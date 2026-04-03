@@ -7,6 +7,127 @@
     "cat": "gk",
     "sub": "bihar"
   },
+  
+  {
+    "q": "Which mirror is used as a rear-view mirror in vehicles? / वाहनों में पीछे का दृश्य देखने के लिए किस दर्पण का उपयोग किया जाता है?",
+    "o": ["Concave Mirror (अवतल)", "Convex Mirror (उत्तल)", "Plane Mirror", "Cylindrical Mirror"],
+    "a": 1,
+    "e": "Convex mirrors provide a wider field of view. / उत्तल दर्पण अधिक विस्तृत क्षेत्र का दृश्य प्रदान करते हैं।",
+    "cat": "gs",
+    "sub": "reflection"
+  },
+  {
+    "q": "Which part of the blood carries oxygen to different parts of the body? / रक्त का कौन सा भाग शरीर के विभिन्न हिस्सों में ऑक्सीजन ले जाता है?",
+    "o": ["White Blood Cells (WBC)", "Plasma", "Red Blood Cells (RBC)", "Platelets"],
+    "a": 2,
+    "e": "Hemoglobin in RBCs binds with oxygen and transports it. / RBC में मौजूद हीमोग्लोबिन ऑक्सीजन के साथ जुड़कर उसका परिवहन करता है।",
+    "cat": "gs",
+    "sub": "circulatory"
+  },
+  {
+    "q": "What is the normal blood pressure of a healthy human? / एक स्वस्थ मनुष्य का सामान्य रक्तचाप कितना होता है?",
+    "o": ["100/70 mm Hg", "120/80 mm Hg", "140/90 mm Hg", "90/60 mm Hg"],
+    "a": 1,
+    "e": "120 mm Hg is systolic and 80 mm Hg is diastolic pressure. / 120 mm Hg सिस्टोलिक और 80 mm Hg डायस्टोलिक दबाव है।",
+    "cat": "gs",
+    "sub": "circulatory"
+  },
+  {
+    "q": "Where does the exchange of gases take place in the lungs? / फेफड़ों में गैसों का आदान-प्रदान कहाँ होता है?",
+    "o": ["Bronchi", "Alveoli (वायु कोष्ठिका)", "Trachea", "Diaphragm"],
+    "a": 1,
+    "e": "Exchange of O2 and CO2 happens in the tiny air sacs called Alveoli. / O2 और CO2 का आदान-प्रदान एल्वियोली नामक छोटी वायु थैलियों में होता है।",
+    "cat": "gs",
+    "sub": "respiratory"
+  },
+  {
+    "q": "Which pigment is responsible for the red color of human blood? / मानव रक्त के लाल रंग के लिए कौन सा वर्णक जिम्मेदार है?",
+    "o": ["Chlorophyll", "Hemocyanin", "Hemoglobin", "Melanin"],
+    "a": 2,
+    "e": "Hemoglobin contains iron which gives blood its red color. / हीमोग्लोबिन में लोहा होता है जो रक्त को लाल रंग देता है।",
+    "cat": "gs",
+    "sub": "circulatory"
+  },
+  {
+    "q": "During exhalation, the diaphragm moves: / उच्छ्वास (साँस छोड़ने) के दौरान, डायाफ्राम: ",
+    "o": ["Downwards", "Upwards (ऊपर की ओर)", "Side-ways", "Does not move"],
+    "a": 1,
+    "e": "During exhalation, the diaphragm relaxes and moves up. / साँस छोड़ने के दौरान, डायाफ्राम शिथिल होकर ऊपर की ओर बढ़ता है।",
+    "cat": "gs",
+    "sub": "respiratory"
+  },
+  {
+    "q": "The 'Powerhouse of the Cell' is: / 'कोशिका का पावरहाउस' किसे कहा जाता है?",
+    "o": ["Nucleus", "Ribosome", "Mitochondria", "Golgi Body"],
+    "a": 2,
+    "e": "Mitochondria produces energy in the form of ATP. / माइटोकॉन्ड्रिया ATP के रूप में ऊर्जा पैदा करता है।",
+    "cat": "gs",
+    "sub": "cell"
+  },
+  {
+    "q": "Which vitamin helps in blood clotting? / कौन सा विटामिन रक्त का थक्का जमने में मदद करता है?",
+    "o": ["Vitamin A", "Vitamin D", "Vitamin E", "Vitamin K"],
+    "a": 3,
+    "e": "Vitamin K is essential for the synthesis of proteins needed for blood clotting. / विटामिन K रक्त के थक्के जमने के लिए आवश्यक प्रोटीन के संश्लेषण के लिए जरूरी है।",
+    "cat": "gs",
+    "sub": "vitamins"
+  },
+  {
+    "q": "The heart is covered by a protective membrane called: / हृदय एक सुरक्षात्मक झिल्ली से ढका होता है जिसे कहते हैं:",
+    "o": ["Pleura", "Pericardium (पेरीकार्डियम)", "Meninges", "Epidermis"],
+    "a": 1,
+    "e": "Pericardium is the fluid-filled sac that surrounds the heart. / पेरीकार्डियम वह द्रव से भरी थैली है जो हृदय को घेरे रहती है।",
+    "cat": "gs",
+    "sub": "circulatory"
+  },
+  {
+    "q": "Which blood group is known as the 'Universal Donor'? / किस रक्त समूह को 'सर्वदाता' कहा जाता है?",
+    "o": ["AB+", "O-", "A+", "B-"],
+    "a": 1,
+    "e": "O negative blood can be given to patients of any blood group. / O नेगेटिव रक्त किसी भी ब्लड ग्रुप के मरीज को दिया जा सकता है।",
+    "cat": "gs",
+    "sub": "circulatory"
+  },
+  {
+    "q": "What is the main waste product of human respiration? / मानव श्वसन का मुख्य अपशिष्ट उत्पाद क्या है?",
+    "o": ["Oxygen", "Carbon Monoxide", "Carbon Dioxide (CO2)", "Nitrogen"],
+    "a": 2,
+    "e": "Humans inhale Oxygen and exhale Carbon Dioxide. / मनुष्य ऑक्सीजन लेते हैं और कार्बन डाइऑक्साइड छोड़ते हैं।",
+    "cat": "gs",
+    "sub": "respiratory"
+  },
+  {
+    "q": "What is the chemical formula of Washing Soda? / वाशिंग सोडा का रासायनिक सूत्र क्या है?",
+    "o": ["NaHCO3", "Na2CO3.10H2O", "NaOH", "CaOCl2"],
+    "a": 1,
+    "e": "Sodium Carbonate Decahydrate is known as washing soda. / सोडियम कार्बोनेट डेकाहाइड्रेट को वाशिंग सोडा कहा जाता है।",
+    "cat": "gs",
+    "sub": "acid_base"
+  },
+  {
+    "q": "Which gas is filled in electric bulbs? / इलेक्ट्रिक बल्बों में कौन सी गैस भरी जाती है?",
+    "o": ["Oxygen", "Hydrogen", "Nitrogen/Argon (नाइट्रोजन/आर्गन)", "Carbon Dioxide"],
+    "a": 2,
+    "e": "Argon or Nitrogen is used to prevent the filament from burning. / फिलामेंट को जलने से बचाने के लिए आर्गन या नाइट्रोजन का उपयोग किया जाता है।",
+    "cat": "gs",
+    "sub": "electricity"
+  },
+  {
+    "q": "What is the S.I. unit of Power of Lens? / लेंस की क्षमता का S.I. मात्रक क्या है?",
+    "o": ["Meter", "Watt", "Dioptre (डायोप्टर)", "Joule"],
+    "a": 2,
+    "e": "Power of lens is measured in Dioptre (D). / लेंस की क्षमता को डायोप्टर (D) में मापा जाता है।",
+    "cat": "gs",
+    "sub": "refraction"
+  },
+  {
+    "q": "Which metal is the best conductor of electricity? / बिजली का सबसे अच्छा सुचालक कौन सा धातु है?",
+    "o": ["Iron", "Copper", "Silver (चांदी)", "Aluminium"],
+    "a": 2,
+    "e": "Silver is the best conductor, followed by Copper. / चांदी सबसे अच्छा सुचालक है, उसके बाद तांबा आता है।",
+    "cat": "gs",
+    "sub": "metals"
+  },
   {
     "q": "Which bank is known as the 'Banker's Bank' in India? / भारत में किस बैंक को 'बैंकर्स बैंक' कहा जाता है?",
     "o": ["SBI", "PNB", "RBI (भारतीय रिजर्व बैंक)", "HDFC"],
