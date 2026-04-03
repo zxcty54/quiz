@@ -8,6 +8,246 @@
     "sub": "bihar"
   },
   {
+    "q": "Which bank is known as the 'Banker's Bank' in India? / भारत में किस बैंक को 'बैंकर्स बैंक' कहा जाता है?",
+    "o": ["SBI", "PNB", "RBI (भारतीय रिजर्व बैंक)", "HDFC"],
+    "a": 2,
+    "e": "Reserve Bank of India (RBI) controls all other banks. / भारतीय रिजर्व बैंक सभी अन्य बैंकों को नियंत्रित करता है।",
+    "cat": "gk",
+    "sub": "banking"
+  },
+  {
+    "q": "Which is the highest mountain peak in India? / भारत की सबसे ऊँची पर्वत चोटी कौन सी है?",
+    "o": ["Mount Everest", "Kanchenjunga (कंचनजंगा)", "Nanda Devi", "K2 (Godwin Austen)"],
+    "a": 1,
+    "e": "Kanchenjunga is the highest peak in India (Sikkim). / कंचनजंगा भारत (सिक्किम) की सबसे ऊँची चोटी है।",
+    "cat": "gk",
+    "sub": "mountains"
+  },
+  {
+    "q": "Which river is known as the 'Dakshin Ganga'? / किस नदी को 'दक्षिण गंगा' के नाम से जाना जाता है?",
+    "o": ["Krishna", "Godavari (गोदावरी)", "Cauvery", "Narmada"],
+    "a": 1,
+    "e": "Godavari is the longest river of South India. / गोदावरी दक्षिण भारत की सबसे लंबी नदी है।",
+    "cat": "gk",
+    "sub": "rivers"
+  },
+  {
+    "q": "In which district of Bihar is the Kakolat Waterfall located? / बिहार के किस जिले में ककोलत जलप्रपात स्थित है?",
+    "o": ["Nawada (नवादा)", "Gaya", "Rohtas", "Kaimur"],
+    "a": 0,
+    "e": "Kakolat is a famous waterfall in Nawada district. / ककोलत नवादा जिले का एक प्रसिद्ध जलप्रपात है।",
+    "cat": "gk",
+    "sub": "bihar_geo"
+  },
+  {
+    "q": "Which planet is known as the 'Red Planet'? / किस ग्रह को 'लाल ग्रह' कहा जाता है?",
+    "o": ["Venus", "Mars (मंगल)", "Jupiter", "Saturn"],
+    "a": 1,
+    "e": "Mars appears red due to Iron Oxide. / आयरन ऑक्साइड के कारण मंगल लाल दिखाई देता है।",
+    "cat": "gk",
+    "sub": "geo"
+  },
+  {
+    "q": "Which Indian state has the longest coastline? / भारत के किस राज्य की तटरेखा सबसे लंबी है?",
+    "o": ["Maharashtra", "Tamil Nadu", "Gujarat (गुजरात)", "Andhra Pradesh"],
+    "a": 2,
+    "e": "Gujarat has the longest coastline in India. / गुजरात की तटरेखा भारत में सबसे लंबी है।",
+    "cat": "gk",
+    "sub": "geo"
+  },
+  {
+    "q": "Which type of soil is best for Cotton cultivation? / कपास की खेती के लिए कौन सी मिट्टी सबसे अच्छी होती है?",
+    "o": ["Alluvial Soil", "Red Soil", "Black Soil (काली मिट्टी)", "Laterite Soil"],
+    "a": 2,
+    "e": "Black soil is also known as 'Regur' soil. / काली मिट्टी को 'रेगुर' मिट्टी भी कहा जाता है।",
+    "cat": "gk",
+    "sub": "agriculture"
+  },
+  {
+    "q": "The 'Tropic of Cancer' passes through how many Indian states? / 'कर्क रेखा' भारत के कितने राज्यों से होकर गुजरती है?",
+    "o": ["6", "7", "8", "9"],
+    "a": 2,
+    "e": "It passes through 8 states including Bihar's neighbor Jharkhand. / यह झारखंड सहित 8 राज्यों से होकर गुजरती है।",
+    "cat": "gk",
+    "sub": "geo"
+  },
+  {
+    "q": "Which is the largest producer of Tea in India? / भारत में चाय का सबसे बड़ा उत्पादक कौन है?",
+    "o": ["West Bengal", "Kerala", "Assam (असम)", "Karnataka"],
+    "a": 2,
+    "e": "Assam produces more than half of India's tea. / असम भारत की आधी से अधिक चाय का उत्पादन करता है।",
+    "cat": "gk",
+    "sub": "agriculture"
+  },
+  {
+    "q": "The 'Standard Meridian' of India (82.5° E) passes through? / भारत का 'मानक मध्याह्न' (82.5° E) कहाँ से गुजरता है?",
+    "o": ["Patna", "Mirzapur (मिर्जापुर)", "Nagpur", "Delhi"],
+    "a": 1,
+    "e": "It passes through Mirzapur, near Prayagraj (UP). / यह प्रयागराज (यूपी) के पास मिर्जापुर से गुजरता है।",
+    "cat": "gk",
+    "sub": "geo"
+  },
+  {
+    "q": "Which pass connects Srinagar to Leh? / कौन सा दर्रा श्रीनगर को लेह से जोड़ता है?",
+    "o": ["Rohtang Pass", "Zoji La (ज़ोजिला)", "Nathu La", "Shipki La"],
+    "a": 1,
+    "e": "Zoji La pass is a vital link between Kashmir and Ladakh. / ज़ोजिला दर्रा कश्मीर और लद्दाख के बीच एक महत्वपूर्ण कड़ी है।",
+    "cat": "gk",
+    "sub": "mountains"
+  },
+  {
+    "q": "The Someshwar Range is located in which district of Bihar? / सोमेश्वर श्रेणी बिहार के किस जिले में स्थित है?",
+    "o": ["East Champaran", "West Champaran (पश्चिम चंपारण)", "Situmari", "Madhubani"],
+    "a": 1,
+    "e": "It is the northernmost hilly part of Bihar. / यह बिहार का सबसे उत्तरी पहाड़ी हिस्सा है।",
+    "cat": "gk",
+    "sub": "bihar_geo"
+  },
+  {
+    "q": "Which layer of the Atmosphere contains the Ozone Layer? / वायुमंडल की किस परत में ओजोन परत पाई जाती है?",
+    "o": ["Troposphere", "Stratosphere (समताप मंडल)", "Mesosphere", "Exosphere"],
+    "a": 1,
+    "e": "Ozone protects us from harmful UV rays. / ओजोन हमें हानिकारक यूवी किरणों से बचाती है।",
+    "cat": "gk",
+    "sub": "climate"
+  },
+  {
+    "q": "Where is the Kaziranga National Park located? / काजीरंगा राष्ट्रीय उद्यान कहाँ स्थित है?",
+    "o": ["Assam (असम)", "Madhya Pradesh", "Uttarakhand", "Rajasthan"],
+    "a": 0,
+    "e": "It is famous for One-horned Rhinoceros. / यह एक सींग वाले गैंडे के लिए प्रसिद्ध है।",
+    "cat": "gk",
+    "sub": "geo"
+  },
+  {
+    "q": "Which is the smallest state of India by Area? / क्षेत्रफल के हिसाब से भारत का सबसे छोटा राज्य कौन सा है?",
+    "o": ["Sikkim", "Goa (गोवा)", "Tripura", "Manipur"],
+    "a": 1,
+    "e": "Goa is the smallest state by area in India. / गोवा क्षेत्रफल के लिहाज से भारत का सबसे छोटा राज्य है।",
+    "cat": "gk",
+    "sub": "geo"
+  },
+  {
+    "q": "Which river does not flow into the Bay of Bengal? / कौन सी नदी बंगाल की खाड़ी में नहीं गिरती है?",
+    "o": ["Ganga", "Godavari", "Narmada (नर्मदा)", "Krishna"],
+    "a": 2,
+    "e": "Narmada and Tapti flow westward into the Arabian Sea. / नर्मदा और ताप्ती पश्चिम की ओर अरब सागर में गिरती हैं।",
+    "cat": "gk",
+    "sub": "rivers"
+  },
+  {
+    "q": "What is the rank of Bihar in India in terms of Population (2011)? / जनसंख्या (2011) के मामले में भारत में बिहार का रैंक क्या है?",
+    "o": ["First", "Second", "Third (तीसरा)", "Fourth"],
+    "a": 2,
+    "e": "Bihar is the 3rd most populous state after UP and Maharashtra. / बिहार यूपी और महाराष्ट्र के बाद तीसरा सबसे अधिक आबादी वाला राज्य है।",
+    "cat": "gk",
+    "sub": "bihar_geo"
+  },
+  {
+    "q": "Which city is known as the 'Manchester of India'? / किस शहर को 'भारत का मैनचेस्टर' कहा जाता है? ",
+    "o": ["Mumbai", "Coimbatore", "Ahmedabad (अहमदाबाद)", "Kanpur"],
+    "a": 2,
+    "e": "Ahmedabad is famous for its textile industry. / अहमदाबाद अपने कपड़ा उद्योग के लिए प्रसिद्ध है।",
+    "cat": "gk",
+    "sub": "geo"
+  },
+  {
+    "q": "In which ocean is the 'Mariana Trench' located? / 'मारियाना ट्रेंच' किस महासागर में स्थित है?",
+    "o": ["Atlantic Ocean", "Indian Ocean", "Pacific Ocean (प्रशांत महासागर)", "Arctic Ocean"],
+    "a": 2,
+    "e": "It is the deepest part of the world's oceans. / यह दुनिया के महासागरों का सबसे गहरा हिस्सा है।",
+    "cat": "gk",
+    "sub": "geo"
+  },
+  {
+    "q": "Which is the largest coffee producing state in India? / भारत में सबसे बड़ा कॉफी उत्पादक राज्य कौन सा है?",
+    "o": ["Assam", "Kerala", "Karnataka (कर्नाटक)", "Tamil Nadu"],
+    "a": 2,
+    "e": "Karnataka contributes around 70% of India's coffee. / कर्नाटक भारत की लगभग 70% कॉफी का योगदान देता है।",
+    "cat": "gk",
+    "sub": "agriculture"
+  },
+  {
+    "q": "The Sundarbans Delta is formed by which rivers? / सुंदरबन डेल्टा किन नदियों द्वारा बनाया गया है?",
+    "o": ["Indus & Jhelum", "Ganga & Brahmaputra (गंगा और ब्रह्मपुत्र)", "Krishna & Kaveri", "Narmada & Tapti"],
+    "a": 1,
+    "e": "It is the largest delta in the world. / यह दुनिया का सबसे बड़ा डेल्टा है।",
+    "cat": "gk",
+    "sub": "rivers"
+  },
+  {
+    "q": "Who presents the Union Budget in the Parliament? / संसद में केंद्रीय बजट कौन पेश करता है?",
+    "o": ["Prime Minister", "Finance Minister (वित्त मंत्री)", "President", "RBI Governor"],
+    "a": 1,
+    "e": "The Finance Minister presents the budget every year. / वित्त मंत्री हर साल बजट पेश करते हैं।",
+    "cat": "gk",
+    "sub": "budget"
+  },
+  {
+    "q": "What is the full form of 'GNP' in Economics? / अर्थशास्त्र में 'GNP' का पूर्ण रूप क्या है?",
+    "o": ["Gross National Product", "Gross Net Product", "General National Product", "Government National Plan"],
+    "a": 0,
+    "e": "GNP measures the total value of goods produced by a country's citizens. / GNP देश के नागरिकों द्वारा उत्पादित वस्तुओं के कुल मूल्य को मापता है।",
+    "cat": "gk",
+    "sub": "economy"
+  },
+  {
+    "q": "The 'Five Year Plans' in India were started in which year? / भारत में 'पंचवर्षीय योजनाएं' किस वर्ष शुरू की गई थीं?",
+    "o": ["1947", "1950", "1951", "1955"],
+    "a": 2,
+    "e": "The first Five Year Plan (1951-56) focused on agriculture. / पहली पंचवर्षीय योजना (1951-56) कृषि पर केंद्रित थी।",
+    "cat": "gk",
+    "sub": "plans"
+  },
+  {
+    "q": "Which organization replaced the Planning Commission in 2015? / 2015 में किस संगठन ने योजना आयोग का स्थान लिया?",
+    "o": ["Finance Commission", "NITI Aayog (नीति आयोग)", "GST Council", "RBI"],
+    "a": 1,
+    "e": "NITI Aayog stands for National Institution for Transforming India. / नीति आयोग का मतलब नेशनल इंस्टीट्यूशन फॉर ट्रांसफॉर्मिंग इंडिया है।",
+    "cat": "gk",
+    "sub": "economy"
+  },
+  {
+    "q": "What is 'Inflation'? / 'मुद्रास्फीति' (Inflation) क्या है?",
+    "o": ["Fall in prices", "Rise in prices (कीमतों में वृद्धि)", "Stable prices", "No flow of money"],
+    "a": 1,
+    "e": "Inflation means a general increase in prices and fall in purchasing value. / मुद्रास्फीति का अर्थ है कीमतों में सामान्य वृद्धि और क्रय शक्ति में गिरावट।",
+    "cat": "gk",
+    "sub": "inflation"
+  },
+  {
+    "q": "Where is the headquarter of RBI located? / RBI का मुख्यालय कहाँ स्थित है?",
+    "o": ["New Delhi", "Mumbai (मुंबई)", "Kolkata", "Chennai"],
+    "a": 1,
+    "e": "RBI was established in 1935 and its HQ is in Mumbai. / RBI की स्थापना 1935 में हुई थी और इसका मुख्यालय मुंबई में है।",
+    "cat": "gk",
+    "sub": "banking"
+  },
+  {
+    "q": "Which sector contributes the most to India's GDP? / भारत के GDP में किस क्षेत्र का योगदान सबसे अधिक है?",
+    "o": ["Agriculture", "Industry", "Service Sector (सेवा क्षेत्र)", "Mining"],
+    "a": 2,
+    "e": "Service sector (Tertiary) is the largest contributor. / सेवा क्षेत्र (तृतीयक) सबसे बड़ा योगदानकर्ता है।",
+    "cat": "gk",
+    "sub": "economy"
+  },
+  {
+    "q": "What is the full form of 'GST'? / 'GST' का पूर्ण रूप क्या है?",
+    "o": ["General Sales Tax", "Goods and Services Tax", "Government Service Tax", "Global Sales Tax"],
+    "a": 1,
+    "e": "GST was implemented in India on 1st July 2017. / भारत में GST 1 जुलाई 2017 को लागू किया गया था।",
+    "cat": "gk",
+    "sub": "economy"
+  },
+  {
+    "q": "Which is the largest public sector bank in India? / भारत का सबसे बड़ा सार्वजनिक क्षेत्र का बैंक कौन सा है?",
+    "o": ["PNB", "Bank of Baroda", "SBI (भारतीय स्टेट बैंक)", "Canara Bank"],
+    "a": 2,
+    "e": "State Bank of India (SBI) is the largest public sector bank. / भारतीय स्टेट बैंक (SBI) सबसे बड़ा सार्वजनिक क्षेत्र का बैंक है।",
+    "cat": "gk",
+    "sub": "banking"
+  },
+  {
     "q": "Who was the leader of the 1857 Revolt in Jagdishpur, Bihar? / बिहार के जगदीशपुर में 1857 के विद्रोह का नेतृत्व किसने किया था?",
     "o": ["Nana Saheb", "Tatya Tope", "Kunwar Singh (कुंवर सिंह)", "Amar Singh"],
     "a": 2,
