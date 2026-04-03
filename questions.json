@@ -7,7 +7,166 @@
     "cat": "gk",
     "sub": "bihar"
   },
-  
+  {
+    "q": "What is the 'Repo Rate' in the Indian Economy? / भारतीय अर्थव्यवस्था में 'रेपो रेट' क्या है?",
+    "o": ["Rate at which banks lend to public", "Rate at which RBI lends to commercial banks", "Rate at which RBI borrows from banks", "Rate of inflation"],
+    "a": 1,
+    "e": "Repo rate is the rate at which RBI lends money to commercial banks for short-term. / रेपो रेट वह दर है जिस पर RBI वाणिज्यिक बैंकों को अल्पावधि के लिए ऋण देता है।",
+    "cat": "gk",
+    "sub": "banking"
+  },
+  {
+    "q": "Which of the following is a 'Direct Tax' in India? / भारत में इनमें से कौन सा एक 'प्रत्यक्ष कर' (Direct Tax) है?",
+    "o": ["GST", "Excise Duty", "Income Tax (आयकर)", "Customs Duty"],
+    "a": 2,
+    "e": "Income tax is paid directly by the individual to the government. / आयकर सीधे व्यक्ति द्वारा सरकार को भुगतान किया जाता है।",
+    "cat": "gk",
+    "sub": "economy"
+  },
+  {
+    "q": "The 'Laffer Curve' shows the relationship between: / 'लैफ़र कर्व' किसके बीच संबंध दर्शाता है?",
+    "o": ["Inflation and Unemployment", "Tax rates and Tax revenue", "Demand and Supply", "GNP and GDP"],
+    "a": 1,
+    "e": "It suggests that there is an optimal tax rate that maximizes total tax revenue. / यह बताता है कि एक इष्टतम कर दर है जो कुल कर राजस्व को अधिकतम करती है।",
+    "cat": "gk",
+    "sub": "economy"
+  },
+  {
+    "q": "What does 'Stagflation' mean? / 'स्टैगफ्लेशन' (Stagflation) का क्या अर्थ है?",
+    "o": ["High inflation with low growth", "Low inflation with high growth", "Recession only", "Hyperinflation"],
+    "a": 0,
+    "e": "Stagflation is a situation of high inflation combined with high unemployment and stagnant demand. / यह उच्च मुद्रास्फीति और उच्च बेरोजगारी की स्थिति है।",
+    "cat": "gk",
+    "sub": "inflation"
+  },
+  {
+    "q": "Who is the 'Lender of Last Resort' in the Indian financial system? / भारतीय वित्तीय प्रणाली में 'अंतिम ऋणदाता' (Lender of Last Resort) कौन है?",
+    "o": ["SBI", "Finance Ministry", "RBI", "World Bank"],
+    "a": 2,
+    "e": "RBI acts as a savior for banks facing liquidity crisis. / RBI तरलता संकट का सामना कर रहे बैंकों के लिए रक्षक के रूप में कार्य करता है।",
+    "cat": "gk",
+    "sub": "banking"
+  },
+  {
+    "q": "The 'Base Year' for calculating GDP in India is currently: / भारत में GDP की गणना के लिए 'आधार वर्ष' वर्तमान में क्या है?",
+    "o": ["2004-05", "2010-11", "2011-12", "2018-19"],
+    "a": 2,
+    "e": "2011-12 is used as the base year for constant price calculations. / स्थिर मूल्य गणना के लिए 2011-12 को आधार वर्ष के रूप में उपयोग किया जाता है।",
+    "cat": "gk",
+    "sub": "economy"
+  },
+  {
+    "q": "What is 'Fiscal Deficit'? / 'राजकोषीय घाटा' (Fiscal Deficit) क्या है?",
+    "o": ["Total Expenditure - Total Receipts", "Total Exp - (Revenue Receipts + Non-debt Capital Receipts)", "Revenue Exp - Revenue Receipts", "Total Debt of Govt"],
+    "a": 1,
+    "e": "It shows how much the government needs to borrow from the market. / यह दर्शाता है कि सरकार को बाजार से कितना उधार लेने की आवश्यकता है।",
+    "cat": "gk",
+    "sub": "budget"
+  },
+  {
+    "q": "Which sector is the 'Backbone' of Bihar's economy? / बिहार की अर्थव्यवस्था की 'रीढ़' कौन सा क्षेत्र है?",
+    "o": ["Service Sector", "Manufacturing", "Agriculture (कृषि)", "Mining"],
+    "a": 2,
+    "e": "Over 70% of Bihar's population is dependent on Agriculture. / बिहार की 70% से अधिक आबादी कृषि पर निर्भर है।",
+    "cat": "gk",
+    "sub": "economy"
+  },
+  {
+    "q": "What is 'Narrow Money' in the context of RBI's classification? / RBI के वर्गीकरण के संदर्भ में 'नैरो मनी' क्या है?",
+    "o": ["M1", "M2", "M3", "M4"],
+    "a": 0,
+    "e": "M1 is the most liquid form of money (Currency with public + Demand deposits). / M1 मुद्रा का सबसे तरल रूप है।",
+    "cat": "gk",
+    "sub": "banking"
+  },
+  {
+    "q": "Devaluation of currency usually leads to: / मुद्रा के अवमूल्यन (Devaluation) से आमतौर पर क्या होता है?",
+    "o": ["Cheaper Exports", "Cheaper Imports", "High Foreign Debt", "Decrease in Exports"],
+    "a": 0,
+    "e": "Devaluation makes a country's exports cheaper and more competitive. / अवमूल्यन किसी देश के निर्यात को सस्ता और प्रतिस्पर्धी बनाता है।",
+    "cat": "gk",
+    "sub": "economy"
+  },
+  {
+    "q": "The 'Green Revolution' primarily increased the production of: / 'हरित क्रांति' ने मुख्य रूप से किसके उत्पादन में वृद्धि की?",
+    "o": ["Pulses", "Wheat & Rice (गेहूं और चावल)", "Oilseeds", "Cotton"],
+    "a": 1,
+    "e": "MS Swaminathan is known as the father of Green Revolution in India. / एमएस स्वामीनाथन को भारत में हरित क्रांति का जनक कहा जाता है।",
+    "cat": "gk",
+    "sub": "plans"
+  },
+  {
+    "q": "Which index is used to measure 'Inflation' for policy making in India? / भारत में नीति निर्धारण के लिए 'मुद्रास्फीति' मापने के लिए किस सूचकांक का उपयोग किया जाता है?",
+    "o": ["WPI", "CPI (Combined)", "GDP Deflator", "IIP"],
+    "a": 1,
+    "e": "Consumer Price Index (CPI) is now the primary tool for RBI to target inflation. / CPI अब मुद्रास्फीति को लक्षित करने के लिए RBI का प्राथमिक उपकरण है।",
+    "cat": "gk",
+    "sub": "inflation"
+  },
+  {
+    "q": "Economic planning is in which list of the Indian Constitution? / आर्थिक नियोजन भारतीय संविधान की किस सूची में है?",
+    "o": ["Union List", "State List", "Concurrent List (समवर्ती सूची)", "Residuary Powers"],
+    "a": 2,
+    "e": "Both Central and State governments can make laws on economic planning. / केंद्र और राज्य दोनों सरकारें आर्थिक नियोजन पर कानून बना सकती हैं।",
+    "cat": "gk",
+    "sub": "polity"
+  },
+  {
+    "q": "What is 'Hidden Unemployment' (Disguised Unemployment)? / 'प्रच्छन्न बेरोजगारी' (Disguised Unemployment) क्या है?",
+    "o": ["No jobs in market", "More people working than required", "Educated people without jobs", "Temporary unemployment"],
+    "a": 1,
+    "e": "It is common in India's agriculture sector. / यह भारत के कृषि क्षेत्र में आम है।",
+    "cat": "gk",
+    "sub": "economy"
+  },
+  {
+    "q": "Which body approves the Five Year Plans in India? / भारत में पंचवर्षीय योजनाओं को कौन सा निकाय अनुमोदित करता था?",
+    "o": ["Planning Commission", "NITI Aayog", "National Development Council (NDC)", "Parliament"],
+    "a": 2,
+    "e": "NDC was the final authority to approve the 5-year plans. / NDC पंचवर्षीय योजनाओं को मंजूरी देने वाला अंतिम प्राधिकरण था।",
+    "cat": "gk",
+    "sub": "plans"
+  },
+  {
+    "q": "What does 'CRR' stand for in Banking? / बैंकिंग में 'CRR' का क्या अर्थ है?",
+    "o": ["Cash Reserve Ratio", "Credit Reserve Rate", "Capital Ratio Rate", "Currency Reserve Ratio"],
+    "a": 0,
+    "e": "Banks must keep a percentage of their deposits with RBI as cash. / बैंकों को अपनी जमा राशि का एक हिस्सा RBI के पास नकद के रूप में रखना पड़ता है।",
+    "cat": "gk",
+    "sub": "banking"
+  },
+  {
+    "q": "The concept of 'Mixed Economy' means: / 'मिश्रित अर्थव्यवस्था' (Mixed Economy) की अवधारणा का अर्थ है:",
+    "o": ["Agriculture and Industry", "Domestic and Foreign trade", "Public and Private sectors together", "Rich and Poor"],
+    "a": 2,
+    "e": "India follows a mixed economy where both govt and private firms exist. / भारत एक मिश्रित अर्थव्यवस्था है जहाँ सरकार और निजी दोनों फर्में मौजूद हैं।",
+    "cat": "gk",
+    "sub": "economy"
+  },
+  {
+    "q": "Which organization calculates National Income in India? / भारत में राष्ट्रीय आय की गणना कौन सा संगठन करता है?",
+    "o": ["NITI Aayog", "RBI", "CSO (now NSO)", "Finance Ministry"],
+    "a": 2,
+    "e": "National Statistical Office (NSO) now calculates National Income. / राष्ट्रीय सांख्यिकी कार्यालय अब राष्ट्रीय आय की गणना करता है।",
+    "cat": "gk",
+    "sub": "national_income"
+  },
+  {
+    "q": "What is 'Reverse Repo Rate'? / 'रिवर्स रेपो रेट' क्या है?",
+    "o": ["Rate RBI lends to banks", "Rate banks lend to public", "Rate RBI pays to banks for their deposits", "Rate of GST"],
+    "a": 2,
+    "e": "When RBI takes money from banks, it pays them Reverse Repo rate. / जब RBI बैंकों से पैसा लेता है, तो वह उन्हें रिवर्स रेपो रेट देता है।",
+    "cat": "gk",
+    "sub": "banking"
+  },
+  {
+    "q": "Which five-year plan was based on the 'Mahalanobis Model'? / कौन सी पंचवर्षीय योजना 'महालनोबिस मॉडल' पर आधारित थी?",
+    "o": ["First", "Second (दूसरी)", "Third", "Fifth"],
+    "a": 1,
+    "e": "The 2nd plan (1956-61) focused on heavy industrialization. / दूसरी योजना (1956-61) ने भारी औद्योगिकीकरण पर ध्यान केंद्रित किया।",
+    "cat": "gk",
+    "sub": "plans"
+  },
   {
     "q": "Which mirror is used as a rear-view mirror in vehicles? / वाहनों में पीछे का दृश्य देखने के लिए किस दर्पण का उपयोग किया जाता है?",
     "o": ["Concave Mirror (अवतल)", "Convex Mirror (उत्तल)", "Plane Mirror", "Cylindrical Mirror"],
