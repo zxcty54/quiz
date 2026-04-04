@@ -8,6 +8,966 @@
     "sub": "bihar"
   },
   {
+    "q": "Which part of the Human Brain is responsible for 'Memory and Intelligence'? / मानव मस्तिष्क का कौन सा भाग 'स्मृति और बुद्धि' के लिए जिम्मेदार है?",
+    "o": ["Cerebellum", "Medulla", "Cerebrum (प्रमस्तिष्क)", "Thalamus"],
+    "a": 2,
+    "e": "Cerebrum is the largest part and controls learning and memory. / प्रमस्तिष्क सबसे बड़ा भाग है और सीखने व स्मृति को नियंत्रित करता है।",
+    "cat": "gs",
+    "sub": "biology"
+  },
+  {
+    "q": "Who was the first President of the 'Bihar Provincial Congress Committee' (1908)? / 'बिहार प्रांतीय कांग्रेस कमेटी' (1908) के पहले अध्यक्ष कौन थे?",
+    "o": ["Mazharul Haque", "Sir Ali Imam (सर अली इमाम)", "Hasan Imam", "Deep Narayan Singh"],
+    "a": 1,
+    "e": "Sir Ali Imam was the first president, and its first session was in Patna. / सर अली इमाम पहले अध्यक्ष थे, और इसका पहला सत्र पटना में हुआ था।",
+    "cat": "gk",
+    "sub": "bihar_hist"
+  },
+  {
+    "q": "What is the 'SI Unit' of Magnetic Flux? / चुंबकीय फ्लक्स (Magnetic Flux) का 'SI मात्रक' क्या है?",
+    "o": ["Tesla", "Weber (वेबर)", "Henry", "Coulomb"],
+    "a": 1,
+    "e": "Weber is the unit of magnetic flux, whereas Tesla is for magnetic induction. / वेबर चुंबकीय फ्लक्स की इकाई है, जबकि टेस्ला चुंबकीय प्रेरण के लिए है।",
+    "cat": "gs",
+    "sub": "magnetism"
+  },
+  {
+    "q": "In which session of the Congress did the split between Moderates and Extremists occur? / कांग्रेस के किस अधिवेशन में नरम दल और गरम दल के बीच विभाजन हुआ था?",
+    "o": ["Bombay 1885", "Calcutta 1906", "Surat 1907 (सूरत अधिवेशन)", "Lucknow 1916"],
+    "a": 2,
+    "e": "The split occurred in the Surat session, and they reunited in Lucknow 1916. / सूरत अधिवेशन में विभाजन हुआ और 1916 के लखनऊ अधिवेशन में वे फिर मिले।",
+    "cat": "gk",
+    "sub": "freedom_struggle"
+  },
+  {
+    "q": "Which enzyme is found in 'Human Saliva'? / 'मानव लार' में कौन सा एंजाइम पाया जाता है?",
+    "o": ["Pepsin", "Trypsin", "Ptyalin/Amylase (टायलिन)", "Lipase"],
+    "a": 2,
+    "e": "Salivary amylase (Ptyalin) starts the digestion of starch. / लार एमाइलेज (टायलिन) स्टार्च के पाचन को शुरू करता है।",
+    "cat": "gs",
+    "sub": "digestive"
+  },
+  {
+    "q": "Who led the 'Salt Satyagraha' in Patna? / पटना में 'नमक सत्याग्रह' का नेतृत्व किसने किया था?",
+    "o": ["Rajendra Prasad", "Ambika Kant Singh (अंबिका कांत सिंह)", "Abdul Bari", "Sri Krishna Singh"],
+    "a": 1,
+    "e": "Ambika Kant Singh led the salt satyagraha at Nakhas Pind, Patna. / अंबिका कांत सिंह ने पटना के नखास पिंड में नमक सत्याग्रह का नेतृत्व किया।",
+    "cat": "gk",
+    "sub": "bihar_hist"
+  },
+  {
+    "q": "Which law explains the 'Curvature of Light' around a massive object? / कौन सा नियम किसी विशाल वस्तु के चारों ओर 'प्रकाश के झुकाव' की व्याख्या करता है?",
+    "o": ["Newton's Law", "General Relativity (सामान्य सापेक्षता)", "Snell's Law", "Ohm's Law"],
+    "a": 1,
+    "e": "Einstein's General Relativity explains gravitational lensing. / आइंस्टीन की सामान्य सापेक्षता गुरुत्वाकर्षण लेंसिंग की व्याख्या करती है।",
+    "cat": "gs",
+    "sub": "physics"
+  },
+  {
+    "q": "Who is the 'Ex-Officio Chairman' of the NITI Aayog? / नीति आयोग का 'पदेन अध्यक्ष' कौन होता है?",
+    "o": ["President", "Prime Minister (प्रधानमंत्री)", "Finance Minister", "Vice President"],
+    "a": 1,
+    "e": "The Prime Minister of India is the chairperson of NITI Aayog. / भारत के प्रधानमंत्री नीति आयोग के अध्यक्ष होते हैं।",
+    "cat": "gk",
+    "sub": "economy"
+  },
+  {
+    "q": "The 'Universal Law of Gravitation' was given by: / 'गुरुत्वाकर्षण का सार्वत्रिक नियम' किसके द्वारा दिया गया था?",
+    "o": ["Galileo", "Newton (न्यूटन)", "Kepler", "Copernicus"],
+    "a": 1,
+    "e": "Sir Isaac Newton formulated the law in 1687. / सर आइजैक न्यूटन ने 1687 में यह नियम प्रतिपादित किया था।",
+    "cat": "gs",
+    "sub": "motion"
+  },
+  {
+    "q": "Which article of the Constitution deals with the 'Abolition of Titles'? / संविधान का कौन सा अनुच्छेद 'उपाधियों के अंत' से संबंधित है?",
+    "o": ["Article 14", "Article 16", "Article 17", "Article 18"],
+    "a": 3,
+    "e": "Article 18 prohibits the state from conferring any titles (except military/academic). / अनुच्छेद 18 राज्य को उपाधियाँ (सैन्य/अकादमिक को छोड़कर) देने से रोकता है।",
+    "cat": "gk",
+    "sub": "articles"
+  },
+  {
+    "q": "What is the 'pH' value of Gastric Acid (HCl) in the stomach? / आमाशय में जठर रस (HCl) का 'pH' मान क्या होता है?",
+    "o": ["1.5 to 3.5", "7.0", "8.5", "5.6"],
+    "a": 0,
+    "e": "Stomach acid is highly acidic to help break down food. / भोजन को तोड़ने के लिए पेट का एसिड अत्यधिक अम्लीय होता है।",
+    "cat": "gs",
+    "sub": "digestive"
+  },
+  {
+    "q": "In which district of Bihar is the 'Udaypur Wildlife Sanctuary' located? / बिहार के किस जिले में 'उदयपुर वन्यजीव अभयारण्य' स्थित है?",
+    "o": ["Gaya", "Rohtas", "West Champaran (पश्चिम चंपारण)", "Munger"],
+    "a": 2,
+    "e": "It is located in Bettiah, West Champaran. / यह पश्चिम चंपारण के बेतिया में स्थित है।",
+    "cat": "gk",
+    "sub": "bihar_geo"
+  },
+  {
+    "q": "Which type of wave is 'Sound'? / 'ध्वनि' किस प्रकार की तरंग है?",
+    "o": ["Transverse wave", "Longitudinal wave (अनुदैर्ध्य तरंग)", "Electromagnetic wave", "Microwave"],
+    "a": 1,
+    "e": "Sound waves require a medium and move by compression/rarefaction. / ध्वनि तरंगों को माध्यम की आवश्यकता होती है और ये संपीड़न/विरलन द्वारा चलती हैं।",
+    "cat": "gs",
+    "sub": "physics"
+  },
+  {
+    "q": "The 'Swaraj Party' was formed by CR Das and Motilal Nehru in which year? / स्वराज पार्टी का गठन सीआर दास और मोतीलाल नेहरू ने किस वर्ष किया था?",
+    "o": ["1920", "1922", "1923", "1925"],
+    "a": 2,
+    "e": "It was formed after the suspension of the Non-Cooperation Movement. / असहयोग आंदोलन के स्थगन के बाद इसका गठन किया गया था।",
+    "cat": "gk",
+    "sub": "freedom_struggle"
+  },
+  {
+    "q": "Which mirror is used in 'Solar Cookers'? / 'सोलर कुकर' में किस दर्पण का उपयोग किया जाता है?",
+    "o": ["Plane Mirror", "Convex Mirror", "Concave Mirror (अवतल दर्पण)", "Bifocal Mirror"],
+    "a": 2,
+    "e": "Concave mirrors focus sunlight at a single point to generate heat. / अवतल दर्पण ऊष्मा उत्पन्न करने के लिए सूर्य के प्रकाश को एक बिंदु पर केंद्रित करते हैं।",
+    "cat": "gs",
+    "sub": "reflection"
+  },
+  {
+    "q": "Who was the founder of the 'Haryanka Dynasty'? / 'हर्यक वंश' का संस्थापक कौन था?",
+    "o": ["Ajatshatru", "Bimbisara (बिंबिसार)", "Udayin", "Shishunaga"],
+    "a": 1,
+    "e": "Bimbisara was the first major ruler of Magadha. / बिंबिसार मगध का पहला प्रमुख शासक था।",
+    "cat": "gk",
+    "sub": "ancient"
+  },
+  {
+    "q": "What is the SI unit of 'Power'? / 'शक्ति' का SI मात्रक क्या है?",
+    "o": ["Joule", "Watt (वाट)", "Newton", "Pascal"],
+    "a": 1,
+    "e": "Power is the rate of doing work, measured in Watts (J/s). / शक्ति कार्य करने की दर है, जिसे वाट (J/s) में मापा जाता है।",
+    "cat": "gs",
+    "sub": "units"
+  },
+  {
+    "q": "Which Constitutional Amendment reduced the voting age from 21 to 18? / किस संविधान संशोधन ने मतदान की आयु 21 से घटाकर 18 कर दी?",
+    "o": ["42nd Amendment", "44th Amendment", "61st Amendment (61वां संशोधन)", "73rd Amendment"],
+    "a": 2,
+    "e": "The 61st Amendment (1988) changed Article 326. / 61वें संशोधन (1988) ने अनुच्छेद 326 में बदलाव किया।",
+    "cat": "gk",
+    "sub": "polity"
+  },
+  {
+    "q": "Which part of the body is affected by 'Pneumonia'? / 'निमोनिया' से शरीर का कौन सा अंग प्रभावित होता है?",
+    "o": ["Liver", "Kidney", "Lungs (फेफड़े)", "Intestine"],
+    "a": 2,
+    "e": "Pneumonia is an infection that inflames the air sacs in the lungs. / निमोनिया एक संक्रमण है जो फेफड़ों की वायु थैलियों में सूजन पैदा करता है।",
+    "cat": "gs",
+    "sub": "diseases"
+  },
+  {
+    "q": "Who was the Governor-General of India during the 1857 Revolt? / 1857 के विद्रोह के दौरान भारत का गवर्नर-जनरल कौन था?",
+    "o": ["Lord Dalhousie", "Lord Canning (लॉर्ड कैनिंग)", "Lord Mayo", "Lord Ripon"],
+    "a": 1,
+    "e": "He became the first Viceroy of India after the revolt. / विद्रोह के बाद वह भारत के पहले वायसराय बने।",
+    "cat": "gk",
+    "sub": "1857_revolt"
+  },
+  {
+    "q": "Which element is known as the 'King of Chemicals'? / किस तत्व/यौगिक को 'रसायनों का राजा' कहा जाता है?",
+    "o": ["Nitric Acid", "Hydrochloric Acid", "Sulphuric Acid (H2SO4)", "Sodium Carbonate"],
+    "a": 2,
+    "e": "Sulphuric Acid is used in almost all industries. / सल्फ्यूरिक एसिड का उपयोग लगभग सभी उद्योगों में किया जाता है।",
+    "cat": "gs",
+    "sub": "acid_base"
+  },
+  {
+    "q": "In which soil type is 'Makhana' (Fox Nut) primarily cultivated in Bihar? / बिहार में 'मखाना' की खेती मुख्य रूप से किस प्रकार की मिट्टी/क्षेत्र में की जाती है?",
+    "o": ["Alluvial Soil", "Marshy/Swampy Land (दलदली भूमि)", "Red Soil", "Sandy Soil"],
+    "a": 1,
+    "e": "Bihar produces 90% of the world's makhana, mainly in Mithila region. / बिहार दुनिया का 90% मखाना पैदा करता है, मुख्य रूप से मिथिला क्षेत्र में।",
+    "cat": "gk",
+    "sub": "agriculture"
+  },
+  {
+    "q": "Which gas is released during the 'Fermentation' of sugar? / चीनी के 'किण्वन' (Fermentation) के दौरान कौन सी गैस निकलती है?",
+    "o": ["Oxygen", "Methane", "Carbon Dioxide (CO2)", "Hydrogen"],
+    "a": 2,
+    "e": "Yeast converts sugar into ethanol and CO2. / यीस्ट चीनी को इथेनॉल और CO2 में बदल देता है।",
+    "cat": "gs",
+    "sub": "carbon"
+  },
+  {
+    "q": "The 'Rohtas Plateau' in Bihar is a part of which mountain range? / बिहार में 'रोहतास का पठार' किस पर्वत श्रृंखला का हिस्सा है?",
+    "o": ["Himalayas", "Vindhyan Range (विंध्य श्रेणी)", "Rajmahal Hills", "Satpura"],
+    "a": 1,
+    "e": "It is the eastern extension of the Vindhyan range. / यह विंध्य श्रेणी का पूर्वी विस्तार है।",
+    "cat": "gk",
+    "sub": "bihar_geo"
+  },
+  {
+    "q": "What is the 'Mass Number' of an atom? / किसी परमाणु की 'द्रव्यमान संख्या' क्या होती है?",
+    "o": ["Number of Protons", "Number of Neutrons", "Sum of Protons and Neutrons", "Number of Electrons"],
+    "a": 2,
+    "e": "Mass number (A) = Protons (Z) + Neutrons (N). / द्रव्यमान संख्या = प्रोटॉन + न्यूट्रॉन।",
+    "cat": "gs",
+    "sub": "chem"
+  },
+  {
+    "q": "Which layer of the atmosphere is most ideal for flying 'Jet Aircrafts'? / 'जेट विमानों' को उड़ाने के लिए वायुमंडल की कौन सी परत सबसे आदर्श है?",
+    "o": ["Troposphere", "Stratosphere (समताप मंडल)", "Mesosphere", "Thermosphere"],
+    "a": 1,
+    "e": "Stratosphere is free from weather disturbances. / समताप मंडल मौसमी हलचलों से मुक्त होता है।",
+    "cat": "gk",
+    "sub": "climate"
+  },
+  {
+    "q": "The 'Octet Rule' in Chemistry was given by: / रसायन विज्ञान में 'अष्टक नियम' (Octet Rule) किसके द्वारा दिया गया था?",
+    "o": ["Mendeleev", "Lewis and Kossel (लुईस और कोसेल)", "Dalton", "Bohr"],
+    "a": 1,
+    "e": "Atoms combine to have 8 electrons in their valence shell. / परमाणु अपने वैलेंस शेल में 8 इलेक्ट्रॉन रखने के लिए गठबंधन करते हैं।",
+    "cat": "gs",
+    "sub": "periodic_table"
+  },
+  {
+    "q": "Which river enters Bihar at 'Chausa'? / कौन सी नदी 'चौसा' के पास बिहार में प्रवेश करती है?",
+    "o": ["Gandak", "Ganga (गंगा)", "Son", "Ghaghra"],
+    "a": 1,
+    "e": "Ganga enters Bihar at Chausa (Buxar). / गंगा चौसा (बक्सर) में बिहार में प्रवेश करती है।",
+    "cat": "gk",
+    "sub": "rivers"
+  },
+  {
+    "q": "Which allotrope of Carbon is a 'Good Conductor' of electricity? / कार्बन का कौन सा अपरूप बिजली का 'सुचालक' है?",
+    "o": ["Diamond", "Graphite (ग्रेफाइट)", "Fullerene", "Coal"],
+    "a": 1,
+    "e": "Graphite has free electrons that allow electricity to flow. / ग्रेफाइट में मुक्त इलेक्ट्रॉन होते हैं जो बिजली प्रवाहित करने देते हैं।",
+    "cat": "gs",
+    "sub": "carbon"
+  },
+  {
+    "q": "What is the 'Albedo' of a surface? / किसी सतह का 'एल्बीडो' (Albedo) क्या होता है?",
+    "o": ["Heat absorbed", "Reflecting power (परावर्तन शक्ति)", "Energy emitted", "Temperature"],
+    "a": 1,
+    "e": "It is the fraction of solar energy reflected from a surface. / यह सतह से परावर्तित सौर ऊर्जा का अंश है।",
+    "cat": "gk",
+    "sub": "climate"
+  },
+  {
+    "q": "Which element has the 'Highest Electronegativity'? / किस तत्व की 'विद्युत ऋणात्मकता' सबसे अधिक होती है?",
+    "o": ["Oxygen", "Chlorine", "Fluorine (फ्लोरीन)", "Nitrogen"],
+    "a": 2,
+    "e": "Fluorine is the most electronegative element in the periodic table. / फ्लोरीन आवर्त सारणी में सबसे अधिक विद्युत ऋणात्मक तत्व है।",
+    "cat": "gs",
+    "sub": "periodic_table"
+  },
+  {
+    "q": "Who founded the 'Pataliputra' city? / 'पाटलिपुत्र' शहर की स्थापना किसने की थी?",
+    "o": ["Bimbisara", "Ajatshatru", "Udayin (उदयन)", "Ashoka"],
+    "a": 2,
+    "e": "Udayin shifted the capital from Rajgriha to Pataliputra. / उदयन ने राजधानी को राजगृह से पाटलिपुत्र स्थानांतरित किया था।",
+    "cat": "gk",
+    "sub": "ancient"
+  },
+  {
+    "q": "What is the 'Critical Angle' for Total Internal Reflection to occur? / पूर्ण आंतरिक परावर्तन के लिए 'क्रांतिक कोण' क्या है?",
+    "o": ["Angle of refraction is 0°", "Angle of refraction is 90°", "Angle of incidence is 0°", "None"],
+    "a": 1,
+    "e": "TIR occurs when angle of incidence exceeds critical angle. / TIR तब होता है जब आपतन कोण क्रांतिक कोण से अधिक हो जाता है।",
+    "cat": "gs",
+    "sub": "refraction"
+  },
+  {
+    "q": "Which canal is the longest in Bihar? / बिहार की सबसे लंबी नहर कौन सी है?",
+    "o": ["Triveni Canal", "Western Gandak Canal (पश्चिमी गंडक नहर)", "Sone Canal", "Kosi Canal"],
+    "a": 1,
+    "e": "Gandak project provides extensive irrigation to North Bihar. / गंडक परियोजना उत्तरी बिहार को व्यापक सिंचाई प्रदान करती है।",
+    "cat": "gk",
+    "sub": "rivers"
+  },
+  {
+    "q": "What is the 'Valency' of Carbon? / कार्बन की 'संयोजकता' (Valency) क्या है?",
+    "o": ["2", "3", "4", "6"],
+    "a": 2,
+    "e": "Carbon is tetravalent, meaning it can form 4 bonds. / कार्बन टेट्रावैलेंट है, यानी यह 4 बॉन्ड बना सकता है।",
+    "cat": "gs",
+    "sub": "carbon"
+  },
+  {
+    "q": "The 'Equinox' occurs when the Sun is vertically above the: / 'विषुव' (Equinox) तब होता है जब सूर्य लंबवत किसके ऊपर होता है?",
+    "o": ["Tropic of Cancer", "Tropic of Capricorn", "Equator (भूमध्य रेखा)", "North Pole"],
+    "a": 2,
+    "e": "During equinox, day and night are of equal duration globally. / विषुव के दौरान, विश्व स्तर पर दिन और रात समान अवधि के होते हैं।",
+    "cat": "gk",
+    "sub": "climate"
+  },
+  {
+    "q": "Which gas is also known as 'Marsh Gas'? / किस गैस को 'मार्श गैस' भी कहा जाता है?",
+    "o": ["Ethane", "Methane (मीथेन)", "Propane", "Butane"],
+    "a": 1,
+    "e": "Methane (CH4) is produced in wetlands and paddy fields. / मीथेन (CH4) आर्द्रभूमि और धान के खेतों में पैदा होती है।",
+    "cat": "gs",
+    "sub": "carbon"
+  },
+  {
+    "q": "In the modern periodic table, horizontal rows are called: / आधुनिक आवर्त सारणी में, क्षैतिज पंक्तियों को क्या कहा जाता है?",
+    "o": ["Groups", "Periods (आवर्त)", "Series", "Clusters"],
+    "a": 1,
+    "e": "There are 7 periods and 18 groups in the periodic table. / आवर्त सारणी में 7 आवर्त और 18 समूह होते हैं।",
+    "cat": "gs",
+    "sub": "periodic_table"
+  },
+  {
+    "q": "The 'Barabar Caves' in Bihar were built during which period? / बिहार में 'बराबर की गुफाएँ' किस काल में बनाई गई थीं?",
+    "o": ["Gupta Period", "Mauryan Period (मौर्य काल)", "Pala Period", "Kushana Period"],
+    "a": 1,
+    "e": "They are the oldest surviving rock-cut caves in India. / ये भारत की सबसे पुरानी जीवित रॉक-कट गुफाएं हैं।",
+    "cat": "gk",
+    "sub": "ancient"
+  },
+  {
+    "q": "Which type of mirror is used in 'Headlights' of cars? / कारों की 'हेडलाइट्स' में किस प्रकार के दर्पण का उपयोग किया जाता है?",
+    "o": ["Convex Mirror", "Concave Mirror (अवतल दर्पण)", "Plane Mirror", "Cylindrical Mirror"],
+    "a": 1,
+    "e": "Concave mirrors reflect light to form a powerful parallel beam. / अवतल दर्पण एक शक्तिशाली समानांतर बीम बनाने के लिए प्रकाश को परावर्तित करते हैं।",
+    "cat": "gs",
+    "sub": "reflection"
+  },
+  {
+    "q": "Identify the 'Passive Voice': The police arrested the thief. / 'पैसिव वॉइस' पहचानें:",
+    "o": ["The thief arrested by police.", "The thief was arrested by the police.", "The thief is arrested by police.", "Police has arrested the thief."],
+    "a": 1,
+    "e": "In passive voice, 'Object + was/were + V3 + by + Subject'.",
+    "cat": "english",
+    "sub": "grammar"
+  },
+  {
+    "q": "Which country won the ICC Men's U-19 World Cup in February 2026? / फरवरी 2026 में किस देश ने ICC पुरुष U-19 विश्व कप जीता?",
+    "o": ["India (भारत)", "Australia", "South Africa", "Pakistan"],
+    "a": 0,
+    "e": "India defeated Australia in the final to lift the trophy. / भारत ने फाइनल में ऑस्ट्रेलिया को हराकर ट्रॉफी जीती।",
+    "cat": "current",
+    "month": "2026-02"
+  },
+  {
+    "q": "What is the 'Synonym' of the word 'Abundant'? / 'Abundant' शब्द का 'पर्यायवाची' क्या है?",
+    "o": ["Scarcity", "Plentiful (प्रचुर)", "Rare", "Meager"],
+    "a": 1,
+    "e": "Abundant means existing in large quantities. / Abundant का अर्थ है बड़ी मात्रा में मौजूद होना।",
+    "cat": "english",
+    "sub": "vocabulary"
+  },
+  {
+    "q": "Who was appointed as the new Chief Justice of India in April 2026? / अप्रैल 2026 में भारत के नए मुख्य न्यायाधीश के रूप में किसे नियुक्त किया गया?",
+    "o": ["Justice Khanna", "Justice Bhushan", "Justice Malhotra", "Justice Ramana"],
+    "a": 0,
+    "e": "Check the latest 2026 appointments for your exam current affairs module.",
+    "cat": "current",
+    "month": "2026-04"
+  },
+  {
+    "q": "Choose the correct 'Antonym' of 'Arrogant': / 'Arrogant' का सही 'विलोम' शब्द चुनें:",
+    "o": ["Proud", "Humble (विनम्र)", "Haughty", "Egoistic"],
+    "a": 1,
+    "e": "Arrogant means conceited; Humble means showing a modest estimate of one's importance.",
+    "cat": "english",
+    "sub": "vocabulary"
+  },
+  {
+    "q": "Which state launched the 'Kanya Utthan Yojana 2.0' in March 2026? / मार्च 2026 में किस राज्य ने 'कन्या उत्थान योजना 2.0' शुरू की?",
+    "o": ["Uttar Pradesh", "Bihar (बिहार)", "Madhya Pradesh", "Rajasthan"],
+    "a": 1,
+    "e": "Bihar govt updated the scheme to provide higher financial aid for girls' education.",
+    "cat": "current",
+    "month": "2026-03"
+  },
+  {
+    "q": "Fill in the blank: She has been living in Patna ___ 2010.",
+    "o": ["For", "Since (से)", "From", "By"],
+    "a": 1,
+    "e": "'Since' is used for a specific point of time in the past.",
+    "cat": "english",
+    "sub": "grammar"
+  },
+  {
+    "q": "What is the rank of India in the 'World Happiness Report 2026'? / 'विश्व प्रसन्नता रिपोर्ट 2026' में भारत का रैंक क्या है?",
+    "o": ["120", "126", "136", "140"],
+    "a": 1,
+    "e": "India's rank has slightly improved in the latest 2026 report.",
+    "cat": "current",
+    "month": "2026-03"
+  },
+  {
+    "q": "Identify the correctly spelt word: / सही वर्तनी वाले शब्द को पहचानें:",
+    "o": ["Occurence", "Occurrence", "Occurance", "Occurrance"],
+    "a": 1,
+    "e": "The correct spelling is O-C-C-U-R-R-E-N-C-E.",
+    "cat": "english",
+    "sub": "spelling"
+  },
+  {
+    "q": "Who won the 'Dadasaheb Phalke Award' for 2025 (Announced in 2026)? / 2025 के लिए 'दादा साहब फाल्के पुरस्कार' किसने जीता?",
+    "o": ["Shah Rukh Khan", "Amitabh Bachchan", "Rekha", "Mithun Chakraborty"],
+    "a": 3,
+    "e": "Mithun Chakraborty was honored for his massive contribution to Indian cinema.",
+    "cat": "current",
+    "month": "2026-01"
+  },
+  {
+    "q": "Change into 'Indirect Speech': He said, 'I am busy.' / 'इनडायरेक्ट स्पीच' में बदलें:",
+    "o": ["He said that he is busy.", "He said that he was busy.", "He says he was busy.", "He told he is busy."],
+    "a": 1,
+    "e": "In reported speech, present simple changes to past simple.",
+    "cat": "english",
+    "sub": "grammar"
+  },
+  {
+    "q": "Which Indian city hosted the 'G20 Digital Summit' in April 2026? / अप्रैल 2026 में किस भारतीय शहर ने 'G20 डिजिटल शिखर सम्मेलन' की मेजबानी की?",
+    "o": ["New Delhi", "Bengaluru (बेंगलुरु)", "Hyderabad", "Pune"],
+    "a": 1,
+    "e": "Bengaluru is known as the Silicon Valley of India.",
+    "cat": "current",
+    "month": "2026-04"
+  },
+  {
+    "q": "What is the meaning of the idiom 'To pull someone's leg'? / 'To pull someone's leg' मुहावरे का क्या अर्थ है?",
+    "o": ["To help someone", "To joke or tease (मजाक करना)", "To hurt someone", "To run fast"],
+    "a": 1,
+    "e": "It means to play a joke on someone by making them believe something untrue.",
+    "cat": "english",
+    "sub": "idioms"
+  },
+  {
+    "q": "The 'Bihar Udyami Yojana' 2026 focuses on which sector? / 'बिहार उद्यमी योजना' 2026 किस क्षेत्र पर केंद्रित है?",
+    "o": ["Agriculture", "Micro & Small Industries (MSME)", "IT Sector", "Health"],
+    "a": 1,
+    "e": "It provides loans to youth and women to start their own small businesses.",
+    "cat": "current",
+    "sub": "bihar_news"
+  },
+  {
+    "q": "Select the 'One-word substitution': A person who knows many languages.",
+    "o": ["Bilingual", "Polyglot (बहुभाषाविद)", "Linguist", "Grammarian"],
+    "a": 1,
+    "e": "Polyglot is a person who can speak or write in several languages.",
+    "cat": "english",
+    "sub": "vocabulary"
+  },
+  {
+    "q": "Which new station was added to the 'Patna Metro' route map in 2026? / 2026 में 'पटना मेट्रो' के रूट मैप में कौन सा नया स्टेशन जोड़ा गया?",
+    "o": ["Saguna More", "Patna Junction", "Zero Mile", "Mithapur"],
+    "a": 2,
+    "e": "The construction of the Priority Corridor is in full swing in 2026.",
+    "cat": "current",
+    "sub": "bihar_news"
+  },
+  {
+    "q": "Choose the correct preposition: He died ___ Cholera.",
+    "o": ["By", "With", "Of (से)", "From"],
+    "a": 2,
+    "e": "We use 'Die of' for a disease and 'Die from' for other causes (like hunger).",
+    "cat": "english",
+    "sub": "grammar"
+  },
+  {
+    "q": "Who is the current Governor of Bihar as of April 2026? / अप्रैल 2026 तक बिहार के वर्तमान राज्यपाल कौन हैं?",
+    "o": ["Phagu Chauhan", "Rajendra Arlekar", "Satyapal Malik", "Larkha Nath"],
+    "a": 1,
+    "e": "Always stay updated with the latest constitutional appointments in the state.",
+    "cat": "current",
+    "sub": "bihar_news"
+  },
+  {
+    "q": "Which Indian state has the highest population density as per the 2011 Census? / 2011 की जनगणना के अनुसार किस भारतीय राज्य का जनसंख्या घनत्व सबसे अधिक है?",
+    "o": ["West Bengal", "Bihar (बिहार)", "Uttar Pradesh", "Kerala"],
+    "a": 1,
+    "e": "Bihar has the highest density with 1106 persons per sq km. / बिहार में प्रति वर्ग किमी 1106 व्यक्तियों के साथ सबसे अधिक घनत्व है।",
+    "cat": "gk",
+    "sub": "bihar_geo"
+  },
+  {
+    "q": "What is the 'Escape Velocity' from the Moon's surface? / चंद्रमा की सतह से 'पलायन वेग' क्या है?",
+    "o": ["11.2 km/s", "2.38 km/s", "5.0 km/s", "1.6 km/s"],
+    "a": 1,
+    "e": "Moon's escape velocity is much lower than Earth's (11.2 km/s). / चंद्रमा का पलायन वेग पृथ्वी की तुलना में बहुत कम है।",
+    "cat": "gs",
+    "sub": "motion"
+  },
+  {
+    "q": "The 'Dronacharya Award' is given to which category of people? / 'द्रोणाचार्य पुरस्कार' किस श्रेणी के लोगों को दिया जाता है?",
+    "o": ["Players", "Sports Coaches (खेल प्रशिक्षक)", "Umpires", "Sports Journalists"],
+    "a": 1,
+    "e": "It is awarded for outstanding coaching in sports. / यह खेलों में उत्कृष्ट कोचिंग के लिए दिया जाता है।",
+    "cat": "gk",
+    "sub": "geo"
+  },
+  {
+    "q": "Which part of the 'Cinchona' tree yields the drug Quinine? / 'सिनकोना' के पेड़ के किस भाग से कुनैन (Quinine) दवा प्राप्त होती है?",
+    "o": ["Leaves", "Flowers", "Bark (छाल)", "Roots"],
+    "a": 2,
+    "e": "Quinine is used in the treatment of Malaria. / कुनैन का उपयोग मलेरिया के उपचार में किया जाता है।",
+    "cat": "gs",
+    "sub": "biology"
+  },
+  {
+    "q": "Who was the first Indian to win a 'Nobel Prize'? / 'नोबेल पुरस्कार' जीतने वाले पहले भारतीय कौन थे?",
+    "o": ["C.V. Raman", "Mother Teresa", "Rabindranath Tagore (रवींद्रनाथ टैगोर)", "Hargobind Khorana"],
+    "a": 2,
+    "e": "He won it for Literature in 1913 for 'Gitanjali'. / उन्होंने 1913 में 'गीतांजलि' के लिए साहित्य में इसे जीता था।",
+    "cat": "gk",
+    "sub": "history"
+  },
+  {
+    "q": "What is the chemical formula of 'Heavy Water'? / 'भारी जल' (Heavy Water) का रासायनिक सूत्र क्या है?",
+    "o": ["H2O", "D2O", "H2O2", "CO2"],
+    "a": 1,
+    "e": "D2O (Deuterium Oxide) is used as a moderator in nuclear reactors. / D2O का उपयोग परमाणु रिएक्टरों में मॉडरेटर के रूप में किया जाता है।",
+    "cat": "gs",
+    "sub": "chem"
+  },
+  {
+    "q": "Which city is known as the 'Electronic City of India'? / किस शहर को 'भारत की इलेक्ट्रॉनिक सिटी' कहा जाता है?",
+    "o": ["Hyderabad", "Bengaluru (बेंगलुरु)", "Gurugram", "Chennai"],
+    "a": 1,
+    "e": "Bengaluru is the hub of India's IT and electronics industry. / बेंगलुरु भारत के आईटी और इलेक्ट्रॉनिक्स उद्योग का केंद्र है।",
+    "cat": "gk",
+    "sub": "geo"
+  },
+  {
+    "q": "The 'Durand Line' is the boundary between which two countries? / 'डूरंड रेखा' किन दो देशों के बीच की सीमा है?",
+    "o": ["India & Pakistan", "India & China", "Pakistan & Afghanistan (पाक और अफगान)", "India & Myanmar"],
+    "a": 2,
+    "e": "It was established in 1893. / इसकी स्थापना 1893 में हुई थी।",
+    "cat": "gk",
+    "sub": "geo"
+  },
+  {
+    "q": "What is the function of 'Platelets' in human blood? / मानव रक्त में 'प्लेटलेट्स' का क्या कार्य है?",
+    "o": ["Carry Oxygen", "Fight Infection", "Blood Clotting (रक्त का थक्का जमना)", "Maintain pH"],
+    "a": 2,
+    "e": "Platelets help to stop bleeding by forming clots. / प्लेटलेट्स थक्के बनाकर रक्तस्राव को रोकने में मदद करते हैं।",
+    "cat": "gs",
+    "sub": "circulatory"
+  },
+  {
+    "q": "In which state is the 'Kaziranga National Park' located? / 'काजीरंगा राष्ट्रीय उद्यान' किस राज्य में स्थित है?",
+    "o": ["Assam (असम)", "West Bengal", "Madhya Pradesh", "Odisha"],
+    "a": 0,
+    "e": "It is famous for the one-horned rhinoceros. / यह एक सींग वाले गैंडे के लिए प्रसिद्ध है।",
+    "cat": "gk",
+    "sub": "geo"
+  },
+  {
+    "q": "Which planet is known as 'Earth's Twin'? / किस ग्रह को 'पृथ्वी की जुड़वां बहन' कहा जाता है?",
+    "o": ["Mars", "Venus (शुक्र)", "Mercury", "Jupiter"],
+    "a": 1,
+    "e": "Venus is similar to Earth in size and mass. / शुक्र आकार और द्रव्यमान में पृथ्वी के समान है।",
+    "cat": "gk",
+    "sub": "geo"
+  },
+  {
+    "q": "What is the 'SI Unit' of Luminous Intensity? / ज्योति तीव्रता (Luminous Intensity) का 'SI मात्रक' क्या है?",
+    "o": ["Mole", "Kelvin", "Candela (कैंडेला)", "Ampere"],
+    "a": 2,
+    "e": "Candela is one of the seven fundamental SI units. / कैंडेला सात मूलभूत SI इकाइयों में से एक है।",
+    "cat": "gs",
+    "sub": "units"
+  },
+  {
+    "q": "Who is the author of the book 'The Discovery of India'? / 'द डिस्कवरी ऑफ इंडिया' पुस्तक के लेखक कौन हैं?",
+    "o": ["Mahatma Gandhi", "Jawaharlal Nehru (जवाहरलाल नेहरू)", "Sardar Patel", "B.R. Ambedkar"],
+    "a": 1,
+    "e": "He wrote this book while imprisoned in Ahmednagar Fort. / उन्होंने यह पुस्तक अहमदनगर किले में कैद के दौरान लिखी थी।",
+    "cat": "gk",
+    "sub": "history"
+  },
+  {
+    "q": "Which gas is responsible for the 'Greenhouse Effect'? / 'ग्रीनहाउस प्रभाव' के लिए कौन सी गैस जिम्मेदार है?",
+    "o": ["Oxygen", "Nitrogen", "Carbon Dioxide (CO2)", "Argon"],
+    "a": 2,
+    "e": "CO2 traps heat in the atmosphere, leading to global warming. / CO2 वायुमंडल में गर्मी को रोकता है, जिससे ग्लोबल वार्मिंग होती है।",
+    "cat": "gs",
+    "sub": "climate"
+  },
+  {
+    "q": "The 'Paisa' coin was first introduced by which ruler? / 'पैसा' का सिक्का सबसे पहले किस शासक ने शुरू किया था?",
+    "o": ["Akbar", "Sher Shah Suri (शेर शाह सूरी)", "Alauddin Khilji", "Iltutmish"],
+    "a": 1,
+    "e": "Sher Shah Suri introduced the Silver Rupee and Copper Dam. / शेर शाह सूरी ने चांदी का रुपया और तांबे का दाम शुरू किया था।",
+    "cat": "gk",
+    "sub": "medieval"
+  },
+  {
+    "q": "Which part of the eye controls the amount of light entering it? / आँख का कौन सा भाग उसमें प्रवेश करने वाली रोशनी की मात्रा को नियंत्रित करता है?",
+    "o": ["Retina", "Cornea", "Iris (परितारिका)", "Lens"],
+    "a": 2,
+    "e": "Iris adjusts the size of the pupil. / आइरिस पुतली के आकार को समायोजित करता है।",
+    "cat": "gs",
+    "sub": "reflection"
+  },
+  {
+    "q": "In which year did the 'Quit India Movement' start? / 'भारत छोड़ो आंदोलन' किस वर्ष शुरू हुआ था?",
+    "o": ["1920", "1930", "1942", "1947"],
+    "a": 2,
+    "e": "It was launched by Gandhiji with the slogan 'Do or Die'. / इसे गांधीजी ने 'करो या मरो' के नारे के साथ शुरू किया था।",
+    "cat": "gk",
+    "sub": "freedom_struggle"
+  },
+  {
+    "q": "What is the study of 'Fungi' called? / 'कवक' (Fungi) के अध्ययन को क्या कहा जाता है?",
+    "o": ["Phycology", "Mycology (माइकोलॉजी)", "Virology", "Bacteriology"],
+    "a": 1,
+    "e": "Mycology deals with the study of fungi and their properties. / माइकोलॉजी कवक और उनके गुणों के अध्ययन से संबंधित है।",
+    "cat": "gs",
+    "sub": "biology"
+  },
+  {
+    "q": "Which fundamental right cannot be suspended even during Emergency? / आपातकाल के दौरान भी कौन सा मौलिक अधिकार निलंबित नहीं किया जा सकता?",
+    "o": ["Right to Equality", "Right to Freedom of Speech", "Right to Life and Personal Liberty (अनुच्छेद 21)", "Right to Religion"],
+    "a": 2,
+    "e": "Articles 20 and 21 remain active during National Emergency. / राष्ट्रीय आपातकाल के दौरान अनुच्छेद 20 और 21 सक्रिय रहते हैं।",
+    "cat": "gk",
+    "sub": "rights"
+  },
+  {
+    "q": "What is the chemical name of 'Vitamin B12'? / 'विटामिन B12' का रासायनिक नाम क्या है?",
+    "o": ["Retinol", "Thiamine", "Cyanocobalamin (साइनोकोबालामिन)", "Riboflavin"],
+    "a": 2,
+    "e": "It contains Cobalt and is essential for red blood cell formation. / इसमें कोबाल्ट होता है और यह लाल रक्त कोशिकाओं के निर्माण के लिए आवश्यक है।",
+    "cat": "gs",
+    "sub": "vitamins"
+  },
+  {
+    "q": "What is the feminine gender of 'Bachelor'? / 'Bachelor' का स्त्रीलिंग क्या है?",
+    "o": ["Bachelore", "Spinster (कुंवारी)", "Mistress", "Nun"],
+    "a": 1,
+    "e": "Spinster is the term used for an unmarried woman.",
+    "cat": "english",
+    "sub": "vocabulary"
+  },
+  {
+    "q": "The 2026 'Bihar Budget' allocated the highest percentage to which sector? / 2026 के 'बिहार बजट' में किस क्षेत्र को सबसे अधिक प्रतिशत आवंटित किया गया?",
+    "o": ["Health", "Education (शिक्षा)", "Infrastructure", "Agriculture"],
+    "a": 1,
+    "e": "Education remains the top priority for Bihar's development budget.",
+    "cat": "current",
+    "sub": "bihar_news"
+  },
+  {
+    "q": "Which article of the Indian Constitution is related to the 'Right to Privacy'? / भारतीय संविधान का कौन सा अनुच्छेद 'निजता के अधिकार' से संबंधित है?",
+    "o": ["Article 19", "Article 20", "Article 21", "Article 22"],
+    "a": 2,
+    "e": "The Supreme Court declared Right to Privacy as a Fundamental Right under Article 21. / सुप्रीम कोर्ट ने अनुच्छेद 21 के तहत निजता के अधिकार को मौलिक अधिकार घोषित किया।",
+    "cat": "gk",
+    "sub": "rights"
+  },
+  {
+    "q": "What is the escape velocity of Earth? / पृथ्वी का पलायन वेग (Escape Velocity) क्या है?",
+    "o": ["9.8 km/s", "11.2 km/s", "15.0 km/s", "7.0 km/s"],
+    "a": 1,
+    "e": "It is the minimum velocity needed to leave Earth's gravity. / यह पृथ्वी के गुरुत्वाकर्षण को छोड़ने के लिए आवश्यक न्यूनतम वेग है।",
+    "cat": "gs",
+    "sub": "motion"
+  },
+  {
+    "q": "Who was the founder of the 'Vikramshila University' in Bihar? / बिहार में 'विक्रमशिला विश्वविद्यालय' के संस्थापक कौन थे?",
+    "o": ["Dharmapala (धर्मपाल)", "Gopala", "Devapala", "Mahipala"],
+    "a": 0,
+    "e": "Dharmapala of the Pala dynasty founded it in the 8th century. / पाल वंश के धर्मपाल ने 8वीं शताब्दी में इसकी स्थापना की थी।",
+    "cat": "gk",
+    "sub": "bihar_hist"
+  },
+  {
+    "q": "Which hormone is known as the 'Fight or Flight' hormone? / किस हार्मोन को 'लड़ो या उड़ो' हार्मोन कहा जाता है?",
+    "o": ["Insulin", "Thyroxine", "Adrenaline (एड्रेनालिन)", "Estrogen"],
+    "a": 2,
+    "e": "Adrenaline is secreted by the adrenal glands during stress. / एड्रेनालिन तनाव के दौरान अधिवृक्क ग्रंथियों द्वारा स्रावित होता है।",
+    "cat": "gs",
+    "sub": "biology"
+  },
+  {
+    "q": "The 'Battle of Plassey' was fought in which year? / 'प्लासी का युद्ध' किस वर्ष लड़ा गया था?",
+    "o": ["1757", "1764", "1857", "1761"],
+    "a": 0,
+    "e": "It was fought between Robert Clive and Siraj-ud-Daulah. / यह रॉबर्ट क्लाइव और सिराजुद्दौला के बीच लड़ा गया था।",
+    "cat": "gk",
+    "sub": "modern"
+  },
+  {
+    "q": "Which layer of the Sun is visible during a total solar eclipse? / पूर्ण सूर्य ग्रहण के दौरान सूर्य की कौन सी परत दिखाई देती है?",
+    "o": ["Photosphere", "Chromosphere", "Corona (कोरोना)", "Core"],
+    "a": 2,
+    "e": "Corona is the outermost layer of the Sun's atmosphere. / कोरोना सूर्य के वायुमंडल की सबसे बाहरी परत है।",
+    "cat": "gs",
+    "sub": "physics"
+  },
+  {
+    "q": "The 'Panchayati Raj' was first adopted by which district? / 'पंचायती राज' को सबसे पहले किस जिले ने अपनाया था?",
+    "o": ["Nagaur, Rajasthan (नागौर)", "Patna, Bihar", "Guntur, AP", "Pune, Maharashtra"],
+    "a": 0,
+    "e": "It was inaugurated on Oct 2, 1959, in Nagaur. / इसका उद्घाटन 2 अक्टूबर 1959 को नागौर में हुआ था।",
+    "cat": "gk",
+    "sub": "panchayat"
+  },
+  {
+    "q": "What is the chemical name of 'Bleaching Powder'? / 'ब्लीचिंग पाउडर' का रासायनिक नाम क्या है?",
+    "o": ["Calcium Carbonate", "Calcium Oxychloride (CaOCl2)", "Sodium Bicarbonate", "Calcium Hydroxide"],
+    "a": 1,
+    "e": "It is used for disinfecting water and as a bleaching agent. / इसका उपयोग पानी को कीटाणुरहित करने और विरंजक के रूप में किया जाता है।",
+    "cat": "gs",
+    "sub": "chem"
+  },
+  {
+    "q": "Which state is the largest producer of 'Mica' in India? / भारत में 'अभ्रक' का सबसे बड़ा उत्पादक राज्य कौन सा है?",
+    "o": ["Bihar", "Jharkhand", "Andhra Pradesh (आंध्र प्रदेश)", "Rajasthan"],
+    "a": 2,
+    "e": "Andhra Pradesh leads in mica production in India. / भारत में अभ्रक उत्पादन में आंध्र प्रदेश अग्रणी है।",
+    "cat": "gk",
+    "sub": "geo"
+  },
+  {
+    "q": "Who wrote the book 'Indica'? / 'इंडिका' पुस्तक किसने लिखी थी?",
+    "o": ["Kautilya", "Megasthenes (मेगास्थनीज)", "Fahien", "Hiuen Tsang"],
+    "a": 1,
+    "e": "Megasthenes was a Greek ambassador in Chandragupta Maurya's court. / मेगास्थनीज चंद्रगुप्त मौर्य के दरबार में एक यूनानी राजदूत था।",
+    "cat": "gk",
+    "sub": "ancient"
+  },
+  {
+    "q": "The 'Curry Leaf' plant belongs to which family? / 'कढ़ी पत्ता' का पौधा किस परिवार से संबंधित है?",
+    "o": ["Rutaceae", "Solanaceae", "Lamiaceae", "Rosaceae"],
+    "a": 0,
+    "e": "It belongs to the Rutaceae family, same as citrus fruits. / यह उसी रुटासी परिवार से है जिससे खट्टे फल संबंधित हैं।",
+    "cat": "gs",
+    "sub": "biology"
+  },
+  {
+    "q": "Which gland is called the 'Master Gland'? / किस ग्रंथि को 'मास्टर ग्रंथि' कहा जाता है?",
+    "o": ["Thyroid", "Adrenal", "Pituitary (पीयूष ग्रंथि)", "Pancreas"],
+    "a": 2,
+    "e": "Pituitary gland controls other endocrine glands. / पीयूष ग्रंथि अन्य अंतःस्रावी ग्रंथियों को नियंत्रित करती है।",
+    "cat": "gs",
+    "sub": "biology"
+  },
+  {
+    "q": "What is 'Fiat Money'? / 'फिएट मनी' (Fiat Money) क्या है?",
+    "o": ["Currency with intrinsic value", "Money issued by govt decree (सरकार द्वारा घोषित)", "Gold coins", "Bank checks"],
+    "a": 1,
+    "e": "It has no intrinsic value but is backed by the government. / इसका कोई आंतरिक मूल्य नहीं होता लेकिन इसे सरकार का समर्थन प्राप्त होता है।",
+    "cat": "gk",
+    "sub": "banking"
+  },
+  {
+    "q": "Which part of the Constitution is called 'Magna Carta of India'? / संविधान के किस भाग को 'भारत का मैग्ना कार्टा' कहा जाता है?",
+    "o": ["Part II", "Part III (भाग III)", "Part IV", "Part IX"],
+    "a": 1,
+    "e": "Part III contains the Fundamental Rights. / भाग III में मौलिक अधिकार शामिल हैं।",
+    "cat": "gk",
+    "sub": "rights"
+  },
+  {
+    "q": "The 'Sudirman Cup' is associated with which sport? / 'सुदीरमन कप' किस खेल से संबंधित है?",
+    "o": ["Football", "Tennis", "Badminton (बैडमिंटन)", "Hockey"],
+    "a": 2,
+    "e": "It is a world mixed team badminton championship. / यह एक विश्व मिश्रित टीम बैडमिंटन चैंपियनशिप है।",
+    "cat": "gk",
+    "sub": "geo"
+  },
+  {
+    "q": "Which acid is present in an 'Ant Sting'? / 'चींटी के डंक' में कौन सा एसिड होता है?",
+    "o": ["Acetic Acid", "Citric Acid", "Methanoic Acid (मेथानोइक एसिड)", "Oxalic Acid"],
+    "a": 2,
+    "e": "Methanoic acid is also known as Formic Acid. / मेथानोइक एसिड को फॉर्मिक एसिड के रूप में भी जाना जाता है।",
+    "cat": "gs",
+    "sub": "acid_base"
+  },
+  {
+    "q": "In which city is the 'Indian School of Mines' located? / 'इंडियन स्कूल ऑफ माइन्स' किस शहर में स्थित है?",
+    "o": ["Ranchi", "Dhanbad (धनबाद)", "Jamshedpur", "Patna"],
+    "a": 1,
+    "e": "It is now known as IIT Dhanbad. / इसे अब IIT धनबाद के रूप में जाना जाता है।",
+    "cat": "gk",
+    "sub": "geo"
+  },
+  {
+    "q": "What is the refractive index of 'Diamond'? / 'हीरे' का अपवर्तनांक (Refractive Index) क्या है?",
+    "o": ["1.33", "1.50", "2.42", "1.00"],
+    "a": 2,
+    "e": "Diamond has a very high refractive index, causing its brilliance. / हीरे का अपवर्तनांक बहुत अधिक होता है, जिससे उसकी चमक बढ़ती है।",
+    "cat": "gs",
+    "sub": "refraction"
+  },
+  {
+    "q": "Which vitamin deficiency causes 'Scurvy'? / किस विटामिन की कमी से 'स्कर्वी' (Scurvy) होता है?",
+    "o": ["Vitamin A", "Vitamin B", "Vitamin C", "Vitamin D"],
+    "a": 2,
+    "e": "Lack of Vitamin C leads to bleeding gums and weakness. / विटामिन C की कमी से मसूड़ों से खून आता है और कमजोरी होती है।",
+    "cat": "gs",
+    "sub": "vitamins"
+  },
+  {
+    "q": "Who was the first female Governor of an Indian state? / भारतीय राज्य की पहली महिला राज्यपाल कौन थीं?",
+    "o": ["Sucheta Kripalani", "Sarojini Naidu (सरोजिनी नायडू)", "Vijayalakshmi Pandit", "Indira Gandhi"],
+    "a": 1,
+    "e": "She served as the Governor of Uttar Pradesh. / उन्होंने उत्तर प्रदेश की राज्यपाल के रूप में कार्य किया।",
+    "cat": "gk",
+    "sub": "polity"
+  },
+  {
+    "q": "Which Fundamental Right was described by Dr. Ambedkar as the 'Heart and Soul' of the Constitution? / किस मौलिक अधिकार को डॉ. अम्बेडकर ने संविधान का 'हृदय और आत्मा' कहा था?",
+    "o": ["Right to Equality", "Right against Exploitation", "Right to Constitutional Remedies (अनुच्छेद 32)", "Right to Freedom of Religion"],
+    "a": 2,
+    "e": "Article 32 allows citizens to move the Supreme Court for enforcement of rights. / अनुच्छेद 32 नागरिकों को अधिकारों के प्रवर्तन के लिए सुप्रीम कोर्ट जाने की अनुमति देता है।",
+    "cat": "gk",
+    "sub": "rights"
+  },
+  {
+    "q": "The 'Joint Sitting' of both Houses of Parliament is presided over by: / संसद के दोनों सदनों की 'संयुक्त बैठक' की अध्यक्षता कौन करता है?",
+    "o": ["President of India", "Vice-President", "Speaker of Lok Sabha (लोकसभा अध्यक्ष)", "Prime Minister"],
+    "a": 2,
+    "e": "The President calls the joint sitting (Art 108), but the Speaker presides. / राष्ट्रपति संयुक्त बैठक बुलाते हैं, लेकिन लोकसभा अध्यक्ष अध्यक्षता करते हैं।",
+    "cat": "gk",
+    "sub": "parliament"
+  },
+  {
+    "q": "Which Amendment Act is known as the 'Mini Constitution' of India? / किस संशोधन अधिनियम को भारत का 'लघु संविधान' कहा जाता है?",
+    "o": ["44th Amendment", "42nd Amendment (42वां संशोधन)", "73rd Amendment", "86th Amendment"],
+    "a": 1,
+    "e": "The 42.nd Amendment (1976) brought massive changes to the Constitution. / 42वें संशोधन (1976) ने संविधान में व्यापक बदलाव किए थे।",
+    "cat": "gk",
+    "sub": "polity"
+  },
+  {
+    "q": "The 'Directive Principles of State Policy' (DPSP) are borrowed from: / 'राज्य के नीति निर्देशक तत्व' (DPSP) कहाँ से लिए गए हैं?",
+    "o": ["USA", "Ireland (आयरलैंड)", "Canada", "Australia"],
+    "a": 1,
+    "e": "DPSPs are mentioned in Part IV (Articles 36-51). / DPSP का उल्लेख भाग IV (अनुच्छेद 36-51) में है।",
+    "cat": "gk",
+    "sub": "polity"
+  },
+  {
+    "q": "Which Article provides for the 'Election Commission' of India? / भारत के 'चुनाव आयोग' के लिए कौन सा अनुच्छेद प्रावधान करता है?",
+    "o": ["Article 324", "Article 315", "Article 280", "Article 360"],
+    "a": 0,
+    "e": "Article 324 gives the EC power to control elections. / अनुच्छेद 324 चुनाव आयोग को चुनाव नियंत्रित करने की शक्ति देता है।",
+    "cat": "gk",
+    "sub": "articles"
+  },
+  {
+    "q": "How many members are nominated by the President to the Rajya Sabha? / राष्ट्रपति द्वारा राज्यसभा में कितने सदस्यों को मनोनीत किया जाता है?",
+    "o": ["2", "10", "12", "15"],
+    "a": 2,
+    "e": "12 members are nominated from fields like Art, Science, Literature. / कला, विज्ञान, साहित्य जैसे क्षेत्रों से 12 सदस्य मनोनीत किए जाते हैं।",
+    "cat": "gk",
+    "sub": "parliament"
+  },
+  {
+    "q": "The 73rd Constitutional Amendment Act is related to: / 73वां संविधान संशोधन अधिनियम किससे संबंधित है?",
+    "o": ["Municipalities", "Panchayati Raj (पंचायती राज)", "Fundamental Duties", "Language"],
+    "a": 1,
+    "e": "It gave constitutional status to Panchayati Raj in 1992. / इसने 1992 में पंचायती राज को संवैधानिक दर्जा दिया था।",
+    "cat": "gk",
+    "sub": "panchayat"
+  },
+  {
+    "q": "What is the 'Quorum' required to hold a meeting of either House of Parliament? / संसद के किसी भी सदन की बैठक के लिए आवश्यक 'कोरम' क्या है?",
+    "o": ["1/5th of total members", "1/10th of total members", "1/4th of total members", "50 members"],
+    "a": 1,
+    "e": "Quorum is the minimum members needed to conduct business (10%). / कोरम कार्यवाही संचालित करने के लिए आवश्यक न्यूनतम सदस्य (10%) है।",
+    "cat": "gk",
+    "sub": "parliament"
+  },
+  {
+    "q": "Which Article deals with the 'Abolition of Untouchability'? / 'अस्पृश्यता के उन्मूलन' से संबंधित कौन सा अनुच्छेद है?",
+    "o": ["Article 14", "Article 15", "Article 17", "Article 18"],
+    "a": 2,
+    "e": "Article 17 forbids the practice of untouchability in any form. / अनुच्छेद 17 किसी भी रूप में अस्पृश्यता के अभ्यास को रोकता है।",
+    "cat": "gk",
+    "sub": "rights"
+  },
+  {
+    "q": "The 'Fundamental Duties' were added to the Constitution on whose recommendation? / 'मौलिक कर्तव्य' किसकी सिफारिश पर संविधान में जोड़े गए थे?",
+    "o": ["Sarkaria Commission", "Swaran Singh Committee (स्वर्ण सिंह समिति)", "Verma Committee", "Mandal Commission"],
+    "a": 1,
+    "e": "They were added by the 42nd Amendment in 1976. / इन्हें 1976 में 42वें संशोधन द्वारा जोड़ा गया था।",
+    "cat": "gk",
+    "sub": "polity"
+  },
+  {
+    "q": "Who appoints the 'Governor' of a State in India? / भारत में किसी राज्य के 'राज्यपाल' की नियुक्ति कौन करता है?",
+    "o": ["Chief Minister", "Prime Minister", "President (राष्ट्रपति)", "Chief Justice of India"],
+    "a": 2,
+    "e": "The Governor holds office during the pleasure of the President. / राज्यपाल राष्ट्रपति के प्रसादपर्यंत पद धारण करता है।",
+    "cat": "gk",
+    "sub": "polity"
+  },
+  {
+    "q": "Which part of the Constitution deals with 'Citizenship'? / संविधान का कौन सा भाग 'नागरिकता' से संबंधित है?",
+    "o": ["Part I", "Part II", "Part III", "Part IV"],
+    "a": 1,
+    "e": "Articles 5 to 11 in Part II deal with citizenship. / भाग II के अनुच्छेद 5 से 11 नागरिकता से संबंधित हैं।",
+    "cat": "gk",
+    "sub": "polity"
+  },
+  {
+    "q": "What is the maximum gap between two sessions of Parliament? / संसद के दो सत्रों के बीच अधिकतम कितना अंतर हो सकता है?",
+    "o": ["3 months", "6 months", "9 months", "1 year"],
+    "a": 1,
+    "e": "Parliament must meet at least twice a year. / संसद की बैठक साल में कम से कम दो बार होनी चाहिए।",
+    "cat": "gk",
+    "sub": "parliament"
+  },
+  {
+    "q": "Under which Article can the President declare a 'Financial Emergency'? / किस अनुच्छेद के तहत राष्ट्रपति 'वित्तीय आपातकाल' घोषित कर सकते हैं?",
+    "o": ["Article 352", "Article 356", "Article 360", "Article 368"],
+    "a": 2,
+    "e": "Financial emergency has never been declared in India yet. / भारत में अभी तक वित्तीय आपातकाल कभी घोषित नहीं किया गया है।",
+    "cat": "gk",
+    "sub": "articles"
+  },
+  {
+    "q": "The idea of 'Single Citizenship' is taken from which country? / 'एकल नागरिकता' का विचार किस देश से लिया गया है?",
+    "o": ["USA", "Britain (ब्रिटेन)", "France", "Switzerland"],
+    "a": 1,
+    "e": "Unlike USA, India follows single citizenship for all states. / अमेरिका के विपरीत, भारत सभी राज्यों के लिए एकल नागरिकता का पालन करता है।",
+    "cat": "gk",
+    "sub": "polity"
+  },
+  {
+    "q": "Which Article provides for 'Uniform Civil Code'? / 'समान नागरिक संहिता' के लिए कौन सा अनुच्छेद प्रावधान करता है?",
+    "o": ["Article 40", "Article 44", "Article 48", "Article 51"],
+    "a": 1,
+    "e": "It is a part of Directive Principles (DPSP). / यह राज्य के नीति निर्देशक तत्वों (DPSP) का हिस्सा है।",
+    "cat": "gk",
+    "sub": "articles"
+  },
+  {
+    "q": "The 'Gram Sabha' is a permanent body at which level? / 'ग्राम सभा' किस स्तर पर एक स्थायी निकाय है?",
+    "o": ["Village Level (ग्राम स्तर)", "Block Level", "District Level", "State Level"],
+    "a": 0,
+    "e": "Gram Sabha consists of all registered voters of a village. / ग्राम सभा में गाँव के सभी पंजीकृत मतदाता शामिल होते हैं।",
+    "cat": "gk",
+    "sub": "panchayat"
+  },
+  {
+    "q": "Who is the 'Ex-officio Chairman' of Rajya Sabha? / राज्यसभा का 'पदेन सभापति' कौन होता है?",
+    "o": ["President", "Prime Minister", "Vice-President (उपराष्ट्रपति)", "Chief Justice"],
+    "a": 2,
+    "e": "The Vice-President of India presides over Rajya Sabha sessions. / भारत के उपराष्ट्रपति राज्यसभा सत्रों की अध्यक्षता करते हैं।",
+    "cat": "gk",
+    "sub": "parliament"
+  },
+  {
+    "q": "Which Schedule contains the 'Anti-Defection Law'? / किस अनुसूची में 'दलबदल विरोधी कानून' शामिल है?",
+    "o": ["8th Schedule", "9th Schedule", "10th Schedule (10वीं अनुसूची)", "12th Schedule"],
+    "a": 2,
+    "e": "It was added by the 52nd Amendment Act, 1985. / इसे 1985 के 52वें संशोधन अधिनियम द्वारा जोड़ा गया था।",
+    "cat": "gk",
+    "sub": "polity"
+  },
+  {
+    "q": "The 'Speaker' of Lok Sabha submits his resignation to? / लोकसभा 'अध्यक्ष' अपना इस्तीफा किसे सौंपता है?",
+    "o": ["President", "Prime Minister", "Deputy Speaker (उपाध्यक्ष)", "Chief Justice"],
+    "a": 2,
+    "e": "Speaker and Deputy Speaker resign to each other. / अध्यक्ष और उपाध्यक्ष एक-दूसरे को इस्तीफा देते हैं।",
+    "cat": "gk",
+    "sub": "parliament"
+  },
+  {
     "q": "What is the 'Repo Rate' in the Indian Economy? / भारतीय अर्थव्यवस्था में 'रेपो रेट' क्या है?",
     "o": ["Rate at which banks lend to public", "Rate at which RBI lends to commercial banks", "Rate at which RBI borrows from banks", "Rate of inflation"],
     "a": 1,
