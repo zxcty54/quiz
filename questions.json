@@ -8,6 +8,3526 @@
     "sub": "bihar"
   },
   {
+  "q": "Which of the following is the 'Smallest' particle of an element that can take part in a chemical reaction?",
+  "o": ["Molecule", "Atom", "Electron", "Proton"],
+  "a": 1,
+  "e": "An atom is the basic unit of an element. While subatomic particles exist, the atom is the smallest unit representing the element's identity.",
+  "cat": "gs",
+  "sub": "atomic_structure"
+},
+{
+  "q": "Who discovered the 'Electron'?",
+  "o": ["Ernest Rutherford", "J.J. Thomson", "James Chadwick", "John Dalton"],
+  "a": 1,
+  "e": "J.J. Thomson discovered the electron in 1897 through his cathode ray tube experiments.",
+  "cat": "gs",
+  "sub": "atomic_structure"
+},
+{
+  "q": "The 'Nucleus' of an atom consists of which particles?",
+  "o": ["Electrons and Protons", "Protons and Neutrons", "Electrons and Neutrons", "Only Protons"],
+  "a": 1,
+  "e": "Protons and Neutrons (together called Nucleons) are located in the center, while electrons revolve around them.",
+  "cat": "gs",
+  "sub": "atomic_structure"
+},
+{
+  "q": "Which subatomic particle has a 'Positive' charge?",
+  "o": ["Electron", "Neutron", "Proton", "Positron"],
+  "a": 2,
+  "e": "Protons are positively charged ($+1.6 \\times 10^{-19}$ C), electrons are negative, and neutrons are neutral.",
+  "cat": "gs",
+  "sub": "atomic_structure"
+},
+{
+  "q": "Who is known as the 'Father of Modern Atomic Theory'?",
+  "o": ["Avogadro", "John Dalton", "Lavoisier", "Bohr"],
+  "a": 1,
+  "e": "John Dalton proposed the first scientific atomic theory in 1803, stating atoms are indivisible.",
+  "cat": "gs",
+  "sub": "atomic_structure"
+},
+{
+  "q": "What is the 'Mass Number' of an atom?",
+  "o": ["Number of Protons", "Number of Electrons", "Sum of Protons and Neutrons", "Number of Neutrons"],
+  "a": 2,
+  "e": "Mass Number (A) = $Z$ (Atomic Number) + $N$ (Number of Neutrons).",
+  "cat": "gs",
+  "sub": "atomic_structure"
+},
+{
+  "q": "Atoms of the same element having the same atomic number but different mass numbers are called:",
+  "o": ["Isobars", "Isotopes", "Isotones", "Isomers"],
+  "a": 1,
+  "e": "Isotopes (like Protium, Deuterium, and Tritium) have different numbers of neutrons.",
+  "cat": "gs",
+  "sub": "atomic_structure"
+},
+{
+  "q": "Which isotope of Hydrogen is 'Radioactive' in nature?",
+  "o": ["Protium", "Deuterium", "Tritium", "None"],
+  "a": 2,
+  "e": "Tritium ($^3H$) is the only radioactive isotope of hydrogen, emitting weak beta particles.",
+  "cat": "gs",
+  "sub": "atomic_structure"
+},
+{
+  "q": "Who discovered the 'Neutron'?",
+  "o": ["Rutherford", "Goldstein", "James Chadwick", "Thomson"],
+  "a": 2,
+  "e": "Chadwick discovered the neutron in 1932 by bombarding Beryllium with alpha particles.",
+  "cat": "gs",
+  "sub": "atomic_structure"
+},
+{
+  "q": "The 'Gold Foil Experiment' led to the discovery of:",
+  "o": ["Electron", "Proton", "Atomic Nucleus", "Neutron"],
+  "a": 2,
+  "e": "Ernest Rutherford's experiment showed that most of the atom is empty space with a dense central nucleus.",
+  "cat": "gs",
+  "sub": "atomic_structure"
+},
+{
+  "q": "What is the maximum number of electrons that can be accommodated in the 'L' shell?",
+  "o": ["2", "8", "18", "32"],
+  "a": 1,
+  "e": "Using the $2n^2$ formula: for L-shell ($n=2$), $2(2)^2 = 8$.",
+  "cat": "gs",
+  "sub": "atomic_structure"
+},
+{
+  "q": "Which state of matter has a 'Definite Shape' and 'Definite Volume'?",
+  "o": ["Solid", "Liquid", "Gas", "Plasma"],
+  "a": 0,
+  "e": "Solids have strong intermolecular forces that keep particles in a fixed position.",
+  "cat": "gs",
+  "sub": "atomic_structure"
+},
+{
+  "q": "The process of a solid changing directly into a gas is called:",
+  "o": ["Evaporation", "Condensation", "Sublimation", "Fusion"],
+  "a": 2,
+  "e": "Substances like Camphor, Dry Ice, and Naphthalene show sublimation.",
+  "cat": "gs",
+  "sub": "atomic_structure"
+},
+{
+  "q": "What is the 'Fourth State' of matter?",
+  "o": ["Gas", "Plasma", "Bose-Einstein Condensate", "Liquid"],
+  "a": 1,
+  "e": "Plasma consists of super-heated, ionized gas and is found in stars and neon signs.",
+  "cat": "gs",
+  "sub": "atomic_structure"
+},
+{
+  "q": "Atoms with the same mass number but different atomic numbers are called:",
+  "o": ["Isotopes", "Isobars", "Isotones", "Isomorphs"],
+  "a": 1,
+  "e": "Isobars belong to different elements, such as Argon (At. No. 18) and Calcium (At. No. 20), both having mass 40.",
+  "cat": "gs",
+  "sub": "atomic_structure"
+},
+{
+  "q": "The 'Uncertainty Principle' was proposed by:",
+  "o": ["Schrodinger", "Heisenberg", "Einstein", "Bohr"],
+  "a": 1,
+  "e": "Heisenberg stated that it is impossible to determine both the position and momentum of an electron simultaneously.",
+  "cat": "gs",
+  "sub": "atomic_structure"
+},
+{
+  "q": "Which of the following is a 'Pure Substance'?",
+  "o": ["Air", "Milk", "Distilled Water", "Steel"],
+  "a": 2,
+  "e": "Distilled water is a compound ($H_2O$), whereas air and milk are mixtures.",
+  "cat": "gs",
+  "sub": "atomic_structure"
+},
+{
+  "q": "The 'Valency' of an atom is determined by:",
+  "o": ["Total number of protons", "Number of electrons in the outermost shell", "Number of neutrons", "Mass number"],
+  "a": 1,
+  "e": "Valence electrons determine the combining capacity of an element.",
+  "cat": "gs",
+  "sub": "atomic_structure"
+},
+{
+  "q": "What is the charge of an 'Alpha' particle?",
+  "o": ["-1", "0", "+2", "+1"],
+  "a": 2,
+  "e": "An alpha particle is a helium nucleus ($He^{2+}$) consisting of 2 protons and 2 neutrons.",
+  "cat": "gs",
+  "sub": "atomic_structure"
+},
+{
+  "q": "Which scientist proposed the 'Plum Pudding' model of the atom?",
+  "o": ["Rutherford", "J.J. Thomson", "Neils Bohr", "Dalton"],
+  "a": 1,
+  "e": "Thomson suggested that an atom is a sphere of positive charge with electrons embedded in it like raisins in a pudding.",
+  "cat": "gs",
+  "sub": "atomic_structure"
+},
+  {
+  "q": "Which quantum number describes the 'Shape' of an orbital?",
+  "o": ["Principal Quantum Number (n)", "Azimuthal Quantum Number (l)", "Magnetic Quantum Number (m)", "Spin Quantum Number (s)"],
+  "a": 1,
+  "e": "The azimuthal quantum number defines the subshell (s, p, d, f) and its corresponding shape.",
+  "cat": "gs",
+  "sub": "atomic_structure"
+},
+{
+  "q": "What is the maximum number of electrons that can be held in a single 'Orbital'?",
+  "o": ["2", "6", "10", "14"],
+  "a": 0,
+  "e": "Regardless of the subshell type, an individual orbital can hold a maximum of 2 electrons with opposite spins.",
+  "cat": "gs",
+  "sub": "atomic_structure"
+},
+{
+  "q": "The 'Aufbau Principle' states that electrons fill orbitals in order of:",
+  "o": ["Increasing Size", "Increasing Energy", "Decreasing Mass", "Alphabetical order"],
+  "a": 1,
+  "e": "Aufbau is German for 'building up'; electrons occupy the lowest energy orbital available first.",
+  "cat": "gs",
+  "sub": "atomic_structure"
+},
+{
+  "q": "Which rule states that 'No two electrons in an atom can have the same set of four quantum numbers'?",
+  "o": ["Hund's Rule", "Pauli Exclusion Principle", "Aufbau Principle", "Octet Rule"],
+  "a": 1,
+  "e": "This principle ensures that electrons in the same orbital must have opposite spins (+1/2 and -1/2).",
+  "cat": "gs",
+  "sub": "atomic_structure"
+},
+{
+  "q": "The 'Spherical' shape is characteristic of which orbital?",
+  "o": ["s-orbital", "p-orbital", "d-orbital", "f-orbital"],
+  "a": 0,
+  "e": "The s-orbital is non-directional and perfectly spherical, while p-orbitals are dumbbell-shaped.",
+  "cat": "gs",
+  "sub": "atomic_structure"
+},
+{
+  "q": "What is the 'Electronic Configuration' of Carbon (Atomic Number 6)?",
+  "o": ["1s2 2s2 2p6", "1s2 2s2 2p2", "1s2 2s4", "1s2 2s1 2p3"],
+  "a": 1,
+  "e": "Carbon has 6 electrons distributed as 2 in the K-shell (1s) and 4 in the L-shell (2s, 2p).",
+  "cat": "gs",
+  "sub": "atomic_structure"
+},
+{
+  "q": "Which of the following is an example of a 'Dumbbell' shaped orbital?",
+  "o": ["s-orbital", "p-orbital", "d-orbital", "f-orbital"],
+  "a": 1,
+  "e": "p-orbitals have two lobes oriented along the x, y, or z axes, resembling a dumbbell.",
+  "cat": "gs",
+  "sub": "atomic_structure"
+},
+{
+  "q": "Who proposed that electrons move in 'Fixed Circular Orbits' around the nucleus?",
+  "o": ["Rutherford", "Neils Bohr", "Thomson", "Planck"],
+  "a": 1,
+  "e": "Bohr’s model introduced the idea of energy levels or shells (K, L, M, N).",
+  "cat": "gs",
+  "sub": "atomic_structure"
+},
+{
+  "q": "The 'Mass' of a Proton is approximately how many times that of an Electron?",
+  "o": ["100 times", "1,837 times", "2,000 times", "Equal"],
+  "a": 1,
+  "e": "Electrons are much lighter than protons and neutrons, contributing almost nothing to the atomic mass.",
+  "cat": "gs",
+  "sub": "atomic_structure"
+},
+{
+  "q": "What is the charge of a 'Neutron'?",
+  "o": ["+1", "-1", "0", "Variable"],
+  "a": 2,
+  "e": "Neutrons are electrically neutral subatomic particles found in the nucleus.",
+  "cat": "gs",
+  "sub": "atomic_structure"
+},
+{
+  "q": "Which subshell has the lowest energy: 3d or 4s?",
+  "o": ["3d", "4s", "Both are equal", "Depends on the atom"],
+  "a": 1,
+  "e": "According to the $(n+l)$ rule, 4s ($4+0=4$) has lower energy than 3d ($3+2=5$).",
+  "cat": "gs",
+  "sub": "atomic_structure"
+},
+{
+  "q": "The total number of 'p-orbitals' in a p-subshell is:",
+  "o": ["1", "3", "5", "7"],
+  "a": 1,
+  "e": "The p-subshell contains three orbitals: $p_x$, $p_y$, and $p_z$.",
+  "cat": "gs",
+  "sub": "atomic_structure"
+},
+{
+  "q": "Which scientist discovered 'Radioactivity'?",
+  "o": ["Marie Curie", "Henri Becquerel", "Rutherford", "Roentgen"],
+  "a": 1,
+  "e": "Becquerel discovered radioactivity in 1896 while working with uranium salts.",
+  "cat": "gs",
+  "sub": "atomic_structure"
+},
+{
+  "q": "What are 'Cathode Rays' composed of?",
+  "o": ["Protons", "Neutrons", "Electrons", "Positrons"],
+  "a": 2,
+  "e": "Cathode rays are streams of fast-moving electrons emitted from the cathode in a discharge tube.",
+  "cat": "gs",
+  "sub": "atomic_structure"
+},
+{
+  "q": "The 'Principal Quantum Number' (n) represents the:",
+  "o": ["Size and Energy of the shell", "Shape of the orbital", "Orientation in space", "Spin of electron"],
+  "a": 0,
+  "e": "The value of 'n' (1, 2, 3...) determines the main energy level where the electron is located.",
+  "cat": "gs",
+  "sub": "atomic_structure"
+},
+{
+  "q": "Which of the following is a 'Noble Gas' configuration?",
+  "o": ["1s2 2s2", "1s2 2s2 2p6", "1s2 2s2 2p5", "1s2 2s2 2p6 3s1"],
+  "a": 1,
+  "e": "The configuration $1s^2 2s^2 2p^6$ belongs to Neon, which has a stable octet.",
+  "cat": "gs",
+  "sub": "atomic_structure"
+},
+{
+  "q": "Atoms with the same number of 'Neutrons' are called:",
+  "o": ["Isotopes", "Isobars", "Isotones", "Isomers"],
+  "a": 2,
+  "e": "Isotones have different atomic and mass numbers but the same $(A-Z)$ value.",
+  "cat": "gs",
+  "sub": "atomic_structure"
+},
+{
+  "q": "Which rule states that 'Orbitals of equal energy are each occupied by one electron before any orbital is doubly occupied'?",
+  "o": ["Pauli's Principle", "Hund's Rule", "Aufbau Rule", "Bohr's Rule"],
+  "a": 1,
+  "e": "Hund’s rule of maximum multiplicity minimizes electron-electron repulsion.",
+  "cat": "gs",
+  "sub": "atomic_structure"
+},
+{
+  "q": "The chemical behavior of an atom depends on its:",
+  "o": ["Number of Neutrons", "Mass Number", "Number of Valance Electrons", "Size of Nucleus"],
+  "a": 2,
+  "e": "Valence electrons determine how an atom bonds and reacts with other atoms.",
+  "cat": "gs",
+  "sub": "atomic_structure"
+},
+  {
+  "q": "The energy required to remove an electron from an isolated gaseous atom is called:",
+  "o": ["Electron Affinity", "Ionization Energy", "Electronegativity", "Lattice Energy"],
+  "a": 1,
+  "e": "Ionization energy increases across a period and decreases down a group.",
+  "cat": "gs",
+  "sub": "periodic_table"
+},
+{
+  "q": "Which of the following elements has the 'Highest' electron affinity?",
+  "o": ["Fluorine", "Chlorine", "Bromine", "Iodine"],
+  "a": 1,
+  "e": "Although Fluorine is more electronegative, Chlorine has a higher electron affinity due to less inter-electronic repulsion.",
+  "cat": "gs",
+  "sub": "periodic_table"
+},
+{
+  "q": "The 'Diagonal Relationship' is shown by elements of which periods?",
+  "o": ["Period 1 and 2", "Period 2 and 3", "Period 3 and 4", "Period 4 and 5"],
+  "a": 1,
+  "e": "Elements like Lithium/Magnesium and Beryllium/Aluminum show similar properties due to similar ionic sizes.",
+  "cat": "gs",
+  "sub": "periodic_table"
+},
+{
+  "q": "Which type of bond is formed by the 'Complete Transfer' of electrons from one atom to another?",
+  "o": ["Covalent Bond", "Ionic (Electrovalent) Bond", "Coordinate Bond", "Hydrogen Bond"],
+  "a": 1,
+  "e": "Ionic bonds usually form between a metal (donor) and a non-metal (acceptor), like in NaCl.",
+  "cat": "gs",
+  "sub": "chemical_bonding"
+},
+{
+  "q": "A bond formed by the 'Sharing' of electrons between two atoms is called:",
+  "o": ["Ionic Bond", "Covalent Bond", "Metallic Bond", "Hydrogen Bond"],
+  "a": 1,
+  "e": "Covalent bonds form when atoms share electron pairs to achieve a stable octet, like in $H_2O$.",
+  "cat": "gs",
+  "sub": "chemical_bonding"
+},
+{
+  "q": "Which of the following molecules contains a 'Triple Bond'?",
+  "o": ["Oxygen ($O_2$)", "Nitrogen ($N_2$)", "Methane ($CH_4$)", "Water ($H_2O$)"],
+  "a": 1,
+  "e": "Nitrogen atoms share three pairs of electrons ($N \\equiv N$) to remain highly stable.",
+  "cat": "gs",
+  "sub": "chemical_bonding"
+},
+{
+  "q": "The bond present in 'Common Salt' (NaCl) is:",
+  "o": ["Covalent", "Ionic", "Coordinate", "Hydrogen"],
+  "a": 1,
+  "e": "Sodium loses an electron and Chlorine gains it, creating a strong electrostatic force.",
+  "cat": "gs",
+  "sub": "chemical_bonding"
+},
+{
+  "q": "What is the 'Shape' of a Methane ($CH_4$) molecule?",
+  "o": ["Linear", "Trigonal Planar", "Tetrahedral", "Pyramidal"],
+  "a": 2,
+  "e": "Methane has $sp^3$ hybridization, resulting in a tetrahedral geometry with bond angles of 109.5°.",
+  "cat": "gs",
+  "sub": "chemical_bonding"
+},
+{
+  "q": "Which type of bond is responsible for the 'High Boiling Point' of water?",
+  "o": ["Ionic Bond", "Covalent Bond", "Hydrogen Bond", "Metallic Bond"],
+  "a": 2,
+  "e": "Hydrogen bonding is a strong intermolecular force between the H of one molecule and O of another.",
+  "cat": "gs",
+  "sub": "chemical_bonding"
+},
+{
+  "q": "An 'Octet Rule' suggests that atoms are most stable when they have how many electrons in their outer shell?",
+  "o": ["2", "4", "8", "18"],
+  "a": 2,
+  "e": "Atoms lose, gain, or share electrons to attain the electron configuration of a noble gas.",
+  "cat": "gs",
+  "sub": "chemical_bonding"
+},
+{
+  "q": "Which of the following is an example of a 'Polar Covalent' molecule?",
+  "o": ["$H_2$", "$O_2$", "$HCl$", "$Cl_2$"],
+  "a": 2,
+  "e": "Because Chlorine is more electronegative than Hydrogen, the shared electrons are pulled closer to Cl.",
+  "cat": "gs",
+  "sub": "chemical_bonding"
+},
+{
+  "q": "The 'Geometry' of a Water ($H_2O$) molecule is:",
+  "o": ["Linear", "Bent (V-shaped)", "Tetrahedral", "Square Planar"],
+  "a": 1,
+  "e": "Due to the presence of two lone pairs on Oxygen, the tetrahedral shape is distorted into a bent shape.",
+  "cat": "gs",
+  "sub": "chemical_bonding"
+},
+{
+  "q": "What is 'Hybridization'?",
+  "o": ["Mixing of atoms", "Mixing of atomic orbitals to form new equivalent orbitals", "Breaking of bonds", "Transfer of protons"],
+  "a": 1,
+  "e": "Hybridization explains the equivalent bond lengths and shapes in molecules like $CH_4$.",
+  "cat": "gs",
+  "sub": "chemical_bonding"
+},
+{
+  "q": "Which of the following compounds has the 'Highest' melting point?",
+  "o": ["$CH_4$", "$H_2O$", "$NaCl$", "$CO_2$"],
+  "a": 2,
+  "e": "Ionic compounds like NaCl have very high melting points due to strong electrostatic lattice energy.",
+  "cat": "gs",
+  "sub": "chemical_bonding"
+},
+{
+  "q": "In a 'Coordinate Covalent Bond', the shared pair of electrons is provided by:",
+  "o": ["Both atoms", "Only one atom", "Three atoms", "The nucleus"],
+  "a": 1,
+  "e": "Also called a 'Dative Bond', as seen in the formation of Ammonium ion ($NH_4^+$).",
+  "cat": "gs",
+  "sub": "chemical_bonding"
+},
+{
+  "q": "Which force is the 'Weakest' among the following?",
+  "o": ["Ionic Bond", "Covalent Bond", "Hydrogen Bond", "Van der Waals Forces"],
+  "a": 3,
+  "e": "Van der Waals forces are weak intermolecular attractions between non-polar molecules.",
+  "cat": "gs",
+  "sub": "chemical_bonding"
+},
+{
+  "q": "The 'Bond Angle' in a linear molecule like $CO_2$ is:",
+  "o": ["90°", "104.5°", "120°", "180°"],
+  "a": 3,
+  "e": "$CO_2$ has $sp$ hybridization, leading to a perfectly straight linear geometry.",
+  "cat": "gs",
+  "sub": "chemical_bonding"
+},
+{
+  "q": "Which molecule has 'Zero' dipole moment?",
+  "o": ["$H_2O$", "$NH_3$", "$CO_2$", "$HCl$"],
+  "a": 2,
+  "e": "In $CO_2$, the bond dipoles are equal and opposite, canceling each other out.",
+  "cat": "gs",
+  "sub": "chemical_bonding"
+},
+{
+  "q": "Metallic bonds are characterized by a 'Sea of':",
+  "o": ["Protons", "Neutrons", "Mobile Electrons", "Fixed Ions"],
+  "a": 2,
+  "e": "Delocalized electrons allow metals to conduct electricity and heat efficiently.",
+  "cat": "gs",
+  "sub": "chemical_bonding"
+},
+{
+  "q": "What is the hybridization of Beryllium in $BeCl_2$?",
+  "o": ["sp", "sp2", "sp3", "dsp2"],
+  "a": 0,
+  "e": "Beryllium forms two sigma bonds with Chlorine, resulting in linear $sp$ hybridization.",
+  "cat": "gs",
+  "sub": "chemical_bonding"
+},
+  {
+  "q": "The energy required to remove an electron from an isolated gaseous atom is called:",
+  "o": ["Electron Affinity", "Ionization Energy", "Electronegativity", "Lattice Energy"],
+  "a": 1,
+  "e": "Ionization energy increases across a period and decreases down a group due to the change in nuclear pull.",
+  "cat": "gs",
+  "sub": "periodic_table"
+},
+{
+  "q": "Which of the following elements has the 'Highest' electron affinity?",
+  "o": ["Fluorine", "Chlorine", "Bromine", "Iodine"],
+  "a": 1,
+  "e": "Although Fluorine is more electronegative, Chlorine has a higher electron affinity because its larger size allows for less electron-electron repulsion.",
+  "cat": "gs",
+  "sub": "periodic_table"
+},
+{
+  "q": "The 'Diagonal Relationship' in the periodic table is shown by elements of which periods?",
+  "o": ["Period 1 and 2", "Period 2 and 3", "Period 3 and 4", "Period 4 and 5"],
+  "a": 1,
+  "e": "Elements like Lithium and Magnesium show similar properties due to their similar ionic sizes and charge densities.",
+  "cat": "gs",
+  "sub": "periodic_table"
+},
+{
+  "q": "Which type of bond is formed by the 'Complete Transfer' of electrons from one atom to another?",
+  "o": ["Covalent Bond", "Ionic (Electrovalent) Bond", "Coordinate Bond", "Hydrogen Bond"],
+  "a": 1,
+  "e": "Ionic bonds usually form between a metal (donor) and a non-metal (acceptor), like in Sodium Chloride (NaCl).",
+  "cat": "gs",
+  "sub": "chemical_bonding"
+},
+{
+  "q": "A bond formed by the 'Sharing' of electrons between two atoms is called:",
+  "o": ["Ionic Bond", "Covalent Bond", "Metallic Bond", "Hydrogen Bond"],
+  "a": 1,
+  "e": "Covalent bonds form when atoms share electron pairs to achieve a stable noble gas configuration.",
+  "cat": "gs",
+  "sub": "chemical_bonding"
+},
+{
+  "q": "Which of the following molecules contains a 'Triple Bond'?",
+  "o": ["Oxygen ($O_2$)", "Nitrogen ($N_2$)", "Methane ($CH_4$)", "Water ($H_2O$)"],
+  "a": 1,
+  "e": "Nitrogen atoms share three pairs of electrons ($N \\equiv N$) to achieve stability, making the molecule very inert.",
+  "cat": "gs",
+  "sub": "chemical_bonding"
+},
+{
+  "q": "The bond present in 'Common Salt' (NaCl) is:",
+  "o": ["Covalent", "Ionic", "Coordinate", "Hydrogen"],
+  "a": 1,
+  "e": "Sodium loses an electron to become $Na^+$ and Chlorine gains one to become $Cl^-$, creating a strong electrostatic attraction.",
+  "cat": "gs",
+  "sub": "chemical_bonding"
+},
+{
+  "q": "What is the 'Shape' of a Methane ($CH_4$) molecule?",
+  "o": ["Linear", "Trigonal Planar", "Tetrahedral", "Pyramidal"],
+  "a": 2,
+  "e": "Methane has $sp^3$ hybridization, resulting in a tetrahedral geometry with bond angles of roughly 109.5°.",
+  "cat": "gs",
+  "sub": "chemical_bonding"
+},
+{
+  "q": "Which type of bond is responsible for the 'High Boiling Point' of water compared to other similar-sized molecules?",
+  "o": ["Ionic Bond", "Covalent Bond", "Hydrogen Bond", "Metallic Bond"],
+  "a": 2,
+  "e": "Hydrogen bonding is a strong intermolecular force that requires significant energy to break during boiling.",
+  "cat": "gs",
+  "sub": "chemical_bonding"
+},
+{
+  "q": "The 'Octet Rule' suggests that atoms are most stable when they have how many electrons in their outer shell?",
+  "o": ["2", "4", "8", "18"],
+  "a": 2,
+  "e": "Atoms lose, gain, or share electrons to attain the stable electron configuration of a noble gas (8 valence electrons).",
+  "cat": "gs",
+  "sub": "chemical_bonding"
+},
+{
+  "q": "Which of the following is an example of a 'Polar Covalent' molecule?",
+  "o": ["$H_2$", "$O_2$", "$HCl$", "$Cl_2$"],
+  "a": 2,
+  "e": "Because Chlorine is much more electronegative than Hydrogen, the shared electrons are pulled closer to the Chlorine atom.",
+  "cat": "gs",
+  "sub": "chemical_bonding"
+},
+{
+  "q": "The 'Geometry' of a Water ($H_2O$) molecule is:",
+  "o": ["Linear", "Bent (V-shaped)", "Tetrahedral", "Square Planar"],
+  "a": 1,
+  "e": "Due to the presence of two lone pairs on the Oxygen atom, the tetrahedral shape is distorted into a bent or V-shape.",
+  "cat": "gs",
+  "sub": "chemical_bonding"
+},
+{
+  "q": "What is 'Hybridization' in chemistry?",
+  "o": ["Mixing of atoms", "Mixing of atomic orbitals to form new equivalent orbitals", "Breaking of bonds", "Transfer of protons"],
+  "a": 1,
+  "e": "Hybridization explains the equivalent bond lengths and specific geometries in molecules like Methane.",
+  "cat": "gs",
+  "sub": "chemical_bonding"
+},
+{
+  "q": "Which of the following compounds has the 'Highest' melting point due to its lattice structure?",
+  "o": ["$CH_4$", "$H_2O$", "$NaCl$", "$CO_2$"],
+  "a": 2,
+  "e": "Ionic compounds like Sodium Chloride have very high melting points due to the strong electrostatic forces in the crystal lattice.",
+  "cat": "gs",
+  "sub": "chemical_bonding"
+},
+{
+  "q": "In a 'Coordinate Covalent Bond' (Dative Bond), the shared pair of electrons is provided by:",
+  "o": ["Both atoms", "Only one atom", "Three atoms", "The nucleus"],
+  "a": 1,
+  "e": "One atom provides both electrons for the bond, while the other atom simply shares them, as seen in the Ammonium ion ($NH_4^+$).",
+  "cat": "gs",
+  "sub": "chemical_bonding"
+},
+{
+  "q": "Which intermolecular force is the 'Weakest' among the following?",
+  "o": ["Ionic Bond", "Covalent Bond", "Hydrogen Bond", "Van der Waals Forces"],
+  "a": 3,
+  "e": "Van der Waals forces are weak attractions between non-polar molecules and are easily overcome by heat.",
+  "cat": "gs",
+  "sub": "chemical_bonding"
+},
+{
+  "q": "The 'Bond Angle' in a linear molecule like Carbon Dioxide ($CO_2$) is:",
+  "o": ["90°", "104.5°", "120°", "180°"],
+  "a": 3,
+  "e": "$CO_2$ has $sp$ hybridization, leading to a perfectly straight linear geometry with an angle of 180°.",
+  "cat": "gs",
+  "sub": "chemical_bonding"
+},
+{
+  "q": "Which molecule has a 'Zero' dipole moment due to its symmetrical shape?",
+  "o": ["$H_2O$", "$NH_3$", "$CO_2$", "$HCl$"],
+  "a": 2,
+  "e": "In $CO_2$, the individual C-O bond dipoles are equal and opposite, so they cancel each other out.",
+  "cat": "gs",
+  "sub": "chemical_bonding"
+},
+{
+  "q": "Metallic bonds are often described as a 'Sea of':",
+  "o": ["Protons", "Neutrons", "Mobile Electrons", "Fixed Ions"],
+  "a": 2,
+  "e": "Delocalized mobile electrons allow metals to conduct electricity and heat efficiently.",
+  "cat": "gs",
+  "sub": "chemical_bonding"
+},
+  {
+  "q": "Which of the following elements shows an 'Exceptional' electronic configuration where the 4s shell has only 1 electron?",
+  "o": ["Iron", "Chromium", "Zinc", "Magnesium"],
+  "a": 1,
+  "e": "Chromium (Z=24) has a configuration of [Ar] 3d5 4s1 to achieve a stable half-filled d-subshell.",
+  "cat": "gs",
+  "sub": "atomic_structure"
+},
+{
+  "q": "The 'Half-life' of Carbon-14 is approximately how many years?",
+  "o": ["1,500 years", "5,730 years", "10,000 years", "25,000 years"],
+  "a": 1,
+  "e": "Carbon-14 has a half-life of 5,730 years, making it ideal for dating organic remains up to 50,000 years old.",
+  "cat": "gs",
+  "sub": "atomic_structure"
+},
+{
+  "q": "Which of the following has the largest 'Ionic Radius'?",
+  "o": ["O2-", "F-", "Na+", "Mg2+"],
+  "a": 0,
+  "e": "These are isoelectronic species; the one with the lowest nuclear charge (Oxygen) has the largest radius.",
+  "cat": "gs",
+  "sub": "periodic_table"
+},
+{
+  "q": "Which effect describes the 'Reluctance of s-shell electrons' to participate in bonding in heavier p-block elements?",
+  "o": ["Inductive Effect", "Inert Pair Effect", "Resonance", "Shielding Effect"],
+  "a": 1,
+  "e": "Inert pair effect explains why Lead (Pb) is more stable in +2 oxidation state than +4.",
+  "cat": "gs",
+  "sub": "periodic_table"
+},
+{
+  "q": "Which molecule contains both 'Ionic and Covalent' bonds?",
+  "o": ["CH4", "NaCl", "KCN", "H2O"],
+  "a": 2,
+  "e": "In Potassium Cyanide, the bond between K+ and CN- is ionic, while the bond between C and N is covalent.",
+  "cat": "gs",
+  "sub": "chemical_bonding"
+},
+{
+  "q": "What is the 'Bond Order' of an Oxygen ($O_2$) molecule?",
+  "o": ["1", "2", "3", "1.5"],
+  "a": 1,
+  "e": "Oxygen has a double bond between the two atoms, resulting in a bond order of 2.",
+  "cat": "gs",
+  "sub": "chemical_bonding"
+},
+{
+  "q": "The 'VSEPR Theory' is used to predict the:",
+  "o": ["Atomic mass", "Molecular geometry/shape", "Electron affinity", "Nuclear stability"],
+  "a": 1,
+  "e": "Valence Shell Electron Pair Repulsion theory predicts shape based on the repulsion between electron pairs.",
+  "cat": "gs",
+  "sub": "chemical_bonding"
+},
+{
+  "q": "Which element has the highest 'Melting Point' in the periodic table?",
+  "o": ["Iron", "Tungsten (W)", "Osmium", "Platinum"],
+  "a": 1,
+  "e": "Tungsten has the highest melting point (3,422°C) of all metals, used in bulb filaments.",
+  "cat": "gs",
+  "sub": "periodic_table"
+},
+{
+  "q": "What is 'Heavy Water' chemically?",
+  "o": ["H2O2", "D2O", "T2O", "Hard water"],
+  "a": 1,
+  "e": "Deuterium Oxide ($D_2O$) is used as a moderator in nuclear reactors.",
+  "cat": "gs",
+  "sub": "atomic_structure"
+},
+{
+  "q": "The 'Octet Rule' is violated in which of the following molecules?",
+  "o": ["CO2", "PCl5", "NH3", "CH4"],
+  "a": 1,
+  "e": "In $PCl_5$, Phosphorus has 10 electrons in its valence shell, showing an 'expanded octet'.",
+  "cat": "gs",
+  "sub": "chemical_bonding"
+},
+{
+  "q": "Which group of elements is known as 'Chalcogens'?",
+  "o": ["Group 15", "Group 16", "Group 17", "Group 18"],
+  "a": 1,
+  "e": "Group 16 elements (Oxygen, Sulfur, etc.) are called chalcogens (ore-formers).",
+  "cat": "gs",
+  "sub": "periodic_table"
+},
+{
+  "q": "Which 'Bond' is the strongest among the following?",
+  "o": ["Single Bond", "Double Bond", "Triple Bond", "Hydrogen Bond"],
+  "a": 2,
+  "e": "A triple bond (like in $N_2$) has the highest bond dissociation energy due to three shared pairs.",
+  "cat": "gs",
+  "sub": "chemical_bonding"
+},
+{
+  "q": "The 'Paramagnetic' nature of Oxygen ($O_2$) is best explained by:",
+  "o": ["Valence Bond Theory", "Molecular Orbital Theory", "VSEPR Theory", "Lewis Theory"],
+  "a": 1,
+  "e": "Molecular Orbital Theory shows two unpaired electrons in antibonding orbitals of $O_2$.",
+  "cat": "gs",
+  "sub": "chemical_bonding"
+},
+{
+  "q": "Which element is known as 'Adamantine'?",
+  "o": ["Silicon", "Carbon (Diamond)", "Boron", "Aluminum"],
+  "a": 1,
+  "e": "Diamond is the hardest natural substance due to its 3D covalent network structure.",
+  "cat": "gs",
+  "sub": "periodic_table"
+},
+{
+  "q": "The 'Screening Effect' (Shielding) is strongest in which subshell?",
+  "o": ["s", "p", "d", "f"],
+  "a": 0,
+  "e": "s-orbitals are closest to the nucleus and provide the most effective shielding for outer electrons.",
+  "cat": "gs",
+  "sub": "atomic_structure"
+},
+{
+  "q": "Which radioactive isotope is used to determine the age of 'Rocks' and Earth?",
+  "o": ["Carbon-14", "Uranium-Lead (U-Pb)", "Iodine-131", "Sodium-24"],
+  "a": 1,
+  "e": "Uranium dating is used for non-living materials like rocks and minerals due to its long half-life.",
+  "cat": "gs",
+  "sub": "atomic_structure"
+},
+{
+  "q": "What is the hybridization of 'Graphite'?",
+  "o": ["sp", "sp2", "sp3", "dsp2"],
+  "a": 1,
+  "e": "In graphite, each carbon is bonded to three others in a hexagonal layer, giving it $sp^2$ hybridization.",
+  "cat": "gs",
+  "sub": "chemical_bonding"
+},
+{
+  "q": "Which element has the lowest 'Ionization Energy' in the periodic table?",
+  "o": ["Helium", "Fluorine", "Cesium", "Francium"],
+  "a": 2,
+  "e": "Cesium has the largest atomic size and loses its valence electron most easily.",
+  "cat": "gs",
+  "sub": "periodic_table"
+},
+  {
+  "q": "Which of the following elements has the highest 'Electronegativity' on the Pauling scale?",
+  "o": ["Oxygen", "Chlorine", "Fluorine", "Nitrogen"],
+  "a": 2,
+  "e": "Fluorine is the most electronegative element (4.0), followed by Oxygen (3.5).",
+  "cat": "gs",
+  "sub": "periodic_table"
+},
+{
+  "q": "What is the 'Geometry' of a molecule with 3 bond pairs and 1 lone pair (e.g., $NH_3$)?",
+  "o": ["Tetrahedral", "Trigonal Planar", "Trigonal Pyramidal", "Bent"],
+  "a": 2,
+  "e": "Ammonia has a pyramidal shape because the lone pair repels the bond pairs more strongly.",
+  "cat": "gs",
+  "sub": "chemical_bonding"
+},
+{
+  "q": "Which subatomic particle is used to trigger 'Nuclear Fission' in Uranium-235?",
+  "o": ["Proton", "Fast Neutron", "Slow (Thermal) Neutron", "Electron"],
+  "a": 2,
+  "e": "U-235 requires slow neutrons to capture and become unstable enough to split.",
+  "cat": "gs",
+  "sub": "atomic_structure"
+},
+{
+  "q": "The 'Diagonal Relationship' exists between Beryllium (Be) and which other element?",
+  "o": ["Magnesium", "Aluminum", "Silicon", "Boron"],
+  "a": 1,
+  "e": "Be and Al share similar properties like amphoterism due to similar charge/radius ratios.",
+  "cat": "gs",
+  "sub": "periodic_table"
+},
+{
+  "q": "Which 'Bond' is formed between atoms of significantly different electronegativities?",
+  "o": ["Non-polar Covalent", "Polar Covalent", "Coordinate", "Metallic"],
+  "a": 1,
+  "e": "A difference in electronegativity causes partial charges ($\delta+$ and $\delta-$), making the bond polar.",
+  "cat": "gs",
+  "sub": "chemical_bonding"
+},
+{
+  "q": "The 'Actinide' series consists of elements with atomic numbers from:",
+  "o": ["58 to 71", "90 to 103", "89 to 102", "57 to 70"],
+  "a": 1,
+  "e": "Actinides (Thorium to Lawrencium) follow Actinium in the f-block.",
+  "cat": "gs",
+  "sub": "periodic_table"
+},
+{
+  "q": "What is the 'Bond Angle' in a molecule with $sp^2$ hybridization (e.g., $BF_3$)?",
+  "o": ["180°", "109.5°", "120°", "90°"],
+  "a": 2,
+  "e": "Trigonal planar molecules have a bond angle of 120°.",
+  "cat": "gs",
+  "sub": "chemical_bonding"
+},
+{
+  "q": "Which isotope of Cobalt is used in the 'Treatment of Cancer' (Radiotherapy)?",
+  "o": ["Cobalt-58", "Cobalt-60", "Cobalt-59", "Cobalt-61"],
+  "a": 1,
+  "e": "Cobalt-60 emits high-energy gamma rays used to kill cancer cells.",
+  "cat": "gs",
+  "sub": "atomic_structure"
+},
+{
+  "q": "Elements of Group 2 are commonly known as:",
+  "o": ["Alkali Metals", "Alkaline Earth Metals", "Halogens", "Noble Gases"],
+  "a": 1,
+  "e": "They are called 'alkaline' because their oxides are basic and 'earth' because they are found in the earth's crust.",
+  "cat": "gs",
+  "sub": "periodic_table"
+},
+{
+  "q": "Which molecule has 'Zero' net dipole moment despite having polar bonds?",
+  "o": ["$H_2O$", "$NH_3$", "$CCl_4$", "$HCl$"],
+  "a": 2,
+  "e": "In $CCl_4$ (Carbon Tetrachloride), the individual C-Cl bond dipoles cancel out due to perfect symmetry.",
+  "cat": "gs",
+  "sub": "chemical_bonding"
+},
+{
+  "q": "What is the 'Electronic Configuration' of Copper (Z=29)?",
+  "o": ["[Ar] 4s2 3d9", "[Ar] 4s1 3d10", "[Ar] 4s2 3d10", "[Ar] 4s0 3d11"],
+  "a": 1,
+  "e": "Copper is an exception; it moves an electron from 4s to 3d to achieve a fully-filled stable d-subshell.",
+  "cat": "gs",
+  "sub": "atomic_structure"
+},
+{
+  "q": "Which type of 'Interaction' holds the two strands of DNA together?",
+  "o": ["Covalent Bond", "Ionic Bond", "Hydrogen Bond", "Metallic Bond"],
+  "a": 2,
+  "e": "Hydrogen bonds between Nitrogenous bases (A=T, G$\equiv$C) stabilize the double helix.",
+  "cat": "gs",
+  "sub": "chemical_bonding"
+},
+{
+  "q": "The 'Paramagnetism' of an element is due to the presence of:",
+  "o": ["Paired electrons", "Unpaired electrons", "Protons", "Neutrons"],
+  "a": 1,
+  "e": "Unpaired electrons have a net magnetic moment and are attracted to magnetic fields.",
+  "cat": "gs",
+  "sub": "atomic_structure"
+},
+{
+  "q": "Which element is used as the 'Standard' for calculating atomic masses?",
+  "o": ["Oxygen-16", "Hydrogen-1", "Carbon-12", "Nitrogen-14"],
+  "a": 2,
+  "e": "One Atomic Mass Unit (amu) is defined as $1/12^{th}$ the mass of a Carbon-12 atom.",
+  "cat": "gs",
+  "sub": "atomic_structure"
+},
+{
+  "q": "Which group of the periodic table contains 'Transition Metals'?",
+  "o": ["Groups 1-2", "Groups 13-18", "Groups 3-12", "The bottom rows only"],
+  "a": 2,
+  "e": "d-block elements are called transition metals because they show a transition in properties between s and p blocks.",
+  "cat": "gs",
+  "sub": "periodic_table"
+},
+{
+  "q": "What happens to the 'Atomic Size' as we move from Left to Right in a period?",
+  "o": ["Increases", "Decreases", "Remains same", "First increases then decreases"],
+  "a": 1,
+  "e": "Atomic size decreases due to an increase in effective nuclear charge, which pulls electrons closer.",
+  "cat": "gs",
+  "sub": "periodic_table"
+},
+{
+  "q": "Which 'Bond' is the shortest and strongest?",
+  "o": ["C-C (Single)", "C=C (Double)", "C$\equiv$C (Triple)", "They are all equal"],
+  "a": 2,
+  "e": "As the number of shared electron pairs increases, the bond length decreases and strength increases.",
+  "cat": "gs",
+  "sub": "chemical_bonding"
+},
+{
+  "q": "Who proposed the 'Octet Rule'?",
+  "o": ["Mendeleev", "Lewis and Kossel", "Dalton", "Bohr"],
+  "a": 1,
+  "e": "G.N. Lewis and Walther Kossel proposed that atoms bond to achieve 8 electrons in their valence shell.",
+  "cat": "gs",
+  "sub": "chemical_bonding"
+},
+{
+  "q": "Which 'Subshell' starts filling after the 4s subshell is complete?",
+  "o": ["4p", "3d", "5s", "4d"],
+  "a": 1,
+  "e": "According to the $n+l$ rule, 3d follows 4s because 3d has higher energy.",
+  "cat": "gs",
+  "sub": "atomic_structure"
+},
+  {
+  "q": "Which of the following molecules has a 'Trigonal Bipyramidal' geometry?",
+  "o": ["SF6", "PCl5", "CH4", "BF3"],
+  "a": 1,
+  "e": "PCl5 has sp3d hybridization, resulting in three equatorial and two axial bonds.",
+  "cat": "gs",
+  "sub": "chemical_bonding"
+},
+{
+  "q": "The 'Bond Order' of a molecule with 10 bonding electrons and 6 antibonding electrons is:",
+  "o": ["1", "2", "3", "4"],
+  "a": 1,
+  "e": "Bond Order = (Bonding - Antibonding) / 2 = (10 - 6) / 2 = 2.",
+  "cat": "gs",
+  "sub": "chemical_bonding"
+},
+{
+  "q": "Which element is used in the 'Control Rods' of a nuclear reactor to absorb neutrons?",
+  "o": ["Uranium", "Cadmium", "Plutonium", "Graphite"],
+  "a": 1,
+  "e": "Cadmium and Boron have a high cross-section for neutron capture, allowing them to regulate the fission rate.",
+  "cat": "gs",
+  "sub": "atomic_structure"
+},
+{
+  "q": "What is the 'Hybridization' of Nitrogen in Ammonia ($NH_3$)?",
+  "o": ["sp", "sp2", "sp3", "dsp2"],
+  "a": 2,
+  "e": "Nitrogen forms 3 sigma bonds and has 1 lone pair, totaling 4 orbitals in sp3 hybridization.",
+  "cat": "gs",
+  "sub": "chemical_bonding"
+},
+{
+  "q": "Which element has the highest 'First Ionization Energy' in the periodic table?",
+  "o": ["Hydrogen", "Helium", "Fluorine", "Neon"],
+  "a": 1,
+  "e": "Helium has a stable duplet and the smallest radius, making it extremely difficult to remove an electron.",
+  "cat": "gs",
+  "sub": "periodic_table"
+},
+{
+  "q": "The 'Isodiaphers' are atoms having the same value of:",
+  "o": ["A - Z", "n - p (Neutron - Proton excess)", "A + Z", "Number of electrons"],
+  "a": 1,
+  "e": "Isodiaphers have the same difference between neutrons and protons (e.g., U-238 and Th-234).",
+  "cat": "gs",
+  "sub": "atomic_structure"
+},
+{
+  "q": "Which type of bond is present in 'Solid Iodine' ($I_2$)?",
+  "o": ["Ionic Bond", "Covalent Bond", "Hydrogen Bond", "Van der Waals Forces"],
+  "a": 3,
+  "e": "While the I-I bond is covalent, the molecules are held together in the solid state by weak London dispersion forces.",
+  "cat": "gs",
+  "sub": "chemical_bonding"
+},
+{
+  "q": "What is the 'Maximum' number of electrons in a 'd-subshell'?",
+  "o": ["2", "6", "10", "14"],
+  "a": 2,
+  "e": "The d-subshell has 5 orbitals, each holding 2 electrons, for a total of 10.",
+  "cat": "gs",
+  "sub": "atomic_structure"
+},
+{
+  "q": "Which 'Law' states that properties of elements are periodic functions of their atomic weights?",
+  "o": ["Modern Periodic Law", "Mendeleev's Periodic Law", "Newlands' Law", "Dobereiner's Law"],
+  "a": 1,
+  "e": "Mendeleev's original law used atomic weight; Moseley later corrected this to atomic number.",
+  "cat": "gs",
+  "sub": "periodic_table"
+},
+{
+  "q": "Which molecule has 'sp' hybridization and a 'Linear' shape?",
+  "o": ["$H_2O$", "$CO_2$", "$SO_2$", "$CH_4$"],
+  "a": 1,
+  "e": "In $CO_2$, Carbon forms two double bonds with zero lone pairs, resulting in sp hybridization.",
+  "cat": "gs",
+  "sub": "chemical_bonding"
+},
+{
+  "q": "What is the 'Oxidation State' of Oxygen in $OF_2$ (Oxygen Difluoride)?",
+  "o": ["-2", "-1", "+2", "+1"],
+  "a": 2,
+  "e": "Since Fluorine is more electronegative than Oxygen, Oxygen is forced into a +2 state here.",
+  "cat": "gs",
+  "sub": "periodic_table"
+},
+{
+  "q": "Which series of the hydrogen spectrum falls in the 'Visible' region?",
+  "o": ["Lyman series", "Balmer series", "Paschen series", "Brackett series"],
+  "a": 1,
+  "e": "The Balmer series (transitions to n=2) produces light visible to the human eye.",
+  "cat": "gs",
+  "sub": "atomic_structure"
+},
+{
+  "q": "The 'Amphoteric' oxide among the following is:",
+  "o": ["$Na_2O$", "$SO_2$", "$Al_2O_3$", "$CaO$"],
+  "a": 2,
+  "e": "Aluminum oxide reacts with both acids and bases, showing its amphoteric nature.",
+  "cat": "gs",
+  "sub": "periodic_table"
+},
+{
+  "q": "Which bond is formed by the 'Lateral' (sideways) overlap of p-orbitals?",
+  "o": ["Sigma bond", "Pi bond", "Delta bond", "Hydrogen bond"],
+  "a": 1,
+  "e": "Sideways overlap results in a pi bond, which is weaker than a sigma bond.",
+  "cat": "gs",
+  "sub": "chemical_bonding"
+},
+{
+  "q": "What is the shape of '$XeF_4$' (Xenon Tetrafluoride)?",
+  "o": ["Tetrahedral", "Square Planar", "Octahedral", "See-saw"],
+  "a": 1,
+  "e": "Xe has 4 bond pairs and 2 lone pairs, resulting in a square planar geometry according to VSEPR.",
+  "cat": "gs",
+  "sub": "chemical_bonding"
+},
+{
+  "q": "Which element has the electron configuration $[Ar] 3d^{10} 4s^2$?",
+  "o": ["Copper", "Zinc", "Iron", "Nickel"],
+  "a": 1,
+  "e": "Zinc (Z=30) has a completely filled d-subshell and s-subshell.",
+  "cat": "gs",
+  "sub": "atomic_structure"
+},
+{
+  "q": "Which 'Isotope' is used to measure the rate of soil erosion?",
+  "o": ["Carbon-14", "Cesium-137", "Iodine-131", "Cobalt-60"],
+  "a": 1,
+  "e": "Cs-137, a byproduct of nuclear testing, is used as a marker in soil science.",
+  "cat": "gs",
+  "sub": "atomic_structure"
+},
+{
+  "q": "The 'Bond Angle' in Methane ($CH_4$) is exactly:",
+  "o": ["90°", "120°", "109° 28'", "180°"],
+  "a": 2,
+  "e": "The tetrahedral angle is 109 degrees and 28 minutes.",
+  "cat": "gs",
+  "sub": "chemical_bonding"
+},
+{
+  "q": "Which group of elements are known as 'Coinage Metals'?",
+  "o": ["Group 1", "Group 11", "Group 12", "Group 10"],
+  "a": 1,
+  "e": "Copper, Silver, and Gold (Group 11) have been used historically to make coins.",
+  "cat": "gs",
+  "sub": "periodic_table"
+},
+{
+  "q": "What is the 'Valence Shell' electronic configuration of Noble Gases (except Helium)?",
+  "o": ["ns1", "ns2 np5", "ns2 np6", "ns2 np4"],
+  "a": 2,
+  "e": "Noble gases have a completely filled octet (8 electrons) in their valence shell.",
+  "cat": "gs",
+  "sub": "periodic_table"
+},
+  {
+  "q": "According to Molecular Orbital Theory, which of the following is 'Paramagnetic'?",
+  "o": ["N2", "O2", "H2", "Li2"],
+  "a": 1,
+  "e": "Oxygen has two unpaired electrons in its antibonding pi orbitals, making it attracted to magnetic fields.",
+  "cat": "gs",
+  "sub": "chemical_bonding"
+},
+{
+  "q": "What is the 'Bond Order' of the Neon molecule ($Ne_2$)?",
+  "o": ["0", "1", "2", "3"],
+  "a": 0,
+  "e": "Neon is a noble gas with a full octet; the bonding and antibonding electrons cancel out, so the molecule does not exist.",
+  "cat": "gs",
+  "sub": "chemical_bonding"
+},
+{
+  "q": "The 'Slater's Rules' are used to calculate which of the following?",
+  "o": ["Atomic Mass", "Effective Nuclear Charge (Zeff)", "Ionization Potential", "Electronegativity"],
+  "a": 1,
+  "e": "Slater's rules account for the shielding effect of inner electrons to find the actual charge felt by a valence electron.",
+  "cat": "gs",
+  "sub": "atomic_structure"
+},
+{
+  "q": "Which molecule has a 'Trigonal Planar' shape?",
+  "o": ["NH3", "BF3", "PCl3", "ClF3"],
+  "a": 1,
+  "e": "Boron in BF3 has sp2 hybridization and zero lone pairs, resulting in a flat triangle shape.",
+  "cat": "gs",
+  "sub": "chemical_bonding"
+},
+{
+  "q": "What is the 'Dipole Moment' of a symmetrical molecule like $CH_4$ or $CCl_4$?",
+  "o": ["High", "Zero", "Negative", "Variable"],
+  "a": 1,
+  "e": "In perfectly symmetrical molecules, individual bond dipoles cancel each other out completely.",
+  "cat": "gs",
+  "sub": "chemical_bonding"
+},
+{
+  "q": "Which 'Quantum Number' defines the orientation of an orbital in 3D space?",
+  "o": ["Principal (n)", "Azimuthal (l)", "Magnetic (m)", "Spin (s)"],
+  "a": 2,
+  "e": "The magnetic quantum number determines the number of orbitals in a subshell and their direction.",
+  "cat": "gs",
+  "sub": "atomic_structure"
+},
+{
+  "q": "The 'Lanthanide Contraction' causes the atomic radii of 4d and 5d elements (like Zr and Hf) to be:",
+  "o": ["Very different", "Nearly the same", "Extremely large", "Extremely small"],
+  "a": 1,
+  "e": "Poor shielding by 4f electrons leads to a greater nuclear pull, making the sizes almost identical.",
+  "cat": "gs",
+  "sub": "periodic_table"
+},
+{
+  "q": "Which of the following is an 'Isoelectronic' pair?",
+  "o": ["Ne and Ar", "Na+ and Mg2+", "O and F", "Li and Be"],
+  "a": 1,
+  "e": "Both Na+ (11-1=10) and Mg2+ (12-2=10) have 10 electrons, same as Neon.",
+  "cat": "gs",
+  "sub": "atomic_structure"
+},
+{
+  "q": "The 'Bond Angle' in a Water molecule is reduced to 104.5° from 109.5° due to:",
+  "o": ["Lone pair - Lone pair repulsion", "Bond pair - Bond pair repulsion", "Atomic size of Oxygen", "High electronegativity"],
+  "a": 0,
+  "e": "Lone pairs occupy more space and push the O-H bonds closer together.",
+  "cat": "gs",
+  "sub": "chemical_bonding"
+},
+{
+  "q": "Which element has the highest 'Melting Point' among the non-metals?",
+  "o": ["Iodine", "Carbon (Diamond)", "Sulfur", "Phosphorus"],
+  "a": 1,
+  "e": "Diamond's 3D network of strong covalent bonds gives it an extremely high melting point.",
+  "cat": "gs",
+  "sub": "periodic_table"
+},
+{
+  "q": "The 'Stability' of a nucleus is determined by which ratio?",
+  "o": ["Proton-Electron", "Neutron-Proton (n/p)", "Proton-Mass", "Electron-Neutron"],
+  "a": 1,
+  "e": "If the n/p ratio is too high or too low, the nucleus becomes radioactive and decays.",
+  "cat": "gs",
+  "sub": "atomic_structure"
+},
+{
+  "q": "Which type of 'Hybridization' is present in $PCl_5$?",
+  "o": ["sp3", "sp3d", "sp3d2", "dsp2"],
+  "a": 1,
+  "e": "Phosphorus uses one s, three p, and one d orbital to accommodate five Chlorine atoms.",
+  "cat": "gs",
+  "sub": "chemical_bonding"
+},
+{
+  "q": "The 'Metallic Radius' is always _______ than the Covalent Radius for the same element.",
+  "o": ["Smaller", "Larger", "Equal", "Half"],
+  "a": 1,
+  "e": "Metallic bonds are weaker than covalent bonds, resulting in a larger distance between nuclei.",
+  "cat": "gs",
+  "sub": "periodic_table"
+},
+{
+  "q": "What is the 'Geometry' of the $SF_4$ molecule?",
+  "o": ["Tetrahedral", "Square Planar", "See-saw", "Octahedral"],
+  "a": 2,
+  "e": "SF4 has 4 bond pairs and 1 lone pair, creating a see-saw shape based on a trigonal bipyramid.",
+  "cat": "gs",
+  "sub": "chemical_bonding"
+},
+{
+  "q": "Which element is known as the 'Typical Transition Element'?",
+  "o": ["Zinc", "Copper", "Scandium", "Iron"],
+  "a": 3,
+  "e": "Iron (Fe) shows all characteristics like variable valency, color, and magnetism perfectly.",
+  "cat": "gs",
+  "sub": "periodic_table"
+},
+{
+  "q": "The 'Bond Order' of $O_2^+$ is:",
+  "o": ["2", "2.5", "3", "1.5"],
+  "a": 1,
+  "e": "Removing an electron from an antibonding orbital increases the bond order from 2 to 2.5.",
+  "cat": "gs",
+  "sub": "chemical_bonding"
+},
+{
+  "q": "Which rule states that 'Electrons enter the subshell with the lowest (n + l) value first'?",
+  "o": ["Hund's Rule", "Aufbau Principle", "Pauli's Principle", "Octet Rule"],
+  "a": 1,
+  "e": "The (n+l) rule determines the relative energy of subshells.",
+  "cat": "gs",
+  "sub": "atomic_structure"
+},
+{
+  "q": "Which molecule has a 'Pyramidal' shape?",
+  "o": ["$CO_2$", "$BF_3$", "$NH_3$", "$CH_4$"],
+  "a": 2,
+  "e": "Ammonia's lone pair distorts the tetrahedral geometry into a pyramid.",
+  "cat": "gs",
+  "sub": "chemical_bonding"
+},
+{
+  "q": "What is the 'Unit' of Electronegativity?",
+  "o": ["kJ/mol", "eV", "Debye", "No unit"],
+  "a": 3,
+  "e": "Electronegativity is a relative scale (like Pauling's) and has no units.",
+  "cat": "gs",
+  "sub": "periodic_table"
+},
+{
+  "q": "The 'Magnetic Moment' ($\mu$) is calculated using which formula?",
+  "o": ["n(n+1)", "$\sqrt{n(n+2)}$", "n/2", "$\sqrt{n^2+1}$"],
+  "a": 1,
+  "e": "The Spin-Only formula ($\mu = \sqrt{n(n+2)}$ BM) depends on the number of unpaired electrons (n).",
+  "cat": "gs",
+  "sub": "atomic_structure"
+},
+{
+  "q": "According to 'Fajan's Rules', which of the following favors high Covalent character in an Ionic bond?",
+  "o": ["Small cation and Large anion", "Large cation and Small anion", "Small cation and Small anion", "Large cation and Large anion"],
+  "a": 0,
+  "e": "A small cation has high polarizing power, and a large anion is easily polarized, leading to shared electron density (covalent nature).",
+  "cat": "gs",
+  "sub": "chemical_bonding"
+},
+{
+  "q": "Which of the following compounds is the most 'Covalent' according to Fajan's rules?",
+  "o": ["LiCl", "NaCl", "KCl", "RbCl"],
+  "a": 0,
+  "e": "Lithium is the smallest cation in the group, giving it the highest polarizing power and thus the most covalent character.",
+  "cat": "gs",
+  "sub": "chemical_bonding"
+},
+{
+  "q": "What is the 'Formal Charge' on the central Oxygen atom in an Ozone ($O_3$) molecule?",
+  "o": ["0", "+1", "-1", "+2"],
+  "a": 1,
+  "e": "Calculated as: Valence e- - [Lone pair e- + 1/2(Bonding e-)] = 6 - [2 + 3] = +1.",
+  "cat": "gs",
+  "sub": "chemical_bonding"
+},
+{
+  "q": "Which type of 'Hydrogen Bond' is present in o-Nitrophenol?",
+  "o": ["Intermolecular", "Intramolecular", "Ionic", "Metallic"],
+  "a": 1,
+  "e": "Intramolecular H-bonding occurs within the same molecule, leading to a lower boiling point compared to the para-isomer.",
+  "cat": "gs",
+  "sub": "chemical_bonding"
+},
+{
+  "q": "Why is 'Ice' less dense than 'Water'?",
+  "o": ["Due to ionic bonds", "Due to an open cage-like structure formed by Hydrogen bonding", "Due to covalent bonds", "Due to air trapped inside"],
+  "a": 1,
+  "e": "In ice, H-bonds create a hollow hexagonal lattice that increases volume and decreases density.",
+  "cat": "gs",
+  "sub": "chemical_bonding"
+},
+{
+  "q": "Which of the following has the highest 'Lattice Energy'?",
+  "o": ["NaF", "NaCl", "NaBr", "NaI"],
+  "a": 0,
+  "e": "Lattice energy is inversely proportional to the size of the ions; Fluoride is the smallest anion here.",
+  "cat": "gs",
+  "sub": "chemical_bonding"
+},
+{
+  "q": "The 'Dipole Moment' of $NH_3$ is higher than $NF_3$ because:",
+  "o": ["Nitrogen is more electronegative than Fluorine", "In $NH_3$, the orbital dipole and bond dipoles are in the same direction", "Fluorine is smaller than Hydrogen", "Ammonia is linear"],
+  "a": 1,
+  "e": "In $NF_3$, the lone pair dipole opposes the N-F bond dipoles, reducing the net result.",
+  "cat": "gs",
+  "sub": "chemical_bonding"
+},
+{
+  "q": "Which 'Bond' is formed by the overlapping of an s-orbital and a p-orbital?",
+  "o": ["s-p sigma bond", "p-p pi bond", "s-s sigma bond", "d-d bond"],
+  "a": 0,
+  "e": "Head-on overlap of an s and p orbital along the internuclear axis forms a sigma bond.",
+  "cat": "gs",
+  "sub": "chemical_bonding"
+},
+{
+  "q": "What is the 'Valency' of an element with atomic number 16?",
+  "o": ["2", "4", "6", "8"],
+  "a": 0,
+  "e": "Element 16 is Sulfur (2, 8, 6). It needs 2 electrons to complete its octet.",
+  "cat": "gs",
+  "sub": "periodic_table"
+},
+{
+  "q": "Which of the following is 'Diamagnetic'?",
+  "o": ["O2", "N2", "NO", "O2-"],
+  "a": 1,
+  "e": "Nitrogen has all electrons paired in its molecular orbitals ($N \equiv N$).",
+  "cat": "gs",
+  "sub": "chemical_bonding"
+},
+{
+  "q": "The 'Bond Angle' in $NH_3$ is roughly:",
+  "o": ["109.5°", "107°", "104.5°", "120°"],
+  "a": 1,
+  "e": "The presence of one lone pair reduces the tetrahedral angle to 107°.",
+  "cat": "gs",
+  "sub": "chemical_bonding"
+},
+{
+  "q": "Which of the following elements has the lowest 'Electron Gain Enthalpy' (least negative)?",
+  "o": ["F", "Cl", "O", "S"],
+  "a": 2,
+  "e": "Oxygen's small size leads to high electron-electron repulsion when adding an electron.",
+  "cat": "gs",
+  "sub": "periodic_table"
+},
+{
+  "q": "What is the hybridization of Carbon in 'Diamond'?",
+  "o": ["sp", "sp2", "sp3", "dsp2"],
+  "a": 2,
+  "e": "In diamond, each carbon is tetrahedrally bonded to four other carbons.",
+  "cat": "gs",
+  "sub": "chemical_bonding"
+},
+{
+  "q": "Which 'Isotope' of Uranium is the most abundant in nature?",
+  "o": ["U-233", "U-235", "U-238", "U-234"],
+  "a": 2,
+  "e": "U-238 makes up over 99% of natural uranium, while U-235 is only about 0.7%.",
+  "cat": "gs",
+  "sub": "atomic_structure"
+},
+{
+  "q": "The 'Valence Electrons' in a Chloride ion ($Cl^-$) are:",
+  "o": ["7", "8", "17", "18"],
+  "a": 1,
+  "e": "Chlorine (7 valence e-) gains one electron to form $Cl^-$, completing its octet (8).",
+  "cat": "gs",
+  "sub": "atomic_structure"
+},
+{
+  "q": "Which force is responsible for the 'Viscosity' of liquids like Honey?",
+  "o": ["Ionic forces", "Intermolecular forces (like H-bonding)", "Metallic forces", "Nuclear forces"],
+  "a": 1,
+  "e": "Stronger intermolecular attractions lead to higher resistance to flow.",
+  "cat": "gs",
+  "sub": "chemical_bonding"
+},
+{
+  "q": "Which element has the electron configuration $[Ar] 3d^5 4s^1$?",
+  "o": ["Manganese", "Chromium", "Iron", "Vanadium"],
+  "a": 1,
+  "e": "Chromium (Z=24) is an exception to achieve stable half-filled d-subshells.",
+  "cat": "gs",
+  "sub": "atomic_structure"
+},
+{
+  "q": "The 'Bond Order' of $N_2^+$ is:",
+  "o": ["3", "2.5", "2", "1.5"],
+  "a": 1,
+  "e": "Removing an electron from the bonding orbital of $N_2$ (order 3) reduces it to 2.5.",
+  "cat": "gs",
+  "sub": "chemical_bonding"
+},
+{
+  "q": "Which molecule is 'Linear'?",
+  "o": ["$H_2O$", "$SO_2$", "$BeCl_2$", "$NO_2$"],
+  "a": 2,
+  "e": "Beryllium in $BeCl_2$ has sp hybridization and zero lone pairs.",
+  "cat": "gs",
+  "sub": "chemical_bonding"
+},
+{
+  "q": "Which of the following molecules has a 'Square Pyramidal' geometry according to VSEPR theory?",
+  "o": ["SF6", "BrF5", "XeF4", "PCl5"],
+  "a": 1,
+  "e": "BrF5 has 5 bond pairs and 1 lone pair, which distorts the octahedral arrangement into a square pyramid.",
+  "cat": "gs",
+  "sub": "chemical_bonding"
+},
+{
+  "q": "What is the 'Bond Order' of the He2+ ion?",
+  "o": ["0", "0.5", "1", "1.5"],
+  "a": 1,
+  "e": "With 2 electrons in bonding and 1 in antibonding orbitals, the bond order is (2-1)/2 = 0.5.",
+  "cat": "gs",
+  "sub": "chemical_bonding"
+},
+{
+  "q": "Which transition metal ion is responsible for the 'Green' color in emeralds?",
+  "o": ["Fe2+", "Cu2+", "Cr3+", "Mn2+"],
+  "a": 2,
+  "e": "Chromium impurities in the beryl crystal structure undergo d-d transitions that produce the green color.",
+  "cat": "gs",
+  "sub": "periodic_table"
+},
+{
+  "q": "The 'Lyman Series' of the Hydrogen spectrum occurs when an electron jumps from higher orbits to which orbit?",
+  "o": ["n = 1", "n = 2", "n = 3", "n = 4"],
+  "a": 0,
+  "e": "Transitions ending at the ground state (n=1) emit ultraviolet radiation, forming the Lyman series.",
+  "cat": "gs",
+  "sub": "atomic_structure"
+},
+{
+  "q": "Which of the following properties 'Increases' down a group in the periodic table?",
+  "o": ["Electronegativity", "Ionization Enthalpy", "Atomic Radius", "Non-metallic character"],
+  "a": 2,
+  "e": "Atomic radius increases down a group due to the addition of new principal energy levels (shells).",
+  "cat": "gs",
+  "sub": "periodic_table"
+},
+{
+  "q": "What is the 'Hybridization' of Carbon in a Carbonate ion (CO3 2-)?",
+  "o": ["sp", "sp2", "sp3", "sp3d"],
+  "a": 1,
+  "e": "Carbon forms three sigma bonds and has no lone pairs, resulting in trigonal planar sp2 hybridization.",
+  "cat": "gs",
+  "sub": "chemical_bonding"
+},
+{
+  "q": "The 'Bond Angle' in the H2S molecule is approximately 92°. This small angle is explained by:",
+  "o": ["High Electronegativity of S", "Drago's Rule (S uses pure p-orbitals)", "S having three lone pairs", "S being smaller than O"],
+  "a": 1,
+  "e": "In heavier p-block elements, the s-p energy gap is high, so they bond using almost pure p-orbitals near 90°.",
+  "cat": "gs",
+  "sub": "chemical_bonding"
+},
+{
+  "q": "Which radioactive isotope is utilized in household 'Smoke Detectors'?",
+  "o": ["Uranium-238", "Americium-241", "Cobalt-60", "Carbon-14"],
+  "a": 1,
+  "e": "Am-241 emits alpha particles that ionize air; smoke disrupts this current, triggering the alarm.",
+  "cat": "gs",
+  "sub": "atomic_structure"
+},
+{
+  "q": "Which of the following molecules has the highest 'Bond Dissociation Energy'?",
+  "o": ["F2", "Cl2", "N2", "O2"],
+  "a": 2,
+  "e": "The triple bond in Nitrogen is extremely strong and requires the most energy to break.",
+  "cat": "gs",
+  "sub": "chemical_bonding"
+},
+{
+  "q": "According to the 'Octet Rule', which of the following is an 'Electron Deficient' compound?",
+  "o": ["NH3", "BCl3", "PCl3", "CH4"],
+  "a": 1,
+  "e": "Boron has only 6 electrons in its valence shell in BCl3, which is less than a complete octet.",
+  "cat": "gs",
+  "sub": "chemical_bonding"
+},
+{
+  "q": "Which subatomic particle is known as a 'Nucleon'?",
+  "o": ["Electron only", "Proton and Neutron", "Proton and Electron", "Neutron only"],
+  "a": 1,
+  "e": "Both protons and neutrons reside in the nucleus and are collectively called nucleons.",
+  "cat": "gs",
+  "sub": "atomic_structure"
+},
+{
+  "q": "The 'Heisenberg Uncertainty Principle' is mathematically expressed as:",
+  "o": ["E = mc2", "Δx . Δp ≥ h/4π", "λ = h/mv", "PV = nRT"],
+  "a": 1,
+  "e": "It states that position and momentum cannot be measured simultaneously with absolute precision.",
+  "cat": "gs",
+  "sub": "atomic_structure"
+},
+{
+  "q": "Which element has the highest 'Ionization Energy' in its own period?",
+  "o": ["Alkali Metal", "Halogen", "Noble Gas", "Chalcogen"],
+  "a": 2,
+  "e": "Noble gases have the highest IE in their period due to their stable, fully-filled electron configurations.",
+  "cat": "gs",
+  "sub": "periodic_table"
+},
+{
+  "q": "What is the 'Magnetic Moment' of an ion with 3 unpaired electrons?",
+  "o": ["1.73 BM", "2.83 BM", "3.87 BM", "4.90 BM"],
+  "a": 2,
+  "e": "Using the formula √(n(n+2)): √(3(3+2)) = √15 ≈ 3.87 Bohr Magneton.",
+  "cat": "gs",
+  "sub": "atomic_structure"
+},
+{
+  "q": "Which of the following is a 'Polar' molecule?",
+  "o": ["CO2", "BF3", "NH3", "CCl4"],
+  "a": 2,
+  "e": "Ammonia is polar because its pyramidal shape doesn't allow bond dipoles to cancel out.",
+  "cat": "gs",
+  "sub": "chemical_bonding"
+},
+{
+  "q": "Which block of the periodic table contains only 'Metals'?",
+  "o": ["s-block", "p-block", "d-block", "f-block"],
+  "a": 3,
+  "e": "Both d and f blocks are entirely metallic, but f-block is exclusively metals (Lanthanides/Actinides).",
+  "cat": "gs",
+  "sub": "periodic_table"
+},
+{
+  "q": "The 'Bond Order' of Carbon Monoxide (CO) is:",
+  "o": ["1", "2", "2.5", "3"],
+  "a": 3,
+  "e": "CO has a triple bond (one coordinate) and is isoelectronic with N2, giving it a bond order of 3.",
+  "cat": "gs",
+  "sub": "chemical_bonding"
+},
+{
+  "q": "Which series of Hydrogen spectrum falls in the 'Infrared' region?",
+  "o": ["Lyman", "Balmer", "Paschen", "None"],
+  "a": 2,
+  "e": "The Paschen, Brackett, and Pfund series all occur in the infrared region.",
+  "cat": "gs",
+  "sub": "atomic_structure"
+},
+{
+  "q": "Which element was discovered using the 'Spectroscope' and named after the Sun?",
+  "o": ["Hydrogen", "Helium", "Neon", "Argon"],
+  "a": 1,
+  "e": "Helium (from Greek 'Helios') was first detected in the solar spectrum during an eclipse.",
+  "cat": "gs",
+  "sub": "periodic_table"
+},
+{
+  "q": "What is the shape of a molecule with 2 bond pairs and 2 lone pairs (like H2O)?",
+  "o": ["Linear", "Bent / V-shaped", "Tetrahedral", "T-shaped"],
+  "a": 1,
+  "e": "Repulsion between lone pairs reduces the tetrahedral angle, resulting in a bent shape.",
+  "cat": "gs",
+  "sub": "chemical_bonding"
+},
+{
+  "q": "Which 'Bond' has the highest directionality?",
+  "o": ["Ionic", "Covalent", "Metallic", "Van der Waals"],
+  "a": 1,
+  "e": "Covalent bonds are directional because they involve the overlap of specific atomic orbitals.",
+  "cat": "gs",
+  "sub": "chemical_bonding"
+},
+{
+  "q": "The 'Second Ionization Energy' is always higher than the first because:",
+  "o": ["Protons increase", "Effective nuclear charge increases for the cation", "Electrons increase", "Size increases"],
+  "a": 1,
+  "e": "After removing one electron, the nucleus pulls the remaining electrons more tightly.",
+  "cat": "gs",
+  "sub": "periodic_table"
+},
+{
+  "q": "Which element is used in 'Vulcanization' of rubber?",
+  "o": ["Phosphorus", "Sulfur", "Carbon", "Silicon"],
+  "a": 1,
+  "e": "Sulfur forms cross-links between polymer chains, making rubber harder and more durable.",
+  "cat": "gs",
+  "sub": "periodic_table"
+},
+{
+  "q": "What is the hybridization of 'Graphite'?",
+  "o": ["sp", "sp2", "sp3", "dsp2"],
+  "a": 1,
+  "e": "Each carbon in graphite is bonded to three others in a hexagonal plane using sp2 orbitals.",
+  "cat": "gs",
+  "sub": "chemical_bonding"
+},
+{
+  "q": "Which rule states 'No two electrons in an atom can have the same four quantum numbers'?",
+  "o": ["Hund's Rule", "Pauli Exclusion Principle", "Aufbau Principle", "Gay-Lussac's Law"],
+  "a": 1,
+  "e": "This principle limits each orbital to a maximum of two electrons with opposite spins.",
+  "cat": "gs",
+  "sub": "atomic_structure"
+},
+{
+  "q": "Which element has the highest 'Density' in the periodic table?",
+  "o": ["Lead", "Osmium", "Gold", "Mercury"],
+  "a": 1,
+  "e": "Osmium is the densest naturally occurring element (approx 22.59 g/cm3).",
+  "cat": "gs",
+  "sub": "periodic_table"
+},
+{
+  "q": "The 'Resonance' in Benzene provides it with:",
+  "o": ["Instability", "Extra stability", "High reactivity", "Color"],
+  "a": 1,
+  "e": "Delocalization of pi electrons lowers the energy of the molecule, increasing stability.",
+  "cat": "gs",
+  "sub": "chemical_bonding"
+},
+{
+  "q": "Which of the following is an 'Actinide' element used in nuclear fuel?",
+  "o": ["Lanthanum", "Thorium", "Cerium", "Lutetium"],
+  "a": 1,
+  "e": "Thorium is a radioactive actinide that can be converted into fissile Uranium-233.",
+  "cat": "gs",
+  "sub": "periodic_table"
+},
+{
+  "q": "What is the charge of a 'Beta' particle?",
+  "o": ["+1", "0", "-1", "+2"],
+  "a": 2,
+  "e": "A beta particle is essentially a high-speed electron emitted from the nucleus.",
+  "cat": "gs",
+  "sub": "atomic_structure"
+},
+{
+  "q": "Which type of bond is found in 'Dry Ice' (Solid CO2)?",
+  "o": ["Ionic", "Covalent", "Molecular (Van der Waals)", "Metallic"],
+  "a": 2,
+  "e": "Dry ice consists of CO2 molecules held together by weak intermolecular dispersion forces.",
+  "cat": "gs",
+  "sub": "chemical_bonding"
+},
+{
+  "q": "The 'Octet Rule' is not applicable to which element?",
+  "o": ["Carbon", "Oxygen", "Hydrogen", "Nitrogen"],
+  "a": 2,
+  "e": "Hydrogen follows the 'Duplet Rule', as it only has one shell that can hold 2 electrons.",
+  "cat": "gs",
+  "sub": "chemical_bonding"
+},
+{
+  "q": "Which 'Orbit' is called the 'Valence Shell'?",
+  "o": ["Innermost", "Outermost", "Middle", "Nucleus"],
+  "a": 1,
+  "e": "The outermost shell contains the electrons that participate in chemical bonding.",
+  "cat": "gs",
+  "sub": "atomic_structure"
+},
+{
+  "q": "Which element is known as 'Quick Silver'?",
+  "o": ["Silver", "Mercury", "Aluminum", "Platinum"],
+  "a": 1,
+  "e": "Mercury is a liquid metal that looks like liquid silver and flows quickly.",
+  "cat": "gs",
+  "sub": "periodic_table"
+},
+{
+  "q": "The 'Angle' in a perfectly Tetrahedral molecule is:",
+  "o": ["90°", "120°", "109.5°", "180°"],
+  "a": 2,
+  "e": "Sp3 hybridized central atoms with zero lone pairs (like CH4) exhibit this angle.",
+  "cat": "gs",
+  "sub": "chemical_bonding"
+},
+{
+  "q": "Which gas is used in 'Neon Signs' for a red-orange glow?",
+  "o": ["Argon", "Neon", "Krypton", "Xenon"],
+  "a": 1,
+  "e": "Neon gas specifically emits a bright red-orange light when electrified.",
+  "cat": "gs",
+  "sub": "periodic_table"
+},
+{
+  "q": "Which particle is 'Heavier' than a proton?",
+  "o": ["Electron", "Neutron", "Positron", "Meson"],
+  "a": 1,
+  "e": "A neutron is slightly heavier than a proton, though both have an approx mass of 1 amu.",
+  "cat": "gs",
+  "sub": "atomic_structure"
+},
+{
+  "q": "Which bond is formed by the 'Head-on' overlap of atomic orbitals?",
+  "o": ["Sigma bond", "Pi bond", "Delta bond", "Hydrogen bond"],
+  "a": 0,
+  "e": "Sigma bonds are formed by axial overlap and are stronger than pi bonds.",
+  "cat": "gs",
+  "sub": "chemical_bonding"
+},
+{
+  "q": "Which element has the highest 'Electrical Conductivity'?",
+  "o": ["Gold", "Copper", "Silver", "Aluminum"],
+  "a": 2,
+  "e": "Silver is the best conductor of electricity, followed by copper and gold.",
+  "cat": "gs",
+  "sub": "periodic_table"
+},
+{
+  "q": "The 'Valency' of an Inert gas is:",
+  "o": ["1", "8", "0", "7"],
+  "a": 2,
+  "e": "Inert gases have full shells and do not need to lose or gain electrons, so their valency is zero.",
+  "cat": "gs",
+  "sub": "periodic_table"
+},
+{
+  "q": "Which of the following is a characteristic property of 'Acids'?",
+  "o": ["Bitter taste", "Soapy touch", "Turns blue litmus red", "pH value greater than 7"],
+  "a": 2,
+  "e": "Acids are sour in taste and turn blue litmus paper red. They have a pH range of 0 to 6.9.",
+  "cat": "gs",
+  "sub": "acid_base"
+},
+{
+  "q": "Which acid is present in 'Vinegar'?",
+  "o": ["Citric acid", "Acetic acid", "Lactic acid", "Tartaric acid"],
+  "a": 1,
+  "e": "Vinegar contains roughly 5-8% acetic acid ($CH_3COOH$) by volume.",
+  "cat": "gs",
+  "sub": "acid_base"
+},
+{
+  "q": "What is the pH value of 'Pure Water' at 25°C?",
+  "o": ["0", "7", "14", "1"],
+  "a": 1,
+  "e": "Pure water is neutral, meaning the concentration of $H^+$ and $OH^-$ ions are equal.",
+  "cat": "gs",
+  "sub": "acid_base"
+},
+{
+  "q": "Which 'Base' is commonly known as 'Milk of Magnesia' and used as an antacid?",
+  "o": ["Sodium Hydroxide", "Calcium Hydroxide", "Magnesium Hydroxide", "Potassium Hydroxide"],
+  "a": 2,
+  "e": "$Mg(OH)_2$ is used to neutralize excess stomach acid and relieve indigestion.",
+  "cat": "gs",
+  "sub": "acid_base"
+},
+{
+  "q": "The 'pH scale' was introduced by which scientist?",
+  "o": ["Arrhenius", "Sorenson", "Lewis", "Bronsted"],
+  "a": 1,
+  "e": "S.P.L. Sorensen developed the pH scale in 1909 to measure acidity and alkalinity.",
+  "cat": "gs",
+  "sub": "acid_base"
+},
+{
+  "q": "Which acid is found in 'Sting of Ants' and bees, causing pain and irritation?",
+  "o": ["Methanoic (Formic) acid", "Oxalic acid", "Citric acid", "Nitric acid"],
+  "a": 0,
+  "e": "Ants inject formic acid ($HCOOH$) when they bite or sting.",
+  "cat": "gs",
+  "sub": "acid_base"
+},
+{
+  "q": "What color does 'Phenolphthalein' turn in a basic solution?",
+  "o": ["Colorless", "Pink", "Yellow", "Blue"],
+  "a": 1,
+  "e": "Phenolphthalein is a synthetic indicator that is colorless in acids but turns deep pink in bases.",
+  "cat": "gs",
+  "sub": "acid_base"
+},
+{
+  "q": "Which gas is evolved when an acid reacts with a 'Metal' (like Zinc)?",
+  "o": ["Oxygen", "Carbon Dioxide", "Hydrogen", "Nitrogen"],
+  "a": 2,
+  "e": "Acids react with active metals to produce a salt and hydrogen gas ($H_2$).",
+  "cat": "gs",
+  "sub": "acid_base"
+},
+{
+  "q": "The reaction between an Acid and a Base to form Salt and Water is called:",
+  "o": ["Oxidation", "Neutralization", "Reduction", "Hydrogenation"],
+  "a": 1,
+  "e": "For example: $HCl + NaOH \\rightarrow NaCl + H_2O$.",
+  "cat": "gs",
+  "sub": "acid_base"
+},
+{
+  "q": "Which 'Acid' is known as the 'King of Chemicals'?",
+  "o": ["Hydrochloric acid", "Sulfuric acid", "Nitric acid", "Phosphoric acid"],
+  "a": 1,
+  "e": "Sulfuric acid ($H_2SO_4$) is used extensively in industries, hence the name.",
+  "cat": "gs",
+  "sub": "acid_base"
+},
+{
+  "q": "What is the pH of 'Human Blood'?",
+  "o": ["6.0", "7.4", "8.5", "5.5"],
+  "a": 1,
+  "e": "Human blood is slightly basic, typically maintained between 7.35 and 7.45.",
+  "cat": "gs",
+  "sub": "acid_base"
+},
+{
+  "q": "Which acid is found in 'Tamarind' (Imli)?",
+  "o": ["Oxalic acid", "Tartaric acid", "Acetic acid", "Citric acid"],
+  "a": 1,
+  "e": "Tartaric acid gives tamarind and grapes their characteristic sour taste.",
+  "cat": "gs",
+  "sub": "acid_base"
+},
+{
+  "q": "Which of the following is a 'Weak Base'?",
+  "o": ["NaOH", "KOH", "NH4OH (Ammonium Hydroxide)", "Ca(OH)2"],
+  "a": 2,
+  "e": "Weak bases do not ionize completely in water; $NH_4OH$ is a common laboratory weak base.",
+  "cat": "gs",
+  "sub": "acid_base"
+},
+{
+  "q": "What happens to the pH of soil when it is treated with 'Quicklime' ($CaO$)?",
+  "o": ["Increases", "Decreases", "Remains same", "Becomes zero"],
+  "a": 0,
+  "e": "Quicklime is basic and is added to acidic soil to raise the pH (neutralize acidity).",
+  "cat": "gs",
+  "sub": "acid_base"
+},
+{
+  "q": "Which substance is used to test the 'Strength' of an acid or base across the whole range?",
+  "o": ["Litmus paper", "Universal Indicator", "Turmeric", "China Rose"],
+  "a": 1,
+  "e": "Universal indicator is a mixture of dyes that shows different colors at different pH values.",
+  "cat": "gs",
+  "sub": "acid_base"
+},
+{
+  "q": "Which acid is produced in the 'Human Stomach' to help in digestion?",
+  "o": ["Sulfuric acid", "Hydrochloric acid (HCl)", "Citric acid", "Nitric acid"],
+  "a": 1,
+  "e": "Gastric juice contains HCl which creates an acidic medium for the enzyme pepsin.",
+  "cat": "gs",
+  "sub": "acid_base"
+},
+{
+  "q": "What is the common name of 'Calcium Oxychloride' ($CaOCl_2$)?",
+  "o": ["Baking Soda", "Bleaching Powder", "Washing Soda", "Plaster of Paris"],
+  "a": 1,
+  "e": "Bleaching powder is used for disinfecting water and bleaching textiles.",
+  "cat": "gs",
+  "sub": "acid_base"
+},
+{
+  "q": "Which indicator turns 'Green' in basic solutions and 'Magenta' in acidic solutions?",
+  "o": ["Turmeric", "Litmus", "China Rose (Gudhal)", "Phenolphthalein"],
+  "a": 2,
+  "e": "China rose petals can be used as a natural acid-base indicator.",
+  "cat": "gs",
+  "sub": "acid_base"
+},
+{
+  "q": "Which of the following is a 'Strong Acid'?",
+  "o": ["Citric acid", "Nitric acid (HNO3)", "Formic acid", "Oxalic acid"],
+  "a": 1,
+  "e": "Nitric acid, along with $HCl$ and $H_2SO_4$, are mineral acids that ionize completely in water.",
+  "cat": "gs",
+  "sub": "acid_base"
+},
+{
+  "q": "According to the 'Arrhenius Theory', an Acid is a substance that gives:",
+  "o": ["OH- ions in water", "H+ ions in water", "A pair of electrons", "Protons in all solvents"],
+  "a": 1,
+  "e": "Arrhenius defined acids as substances that increase the concentration of hydrogen ions ($H^+$) in aqueous solutions.",
+  "cat": "gs",
+  "sub": "acid_base"
+},
+{
+  "q": "What is a 'Lewis Base'?",
+  "o": ["Proton donor", "Proton acceptor", "Electron pair donor", "Electron pair acceptor"],
+  "a": 2,
+  "e": "Lewis bases (like $NH_3$) have a lone pair of electrons that they can donate to form a coordinate bond.",
+  "cat": "gs",
+  "sub": "acid_base"
+},
+{
+  "q": "Tooth decay starts when the pH of the mouth falls below:",
+  "o": ["7.0", "6.5", "5.5", "4.0"],
+  "a": 2,
+  "e": "At pH 5.5, the acid produced by bacteria starts to corrode the tooth enamel (Calcium Phosphate).",
+  "cat": "gs",
+  "sub": "acid_base"
+},
+{
+  "q": "Which salt is used in 'Fire Extinguishers' as a source of $CO_2$?",
+  "o": ["Sodium Carbonate", "Sodium Bicarbonate (Baking Soda)", "Calcium Carbonate", "Potassium Chloride"],
+  "a": 1,
+  "e": "Baking soda ($NaHCO_3$) reacts with acid in the extinguisher to release carbon dioxide gas.",
+  "cat": "gs",
+  "sub": "acid_base"
+},
+{
+  "q": "What is the chemical formula of 'Washing Soda'?",
+  "o": ["Na2CO3", "Na2CO3 . 10H2O", "NaHCO3", "NaOH"],
+  "a": 1,
+  "e": "Washing soda is Sodium Carbonate Decahydrate. The 10 water molecules are 'Water of Crystallization'.",
+  "cat": "gs",
+  "sub": "acid_base"
+},
+{
+  "q": "Which acid is found in 'Sour Milk' or Curd?",
+  "o": ["Citric acid", "Lactic acid", "Butyric acid", "Maleic acid"],
+  "a": 1,
+  "e": "Lactobacillus bacteria convert lactose sugar in milk into lactic acid.",
+  "cat": "gs",
+  "sub": "acid_base"
+},
+{
+  "q": "What is 'Brine' solution?",
+  "o": ["Dilute solution of NaOH", "A concentrated aqueous solution of Sodium Chloride (NaCl)", "Liquid Chlorine", "Saturated Sugar solution"],
+  "a": 1,
+  "e": "Brine is used in the 'Chlor-alkali process' to produce NaOH, Chlorine, and Hydrogen.",
+  "cat": "gs",
+  "sub": "acid_base"
+},
+{
+  "q": "Which of the following is a 'Strong Base'?",
+  "o": ["Magnesium Hydroxide", "Ammonium Hydroxide", "Potassium Hydroxide (KOH)", "Calcium Hydroxide"],
+  "a": 2,
+  "e": "KOH and NaOH are alkali metals' hydroxides that ionize completely in water.",
+  "cat": "gs",
+  "sub": "acid_base"
+},
+{
+  "q": "What is 'Plaster of Paris' (POP) chemically?",
+  "o": ["Calcium Sulfate Dihydrate", "Calcium Sulfate Hemihydrate", "Calcium Carbonate", "Calcium Chloride"],
+  "a": 1,
+  "e": "POP ($CaSO_4 . 1/2 H_2O$) is made by heating Gypsum to 373K ($100°C$).",
+  "cat": "gs",
+  "sub": "acid_base"
+},
+{
+  "q": "Which acid is used to remove 'Ink Stains' from clothes?",
+  "o": ["Acetic acid", "Oxalic acid", "Formic acid", "Nitric acid"],
+  "a": 1,
+  "e": "Oxalic acid (found in tomatoes/spinach) acts as a bleaching agent for certain stains.",
+  "cat": "gs",
+  "sub": "acid_base"
+},
+{
+  "q": "The pH of a solution changes from 3 to 6. How many times does the $H^+$ concentration decrease?",
+  "o": ["2 times", "3 times", "100 times", "1000 times"],
+  "a": 3,
+  "e": "pH is a logarithmic scale. A jump of 3 units means a $10^3$ (1000) difference in concentration.",
+  "cat": "gs",
+  "sub": "acid_base"
+},
+{
+  "q": "What is 'Slaked Lime'?",
+  "o": ["CaO", "Ca(OH)2", "CaCO3", "CaCl2"],
+  "a": 1,
+  "e": "Calcium Hydroxide ($Ca(OH)_2$) is formed when water is added to quicklime ($CaO$).",
+  "cat": "gs",
+  "sub": "acid_base"
+},
+{
+  "q": "Which of the following salts will form an 'Acidic' solution when dissolved in water?",
+  "o": ["NaCl", "CH3COONa", "NH4Cl", "K2SO4"],
+  "a": 2,
+  "e": "Ammonium Chloride is a salt of a strong acid ($HCl$) and a weak base ($NH_4OH$), so it is acidic.",
+  "cat": "gs",
+  "sub": "acid_base"
+},
+{
+  "q": "Which acid is present in 'Apple'?",
+  "o": ["Citric acid", "Malic acid", "Oxalic acid", "Acetic acid"],
+  "a": 1,
+  "e": "Malic acid is the primary acid responsible for the tart taste of apples.",
+  "cat": "gs",
+  "sub": "acid_base"
+},
+{
+  "q": "A solution turns 'Red Litmus Blue'. Its pH is likely to be:",
+  "o": ["1", "4", "5", "10"],
+  "a": 3,
+  "e": "Red to blue means the solution is basic. Basic solutions have a pH greater than 7.",
+  "cat": "gs",
+  "sub": "acid_base"
+},
+{
+  "q": "Which gas is released when 'Baking Soda' is heated during cooking?",
+  "o": ["Hydrogen", "Oxygen", "Carbon Dioxide", "Nitrogen"],
+  "a": 2,
+  "e": "Thermal decomposition of $NaHCO_3$ releases $CO_2$, which makes cakes and bread 'rise'.",
+  "cat": "gs",
+  "sub": "acid_base"
+},
+{
+  "q": "What is 'Glauber's Salt'?",
+  "o": ["MgSO4 . 7H2O", "Na2SO4 . 10H2O", "FeSO4 . 7H2O", "CuSO4 . 5H2O"],
+  "a": 1,
+  "e": "Sodium sulfate decahydrate is known as Glauber's salt.",
+  "cat": "gs",
+  "sub": "acid_base"
+},
+{
+  "q": "Which substance is used as a 'Dehydrating Agent' in the laboratory to dry gases?",
+  "o": ["Dilute H2SO4", "Concentrated H2SO4", "NaOH", "HCl"],
+  "a": 1,
+  "e": "Concentrated sulfuric acid has a strong affinity for water and can remove moisture from gases.",
+  "cat": "gs",
+  "sub": "acid_base"
+},
+{
+  "q": "What is the pH of 'Acid Rain'?",
+  "o": ["7.0", "8.2", "Less than 5.6", "Between 6 and 7"],
+  "a": 2,
+  "e": "Rainwater becomes 'acid rain' when it absorbs pollutants like $SO_2$ and $NO_x$, dropping pH below 5.6.",
+  "cat": "gs",
+  "sub": "acid_base"
+},
+{
+  "q": "The 'Nettle' plant leaves have stinging hair which inject which acid into the skin?",
+  "o": ["Acetic acid", "Citric acid", "Methanoic acid", "Tartaric acid"],
+  "a": 2,
+  "e": "Methanoic (Formic) acid causes the burning pain associated with nettle stings.",
+  "cat": "gs",
+  "sub": "acid_base"
+},
+{
+  "q": "What color does 'Methyl Orange' turn in an Acidic solution?",
+  "o": ["Yellow", "Red/Orange", "Blue", "Colorless"],
+  "a": 1,
+  "e": "Methyl orange is a common synthetic indicator; it is red in acids and turns yellow in basic solutions.",
+  "cat": "gs",
+  "sub": "acid_base"
+},
+{
+  "q": "Which of the following is an 'Amphoteric Oxide'?",
+  "o": ["Na2O", "SO2", "Al2O3", "CaO"],
+  "a": 2,
+  "e": "Aluminum oxide ($Al_2O_3$) can react with both strong acids and strong bases to form salt and water.",
+  "cat": "gs",
+  "sub": "acid_base"
+},
+{
+  "q": "A 'Buffer Solution' is a solution that:",
+  "o": ["Changes pH rapidly", "Resists change in pH upon addition of small amounts of acid or base", "Is always neutral", "Contains only salt"],
+  "a": 1,
+  "e": "Buffers are essential in biological systems (like human blood) to maintain a stable environment.",
+  "cat": "gs",
+  "sub": "acid_base"
+},
+{
+  "q": "Which natural indicator turns 'Reddish-Brown' when it comes into contact with a Base (like soap)?",
+  "o": ["Litmus", "Turmeric", "China Rose", "Red Cabbage"],
+  "a": 1,
+  "e": "Turmeric stays yellow in acids but undergoes a chemical change to reddish-brown in alkaline conditions.",
+  "cat": "gs",
+  "sub": "acid_base"
+},
+{
+  "q": "What is 'Salt Hydrolysis'?",
+  "o": ["Dissolving salt in water", "Reaction of salt ions with water to produce acidity or alkalinity", "Evaporating salt water", "Adding acid to salt"],
+  "a": 1,
+  "e": "It determines whether a salt solution will be acidic, basic, or neutral based on the strength of its parent acid/base.",
+  "cat": "gs",
+  "sub": "acid_base"
+},
+{
+  "q": "Which acid is present in 'Tomatoes'?",
+  "o": ["Citric acid", "Oxalic acid", "Tartaric acid", "Lactic acid"],
+  "a": 1,
+  "e": "Tomatoes primarily contain oxalic acid, which can contribute to kidney stone formation in excess.",
+  "cat": "gs",
+  "sub": "acid_base"
+},
+{
+  "q": "The pH of a 'Neutral' solution at 25°C is exactly 7. If the temperature increases, the pH of neutral water will:",
+  "o": ["Increase", "Decrease", "Stay the same", "Become 14"],
+  "a": 1,
+  "e": "As temperature increases, water ionizes more, increasing $H^+$ concentration, which slightly lowers the pH (though it remains neutral).",
+  "cat": "gs",
+  "sub": "acid_base"
+},
+{
+  "q": "Which of the following is a 'Lewis Acid'?",
+  "o": ["NH3", "H2O", "BF3 (Boron Trifluoride)", "OH-"],
+  "a": 2,
+  "e": "BF3 is electron-deficient and can accept an electron pair, fitting the Lewis definition of an acid.",
+  "cat": "gs",
+  "sub": "acid_base"
+},
+{
+  "q": "What is the common name for 'Sodium Bicarbonate'?",
+  "o": ["Washing Soda", "Baking Soda", "Caustic Soda", "Bleaching Powder"],
+  "a": 1,
+  "e": "Sodium Bicarbonate ($NaHCO_3$) is used in baking and as a household cleaner/deodorizer.",
+  "cat": "gs",
+  "sub": "acid_base"
+},
+{
+  "q": "Which gas is produced when 'Bleaching Powder' is exposed to air containing $CO_2$?",
+  "o": ["Oxygen", "Hydrogen", "Chlorine", "Carbon Monoxide"],
+  "a": 2,
+  "e": "Bleaching powder reacts with $CO_2$ to release chlorine gas, which provides its disinfecting properties.",
+  "cat": "gs",
+  "sub": "acid_base"
+},
+{
+  "q": "An 'Acidic Buffer' can be made by mixing:",
+  "o": ["Strong acid and its salt", "Weak acid and its salt with a strong base", "Strong base and its salt", "Weak base and its salt"],
+  "a": 1,
+  "e": "Example: Acetic acid and Sodium Acetate ($CH_3COOH + CH_3COONa$).",
+  "cat": "gs",
+  "sub": "acid_base"
+},
+{
+  "q": "What is the 'Basicity' of Sulfuric acid ($H_2SO_4$)?",
+  "o": ["1", "2", "3", "0"],
+  "a": 1,
+  "e": "Basicity refers to the number of replaceable hydrogen ions per molecule of acid. $H_2SO_4$ is dibasic.",
+  "cat": "gs",
+  "sub": "acid_base"
+},
+{
+  "q": "Which indicator is 'Colorless' in acidic and neutral solutions but 'Pink' in basic solutions?",
+  "o": ["Methyl Orange", "Litmus", "Phenolphthalein", "Bromothymol Blue"],
+  "a": 2,
+  "e": "Phenolphthalein is widely used in titrations to find the endpoint of a base-acid reaction.",
+  "cat": "gs",
+  "sub": "acid_base"
+},
+{
+  "q": "Which oxide is 'Neutral' (neither acidic nor basic)?",
+  "o": ["CO2", "N2O (Nitrous Oxide)", "MgO", "P2O5"],
+  "a": 1,
+  "e": "Nitrous oxide ($N_2O$) and Carbon monoxide ($CO$) are examples of neutral oxides.",
+  "cat": "gs",
+  "sub": "acid_base"
+},
+{
+  "q": "What is the 'pOH' of a solution if its pH is 4?",
+  "o": ["4", "10", "7", "14"],
+  "a": 1,
+  "e": "$pH + pOH = 14$ at room temperature. Therefore, $14 - 4 = 10$.",
+  "cat": "gs",
+  "sub": "acid_base"
+},
+{
+  "q": "Which acid is used in 'Car Batteries'?",
+  "o": ["Hydrochloric acid", "Nitric acid", "Sulfuric acid", "Acetic acid"],
+  "a": 2,
+  "e": "Dilute sulfuric acid serves as the electrolyte in lead-acid batteries.",
+  "cat": "gs",
+  "sub": "acid_base"
+},
+{
+  "q": "What is the nature of 'Non-metal Oxides' (like $SO_2$ or $CO_2$)?",
+  "o": ["Basic", "Acidic", "Neutral", "Amphoteric"],
+  "a": 1,
+  "e": "Most non-metal oxides dissolve in water to form acidic solutions.",
+  "cat": "gs",
+  "sub": "acid_base"
+},
+{
+  "q": "Which salt is used for 'Removing Permanent Hardness' of water?",
+  "o": ["Baking Soda", "Washing Soda", "Common Salt", "Bleaching Powder"],
+  "a": 1,
+  "e": "Sodium carbonate (Washing soda) reacts with soluble calcium and magnesium salts to precipitate them.",
+  "cat": "gs",
+  "sub": "acid_base"
+},
+{
+  "q": "What happens to 'Blue Litmus' paper when dipped in a solution of Sodium Carbonate?",
+  "o": ["Turns red", "Remains blue", "Turns colorless", "Turns green"],
+  "a": 1,
+  "e": "Sodium carbonate is a basic salt; since it's already basic, blue litmus will not change color.",
+  "cat": "gs",
+  "sub": "acid_base"
+},
+{
+  "q": "What is the chemical name of 'Potash Alum'?",
+  "o": ["Aluminum Sulfate", "Potassium Aluminum Sulfate", "Magnesium Sulfate", "Potassium Carbonate"],
+  "a": 1,
+  "e": "Potash Alum ($K_2SO_4 \\cdot Al_2(SO_4)_3 \\cdot 24H_2O$) is a double salt used in water purification and as a styptic.",
+  "cat": "gs",
+  "sub": "acid_base"
+},
+{
+  "q": "Which property describes a salt losing its 'Water of Crystallization' when exposed to air?",
+  "o": ["Deliquescence", "Hygroscopy", "Efflorescence", "Sublimation"],
+  "a": 2,
+  "e": "Washing soda crystals ($Na_2CO_3 \\cdot 10H_2O$) show efflorescence by becoming a white powder in dry air.",
+  "cat": "gs",
+  "sub": "acid_base"
+},
+{
+  "q": "If a solution has a Hydrogen ion concentration of $10^{-9}$ M, what is its pH?",
+  "o": ["5", "7", "9", "14"],
+  "a": 2,
+  "e": "pH is the negative log of $H^+$ concentration. $-log(10^{-9}) = 9$. The solution is basic.",
+  "cat": "gs",
+  "sub": "acid_base"
+},
+{
+  "q": "Which substance is used to 'Neutralize' acidic stings of a Wasp (which are basic)?",
+  "o": ["Baking Soda", "Vinegar (Acetic Acid)", "Soap", "Bleaching Powder"],
+  "a": 1,
+  "e": "Wasp stings are alkaline, so a weak acid like vinegar is used for relief (unlike ant stings which are acidic).",
+  "cat": "gs",
+  "sub": "acid_base"
+},
+{
+  "q": "What is the nature of 'Metal Oxides' like Magnesium Oxide ($MgO$)?",
+  "o": ["Acidic", "Basic", "Neutral", "Amphoteric"],
+  "a": 1,
+  "e": "Most metal oxides are basic and react with water to form hydroxides or with acids to form salts.",
+  "cat": "gs",
+  "sub": "acid_base"
+},
+{
+  "q": "Which salt is used in 'Black and White Photography'?",
+  "o": ["Silver Chloride", "Silver Bromide", "Sodium Chloride", "Calcium Fluoride"],
+  "a": 1,
+  "e": "Silver bromide ($AgBr$) is light-sensitive and decomposes into silver metal, creating the image.",
+  "cat": "gs",
+  "sub": "acid_base"
+},
+{
+  "q": "What is 'Caustic Soda' chemically?",
+  "o": ["NaHCO3", "Na2CO3", "NaOH", "KOH"],
+  "a": 2,
+  "e": "Sodium Hydroxide ($NaOH$) is a strong base used in soap making and paper industries.",
+  "cat": "gs",
+  "sub": "acid_base"
+},
+{
+  "q": "Which indicator is 'Odor-based' (Olfactory Indicator)?",
+  "o": ["Litmus", "Vanilla Essence", "Turmeric", "Phenolphthalein"],
+  "a": 1,
+  "e": "The smell of vanilla or onion vanishes in basic solutions, making them useful for visually impaired students.",
+  "cat": "gs",
+  "sub": "acid_base"
+},
+{
+  "q": "What is the pH of 'Gastric Juice' in the human stomach?",
+  "o": ["1.2 to 3.0", "7.0 to 8.0", "9.0 to 10.0", "5.0 to 6.0"],
+  "a": 0,
+  "e": "The high acidity is due to Hydrochloric acid, which is necessary for protein digestion.",
+  "cat": "gs",
+  "sub": "acid_base"
+},
+{
+  "q": "The 'Acidity' of an acid depends on the number of:",
+  "o": ["Hydroxyl ions ($OH^-$)", "Replaceable Hydrogen ions ($H^+$)", "Oxygen atoms", "Valence electrons"],
+  "a": 1,
+  "e": "This is known as the 'Basicity' of the acid (e.g., $HCl$ is monobasic, $H_2SO_4$ is dibasic).",
+  "cat": "gs",
+  "sub": "acid_base"
+},
+{
+  "q": "Which acid is used in the 'Lead-Acid' storage batteries?",
+  "o": ["Nitric Acid", "Sulfuric Acid", "Hydrochloric Acid", "Phosphoric Acid"],
+  "a": 1,
+  "e": "Sulfuric acid acts as the electrolyte allowing for the flow of charge.",
+  "cat": "gs",
+  "sub": "acid_base"
+},
+{
+  "q": "What is 'Saponification'?",
+  "o": ["Making of salt", "Reaction of an ester with a base to form soap", "Dissolving sugar", "Acid rain"],
+  "a": 1,
+  "e": "Soap is the sodium or potassium salt of a long-chain fatty acid.",
+  "cat": "gs",
+  "sub": "acid_base"
+},
+{
+  "q": "Which salt is responsible for the 'Yellow Flame' in a laboratory burner?",
+  "o": ["Potassium salts", "Sodium salts", "Copper salts", "Calcium salts"],
+  "a": 1,
+  "e": "Sodium ions give a characteristic golden yellow color in a flame test.",
+  "cat": "gs",
+  "sub": "acid_base"
+},
+{
+  "q": "What is the 'pH' of a 0.01 M $HCl$ solution?",
+  "o": ["1", "2", "3", "0"],
+  "a": 1,
+  "e": "$0.01 = 10^{-2}$. Therefore, $pH = -log(10^{-2}) = 2$.",
+  "cat": "gs",
+  "sub": "acid_base"
+},
+{
+  "q": "Which of the following salts is 'Hygroscopic' (absorbs moisture but doesn't dissolve)?",
+  "o": ["NaCl", "Silica Gel", "Anhydrous CaCl2", "NaOH"],
+  "a": 2,
+  "e": "Anhydrous Calcium Chloride is used as a drying agent in desiccators.",
+  "cat": "gs",
+  "sub": "acid_base"
+},
+{
+  "q": "The 'Sour Taste' of a Lemon is due to which acid?",
+  "o": ["Citric Acid", "Malic Acid", "Oxalic Acid", "Acetic Acid"],
+  "a": 0,
+  "e": "Citrus fruits like lemons and oranges are rich in citric acid.",
+  "cat": "gs",
+  "sub": "acid_base"
+},
+{
+  "q": "Which acid is known as 'Spirit of Salt'?",
+  "o": ["Nitric Acid", "Sulfuric Acid", "Hydrochloric Acid", "Aqua Regia"],
+  "a": 2,
+  "e": "Historically, $HCl$ was produced from rock salt and was called spirit of salt.",
+  "cat": "gs",
+  "sub": "acid_base"
+},
+{
+  "q": "What happens when 'Carbon Dioxide' is passed through Lime Water?",
+  "o": ["It turns blue", "It turns milky due to Calcium Carbonate formation", "It becomes transparent", "It boils"],
+  "a": 1,
+  "e": "The milkiness is due to the formation of insoluble $CaCO_3$.",
+  "cat": "gs",
+  "sub": "acid_base"
+},
+{
+  "q": "Which salt is used as a 'Mordant' in the dyeing industry?",
+  "o": ["Common Salt", "Potash Alum", "Baking Soda", "Epsom Salt"],
+  "a": 1,
+  "e": "Alum helps the dye stick to the fabric fibers.",
+  "cat": "gs",
+  "sub": "acid_base"
+},
+{
+  "q": "What is the chemical formula of 'Blue Vitriol'?",
+  "o": ["FeSO4 . 7H2O", "CuSO4 . 5H2O", "ZnSO4 . 7H2O", "MgSO4 . 7H2O"],
+  "a": 1,
+  "e": "Copper Sulfate Pentahydrate is known as Blue Vitriol due to its deep blue crystals.",
+  "cat": "gs",
+  "sub": "acid_base"
+},
+{
+  "q": "Which of the following is a 'Strong Electrolyte'?",
+  "o": ["Acetic Acid", "Ammonium Hydroxide", "Sodium Chloride (NaCl)", "Carbonic Acid"],
+  "a": 2,
+  "e": "Strong electrolytes ionize completely in water, allowing them to conduct electricity efficiently.",
+  "cat": "gs",
+  "sub": "acid_base"
+},
+{
+  "q": "What is 'Chile Saltpetre' chemically?",
+  "o": ["Potassium Nitrate", "Sodium Nitrate (NaNO3)", "Sodium Nitrite", "Ammonium Nitrate"],
+  "a": 1,
+  "e": "Sodium nitrate is found in large deposits in Chile and is used as a fertilizer and in explosives.",
+  "cat": "gs",
+  "sub": "acid_base"
+},
+{
+  "q": "Which salt is used as a 'Purgative' in medicine under the name 'Epsom Salt'?",
+  "o": ["Calcium Sulfate", "Magnesium Sulfate (MgSO4 . 7H2O)", "Sodium Sulfate", "Zinc Sulfate"],
+  "a": 1,
+  "e": "Epsom salt is used to treat constipation and as a soaking salt for sore muscles.",
+  "cat": "gs",
+  "sub": "acid_base"
+},
+{
+  "q": "What is the common name of 'Sodium Hydroxide'?",
+  "o": ["Caustic Soda", "Caustic Potash", "Baking Soda", "Slaked Lime"],
+  "a": 0,
+  "e": "NaOH is called Caustic Soda because of its corrosive nature on organic tissues.",
+  "cat": "gs",
+  "sub": "acid_base"
+},
+{
+  "q": "Which acid is used to clean 'Gold Ornaments' by jewelers?",
+  "o": ["Sulfuric Acid", "Nitric Acid", "Oxalic Acid", "Aqua Regia"],
+  "a": 3,
+  "e": "Aqua Regia (3 HCl : 1 HNO3) is the only common reagent that can dissolve gold.",
+  "cat": "gs",
+  "sub": "acid_base"
+},
+{
+  "q": "What is 'Microcosmic Salt'?",
+  "o": ["Na(NH4)HPO4 . 4H2O", "Na2CO3", "KNO3", "NaCl"],
+  "a": 0,
+  "e": "Sodium Ammonium Hydrogen Phosphate is used in qualitative analysis (Bead test).",
+  "cat": "gs",
+  "sub": "acid_base"
+},
+{
+  "q": "Which gas is evolved at the 'Anode' during the electrolysis of Brine (Chlor-alkali process)?",
+  "o": ["Hydrogen", "Oxygen", "Chlorine", "Carbon Dioxide"],
+  "a": 2,
+  "e": "Chlorine gas is released at the positive electrode (Anode), while Hydrogen is released at the Cathode.",
+  "cat": "gs",
+  "sub": "acid_base"
+},
+{
+  "q": "What is the nature of a solution with $pOH = 7$?",
+  "o": ["Acidic", "Basic", "Neutral", "Amphoteric"],
+  "a": 2,
+  "e": "At 25°C, $pH + pOH = 14$. If $pOH=7$, then $pH=7$, which is neutral.",
+  "cat": "gs",
+  "sub": "acid_base"
+},
+{
+  "q": "Which substance is used to 'Purify Drinking Water' from bacteria?",
+  "o": ["Washing Soda", "Baking Soda", "Bleaching Powder", "Plaster of Paris"],
+  "a": 2,
+  "e": "Bleaching powder ($CaOCl_2$) releases chlorine which acts as a powerful disinfectant.",
+  "cat": "gs",
+  "sub": "acid_base"
+},
+{
+  "q": "What is the color of 'Anhydrous' Copper Sulfate?",
+  "o": ["Blue", "White", "Green", "Black"],
+  "a": 1,
+  "e": "Without its water of crystallization, copper sulfate loses its blue color and becomes white.",
+  "cat": "gs",
+  "sub": "acid_base"
+},
+{
+  "q": "Which acid is used in the manufacturing of 'Fertilizers' like Superphosphate?",
+  "o": ["Hydrochloric acid", "Nitric acid", "Sulfuric acid", "Acetic acid"],
+  "a": 2,
+  "e": "Sulfuric acid is used to convert rock phosphate into soluble superphosphate fertilizer.",
+  "cat": "gs",
+  "sub": "acid_base"
+},
+{
+  "q": "What is the chemical name of 'Green Vitriol'?",
+  "o": ["Magnesium Sulfate", "Ferrous Sulfate (FeSO4 . 7H2O)", "Zinc Sulfate", "Copper Sulfate"],
+  "a": 1,
+  "e": "Ferrous Sulfate heptahydrate appears as light green crystals.",
+  "cat": "gs",
+  "sub": "acid_base"
+},
+{
+  "q": "Which indicator is used for the titration of a 'Strong Acid' and a 'Weak Base'?",
+  "o": ["Phenolphthalein", "Methyl Orange", "Litmus", "None"],
+  "a": 1,
+  "e": "Methyl orange is suitable because the equivalence point lies in the acidic range (pH < 7).",
+  "cat": "gs",
+  "sub": "acid_base"
+},
+{
+  "q": "What is 'Hypo' used in photography?",
+  "o": ["Sodium Thiosulfate", "Sodium Sulfite", "Silver Nitrate", "Potassium Bromide"],
+  "a": 0,
+  "e": "Sodium Thiosulfate ($Na_2S_2O_3$) is used as a 'fixer' to remove unreacted silver halides.",
+  "cat": "gs",
+  "sub": "acid_base"
+},
+{
+  "q": "Which acid is present in 'Fanta/Coca-Cola' that gives them a tangy taste?",
+  "o": ["Carbonic Acid", "Phosphoric Acid", "Sulfuric Acid", "Citric Acid"],
+  "a": 1,
+  "e": "Phosphoric acid is added to colas to give them a sharper flavor and inhibit mold growth.",
+  "cat": "gs",
+  "sub": "acid_base"
+},
+{
+  "q": "What is the pH of 'Seawater' approximately?",
+  "o": ["5.5", "7.0", "8.1", "10.5"],
+  "a": 2,
+  "e": "Seawater is slightly alkaline due to the presence of dissolved carbonates and bicarbonates.",
+  "cat": "gs",
+  "sub": "acid_base"
+},
+{
+  "q": "Which salt is used in 'Bakery' to make the dough soft and spongy?",
+  "o": ["Washing Soda", "Baking Powder", "Bleaching Powder", "Common Salt"],
+  "a": 1,
+  "e": "Baking powder is a mixture of baking soda and a mild edible acid like tartaric acid.",
+  "cat": "gs",
+  "sub": "acid_base"
+},
+{
+  "q": "Which of the following is a 'Basic Buffer'?",
+  "o": ["CH3COOH + CH3COONa", "NH4OH + NH4Cl", "HCl + NaCl", "NaOH + NaCl"],
+  "a": 1,
+  "e": "A basic buffer is a mixture of a weak base and its salt with a strong acid.",
+  "cat": "gs",
+  "sub": "acid_base"
+},
+{
+  "q": "What is the pH of a solution of 'Ammonium Chloride' (NH4Cl)?",
+  "o": ["Exactly 7", "Greater than 7", "Less than 7", "14"],
+  "a": 2,
+  "e": "NH4Cl is a salt of a strong acid (HCl) and a weak base (NH4OH), making its aqueous solution acidic.",
+  "cat": "gs",
+  "sub": "acid_base"
+},
+{
+  "q": "Which indicator is most suitable for a titration between 'Acetic Acid' and 'Sodium Hydroxide'?",
+  "o": ["Methyl Orange", "Phenolphthalein", "Litmus", "Methyl Red"],
+  "a": 1,
+  "e": "For a weak acid vs strong base titration, the endpoint is in the basic range (pH 8-10), where phenolphthalein works best.",
+  "cat": "gs",
+  "sub": "acid_base"
+},
+{
+  "q": "What is the pH of a 10^-8 M HCl solution?",
+  "o": ["8", "6", "Slightly less than 7", "Slightly more than 7"],
+  "a": 2,
+  "e": "In very dilute solutions, the H+ from water (10^-7) must be added, so the pH remains just below 7.",
+  "cat": "gs",
+  "sub": "acid_base"
+},
+{
+  "q": "Which salt is used as a 'Primary Standard' in acid-base titrations?",
+  "o": ["NaOH", "Anhydrous Sodium Carbonate", "HCl", "KOH"],
+  "a": 1,
+  "e": "Sodium carbonate is stable, non-hygroscopic, and can be weighed accurately, unlike NaOH.",
+  "cat": "gs",
+  "sub": "acid_base"
+},
+{
+  "q": "What is the color of 'Methyl Red' in a basic medium?",
+  "o": ["Red", "Yellow", "Orange", "Pink"],
+  "a": 1,
+  "e": "Methyl red is red in acidic solutions (pH < 4.4) and turns yellow in basic solutions (pH > 6.2).",
+  "cat": "gs",
+  "sub": "acid_base"
+},
+{
+  "q": "Which acid is used to preserve 'Pickles' (Achar)?",
+  "o": ["Nitric acid", "Acetic acid (Vinegar)", "Sulfuric acid", "Hydrochloric acid"],
+  "a": 1,
+  "e": "Acetic acid creates an environment that prevents the growth of bacteria and fungi.",
+  "cat": "gs",
+  "sub": "acid_base"
+},
+{
+  "q": "What is the 'Henderson-Hasselbalch' equation used for?",
+  "o": ["Calculating rate of reaction", "Calculating the pH of a buffer solution", "Calculating atomic mass", "Calculating boiling point"],
+  "a": 1,
+  "e": "pH = pKa + log([Salt]/[Acid]) relates pH to the concentration of buffer components.",
+  "cat": "gs",
+  "sub": "acid_base"
+},
+{
+  "q": "Which of the following salts will NOT undergo 'Hydrolysis'?",
+  "o": ["CH3COONa", "NH4Cl", "NaCl", "Na2CO3"],
+  "a": 2,
+  "e": "Salts of strong acids and strong bases (like NaCl) do not react with water; they just dissolve.",
+  "cat": "gs",
+  "sub": "acid_base"
+},
+{
+  "q": "What is the 'pH' of a solution of Sodium Acetate (CH3COONa)?",
+  "o": ["Less than 7", "Exactly 7", "Greater than 7", "0"],
+  "a": 2,
+  "e": "It is a salt of a weak acid and a strong base, so its solution is basic.",
+  "cat": "gs",
+  "sub": "acid_base"
+},
+{
+  "q": "Which substance is used to 'Neutralize' acidic soil in Bihar agriculture?",
+  "o": ["Baking Soda", "Calcium Carbonate (Limestone)", "Common Salt", "Vinegar"],
+  "a": 1,
+  "e": "Limestone or slaked lime is basic and effectively reduces soil acidity.",
+  "cat": "gs",
+  "sub": "acid_base"
+},
+{
+  "q": "Which indicator is known as an 'Internal Indicator' in titrations?",
+  "o": ["Litmus paper", "Phenolphthalein added to the flask", "External pH meter", "Universal indicator"],
+  "a": 1,
+  "e": "Internal indicators are those added directly into the reaction mixture (the conical flask).",
+  "cat": "gs",
+  "sub": "acid_base"
+},
+{
+  "q": "What is the 'Strength' of an acid defined by?",
+  "o": ["Its concentration", "Its degree of ionization (α)", "Its density", "Its color"],
+  "a": 1,
+  "e": "Strong acids ionize 100%, while weak acids have a very low degree of ionization.",
+  "cat": "gs",
+  "sub": "acid_base"
+},
+{
+  "q": "Which acid is known as 'Oil of Vitriol'?",
+  "o": ["Nitric acid", "Hydrochloric acid", "Sulfuric acid", "Phosphoric acid"],
+  "a": 2,
+  "e": "Sulfuric acid ($H_2SO_4$) was historically obtained by distilling green vitriol.",
+  "cat": "gs",
+  "sub": "acid_base"
+},
+{
+  "q": "What is 'Self-ionization' of water?",
+  "o": ["Water boiling", "Water molecules reacting to form H3O+ and OH-", "Water freezing", "Water dissolving salt"],
+  "a": 1,
+  "e": "Also called autoprotolysis; $2H_2O \\rightleftharpoons H_3O^+ + OH^-$.",
+  "cat": "gs",
+  "sub": "acid_base"
+},
+{
+  "q": "Which of the following is a 'Polyprotic' acid?",
+  "o": ["HCl", "HNO3", "H3PO4", "CH3COOH"],
+  "a": 2,
+  "e": "Phosphoric acid can donate three protons per molecule, making it triprotic.",
+  "cat": "gs",
+  "sub": "acid_base"
+},
+{
+  "q": "Which salt is used in 'Bakery' as a component of Baking Powder along with Baking Soda?",
+  "o": ["Sodium Carbonate", "Potassium Hydrogen Tartrate (Cream of Tartar)", "Sodium Hydroxide", "Calcium Chloride"],
+  "a": 1,
+  "e": "The acidic component reacts with the basic soda to release $CO_2$ only when moistened.",
+  "cat": "gs",
+  "sub": "acid_base"
+},
+{
+  "q": "What is the pH of a 1 M NaOH solution?",
+  "o": ["0", "7", "1", "14"],
+  "a": 3,
+  "e": "pOH = -log(1) = 0. Therefore, pH = 14 - 0 = 14.",
+  "cat": "gs",
+  "sub": "acid_base"
+},
+{
+  "q": "Which indicator changes color from 'Blue' to 'Red' as the solution becomes acidic?",
+  "o": ["Red Litmus", "Blue Litmus", "Phenolphthalein", "Turmeric"],
+  "a": 1,
+  "e": "Blue litmus paper is used specifically to detect acidic solutions.",
+  "cat": "gs",
+  "sub": "acid_base"
+},
+{
+  "q": "What is 'Hard Water' characterized by?",
+  "o": ["High pH", "Presence of Calcium and Magnesium salts", "Presence of Sodium salts", "Low pH"],
+  "a": 1,
+  "e": "Hard water doesn't form lather easily with soap because of these dissolved minerals.",
+  "cat": "gs",
+  "sub": "acid_base"
+},
+{
+  "q": "Which effect explains why the actual charge felt by an electron is less than the nuclear charge?",
+  "o": ["Photoelectric effect", "Shielding (Screening) effect", "Zeeman effect", "Compton effect"],
+  "a": 1,
+  "e": "Inner shell electrons act as a screen, protecting outer electrons from the full pull of the nucleus.",
+  "cat": "gs",
+  "sub": "atomic_structure"
+},
+{
+  "q": "What is the 'Maximum' number of electrons that can be accommodated in the 'N' shell (n=4)?",
+  "o": ["8", "18", "32", "50"],
+  "a": 2,
+  "e": "Using the $2n^2$ formula: $2 \times (4)^2 = 2 \times 16 = 32$.",
+  "cat": "gs",
+  "sub": "atomic_structure"
+},
+{
+  "q": "Which scientist proposed the 'Plum Pudding' model of the atom?",
+  "o": ["Ernest Rutherford", "J.J. Thomson", "John Dalton", "Niels Bohr"],
+  "a": 1,
+  "e": "Thomson suggested atoms were spheres of positive charge with electrons embedded like raisins in a pudding.",
+  "cat": "gs",
+  "sub": "atomic_structure"
+},
+{
+  "q": "In the 'Modern Periodic Table', which group contains the 'Chalcogens'?",
+  "o": ["Group 15", "Group 16", "Group 17", "Group 18"],
+  "a": 1,
+  "e": "Group 16 (Oxygen family) are called Chalcogens, meaning 'ore-formers'.",
+  "cat": "gs",
+  "sub": "periodic_table"
+},
+{
+  "q": "Which element has the 'Lowest' Boiling Point in the entire periodic table?",
+  "o": ["Hydrogen", "Helium", "Nitrogen", "Oxygen"],
+  "a": 1,
+  "e": "Helium has the lowest boiling point (-268.9°C) due to extremely weak Van der Waals forces.",
+  "cat": "gs",
+  "sub": "periodic_table"
+},
+{
+  "q": "What is the 'Bond Order' of the Carbon Monoxide (CO) molecule?",
+  "o": ["1", "2", "3", "2.5"],
+  "a": 2,
+  "e": "CO has a triple bond, making it isoelectronic with Nitrogen ($N_2$) and very stable.",
+  "cat": "gs",
+  "sub": "chemical_bonding"
+},
+{
+  "q": "According to 'Fajan's Rules', a high positive charge on a cation increases its:",
+  "o": ["Ionic character", "Covalent character", "Metallic character", "Acidic character"],
+  "a": 1,
+  "e": "Higher charge increases the polarizing power of the cation, pulling electron density from the anion (covalency).",
+  "cat": "gs",
+  "sub": "chemical_bonding"
+},
+{
+  "q": "Which type of 'Hybridization' is found in the Ethene ($C_2H_4$) molecule?",
+  "o": ["sp", "sp2", "sp3", "dsp2"],
+  "a": 1,
+  "e": "Each Carbon in ethene is bonded to 3 other atoms in a trigonal planar arrangement.",
+  "cat": "gs",
+  "sub": "chemical_bonding"
+},
+{
+  "q": "The 'Isodiaphers' are atoms that have the same:",
+  "o": ["Mass Number", "Atomic Number", "Neutron-Proton difference (n-p)", "Number of Neutrons"],
+  "a": 2,
+  "e": "Example: $^ {238} _{92}U$ and $^ {234} _{90}Th$ both have a neutron-proton difference of 54.",
+  "cat": "gs",
+  "sub": "atomic_structure"
+},
+{
+  "q": "Which of the following elements is a 'Post-Transition Metal'?",
+  "o": ["Iron", "Copper", "Aluminum", "Zinc"],
+  "a": 2,
+  "e": "Metals located between transition metals and metalloids (like Al, Sn, Pb) are post-transition metals.",
+  "cat": "gs",
+  "sub": "periodic_table"
+},
+{
+  "q": "The 'Bond Angle' in a molecule of Ammonia ($NH_3$) is less than 109.5° because of:",
+  "o": ["Lone pair - Lone pair repulsion", "Lone pair - Bond pair repulsion", "Bond pair - Bond pair repulsion", "Nuclear repulsion"],
+  "a": 1,
+  "e": "A lone pair occupies more space than a bond pair, pushing the N-H bonds closer together.",
+  "cat": "gs",
+  "sub": "chemical_bonding"
+},
+{
+  "q": "Which subshell is filled 'Immediately After' the 3p subshell?",
+  "o": ["3d", "4s", "4p", "4d"],
+  "a": 1,
+  "e": "According to the (n+l) rule, 4s (4+0=4) has lower energy than 3d (3+2=5).",
+  "cat": "gs",
+  "sub": "atomic_structure"
+},
+{
+  "q": "The 'Valency' of Silicon (Atomic Number 14) is:",
+  "o": ["2", "4", "6", "8"],
+  "a": 1,
+  "e": "Silicon (2, 8, 4) has 4 valence electrons and usually forms 4 covalent bonds.",
+  "cat": "gs",
+  "sub": "periodic_table"
+},
+{
+  "q": "Which molecule has 'Zero' dipole moment despite having polar bonds?",
+  "o": ["H2O", "NH3", "BF3", "HCl"],
+  "a": 2,
+  "e": "In Boron Trifluoride ($BF_3$), the trigonal planar symmetry causes the bond dipoles to cancel out.",
+  "cat": "gs",
+  "sub": "chemical_bonding"
+},
+{
+  "q": "The 'Actinide' series of elements are placed in which 'Period'?",
+  "o": ["Period 5", "Period 6", "Period 7", "Period 8"],
+  "a": 2,
+  "e": "Lanthanides belong to Period 6, and Actinides belong to Period 7.",
+  "cat": "gs",
+  "sub": "periodic_table"
+},
+{
+  "q": "Which 'Bond' is the longest in length?",
+  "o": ["C-C (Single)", "C=C (Double)", "C≡C (Triple)", "N≡N"],
+  "a": 0,
+  "e": "Single bonds are the longest; as bond order increases (double, triple), bond length decreases.",
+  "cat": "gs",
+  "sub": "chemical_bonding"
+},
+{
+  "q": "What is the 'Oxidation State' of any element in its natural, uncombined state?",
+  "o": ["+1", "-1", "0", "Variable"],
+  "a": 2,
+  "e": "Elements like $O_2$, $H_2$, $Fe$, or $S_8$ have an oxidation state of zero.",
+  "cat": "gs",
+  "sub": "periodic_table"
+},
+{
+  "q": "Which of the following is a 'Liquid Non-metal' at room temperature?",
+  "o": ["Mercury", "Bromine", "Iodine", "Chlorine"],
+  "a": 1,
+  "e": "Bromine is the only non-metallic element that is liquid at standard conditions.",
+  "cat": "gs",
+  "sub": "periodic_table"
+},
+{
+  "q": "Which of the following molecules is 'Diamagnetic' according to Molecular Orbital Theory?",
+  "o": ["O2", "B2", "C2", "O2+"],
+  "a": 2,
+  "e": "In C2, all 12 electrons are paired in the bonding molecular orbitals, making it diamagnetic.",
+  "cat": "gs",
+  "sub": "chemical_bonding"
+},
+{
+  "q": "The 'Pauling Scale' is used to measure which property of an element?",
+  "o": ["Atomic Radius", "Electronegativity", "Ionization Potential", "Electron Affinity"],
+  "a": 1,
+  "e": "Linus Pauling developed the most widely used scale for electronegativity, with Fluorine at 4.0.",
+  "cat": "gs",
+  "sub": "periodic_table"
+},
+{
+  "q": "Which isotope is used in 'Agriculture' to study the uptake of phosphorus by plants?",
+  "o": ["Carbon-14", "Phosphorus-32", "Iodine-131", "Iron-59"],
+  "a": 1,
+  "e": "P-32 is a radioactive tracer that helps scientists track how fertilizers move through a plant.",
+  "cat": "gs",
+  "sub": "atomic_structure"
+},
+{
+  "q": "What is the 'Bond Order' of the Nitrogen ($N_2$) molecule?",
+  "o": ["1", "2", "3", "2.5"],
+  "a": 2,
+  "e": "Nitrogen has a triple bond ($N \\equiv N$), giving it a bond order of 3 and very high stability.",
+  "cat": "gs",
+  "sub": "chemical_bonding"
+},
+{
+  "q": "Which element has the highest 'Electron Affinity' (most negative) in the periodic table?",
+  "o": ["Fluorine", "Chlorine", "Oxygen", "Neon"],
+  "a": 1,
+  "e": "Chlorine has higher electron affinity than Fluorine because its larger size reduces electron-electron repulsion.",
+  "cat": "gs",
+  "sub": "periodic_table"
+},
+{
+  "q": "The 'Lyman Series' of the hydrogen spectrum lies in which region?",
+  "o": ["Visible", "Infrared", "Ultraviolet", "X-ray"],
+  "a": 2,
+  "e": "Lyman series transitions end at n=1, emitting high-energy UV radiation.",
+  "cat": "gs",
+  "sub": "atomic_structure"
+},
+{
+  "q": "Which type of bond involves the 'Sea of Electrons' model?",
+  "o": ["Ionic Bond", "Covalent Bond", "Metallic Bond", "Hydrogen Bond"],
+  "a": 2,
+  "e": "Metallic bonding consists of a lattice of positive ions surrounded by delocalized, mobile electrons.",
+  "cat": "gs",
+  "sub": "chemical_bonding"
+},
+{
+  "q": "What is the 'Geometry' of a molecule with $sp^3d^2$ hybridization (e.g., $SF_6$)?",
+  "o": ["Tetrahedral", "Octahedral", "Trigonal Bipyramidal", "Square Planar"],
+  "a": 1,
+  "e": "Six hybrid orbitals arrange themselves in an octahedral shape to minimize repulsion.",
+  "cat": "gs",
+  "sub": "chemical_bonding"
+},
+{
+  "q": "Which group of elements is known as 'Aerogens'?",
+  "o": ["Halogens", "Noble Gases", "Alkali Metals", "Chalcogens"],
+  "a": 1,
+  "e": "Noble gases (Group 18) are sometimes called aerogens because they are found in the atmosphere.",
+  "cat": "gs",
+  "sub": "periodic_table"
+},
+{
+  "q": "The 'Half-life' of a radioactive substance depends on:",
+  "o": ["Temperature", "Pressure", "Initial quantity", "Nature of the substance"],
+  "a": 3,
+  "e": "Half-life is a constant nuclear property and is unaffected by external physical or chemical changes.",
+  "cat": "gs",
+  "sub": "atomic_structure"
+},
+{
+  "q": "Which molecule has 'Bent' geometry due to two lone pairs on the central atom?",
+  "o": ["CO2", "BeCl2", "H2O", "CH4"],
+  "a": 2,
+  "e": "Water ($H_2O$) has $sp^3$ hybridization but the 2 lone pairs reduce the angle to 104.5°.",
+  "cat": "gs",
+  "sub": "chemical_bonding"
+},
+{
+  "q": "What is 'Eka-Silicon' known as today?",
+  "o": ["Scandium", "Gallium", "Germanium", "Technetium"],
+  "a": 2,
+  "e": "Mendeleev predicted the properties of Germanium and called it Eka-Silicon before its discovery.",
+  "cat": "gs",
+  "sub": "periodic_table"
+},
+{
+  "q": "Which force is the 'Strongest' among the following?",
+  "o": ["Hydrogen Bond", "Dipole-Dipole Interaction", "Covalent Bond", "Van der Waals Force"],
+  "a": 2,
+  "e": "Intramolecular forces (covalent/ionic) are much stronger than intermolecular forces (H-bond/Van der Waals).",
+  "cat": "gs",
+  "sub": "chemical_bonding"
+},
+{
+  "q": "Which 'Subatomic Particle' was the first to be discovered?",
+  "o": ["Proton", "Neutron", "Electron", "Positron"],
+  "a": 2,
+  "e": "The electron was discovered by J.J. Thomson in 1897 through cathode ray experiments.",
+  "cat": "gs",
+  "sub": "atomic_structure"
+},
+{
+  "q": "Which of the following is a 'Transition Element' but does not show variable oxidation states?",
+  "o": ["Iron", "Copper", "Scandium", "Manganese"],
+  "a": 2,
+  "e": "Scandium ($Sc$) usually shows only a +3 oxidation state, unlike other transition metals.",
+  "cat": "gs",
+  "sub": "periodic_table"
+},
+{
+  "q": "What is 'Formal Charge' used for in Lewis structures?",
+  "o": ["Calculating mass", "Predicting the most stable structure", "Measuring speed", "Finding pH"],
+  "a": 1,
+  "e": "The structure with the lowest formal charge on atoms is generally the most stable and correct.",
+  "cat": "gs",
+  "sub": "chemical_bonding"
+},
+{
+  "q": "Which radioactive isotope is used in 'Nuclear Reactors' to generate power?",
+  "o": ["Uranium-235", "Uranium-238", "Carbon-14", "Iodine-131"],
+  "a": 0,
+  "e": "U-235 is fissile, meaning it can sustain a nuclear chain reaction to produce energy.",
+  "cat": "gs",
+  "sub": "atomic_structure"
+},
+{
+  "q": "What is the 'Electronic Configuration' of the Nitride ion ($N^{3-}$)?",
+  "o": ["1s2 2s2 2p3", "1s2 2s2 2p6", "1s2 2s2 2p5", "1s2 2s2 2p2"],
+  "a": 1,
+  "e": "Nitrogen (7e-) gains 3 electrons to reach a stable neon configuration (10e-).",
+  "cat": "gs",
+  "sub": "atomic_structure"
+},
+{
+  "q": "Which of the following is the most 'Abundant' metal in the Earth's crust?",
+  "o": ["Iron", "Aluminum", "Calcium", "Sodium"],
+  "a": 1,
+  "e": "Aluminum is the most abundant metal, though Oxygen and Silicon are more abundant non-metals/metalloids.",
+  "cat": "gs",
+  "sub": "metals_non_metals"
+},
+{
+  "q": "What is the primary 'Ore' of Aluminum?",
+  "o": ["Haematite", "Bauxite", "Cuprite", "Calamine"],
+  "a": 1,
+  "e": "Bauxite ($Al_2O_3 · 2H_2O$) is the main ore used for the industrial extraction of Aluminum.",
+  "cat": "gs",
+  "sub": "metals_non_metals"
+},
+{
+  "q": "Which property allows metals to be hammered into 'Thin Sheets'?",
+  "o": ["Ductility", "Malleability", "Sonority", "Conductivity"],
+  "a": 1,
+  "e": "Malleability is highest in Gold and Silver, allowing them to be beaten into extremely thin foils.",
+  "cat": "gs",
+  "sub": "metals_non_metals"
+},
+{
+  "q": "The 'Cinnabar' ore is used to extract which metal?",
+  "o": ["Lead", "Mercury", "Copper", "Zinc"],
+  "a": 1,
+  "e": "Cinnabar ($HgS$) is the sulfide ore of Mercury.",
+  "cat": "gs",
+  "sub": "metals_non_metals"
+},
+{
+  "q": "Which metal is stored in 'Kerosene' due to its extreme reactivity with air and water?",
+  "o": ["Magnesium", "Sodium", "Zinc", "Iron"],
+  "a": 1,
+  "e": "Sodium and Potassium react violently with moisture to produce Hydrogen gas and heat, often causing fire.",
+  "cat": "gs",
+  "sub": "metals_non_metals"
+},
+{
+  "q": "What is the 'Best Conductor' of heat and electricity among metals?",
+  "o": ["Copper", "Silver", "Gold", "Aluminum"],
+  "a": 1,
+  "e": "Silver has the highest electrical and thermal conductivity, followed closely by Copper.",
+  "cat": "gs",
+  "sub": "metals_non_metals"
+},
+{
+  "q": "Which non-metal is a good 'Conductor' of electricity?",
+  "o": ["Diamond", "Sulfur", "Graphite", "Phosphorus"],
+  "a": 2,
+  "e": "Graphite has delocalized electrons between its hexagonal layers, allowing it to conduct electricity.",
+  "cat": "gs",
+  "sub": "metals_non_metals"
+},
+{
+  "q": "The process of 'Galvanization' involves coating Iron with which metal?",
+  "o": ["Tin", "Zinc", "Chromium", "Nickel"],
+  "a": 1,
+  "e": "Zinc acts as a sacrificial anode, protecting the iron underneath from rusting.",
+  "cat": "gs",
+  "sub": "metals_non_metals"
+},
+{
+  "q": "Which metal is found in a 'Liquid' state at room temperature?",
+  "o": ["Sodium", "Mercury", "Gallium", "Cesium"],
+  "a": 1,
+  "e": "Mercury (Hg) remains liquid at room temperature due to its unique electronic configuration.",
+  "cat": "gs",
+  "sub": "metals_non_metals"
+},
+{
+  "q": "What is 'Haematite' an ore of?",
+  "o": ["Copper", "Aluminum", "Iron", "Lead"],
+  "a": 2,
+  "e": "Haematite ($Fe_2O_3$) is a high-grade oxide ore of Iron.",
+  "cat": "gs",
+  "sub": "metals_non_metals"
+},
+{
+  "q": "Which non-metal is 'Liquid' at room temperature?",
+  "o": ["Chlorine", "Bromine", "Iodine", "Fluorine"],
+  "a": 1,
+  "e": "Bromine is the only non-metallic element that is liquid at standard conditions.",
+  "cat": "gs",
+  "sub": "metals_non_metals"
+},
+{
+  "q": "Which metal is 'Soft' enough to be cut with a knife?",
+  "o": ["Aluminum", "Iron", "Sodium", "Copper"],
+  "a": 2,
+  "e": "Alkali metals like Sodium, Potassium, and Lithium are very soft and have low densities.",
+  "cat": "gs",
+  "sub": "metals_non_metals"
+},
+{
+  "q": "The 'Lustre' (shine) of a metal is due to:",
+  "o": ["High density", "Presence of free electrons", "Hardness", "Atomic size"],
+  "a": 1,
+  "e": "Free electrons on the surface reflect light, giving metals their characteristic metallic luster.",
+  "cat": "gs",
+  "sub": "metals_non_metals"
+},
+{
+  "q": "Which ore is concentrated by the 'Froth Floatation' process?",
+  "o": ["Oxide ores", "Sulfide ores", "Carbonate ores", "Chloride ores"],
+  "a": 1,
+  "e": "Froth floatation is used for sulfide ores like Galena (PbS) or Copper Pyrites (CuFeS2).",
+  "cat": "gs",
+  "sub": "metals_non_metals"
+},
+{
+  "q": "What is 'Magnesite' chemically?",
+  "o": ["MgCO3", "MgSO4", "MgCl2", "MgO"],
+  "a": 0,
+  "e": "Magnesite is the carbonate ore of Magnesium.",
+  "cat": "gs",
+  "sub": "metals_non_metals"
+},
+{
+  "q": "Which metal does not react with 'Dilute HCl' even on heating?",
+  "o": ["Iron", "Zinc", "Copper", "Magnesium"],
+  "a": 2,
+  "e": "Copper is below Hydrogen in the reactivity series and cannot displace it from acids.",
+  "cat": "gs",
+  "sub": "metals_non_metals"
+},
+{
+  "q": "What is the common name for 'Iron Pyrites'?",
+  "o": ["White Gold", "Fool's Gold", "Quick Silver", "Liquid Gold"],
+  "a": 1,
+  "e": "Iron Pyrite ($FeS_2$) looks like gold due to its brassy-yellow color and metallic luster.",
+  "cat": "gs",
+  "sub": "metals_non_metals"
+},
+{
+  "q": "Which metal is used in the 'Filament' of an electric bulb?",
+  "o": ["Copper", "Nichrome", "Tungsten", "Aluminum"],
+  "a": 2,
+  "e": "Tungsten (W) has an extremely high melting point (3422°C), preventing it from melting when white-hot.",
+  "cat": "gs",
+  "sub": "metals_non_metals"
+},
+{
+  "q": "The process of heating an ore strongly in the 'Absence' of air is called:",
+  "o": ["Roasting", "Calcination", "Smelting", "Reduction"],
+  "a": 1,
+  "e": "Calcination is used for carbonate and hydrated ores (e.g., ZnCO3) to remove CO2 or water.",
+  "cat": "gs",
+  "sub": "metals_non_metals"
+},
+{
+  "q": "The process of heating 'Sulfide Ores' in a regular supply of air is called:",
+  "o": ["Calcination", "Roasting", "Electrolysis", "Refining"],
+  "a": 1,
+  "e": "Roasting converts sulfide ores (like ZnS) into oxides, releasing SO2 gas.",
+  "cat": "gs",
+  "sub": "metals_non_metals"
+},
+{
+  "q": "Which of the following is an 'Alloy' of Copper and Zinc?",
+  "o": ["Bronze", "Brass", "Solder", "Steel"],
+  "a": 1,
+  "e": "Brass consists of Copper and Zinc, while Bronze consists of Copper and Tin.",
+  "cat": "gs",
+  "sub": "metals_non_metals"
+},
+{
+  "q": "What is 'Solder' (used in electronics) composed of?",
+  "o": ["Lead and Tin", "Copper and Tin", "Lead and Zinc", "Aluminum and Magnesium"],
+  "a": 0,
+  "e": "Solder has a low melting point, making it ideal for joining electrical wires.",
+  "cat": "gs",
+  "sub": "metals_non_metals"
+},
+{
+  "q": "Which metal is the most 'Reactive' in the reactivity series?",
+  "o": ["Gold", "Sodium", "Potassium", "Iron"],
+  "a": 2,
+  "e": "Potassium (K) is at the top of the activity series, reacting instantly with water and air.",
+  "cat": "gs",
+  "sub": "metals_non_metals"
+},
+{
+  "q": "Which metal is extracted using 'Electrolytic Reduction' of its molten oxide?",
+  "o": ["Iron", "Copper", "Aluminum", "Zinc"],
+  "a": 2,
+  "e": "Highly reactive metals like Aluminum (Hall-Heroult process) cannot be reduced by carbon; they require electricity.",
+  "cat": "gs",
+  "sub": "metals_non_metals"
+},
+{
+  "q": "What is the 'Purity' of 24-carat gold?",
+  "o": ["75%", "91.6%", "100%", "80%"],
+  "a": 2,
+  "e": "24-carat gold is pure gold, but it is too soft for jewelry; 22-carat (91.6%) is commonly used instead.",
+  "cat": "gs",
+  "sub": "metals_non_metals"
+},
+{
+  "q": "Which substance is used as a 'Flux' in the extraction of Iron to remove sand ($SiO_2$)?",
+  "o": ["Limestone (CaCO3)", "Coke", "Bauxite", "Sulfur"],
+  "a": 0,
+  "e": "Limestone decomposes to CaO, which reacts with sand to form molten 'Slag' ($CaSiO_3$).",
+  "cat": "gs",
+  "sub": "metals_non_metals"
+},
+{
+  "q": "Which alloy is used to make 'Aircraft' bodies due to its light weight and strength?",
+  "o": ["Brass", "Magnalium", "Duralumin", "Stainless Steel"],
+  "a": 2,
+  "e": "Duralumin is an alloy of Aluminum, Copper, Manganese, and Magnesium.",
+  "cat": "gs",
+  "sub": "metals_non_metals"
+},
+{
+  "q": "The 'Thermite' reaction uses which metal as a reducing agent to join railway tracks?",
+  "o": ["Iron", "Aluminum", "Copper", "Zinc"],
+  "a": 1,
+  "e": "Aluminum powder reacts with Iron oxide ($Fe_2O_3$) to produce molten iron and massive heat.",
+  "cat": "gs",
+  "sub": "metals_non_metals"
+},
+{
+  "q": "What is 'Amalgam'?",
+  "o": ["An alloy of Gold", "An alloy containing Mercury", "An alloy of Iron", "A pure metal"],
+  "a": 1,
+  "e": "If one of the metals in an alloy is Mercury, it is called an Amalgam (e.g., Sodium Amalgam).",
+  "cat": "gs",
+  "sub": "metals_non_metals"
+},
+{
+  "q": "Which component of 'Stainless Steel' makes it resistant to rusting?",
+  "o": ["Carbon", "Chromium", "Manganese", "Copper"],
+  "a": 1,
+  "e": "Chromium forms a thin, invisible layer of oxide on the surface that prevents corrosion.",
+  "cat": "gs",
+  "sub": "metals_non_metals"
+},
+{
+  "q": "Which metal is found in 'Nature' in its free (native) state?",
+  "o": ["Sodium", "Gold", "Aluminum", "Calcium"],
+  "a": 1,
+  "e": "Noble metals like Gold, Silver, and Platinum are unreactive and found as pure metals.",
+  "cat": "gs",
+  "sub": "metals_non_metals"
+},
+{
+  "q": "What is 'German Silver' composed of?",
+  "o": ["Copper, Zinc, and Nickel", "Copper and Silver", "Silver and Aluminum", "Lead and Silver"],
+  "a": 0,
+  "e": "Despite the name, German Silver contains **zero** silver; it is named for its silver-like appearance.",
+  "cat": "gs",
+  "sub": "metals_non_metals"
+},
+{
+  "q": "Which process is used for the 'Refining' of blister copper?",
+  "o": ["Distillation", "Liquation", "Electrolytic Refining", "Magnetic Separation"],
+  "a": 2,
+  "e": "Copper is refined using an electrolytic cell where pure copper deposits on the cathode.",
+  "cat": "gs",
+  "sub": "metals_non_metals"
+},
+{
+  "q": "What is 'Galena' an ore of?",
+  "o": ["Iron", "Copper", "Lead", "Zinc"],
+  "a": 2,
+  "e": "Galena (PbS) is the primary sulfide ore of Lead.",
+  "cat": "gs",
+  "sub": "metals_non_metals"
+},
+{
+  "q": "The 'Non-metal' used in the vulcanization of rubber is:",
+  "o": ["Carbon", "Sulfur", "Phosphorus", "Silicon"],
+  "a": 1,
+  "e": "Sulfur creates cross-links between rubber polymer chains, making it tough and elastic.",
+  "cat": "gs",
+  "sub": "metals_non_metals"
+},
+{
+  "q": "Which metal is used in 'Galvanized' iron pipes to prevent rusting?",
+  "o": ["Zinc", "Tin", "Nickel", "Chromium"],
+  "a": 0,
+  "e": "Zinc is more reactive than Iron and corrodes preferentially, protecting the pipe.",
+  "cat": "gs",
+  "sub": "metals_non_metals"
+},
+{
+  "q": "Which of the following metals reacts with 'Cold Water' most vigorously?",
+  "o": ["Magnesium", "Calcium", "Potassium", "Aluminum"],
+  "a": 2,
+  "e": "Potassium reacts so violently with cold water that the hydrogen gas evolved catches fire immediately.",
+  "cat": "gs",
+  "sub": "metals_non_metals"
+},
+{
+  "q": "What is the 'Reducing Agent' used in the Blast Furnace to extract Iron from Haematite?",
+  "o": ["Coke (C)", "Carbon Monoxide (CO)", "Limestone", "Oxygen"],
+  "a": 1,
+  "e": "While Coke is the fuel, Carbon Monoxide ($CO$) is the actual gas that reduces iron oxide to iron metal.",
+  "cat": "gs",
+  "sub": "metals_non_metals"
+},
+{
+  "q": "Which non-metal is used in the 'De-galvanization' or cleaning of metals?",
+  "o": ["Sulfur", "Chlorine", "Hydrogen", "Nitrogen"],
+  "a": 1,
+  "e": "Chlorine and its compounds are often used to clean metal surfaces of oxides.",
+  "cat": "gs",
+  "sub": "metals_non_metals"
+},
+{
+  "q": "What is 'Pig Iron'?",
+  "o": ["Purest form of iron", "Iron with 3-4% Carbon and impurities", "Iron used for surgical tools", "Stainless steel"],
+  "a": 1,
+  "e": "Pig iron is the immediate product of the blast furnace; it is brittle due to high carbon content.",
+  "cat": "gs",
+  "sub": "metals_non_metals"
+},
+{
+  "q": "Which metal forms a 'Protective Oxide Layer' that prevents further corrosion (Self-passivation)?",
+  "o": ["Iron", "Sodium", "Aluminum", "Copper"],
+  "a": 2,
+  "e": "Aluminum reacts with air to form $Al_2O_3$, which sticks to the surface and stops more oxygen from reaching the metal.",
+  "cat": "gs",
+  "sub": "metals_non_metals"
+},
+{
+  "q": "What is 'Wrought Iron'?",
+  "o": ["Cast iron", "The purest commercial form of iron", "Steel with 10% Carbon", "Iron ore"],
+  "a": 1,
+  "e": "Wrought iron contains less than 0.5% carbon and is very tough and malleable.",
+  "cat": "gs",
+  "sub": "metals_non_metals"
+},
+{
+  "q": "Which gas is used in 'Food Packaging' (like Chips) to prevent the oxidation of fats and oils?",
+  "o": ["Oxygen", "Hydrogen", "Nitrogen", "Chlorine"],
+  "a": 2,
+  "e": "Nitrogen is an inert non-metal that creates an unreactive atmosphere, keeping food fresh.",
+  "cat": "gs",
+  "sub": "metals_non_metals"
+},
+{
+  "q": "What is 'Aqua Regia' primarily used for in metallurgy?",
+  "o": ["Cleaning iron", "Dissolving Noble metals like Gold/Platinum", "Extracting Aluminum", "Galvanization"],
+  "a": 1,
+  "e": "It is a mixture of conc. $HCl$ and conc. $HNO_3$ in a 3:1 ratio by volume.",
+  "cat": "gs",
+  "sub": "metals_non_metals"
+},
+{
+  "q": "Which of the following is a 'Metalloid' used in making microchips?",
+  "o": ["Carbon", "Silicon", "Aluminum", "Iron"],
+  "a": 1,
+  "e": "Silicon is a semiconductor, making it the foundation of the modern electronics industry.",
+  "cat": "gs",
+  "sub": "metals_non_metals"
+},
+{
+  "q": "What is 'Slag' in the context of iron extraction?",
+  "o": ["Pure iron", "Molten Calcium Silicate ($CaSiO_3$)", "Iron ore", "Waste gas"],
+  "a": 1,
+  "e": "Slag is formed when the flux (limestone) reacts with impurities (sand/silica).",
+  "cat": "gs",
+  "sub": "metals_non_metals"
+},
+{
+  "q": "Which non-metal is found in the 'Earth's Crust' in the highest percentage?",
+  "o": ["Nitrogen", "Oxygen", "Silicon", "Hydrogen"],
+  "a": 1,
+  "e": "Oxygen makes up about 46.6% of the Earth's crust, mainly in the form of oxides.",
+  "cat": "gs",
+  "sub": "metals_non_metals"
+},
+{
+  "q": "Which metal reacts with 'Steam' but not with hot or cold water?",
+  "o": ["Sodium", "Calcium", "Iron", "Copper"],
+  "a": 2,
+  "e": "Iron reacts with steam to form magnetic iron oxide ($Fe_3O_4$) and hydrogen gas.",
+  "cat": "gs",
+  "sub": "metals_non_metals"
+},
+{
+  "q": "What is 'Steel' primarily an alloy of?",
+  "o": ["Iron and Copper", "Iron and Carbon", "Iron and Zinc", "Copper and Tin"],
+  "a": 1,
+  "e": "Steel is iron with a small amount (0.1% to 1.5%) of carbon to increase strength.",
+  "cat": "gs",
+  "sub": "metals_non_metals"
+},
+{
+  "q": "Which metal is used as a 'Catalyst' in the hydrogenation of vegetable oils?",
+  "o": ["Iron", "Nickel", "Copper", "Zinc"],
+  "a": 1,
+  "e": "Finely divided Nickel is used to convert liquid oils into solid fats (Vanaspati Ghee).",
+  "cat": "gs",
+  "sub": "metals_non_metals"
+},
+{
+  "q": "What is 'White Phosphorus' stored in?",
+  "o": ["Kerosene", "Alcohol", "Water", "Open air"],
+  "a": 2,
+  "e": "White phosphorus is highly reactive and catches fire spontaneously in air, so it is kept under water.",
+  "cat": "gs",
+  "sub": "metals_non_metals"
+},
+{
+  "q": "The 'Diamond' is an allotrope of which non-metal?",
+  "o": ["Sulfur", "Silicon", "Carbon", "Boron"],
+  "a": 2,
+  "e": "Diamond is a crystalline form of carbon and is the hardest known natural substance.",
+  "cat": "gs",
+  "sub": "metals_non_metals"
+},
+{
+  "q": "Which metal is found in 'Chlorophyll' in green plants?",
+  "o": ["Iron", "Magnesium", "Calcium", "Zinc"],
+  "a": 1,
+  "e": "Magnesium is the central metal atom in the chlorophyll molecule, essential for photosynthesis.",
+  "cat": "gs",
+  "sub": "metals_non_metals"
+},
+{
+  "q": "What is 'Monazite' sand an ore of?",
+  "o": ["Uranium", "Thorium", "Titanium", "Iron"],
+  "a": 1,
+  "e": "Monazite sand, found in large quantities in Kerala, is a major source of Thorium.",
+  "cat": "gs",
+  "sub": "metals_non_metals"
+},
+{
+  "q": "Which non-metal is used for 'Sterilizing' water?",
+  "o": ["Iodine", "Chlorine", "Fluorine", "Nitrogen"],
+  "a": 1,
+  "e": "Chlorine is an effective germicide used to kill pathogens in municipal water supplies.",
+  "cat": "gs",
+  "sub": "metals_non_metals"
+},
+{
+  "q": "Which metal is the 'Heaviest' (densest) among the following?",
+  "o": ["Lead", "Gold", "Mercury", "Osmium"],
+  "a": 3,
+  "e": "Osmium has the highest density (22.59 g/cm³) of all naturally occurring elements.",
+  "cat": "gs",
+  "sub": "metals_non_metals"
+},
+{
+  "q": "Which alloy is used to make 'Permanent Magnets'?",
+  "o": ["Brass", "Bronze", "Alnico", "Solder"],
+  "a": 2,
+  "e": "Alnico is made of Aluminum, Nickel, and Cobalt.",
+  "cat": "gs",
+  "sub": "metals_non_metals"
+},
+{
+  "q": "The 'Anode Mud' collected during electrolytic refining of copper contains:",
+  "o": ["Iron and Zinc", "Precious metals like Gold and Silver", "Silica", "Aluminum oxide"],
+  "a": 1,
+  "e": "Impurities that are less reactive than copper settle below the anode as precious 'mud'.",
+  "cat": "gs",
+  "sub": "metals_non_metals"
+},
+{
+  "q": "The 'Green Coating' formed on Copper vessels in moist air is:",
+  "o": ["Copper Oxide", "Basic Copper Carbonate", "Copper Nitrate", "Copper Chloride"],
+  "a": 1,
+  "e": "Corrosion of copper produces a mixture of $CuCO_3$ and $Cu(OH)_2$, often called Verdigris.",
+  "cat": "gs",
+  "sub": "metals_non_metals"
+},
+{
+  "q": "Which non-metal is the most 'Lustrous' (shiny)?",
+  "o": ["Sulfur", "Phosphorus", "Iodine", "Carbon"],
+  "a": 2,
+  "e": "Iodine is a dark gray/violet solid that possesses a distinct metallic-like shine.",
+  "cat": "gs",
+  "sub": "metals_non_metals"
+},
+{
+  "q": "Which element has the 'Largest' atomic radius in Period 3?",
+  "o": ["Sodium (Na)", "Chlorine (Cl)", "Argon (Ar)", "Aluminum (Al)"],
+  "a": 0,
+  "e": "Atomic radius decreases across a period; Sodium is at the start and has the largest radius.",
+  "cat": "gs",
+  "sub": "periodic_table"
+},
+{
+  "q": "A 'Coordinate Covalent Bond' is also known as a:",
+  "o": ["Metallic Bond", "Dative Bond", "Electrovalent Bond", "Double Bond"],
+  "a": 1,
+  "e": "It is a bond where both shared electrons come from only one of the participating atoms.",
+  "cat": "gs",
+  "sub": "chemical_bonding"
+},
+{
+  "q": "The 'Stability' of Noble gases is due to which electronic configuration?",
+  "o": ["ns2", "ns2 np6", "ns2 np5", "ns2 np3"],
+  "a": 1,
+  "e": "A completely filled s and p subshell (octet) represents a minimum energy, stable state.",
+  "cat": "gs",
+  "sub": "atomic_structure"
+},
+{
+  "q": "Which scientist discovered the 'Neutron'?",
+  "o": ["Ernest Rutherford", "J.J. Thomson", "James Chadwick", "Niels Bohr"],
+  "a": 2,
+  "e": "Chadwick discovered the neutron in 1932 by bombarding Beryllium with alpha particles.",
+  "cat": "gs",
+  "sub": "atomic_structure"
+},
+{
+  "q": "What is 'Lunar Caustic'?",
+  "o": ["Sodium Nitrate", "Silver Nitrate (AgNO3)", "Potassium Nitrate", "Mercuric Nitrate"],
+  "a": 1,
+  "e": "Silver Nitrate is called Lunar Caustic because it leaves a black stain on the skin when exposed to light.",
+  "cat": "gs",
+  "sub": "acid_base"
+},
+{
+  "q": "Which of the following is a 'Monobasic' acid?",
+  "o": ["H2SO4", "H3PO4", "HCl", "H2C2O4"],
+  "a": 2,
+  "e": "Hydrochloric acid produces only one hydrogen ion per molecule in solution.",
+  "cat": "gs",
+  "sub": "acid_base"
+},
+{
+  "q": "What is the nature of 'Saliva' after a meal?",
+  "o": ["Highly Basic", "Slightly Acidic", "Neutral", "Strongly Acidic"],
+  "a": 1,
+  "e": "Before eating, saliva is basic; after eating, bacteria produce acid, making it slightly acidic.",
+  "cat": "gs",
+  "sub": "acid_base"
+},
+{
+  "q": "Which theory defines a Base as a 'Proton Acceptor'?",
+  "o": ["Arrhenius Theory", "Bronsted-Lowry Theory", "Lewis Theory", "Modern Theory"],
+  "a": 1,
+  "e": "The Bronsted-Lowry theory focuses on the transfer of $H^+$ (protons) between substances.",
+  "cat": "gs",
+  "sub": "acid_base"
+},
+{
+  "q": "What is 'Aqua Regia'?",
+  "o": ["Concentrated HCl", "A mixture of conc. HCl and conc. HNO3 in 3:1 ratio", "A mixture of conc. H2SO4 and conc. HNO3", "Pure Nitric acid"],
+  "a": 1,
+  "e": "Aqua regia (Royal Water) is strong enough to dissolve noble metals like Gold and Platinum.",
+  "cat": "gs",
+  "sub": "acid_base"
+},
+{
+  "q": "Who suggested that 'Electrons behave like both particles and waves'?",
+  "o": ["Einstein", "De Broglie", "Newton", "Bohr"],
+  "a": 1,
+  "e": "Louis de Broglie proposed the dual nature of matter (wave-particle duality).",
+  "cat": "gs",
+  "sub": "atomic_structure"
+},
+{
+  "q": "What is the 'Oxidation State' of Manganese in $KMnO_4$?",
+  "o": ["+2", "+4", "+6", "+7"],
+  "a": 3,
+  "e": "In $KMnO_4$: $+1 + x + 4(-2) = 0 \rightarrow x = +7$.",
+  "cat": "gs",
+  "sub": "periodic_table"
+},
+{
+  "q": "Which radioactive gas is found in the soil and can cause 'Lung Cancer'?",
+  "o": ["Helium", "Neon", "Radon", "Argon"],
+  "a": 2,
+  "e": "Radon is a decay product of Uranium and is the second leading cause of lung cancer.",
+  "cat": "gs",
+  "sub": "atomic_structure"
+},
+{
+  "q": "The number of 'Sigma' ($\sigma$) and 'Pi' ($\pi$) bonds in Ethyne ($C_2H_2$) are:",
+  "o": ["2 sigma, 3 pi", "3 sigma, 2 pi", "1 sigma, 2 pi", "2 sigma, 1 pi"],
+  "a": 1,
+  "e": "Ethyne ($H-C \equiv C-H$) has 3 sigma bonds (two C-H, one C-C) and 2 pi bonds in the triple bond.",
+  "cat": "gs",
+  "sub": "chemical_bonding"
+},
+{
+  "q": "Which subatomic particle is not found in the 'Hydrogen' (Protium) atom?",
+  "o": ["Proton", "Electron", "Neutron", "Positron"],
+  "a": 2,
+  "e": "Protium ($^1_1H$) has 1 proton and 1 electron, but 0 neutrons.",
+  "cat": "gs",
+  "sub": "atomic_structure"
+},
+{
+  "q": "What is the hybridization of Beryllium in Beryllium Chloride ($BeCl_2$)?",
+  "o": ["sp", "sp2", "sp3", "dsp2"],
+  "a": 0,
+  "e": "Beryllium forms two sigma bonds with Chlorine atoms, resulting in linear $sp$ hybridization.",
+  "cat": "gs",
+  "sub": "chemical_bonding"
+},
+{
+  "q": "What is the 'Valency' of Magnesium (Atomic Number 12)?",
+  "o": ["1", "2", "3", "4"],
+  "a": 1,
+  "e": "Magnesium (2, 8, 2) loses 2 electrons from its outermost shell to become stable.",
+  "cat": "gs",
+  "sub": "atomic_structure"
+},
+  {
   "q": "What is the 'Functional Unit' of the human kidney?",
   "o": ["Neuron", "Nephron", "Alveoli", "Hepatocyte"],
   "a": 1,
