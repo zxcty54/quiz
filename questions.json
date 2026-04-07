@@ -39,6 +39,166 @@
   "cat": "gs",
   "sub": "excretory"
 },
+  {
+  "q": "Who is known as the 'Father of Genetics'?",
+  "o": ["Charles Darwin", "Gregor Mendel", "James Watson", "Thomas Hunt Morgan"],
+  "a": 1,
+  "e": "Mendel conducted hybridization experiments on garden peas (Pisum sativum) to discover the laws of inheritance.",
+  "cat": "gs",
+  "sub": "genetics"
+},
+{
+  "q": "Which plant did Gregor Mendel use for his famous genetics experiments?",
+  "o": ["Wild Pea", "Garden Pea (Pisum sativum)", "Sweet Pea", "Mustard"],
+  "a": 1,
+  "e": "He chose the garden pea because it had distinct contrasting traits and was easy to grow.",
+  "cat": "gs",
+  "sub": "genetics"
+},
+{
+  "q": "The physical or observable expression of a gene is called the:",
+  "o": ["Genotype", "Phenotype", "Allele", "Mutation"],
+  "a": 1,
+  "e": "Phenotype is what we see (like tallness or red color), while Genotype is the genetic makeup (like Tt).",
+  "cat": "gs",
+  "sub": "genetics"
+},
+{
+  "q": "What is an 'Allele'?",
+  "o": ["A type of cell", "Alternative forms of a gene", "A protein", "A chromosome"],
+  "a": 1,
+  "e": "For example, the gene for height has two alleles: Tall (T) and Dwarf (t).",
+  "cat": "gs",
+  "sub": "genetics"
+},
+{
+  "q": "According to the 'Law of Dominance', if a Tall (TT) plant is crossed with a Dwarf (tt) plant, the F1 generation will be:",
+  "o": ["All Dwarf", "All Tall", "Half Tall, Half Dwarf", "Medium height"],
+  "a": 1,
+  "e": "In the F1 generation, the dominant trait (Tall) masks the recessive trait (Dwarf).",
+  "cat": "gs",
+  "sub": "genetics"
+},
+{
+  "q": "The 'Phenotypic Ratio' of a Mendelian Monohybrid cross in the F2 generation is:",
+  "o": ["1:2:1", "3:1", "9:3:3:1", "1:1"],
+  "a": 1,
+  "e": "In F2, three plants show the dominant trait and one shows the recessive trait (3:1).",
+  "cat": "gs",
+  "sub": "genetics"
+},
+{
+  "q": "The 'Genotypic Ratio' of a Mendelian Monohybrid cross in the F2 generation is:",
+  "o": ["3:1", "1:2:1", "9:3:3:1", "2:2"],
+  "a": 1,
+  "e": "The ratio represents 1 Pure Tall (TT), 2 Hybrid Tall (Tt), and 1 Pure Dwarf (tt).",
+  "cat": "gs",
+  "sub": "genetics"
+},
+{
+  "q": "Which law states that 'Alleles of a gene pair separate during gamete formation'?",
+  "o": ["Law of Dominance", "Law of Segregation", "Law of Independent Assortment", "Law of Linkage"],
+  "a": 1,
+  "e": "Also known as the Law of Purity of Gametes; each gamete receives only one allele.",
+  "cat": "gs",
+  "sub": "genetics"
+},
+{
+  "q": "The 'Dihybrid Cross' (considering two traits at once) results in which F2 phenotypic ratio?",
+  "o": ["3:1", "1:2:1", "9:3:3:1", "1:1:1:1"],
+  "a": 2,
+  "e": "This ratio led Mendel to propose the Law of Independent Assortment.",
+  "cat": "gs",
+  "sub": "genetics"
+},
+{
+  "q": "What is 'Incomplete Dominance'?",
+  "o": ["One gene is missing", "Both alleles are dominant", "The F1 phenotype is an intermediate blend of the parents", "Trait is only seen in males"],
+  "a": 2,
+  "e": "Classic example: Crossing a Red flower with a White flower results in a Pink flower (Mirabilis jalapa).",
+  "cat": "gs",
+  "sub": "genetics"
+},
+{
+  "q": "Which human blood group system is an example of 'Codominance'?",
+  "o": ["Rh system", "ABO system (specifically AB blood type)", "MN system", "All of these"],
+  "a": 1,
+  "e": "In blood group AB, both A and B antigens are fully expressed on the red blood cells.",
+  "cat": "gs",
+  "sub": "genetics"
+},
+{
+  "q": "Who is known as the 'Father of Modern Genetics' or 'Experimental Genetics'?",
+  "o": ["Gregor Mendel", "T.H. Morgan", "Watson and Crick", "Hugo de Vries"],
+  "a": 1,
+  "e": "Morgan worked on Fruit flies (Drosophila) and discovered Linkage and Sex-linked inheritance.",
+  "cat": "gs",
+  "sub": "genetics"
+},
+{
+  "q": "A 'Test Cross' is used to determine the genotype of an organism by crossing it with a:",
+  "o": ["Homozygous Dominant parent", "Homozygous Recessive parent", "Heterozygous parent", "Sibling"],
+  "a": 1,
+  "e": "If any offspring show the recessive trait, the unknown parent must be heterozygous.",
+  "cat": "gs",
+  "sub": "genetics"
+},
+{
+  "q": "How many pairs of 'Autosomes' are present in a normal human cell?",
+  "o": ["23 pairs", "22 pairs", "1 pair", "46 pairs"],
+  "a": 1,
+  "e": "Humans have 22 pairs of autosomes and 1 pair of sex chromosomes (XX or XY).",
+  "cat": "gs",
+  "sub": "genetics"
+},
+{
+  "q": "The sex of a human child is determined by the:",
+  "o": ["Mother", "Father", "Both", "Environment"],
+  "a": 1,
+  "e": "The father provides either an X or a Y chromosome; if Y is provided, the child is male.",
+  "cat": "gs",
+  "sub": "genetics"
+},
+{
+  "q": "Which of the following is a 'Sex-linked' recessive disorder?",
+  "o": ["Down Syndrome", "Hemophilia", "Sickle Cell Anemia", "Cystic Fibrosis"],
+  "a": 1,
+  "e": "Hemophilia is more common in males because the gene is located on the X chromosome.",
+  "cat": "gs",
+  "sub": "genetics"
+},
+{
+  "q": "What is 'Mutation'?",
+  "o": ["Slow growth", "A sudden, permanent change in the DNA sequence", "Normal cell division", "Healing of a wound"],
+  "a": 1,
+  "e": "Mutations are the ultimate source of genetic variation in a population.",
+  "cat": "gs",
+  "sub": "genetics"
+},
+{
+  "q": "Who proposed the 'Chromosomal Theory of Inheritance'?",
+  "o": ["Mendel", "Sutton and Boveri", "Darwin", "Lamarck"],
+  "a": 1,
+  "e": "They noted that the behavior of chromosomes during meiosis parallels the behavior of Mendel's factors.",
+  "cat": "gs",
+  "sub": "genetics"
+},
+{
+  "q": "Which condition is caused by having an extra copy of chromosome 21 (Trisomy 21)?",
+  "o": ["Turner's Syndrome", "Down Syndrome", "Klinefelter's Syndrome", "Edward's Syndrome"],
+  "a": 1,
+  "e": "Down Syndrome causes intellectual disability and distinct physical features.",
+  "cat": "gs",
+  "sub": "genetics"
+},
+{
+  "q": "What is the genotype of a person with 'Klinefelter’s Syndrome'?",
+  "o": ["45, X", "47, XXY", "47, XYY", "48, XXXY"],
+  "a": 1,
+  "e": "These are males who have an extra X chromosome, leading to some female-like physical traits and infertility.",
+  "cat": "gs",
+  "sub": "genetics"
+},
 {
   "q": "Which hormone is responsible for increasing water reabsorption in the DCT and Collecting Duct?",
   "o": ["Insulin", "Adrenaline", "Antidiuretic Hormone (ADH/Vasopressin)", "Oxytocin"],
@@ -62,6 +222,1766 @@
   "e": "The renal artery carries oxygenated but waste-heavy blood from the aorta to the kidneys.",
   "cat": "gs",
   "sub": "excretory"
+},
+  {
+  "q": "Who is the 'Father of DNA Fingerprinting' in India?",
+  "o": ["Hargobind Khorana", "Lalji Singh", "M.S. Swaminathan", "Verghese Kurien"],
+  "a": 1,
+  "e": "Dr. Lalji Singh was a pioneer in DNA fingerprinting technology in India, establishing the CCMB in Hyderabad.",
+  "cat": "gs",
+  "sub": "genetics"
+},
+{
+  "q": "What is 'Recombinant DNA Technology' primarily used for?",
+  "o": ["Cloning cells", "Joining DNA from two different species", "Reading fossils", "Testing blood"],
+  "a": 1,
+  "e": "It allows scientists to insert a human gene (like insulin) into bacteria to produce medicine.",
+  "cat": "gs",
+  "sub": "genetics"
+},
+{
+  "q": "The first mammal to be successfully 'Cloned' was a sheep named:",
+  "o": ["Molly", "Dolly", "Polly", "Lucy"],
+  "a": 1,
+  "e": "Dolly the sheep was cloned in 1996 using a somatic cell from an adult sheep.",
+  "cat": "gs",
+  "sub": "genetics"
+},
+{
+  "q": "Which enzyme is known as 'Molecular Glue' used to join DNA fragments?",
+  "o": ["Helicase", "DNA Ligase", "Restriction Endonuclease", "Polymerase"],
+  "a": 1,
+  "e": "Ligase seals the gaps in the sugar-phosphate backbone of DNA.",
+  "cat": "gs",
+  "sub": "genetics"
+},
+{
+  "q": "Which enzyme is known as 'Molecular Scissors' because it cuts DNA at specific sites?",
+  "o": ["Ligase", "Restriction Endonuclease", "Amylase", "Lipase"],
+  "a": 1,
+  "e": "These enzymes are essential for genetic engineering to cut out specific genes.",
+  "cat": "gs",
+  "sub": "genetics"
+},
+{
+  "q": "What is 'PCR' (Polymerase Chain Reaction) used for?",
+  "o": ["Digesting protein", "Amplifying (making millions of copies) of a DNA sample", "Killing bacteria", "Measuring heart rate"],
+  "a": 1,
+  "e": "PCR is vital in forensics and medical diagnostics to study tiny amounts of DNA.",
+  "cat": "gs",
+  "sub": "genetics"
+},
+{
+  "q": "In the human evolutionary tree, which ancestor was the first to use 'Fire' and stand fully upright?",
+  "o": ["Australopithecus", "Homo erectus", "Homo habilis", "Neanderthal"],
+  "a": 1,
+  "e": "Homo erectus (Upright Man) had a larger brain and was the first to migrate out of Africa.",
+  "cat": "gs",
+  "sub": "evolution"
+},
+{
+  "q": "Which human ancestor is known as the 'Handy Man' because they were the first to make stone tools?",
+  "o": ["Ramapithecus", "Homo habilis", "Homo sapiens", "Dryopithecus"],
+  "a": 1,
+  "e": "Homo habilis used simple stone flakes for butchering and protection.",
+  "cat": "gs",
+  "sub": "evolution"
+},
+{
+  "q": "Where did modern humans (*Homo sapiens*) first originate?",
+  "o": ["Asia", "Africa", "Europe", "Australia"],
+  "a": 1,
+  "e": "The 'Out of Africa' theory is supported by genetic evidence showing all humans share African ancestors.",
+  "cat": "gs",
+  "sub": "evolution"
+},
+{
+  "q": "The 'Golden Rice' is a genetically modified crop rich in:",
+  "o": ["Vitamin C", "Vitamin A (Beta-carotene)", "Iron", "Protein"],
+  "a": 1,
+  "e": "Golden Rice was engineered to combat blindness and Vitamin A deficiency in developing countries.",
+  "cat": "gs",
+  "sub": "genetics"
+},
+{
+  "q": "What is 'Bt Cotton'?",
+  "o": ["Cotton that grows faster", "Genetically modified cotton resistant to bollworm pests", "Organic cotton", "Colored cotton"],
+  "a": 1,
+  "e": "It contains a gene from the bacterium *Bacillus thuringiensis* that produces a natural insecticide.",
+  "cat": "gs",
+  "sub": "genetics"
+},
+{
+  "q": "The 'Human Genome Project' (HGP) aimed to:",
+  "o": ["Clone humans", "Sequence the entire 3 billion base pairs of human DNA", "Cure all diseases", "Create a new species"],
+  "a": 1,
+  "e": "Completed in 2003, it mapped every gene in the human body.",
+  "cat": "gs",
+  "sub": "genetics"
+},
+{
+  "q": "Which of the following is a 'Stop Codon' that signals the end of protein synthesis?",
+  "o": ["AUG", "UAA", "GUG", "UGC"],
+  "a": 1,
+  "e": "UAA, UAG, and UGA are the three 'Nonsense' or Stop codons.",
+  "cat": "gs",
+  "sub": "genetics"
+},
+{
+  "q": "What is 'Genetic Drift'?",
+  "o": ["Slow evolution", "Random change in allele frequencies in a small population", "Migration of birds", "Mutation in a single cell"],
+  "a": 1,
+  "e": "It happens by chance and is also known as the Sewall Wright effect.",
+  "cat": "gs",
+  "sub": "genetics"
+},
+{
+  "q": "The 'Cri-du-chat' (Cat's cry) syndrome in humans is caused by:",
+  "o": ["Extra chromosome", "Deletion of part of chromosome 5", "High sugar", "Viral infection"],
+  "a": 1,
+  "e": "Affected infants have a high-pitched cry that sounds like a cat.",
+  "cat": "gs",
+  "sub": "genetics"
+},
+{
+  "q": "Which plant is known as the 'Drosophila of the Plant Kingdom' because of its use in genetics?",
+  "o": ["Pea plant", "Neurospora (Fungus)", "Arabidopsis", "Maize"],
+  "a": 2,
+  "e": "Arabidopsis thaliana is a model organism for plant genetic research.",
+  "cat": "gs",
+  "sub": "genetics"
+},
+{
+  "q": "What is 'Pleiotropy'?",
+  "o": ["Multiple genes for one trait", "A single gene affecting multiple traits", "Loss of a gene", "Incomplete dominance"],
+  "a": 1,
+  "e": "Example: The gene for Sickle Cell Anemia also provides resistance to Malaria.",
+  "cat": "gs",
+  "sub": "genetics"
+},
+{
+  "q": "The study of the interactions between 'Genes and the Environment' that don't change the DNA sequence is:",
+  "o": ["Genomics", "Epigenetics", "Proteomics", "Bioinformatics"],
+  "a": 1,
+  "e": "Epigenetics explains why identical twins can develop different health issues.",
+  "cat": "gs",
+  "sub": "genetics"
+},
+{
+  "q": "What is 'Gene Therapy'?",
+  "o": ["Replacing a faulty gene with a healthy one to treat a disease", "Giving pills to genes", "Reading the genetic code", "Cloning"],
+  "a": 0,
+  "e": "It is used for treating genetic disorders like SCID or Cystic Fibrosis.",
+  "cat": "gs",
+  "sub": "genetics"
+},
+{
+  "q": "Which of the following is 'Extranuclear DNA' (DNA found outside the nucleus)?",
+  "o": ["Ribosomal DNA", "Mitochondrial DNA", "Plasma DNA", "None"],
+  "a": 1,
+  "e": "Mitochondria and Chloroplasts have their own circular DNA, inherited only from the mother.",
+  "cat": "gs",
+  "sub": "genetics"
+},
+  {
+  "q": "Which of the following is an 'Autoimmune Disease' where the body attacks its own cells?",
+  "o": ["Typhoid", "Rheumatoid Arthritis", "Malaria", "Cholera"],
+  "a": 1,
+  "e": "In rheumatoid arthritis, the immune system attacks the joints, causing chronic inflammation.",
+  "cat": "gs",
+  "sub": "diseases"
+},
+{
+  "q": "What is 'Active Immunity'?",
+  "o": ["Injecting ready-made antibodies", "Immunity developed after the body produces its own antibodies in response to an antigen", "Immunity from mother to child", "Natural barriers like skin"],
+  "a": 1,
+  "e": "Active immunity is slower but long-lasting, occurring after an infection or vaccination.",
+  "cat": "gs",
+  "sub": "diseases"
+},
+{
+  "q": "The 'Colostrum' (first milk) provides which type of immunity to a newborn?",
+  "o": ["Natural Active Immunity", "Natural Passive Immunity", "Artificial Active Immunity", "None"],
+  "a": 1,
+  "e": "It is passive because the baby receives pre-formed antibodies (IgA) from the mother.",
+  "cat": "gs",
+  "sub": "diseases"
+},
+{
+  "q": "Which organ is known as the 'Graveyard of RBCs' and also acts as a reservoir of erythrocytes?",
+  "o": ["Liver", "Spleen", "Kidney", "Heart"],
+  "a": 1,
+  "e": "The spleen filters out old RBCs and is a major secondary lymphoid organ.",
+  "cat": "gs",
+  "sub": "diseases"
+},
+{
+  "q": "What is 'Anaphylactic Shock'?",
+  "o": ["A severe, life-threatening allergic reaction", "A type of cancer", "A bacterial infection", "A psychological condition"],
+  "a": 0,
+  "e": "It is a rapid systemic reaction often caused by insect stings, peanuts, or certain drugs.",
+  "cat": "gs",
+  "sub": "diseases"
+},
+{
+  "q": "Which drug is obtained from the 'Papaver somniferum' (Poppy plant) and acts as a depressant?",
+  "o": ["Cocaine", "Morphine", "Caffeine", "Nicotine"],
+  "a": 1,
+  "e": "Morphine is a powerful analgesic (painkiller) but is highly addictive.",
+  "cat": "gs",
+  "sub": "diseases"
+},
+{
+  "q": "The 'Heroin' drug, chemically known as Diacetylmorphine, is commonly called:",
+  "o": ["Crack", "Smack", "Coke", "Pot"],
+  "a": 1,
+  "e": "Heroin is a white, odorless, bitter crystalline compound that slows down body functions.",
+  "cat": "gs",
+  "sub": "diseases"
+},
+{
+  "q": "Which part of the brain is most affected by chronic 'Alcohol' consumption, leading to loss of balance?",
+  "o": ["Cerebrum", "Cerebellum", "Medulla", "Thalamus"],
+  "a": 1,
+  "e": "Alcohol impairs the cerebellum, which is responsible for muscular coordination and balance.",
+  "cat": "gs",
+  "sub": "diseases"
+},
+{
+  "q": "What is 'Cirrhosis' of the liver?",
+  "o": ["Liver cancer", "Replacement of healthy liver tissue with scar tissue due to chronic alcohol abuse", "Infection by bacteria", "Gallstones"],
+  "a": 1,
+  "e": "Cirrhosis eventually leads to liver failure and is a common consequence of long-term alcoholism.",
+  "cat": "gs",
+  "sub": "diseases"
+},
+{
+  "q": "Which 'Canker' disease is caused by the fungus *Fusarium* in plants, but 'Canker' in humans refers to:",
+  "o": ["Cancer", "Mouth ulcers (Canker sores)", "Skin rash", "Fever"],
+  "a": 1,
+  "e": "Canker sores are small, shallow lesions that develop on the soft tissues in your mouth.",
+  "cat": "gs",
+  "sub": "diseases"
+},
+{
+  "q": "The 'DPT' vaccine is given to protect children against which three diseases?",
+  "o": ["Diabetes, Polio, Typhoid", "Diphtheria, Pertussis (Whooping Cough), Tetanus", "Dengue, Pneumonia, Tuberculosis", "None"],
+  "a": 1,
+  "e": "DPT is a triple antigen vaccine given early in childhood.",
+  "cat": "gs",
+  "sub": "diseases"
+},
+{
+  "q": "Which disease is caused by the bite of an infected 'Sandfly'?",
+  "o": ["Malaria", "Kala-azar (Leishmaniasis)", "Dengue", "Sleeping Sickness"],
+  "a": 1,
+  "e": "Kala-azar is very common in some parts of Bihar and is caused by the protozoan *Leishmania*.",
+  "cat": "gs",
+  "sub": "diseases"
+},
+{
+  "q": "The 'Malarial Parasite' (Plasmodium) belongs to which class of Protozoa?",
+  "o": ["Ciliata", "Sporozoa", "Sarcodina", "Mastigophora"],
+  "a": 1,
+  "e": "Sporozoans are parasites that have an infectious spore-like stage in their life cycle.",
+  "cat": "gs",
+  "sub": "diseases"
+},
+{
+  "q": "Which 'Hepatitis' virus is primarily transmitted through contaminated food and water?",
+  "o": ["Hepatitis B", "Hepatitis A", "Hepatitis C", "Hepatitis D"],
+  "a": 1,
+  "e": "Hepatitis A and E are water-borne, while B and C are blood-borne.",
+  "cat": "gs",
+  "sub": "diseases"
+},
+{
+  "q": "What is the full form of 'AIDS'?",
+  "o": ["Anti Immune Deficiency Syndrome", "Acquired Immuno Deficiency Syndrome", "Active Immune Disease System", "None"],
+  "a": 1,
+  "e": "It is caused by the Human Immunodeficiency Virus (HIV).",
+  "cat": "gs",
+  "sub": "diseases"
+},
+{
+  "q": "Which of the following is a 'Diagnostic Test' for Tuberculosis?",
+  "o": ["Widal Test", "Mantoux Test", "ELISA", "Biopsy"],
+  "a": 1,
+  "e": "The Mantoux skin test determines if a person has been infected with the TB bacteria.",
+  "cat": "gs",
+  "sub": "diseases"
+},
+{
+  "q": "What is 'Hydrophobia' (fear of water) a symptom of?",
+  "o": ["Typhoid", "Rabies", "Cholera", "Plague"],
+  "a": 1,
+  "e": "Rabies is caused by a virus transmitted through the bite of a mad dog or monkey.",
+  "cat": "gs",
+  "sub": "diseases"
+},
+{
+  "q": "Which disease is caused by 'Yersinia pestis' and spread by rat fleas?",
+  "o": ["Cholera", "Plague", "Malaria", "Smallpox"],
+  "a": 1,
+  "e": "The Bubonic plague was historically known as the 'Black Death'.",
+  "cat": "gs",
+  "sub": "diseases"
+},
+{
+  "q": "What is 'Osteoporosis'?",
+  "o": ["Infection of the bone", "Decrease in bone density making them fragile", "Growth of bone tumors", "Softening of bones in children"],
+  "a": 1,
+  "e": "It is often caused by a deficiency of Calcium and Vitamin D, especially in post-menopausal women.",
+  "cat": "gs",
+  "sub": "diseases"
+},
+  {
+  "q": "What is the study of 'Cancer' called?",
+  "o": ["Oncology", "Hematology", "Cardiology", "Neurology"],
+  "a": 0,
+  "e": "Oncology is the branch of medicine that deals with the prevention, diagnosis, and treatment of cancer.",
+  "cat": "gs",
+  "sub": "diseases"
+},
+{
+  "q": "Which type of 'Tumor' remains confined to its original location and does not spread?",
+  "o": ["Malignant Tumor", "Benign Tumor", "Metastatic Tumor", "Sarcoma"],
+  "a": 1,
+  "e": "Benign tumors generally cause less damage unless they press against vital organs like the brain.",
+  "cat": "gs",
+  "sub": "diseases"
+},
+{
+  "q": "The 'MRI' (Magnetic Resonance Imaging) technique uses which of the following to produce images of the body?",
+  "o": ["X-rays", "Strong Magnetic Fields and Radio Waves", "Gamma Rays", "Sound Waves"],
+  "a": 1,
+  "e": "MRI is highly effective for imaging soft tissues without exposing the patient to ionizing radiation.",
+  "cat": "gs",
+  "sub": "diseases"
+},
+{
+  "q": "Which 'Virus' was responsible for the Global Pandemic that started in 2019?",
+  "o": ["H1N1", "SARS-CoV-2", "Ebola", "MERS"],
+  "a": 1,
+  "e": "SARS-CoV-2 causes the respiratory illness known as COVID-19.",
+  "cat": "gs",
+  "sub": "diseases"
+},
+{
+  "q": "The 'Biopsy' test is used to diagnose which of the following?",
+  "o": ["Typhoid", "Cancer", "Diabetes", "AIDS"],
+  "a": 1,
+  "e": "A biopsy involves removing a small piece of tissue to examine it under a microscope for cancerous cells.",
+  "cat": "gs",
+  "sub": "diseases"
+},
+{
+  "q": "Which disease is caused by 'Poliovirus' and primarily affects the nervous system of children?",
+  "o": ["Measles", "Polio (Poliomyelitis)", "Mumps", "Rubella"],
+  "a": 1,
+  "e": "Polio can lead to irreversible paralysis by destroying motor neurons in the spinal cord.",
+  "cat": "gs",
+  "sub": "diseases"
+},
+{
+  "q": "What is 'Chemotherapy'?",
+  "o": ["Treatment using sunlight", "Treatment of cancer using chemical drugs", "Treatment using heat", "Surgery"],
+  "a": 1,
+  "e": "Chemotherapy uses powerful chemicals to kill fast-growing cells in the body.",
+  "cat": "gs",
+  "sub": "diseases"
+},
+{
+  "q": "Which of the following is a 'Lifestyle Disease' linked to obesity and physical inactivity?",
+  "o": ["Cholera", "Type 2 Diabetes", "Tuberculosis", "Malaria"],
+  "a": 1,
+  "e": "Type 2 Diabetes is often preventable through healthy diet and exercise.",
+  "cat": "gs",
+  "sub": "diseases"
+},
+{
+  "q": "The 'Zika Virus' is primarily transmitted by the bite of which mosquito?",
+  "o": ["Anopheles", "Aedes aegypti", "Culex", "Mansonia"],
+  "a": 1,
+  "e": "Aedes mosquitoes also spread Dengue and Chikungunya.",
+  "cat": "gs",
+  "sub": "diseases"
+},
+{
+  "q": "What does 'AIDS' stand for?",
+  "o": ["Acquired Immune Deficiency Syndrome", "Active Immune Disease System", "Anti Immune Defense Syndrome", "None"],
+  "a": 0,
+  "e": "It represents the final stage of HIV infection where the immune system is severely compromised.",
+  "cat": "gs",
+  "sub": "diseases"
+},
+{
+  "q": "Which 'Organ' is primarily affected by the Hepatitis B virus?",
+  "o": ["Lungs", "Liver", "Heart", "Kidney"],
+  "a": 1,
+  "e": "Hepatitis B causes inflammation and can lead to long-term liver damage or cirrhosis.",
+  "cat": "gs",
+  "sub": "diseases"
+},
+{
+  "q": "What is 'Leukemia'?",
+  "o": ["Bone Cancer", "Blood Cancer", "Skin Cancer", "Lung Cancer"],
+  "a": 1,
+  "e": "Leukemia is a cancer of blood-forming tissues, resulting in an abnormal increase in white blood cells.",
+  "cat": "gs",
+  "sub": "diseases"
+},
+{
+  "q": "The 'Pap Smear' test is used to screen for which type of cancer in women?",
+  "o": ["Breast Cancer", "Cervical Cancer", "Ovarian Cancer", "Lung Cancer"],
+  "a": 1,
+  "e": "Regular Pap smears can detect precancerous changes in the cervix.",
+  "cat": "gs",
+  "sub": "diseases"
+},
+{
+  "q": "Which of the following is a 'Zoonotic Disease' (spread from animals to humans)?",
+  "o": ["Typhoid", "Rabies", "Common Cold", "Diabetes"],
+  "a": 1,
+  "e": "Rabies is a classic zoonosis transmitted through the saliva of infected mammals.",
+  "cat": "gs",
+  "sub": "diseases"
+},
+{
+  "q": "What is the primary function of a 'Vaccine'?",
+  "o": ["To kill bacteria already in the body", "To stimulate the immune system to recognize and fight pathogens", "To replace blood cells", "To lower fever"],
+  "a": 1,
+  "e": "Vaccines create 'Memory' cells in the immune system for future protection.",
+  "cat": "gs",
+  "sub": "diseases"
+},
+{
+  "q": "Which disease is caused by 'H5N1' virus?",
+  "o": ["Swine Flu", "Bird Flu (Avian Influenza)", "Ebola", "COVID-19"],
+  "a": 1,
+  "e": "H5N1 is a highly infectious viral disease that primarily affects birds.",
+  "cat": "gs",
+  "sub": "diseases"
+},
+{
+  "q": "The 'Dengue' fever is characterized by a significant drop in which blood component?",
+  "o": ["RBCs", "Platelets", "WBCs", "Plasma"],
+  "a": 1,
+  "e": "Severe Dengue can cause internal bleeding due to low platelet counts (Thrombocytopenia).",
+  "cat": "gs",
+  "sub": "diseases"
+},
+{
+  "q": "What is 'Glaucoma'?",
+  "o": ["Hardening of arteries", "Increased pressure in the eye that can damage the optic nerve", "Hearing loss", "Skin infection"],
+  "a": 1,
+  "e": "If left untreated, glaucoma is a leading cause of blindness.",
+  "cat": "gs",
+  "sub": "diseases"
+},
+{
+  "q": "Which 'Antibiotic' was the first to be discovered?",
+  "o": ["Streptomycin", "Penicillin", "Amoxicillin", "Tetracycline"],
+  "a": 1,
+  "e": "Penicillin was discovered by Alexander Fleming in 1928 from a mold.",
+  "cat": "gs",
+  "sub": "diseases"
+},
+  {
+  "q": "Which disease is caused by the 'Wuchereria bancrofti' worm?",
+  "o": ["Malaria", "Filariasis (Elephantiasis)", "Typhoid", "Ascariasis"],
+  "a": 1,
+  "e": "This filarial worm lives in the lymphatic vessels, causing extreme swelling of the lower limbs.",
+  "cat": "gs",
+  "sub": "diseases"
+},
+{
+  "q": "The 'Ascaris lumbricoides' is a common intestinal parasite known as:",
+  "o": ["Tapeworm", "Roundworm", "Hookworm", "Pinworm"],
+  "a": 1,
+  "e": "Ascaris infection usually occurs through the ingestion of water or vegetables contaminated with eggs.",
+  "cat": "gs",
+  "sub": "diseases"
+},
+{
+  "q": "Which of the following is a 'Fungal' infection that causes dry, scaly lesions on the skin, nails, and scalp?",
+  "o": ["Ringworm", "Amoebiasis", "Pneumonia", "Plague"],
+  "a": 0,
+  "e": "Ringworm is caused by fungi like Trichophyton and Microsporum, not by an actual worm.",
+  "cat": "gs",
+  "sub": "diseases"
+},
+{
+  "q": "What is 'Athlete's Foot' caused by?",
+  "o": ["Bacteria", "Virus", "Fungus (Tinea pedis)", "Protozoa"],
+  "a": 2,
+  "e": "It is a fungal infection that usually begins between the toes and thrives in damp, tight-fitting shoes.",
+  "cat": "gs",
+  "sub": "diseases"
+},
+{
+  "q": "The 'Mission Indradhanush' launched by the Indian government aims at:",
+  "o": ["Cleaning rivers", "Full immunization of children and pregnant women", "Electricity for all", "High-speed internet"],
+  "a": 1,
+  "e": "It targets 12 vaccine-preventable diseases including Polio, Measles, and Hepatitis B.",
+  "cat": "gs",
+  "sub": "diseases"
+},
+{
+  "q": "Which disease is caused by a deficiency of 'Protein' in children, leading to a swollen belly?",
+  "o": ["Marasmus", "Kwashiorkor", "Rickets", "Scurvy"],
+  "a": 1,
+  "e": "Kwashiorkor occurs when there is enough calorie intake but severe protein deficiency.",
+  "cat": "gs",
+  "sub": "diseases"
+},
+{
+  "q": "What is 'Hemophilia' popularly known as?",
+  "o": ["Silent Killer", "Royal Disease", "Black Death", "White Plague"],
+  "a": 1,
+  "e": "It was common in the royal families of Europe; it is a genetic disorder where blood doesn't clot.",
+  "cat": "gs",
+  "sub": "diseases"
+},
+{
+  "q": "The 'Taenia solium' (Pork Tapeworm) is usually transmitted to humans through:",
+  "o": ["Mosquito bites", "Contaminated undercooked pork", "Air", "Touch"],
+  "a": 1,
+  "e": "Ingesting the cysticerci in infected pork leads to tapeworm infection in the human gut.",
+  "cat": "gs",
+  "sub": "diseases"
+},
+{
+  "q": "Which of the following is an 'Occupational Disease' affecting the lungs of coal miners?",
+  "o": ["Asthma", "Pneumoconiosis (Black Lung)", "Tuberculosis", "Bronchitis"],
+  "a": 1,
+  "e": "Long-term inhalation of coal dust leads to inflammation and scarring of the lung tissue.",
+  "cat": "gs",
+  "sub": "diseases"
+},
+{
+  "q": "What is 'Minamata Disease' caused by?",
+  "o": ["Cadmium poisoning", "Mercury poisoning", "Lead poisoning", "Arsenic poisoning"],
+  "a": 1,
+  "e": "It was first discovered in Japan due to the release of methylmercury in industrial wastewater.",
+  "cat": "gs",
+  "sub": "diseases"
+},
+{
+  "q": "Which chemical poisoning causes 'Itai-Itai' disease (bone softening and kidney failure)?",
+  "o": ["Mercury", "Cadmium", "Arsenic", "Iron"],
+  "a": 1,
+  "e": "Itai-Itai means 'it hurts, it hurts' in Japanese, referring to the severe bone pain.",
+  "cat": "gs",
+  "sub": "diseases"
+},
+{
+  "q": "The 'Oral Rehydration Solution' (ORS) is primarily used for the treatment of:",
+  "o": ["Pneumonia", "Dehydration caused by Diarrhea/Cholera", "Fever", "Anemia"],
+  "a": 1,
+  "e": "ORS contains a specific ratio of salts and sugar to help the body absorb water quickly.",
+  "cat": "gs",
+  "sub": "diseases"
+},
+{
+  "q": "Which part of the body is affected by 'Pyorrhea'?",
+  "o": ["Eyes", "Gums", "Intestine", "Lungs"],
+  "a": 1,
+  "e": "Pyorrhea (Periodontitis) is a severe gum infection that damages the soft tissue and bone supporting teeth.",
+  "cat": "gs",
+  "sub": "diseases"
+},
+{
+  "q": "What is 'Encephalitis'?",
+  "o": ["Inflammation of the liver", "Inflammation of the brain", "Inflammation of the heart", "Inflammation of the joints"],
+  "a": 1,
+  "e": "Japanese Encephalitis (JE) is a viral brain infection spread by mosquitoes, common in parts of Bihar.",
+  "cat": "gs",
+  "sub": "diseases"
+},
+{
+  "q": "Which vitamin deficiency leads to 'Xerophthalmia' (abnormal dryness of the conjunctiva and cornea)?",
+  "o": ["Vitamin B12", "Vitamin A", "Vitamin C", "Vitamin K"],
+  "a": 1,
+  "e": "If untreated, Vitamin A deficiency can progress to permanent blindness.",
+  "cat": "gs",
+  "sub": "diseases"
+},
+{
+  "q": "The 'Pulse Polio' program in India uses which type of vaccine?",
+  "o": ["Injected killed virus", "Oral Live Attenuated Vaccine (OPV)", "DNA vaccine", "Toxoid"],
+  "a": 1,
+  "e": "The 'Do Boond Zindagi Ki' refers to the oral drops developed by Albert Sabin.",
+  "cat": "gs",
+  "sub": "diseases"
+},
+{
+  "q": "What is 'Hansen’s Disease'?",
+  "o": ["Cholera", "Leprosy", "Tuberculosis", "Smallpox"],
+  "a": 1,
+  "e": "Leprosy is caused by Mycobacterium leprae and affects the skin and nerves.",
+  "cat": "gs",
+  "sub": "diseases"
+},
+{
+  "q": "Which disease is transmitted by the 'Tsetse fly'?",
+  "o": ["Malaria", "African Sleeping Sickness", "Kala-azar", "Filariasis"],
+  "a": 1,
+  "e": "It is caused by the protozoan Trypanosoma and leads to severe neurological disruption.",
+  "cat": "gs",
+  "sub": "diseases"
+},
+{
+  "q": "What is 'Amnesia'?",
+  "o": ["Loss of sight", "Loss of memory", "Loss of hearing", "Loss of speech"],
+  "a": 1,
+  "e": "Amnesia can be caused by brain injury, trauma, or certain neurological diseases.",
+  "cat": "gs",
+  "sub": "diseases"
+},
+  {
+  "q": "Which disease is caused by the 'Wuchereria bancrofti' worm?",
+  "o": ["Malaria", "Filariasis (Elephantiasis)", "Typhoid", "Ascariasis"],
+  "a": 1,
+  "e": "This filarial worm lives in the lymphatic vessels, causing extreme swelling of the lower limbs.",
+  "cat": "gs",
+  "sub": "diseases"
+},
+{
+  "q": "The 'Ascaris lumbricoides' is a common intestinal parasite known as:",
+  "o": ["Tapeworm", "Roundworm", "Hookworm", "Pinworm"],
+  "a": 1,
+  "e": "Ascaris infection usually occurs through the ingestion of water or vegetables contaminated with eggs.",
+  "cat": "gs",
+  "sub": "diseases"
+},
+{
+  "q": "Which of the following is a 'Fungal' infection that causes dry, scaly lesions on the skin, nails, and scalp?",
+  "o": ["Ringworm", "Amoebiasis", "Pneumonia", "Plague"],
+  "a": 0,
+  "e": "Ringworm is caused by fungi like Trichophyton and Microsporum, not by an actual worm.",
+  "cat": "gs",
+  "sub": "diseases"
+},
+{
+  "q": "What is 'Athlete's Foot' caused by?",
+  "o": ["Bacteria", "Virus", "Fungus (Tinea pedis)", "Protozoa"],
+  "a": 2,
+  "e": "It is a fungal infection that usually begins between the toes and thrives in damp, tight-fitting shoes.",
+  "cat": "gs",
+  "sub": "diseases"
+},
+{
+  "q": "The 'Mission Indradhanush' launched by the Indian government aims at:",
+  "o": ["Cleaning rivers", "Full immunization of children and pregnant women", "Electricity for all", "High-speed internet"],
+  "a": 1,
+  "e": "It targets 12 vaccine-preventable diseases including Polio, Measles, and Hepatitis B.",
+  "cat": "gs",
+  "sub": "diseases"
+},
+{
+  "q": "Which disease is caused by a deficiency of 'Protein' in children, leading to a swollen belly?",
+  "o": ["Marasmus", "Kwashiorkor", "Rickets", "Scurvy"],
+  "a": 1,
+  "e": "Kwashiorkor occurs when there is enough calorie intake but severe protein deficiency.",
+  "cat": "gs",
+  "sub": "diseases"
+},
+{
+  "q": "What is 'Hemophilia' popularly known as?",
+  "o": ["Silent Killer", "Royal Disease", "Black Death", "White Plague"],
+  "a": 1,
+  "e": "It was common in the royal families of Europe; it is a genetic disorder where blood doesn't clot.",
+  "cat": "gs",
+  "sub": "diseases"
+},
+{
+  "q": "The 'Taenia solium' (Pork Tapeworm) is usually transmitted to humans through:",
+  "o": ["Mosquito bites", "Contaminated undercooked pork", "Air", "Touch"],
+  "a": 1,
+  "e": "Ingesting the cysticerci in infected pork leads to tapeworm infection in the human gut.",
+  "cat": "gs",
+  "sub": "diseases"
+},
+{
+  "q": "Which of the following is an 'Occupational Disease' affecting the lungs of coal miners?",
+  "o": ["Asthma", "Pneumoconiosis (Black Lung)", "Tuberculosis", "Bronchitis"],
+  "a": 1,
+  "e": "Long-term inhalation of coal dust leads to inflammation and scarring of the lung tissue.",
+  "cat": "gs",
+  "sub": "diseases"
+},
+{
+  "q": "What is 'Minamata Disease' caused by?",
+  "o": ["Cadmium poisoning", "Mercury poisoning", "Lead poisoning", "Arsenic poisoning"],
+  "a": 1,
+  "e": "It was first discovered in Japan due to the release of methylmercury in industrial wastewater.",
+  "cat": "gs",
+  "sub": "diseases"
+},
+{
+  "q": "Which chemical poisoning causes 'Itai-Itai' disease (bone softening and kidney failure)?",
+  "o": ["Mercury", "Cadmium", "Arsenic", "Iron"],
+  "a": 1,
+  "e": "Itai-Itai means 'it hurts, it hurts' in Japanese, referring to the severe bone pain.",
+  "cat": "gs",
+  "sub": "diseases"
+},
+{
+  "q": "The 'Oral Rehydration Solution' (ORS) is primarily used for the treatment of:",
+  "o": ["Pneumonia", "Dehydration caused by Diarrhea/Cholera", "Fever", "Anemia"],
+  "a": 1,
+  "e": "ORS contains a specific ratio of salts and sugar to help the body absorb water quickly.",
+  "cat": "gs",
+  "sub": "diseases"
+},
+{
+  "q": "Which part of the body is affected by 'Pyorrhea'?",
+  "o": ["Eyes", "Gums", "Intestine", "Lungs"],
+  "a": 1,
+  "e": "Pyorrhea (Periodontitis) is a severe gum infection that damages the soft tissue and bone supporting teeth.",
+  "cat": "gs",
+  "sub": "diseases"
+},
+{
+  "q": "What is 'Encephalitis'?",
+  "o": ["Inflammation of the liver", "Inflammation of the brain", "Inflammation of the heart", "Inflammation of the joints"],
+  "a": 1,
+  "e": "Japanese Encephalitis (JE) is a viral brain infection spread by mosquitoes, common in parts of Bihar.",
+  "cat": "gs",
+  "sub": "diseases"
+},
+{
+  "q": "Which vitamin deficiency leads to 'Xerophthalmia' (abnormal dryness of the conjunctiva and cornea)?",
+  "o": ["Vitamin B12", "Vitamin A", "Vitamin C", "Vitamin K"],
+  "a": 1,
+  "e": "If untreated, Vitamin A deficiency can progress to permanent blindness.",
+  "cat": "gs",
+  "sub": "diseases"
+},
+{
+  "q": "The 'Pulse Polio' program in India uses which type of vaccine?",
+  "o": ["Injected killed virus", "Oral Live Attenuated Vaccine (OPV)", "DNA vaccine", "Toxoid"],
+  "a": 1,
+  "e": "The 'Do Boond Zindagi Ki' refers to the oral drops developed by Albert Sabin.",
+  "cat": "gs",
+  "sub": "diseases"
+},
+{
+  "q": "What is 'Hansen’s Disease'?",
+  "o": ["Cholera", "Leprosy", "Tuberculosis", "Smallpox"],
+  "a": 1,
+  "e": "Leprosy is caused by Mycobacterium leprae and affects the skin and nerves.",
+  "cat": "gs",
+  "sub": "diseases"
+},
+{
+  "q": "Which disease is transmitted by the 'Tsetse fly'?",
+  "o": ["Malaria", "African Sleeping Sickness", "Kala-azar", "Filariasis"],
+  "a": 1,
+  "e": "It is caused by the protozoan Trypanosoma and leads to severe neurological disruption.",
+  "cat": "gs",
+  "sub": "diseases"
+},
+{
+  "q": "What is 'Amnesia'?",
+  "o": ["Loss of sight", "Loss of memory", "Loss of hearing", "Loss of speech"],
+  "a": 1,
+  "e": "Amnesia can be caused by brain injury, trauma, or certain neurological diseases.",
+  "cat": "gs",
+  "sub": "diseases"
+},
+{
+  "q": "Which medical condition is also known as 'Silent Killer' because it often has no symptoms?",
+  "o": ["Low blood pressure", "Hypertension (High blood pressure)", "Diabetes", "Asthma"],
+  "a": 1,
+  "e": "Hypertension can damage the heart and kidneys for years without the person knowing.",
+  "cat": "gs",
+  "sub": "diseases"
+},
+  {
+  "q": "Which disease is caused by the deficiency of 'Vitamin B3' (Niacin), characterized by Dermatitis and Dementia?",
+  "o": ["Scurvy", "Pellagra", "Beri-beri", "Rickets"],
+  "a": 1,
+  "e": "Pellagra is known as the '3D disease' (Dermatitis, Diarrhea, and Dementia).",
+  "cat": "gs",
+  "sub": "diseases"
+},
+{
+  "q": "What is 'Thalassemia'?",
+  "o": ["A liver infection", "An inherited blood disorder that reduces Hemoglobin production", "High blood pressure", "A viral fever"],
+  "a": 1,
+  "e": "It is a genetic disorder where the body makes an abnormal form of hemoglobin, leading to anemia.",
+  "cat": "gs",
+  "sub": "diseases"
+},
+{
+  "q": "Which chemical 'Marker' is checked in a blood test to diagnose a recent Heart Attack?",
+  "o": ["Bilirubin", "Troponin", "Creatinine", "Urea"],
+  "a": 1,
+  "e": "Troponin is a protein released into the bloodstream when the heart muscle has been damaged.",
+  "cat": "gs",
+  "sub": "diseases"
+},
+{
+  "q": "What is 'Cystic Fibrosis'?",
+  "o": ["A bacterial infection", "A genetic disorder affecting the lungs and digestive system with thick mucus", "A type of cancer", "Heart failure"],
+  "a": 1,
+  "e": "It is caused by a mutation that disrupts the salt and water balance in cells.",
+  "cat": "gs",
+  "sub": "diseases"
+},
+{
+  "q": "Which mineral deficiency causes 'Hypokalemia'?",
+  "o": ["Sodium", "Potassium", "Calcium", "Magnesium"],
+  "a": 1,
+  "e": "Low potassium levels can lead to muscle weakness and heart rhythm problems.",
+  "cat": "gs",
+  "sub": "diseases"
+},
+{
+  "q": "The 'Schick Test' is used to determine immunity against which disease?",
+  "o": ["Tuberculosis", "Diphtheria", "Smallpox", "Measles"],
+  "a": 1,
+  "e": "It tests if a person is susceptible to the toxin produced by Corynebacterium diphtheriae.",
+  "cat": "gs",
+  "sub": "diseases"
+},
+{
+  "q": "What is 'Scurvy' primarily caused by?",
+  "o": ["Lack of Sunlight", "Lack of Vitamin C (Ascorbic acid)", "Lack of Protein", "Lack of Fats"],
+  "a": 1,
+  "e": "Scurvy leads to bleeding gums and poor wound healing; common in sailors historically.",
+  "cat": "gs",
+  "sub": "diseases"
+},
+{
+  "q": "Which disease is caused by the 'Varicella-zoster' virus?",
+  "o": ["Smallpox", "Chickenpox", "Polio", "Mumps"],
+  "a": 1,
+  "e": "Chickenpox is highly contagious and causes an itchy, blister-like rash.",
+  "cat": "gs",
+  "sub": "diseases"
+},
+{
+  "q": "What is 'Mumps'?",
+  "o": ["Viral infection of the Parotid (Salivary) glands", "Swelling of the liver", "Bacterial infection of lungs", "Joint pain"],
+  "a": 0,
+  "e": "Mumps causes painful swelling in the cheeks and jaw area.",
+  "cat": "gs",
+  "sub": "diseases"
+},
+{
+  "q": "Which condition is known as 'Trisomy 18'?",
+  "o": ["Down Syndrome", "Edwards Syndrome", "Patau Syndrome", "Turner Syndrome"],
+  "a": 1,
+  "e": "Edwards syndrome is a severe genetic condition that causes multiple organ defects.",
+  "cat": "gs",
+  "sub": "diseases"
+},
+{
+  "q": "What is 'Gout' caused by?",
+  "o": ["Lack of Calcium", "Accumulation of Uric Acid crystals in joints", "Bacterial infection", "Vitamin D excess"],
+  "a": 1,
+  "e": "High levels of uric acid in the blood lead to sharp crystals forming in the joints, usually the big toe.",
+  "cat": "gs",
+  "sub": "diseases"
+},
+{
+  "q": "Which diagnostic test is used to detect 'Enteric Fever'?",
+  "o": ["Widal Test", "Western Blot", "VDRL", "Mantoux"],
+  "a": 0,
+  "e": "Enteric fever is another name for Typhoid/Paratyphoid fever.",
+  "cat": "gs",
+  "sub": "diseases"
+},
+{
+  "q": "What is 'Hematuria'?",
+  "o": ["Blood in the stool", "Blood in the urine", "Low hemoglobin", "Blood in the lungs"],
+  "a": 1,
+  "e": "Hematuria can be a sign of kidney stones, infection, or bladder cancer.",
+  "cat": "gs",
+  "sub": "diseases"
+},
+{
+  "q": "Which disease is caused by 'Bordetella pertussis'?",
+  "o": ["Tuberculosis", "Whooping Cough (Pertussis)", "Tetanus", "Diphtheria"],
+  "a": 1,
+  "e": "It causes violent, uncontrollable coughing fits that make it hard to breathe.",
+  "cat": "gs",
+  "sub": "diseases"
+},
+{
+  "q": "What is 'Angina Pectoris'?",
+  "o": ["Heart attack", "Chest pain caused by reduced blood flow to the heart muscle", "Lungs infection", "Stroke"],
+  "a": 1,
+  "e": "Angina is often a warning sign of coronary artery disease.",
+  "cat": "gs",
+  "sub": "diseases"
+},
+{
+  "q": "Which disease is characterized by 'Lockjaw' (stiffness of jaw muscles)?",
+  "o": ["Rabies", "Tetanus", "Polio", "Diphtheria"],
+  "a": 1,
+  "e": "Tetanus is caused by Clostridium tetani entering the body through deep cuts or wounds.",
+  "cat": "gs",
+  "sub": "diseases"
+},
+{
+  "q": "The 'VDRL' test is used for the screening of which disease?",
+  "o": ["HIV/AIDS", "Syphilis", "Gonorrhea", "Chlamydia"],
+  "a": 1,
+  "e": "VDRL stands for Venereal Disease Research Laboratory, used to detect Syphilis antibodies.",
+  "cat": "gs",
+  "sub": "diseases"
+},
+{
+  "q": "What is 'Jaundice' a symptom of?",
+  "o": ["Kidney failure", "High Bilirubin levels due to liver/gallbladder issues", "Heart disease", "Anemia"],
+  "a": 1,
+  "e": "Jaundice causes yellowing of the skin and the whites of the eyes.",
+  "cat": "gs",
+  "sub": "diseases"
+},
+{
+  "q": "Which vitamin deficiency causes 'Osteomalacia' in adults?",
+  "o": ["Vitamin A", "Vitamin D", "Vitamin E", "Vitamin C"],
+  "a": 1,
+  "e": "Osteomalacia is the softening of bones in adults, similar to Rickets in children.",
+  "cat": "gs",
+  "sub": "diseases"
+},
+{
+  "q": "What is 'Parkinson’s Disease'?",
+  "o": ["A skin disorder", "A progressive nervous system disorder affecting movement (tremors)", "A lung disease", "Memory loss"],
+  "a": 1,
+  "e": "It is caused by the loss of dopamine-producing neurons in the brain.",
+  "cat": "gs",
+  "sub": "diseases"
+},
+  {
+  "q": "Which toxic element is found in high concentrations in the 'Groundwater' of many districts in Bihar, causing skin lesions?",
+  "o": ["Lead", "Arsenic", "Mercury", "Cadmium"],
+  "a": 1,
+  "e": "Arsenic contamination in the Ganga belt of Bihar leads to 'Blackfoot disease' and skin cancer.",
+  "cat": "gs",
+  "sub": "diseases"
+},
+{
+  "q": "What does 'COPD' stand for in respiratory medicine?",
+  "o": ["Common Obstructive Pulmonary Disease", "Chronic Obstructive Pulmonary Disease", "Core Organic Pulmonary Disorder", "None"],
+  "a": 1,
+  "e": "COPD is a group of lung diseases (like emphysema) that block airflow and make it difficult to breathe.",
+  "cat": "gs",
+  "sub": "diseases"
+},
+{
+  "q": "Which condition is caused by the 'Backflow' of stomach acid into the esophagus?",
+  "o": ["Pneumonia", "GERD (Gastroesophageal Reflux Disease)", "Gastritis", "Colitis"],
+  "a": 1,
+  "e": "GERD causes chronic heartburn and can damage the lining of the food pipe.",
+  "cat": "gs",
+  "sub": "diseases"
+},
+{
+  "q": "The 'Excessive Intake' of Fluoride in drinking water leads to which condition?",
+  "o": ["Anemia", "Fluorosis (Mottling of teeth and bone pain)", "Goitre", "Scurvy"],
+  "a": 1,
+  "e": "Dental and Skeletal Fluorosis is a major public health issue in several districts of Bihar.",
+  "cat": "gs",
+  "sub": "diseases"
+},
+{
+  "q": "What is 'Thrombosis'?",
+  "o": ["Blood cancer", "Formation of a blood clot inside a blood vessel", "Bleeding from the nose", "Low platelet count"],
+  "a": 1,
+  "e": "Thrombosis can block blood flow, leading to serious conditions like a heart attack or stroke.",
+  "cat": "gs",
+  "sub": "diseases"
+},
+{
+  "q": "Which disease is caused by 'Niacin' (Vitamin B3) deficiency and is common in populations eating mainly maize?",
+  "o": ["Pellagra", "Rickets", "Beri-beri", "Night Blindness"],
+  "a": 0,
+  "e": "Pellagra is characterized by the 4 'Ds': Diarrhea, Dermatitis, Dementia, and Death.",
+  "cat": "gs",
+  "sub": "diseases"
+},
+{
+  "q": "What is 'Myocardial Infarction' commonly known as?",
+  "o": ["Brain Stroke", "Heart Attack", "Kidney Failure", "Lung Collapse"],
+  "a": 1,
+  "e": "It occurs when blood flow to a part of the heart is blocked for long enough that the muscle is damaged.",
+  "cat": "gs",
+  "sub": "diseases"
+},
+{
+  "q": "Which virus causes 'Smallpox', the first disease to be globally eradicated?",
+  "o": ["Varicella virus", "Variola virus", "Rhinovirus", "HIV"],
+  "a": 1,
+  "e": "Smallpox was officially declared eradicated by the WHO in 1980 following a global vaccination campaign.",
+  "cat": "gs",
+  "sub": "diseases"
+},
+{
+  "q": "What is 'Scurvy' primarily a disease of?",
+  "o": ["Bones", "Gums and Blood Vessels", "Eyes", "Skin"],
+  "a": 1,
+  "e": "Vitamin C is essential for collagen synthesis; without it, tissues and blood vessels become weak.",
+  "cat": "gs",
+  "sub": "diseases"
+},
+{
+  "q": "Which 'Hormonal' disorder is characterized by a 'Moon Face' and a 'Buffalo Hump'?",
+  "o": ["Addison's Disease", "Cushing's Syndrome", "Diabetes", "Goitre"],
+  "a": 1,
+  "e": "Cushing's is caused by an overproduction of cortisol by the adrenal glands.",
+  "cat": "gs",
+  "sub": "diseases"
+},
+{
+  "q": "What is 'Cataract'?",
+  "o": ["Infection of the eye", "Clouding of the eye's natural lens", "High eye pressure", "Retinal detachment"],
+  "a": 1,
+  "e": "Cataracts are the most common cause of vision loss in people over age 40.",
+  "cat": "gs",
+  "sub": "diseases"
+},
+{
+  "q": "Which test is used to identify 'Salmonella typhi' in a clinical laboratory?",
+  "o": ["ELISA", "Widal Test", "PCR", "Biopsy"],
+  "a": 1,
+  "e": "The Widal test is a serological test for enteric fever (Typhoid).",
+  "cat": "gs",
+  "sub": "diseases"
+},
+{
+  "q": "What is 'Aneurysm'?",
+  "o": ["A type of tumor", "A bulge or ballooning in a blood vessel", "Heart rhythm disorder", "Blood infection"],
+  "a": 1,
+  "e": "A ruptured aneurysm can cause fatal internal bleeding.",
+  "cat": "gs",
+  "sub": "diseases"
+},
+{
+  "q": "Which 'Bacterial' disease is transmitted by the bite of an infected 'Ixodes' tick?",
+  "o": ["Malaria", "Lyme Disease", "Dengue", "Plague"],
+  "a": 1,
+  "e": "Lyme disease causes a 'bullseye' rash and can affect the joints and nervous system.",
+  "cat": "gs",
+  "sub": "diseases"
+},
+{
+  "q": "What is 'Hypoglycemia'?",
+  "o": ["High blood pressure", "Low blood sugar level", "High blood sugar", "Low heart rate"],
+  "a": 1,
+  "e": "It is often a side effect of diabetes treatment and can cause shakiness and fainting.",
+  "cat": "gs",
+  "sub": "diseases"
+},
+{
+  "q": "Which disease is caused by 'Prions' in humans, leading to rapid brain damage?",
+  "o": ["Alzheimer's", "Creutzfeldt-Jakob Disease (CJD)", "Parkinson's", "Multiple Sclerosis"],
+  "a": 1,
+  "e": "CJD is a rare, degenerative, fatal brain disorder caused by infectious proteins.",
+  "cat": "gs",
+  "sub": "diseases"
+},
+{
+  "q": "What is 'Psoriasis'?",
+  "o": ["A lung infection", "A chronic autoimmune skin disease that causes itchy, scaly patches", "A stomach ulcer", "Liver inflammation"],
+  "a": 1,
+  "e": "Psoriasis is thought to be an immune system problem that causes skin cells to grow faster than usual.",
+  "cat": "gs",
+  "sub": "diseases"
+},
+{
+  "q": "Which 'Fungal' disease is commonly known as 'Thrush' when it affects the mouth?",
+  "o": ["Ringworm", "Candidiasis", "Aspergillosis", "Athlete's foot"],
+  "a": 1,
+  "e": "Oral thrush is caused by an overgrowth of the fungus *Candida albicans*.",
+  "cat": "gs",
+  "sub": "diseases"
+},
+{
+  "q": "What is 'Sleep Apnea'?",
+  "o": ["Walking in sleep", "A disorder where breathing repeatedly stops and starts during sleep", "Inability to fall asleep", "Nightmares"],
+  "a": 1,
+  "e": "It is often associated with loud snoring and can lead to daytime fatigue and heart problems.",
+  "cat": "gs",
+  "sub": "diseases"
+},
+  {
+  "q": "Who coined the term 'Ecosystem' in 1935?",
+  "o": ["E.P. Odum", "A.G. Tansley", "Charles Darwin", "Reiter"],
+  "a": 1,
+  "e": "Sir Arthur Tansley defined the ecosystem as the interactive system of living things and their physical environment.",
+  "cat": "gs",
+  "sub": "ecology"
+},
+{
+  "q": "Which of the following is an 'Abiotic' component of an ecosystem?",
+  "o": ["Bacteria", "Plants", "Sunlight", "Fungi"],
+  "a": 2,
+  "e": "Abiotic components are non-living factors like light, temperature, water, and soil.",
+  "cat": "gs",
+  "sub": "ecology"
+},
+{
+  "q": "The '10% Law' of energy transfer in a food chain was proposed by:",
+  "o": ["Lindeman", "Odum", "Tansley", "Darwin"],
+  "a": 0,
+  "e": "According to Raymond Lindeman, only 10% of the energy is transferred from one trophic level to the next.",
+  "cat": "gs",
+  "sub": "ecology"
+},
+{
+  "q": "In a food chain, which organisms are known as 'Primary Producers'?",
+  "o": ["Herbivores", "Green Plants (Autotrophs)", "Carnivores", "Decomposers"],
+  "a": 1,
+  "e": "Plants produce their own food using solar energy, forming the base of every food chain.",
+  "cat": "gs",
+  "sub": "ecology"
+},
+{
+  "q": "What is a 'Food Web'?",
+  "o": ["A single straight line of eating", "A network of interconnected food chains", "A type of spider web", "A collection of plants"],
+  "a": 1,
+  "e": "A food web shows the complex feeding relationships in a real-world ecosystem.",
+  "cat": "gs",
+  "sub": "ecology"
+},
+{
+  "q": "Which organisms occupy the 'Top Trophic Level' in a forest ecosystem?",
+  "o": ["Deer", "Rabbits", "Tigers/Lions", "Insects"],
+  "a": 2,
+  "e": "Apex predators have no natural enemies and sit at the top of the energy pyramid.",
+  "cat": "gs",
+  "sub": "ecology"
+},
+{
+  "q": "What is 'Eutrophication'?",
+  "o": ["Growth of trees", "Enrichment of water bodies with nutrients leading to excessive algae growth", "Lack of water", "Soil erosion"],
+  "a": 1,
+  "e": "Excess nitrogen and phosphorus (often from fertilizers) cause algal blooms that deplete oxygen in the water.",
+  "cat": "gs",
+  "sub": "ecology"
+},
+{
+  "q": "The 'Pyramid of Energy' is always:",
+  "o": ["Inverted", "Upright", "Spindle-shaped", "Horizontal"],
+  "a": 1,
+  "e": "Because energy is lost as heat at each level, the pyramid can never be inverted.",
+  "cat": "gs",
+  "sub": "ecology"
+},
+{
+  "q": "Which of the following is a 'Man-made' (Artificial) ecosystem?",
+  "o": ["Forest", "Pond", "Crop field (Agro-ecosystem)", "Lake"],
+  "a": 2,
+  "e": "Crop fields and aquariums are ecosystems maintained by human intervention.",
+  "cat": "gs",
+  "sub": "ecology"
+},
+{
+  "q": "What is a 'Detrivore'?",
+  "o": ["An animal that eats only grass", "An organism that feeds on dead and decaying organic matter", "A predator", "A parasite"],
+  "a": 1,
+  "e": "Earthworms and woodlice are common detrivores that help in nutrient recycling.",
+  "cat": "gs",
+  "sub": "ecology"
+},
+{
+  "q": "The transition zone between two different ecosystems is called:",
+  "o": ["Ecology", "Ecotone", "Ecotype", "Niche"],
+  "a": 1,
+  "e": "An ecotone (like a marshland between a river and land) often has higher biodiversity.",
+  "cat": "gs",
+  "sub": "ecology"
+},
+{
+  "q": "What is an 'Ecological Niche'?",
+  "o": ["A house for animals", "The specific functional role and position of a species in its ecosystem", "A type of forest", "The total number of animals"],
+  "a": 1,
+  "e": "Niche refers to 'how' an organism lives, including its diet, behavior, and habitat.",
+  "cat": "gs",
+  "sub": "ecology"
+},
+{
+  "q": "Which gas is primarily responsible for the 'Greenhouse Effect'?",
+  "o": ["Nitrogen", "Oxygen", "Carbon Dioxide ($CO_2$)", "Argon"],
+  "a": 2,
+  "e": "Greenhouse gases trap heat in the atmosphere, leading to global warming.",
+  "cat": "gs",
+  "sub": "ecology"
+},
+{
+  "q": "What is 'Biological Magnification'?",
+  "o": ["Growing bigger plants", "Increase in concentration of toxic substances (like DDT) at higher trophic levels", "Studying cells under a microscope", "Faster breeding"],
+  "a": 1,
+  "e": "Toxins accumulate in the fat tissues of animals and become more concentrated as they move up the food chain.",
+  "cat": "gs",
+  "sub": "ecology"
+},
+{
+  "q": "Which layer of the atmosphere contains the 'Ozone Layer'?",
+  "o": ["Troposphere", "Stratosphere", "Mesosphere", "Exosphere"],
+  "a": 1,
+  "e": "The ozone layer protects the Earth from harmful Ultraviolet (UV) radiation.",
+  "cat": "gs",
+  "sub": "ecology"
+},
+{
+  "q": "What are 'CFCs' (Chlorofluorocarbons) primarily used in?",
+  "o": ["Agriculture", "Refrigerators and Air conditioners", "Cars", "Textile industry"],
+  "a": 1,
+  "e": "CFCs were the main cause of ozone layer depletion before being phased out.",
+  "cat": "gs",
+  "sub": "ecology"
+},
+{
+  "q": "The 'Kyoto Protocol' is an international treaty related to:",
+  "o": ["Biodiversity", "Reducing Greenhouse gas emissions", "Protecting ozone layer", "Hazardous waste"],
+  "a": 1,
+  "e": "It was adopted in 1997 to fight global warming by reducing $CO_2$ levels.",
+  "cat": "gs",
+  "sub": "ecology"
+},
+{
+  "q": "Which is the 'Largest' ecosystem on Earth?",
+  "o": ["Desert", "Forest", "Ocean (Marine ecosystem)", "Grassland"],
+  "a": 2,
+  "e": "Oceans cover about 71% of the Earth's surface and provide a massive habitat.",
+  "cat": "gs",
+  "sub": "ecology"
+},
+{
+  "q": "The study of the relationship between 'Individual Species' and their environment is:",
+  "o": ["Synecology", "Autecology", "Paleoecology", "Ethology"],
+  "a": 1,
+  "e": "Autecology focuses on the ecology of a single species.",
+  "cat": "gs",
+  "sub": "ecology"
+},
+{
+  "q": "Which organism is a 'Primary Consumer' in a pond ecosystem?",
+  "o": ["Phytoplankton", "Zooplankton", "Small fish", "Crane"],
+  "a": 1,
+  "e": "Zooplankton eat the producers (phytoplankton), making them primary consumers.",
+  "cat": "gs",
+  "sub": "ecology"
+},
+  {
+  "q": "Which organization publishes the 'Red Data Book' containing the list of endangered species?",
+  "o": ["WWF", "IUCN", "UNEP", "UNESCO"],
+  "a": 1,
+  "e": "The International Union for Conservation of Nature (IUCN) monitors the global conservation status of plants and animals.",
+  "cat": "gs",
+  "sub": "ecology"
+},
+{
+  "q": "Which is the 'Only National Park' in Bihar?",
+  "o": ["Kaimur Sanctuary", "Valmiki National Park", "Pant Wildlife Sanctuary", "Gautam Buddha Sanctuary"],
+  "a": 1,
+  "e": "Valmiki National Park is located in the West Champaran district and is a prominent Tiger Reserve.",
+  "cat": "gs",
+  "sub": "ecology"
+},
+{
+  "q": "What is 'Ex-situ' conservation?",
+  "o": ["Protecting species in their natural habitat", "Protecting species outside their natural habitat (e.g., Zoo, Seed Bank)", "Ignoring the species", "Killing the species"],
+  "a": 1,
+  "e": "Ex-situ conservation is necessary when a species is so endangered that it cannot survive in the wild without help.",
+  "cat": "gs",
+  "sub": "ecology"
+},
+{
+  "q": "The 'Kanwar Lake' (Kabartal), Bihar's only Ramsar site, is located in which district?",
+  "o": ["Patna", "Begusarai", "Gaya", "Bhagalpur"],
+  "a": 1,
+  "e": "Kabartal is Asia's largest freshwater oxbow lake and a vital wetland for migratory birds.",
+  "cat": "gs",
+  "sub": "ecology"
+},
+{
+  "q": "What is 'BOD' (Biological Oxygen Demand) a measure of?",
+  "o": ["Air pollution", "Water pollution (organic matter level)", "Soil fertility", "Noise levels"],
+  "a": 1,
+  "e": "Higher BOD indicates that the water is highly polluted with organic waste, leaving less oxygen for fish.",
+  "cat": "gs",
+  "sub": "ecology"
+},
+{
+  "q": "Which gas is mainly responsible for 'Acid Rain'?",
+  "o": ["Carbon Dioxide", "Sulfur Dioxide ($SO_2$) and Nitrogen Oxides", "Argon", "Helium"],
+  "a": 1,
+  "e": "These gases react with water vapor in the atmosphere to form sulfuric and nitric acids.",
+  "cat": "gs",
+  "sub": "ecology"
+},
+{
+  "q": "The 'Vikramshila Gangetic Dolphin Sanctuary' is located in which district of Bihar?",
+  "o": ["Munger", "Bhagalpur", "Katihar", "Saran"],
+  "a": 1,
+  "e": "It is the only protected area for the endangered Gangetic Dolphin in Asia.",
+  "cat": "gs",
+  "sub": "ecology"
+},
+{
+  "q": "What is 'Global Warming Potential' (GWP) measured against?",
+  "o": ["Methane", "Carbon Dioxide ($CO_2$)", "Water vapor", "Ozone"],
+  "a": 1,
+  "e": "$CO_2$ is the baseline (GWP = 1) against which all other greenhouse gases are compared.",
+  "cat": "gs",
+  "sub": "ecology"
+},
+{
+  "q": "The 'Montreal Protocol' was signed to address which environmental issue?",
+  "o": ["Global Warming", "Ozone Layer Depletion", "Plastic Pollution", "Tiger Conservation"],
+  "a": 1,
+  "e": "Signed in 1987, it aimed to phase out the production of substances like CFCs.",
+  "cat": "gs",
+  "sub": "ecology"
+},
+{
+  "q": "Which of the following is a 'Secondary Pollutant'?",
+  "o": ["CO2", "Sulfur Dioxide", "Ozone ($O_3$)", "Fly Ash"],
+  "a": 2,
+  "e": "Secondary pollutants are not emitted directly but form in the air through chemical reactions.",
+  "cat": "gs",
+  "sub": "ecology"
+},
+{
+  "q": "The 'Chipko Movement' was started by whom to protect trees in Uttarakhand?",
+  "o": ["Sunderlal Bahuguna", "Medha Patkar", "Baba Amte", "Salumarada Thimmakka"],
+  "a": 0,
+  "e": "It was a non-violent social and ecological movement by rural villagers, particularly women.",
+  "cat": "gs",
+  "sub": "ecology"
+},
+{
+  "q": "What is 'Bioremediation'?",
+  "o": ["Killing pests with chemicals", "Using microorganisms to clean up polluted soil or water", "Burning waste", "Planting trees"],
+  "a": 1,
+  "e": "Bacteria or fungi are used to degrade environmental pollutants like oil spills.",
+  "cat": "gs",
+  "sub": "ecology"
+},
+{
+  "q": "The 'National Biodiversity Authority' (NBA) of India is located in:",
+  "o": ["New Delhi", "Chennai", "Kolkata", "Mumbai"],
+  "a": 1,
+  "e": "Established in 2003, it implements the provisions of the Biological Diversity Act.",
+  "cat": "gs",
+  "sub": "ecology"
+},
+{
+  "q": "Which state has the 'Gautam Buddha Wildlife Sanctuary'?",
+  "o": ["Uttar Pradesh", "Bihar (Gaya district)", "Madhya Pradesh", "Odisha"],
+  "a": 1,
+  "e": "It is located on the border of Bihar and Jharkhand, named after Lord Buddha.",
+  "cat": "gs",
+  "sub": "ecology"
+},
+{
+  "q": "What is 'Particulate Matter' (PM 2.5)?",
+  "o": ["Liquid waste", "Atmospheric particles with a diameter less than 2.5 micrometers", "A type of gas", "Soil nutrient"],
+  "a": 1,
+  "e": "These tiny particles can penetrate deep into the lungs and enter the bloodstream, causing health issues.",
+  "cat": "gs",
+  "sub": "ecology"
+},
+{
+  "q": "Which organism is the 'Indicator' of air pollution, especially $SO_2$?",
+  "o": ["Algae", "Lichens", "Mushrooms", "Mosses"],
+  "a": 1,
+  "e": "Lichens disappear from areas where the air is heavily polluted with sulfur dioxide.",
+  "cat": "gs",
+  "sub": "ecology"
+},
+{
+  "q": "The 'Brundtland Commission' report (1987) introduced which famous concept?",
+  "o": ["Ecology", "Sustainable Development", "Global Warming", "Green Revolution"],
+  "a": 1,
+  "e": "It defined sustainable development as meeting current needs without compromising future generations.",
+  "cat": "gs",
+  "sub": "ecology"
+},
+{
+  "q": "Which layer of the atmosphere is the 'Coldest'?",
+  "o": ["Stratosphere", "Mesosphere", "Thermosphere", "Troposphere"],
+  "a": 1,
+  "e": "Temperatures in the mesosphere can drop as low as -90°C.",
+  "cat": "gs",
+  "sub": "ecology"
+},
+{
+  "q": "What is 'Incineration' in waste management?",
+  "o": ["Burying waste", "Burning waste at high temperatures", "Recycling plastic", "Composting"],
+  "a": 1,
+  "e": "Incineration reduces the volume of waste but can release toxic gases if not filtered.",
+  "cat": "gs",
+  "sub": "ecology"
+},
+{
+  "q": "The 'Kaziranga National Park' is famous for which animal?",
+  "o": ["Bengal Tiger", "One-horned Rhinoceros", "Asian Elephant", "Snow Leopard"],
+  "a": 1,
+  "e": "Located in Assam, it hosts two-thirds of the world's great one-horned rhinoceroses.",
+  "cat": "gs",
+  "sub": "ecology"
+},
+  {
+  "q": "In which year was the 'Wildlife Protection Act' passed in India?",
+  "o": ["1972", "1980", "1986", "1992"],
+  "a": 0,
+  "e": "The 1972 Act provides for the protection of wild animals, birds, and plants to ensure environmental security.",
+  "cat": "gs",
+  "sub": "ecology"
+},
+{
+  "q": "The first 'Earth Summit' (UN Conference on Environment and Development) was held in 1992 at:",
+  "o": ["Stockholm", "Rio de Janeiro", "Johannesburg", "Kyoto"],
+  "a": 1,
+  "e": "The Rio Summit resulted in 'Agenda 21' and the Convention on Biological Diversity (CBD).",
+  "cat": "gs",
+  "sub": "ecology"
+},
+{
+  "q": "What is 'In-situ' conservation?",
+  "o": ["Conservation in botanical gardens", "Conservation of species in their natural habitat (e.g., National Parks)", "Conservation in a lab", "Cryopreservation"],
+  "a": 1,
+  "e": "In-situ conservation protects the entire ecosystem alongside the species.",
+  "cat": "gs",
+  "sub": "ecology"
+},
+{
+  "q": "Which Indian state is home to the 'Gir National Park', the only habitat of Asiatic Lions?",
+  "o": ["Rajasthan", "Madhya Pradesh", "Gujarat", "Maharashtra"],
+  "a": 2,
+  "e": "Gir is the last refuge of the Asiatic lion in the wild.",
+  "cat": "gs",
+  "sub": "ecology"
+},
+{
+  "q": "What is 'Biochemical Oxygen Demand' (BOD) used to indicate?",
+  "o": ["Air quality", "Organic pollution in water", "Soil acidity", "Radioactivity"],
+  "a": 1,
+  "e": "High BOD means microorganisms are consuming a lot of oxygen to break down organic waste, indicating high pollution.",
+  "cat": "gs",
+  "sub": "ecology"
+},
+{
+  "q": "Which movement was led by Medha Patkar regarding the construction of dams?",
+  "o": ["Appiko Movement", "Narmada Bachao Andolan", "Chipko Movement", "Silent Valley Movement"],
+  "a": 1,
+  "e": "The movement protested against large dams on the Narmada River due to environmental and displacement concerns.",
+  "cat": "gs",
+  "sub": "ecology"
+},
+{
+  "q": "The 'Project Tiger' was launched by the Government of India in which year?",
+  "o": ["1971", "1973", "1975", "1981"],
+  "a": 1,
+  "e": "It was launched to ensure a viable population of Bengal tigers in their natural habitats.",
+  "cat": "gs",
+  "sub": "ecology"
+},
+{
+  "q": "Which gas is mainly responsible for the 'Ozone Hole' over Antarctica?",
+  "o": ["Carbon Dioxide", "Chlorofluorocarbons (CFCs)", "Methane", "Nitrous Oxide"],
+  "a": 1,
+  "e": "CFCs release chlorine atoms when exposed to UV light, which then destroy ozone molecules.",
+  "cat": "gs",
+  "sub": "ecology"
+},
+{
+  "q": "What is 'Snow Blindness' caused by?",
+  "o": ["Cold weather", "UV-B radiation damage to the cornea", "Lack of Vitamin A", "Dust in snow"],
+  "a": 1,
+  "e": "High doses of UV-B, often reflected by snow, cause inflammation of the cornea.",
+  "cat": "gs",
+  "sub": "ecology"
+},
+{
+  "q": "Which of the following is a 'Non-renewable' source of energy?",
+  "o": ["Solar", "Wind", "Coal", "Biomass"],
+  "a": 2,
+  "e": "Coal is a fossil fuel that takes millions of years to form and cannot be replaced quickly.",
+  "cat": "gs",
+  "sub": "ecology"
+},
+{
+  "q": "What is the 'Albedo Effect'?",
+  "o": ["Absorption of heat by water", "The ability of a surface to reflect solar radiation", "Volcanic activity", "Ocean currents"],
+  "a": 1,
+  "e": "Light surfaces like ice have a high albedo, while dark surfaces like asphalt have a low albedo.",
+  "cat": "gs",
+  "sub": "ecology"
+},
+{
+  "q": "The 'Keibul Lamjao National Park', the world's only floating park, is located in:",
+  "o": ["Assam", "Manipur", "Meghalaya", "Arunachal Pradesh"],
+  "a": 1,
+  "e": "It is located on Loktak Lake and is famous for the Brow-antlered deer (Sangai).",
+  "cat": "gs",
+  "sub": "ecology"
+},
+{
+  "q": "What is 'E-waste'?",
+  "o": ["Environmental waste", "Discarded electronic devices", "Excessive energy use", "Excreta"],
+  "a": 1,
+  "e": "Electronic waste contains toxic heavy metals like lead, mercury, and cadmium.",
+  "cat": "gs",
+  "sub": "ecology"
+},
+{
+  "q": "Which ecological pyramid is 'Never' inverted?",
+  "o": ["Pyramid of Biomass", "Pyramid of Energy", "Pyramid of Numbers", "All can be inverted"],
+  "a": 1,
+  "e": "Energy is always lost as it moves up the trophic levels, so the base is always wider.",
+  "cat": "gs",
+  "sub": "ecology"
+},
+{
+  "q": "What is 'Bio-accumulation'?",
+  "o": ["Building of muscles", "Accumulation of a substance (like a pesticide) in an organism", "Growth of a population", "Recycling of waste"],
+  "a": 1,
+  "e": "It occurs when an organism absorbs a substance at a rate faster than that at which the substance is lost.",
+  "cat": "gs",
+  "sub": "ecology"
+},
+{
+  "q": "The 'Greenhouse Gas' with the highest Global Warming Potential (GWP) is:",
+  "o": ["CO2", "Methane", "Sulfur Hexafluoride (SF6)", "Nitrous Oxide"],
+  "a": 2,
+  "e": "While CO2 is most abundant, SF6 is extremely potent and stays in the atmosphere for thousands of years.",
+  "cat": "gs",
+  "sub": "ecology"
+},
+{
+  "q": "What is 'Desertification'?",
+  "o": ["Planting trees in deserts", "The process by which fertile land becomes desert", "Irrigating dry lands", "Sand storms"],
+  "a": 1,
+  "e": "It is typically a result of drought, deforestation, or inappropriate agriculture.",
+  "cat": "gs",
+  "sub": "ecology"
+},
+{
+  "q": "Which Indian city is known as the 'Tiger Capital of India'?",
+  "o": ["Lucknow", "Nagpur", "Bhopal", "Mysore"],
+  "a": 1,
+  "e": "Nagpur is surrounded by many tiger reserves including Pench and Tadoba.",
+  "cat": "gs",
+  "sub": "ecology"
+},
+{
+  "q": "What is the 'Minamata Convention' related to?",
+  "o": ["Plastic", "Mercury", "Global Warming", "Lead"],
+  "a": 1,
+  "e": "It is a global treaty to protect human health and the environment from the adverse effects of mercury.",
+  "cat": "gs",
+  "sub": "ecology"
+},
+{
+  "q": "In an ecosystem, the 'Decomposers' are mostly:",
+  "o": ["Plants", "Bacteria and Fungi", "Animals", "Viruses"],
+  "a": 1,
+  "e": "They break down dead organic matter, returning nutrients to the soil.",
+  "cat": "gs",
+  "sub": "ecology"
+},
+  {
+  "q": "Which Indian state has the 'Ganges River Dolphin' as its State Aquatic Animal?",
+  "o": ["Uttar Pradesh", "Bihar", "West Bengal", "Assam"],
+  "a": 1,
+  "e": "The Ganges River Dolphin (Susu) is highly endangered and is the National Aquatic Animal of India as well.",
+  "cat": "gs",
+  "sub": "ecology"
+},
+{
+  "q": "What is the 'State Bird' of Bihar, which is also a subject of conservation due to declining numbers?",
+  "o": ["Peacock", "House Sparrow (Gauraiya)", "Koel", "Indian Roller"],
+  "a": 1,
+  "e": "March 20 is celebrated as World Sparrow Day to raise awareness about this bird.",
+  "cat": "gs",
+  "sub": "ecology"
+},
+{
+  "q": "Which 'Award' is known as the 'Green Nobel'?",
+  "o": ["Goldman Environmental Prize", "Right Livelihood Award", "Tyndall Medal", "Blue Planet Prize"],
+  "a": 0,
+  "e": "It is awarded annually to grassroots environmental activists from each of the world's six geographic regions.",
+  "cat": "gs",
+  "sub": "ecology"
+},
+{
+  "q": "What is 'Zero Waste' management?",
+  "o": ["Burning all waste", "A system where all products are reused and no waste is sent to landfills", "Ignoring waste", "Dumping waste in oceans"],
+  "a": 1,
+  "e": "It focuses on waste prevention and the circular economy.",
+  "cat": "gs",
+  "sub": "ecology"
+},
+{
+  "q": "The 'Kaimur Wildlife Sanctuary', the largest in Bihar, is famous for which landscape?",
+  "o": ["Snowy peaks", "Vindhyan Hill Range and Waterfalls", "Mangroves", "Desert dunes"],
+  "a": 1,
+  "e": "It is located in Kaimur and Rohtas districts and is a potential second Tiger Reserve for Bihar.",
+  "cat": "gs",
+  "sub": "ecology"
+},
+{
+  "q": "Which chemical is used in 'Cloud Seeding' to induce artificial rain?",
+  "o": ["Silver Iodide", "Potassium Chloride", "Dry Ice", "All of the above"],
+  "a": 3,
+  "e": "These chemicals act as ice nuclei, causing water vapor to condense and fall as rain.",
+  "cat": "gs",
+  "sub": "ecology"
+},
+{
+  "q": "What is 'Eco-Mark' in India?",
+  "o": ["A logo for organic food", "A certification mark issued by BIS for environment-friendly products", "A forest boundary", "A type of tax"],
+  "a": 1,
+  "e": "The logo is an 'Earthen Pot' (Matka), symbolizing a product made from and returning to nature.",
+  "cat": "gs",
+  "sub": "ecology"
+},
+{
+  "q": "Which district in Bihar is known as the 'Home of Greater Adjutant Stork' (Garuda)?",
+  "o": ["Patna", "Bhagalpur", "Purnia", "Katihar"],
+  "a": 1,
+  "e": "Bhagalpur is one of the few places in the world where these rare birds breed successfully.",
+  "cat": "gs",
+  "sub": "ecology"
+},
+{
+  "q": "What is 'Phytoremediation'?",
+  "o": ["Killing plants", "Using plants to remove, transfer, or stabilize contaminants in soil and water", "Growing plants in labs", "Plant diseases"],
+  "a": 1,
+  "e": "Certain plants like Sunflowers can absorb heavy metals from polluted soil.",
+  "cat": "gs",
+  "sub": "ecology"
+},
+{
+  "q": "The 'Stockholm Convention' is an international treaty to protect human health from:",
+  "o": ["Carbon Dioxide", "Persistent Organic Pollutants (POPs)", "Noise", "Radiation"],
+  "a": 1,
+  "e": "POPs are chemicals that remain intact in the environment for long periods and accumulate in fatty tissue.",
+  "cat": "gs",
+  "sub": "ecology"
+},
+{
+  "q": "Who is known as the 'Waterman of India'?",
+  "o": ["Rajendra Singh", "Salim Ali", "M.S. Swaminathan", "Medha Patkar"],
+  "a": 0,
+  "e": "He won the Stockholm Water Prize for his work in water conservation in Rajasthan.",
+  "cat": "gs",
+  "sub": "ecology"
+},
+{
+  "q": "What is 'Coral Bleaching'?",
+  "o": ["Painting corals", "Loss of symbiotic algae (Zooxanthellae) due to rising ocean temperatures", "Growth of corals", "Sand covering corals"],
+  "a": 1,
+  "e": "Bleached corals turn white and are under high stress, often leading to their death.",
+  "cat": "gs",
+  "sub": "ecology"
+},
+{
+  "q": "Which Indian state has the maximum 'Forest Cover' by area?",
+  "o": ["Arunachal Pradesh", "Madhya Pradesh", "Chhattisgarh", "Mizoram"],
+  "a": 1,
+  "e": "According to the India State of Forest Report, MP has the largest forest area.",
+  "cat": "gs",
+  "sub": "ecology"
+},
+{
+  "q": "What is 'Carbon Footprint'?",
+  "o": ["Markings on coal", "The total amount of greenhouse gases produced by an individual or organization", "A type of fossil", "Soil carbon level"],
+  "a": 1,
+  "e": "It is usually expressed in equivalent tons of Carbon Dioxide ($CO_2$).",
+  "cat": "gs",
+  "sub": "ecology"
+},
+{
+  "q": "Which 'Day' is celebrated as World Environment Day?",
+  "o": ["April 22", "June 5", "September 16", "December 2"],
+  "a": 1,
+  "e": "June 5 was designated by the UN to encourage global awareness and action for the environment.",
+  "cat": "gs",
+  "sub": "ecology"
+},
+{
+  "q": "The 'Gobar Gas' (Biogas) mainly consists of:",
+  "o": ["Ethane", "Methane ($CH_4$)", "Propane", "Butane"],
+  "a": 1,
+  "e": "Biogas is produced by the anaerobic decomposition of organic matter.",
+  "cat": "gs",
+  "sub": "ecology"
+},
+{
+  "q": "What is the 'Green Bench'?",
+  "o": ["A park bench", "A special judicial bench for hearing environmental cases", "A group of farmers", "None"],
+  "a": 1,
+  "e": "The National Green Tribunal (NGT) in India acts as a specialized body for environmental disputes.",
+  "cat": "gs",
+  "sub": "ecology"
+},
+{
+  "q": "Which pigment is responsible for the 'Red Tide' in oceans?",
+  "o": ["Chlorophyll", "Dinoflagellates (Algal bloom)", "Red Clay", "Iron"],
+  "a": 1,
+  "e": "Red tides can be toxic to marine life and humans who eat contaminated shellfish.",
+  "cat": "gs",
+  "sub": "ecology"
+},
+{
+  "q": "What is 'Social Forestry'?",
+  "o": ["Forests for parties", "Management and protection of forests with the involvement of local communities", "Private forests", "Cutting trees for society"],
+  "a": 1,
+  "e": "It aims at helping environmental, social, and rural development.",
+  "cat": "gs",
+  "sub": "ecology"
+},
+{
+  "q": "Which gas is used in 'Fire Extinguishers' because it does not support combustion?",
+  "o": ["Oxygen", "Carbon Dioxide ($CO_2$)", "Nitrogen", "Hydrogen"],
+  "a": 1,
+  "e": "$CO_2$ displaces oxygen around the fire, 'smothering' it.",
+  "cat": "gs",
+  "sub": "ecology"
+},
+{
+  "q": "Which 'Mineral' deficiency is the most common cause of 'Mental Retardation' in children worldwide?",
+  "o": ["Iron", "Iodine", "Zinc", "Calcium"],
+  "a": 1,
+  "e": "Iodine deficiency during pregnancy is the single greatest preventable cause of mental disability.",
+  "cat": "gs",
+  "sub": "diseases"
+},
+{
+  "q": "Which medical condition is also known as 'Silent Killer' because it often has no symptoms?",
+  "o": ["Low blood pressure", "Hypertension (High blood pressure)", "Diabetes", "Asthma"],
+  "a": 1,
+  "e": "Hypertension can damage the heart and kidneys for years without the person knowing.",
+  "cat": "gs",
+  "sub": "diseases"
+},
+{
+  "q": "What is 'Anemia' commonly caused by in the Indian population?",
+  "o": ["Vitamin C deficiency", "Iron deficiency", "Lack of exercise", "High salt intake"],
+  "a": 1,
+  "e": "Iron is essential for producing hemoglobin, which carries oxygen in the blood.",
+  "cat": "gs",
+  "sub": "diseases"
+},
+{
+  "q": "Which of the following is a 'Genetic' (Congenital) disease?",
+  "o": ["Scurvy", "Sickle Cell Anemia", "Typhoid", "Goitre"],
+  "a": 1,
+  "e": "Sickle cell anemia is an inherited blood disorder where RBCs become sickle-shaped.",
+  "cat": "gs",
+  "sub": "diseases"
 },
 {
   "q": "What is 'Micturition'?",
