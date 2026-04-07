@@ -8,6 +8,3606 @@
     "sub": "bihar"
   },
   {
+  "q": "What is the 'Functional Unit' of the human kidney?",
+  "o": ["Neuron", "Nephron", "Alveoli", "Hepatocyte"],
+  "a": 1,
+  "e": "Each human kidney contains about 1 million nephrons which filter blood and form urine.",
+  "cat": "gs",
+  "sub": "excretory"
+},
+{
+  "q": "Which of the following is the 'Primary Nitrogenous Waste' excreted by humans?",
+  "o": ["Ammonia", "Uric Acid", "Urea", "Amino Acids"],
+  "a": 2,
+  "e": "Humans are 'Ureotelic' animals; our liver converts toxic ammonia into less toxic urea for excretion.",
+  "cat": "gs",
+  "sub": "excretory"
+},
+{
+  "q": "The 'Bowman’s Capsule' and 'Glomerulus' together are known as the:",
+  "o": ["Renal Tubule", "Malpighian Body (Renal Corpuscle)", "Loop of Henle", "Collecting Duct"],
+  "a": 1,
+  "e": "This is the site where 'Ultrafiltration' of blood takes place under high pressure.",
+  "cat": "gs",
+  "sub": "excretory"
+},
+{
+  "q": "In which part of the Nephron does the maximum 'Reabsorption' of water and glucose occur?",
+  "o": ["Distal Convoluted Tubule (DCT)", "Proximal Convoluted Tubule (PCT)", "Loop of Henle", "Collecting Duct"],
+  "a": 1,
+  "e": "The PCT reabsorbs nearly 70-80% of electrolytes, water, and 100% of glucose and amino acids.",
+  "cat": "gs",
+  "sub": "excretory"
+},
+{
+  "q": "Which hormone is responsible for increasing water reabsorption in the DCT and Collecting Duct?",
+  "o": ["Insulin", "Adrenaline", "Antidiuretic Hormone (ADH/Vasopressin)", "Oxytocin"],
+  "a": 2,
+  "e": "ADH makes the ducts permeable to water, preventing dehydration and concentrating the urine.",
+  "cat": "gs",
+  "sub": "excretory"
+},
+{
+  "q": "The 'Loop of Henle' is primarily concerned with the conservation of:",
+  "o": ["Glucose", "Water and Sodium", "Urea", "Proteins"],
+  "a": 1,
+  "e": "The descending limb is permeable to water, while the ascending limb is permeable to salts, creating a concentration gradient.",
+  "cat": "gs",
+  "sub": "excretory"
+},
+{
+  "q": "Which blood vessel brings 'Dirty' blood (containing waste) into the kidney?",
+  "o": ["Renal Vein", "Renal Artery", "Hepatic Portal Vein", "Vena Cava"],
+  "a": 1,
+  "e": "The renal artery carries oxygenated but waste-heavy blood from the aorta to the kidneys.",
+  "cat": "gs",
+  "sub": "excretory"
+},
+{
+  "q": "What is 'Micturition'?",
+  "o": ["Formation of urea", "Process of passing urine", "Filtration of blood", "Kidney stone formation"],
+  "a": 1,
+  "e": "Micturition is the neural reflex that causes the urinary bladder to contract and release urine.",
+  "cat": "gs",
+  "sub": "excretory"
+},
+{
+  "q": "The yellow color of normal human urine is due to the presence of which pigment?",
+  "o": ["Melanin", "Urochrome (Urobilin)", "Bilirubin", "Chlorophyll"],
+  "a": 1,
+  "e": "Urochrome is a breakdown product of hemoglobin that gives urine its characteristic straw-yellow color.",
+  "cat": "gs",
+  "sub": "excretory"
+},
+{
+  "q": "What is the 'Glomerular Filtration Rate' (GFR) of a healthy adult human?",
+  "o": ["1 liter/day", "125 ml/minute", "500 ml/hour", "5 liters/minute"],
+  "a": 1,
+  "e": "This equates to about 180 liters of filtrate per day, though 99% of it is reabsorbed back into the blood.",
+  "cat": "gs",
+  "sub": "excretory"
+},
+{
+  "q": "A condition where 'Glucose' is found in the urine is called:",
+  "o": ["Hematuria", "Glycosuria", "Proteinuria", "Uremia"],
+  "a": 1,
+  "e": "Glycosuria is a classic sign of Diabetes Mellitus, occurring when blood sugar exceeds the kidney's reabsorption limit.",
+  "cat": "gs",
+  "sub": "respiratory"
+},
+{
+  "q": "Which of the following is 'Uricotelic' (excretes uric acid as a paste to save water)?",
+  "o": ["Human", "Fish", "Birds and Reptiles", "Frogs"],
+  "a": 2,
+  "e": "Uric acid is the least toxic nitrogenous waste and requires the least amount of water to excrete.",
+  "cat": "gs",
+  "sub": "excretory"
+},
+{
+  "q": "The 'Podocytes' are specialized cells found in the:",
+  "o": ["Walls of the bladder", "Inner wall of Bowman's Capsule", "Liver", "Spleen"],
+  "a": 1,
+  "e": "Podocytes have 'foot processes' that form filtration slits, allowing small molecules to pass into the nephron.",
+  "cat": "gs",
+  "sub": "excretory"
+},
+{
+  "q": "Which part of the kidney contains the 'Renal Pyramids'?",
+  "o": ["Cortex", "Medulla", "Pelvis", "Ureter"],
+  "a": 1,
+  "e": "The inner medulla is divided into conical masses called renal pyramids.",
+  "cat": "gs",
+  "sub": "excretory"
+},
+{
+  "q": "What is 'Hemodialysis'?",
+  "o": ["Natural filtration", "Artificial removal of waste from the blood when kidneys fail", "Blood transfusion", "Testing urine for infection"],
+  "a": 1,
+  "e": "A dialysis machine acts as an 'artificial kidney' to remove urea and excess salts from the patient's blood.",
+  "cat": "gs",
+  "sub": "excretory"
+},
+{
+  "q": "The 'Juxtaglomerular Apparatus' (JGA) helps in regulating:",
+  "o": ["Blood sugar", "Blood pressure and GFR", "Body temperature", "Muscle growth"],
+  "a": 1,
+  "e": "JGA releases Renin when blood pressure drops, triggering the RAAS pathway to restore pressure.",
+  "cat": "gs",
+  "sub": "excretory"
+},
+{
+  "q": "Which muscle makes up the wall of the 'Urinary Bladder'?",
+  "o": ["Skeletal muscle", "Detrusor muscle (Smooth)", "Cardiac muscle", "Biceps"],
+  "a": 1,
+  "e": "The detrusor muscle contracts during micturition to push urine into the urethra.",
+  "cat": "gs",
+  "sub": "excretory"
+},
+{
+  "q": "What is the 'Renal Threshold' for glucose?",
+  "o": ["50 mg/dL", "100 mg/dL", "180 mg/dL", "300 mg/dL"],
+  "a": 2,
+  "e": "If blood glucose rises above 180 mg/dL, the PCT cannot reabsorb it all, and it appears in the urine.",
+  "cat": "gs",
+  "sub": "excretory"
+},
+{
+  "q": "The 'Ornithine Cycle' (Urea Cycle) takes place in which organ?",
+  "o": ["Kidney", "Liver", "Skin", "Lungs"],
+  "a": 1,
+  "e": "Even though the kidney *excretes* urea, the *production* of urea happens in the liver.",
+  "cat": "gs",
+  "sub": "excretory"
+},
+  {
+  "q": "Which hormone is released by the Juxtaglomerular (JG) cells when blood pressure falls?",
+  "o": ["Aldosterone", "Renin", "Angiotensin", "ADH"],
+  "a": 1,
+  "e": "Renin is an enzyme that starts the RAAS cascade to increase blood pressure and maintain GFR.",
+  "cat": "gs",
+  "sub": "excretory"
+},
+{
+  "q": "The 'Counter-Current Mechanism' in the Loop of Henle is responsible for:",
+  "o": ["Filtering glucose", "Producing concentrated (hypertonic) urine", "Excreting ammonia", "Moving blood faster"],
+  "a": 1,
+  "e": "This mechanism creates a high salt concentration in the medulla, allowing water to be pulled out of the collecting duct.",
+  "cat": "gs",
+  "sub": "excretory"
+},
+{
+  "q": "What is the primary chemical composition of most 'Kidney Stones' (Renal Calculi)?",
+  "o": ["Magnesium sulphate", "Calcium oxalate", "Sodium chloride", "Uric acid only"],
+  "a": 1,
+  "e": "Calcium oxalate crystals are the most common cause of hard deposits in the kidney.",
+  "cat": "gs",
+  "sub": "excretory"
+},
+{
+  "q": "Which part of the Nephron is 'Impermeable' to water but permeable to electrolytes?",
+  "o": ["Descending limb of Loop of Henle", "Ascending limb of Loop of Henle", "PCT", "Bowman's Capsule"],
+  "a": 1,
+  "e": "The thick ascending limb pumps out salt into the medulla but does not allow water to follow, making the filtrate dilute.",
+  "cat": "gs",
+  "sub": "excretory"
+},
+{
+  "q": "What is 'Hematuria'?",
+  "o": ["High urea in blood", "Presence of blood/RBCs in the urine", "Glucose in urine", "Lack of urine formation"],
+  "a": 1,
+  "e": "Hematuria can be a sign of infection, kidney stones, or trauma to the urinary tract.",
+  "cat": "gs",
+  "sub": "excretory"
+},
+{
+  "q": "Which of the following is a 'Vasoconstrictor' produced by the action of Renin?",
+  "o": ["Angiotensin I", "Angiotensin II", "Atrial Natriuretic Factor", "Erythropoietin"],
+  "a": 1,
+  "e": "Angiotensin II is a powerful vasoconstrictor that increases blood pressure and stimulates aldosterone release.",
+  "cat": "gs",
+  "sub": "excretory"
+},
+{
+  "q": "The 'Anuria' condition refers to:",
+  "o": ["Painful urination", "Excessive urination", "Failure of kidneys to produce urine (less than 100ml/day)", "Blood in urine"],
+  "a": 2,
+  "e": "Anuria is a medical emergency usually indicating acute kidney failure or total obstruction.",
+  "cat": "gs",
+  "sub": "excretory"
+},
+{
+  "q": "Which nitrogenous waste is the 'Most Toxic' and requires the most water for excretion?",
+  "o": ["Urea", "Uric Acid", "Ammonia", "Creatinine"],
+  "a": 2,
+  "e": "Ammonia must be excreted immediately or converted to urea because it is highly toxic to cells.",
+  "cat": "gs",
+  "sub": "excretory"
+},
+{
+  "q": "What is the function of 'Atrial Natriuretic Factor' (ANF) in kidney regulation?",
+  "o": ["Increase GFR", "Oppose the RAAS mechanism and lower blood pressure", "Stimulate ADH", "Reabsorb sodium"],
+  "a": 1,
+  "e": "ANF is released by the heart when BP is too high; it causes vasodilation and increased salt excretion.",
+  "cat": "gs",
+  "sub": "excretory"
+},
+{
+  "q": "The 'Peritubular Capillaries' that run parallel to the Loop of Henle are called:",
+  "o": ["Vasa Recta", "Glomerulus", "Renal Vein", "Afferent Arteriole"],
+  "a": 0,
+  "e": "Vasa recta play a crucial role in maintaining the medullary osmotic gradient for water reabsorption.",
+  "cat": "gs",
+  "sub": "excretory"
+},
+{
+  "q": "Which organ in the human body is the 'Primary site' for the synthesis of Urea?",
+  "o": ["Kidney", "Liver", "Pancreas", "Spleen"],
+  "a": 1,
+  "e": "Urea is formed in the liver through the Ornithine cycle and then transported to the kidney for excretion.",
+  "cat": "gs",
+  "sub": "excretory"
+},
+{
+  "q": "What is 'Polyuria'?",
+  "o": ["Lack of urine", "Production of abnormally large volumes of dilute urine", "Pain during urination", "Dark colored urine"],
+  "a": 1,
+  "e": "Polyuria is often a symptom of Diabetes Mellitus or Diabetes Insipidus (lack of ADH).",
+  "cat": "gs",
+  "sub": "excretory"
+},
+{
+  "q": "The hormone 'Aldosterone' acts primarily on which part of the nephron?",
+  "o": ["PCT", "Descending limb", "Distal Convoluted Tubule (DCT) and Collecting Duct", "Bowman's Capsule"],
+  "a": 2,
+  "e": "Aldosterone stimulates the reabsorption of Sodium ($Na^+$) and the excretion of Potassium ($K^+$).",
+  "cat": "gs",
+  "sub": "excretory"
+},
+{
+  "q": "Which of the following is 'Ametelic' (excretes amino acids directly)?",
+  "o": ["Insects", "Some mollusks like Unio", "Birds", "Mammals"],
+  "a": 1,
+  "e": "Some aquatic animals excrete amino acids to avoid the energy cost of converting them to ammonia or urea.",
+  "cat": "gs",
+  "sub": "excretory"
+},
+{
+  "q": "The 'Net Filtration Pressure' (NFP) in the glomerulus is approximately:",
+  "o": ["10 mmHg", "50 mmHg", "100 mmHg", "0 mmHg"],
+  "a": 0,
+  "e": "NFP is the result of Glomerular Hydrostatic Pressure minus the opposing osmotic and capsular pressures.",
+  "cat": "gs",
+  "sub": "excretory"
+},
+{
+  "q": "What is 'Dysuria'?",
+  "o": ["Frequent urination", "Painful or difficult urination", "Inability to hold urine", "Night-time urination"],
+  "a": 1,
+  "e": "Dysuria is most commonly caused by a Urinary Tract Infection (UTI).",
+  "cat": "gs",
+  "sub": "excretory"
+},
+{
+  "q": "Which 'Sphincter' of the urethra is under voluntary (conscious) control?",
+  "o": ["Internal Urethral Sphincter", "External Urethral Sphincter", "Pyloric Sphincter", "Anal Sphincter"],
+  "a": 1,
+  "e": "The external sphincter is made of skeletal muscle, allowing us to decide when to urinate.",
+  "cat": "gs",
+  "sub": "excretory"
+},
+{
+  "q": "The condition 'Albuminuria' (Protein in urine) indicates damage to which structure?",
+  "o": ["Bladder", "Ureter", "Glomerular filtration membrane", "Urethra"],
+  "a": 2,
+  "e": "Normally, large proteins like albumin cannot pass through the filtration slits; their presence suggests kidney disease.",
+  "cat": "gs",
+  "sub": "excretory"
+},
+{
+  "q": "What is 'Diabetes Insipidus' caused by?",
+  "o": ["Lack of Insulin", "Lack of ADH (Vasopressin)", "Excess Glucose", "Kidney Stones"],
+  "a": 1,
+  "e": "Without ADH, the kidneys cannot reabsorb water, leading to the production of vast amounts of very dilute urine.",
+  "cat": "gs",
+  "sub": "excretory"
+},
+  {
+  "q": "Which of the following describes the 'Counter-Current Multiplier' in the kidney?",
+  "o": ["Flow of blood in the heart", "The mechanism in the Loop of Henle that creates a high osmotic gradient in the medulla", "The filtration of glucose in the PCT", "The movement of urine in the ureter"],
+  "a": 1,
+  "e": "By moving salts and water in opposite directions in the descending and ascending limbs, the kidney can produce highly concentrated urine.",
+  "cat": "gs",
+  "sub": "excretory"
+},
+{
+  "q": "What is the role of 'Atrial Natriuretic Factor' (ANF) in kidney function?",
+  "o": ["Stimulate Renin release", "Act as a vasodilator to decrease blood pressure and inhibit RAAS", "Increase water reabsorption", "Produce more urea"],
+  "a": 1,
+  "e": "ANF is the body's 'safety valve'—it is released by the heart when blood pressure is too high, helping the kidneys excrete more salt and water.",
+  "cat": "gs",
+  "sub": "excretory"
+},
+{
+  "q": "The 'Flame Cells' (Protonephridia) are the excretory organs found in:",
+  "o": ["Earthworms", "Platyhelminthes (Flatworms like Tapeworm)", "Insects", "Prawns"],
+  "a": 1,
+  "e": "Flame cells are the simplest excretory structures used for osmoregulation in lower invertebrates.",
+  "cat": "gs",
+  "sub": "excretory"
+},
+{
+  "q": "Which part of the 'Nephron' is almost completely surrounded by the 'Vasa Recta'?",
+  "o": ["Bowman's Capsule", "PCT", "Loop of Henle", "DCT"],
+  "a": 2,
+  "e": "The vasa recta are specialized capillaries that dip deep into the medulla alongside the Loop of Henle to maintain the salt gradient.",
+  "cat": "gs",
+  "sub": "excretory"
+},
+{
+  "q": "What is 'Uremia'?",
+  "o": ["Presence of blood in urine", "Accumulation of excess urea in the blood due to kidney failure", "Presence of glucose in urine", "Inability to pass urine"],
+  "a": 1,
+  "e": "Uremia is highly toxic and leads to multi-organ failure if not treated with dialysis or transplant.",
+  "cat": "gs",
+  "sub": "excretory"
+},
+{
+  "q": "Which 'Excretory Organ' in humans is responsible for removing Sterols, Hydrocarbons, and Waxes?",
+  "o": ["Kidneys", "Lungs", "Sebaceous glands (Skin)", "Liver"],
+  "a": 2,
+  "e": "Sebaceous glands secrete sebum, which contains these oily substances to protect the skin.",
+  "cat": "gs",
+  "sub": "excretory"
+},
+{
+  "q": "The 'Malpighian Tubules' are the excretory organs of:",
+  "o": ["Mollusks", "Crustaceans", "Insects (like Cockroaches)", "Flatworms"],
+  "a": 2,
+  "e": "Insects use these tubules to extract nitrogenous waste from their hemolymph and excrete it as uric acid.",
+  "cat": "gs",
+  "sub": "excretory"
+},
+{
+  "q": "What is the function of the 'Juxtaglomerular Apparatus' (JGA)?",
+  "o": ["To produce RBCs", "To sense changes in blood pressure and regulate GFR via Renin", "To store urine", "To digest proteins"],
+  "a": 1,
+  "e": "The JGA is a specialized sensing structure located where the DCT touches the afferent arteriole.",
+  "cat": "gs",
+  "sub": "excretory"
+},
+{
+  "q": "Which condition is characterized by 'Ketonuria' (Ketone bodies in urine)?",
+  "o": ["Kidney stones", "Diabetes Mellitus", "High protein diet", "Hypertension"],
+  "a": 1,
+  "e": "During uncontrolled diabetes, the body breaks down fats for energy, producing acidic ketones that spill into the urine.",
+  "cat": "gs",
+  "sub": "excretory"
+},
+{
+  "q": "The 'Antidiuretic Hormone' (ADH) is synthesized in the ______ and stored in the ______.",
+  "o": ["Kidney, Bladder", "Hypothalamus, Posterior Pituitary", "Liver, Kidney", "Adrenal gland, Heart"],
+  "a": 1,
+  "e": "ADH (Vasopressin) is made in the brain and released into the blood to save water during dehydration.",
+  "cat": "gs",
+  "sub": "excretory"
+},
+  {
+  "q": "Which of the following is the 'Artificial Kidney' used to treat patients with Renal Failure?",
+  "o": ["Stethoscope", "Dialyzer", "Ventilator", "Pacemaker"],
+  "a": 1,
+  "e": "A dialyzer contains semi-permeable tubes that filter urea and excess salts out of the blood using a dialyzing fluid.",
+  "cat": "gs",
+  "sub": "excretory"
+},
+{
+  "q": "In 'Hemodialysis', which substance is kept at the same concentration in the dialyzing fluid as in normal plasma?",
+  "o": ["Urea", "Glucose and Amino Acids", "Uric Acid", "Creatinine"],
+  "a": 1,
+  "e": "Glucose and nutrients are kept at normal levels so they do not diffuse out of the patient's blood during the process.",
+  "cat": "gs",
+  "sub": "excretory"
+},
+{
+  "q": "Which anticoagulant is added to the blood before it enters the dialysis machine?",
+  "o": ["Vitamin K", "Heparin", "Warfarin", "Hirudin"],
+  "a": 1,
+  "e": "Heparin prevents the blood from clotting while it is outside the body in the dialysis tubes.",
+  "cat": "gs",
+  "sub": "excretory"
+},
+{
+  "q": "The 'Green Glands' (Antennal Glands) are the excretory organs found in:",
+  "o": ["Insects", "Prawns and Crustaceans", "Earthworms", "Spiders"],
+  "a": 1,
+  "e": "Prawns use these glands located at the base of their antennae to remove nitrogenous waste.",
+  "cat": "gs",
+  "sub": "excretory"
+},
+{
+  "q": "What is 'Nephritis'?",
+  "o": ["Kidney stones", "Inflammation of the Nephrons", "Low urine production", "Blood in urine"],
+  "a": 1,
+  "e": "Nephritis can be caused by infections or autoimmune disorders, leading to impaired kidney function.",
+  "cat": "gs",
+  "sub": "excretory"
+},
+{
+  "q": "Which part of the 'Nephron' is the primary site for 'Tubular Secretion' of H+ and K+ ions?",
+  "o": ["PCT", "DCT", "Bowman's Capsule", "Loop of Henle"],
+  "a": 1,
+  "e": "The Distal Convoluted Tubule (DCT) selectively secretes ions to maintain the pH and ionic balance of the blood.",
+  "cat": "gs",
+  "sub": "excretory"
+},
+{
+  "q": "The 'Renin-Angiotensin' system is activated when the GFR (Glomerular Filtration Rate) ________.",
+  "o": ["Increases", "Decreases", "Stays constant", "Stops"],
+  "a": 1,
+  "e": "A fall in GFR triggers the JG cells to release Renin, which eventually leads to vasoconstriction to restore pressure.",
+  "cat": "gs",
+  "sub": "excretory"
+},
+{
+  "q": "What is 'Pyuria'?",
+  "o": ["Glucose in urine", "Pus or WBCs in the urine", "Ketones in urine", "Air in the bladder"],
+  "a": 1,
+  "e": "Pyuria is a definitive sign of a Urinary Tract Infection (UTI).",
+  "cat": "gs",
+  "sub": "excretory"
+},
+{
+  "q": "Which animal is 'Uricotelic' to minimize water loss during excretion?",
+  "o": ["Human", "Frog", "Lizard", "Shark"],
+  "a": 2,
+  "e": "Reptiles and birds excrete uric acid as a semi-solid paste, which is the most water-efficient method.",
+  "cat": "gs",
+  "sub": "excretory"
+},
+{
+  "q": "The 'Vasa Recta' is absent or highly reduced in which type of nephron?",
+  "o": ["Juxtamedullary Nephron", "Cortical Nephron", "All nephrons", "None"],
+  "a": 1,
+  "e": "Cortical nephrons have short loops of Henle that do not go deep into the medulla, so they don't need extensive vasa recta.",
+  "cat": "gs",
+  "sub": "excretory"
+},
+{
+  "q": "What is the 'Ornithine Cycle' also known as?",
+  "o": ["Citric Acid Cycle", "Urea Cycle", "Calvin Cycle", "Glycolysis"],
+  "a": 1,
+  "e": "It is the biochemical pathway in the liver that converts ammonia into urea.",
+  "cat": "gs",
+  "sub": "excretory"
+},
+{
+  "q": "Which 'Excretory Structure' is found in Earthworms?",
+  "o": ["Malpighian Tubules", "Nephridia", "Flame cells", "Kidneys"],
+  "a": 1,
+  "e": "Nephridia are tubular structures that help in both excretion and osmoregulation in annelids.",
+  "cat": "gs",
+  "sub": "excretory"
+},
+{
+  "q": "What is 'Renal Glycosuria'?",
+  "o": ["Diabetes", "Excretion of glucose in urine despite normal blood sugar levels", "High protein intake", "Stone in kidney"],
+  "a": 1,
+  "e": "This happens when the PCT has a defect and cannot reabsorb glucose even if the body needs it.",
+  "cat": "gs",
+  "sub": "excretory"
+},
+{
+  "q": "Which part of the 'Adrenal Gland' secretes Aldosterone?",
+  "o": ["Adrenal Medulla", "Adrenal Cortex", "Pituitary", "Thyroid"],
+  "a": 1,
+  "e": "The cortex releases mineralocorticoids like aldosterone to regulate salt and water balance.",
+  "cat": "gs",
+  "sub": "excretory"
+},
+{
+  "q": "The 'Specific Gravity' of urine increases during which condition?",
+  "o": ["Excessive water drinking", "Dehydration", "Diabetes Insipidus", "Use of diuretics"],
+  "a": 1,
+  "e": "In dehydration, urine becomes highly concentrated with solutes, increasing its density or specific gravity.",
+  "cat": "gs",
+  "sub": "excretory"
+},
+{
+  "q": "What is 'Oliguria'?",
+  "o": ["Excessive urination", "Low urine output (less than 400ml/day)", "Blood in urine", "Painful urination"],
+  "a": 1,
+  "e": "Oliguria is often a sign of dehydration, kidney stones, or early kidney failure.",
+  "cat": "gs",
+  "sub": "excretory"
+},
+{
+  "q": "Which of the following describes 'Ureotelic' animals?",
+  "o": ["Excrete Ammonia", "Excrete Urea", "Excrete Uric Acid", "Excrete Amino Acids"],
+  "a": 1,
+  "e": "Mammals, terrestrial amphibians, and marine fishes are generally ureotelic.",
+  "cat": "gs",
+  "sub": "excretory"
+},
+{
+  "q": "What is the 'Hilum' of the kidney?",
+  "o": ["The outer covering", "The notch where the ureter, blood vessels, and nerves enter/exit", "The tip of the pyramid", "The bladder opening"],
+  "a": 1,
+  "e": "The hilum is the concave notch on the inner side of the kidney.",
+  "cat": "gs",
+  "sub": "excretory"
+},
+{
+  "q": "The 'Glomerular Hydrostatic Pressure' is caused by:",
+  "o": ["Blood viscosity", "The difference in diameter between afferent and efferent arterioles", "Heart rate", "Urea concentration"],
+  "a": 1,
+  "e": "The afferent arteriole is wider than the efferent, creating a 'bottleneck' effect that builds up pressure for filtration.",
+  "cat": "gs",
+  "sub": "excretory"
+},
+  {
+  "q": "Which part of the 'Nephron' is primarily responsible for the 'Concentration Gradient' in the Medulla?",
+  "o": ["PCT", "DCT", "Loop of Henle", "Bowman's Capsule"],
+  "a": 2,
+  "e": "The long loops of Henle in juxtamedullary nephrons create the salt gradient needed to pull water out of the collecting ducts.",
+  "cat": "gs",
+  "sub": "excretory"
+},
+{
+  "q": "What is the 'Glomerular Filtration Rate' (GFR) per day in a healthy adult?",
+  "o": ["1.5 Liters", "18 Liters", "180 Liters", "500 Liters"],
+  "a": 2,
+  "e": "While we filter 180L a day, 99% is reabsorbed, leaving only about 1.5L to be excreted as urine.",
+  "cat": "gs",
+  "sub": "excretory"
+},
+{
+  "q": "Which of the following is a 'Potassium-Sparing' diuretic effect?",
+  "o": ["Inhibition of Aldosterone", "Stimulation of ADH", "Increase in Renin", "Reduction in GFR"],
+  "a": 0,
+  "e": "Aldosterone normally dumps Potassium; blocking it helps the body keep Potassium while losing Sodium and Water.",
+  "cat": "gs",
+  "sub": "excretory"
+},
+{
+  "q": "The 'Renal Pelvis' leads directly into which structure?",
+  "o": ["Urethra", "Ureter", "Urinary Bladder", "Renal Cortex"],
+  "a": 1,
+  "e": "The pelvis is a funnel-like dilated part of the ureter in the kidney.",
+  "cat": "gs",
+  "sub": "excretory"
+},
+{
+  "q": "Which 'Buffer System' is most important in the renal regulation of blood pH?",
+  "o": ["Phosphate buffer", "Bicarbonate buffer", "Protein buffer", "Hemoglobin buffer"],
+  "a": 1,
+  "e": "The kidneys manage pH by reabsorbing bicarbonate and secreting hydrogen ions.",
+  "cat": "gs",
+  "sub": "excretory"
+},
+{
+  "q": "What is 'Cystitis'?",
+  "o": ["Inflammation of the Kidney", "Inflammation of the Urinary Bladder", "Stone in the Ureter", "Hardening of Arteries"],
+  "a": 1,
+  "e": "Cystitis is a common UTI, more frequent in females due to a shorter urethra.",
+  "cat": "gs",
+  "sub": "excretory"
+},
+{
+  "q": "Which hormone is the 'Antagonist' (opposite) to Aldosterone regarding Sodium?",
+  "o": ["ADH", "ANF (Atrial Natriuretic Factor)", "Renin", "Thyroxine"],
+  "a": 1,
+  "e": "While Aldosterone saves sodium, ANF promotes its excretion (Natriuresis) to lower blood pressure.",
+  "cat": "gs",
+  "sub": "excretory"
+},
+{
+  "q": "The 'External Urethral Sphincter' is made of which type of muscle?",
+  "o": ["Smooth Muscle", "Skeletal Muscle", "Cardiac Muscle", "Involuntary Muscle"],
+  "a": 1,
+  "e": "Skeletal muscle allows for voluntary control over the timing of urination.",
+  "cat": "gs",
+  "sub": "excretory"
+},
+{
+  "q": "What is 'Renal Ptosis'?",
+  "o": ["Kidney infection", "Dropping of the kidney to a lower position", "Kidney cancer", "Excessive urea"],
+  "a": 1,
+  "e": "Often caused by rapid weight loss, it can lead to the ureter kinking and blocking urine flow.",
+  "cat": "gs",
+  "sub": "excretory"
+},
+{
+  "q": "Which nitrogenous waste requires the 'Least' amount of water for its removal?",
+  "o": ["Ammonia", "Urea", "Uric Acid", "Creatinine"],
+  "a": 2,
+  "e": "Uric acid is almost insoluble in water and is excreted as a thick paste by birds and reptiles.",
+  "cat": "gs",
+  "sub": "excretory"
+},
+{
+  "q": "What is the 'Normal' pH range of human urine?",
+  "o": ["2.0 - 4.0", "4.5 - 8.0 (Average 6.0)", "7.4 constant", "8.5 - 10.0"],
+  "a": 1,
+  "e": "The pH of urine varies depending on diet; a high-protein diet usually makes it more acidic.",
+  "cat": "gs",
+  "sub": "excretory"
+},
+{
+  "q": "Which 'Excretory Organ' in humans also helps in 'Thermoregulation'?",
+  "o": ["Kidney", "Skin (Sweat glands)", "Liver", "Lungs"],
+  "a": 1,
+  "e": "Sweating removes waste salts and also cools the body through evaporation.",
+  "cat": "gs",
+  "sub": "excretory"
+},
+{
+  "q": "The 'Macula Densa' cells are part of which apparatus?",
+  "o": ["Digestive", "Juxtaglomerular Apparatus (JGA)", "Respiratory", "Nervous"],
+  "a": 1,
+  "e": "Macula densa cells monitor the salt concentration in the DCT and signal the JG cells to release Renin.",
+  "cat": "gs",
+  "sub": "excretory"
+},
+{
+  "q": "What is 'Nocturia'?",
+  "o": ["Inability to urinate", "Excessive urination at night", "Blood in urine", "Pain during urination"],
+  "a": 1,
+  "e": "Common in elderly patients or those with heart failure and diabetes.",
+  "cat": "gs",
+  "sub": "excretory"
+},
+{
+  "q": "Which part of the 'Nephron' is often called the 'Diluting Segment'?",
+  "o": ["PCT", "Ascending Limb of Loop of Henle", "Descending Limb", "Bowman's Capsule"],
+  "a": 1,
+  "e": "Because it pumps out salt but is impermeable to water, the fluid inside becomes very dilute (hypotonic).",
+  "cat": "gs",
+  "sub": "excretory"
+},
+{
+  "q": "The 'Basement Membrane' of the glomerulus prevents the filtration of:",
+  "o": ["Glucose", "Large Proteins (Albumin)", "Urea", "Sodium ions"],
+  "a": 1,
+  "e": "It acts as a physical and electrical barrier to prevent protein loss from the blood.",
+  "cat": "gs",
+  "sub": "excretory"
+},
+{
+  "q": "What is 'Azotemia'?",
+  "o": ["Low blood pressure", "Elevation of nitrogenous waste (Urea/Creatinine) in blood", "Lack of RBCs", "Excessive thirst"],
+  "a": 1,
+  "e": "Azotemia is the biochemical sign of kidney dysfunction, often leading to clinical Uremia.",
+  "cat": "gs",
+  "sub": "excretory"
+},
+{
+  "q": "Which of the following describes 'Uricosuric' drugs?",
+  "o": ["Drugs that stop urine", "Drugs that increase the excretion of uric acid", "Painkillers", "Antibiotics"],
+  "a": 1,
+  "e": "These are used to treat Gout by helping the kidneys remove excess uric acid from the blood.",
+  "cat": "gs",
+  "sub": "excretory"
+},
+{
+  "q": "The 'Internal Urethral Sphincter' is controlled by which nervous system?",
+  "o": ["Voluntary", "Autonomic (Involuntary)", "Somatic", "Central"],
+  "a": 1,
+  "e": "It is controlled by sympathetic and parasympathetic nerves, opening automatically when the bladder is full.",
+  "cat": "gs",
+  "sub": "excretory"
+},
+{
+  "q": "What is the 'Definitive' treatment for End-Stage Renal Disease (ESRD)?",
+  "o": ["Antibiotics", "Dialysis", "Kidney Transplantation", "High water intake"],
+  "a": 2,
+  "e": "While dialysis is a temporary support, a transplant is the only way to restore full metabolic function.",
+  "cat": "gs",
+  "sub": "excretory"
+},
+  {
+  "q": "What is the 'Structural and Functional Unit' of the Nervous System?",
+  "o": ["Nephron", "Neuron", "Alveoli", "Sarcomere"],
+  "a": 1,
+  "e": "Neurons are specialized cells designed to transmit electrical impulses throughout the body.",
+  "cat": "gs",
+  "sub": "nervous"
+},
+{
+  "q": "The gap between two neurons across which an impulse passes is called a:",
+  "o": ["Node of Ranvier", "Synapse", "Axon", "Dendrite"],
+  "a": 1,
+  "e": "Chemical messengers called neurotransmitters cross the synapse to continue the signal to the next cell.",
+  "cat": "gs",
+  "sub": "nervous"
+},
+{
+  "q": "Which part of the brain is responsible for 'Higher Mental Processes' like thinking, memory, and reasoning?",
+  "o": ["Cerebellum", "Cerebrum", "Medulla Oblongata", "Hypothalamus"],
+  "a": 1,
+  "e": "The cerebrum is the largest part of the brain and controls voluntary actions and intelligence.",
+  "cat": "gs",
+  "sub": "nervous"
+},
+{
+  "q": "The 'Master Control Center' for maintaining body temperature and hunger is the:",
+  "o": ["Thalamus", "Hypothalamus", "Pons", "Midbrain"],
+  "a": 1,
+  "e": "The hypothalamus links the nervous system to the endocrine system and regulates homeostasis.",
+  "cat": "gs",
+  "sub": "nervous"
+},
+{
+  "q": "Which part of the brain coordinates 'Muscular Movement' and body balance (Posture)?",
+  "o": ["Cerebrum", "Cerebellum", "Medulla", "Corpus Callosum"],
+  "a": 1,
+  "e": "The cerebellum (little brain) ensures smooth, coordinated movements and maintains equilibrium.",
+  "cat": "gs",
+  "sub": "nervous"
+},
+{
+  "q": "What is the function of the 'Myelin Sheath' around an axon?",
+  "o": ["Produces energy", "Insulates the axon and increases the speed of impulse conduction", "Protects against viruses", "Stores neurotransmitters"],
+  "a": 1,
+  "e": "Myelin allows for 'Saltatory Conduction', where the signal jumps between nodes to move faster.",
+  "cat": "gs",
+  "sub": "nervous"
+},
+{
+  "q": "Which part of the brain controls 'Involuntary Actions' like heartbeat, breathing, and blood pressure?",
+  "o": ["Cerebrum", "Medulla Oblongata", "Thalamus", "Cerebellum"],
+  "a": 1,
+  "e": "The medulla contains vital centers for cardiovascular and respiratory regulation.",
+  "cat": "gs",
+  "sub": "nervous"
+},
+{
+  "q": "The 'Reflex Action' is primarily controlled by the:",
+  "o": ["Brain", "Spinal Cord", "Cranial Nerves", "Hypothalamus"],
+  "a": 1,
+  "e": "Reflex arcs allow for an immediate response to stimuli without the signal having to reach the conscious brain first.",
+  "cat": "gs",
+  "sub": "nervous"
+},
+{
+  "q": "Which protective membranes surround the brain and spinal cord?",
+  "o": ["Pleura", "Pericardium", "Meninges", "Peritoneum"],
+  "a": 2,
+  "e": "The meninges consist of three layers: Dura Mater, Arachnoid Mater, and Pia Mater.",
+  "cat": "gs",
+  "sub": "nervous"
+},
+{
+  "q": "The liquid that fills the ventricles of the brain and acts as a 'Shock Absorber' is:",
+  "o": ["Plasma", "Lymph", "Cerebrospinal Fluid (CSF)", "Serum"],
+  "a": 2,
+  "e": "CSF protects the brain from mechanical injury and helps in nutrient exchange.",
+  "cat": "gs",
+  "sub": "nervous"
+},
+{
+  "q": "Which cranial nerve is the longest and connects the brain to the heart, lungs, and gut?",
+  "o": ["Optic Nerve", "Olfactory Nerve", "Vagus Nerve", "Trigeminal Nerve"],
+  "a": 2,
+  "e": "The Vagus nerve (Cranial Nerve X) is the main nerve of the parasympathetic nervous system.",
+  "cat": "gs",
+  "sub": "nervous"
+},
+{
+  "q": "The 'Nissl's Granules' found in a neuron are primarily made of:",
+  "o": ["DNA", "Ribosomes and Rough ER", "Mitochondria", "Lipids"],
+  "a": 1,
+  "e": "Nissl's granules are involved in high-speed protein synthesis for the neuron.",
+  "cat": "gs",
+  "sub": "nervous"
+},
+{
+  "q": "Which chemical is the most common 'Excitatory Neurotransmitter' in the brain?",
+  "o": ["Dopamine", "GABA", "Glutamate", "Serotonin"],
+  "a": 2,
+  "e": "Glutamate is essential for memory and learning, while GABA is the main inhibitory neurotransmitter.",
+  "cat": "gs",
+  "sub": "nervous"
+},
+{
+  "q": "The 'Corpus Callosum' connects which two parts of the brain?",
+  "o": ["Cerebellum and Medulla", "The two Cerebral Hemispheres", "Midbrain and Pons", "Thalamus and Hypothalamus"],
+  "a": 1,
+  "e": "It is a bridge of nerve fibers that allows communication between the left and right sides of the brain.",
+  "cat": "gs",
+  "sub": "nervous"
+},
+{
+  "q": "A person who loses the ability to speak clearly after a stroke likely has damage to:",
+  "o": ["Wernicke's Area", "Broca's Area", "Occipital Lobe", "Temporal Lobe"],
+  "a": 1,
+  "e": "Broca's area in the frontal lobe is responsible for speech production.",
+  "cat": "gs",
+  "sub": "nervous"
+},
+{
+  "q": "Which division of the Nervous System is responsible for the 'Fight or Flight' response?",
+  "o": ["Central Nervous System", "Sympathetic Nervous System", "Parasympathetic Nervous System", "Somatic Nervous System"],
+  "a": 1,
+  "e": "The sympathetic system increases heart rate and dilates pupils during stressful situations.",
+  "cat": "gs",
+  "sub": "nervous"
+},
+{
+  "q": "What is the 'Resting Potential' of a typical neuron?",
+  "o": ["+30 mV", "0 mV", "-70 mV", "-100 mV"],
+  "a": 2,
+  "e": "This is the electrical charge across the cell membrane when the neuron is not transmitting a signal.",
+  "cat": "gs",
+  "sub": "nervous"
+},
+{
+  "q": "The 'Gray Matter' of the brain consists primarily of:",
+  "o": ["Myelinated axons", "Neuron cell bodies and dendrites", "Blood vessels only", "CSF"],
+  "a": 1,
+  "e": "White matter consists of myelinated axons, while gray matter is where the processing happens (cell bodies).",
+  "cat": "gs",
+  "sub": "nervous"
+},
+  {
+  "q": "What is the 'Structural and Functional Unit' of the Nervous System?",
+  "o": ["Nephron", "Neuron", "Alveoli", "Sarcomere"],
+  "a": 1,
+  "e": "Neurons are specialized cells designed to transmit electrical impulses throughout the body.",
+  "cat": "gs",
+  "sub": "nervous"
+},
+{
+  "q": "The gap between two neurons across which an impulse passes is called a:",
+  "o": ["Node of Ranvier", "Synapse", "Axon", "Dendrite"],
+  "a": 1,
+  "e": "Chemical messengers called neurotransmitters cross the synapse to continue the signal to the next cell.",
+  "cat": "gs",
+  "sub": "nervous"
+},
+{
+  "q": "Which part of the brain is responsible for 'Higher Mental Processes' like thinking, memory, and reasoning?",
+  "o": ["Cerebellum", "Cerebrum", "Medulla Oblongata", "Hypothalamus"],
+  "a": 1,
+  "e": "The cerebrum is the largest part of the brain and controls voluntary actions and intelligence.",
+  "cat": "gs",
+  "sub": "nervous"
+},
+{
+  "q": "The 'Master Control Center' for maintaining body temperature and hunger is the:",
+  "o": ["Thalamus", "Hypothalamus", "Pons", "Midbrain"],
+  "a": 1,
+  "e": "The hypothalamus links the nervous system to the endocrine system and regulates homeostasis.",
+  "cat": "gs",
+  "sub": "nervous"
+},
+{
+  "q": "Which part of the brain coordinates 'Muscular Movement' and body balance (Posture)?",
+  "o": ["Cerebrum", "Cerebellum", "Medulla", "Corpus Callosum"],
+  "a": 1,
+  "e": "The cerebellum (little brain) ensures smooth, coordinated movements and maintains equilibrium.",
+  "cat": "gs",
+  "sub": "nervous"
+},
+{
+  "q": "What is the function of the 'Myelin Sheath' around an axon?",
+  "o": ["Produces energy", "Insulates the axon and increases the speed of impulse conduction", "Protects against viruses", "Stores neurotransmitters"],
+  "a": 1,
+  "e": "Myelin allows for 'Saltatory Conduction', where the signal jumps between nodes to move faster.",
+  "cat": "gs",
+  "sub": "nervous"
+},
+{
+  "q": "Which part of the brain controls 'Involuntary Actions' like heartbeat, breathing, and blood pressure?",
+  "o": ["Cerebrum", "Medulla Oblongata", "Thalamus", "Cerebellum"],
+  "a": 1,
+  "e": "The medulla contains vital centers for cardiovascular and respiratory regulation.",
+  "cat": "gs",
+  "sub": "nervous"
+},
+{
+  "q": "The 'Reflex Action' is primarily controlled by the:",
+  "o": ["Brain", "Spinal Cord", "Cranial Nerves", "Hypothalamus"],
+  "a": 1,
+  "e": "Reflex arcs allow for an immediate response to stimuli without the signal having to reach the conscious brain first.",
+  "cat": "gs",
+  "sub": "nervous"
+},
+{
+  "q": "Which protective membranes surround the brain and spinal cord?",
+  "o": ["Pleura", "Pericardium", "Meninges", "Peritoneum"],
+  "a": 2,
+  "e": "The meninges consist of three layers: Dura Mater, Arachnoid Mater, and Pia Mater.",
+  "cat": "gs",
+  "sub": "nervous"
+},
+{
+  "q": "The liquid that fills the ventricles of the brain and acts as a 'Shock Absorber' is:",
+  "o": ["Plasma", "Lymph", "Cerebrospinal Fluid (CSF)", "Serum"],
+  "a": 2,
+  "e": "CSF protects the brain from mechanical injury and helps in nutrient exchange.",
+  "cat": "gs",
+  "sub": "nervous"
+},
+{
+  "q": "Which cranial nerve is the longest and connects the brain to the heart, lungs, and gut?",
+  "o": ["Optic Nerve", "Olfactory Nerve", "Vagus Nerve", "Trigeminal Nerve"],
+  "a": 2,
+  "e": "The Vagus nerve (Cranial Nerve X) is the main nerve of the parasympathetic nervous system.",
+  "cat": "gs",
+  "sub": "nervous"
+},
+{
+  "q": "The 'Nissl's Granules' found in a neuron are primarily made of:",
+  "o": ["DNA", "Ribosomes and Rough ER", "Mitochondria", "Lipids"],
+  "a": 1,
+  "e": "Nissl's granules are involved in high-speed protein synthesis for the neuron.",
+  "cat": "gs",
+  "sub": "nervous"
+},
+{
+  "q": "Which chemical is the most common 'Excitatory Neurotransmitter' in the brain?",
+  "o": ["Dopamine", "GABA", "Glutamate", "Serotonin"],
+  "a": 2,
+  "e": "Glutamate is essential for memory and learning, while GABA is the main inhibitory neurotransmitter.",
+  "cat": "gs",
+  "sub": "nervous"
+},
+{
+  "q": "The 'Corpus Callosum' connects which two parts of the brain?",
+  "o": ["Cerebellum and Medulla", "The two Cerebral Hemispheres", "Midbrain and Pons", "Thalamus and Hypothalamus"],
+  "a": 1,
+  "e": "It is a bridge of nerve fibers that allows communication between the left and right sides of the brain.",
+  "cat": "gs",
+  "sub": "nervous"
+},
+{
+  "q": "A person who loses the ability to speak clearly after a stroke likely has damage to:",
+  "o": ["Wernicke's Area", "Broca's Area", "Occipital Lobe", "Temporal Lobe"],
+  "a": 1,
+  "e": "Broca's area in the frontal lobe is responsible for speech production.",
+  "cat": "gs",
+  "sub": "nervous"
+},
+{
+  "q": "Which division of the Nervous System is responsible for the 'Fight or Flight' response?",
+  "o": ["Central Nervous System", "Sympathetic Nervous System", "Parasympathetic Nervous System", "Somatic Nervous System"],
+  "a": 1,
+  "e": "The sympathetic system increases heart rate and dilates pupils during stressful situations.",
+  "cat": "gs",
+  "sub": "nervous"
+},
+{
+  "q": "What is the 'Resting Potential' of a typical neuron?",
+  "o": ["+30 mV", "0 mV", "-70 mV", "-100 mV"],
+  "a": 2,
+  "e": "This is the electrical charge across the cell membrane when the neuron is not transmitting a signal.",
+  "cat": "gs",
+  "sub": "nervous"
+},
+{
+  "q": "The 'Gray Matter' of the brain consists primarily of:",
+  "o": ["Myelinated axons", "Neuron cell bodies and dendrites", "Blood vessels only", "CSF"],
+  "a": 1,
+  "e": "White matter consists of myelinated axons, while gray matter is where the processing happens (cell bodies).",
+  "cat": "gs",
+  "sub": "nervous"
+},
+{
+  "q": "Which lobe of the cerebrum is primarily responsible for 'Vision'?",
+  "o": ["Frontal Lobe", "Parietal Lobe", "Temporal Lobe", "Occipital Lobe"],
+  "a": 3,
+  "e": "The occipital lobe at the back of the brain processes visual information from the eyes.",
+  "cat": "gs",
+  "sub": "nervous"
+},
+{
+  "q": "What is 'Saltatory Conduction'?",
+  "o": ["Slow signal movement", "Impulse jumping from one Node of Ranvier to another", "Chemical signal in gut", "Muscle contraction"],
+  "a": 1,
+  "e": "This allows signals to travel much faster in myelinated neurons compared to unmyelinated ones.",
+  "cat": "gs",
+  "sub": "nervous"
+},
+  {
+  "q": "Which ion is primarily responsible for the 'Depolarization' phase of an action potential?",
+  "o": ["Potassium (K+)", "Sodium (Na+)", "Calcium (Ca2+)", "Chloride (Cl-)"],
+  "a": 1,
+  "e": "When a neuron is stimulated, Sodium channels open, and Na+ rushes into the cell, making the inside positive.",
+  "cat": "gs",
+  "sub": "nervous"
+},
+{
+  "q": "The 'Sodium-Potassium Pump' moves how many ions across the membrane to maintain the resting potential?",
+  "o": ["2 Na+ out, 3 K+ in", "3 Na+ out, 2 K+ in", "1 Na+ out, 1 K+ in", "3 Na+ in, 2 K+ out"],
+  "a": 1,
+  "e": "It uses ATP to pump 3 Sodium ions out and 2 Potassium ions in, keeping the cell interior negatively charged.",
+  "cat": "gs",
+  "sub": "nervous"
+},
+{
+  "q": "Which part of the 'Human Ear' is responsible for maintaining body balance (Equilibrium)?",
+  "o": ["Cochlea", "Semicircular Canals", "Tympanic Membrane", "Eustachian Tube"],
+  "a": 1,
+  "e": "The vestibular apparatus, including the semicircular canals, senses head rotation and balance.",
+  "cat": "gs",
+  "sub": "nervous"
+},
+{
+  "q": "The 'Organ of Corti', the actual organ of hearing, is located inside the:",
+  "o": ["External Ear", "Middle Ear", "Cochlea", "Saccule"],
+  "a": 2,
+  "e": "It contains hair cells that convert mechanical vibrations into electrical nerve impulses.",
+  "cat": "gs",
+  "sub": "nervous"
+},
+{
+  "q": "In the human 'Eye', the area of sharpest vision (highest visual acuity) is the:",
+  "o": ["Optic Disc (Blind spot)", "Fovea Centralis (Macula)", "Iris", "Choroid"],
+  "a": 1,
+  "e": "The fovea contains a high density of cone cells and is responsible for detailed, central vision.",
+  "cat": "gs",
+  "sub": "nervous"
+},
+{
+  "q": "Which photoreceptor cells are responsible for 'Night Vision' (Scotopic vision)?",
+  "o": ["Cones", "Rods", "Bipolar cells", "Ganglion cells"],
+  "a": 1,
+  "e": "Rods are highly sensitive to low light but do not perceive color, unlike cones.",
+  "cat": "gs",
+  "sub": "nervous"
+},
+{
+  "q": "The 'Eustachian Tube' connects the middle ear with the:",
+  "o": ["Larynx", "Pharynx (Nasopharynx)", "Esophagus", "Trachea"],
+  "a": 1,
+  "e": "It helps equalize air pressure on both sides of the eardrum.",
+  "cat": "gs",
+  "sub": "nervous"
+},
+{
+  "q": "Which vitamin is essential for the synthesis of 'Rhodopsin' (Visual Purple) in the rods?",
+  "o": ["Vitamin C", "Vitamin D", "Vitamin A", "Vitamin K"],
+  "a": 2,
+  "e": "Deficiency of Vitamin A leads to 'Night Blindness' because rhodopsin cannot be formed.",
+  "cat": "gs",
+  "sub": "nervous"
+},
+{
+  "q": "The 'Blind Spot' of the eye is the region where:",
+  "o": ["Cones are maximum", "The Optic Nerve leaves the eye", "The lens is thickest", "Light never reaches"],
+  "a": 1,
+  "e": "There are no photoreceptors (rods or cones) at the optic disc, creating a gap in our vision.",
+  "cat": "gs",
+  "sub": "nervous"
+},
+{
+  "q": "Which part of the brain acts as the 'Emotional Center' (Limbic System)?",
+  "o": ["Medulla", "Amygdala and Hippocampus", "Cerebellum", "Pons"],
+  "a": 1,
+  "e": "The limbic system regulates emotions, motivation, and the formation of long-term memories.",
+  "cat": "gs",
+  "sub": "nervous"
+},
+{
+  "q": "What is the function of 'Schwann Cells'?",
+  "o": ["Produce CSF", "Form the Myelin Sheath in the Peripheral Nervous System (PNS)", "Clean up debris", "Form the Blood-Brain Barrier"],
+  "a": 1,
+  "e": "Unlike Oligodendrocytes in the CNS, Schwann cells provide insulation for nerves in the rest of the body.",
+  "cat": "gs",
+  "sub": "nervous"
+},
+{
+  "q": "The 'Refractory Period' in a neuron is the time when:",
+  "o": ["The neuron is resting", "The neuron cannot fire another action potential", "The neuron is growing", "The synapse is closed"],
+  "a": 1,
+  "e": "This ensures that nerve impulses only travel in one direction and prevents over-stimulation.",
+  "cat": "gs",
+  "sub": "nervous"
+},
+{
+  "q": "Which neurotransmitter is primarily involved in 'Inhibiting' brain activity and reducing anxiety?",
+  "o": ["Glutamate", "GABA (Gamma-Aminobutyric Acid)", "Adrenaline", "Acetylcholine"],
+  "a": 1,
+  "e": "GABA is the main 'calming' neurotransmitter of the central nervous system.",
+  "cat": "gs",
+  "sub": "nervous"
+},
+{
+  "q": "The 'White of the Eye' is scientifically called the:",
+  "o": ["Cornea", "Sclera", "Retina", "Conjunctiva"],
+  "a": 1,
+  "e": "The sclera is the tough, fibrous outer layer that protects the internal structures of the eye.",
+  "cat": "gs",
+  "sub": "nervous"
+},
+{
+  "q": "Which cranial nerve (CN III) controls the majority of 'Eye Movements' and pupil constriction?",
+  "o": ["Optic Nerve", "Oculomotor Nerve", "Trochlear Nerve", "Abducens Nerve"],
+  "a": 1,
+  "e": "CN III, IV, and VI work together to move the eyes, but CN III does the most work.",
+  "cat": "gs",
+  "sub": "nervous"
+},
+{
+  "q": "What is 'Myopia' (Nearsightedness)?",
+  "o": ["Inability to see near objects", "Inability to see distant objects clearly", "Clouding of the lens", "High pressure in the eye"],
+  "a": 1,
+  "e": "In myopia, the eyeball is too long, and images are focused in front of the retina.",
+  "cat": "gs",
+  "sub": "nervous"
+},
+{
+  "q": "Which 'Ossicle' (Ear bone) is the smallest bone in the human body?",
+  "o": ["Malleus (Hammer)", "Incus (Anvil)", "Stapes (Stirrup)", "Hyoid"],
+  "a": 2,
+  "e": "The stapes vibrates against the oval window of the cochlea to transmit sound.",
+  "cat": "gs",
+  "sub": "nervous"
+},
+{
+  "q": "The 'Arbor Vitae' (Tree of Life) refers to the branching white matter pattern in the:",
+  "o": ["Cerebrum", "Cerebellum", "Spinal Cord", "Thalamus"],
+  "a": 1,
+  "e": "It brings sensory and motor information to and from the cerebellar cortex.",
+  "cat": "gs",
+  "sub": "nervous"
+},
+{
+  "q": "Which 'Aqueous Humor' fluid regulates the pressure inside the front part of the eye?",
+  "o": ["Vitreous Humor", "Aqueous Humor", "CSF", "Endolymph"],
+  "a": 1,
+  "e": "Excessive pressure of aqueous humor leads to a condition called 'Glaucoma'.",
+  "cat": "gs",
+  "sub": "nervous"
+},
+  {
+  "q": "How many pairs of 'Cranial Nerves' are present in the human body?",
+  "o": ["10 pairs", "12 pairs", "31 pairs", "43 pairs"],
+  "a": 1,
+  "e": "There are 12 pairs of cranial nerves that emerge directly from the brain, while 31 pairs of spinal nerves emerge from the spinal cord.",
+  "cat": "gs",
+  "sub": "nervous"
+},
+{
+  "q": "Which cranial nerve is responsible for the sense of 'Smell'?",
+  "o": ["Optic Nerve (II)", "Olfactory Nerve (I)", "Vagus Nerve (X)", "Facial Nerve (VII)"],
+  "a": 1,
+  "e": "The olfactory nerve is a purely sensory nerve that carries smell impulses to the brain.",
+  "cat": "gs",
+  "sub": "nervous"
+},
+{
+  "q": "The 'Knee-jerk Reflex' is an example of which type of reflex?",
+  "o": ["Polysynaptic", "Monosynaptic", "Cerebral", "Conditioned"],
+  "a": 1,
+  "e": "It involves a direct connection between a sensory neuron and a motor neuron with no interneuron in between.",
+  "cat": "gs",
+  "sub": "nervous"
+},
+{
+  "q": "Which part of the 'Autonomic Nervous System' is responsible for 'Rest and Digest'?",
+  "o": ["Sympathetic", "Parasympathetic", "Somatic", "Central"],
+  "a": 1,
+  "e": "The parasympathetic system slows the heart rate and increases intestinal activity to conserve energy.",
+  "cat": "gs",
+  "sub": "nervous"
+},
+{
+  "q": "What is the function of 'Acetylcholine' in the nervous system?",
+  "o": ["Inhibitory neurotransmitter only", "Primary neurotransmitter at the Neuromuscular Junction", "Produces myelin", "Stores memory"],
+  "a": 1,
+  "e": "Acetylcholine triggers muscle contraction when a motor neuron signals a muscle fiber.",
+  "cat": "gs",
+  "sub": "nervous"
+},
+{
+  "q": "The 'Nodes of Ranvier' are gaps found in:",
+  "o": ["Dendrites", "Myelinated Axons", "Synapses", "Cell bodies"],
+  "a": 1,
+  "e": "These gaps allow for saltatory conduction, significantly speeding up the electrical signal.",
+  "cat": "gs",
+  "sub": "nervous"
+},
+{
+  "q": "Which neurological disorder is caused by a deficiency of 'Dopamine' in the brain?",
+  "o": ["Alzheimer's", "Parkinson's Disease", "Multiple Sclerosis", "Epilepsy"],
+  "a": 1,
+  "e": "Loss of dopamine-producing cells leads to tremors, stiffness, and difficulty with balance.",
+  "cat": "gs",
+  "sub": "nervous"
+},
+{
+  "q": "The 'Broca’s Area', responsible for speech production, is located in which lobe?",
+  "o": ["Frontal Lobe", "Parietal Lobe", "Temporal Lobe", "Occipital Lobe"],
+  "a": 0,
+  "e": "Damage to this area allows a person to understand speech but makes it difficult for them to speak words.",
+  "cat": "gs",
+  "sub": "nervous"
+},
+{
+  "q": "What is 'Cerebrospinal Fluid' (CSF) mainly produced by?",
+  "o": ["Meninges", "Choroid Plexus", "Pituitary Gland", "Nephrons"],
+  "a": 1,
+  "e": "The choroid plexus is a network of blood vessels in the brain's ventricles that filters blood to create CSF.",
+  "cat": "gs",
+  "sub": "nervous"
+},
+{
+  "q": "Which part of the brain is often called the 'Relay Station' for sensory information?",
+  "o": ["Hypothalamus", "Thalamus", "Pons", "Medulla"],
+  "a": 1,
+  "e": "Almost all sensory signals (except smell) pass through the thalamus before reaching the cerebral cortex.",
+  "cat": "gs",
+  "sub": "nervous"
+},
+{
+  "q": "A 'Reflex Arc' usually consists of how many main components?",
+  "o": ["Two", "Three", "Five", "Ten"],
+  "a": 2,
+  "e": "The five components are: Receptor, Sensory Neuron, Integration Center (Spinal Cord), Motor Neuron, and Effector.",
+  "cat": "gs",
+  "sub": "nervous"
+},
+{
+  "q": "Which part of the 'Eye' is actually an extension of the brain?",
+  "o": ["Cornea", "Retina (Optic Nerve)", "Iris", "Lens"],
+  "a": 1,
+  "e": "The retina and optic nerve are embryologically part of the central nervous system.",
+  "cat": "gs",
+  "sub": "nervous"
+},
+{
+  "q": "What is 'Multiple Sclerosis'?",
+  "o": ["Loss of neurons", "Destruction of the Myelin Sheath in the CNS", "Excessive CSF", "Brain tumor"],
+  "a": 1,
+  "e": "It is an autoimmune disease where the body attacks the insulation of its own nerves, slowing down signals.",
+  "cat": "gs",
+  "sub": "nervous"
+},
+{
+  "q": "The 'All-or-None' principle in nervous conduction means:",
+  "o": ["Half the neurons fire", "A neuron fires at full strength or not at all", "Signals only go to the brain", "Brain uses all its power at once"],
+  "a": 1,
+  "e": "If the stimulus reaches the 'threshold' level, an action potential is triggered; if not, nothing happens.",
+  "cat": "gs",
+  "sub": "nervous"
+},
+{
+  "q": "Which part of the 'Adrenal Gland' is directly stimulated by the Sympathetic Nervous System?",
+  "o": ["Adrenal Cortex", "Adrenal Medulla", "Both", "None"],
+  "a": 1,
+  "e": "The medulla releases Adrenaline (Epinephrine) into the blood to prolong the fight-or-flight response.",
+  "cat": "gs",
+  "sub": "nervous"
+},
+{
+  "q": "The 'Blood-Brain Barrier' (BBB) is primarily formed by which type of glial cell?",
+  "o": ["Microglia", "Astrocytes", "Oligodendrocytes", "Schwann Cells"],
+  "a": 1,
+  "e": "Astrocytes wrap around capillaries in the brain to strictly regulate what enters the brain tissue from the blood.",
+  "cat": "gs",
+  "sub": "nervous"
+},
+{
+  "q": "Which neurotransmitter is often called the 'Feel-good' chemical?",
+  "o": ["Adrenaline", "Dopamine", "GABA", "Glutamate"],
+  "a": 1,
+  "e": "Dopamine is part of the brain's reward system and is associated with pleasure and motivation.",
+  "cat": "gs",
+  "sub": "nervous"
+},
+{
+  "q": "The 'Pons Varolii' acts as a bridge between the:",
+  "o": ["Two lobes of the Cerebellum", "Cerebrum and Spinal Cord", "Thalamus and Hypothalamus", "Eyes and Ears"],
+  "a": 0,
+  "e": "Pons literally means 'bridge'; it connects the two halves of the cerebellum and regulates breathing rhythm.",
+  "cat": "gs",
+  "sub": "nervous"
+},
+{
+  "q": "What is 'Ataxia'?",
+  "o": ["Loss of memory", "Loss of full control of bodily movements (Coordination)", "High blood pressure", "Inability to sleep"],
+  "a": 1,
+  "e": "Ataxia is usually caused by damage to the cerebellum, the balance center of the brain.",
+  "cat": "gs",
+  "sub": "nervous"
+},
+{
+  "q": "Which division of the 'Peripheral Nervous System' controls voluntary muscle movements?",
+  "o": ["Autonomic", "Somatic", "Sympathetic", "Enteric"],
+  "a": 1,
+  "e": "The somatic system carries signals from the CNS to the skeletal muscles.",
+  "cat": "gs",
+  "sub": "nervous"
+},
+  {
+  "q": "Which ion's entry into the 'Synaptic Knob' triggers the release of neurotransmitters?",
+  "o": ["Sodium (Na+)", "Potassium (K+)", "Calcium (Ca2+)", "Chloride (Cl-)"],
+  "a": 2,
+  "e": "Calcium ions enter the terminal when an action potential arrives, causing vesicles to fuse with the membrane.",
+  "cat": "gs",
+  "sub": "nervous"
+},
+{
+  "q": "The 'Vitreous Humor' is a jelly-like substance located in which part of the eye?",
+  "o": ["Between Cornea and Lens", "Between Lens and Retina", "Inside the Iris", "In the Sclera"],
+  "a": 1,
+  "e": "Vitreous humor maintains the spherical shape of the eyeball and holds the retina in place.",
+  "cat": "gs",
+  "sub": "nervous"
+},
+{
+  "q": "Which part of the brain is responsible for 'Thermoregulation' (Body Temperature)?",
+  "o": ["Cerebrum", "Thalamus", "Hypothalamus", "Medulla"],
+  "a": 2,
+  "e": "The hypothalamus acts as the body's thermostat, triggering sweating or shivering to maintain 37°C.",
+  "cat": "gs",
+  "sub": "nervous"
+},
+{
+  "q": "The 'Right Hemisphere' of the brain generally controls which side of the body?",
+  "o": ["Right side", "Left side", "Both sides", "Only the head"],
+  "a": 1,
+  "e": "Due to 'Decussation' (crossing over) in the medulla, each side of the brain controls the opposite side of the body.",
+  "cat": "gs",
+  "sub": "nervous"
+},
+{
+  "q": "What is the function of 'Ependymal Cells' in the CNS?",
+  "o": ["Form Myelin", "Produce and circulate Cerebrospinal Fluid (CSF)", "Defense against bacteria", "Form Blood-Brain Barrier"],
+  "a": 1,
+  "e": "These ciliated cells line the ventricles of the brain and help move the CSF.",
+  "cat": "gs",
+  "sub": "nervous"
+},
+{
+  "q": "Which condition is caused by an 'Increase in Intraocular Pressure'?",
+  "o": ["Cataract", "Glaucoma", "Myopia", "Hypermetropia"],
+  "a": 1,
+  "e": "Glaucoma can damage the optic nerve and lead to permanent blindness if not treated.",
+  "cat": "gs",
+  "sub": "nervous"
+},
+{
+  "q": "The 'Space' between the arachnoid mater and pia mater is called:",
+  "o": ["Epidural space", "Subdural space", "Subarachnoid space", "Synapse"],
+  "a": 2,
+  "e": "This space is filled with CSF and provides a cushion for the brain.",
+  "cat": "gs",
+  "sub": "nervous"
+},
+{
+  "q": "What is 'Hydrocephalus'?",
+  "o": ["Small brain", "Excessive accumulation of CSF in the brain's ventricles", "Brain infection", "Loss of memory"],
+  "a": 1,
+  "e": "Commonly called 'water on the brain,' it can cause head enlargement in infants.",
+  "cat": "gs",
+  "sub": "nervous"
+},
+{
+  "q": "Which neurotransmitter is 'Inhibitory' in the Spinal Cord?",
+  "o": ["Glutamate", "Glycine", "Adrenaline", "Acetylcholine"],
+  "a": 1,
+  "e": "Glycine is the primary inhibitory neurotransmitter in the spinal cord, whereas GABA is primary in the brain.",
+  "cat": "gs",
+  "sub": "nervous"
+},
+{
+  "q": "The 'Blind Spot' lacks which of the following?",
+  "o": ["Blood vessels", "Rods and Cones", "Nerves", "Fluid"],
+  "a": 1,
+  "e": "Because the optic nerve exits here, there are no photoreceptors, making this spot insensitive to light.",
+  "cat": "gs",
+  "sub": "nervous"
+},
+{
+  "q": "What is 'Presbyopia'?",
+  "o": ["Inability to see color", "Age-related loss of lens elasticity making it hard to see near objects", "Double vision", "Night blindness"],
+  "a": 1,
+  "e": "This usually affects people over 40 and is corrected with bifocal or reading glasses.",
+  "cat": "gs",
+  "sub": "nervous"
+},
+{
+  "q": "The 'Organ of Corti' is found sitting on which membrane?",
+  "o": ["Reissner's membrane", "Basilar membrane", "Tectorial membrane", "Tympanic membrane"],
+  "a": 1,
+  "e": "Vibrations of the basilar membrane stimulate the hair cells of the Organ of Corti.",
+  "cat": "gs",
+  "sub": "nervous"
+},
+{
+  "q": "Which of the following describes 'Aphasia'?",
+  "o": ["Loss of balance", "Loss of ability to understand or express speech", "Inability to sleep", "Tremors in hands"],
+  "a": 1,
+  "e": "Aphasia is often a result of brain damage to the Broca's or Wernicke's areas.",
+  "cat": "gs",
+  "sub": "nervous"
+},
+{
+  "q": "The 'Flight or Fight' response is mediated by which hormone and nervous system combo?",
+  "o": ["Insulin/Somatic", "Adrenaline/Sympathetic", "Melatonin/Parasympathetic", "Thyroxine/Central"],
+  "a": 1,
+  "e": "Sympathetic nerves stimulate the adrenal medulla to release adrenaline into the blood.",
+  "cat": "gs",
+  "sub": "nervous"
+},
+{
+  "q": "What is the 'Threshold Potential' required to trigger an action potential?",
+  "o": ["0 mV", "-55 mV", "+30 mV", "-70 mV"],
+  "a": 1,
+  "e": "If the stimulus doesn't depolarize the membrane to roughly -55 mV, no signal is sent (All-or-None).",
+  "cat": "gs",
+  "sub": "nervous"
+},
+{
+  "q": "The 'Malleus, Incus, and Stapes' are located in which part of the ear?",
+  "o": ["Outer Ear", "Middle Ear", "Inner Ear", "Cochlea"],
+  "a": 1,
+  "e": "These three tiny bones amplify sound waves before they reach the inner ear.",
+  "cat": "gs",
+  "sub": "nervous"
+},
+{
+  "q": "Which part of the 'Neuron' contains the nucleus and organelles?",
+  "o": ["Axon", "Dendrite", "Cyton (Soma/Cell Body)", "Myelin"],
+  "a": 2,
+  "e": "The cyton is the metabolic center of the neuron.",
+  "cat": "gs",
+  "sub": "nervous"
+},
+{
+  "q": "What is 'Meningitis'?",
+  "o": ["Brain tumor", "Inflammation of the protective membranes (meninges) of the brain", "Loss of memory", "High blood pressure"],
+  "a": 1,
+  "e": "Meningitis can be bacterial or viral and is a serious medical emergency.",
+  "cat": "gs",
+  "sub": "nervous"
+},
+{
+  "q": "The 'Vestibular Apparatus' is primarily concerned with:",
+  "o": ["Hearing", "Smell", "Equilibrium and Balance", "Taste"],
+  "a": 2,
+  "e": "It detects the position and movement of the head in space.",
+  "cat": "gs",
+  "sub": "nervous"
+},
+{
+  "q": "Which 'Lobes' of the brain are separated by the Central Sulcus?",
+  "o": ["Frontal and Temporal", "Frontal and Parietal", "Parietal and Occipital", "Temporal and Occipital"],
+  "a": 1,
+  "e": "The central sulcus is a major landmark dividing the motor cortex from the sensory cortex.",
+  "cat": "gs",
+  "sub": "nervous"
+},
+  {
+  "q": "Which Cranial Nerve is the only one that extends into the thorax and abdomen?",
+  "o": ["Optic Nerve", "Vagus Nerve (X)", "Facial Nerve", "Trigeminal Nerve"],
+  "a": 1,
+  "e": "The Vagus nerve is the 'wanderer' and is the main nerve for the parasympathetic control of the heart and digestive tract.",
+  "cat": "gs",
+  "sub": "nervous"
+},
+{
+  "q": "The 'Hypoglossal Nerve' (XII) is primarily responsible for the movement of which organ?",
+  "o": ["Eyes", "Tongue", "Lungs", "Heart"],
+  "a": 1,
+  "e": "Damage to this nerve causes difficulty in speaking, swallowing, and sticking out the tongue.",
+  "cat": "gs",
+  "sub": "nervous"
+},
+{
+  "q": "Which part of the 'Nervous System' is destroyed by the Polio virus?",
+  "o": ["Sensory Neurons", "Motor Neurons (Anterior horn cells)", "Myelin Sheath", "Cerebral Cortex"],
+  "a": 1,
+  "e": "Polio specifically attacks motor neurons in the spinal cord, leading to muscle paralysis.",
+  "cat": "gs",
+  "sub": "nervous"
+},
+{
+  "q": "What is the 'Arachnoid Villi' function?",
+  "o": ["Produce CSF", "Reabsorb CSF back into the venous blood", "Protect the eyes", "Sense taste"],
+  "a": 1,
+  "e": "These are small protrusions that allow CSF to exit the subarachnoid space and enter the dural venous sinuses.",
+  "cat": "gs",
+  "sub": "nervous"
+},
+{
+  "q": "Which lobe of the brain contains the 'Primary Auditory Cortex' for hearing?",
+  "o": ["Frontal Lobe", "Parietal Lobe", "Temporal Lobe", "Occipital Lobe"],
+  "a": 2,
+  "e": "The temporal lobes are located near the ears and process sounds and speech.",
+  "cat": "gs",
+  "sub": "nervous"
+},
+{
+  "q": "What is 'Wernicke's Aphasia'?",
+  "o": ["Inability to produce words", "Ability to speak but the words make no sense (Word Salad)", "Loss of memory", "Blindness"],
+  "a": 1,
+  "e": "Damage to the Wernicke's area in the temporal lobe affects language comprehension.",
+  "cat": "gs",
+  "sub": "nervous"
+},
+{
+  "q": "The 'Foramen Magnum' is a large opening in which bone to allow the spinal cord to pass?",
+  "o": ["Frontal bone", "Occipital bone", "Temporal bone", "Sphenoid bone"],
+  "a": 1,
+  "e": "It is located at the base of the skull where the medulla oblongata connects to the spinal cord.",
+  "cat": "gs",
+  "sub": "nervous"
+},
+{
+  "q": "Which chemical 'Antagonizes' (blocks) the action of Acetylcholine at the neuromuscular junction, causing paralysis?",
+  "o": ["Nicotine", "Curare", "Adrenaline", "Dopamine"],
+  "a": 1,
+  "e": "Curare was historically used on poison arrows to paralyze prey by blocking nerve signals to muscles.",
+  "cat": "gs",
+  "sub": "nervous"
+},
+{
+  "q": "What is 'Saltatory Conduction' dependent on?",
+  "o": ["Presence of Myelin and Nodes of Ranvier", "High temperature", "Low sodium", "Large cell body"],
+  "a": 0,
+  "e": "Saltatory means 'to leap'; the electrical signal jumps from node to node, making it 50-100x faster than unmyelinated flow.",
+  "cat": "gs",
+  "sub": "nervous"
+},
+{
+  "q": "Which part of the 'Ear' contains the 'Saccule and Utricle' for sensing linear acceleration?",
+  "o": ["Outer Ear", "Middle Ear", "Vestibule (Inner Ear)", "External Auditory Canal"],
+  "a": 2,
+  "e": "These structures contain 'Otoliths' (ear stones) that shift when you move, telling your brain which way is up.",
+  "cat": "gs",
+  "sub": "nervous"
+},
+{
+  "q": "The 'Trigeminal Nerve' (V) is the largest cranial nerve and is responsible for:",
+  "o": ["Vision", "Facial sensation and Chewing (Mastication)", "Hearing", "Heart rate"],
+  "a": 1,
+  "e": "It has three branches (Ophthalmic, Maxillary, Mandibular) and is the main sensory nerve of the face.",
+  "cat": "gs",
+  "sub": "nervous"
+},
+{
+  "q": "What is 'Babinski's Sign' in neurology?",
+  "o": ["Eye twitching", "An abnormal reflex in adults where the big toe bends upward", "Loss of smell", "High fever"],
+  "a": 1,
+  "e": "It is normal in infants but indicates central nervous system damage (Upper Motor Neuron lesion) in adults.",
+  "cat": "gs",
+  "sub": "nervous"
+},
+{
+  "q": "Which 'Ventricle' of the brain is diamond-shaped and located between the pons and the cerebellum?",
+  "o": ["Lateral Ventricle", "Third Ventricle", "Fourth Ventricle", "Fifth Ventricle"],
+  "a": 2,
+  "e": "The fourth ventricle is continuous with the central canal of the spinal cord.",
+  "cat": "gs",
+  "sub": "nervous"
+},
+{
+  "q": "What is the function of 'Microglia' cells in the brain?",
+  "o": ["Produce Myelin", "Act as immune cells/phagocytes to destroy pathogens", "Circulate CSF", "Form the BBB"],
+  "a": 1,
+  "e": "Microglia are the 'janitors' of the brain, cleaning up dead cells and bacteria.",
+  "cat": "gs",
+  "sub": "nervous"
+},
+{
+  "q": "Which 'Nerve Plexus' controls the movements of the arms and hands?",
+  "o": ["Cervical Plexus", "Brachial Plexus", "Lumbar Plexus", "Sacral Plexus"],
+  "a": 1,
+  "e": "The brachial plexus is a network of nerves originating from the lower cervical and upper thoracic spinal nerves.",
+  "cat": "gs",
+  "sub": "nervous"
+},
+{
+  "q": "What is 'Referred Pain'?",
+  "o": ["Pain felt at the site of injury", "Pain felt in a part of the body other than its actual source", "Lack of pain", "Psychological pain"],
+  "a": 1,
+  "e": "A classic example is heart attack pain being felt in the left arm or jaw.",
+  "cat": "gs",
+  "sub": "nervous"
+},
+{
+  "q": "Which part of the 'Eye' lacks blood vessels and gets oxygen directly from the air?",
+  "o": ["Retina", "Iris", "Cornea", "Lens"],
+  "a": 2,
+  "e": "The cornea is transparent and avascular; it receives nutrients from the aqueous humor and oxygen from the atmosphere.",
+  "cat": "gs",
+  "sub": "nervous"
+},
+{
+  "q": "What is 'Hemiplegia'?",
+  "o": ["Paralysis of both legs", "Paralysis of one side of the body", "Paralysis of all four limbs", "Loss of memory"],
+  "a": 1,
+  "e": "It is usually caused by a stroke or brain injury affecting one hemisphere of the brain.",
+  "cat": "gs",
+  "sub": "nervous"
+},
+{
+  "q": "Which neurotransmitter is 'Deficient' in patients with Alzheimer's Disease?",
+  "o": ["Dopamine", "Serotonin", "Acetylcholine", "GABA"],
+  "a": 2,
+  "e": "Loss of cholinergic neurons leads to the memory loss and cognitive decline seen in Alzheimer's.",
+  "cat": "gs",
+  "sub": "nervous"
+},
+{
+  "q": "What is the 'Subdural Hematoma'?",
+  "o": ["Bleeding outside the skull", "Bleeding between the dura mater and the arachnoid mater", "Brain tumor", "Infection"],
+  "a": 1,
+  "e": "It is a dangerous condition usually caused by a head injury that ruptures veins in the brain.",
+  "cat": "gs",
+  "sub": "nervous"
+},
+  {
+  "q": "Which gland is known as the 'Master Gland' of the human body?",
+  "o": ["Thyroid", "Adrenal", "Pituitary", "Pancreas"],
+  "a": 2,
+  "e": "The pituitary gland is called the master gland because it produces hormones that control many other endocrine glands.",
+  "cat": "gs",
+  "sub": "endocrine"
+},
+{
+  "q": "Which hormone is responsible for the 'Fight or Flight' response?",
+  "o": ["Insulin", "Thyroxine", "Adrenaline (Epinephrine)", "Estrogen"],
+  "a": 2,
+  "e": "Adrenaline is released by the adrenal medulla during stress to increase heart rate and energy.",
+  "cat": "gs",
+  "sub": "endocrine"
+},
+{
+  "q": "The deficiency of which element causes 'Goitre' (swelling of the neck)?",
+  "o": ["Iron", "Calcium", "Iodine", "Phosphorus"],
+  "a": 2,
+  "e": "Iodine is essential for the synthesis of thyroxine hormone by the thyroid gland.",
+  "cat": "gs",
+  "sub": "endocrine"
+},
+{
+  "q": "Which hormone regulates the 'Blood Sugar' level in the human body?",
+  "o": ["Glucagon", "Insulin", "Both 1 and 2", "Growth Hormone"],
+  "a": 2,
+  "e": "Insulin lowers blood sugar, while Glucagon raises it; both are produced by the Pancreas.",
+  "cat": "gs",
+  "sub": "endocrine"
+},
+{
+  "q": "Exophthalmic Goitre (Graves' Disease) is caused by:",
+  "o": ["Hypothyroidism", "Hyperthyroidism", "Lack of Vitamin A", "Low Calcium"],
+  "a": 1,
+  "e": "Over-secretion of thyroid hormones leads to increased metabolism and protruding eyeballs.",
+  "cat": "gs",
+  "sub": "endocrine"
+},
+{
+  "q": "Which gland is both 'Exocrine' and 'Endocrine' (Heterocrine gland)?",
+  "o": ["Liver", "Pancreas", "Thyroid", "Adrenal"],
+  "a": 1,
+  "e": "The pancreas produces digestive enzymes (exocrine) and hormones like insulin (endocrine).",
+  "cat": "gs",
+  "sub": "endocrine"
+},
+{
+  "q": "The hormone 'Melatonin', which regulates the sleep-wake cycle, is secreted by:",
+  "o": ["Pituitary Gland", "Pineal Gland", "Thymus", "Testes"],
+  "a": 1,
+  "e": "The pineal gland acts as the body's biological clock by responding to light and darkness.",
+  "cat": "gs",
+  "sub": "endocrine"
+},
+{
+  "q": "Which hormone is known as the 'Birth Hormone' and 'Milk Ejection Hormone'?",
+  "o": ["Prolactin", "Oxytocin", "Progesterone", "Estrogen"],
+  "a": 1,
+  "e": "Oxytocin stimulates uterine contractions during birth and the release of milk during breastfeeding.",
+  "cat": "gs",
+  "sub": "endocrine"
+},
+{
+  "q": "The 'Islets of Langerhans' are found in which organ?",
+  "o": ["Kidney", "Liver", "Pancreas", "Stomach"],
+  "a": 2,
+  "e": "These are clusters of cells in the pancreas that contain Alpha (glucagon) and Beta (insulin) cells.",
+  "cat": "gs",
+  "sub": "endocrine"
+},
+{
+  "q": "Which hormone deficiency causes 'Diabetes Insipidus'?",
+  "o": ["Insulin", "ADH (Vasopressin)", "Glucagon", "Thyroxine"],
+  "a": 1,
+  "e": "Lack of Anti-Diuretic Hormone (ADH) leads to excessive urination and extreme thirst.",
+  "cat": "gs",
+  "sub": "endocrine"
+},
+{
+  "q": "The 'Emergency Glands' of the body are the:",
+  "o": ["Testes", "Adrenal Glands", "Thyroid", "Salivary Glands"],
+  "a": 1,
+  "e": "The adrenal glands sit on top of the kidneys and produce hormones to handle acute stress.",
+  "cat": "gs",
+  "sub": "endocrine"
+},
+{
+  "q": "Which hormone is responsible for the development of secondary sexual characteristics in males?",
+  "o": ["Estrogen", "Progesterone", "Testosterone", "Insulin"],
+  "a": 2,
+  "e": "Testosterone is an androgen produced by the Leydig cells of the testes.",
+  "cat": "gs",
+  "sub": "endocrine"
+},
+{
+  "q": "Excessive secretion of 'Growth Hormone' (GH) in adults leads to:",
+  "o": ["Gigantism", "Dwarfism", "Acromegaly", "Myxedema"],
+  "a": 2,
+  "e": "In adults, GH excess causes bones of the hands, feet, and face to thicken (Acromegaly).",
+  "cat": "gs",
+  "sub": "endocrine"
+},
+  {
+  "q": "Which of the following is a 'Steroid Hormone' derived from cholesterol?",
+  "o": ["Insulin", "Glucagon", "Cortisol", "Thyroxine"],
+  "a": 2,
+  "e": "Steroid hormones (like Cortisol, Testosterone, and Estrogen) are lipid-soluble and can pass directly through the cell membrane.",
+  "cat": "gs",
+  "sub": "endocrine"
+},
+{
+  "q": "The 'Second Messenger' mechanism (using cAMP) is typically used by which type of hormones?",
+  "o": ["Steroid hormones", "Protein/Peptide hormones", "Thyroid hormones", "Vitamin D"],
+  "a": 1,
+  "e": "Water-soluble protein hormones cannot enter the cell, so they bind to surface receptors and trigger a secondary signal inside.",
+  "cat": "gs",
+  "sub": "endocrine"
+},
+{
+  "q": "Which gland is often called the 'Biological Clock' of the body?",
+  "o": ["Pituitary", "Pineal Gland", "Thymus", "Adrenal"],
+  "a": 1,
+  "e": "The pineal gland secretes melatonin, which regulates circadian rhythms (sleep-wake cycles).",
+  "cat": "gs",
+  "sub": "endocrine"
+},
+{
+  "q": "The 'Neurohypophysis' is another name for the:",
+  "o": ["Anterior Pituitary", "Posterior Pituitary", "Hypothalamus", "Pineal Gland"],
+  "a": 1,
+  "e": "The posterior pituitary stores and releases hormones (Oxytocin/ADH) actually produced by the hypothalamus.",
+  "cat": "gs",
+  "sub": "endocrine"
+},
+{
+  "q": "Which hormone is responsible for 'Metamorphosis' in frogs (changing tadpole to adult)?",
+  "o": ["Adrenaline", "Thyroxine", "Insulin", "Growth Hormone"],
+  "a": 1,
+  "e": "Without thyroxine (and iodine in the water), a tadpole cannot develop into a frog.",
+  "cat": "gs",
+  "sub": "endocrine"
+},
+{
+  "q": "What is 'Cushing's Syndrome' caused by?",
+  "o": ["Hyposecretion of Cortisol", "Hypersecretion of Cortisol (Adrenal Cortex)", "Lack of Insulin", "High Thyroxine"],
+  "a": 1,
+  "e": "Excess cortisol leads to weight gain, a 'moon face', and high blood pressure.",
+  "cat": "gs",
+  "sub": "endocrine"
+},
+{
+  "q": "Which hormone inhibits the release of 'Growth Hormone' and is also known as Somatostatin?",
+  "o": ["GHRH", "GHIH", "GnRH", "TRH"],
+  "a": 1,
+  "e": "Growth Hormone Inhibiting Hormone (GHIH) is produced by the hypothalamus to regulate growth.",
+  "cat": "gs",
+  "sub": "endocrine"
+},
+{
+  "q": "The 'Leydig Cells' in the testes are stimulated to produce testosterone by which hormone?",
+  "o": ["FSH", "LH (ICSH)", "Prolactin", "ACTH"],
+  "a": 1,
+  "e": "Luteinizing Hormone (LH) is also called Interstitial Cell Stimulating Hormone (ICSH) in males.",
+  "cat": "gs",
+  "sub": "endocrine"
+},
+{
+  "q": "Which hormone is a 'Catecholamine'?",
+  "o": ["Thyroxine", "Adrenaline", "Insulin", "Estrogen"],
+  "a": 1,
+  "e": "Adrenaline and Noradrenaline are catecholamines derived from the amino acid tyrosine.",
+  "cat": "gs",
+  "sub": "endocrine"
+},
+{
+  "q": "What is 'Addison's Disease'?",
+  "o": ["Hyperthyroidism", "Hyposecretion of adrenal cortex hormones (mineraloids/glucocorticoids)", "Excessive growth", "Diabetes"],
+  "a": 1,
+  "e": "Addison's leads to fatigue, low blood pressure, and characteristic skin darkening (pigmentation).",
+  "cat": "gs",
+  "sub": "endocrine"
+},
+{
+  "q": "The 'Thymosin' hormone is essential for the maturation of:",
+  "o": ["RBCs", "T-Lymphocytes", "B-Lymphocytes", "Platelets"],
+  "a": 1,
+  "e": "The thymus gland helps train T-cells to fight infections; it is most active in children.",
+  "cat": "gs",
+  "sub": "endocrine"
+},
+{
+  "q": "Which of the following is a 'Local Hormone' (Prostaglandin)?",
+  "o": ["Thyroxine", "Lipid-derived signaling molecules acting near their site of synthesis", "Insulin", "ADH"],
+  "a": 1,
+  "e": "Prostaglandins are not secreted by a single gland but are produced by almost all nucleated cells.",
+  "cat": "gs",
+  "sub": "endocrine"
+},
+{
+  "q": "The 'Negative Feedback' mechanism is used to:",
+  "o": ["Stop a hormone's production once its effect is achieved", "Increase a hormone's level infinitely", "Destroy the gland", "Cause a disease"],
+  "a": 0,
+  "e": "For example, high levels of thyroxine tell the pituitary to stop producing TSH.",
+  "cat": "gs",
+  "sub": "endocrine"
+},
+{
+  "q": "Which hormone promotes 'Sodium Reabsorption' in the kidney and is called a mineralocorticoid?",
+  "o": ["ADH", "Aldosterone", "Cortisol", "Glucagon"],
+  "a": 1,
+  "e": "Aldosterone is the primary mineralocorticoid produced by the adrenal cortex.",
+  "cat": "gs",
+  "sub": "endocrine"
+},
+{
+  "q": "What is 'Gynaecomastia'?",
+  "o": ["Loss of voice", "Development of breast tissue in males due to hormonal imbalance", "Excessive facial hair in females", "Small height"],
+  "a": 1,
+  "e": "It often occurs due to an imbalance between estrogen and testosterone levels.",
+  "cat": "gs",
+  "sub": "endocrine"
+},
+{
+  "q": "Which gland is called the 'Master of the Master Gland' (or the real controller)?",
+  "o": ["Pineal", "Hypothalamus", "Pituitary", "Thalamus"],
+  "a": 1,
+  "e": "The hypothalamus controls the pituitary gland through releasing and inhibiting hormones.",
+  "cat": "gs",
+  "sub": "endocrine"
+},
+{
+  "q": "What is the primary function of 'Prolactin'?",
+  "o": ["Birth of a baby", "Stimulating milk production in mammary glands", "Regulating sugar", "Controlling sleep"],
+  "a": 1,
+  "e": "Prolactin (PRL) levels rise during pregnancy and breastfeeding.",
+  "cat": "gs",
+  "sub": "endocrine"
+},
+{
+  "q": "Which of the following is 'Antagonistic' to Parathyroid Hormone (PTH)?",
+  "o": ["Thyroxine", "Calcitonin", "Insulin", "Aldosterone"],
+  "a": 1,
+  "e": "While PTH increases blood calcium, Calcitonin (from the thyroid) decreases it.",
+  "cat": "gs",
+  "sub": "endocrine"
+},
+{
+  "q": "The 'Conn's Syndrome' is related to the hypersecretion of:",
+  "o": ["Insulin", "Aldosterone", "Thyroxine", "Adrenaline"],
+  "a": 1,
+  "e": "Excess aldosterone leads to high sodium, low potassium, and severe hypertension.",
+  "cat": "gs",
+  "sub": "endocrine"
+},
+{
+  "q": "Which hormone is tested in the 'Urine' to confirm Pregnancy?",
+  "o": ["Estrogen", "Progesterone", "hCG (Human Chorionic Gonadotropin)", "LH"],
+  "a": 2,
+  "e": "hCG is produced by the developing placenta shortly after conception.",
+  "cat": "gs",
+  "sub": "endocrine"
+},
+  {
+  "q": "Which hormone is primarily responsible for 'Ovulation' in the human menstrual cycle?",
+  "o": ["FSH", "LH (Luteinizing Hormone)", "Estrogen", "Progesterone"],
+  "a": 1,
+  "e": "A sudden 'LH Surge' around day 14 of the cycle triggers the release of the egg from the follicle.",
+  "cat": "gs",
+  "sub": "endocrine"
+},
+{
+  "q": "The 'Islets of Langerhans' contain Beta cells that produce Insulin. What do the 'Delta cells' produce?",
+  "o": ["Glucagon", "Somatostatin", "Pancreatic Polypeptide", "Adrenaline"],
+  "a": 1,
+  "e": "Somatostatin acts as an inhibitor to both insulin and glucagon secretion.",
+  "cat": "gs",
+  "sub": "endocrine"
+},
+{
+  "q": "Which type of 'Diabetes' is an autoimmune disease where the body destroys its own Beta cells?",
+  "o": ["Type 1 Diabetes", "Type 2 Diabetes", "Diabetes Insipidus", "Gestational Diabetes"],
+  "a": 0,
+  "e": "Type 1 usually starts in childhood and requires external insulin injections for life.",
+  "cat": "gs",
+  "sub": "endocrine"
+},
+{
+  "q": "What is 'Type 2 Diabetes' primarily characterized by?",
+  "o": ["Lack of insulin production", "Insulin Resistance (cells don't respond to insulin)", "Excessive iodine", "Low growth hormone"],
+  "a": 1,
+  "e": "In Type 2, the body produces insulin, but the receptors on cells become 'deaf' to its signal.",
+  "cat": "gs",
+  "sub": "endocrine"
+},
+{
+  "q": "Which 'Plant Hormone' is known as the 'Stress Hormone' of plants?",
+  "o": ["Auxin", "Gibberellin", "Abscisic Acid (ABA)", "Ethylene"],
+  "a": 2,
+  "e": "ABA closes stomata during water stress and promotes seed dormancy.",
+  "cat": "gs",
+  "sub": "botany"
+},
+{
+  "q": "Which hormone is a 'Gas' and is responsible for the 'Ripening of Fruits'?",
+  "o": ["Cytokinin", "Ethylene", "Auxin", "ABA"],
+  "a": 1,
+  "e": "Ethylene is unique because it acts as a gaseous hormone to ripen fruits like bananas and mangoes.",
+  "cat": "gs",
+  "sub": "botany"
+},
+{
+  "q": "The 'Apical Dominance' (growth of the tip) in plants is caused by which hormone?",
+  "o": ["Gibberellin", "Auxin", "Cytokinin", "Ethylene"],
+  "a": 1,
+  "e": "Auxins produced at the tip inhibit the growth of lateral buds, making the plant grow taller.",
+  "cat": "gs",
+  "sub": "botany"
+},
+{
+  "q": "Which hormone is used to produce 'Seedless Fruits' (Parthenocarpy)?",
+  "o": ["Auxins and Gibberellins", "Ethylene", "ABA", "Cytokinin"],
+  "a": 0,
+  "e": "Applying these hormones can induce fruit formation without fertilization, resulting in seedless varieties.",
+  "cat": "gs",
+  "sub": "botany"
+},
+{
+  "q": "The 'Bolting' effect (sudden elongation of stems) is caused by:",
+  "o": ["Auxin", "Gibberellin", "Cytokinin", "Ethylene"],
+  "a": 1,
+  "e": "Gibberellins promote cell elongation and are used to increase the size of grapes and sugarcane.",
+  "cat": "gs",
+  "sub": "botany"
+},
+{
+  "q": "Which hormone promotes 'Cell Division' and delays leaf aging (senescence)?",
+  "o": ["Auxin", "Cytokinin", "ABA", "Ethylene"],
+  "a": 1,
+  "e": "Cytokinins are often used in tissue culture to stimulate plant growth and keep leaves green.",
+  "cat": "gs",
+  "sub": "botany"
+},
+{
+  "q": "What is the 'Master Gland' of the Endocrine system's controller?",
+  "o": ["Pituitary", "Hypothalamus", "Thalamus", "Adrenal"],
+  "a": 1,
+  "e": "The hypothalamus is the 'Commander-in-Chief' that tells the pituitary what to do.",
+  "cat": "gs",
+  "sub": "endocrine"
+},
+{
+  "q": "Which hormone is responsible for the 'Ejection of Milk' during breastfeeding?",
+  "o": ["Prolactin", "Oxytocin", "Estrogen", "Progesterone"],
+  "a": 1,
+  "e": "Prolactin *produces* the milk, but Oxytocin *ejects* it (Let-down reflex).",
+  "cat": "gs",
+  "sub": "endocrine"
+},
+{
+  "q": "The 'Simmonds' Disease' is caused by the complete atrophy of the:",
+  "o": ["Thyroid", "Anterior Pituitary", "Adrenal Cortex", "Pancreas"],
+  "a": 1,
+  "e": "It leads to a generalized failure of the endocrine system due to lack of pituitary stimulation.",
+  "cat": "gs",
+  "sub": "endocrine"
+},
+{
+  "q": "Which 'Mineraloid' hormone regulates the balance of water and electrolytes?",
+  "o": ["Cortisol", "Aldosterone", "Testosterone", "Thyroxine"],
+  "a": 1,
+  "e": "Aldosterone helps the kidneys retain sodium and water, increasing blood volume.",
+  "cat": "gs",
+  "sub": "endocrine"
+},
+{
+  "q": "What is the 'Triple F' (3F) gland?",
+  "o": ["Thyroid", "Thymus", "Adrenal (Fear, Fight, Flight)", "Pituitary"],
+  "a": 2,
+  "e": "The adrenal gland prepares the body for emergency situations.",
+  "cat": "gs",
+  "sub": "endocrine"
+},
+{
+  "q": "Which hormone is secreted by the 'Heart' to lower blood pressure?",
+  "o": ["ADH", "ANF (Atrial Natriuretic Factor)", "Renin", "Aldosterone"],
+  "a": 1,
+  "e": "ANF opposes the action of Renin and Aldosterone to prevent hypertension.",
+  "cat": "gs",
+  "sub": "endocrine"
+},
+{
+  "q": "The 'Cholecystokinin' (CCK) hormone is produced by the:",
+  "o": ["Stomach", "Small Intestine", "Liver", "Pancreas"],
+  "a": 1,
+  "e": "CCK stimulates the gallbladder to release bile and the pancreas to release enzymes.",
+  "cat": "gs",
+  "sub": "endocrine"
+},
+{
+  "q": "Which hormone is often called the 'Anti-Abortion' hormone?",
+  "o": ["Estrogen", "Progesterone", "Oxytocin", "Relaxin"],
+  "a": 1,
+  "e": "Progesterone maintains the thick uterine lining necessary for pregnancy.",
+  "cat": "gs",
+  "sub": "endocrine"
+},
+{
+  "q": "What is the function of 'Relaxin' hormone?",
+  "o": ["Relaxing the mind", "Softening the pelvic ligaments during childbirth", "Reducing sugar", "Slowing the heart"],
+  "a": 1,
+  "e": "It is secreted by the corpus luteum and placenta to facilitate the baby's passage.",
+  "cat": "gs",
+  "sub": "endocrine"
+},
+  {
+  "q": "Which plant tissue is responsible for the transport of 'Water and Minerals' from roots to leaves?",
+  "o": ["Phloem", "Xylem", "Parenchyma", "Collenchyma"],
+  "a": 1,
+  "e": "Xylem acts as the 'plumbing' system of the plant, moving water upward through tracheids and vessels.",
+  "cat": "gs",
+  "sub": "botany"
+},
+{
+  "q": "Which tissue is known as the 'Food-conducting' tissue in plants?",
+  "o": ["Xylem", "Phloem", "Sclerenchyma", "Epidermis"],
+  "a": 1,
+  "e": "Phloem transports glucose and nutrients from the leaves (source) to the rest of the plant (sink).",
+  "cat": "gs",
+  "sub": "botany"
+},
+{
+  "q": "What is the primary site of 'Photosynthesis' in a plant cell?",
+  "o": ["Mitochondria", "Chloroplast", "Vacuole", "Nucleus"],
+  "a": 1,
+  "e": "Chloroplasts contain chlorophyll which captures solar energy to produce glucose.",
+  "cat": "gs",
+  "sub": "botany"
+},
+{
+  "q": "Which gas is 'Released' as a byproduct during photosynthesis?",
+  "o": ["Carbon Dioxide", "Oxygen", "Nitrogen", "Methane"],
+  "a": 1,
+  "e": "Plants take in CO2 and release Oxygen ($O_2$) during the light-dependent reactions.",
+  "cat": "gs",
+  "sub": "botany"
+},
+{
+  "q": "The 'Meristematic' tissues in plants are characterized by:",
+  "o": ["Dead cells", "Cells that divide continuously", "Permanent shape", "Large vacuoles"],
+  "a": 1,
+  "e": "Meristems are found at the tips of roots and shoots, allowing the plant to grow in length and girth.",
+  "cat": "gs",
+  "sub": "botany"
+},
+{
+  "q": "Which plant hormone is primarily responsible for 'Fruit Ripening'?",
+  "o": ["Auxin", "Gibberellin", "Ethylene", "Cytokinin"],
+  "a": 2,
+  "e": "Ethylene is a gaseous hormone that triggers the ripening process in fruits like bananas and mangoes.",
+  "cat": "gs",
+  "sub": "botany"
+},
+{
+  "q": "What is 'Transpiration'?",
+  "o": ["Absorption of water", "Loss of water vapor from the surface of leaves", "Movement of food", "Growth of roots"],
+  "a": 1,
+  "e": "Transpiration creates a 'suction pull' that helps draw water up from the roots to the top of the plant.",
+  "cat": "gs",
+  "sub": "botany"
+},
+{
+  "q": "The pores on the surface of leaves through which gas exchange occurs are called:",
+  "o": ["Lenticels", "Stomata", "Xylem", "Cuticle"],
+  "a": 1,
+  "e": "Stomata are guarded by 'Guard Cells' which open or close the pore to regulate water loss.",
+  "cat": "gs",
+  "sub": "botany"
+},
+{
+  "q": "Which metal is present at the center of the 'Chlorophyll' molecule?",
+  "o": ["Iron", "Magnesium", "Calcium", "Zinc"],
+  "a": 1,
+  "e": "Magnesium ($Mg$) is the central atom of chlorophyll, similar to how Iron is at the center of Hemoglobin.",
+  "cat": "gs",
+  "sub": "botany"
+},
+{
+  "q": "What is the main function of 'Sclerenchyma' tissue?",
+  "o": ["Photosynthesis", "Providing mechanical strength and stiffness", "Storing food", "Transporting water"],
+  "a": 1,
+  "e": "Sclerenchyma consists of dead cells with thickened walls (lignin) and makes up parts like the husk of a coconut.",
+  "cat": "gs",
+  "sub": "botany"
+},
+{
+  "q": "The 'Light Reaction' of photosynthesis takes place in the:",
+  "o": ["Stroma", "Grana (Thylakoids)", "Cytoplasm", "Cell Wall"],
+  "a": 1,
+  "e": "Grana are stacks of thylakoids where sunlight is converted into chemical energy (ATP/NADPH).",
+  "cat": "gs",
+  "sub": "botany"
+},
+{
+  "q": "Which plant tissue makes the plant 'Girth' (width) increase?",
+  "o": ["Apical Meristem", "Lateral Meristem (Cambium)", "Intercalary Meristem", "Parenchyma"],
+  "a": 1,
+  "e": "Lateral meristems are responsible for secondary growth, which makes trees thicker over time.",
+  "cat": "gs",
+  "sub": "botany"
+},
+{
+  "q": "What is 'Phototropism'?",
+  "o": ["Growth towards gravity", "Growth towards light", "Growth towards water", "Response to touch"],
+  "a": 1,
+  "e": "Auxins accumulate on the shaded side of the stem, causing it to bend toward the light source.",
+  "cat": "gs",
+  "sub": "botany"
+},
+{
+  "q": "Which of the following is a 'C4' plant (highly efficient in hot climates)?",
+  "o": ["Rice", "Wheat", "Maize (Corn)", "Potato"],
+  "a": 2,
+  "e": "C4 plants like Maize and Sugarcane have a specialized anatomy (Kranz anatomy) to minimize water loss.",
+  "cat": "gs",
+  "sub": "botany"
+},
+{
+  "q": "The 'Hardness' of fruits like pears is due to the presence of:",
+  "o": ["Parenchyma", "Sclereids", "Aerenchyma", "Chlorenchyma"],
+  "a": 1,
+  "e": "Sclereids are a type of sclerenchyma cell that provides a gritty texture and strength.",
+  "cat": "gs",
+  "sub": "botany"
+},
+{
+  "q": "What is 'Guttation'?",
+  "o": ["Loss of water through stomata", "Loss of water in liquid form from the margins of leaves", "Absorption of minerals", "Wilting of plants"],
+  "a": 1,
+  "e": "Guttation occurs through specialized pores called 'Hydathodes' during periods of high humidity and root pressure.",
+  "cat": "gs",
+  "sub": "botany"
+},
+{
+  "q": "Which tissue provides 'Buoyancy' to aquatic plants (Hydrophytes)?",
+  "o": ["Aerenchyma", "Collenchyma", "Sclerenchyma", "Xylem"],
+  "a": 0,
+  "e": "Aerenchyma is a type of parenchyma with large air cavities that help plants float on water.",
+  "cat": "gs",
+  "sub": "botany"
+},
+{
+  "q": "The 'Calvin Cycle' (Dark Reaction) takes place in the:",
+  "o": ["Grana", "Stroma", "Mitochondria", "Nucleus"],
+  "a": 1,
+  "e": "In the stroma, $CO_2$ is fixed into sugar using the energy (ATP) generated in the light reaction.",
+  "cat": "gs",
+  "sub": "botany"
+},
+{
+  "q": "Which part of the plant is scientifically known as the 'Kitchen of the Plant'?",
+  "o": ["Root", "Stem", "Leaf", "Flower"],
+  "a": 2,
+  "e": "Leaves are the primary organs for photosynthesis where food is prepared.",
+  "cat": "gs",
+  "sub": "botany"
+},
+{
+  "q": "What is 'Geotropism'?",
+  "o": ["Response to light", "Response to gravity", "Response to chemicals", "Response to magnetism"],
+  "a": 1,
+  "e": "Roots show positive geotropism (grow down), while shoots show negative geotropism (grow up).",
+  "cat": "gs",
+  "sub": "botany"
+},
+  {
+  "q": "Which part of the flower develops into a 'Fruit' after fertilization?",
+  "o": ["Ovule", "Ovary", "Stamen", "Petal"],
+  "a": 1,
+  "e": "The ovary ripens into the fruit, while the ovules inside become the seeds.",
+  "cat": "gs",
+  "sub": "botany"
+},
+{
+  "q": "What is 'Double Fertilization' a characteristic of?",
+  "o": ["Algae", "Gymnosperms", "Angiosperms (Flowering plants)", "Bryophytes"],
+  "a": 2,
+  "e": "In angiosperms, one male gamete fuses with the egg, and another fuses with the polar nuclei to form the endosperm.",
+  "cat": "gs",
+  "sub": "botany"
+},
+{
+  "q": "The 'Sticky' part of the carpel that receives pollen grains is called:",
+  "o": ["Style", "Stigma", "Anther", "Filament"],
+  "a": 1,
+  "e": "The stigma is specially designed to capture and hold pollen during pollination.",
+  "cat": "gs",
+  "sub": "botany"
+},
+{
+  "q": "Which bacterium lives in the 'Root Nodules' of leguminous plants to fix Nitrogen?",
+  "o": ["E. coli", "Rhizobium", "Lactobacillus", "Streptococcus"],
+  "a": 1,
+  "e": "Rhizobium converts atmospheric nitrogen into ammonia, which the plant can use for growth.",
+  "cat": "gs",
+  "sub": "botany"
+},
+{
+  "q": "What is 'Hydroponics'?",
+  "o": ["Growing plants in water", "Growing plants in a soil-less nutrient solution", "Growing plants in sand", "Growing plants without sunlight"],
+  "a": 1,
+  "e": "Hydroponics is a technique of growing plants where all essential minerals are provided in a water-based solution.",
+  "cat": "gs",
+  "sub": "botany"
+},
+{
+  "q": "Which part of the 'Seed' provides food to the developing embryo?",
+  "o": ["Seed coat", "Endosperm", "Radicle", "Plumule"],
+  "a": 1,
+  "e": "The endosperm is a nutrient-rich tissue that supports the plant until it can perform photosynthesis.",
+  "cat": "gs",
+  "sub": "botany"
+},
+{
+  "q": "What is 'Anemophily'?",
+  "o": ["Pollination by insects", "Pollination by wind", "Pollination by water", "Pollination by birds"],
+  "a": 1,
+  "e": "Wind-pollinated flowers (like grass and maize) usually have light pollen and large, feathery stigmas.",
+  "cat": "gs",
+  "sub": "botany"
+},
+{
+  "q": "The movement of 'Water' through the xylem is primarily driven by:",
+  "o": ["Photosynthesis", "Transpiration Pull", "Gravity", "Active Transport"],
+  "a": 1,
+  "e": "As water evaporates from the leaves, it creates a negative pressure that 'pulls' water up from the roots.",
+  "cat": "gs",
+  "sub": "botany"
+},
+{
+  "q": "Which mineral is essential for the 'Opening and Closing' of Stomata?",
+  "o": ["Iron", "Potassium (K+)", "Phosphorus", "Calcium"],
+  "a": 1,
+  "e": "The movement of Potassium ions into guard cells causes them to swell and open the stomatal pore.",
+  "cat": "gs",
+  "sub": "botany"
+},
+{
+  "q": "What is 'Parthenocarpy'?",
+  "o": ["Formation of fruit without fertilization", "Formation of seed without fruit", "Death of a plant", "Pollination by bats"],
+  "a": 0,
+  "e": "Parthenocarpic fruits, like seedless bananas and grapes, develop without the need for pollen.",
+  "cat": "gs",
+  "sub": "botany"
+},
+{
+  "q": "The 'Venus Flytrap' is an example of a:",
+  "o": ["Parasitic plant", "Insectivorous plant", "Saprophytic plant", "Symbiotic plant"],
+  "a": 1,
+  "e": "These plants grow in nitrogen-poor soil and catch insects to fulfill their nitrogen requirements.",
+  "cat": "gs",
+  "sub": "botany"
+},
+{
+  "q": "Which tissue makes up the 'Bark' of a tree?",
+  "o": ["Xylem", "Cork (Phellem)", "Pith", "Endodermis"],
+  "a": 1,
+  "e": "Cork cells are dead at maturity and are filled with suberin, making them waterproof and protective.",
+  "cat": "gs",
+  "sub": "botany"
+},
+{
+  "q": "What is 'Thigmotropism'?",
+  "o": ["Response to light", "Response to gravity", "Response to touch (contact)", "Response to water"],
+  "a": 2,
+  "e": "Tendrils of climbing plants (like money plants or peas) show thigmotropism when they coil around a support.",
+  "cat": "gs",
+  "sub": "botany"
+},
+{
+  "q": "Which gas is used for the 'Artificial Ripening' of green fruits?",
+  "o": ["Ethylene", "Acetylene", "Both 1 and 2", "Oxygen"],
+  "a": 2,
+  "e": "While ethylene is the natural hormone, calcium carbide is often used to produce acetylene for artificial ripening.",
+  "cat": "gs",
+  "sub": "botany"
+},
+{
+  "q": "The 'Red Color' of a tomato is due to which pigment?",
+  "o": ["Chlorophyll", "Lycopene", "Anthocyanin", "Beta-carotene"],
+  "a": 1,
+  "e": "Lycopene is a carotenoid pigment found in red fruits like tomatoes and watermelons.",
+  "cat": "gs",
+  "sub": "botany"
+},
+{
+  "q": "Which part of the plant is responsible for 'Vegetative Propagation' in Ginger?",
+  "o": ["Root", "Rhizome (Stem)", "Leaf", "Bulb"],
+  "a": 1,
+  "e": "A rhizome is an underground modified stem that can grow into a new plant.",
+  "cat": "gs",
+  "sub": "botany"
+},
+{
+  "q": "What is 'Photoperiodism'?",
+  "o": ["Reaction to light intensity", "Response of plants to the relative lengths of day and night", "Photosynthesis speed", "Bending towards light"],
+  "a": 1,
+  "e": "This determines when a plant will flower (Short-day vs. Long-day plants).",
+  "cat": "gs",
+  "sub": "botany"
+},
+{
+  "q": "The 'Pulvinus' is a specialized structure at the base of the leaf in:",
+  "o": ["Mango", "Touch-me-not (Mimosa pudica)", "Rose", "Wheat"],
+  "a": 1,
+  "e": "The pulvinus handles the rapid movement of water to close the leaves when touched.",
+  "cat": "gs",
+  "sub": "botany"
+},
+{
+  "q": "Which of the following is a 'Parasitic' plant?",
+  "o": ["Mushroom", "Cuscuta (Amarbel)", "Pitcher plant", "Lichen"],
+  "a": 1,
+  "e": "Cuscuta lacks chlorophyll and draws all its nutrition from the host plant.",
+  "cat": "gs",
+  "sub": "botany"
+},
+  {
+  "q": "Which tissue is responsible for the 'Secondary Growth' (increase in thickness) of a tree trunk?",
+  "o": ["Apical Meristem", "Vascular Cambium", "Parenchyma", "Endodermis"],
+  "a": 1,
+  "e": "Vascular cambium is a lateral meristem that produces secondary xylem (wood) and secondary phloem.",
+  "cat": "gs",
+  "sub": "botany"
+},
+{
+  "q": "The 'Annual Rings' seen in a cross-section of a tree trunk are used to estimate its age. These rings are made of:",
+  "o": ["Primary Phloem", "Secondary Xylem", "Cortex", "Pith"],
+  "a": 1,
+  "e": "Each year, the cambium produces a layer of spring wood and autumn wood, which together form one annual ring.",
+  "cat": "gs",
+  "sub": "botany"
+},
+{
+  "q": "What is the science of determining the age of a tree by counting its rings called?",
+  "o": ["Dendrochronology", "Pomology", "Paleontology", "Horticulture"],
+  "a": 0,
+  "e": "Dendrochronology uses tree rings to study past climates and the age of the tree.",
+  "cat": "gs",
+  "sub": "botany"
+},
+{
+  "q": "In a large tree, the central, dark-colored, non-functional part of the wood is called:",
+  "o": ["Sapwood", "Heartwood (Duramen)", "Softwood", "Bark"],
+  "a": 1,
+  "e": "Heartwood is filled with resins and tannins, making it resistant to decay and very strong.",
+  "cat": "gs",
+  "sub": "botany"
+},
+{
+  "q": "Which part of the 'Wood' is responsible for the conduction of water in a 50-year-old tree?",
+  "o": ["Heartwood", "Sapwood (Alburnum)", "Pith", "Cork"],
+  "a": 1,
+  "e": "Sapwood is the younger, outer layer of secondary xylem that actively transports water and minerals.",
+  "cat": "gs",
+  "sub": "botany"
+},
+{
+  "q": "The 'Kranz Anatomy' is a characteristic feature of which type of plants?",
+  "o": ["C3 Plants", "C4 Plants (e.g., Maize, Sugarcane)", "CAM Plants", "Hydrophytes"],
+  "a": 1,
+  "e": "Kranz anatomy involves a wreath-like arrangement of bundle sheath cells that helps the plant avoid photorespiration.",
+  "cat": "gs",
+  "sub": "botany"
+},
+{
+  "q": "Which enzyme is the most abundant protein on Earth and is used in the Calvin Cycle?",
+  "o": ["Pepsin", "RuBisCO", "Amylase", "DNA Polymerase"],
+  "a": 1,
+  "e": "RuBisCO fixes carbon dioxide into organic molecules during photosynthesis.",
+  "cat": "gs",
+  "sub": "botany"
+},
+{
+  "q": "What is the main function of 'Phloem Companion Cells'?",
+  "o": ["Water storage", "Loading and unloading of sugar into sieve tubes", "Photosynthesis", "Providing rigid support"],
+  "a": 1,
+  "e": "Companion cells are closely associated with sieve tube elements and manage their metabolic activities.",
+  "cat": "gs",
+  "sub": "botany"
+},
+{
+  "q": "Which of the following is a 'Short-Day Plant' (flowers only when days are short)?",
+  "o": ["Wheat", "Soybean/Rice", "Radish", "Spinach"],
+  "a": 1,
+  "e": "Short-day plants require a long period of darkness to trigger flowering.",
+  "cat": "gs",
+  "sub": "botany"
+},
+{
+  "q": "The 'Velamen' tissue, used for absorbing moisture from the air, is found in the roots of:",
+  "o": ["Mango", "Orchids (Epiphytes)", "Banyan", "Wheat"],
+  "a": 1,
+  "e": "Orchids have hanging aerial roots with velamen to suck water vapor from a humid atmosphere.",
+  "cat": "gs",
+  "sub": "botany"
+},
+{
+  "q": "What is 'Photolysis' of water?",
+  "o": ["Formation of water from gas", "Splitting of water using light energy in Photosystem II", "Absorption of water by roots", "Boiling of water"],
+  "a": 1,
+  "e": "This process releases electrons, protons, and oxygen as a byproduct of photosynthesis.",
+  "cat": "gs",
+  "sub": "botany"
+},
+{
+  "q": "Which plant group is known as the 'Amphibians of the Plant Kingdom'?",
+  "o": ["Thallophyta", "Bryophyta (Mosses)", "Pteridophyta", "Gymnosperms"],
+  "a": 1,
+  "e": "Bryophytes live on land but require water for sexual reproduction (sperm must swim to the egg).",
+  "cat": "gs",
+  "sub": "botany"
+},
+{
+  "q": "The 'Sago' (Sabudana) is obtained from which plant?",
+  "o": ["Cycas", "Pinus", "Rice", "Wheat"],
+  "a": 0,
+  "e": "Sago is a starch extracted from the pith of the Cycas plant, which is a Gymnosperm.",
+  "cat": "gs",
+  "sub": "botany"
+},
+{
+  "q": "Which plant tissue has 'Pectin' deposits at the corners of its cells to provide flexibility?",
+  "o": ["Parenchyma", "Collenchyma", "Sclerenchyma", "Xylem"],
+  "a": 1,
+  "e": "Collenchyma allows young stems and leaves to bend without breaking.",
+  "cat": "gs",
+  "sub": "botany"
+},
+{
+  "q": "What is 'Vernalization'?",
+  "o": ["Growth towards light", "Induction of flowering by exposure to prolonged cold", "Response to touch", "Seed dispersal by wind"],
+  "a": 1,
+  "e": "Many plants in temperate climates require a cold winter period before they can flower in the spring.",
+  "cat": "gs",
+  "sub": "botany"
+},
+{
+  "q": "Which part of the plant is modified to form the 'Spines' in a Cactus?",
+  "o": ["Stem", "Leaves", "Root", "Flower"],
+  "a": 1,
+  "e": "Cactus leaves are modified into spines to reduce water loss (transpiration) and protect against animals.",
+  "cat": "gs",
+  "sub": "botany"
+},
+{
+  "q": "The 'Pneumatophores' (Respiratory roots) are found in:",
+  "o": ["Desert plants", "Mangrove plants (e.g., Rhizophora)", "Aquatic plants", "Climbing plants"],
+  "a": 1,
+  "e": "Mangroves grow in salty, oxygen-poor marshes; pneumatophores grow upward to 'breathe' air.",
+  "cat": "gs",
+  "sub": "botany"
+},
+{
+  "q": "Which plant hormone is also known as the 'Anti-Transpirant'?",
+  "o": ["Auxin", "Gibberellin", "Abscisic Acid (ABA)", "Cytokinin"],
+  "a": 2,
+  "e": "ABA closes the stomata during drought to prevent the plant from wilting.",
+  "cat": "gs",
+  "sub": "botany"
+},
+{
+  "q": "What is the function of 'Inulin' in plants like Dahlia?",
+  "o": ["Photosynthesis", "Storage of Carbohydrates (Fructans) in roots", "Transport of water", "Protection"],
+  "a": 1,
+  "e": "Inulin is a storage polysaccharide often found in the roots or tubers of some plants.",
+  "cat": "gs",
+  "sub": "botany"
+},
+{
+  "q": "Which chemical is found in the 'Cell Wall' of fungi, making it different from plants?",
+  "o": ["Cellulose", "Chitin", "Lignin", "Pectin"],
+  "a": 1,
+  "e": "While plants use cellulose, fungi use chitin (the same material found in insect shells) for their cell walls.",
+  "cat": "gs",
+  "sub": "botany"
+},
+  {
+  "q": "Which part of the 'Clove' (Laung) is used as a spice?",
+  "o": ["Fruit", "Dried Flower Bud", "Seed", "Bark"],
+  "a": 1,
+  "e": "Cloves are the aromatic, dried flower buds of the Syzygium aromaticum tree.",
+  "cat": "gs",
+  "sub": "botany"
+},
+{
+  "q": "The 'Saffron' (Kesar) of commerce is obtained from which part of the Crocus plant?",
+  "o": ["Petals", "Stigma and Style", "Roots", "Anthers"],
+  "a": 1,
+  "e": "Saffron is the most expensive spice in the world, made from the dried stigmas of the Crocus flower.",
+  "cat": "gs",
+  "sub": "botany"
+},
+{
+  "q": "Which disease in Sugarcane is characterized by red streaks in the stem and a sour smell?",
+  "o": ["Citrus Canker", "Red Rot", "Black Rust", "Late Blight"],
+  "a": 1,
+  "e": "Red Rot is caused by the fungus Colletotrichum falcatum and is a major threat to sugarcane crops in Bihar.",
+  "cat": "gs",
+  "sub": "botany"
+},
+{
+  "q": "The 'Citrus Canker' disease, which affects lemon and orange trees, is caused by:",
+  "o": ["Fungus", "Bacteria (Xanthomonas)", "Virus", "Nematode"],
+  "a": 1,
+  "e": "It causes lesions on the leaves, stems, and fruit of citrus trees.",
+  "cat": "gs",
+  "sub": "botany"
+},
+{
+  "q": "Which part of the 'Cinnamon' (Dalchini) tree is used as a spice?",
+  "o": ["Fruit", "Inner Bark", "Leaf", "Root"],
+  "a": 1,
+  "e": "Cinnamon is harvested by peeling the inner bark of the Cinnamomum tree.",
+  "cat": "gs",
+  "sub": "botany"
+},
+{
+  "q": "What is the 'Edible Part' of an Apple?",
+  "o": ["Ovary", "Fleshy Thalamus", "Endosperm", "Pericarp"],
+  "a": 1,
+  "e": "Apple is a 'False Fruit' because the edible part develops from the thalamus, not the ovary.",
+  "cat": "gs",
+  "sub": "botany"
+},
+{
+  "q": "The 'Late Blight of Potato', which caused the Irish Famine, is caused by:",
+  "o": ["Bacteria", "Fungus (Phytophthora)", "Virus", "Algae"],
+  "a": 1,
+  "e": "Phytophthora infestans is a water mold that can destroy entire potato crops in wet weather.",
+  "cat": "gs",
+  "sub": "botany"
+},
+{
+  "q": "Which plant is known as the 'Terror of Bengal' because it clogs waterways?",
+  "o": ["Lotus", "Water Hyacinth (Eichhornia)", "Hydrilla", "Pistia"],
+  "a": 1,
+  "e": "It is an invasive species that depletes oxygen from the water, killing fish.",
+  "cat": "gs",
+  "sub": "botany"
+},
+{
+  "q": "The 'Quinine' drug used for treating Malaria is obtained from the bark of which tree?",
+  "o": ["Eucalyptus", "Cinchona", "Neem", "Teak"],
+  "a": 1,
+  "e": "Cinchona bark was the first effective treatment for malaria.",
+  "cat": "gs",
+  "sub": "botany"
+},
+{
+  "q": "Which part of the 'Turmeric' (Haldi) plant is used in cooking?",
+  "o": ["Root", "Underground Stem (Rhizome)", "Fruit", "Leaf"],
+  "a": 1,
+  "e": "Turmeric is a rhizome, just like ginger.",
+  "cat": "gs",
+  "sub": "botany"
+},
+{
+  "q": "What is 'Epiphytic' growth?",
+  "o": ["Plants growing in water", "Plants growing on other plants for support but not for nutrition", "Parasitic plants", "Desert plants"],
+  "a": 1,
+  "e": "Orchids are common epiphytes that use trees for height to reach sunlight.",
+  "cat": "gs",
+  "sub": "botany"
+},
+{
+  "q": "Which hormone is responsible for the 'Sleep movements' of leaves in pulses?",
+  "o": ["Auxin", "Abscisic Acid (ABA)", "Ethylene", "Cytokinin"],
+  "a": 1,
+  "e": "ABA and Turgor pressure changes in the pulvinus cause leaves to fold at night.",
+  "cat": "gs",
+  "sub": "botany"
+},
+{
+  "q": "The 'Coffee' bean is which part of the plant?",
+  "o": ["Fruit", "Seed", "Leaf", "Bark"],
+  "a": 1,
+  "e": "Coffee beans are the processed seeds found inside the 'cherry' fruit of the Coffea plant.",
+  "cat": "gs",
+  "sub": "botany"
+},
+{
+  "q": "Which plant tissue is called the 'Wood' of the tree?",
+  "o": ["Primary Xylem", "Secondary Xylem", "Phloem", "Cortex"],
+  "a": 1,
+  "e": "Wood is essentially a massive accumulation of secondary xylem produced by the vascular cambium.",
+  "cat": "gs",
+  "sub": "botany"
+},
+{
+  "q": "What is 'Hydrotropism'?",
+  "o": ["Growth towards light", "Growth towards water", "Growth towards chemicals", "Growth towards gravity"],
+  "a": 1,
+  "e": "Plant roots show positive hydrotropism as they grow toward moist soil areas.",
+  "cat": "gs",
+  "sub": "botany"
+},
+{
+  "q": "Which pigment gives the 'Purple' or 'Blue' color to many flowers and fruits?",
+  "o": ["Chlorophyll", "Anthocyanin", "Carotene", "Xanthophyll"],
+  "a": 1,
+  "e": "Anthocyanins are water-soluble vacuolar pigments that change color based on pH.",
+  "cat": "gs",
+  "sub": "botany"
+},
+{
+  "q": "The 'Vascular Bundles' in Monocot stems are usually:",
+  "o": ["Arranged in a ring", "Scattered in the ground tissue", "Absent", "Only found in roots"],
+  "a": 1,
+  "e": "Unlike dicots where they form a ring, monocot bundles (like in maize) are scattered.",
+  "cat": "gs",
+  "sub": "botany"
+},
+{
+  "q": "Which part of the 'Onion' is edible?",
+  "o": ["Root", "Fleshy Scale Leaves (Bulb)", "Flower", "Fruit"],
+  "a": 1,
+  "e": "The onion is a modified underground shoot where the leaves store food.",
+  "cat": "gs",
+  "sub": "botany"
+},
+{
+  "q": "What is 'Vivipary' in plants?",
+  "o": ["Seeds falling on the ground", "Seeds germinating while still attached to the parent plant", "Asexual reproduction", "Death of seeds"],
+  "a": 1,
+  "e": "Common in mangroves (Rhizophora), this allows the seedling to drop into the mud and take root immediately.",
+  "cat": "gs",
+  "sub": "botany"
+},
+{
+  "q": "Which of the following is an 'Oil-yielding' plant?",
+  "o": ["Wheat", "Mustard", "Sugarcane", "Potato"],
+  "a": 1,
+  "e": "Mustard seeds are rich in oils used for cooking and medicinal purposes.",
+  "cat": "gs",
+  "sub": "botany"
+},
+  {
+  "q": "Who proposed the 'Five Kingdom Classification' system?",
+  "o": ["Aristotle", "Carolus Linnaeus", "R.H. Whittaker", "Charles Darwin"],
+  "a": 2,
+  "e": "Whittaker divided all living organisms into Monera, Protista, Fungi, Plantae, and Animalia in 1969.",
+  "cat": "gs",
+  "sub": "classification"
+},
+{
+  "q": "Which kingdom includes all 'Prokaryotic' organisms like Bacteria and Blue-green algae?",
+  "o": ["Protista", "Monera", "Fungi", "Plantae"],
+  "a": 1,
+  "e": "Monera consists of single-celled organisms that do not have a defined nucleus.",
+  "cat": "gs",
+  "sub": "classification"
+},
+{
+  "q": "Organisms that can live in extreme salty areas are called:",
+  "o": ["Methanogens", "Halophiles", "Thermoacidophiles", "Heliophytes"],
+  "a": 1,
+  "e": "Halophiles are a type of Archaebacteria that thrive in high salt concentrations like the Great Salt Lake.",
+  "cat": "gs",
+  "sub": "classification"
+},
+{
+  "q": "Which of the following is known as 'Connecting link' between plants and animals?",
+  "o": ["Amoeba", "Euglena", "Paramecium", "Plasmodium"],
+  "a": 1,
+  "e": "Euglena is autotrophic (like plants) in sunlight and heterotrophic (like animals) in the dark.",
+  "cat": "gs",
+  "sub": "classification"
+},
+{
+  "q": "What is the cell wall of 'Fungi' made of?",
+  "o": ["Cellulose", "Chitin", "Peptidoglycan", "Pectin"],
+  "a": 1,
+  "e": "Chitin is a tough, nitrogen-containing polysaccharide that provides structural support to fungi.",
+  "cat": "gs",
+  "sub": "classification"
+},
+{
+  "q": "Which organism is known as the 'Slipper Animalcule'?",
+  "o": ["Amoeba", "Euglena", "Paramecium", "Trypanosoma"],
+  "a": 2,
+  "e": "Paramecium has a slipper-like shape and is covered in tiny hairs called cilia.",
+  "cat": "gs",
+  "sub": "classification"
+},
+{
+  "q": "The symbiotic association between 'Algae' and 'Fungi' is called:",
+  "o": ["Mycorrhiza", "Lichen", "Parasitism", "Commensalism"],
+  "a": 1,
+  "e": "Lichens are excellent indicators of air pollution, especially Sulfur Dioxide ($SO_2$).",
+  "cat": "gs",
+  "sub": "classification"
+},
+{
+  "q": "To which Phylum do 'Sponges' belong?",
+  "o": ["Coelenterata", "Porifera", "Mollusca", "Annelida"],
+  "a": 1,
+  "e": "Porifera means 'pore-bearers'; they have a water canal system for feeding and respiration.",
+  "cat": "gs",
+  "sub": "classification"
+},
+{
+  "q": "Which animal is known as 'Portuguese Man-of-War'?",
+  "o": ["Hydra", "Physalia", "Aurelia", "Adamsia"],
+  "a": 1,
+  "e": "Physalia is a colony of organisms that looks like a single jellyfish and has a powerful sting.",
+  "cat": "gs",
+  "sub": "classification"
+},
+{
+  "q": "The 'Flame Cells' are the excretory organs of which group?",
+  "o": ["Roundworms", "Flatworms (Platyhelminthes)", "Insects", "Spiders"],
+  "a": 1,
+  "e": "Flatworms like Planaria and Tapeworms use flame cells for osmoregulation and excretion.",
+  "cat": "gs",
+  "sub": "classification"
+},
+{
+  "q": "Which of the following is the 'Largest Phylum' of the Animal Kingdom?",
+  "o": ["Mollusca", "Arthropoda", "Chordata", "Echinodermata"],
+  "a": 1,
+  "e": "Arthropods (insects, spiders, crabs) make up over 80% of all known animal species.",
+  "cat": "gs",
+  "sub": "classification"
+},
+{
+  "q": "Insects breathe through tiny holes on the sides of their body called:",
+  "o": ["Gills", "Lungs", "Spiracles", "Skin"],
+  "a": 2,
+  "e": "Spiracles lead to a network of tubes called the tracheal system.",
+  "cat": "gs",
+  "sub": "classification"
+},
+{
+  "q": "Which animal has 'Blue Blood' due to the presence of Hemocyanin?",
+  "o": ["Earthworm", "Octopus", "Cockroach", "Fish"],
+  "a": 1,
+  "e": "Hemocyanin contains copper instead of iron, giving the blood a blue color when oxygenated.",
+  "cat": "gs",
+  "sub": "classification"
+},
+{
+  "q": "To which phylum does the 'Starfish' belong?",
+  "o": ["Mollusca", "Echinodermata", "Arthropoda", "Annelida"],
+  "a": 1,
+  "e": "Echinoderms have a 'spiny skin' and a unique water vascular system for movement.",
+  "cat": "gs",
+  "sub": "classification"
+},
+{
+  "q": "What is 'Binomial Nomenclature'?",
+  "o": ["Two-word naming system (Genus and Species)", "Naming by three words", "Naming in local language", "Naming by family"],
+  "a": 0,
+  "e": "Proposed by Linnaeus, e.g., *Homo sapiens* (Human).",
+  "cat": "gs",
+  "sub": "classification"
+},
+{
+  "q": "Which organism causes 'Sleeping Sickness'?",
+  "o": ["Plasmodium", "Trypanosoma", "Leishmania", "Entamoeba"],
+  "a": 1,
+  "e": "It is transmitted by the bite of the Tsetse fly.",
+  "cat": "gs",
+  "sub": "classification"
+},
+{
+  "q": "Which group of plants is known as the 'Snakes of the Plant Kingdom'?",
+  "o": ["Bryophytes", "Pteridophytes", "Gymnosperms", "Angiosperms"],
+  "a": 1,
+  "e": "Pteridophytes (like Ferns) were the first terrestrial plants to have vascular tissues (Xylem/Phloem).",
+  "cat": "gs",
+  "sub": "classification"
+},
+{
+  "q": "The 'Naked Seeds' are a characteristic of which group?",
+  "o": ["Angiosperms", "Gymnosperms (e.g., Pine, Cycas)", "Bryophytes", "Algae"],
+  "a": 1,
+  "e": "Gymnosperms produce seeds that are not enclosed within an ovary or fruit.",
+  "cat": "gs",
+  "sub": "classification"
+},
+{
+  "q": "Which bird is the 'Smallest' in the world?",
+  "o": ["Sparrow", "Hummingbird", "Ostrich", "Kiwi"],
+  "a": 1,
+  "e": "The Bee Hummingbird is roughly 5-6 cm long.",
+  "cat": "gs",
+  "sub": "classification"
+},
+{
+  "q": "The only 'Poisonous Lizard' in the world is:",
+  "o": ["Chameleon", "Heloderma (Gila monster)", "Monitor Lizard", "Wall Lizard"],
+  "a": 1,
+  "e": "Heloderma is found in the southwestern US and Mexico.",
+  "cat": "gs",
+  "sub": "classification"
+},
+  {
+  "q": "Which of the following is known as the 'Age of Fishes'?",
+  "o": ["Devonian Period", "Mesozoic Era", "Cenozoic Era", "Silurian Period"],
+  "a": 0,
+  "e": "The Devonian period saw a massive diversification of fish species in Earth's oceans.",
+  "cat": "gs",
+  "sub": "classification"
+},
+{
+  "q": "How many 'Heart Chambers' does a typical Fish have?",
+  "o": ["Two", "Three", "Four", "One"],
+  "a": 0,
+  "e": "Fishes have a 2-chambered heart (one atrium and one ventricle) with single circulation.",
+  "cat": "gs",
+  "sub": "classification"
+},
+{
+  "q": "Which of the following is a 'True Fish'?",
+  "o": ["Starfish", "Silverfish", "Dogfish (Shark)", "Jellyfish"],
+  "a": 2,
+  "e": "Starfish is an echinoderm, Silverfish is an insect, and Jellyfish is a coelenterate. Dogfish is a cartilaginous fish.",
+  "cat": "gs",
+  "sub": "classification"
+},
+{
+  "q": "What is the study of Fishes called?",
+  "o": ["Ornithology", "Ichthyology", "Herpetology", "Entomology"],
+  "a": 1,
+  "e": "Ichthyology focuses on the structure, classification, and habits of fish.",
+  "cat": "gs",
+  "sub": "classification"
+},
+{
+  "q": "Which animal is the 'Connecting Link' between Reptiles and Birds?",
+  "o": ["Archaeopteryx", "Platypus", "Lungfish", "Echidna"],
+  "a": 0,
+  "e": "Archaeopteryx had feathers like birds but teeth and a long bony tail like reptiles.",
+  "cat": "gs",
+  "sub": "classification"
+},
+{
+  "q": "How many heart chambers do 'Amphibians' (like Frogs) usually have?",
+  "o": ["Two", "Three", "Four", "None"],
+  "a": 1,
+  "e": "Amphibians have 2 atria and 1 ventricle, allowing for partial mixing of oxygenated and deoxygenated blood.",
+  "cat": "gs",
+  "sub": "classification"
+},
+{
+  "q": "Which of the following is a 'Cold-blooded' (Poikilothermic) animal?",
+  "o": ["Pigeon", "Bat", "Snake", "Elephant"],
+  "a": 2,
+  "e": "Reptiles, amphibians, and fish cannot regulate their internal body temperature and depend on the environment.",
+  "cat": "gs",
+  "sub": "classification"
+},
+{
+  "q": "The 'Jacobson's Organ' in snakes is used for the sense of:",
+  "o": ["Hearing", "Vision", "Smell/Taste", "Balance"],
+  "a": 2,
+  "e": "Snakes use their flicking tongue to bring scent particles to this organ in the roof of their mouth.",
+  "cat": "gs",
+  "sub": "classification"
+},
+{
+  "q": "Which reptile has a 'Four-chambered' heart, unlike most other reptiles?",
+  "o": ["Lizard", "Turtle", "Crocodile", "Snake"],
+  "a": 2,
+  "e": "Crocodiles are the only reptiles with a completely partitioned 4-chambered heart.",
+  "cat": "gs",
+  "sub": "classification"
+},
+{
+  "q": "The 'Pneumatic Bones' (hollow, air-filled bones) are a characteristic of:",
+  "o": ["Mammals", "Birds (Aves)", "Reptiles", "Fish"],
+  "a": 1,
+  "e": "Hollow bones reduce body weight, making flight easier for birds.",
+  "cat": "gs",
+  "sub": "classification"
+},
+{
+  "q": "Which of the following is the 'Fastest' land animal?",
+  "o": ["Lion", "Cheetah", "Horse", "Deer"],
+  "a": 1,
+  "e": "The Cheetah can reach speeds of up to 110-120 km/h in short bursts.",
+  "cat": "gs",
+  "sub": "classification"
+},
+{
+  "q": "Which mammal is 'Egg-laying' (Monotreme)?",
+  "o": ["Kangaroo", "Duck-billed Platypus", "Blue Whale", "Bat"],
+  "a": 1,
+  "e": "The Platypus and Echidna are primitive mammals that lay eggs but nurse their young with milk.",
+  "cat": "gs",
+  "sub": "classification"
+},
+{
+  "q": "The 'Largest' animal living on Earth today is the:",
+  "o": ["African Elephant", "Blue Whale", "Giant Squid", "Giraffe"],
+  "a": 1,
+  "e": "The Blue Whale is a mammal and can grow up to 30 meters in length.",
+  "cat": "gs",
+  "sub": "classification"
+},
+{
+  "q": "Which organ do 'Whales' and 'Dolphins' use for respiration?",
+  "o": ["Gills", "Lungs", "Skin", "Trachea"],
+  "a": 1,
+  "e": "Whales are mammals; they must come to the surface to breathe air into their lungs through blowholes.",
+  "cat": "gs",
+  "sub": "classification"
+},
+{
+  "q": "The study of 'Birds' is known as:",
+  "o": ["Entomology", "Ornithology", "Herpetology", "Anthology"],
+  "a": 1,
+  "e": "Ornithology covers the study of bird feathers, migration, and behavior.",
+  "cat": "gs",
+  "sub": "classification"
+},
+{
+  "q": "Which of the following is a 'Marsupial' (pouched mammal)?",
+  "o": ["Human", "Kangaroo", "Cow", "Tiger"],
+  "a": 1,
+  "e": "Kanoaroos give birth to undeveloped young that finish growing inside a pouch.",
+  "cat": "gs",
+  "sub": "classification"
+},
+{
+  "q": "What is the scientific name of the 'Peacock', the national bird of India?",
+  "o": ["Pavo cristatus", "Corvus splendens", "Passer domesticus", "Columba livia"],
+  "a": 0,
+  "e": "Pavo cristatus is the biological name for the Indian Peafowl.",
+  "cat": "gs",
+  "sub": "classification"
+},
+  {
+  "q": "Which of the following is the 'Largest' living bird in the world?",
+  "o": ["Albatross", "Ostrich", "Emu", "Peacock"],
+  "a": 1,
+  "e": "The Ostrich is the largest bird; it is flightless but can run at speeds up to 70 km/h.",
+  "cat": "gs",
+  "sub": "classification"
+},
+{
+  "q": "Which mammal is capable of 'Echolocation' to navigate and hunt in the dark?",
+  "o": ["Elephant", "Bat", "Blue Whale", "Both 2 and 3"],
+  "a": 2,
+  "e": "Bats and Cetaceans (Whales/Dolphins) use high-frequency sound waves to 'see' their surroundings.",
+  "cat": "gs",
+  "sub": "classification"
+},
+{
+  "q": "The 'Duck-billed Platypus' is unique because it is a:",
+  "o": ["Marsupial", "Egg-laying Mammal (Monotreme)", "Placental Mammal", "Reptile"],
+  "a": 1,
+  "e": "It shows a link between reptiles and mammals by laying eggs but feeding its young with milk.",
+  "cat": "gs",
+  "sub": "classification"
+},
+{
+  "q": "Which of the following is a 'Non-poisonous' snake common in India?",
+  "o": ["Cobra", "Russell's Viper", "Indian Python (Ajgar)", "Krait"],
+  "a": 2,
+  "e": "Pythons are constrictors; they kill prey by squeezing rather than using venom.",
+  "cat": "gs",
+  "sub": "classification"
+},
+{
+  "q": "Who is known as the 'Father of Taxonomy'?",
+  "o": ["Aristotle", "Carolus Linnaeus", "Theophrastus", "Darwin"],
+  "a": 1,
+  "e": "Linnaeus developed the Binomial Nomenclature system for naming organisms.",
+  "cat": "gs",
+  "sub": "classification"
+},
+{
+  "q": "Viruses are considered a 'Connecting link' between:",
+  "o": ["Plants and Animals", "Living and Non-living", "Bacteria and Fungi", "Monera and Protista"],
+  "a": 1,
+  "e": "Viruses are inert crystals outside a host but replicate like living beings inside a cell.",
+  "cat": "gs",
+  "sub": "classification"
+},
+{
+  "q": "What is the 'Genetic Material' found in the Tobacco Mosaic Virus (TMV)?",
+  "o": ["Double-stranded DNA", "Single-stranded RNA", "Protein only", "Both DNA and RNA"],
+  "a": 1,
+  "e": "TMV was the first virus to be discovered and contains RNA as its genetic material.",
+  "cat": "gs",
+  "sub": "classification"
+},
+{
+  "q": "The protein coat that surrounds the nucleic acid of a virus is called:",
+  "o": ["Capsid", "Plasmid", "Capsule", "Envelope"],
+  "a": 0,
+  "e": "The capsid is made of smaller units called capsomeres.",
+  "cat": "gs",
+  "sub": "classification"
+},
+{
+  "q": "What are 'Bacteriophages'?",
+  "o": ["Bacteria that eat viruses", "Viruses that infect bacteria", "Fungi that look like bacteria", "Ancient bacteria"],
+  "a": 1,
+  "e": "Bacteriophages are used in research and therapy to kill harmful bacteria.",
+  "cat": "gs",
+  "sub": "classification"
+},
+{
+  "q": "Which of the following is 'Smaller' than a virus and consists only of free RNA?",
+  "o": ["Bacteria", "Viroid", "Prion", "Lichen"],
+  "a": 1,
+  "e": "Viroids cause diseases in plants (like Potato spindle tuber disease) and lack a protein coat.",
+  "cat": "gs",
+  "sub": "classification"
+},
+{
+  "q": "Abnormally folded proteins that cause brain diseases like 'Mad Cow Disease' are called:",
+  "o": ["Viruses", "Viroids", "Prions", "Protozoa"],
+  "a": 2,
+  "e": "Prions are infectious proteins that do not contain any nucleic acid (DNA/RNA).",
+  "cat": "gs",
+  "sub": "classification"
+},
+{
+  "q": "Which of the following is a 'Cartilaginous Fish' (no bony skeleton)?",
+  "o": ["Rohu", "Katla", "Shark", "Hilsa"],
+  "a": 2,
+  "e": "Sharks and Rays have skeletons made of cartilage, which is lighter and more flexible than bone.",
+  "cat": "gs",
+  "sub": "classification"
+},
+{
+  "q": "The 'Sea Horse' (Hippocampus) belongs to which group?",
+  "o": ["Mammals", "Amphibians", "Fishes", "Mollusks"],
+  "a": 2,
+  "e": "Despite its horse-like head, the sea horse is a bony fish that breathes through gills.",
+  "cat": "gs",
+  "sub": "classification"
+},
+{
+  "q": "Which mammal has the 'Longest' gestation period (pregnancy)?",
+  "o": ["Human", "Blue Whale", "Elephant", "Giraffe"],
+  "a": 2,
+  "e": "Elephants remain pregnant for about 22 months.",
+  "cat": "gs",
+  "sub": "classification"
+},
+{
+  "q": "What is 'Toxin' secreted by scorpions called?",
+  "o": ["Hemotoxin", "Neurotoxin", "Cytotoxin", "None"],
+  "a": 1,
+  "e": "Scorpion venom primarily attacks the nervous system of the prey.",
+  "cat": "gs",
+  "sub": "classification"
+},
+{
+  "q": "Which bird can 'Fly Backwards'?",
+  "o": ["Eagle", "Hummingbird", "Parrot", "Kingfisher"],
+  "a": 1,
+  "e": "The unique wing structure of hummingbirds allows them to hover and fly in all directions.",
+  "cat": "gs",
+  "sub": "classification"
+},
+{
+  "q": "Which group of animals is characterized by the presence of a 'Hollow Nerve Cord' and a 'Notochord'?",
+  "o": ["Arthropoda", "Mollusca", "Chordata", "Annelida"],
+  "a": 2,
+  "e": "Chordates include all vertebrates (humans, birds, fish) and some primitive relatives.",
+  "cat": "gs",
+  "sub": "classification"
+},
+{
+  "q": "The 'Swim Bladder' (Air bladder) in bony fish is used for:",
+  "o": ["Respiration", "Buoyancy (floating at different depths)", "Digestion", "Reproduction"],
+  "a": 1,
+  "e": "By adjusting the gas in the bladder, fish can stay at a specific depth without swimming constantly.",
+  "cat": "gs",
+  "sub": "classification"
+},
+{
+  "q": "Which reptile is famous for 'Changing Color' to match its environment?",
+  "o": ["Garden Lizard", "Chameleon", "Skink", "Gecko"],
+  "a": 1,
+  "e": "Chameleons use specialized cells called chromatophores to change skin color.",
+  "cat": "gs",
+  "sub": "classification"
+},
+{
+  "q": "The 'National Aquatic Animal' of India is:",
+  "o": ["Dugong", "Ganges River Dolphin", "Gharial", "Whale Shark"],
+  "a": 1,
+  "e": "The Ganges River Dolphin (Susu) is a freshwater mammal found in the Ganga river.",
+  "cat": "gs",
+  "sub": "classification"
+},
+{
+  "q": "Which group of animals is characterized by the presence of 'Mammary Glands'?",
+  "o": ["Aves", "Reptilia", "Mammalia", "Amphibia"],
+  "a": 2,
+  "e": "The ability to produce milk for offspring is the defining feature of mammals.",
+  "cat": "gs",
+  "sub": "classification"
+},
+{
+  "q": "The only 'Flying Mammal' is the:",
+  "o": ["Owl", "Flying Squirrel", "Bat", "Eagle"],
+  "a": 2,
+  "e": "Bats are the only mammals capable of true, sustained flight.",
+  "cat": "gs",
+  "sub": "classification"
+},
+{
+  "q": "What is 'Hibernation'?",
+  "o": ["Summer sleep", "Winter sleep (dormancy)", "Migration", "Breeding"],
+  "a": 1,
+  "e": "Cold-blooded animals and some mammals like bears enter a deep sleep to survive winter cold and food scarcity.",
+  "cat": "gs",
+  "sub": "classification"
+},
+  {
+  "q": "Which of the following is considered a 'Living Fossil'?",
+  "o": ["Cockroach", "Limulus (King Crab)", "Silverfish", "Honeybee"],
+  "a": 1,
+  "e": "Limulus has remained virtually unchanged for millions of years, surviving multiple mass extinctions.",
+  "cat": "gs",
+  "sub": "classification"
+},
+{
+  "q": "How many 'Legs' does a typical Insect have?",
+  "o": ["Four", "Six (3 pairs)", "Eight", "Ten"],
+  "a": 1,
+  "e": "Class Insecta is characterized by having three pairs of jointed legs and usually two pairs of wings.",
+  "cat": "gs",
+  "sub": "classification"
+},
+{
+  "q": "Which of the following is NOT an insect?",
+  "o": ["Ant", "Spider", "Mosquito", "Housefly"],
+  "a": 1,
+  "e": "Spiders belong to Class Arachnida and have 8 legs, while insects belong to Class Insecta and have 6 legs.",
+  "cat": "gs",
+  "sub": "classification"
+},
+{
+  "q": "The 'Exoskeleton' of insects and crustaceans is made of:",
+  "o": ["Calcium", "Chitin", "Keratin", "Cellulose"],
+  "a": 1,
+  "e": "Chitin is a light but extremely tough polysaccharide that protects the internal organs of arthropods.",
+  "cat": "gs",
+  "sub": "classification"
+},
+{
+  "q": "Which organism is used in 'Sericulture'?",
+  "o": ["Honeybee", "Silkworm (Bombyx mori)", "Lac insect", "Earthworm"],
+  "a": 1,
+  "e": "Sericulture is the commercial rearing of silkworms for the production of silk.",
+  "cat": "gs",
+  "sub": "classification"
+},
+{
+  "q": "The 'Pearl' is produced by which animal?",
+  "o": ["Octopus", "Oyster (Pinctada)", "Snail", "Starfish"],
+  "a": 1,
+  "e": "When a foreign particle enters the shell, the oyster covers it with layers of nacre to form a pearl.",
+  "cat": "gs",
+  "sub": "classification"
+},
+{
+  "q": "Which Mollusk is known for its high intelligence and 'Ink Sac' for defense?",
+  "o": ["Pila (Apple Snail)", "Octopus", "Unio", "Sepia"],
+  "a": 1,
+  "e": "The Octopus is a cephalopod known for its complex nervous system and ability to camouflage.",
+  "cat": "gs",
+  "sub": "classification"
+},
+{
+  "q": "The 'Radula' is a rasping organ (tongue-like) found in which group?",
+  "o": ["Arthropods", "Mollusks", "Echinoderms", "Annelids"],
+  "a": 1,
+  "e": "Mollusks use the radula to scrape or cut food before swallowing.",
+  "cat": "gs",
+  "sub": "classification"
+},
+{
+  "q": "Which animal is the 'Connecting Link' between Annelids and Arthropods?",
+  "o": ["Peripatus", "Archaeopteryx", "Neopilina", "Platypus"],
+  "a": 0,
+  "e": "Peripatus shows segmentations like worms but has jointed legs like insects.",
+  "cat": "gs",
+  "sub": "classification"
+},
+{
+  "q": "What is 'Ecdysis' (Molting) in insects?",
+  "o": ["Laying eggs", "Shedding of the old exoskeleton to allow growth", "Flying", "Hibernation"],
+  "a": 1,
+  "e": "Since the chitin shell doesn't grow, the insect must shed it periodically to get bigger.",
+  "cat": "gs",
+  "sub": "classification"
+},
+{
+  "q": "The 'Social Insects' like Bees and Ants communicate using chemicals called:",
+  "o": ["Hormones", "Pheromones", "Enzymes", "Toxins"],
+  "a": 1,
+  "e": "Pheromones are used to signal danger, food locations, or reproductive readiness.",
+  "cat": "gs",
+  "sub": "classification"
+},
+{
+  "q": "Which of the following is a 'Social' insect?",
+  "o": ["Cockroach", "Termite", "Mosquito", "Locust"],
+  "a": 1,
+  "e": "Termites live in highly organized colonies with a king, queen, soldiers, and workers.",
+  "cat": "gs",
+  "sub": "classification"
+},
+{
+  "q": "The 'Compound Eye' of an insect is made of thousands of small units called:",
+  "o": ["Ommatidia", "Nephridia", "Alveoli", "Statocysts"],
+  "a": 0,
+  "e": "Ommatidia allow insects to detect fast motion, though their vision is often 'mosaic' or pixelated.",
+  "cat": "gs",
+  "sub": "classification"
+},
+{
+  "q": "Which animal has a 'Water Vascular System' for locomotion?",
+  "o": ["Fish", "Starfish", "Sponge", "Hydra"],
+  "a": 1,
+  "e": "Echinoderms use hydraulic pressure in their tube feet to move and catch prey.",
+  "cat": "gs",
+  "sub": "classification"
+},
+{
+  "q": "The 'Book Lungs' are the respiratory organs of:",
+  "o": ["Scorpions and Spiders", "Cockroaches", "Fish", "Earthworms"],
+  "a": 0,
+  "e": "Arachnids use these specialized, leaf-like structures for gas exchange.",
+  "cat": "gs",
+  "sub": "classification"
+},
+{
+  "q": "What is 'Bioluminescence'?",
+  "o": ["Growth in light", "Production of light by living organisms (e.g., Firefly)", "Blindness", "Heat production"],
+  "a": 1,
+  "e": "Fireflies use the enzyme luciferase to produce light for attracting mates.",
+  "cat": "gs",
+  "sub": "classification"
+},
+{
+  "q": "Which animal is called the 'Farmer’s Friend'?",
+  "o": ["Honeybee", "Earthworm", "Cow", "Snake"],
+  "a": 1,
+  "e": "Earthworms aerate the soil and turn organic waste into rich 'vermicompost'.",
+  "cat": "gs",
+  "sub": "classification"
+},
+{
+  "q": "The 'Malpighian Tubules' of a Cockroach are used for:",
+  "o": ["Digestion", "Excretion", "Respiration", "Reproduction"],
+  "a": 1,
+  "e": "These tubules extract uric acid from the blood and dump it into the gut.",
+  "cat": "gs",
+  "sub": "classification"
+},
+{
+  "q": "Which of the following is a 'Parasitic' worm found in the human intestine?",
+  "o": ["Earthworm", "Ascaris (Roundworm)", "Nereis", "Leech"],
+  "a": 1,
+  "e": "Ascaris lumbricoides is a common intestinal parasite, especially in children.",
+  "cat": "gs",
+  "sub": "classification"
+},
+{
+  "q": "What is 'Estivation'?",
+  "o": ["Winter sleep", "Summer sleep (to avoid heat and dryness)", "Migration", "Skin shedding"],
+  "a": 1,
+  "e": "Many snails and amphibians go into a dormant state during hot, dry summers.",
+  "cat": "gs",
+  "sub": "classification"
+},
+{
+  "q": "What is the function of 'Lenticels'?",
+  "o": ["Photosynthesis", "Gaseous exchange in woody stems", "Water absorption", "Seed dispersal"],
+  "a": 1,
+  "e": "Lenticels are small pores in the bark that allow oxygen to reach the living tissues of the stem.",
+  "cat": "gs",
+  "sub": "botany"
+},
+{
+  "q": "Which gland is called the 'Throne of Immunity'?",
+  "o": ["Spleen", "Thymus", "Thyroid", "Pineal"],
+  "a": 1,
+  "e": "The thymus gland 'trains' T-lymphocytes to recognize and kill pathogens.",
+  "cat": "gs",
+  "sub": "endocrine"
+},
+{
+  "q": "Which gland disappears or reduces in size after puberty?",
+  "o": ["Thyroid", "Thymus", "Pituitary", "Adrenal"],
+  "a": 1,
+  "e": "The thymus plays a role in immunity (T-cell maturation) early in life and shrinks with age.",
+  "cat": "gs",
+  "sub": "endocrine"
+},
+{
+  "q": "The 'Corpus Luteum' secretes which hormone to maintain pregnancy?",
+  "o": ["Estrogen", "Progesterone", "LH", "FSH"],
+  "a": 1,
+  "e": "Progesterone prepares and maintains the uterine lining for a developing embryo.",
+  "cat": "gs",
+  "sub": "endocrine"
+},
+{
+  "q": "Which hormone regulates the 'Calcium' level in the blood?",
+  "o": ["Thyroxine", "Parathyroid Hormone (PTH) and Calcitonin", "Insulin", "Adrenaline"],
+  "a": 1,
+  "e": "PTH raises blood calcium levels, while Calcitonin lowers them.",
+  "cat": "gs",
+  "sub": "endocrine"
+},
+{
+  "q": "The 'Alpha cells' of the Pancreas secrete:",
+  "o": ["Insulin", "Glucagon", "Somatostatin", "Trypsin"],
+  "a": 1,
+  "e": "Glucagon acts on the liver to convert glycogen into glucose, raising blood sugar.",
+  "cat": "gs",
+  "sub": "endocrine"
+},
+{
+  "q": "Which gland is located in the 'Sella Turcica' (a bony cavity in the skull)?",
+  "o": ["Pituitary", "Pineal", "Thalamus", "Thyroid"],
+  "a": 0,
+  "e": "The pituitary gland is safely tucked away in the base of the skull.",
+  "cat": "gs",
+  "sub": "endocrine"
+},
+{
+  "q": "What is the function of 'Erythropoietin' produced by the kidney?",
+  "o": ["Filter urea", "Stimulate Red Blood Cell production", "Lower blood pressure", "Digestion"],
+  "a": 1,
+  "e": "While the kidney isn't a primary endocrine gland, it secretes EPO to manage oxygen-carrying capacity.",
+  "cat": "gs",
+  "sub": "endocrine"
+},
+{
+  "q": "Which hormone is called the 'Stress Hormone' because it increases during long-term stress?",
+  "o": ["Adrenaline", "Cortisol", "Thyroxine", "Melatonin"],
+  "a": 1,
+  "e": "Cortisol is a glucocorticoid produced by the adrenal cortex to manage energy during prolonged stress.",
+  "cat": "gs",
+  "sub": "endocrine"
+},
+{
+  "q": "What is the function of the 'Ciliary Body' in the eye?",
+  "o": ["Sense color", "Adjust the shape of the lens for focusing (Accommodation)", "Protect the cornea", "Carry tears"],
+  "a": 1,
+  "e": "Ciliary muscles contract or relax to change the lens curvature for seeing near or far objects.",
+  "cat": "gs",
+  "sub": "nervous"
+},
+{
+  "q": "Which lobe of the cerebrum is primarily responsible for 'Vision'?",
+  "o": ["Frontal Lobe", "Parietal Lobe", "Temporal Lobe", "Occipital Lobe"],
+  "a": 3,
+  "e": "The occipital lobe at the back of the brain processes visual information from the eyes.",
+  "cat": "gs",
+  "sub": "nervous"
+},
+{
+  "q": "What is 'Saltatory Conduction'?",
+  "o": ["Slow signal movement", "Impulse jumping from one Node of Ranvier to another", "Chemical signal in gut", "Muscle contraction"],
+  "a": 1,
+  "e": "This allows signals to travel much faster in myelinated neurons compared to unmyelinated ones.",
+  "cat": "gs",
+  "sub": "nervous"
+},
+{
+  "q": "What is the 'Erythropoietin' (EPO) function related to the kidney?",
+  "o": ["Filter blood", "Stimulate RBC production in bone marrow", "Lower BP", "Reabsorb sugar"],
+  "a": 1,
+  "e": "When the kidney senses low oxygen, it releases EPO to increase the number of red blood cells.",
+  "cat": "gs",
+  "sub": "excretory"
+},
+{
+  "q": "Which accessory excretory organ helps in removing 'Sebum' and 'Sweat'?",
+  "o": ["Lungs", "Liver", "Skin", "Intestine"],
+  "a": 2,
+  "e": "Sweat removes water and salts, while sebum removes lipids like sterols and hydrocarbons.",
+  "cat": "gs",
+  "sub": "excretory"
+},
+{
+  "q": "Which duct carries urine from the 'Kidney' to the 'Urinary Bladder'?",
+  "o": ["Urethra", "Ureter", "Vas deferens", "Bile duct"],
+  "a": 1,
+  "e": "The ureters use peristaltic waves to move urine from the renal pelvis to the bladder.",
+  "cat": "gs",
+  "sub": "excretory"
+},
+  {
+  "q": "Which bacterium is responsible for 'Tuberculosis' (TB), a major respiratory disease in India?",
+  "o": ["Streptococcus pneumoniae", "Mycobacterium tuberculosis", "Salmonella typhi", "Vibrio cholerae"],
+  "a": 1,
+  "e": "TB is a bacterial infection that primarily affects the lungs but can spread to other parts of the body.",
+  "cat": "gs",
+  "sub": "respiratory"
+},
+{
+  "q": "What is 'BCG' vaccine used for?",
+  "o": ["Polio", "Tuberculosis", "Cholera", "Smallpox"],
+  "a": 1,
+  "e": "Bacillus Calmette-Guérin (BCG) is the vaccine primarily used against tuberculosis.",
+  "cat": "gs",
+  "sub": "respiratory"
+},
+{
+  "q": "The 'DOTS' strategy is associated with the treatment of which disease?",
+  "o": ["AIDS", "Tuberculosis", "Malaria", "Asthma"],
+  "a": 1,
+  "e": "Directly Observed Treatment, Short-course (DOTS) is the internationally recommended strategy for TB control.",
+  "cat": "gs",
+  "sub": "respiratory"
+},
+{
+  "q": "In 'Infant Respiratory Distress Syndrome' (IRDS), the primary deficiency is of:",
+  "o": ["Oxygen", "Surfactant (Lecithin)", "Hemoglobin", "Glucose"],
+  "a": 1,
+  "e": "Premature babies often lack enough surfactant, causing their alveoli to collapse with every breath.",
+  "cat": "gs",
+  "sub": "respiratory"
+},
+{
+  "q": "What is 'Cyanosis'?",
+  "o": ["Yellowing of skin", "Bluish discoloration of skin due to low oxygen", "High fever", "Rapid heart rate"],
+  "a": 1,
+  "e": "It occurs when deoxygenated hemoglobin levels in the blood rise above 5g/dL.",
+  "cat": "gs",
+  "sub": "respiratory"
+},
+{
+  "q": "Which of the following describes 'Oxygen Toxicity'?",
+  "o": ["Lack of oxygen", "Damage caused by breathing high partial pressures of oxygen for long periods", "High CO2 levels", "Nitrogen bubbles"],
+  "a": 1,
+  "e": "Too much oxygen can create free radicals that damage the central nervous system and lungs.",
+  "cat": "gs",
+  "sub": "respiratory"
+},
+{
+  "q": "The 'Mantoux Test' (Skin test) is used to screen for:",
+  "o": ["Pneumonia", "Tuberculosis", "Lung Cancer", "COVID-19"],
+  "a": 1,
+  "e": "It checks for an immune response to Tuberculin protein to see if a person has been exposed to TB.",
+  "cat": "gs",
+  "sub": "respiratory"
+},
+{
+  "q": "What is the function of the 'Cilia' in the trachea?",
+  "o": ["Gas exchange", "Moving mucus and trapped particles upward away from the lungs", "Vocal cord vibration", "Storing air"],
+  "a": 1,
+  "e": "This is part of the 'Mucociliary Escalator' that keeps the lungs clean.",
+  "cat": "gs",
+  "sub": "respiratory"
+},
+{
+  "q": "Which type of 'Lung Cancer' is most strongly linked to tobacco smoking?",
+  "o": ["Adenocarcinoma", "Small cell lung carcinoma", "Mesothelioma", "None"],
+  "a": 1,
+  "e": "Small cell lung cancer is almost exclusively found in smokers and is highly aggressive.",
+  "cat": "gs",
+  "sub": "respiratory"
+},
+{
+  "q": "What is 'Hypercapnia'?",
+  "o": ["Low oxygen", "Abnormally high levels of CO2 in the blood", "Rapid breathing", "Deep sleep"],
+  "a": 1,
+  "e": "Hypercapnia leads to respiratory acidosis and is a major trigger for increased breathing.",
+  "cat": "gs",
+  "sub": "respiratory"
+},
+{
+  "q": "The 'Lecithin/Sphingomyelin' (L/S) ratio is used to check:",
+  "o": ["Adult lung health", "Fetal lung maturity", "Liver function", "Blood sugar"],
+  "a": 1,
+  "e": "A ratio of 2:1 or higher indicates that the fetal lungs are mature enough for birth.",
+  "cat": "gs",
+  "sub": "respiratory"
+},
+{
+  "q": "Which of the following is the 'Universal form' of energy for cell respiration?",
+  "o": ["Glucose", "ATP", "Lipids", "Pyruvate"],
+  "a": 1,
+  "e": "Adenosine Triphosphate (ATP) is the molecule that stores and transfers energy in all living cells.",
+  "cat": "gs",
+  "sub": "respiratory"
+},
+{
+  "q": "What is 'Hemoptysis'?",
+  "o": ["Vomiting blood", "Coughing up blood from the respiratory tract", "Blood in urine", "Nosebleed"],
+  "a": 1,
+  "e": "It is a classic symptom of serious conditions like Tuberculosis or Lung Cancer.",
+  "cat": "gs",
+  "sub": "respiratory"
+},
+{
+  "q": "The 'Trachea' divides into right and left primary bronchi at the level of which vertebrae?",
+  "o": ["C3", "T5", "T12", "L2"],
+  "a": 1,
+  "e": "The point of bifurcation is called the 'Carina', located roughly at the level of the 5th thoracic vertebra.",
+  "cat": "gs",
+  "sub": "respiratory"
+},
+{
+  "q": "Which of the following describes 'Cheyne-Stokes' breathing?",
+  "o": ["Normal rhythm", "Cycles of increasing and decreasing breathing followed by apnea", "Rapid shallow breathing", "Hiccups"],
+  "a": 1,
+  "e": "Often seen in end-of-life care or severe heart failure.",
+  "cat": "gs",
+  "sub": "respiratory"
+},
+{
+  "q": "What is the 'Respiratory Quotient' (RQ) of Protein?",
+  "o": ["1.0", "0.7", "0.8 - 0.9", "More than 1"],
+  "a": 2,
+  "e": "Proteins have an intermediate RQ value, lower than carbohydrates but higher than fats.",
+  "cat": "gs",
+  "sub": "respiratory"
+},
+{
+  "q": "Which gas is used to dilute Oxygen in the tanks of deep-sea divers to avoid toxicity?",
+  "o": ["Nitrogen", "Helium", "Carbon Dioxide", "Hydrogen"],
+  "a": 1,
+  "e": "Heliox (Helium + Oxygen) is used because helium is less soluble in blood than nitrogen.",
+  "cat": "gs",
+  "sub": "respiratory"
+},
+{
+  "q": "The 'Pleural Cavity' normally contains:",
+  "o": ["Air", "A thin layer of serous fluid", "Blood", "Large amount of mucus"],
+  "a": 1,
+  "e": "Under normal conditions, there is only enough fluid to act as a lubricant; air in this space is a medical emergency.",
+  "cat": "gs",
+  "sub": "respiratory"
+},
+{
+  "q": "What is 'Anaerobic Threshold'?",
+  "o": ["Point where breathing stops", "Point during exercise where lactic acid starts to accumulate", "Maximum lung capacity", "Resting heart rate"],
+  "a": 1,
+  "e": "It marks the intensity of exercise where the body can no longer meet energy demands through aerobic means alone.",
+  "cat": "gs",
+  "sub": "respiratory"
+},
+{
+  "q": "Which part of the 'Pharynx' is only respiratory in function (no food passes here)?",
+  "o": ["Oropharynx", "Laryngopharynx", "Nasopharynx", "Esophagus"],
+  "a": 2,
+  "e": "The nasopharynx is located above the soft palate and serves only as an air passage.",
+  "cat": "gs",
+  "sub": "respiratory"
+},
+{
     "q": "Which Constitutional Amendment Act gave 'Constitutional Status' to Panchayati Raj? / किस संविधान संशोधन अधिनियम ने पंचायती राज को 'संवैधानिक दर्जा' दिया?",
     "o": ["72nd Amendment", "73rd Amendment (73वां संशोधन)", "74th Amendment", "42nd Amendment"],
     "a": 1,
