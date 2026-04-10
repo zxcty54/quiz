@@ -7,6 +7,3599 @@
   "cat": "gs",
   "sub": "electricity"
 },
+    {
+  "q": "What happens to the 'Maxwell-Boltzmann' distribution curve when temperature increases?\ntapman badhne par 'maxwell-boltzmann' vitran vakra (curve) ka kya hota hai?",
+  "o": ["Becomes taller and narrower", "Flattens and shifts to the right | chapta ho jata hai aur dayi aur khisakta hai", "No change", "None"],
+  "a": 1,
+  "e": "Higher temperature means more molecules have higher speeds. / uchchh tapman ka matlab hai ki adhik anuon ki chaal adhik hoti hai.",
+  "cat": "gs",
+  "sub": "heat"
+},
+{
+  "q": "What is the 'Mean Free Path' ($\lambda$) related to molecular diameter ($d$)?\n'madhy mukt path' ($\lambda$) aanvik vyas ($d$) se kaise sambandhit hai?",
+  "o": ["$\lambda \propto d$", "$\lambda \propto 1/d^2$ | $\lambda \propto 1/d^2$", "$\lambda \propto d^2$", "None"],
+  "a": 1,
+  "e": "Inversely proportional to the square of the diameter. / vyas ke varg ke vyutkramanupati.",
+  "cat": "gs",
+  "sub": "heat"
+},
+{
+  "q": "Which gas has the 'Highest' thermal conductivity at STP?\nSTP par kis gas ki 'tapiya chalakta' adhiktam hoti hai?",
+  "o": ["Oxygen", "Nitrogen", "Hydrogen | hydrogen", "Carbon dioxide"],
+  "a": 2,
+  "e": "Hydrogen molecules are lighter and move faster. / hydrogen ke anu halke hote hain aur tezi se chalte hain.",
+  "cat": "gs",
+  "sub": "heat"
+},
+{
+  "q": "What is 'Regnault's Law'?\n'regnault ka niyam' kya hai?",
+  "o": ["Specific heat of gas is constant | gas ki vishisht ushma niyat hoti hai", "PV = nRT", "P \propto T", "None"],
+  "a": 0,
+  "e": "States $C_p$ and $C_v$ of a gas do not change with pressure/temp. / batata hai ki $C_p$ aur $C_v$ dab/tap ke saath nahi badalte.",
+  "cat": "gs",
+  "sub": "heat"
+},
+{
+  "q": "What is the 'Joule-Thomson' effect?\n'joule-thomson' prabhav kya hai?",
+  "o": ["Temperature change during throttling | throttling ke dauran tapman parivartan", "Boiling", "Freezing", "None"],
+  "a": 0,
+  "e": "Cooling or heating of a real gas when passed through a porous plug. / porous plug se guzarne par vastvik gas ka thanda ya garam hona.",
+  "cat": "gs",
+  "sub": "heat"
+},
+{
+  "q": "What is 'Inversion Temperature' ($T_i$)?\n'utkraman tapman' (Inversion Temperature) kya hai?",
+  "o": ["Temp where Joule-Thomson effect is zero | jahan joule-thomson prabhav shunya hota hai", "Boiling point", "0 K", "None"],
+  "a": 0,
+  "e": "Below $T_i$ gas cools, above $T_i$ gas heats up on expansion. / $T_i$ ke niche gas thandi hoti hai, upar garam.",
+  "cat": "gs",
+  "sub": "heat"
+},
+{
+  "q": "What is 'Brownian Motion' evidence of?\n'brownian gati' kiska praman hai?",
+  "o": ["Kinetic nature of molecules | anuon ki gatik prakriti", "Gravity", "Magnetism", "None"],
+  "a": 0,
+  "e": "Proves molecules are in continuous random motion. / sabit karta hai ki anu nirantar yadrichhik gati mein hain.",
+  "cat": "gs",
+  "sub": "heat"
+},
+{
+  "q": "What is 'Pressure' formula in Kinetic Theory?\nanugati siddhant mein 'dab' ka sutra kya hai?",
+  "o": ["$P = 1/3 \rho v^2_{rms}$ | $P = 1/3 \rho v^2_{rms}$", "$P = \rho gh$", "$P = F/A$", "None"],
+  "a": 0,
+  "e": "Pressure exerted by gas molecules on walls. / deewaro par gas anuon dwara lagaya gaya dab.",
+  "cat": "gs",
+  "sub": "heat"
+},
+{
+  "q": "What is the 'Relation' between $C_p$ and $C_v$ for a gas?\nek gas ke liye $C_p$ aur $C_v$ ke beech kya sambandh hai?",
+  "o": ["$C_p - C_v = R$ | $C_p - C_v = R$ (Mayer's Relation)", "$C_p + C_v = R$", "$C_p/C_v = R$", "None"],
+  "a": 0,
+  "e": "Difference is equal to the universal gas constant. / antar sarvabhumik gas niyatank ke barabar hota hai.",
+  "cat": "gs",
+  "sub": "heat"
+},
+{
+  "q": "What is 'Adiabatic Index' ($\gamma$) for Triatomic gas (nonlinear)?\ntri-parmanuk gas (nonlinear) ke liye 'ruddhoshm suchakank' ($\gamma$) kya hai?",
+  "o": ["1.67", "1.4", "1.33 | 1.33 (4/3)", "1.1"],
+  "a": 2,
+  "e": "For molecules like Water vapor or SO2. / jal-vashp ya SO2 jaise anuon ke liye.",
+  "cat": "gs",
+  "sub": "heat"
+},
+{
+  "q": "What is 'Kirchhoff's Law' of radiation?\nvikiran ka 'kirchhoff ka niyam' kya hai?",
+  "o": ["Good absorbers are good emitters | achhe avshoshak hi achhe utsarjak hote hain", "E = mc^2", "V = IR", "None"],
+  "a": 0,
+  "e": "At a given temperature, emissivity equals absorptivity. / diye gaye tapman par, utsarjakta avshoshkta ke barabar hoti hai.",
+  "cat": "gs",
+  "sub": "heat"
+},
+{
+  "q": "What is the 'Solar Spectrum' an example of?\n'saur spectrum' kiska udaharan hai?",
+  "o": ["Continuous spectrum", "Line absorption spectrum | rekha avshoshan spectrum", "Emission spectrum", "None"],
+  "a": 1,
+  "e": "Due to Fraunhofer lines. / fraunhofer rekhaon ke karan.",
+  "cat": "gs",
+  "sub": "heat"
+},
+    {
+  "q": "What is the relation between 'Pressure' and 'Temperature' in an Adiabatic process?\n'ruddhoshm' prakriya mein 'dab' aur 'tapman' ke beech kya sambandh hai?",
+  "o": ["$P^{1-\gamma} T^\gamma = Constant$ | $P^{1-\gamma} T^\gamma = Constant$", "$PV = RT$", "$P/T = Constant$", "None"],
+  "a": 0,
+  "e": "Derived from $PV^\gamma = K$ and $PV=nRT$. / $PV^\gamma = K$ aur adarsh gas samikaran se vyutpann.",
+  "cat": "gs",
+  "sub": "heat"
+},
+{
+  "q": "What is 'Critical Pressure' ($P_c$)?\n'krantik dab' ($P_c$) kya hai?",
+  "o": ["Pressure at critical temperature | krantik tapman par dab", "Atmospheric pressure", "Zero", "None"],
+  "a": 0,
+  "e": "Minimum pressure required to liquefy a gas at its critical temperature. / krantik tapman par gas ko dravit karne ke liye avashyak nyuntam dab.",
+  "cat": "gs",
+  "sub": "heat"
+},
+{
+  "q": "What is 'Clausius-Clapeyron' equation related to?\n'clausius-clapeyron' samikaran kis-se sambandhit hai?",
+  "o": ["Phase change | avastha parivartan", "Gas expansion", "Radiation", "None"],
+  "a": 0,
+  "e": "Relates the slope of the phase boundary to latent heat. / avastha sima ke dhal ko gupt ushma se jodta hai.",
+  "cat": "gs",
+  "sub": "heat"
+},
+{
+  "q": "What is 'Specific Heat' at 'Constant Pressure' ($C_p$) for a Triatomic gas?\ntri-parmanuk gas ke liye $C_p$ kya hai?",
+  "o": ["$3R$", "$4R$ | $4R$", "$5R$", "None"],
+  "a": 1,
+  "e": "$C_p = C_v + R = 3R + R = 4R$ (for non-linear). / gair-rekhika ke liye.",
+  "cat": "gs",
+  "sub": "heat"
+},
+{
+  "q": "What is 'Radiative cooling' fastest in?\n'vikiran sheetlan' kis-me sabse tez hota hai?",
+  "o": ["Black body | krishn pind", "Polished surface", "White body", "None"],
+  "a": 0,
+  "e": "A perfect absorber is also a perfect emitter. / ek adarsh avshoshak hi adarsh utsarjak hota hai.",
+  "cat": "gs",
+  "sub": "heat"
+},
+{
+  "q": "What is 'Thermal equilibrium' reached when?\n'tapiya santulan' kab hota hai?",
+  "o": ["Net heat flow is zero | shuddh ushma pravah shunya ho", "Temp is same | tapman saman ho", "Both | dono", "None"],
+  "a": 2,
+  "e": "No temperature gradient exists between systems. / nikayon ke beech koi tapman pravanta nahi hoti.",
+  "cat": "gs",
+  "sub": "heat"
+},
+{
+  "q": "What is 'Conduction' primarily due to in 'Metals'?\n'dhatuon' mein 'chalan' ka mukhya karan kya hai?",
+  "o": ["Free electrons | mukt electron", "Vibrations", "Radiation", "None"],
+  "a": 0,
+  "e": "Electrons carry thermal energy quickly. / electron tapiya oorja ko tezi se le jate hain.",
+  "cat": "gs",
+  "sub": "heat"
+},
+{
+  "q": "What is 'Entropy' of a system in a 'Reversible Adiabatic' process?\nek 'utkramaniya ruddhoshm' prakriya mein 'entropy' kya hoti hai?",
+  "o": ["Increases", "Decreases", "Constant | niyat", "None"],
+  "a": 2,
+  "e": "Also called Isentropic process. / ise isentropic prakriya bhi kehte hain.",
+  "cat": "gs",
+  "sub": "heat"
+},
+{
+  "q": "What is 'Absolute Zero' not possible according to which law?\nkis niyam ke anusar 'param shunya' sambhav nahi hai?",
+  "o": ["Third Law of Thermodynamics | ushmagatiki ka tritiya niyam", "First Law", "Newton's Law", "None"],
+  "a": 0,
+  "e": "Impossible to reach 0 K in a finite number of steps. / simit kadamon mein 0 K tak pahunchna asambhav hai.",
+  "cat": "gs",
+  "sub": "heat"
+},
+{
+  "q": "What is 'Radiation' intensity inversely proportional to?\n'vikiran' ki teevrata kiske vyutkramanupati hoti hai?",
+  "o": ["$Distance^2$ | $doori^2$ ($d^2$)", "Distance", "Temperature", "None"],
+  "a": 0,
+  "e": "Follows inverse square law from a point source. / bindu srot se vyutkram varg niyam ka palan karta hai.",
+  "cat": "gs",
+  "sub": "heat"
+},
+{
+  "q": "Which state of 'Matter' has 'Least' thermal expansion?\n'padarth' ki kis avastha mein 'tapiya prasar' nyuntam hota hai?",
+  "o": ["Solid | thos", "Liquid", "Gas", "All same"],
+  "a": 0,
+  "e": "Strong intermolecular forces limit expansion. / majboot aanvik bal prasar ko simit karte hain.",
+  "cat": "gs",
+  "sub": "heat"
+},
+{
+  "q": "What is 'Carnot' engine work based on 'Temperature' ($T_1, T_2$)?\ncarnot engine ka karya tapman ($T_1, T_2$) par kaise nirbhar hai?",
+  "o": ["$W \propto (T_1 - T_2)$ | $W \propto (T_1 - T_2)$", "$W \propto T_1/T_2$", "$W \propto T_1 + T_2$", "None"],
+  "a": 0,
+  "e": "Work done is proportional to the difference between source and sink. / karya srot aur sink ke beech ke antar ke samanupati hota hai.",
+  "cat": "gs",
+  "sub": "heat"
+},
+{
+  "q": "What is 'Global Warming' gas with highest 'Global Warming Potential' (GWP)?\nsabse adhik GWP wali 'global warming' gas kaun si hai?",
+  "o": ["CO2", "Methane", "SF6 (Sulfur Hexafluoride) | SF6", "Nitrous Oxide"],
+  "a": 2,
+  "e": "SF6 is a very potent greenhouse gas. / SF6 ek bahut hi shaktishali greenhouse gas hai.",
+  "cat": "gs",
+  "sub": "heat"
+},
+{
+  "q": "What is 'Specific Heat' of 'Steam' approx?\n'bhap' ki 'vishisht ushma' lagbhag kya hai?",
+  "o": ["$0.48 cal/g°C$ | $0.48 cal/g°C$", "$1.0$", "$0.1$", "None"],
+  "a": 0,
+  "e": "Slightly less than half of liquid water. / drav pani ke aadhe se thoda kam.",
+  "cat": "gs",
+  "sub": "heat"
+},
+{
+  "q": "What is 'Thermal conductivity' of a 'Perfect Insulator'?\nek 'adarsh kutchalak' (Perfect Insulator) ki 'tapiya chalakta' kya hai?",
+  "o": ["Infinite", "One", "Zero | shunya", "None"],
+  "a": 2,
+  "e": "Does not allow any heat flow. / koi ushma pravah nahi hone deta.",
+  "cat": "gs",
+  "sub": "heat"
+},
+{
+  "q": "What is 'Mean free path' ($\lambda$) dependency on 'Pressure' ($P$)?\n'madhy mukt path' ($\lambda$) 'dab' ($P$) par kaise nirbhar hai?",
+  "o": ["$\lambda \propto 1/P$ | $\lambda \propto 1/P$", "$\lambda \propto P$", "$\lambda \propto P^2$", "None"],
+  "a": 0,
+  "e": "As pressure increases, molecules are closer, so $\lambda$ decreases. / dab badhne par anu paas aa jate hain, isliye $\lambda$ ghat-ta hai.",
+  "cat": "gs",
+  "sub": "heat"
+},
+{
+  "q": "What is 'Work Done' in an 'Isochoric' process?\n'sam-aytanik' prakriya mein 'kiya gaya karya' kya hota hai?",
+  "o": ["Zero | shunya", "Maximum", "$P \Delta V$", "None"],
+  "a": 0,
+  "e": "Since $\Delta V = 0$, work $P \Delta V = 0$. / kyunki aaytan mein parivartan shunya hai.",
+  "cat": "gs",
+  "sub": "heat"
+},
+{
+  "q": "What was the 'Laplace Correction' in the speed of sound formula?\nध्वनि की चाल के सूत्र में 'लाप्लास सुधार' क्या था?",
+  "o": ["Adiabatic process assumption | रुद्धोष्म प्रक्रिया की मान्यता", "Isothermal process assumption", "Constant volume assumption", "None"],
+  "a": 0,
+  "e": "Newton assumed isothermal, but Laplace corrected it to adiabatic ($v = \sqrt{\gamma P/\rho}$). / न्यूटन ने समतापी माना था, लाप्लास ने इसे रुद्धोष्म में सुधारा।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "What is the value of '$\gamma$' for air used in Laplace correction?\nलाप्लास सुधार में प्रयुक्त हवा के लिए '$\gamma$' का मान क्या है?",
+  "o": ["1.67", "1.4 | 1.4", "1.33", "1.0"],
+  "a": 1,
+  "e": "Air is mostly diatomic (N2, O2), so $\gamma \approx 1.4$. / हवा मुख्य रूप से द्वि-परमाणुक है।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "What is the relation between 'Speed of Sound' and 'Molecular Weight' ($M$) of a gas?\nध्वनि की चाल और गैस के 'अणु भार' ($M$) के बीच क्या संबंध है?",
+  "o": ["$v \propto M$", "$v \propto 1/\sqrt{M}$ | $v \propto 1/\sqrt{M}$", "$v \propto M^2$", "None"],
+  "a": 1,
+  "e": "Sound travels faster in lighter gases (like Hydrogen) than heavier ones. / ध्वनि हल्की गैसों में भारी गैसों की तुलना में तेज चलती है।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "In which gas will sound travel 'Fastest' at the same temperature?\nसमान तापमान पर किस गैस में ध्वनि 'सबसे तेज' चलेगी?",
+  "o": ["Oxygen", "Hydrogen | हाइड्रोजन (Hydrogen)", "Nitrogen", "Carbon dioxide"],
+  "a": 1,
+  "e": "Hydrogen has the lowest molecular weight. / हाइड्रोजन का अणु भार सबसे कम होता है।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "What are 'Overtones' in a vibrating string?\nकंपन करती डोरी में 'अधिस्वरक' (Overtones) क्या होते हैं?",
+  "o": ["Fundamental frequency", "Frequencies higher than fundamental | मूल आवृत्ति से उच्च आवृत्तियाँ", "Low frequencies", "None"],
+  "a": 1,
+  "e": "Higher modes of vibration above the base frequency. / आधार आवृत्ति के ऊपर कंपन के उच्च तरीके।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "The first overtone of a string is also called its:\nडोरी के पहले अधिस्वरक को और क्या कहा जाता है?",
+  "o": ["First Harmonic", "Second Harmonic | द्वितीय हारमोनिक", "Third Harmonic", "None"],
+  "a": 1,
+  "e": "For a string, harmonics are integer multiples ($f, 2f, 3f...$). / डोरी के लिए हारमोनिक्स पूर्णांक गुणक होते हैं।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "What is the ratio of frequencies in an 'Open Organ Pipe'?\n'खुले ऑर्गन पाइप' में आवृत्तियों का अनुपात क्या होता है?",
+  "o": ["1:2:3... | 1:2:3...", "1:3:5...", "2:4:6...", "None"],
+  "a": 0,
+  "e": "Both even and odd harmonics are present. / इसमें सम और विषम दोनों हारमोनिक्स मौजूद होते हैं।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "What is the ratio of frequencies in a 'Closed Organ Pipe'?\n'बंद ऑर्गन पाइप' में आवृत्तियों का अनुपात क्या होता है?",
+  "o": ["1:2:3...", "1:3:5... | 1:3:5...", "2:4:6...", "None"],
+  "a": 1,
+  "e": "Only odd harmonics are present. / इसमें केवल विषम हारमोनिक्स मौजूद होते हैं।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "What is 'End Correction' ($e$) in an organ pipe related to?\nऑर्गन पाइप में 'अंत्य संशोधन' (End Correction) किससे संबंधित है?",
+  "o": ["Length of pipe", "Antinode slightly outside the open end | खुले सिरे से थोड़ा बाहर बनने वाला प्रस्पंद", "Diameter only", "None"],
+  "a": 1,
+  "e": "Sound reflects slightly beyond the physical edge of the pipe. / ध्वनि पाइप के भौतिक किनारे से थोड़ा आगे परावर्तित होती है।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "What is the frequency of 'Middle C' on a standard piano approx?\nएक मानक पियानो पर 'मिडिल सी' (Middle C) की आवृत्ति लगभग क्या है?",
+  "o": ["256 Hz", "261.6 Hz | 261.6 Hz", "440 Hz", "512 Hz"],
+  "a": 1,
+  "e": "Scientific pitch often uses 256, but standard musical tuning is ~262 Hz. / मानक संगीत ट्यूनिंग में यह लगभग 262 हर्ट्ज़ है।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "What frequency is used as the 'Standard Tuning' pitch for an Orchestra (Note A)?\nऑर्केस्ट्रा के लिए 'मानक ट्यूनिंग' पिच (नोट ए) के रूप में किस आवृत्ति का उपयोग होता है?",
+  "o": ["256 Hz", "440 Hz | 440 Hz", "1000 Hz", "None"],
+  "a": 1,
+  "e": "Known as A440, used worldwide to tune instruments. / इसे A440 के रूप में जाना जाता है।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "What is 'Consonance' in music?\nसंगीत में 'संवादिता' (Consonance) क्या है?",
+  "o": ["Unpleasant sound", "Pleasant sounding combination of notes | स्वरों का सुखद संयोजन", "Single note", "None"],
+  "a": 1,
+  "e": "Notes that sound stable and restful together. / वे स्वर जो साथ में स्थिर और सुखद लगते हैं।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "What is 'Dissonance'?\n'विवादिता' (Dissonance) क्या है?",
+  "o": ["Harmonious sound", "Unpleasant or tense sound combination | अरुचिकर या तनावपूर्ण स्वर संयोजन", "Silent", "None"],
+  "a": 1,
+  "e": "Notes that sound clashing or create tension. / वे स्वर जो आपस में टकराते हुए लगते हैं।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "What is the 'Beat Period' if two notes are 256 Hz and 260 Hz?\nयदि दो स्वर 256 Hz और 260 Hz हैं, तो 'विपन्द काल' क्या होगा?",
+  "o": ["4 sec", "0.25 sec | 0.25 सेकंड", "1 sec", "None"],
+  "a": 1,
+  "e": "Beat frequency = 260 - 256 = 4 Hz. Period = 1/f = 1/4 = 0.25s. / सूत्र 1/f का उपयोग करके।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "What happens to the 'Fundamental Frequency' of a string if its 'Tension' is increased?\nयदि डोरी का 'तनाव' बढ़ा दिया जाए, तो उसकी 'मूल आवृत्ति' का क्या होगा?",
+  "o": ["Decreases", "Increases | बढ़ती है", "Stay same", "None"],
+  "a": 1,
+  "e": "$f \propto \sqrt{T}$. Tighter strings vibrate faster. / तनाव बढ़ाने पर डोरी तेजी से कंपन करती है।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "If the 'Length' of a vibrating string is 'Doubled', the frequency becomes:\nयदि कंपन करती डोरी की 'लंबाई' 'दोगुनी' कर दी जाए, तो आवृत्ति हो जाती है:",
+  "o": ["Double", "Half | आधी (Half)", "Four times", "None"],
+  "a": 1,
+  "e": "$f \propto 1/L$. Frequency is inversely proportional to length. / आवृत्ति लंबाई के व्युत्क्रमानुपाती होती है।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "What is a 'Sonometer' used to study?\n'सोनोमीटर' का उपयोग किसके अध्ययन के लिए किया जाता है?",
+  "o": ["Speed of light", "Laws of transverse vibrations of strings | डोरी के अनुप्रस्थ कंपनों के नियम", "Sound in liquids", "None"],
+  "a": 1,
+  "e": "Common lab instrument for verifying $f \propto \sqrt{T}/L$. / डोरी के नियमों को सत्यापित करने का लैब उपकरण।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "Which property of sound allows us to recognize a friend's voice without seeing them?\nध्वनि का कौन सा गुण हमें बिना देखे मित्र की आवाज पहचानने में मदद करता है?",
+  "o": ["Loudness", "Pitch", "Quality / Timbre | गुणता (Quality)", "Intensity"],
+  "a": 2,
+  "e": "Every voice has a unique set of harmonics and waveform. / हर आवाज का अपना विशिष्ट हार्मोनिक्स सेट होता है।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "What is the 'Loudness' of a normal conversation approx?\nसामान्य बातचीत की 'प्रबलता' लगभग कितनी होती है?",
+  "o": ["10 dB", "60 dB | 60 dB", "100 dB", "120 dB"],
+  "a": 1,
+  "e": "Typical range for human speech. / मानव भाषण के लिए विशिष्ट सीमा।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "What level of sound is considered 'Noise Pollution' in industrial areas by day?\nऔद्योगिक क्षेत्रों में दिन के समय किस स्तर की ध्वनि को 'ध्वनि प्रदूषण' माना जाता है?",
+  "o": ["Above 50 dB", "Above 75 dB | 75 dB से ऊपर", "Above 120 dB", "None"],
+  "a": 1,
+  "e": "According to environmental safety standards. / पर्यावरण सुरक्षा मानकों के अनुसार।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "Which 'Part' of the instrument 'Violin' produces sound?\n'वायलिन' वाद्ययंत्र का कौन सा 'भाग' ध्वनि उत्पन्न करता है?",
+  "o": ["Air column", "Stretched strings | खींची हुई डोरियाँ", "Metal plate", "None"],
+  "a": 1,
+  "e": "Vibrations in the strings are amplified by the wooden box. / डोरी के कंपन लकड़ी के बॉक्स द्वारा प्रवर्धित होते हैं।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "A 'Flute' produces sound due to the vibration of:\n'बांसुरी' किसके कंपन के कारण ध्वनि उत्पन्न करती है?",
+  "o": ["Strings", "Air Column | वायु स्तंभ (Air Column)", "Membrane", "None"],
+  "a": 1,
+  "e": "It is a wind instrument (Open pipe). / यह एक सुषिर वाद्ययंत्र है।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "What is the speed of sound in 'Hydrogen' gas approx?\n'हाइड्रोजन' गैस में ध्वनि की चाल लगभग कितनी है?",
+  "o": ["332 m/s", "1284 m/s | 1284 m/s", "5000 m/s", "None"],
+  "a": 1,
+  "e": "Much higher than air because hydrogen is very light. / हाइड्रोजन बहुत हल्की होने के कारण इसमें चाल अधिक होती है।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "How does 'Humidity' affect the speed of sound?\n'आर्द्रता' ध्वनि की चाल को कैसे प्रभावित करती है?",
+  "o": ["Decreases", "Increases | बढ़ाती है", "No effect", "None"],
+  "a": 1,
+  "e": "Moist air is lighter than dry air, so sound travels faster. / नम हवा शुष्क हवा से हल्की होती है।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "What happens to the speed of sound if 'Pressure' is doubled at constant temperature?\nयदि स्थिर तापमान पर 'दाब' दोगुना कर दिया जाए, तो ध्वनि की चाल का क्या होगा?",
+  "o": ["Doubles", "Remains same | स्थिर रहती है", "Halved", "None"],
+  "a": 1,
+  "e": "Speed is independent of pressure if temperature is constant. / तापमान स्थिर रहने पर दाब का कोई प्रभाव नहीं पड़ता।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "What is 'Ultrasonic' sound used for in medicine to break stones?\nकिडनी की पथरी तोड़ने के लिए चिकित्सा में किस ध्वनि का उपयोग होता है?",
+  "o": ["Infrasonic", "Lithotripsy (Ultrasonic) | लिथोट्रिप्सी (Ultrasonic)", "Audible", "None"],
+  "a": 1,
+  "e": "High energy ultrasonic waves shatter the stones. / उच्च ऊर्जा वाली अल्ट्रासोनिक तरंगें पथरी को तोड़ देती हैं।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "Which 'Harmonic' is missing in a closed organ pipe?\nबंद ऑर्गन पाइप में कौन सा 'हारमोनिक' अनुपस्थित होता है?",
+  "o": ["Odd Harmonics", "Even Harmonics | सम हारमोनिक (Even Harmonics)", "All", "None"],
+  "a": 1,
+  "e": "Only 1st, 3rd, 5th... harmonics are present. / केवल विषम हारमोनिक्स ही मौजूद होते हैं।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "What is the 'Fundamental Frequency' also called?\n'मूल आवृत्ति' को और क्या कहा जाता है?",
+  "o": ["First Harmonic | प्रथम हारमोनिक", "First Overtone", "Base frequency", "Both 1 and 3 | 1 और 3 दोनों"],
+  "a": 3,
+  "e": "It is the lowest frequency of vibration. / यह कंपन की सबसे कम आवृत्ति है।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "What is the wavelength of a sound wave if frequency is 20 Hz (v=340)?\nयदि आवृत्ति 20 Hz है, तो तरंगदैर्ध्य क्या होगी ($v=340$)?",
+  "o": ["1.7 m", "17 m | 17 मीटर", "34 m", "None"],
+  "a": 1,
+  "e": "$\lambda = v/f = 340/20 = 17$ m. / सूत्र $\lambda = v/f$ का उपयोग करके।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "Which sound wave has the 'Shortest' wavelength?\nकिस ध्वनि तरंग की 'तरंगदैर्ध्य' सबसे छोटी होती है?",
+  "o": ["Infrasonic", "Audible", "Ultrasonic | पराश्रव्य (Ultrasonic)", "None"],
+  "a": 2,
+  "e": "Highest frequency means shortest wavelength ($v = f\lambda$). / उच्चतम आवृत्ति मतलब न्यूनतम तरंगदैर्ध्य।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "What is the 'Speed of Sound' in 'Iron' approximately?\n'लोहे' में ध्वनि की चाल लगभग कितनी है?",
+  "o": ["340 m/s", "1500 m/s", "5130 m/s | 5130 मी/से", "None"],
+  "a": 2,
+  "e": "Iron is a rigid solid, so sound travels very fast. / लोहा कठोर ठोस है, इसलिए ध्वनि बहुत तेज चलती है।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "Which factor does 'NOT' affect the speed of sound in a gas?\nगैस में ध्वनि की चाल को कौन सा कारक प्रभावित 'नहीं' करता है?",
+  "o": ["Temperature", "Humidity", "Frequency | आवृत्ति (Frequency)", "Molecular weight"],
+  "a": 2,
+  "e": "Speed depends on medium properties, not on the frequency of wave. / चाल माध्यम के गुणों पर निर्भर करती है, तरंग की आवृत्ति पर नहीं।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "What is the 'Law of Tension' for strings?\nडोरियों के लिए 'तनाव का नियम' क्या है?",
+  "o": ["$f \propto T$", "$f \propto \sqrt{T}$ | $f \propto \sqrt{T}$", "$f \propto T^2$", "None"],
+  "a": 1,
+  "e": "Frequency is proportional to the square root of tension. / आवृत्ति तनाव के वर्गमूल के समानुपाती होती है।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "What is the 'Law of Mass' for vibrating strings?\nकंपन करती डोरियों के लिए 'द्रव्यमान का नियम' क्या है?",
+  "o": ["$f \propto m$", "$f \propto 1/\sqrt{m}$ | $f \propto 1/\sqrt{m}$", "$f \propto \sqrt{m}$", "None"],
+  "a": 1,
+  "e": "Heavier strings (higher mass per unit length) vibrate slower. / भारी डोरियाँ धीरे कंपन करती हैं।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "A 'Tuning Fork' is a source of sound of ______ frequency.\n'स्वरित्र द्विभुज' (Tuning Fork) ______ आवृत्ति की ध्वनि का स्रोत है।",
+  "o": ["Variable", "Constant / Single | नियत / एकल", "Multiple", "None"],
+  "a": 1,
+  "e": "Produces a pure tone (single frequency). / यह एक शुद्ध स्वर (एकल आवृत्ति) उत्पन्न करता है।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "What is 'Reverberation Time' according to Sabine's Formula?\nसेबाइन के सूत्र के अनुसार 'अनुरणन काल' क्या है?",
+  "o": ["$T \propto V$ | $T \propto V$ (आयतन के समानुपाती)", "$T \propto 1/V$", "$T = V$", "None"],
+  "a": 0,
+  "e": "$T = 0.161 V / \sum aS$. Larger rooms have longer reverberation. / बड़े कमरों में अनुरणन काल अधिक होता है।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "What is the 'Absorption Coefficient' of a perfect absorber?\nएक आदर्श अवशोषक का 'अवशोषण गुणांक' क्या होता है?",
+  "o": ["0", "0.5", "1 | एक (1)", "Infinite"],
+  "a": 2,
+  "e": "An open window is considered a perfect absorber (coefficient = 1). / खुली खिड़की को आदर्श अवशोषक माना जाता है।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "Which part of ear converts 'Sound Waves' into 'Mechanical Vibrations'?\nकान का कौन सा भाग 'ध्वनि तरंगों' को 'यांत्रिक कंपनों' में बदलता है?",
+  "o": ["Pinna", "Eardrum | कान का पर्दा", "Cochlea", "Auditory nerve"],
+  "a": 1,
+  "e": "Also called Tympanic membrane. / इसे टिम्पैनिक झिल्ली भी कहते हैं।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "What is 'Shock Wave' produced by supersonic objects called?\nसुपरसोनिक वस्तुओं द्वारा उत्पन्न 'शॉक वेव' को क्या कहते हैं?",
+  "o": ["Echo", "Sonic Boom | सोनिक बूम", "Beats", "None"],
+  "a": 1,
+  "e": "It is an explosive noise heard when aircraft breaks the sound barrier. / यह एक विस्फोटक शोर है।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "Which phenomenon is used by 'Dolphins' to detect obstacles?\n'डॉल्फिन' बाधाओं का पता लगाने के लिए किस घटना का उपयोग करती हैं?",
+  "o": ["Refraction", "Echolocation | प्रतिध्वनि-निर्धारण (Echolocation)", "Interference", "None"],
+  "a": 1,
+  "e": "They use ultrasonic waves and their echoes. / वे पराश्रव्य तरंगों और उनकी गूँज का उपयोग करती हैं।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "The sound produced by 'Bats' is:\n'चमगादड़' द्वारा उत्पन्न ध्वनि होती है:",
+  "o": ["Infrasonic", "Audible", "Ultrasonic | पराश्रव्य (Ultrasonic)", "None"],
+  "a": 2,
+  "e": "Bats can produce and hear frequencies up to 100 kHz. / चमगादड़ 100 kHz तक की आवृत्ति सुन सकते हैं।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "What happens to the 'Pitch' of a sound as frequency increases?\nआवृत्ति बढ़ने पर ध्वनि की 'पिच' का क्या होता है?",
+  "o": ["Decreases", "Increases | बढ़ती है", "No change", "None"],
+  "a": 1,
+  "e": "Pitch is the brain's perception of frequency. / पिच आवृत्ति के प्रति मस्तिष्क की अनुभूति है।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "What is the 'Unit' of Pitch?\n'पिच' का मात्रक क्या है?",
+  "o": ["Hertz", "Decibel", "It has no physical unit | इसका कोई भौतिक मात्रक नहीं है", "Phon"],
+  "a": 2,
+  "e": "Pitch is a subjective quality, though it correlates with frequency (Hz). / पिच एक व्यक्तिपरक गुण है।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "Which type of wave is 'Sound' in 'Steel'?\n'स्टील' में 'ध्वनि' किस प्रकार की तरंग है?",
+  "o": ["Longitudinal only", "Transverse only", "Both Longitudinal and Transverse | अनुदैर्ध्य और अनुप्रस्थ दोनों", "None"],
+  "a": 2,
+  "e": "Solids can support both types of elastic waves. / ठोस दोनों प्रकार की तरंगों का समर्थन कर सकते हैं।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "What is 'Intensity' of sound inversely proportional to?\nध्वनि की 'तीव्रता' किसके व्युत्क्रमानुपाती होती है?",
+  "o": ["Distance", "Square of Distance | दूरी के वर्ग के ($r^2$)", "Amplitude", "None"],
+  "a": 1,
+  "e": "Intensity decreases as you move away from the source ($I \propto 1/r^2$). / स्रोत से दूर जाने पर तीव्रता घटती है।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "What is the frequency of an 'Infrasonic' wave approx?\n'अधोश्राव्य' (Infrasonic) तरंग की आवृत्ति लगभग क्या है?",
+  "o": ["10 Hz | 10 Hz", "500 Hz", "50,000 Hz", "None"],
+  "a": 0,
+  "e": "Anything below 20 Hz. / 20 Hz से नीचे कुछ भी।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "Which 'Part' of the human voice box vibrates to produce sound?\nमानव स्वर यंत्र (Voice box) का कौन सा 'भाग' ध्वनि उत्पन्न करने के लिए कंपन करता है?",
+  "o": ["Windpipe", "Vocal Cords | वाक तंतु (Vocal Cords)", "Tongue", "None"],
+  "a": 1,
+  "e": "Air forced through vocal cords causes them to vibrate. / वाक तंतुओं से हवा गुजरने पर वे कंपन करते हैं।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "What is 'Ultrasonic' sound used for in 'Metal' testing?\n'धातु' परीक्षण में पराश्रव्य ध्वनि का उपयोग किसलिए होता है?",
+  "o": ["To melt metal", "To detect internal flaws/cracks | आंतरिक दोषों/दरारों का पता लगाने हेतु", "To color metal", "None"],
+  "a": 1,
+  "e": "Ultrasonic waves reflect from cracks inside the metal. / ये दरारों से परावर्तित हो जाती हैं।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "What is the speed of sound in 'Sea Water' compared to fresh water?\nमीठे पानी की तुलना में 'समुद्र के पानी' में ध्वनि की चाल क्या है?",
+  "o": ["Slower", "Faster | अधिक (Faster)", "Same", "None"],
+  "a": 1,
+  "e": "Salinity and density increase the speed in sea water. / खारापन और घनत्व चाल बढ़ा देते हैं।",
+  "cat": "gs",
+  "sub": "sound"
+},
+
+{
+  "q": "Which factor affects 'Thermal expansion'?\n'tapiya prasar' ko kaun sa karak prabhavit karta hai?",
+  "o": ["Nature of material | padarth ki prakriti", "Temp change | tapman parivartan", "Both | dono", "None"],
+  "a": 2,
+  "e": "Depends on bond strength and temperature rise. / bandhan ki mazbooti aur tapman vriddhi par nirbhar.",
+  "cat": "gs",
+  "sub": "heat"
+},
+{
+  "q": "What is 'Latent Heat' of 'Sublimation' equal to?\n'urdhvapatan' ki 'gupt ushma' kiske barabar hai?",
+  "o": ["Fusion + Vaporization | galan + vashpikaran", "Fusion - Vaporization", "Only Fusion", "None"],
+  "a": 0,
+  "e": "Total heat required to go from solid to gas. / thos se gas tak jane ke liye kul avashyak ushma.",
+  "cat": "gs",
+  "sub": "heat"
+},
+{
+  "q": "What is 'Reversible' engine example?\n'utkramaniya' engine ka udaharan kya hai?",
+  "o": ["Petrol engine", "Carnot engine | carnot engine", "Diesel engine", "None"],
+  "a": 1,
+  "e": "Theoretical ideal engine with no friction or loss. / bina gharshan ya nuksan wala saiddhantik adarsh engine.",
+  "cat": "gs",
+  "sub": "heat"
+},
+{
+  "q": "What is 'Doppler Effect' in sound primarily related to?\nध्वनि में 'डॉप्लर प्रभाव' मुख्य रूप से किससे संबंधित है?",
+  "o": ["Change in loudness", "Apparent change in frequency | आवृत्ति में आभासी परिवर्तन", "Change in wave speed", "None"],
+  "a": 1,
+  "e": "Observed when there is relative motion between source and observer. / जब स्रोत या श्रोता के बीच सापेक्ष गति होती है, तब यह दिखता है।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "What happens to 'Apparent Frequency' if the 'Source' moves towards a stationary observer?\nयदि 'स्रोत' स्थिर श्रोता की ओर बढ़ता है, तो 'आभासी आवृत्ति' का क्या होगा?",
+  "o": ["Decreases", "Increases | बढ़ती है", "Remains same", "None"],
+  "a": 1,
+  "e": "Waves are compressed, leading to a higher perceived frequency. / तरंगें दब जाती हैं, जिससे आवृत्ति बढ़ी हुई लगती है।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "What is the frequency of musical note 'Sa' (Shadja) in Indian classical music (approx)?\nभारतीय शास्त्रीय संगीत में 'सा' (षड्ज) स्वर की आवृत्ति लगभग क्या है?",
+  "o": ["240 Hz | 240 Hz", "256 Hz", "440 Hz", "512 Hz"],
+  "a": 0,
+  "e": "Standard base frequency often used in textbooks for 'Sa'. / पाठ्यपुस्तकों में 'सा' के लिए अक्सर 240 Hz का उपयोग होता है।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "What is the frequency of musical note 'Pa' (Pancham) if 'Sa' is 240 Hz?\nयदि 'सा' 240 Hz है, तो 'प' (पंचम) की आवृत्ति क्या होगी?",
+  "o": ["300 Hz", "360 Hz | 360 Hz", "480 Hz", "None"],
+  "a": 1,
+  "e": "Ratio of Pa to Sa is 3:2. So $240 \times 1.5 = 360$ Hz. / प और सा का अनुपात 3:2 होता है।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "What is 'Mach Number' if an aircraft flies at 680 m/s in air where speed of sound is 340 m/s?\nयदि विमान 680 m/s की चाल से उड़ता है और ध्वनि की चाल 340 m/s है, तो 'मैक नंबर' क्या होगा?",
+  "o": ["1", "2 | 2", "0.5", "None"],
+  "a": 1,
+  "e": "Mach Number = Speed of Object / Speed of Sound = 680/340 = 2. / मैक नंबर = वस्तु की चाल / ध्वनि की चाल।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "What are 'Overtones' in an open organ pipe?\nएक खुले ऑर्गन पाइप में 'अधिस्वरक' (Overtones) क्या होते हैं?",
+  "o": ["Only odd harmonics", "Only even harmonics", "All integer harmonics | सभी पूर्णांक हारमोनिक्स (1, 2, 3...)", "None"],
+  "a": 2,
+  "e": "Open pipes produce both odd and even multiples of fundamental frequency. / खुले पाइप में सभी हारमोनिक्स मौजूद होते हैं।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "Which property of sound 'Does Not' change when sound reflects from a wall?\nदीवार से परावर्तित होने पर ध्वनि का कौन सा गुण 'नहीं' बदलता?",
+  "o": ["Speed", "Wavelength", "Frequency", "All of these | उपरोक्त सभी"],
+  "a": 3,
+  "e": "In the same medium, speed, wavelength and frequency remain constant after reflection. / एक ही माध्यम में परावर्तन के बाद ये तीनों स्थिर रहते हैं।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "What is 'Intensity' of sound proportional to?\nध्वनि की 'तीव्रता' किसके समानुपाती होती है?",
+  "o": ["Amplitude", "Square of Amplitude | आयाम के वर्ग के ($A^2$)", "Frequency", "None"],
+  "a": 1,
+  "e": "Energy carried is proportional to the square of the displacement. / प्रवाहित ऊर्जा विस्थापन के वर्ग के समानुपाती होती है।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "What is 'Sound Level' in dB for 'Painful' noise?\n'दर्दनाक' शोर के लिए dB में 'ध्वनि स्तर' क्या है?",
+  "o": ["60 dB", "90 dB", "120 dB | 120 dB", "None"],
+  "a": 2,
+  "e": "120 dB is the threshold of pain for human ears. / 120 dB मानव कान के लिए दर्द की सीमा है।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "What is the 'Reflection' of sound inside a 'Stethoscope' called?\n'स्टेथोस्कोप' के अंदर ध्वनि के 'परावर्तन' को क्या कहते हैं?",
+  "o": ["Single reflection", "Multiple reflection | बहु-परावर्तन", "Refraction", "None"],
+  "a": 1,
+  "e": "Sound reaches the doctor's ears through repeated reflections in the tube. / ट्यूब में बार-बार होने वाले परावर्तन से आवाज डॉक्टर तक पहुँचती है।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "Which part of ear is filled with 'Fluid' and 'Hair cells'?\nकान का कौन सा भाग 'द्रव' और 'हेयर सेल्स' से भरा होता है?",
+  "o": ["External ear", "Middle ear", "Inner ear (Cochlea) | आंतरिक कान (कोकलिया)", "None"],
+  "a": 2,
+  "e": "The cochlea converts vibrations into nerve impulses. / कोकलिया कंपनों को तंत्रिका आवेगों में बदलता है।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "What is 'Resonance' in sound box of a Guitar?\nगिटार के साउंड बॉक्स में 'अनुनाद' (Resonance) क्या है?",
+  "o": ["Stopping sound", "Vibrating air at natural frequency to amplify sound | आवाज बढ़ाने हेतु प्राकृतिक आवृत्ति पर कंपन", "Echo", "None"],
+  "a": 1,
+  "e": "The box amplifies the weak sound of the string. / बॉक्स डोरी की कमजोर आवाज को बढ़ा देता है।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "What is the 'Minimum Frequency' for 'Ultrasonic' waves?\n'पराश्रव्य' (Ultrasonic) तरंगों के लिए 'न्यूनतम आवृत्ति' क्या है?",
+  "o": ["20 Hz", "2000 Hz", "20,000 Hz | 20,000 Hz", "None"],
+  "a": 2,
+  "e": "Waves with frequency higher than 20 kHz are ultrasonic. / 20 kHz से ऊपर की तरंगें पराश्रव्य होती हैं।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "Which phenomenon causes 'Beats'?\nकिस घटना के कारण 'विपन्द' (Beats) बनते हैं?",
+  "o": ["Reflection", "Refraction", "Interference | व्यतिकरण (Interference)", "None"],
+  "a": 2,
+  "e": "Formed by the superposition of waves of slightly different frequencies. / थोड़ी अलग आवृत्तियों की तरंगों के मिलने से बनते हैं।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "What is 'Mach 1' speed equivalent to?\n'मैक 1' चाल किसके बराबर होती है?",
+  "o": ["Speed of light", "Speed of sound | ध्वनि की चाल", "Half of sound speed", "None"],
+  "a": 1,
+  "e": "Mach 1 means the object is moving at the speed of sound. / मैक 1 का मतलब है वस्तु ध्वनि की गति से चल रही है।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "What happens to 'Wavelength' when sound speed 'Increases' in a medium?\nजब माध्यम में ध्वनि की चाल 'बढ़ती' है, तो 'तरंगदैर्ध्य' का क्या होता है?",
+  "o": ["Decreases", "Increases | बढ़ती है", "Stay same", "None"],
+  "a": 1,
+  "e": "Since $v = f \lambda$ and $f$ is constant, $\lambda$ is proportional to $v$. / क्योंकि आवृत्ति स्थिर रहती है, तरंगदैर्ध्य चाल के समानुपाती होती है।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "Which waves are used to 'Measure' the depth of an ocean?\nसमुद्र की गहराई 'मापने' के लिए किन तरंगों का उपयोग होता है?",
+  "o": ["Infrasonic", "Audible", "Ultrasonic (SONAR) | पराश्रव्य (सोनार)", "Radio waves"],
+  "a": 2,
+  "e": "Ultrasonic waves travel well in water and reflect off the bottom. / पराश्रव्य तरंगें पानी में अच्छी तरह चलती हैं और तल से टकराकर लौटती हैं।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "What is the 'SI Unit' of the amplitude of a sound wave?\nध्वनि तरंग के आयाम का 'SI मात्रक' क्या है?",
+  "o": ["Watt", "Decibel", "Meter | मीटर (Meter)", "Hertz"],
+  "a": 2,
+  "e": "Amplitude is the maximum displacement, so it's measured in meters. / आयाम अधिकतम विस्थापन है, इसलिए इसे मीटर में मापते हैं।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "What is 'Musical Interval' between Sa and High Sa (Sa')?\nसा और ऊँचे सा (Sa') के बीच 'संगीत अंतराल' क्या है?",
+  "o": ["Octave | सप्तक (Octave)", "Semi-tone", "Tone", "None"],
+  "a": 0,
+  "e": "The frequency of high Sa is double the original Sa (Ratio 2:1). / ऊँचे सा की आवृत्ति मूल सा की दोगुनी होती है।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "What is the frequency ratio of note 'Ga' to 'Sa'?\n'ग' और 'सा' के स्वरों का आवृत्ति अनुपात क्या है?",
+  "o": ["9/8", "5/4 | 5/4", "4/3", "None"],
+  "a": 1,
+  "e": "Standard ratio in diatonic musical scale. / डायटोनिक संगीत पैमाने में मानक अनुपात।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "What is 'Persistence of Vision' compared to 'Persistence of Hearing' (0.1s)?\n'श्रवण की दृढ़ता' (0.1s) की तुलना में 'दृष्टि की दृढ़ता' क्या है?",
+  "o": ["0.1s", "1/16 sec | 1/16 सेकंड", "1 sec", "None"],
+  "a": 1,
+  "e": "Eyes retain images for approx 1/16th of a second. / आँखें लगभग 1/16 सेकंड तक चित्र को बनाए रखती हैं।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "Why can we hear 'Echoes' clearly in an empty hall but not in a furnished room?\nखाली हॉल में 'गूँज' साफ क्यों सुनाई देती है, लेकिन फर्नीचर वाले कमरे में क्यों नहीं?",
+  "o": ["Furniture reflects sound", "Furniture absorbs sound | फर्नीचर ध्वनि सोख लेता है", "No reason", "None"],
+  "a": 1,
+  "e": "Soft surfaces like curtains and sofas prevent multiple reflections. / पर्दे और सोफे जैसी मुलायम सतहें परावर्तन को रोकती हैं।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "What is 'Infrasound' used by 'Whales'?\n'व्हेल' द्वारा अधोश्राव्य (Infrasound) का उपयोग किसलिए होता है?",
+  "o": ["To sing", "Long distance communication | लंबी दूरी का संचार", "To jump", "None"],
+  "a": 1,
+  "e": "Low frequencies travel much further in water than high frequencies. / कम आवृत्तियाँ पानी में बहुत दूर तक जाती हैं।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "Which part of ear is 'Snail-shaped' and filled with fluid?\nकान का कौन सा भाग 'घोंघे के आकार' का और द्रव से भरा होता है?",
+  "o": ["Pinna", "Cochlea | कोकलिया (Cochlea)", "Eardrum", "Anvil"],
+  "a": 1,
+  "e": "Primary organ for hearing in the inner ear. / आंतरिक कान में सुनने का मुख्य अंग।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "What is 'Threshold of Pain' for humans in Watts/$m^2$?\nमनुष्यों के लिए 'दर्द की दहलीज' वॉट/$m^2$ में क्या है?",
+  "o": ["$10^{-12}$", "$1 | 1 W/m^2$", "$100$", "None"],
+  "a": 1,
+  "e": "Equivalent to 120 dB. / यह 120 dB के बराबर है।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "What happens to sound 'Speed' when temperature 'Drops'?\nजब तापमान 'गिरता' है, तो ध्वनि की 'चाल' का क्या होगा?",
+  "o": ["Increases", "Decreases | घटती है", "Stay same", "None"],
+  "a": 1,
+  "e": "Speed is directly proportional to $\sqrt{T}$. Cold air means slower sound. / कम तापमान पर ध्वनि धीमी चलती है।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "Which law states that 'Sound follows laws of reflection'?\nकौन सा नियम कहता है कि 'ध्वनि परावर्तन के नियमों का पालन करती है'?",
+  "o": ["Ohm's Law", "Laws of Reflection | परावर्तन के नियम", "Boyle's Law", "None"],
+  "a": 1,
+  "e": "Angle of incidence = Angle of reflection. / आपतन कोण = परावर्तन कोण।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "What is 'Shock Wave' related to?\n'शॉक वेव' किससे संबंधित है?",
+  "o": ["Infrasonics", "Sonic Boom | सोनिक बूम", "Beats", "None"],
+  "a": 1,
+  "e": "Created when object speed > speed of sound. / जब वस्तु की चाल > ध्वनि की चाल हो।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "What is the 'Time' difference between original sound and echo for a distance of 34m (v=340)?\n34m की दूरी (v=340) के लिए मूल ध्वनि और गूँज के बीच 'समय' का अंतर क्या होगा?",
+  "o": ["0.1s", "0.2s | 0.2 सेकंड", "1s", "None"],
+  "a": 1,
+  "e": "Total distance traveled = 2 x 34 = 68m. Time = 68/340 = 0.2s. / कुल दूरी = 68m, समय = 0.2s।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "Which 'Animal' can produce the loudest sound on Earth?\nपृथ्वी पर कौन सा 'जानवर' सबसे तेज ध्वनि उत्पन्न कर सकता है?",
+  "o": ["Elephant", "Blue Whale | ब्लू व्हेल (Blue Whale)", "Lion", "Human"],
+  "a": 1,
+  "e": "Blue whales can produce sounds up to 188 dB. / ब्लू व्हेल 188 dB तक की ध्वनि उत्पन्न कर सकती है।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "What is 'Ultrasonic' sound used for in 'Tooth Cleaning'?\n'दांतों की सफाई' में पराश्रव्य ध्वनि का क्या उपयोग है?",
+  "o": ["Whiten teeth", "Shatter plaque/tartar | प्लैक/टार्टर को तोड़ना", "Numb pain", "None"],
+  "a": 1,
+  "e": "Ultrasonic scalers vibrate to remove hard deposits. / अल्ट्रासोनिक स्केलर कठोर जमाव को हटाने हेतु कंपन करते हैं।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "What is the wavelength of 1,000,000 Hz ultrasonic sound in air (v=340)?\nहवा (v=340) में 10 लाख Hz पराश्रव्य ध्वनि की 'तरंगदैर्ध्य' क्या होगी?",
+  "o": ["0.34 mm | 0.34 mm", "3.4 mm", "34 mm", "None"],
+  "a": 0,
+  "e": "$\lambda = 340 / 1,000,000 = 0.00034$ m = 0.34 mm. / बहुत छोटी तरंगदैर्ध्य।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "Which part of ear is 'Amplifier' of sound vibrations?\nकान का कौन सा भाग ध्वनि कंपनों का 'प्रवर्धक' (Amplifier) है?",
+  "o": ["Pinna", "Ossicles (Middle ear bones) | मध्य कर्ण की हड्डियाँ", "Cochlea", "None"],
+  "a": 1,
+  "e": "Tiny bones amplify pressure up to 20 times. / छोटी हड्डियाँ दबाव को 20 गुना तक बढ़ा देती हैं।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "What is 'Diffraction' more noticeable in: Sound or Light?\n'विवर्तन' किसमें अधिक स्पष्ट होता है: ध्वनि या प्रकाश?",
+  "o": ["Light", "Sound | ध्वनि (Sound)", "Both same", "None"],
+  "a": 1,
+  "e": "Sound wavelengths are larger and closer to size of common obstacles. / ध्वनि की तरंगदैर्ध्य बड़ी होती है।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "What is the 'Frequency Ratio' for the musical note 'Ni' (Nishad)?\n'नी' (निषाद) स्वर का आवृत्ति अनुपात क्या है?",
+  "o": ["5/3", "15/8 | 15/8", "9/8", "None"],
+  "a": 1,
+  "e": "Standard frequency ratio for the 7th note. / सातवें स्वर का मानक अनुपात।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "What is 'Supersonic' vs 'Ultrasonic'?\n'सुपरसोनिक' बनाम 'अल्ट्रासोनिक' क्या है?",
+  "o": ["Both same", "Supersonic is speed, Ultrasonic is frequency | सुपरसोनिक चाल है, पराश्रव्य आवृत्ति", "Both frequency", "None"],
+  "a": 1,
+  "e": "Supersonic > speed of sound. Ultrasonic > 20 kHz frequency. / सुपरसोनिक चाल से जुड़ा है, अल्ट्रासोनिक आवृत्ति से।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "What is 'Reverberation' time unit?\n'अनुरणन' समय का मात्रक क्या है?",
+  "o": ["dB", "Hz", "Seconds | सेकंड (Seconds)", "Meter"],
+  "a": 2,
+  "e": "Measured as the time sound takes to decay by 60 dB. / ध्वनि को 60 dB तक कम होने में लगा समय।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "What is 'Acoustic Shadow'?\n'अकौस्टिक शैडो' (Acoustic Shadow) क्या है?",
+  "o": ["Region of high sound", "Region where sound is blocked by an obstacle | वह क्षेत्र जहाँ बाधा द्वारा ध्वनि रुक जाती है", "Light shadow", "None"],
+  "a": 1,
+  "e": "Area behind a large barrier where sound intensity is low. / बड़े अवरोध के पीछे का क्षेत्र।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "What is 'Echo-ranging' used in submarines?\nपनडुब्बियों में 'इको-रेंजिंग' का क्या उपयोग है?",
+  "o": ["To hide", "To detect distance of enemy ships | दुश्मन जहाजों की दूरी का पता लगाना", "To save fuel", "None"],
+  "a": 1,
+  "e": "Part of SONAR technology. / सोनार तकनीक का हिस्सा।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "What is 'Phon' a unit of?\n'फोन' (Phon) किसका मात्रक है?",
+  "o": ["Frequency", "Loudness Level | प्रबलता स्तर (Loudness Level)", "Pressure", "None"],
+  "a": 1,
+  "e": "Subjective unit of loudness perceived by humans. / मनुष्यों द्वारा महसूस की गई प्रबलता का मात्रक।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "Which medium conducts sound 'Fastest' at room temperature?\nकमरे के तापमान पर कौन सा माध्यम ध्वनि को 'सबसे तेज' संचालित करता है?",
+  "o": ["Air", "Water", "Steel | स्टील (Steel)", "Vacuum"],
+  "a": 2,
+  "e": "Solids have highest elasticity and density favor. / ठोस में उच्च प्रत्यास्थता होती है।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "What happens to the 'Speed of Sound' in a gas if temperature is made 4 times (Kelvin)?\nयदि गैस का तापमान (केल्विन) 4 गुना कर दिया जाए, तो ध्वनि की 'चाल' क्या होगी?",
+  "o": ["Doubles | दोगुनी हो जाएगी", "Four times", "Halved", "Stay same"],
+  "a": 0,
+  "e": "$v \propto \sqrt{T}$. $\sqrt{4} = 2$. / चाल तापमान के वर्गमूल के समानुपाती होती है।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "What is the 'Beat Frequency' if notes are 400 Hz and 405 Hz?\nयदि स्वर 400 Hz और 405 Hz हैं, तो 'विपन्द आवृत्ति' क्या होगी?",
+  "o": ["805 Hz", "5 Hz | 5 Hz", "0.05 Hz", "None"],
+  "a": 1,
+  "e": "Difference is 405 - 400 = 5 Hz. / अंतर 5 हर्ट्ज़ है।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "What is 'Harmonics' relation for strings?\nडोरियों के लिए 'हारमोनिक्स' संबंध क्या है?",
+  "o": ["1:3:5", "1:2:3 | 1:2:3", "2:4:6", "None"],
+  "a": 1,
+  "e": "Strings produce all integer multiples of fundamental frequency. / डोरियाँ मूल आवृत्ति के सभी पूर्णांक गुणक उत्पन्न करती हैं।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "What is 'Node' in a standing wave?\nस्थिर तरंग में 'नोड' (Node) क्या है?",
+  "o": ["Max displacement", "Zero displacement | शून्य विस्थापन", "Max speed", "None"],
+  "a": 1,
+  "e": "Point where particles do not move. / वह बिंदु जहाँ कण नहीं हिलते।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "What is 'Antinode' in a standing wave?\nस्थिर तरंग में 'प्रस्पंद' (Antinode) क्या है?",
+  "o": ["Zero displacement", "Maximum displacement | अधिकतम विस्थापन", "Point of rest", "None"],
+  "a": 1,
+  "e": "Point where amplitude is maximum. / वह बिंदु जहाँ आयाम अधिकतम होता है।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "Which 'Part' of stethoscope is placed on patient's skin?\nस्टेथोस्कोप का कौन सा 'भाग' रोगी की त्वचा पर रखा जाता है?",
+  "o": ["Earpiece", "Diaphragm | डायाफ्राम (Diaphragm)", "Tube", "None"],
+  "a": 1,
+  "e": "Vibrates with body sounds and passes them to tubes. / शरीर की आवाजों से कंपन करता है।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "What is the 'Speed' of sound in air at 100°C approx?\n100°C पर हवा में ध्वनि की 'चाल' लगभग क्या है?",
+  "o": ["332 m/s", "380 m/s | लगभग 380-390 मी/से", "500 m/s", "None"],
+  "a": 1,
+  "e": "Speed increases with temperature. / तापमान के साथ चाल बढ़ती है।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "What is the formula for 'Sound Intensity Level' in decibels ($L$)?\nडेसीबल ($L$) में 'ध्वनि तीव्रता स्तर' का सूत्र क्या है?",
+  "o": ["$10 \log_{10}(I/I_0)$ | $10 \log_{10}(I/I_0)$", "$\log(I)$", "$I/I_0$", "None"],
+  "a": 0,
+  "e": "$I_0$ is the reference intensity ($10^{-12} W/m^2$). / $I_0$ संदर्भ तीव्रता है।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "If sound intensity is doubled, by how much does the 'Decibel Level' increase approx?\nयदि ध्वनि की तीव्रता दोगुनी हो जाए, तो 'डेसीबल स्तर' लगभग कितना बढ़ जाता है?",
+  "o": ["2 dB", "3 dB | 3 dB", "10 dB", "None"],
+  "a": 1,
+  "e": "$\Delta L = 10 \log_{10}(2) \approx 3$ dB. / तीव्रता दोगुनी होने पर स्तर 3 dB बढ़ता है।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "What is the 'Reference Intensity' ($I_0$) for measuring sound level?\nध्वनि स्तर मापने के लिए 'संदर्भ तीव्रता' ($I_0$) क्या है?",
+  "o": ["$1 W/m^2$", "$10^{-12} W/m^2$ | $10^{-12} W/m^2$", "$10^{-6} W/m^2$", "None"],
+  "a": 1,
+  "e": "Corresponds to the threshold of hearing at 1000 Hz. / यह 1000 Hz पर सुनने की दहलीज के बराबर है।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "Which property of a wave is 'Phase' ($\phi$)?\nतरंग का 'कला' (Phase) गुण क्या है?",
+  "o": ["Speed", "Position of a point in a cycle | चक्र में किसी बिंदु की स्थिति", "Loudness", "None"],
+  "a": 1,
+  "e": "Describes the relative position of a wave at a given time. / यह किसी समय पर तरंग की सापेक्ष स्थिति बताता है।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "What is 'Phase Difference' between two points separated by distance $\lambda$?\n$\lambda$ दूरी पर स्थित दो बिंदुओं के बीच 'कलांतर' (Phase Difference) क्या होता है?",
+  "o": ["$90^\circ$", "$180^\circ$", "$360^\circ$ (or $2\pi$) | $360^\circ$ (या $2\pi$)", "Zero"],
+  "a": 2,
+  "e": "A full wavelength corresponds to a phase change of $2\pi$. / एक पूरी तरंगदैर्ध्य $2\pi$ कला परिवर्तन के बराबर होती है।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "Which 'Mode' of vibration has the lowest frequency in a string?\nएक डोरी में कंपन के किस 'मोड' की आवृत्ति सबसे कम होती है?",
+  "o": ["Overtone", "Fundamental Mode | मूल मोड (Fundamental)", "Harmonic", "None"],
+  "a": 1,
+  "e": "Also called the first harmonic. / इसे प्रथम हारमोनिक भी कहा जाता है।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "What is 'Ultrasound Scan' (A-scan) used for in ophthalmology?\nनेत्र विज्ञान में 'अल्ट्रासाउंड स्कैन' (A-scan) का उपयोग किसलिए होता है?",
+  "o": ["Measure eye length | आँख की लंबाई मापने के लिए", "Check color blindness", "Surgery", "None"],
+  "a": 0,
+  "e": "Used to determine the power of intraocular lens for cataract. / मोतियाबिंद के लिए लेंस की शक्ति निर्धारित करने हेतु।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "What is 'Mach Number' of an object moving at 'Hypersonic' speed?\n'हाइपरसोनिक' चाल से चलने वाली वस्तु का 'मैक नंबर' क्या होता है?",
+  "o": ["1", "Above 5 | 5 से अधिक", "Below 1", "2"],
+  "a": 1,
+  "e": "Speeds much higher than supersonic are called hypersonic. / सुपरसोनिक से बहुत अधिक चाल हाइपरसोनिक कहलाती है।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "The 'Loudness' of sound depends on the ______ of the listener's ear.\nध्वनि की 'प्रबलता' श्रोता के कान की ______ पर निर्भर करती है।",
+  "o": ["Shape", "Sensitivity | संवेदनशीलता (Sensitivity)", "Size", "None"],
+  "a": 1,
+  "e": "Loudness is a physiological response, unlike physical intensity. / प्रबलता एक शारीरिक प्रतिक्रिया है।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "What is 'Acoustics' of a building?\nकिसी भवन की 'अकौस्टिक्स' क्या है?",
+  "o": ["Architecture", "Properties that determine sound quality | ध्वनि की गुणवत्ता निर्धारित करने वाले गुण", "Lighting", "None"],
+  "a": 1,
+  "e": "Deals with reflection, absorption and transmission of sound. / यह ध्वनि के परावर्तन और अवशोषण से संबंधित है।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "Which material is used in 'Ultrasonic' transducers?\n'पराबैंगनी' ट्रांसड्यूसर में किस सामग्री का उपयोग होता है?",
+  "o": ["Copper", "Piezoelectric crystals (Quartz) | पीजोइलेक्ट्रिक क्रिस्टल", "Iron", "None"],
+  "a": 1,
+  "e": "Converts electrical energy into ultrasonic vibrations. / विद्युत ऊर्जा को पराश्रव्य कंपनों में बदलता है।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "What is 'Standing Wave' also known as?\n'स्थिर तरंग' (Standing Wave) को और क्या कहा जाता है?",
+  "o": ["Progressive wave", "Stationary Wave | अप्रगामी तरंग (Stationary)", "Light wave", "None"],
+  "a": 1,
+  "e": "Energy is trapped and does not travel forward. / ऊर्जा फंसी रहती है और आगे नहीं बढ़ती।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "What is the 'Amplitude' of a point at a 'Node'?\n'नोड' (Node) पर किसी बिंदु का 'आयाम' क्या होता है?",
+  "o": ["Maximum", "Zero | शून्य (Zero)", "Constant", "None"],
+  "a": 1,
+  "e": "Nodes are points of no displacement. / नोड बिना विस्थापन वाले बिंदु होते हैं।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "What is 'Antinode' a point of?\n'प्रस्पंद' (Antinode) किसका बिंदु है?",
+  "o": ["Zero amplitude", "Maximum amplitude | अधिकतम आयाम (Maximum)", "Rest", "None"],
+  "a": 1,
+  "e": "Points where displacement is largest in a standing wave. / जहाँ विस्थापन सबसे अधिक होता है।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "What is the distance between a 'Node' and the next 'Antinode'?\nएक 'नोड' और अगले 'प्रस्पंद' के बीच की दूरी क्या है?",
+  "o": ["$\lambda$", "$\lambda/2$", "$\lambda/4$ | $\lambda/4$", "None"],
+  "a": 2,
+  "e": "Quarter of a wavelength distance. / एक चौथाई तरंगदैर्ध्य की दूरी।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "Which part of ear is 'Pinna'?\nकान का कौन सा भाग 'पिन्ना' (Pinna) है?",
+  "o": ["Inner ear", "Middle ear", "Outer ear | बाहरी कान", "None"],
+  "a": 2,
+  "e": "Collects sound waves from surroundings. / आसपास से ध्वनि तरंगें एकत्र करता है।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "What is 'Intensity' of sound at 'Threshold of Hearing'?\n'श्रवण की दहलीज' पर ध्वनि की 'तीव्रता' क्या है?",
+  "o": ["$10^{-12} W/m^2$ | $10^{-12} W/m^2$", "$0 W/m^2$", "$1 W/m^2$", "None"],
+  "a": 0,
+  "e": "Minimum physical intensity detectable by human ear. / मानव कान द्वारा खोजी जाने वाली न्यूनतम भौतिक तीव्रता।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "The intensity level of $10^{-6} W/m^2$ is ______ dB.\n$10^{-6} W/m^2$ का तीव्रता स्तर ______ dB है।",
+  "o": ["30", "60 | 60 dB", "90", "None"],
+  "a": 1,
+  "e": "$10 \log(10^{-6}/10^{-12}) = 10 \times 6 = 60$. / सूत्र का उपयोग करके गणना।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "Which sound wave property changes during 'Refraction'?\n'अपवर्तन' (Refraction) के दौरान ध्वनि का कौन सा गुण बदलता है?",
+  "o": ["Frequency", "Wavelength and Speed | तरंगदैर्ध्य और चाल", "Only Amplitude", "None"],
+  "a": 1,
+  "e": "Frequency remains constant when medium changes. / माध्यम बदलने पर आवृत्ति स्थिर रहती है।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "What is 'Acoustic Insulation'?\n'ध्वनि इन्सुलेशन' (Acoustic Insulation) क्या है?",
+  "o": ["Amplifying sound", "Reducing sound transmission between spaces | कमरों के बीच ध्वनि संचरण कम करना", "Cleaning sound", "None"],
+  "a": 1,
+  "e": "Uses materials like mineral wool to block sound. / ध्वनि रोकने के लिए खनिज ऊन जैसी सामग्री का उपयोग।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "Which 'Animal' produces sounds to navigate in caves (not bat)?\nगुफाओं में दिशा खोजने के लिए कौन सा 'जानवर' ध्वनि निकालता है (चमगादड़ नहीं)?",
+  "o": ["Dolphin", "Swiftlet bird | स्विफ्टलेट पक्षी", "Cat", "None"],
+  "a": 1,
+  "e": "Certain birds use clicks for echolocation in the dark. / कुछ पक्षी अंधेरे में इकोलोकेशन का उपयोग करते हैं।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "What happens to the speed of sound if 'Carbon Dioxide' is added to air?\nयदि हवा में 'कार्बन डाइऑक्साइड' मिला दी जाए, तो ध्वनि की चाल का क्या होगा?",
+  "o": ["Increases", "Decreases | कम होगी (Decreases)", "Stay same", "None"],
+  "a": 1,
+  "e": "CO2 is heavier than air, increasing density and lowering speed. / CO2 भारी होती है, जिससे चाल कम हो जाती है।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "What is 'Beats' frequency if $f_1=500 Hz$ and $f_2=508 Hz$?\nयदि $f_1=500$ और $f_2=508$ हो, तो 'विपन्द' आवृत्ति क्या होगी?",
+  "o": ["504 Hz", "8 Hz | 8 Hz", "1008 Hz", "None"],
+  "a": 1,
+  "e": "$|508 - 500| = 8$ Hz. / आवृत्तियों का अंतर।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "What is 'Ultrasonic' sound used for in 'Surgical' instruments?\n'सर्जिकल' उपकरणों में पराश्रव्य ध्वनि का क्या उपयोग है?",
+  "o": ["Heating", "Sterilization | कीटाणुशोधन (Sterilization)", "Coloring", "None"],
+  "a": 1,
+  "e": "Vibrations kill bacteria and clean intricate tools. / कंपन बैक्टीरिया को मारते हैं और औजारों को साफ करते हैं।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "The speed of sound in 'Steel' is ______ than in 'Water'.\n'स्टील' में ध्वनि की चाल 'पानी' की तुलना में ______ होती है।",
+  "o": ["Less", "More | अधिक (More)", "Equal", "None"],
+  "a": 1,
+  "e": "Approx 5960 m/s in steel vs 1500 m/s in water. / स्टील में लगभग 5960 और पानी में 1500 होती है।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "What is 'Wave Number' ($k$)?\n'तरंग संख्या' ($k$) क्या है?",
+  "o": ["$1/\lambda$", "$2\pi/\lambda$ | $2\pi/\lambda$", "$f \lambda$", "None"],
+  "a": 1,
+  "e": "Defined as the spatial frequency of a wave. / यह तरंग की स्थानिक आवृत्ति है।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "What is the frequency of Note 'Re' (Rishabh) if 'Sa' is 240 Hz?\nयदि 'सा' 240 Hz है, तो 'रे' (ऋषभ) की आवृत्ति क्या है?",
+  "o": ["270 Hz | 270 Hz", "300 Hz", "480 Hz", "None"],
+  "a": 0,
+  "e": "Ratio is 9/8. $240 \times 1.125 = 270$ Hz. / रे और सा का अनुपात 9/8 होता है।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "Which part of ear is 'Anvil' (Incus)?\nकान का कौन सा भाग 'एनविल' (Anvil) है?",
+  "o": ["Outer ear", "Middle ear | मध्य कर्ण", "Inner ear", "None"],
+  "a": 1,
+  "e": "One of the three tiny ossicle bones. / तीन छोटी हड्डियों में से एक।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "What is 'Infrasonic' vibration produced by 'Earthquakes' called?\n'भूकंप' द्वारा उत्पन्न अधोश्राव्य कंपनों को क्या कहते हैं?",
+  "o": ["Light waves", "Seismic waves | भूकंपीय तरंगें (Seismic)", "Sound beats", "None"],
+  "a": 1,
+  "e": "Includes primary (P) and secondary (S) waves. / इसमें P और S तरंगें शामिल हैं।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "What is the speed of sound in 'Moist Air' compared to 'Dry Air'?\n'नम हवा' में ध्वनि की चाल 'शुष्क हवा' की तुलना में क्या है?",
+  "o": ["Slower", "Faster | अधिक (Faster)", "Same", "None"],
+  "a": 1,
+  "e": "Density of moist air is lower than dry air. / नम हवा का घनत्व कम होता है।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "What is 'Decibel' a unit of 'Power Ratio'?\n'डेसीबल' किस 'शक्ति अनुपात' का मात्रक है?",
+  "o": ["Linear", "Logarithmic | लघुगणकीय (Logarithmic)", "Square", "None"],
+  "a": 1,
+  "e": "Used to express large ratios in a manageable scale. / बड़े अनुपातों को छोटे पैमाने पर व्यक्त करने हेतु।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "Which 'Part' of sound wave contains high pressure?\nध्वनि तरंग के किस 'भाग' में उच्च दाब होता है?",
+  "o": ["Rarefaction", "Compression | संपीडन (Compression)", "Node", "None"],
+  "a": 1,
+  "e": "Region where particles are pushed close together. / वह क्षेत्र जहाँ कण पास-पास होते हैं।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "What is the frequency of 'First Overtone' in a closed pipe of fundamental $f$?\nमूल आवृत्ति $f$ वाले बंद पाइप में 'पहले अधिस्वरक' की आवृत्ति क्या है?",
+  "o": ["$2f$", "$3f$ | $3f$", "$4f$", "None"],
+  "a": 1,
+  "e": "Closed pipes produce only odd harmonics (1, 3, 5...). / बंद पाइप केवल विषम हारमोनिक्स उत्पन्न करते हैं।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "What is the frequency of 'First Overtone' in an open pipe?\nखुले पाइप में 'पहले अधिस्वरक' की आवृत्ति क्या होती है?",
+  "o": ["$2f$ | $2f$", "$3f$", "$f$", "None"],
+  "a": 0,
+  "e": "Open pipes produce both even and odd harmonics. / खुले पाइप सम और विषम दोनों हारमोनिक्स बनाते हैं।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "Which part of ear is connected to the 'Throat' by Eustachian tube?\nकान का कौन सा भाग यूस्टेशियन ट्यूब द्वारा 'गले' से जुड़ा होता है?",
+  "o": ["Inner ear", "Middle ear | मध्य कर्ण", "Outer ear", "None"],
+  "a": 1,
+  "e": "Helps equalize pressure on both sides of eardrum. / कान के पर्दे के दोनों ओर दाब समान रखने में मदद करता है।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "What is 'Ultrasonic' sound used for in 'Dishwashers'?\n'डिशवॉशर' में पराश्रव्य ध्वनि का क्या उपयोग है?",
+  "o": ["Dry dishes", "Loosen stubborn food particles | जिद्दी गंदगी को ढीला करना", "Heat water", "None"],
+  "a": 1,
+  "e": "Microscopic bubbles created by ultrasound scrub the surfaces. / अल्ट्रासाउंड से बने सूक्ष्म बुलबुले सतह को रगड़ते हैं।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "What is 'Sound Speed' in air at 40°C approx?\n40°C पर हवा में ध्वनि की 'चाल' लगभग क्या है?",
+  "o": ["332 m/s", "356 m/s | लगभग 356 मी/से", "400 m/s", "None"],
+  "a": 1,
+  "e": "Base 332 + (0.61 x 40). / आधार 332 + (0.61 x 40)।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "What is 'Tympanum' another name for?\n'टिम्पैनम' किसका दूसरा नाम है?",
+  "o": ["Cochlea", "Eardrum | कान का पर्दा", "Pinna", "Anvil"],
+  "a": 1,
+  "e": "Membrane that separates outer and middle ear. / बाहरी और मध्य कान को अलग करने वाली झिल्ली।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "What is 'Phase' of two points if they are $\lambda/2$ apart?\nयदि दो बिंदु $\lambda/2$ दूर हैं, तो उनकी 'कला' क्या होगी?",
+  "o": ["In Phase", "Out of Phase ($180^\circ$) | विपरीत कला ($180^\circ$)", "Zero", "None"],
+  "a": 1,
+  "e": "Points move in opposite directions. / बिंदु विपरीत दिशाओं में चलते हैं।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "What is 'Sonar' frequency usually?\n'सोनार' की आवृत्ति आमतौर पर क्या होती है?",
+  "o": ["Audible", "Ultrasonic | पराश्रव्य (Ultrasonic)", "Infrasonic", "None"],
+  "a": 1,
+  "e": "High frequency for better resolution underwater. / पानी के नीचे बेहतर स्पष्टता के लिए उच्च आवृत्ति।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "Which 'Physical Quantity' is constant in a stationary wave?\nस्थिर तरंग में कौन सी 'भौतिक राशि' स्थिर रहती है?",
+  "o": ["Frequency | आवृत्ति (Frequency)", "Amplitude", "Velocity", "None"],
+  "a": 0,
+  "e": "Amplitude varies from zero at nodes to max at antinodes. / आयाम नोड्स पर शून्य और प्रस्पंदों पर अधिकतम होता है।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "What is 'Damping' of sound?\nध्वनि का 'अवमंदन' (Damping) क्या है?",
+  "o": ["Increase in sound", "Gradual decrease in amplitude | आयाम में धीरे-धीरे कमी", "Echo", "None"],
+  "a": 1,
+  "e": "Caused by energy loss due to friction or medium resistance. / घर्षण या माध्यम के प्रतिरोध से ऊर्जा हानि।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "What is the speed of sound in 'Diamond' approx?\n'हीरे' में ध्वनि की चाल लगभग क्या है?",
+  "o": ["5000 m/s", "12000 m/s | 12000 मी/से", "340 m/s", "None"],
+  "a": 1,
+  "e": "Very high due to extreme rigidity. / अत्यधिक कठोरता के कारण बहुत अधिक।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "Which part of ear has 'Three' bones?\nकान के किस भाग में 'तीन' हड्डियाँ होती हैं?",
+  "o": ["Middle ear | मध्य कर्ण", "Inner ear", "Outer ear", "None"],
+  "a": 0,
+  "e": "Malleus, Incus and Stapes. / मैलियस, इनकस और स्टेपीज़।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "What is 'Doppler Shift'?\n'डॉप्लर विस्थापन' (Doppler Shift) क्या है?",
+  "o": ["Change in speed", "Difference between real and apparent frequency | वास्तविक और आभासी आवृत्ति का अंतर", "Echo", "None"],
+  "a": 1,
+  "e": "Depends on the velocities of source and observer. / स्रोत और श्रोता के वेगों पर निर्भर करता है।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "What is 'Resonance' risk in bridges?\nपुलों में 'अनुनाद' (Resonance) का क्या खतरा है?",
+  "o": ["Making sound", "Structural collapse | ढांचे का ढहना", "Rusting", "None"],
+  "a": 1,
+  "e": "If soldiers march in step, frequency may match bridge's natural frequency. / यदि सैनिक ताल मिलाकर चलते हैं, तो आवृत्ति पुल से मिल सकती है।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "What is the unit of 'Loudness Level'?\n'प्रबलता स्तर' का मात्रक क्या है?",
+  "o": ["dB", "Phon | फोन (Phon)", "Sone | सोन (Sone)", "Both 2 and 3 | 2 और 3 दोनों"],
+  "a": 3,
+  "e": "Phon and Sone are psychological units. / फोन और सोन मनोवैज्ञानिक मात्रक हैं।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "What is 'Pitch' of a sound directly dependent on?\nध्वनि की 'पिच' सीधे किस पर निर्भर करती है?",
+  "o": ["Amplitude", "Fundamental frequency | मूल आवृत्ति", "Intensity", "None"],
+  "a": 1,
+  "e": "Defined by the lowest frequency of a periodic waveform. / एक आवर्ती वेवफॉर्म की सबसे कम आवृत्ति द्वारा निर्धारित।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "What is 'Mach 5' called?\n'मैक 5' को क्या कहते हैं?",
+  "o": ["Subsonic", "Supersonic", "Hypersonic | हाइपरसोनिक", "None"],
+  "a": 2,
+  "e": "Borderline between supersonic and hypersonic. / सुपरसोनिक और हाइपरसोनिक के बीच की सीमा।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "What is the relation between the 'Frequency' (f) and 'Length' (L) of an air column in a pipe?\nएक पाइप में वायु स्तंभ की 'आवृत्ति' (f) और 'लंबाई' (L) के बीच क्या संबंध है?",
+  "o": ["$f \propto L$", "$f \propto 1/L$ | $f \propto 1/L$", "$f \propto L^2$", "None"],
+  "a": 1,
+  "e": "Shorter air columns produce higher frequency sounds. / छोटे वायु स्तंभ उच्च आवृत्ति की ध्वनि उत्पन्न करते हैं।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "What is the 'Phase Difference' between two points on a wave separated by $\lambda/4$?\n$\lambda/4$ की दूरी पर स्थित दो बिंदुओं के बीच 'कलांतर' क्या होता है?",
+  "o": ["$180^\circ$", "$90^\circ$ ($\pi/2$) | $90^\circ$ ($\pi/2$)", "$360^\circ$", "None"],
+  "a": 1,
+  "e": "Full wave $\lambda$ is $2\pi$, so $\lambda/4$ is $\pi/2$. / पूरी तरंग $2\pi$ होती है, इसलिए चौथाई हिस्सा $90^\circ$ होगा।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "Which 'Organ' in the inner ear is responsible for turning vibrations into nerve impulses?\nआंतरिक कान का कौन सा 'अंग' कंपनों को तंत्रिका आवेगों में बदलने के लिए जिम्मेदार है?",
+  "o": ["Pinna", "Organ of Corti | कॉर्टी का अंग (Organ of Corti)", "Hammer", "Anvil"],
+  "a": 1,
+  "e": "Located inside the cochlea, it contains sensitive hair cells. / यह कोकलिया के अंदर स्थित होता है और इसमें हेयर सेल्स होते हैं।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "What is the frequency of the 'Second Overtone' in a stretched string of fundamental frequency $f$?\nमूल आवृत्ति $f$ वाली डोरी में 'दूसरे अधिस्वरक' की आवृत्ति क्या होगी?",
+  "o": ["$2f$", "$3f$ | $3f$", "$4f$", "None"],
+  "a": 1,
+  "e": "For strings, overtones are $2f, 3f, 4f...$ (Second overtone is 3rd harmonic). / डोरी के लिए दूसरा अधिस्वरक तीसरा हारमोनिक होता है।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "The 'Speed of Sound' in a gas is proportional to the square root of its:\nकिसी गैस में 'ध्वनि की चाल' उसके ______ के वर्गमूल के समानुपाती होती है।",
+  "o": ["Pressure", "Absolute Temperature | परम तापमान (T)", "Volume", "Density"],
+  "a": 1,
+  "e": "$v = \sqrt{\gamma RT/M}$. / चाल परम तापमान के वर्गमूल के समानुपाती है।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "What is the ratio of 'Harmonics' in a closed organ pipe?\nएक बंद ऑर्गन पाइप में 'हारमोनिक्स' का अनुपात क्या होता है?",
+  "o": ["1:2:3", "1:3:5 | 1:3:5", "2:4:6", "None"],
+  "a": 1,
+  "e": "Closed pipes only produce odd harmonics. / बंद पाइप केवल विषम हारमोनिक्स उत्पन्न करते हैं।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "What is the 'Aud Auditory Nerve's' function?\n'श्रवण तंत्रिका' (Auditory Nerve) का क्या कार्य है?",
+  "o": ["To vibrate", "To carry signals to the brain | मस्तिष्क तक संकेतों को ले जाना", "To collect sound", "None"],
+  "a": 1,
+  "e": "Transmits electrical signals from the cochlea to the brain. / यह कोकलिया से विद्युत संकेतों को दिमाग तक पहुँचाती है।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "Which 'Gas' will have the lowest speed of sound at a given temperature?\nदिए गए तापमान पर किस 'गैस' में ध्वनि की चाल सबसे कम होगी?",
+  "o": ["Hydrogen", "Oxygen", "Carbon Dioxide | कार्बन डाइऑक्साइड (CO2)", "Nitrogen"],
+  "a": 2,
+  "e": "Heavier gases have slower sound speeds ($v \propto 1/\sqrt{M}$). / भारी गैसों में ध्वनि की चाल कम होती है।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "What is 'Infrasonic' sound frequency used in monitoring 'Volcanoes'?\n'ज्वालामुखी' की निगरानी में प्रयुक्त अधोश्राव्य ध्वनि की आवृत्ति क्या होती है?",
+  "o": ["Above 20 kHz", "Below 20 Hz | 20 Hz से कम", "500 Hz", "None"],
+  "a": 1,
+  "e": "Volcanic eruptions produce very low frequency waves. / ज्वालामुखी विस्फोट बहुत कम आवृत्ति की तरंगें पैदा करते हैं।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "Which 'Effect' is used by traffic police to measure the speed of a passing car?\nगुजरती हुई कार की चाल मापने के लिए ट्रैफिक पुलिस किस 'प्रभाव' का उपयोग करती है?",
+  "o": ["Photoelectric effect", "Doppler Effect | डॉप्लर प्रभाव (Doppler Effect)", "Tyndall effect", "None"],
+  "a": 1,
+  "e": "Uses the shift in frequency of reflected waves (Radar/Sonar). / परावर्तित तरंगों की आवृत्ति में बदलाव को मापता है।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "The 'Loudness' of sound is measured using a unit named after:\nध्वनि की 'प्रबलता' मापने की इकाई किसके नाम पर रखी गई है?",
+  "o": ["Newton", "Graham Bell | ग्राहम बेल", "Hertz", "Watt"],
+  "a": 1,
+  "e": "Decibel (dB) is named after Alexander Graham Bell. / डेसीबल का नाम अलेक्जेंडर ग्राहम बेल के नाम पर है।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "What is the speed of sound in 'Gold' approx?\n'सोने' में ध्वनि की चाल लगभग क्या है?",
+  "o": ["340 m/s", "1500 m/s", "3240 m/s | 3240 मी/से", "5000 m/s"],
+  "a": 2,
+  "e": "Metals generally have high speeds, though Gold is lower than Steel. / सोना स्टील से धीमा लेकिन हवा से बहुत तेज है।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "What happens to the frequency of a 'Tuning Fork' if its prongs are 'Filed'?\nयदि 'स्वरित्र द्विभुज' की भुजाओं को 'घिस' दिया जाए, तो आवृत्ति का क्या होगा?",
+  "o": ["Decreases", "Increases | बढ़ती है", "Remains same", "None"],
+  "a": 1,
+  "e": "Filing reduces mass, and frequency increases as mass decreases. / घिसने से द्रव्यमान कम होता है, जिससे आवृत्ति बढ़ती है।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "What happens to the frequency of a 'Tuning Fork' if it is 'Loaded' with wax?\nयदि स्वरित्र पर 'मोम' लगा दिया जाए, तो आवृत्ति का क्या होगा?",
+  "o": ["Increases", "Decreases | घटती है", "Stay same", "None"],
+  "a": 1,
+  "e": "Loading with wax increases mass, which lowers the frequency. / मोम लगाने से द्रव्यमान बढ़ता है और आवृत्ति कम होती है।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "What is the distance between two 'Successive Nodes' in a standing wave?\nएक स्थिर तरंग में दो 'लगातार नोड्स' के बीच की दूरी क्या है?",
+  "o": ["$\lambda$", "$\lambda/2$ | $\lambda/2$", "$\lambda/4$", "None"],
+  "a": 1,
+  "e": "Half of a wavelength. / आधी तरंगदैर्ध्य के बराबर।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "What is the distance between two 'Successive Antinodes'?\nदो 'लगातार प्रस्पंदों' के बीच की दूरी क्या है?",
+  "o": ["$\lambda$", "$\lambda/2$ | $\lambda/2$", "$\lambda/4$", "None"],
+  "a": 1,
+  "e": "Same as the distance between two successive nodes. / यह दो नोड्स के बीच की दूरी के बराबर ही होती है।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "Which property of sound describes the 'Shrillness'?\nध्वनि का कौन सा गुण 'तीखापन' (Shrillness) बताता है?",
+  "o": ["Amplitude", "Pitch | पिच (Pitch)", "Loudness", "None"],
+  "a": 1,
+  "e": "Directly related to the frequency of the wave. / यह सीधे तरंग की आवृत्ति से जुड़ा है।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "What is 'Overtones' in an open organ pipe ratio?\nखुले ऑर्गन पाइप में 'अधिस्वरक' का अनुपात क्या होता है?",
+  "o": ["1:3:5", "2:3:4 | 2:3:4 (Fundamental is 1)", "1:2:3", "None"],
+  "a": 1,
+  "e": "Overtones are $2f, 3f, 4f...$ of the fundamental frequency. / अधिस्वरक मूल आवृत्ति के 2, 3, 4 गुना होते हैं।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "Which instrument uses a 'Stretched Membrane' to produce sound?\nकौन सा वाद्ययंत्र ध्वनि उत्पन्न करने के लिए 'खिंची हुई झिल्ली' का उपयोग करता है?",
+  "o": ["Flute", "Tabla | तबला", "Guitar", "Piano"],
+  "a": 1,
+  "e": "It is a percussion instrument. / यह एक ताल वाद्ययंत्र है।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "What is the 'Time' required for a sound wave of 100 Hz to complete 1 vibration?\n100 Hz आवृत्ति वाली ध्वनि तरंग को 1 कंपन पूरा करने में कितना 'समय' लगेगा?",
+  "o": ["1 sec", "0.01 sec | 0.01 सेकंड", "0.1 sec", "None"],
+  "a": 1,
+  "e": "$T = 1/f = 1/100 = 0.01s$. / सूत्र $T = 1/f$ का उपयोग करके।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "What is 'Ultrasonic' sound frequency used in 'Echocardiogram'?\n'इकोकार्डियोग्राम' में किस ध्वनि आवृत्ति का उपयोग होता है?",
+  "o": ["Infrasonic", "Audible", "Ultrasonic | पराश्रव्य (Ultrasonic)", "None"],
+  "a": 2,
+  "e": "Used to create images of the heart's structure and function. / हृदय की संरचना की छवियाँ बनाने के लिए।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "What is the 'Reflection' of sound from a 'Hard Surface' at 17m distance called?\n17 मीटर की दूरी पर 'कठोर सतह' से ध्वनि का 'परावर्तन' क्या कहलाता है?",
+  "o": ["Refraction", "Echo | प्रतिध्वनि (Echo)", "Beats", "Damping"],
+  "a": 1,
+  "e": "Minimum distance for echo in air is approx 17.2m. / हवा में ईको के लिए न्यूनतम दूरी लगभग 17.2 मीटर है।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "Which wave property determines 'Quality' (Timbre)?\nतरंग का कौन सा गुण 'गुणता' (Timbre) निर्धारित करता है?",
+  "o": ["Amplitude", "Frequency", "Waveform / Harmonics | वेवफॉर्म / हारमोनिक्स", "None"],
+  "a": 2,
+  "e": "Determined by the number and relative intensity of overtones. / यह अधिस्वरकों की संख्या और तीव्रता पर निर्भर करता है।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "What happens to the speed of sound if 'Air' becomes 'Denser' at constant pressure?\nयदि स्थिर दाब पर 'हवा' अधिक 'सघन' हो जाए, तो ध्वनि की चाल का क्या होगा?",
+  "o": ["Increases", "Decreases | कम होगी (Decreases)", "Stay same", "None"],
+  "a": 1,
+  "e": "$v \propto 1/\sqrt{\rho}$. High density lowers the speed. / उच्च घनत्व चाल को कम कर देता है।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "What is 'Acoustic' absorption material example?\n'ध्वनि' अवशोषक सामग्री का उदाहरण क्या है?",
+  "o": ["Glass", "Steel", "Glass wool / Thermocol | ग्लास वूल / थर्माकोल", "None"],
+  "a": 2,
+  "e": "Porous materials trap sound energy and turn it into heat. / छिद्रपूर्ण सामग्री ध्वनि ऊर्जा को सोख लेती है।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "Which 'Animal' can produce sounds up to 100,000 Hz?\nकौन सा 'जानवर' 1,00,000 हर्ट्ज़ तक की ध्वनि उत्पन्न कर सकता है?",
+  "o": ["Elephant", "Dog", "Bat | चमगादड़ (Bat)", "Human"],
+  "a": 2,
+  "e": "Bats use these extreme ultrasonic frequencies for hunting. / चमगादड़ शिकार के लिए इन आवृत्तियों का उपयोग करते हैं।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "What is 'Intensity Level' of a sound with intensity $10^{-4} W/m^2$?\n$10^{-4} W/m^2$ तीव्रता वाली ध्वनि का 'तीव्रता स्तर' क्या होगा?",
+  "o": ["40 dB", "80 dB | 80 dB", "120 dB", "None"],
+  "a": 1,
+  "e": "$10 \log(10^{-4}/10^{-12}) = 10 \times 8 = 80$ dB. / गणना सूत्र के अनुसार।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "What is 'Fundamental Frequency' of a pipe 'Closed' at one end?\nएक सिरे पर 'बंद' पाइप की 'मूल आवृत्ति' क्या होती है?",
+  "o": ["$v/2L$", "$v/4L$ | $v/4L$", "$v/L$", "None"],
+  "a": 1,
+  "e": "Quarter-wave resonator property. / इसमें केवल चौथाई तरंग समाती है।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "What is 'Fundamental Frequency' of a pipe 'Open' at both ends?\nदोनों सिरों पर 'खुले' पाइप की 'मूल आवृत्ति' क्या होती है?",
+  "o": ["$v/2L$ | $v/2L$", "$v/4L$", "$2v/L$", "None"],
+  "a": 0,
+  "e": "Half-wave resonator property. / इसमें आधी तरंग समाती है।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "What happens to speed of sound in air as 'Altitude' increases?\n'ऊंचाई' बढ़ने पर हवा में ध्वनि की चाल का क्या होता है?",
+  "o": ["Increases", "Decreases | कम होती है (Decreases)", "Remains same", "None"],
+  "a": 1,
+  "e": "Higher altitude means lower temperature, which lowers sound speed. / ऊंचाई पर तापमान कम होने से चाल कम हो जाती है।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "Which part of ear is the 'Hammer' (Malleus)?\nकान का कौन सा भाग 'हैमर' (Malleus) है?",
+  "o": ["Outer ear", "Middle ear | मध्य कर्ण", "Inner ear", "None"],
+  "a": 1,
+  "e": "First of the three ossicle bones. / तीन हड्डियों में से पहली।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "What is the speed of sound in 'Aluminium' approx?\n'एल्युमिनियम' में ध्वनि की चाल लगभग क्या है?",
+  "o": ["340 m/s", "1500 m/s", "6420 m/s | 6420 मी/से", "None"],
+  "a": 2,
+  "e": "Very high speed due to low density and high elasticity. / बहुत उच्च चाल।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "What is 'Infrasound' produced by 'Ocean Waves' called?\n'समुद्र की लहरों' द्वारा उत्पन्न अधोश्राव्य ध्वनि को क्या कहते हैं?",
+  "o": ["Sea noise", "Microbaroms | माइक्रोबैरोम्स (Microbaroms)", "Echoes", "None"],
+  "a": 1,
+  "e": "Very low frequency atmospheric pressure fluctuations. / वायुमंडलीय दबाव में बहुत कम आवृत्ति वाले बदलाव।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "Which wave cannot be 'Polarized'?\nकौन सी तरंग का 'ध्रुवीकरण' नहीं किया जा सकता?",
+  "o": ["Light wave", "Sound wave in air | हवा में ध्वनि तरंग", "Radio wave", "None"],
+  "a": 1,
+  "e": "Only transverse waves can be polarized; sound in air is longitudinal. / केवल अनुप्रस्थ तरंगें ही ध्रुवित हो सकती हैं।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "What is the 'Frequency Ratio' of note 'Ma' (Madhyam) to 'Sa'?\n'म' (मध्यम) और 'सा' के स्वरों का आवृत्ति अनुपात क्या है?",
+  "o": ["9/8", "4/3 | 4/3", "3/2", "None"],
+  "a": 1,
+  "e": "Standard interval in musical scales. / संगीत पैमाने में मानक अंतराल।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "What is 'Resonance' intensity?\n'अनुनाद' की तीव्रता क्या होती है?",
+  "o": ["Zero", "Minimum", "Maximum | अधिकतम (Maximum)", "None"],
+  "a": 2,
+  "e": "Amplitude is highest at resonance, so intensity is maximum. / अनुनाद पर आयाम उच्चतम होता है, इसलिए तीव्रता भी अधिकतम होती।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "What is the 'Decibel Level' of a 'Jet takeoff' approx?\n'जेट विमान के उड़ने' का डेसीबल स्तर लगभग कितना है?",
+  "o": ["60 dB", "90 dB", "140 dB | 140 dB", "200 dB"],
+  "a": 2,
+  "e": "Extremely loud, well above the threshold of pain. / दर्द की सीमा से काफी ऊपर।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "Which 'Property' of sound allows it to bend around corners?\nध्वनि का कौन सा 'गुण' उसे कोनों से मुड़ने की अनुमति देता है?",
+  "o": ["Reflection", "Refraction", "Diffraction | विवर्तन (Diffraction)", "Interference"],
+  "a": 2,
+  "e": "Waves bend when they encounter an obstacle. / बाधा आने पर तरंगें मुड़ जाती हैं।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "What is 'Ultrasonic' cleaning used for in 'Watches'?\n'घड़ियों' में पराश्रव्य सफाई का उपयोग किसलिए होता है?",
+  "o": ["To wind them", "To clean delicate tiny parts | नाजुक छोटे पुर्जों की सफाई", "To color them", "None"],
+  "a": 1,
+  "e": "Can reach tiny crevices where brushes cannot. / उन दरारों तक पहुँच सकती है जहाँ ब्रश नहीं जा सकते।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "What is 'Phase' of a wave at a 'Crest'?\n'शृंग' (Crest) पर तरंग की 'कला' क्या होती है?",
+  "o": ["$0$", "$90^\circ$ ($\pi/2$) | $90^\circ$ ($\pi/2$)", "$180^\circ$", "$270^\circ$"],
+  "a": 1,
+  "e": "Point of maximum positive displacement. / अधिकतम धनात्मक विस्थापन का बिंदु।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "What is 'Phase' of a wave at a 'Trough'?\n'गर्त' (Trough) पर तरंग की 'कला' क्या होती है?",
+  "o": ["$90^\circ$", "$180^\circ$", "$270^\circ$ ($3\pi/2$) | $270^\circ$ ($3\pi/2$)", "None"],
+  "a": 2,
+  "e": "Point of maximum negative displacement. / अधिकतम ऋणात्मक विस्थापन का बिंदु।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "The sound of 'Crickets' (insects) is produced by:\n'झींगुरों' की आवाज किसके द्वारा उत्पन्न होती है?",
+  "o": ["Vocal cords", "Rubbing wings together | पंखों को आपस में रगड़कर", "Air columns", "None"],
+  "a": 1,
+  "e": "Known as stridulation. / इसे स्ट्रिडुलेशन कहा जाता है।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "What is 'Standing Wave' nodes' kinetic energy?\nस्थिर तरंग के नोड्स पर 'गतिज ऊर्जा' क्या होती है?",
+  "o": ["Maximum", "Zero | शून्य (Zero)", "Constant", "Infinite"],
+  "a": 1,
+  "e": "Nodes are stationary points, so speed and KE are zero. / नोड्स स्थिर बिंदु होते हैं।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "What is 'Standing Wave' antinodes' kinetic energy?\nस्थिर तरंग के प्रस्पंदों पर 'गतिज ऊर्जा' क्या होती है?",
+  "o": ["Zero", "Maximum | अधिकतम (Maximum)", "Infinite", "None"],
+  "a": 1,
+  "e": "Antinodes have the highest speed. / प्रस्पंदों पर चाल सबसे अधिक होती है।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "What is the frequency of note 'Dha' (Dhaivat) if 'Sa' is 240 Hz?\nयदि 'सा' 240 Hz है, तो 'ध' (धैवत) की आवृत्ति क्या होगी?",
+  "o": ["360 Hz", "400 Hz | 400 Hz", "480 Hz", "None"],
+  "a": 1,
+  "e": "Ratio is 5/3. $240 \times 1.66 \approx 400$ Hz. / ध और सा का अनुपात 5/3 होता है।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "Which part of ear is responsible for 'Pressure Equalization'?\nकान का कौन सा भाग 'दाब संतुलन' के लिए जिम्मेदार है?",
+  "o": ["Pinna", "Eustachian Tube | यूस्टेशियन ट्यूब (Eustachian Tube)", "Cochlea", "None"],
+  "a": 1,
+  "e": "Connects the middle ear to the throat. / यह मध्य कान को गले से जोड़ता है।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "What is 'Sonic Boom' associated with?\n'सोनिक बूम' किससे संबंधित है?",
+  "o": ["Low speed", "Supersonic aircraft | सुपरसोनिक विमान", "Echoes", "None"],
+  "a": 1,
+  "e": "Created by shock waves from objects faster than sound. / ध्वनि से तेज चलने वाली वस्तुओं द्वारा।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "Which type of 'Interference' creates a loud sound?\nकिस प्रकार का 'व्यतिकरण' तेज ध्वनि पैदा करता है?",
+  "o": ["Destructive", "Constructive | संपोषी (Constructive)", "Both", "None"],
+  "a": 1,
+  "e": "Waves add up to increase amplitude. / तरंगें जुड़कर आयाम बढ़ा देती हैं।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "Which type of 'Interference' creates a silent spot?\nकिस प्रकार का 'व्यतिकरण' शांत स्थान (silent spot) बनाता है?",
+  "o": ["Constructive", "Destructive | विनाशी (Destructive)", "Both", "None"],
+  "a": 1,
+  "e": "Waves cancel each other out. / तरंगें एक-दूसरे को खत्म कर देती हैं।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "What is 'Echo' used for in 'Fishing'?\n'मछली पकड़ने' में गूँज (Echo) का उपयोग किसलिए होता है?",
+  "o": ["To attract fish", "To detect schools of fish | मछलियों के झुंड का पता लगाना", "To kill fish", "None"],
+  "a": 1,
+  "e": "Sonar technology helps find underwater life. / सोनार तकनीक पानी के नीचे जीवन खोजने में मदद करती है।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": " What is 'Wavelength' unit?\n'तरंगदैर्ध्य' का मात्रक क्या है?",
+  "o": ["Hertz", "Meter | मीटर (Meter)", "Watt", "None"],
+  "a": 1,
+  "e": "Distance between peaks. / शिखरों के बीच की दूरी।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "What is the 'Loudest' sound a human ear can hear without instant damage?\nबिना तत्काल क्षति के मानव कान कितनी 'तेज' ध्वनि सुन सकता है?",
+  "o": ["80 dB", "100 dB", "115-120 dB | 115-120 dB", "None"],
+  "a": 2,
+  "e": "Brief exposure to 120 dB is painful but survivable. / 120 dB तक थोड़े समय के लिए सहनीय है।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": " What is 'Pitch' based on?\n'पिच' किस पर आधारित है?",
+  "o": ["Amplitude", "Frequency | आवृत्ति (Frequency)", "Loudness", "None"],
+  "a": 1,
+  "e": "Perception of frequency by the brain. / मस्तिष्क द्वारा आवृत्ति की अनुभूति।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "What is 'Wien's Law' application?\n'ween ke niyam' ka upyog kya hai?",
+  "o": ["Measure star temperature | taron ka tapman mapna", "Measure speed", "Measure pressure", "None"],
+  "a": 0,
+  "e": "By analyzing the color (peak wavelength) of the star. / tare ke rang (peak tarangdaidhy) ka vishleshan karke.",
+  "cat": "gs",
+  "sub": "heat"
+},
+{
+  "q": "What is 'Heat' transfer in 'Sun' to 'Earth'?\n'surya' se 'prithvi' tak ushma ka sthanantaran kaise hota hai?",
+  "o": ["Conduction", "Convection", "Radiation | vikiran", "All"],
+  "a": 2,
+  "e": "Vacuum between space allows only radiation. / antariksh ka nirvat sirf vikiran ki anumati deta hai.",
+  "cat": "gs",
+  "sub": "heat"
+},
+{
+  "q": "What is 'Efficiency' of Carnot engine if $T_2 = 0 K$?\nyadi $T_2 = 0 K$ ho, to carnot engine ki 'dakshta' kya hogi?",
+  "o": ["0%", "50%", "100% | 100%", "None"],
+  "a": 2,
+  "e": "$\eta = 1 - 0/T_1 = 1$ (or 100%).",
+  "cat": "gs",
+  "sub": "heat"
+},
+{
+  "q": "What is 'Bimetallic Strip' based on?\n'dwi-dhatvik patti' kis par aadharit hai?",
+  "o": ["Different thermal expansions | vibhinn tapiya prasar", "Magnetism", "Density", "None"],
+  "a": 0,
+  "e": "Two metals expand at different rates, causing bending. / do dhatuyen alag dar se phailti hain, jisse wo mud jati hain.",
+  "cat": "gs",
+  "sub": "heat"
+},
+{
+  "q": "What is 'Triple Point' for CO2 in Celsius (approx)?\nCO2 ke liye 'trik bindu' celsius mein kya hai (lagbhag)?",
+  "o": ["0.01°C", "-56.6°C | -56.6°C", "100°C", "None"],
+  "a": 1,
+  "e": "Below this temperature, liquid CO2 cannot exist at 1 atm. / isse niche 1 atm par drav CO2 sambhav nahi hai.",
+  "cat": "gs",
+  "sub": "heat"
+},
+{
+  "q": "What is 'Specific Heat' of 'Water' in SI units ($J/kg \cdot K$)?\nSI ikai mein 'pani' ki 'vishisht ushma' kya hai?",
+  "o": ["4186 | 4186 J/kg \cdot K", "1000", "540", "None"],
+  "a": 0,
+  "e": "Equivalent to 1 cal/g°C. / 1 cal/g°C ke barabar.",
+  "cat": "gs",
+  "sub": "heat"
+},
+{
+  "q": "What is 'Conduction' fastest in?\n'chalan' kis-me sabse tez hota hai?",
+  "o": ["Gases", "Liquids", "Solids | thos", "Vacuum"],
+  "a": 2,
+  "e": "Particles are tightly packed. / kan bahut paas-paas hote hain.",
+  "cat": "gs",
+  "sub": "heat"
+},
+{
+  "q": "What is 'Newton's Law of Cooling' related to 'Surface Area'?\n'sheetlan ka niyam' 'satahi kshetraphal' se kaise sambandhit hai?",
+  "o": ["Rate $\propto$ Area | dar $\propto$ kshetraphal", "Rate $\propto$ 1/Area", "No relation", "None"],
+  "a": 0,
+  "e": "Larger area cools faster. / bada kshetraphal jaldi thanda hota hai.",
+  "cat": "gs",
+  "sub": "heat"
+},
+{
+  "q": "What is 'Internal Energy' of 'Real Gas' dependent on?\n'vastvik gas' ki 'aantrik oorja' kis par nirbhar karti hai?",
+  "o": ["Temperature only", "Temperature and Volume | tapman aur aaytan", "Pressure only", "None"],
+  "a": 1,
+  "e": "Due to intermolecular forces. / aanvik balon ke karan.",
+  "cat": "gs",
+  "sub": "heat"
+},
+{
+  "q": "What is 'Entropy' of a system at 'Equilibrium'?\n'santulan' par ek nikay ki 'entropy' kya hoti hai?",
+  "o": ["Zero", "Minimum", "Maximum | adhiktam", "None"],
+  "a": 2,
+  "e": "Equilibrium state has the most disorder. / santulan avastha mein sabse adhik avyavastha hoti hai.",
+  "cat": "gs",
+  "sub": "heat"
+},
+{
+  "q": "What is 'Thermal Diffusivity' unit?\n'tapiya visranshilta' ki ikai kya hai?",
+  "o": ["$m^2/s$ | $m^2/s$", "$m/s$", "$J/K$", "None"],
+  "a": 0,
+  "e": "Rate of heat spread in a material. / padarth mein ushma phailne ki dar.",
+  "cat": "gs",
+  "sub": "heat"
+},
+{
+  "q": "Which thermometer is used for 'Stars'?\n'taron' ke liye kis thermometer ka upyog hota hai?",
+  "o": ["Mercury", "Gas", "Pyrometer | pyrometer", "None"],
+  "a": 2,
+  "e": "Uses radiation properties. / vikiran guno ka upyog karta hai.",
+  "cat": "gs",
+  "sub": "heat"
+},
+{
+  "q": "What is 'Stefan's Law' for 'Net heat loss'?\n'shuddh ushma hani' ke liye 'stefan ka niyam' kya hai?",
+  "o": ["$E = \sigma (T^4 - T_0^4)$ | $E = \sigma (T^4 - T_0^4)$", "$E = \sigma T^4$", "$E = \sigma T^2$", "None"],
+  "a": 0,
+  "e": "$T$ is body temp, $T_0$ is surrounding temp. / $T$ pind ka tap hai, $T_0$ vatavaran ka.",
+  "cat": "gs",
+  "sub": "heat"
+},
+{
+  "q": "What is 'Specific Heat' of 'Iron' compared to 'Water'?\npani ki tulna mein 'lohe' ki 'vishisht ushma' kya hai?",
+  "o": ["Higher", "Lower | kam", "Equal", "None"],
+  "a": 1,
+  "e": "Iron heats up much faster than water. / loha pani se bahut tezi se garam hota hai.",
+  "cat": "gs",
+  "sub": "heat"
+},
+{
+  "q": "What is 'Absolute zero' molecular kinetic energy?\n'param shunya' par aanvik gatij oorja kya hoti hai?",
+  "o": ["Zero | shunya (theoretical)", "Maximum", "Infinite", "None"],
+  "a": 0,
+  "e": "Motion theoretically stops at 0 K. / saiddhantik roop se gati 0 K par ruk jati hai.",
+  "cat": "gs",
+  "sub": "heat"
+},
+{
+  "q": "Which law relates 'Emissive power' and 'Absorptive power'?\n'utsarjan kshamta' aur 'avshoshak kshamta' ko kaun sa niyam jodta hai?",
+  "o": ["Stefan's Law", "Kirchhoff's Law | kirchhoff ka niyam", "Newton's Law", "None"],
+  "a": 1,
+  "e": "Ratio is constant for all bodies at same T. / saman T par sabhi pindon ke liye anupat niyat hota hai.",
+  "cat": "gs",
+  "sub": "heat"
+},
+{
+  "q": "What is 'Pressure' of gas if 'rms velocity' is doubled?\nyadi 'rms veg' dugna kar diya jaye, to gas ka 'dab' kya hoga?",
+  "o": ["Double", "Four times | char guna", "Half", "No change"],
+  "a": 1,
+  "e": "Pressure is proportional to the square of rms velocity. / dab rms veg ke varg ke samanupati hota hai.",
+  "cat": "gs",
+  "sub": "heat"
+},
+{
+  "q": "What is 'Adiabatic Index' ($\gamma$) for 'Helium'?\n'helium' ke liye 'ruddhoshm suchakank' ($\gamma$) kya hai?",
+  "o": ["1.67 | 1.67", "1.4", "1.33", "1"],
+  "a": 0,
+  "e": "Helium is a monatomic gas. / helium ek-parmanuk gas hai.",
+  "cat": "gs",
+  "sub": "heat"
+},
+{
+  "q": "What is 'Coefficient of Thermal Conductivity' (k) of 'Diamond'?\n'heere' ki 'tapiya chalakta gunank' (k) kya hai?",
+  "o": ["Highest among solids | thoson mein adhiktam", "Lowest", "Zero", "None"],
+  "a": 0,
+  "e": "Superior to metals like Copper. / tambe jaisi dhatuon se behtar.",
+  "cat": "gs",
+  "sub": "heat"
+},
+{
+  "q": "What is 'Entropy' of a system at '0 K' for perfect crystal?\n'purn kristal' ke liye '0 K' par 'entropy' kya hoti hai?",
+  "o": ["Zero | shunya", "Infinite", "One", "None"],
+  "a": 0,
+  "e": "According to Third Law of Thermodynamics. / ushmagatiki ke tisre niyam ke anusar.",
+  "cat": "gs",
+  "sub": "heat"
+},
+{
+  "q": "What is 'Ideal gas' bulk modulus in Isothermal process?\nsamtapi prakriya mein 'adarsh gas' ka bulk modulus kya hai?",
+  "o": ["P | P (pressure)", "$\gamma P$", "Zero", "None"],
+  "a": 0,
+  "e": "Bulk modulus equals pressure for isothermal. / samtapi ke liye bulk modulus dab ke barabar hota hai.",
+  "cat": "gs",
+  "sub": "heat"
+},
+{
+  "q": "What is 'Ideal gas' bulk modulus in Adiabatic process?\nruddhoshm prakriya mein 'adarsh gas' ka bulk modulus kya hai?",
+  "o": ["P", "$\gamma P$ | $\gamma P$", "Zero", "None"],
+  "a": 1,
+  "e": "Bulk modulus is $\gamma$ times pressure for adiabatic. / ruddhoshm ke liye bulk modulus dab ka $\gamma$ guna hota hai.",
+  "cat": "gs",
+  "sub": "heat"
+},
+{
+  "q": "What is 'Latent Heat' of 'Vaporization' of Water at 100°C?\n100°C par pani ke 'vashpikaran' ki 'gupt ushma' kya hai?",
+  "o": ["540 cal/g | 540 cal/g", "80 cal/g", "1 cal/g", "None"],
+  "a": 0,
+  "e": "Heat required to turn water into steam. / pani ko bhap mein badalne ke liye avashyak ushma.",
+  "cat": "gs",
+  "sub": "heat"
+},
+{
+  "q": "What is 'Convection' primarily caused by in 'Liquids'?\n'dravon' mein 'sanvahan' ka mukhya karan kya hai?",
+  "o": ["Density difference | ghnatv mein antar", "Color", "Viscosity", "None"],
+  "a": 0,
+  "e": "Hotter fluid is less dense and rises. / garam drav kam ghana hota hai aur upar uthta hai.",
+  "cat": "gs",
+  "sub": "heat"
+},
+{
+  "q": "Which material is used for 'Heating Elements'?\n'heating element' ke liye kis padarth ka upyog hota hai?",
+  "o": ["Copper", "Nichrome | nichrome", "Silver", "Aluminium"],
+  "a": 1,
+  "e": "High resistivity and high melting point. / uchchh pratirodhakta aur uchchh galnak.",
+  "cat": "gs",
+  "sub": "heat"
+},
+{
+  "q": "What is 'Work Done' in Isothermal expansion of ideal gas?\nadarsh gas ke samtapi prasar mein 'kiya gaya karya' kiske barabar hai?",
+  "o": ["Heat absorbed | avshoshit ushma", "Internal energy change", "Zero", "None"],
+  "a": 0,
+  "e": "Since $\Delta U = 0$, $Q = W$. / kyunki $\Delta U = 0$ hai, isliye $Q = W$.",
+  "cat": "gs",
+  "sub": "heat"
+},
+{
+  "q": "What is 'Specific Heat' of 'Gas' in Adiabatic process?\nruddhoshm prakriya mein 'gas' ki 'vishisht ushma' kya hoti hai?",
+  "o": ["Zero | shunya", "Infinite", "Constant", "None"],
+  "a": 0,
+  "e": "$Q = 0$, so $C = Q/m\Delta T = 0$.",
+  "cat": "gs",
+  "sub": "heat"
+},
+{
+  "q": "What is 'Specific Heat' of 'Gas' in Isothermal process?\nsamtapi prakriya mein 'gas' ki 'vishisht ushma' kya hoti hai?",
+  "o": ["Zero", "Infinite | anant", "Constant", "None"],
+  "a": 1,
+  "e": "$\Delta T = 0$, so $C = Q/m\Delta T = \infty$.",
+  "cat": "gs",
+  "sub": "heat"
+},
+{
+  "q": "What is 'Thermal expansion' of 'Mercury' useful in?\n'pare' ka 'tapiya prasar' kis-me upyogi hai?",
+  "o": ["Thermometers | thermometer", "Cookers", "Engines", "None"],
+  "a": 0,
+  "e": "Linear expansion with temperature. / tapman ke saath rekhiya prasar.",
+  "cat": "gs",
+  "sub": "heat"
+},
+{
+  "q": "Congratulations! 900 questions complete. What is 'Absolute Zero' on Fahrenheit scale?\nbadhai ho! 900 prashn pure huye. fahrenheit paimane par 'param shunya' kya hai?",
+  "o": ["-459.67°F | -459.67°F", "-273.15°F", "0°F", "None"],
+  "a": 0,
+  "e": "Lowest possible temperature in Fahrenheit. / fahrenheit mein nyuntam sambhav tapman.",
+  "cat": "gs",
+  "sub": "heat"
+},
+{
+  "q": "What is 'Maxwell’s First Relation' of thermodynamics?\nushmagatiki ka 'maxwell ka pehla sambandh' kya hai?",
+  "o": ["$(\partial T/\partial V)_s = -(\partial P/\partial S)_v$ | $(\partial T/\partial V)_s = -(\partial P/\partial S)_v$", "$PV=nRT$", "$dQ=dU+dW$", "None"],
+  "a": 0,
+  "e": "Relates temperature, volume, pressure, and entropy. / tapman, aaytan, dab aur entropy ko jodta hai.",
+  "cat": "gs",
+  "sub": "heat"
+},
+{
+  "q": "What is 'Isothermal Bulk Modulus' of an ideal gas?\nek adarsh gas ka 'samtapi bulk modulus' kya hai?",
+  "o": ["Zero", "Pressure (P) | dab (P)", "$\gamma P$", "Infinite"],
+  "a": 1,
+  "e": "Derived from $PV = Constant$ under isothermal conditions. / samtapi sthitiyon mein $PV = Constant$ se vyutpann.",
+  "cat": "gs",
+  "sub": "heat"
+},
+{
+  "q": "What is 'Adiabatic Bulk Modulus' of an ideal gas?\nek adarsh gas ka 'ruddhoshm bulk modulus' kya hai?",
+  "o": ["P", "$\gamma P$ | $\gamma P$", "Zero", "None"],
+  "a": 1,
+  "e": "Relates to speed of sound in gases. / gason mein dhwani ki chaal se sambandhit hai.",
+  "cat": "gs",
+  "sub": "heat"
+},
+{
+  "q": "What is 'Solar Constant' ($S$) value for Earth?\nprithvi ke liye 'sour niyatank' ($S$) ka maan kya hai?",
+  "o": ["$1.36 kW/m^2$ | $1.36 kW/m^2$", "$2.5 kW/m^2$", "$0.5 kW/m^2$", "None"],
+  "a": 0,
+  "e": "Energy received from Sun per unit area per unit time. / surya se prati ikai kshetraphal prati ikai samay mein prapt oorja.",
+  "cat": "gs",
+  "sub": "heat"
+},
+{
+  "q": "Which process has 'Maximum' change in entropy?\nkis prakriya mein entropy mein 'adhiktam' parivartan hota hai?",
+  "o": ["Reversible", "Irreversible | anutkramaniya", "Adiabatic", "None"],
+  "a": 1,
+  "e": "Irreversibility always leads to an increase in entropy. / anutkramaniyta hamesha entropy mein vriddhi karti hai.",
+  "cat": "gs",
+  "sub": "heat"
+},
+{
+  "q": "What is 'Boltzmann Constant' ($k$) related to Gas Constant ($R$)?\n'boltzmann niyatank' ($k$) ka gas niyatank ($R$) se kya sambandh hai?",
+  "o": ["$k = R/N_A$ | $k = R/N_A$ ($N_A$ is Avogadro No.)", "$k = RN_A$", "$k = R+N_A$", "None"],
+  "a": 0,
+  "e": "Gas constant per molecule. / prati anu gas niyatank.",
+  "cat": "gs",
+  "sub": "heat"
+},
+{
+  "q": "What is 'Average Kinetic Energy' of a gas molecule at temperature $T$?\ntapman $T$ par ek gas anu ki 'ousat gatij oorja' kya hai?",
+  "o": ["$1/2 kT$", "$3/2 kT$ | $3/2 kT$", "$5/2 kT$", "None"],
+  "a": 1,
+  "e": "Directly proportional to absolute temperature. / param tapman ke seedhe samanupati.",
+  "cat": "gs",
+  "sub": "heat"
+},
+{
+  "q": "Which engine has 'Maximum Efficiency' theoretically?\nsaiddhantik roop se kis engine ki 'dakshta adhiktam' hoti hai?",
+  "o": ["Petrol engine", "Diesel engine", "Carnot engine | carnot engine", "Steam engine"],
+  "a": 2,
+  "e": "Efficiency depends only on source and sink temperatures. / dakshta sirf srot aur sink ke tapman par nirbhar karti hai.",
+  "cat": "gs",
+  "sub": "heat"
+},
+{
+  "q": "What is 'Coefficient of Thermal Expansion' for water at 4°C?\n4°C par pani ke liye 'tapiya prasar gunank' kya hai?",
+  "o": ["Maximum", "Minimum", "Zero | shunya", "None"],
+  "a": 2,
+  "e": "Water has maximum density at 4°C, so expansion starts after this point. / 4°C par pani ka ghnatv adhiktam hota hai.",
+  "cat": "gs",
+  "sub": "heat"
+},
+{
+  "q": "What is 'Stefan-Boltzmann Law' power ($P$) formula?\n'stefan-boltzmann niyam' ka shakti ($P$) sutra kya hai?",
+  "o": ["$P = \sigma e A T^4$ | $P = \sigma e A T^4$", "$P = \sigma T^4$", "$P = eAT^2$", "None"],
+  "a": 0,
+  "e": "Radiated power depends on area and T to the power 4. / utsarjit shakti kshetraphal aur tapman ki 4th ghat par nirbhar hai.",
+  "cat": "gs",
+  "sub": "heat"
+},
+{
+  "q": "What is 'Thermal capacity' of a 10g substance with specific heat $0.5 cal/g°C$?\n$0.5 cal/g°C$ vishisht ushma wale 10g padarth ki 'ushma kshamta' kya hai?",
+  "o": ["5 cal/°C | 5 cal/°C", "20 cal/°C", "0.05 cal/°C", "None"],
+  "a": 0,
+  "e": "Thermal Capacity = Mass $\times$ Specific Heat = $10 \times 0.5 = 5$.",
+  "cat": "gs",
+  "sub": "heat"
+},
+{
+  "q": "What is 'Work Done' in a cyclic process?\nek chakriya prakriya mein 'kiya gaya karya' kya hota hai?",
+  "o": ["Zero", "Area of the P-V loop | P-V loop ka kshetraphal", "Internal energy change", "None"],
+  "a": 1,
+  "e": "Net work equals the area enclosed by the cycle on P-V diagram. / shuddh karya P-V diagram par chakra dwara ghera gaya kshetraphal hai.",
+  "cat": "gs",
+  "sub": "heat"
+},
+{
+  "q": "What is 'Adiabatic Process' speed?\n'ruddhoshm prakriya' ki gati kya hoti hai?",
+  "o": ["Very Slow", "Very Fast | bahut tez", "Constant", "None"],
+  "a": 1,
+  "e": "Must be fast so that no heat exchange occurs with surroundings. / tez honi chahiye taaki vatavaran ke saath ushma ka vinimay na ho.",
+  "cat": "gs",
+  "sub": "heat"
+},
+{
+  "q": "What is 'Isothermal Process' speed?\n'samtapi prakriya' ki gati kya hoti hai?",
+  "o": ["Very Slow | bahut dheemi", "Very Fast", "Instant", "None"],
+  "a": 0,
+  "e": "Must be slow to maintain constant temperature. / niyat tapman banaye rakhne ke liye dheemi honi chahiye.",
+  "cat": "gs",
+  "sub": "heat"
+},
+{
+  "q": "Which law explains why 'Radiators' are painted black?\n'radiators' ko kala kyun ranga jata hai, ise kaun sa niyam samjhata hai?",
+  "o": ["Boyle's Law", "Kirchhoff's Law | kirchhoff ka niyam", "Ohm's Law", "None"],
+  "a": 1,
+  "e": "Good absorbers are good emitters of heat. / achhe avshoshak ushma ke achhe utsarjak hote hain.",
+  "cat": "gs",
+  "sub": "heat"
+},
+{
+  "q": "What is 'Pressure Cooker' utility based on?\n'pressure cooker' ki upyogita kis par aadharit hai?",
+  "o": ["Lowering boiling point", "Raising boiling point | kvathanak badhana", "Chemical reaction", "None"],
+  "a": 1,
+  "e": "High pressure increases the boiling point of water. / uchchh dab pani ka kvathanak badha deta hai.",
+  "cat": "gs",
+  "sub": "heat"
+},
+{
+  "q": "What is 'Mean Free Path' ($\lambda$) for a gas molecule?\nek gas anu ke liye 'madhy mukt path' ($\lambda$) kya hai?",
+  "o": ["Average distance between collisions | takkaron ke beech ki ousat doori", "Total path", "Zero", "None"],
+  "a": 0,
+  "e": "Distance traveled by a molecule without hitting another. / bina kisi dusre se takraye anu dwara tay ki gayi doori.",
+  "cat": "gs",
+  "sub": "heat"
+},
+{
+  "q": "What is 'Work Done' in Isothermal compression?\n'samtapi sampidan' mein 'kiya gaya karya' kya hota hai?",
+  "o": ["$nRT \ln(V_2/V_1)$ | $nRT \ln(V_2/V_1)$", "$P \Delta V$", "Zero", "None"],
+  "a": 0,
+  "e": "Formula for work in an isothermal process. / samtapi prakriya mein karya ka sutra.",
+  "cat": "gs",
+  "sub": "heat"
+},
+{
+  "q": "What is 'First Law of Thermodynamics' a special case of?\nushmagatiki ka 'pratham niyam' kiska ek vishesh mamla hai?",
+  "o": ["Conservation of Mass", "Conservation of Energy | oorja sanrakshan", "Conservation of Momentum", "None"],
+  "a": 1,
+  "e": "Energy cannot be created or destroyed, only transformed. / oorja na to paida ki ja sakti hai na hi nasht, sirf rupantarit hoti hai.",
+  "cat": "gs",
+  "sub": "heat"
+},
+{
+  "q": "What is 'Entropy' at Absolute Zero ($0 K$) for a perfect crystal?\nek purn kristal ke liye 'param shunya' par 'entropy' kya hai?",
+  "o": ["Infinite", "Maximum", "Zero | shunya", "None"],
+  "a": 2,
+  "e": "According to the Third Law of Thermodynamics. / ushmagatiki ke tisre niyam ke anusar.",
+  "cat": "gs",
+  "sub": "heat"
+},
+{
+  "q": "What is 'Thermal Conductivity' of 'Copper' compared to 'Steel'?\n'steel' ki tulna mein 'tambe' ki 'tapiya chalakta' kya hai?",
+  "o": ["Higher | adhik", "Lower", "Equal", "None"],
+  "a": 0,
+  "e": "Copper is a much better conductor than steel. / tamba steel se bahut behtar chalak hai.",
+  "cat": "gs",
+  "sub": "heat"
+},
+{
+  "q": "What is 'Efficiency' of a Heat Engine $(\eta)$?\nek ushma engine ki 'dakshta' $(\eta)$ kya hai?",
+  "o": ["$Work / Heat Input$ | $Work / Heat Input$", "$Heat / Work$", "1", "None"],
+  "a": 0,
+  "e": "Ratio of useful work to total heat absorbed. / upyogi karya aur kul avshoshit ushma ka anupat.",
+  "cat": "gs",
+  "sub": "heat"
+},
+{
+  "q": "What is 'Latent Heat' of Fusion of Ice?\nbarf ke galan ki 'gupt ushma' kya hai?",
+  "o": ["$80 cal/g$ | $80 cal/g$", "$540 cal/g$", "$1 cal/g$", "None"],
+  "a": 0,
+  "e": "Heat required to convert 1g of ice to water at 0°C. / 0°C par 1g barf ko pani mein badalne ke liye avashyak ushma.",
+  "cat": "gs",
+  "sub": "heat"
+},
+{
+  "q": "What is 'Vaporization' latent heat for water?\npani ke liye 'vashpikaran' ki gupt ushma kya hai?",
+  "o": ["$80 cal/g$", "$540 cal/g$ | $540 cal/g$", "$100 cal/g$", "None"],
+  "a": 1,
+  "e": "Heat required to convert 1g water to steam at 100°C. / 100°C par 1g pani ko bhap mein badalne ke liye avashyak ushma.",
+  "cat": "gs",
+  "sub": "heat"
+},
+{
+  "q": "What is 'Adiabatic compression' effect on temperature?\n'ruddhoshm sampidan' ka tapman par kya prabhav padta hai?",
+  "o": ["Increases | badhta hai", "Decreases", "No change", "None"],
+  "a": 0,
+  "e": "Work done on the gas increases its internal energy and temp. / gas par kiya gaya karya uski aantrik oorja aur tapman badhata hai.",
+  "cat": "gs",
+  "sub": "heat"
+},
+{
+  "q": "What is 'Isothermal expansion' effect on temperature?\n'samtapi prasar' ka tapman par kya prabhav padta hai?",
+  "o": ["Increases", "Decreases", "Remains same | saman rehta hai", "None"],
+  "a": 2,
+  "e": "By definition, temperature is constant. / paribhasha ke anusar, tapman niyat rehta hai.",
+  "cat": "gs",
+  "sub": "heat"
+},
+{
+  "q": "Which thermometer is best for 'Surface Temperature' of the Sun?\nsurya ki 'satahi tapman' ke liye kaun sa thermometer sabse achha hai?",
+  "o": ["Gas Thermometer", "Pyrometer | pyrometer", "Mercury Thermometer", "None"],
+  "a": 1,
+  "e": "Used for remote high temperature measurement. / doorasth uchchh tapman mapne ke liye upyog hota hai.",
+  "cat": "gs",
+  "sub": "heat"
+},
+{
+  "q": "What is 'Specific Heat' of 'Monatomic Gas' at constant volume ($C_v$)?\nsthir aaytan par 'ek-parmanuk gas' ki 'vishisht ushma' ($C_v$) kya hai?",
+  "o": ["$3/2 R$ | $3/2 R$", "$5/2 R$", "$R$", "None"],
+  "a": 0,
+  "e": "Based on 3 translational degrees of freedom. / 3 sthanantarniya swatantrata ki kotiyon par aadharit.",
+  "cat": "gs",
+  "sub": "heat"
+},
+{
+  "q": "What is 'Specific Heat' of 'Diatomic Gas' at constant volume ($C_v$)?\nsthir aaytan par 'dwi-parmanuk gas' ki 'vishisht ushma' ($C_v$) kya hai?",
+  "o": ["$3/2 R$", "$5/2 R$ | $5/2 R$", "$7/2 R$", "None"],
+  "a": 1,
+  "e": "Based on 5 degrees of freedom (3 trans + 2 rot). / 5 swatantrata ki kotiyon par aadharit.",
+  "cat": "gs",
+  "sub": "heat"
+},
+{
+  "q": "What is 'Carnot cycle' composed of?\n'carnot chakra' kisse bana hota hai?",
+  "o": ["2 Isothermal + 2 Adiabatic | 2 samtapi + 2 ruddhoshm", "4 Isothermal", "4 Adiabatic", "None"],
+  "a": 0,
+  "e": "The most efficient theoretical thermodynamic cycle. / sabse kushal saiddhantik ushmagatiki chakra.",
+  "cat": "gs",
+  "sub": "heat"
+},
+{
+  "q": "What is 'Stefan's Constant' ($\sigma$) value approx?\n'stefan niyatank' ($\sigma$) ka lagbhag maan kya hai?",
+  "o": ["$5.67 \times 10^{-8} W/m^2 K^4$ | $5.67 \times 10^{-8} W/m^2 K^4$", "$8.31$", "$1.38 \times 10^{-23}$", "None"],
+  "a": 0,
+  "e": "Constant used in radiation power calculation. / vikiran shakti ki ganna mein upyog hone wala niyatank.",
+  "cat": "gs",
+  "sub": "heat"
+},
+{
+  "q": "Which law states 'Heat cannot by itself flow from cold to hot'?\nkaun sa niyam kehta hai ki 'ushma apne aap thande se garam ki aur nahi beh sakti'?",
+  "o": ["Zeroth Law", "First Law", "Second Law | dwitiya niyam", "None"],
+  "a": 2,
+  "e": "Related to the direction of thermal processes. / tapiya prakriyaon ki disha se sambandhit.",
+  "cat": "gs",
+  "sub": "heat"
+},
+{
+  "q": "What is 'Efficiency' of Carnot Engine if $T_1 = 400K$ and $T_2 = 300K$?\nyadi $T_1 = 400K$ aur $T_2 = 300K$ ho, to carnot engine ki 'dakshta' kya hogi?",
+  "o": ["25% | 25%", "50%", "75%", "100%"],
+  "a": 0,
+  "e": "$\eta = 1 - 300/400 = 0.25$ or $25%$.",
+  "cat": "gs",
+  "sub": "heat"
+},
+{
+  "q": "What is 'Thermal Resistance' for 'Series' rods?\n'shrenibaddh' (series) chhadon ke liye 'tapiya pratirodh' kya hai?",
+  "o": ["$R_{eq} = R_1 + R_2$ | $R_{eq} = R_1 + R_2$", "$1/R_1 + 1/R_2$", "$R_1 \times R_2$", "None"],
+  "a": 0,
+  "e": "Analogous to series electrical resistance. / shrenibaddh vidyut pratirodh ke saman.",
+  "cat": "gs",
+  "sub": "heat"
+},
+{
+  "q": "What is 'Internal Energy' change in an 'Isochoric' process?\n'sam-aytanik' prakriya mein 'aantrik oorja' parivartan kiske barabar hai?",
+  "o": ["Heat added ($dQ$) | jodi gayi ushma ($dQ$)", "Work done", "Zero", "None"],
+  "a": 0,
+  "e": "Since $dW = 0$, $dQ = dU$. / kyunki $dW = 0$ hai, isliye saari ushma aantrik oorja badhati hai.",
+  "cat": "gs",
+  "sub": "heat"
+},
+{
+  "q": "What is 'Thermostat' primarily used for?\n'thermostat' ka mukhya upyog kya hai?",
+  "o": ["Measure heat", "Maintain constant temperature | niyat tapman banaye rakhna", "Increase pressure", "None"],
+  "a": 1,
+  "e": "Used in irons, refrigerators, etc. / iron, refrigerator aadi mein upyog hota hai.",
+  "cat": "gs",
+  "sub": "heat"
+},
+{
+  "q": "What is 'Density' of Water 'Minimum' at (in liquid range)?\ndrav range mein pani ka 'ghnatv' 'nyuntam' kab hota hai?",
+  "o": ["100°C | 100°C", "4°C", "0°C", "None"],
+  "a": 0,
+  "e": "Water density decreases as it heats up towards boiling. / kvathanak ki aur garam hone par pani ka ghnatv ghat-ta hai.",
+  "cat": "gs",
+  "sub": "heat"
+},
+{
+  "q": "Which material is 'Best Conductor' of heat?\nushma ka 'sabse achha chalak' kaun sa hai?",
+  "o": ["Iron", "Copper", "Silver | chaandi (Silver)", "Wood"],
+  "a": 2,
+  "e": "Silver has the highest thermal conductivity among metals. / dhatuon mein chaandi ki tapiya chalakta adhiktam hoti hai.",
+  "cat": "gs",
+  "sub": "heat"
+},
+{
+  "q": "What is 'Radiation' also called?\n'vikiran' ko aur kya kaha jata hai?",
+  "o": ["Electromagnetic radiation | vidyut chumbakiya vikiran", "Mechanical wave", "Static heat", "None"],
+  "a": 0,
+  "e": "Heat transfer via electromagnetic waves. / vidyut chumbakiya tarangon dwara ushma sthanantaran.",
+  "cat": "gs",
+  "sub": "heat"
+},
+{
+  "q": "What is 'Expansion' of Rail Tracks in summer a result of?\ngarmiyon mein rail ki patriyon ka phailna kiska parinam hai?",
+  "o": ["Linear Expansion | rekhiya prasar", "Cubical Expansion", "Area Expansion", "None"],
+  "a": 0,
+  "e": "Increase in length due to heat. / ushma ke karan lambai mein vriddhi.",
+  "cat": "gs",
+  "sub": "heat"
+},
+{
+  "q": "What is 'Zeroth Law' utility?\n'shunya niyam' (Zeroth Law) ki kya upyogita hai?",
+  "o": ["Temperature measurement | tapman mapan", "Efficiency calculation", "Heat transfer", "None"],
+  "a": 0,
+  "e": "Provides the basis for the concept of temperature. / tapman ki avdharna ka aadhar pradan karta hai.",
+  "cat": "gs",
+  "sub": "heat"
+},
+{
+  "q": "What is 'Thermal conductivity' of a 'Vacuum'?\n'nirvat' ki 'tapiya chalakta' kya hai?",
+  "o": ["Infinite", "Zero | shunya (Zero)", "One", "None"],
+  "a": 1,
+  "e": "Heat cannot be conducted without particles. / kanon ke bina ushma ka chalan nahi ho sakta.",
+  "cat": "gs",
+  "sub": "heat"
+},
+{
+  "q": "What is 'Boyle's Law' relating $P$ and $V$?\n$P$ aur $V$ ko jodne wala 'boyle ka niyam' kya hai?",
+  "o": ["$P \propto V$", "$P \propto 1/V$ | $P \propto 1/V$", "$P = V$", "None"],
+  "a": 1,
+  "e": "At constant temperature, pressure is inversely proportional to volume. / niyat tapman par, dab aaytan ke vyutkramanupati hota hai.",
+  "cat": "gs",
+  "sub": "heat"
+},
+{
+  "q": "What is 'Charles' Law' relating $V$ and $T$?\n$V$ aur $T$ ko jodne wala 'charles ka niyam' kya hai?",
+  "o": ["$V \propto T$ | $V \propto T$", "$V \propto 1/T$", "$V = T$", "None"],
+  "a": 0,
+  "e": "At constant pressure, volume is directly proportional to temperature. / niyat dab par, aaytan tapman ke samanupati hota hai.",
+  "cat": "gs",
+  "sub": "heat"
+},
+{
+  "q": "What is 'Universal Gas Constant' ($R$) value in SI?\nSI mein 'sarvabhumik gas niyatank' ($R$) ka maan kya hai?",
+  "o": ["$8.314 J/mol \cdot K$ | $8.314 J/mol \cdot K$", "$0.0821$", "$1.987$", "None"],
+  "a": 0,
+  "e": "Used in the Ideal Gas Equation $PV=nRT$. / adarsh gas samikaran mein upyog hota hai.",
+  "cat": "gs",
+  "sub": "heat"
+},
+{
+  "q": "What is 'Specific Heat' of 'Ice' approx?\n'barf' ki 'vishisht ushma' lagbhag kya hai?",
+  "o": ["$1.0 cal/g°C$", "$0.5 cal/g°C$ | $0.5 cal/g°C$", "$2.0 cal/g°C$", "None"],
+  "a": 1,
+  "e": "Half of the specific heat of liquid water. / drav pani ki vishisht ushma ki aadhi.",
+  "cat": "gs",
+  "sub": "heat"
+},
+{
+  "q": "What is 'Melting Point' of 'Ice' on Fahrenheit scale?\nfahrenheit paimane par 'barf ka galnak' kya hai?",
+  "o": ["0°F", "32°F | 32°F", "212°F", "100°F"],
+  "a": 1,
+  "e": "Equivalent to 0°C. / 0°C ke barabar.",
+  "cat": "gs",
+  "sub": "heat"
+},
+{
+  "q": "What is 'Boiling Point' of 'Water' on Fahrenheit scale?\nfahrenheit paimane par 'pani ka kvathanak' kya hai?",
+  "o": ["32°F", "100°F", "212°F | 212°F", "373°F"],
+  "a": 2,
+  "e": "Equivalent to 100°C. / 100°C ke barabar.",
+  "cat": "gs",
+  "sub": "heat"
+},
+{
+  "q": "What is 'Joule-Thomson' expansion for an Ideal Gas?\n'adarsh gas' ke liye 'joule-thomson' prasar kya hota hai?",
+  "o": ["Cooling", "Heating", "Zero temperature change | tapman mein koi badlav nahi", "None"],
+  "a": 2,
+  "e": "Ideal gas molecules have no intermolecular forces. / adarsh gas anuon mein koi aanvik bal nahi hota.",
+  "cat": "gs",
+  "sub": "heat"
+},
+{
+  "q": "What is the 'Dimension' of Entropy?\n'entropy' ki 'vima' (dimension) kya hai?",
+  "o": ["$[ML^2T^{-2}K^{-1}]$ | $[ML^2T^{-2}K^{-1}]$", "$[ML^2T^{-2}]$", "$[L^2T^{-2}K^{-1}]$", "None"],
+  "a": 0,
+  "e": "Unit is J/K, so dimension is energy/temperature. / ikai J/K hai, isliye oorja/tapman.",
+  "cat": "gs",
+  "sub": "heat"
+},
+{
+  "q": "What is 'Critical Temperature' ($T_c$) of CO2?\nCO2 ka 'krantik tapman' ($T_c$) kya hai?",
+  "o": ["31.1°C | 31.1°C", "0°C", "100°C", "-50°C"],
+  "a": 0,
+  "e": "Above this temp, CO2 cannot be liquefied by pressure alone. / isse upar sirf dab se CO2 ko dravit nahi kiya ja sakta.",
+  "cat": "gs",
+  "sub": "heat"
+},
+{
+  "q": "What is 'Solar Radiation' peak wavelength related to?\n'sour vikiran' ki peak tarangdaidhy kisse sambandhit hai?",
+  "o": ["Wien's Law | ween ka niyam", "Boyle's Law", "Ohm's Law", "None"],
+  "a": 0,
+  "e": "Sun's peak wavelength is in the visible spectrum. / surya ki peak tarangdaidhy drishya spectrum mein hoti hai.",
+  "cat": "gs",
+  "sub": "heat"
+},
+{
+  "q": "What is 'Thermal conductivity' of a 'Perfect Conductor'?\nek 'adarsh chalak' ki 'tapiya chalakta' kya hai?",
+  "o": ["Zero", "One", "Infinite | anant (Infinite)", "None"],
+  "a": 2,
+  "e": "Allows instantaneous heat flow. / turant ushma pravah ki anumati deta hai.",
+  "cat": "gs",
+  "sub": "heat"
+},
+{
+  "q": "Which color 'Star' is the 'Hottest'?\nkaun sa rang ka 'tara' sabse 'garam' hota hai?",
+  "o": ["Red", "Yellow", "Blue | neela (Blue)", "White"],
+  "a": 2,
+  "e": "Shortest wavelength means highest temperature. / sabse choti tarangdaidhy ka matlab adhiktam tapman.",
+  "cat": "gs",
+  "sub": "heat"
+},
+{
+  "q": "What is 'Triple Point' of Water?\npani ka 'trik bindu' (Triple Point) kya hai?",
+  "o": ["273.16 K | 273.16 K", "273.15 K", "373.15 K", "0 K"],
+  "a": 0,
+  "e": "Where all three phases coexist in equilibrium. / jahan teeno avsthayen santulan mein hoti hain.",
+  "cat": "gs",
+  "sub": "heat"
+},
+{
+  "q": "What is 'Latent Heat' of Steam in Joules (approx)?\nbhap ki 'gupt ushma' joules mein lagbhag kya hai?",
+  "o": ["$2260 kJ/kg$ | $2260 kJ/kg$", "$334 kJ/kg$", "$4200 kJ/kg$", "None"],
+  "a": 0,
+  "e": "Equivalent to 540 cal/g. / 540 cal/g ke barabar.",
+  "cat": "gs",
+  "sub": "heat"
+},
+{
+  "q": "Which thermodynamic law defines 'Internal Energy'?\nkaun sa ushmagatiki niyam 'aantrik oorja' ko paribhashit karta hai?",
+  "o": ["Zeroth Law", "First Law | pratham niyam", "Second Law", "Third Law"],
+  "a": 1,
+  "e": "Based on energy conservation. / oorja sanrakshan par aadharit.",
+  "cat": "gs",
+  "sub": "heat"
+},
+{
+  "q": "What is 'Isothermal' expansion work on P-V graph?\nPV graph par 'samtapi' prasar karya kya hai?",
+  "o": ["Area under the curve | curve ke niche ka kshetraphal", "Slope", "Volume", "None"],
+  "a": 0,
+  "e": "General rule for work in any P-V process. / kisi bhi P-V prakriya mein karya ka samanya niyam.",
+  "cat": "gs",
+  "sub": "heat"
+},
+{
+  "q": "What is 'Entropy' change for a 'Cyclic' process?\nek 'chakriya' prakriya mein 'entropy' parivartan kya hota hai?",
+  "o": ["Increases", "Decreases", "Zero | shunya (Zero)", "None"],
+  "a": 2,
+  "e": "Entropy is a state function; returns to initial value. / entropy state function hai; prarambhik maan par lout-ti hai.",
+  "cat": "gs",
+  "sub": "heat"
+},
+{
+  "q": "Which material has 'Negative' coefficient of thermal expansion?\nkis padarth ka 'tapiya prasar gunank' 'rinatmak' hota hai?",
+  "o": ["Water (0-4°C) | pani (0-4°C)", "Iron", "Copper", "None"],
+  "a": 0,
+  "e": "Water contracts when heated in this range. / is range mein garam karne par pani sikudta hai.",
+  "cat": "gs",
+  "sub": "heat"
+},
+{
+  "q": "What is 'Refrigerator' COP practically?\nvyavharik roop se refrigerator ka COP kya hota hai?",
+  "o": ["Less than 1", "Greater than 1 | 1 se adhik", "Equal to 1", "None"],
+  "a": 1,
+  "e": "Can move more heat than the work input. / kiye gaye karya se adhik ushma sthanantarit kar sakta hai.",
+  "cat": "gs",
+  "sub": "heat"
+},
+{
+  "q": "What is 'Radiant Heat' also known as?\n'vikiran ushma' ko aur kya kaha jata hai?",
+  "o": ["Infrared waves | infrared tarangein", "Ultraviolet", "X-rays", "None"],
+  "a": 0,
+  "e": "Felt as heat by our skin. / hamari twacha ise garmi ke roop mein mehsoos karti hai.",
+  "cat": "gs",
+  "sub": "heat"
+},
+{
+  "q": "What is 'Heat' unit 'Calorie' equal to in Joules?\nek 'calorie' joules mein kiske barabar hai?",
+  "o": ["4.186 J | 4.186 J", "9.8 J", "1 J", "None"],
+  "a": 0,
+  "e": "Mechanical equivalent of heat. / ushma ka yaantrik tulyank.",
+  "cat": "gs",
+  "sub": "heat"
+},
+{
+  "q": "What is 'Mean Free Path' ($\lambda$) dependency on 'Density' ($\rho$)?\n'madhy mukt path' ($\lambda$) 'ghnatv' ($\rho$) par kaise nirbhar hai?",
+  "o": ["$\lambda \propto 1/\rho$ | $\lambda \propto 1/\rho$", "$\lambda \propto \rho$", "$\lambda \propto \rho^2$", "None"],
+  "a": 0,
+  "e": "Denser gas means more frequent collisions. / adhik ghanatv ka matlab hai adhik baar takkar.",
+  "cat": "gs",
+  "sub": "heat"
+},
+{
+  "q": "What is 'Isothermal' elasticity of a gas?\nek gas ki 'samtapi' pratyasthta kya hai?",
+  "o": ["P | P (pressure)", "$\gamma P$", "Zero", "None"],
+  "a": 0,
+  "e": "Equal to the pressure of the gas. / gas ke dab ke barabar.",
+  "cat": "gs",
+  "sub": "heat"
+},
+{
+  "q": "What is 'Adiabatic' elasticity of a gas?\nek gas ki 'ruddhoshm' pratyasthta kya hai?",
+  "o": ["P", "$\gamma P$ | $\gamma P$", "Zero", "None"],
+  "a": 1,
+  "e": "Equal to $\gamma$ times the pressure. / dab ka $\gamma$ guna.",
+  "cat": "gs",
+  "sub": "heat"
+},
+{
+  "q": "What is 'Stefan-Boltzmann Law' power dependency on T?\n'stefan-boltzmann niyam' ki shakti T par kaise nirbhar hai?",
+  "o": ["$T^2$", "$T^4$ | $T^4$", "$T$", "None"],
+  "a": 1,
+  "e": "Proportional to the fourth power of absolute temperature. / param tapman ki chouthi ghat ke samanupati.",
+  "cat": "gs",
+  "sub": "heat"
+},
+{
+  "q": "What is 'Newton’s Law of Cooling' a special case of?\n'newton ka sheetlan niyam' kiska ek vishesh mamla hai?",
+  "o": ["Stefan's Law | stefan ka niyam", "Wien's Law", "Boyle's Law", "None"],
+  "a": 0,
+  "e": "Valid for small temperature differences. / kam tapman ke antar ke liye manya.",
+  "cat": "gs",
+  "sub": "heat"
+},
+{
+  "q": "What is 'Absorptivity' of a perfect Black Body?\nek adarsh krishn pind ki 'avshoshkta' kya hai?",
+  "o": ["0", "0.5", "1 | 1", "Infinite"],
+  "a": 2,
+  "e": "Absorbs all radiation incident on it. / apne upar girne wale saare vikiran ko avshoshit kar leta hai.",
+  "cat": "gs",
+  "sub": "heat"
+},
+{
+  "q": "What is 'Emissivity' of a perfect Black Body?\nek adarsh krishn pind ki 'utsarjakta' kya hai?",
+  "o": ["0", "0.5", "1 | 1", "Infinite"],
+  "a": 2,
+  "e": "Emits maximum possible radiation at a given T. / diye gaye T par adhiktam vikiran utsarjit karta hai.",
+  "cat": "gs",
+  "sub": "heat"
+},
+{
+  "q": "What is 'Radiation' also known as in terms of waves?\ntarangon ke sandarbh mein 'vikiran' ko kya kaha jata hai?",
+  "o": ["Longitudinal waves", "Electromagnetic waves | vidyut chumbakiya tarangein", "Sound waves", "None"],
+  "a": 1,
+  "e": "Can travel through vacuum. / nirvat se guzar sakti hai.",
+  "cat": "gs",
+  "sub": "heat"
+},
+{
+  "q": "Which law relates peak wavelength and temperature?\npeak tarangdaidhy aur tapman ko kaun sa niyam jodta hai?",
+  "o": ["Stefan's Law", "Wien's Displacement Law | ween ka visthapan niyam", "Newton's Law", "None"],
+  "a": 1,
+  "e": "$\lambda_{max} T = Constant$.",
+  "cat": "gs",
+  "sub": "heat"
+},
+{
+  "q": "What is 'Thermodynamic work' path dependent?\nkya 'ushmagatiki karya' raste par nirbhar karta hai?",
+  "o": ["Yes | haan (Yes)", "No", "Only for gases", "None"],
+  "a": 0,
+  "e": "Work is a path function. / karya ek path function hai.",
+  "cat": "gs",
+  "sub": "heat"
+},
+{
+  "q": "What is 'Internal Energy' path dependent?\nkya 'aantrik oorja' raste par nirbhar karti hai?",
+  "o": ["Yes", "No | nahi (No)", "Only for solids", "None"],
+  "a": 1,
+  "e": "Internal energy is a state function. / aantrik oorja ek state function hai.",
+  "cat": "gs",
+  "sub": "heat"
+},
+{
+  "q": "What is 'Convection' in a vacuum?\nnirvat mein 'sanvahan' kya hota hai?",
+  "o": ["Zero | shunya (Zero)", "Maximum", "Slow", "None"],
+  "a": 0,
+  "e": "Convection requires a material medium. / sanvahan ke liye madhyam ki avashyakta hoti hai.",
+  "cat": "gs",
+  "sub": "heat"
+},
+{
+  "q": "What is 'Black Body' color at room temperature?\nkamre ke tapman par 'krishn pind' ka rang kya hota hai?",
+  "o": ["White", "Black | kala (Black)", "Red", "None"],
+  "a": 1,
+  "e": "Appears black because it absorbs all visible light. / kyunki ye saari drishya prakash ko avshoshit karta hai.",
+  "cat": "gs",
+  "sub": "heat"
+},
+{
+  "q": "What is 'Heat' flowing from cold to hot possible 'Only' with?\nthande se garam ki aur ushma ka pravah 'sirf' kiske saath sambhav hai?",
+  "o": ["Internal work", "External work | bahari karya (External work)", "Zero work", "None"],
+  "a": 1,
+  "e": "According to Second Law (Clausius statement). / dwitiya niyam ke anusar.",
+  "cat": "gs",
+  "sub": "heat"
+},
+{
+  "q": "What is 'Efficiency' of any real engine compared to Carnot?\nकिसी bhi vastvik engine ki dakshta carnot ki tulna mein kya hoti hai?",
+  "o": ["Higher", "Lower | kam (Lower)", "Equal", "None"],
+  "a": 1,
+  "e": "Carnot engine is the theoretical limit. / carnot engine saiddhantik sima hai.",
+  "cat": "gs",
+  "sub": "heat"
+},
+{
+  "q": "What is 'Specific Heat' at 'Constant Pressure' always compared to 'Constant Volume'?\nsthir dab par 'vishisht ushma' hamesha sthir aaytan ki tulna mein kya hoti hai?",
+  "o": ["Greater | adhik (Greater)", "Lower", "Equal", "None"],
+  "a": 0,
+  "e": "Because $C_p = C_v + R$.",
+  "cat": "gs",
+  "sub": "heat"
+},
+{
+  "q": "What is 'Thermal conductivity' unit in SI?\nSI mein 'tapiya chalakta' ki ikai kya hai?",
+  "o": ["$W/m \cdot K$ | $W/m \cdot K$", "$J/K$", "$cal/g$", "None"],
+  "a": 0,
+  "e": "Unit of k in heat conduction equation. / ushma chalan samikaran mein k ki ikai.",
+  "cat": "gs",
+  "sub": "heat"
+},
+{
+  "q": "What is 'Adiabatic Index' ($\gamma$) for a gas with 6 degrees of freedom?\n6 swatantrata ki kotiyon wali gas ke liye 'gama' ($\gamma$) kya hai?",
+  "o": ["1.33 | 1.33 (4/3)", "1.4", "1.67", "None"],
+  "a": 0,
+  "e": "$\gamma = 1 + 2/f = 1 + 2/6 = 1.33$.",
+  "cat": "gs",
+  "sub": "heat"
+},
+{
+  "q": "What is 'Work' done by a gas during expansion?\nprasar ke dauran gas dwara 'kiya gaya karya' kya hota hai?",
+  "o": ["Positive | dhanatmak (Positive)", "Negative", "Zero", "None"],
+  "a": 0,
+  "e": "Expansion work is positive in physics convention. / prasar karya dhanatmak mana jata hai.",
+  "cat": "gs",
+  "sub": "heat"
+},
+{
+  "q": "What is 'Internal Energy' of an Ideal Gas dependent 'Only' on?\nadarsh gas ki 'aantrik oorja' sirf kisse judi hai?",
+  "o": ["Pressure", "Volume", "Temperature | tapman (Temperature)", "None"],
+  "a": 2,
+  "e": "U is a function of T only. / U sirf T ka phalan hai.",
+  "cat": "gs",
+  "sub": "heat"
+},
+{
+  "q": "Which state of matter has highest entropy?\npadarth ki kis avastha mein entropy sabse adhik hoti hai?",
+  "o": ["Solid", "Liquid", "Gas | gas (Gas)", "All same"],
+  "a": 2,
+  "e": "Maximum randomness in gas phase. / gas avastha mein adhiktam yadrichhikta.",
+  "cat": "gs",
+  "sub": "heat"
+},
+{
+  "q": "What is 'Vapor Pressure' at boiling point equal to?\nkvathanak par 'vashp dab' kiske barabar hota hai?",
+  "o": ["Zero", "1 atm | 1 atm (Atmospheric pressure)", "100 atm", "None"],
+  "a": 1,
+  "e": "Liquid boils when vapor pressure equals external pressure. / drav tab ubalta hai jab vashp dab bahari dab ke barabar ho.",
+  "cat": "gs",
+  "sub": "heat"
+},
+{
+  "q": "Which law is the basis of 'Thermometry'?\n'thermometry' ka aadhar kaun sa niyam hai?",
+  "o": ["Zeroth Law | shunya niyam (Zeroth Law)", "First Law", "Second Law", "None"],
+  "a": 0,
+  "e": "Defines the concept of thermal equilibrium. / tapiya santulan ki avdharna ko paribhashit karta hai.",
+  "cat": "gs",
+  "sub": "heat"
+},
+{
+  "q": "What is 'Solar Constant' unit?\n'sour niyatank' ki ikai kya hai?",
+  "o": ["$W/m^2$ | $W/m^2$", "$J/K$", "$W/K$", "None"],
+  "a": 0,
+  "e": "Energy per unit area per unit time. / prati ikai kshetraphal prati ikai samay oorja.",
+  "cat": "gs",
+  "sub": "heat"
+},
+{
+  "q": "What is 'Latent Heat' of Fusion of Ice in SI?\nSI mein barf ke galan ki 'gupt ushma' kya hai?",
+  "o": ["$334 kJ/kg$ | $334 kJ/kg$", "$2260 kJ/kg$", "$4200 kJ/kg$", "None"],
+  "a": 0,
+  "e": "Equivalent to 80 cal/g. / 80 cal/g ke barabar.",
+  "cat": "gs",
+  "sub": "heat"
+},
+{
+  "q": "What is 'Ideal Gas' at very low temperature and high pressure?\nbahut kam tap aur uchchh dab par 'adarsh gas' kya hoti hai?",
+  "o": ["Still ideal", "Behaves as Real Gas | vastvik gas ki tarah vyavhar", "Solidifies", "None"],
+  "a": 1,
+  "e": "Deviates from ideality. / adarsh vyavhar se bhatakti hai.",
+  "cat": "gs",
+  "sub": "heat"
+},
+{
+  "q": "What is 'Entropy' of a system always 'Increasing' in?\nkis-me ek nikay ki 'entropy' hamesha 'badhti' hai?",
+  "o": ["Isolated system | vilgit nikay (Isolated)", "Open system", "Closed system", "None"],
+  "a": 0,
+  "e": "Universe is an isolated system. / brahmand ek vilgit nikay hai.",
+  "cat": "gs",
+  "sub": "heat"
+},
+{
+  "q": "Which color 'Body' cools down fastest in dark?\nandhere mein kaun sa rang ka 'pind' sabse jaldi thanda hota hai?",
+  "o": ["White", "Black | kala (Black)", "Red", "None"],
+  "a": 1,
+  "e": "Good absorber is a good emitter. / achha avshoshak achha utsarjak hota hai.",
+  "cat": "gs",
+  "sub": "heat"
+},
+{
+  "q": "What is 'Stefan's Law' primarily for?\n'stefan ka niyam' mukhya roop se kiske liye hai?",
+  "o": ["Conduction", "Convection", "Radiation | vikiran (Radiation)", "None"],
+  "a": 2,
+  "e": "Describes heat loss by radiation. / vikiran dwara ushma hani batata hai.",
+  "cat": "gs",
+  "sub": "heat"
+},
+{
+  "q": "What is 'Specific Heat' of 'Monatomic' gas ($C_p$)?\n'ek-parmanuk' gas ki 'vishisht ushma' ($C_p$) kya hai?",
+  "o": ["$3/2 R$", "$5/2 R$ | $5/2 R$", "$7/2 R$", "None"],
+  "a": 1,
+  "e": "$C_p = C_v + R = 3/2 R + R = 5/2 R$.",
+  "cat": "gs",
+  "sub": "heat"
+},
+{
+  "q": "What is 'Heat Engine' COP?\n'ushma engine' ka COP kya hota hai?",
+  "o": ["Efficiency ($\eta$) | dakshta ($\eta$)", "Infinite", "Zero", "None"],
+  "a": 0,
+  "e": "Usually defined as efficiency for heat engines. / ushma engine ke liye ise dakshta kaha jata hai.",
+  "cat": "gs",
+  "sub": "heat"
+},
+{
+  "q": "What is 'Boiling Point' dependency on 'Pressure'?\n'kvathanak' ki 'dab' par nirbharta kya hai?",
+  "o": ["Increases with Pressure | dab ke saath badhta hai", "Decreases", "No change", "None"],
+  "a": 0,
+  "e": "Reason for pressure cooker working. / pressure cooker ke kaam karne ka karan.",
+  "cat": "gs",
+  "sub": "heat"
+},
+{
+  "q": "What is 'Specific Heat' of water at 4°C?\n4°C par pani ki 'vishisht ushma' kya hoti hai?",
+  "o": ["$1 cal/g°C$ | $1 cal/g°C$", "$0.5 cal/g°C$", "$0$", "None"],
+  "a": 0,
+  "e": "Standard value for water. / pani ka manak maan.",
+  "cat": "gs",
+  "sub": "heat"
+},
+{
+  "q": "What is 'Absolute Zero' unreachable based on?\nkis niyam ke anusar 'param shunya' tak pahunchna asambhav hai?",
+  "o": ["Second Law", "Third Law | tritiya niyam (Third Law)", "First Law", "None"],
+  "a": 1,
+  "e": "Entropy approach zero but temperature cannot. / entropy shunya ki aur jati hai par tapman nahi.",
+  "cat": "gs",
+  "sub": "heat"
+},
+{
+  "q": "CONGRATULATIONS! 1000 Questions Complete! What is Physics?\nBADHAI HO! 1000 prashn pure huye! Physics kya hai?",
+  "o": ["Study of Matter and Energy | padarth aur oorja ka adhyayan", "Study of Plants", "Study of History", "None"],
+  "a": 0,
+  "e": "The most fundamental science. / sabse mool vigyan.",
+  "cat": "gs",
+  "sub": "heat"
+},
+{
+  "q": "What type of wave is 'Sound' in air?\nhawa mein 'dhwani' kis prakar ki tarang hai?",
+  "o": ["Transverse wave", "Longitudinal wave | anudhairya tarang (Longitudinal)", "Electromagnetic wave", "None"],
+  "a": 1,
+  "e": "Sound travels as a series of compressions and rarefactions. / dhwani sampidan aur viralan ke roop mein chalti hai.",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "What is the 'SI Unit' of Frequency?\naavritti (Frequency) ki 'SI ikai' kya hai?",
+  "o": ["Decibel", "Hertz | hertz (Hz)", "Meter", "Watt"],
+  "a": 1,
+  "e": "Number of vibrations per second is called Hertz. / prati second hone wale kampano ki sankhya ko hertz kehte hain.",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "Sound waves CANNOT travel through:\ndhwani tarangein kisse hokar nahi guzar sakti?",
+  "o": ["Solids", "Liquids", "Vacuum | nirvat (Vacuum)", "Gases"],
+  "a": 2,
+  "e": "Sound requires a material medium to travel. / dhwani ko yatra ke liye padarthik madhyam chahiye.",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "What is the speed of sound in 'Air' at 0°C approx?\n0°C par hawa mein dhwani ki chaal lagbhag kya hai?",
+  "o": ["332 m/s | 332 m/s", "1500 m/s", "5000 m/s", "3 \times 10^8 m/s"],
+  "a": 0,
+  "e": "Standard speed in dry air at STP. / STP par shushk hawa mein manak chaal.",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "Which property of sound determines its 'Pitch'?\ndhwani ka kaun sa gun uski 'teekshnata' (Pitch) nirdharit karta hai?",
+  "o": ["Amplitude", "Frequency | aavritti (Frequency)", "Velocity", "Intensity"],
+  "a": 1,
+  "e": "Higher frequency means higher pitch (shrill sound). / uchchh aavritti ka matlab hai uchchh pitch.",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "What is the 'Audible Range' for human ears?\nmanav kaano ke liye 'shravya sima' kya hai?",
+  "o": ["0 to 20 Hz", "20 Hz to 20,000 Hz | 20 Hz se 20,000 Hz", "Above 20,000 Hz", "None"],
+  "a": 1,
+  "e": "Frequencies below 20 Hz are infrasonic, above 20 kHz are ultrasonic. / 20 Hz se niche infrasonic aur 20 kHz se upar ultrasonic hoti hain.",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "What are sound waves below 20 Hz called?\n20 Hz se niche ki dhwani tarangon ko kya kehte hain?",
+  "o": ["Ultrasonic", "Infrasonic | infrasonic (avshravya)", "Audible", "Supersonic"],
+  "a": 1,
+  "e": "Whales and elephants can communicate using infrasonic waves. / whale aur haathi infrasonic ka upyog karte hain.",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "What is the unit used to measure the 'Loudness' of sound?\ndhwani ki 'prabalata' (Loudness) mapne ke liye kis ikai ka upyog hota hai?",
+  "o": ["Hertz", "Decibel | decibel (dB)", "Meter", "Joule"],
+  "a": 1,
+  "e": "Named after Alexander Graham Bell. / alexander graham bell ke naam par.",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "The speed of sound is 'Maximum' in:\ndhwani ki chaal 'adhiktam' kis-me hoti hai?",
+  "o": ["Air", "Water", "Steel | steel (thos)", "Vacuum"],
+  "a": 2,
+  "e": "Sound travels faster in denser and more elastic media like solids. / dhwani thos jaise saghan aur pratyasth madhyam mein tez chalti hai.",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "What is the phenomenon of 'Repetition of Sound' due to reflection called?\nparavartan ke karan 'dhwani ki punravritti' ko kya kehte hain?",
+  "o": ["Refraction", "Echo | pradhwani (Echo)", "Resonance", "Interference"],
+  "a": 1,
+  "e": "Occurs when sound reflects off a distant surface. / tab hota hai jab dhwani kisi doorasth satah se takra kar lout-ti hai.",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "What is the 'Minimum Distance' required to hear a clear echo?\nek saaf echo sun-ne ke liye 'nyuntam doori' kya honi chahiye?",
+  "o": ["10 m", "17.2 m | 17.2 m (approx 17m)", "34 m", "5 m"],
+  "a": 1,
+  "e": "Based on the persistence of hearing (0.1 sec) and speed of sound. / sun-ne ki dridhta (0.1 sec) par aadharit.",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "Which property of sound waves is used in 'SONAR'?\n'SONAR' mein dhwani tarangon ka kaun sa gun upyog hota hai?",
+  "o": ["Refraction", "Reflection | paravartan (Reflection)", "Diffraction", "None"],
+  "a": 1,
+  "e": "Sound Navigation and Ranging uses ultrasonic echoes. / sonar ultrasonic echoes ka upyog karta hai.",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "What is the full form of 'SONAR'?\nSONAR ka purn roop kya hai?",
+  "o": ["Sound Navigation and Ranging | Sound Navigation and Ranging", "Solar Navigation and Ranging", "Sound Night Ranging", "None"],
+  "a": 0,
+  "e": "Used by ships to detect underwater objects. / jahazo dwara pani ke niche ki vastuon ka pata lagane mein prayukt.",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "Which waves are used in 'Ultrasonography' in hospitals?\nhospital mein 'ultrasonography' mein kaun si tarangein upyog hoti hain?",
+  "o": ["X-rays", "Ultrasonic waves | ultrasonic tarangein", "Radio waves", "None"],
+  "a": 1,
+  "e": "High frequency sound waves used for internal body imaging. / sharir ke aantrik bhago ki tasveer ke liye uchchh aavritti ki dhwani.",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "The speed of sound in air ______ with increase in 'Humidity'.\n'aardrata' badhne par hawa mein dhwani ki chaal ______.",
+  "o": ["Increases | badhti hai", "Decreases", "Stay same", "None"],
+  "a": 0,
+  "e": "Moist air is less dense than dry air, and sound travels faster in it. / nam hawa kam saghan hoti hai, isliye dhwani tez chalti hai.",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "What is 'Reverberation'?\n'anuranan' (Reverberation) kya hai?",
+  "o": ["Single reflection", "Multiple reflections of sound | dhwani ke bahu-paravartan", "Breaking of sound", "None"],
+  "a": 1,
+  "e": "Persistence of sound in a big hall due to repeated reflections. / bade hall mein baar-baar paravartan ke karan dhwani ka bane rehna.",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "Which animal can hear 'Ultrasonic' sounds?\nkaun sa janvar 'ultrasonic' dhwani sun sakta hai?",
+  "o": ["Bat | chamgadar (Bat)", "Elephant", "Whale", "Both 1 and 3"],
+  "a": 0,
+  "e": "Bats use ultrasonics for navigation (echolocation). / chamgadar rasta dhoondhne ke liye ultrasonic ka upyog karte hain.",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "What is 'Quality' or 'Timbre' of sound?\ndhwani ki 'gunvatta' (Quality) kya hai?",
+  "o": ["Difference in pitch", "Difference in loudness", "Property to distinguish same pitch/loudness sounds | ek saman pitch/loudness wali dhwaniyon mein antar karne ka gun", "None"],
+  "a": 2,
+  "e": "Helps us distinguish between a flute and a piano. / bansuri aur piano ke beech antar karne mein madad karta hai.",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "What is the relation between Wave Speed ($v$), Frequency ($f$), and Wavelength ($\lambda$)?\nveg, aavritti aur tarangdaidhy ke beech kya sambandh hai?",
+  "o": ["$v = f \lambda$ | $v = f \lambda$", "$v = f/\lambda$", "$f = v \lambda$", "None"],
+  "a": 0,
+  "e": "Basic wave equation. / mool tarang samikaran.",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "What happens to 'Frequency' of sound when it moves from one medium to another?\njab dhwani ek madhyam se dusre mein jati hai, to uski 'aavritti' ka kya hota hai?",
+  "o": ["Increases", "Decreases", "Remains constant | niyat rehti hai", "None"],
+  "a": 2,
+  "e": "Frequency depends on the source, not the medium. / aavritti srot par nirbhar karti hai, madhyam par nahi.",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "What is 'Mach Number' related to?\n'mach sankhya' kisse sambandhit hai?",
+  "o": ["Speed of sound | dhwani ki chaal", "Intensity", "Frequency", "None"],
+  "a": 0,
+  "e": "Ratio of object speed to speed of sound. / vastu ki chaal aur dhwani ki chaal ka anupat.",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "A sound with Mach number > 1 is called:\nmach sankhya > 1 wali dhwani ko kya kehte hain?",
+  "o": ["Subsonic", "Supersonic | supersonic", "Infrasonic", "None"],
+  "a": 1,
+  "e": "Speed is faster than the speed of sound. / chaal dhwani ki chaal se adhik hoti hai.",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "What is the 'Doppler Effect'?\n'doppler prabhav' kya hai?",
+  "o": ["Change in speed", "Apparent change in frequency due to motion | gati ke karan aavritti mein aabhasit badlav", "Refraction", "None"],
+  "a": 1,
+  "e": "Observed when source or observer is moving. / tab dikhta hai jab srot ya prekshak gati mein hon.",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "What is 'Intensity' of sound?\ndhwani ki 'teevrata' (Intensity) kya hai?",
+  "o": ["Energy per unit area per unit time | prati ikai kshetraphal prati ikai samay oorja", "Pitch", "Loudness", "None"],
+  "a": 0,
+  "e": "Physical quantity measured in $W/m^2$. / $W/m^2$ mein mapi jane wali bhautik rashi.",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "Which part of the 'Human Ear' converts vibrations into electrical signals?\nmanav kaan ka kaun sa bhag kampano ko vidyut sanketo mein badalta hai?",
+  "o": ["Eardrum", "Cochlea | cochlea (karnavart)", "Pinna", "Hammer"],
+  "a": 1,
+  "e": "The fluid-filled part in the inner ear. / aantrik kaan ka drav-bhara bhag.",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "What is 'Resonance'?\n'anunaad' (Resonance) kya hai?",
+  "o": ["Echo", "Vibration with high amplitude when natural frequency matches | jab prakritik aavritti milti hai to uchchh aayam ke saath kampan", "Damping", "None"],
+  "a": 1,
+  "e": "Occurs when external frequency matches natural frequency. / jab bahari aavritti prakritik aavritti se milti hai.",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "The speed of sound is 'Minimum' in:\ndhwani ki chaal 'nyuntam' kis-me hoti hai?",
+  "o": ["Gases (Air) | gasen (hawa)", "Liquids", "Solids", "Vacuum"],
+  "a": 0,
+  "e": "Due to low density and elasticity compared to solids/liquids. / thos/drav ki tulna mein kam ghnatv aur pratyasthta ke karan.",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "What is the 'Time Period' (T) related to Frequency (f)?\nsamay kaal aur aavritti ka kya sambandh hai?",
+  "o": ["$T = f$", "$T = 1/f$ | $T = 1/f$", "$T = f^2$", "None"],
+  "a": 1,
+  "e": "Reciprocal relation. / vyutkram sambandh.",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "What is 'Amplitude' of a wave?\nek tarang ka 'aayam' (Amplitude) kya hai?",
+  "o": ["Distance between crests", "Maximum displacement from mean position | madhya sthiti se adhiktam visthapan", "Speed", "None"],
+  "a": 1,
+  "e": "Determines the loudness of sound. / dhwani ki prabalata nirdharit karta hai.",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "Which sound wave cannot be heard by humans?\nkaun si dhwani tarang manushyon dwara nahi suni ja sakti?",
+  "o": ["100 Hz", "5000 Hz", "25,000 Hz | 25,000 Hz", "20 Hz"],
+  "a": 2,
+  "e": "It is in the ultrasonic range (> 20 kHz). / ye ultrasonic range mein hai.",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "What is 'Stethoscope' based on?\n'stethoscope' kis par aadharit hai?",
+  "o": ["Refraction", "Multiple reflection of sound | dhwani ka bahu-paravartan", "Diffraction", "None"],
+  "a": 1,
+  "e": "Sound travels through the tube by multiple reflections. / tube mein dhwani bahu-paravartan se yatra karti hai.",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "What is 'Sound Barrier'?\n'dhwani avrodh' (Sound Barrier) kya hai?",
+  "o": ["A wall", "Speed of sound | dhwani ki chaal", "Frequency limit", "None"],
+  "a": 1,
+  "e": "The sudden increase in drag as an object approaches speed of sound. / jab vastu dhwani ki chaal ke paas pahunchti hai to khinchav badh jata hai.",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "What are 'Sonic Booms' caused by?\n'sonic booms' kiske karan hote hain?",
+  "o": ["Infrasonics", "Supersonic aircrafts | supersonic viman", "Loud speakers", "None"],
+  "a": 1,
+  "e": "Shock waves created by objects moving faster than sound. / dhwani se tez chalne wali vastuon dwara bani shock tarangein.",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "What happens to sound speed with 'Temperature' increase?\ntapman badhne par dhwani ki chaal ka kya hota hai?",
+  "o": ["Increases | badhti hai", "Decreases", "No change", "None"],
+  "a": 0,
+  "e": "Speed increases by 0.61 m/s for every 1°C rise. / prati 1°C badhne par chaal 0.61 m/s badhti hai.",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "What is 'Echo-location' used by?\n'echo-location' ka upyog kiske dwara kiya jata hai?",
+  "o": ["Bats", "Dolphins", "Submarines", "All of these | uprokt sabhi"],
+  "a": 3,
+  "e": "Used to detect obstacles or prey. / badhaon ya shikar ka pata lagane ke liye.",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "What is 'Infrasound' primarily produced by?\n'avshravya dhwani' (Infrasound) mukhya roop se kisse paida hoti hai?",
+  "o": ["Earthquakes | bhukamp", "Whistles", "Piano", "None"],
+  "a": 0,
+  "e": "Large objects like Earth produce very low frequencies. / prithvi jaisi badi vastuyen bahut kam aavritti paida karti hain.",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "What is 'Wavelength' ($\lambda$)?\n'tarangdaidhy' ($\lambda$) kya hai?",
+  "o": ["Distance between two consecutive crests/troughs | do kramagat shring/garta ke beech ki doori", "Height of wave", "Speed", "None"],
+  "a": 0,
+  "e": "Measured in meters. / ise meter mein mapa jata hai.",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "Loudness of sound is proportional to ______ of amplitude.\ndhwani ki prabalata aayam ke ______ ke samanupati hoti hai.",
+  "o": ["Square root", "Square | varg (Square)", "Cube", "None"],
+  "a": 1,
+  "e": "$Loudness \propto Amplitude^2$. / prabalata $\propto$ aayam².",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "What is 'Ultrasonic' frequency range?\n'ultrasonic' aavritti range kya hai?",
+  "o": ["Below 20 Hz", "20 to 20,000 Hz", "Above 20,000 Hz | 20,000 Hz se upar", "None"],
+  "a": 2,
+  "e": "Beyond the range of human hearing. / manav shravan sima ke bahar.",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "What is 'Beats' phenomenon?\n'beats' (vipand) ki ghatna kya hai?",
+  "o": ["Loud sound", "Periodic variation in loudness due to slightly different frequencies | thodi alag aavrittiyon ke karan prabalata mein badlav", "Reflection", "None"],
+  "a": 1,
+  "e": "Result of interference of two waves of close frequencies. / paas-paas ki aavrittiyon wali do tarangon ke vyatikaran ka parinam.",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "Which part of ear is also called 'Drum'?\nkaan ke kis bhag ko 'dhol' (Drum) bhi kehte hain?",
+  "o": ["Pinna", "Tympanic membrane | tympanic jhalli (Eardrum)", "Cochlea", "None"],
+  "a": 1,
+  "e": "Vibrates when sound waves hit it. / jab dhwani tarangein takrati hain to ye kampan karta hai.",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "What is 'Note' in music?\nsangeet mein 'note' kya hai?",
+  "o": ["Single frequency sound", "Mixture of several frequencies | kai aavrittiyon ka mishran", "Noise", "None"],
+  "a": 1,
+  "e": "A sound produced by mixing various frequencies which is pleasant. / kai aavrittiyon se bani suhani dhwani.",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "What is 'Tone'?\n'tone' kya hai?",
+  "o": ["Sound of single frequency | ekal aavritti wali dhwani", "Loud noise", "Mixed frequencies", "None"],
+  "a": 0,
+  "e": "Pure sound with only one frequency. / sirf ek aavritti wali shuddh dhwani.",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "Speed of sound in 'Steel' is approx:\n'steel' mein dhwani ki chaal lagbhag hai:",
+  "o": ["340 m/s", "1500 m/s", "5960 m/s | 5960 m/s", "None"],
+  "a": 2,
+  "e": "Much faster than air or water. / hawa ya pani se bahut tez.",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "What is 'Noise'?\n'shor' (Noise) kya hai?",
+  "o": ["Pleasant sound", "Unpleasant and irregular sound | apriya aur aniyamit dhwani", "Musical note", "None"],
+  "a": 1,
+  "e": "Disordered sound that causes irritation. / avyavasthit dhwani jo chidchidapan paida karti hai.",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "Which medium is 'Empty Space'?\n'shunya sthan' (Empty Space) kaun sa madhyam hai?",
+  "o": ["Air", "Water", "Vacuum | nirvat (Vacuum)", "None"],
+  "a": 2,
+  "e": "Sound cannot travel here. / yahan dhwani yatra nahi kar sakti.",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "What is 'Persistence of Hearing' time?\n'shravan dridhta' (Persistence of Hearing) samay kya hai?",
+  "o": ["1 sec", "0.1 sec | 0.1 sec", "0.5 sec", "None"],
+  "a": 1,
+  "e": "The sensation of sound remains in brain for 0.1s. / dhwani ka ehsas dimaag mein 0.1s tak rehta hai.",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "What is used to 'Absorb' sound in auditoriums?\nauditorium mein dhwani ko 'sokhne' (Absorb) ke liye kya upyog hota hai?",
+  "o": ["Mirrors", "Compressed fiberboard / Curtains | fiberboard / parde", "Metals", "None"],
+  "a": 1,
+  "e": "To reduce reverberation. / anuranan ko kam karne ke liye.",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "Speed of sound in 'Water' is approx:\npani mein dhwani ki chaal lagbhag hai:",
+  "o": ["340 m/s", "1500 m/s | 1500 m/s", "5000 m/s", "None"],
+  "a": 1,
+  "e": "Approx 4-5 times faster than in air. / hawa se lagbhag 4-5 guna tez.",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "Congratulations! 50 questions done. What is Sound?\nbadhai ho! 50 prashn pure huye. dhwani kya hai?",
+  "o": ["Form of matter", "Form of energy | oorja ka ek roop", "Invisible gas", "None"],
+  "a": 1,
+  "e": "Energy that produces sensation of hearing. / oorja jo sun-ne ki sanvedna paida karti hai.",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "What is 'Adiabatic Index' ($\gamma$) for Helium?\nhelium ke liye 'ruddhoshm suchakank' ($\gamma$) kya hai?",
+  "o": ["1.4", "1.67 | 1.67", "1.33", "1.0"],
+  "a": 1,
+  "e": "For monatomic gases like Helium. / helium jaisi ek-parmanuk gason ke liye.",
+  "cat": "gs",
+  "sub": "heat"
+},
+{
+  "q": "Congratulations! 950 questions complete. What is 'Adiabatic Index' ($\gamma$) for Oxygen?\nbadhai ho! 950 prashn pure huye. oxygen ke liye 'ruddhoshm suchakank' ($\gamma$) kya hai?",
+  "o": ["1.4 | 1.4", "1.67", "1.33", "2.0"],
+  "a": 0,
+  "e": "Oxygen is a diatomic gas. / oxygen ek dwi-parmanuk gas hai.",
+  "cat": "gs",
+  "sub": "heat"
+},
+{
+  "q": "What is 'Solar Constant' dependent on 'Distance' ($r$)?\n'sour niyatank' 'doori' ($r$) par kaise nirbhar karta hai?",
+  "o": ["$S \propto 1/r$", "$S \propto 1/r^2$ | $S \propto 1/r^2$", "$S \propto r$", "None"],
+  "a": 1,
+  "e": "Follows the inverse square law. / vyutkram varg niyam ka palan karta hai.",
+  "cat": "gs",
+  "sub": "heat"
+},
+{
+  "q": "What is 'Greenhouse' gas primarily?\npramukh 'greenhouse' gas kaun si hai?",
+  "o": ["Oxygen", "CO2 and Water vapor | CO2 aur jal-vashp", "Nitrogen", "Argon"],
+  "a": 1,
+  "e": "They absorb infrared radiation. / ye infrared vikiran ko avshoshit karti hain.",
+  "cat": "gs",
+  "sub": "heat"
+},
+{
+  "q": "What is 'Specific Heat' at constant volume for 'Solids' at low temp?\nkam tapman par 'thoson' ke liye sthir aaytan par 'vishisht ushma' kya hoti hai?",
+  "o": ["$T^3$ Law | $T^3$ niyam (Debye Law)", "Constant", "Zero", "None"],
+  "a": 0,
+  "e": "Specific heat is proportional to the cube of absolute temperature. / vishisht ushma param tapman ki ghan (cube) ke samanupati hoti hai.",
+  "cat": "gs",
+  "sub": "heat"
+},
+{
+  "q": "What is 'Thermal Conductivity' of 'Air' compared to 'Water'?\npani ki tulna mein 'hawa' ki 'tapiya chalakta' kya hai?",
+  "o": ["Higher", "Lower | kam", "Equal", "None"],
+  "a": 1,
+  "e": "Gases are generally poorer conductors than liquids. / gasen aamtour par dravon se kharab chalak hoti hain.",
+  "cat": "gs",
+  "sub": "heat"
+},
+{
+  "q": "What is the 'Reason' for using 'Glass' in Greenhouses?\ngreenhouse mein 'kaanch' ka upyog karne ka 'karan' kya hai?",
+  "o": ["Transparent to light, opaque to IR | prakash ke liye pardarshi, IR ke liye apardarshi", "Cheap", "Strong", "None"],
+  "a": 0,
+  "e": "Traps the heat inside. / ushma ko andar rok leta hai.",
+  "cat": "gs",
+  "sub": "heat"
+},
+{
+  "q": "What is 'Newton's Law of Cooling' valid for?\n'newton ka sheetlan niyam' kiske liye manya hai?",
+  "o": ["Small temperature difference | kam tapantar", "Large temperature difference", "All cases", "None"],
+  "a": 0,
+  "e": "Usually valid when $\Delta T < 30°C$. / aamtour par jab $\Delta T < 30°C$ ho.",
+  "cat": "gs",
+  "sub": "heat"
+},
+{
+  "q": "What is 'Emissivity' of a 'Grey Body'?\nek 'grey body' ki 'utsarjakta' kya hoti hai?",
+  "o": ["Zero", "One", "Between 0 and 1 | 0 aur 1 ke beech", "Infinite"],
+  "a": 2,
+  "e": "Constant emissivity for all wavelengths. / sabhi tarangdaidhy ke liye niyat utsarjakta.",
+  "cat": "gs",
+  "sub": "heat"
+},
+{
+  "q": "What is 'Black Body' Radiation spectrum called?\n'krishn pind' vikiran spectrum ko kya kehte hain?",
+  "o": ["Planck's Law curve | planck ke niyam ka curve", "Boyle's curve", "Linear curve", "None"],
+  "a": 0,
+  "e": "Describes the intensity of radiation at different wavelengths. / vibhinn tarangdaidhy par vikiran ki teevrata batata hai.",
+  "cat": "gs",
+  "sub": "heat"
+},
+{
+  "q": "Which color 'Surface' is the best radiator of heat?\nkaun sa rang 'satah' ushma ka sabse achha radiator hai?",
+  "o": ["Polished Silver", "Dull Black | halka kala (Dull Black)", "White", "Yellow"],
+  "a": 1,
+  "e": "Rough black surfaces emit heat most efficiently. / khurduri kali satah sabse dakshta se ushma utsarjit karti hai.",
+  "cat": "gs",
+  "sub": "heat"
+},
+{
+  "q": "What is 'Heat Transfer' without a medium called?\nbina madhyam ke 'ushma sthanantaran' ko kya kehte hain?",
+  "o": ["Conduction", "Convection", "Radiation | vikiran", "All"],
+  "a": 2,
+  "e": "Can travel through vacuum. / nirvat se guzar sakti hai.",
+  "cat": "gs",
+  "sub": "heat"
+},
+{
+  "q": "What is 'Internal Energy' change in an 'Isothermal' process of ideal gas?\nadarsh gas ki 'samtapi' prakriya mein 'aantrik oorja' parivartan kya hota hai?",
+  "o": ["Positive", "Negative", "Zero | shunya", "None"],
+  "a": 2,
+  "e": "Since $T$ is constant, $U$ remains constant. / kyunki $T$ niyat hai, $U$ bhi niyat rehta hai.",
+  "cat": "gs",
+  "sub": "heat"
+},
+{
+  "q": "What is 'Work Done' on a gas in 'Adiabatic' compression?\n'ruddhoshm' sampidan mein gas par 'kiya gaya karya' kya hota hai?",
+  "o": ["Converted to internal energy | aantrik oorja mein badal jata hai", "Lost as heat", "Zero", "None"],
+  "a": 0,
+  "e": "Temperature and internal energy increase. / tapman aur aantrik oorja badh jate hain.",
+  "cat": "gs",
+  "sub": "heat"
+},
+{
+  "q": "What is 'Vapor Pressure'?\n'vashp dab' (Vapor Pressure) kya hai?",
+  "o": ["Pressure of vapor in equilibrium with liquid | drav ke saath santulan mein vashp ka dab", "Total air pressure", "Zero", "None"],
+  "a": 0,
+  "e": "Increases with temperature. / tapman ke saath badhta hai.",
+  "cat": "gs",
+  "sub": "heat"
+},
+{
+  "q": "What is 'Boiling' of liquid happens when?\ndrav ka 'kvathan' kab hota hai?",
+  "o": ["Vapor pressure = Atmospheric pressure | vashp dab = vayumandaliya dab", "Temp is 0°C", "Vapor pressure = 0", "None"],
+  "a": 0,
+  "e": "The whole liquid starts turning to gas. / pura drav gas mein badalne lagta hai.",
+  "cat": "gs",
+  "sub": "heat"
+},
+{
+  "q": "What is 'Latent Heat' related to 'Bonds'?\n'gupt ushma' ka 'bandhan' (Bonds) se kya sambandh hai?",
+  "o": ["Energy to break molecular bonds | aanvik bandhan todne ke liye oorja", "Energy to move molecules", "Both", "None"],
+  "a": 0,
+  "e": "Used to change state, not temperature. / avastha badalne ke liye upyog hoti hai, tapman nahi.",
+  "cat": "gs",
+  "sub": "heat"
+},
+{
+  "q": "What is 'Carnot' engine source temperature theoretically?\ncarnot engine srot ka tapman saiddhantik roop se kya hona chahiye?",
+  "o": ["Infinite | anant", "0 K", "100°C", "None"],
+  "a": 0,
+  "e": "For 100% efficiency, source must be infinite or sink 0 K. / 100% dakshta ke liye srot anant ya sink 0 K hona chahiye.",
+  "cat": "gs",
+  "sub": "heat"
+},
+{
+  "q": "What is 'Entropy' of the Universe always doing?\nbrahmand ki 'entropy' hamesha kya kar rahi hai?",
+  "o": ["Increasing | badh rahi hai", "Decreasing", "Staying same", "None"],
+  "a": 0,
+  "e": "Due to Second Law of Thermodynamics. / ushmagatiki ke dwitiya niyam ke karan.",
+  "cat": "gs",
+  "sub": "heat"
+},
+{
+  "q": "Which substance has 'Highest' specific heat?\nkis padarth ki 'vishisht ushma' sabse adhik hai?",
+  "o": ["Water | pani", "Kerosene", "Iron", "Sand"],
+  "a": 0,
+  "e": "Water takes more time to heat and cool. / pani garam aur thanda hone mein adhik samay leta hai.",
+  "cat": "gs",
+  "sub": "heat"
+},
+{
+  "q": "What is 'Thermos Flask' designed to minimize?\n'thermos flask' kise kam karne ke liye design kiya jata hai?",
+  "o": ["Conduction", "Convection", "Radiation", "All of these | uprokt sabhi"],
+  "a": 3,
+  "e": "Uses vacuum, silvering and double walls. / nirvat, silvering aur dohari deewaro ka upyog karta hai.",
+  "cat": "gs",
+  "sub": "heat"
+},
+{
+  "q": "What is 'Cooling' caused by 'Perspiration' (sweating)?\n'paseene' se 'sheetlan' (Cooling) kiska parinam hai?",
+  "o": ["Evaporation | vashpikaran", "Conduction", "Radiation", "None"],
+  "a": 0,
+  "e": "Evaporation takes latent heat from the body. / vashpikaran sharir se gupt ushma leta hai.",
+  "cat": "gs",
+  "sub": "heat"
+},
+{
+  "q": "What is 'Cooking' faster in a Pressure Cooker because?\npressure cooker mein 'khana' jaldi kyun banta hai?",
+  "o": ["Pressure lowers boiling point", "Pressure raises boiling point | dab kvathanak badha deta hai", "Direct heat", "None"],
+  "a": 1,
+  "e": "High pressure raises boiling point, so water is hotter. / uchchh dab kvathanak badhata hai, isliye pani adhik garam hota hai.",
+  "cat": "gs",
+  "sub": "heat"
+},
+{
+  "q": "What is 'Specific Heat' of 'Ice' compared to 'Steam'?\n'bhap' ki tulna mein 'barf' ki 'vishisht ushma' kya hai?",
+  "o": ["Equal | lagbhag saman (approx 0.5 cal/g°C)", "Double", "Zero", "None"],
+  "a": 0,
+  "e": "Both are approx half of liquid water's specific heat. / dono drav pani ki vishisht ushma ki lagbhag aadhi hain.",
+  "cat": "gs",
+  "sub": "heat"
+},
+{
+  "q": "Which thermodynamic process has 'Max' work done (between same V)?\nsaman V ke beech kis ushmagatiki prakriya mein 'adhiktam' karya hota hai?",
+  "o": ["Isothermal", "Isobaric | samdabi", "Adiabatic", "Isochoric"],
+  "a": 1,
+  "e": "Area under P-V curve is max for isobaric. / samdabi ke liye P-V curve ke niche ka kshetraphal adhiktam hota hai.",
+  "cat": "gs",
+  "sub": "heat"
+},
+{
+  "q": "What is 'Ideal Refrigerator' efficiency expressed as?\nek adarsh refrigerator ki dakshta ko kaise darshaya jata hai?",
+  "o": ["Coefficient of Performance (COP) | nishpadan gunank", "Watt", "Horsepower", "None"],
+  "a": 0,
+  "e": "Ratio of heat removed to work done. / hatayi gayi ushma aur kiye gaye karya ka anupat.",
+  "cat": "gs",
+  "sub": "heat"
+},
+{
+  "q": "What is 'Stefan's Law' for a body with emissivity '$e$'?\n'$e$' utsarjakta wale pind ke liye 'stefan ka niyam' kya hai?",
+  "o": ["$E = e \sigma T^4$ | $E = e \sigma T^4$", "$E = \sigma T^4$", "$E = eT^2$", "None"],
+  "a": 0,
+  "e": "Includes the emissivity factor for non-black bodies. / gair-krishn pindon ke liye utsarjakta factor shamil karta hai.",
+  "cat": "gs",
+  "sub": "heat"
+},
+{
+  "q": "What is 'Mechanical Equivalent of Heat' (J) Dimension?\n'ushma ka yaantrik tulyank' (J) ki 'vima' kya hai?",
+  "o": ["$[ML^2T^{-2}]$", "Dimensionless | vimaheen", "$[L^2T^{-2}]$", "None"],
+  "a": 1,
+  "e": "It is just a conversion constant. / yah sirf ek rupantaran niyatank hai.",
+  "cat": "gs",
+  "sub": "heat"
+},
+{
+  "q": "What is 'Thermal Conductivity' of 'Silver' compared to 'Iron'?\nlohe ki tulna mein 'chaandi' ki 'tapiya chalakta' kya hai?",
+  "o": ["Much higher | bahut adhik", "Lower", "Equal", "None"],
+  "a": 0,
+  "e": "Silver is the best metallic conductor. / chaandi sabse achha dhatu chalak hai.",
+  "cat": "gs",
+  "sub": "heat"
+},
+{
+  "q": "What is 'Gas Law' relating $V$ and $T$ at constant $P$?\nsthir $P$ par $V$ aur $T$ ke beech sambandh batane wala 'gas niyam' kaun sa hai?",
+  "o": ["Boyle's Law", "Charles's Law | charles ka niyam", "Dalton's Law", "None"],
+  "a": 1,
+  "e": "$V \propto T$ at constant Pressure. / sthir dab par $V \propto T$।",
+  "cat": "gs",
+  "sub": "heat"
+},
+{
+  "q": "What is 'Absolute Scale' of temperature also called?\ntapman ke 'param paimane' ko aur kya kaha jata hai?",
+  "o": ["Kelvin Scale | kevin paimana", "Celsius scale", "Fahrenheit scale", "None"],
+  "a": 0,
+  "e": "Starts from absolute zero. / param shunya se shuru hota hai.",
+  "cat": "gs",
+  "sub": "heat"
+},
+{
+  "q": "What is 'Ice Point' on Kelvin scale?\nkevin paimane par 'himank' (Ice Point) kya hai?",
+  "o": ["0 K", "273.15 K | 273.15 K", "373.15 K", "100 K"],
+  "a": 1,
+  "e": "Equivalent to 0°C. / 0°C ke barabar.",
+  "cat": "gs",
+  "sub": "heat"
+},
+{
+  "q": "What is 'Steam Point' on Kelvin scale?\nkevin paimane par 'vashp bindu' (Steam Point) kya hai?",
+  "o": ["273.15 K", "373.15 K | 373.15 K", "0 K", "100 K"],
+  "a": 1,
+  "e": "Equivalent to 100°C. / 100°C ke barabar.",
+  "cat": "gs",
+  "sub": "heat"
+},
+{
+  "q": "What is 'Zeroth Law' utility?\n'shunya niyam' (Zeroth Law) ki upyogita kya hai?",
+  "o": ["Definition of Temperature | tapman ki paribhasha", "Conservation of energy", "Efficiency", "None"],
+  "a": 0,
+  "e": "Basis for measuring temperature using thermometers. / thermometer dwara tapman mapne ka aadhar.",
+  "cat": "gs",
+  "sub": "heat"
+},
+{
+  "q": "What is 'Work' in 'Free Expansion'?\n'mukt prasar' (Free Expansion) mein 'karya' kya hota hai?",
+  "o": ["Maximum", "Positive", "Zero | shunya", "Negative"],
+  "a": 2,
+  "e": "Expansion against vacuum does no work. / nirvat ke viruddh prasar koi karya nahi karta.",
+  "cat": "gs",
+  "sub": "heat"
+},
+{
+  "q": "Which thermometer is used for 'Low' temperature measurement?\n'kam' tapman mapne ke liye kis thermometer ka upyog hota hai?",
+  "o": ["Pyrometer", "Alcohol thermometer | alcohol thermometer", "Mercury thermometer", "None"],
+  "a": 1,
+  "e": "Alcohol freezes at a much lower temperature than mercury. / alcohol pare se bahut niche tapman par jamta hai.",
+  "cat": "gs",
+  "sub": "heat"
+},
+{
+  "q": "What is 'Coefficient of Cubical Expansion' ($\gamma$)?\n'aaytan prasar gunank' ($\gamma$) kya hai?",
+  "o": ["$\gamma = 3\alpha$ | $\gamma = 3\alpha$ (where $\alpha$ is linear)", "$\gamma = \alpha$", "$\gamma = 2\alpha$", "None"],
+  "a": 0,
+  "e": "Relation between volume and linear expansion for solids. / thoson ke liye aaytan aur rekhiya prasar ke beech sambandh.",
+  "cat": "gs",
+  "sub": "heat"
+},
+{
+  "q": "What is 'Solar Energy' source?\n'sour oorja' ka srot kya hai?",
+  "o": ["Nuclear Fusion | nabhikiya sanlayan", "Nuclear Fission", "Chemical reaction", "None"],
+  "a": 0,
+  "e": "Hydrogen nuclei fuse into Helium. / hydrogen nabhik helium mein sanlayit hote hain.",
+  "cat": "gs",
+  "sub": "heat"
+},
+{
+  "q": "What is 'Emissive Power' of a Black Body at 2000K compared to 1000K?\n1000K ki tulna mein 2000K par ek krishn pind ki 'utsarjan kshamta' kya hogi?",
+  "o": ["Double", "4 times", "16 times | 16 guna ($2^4$)", "Equal"],
+  "a": 2,
+  "e": "Based on $T^4$ law. / $T^4$ niyam par aadharit.",
+  "cat": "gs",
+  "sub": "heat"
+},
+{
+  "q": "Congratulations! 850 questions complete. What is 'Specific Heat' of Copper?\nbadhai ho! 850 prashn pure huye. tambe ki 'vishisht ushma' kya hai?",
+  "o": ["$0.09 cal/g°C$ | $0.09 cal/g°C$", "$1 cal/g°C$", "$0.5 cal/g°C$", "None"],
+  "a": 0,
+  "e": "Typical value for a good metallic conductor. / ek achhe dhatu chalak ke liye samanya maan.",
+  "cat": "gs",
+  "sub": "heat"
+},
 {
   "q": "Which wire in a house is 'Always Live' even if the switch is off (if wired incorrectly)?\nघर में कौन सा तार 'हमेशा लाइव' रहता है भले ही स्विच बंद हो (यदि गलत वायरिंग की गई हो)?",
   "o": ["Neutral", "Phase/Live wire before the switch | स्विच से पहले वाला लाइव तार", "Earth", "None"],
@@ -7576,6 +11169,406 @@
   "e": "Heat is a form of energy. / ऊष्मा ऊर्जा का एक रूप है।",
   "cat": "gs",
   "sub": "heat"
+},
+{
+  "q": "What is the relation between the 'Intensity' ($I$) of sound and 'Amplitude' ($A$)?\nध्वनि की 'तीव्रता' ($I$) और 'आयाम' ($A$) के बीच क्या संबंध है?",
+  "o": ["$I \propto A$", "$I \propto A^2$ | $I \propto A^2$", "$I \propto \sqrt{A}$", "None"],
+  "a": 1,
+  "e": "Intensity is directly proportional to the square of the amplitude. / तीव्रता आयाम के वर्ग के समानुपाती होती है।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "Which part of the 'Human Ear' is responsible for maintaining body balance?\nमानव कान का कौन सा भाग शरीर का संतुलन बनाए रखने के लिए जिम्मेदार है?",
+  "o": ["Cochlea", "Semicircular canals | अर्धवृत्ताकार नलिकाएं", "Eardrum", "Pinna"],
+  "a": 1,
+  "e": "The vestibular system in the inner ear helps with balance. / आंतरिक कान का वेस्टिबुलर सिस्टम संतुलन में मदद करता है।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "The speed of sound in air is 'Independent' of:\nहवा में ध्वनि की गति किससे 'स्वतंत्र' होती है?",
+  "o": ["Temperature", "Pressure | दाब (Pressure)", "Humidity", "Density"],
+  "a": 1,
+  "e": "At constant temperature, change in pressure does not affect the speed of sound. / स्थिर तापमान पर दाब बदलने से ध्वनि की चाल नहीं बदलती।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "Which of the following has the 'Highest Pitch' of sound?\nनिम्नलिखित में से किसकी ध्वनि की 'पिच' सबसे अधिक होती है?",
+  "o": ["Man's voice", "Woman's voice | महिला की आवाज", "Lion's roar", "Drum beat"],
+  "a": 1,
+  "e": "Women's and children's voices generally have higher frequency, hence higher pitch. / महिलाओं और बच्चों की आवाज की आवृत्ति अधिक होती है।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "What is the 'Threshold of Hearing' for a healthy human ear?\nएक स्वस्थ मानव कान के लिए 'श्रवण की दहलीज' क्या है?",
+  "o": ["0 dB | 0 dB", "10 dB", "120 dB", "None"],
+  "a": 0,
+  "e": "This is the minimum sound level that a human can hear ($10^{-12} W/m^2$). / यह वह न्यूनतम स्तर है जिसे मनुष्य सुन सकता है।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "What is the 'Threshold of Pain' for sound in dB?\nध्वनि के लिए 'दर्द की दहलीज' कितने dB पर होती है?",
+  "o": ["80 dB", "100 dB", "120 dB | 120 dB", "None"],
+  "a": 2,
+  "e": "Sound above 120-130 dB causes physical pain to the ear. / 120 dB से ऊपर की ध्वनि कान में दर्द पैदा करती है।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "Which 'Medium' has the highest speed of sound among these?\nइनमें से किस 'माध्यम' में ध्वनि की गति सबसे अधिक है?",
+  "o": ["Water", "Air", "Aluminium | एल्युमिनियम", "Glass"],
+  "a": 2,
+  "e": "Speed in Aluminium is approx 6420 m/s. / एल्युमिनियम में चाल लगभग 6420 मीटर/सेकंड होती है।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "What is 'Ultrasonic' sound used for in industries?\nउद्योगों में 'पराबैंगनी' (Ultrasonic) ध्वनि का उपयोग किसके लिए होता है?",
+  "o": ["Cleaning spiral parts | सर्पिल पुर्जों की सफाई", "Detecting cracks in metal | धातु में दरारों का पता लगाना", "Both 1 and 2 | दोनों 1 और 2", "None"],
+  "a": 2,
+  "e": "Used for non-destructive testing and precision cleaning. / इसका उपयोग पुर्जों की सफाई और टेस्टिंग के लिए होता है।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "What happens to 'Wavelength' when sound enters from air to water?\nजब ध्वनि हवा से पानी में प्रवेश करती है, तो 'तरंगदैर्ध्य' का क्या होता है?",
+  "o": ["Increases | बढ़ती है", "Decreases", "Stay same", "None"],
+  "a": 0,
+  "e": "Speed increases in water, and $v = f \lambda$. Since frequency is constant, wavelength must increase. / पानी में चाल बढ़ने से तरंगदैर्ध्य बढ़ जाती है।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "What is 'Diffraction' of sound?\nध्वनि का 'विवर्तन' (Diffraction) क्या है?",
+  "o": ["Reflection", "Bending of sound around obstacles | बाधाओं के किनारे से ध्वनि का मुड़ना", "Breaking of sound", "None"],
+  "a": 1,
+  "e": "Allows us to hear someone speaking from around a corner. / इसी कारण हम कोने के पीछे से भी आवाज सुन पाते हैं।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "What is the 'Reflection of sound' from clouds and land during thunder called?\nगरज के दौरान बादलों और जमीन से ध्वनि का 'परावर्तन' क्या कहलाता है?",
+  "o": ["Echo", "Rolling of thunder | गड़गड़ाहट (Rolling)", "Refraction", "None"],
+  "a": 1,
+  "e": "Caused by multiple reflections of the sound of lightning. / यह बिजली की आवाज के बार-बार परावर्तन के कारण होता है।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "The speed of sound in air is 'Directly Proportional' to:\nहवा में ध्वनि की गति किसके 'सीधे समानुपाती' होती है?",
+  "o": ["Temperature (T)", "Square root of Temperature ($\sqrt{T}$) | तापमान के वर्गमूल ($\sqrt{T}$)", "Pressure", "None"],
+  "a": 1,
+  "e": "$v \propto \sqrt{T}$ where T is absolute temperature. / चाल परम तापमान के वर्गमूल के समानुपाती होती है।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "Which instrument uses 'Resonance' to produce music?\nसंगीत उत्पन्न करने के लिए कौन सा वाद्ययंत्र 'अनुनाद' का उपयोग करता है?",
+  "o": ["Guitar | गिटार", "Violin | वायलिन", "Flute | बांसुरी", "All of these | उपरोक्त सभी"],
+  "a": 3,
+  "e": "Sound boxes or air columns vibrate at natural frequencies. / वाद्ययंत्रों के बॉक्स या एयर कॉलम अनुनाद पर काम करते हैं।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "What is 'Supersonic Speed'?\n'सुपरसोनिक चाल' क्या है?",
+  "o": ["Speed of light", "Speed greater than speed of sound | ध्वनि की चाल से अधिक चाल", "Speed of sound", "None"],
+  "a": 1,
+  "e": "Measured in Mach numbers ($Mach > 1$). / इसे मैक नंबर में मापा जाता है।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "What are 'Longitudinal Waves' consist of?\n'अनुदैर्ध्य तरंगों' में क्या शामिल होता है?",
+  "o": ["Crests and Troughs", "Compressions and Rarefactions | संपीडन और विरलन", "Only Crests", "None"],
+  "a": 1,
+  "e": "Particles of the medium move parallel to the wave direction. / माध्यम के कण तरंग की दिशा के समानांतर चलते हैं।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "What is 'Intensity Level' of sound measured in?\nध्वनि के 'तीव्रता स्तर' को किसमें मापा जाता है?",
+  "o": ["Watt", "$W/m^2$", "Decibel (dB) | डेसीबल (dB)", "Hertz"],
+  "a": 2,
+  "e": "It is a logarithmic scale for sound intensity. / यह ध्वनि तीव्रता के लिए एक लघुगणकीय पैमाना है।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "What happens to the 'Pitch' of a siren as an ambulance 'Approaches' you?\nजैसे ही एम्बुलेंस आपके 'पास आती' है, सायरन की 'पिच' का क्या होता है?",
+  "o": ["Decreases", "Increases | बढ़ती है", "Stay same", "None"],
+  "a": 1,
+  "e": "Due to Doppler Effect, frequency appears higher. / डॉप्लर प्रभाव के कारण आवृत्ति बढ़ी हुई लगती है।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "What is 'Infrasonic' wave frequency?\n'अधोश्राव्य' (Infrasonic) तरंग की आवृत्ति क्या है?",
+  "o": ["> 20,000 Hz", "< 20 Hz | 20 Hz से कम", "20 - 200 Hz", "None"],
+  "a": 1,
+  "e": "Human ear cannot hear these low frequencies. / मानव कान इन कम आवृत्तियों को नहीं सुन सकता।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "Which part of ear acts like a 'Funnel' to collect sound?\nकान का कौन सा भाग ध्वनि एकत्र करने के लिए 'कीप' की तरह कार्य करता है?",
+  "o": ["Cochlea", "Pinna | पिन्ना (Pinna)", "Eardrum", "Hammer"],
+  "a": 1,
+  "e": "The outer visible part of the ear. / कान का बाहरी दिखने वाला भाग।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "The speed of sound in air at 20°C is approximately:\n20°C पर हवा में ध्वनि की चाल लगभग कितनी होती है?",
+  "o": ["332 m/s", "344 m/s | 344 m/s", "1500 m/s", "None"],
+  "a": 1,
+  "e": "Speed increases with temperature from the base 332 m/s. / तापमान के साथ चाल 332 मीटर/सेकंड से बढ़ जाती है।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "What is the 'Time' taken for sound to travel 1 km in air?\nहवा में ध्वनि को 1 किमी की दूरी तय करने में कितना 'समय' लगता है?",
+  "o": ["1 sec", "3 sec | लगभग 3 सेकंड", "10 sec", "None"],
+  "a": 1,
+  "e": "Since speed is approx 340 m/s, $1000/340 \approx 3$ seconds. / लगभग 340 मी/से की चाल के हिसाब से।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "Which 'Animal' uses infrasound to communicate over long distances?\nकौन सा 'जानवर' लंबी दूरी पर संचार के लिए अधोश्राव्य (Infrasound) का उपयोग करता है?",
+  "o": ["Bat", "Elephant | हाथी (Elephant)", "Dog", "Cat"],
+  "a": 1,
+  "e": "Elephants can hear and produce infrasound for long-range talk. / हाथी लंबी दूरी की बातचीत के लिए इसका उपयोग करते हैं।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "What is 'Beat Frequency' equal to?\n'विपन्द आवृत्ति' (Beat Frequency) किसके बराबर होती है?",
+  "o": ["Sum of two frequencies", "Difference of two frequencies | दो आवृत्तियों के अंतर के", "Product", "None"],
+  "a": 1,
+  "e": "$f_{beat} = |f_1 - f_2|$. / यह दो आवृत्तियों के घटाव के बराबर होती है।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "What is 'Noise Pollution' level limit for residential areas at night in India?\nभारत में रात के समय आवासीय क्षेत्रों के लिए 'ध्वनि प्रदूषण' की सीमा क्या है?",
+  "o": ["45 dB | 45 dB", "55 dB", "75 dB", "None"],
+  "a": 0,
+  "e": "According to Noise Pollution Rules. / ध्वनि प्रदूषण नियमों के अनुसार।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "Which phenomenon causes 'Dead Spots' in a theater?\nकिस घटना के कारण थिएटर में 'डेड स्पॉट' (जहाँ आवाज नहीं आती) बनते हैं?",
+  "o": ["Reflection", "Interference | व्यतिकरण (Interference)", "Refraction", "None"],
+  "a": 1,
+  "e": "Destructive interference of sound waves. / ध्वनि तरंगों का विनाशकारी व्यतिकरण।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "What is 'Timbre' used for?\n'स्वरमाधुर्य' (Timbre) का उपयोग किसलिए किया जाता है?",
+  "o": ["To find loudness", "To distinguish different musical instruments | विभिन्न वाद्ययंत्रों में अंतर करने के लिए", "To measure speed", "None"],
+  "a": 1,
+  "e": "Quality of sound that depends on the waveform and harmonics. / ध्वनि का वह गुण जो वेवफॉर्म और हार्मोनिक्स पर निर्भर करता है।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "The sound of 'Thunder' is heard later than the 'Flash' because:\n'बादल की गरज' 'बिजली की चमक' के बाद सुनाई देती है क्योंकि:",
+  "o": ["Sound is produced later", "Light travels much faster than sound | प्रकाश ध्वनि से बहुत तेज चलता है", "Thunder is heavy", "None"],
+  "a": 1,
+  "e": "Light speed is $3 \times 10^8$ m/s, Sound is only $340$ m/s. / प्रकाश की गति ध्वनि से लाखों गुना अधिक है।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "What is 'Intensity' unit in terms of Power?\nशक्ति के संदर्भ में 'तीव्रता' का मात्रक क्या है?",
+  "o": ["Watt-meter", "Watt/meter$^2$ | वाट प्रति वर्ग मीटर", "Joule/sec", "None"],
+  "a": 1,
+  "e": "Energy per unit area per unit time. / प्रति इकाई क्षेत्र प्रति इकाई समय ऊर्जा।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "Which part of ear contains 'Tiny Bones' (Ossicles)?\nकान के किस भाग में 'नन्हीं हड्डियाँ' (ओसिकल्स) होती हैं?",
+  "o": ["Outer ear", "Middle ear | मध्य कर्ण (Middle Ear)", "Inner ear", "None"],
+  "a": 1,
+  "e": "Includes Hammer, Anvil and Stirrup. / इसमें हैमर, एनविल और स्टिरप शामिल हैं।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "What is 'Stirrup' (Stapes) bone specialty?\n'स्टिरप' (स्टेपीज़) हड्डी की क्या विशेषता है?",
+  "o": ["Hardest bone", "Smallest bone in human body | मानव शरीर की सबसे छोटी हड्डी", "Longest bone", "None"],
+  "a": 1,
+  "e": "Located in the middle ear. / यह मध्य कान में स्थित होती है।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "What is 'Acoustics'?\n'अकौस्टिक्स' (Acoustics) क्या है?",
+  "o": ["Study of light", "Study of sound | ध्वनि का अध्ययन", "Study of water", "None"],
+  "a": 1,
+  "e": "Branch of physics dealing with production and properties of sound. / भौतिकी की वह शाखा जो ध्वनि के गुणों से संबंधित है।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "Why is 'Soft Furniture' used in sound recording studios?\nसाउंड रिकॉर्डिंग स्टूडियो में 'मुलायम फर्नीचर' क्यों उपयोग किया जाता है?",
+  "o": ["To look good", "To absorb unwanted echoes | अवांछित गूँज को सोखने के लिए", "To sit comfortably", "None"],
+  "a": 1,
+  "e": "Porous materials prevent sound reflection. / छिद्रपूर्ण सामग्री ध्वनि परावर्तन को रोकती है।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "What is 'Mach 2' speed?\n'मैक 2' चाल क्या है?",
+  "o": ["Speed of sound", "Twice the speed of sound | ध्वनि की चाल की दोगुनी", "Half the speed", "None"],
+  "a": 1,
+  "e": "Indicates supersonic speed. / यह सुपरसोनिक चाल को दर्शाता है।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "Which factor 'Decreases' the speed of sound in air?\nहवा में ध्वनि की चाल को कौन सा कारक 'कम' करता है?",
+  "o": ["High Humidity", "Low Temperature | कम तापमान", "High Temperature", "None"],
+  "a": 1,
+  "e": "Speed is directly proportional to $\sqrt{T}$. Cold air means slower sound. / कम तापमान पर ध्वनि धीमी चलती है।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "What is 'Periodic' in a wave?\nतरंग में 'आवर्ती' (Periodic) क्या होता है?",
+  "o": ["Motion after fixed time intervals | निश्चित समय अंतराल के बाद गति", "Random motion", "Linear motion", "None"],
+  "a": 0,
+  "e": "Vibrations repeat themselves after a time period T. / कंपन एक समय अवधि T के बाद खुद को दोहराते हैं।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "What is 'Sound' characterized as?\n'ध्वनि' को किस रूप में वर्णित किया जाता है?",
+  "o": ["Mechanical Wave | यांत्रिक तरंग", "Non-mechanical wave", "Transverse only", "None"],
+  "a": 0,
+  "e": "Needs a medium and physical vibration to travel. / इसे यात्रा के लिए माध्यम और भौतिक कंपन चाहिए।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "Which logic can 'Sound' not follow?\n'ध्वनि' किस नियम का पालन नहीं कर सकती?",
+  "o": ["Reflection", "Refraction", "Polarization | ध्रुवीकरण (Polarization)", "Interference"],
+  "a": 2,
+  "e": "Only transverse waves can be polarized; sound in air is longitudinal. / केवल अनुप्रस्थ तरंगों का ध्रुवीकरण हो सकता है।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "What is 'Loudness' measured subjectively by?\nव्यक्तिगत रूप से 'प्रबलता' को किसके द्वारा मापा जाता है?",
+  "o": ["Phon | फोन (Phon)", "Hertz", "Watt", "None"],
+  "a": 0,
+  "e": "Unit of perceived loudness. / महसूस की गई प्रबलता का मात्रक।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "What is 'Overtone'?\n'अधिस्वरक' (Overtone) क्या है?",
+  "o": ["Base frequency", "Higher frequency harmonics | उच्च आवृत्ति हार्मोनिक्स", "Noise", "None"],
+  "a": 1,
+  "e": "Frequencies higher than the fundamental frequency in a complex sound. / एक जटिल ध्वनि में मूल आवृत्ति से उच्च आवृत्तियाँ।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "Which part of the ear is 'Snail-shaped'?\nकान का कौन सा भाग 'घोंघे के आकार' का होता है?",
+  "o": ["Pinna", "Cochlea | कोकलिया (Cochlea)", "Eardrum", "Anvil"],
+  "a": 1,
+  "e": "Filled with fluid and hair cells to detect sound. / ध्वनि का पता लगाने के लिए द्रव और हेयर सेल्स से भरा।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "What is the speed of sound in 'Vacuum'?\n'निर्वात' में ध्वनि की चाल क्या है?",
+  "o": ["$3 \times 10^8$ m/s", "332 m/s", "Zero | शून्य (Zero)", "None"],
+  "a": 2,
+  "e": "Sound cannot travel without a medium. / बिना माध्यम के ध्वनि यात्रा नहीं कर सकती।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "The 'Pitch' of a sound depends on its:\nध्वनि की 'पिच' किस पर निर्भर करती है?",
+  "o": ["Amplitude", "Frequency | आवृत्ति (Frequency)", "Velocity", "None"],
+  "a": 1,
+  "e": "Higher frequency = Shrill voice, Lower frequency = Grave voice. / अधिक आवृत्ति = तीखी आवाज।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "What is 'Shock Wave' related to?\n'शॉक वेव' किससे संबंधित है?",
+  "o": ["Sonic Boom | सोनिक बूम", "Echo", "Resonance", "None"],
+  "a": 0,
+  "e": "Produced by objects moving at supersonic speeds. / सुपरसोनिक गति से चलने वाली वस्तुओं द्वारा निर्मित।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "What is the frequency of 'Stethoscope' sounds usually?\n'स्टेथोस्कोप' की ध्वनियों की आवृत्ति आमतौर पर क्या होती है?",
+  "o": ["Ultrasonic", "Low Frequency Audible | कम आवृत्ति वाली श्रव्य", "Infrasonic", "None"],
+  "a": 1,
+  "e": "Focuses on heart and lung sounds which are low frequency. / हृदय और फेफड़ों की ध्वनियों पर केंद्रित।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "Which medium conducts sound 'Slowest'?\nकौन सा माध्यम ध्वनि को 'सबसे धीमा' संचालित करता है?",
+  "o": ["Steel", "Water", "Air | हवा (Air)", "Copper"],
+  "a": 2,
+  "e": "Gases have the lowest speed of sound. / गैसों में ध्वनि की चाल सबसे कम होती है।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "What is 'Wavelength' of a 340 Hz sound in air (v=340)?\nहवा में 340 Hz ध्वनि की 'तरंगदैर्ध्य' क्या होगी ($v=340$)?",
+  "o": ["10 m", "1 m | 1 मीटर", "0.1 m", "None"],
+  "a": 1,
+  "e": "Using $\lambda = v / f = 340 / 340 = 1$ m. / सूत्र $\lambda = v / f$ का उपयोग करके।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "What is 'Infrasound' used for in nature?\nप्रकृति में 'अधोश्राव्य' (Infrasound) का उपयोग किसलिए होता है?",
+  "o": ["By bats to find food", "By whales to navigate | व्हेल द्वारा दिशा खोजने हेतु", "By birds to fly", "None"],
+  "a": 1,
+  "e": "Whales and Elephants use it for long-distance communication. / व्हेल और हाथी लंबी दूरी के संचार हेतु प्रयुक्त करते हैं।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "What is 'Reverberation' time recommended for small classrooms?\nछोटे क्लासरूम के लिए अनुशंसित 'अनुरणन' समय क्या है?",
+  "o": ["0.4 to 0.6 sec | 0.4 से 0.6 सेकंड", "2 sec", "10 sec", "None"],
+  "a": 0,
+  "e": "To ensure clarity of speech without overlap. / ओवरलैप के बिना भाषण की स्पष्टता सुनिश्चित करने के लिए।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "Which 'Law' explains Doppler Effect for sound?\nध्वनि के लिए डॉप्लर प्रभाव की व्याख्या कौन सा 'नियम' करता है?",
+  "o": ["Newton's Law", "Doppler's Principle | डॉप्लर का सिद्धांत", "Ohm's Law", "None"],
+  "a": 1,
+  "e": "Describes frequency shift due to relative motion. / सापेक्ष गति के कारण आवृत्ति में बदलाव का वर्णन करता है।",
+  "cat": "gs",
+  "sub": "sound"
+},
+{
+  "q": "Congratulations! 100 questions of Sound complete. What is 'Sound' primarily?\nबधाई हो! ध्वनि के 100 प्रश्न पूरे हुए। 'ध्वनि' मुख्य रूप से क्या है?",
+  "o": ["Longitudinal Wave | अनुदैर्ध्य तरंग", "Transverse Wave", "Light Wave", "None"],
+  "a": 0,
+  "e": "Consists of compressions and rarefactions in a medium. / माध्यम में संपीडन और विरलन शामिल हैं।",
+  "cat": "gs",
+  "sub": "sound"
 },
 {
   "q": "What is the 'Wattage' of a 2 HP motor?\n2 HP मोटर की 'वॉट क्षमता' क्या है?",
