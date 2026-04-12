@@ -12,7 +12,7 @@
 "o": ["To increase the current price of goods", "To provide a fixed point for comparing growth over time", "To calculate taxes only", "To ignore inflation"],
 "a": 1,
 "e": "A base year provides a benchmark for comparing economic data across different periods. / आधार वर्ष विभिन्न अवधियों के आर्थिक आंकड़ों की तुलना के लिए एक बेंचमार्क प्रदान करता है।",
-"cat": "economics",
+"cat": "eco",
 "sub": "national_income"
 },
 {
@@ -20,7 +20,7 @@
 "o": ["ASI (Annual Survey of Industries)", "MCA-21", "NSSO Survey", "RBI Data"],
 "a": 1,
 "e": "MCA-21 is a mission-mode project that allows companies to file data online, providing a more comprehensive database than the older ASI. / MCA-21 एक मिशन-मोड प्रोजेक्ट है जो कंपनियों को ऑनलाइन डेटा फाइल करने की अनुमति देता है।",
-"cat": "economics",
+"cat": "eco",
 "sub": "national_income"
 },
   {
@@ -37,7 +37,7 @@
   "a": 2,
   "e": "In contract farming, farmers are assured of a price beforehand, reducing their market risk. / कॉन्ट्रैक्ट फार्मिंग में किसानों को पहले से ही कीमत का आश्वासन दिया जाता है, जिससे उनके बाजार जोखिम कम हो जाते हैं।",
   "cat": "gk",
-  "sub": "economics"
+  "sub": "eco"
 },
 {
   "q": "Why is the food processing industry often referred to as a 'Sunrise Industry' in India?\nभारत में खाद्य प्रसंस्करण उद्योग को अक्सर 'सनराइज इंडस्ट्री' (Sunrise Industry) क्यों कहा जाता है?",
@@ -53,7 +53,7 @@
   "a": 1,
   "e": "Productivity refers to how much is produced from a specific area of land, which is crucial given India's limited land resources. / उत्पादकता का तात्पर्य भूमि के एक विशिष्ट क्षेत्र से होने वाली उपज से है।",
   "cat": "gk",
-  "sub": "economics"
+  "sub": "eco"
 },
 {
   "q": "According to the discussion, which factor is changing the consumption pattern in India towards processed foods?\nचर्चा के अनुसार, कौन सा कारक भारत में उपभोग पैटर्न को प्रोसेस्ड फूड की ओर बदल रहा है?",
@@ -61,7 +61,7 @@
   "a": 1,
   "e": "Growth in cities and more women entering the workforce have increased the demand for ready-to-eat and processed foods. / शहरों में वृद्धि और कार्यबल में महिलाओं की बढ़ती भागीदारी ने प्रोसेस्ड फूड की मांग बढ़ा दी है।",
   "cat": "gk",
-  "sub": "economics"
+  "sub": "eco"
 },
 {
   "q": "What was a major structural issue for farmers related to the APMC (Agricultural Produce Market Committee)?\nAPMC (कृषि उपज मंडी समिति) से संबंधित किसानों के लिए एक प्रमुख ढांचागत समस्या क्या थी?",
@@ -69,7 +69,7 @@
   "a": 1,
   "e": "Historically, farmers were restricted to sell their produce only in mandis governed by APMC, which often involved middlemen. / ऐतिहासिक रूप से, किसान अपनी उपज केवल APMC मंडियों में बेचने के लिए प्रतिबंधित थे।",
   "cat": "gk",
-  "sub": "economics"
+  "sub": "eco"
 },
 {
   "q": "The concept of 'Post-Harvest Management' focuses on preventing losses at which stage?\n'कटाई के बाद प्रबंधन' (Post-Harvest Management) का विचार किस चरण में नुकसान को रोकने पर केंद्रित है?",
@@ -77,7 +77,7 @@
   "a": 1,
   "e": "It involves proper storage, packaging, and transportation to ensure food doesn't rot before reaching the market. / इसमें यह सुनिश्चित करने के लिए उचित भंडारण और परिवहन शामिल है कि भोजन बाजार तक पहुँचने से पहले सड़े नहीं।",
   "cat": "gk",
-  "sub": "economics"
+  "sub": "eco"
 },
 {
   "q": "What does 'Rainfed Farming' rely on for irrigation?\n'रेनफे़ड फार्मिंग' (Rainfed Farming) सिंचाई के लिए किस पर निर्भर करती है?",
@@ -85,7 +85,7 @@
   "a": 1,
   "e": "Rainfed farming is highly dependent on seasonal monsoon rains rather than artificial irrigation systems. / रेनफेड फार्मिंग कृत्रिम सिंचाई प्रणालियों के बजाय मौसमी मानसूनी बारिश पर निर्भर है।",
   "cat": "gk",
-  "sub": "economics"
+  "sub": "eco"
 },
 {
   "q": "Which technology is being encouraged to manage ecological imbalance and soil nutrients in modern agriculture?\nआधुनिक कृषि में पारिस्थितिक असंतुलन और मिट्टी के पोषक तत्वों के प्रबंधन के लिए किस तकनीक को प्रोत्साहित किया जा रहा है?",
@@ -93,7 +93,7 @@
   "a": 1,
   "e": "Modern tech like biotechnology helps in creating better crop varieties and monitoring soil health. / आधुनिक तकनीक बेहतर फसल किस्मों को विकसित करने और मिट्टी के स्वास्थ्य की निगरानी में मदद करती है।",
   "cat": "gk",
-  "sub": "economics"
+  "sub": "eco"
 },
 {
   "q": "What role does the 'Enterprise Approach' play in valuing the manufacturing sector?\nविनिर्माण क्षेत्र के मूल्यांकन में 'एंटरप्राइज अप्रोच' क्या भूमिका निभाता है?",
@@ -108,7 +108,7 @@
 "o": ["Only factory-level production", "Marketing, Branding, and Head Office expenses", "Only labor wages", "Raw material costs only"],
 "a": 1,
 "e": "The enterprise approach includes corporate activities like branding and marketing, not just physical manufacturing at the factory. / एंटरप्राइज अप्रोच में ब्रांडिंग और मार्केटिंग जैसी कॉर्पोरेट गतिविधियां शामिल हैं, न कि केवल कारखाने में विनिर्माण।",
-"cat": "economics",
+"cat": "eco",
 "sub": "national_income"
 },
 {
@@ -116,7 +116,7 @@
 "o": ["Product tax is volume-independent; Production tax is per unit", "Product tax is per unit (like GST); Production tax is volume-independent (like land revenue)", "Both are the same", "Production tax is paid only by consumers"],
 "a": 1,
 "e": "Production taxes are paid on factors of production (like land revenue) regardless of output, whereas product taxes are paid per unit. / उत्पादन कर उत्पादन के कारकों पर दिए जाते हैं, जबकि उत्पाद कर प्रति यूनिट दिए जाते हैं।",
-"cat": "economics",
+"cat": "eco",
 "sub": "national_income"
 },
 {
@@ -124,7 +124,7 @@
 "o": ["As total consumption", "As part of household savings", "As government expenditure", "They are ignored"],
 "a": 1,
 "e": "Valuables are now treated as household savings rather than just consumption, affecting the calculation of the savings rate. / कीमती वस्तुओं को अब केवल उपभोग के बजाय घरेलू बचत माना जाता है।",
-"cat": "economics",
+"cat": "eco",
 "sub": "national_income"
 },
 {
@@ -132,7 +132,7 @@
 "o": ["RBI", "CSO (Central Statistical Organization) / NSO", "Ministry of Finance", "NITI Aayog"],
 "a": 1,
 "e": "The CSO (now under NSO) releases quarterly reports to monitor economic performance. / CSO (अब NSO के तहत) आर्थिक प्रदर्शन की निगरानी के लिए त्रैमासिक रिपोर्ट जारी करता है।",
-"cat": "economics",
+"cat": "eco",
 "sub": "national_income"
 },
 {
@@ -140,7 +140,7 @@
 "o": ["India", "Bhutan", "Norway", "Switzerland"],
 "a": 1,
 "e": "GNH was proposed by the 4th King of Bhutan to emphasize holistic well-being over purely material growth. / GNH को भूटान के चौथे राजा द्वारा भौतिक विकास के बजाय समग्र कल्याण पर जोर देने के लिए प्रस्तावित किया गया था।",
-"cat": "economics",
+"cat": "eco",
 "sub": "global_indices"
 },
 {
@@ -148,7 +148,7 @@
 "o": ["GVA at Factor Cost + Net Product Taxes", "GVA at Factor Cost + Net Production Taxes", "GDP - Depreciation", "Factor Cost - Subsidies"],
 "a": 1,
 "e": "GVA at Basic Prices = GVA at Factor Cost + (Production Taxes - Production Subsidies). / बेसिक कीमतों पर GVA = कारक लागत पर GVA + (उत्पादन कर - उत्पादन सब्सिडी)।",
-"cat": "economics",
+"cat": "eco",
 "sub": "national_income"
 },
 {
@@ -156,7 +156,7 @@
 "o": ["Political changes", "Changes in production patterns and technological innovations", "Population growth only", "Decrease in tax revenue"],
 "a": 1,
 "e": "Updating the base year captures new technologies (like OLED TVs) and changes in consumer behavior. / आधार वर्ष को अपडेट करना नई तकनीकों और उपभोक्ता व्यवहार में बदलाव को दर्शाता है।",
-"cat": "economics",
+"cat": "eco",
 "sub": "national_income"
 },
 {
@@ -164,7 +164,7 @@
 "o": ["Sustainable development", "Environmental conservation and Cultural values", "Good governance", "All of the above"],
 "a": 3,
 "e": "GNH covers 9 domains including psychological well-being, health, culture, and governance. / GNH में मनोवैज्ञानिक कल्याण, स्वास्थ्य, संस्कृति और शासन सहित 9 क्षेत्र शामिल हैं।",
-"cat": "economics",
+"cat": "eco",
 "sub": "global_indices"
 },
 {
@@ -173,7 +173,7 @@
 "a": 1,
 "e": "Sustainable development means using resources wisely today so that enough is left for future generations. / सतत विकास का अर्थ है आज संसाधनों का बुद्धिमानी से उपयोग करना ताकि भविष्य की पीढ़ियों के लिए पर्याप्त बचा रहे।",
 "cat": "gk",
-"sub": "economics"
+"sub": "eco"
 },
 {
 "q": "The concept of 'Sustainable Development' was majorly highlighted in which international summit?\n'सतत विकास' की अवधारणा को प्रमुख रूप से किस अंतर्राष्ट्रीय शिखर सम्मेलन में उठाया गया था?",
@@ -181,7 +181,7 @@
 "a": 1,
 "e": "The issue of sustainable development was significantly raised during the Earth Summit held in 1992. / सतत विकास का मुद्दा 1992 में आयोजित पृथ्वी शिखर सम्मेलन के दौरान प्रमुखता से उठाया गया था।",
 "cat": "gk",
-"sub": "economics"
+"sub": "eco"
 },
 {
   "q": "What is the primary target of the 'Agriculture Export Policy 2018' regarding export value by 2022?\n'एग्रीकल्चर एक्सपोर्ट पॉलिसी 2018' का 2022 तक निर्यात मूल्य के संबंध में प्राथमिक लक्ष्य क्या है?",
@@ -189,7 +189,7 @@
   "a": 0,
   "e": "The policy aimed to double agricultural exports from $30 billion to $60 billion by 2022 and reach $100 billion in the following years. / इस नीति का लक्ष्य 2022 तक कृषि निर्यात को $30 बिलियन से दोगुना करके $60 बिलियन करना और अगले वर्षों में $100 बिलियन तक पहुँचाना था।",
   "cat": "gk",
-  "sub": "economics"
+  "sub": "eco"
 },
 {
   "q": "What does the term 'Rainbow Revolution' refer to in Indian agriculture?\nभारतीय कृषि में 'रेनबो रिवॉल्यूशन' (Rainbow Revolution) शब्द का क्या अर्थ है?",
@@ -197,7 +197,7 @@
   "a": 1,
   "e": "Rainbow Revolution is an integrated approach that includes green, white, blue, yellow, and golden revolutions to cover the entire agriculture sector. / रेनबो रिवॉल्यूशन एक एकीकृत दृष्टिकोण है जिसमें पूरे कृषि क्षेत्र को कवर करने के लिए हरित, श्वेत, नीली, पीली और सुनहरी क्रांतियां शामिल हैं।",
   "cat": "gk",
-  "sub": "economics"
+  "sub": "eco"
 },
 {
   "q": "In the context of agricultural trade, what do 'SPS measures' (Sanitary and Phytosanitary) deal with?\nकृषि व्यापार के संदर्भ में, 'SPS उपाय' (Sanitary and Phytosanitary) किससे संबंधित हैं?",
@@ -205,7 +205,7 @@
   "a": 1,
   "e": "SPS measures are rules to protect human or animal life from risks in food or to protect plants from pests and diseases. / SPS उपाय भोजन में जोखिमों से मानव या पशु जीवन की रक्षा करने या पौधों को कीटों और बीमारियों से बचाने के नियम हैं।",
   "cat": "gk",
-  "sub": "economics"
+  "sub": "eco"
 },
 {
   "q": "Which organization is primarily responsible for the procurement of wheat and rice at Minimum Support Price (MSP)?\nन्यूनतम समर्थन मूल्य (MSP) पर गेहूं और चावल की खरीद के लिए मुख्य रूप से कौन सा संगठन जिम्मेदार है?",
@@ -213,7 +213,7 @@
   "a": 1,
   "e": "FCI procures grains at MSP to maintain buffer stocks and ensure food security. / एफसीआई बफर स्टॉक बनाए रखने और खाद्य सुरक्षा सुनिश्चित करने के लिए एमएसपी पर अनाज की खरीद करता है।",
   "cat": "gk",
-  "sub": "economics"
+  "sub": "eco"
 },
 {
   "q": "What is the main concept of 'Contract Farming'?\n'कॉन्ट्रैक्ट फार्मिंग' (Contract Farming) की मुख्य अवधारणा क्या है?",
@@ -221,7 +221,7 @@
   "a": 1,
   "e": "In contract farming, a buyer (firm) and a farmer agree in advance on the price and quality of the produce to be delivered. / कॉन्ट्रैक्ट फार्मिंग में, खरीदार (फर्म) और किसान पहले से ही उत्पाद की कीमत और गुणवत्ता पर सहमत होते हैं।",
   "cat": "gk",
-  "sub": "economics"
+  "sub": "eco"
 },
 {
   "q": "The 'National Mission for Sustainable Agriculture' (NMSA) is a part of which larger Indian action plan?\n'नेशनल मिशन फॉर सस्टेनेबल एग्रीकल्चर' (NMSA) किस बड़ी भारतीय कार्य योजना का हिस्सा है?",
@@ -229,7 +229,7 @@
   "a": 1,
   "e": "NMSA is one of the eight missions under the NAPCC to make agriculture more resilient to climate change. / NMSA कृषि को जलवायु परिवर्तन के प्रति अधिक लचीला बनाने के लिए NAPCC के तहत आठ मिशनों में से एक है।",
   "cat": "gk",
-  "sub": "economics"
+  "sub": "eco"
 },
 {
   "q": "Why is the 'Second Green Revolution' or 'Evergreen Revolution' considered necessary for India today?\nआज भारत के लिए 'दूसरी हरित क्रांति' या 'सदाबहार क्रांति' क्यों आवश्यक मानी जाती है?",
@@ -237,7 +237,7 @@
   "a": 1,
   "e": "The second green revolution focuses on sustainable methods, high productivity across all crops, and holistic development. / दूसरी हरित क्रांति टिकाऊ तरीकों, सभी फसलों में उच्च उत्पादकता और समग्र विकास पर केंद्रित है।",
   "cat": "gk",
-  "sub": "economics"
+  "sub": "eco"
 },
 {
   "q": "Which state's 'Bhoomi Project' is a successful example of digitizing land records in India?\nभारत में भूमि अभिलेखों के डिजिटलीकरण का सफल उदाहरण किस राज्य का 'भूमि प्रोजेक्ट' (Bhoomi Project) है?",
@@ -245,7 +245,7 @@
   "a": 2,
   "e": "Karnataka's Bhoomi project is a pioneering initiative in digitizing land records to reduce corruption and help farmers. / कर्नाटक का भूमि प्रोजेक्ट भ्रष्टाचार को कम करने और किसानों की मदद करने के लिए भूमि अभिलेखों के डिजिटलीकरण में एक अग्रणी पहल है।",
   "cat": "gk",
-  "sub": "economics"
+  "sub": "eco"
 },
 {
   "q": "What is the primary motive behind creating 'Special Economic Zones' (SEZs) for agriculture?\nकृषि के लिए 'विशेष आर्थिक क्षेत्र' (SEZs) बनाने के पीछे प्राथमिक उद्देश्य क्या है?",
@@ -253,7 +253,7 @@
   "a": 1,
   "e": "SEZs for agriculture are designed to improve supply chains, processing, and high-value exports. / कृषि के लिए एसईजेड आपूर्ति श्रृंखला, प्रसंस्करण और उच्च मूल्य वाले निर्यात में सुधार के लिए डिज़ाइन किए गए हैं।",
   "cat": "gk",
-  "sub": "economics"
+  "sub": "eco"
 },
 {
   "q": "Under Minimum Support Price (MSP), the government guarantees that the price of a crop will not fall below a certain level to protect:\nन्यूनतम समर्थन मूल्य (MSP) के तहत, सरकार गारंटी देती है कि फसल की कीमत एक निश्चित स्तर से नीचे नहीं गिरेगी ताकि किसकी रक्षा की जा सके:",
@@ -261,7 +261,7 @@
   "a": 2,
   "e": "MSP ensures farmers receive a fair price even if market prices crash due to overproduction. / एमएसपी यह सुनिश्चित करता है कि अधिक उत्पादन के कारण बाजार की कीमतें गिरने पर भी किसानों को उचित मूल्य मिले।",
   "cat": "gk",
-  "sub": "economics"
+  "sub": "eco"
 },
 {
 "q": "What were the development goals called that were in place from the year 2000 to 2015?\nवर्ष 2000 से 2015 तक लागू विकास लक्ष्यों को क्या कहा जाता था?",
@@ -269,7 +269,7 @@
 "a": 1,
 "e": "MDGs (Millennium Development Goals) were the global targets from 2000 to 2015 before they were replaced by SDGs. / 2000 से 2015 तक MDG वैश्विक लक्ष्य थे, जिन्हें बाद में SDG द्वारा बदल दिया गया।",
 "cat": "gk",
-"sub": "economics"
+"sub": "eco"
 },
 {
 "q": "How many Sustainable Development Goals (SDGs) and targets were adopted globally in 2015?\n2015 में वैश्विक स्तर पर कितने सतत विकास लक्ष्य (SDG) और लक्ष्य (targets) अपनाए गए थे?",
@@ -277,7 +277,7 @@
 "a": 1,
 "e": "The UN adopted 17 Goals and 169 specific targets to be achieved by 2030. / संयुक्त राष्ट्र ने 2030 तक प्राप्त करने के लिए 17 लक्ष्य और 169 विशिष्ट लक्ष्य अपनाए।",
 "cat": "gk",
-"sub": "economics"
+"sub": "eco"
 },
 {
 "q": "The 'International Solar Alliance' (ISA) was jointly launched in 2015 by India and which other country?\n'अंतर्राष्ट्रीय सौर गठबंधन' (ISA) को 2015 में भारत और किस अन्य देश द्वारा संयुक्त रूप से लॉन्च किया गया था?",
@@ -285,7 +285,7 @@
 "a": 2,
 "e": "ISA was launched by India and France in Paris on November 30, 2015, during COP 21. / ISA को COP 21 के दौरान 30 नवंबर 2015 को पेरिस में भारत और फ्रांस द्वारा लॉन्च किया गया था।",
 "cat": "gk",
-"sub": "economics"
+"sub": "eco"
 },
 {
 "q": "Which Indian initiative aims to create an additional carbon sink of 2.5 to 3 billion tonnes of CO2 equivalent by 2030?\nकिस भारतीय पहल का लक्ष्य 2030 तक 2.5 से 3 बिलियन टन CO2 के बराबर अतिरिक्त कार्बन सिंक बनाना है?",
@@ -293,7 +293,7 @@
 "a": 1,
 "e": "As part of its NDC, India committed to increasing forest and tree cover to absorb more carbon. / अपने एनडीसी के हिस्से के रूप में, भारत ने अधिक कार्बन अवशोषित करने के लिए वन और वृक्षों के आवरण को बढ़ाने की प्रतिबद्धता जताई।",
 "cat": "gk",
-"sub": "economics"
+"sub": "eco"
 },
 {
 "q": "What does 'Green GDP' refer to in the context of national accounting?\nराष्ट्रीय लेखांकन के संदर्भ में 'ग्रीन जीडीपी' (Green GDP) किसे संदर्भित करता है?",
@@ -301,7 +301,7 @@
 "a": 1,
 "e": "Green GDP accounts for the utilization of non-renewable natural resources and environmental damage during growth. / ग्रीन जीडीपी विकास के दौरान गैर-नवीकरणीय प्राकृतिक संसाधनों के उपयोग और पर्यावरणीय क्षति को ध्यान में रखती है।",
 "cat": "gk",
-"sub": "economics"
+"sub": "eco"
 },
 {
 "q": "What is 'Climate Financing'?\n'क्लाइमेट फाइनेंसिंग' (Climate Financing) क्या है?",
@@ -309,7 +309,7 @@
 "a": 1,
 "e": "It refers to local, national, or transnational financing drawn from public and private sources for climate action. / यह जलवायु कार्रवाई के लिए सार्वजनिक और निजी स्रोतों से स्थानीय, राष्ट्रीय या अंतर्राष्ट्रीय स्तर पर प्राप्त वित्त को संदर्भित करता है।",
 "cat": "gk",
-"sub": "economics"
+"sub": "eco"
 },
 {
 "q": "Which SDG focuses specifically on 'Zero Hunger'?\nकौन सा SDG विशेष रूप से 'शून्य भूख' (Zero Hunger) पर केंद्रित है?",
@@ -317,7 +317,7 @@
 "a": 1,
 "e": "SDG 2 aims to end hunger, achieve food security, and improve nutrition globally. / SDG 2 का लक्ष्य भूख को समाप्त करना, खाद्य सुरक्षा प्राप्त करना और वैश्विक स्तर पर पोषण में सुधार करना है।",
 "cat": "gk",
-"sub": "economics"
+"sub": "eco"
 },
 {
 "q": "What is the calorie-based definition of 'Absolute Poverty' for rural and urban areas in India?\nभारत में ग्रामीण और शहरी क्षेत्रों के लिए 'पूर्ण गरीबी' (Absolute Poverty) की कैलोरी-आधारित परिभाषा क्या है?",
@@ -461,7 +461,7 @@
 "a": 1,
 "e": "Muhammad Yunus of Bangladesh started the Grameen Bank, which popularized the concept of microfinance and SHGs globally. / बांग्लादेश के मोहम्मद यूनुस ने ग्रामीण बैंक की शुरुआत की, जिसने विश्व स्तर पर माइक्रोफाइनेंस और एसएचजी की अवधारणा को लोकप्रिय बनाया।",
 "cat": "gk",
-"sub": "economics"
+"sub": "eco"
 },
 {
 "q": "Under the 'Pradhan Mantri MUDRA Yojana', what is the maximum loan limit for the 'Tarun' category?\n'प्रधानमंत्री मुद्रा योजना' के तहत 'तरुण' श्रेणी के लिए अधिकतम ऋण सीमा क्या है?",
@@ -477,7 +477,7 @@
 "a": 1,
 "e": "JAM stands for Jan Dhan Yojana, Aadhaar, and Mobile connectivity, which helps in direct cash transfers to beneficiaries. / JAM का अर्थ जन धन योजना, आधार और मोबाइल कनेक्टिविटी है, जो लाभार्थियों को सीधे नकद हस्तांतरण में मदद करता है।",
 "cat": "gk",
-"sub": "economics"
+"sub": "eco"
 },
 {
 "q": "What is the primary objective of 'Universal Basic Income' (UBI)?\n'यूनिवर्सल बेसिक इनकम' (UBI) का प्राथमिक उद्देश्य क्या है?",
@@ -493,7 +493,7 @@
 "a": 2,
 "e": "NABARD (National Bank for Agriculture and Rural Development) plays a central role in promoting and refinancing SHGs and microfinance. / नाबार्ड (राष्ट्रीय कृषि और ग्रामीण विकास बैंक) एसएचजी और माइक्रोफाइनेंस को बढ़ावा देने और पुनर्वित्त करने में केंद्रीय भूमिका निभाता है।",
 "cat": "gk",
-"sub": "economics"
+"sub": "eco"
 },
 {
 "q": "What is a major criticism against 'Universal Basic Income' (UBI)?\n'यूनिवर्सल बेसिक इनकम' (UBI) के खिलाफ एक प्रमुख आलोचना क्या है?",
@@ -517,7 +517,7 @@
 "a": 1,
 "e": "MFIs provide small-scale financial services to those who lack access to formal banking. / एमएफआई उन लोगों को लघु-स्तरीय वित्तीय सेवाएं प्रदान करते हैं जिनकी औपचारिक बैंकिंग तक पहुंच नहीं है।",
 "cat": "gk",
-"sub": "economics"
+"sub": "eco"
 },
 {
 "q": "Which scheme aims to improve the living standards in villages by involving higher education institutions?\nउच्च शिक्षण संस्थानों को शामिल करके गाँवों में जीवन स्तर सुधारने का लक्ष्य कौन सी योजना रखती है?",
@@ -534,7 +534,7 @@
 "a": 1,
 "e": "Buffer stocks are used to provide food during natural calamities and to release grains in the market to control rising prices. / बफर स्टॉक का उपयोग प्राकृतिक आपदाओं के दौरान भोजन प्रदान करने और बढ़ती कीमतों को नियंत्रित करने के लिए बाजार में अनाज जारी करने के लिए किया जाता है।",
 "cat": "gk",
-"sub": "economics"
+"sub": "eco"
 },
 {
 "q": "Which organization is responsible for procuring, storing, and distributing food grains for the government in India?\nभारत में सरकार के लिए अनाज की खरीद, भंडारण और वितरण के लिए कौन सा संगठन जिम्मेदार है?",
@@ -542,7 +542,7 @@
 "a": 1,
 "e": "FCI (Food Corporation of India) handles the procurement of food grains from farmers at MSP and manages their storage. / एफसीआई (भारतीय खाद्य निगम) एमएसपी पर किसानों से अनाज की खरीद करता है और उनके भंडारण का प्रबंधन करता है।",
 "cat": "gk",
-"sub": "economics"
+"sub": "eco"
 },
 {
 "q": "What does MSP stand for in the context of agricultural policy?\nकृषि नीति के संदर्भ में MSP का पूर्ण रूप क्या है?",
@@ -550,7 +550,7 @@
 "a": 1,
 "e": "Minimum Support Price (MSP) is the fixed price at which the government promises to buy crops from farmers to protect them from price fluctuations. / न्यूनतम समर्थन मूल्य (एमएसपी) वह निश्चित मूल्य है जिस पर सरकार किसानों को मूल्य के उतार-चढ़ाव से बचाने के लिए फसल खरीदने का वादा करती है।",
 "cat": "gk",
-"sub": "economics"
+"sub": "eco"
 },
 {
 "q": "The 'National Food Security Act' (NFSA) was passed in which year?\n'राष्ट्रीय खाद्य सुरक्षा अधिनियम' (NFSA) किस वर्ष पारित किया गया था?",
@@ -558,7 +558,7 @@
 "a": 1,
 "e": "The NFSA was enacted on September 10, 2013, to provide food and nutritional security by ensuring access to adequate food at affordable prices. / एनएफएसए को 10 सितंबर, 2013 को वहनीय कीमतों पर पर्याप्त भोजन सुनिश्चित करके खाद्य और पोषण सुरक्षा प्रदान करने के लिए लागू किया गया था।",
 "cat": "gk",
-"sub": "economics"
+"sub": "eco"
 },
 {
 "q": "Under the National Food Security Act, what is the monthly entitlement of food grains per person?\nराष्ट्रीय खाद्य सुरक्षा अधिनियम के तहत, प्रति व्यक्ति प्रति माह खाद्यान्न की पात्रता कितनी है?",
@@ -566,7 +566,7 @@
 "a": 1,
 "e": "Eligible persons are entitled to receive 5 kg of food grains per person per month at subsidized prices. / पात्र व्यक्ति रियायती कीमतों पर प्रति व्यक्ति प्रति माह 5 किलो खाद्यान्न प्राप्त करने के हकदार हैं।",
 "cat": "gk",
-"sub": "economics"
+"sub": "eco"
 },
 {
 "q": "Which scheme provides 35 kg of food grains per month to the 'poorest of the poor' families?\n'गरीबों में सबसे गरीब' परिवारों को प्रति माह 35 किलो खाद्यान्न कौन सी योजना प्रदान करती है?",
@@ -590,7 +590,7 @@
 "a": 1,
 "e": "TPDS was introduced to focus food subsidies on the poor, especially those below the poverty line (BPL). / टीपीडीएस को विशेष रूप से गरीबी रेखा से नीचे (बीपीएल) के लोगों पर खाद्य सब्सिडी केंद्रित करने के लिए शुरू किया गया था।",
 "cat": "gk",
-"sub": "economics"
+"sub": "eco"
 },
 {
 "q": "Which Indian initiative provides biometric 12-digit unique ID numbers to identify beneficiaries for government schemes?\nसरकारी योजनाओं के लाभार्थियों की पहचान करने के लिए 12 अंकों की विशिष्ट आईडी नंबर प्रदान करने वाली भारतीय पहल कौन सी है?",
@@ -598,7 +598,7 @@
 "a": 1,
 "e": "Aadhaar helps in authenticating beneficiaries and ensuring that benefits reach the correct person without leakage. / आधार लाभार्थियों को प्रमाणित करने और यह सुनिश्चित करने में मदद करता है कि लाभ बिना किसी रिसाव के सही व्यक्ति तक पहुंचे।",
 "cat": "gk",
-"sub": "economics"
+"sub": "eco"
 },
 {
 "q": "What is the primary factor that makes India's agriculture sector vital for national stability?\nभारत के कृषि क्षेत्र को राष्ट्रीय स्थिरता के लिए महत्वपूर्ण बनाने वाला प्राथमिक कारक क्या है?",
@@ -606,7 +606,7 @@
 "a": 1,
 "e": "Agriculture is the backbone of the economy as it provides food for the population and raw materials for industries. / कृषि अर्थव्यवस्था की रीढ़ है क्योंकि यह आबादी के लिए भोजन और उद्योगों के लिए कच्चा माल प्रदान करती है।",
 "cat": "gk",
-"sub": "economics"
+"sub": "eco"
 },
 {
 "q": "The first phase of the 'Green Revolution' in India was mainly successful in which region?\nभारत में 'हरित क्रांति' का पहला चरण मुख्य रूप से किस क्षेत्र में सफल रहा था?",
@@ -614,7 +614,7 @@
 "a": 1,
 "e": "These regions had better irrigation facilities and early access to high-yielding variety (HYV) seeds. / इन क्षेत्रों में सिंचाई की बेहतर सुविधाएं थीं और उच्च उपज वाली किस्म (HYV) के बीजों तक शुरुआती पहुंच थी।",
 "cat": "gk",
-"sub": "economics"
+"sub": "eco"
 },
 {
 "q": "Which revolution is specifically associated with the increase in 'Milk Production'?\nकौन सी क्रांति विशेष रूप से 'दूध उत्पादन' में वृद्धि से जुड़ी है?",
@@ -622,7 +622,7 @@
 "a": 2,
 "e": "Also known as Operation Flood, it aimed at making India a milk-sufficient nation. / इसे ऑपरेशन फ्लड के रूप में भी जाना जाता है, इसका उद्देश्य भारत को दूध के मामले में आत्मनिर्भर राष्ट्र बनाना था।",
 "cat": "gk",
-"sub": "economics"
+"sub": "eco"
 },
 {
 "q": "Who is considered the 'Father of the Green Revolution' in India?\nभारत में 'हरित क्रांति' का जनक किसे माना जाता है?",
@@ -630,7 +630,7 @@
 "a": 1,
 "e": "M.S. Swaminathan played a crucial role in introducing and developing high-yielding varieties of wheat and rice in India. / एम.एस. स्वामीनाथन ने भारत में गेहूं और चावल की उच्च उपज वाली किस्मों को पेश करने और विकसित करने में महत्वपूर्ण भूमिका निभाई।",
 "cat": "gk",
-"sub": "economics"
+"sub": "eco"
 },
 {
 "q": "The 'Pink Revolution' primarily focuses on the modernization of which sector?\n'पिंक रिवॉल्यूशन' (Pink Revolution) मुख्य रूप से किस क्षेत्र के आधुनिकीकरण पर केंद्रित है?",
@@ -638,7 +638,7 @@
 "a": 2,
 "e": "It refers to the technological advancement and growth in the meat and poultry export sector. / यह मांस और पोल्ट्री निर्यात क्षेत्र में तकनीकी प्रगति और विकास को संदर्भित करता है।",
 "cat": "gk",
-"sub": "economics"
+"sub": "eco"
 },
 {
 "q": "What was the main objective of the 'Yellow Revolution' in India?\nभारत में 'पीली क्रांति' (Yellow Revolution) का मुख्य उद्देश्य क्या था?",
@@ -646,7 +646,7 @@
 "a": 1,
 "e": "The Yellow Revolution targeted the production of edible oilseeds like mustard and sunflower. / पीली क्रांति ने सरसों और सूरजमुखी जैसे खाद्य तिलहनों के उत्पादन को लक्षित किया।",
 "cat": "gk",
-"sub": "economics"
+"sub": "eco"
 },
 {
 "q": "Which color of revolution represents 'Fisheries/Marine' development?\nकौन सा रंग 'मत्स्य/समुद्री' विकास का प्रतिनिधित्व करता है?",
@@ -654,7 +654,7 @@
 "a": 1,
 "e": "The Blue Revolution focuses on increasing aquaculture and fish production. / नीली क्रांति जलीय कृषि और मछली उत्पादन बढ़ाने पर केंद्रित है।",
 "cat": "gk",
-"sub": "economics"
+"sub": "eco"
 },
 {
 "q": "In the context of agriculture, what are 'HYV' seeds?\nकृषि के संदर्भ में, 'HYV' बीज क्या हैं?",
@@ -662,7 +662,7 @@
 "a": 0,
 "e": "HYV seeds produce a higher amount of grain per plant compared to traditional seeds. / पारंपरिक बीजों की तुलना में HYV बीज प्रति पौधे अधिक मात्रा में अनाज पैदा करते हैं।",
 "cat": "gk",
-"sub": "economics"
+"sub": "eco"
 },
 {
 "q": "The 'Silver Fiber Revolution' is related to the production of which crop?\n'सिल्वर फाइबर क्रांति' किस फसल के उत्पादन से संबंधित है?",
@@ -670,7 +670,7 @@
 "a": 1,
 "e": "While 'Silver Revolution' is for eggs, 'Silver Fiber' specifically refers to cotton. / जबकि 'सिल्वर रिवॉल्यूशन' अंडों के लिए है, 'सिल्वर फाइबर' विशेष रूप से कपास को संदर्भित करता है।",
 "cat": "gk",
-"sub": "economics"
+"sub": "eco"
 },
 {
 "q": "Why is 'Productivity' (yield per hectare) a major challenge for Indian agriculture?\nभारतीय कृषि के लिए 'उत्पादकता' (प्रति हेक्टेयर उपज) एक बड़ी चुनौती क्यों है?",
@@ -678,7 +678,7 @@
 "a": 1,
 "e": "Most Indian farmers have small land plots, making it difficult to apply expensive modern farming techniques. / अधिकांश भारतीय किसानों के पास छोटे भूखंड हैं, जिससे महंगी आधुनिक खेती की तकनीक अपनाना मुश्किल हो जाता है।",
 "cat": "gk",
-"sub": "economics"
+"sub": "eco"
 },
 {
 "q": "Under the 'Antyodaya Anna Yojana', at what rates are wheat and rice currently provided?\n'अंत्योदय अन्न योजना' के तहत, वर्तमान में गेहूं और चावल किस दर पर प्रदान किए जाते हैं?",
@@ -694,7 +694,7 @@
 "a": 2,
 "e": "Aadhaar provides a unique biometric identity to ensure the benefits reach the correct person without duplication. / आधार यह सुनिश्चित करने के लिए एक अद्वितीय बायोमेट्रिक पहचान प्रदान करता है कि लाभ बिना किसी दोहराव के सही व्यक्ति तक पहुंचे।",
 "cat": "gk",
-"sub": "economics"
+"sub": "eco"
 },
 
 {
@@ -727,7 +727,7 @@
 "a": 1,
 "e": "High population and poverty increase the pressure on resources, making it difficult to save for the future. / उच्च जनसंख्या और गरीबी संसाधनों पर दबाव बढ़ाते हैं, जिससे भविष्य के लिए बचत करना मुश्किल हो जाता है।",
 "cat": "gk",
-"sub": "economics"
+"sub": "eco"
 },
 
 {
@@ -800,7 +800,7 @@
   "a": 1,
   "e": "Land reforms aimed to remove intermediaries like Zamindars and ensure equitable distribution of land among actual tillers. / भूमि सुधारों का उद्देश्य जमींदारों जैसे बिचौलियों को हटाना और वास्तविक खेती करने वालों के बीच भूमि का समान वितरण सुनिश्चित करना था।",
   "cat": "gk",
-  "sub": "economics"
+  "sub": "eco"
 },
 {
   "q": "Which system was abolished to remove intermediaries between the government and the farmers?\nसरकार और किसानों के बीच से बिचौलियों को हटाने के लिए किस प्रथा को समाप्त किया गया था?",
@@ -808,7 +808,7 @@
   "a": 2,
   "e": "The abolition of the Zamindari system was a major step to stop the exploitation of farmers by middlemen. / बिचौलियों द्वारा किसानों के शोषण को रोकने के लिए जमींदारी प्रथा का उन्मूलन एक बड़ा कदम था।",
   "cat": "gk",
-  "sub": "economics"
+  "sub": "eco"
 },
 {
   "q": "What does 'Land Ceiling' refer to in land reform policies?\nभूमि सुधार नीतियों में 'लैंड सीलिंग' (Land Ceiling) का क्या अर्थ है?",
@@ -824,7 +824,7 @@
   "a": 1,
   "e": "Consolidation brings scattered small plots together, making farming more efficient and manageable. / चकबंदी बिखरे हुए छोटे भूखंडों को एक साथ लाती है, जिससे खेती अधिक कुशल और प्रबंधनीय हो जाती है।",
   "cat": "gk",
-  "sub": "economics"
+  "sub": "eco"
 },
 {
   "q": "To whom is the 'surplus land' acquired through ceiling laws redistributed?\nसीलिंग कानूनों के माध्यम से अधिग्रहित 'अतिरिक्त भूमि' को किसे पुनर्वितरित किया जाता है?",
@@ -832,7 +832,7 @@
   "a": 1,
   "e": "Surplus land taken from large owners is redistributed to those who have no land or very little land. / बड़े मालिकों से ली गई अतिरिक्त भूमि को उन लोगों को दिया जाता है जिनके पास जमीन नहीं है या बहुत कम है।",
   "cat": "gk",
-  "sub": "economics"
+  "sub": "eco"
 },
 {
   "q": "What was the main focus of 'Tenancy Reforms'?\n'काश्तकारी सुधारों' (Tenancy Reforms) का मुख्य फोकस क्या था?",
@@ -840,7 +840,7 @@
   "a": 1,
   "e": "Tenancy reforms ensure that tenants (who rent land) pay fair rent and cannot be evicted arbitrarily. / काश्तकारी सुधार यह सुनिश्चित करते हैं कि किरायेदार उचित किराया दें और उन्हें मनमाने ढंग से निकाला न जा सके।",
   "cat": "gk",
-  "sub": "economics"
+  "sub": "eco"
 },
 {
   "q": "Which state is considered highly successful in the implementation of land reforms?\nभूमि सुधारों के कार्यान्वयन में किस राज्य को अत्यधिक सफल माना जाता है?",
@@ -848,7 +848,7 @@
   "a": 1,
   "e": "West Bengal and Kerala implemented land reforms more effectively compared to other states. / पश्चिम बंगाल और केरल ने अन्य राज्यों की तुलना में भूमि सुधारों को अधिक प्रभावी ढंग से लागू किया।",
   "cat": "gk",
-  "sub": "economics"
+  "sub": "eco"
 },
 {
   "q": "Which movement led by Vinoba Bhave encouraged voluntary land donation?\nविनोबा भावे के नेतृत्व में किस आंदोलन ने स्वैच्छिक भूमि दान को प्रोत्साहित किया?",
@@ -856,7 +856,7 @@
   "a": 1,
   "e": "The Bhoodan movement was a voluntary land reform movement where landowners donated land to the landless. / भूदान आंदोलन एक स्वैच्छिक भूमि सुधार आंदोलन था जहाँ जमींदारों ने भूमिहीनों को भूमि दान की थी।",
   "cat": "gk",
-  "sub": "economics"
+  "sub": "eco"
 },
 {
   "q": "In the context of land reforms, who are 'Intermediaries'?\nभूमि सुधारों के संदर्भ में 'बिचौलिए' (Intermediaries) कौन हैं?",
@@ -864,7 +864,7 @@
   "a": 1,
   "e": "Intermediaries were those who stood between the state and the actual tiller, collecting rent as a middleman. / बिचौलिए वे थे जो राज्य और वास्तविक किसान के बीच खड़े होकर किराए की वसूली करते थे।",
   "cat": "gk",
-  "sub": "economics"
+  "sub": "eco"
 },
   {
   "q": "Which sector is primarily responsible for creating demand for agricultural products and providing mass employment?\nकौन सा क्षेत्र मुख्य रूप से कृषि उत्पादों के लिए मांग पैदा करने और बड़े पैमाने पर रोजगार प्रदान करने के लिए जिम्मेदार है?",
@@ -896,7 +896,7 @@
   "a": 0,
   "e": "The Mahalanobis model prioritized the development of capital goods and basic industries to make India self-reliant. / महालनोबिस मॉडल ने भारत को आत्मनिर्भर बनाने के लिए पूंजीगत वस्तुओं और बुनियादी उद्योगों के विकास को प्राथमिकता दी।",
   "cat": "gk",
-  "sub": "economics"
+  "sub": "eco"
 },
 {
   "q": "What was a major reason for the government to lead industrialization post-independence?\nआजादी के बाद सरकार के औद्योगीकरण का नेतृत्व करने का एक प्रमुख कारण क्या था?",
@@ -904,7 +904,7 @@
   "a": 1,
   "e": "Post-independence, the private sector was weak and lacked the capital and technology required for large-scale industrialization. / आजादी के बाद, निजी क्षेत्र कमजोर था और बड़े पैमाने पर औद्योगीकरण के लिए आवश्यक पूंजी और तकनीक की कमी थी।",
   "cat": "gk",
-  "sub": "economics"
+  "sub": "eco"
 },
 {
   "q": "Before 1991, how many industries were exclusively reserved for the Public Sector under the 1956 policy?\n1991 से पहले, 1956 की नीति के तहत कितने उद्योग विशेष रूप से सार्वजनिक क्षेत्र के लिए आरक्षित थे?",
@@ -912,7 +912,7 @@
   "a": 2,
   "e": "The Industrial Policy Resolution of 1956 reserved 17 key industries exclusively for the public sector. / 1956 के औद्योगिक नीति प्रस्ताव ने 17 प्रमुख उद्योगों को विशेष रूप से सार्वजनिक क्षेत्र के लिए आरक्षित किया था।",
   "cat": "gk",
-  "sub": "economics"
+  "sub": "eco"
 },
 {
   "q": "What does 'MRTP' stand for in the context of pre-1991 industrial regulation?\n1991 से पहले के औद्योगिक विनियमन के संदर्भ में 'MRTP' का पूर्ण रूप क्या है?",
@@ -920,7 +920,7 @@
   "a": 1,
   "e": "The MRTP Act was designed to prevent the concentration of economic power and control monopolies. / MRTP अधिनियम आर्थिक शक्ति के संकेंद्रण को रोकने और एकाधिकार को नियंत्रित करने के लिए बनाया गया था।",
   "cat": "gk",
-  "sub": "economics"
+  "sub": "eco"
 },
 {
   "q": "Which act was used to regulate foreign companies and exchange in India before the economic reforms?\nआर्थिक सुधारों से पहले भारत में विदेशी कंपनियों और विनिमय को विनियमित करने के लिए किस अधिनियम का उपयोग किया गया था?",
@@ -928,7 +928,7 @@
   "a": 1,
   "e": "FERA was a strict act used to control foreign exchange and the activities of foreign companies in India. / FERA भारत में विदेशी मुद्रा और विदेशी कंपनियों की गतिविधियों को नियंत्रित करने के लिए उपयोग किया जाने वाला एक सख्त अधिनियम था।",
   "cat": "gk",
-  "sub": "economics"
+  "sub": "eco"
 },
 {
   "q": "What was the main social objective of Public Sector Undertakings (PSUs) in India?\nभारत में सार्वजनिक क्षेत्र के उपक्रमों (PSUs) का मुख्य सामाजिक उद्देश्य क्या था?",
@@ -944,7 +944,7 @@
   "a": 1,
   "e": "The era was known for its excessive government control, requiring multiple licenses and permissions for any business activity. / यह युग अपने अत्यधिक सरकारी नियंत्रण के लिए जाना जाता था, जिसमें किसी भी व्यावसायिक गतिविधि के लिए कई लाइसेंस और अनुमति की आवश्यकता होती थी।",
   "cat": "gk",
-  "sub": "economics"
+  "sub": "eco"
 },
   {
   "q": "The Industrial Policy of 1991 is often associated with which economic concept that changed the Indian economy?\n1991 की औद्योगिक नीति अक्सर किस आर्थिक अवधारणा से जुड़ी है जिसने भारतीय अर्थव्यवस्था को बदल दिया?",
@@ -952,7 +952,7 @@
   "a": 1,
   "e": "The 1991 policy introduced Liberalization, Privatization, and Globalization to open the economy and reduce government control. / 1991 की नीति ने अर्थव्यवस्था को खोलने और सरकारी नियंत्रण को कम करने के लिए उदारीकरण, निजीकरण और वैश्वीकरण की शुरुआत की।",
   "cat": "gk",
-  "sub": "economics"
+  "sub": "eco"
 },
 {
   "q": "What was the main goal of 'Liberalization' in the 1991 Industrial Policy?\n1991 की औद्योगिक नीति में 'उदारीकरण' (Liberalization) का मुख्य लक्ष्य क्या था?",
@@ -960,7 +960,7 @@
   "a": 1,
   "e": "Liberalization aimed to provide freedom to businesses by removing unnecessary licenses and government restrictions. / उदारीकरण का उद्देश्य अनावश्यक लाइसेंस और सरकारी प्रतिबंधों को हटाकर व्यवसायों को स्वतंत्रता प्रदान करना था।",
   "cat": "gk",
-  "sub": "economics"
+  "sub": "eco"
 },
 {
   "q": "Which two sectors were strictly reserved for the Public Sector and not opened to private players in 1991?\n1991 में किन दो क्षेत्रों को सार्वजनिक क्षेत्र के लिए सख्ती से आरक्षित रखा गया था और निजी खिलाड़ियों के लिए नहीं खोला गया था?",
@@ -976,7 +976,7 @@
   "a": 1,
   "e": "Disinvestment is the tool used by the government to reduce its stake in PSUs and raise resources. / विनिवेश वह उपकरण है जिसका उपयोग सरकार पीएसयू में अपनी हिस्सेदारी कम करने और संसाधन जुटाने के लिए करती है।",
   "cat": "gk",
-  "sub": "economics"
+  "sub": "eco"
 },
 {
   "q": "A company is considered 'Privatized' in the true sense when the government transfers:\nएक कंपनी को सही मायने में 'निजीकृत' तब माना जाता है जब सरकार स्थानांतरित करती है:",
@@ -984,7 +984,7 @@
   "a": 1,
   "e": "Privatization involves transferring more than 51% shares or management control to private hands. / निजीकरण में 51% से अधिक शेयर या प्रबंधन नियंत्रण निजी हाथों में स्थानांतरित करना शामिल है।",
   "cat": "gk",
-  "sub": "economics"
+  "sub": "eco"
 },
 {
   "q": "What are 'Maha-ratnas' and 'Nav-ratnas' in the context of the Indian economy?\nभारतीय अर्थव्यवस्था के संदर्भ में 'महारत्न' और 'नवरत्न' क्या हैं?",
@@ -1000,7 +1000,7 @@
   "a": 1,
   "e": "NIF was created to store money earned from selling PSU shares, with 75% of profits used for social sectors like health and education. / पीएसयू शेयरों को बेचने से अर्जित धन को रखने के लिए एनआईएफ बनाया गया था, जिसका 75% लाभ स्वास्थ्य और शिक्षा जैसे सामाजिक क्षेत्रों के लिए उपयोग किया जाता है।",
   "cat": "gk",
-  "sub": "economics"
+  "sub": "eco"
 },
 {
   "q": "What was the main criticism against the privatization of profit-making PSUs?\nलाभ कमाने वाले सार्वजनिक क्षेत्र के उपक्रमों के निजीकरण के खिलाफ मुख्य आलोचना क्या थी?",
@@ -1008,7 +1008,7 @@
   "a": 1,
   "e": "Critics feared that private owners would focus only on profit and ignore the social objectives of the government. / आलोचकों को डर था कि निजी मालिक केवल लाभ पर ध्यान करेंगे और सरकार के सामाजिक उद्देश्यों की अनदेखी करेंगे।",
   "cat": "gk",
-  "sub": "economics"
+  "sub": "eco"
 },
 {
   "q": "Under the 1991 policy, for which industries is an industrial license still mandatory?\n1991 की नीति के तहत, किन उद्योगों के लिए औद्योगिक लाइसेंस अभी भी अनिवार्य है?",
@@ -1016,7 +1016,7 @@
   "a": 1,
   "e": "Licensing is retained for industries involving environment, safety, and strategic concerns. / पर्यावरण, सुरक्षा और रणनीतिक चिंताओं वाले उद्योगों के लिए लाइसेंसिंग बरकरार रखी गई है।",
   "cat": "gk",
-  "sub": "economics"
+  "sub": "eco"
 },
   {
   "q": "What is the primary shift in the role of Public Sector Undertakings (PSUs) in India as discussed in the text?\nपाठ में चर्चा के अनुसार भारत में सार्वजनिक क्षेत्र के उपक्रमों (PSUs) की भूमिका में प्राथमिक बदलाव क्या है?",
@@ -1032,7 +1032,7 @@
   "a": 2,
   "e": "The policy aimed to increase the share of manufacturing in GDP to 25% and create 100 million jobs. / नीति का लक्ष्य जीडीपी में विनिर्माण की हिस्सेदारी को 25% तक बढ़ाना और 10 करोड़ नौकरियां पैदा करना था।",
   "cat": "gk",
-  "sub": "economics"
+  "sub": "eco"
 },
 {
   "q": "What does 'NIMZ' stand for in the context of industrial development in India?\nभारत में औद्योगिक विकास के संदर्भ में 'NIMZ' का पूर्ण रूप क्या है?",
@@ -1040,7 +1040,7 @@
   "a": 1,
   "e": "NIMZs are large integrated industrial townships aimed at providing world-class infrastructure for manufacturing. / NIMZ विनिर्माण के लिए विश्व स्तरीय बुनियादी ढांचा प्रदान करने के उद्देश्य से बड़े एकीकृत औद्योगिक टाउनशिप हैं।",
   "cat": "gk",
-  "sub": "economics"
+  "sub": "eco"
 },
 {
   "q": "Which state-of-the-art industrial township was proposed as part of the Delhi-Mumbai Industrial Corridor (DMIC)?\nदिल्ली-मुंबई औद्योगिक कॉरिडोर (DMIC) के हिस्से के रूप में किस अत्याधुनिक औद्योगिक टाउनशिप का प्रस्ताव दिया गया था?",
@@ -1048,7 +1048,7 @@
   "a": 1,
   "e": "The Manesar-Bawal region in Haryana is a key investment area under the DMIC project. / हरियाणा में मानेसर-बावल क्षेत्र DMIC परियोजना के तहत एक प्रमुख निवेश क्षेत्र है।",
   "cat": "gk",
-  "sub": "economics"
+  "sub": "eco"
 },
 {
   "q": "Under the 'Viability Gap Funding' (VGF) scheme, the government provides financial support to projects that are:\n'वायबिलिटी गैप फंडिंग' (VGF) योजना के तहत, सरकार उन परियोजनाओं को वित्तीय सहायता प्रदान करती है जो:",
@@ -1064,7 +1064,7 @@
   "a": 1,
   "e": "It simplifies the regulatory environment by providing all clearances in a time-bound manner through a single interface. / यह एक इंटरफेस के माध्यम से समयबद्ध तरीके से सभी मंजूरी प्रदान करके नियामक वातावरण को सरल बनाता है।",
   "cat": "gk",
-  "sub": "economics"
+  "sub": "eco"
 },
 {
   "q": "How does the government encourage 'Green Technology' in NIMZs?\nसरकार NIMZs में 'ग्रीन टेक्नोलॉजी' को कैसे प्रोत्साहित करती है?",
@@ -1072,7 +1072,7 @@
   "a": 1,
   "e": "Units using pollution control or energy-saving devices receive capital subsidies and interest relief. / प्रदूषण नियंत्रण या ऊर्जा-बचत उपकरणों का उपयोग करने वाली इकाइयों को पूंजीगत सब्सिडी और ब्याज राहत मिलती है।",
   "cat": "gk",
-  "sub": "economics"
+  "sub": "eco"
 },
 {
   "q": "What specific tax relief is provided to units located in NIMZ for purchasing new plant and machinery?\nNIMZ में स्थित इकाइयों को नए प्लांट और मशीनरी खरीदने के लिए कौन सी विशिष्ट कर राहत प्रदान की जाती है?",
@@ -1080,7 +1080,7 @@
   "a": 1,
   "e": "Relief from capital gains tax is granted if the sale consideration of an old unit is reinvested in new machinery within three years. / यदि पुरानी इकाई की बिक्री प्रतिफल को तीन वर्षों के भीतर नई मशीनरी में पुनर्निवेश किया जाता है, तो पूंजीगत लाभ कर से राहत दी जाती है।",
   "cat": "gk",
-  "sub": "economics"
+  "sub": "eco"
 },
 {
   "q": "The 'SHREYAS' scheme and industrial training focus on which aspect of the labor force?\n'SHREYAS' योजना और औद्योगिक प्रशिक्षण श्रम शक्ति के किस पहलू पर ध्यान केंद्रित करते हैं?",
@@ -1096,7 +1096,7 @@
   "a": 1,
   "e": "Fierce competition leads to lower prices and better reach, as producers try to attract more customers, which ultimately benefits the consumer. / कड़ी प्रतिस्पर्धा से कीमतें कम होती हैं और पहुंच बेहतर होती है, क्योंकि उत्पादक अधिक ग्राहकों को आकर्षित करने की कोशिश करते हैं, जिससे अंततः उपभोक्ता को लाभ होता है।",
   "cat": "gk",
-  "sub": "economics"
+  "sub": "eco"
 },
 {
   "q": "In the modern corporate world, what does 'Corporate Governance' primarily emphasize?\nआधुनिक कॉर्पोरेट जगत में 'कॉर्पोरेट गवर्नेंस' मुख्य रूप से किस पर जोर देता है?",
@@ -1104,7 +1104,7 @@
   "a": 1,
   "e": "Corporate governance ensures that a company works independently with transparency and moral responsibility towards its stakeholders and society. / कॉर्पोरेट गवर्नेंस यह सुनिश्चित करता है कि कंपनी अपने हितधारकों और समाज के प्रति पारदर्शिता और नैतिक जिम्मेदारी के साथ स्वतंत्र रूप से काम करे।",
   "cat": "gk",
-  "sub": "economics"
+  "sub": "eco"
 },
 {
   "q": "According to the Companies Act, what is the mandatory requirement for CSR (Corporate Social Responsibility) for eligible companies?\nकंपनी अधिनियम के अनुसार, पात्र कंपनियों के लिए CSR (कॉर्पोरेट सोशल रिस्पॉन्सिबिलिटी) की अनिवार्य आवश्यकता क्या है?",
@@ -1112,7 +1112,7 @@
   "a": 1,
   "e": "Companies meeting specific criteria (net worth/turnover/profit) must spend 2% of their average net profits from the last 3 years on CSR activities. / विशिष्ट मानदंडों को पूरा करने वाली कंपनियों को पिछले 3 वर्षों के अपने औसत शुद्ध लाभ का 2% CSR गतिविधियों पर खर्च करना होगा।",
   "cat": "gk",
-  "sub": "economics"
+  "sub": "eco"
 },
 {
   "q": "Which criteria make a company eligible for mandatory CSR under the current laws discussed?\nचर्चा किए गए वर्तमान कानूनों के तहत कौन से मानदंड एक कंपनी को अनिवार्य CSR के लिए पात्र बनाते हैं?",
@@ -1120,7 +1120,7 @@
   "a": 1,
   "e": "Companies with a net worth of ₹500 cr+, turnover of ₹1000 cr+, or net profit of ₹5 cr+ are mandated to perform CSR. / ₹500 करोड़+ की कुल संपत्ति, ₹1000 करोड़+ का टर्नओवर, या ₹5 करोड़+ के शुद्ध लाभ वाली कंपनियों को CSR करना अनिवार्य है।",
   "cat": "gk",
-  "sub": "economics"
+  "sub": "eco"
 },
 {
   "q": "What is the main role of a 'Holding Company' like Tata Sons, as mentioned in the professional management model?\nपेशेवर प्रबंधन मॉडल में उल्लिखित टाटा संस जैसी 'होल्डिंग कंपनी' की मुख्य भूमिका क्या है?",
@@ -1128,7 +1128,7 @@
   "a": 1,
   "e": "A holding company owns shares in other companies (subsidiaries) and oversees them professionally while they function independently. / एक होल्डिंग कंपनी अन्य कंपनियों (सहायक कंपनियों) में शेयर रखती है और पेशेवर रूप से उनकी देखरेख करती है जबकि वे स्वतंत्र रूप से कार्य करती हैं।",
   "cat": "gk",
-  "sub": "economics"
+  "sub": "eco"
 },
 {
   "q": "The concept of 'PPP' (Public Private Partnership) aims to combine:\n'PPP' (सार्वजनिक निजी भागीदारी) की अवधारणा का लक्ष्य किसे संयोजित करना है?",
@@ -1136,7 +1136,7 @@
   "a": 1,
   "e": "PPP models bring together the government and private sector to fund and operate infrastructure projects like roads and bridges. / PPP मॉडल बुनियादी ढांचा परियोजनाओं के वित्तपोषण और संचालन के लिए सरकार और निजी क्षेत्र को एक साथ लाते हैं।",
   "cat": "gk",
-  "sub": "economics"
+  "sub": "eco"
 },
 {
   "q": "Why is the private sector becoming more involved in traditional public domains like roadways and power?\nसड़क मार्ग और बिजली जैसे पारंपरिक सार्वजनिक क्षेत्रों में निजी क्षेत्र अधिक क्यों शामिल हो रहा है?",
@@ -1144,7 +1144,7 @@
   "a": 1,
   "e": "The government seeks private investment and expertise to bring global standards and efficiency to critical infrastructure. / सरकार महत्वपूर्ण बुनियादी ढांचे में वैश्विक मानक और दक्षता लाने के लिए निजी निवेश और विशेषज्ञता चाहती है।",
   "cat": "gk",
-  "sub": "economics"
+  "sub": "eco"
 },
 {
   "q": "What does the term 'Mixed Economy' refer to in the Indian context?\nभारतीय संदर्भ में 'मिश्रित अर्थव्यवस्था' (Mixed Economy) शब्द का क्या अर्थ है?",
@@ -1152,7 +1152,7 @@
   "a": 1,
   "e": "India adopted a mixed economy model where the state and private sector both contribute to industrial growth. / भारत ने एक मिश्रित अर्थव्यवस्था मॉडल अपनाया जहाँ राज्य और निजी क्षेत्र दोनों औद्योगिक विकास में योगदान देते हैं।",
   "cat": "gk",
-  "sub": "economics"
+  "sub": "eco"
 },
 {
   "q": "What is the 'moral responsibility' of businesses mentioned toward the end of the text?\nपाठ के अंत में व्यवसायों की किस 'नैतिक जिम्मेदारी' का उल्लेख किया गया है?",
@@ -1160,7 +1160,7 @@
   "a": 1,
   "e": "Modern businesses are expected to grow while maintaining ethical standards and contributing back to the society. / आधुनिक व्यवसायों से नैतिक मानकों को बनाए रखते हुए और समाज में योगदान देते हुए बढ़ने की उम्मीद की जाती है।",
   "cat": "gk",
-  "sub": "economics"
+  "sub": "eco"
 },
   {
   "q": "What is the primary function of an 'Exit Policy' in an industrial economy?\nएक औद्योगिक अर्थव्यवस्था में 'एग्जिट पॉलिसी' (Exit Policy) का प्राथमिक कार्य क्या है?",
@@ -1168,7 +1168,7 @@
   "a": 1,
   "e": "An exit policy provides a legal way for inefficient or loss-making units to shut down or change their business nature, which is essential for market flexibility. / एग्जिट पॉलिसी अक्षम या घाटे में चल रही इकाइयों को बंद करने या अपने व्यवसाय की प्रकृति बदलने का कानूनी तरीका प्रदान करती है।",
   "cat": "gk",
-  "sub": "economics"
+  "sub": "eco"
 },
 {
   "q": "Which judicial body was established in India to handle cases related to company revival and closure?\nभारत में कंपनियों के पुनरुद्धार और बंद होने से संबंधित मामलों को संभालने के लिए किस न्यायिक निकाय की स्थापना की गई थी?",
@@ -1176,7 +1176,7 @@
   "a": 1,
   "e": "NCLT serves as a single window for speedier disposal of cases related to sick companies and insolvency. / NCLT बीमार कंपनियों और दिवालियापन से संबंधित मामलों के त्वरित निपटान के लिए एकल खिड़की के रूप में कार्य करता है।",
   "cat": "gk",
-  "sub": "economics"
+  "sub": "eco"
 },
 {
   "q": "In economic terms, what is a 'Sick Company'?\nआर्थिक संदर्भ में, 'बीमार कंपनी' (Sick Company) क्या है?",
@@ -1184,7 +1184,7 @@
   "a": 1,
   "e": "A sick company is an industrial unit that has accumulated losses and shows a negative net worth. / एक बीमार कंपनी वह औद्योगिक इकाई है जिसने घाटा जमा किया है और जिसकी कुल संपत्ति नकारात्मक है।",
   "cat": "gk",
-  "sub": "economics"
+  "sub": "eco"
 },
 {
   "q": "What is the 'Hire and Fire' policy often associated with private sector labor reforms?\nनिजी क्षेत्र के श्रम सुधारों से जुड़ी 'हायर एंड फायर' (Hire and Fire) नीति क्या है?",
@@ -1192,7 +1192,7 @@
   "a": 1,
   "e": "It refers to the employer's flexibility to adjust the workforce according to business needs and worker productivity. / यह व्यवसाय की जरूरतों और श्रमिक उत्पादकता के अनुसार कार्यबल को समायोजित करने के लिए नियोक्ता के लचीलेपन को संदर्भित करता है।",
   "cat": "gk",
-  "sub": "economics"
+  "sub": "eco"
 },
 {
   "q": "The 'Ease of Doing Business' index measures:\n'ईज ऑफ डूइंग बिजनेस' (Ease of Doing Business) सूचकांक क्या मापता है?",
@@ -1200,7 +1200,7 @@
   "a": 1,
   "e": "It reflects how supportive a country's regulatory environment is for business operations. / यह दर्शाता है कि किसी देश का नियामक वातावरण व्यावसायिक संचालन के लिए कितना सहायक है।",
   "cat": "gk",
-  "sub": "economics"
+  "sub": "eco"
 },
 {
   "q": "Which government initiative launched in 2014 aims to transform India into a global manufacturing hub?\n2014 में शुरू की गई किस सरकारी पहल का उद्देश्य भारत को एक वैश्विक विनिर्माण केंद्र में बदलना है?",
@@ -1216,7 +1216,7 @@
   "a": 1,
   "e": "Industrial corridors provide integrated infrastructure and connectivity to develop global manufacturing hubs. / औद्योगिक गलियारे वैश्विक विनिर्माण केंद्र विकसित करने के लिए एकीकृत बुनियादी ढांचा और कनेक्टिविटी प्रदान करते हैं।",
   "cat": "gk",
-  "sub": "economics"
+  "sub": "eco"
 },
 {
   "q": "What benefit does a 'Geographical Indication' (GI) tag provide to a product?\n'भौगोलिक संकेत' (GI) टैग किसी उत्पाद को क्या लाभ प्रदान करता है?",
@@ -1224,7 +1224,7 @@
   "a": 1,
   "e": "A GI tag protects the uniqueness of products originating from a specific region, helping in branding and exports. / एक GI टैग एक विशिष्ट क्षेत्र से उत्पन्न होने वाले उत्पादों की विशिष्टता की रक्षा करता है, जिससे ब्रांडिंग और निर्यात में मदद मिलती है।",
   "cat": "gk",
-  "sub": "economics"
+  "sub": "eco"
 },
 {
   "q": "The 'Startup India' initiative is primarily designed to:\n'स्टार्टअप इंडिया' पहल मुख्य रूप से किसके लिए तैयार की गई है?",
@@ -1240,7 +1240,7 @@
   "a": 1,
   "e": "Infrastructure like roads requires constant monitoring and repeated investment for maintenance; you can never say investment is 'adequate' once and for all. / सड़कों जैसे बुनियादी ढांचे की निरंतर निगरानी और रखरखाव के लिए बार-बार निवेश की आवश्यकता होती है; आप कभी नहीं कह सकते कि निवेश एक बार में 'पर्याप्त' है।",
   "cat": "gk",
-  "sub": "economics"
+  "sub": "eco"
 },
 {
   "q": "What does the term 'Negative Grant' refer to in infrastructure contracts?\nबुनियादी ढांचा अनुबंधों में 'नेगेटिव ग्रांट' (Negative Grant) शब्द का क्या अर्थ है?",
@@ -1248,7 +1248,7 @@
   "a": 1,
   "e": "A negative grant occurs when a project is so financially viable that the contractor pays the government to win the contract. / नेगेटिव ग्रांट तब होती है जब कोई परियोजना वित्तीय रूप से इतनी व्यवहार्य होती है कि ठेकेदार अनुबंध जीतने के लिए सरकार को भुगतान करता है।",
   "cat": "gk",
-  "sub": "economics"
+  "sub": "eco"
 },
 {
   "q": "Infrastructure development is considered a key driver for which of the following?\nबुनियादी ढांचा विकास को निम्नलिखित में से किसका प्रमुख चालक माना जाता है?",
@@ -1256,7 +1256,7 @@
   "a": 1,
   "e": "Good infrastructure reduces logistics costs, improves connectivity, and boosts the overall productivity of an economy. / अच्छा बुनियादी ढांचा रसद लागत को कम करता है, कनेक्टिविटी में सुधार करता है और अर्थव्यवस्था की समग्र उत्पादकता को बढ़ाता है।",
   "cat": "gk",
-  "sub": "economics"
+  "sub": "eco"
 },
 {
   "q": "What is a major challenge faced in infrastructure projects in India?\nभारत में बुनियादी ढांचा परियोजनाओं में सामना की जाने वाली एक प्रमुख चुनौती क्या है?",
@@ -1264,7 +1264,7 @@
   "a": 1,
   "e": "Delays in land acquisition and getting environmental clearances often lead to cost overruns in infrastructure projects. / भूमि अधिग्रहण और पर्यावरणीय मंजूरी मिलने में देरी अक्सर बुनियादी ढांचा परियोजनाओं में लागत वृद्धि का कारण बनती है।",
   "cat": "gk",
-  "sub": "economics"
+  "sub": "eco"
 },
 {
   "q": "Under which model is the government increasingly developing roads and highways?\nसरकार किस मॉडल के तहत सड़कों और राजमार्गों का विकास तेजी से कर रही है?",
@@ -1272,7 +1272,7 @@
   "a": 1,
   "e": "The PPP model allows the government to leverage private sector investment and efficiency for building large-scale infrastructure. / PPP मॉडल सरकार को बड़े पैमाने पर बुनियादी ढांचे के निर्माण के लिए निजी क्षेत्र के निवेश और दक्षता का लाभ उठाने की अनुमति देता है।",
   "cat": "gk",
-  "sub": "economics"
+  "sub": "eco"
 },
 {
   "q": "What is the purpose of 'Urban Development Programs' mentioned in the text?\nपाठ में उल्लिखित 'शहरी विकास कार्यक्रमों' का उद्देश्य क्या है?",
@@ -1288,7 +1288,7 @@
   "a": 1,
   "e": "Lack of maintenance can lead to rapid deterioration of roads, making the initial investment a waste. / रखरखाव की कमी से सड़कें तेजी से खराब हो सकती हैं, जिससे शुरुआती निवेश बेकार हो जाता है।",
   "cat": "gk",
-  "sub": "economics"
+  "sub": "eco"
 },
 {
   "q": "In the context of the Indian economy, infrastructure is divided into which two main categories?\nभारतीय अर्थव्यवस्था के संदर्भ में, बुनियादी ढांचे को किन दो मुख्य श्रेणियों में विभाजित किया गया है?",
@@ -1296,7 +1296,7 @@
   "a": 1,
   "e": "Physical infrastructure includes power and transport, while social infrastructure includes health and education. / भौतिक बुनियादी ढांचे में बिजली और परिवहन शामिल हैं, जबकि सामाजिक बुनियादी ढांचे में स्वास्थ्य और शिक्षा शामिल हैं।",
   "cat": "gk",
-  "sub": "economics"
+  "sub": "eco"
 },
   {
   "q": "What is the primary debate between 'Environment' and 'Infrastructure Development' as discussed in the text?\nपाठ में चर्चा के अनुसार 'पर्यावरण' और 'बुनियादी ढांचा विकास' के बीच प्राथमिक बहस क्या है?",
@@ -1304,7 +1304,7 @@
   "a": 1,
   "e": "The government emphasizes that while infrastructure (like roads and industries) is necessary for people's livelihood, it must be balanced with environmental preservation or compensatory afforestation. / सरकार इस बात पर जोर देती है कि जहां बुनियादी ढांचा लोगों की आजीविका के लिए आवश्यक है, वहीं इसे पर्यावरण संरक्षण या प्रतिपूरक वनीकरण के साथ संतुलित किया जाना चाहिए।",
   "cat": "gk",
-  "sub": "economics"
+  "sub": "eco"
 },
 {
   "q": "What percentage of India's foreign trade by volume is handled through ports?\nमात्रा (volume) के हिसाब से भारत का कितना प्रतिशत विदेशी व्यापार बंदरगाहों के माध्यम से होता है?",
@@ -1312,7 +1312,7 @@
   "a": 2,
   "e": "Ports handle 90% of India's foreign trade by volume and around 70% by value, making them critical for the economy. / बंदरगाह मात्रा के हिसाब से भारत के विदेशी व्यापार का 90% और मूल्य के हिसाब से लगभग 70% हिस्सा संभालते हैं।",
   "cat": "gk",
-  "sub": "economics"
+  "sub": "eco"
 },
 {
   "q": "Which government initiative aims to modernize India's ports and enhance port-led connectivity?\nभारत के बंदरगाहों को आधुनिक बनाने और बंदरगाह-आधारित कनेक्टिविटी को बढ़ाने के लिए कौन सी सरकारी पहल शुरू की गई है?",
@@ -1328,7 +1328,7 @@
   "a": 3,
   "e": "The government allows 100% FDI under the automatic route for port development projects to attract global investment and technology. / सरकार वैश्विक निवेश और तकनीक को आकर्षित करने के लिए बंदरगाह विकास परियोजनाओं के लिए ऑटोमैटिक रूट के तहत 100% FDI की अनुमति देती है।",
   "cat": "gk",
-  "sub": "economics"
+  "sub": "eco"
 },
 {
   "q": "National Waterway 1 (NW-1) connects which of the following cities?\nराष्ट्रीय जलमार्ग 1 (NW-1) निम्नलिखित में से किन शहरों को जोड़ता है?",
@@ -1336,7 +1336,7 @@
   "a": 2,
   "e": "NW-1 runs on the Ganga-Bhagirathi-Hooghly river system from Prayagraj to Haldia, covering 1620 km. / NW-1 प्रयागराज से हल्दिया तक गंगा-भागीरथी-हुगली नदी प्रणाली पर चलता है, जो 1620 किमी की दूरी तय करता है।",
   "cat": "gk",
-  "sub": "economics"
+  "sub": "eco"
 },
 {
   "q": "On which river system is National Waterway 2 (NW-2) developed?\nराष्ट्रीय जलमार्ग 2 (NW-2) किस नदी प्रणाली पर विकसित किया गया है?",
@@ -1344,7 +1344,7 @@
   "a": 1,
   "e": "NW-2 is developed on the Brahmaputra River, connecting Sadiya and Dhubri in Assam. / NW-2 ब्रह्मपुत्र नदी पर विकसित किया गया है, जो असम में सदिया और धुबरी को जोड़ता है।",
   "cat": "gk",
-  "sub": "economics"
+  "sub": "eco"
 },
 {
   "q": "What is a major structural issue or challenge faced by Indian ports compared to global standards?\nवैश्विक मानकों की तुलना में भारतीय बंदरगाहों के सामने एक प्रमुख ढांचागत मुद्दा या चुनौती क्या है?",
@@ -1352,7 +1352,7 @@
   "a": 1,
   "e": "The average turnaround time in India is around 3.5 days, which is much slower than international ports where tasks are completed in hours. / भारत में औसत टर्नअराउंड समय लगभग 3.5 दिन है, जो अंतरराष्ट्रीय बंदरगाहों की तुलना में बहुत धीमा है।",
   "cat": "gk",
-  "sub": "economics"
+  "sub": "eco"
 },
 {
   "q": "The plan to develop 78 lighthouses in India as 'Tourism Centers' is being executed under which model?\nभारत में 78 लाइटहाउसों को 'पर्यटन केंद्रों' के रूप में विकसित करने की योजना किस मॉडल के तहत निष्पादित की जा रही है?",
@@ -1360,7 +1360,7 @@
   "a": 1,
   "e": "Developing lighthouses for tourism is a PPP initiative to enhance coastal tourism and generate revenue. / पर्यटन के लिए लाइटहाउस विकसित करना तटीय पर्यटन को बढ़ाने और राजस्व उत्पन्न करने के लिए एक पीपीपी पहल है।",
   "cat": "gk",
-  "sub": "economics"
+  "sub": "eco"
 },
   {
   "q": "Which sector contributes the largest share (nearly 70%) to the total savings in the Indian economy?\nभारतीय अर्थव्यवस्था में कुल बचत में सबसे बड़ा हिस्सा (लगभग 70%) कौन सा क्षेत्र योगदान देता है?",
@@ -1368,7 +1368,7 @@
   "a": 2,
   "e": "The household sector is the primary source of savings in India, which includes financial assets (bank deposits) and physical assets (real estate/gold). / भारत में बचत का प्राथमिक स्रोत घरेलू क्षेत्र है, जिसमें वित्तीय संपत्ति और भौतिक संपत्ति शामिल हैं।",
   "cat": "gk",
-  "sub": "economics"
+  "sub": "eco"
 },
 {
   "q": "What is 'Gross Capital Formation' in the context of an economy?\nएक अर्थव्यवस्था के संदर्भ में 'ग्रॉस कैपिटल फॉर्मेशन' (सकल पूंजी निर्माण) क्या है?",
@@ -1376,7 +1376,7 @@
   "a": 1,
   "e": "Capital formation refers to increasing the stock of productive assets like machines and buildings, which drives economic growth. / पूंजी निर्माण का तात्पर्य मशीनों और इमारतों जैसी उत्पादक संपत्तियों के स्टॉक को बढ़ाने से है, जो आर्थिक विकास को गति देता है।",
   "cat": "gk",
-  "sub": "economics"
+  "sub": "eco"
 },
 {
   "q": "The 'Hindu Rate of Growth', a term used for the low growth cycle of the Indian economy in the past, was around:\n'हिंदू विकास दर', जो अतीत में भारतीय अर्थव्यवस्था के निम्न विकास चक्र के लिए इस्तेमाल किया जाने वाला शब्द था, लगभग कितनी थी?",
@@ -1384,7 +1384,7 @@
   "a": 1,
   "e": "Coined by Raj Krishna, it referred to the stagnant 3.5% growth rate India faced between the 1950s and 1980s. / राज कृष्णा द्वारा गढ़ा गया यह शब्द भारत द्वारा 1950 और 1980 के दशक के बीच सामना की गई 3.5% की स्थिर विकास दर को संदर्भित करता है।",
   "cat": "gk",
-  "sub": "economics"
+  "sub": "eco"
 },
 {
   "q": "Which PPP model involves a private player building and operating a project for a specific period before handing it back to the government?\nकिस PPP मॉडल में एक निजी खिलाड़ी सरकार को वापस सौंपने से पहले एक विशिष्ट अवधि के लिए परियोजना का निर्माण और संचालन करता है?",
@@ -1392,7 +1392,7 @@
   "a": 1,
   "e": "Under BOT, the private entity recovers its investment through tolls or fees during the operation period before transferring the asset to the state. / BOT के तहत, निजी संस्था संपत्ति को राज्य को स्थानांतरित करने से पहले संचालन अवधि के दौरान टोल या शुल्क के माध्यम से अपना निवेश वसूल करती है।",
   "cat": "gk",
-  "sub": "economics"
+  "sub": "eco"
 },
 {
   "q": "What is the primary difference between FDI and FPI (Foreign Portfolio Investment)?\nFDI और FPI (विदेशी पोर्टफोलियो निवेश) के बीच प्राथमिक अंतर क्या है?",
@@ -1400,7 +1400,7 @@
   "a": 1,
   "e": "FDI provides long-term capital and management expertise, while FPI is often 'hot money' that can leave the market quickly. / FDI दीर्घकालिक पूंजी और प्रबंधन विशेषज्ञता प्रदान करता है, जबकि FPI अक्सर 'हॉट मनी' होता है जो बाजार से जल्दी बाहर निकल सकता है।",
   "cat": "gk",
-  "sub": "economics"
+  "sub": "eco"
 },
 {
   "q": "The 'Swiss Challenge' model is related to which of the following?\n'स्विस चैलेंज' मॉडल निम्नलिखित में से किससे संबंधित है?",
@@ -1408,7 +1408,7 @@
   "a": 1,
   "e": "In a Swiss Challenge, an original proposer's plan is made public, and other bidders are invited to provide a better offer for the project. / स्विस चैलेंज में, मूल प्रस्तावक की योजना को सार्वजनिक किया जाता है, और अन्य बोलीदाताओं को परियोजना के लिए बेहतर प्रस्ताव देने के लिए आमंत्रित किया जाता है।",
   "cat": "gk",
-  "sub": "economics"
+  "sub": "eco"
 },
 {
   "q": "Under the 'Hybrid Annuity Model' (HAM) for highways, what percentage of the project cost is provided by the government during the construction phase?\nराजमार्गों के लिए 'हाइब्रिड एन्युइटी मॉडल' (HAM) के तहत, निर्माण चरण के दौरान सरकार द्वारा परियोजना लागत का कितना प्रतिशत प्रदान किया जाता है?",
@@ -1416,7 +1416,7 @@
   "a": 2,
   "e": "In HAM, the government pays 40% of the cost in installments, while the developer arranges the remaining 60%. / HAM में, सरकार किश्तों में लागत का 40% भुगतान करती है, जबकि डेवलपर शेष 60% की व्यवस्था करता है।",
   "cat": "gk",
-  "sub": "economics"
+  "sub": "eco"
 },
 {
   "q": "Which technology is used by 'FASTag' to enable direct toll payments from a bank account?\nबैंक खाते से सीधे टोल भुगतान सक्षम करने के लिए 'FASTag' द्वारा किस तकनीक का उपयोग किया जाता है?",
@@ -1424,7 +1424,7 @@
   "a": 1,
   "e": "FASTag uses RFID technology to scan the tag on the vehicle's windshield and deduct toll charges while the vehicle is in motion. / FASTag वाहन की विंडशील्ड पर लगे टैग को स्कैन करने और वाहन के चलने के दौरान टोल शुल्क काटने के लिए RFID तकनीक का उपयोग करता है।",
   "cat": "gk",
-  "sub": "economics"
+  "sub": "eco"
 },
   {
   "q": "What is the primary source of power generation in India as discussed in the text?\nपाठ में चर्चा के अनुसार भारत में बिजली उत्पादन का प्राथमिक स्रोत क्या है?",
@@ -1440,7 +1440,7 @@
   "a": 1,
   "e": "Aggregate Transmission and Distribution losses occur due to technical issues, power theft, and inefficient billing, and India has some of the highest losses globally. / एग्रीगेट ट्रांसमिशन और डिस्ट्रिब्यूशन लॉस तकनीकी समस्याओं, बिजली चोरी और अक्षम बिलिंग के कारण होते हैं।",
   "cat": "gk",
-  "sub": "economics"
+  "sub": "eco"
 },
 {
   "q": "Which scheme was launched for the operational and financial turnaround of Power Distribution Companies (DISCOMs)?\nबिजली वितरण कंपनियों (DISCOMs) के परिचालन और वित्तीय सुधार के लिए कौन सी योजना शुरू की गई थी?",
@@ -1464,7 +1464,7 @@
   "a": 2,
   "e": "India has set an ambitious target of achieving 500 GW of non-fossil fuel-based energy capacity by 2030. / भारत ने 2030 तक 500 गीगावाट गैर-जीवाश्म ईंधन आधारित ऊर्जा क्षमता हासिल करने का महत्वाकांक्षी लक्ष्य रखा है।",
   "cat": "gk",
-  "sub": "economics"
+  "sub": "eco"
 },
 {
   "q": "Which organization is mentioned as being responsible for managing India's coal resources?\nभारत के कोयला संसाधनों के प्रबंधन के लिए किस संगठन का उल्लेख किया गया है?",
@@ -1480,7 +1480,7 @@
   "a": 1,
   "e": "Nuclear plants take a long time to build (gestation period) and require massive initial investment, besides safety and waste disposal issues. / परमाणु संयंत्रों को बनाने में लंबा समय लगता है और सुरक्षा मुद्दों के अलावा बड़े प्रारंभिक निवेश की आवश्यकता होती है।",
   "cat": "gk",
-  "sub": "economics"
+  "sub": "eco"
 },
 {
   "q": "The 'Deendayal Upadhyaya Gram Jyoti Yojana' (DDUGJY) focuses on which aspect of rural power supply?\n'दीनदयाल उपाध्याय ग्राम ज्योति योजना' (DDUGJY) ग्रामीण बिजली आपूर्ति के किस पहलू पर ध्यान केंद्रित करती है?",
@@ -1496,7 +1496,7 @@
   "a": 1,
   "e": "The fund is suggested to support R&D and find alternatives to reduce heavy dependence on imported petroleum. / आयातित पेट्रोलियम पर भारी निर्भरता को कम करने के लिए अनुसंधान और विकास का समर्थन करने के लिए इस कोष का सुझाव दिया गया है।",
   "cat": "gk",
-  "sub": "economics"
+  "sub": "eco"
 },
   {
   "q": "What is the primary definition of 'Fiscal Policy'?\n'राजकोषीय नीति' (Fiscal Policy) की प्राथमिक परिभाषा क्या है?",
@@ -1640,7 +1640,7 @@
   "a": 1,
   "e": "Black money refers to funds that are earned through illegal activities or legal activities but are not reported to the government to avoid taxes. / काला धन वह आय है जिस पर कर का भुगतान नहीं किया गया है और जिसके स्रोत का खुलासा नहीं किया गया है।",
   "cat": "gk",
-  "sub": "economics"
+  "sub": "eco"
 },
 {
   "q": "What was the main objective of the Demonetization policy implemented on November 8, 2016?\n8 नवंबर, 2016 को लागू की गई विमुद्रीकरण (Demonetization) नीति का मुख्य उद्देश्य क्या था?",
@@ -1648,7 +1648,7 @@
   "a": 1,
   "e": "The goal was to render black money stored in high-denomination notes useless and promote a digital, transparent economy. / इसका लक्ष्य उच्च मूल्य के नोटों में जमा काले धन को बेकार करना और डिजिटल अर्थव्यवस्था को बढ़ावा देना था।",
   "cat": "gk",
-  "sub": "economics"
+  "sub": "eco"
 },
 {
   "q": "According to the rules mentioned, it is mandatory to provide a PAN number for any financial transaction exceeding:\nबताए गए नियमों के अनुसार, किस सीमा से अधिक के किसी भी वित्तीय लेनदेन के लिए पैन (PAN) नंबर देना अनिवार्य है?",
@@ -1656,7 +1656,7 @@
   "a": 1,
   "e": "A Permanent Account Number (PAN) is mandatory for high-value transactions, such as bank deposits of ₹50,000 or more, to track tax compliance. / ₹50,000 या उससे अधिक के लेनदेन के लिए पैन नंबर अनिवार्य है ताकि टैक्स अनुपालन पर नजर रखी जा सके।",
   "cat": "gk",
-  "sub": "economics"
+  "sub": "eco"
 },
 {
   "q": "What does 'Digital India' and the promotion of 'BHIM UPI' aim to achieve in the context of black money?\nकाले धन के संदर्भ में 'डिजिटल इंडिया' और 'भीम यूपीआई' (BHIM UPI) के प्रचार का क्या उद्देश्य है?",
@@ -1664,7 +1664,7 @@
   "a": 1,
   "e": "Electronic payments leave a digital trail, making it difficult to hide undisclosed income compared to cash transactions. / इलेक्ट्रॉनिक भुगतान एक डिजिटल निशान छोड़ते हैं, जिससे बेहिसाब आय को छिपाना मुश्किल हो जाता है।",
   "cat": "gk",
-  "sub": "economics"
+  "sub": "eco"
 },
 {
   "q": "Which of the following was a major challenge or disadvantage of the 2016 demonetization mentioned in the text?\nपाठ में उल्लिखित 2016 के विमुद्रीकरण की एक प्रमुख चुनौती या हानि क्या थी?",
@@ -1672,7 +1672,7 @@
   "a": 1,
   "e": "The sudden transition led to short-term economic disruption and significant physical and logistical hardship for common citizens. / अचानक बदलाव से अल्पावधि में आर्थिक व्यवधान और आम नागरिकों के लिए काफी कठिनाइयां हुईं।",
   "cat": "gk",
-  "sub": "economics"
+  "sub": "eco"
 },
 {
   "q": "What is the 'Aadhaar Merchant Pay' system designed for?\n'आधार मर्चेंट पे' (Aadhaar Merchant Pay) सिस्टम किसके लिए तैयार किया गया है?",
@@ -1680,7 +1680,7 @@
   "a": 1,
   "e": "It allows merchants to receive payments from customers using their fingerprints, even if the customer doesn't have a phone or card. / यह मर्चेंट को ग्राहकों से उनके फिंगरप्रिंट का उपयोग करके भुगतान प्राप्त करने की अनुमति देता है।",
   "cat": "gk",
-  "sub": "economics"
+  "sub": "eco"
 },
 {
   "q": "The term 'Tax Evasion' refers to:\n'टैक्स चोरी' (Tax Evasion) शब्द का अर्थ है:",
@@ -1688,7 +1688,7 @@
   "a": 0,
   "e": "Tax evasion is an illegal act where a person or entity deliberately avoids paying their true tax liability. / टैक्स चोरी एक अवैध कार्य है जहाँ कोई जानबूझकर अपनी सही कर देनदारी चुकाने से बचता है।",
   "cat": "gk",
-  "sub": "economics"
+  "sub": "eco"
 },
 {
   "q": "Which body was formed in 2014 specifically to investigate black money issues?\nकाले धन के मुद्दों की जांच के लिए विशेष रूप से 2014 में किस निकाय का गठन किया गया था?",
@@ -1696,7 +1696,7 @@
   "a": 1,
   "e": "The SIT was constituted under the direction of the Supreme Court to track and recover undisclosed wealth. / काले धन पर एसआईटी (SIT) का गठन अघोषित संपत्ति को ट्रैक करने और वसूलने के लिए किया गया था।",
   "cat": "gk",
-  "sub": "economics"
+  "sub": "eco"
 },
   {
   "q": "What is the primary reason for low tax compliance in India as discussed in the text?\nपाठ में चर्चा के अनुसार भारत में कम कर अनुपालन (Tax Compliance) का प्राथमिक कारण क्या है?",
@@ -1768,7 +1768,7 @@
   "a": 1,
   "e": "RBI acts as the debt manager for the government by issuing Treasury Bills (short-term) and Dated Securities (long-term). / आरबीआई बाजार से धन जुटाने के लिए ट्रेजरी बिल (अल्पकालिक) और डेटेड सिक्योरिटीज (दीर्घकालिक) जारी करके सरकार के लिए ऋण प्रबंधक के रूप में कार्य करता है।",
   "cat": "gk",
-  "sub": "economics"
+  "sub": "eco"
 },
 {
   "q": "What is the main difference between 'Treasury Bills' and 'Dated Securities'?\n'ट्रेजरी बिल' और 'डेटेड सिक्योरिटीज' के बीच मुख्य अंतर क्या है?",
@@ -1776,7 +1776,7 @@
   "a": 1,
   "e": "Treasury Bills (T-Bills) are short-term money market instruments, whereas Dated Securities are long-term instruments. / ट्रेजरी बिल एक वर्ष से कम अवधि के लिए होते हैं, जबकि डेटेड सिक्योरिटीज एक वर्ष से अधिक की लंबी अवधि के लिए उपयोग किए जाने वाले साधन हैं।",
   "cat": "gk",
-  "sub": "economics"
+  "sub": "eco"
 },
 {
   "q": "What is the primary target of the Monetary Policy in India as per the modern framework?\nआधुनिक ढांचे के अनुसार भारत में मौद्रिक नीति का प्राथमिक लक्ष्य क्या है?",
@@ -1784,7 +1784,7 @@
   "a": 1,
   "e": "The primary objective is to maintain price stability while keeping in mind the objective of growth, targeting CPI inflation. / मुख्य उद्देश्य विकास को ध्यान में रखते हुए मूल्य स्थिरता बनाए रखना है, जिसमें उपभोक्ता मूल्य सूचकांक (CPI) मुद्रास्फीति को लक्षित किया जाता है।",
   "cat": "gk",
-  "sub": "economics"
+  "sub": "eco"
 },
 {
   "q": "How many members are there in the Monetary Policy Committee (MPC) of India?\nभारत की मौद्रिक नीति समिति (MPC) में कुल कितने सदस्य होते हैं?",
@@ -1792,7 +1792,7 @@
   "a": 1,
   "e": "The MPC consists of 6 members: 3 from RBI (including the Governor) and 3 external members appointed by the Government. / एमपीसी में 6 सदस्य होते हैं: 3 आरबीआई से (गवर्नर सहित) और 3 सरकार द्वारा नियुक्त बाहरी सदस्य।",
   "cat": "gk",
-  "sub": "economics"
+  "sub": "eco"
 },
 {
   "q": "How often is the inflation target reviewed by the Government of India in consultation with the RBI?\nआरबीआई के परामर्श से भारत सरकार द्वारा मुद्रास्फीति लक्ष्य की समीक्षा कितनी बार की जाती है?",
@@ -1800,7 +1800,7 @@
   "a": 1,
   "e": "The inflation target is fixed by the Central Government once every five years to ensure economic stability. / आर्थिक स्थिरता सुनिश्चित करने के लिए केंद्र सरकार द्वारा हर पांच साल में एक बार मुद्रास्फीति लक्ष्य तय किया जाता है।",
   "cat": "gk",
-  "sub": "economics"
+  "sub": "eco"
 },
 {
   "q": "What is the 'Repo Rate' in the context of Indian Banking?\nभारतीय बैंकिंग के संदर्भ में 'रेपो रेट' (Repo Rate) क्या है?",
@@ -1808,7 +1808,7 @@
   "a": 1,
   "e": "Repo rate is the interest rate at which RBI provides liquidity to banks against government securities. / रेपो रेट वह ब्याज दर है जिस पर आरबीआई सरकारी प्रतिभूतियों के बदले बैंकों को नकदी प्रदान करता है।",
   "cat": "gk",
-  "sub": "economics"
+  "sub": "eco"
 },
 {
   "q": "What is the effect of an increase in the 'Reverse Repo Rate' by the RBI?\nआरबीआई द्वारा 'रिवर्स रेपो रेट' में वृद्धि का क्या प्रभाव होता है?",
@@ -1816,7 +1816,7 @@
   "a": 1,
   "e": "An increase in reverse repo rate encourages banks to keep their surplus funds with RBI instead of lending, reducing money supply. / रिवर्स रेपो रेट बढ़ने से बैंक अपना पैसा आरबीआई के पास रखने के लिए प्रोत्साहित होते हैं, जिससे बाजार में मुद्रा की आपूर्ति कम हो जाती है।",
   "cat": "gk",
-  "sub": "economics"
+  "sub": "eco"
 },
 {
   "q": "What is 'Cash Reserve Ratio' (CRR)?\n'नकद आरक्षित अनुपात' (CRR) क्या है?",
@@ -1824,7 +1824,7 @@
   "a": 1,
   "e": "CRR is the share of net demand and time liabilities that banks must maintain as cash with the RBI. / सीआरआर कुल जमा का वह हिस्सा है जिसे बैंकों को नकद के रूप में आरबीआई के पास अनिवार्य रूप से रखना पड़ता है।",
   "cat": "gk",
-  "sub": "economics"
+  "sub": "eco"
 },
   {
   "q": "What is the primary role of banks as financial intermediaries in an economy?\nएक अर्थव्यवस्था में वित्तीय मध्यस्थों के रूप में बैंकों की प्राथमिक भूमिका क्या है?",
@@ -1832,7 +1832,7 @@
   "a": 1,
   "e": "Banks act as intermediaries by accepting deposits from people with surplus money (lenders) and providing loans to those who need capital (borrowers/investors). / बैंक बचतकर्ताओं से जमा स्वीकार करके और निवेशकों को ऋण प्रदान करके मध्यस्थ के रूप में कार्य करते हैं।",
   "cat": "gk",
-  "sub": "economics"
+  "sub": "eco"
 },
 {
   "q": "In which year was the Reserve Bank of India (RBI) established, and which act governs it?\nभारतीय रिजर्व बैंक (RBI) की स्थापना किस वर्ष हुई थी और कौन सा अधिनियम इसे नियंत्रित करता है?",
@@ -1840,7 +1840,7 @@
   "a": 0,
   "e": "RBI was established on April 1, 1935, under the provisions of the Reserve Bank of India Act, 1934. / आरबीआई की स्थापना 1 अप्रैल, 1935 को भारतीय रिजर्व बैंक अधिनियम, 1934 के तहत की गई थी।",
   "cat": "gk",
-  "sub": "economics"
+  "sub": "eco"
 },
 {
   "q": "What is the shareholding pattern in Regional Rural Banks (RRBs) between Central Govt, State Govt, and Sponsor Banks?\nक्षेत्रीय ग्रामीण बैंकों (RRBs) में केंद्र सरकार, राज्य सरकार और प्रायोजक बैंकों के बीच शेयरधारिता का पैटर्न क्या है?",
@@ -1848,7 +1848,7 @@
   "a": 1,
   "e": "RRBs are owned by the Central Government (50%), the State Government (15%), and the Sponsor Bank (35%). / RRB में केंद्र सरकार की 50%, राज्य सरकार की 15% और प्रायोजक बैंक की 35% हिस्सेदारी होती है।",
   "cat": "gk",
-  "sub": "economics"
+  "sub": "eco"
 },
 {
   "q": "Which rate replaced the 'Base Rate' system from April 1, 2016, to ensure better transmission of monetary policy?\nमौद्रिक नीति के बेहतर संचरण को सुनिश्चित करने के लिए 1 अप्रैल, 2016 से 'बेस रेट' प्रणाली के स्थान पर कौन सी दर लागू की गई?",
@@ -1856,7 +1856,7 @@
   "a": 1,
   "e": "MCLR is an internal benchmark rate for banks to determine interest rates on loans, based on the marginal cost of funds. / MCLR फंड की सीमांत लागत पर आधारित ऋण दरों को निर्धारित करने के लिए बैंकों के लिए एक आंतरिक बेंचमार्क दर है।",
   "cat": "gk",
-  "sub": "economics"
+  "sub": "eco"
 },
 {
   "q": "What does 'NPA' stand for in the banking sector?\nबैंकिंग क्षेत्र में 'NPA' का पूर्ण रूप क्या है?",
@@ -1864,7 +1864,7 @@
   "a": 1,
   "e": "An NPA is a loan or advance for which the principal or interest payment remained overdue for a period of 90 days. / NPA वह ऋण या अग्रिम है जिसका मूलधन या ब्याज भुगतान 90 दिनों की अवधि के लिए बकाया रहता है।",
   "cat": "gk",
-  "sub": "economics"
+  "sub": "eco"
 },
 {
   "q": "The 'Basel Norms' are international banking regulations primarily aimed at:\n'बेसल मानदंड' अंतरराष्ट्रीय बैंकिंग नियम हैं जिनका प्राथमिक उद्देश्य है:",
@@ -1872,7 +1872,7 @@
   "a": 1,
   "e": "Basel norms (I, II, and III) are global standards set to ensure financial stability by maintaining adequate capital buffers. / बेसल मानदंड पर्याप्त पूंजी बफर बनाए रखकर वित्तीय स्थिरता सुनिश्चित करने के लिए निर्धारित वैश्विक मानक हैं।",
   "cat": "gk",
-  "sub": "economics"
+  "sub": "eco"
 },
 {
   "q": "Which type of bank operates on a 'No Profit, No Loss' basis and is owned by its members?\nकिस प्रकार का बैंक 'नो प्रॉफिट, नो लॉस' के आधार पर काम करता है और इसका स्वामित्व इसके सदस्यों के पास होता है?",
@@ -1880,7 +1880,7 @@
   "a": 1,
   "e": "Cooperative banks are owned and run by their members (customers), focusing on mutual help rather than maximizing profit. / सहकारी बैंकों का स्वामित्व और संचालन उनके सदस्यों द्वारा किया जाता है, जो लाभ के बजाय आपसी सहायता पर ध्यान केंद्रित करते हैं।",
   "cat": "gk",
-  "sub": "economics"
+  "sub": "eco"
 },
 {
   "q": "What is the 'Capital Adequacy Ratio' (CAR)?\n'पूंजी पर्याप्तता अनुपात' (CAR) क्या है?",
@@ -1888,7 +1888,7 @@
   "a": 0,
   "e": "CAR is a measure of a bank's available capital expressed as a percentage of its risk-weighted credit exposures. / CAR बैंक की उपलब्ध पूंजी का एक माप है जिसे उसकी जोखिम-भारित ऋण जोखिम के प्रतिशत के रूप में व्यक्त किया जाता है।",
   "cat": "gk",
-  "sub": "economics"
+  "sub": "eco"
 },
   {
   "q": "What is the primary objective of 'Liquidity Management' by the RBI?\nआरबीआई द्वारा 'तरलता प्रबंधन' (Liquidity Management) का प्राथमिक उद्देश्य क्या है?",
@@ -2088,7 +2088,7 @@
   "a": 1,
   "e": "No country is self-sufficient in all resources. Trade allows countries to exchange what they have in abundance for what they lack, such as technology or raw materials. / कोई भी देश सभी संसाधनों में आत्मनिर्भर नहीं है। व्यापार देशों को उन चीजों के बदले में अपनी प्रचुर वस्तुओं का आदान-प्रदान करने की अनुमति देता है जिनकी उनके पास कमी है।",
   "cat": "gk",
-  "sub": "economics"
+  "sub": "eco"
 },
 {
   "q": "The concept of 'Comparative Advantage' implies that a country should:\n'तुलनात्मक लाभ' (Comparative Advantage) की अवधारणा का तात्पर्य है कि एक देश को:",
@@ -2096,7 +2096,7 @@
   "a": 1,
   "e": "Comparative advantage suggests that a country should focus on producing and exporting goods where it is most efficient compared to other products. / तुलनात्मक लाभ बताता है कि एक देश को उन वस्तुओं के उत्पादन और निर्यात पर ध्यान केंद्रित करना चाहिए जहाँ वह अन्य उत्पादों की तुलना में सबसे अधिक कुशल है।",
   "cat": "gk",
-  "sub": "economics"
+  "sub": "eco"
 },
 {
   "q": "In a comparison between a labor-rich country and a capital-rich country, the labor-rich country has an advantage in:\nएक श्रम-समृद्ध देश और एक पूंजी-समृद्ध देश के बीच तुलना में, श्रम-समृद्ध देश को किसमें लाभ होता है?",
@@ -2104,7 +2104,7 @@
   "a": 1,
   "e": "Countries with a large population have cheaper labor, making the production of labor-intensive goods (like textiles) more cost-effective. / विशाल जनसंख्या वाले देशों में श्रम सस्ता होता है, जिससे श्रम-प्रधान वस्तुओं (जैसे कपड़ा) का उत्पादन अधिक लागत प्रभावी हो जाता है।",
   "cat": "gk",
-  "sub": "economics"
+  "sub": "eco"
 },
 {
   "q": "What characterizes 'Capital-intensive' goods?\n'पूंजी-प्रधान' (Capital-intensive) वस्तुओं की क्या विशेषता है?",
@@ -2112,7 +2112,7 @@
   "a": 1,
   "e": "Capital-intensive production relies more on expensive machinery, high-end technology, and large financial investment rather than manual labor. / पूंजी-प्रधान उत्पादन शारीरिक श्रम के बजाय महंगी मशीनरी, उच्च तकनीक और बड़े वित्तीय निवेश पर अधिक निर्भर करता है।",
   "cat": "gk",
-  "sub": "economics"
+  "sub": "eco"
 },
 {
   "q": "Why is maintaining 'Foreign Exchange Reserves' critical for a country?\nकिसी देश के लिए 'विदेशी मुद्रा भंडार' (Foreign Exchange Reserves) बनाए रखना क्यों महत्वपूर्ण है?",
@@ -2120,7 +2120,7 @@
   "a": 1,
   "e": "Foreign reserves are essential to pay for imports and ensure the economy remains stable against global market fluctuations. / विदेशी मुद्रा भंडार आयात के भुगतान के लिए और वैश्विक बाजार के उतार-चढ़ाव के खिलाफ अर्थव्यवस्था को स्थिर रखने के लिए आवश्यक हैं।",
   "cat": "gk",
-  "sub": "economics"
+  "sub": "eco"
 },
 {
   "q": "Which of the following is considered a 'disadvantage' of heavy trade dependence?\nव्यापार पर भारी निर्भरता का एक 'नुकसान' किसे माना जाता है?",
@@ -2128,7 +2128,7 @@
   "a": 1,
   "e": "Excessive dependence can lead to economic instability if the supplying country faces a crisis or if global prices fluctuate sharply. / अत्यधिक निर्भरता आर्थिक अस्थिरता का कारण बन सकती है यदि आपूर्ति करने वाला देश संकट का सामना करता है या वैश्विक कीमतें तेजी से बदलती हैं।",
   "cat": "gk",
-  "sub": "economics"
+  "sub": "eco"
 },
 {
   "q": "What are the major trends in 'New Globalization'?\n'नए वैश्वीकरण' (New Globalization) में प्रमुख रुझान क्या हैं?",
@@ -2136,7 +2136,7 @@
   "a": 1,
   "e": "Modern globalization is defined by high-speed technological progress, AI, and changing dynamics in how labor is used globally. / आधुनिक वैश्वीकरण को उच्च गति वाली तकनीकी प्रगति, एआई और वैश्विक स्तर पर श्रम के उपयोग के बदलते तरीकों द्वारा परिभाषित किया गया है।",
   "cat": "gk",
-  "sub": "economics"
+  "sub": "eco"
 },
 {
   "q": "How does globalization impact 'Climate Change'?\nवैश्वीकरण 'जलवायु परिवर्तन' को कैसे प्रभावित करता है?",
@@ -2144,7 +2144,7 @@
   "a": 1,
   "e": "Global trade increases the scale of industrial activities and logistics, which are linked to carbon emissions and global warming. / वैश्विक व्यापार औद्योगिक गतिविधियों और रसद के पैमाने को बढ़ाता है, जो कार्बन उत्सर्जन और ग्लोबल वार्मिंग से जुड़े हैं।",
   "cat": "gk",
-  "sub": "economics"
+  "sub": "eco"
 },
   {
   "q": "What is the primary characteristic of a 'Closed Economy' as discussed in the text?\nपाठ में चर्चा के अनुसार 'बंद अर्थव्यवस्था' (Closed Economy) की प्राथमिक विशेषता क्या है?",
@@ -2152,7 +2152,7 @@
   "a": 1,
   "e": "A closed economy focuses on self-reliance and domestic consumption, having limited or no significant trade with other nations. / एक बंद अर्थव्यवस्था आत्मनिर्भरता और घरेलू उपभोग पर ध्यान केंद्रित करती है, जिसका अन्य देशों के साथ सीमित या कोई महत्वपूर्ण व्यापार नहीं होता है।",
   "cat": "gk",
-  "sub": "economics"
+  "sub": "eco"
 },
 {
   "q": "The shift from 'Asymmetrical Information' to 'Symmetrical Information' is due to:\n'असममित सूचना' से 'सममित सूचना' (Symmetrical Information) की ओर बदलाव का कारण क्या है?",
@@ -2160,7 +2160,7 @@
   "a": 1,
   "e": "Globalization and the internet have made information accessible to everyone equally and instantly, reducing the gap between the informed and uninformed. / वैश्वीकरण और इंटरनेट ने सूचनाओं को सभी के लिए समान रूप से और तुरंत सुलभ बना दिया है।",
   "cat": "gk",
-  "sub": "economics"
+  "sub": "eco"
 },
 {
   "q": "What does the term 'Global Village' refer to in the context of globalization?\nवैश्वीकरण के संदर्भ में 'ग्लोबल विलेज' (Global Village) शब्द का क्या अर्थ है?",
@@ -2168,7 +2168,7 @@
   "a": 1,
   "e": "Global Village implies that the world is now so connected via telecommunications and trade that geographic distances no longer matter. / ग्लोबल विलेज का तात्पर्य है कि दुनिया अब दूरसंचार और व्यापार के माध्यम से इतनी जुड़ी हुई है कि भौगोलिक दूरियां अब मायने नहीं रखती हैं।",
   "cat": "gk",
-  "sub": "economics"
+  "sub": "eco"
 },
 {
   "q": "What was the significance of the 1991 Economic Reforms in India regarding globalization?\nवैश्वीकरण के संबंध में भारत में 1991 के आर्थिक सुधारों का क्या महत्व था?",
@@ -2176,7 +2176,7 @@
   "a": 1,
   "e": "The 1991 reforms marked India's transition from an inward-looking economy to an open, globalized market. / 1991 के सुधारों ने भारत के एक अंतर्मुखी अर्थव्यवस्था से एक खुली, वैश्विक बाजार की ओर संक्रमण को चिह्नित किया।",
   "cat": "gk",
-  "sub": "economics"
+  "sub": "eco"
 },
 {
   "q": "According to the text, how did the 2008 Global Recession change the perception of 'Isolated Economies'?\nपाठ के अनुसार, 2008 की वैश्विक मंदी ने 'अलग-थलग अर्थव्यवस्थाओं' (Isolated Economies) की धारणा को कैसे बदल दिया?",
@@ -2184,7 +2184,7 @@
   "a": 1,
   "e": "The 2008 crisis demonstrated that economic shocks in one part of the world (like the US) quickly spread globally, affecting even seemingly stable nations. / 2008 के संकट ने प्रदर्शित किया कि दुनिया के एक हिस्से में आर्थिक झटके तेजी से विश्व स्तर पर फैलते हैं।",
   "cat": "gk",
-  "sub": "economics"
+  "sub": "eco"
 },
 {
   "q": "What is 'Import Substitution' as mentioned in the inward-looking policy framework?\nअंतर्मुखी नीति ढांचे में उल्लिखित 'आयात प्रतिस्थापन' (Import Substitution) क्या है?",
@@ -2192,7 +2192,7 @@
   "a": 1,
   "e": "Import substitution aims to promote domestic industries by producing goods locally that were previously imported from abroad. / आयात प्रतिस्थापन का उद्देश्य उन वस्तुओं का स्थानीय स्तर पर उत्पादन करके घरेलू उद्योगों को बढ़ावा देना है जिन्हें पहले विदेशों से आयात किया जाता था।",
   "cat": "gk",
-  "sub": "economics"
+  "sub": "eco"
 },
 {
   "q": "Which of the following is a 'Flip Side' or challenge of globalization mentioned in the discussion?\nचर्चा में उल्लिखित वैश्वीकरण की एक 'चुनौती' या नकारात्मक पहलू निम्नलिखित में से कौन सा है?",
@@ -2200,7 +2200,7 @@
   "a": 1,
   "e": "While globalization brings variety, it also puts pressure on domestic sectors that may struggle to compete with low-cost international products. / जबकि वैश्वीकरण विविधता लाता है, यह घरेलू क्षेत्रों पर भी दबाव डालता है जो कम लागत वाले अंतरराष्ट्रीय उत्पादों के साथ प्रतिस्पर्धा करने में संघर्ष कर सकते हैं।",
   "cat": "gk",
-  "sub": "economics"
+  "sub": "eco"
 },
 {
   "q": "In the modern era, 'Living Standards' have been redefined primarily because:\nआधुनिक युग में, 'जीवन स्तर' को मुख्य रूप से इसलिए फिर से परिभाषित किया गया है क्योंकि:",
@@ -2208,7 +2208,7 @@
   "a": 1,
   "e": "Technological progress and falling prices have turned many luxury items into essentials for a comfortable lifestyle. / तकनीकी प्रगति और गिरती कीमतों ने कई विलासिता की वस्तुओं को आरामदायक जीवन शैली के लिए आवश्यक वस्तुओं में बदल दिया है।",
   "cat": "gk",
-  "sub": "economics"
+  "sub": "eco"
 },
 {
   "q": "What role does 'FDI' (Foreign Direct Investment) play in an open economy?\nएक खुली अर्थव्यवस्था में 'FDI' (विदेशी प्रत्यक्ष निवेश) क्या भूमिका निभाता है?",
@@ -2216,7 +2216,7 @@
   "a": 1,
   "e": "FDI provides supplementary capital and advanced technology that helps the host country grow faster and become globally competitive. / FDI पूरक पूंजी और उन्नत तकनीक प्रदान करता है जो मेजबान देश को तेजी से बढ़ने में मदद करता है।",
   "cat": "gk",
-  "sub": "economics"
+  "sub": "eco"
 },
   {
   "q": "What has been the most significant impact of globalization on India's 'Middle Class'?\nवैश्वीकरण का भारत के 'मध्यम वर्ग' पर सबसे महत्वपूर्ण प्रभाव क्या रहा है?",
@@ -2224,7 +2224,7 @@
   "a": 1,
   "e": "Globalization has empowered the middle class by increasing income levels, providing access to global brands, and expanding market opportunities in Tier-2 and Tier-3 cities. / वैश्वीकरण ने आय के स्तर को बढ़ाकर, वैश्विक ब्रांडों तक पहुंच प्रदान करके और मध्यम वर्ग को सशक्त बनाया है।",
   "cat": "gk",
-  "sub": "economics"
+  "sub": "eco"
 },
 {
   "q": "The term 'Information Symmetry' in the modern globalized world refers to:\nआधुनिक वैश्वीकृत दुनिया में 'सूचना समरूपता' (Information Symmetry) शब्द का अर्थ है:",
@@ -2232,7 +2232,7 @@
   "a": 1,
   "e": "The digital revolution has eliminated the information gap, allowing consumers to make informed decisions about products, prices, and origins instantly. / डिजिटल क्रांति ने सूचना के अंतर को समाप्त कर दिया है, जिससे उपभोक्ता उत्पादों और कीमतों के बारे में तुरंत निर्णय ले सकते हैं।",
   "cat": "gk",
-  "sub": "economics"
+  "sub": "eco"
 },
 {
   "q": "How has the role of 'Women' changed in the era of globalization as discussed?\nचर्चा के अनुसार वैश्वीकरण के युग में 'महिलाओं' की भूमिका कैसे बदली है?",
@@ -2240,7 +2240,7 @@
   "a": 1,
   "e": "Women are increasingly participating in diverse fields like aviation, police, and corporate leadership, leading to greater social and financial empowerment. / महिलाएं विमानन, पुलिस और कॉर्पोरेट नेतृत्व जैसे विभिन्न क्षेत्रों में तेजी से भाग ले रही हैं, जिससे सामाजिक सशक्तिकरण हुआ है।",
   "cat": "gk",
-  "sub": "economics"
+  "sub": "eco"
 },
 {
   "q": "What does 'Global Culture' or 'Universal Trends' imply in the context of lifestyle?\nजीवनशैली के संदर्भ में 'वैश्विक संस्कृति' (Global Culture) का क्या तात्पर्य है?",
@@ -2248,7 +2248,7 @@
   "a": 1,
   "e": "Global culture refers to the blending of traditions and adoption of universal lifestyle trends across borders due to increased connectivity. / वैश्विक संस्कृति से तात्पर्य बढ़ती कनेक्टिविटी के कारण सीमाओं के पार सार्वभौमिक जीवनशैली के रुझानों को अपनाने से है।",
   "cat": "gk",
-  "sub": "economics"
+  "sub": "eco"
 },
 {
   "q": "Which of the following is cited as a 'Negative' impact or challenge of globalization on society?\nसमाज पर वैश्वीकरण के 'नकारात्मक' प्रभाव या चुनौती के रूप में निम्नलिखित में से किसे उद्धृत किया गया है?",
@@ -2256,7 +2256,7 @@
   "a": 1,
   "e": "Increased consumerism can lead to debt and stress, while excessive internet/social media usage can lead to distraction and addiction. / बढ़ता उपभोक्तावाद कर्ज और तनाव का कारण बन सकता है, जबकि सोशल मीडिया का अत्यधिक उपयोग ध्यान भटकाने और लत का कारण बन सकता है।",
   "cat": "gk",
-  "sub": "economics"
+  "sub": "eco"
 },
 {
   "q": "The concept of 'Unity in Diversity' in the context of a globalized India remains strong because:\nवैश्वीकृत भारत के संदर्भ में 'विविधता में एकता' की अवधारणा मजबूत बनी हुई है क्योंकि:",
@@ -2264,7 +2264,7 @@
   "a": 1,
   "e": "Despite the influx of global trends, the core fabric of Indian society remains interconnected through its diverse cultural and linguistic roots. / वैश्विक रुझानों के बावजूद, भारतीय समाज का मूल ताना-बनाना अपनी विविध सांस्कृतिक और भाषाई जड़ों के माध्यम से आपस में जुड़ा हुआ है।",
   "cat": "gk",
-  "sub": "economics"
+  "sub": "eco"
 },
 {
   "q": "What is the primary driver behind the rapid expansion of 'Mobile Telephony' in rural India?\nग्रामीण भारत में 'मोबाइल टेलीफोनी' के तेजी से विस्तार के पीछे प्राथमिक कारक क्या है?",
@@ -2272,7 +2272,7 @@
   "a": 1,
   "e": "Cheap call rates and data have revolutionized communication, connecting even the most remote villages to the global network. / सस्ती कॉल दरों और डेटा ने संचार में क्रांति ला दी है, जिससे दूर-दराज के गांव भी वैश्विक नेटवर्क से जुड़ गए हैं।",
   "cat": "gk",
-  "sub": "economics"
+  "sub": "eco"
 },
 {
   "q": "What does 'Cross-Border Cultural Engagement' through tourism lead to?\nपर्यटन के माध्यम से 'सीमा पार सांस्कृतिक जुड़ाव' का क्या परिणाम होता है?",
@@ -2280,7 +2280,7 @@
   "a": 1,
   "e": "Tourism allows people to experience different cultures firsthand, fostering a sense of global community and mutual respect. / पर्यटन लोगों को विभिन्न संस्कृतियों का प्रत्यक्ष अनुभव करने की अनुमति देता है, जिससे वैश्विक समुदाय और आपसी सम्मान की भावना को बढ़ावा मिलता है।",
   "cat": "gk",
-  "sub": "economics"
+  "sub": "eco"
 },
   {
   "q": "What is the difference between 'Export-led Growth' and 'Growth-led Export'?\n'निर्यात-प्रेरित विकास' (Export-led Growth) और 'विकास-प्रेरित निर्यात' (Growth-led Export) के बीच क्या अंतर है?",
@@ -2288,7 +2288,7 @@
   "a": 0,
   "e": "Export-led growth focuses on expanding exports to trigger economic expansion, whereas growth-led export occurs when domestic industrial maturity creates a surplus to be exported. / निर्यात-प्रेरित विकास आर्थिक विस्तार के लिए निर्यात बढ़ाने पर केंद्रित है, जबकि विकास-प्रेरित निर्यात तब होता है जब घरेलू औद्योगिक परिपक्वता निर्यात के लिए अधिशेष पैदा करती है।",
   "cat": "gk",
-  "sub": "economics"
+  "sub": "eco"
 },
 {
   "q": "Which major government initiative was launched in 2014 to transform India into a global manufacturing hub?\nभारत को वैश्विक विनिर्माण केंद्र में बदलने के लिए 2014 में कौन सी प्रमुख सरकारी पहल शुरू की गई थी?",
@@ -2296,7 +2296,7 @@
   "a": 1,
   "e": "Make in India was launched to encourage companies to manufacture their products in India and incentivize dedicated investments in manufacturing. / मेक इन इंडिया की शुरुआत कंपनियों को भारत में अपने उत्पादों के निर्माण के लिए प्रोत्साहित करने और विनिर्माण में निवेश को बढ़ावा देने के लिए की गई थी।",
   "cat": "gk",
-  "sub": "economics"
+  "sub": "eco"
 },
 {
   "q": "The 'Make in India' initiative is based on which of the following four pillars?\n'मेक इन इंडिया' पहल निम्नलिखित में से किन चार स्तंभों पर आधारित है?",
@@ -2304,7 +2304,7 @@
   "a": 1,
   "e": "The four pillars represent a shift in government's interaction with industry: from regulator to facilitator, through modern infrastructure and simplified processes. / ये चार स्तंभ सरकार की भूमिका को एक नियामक से सुगमकर्ता में बदलने का प्रतिनिधित्व करते हैं।",
   "cat": "gk",
-  "sub": "economics"
+  "sub": "eco"
 },
 {
   "q": "What is the primary objective of 'Intellectual Property Rights' (IPR) in the context of industrial development?\nऔद्योगिक विकास के संदर्भ में 'बौद्धिक संपदा अधिकार' (IPR) का प्राथमिक उद्देश्य क्या है?",
@@ -2312,7 +2312,7 @@
   "a": 1,
   "e": "IPR provides legal protection for inventions, designs, and artistic works, encouraging innovation and investment in the economy. / आईपीआर आविष्कारों और डिजाइनों को कानूनी सुरक्षा प्रदान करता है, जिससे अर्थव्यवस्था में नवाचार और निवेश को बढ़ावा मिलता है।",
   "cat": "gk",
-  "sub": "economics"
+  "sub": "eco"
 },
 {
   "q": "Under 'Make in India', what does 'New Mindset' refer to?\n'मेक इन इंडिया' के तहत 'नई मानसिकता' (New Mindset) का क्या तात्पर्य है?",
@@ -2320,7 +2320,7 @@
   "a": 1,
   "e": "It represents a change in the government's approach to partner with the business community for national development. / यह राष्ट्रीय विकास के लिए व्यापारिक समुदाय के साथ साझेदारी करने के सरकारी दृष्टिकोण में बदलाव का प्रतिनिधित्व करता है।",
   "cat": "gk",
-  "sub": "economics"
+  "sub": "eco"
 },
 {
   "q": "What is a 'Special Finance Facility' mentioned in the context of manufacturing?\nविनिर्माण के संदर्भ में उल्लिखित 'विशेष वित्त सुविधा' (Special Finance Facility) क्या है?",
@@ -2328,7 +2328,7 @@
   "a": 1,
   "e": "Special finance facilities are designed to provide capital to critical industrial sectors to boost production and self-reliance. / विशेष वित्त सुविधाएं उत्पादन और आत्मनिर्भरता को बढ़ावा देने के लिए महत्वपूर्ण औद्योगिक क्षेत्रों को पूंजी प्रदान करने के लिए बनाई गई हैं।",
   "cat": "gk",
-  "sub": "economics"
+  "sub": "eco"
 },
 {
   "q": "What are 'Standards and Technical Regulations' important for in global trade?\nवैश्विक व्यापार में 'मानक और तकनीकी विनियम' किसके लिए महत्वपूर्ण हैं?",
@@ -2336,7 +2336,7 @@
   "a": 1,
   "e": "Following global standards ensures that products manufactured in India are acceptable and competitive worldwide. / वैश्विक मानकों का पालन यह सुनिश्चित करता है कि भारत में निर्मित उत्पाद दुनिया भर में स्वीकार्य और प्रतिस्पर्धी हों।",
   "cat": "gk",
-  "sub": "economics"
+  "sub": "eco"
 },
 {
   "q": "What role does 'Confidence Building' play among potential partners abroad under Make in India?\nमेक इन इंडिया के तहत विदेश में संभावित भागीदारों के बीच 'विश्वास बहाली' (Confidence Building) क्या भूमिका निभाती है?",
@@ -2344,7 +2344,7 @@
   "a": 1,
   "e": "By demonstrating capability and simplifying regulations, India builds trust with global investors to choose India as a manufacturing destination. / क्षमता प्रदर्शित करके और नियमों को सरल बनाकर, भारत वैश्विक निवेशकों के बीच विश्वास पैदा करता है।",
   "cat": "gk",
-  "sub": "economics"
+  "sub": "eco"
 },
   {
   "q": "What is the primary definition of a Special Economic Zone (SEZ) in India?\nभारत में विशेष आर्थिक क्षेत्र (SEZ) की प्राथमिक परिभाषा क्या है?",
@@ -2352,7 +2352,7 @@
   "a": 1,
   "e": "SEZs are geographically demarcated areas with liberal economic laws, treated as foreign territory for the purpose of trade operations, duties, and tariffs. / SEZ उदार आर्थिक कानूनों वाले भौगोलिक रूप से सीमांकित क्षेत्र हैं, जिन्हें व्यापार संचालन और शुल्कों के उद्देश्य से विदेशी क्षेत्र माना जाता है।",
   "cat": "gk",
-  "sub": "economics"
+  "sub": "eco"
 },
 {
   "q": "What does the term 'Domestic Tariff Area' (DTA) refer to in the context of SEZs?\nSEZ के संदर्भ में 'डोमेस्टिक टैरिफ एरिया' (DTA) शब्द का क्या अर्थ है?",
@@ -2360,7 +2360,7 @@
   "a": 1,
   "e": "DTA refers to the entire territory of India except the SEZs. Any goods moving from SEZ to DTA are treated as imports. / DTA का तात्पर्य SEZ को छोड़कर भारत के पूरे क्षेत्र से है। SEZ से DTA में जाने वाली किसी भी वस्तु को आयात माना जाता है।",
   "cat": "gk",
-  "sub": "economics"
+  "sub": "eco"
 },
 {
   "q": "What was the precursor to SEZs in India, which started with Kandla in 1965?\nभारत में SEZ का पूर्ववर्ती क्या था, जिसकी शुरुआत 1965 में कांडला से हुई थी?",
@@ -2368,7 +2368,7 @@
   "a": 1,
   "e": "Export Processing Zones (EPZs) were the earlier model, but they faced limitations which led to the introduction of the more comprehensive SEZ policy in 2000. / निर्यात प्रसंस्करण क्षेत्र (EPZ) पिछला मॉडल थे, लेकिन उन्हें सीमाओं का सामना करना पड़ा जिससे 2000 में SEZ नीति शुरू हुई।",
   "cat": "gk",
-  "sub": "economics"
+  "sub": "eco"
 },
 {
   "q": "One of the major incentives provided to SEZ units is:\nSEZ इकाइयों को दिए जाने वाले प्रमुख प्रोत्साहनों में से एक क्या है?",
@@ -2376,7 +2376,7 @@
   "a": 1,
   "e": "SEZ units enjoy a tax holiday, including a 100% income tax exemption on export profits for the first five years of operation. / SEZ इकाइयाँ टैक्स हॉलिडे का आनंद लेती हैं, जिसमें संचालन के पहले पांच वर्षों के लिए निर्यात लाभ पर 100% आयकर छूट शामिल है।",
   "cat": "gk",
-  "sub": "economics"
+  "sub": "eco"
 },
 {
   "q": "What is a significant challenge faced by SEZs located in landlocked states like Punjab or Haryana?\nपंजाब या हरियाणा जैसे भू-आबद्ध (landlocked) राज्यों में स्थित SEZ के सामने एक महत्वपूर्ण चुनौती क्या है?",
@@ -2384,7 +2384,7 @@
   "a": 1,
   "e": "Proximity to a port is critical for SEZs focused on exports. Landlocked SEZs face difficulties in shipping goods efficiently compared to coastal SEZs. / बंदरगाह से निकटता निर्यात पर केंद्रित SEZ के लिए महत्वपूर्ण है। तटीय SEZ की तुलना में भू-आबद्ध SEZ को माल भेजने में कठिनाइयों का सामना करना पड़ता है।",
   "cat": "gk",
-  "sub": "economics"
+  "sub": "eco"
 },
 {
   "q": "How does the size of SEZs in India generally compare to those in China?\nभारत में SEZs का आकार आम तौर पर चीन के SEZs की तुलना में कैसा है?",
@@ -2392,7 +2392,7 @@
   "a": 1,
   "e": "Chinese SEZs are vast (often covering entire cities like Shenzhen), whereas Indian SEZs have historically been smaller and fragmented, often limited to specific sectors. / चीनी SEZ विशाल हैं, जबकि भारतीय SEZ ऐतिहासिक रूप से छोटे और खंडित रहे हैं।",
   "cat": "gk",
-  "sub": "economics"
+  "sub": "eco"
 },
 {
   "q": "What is the role of an 'Independent Regulator' proposed for SEZs?\nSEZ के लिए प्रस्तावित 'स्वतंत्र नियामक' की भूमिका क्या है?",
@@ -2400,7 +2400,7 @@
   "a": 1,
   "e": "An independent regulator would provide a stable and professional governance framework for SEZs, similar to SEBI for markets or IRDA for insurance. / एक स्वतंत्र नियामक SEZ के लिए एक स्थिर और पेशेवर शासन ढांचा प्रदान करेगा।",
   "cat": "gk",
-  "sub": "economics"
+  "sub": "eco"
 },
 {
   "q": "The 'Net Foreign Exchange' (NFE) earning criteria for SEZ units means:\nSEZ इकाइयों के लिए 'शुद्ध विदेशी मुद्रा' (NFE) अर्जन मानदंड का अर्थ है:",
@@ -2408,7 +2408,7 @@
   "a": 1,
   "e": "SEZ units must be 'Positive Net Foreign Exchange' earners, meaning their total export value must exceed their total import value. / SEZ इकाइयों को 'पॉजिटिव नेट फॉरेन एक्सचेंज' अर्जक होना चाहिए, जिसका अर्थ है कि उनका कुल निर्यात मूल्य उनके कुल आयात मूल्य से अधिक होना चाहिए।",
   "cat": "gk",
-  "sub": "economics"
+  "sub": "eco"
 },
   {
   "q": "What is the primary role of 'Agri Export Zones' (AEZ) in India?\nभारत में 'कृषि निर्यात क्षेत्र' (AEZ) की प्राथमिक भूमिका क्या है?",
@@ -2553,7 +2553,7 @@
   "a": 1,
   "e": "BOP is a comprehensive record that tracks all money coming into and going out of a country, including trade in goods, services, and financial transfers. / BOP एक व्यापक रिकॉर्ड है जो देश में आने और जाने वाले सभी पैसों को ट्रैक करता है।",
   "cat": "gk",
-  "sub": "economics"
+  "sub": "eco"
 },
 {
   "q": "What does the 'Current Account' of the BOP primarily consist of?\nBOP के 'करंट अकाउंट' (Current Account) में मुख्य रूप से क्या शामिल होता है?",
@@ -2561,7 +2561,7 @@
   "a": 1,
   "e": "The current account records the export and import of goods and services, as well as incomes and transfers like remittances from workers abroad. / करंट अकाउंट वस्तुओं और सेवाओं के निर्यात-आयात, और विदेशों से आने वाले धन (रेमिटेंस) को रिकॉर्ड करता है।",
   "cat": "gk",
-  "sub": "economics"
+  "sub": "eco"
 },
 {
   "q": "What is the meaning of 'Trade Deficit' in an open economy?\nएक खुली अर्थव्यवस्था में 'व्यापार घाटे' (Trade Deficit) का क्या अर्थ है?",
@@ -2569,7 +2569,7 @@
   "a": 1,
   "e": "A trade deficit occurs when a country spends more on buying foreign goods than it earns from selling its own goods abroad. / व्यापार घाटा तब होता है जब कोई देश अपनी वस्तुओं को बेचने से होने वाली कमाई की तुलना में विदेशी सामान खरीदने पर अधिक खर्च करता है।",
   "cat": "gk",
-  "sub": "economics"
+  "sub": "eco"
 },
 {
   "q": "The term 'Invisibles' in the Balance of Payments refers to the trade in:\nभुगतान संतुलन में 'इनविजिबल्स' (Invisibles) शब्द किसके व्यापार को संदर्भित करता है?",
@@ -2577,7 +2577,7 @@
   "a": 1,
   "e": "Invisibles are non-physical trade items. For India, software services and remittances from the diaspora are major positive contributors in this category. / इनविजिबल्स गैर-भौतिक व्यापारिक वस्तुएं हैं, जैसे सॉफ्टवेयर सेवाएं और विदेशों से भारतीयों द्वारा भेजा गया पैसा।",
   "cat": "gk",
-  "sub": "economics"
+  "sub": "eco"
 },
 {
   "q": "What is 'Fiscal Deficit' and how is it related to 'Current Account Deficit' in the 'Twin Deficit' concept?\n'राजकोषीय घाटा' क्या है और 'ट्विन डेफिसिट' (Twin Deficit) अवधारणा में यह करंट अकाउंट घाटे से कैसे संबंधित है?",
@@ -2593,7 +2593,7 @@
   "a": 1,
   "e": "The capital account records all international transactions that involve the transfer of ownership of assets, such as investments and loans. / कैपिटल अकाउंट उन सभी अंतर्राष्ट्रीय लेनदेन को रिकॉर्ड करता है जिनमें संपत्तियों के स्वामित्व का हस्तांतरण शामिल होता है।",
   "cat": "gk",
-  "sub": "economics"
+  "sub": "eco"
 },
 {
   "q": "What are 'Remittances' in the context of the Indian economy?\nभारतीय अर्थव्यवस्था के संदर्भ में 'रेमिटेंस' (Remittances) क्या हैं?",
@@ -2601,7 +2601,7 @@
   "a": 1,
   "e": "India is one of the world's largest recipients of remittances, which helps reduce the impact of the trade deficit. / रेमिटेंस विदेशों में काम करने वाले भारतीयों द्वारा घर भेजा गया पैसा है, जो व्यापार घाटे के प्रभाव को कम करने में मदद करता है।",
   "cat": "gk",
-  "sub": "economics"
+  "sub": "eco"
 },
 {
   "q": "If a country has a 'Current Account Surplus', it means:\nयदि किसी देश का 'करेंट अकाउंट सरप्लस' (Current Account Surplus) है, तो इसका अर्थ है:",
@@ -2609,7 +2609,7 @@
   "a": 1,
   "e": "A surplus indicates that the country is earning more from its total exports and transfers than it is spending on imports and payments abroad. / सरप्लस इंगित करता है कि देश विदेशों में खर्च करने की तुलना में अपने कुल निर्यात और रेमिटेंस से अधिक कमा रहा है।",
   "cat": "gk",
-  "sub": "economics"
+  "sub": "eco"
 },
   {
   "q": "What was the main difference between FERA (1973) and FEMA (1999)?\nFERA (1973) और FEMA (1999) के बीच मुख्य अंतर क्या था?",
@@ -2625,7 +2625,7 @@
   "a": 1,
   "e": "Convertibility allows individuals and businesses to freely convert local currency into foreign currency for international transactions without government interference. / परिवर्तनीयता व्यक्तियों और व्यवसायों को अंतर्राष्ट्रीय लेनदेन के लिए स्थानीय मुद्रा को विदेशी मुद्रा में स्वतंत्र रूप से बदलने की अनुमति देती है।",
   "cat": "gk",
-  "sub": "economics"
+  "sub": "eco"
 },
 {
   "q": "What is the current status of the Indian Rupee's convertibility?\nभारतीय रुपये की परिवर्तनीयता (Convertibility) की वर्तमान स्थिति क्या है?",
@@ -2633,7 +2633,7 @@
   "a": 1,
   "e": "India achieved full convertibility on the Current Account in 1994, but the Capital Account is still subject to certain restrictions to prevent economic shocks. / भारत ने 1994 में करंट अकाउंट पर पूर्ण परिवर्तनीयता प्राप्त की, लेकिन कैपिटल अकाउंट अभी भी कुछ प्रतिबंधों के अधीन है।",
   "cat": "gk",
-  "sub": "economics"
+  "sub": "eco"
 },
 {
   "q": "Which committee was formed to provide a roadmap for Capital Account Convertibility in India?\nभारत में कैपिटल अकाउंट परिवर्तनीयता के लिए रोडमैप प्रदान करने के लिए किस समिति का गठन किया गया था?",
@@ -2641,15 +2641,15 @@
   "a": 1,
   "e": "The Tarapore Committee (I and II) recommended specific economic targets (like low fiscal deficit and inflation) to be met before moving to full capital account convertibility. / तारापुर समिति ने पूर्ण कैपिटल अकाउंट परिवर्तनीयता पर जाने से पहले विशिष्ट आर्थिक लक्ष्यों को पूरा करने की सिफारिश की थी।",
   "cat": "gk",
-  "sub": "economics"
+  "sub": "eco"
 },
 {
-  "q": "The 'Dutch Disease' in economics refers to a situation where:\nअर्थशास्त्र में 'डच डिजीज' (Dutch Disease) उस स्थिति को संदर्भित करता है जहाँ:",
+  "q": "The 'Dutch Disease' in eco refers to a situation where:\nअर्थशास्त्र में 'डच डिजीज' (Dutch Disease) उस स्थिति को संदर्भित करता है जहाँ:",
   "o": ["A country's population falls rapidly", "A large discovery of natural resources leads to the appreciation of currency, hurting other sectors like manufacturing", "The central bank stops printing money", "Taxes are abolished for everyone"],
   "a": 1,
   "e": "It describes the negative impact on an economy when a sharp rise in exports of one sector (like oil) makes the currency stronger, making other exports expensive. / यह अर्थव्यवस्था पर उस नकारात्मक प्रभाव का वर्णन करता है जब एक क्षेत्र के निर्यात में भारी वृद्धि मुद्रा को मजबूत बनाती है, जिससे अन्य निर्यात महंगे हो जाते हैं।",
   "cat": "gk",
-  "sub": "economics"
+  "sub": "eco"
 },
 {
   "q": "Which body trials criminal violations of foreign exchange laws under the modern framework?\nआधुनिक ढांचे के तहत विदेशी मुद्रा कानूनों के आपराधिक उल्लंघन की जांच कौन सा निकाय करता है?",
@@ -2657,7 +2657,7 @@
   "a": 1,
   "e": "Under FEMA, while many offenses are civil, serious criminal trials related to foreign exchange are handled by the Enforcement Directorate. / FEMA के तहत विदेशी मुद्रा से संबंधित गंभीर मामलों की जांच प्रवर्तन निदेशालय (ED) द्वारा की जाती है।",
   "cat": "gk",
-  "sub": "economics"
+  "sub": "eco"
 },
 {
   "q": "What is 'Impossible Trinity' in the context of central bank management?\nकेंद्रीय बैंक प्रबंधन के संदर्भ में 'इम्पॉसिबल ट्रिनिटी' (Impossible Trinity) क्या है?",
@@ -2665,7 +2665,7 @@
   "a": 1,
   "e": "It is a concept stating that it is impossible for a country to have all three at the same time: a fixed exchange rate, free capital flow, and an independent monetary policy. / यह एक अवधारणा है कि एक देश के लिए एक ही समय में एक निश्चित विनिमय दर, मुफ्त पूंजी प्रवाह और स्वतंत्र मौद्रिक नीति रखना असंभव है।",
   "cat": "gk",
-  "sub": "economics"
+  "sub": "eco"
 },
 {
   "q": "What is the primary risk of full 'Capital Account Convertibility'?\nपूर्ण 'कैपिटल अकाउंट परिवर्तनीयता' का प्राथमिक जोखिम क्या है?",
@@ -2673,7 +2673,7 @@
   "a": 1,
   "e": "Full capital account convertibility can make an economy vulnerable to external shocks as investors can quickly pull out their money. / पूर्ण कैपिटल अकाउंट परिवर्तनीयता एक अर्थव्यवस्था को बाहरी झटकों के प्रति संवेदनशील बना सकती है क्योंकि निवेशक जल्दी से अपना पैसा निकाल सकते हैं।",
   "cat": "gk",
-  "sub": "economics"
+  "sub": "eco"
 },
   {
   "q": "What does the 'Transaction Cost' in currency conversion refer to?\nमुद्रा परिवर्तन में 'लेनदेन लागत' (Transaction Cost) का क्या तात्पर्य है?",
@@ -2689,7 +2689,7 @@
   "a": 1,
   "e": "Currency depreciation makes domestic goods cheaper for foreigners, which usually leads to an increase in export volume. / मुद्रा का मूल्य गिरने से घरेलू सामान विदेशियों के लिए सस्ता हो जाता है, जिससे निर्यात बढ़ने की संभावना होती है।",
   "cat": "gk",
-  "sub": "economics"
+  "sub": "eco"
 },
 {
   "q": "Which of the following is a key risk of having a fully convertible capital account?\nपूरी तरह से परिवर्तनीय कैपिटल अकाउंट होने का एक प्रमुख जोखिम क्या है?",
@@ -2697,7 +2697,7 @@
   "a": 1,
   "e": "Full capital account convertibility can lead to rapid outflow of foreign funds if investors lose confidence, causing economic instability. / वैश्विक संकट के दौरान निवेशक तेजी से अपना पैसा निकाल सकते हैं, जिससे आर्थिक अस्थिरता पैदा हो सकती है।",
   "cat": "gk",
-  "sub": "economics"
+  "sub": "eco"
 },
 {
   "q": "The 'Real Effective Exchange Rate' (REER) is used to measure:\n'वास्तविक प्रभावी विनिमय दर' (REER) का उपयोग क्या मापने के लिए किया जाता है?",
@@ -2705,7 +2705,7 @@
   "a": 1,
   "e": "REER helps determine a country's international competitiveness by comparing its currency with a basket of other currencies while accounting for price changes. / REER अन्य मुद्राओं की तुलना में देश की अंतर्राष्ट्रीय प्रतिस्पर्धात्मकता को मापने में मदद करता है।",
   "cat": "gk",
-  "sub": "economics"
+  "sub": "eco"
 },
 {
   "q": "What is the role of the RBI in the 'Managed Floating' exchange rate system of India?\nभारत की 'मैनेज्ड फ्लोटिंग' विनिमय दर प्रणाली में आरबीआई की क्या भूमिका है?",
@@ -2729,7 +2729,7 @@
   "a": 1,
   "e": "The shift was intended to move from 'regulation' (strict control) to 'management' (facilitating flow) of foreign exchange. / इसका उद्देश्य विदेशी मुद्रा के 'नियमन' से 'प्रबंधन' की ओर बढ़ना था ताकि व्यापार को सुगम बनाया जा सके।",
   "cat": "gk",
-  "sub": "economics"
+  "sub": "eco"
 },
 {
   "q": "Under the 'Liberalised Remittance Scheme' (LRS), Indian residents can send up to ______ abroad annually without special permission.\n'उदारीकृत प्रेषण योजना' (LRS) के तहत, भारतीय निवासी विशेष अनुमति के बिना सालाना ______ तक विदेश भेज सकते हैं।",
@@ -3004,7 +3004,7 @@
   "sub": "budget"
 },
 {
-  "q": "What does the term 'Debt Servicing' primarily refer to in economics?\nअर्थशास्त्र में 'ऋण सेवा' (Debt Servicing) शब्द का प्राथमिक अर्थ क्या है?",
+  "q": "What does the term 'Debt Servicing' primarily refer to in eco?\nअर्थशास्त्र में 'ऋण सेवा' (Debt Servicing) शब्द का प्राथमिक अर्थ क्या है?",
   "o": ["Providing free banking services to people", "Payment of the principal amount along with interest on the borrowed funds", "Selling government assets to pay off debt", "Increasing the tax rate for everyone"],
   "a": 1,
   "e": "Debt servicing is the cash required to cover the repayment of interest and principal on a debt for a particular period. / ऋण सेवा वह नकदी है जो एक निश्चित अवधि के लिए ऋण पर ब्याज और मूलधन के पुनर्भुगतान के लिए आवश्यक होती है।",
@@ -3145,7 +3145,7 @@
   "a": 1,
   "e": "Currency appreciation makes imports cheaper but can make exports less competitive. / मुद्रा अधिमूल्यन से आयात सस्ता हो जाता है लेकिन निर्यात कम प्रतिस्पर्धी हो सकता है।",
   "cat": "gk",
-  "sub": "economics"
+  "sub": "eco"
 },
 {
   "q": "The 'Tarapore Committee' recommended that full capital account convertibility should be achieved only after:\nतारापुर समिति ने सिफारिश की थी कि पूर्ण कैपिटल अकाउंट परिवर्तनीयता केवल तब प्राप्त की जानी चाहिए जब:",
@@ -3153,7 +3153,7 @@
   "a": 1,
   "e": "The committee emphasized that low fiscal deficit and stable inflation are prerequisites for full convertibility. / समिति ने जोर दिया कि पूर्ण परिवर्तनीयता के लिए कम राजकोषीय घाटा और स्थिर मुद्रास्फीति पूर्व-शर्तें हैं।",
   "cat": "gk",
-  "sub": "economics"
+  "sub": "eco"
 },
 {
   "q": "Which of these is a 'Pre-condition' for moving towards full convertibility according to economic experts?\nआर्थिक विशेषज्ञों के अनुसार पूर्ण परिवर्तनीयता की ओर बढ़ने के लिए इनमें से कौन सी 'पूर्व-शर्त' है?",
@@ -3161,7 +3161,7 @@
   "a": 1,
   "e": "Strong economic fundamentals, such as low inflation and a stable fiscal deficit, are necessary before allowing free capital movement. / मुक्त पूंजी प्रवाह की अनुमति देने से पहले कम मुद्रास्फीति और स्थिर राजकोषीय घाटे जैसे मजबूत आर्थिक आधार आवश्यक हैं।",
   "cat": "gk",
-  "sub": "economics"
+  "sub": "eco"
 },
 {
   "q": "The shift from 'Liberalization' to 'Globalization' in India primarily aimed at:\nभारत में 'उदारीकरण' से 'वैश्वीकरण' की ओर बढ़ने का प्राथमिक उद्देश्य क्या था?",
@@ -3169,7 +3169,7 @@
   "a": 1,
   "e": "Globalization aims to make Indian industries competitive on a global scale by allowing easier flow of trade, capital, and technology. / वैश्वीकरण का उद्देश्य व्यापार, पूंजी और तकनीक के आसान प्रवाह की अनुमति देकर भारतीय उद्योगों को वैश्विक स्तर पर प्रतिस्पर्धी बनाना है।",
   "cat": "gk",
-  "sub": "economics"
+  "sub": "eco"
 },
 {
   "q": "What happens to 'Foreign Exchange Reserves' when there is a Balance of Payments surplus?\nभुगतान संतुलन में सरप्लस होने पर 'विदेशी मुद्रा भंडार' का क्या होता है?",
@@ -3185,7 +3185,7 @@
   "a": 1,
   "e": "A high CAD means the country is dependent on foreign investment or borrowing to pay for its imports, which can lead to a crisis if capital flows out. / उच्च CAD का अर्थ है कि देश अपने आयात का भुगतान करने के लिए विदेशी निवेश या उधार पर निर्भर है।",
   "cat": "gk",
-  "sub": "economics"
+  "sub": "eco"
 },
 {
   "q": "The 'Look East' policy (now Act East) aims to strengthen trade relations primarily with:\n'लुक ईस्ट' नीति (अब एक्ट ईस्ट) का उद्देश्य मुख्य रूप से किसके साथ व्यापारिक संबंधों को मजबूत करना है?",
@@ -3217,7 +3217,7 @@
   "a": 1,
   "e": "Unlike China's focus on heavy manufacturing, a large percentage (over 60%) of SEZ approvals in India are in the IT, ITES, and service sectors. / चीन के भारी विनिर्माण पर ध्यान देने के विपरीत, भारत में SEZ का एक बड़ा हिस्सा आईटी और सेवा क्षेत्रों में है।",
   "cat": "gk",
-  "sub": "economics"
+  "sub": "eco"
 },
 {
   "q": "What was a major concern raised by critics regarding 'Food Security' in the context of SEZs?\nSEZ के संदर्भ में 'खाद्य सुरक्षा' के संबंध में आलोचकों द्वारा उठाई गई एक प्रमुख चिंता क्या थी?",
@@ -3225,7 +3225,7 @@
   "a": 1,
   "e": "Critics feared that using vast amounts of fertile land for SEZs would reduce agricultural output and threaten national food security. / आलोचकों को डर था कि SEZ के लिए उपजाऊ भूमि के उपयोग से कृषि उत्पादन कम हो जाएगा।",
   "cat": "gk",
-  "sub": "economics"
+  "sub": "eco"
 },
 {
   "q": "The term 'Butterfly Economy' in the text refers to:\nपाठ में 'बटरफ्लाई इकोनॉमी' (Butterfly Economy) शब्द का अर्थ है:",
@@ -3233,7 +3233,7 @@
   "a": 1,
   "e": "It often refers to the sensitivity and interconnectedness of the modern globalized economy. / यह अक्सर आधुनिक वैश्वीकृत अर्थव्यवस्था की संवेदनशीलता और अंतर्संबंध को संदर्भित करता है।",
   "cat": "gk",
-  "sub": "economics"
+  "sub": "eco"
 },
 {
   "q": "How does 'New Infrastructure' support the Make in India mission?\n'नया बुनियादी ढांचा' (New Infrastructure) मेक इन इंडिया मिशन का समर्थन कैसे करता है?",
@@ -3241,7 +3241,7 @@
   "a": 1,
   "e": "Modern and efficient infrastructure is essential to reduce logistics costs and improve the speed of doing business. / रसद लागत को कम करने और व्यवसाय करने की गति में सुधार के लिए आधुनिक और कुशल बुनियादी ढांचा आवश्यक है।",
   "cat": "gk",
-  "sub": "economics"
+  "sub": "eco"
 },
 {
   "q": "In the context of the 'Digital Metamorphosis', how has news consumption changed?\n'डिजिटल कायाकल्प' के संदर्भ में, समाचारों के उपभोग का तरीका कैसे बदल गया है?",
@@ -3249,7 +3249,7 @@
   "a": 1,
   "e": "The shift to digital platforms and social media allows people to access news from around the world instantly on their mobile screens. / डिजिटल प्लेटफॉर्म और सोशल मीडिया की ओर बदलाव से लोग अपने मोबाइल स्क्रीन पर तुरंत दुनिया भर के समाचार प्राप्त कर सकते हैं।",
   "cat": "gk",
-  "sub": "economics"
+  "sub": "eco"
 },
 {
   "q": "According to the discussion, globalization should ideally be viewed as:\nचर्चा के अनुसार, वैश्वीकरण को आदर्श रूप से किस रूप में देखा जाना चाहिए?",
@@ -3257,7 +3257,7 @@
   "a": 1,
   "e": "Globalization is a process of transformation that, despite challenges, offers immense opportunities for overall human development and economic progress. / वैश्वीकरण परिवर्तन की एक प्रक्रिया है जो चुनौतियों के बावजूद मानव विकास और आर्थिक प्रगति के लिए अवसर प्रदान करती है।",
   "cat": "gk",
-  "sub": "economics"
+  "sub": "eco"
 },
 {
   "q": "What is the impact of globalization on 'Socio-Cultural Exchange'?\n'सामाजिक-सांस्कृतिक विनिमय' पर वैश्वीकरण का क्या प्रभाव है?",
@@ -3265,7 +3265,7 @@
   "a": 1,
   "e": "Globalization facilitates travel and communication, leading to a blending of cultures and a better understanding of global perspectives. / वैश्वीकरण यात्रा और संचार की सुविधा प्रदान करता है, जिससे संस्कृतियों का मिश्रण होता है और वैश्विक दृष्टिकोण की बेहतर समझ होती है।",
   "cat": "gk",
-  "sub": "economics"
+  "sub": "eco"
 },
 {
   "q": "The term 'Welfare Gains' in the context of trade refers to:\nव्यापार के संदर्भ में 'कल्याणकारी लाभ' (Welfare Gains) शब्द का अर्थ है:",
@@ -3273,7 +3273,7 @@
   "a": 1,
   "e": "Trade enhances social welfare by making a diverse range of products available at competitive prices and improving living standards. / व्यापार प्रतिस्पर्धी कीमतों पर विविध उत्पाद उपलब्ध कराकर और जीवन स्तर में सुधार करके सामाजिक कल्याण को बढ़ाता है।",
   "cat": "gk",
-  "sub": "economics"
+  "sub": "eco"
 },
 {
   "q": "What is a 'Trade Barrier'?\n'व्यापार बाधा' (Trade Barrier) क्या है?",
@@ -3281,7 +3281,7 @@
   "a": 1,
   "e": "Trade barriers are restrictions like import taxes (tariffs) or quantity limits (quotas) used to protect domestic industries. / व्यापार बाधाएं आयात कर (टैरिफ) या मात्रा सीमा (कोटा) जैसे प्रतिबंध हैं जिनका उपयोग घरेलू उद्योगों की रक्षा के लिए किया जाता है।",
   "cat": "gk",
-  "sub": "economics"
+  "sub": "eco"
 },
 {
   "q": "What does 'Mission Bhagiratha' or similar 'Gyan Sangam' events focus on in the banking sector?\nबैंकिंग क्षेत्र में 'ज्ञान संगम' जैसे आयोजनों का ध्यान किस पर केंद्रित होता है?",
@@ -3337,7 +3337,7 @@
   "a": 1,
   "e": "Banks included in the Second Schedule of the RBI Act, 1934 are called Scheduled Banks, which are eligible for loans from RBI. / आरबीआई अधिनियम की दूसरी अनुसूची में शामिल बैंकों को अनुसूचित बैंक कहा जाता है।",
   "cat": "gk",
-  "sub": "economics"
+  "sub": "eco"
 },
 {
   "q": "Why was the 'UDAY' scheme or similar interventions needed for Cooperative Banks after the PMC Bank crisis?\nपीएमसी बैंक संकट के बाद सहकारी बैंकों के लिए 'उदय' योजना या इसी तरह के हस्तक्षेप की आवश्यकता क्यों थी?",
@@ -3345,7 +3345,7 @@
   "a": 1,
   "e": "Following crises in cooperative banks, the government brought them under tighter RBI scrutiny to protect depositors' interests. / सहकारी बैंकों में संकट के बाद, सरकार ने जमाकर्ताओं के हितों की रक्षा के लिए उन्हें आरबीआई की कड़ी निगरानी में ला दिया।",
   "cat": "gk",
-  "sub": "economics"
+  "sub": "eco"
 },
 {
   "q": "The term 'Statutory Liquidity Ratio' (SLR) refers to the liquid assets banks must keep in the form of:\n'वैधानिक तरलता अनुपात' (SLR) उन तरल संपत्तियों को संदर्भित करता है जिन्हें बैंकों को किस रूप में रखना चाहिए?",
@@ -3353,7 +3353,7 @@
   "a": 1,
   "e": "SLR is the minimum percentage of deposits that a commercial bank has to maintain in the form of liquid cash, gold, or other securities. / एसएलआर जमा का वह न्यूनतम प्रतिशत है जिसे बैंक को नकद, सोना या अन्य प्रतिभूतियों के रूप में अपने पास रखना होता है।",
   "cat": "gk",
-  "sub": "economics"
+  "sub": "eco"
 },
 {
   "q": "What is the primary target for inflation (CPI) set by the government for the MPC?\nसरकार द्वारा एमपीसी के लिए मुद्रास्फीति (CPI) का प्राथमिक लक्ष्य क्या तय किया गया है?",
@@ -3361,7 +3361,7 @@
   "a": 2,
   "e": "The current inflation target is 4% within a band of 2% to 6%. / वर्तमान मुद्रास्फीति लक्ष्य 4% है, जिसमें 2% से 6% के बीच रहने की गुंजाइश दी गई है।",
   "cat": "gk",
-  "sub": "economics"
+  "sub": "eco"
 },
 {
   "q": "In the context of government budgeting, an 'Outcome Budget' focuses on:\nसरकारी बजट के संदर्भ में, 'आउटकम बजट' (Outcome Budget) किस पर केंद्रित है?",
@@ -3385,7 +3385,7 @@
   "a": 1,
   "e": "Misusing others' accounts (like Jan Dhan) to launder money is illegal and subjects both parties to investigation by the IT department. / धन शोधन के लिए दूसरों के खातों का दुरुपयोग करना अवैध है और यह जांच का विषय है।",
   "cat": "gk",
-  "sub": "economics"
+  "sub": "eco"
 },
 {
   "q": "How does the government benefit from money being deposited in bank accounts due to demonetization?\nविमुद्रीकरण के कारण बैंक खातों में पैसा जमा होने से सरकार को क्या लाभ होता है?",
@@ -3393,7 +3393,7 @@
   "a": 1,
   "e": "Increased deposits allow banks to lower interest rates on loans, stimulating investment and bringing more money into the formal tax net. / जमा राशि बढ़ने से बैंकों को ऋण पर ब्याज दरें कम करने और अधिक धन को औपचारिक कर जाल में लाने में मदद मिलती।",
   "cat": "gk",
-  "sub": "economics"
+  "sub": "eco"
 },
 {
   "q": "What is the role of the 'GST Network' (GSTN)?\n'जीएसटी नेटवर्क' (GSTN) की क्या भूमिका है?",
@@ -3425,7 +3425,7 @@
   "a": 1,
   "e": "Using energy-efficient LEDs reduces the total load on the grid and saves a large amount of money and energy for the country. / ऊर्जा-कुशल एलईडी का उपयोग ग्रिड पर कुल भार को कम करता है और देश के लिए बड़ी मात्रा में धन और ऊर्जा बचाता है।",
   "cat": "gk",
-  "sub": "economics"
+  "sub": "eco"
 },
 {
   "q": "What is 'Venture Capital' (VC)?\n'वेंचर कैपिटल' (VC) क्या है?",
@@ -3433,7 +3433,7 @@
   "a": 1,
   "e": "Venture capital is a form of private equity that provides funding to small or startup firms that have long-term growth potential. / वेंचर कैपिटल निजी इक्विटी का एक रूप है जो दीर्घकालिक विकास क्षमता वाली छोटी या स्टार्टअप फर्मों को धन प्रदान करता है।",
   "cat": "gk",
-  "sub": "economics"
+  "sub": "eco"
 },
 {
   "q": "The term 'Viability Gap Funding' (VGF) is used for projects that are:\n'वायबिलिटी गैप फंडिंग' (VGF) शब्द का उपयोग उन परियोजनाओं के लिए किया जाता है जो:",
@@ -3441,7 +3441,7 @@
   "a": 1,
   "e": "VGF is a one-time grant to make infrastructure projects commercially attractive for private players while serving public needs. / VGF बुनियादी ढांचा परियोजनाओं को निजी खिलाड़ियों के लिए व्यावसायिक रूप से आकर्षक बनाने के लिए एक बार का अनुदान है।",
   "cat": "gk",
-  "sub": "economics"
+  "sub": "eco"
 },
 {
   "q": "Which project aims at creating 'Last Mile Connectivity' for major Indian ports?\nकिस परियोजना का उद्देश्य प्रमुख भारतीय बंदरगाहों के लिए 'लास्ट माइल कनेक्टिविटी' बनाना है?",
@@ -3449,7 +3449,7 @@
   "a": 1,
   "e": "IPRCL works on connecting major ports to the railway network for faster movement of cargo. / IPRCL माल की तेजी से आवाजाही के लिए प्रमुख बंदरगाहों को रेलवे नेटवर्क से जोड़ने पर काम करता है।",
   "cat": "gk",
-  "sub": "economics"
+  "sub": "eco"
 },
 {
   "q": "The term 'Maritime Agenda 2010-2020' focused on increasing India's capacity in:\n'मैरीटाइम एजेंडा 2010-2020' ने भारत की क्षमता बढ़ाने पर ध्यान केंद्रित किया:",
@@ -3457,7 +3457,7 @@
   "a": 1,
   "e": "The agenda aimed to significantly increase India's share in global ship-building and total port cargo capacity. / इस एजेंडे का उद्देश्य वैश्विक जहाज निर्माण और कुल बंदरगाह कार्गो क्षमता में भारत की हिस्सेदारी को महत्वपूर्ण रूप से बढ़ाना था।",
   "cat": "gk",
-  "sub": "economics"
+  "sub": "eco"
 },
 {
   "q": "What financial instrument is often used to bridge the gap in projects that are socially essential but not financially attractive?\nउन परियोजनाओं में अंतर को पाटने के लिए अक्सर किस वित्तीय साधन का उपयोग किया जाता है जो सामाजिक रूप से आवश्यक हैं लेकिन वित्तीय रूप से आकर्षक नहीं हैं?",
@@ -3465,7 +3465,7 @@
   "a": 1,
   "e": "VGF is a grant provided by the government to make infrastructure projects commercially viable for private players. / VGF सरकार द्वारा बुनियादी ढांचा परियोजनाओं को निजी खिलाड़ियों के लिए व्यावसायिक रूप से व्यवहार्य बनाने के लिए दिया जाने वाला अनुदान है।",
   "cat": "gk",
-  "sub": "economics"
+  "sub": "eco"
 },
 {
   "q": "Infrastructure projects usually have a long 'Gestation Period', which means:\nबुनियादी ढांचा परियोजनाओं में आमतौर पर एक लंबी 'गर्भधारण अवधि' (Gestation Period) होती है, जिसका अर्थ है:",
@@ -3473,7 +3473,7 @@
   "a": 1,
   "e": "Large projects like dams or highways take many years to build before they start providing benefits or returns. / बांधों या राजमार्गों जैसी बड़ी परियोजनाओं को लाभ या रिटर्न देना शुरू करने से पहले निर्माण में कई साल लगते हैं।",
   "cat": "gk",
-  "sub": "economics"
+  "sub": "eco"
 },
 {
   "q": "What is 'Single Window' clearance in the context of starting a business?\nव्यवसाय शुरू करने के संदर्भ में 'सिंगल विंडो' (Single Window) क्लीयरेंस क्या है?",
@@ -3481,7 +3481,7 @@
   "a": 1,
   "e": "It simplifies the process by allowing entrepreneurs to get all required permissions from a single interface. / यह उद्यमियों को एक ही इंटरफेस से सभी आवश्यक अनुमति प्राप्त करने की अनुमति देकर प्रक्रिया को सरल बनाता है।",
   "cat": "gk",
-  "sub": "economics"
+  "sub": "eco"
 },
 {
   "q": "When did India's first industrial policy, which laid the foundation for a mixed economy, come into effect?\nमिश्रित अर्थव्यवस्था की नींव रखने वाली भारत की पहली औद्योगिक नीति कब लागू हुई?",
@@ -3489,7 +3489,7 @@
   "a": 1,
   "e": "The Industrial Policy Statement of 1948 officially introduced the concept of a mixed economy in India. / 1948 के औद्योगिक नीति वक्तव्य ने आधिकारिक तौर पर भारत में मिश्रित अर्थव्यवस्था की अवधारणा पेश की।",
   "cat": "gk",
-  "sub": "economics"
+  "sub": "eco"
 },
 {
   "q": "Which sector is considered a 'priority' for employment intensification in the manufacturing policy?\nविनिर्माण नीति में रोजगार तीव्रता के लिए किस क्षेत्र को 'प्राथमिकता' माना जाता है?",
@@ -3497,7 +3497,7 @@
   "a": 1,
   "e": "Labor-intensive sectors like textiles, gems & jewelry, and food processing are prioritized to create mass employment. / बड़े पैमाने पर रोजगार पैदा करने के लिए कपड़ा, रत्न और आभूषण, और खाद्य प्रसंस्करण जैसे श्रम-प्रधान क्षेत्रों को प्राथमिकता दी जाती है।",
   "cat": "gk",
-  "sub": "economics"
+  "sub": "eco"
 },
 {
   "q": "What does the 'Exit Policy' in the context of industrial reforms refer to?\nऔद्योगिक सुधारों के संदर्भ में 'एग्जिट पॉलिसी' (Exit Policy) किसे संदर्भित करती है?",
@@ -3505,7 +3505,7 @@
   "a": 1,
   "e": "An exit policy allows inefficient companies to shut down while protecting workers' interests through compensation. / एग्जिट पॉलिसी अक्षम कंपनियों को बंद करने की अनुमति देती है जबकि मुआवजे के माध्यम से श्रमिकों के हितों की रक्षा करती है।",
   "cat": "gk",
-  "sub": "economics"
+  "sub": "eco"
 },
 {
   "q": "What was the social objective behind Land Reforms in India?\nभारत में भूमि सुधारों के पीछे सामाजिक उद्देश्य क्या था?",
@@ -3513,7 +3513,7 @@
   "a": 1,
   "e": "Land reforms aimed at social justice by reducing the gap between rich landlords and poor farmers. / भूमि सुधारों का उद्देश्य अमीर जमींदारों और गरीब किसानों के बीच की खाई को कम करके सामाजिक न्याय प्रदान करना था।",
   "cat": "gk",
-  "sub": "economics"
+  "sub": "eco"
 },
 {
 "q": "What name is given to workers in the Primary sector involved in outdoor tasks?\nबाहरी कार्यों में शामिल प्राथमिक क्षेत्र के श्रमिकों को क्या नाम दिया गया है?",
