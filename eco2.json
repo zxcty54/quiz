@@ -9432,8 +9432,6 @@
   "sub": "international_orgs"
 },
 {
-  "q": "Which organization was the predecessor to the WTO before
-{
   "q": "The 'Sub-prime Crisis' specifically highlighted the risks associated with:\n'सब-प्राइम संकट' ने विशेष रूप से किसके साथ जुड़े जोखिमों को उजागर किया?",
   "o": ["Lending only to the government", "Excessive and unregulated risk-taking by financial institutions and poor credit assessment", "Building too many hospitals", "Reducing the number of schools"],
   "a": 1,
@@ -16848,6 +16846,2806 @@
   "e": "Sundari trees provide durable hard timber and are a major species in the mangrove forests of the Ganga-Brahmaputra delta. / सुंदरी वृक्ष मैंग्रोव वनों की एक प्रमुख प्रजाति है।",
   "cat": "geo",
   "sub": "physical_geo"
+},
+  {
+  "q": "What is the primary scientific definition of 'Wind'?\n'पवन' (Wind) की प्राथमिक वैज्ञानिक परिभाषा क्या है?",
+  "o": ["Vertical movement of air", "Horizontal movement of air from high to low pressure", "Stationary air mass", "Only the movement of clouds"],
+  "a": 1,
+  "e": "Wind is the horizontal motion of air driven by pressure differences. Vertical motion is called air currents. / उच्च दाब से निम्न दाब की ओर वायु की क्षैतिज गति पवन कहलाती है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Which force is responsible for the deflection of winds to the right in the Northern Hemisphere?\nउत्तरी गोलार्ध में हवाओं के दाईं ओर विक्षेपण के लिए कौन सा बल जिम्मेदार है?",
+  "o": ["Pressure Gradient Force", "Friction Force", "Coriolis Force", "Centrifugal Force"],
+  "a": 2,
+  "e": "The Coriolis force, caused by Earth's rotation, deflects winds to the right in the North and left in the South. / पृथ्वी के घूर्णन से उत्पन्न कोरिओलिस बल हवाओं की दिशा बदल देता है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The Coriolis Force is zero at the ______ and maximum at the ______.\nकोरिओलिस बल ______ पर शून्य और ______ पर अधिकतम होता है।",
+  "o": ["Poles, Equator", "Equator, Poles", "Tropics, Arctic", "Sea level, Mountains"],
+  "a": 1,
+  "e": "Coriolis effect is absent at the equator and increases towards the poles. / कोरिओलिस बल भूमध्य रेखा पर शून्य और ध्रुवों पर सर्वाधिक होता है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "What happens to a 'Low Pressure' (LP) system in the Northern Hemisphere due to the Coriolis effect?\nकोरिओलिस प्रभाव के कारण उत्तरी गोलार्ध में 'निम्न दाब' (LP) प्रणाली का क्या होता है?",
+  "o": ["It rotates clockwise", "It rotates anti-clockwise", "It moves in a straight line", "It vanishes immediately"],
+  "a": 1,
+  "e": "In the Northern Hemisphere, winds blow anti-clockwise around a low pressure center. / उत्तरी गोलार्ध में निम्न दाब (चक्रवात) के चारों ओर हवाएं वामावर्त घूमती हैं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "What is 'Normal Lapse Rate' in the Troposphere?\nक्षोभमंडल में 'सामान्य ह्रास दर' क्या है?",
+  "o": ["Decrease of 6.4°C per 1 km of ascent", "Increase of 10°C per km", "Constant temperature for 50 km", "Pressure becoming zero"],
+  "a": 0,
+  "e": "Temperature decreases with altitude in the troposphere at an average rate of 6.4°C/km. / ऊँचाई के साथ तापमान घटने की दर 6.4°C प्रति किमी है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The 'Specific Heat of Water' being higher than land means:\nजल की 'विशिष्ट ऊष्मा' भूमि से अधिक होने का अर्थ है:",
+  "o": ["Water heats up very quickly", "Water takes more energy and time to heat up and cool down", "Water is always frozen", "Land never cools down"],
+  "a": 1,
+  "e": "Water requires more heat to raise its temperature by 1 degree compared to land. / पानी को गर्म या ठंडा होने में जमीन से अधिक समय लगता है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Which type of 'Heat' is released when water vapor condenses into liquid water?\nजब जलवाष्प तरल जल में संघनित होती है, तो कौन सी 'ऊष्मा' मुक्त होती है?",
+  "o": ["Sensible Heat", "Latent Heat of Condensation", "Solar Radiation", "Geothermal energy"],
+  "a": 1,
+  "e": "Latent heat stored during evaporation is released during condensation, fueling storms. / संघनन के दौरान मुक्त होने वाली ऊर्जा को संघनन की गुप्त ऊष्मा कहते हैं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Why do 'Tornadoes' have extremely high wind speeds?\n'टॉरनेडो' में हवा की गति अत्यधिक क्यों होती है?",
+  "o": ["Due to high humidity only", "Due to an extreme pressure gradient in a very small area", "Because they are found in space", "Due to ocean tides"],
+  "a": 1,
+  "e": "Tornadoes have very steep pressure gradients over a small radius, creating violent rotation. / छोटे क्षेत्र में तीव्र वायुदाब प्रवणता के कारण टॉरनेडो बहुत विनाशकारी होते हैं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The term 'Furious Fifties' refers to powerful winds in the:\n'फ्यूरियस फिफ्टीज़' शब्द किन शक्तिशाली हवाओं को संदर्भित करता है?",
+  "o": ["Northern Hemisphere deserts", "Southern Hemisphere (40°-60° S) due to lack of land friction", "The Sahara desert only", "Himalayan peaks"],
+  "a": 1,
+  "e": "Lack of large landmasses in the Southern Hemisphere allows winds to blow at high speeds. / दक्षिणी गोलार्ध में भूमि कम होने से हवाएं बहुत तेज चलती हैं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "What describes 'Geostrophic Wind' correctly?\n'भू-विक्षेपी पवन' (Geostrophic Wind) का सही वर्णन क्या है?",
+  "o": ["Wind affected by friction only", "Wind blowing parallel to isobars when PGF and Coriolis force balance each other", "Wind blowing vertically upwards", "Dust storms"],
+  "a": 1,
+  "e": "At high altitudes (free from friction), winds blow parallel to isobars due to pressure and Coriolis balance. / ऊँचाई पर समदाब रेखाओं के समानांतर चलने वाली पवन।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Which layer of the atmosphere is characterized by 'Atmospheric Stability' (descending air)?\nवायुमंडल की किस परत या स्थिति में 'वायुमंडलीय स्थिरता' (नीचे गिरती हवा) देखी जाती है?",
+  "o": ["Low Pressure center", "High Pressure center", "Equatorial belt during rain", "None of the above"],
+  "a": 1,
+  "e": "High pressure areas feature sinking air, which suppresses cloud formation and rain. / उच्च दाब में हवा नीचे बैठती है, जिससे मौसम साफ रहता है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The 'ITCZ' (Inter-Tropical Convergence Zone) is a zone of:\n'ITCZ' किसका क्षेत्र है?",
+  "o": ["Descending dry air", "Convergence and rising of trade winds near the equator", "High pressure only", "Perpetual ice"],
+  "a": 1,
+  "e": "Trade winds from both hemispheres meet and rise due to intense heating at the equator. / यहाँ व्यापारिक पवनें मिलकर ऊपर उठती हैं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "What is the 'Eye' of a Tropical Cyclone?\nउष्णकटिबंधीय चक्रवात की 'आँख' (Eye) क्या है?",
+  "o": ["The most violent part with rain", "A calm, low-pressure center with sinking air and clear skies", "The outermost boundary", "A type of lightning"],
+  "a": 1,
+  "e": "The eye is a central region of light winds and fair weather within the cyclone. / चक्रवात का केंद्र जहाँ हवाएं शांत और आसमान साफ़ होता है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Which clouds are most commonly associated with 'Thunderstorms' and intense rain?\n'गरज के साथ तूफान' और तीव्र वर्षा से कौन से बादल सबसे अधिक संबंधित हैं?",
+  "o": ["Cirrus", "Stratus", "Cumulonimbus (कपासी वर्षी)", "Altostratus"],
+  "a": 2,
+  "e": "Cumulonimbus are towering clouds responsible for heavy rain, thunder, and lightning. / कपासी वर्षी बादल भारी वर्षा और गर्जना के लिए जिम्मेदार हैं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The transfer of heat through 'Horizontal' movement of air mass is:\nवायु राशि की 'क्षैतिज' गति के माध्यम से ऊष्मा का स्थानांतरण है:",
+  "o": ["Conduction", "Convection", "Advection (अभिवाहन)", "Radiation"],
+  "a": 2,
+  "e": "Advection is the horizontal transport of properties (like heat or moisture) by the wind. / हवा द्वारा ऊष्मा का क्षैतिज संचरण अभिवाहन कहलाता है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "What are 'Isobars'?\n'आइसोबार' (Isobars) क्या हैं?",
+  "o": ["Lines of equal temperature", "Lines joining places of equal atmospheric pressure", "Lines of equal rainfall", "Lines of equal ocean depth"],
+  "a": 1,
+  "e": "Isobars connect points with the same air pressure on a weather map. / समान वायुदाब वाले स्थानों को मिलाने वाली रेखाएं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Tropical Cyclones move in which general direction in the trade wind belt?\nव्यापारिक पवन पेटी में उष्णकटिबंधीय चक्रवात किस सामान्य दिशा में चलते हैं?",
+  "o": ["West to East", "East to West", "North to South only", "They are stationary"],
+  "a": 1,
+  "e": "They are driven by trade winds, moving from East to West towards the coasts. / व्यापारिक पवनों के प्रभाव से ये पूर्व से पश्चिम की ओर बढ़ते हैं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The term 'Typhoon' (टाइफून) is used for cyclones in which region?\n'टाइफून' शब्द का प्रयोग किस क्षेत्र में चक्रवातों के लिए किया जाता है?",
+  "o": ["Atlantic Ocean", "Indian Ocean", "South China Sea / Western Pacific", "Australia"],
+  "a": 2,
+  "e": "Cyclones are called Typhoons in the South China Sea and near Japan. / चीन सागर और जापान के पास इन्हें टाइफून कहते हैं।",
+  "cat": "geo",
+  "sub": "mapping"
+},
+{
+  "q": "Where is the 'Coriolis Force' zero, preventing the formation of tropical cyclones?\nकोरिओलिस बल कहाँ शून्य होता है, जो उष्णकटिबंधीय चक्रवातों के निर्माण को रोकता है?",
+  "o": ["Poles", "30 degrees North", "Equator (0° to 5° latitude)", "Himalayas"],
+  "a": 2,
+  "e": "Cyclones cannot form at the equator because the Coriolis force is insufficient to create rotation. / भूमध्य रेखा पर चक्रवात नहीं बनते क्योंकि वहां कोरिओलिस बल नहीं होता।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "What defines 'Atmospheric Instability'?\n'वायुमंडलीय अस्थिरता' को क्या परिभाषित करता है?",
+  "o": ["Sinking dry air", "Rapid rising of warm, moist air leading to cloud formation", "Static high pressure", "Clear winter night"],
+  "a": 1,
+  "e": "Instability occurs when air continues to rise, leading to condensation and storms. / गर्म हवा के लगातार ऊपर उठने से अस्थिरता पैदा होती है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Which of the following is a 'Primary Factor' controlling temperature distribution?\nतापमान वितरण को नियंत्रित करने वाला 'प्राथमिक कारक' निम्नलिखित में से कौन सा है?",
+  "o": ["Advection", "Latitude (Distance from equator)", "Ocean current only", "Soil color"],
+  "a": 1,
+  "e": "Latitude determines the angle of sun rays, the most basic control on temperature. / अक्षांश (भूमध्य रेखा से दूरी) तापमान का मुख्य नियंत्रक है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "A 'Warm Front' is formed when:\nएक 'गर्म वाताग्र' (Warm Front) तब बनता है जब:",
+  "o": ["Cold air pushes warm air rapidly", "Warm air mass moves towards and slides over a cold air mass", "Two cold air masses meet", "A volcano erupts"],
+  "a": 1,
+  "e": "Warm air is lighter and glides slowly over the dense cold air. / गर्म हवा का ठंडी हवा के ऊपर चढ़ना गर्म वाताग्र बनाता है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "What is the 'Standard Unit' of air pressure used in meteorology?\nमौसम विज्ञान में प्रयुक्त वायुदाब की 'मानक इकाई' क्या है?",
+  "o": ["Celsius", "Kilometers", "Millibars (mb) / Hectopascals", "Grams"],
+  "a": 2,
+  "e": "Pressure is measured in millibars (mb) or hectopascals (hPa). / वायुदाब को मिलीबार (mb) में मापा जाता है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Why does 'Land' heat up faster than 'Water'?\n'भूमि', 'जल' की तुलना में तेजी से क्यों गर्म होती है?",
+  "o": ["Land is transparent", "Land has lower specific heat and is stationary", "Water is made of metal", "Sun shines only on land"],
+  "a": 1,
+  "e": "Land requires less energy to heat up and doesn't distribute heat like mobile water. / जमीन की विशिष्ट ऊष्मा कम होती है और वह स्थिर होती है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The 'Adiabatic Lapse Rate' refers to temperature change due to:\n'रुद्धोष्म ह्रास दर' (Adiabatic Lapse Rate) किसके कारण होने वाले तापमान परिवर्तन को संदर्भित करती है?",
+  "o": ["External heating from a stove", "Expansion and contraction of an air parcel without external heat exchange", "Rainfall only", "Ocean currents"],
+  "a": 1,
+  "e": "Rising air cools due to expansion; sinking air warms due to compression. / बिना बाहरी ऊष्मा के, प्रसार या संकुचन से तापमान बदलना।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Which city would have higher temperature variations (hotter summers, colder winters) - Delhi or Mumbai?\nदिल्ली या मुंबई में से किस शहर में तापमान का उतार-चढ़ाव (अधिक गर्म गर्मियां, अधिक ठंडी सर्दियां) अधिक होगा?",
+  "o": ["Mumbai", "Delhi", "Both are same", "None"],
+  "a": 1,
+  "e": "Delhi is far from the sea (continentality), while Mumbai is coastal (maritime influence). / समुद्र से दूर होने के कारण दिल्ली में तापांतर अधिक होता है।",
+  "cat": "geo",
+  "sub": "mapping"
+},
+{
+  "q": "What is 'Advection Inversion'?\n'अभिवाहन व्युत्क्रमण' (Advection Inversion) क्या है?",
+  "o": ["Cooling of ground at night", "Inversion caused by horizontal movement of warm air over a cold surface", "Vertical rising of air", "Volcanic smoke"],
+  "a": 1,
+  "e": "When warm air moves over a cold surface (like a valley), it creates an inversion. / ठंडी सतह के ऊपर गर्म हवा के क्षैतिज बहाव से बना व्युत्क्रमण।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The 'Coriolis Force' is a ______ force.\nकोरिओलिस बल एक ______ बल है।",
+  "o": ["Real physical push", "Pseudo / Apparent force due to Earth's rotation", "Magnetic force", "Gravitational force"],
+  "a": 1,
+  "e": "It is an apparent force that results from the rotation of the Earth. / यह पृथ्वी के घूर्णन के कारण लगने वाला एक आभासी (Pseudo) बल है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "At a 'High Pressure' (HP) center, winds generally ______.\n'उच्च दाब' (HP) केंद्र पर, हवाएँ आमतौर पर ______।",
+  "o": ["Converge and rise", "Diverge and sink", "Stay completely still", "Explode"],
+  "a": 1,
+  "e": "Winds move outward from HP centers and sink from above. / उच्च दाब से हवा बाहर की ओर फैलती है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The 'Horse Latitudes' are regions of:\n'अश्व अक्षांश' (Horse Latitudes) किसके क्षेत्र हैं?",
+  "o": ["Extreme rainfall", "Sinking air and calm winds at 30°-35° latitude", "High wind speed", "Deep ocean trenches"],
+  "a": 1,
+  "e": "These are sub-tropical high-pressure belts with stable conditions. / 30°-35° अक्षांश जहाँ हवा नीचे बैठती है और मौसम शांत रहता है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Which seismic wave can travel through 'Solids, Liquids, and Gases'?\nकौन सी भूकंपीय तरंग 'ठोस, तरल और गैस' तीनों के माध्यम से यात्रा कर सकती है?",
+  "o": ["S-wave", "P-wave", "L-wave", "None"],
+  "a": 1,
+  "e": "P-waves (Primary) are longitudinal and pass through all states of matter. / पी-तरंगें सभी माध्यमों में चल सकती हैं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The 'Moho' Discontinuity separates which two layers?\n'मोह' असंबद्धता किन दो परतों को अलग करती है?",
+  "o": ["Crust and Mantle", "Mantle and Core", "Upper and Lower Crust", "Atmosphere and Ocean"],
+  "a": 0,
+  "e": "It is the boundary between the crust and the mantle. / क्रस्ट और मेंटल के बीच की सीमा।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "What is the primary mineral in the Earth's 'Core'?\nपृथ्वी के 'कोर' (Core) में प्राथमिक खनिज क्या है?",
+  "o": ["Silica", "Aluminum", "Iron and Nickel (Nife)", "Magnesium"],
+  "a": 2,
+  "e": "The core is made of heavy metals, mainly Nickel and Iron. / कोर निकल और लोहे से बना है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "A 'V-shaped' valley is an erosional feature of which geomorphic agent?\n'वी-आकार' की घाटी किस भू-आकृतिक कारक की अपरदनी विशेषता है?",
+  "o": ["Wind", "Glacier", "Running Water (River)", "Wave"],
+  "a": 2,
+  "e": "Rivers carve V-shaped valleys through downward erosion. / नदियाँ ऊर्ध्वाधर अपरदन से वी-आकार की घाटियाँ बनाती हैं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "In which city is the 'Red Sea' rifting most active?\n'लाल सागर' की दरार (Rifting) किस क्षेत्र में सबसे अधिक सक्रिय है?",
+  "o": ["Between Africa and Arabian Peninsula", "Between India and Sri Lanka", "In USA", "In Australia"],
+  "a": 0,
+  "e": "The Red Sea is forming as the Arabian plate moves away from Africa. / लाल सागर अफ्रीका और अरब प्लेटों के अलग होने से बन रहा है।",
+  "cat": "geo",
+  "sub": "mapping"
+},
+{
+  "q": "What causes the 'Standard Time' difference within India from West to East?\nभारत के भीतर पश्चिम से पूर्व तक 'मानक समय' के अंतर का क्या कारण है?",
+  "o": ["Latitude", "Longitude difference (approx 30 degrees)", "Altitude", "Temperature"],
+  "a": 1,
+  "e": "India's width leads to a 2-hour local time difference between Gujarat and Arunachal. / देशांतरीय विस्तार के कारण समय में अंतर होता है।",
+  "cat": "geo",
+  "sub": "mapping"
+},
+{
+  "q": "Which state of matter is the 'Inner Core' of the Earth?\nपृथ्वी का 'आंतरिक कोर' पदार्थ की किस अवस्था में है?",
+  "o": ["Liquid", "Solid", "Gaseous", "Plasma"],
+  "a": 1,
+  "e": "Extreme pressure keeps it solid despite high temperature. / अत्यधिक दबाव के कारण यह ठोस है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The term 'Barchan' refers to which type of sand dune?\n'बरखान' (Barchan) शब्द किस प्रकार के रेत के टीले को संदर्भित करता है?",
+  "o": ["Linear", "Crescent-shaped with horns downwind", "Star-shaped", "Square"],
+  "a": 1,
+  "e": "Barchans are crescent-shaped dunes common in deserts. / बरखान अर्धचंद्राकार बालू के टीले होते हैं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "What describes 'Subduction'?\n'सबडक्शन' (Subduction) का वर्णन क्या है?",
+  "o": ["Plates moving apart", "One plate sinking beneath another at a convergent boundary", "Plates sliding horizontally", "None"],
+  "a": 1,
+  "e": "Happens at convergent margins where the denser plate sinks. / अभिसरण सीमा पर एक प्लेट का नीचे धंसना।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Which mineral is standard for hardness level 10?\nकिस खनिज को कठोरता स्तर 10 के लिए मानक माना जाता है?",
+  "o": ["Quartz", "Topaz", "Diamond", "Talc"],
+  "a": 2,
+  "e": "Diamond is the hardest natural mineral. / हीरा मोह स्केल पर सबसे कठोर है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The 'Ring of Fire' is located around which ocean?\n'रिंग ऑफ फायर' किस महासागर के चारों ओर स्थित है?",
+  "o": ["Atlantic", "Pacific", "Indian", "Arctic"],
+  "a": 1,
+  "e": "It is a zone of intense volcanic and seismic activity around the Pacific. / यह प्रशांत महासागर के चारों ओर का ज्वालामुखी क्षेत्र है।",
+  "cat": "geo",
+  "sub": "mapping"
+},
+{
+  "q": "What defines 'Maffic' rocks?\n'मैफ़िक' चट्टानों को क्या परिभाषित करता है?",
+  "o": ["High Silica content", "Low Silica, High Iron and Magnesium content", "Always white color", "Found in atmosphere"],
+  "a": 1,
+  "e": "Maffic rocks are dense and dark (e.g., Basalt). / कम सिलिका और अधिक लोहा-मैग्नीशियम वाली चट्टानें।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The 'Zoid' (Geoid) shape means Earth is bulged at the:\n'जॉइड' (Geoid) आकार का अर्थ है कि पृथ्वी यहाँ उभरी हुई है:",
+  "o": ["Poles", "Equator", "North Pole only", "South Pole only"],
+  "a": 1,
+  "e": "Rotation causes an equatorial bulge. / घूर्णन के कारण भूमध्य रेखा पर उभार आता है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Which seismic wave arrives 'Last' at a station?\nस्टेशन पर कौन सी भूकंपीय तरंग 'सबसे अंत' में पहुँचती है?",
+  "o": ["P-wave", "S-wave", "Surface wave (L/R)", "Body wave"],
+  "a": 2,
+  "e": "Surface waves are the slowest but most destructive. / धरातलीय तरंगें सबसे धीमी और विनाशकारी होती हैं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "A 'Batholith' is specifically which type of igneous body?\n'बैथोलिथ' विशेष रूप से किस प्रकार का आग्नेय पिंड है?",
+  "o": ["Small surface intrusion", "Giant deep-seated magma chamber", "Horizontal sheet", "Wall-like structure"],
+  "a": 1,
+  "e": "Batholiths are the largest intrusive igneous formations. / यह सबसे बड़ा गहरा आग्नेय पिंड है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "What turns 'Metamorphic' rocks back into 'Igneous'?\n'कायांतरित' शैलों को वापस 'आग्नेय' में क्या बदलता है?",
+  "o": ["Weathering", "Melting and subsequent cooling", "Compression", "Erosion"],
+  "a": 1,
+  "e": "Melting produces magma, which solidifies as igneous rock. / पिघलकर जमकर ठोस होना।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The term 'Sial' refers to rocks rich in:\n'सियाल' (Sial) शब्द किन तत्वों से भरपूर चट्टानों को संदर्भित करता है:",
+  "o": ["Silica and Magnesium", "Silica and Aluminum", "Nickel and Lead", "Gold and Silver"],
+  "a": 1,
+  "e": "Sial stands for Silica + Aluminum. / सियाल सिलिका और एल्युमीनियम से बना है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Which 'Geomorphic Agent' forms 'U-shaped' valleys?\nकौन सा भू-आकृतिक कारक 'यू-आकार' की घाटियाँ बनाता है?",
+  "o": ["River", "Glacier", "Wind", "Wave"],
+  "a": 1,
+  "e": "Glaciers widen and deepen valleys into U-shapes. / हिमनद यू-आकार की घाटियाँ बनाते हैं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+  {
+  "q": "Which type of cyclone is driven by 'Latent Heat' released during condensation of water vapor over warm oceans?\nगर्म महासागरों के ऊपर जलवाष्प के संघनन के दौरान मुक्त 'गुप्त ऊष्मा' द्वारा कौन सा चक्रवात संचालित होता है?",
+  "o": ["Extra-Tropical Cyclone", "Tropical Cyclone (उष्णकटिबंधीय चक्रवात)", "Anticyclone", "Polar vortex"],
+  "a": 1,
+  "e": "Tropical cyclones gain their energy from the evaporation of water and subsequent condensation. / उष्णकटिबंधीय चक्रवात अपनी ऊर्जा जलवाष्प की गुप्त ऊष्मा से प्राप्त करते हैं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The 'Eye' of a tropical cyclone is characterized by ______ air and ______ weather.\nउष्णकटिबंधीय चक्रवात की 'आँख' की विशेषता ______ वायु और ______ मौसम है।",
+  "o": ["Rising; Stormy", "Sinking / Descending; Calm and clear", "Rotating; High rain", "Stationary; Frozen"],
+  "a": 1,
+  "e": "The center (eye) has sinking air, resulting in stability and clear skies. / आँख में हवा नीचे बैठती है, जिससे मौसम शांत रहता है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Which of the following is a 'Pre-condition' for the formation of a Tropical Cyclone?\nउष्णकटिबंधीय चक्रवात के निर्माण के लिए निम्नलिखित में से कौन सी एक 'पूर्व-शर्त' है?",
+  "o": ["Water temperature below 20°C", "Sea surface temperature higher than 27°C", "Zero Coriolis force", "High vertical wind shear"],
+  "a": 1,
+  "e": "A warm sea surface (at least 27°C) is essential to provide continuous moisture. / समुद्र की सतह का तापमान 27°C से अधिक होना चाहिए।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "What happens to a Tropical Cyclone when it reaches the 'Land Surface'?\nजब उष्णकटिबंधीय चक्रवात 'स्थलीय सतह' पर पहुँचता है तो क्या होता है?",
+  "o": ["It becomes more powerful", "It dissipates (Landfall) due to loss of moisture source", "It turns into ice", "It stays stationary forever"],
+  "a": 1,
+  "e": "Once the source of moisture (the ocean) is cut off, the cyclone weakens and dies. / नमी का स्रोत खत्म होने से चक्रवात कमजोर होकर समाप्त हो जाता है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "A 'Tornado' (टॉरनेडो) is a violently rotating column of air that connects:\n'टॉरनेडो' वायु का एक तेजी से घूमने वाला स्तंभ है जो जोड़ता है:",
+  "o": ["Sea floor to mountains", "Ground surface to a cumulonimbus cloud", "Space to atmosphere", "Desert to forest"],
+  "a": 1,
+  "e": "Tornadoes are localized, violent storms extending from a thunderstorm cloud to the ground. / टॉरनेडो जमीन की सतह को तूफानी बादल से जोड़ता है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Which region calls tropical cyclones 'Willy-Willies'?\nकिस क्षेत्र में उष्णकटिबंधीय चक्रवातों को 'विली-विलीज़' (Willy-Willies) कहा जाता है?",
+  "o": ["USA", "China", "Australia", "India"],
+  "a": 2,
+  "e": "In Australia, these storms are traditionally known as Willy-Willies. / ऑस्ट्रेलिया में चक्रवात को विली-विली कहते हैं।",
+  "cat": "geo",
+  "sub": "mapping"
+},
+{
+  "q": "The rotation of a cyclone in the Southern Hemisphere is:\nदक्षिणी गोलार्ध में चक्रवात का घूर्णन होता है:",
+  "o": ["Anti-clockwise", "Clockwise", "Vertical only", "No rotation"],
+  "a": 1,
+  "e": "Due to the Coriolis force, cyclones rotate clockwise in the South and anti-clockwise in the North. / दक्षिणी गोलार्ध में चक्रवात दक्षिणावर्त (Clockwise) घूमते हैं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "What is 'Vertical Wind Shear'?\n'ऊर्ध्वाधर पवन अपरूपण' (Vertical Wind Shear) क्या है?",
+  "o": ["Wind blowing sideways only", "Difference in wind speed or direction at different altitudes", "Wind speed on a mountain top only", "None"],
+  "a": 1,
+  "e": "Cyclones require low vertical wind shear to maintain their structure. / अलग-अलग ऊँचाइयों पर पवन की गति में अंतर।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The 'Wall of the Eye' (आई वॉल) of a cyclone is where:\nचक्रवात की 'आँख की दीवार' (आई वॉल) वह स्थान है जहाँ:",
+  "o": ["Winds are calmest", "Winds are strongest with maximum rainfall and updraft", "Air sinks down", "Ice is formed"],
+  "a": 1,
+  "e": "The eyewall contains the most intense winds and heaviest rain. / आई वॉल में पवन की गति और वर्षा सर्वाधिक होती है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "What is the primary difference between Tropical and Extra-tropical (Temperate) cyclones?\nउष्णकटिबंधीय और शीतोष्ण चक्रवातों के बीच प्राथमिक अंतर क्या है?",
+  "o": ["Tropical ones are larger", "Extra-tropical cyclones are formed by frontogenesis (collision of air masses)", "Only tropical ones rotate", "Temperate ones never rain"],
+  "a": 1,
+  "e": "Temperate cyclones form due to cold and warm air mass meeting (Fronts), while Tropical ones don't use fronts. / शीतोष्ण चक्रवात वाताग्रों (Fronts) के कारण बनते हैं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Which instrument is used to measure 'Wind Speed'?\n'पवन की गति' मापने के लिए किस उपकरण का उपयोग किया जाता है?",
+  "o": ["Barometer", "Anemometer", "Thermometer", "Seismograph"],
+  "a": 1,
+  "e": "An anemometer measures the velocity of the wind. / एनीमोमीटर पवन वेग मापता है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "A 'Thundersorm' (गरज के साथ तूफान) is usually a result of strong ______.\n'थंडरस्टॉर्म' आमतौर पर किसके तीव्र होने का परिणाम होता है?",
+  "o": ["Downdraft", "Updraft of moist air", "Horizontal wind only", "Ocean tides"],
+  "a": 1,
+  "e": "Strong updrafts carry moisture high, forming tall cumulonimbus clouds. / नम हवा के तीव्र ऊर्ध्वाधर उत्थान (Updraft) से यह बनता है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The 'Mature Stage' of a thunderstorm is characterized by:\nथंडरस्टॉर्म के 'परिपक्व चरण' (Mature Stage) की विशेषता क्या है?",
+  "o": ["Only updrafts", "Simultaneous presence of strong updrafts and downdrafts (leading to rain/lightning)", "Clouds disappearing", "No wind"],
+  "a": 1,
+  "e": "Both rising and falling air currents occur, creating rain and electricity. / इसमें ऊपर उठती और नीचे गिरती हवा दोनों एक साथ होती हैं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "What are 'Waterspouts'?\n'वाटरस्पाउट्स' (Waterspouts) क्या हैं?",
+  "o": ["Fountains in a park", "Tornadoes that occur over water bodies", "Type of whale", "Tidal waves"],
+  "a": 1,
+  "e": "When a tornado forms over a sea or lake, it pulls water up as a spout. / पानी के ऊपर बनने वाले टॉरनेडो को वाटरस्पाउट कहते हैं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Which region in the USA is famous for frequent 'Tornado' activity?\nयूएसए का कौन सा क्षेत्र बार-बार 'टॉरनेडो' गतिविधि के लिए प्रसिद्ध है?",
+  "o": ["Florida only", "Tornado Alley (Central USA)", "Alaska", "Hawaii"],
+  "a": 1,
+  "e": "The central USA sees thousands of tornadoes annually. / मध्य अमेरिका का 'टॉरनेडो एली' क्षेत्र इसके लिए प्रसिद्ध है।",
+  "cat": "geo",
+  "sub": "mapping"
+},
+{
+  "q": "Tropical Cyclones are called ______ in the North Atlantic and Eastern Pacific.\nउत्तरी अटलांटिक और पूर्वी प्रशांत क्षेत्र में उष्णकटिबंधीय चक्रवातों को ______ कहा जाता है।",
+  "o": ["Typhoons", "Hurricanes (हरिकेन)", "Willy-Willies", "Baguios"],
+  "a": 1,
+  "e": "Hurricane is the name used in the American region. / अमेरिका के पास इन्हें हरिकेन कहते हैं।",
+  "cat": "geo",
+  "sub": "mapping"
+},
+{
+  "q": "What causes 'Lightning' in a cumulonimbus cloud?\nकपासी वर्षी बादल (Cumulonimbus) में 'बिजली' का क्या कारण है?",
+  "o": ["Sunlight reflection", "Potential difference created by friction between updraft and downdraft particles", "Moon's gravity", "Static electricity from sea"],
+  "a": 1,
+  "e": "Friction between ice particles and water droplets builds electrical charges. / हवा के कणों के बीच घर्षण से उत्पन्न विद्युत आवेश।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "A 'Seif' (सीफ) is a type of ______ sand dune.\n'सीफ' (Seif) एक प्रकार का ______ रेत का टीला है।",
+  "o": ["Crescent", "Linear / Longitudinal", "Circular", "Square"],
+  "a": 1,
+  "e": "Seif dunes are long, narrow ridges of sand parallel to the wind. / ये पवन की दिशा के समानांतर लंबे टीले होते हैं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The term 'Manga Shower' (मैंगो शावर) in Kerala is a result of:\nकेरल में 'मैंगो शावर' शब्द किसका परिणाम है?",
+  "o": ["Heavy snowfall", "Pre-monsoon thunderstorms helpful for mango ripening", "Ocean currents", "Volcanic ash"],
+  "a": 1,
+  "e": "Localized thunderstorms in April/May help the mango crop. / मानसून पूर्व होने वाली तूफानी वर्षा।",
+  "cat": "geo",
+  "sub": "mapping"
+},
+{
+  "q": "What happens during the 'Dissipating Stage' of a thunderstorm?\nथंडरस्टॉर्म के 'समाप्ति चरण' (Dissipating Stage) के दौरान क्या होता है?",
+  "o": ["Rain starts", "Downdrafts dominate, cutting off the updraft moisture source", "Wind speed reaches 500 km/hr", "Clouds grow taller"],
+  "a": 1,
+  "e": "Sinking air suppresses the rising moisture, leading to the end of the storm. / नीचे गिरती हवा नमी के ऊपर उठने को रोक देती है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Which seismic wave moves like a snake side-to-side horizontally?\nकौन सी भूकंपीय तरंग सांप की तरह क्षैतिज रूप से अगल-बगल चलती है?",
+  "o": ["P-wave", "Love wave (L-wave)", "S-wave", "R-wave"],
+  "a": 1,
+  "e": "L-waves are surface waves moving horizontally. / लव तरंगें क्षैतिज रूप से चलती हैं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The 'Standard Time' of India follows 82°30'E. Which city is the reference point?\nभारत का 'मानक समय' 82°30'E का अनुसरण करता है। संदर्भ बिंदु कौन सा शहर है?",
+  "o": ["Patna", "Mirzapur", "Mumbai", "Kolkata"],
+  "a": 1,
+  "e": "Reference for IST is Mirzapur near Prayagraj. / उत्तर प्रदेश का मिर्जापुर।",
+  "cat": "geo",
+  "sub": "mapping"
+},
+{
+  "q": "What is the approximate speed of 'Tornado' winds?\n'टॉरनेडो' पवन की अनुमानित गति क्या है?",
+  "o": ["10 km/hr", "100 km/hr", "Up to 500 km/hr", "2000 km/hr"],
+  "a": 2,
+  "e": "Tornadoes have the highest wind speeds on Earth. / टॉरनेडो की गति 500 किमी/घंटा तक हो सकती है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Which layer of atmosphere is 'Outermost'?\nवायुमंडल की 'सबसे बाहरी' परत कौन सी है?",
+  "o": ["Stratosphere", "Exosphere", "Mesosphere", "Troposphere"],
+  "a": 1,
+  "e": "Exosphere is the top layer merging with space. / बहिर्मंडल सबसे बाहरी परत है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The 'Moho' discontinuity separates:\n'मोह' असंबद्धता अलग करती है:",
+  "o": ["Core and Mantle", "Crust and Mantle", "Upper and Lower Crust", "None"],
+  "a": 1,
+  "e": "Boundary between crust and mantle. / क्रस्ट और मेंटल के बीच की सीमा।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "What defines the 'Hardness' of a mineral?\nखनिज की 'कठोरता' को क्या परिभाषित करता है?",
+  "o": ["Its color", "Its resistance to being scratched (Mohs scale)", "Its weight", "Its price"],
+  "a": 1,
+  "e": "Hardness is measured by scratch resistance. / खरोंच के प्रति प्रतिरोध।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Which type of 'Process' is Weathering?\n'अपक्षय' (Weathering) किस प्रकार की प्रक्रिया है?",
+  "o": ["Endogenic", "Exogenic (Static/In-situ)", "Dynamic", "Global"],
+  "a": 1,
+  "e": "It happens on the surface without transportation. / यह एक बाह्य और स्थिर प्रक्रिया है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The 'Divergent' movement of plates on ocean floor creates:\nसमुद्र तल पर प्लेटों की 'अपसारी' गति क्या बनाती है?",
+  "o": ["Deep Trenches", "Mid-Oceanic Ridges", "Fold Mountains", "Deltas"],
+  "a": 1,
+  "e": "Magma rises to form new crust at ridges. / अपसरण से मध्य-महासागरीय कटक बनते हैं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "What describes 'Subduction'?\n'सबडक्शन' (Subduction) का वर्णन क्या है?",
+  "o": ["Plates pulling apart", "One plate sinking beneath another", "Plates sliding past", "None"],
+  "a": 1,
+  "e": "Happens at convergent boundaries. / एक प्लेट का दूसरे के नीचे धंसना।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Which mineral has hardness 1?\nकिस खनिज की कठोरता 1 है?",
+  "o": ["Talc", "Quartz", "Diamond", "Calcite"],
+  "a": 0,
+  "e": "Talc is the softest mineral. / टल्क सबसे कोमल है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The term 'Sial' is associated with:\n'सियाल' (Sial) शब्द किससे संबंधित है:",
+  "o": ["Oceanic crust", "Continental crust (Silica + Aluminum)", "Inner core", "Atmosphere"],
+  "a": 1,
+  "e": "Continental crust shorthand. / महाद्वीपीय क्रस्ट।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Which geomorphic agent forms 'Ox-bow lakes'?\nकौन सा भू-आकृतिक कारक 'गोखुर झीलें' बनाता है?",
+  "o": ["Glacier", "Running water (Meandering river)", "Wind", "Wave"],
+  "a": 1,
+  "e": "Meanders get cut off to form ox-bow lakes. / विसर्पी नदियाँ गोखुर झीलें बनाती हैं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "A 'Plunge Pool' is formed at the base of a:\n'प्लंज पूल' किसके आधार पर बनता है?",
+  "o": ["Glacier", "Waterfall", "Dune", "Cliff"],
+  "a": 1,
+  "e": "Erosional feature of running water. / झरने के नीचे बनने वाला गड्ढा।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The 'Afar Triangle' is located in:\n'अफार ट्रायंगल' कहाँ स्थित है?",
+  "o": ["Asia", "East Africa", "South America", "Europe"],
+  "a": 1,
+  "e": "Tectonic triple junction. / पूर्वी अफ्रीका में।",
+  "cat": "geo",
+  "sub": "mapping"
+},
+{
+  "q": "Which state of matter describes the 'Outer Core'?\n'बाहरी कोर' को पदार्थ की कौन सी अवस्था वर्णित करती है?",
+  "o": ["Solid", "Liquid", "Gas", "Plasma"],
+  "a": 1,
+  "e": "Liquid state proven by seismic shadow zones. / यह तरल अवस्था में है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The 'Zoid' shape implies Earth is flattened at:\n'जॉइड' आकार का तात्पर्य है कि पृथ्वी चपटी है:",
+  "o": ["Equator", "Poles", "Sea Level", "Troughs"],
+  "a": 1,
+  "e": "Flattened at North and South poles. / ध्रुवों पर पृथ्वी चपटी है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "What defines 'Maffic' rocks?\n'मैफ़िक' चट्टानों को क्या परिभाषित करता है?",
+  "o": ["High Silica", "Low Silica, High Iron/Magnesium", "White color", "Found in clouds"],
+  "a": 1,
+  "e": "Denser, basaltic rocks. / सघन और गहरे रंग की चट्टानें।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "In which period did Oxygen levels reach 30%?\nकिस काल में ऑक्सीजन का स्तर 30% तक पहुँच गया था?",
+  "o": ["Hadean", "Phanerozoic (~280 Ma)", "Archean", "None"],
+  "a": 1,
+  "e": "High levels during giant mammal era. / लगभग 280 मिलियन वर्ष पहले।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "What causes the 'Bulge' at the Equator?\nभूमध्य रेखा पर 'उभार' का क्या कारण है?",
+  "o": ["Moon", "Centrifugal force from rotation", "Water tides", "Sun"],
+  "a": 1,
+  "e": "Earth's spinning effect. / घूर्णन से उत्पन्न अपकेंद्रीय बल।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Which seismic wave arrives 'First' at a station?\nस्टेशन पर कौन सी भूकंपीय तरंग 'सबसे पहले' पहुँचती है?",
+  "o": ["S-wave", "P-wave", "L-wave", "None"],
+  "a": 1,
+  "e": "Primary fastest wave. / पी-तरंगें।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The 'Standard Meridian' for IST passes through which state primarily discussed?\nIST के लिए मानक याम्योत्तर मुख्य रूप से किस राज्य से गुजरता है जिसकी चर्चा की गई?",
+  "o": ["Bihar", "Uttar Pradesh", "Maharashtra", "Kerala"],
+  "a": 1,
+  "e": "Passing through Mirzapur, UP. / उत्तर प्रदेश के मिर्जापुर से।",
+  "cat": "geo",
+  "sub": "mapping"
+},
+{
+  "q": "Which mineral property refers to the 'Color of Powder'?\nकौन सा खनिज गुण 'चूर्ण के रंग' को संदर्भित करता है?",
+  "o": ["Lustre", "Streak", "Cleavage", "Hardness"],
+  "a": 1,
+  "e": "Identified using a streak plate. / यह स्ट्रीक (Streak) कहलाता है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "A 'Laccolith' is described as having which shape?\n'लैकोलिथ' को किस आकार का बताया गया है?",
+  "o": ["Saucer", "Dome-shaped / Mushroom-like", "Wall", "Thin sheet"],
+  "a": 1,
+  "e": "Intrusive igneous feature. / यह गुंबद के आकार की अंतर्भेदी आकृति है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Which type of 'Process' levels heights and fills depressions?\nकिस प्रकार की 'प्रक्रिया' ऊँचाइयों को समतल करती है और गड्ढों को भरती है?",
+  "o": ["Endogenic", "Exogenic / Gradational", "Volcanic", "None"],
+  "a": 1,
+  "e": "Gradation through erosion and deposition. / बाह्य प्रक्रियाएं सतह को समतल करती हैं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "What turns 'Metamorphic' rocks back into 'Igneous'?\n'कायांतरित' शैलों को वापस 'आग्नेय' में क्या बदलता है?",
+  "o": ["Weathering", "Melting and subsequent cooling", "Compression", "Erosion"],
+  "a": 1,
+  "e": "Melting produces magma. / पिघलकर जमकर ठोस होना।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Which seismic wave is the most 'Destructive'?\nकौन सी भूकंपीय तरंग सर्वाधिक 'विनाशकारी' है?",
+  "o": ["P-wave", "S-wave", "Surface wave", "None"],
+  "a": 2,
+  "e": "Causes maximum surface damage. / धरातलीय तरंगें सर्वाधिक विनाश करती हैं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "What describes 'Regolith'?\n'रेगोलिथ' (Regolith) का वर्णन क्या है?",
+  "o": ["Solid rock", "Loose weathered material", "Magma", "Gases"],
+  "a": 1,
+  "e": "Mixture of soil and rock debris. / चट्टान के ऊपर जमा ढीला मलबा।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "In which city is the 'Red Sea' forming due to rifting?\nरिफ्टिंग के कारण 'लाल सागर' कहाँ बन रहा है?",
+  "o": ["East Africa", "India", "USA", "None"],
+  "a": 0,
+  "e": "Active divergent boundary. / पूर्वी अफ्रीका में।",
+  "cat": "geo",
+  "sub": "mapping"
+},
+  {
+  "q": "What is the primary energy source that fuels a Tropical Cyclone?\nउष्णकटिबंधीय चक्रवात को शक्ति प्रदान करने वाला प्राथमिक ऊर्जा स्रोत क्या है?",
+  "o": ["Sensible heat from the sun", "Latent heat of condensation", "Frictional force of waves", "Geothermal energy"],
+  "a": 1,
+  "e": "Tropical cyclones gain their energy from the latent heat of condensation released when moist air rises and forms clouds. / संघनन की गुप्त ऊष्मा ही चक्रवातों को ऊर्जा देती है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The 'Eye' of a tropical cyclone is a region of ______ pressure and ______ air.\nउष्णकटिबंधीय चक्रवात की 'आँख' (Eye) ______ दाब और ______ वायु का क्षेत्र है।",
+  "o": ["High, Rising", "Low, Sinking / Descending", "High, Sinking", "Low, Rising"],
+  "a": 1,
+  "e": "The eye is a calm, low-pressure center where air descends, leading to clear skies and stability. / आँख में दाब निम्न होता है और हवा नीचे बैठती है, जिससे मौसम शांत रहता है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "In the Northern Hemisphere, Tropical Cyclones rotate in which direction?\nउत्तरी गोलार्ध में उष्णकटिबंधीय चक्रवात किस दिशा में घूमते हैं?",
+  "o": ["Clockwise", "Anti-clockwise", "Only horizontally", "They do not rotate"],
+  "a": 1,
+  "e": "Due to the Coriolis effect, cyclones rotate anti-clockwise in the Northern Hemisphere and clockwise in the Southern. / उत्तरी गोलार्ध में चक्रवात वामावर्त (Anti-clockwise) घूमते हैं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "What temperature must the sea surface reach to facilitate the formation of a Tropical Cyclone?\nउष्णकटिबंधीय चक्रवात के निर्माण के लिए समुद्र की सतह का तापमान कितना होना चाहिए?",
+  "o": ["15°C", "20°C", "Higher than 27°C", "Exactly 0°C"],
+  "a": 2,
+  "e": "A warm sea surface of at least 27°C is a pre-condition for tropical cyclone formation. / समुद्र का तापमान कम से कम 27 डिग्री सेल्सियस होना आवश्यक है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Why do Tropical Cyclones dissipate (die out) upon reaching the land surface?\nस्थलीय सतह पर पहुँचने पर उष्णकटिबंधीय चक्रवात क्यों समाप्त हो जाते हैं?",
+  "o": ["Due to high gravity on land", "Because the moisture source (ocean) is cut off", "Due to cold winds from mountains", "They turn into tornadoes"],
+  "a": 1,
+  "e": "Cyclones need constant moisture from the ocean; on land, this supply stops, causing the storm to weaken. / नमी का स्रोत (समुद्र) खत्म होने से चक्रवात दम तोड़ देते हैं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "What are 'Waterspouts'?\n'वाटरस्पाउट्स' (Waterspouts) क्या हैं?",
+  "o": ["Large fountains in the sea", "Tornadoes that form over water bodies", "A type of ocean current", "Heavy rainfall"],
+  "a": 1,
+  "e": "A waterspout is essentially a tornado that occurs over a sea, lake, or ocean. / पानी के ऊपर बनने वाले टॉरनेडो को वाटरस्पाउट कहते हैं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Tropical Cyclones are called ______ in the South China Sea region.\nदक्षिण चीन सागर क्षेत्र में उष्णकटिबंधीय चक्रवातों को ______ कहा जाता है।",
+  "o": ["Hurricanes", "Willy-Willies", "Typhoons (टाइफून)", "Baguios"],
+  "a": 2,
+  "e": "They are called Typhoons in the South China Sea and Western Pacific. / चीन सागर में इन्हें टाइफून कहा जाता है।",
+  "cat": "geo",
+  "sub": "mapping"
+},
+{
+  "q": "What is the approximate wind speed of a violent 'Tornado'?\nएक भीषण 'टॉरनेडो' की पवन गति लगभग कितनी होती है?",
+  "o": ["50 km/hr", "100 km/hr", "Up to 500 km/hr", "2000 km/hr"],
+  "a": 2,
+  "e": "Tornadoes can have wind speeds up to 500 km/hr, making them the fastest winds on Earth. / टॉरनेडो की गति 500 किमी/घंटा तक पहुँच सकती है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The 'Eye Wall' (आई वॉल) of a cyclone is the place where:\nचक्रवात की 'आई वॉल' वह स्थान है जहाँ:",
+  "o": ["Winds are calm", "Winds are strongest with maximum rainfall and updrafts", "Temperature is lowest", "Birds fly safely"],
+  "a": 1,
+  "e": "The eyewall surrounding the eye has the most intense winds and heaviest rainfall. / आई वॉल में पवन की गति और वर्षा सर्वाधिक होती है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "How is a 'Thunderstorm' different from a Tropical Cyclone in terms of area and duration?\nक्षेत्र और अवधि के संदर्भ में 'थंडरस्टॉर्म' उष्णकटिबंधीय चक्रवात से कैसे भिन्न है?",
+  "o": ["It covers thousands of km", "It is small (few km) and short-lived (few hours)", "It lasts for weeks", "It only happens in the core"],
+  "a": 1,
+  "e": "Thunderstorms are local, intense storms covering small areas and lasting for a short time. / थंडरस्टॉर्म छोटे क्षेत्र में आते हैं और जल्दी समाप्त हो जाते हैं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "What causes the sound of 'Thunder'?\n'बादलों के गरजने' (Thunder) का क्या कारण है?",
+  "o": ["Clouds hitting each other", "Rapid expansion of air particles due to high temperature of lightning", "God's hammer", "Wind friction with mountains"],
+  "a": 1,
+  "e": "The extreme heat of lightning causes air to expand explosively, creating a shock wave we hear as thunder. / बिजली की अत्यधिक गर्मी से हवा के अचानक फैलने से गर्जना होती है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Which type of 'Front' involves cold air rapidly pushing and lifting warm air, leading to cumulonimbus clouds?\nकिस प्रकार के 'वाताग्र' (Front) में ठंडी हवा तेजी से गर्म हवा को ऊपर धकेलती है, जिससे कपासी वर्षी बादल बनते हैं?",
+  "o": ["Warm Front", "Cold Front (शीत वाताग्र)", "Stationary Front", "Occluded Front"],
+  "a": 1,
+  "e": "In a Cold Front, dense cold air displaces warm air vertically and violently. / शीत वाताग्र में ठंडी हवा गर्म हवा को तेजी से ऊपर उठाती है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The 'Coriolis Force' is zero at the ______ and maximum at the ______.\nकोरिओलिस बल ______ पर शून्य और ______ पर अधिकतम होता है।",
+  "o": ["Poles, Equator", "Equator, Poles", "Sea level, Mountains", "Center of Earth, Surface"],
+  "a": 1,
+  "e": "Coriolis force is absent at the equator and increases as we move towards the poles. / भूमध्य रेखा पर यह शून्य और ध्रुवों पर सर्वाधिक होता है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "What defines 'Extra-tropical' (Temperate) cyclones?\n'शीतोष्ण' (Temperate) चक्रवातों को क्या परिभाषित करता है?",
+  "o": ["They form over warm oceans only", "They form due to fronts in the mid-latitudes (40°-65°)", "They don't rotate", "They only occur in summer"],
+  "a": 1,
+  "e": "Extra-tropical cyclones form at high latitudes where cold and warm air masses meet. / ये उच्च अक्षांशों पर वाताग्रों (Fronts) के कारण बनते हैं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The term 'Barchans' refers to which wind-deposited landform?\n'बरखान' शब्द पवन द्वारा निक्षेपित किस भू-आकृति को संदर्भित करता है?",
+  "o": ["Mushroom rock", "Crescent-shaped sand dunes", "Flat playas", "Angular rocks"],
+  "a": 1,
+  "e": "Barchans are crescent sand dunes with horns pointing downwind. / ये आधे चाँद जैसे दिखने वाले रेत के टीले हैं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "What is the 'Latent Heat of Condensation' used for in the atmosphere?\nवायुमंडल में 'संघनन की गुप्त ऊष्मा' का क्या उपयोग है?",
+  "o": ["Freezing the ocean", "Fueling weather systems like cyclones and thunderstorms", "Creating wind friction", "Absorbing sunlight only"],
+  "a": 1,
+  "e": "Energy released during cloud formation powers the movement of storms. / यह ऊर्जा चक्रवातों और तूफानों को गति प्रदान करती है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Which instrument measures 'Atmospheric Pressure'?\n'वायुमंडलीय दाब' को कौन सा उपकरण मापता है?",
+  "o": ["Barometer", "Thermometer", "Hygrometer", "Anemometer"],
+  "a": 0,
+  "e": "A barometer is used to measure air pressure. / बैरोमीटर वायुदाब मापने का यंत्र है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The temperature at which the Relative Humidity of an air parcel reaches 100% is called:\nवह तापमान जिस पर वायु राशि की सापेक्ष आर्द्रता 100% हो जाती है, कहलाता है:",
+  "o": ["Boiling point", "Freezing point", "Dew Point (ओसांक)", "Specific heat"],
+  "a": 2,
+  "e": "Dew point is the temperature where air becomes saturated. / ओसांक वह तापमान है जहाँ हवा संतृप्त हो जाती है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Why do 'Tornadoes' appear as dark funnels reaching the ground?\n'टॉरनेडो' जमीन तक पहुँचने वाली काली कीप (Funnel) के रूप में क्यों दिखाई देते हैं?",
+  "o": ["Due to shadows", "Due to debris and dust being pulled up by strong updrafts", "Because of cold water", "None of the above"],
+  "a": 1,
+  "e": "The funnel cloud consists of condensed water vapor and picked-up debris. / धूल और मलबे के खिंचाव के कारण टॉरनेडो काला कीप जैसा दिखता है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The term 'Manga Shower' in Kerala is associated with which phenomenon?\nकेरल में 'मैंगो शावर' शब्द किस परिघटना से जुड़ा है?",
+  "o": ["Tornado", "Pre-monsoon thunderstorms", "Glacial melt", "Dust storm"],
+  "a": 1,
+  "e": "Localized thunderstorms in April/May help in ripening mangoes. / मानसून पूर्व होने वाली तूफानी वर्षा।",
+  "cat": "geo",
+  "sub": "mapping"
+},
+{
+  "q": "A 'Plunge Pool' is an erosional feature of which geomorphic agent?\n'प्लंज पूल' किस भू-आकृतिक कारक की अपरदनी विशेषता है?",
+  "o": ["Wind", "Glacier", "Running Water (Waterfall)", "Waves"],
+  "a": 2,
+  "e": "Formed at the base of a waterfall by the sheer force of water. / झरने के आधार पर पानी के प्रहार से बना गड्ढा।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Which state of matter describes the 'Outer Core' where S-waves cannot pass?\nपदार्थ की कौन सी अवस्था 'बाहरी कोर' का वर्णन करती है जहाँ एस-तरंगें नहीं गुजर सकतीं?",
+  "o": ["Solid", "Liquid/Plasma", "Gaseous", "None"],
+  "a": 1,
+  "e": " proven by seismic shadow zones between 105° and 105°. / बाहरी कोर तरल है, जो एस-तरंगों को रोक देता है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The 'Moho' Discontinuity separates the ______ from the ______.\n'मोह' असंबद्धता किसे किससे अलग करती है?",
+  "o": ["Crust, Mantle", "Mantle, Core", "Upper, Lower Crust", "Inner, Outer Core"],
+  "a": 0,
+  "e": "Boundary between Earth's rocky crust and the mantle. / क्रस्ट और मेंटल के बीच की सीमा।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "What happens during 'Domal Uplift' in endogenic forces?\nएंडोजेनिक बलों में 'डोमल अपलिफ्ट' के दौरान क्या होता है?",
+  "o": ["Land sinks", "Crust bends upward into a dome due to pressure from below", "Mountains turn to sand", "Ice melts"],
+  "a": 1,
+  "e": "Magma pressure pushes the crust upward. / नीचे से दबाव के कारण क्रस्ट का ऊपर उठना।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Which mineral has hardness 10 on Mohs scale?\nमोह स्केल पर किस खनिज की कठोरता 10 है?",
+  "o": ["Talc", "Quartz", "Diamond", "Topaz"],
+  "a": 2,
+  "e": "Diamond is the hardest natural mineral. / हीरा सर्वाधिक कठोर है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The term 'Sial' is shorthand for which two minerals?\n'सियाल' (Sial) शब्द किन दो खनिजों का संक्षिप्त रूप है?",
+  "o": ["Silica and Aluminum", "Silica and Magnesium", "Sodium and Iron", "Lead and Zinc"],
+  "a": 0,
+  "e": "Continental crust composition. / सिलिका और एल्युमीनियम।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Which seismic wave is the fastest and arrives first?\nकौन सी भूकंपीय तरंग सबसे तेज होती है और पहले पहुँचती है?",
+  "o": ["S-wave", "P-wave", "L-wave", "None"],
+  "a": 1,
+  "e": "Primary waves (P-waves) reach recording stations first. / पी-तरंगें सबसे तेज होती हैं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "What is the primary factor for 'Continentality'?\n'महाद्वीपीयता' (Continentality) का प्राथमिक कारक क्या है?",
+  "o": ["Distance from the sea", "Height of mountains", "Number of forests", "Wind speed"],
+  "a": 0,
+  "e": "Regions far from the sea have extreme temperature variations. / समुद्र से दूरी के कारण तापांतर बढ़ जाता है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The 'Standard Meridian' of India follows which longitude?\nभारत का 'मानक याम्योत्तर' किस देशांतर का अनुसरण करता है?",
+  "o": ["0°", "82°30' E", "90° E", "23.5° N"],
+  "a": 1,
+  "e": "82.5° East passing through Mirzapur. / 82.5° पूर्व भारत का मानक देशांतर है।",
+  "cat": "geo",
+  "sub": "mapping"
+},
+{
+  "q": "Which geomorphic agent forms 'U-shaped' valleys?\nकौन सा भू-आकृतिक कारक 'यू-आकार' की घाटियाँ बनाता है?",
+  "o": ["River", "Wind", "Glacier", "Wave"],
+  "a": 2,
+  "e": "Moving ice carves broad U-shaped troughs. / हिमनद यू-आकार की घाटी बनाते हैं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "What describes 'Subduction'?\n'सबडक्शन' (Subduction) का वर्णन क्या है?",
+  "o": ["Plates pulling apart", "One plate sinking beneath another", "Plates sliding horizontally", "None"],
+  "a": 1,
+  "e": "Occurs at convergent boundaries. / एक प्लेट का दूसरे के नीचे धंसना।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The 'Afar Triangle' hotspot is in:\n'अफार ट्रायंगल' हॉटस्पॉट कहाँ है?",
+  "o": ["Asia", "Africa (Ethiopia)", "South America", "Europe"],
+  "a": 1,
+  "e": "Triple junction in East Africa. / पूर्वी अफ्रीका में।",
+  "cat": "geo",
+  "sub": "mapping"
+},
+{
+  "q": "Which mineral has hardness level 1?\nकिस खनिज का कठोरता स्तर 1 है?",
+  "o": ["Quartz", "Gypsum", "Talc", "Diamond"],
+  "a": 2,
+  "e": "Talc is the softest. / टल्क सबसे कोमल है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The term 'Syntaxial Bend' refers to which range?\n'सिंटैक्सियल बेंड' किस पर्वतमाला को संदर्भित करता है?",
+  "o": ["Andes", "Rockies", "Himalayas", "Alps"],
+  "a": 2,
+  "e": "Sharp turns at eastern and western ends of Himalayas. / हिमालय के तीव्र मोड़।",
+  "cat": "geo",
+  "sub": "mapping"
+},
+{
+  "q": "What causes the 'Bulge' at the Equator?\nभूमध्य रेखा पर 'उभार' का क्या कारण है?",
+  "o": ["Moon", "Centrifugal force from rotation", "Water tides", "Sun"],
+  "a": 1,
+  "e": "Earth's spinning effect. / घूर्णन का अपकेंद्रीय प्रभाव।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Which seismic wave moves like a snake side-to-side?\nकौन सी भूकंपीय तरंग सांप की तरह अगल-बगल चलती है?",
+  "o": ["P-wave", "Love wave (L-wave)", "S-wave", "None"],
+  "a": 1,
+  "e": "Horizontal surface wave. / लव तरंगें क्षैतिज रूप से चलती हैं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The 'Asthenosphere' is primarily made of:\n'एस्थेनोस्फीयर' मुख्य रूप से बनी है:",
+  "o": ["Granite", "Peridotite", "Basalt", "Chalk"],
+  "a": 1,
+  "e": "Main source of magma in upper mantle. / मेंटल की मुख्य चट्टान पीरियोडोटाइट।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "What defines 'Maffic' rocks?\n'मैफ़िक' चट्टानों को क्या परिभाषित करता है?",
+  "o": ["High Silica", "Low Silica, High Iron/Magnesium", "White color", "No density"],
+  "a": 1,
+  "e": "Denser, basaltic rocks. / सघन और गहरे रंग की चट्टानें।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The 'Zoid' shape implies Earth is flattened at:\n'जॉइड' आकार का अर्थ है पृथ्वी चपटी है:",
+  "o": ["Equator", "Poles", "Sea Level", "Troughs"],
+  "a": 1,
+  "e": "Flattened at poles. / ध्रुवों पर चपटी।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "What is 'Regolith'?\n'रेगोलिथ' क्या है?",
+  "o": ["Solid rock", "Loose weathered material covering bedrock", "Magma", "None"],
+  "a": 1,
+  "e": "Mixture of soil and broken rock. / चट्टान के ऊपर जमा ढीला मलबा।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Which state of matter is 'Inner Core'?\n'आंतरिक कोर' किस अवस्था में है?",
+  "o": ["Liquid", "Gas", "Solid", "None"],
+  "a": 2,
+  "e": "Solid due to extreme pressure. / अत्यधिक दबाव के कारण ठोस।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "In which city is the 'Red Sea' forming?\n'लाल सागर' कहाँ बन रहा है?",
+  "o": ["East Africa", "India", "USA", "Europe"],
+  "a": 0,
+  "e": "Active rifting zone. / पूर्वी अफ्रीका में।",
+  "cat": "geo",
+  "sub": "mapping"
+},
+{
+  "q": "Which mineral was confirmed on Moon by Chandrayaan-3?\nचंद्रयान-3 द्वारा चंद्रमा पर किस खनिज की पुष्टि की गई?",
+  "o": ["Gold", "Sulfur", "Iron", "None"],
+  "a": 1,
+  "e": "Achievement of India's mission. / चंद्रमा पर सल्फर की खोज।",
+  "cat": "geo",
+  "sub": "mapping"
+},
+{
+  "q": "What determines 'Viscosity' of magma?\nमैग्मा की 'श्यानता' क्या निर्धारित करती है?",
+  "o": ["Water", "Silica content", "Color", "None"],
+  "a": 1,
+  "e": "High silica = High viscosity. / सिलिका की मात्रा।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Which seismic wave arrives last?\nकौन सी भूकंपीय तरंग सबसे अंत में पहुँचती है?",
+  "o": ["P-wave", "S-wave", "Surface wave", "Body wave"],
+  "a": 2,
+  "e": "Surface waves are slowest. / धरातलीय तरंगें सबसे धीमी होती हैं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "What turns 'Metamorphic' rocks back into 'Igneous'?\n'कायांतरित' शैलों को वापस 'आग्नेय' में क्या बदलता है?",
+  "o": ["Weathering", "Melting", "Pressure", "Erosion"],
+  "a": 1,
+  "e": "Melting produces magma. / पिघलकर जमकर ठोस होना।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Which mineral property refers to 'Color of Powder'?\nकौन सा खनिज गुण 'चूर्ण के रंग' को संदर्भित करता है?",
+  "o": ["Lustre", "Streak", "Cleavage", "Hardness"],
+  "a": 1,
+  "e": "Identified using a streak plate. / यह स्ट्रीक (Streak) कहलाता है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "A 'Laccolith' is ______ shaped.\n'लैकोलिथ' ______ आकार का होता है।",
+  "o": ["Saucer", "Dome-shaped", "Wall", "Thin sheet"],
+  "a": 1,
+  "e": "Mushroom-like dome. / यह गुंबद के आकार की अंतर्भेदी आकृति है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+  {
+  "q": "Which cloud type is known as 'Fair Weather Cloud' and looks like cotton balls?\nकौन सा बादल 'साफ़ मौसम का बादल' कहलाता है और रुई के गोले जैसा दिखता है?",
+  "o": ["Nimbus", "Stratus", "Cumulus (कपासी)", "Cirrus"],
+  "a": 2,
+  "e": "Cumulus clouds are fluffy and indicate fair weather under normal conditions. / कपासी बादल रुई के ढेर जैसे दिखते हैं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "What does the term 'Nimbus' mean in cloud classification?\nबादल वर्गीकरण में 'निम्बस' (Nimbus) शब्द का क्या अर्थ है?",
+  "o": ["High altitude", "Wispy", "Rain-bearing (वर्षा करने वाला)", "Transparent"],
+  "a": 2,
+  "e": "Nimbus signifies that the cloud is heavy with moisture and likely to cause precipitation. / निम्बस का अर्थ वर्षा करने वाला बादल है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Which clouds form at the highest altitudes (8-12 km) and are made of ice crystals?\nकौन से बादल सर्वाधिक ऊँचाई (8-12 किमी) पर बनते हैं और बर्फ के क्रिस्टल से बने होते हैं?",
+  "o": ["Cirrus (सिरस)", "Stratus", "Altocumulus", "Nimbostratus"],
+  "a": 0,
+  "e": "Cirrus clouds are thin, wispy clouds found at very high altitudes. / सिरस बादल रेशमी और ऊँचाई पर पाए जाने वाले बादल हैं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The 'Latent Heat' released during cloud formation is responsible for:\nबादल बनने के दौरान मुक्त होने वाली 'गुप्त ऊष्मा' किसके लिए जिम्मेदार है?",
+  "o": ["Cooling the air", "Providing energy to storms and cyclones", "Reducing humidity", "Making sky blue"],
+  "a": 1,
+  "e": "This energy fuels the intensification of thunderstorms and tropical cyclones. / यह ऊर्जा तूफानों और चक्रवातों को शक्ति देती है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "What is 'Relative Humidity' expressed as?\n'सापेक्ष आर्द्रता' (Relative Humidity) को किस रूप में व्यक्त किया जाता है?",
+  "o": ["Grams", "Kilometers", "Percentage (%)", "Degrees"],
+  "a": 2,
+  "e": "Relative humidity is the ratio of actual moisture to capacity, expressed in percentage. / सापेक्ष आर्द्रता को प्रतिशत में मापा जाता है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "When water vapor turns directly into ice crystals without becoming liquid, it is called:\nजब जलवाष्प बिना तरल बने सीधे बर्फ के क्रिस्टल में बदल जाती है, तो उसे क्या कहते हैं?",
+  "o": ["Condensation", "Sublimation (ऊर्ध्वपातन)", "Evaporation", "Leaching"],
+  "a": 1,
+  "e": "Sublimation is the transition from gas directly to solid. / गैस का सीधे ठोस में बदलना ऊर्ध्वपातन है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Which 'Middle-level' cloud (2-6 km) is characterized by a wavy or patchy structure?\nकिस 'मध्य-स्तर' के बादल (2-6 किमी) की विशेषता लहरदार या धब्बेदार संरचना है?",
+  "o": ["Cirrostratus", "Altocumulus (मध्य कपासी)", "Stratocumulus", "Cumulonimbus"],
+  "a": 1,
+  "e": "Alto- prefix refers to middle-level clouds. / 'एल्टो' (Alto) शब्द मध्य स्तर के बादलों को दर्शाता है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "What happens to the 'Water holding capacity' of air as its temperature increases?\nवायु का तापमान बढ़ने पर उसकी 'जल धारण क्षमता' का क्या होता है?",
+  "o": ["It decreases", "It remains constant", "It increases", "It becomes zero"],
+  "a": 2,
+  "e": "Warm air can hold more moisture than cold air. / गर्म हवा अधिक नमी धारण कर सकती है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "A cloud that covers large areas of the sky in uniform layers is called:\nवह बादल जो आकाश के बड़े क्षेत्रों को एकसमान परतों में ढकता है, कहलाता है:",
+  "o": ["Cirrus", "Stratus (स्तरी)", "Cumulus", "Lenticular"],
+  "a": 1,
+  "e": "Stratus clouds form thick, blanket-like layers. / स्तरी बादल चादर की तरह आसमान में फैले होते हैं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Which type of 'Fog' is common over cold ocean currents near the coast?\nतट के पास ठंडी समुद्री धाराओं के ऊपर किस प्रकार का 'कोहरा' (Fog) सामान्य है?",
+  "o": ["Radiation Fog", "Advection Fog (अभिवाहन कोहरा)", "Upslope Fog", "Smog"],
+  "a": 1,
+  "e": "Advection fog forms when warm moist air moves over a cool surface. / ठंडी सतह के ऊपर गर्म हवा के बहने से बना कोहरा।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "What are 'Hygroscopic Nuclei'?\n'हाइग्रोस्कोपिक न्यूक्लिआई' (Hygroscopic Nuclei) क्या हैं?",
+  "o": ["Frozen raindrops", "Small particles like salt or dust around which condensation starts", "Type of cloud", "Vacuum in space"],
+  "a": 1,
+  "e": "These particles provide the surface for water vapor to turn into droplets. / धूल और नमक के कण जिनके चारों ओर संघनन होता है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Which rainfall type is common in the 'Doldrums' (Equator) where air rises vertically after daily heating?\n'डोलड्रम' (भूमध्य रेखा) में कौन सी वर्षा सामान्य है जहाँ दैनिक तापन के बाद हवा ऊर्ध्वाधर उठती है?",
+  "o": ["Frontal rainfall", "Cyclonic rainfall", "Convectional rainfall (संवहनीय वर्षा)", "Orograpic rainfall"],
+  "a": 2,
+  "e": "Convectional rain often occurs in equatorial regions around 4 PM daily. / भूमध्य रेखा पर होने वाली दैनिक वर्षा संवहनीय वर्षा है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The 'Windward side' of a mountain receives more rain than the 'Leeward side' in which process?\nकिस प्रक्रिया में पर्वत के 'पवनोन्मुख ढाल' पर 'विमुख ढाल' की तुलना में अधिक वर्षा होती है?",
+  "o": ["Convectional", "Frontal", "Orographic (पर्वतीय वर्षा)", "Monsoon only"],
+  "a": 2,
+  "e": "Air is forced to rise over a mountain, cooling and causing rain on the rising side. / पहाड़ों से टकराकर हवा के ऊपर उठने से होने वाली वर्षा।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "What is a 'Rain Shadow Area'?\n'वृष्टि छाया क्षेत्र' (Rain Shadow Area) क्या है?",
+  "o": ["A place with constant flood", "The dry leeward side of a mountain range", "The center of a cyclone", "The North Pole"],
+  "a": 1,
+  "e": "The leeward side remains dry as moisture is lost on the windward side. / पहाड़ के पीछे का वह सूखा हिस्सा जहाँ बारिश नहीं पहुँचती।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The term 'Sleet' (स्लीट) refers to:\n'स्लीट' (Sleet) शब्द का तात्पर्य है:",
+  "o": ["Large balls of ice", "Frozen raindrops or melted snow refreezing into small ice pellets", "Only fine mist", "Heavy summer rain"],
+  "a": 1,
+  "e": "Sleet consists of small pellets of ice formed by freezing of rain. / जमी हुई वर्षा की बूंदें स्लीट कहलाती हैं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "What describes 'Hail' (हेल)?\n'हेल' (ओला) का वर्णन क्या है?",
+  "o": ["Small dust particles", "Large, layered balls of ice falling from strong cumulonimbus clouds", "Dew drops", "Sea spray"],
+  "a": 1,
+  "e": "Hail forms in strong updrafts that carry ice pellets up through clouds multiple times. / तूफानी बादलों से गिरने वाले बर्फ के बड़े गोले।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Which is the main factor determining the 'Global distribution' of rainfall?\nवर्षा के 'वैश्विक वितरण' को निर्धारित करने वाला मुख्य कारक कौन सा है?",
+  "o": ["Moon's phases", "Wind belts and distance from the sea", "Tides", "Building height"],
+  "a": 1,
+  "e": "Global winds (like Trade winds) and proximity to oceans determine regional rain. / वैश्विक पवन पेटियाँ और समुद्र से दूरी वर्षा तय करते हैं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "High rainfall regions (above 200 cm) are typically found in:\nउच्च वर्षा वाले क्षेत्र (200 सेमी से ऊपर) आमतौर पर कहाँ पाए जाते हैं?",
+  "o": ["Equatorial belt and windward mountain slopes", "Deep inside large continents", "Polar regions", "Sub-tropical deserts"],
+  "a": 0,
+  "e": "Abundant heat and moisture near the equator result in heavy rainfall. / भूमध्यरेखीय क्षेत्रों में सर्वाधिक वर्षा होती है।",
+  "cat": "geo",
+  "sub": "mapping"
+},
+{
+  "q": "The term 'Specific Humidity' measures:\n'विशिष्ट आर्द्रता' (Specific Humidity) मापती है:",
+  "o": ["The ratio of light to shadow", "The actual weight of water vapor per unit weight of air", "Rainfall speed", "Cloud density only"],
+  "a": 1,
+  "e": "It remains constant regardless of pressure/temp changes unless moisture is added/removed. / हवा के प्रति इकाई भार में जलवाष्प का वास्तविक भार।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "A 'Cloudburst' (बादल फटना) is an extreme form of:\n'बादल फटना' (Cloudburst) किसका एक चरम रूप है?",
+  "o": ["Drought", "Intense localized rainfall from cumulonimbus clouds", "Global warming", "Ozone hole"],
+  "a": 1,
+  "e": "Sudden, very heavy rain over a small area often leading to flash floods. / एक छोटे क्षेत्र में होने वाली अत्यधिक तीव्र वर्षा।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "What happens to 'Relative Humidity' if air is cooled to its dew point?\nयदि वायु को उसके ओसांक तक ठंडा किया जाए तो 'सापेक्ष आर्द्रता' का क्या होगा?",
+  "o": ["It becomes 0%", "It remains 50%", "It becomes 100%", "It vanishes"],
+  "a": 2,
+  "e": "At dew point, the air is fully saturated. / ओसांक पर सापेक्ष आर्द्रता 100% होती है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The process of 'Evapo-transpiration' includes evaporation from ______ and transpiration from ______.\n'वाष्पन-वाष्पोत्सर्जन' की प्रक्रिया में ______ से वाष्पीकरण और ______ से वाष्पोत्सर्जन शामिल है।",
+  "o": ["Ice, Rock", "Water bodies, Plants", "Air, Sun", "Clouds, Soil"],
+  "a": 1,
+  "e": "Combined loss of water from soil/water surfaces and vegetation. / जल निकायों और पौधों से होने वाला जल का क्षय।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Which gas is used as a 'Coolant' in its liquid form for preservation?\nसंरक्षण के लिए किस गैस का उसके तरल रूप में 'कूलेंट' के रूप में उपयोग किया जाता है?",
+  "o": ["Oxygen", "Liquid Nitrogen", "Argon", "Helium"],
+  "a": 1,
+  "e": "Liquid nitrogen is vital for cryo-preservation. / तरल नाइट्रोजन का उपयोग क्रायो-प्रिजर्वेशन में होता है।",
+  "cat": "geo",
+  "sub": "resources"
+},
+{
+  "q": "The 'Tropopause' height varies between ______ km.\nक्षोभसीमा (Tropopause) की ऊँचाई ______ किमी के बीच बदलती रहती है।",
+  "o": ["0-5", "8-18", "50-80", "100-200"],
+  "a": 1,
+  "e": "Height depends on convection intensity at different latitudes. / यह ध्रुवों पर 8 किमी और भूमध्य रेखा पर 18 किमी होती है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Which seismic wave moves in a 'Circular' orbit?\nकौन सी भूकंपीय तरंग 'वृत्ताकार' कक्षा में चलती है?",
+  "o": ["P-wave", "Rayleigh wave (R-wave)", "S-wave", "None"],
+  "a": 1,
+  "e": "Surface waves with elliptical/circular ground motion. / रेले तरंगें वृत्ताकार गति पैदा करती हैं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The term 'Sial' refers to rocks rich in Silica and ______.\n'सियाल' (Sial) शब्द सिलिका और ______ से भरपूर चट्टानों को संदर्भित करता है।",
+  "o": ["Aluminum", "Magnesium", "Iron", "Carbon"],
+  "a": 0,
+  "e": "Sial = Silica + Aluminum. / सिलिका और एल्युमीनियम।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "What defines the 'Standard Meridian' of India?\nभारत का 'मानक याम्योत्तर' क्या परिभाषित करता है?",
+  "o": ["Height of mountains", "The longitude used to fix Indian Standard Time (IST)", "Distance from sea", "Amount of gold"],
+  "a": 1,
+  "e": "82.5° East longitude. / 82.5° पूर्व देशांतर जो भारत का समय तय करता है।",
+  "cat": "geo",
+  "sub": "mapping"
+},
+{
+  "q": "Which layer of atmosphere reflecting radio waves back to Earth?\nवायुमंडल की कौन सी परत रेडियो तरंगों को वापस पृथ्वी पर परावर्तित करती है?",
+  "o": ["Stratosphere", "Ionosphere (आयनमंडल)", "Exosphere", "Troposphere"],
+  "a": 1,
+  "e": "Charged particles in the ionosphere enable radio communication. / आयनमंडल रेडियो संचार के लिए जिम्मेदार है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The 'Ring of Fire' is located in which ocean?\n'रिंग ऑफ फायर' किस महासागर में स्थित है?",
+  "o": ["Atlantic", "Pacific", "Indian", "Arctic"],
+  "a": 1,
+  "e": "A basin of high volcanic and seismic activity. / प्रशांत महासागर के चारों ओर का ज्वालामुखी क्षेत्र।",
+  "cat": "geo",
+  "sub": "mapping"
+},
+{
+  "q": "What is the primary factor that makes a rock 'Basaltic'?\nकौन सा प्राथमिक कारक किसी शैल को 'बेसाल्टिक' बनाता है?",
+  "o": ["High silica", "Low silica and high Iron/Magnesium", "White color", "Always soft"],
+  "a": 1,
+  "e": "Basalt is a dense, maffic rock. / कम सिलिका और अधिक लोहा-मैग्नीशियम।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Which state of matter is the 'Inner Core' of the Earth?\nपृथ्वी का 'आंतरिक कोर' पदार्थ की किस अवस्था में है?",
+  "o": ["Liquid", "Solid", "Gaseous", "Plasma"],
+  "a": 1,
+  "e": "Solid due to extreme pressure. / अत्यधिक दबाव के कारण ठोस।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The term 'Nife' refers to Earth's core because of:\n'निफे' शब्द पृथ्वी के कोर को संदर्भित करता है क्योंकि:",
+  "o": ["Nickel and Ferrous (Iron)", "Nickel and Fluorine", "Nitrogen and Feldspar", "None"],
+  "a": 0,
+  "e": "Primary elements Ni and Fe. / निकल और लोहे की प्रधानता।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Which seismic wave arrives 'Last' at a station?\nस्टेशन पर कौन सी भूकंपीय तरंग 'सबसे अंत' में पहुँचती है?",
+  "o": ["P-wave", "S-wave", "Surface wave", "Body wave"],
+  "a": 2,
+  "e": "Slowest but most destructive. / धरातलीय तरंगें सबसे धीमी होती हैं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "What describes 'Regolith'?\n'रेगोलिथ' (Regolith) क्या है?",
+  "o": ["Solid rock", "Loose weathered material covering bedrock", "Magma only", "Pure gas"],
+  "a": 1,
+  "e": "Mixture of soil and rock fragments. / चट्टान के ऊपर जमा ढीली सामग्री।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Which 'Geomorphic Agent' forms 'Deltas'?\nकौन सा भू-आकृतिक कारक 'डेल्टा' बनाता है?",
+  "o": ["Wind", "Running Water (River)", "Glacier", "Wave"],
+  "a": 1,
+  "e": "Formed at the mouth of rivers by deposition. / नदी के मुहाने पर निक्षेपण द्वारा निर्मित।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "A 'Lagoon' is a water body separated from sea by:\nएक 'लैगून' समुद्र से किसके द्वारा अलग किया गया जल निकाय है?",
+  "o": ["Mountain", "Spit or Barrier Bar", "Glacier", "Iceberg"],
+  "a": 1,
+  "e": "Partial or complete separation by sand bars. / रेत की पट्टी द्वारा समुद्र से अलग हुआ जल भाग।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "What turns 'Metamorphic' rocks back into 'Igneous'?\n'कायांतरित' शैलों को वापस 'आग्नेय' में क्या बदलता है?",
+  "o": ["Weathering", "Melting and subsequent cooling", "Compression", "Erosion"],
+  "a": 1,
+  "e": "Melting produces magma, cooling produces rock. / पिघलकर जमकर ठोस होना।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The term 'Orogeny' is specifically related to:\n'ओरोजेनी' (Orogeny) शब्द विशेष रूप से किससे संबंधित है?",
+  "o": ["Soil formation", "Mountain building", "Ice melting", "Sea level rise"],
+  "a": 1,
+  "e": "Horizontal tectonic forces build mountain ranges. / पर्वत निर्माणकारी बलों को ओरोजेनेटिक कहते हैं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Which mineral property refers to the shape of crystal faces?\nकौन सा खनिज गुण क्रिस्टल फलकों की व्यवस्था को संदर्भित करता है?",
+  "o": ["Cleavage", "Streak", "External Crystal Form", "Fracture"],
+  "a": 2,
+  "e": "Determined by internal atomic arrangement. / बाहरी ज्यामितीय आकार को क्रिस्टल रूप कहते हैं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The 'Standard Meridian' for IST passes through which city?\nIST के लिए मानक याम्योत्तर किस शहर से गुजरता है?",
+  "o": ["Delhi", "Mirzapur", "Mumbai", "Kolkata"],
+  "a": 1,
+  "e": "Located in Uttar Pradesh. / यह मिर्जापुर से होकर गुजरता है।",
+  "cat": "geo",
+  "sub": "mapping"
+},
+{
+  "q": "Which type of 'Process' is Volcanism?\n'ज्वालामुखीयता' (Volcanism) किस प्रकार की प्रक्रिया है?",
+  "o": ["Exogenic", "Endogenic", "Atmospheric", "Static"],
+  "a": 1,
+  "e": "Internal force and process. / यह एक एंडोजेनिक (आंतरिक) प्रक्रिया है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "What happens during 'Oxidation' in chemical weathering?\nरासायनिक अपक्षय में 'ऑक्सीकरण' के दौरान क्या होता है?",
+  "o": ["Addition of oxygen to minerals like iron, forming rust", "Loss of all minerals", "Rocks turn blue", "Melting of rocks"],
+  "a": 0,
+  "e": "Iron reacts with oxygen and water to form ferric oxide. / लोहे का ऑक्सीजन से क्रिया कर जंग बनाना।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The 'Amazon River' is located in which continent?\n'अमेजन नदी' किस महाद्वीप में स्थित है?",
+  "o": ["Africa", "Asia", "South America", "North America"],
+  "a": 2,
+  "e": "The largest river by volume in the world. / यह दक्षिण अमेरिका में स्थित है।",
+  "cat": "geo",
+  "sub": "mapping"
+},
+{
+  "q": "What creates 'V-shaped' valleys?\n'वी-आकार' की घाटियाँ कौन बनाता है?",
+  "o": ["Wind", "Glacier", "Running Water (River)", "None"],
+  "a": 2,
+  "e": "Vertical erosion in a river's youth stage. / युवावस्था में नदियों द्वारा निर्मित घाटी।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Which seismic wave is most 'Destructive'?\nकौन सी भूकंपीय तरंग सर्वाधिक 'विनाशकारी' है?",
+  "o": ["P-wave", "S-wave", "Surface wave", "None"],
+  "a": 2,
+  "e": "Causes maximum surface damage. / धरातलीय तरंगें सर्वाधिक विनाश करती हैं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The 'Standard Time' of a country is chosen based on its:\nकिसी देश का 'मानक समय' किसके आधार पर चुना जाता है?",
+  "o": ["Latitude", "Longitude", "Altitude", "Population"],
+  "a": 1,
+  "e": "Based on a central meridian. / मानक समय देशांतर पर आधारित होता है।",
+  "cat": "geo",
+  "sub": "mapping"
+},
+{
+  "q": "What describes 'Isotherms'?\n'आइसोथर्म' (Isotherms) क्या दर्शाते हैं?",
+  "o": ["Lines of equal temperature", "Lines of equal pressure", "Lines of equal rain", "None"],
+  "a": 0,
+  "e": "Connect places with the same temperature. / समान तापमान वाले स्थानों को जोड़ने वाली रेखाएं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Which mineral is Assigned Hardness 1?\nकिस खनिज को कठोरता 1 दी गई है?",
+  "o": ["Talc", "Quartz", "Diamond", "Gypsum"],
+  "a": 0,
+  "e": "Softest mineral. / टल्क सबसे कोमल खनिज है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+  {
+  "q": "Which climate type serves as a transition zone between tropical rainforests and arid deserts, featuring distinct wet and dry seasons?\nकौन सा जलवायु प्रकार उष्णकटिबंधीय वर्षावनों और शुष्क मरुस्थलों के बीच एक संक्रमण क्षेत्र के रूप में कार्य करता है, जिसमें स्पष्ट गीले और सूखे मौसम होते हैं?",
+  "o": ["Tropical Wet (Af)", "Tropical Monsoon (Am)", "Tropical Wet and Dry / Savanna (Aw)", "Humid Subtropical (Cfa)"],
+  "a": 2,
+  "e": "Tropical Savanna climate (Aw) is a transition zone between humid and arid regions. / सवाना जलवायु वर्षावनों और मरुस्थलों के बीच का संक्रमण क्षेत्र है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The 'Llanos' and 'Campos' savanna grasslands are located in which continent?\n'लानोस' और 'कंपोस' सवाना घास के मैदान किस महाद्वीप में स्थित हैं?",
+  "o": ["Africa", "Australia", "South America", "North America"],
+  "a": 2,
+  "e": "Llanos are found in the Orinoco basin (Venezuela) and Campos in the Brazilian Highlands. / लानोस वेनेजुएला में और कंपोस ब्राजील में पाए जाते हैं।",
+  "cat": "geo",
+  "sub": "mapping"
+},
+{
+  "q": "What is a unique characteristic of the 'Baobab' and 'Acacia' trees found in the Savanna?\nसवाना में पाए जाने वाले 'बाओबाब' और 'अकेसिया' पेड़ों की एक अनूठी विशेषता क्या है?",
+  "o": ["They have thin needle-like leaves", "They are umbrella-shaped with broad stems to store water during dry summers", "They grow only in water", "They have no roots"],
+  "a": 1,
+  "e": "These trees are drought-resistant and store water in their thick trunks to survive the dry season. / ये पेड़ सूखे से बचने के लिए अपने तनों में पानी जमा करते हैं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Why are Savanna regions often referred to as 'Big Game Country'?\nसवाना क्षेत्रों को अक्सर 'बिग गेम कंट्री' (Big Game Country) क्यों कहा जाता है?",
+  "o": ["Due to large sports stadiums", "Due to the abundance of large wild animals like elephants, giraffes, and lions", "Because of high wheat production", "Due to intense mining"],
+  "a": 1,
+  "e": "The abundance of diverse and large wildlife makes it a prime region for viewing/hunting big animals. / विशाल वन्यजीवों की प्रचुरता के कारण इसे 'बिग गेम कंट्री' कहते हैं।",
+  "cat": "geo",
+  "sub": "resources"
+},
+{
+  "q": "Which of the following is a 'Hot Desert' primarily caused by offshore trade winds and cold ocean currents?\nनिम्नलिखित में से कौन सा एक 'गर्म मरुस्थल' है जो मुख्य रूप से अपतटीय व्यापारिक पवनों और ठंडी समुद्री धाराओं के कारण बनता है?",
+  "o": ["Gobi Desert", "Sahara Desert", "Atacama Desert", "Both b and c"],
+  "a": 3,
+  "e": "Hot deserts like Sahara and Atacama are located on western margins due to desiccating effects of cold currents and offshore winds. / सहारा और अटाकामा जैसे मरुस्थल ठंडी धाराओं और अपतटीय पवनों से बनते हैं।",
+  "cat": "geo",
+  "sub": "mapping"
+},
+{
+  "q": "What is the primary factor for the existence of deserts like 'Gobi' and 'Taklamakan' in the mid-latitudes?\nमध्य अक्षांशों में 'गोबी' और 'टकलामकान' जैसे मरुस्थलों के अस्तित्व का प्राथमिक कारक क्या है?",
+  "o": ["Cold currents only", "Continentality (remoteness from moisture-bearing winds)", "High rainfall", "Proximity to the equator"],
+  "a": 1,
+  "e": "These are rain-shadow or continental deserts located far away from oceanic moisture. / समुद्र से अत्यधिक दूरी (महाद्वीपीयता) के कारण ये क्षेत्र शुष्क रहते हैं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The 'Atacama Desert' is associated with which cold ocean current?\n'अटाकामा मरुस्थल' किस ठंडी समुद्री धारा से जुड़ा है?",
+  "o": ["Canary Current", "Benguela Current", "Peruvian / Humboldt Current", "California Current"],
+  "a": 2,
+  "e": "The cold Peruvian current off the coast of Chile contributes to the extreme aridity of the Atacama. / पेरूवियन (हम्बोल्ट) धारा अटाकामा की शुष्कता का कारण है।",
+  "cat": "geo",
+  "sub": "mapping"
+},
+{
+  "q": "What are 'Xerophytic' plants typical of desert vegetation?\nमरुस्थलीय वनस्पति के विशिष्ट 'जेरोफाइटिक' (Xerophytic) पौधे क्या हैं?",
+  "o": ["Plants that grow in water", "Drought-resistant plants with waxy cuticles and shallow roots like cactus", "Tall trees with soft leaves", "Mosses and Lichens only"],
+  "a": 1,
+  "e": "Xerophytes are adapted to survive in environments with little liquid water. / कम पानी में जीवित रहने वाले अनुकूलित पौधे जेरोफाइट्स कहलाते हैं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The 'Oasis' (ओएसिस) in a desert is significant because:\nमरुस्थल में 'ओएसिस' (Oasis) महत्वपूर्ण है क्योंकि:",
+  "o": ["It is where sand dunes are tallest", "It is a water-containing depression where date palms and agriculture are possible", "It has no wind", "It is made of solid gold"],
+  "a": 1,
+  "e": "Oases provide a rare water source for settlements and crops like date palms in arid regions. / ओएसिस जल स्रोत प्रदान करते हैं जहाँ खजूर की खेती संभव होती है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Which desert is known as a 'Mid-latitude' or Temperate desert located in South America?\nदक्षिण अमेरिका में स्थित 'मध्य-अक्षांश' या शीतोष्ण मरुस्थल के रूप में किसे जाना जाता है?",
+  "o": ["Atacama", "Kalahari", "Patagonian Desert", "Mojave"],
+  "a": 2,
+  "e": "The Patagonian desert is a cold-winter desert located in Argentina. / पेटागोनिया दक्षिण अमेरिका का एक शीतोष्ण मरुस्थल है।",
+  "cat": "geo",
+  "sub": "mapping"
+},
+{
+  "q": "The 'Kubuki Model' in China is a successful example of:\nचीन में 'कुबुकी मॉडल' (Kubuki Model) किसका एक सफल उदाहरण है?",
+  "o": ["Building space stations", "Greening and restoring a desert into fertile vegetation", "Deep sea mining", "Frontogenesis"],
+  "a": 1,
+  "e": "The Kubuqi model is world-renowned for desertification control and ecological restoration. / यह मरुस्थल को हरा-भरा बनाने का एक सफल चीन का मॉडल है।",
+  "cat": "geo",
+  "sub": "resources"
+},
+{
+  "q": "In which climate type does 'Winter Rainfall' occur due to the influence of Westerlies?\nकिस जलवायु प्रकार में पछुआ पवनों (Westerlies) के प्रभाव से 'सर्दियों में वर्षा' होती है?",
+  "o": ["Savanna", "Steppe", "Mediterranean (Cs)", "Hot Desert"],
+  "a": 2,
+  "e": "Mediterranean climate is unique for having dry summers and rainy winters. / भूमध्यसागरीय जलवायु की विशेषता 'सर्दियों की वर्षा' है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The 'Chaparral' (चपल) is a unique vegetation found in which Mediterranean region?\n'चपल' (Chaparral) एक अद्वितीय वनस्पति है जो किस भूमध्यसागरीय क्षेत्र में पाई जाती है?",
+  "o": ["Italy", "California, USA", "South Africa", "Chile"],
+  "a": 1,
+  "e": "Chaparral refers to the scrubland vegetation specific to California's Mediterranean climate. / कैलिफोर्निया की विशिष्ट झाड़ीदार वनस्पति को चपल कहते हैं।",
+  "cat": "geo",
+  "sub": "mapping"
+},
+{
+  "q": "Mediterranean regions are world-famous for the production of:\nभूमध्यसागरीय क्षेत्र किसके उत्पादन के लिए विश्व प्रसिद्ध हैं?",
+  "o": ["Rice and Wheat only", "Citrus fruits (Oranges, Lemons) and Grapes for Wine", "Tea and Coffee", "Rubber and Palm Oil"],
+  "a": 1,
+  "e": "The climate is ideal for orchards and vineyards, making it the 'Orchard of the World'. / यह क्षेत्र खट्टे फलों और अंगूर (वाइन) के लिए प्रसिद्ध है।",
+  "cat": "geo",
+  "sub": "resources"
+},
+{
+  "q": "What is 'Transhumance' (ट्रांसह्यूमस) in the context of Mediterranean mountain farming?\nभूमध्यसागरीय पर्वतीय कृषि के संदर्भ में 'ट्रांसह्यूमस' (Transhumance) क्या है?",
+  "o": ["Growing trees on hills", "Seasonal migration of people and livestock up to mountains in summer and down to valleys in winter", "Artificial rain process", "Mining in mountains"],
+  "a": 1,
+  "e": "It is the practice of moving cattle/sheep based on seasonal pasture availability. / पशुओं को मौसम के अनुसार पहाड़ों और घाटियों के बीच ले जाना ट्रांसह्यूमस है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Which of the following is a 'Temperate Grassland' found in North America?\nनिम्नलिखित में से कौन सा उत्तर अमेरिका में पाया जाने वाला 'शीतोष्ण घास का मैदान' है?",
+  "o": ["Steppes", "Prairies (प्रेयरी)", "Pampas", "Downs"],
+  "a": 1,
+  "e": "Prairies are the extensive temperate grasslands of central North America. / प्रेयरी उत्तर अमेरिका के विशाल घास के मैदान हैं।",
+  "cat": "geo",
+  "sub": "mapping"
+},
+{
+  "q": "The term 'Grainaries of the World' is often applied to which climate zone?\n'विश्व के अन्न भंडार' (Grainaries of the World) शब्द अक्सर किस जलवायु क्षेत्र पर लागू होता है?",
+  "o": ["Equatorial", "Mediterranean", "Temperate Continental / Steppe (BSk)", "Tropical Monsoon"],
+  "a": 2,
+  "e": "Extensive wheat cultivation in Steppes and Prairies makes them world leaders in grain. / स्टेपी और प्रेयरी क्षेत्रों में गेहूं की अत्यधिक खेती होती है।",
+  "cat": "geo",
+  "sub": "resources"
+},
+{
+  "q": "In the 'Veld' (वेल्ड) grasslands of South Africa, what are the two main rivers?\nदक्षिण अफ्रीका के 'वेल्ड' (Veld) घास के मैदानों में दो मुख्य नदियाँ कौन सी हैं?",
+  "o": ["Nile and Congo", "Orange and Limpopo", "Murray and Darling", "Amazon and Orinoco"],
+  "a": 1,
+  "e": "Orange and Limpopo rivers drain the High and Low Veld regions. / ऑरेंज और लिम्पोपो नदियाँ वेल्ड क्षेत्र से बहती हैं।",
+  "cat": "geo",
+  "sub": "mapping"
+},
+{
+  "q": "Which region produces sugar from 'Sugar Beet' because the climate is too dry for Sugarcane?\nकौन सा क्षेत्र 'चुकंदर' (Sugar Beet) से चीनी का उत्पादन करता है क्योंकि जलवायु गन्ने के लिए बहुत शुष्क है?",
+  "o": ["Amazon Basin", "Steppe regions like Kazakhstan/Russia", "Southern India", "Java Island"],
+  "a": 1,
+  "e": "In temperate grasslands, sugar beet is a major substitute for sugarcane due to water limitations. / स्टेपी क्षेत्रों में पानी की कमी के कारण चुकंदर से चीनी बनाई जाती है।",
+  "cat": "geo",
+  "sub": "resources"
+},
+{
+  "q": "What is the 'Angora Goat' famous for in the context of the Veld?\nवेल्ड के संदर्भ में 'अंगोरा बकरी' (Angora Goat) किसके लिए प्रसिद्ध है?",
+  "o": ["Meat only", "High-quality Mohair (wool) production", "Milk production only", "Carrying heavy loads"],
+  "a": 1,
+  "e": "Angora goats are prized for Mohair, a valuable silky fiber/wool. / अंगोरा बकरियों से मोहैर नामक उच्च गुणवत्ता वाला ऊन प्राप्त होता है।",
+  "cat": "geo",
+  "sub": "resources"
+},
+{
+  "q": "The 'Murray-Darling' river basin is located in which grassland region?\n'मरे-डार्लिंग' नदी बेसिन किस घास के मैदान वाले क्षेत्र में स्थित है?",
+  "o": ["Pampas", "Velds", "Downs (Australia)", "Prairies"],
+  "a": 2,
+  "e": "The Downs in Australia are watered by the Murray-Darling river system. / मरे-डार्लिंग बेसिन ऑस्ट्रेलिया के डाउंस (Downs) में है।",
+  "cat": "geo",
+  "sub": "mapping"
+},
+{
+  "q": "Why does the 'Northern Hemisphere' show more extensive Temperate Grasslands than the Southern Hemisphere?\nउत्तरी गोलार्ध, दक्षिणी गोलार्ध की तुलना में अधिक विस्तृत शीतोष्ण घास के मैदान क्यों दर्शाता है?",
+  "o": ["Due to more water", "Due to larger landmasses in the mid-latitudes", "Because of high wind speed", "Due to fewer humans"],
+  "a": 1,
+  "e": "The southern hemisphere lacks large land areas at the 40°-55° latitude belt. / उत्तरी गोलार्ध में जमीन अधिक होने के कारण स्टेपी और प्रेयरी अधिक विस्तृत हैं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "What defines the 'Pampas' region of Argentina?\nअर्जेंटीना के 'पंपास' (Pampas) क्षेत्र को क्या परिभाषित करता है?",
+  "o": ["High mountains", "Fertile grasslands known for wheat export and livestock ranching", "Dense rainforests", "Frozen tundra"],
+  "a": 1,
+  "e": "Pampas are productive grasslands vital for Argentina's economy. / पंपास गेहूँ निर्यात और पशुपालन के लिए उपजाऊ मैदान हैं।",
+  "cat": "geo",
+  "sub": "mapping"
+},
+{
+  "q": "How does 'Coriolis Force' affect the winds near the Equator?\nभूमध्य रेखा के पास कोरिओलिस बल हवाओं को कैसे प्रभावित करता है?",
+  "o": ["It pushes them to the left only", "It is virtually zero, preventing cyclone formation", "It makes them blow very fast", "It stops them completely"],
+  "a": 1,
+  "e": "Coriolis force is zero at the equator, which is why cyclones do not form between 0-5 degrees latitude. / भूमध्य रेखा पर कोरिओलिस बल शून्य होने से चक्रवात नहीं बनते।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The 'Canary Current' is a cold current that influences which desert?\n'कैनरी धारा' एक ठंडी धारा है जो किस मरुस्थल को प्रभावित करती है?",
+  "o": ["Kalahari", "Sahara", "Namib", "Australian"],
+  "a": 1,
+  "e": "The Canary current cools the air off the Sahara, reducing its capacity to hold moisture. / कैनरी धारा सहारा मरुस्थल की शुष्कता बढ़ाती है।",
+  "cat": "geo",
+  "sub": "mapping"
+},
+{
+  "q": "What is the typical 'Soil Type' found in the dry Savanna regions?\nशुष्क सवाना क्षेत्रों में पाई जाने वाली विशिष्ट 'मिट्टी का प्रकार' क्या है?",
+  "o": ["Peaty soil", "Laterite / Reddish Latosols", "Pure black cotton soil", "Glacial till"],
+  "a": 1,
+  "e": "Due to alternate wet/dry conditions, leaching and oxidation create reddish soils. / सवाना में ऑक्सीकरण के कारण लाल लैटेराइट जैसी मिट्टी मिलती है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The term 'Macha' (मचिया) refers to Mediterranean vegetation in which country?\n'मचिया' (Macha) शब्द किस देश में भूमध्यसागरीय वनस्पति को संदर्भित करता है?",
+  "o": ["Spain", "France", "Italy", "Greece"],
+  "a": 2,
+  "e": "Macchia is the term used for Mediterranean scrubland in Italy. / इटली में झाड़ीदार वनस्पति को मचिया कहते हैं।",
+  "cat": "geo",
+  "sub": "mapping"
+},
+{
+  "q": "Where are 'Coniferous' trees (needle-leaves) typically found in relation to temperate grasslands?\nशीतोष्ण घास के मैदानों के संबंध में 'शंकुधारी' (Coniferous) पेड़ आमतौर पर कहाँ पाए जाते हैं?",
+  "o": ["At the equator", "On the poles only", "Towards the colder, polar side (transition to Taiga)", "Inside deep caves"],
+  "a": 2,
+  "e": "Grasslands merge into coniferous forests as you move towards higher, colder latitudes. / ठंडे अक्षांशों की ओर बढ़ने पर घास के मैदान शंकुधारी वनों में बदल जाते हैं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Which part of the Earth's atmosphere is heated primarily from 'Terrestrial Radiation'?\nपृथ्वी के वायुमंडल का कौन सा भाग मुख्य रूप से 'स्थलीय विकिरण' से गर्म होता है?",
+  "o": ["Troposphere", "Stratosphere", "Mesosphere", "Thermosphere"],
+  "a": 0,
+  "e": "The troposphere is heated from the ground up by infrared energy emitted by Earth. / क्षोभमंडल नीचे से ऊपर की ओर गर्म होता है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "What is the 'Normal Lapse Rate' value mentioned in the structures of the atmosphere?\nवायुमंडल की संरचनाओं में उल्लिखित 'सामान्य ह्रास दर' का मान क्या है?",
+  "o": ["10°C / km", "6.4°C / 1 km ascent", "0°C constant", "Minus 100°C"],
+  "a": 1,
+  "e": "Standard rate at which temperature falls in the troposphere. / प्रति 1 किमी 6.4°C तापमान गिरता है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "A 'Tarn Lake' is an erosional feature formed by:\n'टार्न झील' (Tarn Lake) किसके द्वारा निर्मित एक अपरदनी आकृति है?",
+  "o": ["River water", "Glacial action in a cirque", "Wind in desert", "Volcanic eruption"],
+  "a": 1,
+  "e": "Lakes in cirque basins are called tarns. / सर्क में पानी भरने से बनी झील टार्न है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The 'Moho' Discontinuity separates the ______ from the ______.\n'मोह' असंबद्धता ______ को ______ से अलग करती है।",
+  "o": ["Crust, Mantle", "Mantle, Core", "Upper, Lower Crust", "Ocean, Atmosphere"],
+  "a": 0,
+  "e": "Boundary between Earth's outer rock shell and the inner hot mantle. / यह क्रस्ट और मेंटल की सीमा है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Which mineral shorthand 'Nife' represents the core?\nकोर का प्रतिनिधित्व करने वाला कौन सा खनिज संक्षिप्त नाम 'निफे' है?",
+  "o": ["Nickel and Ferrous (Iron)", "Silica and Aluminum", "Nitrogen and Feldspar", "None"],
+  "a": 0,
+  "e": "Dominant elements Ni and Fe. / निकल और लोहा।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "What turns 'Metamorphic' rocks back into 'Igneous'?\n'कायांतरित' शैलों को वापस 'आग्नेय' में क्या बदलता है?",
+  "o": ["Weathering", "Melting and subsequent cooling", "Compression", "Erosion"],
+  "a": 1,
+  "e": "Melting produces magma; cooling produces igneous rocks. / पिघलकर जमकर ठोस होना।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Which seismic wave moves like a snake?\nकौन सी भूकंपीय तरंग सांप की तरह चलती है?",
+  "o": ["P-wave", "Love wave (L-wave)", "S-wave", "None"],
+  "a": 1,
+  "e": "Surface horizontal side-to-side motion. / लव तरंगें क्षैतिज रूप से मुड़ती हैं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "What is 'Regolith'?\n'रेगोलिथ' (Regolith) क्या है?",
+  "o": ["Solid bedrock", "Weathered loose material covering bedrock", "Magma", "Gases"],
+  "a": 1,
+  "e": "Mixture of soil and rock fragments. / चट्टान के ऊपर जमा ढीला मलबा।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Which state of matter describes the 'Outer Core'?\n'बाहरी कोर' को पदार्थ की कौन सी अवस्था वर्णित करती है?",
+  "o": ["Solid", "Liquid / Plasma", "Gas", "None"],
+  "a": 1,
+  "e": "Blocking of S-waves proves it is non-solid. / यह तरल या प्लाज्मा अवस्था में है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The 'Ring of Fire' is located around which ocean?\n'रिंग ऑफ फायर' किस महासागर के चारों ओर स्थित है?",
+  "o": ["Atlantic", "Pacific", "Indian", "Arctic"],
+  "a": 1,
+  "e": "Most active seismic and volcanic zone. / प्रशांत महासागर के चारों ओर।",
+  "cat": "geo",
+  "sub": "mapping"
+},
+{
+  "q": "Which factor creates 'Domes' on the crust according to endogenic theory?\nएंडोजेनिक सिद्धांत के अनुसार क्रस्ट पर 'गुंबद' कौन बनाता है?",
+  "o": ["Wind", "Domal uplift from rising magma/convection", "Rain", "Tides"],
+  "a": 1,
+  "e": "Vertical pressure from below. / नीचे से मैग्मा का दबाव।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "What determines 'Viscosity' of magma?\nमैग्मा की 'श्यानता' (Viscosity) क्या निर्धारित करती है?",
+  "o": ["Water only", "Silica content", "Color", "None"],
+  "a": 1,
+  "e": "High silica = High viscosity (honey-like). / सिलिका की मात्रा।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The 'Standard Meridian' for IST passes through which city?\nIST के लिए मानक याम्योत्तर किस शहर से गुजरता है?",
+  "o": ["Delhi", "Mirzapur", "Mumbai", "Kolkata"],
+  "a": 1,
+  "e": "Located in Uttar Pradesh. / यह मिर्जापुर (UP) से होकर गुजरता है।",
+  "cat": "geo",
+  "sub": "mapping"
+},
+{
+  "q": "Which seismic wave is the fastest?\nकौन सी भूकंपीय तरंग सबसे तेज होती है?",
+  "o": ["S-wave", "P-wave", "Surface wave", "None"],
+  "a": 1,
+  "e": "Primary fastest body wave. / पी-तरंगें सबसे पहले आती हैं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "What is the primary factor for 'Continentality'?\n'महाद्वीपीयता' का प्राथमिक कारक क्या है?",
+  "o": ["Latitude", "Distance from the sea", "Height", "None"],
+  "a": 1,
+  "e": "Remoteness from maritime influence. / समुद्र से दूरी।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Which geomorphic agent forms 'Barchans'?\nकौन सा भू-आकृतिक कारक 'बरखान' बनाता है?",
+  "o": ["River", "Wind", "Glacier", "Waves"],
+  "a": 1,
+  "e": "Wind deposition in deserts. / पवन द्वारा निर्मित रेत के टीले।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "A 'Plunge Pool' is found at the base of a:\n'प्लंज पूल' किसके आधार पर बनता है?",
+  "o": ["Glacier", "Waterfall", "Dune", "Cliff"],
+  "a": 1,
+  "e": "Erosional feature of running water. / झरने के नीचे बनने वाला गड्ढा।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The term 'Subduction' is associated with which plate boundary?\n'सबडक्शन' शब्द किस प्लेट सीमा से जुड़ा है?",
+  "o": ["Divergent", "Convergent", "Transform", "Passive"],
+  "a": 1,
+  "e": "One plate sinking beneath another. / अभिसरण सीमा पर प्लेट का धंसना।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Which mineral has hardness level 10?\nकिस खनिज का कठोरता स्तर 10 है?",
+  "o": ["Quartz", "Topaz", "Diamond", "Talc"],
+  "a": 2,
+  "e": "Hardest natural mineral. / हीरा सर्वाधिक कठोर है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "What describes 'Isotherms'?\n'आइसोथर्म' क्या दर्शाते हैं?",
+  "o": ["Lines of equal temperature", "Lines of equal pressure", "Lines of equal rain", "None"],
+  "a": 0,
+  "e": "Joining places with same temperature. / समान तापमान वाले स्थानों को जोड़ने वाली रेखाएं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+  {
+  "q": "What is the 'Eye' of a Tropical Cyclone characterized by?\nउष्णकटिबंधीय चक्रवात की 'आँख' (Eye) की क्या विशेषता है?",
+  "o": ["High wind speed and heavy rain", "Calm weather, sinking air, and relatively clear skies", "Dense cumulonimbus clouds only", "Freezing temperatures"],
+  "a": 1,
+  "e": "The eye is the central area of low pressure where air descends, creating a calm zone. / चक्रवात का शांत केंद्र जहाँ हवा नीचे बैठती है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Which type of cyclone forms due to 'Frontogenesis' (meeting of cold and warm air masses)?\n'वाताग्रजनन' (Frontogenesis - ठंडी और गर्म वायु राशियों का मिलना) के कारण कौन सा चक्रवात बनता है?",
+  "o": ["Tropical Cyclone", "Extra-Tropical / Temperate Cyclone (शीतोष्ण चक्रवात)", "Tornado", "Doldrum"],
+  "a": 1,
+  "e": "Temperate cyclones are frontal in origin, unlike tropical ones which are driven by thermal convection. / शीतोष्ण चक्रवात वाताग्रों के कारण बनते हैं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The energy of a Tropical Cyclone is primarily derived from:\nउष्णकटिबंधीय चक्रवात की ऊर्जा मुख्य रूप से किससे प्राप्त होती है?",
+  "o": ["Nuclear fusion", "Latent Heat of Condensation", "Wind friction with buildings", "Tidal energy"],
+  "a": 1,
+  "e": "Energy is released as water vapor condenses into clouds, fueling the storm's intensity. / संघनन की गुप्त ऊष्मा ही इसे ऊर्जा प्रदान करती है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Which region calls Tropical Cyclones 'Hurricanes'?\nकिस क्षेत्र में उष्णकटिबंधीय चक्रवातों को 'हरिकेन' (Hurricanes) कहा जाता है?",
+  "o": ["Indian Ocean", "South China Sea", "Atlantic Ocean and Eastern Pacific", "Australia"],
+  "a": 2,
+  "e": "In the American region (Atlantic/E. Pacific), cyclones are known as Hurricanes. / अमेरिका के पास इन्हें हरिकेन कहते हैं।",
+  "cat": "geo",
+  "sub": "mapping"
+},
+{
+  "q": "What causes the sound of 'Thunder' during a storm?\nतूफान के दौरान 'बादलों के गरजने' (Thunder) का क्या कारण है?",
+  "o": ["Clouds colliding with each other", "Rapid expansion of air heated by lightning", "Magnetic discharge", "Falling ice pellets only"],
+  "a": 1,
+  "e": "The extreme heat of lightning causes nearby air to expand explosively, creating the sound. / बिजली की गर्मी से हवा के अचानक फैलने से गर्जना होती है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The 'Coriolis Force' is necessary for cyclone formation. Why is it zero at the equator?\nचक्रवात निर्माण के लिए कोरिओलिस बल आवश्यक है। भूमध्य रेखा पर यह शून्य क्यों है?",
+  "o": ["Lack of air pressure", "There is no rotational deflection at 0° latitude", "Gravity is too strong", "Sunrays are too straight"],
+  "a": 1,
+  "e": "Deflection is absent at the equator, preventing winds from spiraling into a low pressure center. / भूमध्य रेखा पर विक्षेपण नहीं होता, जिससे हवाएं घूम नहीं पातीं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "A 'Tornado' that occurs over water is called a:\nपानी के ऊपर आने वाले 'टॉरनेडो' को क्या कहा जाता है?",
+  "o": ["Typhoon", "Waterspout (वाटरस्पाउट)", "Ocean current", "Tsunami"],
+  "a": 1,
+  "e": "When the rotating funnel of a tornado extends over water, it's a waterspout. / पानी के ऊपर बनने वाले टॉरनेडो को वाटरस्पाउट कहते हैं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The temperature of 'Lightning' can be up to ______ times hotter than the surface of the sun.\n'बिजली' (Lightning) का तापमान सूर्य की सतह से ______ गुना अधिक गर्म हो सकता है।",
+  "o": ["2", "5 (approx 30,000°C)", "10", "100"],
+  "a": 1,
+  "e": "Lightning is incredibly hot, heating air to 30,000°C, while sun's surface is ~6,000°C. / बिजली का ताप लगभग 30,000 डिग्री सेल्सियस तक होता है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+  {
+  "q": "In a wave, do water particles move forward with the wave energy?\nएक तरंग में, क्या पानी के कण तरंग ऊर्जा के साथ आगे बढ़ते हैं?",
+  "o": ["Yes, like a river", "No, they oscillate in a circular motion at their position", "Only during high tide", "None"],
+  "a": 1,
+  "e": "Waves transmit energy, while water particles move in closed circular orbits. / तरंग ऊर्जा आगे बढ़ती है, पर पानी के कण अपने स्थान पर गोलाकार घूमते हैं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The 'Crest' of a wave is its ______ point, while the 'Trough' is its ______ point.\nतरंग का 'श्रृंग' (Crest) उसका ______ बिंदु है, जबकि 'गर्त' (Trough) उसका ______ बिंदु है।",
+  "o": ["Lowest, Highest", "Highest, Lowest", "Coldest, Hottest", "Start, End"],
+  "a": 1,
+  "e": "Crest is the peak, Trough is the depression. / सबसे ऊँचा भाग श्रृंग और सबसे गहरा भाग गर्त है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "What causes waves to 'Break' (सर्फ) near the shore?\nतट के पास तरंगों के 'टूटने' (सर्फ) का क्या कारण है?",
+  "o": ["Sea salt", "Friction with the ocean floor reducing the wave's depth", "Wind stops blowing", "None"],
+  "a": 1,
+  "e": "As water becomes shallow, bottom friction distorts the circular orbit into an ellipse until the wave collapses. / तट के पास घर्षण से तरंगें टूट जाती हैं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "What is the primary cause of 'Tides' (ज्वार-भाटा)?\n'ज्वार-भाटा' का प्राथमिक कारण क्या है?",
+  "o": ["Ocean currents", "Gravitational pull of the Moon and Sun", "Undersea earthquakes", "Wind speed"],
+  "a": 1,
+  "e": "Tides are periodic rise and fall due to lunar and solar gravity. / चंद्रमा और सूर्य के गुरुत्वाकर्षण खिंचाव से ज्वार-भाटा आता है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "How many 'High Tides' typically occur in a period of 24 hours and 50 minutes?\n24 घंटे 50 मिनट की अवधि में आमतौर पर कितने 'उच्च ज्वार' आते हैं?",
+  "o": ["One", "Two", "Four", "None"],
+  "a": 1,
+  "e": "A location typically experiences two high and two low tides due to Earth's rotation and the Moon's pull. / आमतौर पर एक दिन (ज्वारीय दिन) में दो उच्च ज्वार आते हैं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Why is the time between two high tides 12 hours and 25 minutes instead of exactly 12 hours?\nदो उच्च ज्वारों के बीच का समय ठीक 12 घंटे के बजाय 12 घंटे 25 मिनट क्यों होता है?",
+  "o": ["Earth rotates faster", "The Moon revolves around the Earth in the same direction as Earth rotates", "Sun's gravity slows it down", "None"],
+  "a": 1,
+  "e": "The Moon moves forward in its orbit, requiring Earth to rotate an extra 50 mins daily to align again. / चंद्रमा के परिक्रमण के कारण उसे पुनः सामने आने में समय लगता है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "A 'Spring Tide' (वृहत ज्वार) occurs when the Sun, Moon, and Earth are:\n'वृहत ज्वार' (Spring Tide) तब आता है जब सूर्य, चंद्रमा और पृथ्वी होते हैं:",
+  "o": ["At a 90-degree angle", "In a straight line (Syzygy)", "On opposite sides of the galaxy", "None"],
+  "a": 1,
+  "e": "During Full Moon and New Moon, gravitational pulls combine. / पूर्णिमा और अमावस्या को ये तीनों एक सीध (सिजगी) में होते हैं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "A 'Neap Tide' (लघु ज्वार) is characterized by ______ high tides and ______ low tides than usual.\n'लघु ज्वार' (Neap Tide) की विशेषता सामान्य से ______ उच्च ज्वार और ______ निम्न ज्वार है।",
+  "o": ["Higher, Lower", "Lower, Higher (कम ऊँचे उच्च ज्वार और ऊँचे निम्न ज्वार)", "Both are Zero", "None"],
+  "a": 1,
+  "e": "In quadrature, solar and lunar pulls partially cancel each other, reducing the tidal range. / इसमें उच्च ज्वार की ऊँचाई कम और निम्न ज्वार की गहराई कम होती है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Which ocean current is a 'Cold Current' found off the west coast of Africa?\nअफ्रीका के पश्चिमी तट पर पाई जाने वाली 'ठंडी धारा' कौन सी है?",
+  "o": ["Gulf Stream", "Benguela Current", "Kuroshio Current", "Mozambique Current"],
+  "a": 1,
+  "e": "The Benguela current is a major cold current in the South Atlantic. / बेंगुएला धारा दक्षिण अटलांटिक की एक प्रमुख ठंडी धारा है।",
+  "cat": "geo",
+  "sub": "mapping"
+},
+{
+  "q": "The 'Gulf Stream' (गल्फ स्ट्रीम) is a ______ current that flows along the East Coast of the USA.\n'गल्फ स्ट्रीम' एक ______ धारा है जो अमेरिका के पूर्वी तट के साथ बहती है।",
+  "o": ["Cold", "Warm", "Deep sea only", "None"],
+  "a": 1,
+  "e": "It carries warm water from the Gulf of Mexico towards Europe. / यह मेक्सिको की खाड़ी से आने वाली एक गर्म धारा है।",
+  "cat": "geo",
+  "sub": "mapping"
+},
+{
+  "q": "What is a 'Gyre' (जायर) in the ocean?\nमहासागर में 'जायर' (Gyre) क्या है?",
+  "o": ["A deep trench", "A large system of circulating ocean currents", "A type of fish", "A sunken island"],
+  "a": 1,
+  "e": "Gyres are circular current systems caused by prevailing winds and the Coriolis effect. / धाराओं के चक्राकार घूमने से बना तंत्र जायर कहलाता है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Which force determines the 'Direction' of ocean currents?\nसमुद्री धाराओं की 'दिशा' कौन सा बल निर्धारित करता है?",
+  "o": ["Tides", "Coriolis Force and Wind direction", "Earth's magnetic field", "None"],
+  "a": 1,
+  "e": "Winds initiate movement, and Coriolis force deflects the path. / कोरिओलिस बल और पवनें धाराओं को दिशा देती हैं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The 'Sargasso Sea' is unique because it is:\n'सारगासो सागर' अद्वितीय है क्योंकि यह है:",
+  "o": ["The deepest sea", "Defined by ocean currents (within a gyre) rather than land boundaries", "A freshwater sea", "In space"],
+  "a": 1,
+  "e": "It is an area of calm water and seaweed in the North Atlantic gyre. / यह अटलांटिक के जायर के बीच स्थित बिना तट वाला सागर है।",
+  "cat": "geo",
+  "sub": "mapping"
+},
+{
+  "q": "Which current is the cold counterpart of the Kuroshio current in the North Pacific?\nउत्तरी प्रशांत में कुरोशियो धारा की ठंडी समकक्ष धारा कौन सी है?",
+  "o": ["California Current", "Oyashio Current (ओयाशियो)", "Peru Current", "Brazil Current"],
+  "a": 1,
+  "e": "Oyashio brings cold water from the Arctic towards Japan. / ओयाशियो उत्तर से आने वाली ठंडी धारा है।",
+  "cat": "geo",
+  "sub": "mapping"
+},
+{
+  "q": "What happens when 'Cold and Warm' ocean currents meet, such as at Newfoundland?\nजब न्यूफ़ाउंडलैंड जैसी जगहों पर 'ठंडी और गर्म' धाराएँ मिलती हैं, तो क्या होता है?",
+  "o": ["Rainfall disappears", "Dense fog is created and it becomes a rich fishing ground", "A volcano erupts", "None"],
+  "a": 1,
+  "e": "The mixing of temperatures creates fog and promotes plankton growth for fish. / इनके मिलने से घना कोहरा बनता है और मछलियों के लिए उत्तम क्षेत्र बनता है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The 'Peru Current' is also known as the ______ current.\n'पेरू धारा' को और किस नाम से जाना जाता है?",
+  "o": ["Canary", "Humboldt Current (हम्बोल्ट)", "Agulhas", "Florida"],
+  "a": 1,
+  "e": "Named after the scientist Alexander von Humboldt. / इसे हम्बोल्ट धारा भी कहते हैं।",
+  "cat": "geo",
+  "sub": "mapping"
+},
+{
+  "q": "Which current influences the aridity of the Atacama Desert?\nकौन सी धारा अटाकामा मरुस्थल की शुष्कता को प्रभावित करती है?",
+  "o": ["Brazil Current", "Peru / Humboldt Current (Cold)", "Gulf Stream", "None"],
+  "a": 1,
+  "e": "Cold currents stabilize the air, preventing rainfall on adjacent land. / ठंडी पेरू धारा अटाकामा को सूखा रखने में मदद करती है।",
+  "cat": "geo",
+  "sub": "mapping"
+},
+{
+  "q": "What is the 'Counter Equatorial Current'?\n'विपरीत विषुवतीय धारा' क्या है?",
+  "o": ["A current that flows towards the poles", "A current flowing West to East between the North and South Equatorial currents", "A wind pattern", "None"],
+  "a": 1,
+  "e": "It flows eastward to balance the water piled up in the west by trade winds. / यह पूर्व की ओर बहकर जल स्तर को संतुलित करती है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Tidal Energy is a ______ and ______ source of power.\nज्वारीय ऊर्जा शक्ति का एक ______ और ______ स्रोत है।",
+  "o": ["Non-renewable, Dirty", "Renewable, Clean", "Expensive, Gaseous", "None"],
+  "a": 1,
+  "e": "Tides are constant and provide zero-emission energy. / यह एक नवीकरणीय और स्वच्छ ऊर्जा स्रोत है।",
+  "cat": "geo",
+  "sub": "resources"
+},
+{
+  "q": "Which type of 'Tide' is observed once a day with one high and one low water?\nएक दिन में एक उच्च और एक निम्न ज्वार वाला कौन सा 'ज्वार' देखा जाता है?",
+  "o": ["Semi-diurnal", "Diurnal Tide (दैनिक ज्वार)", "Mixed", "Neap"],
+  "a": 1,
+  "e": "Diurnal tides have one cycle per tidal day. / एक ही चक्र वाले ज्वार को दैनिक ज्वार कहते हैं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "What is 'Latent Heat of Condensation'?\n'संघनन की गुप्त ऊष्मा' क्या है?",
+  "o": ["Heat from the sun", "Energy released when vapor turns to liquid", "Ice melting heat", "None"],
+  "a": 1,
+  "e": "Key driver of cyclone intensification. / जलवाष्प के पानी बनने पर निकलने वाली ऊर्जा।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The 'Standard Meridian' of India is 82°30'E. Which city is the reference?\nभारत का 'मानक याम्योत्तर' 82°30'E है। संदर्भ शहर कौन सा है?",
+  "o": ["Delhi", "Mirzapur", "Mumbai", "Kolkata"],
+  "a": 1,
+  "e": "Standard time reference point. / मिर्जापुर (उत्तर प्रदेश)।",
+  "cat": "geo",
+  "sub": "mapping"
+},
+{
+  "q": "Which seismic wave is blocked by liquid outer core?\nतरल बाहरी कोर द्वारा कौन सी भूकंपीय तरंग रुक जाती है?",
+  "o": ["P-wave", "S-wave", "L-wave", "None"],
+  "a": 1,
+  "e": "Secondary waves only pass through solids. / एस-तरंगें तरल में नहीं चलतीं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The 'Moho' Discontinuity separates which two layers?\n'मोह' असंबद्धता किन दो परतों को अलग करती है?",
+  "o": ["Crust and Mantle", "Mantle and Core", "Inner and Outer Core", "None"],
+  "a": 0,
+  "e": "Base of the Earth's crust. / क्रस्ट और मेंटल के बीच की सीमा।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "What turns 'Metamorphic' rocks back into 'Igneous'?\n'कायांतरित' शैलों को वापस 'आग्नेय' में क्या बदलता है?",
+  "o": ["Weathering", "Melting and cooling", "Compression", "Erosion"],
+  "a": 1,
+  "e": "Cycle of rock transformation. / पिघलकर जमकर ठोस होना।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Which mineral has hardness 10?\nकिस खनिज की कठोरता 10 है?",
+  "o": ["Quartz", "Diamond", "Talc", "None"],
+  "a": 1,
+  "e": "Hardest natural mineral. / हीरा सर्वाधिक कठोर है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Where is the 'Mariana Trench' located?\n'मारियाना ट्रेंच' कहाँ स्थित है?",
+  "o": ["Atlantic", "Pacific", "Indian", "Arctic"],
+  "a": 1,
+  "e": "Deepest point in the Pacific Ocean. / यह प्रशांत महासागर में है।",
+  "cat": "geo",
+  "sub": "mapping"
+},
+{
+  "q": "The 'Zoid' shape implies Earth is flattened at:\n'जॉइड' (Geoid) आकार का अर्थ है पृथ्वी यहाँ चपटी है:",
+  "o": ["Equator", "Poles", "Sea Level", "Troughs"],
+  "a": 1,
+  "e": "Flattened at North and South poles. / ध्रुवों पर चपटी।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "What describes 'Isotherms'?\n'आइसोथर्म' क्या दर्शाते हैं?",
+  "o": ["Lines of same pressure", "Lines of same temperature", "Lines of same rain", "None"],
+  "a": 1,
+  "e": "Joining places with same temperature. / समान तापमान वाले स्थानों को जोड़ने वाली रेखाएं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "A 'Plunge Pool' is found at the base of a:\n'प्लंज पूल' किसके आधार पर बनता है?",
+  "o": ["Glacier", "Waterfall", "Dune", "Cliff"],
+  "a": 1,
+  "e": "Erosional feature of water. / झरने के आधार पर बना गड्ढा।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Which state of matter describes the 'Outer Core'?\n'बाहरी कोर' को पदार्थ की कौन सी अवस्था वर्णित करती है?",
+  "o": ["Solid", "Liquid", "Gas", "None"],
+  "a": 1,
+  "e": "Confirmed by S-wave shadow zones. / यह तरल अवस्था में है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The 'Afar Triangle' is located in which continent?\n'अफार ट्रायंगल' किस महाद्वीप में स्थित है?",
+  "o": ["Asia", "Africa", "South America", "Europe"],
+  "a": 1,
+  "e": "Triple junction in Ethiopia/Djibouti. / यह पूर्वी अफ्रीका में स्थित है।",
+  "cat": "geo",
+  "sub": "mapping"
+},
+{
+  "q": "What creates 'Magnetic Field' of the Earth?\nपृथ्वी का 'चुंबकीय क्षेत्र' किससे उत्पन्न होता है?",
+  "o": ["Solid core", "Convection in the liquid outer core", "Ocean waves", "Winds"],
+  "a": 1,
+  "e": "Movement of molten iron charges. / बाहरी तरल कोर में हलचल से।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Which geological period saw the split of Pangaea?\nकिस भूवैज्ञानिक काल में पंजिया विभाजित हुआ था?",
+  "o": ["Carboniferous", "Triassic / Jurassic", "Tertiary", "Holocene"],
+  "a": 1,
+  "e": "Breakup into Laurasia and Gondwanaland. / यह ट्राइएसिक और जुरासिक काल में हुआ।",
+  "cat": "geo",
+  "sub": "world_geo"
+},
+{
+  "q": "A 'Barchan' is shaped like a ______.\n'बरखान' का आकार ______ जैसा होता है?",
+  "o": ["Square", "Crescent Moon", "Circle", "Triangle"],
+  "a": 1,
+  "e": "Wind-formed sand dune. / यह आधे चाँद जैसा दिखने वाला टीला है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "What does 'Sima' stand for in Earth's layers?\nपृथ्वी की परतों में 'सीमा' (Sima) का क्या अर्थ है?",
+  "o": ["Silica and Magnesium", "Silica and Aluminum", "Sodium and Iron", "Lead and Zinc"],
+  "a": 0,
+  "e": "Oceanic crust material. / सीमा सिलिका और मैग्नीशियम से बनी है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The 'V-shaped' valley is an erosional feature of which agent?\n'वी-आकार' की घाटी किस कारक की अपरदनी विशेषता है?",
+  "o": ["Wind", "Glacier", "Running Water (River)", "Groundwater"],
+  "a": 2,
+  "e": "Vertical erosion in youth stage. / युवावस्था में नदियों द्वारा निर्मित घाटी।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Which seismic wave causes horizontal side-to-side (snake-like) ground movement?\nकौन सी भूकंपीय तरंग क्षैतिज रूप से अगल-बगल (सांप की तरह) चलती है?",
+  "o": ["P-wave", "S-wave", "Love wave", "R-wave"],
+  "a": 2,
+  "e": "L-waves are horizontal surface waves. / लव तरंगें क्षैतिज गति पैदा करती हैं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "What is the primary factor that makes a rock 'Basaltic'?\nकौन सा प्राथमिक कारक किसी शैल को 'बेसाल्टिक' बनाता है?",
+  "o": ["High Silica", "Low Silica, High Iron/Magnesium", "Light color", "No density"],
+  "a": 1,
+  "e": "Denser, dark-colored rock. / कम सिलिका और अधिक लोहा-मैग्नीशियम।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Which state of matter describes the 'Asthenosphere'?\n'एस्थेनोस्फीयर' पदार्थ की किस अवस्था का वर्णन करती है?",
+  "o": ["Solid", "Liquid", "Semi-molten / Plastic solid", "Gaseous"],
+  "a": 2,
+  "e": "Weak, ductile part of upper mantle. / मेंटल की अर्ध-पिघली हुई परत।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "In which city is the 'Red Sea' forming due to rifting?\nरिफ्टिंग के कारण 'लाल सागर' कहाँ बन रहा है?",
+  "o": ["East Africa", "India", "USA", "Europe"],
+  "a": 0,
+  "e": "Triple junction rift. / यह पूर्वी अफ्रीका में स्थित है।",
+  "cat": "geo",
+  "sub": "mapping"
+},
+{
+  "q": "Which mineral was found on Moon by Chandrayaan-3?\nचंद्रयान-3 द्वारा चंद्रमा पर क्या पाया गया?",
+  "o": ["Gold", "Sulfur", "Iron", "None"],
+  "a": 1,
+  "e": "Significant discovery by the mission. / चंद्रमा पर सल्फर की खोज।",
+  "cat": "geo",
+  "sub": "mapping"
+},
+{
+  "q": "Which seismic wave arrives last?\nकौन सी भूकंपीय तरंग सबसे अंत में पहुँचती है?",
+  "o": ["P-wave", "S-wave", "Surface wave", "Body wave"],
+  "a": 2,
+  "e": "Slowest but most destructive. / धरातलीय तरंगें सबसे धीमी होती हैं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "What defines 'Hardness' of a mineral?\nखनिज की 'कठोरता' को क्या परिभाषित करता है?",
+  "o": ["Its color", "Its resistance to being scratched", "Its weight", "Its smell"],
+  "a": 1,
+  "e": "Tested on Mohs scale. / खरोंच के प्रति प्रतिरोध।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "A 'Laccolith' is described as having which shape?\n'लैकोलिथ' को किस आकार का बताया गया है?",
+  "o": ["Saucer", "Dome-shaped / Mushroom-like", "Wall", "Thin sheet"],
+  "a": 1,
+  "e": "Mushroom-like dome intrusion. / यह गुंबद के आकार की अंतर्भेदी आकृति है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Which state of matter is the 'Inner Core' of the Earth?\nपृथ्वी का 'आंतरिक कोर' पदार्थ की किस अवस्था में है?",
+  "o": ["Liquid", "Gas", "Solid", "Plasma"],
+  "a": 2,
+  "e": "Due to high pressure. / अत्यधिक दबाव के कारण ठोस।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The 'Standard Meridian' for IST passes through which Indian state primarily discussed?\nIST के लिए मानक याम्योत्तर मुख्य रूप से किस राज्य से गुजरता है?",
+  "o": ["Bihar", "Uttar Pradesh", "Maharashtra", "Odisha"],
+  "a": 1,
+  "e": "Through Mirzapur, UP. / उत्तर प्रदेश के मिर्जापुर से।",
+  "cat": "geo",
+  "sub": "mapping"
+},
+{
+  "q": "What turns 'Metamorphic' rocks back into 'Igneous'?\n'कायांतरित' शैलों को वापस 'आग्नेय' में क्या बदलता है?",
+  "o": ["Weathering", "Melting and solidification", "Compression", "None"],
+  "a": 1,
+  "e": "Rock cycle transformation. / पिघलकर जमकर ठोस होना।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Which seismic wave is the most 'Destructive'?\nकौन सी भूकंपीय तरंग सर्वाधिक 'विनाशकारी' है?",
+  "o": ["P-wave", "S-wave", "Surface wave", "None"],
+  "a": 2,
+  "e": "Causes maximum damage. / धरातलीय तरंगें सर्वाधिक विनाश करती हैं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "What describes 'Regolith'?\n'रेगोलिथ' (Regolith) का वर्णन क्या है?",
+  "o": ["Solid rock", "Weathered loose material covering bedrock", "Magma", "None"],
+  "a": 1,
+  "e": "Mixture of soil and rock bits. / चट्टान के ऊपर जमा ढीला मलबा।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Which type of 'Humidity' is expressed as a percentage and indicates saturation level?\nकौन सी 'आर्द्रता' प्रतिशत में व्यक्त की जाती है और संतृप्ति स्तर को दर्शाती है?",
+  "o": ["Absolute Humidity", "Specific Humidity", "Relative Humidity (सापेक्ष आर्द्रता)", "Dry Air Index"],
+  "a": 2,
+  "e": "Relative humidity compares actual moisture to total capacity at a given temperature. / सापेक्ष आर्द्रता को प्रतिशत में मापा जाता है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "When 'Relative Humidity' reaches 100%, the air is said to be:\nजब 'सापेक्ष आर्द्रता' 100% तक पहुँच जाती है, तो वायु को क्या कहा जाता है?",
+  "o": ["Arid", "Unstable only", "Saturated (संतृप्त)", "Thin"],
+  "a": 2,
+  "e": "Saturated air cannot hold any more water vapor at that temperature. / संतृप्त वायु और जलवाष्प धारण नहीं कर सकती।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "What is the 'Dew Point' (ओसांक)?\n'ओसांक' (Dew Point) क्या है?",
+  "o": ["The height of a cloud", "The temperature at which air becomes saturated with moisture", "The speed of a falling raindrop", "The freezing point of ocean water"],
+  "a": 1,
+  "e": "It is the temperature where condensation begins as relative humidity hits 100%. / वह तापमान जिस पर वायु संतृप्त हो जाती है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Why is 'Evaporation' called a surface phenomenon?\n'वाष्पीकरण' को सतही परिघटना क्यों कहा जाता है?",
+  "o": ["It only happens in the core", "It occurs from the upper layer of water particles meeting the air", "It requires plants", "It only happens in oceans"],
+  "a": 1,
+  "e": "Molecules escape from the surface of a liquid when they gain enough kinetic energy. / तरल की ऊपरी सतह से कणों का गैस में बदलना।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Which clouds are thin, wispy, and found at very high altitudes (above 8 km)?\nकौन से बादल पतले, रेशमी और बहुत ऊँचाई (8 किमी से ऊपर) पर पाए जाते हैं?",
+  "o": ["Stratus", "Cumulus", "Cirrus (सिरस)", "Nimbus"],
+  "a": 2,
+  "e": "Cirrus clouds are high-altitude ice-crystal clouds. / सिरस सर्वाधिक ऊँचाई वाले बादल हैं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "What characterizes 'Cumulonimbus' (कपासी वर्षी) clouds?\n'कपासी वर्षी' (Cumulonimbus) बादलों की क्या विशेषता है?",
+  "o": ["Thin and high", "Tall, dark, and responsible for thunderstorms and heavy rain", "They only appear in winter", "They look like uniform sheets"],
+  "a": 1,
+  "e": "These are storm clouds with massive vertical growth. / ये विशाल ऊर्ध्वाधर विस्तार वाले तूफानी बादल हैं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Rainfall caused by air being forced to rise over a mountain range is called:\nपर्वत श्रृंखला के ऊपर हवा के उठने के कारण होने वाली वर्षा कहलाती है:",
+  "o": ["Convectional rain", "Frontal rain", "Orographic rain (पर्वतीय वर्षा)", "Cyclonic rain"],
+  "a": 2,
+  "e": "Moist air cools as it ascends the mountain slope, leading to condensation and rain. / पहाड़ों से टकराकर ऊपर उठती हवा से होने वाली वर्षा।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Which region on Earth receives the highest 'Annual Rainfall' on average?\nपृथ्वी पर किस क्षेत्र में औसतन सर्वाधिक 'वार्षिक वर्षा' होती है?",
+  "o": ["Polar regions", "The Equator / Tropical belts", "Sub-tropical deserts", "Central Asia"],
+  "a": 1,
+  "e": "High heat and moisture result in daily convectional rain near the equator. / भूमध्यरेखीय क्षेत्रों में सर्वाधिक वर्षा होती है।",
+  "cat": "geo",
+  "sub": "mapping"
+},
+{
+  "q": "What happens during 'Condensation'?\n'संघनन' (Condensation) के दौरान क्या होता है?",
+  "o": ["Ice melts into water", "Water turns into gas", "Water vapor transforms into liquid water droplets", "Air pressure increases only"],
+  "a": 2,
+  "e": "It is the process where gas loses energy to become a liquid. / जलवाष्प का तरल जल में बदलना संघनन है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The 'Sleet' form of precipitation consists of:\n'स्लीट' (Sleet) प्रकार के वर्षण में शामिल है:",
+  "o": ["Only large hailstones", "Frozen raindrops or small ice pellets", "Dust mixed with rain", "Steam"],
+  "a": 1,
+  "e": "Sleet occurs when snow melts and refreezes as it falls through a cold air layer. / जमी हुई वर्षा की बूंदों को स्लीट कहते हैं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Why do 'Deserts' usually lie on the western margins of continents in the tropics?\nउष्णकटिबंधीय क्षेत्रों में मरुस्थल आमतौर पर महाद्वीपों के पश्चिमी किनारों पर क्यों स्थित होते हैं?",
+  "o": ["Too many people live there", "Influence of cold ocean currents and offshore dry trade winds", "Proximity to the moon", "Absence of wind"],
+  "a": 1,
+  "e": "Cold currents stabilize air (prevent rain) and trade winds become dry by the time they reach the west. / ठंडी धाराओं और शुष्क व्यापारिक पवनों के प्रभाव से।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "A 'Cloudburst' (बादल फटना) is specifically an extreme and sudden heavy rain in a ______.\n'बादल फटना' विशेष रूप से एक ______ में होने वाली चरम और अचानक भारी वर्षा है।",
+  "o": ["Large ocean", "Localized area (often mountainous)", "High pressure zone", "Stratosphere"],
+  "a": 1,
+  "e": "Intense rain over a small area often leads to catastrophic flash floods. / एक छोटे क्षेत्र में होने वाली मूसलाधार वर्षा।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Which seismic wave can travel through all states of matter (solid, liquid, gas)?\nकौन सी भूकंपीय तरंग पदार्थ की सभी अवस्थाओं (ठोस, तरल, गैस) में यात्रा कर सकती है?",
+  "o": ["P-wave", "S-wave", "L-wave", "None"],
+  "a": 0,
+  "e": "Primary waves (P-waves) are longitudinal and pass through every medium. / पी-तरंगें सभी माध्यमों में चल सकती हैं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The 'Standard Meridian' of India is 82.5°E. What is the time difference from GMT?\nभारत का 'मानक याम्योत्तर' 82.5°E है। GMT से समय का अंतर क्या है?",
+  "o": ["+2 hours", "+5.5 hours", "-5.5 hours", "0 hours"],
+  "a": 1,
+  "e": "Indian Standard Time is 5 hours and 30 minutes ahead of Greenwich Mean Time. / भारत का समय GMT से साढ़े पांच घंटे आगे है।",
+  "cat": "geo",
+  "sub": "mapping"
+},
+{
+  "q": "What describes 'Subduction'?\n'सबडक्शन' (Subduction) का वर्णन क्या है?",
+  "o": ["Plates pulling apart", "One tectonic plate sinking below another into the mantle", "Plates sliding past", "None"],
+  "a": 1,
+  "e": "Happens at convergent boundaries where crust is destroyed. / अभिसरण सीमा पर एक प्लेट का नीचे धंसना।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Which mineral has a hardness level of 10?\nकिस खनिज का कठोरता स्तर 10 है?",
+  "o": ["Quartz", "Diamond", "Talc", "Gypsum"],
+  "a": 1,
+  "e": "Diamond is the hardest natural mineral. / हीरा मोह स्केल पर सबसे कठोर है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The 'Moho' discontinuity is the boundary between:\n'मोह' असंबद्धता किसके बीच की सीमा है?",
+  "o": ["Core and Mantle", "Crust and Mantle", "Upper and Lower Crust", "None"],
+  "a": 1,
+  "e": "Separates the rocky outer crust from the underlying mantle. / क्रस्ट और मेंटल के बीच की सीमा।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "What causes the 'Bulge' of Earth at the Equator?\nभूमध्य रेखा पर पृथ्वी के 'उभार' का क्या कारण है?",
+  "o": ["Moon's gravity", "Centrifugal force from rotation", "Water tides", "Sunlight"],
+  "a": 1,
+  "e": "Earth's spinning causes material to move outwards at the center. / घूर्णन से उत्पन्न अपकेंद्रीय बल के कारण।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The term 'Sial' refers to rocks rich in:\n'सियाल' (Sial) शब्द किन तत्वों से भरपूर चट्टानों को संदर्भित करता है?",
+  "o": ["Magnesium", "Aluminum and Silica", "Iron", "Carbon"],
+  "a": 1,
+  "e": "Continental crust composition shorthand. / सिलिका और एल्युमीनियम।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Which geomorphic agent forms 'Ox-bow lakes'?\nकौन सा भू-आकृतिक कारक 'गोखुर झीलें' बनाता है?",
+  "o": ["Glacier", "Running water (Meandering river)", "Wind", "Wave"],
+  "a": 1,
+  "e": "River meanders get cut off over time. / विसर्पी नदियों के कटाव से बनती हैं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "A 'Plunge Pool' is an erosional feature of which agent?\n'प्लंज पूल' किस कारक की अपरदनी विशेषता है?",
+  "o": ["Wind", "Glacier", "Running water (Waterfall)", "Waves"],
+  "a": 2,
+  "e": "Depression at the base of a waterfall. / झरने के आधार पर बनने वाला गड्ढा।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Which state of matter describes the 'Outer Core'?\n'बाहरी कोर' को पदार्थ की कौन सी अवस्था वर्णित करती है?",
+  "o": ["Solid", "Liquid", "Gas", "Plasma"],
+  "a": 1,
+  "e": "Confirmed by its inability to pass S-waves. / यह तरल अवस्था में है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "What is the 'Afar Triangle' in Africa known for?\nअफ्रीका में 'अफार ट्रायंगल' किसके लिए जाना जाता है?",
+  "o": ["Highest peak", "Tectonic triple junction / Rifting", "Largest lake", "None"],
+  "a": 1,
+  "e": "Active rift zone where three plates are pulling apart. / यहाँ तीन विवर्तनिक प्लेटें अलग हो रही हैं।",
+  "cat": "geo",
+  "sub": "mapping"
+},
+{
+  "q": "The 'Zoid' shape implies Earth is flattened at the:\n'जॉइड' आकार का अर्थ है कि पृथ्वी यहाँ चपटी है:",
+  "o": ["Equator", "Poles", "Sea Level", "Troughs"],
+  "a": 1,
+  "e": "Flattened at the North and South poles. / ध्रुवों पर पृथ्वी चपटी है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "What defines 'Maffic' rocks?\n'मैफ़िक' चट्टानों को क्या परिभाषित करता है?",
+  "o": ["High Silica", "Low Silica, High Iron/Magnesium", "White color", "Found in space"],
+  "a": 1,
+  "e": "Dense, dark-colored igneous rocks like basalt. / कम सिलिका और अधिक लोहा/मैग्नीशियम वाली चट्टानें।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "In which period did Oxygen levels reach 30%?\nकिस काल में ऑक्सीजन का स्तर 30% तक पहुँच गया था?",
+  "o": ["Hadean", "Phanerozoic (~280 Ma)", "Archean", "None"],
+  "a": 1,
+  "e": "High oxygen supported giant life forms. / लगभग 280 मिलियन वर्ष पहले।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Which seismic wave arrives last?\nकौन सी भूकंपीय तरंग सबसे अंत में पहुँचती है?",
+  "o": ["P-wave", "S-wave", "Surface wave", "Body wave"],
+  "a": 2,
+  "e": "Slowest but most destructive. / धरातलीय तरंगें सबसे धीमी होती हैं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "What is 'Regolith'?\n'रेगोलिथ' (Regolith) क्या है?",
+  "o": ["Solid core", "Weathered loose material covering bedrock", "Magma", "None"],
+  "a": 1,
+  "e": "Mixture of soil and broken rock pieces. / चट्टान के ऊपर जमा ढीली सामग्री।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The 'Standard Meridian' for IST passes through which city primarily?\nIST के लिए मानक याम्योत्तर मुख्य रूप से किस शहर से गुजरता है जिसकी चर्चा की गई?",
+  "o": ["Patna", "Mirzapur", "Mumbai", "Kolkata"],
+  "a": 1,
+  "e": "Passing through Mirzapur, UP. / उत्तर प्रदेश के मिर्जापुर से।",
+  "cat": "geo",
+  "sub": "mapping"
+},
+{
+  "q": "Which mineral property refers to the 'Color of Powder'?\nकौन सा खनिज गुण 'चूर्ण के रंग' को संदर्भित करता है?",
+  "o": ["Lustre", "Streak", "Cleavage", "Hardness"],
+  "a": 2,
+  "e": "Tested on an unglazed porcelain plate. / यह स्ट्रीक (Streak) कहलाता है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "A 'Laccolith' is described as having which shape?\n'लैकोलिथ' को किस आकार का बताया गया है?",
+  "o": ["Saucer", "Dome-shaped / Mushroom-like", "Wall", "Thin sheet"],
+  "a": 1,
+  "e": "Intrusive igneous body. / यह गुंबद के आकार की अंतर्भेदी आकृति है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Which type of 'Process' levels heights and fills depressions?\nकिस प्रकार की 'प्रक्रिया' ऊँचाइयों को समतल करती है और गड्ढों को भरती है?",
+  "o": ["Endogenic", "Exogenic / Gradational", "Volcanic", "None"],
+  "a": 1,
+  "e": "Gradation through erosion and deposition. / बाह्य प्रक्रियाएं सतह को समतल करती हैं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "What turns 'Metamorphic' rocks back into 'Igneous'?\n'कायांतरित' शैलों को वापस 'आग्नेय' में क्या बदलता है?",
+  "o": ["Weathering", "Melting and subsequent cooling", "Compression", "Erosion"],
+  "a": 1,
+  "e": "Melting produces magma. / पिघलकर जमकर ठोस होना।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Which seismic wave is the most 'Destructive'?\nकौन सी भूकंपीय तरंग सर्वाधिक 'विनाशकारी' है?",
+  "o": ["P-wave", "S-wave", "Surface wave", "None"],
+  "a": 2,
+  "e": "Causes maximum surface damage. / धरातलीय तरंगें सर्वाधिक विनाश करती हैं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "What describes 'Regolith'?\n'रेगोलिथ' (Regolith) का वर्णन क्या है?",
+  "o": ["Solid rock", "Loose weathered material", "Magma", "Gases"],
+  "a": 1,
+  "e": "Mixture of soil and rock debris. / चट्टान के ऊपर जमा ढीला मलबा।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "In which city is the 'Red Sea' forming due to rifting?\nरिफ्टिंग के कारण 'लाल सागर' कहाँ बन रहा है?",
+  "o": ["East Africa", "India", "USA", "None"],
+  "a": 0,
+  "e": "Active divergent boundary. / पूर्वी अफ्रीका में।",
+  "cat": "geo",
+  "sub": "mapping"
+},
+{
+  "q": "The term 'Nife' refers to Earth's core because of which minerals?\n'निफे' शब्द पृथ्वी के कोर को किन खनिजों के कारण संदर्भित करता है?",
+  "o": ["Nickel and Ferrous (Iron)", "Silica and Alumina", "Nitrogen and Feldspar", "None"],
+  "a": 0,
+  "e": "Ni and Fe components. / निकल और लोहे की प्रधानता।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Which seismic wave arrives 'Last' at a station?\nस्टेशन पर कौन सी भूकंपीय तरंग 'सबसे अंत' में पहुँचती है?",
+  "o": ["P-wave", "S-wave", "Surface wave", "Body wave"],
+  "a": 2,
+  "e": "Slowest moving waves. / धरातलीय तरंगें सबसे धीमी होती हैं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "What defines 'Hardness' of a mineral?\nखनिज की 'कठोरता' को क्या परिभाषित करता है?",
+  "o": ["Its color", "Its resistance to being scratched", "Its weight", "Its smell"],
+  "a": 1,
+  "e": "Hardness is tested using the Mohs scale. / खरोंच के प्रति प्रतिरोध।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "A 'Laccolith' is described as having which shape?\n'लैकोलिथ' को किस आकार का बताया गया है?",
+  "o": ["Saucer", "Dome-shaped / mushroom-like", "Wall", "Thin sheet"],
+  "a": 1,
+  "e": "Mushroom-like dome intrusion. / यह गुंबद के आकार की अंतर्भेदी आकृति है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Which state of matter is the 'Inner Core' of the Earth?\nपृथ्वी का 'आंतरिक कोर' पदार्थ की किस अवस्था में है?",
+  "o": ["Liquid", "Gas", "Solid", "Plasma"],
+  "a": 2,
+  "e": "High pressure keeps it solid. / अत्यधिक दबाव के कारण ठोस।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The 'Standard Meridian' for IST passes through Mirzapur in which state?\nIST के लिए मानक याम्योत्तर किस राज्य के मिर्जापुर से होकर गुजरता है?",
+  "o": ["Bihar", "Uttar Pradesh", "Madhya Pradesh", "Odisha"],
+  "a": 1,
+  "e": "82.5°E longitude. / यह उत्तर प्रदेश के मिर्जापुर से होकर गुजरता है।",
+  "cat": "geo",
+  "sub": "mapping"
+},
+{
+  "q": "Where is 'Mawsynram' significant for?\n'मौसिनराम' किसके लिए महत्वपूर्ण है?",
+  "o": ["Deserts", "Highest rainfall on Earth", "Coldest point", "Volcano"],
+  "a": 1,
+  "e": "Located in Meghalaya, India. / विश्व में सर्वाधिक वर्षा वाला स्थान।",
+  "cat": "geo",
+  "sub": "mapping"
+},
+{
+  "q": "Which state of matter is the 'Inner Core'?\n'आंतरिक कोर' पदार्थ की किस अवस्था में है?",
+  "o": ["Liquid", "Gas", "Solid", "None"],
+  "a": 2,
+  "e": "Solid due to extreme pressure. / अत्यधिक दबाव के कारण ठोस।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Which 'Geomorphic Agent' forms 'Ox-bow lakes'?\nकौन सा भू-आकृतिक कारक 'गोखुर झीलें' बनाता है?",
+  "o": ["Glacier", "Running water", "Wind", "Wave"],
+  "a": 1,
+  "e": "Meander loops get cut off. / विसर्पी नदियों के कटाव से बनती हैं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The term 'Geoid' describes the shape of the:\n'जॉइड' (Geoid) शब्द किसके आकार का वर्णन करता है?",
+  "o": ["Sun", "Moon", "Earth", "Stars"],
+  "a": 2,
+  "e": "Earth's unique physical shape. / पृथ्वी का वास्तविक भौगोलिक आकार।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Which type of 'Process' levels heights and fills depressions?\nकिस प्रकार की 'प्रक्रिया' ऊँचाइयों को समतल करती है और गड्ढों को भरती है?",
+  "o": ["Endogenic", "Exogenic / Gradational", "Volcanic", "None"],
+  "a": 1,
+  "e": "Gradation through erosion and deposition. / बाह्य प्रक्रियाएं सतह को समतल करती हैं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "What creates 'Magnetic Field' of the Earth?\nपृथ्वी का 'चुंबकीय क्षेत्र' किससे उत्पन्न होता है?",
+  "o": ["Solid core", "Convection in outer liquid core", "Rain", "Winds"],
+  "a": 1,
+  "e": "Liquid iron movement. / बाहरी तरल कोर में धाराओं की गति से।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The term 'Nife' refers to Earth's core because of which minerals?\n'निफे' शब्द पृथ्वी के कोर को किन खनिजों के कारण संदर्भित करता है?",
+  "o": ["Nickel and Iron (Ferrous)", "Silica and Alumina", "Nitrogen and Feldspar", "None"],
+  "a": 0,
+  "e": "Ni and Fe components. / निकल और लोहे की प्रधानता।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Which seismic wave arrives 'Last' at a station?\nस्टेशन पर कौन सी भूकंपीय तरंग 'सबसे अंत' में पहुँचती है?",
+  "o": ["P-wave", "S-wave", "Surface wave", "Body wave"],
+  "a": 2,
+  "e": "Slowest moving waves. / धरातलीय तरंगें सबसे धीमी होती हैं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "What is the primary factor for 'Divergence' between plates?\nप्लेटों के बीच 'अपसरण' (Divergence) का प्राथमिक कारक क्या है?",
+  "o": ["Crushing together", "Rising convection currents pulling plates apart", "Static mantle", "Solar wind"],
+  "a": 1,
+  "e": "Magma rising from the mantle forces plates to separate. / संवहन धाराओं के कारण प्लेटों का दूर जाना।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The 'Syntaxial Bend' refers to the sharp turn of which mountain range?\n'सिंटैक्सियल बेंड' किस पर्वत श्रृंखला के तीव्र मोड़ को संदर्भित करता है?",
+  "o": ["Andes", "Rockies", "Himalayas (near Namcha Barwa)", "Alps"],
+  "a": 2,
+  "e": "The Himalayas turn sharply southwards at both ends. / हिमालय के पूर्वी और पश्चिमी छोर का तीव्र मोड़।",
+  "cat": "geo",
+  "sub": "mapping"
 },
 {
   "q": "What was the social objective behind Land Reforms in India?\nभारत में भूमि सुधारों के पीछे सामाजिक उद्देश्य क्या था?",
