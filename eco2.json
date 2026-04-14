@@ -8,6 +8,1342 @@
 "sub": "sectors"
 },
   {
+  "q": "What is the primary formula used to calculate 'Population Density'?\n'जनसंख्या घनत्व' की गणना के लिए प्रयुक्त प्राथमिक सूत्र क्या है?",
+  "o": ["Population × Area", "Area / Population", "Population / Area", "Population + Area"],
+  "a": 2,
+  "e": "Population density is calculated as the total number of people divided by the total land area, usually expressed per square km. / कुल जनसंख्या को कुल क्षेत्रफल से भाग देने पर घनत्व प्राप्त होता है।",
+  "cat": "geo",
+  "sub": "human_geo"
+},
+{
+  "q": "According to the transcript, why is it essential for a DM or Chief Minister to know the population distribution?\nट्रांसक्रिप्ट के अनुसार, एक डीएम या मुख्यमंत्री के लिए जनसंख्या वितरण जानना क्यों आवश्यक है?",
+  "o": ["For counting trees", "For effective planning of health, education, and economic schemes", "To increase personal wealth", "To predict the weather"],
+  "a": 1,
+  "e": "Knowing where people live and their characteristics helps in the proper implementation of schemes like schools, hospitals, and housing. / शिक्षा, स्वास्थ्य और आर्थिक योजनाओं के प्रभावी कार्यान्वयन के लिए यह आवश्यक है।",
+  "cat": "geo",
+  "sub": "human_geo"
+},
+  {
+    "q": "What is the standard formula for 'Sex Ratio' used in India?\nभारत में प्रयुक्त 'लिंग अनुपात' का मानक सूत्र क्या है?",
+    "o": ["(Male Population / Female Population) × 1000", "(Female Population / Male Population) × 1000", "(Total Population / Female Population) × 100", "(Births / Deaths) × 1000"],
+    "a": 1,
+    "e": "In India, sex ratio is calculated as the number of females per 1000 males. / भारत में प्रति हजार पुरुषों पर महिलाओं की संख्या को लिंग अनुपात कहते हैं।",
+    "cat": "geo",
+    "sub": "human_geo"
+  },
+  {
+    "q": "Which of the following is a 'Natural Advantage' possessed by females according to the transcript?\nट्रांसक्रिप्ट के अनुसार महिलाओं के पास कौन सा 'प्राकृतिक लाभ' (Natural Advantage) है?",
+    "o": ["Social leadership", "Biological resilience and higher life expectancy", "Physical strength in construction", "Access to early voting"],
+    "a": 1,
+    "e": "Females are biologically more resilient and have a natural advantage in life expectancy compared to males. / जैविक रूप से महिलाएं अधिक सहनशील होती हैं और उनकी औसत आयु प्राकृतिक रूप से अधिक होती है।",
+    "cat": "geo",
+    "sub": "human_geo"
+  },
+  {
+    "q": "What was the sex ratio in India according to the 2011 Census?\n2011 की जनगणना के अनुसार भारत में लिंग अनुपात क्या था?",
+    "o": ["927", "933", "943", "1020"],
+    "a": 2,
+    "e": "As per Census 2011, India's sex ratio was 943 females per 1000 males. / 2011 की जनगणना के अनुसार यह 943 था।",
+    "cat": "geo",
+    "sub": "mapping"
+  },
+  {
+    "q": "The 'PCPNDT Act' of 1994 was enacted primarily to stop:\n1994 का 'PCPNDT एक्ट' मुख्य रूप से किसे रोकने के लिए बनाया गया था?",
+    "o": ["Child labor", "Female feticide and gender-biased sex selection", "Migration to cities", "Environmental pollution"],
+    "a": 1,
+    "e": "The act was implemented to prevent prenatal gender determination and female feticide. / भ्रूण हत्या और लिंग चयन को रोकने के लिए यह कानून लाया गया था।",
+    "cat": "geo",
+    "sub": "human_geo"
+  },
+  {
+    "q": "Which age group is generally considered as the 'Working Population'?\nकिस आयु वर्ग को आम तौर पर 'कार्यशील जनसंख्या' माना जाता है?",
+    "o": ["0-14 years", "15-59 years", "Above 60 years", "0-18 years"],
+    "a": 1,
+    "e": "People between 15 and 59 years form the economic engine of a country as they are independent workers. / 15 से 59 वर्ष के लोग कार्यशील जनसंख्या का हिस्सा होते हैं।",
+    "cat": "geo",
+    "sub": "human_geo"
+  },
+  {
+    "q": "What does a 'Triangular' or broad-based population pyramid indicate?\nएक 'त्रिकोणीय' या चौड़े आधार वाला जनसंख्या पिरामिड क्या दर्शाता है?",
+    "o": ["Declining population", "High birth rates and an expanding population", "Stable population", "No children"],
+    "a": 1,
+    "e": "A broad base means high births, typical of developing countries like Nigeria or Bangladesh. / चौड़ा आधार उच्च जन्म दर और बढ़ती जनसंख्या का प्रतीक है।",
+    "cat": "geo",
+    "sub": "human_geo"
+  },
+  {
+    "q": "A 'Bell-shaped' population pyramid with a tapered top indicates:\nऊपर की ओर संकुचित होने वाला 'घंटी के आकार' का जनसंख्या पिरामिड क्या दर्शाता है?",
+    "o": ["Rapid growth", "Constant/Stable population with balanced birth and death rates", "Migration only", "Volcanic activity"],
+    "a": 1,
+    "e": "Australia is an example where birth and death rates are almost equal, resulting in a stable population. / घंटी का आकार स्थिर जनसंख्या को दर्शाता है।",
+    "cat": "geo",
+    "sub": "human_geo"
+  },
+  {
+    "q": "What is the characteristic of an 'Urn-shaped' population pyramid?\n'अर्न (Urn) के आकार' के जनसंख्या पिरामिड की क्या विशेषता है?",
+    "o": ["Expanding growth", "Declining population with low birth and death rates", "High infant mortality", "Broad base"],
+    "a": 1,
+    "e": "Countries like Japan show this shape, where birth rates are very low, leading to a shrinking population. / यह घटती हुई जनसंख्या को दर्शाता है (जैसे जापान)।",
+    "cat": "geo",
+    "sub": "human_geo"
+  },
+  {
+    "q": "Why is 'Age Structure' important for economic planning?\nआर्थिक योजना के लिए 'आयु संरचना' क्यों महत्वपूर्ण है?",
+    "o": ["To count the total number of houses", "To understand the dependency ratio and plan for schools or pensions", "To predict rainfall", "To count livestock"],
+    "a": 1,
+    "e": "A large young population needs schools, while an aging population needs health care and pensions. / निर्भरता अनुपात को समझकर ही स्कूल या पेंशन की योजना बनाई जा सकती है।",
+    "cat": "geo",
+    "sub": "human_geo"
+  },
+  {
+    "q": "The term 'Life Expectancy' (जीवन प्रत्याशा) refers to:\n'जीवन प्रत्याशा' (Life Expectancy) शब्द का तात्पर्य है:",
+    "o": ["The age at which a person gets a job", "The average number of years a person is expected to live at the time of birth", "The time taken to travel across the globe", "Maximum age of a tree"],
+    "a": 1,
+    "e": "Life expectancy is a key indicator of health standards in a country. / जन्म के समय एक व्यक्ति के जीवित रहने की औसत आयु।",
+    "cat": "geo",
+    "sub": "human_geo"
+  },
+  {
+    "q": "Which of the following is a 'Dependent' population group?\nनिम्नलिखित में से कौन सा 'आश्रित' जनसंख्या समूह है?",
+    "o": ["15-59 years", "0-14 years and above 60 years", "Only IT professionals", "Only farmers"],
+    "a": 1,
+    "e": "Children and the elderly depend on the working-age population for resources. / बच्चे और बुजुर्ग कार्यशील जनसंख्या पर निर्भर होते हैं।",
+    "cat": "geo",
+    "sub": "human_geo"
+  },
+  {
+    "q": "The population pyramid of 'Japan' is an example of which type?\n'जापान' का जनसंख्या पिरामिड किस प्रकार का उदाहरण है?",
+    "o": ["Expanding base", "Stable", "Declining / Narrow base", "Perfect triangle"],
+    "a": 2,
+    "e": "Japan's birth rates are very low, causing the pyramid to narrow at the bottom. / जापान की जनसंख्या घट रही है, इसलिए इसका आधार संकीर्ण है।",
+    "cat": "geo",
+    "sub": "mapping"
+  },
+  {
+    "q": "What is 'Demographic Transition'?\n'जनसांख्यिकीय संक्रमण' क्या है?",
+    "o": ["Change in religion", "The shift from rural/agrarian to urban/industrial society and its impact on birth/death rates", "Moving from forest to cave", "None"],
+    "a": 1,
+    "e": "It tracks how population dynamics change as a society becomes more advanced. / समाज के विकसित होने के साथ जन्म-मृत्यु दरों में बदलाव की प्रक्रिया।",
+    "cat": "geo",
+    "sub": "human_geo"
+  },
+  {
+    "q": "What defines the 'Rural-Urban Composition' of a country?\nकिसी देश के 'ग्रामीण-शहरी संगठन' को क्या परिभाषित करता है?",
+    "o": ["The distance between houses", "The primary occupation and living environment (villages vs cities)", "The color of roads", "Only the number of hospitals"],
+    "a": 1,
+    "e": "Rural areas are primarily agrarian (Primary sector), while urban areas focus on manufacturing and services (Secondary/Tertiary sectors). / ग्रामीण क्षेत्र कृषि प्रधान और शहरी क्षेत्र सेवा/विनिर्माण प्रधान होते हैं।",
+    "cat": "geo",
+    "sub": "human_geo"
+  },
+  {
+    "q": "Why is the female population higher in 'Urban areas' of developed countries like Canada?\nकनाडा जैसे विकसित देशों के 'शहरी क्षेत्रों' में महिला जनसंख्या अधिक क्यों है?",
+    "o": ["Fewer cities in Canada", "Availability of diverse job opportunities and safe environment for females", "Women do not like villages", "No farming in Canada"],
+    "a": 1,
+    "e": "Developed urban areas offer diverse service sector jobs and better quality of life for women. / विकसित शहरों में महिलाओं के लिए रोजगार के अधिक अवसर होते हैं।",
+    "cat": "geo",
+    "sub": "human_geo"
+  },
+  {
+    "q": "In developing countries like India, why is the female population higher in 'Rural areas' than cities?\nभारत जैसे विकासशील देशों में शहरों की तुलना में 'ग्रामीण क्षेत्रों' में महिला जनसंख्या अधिक क्यों है?",
+    "o": ["Men migrate to cities for work, leaving women for agricultural labor at home", "Women are not allowed in cities", "No schools in cities", "Farming is too difficult for men"],
+    "a": 0,
+    "e": "Male-selective migration for work in cities leaves women to handle the household and agriculture in villages. / काम के लिए पुरुषों का शहरों की ओर पलायन ग्रामीण क्षेत्रों में महिलाओं की संख्या बढ़ा देता है।",
+    "cat": "geo",
+    "sub": "human_geo"
+  },
+  {
+    "q": "Which sector does 'Manufacturing' fall into in occupational structure?\nव्यावसायिक संरचना में 'विनिर्माण' (Manufacturing) किस क्षेत्र में आता है?",
+    "o": ["Primary Sector", "Secondary Sector", "Tertiary Sector", "Quaternary Sector"],
+    "a": 1,
+    "e": "The Secondary sector involves processing raw materials into goods. / विनिर्माण द्वितीयक क्षेत्र का हिस्सा है।",
+    "cat": "geo",
+    "sub": "human_geo"
+  },
+  {
+    "q": "What is the primary indicator of the 'Socio-economic status' of a society?\nकिसी समाज की 'सामाजिक-आर्थिक स्थिति' का प्राथमिक संकेतक क्या है?",
+    "o": ["Total area of the country", "Literacy rate", "Number of mountains", "Average height of people"],
+    "a": 1,
+    "e": "Literacy reflects information access, living standards, and the status of women. / साक्षरता समाज के विकास और महिलाओं की स्थिति का दर्पण है।",
+    "cat": "geo",
+    "sub": "human_geo"
+  },
+  {
+    "q": "In the occupational structure, 'Information Technology' and 'R&D' are parts of which sector?\nव्यावसायिक संरचना में, 'सूचना प्रौद्योगिकी' (IT) और 'अनुसंधान एवं विकास' (R&D) किस क्षेत्र के भाग हैं?",
+    "o": ["Primary", "Secondary", "Tertiary", "Quaternary (चतुर्थक)"],
+    "a": 3,
+    "e": "The Quaternary sector is knowledge-based, involving intellectual services. / चतुर्थक क्षेत्र ज्ञान और अनुसंधान पर आधारित है।",
+  "cat": "geo",
+  "sub": "human_geo"
+  },
+  {
+    "q": "What is a 'Dependent Population' as per the एज-सेक्स पिरामिड?\nआयु-लिंग पिरामिड के अनुसार 'आश्रित जनसंख्या' क्या है?",
+    "o": ["People aged 15-59", "Children (0-14) and Elderly (60+)", "Only software engineers", "Only university students"],
+    "a": 1,
+    "e": "Dependent groups rely on the working-age population for economic and social support. / बच्चे और बुजुर्ग कार्यशील आबादी पर निर्भर होते हैं।",
+    "cat": "geo",
+    "sub": "human_geo"
+  },
+  {
+    "q": "Why is 'Literacy' higher in urban areas of India compared to villages?\nभारत के ग्रामीण क्षेत्रों की तुलना में शहरी क्षेत्रों में 'साक्षरता' अधिक क्यों है?",
+    "o": ["More water in cities", "Concentration of educational infrastructure and diverse job requirements", "People in villages do not want to study", "None"],
+    "a": 1,
+    "e": "Better schools and the need for skilled labor in cities drive higher literacy. / शिक्षा के बुनियादी ढांचे और रोजगार की जरूरतों के कारण शहरों में साक्षरता अधिक है।",
+    "cat": "geo",
+    "sub": "human_geo"
+  },
+  {
+    "q": "The 'Primary Sector' mainly includes activities related to:\n'प्राथमिक क्षेत्र' में मुख्य रूप से किससे संबंधित गतिविधियाँ शामिल हैं?",
+    "o": ["Computing", "Natural resources (Agriculture, Fishing, Forestry)", "Banking", "Construction"],
+    "a": 1,
+    "e": "Primary activities are directly dependent on the environment. / प्राथमिक गतिविधियाँ सीधे पर्यावरण और संसाधनों से जुड़ी होती हैं।",
+    "cat": "geo",
+    "sub": "human_geo"
+  },
+  {
+    "q": "Which type of population pyramid does 'Australia' have?\n'ऑस्ट्रेलिया' का जनसंख्या पिरामिड किस प्रकार का है?",
+    "o": ["Expanding", "Stable / Bell-shaped", "Declining", "Inverted"],
+    "a": 1,
+    "e": "Australia shows a constant population trend with birth and death rates in balance. / ऑस्ट्रेलिया का पिरामिड घंटी के आकार का और स्थिर है।",
+    "cat": "geo",
+    "sub": "mapping"
+  },
+  {
+    "q": "What is the result of 'High Male Migration' to cities like Mumbai and Delhi?\nमुंबई और दिल्ली जैसे शहरों में 'उच्च पुरुष प्रवास' का क्या परिणाम होता है?",
+    "o": ["Distorted sex ratio in cities with more males than females", "Fewer houses", "More rain", "None"],
+    "a": 0,
+    "e": "Labor-driven migration causes a gender imbalance in urban centers. / काम के लिए होने वाला प्रवास शहरों के लिंग अनुपात को बिगाड़ देता है।",
+    "cat": "geo",
+    "sub": "human_geo"
+  },
+  {
+    "q": "What is 'Demographic Dividend' for India?\nभारत के लिए 'जनसांख्यिकीय लाभांश' क्या है?",
+    "o": ["Having many old people", "A large chunk of population in the 15-35 age group", "High literacy rate only", "Low birth rate"],
+    "a": 1,
+    "e": "A young workforce provides a golden opportunity for economic growth. / 15-35 वर्ष के युवाओं की बड़ी संख्या भारत की आर्थिक शक्ति है।",
+    "cat": "geo",
+    "sub": "human_geo"
+  },
+  {
+    "q": "In 'Canada', farming is highly ______ and handled mostly by males.\n'कनाडा' में कृषि अत्यधिक ______ है और मुख्य रूप से पुरुषों द्वारा संभाली जाती है।",
+    "o": ["Traditional", "Mechanized (यंत्रीकृत)", "Primitive", "Impossible"],
+    "a": 1,
+    "e": "Mechanization reduces manual labor, and in many developed countries, women move to cities for service jobs. / यंत्रीकरण के कारण कनाडा में ग्रामीण क्षेत्रों में पुरुष अधिक हैं।",
+    "cat": "geo",
+    "sub": "mapping"
+  },
+  {
+    "q": "What does a 'Narrow Base' in a population pyramid indicate?\nजनसंख्या पिरामिड में 'संकीर्ण आधार' क्या दर्शाता है?",
+    "o": ["High birth rate", "Low birth rate", "Large child population", "Drought"],
+    "a": 1,
+    "e": "A narrow base indicates fewer children being born. / संकीर्ण आधार का अर्थ है कम जन्म दर।",
+    "cat": "geo",
+    "sub": "human_geo"
+  },
+  {
+    "q": "Which state of demographic transition is 'Nigeria' currently in (expanding pyramid)?\n'नाइजीरिया' वर्तमान में जनसांख्यिकीय संक्रमण की किस अवस्था में है (बढ़ता हुआ पिरामिड)?",
+    "o": ["Stage 1", "Stage 2 (Expanding)", "Stage 4", "None"],
+    "a": 1,
+    "e": "Broad base and high growth place it in early stages of transition. / नाइजीरिया बढ़ती हुई जनसंख्या वाली दूसरी अवस्था में है।",
+    "cat": "geo",
+    "sub": "mapping"
+  },
+  {
+    "q": "The term 'Socio-economic Indicator' for साक्षरता includes which of the following?\nसाक्षरता के लिए 'सामाजिक-आर्थिक संकेतक' में निम्नलिखित में से क्या शामिल है?",
+    "o": ["Standard of living", "Status of women", "Availability of educational facilities", "All of the above"],
+    "a": 3,
+    "e": "Literacy is a broad measure of social progress. / साक्षरता जीवन स्तर और नारी सम्मान का पैमाना है।",
+    "cat": "geo",
+    "sub": "human_geo"
+  },
+  {
+    "q": "In India, women in rural areas often dominate which sector?\nभारत में, ग्रामीण क्षेत्रों में महिलाएँ अक्सर किस क्षेत्र में हावी होती हैं?",
+    "o": ["IT sector", "Agricultural labor (Primary sector)", "Manufacturing", "Banking"],
+    "a": 1,
+    "e": "Rural agriculture in India sees high female participation. / भारतीय गांवों में महिलाएं कृषि कार्यों में बढ़-चढ़कर हिस्सा लेती हैं।",
+    "cat": "geo",
+    "sub": "human_geo"
+  },
+  {
+    "q": "What characterizes the 'Post-reproductive' stage?\n'प्रजनन-पश्चात' (Post-reproductive) चरण की क्या विशेषता है?",
+    "o": ["High energy workers", "Population aged 60+ (Elderly)", "Infants", "None"],
+    "a": 1,
+    "e": "This group includes the elderly who require healthcare support. / 60 वर्ष से अधिक के बुजुर्ग इस श्रेणी में आते हैं।",
+    "cat": "geo",
+    "sub": "human_geo"
+  },
+  {
+    "q": "Why is the 'Urban' environment often perceived as 'Unsafe' for females in some developing countries?\nकुछ विकासशील देशों में 'शहरी' वातावरण को अक्सर महिलाओं के लिए 'असुरक्षित' क्यों माना जाता है?",
+    "o": ["Lack of proper housing and social security", "Too many schools", "Presence of oceans", "High oxygen levels"],
+    "a": 0,
+    "e": "Issues like inadequate safety measures and high costs of living limit female urban migration. / सुरक्षा की कमी और आवास की समस्या महिलाओं के शहरी प्रवास को रोकती है।",
+    "cat": "geo",
+    "sub": "human_geo"
+  },
+  {
+    "q": "In 'Economic Planning', 'Tertiary Sector' refers to:\n'आर्थिक योजना' में, 'तृतीयक क्षेत्र' संदर्भित करता है:",
+  "o": ["Farming", "Service industry (Healthcare, Education, Transport)", "Mining", "Forestry"],
+  "a": 1,
+  "e": "Services provided to people form the tertiary sector. / सेवा उद्योग तृतीयक क्षेत्र कहलाता है।",
+  "cat": "geo",
+  "sub": "human_geo"
+  },
+  {
+    "q": "What mineral property describes a 'Glass-like' shine?\nकौन सा खनिज गुण 'कांच जैसी' चमक का वर्णन करता है?",
+    "o": ["Streak", "Vitreous Lustre", "Hardness", "Cleavage"],
+    "a": 1,
+    "e": "Vitreous is a type of non-metallic lustre. / कांच जैसी चमक को विट्रियस लस्टर कहते हैं।",
+    "cat": "geo",
+    "sub": "physical_geo"
+  },
+  {
+    "q": "The 'Moho' Discontinuity separates the ______ from the ______.\n'मोह' असंबद्धता ______ को ______ से अलग करती है?",
+    "o": ["Crust, Mantle", "Mantle, Core", "Upper, Lower Crust", "None"],
+    "a": 0,
+    "e": "Boundary between rocky shell and hot mantle. / क्रस्ट और मेंटल की सीमा।",
+    "cat": "geo",
+    "sub": "physical_geo"
+  },
+  {
+    "q": "Which seismic wave moves like a 'Slinky'?\nकौन सी भूकंपीय तरंग 'स्लिंकी' (Slinky) की तरह चलती है?",
+    "o": ["S-wave", "P-wave", "L-wave", "R-wave"],
+    "a": 1,
+    "e": "Longitudinal waves like P-waves compress and expand. / पी-तरंगें अनुदैर्ध्य होती हैं।",
+    "cat": "geo",
+    "sub": "physical_geo"
+  },
+  {
+    "q": "What turns 'Sediments' into 'Rock'?\n'अवसादों' को 'शैल' में क्या बदलता है?",
+    "o": ["Melting", "Lithification (Compaction and Cementation)", "Weathering", "None"],
+    "a": 1,
+    "e": "Sedimentary rock formation process. / लिथिफिकेशन की प्रक्रिया।",
+    "cat": "geo",
+    "sub": "physical_geo"
+  },
+  {
+    "q": "Which geomorphic agent forms 'Ox-bow lakes'?\nकौन सा भू-आकृतिक कारक 'गोखुर झीलें' बनाता है?",
+    "o": ["Wind", "Glacier", "Running Water (River)", "Wave"],
+    "a": 2,
+    "e": "Formed from meandering river loops. / विसर्पी नदियाँ।",
+    "cat": "geo",
+    "sub": "physical_geo"
+  },
+  {
+    "q": "Where is the 'Mariana Trench' located?\n'मारियाना ट्रेंच' कहाँ है?",
+    "o": ["Atlantic", "Pacific", "Indian", "Arctic"],
+    "a": 1,
+    "e": "Deepest point in Western Pacific. / प्रशांत महासागर।",
+    "cat": "geo",
+    "sub": "mapping"
+  },
+  {
+    "q": "What defines the 'Hardness' of a mineral?\nखनिज की 'कठोरता' को क्या परिभाषित करता है?",
+    "o": ["Its color", "Its resistance to being scratched (Mohs scale)", "Its weight", "Its smell"],
+    "a": 1,
+    "e": "Hardness measures scratch resistance. / खरोंच के प्रति प्रतिरोध।",
+    "cat": "geo",
+    "sub": "physical_geo"
+  },
+  {
+    "q": "The 'Standard Meridian' for IST in India is:\nभारत में IST के लिए मानक याम्योत्तर है:",
+    "o": ["0°", "82.5° E", "90° E", "23.5° N"],
+    "a": 1,
+    "e": "Passing through Mirzapur. / 82.5° पूर्व।",
+    "cat": "geo",
+    "sub": "mapping"
+  },
+  {
+    "q": "Which state of matter block S-waves?\nपदार्थ की कौन सी अवस्था एस-तरंगों को रोकती है?",
+    "o": ["Solid", "Liquid", "Gas", "None"],
+    "a": 1,
+    "e": "Confirmed by Earth's core studies. / तरल।",
+    "cat": "geo",
+    "sub": "physical_geo"
+  },
+  {
+    "q": "What is 'Regolith'?\n'रेगोलिथ' क्या है?",
+    "o": ["Solid core", "Loose weathered debris covering bedrock", "Magma", "None"],
+    "a": 1,
+    "e": "Mixture of fragments and soil. / चट्टान पर जमा ढीला मलबा।",
+    "cat": "geo",
+    "sub": "physical_geo"
+  },
+  {
+    "q": "Which seismic wave moves side-to-side?\nकौन सी तरंग अगल-बगल चलती है?",
+    "o": ["P-wave", "Love wave", "S-wave", "None"],
+    "a": 1,
+    "e": "Horizontal surface wave. / लव तरंग।",
+    "cat": "geo",
+    "sub": "physical_geo"
+  },
+  {
+    "q": "The 'Asthenosphere' is primarily made of:\n'एस्थेनोस्फीयर' मुख्य रूप से बनी है:",
+    "o": ["Granite", "Peridotite", "Basalt", "None"],
+    "a": 1,
+    "e": "Mantle rock. / पीरियोडोटाइट।",
+    "cat": "geo",
+    "sub": "physical_geo"
+  },
+  {
+    "q": "What describes 'Isotherms'?\n'आइसोथर्म' क्या हैं?",
+    "o": ["Equal pressure lines", "Equal temperature lines", "Equal rain lines", "None"],
+    "a": 1,
+    "e": "Joining same heat points. / समान तापमान वाली रेखाएं।",
+    "cat": "geo",
+    "sub": "physical_geo"
+  },
+  {
+    "q": "Where is 'Mawsynram' significant for?\n'मौसिनराम' क्यों महत्वपूर्ण है?",
+    "o": ["Deserts", "Highest rainfall on Earth", "Coldest point", "Volcano"],
+    "a": 1,
+    "e": "Wettest place in India. / विश्व में सर्वाधिक वर्षा वाला स्थान।",
+    "cat": "geo",
+    "sub": "mapping"
+  },
+  {
+    "q": "Which state of matter is the 'Inner Core'?\n'आंतरिक कोर' की अवस्था क्या है?",
+    "o": ["Liquid", "Solid", "Gas", "None"],
+    "a": 1,
+    "e": "Due to immense pressure. / ठोस।",
+    "cat": "geo",
+    "sub": "physical_geo"
+  },
+  {
+    "q": "Which type of 'Process' levels heights?\nऊँचाइयों को कौन समतल करता है?",
+    "o": ["Endogenic", "Exogenic", "None", "None"],
+    "a": 1,
+    "e": "Gradational force. / एक्सोजेनिक।",
+    "cat": "geo",
+    "sub": "physical_geo"
+  },
+  {
+    "q": "What turns 'Metamorphic' rocks back into 'Igneous'?\n'कायांतरित' को 'आग्नेय' में क्या बदलता है?",
+    "o": ["Weathering", "Melting and cooling", "Compression", "None"],
+    "a": 1,
+    "e": "Melting produces magma. / पिघलकर जमकर ठोस होना।",
+    "cat": "geo",
+    "sub": "physical_geo"
+  },
+  {
+    "q": "What describes 'Regolith'?\nरेगोलिथ का वर्णन क्या है?",
+    "o": ["Solid rock", "Weathered loose material", "Magma", "None"],
+    "a": 1,
+    "e": "Surface debris. / चट्टान पर जमा मलबा।",
+    "cat": "geo",
+    "sub": "physical_geo"
+  },
+  {
+    "q": "In which city is the 'Red Sea' forming?\n'लाल सागर' कहाँ बन रहा है?",
+    "o": ["East Africa", "India", "None", "None"],
+    "a": 0,
+    "e": "Rifting zone. / पूर्वी अफ्रीका।",
+    "cat": "geo",
+    "sub": "mapping"
+  },
+  {
+    "q": "Which mineral was confirmed on Moon by Chandrayaan-3?\nचंद्रयान-3 ने चंद्रमा पर क्या पाया?",
+    "o": ["Gold", "Sulfur", "None", "None"],
+    "a": 1,
+    "e": "Major discovery. / सल्फर।",
+    "cat": "geo",
+    "sub": "mapping"
+  },
+  {
+    "q": "A 'Laccolith' is ______ shaped.\n'लैकोलिथ' ______ आकार का होता है।",
+    "o": ["Saucer", "Dome-shaped", "None", "None"],
+    "a": 1,
+    "e": "Mushroom-like intrusion. / गुंबद जैसा।",
+    "cat": "geo",
+    "sub": "physical_geo"
+  },
+  {
+    "q": "What describes 'Maffic' rocks?\n'मैफ़िक' चट्टानें कैसी होती हैं?",
+    "o": ["Dense, Dark", "Light, White", "None", "None"],
+    "a": 0,
+    "e": "Rich in Mg/Fe. / सघन और काली।",
+    "cat": "geo",
+    "sub": "physical_geo"
+  },
+  {
+    "q": "Which seismic wave arrives last?\nकौन सी भूकंपीय तरंग अंत में पहुँचती है?",
+    "o": ["P-wave", "S-wave", "Surface wave", "None"],
+    "a": 2,
+    "e": "Slowest surface wave. / धरातलीय तरंगें।",
+    "cat": "geo",
+    "sub": "physical_geo"
+  },
+  {
+    "q": "Which mineral has hardness level 1?\nकिसकी कठोरता 1 है?",
+    "o": ["Quartz", "Talc", "None", "None"],
+    "a": 1,
+    "e": "Softest. / टल्क।",
+    "cat": "geo",
+    "sub": "physical_geo"
+  },
+  {
+    "q": "In which period did Oxygen reach 30%?\nकिस काल में ऑक्सीजन 30% थी?",
+    "o": ["Hadean", "Phanerozoic", "None", "None"],
+    "a": 1,
+    "e": "280 Ma ago. / फनेरोज़ोइक।",
+    "cat": "geo",
+    "sub": "physical_geo"
+  },
+  {
+    "q": "The 'Standard Meridian' of India is ______.\nभारत का मानक देशांतर ______ है।",
+    "o": ["82.5° E", "0°", "None", "None"],
+    "a": 0,
+    "e": "Fixes time. / 82.5° पूर्व।",
+    "cat": "geo",
+    "sub": "mapping"
+  },
+  {
+    "q": "Which mineral has hardness 10?\nकिसकी कठोरता 10 है?",
+    "o": ["Diamond", "Quartz", "None", "None"],
+    "a": 0,
+    "e": "Hardest. / हीरा।",
+    "cat": "geo",
+    "sub": "physical_geo"
+  },
+  {
+    "q": "Where is the 'Mariana Trench' located?\n'मारियाना ट्रेंच' कहाँ है?",
+    "o": ["Pacific", "Atlantic", "None", "None"],
+    "a": 0,
+    "e": "Deepest point. / प्रशांत महासागर।",
+    "cat": "geo",
+    "sub": "mapping"
+  },
+  {
+    "q": "The 'Zoid' shape means Earth is flattened at:\n'जॉइड' का अर्थ है चपटी पृथ्वी कहाँ है?",
+    "o": ["Poles", "Equator", "None", "None"],
+    "a": 0,
+    "e": "Polar flattening. / ध्रुवों पर।",
+    "cat": "geo",
+    "sub": "physical_geo"
+  },
+  {
+    "q": "What describes 'Subduction'?\nसबडक्शन क्या है?",
+    "o": ["Sinking plate", "Rising plate", "None", "None"],
+    "a": 0,
+    "e": "One plate under another. / प्लेट का नीचे धंसना।",
+    "cat": "geo",
+    "sub": "physical_geo"
+  },
+  {
+    "q": "Which mineral shorthand 'Nife' represents the Earth's core?\nकौन सा खनिज संक्षिप्त नाम 'निफे' (Nife) पृथ्वी के कोर का प्रतिनिधित्व करता है?",
+    "o": ["Nickel and Ferrous (Iron)", "Silicon and Aluminum", "Magnesium and Silicon", "Gold and Silver"],
+    "a": 0,
+    "e": "Core consists of Ni and Fe. / कोर निकल और लोहे से बना है।",
+    "cat": "geo",
+    "sub": "physical_geo"
+  },
+  {
+    "q": "The 'Moho' Discontinuity separates the ______ from the ______.\n'मोह' असंबद्धता ______ को ______ से अलग करती है?",
+    "o": ["Crust, Mantle", "Mantle, Core", "Upper, Lower Crust", "Atmosphere, Ocean"],
+    "a": 0,
+    "e": "Boundary between Earth's rocky shell and the hot mantle. / यह क्रस्ट और मेंटल की सीमा है।",
+    "cat": "geo",
+    "sub": "physical_geo"
+  },
+  {
+    "q": "What describes 'Pre-reproductive' stage in a population?\nजनसंख्या में 'प्रजनन-पूर्व' (Pre-reproductive) चरण का वर्णन क्या है?",
+    "o": ["Aged 60+", "Working adults", "Children and teenagers before they reach child-bearing age", "Retired government officials"],
+    "a": 2,
+    "e": "This group determines future growth when they move to the reproductive stage. / प्रजनन आयु तक न पहुँचने वाले बच्चे और किशोर।",
+    "cat": "geo",
+    "sub": "human_geo"
+  },
+  {
+    "q": "In an expanding population pyramid, why is the birth rate high?\nबढ़ते जनसंख्या पिरामिड में जन्म दर उच्च क्यों होती है?",
+    "o": ["Lack of education and family planning", "Too many schools", "Cold weather", "Presence of ocean"],
+    "a": 0,
+    "e": "Low awareness and lack of contraceptives lead to higher growth in developing nations. / साक्षरता और परिवार नियोजन की कमी इसका मुख्य कारण है।",
+    "cat": "geo",
+    "sub": "human_geo"
+  },
+{
+  "q": "Which geographical factor encourages high population concentration in areas like the Indo-Gangetic plains?\nइंडो-गंगा के मैदानों जैसे क्षेत्रों में उच्च जनसंख्या सांद्रता को कौन सा भौगोलिक कारक प्रोत्साहित करता है?",
+  "o": ["Hilly terrain", "Availability of fresh water and fertile soil", "Extreme cold climate", "Presence of deserts"],
+  "a": 1,
+  "e": "Regions with abundant fresh water and fertile soil support agriculture and life, leading to high population density. / ताजे पानी की उपलब्धता और उपजाऊ मिट्टी सघन जनसंख्या का मुख्य कारण हैं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "What is 'Natural Growth' of population?\nजनसंख्या की 'प्राकृतिक वृद्धि' क्या है?",
+  "o": ["Births + Deaths", "Births - Deaths", "In-migration - Out-migration", "Total population increase only"],
+  "a": 1,
+  "e": "Natural growth is the difference between birth rate and death rate in a particular area during a specific period. / जन्म दर और मृत्यु दर के अंतर को प्राकृतिक वृद्धि कहते हैं।",
+  "cat": "geo",
+  "sub": "human_geo"
+},
+{
+  "q": "Which city in the world has the highest population density, as mentioned in the class?\nकक्षा में बताए अनुसार विश्व में सर्वाधिक जनसंख्या घनत्व वाला शहर कौन सा है?",
+  "o": ["Mumbai", "New York", "Manila (Philippines)", "Tokyo"],
+  "a": 2,
+  "e": "Manila has an extreme density of approx 46,000 people per square kilometer. / मनीला (फिलीपींस) का घनत्व लगभग 46,000 व्यक्ति प्रति वर्ग किमी है।",
+  "cat": "geo",
+  "sub": "mapping"
+},
+{
+  "q": "What is the primary 'Pull Factor' for migration to urban areas?\nशहरी क्षेत्रों में प्रवास के लिए प्राथमिक 'आकर्षण कारक' (Pull Factor) क्या है?",
+  "o": ["Lack of electricity", "Better job opportunities, health, and education facilities", "Drought and famine", "Political instability"],
+  "a": 1,
+  "e": "Pull factors attract people to a new place due to better living standards and opportunities. / बेहतर रोजगार, स्वास्थ्य और शिक्षा की सुविधाएं लोगों को शहरों की ओर खींचती हैं।",
+  "cat": "geo",
+  "sub": "human_geo"
+},
+{
+  "q": "Which of the following is a 'Push Factor' for leaving one's place of origin?\nअपने मूल स्थान को छोड़ने के लिए निम्नलिखित में से कौन सा एक 'प्रतिकर्ष कारक' (Push Factor) है?",
+  "o": ["High income levels", "Good infrastructure", "Unemployment and poor living conditions", "Peaceful environment"],
+  "a": 2,
+  "e": "Push factors are negative conditions that force people to leave their original residence. / बेरोजगारी और खराब जीवन स्तर लोगों को पलायन के लिए मजबूर करते हैं।",
+  "cat": "geo",
+  "sub": "human_geo"
+},
+{
+  "q": "The concept of 'Actual Growth' of population includes natural growth plus:\nजनसंख्या की 'वास्तविक वृद्धि' की अवधारणा में प्राकृतिक वृद्धि के साथ क्या शामिल है?",
+  "o": ["(In-migration - Out-migration)", "(Deaths + Births)", "Only international tourists", "Only natural disasters"],
+  "a": 0,
+  "e": "Actual Growth = (Births - Deaths) + (In-migration - Out-migration). / वास्तविक वृद्धि में जन्म-मृत्यु के साथ प्रवास (माइग्रेशन) को भी जोड़ा जाता है।",
+  "cat": "geo",
+  "sub": "human_geo"
+},
+{
+  "q": "Which country recently surpassed China to become the most populous nation in the world?\nहाल ही में कौन सा देश चीन को पछाड़कर विश्व का सबसे अधिक जनसंख्या वाला देश बन गया है?",
+  "o": ["USA", "India", "Indonesia", "Brazil"],
+  "a": 1,
+  "e": "India became the most populous country in April 2023, reaching approx 1.42 billion. / भारत अब विश्व का सर्वाधिक जनसंख्या वाला देश है।",
+  "cat": "geo",
+  "sub": "mapping"
+},
+{
+  "q": "What does a 'Negative Population Growth' indicate?\n'ऋणात्मक जनसंख्या वृद्धि' क्या दर्शाती है?",
+  "o": ["Deaths are equal to births", "Birth rate is lower than death rate or high out-migration", "High fertility rate", "The country is becoming larger in area"],
+  "a": 1,
+  "e": "Negative growth occurs when the population decreases over time. / जब जन्म दर मृत्यु दर से कम हो जाए या पलायन अधिक हो, तो जनसंख्या घटती है।",
+  "cat": "geo",
+  "sub": "human_geo"
+},
+{
+  "q": "The term 'Demographic Transition' refers to:\n'जनसांख्यिकीय संक्रमण' (Demographic Transition) शब्द का तात्पर्य है:",
+  "o": ["Moving from one city to another", "The shift from high birth/death rates to low birth/death rates as a society develops", "Change in skin color", "Increasing forest area"],
+  "a": 1,
+  "e": "It describes how a society moves from rural/agrarian to urban/industrial stage. / यह समाज के ग्रामीण से औद्योगिक चरण में बदलने की प्रक्रिया है।",
+  "cat": "geo",
+  "sub": "human_geo"
+},
+{
+  "q": "Which state of the Demographic Transition model is characterized by stable population but high births and high deaths?\nजनसांख्यिकीय संक्रमण मॉडल की कौन सी अवस्था स्थिर जनसंख्या लेकिन उच्च जन्म और उच्च मृत्यु दर की विशेषता वाली है?",
+  "o": ["Stage 1", "Stage 2", "Stage 3", "Final Stage"],
+  "a": 0,
+  "e": "Stage 1 represents primitive, agrarian societies with low technology and high mortality. / प्रथम अवस्था में पिछड़ा समाज होता है जहाँ जन्म और मृत्यु दोनों उच्च होते हैं।",
+  "cat": "geo",
+  "sub": "human_geo"
+},
+{
+  "q": "What is 'Crude Birth Rate' (CBR) calculated per ______ population?\n'अशोधित जन्म दर' (CBR) की गणना प्रति ______ जनसंख्या पर की जाती है?",
+  "o": ["100", "500", "1,000", "1,00,000"],
+  "a": 2,
+  "e": "CBR is the number of live births in a year per thousand of population. / जन्म दर की गणना प्रति हजार व्यक्तियों पर की जाती है।",
+  "cat": "geo",
+  "sub": "human_geo"
+},
+{
+  "q": "Why did the world population increase exponentially after the 18th century?\n18वीं शताब्दी के बाद विश्व की जनसंख्या में तेजी से वृद्धि क्यों हुई?",
+  "o": ["Lack of food", "Industrial Revolution and advancements in medical science", "Decrease in land area", "People stopped traveling"],
+  "a": 1,
+  "e": "Technological and medical growth reduced death rates, leading to rapid population surge. / औद्योगिक क्रांति और चिकित्सा सुधारों से मृत्यु दर कम हुई और जनसंख्या बढ़ी।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The 'Oasis' (ओएसिस) in a desert is significant because:\nमरुस्थल में 'ओएसिस' (Oasis) महत्वपूर्ण है क्योंकि:",
+  "o": ["It has no water", "It is a fertile spot with water where people settle", "It is the coldest place", "It is made of salt"],
+  "a": 1,
+  "e": "Water availability in arid regions attracts settlements. / पानी की उपलब्धता के कारण लोग ओएसिस के पास बसते हैं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Which of the following is an 'Economic Factor' affecting population distribution?\nजनसंख्या वितरण को प्रभावित करने वाला 'आर्थिक कारक' निम्नलिखित में से कौन सा है?",
+  "o": ["Terrain/Landform", "Mineral resources and Industrialization", "Climate", "Religion"],
+  "a": 1,
+  "e": "Presence of minerals (like Chota Nagpur Plateau) attracts industries and jobs, increasing population. / खनिजों की उपस्थिति और औद्योगीकरण आर्थिक कारक हैं।",
+  "cat": "geo",
+  "sub": "human_geo"
+},
+{
+  "q": "What is 'Reverse Migration'?\n'विपरीत प्रवास' (Reverse Migration) क्या है?",
+  "o": ["Moving from rural to urban", "Moving from urban back to rural areas (e.g., during COVID-19)", "Moving from land to sea", "None of the above"],
+  "a": 1,
+  "e": "COVID-19 saw a major trend of people returning to their native villages from cities. / शहरों से वापस गांवों की ओर पलायन को विपरीत प्रवास कहते हैं।",
+  "cat": "geo",
+  "sub": "human_geo"
+},
+{
+  "q": "Which continent has the highest percentage (~60%) of the world's population?\nकिस महाद्वीप में विश्व की जनसंख्या का सर्वाधिक प्रतिशत (~60%) है?",
+  "o": ["Africa", "Europe", "Asia", "North America"],
+  "a": 2,
+  "e": "Asia is the most populous continent, hosting countries like India and China. / एशिया विश्व का सबसे अधिक आबादी वाला महाद्वीप है।",
+  "cat": "geo",
+  "sub": "mapping"
+},
+{
+  "q": "A 'Doldrum' refers to which atmospheric zone?\n'डोलड्रम' किस वायुमंडलीय क्षेत्र को संदर्भित करता है?",
+  "o": ["Polar high pressure", "Equatorial low pressure belt (0°-5°)", "Desert mountain peaks", "Inside a volcano"],
+  "a": 1,
+  "e": "Doldrums are regions near the equator with calm winds and low pressure. / भूमध्य रेखा के पास शांत हवाओं वाले क्षेत्र को डोलड्रम कहते हैं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "In the 'Heat Budget', what is 'Albedo'?\n'ऊष्मा बजट' में 'एल्बिडो' क्या है?",
+  "o": ["Heat absorbed by soil", "The percentage of solar radiation reflected back without absorption", "Energy of a tornado", "None of the above"],
+  "a": 1,
+  "e": "Earth reflects about 35% of solar energy back to space immediately. / बिना अवशोषित हुए परावर्तित सौर ऊर्जा को एल्बिडो कहते हैं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "How does 'Climate' act as a deterrent to population distribution?\n'जलवायु' जनसंख्या वितरण के लिए एक निवारक के रूप में कैसे कार्य करती है?",
+  "o": ["Pleasant weather attracts people", "Extreme hot or cold climates (e.g., Sahara or Tundra) are difficult for habitation", "Rain makes people move to space", "Climate has no effect"],
+  "a": 1,
+  "e": "Hostile climates result in low population density. / अत्यधिक विषम जलवायु वाले क्षेत्रों में लोग कम रहना पसंद करते हैं।",
+  "cat": "geo",
+  "sub": "human_geo"
+},
+{
+  "q": "What is 'Migration' definition in simple terms?\nसरल शब्दों में 'प्रवास' (Migration) की परिभाषा क्या है?",
+  "o": ["People staying in one place forever", "Spontaneous movement of people from place of origin to place of destination", "Watching birds fly", "Planting trees"],
+  "a": 1,
+  "e": "Migration is the permanent or temporary change of residence. / एक स्थान से दूसरे स्थान पर जाकर बसना प्रवास कहलाता है।",
+  "cat": "geo",
+  "sub": "human_geo"
+},
+{
+  "q": "Which mineral shorthand 'Nife' represents the Earth's core?\nकौन सा खनिज संक्षिप्त नाम 'निफे' (Nife) पृथ्वी के कोर का प्रतिनिधित्व करता है?",
+  "o": ["Nitrogen and Iron", "Nickel and Ferrous (Iron)", "Nickel and Flourine", "None of the above"],
+  "a": 1,
+  "e": "The core consists primarily of heavy metals Nickel and Iron. / कोर मुख्य रूप से निकल और लोहे से बना है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The 'Standard Meridian' of India is 82.5°E. Which city does it pass through?\nभारत का 'मानक याम्योत्तर' 82.5°E है। यह किस शहर से होकर गुजरता है?",
+  "o": ["Delhi", "Mumbai", "Mirzapur (Uttar Pradesh)", "Kolkata"],
+  "a": 2,
+  "e": "Indian Standard Time is calculated based on this longitude. / यह मिर्जापुर (उत्तर प्रदेश) से होकर गुजरता है।",
+  "cat": "geo",
+  "sub": "mapping"
+},
+{
+  "q": "What happens to the 'Relative Humidity' of air as temperature increases?\nतापमान बढ़ने पर वायु की 'सापेक्ष आर्द्रता' का क्या होता है?",
+  "o": ["It increases", "It stays same", "It decreases", "It vanishes"],
+  "a": 2,
+  "e": "Warm air can hold more moisture, so its relative saturation percentage drops. / तापमान बढ़ने पर वायु की नमी सोखने की क्षमता बढ़ती है, इसलिए सापेक्ष आर्द्रता घटती है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Which seismic wave is the fastest?\nकौन सी भूकंपीय तरंग सबसे तेज होती है?",
+  "o": ["S-wave", "P-wave", "L-wave", "R-wave"],
+  "a": 1,
+  "e": "P-waves (Primary) reach the recording station first. / पी-तरंगें सर्वाधिक तीव्र होती हैं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The term 'Mantle' refers to the layer of Earth up to ______ depth.\n'मेंटल' शब्द पृथ्वी की कितनी गहराई तक की परत को संदर्भित करता है?",
+  "o": ["200 km", "2900 km", "5100 km", "6400 km"],
+  "a": 1,
+  "e": "The mantle begins below the Moho and ends at the Gutenberg discontinuity. / मेंटल की गहराई 2900 किमी तक है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Which type of 'Industry' attracts population in cities like Bangalore?\nबैंगलोर जैसे शहरों में किस प्रकार का 'उद्योग' जनसंख्या को आकर्षित करता है?",
+  "o": ["Mining", "Agriculture", "Service/IT Industry", "Forestry"],
+  "a": 2,
+  "e": "Tertiary/Service sector growth is a major pull factor for urban migration. / आईटी और सेवा क्षेत्र शहरी प्रवास का मुख्य कारण है।",
+  "cat": "geo",
+  "sub": "human_geo"
+},
+{
+  "q": "What is 'Population Doubling Time'?\n'जनसंख्या दोहरीकरण समय' क्या है?",
+  "o": ["Time taken for a person to get married", "Time taken for a population to double itself at current growth rate", "Time taken to count the people", "One year"],
+  "a": 1,
+  "e": "It helps measure the speed of population growth. / वर्तमान दर पर जनसंख्या के दोगुना होने में लगने वाला समय।",
+  "cat": "geo",
+  "sub": "human_geo"
+},
+{
+  "q": "Which factor is NOT a reason for high population in 'Coastal Regions'?\n'तटीय क्षेत्रों' में उच्च जनसंख्या के लिए कौन सा कारक कारण नहीं है?",
+  "o": ["Trade and transport facilities", "Moderate climate", "Lack of water", "Employment in fishing"],
+  "a": 2,
+  "e": "Coastal areas have abundant water, which is a reason for high population. / तटीय क्षेत्रों में पानी की कमी नहीं, प्रचुरता होती है।",
+  "cat": "geo",
+  "sub": "human_geo"
+},
+{
+  "q": "What is the 'Zoid' (Geoid) shape of Earth?\nपृथ्वी का 'जॉइड' (Geoid) आकार क्या है?",
+  "o": ["Perfect circle", "Bulged at equator and flattened at poles", "Square", "Triangle"],
+  "a": 1,
+  "e": "Rotation causes the equatorial bulge. / घूर्णन के कारण पृथ्वी भूमध्य रेखा पर उभरी हुई है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Which mineral has hardness 1 on Mohs scale?\nमोह स्केल पर किस खनिज की कठोरता 1 है?",
+  "o": ["Quartz", "Diamond", "Talc", "Gypsum"],
+  "a": 2,
+  "e": "Talc is the softest mineral. / टल्क सबसे कोमल खनिज है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "What is 'Leaching' process in soil?\nमिट्टी में 'निक्षालन' (Leaching) प्रक्रिया क्या है?",
+  "o": ["Adding minerals", "Removal of soluble minerals and nutrients by water flowing downwards", "Burning soil", "Freezing soil"],
+  "a": 1,
+  "e": "Common in high rainfall areas, making the topsoil less fertile. / पानी के साथ पोषक तत्वों का नीचे की परतों में जाना।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The term 'Sial' represents which layer?\n'सियाल' (Sial) शब्द किस परत का प्रतिनिधित्व करता है?",
+  "o": ["Oceanic crust", "Continental crust", "Outer core", "Inner core"],
+  "a": 1,
+  "e": "Sial stands for Silica and Aluminum. / यह महाद्वीपीय क्रस्ट का संगठन है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Which seismic wave moves like a snake (side-to-side)?\nकौन सी भूकंपीय तरंग सांप की तरह (अगल-बगल) चलती है?",
+  "o": ["P-wave", "S-wave", "Love wave", "Rayleigh wave"],
+  "a": 2,
+  "e": "Love waves are surface waves with horizontal motion. / लव तरंगें क्षैतिज रूप से चलती हैं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "What is the 'Parent Rock' for Black Soil (Regur) in India?\nभारत में काली मिट्टी (रेगुर) के लिए 'जनक शैल' क्या है?",
+  "o": ["Granite", "Sandstone", "Basalt", "Limestone"],
+  "a": 2,
+  "e": "Weathering of volcanic basalt forms black soil. / बेसाल्ट के अपक्षय से काली मिट्टी बनती है।",
+  "cat": "geo",
+  "sub": "mapping"
+},
+{
+  "q": "Which state of matter describes the 'Outer Core'?\n'बाहरी कोर' को पदार्थ की कौन सी अवस्था वर्णित करती है?",
+  "o": ["Solid", "Liquid", "Gas", "None"],
+  "a": 1,
+  "e": "S-waves cannot pass through it. / बाहरी कोर तरल अवस्था में है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The term 'Subduction' is associated with which plate boundary?\n'सबडक्शन' शब्द किस प्लेट सीमा से जुड़ा है?",
+  "o": ["Divergent", "Convergent", "Transform", "Passive"],
+  "a": 1,
+  "e": "One plate sinks below another. / एक प्लेट का दूसरे के नीचे धंसना।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "A 'V-shaped' valley is an erosional feature of which agent?\n'वी-आकार' की घाटी किस कारक की अपरदनी विशेषता है?",
+  "o": ["Wind", "Glacier", "Running Water (River)", "None"],
+  "a": 2,
+  "e": "Rivers carve V-shaped valleys in mountains. / नदियाँ पर्वतों में वी-आकार की घाटी बनाती हैं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Which mineral property refers to the 'Color of Powder'?\nकौन सा खनिज गुण 'चूर्ण के रंग' को संदर्भित करता है?",
+  "o": ["Lustre", "Streak", "Cleavage", "Hardness"],
+  "a": 1,
+  "e": "Determined by rubbing on a streak plate. / यह स्ट्रीक (Streak) कहलाता है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "What creates the 'Magnetic Field' of the Earth?\nपृथ्वी का 'चुंबकीय क्षेत्र' किससे बनता है?",
+  "o": ["Solid crust", "Convection in outer liquid core", "Rain", "None"],
+  "a": 1,
+  "e": "Movement of molten iron and nickel. / बाहरी तरल कोर में धातुओं की हलचल से।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The 'Standard Meridian' for IST is based on ______.\nIST के लिए मानक याम्योत्तर ______ पर आधारित है।",
+  "o": ["0°", "82.5° E", "90° E", "23.5° N"],
+  "a": 1,
+  "e": "82.5° East longitude. / 82.5° पूर्व देशांतर।",
+  "cat": "geo",
+  "sub": "mapping"
+},
+{
+  "q": "Which type of 'Process' is Volcanism?\n'ज्वालामुखीयता' किस प्रकार की प्रक्रिया है?",
+  "o": ["Exogenic", "Endogenic", "Atmospheric", "None"],
+  "a": 1,
+  "e": "Internal force from the interior. / यह एक आंतरिक प्रक्रिया है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "What turns 'Metamorphic' rocks back into 'Igneous'?\n'कायांतरित' शैलों को वापस 'आग्नेय' में क्या बदलता है?",
+  "o": ["Weathering", "Melting and solidification", "Compression", "Erosion"],
+  "a": 1,
+  "e": "Melting produces magma. / पिघलकर जमकर ठोस होना।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Which seismic wave arrives last?\nकौन सी भूकंपीय तरंग सबसे अंत में पहुँचती है?",
+  "o": ["P-wave", "S-wave", "Surface wave", "Body wave"],
+  "a": 2,
+  "e": "Surface waves are the slowest. / धरातलीय तरंगें सबसे धीमी होती हैं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "What describes 'Regolith'?\n'रेगोलिथ' क्या है?",
+  "o": ["Solid rock", "Weathered loose material covering bedrock", "Magma", "None"],
+  "a": 1,
+  "e": "Unconsolidated rock and soil fragments. / चट्टान के ऊपर जमा ढीला मलबा।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "In which city is the 'Red Sea' forming due to rifting?\nरिफ्टिंग के कारण 'लाल सागर' कहाँ बन रहा है?",
+  "o": ["East Africa", "India", "USA", "None"],
+  "a": 0,
+  "e": "Divergent boundary in Africa. / पूर्वी अफ्रीका में।",
+  "cat": "geo",
+  "sub": "mapping"
+},
+{
+  "q": "Which mineral was confirmed on Moon by Chandrayaan-3?\nचंद्रयान-3 द्वारा चंद्रमा पर क्या पाया गया?",
+  "o": ["Gold", "Sulfur", "Iron", "None"],
+  "a": 1,
+  "e": "Critical discovery of Indian mission. / चंद्रमा पर सल्फर की खोज।",
+  "cat": "geo",
+  "sub": "mapping"
+},
+{
+  "q": "What is the common 'Hardness' of Quartz?\nक्वार्ट्ज की सामान्य 'कठोरता' क्या है?",
+  "o": ["1", "3", "7", "10"],
+  "a": 2,
+  "e": "Level 7 on Mohs scale. / मोह स्केल पर स्तर 7।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The term 'Mantle' refers to which part of the Earth?\n'मेंटल' शब्द पृथ्वी के किस भाग को संदर्भित करता है?",
+  "o": ["Outer thin layer", "Huge layer between crust and core", "Innermost ball", "None"],
+  "a": 1,
+  "e": "Largest part of Earth's volume. / क्रस्ट और कोर के बीच की विशाल परत।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+  {
+  "q": "In the 'Demographic Transition Theory', Stage 2 is characterized by:\n'जनसांख्यिकीय संक्रमण सिद्धांत' में, अवस्था 2 की विशेषता है:",
+  "o": ["Low births and low deaths", "High births and rapidly declining deaths", "Low births and high deaths", "High births and high deaths"],
+  "a": 1,
+  "e": "Improvements in health and sanitation reduce deaths while births remain high, leading to population explosion. / स्वास्थ्य सुधारों से मृत्यु दर गिरती है पर जन्म दर उच्च रहती है।",
+  "cat": "geo",
+  "sub": "human_geo"
+},
+{
+  "q": "Which of the following is a result of 'Medical Advancement' on population?\nजनसंख्या पर 'चिकित्सा प्रगति' का निम्नलिखित में से कौन सा परिणाम है?",
+  "o": ["Increased death rate", "Increased birth rate only", "Decreased infant mortality and increased life expectancy", "Fewer hospitals"],
+  "a": 2,
+  "e": "Science has helped control diseases and improve living conditions. / चिकित्सा से शिशु मृत्यु दर में कमी और औसत आयु में वृद्धि हुई है।",
+  "cat": "geo",
+  "sub": "human_geo"
+},
+{
+  "q": "The 'Final Stage' of Demographic Transition shows:\nजनसांख्यिकीय संक्रमण की 'अंतिम अवस्था' क्या दर्शाती है?",
+  "o": ["Population explosion", "Urbanized society with low births and low deaths (Stable population)", "No people left", "Only rural life"],
+  "a": 1,
+  "e": "Developed and urban societies reach a state of stable or slow population growth. / विकसित और शहरी समाजों में जन्म और मृत्यु दोनों कम और स्थिर हो जाते हैं।",
+  "cat": "geo",
+  "sub": "human_geo"
+},
+{
+  "q": "What is 'Demographic Dividend'?\n'जनसांख्यिकीय लाभांश' (Demographic Dividend) क्या है?",
+  "o": ["A government tax", "The economic growth potential resulting from a large working-age population (15-35 years)", "Counting babies only", "None of the above"],
+  "a": 1,
+  "e": "India is currently in a position of demographic dividend with many young workers. / कार्यशील जनसंख्या (15-35 वर्ष) की प्रचुरता से आर्थिक लाभ की संभावना।",
+  "cat": "geo",
+  "sub": "human_geo"
+},
+{
+  "q": "Malthusian theory suggests that population grows ______ while food supply grows ______.\nमाल्थस का सिद्धांत बताता है कि जनसंख्या ______ बढ़ती है जबकि खाद्य आपूर्ति ______ बढ़ती है।",
+  "o": ["Arithmetically; Geometrically", "Geometrically; Arithmetically", "Both Arithmetically", "Both Geometrically"],
+  "a": 1,
+  "e": "Thomas Malthus predicted that population would outstrip food resources. / जनसंख्या ज्यामितीय रूप से और खाद्य संसाधन अंकगणितीय रूप से बढ़ते हैं।",
+  "cat": "geo",
+  "sub": "human_geo"
+},
+{
+  "q": "As per the transcript, what is a way to 'Control' population growth?\nट्रांसक्रिप्ट के अनुसार, जनसंख्या वृद्धि को 'नियंत्रित' करने का एक तरीका क्या है?",
+  "o": ["Family planning and tax incentives/disincentives", "Stopping all schools", "Increasing death rate intentionally", "Moving to Mars"],
+  "a": 0,
+  "e": "China's One Child Policy or tax penalties on third child are common examples. / परिवार नियोजन और सरकारी नीतियां (जैसे वन चाइल्ड पॉलिसी) प्रभावी तरीके हैं।",
+  "cat": "geo",
+  "sub": "human_geo"
+},
+{
+  "q": "The 'Sex Ratio' in a population distribution pattern refers to:\nजनसंख्या वितरण पैटर्न में 'लिंग अनुपात' (Sex Ratio) संदर्भित करता है:",
+  "o": ["Number of children only", "Number of females per 1000 males", "Number of aged people", "Only urban population"],
+  "a": 1,
+  "e": "It helps understand the gender balance in a society. / प्रति 1000 पुरुषों पर महिलाओं की संख्या।",
+  "cat": "geo",
+  "sub": "human_geo"
+},
+{
+  "q": "Which gas is used in 'Cryo-preservation' to store biological cells?\nजैविक कोशिकाओं को संग्रहीत करने के लिए 'क्रायो-प्रिजर्वेशन' में किस गैस का उपयोग किया जाता है?",
+  "o": ["Oxygen", "Liquid Nitrogen", "Carbon Dioxide", "Helium"],
+  "a": 1,
+  "e": "Liquid nitrogen maintains extremely low temperatures. / तरल नाइट्रोजन का उपयोग होता है।",
+  "cat": "geo",
+  "sub": "resources"
+},
+{
+  "q": "Why is 'Relative Humidity' 100% at the 'Dew Point'?\n'ओसांक' पर 'सापेक्ष आर्द्रता' 100% क्यों होती है?",
+  "o": ["Because air is dry", "Because the air is fully saturated and cannot hold more water vapor", "Because it is raining gold", "None of the above"],
+  "a": 1,
+  "e": "At dew point, condensation begins because capacity equals content. / क्योंकि हवा पूरी तरह संतृप्त हो चुकी होती है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "What creates 'Thunder' in the atmosphere?\nवायुमंडल में 'गर्जना' (Thunder) क्या उत्पन्न करता है?",
+  "o": ["Sound of rain", "Explosive expansion of air due to lightning heat", "Falling ice", "Strong winds"],
+  "a": 1,
+  "e": "Lightning heats the air suddenly causing a shockwave. / बिजली की ऊष्मा से हवा के अचानक फैलने से गर्जना होती है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "What is the primary factor for the 'Albedo' of clouds?\nबादलों के 'एल्बिडो' के लिए प्राथमिक कारक क्या है?",
+  "o": ["Their temperature", "Their thickness and brightness (reflectivity)", "Their speed", "Their height"],
+  "a": 1,
+  "e": "Thick, white clouds reflect a lot of sunlight back to space. / बादलों की मोटाई और चमक प्रकाश को परावर्तित करती है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The 'Standard Time' of India follows which longitude?\nभारत का 'मानक समय' किस देशांतर का अनुसरण करता है?",
+  "o": ["0°", "82.5° E", "97° E", "23.5° N"],
+  "a": 1,
+  "e": "Passing through Mirzapur, UP. / 82.5° पूर्व देशांतर।",
+  "cat": "geo",
+  "sub": "mapping"
+},
+{
+  "q": "Which state of matter block S-waves?\nपदार्थ की कौन सी अवस्था एस-तरंगों को रोकती है?",
+  "o": ["Solid", "Liquid", "Gas", "None"],
+  "a": 1,
+  "e": "S-waves only pass through solids. / एस-तरंगें तरल में नहीं चलतीं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "What causes 'Frontal Inversion'?\n'वाताग्र व्युत्क्रमण' (Frontal Inversion) का क्या कारण है?",
+  "o": ["Solar heat", "Warm air rising over cold air at a front", "Moon's gravity", "None"],
+  "a": 1,
+  "e": "Warmer air pushed up over cooler air results in increasing temperature with height. / ठंडी हवा के ऊपर गर्म हवा के चढ़ने से।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Which mineral shorthand 'Nife' represents the core?\nकौन सा खनिज संक्षिप्त नाम 'निफे' कोर का प्रतिनिधित्व करता है?",
+  "o": ["Nickel/Iron", "Silica/Aluminum", "Sodium", "None"],
+  "a": 0,
+  "e": "Nickel and Ferrous. / निकल और लोहा।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "A 'V-shaped' valley is formed by:\n'वी-आकार' की घाटी किसके द्वारा बनती है?",
+  "o": ["Wind", "River erosion", "Glacier", "Ice"],
+  "a": 1,
+  "e": "Characteristic of mountain rivers. / नदियों के लंबवत अपरदन से।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "What defines the 'Hardness' of a mineral?\nखनिज की 'कठोरता' को क्या परिभाषित करता है?",
+  "o": ["Color", "Resistance to scratching", "Price", "Size"],
+  "a": 1,
+  "e": "Measured on Mohs scale. / खरोंच के प्रति प्रतिरोध।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Which seismic wave arrives first?\nकौन सी भूकंपीय तरंग सबसे पहले पहुँचती है?",
+  "o": ["P-wave", "S-wave", "L-wave", "None"],
+  "a": 0,
+  "e": "Primary waves. / पी-तरंगें।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "What describes 'Subduction'?\n'सबडक्शन' क्या है?",
+  "o": ["Rising land", "Sinking of a tectonic plate", "Wind blowing", "None"],
+  "a": 1,
+  "e": "One plate sinking beneath another. / एक प्लेट का दूसरे के नीचे धंसना।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The term 'Sial' represents which layer?\n'सियाल' (Sial) किस परत को दर्शाता है?",
+  "o": ["Ocean floor", "Continental crust", "Core", "Mantle"],
+  "a": 1,
+  "e": "Silica and Aluminum. / महाद्वीपीय क्रस्ट।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Which mineral has hardness 10?\nकिस खनिज की कठोरता 10 है?",
+  "o": ["Talc", "Quartz", "Diamond", "Topaz"],
+  "a": 2,
+  "e": "Hardest mineral. / हीरा।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Where is the 'Mariana Trench' located?\n'मारियाना ट्रेंच' कहाँ है?",
+  "o": ["Atlantic", "Pacific", "Indian", "Arctic"],
+  "a": 1,
+  "e": "Western Pacific. / प्रशांत महासागर।",
+  "cat": "geo",
+  "sub": "mapping"
+},
+{
+  "q": "Which state of matter is the 'Inner Core'?\n'आंतरिक कोर' की अवस्था क्या है?",
+  "o": ["Liquid", "Solid", "Gas", "None"],
+  "a": 1,
+  "e": "Due to high pressure. / अत्यधिक दबाव के कारण ठोस।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The 'Zoid' shape means Earth is bulged at:\n'जॉइड' आकार का अर्थ है पृथ्वी उभरी हुई है:",
+  "o": ["Poles", "Equator", "Top", "Bottom"],
+  "a": 1,
+  "e": "Centrifugal force effect. / भूमध्य रेखा पर।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "What describes 'Isotherms'?\n'आइसोथर्म' क्या हैं?",
+  "o": ["Lines of same pressure", "Lines of same temperature", "Lines of same rain", "None"],
+  "a": 1,
+  "e": "Equal temperature points. / समान तापमान वाली रेखाएं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Which geomorphic agent forms 'Barchans'?\n'बरखान' कौन बनाता है?",
+  "o": ["River", "Wind", "Glacier", "None"],
+  "a": 1,
+  "e": "Desert sand dunes. / पवन।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "What is 'Regolith'?\n'रेगोलिथ' क्या है?",
+  "o": ["Solid core", "Weathered debris on bedrock", "A cloud", "None"],
+  "a": 1,
+  "e": "Loose layer of fragments. / चट्टान के ऊपर जमा ढीला मलबा।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The term 'Mantle' is up to what depth?\n'मेंटल' कितनी गहराई तक है?",
+  "o": ["100 km", "2900 km", "6400 km", "None"],
+  "a": 1,
+  "e": "Intermediate layer. / 2900 किमी।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "What creates the 'Magnetic Field' of Earth?\nपृथ्वी का चुंबकीय क्षेत्र किससे बनता है?",
+  "o": ["Crust", "Liquid outer core convection", "Moon", "None"],
+  "a": 1,
+  "e": "Molten iron movement. / बाहरी कोर में धाराओं की गति से।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Which type of 'Process' is Volcanism?\n'ज्वालामुखीयता' कैसी प्रक्रिया है?",
+  "o": ["Exogenic", "Endogenic", "Solar", "None"],
+  "a": 1,
+  "e": "Internal force. / एंडोजेनिक।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "What turns 'Metamorphic' rocks back into 'Igneous'?\n'कायांतरित' को 'आग्नेय' में क्या बदलता है?",
+  "o": ["Weathering", "Melting and cooling", "Erosion", "None"],
+  "a": 1,
+  "e": "Rock cycle. / पिघलकर जमकर ठोस होना।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Which seismic wave is the slowest?\nसबसे धीमी भूकंपीय तरंग कौन सी है?",
+  "o": ["P-wave", "S-wave", "Surface wave", "None"],
+  "a": 2,
+  "e": "Most destructive surface wave. / धरातलीय तरंगें।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The 'Moho' discontinuity separates:\n'मोह' असंबद्धता अलग करती है:",
+  "o": ["Crust and Mantle", "Core and Mantle", "None", "None"],
+  "a": 0,
+  "e": "Boundary between crust/mantle. / क्रस्ट और मेंटल के बीच।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Which mineral property refers to 'Color of Powder'?\nकौन सा गुण 'चूर्ण के रंग' को दर्शाता है?",
+  "o": ["Lustre", "Streak", "Cleavage", "Hardness"],
+  "a": 1,
+  "e": "Tested on streak plate. / स्ट्रीक।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "In which city is the 'Red Sea' forming?\n'लाल सागर' कहाँ बन रहा है?",
+  "o": ["East Africa", "India", "None", "None"],
+  "a": 0,
+  "e": "Rifting zone. / पूर्वी अफ्रीका।",
+  "cat": "geo",
+  "sub": "mapping"
+},
+{
+  "q": "Which mineral was confirmed on Moon by Chandrayaan-3?\nचंद्रयान-3 ने चंद्रमा पर क्या पाया?",
+  "o": ["Gold", "Sulfur", "None", "None"],
+  "a": 1,
+  "e": "Chemical discovery. / सल्फर।",
+  "cat": "geo",
+  "sub": "mapping"
+},
+{
+  "q": "A 'Laccolith' is ______ shaped.\n'लैकोलिथ' ______ आकार का होता है।",
+  "o": ["Saucer", "Dome-shaped", "None", "None"],
+  "a": 1,
+  "e": "Mushroom-like dome. / गुंबद जैसा।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Which type of 'Process' levels heights?\nऊँचाइयों को कौन समतल करता है?",
+  "o": ["Endogenic", "Exogenic", "None", "None"],
+  "a": 1,
+  "e": "Gradational force. / एक्सोजेनिक।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "What describes 'Maffic' rocks?\n'मैफ़िक' चट्टानें कैसी होती हैं?",
+  "o": ["Dense, Dark", "Light, White", "None", "None"],
+  "a": 0,
+  "e": "Rich in Mg/Fe. / सघन और काली।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "What is the 'Eye' of a cyclone?\nचक्रवात की 'आँख' क्या है?",
+  "o": ["Violent part", "Calm center", "None", "None"],
+  "a": 1,
+  "e": "Low pressure calm zone. / शांत केंद्र।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Tropical Cyclones are driven by ______.\nउष्णकटिबंधीय चक्रवात किससे चलते हैं?",
+  "o": ["Solar heat", "Latent heat", "None", "None"],
+  "a": 1,
+  "e": "Energy from condensation. / गुप्त ऊष्मा।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Which region has 'Willy-Willies'?\n'विली-विली' कहाँ आते हैं?",
+  "o": ["Australia", "China", "None", "None"],
+  "a": 0,
+  "e": "Regional name for cyclone. / ऑस्ट्रेलिया।",
+  "cat": "geo",
+  "sub": "mapping"
+},
+{
+  "q": "What is a 'Tornado'?\n'टॉरनेडो' क्या है?",
+  "o": ["Sea current", "Rotating air column", "None", "None"],
+  "a": 1,
+  "e": "Violent storm. / हवा का घूमता स्तंभ।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "What is the 'Coriolis Force' at Equator?\nभूमध्य रेखा पर कोरिओलिस बल कितना है?",
+  "o": ["Max", "Zero", "None", "None"],
+  "a": 1,
+  "e": "No deflection. / शून्य।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "In which period did Oxygen reach 30%?\nकिस काल में ऑक्सीजन 30% थी?",
+  "o": ["Hadean", "Phanerozoic", "None", "None"],
+  "a": 1,
+  "e": "Phanerozoic Eon. / फनेरोज़ोइक।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The 'Standard Meridian' of India is ______.\nभारत का मानक देशांतर ______ है।",
+  "o": ["82.5° E", "0°", "None", "None"],
+  "a": 0,
+  "e": "IST baseline. / 82.5° पूर्व।",
+  "cat": "geo",
+  "sub": "mapping"
+},
+{
+  "q": "Which mineral has hardness level 1?\nकिसकी कठोरता 1 है?",
+  "o": ["Quartz", "Talc", "None", "None"],
+  "a": 1,
+  "e": "Softest mineral. / टल्क।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "What is 'Regolith' in context of soil?\nमिट्टी के संदर्भ में रेगोलिथ क्या है?",
+  "o": ["Solid bedrock", "Weathered debris", "None", "None"],
+  "a": 1,
+  "e": "Loose top layer. / ढीला मलबा।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Which seismic wave moves side-to-side?\nकौन सी तरंग अगल-बगल चलती है?",
+  "o": ["P-wave", "Love wave", "None", "None"],
+  "a": 1,
+  "e": "Surface horizontal wave. / लव तरंग।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "What is the 'Eye Wall' of a cyclone?\nचक्रवात की 'आई वॉल' क्या है?",
+  "o": ["Calm part", "Most violent part", "None", "None"],
+  "a": 1,
+  "e": "Surrounding the eye. / सर्वाधिक तीव्र भाग।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+  {
   "q": "What is the primary difference between a 'Landform' and a 'Landscape'?\n'भू-आकृति' (Landform) और 'भू-दृश्य' (Landscape) के बीच प्राथमिक अंतर क्या है?",
   "o": ["Landform is bigger than landscape", "A landscape is a collection of several related landforms", "Landforms only occur in water", "There is no difference"],
   "a": 1,
