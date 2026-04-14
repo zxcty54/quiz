@@ -8,6 +8,806 @@
 "sub": "sectors"
 },
   {
+  "q": "Who proposed the 'Convection Current Theory' in the 1930s to explain the force behind tectonic movements?\n1930 के दशक में विवर्तनिक गति के पीछे के बल की व्याख्या करने के लिए 'संवहन धारा सिद्धांत' किसने प्रस्तावित किया था?",
+  "o": ["Alfred Wegener", "Arthur Holmes", "Harry Hess", "McKenzie"],
+  "a": 1,
+  "e": "Arthur Holmes proposed that thermal convection currents in the mantle provide the energy for plate movement. / आर्थर होम्स ने बताया कि मेंटल में तापीय संवहन धाराएं प्लेटों को गति प्रदान करती हैं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The 'Asthenosphere' is described as a semi-molten layer. Which material is it primarily made of?\n'एस्थेनोस्फीयर' को एक अर्ध-पिघली हुई परत के रूप में वर्णित किया गया है। यह मुख्य रूप से किस पदार्थ से बनी है?",
+  "o": ["Granite", "Peridotite", "Basalt", "Limestone"],
+  "a": 1,
+  "e": "The mantle and asthenosphere are primarily composed of Peridotite. / मेंटल और एस्थेनोस्फीयर मुख्य रूप से पीरियोडोटाइट से बने होते हैं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The 'Rising Limb' of a convection current is associated with which surface feature?\nसंवहन धारा का 'उठता हुआ लिंब' (Rising Limb) किस सतही विशेषता से जुड़ा है?",
+  "o": ["Oceanic Trenches", "Fold Mountains", "Mid-Oceanic Ridges", "Abyssal Plains"],
+  "a": 2,
+  "e": "Rising limbs push magma upwards, creating Mid-Oceanic Ridges and causing divergence. / ऊपर उठती धाराएं मैग्मा को ऊपर धकेलती हैं, जिससे मध्य-महासागरीय कटक बनते हैं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "According to Harry Hess, where is the oldest oceanic crust typically found?\nहैरी हेस के अनुसार, सबसे पुरानी महासागरीय क्रस्ट आमतौर पर कहाँ पाई जाती है?",
+  "o": ["Near the Mid-Oceanic Ridge", "On the continents", "Near the Oceanic Trenches (Subduction zones)", "At the North Pole"],
+  "a": 2,
+  "e": "Oldest crust is found near trenches before it subducts, while the newest is at the ridges. / सबसे पुरानी क्रस्ट खाइयों (Trenches) के पास पाई जाती है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Why was the ocean floor found to be no older than 200 million years, despite Earth being 4.6 billion years old?\nपृथ्वी के 4.6 बिलियन वर्ष पुराने होने के बावजूद महासागर का तल 200 मिलियन वर्ष से अधिक पुराना क्यों नहीं पाया गया?",
+  "o": ["Ocean water prevents aging", "Constant recycling of oceanic crust at subduction zones", "Oceanic crust was formed later than continents", "Errors in carbon dating"],
+  "a": 1,
+  "e": "Oceanic crust is constantly created at ridges and destroyed at trenches, keeping it geologically young. / सबडक्शन क्षेत्रों में महासागरीय क्रस्ट का निरंतर पुनर्चक्रण होता रहता है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Which ocean features a nearly 65,000 km long Mid-Oceanic Ridge system?\nकिस महासागर में लगभग 65,000 किमी लंबी मध्य-महासागरीय कटक प्रणाली पाई जाती है?",
+  "o": ["Pacific Ocean", "Indian Ocean", "Atlantic Ocean", "Arctic Ocean"],
+  "a": 2,
+  "e": "The Mid-Atlantic Ridge is a prominent feature of the Atlantic Ocean floor. / अटलांटिक महासागर में प्रसिद्ध मध्य-महासागरीय कटक स्थित है।",
+  "cat": "geo",
+  "sub": "mapping"
+},
+{
+  "q": "The 'Sinking Limb' of a convection current typically leads to the formation of:\nसंवहन धारा का 'सिंकिंग लिंब' (Sinking Limb) आमतौर पर किसके निर्माण का कारण बनता है?",
+  "o": ["Rift Valleys", "Oceanic Trenches", "Islands", "Deserts"],
+  "a": 1,
+  "e": "Sinking limbs pull the crust downwards, creating deep oceanic trenches or troughs. / नीचे गिरती धाराएं क्रस्ट को नीचे खींचती हैं, जिससे समुद्री खाइयाँ (Trenches) बनती हैं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "What happens to the temperature of the seafloor as you move away from the Mid-Oceanic Ridge?\nमध्य-महासागरीय कटक से दूर जाने पर समुद्र तल के तापमान का क्या होता है?",
+  "o": ["It increases", "It stays constant", "It decreases", "It fluctuates randomly"],
+  "a": 2,
+  "e": "The ridges are heat sources (magma); hence, temperature drops with distance from the ridge. / कटक मैग्मा के स्रोत हैं, इसलिए उनसे दूर जाने पर तापमान कम हो जाता है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The process of 'Seafloor Spreading' was proven by which evidence?\n'सागर अधस्तल विस्तार' की प्रक्रिया किस साक्ष्य से सिद्ध हुई?",
+  "o": ["Jigsaw fit of continents", "Paleomagnetic reversals and symmetrical magnetic stripes", "Presence of fossils in Norway", "Gold deposits in Ghana"],
+  "a": 1,
+  "e": "Identical magnetic patterns on either side of the ridge proved that the floor is moving outwards. / कटक के दोनों ओर समान चुंबकीय पैटर्न ने सागर तल के विस्तार को सिद्ध किया।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Which state of matter describes the 'Outer Core', blocking S-waves?\nपदार्थ की कौन सी अवस्था 'बाहरी कोर' का वर्णन करती है, जो एस-तरंगों को रोकती है?",
+  "o": ["Solid", "Liquid/Plasma", "Gaseous", "Super-solid"],
+  "a": 1,
+  "e": "The outer core is liquid (or plasma), which does not allow transverse S-waves to pass. / बाहरी कोर तरल है, जिससे एस-तरंगें नहीं गुजर सकतीं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "A 'Juvenile Sea' or 'Nascent Sea' like the Red Sea is formed at which stage of rifting?\nलाल सागर जैसा 'जुवेनाइल सी' या 'नेसेंट सी' दरार (Rifting) के किस चरण में बनता है?",
+  "o": ["Stage 1: Domal uplift", "Stage 4: Cracking", "Stage 6: Water entry and thinning", "Stage 8: Subduction"],
+  "a": 2,
+  "e": "A juvenile sea forms when the rifted land sinks below sea level and water enters. / जब दरार समुद्र तल से नीचे चली जाती है और पानी भर जाता है, तो जुवेनाइल सी बनता है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The 'Afar Triangle' in Africa is an example of a:\nअफ्रीका में 'अफार ट्रायंगल' किसका उदाहरण है?",
+  "o": ["Convergence zone", "Triple Junction / Tectonic Hotspot", "Deepest trench", "Fold mountain range"],
+  "a": 1,
+  "e": "The Afar Triangle is a triple junction where the African, Arabian, and Somali plates diverge. / अफर ट्रायंगल एक ट्रिपल जंक्शन (हॉटस्पॉट) है जहाँ तीन प्लेटें अलग हो रही हैं।",
+  "cat": "geo",
+  "sub": "mapping"
+},
+{
+  "q": "What is the primary reason for 'Radioactive decay' in the Earth's interior?\nपृथ्वी के आंतरिक भाग में 'रेडियोधर्मी क्षय' का प्राथमिक कारण क्या है?",
+  "o": ["Solar energy", "Internal heat generation from elements like Uranium/Thorium", "Pressure from the atmosphere", "Oceanic tides"],
+  "a": 1,
+  "e": "Unstable isotopes in the mantle decay, releasing heat that drives convection. / मेंटल में अस्थिर आइसोटोप के क्षय से ऊष्मा उत्पन्न होती है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Which term refers to the point of contact between two plates where friction causes earthquakes?\nदो प्लेटों के बीच संपर्क के उस बिंदु को क्या कहते हैं जहाँ घर्षण के कारण भूकंप आते हैं?",
+  "o": ["Epicenter", "Benioff Zone", "Crater", "Shelf break"],
+  "a": 1,
+  "e": "The Benioff zone is the planar zone of seismicity corresponding with the down-going slab in a subduction zone. / सबडक्शन क्षेत्र में भूकंपीय गतिविधि वाले क्षेत्र को बेनिऑफ ज़ोन कहते हैं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Which type of crust is composed of lighter 'Felsic' granitic rocks?\nकिस प्रकार की क्रस्ट हल्के 'फेल्सिक' ग्रेनाइट चट्टानों से बनी है?",
+  "o": ["Oceanic Crust", "Continental Crust", "Lower Mantle", "Inner Core"],
+  "a": 1,
+  "e": "Continental crust is Felsic (Feldspar + Silica) and less dense (~2.7 g/cm³). / महाद्वीपीय क्रस्ट फेल्सिक और कम सघन होती है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The term 'Maffic' used for oceanic crust stands for which two mineral components?\nमहासागरीय क्रस्ट के लिए प्रयुक्त 'मैफ़िक' शब्द किन दो खनिज घटकों का प्रतीक है?",
+  "o": ["Manganese and Iron", "Magnesium and Ferrous (Iron)", "Magnesium and Fluorine", "Mica and Feldspar"],
+  "a": 1,
+  "e": "Maffic stands for Magnesium (Ma) and Ferrous/Iron (Fe). / मैफिक मैग्नीशियम और आयरन से बना है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Who provided the 'Pre-theory' of Seafloor spreading by mapping the ocean floor using sonar/radar?\nसोनार/रडार का उपयोग करके समुद्र तल का मानचित्रण करके सागर तल विस्तार का 'पूर्व-सिद्धांत' किसने दिया था?",
+  "o": ["Harry Hess", "Edward Bullard", "Alfred Wegener", "Ptolemy"],
+  "a": 1,
+  "e": "Edward Bullard was a pioneer in mapping the relief features of the ocean floor. / एडवर्ड बुलार्ड ने समुद्र तल की स्थलाकृतियों का मानचित्रण किया था।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "What is 'Lithosphere' a combination of?\n'स्थलमंडल' (Lithosphere) किसका संयोजन है?",
+  "o": ["Crust and Core", "Uppermost solid Mantle and Crust", "Only the Oceanic crust", "Only the Continental crust"],
+  "a": 1,
+  "e": "Lithosphere includes the crust and the top solid layer of the mantle (up to 200 km). / क्रस्ट और ऊपरी मेंटल की ठोस परत मिलकर स्थलमंडल बनाते हैं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Which type of boundary is created by the 'Divergence' of tectonic plates?\nविवर्तनिक प्लेटों के 'अपसरण' (Divergence) से किस प्रकार की सीमा बनती है?",
+  "o": ["Destructive Boundary", "Constructive Boundary", "Conservative Boundary", "Subduction Zone"],
+  "a": 1,
+  "e": "Divergent boundaries are constructive because they create new crust. / अपसारी सीमा पर नई क्रस्ट बनती है, इसलिए इसे रचनात्मक सीमा कहते हैं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The process of 'Inter-plate thinning' occurs due to:\n'इंटर-प्लेट थिनिंग' (प्लेट का पतला होना) किसके कारण होता है?",
+  "o": ["Cold winds", "Melting of the plate bottom due to proximity to the hot mantle", "Erosion by rain", "Human drilling"],
+  "a": 1,
+  "e": "As the plate moves over or sinks into the hot mantle, the bottom layer melts and thins out. / गर्म मेंटल के संपर्क में आने से प्लेट की निचली परत पिघलकर पतली हो जाती है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Which of the following is a 'Minor' tectonic plate near Central America?\nमध्य अमेरिका के पास निम्नलिखित में से कौन सी एक 'लघु' विवर्तनिक प्लेट है?",
+  "o": ["African Plate", "Cocos Plate", "Eurasian Plate", "Antarctic Plate"],
+  "a": 1,
+  "e": "Cocos is a minor plate between Central America and the Pacific plate. / कोकोस मध्य अमेरिका और प्रशांत प्लेट के बीच एक छोटी प्लेट है।",
+  "cat": "geo",
+  "sub": "mapping"
+},
+{
+  "q": "Which seismic waves travel like a snake (side-to-side) on the Earth's surface?\nकौन सी भूकंपीय तरंगें पृथ्वी की सतह पर सांप की तरह (अगल-बगल) चलती हैं?",
+  "o": ["P-waves", "S-waves", "Love waves", "Rayleigh waves"],
+  "a": 2,
+  "e": "Love waves (L-waves) move horizontally perpendicular to the direction of travel. / लव तरंगें क्षैतिज रूप से टेढ़ी-मेढ़ी गति करती हैं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "What did the 'Chandrayaan-3' mission confirm on the Moon that is also found in Earth's core?\nचंद्रयान-3 मिशन ने चंद्रमा पर किस तत्व की पुष्टि की जो पृथ्वी के कोर में भी पाया जाता है?",
+  "o": ["Gold", "Sulfur", "Uranium", "Plastic"],
+  "a": 1,
+  "e": "Sulfur was discovered by Chandrayaan-3 on the lunar surface, suggesting similar planetary compositions. / चंद्रयान-3 ने चंद्रमा पर सल्फर की खोज की।",
+  "cat": "geo",
+  "sub": "mapping"
+},
+{
+  "q": "At a 'Convergent' boundary, if one plate is denser, it will ______.\nएक 'अभिसरण' सीमा पर, यदि एक प्लेट अधिक सघन है, तो वह ______।",
+  "o": ["Float higher", "Subduct / Sink into the mantle", "Stop moving", "Explode"],
+  "a": 1,
+  "e": "The denser plate always subducts under the lighter plate during a collision. / सघन प्लेट हमेशा हल्की प्लेट के नीचे धंसती है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Which feature is formed when oceanic-oceanic convergence creates a chain of volcanic islands?\nजब महासागरीय-महासागरीय अभिसरण ज्वालामुखीय द्वीपों की एक श्रृंखला बनाता है तो कौन सी आकृति बनती है?",
+  "o": ["Rift Valley", "Archipelago / Island Arc", "Abyssal Plain", "Continental Shelf"],
+  "a": 1,
+  "e": "Island arcs like Japan or the Philippines are formed by subduction between two oceanic plates. / दो महासागरीय प्लेटों के टकराने से द्वीप चाप (Archipelago) बनते हैं।",
+  "cat": "geo",
+  "sub": "mapping"
+},
+{
+  "q": "What is the 'Conrad Discontinuity' associated with?\n'कोनराड असंबद्धता' किससे संबंधित है?",
+  "o": ["Boundary between Crust and Mantle", "Boundary between Upper and Lower Crust", "Boundary between Core and Mantle", "Boundary between Upper and Lower Mantle"],
+  "a": 1,
+  "e": "Conrad discontinuity separates the outer granitic crust from the inner basaltic crust. / यह ऊपरी और निचले क्रस्ट के बीच की विभाजक रेखा है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Why is 'Basalt' denser than 'Granite'?\n'बेसाल्ट' 'ग्रेनाइट' से अधिक सघन क्यों है?",
+  "o": ["Because it is light colored", "Due to high iron and magnesium content and lower silica", "Because it contains air bubbles", "Because it is found on land only"],
+  "a": 1,
+  "e": "Basalt is maffic (rich in Mg and Fe), making it significantly heavier than felsic granite. / बेसाल्ट लोहे और मैग्नीशियम के कारण भारी होता है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The 'Great African Rift Valley' is a proof that Africa is ______.\n'महान अफ्रीकी भ्रंश घाटी' इस बात का प्रमाण है कि अफ्रीका ______।",
+  "o": ["Shrinking", "Undergoing Continental Rifting and splitting", "Static", "Rising as a single mountain"],
+  "a": 1,
+  "e": "The rift valley is a divergent boundary where the continent is literally pulling apart. / अफ्रीकी भ्रंश घाटी प्लेटों के दूर जाने (Rifting) का प्रत्यक्ष प्रमाण है।",
+  "cat": "geo",
+  "sub": "mapping"
+},
+{
+  "q": "Seismic waves 'Refract' or bend when they:\nभूकंपीय तरंगें 'अपवर्तित' (Refract) या मुड़ती हैं जब वे:",
+  "o": ["Hit a hard surface and bounce back", "Change medium with different densities", "Travel in a vacuum", "Go through space"],
+  "a": 1,
+  "e": "Refraction occurs when waves enter a medium of different density, changing their speed and direction. / घनत्व बदलने पर तरंगों का मुड़ना अपवर्तन कहलाता है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Which type of boundary is 'Conservative' where crust is neither created nor destroyed?\nकिस प्रकार की सीमा 'संरक्षी' (Conservative) है जहाँ क्रस्ट न तो बनती है और न ही नष्ट होती है?",
+  "o": ["Convergent", "Divergent", "Transform", "Subduction"],
+  "a": 2,
+  "e": "Transform boundaries allow plates to slide past each other horizontally. / रूपांतरण सीमा पर न तो क्रस्ट बनती है और न ही नष्ट होती है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The 'Nazca Plate' subducts under the South American plate to form which mountains?\n'नाज़का प्लेट' दक्षिण अमेरिकी प्लेट के नीचे धंसकर किन पर्वतों का निर्माण करती है?",
+  "o": ["Himalayas", "Rockies", "Andes", "Alps"],
+  "a": 2,
+  "e": "Ocean-Continent convergence between Nazca and South America created the Andes. / नाज़का और दक्षिण अमेरिकी प्लेट की टक्कर से एंडीज पर्वत बने।",
+  "cat": "geo",
+  "sub": "mapping"
+},
+{
+  "q": "What determines the 'Viscosity' of magma?\nमैग्मा की 'श्यानता' (Viscosity) क्या निर्धारित करती है?",
+  "o": ["Water content only", "Silica content (High silica = High viscosity)", "The depth of the mantle", "Atmospheric pressure"],
+  "a": 1,
+  "e": "High silica content makes magma thick and sticky (viscous), like honey. / सिलिका की अधिकता मैग्मा को गाढ़ा और चिपचिपा बनाती है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The 'Mid-Atlantic Ridge' is characterized by which tectonic movement?\n'मध्य-अटलांटिक कटक' किस विवर्तनिक हलचल की विशेषता है?",
+  "o": ["Plates sliding past each other", "Plates crashing together", "Plates moving apart (Divergence)", "Plates remaining static"],
+  "a": 2,
+  "e": "It is a constructive divergent boundary in the Atlantic Ocean. / यह अटलांटिक महासागर में एक अपसारी (Divergent) सीमा है।",
+  "cat": "geo",
+  "sub": "mapping"
+},
+{
+  "q": "What is 'Pangea'?\n'पंजिया' (Pangea) क्या है?",
+  "o": ["The ancient super ocean", "The ancient supercontinent", "The core of the earth", "A type of rock"],
+  "a": 1,
+  "e": "Pangea was the giant landmass before it broke into today's continents. / पंजिया वह विशाल भू-भाग था जिससे सभी महाद्वीप अलग हुए।",
+  "cat": "geo",
+  "sub": "world_geo"
+},
+{
+  "q": "In the context of seismic waves, what is the 'Shadow Zone'?\nभूकंपीय तरंगों के संदर्भ में 'छाया क्षेत्र' (Shadow Zone) क्या है?",
+  "o": ["An area with no gravity", "A region where seismic waves are not detected by seismographs", "The area directly under the focus", "A desert region"],
+  "a": 1,
+  "e": "Refraction and blocking by the core create specific areas where waves don't reach monitoring stations. / वह क्षेत्र जहाँ भूकंपीय तरंगें रिकॉर्ड नहीं की जा सकतीं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Which part of the Earth acts as the source of Earth's magnetic field?\nपृथ्वी का कौन सा भाग पृथ्वी के चुंबकीय क्षेत्र के स्रोत के रूप में कार्य करता है?",
+  "o": ["Solid Crust", "Liquid Outer Core", "Solid Inner Core", "Lower Mantle"],
+  "a": 1,
+  "e": "Convection in the liquid outer core generates the Earth's magnetic field. / बाहरी कोर की तरल अवस्था चुंबकीय क्षेत्र बनाती है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Who coined the term 'Plate' in 1965?\n1965 में 'प्लेट' शब्द किसने गढ़ा था?",
+  "o": ["McKenzie", "J. Tuzo Wilson", "Harry Hess", "Arthur Holmes"],
+  "a": 1,
+  "e": "Tuzo Wilson first introduced the term 'Plate' in the context of plate tectonics. / टुज़ो विल्सन ने सबसे पहले प्लेट शब्द का प्रयोग किया।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The 'Mesosphere' in geology refers to:\nभूविज्ञान में 'मेजोस्फीयर' संदर्भित करता है:",
+  "o": ["The middle layer of the atmosphere", "The solid lower mantle between asthenosphere and core", "The oceanic crust", "The inner core"],
+  "a": 1,
+  "e": "Geologically, it is the more rigid part of the mantle below the asthenosphere. / भूगर्भीय रूप से यह निचले मेंटल की ठोस परत है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Which plate boundary is also known as a 'Destructive' boundary?\nकिस प्लेट सीमा को 'विनाशकारी' (Destructive) सीमा के रूप में भी जाना जाता है?",
+  "o": ["Divergent", "Convergent (Subduction zone)", "Transform", "Passive margin"],
+  "a": 1,
+  "e": "At convergent boundaries, crust is 'destroyed' as it melts in the mantle. / अभिसरण सीमा पर क्रस्ट नष्ट होती है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "What happens at a 'Transform' boundary?\n'रूपांतरण' (Transform) सीमा पर क्या होता है?",
+  "o": ["Mountains are built", "Ocean floor is created", "Plates slide horizontally past each other", "Volcanoes always erupt"],
+  "a": 2,
+  "e": "Plates slide sideways, which usually results in strike-slip faults and earthquakes. / प्लेटें एक-दूसरे के बगल से खिसकती हैं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The 'Himalayas' were formed by the collision of which two plates?\n'हिमालय' का निर्माण किन दो प्लेटों की टक्कर से हुआ था?",
+  "o": ["Nazca and South American", "Indian and Eurasian", "Pacific and North American", "African and Antarctic"],
+  "a": 1,
+  "e": "Continent-continent collision between the Indian and Eurasian plates created the Himalayas. / भारतीय और यूरेशियन प्लेटों के अभिसरण से हिमालय बना।",
+  "cat": "geo",
+  "sub": "mountains"
+},
+{
+  "q": "Which seismic wave is the 'Primary' wave, arriving first at stations?\nकौन सी भूकंपीय तरंग 'प्राथमिक' तरंग है, जो स्टेशनों पर सबसे पहले पहुँचती है?",
+  "o": ["S-wave", "P-wave", "L-wave", "R-wave"],
+  "a": 1,
+  "e": "P-waves are the fastest seismic waves. / पी-तरंगें सबसे तेज होती हैं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "What is the name of the super ocean that surrounded Pangaea?\nपंजिया को घेरने वाले विशाल महासागर का क्या नाम है?",
+  "o": ["Panthalassa", "Tethys", "Atlantic", "Arctic"],
+  "a": 0,
+  "e": "Panthalassa was the global primordial ocean. / पेंथालासा वह विशाल महासागर था।",
+  "cat": "geo",
+  "sub": "world_geo"
+},
+{
+  "q": "Identical fossils on different continents prove that the continents were ______.\nविभिन्न महाद्वीपों पर समान जीवाश्म यह सिद्ध करते हैं कि महाद्वीप ______ थे।",
+  "o": ["Separated by large oceans always", "Once joined together (Pangea)", "Created at different times", "Stationary"],
+  "a": 1,
+  "e": "Fossil evidence (like Glossopteris) proves continents were once one. / जीवाश्म प्रमाण महाद्वीपों के जुड़े होने को सिद्ध करते हैं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Which type of rock is 'Granite'?\n'ग्रेनाइट' किस प्रकार की चट्टान है?",
+  "o": ["Extrusive Igneous", "Intrusive Igneous", "Sedimentary", "Metamorphic"],
+  "a": 1,
+  "e": "Granite forms from magma cooling slowly inside the crust. / ग्रेनाइट एक अंतर्भेदी आग्नेय शैल है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The 'Divergent' movement of plates on the ocean floor creates:\nसमुद्र तल पर प्लेटों की 'अपसारी' गति क्या बनाती है?",
+  "o": ["Deep Trenches", "Fold Mountains", "Mid-Oceanic Ridges", "Deserts"],
+  "a": 2,
+  "e": "Divergence at oceanic floor results in seafloor spreading and ridges. / समुद्री तल पर अपसरण से मध्य-महासागरीय कटक बनते हैं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Which minor plate is located between the Philippine and Pacific plates?\nफिलीपीन और प्रशांत प्लेटों के बीच कौन सी छोटी प्लेट स्थित है?",
+  "o": ["Nazca", "Caroline Plate", "Cocos", "Juan de Fuca"],
+  "a": 1,
+  "e": "The Caroline plate is a minor plate in the western Pacific. / कैरोलीन प्लेट प्रशांत क्षेत्र में एक छोटी प्लेट है।",
+  "cat": "geo",
+  "sub": "mapping"
+},
+{
+  "q": "What is the approximate rate of growth of 'Mount Everest' per year?\n'माउंट एवरेस्ट' की प्रति वर्ष वृद्धि की अनुमानित दर क्या है?",
+  "o": ["1 meter", "6 centimeters", "10 inches", "0.5 km"],
+  "a": 1,
+  "e": "Due to ongoing collision, Everest rises by about 6cm each year. / एवरेस्ट हर साल लगभग 6 सेमी बढ़ रहा है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Which layer separates the Mantle from the Core?\nमेंटल को कोर से कौन सी परत अलग करती है?",
+  "o": ["Moho Discontinuity", "Gutenberg Discontinuity", "Lehmann Discontinuity", "Conrad Discontinuity"],
+  "a": 1,
+  "e": "The Gutenberg discontinuity marks the core-mantle boundary. / गुटेनबर्ग असंबद्धता मेंटल और कोर के बीच की सीमा है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+  {
+  "q": "At which type of plate boundary is new lithosphere generated?\nकिस प्रकार की प्लेट सीमा पर नया स्थलमंडल उत्पन्न होता है?",
+  "o": ["Convergent", "Divergent", "Transform", "Subduction"],
+  "a": 1,
+  "e": "New crust is created at divergent boundaries (ridges). / अपसारी सीमा पर नई क्रस्ट का निर्माण होता है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The 'Pacific Ring of Fire' is associated with:\n'पैसिफिक रिंग ऑफ फायर' किससे संबंधित है?",
+  "o": ["Static plates", "Subduction zones and volcanic arcs", "Glacial valleys", "Desertification"],
+  "a": 1,
+  "e": "Most active volcanoes and earthquakes occur here due to intense subduction. / रिंग ऑफ फायर सबडक्शन और ज्वालामुखियों का क्षेत्र है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Which plate was separated from the main African plate, creating the 'Red Sea'?\n'लाल सागर' के निर्माण के दौरान कौन सी प्लेट मुख्य अफ्रीकी प्लेट से अलग हुई थी?",
+  "o": ["Indian Plate", "Arabian Plate", "Eurasian Plate", "South American Plate"],
+  "a": 1,
+  "e": "The divergence of Arabian and African plates created the Red Sea. / अरब प्लेट के अफ्रीका से अलग होने से लाल सागर बना।",
+  "cat": "geo",
+  "sub": "mapping"
+},
+{
+  "q": "What is the primary characteristic of 'Ocean-Continent' convergence?\n'महासागर-महाद्वीप' अभिसरण की प्राथमिक विशेषता क्या है?",
+  "o": ["Forming deep trenches and volcanic mountain chains (like Andes)", "Creating flat plains only", "Creating rift valleys only", "No earthquakes"],
+  "a": 0,
+  "e": "Denser oceanic crust subducts, creating trenches and volcanic mountains on the continental edge. / इसमें खाइयाँ और ऊंचे ज्वालामुखीय पर्वत (जैसे एंडीज) बनते हैं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The 'Juan de Fuca' plate is located near the coast of which region?\n'जुआन डी फूका' प्लेट किस क्षेत्र के तट के पास स्थित है?",
+  "o": ["Southern Africa", "North America (Pacific Northwest)", "Northern Europe", "Eastern Australia"],
+  "a": 1,
+  "e": "It is a minor plate off the coast of Washington/Oregon/Vancouver. / यह उत्तर अमेरिका के उत्तर-पश्चिमी तट के पास है।",
+  "cat": "geo",
+  "sub": "mapping"
+},
+{
+  "q": "Which seismic waves cause ground particles to move in an elliptical/circular orbit?\nकौन सी भूकंपीय तरंगें जमीनी कणों को अंडाकार/वृत्ताकार कक्षा में ले जाती हैं?",
+  "o": ["P-waves", "Love waves", "Rayleigh waves", "Sound waves"],
+  "a": 2,
+  "e": "Rayleigh waves are surface waves with a circular motion. / रेले तरंगें वृत्ताकार गति पैदा करती हैं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "What mineral property is tested when you calculate the ratio of its mass to water volume?\nजब आप किसी खनिज के द्रव्यमान और जल के आयतन के अनुपात की गणना करते हैं तो किस गुण का परीक्षण किया जाता है?",
+  "o": ["Hardness", "Lustre", "Specific Gravity", "Streak"],
+  "a": 2,
+  "e": "This determines the relative density of the mineral. / यह विशिष्ट गुरुत्व (Specific Gravity) कहलाता है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The 'San Andreas Fault' is a perfect example of a:\n'सैन एंड्रियास फॉल्ट' किसका एक आदर्श उदाहरण है?",
+  "o": ["Subduction zone", "Mid-oceanic ridge", "Transform fault boundary", "Shield volcano"],
+  "a": 2,
+  "e": "Two plates slide past each other horizontally here. / यह एक रूपांतरण भ्रंश (Transform Fault) है।",
+  "cat": "geo",
+  "sub": "mapping"
+},
+{
+  "q": "Which element makes rocks more 'Maffic' and dense?\nकौन सा तत्व चट्टानों को अधिक 'मैफिक' और सघन बनाता है?",
+  "o": ["Oxygen", "Silicon", "Iron and Magnesium", "Sodium"],
+  "a": 2,
+  "e": "Magnesium and Ferrous (Iron) give maffic rocks their weight. / लोहा और मैग्नीशियम चट्टान को भारी बनाते हैं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "What happens during 'Metamorphism' in the rock cycle?\nशैल चक्र में 'कायांतरण' के दौरान क्या होता है?",
+  "o": ["Rocks melt into liquid", "Rocks change structure under heat/pressure without melting", "Rocks explode", "Rocks disappear"],
+  "a": 1,
+  "e": "Existing rocks recrystallize into new forms under high pressure/temperature. / बिना पिघले चट्टान का रूप बदलना कायांतरण है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The 'Mariana Trench' was formed due to the subduction of which plate?\n'मारियाना ट्रेंच' का निर्माण किस प्लेट के धंसने के कारण हुआ था?",
+  "o": ["Pacific plate under Philippine plate", "Eurasian under Indian", "Nazca under South American", "Cocos under North American"],
+  "a": 0,
+  "e": "Ocean-ocean convergence between Pacific and Philippine plates. / प्रशांत प्लेट के फिलीपीन प्लेट के नीचे धंसने से यह बनी है।",
+  "cat": "geo",
+  "sub": "mapping"
+},
+{
+  "q": "Why is the continental crust referred to as 'Felsic'?\nमहाद्वीपीय क्रस्ट को 'फेल्सिक' क्यों कहा जाता है?",
+  "o": ["It is heavy", "It is rich in Feldspar and Silica", "It is black in color", "It is always under water"],
+  "a": 1,
+  "e": "Felsic rocks are silica-rich and lighter. / इसमें फेल्डस्पार और सिलिका अधिक होता है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Which plate boundary is known as 'Destructive'?\nकिस प्लेट सीमा को 'विनाशकारी' माना जाता है?",
+  "o": ["Divergent", "Convergent", "Transform", "Passive"],
+  "a": 1,
+  "e": "Lithosphere is destroyed via subduction at convergent boundaries. / अभिसरण सीमा पर स्थलमंडल नष्ट होता है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "A 'Batholith' is a large ______ igneous body.\n'बैथोलिथ' एक बड़ा ______ आग्नेय पिंड है।",
+  "o": ["Extrusive", "Intrusive / Plutonic", "Volcanic ash", "Layered sedimentary"],
+  "a": 1,
+  "e": "Batholiths cool deep in the crust. / बैथोलिथ एक गहरी अंतर्भेदी आकृति है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "What is 'Dike' (Dyk) in volcanic geography?\nज्वालामुखी भूगोल में 'डाइक' क्या है?",
+  "o": ["A crater lake", "A horizontal lava sheet", "A vertical wall-like intrusion of magma", "A cloud of smoke"],
+  "a": 2,
+  "e": "Dikes are discordant (vertical) magmatic intrusions. / दीवार की तरह लंबवत जमाव को डाइक कहते हैं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The 'Deccan Traps' were formed due to:\n'दक्कन ट्रैप' किसके कारण बने थे?",
+  "o": ["Glacial deposition", "Flood Basalt eruptions from a hotspot", "Crashing of mountains", "Tsunami waves"],
+  "a": 1,
+  "e": "Massive eruptions from a hotspot created the basaltic plateau. / हॉटस्पॉट से निकले फ्लड बेसाल्ट से दक्कन ट्रैप बना।",
+  "cat": "geo",
+  "sub": "mapping"
+},
+{
+  "q": "Which seismic wave is the 'Slowest' but causes most destruction?\nकौन सी भूकंपीय तरंग सबसे 'धीमी' है लेकिन सबसे अधिक विनाश करती है?",
+  "o": ["P-wave", "S-wave", "Surface wave", "Body wave"],
+  "a": 2,
+  "e": "Surface waves have the longest duration and largest amplitude. / धरातलीय तरंगें धीमी पर सबसे विनाशकारी होती हैं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The term 'Sial' stands for Silica and ______.\n'सियाल' का अर्थ सिलिका और ______ है।",
+  "o": ["Aluminum", "Iron", "Magnesium", "Silver"],
+  "a": 0,
+  "e": "Continental crust is characterized by Silica and Aluminum. / सियाल सिलिका और एल्युमीनियम से बना है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "What is the main property of 'Sedimentary' rocks?\n'अवसादी' शैलों का मुख्य गुण क्या है?",
+  "o": ["They never have fossils", "They are formed in layers (stratified)", "They are formed from liquid core", "They are only white"],
+  "a": 1,
+  "e": "Sedimentary rocks are deposits laid down in beds or layers. / अवसादी शैल परतों में पाए जाते हैं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Which plate was subducted under the Indian plate to form the Himalayas?\nहिमालय बनाने के लिए भारतीय प्लेट के नीचे कौन सा हिस्सा धंसा था?",
+  "o": ["Eurasian continental plate", "Tethys oceanic floor", "Antarctic plate", "Pacific plate"],
+  "a": 1,
+  "e": "The oceanic Tethys floor subducted before the continents collided. / टक्कर से पहले टेथिस का समुद्री हिस्सा धंसा था।",
+  "cat": "geo",
+  "sub": "mapping"
+},
+{
+  "q": "What does 'Gutenberg Discontinuity' separate?\n'गुटेनबर्ग असंबद्धता' किसे अलग करती है?",
+  "o": ["Crust and Mantle", "Mantle and Core", "Inner and Outer Core", "Upper and Lower Mantle"],
+  "a": 1,
+  "e": "Boundary between the mantle and the outer core. / यह मेंटल और कोर के बीच की सीमा है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Which scale measures earthquake intensity (visible damage)?\nभूकंप की तीव्रता (दृश्य क्षति) कौन सा पैमाना मापता है?",
+  "o": ["Richter", "Mercalli", "Mohs", "Kelvin"],
+  "a": 1,
+  "e": "Mercalli scale ranges from 1 to 12. / मरकली स्केल नुकसान के आधार पर तीव्रता मापता है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The 'Basaltic' floor of the ocean is much ______ than the continents.\nमहासागर का 'बेसाल्टिक' तल महाद्वीपों की तुलना में बहुत ______ है।",
+  "o": ["Thicker", "Thinner", "Lighter", "Older"],
+  "a": 1,
+  "e": "Oceanic crust is thin (approx 5-10 km) but very dense. / महासागरीय क्रस्ट पतली और सघन होती है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "A 'Lopolith' is shaped like a ______.\n'लोपोलिथ' (Lopolith) का आकार ______ जैसा होता है।",
+  "o": ["Wall", "Saucer / Bowl", "Mushroom", "Cube"],
+  "a": 1,
+  "e": "Saucer-shaped intrusive body. / यह तश्तरीनुमा आकार का होता है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Who is associated with the 'Plate Tectonics' theory in 1967?\n1967 में 'प्लेट विवर्तनिकी' सिद्धांत से कौन संबंधित है?",
+  "o": ["Wegener", "McKenzie, Parker, and Morgan", "Holmes", "Harry Hess"],
+  "a": 1,
+  "e": "These geologists synthesized earlier ideas into a complete theory. / इन तीनों वैज्ञानिकों ने मिलकर प्लेट विवर्तनिकी सिद्धांत दिया।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Which plate movement is 'Constructive'?\nकौन सा प्लेट संचलन 'रचनात्मक' है?",
+  "o": ["Convergent", "Divergent", "Transform", "Passive"],
+  "a": 1,
+  "e": "Divergent boundaries create new crust. / अपसारी संचलन से नई क्रस्ट बनती है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The 'Standard Meridian' of India is 82.5°E. In which city does it pass?\nभारत का 'मानक याम्योत्तर' 82.5°E है। यह किस शहर से गुजरता है?",
+  "o": ["Patna", "Mirzapur / Prayagraj", "Mumbai", "Kolkata"],
+  "a": 1,
+  "e": "Mirzapur is the reference point for Indian Standard Time. / यह मिर्जापुर (उत्तर प्रदेश) से होकर गुजरता है।",
+  "cat": "geo",
+  "sub": "mapping"
+},
+{
+  "q": "The 'Ring of Fire' is located in which ocean?\n'रिंग ऑफ फायर' किस महासागर में स्थित है?",
+  "o": ["Atlantic", "Indian", "Pacific", "Arctic"],
+  "a": 2,
+  "e": "Encircles the Pacific basin. / यह प्रशांत महासागर में स्थित है।",
+  "cat": "geo",
+  "sub": "mapping"
+},
+{
+  "q": "What is the primary cause of 'Convection Currents' in the mantle?\nमेंटल में 'संवहन धाराओं' का प्राथमिक कारण क्या है?",
+  "o": ["Sunlight", "Radioactive heat and density differences", "Moon's gravity", "Surface winds"],
+  "a": 1,
+  "e": "Heat from within the earth drives these movements. / आंतरिक ऊष्मा और घनत्व में अंतर इसका कारण है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Which seismic wave arrives 'Last' at a station?\nस्टेशन पर कौन सी भूकंपीय तरंग 'अंत में' पहुँचती है?",
+  "o": ["P-wave", "S-wave", "Surface wave", "Body wave"],
+  "a": 2,
+  "e": "Surface waves travel slowest but carry the most energy. / धरातलीय तरंगें सबसे अंत में पहुँचती हैं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The term 'Foliation' is associated with which rock type?\n'फोलिएशन' शब्द किस शैल प्रकार से जुड़ा है?",
+  "o": ["Igneous", "Sedimentary", "Metamorphic", "Vitreous"],
+  "a": 2,
+  "e": "Planar arrangement of minerals due to pressure. / दबाव के कारण खनिजों की परतों वाली व्यवस्था कायांतरित शैलों में होती है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The 'Juan de Fuca' plate is a minor plate near ______.\n'जुआन डी फूका' प्लेट ______ के पास एक छोटी प्लेट है।",
+  "o": ["India", "South America", "North America", "Australia"],
+  "a": 2,
+  "e": "Off the coast of North America. / यह उत्तर अमेरिका के पास स्थित है।",
+  "cat": "geo",
+  "sub": "mapping"
+},
+{
+  "q": "A 'Gabbro' rock is the intrusive version of which rock?\n'गैब्रो' किस चट्टान का अंतर्भेदी रूप है?",
+  "o": ["Granite", "Basalt", "Limestone", "Sandstone"],
+  "a": 1,
+  "e": "Gabbro and Basalt have the same chemical composition. / गैब्रो और बेसाल्ट का संगठन एक समान होता है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The 'Moho Discontinuity' lies between ______ and ______.\n'मोह असंबद्धता' ______ और ______ के बीच स्थित है।",
+  "o": ["Crust, Mantle", "Mantle, Core", "Upper, Lower Crust", "Inner, Outer Core"],
+  "a": 0,
+  "e": "Boundary between the solid crust and mantle. / यह क्रस्ट और मेंटल के बीच की सीमा है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Which state has the largest 'Deccan Basalt' coverage in India?\nभारत में किस राज्य में 'दक्कन बेसाल्ट' का सर्वाधिक विस्तार है?",
+  "o": ["UP", "Bihar", "Maharashtra", "Kerala"],
+  "a": 2,
+  "e": "Maharashtra occupies the bulk of the Deccan Plateau. / महाराष्ट्र में दक्कन के पठार का सबसे अधिक विस्तार है।",
+  "cat": "geo",
+  "sub": "mapping"
+},
+{
+  "q": "A 'Sill' is a ______ intrusive sheet.\n'सिल' एक ______ अंतर्भेदी परत है।",
+  "o": ["Horizontal", "Vertical", "Diagonal", "Spherical"],
+  "a": 0,
+  "e": "Magma cooling parallel to bedding planes. / क्षैतिज रूप से जमी हुई लावा की परत को सिल कहते हैं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Which mineral has a hardness of 10?\nकिस खनिज की कठोरता 10 होती है?",
+  "o": ["Quartz", "Diamond", "Talc", "Calcite"],
+  "a": 1,
+  "e": "Diamond is at the top of the Mohs scale. / हीरा मोह स्केल पर 10वें स्थान पर है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The study of rocks is called:\nचट्टानों के अध्ययन को कहा जाता है:",
+  "o": ["Mineralogy", "Petrology", "Seismology", "Hydrology"],
+  "a": 1,
+  "e": "Petrology focuses on rock formation and composition. / शैलों के अध्ययन को पेट्रोलॉजी कहते हैं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Which boundary is destructive in plate tectonics?\nप्लेट विवर्तनिकी में कौन सी सीमा विनाशकारी है?",
+  "o": ["Divergent", "Convergent", "Transform", "Passive"],
+  "a": 1,
+  "e": "Crust is destroyed by melting in the mantle. / अभिसरण सीमा (Convergent) विनाशकारी होती है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The 'Phacolith' is found in ______ mountains.\n'फेकोलिथ' ______ पर्वतों में पाया जाता है।",
+  "o": ["Block", "Fold", "Volcanic", "Residual"],
+  "a": 1,
+  "e": "Found in anticlines and synclines. / यह वलित पर्वतों के मोड़ों पर मिलता है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "What is the average density of the entire Earth?\nसंपूर्ण पृथ्वी का औसत घनत्व कितना है?",
+  "o": ["2.7", "5.5", "13.0", "3.4"],
+  "a": 1,
+  "e": "Mean density considering all layers. / पृथ्वी का औसत घनत्व 5.5 है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Which mineral is greenish-black and maffic?\nकौन सा खनिज हरा-काला और मैफिक है?",
+  "o": ["Quartz", "Olivine", "Feldspar", "Calcite"],
+  "a": 1,
+  "e": "Common in mantle and basalt. / ओलिवाइन एक मैफिक खनिज है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Which state of matter is the 'Inner Core'?\n'आंतरिक कोर' पदार्थ की किस अवस्था में है?",
+  "o": ["Liquid", "Gas", "Solid", "Plasma"],
+  "a": 2,
+  "e": "Solid due to extreme pressure. / अत्यधिक दबाव के कारण आंतरिक कोर ठोस है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Which rock results from metamorphosed Limestone?\nचूना पत्थर के कायांतरण से कौन सी चट्टान बनती है?",
+  "o": ["Slate", "Marble", "Gneiss", "Quartzite"],
+  "a": 1,
+  "e": "Limestone recrystallizes into marble. / चूना पत्थर से संगमरमर बनता है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The 'Lithosphere' consists of crust and ______.\n'स्थलमंडल' में क्रस्ट और ______ शामिल हैं।",
+  "o": ["Outer core", "Uppermost solid mantle", "Liquid core", "Entire mantle"],
+  "a": 1,
+  "e": "Top rigid layer of Earth. / क्रस्ट और ऊपरी ठोस मेंटल मिलकर स्थलमंडल बनाते हैं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The 'Gondwanaland' name comes from a tribe in which country?\n'गोंडवाना लैंड' का नाम किस देश की एक जनजाति से आया है?",
+  "o": ["Africa", "Brazil", "India", "Australia"],
+  "a": 2,
+  "e": "The Gond tribe in India. / भारत की गोंड जनजाति के नाम पर यह पड़ा।",
+  "cat": "geo",
+  "sub": "world_geo"
+},
+{
+  "q": "A 'Laccolith' is ______ shaped.\n'लैकोलिथ' ______ आकार का होता है।",
+  "o": ["Dome", "Saucer", "Wall", "Thin sheet"],
+  "a": 0,
+  "e": "Mushroom-like dome structure. / यह गुंबद के आकार की अंतर्भेदी आकृति है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Which gas is 21% of Earth's atmosphere?\nपृथ्वी के वायुमंडल में कौन सी गैस 21% है?",
+  "o": ["Nitrogen", "Oxygen", "Argon", "CO2"],
+  "a": 1,
+  "e": "Essential for life. / ऑक्सीजन का प्रतिशत 21 है।",
+  "cat": "geo",
+  "sub": "climate"
+},
+{
+  "q": "What is 'Regur' another name for?\n'रेगुर' किसका दूसरा नाम है?",
+  "o": ["Alluvial soil", "Black soil", "Laterite soil", "Arid soil"],
+  "a": 1,
+  "e": "Famous for cotton growth in India. / काली मिट्टी को रेगुर भी कहते हैं।",
+  "cat": "geo",
+  "sub": "agriculture"
+},
+{
+  "q": "The 'S-wave' cannot pass through ______.\n'एस-तरंग' ______ से नहीं गुजर सकती।",
+  "o": ["Solid", "Liquid", "Mountains", "Crust"],
+  "a": 1,
+  "e": "Transverse waves require solid bonds. / एस-तरंगें तरल में प्रवेश नहीं कर पातीं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The term 'Tethys' refers to an ancient ______.\n'टेथिस' (Tethys) शब्द एक प्राचीन ______ को संदर्भित करता है।",
+  "o": ["Volcano", "Sea", "Continent", "River"],
+  "a": 1,
+  "e": "Tethys was the sea between Laurasia and Gondwanaland. / टेथिस लारेशिया और गोंडवाना के बीच का प्राचीन सागर था।",
+  "cat": "geo",
+  "sub": "world_geo"
+},
+  {
   "q": "Which of the following is the correct order of the Himalayan ranges from North to South?\nउत्तर से दक्षिण की ओर हिमालय पर्वतमाला का सही क्रम निम्नलिखित में से कौन सा है?",
   "o": ["Himadri, Himachal, Shiwalik", "Shiwalik, Himachal, Himadri", "Himachal, Himadri, Shiwalik", "Himadri, Shiwalik, Himachal"],
   "a": 0,
@@ -328,6 +1128,1999 @@
     "cat": "geo",
     "sub": "mountains"
   },
+  {
+  "q": "Which of the following processes involves the modification of the Earth's surface configuration?\nनिम्नलिखित में से कौन सी प्रक्रिया पृथ्वी की सतह के विन्यास के संशोधन में शामिल है?",
+  "o": ["Atmospheric Process", "Geomorphic Process", "Biological Process only", "Chemical Reaction only"],
+  "a": 1,
+  "e": "Geomorphic processes are natural mechanisms like weathering and erosion that change the Earth's surface. / भू-आकृतिक प्रक्रियाएं वे प्राकृतिक तंत्र हैं जो पृथ्वी की सतह को बदलते हैं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The forces that originate from within the interior of the Earth are called:\nवे बल जो पृथ्वी के आंतरिक भाग से उत्पन्न होते हैं, कहलाते हैं:",
+  "o": ["Exogenic Forces", "Endogenic Forces", "Atmospheric Forces", "Solar Forces"],
+  "a": 1,
+  "e": "Endogenic forces (आंतरिक बल) originate from Earth's interior and create features like mountains and volcanoes. / एंडोजेनिक बल पृथ्वी के अंदर से काम करते हैं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Which of the following is an example of an 'Exogenic' force acting on the Earth's crust?\nपृथ्वी की क्रस्ट पर कार्य करने वाले 'एक्सोजेनिक' बल का उदाहरण निम्नलिखित में से कौन सा है?",
+  "o": ["Volcanism", "Earthquakes", "Wind and Water erosion", "Plate Tectonics"],
+  "a": 2,
+  "e": "Exogenic forces operate on the surface and are driven by energy from the sun and gravity. / पवन और जल अपरदन बाहरी बल (एक्सोजेनिक) के उदाहरण हैं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "What is the primary driving energy source for 'Endogenic' processes according to the transcript?\nट्रांसक्रिप्ट के अनुसार 'एंडोजेनिक' प्रक्रियाओं के लिए प्राथमिक प्रेरक ऊर्जा स्रोत क्या है?",
+  "o": ["Sunlight", "Mantle Convection Currents", "Tides", "Winds"],
+  "a": 1,
+  "e": "Endogenic forces are driven primarily by the heat generated from radioactive decay and convection currents in the mantle. / मेंटल में संवहन धाराएं एंडोजेनिक बलों का मुख्य स्रोत हैं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Forces that cause sudden, often destructive movements like volcanoes are termed as:\nवे बल जो ज्वालामुखी जैसी अचानक और विनाशकारी हलचल पैदा करते हैं, कहलाते हैं:",
+  "o": ["Diastrophic Forces", "Catastrophic Forces", "Gradational Forces", "Static Forces"],
+  "a": 1,
+  "e": "Catastrophic forces cause sudden movements like earthquakes and volcanic eruptions. / अचानक होने वाली हलचल को कैटास्ट्रोफिक बल कहते हैं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The slow, long-term process of building continents and mountains is part of which endogenic force?\nमहाद्वीपों और पर्वतों के निर्माण की धीमी, दीर्घकालिक प्रक्रिया किस एंडोजेनिक बल का हिस्सा है?",
+  "o": ["Catastrophic", "Diastrophic", "Erosional", "Weathering"],
+  "a": 1,
+  "e": "Diastrophism involves slow building of mountains and continents over millions of years. / पर्वतों का धीमा निर्माण डायस्ट्रोफिक बल के अंतर्गत आता है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The term 'Epeirogenetic' force refers to which type of movement?\n'एपेरोजेनेटिक' (Epeirogenetic) बल किस प्रकार की गति को संदर्भित करता है?",
+  "o": ["Horizontal movement of mountains", "Vertical movement/building of continents", "Melting of ice", "Wind blowing"],
+  "a": 1,
+  "e": "Epeirogeny is associated with vertical movements leading to the uplift or subsidence of large parts of the Earth's crust. / महाद्वीप निर्माणकारी बलों को एपेरोजेनेटिक बल कहते हैं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Mountain building processes, often involving horizontal forces and folding, are known as:\nपर्वत निर्माण की प्रक्रियाएं, जिनमें अक्सर क्षैतिज बल और वलन शामिल होते हैं, कहलाती हैं:",
+  "o": ["Epeirogenesis", "Orogenesis", "Weathering", "Deposition"],
+  "a": 1,
+  "e": "Orogenesis is the process of mountain building through tectonic activities like folding and faulting. / ओरोजेनेसिस पर्वत निर्माण की प्रक्रिया है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "What happens during 'Domal Uplift' or up-warping of the Earth's crust?\nपृथ्वी की क्रस्ट के 'डोमल अपलिफ्ट' (गुम्बद जैसा उभार) या 'अप-वार्पिंग' के दौरान क्या होता है?",
+  "o": ["Crust sinks below the sea", "Crust bends upwards into a dome shape due to pressure from below", "Crust dissolves in water", "Crust breaks into small sands"],
+  "a": 1,
+  "e": "Up-warping or domal uplift is the vertical upward bending of the crust. / नीचे से दबाव के कारण क्रस्ट का ऊपर उठना अप-वार्पिंग है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Which force is primarily responsible for 'Flattening' or leveling the Earth's surface through erosion and deposition?\nअपरदन और निक्षेपण के माध्यम से पृथ्वी की सतह को 'सपाट' या समतल करने के लिए मुख्य रूप से कौन सा बल जिम्मेदार है?",
+  "o": ["Endogenic Forces", "Exogenic Forces", "Magnetic Forces", "Nuclear Forces"],
+  "a": 1,
+  "e": "Exogenic processes like weathering and erosion try to level the Earth's surface by wearing down heights. / एक्सोजेनिक प्रक्रियाएं सतह को समतल करने का प्रयास करती हैं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The term 'Nascent Sea' (जुवेनाइल सी) refers to which stage of ocean formation, with the Red Sea as an example?\n'नेसेंट सी' (जुवेनाइल सी) महासागर निर्माण के किस चरण को संदर्भित करता है, जिसका उदाहरण लाल सागर है?",
+  "o": ["Stage 1: Domal uplift", "Stage 6: Water entry after thinning and faulting", "Stage 10: Complete subduction", "Stage 4: Only cracking"],
+  "a": 1,
+  "e": "A nascent sea is formed when the rift valley sinks below sea level and water fills it. / जब रिफ्ट वैली में समुद्र का पानी भर जाता है, तो नेसेंट सी बनता है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Where did the Indian Plate collide with the Eurasian Plate to form the Himalayas?\nहिमालय बनाने के लिए भारतीय प्लेट यूरेशियन प्लेट से कहाँ टकराई थी?",
+  "o": ["Towards the South Pole", "Towards the North-East direction", "Only towards the West", "It did not collide"],
+  "a": 1,
+  "e": "The northward and eastward drift of the Indian plate led to its collision with the Eurasian plate. / भारतीय प्लेट उत्तर-पूर्व की ओर खिसकते हुए यूरेशियन प्लेट से टकराई थी।",
+  "cat": "geo",
+  "sub": "mapping"
+},
+{
+  "q": "In the rifting process, the raised block of crust between two faults is called a:\nरिफ्टिंग प्रक्रिया में, दो भ्रंशों (Faults) के बीच उठे हुए क्रस्ट के हिस्से को क्या कहा जाता है?",
+  "o": ["Graben", "Horst", "Trench", "Basin"],
+  "a": 1,
+  "e": "A Horst is an uplifted block, while a Graben is a sunken block between faults. / उठे हुए हिस्से को होस्ट (Horst) कहते हैं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The 'Narmada Valley' in India is an example of a ______ formed by faulting.\nभारत में 'नर्मदा घाटी' भ्रंश (Faulting) द्वारा निर्मित एक ______ का उदाहरण है।",
+  "o": ["Deltas", "Rift Valley", "Volcanic Island", "Archipelago"],
+  "a": 1,
+  "e": "The Narmada and Tapi rivers flow through rift valleys created by tectonic forces in central India. / नर्मदा एक रिफ्ट वैली (भ्रंश घाटी) से होकर बहती है।",
+  "cat": "geo",
+  "sub": "mapping"
+},
+{
+  "q": "What is the primary characteristic of 'Normal Faults'?\n'सामान्य भ्रंश' (Normal Faults) की प्राथमिक विशेषता क्या है?",
+  "o": ["Plates move towards each other", "One block slides down relative to another due to tension/pulling apart", "Blocks move up due to compression", "Plates remain stuck forever"],
+  "a": 1,
+  "e": "Normal faults occur due to tensional forces pulling the crust apart, causing one side to drop. / तनाव बल के कारण एक ब्लॉक का नीचे खिसकना सामान्य भ्रंश है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The 'Rann of Kachchh' upliftment is an example of which type of movement?\n'कच्छ का रण' का उत्थान (upliftment) किस प्रकार की गति का उदाहरण है?",
+  "o": ["Orogenetic", "Epeirogenetic (Emergence)", "Weathering", "Glaciation"],
+  "a": 1,
+  "e": "The emergence of Rann of Kachchh from the sea is a vertical epeirogenetic movement. / कच्छ के रण का ऊपर उठना एपेरोजेनेटिक (इमरजेंस) गति है।",
+  "cat": "geo",
+  "sub": "mapping"
+},
+{
+  "q": "What name is given to the 'Triple Junction' or hotspot in Africa where three rifts meet?\nअफ्रीका के उस 'ट्रिपल जंक्शन' या हॉटस्पॉट को क्या नाम दिया गया है जहाँ तीन दरारें मिलती हैं?",
+  "o": ["Afar Triangle", "Sahara Desert", "Nile Basin", "Kalahari Hotspot"],
+  "a": 0,
+  "e": "The Afar Triangle is a tectonic triple junction where the African, Somali, and Arabian plates diverge. / अफार ट्रायंगल वह क्षेत्र है जहाँ से दरारें शुरू होती हैं।",
+  "cat": "geo",
+  "sub": "mapping"
+},
+{
+  "q": "Which force is responsible for the 'U-turn' of the Brahmaputra River at Namcha Barwa?\nनामचा बरवा में ब्रह्मपुत्र नदी के 'यू-टर्न' के लिए कौन सा बल जिम्मेदार है?",
+  "o": ["Glacial flow", "Tectonic bending/folding of the Himalayas", "Human engineering", "Wind direction"],
+  "a": 1,
+  "e": "The river takes a sharp turn due to the syntaxial bend in the Himalayan mountain range. / हिमालय के तीव्र मोड़ के कारण ब्रह्मपुत्र यू-टर्न लेती है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "When a block of crust is pushed upwards over another due to compression, it forms a:\nजब संपीडन के कारण क्रस्ट का एक ब्लॉक दूसरे के ऊपर धकेला जाता है, तो यह क्या बनाता है?",
+  "o": ["Normal Fault", "Reverse Fault", "Rift Valley only", "None of the above"],
+  "a": 1,
+  "e": "Reverse faults are caused by compressional forces pushing the crust together. / संपीडन बल से बनने वाले भ्रंश को रिवर्स भ्रंश कहते हैं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The term 'Subduction' occurs at which type of plate boundary?\n'प्रविष्ठन' (Subduction) शब्द किस प्रकार की प्लेट सीमा पर होता है?",
+  "o": ["Divergent", "Convergent", "Transform", "Passive"],
+  "a": 1,
+  "e": "Subduction occurs when one tectonic plate sinks beneath another at a convergent boundary. / अभिसरण सीमा पर एक प्लेट का नीचे धंसना सबडक्शन कहलाता है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Which of the following is NOT an exogenic geomorphic agent?\nनिम्नलिखित में से कौन सा एक्सोजेनिक भू-आकृतिक कारक नहीं है?",
+  "o": ["Running water", "Wind", "Magma", "Glaciers"],
+  "a": 2,
+  "e": "Magma is an internal (endogenic) factor, whereas water, wind, and glaciers work on the surface. / मैग्मा आंतरिक कारक है, बाहरी नहीं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The process of 'Degradation' of landforms is primarily caused by:\nभू-आकृतियों के 'निम्नीकरण' (Degradation) की प्रक्रिया मुख्य रूप से किसके कारण होती है?",
+  "o": ["Endogenic upliftment", "Exogenic erosion", "Volcanic buildup", "Earthquakes"],
+  "a": 1,
+  "e": "Exogenic forces wear down the land surface, a process called degradation. / बाहरी बलों द्वारा सतह को घिसना निम्नीकरण कहलाता है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "What is 'Syncline' in the context of rock folding?\nशैल वलन (Rock folding) के संदर्भ में 'अभिनति' (Syncline) क्या है?",
+  "o": ["The peak of a fold", "The trough or concave part of a fold", "A vertical crack", "A type of volcano"],
+  "a": 1,
+  "e": "In a folded structure, the downward trough is called a syncline. / वलन के नीचे धंसे हुए भाग को अभिनति कहते हैं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The 'Vindhya' and 'Satpura' ranges in India are classic examples of ______ mountains.\nभारत में 'विंध्य' और 'सतपुड़ा' श्रेणियाँ ______ पर्वतों के उत्कृष्ट उदाहरण हैं।",
+  "o": ["Fold", "Block", "Volcanic", "Residual"],
+  "a": 1,
+  "e": "Vindhya and Satpura are block mountains with rift valleys like Narmada in between. / विंध्य और सतपुड़ा ब्लॉक पर्वत हैं।",
+  "cat": "geo",
+  "sub": "mapping"
+},
+{
+  "q": "According to the transcript, 'Weathering' is a process of:\nट्रांसक्रिप्ट के अनुसार, 'अपक्षय' (Weathering) एक प्रक्रिया है:",
+  "o": ["Uplifting mountains", "Mechanical disintegration and chemical decomposition of rocks", "Moving stones to other countries", "Generating electricity"],
+  "a": 1,
+  "e": "Weathering is the on-site breaking down of rocks into smaller pieces. / शैलों के अपने स्थान पर टूटने को अपक्षय कहते हैं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "A 'Napie' (निपेश) in geology refers to a fold that has:\nभूविज्ञान में 'निपेश' (Napie) उस वलन को संदर्भित करता है जो:",
+  "o": ["Become perfectly straight", "Overturned so much that it breaks and slides over another rock unit", "Turned into a volcano", "Disappeared into the ocean"],
+  "a": 1,
+  "e": "Nappes are massive sheet-like bodies of rock that have been moved more than 2 km from their original position due to horizontal thrust. / जब वलन टूटकर दूर जा गिरता है, तो उसे निपेश कहते हैं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Which type of fold has an axis that makes two equal angles with its limbs?\nकिस प्रकार के वलन में अक्ष अपनी भुजाओं के साथ दो समान कोण बनाता है?",
+  "o": ["Asymmetrical fold", "Symmetrical fold", "Isocline fold", "Recumbent fold"],
+  "a": 1,
+  "e": "A symmetrical fold is balanced on both sides of the axial plane. / सममित वलन (Symmetrical) दोनों तरफ बराबर होता है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "What is 'Diurnal Temperature' variation, and where is it highest?\n'दैनिक तापांतर' क्या है, और यह कहाँ सबसे अधिक होता है?",
+  "o": ["Rainfall in a day; Poles", "Difference between day high and night low temperatures; Deserts", "Snowfall speed; Mountains", "Wind speed difference; Oceans"],
+  "a": 1,
+  "e": "The difference between maximum and minimum temperature in 24 hours. It is very high in deserts, aiding physical weathering. / दिन और रात के तापमान के अंतर को दैनिक तापांतर कहते हैं।",
+  "cat": "geo",
+  "sub": "climate"
+},
+{
+  "q": "The formation of 'Red Soil' in regions like Andhra Pradesh is primarily due to:\nआंध्र प्रदेश जैसे क्षेत्रों में 'लाल मिट्टी' का निर्माण मुख्य रूप से किसके कारण होता है?",
+  "o": ["Cold weather", "Oxidation of iron-rich rocks", "Glacial deposits", "Sand blowing from Sahara"],
+  "a": 1,
+  "e": "Iron in rocks reacts with oxygen to form iron oxides (rust), giving soil a red color. / लोहे के ऑक्सीकरण (जंग) से लाल मिट्टी बनती है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Which of the following is NOT a type of Physical Weathering?\nनिम्नलिखित में से कौन सा भौतिक अपक्षय का प्रकार नहीं है?",
+  "o": ["Block disintegration", "Carbonation", "Exfoliation", "Frost action"],
+  "a": 1,
+  "e": "Carbonation is a chemical weathering process involving CO2 and water. / कार्बोनेशन रासायनिक अपक्षय है, भौतिक नहीं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "In the 'Rock Cycle', any rock that melts in the mantle becomes ______ again.\n'शैल चक्र' में, कोई भी शैल जो मेंटल में पिघल जाता है, वह फिर से ______ बन जाता है।",
+  "o": ["Sediments", "Metamorphic Rock", "Magma", "Coal"],
+  "a": 2,
+  "e": "Melting always returns material to the magmatic state. / पिघला हुआ शैल मैग्मा कहलाता है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "What is the 'Stress' that causes rocks to increase in volume during day and decrease at night?\nदिन में शैलों के आयतन में वृद्धि और रात में कमी का कारण बनने वाला 'तनाव' (Stress) क्या है?",
+  "o": ["Chemical stress", "Thermal/Physical stress from sunlight", "Nuclear stress", "Atmospheric pressure only"],
+  "a": 1,
+  "e": "Solar heating causes expansion (volume increase) and nighttime cooling causes contraction. / सूर्य के ताप से होने वाले फैलाव और सिकुड़न को तापीय तनाव कहते हैं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The 'Aravalli Mountains' in India are considered:\nभारत में 'अरावली पर्वत' माने जाते हैं:",
+  "o": ["New Fold Mountains", "Old Fold Mountains", "Block Mountains only", "Volcanic peaks"],
+  "a": 1,
+  "e": "Aravallis are one of the oldest fold mountain systems in the world. / अरावली प्राचीन वलित पर्वत हैं।",
+  "cat": "geo",
+  "sub": "mountains"
+},
+{
+  "q": "The term 'Endo' and 'Genic' combined imply:\n'इंडो' और 'जेनिक' शब्द मिलकर क्या अर्थ देते हैं?",
+  "o": ["Origin from space", "Origin from within (Earth's interior)", "Origin from water", "Ending of life"],
+  "a": 1,
+  "e": "Endogenic means generated from the inside. / एंडोजेनिक का अर्थ है आंतरिक उत्पत्ति।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Which of the following describes 'Biological Weathering'?\nनिम्नलिखित में से कौन 'जैविक अपक्षय' का वर्णन करता है?",
+  "o": ["Rain washing away soil", "Sunlight heating rocks", "Plant roots breaking through rocks or burrowing animals creating paths", "Wind blowing sand"],
+  "a": 2,
+  "e": "Living organisms contribute to rock breakdown through physical pressure or chemical changes. / पौधों की जड़ों या जीवों द्वारा शैलों का टूटना जैविक अपक्षय है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "What mineral property describes the 'Color of Powder' when a mineral is rubbed?\nखनिज को रगड़ने पर 'चूर्ण का रंग' कौन सा खनिज गुण दर्शाता है?",
+  "o": ["Lustre", "Streak", "Cleavage", "Hardness"],
+  "a": 1,
+  "e": "Streak is identified by rubbing the mineral on a rough plate. / रगड़ने पर चूर्ण का रंग स्ट्रीक कहलाता है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "A 'Lopolith' is an intrusive body with which shape?\n'लोपोलिथ' (Lopolith) किस आकार का एक अंतर्भेदी पिंड है?",
+  "o": ["Mushroom-shaped", "Saucer-shaped", "Wall-shaped", "Lens-shaped"],
+  "a": 1,
+  "e": "A saucer-shaped body within the crust. / यह तश्तरीनुमा आकार का होता है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The term 'Subside' in the context of land movement means:\nभूमि की हलचल के संदर्भ में 'सबसाइड' (Subside) शब्द का अर्थ है:",
+  "o": ["Rising up", "Sinking down / moving downward", "Turning into gas", "Expanding sideways"],
+  "a": 1,
+  "e": "Subsidence is the downward movement or sinking of the ground surface. / जमीन का नीचे धंसना सब्सिडेंस कहलाता है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The 'Gondwanaland' split resulted in the formation of which of the following?\nगोंडवाना लैंड के टूटने के परिणामस्वरूप निम्नलिखित में से किसका निर्माण हुआ?",
+  "o": ["North America", "South America, Africa, India, and Australia", "Greenland", "Europe"],
+  "a": 1,
+  "e": "The southern part of Pangaea formed these modern landmasses. / गोंडवाना लैंड से दक्षिण अमेरिका, अफ्रीका, भारत और ऑस्ट्रेलिया बने।",
+  "cat": "geo",
+  "sub": "world_geo"
+},
+{
+  "q": "Which of the following describes 'Exfoliation' or Onion Weathering?\nनिम्नलिखित में से कौन 'एक्सफोलिएशन' या प्याज अपक्षय का वर्णन करता है?",
+  "o": ["Breaking into cubes", "Peeling off of outer layers of rocks in sheets", "Melting like wax", "Turning into blue color"],
+  "a": 1,
+  "e": "Outer layers peel off due to expansion/contraction cycles like onion skin. / शैल की ऊपरी परतों का छिलके की तरह उतरना एक्सफोलिएशन है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The 'Standard Meridian' of India passes through which degree of longitude?\nभारत का 'मानक याम्योत्तर' देशांतर के कितने डिग्री से होकर गुजरता है?",
+  "o": ["82.5° E", "0°", "97.25° E", "68.7° E"],
+  "a": 0,
+  "e": "82°30'E is the reference for Indian Standard Time. / 82.5° पूर्व भारत का मानक देशांतर है।",
+  "cat": "geo",
+  "sub": "mapping"
+},
+{
+  "q": "Which seismic wave is also called 'Transverse' and moves particles up and down?\nकौन सी भूकंपीय तरंग 'अनुप्रस्थ' कहलाती है और कणों को ऊपर-नीचे ले जाती है?",
+  "o": ["P-wave", "S-wave", "Love wave", "Rayleigh wave"],
+  "a": 1,
+  "e": "S-waves vibrate particles perpendicular to the wave direction. / एस-तरंगें अनुप्रस्थ होती हैं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "What is 'Lithification'?\n'लिथिफिकेशन' (Lithification) क्या है?",
+  "o": ["Melting rocks into magma", "Process of turning sediments into solid rock", "Erosion of mountains", "Upliftment of land"],
+  "a": 1,
+  "e": "The transformation of loose sediments into sedimentary rocks. / अवसादों के जमकर शैल बनने की प्रक्रिया लिथिफिकेशन है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Which mineral has a hardness level of 10 on the Mohs scale?\nमोह स्केल पर किस खनिज का कठोरता स्तर 10 है?",
+  "o": ["Quartz", "Diamond", "Corundum", "Topaz"],
+  "a": 1,
+  "e": "Diamond is the hardest natural mineral. / हीरा सर्वाधिक कठोर है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "A 'Batholith' is specifically known as a:\n'बैथोलिथ' को विशेष रूप से किस रूप में जाना जाता है?",
+  "o": ["Volcanic crater", "Large magma chamber that cools deep in the crust", "Horizontal lava flow", "Desert dune"],
+  "a": 1,
+  "e": "Large granite-rich intrusive body at the core of mountains. / विशाल अंतर्भेदी आग्नेय पिंड को बैथोलिथ कहते हैं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The term 'Orogeny' is specifically related to:\n'ओरोजेनी' (Orogeny) शब्द विशेष रूप से किससे संबंधित है?",
+  "o": ["Continent building", "Mountain building", "Sea level rise", "Soil erosion"],
+  "a": 1,
+  "e": "Orogenetic forces are responsible for creating mountain ranges. / पर्वत निर्माणकारी बल ओरोजेनेटिक बल कहलाते हैं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "In which type of rock are 'Fossils' most likely to be found?\nकिस प्रकार के शैल में 'जीवाश्म' पाए जाने की सर्वाधिक संभावना है?",
+  "o": ["Igneous", "Sedimentary", "Metamorphic", "Basaltic"],
+  "a": 1,
+  "e": "Sedimentary rocks are layered and preserve organic remains. / अवसादी शैलों में जीवाश्म सुरक्षित रहते हैं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Which state of matter block S-waves in the Earth's interior?\nपृथ्वी के आंतरिक भाग में पदार्थ की कौन सी अवस्था एस-तरंगों को रोकती है?",
+  "o": ["Solid", "Liquid", "Plasma", "Gaseous"],
+  "a": 1,
+  "e": "S-waves cannot pass through liquid, proving the outer core is liquid. / एस-तरंगें तरल में प्रवेश नहीं कर पातीं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The 'Asthenosphere' is primarily made of which rock type?\n'एस्थेनोस्फीयर' मुख्य रूप से किस शैल प्रकार से बनी है?",
+  "o": ["Granite", "Peridotite", "Basalt", "Limestone"],
+  "a": 1,
+  "e": "Peridotite is the ultra-maffic rock forming the mantle. / मेंटल की चट्टान पीरियोडोटाइट (Peridotite) है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+  {
+  "q": "Which of the following processes involves the modification of the Earth's surface configuration?\nनिम्नलिखित में से कौन सी प्रक्रिया पृथ्वी की सतह के विन्यास के संशोधन में शामिल है?",
+  "o": ["Atmospheric Process", "Geomorphic Process", "Biological Process only", "Chemical Reaction only"],
+  "a": 1,
+  "e": "Geomorphic processes are natural mechanisms like weathering and erosion that change the Earth's surface. / भू-आकृतिक प्रक्रियाएं वे प्राकृतिक तंत्र हैं जो पृथ्वी की सतह को बदलते हैं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The forces that originate from within the interior of the Earth are called:\nवे बल जो पृथ्वी के आंतरिक भाग से उत्पन्न होते हैं, कहलाते हैं:",
+  "o": ["Exogenic Forces", "Endogenic Forces", "Atmospheric Forces", "Solar Forces"],
+  "a": 1,
+  "e": "Endogenic forces (आंतरिक बल) originate from Earth's interior and create features like mountains and volcanoes. / एंडोजेनिक बल पृथ्वी के अंदर से काम करते हैं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Which of the following is an example of an 'Exogenic' force acting on the Earth's crust?\nपृथ्वी की क्रस्ट पर कार्य करने वाले 'एक्सोजेनिक' बल का उदाहरण निम्नलिखित में से कौन सा है?",
+  "o": ["Volcanism", "Earthquakes", "Wind and Water erosion", "Plate Tectonics"],
+  "a": 2,
+  "e": "Exogenic forces operate on the surface and are driven by energy from the sun and gravity. / पवन और जल अपरदन बाहरी बल (एक्सोजेनिक) के उदाहरण हैं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "What is the primary driving energy source for 'Endogenic' processes according to the transcript?\nट्रांसक्रिप्ट के अनुसार 'एंडोजेनिक' प्रक्रियाओं के लिए प्राथमिक प्रेरक ऊर्जा स्रोत क्या है?",
+  "o": ["Sunlight", "Mantle Convection Currents", "Tides", "Winds"],
+  "a": 1,
+  "e": "Endogenic forces are driven primarily by the heat generated from radioactive decay and convection currents in the mantle. / मेंटल में संवहन धाराएं एंडोजेनिक बलों का मुख्य स्रोत हैं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Forces that cause sudden, often destructive movements like volcanoes are termed as:\nवे बल जो ज्वालामुखी जैसी अचानक और विनाशकारी हलचल पैदा करते हैं, कहलाते हैं:",
+  "o": ["Diastrophic Forces", "Catastrophic Forces", "Gradational Forces", "Static Forces"],
+  "a": 1,
+  "e": "Catastrophic forces cause sudden movements like earthquakes and volcanic eruptions. / अचानक होने वाली हलचल को कैटास्ट्रोफिक बल कहते हैं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The slow, long-term process of building continents and mountains is part of which endogenic force?\nमहाद्वीपों और पर्वतों के निर्माण की धीमी, दीर्घकालिक प्रक्रिया किस एंडोजेनिक बल का हिस्सा है?",
+  "o": ["Catastrophic", "Diastrophic", "Erosional", "Weathering"],
+  "a": 1,
+  "e": "Diastrophism involves slow building of mountains and continents over millions of years. / पर्वतों का धीमा निर्माण डायस्ट्रोफिक बल के अंतर्गत आता है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The term 'Epeirogenetic' force refers to which type of movement?\n'एपेरोजेनेटिक' (Epeirogenetic) बल किस प्रकार की गति को संदर्भित करता है?",
+  "o": ["Horizontal movement of mountains", "Vertical movement/building of continents", "Melting of ice", "Wind blowing"],
+  "a": 1,
+  "e": "Epeirogeny is associated with vertical movements leading to the uplift or subsidence of large parts of the Earth's crust. / महाद्वीप निर्माणकारी बलों को एपेरोजेनेटिक बल कहते हैं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Mountain building processes, often involving horizontal forces and folding, are known as:\nपर्वत निर्माण की प्रक्रियाएं, जिनमें अक्सर क्षैतिज बल और वलन शामिल होते हैं, कहलाती हैं:",
+  "o": ["Epeirogenesis", "Orogenesis", "Weathering", "Deposition"],
+  "a": 1,
+  "e": "Orogenesis is the process of mountain building through tectonic activities like folding and faulting. / ओरोजेनेसिस पर्वत निर्माण की प्रक्रिया है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "What happens during 'Domal Uplift' or up-warping of the Earth's crust?\nपृथ्वी की क्रस्ट के 'डोमल अपलिफ्ट' (गुम्बद जैसा उभार) या 'अप-वार्पिंग' के दौरान क्या होता है?",
+  "o": ["Crust sinks below the sea", "Crust bends upwards into a dome shape due to pressure from below", "Crust dissolves in water", "Crust breaks into small sands"],
+  "a": 1,
+  "e": "Up-warping or domal uplift is the vertical upward bending of the crust. / नीचे से दबाव के कारण क्रस्ट का ऊपर उठना अप-वार्पिंग है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Which force is primarily responsible for 'Flattening' or leveling the Earth's surface through erosion and deposition?\nअपरदन और निक्षेपण के माध्यम से पृथ्वी की सतह को 'सपाट' या समतल करने के लिए मुख्य रूप से कौन सा बल जिम्मेदार है?",
+  "o": ["Endogenic Forces", "Exogenic Forces", "Magnetic Forces", "Nuclear Forces"],
+  "a": 1,
+  "e": "Exogenic processes like weathering and erosion try to level the Earth's surface by wearing down heights. / एक्सोजेनिक प्रक्रियाएं सतह को समतल करने का प्रयास करती हैं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The term 'Nascent Sea' (जुवेनाइल सी) refers to which stage of ocean formation, with the Red Sea as an example?\n'नेसेंट सी' (जुवेनाइल सी) महासागर निर्माण के किस चरण को संदर्भित करता है, जिसका उदाहरण लाल सागर है?",
+  "o": ["Stage 1: Domal uplift", "Stage 6: Water entry after thinning and faulting", "Stage 10: Complete subduction", "Stage 4: Only cracking"],
+  "a": 1,
+  "e": "A nascent sea is formed when the rift valley sinks below sea level and water fills it. / जब रिफ्ट वैली में समुद्र का पानी भर जाता है, तो नेसेंट सी बनता है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Where did the Indian Plate collide with the Eurasian Plate to form the Himalayas?\nहिमालय बनाने के लिए भारतीय प्लेट यूरेशियन प्लेट से कहाँ टकराई थी?",
+  "o": ["Towards the South Pole", "Towards the North-East direction", "Only towards the West", "It did not collide"],
+  "a": 1,
+  "e": "The northward and eastward drift of the Indian plate led to its collision with the Eurasian plate. / भारतीय प्लेट उत्तर-पूर्व की ओर खिसकते हुए यूरेशियन प्लेट से टकराई थी।",
+  "cat": "geo",
+  "sub": "mapping"
+},
+{
+  "q": "In the rifting process, the raised block of crust between two faults is called a:\nरिफ्टिंग प्रक्रिया में, दो भ्रंशों (Faults) के बीच उठे हुए क्रस्ट के हिस्से को क्या कहा जाता है?",
+  "o": ["Graben", "Horst", "Trench", "Basin"],
+  "a": 1,
+  "e": "A Horst is an uplifted block, while a Graben is a sunken block between faults. / उठे हुए हिस्से को होस्ट (Horst) कहते हैं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The 'Narmada Valley' in India is an example of a ______ formed by faulting.\nभारत में 'नर्मदा घाटी' भ्रंश (Faulting) द्वारा निर्मित एक ______ का उदाहरण है।",
+  "o": ["Deltas", "Rift Valley", "Volcanic Island", "Archipelago"],
+  "a": 1,
+  "e": "The Narmada and Tapi rivers flow through rift valleys created by tectonic forces in central India. / नर्मदा एक रिफ्ट वैली (भ्रंश घाटी) से होकर बहती है।",
+  "cat": "geo",
+  "sub": "mapping"
+},
+{
+  "q": "What is the primary characteristic of 'Normal Faults'?\n'सामान्य भ्रंश' (Normal Faults) की प्राथमिक विशेषता क्या है?",
+  "o": ["Plates move towards each other", "One block slides down relative to another due to tension/pulling apart", "Blocks move up due to compression", "Plates remain stuck forever"],
+  "a": 1,
+  "e": "Normal faults occur due to tensional forces pulling the crust apart, causing one side to drop. / तनाव बल के कारण एक ब्लॉक का नीचे खिसकना सामान्य भ्रंश है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The 'Rann of Kachchh' upliftment is an example of which type of movement?\n'कच्छ का रण' का उत्थान (upliftment) किस प्रकार की गति का उदाहरण है?",
+  "o": ["Orogenetic", "Epeirogenetic (Emergence)", "Weathering", "Glaciation"],
+  "a": 1,
+  "e": "The emergence of Rann of Kachchh from the sea is a vertical epeirogenetic movement. / कच्छ के रण का ऊपर उठना एपेरोजेनेटिक (इमरजेंस) गति है।",
+  "cat": "geo",
+  "sub": "mapping"
+},
+{
+  "q": "What name is given to the 'Triple Junction' or hotspot in Africa where three rifts meet?\nअफ्रीका के उस 'ट्रिपल जंक्शन' या हॉटस्पॉट को क्या नाम दिया गया है जहाँ तीन दरारें मिलती हैं?",
+  "o": ["Afar Triangle", "Sahara Desert", "Nile Basin", "Kalahari Hotspot"],
+  "a": 0,
+  "e": "The Afar Triangle is a tectonic triple junction where the African, Somali, and Arabian plates diverge. / अफार ट्रायंगल वह क्षेत्र है जहाँ से दरारें शुरू होती हैं।",
+  "cat": "geo",
+  "sub": "mapping"
+},
+{
+  "q": "Which force is responsible for the 'U-turn' of the Brahmaputra River at Namcha Barwa?\nनामचा बरवा में ब्रह्मपुत्र नदी के 'यू-टर्न' के लिए कौन सा बल जिम्मेदार है?",
+  "o": ["Glacial flow", "Tectonic bending/folding of the Himalayas", "Human engineering", "Wind direction"],
+  "a": 1,
+  "e": "The river takes a sharp turn due to the syntaxial bend in the Himalayan mountain range. / हिमालय के तीव्र मोड़ के कारण ब्रह्मपुत्र यू-टर्न लेती है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "When a block of crust is pushed upwards over another due to compression, it forms a:\nजब संपीडन के कारण क्रस्ट का एक ब्लॉक दूसरे के ऊपर धकेला जाता है, तो यह क्या बनाता है?",
+  "o": ["Normal Fault", "Reverse Fault", "Rift Valley only", "None of the above"],
+  "a": 1,
+  "e": "Reverse faults are caused by compressional forces pushing the crust together. / संपीडन बल से बनने वाले भ्रंश को रिवर्स भ्रंश कहते हैं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The term 'Subduction' occurs at which type of plate boundary?\n'प्रविष्ठन' (Subduction) शब्द किस प्रकार की प्लेट सीमा पर होता है?",
+  "o": ["Divergent", "Convergent", "Transform", "Passive"],
+  "a": 1,
+  "e": "Subduction occurs when one tectonic plate sinks beneath another at a convergent boundary. / अभिसरण सीमा पर एक प्लेट का नीचे धंसना सबडक्शन कहलाता है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Which of the following is NOT an exogenic geomorphic agent?\nनिम्नलिखित में से कौन सा एक्सोजेनिक भू-आकृतिक कारक नहीं है?",
+  "o": ["Running water", "Wind", "Magma", "Glaciers"],
+  "a": 2,
+  "e": "Magma is an internal (endogenic) factor, whereas water, wind, and glaciers work on the surface. / मैग्मा आंतरिक कारक है, बाहरी नहीं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The process of 'Degradation' of landforms is primarily caused by:\nभू-आकृतियों के 'निम्नीकरण' (Degradation) की प्रक्रिया मुख्य रूप से किसके कारण होती है?",
+  "o": ["Endogenic upliftment", "Exogenic erosion", "Volcanic buildup", "Earthquakes"],
+  "a": 1,
+  "e": "Exogenic forces wear down the land surface, a process called degradation. / बाहरी बलों द्वारा सतह को घिसना निम्नीकरण कहलाता है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "What is 'Syncline' in the context of rock folding?\nशैल वलन (Rock folding) के संदर्भ में 'अभिनति' (Syncline) क्या है?",
+  "o": ["The peak of a fold", "The trough or concave part of a fold", "A vertical crack", "A type of volcano"],
+  "a": 1,
+  "e": "In a folded structure, the downward trough is called a syncline. / वलन के नीचे धंसे हुए भाग को अभिनति कहते हैं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The 'Vindhya' and 'Satpura' ranges in India are classic examples of ______ mountains.\nभारत में 'विंध्य' और 'सतपुड़ा' श्रेणियाँ ______ पर्वतों के उत्कृष्ट उदाहरण हैं।",
+  "o": ["Fold", "Block", "Volcanic", "Residual"],
+  "a": 1,
+  "e": "Vindhya and Satpura are block mountains with rift valleys like Narmada in between. / विंध्य और सतपुड़ा ब्लॉक पर्वत हैं।",
+  "cat": "geo",
+  "sub": "mapping"
+},
+{
+  "q": "According to the transcript, 'Weathering' is a process of:\nट्रांसक्रिप्ट के अनुसार, 'अपक्षय' (Weathering) एक प्रक्रिया है:",
+  "o": ["Uplifting mountains", "Mechanical disintegration and chemical decomposition of rocks", "Moving stones to other countries", "Generating electricity"],
+  "a": 1,
+  "e": "Weathering is the on-site breaking down of rocks into smaller pieces. / शैलों के अपने स्थान पर टूटने को अपक्षय कहते हैं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "A 'Napie' (निपेश) in geology refers to a fold that has:\nभूविज्ञान में 'निपेश' (Napie) उस वलन को संदर्भित करता है जो:",
+  "o": ["Become perfectly straight", "Overturned so much that it breaks and slides over another rock unit", "Turned into a volcano", "Disappeared into the ocean"],
+  "a": 1,
+  "e": "Nappes are massive sheet-like bodies of rock that have been moved more than 2 km from their original position due to horizontal thrust. / जब वलन टूटकर दूर जा गिरता है, तो उसे निपेश कहते हैं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Which type of fold has an axis that makes two equal angles with its limbs?\nकिस प्रकार के वलन में अक्ष अपनी भुजाओं के साथ दो समान कोण बनाता है?",
+  "o": ["Asymmetrical fold", "Symmetrical fold", "Isocline fold", "Recumbent fold"],
+  "a": 1,
+  "e": "A symmetrical fold is balanced on both sides of the axial plane. / सममित वलन (Symmetrical) दोनों तरफ बराबर होता है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "What is 'Diurnal Temperature' variation, and where is it highest?\n'दैनिक तापांतर' क्या है, और यह कहाँ सबसे अधिक होता है?",
+  "o": ["Rainfall in a day; Poles", "Difference between day high and night low temperatures; Deserts", "Snowfall speed; Mountains", "Wind speed difference; Oceans"],
+  "a": 1,
+  "e": "The difference between maximum and minimum temperature in 24 hours. It is very high in deserts, aiding physical weathering. / दिन और रात के तापमान के अंतर को दैनिक तापांतर कहते हैं।",
+  "cat": "geo",
+  "sub": "climate"
+},
+{
+  "q": "The formation of 'Red Soil' in regions like Andhra Pradesh is primarily due to:\nआंध्र प्रदेश जैसे क्षेत्रों में 'लाल मिट्टी' का निर्माण मुख्य रूप से किसके कारण होता है?",
+  "o": ["Cold weather", "Oxidation of iron-rich rocks", "Glacial deposits", "Sand blowing from Sahara"],
+  "a": 1,
+  "e": "Iron in rocks reacts with oxygen to form iron oxides (rust), giving soil a red color. / लोहे के ऑक्सीकरण (जंग) से लाल मिट्टी बनती है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Which of the following is NOT a type of Physical Weathering?\nनिम्नलिखित में से कौन सा भौतिक अपक्षय का प्रकार नहीं है?",
+  "o": ["Block disintegration", "Carbonation", "Exfoliation", "Frost action"],
+  "a": 1,
+  "e": "Carbonation is a chemical weathering process involving CO2 and water. / कार्बोनेशन रासायनिक अपक्षय है, भौतिक नहीं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "In the 'Rock Cycle', any rock that melts in the mantle becomes ______ again.\n'शैल चक्र' में, कोई भी शैल जो मेंटल में पिघल जाता है, वह फिर से ______ बन जाता है।",
+  "o": ["Sediments", "Metamorphic Rock", "Magma", "Coal"],
+  "a": 2,
+  "e": "Melting always returns material to the magmatic state. / पिघला हुआ शैल मैग्मा कहलाता है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "What is the 'Stress' that causes rocks to increase in volume during day and decrease at night?\nदिन में शैलों के आयतन में वृद्धि और रात में कमी का कारण बनने वाला 'तनाव' (Stress) क्या है?",
+  "o": ["Chemical stress", "Thermal/Physical stress from sunlight", "Nuclear stress", "Atmospheric pressure only"],
+  "a": 1,
+  "e": "Solar heating causes expansion (volume increase) and nighttime cooling causes contraction. / सूर्य के ताप से होने वाले फैलाव और सिकुड़न को तापीय तनाव कहते हैं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The 'Aravalli Mountains' in India are considered:\nभारत में 'अरावली पर्वत' माने जाते हैं:",
+  "o": ["New Fold Mountains", "Old Fold Mountains", "Block Mountains only", "Volcanic peaks"],
+  "a": 1,
+  "e": "Aravallis are one of the oldest fold mountain systems in the world. / अरावली प्राचीन वलित पर्वत हैं।",
+  "cat": "geo",
+  "sub": "mountains"
+},
+{
+  "q": "The term 'Endo' and 'Genic' combined imply:\n'इंडो' और 'जेनिक' शब्द मिलकर क्या अर्थ देते हैं?",
+  "o": ["Origin from space", "Origin from within (Earth's interior)", "Origin from water", "Ending of life"],
+  "a": 1,
+  "e": "Endogenic means generated from the inside. / एंडोजेनिक का अर्थ है आंतरिक उत्पत्ति।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Which of the following describes 'Biological Weathering'?\nनिम्नलिखित में से कौन 'जैविक अपक्षय' का वर्णन करता है?",
+  "o": ["Rain washing away soil", "Sunlight heating rocks", "Plant roots breaking through rocks or burrowing animals creating paths", "Wind blowing sand"],
+  "a": 2,
+  "e": "Living organisms contribute to rock breakdown through physical pressure or chemical changes. / पौधों की जड़ों या जीवों द्वारा शैलों का टूटना जैविक अपक्षय है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "What mineral property describes the 'Color of Powder' when a mineral is rubbed?\nखनिज को रगड़ने पर 'चूर्ण का रंग' कौन सा खनिज गुण दर्शाता है?",
+  "o": ["Lustre", "Streak", "Cleavage", "Hardness"],
+  "a": 1,
+  "e": "Streak is identified by rubbing the mineral on a rough plate. / रगड़ने पर चूर्ण का रंग स्ट्रीक कहलाता है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "A 'Lopolith' is an intrusive body with which shape?\n'लोपोलिथ' (Lopolith) किस आकार का एक अंतर्भेदी पिंड है?",
+  "o": ["Mushroom-shaped", "Saucer-shaped", "Wall-shaped", "Lens-shaped"],
+  "a": 1,
+  "e": "A saucer-shaped body within the crust. / यह तश्तरीनुमा आकार का होता है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The term 'Subside' in the context of land movement means:\nभूमि की हलचल के संदर्भ में 'सबसाइड' (Subside) शब्द का अर्थ है:",
+  "o": ["Rising up", "Sinking down / moving downward", "Turning into gas", "Expanding sideways"],
+  "a": 1,
+  "e": "Subsidence is the downward movement or sinking of the ground surface. / जमीन का नीचे धंसना सब्सिडेंस कहलाता है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The 'Gondwanaland' split resulted in the formation of which of the following?\nगोंडवाना लैंड के टूटने के परिणामस्वरूप निम्नलिखित में से किसका निर्माण हुआ?",
+  "o": ["North America", "South America, Africa, India, and Australia", "Greenland", "Europe"],
+  "a": 1,
+  "e": "The southern part of Pangaea formed these modern landmasses. / गोंडवाना लैंड से दक्षिण अमेरिका, अफ्रीका, भारत और ऑस्ट्रेलिया बने।",
+  "cat": "geo",
+  "sub": "world_geo"
+},
+{
+  "q": "Which of the following describes 'Exfoliation' or Onion Weathering?\nनिम्नलिखित में से कौन 'एक्सफोलिएशन' या प्याज अपक्षय का वर्णन करता है?",
+  "o": ["Breaking into cubes", "Peeling off of outer layers of rocks in sheets", "Melting like wax", "Turning into blue color"],
+  "a": 1,
+  "e": "Outer layers peel off due to expansion/contraction cycles like onion skin. / शैल की ऊपरी परतों का छिलके की तरह उतरना एक्सफोलिएशन है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The 'Standard Meridian' of India passes through which degree of longitude?\nभारत का 'मानक याम्योत्तर' देशांतर के कितने डिग्री से होकर गुजरता है?",
+  "o": ["82.5° E", "0°", "97.25° E", "68.7° E"],
+  "a": 0,
+  "e": "82°30'E is the reference for Indian Standard Time. / 82.5° पूर्व भारत का मानक देशांतर है।",
+  "cat": "geo",
+  "sub": "mapping"
+},
+{
+  "q": "Which seismic wave is also called 'Transverse' and moves particles up and down?\nकौन सी भूकंपीय तरंग 'अनुप्रस्थ' कहलाती है और कणों को ऊपर-नीचे ले जाती है?",
+  "o": ["P-wave", "S-wave", "Love wave", "Rayleigh wave"],
+  "a": 1,
+  "e": "S-waves vibrate particles perpendicular to the wave direction. / एस-तरंगें अनुप्रस्थ होती हैं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "What is 'Lithification'?\n'लिथिफिकेशन' (Lithification) क्या है?",
+  "o": ["Melting rocks into magma", "Process of turning sediments into solid rock", "Erosion of mountains", "Upliftment of land"],
+  "a": 1,
+  "e": "The transformation of loose sediments into sedimentary rocks. / अवसादों के जमकर शैल बनने की प्रक्रिया लिथिफिकेशन है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Which mineral has a hardness level of 10 on the Mohs scale?\nमोह स्केल पर किस खनिज का कठोरता स्तर 10 है?",
+  "o": ["Quartz", "Diamond", "Corundum", "Topaz"],
+  "a": 1,
+  "e": "Diamond is the hardest natural mineral. / हीरा सर्वाधिक कठोर है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "A 'Batholith' is specifically known as a:\n'बैथोलिथ' को विशेष रूप से किस रूप में जाना जाता है?",
+  "o": ["Volcanic crater", "Large magma chamber that cools deep in the crust", "Horizontal lava flow", "Desert dune"],
+  "a": 1,
+  "e": "Large granite-rich intrusive body at the core of mountains. / विशाल अंतर्भेदी आग्नेय पिंड को बैथोलिथ कहते हैं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The term 'Orogeny' is specifically related to:\n'ओरोजेनी' (Orogeny) शब्द विशेष रूप से किससे संबंधित है?",
+  "o": ["Continent building", "Mountain building", "Sea level rise", "Soil erosion"],
+  "a": 1,
+  "e": "Orogenetic forces are responsible for creating mountain ranges. / पर्वत निर्माणकारी बल ओरोजेनेटिक बल कहलाते हैं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "In which type of rock are 'Fossils' most likely to be found?\nकिस प्रकार के शैल में 'जीवाश्म' पाए जाने की सर्वाधिक संभावना है?",
+  "o": ["Igneous", "Sedimentary", "Metamorphic", "Basaltic"],
+  "a": 1,
+  "e": "Sedimentary rocks are layered and preserve organic remains. / अवसादी शैलों में जीवाश्म सुरक्षित रहते हैं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Which state of matter block S-waves in the Earth's interior?\nपृथ्वी के आंतरिक भाग में पदार्थ की कौन सी अवस्था एस-तरंगों को रोकती है?",
+  "o": ["Solid", "Liquid", "Plasma", "Gaseous"],
+  "a": 1,
+  "e": "S-waves cannot pass through liquid, proving the outer core is liquid. / एस-तरंगें तरल में प्रवेश नहीं कर पातीं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The 'Asthenosphere' is primarily made of which rock type?\n'एस्थेनोस्फीयर' मुख्य रूप से किस शैल प्रकार से बनी है?",
+  "o": ["Granite", "Peridotite", "Basalt", "Limestone"],
+  "a": 1,
+  "e": "Peridotite is the ultra-maffic rock forming the mantle. / मेंटल की चट्टान पीरियोडोटाइट (Peridotite) है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "What happens to gravity as we move from the Equator towards the Poles?\nभूमध्य रेखा से ध्रुवों की ओर जाने पर गुरुत्वाकर्षण का क्या होता है?",
+  "o": ["It decreases", "It increases", "It stays the same", "It becomes zero"],
+  "a": 1,
+  "e": "The poles are closer to the Earth's center than the equator. / ध्रुवों पर गुरुत्वाकर्षण का मान अधिक होता है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+  {
+  "q": "What is the primary difference between 'Weathering' and 'Erosion'?\n'अपक्षय' और 'अपरदन' के बीच प्राथमिक अंतर क्या है?",
+  "o": ["Weathering is moving; Erosion is static", "Weathering is static (on-site); Erosion involves transportation of material", "Both are exactly the same", "Erosion only happens in space"],
+  "a": 1,
+  "e": "Weathering breaks rocks down where they are, while erosion moves them to new locations. / अपक्षय स्व-स्थाने (on-site) प्रक्रिया है, जबकि अपरदन में परिवहन शामिल है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The process where rock salt or gypsum dissolves in water is called:\nवह प्रक्रिया जिसमें सेंधा नमक या जिप्सम पानी में घुल जाते हैं, कहलाती है:",
+  "o": ["Oxidation", "Carbonation", "Solution", "Hydration"],
+  "a": 2,
+  "e": "Solution is the chemical process where minerals dissolve in liquid water. / खनिजों का पानी में घुलना 'विलयन' (Solution) कहलाता है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "When water freezes in rock cracks and expands, it exerts ______ pressure.\nजब पानी चट्टानों की दरारों में जम जाता है और फैलता है, तो यह ______ दबाव डालता है।",
+  "o": ["Cooling", "Bursting / Frost", "Chemical", "Nuclear"],
+  "a": 1,
+  "e": "Frozen water expands by approx 9% and creates enough pressure to break rock. / बर्फ का फैलाव फटने वाला दबाव (Bursting pressure) पैदा करता है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The 'Carbonation' process specifically involves the reaction between ______ and ______.\n'कार्बोनेशन' प्रक्रिया में विशेष रूप से ______ और ______ के बीच प्रतिक्रिया शामिल है।",
+  "o": ["Iron and Water", "Carbon Dioxide and Water (creating carbonic acid)", "Sand and Salt", "Oxygen and Gold"],
+  "a": 1,
+  "e": "CO2 and water form a weak carbonic acid that dissolves limestone/chalk. / CO2 और पानी मिलकर कमजोर कार्बोनिक एसिड बनाते हैं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Which type of rocks are most affected by 'Frost' action in high altitude areas?\nउच्च पर्वतीय क्षेत्रों में 'पाला' (Frost) की क्रिया से कौन से शैल सबसे अधिक प्रभावित होते हैं?",
+  "o": ["Granite", "Basalt", "Sedimentary rocks (with more pores and layers)", "Inner core rocks"],
+  "a": 2,
+  "e": "Sedimentary rocks have layers and pores where water can easily enter and freeze. / परतों वाले अवसादी शैल पाले से जल्दी टूटते हैं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "What happens during 'Hydration' in chemical weathering?\nरासायनिक अपक्षय में 'जलयोजन' (Hydration) के दौरान क्या होता है?",
+  "o": ["Rocks burn", "Minerals absorb water and swell up, creating internal pressure", "Rocks turn into gas", "No change occurs"],
+  "a": 1,
+  "e": "Hydration is the chemical addition of water to a mineral, causing it to expand. / खनिजों द्वारा पानी सोखकर फूलना जलयोजन है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The conversion of the mineral 'Feldspar' into 'Kaolin' (clay) is an example of:\nखनिज 'फेल्डस्पार' का 'काओलिन' (मिट्टी) में परिवर्तन किसका उदाहरण है?",
+  "o": ["Oxidation", "Hydration", "Frost action", "Wind erosion"],
+  "a": 1,
+  "e": "Feldspar turns into clay through the process of hydration. / जलयोजन के माध्यम से फेल्डस्पार मिट्टी में बदल जाता है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "In chemical weathering, 'Oxidation' often leads to the rock turning into a ______ color.\nरासायनिक अपक्षय में, 'ऑक्सीकरण' से शैल अक्सर किस रंग में बदल जाता है?",
+  "o": ["Blue", "Red / Brown (Rusty)", "Transparent", "Bright Green"],
+  "a": 1,
+  "e": "Oxidation of iron leads to the formation of rust, giving a reddish/brownish tint. / लोहे के ऑक्सीकरण से जंग जैसा लाल/भूरा रंग आता है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "When oxidized rocks lose oxygen in an environment with no air (e.g., under water), the process is called:\nजब ऑक्सीकृत शैल हवा रहित वातावरण (जैसे पानी के नीचे) में ऑक्सीजन खो देते हैं, तो उस प्रक्रिया को कहते हैं:",
+  "o": ["Carbonation", "Solution", "Reduction", "Hydration"],
+  "a": 2,
+  "e": "Reduction is the removal of oxygen from a mineral. / ऑक्सीजन का निकलना 'अपचयन' (Reduction) कहलाता है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Plants with 'Deep Roots' can cause weathering by:\n'गहरी जड़ों' वाले पौधे अपक्षय का कारण बन सकते हैं:",
+  "o": ["Cooling the rock", "Exerting physical pressure in cracks and allowing water to penetrate deeper", "Eating the rock", "None of the above"],
+  "a": 1,
+  "e": "Roots widen cracks and help water reach inner surfaces of the rock. / जड़ें दरारों को चौड़ा करती हैं और पानी को अंदर पहुँचने में मदद करती हैं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Which animals are known for 'Mechanical' biological weathering by removing topsoil and exposing new surfaces?\nकौन से जानवर मिट्टी की ऊपरी परत को हटाकर और नई सतहों को उजागर करके 'यांत्रिक' जैविक अपक्षय के लिए जाने जाते हैं?",
+  "o": ["Flying birds only", "Burrowing animals (like rats, rabbits, earthworms)", "Fish", "Whales"],
+  "a": 1,
+  "e": "Burrowing animals move soil and expose rocks to the elements. / बिल बनाने वाले जीव (जैसे चूहे, केंचुए) अपक्षय में मदद करते हैं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "What is 'Unloading' in the context of physical weathering?\nभौतिक अपक्षय के संदर्भ में 'अनलोडिंग' (Unloading) क्या है?",
+  "o": ["Adding weight to a mountain", "Removal of overlying layers, causing the rock below to expand and crack", "A ship releasing cargo", "Rainfall stopping"],
+  "a": 1,
+  "e": "Pressure release due to erosion of overlying rock causes cracks to expand. / ऊपरी भार हटने से नीचे की चट्टान का फैलना और दरकना अनलोडिंग है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The term 'Shattering' weathering creates fragments that are ______.\n'शटरिंग' अपक्षय ऐसे टुकड़े बनाता है जो ______ होते हैं।",
+  "o": ["Perfectly round", "Highly angular with sharp corners", "Liquid", "Soft like mud"],
+  "a": 1,
+  "e": "Thermal stress can cause rocks to snap into sharp, angular fragments. / तापीय तनाव से चट्टानें नुकीले कोणीय टुकड़ों में टूट जाती हैं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Biological weathering is considered a mix of ______ and ______ processes.\nजैविक अपक्षय को ______ और ______ प्रक्रियाओं का मिश्रण माना जाता है।",
+  "o": ["Solar and Nuclear", "Physical and Chemical", "Ice and Fire", "Static and Dynamic"],
+  "a": 1,
+  "e": "Organisms can break rocks physically (roots) and chemically (acids from decay). / जैविक अपक्षय में भौतिक और रासायनिक दोनों क्रियाएं शामिल हैं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Which gas produced during plant/animal decay reacts with rock minerals in chemical weathering?\nपौधों/जानवरों के सड़ने के दौरान पैदा होने वाली कौन सी गैस रासायनिक अपक्षय में शैल खनिजों के साथ प्रतिक्रिया करती है?",
+  "o": ["Oxygen only", "Carbon Dioxide (CO2)", "Hydrogen only", "Nitrogen only"],
+  "a": 1,
+  "e": "Decay produces organic acids and CO2, which aids in rock decomposition. / सड़न से निकलने वाली CO2 और एसिड अपक्षय में मदद करते हैं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "What results from the 'Solution' of limestone over thousands of years?\nहजारों वर्षों में चूना पत्थर के 'विलयन' (Solution) से क्या परिणाम निकलता है?",
+  "o": ["High mountains", "Caves and sinkholes (Karst topography)", "Frozen peaks", "Dunes"],
+  "a": 1,
+  "e": "Water dissolves limestone to create underground caves and surface depressions. / विलयन से चूना पत्थर क्षेत्रों में गुफाएं बनती हैं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Which type of climate promotes the fastest 'Chemical' weathering?\nकिस प्रकार की जलवायु सबसे तेज 'रासायनिक' अपक्षय को बढ़ावा देती है?",
+  "o": ["Dry and Cold", "Hot and Wet (Humid)", "Dry and Hot", "Frozen"],
+  "a": 1,
+  "e": "Heat and moisture are catalysts for chemical reactions in rocks. / गर्म और आर्द्र जलवायु रासायनिक अपक्षय के लिए अनुकूल है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The term 'Syntaxial Bend' refers to the sharp turn of the Himalayas in which region?\n'सिंटैक्सियल बेंड' हिमालय के किस क्षेत्र में आने वाले तीव्र मोड़ को संदर्भित करता है?",
+  "o": ["Punjab", "Assam / Namcha Barwa", "Rajasthan", "Delhi"],
+  "a": 1,
+  "e": "The Himalayas turn sharply southwards at their eastern and western ends. / हिमालय के पूर्वी और पश्चिमी छोर के तीव्र मोड़ को सिंटैक्सियल बेंड कहते हैं।",
+  "cat": "geo",
+  "sub": "mapping"
+},
+{
+  "q": "Why is 'Bauxite' considered an important mineral for India?\n'बॉक्साइट' को भारत के लिए एक महत्वपूर्ण खनिज क्यों माना जाता है?",
+  "o": ["It is used to make food", "It is the primary ore for Aluminum production", "It is a type of fuel", "It is found in gold mines"],
+  "a": 1,
+  "e": "India has significant bauxite reserves, essential for the aluminum industry. / बॉल्साइट एल्युमीनियम का मुख्य स्रोत है।",
+  "cat": "geo",
+  "sub": "resources"
+},
+{
+  "q": "The process where rocks are broken down into 'Grains' due to differential heating is called:\nविभेदक तापन के कारण शैलों के 'दानेदार' टुकड़ों में टूटने की प्रक्रिया को कहते हैं:",
+  "o": ["Block disintegration", "Granular disintegration", "Oxidation", "Subduction"],
+  "a": 1,
+  "e": "Minerals in rocks expand at different rates, causing the rock to fall apart into grains. / अलग-अलग फैलाव के कारण दानों में टूटना ग्रेनुलर डिसइंटीग्रेशन है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "What happens when iron-rich minerals encounter 'Water and Air'?\nजब लौह युक्त खनिजों का सामना 'जल और वायु' से होता है तो क्या होता है?",
+  "o": ["They turn into gold", "They rust (Oxidation)", "They freeze", "They shrink"],
+  "a": 1,
+  "e": "Rusting or oxidation creates iron oxides, weakening the rock. / जल और वायु के संपर्क में लोहा जंग (Oxidation) बनाता है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "A 'V-shaped' valley on the surface is primarily a result of which geomorphic process?\nसतह पर एक 'वी-आकार' (V-shaped) की घाटी मुख्य रूप से किस भू-आकृतिक प्रक्रिया का परिणाम है?",
+  "o": ["Endogenic uplift", "Exogenic river erosion", "Volcanic eruption", "Plate collision"],
+  "a": 1,
+  "e": "Rivers carve out V-shaped valleys through the process of vertical erosion. / नदियाँ अपरदन के द्वारा वी-आकार की घाटियाँ बनाती हैं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The 'Sahara Desert' shows high levels of ______ weathering due to extreme day-night temperature changes.\n'सहारा मरुस्थल' दिन-रात के अत्यधिक तापमान परिवर्तन के कारण ______ अपक्षय का उच्च स्तर दिखाता है।",
+  "o": ["Chemical", "Physical / Mechanical", "Glacial", "Hydraulic"],
+  "a": 1,
+  "e": "Physical expansion and contraction break rocks in arid regions. / मरुस्थलों में भौतिक अपक्षय अधिक प्रभावी होता है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Which state has the largest 'Deccan Basalt' province in India?\nभारत में किस राज्य में 'दक्कन बेसाल्ट' का सर्वाधिक विस्तार है?",
+  "o": ["UP", "Maharashtra", "Bihar", "Kerala"],
+  "a": 1,
+  "e": "Maharashtra occupies the largest area of the volcanic Deccan Plateau. / महाराष्ट्र दक्कन बेसाल्ट का मुख्य क्षेत्र है।",
+  "cat": "geo",
+  "sub": "mapping"
+},
+{
+  "q": "What does the 'A' and 'V' represent in PVT action on rocks?\nशैलों पर PVT क्रिया में 'A' और 'V' क्या दर्शाते हैं?\n(Note: Based on Pressure-Volume-Temperature context)\n",
+  "o": ["Air and Velocity", "Altitude and Vibration", "Pressure, Volume, and Temperature", "Atoms and Vacuum"],
+  "a": 2,
+  "e": "Metamorphism occurs under the action of Pressure, Volume, and Temperature. / कायांतरण दाब (Pressure), आयतन (Volume) और तापमान (Temperature) पर निर्भर है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Which mineral is characterized by its 'Pearly' lustre and thin sheet-like structure?\n'मोती जैसी' चमक और पतली चादर जैसी संरचना किस खनिज की विशेषता है?",
+  "o": ["Quartz", "Mica", "Talc", "Hematite"],
+  "a": 1,
+  "e": "Mica can be split into very thin sheets and has a pearly sheen. / अभ्रक (Mica) की चमक मोती जैसी होती है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The process of 'Denudation' includes which three sub-processes?\n'अनाच्छादन' (Denudation) प्रक्रिया में कौन सी तीन उप-प्रक्रियाएं शामिल हैं?",
+  "o": ["Melting, Freezing, Boiling", "Weathering, Erosion, and Mass movement", "Folding, Faulting, Volcanism", "None of the above"],
+  "a": 1,
+  "e": "Denudation is the overall wearing away of the Earth's surface. / अपक्षय, अपरदन और मास मूवमेंट मिलकर अनाच्छादन कहलाते हैं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "What is the result of 'Stress' building up in the Earth's crust along a fault line?\nभ्रंश रेखा (Fault line) के साथ पृथ्वी की क्रस्ट में 'तनाव' (Stress) उत्पन्न होने का परिणाम क्या होता है?",
+  "o": ["Rainfall", "Earthquake / Seismic waves", "Snowfall", "Ocean tide"],
+  "a": 1,
+  "e": "Sudden release of stress along faults leads to earthquakes. / भ्रंश रेखा पर तनाव मुक्त होने से भूकंप आते हैं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Which type of weathering is 'Solution' categorized under?\n'विलयन' (Solution) को किस प्रकार के अपक्षय के अंतर्गत वर्गीकृत किया गया है?",
+  "o": ["Physical", "Chemical", "Biological", "Glacial"],
+  "a": 1,
+  "e": "It is a chemical breakdown where minerals are dissolved by water. / विलयन एक रासायनिक अपक्षय प्रक्रिया है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Where is the 'Lake Baikal', the world's deepest freshwater lake, located?\nविश्व की सबसे गहरी मीठे पानी की झील, 'बैकाल झील' कहाँ स्थित है?",
+  "o": ["Canada", "Russia (Siberia)", "India", "Africa"],
+  "a": 1,
+  "e": "Lake Baikal is a rift lake in southern Siberia, Russia. / बैकाल झील रूस के साइबेरिया में स्थित है।",
+  "cat": "geo",
+  "sub": "mapping"
+},
+{
+  "q": "What happens to the volume of water when it turns into 'Ice'?\nजब पानी 'बर्फ' में बदल जाता है तो उसके आयतन (Volume) का क्या होता है?",
+  "o": ["It stays the same", "It increases (approx 9%)", "It decreases", "It becomes zero"],
+  "a": 1,
+  "e": "Ice occupies more space than liquid water. / बर्फ जमने पर आयतन बढ़ जाता है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Which geomorphic agent moves material from high mountains to lower valleys due to gravity?\nकौन सा भू-आकृतिक कारक गुरुत्वाकर्षण के कारण सामग्री को ऊँचे पहाड़ों से निचली घाटियों में ले जाता है?",
+  "o": ["Moonlight", "Gravity / Geomorphic agents like water and ice", "Wind only", "Heat"],
+  "a": 1,
+  "e": "Gravity and agents of erosion move materials downslope. / गुरुत्वाकर्षण और अपरदन के कारक सामग्री को नीचे लाते हैं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "A 'Fold Mountain' like the Himalayas is primarily formed by ______ forces.\nहिमालय जैसा 'वलित पर्वत' मुख्य रूप से ______ बलों द्वारा निर्मित होता है।",
+  "o": ["Tensional", "Compressional (Orogenetic)", "Erosional", "Static"],
+  "a": 1,
+  "e": "Horizontal compressional forces cause the crust to fold and uplift. / संपीडन बल से वलित पर्वत बनते हैं।",
+  "cat": "geo",
+  "sub": "mountains"
+},
+{
+  "q": "What defines 'Maffic' rocks found in the oceanic crust?\nमहासागरीय क्रस्ट में पाए जाने वाले 'मैफ़िक' शैलों को क्या परिभाषित करता है?",
+  "o": ["Rich in Silicon and Aluminum", "Rich in Magnesium and Iron", "Soft like chalk", "White color"],
+  "a": 1,
+  "e": "Maffic rocks are denser and darker. / मैफिक शैल मैग्नीशियम और लोहे से भरपूर होती हैं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The term 'Intrusive' rock implies that magma cooled ______.\n'अंतर्भेदी' (Intrusive) शैल का अर्थ है कि मैग्मा ______ ठंडा हुआ।",
+  "o": ["On the surface", "Inside the Earth's crust", "In space", "Underwater only"],
+  "a": 1,
+  "e": "Intrusive rocks solidify underground. / अंतर्भेदी शैल क्रस्ट के अंदर ठंडे होते हैं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "In which city is the 'Red Sea' rifting most visible in modern geography?\nआधुनिक भूगोल में 'लाल सागर' की दरार किस क्षेत्र में सबसे अधिक दिखाई देती है?",
+  "o": ["Between Africa and Arabian Peninsula", "Between India and Sri Lanka", "Between USA and Canada", "None of the above"],
+  "a": 0,
+  "e": "The Red Sea is an active rift zone. / लाल सागर अफ्रीका और अरब के बीच की दरार में स्थित है।",
+  "cat": "geo",
+  "sub": "mapping"
+},
+{
+  "q": "What is the result of 'Reduction' in minerals like Iron Oxide?\nआयरन ऑक्साइड जैसे खनिजों में 'अपचयन' (Reduction) का क्या परिणाम होता है?",
+  "o": ["Turning red", "Turning greenish or bluish-gray due to loss of oxygen", "Dissolving in water", "Turning into gold"],
+  "a": 1,
+  "e": "Reduction occurs in oxygen-poor environments. / अपचयन से शैल हरा या नीला-धूसर हो जाता है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Which property allows 'Mica' to be used as an insulator in irons and other heat-based appliances?\nकौन सा गुण 'अभ्रक' (Mica) को इस्त्री और अन्य ताप-आधारित उपकरणों में कुचालक के रूप में उपयोग करने की अनुमति देता है?",
+  "o": ["Hardness", "High heat resistance and electrical insulation", "Transparency", "Blue color"],
+  "a": 1,
+  "e": "Mica is stable at high temperatures and does not conduct electricity. / अभ्रक उच्च ताप प्रतिरोध और विद्युत कुचालक होता है।",
+  "cat": "geo",
+  "sub": "resources"
+},
+{
+  "q": "What is 'Regolith'?\n'रेगोलिथ' (Regolith) क्या है?",
+  "o": ["Solid core of the Earth", "Layer of loose, heterogeneous superficial material covering solid rock", "A type of gas", "A river name"],
+  "a": 1,
+  "e": "Weathered material sitting on top of bedrock. / ठोस शैल के ऊपर जमा ढीले अपक्षयित पदार्थ को रेगोलिथ कहते हैं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The 'Deccan Trap' rocks are mainly ______ in nature.\n'दक्कन ट्रैप' के शैल मुख्य रूप से ______ प्रकृति के हैं।",
+  "o": ["Granitic", "Basaltic", "Sandstone", "Marble"],
+  "a": 1,
+  "e": "Formed from vast lava flows. / दक्कन ट्रैप बेसाल्टिक लावा से बना है।",
+  "cat": "geo",
+  "sub": "mapping"
+},
+{
+  "q": "Which type of 'Geomorphic Process' is responsible for building landmasses?\nकिस प्रकार की 'भू-आकृतिक प्रक्रिया' भू-भागों के निर्माण के लिए जिम्मेदार है?",
+  "o": ["Exogenic", "Endogenic", "Atmospheric", "Static"],
+  "a": 1,
+  "e": "Endogenic forces are the main mountain and continent builders. / एंडोजेनिक बल भू-भागों का निर्माण करते हैं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "What is 'Exfoliation' specifically related to?\n'एक्सफोलिएशन' (Exfoliation) विशेष रूप से किससे संबंधित है?",
+  "o": ["Underwater volcanoes", "Peeling of layers from a rock due to thermal expansion/contraction", "Folding of mountains", "Tidal movement"],
+  "a": 1,
+  "e": "It results in curved rock surfaces often resembling onion layers. / तापीय चक्रों के कारण परतों का उतरना एक्सफोलिएशन है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The process of 'Solution' is most active in which type of rocks?\n'विलयन' (Solution) की प्रक्रिया किन शैलों में सबसे अधिक सक्रिय होती है?",
+  "o": ["Granite", "Basalt", "Limestone and Chalk", "Diamond"],
+  "a": 2,
+  "e": "Calcium carbonate dissolves easily in slightly acidic rainwater. / चूना पत्थर और चाक विलयन द्वारा जल्दी घुलते हैं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "How does 'Frost Action' break rocks?\n'पाले की क्रिया' (Frost Action) शैलों को कैसे तोड़ती है?",
+  "o": ["By heating them", "By expansion of freezing water in cracks", "By wind speed", "By acid rain"],
+  "a": 1,
+  "e": "The 9% volume expansion of ice forces cracks wider. / दरारों में बर्फ के जमने और फैलने से शैल टूटते हैं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Which of the following describes 'Mass Movement'?\nनिम्नलिखित में से कौन 'मास मूवमेंट' (Mass Movement) का वर्णन करता है?",
+  "o": ["Wind blowing leaves", "Downward movement of soil and rock under the direct influence of gravity", "Fish migrating", "Sunlight heating the ground"],
+  "a": 1,
+  "e": "Movement like landslides occurring primarily due to gravity. / गुरुत्वाकर्षण के प्रभाव में सामग्री का नीचे खिसकना मास मूवमेंट है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The 'Moho Discontinuity' separates the ______ from the ______.\n'मोह असंबद्धता' ______ को ______ से अलग करती है।",
+  "o": ["Crust, Mantle", "Mantle, Core", "Outer Core, Inner Core", "None of the above"],
+  "a": 0,
+  "e": "The boundary between the Earth's crust and mantle. / यह क्रस्ट और मेंटल के बीच की सीमा है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Which mineral is standard for hardness level 1 (the softest)?\nकठोरता स्तर 1 (सबसे कोमल) के लिए कौन सा खनिज मानक है?",
+  "o": ["Quartz", "Gypsum", "Talc", "Diamond"],
+  "a": 2,
+  "e": "Talc is level 1 on Mohs scale. / टल्क का मान 1 होता है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "In chemical weathering, 'Carbonation' creates which type of acid?\nरासायनिक अपक्षय में, 'कार्बोनेशन' किस प्रकार का अम्ल बनाता है?",
+  "o": ["Sulfuric acid", "Carbonic acid", "Nitric acid", "Citric acid"],
+  "a": 1,
+  "e": "CO2 + Water = Weak Carbonic Acid. / कार्बोनेशन से कार्बोनिक एसिड बनता है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The 'Standard Time' of India follows which meridian?\nभारत का 'मानक समय' किस याम्योत्तर का अनुसरण करता है?",
+  "o": ["0°", "82°30' E", "90° E", "23.5° N"],
+  "a": 1,
+  "e": "Passing through Mirzapur, UP. / 82°30' पूर्व भारत का मानक देशांतर है।",
+  "cat": "geo",
+  "sub": "mapping"
+},
+  {
+  "q": "What is the primary driving force behind 'Mass Movement' as explained in the transcript?\nट्रांसक्रिप्ट में बताए अनुसार 'वृहत संचलन' (Mass Movement) के पीछे प्राथमिक प्रेरक बल क्या है?",
+  "o": ["Running water", "Wind pressure", "Gravity", "Solar radiation"],
+  "a": 2,
+  "e": "Gravity is the primary force that moves debris and rocks down a slope. Other factors like rain only act as catalysts. / गुरुत्वाकर्षण वह प्राथमिक बल है जो मलबे को ढलान के नीचे धकेलता है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Which of the following is a 'Pre-requisite' for Mass Movement to occur?\nवृहत संचलन होने के लिए निम्नलिखित में से कौन सी एक 'पूर्व-शर्त' है?",
+  "o": ["Weathering", "Erosion", "Steep or moderate slope", "Presence of vegetation"],
+  "a": 2,
+  "e": "Mass movement cannot happen on a perfectly flat surface; it requires a slope for gravity to act. Weathering aids it but is not a pre-requisite. / वृहत संचलन के लिए ढलान का होना अनिवार्य है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The extremely slow downslope movement of soil or rock debris that is barely visible is called:\nमिट्टी या चट्टानी मलबे की अत्यधिक धीमी गति जो मुश्किल से दिखाई देती है, कहलाती है:",
+  "o": ["Landslide", "Earthflow", "Creep", "Mudflow"],
+  "a": 2,
+  "e": "Creep is the slowest form of mass movement, often noticed only by tilted telephone poles or fences over years. / क्रीप (Creep) सबसे धीमी गति का संचलन है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "What is 'Regolith' (रेगोलिथ) in the context of soil and rocks?\nमिट्टी और शैलों के संदर्भ में 'रेगोलिथ' (Regolith) क्या है?",
+  "o": ["The solid inner core", "A layer of loose, un-consolidated material covering the bedrock", "A type of volcanic ash", "Pure clay only"],
+  "a": 1,
+  "e": "Regolith is a blanket of loose material including soil and weathered rock that sits above the solid bedrock. / ठोस शैल के ऊपर जमा ढीले अपक्षयित पदार्थ को रेगोलिथ कहते हैं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Which type of mass movement involves a 'Backward Rotation' along a curved plane?\nकिस प्रकार के वृहत संचलन में वक्र तल के साथ 'पीछे की ओर घूर्णन' (Backward Rotation) शामिल होता है?",
+  "o": ["Debris slide", "Slump", "Rock fall", "Solifluction"],
+  "a": 1,
+  "e": "Slumping occurs when a block of material moves downslope with a backward rotation along a curved slip surface. / वक्र तल पर पीछे की ओर घूमते हुए खिसकने को स्लंप (Slump) कहते हैं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The rapid movement of water-saturated clay or silt down low-angle terraces is known as:\nकम कोण वाले छतों पर पानी से संतृप्त चिकनी मिट्टी या गाद की तीव्र गति को क्या कहा जाता है?",
+  "o": ["Earthflow", "Creep", "Soil erosion", "Subsidence"],
+  "a": 0,
+  "e": "Earthflow occurs in humid regions when soil becomes saturated with water and flows down a slope. / आर्द्र क्षेत्रों में मिट्टी का संतृप्त होकर बहना अर्थफ्लो कहलाता है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Which process describes the slow downslope flow of soil/debris in permafrost regions during summer?\nग्रीष्मकाल में परमाफ्रॉस्ट क्षेत्रों में मिट्टी/मलबे के धीमे बहाव की प्रक्रिया क्या कहलाती है?",
+  "o": ["Exfoliation", "Solifluction", "Shattering", "Carbonation"],
+  "a": 1,
+  "e": "Solifluction is common in cold climates where the top layer melts and slides over a frozen sub-layer. / ठंडे प्रदेशों में ऊपरी सतह का पिघलकर नीचे खिसकना सॉलीफ़्लक्शन (Solifluction) है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "What is the primary difference between a 'Debris Slide' and a 'Debris Fall'?\n'डेब्रिस स्लाइड' और 'डेब्रिस फॉल' के बीच प्राथमिक अंतर क्या है?",
+  "o": ["Slide is fast; Fall is slow", "Slide moves along a surface; Fall is a vertical free fall from a cliff", "Fall involves ice; Slide involves water", "There is no difference"],
+  "a": 1,
+  "e": "In a slide, material maintains contact with the ground; in a fall, material drops vertically from an overhanging face. / स्लाइड सतह के सहारे होती है, जबकि फॉल सीधा नीचे गिरना है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The term 'Subsidence' (सब्सिडेंस) refers to the ______ movement of the Earth's surface.\n'सब्सिडेंस' शब्द पृथ्वी की सतह की ______ हलचल को संदर्भित करता है।",
+  "o": ["Horizontal", "Vertical / Sinking", "Circular", "Expansion"],
+  "a": 1,
+  "e": "Subsidence is the sinking of the ground surface, often due to underground mining or fluid extraction. / सतह का नीचे धंसना सब्सिडेंस कहलाता है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Which exogenic process is described as a 'Kinetic Energy' driven movement of rock fragments?\nकिस बाह्य प्रक्रिया को शैल टुकड़ों की 'गतिज ऊर्जा' द्वारा संचालित गति के रूप में वर्णित किया गया है?",
+  "o": ["Weathering", "Erosion", "Deposition", "Carbonation"],
+  "a": 1,
+  "e": "Erosion involves the acquisition and transportation of materials using kinetic energy from wind, water, or ice. / गतिज ऊर्जा का उपयोग करके सामग्री का परिवहन अपरदन (Erosion) कहलाता है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Deposition is not considered an 'Act' but a ______ of erosion.\nनिक्षेपण को एक 'कार्य' नहीं बल्कि अपरदन का ______ माना जाता है।",
+  "o": ["Reason", "Consequence / Result", "Beginning", "Obstacle"],
+  "a": 1,
+  "e": "Deposition occurs when geomorphic agents lose velocity and can no longer carry the load. / जब अपरदन के कारक सामग्री ढोना बंद कर देते हैं, तो निक्षेपण होता है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The 'Vindhya' and 'Satpura' ranges in central India create rift valleys for which rivers?\nमध्य भारत की 'विंध्य' और 'सतपुड़ा' श्रेणियां किन नदियों के लिए भ्रंश घाटियाँ (Rift Valleys) बनाती हैं?",
+  "o": ["Ganga and Yamuna", "Narmada and Tapi", "Godavari and Krishna", "Luni and Sabarmati"],
+  "a": 1,
+  "e": "Narmada flows between Vindhya and Satpura, while Tapi flows south of Satpura in rift valleys. / नर्मदा और तापी नदियाँ इन भ्रंश घाटियों से होकर बहती हैं।",
+  "cat": "geo",
+  "sub": "mapping"
+},
+{
+  "q": "What is 'Frost action' and how does it affect rocks?\n'पाले की क्रिया' क्या है और यह शैलों को कैसे प्रभावित करती है?",
+  "o": ["It melts rocks", "Water expands by 9% when freezing in cracks, creating bursting pressure", "It turns rocks into salt", "It has no effect"],
+  "a": 1,
+  "e": "Ice takes up more space than water, forcing rock cracks to widen and eventually break. / दरारों में बर्फ जमने और फैलने से चट्टानें टूट जाती हैं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Which type of weathering involves the 'Peeling off' of rock layers like an onion?\nकिस प्रकार के अपक्षय में प्याज की तरह शैल की परतों का 'उतरना' शामिल है?",
+  "o": ["Carbonation", "Exfoliation", "Hydration", "Frosting"],
+  "a": 1,
+  "e": "Exfoliation or onion weathering happens due to thermal expansion and contraction cycles on the surface. / तापीय चक्रों के कारण सतह का परतों में उतरना एक्सफोलिएशन है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The chemical reaction of minerals with water that leads to the formation of 'Clay' (Kaolin) is:\nखनिजों की जल के साथ रासायनिक अभिक्रिया जिससे 'मिट्टी' (Kaolin) का निर्माण होता है, कहलाती है:",
+  "o": ["Oxidation", "Hydration", "Solution", "Reduction"],
+  "a": 1,
+  "e": "Hydration is the chemical addition of water to minerals like Feldspar, turning them into clay. / खनिजों का जल सोखकर फूलना और बदलना जलयोजन है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Which process turns Iron into 'Rust' when exposed to air and water?\nवायु और जल के संपर्क में आने पर लोहा 'जंग' में किस प्रक्रिया से बदल जाता है?",
+  "o": ["Carbonation", "Oxidation", "Reduction", "Hydrolysis"],
+  "a": 1,
+  "e": "Oxidation of iron creates ferric oxide (rust), which is a weak and easily weathered form. / लोहे का ऑक्सीजन से क्रिया करना ऑक्सीकरण है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Why is 'Time' considered a crucial factor in soil formation?\nमृदा निर्माण में 'समय' को एक महत्वपूर्ण कारक क्यों माना जाता है?",
+  "o": ["It doesn't matter", "It determines the maturity and thickness of the soil horizons", "It changes the color of the sun", "It only affects mountains"],
+  "a": 1,
+  "e": "Older soils have well-developed layers (horizons), while young soils like Alluvium are thin and lack stratification. / समय मृदा की परिपक्वता और परतों की गहराई तय करता है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The 'Alluvial Soil' found in the Northern Plains of India is an example of ______ soil.\nभारत के उत्तरी मैदानों में पाई जाने वाली 'जलोढ़ मृदा' किस प्रकार की मृदा का उदाहरण है?",
+  "o": ["Old mature", "Young/Recent", "Volcanic", "Desert"],
+  "a": 1,
+  "e": "Alluvial soil is recently deposited by rivers and is one of the youngest soil formations in India. / जलोढ़ मृदा नदियों द्वारा हाल ही में लाई गई 'युवा' मृदा है।",
+  "cat": "geo",
+  "sub": "mapping"
+},
+{
+  "q": "A 'Talus' or 'Scree' is a fan-like deposit formed by which process?\n'टलस' (Talus) या 'स्क्री' एक पंखे जैसा निक्षेप है जो किस प्रक्रिया से बनता है?",
+  "o": ["Wind erosion", "Talus Creep (slow mass movement of physical debris)", "Volcanic ash fall", "Underwater current"],
+  "a": 1,
+  "e": "Talus creep involves large quantities of physically weathered rocks rolling down a slope to form a fan structure. / भौतिक मलबे के नीचे लुढ़कने से टलस बनता है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Which gas produced during plant/animal decay aids in 'Chemical Weathering'?\nपौधों/जानवरों के सड़ने के दौरान पैदा होने वाली कौन सी गैस रासायनिक अपक्षय में सहायता करती है?",
+  "o": ["Oxygen", "Carbon Dioxide (forming carbonic acid)", "Nitrogen", "Argon"],
+  "a": 1,
+  "e": "Decay produces CO2 which reacts with moisture to form carbonic acid, dissolving limestone. / सड़न से निकली CO2 तेजाबी क्रिया कर चूने को घोलती है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The removal of the top fertile layer of soil primarily due to wind or water is called:\nमुख्य रूप से पवन या जल के कारण मिट्टी की ऊपरी उपजाऊ परत का हटना कहलाता है:",
+  "o": ["Soil Formation", "Soil Erosion", "Weathering", "Subsidence"],
+  "a": 1,
+  "e": "Soil erosion is the displacement of the upper layer of soil; a form of land degradation. / ऊपरी परत का हटना मृदा अपरदन है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "In which type of 'Fold' does the axial plane become nearly horizontal?\nकिस प्रकार के 'वलन' (Fold) में अक्षीय तल लगभग क्षैतिज हो जाता है?",
+  "o": ["Symmetrical", "Asymmetrical", "Recumbent", "Isocline"],
+  "a": 2,
+  "e": "In a recumbent fold, the pressure is so high that the fold 'lays down' parallel to the surface. / रिकम्बेंट फोल्ड में चट्टानें लगभग लेट जाती हैं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The term 'Orogenesis' is associated with the building of:\n'ओरोजेनेसिस' (Orogenesis) शब्द किसके निर्माण से जुड़ा है?",
+  "o": ["Oceans", "Continents", "Mountains", "Caves"],
+  "a": 2,
+  "e": "Orogenetic forces are mountain-building forces that involve folding and faulting. / ओरोजेनेसिस पर्वत निर्माण की प्रक्रिया है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Which state in India experienced a massive 'Mudflow' disaster in Leh in 2010?\nभारत के किस राज्य/केंद्र शासित प्रदेश ने 2010 में लेह में बड़े पैमाने पर 'मडफ्लो' (कीचड़ का बहाव) आपदा का सामना किया था?",
+  "o": ["Ladakh", "Kerala", "Assam", "Gujarat"],
+  "a": 0,
+  "e": "A cloudburst in Leh (2010) triggered a massive mudflow that destroyed much of the city. / लेह में बादल फटने से भयानक मडफ्लो हुआ था।",
+  "cat": "geo",
+  "sub": "mapping"
+},
+{
+  "q": "What is the primary factor that causes 'Differential Heating' in rocks leading to granular disintegration?\nशैलों में 'विभेदक तापन' का प्राथमिक कारक क्या है जिससे दानेदार विखंडन होता है?",
+  "o": ["Wind speed", "Presence of dark and light colored minerals absorbing heat differently", "Water salt content", "Gravity"],
+  "a": 1,
+  "e": "Dark minerals absorb more heat and expand more than light ones, creating internal stress and disintegration. / अलग-अलग रंग के खनिज अलग तरह से गर्मी सोखते हैं जिससे तनाव पैदा होता है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The study of landforms and the processes that shape them is known as:\nभू-आकृतियों और उन्हें आकार देने वाली प्रक्रियाओं के अध्ययन को क्या कहा जाता है?",
+  "o": ["Meteorology", "Geomorphology", "Oceanography", "Seismology"],
+  "a": 1,
+  "e": "Geomorphology is the scientific study of the origin and evolution of topographic features. / भू-आकृतियों के अध्ययन को जियोमॉर्फोलॉजी कहते हैं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Which 'Exogenic Agent' is most effective in carving landscapes in arid (desert) regions?\nशुष्क (मरुस्थलीय) क्षेत्रों में परिदृश्य को आकार देने में कौन सा 'बाह्य कारक' सबसे प्रभावी है?",
+  "o": ["Running water", "Wind", "Glaciers", "Underground water"],
+  "a": 1,
+  "e": "In deserts, wind is the primary agent of erosion and deposition due to lack of vegetation and moisture. / मरुस्थलों में पवन मुख्य अपरदन कारक है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The process of 'Lithification' (लिथिफिकेशन) converts:\n'लिथिफिकेशन' की प्रक्रिया किसे परिवर्तित करती है?",
+  "o": ["Rocks into magma", "Sediments into solid sedimentary rocks", "Ice into water", "Salt into gold"],
+  "a": 1,
+  "e": "Lithification is the compaction and cementation of sediments. / अवसादों के जमकर पत्थर बनने को लिथिफिकेशन कहते हैं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Which landform is described as a 'Graben' or a rift valley?\nकिस भू-आकृति को 'ग्रैबेन' (Graben) या भ्रंश घाटी के रूप में वर्णित किया गया है?",
+  "o": ["A mountain peak", "A sunken block of crust between two faults", "A coral island", "A river delta"],
+  "a": 1,
+  "e": "A graben is the central part that slides down during tensional faulting. / दो दरारों के बीच नीचे धंसे हिस्से को ग्रैबेन कहते हैं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "A 'Nappe' (निपेश) is formed when an overturned fold:\nएक 'निपेश' (Nappe) तब बनता है जब एक उल्टा हुआ वलन:",
+  "o": ["Becomes straight", "Breaks and is pushed many kilometers away over other rocks", "Melts", "Disappears underground"],
+  "a": 1,
+  "e": "Under extreme horizontal pressure, a fold can break and slide over distant rock units. / जब वलन टूटकर कोसों दूर जा गिरता है, तो उसे निपेश कहते हैं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The 'Standard Time' of a country is usually based on its central ______.\nकिसी देश का 'मानक समय' आमतौर पर उसके केंद्रीय ______ पर आधारित होता है।",
+  "o": ["Latitude", "Longitude", "Altitude", "Population"],
+  "a": 1,
+  "e": "Standard time is calculated using a central meridian to maintain uniformity. / मानक समय देशांतर (Longitude) पर आधारित होता है।",
+  "cat": "geo",
+  "sub": "mapping"
+},
+{
+  "q": "Which seismic wave is the first to arrive at a seismic station?\nकौन सी भूकंपीय तरंग भूकंपीय स्टेशन पर सबसे पहले पहुँचती है?",
+  "o": ["S-wave", "L-wave", "P-wave", "R-wave"],
+  "a": 2,
+  "e": "P-waves (Primary) are the fastest body waves. / पी-तरंगें सबसे तेज होती हैं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The 'Moho' Discontinuity separates the ______ from the ______.\n'मोह' असंबद्धता किसे किससे अलग करती है?",
+  "o": ["Crust, Mantle", "Mantle, Core", "Outer core, Inner core", "None of the above"],
+  "a": 0,
+  "e": "It is the boundary between the Earth's crust and the mantle. / यह क्रस्ट और मेंटल के बीच की सीमा है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "What is the result of 'Divergence' between two tectonic plates?\nदो विवर्तनिक प्लेटों के बीच 'अपसरण' (Divergence) का क्या परिणाम होता है?",
+  "o": ["Mountain building", "Crust destruction", "Creation of new crust and rift valleys", "Plate stagnation"],
+  "a": 2,
+  "e": "Divergent boundaries are constructive, creating new floor or rifts. / अपसरण से नई क्रस्ट और रिफ्ट वैली बनती है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Which state of matter is the 'Inner Core' of the Earth?\nपृथ्वी का 'आंतरिक कोर' पदार्थ की किस अवस्था में है?",
+  "o": ["Liquid", "Solid", "Gaseous", "Plasma"],
+  "a": 1,
+  "e": "The inner core is solid due to immense pressure despite high temperature. / अत्यधिक दबाव के कारण आंतरिक कोर ठोस है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "What is 'Biological Weathering' primarily caused by?\n'जैविक अपक्षय' मुख्य रूप से किसके कारण होता है?",
+  "o": ["Wind speed", "Living organisms like plants, animals, and microbes", "Sunlight", "Volcanoes"],
+  "a": 1,
+  "e": "Plants, burrowing animals, and micro-organisms break down rocks. / जीव-जंतुओं और पौधों द्वारा होने वाला अपक्षय जैविक है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Which mineral is the hardest naturally occurring substance?\nकौन सा खनिज प्राकृतिक रूप से पाया जाने वाला सबसे कठोर पदार्थ है?",
+  "o": ["Quartz", "Talc", "Diamond", "Topaz"],
+  "a": 2,
+  "e": "Diamond is at level 10 on the Mohs scale. / हीरा सर्वाधिक कठोर प्राकृतिक खनिज है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The term 'Tethys' refers to an ancient:\n'टेथिस' शब्द एक प्राचीन ______ को संदर्भित करता है:",
+  "o": ["Mountain", "Sea", "Desert", "Continent"],
+  "a": 1,
+  "e": "Tethys was the sea located between Laurasia and Gondwanaland. / टेथिस लारेशिया और गोंडवाना के बीच का प्राचीन सागर था।",
+  "cat": "geo",
+  "sub": "world_geo"
+},
+{
+  "q": "Which force is responsible for the 'Uplift' of mountains during orogeny?\nपर्वत निर्माण (Orogeny) के दौरान पर्वतों के 'उत्थान' के लिए कौन सा बल जिम्मेदार है?",
+  "o": ["Tensional", "Compressional", "Erosional", "Static"],
+  "a": 1,
+  "e": "Horizontal compressional forces fold and uplift the crust into mountains. / संपीडन बल पर्वतों को ऊपर उठाने के लिए उत्तरदायी है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The 'Deccan Trap' in India was formed by:\nभारत में 'दक्कन ट्रैप' का निर्माण किसके द्वारा हुआ था?",
+  "o": ["River deposits", "Flood Basalt eruptions from a hotspot", "Glacial movement", "Earthquakes only"],
+  "a": 1,
+  "e": "Successive layers of basaltic lava created the Deccan Plateau. / लावा के प्रवाह से दक्कन ट्रैप का निर्माण हुआ।",
+  "cat": "geo",
+  "sub": "mapping"
+},
+{
+  "q": "What is the primary factor that makes a rock 'Basaltic' or maffic?\nकौन सा प्राथमिक कारक किसी शैल को 'बेसाल्टिक' या मैफिक बनाता है?",
+  "o": ["High silica content", "Low silica and high Iron/Magnesium content", "Light color", "Found only in caves"],
+  "a": 1,
+  "e": "Maffic rocks have low silica and are rich in heavy metals like iron. / मैफिक शैलों में सिलिका कम और लोहा/मैग्नीशियम अधिक होता है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "A 'Laccolith' is a dome-shaped intrusive body connected by a:\n'लैकोलिथ' एक गुंबद के आकार की अंतर्भेदी आकृति है जो किससे जुड़ी होती है?",
+  "o": ["Horizontal crack", "Vertical pipe-like conduit from below", "River bed", "Snow peak"],
+  "a": 1,
+  "e": "Laccoliths are mushroom-like intrusions with a flat base fed by a conduit. / लैकोलिथ नीचे से एक पाइप जैसी नली से जुड़ा होता है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The 'San Andreas Fault' is located in which country?\n'सैन एंड्रियास फॉल्ट' किस देश में स्थित है?",
+  "o": ["India", "USA (California)", "Japan", "Brazil"],
+  "a": 1,
+  "e": "It is a famous transform fault boundary in the United States. / यह अमेरिका के कैलिफोर्निया में स्थित एक भ्रंश है।",
+  "cat": "geo",
+  "sub": "mapping"
+},
+{
+  "q": "Which type of 'Process' levels the heights and fills the depressions of the Earth?\nकिस प्रकार की 'प्रक्रिया' पृथ्वी की ऊँचाइयों को समतल करती है और गड्ढों को भरती है?",
+  "o": ["Endogenic", "Exogenic / Gradational", "Volcanic", "Atmospheric only"],
+  "a": 1,
+  "e": "Exogenic processes are gradational; they wear down heights and fill basins. / बाह्य प्रक्रियाएं ऊँचाइयों को काटकर नीचाइयों को भरती हैं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "What happens to the volume of water when it turns into 'Ice'?\nजब पानी 'बर्फ' में बदल जाता है तो उसके आयतन का क्या होता है?",
+  "o": ["Decreases", "Increases", "Stays the same", "Becomes zero"],
+  "a": 1,
+  "e": "Water expands by about 9% upon freezing. / बर्फ जमने पर आयतन बढ़ जाता है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The term 'Subduction' is associated with which plate boundary?\n'प्रविष्ठन' (Subduction) शब्द किस प्लेट सीमा से जुड़ा है?",
+  "o": ["Divergent", "Convergent", "Transform", "Static"],
+  "a": 1,
+  "e": "Subduction occurs at convergent boundaries where one plate sinks. / प्रविष्ठन अभिसरण सीमाओं पर होता है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Which mineral exhibits the best 'Cleavage' properties, breaking into thin sheets?\nकौन सा खनिज सबसे अच्छा 'विदलन' (Cleavage) गुण प्रदर्शित करता है, जो पतली चादरों में टूट जाता है?",
+  "o": ["Quartz", "Mica", "Talc", "Diamond"],
+  "a": 1,
+  "e": "Mica has perfect basal cleavage in one direction. / अभ्रक (Mica) में एक दिशा में पूर्ण विदलन होता है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The 'Afar Triangle' triple junction is located in which continent?\n'अफार ट्रायंगल' ट्रिपल जंक्शन किस महाद्वीप में स्थित है?",
+  "o": ["Asia", "Africa", "South America", "Europe"],
+  "a": 1,
+  "e": "It is located in East Africa, where three tectonic plates are diverging. / अफार ट्रायंगल पूर्वी अफ्रीका में स्थित है।",
+  "cat": "geo",
+  "sub": "mapping"
+},
+{
+  "q": "What creates the 'Magnetic Field' of the Earth as discussed in the core section?\nकोर अनुभाग में चर्चा के अनुसार पृथ्वी का 'चुंबकीय क्षेत्र' क्या बनाता है?",
+  "o": ["Solid inner core", "Convection of electrons in the liquid outer core", "Solar wind", "Meteors"],
+  "a": 1,
+  "e": "The outer core is a liquid conductor that generates the geodynamo. / बाहरी कोर की तरल अवस्था चुंबकीय क्षेत्र पैदा करती है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+  
+{
+  "q": "Which geological period saw the split of Pangaea into Laurasia and Gondwanaland?\nकिस भूवैज्ञानिक काल में पंजिया लारेशिया और गोंडवाना लैंड में विभाजित हुआ था?",
+  "o": ["Carboniferous", "Triassic / Jurassic", "Tertiary", "Holocene"],
+  "a": 1,
+  "e": "The breakup of Pangaea began in the Triassic and was well underway by the Jurassic. / पंजिया का विभाजन ट्राइएसिक और जुरासिक काल में हुआ।",
+  "cat": "geo",
+  "sub": "world_geo"
+},
+  {
+  "q": "Which of the following is NOT one of the five primary factors of 'Soil Formation'?\nनिम्नलिखित में से कौन 'मृदा निर्माण' के पांच प्राथमिक कारकों में से एक नहीं है?",
+  "o": ["Parent Material", "Climate", "Time", "Human Population density"],
+  "a": 3,
+  "e": "The five factors are Parent Material, Topography, Climate, Biological Activity, and Time. Population density is not a natural factor. / मृदा निर्माण के प्राकृतिक कारकों में जनसंख्या घनत्व शामिल नहीं है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The 'Topography' of a region affects soil formation by influencing:\nकिसी क्षेत्र की 'स्थलाकृति' (Topography) मृदा निर्माण को कैसे प्रभावित करती है?",
+  "o": ["The color of the stars", "Exposure to sunlight and drainage of water", "The speed of the earth's rotation", "None of the above"],
+  "a": 1,
+  "e": "Slope and orientation determine how much water stays and how much sun the surface gets. / ढाल और दिशा सूर्य के ताप और जल निकास को प्रभावित करते हैं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Soils found on steep slopes are usually ______ compared to soils in valleys.\nघाटियों की तुलना में तीव्र ढलानों पर पाई जाने वाली मृदा आमतौर पर ______ होती है।",
+  "o": ["Thicker", "Thinner", "More fertile", "Permanently frozen"],
+  "a": 1,
+  "e": "Steep slopes allow high erosion, leading to thin soil profiles. / ढलानों पर अपरदन अधिक होने से मिट्टी की परत पतली होती है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "What describes 'Chemical Weathering' as explained in the transcript?\nट्रांसक्रिप्ट में बताए अनुसार 'रासायनिक अपक्षय' का वर्णन क्या है?",
+  "o": ["Breaking rocks with a hammer", "Decomposition of rocks through reactions with water and air (acid rain)", "Moving rocks to a new place", "Melting rocks in a volcano"],
+  "a": 1,
+  "e": "Chemical weathering changes the molecular structure of rocks through chemical reactions. / जल और वायु के साथ अभिक्रिया से चट्टानों का सड़ना रासायनिक अपक्षय है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The process of 'Carbonation' is most effective on which type of rock?\n'कार्बोनेशन' की प्रक्रिया किस प्रकार के शैल पर सबसे प्रभावी होती है?",
+  "o": ["Granite", "Basalt", "Limestone and Chalk", "Quartzite"],
+  "a": 2,
+  "e": "Calcium carbonate in limestone reacts with carbonic acid (CO2 + water) to dissolve. / चूना पत्थर और चाक कार्बोनेशन द्वारा जल्दी घुलते हैं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Which soil horizon is generally referred to as 'Topsoil'?\nकिस मृदा स्तर (Horizon) को आमतौर पर 'ऊपरी मृदा' (Topsoil) कहा जाता है?",
+  "o": ["Horizon C", "Horizon B", "Horizon A", "Bedrock"],
+  "a": 2,
+  "e": "Horizon A contains the most organic matter and is the zone of plant growth. / 'ए' स्तर सबसे ऊपरी और जैविक पदार्थों से भरपूर परत है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "A 'Rock Glacier Creep' occurs when:\n'रॉक ग्लेशियर क्रीप' तब होता है जब:",
+  "o": ["Lava flows into a glacier", "Ice between rock layers and permafrost melts during summer, causing slow flow", "Wind blows over ice", "A mountain explodes"],
+  "a": 1,
+  "e": "Melting of ice sieved between layers in cold climates leads to this specific mass movement. / गर्मियों में परतों के बीच जमी बर्फ के पिघलने से होने वाला धीमा बहाव।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The term 'Mudflow' is common in which type of climate regions?\n'मडफ्लो' (Mudflow) शब्द किन जलवायु क्षेत्रों में सामान्य है?",
+  "o": ["Polar only", "Arid and semi-arid regions after sudden heavy rain", "Equatorial only", "Deep ocean"],
+  "a": 1,
+  "e": "Arid regions have loose debris which flows rapidly as mud when hit by sudden torrential rain. / शुष्क और अर्ध-शुष्क क्षेत्रों में अचानक बारिश से मडफ्लो होता है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "What does a 'V-shaped' valley indicate in a river's lifecycle?\nनदी के जीवनचक्र में 'वी-आकार' की घाटी क्या दर्शाती है?",
+  "o": ["Old age with no energy", "Youthful stage with active vertical erosion", "A man-made canal", "A dried-up lake"],
+  "a": 1,
+  "e": "Youthful rivers carve deep V-shapes due to high kinetic energy and downward cutting. / युवा नदियाँ ऊर्ध्वाधर अपरदन से वी-आकार की घाटियाँ बनाती हैं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The process where a river dumps its load after losing speed is called:\nगति कम होने के बाद नदी द्वारा अपना भार छोड़ने की प्रक्रिया कहलाती है:",
+  "o": ["Erosion", "Weathering", "Deposition", "Transportation"],
+  "a": 2,
+  "e": "Loss of velocity leads to the settling of sediments, known as deposition. / सामग्री का जमना निक्षेपण (Deposition) कहलाता है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Which 'Geomorphic Agent' created the vast Alluvial fans at the foot of the Himalayas?\nकिस 'भू-आकृतिक कारक' ने हिमालय की तलहटी में विशाल जलोढ़ पंखे (Alluvial fans) बनाए हैं?",
+  "o": ["Wind", "Glaciers", "Running Water (Rivers)", "Underground water"],
+  "a": 2,
+  "e": "Rivers coming from mountains deposit debris as they reach the plains, forming fans. / पहाड़ों से उतरती नदियाँ निक्षेपण द्वारा जलोढ़ पंखे बनाती हैं।",
+  "cat": "geo",
+  "sub": "mapping"
+},
+{
+  "q": "The 'NPK' ratio mentioned in soil activity refers to which three nutrients?\nमृदा गतिविधि में उल्लिखित 'NPK' अनुपात किन तीन पोषक तत्वों को संदर्भित करता है?",
+  "o": ["Nickel, Phosphorus, Potassium", "Nitrogen, Phosphorus, Potassium", "Neon, Platinum, Krypton", "Sodium, Phosphorus, Potassium"],
+  "a": 1,
+  "e": "Nitrogen (N), Phosphorus (P), and Potassium (K) are vital soil nutrients. / एन-पी-के (NPK) नाइट्रोजन, फॉस्फोरस और पोटैशियम के प्रतीक हैं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Why is 'Black Soil' also called 'Self-ploughing' soil?\n'काली मिट्टी' को 'स्व-जुताई' (Self-ploughing) वाली मिट्टी क्यों कहा जाता है?",
+  "o": ["Farmers don't work there", "It develops deep cracks when dry, aiding air circulation", "It is made of metal", "It flows like water"],
+  "a": 1,
+  "e": "Shrinkage cracks in dry black soil allow aeration, mimicking the effect of ploughing. / सूखने पर दरारें पड़ने से हवा का संचार होता है, जिसे स्व-जुताई कहते हैं।",
+  "cat": "geo",
+  "sub": "agriculture"
+},
+{
+  "q": "What is 'Leaching' (निक्षालन) in the context of soil science?\nमृदा विज्ञान के संदर्भ में 'निक्षालन' (Leaching) क्या है?",
+  "o": ["Adding minerals to soil", "Washing away of nutrients and minerals to lower layers by heavy rain", "Warming of the soil", "Breaking of bedrock"],
+  "a": 1,
+  "e": "In heavy rainfall areas, soluble minerals are carried down into the soil, leaving the surface poor in nutrients. / भारी बारिश से पोषक तत्वों का नीचे की परतों में जाना निक्षालन है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "A 'Delta' is formed at which part of the river?\nएक 'डेल्टा' नदी के किस भाग में बनता है?",
+  "o": ["Source", "Waterfall", "Mouth (where it enters the sea)", "Middle course"],
+  "a": 2,
+  "e": "Deltas are depositional features at the mouth of a river where speed is minimal. / नदी के मुहाने पर समुद्र में मिलने से पहले डेल्टा बनता है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Which type of mass movement involves soil sliding like 'Steps' or 'Terraces' in humid regions?\nकिस प्रकार के वृहत संचलन में आर्द्र क्षेत्रों में मिट्टी 'सीढ़ियों' या 'छतों' की तरह खिसकती है?",
+  "o": ["Rock fall", "Earthflow", "Mudflow", "Creep"],
+  "a": 1,
+  "e": "Earthflow creates step-like terrace structures as water-saturated material slips. / आर्द्र क्षेत्रों में मिट्टी का खिसकना सीढ़ीनुमा अर्थफ्लो बनाता है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The term 'Pedology' is the scientific study of:\n'पेडोलॉजी' (Pedology) किसका वैज्ञानिक अध्ययन है?",
+  "o": ["Rocks", "Earthquakes", "Soil", "Fossils"],
+  "a": 2,
+  "e": "Pedology focuses on soil formation, classification, and morphology. / मृदा के वैज्ञानिक अध्ययन को पेडोलॉजी कहते हैं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Which factor determines the 'Rate of Weathering' of the parent material?\nजनक सामग्री (Parent material) के 'अपक्षय की दर' को कौन सा कारक निर्धारित करता है?",
+  "o": ["Moon's gravity", "Parent rock hardness and chemical structure", "Number of humans nearby", "Speed of sound"],
+  "a": 1,
+  "e": "Softer rocks or those with more reactive minerals weather faster. / चट्टान की कठोरता और संरचना अपक्षय की गति तय करती है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "What does 'Saturated Soil' mean?\n'संतृप्त मृदा' (Saturated Soil) का क्या अर्थ है?",
+  "o": ["Soil that is bone dry", "Soil where all pore spaces are filled with water and it cannot absorb more", "Soil with too much salt", "Soil only found in space"],
+  "a": 1,
+  "e": "Saturation means all gaps between particles are full of liquid. / जब मिट्टी में और पानी सोखने की क्षमता न रहे, तो वह संतृप्त है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Which 'Exogenic' process is static and happens on-site?\nकौन सी 'बाह्य' प्रक्रिया स्थिर है और स्व-स्थाने होती है?",
+  "o": ["Erosion", "Weathering", "Transportation", "Mass movement"],
+  "a": 1,
+  "e": "Weathering is an 'in-situ' process, whereas erosion and mass movement involve displacement. / अपक्षय एक ही स्थान पर होने वाली प्रक्रिया है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The 'Ganga Delta' is famous for which type of forest?\n'गंगा डेल्टा' किस प्रकार के वनों के लिए प्रसिद्ध है?",
+  "o": ["Coniferous", "Mangrove / Sundarbans", "Rainforest", "Desert Scrub"],
+  "a": 1,
+  "e": "The Sundarbans are the largest mangrove forests in the world. / सुंदरवन गंगा-ब्रह्मपुत्र डेल्टा में स्थित मैंग्रोव वन हैं।",
+  "cat": "geo",
+  "sub": "mapping"
+},
+{
+  "q": "Which mineral property refers to the arrangement of crystal faces?\nकौन सा खनिज गुण क्रिस्टल फलकों की व्यवस्था को संदर्भित करता है?",
+  "o": ["Cleavage", "Lustre", "External Crystal Form", "Fracture"],
+  "a": 2,
+  "e": "This is determined by the internal atomic arrangement. / यह परमाणु व्यवस्था से तय होने वाला 'क्रिस्टल रूप' है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "How do 'Burrowing Animals' contribute to soil development?\n'बिल बनाने वाले जीव' मृदा के विकास में कैसे योगदान देते हैं?",
+  "o": ["They make it colder", "They mix soil, aerate it, and add organic matter (manure)", "They turn soil into rock", "They have no role"],
+  "a": 1,
+  "e": "Animals like earthworms improve soil fertility by mixing nutrients and airing the soil. / जीव मिट्टी को उलट-पुलट कर उसे उपजाऊ और हवादार बनाते हैं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Which horizon of soil primarily consists of 'Partially weathered' parent material?\nमृदा का कौन सा स्तर मुख्य रूप से 'आंशिक रूप से अपक्षयित' जनक सामग्री से बना होता है?",
+  "o": ["Horizon A", "Horizon B", "Horizon C", "Bedrock"],
+  "a": 2,
+  "e": "Horizon C is a transition layer between topsoil and un-weathered rock. / 'सी' स्तर जनक चट्टानों के टूटने से बनी शुरुआती परत है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The process of 'Oxidation' makes rocks more ______ to physical breakdown.\n'ऑक्सीकरण' की प्रक्रिया शैलों को भौतिक विखंडन के प्रति अधिक ______ बनाती है।",
+  "o": ["Resistant", "Susceptible / Prone", "Shiny", "Indestructible"],
+  "a": 1,
+  "e": "Oxidation weakens the internal bonds of the minerals. / ऑक्सीकरण शैलों के बंधन कमजोर कर उन्हें आसानी से टूटने योग्य बनाता है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Where would you find 'Laterite' soil in India?\nभारत में 'लैटेराइट' मृदा कहाँ पाई जाएगी?",
+  "o": ["Punjab plains", "High rainfall areas of Western Ghats and North-East", "Thar desert", "Mount Everest peak"],
+  "a": 1,
+  "e": "Laterite soil forms due to intense leaching in tropical regions with high rain. / भारी वर्षा वाले पश्चिमी घाट और पूर्वोत्तर में लैटेराइट मृदा मिलती है।",
+  "cat": "geo",
+  "sub": "mapping"
+},
+{
+  "q": "What defines the 'Maturity' of a soil profile?\nमृदा परिच्छेदिका (Profile) की 'परिपक्वता' को क्या परिभाषित करता है?",
+  "o": ["The color of the grass", "The development of clear horizons (A, B, C)", "The speed of the wind", "The depth of the ocean nearby"],
+  "a": 1,
+  "e": "Mature soils have distinct, well-defined layers over thousands of years. / परिपक्व मृदा में स्पष्ट परतें (Horizons) विकसित होती हैं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Which seismic wave moves ground particles in a 'Snake-like' horizontal manner?\nकौन सी भूकंपीय तरंग जमीनी कणों को 'सांप की तरह' क्षैतिज रूप से ले जाती है?",
+  "o": ["P-wave", "S-wave", "Love wave", "Rayleigh wave"],
+  "a": 2,
+  "e": "Love waves are surface waves that move side-to-side. / लव तरंगें क्षैतिज रूप से टेढ़ी-मेढ़ी गति करती हैं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The 'Basaltic' lava flow is known for creating which type of soil?\n'बेसाल्टिक' लावा प्रवाह किस प्रकार की मृदा बनाने के लिए जाना जाता है?",
+  "o": ["Red soil", "Black soil / Regur", "Peaty soil", "Alluvial soil"],
+  "a": 1,
+  "e": "Weathering of basalt (volcanic rock) results in black cotton soil. / बेसाल्ट के अपक्षय से काली मिट्टी (रेगुर) बनती है।",
+  "cat": "geo",
+  "sub": "mapping"
+},
+{
+  "q": "What is the primary characteristic of 'Porous' rocks like sandstone?\nबलुआ पत्थर (Sandstone) जैसे 'छिद्रपूर्ण' शैलों की प्राथमिक विशेषता क्या है?",
+  "o": ["They explode easily", "They allow water to percolate and reach lower layers", "They are harder than diamond", "They are only blue"],
+  "a": 1,
+  "e": "Porosity determines a rock's ability to hold and pass fluids. / छिद्रपूर्ण शैल पानी को रिसकर नीचे जाने देते हैं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The term 'Mantle' refers to which part of the Earth's interior?\n'मेंटल' शब्द पृथ्वी के आंतरिक भाग के किस हिस्से को संदर्भित करता है?",
+  "o": ["The thin top layer", "The large layer between the crust and core", "The inner solid ball", "The atmosphere"],
+  "a": 1,
+  "e": "The mantle constitutes most of the Earth's volume. / मेंटल क्रस्ट और कोर के बीच की विशाल परत है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Which mineral has a hardness of level 1?\nकिस खनिज की कठोरता स्तर 1 है?",
+  "o": ["Quartz", "Gypsum", "Talc", "Diamond"],
+  "a": 2,
+  "e": "Talc is the softest mineral. / टल्क सबसे कोमल (स्तर 1) खनिज है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "What happens during 'Reduction' chemical weathering?\n'अपचयन' (Reduction) रासायनिक अपक्षय के दौरान क्या होता है?",
+  "o": ["Oxygen is added", "Oxygen is removed from minerals in an oxygen-poor environment", "Rock turns into gas", "Rock melts into lava"],
+  "a": 1,
+  "e": "This often occurs in waterlogged soils, turning them greenish/bluish. / ऑक्सीजन की कमी वाले स्थान (जैसे पानी के नीचे) में ऑक्सीजन का निकलना।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Which factor creates 'Domes' and 'Rifts' on the crust according to endogenic theory?\nएंडोजेनिक सिद्धांत के अनुसार क्रस्ट पर 'गुंबद' और 'दरारें' कौन सा कारक बनाता है?",
+  "o": ["Wind pressure", "Domal uplift and tension from rising convection currents", "Rainfall only", "Ocean tides"],
+  "a": 1,
+  "e": "Rising limbs of convection currents push and pull the crust. / ऊपर उठती संवहन धाराएं क्रस्ट को धकेलकर गुंबद और दरारें बनाती हैं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The 'Amazon Forest' region shows high ______ weathering due to heat and humidity.\n'अमेजन वन' क्षेत्र गर्मी और आर्द्रता के कारण उच्च ______ अपक्षय प्रदर्शित करता है।",
+  "o": ["Physical", "Chemical", "Mechanical only", "No"],
+  "a": 1,
+  "e": "Abundant moisture and high heat catalyze chemical reactions in rocks. / उष्णकटिबंधीय क्षेत्रों में रासायनिक अपक्षय अधिक होता है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "What turns 'Metamorphic Rocks' into 'Igneous Rocks'?\nक्या कायांतरित शैलों को आग्नेय शैलों में बदल देता है?",
+  "o": ["Weathering", "Melting and subsequent cooling/solidification", "Drying in the sun", "Erosion by wind"],
+  "a": 1,
+  "e": "Any rock that melts into magma and then solidifies becomes igneous. / पिघलकर मैग्मा बनना और फिर जमना आग्नेय शैल बनाता है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The term 'Sial' refers to rocks rich in:\n'सियाल' (Sial) शब्द किन खनिजों से भरपूर चट्टानों को संदर्भित करता है:",
+  "o": ["Silicon and Magnesium", "Silicon and Aluminum", "Iron and Lead", "Carbon and Oxygen"],
+  "a": 1,
+  "e": "Si stands for Silica, Al for Aluminum. / सियाल सिलिका और एल्युमीनियम से बना है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Which rock is known for prominent 'Foliation' bands of minerals?\nखनिजों के स्पष्ट 'फोलिएशन' बैंड के लिए कौन सा शैल जाना जाता है?",
+  "o": ["Granite", "Gneiss", "Limestone", "Sandstone"],
+  "a": 1,
+  "e": "High-grade metamorphism produces alternating light and dark bands in Gneiss. / नीस में स्पष्ट खनिज धारियाँ या बैंड होते हैं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The 'Basaltic' oceanic crust is much ______ than continental granite.\n'बेसाल्टिक' महासागरीय क्रस्ट महाद्वीपीय ग्रेनाइट की तुलना में बहुत ______ है।",
+  "o": ["Thicker", "Thinner but denser", "Lighter in weight", "Older in age"],
+  "a": 1,
+  "e": "Oceanic crust is thinner (5-10km) but denser (3.0) than continental crust. / महासागरीय क्रस्ट पतली और सघन होती है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Which type of sedimentary rock is 'Conglomerate'?\n'कोंग्लोमरेट' (Conglomerate) किस प्रकार का अवसादी शैल है?",
+  "o": ["Chemically formed", "Organically formed", "Mechanically formed from large rounded fragments", "Soft metamorphic"],
+  "a": 2,
+  "e": "Conglomerates are clastic rocks made of large rounded pebbles. / यह बड़े गोल टुकड़ों से बना यांत्रिक अवसादी शैल है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "What defines the 'Cleavage' of a mineral?\nखनिज के 'विदलन' (Cleavage) को क्या परिभाषित करता है?",
+  "o": ["Its color in sunlight", "The tendency to break along specific atomic planes", "The smell when rubbed", "Its price in market"],
+  "a": 1,
+  "e": "Cleavage is orderly breaking related to internal structure. / परमाणु परतों के सहारे टूटने के गुण को विदलन कहते हैं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Which rock cycle path involves 'Melting'?\nशैल चक्र के किस पथ में 'पिघलना' (Melting) शामिल है?",
+  "o": ["Igneous to Sediments", "Sediments to Metamorphic", "Metamorphic to Magma", "Magma to Igneous"],
+  "a": 2,
+  "e": "Extreme heat in the interior melts rocks back into magma. / अत्यधिक ताप से शैलों का मैग्मा में बदलना।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The term 'Core' of the Earth refers to:\nपृथ्वी के 'कोर' (Core) का तात्पर्य है:",
+  "o": ["The top soil", "The huge middle layer", "The innermost dense central part (Nife)", "The atmosphere"],
+  "a": 2,
+  "e": "The core is made of heavy iron and nickel. / कोर पृथ्वी का सबसे सघन केंद्रीय भाग है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Which mineral property refers to its resistance to scratching?\nखनिज का कौन सा गुण खरोंच के प्रति उसके प्रतिरोध को संदर्भित करता है?",
+  "o": ["Streak", "Lustre", "Hardness", "Transparency"],
+  "a": 2,
+  "e": "Hardness is measured using the Mohs scale. / खरोंच का प्रतिरोध कठोरता (Hardness) कहलाता है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "What is the common hardness of 'Diamond'?\n'हीरे' की सामान्य कठोरता क्या है?",
+  "o": ["1", "5", "7", "10"],
+  "a": 3,
+  "e": "Diamond is the standard for level 10. / हीरा मोह स्केल पर 10वें स्थान पर है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Which rock type contains the largest amount of 'Organic matter' over time?\nसमय के साथ किस शैल प्रकार में सर्वाधिक 'जैविक पदार्थ' होता है?",
+  "o": ["Granite", "Basalt", "Organic Sedimentary (Coal/Chalk)", "Quartzite"],
+  "a": 2,
+  "e": "These are formed from compressed plant or animal remains. / कोयला और चाक जैविक अवसादी शैल के उदाहरण हैं।",
+  "cat": "geo",
+  "sub": "resources"
+},
+{
+  "q": "Metamorphism due to heat and pressure over a wide area is called:\nविस्तृत क्षेत्र में ताप और दाब के कारण होने वाला कायांतरण कहलाता है:",
+  "o": ["Contact", "Regional", "Static", "Impact"],
+  "a": 1,
+  "e": "Regional metamorphism is large-scale and tectonic. / बड़े पैमाने पर होने वाला परिवर्तन प्रादेशिक कायांतरण है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Which process turns 'Sediments' into 'Rock'?\nकौन सी प्रक्रिया 'अवसादों' को 'शैल' में बदल देती है?",
+  "o": ["Melting", "Weathering", "Compaction and Cementation (Lithification)", "Heating"],
+  "a": 2,
+  "e": "Pressure and chemical glue turn loose bits into rock. / दबाव और सिमेंटेशन से अवसादी शैल बनते हैं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The term 'Sima' refers to rocks rich in Silica and ______.\n'सीमा' (Sima) शब्द सिलिका और ______ से भरपूर चट्टानों को संदर्भित करता है:",
+  "o": ["Aluminum", "Iron", "Magnesium", "Potassium"],
+  "a": 2,
+  "e": "Sima represents the oceanic crust layer. / सीमा सिलिका और मैग्नीशियम से बना है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Which rock is often used for Kitchen Countertops and is very hard?\nकौन सा शैल अक्सर रसोई के काउंटरटॉप्स के लिए उपयोग किया जाता है और बहुत कठोर होता है?",
+  "o": ["Limestone", "Shale", "Granite", "Coal"],
+  "a": 2,
+  "e": "Granite is an intrusive igneous rock prized for its hardness and patterns. / ग्रेनाइट अपनी कठोरता के कारण निर्माण कार्यों में उपयोगी है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Which type of 'Process' turns any rock into 'Igneous' again in the rock cycle?\nशैल चक्र में कौन सी 'प्रक्रिया' किसी भी शैल को फिर से 'आग्नेय' बना देती है?",
+  "o": ["Weathering", "Metamorphism", "Melting and Solidification", "Folding"],
+  "a": 2,
+  "e": "Melting into magma and subsequent cooling creates igneous rocks. / पिघलकर जमकर ठोस होना आग्नेय शैल बनाता है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
   {
     "q": "The 'Tri-cellular model' of atmospheric circulation includes which cells?\nवायुमंडलीय परिसंचरण के 'त्रि-कोशकीय मॉडल' में कौन सी कोशिकाएं शामिल हैं?",
     "o": ["Hadley, Ferrel, and Polar", "Bhanga, Khadar, and Terai", "Indus, Ganga, and Brahmaputra", "Northern, Southern, and Eastern"],
