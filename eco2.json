@@ -8,6 +8,806 @@
 "sub": "sectors"
 },
   {
+  "q": "What is the primary motive behind 'Plantation Agriculture' as introduced by Europeans?\nयूरोपीय लोगों द्वारा शुरू की गई 'रोपण कृषि' (Plantation Agriculture) के पीछे प्राथमिक उद्देश्य क्या है?",
+  "o": ["Self-consumption", "Commercial profit and export", "Providing free food", "None of the above"],
+  "a": 1,
+  "e": "Plantation agriculture is a large-scale commercial farming intended for profit. / रोपण कृषि लाभ और निर्यात के लिए की जाने वाली व्यापारिक खेती है।",
+  "cat": "geo",
+  "sub": "human_geo"
+},
+{
+  "q": "In which region is 'Shifting Cultivation' (Jhuming) traditionally practiced in India?\nभारत में पारंपरिक रूप से 'स्थानांतरी कृषि' (झूमिंग) किस क्षेत्र में की जाती है?",
+  "o": ["Punjab", "North-Eastern states (Assam, Meghalaya, Nagaland)", "Rajasthan", "Kerala"],
+  "a": 1,
+  "e": "Tribal communities in the North-East use 'slash and burn' methods for subsistence. / उत्तर-पूर्वी भारत में इसे झूमिंग कहा जाता है।",
+  "cat": "geo",
+  "sub": "mapping"
+},
+{
+  "q": "What are 'Fazendas' in the context of Brazilian agriculture?\nब्राजील की कृषि के संदर्भ में 'फजेंडा' (Fazendas) क्या हैं?",
+  "o": ["Small vegetable gardens", "Large coffee plantations (कॉफी के बड़े बागान)", "Type of agricultural tool", "Dairy farms"],
+  "a": 1,
+  "e": "Large-scale coffee estates in Brazil are known as Fazendas. / ब्राजील में कॉफी के विशाल बागानों को फजेंडा कहते हैं।",
+  "cat": "geo",
+  "sub": "mapping"
+},
+{
+  "q": "Which of the following is a characteristic of 'Extensive Commercial Grain Cultivation'?\n'विस्तृत वाणिज्यिक अनाज कृषि' की निम्नलिखित में से कौन सी एक विशेषता है?",
+  "o": ["Low mechanization", "High yield per person due to large land holdings and machines", "Manual labor only", "Very small farms"],
+  "a": 1,
+  "e": "Large farms and use of machinery result in high productivity per person. / मशीनों और बड़े फार्मों के कारण प्रति व्यक्ति उत्पादन अधिक होता है।",
+  "cat": "geo",
+  "sub": "human_geo"
+},
+{
+  "q": "What defines 'Mixed Farming'?\n'मिश्रित कृषि' (Mixed Farming) को क्या परिभाषित करता है?",
+  "o": ["Growing only two types of crops", "Equal emphasis on crop cultivation and animal husbandry", "Mixing salt and soil", "Farming in water"],
+  "a": 1,
+  "e": "Mixed farming integrates growing crops and rearing livestock on the same farm. / फसल उगाने और पशुपालन को एक साथ करना मिश्रित कृषि है।",
+  "cat": "geo",
+  "sub": "human_geo"
+},
+{
+  "q": "Which type of farming is the most advanced and capital-intensive form of livestock rearing?\nपशुपालन का सबसे उन्नत और पूंजी-प्रधान रूप कौन सी खेती है?",
+  "o": ["Nomadic herding", "Dairy Farming (दुग्ध कृषि)", "Shifting cultivation", "None"],
+  "a": 1,
+  "e": "Dairy farming requires high investment in shelters, milking machines, and veterinary care. / दुग्ध कृषि अत्यधिक संगठित और पूंजी-प्रधान होती है।",
+  "cat": "geo",
+  "sub": "human_geo"
+},
+{
+  "q": "The term 'Truck Farming' is used for which specific type of agriculture?\n'ट्रक फार्मिंग' (Truck Farming) शब्द का प्रयोग किस विशिष्ट प्रकार की कृषि के लिए किया जाता है?",
+  "o": ["Growing trucks in factories", "Specialized growing of vegetables for distant markets", "Only wheat production", "Pastoralism"],
+  "a": 1,
+  "e": "Vegetables are perishable, so they are transported overnight by trucks to markets. / बाजार के लिए सब्जियों का विशेष उत्पादन ट्रक फार्मिंग कहलाता है।",
+  "cat": "geo",
+  "sub": "human_geo"
+},
+{
+  "q": "What is 'Viticulture' (विटीकल्चर) specifically famous for in the Mediterranean region?\nभूमध्यसागरीय क्षेत्र में 'विटीकल्चर' (Viticulture) विशेष रूप से किसके लिए प्रसिद्ध है?",
+  "o": ["Apple growth", "Grape cultivation (अंगूर की खेती)", "Rice production", "Fish farming"],
+  "a": 1,
+  "e": "Viticulture is the cultivation of grapes, often used for world-class wine production. / अंगूर की खेती को विटीकल्चर कहते हैं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "In which type of mining is a 'Shaft' required to reach deep mineral ores?\nगहरे खनिज अयस्कों तक पहुँचने के लिए किस प्रकार के खनन में 'शाफ्ट' (Shaft) की आवश्यकता होती है?",
+  "o": ["Open cast / Surface mining", "Underground mining (भूमिगत खनन)", "Alluvial mining", "None"],
+  "a": 1,
+  "e": "Deep minerals require vertical and horizontal tunnels (shafts) and lifts. / गहराई में स्थित खनिजों के लिए शाफ्ट मेथड का उपयोग होता है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Which factor is a 'Physical Factor' affecting mining activity?\nखनन गतिविधि को प्रभावित करने वाला 'भौतिक कारक' कौन सा है?",
+  "o": ["Market demand", "Size, grade, and mode of occurrence of the mineral deposit", "Capital investment", "Availability of labor"],
+  "a": 1,
+  "e": "Physical factors relate to the nature and location of the resource itself. / खनिज के भंडार का आकार और गुणवत्ता भौतिक कारक हैं।",
+  "cat": "geo",
+  "sub": "human_geo"
+},
+{
+  "q": "What characterizes 'Cooperative Farming'?\n'सहकारी कृषि' (Cooperative Farming) की क्या विशेषता है?",
+  "o": ["Farmers losing their land to government", "A group of farmers pooling resources voluntarily to improve efficiency and profit", "Farming done by animals only", "Forced labor"],
+  "a": 1,
+  "e": "Farmers form a cooperative society to buy inputs and sell products together. / किसानों का समूह अपनी इच्छा से संसाधन जुटाकर खेती करता है।",
+  "cat": "geo",
+  "sub": "human_geo"
+},
+{
+  "q": "Collective farming, also known as 'Kolkhoz', was introduced in which former country?\nसामूहिक कृषि, जिसे 'कोल्खोज़' (Kolkhoz) भी कहा जाता है, किस पूर्व देश में शुरू की गई थी?",
+  "o": ["USA", "Soviet Union (USSR)", "India", "Brazil"],
+  "a": 1,
+  "e": "The USSR introduced Kolkhoz as part of state-controlled socialist farming. / सोवियत संघ में सामूहिक कृषि को कोल्खोज़ कहते थे।",
+  "cat": "geo",
+  "sub": "mapping"
+},
+{
+  "q": "The 'Prairies' in North America are famous for which grain production?\nउत्तर अमेरिका में 'प्रेयरी' (Prairies) किस अनाज उत्पादन के लिए प्रसिद्ध हैं?",
+  "o": ["Rice", "Wheat (गेहूं)", "Coffee", "Tea"],
+  "a": 1,
+  "e": "Prairies are one of the world's major wheat bowls. / प्रेयरी विश्व के प्रमुख गेहूं उत्पादक क्षेत्र हैं।",
+  "cat": "geo",
+  "sub": "mapping"
+},
+{
+  "q": "Which type of 'Agriculture' is highly developed in the Mediterranean region due to winter rainfall?\nसर्दियों की वर्षा के कारण भूमध्यसागरीय क्षेत्र में किस प्रकार की 'कृषि' अत्यधिक विकसित है?",
+  "o": ["Paddy cultivation", "Specialized Citrus Fruit farming (खट्टे फलों की खेती)", "Dairy farming only", "Reindeer herding"],
+  "a": 1,
+  "e": "The unique climate is perfect for oranges, lemons, and olives. / यह क्षेत्र संतरे और नींबू जैसे खट्टे फलों के लिए प्रसिद्ध है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "What describes 'Factory Farming' (फैक्ट्री फार्मिंग)?\n'फैक्ट्री फार्मिंग' (Factory Farming) का वर्णन क्या है?",
+  "o": ["Rearing livestock in confined spaces with specialized food to increase production", "Farming inside a real factory building", "Only using robots for farming", "None"],
+  "a": 0,
+  "e": "Often applied to poultry and cattle in developed nations to maximize output. / जानवरों को सीमित जगह में विशेष आहार देकर पालना।",
+  "cat": "geo",
+  "sub": "human_geo"
+},
+{
+  "q": "The removal of 'Regolith' through wind or water is called:\nपवन या जल के माध्यम से 'रेगोलिथ' (Regolith) के हटने को कहा जाता है:",
+  "o": ["Weathering", "Erosion (अपरदन)", "Deposition", "Carbonation"],
+  "a": 1,
+  "e": "Erosion involves the transport of weathered fragments. / अपक्षयित मलबे के परिवहन को अपरदन कहते हैं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Which mineral shorthand 'Sima' represents the oceanic crust?\nकौन सा खनिज संक्षिप्त नाम 'सीमा' (Sima) महासागरीय क्रस्ट का प्रतिनिधित्व करता है?",
+  "o": ["Silica and Aluminum", "Silica and Magnesium", "Sodium and Iron", "None"],
+  "a": 1,
+  "e": "Sima stands for Silica and Magnesium. / सीमा सिलिका और मैग्नीशियम से बनी है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "A 'V-shaped' valley is an erosional feature of which youthful geomorphic agent?\n'वी-आकार' की घाटी किस युवा भू-आकृतिक कारक की अपरदनी विशेषता है?",
+  "o": ["Wind", "Running Water / River", "Glacier", "Wave"],
+  "a": 1,
+  "e": "Youthful rivers focus on vertical downward cutting. / नदियाँ अपनी युवावस्था में वी-आकार की घाटी बनाती हैं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Where is the 'Siberian Shelf' and why is it unique?\n'साइबेरियन शेल्फ' कहाँ है और यह अद्वितीय क्यों है?",
+  "o": ["In the Atlantic; very deep", "In the Arctic Ocean; the widest continental shelf in the world", "In India; very small", "None"],
+  "a": 1,
+  "e": "It extends up to 1500 km in width, the largest shelf globally. / यह विश्व का सबसे चौड़ा महाद्वीपीय मग्नतट है।",
+  "cat": "geo",
+  "sub": "mapping"
+},
+{
+  "q": "The 'Moho' Discontinuity is at the base of which layer?\n'मोह' असंबद्धता किस परत के आधार पर है?",
+  "o": ["Mantle", "Crust", "Core", "Atmosphere"],
+  "a": 1,
+  "e": "It separates the Earth's crust from the mantle. / यह क्रस्ट और मेंटल के बीच स्थित है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "What turns 'Sediments' into 'Rock'?\n'अवसादों' को 'शैल' में क्या बदलता है?",
+  "o": ["Melting", "Lithification (Compaction and Cementation)", "Weathering", "None"],
+  "a": 1,
+  "e": "This process forms sedimentary rocks. / संपीडन और सिमेंटेशन से अवसादी शैल बनते हैं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Which mineral property refers to 'Resistance to Scratching'?\nखनिज का कौन सा गुण 'खरोंच के प्रति प्रतिरोध' को संदर्भित करता है?",
+  "o": ["Lustre", "Streak", "Hardness (कठोरता)", "Cleavage"],
+  "a": 2,
+  "e": "Measured on the Mohs scale from 1 to 10. / खरोंच का प्रतिरोध कठोरता कहलाता है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The 'Ring of Fire' is a zone of intense activity in which ocean?\n'रिंग ऑफ फायर' किस महासागर में तीव्र गतिविधि का क्षेत्र है?",
+  "o": ["Atlantic", "Pacific (प्रशांत महासागर)", "Indian", "Arctic"],
+  "a": 1,
+  "e": "Most earthquakes and volcanic eruptions occur here. / यह प्रशांत महासागर के चारों ओर का ज्वालामुखी क्षेत्र है।",
+  "cat": "geo",
+  "sub": "mapping"
+},
+{
+  "q": "Which seismic wave reaches first at a station?\nकौन सी भूकंपीय तरंग स्टेशन पर सबसे पहले पहुँचती है?",
+  "o": ["S-wave", "P-wave (पी-तरंग)", "Surface wave", "None"],
+  "a": 1,
+  "e": "Primary waves have the highest velocity. / पी-तरंगें सर्वाधिक तीव्र होती हैं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "What is the primary factor for 'Differential Heating' of Earth's surface?\nपृथ्वी की सतह के 'विभेदी तापन' का मुख्य कारक क्या है?",
+  "o": ["Distance from moon", "Angle of Sun rays (Angle of Incidence)", "Color of flowers", "None"],
+  "a": 1,
+  "e": "Curvature of Earth determines how sunlight is distributed. / सूर्य की किरणों का कोण तापन को प्रभावित करता है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The term 'Subduction' is associated with which plate boundary?\n'सबडक्शन' शब्द किस प्लेट सीमा से जुड़ा है?",
+  "o": ["Divergent", "Convergent (अभिसरण)", "Transform", "None"],
+  "a": 1,
+  "e": "One plate slides under another into the mantle. / एक प्लेट का दूसरे के नीचे धंसना।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Which state of matter block S-waves?\nपदार्थ की कौन सी अवस्था एस-तरंगों को रोकती है?",
+  "o": ["Solid", "Liquid", "Gas", "None"],
+  "a": 1,
+  "e": "Secondary waves cannot pass through liquids. / एस-तरंगें तरल पदार्थों में नहीं चलतीं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "What is 'Regolith'?\n'रेगोलिथ' क्या है?",
+  "o": ["Solid rock", "Loose weathered material covering bedrock", "Magma", "None"],
+  "a": 1,
+  "e": "Debris and soil layer on top of solid rock. / ठोस चट्टान के ऊपर जमा ढीला मलबा।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The term 'Sial' refers to rocks rich in:\n'सियाल' शब्द किन खनिजों से भरपूर चट्टानों को संदर्भित करता है?",
+  "o": ["Magnesium", "Aluminum and Silica", "Iron", "Carbon"],
+  "a": 1,
+  "e": "Typical of continental crust. / सिलिका और एल्युमीनियम।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Which mineral has hardness 10?\nकिस खनिज की कठोरता 10 है?",
+  "o": ["Quartz", "Diamond", "Talc", "None"],
+  "a": 1,
+  "e": "Diamond is the hardest natural mineral. / हीरा सर्वाधिक कठोर है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The 'Standard Meridian' of India passes through which city primarily?\nIST के लिए मानक याम्योत्तर मुख्य रूप से किस शहर से गुजरता है?",
+  "o": ["Patna", "Mirzapur", "Mumbai", "Kolkata"],
+  "a": 1,
+  "e": "Used to fix time for the whole country. / यह मिर्जापुर (UP) से होकर गुजरता है।",
+  "cat": "geo",
+  "sub": "mapping"
+},
+{
+  "q": "Which seismic wave moves like a snake side-to-side?\nकौन सी तरंग सांप की तरह अगल-बगल चलती है?",
+  "o": ["P-wave", "Love wave", "S-wave", "None"],
+  "a": 1,
+  "e": "Surface horizontal wave. / लव तरंगें क्षैतिज रूप से मुड़ती हैं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The 'Asthenosphere' is primarily made of:\n'एस्थेनोस्फीयर' मुख्य रूप से बनी है:",
+  "o": ["Granite", "Peridotite", "Basalt", "None"],
+  "a": 1,
+  "e": "Weak, semi-molten part of mantle. / मेंटल की मुख्य चट्टान पीरियोडोटाइट।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "What describes 'Maffic' rocks?\n'मैफ़िक' चट्टानें कैसी होती हैं?",
+  "o": ["Dense, Dark", "Light, White", "None", "None"],
+  "a": 0,
+  "e": "Rich in Mg and Fe. / सघन और काली।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "What turns 'Metamorphic' rocks back into 'Igneous'?\n'कायांतरित' को 'आग्नेय' में क्या बदलता है?",
+  "o": ["Weathering", "Melting and cooling", "Compression", "None"],
+  "a": 1,
+  "e": "Solidification of magma. / पिघलकर जमकर ठोस होना।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Which mineral property refers to 'Color of Powder'?\nकौन सा गुण खनिज के 'चूर्ण का रंग' है?",
+  "o": ["Lustre", "Streak", "Cleavage", "Hardness"],
+  "a": 1,
+  "e": "Identified using a streak plate. / स्ट्रीक (Streak)।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "A 'Laccolith' is ______ shaped.\n'लैकोलिथ' ______ आकार का होता है।",
+  "o": ["Saucer", "Dome-shaped", "Wall", "Thin sheet"],
+  "a": 1,
+  "e": "Mushroom-like dome. / गुंबद जैसा।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Which type of 'Process' levels heights?\nऊँचाइयों को कौन समतल करता है?",
+  "o": ["Endogenic", "Exogenic", "None", "None"],
+  "a": 1,
+  "e": "Gradational force. / एक्सोजेनिक।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Where is the 'Mariana Trench' located?\n'मारियाना ट्रेंच' कहाँ है?",
+  "o": ["Pacific", "Atlantic", "None", "None"],
+  "a": 0,
+  "e": "Deepest point. / प्रशांत महासागर।",
+  "cat": "geo",
+  "sub": "mapping"
+},
+{
+  "q": "The 'Zoid' shape means Earth is flattened at:\n'जॉइड' का अर्थ है चपटी पृथ्वी कहाँ है?",
+  "o": ["Poles", "Equator", "None", "None"],
+  "a": 0,
+  "e": "Polar flattening. / ध्रुवों पर।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Which seismic wave is the slowest?\nसबसे धीमी तरंग कौन सी है?",
+  "o": ["P-wave", "S-wave", "Surface wave", "Body wave"],
+  "a": 2,
+  "e": "Surface waves are most destructive. / धरातलीय तरंगें।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "In which city is the 'Red Sea' forming?\n'लाल सागर' कहाँ बन रहा है?",
+  "o": ["East Africa", "India", "None", "None"],
+  "a": 0,
+  "e": "Rifting zone. / पूर्वी अफ्रीका।",
+  "cat": "geo",
+  "sub": "mapping"
+},
+{
+  "q": "Which mineral was confirmed on Moon by Chandrayaan-3?\nचंद्रयान-3 ने चंद्रमा पर क्या पाया?",
+  "o": ["Gold", "Sulfur", "None", "None"],
+  "a": 1,
+  "e": "Chemical discovery. / सल्फर।",
+  "cat": "geo",
+  "sub": "mapping"
+},
+{
+  "q": "What describes 'Regolith'?\n'रेगोलिथ' का वर्णन क्या है?",
+  "o": ["Solid rock", "Weathered loose material", "Magma", "None"],
+  "a": 1,
+  "e": "Surface debris covering rock. / चट्टान पर जमा मलबा।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The 'Moho' discontinuity is at the base of ______.\n'मोह' असंबद्धता किसके आधार पर है?",
+  "o": ["Crust", "Mantle", "Core", "None"],
+  "a": 0,
+  "e": "Boundary between shell and mantle. / क्रस्ट।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Which mineral has hardness 1?\nकिसकी कठोरता 1 है?",
+  "o": ["Quartz", "Talc", "None", "None"],
+  "a": 1,
+  "e": "Softest mineral. / टल्क।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "In which period did Oxygen reach 30%?\nकिस काल में ऑक्सीजन 30% थी?",
+  "o": ["Hadean", "Phanerozoic", "None", "None"],
+  "a": 1,
+  "e": "Around 280 million years ago. / फनेरोज़ोइक।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The 'Standard Meridian' of India is ______.\nभारत का मानक देशांतर ______ है।",
+  "o": ["82.5° E", "0°", "None", "None"],
+  "a": 0,
+  "e": "Basis of IST. / 82.5° पूर्व।",
+  "cat": "geo",
+  "sub": "mapping"
+},
+  {
+  "q": "Which of the following is defined as a 'Primary Activity'?\nनिम्नलिखित में से किसे 'प्राथमिक क्रिया' के रूप में परिभाषित किया गया है?",
+  "o": ["Manufacturing cars", "Direct extraction of resources from nature (Agriculture, Mining, Fishing)", "Banking services", "Software development"],
+  "a": 1,
+  "e": "Primary activities are directly dependent on the environment as they refer to the utilization of Earth's resources. / प्रकृति से सीधे संसाधनों के दोहन को प्राथमिक क्रिया कहते हैं।",
+  "cat": "geo",
+  "sub": "human_geo"
+},
+{
+  "q": "What is the simplest and oldest known economic activity of human beings?\nमानव जाति की सबसे सरल और प्राचीनतम ज्ञात आर्थिक गतिविधि कौन सी है?",
+  "o": ["Dairy farming", "Gathering and Hunting (संग्रहण और आखेट)", "Intensive subsistence agriculture", "Mining"],
+  "a": 1,
+  "e": "Early humans survived by hunting animals and gathering edible plants from their surroundings. / शुरुआती मानव अपने भोजन के लिए आखेट और संग्रहण पर निर्भर थे।",
+  "cat": "geo",
+  "sub": "human_geo"
+},
+{
+  "q": "The practice of 'Nomadic Herding' is also known as:\n'चलवासी पशुचारण' (Nomadic Herding) को इस नाम से भी जाना जाता है:",
+  "o": ["Commercial livestock rearing", "Pastoral nomadism (पशुचारी खानाबदोश)", "Mixed farming", "Viticulture"],
+  "a": 1,
+  "e": "Nomadic herding is a primitive subsistence activity where herders move from place to place with their livestock. / चलवासी पशुचारण एक जीवन निर्वाह गतिविधि है जहाँ पशुपालक चारे की तलाश में घूमते हैं।",
+  "cat": "geo",
+  "sub": "human_geo"
+},
+{
+  "q": "What is 'Transhumance' (ऋतु-प्रवास) as explained in the transcript?\nट्रांसक्रिप्ट में बताए अनुसार 'ऋतु-प्रवास' (Transhumance) क्या है?",
+  "o": ["Moving from rural to urban areas", "Seasonal migration of herders between mountains and plains", "Trading animals for money", "None of the above"],
+  "a": 1,
+  "e": "It involves moving to mountain pastures in summer and returning to valley plains in winter. / गर्मियों में पहाड़ों और सर्दियों में मैदानों की ओर पशुओं के साथ प्रवास।",
+  "cat": "geo",
+  "sub": "human_geo"
+},
+{
+  "q": "Which animals are typically reared by nomadic herders in the 'Tundra' regions?\n'टुंड्रा' क्षेत्रों में चलवासी पशुपालकों द्वारा आमतौर पर किन जानवरों को पाला जाता है?",
+  "o": ["Camels", "Reindeer (रेनडियर)", "Yaks", "Llamas"],
+  "a": 1,
+  "e": "In the cold Arctic and sub-Arctic areas, reindeer are the primary livestock for nomads. / ठंडे टुंड्रा क्षेत्रों में रेनडियर पाले जाते हैं।",
+  "cat": "geo",
+  "sub": "mapping"
+},
+{
+  "q": "How is 'Commercial Livestock Rearing' different from 'Nomadic Herding'?\n'वाणिज्यिक पशुधन पालन' 'चलवासी पशुचारण' से कैसे भिन्न है?",
+  "o": ["It is practiced on a small scale", "It is highly organized, capital-intensive, and profit-oriented", "It does not require any technology", "Animals are always moved manually"],
+  "a": 1,
+  "e": "Commercial rearing is a modern, systematic business practiced on large permanent ranches. / यह एक संगठित और पूंजी प्रधान व्यवसाय है जो लाभ के लिए किया जाता है।",
+  "cat": "geo",
+  "sub": "human_geo"
+},
+{
+  "q": "What are 'Ranches' (रैंच) in the context of commercial livestock?\nवाणिज्यिक पशुधन के संदर्भ में 'रैंच' (Ranches) क्या हैं?",
+  "o": ["Small cages for birds", "Large permanent fenced areas for rearing animals", "Deep underground mines", "Type of agricultural tool"],
+  "a": 1,
+  "e": "Ranches are divided into parcels and fenced to control grazing and manage livestock efficiently. / ये जानवरों को पालने के लिए बड़े और बाड़ लगे हुए स्थायी क्षेत्र होते हैं।",
+  "cat": "geo",
+  "sub": "human_geo"
+},
+{
+  "q": "Which process in the atmosphere is described as the 'engine' for weather changes and instability?\nवायुमंडल में किस प्रक्रिया को मौसम परिवर्तन और अस्थिरता के 'इंजन' के रूप में वर्णित किया गया है?",
+  "o": ["Photosynthesis", "Water Vapor (and the hydrological cycle)", "Ozone depletion", "Nitrogen fixation"],
+  "a": 1,
+  "e": "Water vapor and its transition between states drive all major climatic phenomena. / जलवाष्प ही वायुमंडलीय अस्थिरता और मौसम परिवर्तन का मुख्य कारण है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The term 'Gathering' today has a commercial aspect, such as collecting ______ for medicine.\nआज संग्रहण का एक व्यावसायिक पहलू भी है, जैसे औषधि के लिए ______ का संग्रह।",
+  "o": ["Sand", "Tree bark (like Quinine) and medicinal plants", "Plastic waste", "None"],
+  "a": 1,
+  "e": "Commercial gathering involves extracting valuable parts of plants like barks, leaves, and resins for global markets. / औषधि के लिए कुनैन जैसी छालों का संग्रहण अब व्यावसायिक हो गया है।",
+  "cat": "geo",
+  "sub": "resources"
+},
+{
+  "q": "In which continent are 'Llamas' and 'Alpacas' traditionally reared in the high-altitude Andes?\nकिस महाद्वीप के ऊँचे एंडीज पर्वतों में पारंपरिक रूप से 'ला़मा' और 'अल्पाका' पाले जाते हैं?",
+  "o": ["Africa", "Asia", "South America", "North America"],
+  "a": 2,
+  "e": "These animals are native to the high mountainous regions of South America. / ये दक्षिण अमेरिका के पर्वतीय क्षेत्रों के विशिष्ट पशु हैं।",
+  "cat": "geo",
+  "sub": "mapping"
+},
+{
+  "q": "Which gas is primarily used for 'Cryo-preservation' of biological materials like blood and sperm?\nरक्त और शुक्राणु जैसे जैविक पदार्थों के 'क्रायो-प्रिजर्वेशन' के लिए मुख्य रूप से किस गैस का उपयोग किया जाता है?",
+  "o": ["Oxygen", "Liquid Nitrogen", "Carbon dioxide", "Helium"],
+  "a": 1,
+  "e": "Liquid nitrogen provides the extreme low temperatures needed for preservation. / तरल नाइट्रोजन का उपयोग बहुत कम तापमान पर प्रिजर्वेशन के लिए होता है।",
+  "cat": "geo",
+  "sub": "resources"
+},
+{
+  "q": "What was the significance of the 'Industrial Revolution' for mining activities?\nखनन गतिविधियों के लिए 'औद्योगिक क्रांति' का क्या महत्व था?",
+  "o": ["It stopped mining", "It led to large-scale mechanization and increased demand for minerals", "It only affected agriculture", "None"],
+  "a": 1,
+  "e": "The revolution brought new technologies that allowed deeper and faster extraction of ores. / औद्योगिक क्रांति से खनन में मशीनीकरण आया और खनिजों की मांग बढ़ी।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "What is 'Shaft Mining' (कूपकी खनन)?\n'कूपकी खनन' (Shaft Mining) क्या है?",
+  "o": ["Mining at the surface level", "Underground mining using vertical and horizontal tunnels for deep ores", "Mining in the ocean only", "None of the above"],
+  "a": 1,
+  "e": "Shaft mining is used to reach minerals located very deep inside the Earth. / गहराई में स्थित खनिजों के लिए ऊर्ध्वाधर और क्षैतिज सुरंगों वाला खनन।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Which factor determines whether a mineral should be mined commercially?\nकौन सा कारक यह निर्धारित करता है कि किसी खनिज का व्यावसायिक रूप से खनन किया जाना चाहिए या नहीं?",
+  "o": ["Only its color", "Availability of technology and market demand", "The number of trees on the site", "None"],
+  "a": 1,
+  "e": "Commercial viability depends on technical feasibility and the profitability in the market. / खनन का निर्णय तकनीक की उपलब्धता और बाजार की मांग पर निर्भर करता है।",
+  "cat": "geo",
+  "sub": "human_geo"
+},
+{
+  "q": "The term 'Aerosol' in the atmosphere refers to:\nवायुमंडल में 'एरोसोल' (Aerosol) शब्द का तात्पर्य है:",
+  "o": ["Only clouds", "Suspension of fine solid particles or liquid droplets in air", "A type of fuel", "Only oxygen molecules"],
+  "a": 1,
+  "e": "Aerosols include dust, smoke, sea salt, and pollen floating in the air. / हवा में तैरते सूक्ष्म ठोस कणों या तरल बूंदों को एरोसोल कहते हैं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "What is 'Hygroscopic Nuclei' associated with?\n'हाइग्रोस्कोपिक न्यूक्लिआई' (Hygroscopic Nuclei) किससे संबंधित है?",
+  "o": ["Mining ores", "Cloud formation and rainfall", "Earthquakes", "Tides"],
+  "a": 1,
+  "e": "These are particles like dust or salt around which water vapor condenses to form clouds. / ये धूल या नमक के कण हैं जिनके चारों ओर जलवाष्प जमा होकर बादल बनाती है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Which sector does 'Manufacturing' fall into according to the Goa trip story?\nगोवा ट्रिप की कहानी के अनुसार 'विनिर्माण' (Manufacturing) किस क्षेत्र में आता है?",
+  "o": ["Primary", "Secondary", "Tertiary", "Quinary"],
+  "a": 1,
+  "e": "Secondary sector involves processing raw materials into finished goods. / कच्चे माल को उपयोगी माल में बदलना द्वितीयक क्रिया है।",
+  "cat": "geo",
+  "sub": "human_geo"
+},
+{
+  "q": "The 'Quaternary Sector' involves activities related to:\n'चतुर्थक क्षेत्र' (Quaternary Sector) में किससे संबंधित गतिविधियाँ शामिल हैं?",
+  "o": ["Farming", "Intellectual research, knowledge, and high-level services", "Mining", "Construction"],
+  "a": 1,
+  "e": "This sector is knowledge-based, like R&D, IT services, and teaching. / यह क्षेत्र अनुसंधान, ज्ञान और उच्च स्तरीय सेवाओं पर आधारित है।",
+  "cat": "geo",
+  "sub": "human_geo"
+},
+{
+  "q": "Who are the 'Gold Collar' workers in an economy?\nकिसी अर्थव्यवस्था में 'गोल्ड कॉलर' (Gold Collar) कर्मचारी कौन होते हैं?",
+  "o": ["Farmers", "Miners", "Top decision makers and professionals in the Quinary sector", "Factory workers"],
+  "a": 2,
+  "e": "Quinary workers are top-level executives and decision-makers. / पंचम क्षेत्र के उच्च स्तरीय नीति निर्धारक और विशेषज्ञ।",
+  "cat": "geo",
+  "sub": "human_geo"
+},
+{
+  "q": "What is the primary motive behind any 'Commercial' activity?\nकिसी भी 'वाणिज्यिक' गतिविधि के पीछे प्राथमिक उद्देश्य क्या होता है?",
+  "o": ["Social service only", "Self-consumption", "Profit making (लाभ कमाना)", "None"],
+  "a": 2,
+  "e": "Commercial activities are always driven by the goal of earning profit. / व्यावसायिक गतिविधियां हमेशा लाभ कमाने के उद्देश्य से की जाती हैं।",
+  "cat": "geo",
+  "sub": "human_geo"
+},
+{
+  "q": "Which region is a major area for 'Nomadic Herding' across North Africa and Eurasia?\nउत्तर अफ्रीका और यूरेशिया में 'चलवासी पशुचारण' का प्रमुख क्षेत्र कौन सा है?",
+  "o": ["Amazon basin", "The belt from Atlantic shores of Africa to Mongolia and Central China", "Australia only", "Canada only"],
+  "a": 1,
+  "e": "This vast belt of arid and semi-arid land is the largest area for nomadic herding. / अफ्रीका के अटलांटिक तट से मंगोलिया तक की पेटी इसका मुख्य क्षेत्र है।",
+  "cat": "geo",
+  "sub": "mapping"
+},
+{
+  "q": "The 'Specific Gravity' of minerals helps in identifying their ______.\nखनिजों का 'विशिष्ट गुरुत्व' उनकी ______ की पहचान करने में मदद करता है।",
+  "o": ["Color", "Relative density compared to water", "Hardness", "Taste"],
+  "a": 1,
+  "e": "It is the ratio of the weight of a mineral to the weight of an equal volume of water. / यह पानी की तुलना में खनिज के सापेक्ष घनत्व का माप है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "What describes 'Open Cast Mining' (विवृत खनन)?\n'विवृत खनन' (Open Cast Mining) का वर्णन क्या है?",
+  "o": ["Drilling deep tunnels", "Extracting minerals near the surface by removing the top layer", "Mining in the sky", "None"],
+  "a": 1,
+  "e": "It is the easiest and cheapest way of mining minerals found at shallow depths. / सतह के पास स्थित खनिजों को ऊपरी परत हटाकर निकालना।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Which mineral has a hardness level of 1 on the Mohs scale?\nमोह स्केल पर किस खनिज की कठोरता स्तर 1 है?",
+  "o": ["Quartz", "Diamond", "Talc (टल्क)", "Gypsum"],
+  "a": 2,
+  "e": "Talc is the softest mineral and is used in face powders. / टल्क सबसे कोमल खनिज है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The term 'Nife' stands for which two elements in Earth's core?\n'निफे' शब्द पृथ्वी के कोर में किन दो तत्वों का प्रतीक है?",
+  "o": ["Nitrogen and Iron", "Nickel and Ferrous (Iron)", "Nickel and Flourine", "None"],
+  "a": 1,
+  "e": "Ni (Nickel) and Fe (Ferrous/Iron) make up the core. / कोर निकल और लोहे से बना है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "A 'V-shaped' valley on the Earth's surface is an erosional feature of which agent?\nपृथ्वी की सतह पर 'वी-आकार' की घाटी किस कारक की अपरदनी विशेषता है?",
+  "o": ["Wind", "Glacier", "Running Water (Rivers)", "Waves"],
+  "a": 2,
+  "e": "Rivers in their youthful stage carve out deep V-shaped valleys through vertical erosion. / युवा नदियाँ ऊर्ध्वाधर अपरदन से वी-आकार की घाटियाँ बनाती हैं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The 'Moho' Discontinuity separates the ______ from the ______.\n'मोह' असंबद्धता ______ को ______ से अलग करती है?",
+  "o": ["Crust, Mantle", "Mantle, Core", "Upper, Lower Crust", "Ocean, Atmosphere"],
+  "a": 0,
+  "e": "It is the boundary between the Earth's crust and the mantle. / यह क्रस्ट और मेंटल के बीच की विभाजक रेखा है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "What is the primary mineral component of 'Sial' in the continental crust?\nमहाद्वीपीय क्रस्ट में 'सियाल' (Sial) का प्राथमिक खनिज संगठन क्या है?",
+  "o": ["Silica and Magnesium", "Silica and Aluminum", "Iron and Nickel", "None"],
+  "a": 1,
+  "e": "Sial stands for Silica (Si) and Aluminum (Al). / सियाल सिलिका और एल्युमीनियम से बना है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Which seismic waves cause side-to-side (snake-like) ground movement?\nकौन सी भूकंपीय तरंगें सांप की तरह अगल-बगल (side-to-side) गति का कारण बनती हैं?",
+  "o": ["P-waves", "S-waves", "Love waves (L-waves)", "Rayleigh waves"],
+  "a": 2,
+  "e": "Love waves are surface waves with horizontal motion. / लव तरंगें धरातल पर क्षैतिज रूप से चलती हैं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "What happens to the density of Earth's layers as we move from the surface to the core?\nसतह से कोर की ओर जाने पर पृथ्वी की परतों के घनत्व का क्या होता है?",
+  "o": ["Decreases", "Increases", "Stays same", "Becomes zero"],
+  "a": 1,
+  "e": "Heavier elements concentrated at the center due to gravity, increasing density. / गहराई के साथ घनत्व बढ़ता जाता है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The 'Mariana Trench' is located in which ocean?\n'मारियाना ट्रेंच' किस महासागर में स्थित है?",
+  "o": ["Atlantic", "Indian", "Pacific", "Arctic"],
+  "a": 2,
+  "e": "It is the deepest point on Earth, located in the Western Pacific Ocean. / यह विश्व का सबसे गहरा बिंदु है और प्रशांत महासागर में स्थित है।",
+  "cat": "geo",
+  "sub": "mapping"
+},
+{
+  "q": "What is the primary factor that determines the 'Viscosity' (श्यानता) of magma?\nमैग्मा की 'श्यानता' (Viscosity) को निर्धारित करने वाला प्राथमिक कारक क्या है?",
+  "o": ["Water content", "Silica content", "Color", "Presence of fish"],
+  "a": 1,
+  "e": "High silica content makes magma thicker (more viscous). / सिलिका की अधिकता मैग्मा को गाढ़ा बनाती है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Which mineral property refers to the shape of crystal faces?\nखनिज का कौन सा गुण क्रिस्टल फलकों के आकार को संदर्भित करता है?",
+  "o": ["Lustre", "Streak", "External Crystal Form", "Cleavage"],
+  "a": 2,
+  "e": "This is determined by the internal arrangement of molecules. / बाहरी ज्यामितीय आकार को क्रिस्टल रूप कहते हैं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "A 'Batholith' is a large ______ igneous body.\n'बैथोलिथ' एक विशाल ______ आग्नेय पिंड है।",
+  "o": ["Extrusive", "Intrusive / Plutonic", "Volcanic ash", "Layered sedimentary"],
+  "a": 1,
+  "e": "Batholiths are massive bodies of magma that cool deep within the Earth. / यह पृथ्वी की गहराई में ठंडा होने वाला विशाल आग्नेय पिंड है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "What is the result of 'Convergence' between two tectonic plates?\nदो विवर्तनिक प्लेटों के बीच 'अभिसरण' (Convergence) का क्या परिणाम होता है?",
+  "o": ["Rift valleys", "New oceanic floor", "Folding and mountain building (like Himalayas)", "None"],
+  "a": 2,
+  "e": "When plates collide, they buckle and fold to create mountains. / प्लेटों के टकराने से वलित पर्वत (जैसे हिमालय) बनते हैं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The 'Standard Meridian' of India is 82.5°E. In which city does it pass through?\nभारत का 'मानक याम्योत्तर' 82.5°E है। यह किस शहर से होकर गुजरता है?",
+  "o": ["Patna", "Mirzapur (near Prayagraj)", "Mumbai", "Kolkata"],
+  "a": 1,
+  "e": "Mirzapur is the reference point for Indian Standard Time. / यह उत्तर प्रदेश के मिर्जापुर से होकर गुजरता है।",
+  "cat": "geo",
+  "sub": "mapping"
+},
+{
+  "q": "Which seismic wave arrives last at a recording station?\nरिकॉर्डिंग स्टेशन पर कौन सी भूकंपीय तरंग सबसे अंत में पहुँचती है?",
+  "o": ["P-wave", "S-wave", "Surface wave", "Body wave"],
+  "a": 2,
+  "e": "Surface waves travel slowly along the surface but are the most destructive. / धरातलीय तरंगें सबसे धीमी होती हैं लेकिन सर्वाधिक विनाशकारी होती हैं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "What describes 'Subduction'?\n'सबडक्शन' (Subduction) का वर्णन क्या है?",
+  "o": ["Plates pulling apart", "One tectonic plate sinking beneath another into the mantle", "Plates sliding side-by-side", "None"],
+  "a": 1,
+  "e": "Happens at convergent boundaries where one plate goes down. / अभिसरण सीमा पर एक प्लेट का नीचे धंसना।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The term 'Sima' represents which elements in Earth's layers?\n'सीमा' (Sima) शब्द पृथ्वी की परतों में किन तत्वों का प्रतिनिधित्व करता है?",
+  "o": ["Silica and Aluminum", "Silica and Magnesium", "Sodium and Iron", "Lead and Zinc"],
+  "a": 1,
+  "e": "Sima refers to the denser material of the oceanic crust. / सीमा सिलिका और मैग्नीशियम से बनी है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Which mineral has the highest hardness level of 10?\nकिस खनिज का कठोरता स्तर सर्वाधिक 10 है?",
+  "o": ["Quartz", "Corundum", "Diamond (हीरा)", "Topaz"],
+  "a": 2,
+  "e": "Diamond is the hardest natural substance. / हीरा सर्वाधिक कठोर प्राकृतिक पदार्थ है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "What is the primary factor that makes a rock 'Acidic' in nature?\nकौन सा प्राथमिक कारक किसी शैल को प्रकृति में 'अम्लीय' बनाता है?",
+  "o": ["Low Silica", "High Silica content (above 65%)", "Dark color", "Found in oceans"],
+  "a": 1,
+  "e": "High silica content makes rocks like granite acidic and light-colored. / सिलिका की अधिकता शैल को अम्लीय बनाती है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "A 'Dike' is a ______ intrusive igneous body.\n'डाइक' (Dike) एक ______ अंतर्भेदी आग्नेय पिंड है।",
+  "o": ["Horizontal", "Vertical / Wall-like (लंबवत)", "Saucer-shaped", "Mushroom-shaped"],
+  "a": 1,
+  "e": "Dikes cut across existing rock layers vertically. / दीवार की तरह लंबवत जमाव को डाइक कहते हैं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Which state of matter describes the 'Outer Core' where S-waves cannot pass?\nपृथ्वी का 'बाहरी कोर' पदार्थ की किस अवस्था में है, जहाँ एस-तरंगें नहीं गुजर पातीं?",
+  "o": ["Solid", "Liquid / Plasma", "Gaseous", "None"],
+  "a": 1,
+  "e": "The outer core is liquid, blocking transverse S-waves. / बाहरी कोर तरल है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "The 'Afar Triangle' is an example of a ______.\n'अफार ट्रायंगल' (Afar Triangle) किसका एक उदाहरण है?",
+  "o": ["Triple Junction / Rifting area in Africa", "Deepest trench", "Fold mountain", "Delta"],
+  "a": 0,
+  "e": "It is a tectonic triple junction where three plates are moving apart. / यहाँ तीन विवर्तनिक प्लेटें अलग हो रही हैं।",
+  "cat": "geo",
+  "sub": "mapping"
+},
+{
+  "q": "The 'Zoid' (Geoid) shape of the Earth implies it is bulged at the:\nपृथ्वी के 'जॉइड' (Geoid) आकार का अर्थ है कि यह उभरी हुई है:",
+  "o": ["Poles", "Equator", "Top", "Bottom"],
+  "a": 1,
+  "e": "Earth's rotation and centrifugal force cause the equatorial bulge. / घूर्णन के कारण भूमध्य रेखा पर उभार आता है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Which mineral property refers to the 'Color of Powder'?\nकौन सा गुण खनिज के 'चूर्ण का रंग' है?",
+  "o": ["Lustre", "Streak", "Cleavage", "Hardness"],
+  "a": 1,
+  "e": "Tested by rubbing on an unglazed plate. / यह स्ट्रीक (Streak) कहलाता है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "A 'Laccolith' is described as having which shape?\n'लैकोलिथ' (Laccolith) को किस आकार का बताया गया है?",
+  "o": ["Saucer", "Dome-shaped / Mushroom-like", "Wall-like", "Thin sheet"],
+  "a": 1,
+  "e": "It is a mushroom-shaped dome of magma within the crust. / यह गुंबद के आकार की अंतर्भेदी आकृति है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "In the 'Rock Cycle', what turns any rock into 'Sediments'?\n'शैल चक्र' में कोई भी शैल 'अवसाद' में कैसे बदलता है?",
+  "o": ["Melting", "Weathering and Erosion", "High pressure", "Subduction"],
+  "a": 1,
+  "e": "Surface processes break down rocks into small fragments. / अपक्षय और अपरदन से शैल अवसादों में बदलते हैं।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "What turns 'Metamorphic' rocks back into 'Igneous'?\n'कायांतरित' शैलों को वापस 'आग्नेय' में क्या बदलता है?",
+  "o": ["Weathering", "Melting and subsequent cooling", "Compression", "Erosion"],
+  "a": 1,
+  "e": "Melting produces magma, which solidifies as igneous rock. / पिघलकर जमकर ठोस होना।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Which type of 'Process' is Volcanism?\n'ज्वालामुखीयता' (Volcanism) किस प्रकार की प्रक्रिया है?",
+  "o": ["Exogenic", "Endogenic", "Atmospheric", "Static"],
+  "a": 1,
+  "e": "It originates from internal heat and pressure. / यह एक एंडोजेनिक (आंतरिक) प्रक्रिया है।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "Which mineral has hardness 10?\nकिसकी कठोरता 10 है?",
+  "o": ["Diamond", "Quartz", "None", "None"],
+  "a": 0,
+  "e": "Standard 10. / हीरा।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+{
+  "q": "What describes 'Subduction'?\n'सबडक्शन' क्या है?",
+  "o": ["Sinking of plate", "Rising of plate", "None", "None"],
+  "a": 0,
+  "e": "Oceanic plate sliding under. / प्लेट का नीचे धंसना।",
+  "cat": "geo",
+  "sub": "physical_geo"
+},
+  {
   "q": "What is the primary indicator of the socio-economic status of a society as per the transcript?\nट्रांसक्रिप्ट के अनुसार किसी समाज की सामाजिक-आर्थिक स्थिति का प्राथमिक संकेतक क्या है?",
   "o": ["Total gold reserves", "Literacy rate", "Number of mountains", "Average height of people"],
   "a": 1,
