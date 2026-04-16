@@ -23,6 +23,487 @@
     "cat": "gk",
     "sub": "ancient"
   },
+
+  {
+    "q": "बिरसा मुंडा का जन्म 1870 के दशक के मध्य में किस क्षेत्र में हुआ था?\nIn which region was Birsa Munda born in the mid-1870s?",
+    "o": ["बस्तर", "छोटा नागपुर (Chhota Nagpur)", "नीलगिरी", "अंडमान"],
+    "a": 1,
+    "e": "बिरसा मुंडा का जन्म छोटा नागपुर के मुंडा जनजाति के परिवार में हुआ था। / Birsa Munda was born in the Chhota Nagpur region in a Munda family.",
+    "cat": "gk",
+    "sub": "modern"
+  },
+  {
+    "q": "जनजातीय शब्दावली में 'डिकु' (Dikus) शब्द का प्रयोग किसके लिए किया जाता था?\nIn tribal terminology, for whom was the term 'Dikus' used?",
+    "o": ["स्थानीय मुखिया", "बाहरी लोग (Outsiders)", "देवता", "जंगली जानवर"],
+    "a": 1,
+    "e": "आदिवासी लोग अंग्रेजों, व्यापारियों और साहूकारों जैसे बाहरी लोगों को 'डिकु' कहते थे, जिन्हें वे अपनी समस्याओं का कारण मानते थे। / Tribals called outsiders like the British and moneylenders 'Dikus'.",
+    "cat": "gk",
+    "sub": "modern"
+  },
+  {
+    "q": "'झूम खेती' (Jhum Cultivation) को और किस नाम से जाना जाता है?\nBy what other name is 'Jhum Cultivation' known?",
+    "o": ["स्थायी कृषि", "स्थानांतरी कृषि (Shifting Cultivation)", "नहरी सिंचाई", "बागवानी"],
+    "a": 1,
+    "e": "झूम खेती या स्थानांतरी कृषि में जंगलों को काटकर और जलाकर राख को उर्वरक के रूप में उपयोग किया जाता है। / Jhum cultivation is also known as Shifting cultivation.",
+    "cat": "gk",
+    "sub": "modern"
+  },
+  {
+    "q": "झूम खेती में बीज बोने की उस विधि को क्या कहा जाता है जिसमें बीजों को जमीन पर छिड़क दिया जाता है?\nWhat is the method of sowing seeds in Jhum cultivation called where seeds are scattered on the ground?",
+    "o": ["ड्रिलिंग", "ब्रॉडकास्टिंग (Broadcasting)", "प्लाइंग", "नर्सरी"],
+    "a": 1,
+    "e": "झूम कल्टीवेटर हल चलाने के बजाय बीजों को जमीन पर बिखेर देते थे, जिसे ब्रॉडकास्टिंग कहा जाता है। / Scattering seeds on the ground is called broadcasting.",
+    "cat": "gk",
+    "sub": "modern"
+  },
+  {
+    "q": "ओडिशा के जंगलों में रहने वाला कौन सा जनजातीय समूह 'शिकारी और संग्राहक' (Hunters & Gatherers) के रूप में जाना जाता था?\nWhich tribal group in the forests of Odisha was known as 'Hunters and Gatherers'?",
+    "o": ["मुंडा", "खोंड (Khonds)", "सांथाल", "भील"],
+    "a": 1,
+    "e": "ओडिशा के खोंड लोग टोलियों में शिकार करते थे और कंद-मूल व फल इकट्ठा करते थे। / The Khonds of Odisha were known for hunting and gathering forest produce.",
+    "cat": "gk",
+    "sub": "modern"
+  },
+  {
+    "q": "स्थानीय बुनकर और चमड़ा श्रमिक कपड़ों की रंगाई के लिए किन फूलों का उपयोग करते थे?\nWhich flowers were used by local weavers and leather workers for dyeing clothes?",
+    "o": ["गुलाब और गेंदा", "कुसुम और पलाश (Kusum & Palash)", "सूरजमुखी", "कमल"],
+    "a": 1,
+    "e": "आदिवासी लोग जंगलों से कुसुम और पलाश के फूल इकट्ठा कर बुनकरों को बेचते थे जिनका उपयोग रंग बनाने में होता था। / Kusum and Palash flowers were used for dyeing clothes and leather.",
+    "cat": "gk",
+    "sub": "modern"
+  },
+  {
+    "q": "मध्य भारत की वह कौन सी जनजाति थी जो खुद को 'जंगल की संतान' मानती थी और मजदूरी करना अपमान समझती थी?\nWhich tribe in Central India considered themselves 'children of the forest' and felt it below dignity to work as laborers?",
+    "o": ["सांथाल", "बैगा (Baigas)", "गोंड", "गद्दी"],
+    "a": 1,
+    "e": "बैगा जनजाति के लोग केवल जंगल की उपज पर जीवित रहना चाहते थे और दूसरों के खेतों में काम करना उनके लिए अपमानजनक था। / Baigas considered themselves children of the forest and refused to be laborers.",
+    "cat": "gk",
+    "sub": "modern"
+  },
+  {
+    "q": "ब्रिटिश अधिकारियों ने किन जनजातीय समूहों को शिकारी-संग्राहकों की तुलना में अधिक 'सभ्य' माना?\nWhich tribal groups did British officials consider more 'civilized' than hunter-gatherers?",
+    "o": ["मुंडा और सांथाल", "गोंड और सांथाल (Gonds & Santhals)", "भील और बैगा", "नागा और जारवा"],
+    "a": 1,
+    "e": "अंग्रेज उन जनजातियों को अधिक सभ्य मानते थे जो एक जगह बसकर खेती करते थे, जैसे गोंड और सांथाल। / Settled tribes like Gonds and Santhals were seen as more civilized by the British.",
+    "cat": "gk",
+    "sub": "modern"
+  },
+  {
+    "q": "ब्रिटिश शासन के दौरान जनजातीय मुखियाओं (Tribal Chiefs) की शक्तियों पर क्या प्रभाव पड़ा?\nWhat was the impact on the powers of Tribal Chiefs during British rule?",
+    "o": ["उनकी शक्तियाँ बढ़ गईं", "उनकी प्रशासनिक शक्तियाँ खत्म हो गईं (Administrative powers were lost)", "वे स्वतंत्र राजा बन गए", "कोई प्रभाव नहीं पड़ा"],
+    "a": 1,
+    "e": "अंग्रेजों के अधीन मुखियाओं के पास जमीन का मालिकाना हक तो रहा, लेकिन उनकी प्रशासनिक और कानून बनाने की शक्ति छिन गई। / Tribal chiefs lost their administrative powers under the British.",
+    "cat": "gk",
+    "sub": "modern"
+  },
+  {
+    "q": "अंग्रेजों ने जंगलों को 'आरक्षित वन' (Reserved Forests) क्यों घोषित किया?\nWhy did the British declare forests as 'Reserved Forests'?",
+    "o": ["आदिवासियों के रहने के लिए", "कीमती लकड़ी (जैसे इमारती लकड़ी) प्राप्त करने के लिए (To produce timber)", "जानवरों के शिकार के लिए", "खेती को बढ़ावा देने के लिए"],
+    "a": 1,
+    "e": "आरक्षित वनों से अंग्रेज अपनी जरूरतों, जैसे रेलवे स्लीपर बनाने के लिए, कीमती लकड़ी प्राप्त करना चाहते थे। / Reserved forests were meant for timber production required by the British.",
+    "cat": "gk",
+    "sub": "modern"
+  },
+  {
+    "q": "रेलवे स्लीपर बनाने के लिए वनों में काम करने हेतु अंग्रेजों ने किस नई व्यवस्था की शुरुआत की?\nWhat new arrangement did the British start to get labor in forests for making railway sleepers?",
+    "o": ["मजदूरी बढ़ा दी", "वन ग्राम (Forest Villages) बसाए", "मशीनों का प्रयोग किया", "सेना बुलाई"],
+    "a": 1,
+    "e": "अंग्रेजों ने आदिवासियों को जंगल के छोटे हिस्सों पर खेती की अनुमति दी, बशर्ते वे वन विभाग के लिए सस्ता श्रम उपलब्ध कराएं। इन्हें 'वन ग्राम' कहा गया। / The British established forest villages to ensure cheap labor.",
+    "cat": "gk",
+    "sub": "modern"
+  },
+  {
+    "q": "रेशम के व्यापारियों ने 18वीं शताब्दी में हजारीबाग के संधालों से रेशम के कीड़े (Cocoons) किस दाम पर खरीदे थे?\nAt what price did silk traders buy cocoons from the Santhals of Hazaribagh in the 18th century?",
+    "o": ["बहुत ऊँचे दाम पर", "बहुत कम दाम पर (Very low price)", "वस्तु विनिमय द्वारा", "सोने के बदले"],
+    "a": 1,
+    "e": "व्यापारी आदिवासियों को 3-4 रुपये देकर हजारों कोकून खरीदते थे और उन्हें 5 गुना ज्यादा कीमत पर बेचते थे। / Silk cocoons were purchased at a very low price and sold at much higher rates.",
+    "cat": "gk",
+    "sub": "modern"
+  },
+  {
+    "q": "बिहार और झारखंड के आदिवासियों को काम की तलाश में किन खतरनाक स्थानों पर जाना पड़ा?\nTo which dangerous places did the tribals of Bihar and Jharkhand have to go in search of work?",
+    "o": ["सॉफ्टवेयर कंपनियों में", "चाय बागान और कोयला खदानों में (Tea plantations & Coal mines)", "विदेशी यात्राओं पर", "केवल सरकारी दफ्तरों में"],
+    "a": 1,
+    "e": "आदिवासियों को असम के चाय बागानों और बिहार की कोयला खदानों में ठेकेदारों के माध्यम से काम करने के लिए मजबूर किया गया। / Tribals were recruited for tea plantations in Assam and coal mines in Bihar.",
+    "cat": "gk",
+    "sub": "modern"
+  },
+  {
+    "q": "बिरसा मुंडा ने किस काल्पनिक युग को 'स्वर्ण युग' या 'सतयुग' (Age of Truth) कहा था?\nWhich imaginary era did Birsa Munda refer to as the 'Golden Age' or 'Satyug'?",
+    "o": ["ब्रिटिश काल", "आदिवासियों के गौरवशाली अतीत को (Glorious tribal past)", "भविष्य के औद्योगिक युग को", "मुगल काल"],
+    "a": 1,
+    "e": "बिरसा मुंडा एक ऐसे अतीत की बात करते थे जब मुंडा लोग प्रकृति के साथ शांति से रहते थे और बाहरी लोगों (डिकु) का हस्तक्षेप नहीं था। / Birsa visualized a Golden Age when tribals lived a good life without Dikus.",
+    "cat": "gk",
+    "sub": "modern"
+  },
+  {
+    "q": "बिरसा मुंडा को ब्रिटिश सरकार ने पहली बार कब और क्यों गिरफ्तार किया था?\nWhen and why was Birsa Munda first arrested by the British government?",
+    "o": ["1857 में विद्रोह के लिए", "1895 में दंगा भड़काने के आरोप में (1895 for Rioting)", "1947 में चोरी के लिए", "1900 में व्यापार के लिए"],
+    "a": 1,
+    "e": "1895 में बिरसा मुंडा को दंगा भड़काने के आरोप में गिरफ्तार किया गया और उन्हें 2 साल की जेल हुई। / Birsa was arrested in 1895 on charges of rioting.",
+    "cat": "gk",
+    "sub": "modern"
+  },
+  {
+    "q": "बिरसा मुंडा के अनुयायी 'डिकु' और 'यूरोपीय' शक्ति के प्रतीक के रूप में किसे नष्ट करना चाहते थे?\nWhom did Birsa's followers want to destroy as symbols of 'Diku' and European power?",
+    "o": ["जंगलों को", "रावण (Ravana)", "अपने ही गाँवों को", "नदियों को"],
+    "a": 1,
+    "e": "बिरसा ने अपने अनुयायियों से कहा कि उन्हें रावण (डिकु और यूरोपीय) को नष्ट कर अपने साम्राज्य की स्थापना करनी है। / Birsa asked his people to destroy 'Ravana' (Dikus and Europeans).",
+    "cat": "gk",
+    "sub": "modern"
+  },
+  {
+    "q": "बिरसा मुंडा के आंदोलन का प्रतीक झंडा किस रंग का था?\nWhat was the color of the flag of Birsa Munda's movement?",
+    "o": ["लाल", "सफेद (White)", "हरा", "पीला"],
+    "a": 1,
+    "e": "बिरसा मुंडा के विद्रोह के दौरान 'बिरसा राज' के प्रतीक के रूप में सफेद झंडा लहराया गया था। / The white flag was raised as a symbol of Birsa Raj.",
+    "cat": "gk",
+    "sub": "modern"
+  },
+  {
+    "q": "बिरसा मुंडा की मृत्यु कब और किस कारण हुई?\nWhen and how did Birsa Munda die?",
+    "o": ["1895 में युद्ध में", "1900 में हैजा (Cholera) के कारण", "1920 में फाँसी से", "1947 में बुढ़ापे से"],
+    "a": 1,
+    "e": "1900 में बिरसा मुंडा की जेल में हैजा होने के कारण मृत्यु हो गई थी। / Birsa Munda died of cholera in prison in 1900.",
+    "cat": "gk",
+    "sub": "modern"
+  },
+  {
+    "q": "बिरसा मुंडा के विद्रोह का एक महत्वपूर्ण परिणाम क्या था?\nWhat was a significant outcome of Birsa Munda's revolt?",
+    "o": ["अंग्रेज भारत छोड़कर चले गए", "ब्रिटिश सरकार ने आदिवासियों की जमीन न हड़पने के कानून बनाए (Laws protecting tribal land)", "आदिवासियों ने खेती छोड़ दी", "सभी आदिवासी ईसाई बन गए"],
+    "a": 1,
+    "e": "इस आंदोलन के कारण ब्रिटिश सरकार को ऐसे कानून बनाने पड़े जिससे डिकु लोग आदिवासियों की जमीन आसानी से न हड़प सकें। / The British had to introduce laws to protect tribal land.",
+    "cat": "gk",
+    "sub": "modern"
+  },
+  {
+    "q": "1906 में असम में हुआ 'सोनग्राम संगमा' (Songram Sangma) विद्रोह किस कारण हुआ था?\nWhat caused the 'Songram Sangma' revolt in Assam in 1906?",
+    "o": ["अकाल के कारण", "दमनकारी वन कानूनों के विरोध में (Against colonial forest laws)", "व्यापार के लिए", "शिक्षा की कमी"],
+    "a": 1,
+    "e": "आदिवासियों ने ब्रिटिश वन कानूनों के खिलाफ विरोध किया, जिसके परिणामस्वरूप 1906 में असम में सोनग्राम संगमा विद्रोह हुआ। / The revolt in Assam was a reaction against colonial forest laws.",
+    "cat": "gk",
+    "sub": "modern"
+  },
+  {
+    "q": "मुगल सम्राट ने ईस्ट इंडिया कंपनी को बंगाल का 'दीवान' औपचारिक रूप से कब नियुक्त किया था?\nWhen did the Mughal Emperor formally appoint the East India Company as the Diwan of Bengal?",
+    "o": ["12 अगस्त 1765 (12 August 1765)", "15 अगस्त 1947", "26 जनवरी 1950", "10 मई 1857"],
+    "a": 0,
+    "e": "12 अगस्त 1765 को मुगल सम्राट शाह आलम द्वितीय ने रॉबर्ट क्लाइव को बंगाल की दीवानी सौंपी, जिससे कंपनी को राजस्व वसूली का कानूनी अधिकार मिल गया। / The Mughal Emperor appointed the Company as Diwan on 12 August 1765.",
+    "cat": "gk",
+    "sub": "modern"
+  },
+  {
+    "q": "ब्रिटिश शासन के दौरान 'दीवान' (Diwan) बनने का मुख्य अर्थ क्या था?\nWhat was the primary meaning of becoming a 'Diwan' during British rule?",
+    "o": ["धार्मिक गुरु बनना", "मुख्य वित्तीय प्रशासक बनना (Chief Financial Administrator)", "केवल सेना का नेतृत्व करना", "व्यापारिक दूत बनना"],
+    "a": 1,
+    "e": "दीवान के रूप में कंपनी अपने नियंत्रण वाले भू-भाग के आर्थिक मामलों की मुख्य शासक बन गई थी। / As Diwan, the Company became the chief financial administrator of the territory.",
+    "cat": "gk",
+    "sub": "modern"
+  },
+  {
+    "q": "1793 में लॉर्ड कार्नवालिस द्वारा बंगाल में कौन सी राजस्व व्यवस्था लागू की गई थी?\nWhich revenue system was introduced in Bengal by Lord Cornwallis in 1793?",
+    "o": ["रैयतवाड़ी व्यवस्था", "महालवारी व्यवस्था", "स्थायी बंदोबस्त (Permanent Settlement)", "इजारदारी प्रथा"],
+    "a": 2,
+    "e": "स्थायी बंदोबस्त के तहत राजस्व की राशि स्थायी रूप से तय कर दी गई थी, जिसे भविष्य में कभी नहीं बढ़ाया जाना था। / Permanent Settlement was introduced by Cornwallis in 1793.",
+    "cat": "gk",
+    "sub": "modern"
+  },
+  {
+    "q": "स्थायी बंदोबस्त (Permanent Settlement) के तहत राजस्व संग्रह करने की जिम्मेदारी किसे दी गई थी?\nUnder the Permanent Settlement, who was responsible for collecting revenue?",
+    "o": ["किसानों को", "राजाओं और तालुकेदारों को (Rajas & Talukdars as Zamindars)", "सीधे सरकारी अधिकारियों को", "विदेशी व्यापारियों को"],
+    "a": 1,
+    "e": "स्थायी बंदोबस्त के तहत राजाओं और तालुकेदारों को 'जमींदार' के रूप में मान्यता दी गई और उन्हें किसानों से लगान वसूलने का काम सौंपा गया। / Rajas and Talukdars were recognized as Zamindars to collect rent.",
+    "cat": "gk",
+    "sub": "modern"
+  },
+  {
+    "q": "1822 में होल्ट मैकेंजी द्वारा उत्तर-पश्चिमी प्रांतों में कौन सी नई राजस्व प्रणाली लागू की गई?\nWhich new revenue system was introduced in the North-Western Provinces by Holt Mackenzie in 1822?",
+    "o": ["रैयतवाड़ी व्यवस्था", "महालवारी व्यवस्था (Mahalwari System)", "स्थायी बंदोबस्त", "नील खेती"],
+    "a": 1,
+    "e": "महालवारी व्यवस्था में 'महाल' (गाँव या गाँवों का समूह) को एक इकाई माना गया और राजस्व का समय-समय पर संशोधन किया जाना तय हुआ। / Holt Mackenzie devised the Mahalwari system.",
+    "cat": "gk",
+    "sub": "modern"
+  },
+  {
+    "q": "महालवारी व्यवस्था में 'महाल' (Mahal) शब्द का क्या अर्थ है?\nWhat does the term 'Mahal' mean in the Mahalwari system?",
+    "o": ["एक महल या किला", "एक गाँव या गाँवों का समूह (A village or group of villages)", "एक बड़ा राजा", "राजस्व अधिकारी"],
+    "a": 1,
+    "e": "ब्रिटिश राजस्व रिकॉर्ड में एक गाँव या गाँवों के समूह को 'महाल' कहा जाता था। / In British revenue records, a Mahal is a revenue estate, often a village.",
+    "cat": "gk",
+    "sub": "modern"
+  },
+  {
+    "q": "दक्षिण भारत में थॉमस मुनरो द्वारा विकसित राजस्व व्यवस्था का नाम क्या था?\nWhat was the name of the revenue system developed by Thomas Munro in South India?",
+    "o": ["महालवारी", "स्थायी बंदोबस्त", "रैयतवाड़ी व्यवस्था (Ryotwari System)", "जमींदारी व्यवस्था"],
+    "a": 2,
+    "e": "रैयतवाड़ी व्यवस्था में राजस्व का सीधा समझौता 'रैयतों' (किसानों) के साथ किया गया, क्योंकि वहाँ पारंपरिक जमींदार नहीं थे। / Thomas Munro developed the Ryotwari system in South India.",
+    "cat": "gk",
+    "sub": "modern"
+  },
+  {
+    "q": "रैयतवाड़ी व्यवस्था में 'रैयत' (Ryot) शब्द किसके लिए प्रयुक्त होता है?\nFor whom is the term 'Ryot' used in the Ryotwari system?",
+    "o": ["बड़े जमींदार", "सरकारी अधिकारी", "खेतीहर या किसान (Cultivators/Peasants)", "सैनिक"],
+    "a": 2,
+    "e": "रैयत शब्द का अर्थ किसान या खेतीहर है, जिनसे अंग्रेज सीधे लगान वसूलते थे। / Ryot refers to the cultivator or peasant.",
+    "cat": "gk",
+    "sub": "modern"
+  },
+  {
+    "q": "1770 में बंगाल में आए भीषण अकाल (Famine) में लगभग कितने लोगों की मृत्यु हुई थी?\nApproximately how many people died in the terrible famine of 1770 in Bengal?",
+    "o": ["1 लाख", "50 लाख", "1 करोड़ (10 million)", "5 करोड़"],
+    "a": 2,
+    "e": "1770 के अकाल में बंगाल की लगभग एक-तिहाई आबादी (1 करोड़ लोग) खत्म हो गई थी। / The famine of 1770 wiped out one-third of Bengal's population.",
+    "cat": "gk",
+    "sub": "modern"
+  },
+  {
+    "q": "नील (Indigo) के पौधे मुख्य रूप से किस जलवायु क्षेत्र में उगते हैं?\nIn which climatic zone do Indigo plants primarily grow?",
+    "o": ["शीतोष्ण कटिबंध (Temperate)", "उष्ण कटिबंध (Tropics)", "ध्रुवीय क्षेत्र", "रेगिस्तानी क्षेत्र"],
+    "a": 1,
+    "e": "नील के पौधे मुख्य रूप से उष्ण कटिबंधीय (Tropical) क्षेत्रों में उगते हैं, यही कारण था कि भारतीय नील की यूरोप में बहुत माँग थी। / Indigo plants grow primarily in the tropics.",
+    "cat": "gk",
+    "sub": "modern"
+  },
+  {
+    "q": "यूरोपीय कपड़ा उत्पादक नील के विकल्प के रूप में किस पौधे का उपयोग करते थे?\nWhich plant did European cloth producers use as a substitute for Indigo?",
+    "o": ["कपास", "वोड (Woad)", "पटसन", "तंबाकू"],
+    "a": 1,
+    "e": "वोड (Woad) शीतोष्ण क्षेत्रों में उगता था, लेकिन इससे मिलने वाला रंग फीका और डल होता था, जबकि नील का रंग चमकदार नीला होता था। / European producers used the woad plant for dyes.",
+    "cat": "gk",
+    "sub": "modern"
+  },
+  {
+    "q": "नील की खेती के दो मुख्य तरीके कौन से थे?\nWhat were the two main systems of indigo cultivation?",
+    "o": ["स्थायी और अस्थायी", "निज और रैयती (Nij and Ryoti)", "महालवारी और रैयतवाड़ी", "सरकारी और निजी"],
+    "a": 1,
+    "e": "निज खेती में बागान मालिक खुद जमीन खरीदकर या किराये पर लेकर खेती करवाते थे, जबकि रैयती में किसानों से जबरन अनुबंध कराया जाता था। / The two systems were Nij and Ryoti.",
+    "cat": "gk",
+    "sub": "modern"
+  },
+  {
+    "q": "नील की 'निज' (Nij) खेती में बागान मालिकों को मुख्य रूप से किस समस्या का सामना करना पड़ता था?\nWhat was the main problem faced by planters in 'Nij' cultivation of indigo?",
+    "o": ["उपजाऊ भूमि और मजदूरों की कमी (Lack of fertile land & labor)", "बीज की कमी", "पानी की अधिकता", "टैक्स न होना"],
+    "a": 0,
+    "e": "नील की खेती के लिए बड़े भूखंडों की जरूरत थी और मजदूरों की जरूरत उसी समय पड़ती थी जब वे चावल की खेती में व्यस्त होते थे। / Planters found it difficult to expand areas and find labor.",
+    "cat": "gk",
+    "sub": "modern"
+  },
+  {
+    "q": "नील विद्रोह या 'ब्लू रिबेलियन' (Blue Rebellion) कब शुरू हुआ था?\nWhen did the 'Blue Rebellion' or Indigo Revolt begin?",
+    "o": ["1857", "1859", "1885", "1917"],
+    "a": 1,
+    "e": "मार्च 1859 में बंगाल के हजारों रैयतों ने नील की खेती करने से इनकार कर दिया और बागान मालिकों के विरुद्ध विद्रोह कर दिया। / The Blue Rebellion started in March 1859 in Bengal.",
+    "cat": "gk",
+    "sub": "modern"
+  },
+  {
+    "q": "नील विद्रोह के दौरान बागान मालिकों के एजेंटों को क्या कहा जाता था जिनकी किसान पिटाई कर देते थे?\nDuring the Indigo revolt, what were the agents of planters called, who were often beaten by peasants?",
+    "o": ["दरोगा", "गुमाश्ता (Gomasthas)", "सूबेदार", "पटवारी"],
+    "a": 1,
+    "e": "गुमाश्ता वे एजेंट थे जो लगान वसूलने आते थे। विद्रोह के दौरान किसानों ने उन्हें पीटना शुरू कर दिया था। / Gomasthas were the agents who came to collect rent.",
+    "cat": "gk",
+    "sub": "modern"
+  },
+  {
+    "q": "नील विद्रोह की जांच के लिए ब्रिटिश सरकार ने किस आयोग का गठन किया था?\nWhich commission was set up by the British government to investigate the indigo revolt?",
+    "o": ["साइमन कमीशन", "नील आयोग (Indigo Commission)", "हंटर आयोग", "टॉर्च कमीशन"],
+    "a": 1,
+    "e": "नील आयोग ने बागान मालिकों को दोषी पाया और माना कि नील की खेती रैयतों के लिए लाभकारी नहीं है। / The government set up the Indigo Commission to inquire.",
+    "cat": "gk",
+    "sub": "modern"
+  },
+  {
+    "q": "बंगाल में नील उत्पादन धराशायी होने के बाद बागान मालिकों ने अपना ध्यान किस क्षेत्र की ओर स्थानांतरित किया?\nAfter indigo production collapsed in Bengal, where did planters shift their attention?",
+    "o": ["पंजाब", "बिहार (Bihar)", "महाराष्ट्र", "गुजरात"],
+    "a": 1,
+    "e": "बंगाल में विद्रोह के बाद बागान मालिक बिहार चले गए, जहाँ बाद में चंपारण आंदोलन हुआ। / After the revolt in Bengal, planters shifted to Bihar.",
+    "cat": "gk",
+    "sub": "modern"
+  },
+  {
+    "q": "1917 में महात्मा गांधी ने नील बागान मालिकों के खिलाफ अपना पहला सत्याग्रह कहाँ शुरू किया था?\nWhere did Mahatma Gandhi start his first Satyagraha against indigo planters in 1917?",
+    "o": ["खेड़ा", "चंपारण (Champaran)", "अहमदाबाद", "चौरी-चौरा"],
+    "a": 1,
+    "e": "गांधीजी ने बिहार के चंपारण का दौरा किया और वहाँ के नील किसानों की समस्याओं को लेकर आंदोलन शुरू किया। / Gandhi's visit to Champaran in 1917 marked the start of the movement.",
+    "cat": "gk",
+    "sub": "modern"
+  },
+  {
+    "q": "सिखों के किस राजा की मृत्यु के बाद अंग्रेजों ने पंजाब का अधिग्रहण किया था?\nAfter the death of which Sikh King did the British annex Punjab?",
+    "o": ["दिलीप सिंह", "महाराजा रणजीत सिंह (Maharaja Ranjit Singh)", "बंदा बहादुर", "गुरु गोबिंद सिंह"],
+    "a": 1,
+    "e": "महाराजा रणजीत सिंह के जीवित रहने तक अंग्रेज पंजाब पर कब्जा नहीं कर पाए थे, उनकी मृत्यु (1839) के बाद दो युद्धों के बाद पंजाब को हड़प लिया गया। / Punjab was annexed after the death of Ranjit Singh.",
+    "cat": "gk",
+    "sub": "modern"
+  },
+  {
+    "q": "किस गवर्नर-जनरल ने 'व्यपगत का सिद्धांत' या 'विलय नीति' (Doctrine of Lapse) के तहत कई भारतीय राज्यों को हड़पा था?\nWhich Governor-General annexed many Indian states under the 'Doctrine of Lapse'?",
+    "o": ["लॉर्ड कार्नवालिस", "लॉर्ड डलहौजी (Lord Dalhousie)", "वॉरेन हेस्टिंग्स", "लॉर्ड बेंटिक"],
+    "a": 1,
+    "e": "लॉर्ड डलहौजी ने इस नीति का उपयोग झांसी, सतारा और संबलपुर जैसे राज्यों को ब्रिटिश साम्राज्य में मिलाने के लिए किया था। / Dalhousie implemented the Doctrine of Lapse.",
+    "cat": "gk",
+    "sub": "modern"
+  },
+  {
+    "q": "ईस्ट इंडिया कंपनी ने 1600 में इंग्लैंड की किस महारानी से पूर्व के साथ व्यापार करने का चार्टर (इजाजतनामा) हासिल किया था?\nFrom which Queen of England did the East India Company acquire a charter to trade with the East in 1600?",
+    "o": ["महारानी विक्टोरिया", "महारानी एलिजाबेथ प्रथम (Queen Elizabeth I)", "महारानी ऐन", "महारानी मैरी"],
+    "a": 1,
+    "e": "महारानी एलिजाबेथ प्रथम ने कंपनी को पूर्व में व्यापार करने का एकाधिकार दिया, जिससे इंग्लैंड की कोई दूसरी कंपनी उनके साथ होड़ नहीं कर सकती थी। / Queen Elizabeth I granted the Company the sole right to trade with the East.",
+    "cat": "gk",
+    "sub": "modern"
+  },
+  {
+    "q": "ईस्ट इंडिया कंपनी के आने से पहले भारत के समुद्री रास्तों की खोज किसने की थी?\nWho discovered the sea route to India before the East India Company's arrival?",
+    "o": ["क्रिस्टोफर कोलंबस", "वास्को डी गामा (Vasco da Gama)", "कैप्टन कुक", "रॉबर्ट क्लाइव"],
+    "a": 1,
+    "e": "पुर्तगाली खोजी यात्री वास्को डी गामा ने 1498 में पहली बार भारत तक पहुँचने के समुद्री मार्ग की खोज की थी। / Portuguese explorer Vasco da Gama discovered the sea route to India in 1498.",
+    "cat": "gk",
+    "sub": "modern"
+  },
+  {
+    "q": "पहली इंग्लिश फैक्ट्री 1651 में किस नदी के किनारे स्थापित की गई थी?\nOn the banks of which river was the first English factory established in 1651?",
+    "o": ["यमुना नदी", "हुगली नदी (River Hugli)", "नर्मदा नदी", "गंगा नदी"],
+    "a": 1,
+    "e": "पहली इंग्लिश फैक्ट्री बंगाल में हुगली नदी के किनारे शुरू हुई थी, जहाँ से कंपनी के व्यापारी (जिन्हें फैक्टर्स कहा जाता था) काम करते थे। / The first English factory was set up on the banks of the river Hugli.",
+    "cat": "gk",
+    "sub": "modern"
+  },
+  {
+    "q": "प्लासी का युद्ध (Battle of Plassey) 1757 में किसके बीच लड़ा गया था?\nBetween whom was the Battle of Plassey fought in 1757?",
+    "o": ["मीर कासिम और क्लाइव", "सिराजुद्दौला और रॉबर्ट क्लाइव (Sirajuddaula & Robert Clive)", "हैदर अली और डलहौजी", "अकबर और ब्रिटिश"],
+    "a": 1,
+    "e": "रॉबर्ट क्लाइव के नेतृत्व में कंपनी की सेना ने बंगाल के नवाब सिराजुद्दौला के खिलाफ प्लासी का युद्ध लड़ा और जीत हासिल की। / Robert Clive led the Company army against Sirajuddaula at Plassey.",
+    "cat": "gk",
+    "sub": "modern"
+  },
+  {
+    "q": "सिराजुद्दौला की हार का मुख्य कारण उसके किस सेनापति द्वारा किया गया विश्वासघात था?\nWhat was the main reason for Sirajuddaula's defeat, involving betrayal by which of his commanders?",
+    "o": ["मीर कासिम", "मीर जाफ़र (Mir Jafar)", "राय दुर्लभ", "जगत सेठ"],
+    "a": 1,
+    "e": "मीर जाफ़र ने अपनी टुकड़ी के साथ युद्ध में हिस्सा नहीं लिया क्योंकि रॉबर्ट क्लाइव ने उसे सिराजुद्दौला को हटाकर नवाब बनाने का लालच दिया था। / Mir Jafar's betrayal by not fighting was the key reason for the defeat.",
+    "cat": "gk",
+    "sub": "modern"
+  },
+  {
+    "q": "बक्सर का युद्ध (Battle of Buxar) कब लड़ा गया था?\nWhen was the Battle of Buxar fought?",
+    "o": ["1757", "1764", "1761", "1782"],
+    "a": 1,
+    "e": "मीर कासिम को हराने के लिए अंग्रेजों ने 1764 में बक्सर का युद्ध लड़ा, जिसके बाद कंपनी को बंगाल की दीवानी अधिकार मिले। / The Battle of Buxar was fought in 1764.",
+    "cat": "gk",
+    "sub": "modern"
+  },
+  {
+    "q": "1765 में मुगल सम्राट ने ईस्ट इंडिया कंपनी को किस पद पर नियुक्त किया?\nIn 1765, the Mughal Emperor appointed the East India Company to which position?",
+    "o": ["सैनिक गवर्नर", "बंगाल का दीवान (Diwan of Bengal)", "राजदूत", "वज़ीर-ए-आज़म"],
+    "a": 1,
+    "e": "दीवान नियुक्त होने के बाद कंपनी को बंगाल के विशाल राजस्व संसाधनों पर नियंत्रण मिल गया। / The Mughal emperor appointed the Company as the Diwan of the provinces of Bengal.",
+    "cat": "gk",
+    "sub": "modern"
+  },
+  {
+    "q": "'शेर-ए-मैसूर' के नाम से किसे जाना जाता था?\nWho was known as the 'Tiger of Mysore'?",
+    "o": ["हैदर अली", "टीपू सुल्तान (Tipu Sultan)", "रणजीत सिंह", "नाना फड़नवीस"],
+    "a": 1,
+    "e": "टीपू सुल्तान को उनकी बहादुरी के कारण 'शेर-ए-मैसूर' कहा जाता था। उन्होंने अंग्रेजों के व्यापारिक हितों को कड़ी चुनौती दी थी। / Tipu Sultan was famously known as the Tiger of Mysore.",
+    "cat": "gk",
+    "sub": "modern"
+  },
+  {
+    "q": "टीपू सुल्तान की मृत्यु अपनी राजधानी की रक्षा करते हुए किस वर्ष हुई थी?\nIn which year did Tipu Sultan die while defending his capital?",
+    "o": ["1785", "1792", "1799", "1801"],
+    "a": 2,
+    "e": "मैसूर के साथ चौथी जंग (श्रीरंगपट्टनम की जंग) में 1799 में टीपू सुल्तान वीरगति को प्राप्त हुए। / Tipu Sultan died defending his capital, Seringapatam, in 1799.",
+    "cat": "gk",
+    "sub": "modern"
+  },
+  {
+    "q": "पानीपत की तीसरी लड़ाई (1761) में मराठों की हार के बाद उनका दिल्ली से शासन चलाने का सपना क्यों टूट गया?\nWhy was the Maratha dream of ruling from Delhi shattered after their defeat in the Third Battle of Panipat (1761)?",
+    "o": ["मुगलों के कारण", "अहमद शाह अब्दाली से हार के कारण (Defeat by Ahmad Shah Abdali)", "सिखों के कारण", "आंतरिक विद्रोह"],
+    "a": 1,
+    "e": "1761 में अहमद शाह अब्दाली से मिली हार ने मराठों की शक्ति को कमजोर कर दिया और उत्तर भारत पर उनके वर्चस्व को खत्म कर दिया। / The defeat in 1761 crushed the Marathas' hope of ruling India from Delhi.",
+    "cat": "gk",
+    "sub": "modern"
+  },
+  {
+    "q": "'सहायक संधि' (Subsidiary Alliance) की व्यवस्था को मुख्य रूप से किस गवर्नर-जनरल ने लागू किया था?\nWhich Governor-General primarily implemented the 'Subsidiary Alliance' system?",
+    "o": ["वॉरेन हेस्टिंग्स", "लॉर्ड रिचर्ड वेलेज़ली (Richard Wellesley)", "लॉर्ड डलहौजी", "लॉर्ड कार्नवालिस"],
+    "a": 1,
+    "e": "लॉर्ड वेलेज़ली ने सहायक संधि के जरिए भारतीय राज्यों को कंपनी की सेना के खर्च पर निर्भर बना दिया। / Richard Wellesley was responsible for the Subsidiary Alliance system.",
+    "cat": "gk",
+    "sub": "modern"
+  },
+  {
+    "q": "लॉर्ड डलहौजी ने राज्यों को हड़पने के लिए किस नीति का प्रतिपादन किया था?\nWhich policy did Lord Dalhousie devise to annex Indian states?",
+    "o": ["सहायक संधि", "विलय नीति या व्यपगत का सिद्धांत (Doctrine of Lapse)", "पैरामाउंटसी", "द्वैध शासन"],
+    "a": 1,
+    "e": "विलय नीति (Doctrine of Lapse) के अनुसार, यदि किसी शासक की मृत्यु बिना पुरुष वारिस के होती थी, तो उसकी रियासत कंपनी का हिस्सा बन जाती थी। / Dalhousie devised the Doctrine of Lapse for annexation.",
+    "cat": "gk",
+    "sub": "modern"
+  },
+  {
+    "q": "झांसी का विलय ब्रिटिश साम्राज्य में किस आधार पर किया गया था?\nOn what basis was Jhansi annexed into the British Empire?",
+    "o": ["युद्ध में हार", "कुशासन का आरोप", "वारिस न होने के कारण (Doctrine of Lapse)", "स्वेच्छा से"],
+    "a": 2,
+    "e": "झांसी के राजा की मृत्यु के बाद उनका कोई पुरुष वारिस न होने के कारण डलहौजी ने 'विलय नीति' के तहत इसे हड़प लिया था। / Jhansi was annexed in 1854 under the Doctrine of Lapse.",
+    "cat": "gk",
+    "sub": "modern"
+  },
+  {
+    "q": "अवध का विलय 1856 में किस आधार पर किया गया था?\nOn what basis was Awadh annexed in 1856?",
+    "o": ["विलय नीति", "कुशासन का आरोप (Allegation of Misgovernment)", "सहायक संधि", "कोई वारिस न होना"],
+    "a": 1,
+    "e": "अंग्रेजों ने तर्क दिया कि वे नवाब के कुशासन से जनता को आजाद कराने के लिए अवध का अधिग्रहण कर रहे हैं। / The British took over Awadh citing 'misgovernment' by the Nawab.",
+    "cat": "gk",
+    "sub": "modern"
+  },
+  {
+    "q": "ब्रिटिश शासन के दौरान 'प्रेसिडेन्सी' (Presidency) शब्द का क्या अर्थ था?\nWhat did the term 'Presidency' mean during British rule?",
+    "o": ["स्कूल", "मुख्य प्रशासनिक इकाइयाँ (Main administrative units)", "धार्मिक केंद्र", "सैनिक छावनी"],
+    "a": 1,
+    "e": "ब्रिटिश इलाकों को मोटे तौर पर प्रशासनिक इकाइयों में बाँटा गया था जिन्हें प्रेसिडेन्सी कहा जाता था (बंगाल, मद्रास और बॉम्बे)। / British territories were divided into administrative units called Presidencies.",
+    "cat": "gk",
+    "sub": "modern"
+  },
+  {
+    "q": "1773 के रेगुलेटिंग एक्ट के तहत भारत में किस नए संस्थान की स्थापना की गई?\nUnder the Regulating Act of 1773, which new institution was established in India?",
+    "o": ["संसद", "सर्वोच्च न्यायालय (Supreme Court)", "रिजर्व बैंक", "पुलिस विभाग"],
+    "a": 1,
+    "e": "1773 के रेगुलेटिंग एक्ट के तहत कोलकाता में एक नए सर्वोच्च न्यायालय (Supreme Court) की स्थापना की गई थी। / A new Supreme Court was established under the Regulating Act of 1773.",
+    "cat": "gk",
+    "sub": "modern"
+  },
+  {
+    "q": "ब्रिटिश सेना में 'सिपाही' (Sepoy) शब्द का क्या अर्थ था?\nWhat did the term 'Sepoy' mean in the British army?",
+    "o": ["केवल घुड़सवार", "पैदल सैनिक (Foot soldier)", "रसोइया", "अधिकारी"],
+    "a": 1,
+    "e": "सिपाही शब्द भारतीय शब्द 'सिपाही' से बना था, जो कंपनी की सेना में पैदल सैनिक (Infantry) के रूप में काम करते थे। / The term came from the Indian word sipahi, meaning foot soldier.",
+    "cat": "gk",
+    "sub": "modern"
+  },
+  {
+    "q": "लॉर्ड हेस्टिंग्स द्वारा शुरू की गई 'सर्वोच्चता की नीति' (Policy of Paramountcy) का क्या दावा था?\nWhat did the 'Policy of Paramountcy' initiated by Lord Hastings claim?",
+    "o": ["सबको समान अधिकार", "कंपनी की सत्ता सर्वोपरि है (Company's authority was paramount)", "व्यापार केवल भारतीय करेंगे", "मुगल राजा ही सर्वश्रेष्ठ है"],
+    "a": 1,
+    "e": "इस नीति के तहत कंपनी ने दावा किया कि उसकी सत्ता सर्वोच्च है, इसलिए वह किसी भी भारतीय राज्य का अधिग्रहण करने के लिए हकदार है। / It claimed that the Company's authority was supreme or paramount.",
+    "cat": "gk",
+    "sub": "modern"
+  },
+  {
+    "q": "किस साहसी रानी ने 'कित्तूर' (कर्नाटक) में अंग्रेजों के खिलाफ हथियार उठाए और आंदोलन का नेतृत्व किया?\nWhich brave Queen took up arms against the British in Kittur (Karnataka)?",
+    "o": ["रानी लक्ष्मीबाई", "रानी चेन्नम्मा (Rani Chennamma)", "बेगम हज़रत महल", "जीजाबाई"],
+    "a": 1,
+    "e": "जब अंग्रेजों ने कित्तूर के छोटे से राज्य को कब्जे में लेने की कोशिश की, तो रानी चेन्नम्मा ने विद्रोह कर दिया। / Rani Chennamma led an anti-British resistance movement in Kittur.",
+    "cat": "gk",
+    "sub": "modern"
+  },
+  {
+    "q": "18वीं शताब्दी के उत्तरार्ध में कंपनी को 'मस्कट' (Musket) और 'मैचलॉक' (Matchlock) की अधिक आवश्यकता क्यों पड़ने लगी?\nWhy did the Company need more Muskets and Matchlocks in the late 18th century?",
+    "o": ["सजावट के लिए", "युद्ध तकनीक में बदलाव के कारण (Change in warfare technology)", "शिकार के लिए", "उपहार देने के लिए"],
+    "a": 1,
+    "e": "बंदूकों (मस्कट) और बारूद के प्रयोग (मैचलॉक) के बढ़ते चलन के कारण पैदल सेना अधिक महत्वपूर्ण हो गई थी। / As warfare technology changed, infantry soldiers armed with guns became crucial.",
+    "cat": "gk",
+    "sub": "modern"
+  },
   {
     "q": "इतिहास को केवल 'तारीखों का पर्याय' मानना क्यों गलत है?\nWhy is it wrong to consider history only as synonymous with dates?",
     "o": ["क्योंकि तारीखें बदलती रहती हैं", "क्योंकि इतिहास प्रक्रियाओं और तुलनाओं के बारे में है (History is about processes and comparisons)", "क्योंकि तारीखें याद करना कठिन है", "क्योंकि इतिहास में केवल राजा होते हैं"],
