@@ -23,7 +23,806 @@
     "cat": "gk",
     "sub": "ancient"
   },
-
+  {
+    "q": "कुतुब मीनार की पहली मंज़िल का निर्माण लगभग 1199 में किसने करवाया था?\nWho constructed the first floor of Qutub Minar around 1199?",
+    "o": ["इल्तुतमिश", "कुतुबुद्दीन ऐबक (Qutbuddin Aybak)", "अलाउद्दीन खिलजी", "फिरोजशाह तुगलक"],
+    "a": 1,
+    "e": "कुतुबुद्दीन ऐबक ने 1199 में इसकी पहली मंजिल बनवाई थी, जबकि शेष मंजिलों का निर्माण 1229 के आसपास इल्तुतमिश ने करवाया। / Qutbuddin Aybak built the first floor in 1199.",
+    "cat": "gk",
+    "sub": "medieval"
+  },
+  {
+    "q": "8वीं से 13वीं शताब्दी के बीच मंदिरों और इमारतों में छत, दरवाजे और खिड़कियाँ बनाने की 'ट्रैबिएट' (Trabeate) तकनीक क्या थी?\nWhat was the 'Trabeate' technique used between the 8th and 13th centuries for roofs and doors?",
+    "o": ["मेहराब बनाना", "दो ऊर्ध्वाधर स्तंभों पर एक क्षैतिज शहतीर रखना (Horizontal beam across two vertical columns)", "ईंटों का गुंबद बनाना", "लोहे के ढांचों का प्रयोग"],
+    "a": 1,
+    "e": "अनुप्रस्थ टोडा निर्माण (Trabeate) में दो खड़े खंभों के ऊपर एक आड़ी शहतीर रखकर छत या दरवाजे बनाए जाते थे। / It involved placing a horizontal beam across two vertical columns.",
+    "cat": "gk",
+    "sub": "medieval"
+  },
+  {
+    "q": "खजुराहो में स्थित 'कंदरिया महादेव मंदिर' का निर्माण 999 ईस्वी में किस वंश के राजा धंगदेव द्वारा किया गया था?\nWhich dynasty's King Dhangadeva built the Kandariya Mahadeva temple in 999 AD?",
+    "o": ["चोल वंश", "चंदेल वंश (Chandela Dynasty)", "गुप्त वंश", "पाल वंश"],
+    "a": 1,
+    "e": "चंदेल राजवंश के राजा धंगदेव ने भगवान शिव की आराधना के लिए इस भव्य मंदिर का निर्माण करवाया था। / King Dhangadeva of the Chandela dynasty built this temple for Lord Shiva.",
+    "cat": "gk",
+    "sub": "medieval"
+  },
+  {
+    "q": "तंजौर के 'राजराजेश्वर मंदिर' का शिखर अपने समय के मंदिरों में सबसे ऊँचा था। इसका निर्माण किसने करवाया था?\nThe shikhara of the Rajarajeshvara temple was the tallest of its time. Who built it?",
+    "o": ["राजेंद्र प्रथम", "राजराजा देव (Rajaraja Deva)", "विजयालय", "धंगदेव"],
+    "a": 1,
+    "e": "राजा राजराजा देव ने अपने देवता राजराजेश्वरम् की उपासना हेतु इसे बनवाया था। / King Rajaraja Deva built it to worship his god, Rajarajeshvaram.",
+    "cat": "gk",
+    "sub": "medieval"
+  },
+  {
+    "q": "राजराजेश्वर मंदिर के 90 टन भारी पत्थर को शिखर तक पहुँचाने के लिए वास्तुकारों ने कौन सा रास्ता बनाया था?\nWhat path did architects build to carry a 90-ton stone to the top of the Rajarajeshvara temple?",
+    "o": ["लिफ्ट", "चढ़ाईदार रास्ता (Incline path)", "बड़ी क्रेन", "सुरंग"],
+    "a": 1,
+    "e": "90 टन के पत्थर को उठाने के लिए मंदिर से 4 किमी दूर से एक चढ़ाईदार रास्ता (Incline) बनाया गया था। / A 4km long incline path was built to roll the heavy stone up.",
+    "cat": "gk",
+    "sub": "medieval"
+  },
+  {
+    "q": "12वीं शताब्दी में वास्तुकला की 'मेहराबदार' (Arcuate) शैली में 'की-स्टोन' (Key-stone) का क्या महत्व था?\nWhat was the significance of the 'Key-stone' in the Arcuate style of architecture?",
+    "o": ["सजावट के लिए", "मेहराब के भार को आधार पर डालना (Transfer weight to the base)", "दरवाजा बंद करने के लिए", "दीवार को रंगने के लिए"],
+    "a": 1,
+    "e": "की-स्टोन (डाट) मेहराब के मध्य में होता था जो ऊपरी ढांचे का पूरा भार मेहराब के आधारों पर डाल देता था। / The key-stone transferred the weight of the superstructure to the base of the arch.",
+    "cat": "gk",
+    "sub": "medieval"
+  },
+  {
+    "q": "दिल्ली के सुल्तान इल्तुतमिश ने 'हौज़-ए-सुल्तानी' का निर्माण कहाँ करवाया था, जिसके लिए उन्हें बहुत सम्मान मिला?\nWhere did Sultan Iltutmish build the 'Hauz-i-Sultani' (King's Reservoir)?",
+    "o": ["लाल किले के अंदर", "देहली-ए-कुहना के एकदम बाहर (Just outside Dehli-i-Kuhna)", "आगरा में", "अजमेर में"],
+    "a": 1,
+    "e": "इल्तुतमिश ने दिल्ली-ए-कुहना के बाहर एक विशाल जलाशय बनवाया था, जिसे 'राजा का जलाशय' कहा गया। / He built a large reservoir just outside Dehli-i-Kuhna.",
+    "cat": "gk",
+    "sub": "medieval"
+  },
+  {
+    "q": "मध्यकाल में मंदिर और मस्जिदें शासकों द्वारा अपनी शक्ति और धन के प्रदर्शन के अलावा और किसलिए बनाई जाती थीं?\nIn the medieval period, why were temples and mosques built besides displaying power and wealth?",
+    "o": ["केवल व्यापार के लिए", "ईश्वर के साथ अपने घनिष्ठ संबंध को दर्शाने के लिए (Demonstrate close relationship with God)", "सैनिकों के रहने के लिए", "केवल मनोरंजन के लिए"],
+    "a": 1,
+    "e": "शासक पूजा के स्थलों का निर्माण ईश्वर के साथ अपने संबंधों की घोषणा करने और लेजिटिमेसी पाने के लिए करते थे। / They were meant to demonstrate the ruler's close relationship with the divine.",
+    "cat": "gk",
+    "sub": "medieval"
+  },
+  {
+    "q": "9वीं शताब्दी के दौरान किस पाण्ड्य राजा ने श्रीलंका पर आक्रमण कर बुद्ध की स्वर्ण प्रतिमा छीन ली थी?\nWhich Pandya king invaded Sri Lanka and seized the golden statue of Buddha in the 9th century?",
+    "o": ["राजराजा प्रथम", "श्रीमारा श्रीवल्लभ (Shrimara Shrivallabha)", "सेना प्रथम", "विजयालय"],
+    "a": 1,
+    "e": "श्रीमारा श्रीवल्लभ ने श्रीलंका पर आक्रमण किया और वहाँ से बुद्ध की कीमती स्वर्ण प्रतिमा लूट ली थी। / Shrimara Shrivallabha invaded Sri Lanka and removed the golden statue of Buddha.",
+    "cat": "gk",
+    "sub": "medieval"
+  },
+  {
+    "q": "चोल राजा राजेंद्र प्रथम ने अपने द्वारा निर्मित शिव मंदिर को किन शासकों से लूटी गई मूर्तियों से भर दिया था?\nRajendra I filled his Shiva temple with statues seized from which defeated rulers?",
+    "o": ["चालुक्य, कलिंग और पाल (Chalukyas, Kalingas & Palas)", "केवल मुगल", "केवल राजपूत", "विदेशी आक्रमणकारी"],
+    "a": 0,
+    "e": "राजेंद्र प्रथम ने चालुक्यों से सूर्य-पीठिका, कलिंगों से नंदी और बंगाल के पालों से काली की मूर्तियाँ प्राप्त की थीं। / He filled the temple with seized statues from Chalukyas, Kalingas, and Palas.",
+    "cat": "gk",
+    "sub": "medieval"
+  },
+  {
+    "q": "मुगल सम्राट बाबर ने अपनी आत्मकथा में किस प्रकार के उद्यानों में अपनी रुचि का वर्णन किया है?\nIn his autobiography, Babur described his interest in which type of gardens?",
+    "o": ["जंगली उद्यान", "चारबाग (Chahar Bagh)", "केवल फूलों के बाग", "तैरते हुए बाग"],
+    "a": 1,
+    "e": "बाबर ने चार समान हिस्सों में बँटे 'चारबाग' उद्यानों की योजना और निर्माण में अपनी रुचि दिखाई थी। / Babur was interested in formally laid out gardens called Chahar Bagh.",
+    "cat": "gk",
+    "sub": "medieval"
+  },
+  {
+    "q": "मुगल वास्तुकला में 'पितरा-दूरा' (Pietra Dura) तकनीक का क्या अर्थ है?\nWhat does the 'Pietra Dura' technique mean in Mughal architecture?",
+    "o": ["लकड़ी पर नक्काशी", "संगमरमर पर रंगीन कीमती पत्थरों को जड़कर बनाया गया सुंदर डिज़ाइन (Inlaid patterns with colored stones on marble)", "दीवारों पर पेंटिंग", "छत पर शीशे लगाना"],
+    "a": 1,
+    "e": "शाहजहाँ के काल में संगमरमर या बलुआ पत्थर पर रंगीन पत्थरों को जड़कर 'पितरा-दूरा' के सुंदर नमूने बनाए गए। / It refers to colored stones placed in depressions carved into marble.",
+    "cat": "gk",
+    "sub": "medieval"
+  },
+  {
+    "q": "शाहजहाँ ने दिल्ली के लाल किले में अपने सिंहासन के पीछे किस ग्रीक देवता को वीणा बजाते हुए 'पितरा-दूरा' में चित्रित करवाया था?\nWhich Greek god is depicted in Pietra Dura behind Shah Jahan's throne in the Red Fort?",
+    "o": ["अपोलो", "ऑर्फ़ियस (Orpheus)", "ज़ीउस", "हर्कुलिस"],
+    "a": 1,
+    "e": "ग्रीक देवता ऑर्फ़ियस को वीणा बजाते हुए दिखाया गया था, जिसका संगीत हिंसक जानवरों को भी शांत कर देता था। / The Greek god Orpheus was depicted playing the lute.",
+    "cat": "gk",
+    "sub": "medieval"
+  },
+  {
+    "q": "मुगल शासकों द्वारा अपनाई गई 'रिवर-फ्रंट गार्डन' (River-Front Garden) शैली में मुख्य इमारत या निवास कहाँ स्थित होता था?\nIn the 'River-Front Garden' style, where was the main building located?",
+    "o": ["बाग के एकदम बीच में", "नदी के तट पर बाग के किनारे (Edge of the garden, close to the river bank)", "पहाड़ के ऊपर", "शहर के बाहर"],
+    "a": 1,
+    "e": "ताजमहल में शाहजहाँ ने चारबाग के बीच के बजाय नदी के तट पर मुख्य मकबरे का निर्माण करवाया था। / The dwelling was not in the middle of the Chahar Bagh but at its edge, close to the river.",
+    "cat": "gk",
+    "sub": "medieval"
+  },
+  {
+    "q": "शाहजहाँ ने अपनी नई राजधानी 'शाहजहाँनाबाद' में यमुना नदी के तट पर केवल किसे अपना घर बनाने की अनुमति दी थी?\nIn Shahjahanabad, who was allowed by Shah Jahan to build a home on the river bank?",
+    "o": ["सभी व्यापारियों को", "राजकुमार दारा शिकोह जैसे पसंदीदा कुलीनों को (Favoured nobles like Dara Shukoh)", "सभी नागरिकों को", "केवल हिंदू राजाओं को"],
+    "a": 1,
+    "e": "यमुना नदी के तट तक पहुँच केवल बादशाह और दारा शिकोह जैसे विशेष कुलीनों तक ही सीमित थी। / Only special nobles like Dara Shukoh were given access to the river.",
+    "cat": "gk",
+    "sub": "medieval"
+  },
+  {
+    "q": "बंगाल के स्थानीय शासकों द्वारा विकसित 'बाँध की झोपड़ी' वाली छत की शैली को मुगलों ने किस नाम से अपनाया?\nWhat name did the Mughals give to the roof style developed by local rulers in Bengal?",
+    "o": ["गुंबद", "बाँग्ला गुंबद (Bangla Dome)", "मेहराब", "मीनार"],
+    "a": 1,
+    "e": "मुगलों को बंगाल की 'बाँग्ला गुंबद' शैली इतनी पसंद आई कि उन्होंने इसे अपनी वास्तुकला में शामिल किया। / The Mughals liked the 'Bangla dome' so much that they used it in their architecture.",
+    "cat": "gk",
+    "sub": "medieval"
+  },
+  {
+    "q": "फ़तेहपुर सीकरी के 'जोधाबाई महल' की वास्तुकला पर किस क्षेत्र की वास्तुकला शैली का गहरा प्रभाव दिखता है?\nThe architecture of Jodh Bai's palace in Fatehpur Sikri shows influence from which region?",
+    "o": ["कश्मीर", "गुजरात (Gujarat)", "बंगाल", "दक्षिण भारत"],
+    "a": 1,
+    "e": "फ़तेहपुर सीकरी की कई इमारतों पर गुजरात और मालवा की वास्तुकला शैलियों का प्रभाव दिखाई देता है। / Many buildings show the influence of the architectural styles of Gujarat.",
+    "cat": "gk",
+    "sub": "medieval"
+  },
+  {
+    "q": "12वीं शताब्दी के दौरान फ्रांस में बने ऊँचे और हल्के चर्चों की शैली को क्या कहा जाता है?\nWhat is the style of tall and light churches built in France during the 12th century called?",
+    "o": ["द्रविड़ शैली", "गोथिक शैली (Gothic style)", "नगर शैली", "इस्लामिक शैली"],
+    "a": 1,
+    "e": "गोथिक शैली की विशेषता नुकीले मेहराब, रंगीन काँच का उपयोग और ऊँचे शिखर थे। / The Gothic style is characterized by high pointed arches and stained glass.",
+    "cat": "gk",
+    "sub": "medieval"
+  },
+  {
+    "q": "मध्यकाल में 'नगरम्' (Nagaram) शब्द का प्रयोग किसके लिए किया जाता था?\nFor what was the term 'Nagaram' used in the medieval period?",
+    "o": ["किसानों की बस्ती", "व्यापारियों के संघ (Associations of traders)", "पुजारियों की सभा", "राजा का रसोइया"],
+    "a": 1,
+    "e": "शहरों में व्यापारियों के संघों को 'नगरम्' कहा जाता था जो प्रशासनिक कार्य भी करते थे। / Associations of traders in towns were known as Nagaram.",
+    "cat": "gk",
+    "sub": "medieval"
+  },
+  {
+    "q": "मुगल काल में 'दीवान-ए-आम' और 'दीवान-ए-खास' का मुख्य प्रयोजन क्या था?\nWhat was the main purpose of 'Diwan-i-Aam' and 'Diwan-i-Khas' in the Mughal period?",
+    "o": ["केवल भोजन के लिए", "सार्वजनिक और निजी सभाओं के लिए (Public and private audiences)", "मस्जिद के लिए", "घोड़ों के अस्तबल के लिए"],
+    "a": 1,
+    "e": "ये विशेष रूप से बनाई गई सभाएँ थीं जहाँ बादशाह जनता और अपने खास मंत्रियों से मिलता था। / These were carefully planned halls for public and private audiences.",
+    "cat": "gk",
+    "sub": "medieval"
+  },
+  {
+    "q": "मुगल साम्राज्य की स्थापना 1526 में किसने की थी?\nWho founded the Mughal Empire in 1526?",
+    "o": ["हुमायूं", "अकबर", "बाबर (Babur)", "तैमूर"],
+    "a": 2,
+    "e": "बाबर ने 1526 में पानीपत के पहले युद्ध में इब्राहिम लोदी को हराकर मुगल साम्राज्य की नींव रखी थी। / Babur founded the Mughal Empire after defeating Ibrahim Lodi in 1526.",
+    "cat": "gk",
+    "sub": "medieval"
+  },
+  {
+    "q": "मुगल शासक अपनी माता की ओर से किसके वंशज थे?\nThe Mughals were descendants of whom from their mother's side?",
+    "o": ["तैमूर", "चंगेज खान (Genghis Khan)", "शेरशाह सूरी", "इब्राहिम लोदी"],
+    "a": 1,
+    "e": "मुगल अपनी माता की ओर से मंगोल शासक चंगेज खान के वंशज थे। / From their mother's side, they were descendants of Genghis Khan.",
+    "cat": "gk",
+    "sub": "medieval"
+  },
+  {
+    "q": "मुगल अपने पिता की ओर से किसके उत्तराधिकारी या वंशज माने जाते थे?\nFrom their father's side, the Mughals were the successors of?",
+    "o": ["चंगेज खान", "तैमूर (Timur)", "अकबर", "कुतुबुद्दीन ऐबक"],
+    "a": 1,
+    "e": "मुगल पिता की ओर से ईरान, इराक और आधुनिक तुर्की के शासक तैमूर के वंशज थे। / From their father's side, they were successors of Timur.",
+    "cat": "gk",
+    "sub": "medieval"
+  },
+  {
+    "q": "बाबर ने 1527 में खानवा के युद्ध में किसे पराजित किया था?\nWhom did Babur defeat in the Battle of Khanwa in 1527?",
+    "o": ["इब्राहिम लोदी", "राणा सांगा (Rana Sanga)", "मेदिनी राय", "हेमू"],
+    "a": 1,
+    "e": "बाबर ने 1527 में मेवाड़ के शासक राणा सांगा और उनके सहयोगियों को खानवा में हराया था। / Babur defeated Rana Sanga at Khanwa in 1527.",
+    "cat": "gk",
+    "sub": "medieval"
+  },
+  {
+    "q": "किस मुगल सम्राट को दो बार शासन करना पड़ा और बीच में उसे ईरान भागना पड़ा था?\nWhich Mughal emperor had to rule twice and flee to Iran in between?",
+    "o": ["बाबर", "हुमायूं (Humayun)", "जहांगीर", "शाहजहाँ"],
+    "a": 1,
+    "e": "शेरशाह सूरी से हारने के बाद हुमायूं को ईरान भागना पड़ा, जहाँ से लौटकर उसने 1555 में दोबारा दिल्ली जीती। / After being defeated by Sher Shah, Humayun fled to Iran but returned to recapture Delhi in 1555.",
+    "cat": "gk",
+    "sub": "medieval"
+  },
+  {
+    "q": "अकबर मात्र कितने वर्ष की आयु में सम्राट बना था?\nAt what age did Akbar become the emperor?",
+    "o": ["10 वर्ष", "13 वर्ष (13 years)", "18 वर्ष", "21 वर्ष"],
+    "a": 1,
+    "e": "हुमायूं की मृत्यु के बाद अकबर केवल 13 वर्ष की आयु में मुगल सम्राट बना। / Akbar became the emperor at the age of 13.",
+    "cat": "gk",
+    "sub": "medieval"
+  },
+  {
+    "q": "अकबर के शासनकाल के शुरुआती वर्षों में उसका संरक्षक (Regent) कौन था?\nWho was the regent of Akbar during the early years of his reign?",
+    "o": ["अब्दुल फजल", "बैरम खान (Bairam Khan)", "टोडरमल", "मानसिंह"],
+    "a": 1,
+    "e": "बैरम खान अकबर का संरक्षक था, जिसने उसे शासन की शुरुआती चुनौतियों से निपटने में मदद की। / Bairam Khan was Akbar's regent and protector.",
+    "cat": "gk",
+    "sub": "medieval"
+  },
+  {
+    "q": "मुगल प्रशासन में 'मनसब' (Mansab) शब्द का क्या अर्थ था?\nWhat did the term 'Mansab' mean in Mughal administration?",
+    "o": ["एक पद या रैंक (A position or rank)", "एक प्रकार का कर", "सोने का सिक्का", "धार्मिक गुरु"],
+    "a": 0,
+    "e": "मनसबदारों के पद, वेतन और सैन्य उत्तरदायित्व को निर्धारित करने के लिए 'मनसब' शब्द का प्रयोग होता था। / Mansab referred to a position or rank held by a Mughal official.",
+    "cat": "gk",
+    "sub": "medieval"
+  },
+  {
+    "q": "अकबर के राजस्व मंत्री टोडरमल ने कौन सी नई राजस्व प्रणाली शुरू की थी?\nWhich new revenue system was introduced by Akbar's revenue minister Todar Mal?",
+    "o": ["इक्ता प्रणाली", "जब्त (Zabt)", "स्थायी बंदोबस्त", "रैयतवाड़ी"],
+    "a": 1,
+    "e": "टोडरमल ने कृषि उत्पादन और कीमतों का 10 वर्षों का सर्वेक्षण कर 'जब्त' प्रणाली लागू की थी। / Todar Mal introduced the Zabt system based on crop surveys.",
+    "cat": "gk",
+    "sub": "medieval"
+  },
+  {
+    "q": "अकबर की जीवनी 'अकबर नामा' के लेखक कौन थे?\nWho was the author of Akbar's biography, 'Akbar Nama'?",
+    "o": ["फैजी", "बीरबल", "अबुल फजल (Abul Fazl)", "गुलबदन बेगम"],
+    "a": 2,
+    "e": "अकबर के मित्र और दरबारी अबुल फजल ने तीन खंडों में अकबर नामा लिखी थी। / Abul Fazl wrote the Akbar Nama, the biography of Emperor Akbar.",
+    "cat": "gk",
+    "sub": "medieval"
+  },
+  {
+    "q": "'आईने-अकबरी' (Ain-i-Akbari) अकबर नामा का कौन सा खंड (Volume) है?\n'Ain-i-Akbari' is which volume of the Akbar Nama?",
+    "o": ["पहला", "दूसरा", "तीसरा (Third)", "चौथा"],
+    "a": 2,
+    "e": "अकबर नामा के तीसरे खंड को आईने-अकबरी कहा जाता है, जो प्रशासन और सांख्यिकीय विवरण से संबंधित है। / The third volume of Akbar Nama is called Ain-i-Akbari.",
+    "cat": "gk",
+    "sub": "medieval"
+  },
+  {
+    "q": "मुगल साम्राज्य में प्रांतों (Provinces) को क्या कहा जाता था?\nWhat were the provinces called in the Mughal Empire?",
+    "o": ["परगना", "सबा (Subas)", "ग्राम", "इक्ता"],
+    "a": 1,
+    "e": "मुगल साम्राज्य कई प्रांतों में बँटा था जिन्हें 'सूबा' कहा जाता था और इनका प्रमुख 'सूबेदार' कहलाता था। / Provinces were called Subas and were headed by a Subadar.",
+    "cat": "gk",
+    "sub": "medieval"
+  },
+  {
+    "q": "अकबर द्वारा शुरू किए गए 'सुलह-ए-कुल' (Sulh-i-kul) के विचार का क्या अर्थ था?\nWhat was the meaning of the idea of 'Sulh-i-kul' introduced by Akbar?",
+    "o": ["युद्ध की नीति", "सार्वभौमिक शांति (Universal Peace)", "कर संग्रह", "सैन्य गठबंधन"],
+    "a": 1,
+    "e": "सुलह-ए-कुल का अर्थ था सार्वभौमिक शांति और सहिष्णुता, जहाँ धर्म के आधार पर भेदभाव नहीं होता था। / Sulh-i-kul meant universal peace and religious tolerance.",
+    "cat": "gk",
+    "sub": "medieval"
+  },
+  {
+    "q": "मुगल प्रशासन में 'दीवान' (Diwan) किस विभाग का प्रमुख अधिकारी होता था?\nIn Mughal administration, 'Diwan' was the head of which department?",
+    "o": ["सैन्य विभाग", "वित्तीय विभाग (Financial/Revenue)", "धार्मिक विभाग", "नगर पुलिस"],
+    "a": 1,
+    "e": "प्रांतीय प्रशासन में वित्तीय प्रबंधन का काम 'दीवान' नामक अधिकारी द्वारा किया जाता था। / The Diwan was the financial officer of the province.",
+    "cat": "gk",
+    "sub": "medieval"
+  },
+  {
+    "q": "शाहजहाँ को उसके अंतिम दिनों में कहाँ कैद कर दिया गया था?\nWhere was Shah Jahan imprisoned during his final days?",
+    "o": ["लाल किला, दिल्ली", "आगरा (Agra)", "ग्वालियर", "लाहौर"],
+    "a": 1,
+    "e": "औरंगजेब ने अपने पिता शाहजहाँ को आगरा के किले में कैद कर दिया था। / Aurangzeb imprisoned his father Shah Jahan in Agra.",
+    "cat": "gk",
+    "sub": "medieval"
+  },
+  {
+    "q": "जहांगीर की पत्नी 'मेहरून्निसा' को किस उपाधि से सम्मानित किया गया था?\nJahangir's wife 'Mehrunnisa' was honored with which title?",
+    "o": ["मुमताज महल", "नूरजहाँ (Nur Jahan)", "मरियम-उज़-ज़मानी", "ज़ीनत महल"],
+    "a": 1,
+    "e": "जहांगीर ने मेहरून्निसा से विवाह के बाद उसे 'नूरजहाँ' (दुनिया की रोशनी) का खिताब दिया था। / Mehrunnisa was given the title Nur Jahan by Jahangir.",
+    "cat": "gk",
+    "sub": "medieval"
+  },
+  {
+    "q": "मुगल काल में 'कोतवाल' (Kotwal) का मुख्य कार्य क्या था?\nWhat was the main function of the 'Kotwal' during the Mughal period?",
+    "o": ["कर वसूलना", "नगर पुलिस कमांडर (Town police commander)", "यज्ञ करना", "खेती का निरीक्षण"],
+    "a": 1,
+    "e": "कोतवाल शहर में कानून और व्यवस्था बनाए रखने वाला पुलिस अधिकारी होता था। / The Kotwal was the town police commander.",
+    "cat": "gk",
+    "sub": "medieval"
+  },
+  {
+    "q": "अकबर ने विभिन्न धर्मों के विद्वानों के साथ चर्चा करने के लिए किस स्थान का निर्माण करवाया था?\nWhich place did Akbar build to hold discussions with scholars of different religions?",
+    "o": ["पंच महल", "इबादत खाना (Ibadat Khana)", "दीवाने-आम", "बुलंद दरवाजा"],
+    "a": 1,
+    "e": "फतेहपुर सीकरी में अकबर ने इबादत खाना बनवाया जहाँ वह धार्मिक और सामाजिक विषयों पर चर्चा करता था। / Akbar built the Ibadat Khana at Fatehpur Sikri for religious discussions.",
+    "cat": "gk",
+    "sub": "medieval"
+  },
+  {
+    "q": "औरंगजेब ने किस क्षेत्र के राजा 'शिवाजी' का अपमान किया था, जिसके बाद उन्होंने मुगलों के खिलाफ संघर्ष किया?\nAurangzeb insulted which ruler, leading him to struggle against the Mughals?",
+    "o": ["राणा प्रताप", "शिवाजी (Shivaji)", "राजा सूरजमल", "अमर सिंह"],
+    "a": 1,
+    "e": "औरंगजेब द्वारा शिवाजी महाराज के अपमान के बाद, मराठों ने मुगलों के खिलाफ छापामार (Guerilla) युद्ध शुरू किया। / After being insulted by Aurangzeb, Shivaji led the Maratha struggle against the Mughals.",
+    "cat": "gk",
+    "sub": "medieval"
+  },
+  {
+    "q": "मुगल काल में 'बख्शी' (Bakshi) नामक अधिकारी का क्या उत्तरदायित्व था?\nWhat was the responsibility of the official named 'Bakshi' in the Mughal period?",
+    "o": ["न्याय देना", "सैनिक वेतन अधिकारी (Military paymaster)", "मंदिरों की देखरेख", "शाही रसोइया"],
+    "a": 1,
+    "e": "बख्शी सैन्य प्रशासन में सैनिकों के वेतन और रिकॉर्ड का प्रबंधन करता था। / The Bakshi was the military paymaster.",
+    "cat": "gk",
+    "sub": "medieval"
+  },
+  {
+    "q": "दिल्ली पहली बार किस राजवंश के शासनकाल में साम्राज्य की राजधानी बनी?\nUnder which dynasty did Delhi first become the capital of a kingdom?",
+    "o": ["चौहान वंश", "तोमर राजपूत (Tomar Rajputs)", "गुलाम वंश", "तुगलक वंश"],
+    "a": 1,
+    "e": "12वीं शताब्दी के मध्य में तोमर राजपूतों (अनंगपाल) के काल में दिल्ली पहली बार राजधानी बनी। / Delhi first became a capital under the Tomar Rajputs.",
+    "cat": "gk",
+    "sub": "medieval"
+  },
+  {
+    "q": "तोमर राजपूतों को 12वीं शताब्दी के मध्य में किसने पराजित कर दिल्ली पर अधिकार किया था?\nWho defeated the Tomars in the mid-12th century to capture Delhi?",
+    "o": ["कुतुबुद्दीन ऐबक", "अजमेर के चौहानों ने (Chauhans of Ajmer)", "महमूद गजनी", "इल्तुतमिश"],
+    "a": 1,
+    "e": "अजमेर के चौहानों (जिन्हें चाहमान भी कहा जाता है) ने तोमर राजपूतों को हराकर दिल्ली पर कब्जा किया था। / The Chauhans of Ajmer defeated the Tomars.",
+    "cat": "gk",
+    "sub": "medieval"
+  },
+  {
+    "q": "दिल्ली सल्तनत के सुल्तानों के शासनकाल में प्रशासन की भाषा कौन सी थी?\nWhat was the language of administration under the Delhi Sultanate?",
+    "o": ["अरबी", "उर्दू", "फारसी (Persian)", "हिन्दी"],
+    "a": 2,
+    "e": "दिल्ली सल्तनत की आधिकारिक और प्रशासनिक भाषा फारसी (पर्शियन) थी। / Persian was the administrative language of the Delhi Sultanate.",
+    "cat": "gk",
+    "sub": "medieval"
+  },
+  {
+    "q": "इतिहास में 'तवारीख' (Tawarikh) शब्द का प्रयोग किसके लिए किया जाता था?\nWhat did the term 'Tawarikh' refer to in history?",
+    "o": ["सिक्के", "लिखित इतिहास/वृत्तांत (Written Histories)", "एक प्रकार का कर", "सैनिक छावनी"],
+    "a": 1,
+    "e": "पढ़े-लिखे सचिवों और दरबारियों द्वारा फारसी में लिखे गए इतिहास को 'तवारीख' कहा जाता था। / Tawarikh were written histories composed in Persian by learned men.",
+    "cat": "gk",
+    "sub": "medieval"
+  },
+  {
+    "q": "सन् 1236 में दिल्ली की सुल्तान बनने वाली रजिया सुल्तान किसकी पुत्री थी?\nWhose daughter was Raziyya Sultan, who became the Sultan of Delhi in 1236?",
+    "o": ["कुतुबुद्दीन ऐबक", "इल्तुतमिश (Iltutmish)", "गयासुद्दीन बलबन", "अलाउद्दीन खिलजी"],
+    "a": 1,
+    "e": "रजिया सुल्तान इल्तुतमिश की पुत्री थी और अपने भाइयों से अधिक सक्षम होने के कारण सुल्तान बनी। / Raziyya was the daughter of Sultan Iltutmish.",
+    "cat": "gk",
+    "sub": "medieval"
+  },
+  {
+    "q": "इतिहासकार मिन्हाज-ए-सिराज ने रजिया सुल्तान के बारे में क्या विचार व्यक्त किए थे?\nWhat were the views of chronicler Minhaj-i-Siraj about Raziyya Sultan?",
+    "o": ["वह पूरी तरह अयोग्य थी", "वह अपने भाइयों से अधिक योग्य थी, पर रानी के रूप में स्वीकार्य नहीं (More capable but not accepted as queen)", "वह एक महान सेनापति थी", "उसे राजनीति का ज्ञान नहीं था"],
+    "a": 1,
+    "e": "मिन्हाज ने स्वीकार किया कि वह योग्य थी, लेकिन उस समय के सामाजिक 'ईश्वरीय व्यवस्था' के अनुसार एक महिला का शासक होना स्वीकार नहीं किया गया। / Minhaj-i-Siraj thought she was more capable than her brothers but not acceptable as a female ruler.",
+    "cat": "gk",
+    "sub": "medieval"
+  },
+  {
+    "q": "दिल्ली सल्तनत में 'गैरिसन टाउन' (Garrison Town) का क्या अर्थ था?\nWhat was the meaning of 'Garrison Town' in the Delhi Sultanate?",
+    "o": ["व्यापारिक केंद्र", "किलेबंद बसावट जहाँ सैनिक रहते थे (Fortified settlement with soldiers)", "विदेशी यात्रियों के रुकने की जगह", "अनाज का गोदाम"],
+    "a": 1,
+    "e": "गैरिसन टाउन उन किलेबंद शहरों को कहा जाता था जहाँ सुल्तान की सेना और सैनिक टुकड़ियाँ रहती थीं। / Garrison towns were fortified settlements where soldiers lived.",
+    "cat": "gk",
+    "sub": "medieval"
+  },
+  {
+    "q": "दिल्ली सल्तनत के आरंभिक काल में 'हिंटरलैंड' (Hinterland) शब्द किसके लिए प्रयुक्त होता था?\nFor what was the term 'Hinterland' used in the early Delhi Sultanate?",
+    "o": ["पहाड़ी क्षेत्र", "शहर के आसपास का वह क्षेत्र जो उसे वस्तुओं की आपूर्ति करता था (Area adjacent to a city supplying goods)", "किले के भीतर का हिस्सा", "दुश्मन का इलाका"],
+    "a": 1,
+    "e": "हिंटरलैंड या 'भीतरी प्रदेश' उस क्षेत्र को कहते थे जो शहर को वस्तुओं और सेवाओं की आपूर्ति करता था। / Hinterland refers to the land adjacent to a city that supplies it with goods and services.",
+    "cat": "gk",
+    "sub": "medieval"
+  },
+  {
+    "q": "इल्तुतमिश ने विश्वसनीय गवर्नर और प्रशासक बनाने के लिए किन लोगों को प्राथमिकता दी थी?\nWhom did Iltutmish prefer for reliable governors and administrators?",
+    "o": ["राजपूत राजाओं को", "सामंतों को", "विशेष रूप से प्रशिक्षित गुलामों को (Specialized Slaves/Bandagan)", "विदेशी व्यापारियों को"],
+    "a": 2,
+    "e": "इल्तुतमिश ने उच्च पदों के लिए कुलीनों के बजाय 'बंदगां' (विशेष गुलामों) को चुना क्योंकि वे पूरी तरह सुल्तान पर निर्भर और वफादार थे। / He preferred special slaves called Bandagan for high offices.",
+    "cat": "gk",
+    "sub": "medieval"
+  },
+  {
+    "q": "दिल्ली सल्तनत में सैन्य कमांडरों को दी जाने वाली ज़मीन को क्या कहा जाता था?\nWhat was the land granted to military commanders in the Delhi Sultanate called?",
+    "o": ["खराज", "इक्ता (Iqta)", "ज़कात", "जागीर"],
+    "a": 1,
+    "e": "सैनिक कमांडरों को दी गई भूमि 'इक्ता' कहलाती थी और इसे धारण करने वाला 'इक्तादार' या 'मुक्ति' कहलाता था। / The land was called Iqta and the holder was called Iqtadar or Muqti.",
+    "cat": "gk",
+    "sub": "medieval"
+  },
+  {
+    "q": "इक्तादार या 'मुक्ति' (Muqti) का मुख्य कर्तव्य क्या था?\nWhat was the primary duty of the Iqtadar or Muqti?",
+    "o": ["केवल खेती करना", "सैन्य अभियानों का नेतृत्व और कानून-व्यवस्था बनाए रखना (Military campaigns & Law and order)", "धर्म का प्रचार करना", "सिक्के ढालना"],
+    "a": 1,
+    "e": "मुक्ति का कर्तव्य सैन्य अभियानों का नेतृत्व करना और अपने इक्ता में कानून-व्यवस्था बनाए रखना था। / Their duty was to lead military campaigns and maintain law and order in their iqtas.",
+    "cat": "gk",
+    "sub": "medieval"
+  },
+  {
+    "q": "अलाउद्दीन खिलजी के शासनकाल में कृषि पर लगाए जाने वाले कर 'खराज' की दर क्या थी?\nWhat was the rate of 'Khiraj', the crop tax, during Alauddin Khalji's reign?",
+    "o": ["उपज का 25%", "उपज का 50% (50% of the produce)", "उपज का 10%", "उपज का 75%"],
+    "a": 1,
+    "e": "अलाउद्दीन ने खेती पर कर बढ़ा दिया था, जो किसान की कुल उपज का 50% लिया जाता था। / Khiraj was fixed at 50% of the peasant’s produce.",
+    "cat": "gk",
+    "sub": "medieval"
+  },
+  {
+    "q": "अलाउद्दीन खिलजी और मोहम्मद तुगलक के समय में भारत पर आक्रमण करने वाले मंगोल नेता कौन थे?\nWho was the Mongol leader whose armies invaded India during the reigns of Khalji and Tughluq?",
+    "o": ["बाबर", "चंगेज खान (Genghis Khan)", "तैमूर लंग", "हुलागु खान"],
+    "a": 1,
+    "e": "चंगेज खान के नेतृत्व में मंगोलों ने ट्रांसऑक्सियाना पर हमला किया और बाद में दिल्ली सल्तनत को बार-बार निशाना बनाया। / Mongols under Genghis Khan invaded the Delhi Sultanate.",
+    "cat": "gk",
+    "sub": "medieval"
+  },
+  {
+    "q": "मंगोल आक्रमणों से सुरक्षा के लिए अलाउद्दीन खिलजी ने दिल्ली में कौन सा नया गैरिसन टाउन (शहर) बसाया था?\nWhich new garrison town did Alauddin Khalji build in Delhi for protection against Mongol attacks?",
+    "o": ["दौलताबाद", "सीरी (Siri)", "तुगलकाबाद", "जहाँपनाह"],
+    "a": 1,
+    "e": "अलाउद्दीन खिलजी ने अपने सैनिकों के लिए 'सीरी' नामक एक नया सैन्य शहर या गैरिसन टाउन बनाया था। / He constructed a new garrison town named Siri for his soldiers.",
+    "cat": "gk",
+    "sub": "medieval"
+  },
+  {
+    "q": "किस सुल्तान ने दिल्ली के निवासियों को जबरन दक्षिण भारत की नई राजधानी 'दौलताबाद' स्थानांतरित किया था?\nWhich Sultan forcibly moved the residents of Delhi to the new capital 'Daulatabad' in the south?",
+    "o": ["बलबन", "अलाउद्दीन खिलजी", "मुहम्मद तुगलक (Muhammad Tughluq)", "फिरोजशाह तुगलक"],
+    "a": 2,
+    "e": "मुहम्मद तुगलक ने राजधानी को दिल्ली से दौलताबाद शिफ्ट किया, जिससे लोगों को भारी परेशानी हुई। / Muhammad Tughluq ordered the people of Delhi to move to Daulatabad.",
+    "cat": "gk",
+    "sub": "medieval"
+  },
+  {
+    "q": "मुहम्मद तुगलक द्वारा शुरू की गई 'टोकन करेंसी' (सांकेतिक मुद्रा) असफल क्यों रही?\nWhy did the 'Token Currency' introduced by Muhammad Tughluq fail?",
+    "o": ["सिक्के बहुत भारी थे", "सिक्के बहुत कीमती धातु के थे", "सिक्कों की नकल (नकली सिक्के) बनाना बहुत आसान था (Easily counterfeited)", "लोगों ने व्यापार बंद कर दिया"],
+    "a": 2,
+    "e": "यह मुद्रा सस्ते धातुओं से बनी थी जिसे लोगों ने अपने घरों में ही नकली तरीके से ढालना शुरू कर दिया था। / It was made of cheap metals and people easily made counterfeit coins at home.",
+    "cat": "gk",
+    "sub": "medieval"
+  },
+  {
+    "q": "इतिहासकार 'सर्कल ऑफ जस्टिस' (न्याय चक्र) का संबंध किससे मानते हैं?\nWhat do historians refer to as the 'Circle of Justice'?",
+    "o": ["केवल न्यायालय की व्यवस्था", "राजा, सैनिक, कर और किसान के बीच का अंतर्संबंध (Interdependence between King, Soldier, Tax & Peasant)", "सैनिकों का घेरा", "जेल की व्यवस्था"],
+    "a": 1,
+    "e": "राजा सैनिकों के बिना नहीं रह सकता, सैनिक वेतन (टैक्स) के बिना नहीं, और टैक्स किसानों के बिना नहीं मिल सकता। यह चक्र न्याय पर टिका है। / The interdependence between the King, soldiers, and peasants is the Circle of Justice.",
+    "cat": "gk",
+    "sub": "medieval"
+  },
+  {
+    "q": "15वीं शताब्दी में शेरशाह सूरी ने किस मुगल सम्राट को हराकर दिल्ली पर अधिकार किया था?\nWhich Mughal Emperor was defeated by Sher Shah Suri in the 15th century to capture Delhi?",
+    "o": ["बाबर", "हुमायूं (Humayun)", "अकबर", "जहांगीर"],
+    "a": 1,
+    "e": "शेरशाह सूरी ने हुमायूं को हराकर बिहार और दिल्ली पर सूर राजवंश की स्थापना की थी। / Sher Shah Suri defeated the Mughal Emperor Humayun.",
+    "cat": "gk",
+    "sub": "medieval"
+  },
+  {
+    "q": "शेरशाह सूरी के प्रशासन का वह कौन सा मॉडल था जिसे बाद में सम्राट अकबर ने अपनाया था?\nWhich model of Sher Shah Suri's administration was later adopted by Emperor Akbar?",
+    "o": ["धार्मिक नीति", "राजस्व और प्रशासनिक व्यवस्था (Revenue and Administrative system)", "विवाह नीति", "केवल सैन्य संगठन"],
+    "a": 1,
+    "e": "शेरशाह ने अलाउद्दीन खिलजी की नीतियों को और बेहतर बनाया, जिसे बाद में अकबर ने मुगल साम्राज्य के लिए आधार बनाया। / Akbar followed Sher Shah’s administrative model.",
+    "cat": "gk",
+    "sub": "medieval"
+  },
+  {
+    "q": "प्रसिद्ध मोरक्कन यात्री इब्न बतूता ने दिल्ली सल्तनत के बारे में किस पक्ष का विस्तृत वर्णन किया है?\nThe famous Moroccan traveler Ibn Battuta described which aspect of the Delhi Sultanate in detail?",
+    "o": ["केवल युद्ध", "स्थानीय सरदारों और किलाबंदी का (Local Chieftains and Fortifications)", "केवल धर्म", "विदेशी व्यापार"],
+    "a": 1,
+    "e": "इब्न बतूता ने बताया कि कैसे स्थानीय सरदार पहाड़ों और बाँस के जंगलों में खुद को सुरक्षित रखते थे। / Ibn Battuta explained how local chieftains fortified themselves in mountains and forests.",
+    "cat": "gk",
+    "sub": "medieval"
+  },
+  {
+    "q": "सातवीं शताब्दी के दौरान बड़े भूस्वामियों या योद्धा सरदारों को राजाओं द्वारा किस रूप में मान्यता दी गई थी?\nDuring the 7th century, large landowners or warrior chiefs were acknowledged as what by kings?",
+    "o": ["महाराजा", "सामंत (Samantas)", "अमात्य", "पहलवान"],
+    "a": 1,
+    "e": "राजा इन सरदारों को अपना 'सामंत' मानते थे, जिनसे उम्मीद की जाती थी कि वे राजा के लिए उपहार लाएँ और सैन्य सहायता प्रदान करें। / Kings acknowledged them as Samantas, expecting gifts and military support.",
+    "cat": "gk",
+    "sub": "medieval"
+  },
+  {
+    "q": "राष्ट्रकूट वंश के किस शासक ने अपने चालुक्य स्वामी की अधीनता से इनकार कर दिया और 'हिरण्य-गर्भ' नामक अनुष्ठान किया?\nWhich Rashtrakuta ruler overthrew his Chalukya overlord and performed the 'Hiranya-Garbha' ritual?",
+    "o": ["कृष्ण प्रथम", "दंतिदुर्ग (Dantidurga)", "अमोघवर्ष", "गोविंद तृतीय"],
+    "a": 1,
+    "e": "दंतिदुर्ग ने 8वीं सदी के मध्य में चालुक्यों को हराकर राष्ट्रकूट राजवंश की नींव रखी और स्वयं को क्षत्रिय घोषित करने के लिए हिरण्य-गर्भ अनुष्ठान किया। / Dantidurga overthrew the Chalukyas and performed the Hiranya-Garbha ritual.",
+    "cat": "gk",
+    "sub": "medieval"
+  },
+  {
+    "q": "'हिरण्य-गर्भ' (Hiranya-Garbha) अनुष्ठान का शाब्दिक अर्थ क्या है?\nWhat is the literal meaning of the 'Hiranya-Garbha' ritual?",
+    "o": ["पवित्र जल", "सोने का गर्भ (Golden Womb)", "विजय का रथ", "अश्वमेध"],
+    "a": 1,
+    "e": "हिरण्य-गर्भ का अर्थ है 'सोने का गर्भ'। माना जाता था कि इसे करने से गैर-क्षत्रिय जन्म लेने वाला व्यक्ति भी क्षत्रिय बन जाता था। / It means Golden Womb, used to attain Kshatriya status through rebirth.",
+    "cat": "gk",
+    "sub": "medieval"
+  },
+  {
+    "q": "कदम्ब मयूरशर्मन और गुर्जर-प्रतिहार हरिश्चंद्र ने अपना पारंपरिक पेशा छोड़कर क्या अपनाया?\nWhat did Kadamba Mayurasharman and Gurjara-Pratihara Harichandra adopt after leaving their traditional profession?",
+    "o": ["व्यापार", "शस्त्र या हथियार उठाना (Took to arms)", "कृषि", "मूर्तिकला"],
+    "a": 1,
+    "e": "ये दोनों मूल रूप से ब्राह्मण थे, लेकिन इन्होंने कर्नाटक और राजस्थान में अपने राज्य स्थापित करने के लिए शस्त्र अपनाए। / Originally Brahmins, they took to arms to establish kingdoms in Karnataka and Rajasthan.",
+    "cat": "gk",
+    "sub": "medieval"
+  },
+  {
+    "q": "मध्यकाल में राजाओं द्वारा धारण की गई उच्च ध्वनि वाली उपाधि 'महाराजाधिराज' का क्या अर्थ है?\nWhat does the high-sounding title 'Maharajadhiraja' mean?",
+    "o": ["तीनों लोकों का स्वामी", "राजाओं का राजा (Great king, overlord of kings)", "धर्म का रक्षक", "परमेश्वर"],
+    "a": 1,
+    "e": "महाराजाधिराज का अर्थ है महान राजा या राजाओं का अधिराज। / It means a great king or the overlord of kings.",
+    "cat": "gk",
+    "sub": "medieval"
+  },
+  {
+    "q": "चोल शिलालेखों में वर्णित 400 से अधिक करों (taxes) में सबसे अधिक उल्लेखित 'वेट्टि' (Vetti) कर किस रूप में लिया जाता था?\nIn Chola inscriptions, how was the most frequently mentioned tax 'Vetti' collected?",
+    "o": ["नकद रूप में", "जबरन श्रम के रूप में (Forced labour)", "अनाज के रूप में", "सोने के रूप में"],
+    "a": 1,
+    "e": "'वेट्टि' कर नकद के बजाय जबरन श्रम के रूप में लिया जाता था। / Vetti was taken in the form of forced labour rather than cash.",
+    "cat": "gk",
+    "sub": "medieval"
+  },
+  {
+    "q": "ग्वालियर (मध्य प्रदेश) से प्राप्त प्रशस्ति में किस गुर्जर-प्रतिहार शासक की उपलब्धियों का वर्णन मिलता है?\nWhich Gurjara-Pratihara ruler's achievements are described in a Prashasti found in Gwalior?",
+    "o": ["वत्सराज", "नागभट्ट (Nagabhata)", "मिहिर भोज", "महेंद्रपाल"],
+    "a": 1,
+    "e": "ग्वालियर प्रशस्ति नागभट्ट प्रथम के सैन्य अभियानों और जीतों का संस्कृत में वर्णन करती है। / The Gwalior Prashasti describes the military victories of Nagabhata.",
+    "cat": "gk",
+    "sub": "medieval"
+  },
+  {
+    "q": "कश्मीर के राजाओं का इतिहास बताने वाली प्रसिद्ध संस्कृत कविता 'राजतरंगिणी' के लेखक कौन थे?\nWho was the author of the famous Sanskrit poem describing the history of Kashmiri kings?",
+    "o": ["बिल्हण", "कल्हण (Kalhana)", "बाणभट्ट", "चाणक्य"],
+    "a": 1,
+    "e": "कल्हण ने 12वीं शताब्दी में कश्मीर के शासकों का वृत्तांत लिखा, जिसमें उन्होंने शिलालेखों और सिक्कों का वैज्ञानिक अध्ययन किया। / Kalhana wrote the history of Kashmiri kings using scientific sources.",
+    "cat": "gk",
+    "sub": "medieval"
+  },
+  {
+    "q": "गंगा घाटी में स्थित 'कन्नौज' शहर पर नियंत्रण के लिए किन तीन पक्षों के बीच 'त्रिपक्षीय संघर्ष' (Tripartite Struggle) हुआ?\nWhich three parties were involved in the 'Tripartite Struggle' for control over Kanauj?",
+    "o": ["चोल, चेर, पाण्ड्य", "गुर्जर-प्रतिहार, राष्ट्रकूट और पाल (Gurjara-Pratihara, Rashtrakuta & Pala)", "मौर्य, गुप्त, कुषाण", "मुगल, मराठा, सिख"],
+    "a": 1,
+    "e": "कन्नौज पर नियंत्रण के लिए ये तीन राजवंश सदियों तक आपस में लड़ते रहे। / These three dynasties fought for centuries over the city of Kanauj.",
+    "cat": "gk",
+    "sub": "medieval"
+  },
+  {
+    "q": "अफगानिस्तान के सुल्तान महमूद गजनी ने भारत के किस प्रसिद्ध मंदिर पर 17 बार आक्रमण कर उसकी संपत्ति लूटी?\nSultan Mahmud of Ghazni attacked which famous Indian temple 17 times to loot its wealth?",
+    "o": ["कोणार्क मंदिर", "सोमनाथ मंदिर (Somnath temple)", "खजुराहो मंदिर", "मीनाक्षी मंदिर"],
+    "a": 1,
+    "e": "महमूद गजनी ने गुजरात के समृद्ध सोमनाथ मंदिर को निशाना बनाया और लूटी हुई संपत्ति से गजनी शहर को सजाया। / He targeted the wealthy Somnath temple in Gujarat.",
+    "cat": "gk",
+    "sub": "medieval"
+  },
+  {
+    "q": "महमूद गजनी ने किस विद्वान को उपमहाद्वीप का लेखा-जोखा लिखने का काम सौंपा था, जिसने 'किताब-उल-हिंद' लिखी?\nWhich scholar was commissioned by Mahmud Ghazni to write 'Kitab-al-Hind'?",
+    "o": ["इब्न बतूता", "अल-बिरूनी (Al-Biruni)", "अमीर खुसरो", "फ़िरदौसी"],
+    "a": 1,
+    "e": "अल-बिरूनी ने अरबी भाषा में 'किताब-उल-हिंद' लिखी, जो आज भी इतिहासकारों के लिए एक महत्वपूर्ण स्रोत है। / Al-Biruni wrote 'Kitab-al-Hind' in Arabic.",
+    "cat": "gk",
+    "sub": "medieval"
+  },
+  {
+    "q": "तराइन के युद्ध (1191 और 1192) में पृथ्वीराज तृतीय का मुकाबला किस अफगान शासक से हुआ था?\nIn the Battles of Tarain, Prithviraj III faced which Afghan ruler?",
+    "o": ["महमूद गजनी", "मुहम्मद गोरी (Muhammad Ghori)", "चंगेज खान", "बाबर"],
+    "a": 1,
+    "e": "1191 में पृथ्वीराज जीते, लेकिन 1192 में मुहम्मद गोरी ने उन्हें हरा दिया। / Muhammad Ghori defeated Prithviraj III in the second battle of Tarain in 1192.",
+    "cat": "gk",
+    "sub": "medieval"
+  },
+  {
+    "q": "उरैयूर के प्राचीन चोल परिवार के 'विजयालय' ने 9वीं सदी के मध्य में मुत्तरैयार को हराकर किस शहर पर कब्जा किया?\nVijayalaya of the ancient Chola family captured which city by defeating the Muttaraiyar?",
+    "o": ["मदुरै", "तंजावुर (Thanjavur)", "कांचीपुरम", "मैसूर"],
+    "a": 1,
+    "e": "विजयालय ने कावेरी डेल्टा में तंजावुर शहर बसाया और वहाँ निशुंभसूदिनी देवी का मंदिर बनवाया। / Vijayalaya captured Thanjavur and established the Chola power.",
+    "cat": "gk",
+    "sub": "medieval"
+  },
+  {
+    "q": "चोल वंश का सबसे शक्तिशाली शासक किसे माना जाता है, जो 985 ईस्वी में राजा बना?\nWho is considered the most powerful Chola ruler, who became king in 985 AD?",
+    "o": ["विजयालय", "राजराजा प्रथम (Rajaraja I)", "राजेंद्र प्रथम", "आदित्य प्रथम"],
+    "a": 1,
+    "e": "राजराजा प्रथम ने चोल प्रशासन को पुनर्गठित किया और साम्राज्य का विस्तार किया। / Rajaraja I is considered the greatest Chola king.",
+    "cat": "gk",
+    "sub": "medieval"
+  },
+  {
+    "q": "चोल शासक राजेंद्र प्रथम ने गंगा घाटी, श्रीलंका और दक्षिण-पूर्व एशिया के देशों पर विजय के बाद कौन सी नौसेना विकसित की थी?\nWhich force did Rajendra I develop for his expeditions to the Ganges valley and SE Asia?",
+    "o": ["वायु सेना", "नौसेना (Navy)", "हाथी सेना", "घुड़सवार सेना"],
+    "a": 1,
+    "e": "राजेंद्र प्रथम ने अपनी विजय यात्राओं के लिए एक शक्तिशाली नौसेना तैयार की थी। / Rajendra I developed a powerful navy for overseas expeditions.",
+    "cat": "gk",
+    "sub": "medieval"
+  },
+  {
+    "q": "चोल काल के मंदिर केवल पूजा के स्थान नहीं थे, बल्कि वे किस चीज के केंद्र भी थे?\nChola temples were not just places of worship but also centers of what?",
+    "o": ["केवल युद्ध प्रशिक्षण", "आर्थिक, सामाजिक और सांस्कृतिक जीवन (Economic, social & cultural life)", "केवल कृषि", "विदेशी व्यापार"],
+    "a": 1,
+    "e": "मंदिरों के साथ शिल्प उत्पादन और बस्तियाँ जुड़ी हुई थीं, जो उन्हें सामाजिक और आर्थिक गतिविधियों का केंद्र बनाती थीं। / Temples were the nuclei of settlements and social-economic hubs.",
+    "cat": "gk",
+    "sub": "medieval"
+  },
+  {
+    "q": "चोल प्रशासन में किसानों की बस्तियों को क्या कहा जाता था?\nWhat were the settlements of peasants called in Chola administration?",
+    "o": ["नाडु", "उर (Ur)", "सभा", "ब्रह्मदेय"],
+    "a": 1,
+    "e": "किसानों की बस्तियों को 'उर' कहा जाता था, जो सिंचाई वाली खेती के कारण समृद्ध हो गई थीं। / Peasants' settlements were called Ur.",
+    "cat": "gk",
+    "sub": "medieval"
+  },
+  {
+    "q": "चोल काल में गाँवों के समूह को क्या कहा जाता था, जो न्याय करने और कर वसूलने जैसे कार्य करते थे?\nWhat were the groups of villages called in the Chola period?",
+    "o": ["नगरम्", "नाडु (Nadu)", "मण्डल", "पट्टिनम"],
+    "a": 1,
+    "e": "गाँवों के समूह को 'नाडु' कहा जाता था, जिसके पास प्रशासनिक और न्यायिक शक्तियाँ थीं। / Groups of villages were known as Nadu.",
+    "cat": "gk",
+    "sub": "medieval"
+  },
+  {
+    "q": "चोल अभिलेखों के अनुसार 'शालाभोग' (Shalabhoga) किस प्रकार की भूमि को कहा जाता था?\nAccording to Chola inscriptions, what kind of land was called 'Shalabhoga'?",
+    "o": ["मंदिर को दान दी गई भूमि", "स्कूल के रखरखाव के लिए भूमि (Land for maintenance of a school)", "ब्राह्मणों को दान दी गई भूमि", "गैर-ब्राह्मणों की भूमि"],
+    "a": 1,
+    "e": "'शालाभोग' विद्यालय के रख-रखाव के लिए दी गई भूमि थी। / Shalabhoga was land granted for school maintenance.",
+    "cat": "gk",
+    "sub": "medieval"
+  },
+  {
+    "q": "उत्तरमेरुर (तमिलनाडु) के शिलालेख के अनुसार सभा (Sabha) की समितियों के सदस्यों का चुनाव किस पद्धति से किया जाता था?\nHow were members of committees chosen in the Sabha according to the Uttaramerur inscription?",
+    "o": ["राजा के चुनाव द्वारा", "लकी ड्रॉ पद्धति (Lottery/Ticket system)", "वंशानुगत", "केवल ऊँची जाति द्वारा"],
+    "a": 1,
+    "e": "योग्य उम्मीदवारों के नाम ताड़ के पत्तों पर लिखकर मिट्टी के बर्तन में डाले जाते थे और एक छोटे लड़के से उन्हें निकलवाया जाता था। / Names were written on palm leaf tickets and drawn from a pot.",
+    "cat": "gk",
+    "sub": "medieval"
+  },
+  {
+    "q": "1154 ईस्वी में अरब भूगोलवेत्ता अल-इदरीसी ने जो मानचित्र बनाया था, उसमें आधुनिक मानचित्र की तुलना में क्या प्रमुख अंतर था?\nIn the map made by Al-Idrisi in 1154 AD, what was the major difference compared to modern maps?",
+    "o": ["भारत गायब था", "श्रीलंका को उत्तर में दिखाया गया था (Sri Lanka at the top)", "नदियों के नाम नहीं थे", "मानचित्र गोल था"],
+    "a": 1,
+    "e": "अल-इदरीसी के मानचित्र में दक्षिण भारत उस जगह है जहाँ हम आज उत्तर भारत ढूंढेंगे और श्रीलंका ऊपर की ओर है। / In Al-Idrisi's map, south India was placed at the top, and Sri Lanka was shown at the north.",
+    "cat": "gk",
+    "sub": "medieval"
+  },
+  {
+    "q": "मध्यकाल में 'हिंदुस्तान' शब्द का प्रयोग 13वीं शताब्दी में मिन्हाज-ए-सिराज ने किन क्षेत्रों के लिए किया था?\nFor which areas did Minhaj-i-Siraj use the word 'Hindustan' in the 13th century?",
+    "o": ["पूरा दक्षिण भारत", "पंजाब, हरियाणा और गंगा-यमुना के बीच की भूमि", "केवल बंगाल और बिहार", "आधुनिक पाकिस्तान"],
+    "a": 1,
+    "e": "मिन्हाज-ए-सिराज ने 'हिंदुस्तान' का प्रयोग पंजाब, हरियाणा और गंगा-यमुना के बीच स्थित क्षेत्रों के लिए किया था, जिसका अर्थ राजनीतिक था। / He used it for areas of Punjab, Haryana, and the lands between Ganga and Yamuna.",
+    "cat": "gk",
+    "sub": "medieval"
+  },
+  {
+    "q": "16वीं शताब्दी में बाबर ने 'हिंदुस्तान' शब्द का प्रयोग किस संदर्भ में किया था?\nIn what context did Babur use the word 'Hindustan' in the 16th century?",
+    "o": ["धार्मिक एकता के लिए", "उपमहाद्वीप के भूगोल, पशु-पक्षियों और संस्कृति के लिए", "केवल दिल्ली सल्तनत के लिए", "स्वतंत्रता आंदोलन के लिए"],
+    "a": 1,
+    "e": "बाबर ने इस शब्द का प्रयोग इस उपमहाद्वीप के भूगोल, यहाँ के निवासियों की संस्कृति और प्राकृतिक संपदा (Flora/Fauna) का वर्णन करने के लिए किया। / Babur used it to describe the geography and culture of the subcontinent.",
+    "cat": "gk",
+    "sub": "medieval"
+  },
+  {
+    "q": "मध्यकाल में 'विदेशी' (Foreigner) शब्द का क्या अर्थ था?\nWhat was the meaning of the word 'Foreigner' in the medieval period?",
+    "o": ["जो भारत के बाहर से आया हो", "कोई भी अनजाना व्यक्ति जो उस समाज या गाँव का हिस्सा न हो (Any stranger not part of that society)", "जो केवल अंग्रेजी बोलता हो", "जो केवल दूसरे धर्म का हो"],
+    "a": 1,
+    "e": "मध्यकाल में किसी गाँव में आने वाला कोई भी अनजाना व्यक्ति जो उस समाज या संस्कृति का अंग न हो, 'विदेशी' कहलाता था। / A stranger who was not a part of a particular society or culture was a foreigner.",
+    "cat": "gk",
+    "sub": "medieval"
+  },
+  {
+    "q": "इतिहासकारों के लिए मध्यकाल की जानकारी का सबसे प्रमुख और बढ़ता हुआ स्रोत कौन सा बन गया था?\nWhich source became the most prominent and growing for historians studying the medieval period?",
+    "o": ["सिक्के", "अभिलेख", "कागज पर लिखित विवरण (Textual Records)", "गुफा चित्रकला"],
+    "a": 2,
+    "e": "मध्यकाल में कागज सस्ता हो गया था, इसलिए टेक्सुअल रिकॉर्ड्स (लिखित विवरण) अन्य स्रोतों की तुलना में बहुत बढ़ गए। / Textual records increased as paper became cheaper and more widely available.",
+    "cat": "gk",
+    "sub": "medieval"
+  },
+  {
+    "q": "पाण्डुलिपियों (Manuscripts) की नकल करने वाले 'नकलनीस' या 'लिपिक' को क्या कहा जाता था?\nWhat were the scribes who copied manuscripts by hand called?",
+    "o": ["अभिलेखपाल", "नक्कास", "नबीस (Scribes)", "चित्रकार"],
+    "a": 2,
+    "e": "छापेखाने (Printing Press) न होने के कारण 'स्क्राइब्स' या लिपिक हाथ से ही पाण्डुलिपियों की प्रतिकृति बनाते थे। / Scribes copied manuscripts by hand as there were no printing presses.",
+    "cat": "gk",
+    "sub": "medieval"
+  },
+  {
+    "q": "हाथ से नकल करते समय लिपिकों (Scribes) द्वारा किए गए छोटे-छोटे बदलावों का क्या परिणाम हुआ?\nWhat was the result of small changes made by scribes while copying manuscripts?",
+    "o": ["कोई प्रभाव नहीं पड़ा", "मूल अर्थ पूरी तरह बदल गया (Substantial changes over centuries)", "किताबें सुंदर हो गईं", "भाषा सरल हो गई"],
+    "a": 1,
+    "e": "सदियों तक नकल होते रहने के कारण एक ही मूल ग्रंथ की विभिन्न प्रतियाँ एक-दूसरे से बहुत अलग हो गईं। / Over centuries of copying, versions of the same text became substantially different from each other.",
+    "cat": "gk",
+    "sub": "medieval"
+  },
+  {
+    "q": "14वीं सदी के इतिहासकार जियाउद्दीन बरनी ने अपना पहला वृत्तांत (Chronicle) कब लिखा था?\nWhen did the 14th-century chronicler Ziyauddin Barani write his first chronicle?",
+    "o": ["1346", "1356", "1358", "1400"],
+    "a": 1,
+    "e": "बरनी ने अपना पहला वृत्तांत 1356 में और दूसरा इसके दो साल बाद (1358) लिखा था। / Barani wrote his first chronicle in 1356 and the second two years later.",
+    "cat": "gk",
+    "sub": "medieval"
+  },
+  {
+    "q": "मध्यकाल के दौरान सिंचाई के क्षेत्र में किस नई तकनीक का प्रयोग शुरू हुआ?\nWhich new technology began to be used in irrigation during the medieval period?",
+    "o": ["नहरें", "रहत (Persian Wheel)", "ड्रिप सिंचाई", "ट्यूबवेल"],
+    "a": 1,
+    "e": "मध्यकाल में सिंचाई के लिए 'रहत' (Persian Wheel) का उपयोग एक महत्वपूर्ण तकनीकी परिवर्तन था। / The Persian wheel in irrigation was a major technological innovation of this period.",
+    "cat": "gk",
+    "sub": "medieval"
+  },
+  {
+    "q": "700 से 1750 ईस्वी के बीच 'राजपूत' शब्द का महत्व किस समूह के लिए बढ़ा?\nFor which group did the importance of the term 'Rajput' increase between 700-1750 AD?",
+    "o": ["केवल राजाओं के लिए", "योद्धाओं के समूह के लिए (Group of Warriors)", "केवल किसानों के लिए", "केवल पुजारियों के लिए"],
+    "a": 1,
+    "e": "राजपूत शब्द (राज-पुत्र) का प्रयोग योद्धाओं के उस समूह के लिए होने लगा जो क्षत्रिय होने का दावा करते थे। / The term Rajput was used for a group of warriors who claimed Kshatriya status.",
+    "cat": "gk",
+    "sub": "medieval"
+  },
+  {
+    "q": "जंगलों की कटाई के कारण किन लोगों को अपना निवास स्थान छोड़ना पड़ा और वे किसान बन गए?\nWhich people had to leave their habitat due to forest clearing and became peasants?",
+    "o": ["व्यापारी", "वनवासी (Forest Dwellers)", "सैनिक", "शिल्पकार"],
+    "a": 1,
+    "e": "खेती के विस्तार के लिए जंगलों की कटाई हुई, जिससे वनवासियों को माइग्रेट करना पड़ा या वे खेती करने लगे। / Forest dwellers had to migrate or become peasants as forests were cleared for agriculture.",
+    "cat": "gk",
+    "sub": "medieval"
+  },
+  {
+    "q": "समाज में बढ़ते अंतर के कारण लोग किन समूहों में बँटने लगे, जिनकी अपनी रस्में और नियम थे?\nDue to increasing social differences, people began to be grouped into which units with their own rules?",
+    "o": ["देश", "जाति (Jatis)", "पार्टी", "मोहल्ला"],
+    "a": 1,
+    "e": "लोगों की पृष्ठभूमि और व्यवसाय के आधार पर उन्हें 'जातियों' या उप-जातियों में बाँटा गया। / People were grouped into 'Jatis' or sub-castes based on their backgrounds and occupations.",
+    "cat": "gk",
+    "sub": "medieval"
+  },
+  {
+    "q": "'जाति पंचायत' का मुख्य कार्य क्या था?\nWhat was the primary function of the 'Jati Panchayat'?",
+    "o": ["युद्ध लड़ना", "अपनी जाति के सदस्यों के व्यवहार को नियंत्रित करने के लिए नियम बनाना (Enforcing conduct of members)", "टैक्स वसूलना", "शिक्षा देना"],
+    "a": 1,
+    "e": "जाति के बुजुर्गों की एक सभा, जिसे 'जाति पंचायत' कहा जाता था, अपने सदस्यों के व्यवहार के लिए नियम लागू करती थी। / An assembly of elders, called Jati Panchayat, enforced rules for their members.",
+    "cat": "gk",
+    "sub": "medieval"
+  },
+  {
+    "q": "गयासुद्दीन बलबन की संस्कृत प्रशस्ति के अनुसार, उसका साम्राज्य कहाँ से कहाँ तक फैला था?\nAccording to a Sanskrit Prashasti of Ghiyasuddin Balban, how far did his empire extend?",
+    "o": ["केवल दिल्ली तक", "बंगाल (गौड़) से लेकर अफगानिस्तान (गजनी) तक", "कश्मीर से कन्याकुमारी तक", "गुजरात से असम तक"],
+    "a": 1,
+    "e": "प्रशस्ति में दावा किया गया है कि बलबन का साम्राज्य पूर्व में बंगाल (गौड़) से पश्चिम में गजनी (अफगानिस्तान) तक फैला था। / It claims his empire stretched from Gauda (Bengal) to Ghazni (Afghanistan).",
+    "cat": "gk",
+    "sub": "medieval"
+  },
+  {
+    "q": "मध्यकाल में हिंदू धर्म में आए प्रमुख परिवर्तनों में से कौन सा एक सही है?\nWhich is a correct major change in Hinduism during the medieval period?",
+    "o": ["नया कोई मंदिर नहीं बना", "नए देवी-देवताओं की पूजा और मंदिरों का निर्माण (Worship of new deities & building temples)", "संस्कृत का महत्व खत्म हो गया", "पुरोहितों का प्रभाव कम हो गया"],
+    "a": 1,
+    "e": "इस काल में नए देवताओं की पूजा शुरू हुई, राजाओं द्वारा मंदिरों का निर्माण हुआ और ब्राह्मणों का महत्व बढ़ा। / This period saw the worship of new deities and construction of temples by royalty.",
+    "cat": "gk",
+    "sub": "medieval"
+  },
+  {
+    "q": "इस्लाम धर्म में 'शिया' और 'सुन्नी' के बीच मुख्य मतभेद क्या था?\nWhat was the main difference between 'Shia' and 'Sunni' in Islam?",
+    "o": ["नमाज का तरीका", "पैगंबर के उत्तराधिकारी को लेकर (Succession to the Prophet)", "कुरान की भाषा", "मक्का की दिशा"],
+    "a": 1,
+    "e": "शिया मुस्लिम पैगंबर के दामाद अली को मुस्लिम समुदाय का नेता मानते थे, जबकि सुन्नी खलीफाओं के अधिकार को स्वीकार करते थे। / Shias believed in Ali as the leader, while Sunnis accepted the authority of the Khalifas.",
+    "cat": "gk",
+    "sub": "medieval"
+  },
+  {
+    "q": "ब्रिटिश इतिहासकारों ने भारतीय इतिहास को किन तीन कालखंडों में विभाजित किया था?\nBritish historians divided Indian history into which three periods?",
+    "o": ["प्राचीन, मध्यकालीन, आधुनिक", "हिंदू, मुस्लिम, ब्रिटिश (Hindu, Muslim, British)", "आर्य, द्रविड़, अंग्रेज", "अमीर, गरीब, मध्यम"],
+    "a": 1,
+    "e": "19वीं सदी के मध्य में ब्रिटिश इतिहासकारों ने धर्म के आधार पर इतिहास को हिंदू, मुस्लिम और ब्रिटिश काल में बाँटा था। / They divided history into Hindu, Muslim, and British periods based on the religion of rulers.",
+    "cat": "gk",
+    "sub": "medieval"
+  },
+  {
+    "q": "इतिहास में 'युगों' (Periods) का विभाजन करते समय ब्रिटिश इतिहासकारों ने किस महत्वपूर्ण पक्ष की अनदेखी की?\nWhat important aspect did British historians ignore while periodizing history?",
+    "o": ["युद्धों की", "आर्थिक और सामाजिक कारकों की (Economic and social factors)", "राजाओं के नाम की", "किलेबंदी की"],
+    "a": 1,
+    "e": "उन्होंने समाज और अर्थव्यवस्था में हुए बड़े बदलावों को नजरअंदाज कर केवल शासकों के धर्म को ही एकमात्र महत्वपूर्ण बदलाव माना। / They ignored major economic and social changes, focusing only on the ruler's religion.",
+    "cat": "gk",
+    "sub": "medieval"
+  },
+  {
+    "q": "मध्यकाल में 'पाण्डुलिपियों' को सुरक्षित रखने के स्थान को क्या कहा जाता है?\nWhat is the place where 'Manuscripts' are kept called?",
+    "o": ["पुस्तकालय", "अभिलेखागार (Archives)", "संग्रहालय", "कोष"],
+    "a": 1,
+    "e": "पाण्डुलिपियों और दस्तावेजों को 'अभिलेखागार' (Archives) में सुरक्षित रखा जाता था। / Manuscripts and documents are stored in archives.",
+    "cat": "gk",
+    "sub": "medieval"
+  },
+  {
+    "q": "700 से 1750 ईस्वी के इन हजार वर्षों में 'मोबिलिटी' (Mobility) बढ़ने का मुख्य कारण क्या था?\nWhat was the main reason for increased 'Mobility' during these thousand years?",
+    "o": ["पर्यटन", "अवसर और अपार संपदा की तलाश (Search of opportunity and wealth)", "धार्मिक यात्रा", "शिक्षा"],
+    "a": 1,
+    "e": "इस उपमहाद्वीप में अपार संपदा और अपना भाग्य बनाने के लिए संभावनाएँ थीं, इसलिए लोग समूहों में यात्राएँ करते थे। / People traveled in search of wealth and opportunities available in the subcontinent.",
+    "cat": "gk",
+    "sub": "medieval"
+  },
   {
     "q": "दिल्ली के महरौली में स्थित 'लौह स्तंभ' (Iron Pillar) की सबसे बड़ी विशेषता क्या है, जो वैज्ञानिकों को आज भी आश्चर्यचकित करती है?\nWhat is the most remarkable feature of the Iron Pillar at Mehrauli, Delhi?",
     "o": ["इसकी अत्यधिक ऊँचाई", "1500 वर्षों बाद भी इसमें जंग न लगना (No rusting)", "इसका सोने से बना होना", "इस पर कोई शिलालेख न होना"],
