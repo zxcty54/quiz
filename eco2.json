@@ -416,14 +416,6 @@
   "sub": "human_geo"
 },
 {
-  "q": "What is 'Transhumance' (ऋतु-प्रवास) as explained in the transcript?\nट्रांसक्रिप्ट में बताए अनुसार 'ऋतु-प्रवास' (Transhumance) क्या है?",
-  "o": ["Moving from rural to urban areas", "Seasonal migration of herders between mountains and plains", "Trading animals for money", "None of the above"],
-  "a": 1,
-  "e": "It involves moving to mountain pastures in summer and returning to valley plains in winter. / गर्मियों में पहाड़ों और सर्दियों में मैदानों की ओर पशुओं के साथ प्रवास।",
-  "cat": "geo",
-  "sub": "human_geo"
-},
-{
   "q": "Which animals are typically reared by nomadic herders in the 'Tundra' regions?\n'टुंड्रा' क्षेत्रों में चलवासी पशुपालकों द्वारा आमतौर पर किन जानवरों को पाला जाता है?",
   "o": ["Camels", "Reindeer (रेनडियर)", "Yaks", "Llamas"],
   "a": 1,
@@ -807,14 +799,7 @@
   "cat": "geo",
   "sub": "physical_geo"
 },
-  {
-  "q": "What is the primary indicator of the socio-economic status of a society as per the transcript?\nट्रांसक्रिप्ट के अनुसार किसी समाज की सामाजिक-आर्थिक स्थिति का प्राथमिक संकेतक क्या है?",
-  "o": ["Total gold reserves", "Literacy rate", "Number of mountains", "Average height of people"],
-  "a": 1,
-  "e": "Literacy is a key indicator of socio-economic development as it reflects standard of living and the status of women. / साक्षरता सामाजिक-आर्थिक विकास का मुख्य संकेतक है।",
-  "cat": "geo",
-  "sub": "human_geo"
-},
+  
 {
   "q": "Which age group is generally considered the 'Working Population' of a country?\nकिसी देश की 'कार्यशील जनसंख्या' आमतौर पर किस आयु वर्ग को माना जाता है?",
   "o": ["0-14 years", "15-59 years", "Above 60 years", "0-18 years"],
@@ -912,7 +897,7 @@
   "sub": "human_geo"
 },
 {
-  "q": "According to the transcript, 'Productivity' in human development refers to:\nट्रांसक्रिप्ट के अनुसार, मानव विकास में 'उत्पादकता' (Productivity) का तात्पर्य है:",
+  "q": "A'Productivity' in human development refers to:\nमानव विकास में 'उत्पादकता' (Productivity) का तात्पर्य है:",
   "o": ["Producing more crops", "Human labor productivity in terms of capabilities and work", "Producing only metal goods", "None"],
   "a": 1,
   "e": "It means enriching people's capabilities to increase their contribution. / लोगों की क्षमताओं को समृद्ध करना ताकि उनका श्रम अधिक प्रभावी हो।",
@@ -1560,7 +1545,7 @@
   "sub": "human_geo"
 },
 {
-  "q": "What is 'Transhumance' (ऋतु-प्रवास) as explained in the transcript?\nट्रांसक्रिप्ट में बताए अनुसार 'ऋतु-प्रवास' (Transhumance) क्या है?",
+  "q": "What is 'Transhumance' (ऋतु-प्रवास) ?\n'ऋतु-प्रवास' (Transhumance) क्या है?",
   "o": ["Moving from rural to urban areas", "Seasonal migration of herders between mountains and plains", "Trading animals for money", "None of the above"],
   "a": 1,
   "e": "It involves moving to mountain pastures in summer and returning to valley plains in winter. / गर्मियों में पहाड़ों और सर्दियों में मैदानों की ओर पशुओं के साथ प्रवास।",
@@ -2377,7 +2362,7 @@
   "sub": "human_geo"
 },
 {
-  "q": "According to the transcript, why is it essential for a DM or Chief Minister to know the population distribution?\nट्रांसक्रिप्ट के अनुसार, एक डीएम या मुख्यमंत्री के लिए जनसंख्या वितरण जानना क्यों आवश्यक है?",
+  "q": "why is it essential for a DM or Chief Minister to know the population distribution?\nएक डीएम या मुख्यमंत्री के लिए जनसंख्या वितरण जानना क्यों आवश्यक है?",
   "o": ["For counting trees", "For effective planning of health, education, and economic schemes", "To increase personal wealth", "To predict the weather"],
   "a": 1,
   "e": "Knowing where people live and their characteristics helps in the proper implementation of schemes like schools, hospitals, and housing. / शिक्षा, स्वास्थ्य और आर्थिक योजनाओं के प्रभावी कार्यान्वयन के लिए यह आवश्यक है।",
@@ -2393,7 +2378,7 @@
     "sub": "human_geo"
   },
   {
-    "q": "Which of the following is a 'Natural Advantage' possessed by females according to the transcript?\nट्रांसक्रिप्ट के अनुसार महिलाओं के पास कौन सा 'प्राकृतिक लाभ' (Natural Advantage) है?",
+    "q": "Which of the following is a 'Natural Advantage' possessed by females?\nमहिलाओं के पास कौन सा 'प्राकृतिक लाभ' (Natural Advantage) है?",
     "o": ["Social leadership", "Biological resilience and higher life expectancy", "Physical strength in construction", "Access to early voting"],
     "a": 1,
     "e": "Females are biologically more resilient and have a natural advantage in life expectancy compared to males. / जैविक रूप से महिलाएं अधिक सहनशील होती हैं और उनकी औसत आयु प्राकृतिक रूप से अधिक होती है।",
@@ -3345,7 +3330,7 @@
   "sub": "human_geo"
 },
 {
-  "q": "As per the transcript, what is a way to 'Control' population growth?\nट्रांसक्रिप्ट के अनुसार, जनसंख्या वृद्धि को 'नियंत्रित' करने का एक तरीका क्या है?",
+  "q": "what is a way to 'Control' population growth?\nजनसंख्या वृद्धि को 'नियंत्रित' करने का एक तरीका क्या है?",
   "o": ["Family planning and tax incentives/disincentives", "Stopping all schools", "Increasing death rate intentionally", "Moving to Mars"],
   "a": 0,
   "e": "China's One Child Policy or tax penalties on third child are common examples. / परिवार नियोजन और सरकारी नीतियां (जैसे वन चाइल्ड पॉलिसी) प्रभावी तरीके हैं।",
@@ -3713,7 +3698,7 @@
   "sub": "physical_geo"
 },
 {
-  "q": "Which of the following is the 'Primary Reason' for Mass Movement as discussed in the transcript?\nट्रांसक्रिप्ट में चर्चा के अनुसार वृहत संचलन (Mass Movement) का 'प्राथमिक कारण' क्या है?",
+  "q": "Which of the following is the 'Primary Reason' for Mass Movement ?\n वृहत संचलन (Mass Movement) का 'प्राथमिक कारण' क्या है?",
   "o": ["Rainfall", "Wind", "Gravity", "Solar insulation"],
   "a": 2,
   "e": "While rain can act as a lubricant, gravity is the actual driving force that pulls materials downslope. / गुरुत्वाकर्षण वह मुख्य बल है जो सामग्री को ढाल के नीचे खींचता है।",
@@ -4649,7 +4634,7 @@
   "sub": "physical_geo"
 },
 {
-  "q": "What causes 'Frontal Inversion' as explained in the transcript?\nट्रांसक्रिप्ट में बताए अनुसार 'वाताग्र व्युत्क्रमण' (Frontal Inversion) का क्या कारण है?",
+  "q": "What causes 'Frontal Inversion'?\n'वाताग्र व्युत्क्रमण' (Frontal Inversion) का क्या कारण है?",
   "o": ["Solar eclipse", "Collision of cold and warm air masses where warm air rises over cold air", "Underwater volcanic eruption", "High pressure at the poles only"],
   "a": 1,
   "e": "When cold and warm air meet, the lighter warm air is pushed up over the dense cold air, creating an inversion. / गर्म हवा के ठंडी हवा के ऊपर चढ़ने से वाताग्र व्युत्क्रमण होता है।",
@@ -6081,7 +6066,7 @@
   "sub": "physical_geo"
 },
   {
-  "q": "What is a 'Piedmont Glacier' as explained in the transcript?\nट्रांसक्रिप्ट में बताए अनुसार 'पीडमोंट ग्लेशियर' (Piedmont Glacier) क्या है?",
+  "q": "What is a 'Piedmont Glacier'?\n'पीडमोंट ग्लेशियर' (Piedmont Glacier) क्या है?",
   "o": ["A glacier found on the peaks of mountains", "A flat surface of ice formed by the convergence of several glaciers at the base of a mountain", "A glacier that never melts", "A glacier found only at the South Pole"],
   "a": 1,
   "e": "Piedmont glaciers form when several valley glaciers flow out of mountains and merge on a flat plain. / कई हिमनदों के पर्वत के आधार पर मिलने से बना चपटा बर्फ का क्षेत्र पीडमोंट ग्लेशियर कहलाता है।",
@@ -6857,7 +6842,7 @@
   "sub": "physical_geo"
 },
 {
-  "q": "According to the transcript, which of the following describes 'Air' correctly?\nट्रांसक्रिप्ट के अनुसार, निम्नलिखित में से कौन 'वायु' (Air) का सही वर्णन करता है?",
+  "q": "which of the following describes 'Air' correctly?\nनिम्नलिखित में से कौन 'वायु' (Air) का सही वर्णन करता है?",
   "o": ["Only a mixture of gases", "A combination of solids, liquids, and gases", "Only oxygen and nitrogen", "A vacuum with dust"],
   "a": 1,
   "e": "Air in the atmosphere is an envelope containing solid particles (aerosols), liquids (water droplets/moisture), and various gases. / वायु में ठोस (एरोसोल), तरल (जलवाष्प) और गैसें तीनों शामिल हैं।",
@@ -7337,7 +7322,7 @@
   "sub": "physical_geo"
 },
 {
-  "q": "Which state of India confirmed 'Sulfur' presence near the Moon's surface as per the transcript context?\nट्रांसक्रिप्ट संदर्भ के अनुसार भारत के किस मिशन ने चंद्रमा की सतह के पास 'सल्फर' की उपस्थिति की पुष्टि की?",
+  "q": "Which state of India confirmed 'Sulfur' presence near the Moon's surface?\n भारत के किस मिशन ने चंद्रमा की सतह के पास 'सल्फर' की उपस्थिति की पुष्टि की?",
   "o": ["Mangalyaan", "Chandrayaan-2", "Chandrayaan-3", "Aditya-L1"],
   "a": 2,
   "e": "Chandrayaan-3's rover discovered sulfur on the lunar surface. / चंद्रयान-3 ने चंद्रमा पर सल्फर की खोज की।",
@@ -8852,7 +8837,7 @@
   "sub": "physical_geo"
 },
 {
-  "q": "What is the primary driving energy source for 'Endogenic' processes according to the transcript?\nट्रांसक्रिप्ट के अनुसार 'एंडोजेनिक' प्रक्रियाओं के लिए प्राथमिक प्रेरक ऊर्जा स्रोत क्या है?",
+  "q": "What is the primary driving energy source for 'Endogenic' processes?\n'एंडोजेनिक' प्रक्रियाओं के लिए प्राथमिक प्रेरक ऊर्जा स्रोत क्या है?",
   "o": ["Sunlight", "Mantle Convection Currents", "Tides", "Winds"],
   "a": 1,
   "e": "Endogenic forces are driven primarily by the heat generated from radioactive decay and convection currents in the mantle. / मेंटल में संवहन धाराएं एंडोजेनिक बलों का मुख्य स्रोत हैं।",
@@ -9020,7 +9005,7 @@
   "sub": "mapping"
 },
 {
-  "q": "According to the transcript, 'Weathering' is a process of:\nट्रांसक्रिप्ट के अनुसार, 'अपक्षय' (Weathering) एक प्रक्रिया है:",
+  "q": "Weathering is a process of:\nअपक्षय (Weathering) एक प्रक्रिया है:",
   "o": ["Uplifting mountains", "Mechanical disintegration and chemical decomposition of rocks", "Moving stones to other countries", "Generating electricity"],
   "a": 1,
   "e": "Weathering is the on-site breaking down of rocks into smaller pieces. / शैलों के अपने स्थान पर टूटने को अपक्षय कहते हैं।",
@@ -9244,7 +9229,7 @@
   "sub": "physical_geo"
 },
 {
-  "q": "What is the primary driving energy source for 'Endogenic' processes according to the transcript?\nट्रांसक्रिप्ट के अनुसार 'एंडोजेनिक' प्रक्रियाओं के लिए प्राथमिक प्रेरक ऊर्जा स्रोत क्या है?",
+  "q": "What is the primary driving energy source for 'Endogenic' processes ?\n 'एंडोजेनिक' प्रक्रियाओं के लिए प्राथमिक प्रेरक ऊर्जा स्रोत क्या है?",
   "o": ["Sunlight", "Mantle Convection Currents", "Tides", "Winds"],
   "a": 1,
   "e": "Endogenic forces are driven primarily by the heat generated from radioactive decay and convection currents in the mantle. / मेंटल में संवहन धाराएं एंडोजेनिक बलों का मुख्य स्रोत हैं।",
@@ -9410,14 +9395,6 @@
   "e": "Vindhya and Satpura are block mountains with rift valleys like Narmada in between. / विंध्य और सतपुड़ा ब्लॉक पर्वत हैं।",
   "cat": "geo",
   "sub": "mapping"
-},
-{
-  "q": "According to the transcript, 'Weathering' is a process of:\nट्रांसक्रिप्ट के अनुसार, 'अपक्षय' (Weathering) एक प्रक्रिया है:",
-  "o": ["Uplifting mountains", "Mechanical disintegration and chemical decomposition of rocks", "Moving stones to other countries", "Generating electricity"],
-  "a": 1,
-  "e": "Weathering is the on-site breaking down of rocks into smaller pieces. / शैलों के अपने स्थान पर टूटने को अपक्षय कहते हैं।",
-  "cat": "geo",
-  "sub": "physical_geo"
 },
 {
   "q": "A 'Napie' (निपेश) in geology refers to a fold that has:\nभूविज्ञान में 'निपेश' (Napie) उस वलन को संदर्भित करता है जो:",
@@ -10012,7 +9989,7 @@
   "sub": "mapping"
 },
   {
-  "q": "What is the primary driving force behind 'Mass Movement' as explained in the transcript?\nट्रांसक्रिप्ट में बताए अनुसार 'वृहत संचलन' (Mass Movement) के पीछे प्राथमिक प्रेरक बल क्या है?",
+  "q": "What is the primary driving force behind 'Mass Movement'?\n'वृहत संचलन' (Mass Movement) के पीछे प्राथमिक प्रेरक बल क्या है?",
   "o": ["Running water", "Wind pressure", "Gravity", "Solar radiation"],
   "a": 2,
   "e": "Gravity is the primary force that moves debris and rocks down a slope. Other factors like rain only act as catalysts. / गुरुत्वाकर्षण वह प्राथमिक बल है जो मलबे को ढलान के नीचे धकेलता है।",
@@ -10437,7 +10414,7 @@
   "sub": "physical_geo"
 },
 {
-  "q": "What describes 'Chemical Weathering' as explained in the transcript?\nट्रांसक्रिप्ट में बताए अनुसार 'रासायनिक अपक्षय' का वर्णन क्या है?",
+  "q": "What describes 'Chemical Weathering'?\n'रासायनिक अपक्षय' का वर्णन क्या है?",
   "o": ["Breaking rocks with a hammer", "Decomposition of rocks through reactions with water and air (acid rain)", "Moving rocks to a new place", "Melting rocks in a volcano"],
   "a": 1,
   "e": "Chemical weathering changes the molecular structure of rocks through chemical reactions. / जल और वायु के साथ अभिक्रिया से चट्टानों का सड़ना रासायनिक अपक्षय है।",
@@ -17217,7 +17194,7 @@
   "sub": "mapping"
 },
 {
-  "q": "What was the 'Tethys Sea' according to the transcript?\nट्रांसक्रिप्ट के अनुसार 'टेथिस सागर' क्या था?",
+  "q": "What was the 'Tethys Sea'?\n'टेथिस सागर' क्या था?",
   "o": ["The deepest part of Pacific", "The narrow sea between Laurasia and Gondwanaland", "A sea in the center of Africa", "A frozen sea at the North Pole"],
   "a": 1,
   "e": "Tethys was the oceanic space between the northern and southern giant landmasses. / लारेशिया और गोंडवाना लैंड के बीच का सागर टेथिस था।",
@@ -22182,7 +22159,7 @@
   "sub": "physical_geo"
 },
 {
-  "q": "Which of the following is a 'Non-Metallic' mineral mentioned in the transcript?\nट्रांसक्रिप्ट में उल्लिखित निम्नलिखित में से कौन सा एक 'अधात्विक' खनिज है?",
+  "q": "Which of the following is a 'Non-Metallic' mineral?\n निम्नलिखित में से कौन सा एक 'अधात्विक' खनिज है?",
   "o": ["Lead", "Copper", "Sulfur", "Tin"],
   "a": 2,
   "e": "Sulfur and phosphorus are non-metallic minerals. / सल्फर एक अधात्विक खनिज है।",
@@ -22342,7 +22319,7 @@
   "sub": "resources"
 },
 {
-  "q": "According to the transcript, how many basic crystal structure arrangements (Bravais Lattices) are possible for all minerals?\nट्रांसक्रिप्ट के अनुसार, सभी खनिजों के लिए कितनी मूल क्रिस्टल संरचना व्यवस्थाएं (ब्रेवाइस लैटिस) संभव हैं?",
+  "q": "how many basic crystal structure arrangements (Bravais Lattices) are possible for all minerals?\nसभी खनिजों के लिए कितनी मूल क्रिस्टल संरचना व्यवस्थाएं (ब्रेवाइस लैटिस) संभव हैं?",
   "o": ["8", "14", "4000", "100"],
   "a": 1,
   "e": "There are only 14 unique internal arrangements that form over 4000 types of known minerals. / केवल 14 प्रकार की आंतरिक व्यवस्थाएं (लैटिस) संभव हैं।",
@@ -22590,7 +22567,7 @@
   "sub": "physical_geo"
 },
 {
-  "q": "According to the transcript, most minerals are formed from a combination of ______.\nट्रांसक्रिप्ट के अनुसार, अधिकांश खनिज ______ के संयोजन से बनते हैं।",
+  "q": "Most minerals are formed from a combination of ______.\nट्अधिकांश खनिज ______ के संयोजन से बनते हैं।",
   "o": ["Rocks", "Elements", "Molecules only", "Gases"],
   "a": 1,
   "e": "Minerals are specific combinations of chemical elements. / तत्व मिलकर खनिज बनाते हैं।",
