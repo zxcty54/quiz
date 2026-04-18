@@ -39,5 +39,45 @@
     "e": "Blank 3: 'Can' expresses the ability of a healthy person to enjoy life.",
     "cat": "english",
     "sub": "cloze-test"
+  },
+  {
+    "q": "<b>Error Spotting:</b> Select the part with the error.<br/><br/>Neither the captain (A)/ nor the players (B)/ is responsible for the defeat. (C)/ No Error (D)",
+    "o": ["A", "B", "C", "D"],
+    "a": 2,
+    "e": "Rule: When subjects are joined by 'Neither-nor', the verb must agree with the nearest subject. Since 'players' is plural, use 'are' instead of 'is'.",
+    "cat": "english",
+    "sub": "subject-verb"
+  },
+  {
+    "q": "<b>Error Spotting:</b> Select the part with the error.<br/><br/>He is (A)/ senior than (B)/ me in the office. (C)/ No Error (D)",
+    "o": ["A", "B", "C", "D"],
+    "a": 1,
+    "e": "Rule: Words ending in '-ior' (senior, junior, superior, inferior) are followed by the preposition 'to', not 'than'.",
+    "cat": "english",
+    "sub": "prepositions"
+  },
+  {
+    "q": "<b>Error Spotting:</b> Select the part with the error.<br/><br/>If I was you (A)/ I would not (B)/ accept this offer. (C)/ No Error (D)",
+    "o": ["A", "B", "C", "D"],
+    "a": 0,
+    "e": "Rule: In imaginary/hypothetical sentences (Subjunctive mood), we always use 'were' regardless of the subject. Correct: 'If I were you'.",
+    "cat": "english",
+    "sub": "conditionals"
+  },
+  {
+    "q": "<b>Error Spotting:</b> Select the part with the error.<br/><br/>Scarcely had he (A)/ gone out (B)/ than it started raining. (C)/ No Error (D)",
+    "o": ["A", "B", "C", "D"],
+    "a": 2,
+    "e": "Rule: 'Scarcely' and 'Hardly' are always followed by the conjunction 'when' or 'before', never 'than' (which is used with 'No sooner').",
+    "cat": "english",
+    "sub": "conjunctions"
+  },
+  {
+    "q": "<b>Error Spotting:</b> Select the part with the error.<br/><br/>The furniture (A)/ in this room (B)/ are very old. (C)/ No Error (D)",
+    "o": ["A", "B", "C", "D"],
+    "a": 2,
+    "e": "Rule: 'Furniture' is an uncountable noun and is always used in the singular form. Therefore, it takes a singular verb 'is'.",
+    "cat": "english",
+    "sub": "nouns"
   }
 ]
