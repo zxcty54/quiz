@@ -15,5 +15,1053 @@
     "e": "Ascorbic acid is the chemical name for Vitamin C, which is essential for skin and immunity.",
     "cat": "science",
     "sub": "chemistry"
-  }
+  },
+  {
+  "q": "Which polymer is used for making 'Bulletproof' vests and high-strength helmets?",
+  "o": ["Nylon", "Kevlar", "Teflon", "Bakelite"],
+  "a": 1,
+  "e": "Kevlar is a heat-resistant and strong synthetic fiber; its molecular structure makes it 5 times stronger than steel.",
+  "cat": "gs",
+  "sub": "industrial_chemistry"
+},
+{
+  "q": "What is the 'Monomer' of Polyvinyl Chloride (PVC), used for making water pipes in Bihar?",
+  "o": ["Ethene", "Vinyl Chloride", "Styrene", "Propene"],
+  "a": 1,
+  "e": "PVC is made by the polymerization of Vinyl Chloride ($CH_2=CHCl$).",
+  "cat": "gs",
+  "sub": "industrial_chemistry"
+},
+{
+  "q": "Which type of 'Plastic' can be melted and reshaped again and again?",
+  "o": ["Thermosetting plastic", "Thermoplastic", "Fiberglass", "Bakelite"],
+  "a": 1,
+  "e": "Thermoplastics (like Polyethylene/PVC) soften on heating and harden on cooling.",
+  "cat": "gs",
+  "sub": "industrial_chemistry"
+},
+{
+  "q": "What is the main difference between 'Soap' and 'Detergent' in hard water?",
+  "o": ["Soap is better", "Detergent works in hard water, soap does not", "Soap is synthetic", "Detergents are made from fats"],
+  "a": 1,
+  "e": "Soaps form 'scum' with Ca and Mg ions in hard water, whereas detergents remain soluble and effective.",
+  "cat": "gs",
+  "sub": "industrial_chemistry"
+},
+{
+  "q": "Which polymer is used to make 'Non-stick' frying pans?",
+  "o": ["PVC", "Polystyrene", "Teflon (PTFE)", "Nylon"],
+  "a": 2,
+  "e": "Polytetrafluoroethylene has extremely low friction and high heat resistance.",
+  "cat": "gs",
+  "sub": "industrial_chemistry"
+},
+  {
+  "q": "Which acid is present in 'Sour Milk' or curd?",
+  "o": ["Acetic acid", "Citric acid", "Lactic acid", "Tartaric acid"],
+  "a": 2,
+  "e": "Bacteria convert lactose (milk sugar) into lactic acid.",
+  "cat": "gs",
+  "sub": "carbon_compounds"
+},
+{
+  "q": "What is the primary difference between 'Soaps' and 'Detergents'?",
+  "o": ["Color", "Detergents are effective in hard water; soaps are not", "Soap is stronger", "Detergents are natural"],
+  "a": 1,
+  "e": "Detergents are ammonium or sulfonate salts that do not form 'scum' with calcium ions.",
+  "cat": "gs",
+  "sub": "carbon_compounds"
+},
+{
+  "q": "Which test is used to distinguish between 'Alcohols' and 'Phenols'?",
+  "o": ["Litmus test", "Ferric Chloride test", "Sodium bicarbonate test", "Silver mirror test"],
+  "a": 1,
+  "e": "Phenols give a characteristic violet//purple color with neutral $FeCl_3$.",
+  "cat": "gs",
+  "sub": "carbon_compounds"
+},
+{
+  "q": "What is the 'IUPAC name' of $CH_3-CH(OH)-CH_3$?",
+  "o": ["Propan-1-ol", "Propan-2-ol", "Ethane-1,2-diol", "Isopropanol"],
+  "a": 1,
+  "e": "The -OH group is on the second carbon of a three-carbon chain.",
+  "cat": "gs",
+  "sub": "carbon_compounds"
+},
+{
+  "q": "Which substance is used as 'Antifreeze' in car radiators?",
+  "o": ["Methanol", "Ethylene Glycol", "Glycerol", "Acetic Acid"],
+  "a": 1,
+  "e": "It lowers the freezing point of water to prevent the radiator from bursting in cold weather.",
+  "cat": "gs",
+  "sub": "carbon_compounds"
+},
+  {
+  "q": "Deficiency of Vitamin K leads to:",
+  "o": ["Night blindness", "Scurvy", "Delayed blood clotting", "Rickets"],
+  "a": 2,
+  "e": "Vitamin K is a co-factor for enzymes that activate blood-clotting factors like prothrombin.",
+  "cat": "gs",
+  "sub": "vitamins"
+},
+{
+  "q": "Which enzyme converts Glucose into Ethyl Alcohol during fermentation?",
+  "o": ["Zymase", "Invertase", "Maltase", "Diastase"],
+  "a": 0,
+  "e": "Zymase is an enzyme complex that catalyzes the fermentation of sugar into ethanol and CO2.",
+  "cat": "gs",
+  "sub": "cell"
+},
+{
+  "q": "Which part of the Alimentary canal is the widest?",
+  "o": ["Esophagus", "Stomach", "Large Intestine", "Duodenum"],
+  "a": 1,
+  "e": "The stomach is a J-shaped, sac-like organ that is the widest part of the digestive tract.",
+  "cat": "gs",
+  "sub": "digestive"
+},
+{
+  "q": "Which vitamin is synthesized by bacteria in the human colon?",
+  "o": ["Vitamin A", "Vitamin C", "Vitamin K", "Vitamin D"],
+  "a": 2,
+  "e": "E. coli and other bacteria in the large intestine produce Vitamin K and some B-complex vitamins.",
+  "cat": "gs",
+  "sub": "digestive"
+},
+{
+  "q": "What is 'Methylated Spirit'?",
+  "o": ["Pure Ethanol", "Ethanol mixed with Methanol", "Pure Methanol", "Alcohol with sugar"],
+  "a": 1,
+  "e": "It is a type of denatured alcohol used as a fuel and solvent.",
+  "cat": "gs",
+  "sub": "carbon_compounds"
+},
+{
+  "q": "Which chemical is known as 'Oil of Wintergreen'?",
+  "o": ["Methyl Salicylate", "Ethyl Acetate", "Acetic Acid", "Benzaldehyde"],
+  "a": 0,
+  "e": "It is an ester used in ointments (like Iodex) for pain relief.",
+  "cat": "gs",
+  "sub": "carbon_compounds"
+},
+{
+  "q": "What is the suffix for 'Ketones' in IUPAC naming?",
+  "o": ["-ol", "-one", "-al", "-oic"],
+  "a": 1,
+  "e": "Example: Propanone, Butanone.",
+  "cat": "gs",
+  "sub": "carbon_compounds"
+},
+{
+  "q": "Which 'Aldehyde' is used as a 'Silvering agent' for mirrors in the lab?",
+  "o": ["Formaldehyde", "Acetaldehyde", "Benzaldehyde", "Any aldehyde (via Tollen's reagent)"],
+  "a": 3,
+  "e": "Aldehydes reduce silver ions to metallic silver, forming a mirror on the glass surface.",
+  "cat": "gs",
+  "sub": "carbon_compounds"
+},
+{
+  "q": "What is the common name of 'Ethanoic Acid'?",
+  "o": ["Formic acid", "Acetic acid", "Propionic acid", "Butyric acid"],
+  "a": 1,
+  "e": "Commonly known as acetic acid.",
+  "cat": "gs",
+  "sub": "carbon_compounds"
+},
+{
+  "q": "Which acid is found in 'Sting' of a Honeybee?",
+  "o": ["Acetic acid", "Methanoic acid (Formic acid)", "Citric acid", "Oxalic acid"],
+  "a": 1,
+  "e": "Ants and bees inject methanoic acid, causing pain and swelling.",
+  "cat": "gs",
+  "sub": "carbon_compounds"
+},
+{
+  "q": "What is 'Proof Spirit'?",
+  "o": ["Pure alcohol", "Alcohol with 57.1% ethanol by volume", "Dilute vinegar", "Methylated spirit"],
+  "a": 1,
+  "e": "It is a traditional measure of the ethanol content in an alcoholic beverage.",
+  "cat": "gs",
+  "sub": "carbon_compounds"
+},
+{
+  "q": "Which alcohol is 'Absolute Alcohol'?",
+  "o": ["95% Ethanol", "100% Ethanol", "50% Ethanol", "Pure Methanol"],
+  "a": 1,
+  "e": "It is ethanol that has been dehydrated to remove all water.",
+  "cat": "gs",
+  "sub": "carbon_compounds"
+},
+{
+  "q": "What is the IUPAC name for $CH_3-CH_2-COOH$?",
+  "o": ["Ethanoic acid", "Propanoic acid", "Butanoic acid", "Methanoic acid"],
+  "a": 1,
+  "e": "A three-carbon chain with a carboxyl group.",
+  "cat": "gs",
+  "sub": "carbon_compounds"
+},
+{
+  "q": "Which functional group is found in 'Perfumes' and 'Artificial Flavors'?",
+  "o": ["Alcohol", "Aldehyde", "Ester", "Ether"],
+  "a": 2,
+  "e": "Esters are responsible for pleasant, fruity odors.",
+  "cat": "gs",
+  "sub": "carbon_compounds"
+},
+{
+  "q": "What is 'Bakelite'?",
+  "o": ["A type of alcohol", "A polymer (Phenol-Formaldehyde resin)", "A ketone", "An ester"],
+  "a": 1,
+  "e": "Used for making electrical switches and handles of pans.",
+  "cat": "gs",
+  "sub": "carbon_compounds"
+},
+{
+  "q": "Which gas is evolved when 'Ethanol' reacts with Sodium metal?",
+  "o": ["Oxygen", "Hydrogen", "Carbon Dioxide", "Ethane"],
+  "a": 1,
+  "e": "Alcohols react with active metals like Na to release Hydrogen gas.",
+  "cat": "gs",
+  "sub": "carbon_compounds"
+},
+{
+  "q": "What is the 'IUPAC name' of $CH_3-O-CH_3$?",
+  "o": ["Dimethyl ether", "Methoxymethane", "Ethoxymethane", "Methoxyethane"],
+  "a": 1,
+  "e": "In IUPAC, ethers are named as Alkoxyalkanes.",
+  "cat": "gs",
+  "sub": "carbon_compounds"
+},
+{
+  "q": "Which acid is present in 'Tamarind'?",
+  "o": ["Citric acid", "Tartaric acid", "Malic acid", "Oxalic acid"],
+  "a": 1,
+  "e": "Tartaric acid gives tamarind its sour taste.",
+  "cat": "gs",
+  "sub": "carbon_compounds"
+},
+{
+  "q": "What is 'Pyrolysis' of methane called?",
+  "o": ["Hydrogenation", "Cracking or Thermal decomposition", "Combustion", "Substitution"],
+  "a": 1,
+  "e": "Heating methane in the absence of air breaks it down into carbon black and hydrogen.",
+  "cat": "gs",
+  "sub": "carbon_compounds"
+},
+{
+  "q": "Which compound is known as 'Chloroform'?",
+  "o": ["$CH_3Cl$", "$CH_2Cl_2$", "$CHCl_3$", "$CCl_4$"],
+  "a": 2,
+  "e": "Trichloromethane ($CHCl_3$) was formerly used as an anesthetic.",
+  "cat": "gs",
+  "sub": "carbon_compounds"
+},
+{
+  "q": "What is the 'Structure' of Benzene?",
+  "o": ["Open chain", "Cyclic hexagonal ring with alternate single and double bonds", "Pentagonal ring", "Tetrahedral"],
+  "a": 1,
+  "e": "Benzene ($C_6H_6$) is the simplest aromatic hydrocarbon.",
+  "cat": "gs",
+  "sub": "carbon_compounds"
+},
+  {
+  "q": "Who proposed the 'Hexagonal Ring' structure of Benzene with alternating double bonds?",
+  "o": ["Michael Faraday", "August Kekulé", "Linus Pauling", "John Dalton"],
+  "a": 1,
+  "e": "Kekulé famously claimed to have discovered the ring structure after a dream about a snake biting its own tail.",
+  "cat": "gs",
+  "sub": "carbon_compounds"
+},
+{
+  "q": "What is the 'IUPAC name' of Phenol?",
+  "o": ["Hydroxybenzene", "Benzyl alcohol", "Benzaldehyde", "Methylbenzene"],
+  "a": 0,
+  "e": "Phenol consists of a hydroxyl group (-OH) directly attached to a benzene ring.",
+  "cat": "gs",
+  "sub": "carbon_compounds"
+},
+{
+  "q": "Which compound is known as 'Toluene'?",
+  "o": ["Chlorobenzene", "Methylbenzene", "Ethylbenzene", "Nitrobenzene"],
+  "a": 1,
+  "e": "Toluene ($C_6H_5CH_3$) is a common industrial solvent used in paints and glues.",
+  "cat": "gs",
+  "sub": "carbon_compounds"
+},
+{
+  "q": "What is the product of 'Complete Oxidation' of primary alcohols using acidified $K_2Cr_2O_7$?",
+  "o": ["Aldehyde", "Ketone", "Carboxylic Acid", "Ester"],
+  "a": 2,
+  "e": "Primary alcohols oxidize to aldehydes first, and then rapidly to carboxylic acids.",
+  "cat": "gs",
+  "sub": "carbon_compounds"
+},
+{
+  "q": "Which gas is evolved when 'Ethyne' is passed through red-hot iron tubes (Polymerization)?",
+  "o": ["Ethane", "Benzene", "Methane", "Polyethylene"],
+  "a": 1,
+  "e": "Three molecules of ethyne ($C_2H_2$) polymerize to form one molecule of Benzene ($C_6H_6$).",
+  "cat": "gs",
+  "sub": "carbon_compounds"
+},
+{
+  "q": "What is the 'Functional Group' in Phenol?",
+  "o": ["Alcoholic -OH", "Phenolic -OH", "Aldehyde -CHO", "Ether -O-"],
+  "a": 1,
+  "e": "While both are -OH, phenolic groups are more acidic than alcoholic groups found in alkanols.",
+  "cat": "gs",
+  "sub": "carbon_compounds"
+},
+{
+  "q": "Which compound is used as a 'Refrigerant' and is known as Freon-12?",
+  "o": ["$CHCl_3$", "$CH_2Cl_2$", "$CF_2Cl_2$", "$CH_3Cl$"],
+  "a": 2,
+  "e": "Dichlorodifluoromethane is a CFC that was widely used before being banned for ozone depletion.",
+  "cat": "gs",
+  "sub": "carbon_compounds"
+},
+{
+  "q": "What is 'TNT' (Trinitrotoluene) primarily used for?",
+  "o": ["As a fertilizer", "As an explosive", "As a medicine", "As a dye"],
+  "a": 1,
+  "e": "It is an aromatic nitro compound prepared by nitrating toluene.",
+  "cat": "gs",
+  "sub": "carbon_compounds"
+},
+{
+  "q": "Which reaction is used to convert 'Vegetable Oil' into 'Vanaspati Ghee'?",
+  "o": ["Oxidation", "Reduction (Hydrogenation)", "Substitution", "Esterification"],
+  "a": 1,
+  "e": "Hydrogen gas is added to unsaturated carbon-carbon double bonds in the presence of a Nickel catalyst.",
+  "cat": "gs",
+  "sub": "carbon_compounds"
+},
+{
+  "q": "What is 'Gammexane' (Lindane) chemically?",
+  "o": ["Chlorobenzene", "Benzene Hexachloride (BHC)", "DDT", "Toluene"],
+  "a": 1,
+  "e": "BHC ($C_6H_6Cl_6$) is a powerful insecticide used in agriculture.",
+  "cat": "gs",
+  "sub": "carbon_compounds"
+},
+{
+  "q": "Which compound is formed when 'Phenol' reacts with Zinc dust?",
+  "o": ["Benzene", "Toluene", "Zinc Phenoxide", "Aniline"],
+  "a": 0,
+  "e": "Zinc acts as a reducing agent, removing the oxygen from phenol to yield benzene.",
+  "cat": "gs",
+  "sub": "carbon_compounds"
+},
+{
+  "q": "What is the 'Hybridization' of carbon atoms in Benzene?",
+  "o": ["sp", "sp2", "sp3", "dsp2"],
+  "a": 1,
+  "e": "All 6 carbons in benzene are $sp^2$ hybridized, resulting in a planar hexagonal shape.",
+  "cat": "gs",
+  "sub": "carbon_compounds"
+},
+{
+  "q": "Which reagent is used for 'Decarboxylation' of sodium salts of fatty acids to produce alkanes?",
+  "o": ["Soda Lime (NaOH + CaO)", "Pure NaOH", "H2SO4", "LiAlH4"],
+  "a": 0,
+  "e": "Soda lime removes the $-CO_2$ group from the salt, reducing the chain length by one carbon.",
+  "cat": "gs",
+  "sub": "carbon_compounds"
+},
+{
+  "q": "What is 'Aniline' chemically?",
+  "o": ["Hydroxybenzene", "Aminobenzene", "Nitrobenzene", "Chlorobenzene"],
+  "a": 1,
+  "e": "Aniline ($C_6H_5NH_2$) is the starting material for making many synthetic dyes.",
+  "cat": "gs",
+  "sub": "carbon_compounds"
+},
+{
+  "q": "Which 'Haloalkane' is used in fire extinguishers under the name 'Pyrene'?",
+  "o": ["Chloroform", "Iodoform", "Carbon Tetrachloride (CCl4)", "Ethyl Chloride"],
+  "a": 2,
+  "e": "$CCl_4$ vapors are non-flammable and denser than air, helping to smother fires.",
+  "cat": "gs",
+  "sub": "carbon_compounds"
+},
+{
+  "q": "What is the result of 'Mild Oxidation' of a secondary alcohol?",
+  "o": ["Aldehyde", "Ketone", "Carboxylic Acid", "Ester"],
+  "a": 1,
+  "e": "Secondary alcohols oxidize to ketones and do not easily oxidize further.",
+  "cat": "gs",
+  "sub": "carbon_compounds"
+},
+{
+  "q": "Which compound gives a 'Yellow Precipitate' with Iodine and Alkali (Iodoform test)?",
+  "o": ["Methanol", "Ethanol", "Diethyl ether", "Benzene"],
+  "a": 1,
+  "e": "Ethanol and ketones with a methyl group (like Acetone) pass this test.",
+  "cat": "gs",
+  "sub": "carbon_compounds"
+},
+{
+  "q": "What is 'Naphthalene' commonly used for in households?",
+  "o": ["Cooking fuel", "Mothballs to repel insects", "Cleaning agent", "Fertilizer"],
+  "a": 1,
+  "e": "It is an aromatic hydrocarbon consisting of two fused benzene rings that sublimes easily.",
+  "cat": "gs",
+  "sub": "carbon_compounds"
+},
+{
+  "q": "Which reaction is used to synthesize 'Alkanes' by the coupling of two alkyl halides with Sodium?",
+  "o": ["Friedel-Crafts Reaction", "Wurtz Reaction", "Reimer-Tiemann Reaction", "Cannizzaro Reaction"],
+  "a": 1,
+  "e": "Wurtz reaction doubles the number of carbon atoms in the resulting alkane.",
+  "cat": "gs",
+  "sub": "carbon_compounds"
+},
+{
+  "q": "What is the common name for 'Trichloromethane'?",
+  "o": ["Iodoform", "Chloroform", "Freon", "Phosgene"],
+  "a": 1,
+  "e": "Chloroform ($CHCl_3$) was a pioneer anesthetic but is now mostly used as a solvent.",
+  "cat": "gs",
+  "sub": "carbon_compounds"
+},
+{
+  "q": "Which compound is produced when 'Ethanol' is heated with excess concentrated $H_2SO_4$ at 170°C?",
+  "o": ["Diethyl ether", "Ethene", "Ethane", "Ethanal"],
+  "a": 1,
+  "e": "This is a dehydration reaction where a water molecule is removed to form a double bond.",
+  "cat": "gs",
+  "sub": "carbon_compounds"
+},
+{
+  "q": "What is 'Bakelite' made from?",
+  "o": ["Phenol and Formaldehyde", "Ethene and Benzene", "Adipic acid and Glycol", "Styrene"],
+  "a": 0,
+  "e": "It is a thermosetting polymer used for electrical switches and pan handles.",
+  "cat": "gs",
+  "sub": "carbon_compounds"
+},
+{
+  "q": "Which aromatic compound is used as a 'Preservative' in the form of its Sodium salt?",
+  "o": ["Phenol", "Benzoic Acid", "Salicylic Acid", "Toluene"],
+  "a": 1,
+  "e": "Sodium Benzoate is widely used to prevent spoilage in fruit juices and pickles.",
+  "cat": "gs",
+  "sub": "carbon_compounds"
+},
+{
+  "q": "What is the 'IUPAC name' of Glycerin?",
+  "o": ["Propan-1-ol", "Propane-1,2-diol", "Propane-1,2,3-triol", "Ethane-1,2-diol"],
+  "a": 2,
+  "e": "Glycerin is a trihydric alcohol with three hydroxyl groups on three carbons.",
+  "cat": "gs",
+  "sub": "carbon_compounds"
+},
+{
+  "q": "Which reaction introduces an 'Alkyl group' into a benzene ring using an alkyl halide and $AlCl_3$?",
+  "o": ["Wurtz-Fittig Reaction", "Friedel-Crafts Alkylation", "Sandmeyer Reaction", "Kolbe’s Reaction"],
+  "a": 1,
+  "e": "It is a classic electrophilic substitution reaction in aromatic chemistry.",
+  "cat": "gs",
+  "sub": "carbon_compounds"
+},
+{
+  "q": "What is 'Aspirin' chemically?",
+  "o": ["Methyl Salicylate", "Acetylsalicylic Acid", "Ethyl Benzoate", "Phenyl Salicylate"],
+  "a": 1,
+  "e": "Prepared by the acetylation of salicylic acid, used as an analgesic.",
+  "cat": "gs",
+  "sub": "carbon_compounds"
+},
+{
+  "q": "Which alcohol is known as 'Grain Alcohol'?",
+  "o": ["Methanol", "Ethanol", "Propanol", "Isopropyl alcohol"],
+  "a": 1,
+  "e": "Ethanol is produced by the fermentation of grains like corn, wheat, or barley.",
+  "cat": "gs",
+  "sub": "carbon_compounds"
+},
+{
+  "q": "What is the functional group in 'Ester'?",
+  "o": ["-CHO", "-CO-", "-COOR", "-O-"],
+  "a": 2,
+  "e": "Esters have the general formula R-COOR' and are often sweet-smelling.",
+  "cat": "gs",
+  "sub": "carbon_compounds"
+},
+{
+  "q": "Which 'Ketone' is the simplest member of the series?",
+  "o": ["Methanone", "Ethanone", "Propanone (Acetone)", "Butanone"],
+  "a": 2,
+  "e": "A ketone requires at least 3 carbons to have the >C=O group between two alkyl groups.",
+  "cat": "gs",
+  "sub": "carbon_compounds"
+},
+{
+  "q": "What is 'Lucas Reagent' used to distinguish?",
+  "o": ["Alcohols from Phenols", "Primary, Secondary, and Tertiary Alcohols", "Aldehydes from Ketones", "Alkanes from Alkenes"],
+  "a": 1,
+  "e": "Tertiary alcohols react immediately, secondary after 5 mins, and primary not at all at room temp.",
+  "cat": "gs",
+  "sub": "carbon_compounds"
+},
+{
+  "q": "Which compound is known as 'Oil of Mirbane' and has an almond-like smell?",
+  "o": ["Benzaldehyde", "Nitrobenzene", "Aniline", "Phenol"],
+  "a": 1,
+  "e": "Nitrobenzene is used to scent cheap soaps and as a precursor to aniline.",
+  "cat": "gs",
+  "sub": "carbon_compounds"
+},
+{
+  "q": "What is the 'IUPAC name' of Acetaldehyde?",
+  "o": ["Methanal", "Ethanal", "Propanal", "Ethanol"],
+  "a": 1,
+  "e": "The two-carbon aldehyde is called Ethanal.",
+  "cat": "gs",
+  "sub": "carbon_compounds"
+},
+{
+  "q": "Which acid is produced in the 'Muscles' during heavy exercise, causing cramps?",
+  "o": ["Acetic Acid", "Lactic Acid", "Citric Acid", "Oxalic Acid"],
+  "a": 1,
+  "e": "Anaerobic respiration in muscle cells produces lactic acid as a byproduct.",
+  "cat": "gs",
+  "sub": "carbon_compounds"
+},
+{
+  "q": "What is 'Ether' primarily used for in old medical history?",
+  "o": ["As an antiseptic", "As a general anesthetic", "To treat fever", "As a vaccine"],
+  "a": 1,
+  "e": "Diethyl ether was one of the first successful inhalation anesthetics.",
+  "cat": "gs",
+  "sub": "carbon_compounds"
+},
+{
+  "q": "Which 'Aromatic' hydrocarbon is found in mothballs?",
+  "o": ["Benzene", "Toluene", "Naphthalene", "Anthracene"],
+  "a": 2,
+  "e": "Naphthalene ($C_{10}H_8$) consists of two fused benzene rings.",
+  "cat": "gs",
+  "sub": "carbon_compounds"
+},
+{
+  "q": "What is 'Power Alcohol' a mixture of?",
+  "o": ["Ethanol and Water", "Ethanol and Petrol", "Methanol and Petrol", "Alcohol and Sugar"],
+  "a": 1,
+  "e": "It is used as an alternative fuel in internal combustion engines.",
+  "cat": "gs",
+  "sub": "carbon_compounds"
+},
+{
+  "q": "Which reaction is used to prepare 'Salicylaldehyde' from Phenol?",
+  "o": ["Friedel-Crafts reaction", "Reimer-Tiemann reaction", "Kolbe’s reaction", "Wurtz reaction"],
+  "a": 1,
+  "e": "Phenol reacts with Chloroform and aqueous $NaOH$ to introduce a -CHO group.",
+  "cat": "gs",
+  "sub": "carbon_compounds"
+},
+{
+  "q": "What is the 'Functional Group' in Amines?",
+  "o": ["-NO2", "-NH2", "-CN", "-CONH2"],
+  "a": 1,
+  "e": "Amines are derivatives of ammonia where H atoms are replaced by alkyl groups.",
+  "cat": "gs",
+  "sub": "carbon_compounds"
+},
+{
+  "q": "Which 'Polymer' is made from the monomer Styrene?",
+  "o": ["PVC", "Polystyrene", "Nylon", "Teflon"],
+  "a": 1,
+  "e": "Polystyrene is used for making thermocol and disposable cups.",
+  "cat": "gs",
+  "sub": "carbon_compounds"
+},
+{
+  "q": "What is 'Rectified Spirit'?",
+  "o": ["100% Ethanol", "95.5% Ethanol + 4.5% Water", "Pure Methanol", "Alcohol with pyridine"],
+  "a": 1,
+  "e": "It is obtained by fractional distillation and is the most common commercial form of ethanol.",
+  "cat": "gs",
+  "sub": "carbon_compounds"
+},
+{
+  "q": "Which aromatic compound is used in 'Dyeing' and as a starting material for Paracetamol?",
+  "o": ["Phenol", "Aniline", "Toluene", "Benzene"],
+  "a": 0,
+  "e": "Phenol is a versatile starting material for many drugs and plastics.",
+  "cat": "gs",
+  "sub": "carbon_compounds"
+},
+{
+  "q": "What is the 'IUPAC name' of $CH_3-CH_2-O-CH_2-CH_3$?",
+  "o": ["Methoxymethane", "Ethoxyethane", "Methoxyethane", "Ethyl ether"],
+  "a": 1,
+  "e": "It is Diethyl ether, named systematically as Ethoxyethane.",
+  "cat": "gs",
+  "sub": "carbon_compounds"
+},
+{
+  "q": "Which gas is evolved when 'Alcohols' react with Sodium metal?",
+  "o": ["Oxygen", "Hydrogen", "Carbon Dioxide", "Chlorine"],
+  "a": 1,
+  "e": "Reaction of Na with R-OH produces sodium alkoxide and $H_2$ gas.",
+  "cat": "gs",
+  "sub": "carbon_compounds"
+},
+{
+  "q": "What is the 'Oxidation' product of Methanol in the human body that causes blindness?",
+  "o": ["Acetic acid", "Formaldehyde (Methanal)", "Carbon dioxide", "Formic acid"],
+  "a": 1,
+  "e": "The liver enzyme alcohol dehydrogenase converts methanol to toxic formaldehyde.",
+  "cat": "gs",
+  "sub": "carbon_compounds"
+},
+{
+  "q": "Which acid is present in 'Tamarind' and is an organic di-acid?",
+  "o": ["Citric acid", "Lactic acid", "Tartaric acid", "Oxalic acid"],
+  "a": 2,
+  "e": "Tartaric acid gives tamarind its unique sharp sourness.",
+  "cat": "gs",
+  "sub": "carbon_compounds"
+},
+{
+  "q": "What is 'Saponification' a reaction of?",
+  "o": ["Acids and Bases", "Esters and Alkalis", "Alcohols and Acids", "Alkanes and Chlorine"],
+  "a": 1,
+  "e": "It is the alkaline hydrolysis of fats (esters) to produce soap and glycerol.",
+  "cat": "gs",
+  "sub": "carbon_compounds"
+},
+{
+  "q": "Which compound is used as an 'Antiseptic' in soaps under the name Bithional?",
+  "o": ["Phenol", "Ethanol", "Iodoform", "Bithional"],
+  "a": 3,
+  "e": "It is added to soaps to impart antiseptic properties.",
+  "cat": "gs",
+  "sub": "carbon_compounds"
+},
+{
+  "q": "What is the 'Common name' for Ethane-1,2-diol, used as antifreeze?",
+  "o": ["Glycerin", "Ethylene Glycol", "Propylene Glycol", "Wood spirit"],
+  "a": 1,
+  "e": "It is a dihydric alcohol with two -OH groups.",
+  "cat": "gs",
+  "sub": "carbon_compounds"
+},
+{
+  "q": "Which functional group is found in 'Proteins'?",
+  "o": ["Ester", "Amide (Peptide bond)", "Ether", "Ketone"],
+  "a": 1,
+  "e": "Proteins are polymers of amino acids linked by peptide (-CONH-) bonds.",
+  "cat": "gs",
+  "sub": "carbon_compounds"
+},
+{
+  "q": "What is the name of the reaction that converts 'Phenol' to Salicylic acid?",
+  "o": ["Reimer-Tiemann reaction", "Kolbe’s reaction", "Cannizzaro reaction", "Hofmann reaction"],
+  "a": 1,
+  "e": "Phenol reacts with $CO_2$ and $NaOH$ to form sodium salicylate.",
+  "cat": "gs",
+  "sub": "carbon_compounds"
+},
+  {
+  "q": "Which 'Monosaccharide' is known as Blood Sugar and is the primary energy source for cells?",
+  "o": ["Fructose", "Glucose", "Galactose", "Ribose"],
+  "a": 1,
+  "e": "Glucose ($C_6H_{12}O_6$) is an aldohexose and is essential for cellular respiration.",
+  "cat": "gs",
+  "sub": "carbon_compounds"
+},
+{
+  "q": "What is the 'Sweetest' naturally occurring sugar found in fruits and honey?",
+  "o": ["Glucose", "Sucrose", "Fructose", "Lactose"],
+  "a": 2,
+  "e": "Fructose, also known as fruit sugar, is a ketohexose and is significantly sweeter than table sugar.",
+  "cat": "gs",
+  "sub": "carbon_compounds"
+},
+{
+  "q": "Which linkage joins two 'Amino Acids' together in a protein chain?",
+  "o": ["Glycosidic linkage", "Peptide (Amide) linkage", "Ester linkage", "Phosphodiester linkage"],
+  "a": 1,
+  "e": "A peptide bond (-CONH-) forms between the carboxyl group of one amino acid and the amino group of another.",
+  "cat": "gs",
+  "sub": "carbon_compounds"
+},
+{
+  "q": "What is 'Starch' chemically?",
+  "o": ["A Monosaccharide", "A Disaccharide", "A Polysaccharide", "A Protein"],
+  "a": 2,
+  "e": "Starch is a polymer of alpha-glucose and serves as the main energy storage in plants.",
+  "cat": "gs",
+  "sub": "carbon_compounds"
+},
+{
+  "q": "Which 'Vitamin' is water-soluble and helps in the healing of wounds?",
+  "o": ["Vitamin A", "Vitamin C (Ascorbic Acid)", "Vitamin D", "Vitamin K"],
+  "a": 1,
+  "e": "Vitamin C is essential for collagen synthesis; its deficiency causes Scurvy.",
+  "cat": "gs",
+  "sub": "carbon_compounds"
+},
+{
+  "q": "What is the 'Monomer' of Natural Rubber?",
+  "o": ["Ethylene", "Vinyl Chloride", "Isoprene", "Styrene"],
+  "a": 2,
+  "e": "Natural rubber is a polymer of Isoprene (2-methyl-1,3-butadiene).",
+  "cat": "gs",
+  "sub": "carbon_compounds"
+},
+{
+  "q": "Which 'Polymer' is used to make non-stick cookware like 'Teflon'?",
+  "o": ["Polyethylene", "Polystyrene", "Polytetrafluoroethylene (PTFE)", "PVC"],
+  "a": 2,
+  "e": "PTFE is chemically inert and has very low friction, preventing food from sticking.",
+  "cat": "gs",
+  "sub": "carbon_compounds"
+},
+{
+  "q": "What is the sugar found in 'Milk'?",
+  "o": ["Sucrose", "Lactose", "Maltose", "Fructose"],
+  "a": 1,
+  "e": "Lactose is a disaccharide composed of Glucose and Galactose.",
+  "cat": "gs",
+  "sub": "carbon_compounds"
+},
+{
+  "q": "Which 'Vitamin' is synthesized by the human body in the presence of sunlight?",
+  "o": ["Vitamin A", "Vitamin B12", "Vitamin D", "Vitamin E"],
+  "a": 2,
+  "e": "Ultraviolet rays trigger the synthesis of Vitamin D (Calciferol) in the skin.",
+  "cat": "gs",
+  "sub": "carbon_compounds"
+},
+{
+  "q": "What is 'Nylon 6,6' classified as?",
+  "o": ["Polyester", "Polyamide", "Polyolefin", "Polyvinyl"],
+  "a": 1,
+  "e": "It is made from adipic acid and hexamethylene diamine, containing many amide (peptide-like) linkages.",
+  "cat": "gs",
+  "sub": "carbon_compounds"
+},
+{
+  "q": "Which 'Sugar' is used in the household as Table Sugar?",
+  "o": ["Maltose", "Sucrose", "Lactose", "Glucose"],
+  "a": 1,
+  "e": "Sucrose is a disaccharide obtained from sugarcane or sugar beets.",
+  "cat": "gs",
+  "sub": "carbon_compounds"
+},
+{
+  "q": "What is 'Insulin' chemically?",
+  "o": ["A Carbohydrate", "A Lipid", "A Protein (Hormone)", "A Vitamin"],
+  "a": 2,
+  "e": "Insulin is a peptide hormone that regulates blood glucose levels.",
+  "cat": "gs",
+  "sub": "carbon_compounds"
+},
+{
+  "q": "Which 'Fat-soluble' Vitamin is essential for blood clotting?",
+  "o": ["Vitamin A", "Vitamin D", "Vitamin E", "Vitamin K"],
+  "a": 3,
+  "e": "Vitamin K is required for the synthesis of proteins involved in blood coagulation.",
+  "cat": "gs",
+  "sub": "carbon_compounds"
+},
+{
+  "q": "What is the basic 'Building Block' of proteins?",
+  "o": ["Glucose", "Fatty acids", "Amino acids", "Nucleotides"],
+  "a": 2,
+  "e": "There are 20 standard amino acids that combine in various sequences to form proteins.",
+  "cat": "gs",
+  "sub": "carbon_compounds"
+},
+{
+  "q": "Which polymer is used for making 'Plastic Pipes' (PVC)?",
+  "o": ["Polyethylene", "Polyvinyl Chloride", "Polypropylene", "Bakelite"],
+  "a": 1,
+  "e": "PVC is durable, chemical-resistant, and widely used in construction.",
+  "cat": "gs",
+  "sub": "carbon_compounds"
+},
+{
+  "q": "What is 'Cellulose'?",
+  "o": ["Animal protein", "Plant polysaccharide", "Synthetic fiber", "A lipid"],
+  "a": 1,
+  "e": "Cellulose provides structural support to plant cell walls and is the most abundant organic polymer on Earth.",
+  "cat": "gs",
+  "sub": "carbon_compounds"
+},
+{
+  "q": "Which 'Vitamin' is also known as Retinol?",
+  "o": ["Vitamin A", "Vitamin B1", "Vitamin C", "Vitamin D"],
+  "a": 0,
+  "e": "Vitamin A is crucial for good vision and immune function.",
+  "cat": "gs",
+  "sub": "carbon_compounds"
+},
+{
+  "q": "What is the 'Monomer' of Orlon (Acrylic fiber)?",
+  "o": ["Vinyl Chloride", "Acrylonitrile", "Styrene", "Caprolactam"],
+  "a": 1,
+  "e": "Polyacrylonitrile is used as a wool substitute in sweaters and blankets.",
+  "cat": "gs",
+  "sub": "carbon_compounds"
+},
+{
+  "q": "Which 'Enzyme' breaks down starch into maltose in the human mouth?",
+  "o": ["Pepsin", "Trypsin", "Salivary Amylase (Ptyalin)", "Lipase"],
+  "a": 2,
+  "e": "Digestion of carbohydrates begins in the mouth via amylase.",
+  "cat": "gs",
+  "sub": "carbon_compounds"
+},
+{
+  "q": "What is 'Rayon'?",
+  "o": ["Natural Silk", "Regenerated Cellulose (Semi-synthetic)", "Fully synthetic polymer", "Animal Wool"],
+  "a": 1,
+  "e": "Rayon is made from wood pulp but processed chemically to form fibers.",
+  "cat": "gs",
+  "sub": "carbon_compounds"
+},
+{
+  "q": "Which 'Vitamin B' deficiency causes Beri-Beri?",
+  "o": ["Vitamin B1 (Thiamine)", "Vitamin B2 (Riboflavin)", "Vitamin B6 (Pyridoxine)", "Vitamin B12"],
+  "a": 0,
+  "e": "Thiamine is essential for energy metabolism and nerve function.",
+  "cat": "gs",
+  "sub": "carbon_compounds"
+},
+{
+  "q": "What is 'Bakelite'?",
+  "o": ["Thermoplastic", "Thermosetting Plastic", "Natural Fiber", "Elastomer"],
+  "a": 1,
+  "e": "Bakelite is a phenol-formaldehyde resin that does not melt once set, used in electrical switches.",
+  "cat": "gs",
+  "sub": "carbon_compounds"
+},
+{
+  "q": "Which sugar is found in 'DNA'?",
+  "o": ["Ribose", "Deoxyribose", "Glucose", "Fructose"],
+  "a": 1,
+  "e": "Deoxyribonucleic acid contains a five-carbon sugar with one less oxygen than ribose.",
+  "cat": "gs",
+  "sub": "carbon_compounds"
+},
+{
+  "q": "What is the 'Denaturation' of proteins?",
+  "o": ["Formation of proteins", "Loss of 3D structure due to heat or pH change", "Digestion of proteins", "Synthesis of amino acids"],
+  "a": 1,
+  "e": "Denaturation makes proteins lose their biological activity (e.g., boiling an egg).",
+  "cat": "gs",
+  "sub": "carbon_compounds"
+},
+{
+  "q": "Which 'Polysaccharide' is stored in the human liver and muscles as an energy reserve?",
+  "o": ["Starch", "Cellulose", "Glycogen", "Inulin"],
+  "a": 2,
+  "e": "Glycogen is often called 'animal starch'.",
+  "cat": "gs",
+  "sub": "carbon_compounds"
+},
+{
+  "q": "What is the monomer of 'Terylene' (Dacron)?",
+  "o": ["Ethylene Glycol and Terephthalic Acid", "Adipic Acid and Hexamethylene Diamine", "Vinyl Chloride", "Phenol"],
+  "a": 0,
+  "e": "Terylene is a common polyester used in clothing.",
+  "cat": "gs",
+  "sub": "carbon_compounds"
+},
+{
+  "q": "Which 'Vitamin' contains Cobalt?",
+  "o": ["Vitamin B1", "Vitamin B6", "Vitamin B12 (Cyanocobalamin)", "Vitamin C"],
+  "a": 2,
+  "e": "Vitamin B12 is essential for red blood cell formation and DNA synthesis.",
+  "cat": "gs",
+  "sub": "carbon_compounds"
+},
+{
+  "q": "What is 'Vulcanization' of rubber?",
+  "o": ["Cleaning rubber", "Heating natural rubber with Sulfur", "Making rubber liquid", "Adding water to rubber"],
+  "a": 1,
+  "e": "Vulcanization improves the elasticity, toughness, and temperature resistance of rubber.",
+  "cat": "gs",
+  "sub": "carbon_compounds"
+},
+{
+  "q": "Which 'Carbohydrate' is used to test for the presence of Iodine in a lab?",
+  "o": ["Glucose", "Starch", "Sucrose", "Cellulose"],
+  "a": 1,
+  "e": "Starch reacts with iodine to form a characteristic deep blue-black complex.",
+  "cat": "gs",
+  "sub": "carbon_compounds"
+},
+{
+  "q": "What is 'Buna-N'?",
+  "o": ["Natural Rubber", "Synthetic Rubber", "Plastic", "Fiber"],
+  "a": 1,
+  "e": "It is a copolymer of butadiene and acrylonitrile, resistant to oils and chemicals.",
+  "cat": "gs",
+  "sub": "carbon_compounds"
+},
+{
+  "q": "Which 'Vitamin' deficiency causes Rickets in children?",
+  "o": ["Vitamin A", "Vitamin B", "Vitamin C", "Vitamin D"],
+  "a": 3,
+  "e": "Vitamin D deficiency leads to soft and weak bones.",
+  "cat": "gs",
+  "sub": "carbon_compounds"
+},
+{
+  "q": "What is 'Saponification' primarily used for?",
+  "o": ["Making plastic", "Making soap", "Making cement", "Making fertilizers"],
+  "a": 1,
+  "e": "It is the alkaline hydrolysis of fats or oils to produce soap and glycerol.",
+  "cat": "gs",
+  "sub": "carbon_compounds"
+},
+{
+  "q": "Which amino acid is 'Non-essential' for humans (can be synthesized by the body)?",
+  "o": ["Lysine", "Valine", "Glycine", "Tryptophan"],
+  "a": 2,
+  "e": "Essential amino acids must be obtained through diet.",
+  "cat": "gs",
+  "sub": "carbon_compounds"
+},
+{
+  "q": "What is 'Teflon' chemically?",
+  "o": ["Polyvinyl Chloride", "Polytetrafluoroethylene", "Polyisoprene", "Polycarbonate"],
+  "a": 1,
+  "e": "It is used in non-stick coatings and industrial gaskets.",
+  "cat": "gs",
+  "sub": "carbon_compounds"
+},
+{
+  "q": "Which 'Vitamin' is destroyed by overcooking or heat?",
+  "o": ["Vitamin A", "Vitamin C", "Vitamin D", "Vitamin K"],
+  "a": 1,
+  "e": "Ascorbic acid is very sensitive to heat and oxygen.",
+  "cat": "gs",
+  "sub": "carbon_compounds"
+},
+{
+  "q": "What is 'Gutta Percha'?",
+  "o": ["A type of plastic", "A natural isomer of rubber", "A synthetic fiber", "A detergent"],
+  "a": 1,
+  "e": "It is trans-polyisoprene and is used in dental fillings and underwater cables.",
+  "cat": "gs",
+  "sub": "carbon_compounds"
+},
+{
+  "q": "Which 'Base' is found in RNA but NOT in DNA?",
+  "o": ["Adenine", "Guanine", "Cytosine", "Uracil"],
+  "a": 3,
+  "e": "RNA uses Uracil, whereas DNA uses Thymine.",
+  "cat": "gs",
+  "sub": "carbon_compounds"
+},
+{
+  "q": "What is the monomer of 'Polystyrene'?",
+  "o": ["Ethylene", "Vinyl Benzene (Styrene)", "Propylene", "Butadiene"],
+  "a": 1,
+  "e": "Polystyrene is used for making thermocol and disposable cups.",
+  "cat": "gs",
+  "sub": "carbon_compounds"
+},
+{
+  "q": "Which 'Vitamin' is known as the Anti-sterility Vitamin?",
+  "o": ["Vitamin A", "Vitamin D", "Vitamin E (Tocopherol)", "Vitamin K"],
+  "a": 2,
+  "e": "Vitamin E is important for reproductive health and as an antioxidant.",
+  "cat": "gs",
+  "sub": "carbon_compounds"
+},
+{
+  "q": "What is 'Plexiglass' (Lucite)?",
+  "o": ["Glass with plastic", "Polymethyl Methacrylate (PMMA)", "Toughened glass", "Lead glass"],
+  "a": 1,
+  "e": "It is a transparent thermoplastic used as a lightweight alternative to glass.",
+  "cat": "gs",
+  "sub": "carbon_compounds"
+},
+{
+  "q": "Which 'Disaccharide' is found in sprouted seeds (Malt)?",
+  "o": ["Sucrose", "Lactose", "Maltose", "Cellobiose"],
+  "a": 2,
+  "e": "Maltose is composed of two glucose units.",
+  "cat": "gs",
+  "sub": "carbon_compounds"
+},
+{
+  "q": "What is 'Natural Rubber' chemically?",
+  "o": ["Polystyrene", "Polyisoprene", "Polyvinyl", "Neoprene"],
+  "a": 1,
+  "e": "Natural rubber is a polymer of the monomer Isoprene ($2-methyl-1,3-butadiene$).",
+  "cat": "gs",
+  "sub": "industrial_chemistry"
+},
+{
+  "q": "Which 'Thermosetting' plastic is used for making electrical switches and handles of pressure cookers?",
+  "o": ["Polyethylene", "Bakelite", "PVC", "Nylon"],
+  "a": 1,
+  "e": "Bakelite is a poor conductor of heat and electricity and does not melt once set.",
+  "cat": "gs",
+  "sub": "industrial_chemistry"
+},
+{
+  "q": "What is 'Terylene' (Dacron) a type of?",
+  "o": ["Polyamide", "Polyester", "Polyether", "Polyolefin"],
+  "a": 1,
+  "e": "Terylene is a popular polyester used for making clothing fibers.",
+  "cat": "gs",
+  "sub": "industrial_chemistry"
+},
+{
+  "q": "Which gas is evolved during the manufacture of 'Polyurethane' foam used in mattresses?",
+  "o": ["Oxygen", "Hydrogen", "Carbon Dioxide", "Chlorine"],
+  "a": 2,
+  "e": "CO2 acts as a blowing agent to create the 'bubbles' or foam structure.",
+  "cat": "gs",
+  "sub": "industrial_chemistry"
+},
+{
+  "q": "What is the 'Monomer' of Teflon?",
+  "o": ["Vinyl Chloride", "Tetrafluoroethene", "Ethene", "Ethylene Glycol"],
+  "a": 1,
+  "e": "Tetrafluoroethene ($CF_2=CF_2$) polymerizes to form Teflon.",
+  "cat": "gs",
+  "sub": "industrial_chemistry"
+},
+{
+  "q": "Which synthetic fiber was the first to be made entirely from 'Chemicals' (Coal, Air, and Water)?",
+  "o": ["Rayon", "Nylon", "Terylene", "Acrylic"],
+  "a": 1,
+  "e": "Nylon is a fully synthetic polyamide fiber developed in 1935.",
+  "cat": "gs",
+  "sub": "industrial_chemistry"
+},
+{
+  "q": "What is 'Orlon' (Acrylic fiber) used as a substitute for?",
+  "o": ["Cotton", "Silk", "Wool", "Linen"],
+  "a": 2,
+  "e": "Acrylic fibers are warm, lightweight, and soft, mimicking the properties of wool.",
+  "cat": "gs",
+  "sub": "industrial_chemistry"
+},
+{
+  "q": "Which chemical is used as a 'Plasticizer' to make PVC flexible for wires?",
+  "o": ["Benzene", "Phthalates", "Sulfur", "Acetic Acid"],
+  "a": 1,
+  "e": "Phthalates fit between polymer chains, allowing them to slide past each other.",
+  "cat": "gs",
+  "sub": "industrial_chemistry"
+},
+{
+  "q": "What is 'Neoprene' primarily used for?",
+  "o": ["Making tires", "Wetsuits and chemical-resistant gloves", "Fuel", "Clothing"],
+  "a": 1,
+  "e": "Neoprene is a synthetic rubber that is more resistant to oil and heat than natural rubber.",
+  "cat": "gs",
+  "sub": "industrial_chemistry"
+}
 ]
