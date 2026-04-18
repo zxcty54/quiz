@@ -79,5 +79,54 @@
     "e": "Rule: 'Furniture' is an uncountable noun and is always used in the singular form. Therefore, it takes a singular verb 'is'.",
     "cat": "english",
     "sub": "nouns"
+  },
+
+  {
+    "q": "<b>Direct-Indirect:</b> Select the correct indirect form.<br/><br/>He said to me, \"I am writing a letter now.\"",
+    "o": ["He told me that he is writing a letter now.", "He told me that he was writing a letter then.", "He said me that he was writing a letter then.", "He told me that I was writing a letter then."],
+    "a": 1,
+    "e": "Rule: 'Said to' becomes 'Told'. 'Am writing' (Present Continuous) changes to 'Was writing' (Past Continuous), and 'now' changes to 'then'.",
+    "cat": "english",
+    "sub": "narration"
+  },
+  {
+    "q": "<b>Direct-Indirect:</b> Select the correct indirect form.<br/><br/>The teacher said, \"The Sun rises in the East.\"",
+    "o": ["The teacher said that the Sun rose in the East.", "The teacher told that the Sun rises in the East.", "The teacher said that the Sun rises in the East.", "The teacher said the Sun will rise in the East."],
+    "a": 2,
+    "e": "Rule: If the direct speech is a Universal Truth or Habitual Fact, the tense does not change even if the reporting verb is in the past tense.",
+    "cat": "english",
+    "sub": "narration"
+  },
+  {
+    "q": "<b>Direct-Indirect:</b> Select the correct indirect form.<br/><br/>She said, \"Where are you going?\"",
+    "o": ["She asked where I was going.", "She asked where was I going.", "She said where I was going.", "She asked that where I was going."],
+    "a": 0,
+    "e": "Rule: In Interrogative sentences, 'said' changes to 'asked'. The sentence becomes assertive (Subject + Verb), and 'that' is not used with 'Wh' questions.",
+    "cat": "english",
+    "sub": "narration"
+  },
+  {
+    "q": "<b>Active-Passive:</b> Select the correct passive voice.<br/><br/>The chef prepares a delicious meal.",
+    "o": ["A delicious meal was prepared by the chef.", "A delicious meal is prepared by the chef.", "A delicious meal is being prepared by the chef.", "A delicious meal has been prepared by the chef."],
+    "a": 1,
+    "e": "Rule: For Present Indefinite (V1), use 'is/am/are + V3' in passive voice. 'Prepares' becomes 'is prepared'.",
+    "cat": "english",
+    "sub": "voice"
+  },
+  {
+    "q": "<b>Active-Passive:</b> Select the correct passive voice.<br/><br/>They are painting the wall.",
+    "o": ["The wall is painted by them.", "The wall was being painted by them.", "The wall is being painted by them.", "The wall has been painted by them."],
+    "a": 2,
+    "e": "Rule: For Present Continuous (is/am/are + ing), use 'is/am/are + being + V3' in passive voice.",
+    "cat": "english",
+    "sub": "voice"
+  },
+  {
+    "q": "<b>Active-Passive:</b> Select the correct passive voice.<br/><br/>Shut the door.",
+    "o": ["The door is shut.", "Let the door be shut.", "You are shut the door.", "The door be shutted."],
+    "a": 1,
+    "e": "Rule: For Imperative sentences (Order/Request), the passive structure is usually 'Let + Object + be + V3'.",
+    "cat": "english",
+    "sub": "voice"
   }
 ]
