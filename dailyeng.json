@@ -15,5 +15,29 @@
     "e": "Meticulous means showing great attention to detail; being very careful and precise.",
     "cat": "english",
     "sub": "synonym"
+  },
+  {
+    "q": "<b>Cloze Test:</b> Select the most appropriate option for <b>Blank No. 1</b>.<br/><br/><i>'Health is the (1)______ wealth of a person. If we (2)______ our health, we lose everything. A healthy person (3)______ enjoy life to the fullest. Regular exercise (4)______ us fit and active. Therefore, we should (5)______ healthy habits.'</i>",
+    "o": ["only", "ultimate", "fake", "bad"],
+    "a": 1,
+    "e": "Blank 1: 'Ultimate' is the correct choice as health is considered the greatest/final wealth.",
+    "cat": "english",
+    "sub": "cloze-test"
+  },
+  {
+    "q": "<b>Cloze Test:</b> Select the most appropriate option for <b>Blank No. 2</b>.<br/><br/><i>'Health is the (1)______ wealth of a person. If we <u><b>(2)______</b></u> our health, we lose everything. A healthy person (3)______ enjoy life to the fullest. Regular exercise (4)______ us fit and active. Therefore, we should (5)______ healthy habits.'</i>",
+    "o": ["neglect", "protect", "gain", "improve"],
+    "a": 0,
+    "e": "Blank 2: 'Neglect' fits the condition 'If we... we lose everything'.",
+    "cat": "english",
+    "sub": "cloze-test"
+  },
+  {
+    "q": "<b>Cloze Test:</b> Select the most appropriate option for <b>Blank No. 3</b>.<br/><br/><i>'Health is the (1)______ wealth of a person. If we (2)______ our health, we lose everything. A healthy person <u><b>(3)______</b></u> enjoy life to the fullest. Regular exercise (4)______ us fit and active. Therefore, we should (5)______ healthy habits.'</i>",
+    "o": ["cannot", "might", "can", "should"],
+    "a": 2,
+    "e": "Blank 3: 'Can' expresses the ability of a healthy person to enjoy life.",
+    "cat": "english",
+    "sub": "cloze-test"
   }
 ]
