@@ -25,6 +25,1486 @@
   },
   
   {
+    "q": "Which type of microorganism is responsible for causing 'Measles' (Khasra)?\n'खसरा' (Measles) किस प्रकार के सूक्ष्मजीव के कारण होता है?",
+    "o": ["Bacteria", "Virus | विषाणु (वायरस)", "Protozoa", "Fungus"],
+    "a": 1,
+    "e": "Measles is a viral infection that affects the whole body, especially the skin and respiratory system. / खसरा एक वायरस जनित रोग है जो त्वचा और श्वसन तंत्र को प्रभावित करता है।",
+    "cat": "gs",
+    "sub": "diseases"
+  },
+  {
+    "q": "Which organ is primarily affected by Jaundice or Hepatitis?\nपीलिया या हेपेटाइटिस से मुख्य रूप से कौन सा अंग प्रभावित होता है?",
+    "o": ["Kidney", "Lungs", "Liver (Yarit) | यकृत (लीवर)", "Heart"],
+    "a": 2,
+    "e": "Hepatitis viruses primarily target the liver, causing inflammation and dysfunction. / हेपेटाइटिस वायरस मुख्य रूप से लीवर पर हमला करते हैं।",
+    "cat": "gs",
+    "sub": "diseases"
+  },
+  {
+    "q": "What is the full form of the 'ELISA' test used to diagnose HIV?\nHIV की जाँच के लिए उपयोग किए जाने वाले 'ELISA' टेस्ट का पूर्ण रूप क्या है?",
+    "o": ["Enzyme-Linked Immunosorbent Assay | एंजाइम लिंक्ड इम्यूनोसॉर्बेंट ऐसे", "Electronic Link Immune System Analysis", "Extra Light Immune Solution Agent", "None"],
+    "a": 0,
+    "e": "ELISA is a screening test that detects antibodies produced against HIV in the body. / एलिसा एक स्क्रीनिंग टेस्ट है जो एचआईवी के खिलाफ बनी एंटीबॉडी का पता लगाता है।",
+    "cat": "gs",
+    "sub": "bio"
+  },
+  {
+    "q": "Which cancer diagnostic test is used to check the spread of cancer cells throughout the body using radioactive glucose?\nरेडियोधर्मी ग्लूकोज का उपयोग करके शरीर में कैंसर के फैलाव की जाँच करने वाला टेस्ट कौन सा है?",
+    "o": ["X-ray", "Biopsy", "PET Scan | पेट स्कैन", "ECG"],
+    "a": 2,
+    "e": "A PET scan identifies active cancer cells by showing areas of high metabolic activity. / पेट स्कैन शरीर में सक्रिय कैंसर कोशिकाओं की पहचान करता है।",
+    "cat": "gs",
+    "sub": "diseases"
+  },
+  {
+    "q": "What occurs when cancer cells spread from their original site to other parts of the body?\nजब कैंसर कोशिकाएं अपने मूल स्थान से शरीर के अन्य भागों में फैल जाती हैं, तो इसे क्या कहते हैं?",
+    "o": ["Benign", "Metastasis | मेटास्टेटिक्स", "Latent Period", "Recurrence"],
+    "a": 1,
+    "e": "Metastasis is the advanced stage where cancer spreads to distant organs via blood or lymph. / मेटास्टेटिक्स वह अवस्था है जब कैंसर शरीर के अन्य अंगों में फैल जाता है।",
+    "cat": "gs",
+    "sub": "diseases"
+  },
+  {
+    "q": "Which surgery involves creating a new path for blood flow around a blocked coronary artery?\nअवरुद्ध कोरोनरी धमनी के चारों ओर रक्त प्रवाह के लिए नया रास्ता बनाने वाली सर्जरी कौन सी है?",
+    "o": ["Angiography", "Bypass Surgery | बाईपास सर्जरी", "Dialysis", "Biopsy"],
+    "a": 1,
+    "e": "Bypass surgery (CABG) uses a graft (like the mammary or radial artery) to bypass blocked heart vessels. / बाईपास सर्जरी हृदय की अवरुद्ध नलियों के बगल से नया रास्ता बनाती है।",
+    "cat": "gs",
+    "sub": "circulatory"
+  },
+  {
+    "q": "What is the chemical name of the 'Red Devil' drug used in chemotherapy?\nकीमोथेरेपी में प्रयुक्त 'रेड डेविल' दवा का रासायनिक नाम क्या है (जैसा क्लास में चर्चा हुई)?",
+    "o": ["Paracetamol", "Adriamycin (Doxorubicin) | एड्रियामाइसिन", "Insulin", "Penicillin"],
+    "a": 1,
+    "e": "Adriamycin is nicknamed 'Red Devil' because of its red color and high toxicity level. / एड्रियामाइसिन को इसके रंग और विषाक्तता के कारण 'रेड डेविल' कहा जाता है।",
+    "cat": "gs",
+    "sub": "bio"
+  },
+  {
+    "q": "Which type of se-line (bottle) contains only sterile water and 0.9% salt (NaCl)?\nकिस प्रकार के सेलाइन में केवल शुद्ध जल और 0.9% नमक (NaCl) होता है?",
+    "o": ["D5", "DNS", "NS (Normal Saline) | एनएस (नॉर्मल सेलाइन)", "RL"],
+    "a": 2,
+    "e": "Normal Saline (NS) is used for hydration and cleaning wounds without adding glucose. / एनएस का उपयोग शरीर में पानी की कमी पूरी करने और घाव धोने के लिए किया जाता है।",
+    "cat": "gs",
+    "sub": "bio"
+  },
+  {
+    "q": "Which se-line bottle is avoided for Diabetic patients because it contains glucose/dextrose?\nमधुमेह (शुगर) के रोगियों के लिए कौन सा सेलाइन नहीं दिया जाता क्योंकि इसमें ग्लूकोज होता है?",
+    "o": ["NS", "D5 / D10 | डी5 / डी10", "Sterile Water", "None"],
+    "a": 1,
+    "e": "D5 and D10 contain dextrose (sugar), which can dangerously spike blood sugar levels in diabetics. / D5 और D10 में शुगर होती है, इसलिए शुगर के मरीजों को यह नहीं दिया जाता।",
+    "cat": "gs",
+    "sub": "nutrition"
+  },
+  {
+    "q": "The 'RL' (Ringer Lactate) bottle is primarily given to patients with ____.\n'RL' (रिंगर लैक्टेट) की बोतल मुख्य रूप से किन रोगियों को दी जाती है?",
+    "o": ["High Sugar", "Low BP / Malnutrition | लो बीपी / कुपोषण", "High Fever", "Eye infection"],
+    "a": 1,
+    "e": "RL is a balanced solution used to restore electrolytes in cases of low BP or malnutrition. / आरएल का उपयोग लो बीपी या कुपोषण में इलेक्ट्रोलाइट्स संतुलित करने के लिए किया जाता है।",
+    "cat": "gs",
+    "sub": "circulatory"
+  },
+  {
+    "q": "Which treatment uses high-energy rays like X-rays to destroy cancer cells locally?\nकौन सा उपचार कैंसर कोशिकाओं को स्थानीय रूप से नष्ट करने के लिए उच्च-ऊर्जा किरणों का उपयोग करता है?",
+    "o": ["Chemotherapy", "Radiation Therapy | रेडिएशन थेरेपी", "Ayurveda", "Homeopathy"],
+    "a": 1,
+    "e": "Radiation therapy targets specific tumor sites to kill cancer cells and shrink tumors. / रेडिएशन थेरेपी लक्षित ट्यूमर पर किरणों का उपयोग करती है।",
+    "cat": "gs",
+    "sub": "diseases"
+  },
+  {
+    "q": "The 'DNS' se-line bottle is a combination of which two solutions?\n'DNS' सेलाइन की बोतल किन दो समाधानों का मिश्रण है?",
+    "o": ["Dextrose + Normal Saline | डेक्सोज + एनएस", "Lactate + Water", "Blood + Plasma", "Sugar + Antibiotic"],
+    "a": 0,
+    "e": "DNS stands for Dextrose Normal Saline, containing both salt and sugar. / डीएनएस में नमक और चीनी (डेक्सोज) दोनों होते हैं।",
+    "cat": "gs",
+    "sub": "bio"
+  },
+  {
+    "q": "Which vaccine is given to prevent Uterine (Cervical) cancer in females?\nमहिलाओं में गर्भाशय (ग्रीवा) के कैंसर को रोकने के लिए कौन सी वैक्सीन दी जाती है?",
+    "o": ["BCG", "DPT", "HPV Vaccine | एचपीवी वैक्सीन", "Polio"],
+    "a": 2,
+    "e": "The HPV vaccine protects against Human Papillomavirus, a major cause of cervical cancer. / एचपीवी वैक्सीन गर्भाशय ग्रीवा के कैंसर से सुरक्षा प्रदान करती है।",
+    "cat": "gs",
+    "sub": "reproduction"
+  },
+  {
+    "q": "Why is 'Biopsy' necessary in cancer diagnosis?\nकैंसर के निदान में 'बायोप्सी' क्यों आवश्यक है?",
+    "o": ["To check blood group", "To determine the Grade and Stage of cancer | कैंसर के ग्रेड और स्टेज का पता लगाने हेतु", "To check height", "For fun"],
+    "a": 1,
+    "e": "Biopsy provides definitive evidence of cancer type, grade, and aggressiveness. / बायोप्सी कैंसर के प्रकार और उसके फैलने की गति की सटीक जानकारी देती है।",
+    "cat": "gs",
+    "sub": "diseases"
+  },
+  {
+    "q": "Which virus causes 'Hydrophobia' (fear of water) and is transmitted via animal bites?\nकौन सा वायरस 'हाइपोफोबिया' (पानी से डर) का कारण बनता है और जानवरों के काटने से फैलता है?",
+    "o": ["HIV", "Rhabdo virus (Rabies) | रबड़ो वायरस", "H5N1", "Ebola"],
+    "a": 1,
+    "e": "Rabies virus (Rhabdovirus) attacks the nervous system, making the patient afraid of water. / रबड़ो वायरस रेबीज का कारण बनता है जिससे पानी से डर लगता है।",
+    "cat": "gs",
+    "sub": "diseases"
+  },
+  {
+    "q": "The 'BCG' vaccine is mandatory to protect children from which disease?\n'BCG' वैक्सीन बच्चों को किस बीमारी से बचाने के लिए अनिवार्य है?",
+    "o": ["Dengue", "Tuberculosis (TB) | तपेदिक (टीबी)", "Malaria", "Cancer"],
+    "a": 1,
+    "e": "BCG (Bacillus Calmette-Guérin) is given to infants to build immunity against TB. / बीसीजी का टीका टीबी से बचाव के लिए दिया जाता है।",
+    "cat": "gs",
+    "sub": "bio"
+  },
+  {
+    "q": "How many se-line bottles are typically recommended to flush the body in case of poisoning?\nजहर पीने की स्थिति में शरीर को फ्लश करने के लिए आमतौर पर कितनी सेलाइन बोतलों की सलाह दी जाती है?",
+    "o": ["1 bottle", "2 bottles", "7 to 8 bottles | 7 से 8 बोतलें", "None"],
+    "a": 2,
+    "e": "In cases of toxicity, multiple bottles of saline are used to dilute the poison in the blood. / विषाक्तता के मामले में रक्त में जहर को पतला करने के लिए कई बोतलें चढ़ाई जाती हैं।",
+    "cat": "gs",
+    "sub": "bio"
+  },
+  {
+    "q": "Which part of the heart is more important as it pumps blood to the whole body?\nहृदय का कौन सा भाग अधिक महत्वपूर्ण है क्योंकि यह पूरे शरीर को रक्त पंप करता है?",
+    "o": ["Right Atrium", "Right Ventricle", "Left Ventricle | बायाँ निलय", "None"],
+    "a": 2,
+    "e": "The left side (left ventricle) handles systemic circulation, making it more critical. / हृदय का बायाँ हिस्सा पूरे शरीर में रक्त पहुँचाने का काम करता है।",
+    "cat": "gs",
+    "sub": "circulatory"
+  },
+  {
+    "q": "The 'Orfit' mask is used during which medical procedure?\n'ऑर्फिट' (Orfit) मास्क का उपयोग किस चिकित्सा प्रक्रिया के दौरान किया जाता है?",
+    "o": ["Biopsy", "Surgery", "Radiation Therapy | रेडिएशन थेरेपी", "Dialysis"],
+    "a": 2,
+    "e": "An Orfit mask immobilizes the patient's head or neck to ensure precise radiation delivery. / ऑर्फिट मास्क रेडिएशन के दौरान मरीज को स्थिर रखने के लिए उपयोग किया जाता है।",
+    "cat": "gs",
+    "sub": "bio"
+  },
+  {
+    "q": "What is the primary function of the 'Placenta' in pregnancy?\nगर्भावस्था में 'प्लेसेंटा' (अपरा) का मुख्य कार्य क्या है?",
+    "o": ["Brain development", "Nutrient and Oxygen exchange | पोषक तत्व और ऑक्सीजन का आदान-प्रदान", "Making hair", "None"],
+    "a": 1,
+    "e": "The placenta transfers nutrients and oxygen from the mother to the fetus. / प्लेसेंटा माँ से भ्रूण तक पोषण और ऑक्सीजन पहुँचाने का काम करता है।",
+    "cat": "gs",
+    "sub": "reproduction"
+  },
+  {
+    "q": "Which type of microorganism causes the disease 'Measles' (Khasra)?\n'खसरा' (Measles) रोग किस प्रकार के सूक्ष्मजीव के कारण होता है?",
+    "o": ["Bacteria", "Virus | विषाणु (वायरस)", "Protozoa", "Fungus"],
+    "a": 1,
+    "e": "Measles is a highly contagious viral infection that causes a total-body skin rash and flu-like symptoms. / खसरा एक अत्यधिक संक्रामक वायरस जनित रोग है।",
+    "cat": "gs",
+    "sub": "diseases"
+  },
+  {
+    "q": "What is the primary diagnostic test used to identify 'AIDS'?\n'एड्स' (AIDS) की पहचान के लिए प्राथमिक नैदानिक परीक्षण कौन सा है?",
+    "o": ["Widal", "ELISA | एलिसा", "Biopsy", "MRI"],
+    "a": 1,
+    "e": "ELISA (Enzyme-Linked Immunosorbent Assay) is used to detect antibodies produced against HIV. / एलिसा टेस्ट एचआईवी के खिलाफ बनी एंटीबॉडी का पता लगाता है।",
+    "cat": "gs",
+    "sub": "diseases"
+  },
+  {
+    "q": "The 'Trachoma' disease primarily affects which organ of the human body?\n'ट्रैकोमा' (Trachoma) रोग मुख्य रूप से मानव शरीर के किस अंग को प्रभावित करता है?",
+    "o": ["Lungs", "Liver", "Eyes | आँख", "Kidney"],
+    "a": 2,
+    "e": "Trachoma is a bacterial infection that affects the eyes and can lead to blindness if untreated. / ट्रैकोमा आँखों का संक्रमण है जिससे आँखों की रोशनी जा सकती है।",
+    "cat": "gs",
+    "sub": "sense_organs"
+  },
+  {
+    "q": "Which type of virus is responsible for causing Jaundice and Hepatitis?\nपीलिया और हेपेटाइटिस के लिए किस प्रकार का वायरस जिम्मेदार है?",
+    "o": ["DNA Virus", "RNA Virus | आरएनए वायरस", "Retrovirus", "None"],
+    "a": 1,
+    "e": "Hepatitis viruses (A, B, C) are primarily RNA viruses that attack liver functions. / हेपेटाइटिस वायरस मुख्य रूप से आरएनए वायरस होते हैं जो लीवर पर हमला करते हैं।",
+    "cat": "gs",
+    "sub": "diseases"
+  },
+  {
+    "q": "What is the study of Cancer called?\nकैंसर के अध्ययन को क्या कहा जाता है?",
+    "o": ["Neurology", "Hepatology", "Oncology | ऑन्कोलॉजी", "Nephrology"],
+    "a": 2,
+    "e": "Oncology is the branch of medicine that specializes in the diagnosis and treatment of cancer. / ऑन्कोलॉजी कैंसर के निदान और उपचार से संबंधित विज्ञान है।",
+    "cat": "gs",
+    "sub": "bio"
+  },
+  {
+    "q": "Which diagnostic procedure is mandatory before starting any cancer treatment to determine the 'Grade' and 'Stage'?\nकैंसर का 'ग्रेड' और 'स्टेज' निर्धारित करने के लिए उपचार शुरू करने से पहले कौन सी प्रक्रिया अनिवार्य है?",
+    "o": ["X-ray", "Biopsy | बायोप्सी", "Blood group test", "ECG"],
+    "a": 1,
+    "e": "Biopsy involves taking a tissue sample to examine cells under a microscope for cancer confirmation. / बायोप्सी में ऊतक का नमूना लेकर कैंसर की पुष्टि की जाती है।",
+    "cat": "gs",
+    "sub": "diseases"
+  },
+  {
+    "q": "What is the advanced imaging technique used to check the spread of cancer throughout the body?\nपूरे शरीर में कैंसर के फैलाव की जांच के लिए उपयोग की जाने वाली उन्नत इमेजिंग तकनीक कौन सी है?",
+    "o": ["Ultrasound", "PET Scan | पेट स्कैन (PET Scan)", "Endoscopy", "Stethoscope"],
+    "a": 1,
+    "e": "PET (Positron Emission Tomography) scan uses radioactive glucose (FDG) to detect active cancer cells. / पेट स्कैन शरीर में सक्रिय कैंसर कोशिकाओं का पता लगाता है।",
+    "cat": "gs",
+    "sub": "bio"
+  },
+  {
+    "q": "What does 'Metastasis' (Mets) mean in medical terminology regarding cancer?\nकैंसर के संबंध में चिकित्सा शब्दावली में 'मेटास्टेसिस' (Mets) का क्या अर्थ है?",
+    "o": ["Cancer is cured", "Cancer has spread to other organs | कैंसर अन्य अंगों में फैल गया है", "Stage 1 only", "No risk"],
+    "a": 1,
+    "e": "Metastasis is the process where cancer cells break away from the original tumor and travel through the blood/lymph to form new tumors. / मेटास्टेसिस का अर्थ है कैंसर का शरीर के अन्य भागों में फैलना।",
+    "cat": "gs",
+    "sub": "diseases"
+  },
+  {
+    "q": "Which cancer treatment uses chemical drugs to kill rapidly dividing weak cells?\nकौन सा कैंसर उपचार तेजी से विभाजित होने वाली कमजोर कोशिकाओं को मारने के लिए रासायनिक दवाओं का उपयोग करता है?",
+    "o": ["Radiation", "Surgery", "Chemotherapy | कीमोथेरेपी", "Ayurveda"],
+    "a": 2,
+    "e": "Chemotherapy targets cancer cells but often causes side effects like hair loss as it kills other weak cells too. / कीमोथेरेपी कैंसर कोशिकाओं को मारने के लिए रसायनों का उपयोग करती है।",
+    "cat": "gs",
+    "sub": "diseases"
+  },
+  {
+    "q": "The use of high-energy X-rays to destroy cancer cells in a localized area is called ____.\nएक स्थानीय क्षेत्र में कैंसर कोशिकाओं को नष्ट करने के लिए उच्च-ऊर्जा एक्स-रे का उपयोग ____ कहलाता है।",
+    "o": ["Biopsy", "Radiation Therapy | रेडिएशन थेरेपी", "Dialysis", "IVF"],
+    "a": 1,
+    "e": "Radiation therapy uses focused beams of energy to kill cancer cells and shrink tumors. / रेडिएशन थेरेपी कैंसर कोशिकाओं को मारने के लिए केंद्रित किरणों का उपयोग करती है।",
+    "cat": "gs",
+    "sub": "diseases"
+  },
+  {
+    "q": "Which vaccine is recommended for females to prevent Uterine/Cervical cancer?\nगर्भाशय/ग्रीवा के कैंसर को रोकने के लिए महिलाओं के लिए कौन सी वैक्सीन अनुशंसित है?",
+    "o": ["BCG", "HPV Vaccine | एचपीवी (HPV) वैक्सीन", "DPT", "Polio Drop"],
+    "a": 1,
+    "e": "Human Papillomavirus (HPV) vaccine significantly reduces the risk of cervical cancer. / एचपीवी वैक्सीन गर्भाशय ग्रीवा के कैंसर के जोखिम को कम करती है।",
+    "cat": "gs",
+    "sub": "bio"
+  },
+  {
+    "q": "Why does a patient lose hair during 'Chemotherapy'?\n'कीमोथेरेपी' के दौरान मरीज के बाल क्यों झड़ जाते हैं?",
+    "o": ["Due to stress", "Drugs kill all weak/rapidly dividing cells including hair follicles | दवाएं बालों सहित सभी कमजोर कोशिकाओं को मारती हैं", "Lack of water", "None"],
+    "a": 1,
+    "e": "Chemo cannot distinguish between cancer cells and other healthy fast-growing cells like hair. / कीमो कैंसर कोशिकाओं और बालों जैसी तेजी से बढ़ने वाली कोशिकाओं के बीच अंतर नहीं कर पाती।",
+    "cat": "gs",
+    "sub": "bio"
+  },
+  {
+    "q": "Which virus is responsible for 'Rabies' and causes a fear of water (Hydrophobia)?\nकौन सा वायरस 'रेबीज' के लिए जिम्मेदार है और पानी से डर (Hydrophobia) पैदा करता है?",
+    "o": ["HIV", "Rhabdo Virus | रबड़ो वायरस", "H5N1", "Ebola"],
+    "a": 1,
+    "e": "Rabies virus (Rhabdovirus) attacks the nervous system, leading to fatal symptoms if the vaccine is not taken. / रबड़ो वायरस रेबीज का कारण बनता है।",
+    "cat": "gs",
+    "sub": "diseases"
+  },
+  {
+    "q": "The 'Orfit' mask used in cancer treatment is primarily for ____.\nकैंसर के उपचार में उपयोग किया जाने वाला 'ऑर्फिट' (Orfit) मास्क मुख्य रूप से ____ के लिए है।",
+    "o": ["Oxygen supply", "Immobilizing the patient during radiation | रेडिएशन के दौरान मरीज को स्थिर रखने हेतु", "Checking fever", "Beautification"],
+    "a": 1,
+    "e": "An Orfit mask ensures the patient remains in the exact same position during each radiation session. / ऑर्फिट मास्क रेडिएशन के दौरान शरीर के भाग को स्थिर रखता है।",
+    "cat": "gs",
+    "sub": "bio"
+  },
+  {
+    "q": "Which mineral's excess in water leads to 'Liver Cirrhosis' according to the lesson?\nपाठ के अनुसार पानी में किस खनिज की अधिकता से 'लीवर सिरोसिस' होता है?",
+    "o": ["Iodine", "Copper", "Iron | आयरन (लोहा)", "Cadmium"],
+    "a": 2,
+    "e": "Excessive accumulation of iron (Siderosis) in the body can damage the liver. / शरीर में आयरन की अधिकता लीवर को नुकसान पहुँचाती है।",
+    "cat": "gs",
+    "sub": "chem"
+  },
+  {
+    "q": "What is the common term for 'Lock Jaw' disease, prevented by the DPT vaccine?\n'लॉक जॉ' बीमारी का सामान्य नाम क्या है, जिसे डीपीटी वैक्सीन द्वारा रोका जाता है?",
+    "o": ["Pneumonia", "Tetanus | टिटनेस", "Typhoid", "Mumps"],
+    "a": 1,
+    "e": "Tetanus causes muscle stiffness, starting with the jaw, hence called Lock Jaw. / टिटनेस में मांसपेशियां अकड़ जाती हैं, जिसकी शुरुआत जबड़े से होती है।",
+    "cat": "gs",
+    "sub": "diseases"
+  },
+  {
+    "q": "The 'ART' (Antiretroviral Therapy) is the standard medication for which infection?\n'ART' (एंटी-रेट्रोवायरल थेरेपी) किस संक्रमण के लिए मानक दवा है?",
+    "o": ["Malaria", "Cancer", "HIV/AIDS | एचआईवी/एड्स", "TB"],
+    "a": 2,
+    "e": "ART helps suppress the HIV virus and prevents it from progressing to AIDS. / ART एचआईवी वायरस को दबाने और जीवन बढ़ाने में मदद करती है।",
+    "cat": "gs",
+    "sub": "diseases"
+  },
+  {
+    "q": "Which organ is primarily affected by the 'Mumps' (Galsua) virus?\n'गलसुआ' (Mumps) वायरस से मुख्य रूप से कौन सा अंग प्रभावित होता है?",
+    "o": ["Heart", "Intestine", "Salivary Glands (Parotid) | लार ग्रंथियां", "Bones"],
+    "a": 2,
+    "e": "Mumps causes painful swelling in the parotid glands located near the ears. / गलसुआ लार ग्रंथियों (पैरोटिड) में सूजन पैदा करता है।",
+    "cat": "gs",
+    "sub": "sense_organs"
+  },
+  {
+    "q": "If a cancer report says 'Benign', what does it typically mean?\nयदि कैंसर की रिपोर्ट 'बेनाइन' (Benign) कहती है, तो इसका आमतौर पर क्या मतलब है?",
+    "o": ["Cancer is spreading fast", "Non-cancerous/Safe tumor | गैर-कैंसरयुक्त/सुरक्षित ट्यूमर", "Stage 4 cancer", "Death is certain"],
+    "a": 1,
+    "e": "Benign tumors are not cancerous and do not spread to other parts of the body. / बेनाइन ट्यूमर कैंसरयुक्त नहीं होते और फैलते नहीं हैं।",
+    "cat": "gs",
+    "sub": "diseases"
+  },
+  {
+    "q": "Which part of the brain is affected first by alcohol, leading to a loss of physical balance?\nशराब से मस्तिष्क का कौन सा भाग सबसे पहले प्रभावित होता है, जिससे शारीरिक संतुलन बिगड़ जाता है?",
+    "o": ["Cerebrum", "Cerebellum | सेरीबेलम", "Thalamus", "Medulla"],
+    "a": 1,
+    "e": "The cerebellum is responsible for coordination and balance; alcohol disrupts its function. / सेरीबेलम संतुलन और समन्वय के लिए जिम्मेदार है।",
+    "cat": "gs",
+    "sub": "nervous"
+  },
+  {
+    "q": "Which test is used for the diagnosis of 'Typhoid' fever?\n'टाइफाइड' (मियादी बुखार) की जाँच के लिए किस टेस्ट का उपयोग किया जाता है?",
+    "o": ["ELISA", "Widal Test | विडाल टेस्ट", "Biopsy", "MRI"],
+    "a": 1,
+    "e": "The Widal test identifies antibodies against Salmonella typhi, the bacteria causing Typhoid. / विडाल टेस्ट टाइफाइड पैदा करने वाले बैक्टीरिया के खिलाफ बनी एंटीबॉडी की पहचान करता है।",
+    "cat": "gs",
+    "sub": "diseases"
+  },
+  {
+    "q": "Which vaccine is known as the 'Triple Vaccine' because it protects against Diphtheria, Pertussis, and Tetanus?\nकिस वैक्सीन को 'ट्रिपल वैक्सीन' कहा जाता है क्योंकि यह डिप्थीरिया, काली खाँसी और टिटनेस से बचाती है?",
+    "o": ["BCG", "DPT | डीपीटी", "OPV", "MMR"],
+    "a": 1,
+    "e": "DPT stands for Diphtheria, Pertussis (Whooping Cough), and Tetanus. / डीपीटी का अर्थ डिप्थीरिया, परट्यूसिस (काली खाँसी) और टिटनेस है।",
+    "cat": "gs",
+    "sub": "bio"
+  },
+  {
+    "q": "Which organ is primarily affected by Tuberculosis (TB) and Pneumonia?\nतपेदिक (टीबी) और निमोनिया से मुख्य रूप से कौन सा अंग प्रभावित होता है?",
+    "o": ["Intestine", "Liver", "Lungs | फेफड़े", "Heart"],
+    "a": 2,
+    "e": "Both TB and Pneumonia are bacterial infections that target the respiratory system and lungs. / टीबी और निमोनिया दोनों फेफड़ों के संक्रमण से संबंधित हैं।",
+    "cat": "gs",
+    "sub": "respiratory"
+  },
+  {
+    "q": "What is the full form of the 'BCG' vaccine given to infants for TB protection?\nशिशुओं को टीबी से सुरक्षा के लिए दी जाने वाली 'BCG' वैक्सीन का पूर्ण रूप क्या है?",
+    "o": ["Bacillus Cholera Germ", "Bacillus Calmette-Guérin | बेसिलस कैलमेटर ग्यूरिन", "Bacteria Control Grade", "None"],
+    "a": 1,
+    "e": "BCG vaccine is mandatory for infants to prevent severe forms of tuberculosis. / बीसीजी का टीका शिशुओं को टीबी से बचाने के लिए दिया जाता है।",
+    "cat": "gs",
+    "sub": "bio"
+  },
+  {
+    "q": "Which disease is also known as 'Lock Jaw' or 'Dhanush Tankaar' due to muscle spasms?\nमांसपेशियों में ऐंठन के कारण किस बीमारी को 'लॉक जॉ' या 'धनुष टंकार' भी कहा जाता है?",
+    "o": ["Plague", "Tetanus | टिटनेस", "Cholera", "Leprosy"],
+    "a": 1,
+    "e": "Tetanus bacteria produce a toxin that causes painful muscle contractions, locking the jaw. / टिटनेस में मांसपेशियां अकड़ जाती हैं जिससे जबड़ा लॉक हो जाता है।",
+    "cat": "gs",
+    "sub": "diseases"
+  },
+  {
+    "q": "Which virus is responsible for causing AIDS?\nएड्स (AIDS) के लिए कौन सा वायरस जिम्मेदार है?",
+    "o": ["Rhino Virus", "HIV (Human Immunodeficiency Virus) | एचआईवी", "Ebola Virus", "H5N1"],
+    "a": 1,
+    "e": "HIV attacks the T-cells (CD4) of the immune system, leading to AIDS in final stages. / एचआईवी इम्यून सिस्टम की टी-सेल्स पर हमला करता है।",
+    "cat": "gs",
+    "sub": "diseases"
+  },
+  {
+    "q": "Which screening test is commonly performed to detect HIV antibodies?\nएचआईवी एंटीबॉडी का पता लगाने के लिए आमतौर पर कौन सा स्क्रीनिंग टेस्ट किया जाता है?",
+    "o": ["Widal", "ELISA | एलिसा", "Biopsy", "Endoscopy"],
+    "a": 1,
+    "e": "ELISA (Enzyme-Linked Immunosorbent Assay) is used to detect HIV infection. / एलिसा टेस्ट का उपयोग एचआईवी संक्रमण की पहचान के लिए किया जाता है।",
+    "cat": "gs",
+    "sub": "bio"
+  },
+  {
+    "q": "Which type of microorganism causes 'Dengue' fever?\n'डेंगू' बुखार किस प्रकार के सूक्ष्मजीव के कारण होता है?",
+    "o": ["Bacteria", "Fungus", "Virus | विषाणु (वायरस)", "Protozoa"],
+    "a": 2,
+    "e": "Dengue is a viral infection (Arbovirus) transmitted by the Aedes aegypti mosquito. / डेंगू एक वायरस जनित रोग है जो एडीज मच्छर द्वारा फैलता है।",
+    "cat": "gs",
+    "sub": "diseases"
+  },
+  {
+    "q": "In which disease does the 'Platelet' count significantly drop in the blood?\nरक्त में 'प्लेटलेट्स' की संख्या किस बीमारी में काफी कम हो जाती है?",
+    "o": ["Malaria", "Dengue | डेंगू", "TB", "Cholera"],
+    "a": 1,
+    "e": "A major complication of Dengue is the drastic fall in blood platelet count. / डेंगू का एक मुख्य लक्षण प्लेटलेट काउंट में भारी गिरावट है।",
+    "cat": "gs",
+    "sub": "circulatory"
+  },
+  {
+    "q": "Who discovered the first effective vaccine for 'Polio'?\n'पोलियो' के पहले प्रभावी टीके की खोज किसने की थी?",
+    "o": ["Edward Jenner", "Jonas Salk | जोनास शॉक", "Louis Pasteur", "Alexander Fleming"],
+    "a": 1,
+    "e": "Jonas Salk developed the first polio vaccine (IPV) and did not patent it for public good. / जोनास शॉक ने पोलियो का पहला टीका विकसित किया था।",
+    "cat": "gs",
+    "sub": "bio"
+  },
+  {
+    "q": "What is the genetic material usually found in most viruses?\nअधिकांश वायरस में आमतौर पर कौन सी आनुवंशिक सामग्री पाई जाती है?",
+    "o": ["Double DNA", "RNA or Single DNA | आरएनए", "Only Hemoglobin", "None"],
+    "a": 1,
+    "e": "Most harmful viruses, including HIV and Influenza, use RNA as their genetic material. / एचआईवी और इन्फ्लुएंजा जैसे वायरस आरएनए का उपयोग करते हैं।",
+    "cat": "gs",
+    "sub": "bio"
+  },
+  {
+    "q": "Which animal is the primary carrier of 'Swine Flu' (H1N1)?\n'स्वाइन फ्लू' (H1N1) का प्राथमिक वाहक कौन सा जानवर है?",
+    "o": ["Bird/Chicken", "Pig | सूअर", "Dog", "Bat"],
+    "a": 1,
+    "e": "Swine flu is caused by H1N1 virus, which originated in pigs. / स्वाइन फ्लू सूअर से फैलने वाला वायरस जनित रोग है।",
+    "cat": "gs",
+    "sub": "diseases"
+  },
+  {
+    "q": "What is the virus strain for 'Bird Flu'?\n'बर्ड फ्लू' के वायरस स्ट्रेन का नाम क्या है?",
+    "o": ["H1N1", "H5N1 | एच5एन1", "Covid-19", "HIV"],
+    "a": 1,
+    "e": "Avian influenza or Bird Flu is caused by the H5N1 virus strain. / बर्ड फ्लू H5N1 वायरस के कारण होता है।",
+    "cat": "gs",
+    "sub": "diseases"
+  },
+  {
+    "q": "Which disease was eradicated in India after the 1975 campaign and its vaccine was found by Edward Jenner?\n1975 के अभियान के बाद भारत में किस बीमारी का उन्मूलन किया गया और इसका टीका एडवर्ड जेनर ने खोजा था?",
+    "o": ["Polio", "Smallpox (Chechak) | चेचक", "AIDS", "Plague"],
+    "a": 1,
+    "e": "Edward Jenner discovered the smallpox vaccine, and the disease is now globally eradicated. / चेचक का टीका एडवर्ड जेनर ने खोजा था, अब यह बीमारी खत्म हो चुकी है।",
+    "cat": "gs",
+    "sub": "diseases"
+  },
+  {
+    "q": "The disease 'Mumps' (Galsua) affects which part of the body?\n'गलसुआ' (Mumps) रोग शरीर के किस भाग को प्रभावित करता है?",
+    "o": ["Heart", "Intestine", "Salivary Glands (Parotid) | लार ग्रंथियां", "Kidney"],
+    "a": 2,
+    "e": "Mumps is a viral infection that causes swelling in the parotid salivary glands. / मम्प्स एक वायरस संक्रमण है जो लार ग्रंथियों में सूजन पैदा करता है।",
+    "cat": "gs",
+    "sub": "sense_organs"
+  },
+  {
+    "q": "Which virus causes 'Rabies' and is often transmitted through dog bites?\nकौन सा वायरस 'रेबीज' का कारण बनता है और अक्सर कुत्तों के काटने से फैलता है?",
+    "o": ["Retrovirus", "Rhabdo Virus | रबड़ो वायरस", "Arbovirus", "H1N1"],
+    "a": 1,
+    "e": "The Rhabdovirus causes rabies, which attacks the central nervous system. / रबड़ो वायरस रेबीज का कारण बनता है।",
+    "cat": "gs",
+    "sub": "diseases"
+  },
+  {
+    "q": "What is 'Black Death' historically referred to?\nइतिहास में 'काली मौत' (Black Death) किसे कहा गया है?",
+    "o": ["TB", "Plague | प्लेग", "Malaria", "Cancer"],
+    "a": 1,
+    "e": "Plague is called Black Death because of the black spots it produced on the skin. / प्लेग को ऐतिहासिक रूप से काली मौत कहा जाता है।",
+    "cat": "gs",
+    "sub": "diseases"
+  },
+  {
+    "q": "Which mosquito is the carrier of 'Filaria' (Elephantiasis)?\n'फाइलेरिया' (हाथी पाँव) का वाहक कौन सा मच्छर है?",
+    "o": ["Anopheles", "Aedes", "Culex | क्यूलेक्स", "CC fly"],
+    "a": 2,
+    "e": "Filaria is caused by a worm and spread by the Culex mosquito. / फाइलेरिया क्यूलेक्स मच्छर द्वारा फैलाया जाता है।",
+    "cat": "gs",
+    "sub": "diseases"
+  },
+  {
+    "q": "The 'DOTS' treatment is specifically used for which disease?\n'डॉट्स' (DOTS) उपचार विशेष रूप से किस बीमारी के लिए उपयोग किया जाता है?",
+    "o": ["Diabetes", "Typhoid", "Tuberculosis (TB) | तपेदिक (टीबी)", "Leprosy"],
+    "a": 2,
+    "e": "Directly Observed Treatment, Short-course (DOTS) is the standard TB cure. / डॉट्स टीबी के इलाज की मानक पद्धति है।",
+    "cat": "gs",
+    "sub": "diseases"
+  },
+  {
+    "q": "Which vitamin deficiency leads to 'Rickets' (bone thinning in children)?\nकिस विटामिन की कमी से 'रिकेट्स' (बच्चों में हड्डियों का पतला होना) होता है?",
+    "o": ["Vitamin A", "Vitamin C", "Vitamin D | विटामिन D", "Vitamin K"],
+    "a": 2,
+    "e": "Vitamin D is essential for calcium absorption in bones. / विटामिन D हड्डियों में कैल्शियम के अवशोषण के लिए आवश्यक है।",
+    "cat": "gs",
+    "sub": "nutrition"
+  },
+  {
+    "q": "Which mosquito is the carrier for the 'Filaria' (Elephantiasis) disease?\n'फाइलेरिया' (हाथी पाँव) रोग का वाहक कौन सा मच्छर है?",
+    "o": ["Anopheles", "Aedes aegypti", "Culex | क्यूलेक्स", "Tsetse fly"],
+    "a": 2,
+    "e": "Filaria is caused by the Wuchereria worm and carried by the Culex mosquito. / फाइलेरिया वुचेरिया कृमि के कारण होता है और क्यूलेक्स मच्छर द्वारा फैलाया जाता है।",
+    "cat": "gs",
+    "sub": "diseases"
+  },
+  {
+    "q": "What is the mnemonic trick to remember diseases caused by 'Bacteria' (Jivanu)?\n'जीवाणु' (Bacteria) से होने वाले रोगों को याद रखने की ट्रिक क्या है?",
+    "o": ["Pe Kaam Sop", "E Daad Khaag", "Deep City Ka Kutni Hai | डीप सिटी का कुटनी है", "None"],
+    "a": 2,
+    "e": "Deep (Diphtheria, Plague), City (Syphilis, Tetanus), Ka (Kali Khansi), Ku (Kushth), T (Typhoid), Ni (Pneumonia), Hai (Haiza).",
+    "cat": "gs",
+    "sub": "bio"
+  },
+  {
+    "q": "Which bacterial disease is also known as 'Lock Jaw' or 'Dhanush Tankaar'?\nकिस जीवाणु रोग को 'लॉक जॉ' (जबड़ा लॉक) या 'धनुष टंकार' भी कहा जाता है?",
+    "o": ["Typhoid", "Tetanus | टिटनेस", "Plague", "Cholera"],
+    "a": 1,
+    "e": "Tetanus causes severe muscle spasms that can lock the jaw and bend the body like a bow. / टिटनेस में मांसपेशियां अकड़ जाती हैं जिससे शरीर धनुष की तरह टेढ़ा हो जाता है।",
+    "cat": "gs",
+    "sub": "diseases"
+  },
+  {
+    "q": "How soon should a person take the Tetanus (Tead-back) injection after an injury?\nचोट लगने के बाद व्यक्ति को टिटनेस (ट्रेड-बैक) का इंजेक्शन कितनी देर के भीतर ले लेना चाहिए?",
+    "o": ["Within 24 hours | 24 घंटे के भीतर", "After 1 week", "Within 1 month", "Only if pain starts"],
+    "a": 0,
+    "e": "Tetanus prevention is effective if the vaccine is taken within 24 hours of exposure. / टिटनेस से बचाव के लिए 24 घंटे के भीतर टीका लेना आवश्यक है।",
+    "cat": "gs",
+    "sub": "bio"
+  },
+  {
+    "q": "Which organ is primarily affected by 'Pneumonia' and 'Tuberculosis' (TB)?\n'निमोनिया' और 'टीबी' (Tuberculosis) से मुख्य रूप से कौन सा अंग प्रभावित होता है?",
+    "o": ["Heart", "Liver", "Lungs | फेफड़े", "Kidney"],
+    "a": 2,
+    "e": "Both Pneumonia and TB cause infections in the Alveoli and tissues of the lungs. / निमोनिया और टीबी दोनों फेफड़ों के संक्रमण से संबंधित हैं।",
+    "cat": "gs",
+    "sub": "respiratory"
+  },
+  {
+    "q": "What is the surgical process of grafting an extra artery to the heart called?\nहृदय में एक अतिरिक्त धमनी लगाने की सर्जिकल प्रक्रिया को क्या कहा जाता है?",
+    "o": ["Angiography", "Bypass Surgery | बाईपास सर्जरी", "Dialysis", "Biopsy"],
+    "a": 1,
+    "e": "Bypass surgery creates a new path for blood flow when a coronary artery is blocked. / बाईपास सर्जरी अवरुद्ध धमनी के बगल से रक्त प्रवाह का नया रास्ता बनाती है।",
+    "cat": "gs",
+    "sub": "circulatory"
+  },
+  {
+    "q": "Which fly is responsible for spreading 'Cholera' (Haiza) via contaminated food?\nदूषित भोजन के माध्यम से 'हैजा' (Haiza) फैलाने के लिए कौन सी मक्खी जिम्मेदार है?",
+    "o": ["Sandfly", "Tsetse fly", "Housefly | घरेलू मक्खी", "Dragonfly"],
+    "a": 2,
+    "e": "Houseflies carry Vibrio cholerae bacteria from waste to food items. / घरेलू मक्खियाँ कचरे से भोजन तक हैजा के बैक्टीरिया पहुँचाती हैं।",
+    "cat": "gs",
+    "sub": "diseases"
+  },
+  {
+    "q": "In medical terms, what is 'IMA' (Internal Mammary Artery) used for during surgery?\nचिकित्सा शब्दावली में, सर्जरी के दौरान 'IMA' (लीमा/रीमा) का उपयोग किस लिए किया जाता है?",
+    "o": ["Brain repair", "Heart Bypass Grafting | हार्ट बाईपास ग्राफ्टिंग", "Kidney stones", "Eye donation"],
+    "a": 1,
+    "e": "LIMA and RIMA are chest arteries used as grafts in heart bypass surgeries. / लीमा और रीमा छाती की धमनियां हैं जिनका उपयोग बाईपास सर्जरी में ग्राफ्ट के रूप में किया जाता है।",
+    "cat": "gs",
+    "sub": "circulatory"
+  },
+  {
+    "q": "The 'Plague' disease is historically associated with being spread by the fleas on ____.\n'प्लेग' रोग ऐतिहासिक रूप से ____ पर पाए जाने वाले पिस्सू द्वारा फैलने से जुड़ा है।",
+    "o": ["Dogs", "Rats | चूहे", "Cats", "Birds"],
+    "a": 1,
+    "e": "Plague bacteria (Yersinia pestis) are transmitted to humans by fleas that live on rats. / प्लेग चूहों पर रहने वाले पिस्सू के माध्यम से फैलता है।",
+    "cat": "gs",
+    "sub": "diseases"
+  },
+  {
+    "q": "Which test confirms the pH, Oxygen, and Potassium levels in a critical patient's artery?\nएक क्रिटिकल मरीज की धमनी में पीएच, ऑक्सीजन और पोटेशियम के स्तर की पुष्टि कौन सा टेस्ट करता है?",
+    "o": ["CBC", "ABG (Arterial Blood Gas) | एबीजी", "KFT", "Widal"],
+    "a": 1,
+    "e": "ABG measures blood gases and electrolytes directly from arterial blood for rapid diagnosis. / एबीजी धमनी के रक्त से गैसों और इलेक्ट्रोलाइट्स को मापता है।",
+    "cat": "gs",
+    "sub": "circulatory"
+  },
+  {
+    "q": "A doctor who specializes in treating diseases of children is called a ____.\nबच्चों की बीमारियों के इलाज में विशेषज्ञता रखने वाले डॉक्टर को क्या कहा जाता है?",
+    "o": ["Geriatrician", "Gynecologist", "Pediatrician | पीडियाट्रिशियन", "Neurologist"],
+    "a": 2,
+    "e": "Pediatrics is the branch of medicine dealing with the health and medical care of infants and children. / पीडियाट्रिक्स बच्चों की चिकित्सा से संबंधित शाखा है।",
+    "cat": "gs",
+    "sub": "bio"
+  },
+  {
+    "q": "Which mineral is highly essential for the formation and strength of bones?\nहड्डियों के निर्माण और मजबूती के लिए कौन सा खनिज अत्यधिक आवश्यक है?",
+    "o": ["Iron", "Calcium | कैल्शियम", "Iodine", "Sodium"],
+    "a": 1,
+    "e": "Calcium is the primary mineral required to maintain bone density. / कैल्शियम हड्डियों के घनत्व को बनाए रखने के लिए प्राथमिक खनिज है।",
+    "cat": "gs",
+    "sub": "chem"
+  },
+  {
+    "q": "The deficiency of 'Potassium' (K) in the body primarily affects which organ?\nशरीर में 'पोटेशियम' (K) की कमी मुख्य रूप से किस अंग को प्रभावित करती है?",
+    "o": ["Lungs", "Heart | हृदय", "Skin", "Stomach"],
+    "a": 1,
+    "e": "Potassium balance is critical for heart rhythm; its imbalance can lead to cardiac arrest. / पोटेशियम का संतुलन हृदय की लय के लिए महत्वपूर्ण है।",
+    "cat": "gs",
+    "sub": "circulatory"
+  },
+  {
+    "q": "Which part of the ear is a 'Vestigial Organ' (अवशेषी अंग) in humans?\nकान का कौन सा भाग मनुष्यों में 'अवशेषी अंग' है?",
+    "o": ["Cochlea", "Pinna | पिन्ना (कर्ण पल्लव)", "Eardrum", "Malleus"],
+    "a": 1,
+    "e": "Human pinna muscles are vestigial as they no longer serve a vital function in movement. / मनुष्यों में पिन्ना की मांसपेशियां अवशेषी हैं क्योंकि वे अब काम नहीं करतीं।",
+    "cat": "gs",
+    "sub": "sense_organs"
+  },
+  {
+    "q": "MDT (Multi-Drug Treatment) is the standard cure for which bacterial disease?\nMDT किस जीवाणु रोग का मानक उपचार है?",
+    "o": ["Cholera", "Leprosy (Kushth) | कुष्ठ रोग", "Typhoid", "Tetanus"],
+    "a": 1,
+    "e": "MDT is a highly effective combination treatment for curing Leprosy. / एमडीटी कुष्ठ रोग के इलाज के लिए एक प्रभावी उपचार है।",
+    "cat": "gs",
+    "sub": "diseases"
+  },
+  {
+    "q": "Which vitamin is destroyed during alcohol consumption or by boiling food?\nशराब के सेवन या भोजन उबालने के दौरान कौन सा विटामिन नष्ट हो जाता है?",
+    "o": ["Vitamin A", "Vitamin C | विटामिन C", "Vitamin D", "Vitamin K"],
+    "a": 1,
+    "e": "Vitamin C is water-soluble and heat-sensitive; it is easily lost during processing. / विटामिन C गर्मी के प्रति संवेदनशील है और उबालने से नष्ट हो जाता है।",
+    "cat": "gs",
+    "sub": "nutrition"
+  },
+  {
+    "q": "The 'Memory Card' of the human brain where logic and memory are stored is ____.\nमानव मस्तिष्क का 'मेमोरी कार्ड' जहाँ तर्क और याददाश्त संचित होती है, वह ____ है।",
+    "o": ["Cerebellum", "Thalamus", "Cerebrum | सेरीब्रम", "Medulla"],
+    "a": 2,
+    "e": "The Cerebrum is the largest part of the brain and controls all intellectual functions. / सेरीब्रम मस्तिष्क का सबसे बड़ा भाग है और बुद्धिमत्ता को नियंत्रित करता है।",
+    "cat": "gs",
+    "sub": "nervous"
+  },
+  {
+    "q": "Which diagnostic test is used to detect 'Typhoid' fever?\n'टाइफाइड' बुखार का पता लगाने के लिए किस टेस्ट का उपयोग किया जाता है?",
+    "o": ["ELISA", "Widal Test | विडाल टेस्ट", "Biopsy", "ECG"],
+    "a": 1,
+    "e": "The Widal test detects antibodies that the body makes against Salmonella typhi. / विडाल टेस्ट टाइफाइड के बैक्टीरिया के खिलाफ बनी एंटीबॉडी की जांच करता है।",
+    "cat": "gs",
+    "sub": "diseases"
+  },
+  {
+    "q": "Which gland is known as the 'Master of Master Gland'?\nकिस ग्रंथि को 'मास्टर ऑफ मास्टर ग्रंथि' कहा जाता है?",
+    "o": ["Pituitary", "Thyroid", "Hypothalamus | हाइपोथैलेमस", "Pineal"],
+    "a": 2,
+    "e": "The Hypothalamus regulates the pituitary gland, earning this title. / हाइपोथैलेमस पीयूष ग्रंथि को नियंत्रित करता है।",
+    "cat": "gs",
+    "sub": "endocrine"
+  },
+  {
+    "q": "The protective membrane of the Kidney is called ____.\nकिडनी की सुरक्षात्मक झिल्ली को ____ कहा जाता है।",
+    "o": ["Pleura", "Peritoneum | पेरिटोनियम", "Meninges", "Pericardium"],
+    "a": 1,
+    "e": "The Peritoneum covers the abdominal organs, including the kidneys. / पेरिटोनियम पेट के अंगों और किडनी को ढकती है।",
+    "cat": "gs",
+    "sub": "excretory"
+  },
+  {
+    "q": "Which type of microorganism causes the disease 'Malaria'?\n'मलेरिया' रोग किस प्रकार के सूक्ष्मजीव के कारण होता है?",
+    "o": ["Bacteria", "Virus", "Protozoa | प्रोटोजोआ", "Fungus"],
+    "a": 2,
+    "e": "Malaria is caused by the Plasmodium protozoa, which is carried by the female Anopheles mosquito. / मलेरिया प्लाज्मोडियम प्रोटोजोआ के कारण होता है, जिसका वाहक मादा एनाफिलीज मच्छर है।",
+    "cat": "gs",
+    "sub": "diseases"
+  },
+  {
+    "q": "What is the mnemonic trick to remember diseases caused by Protozoa?\nप्रोटोजोआ से होने वाले रोगों को याद रखने की ट्रिक क्या है?",
+    "o": ["Ganpati Bappa Morya", "Pe Kaam Sop | पे काम सोप", "E Daad Khaag", "None of these"],
+    "a": 1,
+    "e": "Pe (Pechis), Kaam (Kala-azar, Malaria), Sop (Sone ki bimari, Pyorrhea). / पे (पेचिस), काम (कालाजार, मलेरिया), सोप (सोने की बीमारी, पायरिया)।",
+    "cat": "gs",
+    "sub": "bio"
+  },
+  {
+    "q": "Which protozoa is responsible for causing 'Amoebic Dysentery' (Pechis)?\n'पेचिस' (Pechis) के लिए कौन सा प्रोटोजोआ जिम्मेदार है?",
+    "o": ["Plasmodium", "Entamoeba Histolytica | एंटअमीबा हिस्टोलिटिका", "Leishmania", "Trypanosoma"],
+    "a": 1,
+    "e": "Entamoeba Histolytica infects the large intestine, causing loose motions and abdominal pain. / एंटअमीबा हिस्टोलिटिका बड़ी आंत को प्रभावित करता है जिससे पेचिस होती है।",
+    "cat": "gs",
+    "sub": "diseases"
+  },
+  {
+    "q": "Which organ is primarily affected by the Malaria parasite?\nमलेरिया परजीवी द्वारा मुख्य रूप से कौन सा अंग प्रभावित होता है?",
+    "o": ["Lungs", "Kidney", "Spleen (Pleeha) | प्लीहा (एस्पलीन)", "Heart"],
+    "a": 2,
+    "e": "The malaria parasite attacks Red Blood Cells and the Spleen, leading to anemia and fever. / मलेरिया परजीवी RBC और प्लीहा पर हमला करता है।",
+    "cat": "gs",
+    "sub": "circulatory"
+  },
+  {
+    "q": "Which fly acts as a carrier for 'Kala-azar' (Black Fever)?\n'कालाजार' (काला बुखार) के वाहक के रूप में कौन सी मक्खी कार्य करती है?",
+    "o": ["Housefly", "Tsetse fly", "Sandfly (Baalu Makkhi) | बालू मक्खी", "Mosquito"],
+    "a": 2,
+    "e": "Kala-azar is caused by Leishmania and transmitted by the bite of infected sandflies. / कालाजार लिशमेनिया द्वारा होता है और बालू मक्खी द्वारा फैलता है।",
+    "cat": "gs",
+    "sub": "diseases"
+  },
+  {
+    "q": "The 'Sleeping Sickness' is transmitted by which insect?\n'सोने की बीमारी' (Sleeping Sickness) किस कीट द्वारा फैलती है?",
+    "o": ["Sandfly", "Tsetse fly (CC Makkhi) | सीसी मक्खी", "Cockroach", "Ant"],
+    "a": 1,
+    "e": "Sleeping Sickness is caused by Trypanosoma and spread by the Tsetse fly. / सोने की बीमारी ट्रिपेनोसोमा द्वारा होती है और सीसी मक्खी से फैलती है।",
+    "cat": "gs",
+    "sub": "diseases"
+  },
+  {
+    "q": "Which disease causes yellowing of teeth and bleeding from gums due to protozoa?\nप्रोटोजोआ के कारण दांतों का पीलापन और मसूड़ों से खून आने वाली बीमारी कौन सी है?",
+    "o": ["Scurvy", "Pyorrhea | पायरिया", "Rickets", "Goitre"],
+    "a": 1,
+    "e": "Pyorrhea is caused by Entamoeba Gingivalis, affecting the gums. / पायरिया एंटअमीबा जेंजीवेरिस के कारण मसूड़ों को प्रभावित करता है।",
+    "cat": "gs",
+    "sub": "diseases"
+  },
+  {
+    "q": "Natural 'Quinine', used to treat Malaria, is obtained from the bark of which tree?\nमलेरिया के इलाज में प्रयुक्त प्राकृतिक 'कुनैन', किस पेड़ की छाल से प्राप्त होती है?",
+    "o": ["Neem", "Peepal", "Cinchona | सिनकोना", "Banyan"],
+    "a": 2,
+    "e": "The bark of the Cinchona tree is the source of Quinine, an effective anti-malarial drug. / सिनकोना पेड़ की छाल कुनैन का स्रोत है।",
+    "cat": "gs",
+    "sub": "bio"
+  },
+  {
+    "q": "What is the mnemonic trick for diseases caused by 'Fungus' (Kavak)?\n'कवक' (Kavak) से होने वाले रोगों की ट्रिक क्या है?",
+    "o": ["Pe Kaam Sop", "E Daad Khaag | ए दाद खाग", "WBC", "LAT"],
+    "a": 1,
+    "e": "E (Eczema), Daad (Ringworm), Da (Asthma/Dama), Kha (Scabies), G (Baldness). / ए (एग्जिमा), दाद, द (दमा), खा (खाज), ग (गंजापन)।",
+    "cat": "gs",
+    "sub": "bio"
+  },
+  {
+    "q": "Which disease involves an infection in the lungs where fungus causes severe coughing?\nफेफड़ों में संक्रमण वाली कौन सी बीमारी है जिसमें कवक के कारण भारी खांसी होती है?",
+    "o": ["Pneumonia", "Asthma (Dama) | दमा", "Typhoid", "Cholera"],
+    "a": 1,
+    "e": "Asthma (Dama) can be triggered or caused by fungal spores irritating the lungs. / दमा फेफड़ों में कवक के कारण हो सकता है।",
+    "cat": "gs",
+    "sub": "respiratory"
+  },
+  {
+    "q": "Baldness (Ganjapan) can be caused by which type of infection?\nगंजापन (Ganjapan) किस प्रकार के संक्रमण के कारण हो सकता है?",
+    "o": ["Viral", "Bacterial", "Fungal | कवक (Fungal)", "Protozoan"],
+    "a": 2,
+    "e": "Fungal infections on the scalp can damage hair follicles, leading to baldness. / सिर में कवक संक्रमण से बाल झड़ सकते हैं और गंजापन हो सकता है।",
+    "cat": "gs",
+    "sub": "diseases"
+  },
+  {
+    "q": "Which condition is characterized by itching and skin erosion between the toes?\nपैर की उंगलियों के बीच खुजली और त्वचा के सड़ने की विशेषता वाली स्थिति कौन सी है?",
+    "o": ["Scabies", "Athlete's Foot | एथलीट फुट", "Pyorrhea", "Anemia"],
+    "a": 1,
+    "e": "Athlete's foot is a common fungal infection affecting the skin on the feet. / एथलीट फुट पैरों की त्वचा को प्रभावित करने वाला कवक संक्रमण है।",
+    "cat": "gs",
+    "sub": "diseases"
+  },
+  {
+    "q": "Why is 'Amla' considered a great source of Vitamin C, even when dried?\n'आंवला' को सूखने के बाद भी विटामिन C का बेहतरीन स्रोत क्यों माना जाता है?",
+    "o": ["It is expensive", "It retains nutrients well | यह पोषक तत्वों को अच्छी तरह बनाए रखता है", "It is sweet", "It has no acid"],
+    "a": 1,
+    "e": "Amla is unique as its Vitamin C content is highly stable and resistant to heat. / आंवला का विटामिन C गर्मी के प्रति प्रतिरोधी और स्थिर होता है।",
+    "cat": "gs",
+    "sub": "nutrition"
+  },
+  {
+    "q": "Which vitamin is also known as a 'Hormone' due to its fast production in sunlight?\nधूप में तेजी से बनने के कारण किस विटामिन को 'हार्मोन' भी कहा जाता है?",
+    "o": ["Vitamin A", "Vitamin C", "Vitamin D | विटामिन D", "Vitamin K"],
+    "a": 2,
+    "e": "Vitamin D acts as a steroid hormone and is synthesized by the skin. / विटामिन D एक स्टेरॉयड हार्मोन की तरह कार्य करता है।",
+    "cat": "gs",
+    "sub": "bio"
+  },
+  {
+    "q": "In 'Color Blindness', which color does a patient often confuse with Green?\n'कलर ब्लाइंडनेस' में मरीज अक्सर हरे रंग के साथ किस रंग में भ्रमित होता है?",
+    "o": ["Blue", "Red | लाल (Red)", "Yellow", "White"],
+    "a": 1,
+    "e": "Red-green color blindness is the most common form where these two colors look similar. / लाल-हरा अंधापन सबसे सामान्य रूप है।",
+    "cat": "gs",
+    "sub": "diseases"
+  },
+  {
+    "q": "What is the primary function of 'WBC' in the human body?\nमानव शरीर में 'WBC' का प्राथमिक कार्य क्या है?",
+    "o": ["Carrying oxygen", "Blood clotting", "Immunity/Fighting diseases | प्रतिरक्षा/बीमारियों से लड़ना", "Digestion"],
+    "a": 2,
+    "e": "White Blood Cells are the defense system of the body against pathogens. / श्वेत रक्त कोशिकाएं शरीर की रक्षा प्रणाली हैं।",
+    "cat": "gs",
+    "sub": "circulatory"
+  },
+  {
+    "q": "Where is the 'Thymus Gland' located, and until what age is it active?\n'थाइमस ग्रंथि' कहाँ स्थित है और यह किस आयु तक सक्रिय रहती है?",
+    "o": ["Brain, 50 years", "Chest, 15 years | छाती, 15 वर्ष", "Neck, birth", "Kidney, 10 years"],
+    "a": 1,
+    "e": "The Thymus is in the chest and produces T-cells until puberty (~15 years). / थाइमस छाती में होता है और 15 वर्ष तक टी-सेल्स बनाता है।",
+    "cat": "gs",
+    "sub": "endocrine"
+  },
+  {
+    "q": "Which vitamin is essential for 'Blood Clotting'?\n'रक्त का थक्का' जमने के लिए कौन सा विटामिन आवश्यक है?",
+    "o": ["Vitamin A", "Vitamin C", "Vitamin K | विटामिन K", "Vitamin E"],
+    "a": 2,
+    "e": "Vitamin K is critical for synthesizing proteins needed for blood coagulation. / रक्त के थक्के जमने के लिए विटामिन K आवश्यक है।",
+    "cat": "gs",
+    "sub": "circulatory"
+  },
+  {
+    "q": "Common 'Dandruff' in hair is actually a type of ____ infection.\nबालों में होने वाली 'रूसी' वास्तव में एक प्रकार का ____ संक्रमण है।",
+    "o": ["Bacterial", "Viral", "Fungal | कवक (Fungal)", "Genetic"],
+    "a": 2,
+    "e": "Dandruff is often caused by a fungus-like protist (Malassezia) on the scalp. / रूसी अक्सर खोपड़ी पर कवक जैसे जीव के कारण होती है।",
+    "cat": "gs",
+    "sub": "diseases"
+  },
+  {
+    "q": "Why should we avoid peeling vegetables too deeply, according to the lesson?\nपाठ के अनुसार हमें सब्जियों को बहुत गहरा छीलने से क्यों बचना चाहिए?",
+    "o": ["To save time", "To prevent loss of Vitamin C | विटामिन C के नुकसान को रोकने के लिए", "To keep them heavy", "None"],
+    "a": 1,
+    "e": "Many vitamins, especially Vitamin C, are concentrated just under the skin of vegetables. / विटामिन C सब्जियों की त्वचा के ठीक नीचे होता है।",
+    "cat": "gs",
+    "sub": "nutrition"
+  },
+  {
+    "q": "Which vitamin is also known as 'Ascorbic Acid' and helps in healing wounds?\nकिस विटामिन को 'एस्कॉर्बिक एसिड' भी कहा जाता है और यह घाव भरने में मदद करता है?",
+    "o": ["Vitamin A", "Vitamin B", "Vitamin C | विटामिन C", "Vitamin D"],
+    "a": 2,
+    "e": "Vitamin C (Ascorbic Acid) is essential for tissue repair and collagen production, aiding in wound healing. / विटामिन C घाव भरने और ऊतकों की मरम्मत के लिए आवश्यक है।",
+    "cat": "gs",
+    "sub": "nutrition"
+  },
+  {
+    "q": "Which vitamin is destroyed by boiling food or peeling vegetables too deeply?\nभोजन को उबालने या सब्जियों को बहुत गहरा छीलने से कौन सा विटामिन नष्ट हो जाता है?",
+    "o": ["Vitamin A", "Vitamin C | विटामिन C", "Vitamin D", "Vitamin K"],
+    "a": 1,
+    "e": "Vitamin C is highly sensitive to heat and oxidation. / विटामिन C गर्मी और हवा के संपर्क में आने से जल्दी नष्ट हो जाता है।",
+    "cat": "gs",
+    "sub": "bio"
+  },
+  {
+    "q": "Which vitamin is synthesized in the skin in the presence of 'Sunlight'?\n'सूर्य के प्रकाश' की उपस्थिति में त्वचा में किस विटामिन का संश्लेषण होता है?",
+    "o": ["Vitamin A", "Vitamin C", "Vitamin D | विटामिन D", "Vitamin E"],
+    "a": 2,
+    "e": "Vitamin D is unique because the body can produce it when skin is exposed to UVB rays. / सूर्य की किरणों के संपर्क में आने पर शरीर विटामिन D बनाता है।",
+    "cat": "gs",
+    "sub": "bio"
+  },
+  {
+    "q": "The deficiency of Vitamin D causes which disease in children, characterized by thin/bent legs?\nबच्चों में विटामिन D की कमी से कौन सा रोग होता है, जिसमें पैर पतले या टेढ़े हो जाते हैं?",
+    "o": ["Scurvy", "Rickets | रिकेट्स", "Anaemia", "Beriberi"],
+    "a": 1,
+    "e": "Rickets causes soft and weak bones in children due to lack of Vitamin D or Calcium. / विटामिन D या कैल्शियम की कमी से बच्चों की हड्डियाँ कमजोर हो जाती हैं, जिसे रिकेट्स कहते हैं।",
+    "cat": "gs",
+    "sub": "diseases"
+  },
+  {
+    "q": "Which disease is known as the 'Royal Disease' and prevents blood from clotting?\nकिस बीमारी को 'शाही बीमारी' (Royal Disease) कहा जाता है और यह रक्त का थक्का जमने से रोकती है?",
+    "o": ["Colour Blindness", "Haemophilia | हीमोफीलिया", "Diabetes", "Goitre"],
+    "a": 1,
+    "e": "Haemophilia is a genetic disorder where the blood doesn't clot normally. / हीमोफीलिया एक आनुवंशिक विकार है जिसमें खून का थक्का नहीं जमता।",
+    "cat": "gs",
+    "sub": "genetics"
+  },
+  {
+    "q": "Color Blindness is a genetic defect primarily associated with which chromosome?\nकलर ब्लाइंडनेस एक आनुवंशिक दोष है जो मुख्य रूप से किस गुणसूत्र से जुड़ा है?",
+    "o": ["Y-Chromosome", "X-Chromosome | X-गुणसूत्र", "Ribosome", "Mitochondria"],
+    "a": 1,
+    "e": "Color blindness is an X-linked recessive trait, meaning it is carried on the X chromosome. / कलर ब्लाइंडनेस X-गुणसूत्र द्वारा ले जाया जाने वाला विकार है।",
+    "cat": "gs",
+    "sub": "genetics"
+  },
+  {
+    "q": "Which mental disorder is characterized by 'Delusions' and talking to oneself in a world of imagination?\nकिस मानसिक विकार में व्यक्ति कल्पना की दुनिया में रहता है और खुद से बातें (Delusions) करता है?",
+    "o": ["OCD", "Schizophrenia (Sijofremia) | सिज़ोफ्रेनिया", "Alzheimer's", "Myopia"],
+    "a": 1,
+    "e": "Schizophrenia affects a person's ability to think, feel, and behave clearly, often involving hallucinations. / सिज़ोफ्रेनिया में व्यक्ति वास्तविक और काल्पनिक दुनिया में अंतर नहीं कर पाता।",
+    "cat": "gs",
+    "sub": "diseases"
+  },
+  {
+    "q": "A mental disorder where a person feels compelled to wash hands repeatedly is known as ____.\nएक मानसिक विकार जिसमें व्यक्ति बार-बार हाथ धोने के लिए मजबूर महसूस करता है, क्या कहलाता है?",
+    "o": ["Schizophrenia", "OCD (Obsessive Compulsive Disorder) | ओसीडी", "Dyslexia", "Anemia"],
+    "a": 1,
+    "e": "OCD involves unwanted repetitive thoughts (obsessions) and/or actions (compulsions). / ओसीडी में व्यक्ति बार-बार एक ही काम करने की तीव्र इच्छा महसूस करता है।",
+    "cat": "gs",
+    "sub": "diseases"
+  },
+  {
+    "q": "Which vitamin is NOT found in meat, milk, or eggs?\nकौन सा विटामिन मांस, दूध या अंडे में नहीं पाया जाता है?",
+    "o": ["Vitamin B12", "Vitamin A", "Vitamin C | विटामिन C", "Vitamin D"],
+    "a": 2,
+    "e": "Animal-based foods are generally poor sources of Vitamin C, which is found in citrus fruits. / विटामिन C मुख्य रूप से खट्टे फलों में पाया जाता है।",
+    "cat": "gs",
+    "sub": "nutrition"
+  },
+  {
+    "q": "The condition where a person cannot distinguish between 'Red' and 'Green' colors is ____.\nवह स्थिति जिसमें व्यक्ति 'लाल' और 'हरे' रंगों के बीच अंतर नहीं कर पाता, ____ है।",
+    "o": ["Cataract", "Myopia", "Colour Blindness | वर्णान्धता (Colour Blindness)", "Glaucoma"],
+    "a": 2,
+    "e": "Colour blindness makes it difficult to perceive certain colors, most commonly red and green. / वर्णान्धता में व्यक्ति को लाल और हरे रंग में भ्रम होता है।",
+    "cat": "gs",
+    "sub": "diseases"
+  },
+  {
+    "q": "Which vitamin is also considered a 'Hormone' due to its fast-acting nature?\nअपनी तीव्र कार्यक्षमता के कारण किस विटामिन को 'हार्मोन' भी माना जाता है?",
+    "o": ["Vitamin A", "Vitamin C", "Vitamin D | विटामिन D", "Vitamin K"],
+    "a": 2,
+    "e": "Vitamin D functions like a steroid hormone in the body. / विटामिन D शरीर में एक स्टेरॉयड हार्मोन की तरह काम करता है।",
+    "cat": "gs",
+    "sub": "bio"
+  },
+  {
+    "q": "What happens if the 'Spinal Cord' (Second Brain) is ruptured?\nयदि 'स्पाइनल कॉर्ड' (द्वितीय मस्तिष्क) फट या टूट जाए तो क्या होगा?",
+    "o": ["Digestion improves", "Paralysis | लकवा (Paralysis)", "Memory loss", "Height increase"],
+    "a": 1,
+    "e": "Damage to the spinal cord cuts off signals between the brain and body, leading to paralysis. / स्पाइनल कॉर्ड में चोट लगने से मस्तिष्क और शरीर के बीच संपर्क टूट जाता है।",
+    "cat": "gs",
+    "sub": "nervous"
+  },
+  {
+    "q": "Which element is found in 'Tepidum Lucidum' that makes animal eyes shine at night?\n'टिपिडम लुसिडम' में कौन सा तत्व पाया जाता है जो रात में जानवरों की आँखों को चमकदार बनाता है?",
+    "o": ["Iron", "Zinc | जिंक", "Calcium", "Iodine"],
+    "a": 1,
+    "e": "Zinc-cysteine creates the reflective layer in animal eyes. / जिंक जानवरों की आँखों में परावर्तक परत बनाता है।",
+    "cat": "gs",
+    "sub": "chem"
+  },
+  {
+    "q": "The 'Ishihara Chart' is used to diagnose which condition?\n'इसीरा (Ishihara) चार्ट' का उपयोग किस स्थिति के निदान के लिए किया जाता है?",
+    "o": ["Night Blindness", "Colour Blindness | वर्णान्धता", "Diabetes", "Blood Pressure"],
+    "a": 1,
+    "e": "Ishihara plates are used to test color vision deficiency. / इसीरा चार्ट का उपयोग रंग दृष्टि की कमी की जांच के लिए किया जाता है।",
+    "cat": "gs",
+    "sub": "sense_organs"
+  },
+  {
+    "q": "Hormones produced by the 'Gonads' (Reproductive glands) are made of ____.\n'गोनाड' (जनन ग्रंथियों) द्वारा निर्मित हार्मोन किसके बने होते हैं?",
+    "o": ["Amino acids", "Steroids (Cholesterol) | स्टेरॉयड", "Water", "Oxygen"],
+    "a": 1,
+    "e": "Reproductive hormones are fat-soluble steroids derived from cholesterol. / जनन हार्मोन वसा में घुलनशील स्टेरॉयड होते हैं।",
+    "cat": "gs",
+    "sub": "bio"
+  },
+  {
+    "q": "Which type of disease is NOT spread from one person to another (e.g., Cancer, Heart Attack)?\nकिस प्रकार का रोग एक व्यक्ति से दूसरे व्यक्ति में नहीं फैलता (जैसे कैंसर, हार्ट अटैक)?",
+    "o": ["Communicable", "Non-infectious (Asankramak) | असंक्रामक", "Viral", "Bacterial"],
+    "a": 1,
+    "e": "Non-infectious diseases are caused by lifestyle, genetics, or environmental factors. / असंक्रामक रोग जीवनशैली या आनुवंशिक कारणों से होते हैं।",
+    "cat": "gs",
+    "sub": "diseases"
+  },
+  {
+    "q": "Which mineral helps in regulating 'Blood Pressure' and its lack can cause muscle cramps?\nकौन सा खनिज 'रक्तचाप' को नियंत्रित करने में मदद करता है और इसकी कमी से मांसपेशियों में खिंचाव हो सकता है?",
+    "o": ["Sodium | सोडियम", "Iron", "Iodine", "Phosphorus"],
+    "a": 0,
+    "e": "Sodium is essential for fluid balance and nerve impulses. / सोडियम शरीर में तरल पदार्थ के संतुलन के लिए आवश्यक है।",
+    "cat": "gs",
+    "sub": "chem"
+  },
+  {
+    "q": "The deficiency of which mineral leads to 'Goitre' (swelling in the neck)?\nकिस खनिज की कमी से 'घेंघा' (गर्दन में सूजन) होता है?",
+    "o": ["Calcium", "Iodine | आयोडीन", "Zinc", "Iron"],
+    "a": 1,
+    "e": "The thyroid gland needs iodine to produce hormones; its lack causes swelling. / थायराइड ग्रंथि को हार्मोन बनाने के लिए आयोडीन चाहिए।",
+    "cat": "gs",
+    "sub": "chem"
+  },
+  {
+    "q": "Which organ in the human body has the highest capacity for 'Regeneration'?\nमानव शरीर के किस अंग में 'पुनर्योजन' (Regeneration) की उच्चतम क्षमता होती है?",
+    "o": ["Brain", "Heart", "Liver | यकृत (लीवर)", "Kidney"],
+    "a": 2,
+    "e": "The liver can regrow to its full size even if a large part is removed. / लीवर अपने क्षतिग्रस्त हिस्से को दोबारा बना सकता है।",
+    "cat": "gs",
+    "sub": "bio"
+  },
+  {
+    "q": "Which gland is called the 'Master Gland' of the human body?\nमानव शरीर की किस ग्रंथि को 'मास्टर ग्रंथि' कहा जाता है?",
+    "o": ["Thyroid", "Pituitary | पीयूष (पिट्यूटरी)", "Adrenal", "Pancreas"],
+    "a": 1,
+    "e": "The pituitary gland controls many other endocrine glands. / पीयूष ग्रंथि शरीर की अन्य कई ग्रंथियों को नियंत्रित करती है।",
+    "cat": "gs",
+    "sub": "endocrine"
+  },
+  {
+    "q": "Which vitamin is also known as 'Ascorbic Acid' and is found in citrus fruits?\nकिस विटामिन को 'एस्कॉर्बिक एसिड' भी कहा जाता है और यह खट्टे फलों में पाया जाता है?",
+    "o": ["Vitamin A", "Vitamin B", "Vitamin C | विटामिन C", "Vitamin D"],
+    "a": 2,
+    "e": "Vitamin C (Ascorbic Acid) is essential for skin and immunity but is destroyed by boiling or peeling. / विटामिन C त्वचा और प्रतिरक्षा के लिए आवश्यक है लेकिन उबालने या छीलने से नष्ट हो जाता है।",
+    "cat": "gs",
+    "sub": "nutrition"
+  },
+  {
+    "q": "Which of the following is NOT a source of Vitamin C?\nनिम्नलिखित में से कौन विटामिन C का स्रोत 'नहीं' है?",
+    "o": ["Lemon", "Amla", "Meat | मीट (मांस)", "Orange"],
+    "a": 2,
+    "e": "Vitamin C is generally absent in meat, milk, and eggs. / विटामिन C आमतौर पर मांस, दूध और अंडे में नहीं पाया जाता है।",
+    "cat": "gs",
+    "sub": "nutrition"
+  },
+  {
+    "q": "Which vitamin is destroyed during the process of urination or alcohol consumption?\nमूत्र विसर्जन या शराब के सेवन के दौरान कौन सा विटामिन नष्ट हो जाता है?",
+    "o": ["Vitamin A", "Vitamin C | विटामिन C", "Vitamin D", "Vitamin E"],
+    "a": 1,
+    "e": "Vitamin C is water-soluble and is not stored in the body; it is excreted through urine. / विटामिन C जल में घुलनशील है और शरीर में संचित नहीं होता; यह मूत्र के माध्यम से बाहर निकल जाता है।",
+    "cat": "gs",
+    "sub": "bio"
+  },
+  {
+    "q": "Which vitamin acts as a 'Hormone' and is synthesized in the presence of sunlight?\nकौन सा विटामिन 'हार्मोन' की तरह कार्य करता है और सूर्य के प्रकाश की उपस्थिति में संश्लेषित होता है?",
+    "o": ["Vitamin A", "Vitamin D | विटामिन D", "Vitamin E", "Vitamin K"],
+    "a": 1,
+    "e": "Vitamin D is unique because it functions like a hormone and helps in calcium absorption. / विटामिन D अद्वितीय है क्योंकि यह हार्मोन की तरह कार्य करता है और कैल्शियम अवशोषण में मदद करता है।",
+    "cat": "gs",
+    "sub": "bio"
+  },
+  {
+    "q": "The deficiency of Vitamin D in adults leads to which bone disease?\nवयस्कों में विटामिन D की कमी से हड्डियों की कौन सी बीमारी होती है?",
+    "o": ["Rickets", "Osteomalacia | ऑस्टियोमलेशिया", "Goitre", "Scurvy"],
+    "a": 1,
+    "e": "Rickets occurs in children, while Osteomalacia is the softening of bones in adults. / बच्चों में रिकेट्स होता है, जबकि वयस्कों में ऑस्टियोमलेशिया (हड्डियों का नरम होना) होता है।",
+    "cat": "gs",
+    "sub": "diseases"
+  },
+  {
+    "q": "Which vitamin is essential for 'Reproductive Health' and is found in sprouted grains?\nकौन सा विटामिन 'जनन स्वास्थ्य' के लिए आवश्यक है और अंकुरित अनाज में पाया जाता है?",
+    "o": ["Vitamin A", "Vitamin E (Tocopherol) | विटामिन E", "Vitamin C", "Vitamin B12"],
+    "a": 1,
+    "e": "Vitamin E is crucial for fertility and skin health, often called the 'Beauty Vitamin'. / विटामिन E प्रजनन क्षमता और त्वचा के स्वास्थ्य के लिए महत्वपूर्ण है।",
+    "cat": "gs",
+    "sub": "reproduction"
+  },
+  {
+    "q": "Which vitamin helps in 'Blood Clotting' and its deficiency can lead to Hemorrhage?\nकौन सा विटामिन 'रक्त का थक्का' जमाने में मदद करता है और इसकी कमी से हेमरेज हो सकता है?",
+    "o": ["Vitamin K (Phylloquinone) | विटामिन K", "Vitamin A", "Vitamin D", "Vitamin C"],
+    "a": 0,
+    "e": "Vitamin K is essential for synthesizing clotting factors in the liver. / लीवर में क्लॉटिंग कारकों के संश्लेषण के लिए विटामिन K आवश्यक है।",
+    "cat": "gs",
+    "sub": "circulatory"
+  },
+  {
+    "q": "Which mineral is highly required for the strength of 'Bones and Teeth'?\n'हड्डियों और दांतों' की मजबूती के लिए किस खनिज की अत्यधिक आवश्यकता होती है?",
+    "o": ["Iron", "Calcium | कैल्शियम", "Sodium", "Iodine"],
+    "a": 1,
+    "e": "Calcium and Phosphorus are the primary minerals forming the bone matrix. / कैल्शियम और फास्फोरस हड्डियों के मैट्रिक्स बनाने वाले प्राथमिक खनिज हैं।",
+    "cat": "gs",
+    "sub": "chem"
+  },
+  {
+    "q": "What does 'ABG' stand for in a critical care hospital setting?\nक्रिटिकल केयर अस्पताल सेटिंग में 'ABG' का क्या अर्थ है?",
+    "o": ["Average Blood Glucose", "Arterial Blood Gas | आर्टेरियल ब्लड गैस", "All Blood Groups", "Acid Base Ground"],
+    "a": 1,
+    "e": "ABG measures pH and gases (O2/CO2) from an artery to monitor critical patients. / ABG क्रिटिकल मरीजों की निगरानी के लिए धमनी से pH और गैसों (O2/CO2) को मापता है।",
+    "cat": "gs",
+    "sub": "circulatory"
+  },
+  {
+    "q": "The deficiency of which element leads to 'Anemia' (low hemoglobin)?\nकिस तत्व की कमी से 'एनीमिया' (कम हीमोग्लोबिन) होता है?",
+    "o": ["Calcium", "Iodine", "Iron | आयरन", "Zinc"],
+    "a": 2,
+    "e": "Iron is the core component of the heme group in hemoglobin. / आयरन हीमोग्लोबिन के हीम समूह का मुख्य घटक है।",
+    "cat": "gs",
+    "sub": "chem"
+  },
+  {
+    "q": "Which mineral helps regulate the 'Heart Beat' and its imbalance can be fatal?\nकौन सा खनिज 'हृदय की धड़कन' को नियंत्रित करने में मदद करता है और इसका असंतुलन घातक हो सकता है?",
+    "o": ["Iodine", "Potassium | पोटेशियम", "Fluorine", "Iron"],
+    "a": 1,
+    "e": "Potassium is vital for electrical signals in the heart; high/low levels can cause cardiac arrest. / हृदय में विद्युत संकेतों के लिए पोटेशियम महत्वपूर्ण है।",
+    "cat": "gs",
+    "sub": "chem"
+  },
+  {
+    "q": "Which category of minerals is needed in relatively 'larger' amounts (like Calcium)?\nखनिजों की किस श्रेणी की आवश्यकता अपेक्षाकृत 'बड़ी' मात्रा में होती है (जैसे कैल्शियम)?",
+    "o": ["Micro-minerals", "Macro-minerals (Vrihad) | वृहद खनिज", "Trace elements", "Inorganic gases"],
+    "a": 1,
+    "e": "Macro-minerals like Calcium, Phosphorus, and Potassium are needed in significant quantities. / कैल्शियम, फास्फोरस और पोटेशियम जैसे वृहद खनिजों की आवश्यकता महत्वपूर्ण मात्रा में होती है।",
+    "cat": "gs",
+    "sub": "bio"
+  },
+  {
+    "q": "Which vitamin is found in 'Fish Liver Oil' specifically (as discussed in class)?\n'मछली के यकृत के तेल' (Fish Liver Oil) में विशेष रूप से कौन सा विटामिन पाया जाता है?",
+    "o": ["Vitamin C", "Vitamin A | विटामिन A", "Vitamin B", "Vitamin K"],
+    "a": 1,
+    "e": "Liver stores fat-soluble vitamins, especially Vitamin A. Fish meat generally has Vitamin D. / लीवर वसा में घुलनशील विटामिन, विशेष रूप से विटामिन A को संचित करता है।",
+    "cat": "gs",
+    "sub": "nutrition"
+  },
+  {
+    "q": "The 'Beauty Vitamin' which helps in skin regeneration is ____.\nत्वचा के पुनर्जन्म में मदद करने वाला 'ब्यूटी विटामिन' ____ है।",
+    "o": ["Vitamin D", "Vitamin E | विटामिन E", "Vitamin K", "Vitamin B1"],
+    "a": 1,
+    "e": "Vitamin E is an antioxidant that protects skin cells from damage. / विटामिन E एक एंटीऑक्सीडेंट है जो त्वचा कोशिकाओं को नुकसान से बचाता है।",
+    "cat": "gs",
+    "sub": "bio"
+  },
+  {
+    "q": "Which element is needed in very 'small' (micro) amounts for the Thyroid gland?\nथायराइड ग्रंथि के लिए किस तत्व की बहुत 'कम' (सूक्ष्म) मात्रा में आवश्यकता होती है?",
+    "o": ["Calcium", "Potassium", "Iodine | आयोडीन", "Magnesium"],
+    "a": 2,
+    "e": "Iodine is a trace mineral essential for thyroxine production. / आयोडीन थायरोक्सिन उत्पादन के लिए आवश्यक एक सूक्ष्म खनिज है।",
+    "cat": "gs",
+    "sub": "chem"
+  },
+  {
+    "q": "During surgery, a 'Section Pipe' is often used to clear foam/fluid from the baby's mouth because it was in ____.\nसर्जरी के दौरान, बच्चे के मुँह से झाग/द्रव साफ करने के लिए अक्सर 'सेक्शन पाइप' का उपयोग किया जाता है क्योंकि वह ____ में था।",
+    "o": ["Urine", "Amniotic Fluid | एमनियोटिक द्रव", "Bile", "Blood"],
+    "a": 1,
+    "e": "The fetus is surrounded by amniotic fluid in the womb. / भ्रूण गर्भाशय में एमनियोटिक द्रव से घिरा होता है।",
+    "cat": "gs",
+    "sub": "reproduction"
+  },
+  {
+    "q": "What is the primary function of 'Roughage' (Mota Chara) in digestion?\nपाचन में 'रुक्षांश' (मोटा चारा) का प्राथमिक कार्य क्या है?",
+    "o": ["Providing energy", "Cleaning the alimentary canal | आहार नाल की सफाई", "Building muscles", "Supplying vitamins"],
+    "a": 1,
+    "e": "Roughage or fiber aids in bowel movements and clears waste from the intestines. / रुक्षांश या फाइबर मल त्याग में सहायता करता है और आंतों से कचरा साफ करता है।",
+    "cat": "gs",
+    "sub": "digestive"
+  },
+  {
+    "q": "Which gland is known as the 'Master of Master Gland'?\nकिस ग्रंथि को 'मास्टर ऑफ मास्टर ग्रंथि' कहा जाता है?",
+    "o": ["Pituitary", "Thyroid", "Hypothalamus | हाइपोथैलेमस", "Pineal"],
+    "a": 2,
+    "e": "Hypothalamus controls the pituitary (master) gland. / हाइपोथैलेमस पीयूष (मास्टर) ग्रंथि को नियंत्रित करता है।",
+    "cat": "gs",
+    "sub": "endocrine"
+  },
+  {
+    "q": "Where is 'Bile' (Pitta) produced and stored respectively?\n'पित्त' (Bile) क्रमशः कहाँ निर्मित और कहाँ संचित होता है?",
+    "o": ["Produced in Liver, Stored in Gall Bladder | लीवर में निर्मित, पित्ताशय में संचित", "Produced in Stomach, Stored in Pancreas", "Produced in Spleen, Stored in Kidney", "None"],
+    "a": 0,
+    "e": "Bile is made by hepatocytes in the liver and concentrated in the gall bladder. / पित्त लीवर द्वारा बनाया जाता है और पित्ताशय में जमा होता है।",
+    "cat": "gs",
+    "sub": "digestive"
+  },
+  {
+    "q": "Why is 'Amla' considered a very stable source of Vitamin C?\n'आंवला' को विटामिन C का बहुत स्थिर स्रोत क्यों माना जाता है?",
+    "o": ["It is expensive", "It can be dried and stored for a year without losing all Vitamin C | इसे सुखाकर संचित किया जा सकता है", "It is very sweet", "None"],
+    "a": 1,
+    "e": "Amla retains its Vitamin C even after drying or processing better than many other fruits. / आंवला सुखाने या संसाधित करने के बाद भी अपने विटामिन C को बेहतर तरीके से बनाए रखता है।",
+    "cat": "gs",
+    "sub": "nutrition"
+  },
+  {
+    "q": "Which scientist is credited with naming 'Vitamins' and proposing the Vitamin Theory?\n'विटामिन' शब्द का नामकरण और विटामिन सिद्धांत का प्रतिपादन किस वैज्ञानिक ने किया था?",
+    "o": ["Lunin", "Funk | फंक", "William Harvey", "Robert Hooke"],
+    "a": 1,
+    "e": "Casimir Funk named the organic micronutrients 'Vitamins' in 1912. / फंक ने 1912 में इन कार्बनिक सूक्ष्म पोषक तत्वों का नाम 'विटामिन' रखा था।",
+    "cat": "gs",
+    "sub": "bio"
+  },
+  {
+    "q": "Which vitamins are soluble in 'Water' (remember the 'WBC' mnemonic)?\nकौन से विटामिन 'जल' में घुलनशील होते हैं ('WBC' ट्रिक याद रखें)?",
+    "o": ["A and D", "B and C | विटामिन B और C", "E and K", "A and K"],
+    "a": 1,
+    "e": "Vitamins B and C are water-soluble, while A, D, E, and K are fat-soluble. / विटामिन B और C जल में घुलनशील हैं, जबकि A, D, E और K वसा में।",
+    "cat": "gs",
+    "sub": "bio"
+  },
+  {
+    "q": "Which vitamin is found in abundance in 'Golden Rice'?\n'गोल्डन राइस' (Golden Rice) में कौन सा विटामिन प्रचुर मात्रा में पाया जाता है?",
+    "o": ["Vitamin B", "Vitamin C", "Vitamin A | विटामिन A", "Vitamin D"],
+    "a": 2,
+    "e": "Golden rice is a genetically modified variety of rice to produce beta-carotene (Vitamin A). / गोल्डन राइस को विटामिन A की कमी को दूर करने के लिए विशेष रूप से बनाया गया है।",
+    "cat": "gs",
+    "sub": "nutrition"
+  },
+  {
+    "q": "What is the chemical name of Vitamin A?\nविटामिन A का रासायनिक नाम क्या है?",
+    "o": ["Thiamine", "Retinol | रेटिनॉल", "Ascorbic Acid", "Calciferol"],
+    "a": 1,
+    "e": "Vitamin A is called Retinol because it is essential for the retina of the eye. / विटामिन A को रेटिनॉल कहा जाता है क्योंकि यह आँखों की रेटिना के लिए आवश्यक है।",
+    "cat": "gs",
+    "sub": "chem"
+  },
+  {
+    "q": "Which vitamin is known as the 'Anti-infection' or 'Protective' vitamin?\nकिस विटामिन को 'प्रतिरक्षी' या 'एंटी-इंफेक्शन' विटामिन के रूप में जाना जाता है?",
+    "o": ["Vitamin D", "Vitamin A | विटामिन A", "Vitamin E", "Vitamin K"],
+    "a": 1,
+    "e": "Vitamin A helps maintain the immune system and protects against diseases. / विटामिन A बीमारियों से रक्षा करता है और प्रतिरक्षा प्रणाली को मजबूत करता है।",
+    "cat": "gs",
+    "sub": "bio"
+  },
+  {
+    "q": "Which part of the fish is a rich source of Vitamin A?\nमछली का कौन सा भाग विटामिन A का एक समृद्ध स्रोत है?",
+    "o": ["Scales", "Fins", "Liver (Yarit) | यकृत (लीवर)", "Tail"],
+    "a": 2,
+    "e": "Fish liver oil is a highly concentrated source of Vitamin A. / मछली के यकृत का तेल विटामिन A का मुख्य स्रोत है।",
+    "cat": "gs",
+    "sub": "nutrition"
+  },
+  {
+    "q": "Which disease is caused by the deficiency of Vitamin B1 (Thiamine)?\nविटामिन B1 (थायमिन) की कमी से कौन सा रोग होता है?",
+    "o": ["Scurvy", "Rickets", "Beriberi | बेरीबेरी", "Anaemia"],
+    "a": 2,
+    "e": "Beriberi is a disease caused by Vitamin B1 deficiency, affecting the nervous and cardiovascular systems. / बेरीबेरी विटामिन B1 की कमी से होने वाला रोग है।",
+    "cat": "gs",
+    "sub": "diseases"
+  },
+  {
+    "q": "Polishing rice removes which vitamin from its outer layer?\nचावल को पॉलिश करने से उसकी बाहरी परत से कौन सा विटामिन हट जाता है?",
+    "o": ["Vitamin A", "Vitamin B1 (Thiamine) | विटामिन B1", "Vitamin C", "Vitamin D"],
+    "a": 1,
+    "e": "Polishing removes the husk and bran, which are rich in Thiamine. / पॉलिश करने से थायमिन युक्त भूसी और चोकर निकल जाता है।",
+    "cat": "gs",
+    "sub": "nutrition"
+  },
+  {
+    "q": "Which Vitamin B member is known as 'Riboflavin' and found in mitochondria?\nविटामिन B समूह के किस सदस्य को 'राइबोफ्लेविन' कहा जाता है और यह माइट्रोकांड्रिया में पाया जाता है?",
+    "o": ["B1", "B2 | विटामिन B2", "B3", "B5"],
+    "a": 1,
+    "e": "Vitamin B2 is essential for energy production in the mitochondria. / विटामिन B2 माइट्रोकांड्रिया में ऊर्जा उत्पादन के लिए आवश्यक है।",
+    "cat": "gs",
+    "sub": "bio"
+  },
+  {
+    "q": "The deficiency of Vitamin B3 (Niacin/Nicotinamide) leads to which issue mentioned in class?\nविटामिन B3 (नियासिन) की कमी से क्लास में बताई गई कौन सी समस्या होती है?",
+    "o": ["Night blindness", "Whitening of hair | बालों का पकना (सफेद होना)", "Rickets", "Goitre"],
+    "a": 1,
+    "e": "B3 deficiency is often linked to skin problems and premature graying of hair. / B3 की कमी से चर्म रोग और बाल सफेद होने लगते हैं।",
+    "cat": "gs",
+    "sub": "diseases"
+  },
+  {
+    "q": "Vitamin B7 is also known by which other name?\nविटामिन B7 को किस अन्य नाम से भी जाना जाता है?",
+    "o": ["Vitamin H | विटामिन H", "Vitamin G", "Vitamin F", "Vitamin M"],
+    "a": 0,
+    "e": "Vitamin B7 is commonly known as Biotin or Vitamin H. / विटामिन B7 को बायोटीन या विटामिन H कहा जाता है।",
+    "cat": "gs",
+    "sub": "bio"
+  },
+  {
+    "q": "Which mineral is a key component of Vitamin B12 (Cyanocobalamin)?\nविटामिन B12 (साइनोकोबालामीन) का मुख्य घटक कौन सा खनिज है?",
+    "o": ["Iron", "Cobalt | कोबाल्ट", "Zinc", "Magnesium"],
+    "a": 1,
+    "e": "Vitamin B12 is the only vitamin that contains the metal ion Cobalt. / विटामिन B12 एकमात्र विटामिन है जिसमें कोबाल्ट पाया जाता है।",
+    "cat": "gs",
+    "sub": "chem"
+  },
+  {
+    "q": "The deficiency of Vitamin B7 (Biotin) can lead to which severe nervous system issue?\nविटामिन B7 (बायोटीन) की कमी से तंत्रिका तंत्र की कौन सी गंभीर समस्या हो सकती है?",
+    "o": ["Night blindness", "Paralysis | लकवा (Paralysis)", "Scurvy", "Dwarfism"],
+    "a": 1,
+    "e": "Biotin is essential for metabolic health; its severe lack can cause muscle weakness and paralysis. / बायोटीन की कमी से मांसपेशियों में कमजोरी और लकवा मार सकता है।",
+    "cat": "gs",
+    "sub": "diseases"
+  },
+  {
+    "q": "Which type of 'Acid' is associated with Vitamin B9?\nविटामिन B9 के साथ कौन सा 'एसिड' जुड़ा हुआ है?",
+    "o": ["Citric Acid", "Folic Acid | फोलिक एसिड", "Lactic Acid", "Acetic Acid"],
+    "a": 1,
+    "e": "Vitamin B9 is scientifically known as Folic Acid, crucial for cell growth. / विटामिन B9 को फोलिक एसिड के नाम से जाना जाता है।",
+    "cat": "gs",
+    "sub": "chem"
+  },
+  {
+    "q": "Pernicious Anaemia is caused by the deficiency of which vitamin?\nपेरिनियस एनीमिया (घातक रक्ताल्पता) किस विटामिन की कमी के कारण होता है?",
+    "o": ["B1", "B6", "B12 | विटामिन B12", "B3"],
+    "a": 2,
+    "e": "Vitamin B12 is essential for RBC formation; its lack leads to severe anaemia. / विटामिन B12 लाल रक्त कोशिकाओं के निर्माण के लिए आवश्यक है।",
+    "cat": "gs",
+    "sub": "diseases"
+  },
+  {
+    "q": "Which of the following is NOT an organic substance?\nनिम्नलिखित में से कौन सा एक कार्बनिक पदार्थ 'नहीं' है?",
+    "o": ["Vitamins", "Carbohydrates", "Minerals | खनिज", "Proteins"],
+    "a": 2,
+    "e": "Minerals and water are inorganic (lack carbon). / खनिज और जल अकार्बनिक होते हैं (इनमें कार्बन नहीं होता)।",
+    "cat": "gs",
+    "sub": "chem"
+  },
+  {
+    "q": "Where are fat-soluble vitamins (A, D, E, K) primarily stored in the human body?\nमानव शरीर में वसा में घुलनशील विटामिन (A, D, E, K) मुख्य रूप से कहाँ संचित होते हैं?",
+    "o": ["Lungs", "Kidneys", "Liver | यकृत (लीवर)", "Stomach"],
+    "a": 2,
+    "e": "The liver acts as a storage tank for vitamins that dissolve in fat. / लीवर वसा में घुलनशील विटामिनों के लिए भंडारण का काम करता है।",
+    "cat": "gs",
+    "sub": "bio"
+  },
+  {
+    "q": "Which vitamin is synthesized in the body with the help of 'Sunlight'?\n'सूर्य के प्रकाश' की सहायता से शरीर में किस विटामिन का संश्लेषण होता है?",
+    "o": ["Vitamin A", "Vitamin B", "Vitamin D | विटामिन D", "Vitamin C"],
+    "a": 2,
+    "e": "Skin produces Vitamin D when exposed to UV rays from sunlight. / त्वचा सूर्य के प्रकाश की उपस्थिति में विटामिन D बनाती है।",
+    "cat": "gs",
+    "sub": "bio"
+  },
+  {
+    "q": "Yellow fruits like Mango and Papaya are rich sources of which vitamin?\nआम और पपीता जैसे पीले फल किस विटामिन के समृद्ध स्रोत हैं?",
+    "o": ["Vitamin C", "Vitamin A | विटामिन A", "Vitamin K", "Vitamin B12"],
+    "a": 1,
+    "e": "Yellow and orange fruits contain beta-carotene, which is converted to Vitamin A. / पीले फलों में बीटा-कैरोटीन होता है जो विटामिन A में बदल जाता है।",
+    "cat": "gs",
+    "sub": "nutrition"
+  },
+  {
+    "q": "What is the primary role of 'Antioxidants' mentioned in relation to Red Wine and fruits?\nरेड वाइन और फलों के संबंध में बताए गए 'एंटीऑक्सीडेंट' की मुख्य भूमिका क्या है?",
+    "o": ["Causing sleep", "Repairing skin and fighting free radicals | त्वचा की मरम्मत और फ्री रेडिकल्स से लड़ना", "Increasing fat", "Stopping digestion"],
+    "a": 1,
+    "e": "Antioxidants protect cells from damage and maintain skin glow. / एंटीऑक्सीडेंट कोशिकाओं को नुकसान से बचाते हैं और चेहरे पर ग्लो लाते हैं।",
+    "cat": "gs",
+    "sub": "bio"
+  },
+  {
+    "q": "The chemical name of Vitamin B5 is ____.\nविटामिन B5 का रासायनिक नाम ____ है।",
+    "o": ["Pyridoxine", "Pantothenic Acid | पेंटोथेनिक एसिड", "Biotin", "Niacin"],
+    "a": 1,
+    "e": "B5 name 'Panto' comes from 5 (Penta). / B5 का नाम पेंटा (5) से पेंटोथेनिक एसिड पड़ा है।",
+    "cat": "gs",
+    "sub": "chem"
+  },
+  {
+    "q": "Which vitamin is destroyed during 'Chemotherapy', leading to loss of taste and hair?\nकीमोथेरेपी के दौरान कौन सा विटामिन नष्ट हो जाता है, जिससे स्वाद और बाल चले जाते हैं?",
+    "o": ["Vitamin A", "Vitamin B Complex (and cells like Olfactory) | विटामिन B कॉम्प्लेक्स", "Vitamin D", "Vitamin K"],
+    "a": 1,
+    "e": "Chemotherapy targets rapidly dividing cells and affects B-vitamin balance and olfactory lobes. / कीमोथेरेपी कोशिकाओं और विटामिन B के संतुलन को प्रभावित करती है।",
+    "cat": "gs",
+    "sub": "diseases"
+  },
+  {
+    "q": "Why is the 'Placenta' important for a baby in the womb?\nगर्भ में पल रहे बच्चे के लिए 'प्लेसेंटा' क्यों महत्वपूर्ण है?",
+    "o": ["For protection only", "For nutrients and waste removal | पोषक तत्वों और अपशिष्ट निकासी के लिए", "For making hair", "For bone hardening"],
+    "a": 1,
+    "e": "The placenta provides oxygen and nutrients to the fetus and removes carbon dioxide and other waste. / प्लेसेंटा बच्चे को पोषण देता है और कचरा बाहर निकालता है।",
+    "cat": "gs",
+    "sub": "reproduction"
+  },
+  {
+    "q": "In the context of 'Nervous System', what is the small gap between two neurons called?\n'तंत्रिका तंत्र' के संदर्भ में, दो न्यूरॉन्स के बीच के छोटे अंतराल को क्या कहा जाता है?",
+    "o": ["Axon", "Synapse (Snaps) | सिनेप्स", "Cranium", "Dendrite"],
+    "a": 1,
+    "e": "A synapse allows a signal to pass from one neuron to another. / सिनेप्स संकेतों को एक न्यूरॉन से दूसरे तक जाने देता है।",
+    "cat": "gs",
+    "sub": "nervous"
+  },
+  {
+    "q": "Which element's deficiency causes 'Goitre' (swelling of the neck)?\nकिस तत्व की कमी से 'घेंघा' (गर्दन में सूजन) होता है?",
+    "o": ["Iron", "Calcium", "Iodine | आयोडीन", "Sodium"],
+    "a": 2,
+    "e": "Iodine is essential for the thyroid gland to produce hormones. / थायराइड ग्रंथि को हार्मोन बनाने के लिए आयोडीन की आवश्यकता होती है।",
+    "cat": "gs",
+    "sub": "chem"
+  },
+  {
+    "q": "Which nutrient is responsible for body building and tissue repair?\nशरीर निर्माण और ऊतकों की मरम्मत के लिए कौन सा पोषक तत्व जिम्मेदार है?",
+    "o": ["Carbohydrate", "Fat", "Protein | प्रोटीन", "Vitamin"],
+    "a": 2,
+    "e": "Proteins are the building blocks of life, made of amino acids. / प्रोटीन जीवन के आधार खंड हैं, जो अमीनो एसिड से बने होते हैं।",
+    "cat": "gs",
+    "sub": "nutrition"
+  },
+  {
+    "q": "How many types of amino acids are required to form a complete protein?\nएक पूर्ण प्रोटीन बनाने के लिए कितने प्रकार के अमीनो एसिड की आवश्यकता होती है?",
+    "o": ["10", "15", "20 | 20 प्रकार", "30"],
+    "a": 2,
+    "e": "A total of 20 amino acids (10 non-essential and 10 essential) make one protein. / कुल 20 अमीनो एसिड मिलकर एक प्रोटीन का निर्माण करते हैं।",
+    "cat": "gs",
+    "sub": "bio"
+  },
+  {
+    "q": "Which element is found in Protein that is absent in Carbohydrates and Fats?\nप्रोटीन में कौन सा तत्व पाया जाता है जो कार्बोहाइड्रेट और वसा में अनुपस्थित होता है?",
+    "o": ["Carbon", "Hydrogen", "Oxygen", "Nitrogen | नाइट्रोजन"],
+    "a": 3,
+    "e": "Proteins are nitrogenous compounds, which makes them harder to digest than carbs. / प्रोटीन नाइट्रोजनयुक्त यौगिक होते हैं, जो उन्हें पचाने में कठिन बनाते हैं।",
+    "cat": "gs",
+    "sub": "chem"
+  },
+  {
+    "q": "Which disease is caused by protein deficiency in children, leading to a protruding belly?\nबच्चों में प्रोटीन की कमी से कौन सा रोग होता है, जिससे पेट बाहर निकल आता है?",
+    "o": ["Anemia", "Kwashiorkor | क्वाशियोरकोर", "Goitre", "Scurvy"],
+    "a": 1,
+    "e": "Kwashiorkor and Marasmus are severe forms of protein-energy malnutrition. / क्वाशियोरकोर और मैरास्मस प्रोटीन की कमी से होने वाले कुपोषण हैं।",
+    "cat": "gs",
+    "sub": "diseases"
+  },
+  {
+    "q": "What is the primary storage form of energy in the human body, providing 9.3 kcal/g?\nमानव शरीर में ऊर्जा का प्राथमिक संचयी रूप क्या है, जो 9.3 किलो-कैलोरी ऊर्जा देता है?",
+    "o": ["Glucose", "Fat (Vasa) | वसा", "Protein", "Starch"],
+    "a": 1,
+    "e": "Fat is the most energy-dense nutrient and provides high energy in emergency/fasting. / वसा सबसे अधिक ऊर्जा सघन पोषक तत्व है।",
+    "cat": "gs",
+    "sub": "nutrition"
+  },
+  {
+    "q": "Which substance makes up the outer shell of capsules and plant leaves?\nकैप्सूल का बाहरी आवरण और पौधों की पत्तियां किस पदार्थ से बनी होती हैं?",
+    "o": ["Cellulose", "Starch (Mand) | स्टार्च", "Chitin", "Glucose"],
+    "a": 1,
+    "e": "Medicinal capsules are made of starch, which is a polysaccharide. / औषधीय कैप्सूल स्टार्च (मंड) के बने होते हैं।",
+    "cat": "gs",
+    "sub": "bio"
+  },
+  {
+    "q": "The exoskeleton of insects like cockroaches and fish scales are made of ____.\nतिलचट्टे जैसे कीड़ों का बाह्य कंकाल और मछली के चोटे (scales) ____ के बने होते हैं।",
+    "o": ["Keratin", "Cellulose", "Chitin | काइटिन", "Collagen"],
+    "a": 2,
+    "e": "Chitin is a tough polysaccharide providing structural support to insects. / काइटिन एक कठोर पॉलीसैकराइड है जो कीटों को सुरक्षा देता है।",
+    "cat": "gs",
+    "sub": "bio"
+  },
+  {
+    "q": "Which protein is found most abundantly in the human body?\nमानव शरीर में सबसे प्रचुर मात्रा में पाया जाने वाला प्रोटीन कौन सा है?",
+    "o": ["Hemoglobin", "Insulin", "Collagen | कोलेजन", "Keratin"],
+    "a": 2,
+    "e": "Collagen is the main structural protein in various connective tissues. / कोलेजन विभिन्न संयोजी ऊतकों में पाया जाने वाला मुख्य प्रोटीन है।",
+    "cat": "gs",
+    "sub": "bio"
+  },
+  {
+    "q": "Which component of a 'Lipid Profile' is considered 'Bad Cholesterol'?\n'लिपिड प्रोफाइल' का कौन सा घटक 'खराब कोलेस्ट्रॉल' माना जाता है?",
+    "o": ["HDL", "LDL | एलडीएल (LDL)", "VLDL", "Albumin"],
+    "a": 1,
+    "e": "High levels of LDL lead to plaque buildup in arteries, increasing heart attack risk. / LDL का उच्च स्तर धमनियों में रुकावट पैदा करता है।",
+    "cat": "gs",
+    "sub": "diseases"
+  },
+  {
+    "q": "Which vitamin is water-soluble (found in the 'WBC' mnemonic)?\nकौन सा विटामिन पानी में घुलनशील है ('WBC' ट्रिक के अनुसार)?",
+    "o": ["Vitamin A", "Vitamin D", "Vitamin C | विटामिन C", "Vitamin K"],
+    "a": 2,
+    "e": "WBC mnemonic: W(Water), B, and C vitamins are water-soluble. / विटामिन B और C पानी में घुलनशील होते हैं।",
+    "cat": "gs",
+    "sub": "bio"
+  },
+  {
+    "q": "In which part of the body is the 'Thymus Gland' located, helping children build immunity?\nशरीर के किस भाग में 'थाइमस ग्रंथि' स्थित होती है, जो बच्चों में प्रतिरोधक क्षमता बढ़ाती है?",
+    "o": ["Brain", "Neck", "Chest | छाती (वक्ष)", "Kidney"],
+    "a": 2,
+    "e": "The Thymus gland is located in the thoracic cavity and produces proteins and immunity. / थाइमस ग्रंथि वक्ष गुहा में होती है और प्रतिरक्षा प्रदान करती है।",
+    "cat": "gs",
+    "sub": "endocrine"
+  },
+  {
+    "q": "Which hormone is injected into cattle to increase milk yield, though it's harmful?\nपशुओं में दूध की मात्रा बढ़ाने के लिए कौन सा हार्मोन लगाया जाता है, हालाँकि यह हानिकारक है?",
+    "o": ["Insulin", "Oxytocin | ऑक्सीटोसिन", "Adrenaline", "Thyroxine"],
+    "a": 1,
+    "e": "Oxytocin causes milk let-down but harms the animal's health. / ऑक्सीटोसिन दूध निकालने के लिए उपयोग किया जाता है।",
+    "cat": "gs",
+    "sub": "reproduction"
+  },
+  {
+    "q": "Which sugar is specifically found in milk?\nदूध में मुख्य रूप से कौन सी शर्करा पाई जाती है?",
+    "o": ["Sucrose", "Maltose", "Lactose | लैक्टोज", "Fructose"],
+    "a": 2,
+    "e": "Lactose is the primary disaccharide found in dairy products. / डेयरी उत्पादों में पाया जाने वाला प्राथमिक डाइसैकराइड लैक्टोज है।",
+    "cat": "gs",
+    "sub": "nutrition"
+  },
+  {
+    "q": "Which element is found in Insulin that helps regulate sugar levels?\nइंसुलिन में कौन सा तत्व पाया जाता है जो शुगर लेवल को नियंत्रित करने में मदद करता है?",
+    "o": ["Iron", "Calcium", "Zinc | जिंक (जस्ता)", "Iodine"],
+    "a": 2,
+    "e": "Zinc is crucial for the synthesis and storage of insulin. / इंसुलिन के निर्माण के लिए जिंक आवश्यक है।",
+    "cat": "gs",
+    "sub": "chem"
+  },
+  {
+    "q": "The protective membrane surrounding the Brain is called ____.\nमस्तिष्क के चारों ओर की सुरक्षात्मक झिल्ली क्या कहलाती है?",
+    "o": ["Pleura", "Pericardium", "Meninges | मेनिन्जेस", "Peritoneum"],
+    "a": 2,
+    "e": "Meningitis is the inflammation of this protective layer. / मेनिन्जेस मस्तिष्क की सुरक्षात्मक परत है।",
+    "cat": "gs",
+    "sub": "nervous"
+  },
+  {
+    "q": "Which nutrient provides 4.2 kcal/g and is the body's first choice for daily activities?\nकौन सा पोषक तत्व 4.2 kcal/g प्रदान करता है और दैनिक गतिविधियों के लिए शरीर की पहली पसंद है?",
+    "o": ["Protein", "Carbohydrate | कार्बोहाइड्रेट", "Fat", "Fiber"],
+    "a": 1,
+    "e": "Carbohydrates like glucose are oxidized first for immediate energy. / तत्काल ऊर्जा के लिए सबसे पहले कार्बोहाइड्रेट का उपयोग होता है।",
+    "cat": "gs",
+    "sub": "nutrition"
+  },
+  {
+    "q": "Why do women generally feel less cold than men?\nमहिलाओं को आमतौर पर पुरुषों की तुलना में कम ठंड क्यों लगती है?",
+    "o": ["Due to more hemoglobin", "Due to thicker fat layer | वसा की अधिक परत के कारण", "Due to height", "None"],
+    "a": 1,
+    "e": "A natural layer of subcutaneous fat acts as an insulator against cold. / वसा की परत ठंड के विरुद्ध कुचालक (insulator) का कार्य करती है।",
+    "cat": "gs",
+    "sub": "bio"
+  },
+  {
+    "q": "Which plant-based food is considered a 'rich source' of protein?\nकौन सा पादप-आधारित भोजन प्रोटीन का 'समृद्ध स्रोत' माना जाता है?",
+    "o": ["Potato", "Rice", "Soybean | सोयाबीन", "Banana"],
+    "a": 2,
+    "e": "Soybeans contain about 40% protein, making them an excellent source for vegetarians. / सोयाबीन में उच्च मात्रा में प्रोटीन होता है।",
+    "cat": "gs",
+    "sub": "nutrition"
+  },
+  {
+    "q": "A 'Venn diagram' relation mentioned in the lesson states that all Steroids are ____.\nपाठ में बताए गए 'वेन आरेख' संबंध के अनुसार, सभी स्टेरॉयड ____ हैं।",
+    "o": ["Proteins", "Cholesterol | कोलेस्ट्रॉल", "Water", "Oxygen"],
+    "a": 1,
+    "e": "Chemically, steroids are derivatives of cholesterol. / रासायनिक रूप से, स्टेरॉयड कोलेस्ट्रॉल के व्युत्पन्न होते हैं।",
+    "cat": "gs",
+    "sub": "bio"
+  },
+  {
+    "q": "Which part of the brain is the 'Relay Center' for spinal nerve impulses?\nरीढ़ की तंत्रिका आवेगों के लिए मस्तिष्क का 'रिले केंद्र' कौन सा भाग है?",
+    "o": ["Cerebrum", "Thalamus", "Spinal Cord | स्पाइनल कॉर्ड", "Medulla"],
+    "a": 2,
+    "e": "The spinal cord transmits signals from the body to the brain and manages reflexes. / स्पाइनल कॉर्ड शरीर के संकेतों को मस्तिष्क तक भेजती है और रिफ्लेक्स को नियंत्रित करती है।",
+    "cat": "gs",
+    "sub": "nervous"
+  },
+  {
     "q": "Which of the following carbohydrates is most easily digested by the human body?\nनिम्नलिखित में से कौन सा कार्बोहाइड्रेट मानव शरीर द्वारा सबसे आसानी से पचाया जाता है?",
     "o": ["Polysaccharide", "Monosaccharide (Glucose) | मोनोसैकराइड", "Disaccharide", "Cellulose"],
     "a": 1,
