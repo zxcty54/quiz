@@ -24,6 +24,567 @@
     "cat": "ca",
     "sub": "sports"
   },
+
+  {
+    "q": "India's 'National Vaccination Day' is celebrated on which date?",
+    "o": ["1 February", "16 March | 16 मार्च", "23 March", "1 April"],
+    "a": 1,
+    "e": "National Vaccination Day was celebrated on 16 March 2026 in India[cite: 375].",
+    "cat": "ca",
+    "sub": "health"
+  },
+  {
+    "q": "The government launched an HPV vaccination campaign targeting how many adolescent girls?",
+    "o": ["10 Lakh", "50 Lakh", "1.15 Crore | 1.15 करोड़ लड़कियां", "2 Crore"],
+    "a": 2,
+    "e": "The HPV campaign targets 1.15 crore girls aged 14 years to prevent cervical cancer[cite: 376, 485].",
+    "cat": "ca",
+    "sub": "health"
+  },
+  {
+    "q": "Which digital platform is used for tracking life-cycle routine immunization in India?",
+    "o": ["CoWIN", "U-WIN | यू-विन", "eVIN", "Aarogya Setu"],
+    "a": 1,
+    "e": "U-WIN is used for tracking routine immunization, while CoWIN was for COVID-19[cite: 443, 477, 574].",
+    "cat": "ca",
+    "sub": "tech"
+  },
+  {
+    "q": "India accounts for approximately what percentage of global cervical cancer deaths?",
+    "o": ["10%", "25% | 25 प्रतिशत", "50%", "75%"],
+    "a": 1,
+    "e": "India contributes approximately 25% of global cervical cancer deaths (nearly 80,000 annually)[cite: 493, 501].",
+    "cat": "ca",
+    "sub": "health"
+  },
+  {
+    "q": "Which virus is the primary cause of cervical cancer?",
+    "o": ["H5N1", "Human Papillomavirus (HPV) | ह्यूमन पैपिलोमावायरस", "HIV", "Zika Virus"],
+    "a": 1,
+    "e": "Cervical cancer is primarily caused by persistent infection with high-risk strains of HPV[cite: 504, 523].",
+    "cat": "gs",
+    "sub": "bio"
+  },
+  {
+    "q": "Which vaccine is India currently administering for its free HPV vaccination campaign?",
+    "o": ["Cervavac", "Gardasil-4 | गार्डासिल-4", "BCG", "Covaxin"],
+    "a": 1,
+    "e": "India is introducing single-dose HPV vaccination using Gardasil-4[cite: 486, 525, 571].",
+    "cat": "ca",
+    "sub": "health"
+  },
+  {
+    "q": "Which digital system manages the 'Cold-Chain' and stock visibility of vaccines in India?",
+    "o": ["U-WIN", "eVIN | ई-विन", "NCRP", "Samanvaya"],
+    "a": 1,
+    "e": "eVIN (Electronic Vaccine Intelligence Network) ensures cold-chain integrity and stock visibility[cite: 443, 487, 541, 573].",
+    "cat": "ca",
+    "sub": "tech"
+  },
+  {
+    "q": "The Universal Immunization Programme (UIP) in India was launched in which year?",
+    "o": ["1947", "1975", "1985 | वर्ष 1985", "2014"],
+    "a": 2,
+    "e": "The UIP was launched in 1985 to provide free vaccination against preventable diseases[cite: 447, 475].",
+    "cat": "gs",
+    "sub": "health"
+  },
+  {
+    "q": "What is India's 'Net-Zero' emissions target year announced at COP26?",
+    "o": ["2030", "2047", "2050", "2070 | वर्ष 2070"],
+    "a": 3,
+    "e": "India has committed to achieving net-zero emissions by the year 2070[cite: 234, 608, 668].",
+    "cat": "gs",
+    "sub": "environment"
+  },
+  {
+    "q": "What is the enhanced target for 'Emissions Intensity Reduction' of GDP by 2035 in India's new NDC?",
+    "o": ["33%", "45%", "47% | 47 प्रतिशत", "60%"],
+    "a": 2,
+    "e": "India's updated NDC (2031-2035) enhances the target to 47% emissions intensity reduction[cite: 593, 607].",
+    "cat": "ca",
+    "sub": "environment"
+  },
+  {
+    "q": "Which Indian state has witnessed the highest adoption of Electric Vehicles (EVs) between 2019 and 2025?",
+    "o": ["Gujarat", "Maharashtra", "Tamil Nadu", "Data not specific | डेटा विशिष्ट नहीं"],
+    "a": 3,
+    "e": "While the text highlights year-on-year growth (1.74 Lakh to 19.68 Lakh), it does not rank states specifically for adoption but mentions 19 states participating in e-bus schemes[cite: 997, 1069].",
+    "cat": "ca",
+    "sub": "economy"
+  },
+  {
+    "q": "The 'PM E-DRIVE Scheme' launched in September 2024 incentivizes which category?",
+    "o": ["Rural farmers", "Electric vehicles (2W, 3W, trucks, buses) | इलेक्ट्रिक वाहन", "Nuclear power plants", "River cleaning"],
+    "a": 1,
+    "e": "PM E-DRIVE incentivizes adoption of electric two-wheelers, three-wheelers, trucks, and buses[cite: 1043, 1044].",
+    "cat": "ca",
+    "sub": "governance"
+  },
+  {
+    "q": "Which mineral is critical for 'Electric Motors' and 'EV Drivetrains'?",
+    "o": ["Lithium", "Cobalt", "Rare Earth Magnets | दुर्लभ पृथ्वी चुंबक", "Silicon"],
+    "a": 2,
+    "e": "Rare earth magnets are critical components for EV motors and drivetrains[cite: 1055].",
+    "cat": "gs",
+    "sub": "tech"
+  },
+  {
+    "q": "How many 'Polluted River Stretches' (PRSs) were identified by CPCB in its 2025 report?",
+    "o": ["351", "296 | 296 प्रदूषित नदी खंड", "149", "54"],
+    "a": 1,
+    "e": "The CPCB 2025 report identified 296 Polluted River Stretches on 271 rivers[cite: 1115, 1168].",
+    "cat": "ca",
+    "sub": "environment"
+  },
+  {
+    "q": "Which Indian state has the 'highest' number of Polluted River Stretches (54) as of 2025?",
+    "o": ["Uttar Pradesh", "Bihar", "Maharashtra | महाराष्ट्र", "Kerala"],
+    "a": 2,
+    "e": "Maharashtra has the highest number of PRSs (54), followed by Kerala (32)[cite: 1156, 1171].",
+    "cat": "ca",
+    "sub": "environment"
+  },
+  {
+    "q": "The publication 'Energy Statistics India 2026' was released by which office?",
+    "o": ["Ministry of Power", "NITI Aayog", "National Statistics Office (NSO) | राष्ट्रीय सांख्यिकी कार्यालय", "CEA"],
+    "a": 2,
+    "e": "The 33rd edition of Energy Statistics India was released by the National Statistics Office under MoSPI[cite: 1195, 1214, 1349].",
+    "cat": "ca",
+    "sub": "economy"
+  },
+  {
+    "q": "What is the standardized unit used in the Energy Statistics report?",
+    "o": ["MegaWatt", "KTOE (Kilo Tonnes of Oil Equivalent) | केटीओई", "GigaJoules", "Billion Units"],
+    "a": 1,
+    "e": "KTOE is the standardized unit used to measure primary energy supply and consumption[cite: 1221, 1350].",
+    "cat": "gs",
+    "sub": "economy"
+  },
+  {
+    "q": "Which fuel remains the 'backbone' of India's energy mix, supplying the largest portion of energy?",
+    "o": ["Natural Gas", "Solar Energy", "Coal | कोयला", "Petroleum"],
+    "a": 2,
+    "e": "Coal remains the backbone of India's energy mix and the largest source of supply[cite: 1257, 1352].",
+    "cat": "gs",
+    "sub": "economy"
+  },
+  {
+    "q": "Which Indian state has the highest Renewable Energy (RE) potential (23.7%)?",
+    "o": ["Gujarat", "Rajasthan | राजस्थान", "Maharashtra", "Karnataka"],
+    "a": 1,
+    "e": "Rajasthan has the highest renewable energy potential in India at 23.7%[cite: 1282].",
+    "cat": "ca",
+    "sub": "geography"
+  },
+  {
+    "q": "How many Aadhaar holders are there in India as per the March 2026 update?",
+    "o": ["100 Crore", "121 Crore", "134 Crore | 134 करोड़", "150 Crore"],
+    "a": 2,
+    "e": "India has approximately 134 crore Aadhaar holders, ensuring near-universal coverage[cite: 1362, 1379, 1411].",
+    "cat": "ca",
+    "sub": "society"
+  },
+  {
+    "q": "The 'Puttaswamy Judgment' (2018) by the Supreme Court primarily linked Aadhaar to which right?",
+    "o": ["Right to Equality", "Right to Privacy (Article 21) | निजता का अधिकार", "Right to Information", "Right against Exploitation"],
+    "a": 1,
+    "e": "The judgment upheld Aadhaar but linked it to the Right to Privacy under Article 21[cite: 1377, 1395].",
+    "cat": "gs",
+    "sub": "polity"
+  },
+  {
+    "q": "Which organization is the statutory authority regulating the Aadhaar ecosystem?",
+    "o": ["MeitY", "UIDAI | यूआईडीएआई", "NITI Aayog", "Home Ministry"],
+    "a": 1,
+    "e": "UIDAI is the statutory authority under MeitY that regulates Aadhaar enrolment and security[cite: 1382, 1440].",
+    "cat": "gs",
+    "sub": "governance"
+  },
+  {
+    "q": "What does the 'Orange Economy' refer to in the National AI Skilling Initiative context?",
+    "o": ["Agriculture sector", "Creative economy (Culture & Media) | रचनात्मक अर्थव्यवस्था", "Space exploration", "Marine economy"],
+    "a": 1,
+    "e": "Orange Economy refers to economic activities linked to creativity, culture, and digital content[cite: 1452, 1468, 1525].",
+    "cat": "ca",
+    "sub": "economy"
+  },
+  {
+    "q": "Which organization operates 'DD Free Dish', India's only free DTH service?",
+    "o": ["Doordarshan", "Prasar Bharati | प्रसार भारती", "Ministry of IT", "ISRO"],
+    "a": 1,
+    "e": "DD Free Dish is operated by Prasar Bharati, reaching about 4 crore households[cite: 1462, 1498, 1521].",
+    "cat": "gs",
+    "sub": "governance"
+  },
+  {
+    "q": "The 'National AI Skilling Initiative' aims to train how many creators in partnership with Google and YouTube?",
+    "o": ["5,000", "10,000", "15,000 | 15,000 रचनाकार", "50,000"],
+    "a": 2,
+    "e": "The initiative targets 15,000 creators, students, and professionals for AI training[cite: 1479, 1523].",
+    "cat": "ca",
+    "sub": "tech"
+  },
+  {
+    "q": "What is 'Agray', recently inducted into the Indian Navy?",
+    "o": ["Aircraft Carrier", "Nuclear Submarine", "ASW Shallow Water Craft | एएसडब्ल्यू शैलो वाटर क्राफ्ट", "Missile Destroyer"],
+    "a": 2,
+    "e": "'Agray' is the fourth Anti-Submarine Warfare Shallow Water Craft built by GRSE[cite: 1542, 1543, 1601].",
+    "cat": "ca",
+    "sub": "defense"
+  },
+  {
+    "q": "Where was the 'IMEX TTX 2026' maritime exercise hosted by the Indian Navy?",
+    "o": ["Visakhapatnam", "Mumbai", "Kochi | कोच्चि", "Port Blair"],
+    "a": 2,
+    "e": "The Indian Navy hosted the IONS Maritime Table-top Exercise (IMEX TTX) 2026 at Kochi[cite: 1603, 1605].",
+    "cat": "ca",
+    "sub": "defense"
+  },
+  {
+    "q": "Which organization acts as the 'National Nodal Agency' for responding to cyber security incidents?",
+    "o": ["I4C", "NCRB", "CERT-In | सर्ट-इन (CERT-In)", "CBI"],
+    "a": 2,
+    "e": "CERT-In is the nodal agency for incident response under Section 70B of the IT Act, 2000[cite: 1668, 1682, 1778].",
+    "cat": "gs",
+    "sub": "tech"
+  },
+  {
+    "q": "What is the dedicated helpline number for reporting 'Financial Cyber Frauds' in India?",
+    "o": ["100", "101", "1930 | 1930", "1098"],
+    "a": 2,
+    "e": "Helpline 1930 is dedicated to the immediate reporting of financial cyber frauds[cite: 1719, 1783].",
+    "cat": "gs",
+    "sub": "governance"
+  },
+  {
+    "q": "The 'I4C' (Indian Cyber Crime Coordination Centre) is an initiative of which ministry?",
+    "o": ["MeitY", "Ministry of Home Affairs (MHA) | गृह मंत्रालय", "Ministry of Defence", "Ministry of Law"],
+    "a": 1,
+    "e": "I4C is an initiative of the Ministry of Home Affairs (MHA) for integrated cybercrime response[cite: 1690, 1717, 1782].",
+    "cat": "gs",
+    "sub": "governance"
+  },
+  {
+    "q": "Which joint military exercise was conducted between India and 'Egypt' (Misr)?",
+    "o": ["Hand-in-Hand", "Cyclone | साइक्लोन (Cyclone)", "Nomadic Elephant", "Surya Kiran"],
+    "a": 1,
+    "e": "The 4th joint special exercise 'Cyclone' was held between Indian and Egyptian armies[cite: 1413].",
+    "cat": "ca",
+    "sub": "defense"
+  },
+  {
+    "q": "The 'Vedic Clock' (Vikramaditya) based on the Panchang is established in which city?",
+    "o": ["Ujjain", "Varanasi | वाराणसी", "Haridwar", "Nashik"],
+    "a": 1,
+    "e": "According to the transcript, the Vedic clock is established in Varanasi[cite: 1413].",
+    "cat": "ca",
+    "sub": "culture"
+  },
+  {
+    "q": "Which state has recently declared 'Cancer' as a notified disease?",
+    "o": ["Kerala", "Tamil Nadu", "Telangana | तेलंगाना", "Karnataka"],
+    "a": 2,
+    "e": "Telangana has declared cancer as a notified/reportable disease[cite: 1413].",
+    "cat": "ca",
+    "sub": "health"
+  },
+  {
+    "q": "The 'Kigali Protocol' deals with the phasing out of which substances?",
+    "o": ["Plastic waste", "Hydrofluorocarbons (HFCs) | हाइड्रोफ्लोरोकार्बन", "Carbon dioxide", "Mercury"],
+    "a": 1,
+    "e": "Under the Kigali Protocol, India has committed to phasing out HFCs after 2027[cite: 1413].",
+    "cat": "gs",
+    "sub": "environment"
+  },
+  {
+    "q": "Which FMCG company in India first achieved a 1 trillion rupee turnover in FY26?",
+    "o": ["Hindustan Unilever", "ITC", "Amul | अमूल", "Nestle India"],
+    "a": 2,
+    "e": "Amul became the first Indian FMCG company to cross the 1 trillion rupee turnover milestone[cite: 1413].",
+    "cat": "ca",
+    "sub": "economy"
+  },
+  {
+    "q": "The 'Jan Vishwas (Amendment of Provisions) Bill, 2026' primarily focuses on which of the following?",
+    "o": ["Criminalization of tax evasion", "Decriminalization of minor offences | लघु अपराधों को गैर-आपराधिक बनाना", "Expanding judicial powers", "Increasing imprisonment terms"],
+    "a": 1,
+    "e": "The bill proposes large-scale decriminalization of minor offences to improve Ease of Doing Business and governance efficiency[cite: 89, 90].",
+    "cat": "ca",
+    "sub": "polity"
+  },
+  {
+    "q": "Under the Jan Vishwas Bill 2026, how many provisions across how many Central Acts are proposed to be amended?",
+    "o": ["183 provisions across 42 Acts", "784 provisions across 79 Acts | 79 कानूनों में 784 प्रावधान", "500 provisions across 50 Acts", "100 provisions across 10 Acts"],
+    "a": 1,
+    "e": "The Bill proposes the amendment of 784 provisions across 79 Central Acts under 23 Ministries[cite: 108, 157].",
+    "cat": "ca",
+    "sub": "polity"
+  },
+  {
+    "q": "Which constitutional article is aligned with the Jan Vishwas Bill by avoiding excessive criminalization?",
+    "o": ["Article 14", "Article 19", "Article 21 | अनुच्छेद 21", "Article 32"],
+    "a": 2,
+    "e": "The bill aligns with Article 21 (due process, proportionality) by avoiding excessive criminalization for minor offences[cite: 129].",
+    "cat": "ca",
+    "sub": "polity"
+  },
+  {
+    "q": "The Subhash Chandra Bose Aapda Prabandhan Puraskar was instituted in which year?",
+    "o": ["2014", "2019 | वर्ष 2019", "2021", "2026"],
+    "a": 1,
+    "e": "The award was instituted in 2019 by the Ministry of Home Affairs to recognize excellence in disaster management[cite: 174, 203].",
+    "cat": "ca",
+    "sub": "governance"
+  },
+  {
+    "q": "On which date is the Subhash Chandra Bose Aapda Prabandhan Puraskar announced annually?",
+    "o": ["15 August", "26 January", "23 January | 23 जनवरी", "2 October"],
+    "a": 2,
+    "e": "The award is announced every year on 23rd January, which is observed as Parakram Diwas[cite: 175, 204].",
+    "cat": "ca",
+    "sub": "governance"
+  },
+  {
+    "q": "What is the cash prize awarded to an 'Institution' under the SCB Aapda Prabandhan Puraskar?",
+    "o": ["Rs. 5 Lakh", "Rs. 10 Lakh", "Rs. 51 Lakh | 51 लाख रुपये", "Rs. 1 Crore"],
+    "a": 2,
+    "e": "The cash award is Rs. 51 lakh for an institution and Rs. 5 lakh for an individual[cite: 182, 205].",
+    "cat": "ca",
+    "sub": "governance"
+  },
+  {
+    "q": "According to the PIB summary, what is India's current economic growth rate mentioned in the budget?",
+    "o": ["6.5%", "7% | 7 प्रतिशत", "7.5%", "8%"],
+    "a": 1,
+    "e": "The budget summary states that India is growing at a 7% growth rate[cite: 21].",
+    "cat": "ca",
+    "sub": "economy"
+  },
+  {
+    "q": "The 'Bharat Electricity Summit 2026' was inaugurated at which venue?",
+    "o": ["Bharat Mandapam", "Yashobhoomi, New Delhi | यशोभूमि, नई दिल्ली", "GIFT City", "Kochi"],
+    "a": 1,
+    "e": "The summit was inaugurated on 19 March 2026 at Yashobhoomi, New Delhi[cite: 215].",
+    "cat": "ca",
+    "sub": "infrastructure"
+  },
+  {
+    "q": "What is India's target for non-fossil fuel capacity by the year 2035-36?",
+    "o": ["500 GW", "750 GW", "900 GW | 900 गीगावाट", "1000 GW"],
+    "a": 2,
+    "e": "The National Resource Adequacy Plan targets 900 GW non-fossil capacity by 2035-36[cite: 216, 266].",
+    "cat": "ca",
+    "sub": "environment"
+  },
+  {
+    "q": "India operates the world's largest synchronized electricity grid known as ____.",
+    "o": ["Mega Grid India", "One Nation One Grid | वन नेशन वन ग्रिड", "Solar Grid India", "Unified Energy Network"],
+    "a": 1,
+    "e": "India operates the world's largest synchronized grid (One Nation One Grid), completed in December 2013[cite: 241].",
+    "cat": "ca",
+    "sub": "infrastructure"
+  },
+  {
+    "q": "Which scheme aims to promote 'Rooftop Solar' adoption in Indian households?",
+    "o": ["PM-Kisan", "PM Surya Ghar Muft Bijli Yojana | पीएम सूर्य घर मुफ्त बिजली योजना", "Ujjwala Yojana", "PM-Awas"],
+    "a": 1,
+    "e": "PM Surya Ghar Muft Bijli Yojana, launched in February 2024, promotes rooftop solar adoption[cite: 257, 290].",
+    "cat": "ca",
+    "sub": "economy"
+  },
+  {
+    "q": "The '24 Speed Post' initiative launched on 17 March 2026 guarantees delivery within ____.",
+    "o": ["Same day", "D+1 (Next day) | अगले दिन", "48 hours", "7 days"],
+    "a": 1,
+    "e": "'24 Speed Post' provides D+1 (next-day) guaranteed delivery[cite: 297, 346].",
+    "cat": "ca",
+    "sub": "governance"
+  },
+  {
+    "q": "Which of the following cities is NOT part of the initial phase of '24 Speed Post' service?",
+    "o": ["Mumbai", "Chennai", "Pune | पुणे", "Kolkata"],
+    "a": 2,
+    "e": "The first phase covers six metros: Delhi, Mumbai, Chennai, Kolkata, Bengaluru, and Hyderabad[cite: 298, 344].",
+    "cat": "ca",
+    "sub": "governance"
+  },
+  {
+    "q": "Under which schedule and list of the Constitution do 'Postal Services' fall?",
+    "o": ["State List", "Concurrent List", "Union List (Entry 31) | संघ सूची (प्रविष्टि 31)", "Panchayat List"],
+    "a": 2,
+    "e": "Postal services fall under the Union List (Entry 31, Seventh Schedule)[cite: 307, 370].",
+    "cat": "ca",
+    "sub": "polity"
+  },
+  {
+    "q": "What is the primary goal of the 'National Logistics Policy' regarding logistics costs in India?",
+    "o": ["Increase to 20% of GDP", "Maintain at 15% of GDP", "Reduce to ~8-10% of GDP", "Reduction of logistics cost (~13-14% of GDP) | लॉजिस्टिक्स लागत को कम करना"],
+    "a": 3,
+    "e": "The '24 Speed Post' contributes to the National Logistics Policy goal of reducing logistics costs, which are currently around 13-14% of GDP[cite: 318].",
+    "cat": "ca",
+    "sub": "economy"
+  },
+  {
+    "q": "In Indian Agriculture, which commodity does India rank Rank #1 globally in production (2024-25)?",
+    "o": ["Rice", "Wheat", "Millets | बाजरा/मोटा अनाज", "Sugarcane"],
+    "a": 2,
+    "e": "India ranks 1st in the production of Millets (18.59 MT), Pulses, and Spices[cite: 690, 698, 795, 815].",
+    "cat": "ca",
+    "sub": "agriculture"
+  },
+  {
+    "q": "What was India's record foodgrain production in the year 2024-25?",
+    "o": ["250.5 MMT", "357.73 MMT | 357.73 मिलियन मीट्रिक टन", "400 MMT", "362 MMT"],
+    "a": 1,
+    "e": "India recorded a record production of 357.73 MMT foodgrains in 2024-25[cite: 677, 811].",
+    "cat": "ca",
+    "sub": "agriculture"
+  },
+  {
+    "q": "Which sector's output in India has recently 'surpassed' foodgrain production?",
+    "o": ["Fisheries", "Horticulture | बागवानी", "Dairy", "Poultry"],
+    "a": 1,
+    "e": "Horticulture output (362 MT) has risen to surpass foodgrain production[cite: 767, 811].",
+    "cat": "ca",
+    "sub": "agriculture"
+  },
+  {
+    "q": "How much income support is provided annually to farmers under the 'PM-KISAN' scheme?",
+    "o": ["Rs. 2,000", "Rs. 4,000", "Rs. 6,000 | 6,000 रुपये", "Rs. 10,000"],
+    "a": 2,
+    "e": "PM-KISAN provides Rs. 6,000 annual income support to farmers[cite: 772].",
+    "cat": "ca",
+    "sub": "social_justice"
+  },
+  {
+    "q": "The 'e-NAM' platform serves as a digital ecosystem for which purpose?",
+    "o": ["Farmer insurance", "Transparent price discovery and trade | पारदर्शी मूल्य खोज और व्यापार", "Fertilizer distribution", "Seed certification"],
+    "a": 1,
+    "e": "e-NAM platform integrates farmers and mandis for transparent price discovery and inter-state trade[cite: 780, 814].",
+    "cat": "ca",
+    "sub": "agriculture"
+  },
+  {
+    "q": "As per PLFS 2025, what is the Labour Force Participation Rate (LFPR) in India?",
+    "o": ["50.5%", "59.3% | 59.3 प्रतिशत", "79.1%", "40.0%"],
+    "a": 1,
+    "e": "LFPR is at 59.3%, with 79.1% for males and 40.0% for females[cite: 846].",
+    "cat": "ca",
+    "sub": "economy"
+  },
+  {
+    "q": "What is the 'Unemployment Rate' (UR) in India according to the PLFS 2025 report?",
+    "o": ["5.1%", "4.2%", "3.1% | 3.1 प्रतिशत", "9.9%"],
+    "a": 2,
+    "e": "The Unemployment Rate (UR) stands at 3.1% as per the PLFS 2025 report[cite: 848].",
+    "cat": "ca",
+    "sub": "economy"
+  },
+  {
+    "q": "What does 'NEET' stand for in the context of youth workforce underutilization?",
+    "o": ["New Energy and Environment Taskforce", "Not in Education, Employment, or Training | शिक्षा, रोजगार या प्रशिक्षण में नहीं", "National Economic Employment Test", "None of the above"],
+    "a": 1,
+    "e": "NEET (15-29 years) at ~25% signals underutilization of the youth workforce[cite: 945, 955].",
+    "cat": "ca",
+    "sub": "economy"
+  },
+  {
+    "q": "According to PLFS 2025, which approach provides employment data for the last 365 days?",
+    "o": ["Current Weekly Status", "Usual Status | सामान्य स्थिति", "Daily Status", "Monthly Status"],
+    "a": 1,
+    "e": "Usual Status (365 days) and Current Weekly Status (7 days) are the two approaches used by PLFS[cite: 838].",
+    "cat": "ca",
+    "sub": "economy"
+  },
+  {
+    "q": "The 'Periodic Labour Force Survey' (PLFS) is conducted by which organization?",
+    "o": ["NITI Aayog", "RBI", "NSO under MoSPI | सांख्यिकी और कार्यक्रम कार्यान्वयन मंत्रालय के तहत एनएसओ", "Labour Bureau"],
+    "a": 2,
+    "e": "PLFS is conducted by the National Statistical Office (NSO) under MoSPI[cite: 838, 980].",
+    "cat": "ca",
+    "sub": "governance"
+  },
+  {
+    "q": "In the Union Budget 2026-27, from which source does the government receive the highest 'Rupee Comes From' (24 paise)?",
+    "o": ["Income Tax", "GST", "Borrowings and Other Liabilities | उधार और अन्य देयताएं", "Corporation Tax"],
+    "a": 2,
+    "e": "The highest source of income is Borrowings (24 paise), followed by Income Tax (21 paise)[cite: 1413].",
+    "cat": "ca",
+    "sub": "economy"
+  },
+  {
+    "q": "Where is the 'Rupee Goes To' the highest (22 paise) according to the 2026-27 budget?",
+    "o": ["Interest Payments", "Defense", "States' share of Taxes & Duties | करों और शुल्कों में राज्यों का हिस्सा", "Central Sector Schemes"],
+    "a": 2,
+    "e": "The largest expenditure is the States' share of taxes and duties (22%), followed by interest payments (20%)[cite: 1413].",
+    "cat": "ca",
+    "sub": "economy"
+  },
+  {
+    "q": "Which ministry receives the highest budget allocation in 2026-27?",
+    "o": ["Ministry of Railways", "Ministry of Agriculture", "Ministry of Defence | रक्षा मंत्रालय", "Ministry of Education"],
+    "a": 2,
+    "e": "The Ministry of Defence receives the highest allocation among ministries[cite: 1413].",
+    "cat": "ca",
+    "sub": "economy"
+  },
+  {
+    "q": "The new 'Income Tax Act' is proposed to be effective from which date?",
+    "o": ["1 January 2026", "1 April 2026 | 1 अप्रैल 2026", "1 July 2026", "31 March 2027"],
+    "a": 1,
+    "e": "A new Income Tax Act will come into effect from 1 April 2026, replacing the 1961 Act[cite: 1413].",
+    "cat": "ca",
+    "sub": "economy"
+  },
+  {
+    "q": "In the budget, how many archaeological sites are planned to be developed as vibrant cultural destinations?",
+    "o": ["5", "10", "15 | 15 पुरातात्विक स्थल", "20"],
+    "a": 2,
+    "e": "15 archaeological sites, including Lothal and Sarnath, will be developed[cite: 1413].",
+    "cat": "ca",
+    "sub": "culture"
+  },
+  {
+    "q": "Which state has been allocated the highest budget under the 'Pahado ka Gaurav' (Pride of Mountains) scheme?",
+    "o": ["Uttarakhand", "Himachal Pradesh", "Arunachal Pradesh | अरुणाचल प्रदेश", "Sikkim"],
+    "a": 2,
+    "e": "Arunachal Pradesh received the highest budget allocation under this scheme[cite: 1413].",
+    "cat": "ca",
+    "sub": "governance"
+  },
+  {
+    "q": "Which commission recommended the formation of the Reserve Bank of India (RBI)?",
+    "o": ["Simon Commission", "Hilton Young Commission | हिल्टन यंग कमीशन", "Kothari Commission", "Shah Commission"],
+    "a": 1,
+    "e": "The Young Hilton Commission recommended the formation of the RBI[cite: 1413].",
+    "cat": "ca",
+    "sub": "economy"
+  },
+  {
+    "q": "What is the revised 'Fiscal Deficit' target for India in the year 2026-27?",
+    "o": ["4.5%", "4.4%", "4.3% | 4.3 प्रतिशत", "4.0%"],
+    "a": 2,
+    "e": "The estimated Fiscal Deficit for 2026-27 is 4.3%[cite: 1413].",
+    "cat": "ca",
+    "sub": "economy"
+  },
+  {
+    "q": "The 'Jan Vishwas Act 2023' decriminalized how many provisions before the 2026 amendment?",
+    "o": ["784", "183 | 183 प्रावधान", "717", "62"],
+    "a": 1,
+    "e": "The original Jan Vishwas Act, 2023, decriminalized 183 provisions across 42 Acts[cite: 105, 159].",
+    "cat": "ca",
+    "sub": "polity"
+  },
+  {
+    "q": "Which state has the highest 'Land Inequality' according to the World Inequality Lab report mentioned in the PIB?",
+    "o": ["Uttar Pradesh", "Maharashtra", "Bihar | बिहार", "Kerala"],
+    "a": 2,
+    "e": "According to the report, Bihar has the highest land inequality in India[cite: 1413].",
+    "cat": "ca",
+    "sub": "social_justice"
+  },
   {
     "q": "Which country recently became the newest member of the BRICS alliance in 2025-26?",
     "o": ["Argentina", "Saudi Arabia", "Thailand", "Indonesia"],
