@@ -121,6 +121,23 @@
     "cat": "ca",
     "sub": "governance"
   },
+  
+  {
+    "q": "In which cities will ship repair facilities be established?\nकिन शहरों में जहाज मरम्मत सुविधाएं स्थापित की जाएंगी?",
+    "o": ["Mumbai & Chennai", "Varanasi and Patna | वाराणसी और पटना", "Kolkata & Kochi", "Surat"],
+    "a": 1,
+    "e": "Ship repair facilities will be established in Varanasi and Patna. / जहाज मरम्मत सुविधाएं वाराणसी और पटना में स्थापित की जाएंगी।",
+    "cat": "ca",
+    "sub": "infrastructure"
+  },
+  {
+    "q": "Where will the 'Rare Earth Permanent Magnet' corridor be established?\n'दुर्लभ पृथ्वी स्थायी चुंबक' कॉरिडोर कहाँ स्थापित किया जाएगा?",
+    "o": ["Gujarat & Rajasthan", "Odisha, Kerala, Andhra, Tamil Nadu | ओडिशा, केरल, आंध्र, तमिलनाडु", "UP & Bihar", "Punjab"],
+    "a": 1,
+    "e": "The corridor for rare minerals will span Odisha, Kerala, Andhra Pradesh, and Tamil Nadu. / यह कॉरिडोर ओडिशा, केरल, आंध्र और तमिलनाडु में बनेगा।",
+    "cat": "ca",
+    "sub": "infrastructure"
+  },
   {
     "q": "Which mineral is critical for 'Electric Motors' and 'EV Drivetrains'?",
     "o": ["Lithium", "Cobalt", "Rare Earth Magnets | दुर्लभ पृथ्वी चुंबक", "Silicon"],
@@ -274,12 +291,28 @@
     "sub": "defense"
   },
   {
+    "q": "Where is the indigenous 'Fast Breeder Reactor' located?\nस्वदेशी 'फास्ट ब्रीडर रिएक्टर' कहाँ स्थित है?",
+    "o": ["Tarapur", "Kalpakkam | कलपक्कम", "Narora", "Rawatbhata"],
+    "a": 1,
+    "e": "The prototype FBR is established in Kalpakkam, Tamil Nadu. / यह तमिलनाडु के कलपक्कम में स्थित है।",
+    "cat": "ca",
+    "sub": "science"
+  },
+  {
     "q": "The 'Vedic Clock' (Vikramaditya) based on the Panchang is established in which city?",
     "o": ["Ujjain", "Varanasi | वाराणसी", "Haridwar", "Nashik"],
     "a": 1,
     "e": "According to the transcript, the Vedic clock is established in Varanasi.",
     "cat": "ca",
     "sub": "culture"
+  },
+  {
+    "q": "Which country introduced the first 10G internet?\nकिस देश ने पहला 10G इंटरनेट पेश किया?",
+    "o": ["India", "China", "UAE | यूएई", "Singapore"],
+    "a": 2,
+    "e": "UAE presented the world's first 10G network. / यूएई ने दुनिया का पहला 10G नेटवर्क पेश किया।",
+    "cat": "ca",
+    "sub": "tech"
   },
   {
     "q": "Which state has recently declared 'Cancer' as a notified disease?",
@@ -304,6 +337,14 @@
     "e": "Amul became the first Indian FMCG company to cross the 1 trillion rupee turnover milestone.",
     "cat": "ca",
     "sub": "economy"
+  },
+  {
+    "q": "Where was India's first quantum computer launched?\nभारत का पहला क्वांटम कंप्यूटर कहाँ लॉन्च किया गया?",
+    "o": ["Bengaluru", "Hyderabad", "Amravati | अमरावती", "Delhi"],
+    "a": 2,
+    "e": "India's first quantum computer was launched in Amravati. / भारत का पहला क्वांटम कंप्यूटर अमरावती में लॉन्च हुआ।",
+    "cat": "ca",
+    "sub": "tech"
   },
   {
     "q": "The 'Jan Vishwas (Amendment of Provisions) Bill, 2026' primarily focuses on which of the following?",
@@ -392,6 +433,14 @@
     "e": "PM Surya Ghar Muft Bijli Yojana, launched in February 2024, promotes rooftop solar adoption.",
     "cat": "ca",
     "sub": "economy"
+  },
+  {
+    "q": "Which state's police received the 'President's Color' award?\nकिस राज्य की पुलिस को 'प्रेसिडेंट कलर' पुरस्कार मिला?",
+    "o": ["Bihar", "Odisha | ओडिशा", "Gujarat", "Kerala"],
+    "a": 1,
+    "e": "Odisha Police has been honored with the President's Color. / ओडिशा पुलिस को प्रेसिडेंट कलर से सम्मानित किया गया।",
+    "cat": "ca",
+    "sub": "awards"
   },
   {
     "q": "The '24 Speed Post' initiative launched on 17 March 2026 guarantees delivery within ____.",
@@ -568,6 +617,14 @@
     "e": "The estimated Fiscal Deficit for 2026-27 is 4.3%.",
     "cat": "ca",
     "sub": "economy"
+  },
+  {
+    "q": "What is the cash prize for an 'Institution' under the SCB Aapda Puraskar?\nसंस्थान को आपदा प्रबंधन पुरस्कार के तहत कितनी राशि मिलती है?",
+    "o": ["5 Lakh", "10 Lakh", "51 Lakh | 51 लाख रुपये", "1 Crore"],
+    "a": 2,
+    "e": "The award is 51 lakh for institutions and 5 lakh for individuals. / संस्थानों के लिए 51 लाख और व्यक्तियों के लिए 5 लाख रुपये पुरस्कार है।",
+    "cat": "ca",
+    "sub": "governance"
   },
   {
     "q": "The 'Jan Vishwas Act 2023' decriminalized how many provisions before the 2026 amendment?",
