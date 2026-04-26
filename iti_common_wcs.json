@@ -1,0 +1,32 @@
+[
+  {
+    "q": "Which type of fire extinguisher is used for electrical fires? / बिजली की आग के लिए किस प्रकार के अग्निशामक (fire extinguisher) का उपयोग किया जाता है?",
+    "o": ["Water / पानी", "Foam / फोम", "Halon/CO2 / हेलोन/CO2", "Dry Powder / सूखा पाउडर"],
+    "a": 2,
+    "e": "Halon or CO2 extinguishers do not conduct electricity. / हेलोन या CO2 बुझाने वाले यंत्र बिजली का संचालन नहीं करते हैं।"
+  },
+  {
+    "q": "What is the least count of a standard Vernier Caliper? / एक मानक वर्नियर कैलिपर की अल्पतमांक (Least Count) क्या होती है?",
+    "o": ["0.1 mm", "0.01 mm", "0.02 mm", "0.05 mm"],
+    "a": 2,
+    "e": "Most common workshop Vernier Calipers have a least count of 0.02 mm. / अधिकांश वर्कशॉप वर्नियर कैलिपर की अल्पतमांक 0.02 मिमी होती है।"
+  },
+  {
+    "q": "Which engine component converts reciprocating motion into rotary motion? / इंजन का कौन सा हिस्सा रेसिप्रोकेटिंग मोशन को रोटरी मोशन में बदलता है?",
+    "o": ["Piston / पिस्टन", "Crankshaft / क्रैंकशाफ्ट", "Camshaft / कैमशाफ्ट", "Valves / वाल्व"],
+    "a": 1,
+    "e": "Crankshaft converts the up-down motion of the piston into rotation. / क्रैंकशाफ्ट पिस्टन की ऊपर-नीचे की गति को घूर्णन में बदलता है।"
+  },
+  {
+    "q": "What is the unit of Luminous Intensity? / ज्योति तीव्रता (Luminous Intensity) की इकाई क्या है?",
+    "o": ["Lux / लक्स", "Lumen / लुमेन", "Candela / कैंडेला", "Watt / वाट"],
+    "a": 2,
+    "e": "Candela is the SI unit of luminous intensity. / कैंडेला ज्योति तीव्रता की SI इकाई है।"
+  },
+  {
+    "q": "Which flux is used for soldering galvanized iron? / गैल्वेनाइज्ड आयरन की सोल्डरिंग के लिए किस फ्लक्स का उपयोग किया जाता है?",
+    "o": ["Resin / राल", "Zinc Chloride / जिंक क्लोराइड", "Hydrochloric Acid / हाइड्रोक्लोरिक एसिड", "Ammonium Chloride / अमोनियम क्लोराइड"],
+    "a": 2,
+    "e": "Hydrochloric acid is commonly used for GI sheets. / GI शीट के लिए हाइड्रोक्लोरिक एसिड का उपयोग किया जाता है।"
+  }
+]
