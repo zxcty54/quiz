@@ -1,0 +1,122 @@
+[
+  {
+    "q": "If 'PEACE' is coded as 'RGCEG', how will 'FRIEND' be coded? / यदि 'PEACE' को 'RGCEG' के रूप में कोडित किया जाता है, तो 'FRIEND' को कैसे कोडित किया जाएगा?",
+    "o": ["HTKGPF", "GSHFME", "ITLHQG", "HRKFME"],
+    "a": 0,
+    "e": "Logic: Each letter +2 (P+2=R, E+2=G...). / तर्क: प्रत्येक अक्षर +2 (P+2=R, E+2=G...)।"
+  },
+  {
+    "q": "Find the missing number: 7, 11, 20, 36, 61, ? / लुप्त संख्या ज्ञात कीजिए: 7, 11, 20, 36, 61, ?",
+    "o": ["97", "102", "91", "85"],
+    "a": 0,
+    "e": "Logic: Adding squares of numbers (2², 3², 4², 5², 6²). / तर्क: संख्याओं के वर्ग जोड़ना (2², 3², 4², 5², 6²)।"
+  },
+  {
+    "q": "Statement: All poets are scholars. Some scholars are rich. \nConclusion: (I) Some poets are rich. (II) Some rich are scholars. \n\nकथन: सभी कवि विद्वान हैं। कुछ विद्वान अमीर हैं। \nनिष्कर्ष: (I) कुछ कवि अमीर हैं। (II) कुछ अमीर विद्वान हैं।",
+    "o": ["Only I follows / केवल I सही है", "Only II follows / केवल II सही है", "Both follow / दोनों सही हैं", "Neither follows / दोनों गलत हैं"],
+    "a": 1,
+    "e": "Conclusion II is a direct implication of the statement. / निष्कर्ष II कथन का सीधा निहितार्थ है।"
+  },
+  {
+    "q": "If A+B means 'A is brother of B' and A*B means 'A is mother of B', what is P's relation to R in P+Q*R? / यदि A+B का अर्थ 'A, B का भाई है' और A*B का अर्थ 'A, B की माँ है', तो P+Q*R में P का R से क्या संबंध है?",
+    "o": ["Maternal Uncle / मामा", "Paternal Uncle / चाचा", "Father / पिता", "Brother / भाई"],
+    "a": 0,
+    "e": "P is the brother of R's mother. / P, R की माँ का भाई है।"
+  },
+  {
+    "q": "Select the Odd One Out: / विषम का चयन करें:",
+    "o": ["25 - 625", "15 - 225", "12 - 144", "13 - 171"],
+    "a": 3,
+    "e": "13² is 169, not 171. / 13² 169 होता है, 171 नहीं।"
+  },
+  {
+    "q": "Select the related option: Doctor : Hospital :: Lawyer : ? / संबंधित विकल्प का चयन करें: डॉक्टर : अस्पताल :: वकील : ?",
+    "o": ["Court / न्यायालय", "Office / कार्यालय", "Station / स्टेशन", "School / विद्यालय"],
+    "a": 0,
+    "e": "The second is the workplace of the first. / दूसरा पहले का कार्यस्थल है।"
+  },
+  {
+    "q": "Find the missing number: 3, 10, 31, 94, ? / लुप्त संख्या ज्ञात कीजिए: 3, 10, 31, 94, ?",
+    "o": ["283", "273", "295", "300"],
+    "a": 0,
+    "e": "Logic: (n * 3) + 1. / तर्क: (संख्या * 3) + 1."
+  },
+  {
+    "q": "A man walks 5km North, then turns Left and walks 10km. In which direction is he from the starting point? / एक आदमी 5 किमी उत्तर की ओर चलता है, फिर बाईं ओर मुड़ता है और 10 किमी चलता है। वह शुरुआती बिंदु से किस दिशा में है?",
+    "o": ["North-West / उत्तर-पश्चिम", "South-East / दक्षिण-पूर्व", "North / उत्तर", "West / पश्चिम"],
+    "a": 0,
+    "e": "The final position is between North and West. / अंतिम स्थिति उत्तर और पश्चिम के बीच है।"
+  },
+  {
+    "q": "If '+' means '÷', '-' means '+', '×' means '-' and '÷' means '×', then: 8 + 2 ÷ 3 - 4 = ? / यदि '+' का अर्थ '÷', '-' का अर्थ '+', '×' का अर्थ '-' और '÷' का अर्थ '×' है, तो: 8 + 2 ÷ 3 - 4 = ?",
+    "o": ["16", "10", "12", "14"],
+    "a": 0,
+    "e": "Using BODMAS: (8 ÷ 2) × 3 + 4 = 16."
+  },
+  {
+    "q": "Complete the series: BDF, HJL, NPR, ? / श्रृंखला को पूरा करें: BDF, HJL, NPR, ?",
+    "o": ["TVX", "TUW", "STU", "VXZ"],
+    "a": 0,
+    "e": "Gap of +6 in each corresponding letter. / प्रत्येक संबंधित अक्षर में +6 का अंतर।"
+  },
+  {
+    "q": "Bihar : Patna :: Maharashtra : ? / बिहार : पटना :: महाराष्ट्र : ?",
+    "o": ["Mumbai / मुंबई", "Pune / पुणे", "Nashik / नासिक", "Nagpur / नागपुर"],
+    "a": 0,
+    "e": "Capital of the state. / राज्य की राजधानी।"
+  },
+  {
+    "q": "If 1st January 2026 is Thursday, what will be the day on 31st December 2026? / यदि 1 जनवरी 2026 को गुरुवार है, तो 31 दिसंबर 2026 को कौन सा दिन होगा?",
+    "o": ["Thursday / गुरुवार", "Friday / शुक्रवार", "Wednesday / बुधवार", "Monday / सोमवार"],
+    "a": 0,
+    "e": "In a non-leap year, the first and last day are the same. / एक साधारण वर्ष में, पहला और अंतिम दिन समान होता है।"
+  },
+  {
+    "q": "Find the missing cube: 1, 8, 27, 64, ? / लुप्त घन ज्ञात कीजिए: 1, 8, 27, 64, ?",
+    "o": ["125", "100", "216", "81"],
+    "a": 0,
+    "e": "Logic: 1³, 2³, 3³, 4³, 5³."
+  },
+  {
+    "q": "Statement: Some mobiles are laptops. Some laptops are tablets. \nConclusion: Some mobiles are tablets. \n\nकथन: कुछ मोबाइल लैपटॉप हैं। कुछ लैपटॉप टैबलेट हैं। \nनिष्कर्ष: कुछ मोबाइल टैबलेट हैं।",
+    "o": ["False / गलत", "True / सही", "Maybe / हो सकता है", "Insufficient data / अपर्याप्त डेटा"],
+    "a": 0,
+    "e": "No direct link between mobiles and tablets. / मोबाइल और टैबलेट के बीच कोई सीधा संबंध नहीं है।"
+  },
+  {
+    "q": "Dye : Color :: Word : ? / डाई : रंग :: शब्द : ?",
+    "o": ["Language / भाषा", "Alphabet / वर्णमाला", "Write / लिखना", "Sentence / वाक्य"],
+    "a": 0,
+    "e": "Words form a Language. / शब्दों से भाषा बनती है।"
+  },
+  {
+    "q": "Find the Odd One Out: / विषम का चयन करें:",
+    "o": ["Ear / कान", "Eye / आँख", "Nose / नाक", "Liver / यकृत"],
+    "a": 3,
+    "e": "Liver is an internal organ. / यकृत एक आंतरिक अंग है।"
+  },
+  {
+    "q": "If MAN = 28 and TO = 35, then CAT = ? / यदि MAN = 28 और TO = 35 है, तो CAT = ?",
+    "o": ["24", "42", "20", "30"],
+    "a": 0,
+    "e": "Sum of alphabetical positions. / वर्णमाला के स्थान का योग।"
+  },
+  {
+    "q": "At 3:00 PM, what is the angle between the hour and minute hands? / दोपहर 3:00 बजे, घंटे और मिनट की सुइयों के बीच का कोण क्या होता है?",
+    "o": ["90°", "45°", "180°", "60°"],
+    "a": 0,
+    "e": "Logic: 3 * 30° = 90°."
+  },
+  {
+    "q": "Complete the series: AZ, CX, EV, ? / श्रृंखला को पूरा करें: AZ, CX, EV, ?",
+    "o": ["GT", "GS", "HS", "IR"],
+    "a": 0,
+    "e": "Logic: First letter +2, second is opposite letter. / तर्क: पहला अक्षर +2, दूसरा विपरीत अक्षर है।"
+  },
+  {
+    "q": "Which diagram shows the relation: Birds, Crows, Dogs? / कौन सा आरेख संबंध दर्शाता है: पक्षी, कौवे, कुत्ते?",
+    "o": ["Crows inside Birds, Dogs separate / कौवे पक्षियों के अंदर, कुत्ते अलग", "All separate / सभी अलग", "All interconnected / सभी परस्पर जुड़े हुए", "Dogs inside Birds / कुत्ते पक्षियों के अंदर"],
+    "a": 0,
+    "e": "Crows are birds, but dogs are mammals. / कौवे पक्षी हैं, लेकिन कुत्ते स्तनधारी हैं।"
+  }
+]
