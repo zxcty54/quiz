@@ -1,1 +1,2163 @@
-
+[
+  {
+    "q": "What does LAMA stand for in hospital discharge procedures? / अस्पताल की छुट्टी की प्रक्रिया में LAMA का क्या अर्थ है?",
+    "o": ["Leave Against Medical Advice | सलाह के विरुद्ध छोड़ना", "Leave After Medical Approval", "Long Absence Medical Assistance", "None"],
+    "a": 0,
+    "e": "LAMA refers to a patient choosing to leave the hospital despite the doctor's recommendation to stay for treatment. [cite: 81]",
+    "cat": "technical",
+    "sub": "nursing_foundations"
+  },
+  {
+    "q": "Which site is most commonly used to assess the pulse in an adult during a routine checkup? / नियमित जांच के दौरान वयस्क में पल्स मापने के लिए किस स्थान का सबसे अधिक उपयोग किया जाता है?",
+    "o": ["Carotid artery", "Radial artery | रेडियल आर्टरी", "Brachial artery", "Popliteal artery"],
+    "a": 1,
+    "e": "The radial artery at the wrist is the most common site for assessing pulse rate. [cite: 92]",
+    "cat": "technical",
+    "sub": "nursing_foundations"
+  },
+  {
+    "q": "What is the normal range for adult body temperature measured orally? / मौखिक रूप से मापे गए वयस्क शरीर के तापमान की सामान्य सीमा क्या है?",
+    "o": ["94-96°F", "98.6°F (37°C) | 98.6°F", "100-102°F", "90-92°F"],
+    "a": 1,
+    "e": "98.6°F is considered the standard normal body temperature for a healthy adult. [cite: 90]",
+    "cat": "technical",
+    "sub": "nursing_foundations"
+  },
+  
+  {
+    "q": "What is 'Electroconvulsive Therapy' (ECT)? / 'इलेक्ट्रोकन्वल्सिव थेरेपी' (ECT) क्या है?",
+    "o": ["A type of massage", "Passing small electric currents to induce seizures | बिजली के झटके से उपचार", "Brain surgery", "None"],
+    "a": 1,
+    "e": "ECT is used for severe depression or schizophrenia when medications are not effective.",
+    "cat": "technical",
+    "sub": "mental_health_nursing"
+  },
+  {
+    "q": "What is a mandatory requirement before starting ECT? / ECT शुरू करने से पहले एक अनिवार्य आवश्यकता क्या है?",
+    "o": ["Feeding the patient", "Informed consent | सूचित सहमति", "Exercise", "None"],
+    "a": 1,
+    "e": "The patient or their legal guardian must provide written consent after understanding the risks.",
+    "cat": "technical",
+    "sub": "mental_health_nursing"
+  },
+  {
+    "q": "Which medication class is used to treat Schizophrenia? / सिज़ोफ्रेनिया के इलाज के लिए किस दवा वर्ग का उपयोग किया जाता है?",
+    "o": ["Antidepressants", "Antipsychotics | एंटीसाइकोटिक्स", "Anticonvulsants", "None"],
+    "a": 1,
+    "e": "Antipsychotics help manage symptoms like delusions and hallucinations.",
+    "cat": "technical",
+    "sub": "mental_health_nursing"
+  },
+  {
+    "q": "In 'Cognitive Behavioral Therapy' (CBT), the focus is on: / 'संज्ञानात्मक व्यवहार थेरेपी' (CBT) में ध्यान केंद्रित किया जाता है:",
+    "o": ["Changing negative thought patterns | नकारात्मक विचारों को बदलना", "Dreams", "Past lives", "None"],
+    "a": 0,
+    "e": "CBT helps patients identify and change distorted thinking that leads to emotional distress.",
+    "cat": "technical",
+    "sub": "mental_health_nursing"
+  },
+  {
+    "q": "What is the primary role of a nurse after ECT treatment? / ECT उपचार के बाद नर्स की प्राथमिक भूमिका क्या है?",
+    "o": ["Asking the patient to run", "Monitoring vitals and ensuring a safe airway | वाइटल और वायुमार्ग की निगरानी", "Discharging the patient", "None"],
+    "a": 1,
+    "e": "The patient is often confused and at risk for aspiration immediately after the procedure.",
+    "cat": "technical",
+    "sub": "mental_health_nursing"
+  },
+  {
+    "q": "Which drug is commonly used as a 'Mood Stabilizer' in Bipolar Disorder? / बाइपोलर डिसऑर्डर में 'मूड स्टेबलाइजर' के रूप में आमतौर पर किस दवा का उपयोग किया जाता है?",
+    "o": ["Paracetamol", "Lithium Carbonate | लिथियम कार्बोनेट", "Penicillin", "None"],
+    "a": 1,
+    "e": "Lithium helps prevent both manic and depressive episodes.",
+    "cat": "technical",
+    "sub": "mental_health_nursing"
+  },
+  {
+    "q": "What is 'Occupational Therapy' in psychiatry? / मनोरोग में 'ऑक्यूपेशनल थेरेपी' क्या है?",
+    "o": ["Finding a job", "Using meaningful activities to improve daily functioning | सार्थक गतिविधियों का उपयोग", "Physical exercise", "None"],
+    "a": 1,
+    "e": "It helps patients regain skills needed for independent living.",
+    "cat": "technical",
+    "sub": "mental_health_nursing"
+  },
+  {
+    "q": "What is 'Phobia'? / 'फोबिया' (Phobia) क्या है?",
+    "o": ["General worry", "Persistent and irrational fear of a specific object | विशिष्ट डर", "High fever", "None"],
+    "a": 1,
+    "e": "Examples include fear of heights (acrophobia) or enclosed spaces (claustrophobia).",
+    "cat": "technical",
+    "sub": "mental_health_nursing"
+  },
+  {
+    "q": "Which therapy involves the patient interacting with others in a group setting? / किस थेरेपी में रोगी समूह में दूसरों के साथ बातचीत करता है?",
+    "o": ["Individual therapy", "Group Therapy | ग्रुप थेरेपी", "Self-talk", "None"],
+    "a": 1,
+    "e": "Group therapy provides support and helps patients realize they are not alone in their struggles.",
+    "cat": "technical",
+    "sub": "mental_health_nursing"
+  },
+  {
+    "q": "The nurse-patient relationship in psychiatry should be: / मनोरोग में नर्स-रोगी संबंध कैसा होना चाहिए?",
+    "o": ["Personal", "Therapeutic and professional | चिकित्सीय और व्यावसायिक", "Distant", "Aggressive"],
+    "a": 1,
+    "e": "A therapeutic relationship is built on trust, empathy, and professional boundaries.",
+    "cat": "technical",
+    "sub": "mental_health_nursing"
+  },
+  {
+    "q": "What is the primary characteristic of 'Depression' in a psychiatric patient? / मनोरोग रोगी में 'अवसाद' (Depression) की प्राथमिक विशेषता क्या है?",
+    "o": ["Excessive energy", "Persistent sadness and loss of interest | लगातार उदासी और रुचि की कमी", "Rapid speech", "None"],
+    "a": 1,
+    "e": "Depression is characterized by anhedonia (inability to feel pleasure) and a persistent low mood.",
+    "cat": "technical",
+    "sub": "mental_health_nursing"
+  },
+  {
+    "q": "Which nursing intervention is most critical for a 'Suicidal' patient? / 'आत्महत्या की प्रवृत्ति' वाले मरीज के लिए कौन सा नर्सिंग हस्तक्षेप सबसे महत्वपूर्ण है?",
+    "o": ["Giving privacy", "Continuous observation (one-to-one) | निरंतर निगरानी", "Providing sharp objects", "None"],
+    "a": 1,
+    "e": "Safety is the priority; the patient must never be left alone to prevent self-harm.",
+    "cat": "technical",
+    "sub": "mental_health_nursing"
+  },
+  {
+    "q": "What is 'Hallucination'? / 'मतिभ्रम' (Hallucination) क्या है?",
+    "o": ["Misinterpretation of real stimuli", "Perception without any external stimuli | बिना किसी बाहरी उद्दीपन के धारणा", "Fixed false belief", "None"],
+    "a": 1,
+    "e": "Hallucination involves seeing, hearing, or feeling things that are not actually present.",
+    "cat": "technical",
+    "sub": "mental_health_nursing"
+  },
+  {
+    "q": "A patient believes they are a 'King' despite evidence to the contrary. This is called: / एक मरीज खुद को 'राजा' मानता है। इसे क्या कहा जाता है?",
+    "o": ["Illusion", "Delusion of Grandeur | भव्यता का भ्रम (Delusion)", "Anxiety", "Phobia"],
+    "a": 1,
+    "e": "Delusion is a fixed, false belief that is not shaken by logic or evidence.",
+    "cat": "technical",
+    "sub": "mental_health_nursing"
+  },
+  {
+    "q": "Which of the following is a sign of 'Abnormal' behavior? / निम्नलिखित में से कौन सा 'असामान्य' व्यवहार का संकेत है?",
+    "o": ["Occasional sadness", "Social withdrawal and self-neglect | सामाजिक अलगाव और खुद की उपेक्षा", "Sleeping 8 hours", "None"],
+    "a": 1,
+    "e": "Abnormal behavior often interferes with daily functioning and social relationships.",
+    "cat": "technical",
+    "sub": "mental_health_nursing"
+  },
+  {
+    "q": "What is 'Anxiety'? / 'चिंता' (Anxiety) क्या है?",
+    "o": ["A feeling of deep sleep", "A feeling of apprehension or dread | घबराहट या डर की भावना", "Excessive happiness", "None"],
+    "a": 1,
+    "e": "Anxiety is an emotional response to a perceived or real threat, often accompanied by physical symptoms.",
+    "cat": "technical",
+    "sub": "mental_health_nursing"
+  },
+  {
+    "q": "In 'Mania', the patient typically shows: / 'मेनिया' (Mania) में, रोगी आमतौर पर क्या दिखाता है?",
+    "o": ["Extreme lethargy", "Elated mood and flight of ideas | उत्साहित मूड और विचारों की तेजी", "Silence", "None"],
+    "a": 1,
+    "e": "Mania is the opposite of depression, characterized by excessive activity and euphoria.",
+    "cat": "technical",
+    "sub": "mental_health_nursing"
+  },
+  {
+    "q": "What should a nurse do first if a patient expresses suicidal thoughts? / यदि कोई मरीज आत्मघाती विचार व्यक्त करता है तो नर्स को सबसे पहले क्या करना चाहिए?",
+    "o": ["Laugh it off", "Take it seriously and assess the plan | गंभीरता से लें और योजना का आकलन करें", "Ignore it", "None"],
+    "a": 1,
+    "e": "All suicidal threats must be taken seriously and reported to the psychiatric team immediately.",
+    "cat": "technical",
+    "sub": "mental_health_nursing"
+  },
+  {
+    "q": "What is 'Illusion'? / 'इल्यूजन' (Illusion) क्या है?",
+    "o": ["Fixed belief", "Misinterpretation of a real external stimulus | वास्तविक उद्दीपन की गलत व्याख्या", "No perception", "None"],
+    "a": 1,
+    "e": "Example: Seeing a rope and thinking it is a snake.",
+    "cat": "technical",
+    "sub": "mental_health_nursing"
+  },
+  {
+    "q": "The therapeutic environment in a psychiatric ward is often called: / मनोरोग वार्ड में चिकित्सीय वातावरण को अक्सर क्या कहा जाता है?",
+    "o": ["Prison", "Milieu Therapy | मिलियू थेरेपी", "Open field", "None"],
+    "a": 1,
+    "e": "Milieu therapy uses the environment to promote safety and social learning.",
+    "cat": "technical",
+    "sub": "mental_health_nursing"
+  },
+  {
+    "q": "Which of the following is a 'Cyanotic' congenital heart disease? / निम्नलिखित में से कौन सा एक 'सायनोटिक' जन्मजात हृदय रोग है?",
+    "o": ["Ventricular Septal Defect (VSD)", "Tetralogy of Fallot (TOF) | टेट्रालॉजी ऑफ फैलोट", "Atrial Septal Defect (ASD)", "Patent Ductus Arteriosus (PDA)"],
+    "a": 1,
+    "e": "TOF is a cyanotic heart defect where deoxygenated blood mixes with oxygenated blood, leading to a blue tint in the skin (cyanosis).",
+    "cat": "technical",
+    "sub": "pediatric_nursing"
+  },
+  {
+    "q": "What is the hallmark sign of 'Kwashiorkor' that distinguishes it from Marasmus? / क्वाशियोरकोर का प्रमुख लक्षण क्या है जो इसे मारस्मस से अलग करता है?",
+    "o": ["Extreme wasting", "Edema (Swelling) | एडिमा (सूजन)", "Sunken eyes", "Baggy pants appearance"],
+    "a": 1,
+    "e": "Kwashiorkor is primarily a protein deficiency causing fluid retention (edema), whereas Marasmus is overall calorie deficiency causing severe wasting.",
+    "cat": "technical",
+    "sub": "pediatric_nursing"
+  },
+  {
+    "q": "What is 'Play Therapy' in a hospital setting? / अस्पताल सेटिंग में 'प्ले थेरेपी' (Play Therapy) क्या है?",
+    "o": ["Physical exercise only", "Using play to help children express feelings and cope with illness | खेल के माध्यम से तनाव कम करना", "Studying in ward", "None"],
+    "a": 1,
+    "e": "Play therapy is a therapeutic approach used by nurses to reduce a child's anxiety and help them understand medical procedures.",
+    "cat": "technical",
+    "sub": "pediatric_nursing"
+  },
+  {
+    "q": "In 'Tetralogy of Fallot', what should a nurse do during a 'Cyanotic/Tet Spell'? / TOF में, 'सायनोटिक स्पेल' के दौरान नर्स को क्या करना चाहिए?",
+    "o": ["Make the child run", "Place the child in Knee-Chest position | घुटने-छाती (Knee-Chest) स्थिति में रखें", "Give cold water", "None"],
+    "a": 1,
+    "e": "The knee-chest position increases systemic vascular resistance, improving blood flow to the lungs during a spell.",
+    "cat": "technical",
+    "sub": "pediatric_nursing"
+  },
+  {
+    "q": "Which condition is characterized by a 'Moon Face' appearance in children? / बच्चों में 'मून फेस' (Moon Face) किस स्थिति की विशेषता है?",
+    "o": ["Marasmus", "Kwashiorkor | क्वाशियोरकोर", "Anemia", "Rickets"],
+    "a": 1,
+    "e": "In Kwashiorkor, edema and fatty liver can give the face a rounded, 'moon-like' appearance.",
+    "cat": "technical",
+    "sub": "pediatric_nursing"
+  },
+  {
+    "q": "The 'Right to Protection from Abuse' falls under: / 'दुर्व्यवहार से सुरक्षा का अधिकार' किसके अंतर्गत आता है?",
+    "o": ["Labor laws", "Child Rights (UNCRC) | बाल अधिकार", "Traffic rules", "None"],
+    "a": 1,
+    "e": "The UN Convention on the Rights of the Child ensures that every child is protected from all forms of physical or mental violence.",
+    "cat": "technical",
+    "sub": "pediatric_nursing"
+  },
+  {
+    "q": "What is the primary nursing goal for a child with 'Spina Bifida' before surgery? / सर्जरी से पहले 'स्पाइना बिफिडा' वाले बच्चे के लिए प्राथमिक नर्सिंग लक्ष्य क्या है?",
+    "o": ["Feeding high protein", "Protecting the sac from injury and infection | सैक को चोट और संक्रमण से बचाना", "Encouraging walking", "None"],
+    "a": 1,
+    "e": "Preventing rupture of the protruding sac is vital to avoid life-threatening meningitis.",
+    "cat": "technical",
+    "sub": "pediatric_nursing"
+  },
+  {
+    "q": "Which type of play is typical for 'Infants'? / 'शिशुओं' के लिए किस प्रकार का खेल विशिष्ट है?",
+    "o": ["Cooperative play", "Solitary play | एकांत खेल", "Parallel play", "Competitive play"],
+    "a": 1,
+    "e": "Infants usually play alone (solitary) and are not interested in playing with other children yet.",
+    "cat": "technical",
+    "sub": "pediatric_nursing"
+  },
+  {
+    "q": "In 'Marasmus', the child has an appearance often described as: / 'मारस्मस' में बच्चे का रूप अक्सर किस तरह वर्णित किया जाता है?",
+    "o": ["Moon face", "Old man's face (Wizened) | बूढ़े व्यक्ति जैसा चेहरा", "Very fat", "None"],
+    "a": 1,
+    "e": "Due to extreme loss of subcutaneous fat and muscle, the skin hangs loose, making the child look like an old person.",
+    "cat": "technical",
+    "sub": "pediatric_nursing"
+  },
+  {
+    "q": "What is the focus of a 'Child Guidance Clinic' (CGC)? / 'चाइल्ड गाइडेंस क्लिनिक' (CGC) का केंद्र क्या है?",
+    "o": ["Physical surgery", "Preventive, curative, and rehabilitative mental health services | मानसिक स्वास्थ्य सेवाएं", "Vaccination", "None"],
+    "a": 1,
+    "e": "CGCs address emotional, behavioral, and learning problems in children through a team of specialists.",
+    "cat": "technical",
+    "sub": "pediatric_nursing"
+  },
+  {
+    "q": "At what age does a child typically start 'Parallel Play'? / एक बच्चा आमतौर पर किस उम्र में 'समानांतर खेल' (Parallel Play) शुरू करता है?",
+    "o": ["Infancy", "Toddlerhood (1-3 years) | टॉडलर (1-3 वर्ष)", "Adolescence", "None"],
+    "a": 1,
+    "e": "Toddlers often play side-by-side with other children but not directly with them. [cite: 194]",
+    "cat": "technical",
+    "sub": "pediatric_nursing"
+  },
+  {
+    "q": "Which vaccine provides protection against 'Whooping Cough' (Pertussis)? / कौन सा टीका 'काली खांसी' (Pertussis) से सुरक्षा प्रदान करता है?",
+    "o": ["BCG", "DPT (or Pentavalent) | डीपीटी", "OPV", "MMR"],
+    "a": 1,
+    "e": "Pertussis is the 'P' component of the DPT vaccine. [cite: 154]",
+    "cat": "technical",
+    "sub": "pediatric_nursing"
+  },
+  {
+    "q": "What is the most common cause of 'Accidental Poisoning' in toddlers? / टॉडलर्स में 'आकस्मिक विषाक्तता' का सबसे सामान्य कारण क्या है?",
+    "o": ["Unsafe storage of household chemicals | रसायनों का असुरक्षित भंडारण", "Food allergies", "Pollution", "None"],
+    "a": 0,
+    "e": "Toddlers are curious and often ingest colorful medicines or chemicals kept within reach. [cite: 114, 194]",
+    "cat": "technical",
+    "sub": "pediatric_nursing"
+  },
+  {
+    "q": "A child who can 'run, climb stairs, and use 2-3 word sentences' is likely: / एक बच्चा जो 'दौड़ सकता है, सीढ़ियां चढ़ सकता है और 2-3 शब्दों के वाक्य बोल सकता है' वह लगभग है:",
+    "o": ["6 months old", "2 years old | 2 वर्ष का", "5 years old", "None"],
+    "a": 1,
+    "e": "These are typical developmental milestones for a two-year-old toddler. [cite: 57, 193]",
+    "cat": "technical",
+    "sub": "pediatric_nursing"
+  },
+  {
+    "q": "Which immunization is given as a 'Booster' dose at 16-24 months? / 16-24 महीने की उम्र में 'बूस्टर' खुराक के रूप में कौन सा टीकाकरण दिया जाता है?",
+    "o": ["BCG", "DPT and OPV Booster | डीपीटी और ओपीवी बूस्टर", "Hepatitis B", "None"],
+    "a": 1,
+    "e": "Booster doses are vital to maintain immunity levels established by primary doses. [cite: 62, 195]",
+    "cat": "technical",
+    "sub": "pediatric_nursing"
+  },
+  {
+    "q": "What is the significance of the 'Growth Chart'? / 'ग्रोथ चार्ट' का क्या महत्व है?",
+    "o": ["To measure intelligence", "To monitor a child's growth over time and detect malnutrition | वृद्धि की निगरानी", "To check vision", "None"],
+    "a": 1,
+    "e": "It helps health workers identify deviations from normal growth patterns early. [cite: 43, 193]",
+    "cat": "technical",
+    "sub": "pediatric_nursing"
+  },
+  {
+    "q": "Which position should a baby be placed in for 'Sleep' to prevent SIDS? / SIDS को रोकने के लिए बच्चे को 'सोने' के लिए किस पोजीशन में रखा जाना चाहिए?",
+    "o": ["On the stomach", "On the back (Supine) | पीठ के बल", "On the side", "None"],
+    "a": 1,
+    "e": "Back-to-sleep is the safest position recommended to reduce the risk of Sudden Infant Death Syndrome. [cite: 28, 62]",
+    "cat": "technical",
+    "sub": "pediatric_nursing"
+  },
+  {
+    "q": "A deficiency of 'Vitamin A' in children can lead to: / बच्चों में 'विटामिन A' की कमी से क्या हो सकता है?",
+    "o": ["Scurvy", "Night Blindness (Xerophthalmia) | रतौंधी", "Rickets", "None"],
+    "a": 1,
+    "e": "Vitamin A is crucial for vision; chronic deficiency can lead to permanent blindness. [cite: 15, 150]",
+    "cat": "technical",
+    "sub": "pediatric_nursing"
+  },
+  {
+    "q": "What is 'Failure to Thrive' (FTT)? / 'फेलियर टू थ्राइव' (FTT) क्या है?",
+    "o": ["Fast growth", "Inadequate weight gain or growth in children | अपर्याप्त शारीरिक वृद्धि", "High fever", "None"],
+    "a": 1,
+    "e": "FTT can be due to medical issues, poor nutrition, or psychosocial neglect. [cite: 18, 57]",
+    "cat": "technical",
+    "sub": "pediatric_nursing"
+  },
+  {
+    "q": "What is the primary role of a 'School Health Nurse'? / 'स्कूल हेल्थ नर्स' की प्राथमिक भूमिका क्या है?",
+    "o": ["Teaching math", "Screening for health problems and health education | स्वास्थ्य स्क्रीनिंग", "Cooking meals", "None"],
+    "a": 1,
+    "e": "They ensure children are healthy, immunized, and educated about personal hygiene. [cite: 36, 62]",
+    "cat": "technical",
+    "sub": "pediatric_nursing"
+  },
+  {
+    "q": "What is the primary sign of 'Respiratory Distress Syndrome' (RDS) in a newborn? / नवजात शिशु में 'रेस्पिरेटरी डिस्ट्रेस सिंड्रोम' (RDS) का प्राथमिक लक्षण क्या है?",
+    "o": ["Slow breathing", "Nasal flaring and chest retractions | नाक फूलना और छाती का धंसना", "Pink skin", "None"],
+    "a": 1,
+    "e": "RDS is common in preterm babies due to lack of surfactant, causing labored breathing and grunting. [cite: 198]",
+    "cat": "technical",
+    "sub": "pediatric_nursing"
+  },
+  {
+    "q": "Which condition is a surgical emergency characterized by 'Current Jelly' stools? / 'करंट जेली' जैसे मल वाली कौन सी सर्जिकल इमरजेंसी बच्चों में देखी जाती है?",
+    "o": ["Pneumonia", "Intussusception | इंटुससेप्शन", "Diarrhea", "None"],
+    "a": 1,
+    "e": "Intussusception occurs when one part of the intestine slides into another, causing obstruction and bloody mucus in stools. [cite: 201]",
+    "cat": "technical",
+    "sub": "pediatric_nursing"
+  },
+  {
+    "q": "What is the immediate nursing action for a child having a 'Febrile Seizure'? / 'फेब्राइल सीजर' (बुखार वाले दौरे) के दौरान नर्स की तत्काल कार्रवाई क्या है?",
+    "o": ["Give water", "Ensure safety and side-lying position | सुरक्षा और साइड-लाइंग पोजीशन", "Put an object in mouth", "None"],
+    "a": 1,
+    "e": "Protecting the child from injury and maintaining a patent airway is the priority during a seizure. [cite: 110, 201]",
+    "cat": "technical",
+    "sub": "pediatric_nursing"
+  },
+  {
+    "q": "Which vitamin is given at birth to prevent 'Hemorrhagic Disease' of the newborn? / नवजात के 'रक्तस्रावी रोग' को रोकने के लिए जन्म के समय कौन सा विटामिन दिया जाता है?",
+    "o": ["Vitamin A", "Vitamin K | विटामिन K", "Vitamin C", "None"],
+    "a": 1,
+    "e": "Newborns have low vitamin K levels; an injection is given to ensure proper blood clotting. [cite: 176]",
+    "cat": "technical",
+    "sub": "pediatric_nursing"
+  },
+  {
+    "q": "In a child with 'Dehydration', which sign indicates 'Severe' dehydration? / 'निर्जलीकरण' (Dehydration) वाले बच्चे में कौन सा लक्षण 'गंभीर' स्थिति को दर्शाता है?",
+    "o": ["Mild thirst", "Sunken fontanelle and skin tenting | धंसा हुआ फोंटानेल", "Increased urine", "None"],
+    "a": 1,
+    "e": "Severe dehydration is a medical emergency that leads to lethargy and electrolyte imbalance. [cite: 120, 201]",
+    "cat": "technical",
+    "sub": "pediatric_nursing"
+  },
+  {
+    "q": "What is the primary treatment for 'Physiological Jaundice' in newborns? / नवजात शिशुओं में 'शारीरिक पीलिया' का प्राथमिक उपचार क्या है?",
+    "o": ["Antibiotics", "Frequent breastfeeding | बार-बार स्तनपान", "Surgery", "None"],
+    "a": 1,
+    "e": "Increased feeding promotes bowel movements, helping the baby excrete bilirubin. [cite: 197, 200]",
+    "cat": "technical",
+    "sub": "pediatric_nursing"
+  },
+  {
+    "q": "What is 'Cleft Lip'? / 'क्लिफ्ट लिप' (Cleft Lip) क्या है?",
+    "o": ["A heart defect", "A congenital split in the upper lip | ऊपरी होंठ में जन्मजात दरार", "A lung infection", "None"],
+    "a": 1,
+    "e": "It is a congenital anomaly that requires surgical repair and specialized feeding techniques. [cite: 199]",
+    "cat": "technical",
+    "sub": "pediatric_nursing"
+  },
+  {
+    "q": "Which positioning is best for an infant with 'Gastroesophageal Reflux' (GER)? / 'जीईआर' (GER) वाले शिशु के लिए कौन सी पोजीशन सबसे अच्छी है?",
+    "o": ["Flat on back", "Upright position during and after feeding | दूध पिलाने के बाद सीधा रखना", "Left side", "None"],
+    "a": 1,
+    "e": "Keeping the baby upright helps gravity prevent stomach contents from flowing back into the esophagus. [cite: 201]",
+    "cat": "technical",
+    "sub": "pediatric_nursing"
+  },
+  {
+    "q": "What does a 'Positive Mantoux Test' in a child indicate? / बच्चे में 'सकारात्मक मोंटू टेस्ट' क्या दर्शाता है?",
+    "o": ["Active TB only", "Exposure to Mycobacterium tuberculosis | टीबी के बैक्टीरिया का संपर्क", "HIV infection", "None"],
+    "a": 1,
+    "e": "It shows that the child's immune system has encountered TB bacteria, but further tests are needed for diagnosis. [cite: 128, 135]",
+    "cat": "technical",
+    "sub": "pediatric_nursing"
+  },
+  {
+    "q": "What is the primary role of 'Oral Rehydration Salts' (ORS)? / 'ओरल रीहाइड्रेशन साल्ट्स' (ORS) की प्राथमिक भूमिका क्या है?",
+    "o": ["Stopping diarrhea", "Replacing lost fluids and electrolytes | तरल और इलेक्ट्रोलाइट्स की पूर्ति", "Killing bacteria", "None"],
+    "a": 1,
+    "e": "ORS is essential for preventing death from dehydration during diarrheal diseases. [cite: 120, 201]",
+    "cat": "technical",
+    "sub": "pediatric_nursing"
+  },
+  {
+    "q": "At what age is the first dose of 'BCG' vaccine typically administered? / 'BCG' टीके की पहली खुराक आमतौर पर किस उम्र में दी जाती है?",
+    "o": ["At 9 months", "At birth | जन्म के समय", "At 5 years", "None"],
+    "a": 1,
+    "e": "BCG is given at birth to protect the newborn against tuberculosis. [cite: 195, 196]",
+    "cat": "technical",
+    "sub": "pediatric_nursing"
+  },
+  {
+    "q": "Which vaccine is given via the 'Oral' route? / कौन सा टीका 'मौखिक' (Oral) मार्ग से दिया जाता है?",
+    "o": ["DPT", "OPV (Oral Polio Vaccine) | ओपीवी", "Hepatitis B", "BCG"],
+    "a": 1,
+    "e": "OPV is administered as drops into the mouth to prevent poliomyelitis. [cite: 195]",
+    "cat": "technical",
+    "sub": "pediatric_nursing"
+  },
+  {
+    "q": "What is the recommended age for the first dose of 'Measles-Rubella' (MR) vaccine? / 'मिजल्स-रुबेला' (MR) टीके की पहली खुराक के लिए अनुशंसित उम्र क्या है?",
+    "o": ["At birth", "9-12 months | 9-12 महीने", "5 years", "None"],
+    "a": 1,
+    "e": "The first dose of MR is typically given between 9 to 12 completed months. [cite: 195]",
+    "cat": "technical",
+    "sub": "pediatric_nursing"
+  },
+  {
+    "q": "Which vaccine is included in the 'Pentavalent' vaccine? / 'पेंटावेलेंट' टीके में कौन सा टीका शामिल है?",
+    "o": ["BCG", "DPT + Hep B + Hib | डीपीटी + हेप बी + हिब", "Polio", "Measles"],
+    "a": 1,
+    "e": "Pentavalent protects against Diphtheria, Pertussis, Tetanus, Hepatitis B, and Hib. [cite: 195]",
+    "cat": "technical",
+    "sub": "pediatric_nursing"
+  },
+  {
+    "q": "What is 'Phototherapy' used for in newborns? / नवजात शिशुओं में 'फोटोथेरेपी' का उपयोग किसके लिए किया जाता है?",
+    "o": ["Fever", "Hyperbilirubinemia (Jaundice) | पीलिया", "Fracture", "Anemia"],
+    "a": 1,
+    "e": "Phototherapy helps break down bilirubin in the skin so it can be excreted. [cite: 197]",
+    "cat": "technical",
+    "sub": "pediatric_nursing"
+  },
+  {
+    "q": "Which mineral deficiency is the most common cause of 'Anemia' in toddlers? / छोटे बच्चों में 'एनीमिया' का सबसे सामान्य कारण किस खनिज की कमी है?",
+    "o": ["Calcium", "Iron | आयरन", "Sodium", "Zinc"],
+    "a": 1,
+    "e": "Iron deficiency anemia is prevalent in children due to rapid growth and poor dietary intake. [cite: 15, 57]",
+    "cat": "technical",
+    "sub": "pediatric_nursing"
+  },
+  {
+    "q": "At what age should 'Complementary Feeding' (Weaning) begin? / 'पूरक आहार' (Complementary Feeding) किस उम्र में शुरू होना चाहिए?",
+    "o": ["At 3 months", "At 6 months | 6 महीने", "At 1 year", "None"],
+    "a": 1,
+    "e": "After 6 months, breast milk alone is not sufficient, and solid/semi-solid foods should be introduced. [cite: 200]",
+    "cat": "technical",
+    "sub": "pediatric_nursing"
+  },
+  {
+    "q": "What is the 'Apgar Score' used to assess? / 'Apgar स्कोर' का उपयोग किसके मूल्यांकन के लिए किया जाता है?",
+    "o": ["Intelligence", "Immediate physical condition of a newborn | नवजात की तत्काल स्थिति", "Growth rate", "None"],
+    "a": 1,
+    "e": "It assesses heart rate, respiratory effort, muscle tone, reflex, and color at 1 and 5 minutes after birth. [cite: 175, 176, 196]",
+    "cat": "technical",
+    "sub": "pediatric_nursing"
+  },
+  {
+    "q": "Which condition is a medical emergency characterized by a 'Barking Cough'? / 'भौंकने वाली खांसी' (Barking Cough) किस आपातकालीन स्थिति की विशेषता है?",
+    "o": ["Asthma", "Croup (Laryngotracheobronchitis) | क्रुप", "Pneumonia", "Tuberculosis"],
+    "a": 1,
+    "e": "Croup is an upper airway infection that blocks breathing and has a distinctive barking cough. [cite: 60, 201]",
+    "cat": "technical",
+    "sub": "pediatric_nursing"
+  },
+  {
+    "q": "What is the primary role of a 'Child Guidance Clinic'? / 'चाइल्ड गाइडेंस क्लिनिक' की प्राथमिक भूमिका क्या है?",
+    "o": ["Vaccination", "Treating behavioral and emotional problems in children | व्यवहार संबंधी समस्याओं का उपचार", "Surgery", "None"],
+    "a": 1,
+    "e": "These clinics provide specialized help for children with developmental or psychological issues. [cite: 195]",
+    "cat": "technical",
+    "sub": "pediatric_nursing"
+  },
+  {
+    "q": "What does the 'A' in APGAR score stand for? / APGAR स्कोर में 'A' का क्या अर्थ है?",
+    "o": ["Age", "Appearance (Skin Color) | अपीयरेंस (त्वचा का रंग)", "Alertness", "Airway"],
+    "a": 1,
+    "e": "Appearance assesses the skin color, ranging from blue/pale (0) to completely pink (2).",
+    "cat": "technical",
+    "sub": "pediatric_nursing"
+  },
+  {
+    "q": "At what intervals is the APGAR score typically assessed after birth? / जन्म के बाद आमतौर पर किन अंतरालों पर APGAR स्कोर का मूल्यांकन किया जाता है?",
+    "o": ["1 and 5 minutes | 1 और 5 मिनट", "10 and 20 minutes", "Every hour", "At birth only"],
+    "a": 0,
+    "e": "The 1-minute score determines how the baby tolerated birth, and the 5-minute score tells how the baby is doing outside the womb.",
+    "cat": "technical",
+    "sub": "pediatric_nursing"
+  },
+  {
+    "q": "A newborn has a heart rate of 110 bpm, a strong cry, and some flexion of extremities. What is the APGAR score for heart rate? / एक नवजात की हृदय गति 110 bpm है, वह तेजी से रो रहा है। हृदय गति के लिए APGAR स्कोर क्या है?",
+    "o": ["0", "1", "2 | 2", "5"],
+    "a": 2,
+    "e": "A heart rate over 100 beats per minute is assigned a maximum score of 2.",
+    "cat": "technical",
+    "sub": "pediatric_nursing"
+  },
+  {
+    "q": "In Neonatal Resuscitation, what is the 'Golden Minute'? / नवजात पुनर्जीवन में 'गोल्डन मिनट' क्या है?",
+    "o": ["First 60 seconds to start ventilation if needed | वेंटिलेशन शुरू करने के लिए पहले 60 सेकंड", "Time taken to bath the baby", "Time for placenta delivery", "None"],
+    "a": 0,
+    "e": "The first minute is critical for establishing breathing in a neonate who does not breathe spontaneously.",
+    "cat": "technical",
+    "sub": "pediatric_nursing"
+  },
+  {
+    "q": "What is the correct position of the head during 'Bag and Mask' ventilation? / 'बैग और मास्क' वेंटिलेशन के दौरान सिर की सही स्थिति क्या है?",
+    "o": ["Extreme hyperextension", "Slightly extended (Sniffing position) | स्निफिंग पोजीशन", "Flexed towards chest", "Lateral position"],
+    "a": 1,
+    "e": "The 'sniffing' position aligns the airway for effective ventilation.",
+    "cat": "technical",
+    "sub": "pediatric_nursing"
+  },
+  {
+    "q": "An APGAR score of 3 indicates that the newborn is in: / 3 का APGAR स्कोर इंगित करता है कि नवजात:",
+    "o": ["Excellent condition", "Severe distress requiring immediate resuscitation | गंभीर संकट", "Mild distress", "None"],
+    "a": 1,
+    "e": "Scores 0-3 indicate severe distress, 4-6 moderate distress, and 7-10 normal transition.",
+    "cat": "technical",
+    "sub": "pediatric_nursing"
+  },
+  {
+    "q": "Which sign is being assessed under 'Grimace' in the APGAR score? / APGAR स्कोर में 'ग्रिमेस' (Grimace) के तहत किस संकेत का मूल्यांकन किया जाता है?",
+    "o": ["Heart rate", "Reflex irritability (Response to stimulation) | रिफ्लेक्स चिड़चिड़ापन", "Muscle tone", "Breathing"],
+    "a": 1,
+    "e": "Grimace evaluates the baby's response to stimulation, such as a flick to the sole of the foot.",
+    "cat": "technical",
+    "sub": "pediatric_nursing"
+  },
+  {
+    "q": "When using a Bag-Valve-Mask (Ambu Bag) on a neonate, what is the recommended ventilation rate? / नवजात शिशु पर बैग-वाल्व-मास्क का उपयोग करते समय अनुशंसित वेंटिलेशन दर क्या है?",
+    "o": ["10-20 breaths/min", "40-60 breaths/min | 40-60 सांस प्रति मिनट", "80-100 breaths/min", "None"],
+    "a": 1,
+    "e": "A rate of 40-60 breaths per minute mimics the normal respiratory rate of a newborn.",
+    "cat": "technical",
+    "sub": "pediatric_nursing"
+  },
+  {
+    "q": "What is the primary indicator of successful 'Bag and Mask' ventilation? / सफल 'बैग और मास्क' वेंटिलेशन का प्राथमिक संकेतक क्या है?",
+    "o": ["Baby becomes blue", "Visible chest rise | छाती का ऊपर उठना", "Fast heart rate only", "None"],
+    "a": 1,
+    "e": "Observation of the chest rising with each breath is the best sign that air is entering the lungs.",
+    "cat": "technical",
+    "sub": "pediatric_nursing"
+  },
+  {
+    "q": "If the newborn's heart rate remains below 60 bpm despite adequate ventilation, what is the next step? / यदि पर्याप्त वेंटिलेशन के बावजूद नवजात की हृदय गति 60 bpm से नीचे रहती है, तो अगला कदम क्या है?",
+    "o": ["Stop resuscitation", "Start chest compressions | चेस्ट कंप्रेशन शुरू करें", "Give water", "None"],
+    "a": 1,
+    "e": "According to NRP guidelines, chest compressions are indicated if the heart rate is below 60 bpm after 30 seconds of effective ventilation.",
+    "cat": "technical",
+    "sub": "pediatric_nursing"
+  },
+  {
+    "q": "What is 'Menorrhagia' clinically defined as? / 'मेनोरेजिया' (Menorrhagia) को चिकित्सकीय रूप से क्या कहा जाता है?",
+    "o": ["Absence of periods", "Excessive or prolonged menstrual bleeding | अत्यधिक या लंबा मासिक धर्म", "Painful periods", "None"],
+    "a": 1,
+    "e": "It refers to abnormally heavy or prolonged bleeding that interferes with the woman's quality of life.",
+    "cat": "technical",
+    "sub": "obstetrical_nursing"
+  },
+  {
+    "q": "What is the primary symptom of 'Uterine Fibroids'? / 'गर्भाशय फाइब्रॉइड' (Uterine Fibroids) का प्राथमिक लक्षण क्या है?",
+    "o": ["Sudden weight loss", "Abnormal uterine bleeding and pelvic pressure | असामान्य रक्तस्राव", "High fever", "None"],
+    "a": 1,
+    "e": "Fibroids are non-cancerous growths that often cause heavy periods and pelvic pain.",
+    "cat": "technical",
+    "sub": "obstetrical_nursing"
+  },
+  {
+    "q": "In 'Vesico-Vaginal Fistula' (VVF), there is an abnormal opening between: / 'वेसिको-वैजाइनल फिस्टुला' (VVF) में किसके बीच एक असामान्य छेद होता है?",
+    "o": ["Rectum and Vagina", "Bladder and Vagina | मूत्राशय और योनि", "Uterus and Rectum", "None"],
+    "a": 1,
+    "e": "VVF causes continuous involuntary leakage of urine into the vagina.",
+    "cat": "technical",
+    "sub": "obstetrical_nursing"
+  },
+  {
+    "q": "What is the most common cause of 'Vaginal Fistula' in developing countries? / विकासशील देशों में 'वैजाइनल फिस्टुला' का सबसे सामान्य कारण क्या है?",
+    "o": ["Cancer", "Obstructed labour | बाधित प्रसव", "Accidents", "Surgery"],
+    "a": 1,
+    "e": "Prolonged pressure of the fetal head against the mother's tissues during obstructed labour causes tissue death and fistula.",
+    "cat": "technical",
+    "sub": "obstetrical_nursing"
+  },
+  {
+    "q": "Which nursing intervention is crucial for a patient with VVF? / VVF वाले रोगी के लिए कौन सा नर्सिंग हस्तक्षेप महत्वपूर्ण है?",
+    "o": ["Limiting water intake", "Skin care and preventing excoriation due to urine | त्वचा की देखभाल", "Exercise", "None"],
+    "a": 1,
+    "e": "Constant urine leakage can cause severe skin breakdown and emotional distress; hygiene is priority.",
+    "cat": "technical",
+    "sub": "obstetrical_nursing"
+  },
+  {
+    "q": "What is 'Secondary Amenorrhea'? / 'सेकेंडरी अमेनोरिया' (Secondary Amenorrhea) क्या है?",
+    "o": ["Never having a period", "Absence of periods for 6 months in a woman who previously had them | मासिक धर्म का बंद होना", "Painful periods", "None"],
+    "a": 1,
+    "e": "It can be caused by pregnancy, stress, weight loss, or hormonal disorders like PCOS.",
+    "cat": "technical",
+    "sub": "obstetrical_nursing"
+  },
+  {
+    "q": "Which symptom is a common 'Menopausal' vasomotor symptom? / कौन सा लक्षण एक सामान्य 'रजोनिवृत्ति' (Menopausal) वासोमोटर लक्षण है?",
+    "o": ["Toothache", "Hot flashes and night sweats | हॉट फ्लैशेस", "Increased appetite", "None"],
+    "a": 1,
+    "e": "Declining estrogen levels lead to sudden feelings of heat and sweating.",
+    "cat": "technical",
+    "sub": "obstetrical_nursing"
+  },
+  {
+    "q": "What is an 'Ovarian Cyst'? / 'ओवेरियन सिस्ट' (Ovarian Cyst) क्या है?",
+    "o": ["A solid tumor", "A fluid-filled sac on the ovary | अंडाशय पर तरल से भरी थैली", "Uterine infection", "None"],
+    "a": 1,
+    "e": "Most cysts are functional and harmless, but some can cause pain or require surgery.",
+    "cat": "technical",
+    "sub": "obstetrical_nursing"
+  },
+  {
+    "q": "In 'Recto-Vaginal Fistula' (RVF), what is the characteristic symptom? / 'रेक्टो-वैजाइनल फिस्टुला' (RVF) में विशिष्ट लक्षण क्या है?",
+    "o": ["Urine leakage", "Passage of gas or feces through the vagina | योनि से मल का निकलना", "High BP", "None"],
+    "a": 1,
+    "e": "RVF involves an opening between the rectum and the vagina, leading to fecal incontinence via the vagina.",
+    "cat": "technical",
+    "sub": "obstetrical_nursing"
+  },
+  {
+    "q": "What is the primary treatment for 'Large' uterine fibroids causing severe symptoms? / गंभीर लक्षण पैदा करने वाले 'बड़े' गर्भाशय फाइब्रॉइड का प्राथमिक उपचार क्या है?",
+    "o": ["Antibiotics", "Myomectomy or Hysterectomy | मायोमेक्टोमी या हिस्टेरेक्टॉमी", "Rest only", "None"],
+    "a": 1,
+    "e": "Surgical removal of the fibroid (myomectomy) or the entire uterus (hysterectomy) may be necessary.",
+    "cat": "technical",
+    "sub": "obstetrical_nursing"
+  },
+  {
+    "q": "What is the nurse's priority assessment immediately after a 'C-Section' (Caesarean)? / 'C-Section' के तुरंत बाद नर्स की प्राथमिकता क्या है?",
+    "o": ["Giving solid food", "Uterine firmness and vaginal bleeding (Lochia) | गर्भाशय की मजबूती और रक्तस्राव", "Checking hair color", "None"],
+    "a": 1,
+    "e": "Post-op monitoring for hemorrhage and uterine atony is critical after a Caesarean delivery.",
+    "cat": "technical",
+    "sub": "obstetrical_nursing"
+  },
+  {
+    "q": "In 'Forceps Delivery', which maternal complication is a nurse most alert for? / 'फोरसेप्स डिलीवरी' में नर्स किस जटिलता के लिए सबसे अधिक सतर्क रहती है?",
+    "o": ["Fever", "Perineal and vaginal lacerations | पेरिनियम और योनि में चोट", "Anemia", "None"],
+    "a": 1,
+    "e": "Forceps can cause significant soft tissue trauma or tears to the mother's birth canal.",
+    "cat": "technical",
+    "sub": "obstetrical_nursing"
+  },
+  {
+    "q": "Why is it essential to examine the 'Placenta' after delivery? / प्रसव के बाद 'प्लेसेंटा' की जांच करना क्यों आवश्यक है?",
+    "o": ["To check its weight only", "To ensure no fragments are left inside (preventing PPH) | कोई टुकड़ा अंदर न बचा हो", "For research only", "None"],
+    "a": 1,
+    "e": "Retained placental fragments can prevent uterine contraction, leading to severe Postpartum Hemorrhage (PPH).",
+    "cat": "technical",
+    "sub": "obstetrical_nursing"
+  },
+  {
+    "q": "Which clinical sign indicates 'Vacuum Extraction' may have caused a scalp injury to the neonate? / कौन सा नैदानिक संकेत बताता है कि 'वैक्यूम एक्सट्रैक्शन' से नवजात के सिर पर चोट लगी है?",
+    "o": ["Red eyes", "Chignon or Caput Succedaneum | चिग्नॉन या कपूत सक्सीडेनियम", "Fast heart rate", "None"],
+    "a": 1,
+    "e": "Vacuum extraction often causes a localized swelling (chignon) on the baby's head where the suction cup was applied.",
+    "cat": "technical",
+    "sub": "obstetrical_nursing"
+  },
+  {
+    "q": "A nurse is caring for a post-C-section patient. Which symptom should be reported as a possible 'Infection'? / C-section के बाद किस लक्षण को संभावित 'संक्रमण' के रूप में रिपोर्ट किया जाना चाहिए?",
+    "o": ["Mild pain", "Foul-smelling lochia and high fever | दुर्गंधयुक्त लोचिया और तेज बुखार", "Hunger", "None"],
+    "a": 1,
+    "e": "These are classic signs of endometritis or wound infection following surgery.",
+    "cat": "technical",
+    "sub": "obstetrical_nursing"
+  },
+  {
+    "q": "What is the primary indication for using 'Vacuum' or 'Forceps' during labour? / प्रसव के दौरान 'वैक्यूम' या 'फोरसेप्स' का उपयोग करने का प्राथमिक संकेत क्या है?",
+    "o": ["Patient's request for faster delivery", "Prolonged second stage or fetal distress | प्रसव का लंबा दूसरा चरण", "Doctor's holiday", "None"],
+    "a": 1,
+    "e": "These tools are used to assist delivery when the mother is exhausted or the baby needs immediate birth.",
+    "cat": "technical",
+    "sub": "obstetrical_nursing"
+  },
+  {
+    "q": "After a C-section, the nurse must encourage early 'Ambulation' to prevent: / C-section के बाद, नर्स को किसकी रोकथाम के लिए 'एम्बुलेशन' (चलना-फिरना) को बढ़ावा देना चाहिए?",
+    "o": ["Headache", "Deep Vein Thrombosis (DVT) | डीवीटी (DVT)", "Hunger", "None"],
+    "a": 1,
+    "e": "Early movement improves circulation and prevents blood clots in the legs after surgery.",
+    "cat": "technical",
+    "sub": "obstetrical_nursing"
+  },
+  {
+    "q": "How many 'Vessels' should a normal Umbilical Cord have during examination? / जांच के दौरान एक सामान्य गर्भनाल में कितनी 'वाहिकाएं' (Vessels) होनी चाहिए?",
+    "o": ["One artery, one vein", "Two arteries, one vein | दो धमनियां, एक शिरा", "Two veins, one artery", "Three arteries"],
+    "a": 1,
+    "e": "Presence of only two vessels (one artery, one vein) may indicate congenital anomalies.",
+    "cat": "technical",
+    "sub": "obstetrical_nursing"
+  },
+  {
+    "q": "What is 'Retained Placenta'? / 'रिटेंड प्लेसेंटा' (Retained Placenta) क्या है?",
+    "o": ["Delivery of placenta within 5 mins", "Placenta not delivered within 30 mins after birth | 30 मिनट तक प्लेसेंटा न निकलना", "Placenta delivered before baby", "None"],
+    "a": 1,
+    "e": "It is a complication that often requires manual removal under anesthesia.",
+    "cat": "technical",
+    "sub": "obstetrical_nursing"
+  },
+  {
+    "q": "Which nerve injury can occur to the newborn in a difficult Forceps delivery? / एक कठिन फोरसेप्स डिलीवरी में नवजात शिशु को कौन सी तंत्रिका क्षति हो सकती है?",
+    "o": ["Optic nerve", "Facial nerve | चेहरे की तंत्रिका (Facial nerve)", "Sciatic nerve", "None"],
+    "a": 1,
+    "e": "Pressure from the forceps blades can cause temporary or permanent facial palsy in the neonate.",
+    "cat": "technical",
+    "sub": "obstetrical_nursing"
+  },
+  {
+    "q": "What is 'Precipitate Labour'? / 'प्रेसिपिटेट लेबर' (Precipitate Labour) क्या है?",
+    "o": ["Labour lasting 24 hours", "Labour lasting less than 3 hours | 3 घंटे से कम समय का प्रसव", "Labour requiring C-section", "None"],
+    "a": 1,
+    "e": "Rapid delivery increases the risk of maternal lacerations and fetal intracranial hemorrhage.",
+    "cat": "technical",
+    "sub": "obstetrical_nursing"
+  },
+  {
+    "q": "Which manoeuvre is used to deliver the head in a 'Breech' presentation? / 'ब्रीच' प्रेजेंटेशन में सिर निकालने के लिए किस पैंतरे (manoeuvre) का उपयोग किया जाता है?",
+    "o": ["Leopold's", "Mauriceau-Smellie-Veit | मॉरिस्यू-स्मेली-वीट", "Ritgen's", "None"],
+    "a": 1,
+    "e": "This specific technique helps in the safe delivery of the after-coming head in breech births.",
+    "cat": "technical",
+    "sub": "obstetrical_nursing"
+  },
+  {
+    "q": "What is 'Lochia Serosa'? / 'लोचिया सेरोसा' (Lochia Serosa) क्या है?",
+    "o": ["Bloody discharge", "Pinkish-brown vaginal discharge (days 4-10) | गुलाबी-भूरा स्राव", "White discharge", "None"],
+    "a": 1,
+    "e": "It follows lochia rubra and contains serum, leukocytes, and tissue debris.",
+    "cat": "technical",
+    "sub": "obstetrical_nursing"
+  },
+  {
+    "q": "Which vitamin is essential for the prevention of 'Neural Tube Defects' (NTD)? / 'न्यूरल ट्यूब डिफेक्ट' (NTD) की रोकथाम के लिए कौन सा विटामिन आवश्यक है?",
+    "o": ["Vitamin C", "Folic Acid | फोलिक एसिड", "Vitamin D", "Vitamin K"],
+    "a": 1,
+    "e": "Folic acid supplementation is recommended before and during early pregnancy to prevent NTDs like spina bifida.",
+    "cat": "technical",
+    "sub": "obstetrical_nursing"
+  },
+  {
+    "q": "What is 'Mastitis'? / 'मास्टिटिस' (Mastitis) क्या है?",
+    "o": ["Infection of the uterus", "Inflammation/infection of the breast tissue | स्तन ऊतक की सूजन", "Infection of the vagina", "None"],
+    "a": 1,
+    "e": "It often occurs during breastfeeding due to a blocked duct or bacteria entering via a cracked nipple.",
+    "cat": "technical",
+    "sub": "obstetrical_nursing"
+  },
+  {
+    "q": "Which clinical sign indicates 'Atonic' Postpartum Hemorrhage? / 'एटोनिक' प्रसवोत्तर रक्तस्राव का कौन सा नैदानिक संकेत है?",
+    "o": ["Firm uterus", "Soft, boggy uterus | नरम और ढीला गर्भाशय", "Normal BP", "None"],
+    "a": 1,
+    "e": "A soft or boggy uterus fails to compress blood vessels after placental delivery, leading to heavy bleeding.",
+    "cat": "technical",
+    "sub": "obstetrical_nursing"
+  },
+  {
+    "q": "The surgical removal of the 'Uterus' is called: / 'गर्भाशय' को शल्य चिकित्सा द्वारा निकालने को क्या कहा जाता है?",
+    "o": ["Oophorectomy", "Hysterectomy | हिस्टेरेक्टॉमी", "Salpingectomy", "Mastectomy"],
+    "a": 1,
+    "e": "Hysterectomy can be total or partial depending on the condition (fibroids, cancer, etc.).",
+    "cat": "technical",
+    "sub": "obstetrical_nursing"
+  },
+  {
+    "q": "What is 'Dysmenorrhea'? / 'डिस्मेनोरिया' (Dysmenorrhea) क्या है?",
+    "o": ["Absence of periods", "Painful menstruation | दर्दनाक मासिक धर्म", "Heavy bleeding", "Irregular periods"],
+    "a": 1,
+    "e": "It is characterized by cramping pain in the lower abdomen during or before menstruation.",
+    "cat": "technical",
+    "sub": "obstetrical_nursing"
+  },
+  {
+    "q": "Which family planning method is a 'Hormonal' injectable? / परिवार नियोजन की कौन सी विधि 'हार्मोनल' इंजेक्शन है?",
+    "o": ["Copper T", "Antara (DMPA) | अंतरा (DMPA)", "Chhaya", "Mala-N"],
+    "a": 1,
+    "e": "DMPA is an injectable contraceptive given every 3 months.",
+    "cat": "technical",
+    "sub": "obstetrical_nursing"
+  },
+  {
+    "q": "What is 'Cervical Erosion'? / 'सर्वाइकल इरोजन' (Cervical Erosion) क्या है?",
+    "o": ["Infection of cervix", "Columnar epithelium replaces squamous epithelium on the cervix | गर्भाशय ग्रीवा का घाव", "Cancer of cervix", "None"],
+    "a": 1,
+    "e": "It often appears as a red, velvety area on the cervix and can cause vaginal discharge or spotting.",
+    "cat": "technical",
+    "sub": "obstetrical_nursing"
+  },
+  {
+    "q": "What is the primary characteristic of 'Placenta Previa'? / 'प्लेसेंटा प्रीविया' (Placenta Previa) की प्राथमिक विशेषता क्या है?",
+    "o": ["Painful vaginal bleeding", "Painless, bright red vaginal bleeding in late pregnancy | दर्द रहित रक्तस्राव", "Severe abdominal pain", "None"],
+    "a": 1,
+    "e": "In Placenta Previa, the placenta is implanted in the lower uterine segment, causing painless bleeding when the cervix dilates.",
+    "cat": "technical",
+    "sub": "obstetrical_nursing"
+  },
+  {
+    "q": "Which condition involves the premature separation of a normally implanted placenta? / सामान्य रूप से आरोपित प्लेसेंटा के समय से पहले अलग होने की स्थिति को क्या कहा जाता है?",
+    "o": ["Placenta Previa", "Abruptio Placentae | एब्रप्शन प्लेसेंटा", "Hydatidiform mole", "Ectopic pregnancy"],
+    "a": 1,
+    "e": "Abruptio placentae is a medical emergency characterized by painful bleeding and uterine tenderness.",
+    "cat": "technical",
+    "sub": "obstetrical_nursing"
+  },
+  {
+    "q": "What is the drug of choice for 'Syphilis' during pregnancy? / गर्भावस्था के दौरान 'सिफलिस' के लिए पहली पसंद की दवा कौन सी है?",
+    "o": ["Metronidazole", "Benzathine Penicillin G | पेनिसिलिन जी", "Azithromycin", "None"],
+    "a": 1,
+    "e": "Penicillin is effective in treating maternal syphilis and preventing congenital syphilis in the fetus.",
+    "cat": "technical",
+    "sub": "obstetrical_nursing"
+  },
+  {
+    "q": "A pregnancy that occurs outside the uterine cavity is known as: / गर्भाशय गुहा के बाहर होने वाली गर्भावस्था को क्या कहा जाता है?",
+    "o": ["Molar pregnancy", "Ectopic pregnancy | अस्थानिक गर्भावस्था", "Multiple pregnancy", "Phantom pregnancy"],
+    "a": 1,
+    "e": "Most ectopic pregnancies occur in the fallopian tubes and can lead to life-threatening rupture.",
+    "cat": "technical",
+    "sub": "obstetrical_nursing"
+  },
+  {
+    "q": "What is 'Polyhydramnios'? / 'पॉलीहाइड्रामनियोस' (Polyhydramnios) क्या है?",
+    "o": ["Too little amniotic fluid", "Excessive amniotic fluid (more than 2000ml) | अत्यधिक एमनियोटिक द्रव", "No amniotic fluid", "Bloody fluid"],
+    "a": 1,
+    "e": "Excessive fluid can lead to complications like preterm labour and cord prolapse.",
+    "cat": "technical",
+    "sub": "obstetrical_nursing"
+  },
+  {
+    "q": "Which test is used to screen for 'Gestational Diabetes Mellitus' (GDM)? / 'जेस्टेशनल डायबिटीज' के लिए किस परीक्षण का उपयोग किया जाता है?",
+    "o": ["Widal test", "Oral Glucose Tolerance Test (OGTT) | ओजीटीटी", "Mantoux test", "VDRL"],
+    "a": 1,
+    "e": "OGTT measures the body's ability to handle glucose during pregnancy.",
+    "cat": "technical",
+    "sub": "obstetrical_nursing"
+  },
+  {
+    "q": "What is the primary risk for a baby born to a 'Diabetic' mother? / 'मधुमेह' वाली माँ से पैदा हुए बच्चे के लिए प्राथमिक जोखिम क्या है?",
+    "o": ["Hyperglycemia", "Hypoglycemia | हाइपोग्लाइसीमिया", "Dehydration", "None"],
+    "a": 1,
+    "e": "High maternal glucose causes the fetal pancreas to produce excess insulin, leading to low blood sugar after birth.",
+    "cat": "technical",
+    "sub": "obstetrical_nursing"
+  },
+  {
+    "q": "In 'Hyperemesis Gravidarum', the nurse's priority is: / 'हाइपरमेसिस ग्रेविडरम' में नर्स की प्राथमिकता क्या है?",
+    "o": ["Weight gain", "Fluid and electrolyte replacement | तरल और इलेक्ट्रोलाइट प्रतिस्थापन", "Exercise", "None"],
+    "a": 1,
+    "e": "Severe vomiting leads to dehydration and ketosis, requiring IV fluids.",
+    "cat": "technical",
+    "sub": "obstetrical_nursing"
+  },
+  {
+    "q": "Which infection is a part of the 'TORCH' screening in pregnancy? / गर्भावस्था में 'TORCH' स्क्रीनिंग में कौन सा संक्रमण शामिल है?",
+    "o": ["Typhoid", "Toxoplasmosis | टोक्सोप्लाज्मोसिस", "Tetanus", "Cholera"],
+    "a": 1,
+    "e": "TORCH stands for Toxoplasmosis, Other (Syphilis, etc.), Rubella, Cytomegalovirus, and Herpes.",
+    "cat": "technical",
+    "sub": "obstetrical_nursing"
+  },
+  {
+    "q": "What does a 'Bishop Score' assess? / 'बिशप स्कोर' (Bishop Score) क्या मापता है?",
+    "o": ["Fetal maturity", "Readiness of the cervix for induction of labour | प्रसव प्रेरण के लिए तैयारी", "Maternal weight", "None"],
+    "a": 1,
+    "e": "It evaluates cervical dilation, effacement, consistency, position, and fetal station.",
+    "cat": "technical",
+    "sub": "obstetrical_nursing"
+  },
+  {
+    "q": "What is the duration of the 'Puerperium' period? / 'प्यूपेरियम' (Puerperium) अवधि की अवधि क्या है?",
+    "o": ["1 week", "6 weeks | 6 सप्ताह", "9 months", "1 year"],
+    "a": 1,
+    "e": "It is the period (approx 42 days) following childbirth during which the mother's organs return to their non-pregnant state.",
+    "cat": "technical",
+    "sub": "obstetrical_nursing"
+  },
+  {
+    "q": "Which hormone is primarily responsible for 'Milk Ejection' (let-down reflex)? / 'दूध के स्राव' के लिए मुख्य रूप से कौन सा हार्मोन जिम्मेदार है?",
+    "o": ["Prolactin", "Oxytocin | ऑक्सीटोसिन", "Estrogen", "Progesterone"],
+    "a": 1,
+    "e": "Oxytocin causes the contraction of myoepithelial cells in the breast, ejecting milk; Prolactin stimulates production.",
+    "cat": "technical",
+    "sub": "obstetrical_nursing"
+  },
+  {
+    "q": "What is 'Lochia Rubra'? / 'लोचिया रूब्रा' (Lochia Rubra) क्या है?",
+    "o": ["Yellowish discharge", "Bright red vaginal discharge for first 1-3 days post-delivery | लाल रंग का स्राव", "Clear fluid", "None"],
+    "a": 1,
+    "e": "It consists primarily of blood and decidual debris, appearing immediately after delivery.",
+    "cat": "technical",
+    "sub": "obstetrical_nursing"
+  },
+  {
+    "q": "The first milk produced after birth, rich in antibodies, is called: / जन्म के बाद उत्पादित पहला दूध, जो एंटीबॉडी से भरपूर होता है, कहलाता है:",
+    "o": ["Fore milk", "Colostrum | कोलोस्ट्रम", "Hind milk", "Fetal milk"],
+    "a": 1,
+    "e": "Colostrum is essential for providing natural immunity to the newborn.",
+    "cat": "technical",
+    "sub": "obstetrical_nursing"
+  },
+  {
+    "q": "What is the most common cause of 'Postpartum Hemorrhage' (PPH)? / 'प्रसवोत्तर रक्तस्राव' (PPH) का सबसे सामान्य कारण क्या है?",
+    "o": ["Infection", "Uterine Atony | गर्भाशय की कमजोरी (Atony)", "Trauma", "Anemia"],
+    "a": 1,
+    "e": "Uterine atony (failure of the uterus to contract after delivery) accounts for 80% of PPH cases.",
+    "cat": "technical",
+    "sub": "obstetrical_nursing"
+  },
+  {
+    "q": "Which family planning method is considered 'Permanent' for males? / पुरुषों के लिए परिवार नियोजन की कौन सी विधि 'स्थायी' मानी जाती है?",
+    "o": ["Condom", "Vasectomy | नसबंदी (Vasectomy)", "IUD", "Oral pills"],
+    "a": 1,
+    "e": "Vasectomy involves cutting or sealing the vas deferens to prevent sperm from entering the semen.",
+    "cat": "technical",
+    "sub": "obstetrical_nursing"
+  },
+  {
+    "q": "What does 'Exclusive Breastfeeding' mean? / 'एक्सक्लूसिव ब्रेस्टफीडिंग' का क्या अर्थ है?",
+    "o": ["Breast milk and water", "Only breast milk for first 6 months | केवल स्तनपान", "Breast milk and formula", "None"],
+    "a": 1,
+    "e": "The infant receives only breast milk (no water or other foods) for the first six months of life.",
+    "cat": "technical",
+    "sub": "obstetrical_nursing"
+  },
+  {
+    "q": "What is 'Involution' of the uterus? / गर्भाशय का 'इनवोल्यूशन' (Involution) क्या है?",
+    "o": ["Enlargement during pregnancy", "Uterus returning to its normal size post-delivery | सामान्य आकार में लौटना", "Rupture of uterus", "None"],
+    "a": 1,
+    "e": "This process is facilitated by oxytocin release during breastfeeding.",
+    "cat": "technical",
+    "sub": "obstetrical_nursing"
+  },
+  {
+    "q": "Which family planning method also provides protection against STIs? / परिवार नियोजन की कौन सी विधि STI से भी सुरक्षा प्रदान करती है?",
+    "o": ["Copper T", "Condoms | कंडोम", "Injectables", "Tubectomy"],
+    "a": 1,
+    "e": "Barrier methods like condoms are the only ones providing dual protection against pregnancy and infections.",
+    "cat": "technical",
+    "sub": "obstetrical_nursing"
+  },
+  {
+    "q": "What is a primary nursing instruction for a mother with 'Engorged' breasts? / 'भारी' (Engorged) स्तनों वाली माँ के लिए प्राथमिक नर्सिंग निर्देश क्या है?",
+    "o": ["Stop breastfeeding", "Frequent feeding and warm compresses | बार-बार स्तनपान", "Apply ice only", "Bind the breasts tightly"],
+    "a": 1,
+    "e": "Regular emptying of the breasts through feeding or expression is the best way to relieve engorgement.",
+    "cat": "technical",
+    "sub": "obstetrical_nursing"
+  },
+  {
+    "q": "Which sign is considered a 'Positive' sign of pregnancy? / गर्भावस्था का 'सकारात्मक' (Positive) संकेत कौन सा माना जाता है?",
+    "o": ["Amenorrhea", "Fetal heart sounds heard by doppler | भ्रूण के दिल की धड़कन", "Morning sickness", "Positive urine test"],
+    "a": 1,
+    "e": "Fetal heart sounds and ultrasound visualization are definitive (positive) signs, unlike presumptive signs like nausea.",
+    "cat": "technical",
+    "sub": "obstetrical_nursing"
+  },
+  {
+    "q": "What is the primary characteristic of 'Eclampsia' that distinguishes it from Pre-eclampsia? / 'एक्लेम्पसिया' (Eclampsia) की प्राथमिक विशेषता क्या है जो इसे प्री-एक्लेम्पसिया से अलग करती है?",
+    "o": ["High blood pressure", "Presence of seizures (convulsions) | दौरे पड़ना", "Protein in urine", "Swelling in feet"],
+    "a": 1,
+    "e": "The onset of seizures in a woman with pre-eclampsia marks the transition to eclampsia, a life-threatening emergency.",
+    "cat": "technical",
+    "sub": "obstetrical_nursing"
+  },
+  {
+    "q": "In the first stage of labour, what is the main physiological change? / प्रसव के पहले चरण में मुख्य शारीरिक परिवर्तन क्या होता है?",
+    "o": ["Expulsion of the baby", "Progressive dilation and effacement of the cervix | गर्भाशय ग्रीवा का विस्तार", "Expulsion of the placenta", "None"],
+    "a": 1,
+    "e": "The first stage begins with regular contractions and ends with full cervical dilation (10 cm).",
+    "cat": "technical",
+    "sub": "obstetrical_nursing"
+  },
+  {
+    "q": "What is 'Naegele’s Rule' used for? / 'नेगेल्स रूल' (Naegele’s Rule) का उपयोग किसके लिए किया जाता है?",
+    "o": ["To check fetal weight", "To calculate the Expected Date of Delivery (EDD) | ईडीडी की गणना", "To measure BP", "None"],
+    "a": 1,
+    "e": "EDD is calculated by adding 9 months and 7 days to the first day of the Last Menstrual Period (LMP).",
+    "cat": "technical",
+    "sub": "obstetrical_nursing"
+  },
+  {
+    "q": "Which position is recommended for a pregnant woman to prevent 'Supine Hypotension Syndrome'? / 'सुपाइन हाइपोटेंशन सिंड्रोम' को रोकने के लिए गर्भवती महिला के लिए कौन सी स्थिति अनुशंसित है?",
+    "o": ["Right side-lying", "Left lateral position | बाईं करवट", "Flat on the back", "Trendelenburg"],
+    "a": 1,
+    "e": "The left lateral position removes pressure from the inferior vena cava, improving blood flow to the heart and fetus.",
+    "cat": "technical",
+    "sub": "obstetrical_nursing"
+  },
+  {
+    "q": "What is 'Episiotomy'? / 'एपिसियोटॉमी' (Episiotomy) क्या है?",
+    "o": ["A type of C-section", "Surgical incision of the perineum to enlarge vaginal opening | पेरिनियम में चीरा", "Removing the uterus", "None"],
+    "a": 1,
+    "e": "It is often performed during the second stage of labour to prevent jagged tears and facilitate delivery.",
+    "cat": "technical",
+    "sub": "obstetrical_nursing"
+  },
+  {
+    "q": "Which medication is the drug of choice for managing seizures in Eclampsia? / एक्लेम्पसिया में दौरे के प्रबंधन के लिए कौन सी दवा पहली पसंद है?",
+    "o": ["Diazepam", "Magnesium Sulfate | मैग्नीशियम सल्फेट", "Phenytoin", "Insulin"],
+    "a": 1,
+    "e": "Magnesium Sulfate is highly effective in preventing and treating eclamptic seizures.",
+    "cat": "technical",
+    "sub": "obstetrical_nursing"
+  },
+  {
+    "q": "The 'Second Stage' of labour ends with: / प्रसव का 'दूसरा चरण' किसके साथ समाप्त होता है?",
+    "o": ["Full dilation of cervix", "Birth of the baby | बच्चे का जन्म", "Delivery of placenta", "Rupture of membranes"],
+    "a": 1,
+    "e": "The second stage is the expulsion stage, starting from full dilation to the delivery of the neonate.",
+    "cat": "technical",
+    "sub": "obstetrical_nursing"
+  },
+  {
+    "q": "What does 'Antenatal Care' (ANC) primarily aim for? / 'एंटी-नेटल केयर' (ANC) का मुख्य उद्देश्य क्या है?",
+    "o": ["Post-delivery recovery", "Ensuring a safe pregnancy and healthy mother/baby | सुरक्षित गर्भावस्था", "Planning family size", "None"],
+    "a": 1,
+    "e": "ANC focuses on regular monitoring during pregnancy to detect and manage potential complications early.",
+    "cat": "technical",
+    "sub": "obstetrical_nursing"
+  },
+  {
+    "q": "Which emergency condition involves the umbilical cord slipping ahead of the baby? / किस आपातकालीन स्थिति में गर्भनाल बच्चे से पहले बाहर आ जाती है?",
+    "o": ["Placenta Previa", "Cord Prolapse | कॉर्ड प्रोलैप्स", "Abruptio Placentae", "None"],
+    "a": 1,
+    "e": "Cord prolapse is a medical emergency because the cord can be compressed, cutting off oxygen to the baby.",
+    "cat": "technical",
+    "sub": "obstetrical_nursing"
+  },
+  {
+    "q": "During 'Gowning', once the nurse is in the sterile gown, which area is considered sterile? / 'गाउनिंग' के दौरान, नर्स द्वारा स्टेराइल गाउन पहनने के बाद, कौन सा क्षेत्र स्टेराइल माना जाता है?",
+    "o": ["The back of the gown", "Front from chest to waist level and sleeves | छाती से कमर तक का अगला हिस्सा", "Below the knees", "Neckline"],
+    "a": 1,
+    "e": "Only the front and sleeves up to the elbow are considered sterile; the back is always unsterile.",
+    "cat": "technical",
+    "sub": "medical_surgical_nursing"
+  },
+  {
+    "q": "What is the primary objective of the 'Recovery Room' (PACU)? / 'रिकवरी रूम' (PACU) का प्राथमिक उद्देश्य क्या है?",
+    "o": ["Long term care", "Intensive monitoring until vital signs are stable after anesthesia | वाइटल स्थिर होने तक निगरानी", "Administrative work", "None"],
+    "a": 1,
+    "e": "PACU ensures a safe transition from an anesthetized state to a conscious state.",
+    "cat": "technical",
+    "sub": "medical_surgical_nursing"
+  },
+  {
+    "q": "Which instrument is used during 'Intubation' to visualize the vocal cords? / 'इंट्यूबेशन' के दौरान वोकल कॉर्ड्स देखने के लिए किस उपकरण का उपयोग किया जाता है?",
+    "o": ["Otoscope", "Laryngoscope | लैरींगोस्कोप", "Stethoscope", "Tuning fork"],
+    "a": 1,
+    "e": "A laryngoscope is essential for correct placement of the endotracheal tube in the trachea.",
+    "cat": "technical",
+    "sub": "medical_surgical_nursing"
+  },
+  {
+    "q": "What is the 'Closed Gloving' technique? / 'क्लोज्ड ग्लविंग' (Closed Gloving) तकनीक क्या है?",
+    "o": ["Gloving with bare hands", "Gloving where hands remain inside the gown sleeves until gloves are on | गाउन के अंदर हाथ रखकर ग्लविंग", "Wearing two pairs of gloves", "None"],
+    "a": 1,
+    "e": "This technique minimizes the risk of contamination from the hands to the outside of the gloves.",
+    "cat": "technical",
+    "sub": "medical_surgical_nursing"
+  },
+  {
+    "q": "In an emergency, what is the role of an 'Ambu Bag' (BVM)? / आपात स्थिति में, 'Ambu Bag' (BVM) की क्या भूमिका है?",
+    "o": ["Sucking fluid", "Manual ventilation to provide oxygen | मैन्युअल वेंटिलेशन", "Measuring BP", "None"],
+    "a": 1,
+    "e": "Bag-Valve-Mask (BVM) is used to provide positive pressure ventilation to a patient not breathing adequately.",
+    "cat": "technical",
+    "sub": "medical_surgical_nursing"
+  },
+  {
+    "q": "What is 'Extubation'? / 'एक्सटयूबेशन' (Extubation) क्या है?",
+    "o": ["Inserting a tube", "Removal of an endotracheal tube | एंडोट्रैचियल ट्यूब को निकालना", "Cleaning the ward", "None"],
+    "a": 1,
+    "e": "It is done when the patient is stable enough to maintain their own airway and breathing.",
+    "cat": "technical",
+    "sub": "medical_surgical_nursing"
+  },
+  {
+    "q": "Which complication is most likely immediately after 'Intubation'? / 'इंट्यूबेशन' के तुरंत बाद किस जटिलता की सबसे अधिक संभावना होती है?",
+    "o": ["Knee pain", "Esophageal intubation or Laryngospasm | ग्रासनली इंट्यूबेशन", "Hunger", "None"],
+    "a": 1,
+    "e": "Accidental placement of the tube in the esophagus is a serious risk and must be checked immediately.",
+    "cat": "technical",
+    "sub": "medical_surgical_nursing"
+  },
+  {
+    "q": "How does a nurse check the 'Stability' of a patient in the Recovery Room? / रिकवरी रूम में नर्स मरीज की 'स्थिरता' की जांच कैसे करती है?",
+    "o": ["Asking the patient's name only", "Aldrete Scoring system (Vitals, Activity, Consciousness) | एल्ड्रेट स्कोरिंग", "By their height", "None"],
+    "a": 1,
+    "e": "The Aldrete score is a standardized tool to determine if a patient is ready for discharge from PACU.",
+    "cat": "technical",
+    "sub": "medical_surgical_nursing"
+  },
+  {
+    "q": "Which resuscitation equipment provides high-energy electrical therapy to the heart? / कौन सा रिससिटेशन उपकरण हृदय को उच्च-ऊर्जा विद्युत चिकित्सा प्रदान करता है?",
+    "o": ["Ventilator", "Defibrillator | डिफिब्रिलेटर", "Suction machine", "Infusion pump"],
+    "a": 1,
+    "e": "It is used to treat life-threatening arrhythmias by 'resetting' the heart's electrical activity.",
+    "cat": "technical",
+    "sub": "medical_surgical_nursing"
+  },
+  {
+    "q": "When performing 'Surgical Hand Scrub', where should the hands be kept relative to the elbows? / 'सर्जिकल हैंड स्क्रब' करते समय, हाथों को कोहनियों के सापेक्ष कहाँ रखा जाना चाहिए?",
+    "o": ["Lower than elbows", "Higher than elbows | कोहनियों से ऊपर", "At the same level", "In the pockets"],
+    "a": 1,
+    "e": "Hands must be kept above elbows to allow water to drain from the cleanest area (hands) to the less clean area (elbows).",
+    "cat": "technical",
+    "sub": "medical_surgical_nursing"
+  },
+  {
+    "q": "What is the hallmark clinical sign of 'ARDS' (Acute Respiratory Distress Syndrome)? / 'ARDS' का प्रमुख नैदानिक लक्षण क्या है?",
+    "o": ["Slow heart rate", "Refractory Hypoxemia | रिफ्रैक्टरी हाइपोक्सिमिया", "Normal oxygen levels", "None"],
+    "a": 1,
+    "e": "Refractory hypoxemia is when blood oxygen remains low even with high concentrations of oxygen therapy.",
+    "cat": "technical",
+    "sub": "medical_surgical_nursing"
+  },
+  {
+    "q": "Which positioning is essential for a patient with 'Pleural Effusion' during Thoracentesis? / थोरासेन्टेसिस के दौरान 'प्लूरल एफ्यूजन' वाले रोगी के लिए कौन सी स्थिति आवश्यक है?",
+    "o": ["Supine", "Sitting upright leaning forward on a bedside table | आगे झुककर बैठना", "Prone", "None"],
+    "a": 1,
+    "e": "This position expands the intercostal spaces for easier access to the pleural cavity.",
+    "cat": "technical",
+    "sub": "medical_surgical_nursing"
+  },
+  {
+    "q": "In 'Liver Cirrhosis', what is the primary cause of Ascites? / 'लिवर सिरोसिस' में, जलोदर (Ascites) का प्राथमिक कारण क्या है?",
+    "o": ["Low BP", "Portal Hypertension and Hypoalbuminemia | पोर्टल हाइपरटेंशन", "High sugar", "None"],
+    "a": 1,
+    "e": "Increased pressure in the portal vein and low albumin levels cause fluid to leak into the abdominal cavity.",
+    "cat": "technical",
+    "sub": "medical_surgical_nursing"
+  },
+  {
+    "q": "What is a 'Varicose Vein'? / 'वैरिकोज वेन' (Varicose Vein) क्या है?",
+    "o": ["Thin arteries", "Dilated, twisted veins with incompetent valves | सूजी हुई और मुड़ी हुई नसें", "Blocked capillaries", "None"],
+    "a": 1,
+    "e": "They occur most commonly in the legs due to high pressure and valve failure.",
+    "cat": "technical",
+    "sub": "medical_surgical_nursing"
+  },
+  {
+    "q": "A patient with 'Hemophilia A' is deficient in which clotting factor? / 'हीमोफीलिया ए' वाले रोगी में किस क्लॉटिंग फैक्टर की कमी होती है?",
+    "o": ["Factor IX", "Factor VIII | फैक्टर VIII", "Factor X", "Factor V"],
+    "a": 1,
+    "e": "Hemophilia A is a genetic disorder caused by missing or defective Factor VIII.",
+    "cat": "technical",
+    "sub": "medical_surgical_nursing"
+  },
+  {
+    "q": "What is the nurse's priority for a patient in 'Hepatic Coma'? / 'हिपेटिक कोमा' में मरीज के लिए नर्स की प्राथमिकता क्या है?",
+    "o": ["Giving solid food", "Maintaining airway and monitoring neurological status | वायुमार्ग और मानसिक स्थिति", "Walking exercise", "None"],
+    "a": 1,
+    "e": "Protecting the airway is vital as the patient has an altered level of consciousness.",
+    "cat": "technical",
+    "sub": "medical_surgical_nursing"
+  },
+  {
+    "q": "After a 'Renal Transplant', what is the most critical complication to monitor? / 'रीनल ट्रांसप्लांट' के बाद, निगरानी के लिए सबसे महत्वपूर्ण जटिलता क्या है?",
+    "o": ["Hair loss", "Graft rejection and infection | ग्राफ्ट रिजेक्शन और संक्रमण", "Toothache", "None"],
+    "a": 1,
+    "e": "The nurse must monitor for signs like fever, pain over the graft site, and decreased urine output.",
+    "cat": "technical",
+    "sub": "medical_surgical_nursing"
+  },
+  {
+    "q": "Which medication is typically avoided in patients with bleeding disorders like Hemophilia? / हीमोफीलिया जैसे रक्तस्राव विकारों वाले रोगियों में आमतौर पर किस दवा से बचा जाता है?",
+    "o": ["Paracetamol", "Aspirin/NSAIDs | एस्पिरिन", "Vitamin C", "None"],
+    "a": 1,
+    "e": "Aspirin inhibits platelet aggregation and can worsen bleeding tendencies.",
+    "cat": "technical",
+    "sub": "medical_surgical_nursing"
+  },
+  {
+    "q": "What is 'Arteriosclerosis'? / 'आर्टेरियोस्क्लेरोसिस' (Arteriosclerosis) क्या है?",
+    "o": ["Softening of veins", "Hardening and loss of elasticity of arteries | धमनियों का सख्त होना", "Muscle growth", "None"],
+    "a": 1,
+    "e": "It restricts blood flow to organs and tissues, often linked to high blood pressure.",
+    "cat": "technical",
+    "sub": "medical_surgical_nursing"
+  },
+  {
+    "q": "Leukemia patients are at high risk for infection because: / ल्यूकेमिया के रोगियों को संक्रमण का उच्च जोखिम होता है क्योंकि:",
+    "o": ["They eat too much", "They have immature and dysfunctional WBCs | दोषपूर्ण श्वेत रक्त कोशिकाएं", "They exercise", "None"],
+    "a": 1,
+    "e": "While WBC count might be high, the cells are abnormal and cannot fight infections effectively.",
+    "cat": "technical",
+    "sub": "medical_surgical_nursing"
+  },
+  {
+    "q": "What is the primary characteristic of 'Uremia' in kidney failure? / गुर्दे की विफलता में 'यूरेमिया' (Uremia) की प्राथमिक विशेषता क्या है?",
+    "o": ["High sugar", "Accumulation of nitrogenous waste in blood | रक्त में नाइट्रोजनयुक्त कचरे का संचय", "High calcium", "None"],
+    "a": 1,
+    "e": "Uremia occurs when kidneys cannot filter out urea and creatinine, leading to systemic toxicity.",
+    "cat": "technical",
+    "sub": "medical_surgical_nursing"
+  },
+  {
+    "q": "Which surgery involves making an opening in the abdominal wall for feces to pass? / मल त्याग के लिए पेट की दीवार में छेद करने वाली सर्जरी कौन सी है?",
+    "o": ["Appendectomy", "Colostomy | कोलोस्टोमी", "Gastrectomy", "None"],
+    "a": 1,
+    "e": "A colostomy is performed when the lower part of the colon or rectum is diseased or removed.",
+    "cat": "technical",
+    "sub": "medical_surgical_nursing"
+  },
+  {
+    "q": "What is 'Gowning and Gloving' in OT technique? / OT तकनीक में 'गाउनिंग और ग्लविंग' क्या है?",
+    "o": ["Wearing street clothes", "Maintaining surgical asepsis during operation | सर्जिकल एसेप्सिस बनाए रखना", "Cleaning the floor", "None"],
+    "a": 1,
+    "e": "Sterile gowns and gloves prevent the transfer of microorganisms from the surgical team to the patient.",
+    "cat": "technical",
+    "sub": "medical_surgical_nursing"
+  },
+  {
+    "q": "Which symptom is most indicative of 'Appendicitis'? / 'अपेंडिसाइटिस' का सबसे अधिक संकेत देने वाला लक्षण कौन सा है?",
+    "o": ["Left shoulder pain", "Rebound tenderness in the right lower quadrant | दाहिने निचले चतुर्थांश में दर्द", "Headache", "None"],
+    "a": 1,
+    "e": "Pain at McBurney's point that worsens when pressure is released is a classic sign of appendicitis.",
+    "cat": "technical",
+    "sub": "medical_surgical_nursing"
+  },
+  {
+    "q": "What is 'Spinal Anesthesia'? / 'स्पाइनल एनेस्थीसिया' (Spinal Anesthesia) क्या है?",
+    "o": ["Putting patient to sleep", "Injection into the subarachnoid space for regional numbing | क्षेत्रीय सुन्नता", "Numbing only the skin", "None"],
+    "a": 1,
+    "e": "It blocks sensation in the lower half of the body for surgeries like C-sections or hernia repair.",
+    "cat": "technical",
+    "sub": "medical_surgical_nursing"
+  },
+  {
+    "q": "Why is 'Incentive Spirometry' taught to post-operative patients? / ऑपरेशन के बाद के रोगियों को 'इंसेंटिव स्पाइरोमेट्री' क्यों सिखाई जाती है?",
+    "o": ["To help them walk", "To prevent atelectasis (collapsed lung) | फेफड़ों को सिकुड़ने से रोकने के लिए", "To stop bleeding", "None"],
+    "a": 1,
+    "e": "Deep breathing exercises help keep the alveoli open and prevent pneumonia after anesthesia.",
+    "cat": "technical",
+    "sub": "medical_surgical_nursing"
+  },
+  {
+    "q": "Which complication is a nurse most alert for during 'Peritoneal Dialysis'? / 'पेरिटोनियल डायलिसिस' के दौरान नर्स किस जटिलता के लिए सबसे अधिक सतर्क रहती है?",
+    "o": ["Toothache", "Peritonitis (infection) | पेरिटोनिटिस (संक्रमण)", "Muscle growth", "None"],
+    "a": 1,
+    "e": "Infection of the peritoneal cavity is a serious risk due to the repeated introduction of fluid.",
+    "cat": "technical",
+    "sub": "medical_surgical_nursing"
+  },
+  {
+    "q": "What is the primary role of a 'Scrub Nurse' during surgery? / सर्जरी के दौरान 'स्क्रब नर्स' की प्राथमिक भूमिका क्या है?",
+    "o": ["Administering anesthesia", "Handling sterile instruments to the surgeon | स्टेराइल उपकरण सर्जन को देना", "Talking to the patient's family", "None"],
+    "a": 1,
+    "e": "The scrub nurse maintains the sterile field and assists the surgeon directly with instruments.",
+    "cat": "technical",
+    "sub": "medical_surgical_nursing"
+  },
+  {
+    "q": "What is 'Hematemesis'? / 'हेमेटेमेसिस' (Hematemesis) क्या है?",
+    "o": ["Blood in stool", "Vomiting of blood | खून की उल्टी", "Blood in urine", "None"],
+    "a": 1,
+    "e": "It often indicates an upper gastrointestinal bleed, such as from a peptic ulcer.",
+    "cat": "technical",
+    "sub": "medical_surgical_nursing"
+  },
+  {
+    "q": "The 'Recovery Room' (PACU) is used for: / 'रिकवरी रूम' (PACU) का उपयोग किसके लिए किया जाता है?",
+    "o": ["Performing surgery", "Close monitoring until effects of anesthesia wear off | एनेस्थीसिया का असर खत्म होने तक निगरानी", "Keeping medical records", "None"],
+    "a": 1,
+    "e": "Post-Anesthesia Care Unit (PACU) ensures the patient's vitals and airway are stable immediately after surgery.",
+    "cat": "technical",
+    "sub": "medical_surgical_nursing"
+  },
+  {
+    "q": "What is the primary objective of 'Barrier Nursing' in a patient with Tuberculosis? / तपेदिक (TB) के रोगी में 'बैरियर नर्सिंग' का प्राथमिक उद्देश्य क्या है?",
+    "o": ["To provide comfort", "To prevent cross-infection | क्रॉस-संक्रमण को रोकना", "To improve diet", "None"],
+    "a": 1,
+    "e": "Barrier nursing is used to prevent the transmission of infectious pathogens from one person to another in clinical settings.",
+    "cat": "technical",
+    "sub": "medical_surgical_nursing"
+  },
+  {
+    "q": "Which clinical sign is characteristic of 'Right-sided Heart Failure'? / 'दाएँ पक्ष की हृदय विफलता' (Right-sided Heart Failure) का विशिष्ट नैदानिक लक्षण कौन सा है?",
+    "o": ["Lung congestion", "Distended jugular veins and peripheral edema | जुगुलर वेंस में सूजन", "Chronic cough", "None"],
+    "a": 1,
+    "e": "Right-sided failure causes systemic congestion, leading to fluid backup in the veins and swelling in the limbs.",
+    "cat": "technical",
+    "sub": "medical_surgical_nursing"
+  },
+  {
+    "q": "In a patient with Pneumonia, what does 'Wheezing' indicate? / निमोनिया के रोगी में 'व्हीजिंग' (Wheezing) क्या दर्शाता है?",
+    "o": ["Normal lungs", "Narrowing of the airways | वायुमार्ग का संकुचित होना", "Deep sleep", "Clear mucus"],
+    "a": 1,
+    "e": "Wheezing is a high-pitched whistling sound caused by air moving through constricted bronchi.",
+    "cat": "technical",
+    "sub": "medical_surgical_nursing"
+  },
+  {
+    "q": "What is 'Aneurysm' in the context of vascular diseases? / संवहनी रोगों के संदर्भ में 'एन्यूरिज्म' (Aneurysm) क्या है?",
+    "o": ["Hardening of arteries", "Localized dilation or ballooning of an artery | आर्टरी का फूलना", "Clot in the vein", "None"],
+    "a": 1,
+    "e": "An aneurysm is a weakened area in an artery wall that bulges out, posing a risk of rupture.",
+    "cat": "technical",
+    "sub": "medical_surgical_nursing"
+  },
+  {
+    "q": "Which medication is commonly used as a 'Rescue Inhaler' for Asthma? / अस्थमा के लिए 'रेस्क्यू इनहेलर' के रूप में आमतौर पर किस दवा का उपयोग किया जाता है?",
+    "o": ["Salbutamol | सालबुटामोल", "Aspirin", "Penicillin", "Insulin"],
+    "a": 0,
+    "e": "Salbutamol is a short-acting beta-agonist that rapidly opens the airways during an attack.",
+    "cat": "technical",
+    "sub": "medical_surgical_nursing"
+  },
+  {
+    "q": "What is the main danger of 'Deep Vein Thrombosis' (DVT)? / 'डीप वेन थ्रोम्बोसिस' (DVT) का मुख्य खतरा क्या है?",
+    "o": ["Skin rash", "Pulmonary Embolism | पल्मोनरी एम्बोलिज्म", "Stomach ache", "None"],
+    "a": 1,
+    "e": "A blood clot in the deep veins can break loose and travel to the lungs, which is life-threatening.",
+    "cat": "technical",
+    "sub": "medical_surgical_nursing"
+  },
+  {
+    "q": "A patient with anemia often exhibits 'Pallor'. This is best observed in: / एनीमिया वाले रोगी में 'पीलापन' (Pallor) देखा जाता है। इसे सबसे अच्छा कहाँ देखा जा सकता है?",
+    "o": ["Hair", "Conjunctiva and nail beds | कंजंक्टिवा और नाखून", "Teeth", "None"],
+    "a": 1,
+    "e": "Mucous membranes and nail beds are ideal sites to assess reduced hemoglobin levels visually.",
+    "cat": "technical",
+    "sub": "medical_surgical_nursing"
+  },
+  {
+    "q": "Which heart rhythm is considered a medical emergency? / कौन सी हृदय लय (heart rhythm) को मेडिकल इमरजेंसी माना जाता है?",
+    "o": ["Sinus rhythm", "Ventricular Fibrillation | वेंट्रिकुलर फाइब्रिलेशन", "Sinus Bradycardia", "None"],
+    "a": 1,
+    "e": "VF is a chaotic heart rhythm that stops the heart from pumping blood, requiring immediate defibrillation.",
+    "cat": "technical",
+    "sub": "medical_surgical_nursing"
+  },
+  {
+    "q": "What is the significance of the 'Sputum Culture' test? / 'थूक संवर्धन' (Sputum Culture) परीक्षण का क्या महत्व है?",
+    "o": ["To check heart rate", "To identify the specific bacteria causing infection | विशिष्ट बैक्टीरिया की पहचान", "To measure BP", "None"],
+    "a": 1,
+    "e": "It helps in selecting the most effective antibiotic to treat respiratory infections like TB or pneumonia.",
+    "cat": "technical",
+    "sub": "medical_surgical_nursing"
+  },
+  {
+    "q": "In Hypertension management, why is 'Sodium' intake restricted? / उच्च रक्तचाप प्रबंधन में 'सोडियम' का सेवन क्यों सीमित किया जाता है?",
+    "o": ["To increase appetite", "To reduce fluid retention and lower BP | तरल प्रतिधारण और बीपी कम करने के लिए", "To improve sleep", "None"],
+    "a": 1,
+    "e": "High sodium leads to water retention in the blood vessels, which increases blood pressure.",
+    "cat": "technical",
+    "sub": "medical_surgical_nursing"
+  },
+  {
+    "q": "What is the most common cause of 'Peptic Ulcer'? / 'पेप्टिक अल्सर' का सबसे सामान्य कारण क्या है?",
+    "o": ["Eating spicy food", "H. pylori infection | एच. पाइलोरी संक्रमण", "Stress", "Drinking tea"],
+    "a": 1,
+    "e": "Helicobacter pylori bacteria weaken the protective lining of the stomach and duodenum[cite: 134].",
+    "cat": "technical",
+    "sub": "medical_surgical_nursing"
+  },
+  {
+    "q": "In 'Chronic Kidney Disease', what is the purpose of 'Dialysis'? / 'क्रोनिक किडनी डिजीज' में, 'डायलिसिस' का उद्देश्य क्या है?",
+    "o": ["To cure the kidney", "To remove waste products and excess fluid | अपशिष्ट उत्पादों और अतिरिक्त तरल को निकालना", "To increase BP", "None"],
+    "a": 1,
+    "e": "Dialysis acts as an artificial kidney to filter blood when kidneys fail[cite: 139].",
+    "cat": "technical",
+    "sub": "medical_surgical_nursing"
+  },
+  {
+    "q": "What is 'Hepatitis'? / 'हेपेटाइटिस' (Hepatitis) क्या है?",
+    "o": ["Inflammation of the heart", "Inflammation of the liver | लिवर की सूजन", "Inflammation of the lungs", "None"],
+    "a": 1,
+    "e": "Hepatitis is often caused by viruses (A, B, C, D, E) or toxic substances[cite: 134, 135].",
+    "cat": "technical",
+    "sub": "medical_surgical_nursing"
+  },
+  {
+    "q": "Before surgery, why is a patient kept 'NPO' (Nothing by mouth)? / सर्जरी से पहले, मरीज को 'NPO' क्यों रखा जाता है?",
+    "o": ["To save food", "To prevent aspiration under anesthesia | एनेस्थीसिया के तहत एस्पिरेशन को रोकना", "To reduce weight", "None"],
+    "a": 1,
+    "e": "An empty stomach reduces the risk of vomiting and inhaling stomach contents during surgery[cite: 126, 147].",
+    "cat": "technical",
+    "sub": "medical_surgical_nursing"
+  },
+  {
+    "q": "Which type of 'Anesthesia' results in loss of consciousness? / किस प्रकार के 'एनेस्थीसिया' के परिणामस्वरूप चेतना की हानि होती है?",
+    "o": ["Local anesthesia", "General anesthesia | जनरल एनेस्थीसिया", "Spinal anesthesia", "Regional anesthesia"],
+    "a": 1,
+    "e": "General anesthesia affects the whole body and produces a reversible loss of consciousness[cite: 127].",
+    "cat": "technical",
+    "sub": "medical_surgical_nursing"
+  },
+  {
+    "q": "What is the nurse's priority in 'Post-operative' care immediately after recovery from anesthesia? / एनेस्थीसिया से ठीक होने के बाद 'पोस्ट-ऑपरेटिव' देखभाल में नर्स की प्राथमिकता क्या है?",
+    "o": ["Give food", "Maintain a patent airway | वायुमार्ग (Airway) खुला रखना", "Ask about pain only", "Change dressing"],
+    "a": 1,
+    "e": "Ensuring the patient can breathe effectively is the most critical immediate care[cite: 126, 147].",
+    "cat": "technical",
+    "sub": "medical_surgical_nursing"
+  },
+  {
+    "q": "A 'Hernia' is best described as: / 'हर्निया' का सबसे अच्छा वर्णन है:",
+    "o": ["A broken bone", "Protrusion of an organ through a weak spot in the muscle | मांसपेशी के कमजोर हिस्से से अंग का बाहर निकलना", "A skin infection", "None"],
+    "a": 1,
+    "e": "Hernias often occur in the abdominal wall or groin[cite: 134].",
+    "cat": "technical",
+    "sub": "medical_surgical_nursing"
+  },
+  {
+    "q": "Which OT instrument is primarily used for grasping and holding tissue? / ऊतक (Tissue) को पकड़ने और थामने के लिए मुख्य रूप से किस OT उपकरण का उपयोग किया जाता है?",
+    "o": ["Scalpel", "Forceps | फोरसेप्स", "Retractor", "Scissors"],
+    "a": 1,
+    "e": "Forceps come in various sizes for different surgical grasping needs[cite: 146].",
+    "cat": "technical",
+    "sub": "medical_surgical_nursing"
+  },
+  {
+    "q": "What is the primary indicator of 'Kidney Failure' in blood tests? / रक्त परीक्षणों में 'किडनी फेलियर' का प्राथमिक संकेतक क्या है?",
+    "o": ["Low glucose", "Elevated Serum Creatinine | सीरम क्रिएटिनिन का उच्च स्तर", "High hemoglobin", "None"],
+    "a": 1,
+    "e": "Creatinine is a waste product that kidneys normally filter out; high levels suggest poor function[cite: 137].",
+    "cat": "technical",
+    "sub": "medical_surgical_nursing"
+  },
+  {
+    "q": "Which OT equipment is used to provide a sterile field and manage surgical lighting? / किस OT उपकरण का उपयोग स्टेराइल फील्ड प्रदान करने और सर्जिकल लाइटिंग के प्रबंधन के लिए किया जाता है?",
+    "o": ["Suction machine", "Overhead surgical lights | ओवरहेड सर्जिकल लाइट्स", "Defibrillator", "Ventilator"],
+    "a": 1,
+    "e": "Shadow-less overhead lights are essential for visibility during operations[cite: 146].",
+    "cat": "technical",
+    "sub": "medical_surgical_nursing"
+  },
+  {
+    "q": "Which positioning is most beneficial for a patient experiencing acute respiratory distress in Asthma? / अस्थमा में तीव्र श्वसन संकट का सामना कर रहे रोगी के लिए कौन सी पोजीशन सबसे फायदेमंद है?",
+    "o": ["Supine position", "High-Fowler's position | हाई-फाउलर पोजीशन", "Lithotomy position", "Prone position"],
+    "a": 1,
+    "e": "Sitting upright (High-Fowler's) helps in maximum lung expansion and eases breathing[cite: 128].",
+    "cat": "technical",
+    "sub": "medical_surgical_nursing"
+  },
+  {
+    "q": "What is the hallmark symptom of 'Pulmonary Tuberculosis'? / 'पल्मोनरी ट्यूबरकुलोसिस' का प्रमुख लक्षण क्या है?",
+    "o": ["Sudden chest pain", "Persistent cough for more than 3 weeks | 3 सप्ताह से अधिक खांसी", "Skin rash", "Severe headache"],
+    "a": 1,
+    "e": "A chronic cough, often with blood-streaked sputum, is a classic sign of TB[cite: 128].",
+    "cat": "technical",
+    "sub": "medical_surgical_nursing"
+  },
+  {
+    "q": "In 'Myocardial Infarction' (Heart Attack), which enzyme is most specific for diagnosis? / 'मायोकार्डियल इंफार्क्शन' (हार्ट अटैक) में, निदान के लिए कौन सा एंजाइम सबसे विशिष्ट है?",
+    "o": ["Amylase", "Troponin I/T | ट्रोपोनिन", "Alkaline Phosphatase", "None"],
+    "a": 1,
+    "e": "Cardiac troponins are highly specific markers for myocardial damage[cite: 129].",
+    "cat": "technical",
+    "sub": "medical_surgical_nursing"
+  },
+  {
+    "q": "Which blood type is considered the 'Universal Donor'? / किस रक्त प्रकार को 'यूनिवर्सल डोनर' माना जाता है?",
+    "o": ["AB positive", "O negative | ओ नेगेटिव", "A positive", "B negative"],
+    "a": 1,
+    "e": "O negative blood can be given to patients of any blood type in emergencies[cite: 132].",
+    "cat": "technical",
+    "sub": "medical_surgical_nursing"
+  },
+  {
+    "q": "What is the primary nursing intervention during a 'Blood Transfusion' reaction? / 'ब्लड ट्रांसफ्यूजन' रिएक्शन के दौरान प्राथमिक नर्सिंग हस्तक्षेप क्या है?",
+    "o": ["Slow the rate", "Stop the transfusion immediately | ट्रांसफ्यूजन तुरंत रोकें", "Give water to patient", "Continue and monitor"],
+    "a": 1,
+    "e": "Safety first: Stopping the infusion prevents further administration of the offending blood[cite: 132, 133].",
+    "cat": "technical",
+    "sub": "medical_surgical_nursing"
+  },
+  {
+    "q": "Hypertension is clinically defined as a persistent blood pressure above: / उच्च रक्तचाप (Hypertension) को चिकित्सकीय रूप से किसके ऊपर के निरंतर रक्तचाप के रूप में परिभाषित किया गया है?",
+    "o": ["110/70 mmHg", "140/90 mmHg | 140/90 mmHg", "120/80 mmHg", "100/60 mmHg"],
+    "a": 1,
+    "e": "Consistent readings of 140/90 or higher indicate hypertension[cite: 129].",
+    "cat": "technical",
+    "sub": "medical_surgical_nursing"
+  },
+  {
+    "q": "What is the most common cause of 'Iron Deficiency Anemia'? / 'आयरन की कमी से होने वाले एनीमिया' का सबसे सामान्य कारण क्या है?",
+    "o": ["Excessive sleep", "Chronic blood loss or poor diet | पुराना रक्तस्राव या खराब आहार", "Drinking too much water", "None"],
+    "a": 1,
+    "e": "Inadequate intake or loss of iron leads to reduced hemoglobin production[cite: 132].",
+    "cat": "technical",
+    "sub": "medical_surgical_nursing"
+  },
+  {
+    "q": "Which type of 'Lung Cancer' is most strongly associated with smoking? / किस प्रकार का 'फेफड़ों का कैंसर' धूम्रपान से सबसे अधिक मजबूती से जुड़ा है?",
+    "o": ["Small cell lung cancer | स्मॉल सेल लंग कैंसर", "Adenocarcinoma", "Large cell carcinoma", "None"],
+    "a": 0,
+    "e": "Small cell lung cancer is almost exclusively found in heavy smokers[cite: 128].",
+    "cat": "technical",
+    "sub": "medical_surgical_nursing"
+  },
+  {
+    "q": "What is the role of 'Nitroglycerin' in Angina Pectoris? / एंजाइना पेक्टोरिस में 'नाइट्रोग्लिसरीन' की क्या भूमिका है?",
+    "o": ["To increase BP", "Vasodilation to reduce chest pain | सीने के दर्द को कम करने के लिए वासोडिलेशन", "To thin the blood", "None"],
+    "a": 1,
+    "e": "It relaxes coronary arteries, improving blood flow to the heart muscle[cite: 130].",
+    "cat": "technical",
+    "sub": "medical_surgical_nursing"
+  },
+  {
+    "q": "Leukemia is a cancer characterized by the uncontrolled production of: / ल्यूकेमिया एक कैंसर है जिसमें किसका अनियंत्रित उत्पादन होता है?",
+    "o": ["Red blood cells", "Abnormal white blood cells | असामान्य श्वेत रक्त कोशिकाएं", "Platelets", "None"],
+    "a": 1,
+    "e": "Leukemia affects the blood-forming tissues, leading to an overproduction of immature WBCs[cite: 132].",
+    "cat": "technical",
+    "sub": "medical_surgical_nursing"
+  },
+  {
+    "q": "What is the mandatory storage requirement for 'Narcotic' drugs in a hospital? / अस्पताल में 'नशीली' दवाओं (Narcotics) के लिए अनिवार्य भंडारण आवश्यकता क्या है?",
+    "o": ["In an open shelf", "Double-locked cupboard and strict record-keeping | डबल-लॉक अलमारी और रिकॉर्ड", "Under the patient's bed", "None"],
+    "a": 1,
+    "e": "Narcotics must be kept under double lock and key, with every dose recorded to prevent misuse and legal issues[cite: 106].",
+    "cat": "technical",
+    "sub": "nursing_foundations"
+  },
+  {
+    "q": "What is the primary purpose of the 'Cold Chain' in vaccine management? / वैक्सीन प्रबंधन में 'कोल्ड चेन' (Cold Chain) का प्राथमिक उद्देश्य क्या है?",
+    "o": ["To keep the vaccine bottles clean", "To maintain potency by keeping vaccines at specific temperatures | प्रभावशीलता बनाए रखना", "To freeze all vaccines", "None"],
+    "a": 1,
+    "e": "Cold chain ensures vaccines are stored and transported within recommended temperature ranges to remain effective[cite: 62].",
+    "cat": "technical",
+    "sub": "community_health_nursing"
+  },
+  {
+    "q": "In Adult CPR, what is the correct ratio of chest compressions to rescue breaths? / वयस्क CPR में, चेस्ट कंप्रेशन और रेस्क्यू ब्रीदिंग का सही अनुपात क्या है?",
+    "o": ["15:2", "30:2 | 30:2", "5:1", "50:2"],
+    "a": 1,
+    "e": "The standard ratio for adult CPR is 30 compressions followed by 2 breaths to maintain circulation and oxygenation[cite: 51, 197].",
+    "cat": "technical",
+    "sub": "medical_surgical_nursing"
+  },
+  {
+    "q": "When transporting a patient with a suspected 'Spinal Cord' injury, which technique is essential? / 'रीढ़ की हड्डी' की संदिग्ध चोट वाले मरीज को ले जाते समय कौन सी तकनीक आवश्यक है?",
+    "o": ["Sitting position", "Log-rolling and using a backboard | लॉग-रोलिंग और बैकबोर्ड", "Carrying in arms", "None"],
+    "a": 1,
+    "e": "Log-rolling keeps the head, neck, and spine in alignment to prevent further permanent damage during transport[cite: 53, 109].",
+    "cat": "technical",
+    "sub": "nursing_foundations"
+  },
+  {
+    "q": "What is a common toxic symptom of 'Digoxin' overdose? / 'डिजॉक्सिन' ओवरडोज का एक सामान्य विषाक्त लक्षण क्या है?",
+    "o": ["Increased hunger", "Visual disturbances (Yellow-green halos) | दृष्टि संबंधी गड़बड़ी", "Hyperactivity", "Skin rash"],
+    "a": 1,
+    "e": "Digoxin toxicity often manifests as nausea, vomiting, and characteristic changes in color vision[cite: 11].",
+    "cat": "technical",
+    "sub": "basic_sciences"
+  },
+  {
+    "q": "Which emergency equipment is used to deliver a controlled electric shock to restore heart rhythm? / हृदय की लय बहाल करने के लिए नियंत्रित बिजली का झटका देने के लिए किस उपकरण का उपयोग किया जाता है?",
+    "o": ["Ventilator", "Defibrillator | डिफिब्रिलेटर", "Suction machine", "Nebulizer"],
+    "a": 1,
+    "e": "Defibrillators are critical in treating life-threatening cardiac arrhythmias like ventricular fibrillation[cite: 149].",
+    "cat": "technical",
+    "sub": "medical_surgical_nursing"
+  },
+  {
+    "q": "What is the recommended depth of chest compressions for an adult during CPR? / CPR के दौरान वयस्क के लिए चेस्ट कंप्रेशन की अनुशंसित गहराई क्या है?",
+    "o": ["1 inch", "At least 2 inches (5 cm) | कम से कम 2 इंच", "5 inches", "None"],
+    "a": 1,
+    "e": "Adequate depth is necessary to manually pump blood out of the heart to the brain and organs[cite: 51].",
+    "cat": "technical",
+    "sub": "medical_surgical_nursing"
+  },
+  {
+    "q": "If a patient shows signs of 'Anaphylactic Shock' after an injection, what is the immediate action? / यदि इंजेक्शन के बाद मरीज 'एनाफिलेक्टिक शॉक' के लक्षण दिखाता है, तो तत्काल कार्रवाई क्या है?",
+    "o": ["Wait for 10 minutes", "Administer Adrenaline (Epinephrine) and notify doctor | एड्रेनालिन देना", "Give a glass of juice", "None"],
+    "a": 1,
+    "e": "Anaphylaxis is a life-threatening allergic reaction requiring immediate intervention to open airways[cite: 51, 105].",
+    "cat": "technical",
+    "sub": "medical_surgical_nursing"
+  },
+  {
+    "q": "How should a nurse handle 'Biomedical Waste' like used needles? / नर्स को इस्तेमाल की गई सुइयों जैसे 'बायोमेडिकल वेस्ट' को कैसे संभालना चाहिए?",
+    "o": ["Dispose in blue bag", "Discard in a puncture-proof yellow container | पंचर-प्रूफ पीले कंटेनर में डालें", "Throw in regular trash", "None"],
+    "a": 1,
+    "e": "Used sharps must be placed in puncture-resistant containers to prevent needle-stick injuries and infection spread[cite: 104, 133].",
+    "cat": "technical",
+    "sub": "nursing_foundations"
+  },
+  {
+    "q": "What is the first step in the 'Chain of Survival' for cardiac arrest? / कार्डियक अरेस्ट के लिए 'चेन ऑफ सर्वाइवल' का पहला चरण क्या है?",
+    "o": ["Start surgery", "Early recognition and activation of emergency response | आपातकालीन प्रतिक्रिया सक्रिय करना", "Give medicine", "None"],
+    "a": 1,
+    "e": "Immediate recognition of arrest and calling for help is the foundation of successful resuscitation[cite: 51, 130].",
+    "cat": "technical",
+    "sub": "medical_surgical_nursing"
+  },
+  {
+    "q": "In a Medico-Legal Case (MLC), what is the nurse's primary duty regarding the patient's clothing and belongings? / मेडिको-लीगल केस (MLC) में, मरीज के कपड़ों और सामान के संबंध में नर्स का प्राथमिक कर्तव्य क्या है?",
+    "o": ["Wash and return to family", "Preserve and hand over to police as evidence | साक्ष्य के रूप में सुरक्षित रखना", "Discard them", "Keep them in the ward"],
+    "a": 1,
+    "e": "Any item belonging to an MLC patient can be vital evidence; they must be labeled and preserved for the police[cite: 80, 82].",
+    "cat": "technical",
+    "sub": "nursing_foundations"
+  },
+  {
+    "q": "What is the nurse's role when a patient is giving a 'Dying Declaration'? / 'मरने से पहले दिए गए बयान' (Dying Declaration) के दौरान नर्स की क्या भूमिका है?",
+    "o": ["To write the statement themselves", "To witness and ensure the patient is mentally fit | गवाह बनना और मानसिक स्थिति सुनिश्चित करना", "To call the media", "None"],
+    "a": 1,
+    "e": "A nurse often acts as a witness to ensure the declaration was made voluntarily and that the patient was conscious[cite: 111, 112].",
+    "cat": "technical",
+    "sub": "nursing_foundations"
+  },
+  {
+    "q": "A fever where the temperature remains above normal but fluctuates more than 2°C in 24 hours is called: / वह बुखार जहाँ तापमान सामान्य से ऊपर रहता है लेकिन 24 घंटों में 2°C से अधिक बदलता है, कहलाता है:",
+    "o": ["Constant fever", "Remittent fever | रेमिटेंट बुखार", "Intermittent fever", "Relapsing fever"],
+    "a": 1,
+    "e": "In remittent fever, the temperature varies significantly but never touches the normal baseline[cite: 90].",
+    "cat": "technical",
+    "sub": "nursing_foundations"
+  },
+  {
+    "q": "Which pulse characteristic refers to the 'strength' or 'force' of the heart's contraction? / पल्स की कौन सी विशेषता हृदय के संकुचन की 'शक्ति' या 'बल' को संदर्भित करती है?",
+    "o": ["Rhythm", "Volume (Amplitude) | वॉल्यूम (आयाम)", "Rate", "Tension"],
+    "a": 1,
+    "e": "Pulse volume reflects the amount of blood pumped with each beat and the force of the pulse[cite: 91, 92].",
+    "cat": "technical",
+    "sub": "nursing_foundations"
+  },
+  {
+    "q": "When transferring a patient to another hospital, which information must be included in the 'Transfer Report'? / मरीज को दूसरे अस्पताल भेजते समय 'ट्रांसफर रिपोर्ट' में कौन सी जानकारी शामिल होनी चाहिए?",
+    "o": ["Current vitals and treatment given | वर्तमान वाइटल और दिया गया उपचार", "Hospital menu", "Patient's hobbies", "None"],
+    "a": 0,
+    "e": "Transfer reports must be factual, accurate, and organized to ensure continuity of care[cite: 88, 89].",
+    "cat": "technical",
+    "sub": "nursing_foundations"
+  },
+  {
+    "q": "What precaution is essential when taking the temperature of an 'Unconscious' patient? / 'बेहोश' मरीज का तापमान लेते समय कौन सी सावधानी आवश्यक है?",
+    "o": ["Avoid the oral route | ओरल मार्ग से बचें", "Use a glass thermometer", "Ask the patient to hold it", "None"],
+    "a": 0,
+    "e": "Oral temperature is contraindicated in unconscious patients due to the risk of biting the thermometer or aspiration[cite: 90, 98].",
+    "cat": "technical",
+    "sub": "nursing_foundations"
+  },
+  {
+    "q": "A pulse that is irregular in rhythm is known as: / वह पल्स जिसकी लय (rhythm) अनियमित होती है, कहलाती है:",
+    "o": ["Tachycardia", "Arrhythmia | अरिदमिया (Arrhythmia)", "Bradycardia", "Eupnea"],
+    "a": 1,
+    "e": "Arrhythmia is an alteration in the pulse characteristics, specifically its regularity[cite: 92, 129].",
+    "cat": "technical",
+    "sub": "nursing_foundations"
+  },
+  {
+    "q": "In 'Intermittent' fever, the temperature: / 'इंटरमिटेंट' (Intermittent) बुखार में, तापमान:",
+    "o": ["Remains high constantly", "Returns to normal at regular intervals | नियमित अंतराल पर सामान्य हो जाता है", "Stays below normal", "Fluctuates 5 degrees every hour"],
+    "a": 1,
+    "e": "Intermittent fever is characterized by periods of normal temperature between peaks of fever[cite: 90].",
+    "cat": "technical",
+    "sub": "nursing_foundations"
+  },
+  {
+    "q": "Which site is preferred for pulse assessment in infants (under 1 year)? / शिशुओं (1 वर्ष से कम) में पल्स मूल्यांकन के लिए कौन सा स्थान पसंद किया जाता है?",
+    "o": ["Radial artery", "Apical pulse | एपिकल पल्स", "Carotid artery", "Dorsalis pedis"],
+    "a": 1,
+    "e": "Apical pulse assessment is the most accurate method for infants as peripheral pulses can be hard to palpate[cite: 92].",
+    "cat": "technical",
+    "sub": "pediatric_nursing"
+  },
+  {
+    "q": "What is the primary goal of the 'Referral System'? / 'रेफरल सिस्टम' (Referral System) का प्राथमिक लक्ष्य क्या है?",
+    "o": ["To reduce hospital staff", "To provide specialized care not available at the current facility | विशेषज्ञ देखभाल प्रदान करना", "To increase patient bills", "None"],
+    "a": 1,
+    "e": "Referrals ensure patients receive the appropriate level of medical and nursing care required for their condition[cite: 81].",
+    "cat": "technical",
+    "sub": "nursing_foundations"
+  },
+  {
+    "q": "What is the 'Right Route' check in drug administration? / दवा प्रशासन में 'सही मार्ग' (Right Route) की जांच क्या है?",
+    "o": ["Giving medicine at 10 AM", "Ensuring the drug is given via the prescribed path (e.g., IV vs IM) | निर्धारित पथ से दवा देना", "Giving the drug to the right ward", "None"],
+    "a": 1,
+    "e": "The route must match the physician's prescription to ensure safety and effectiveness[cite: 105, 107].",
+    "cat": "technical",
+    "sub": "nursing_foundations"
+  },
+  {
+    "q": "What is the First Aid for a 'Fracture' in a limb? / हाथ या पैर में 'फ्रैक्चर' के लिए प्राथमिक चिकित्सा क्या है?",
+    "o": ["Massage the area", "Splint and immobilize the joint above and below the injury | स्प्लिंट और स्थिर करना", "Apply hot compress", "Try to straighten the bone"],
+    "a": 1,
+    "e": "Immobilization prevents further damage to tissues and nerves[cite: 108, 109].",
+    "cat": "technical",
+    "sub": "nursing_foundations"
+  },
+  {
+    "q": "Which route provides the 'fastest' absorption of medication? / दवा का सबसे तेज़ अवशोषण कौन सा मार्ग प्रदान करता है?",
+    "o": ["Oral", "Intravenous (IV) | इंट्रावेनस", "Subcutaneous", "Intradermal"],
+    "a": 1,
+    "e": "IV administration puts the medication directly into the systemic circulation[cite: 105].",
+    "cat": "technical",
+    "sub": "nursing_foundations"
+  },
+  {
+    "q": "The abbreviation 'q.i.d.' means the medicine should be given: / 'q.i.d.' संक्षिप्त नाम का अर्थ है कि दवा दी जानी चाहिए:",
+    "o": ["Twice a day", "Four times a day | दिन में चार बार", "Every hour", "Every other day"],
+    "a": 1,
+    "e": "q.i.d. (quater in die) is a standard instruction for four-times-daily dosing[cite: 107].",
+    "cat": "technical",
+    "sub": "nursing_foundations"
+  },
+  {
+    "q": "What is the immediate First Aid for an 'Insect Bite' with a stinger? / डंक वाले 'कीड़े के काटने' के लिए तत्काल प्राथमिक चिकित्सा क्या है?",
+    "o": ["Squeeze the area", "Scrape off the stinger and apply a cold compress | डंक को खुरच कर निकालें", "Apply heat", "None"],
+    "a": 1,
+    "e": "Scraping avoids squeezing more venom into the skin; cold compress reduces swelling[cite: 109].",
+    "cat": "technical",
+    "sub": "nursing_foundations"
+  },
+  {
+    "q": "What is 'Polypharmacy'? / 'पॉलीफार्मेसी' (Polypharmacy) क्या है?",
+    "o": ["A pharmacy building", "Concurrent use of multiple medications by a patient | एक साथ कई दवाओं का उपयोग", "Study of pharmacy", "None"],
+    "a": 1,
+    "e": "It increases the risk of drug interactions and adverse effects[cite: 10, 106].",
+    "cat": "technical",
+    "sub": "nursing_foundations"
+  },
+  {
+    "q": "What is the First Aid priority for a person with 'Hemorrhage' (severe bleeding)? / 'रक्तस्राव' (गंभीर रक्तस्राव) वाले व्यक्ति के लिए प्राथमिक चिकित्सा प्राथमिकता क्या है?",
+    "o": ["Give them water", "Apply direct pressure to the wound | घाव पर सीधा दबाव डालें", "Check their temperature", "None"],
+    "a": 1,
+    "e": "Controlling blood loss is vital to prevent shock and maintain circulation[cite: 109].",
+    "cat": "technical",
+    "sub": "nursing_foundations"
+  },
+  {
+    "q": "The 'Rights' of drug administration must be checked: / दवा प्रशासन के 'Rights' की जांच की जानी चाहिए:",
+    "o": ["Only once a week", "Every time a medication is prepared and given | हर बार जब दवा दी जाती है", "Only for children", "None"],
+    "a": 1,
+    "e": "Frequent verification is the best defense against medication errors[cite: 31, 105].",
+    "cat": "technical",
+    "sub": "nursing_foundations"
+  },
+  {
+    "q": "What is the First Aid for a victim of 'Poisoning' who is unconscious? / जहर खाने वाले बेहोश पीड़ित के लिए प्राथमिक चिकित्सा क्या है?",
+    "o": ["Make them vomit", "Maintain an open airway and transport immediately | वायुमार्ग खुला रखें और तुरंत ले जाएं", "Give them milk", "None"],
+    "a": 1,
+    "e": "Vomiting is dangerous in an unconscious person due to aspiration risk; transport is priority[cite: 109].",
+    "cat": "technical",
+    "sub": "nursing_foundations"
+  },
+  {
+    "q": "Which First Aid action is appropriate for a 'Minor Burn'? / 'मामूली जलन' (Minor Burn) के लिए कौन सी प्राथमिक चिकित्सा कार्रवाई उपयुक्त है?",
+    "o": ["Apply butter", "Run cool tap water over the burn for several minutes | ठंडे पानी की धार डालें", "Apply ice directly", "Pop the blisters"],
+    "a": 1,
+    "e": "Cooling stops the burning process and relieves pain without damaging tissue like ice might[cite: 27, 108].",
+    "cat": "technical",
+    "sub": "nursing_foundations"
+  },
+  {
+    "q": "What is the primary legal responsibility of a nurse when a patient 'Absconds' from the hospital? / जब कोई मरीज अस्पताल से 'फरार' (Abscond) हो जाता है, तो नर्स की प्राथमिक कानूनी जिम्मेदारी क्या है?",
+    "o": ["Inform the police and document the incident | पुलिस को सूचित करना और घटना का दस्तावेजीकरण", "Lock the ward", "Ask the family to pay the bill", "None"],
+    "a": 0,
+    "e": "Absconding is a serious medico-legal issue that requires immediate reporting and factual documentation[cite: 81, 88].",
+    "cat": "technical",
+    "sub": "nursing_foundations"
+  },
+  {
+    "q": "Which factor is most likely to cause 'Bradycardia' in an adult? / वयस्क में 'ब्रैडीकार्डिया' (Bradycardia) होने की सबसे अधिक संभावना किस कारक से है?",
+    "o": ["Fear", "Deep sleep or being an athlete | गहरी नींद या एथलीट होना", "Fever", "Anxiety"],
+    "a": 1,
+    "e": "Bradycardia (pulse < 60 bpm) is normal during sleep or in highly trained athletes due to efficient heart function[cite: 91, 92].",
+    "cat": "technical",
+    "sub": "nursing_foundations"
+  },
+  {
+    "q": "When assessing respiration, why should the nurse not tell the patient they are counting breaths? / श्वसन का आकलन करते समय, नर्स को रोगी को यह क्यों नहीं बताना चाहिए कि वे सांसों की गिनती कर रहे हैं?",
+    "o": ["To save time", "To prevent the patient from consciously altering their breathing | सांसों के अनैच्छिक परिवर्तन को रोकने के लिए", "It is a secret procedure", "None"],
+    "a": 1,
+    "e": "Respiration can be consciously controlled; not telling the patient ensures an accurate resting rate[cite: 93, 94].",
+    "cat": "technical",
+    "sub": "nursing_foundations"
+  },
+  {
+    "q": "Which site is preferred for assessing body temperature in a patient with 'Oral' surgery? / 'ओरल' सर्जरी वाले मरीज में शरीर के तापमान के आकलन के लिए कौन सा स्थान पसंद किया जाता है?",
+    "o": ["Mouth", "Axilla (Armpit) or Rectum | बगल (Axilla) या मलाशय", "Tongue", "None"],
+    "a": 1,
+    "e": "Oral assessment is contraindicated in patients with oral trauma or surgery[cite: 90].",
+    "cat": "technical",
+    "sub": "nursing_foundations"
+  },
+  {
+    "q": "What is 'Orthostatic Hypotension'? / 'ऑर्थोस्टेटिक हाइपोटेंशन' (Orthostatic Hypotension) क्या है?",
+    "o": ["High BP during exercise", "Drop in BP when standing up from a sitting/lying position | उठने पर बीपी में गिरावट", "Constant high BP", "None"],
+    "a": 1,
+    "e": "It is a sudden fall in blood pressure that occurs when a person changes position rapidly[cite: 95].",
+    "cat": "technical",
+    "sub": "nursing_foundations"
+  },
+  {
+    "q": "What is the 'Golden Hour' in trauma and first aid? / आघात और प्राथमिक चिकित्सा में 'गोल्डन आवर' क्या है?",
+    "o": ["The first hour after injury where medical intervention is most critical | चोट के बाद का पहला घंटा", "One hour before surgery", "The time of sunset", "None"],
+    "a": 0,
+    "e": "Immediate care within the first hour significantly improves the chances of survival[cite: 108, 110].",
+    "cat": "technical",
+    "sub": "nursing_foundations"
+  },
+  {
+    "q": "In 'Cheyne-Stokes' respiration, what pattern is observed? / 'चेयेन-स्टोक्स' श्वसन में कौन सा पैटर्न देखा जाता है?",
+    "o": ["Constant fast breathing", "Alternating periods of deep breathing and apnea | गहरी सांस और एपनिया का चक्र", "Normal breathing", "Slow breathing"],
+    "a": 1,
+    "e": "This pattern is often seen in terminal illnesses or heart failure[cite: 94, 111].",
+    "cat": "technical",
+    "sub": "nursing_foundations"
+  },
+  {
+    "q": "Which document is essential for transferring a patient to another hospital? / मरीज को दूसरे अस्पताल में स्थानांतरित करने के लिए कौन सा दस्तावेज आवश्यक है?",
+    "o": ["ID card", "Referral/Transfer report | रेफरल/ट्रांसफर रिपोर्ट", "Diet chart", "None"],
+    "a": 1,
+    "e": "Transfer reports ensure continuity of care and share critical patient data[cite: 81, 89].",
+    "cat": "technical",
+    "sub": "nursing_foundations"
+  },
+  {
+    "q": "Which sound is identified as the 'Systolic' blood pressure? / किस ध्वनि को 'सिस्टोलिक' रक्तचाप के रूप में पहचाना जाता है?",
+    "o": ["The last muffled sound", "The first clear tapping sound heard | पहली स्पष्ट टैपिंग ध्वनि", "The constant background noise", "None"],
+    "a": 1,
+    "e": "The first Korotkoff sound corresponds to the peak pressure in the arteries[cite: 95].",
+    "cat": "technical",
+    "sub": "nursing_foundations"
+  },
+  {
+    "q": "What is the nurse's role in caring for the 'Unit' after a patient's discharge? / मरीज के डिस्चार्ज होने के बाद 'यूनिट' की देखभाल में नर्स की क्या भूमिका है?",
+    "o": ["Closing the hospital", "Disinfection and preparation for the next admission | कीटाणुशोधन और अगली भर्ती की तैयारी", "Leaving it as it is", "None"],
+    "a": 1,
+    "e": "Terminal cleaning is vital for infection control in clinical settings[cite: 83, 101, 117].",
+    "cat": "technical",
+    "sub": "nursing_foundations"
+  },
+  {
+    "q": "Which medication right is checked by asking the patient to state their name and date of birth? / मरीज से उनका नाम और जन्म तिथि पूछकर दवा का कौन सा 'Right' जांचा जाता है?",
+    "o": ["Right drug", "Right patient | सही मरीज", "Right time", "Right route"],
+    "a": 1,
+    "e": "Using two identifiers ensures the medication is given to the correct individual[cite: 105].",
+    "cat": "technical",
+    "sub": "nursing_foundations"
+  },
+  {
+    "q": "For a 'Subcutaneous' (SC) injection, what is the typical angle of needle insertion? / 'सबक्यूटिनियस' (SC) इंजेक्शन के लिए सुई लगाने का विशिष्ट कोण क्या है?",
+    "o": ["10 degrees", "45 to 90 degrees | 45 से 90 डिग्री", "180 degrees", "15 degrees"],
+    "a": 1,
+    "e": "The angle depends on the amount of subcutaneous tissue and the length of the needle used[cite: 105].",
+    "cat": "technical",
+    "sub": "nursing_foundations"
+  },
+  {
+    "q": "What is the immediate First Aid for a severe chemical burn to the eye? / आंख में गंभीर रासायनिक जलन के लिए तत्काल प्राथमिक चिकित्सा क्या है?",
+    "o": ["Apply a thick bandage", "Flush with clean water for at least 15-20 minutes | कम से कम 15-20 मिनट तक पानी से धोएं", "Apply antibiotic ointment", "Cover with an eye patch"],
+    "a": 1,
+    "e": "Immediate irrigation is critical to dilute and remove the chemical to prevent permanent damage[cite: 109].",
+    "cat": "technical",
+    "sub": "nursing_foundations"
+  },
+  {
+    "q": "The abbreviation 'p.c.' in medication administration means: / दवा प्रशासन में 'p.c.' संक्षिप्त नाम का अर्थ है:",
+    "o": ["Before meals", "After meals | भोजन के बाद", "At bedtime", "When necessary"],
+    "a": 1,
+    "e": "p.c. (post cibum) indicates the medication should be taken after eating[cite: 107].",
+    "cat": "technical",
+    "sub": "nursing_foundations"
+  },
+  {
+    "q": "What should be done first for a victim of an 'Electric Shock'? / 'बिजली के झटके' के शिकार व्यक्ति के लिए सबसे पहले क्या किया जाना चाहिए?",
+    "o": ["Start CPR immediately", "Safely turn off the power source | बिजली के स्रोत को सुरक्षित रूप से बंद करें", "Give them water", "Touch them to pull away"],
+    "a": 1,
+    "e": "Safety first: Ensure the victim is no longer in contact with the live current before touching them[cite: 108].",
+    "cat": "technical",
+    "sub": "nursing_foundations"
+  },
+  {
+    "q": "Which IM injection site is preferred for infants? / शिशुओं के लिए कौन सा IM इंजेक्शन साइट पसंद किया जाता है?",
+    "o": ["Deltoid muscle", "Vastus lateralis (thigh) | वास्टस लैटरलिस (जांघ)", "Gluteus maximus", "None"],
+    "a": 1,
+    "e": "The vastus lateralis is the most developed muscle in infants for safe medication absorption[cite: 105].",
+    "cat": "technical",
+    "sub": "pediatric_nursing"
+  },
+  {
+    "q": "What is the first step in managing an 'Open Fracture' in the field? / खुले फ्रैक्चर (Open Fracture) के प्रबंधन में पहला कदम क्या है?",
+    "o": ["Push the bone back in", "Control bleeding and cover with a clean dressing | रक्तस्राव को नियंत्रित करें और ढकें", "Apply a tight tourniquet", "Massage the area"],
+    "a": 1,
+    "e": "Preventing further contamination and blood loss is the priority before splinting[cite: 109].",
+    "cat": "technical",
+    "sub": "nursing_foundations"
+  },
+  {
+    "q": "If a nurse makes a 'Medication Error', what is the immediate ethical action? / यदि नर्स से दवा की त्रुटि होती है, तो तत्काल नैतिक कार्रवाई क्या है?",
+    "o": ["Hide the record", "Report it immediately to the physician and supervisor | तुरंत डॉक्टर और सुपरवाइजर को रिपोर्ट करें", "Wait for the patient to complain", "None"],
+    "a": 1,
+    "e": "Patient safety is paramount; reporting allows for immediate corrective actions to mitigate harm[cite: 105, 110].",
+    "cat": "technical",
+    "sub": "nursing_foundations"
+  },
+  {
+    "q": "In a 'Heat Stroke' situation, the primary goal is: / 'हीट स्ट्रोक' की स्थिति में प्राथमिक लक्ष्य है:",
+    "o": ["Giving hot tea", "Rapidly cooling the body | शरीर को तेजी से ठंडा करना", "Applying a warm blanket", "Making them walk"],
+    "a": 1,
+    "e": "Heat stroke is a medical emergency requiring urgent reduction of core body temperature[cite: 90].",
+    "cat": "technical",
+    "sub": "nursing_foundations"
+  },
+  {
+    "q": "The 'Right Documentation' includes recording: / 'सही दस्तावेजीकरण' (Right Documentation) में क्या रिकॉर्ड करना शामिल है?",
+    "o": ["The patient's name only", "Time, route, dose, and patient's response | समय, मार्ग, खुराक और प्रतिक्रिया", "The cost of the drug", "The nurse's home address"],
+    "a": 1,
+    "e": "Complete documentation ensures clinical continuity and legal accountability[cite: 87, 88].",
+    "cat": "technical",
+    "sub": "nursing_foundations"
+  },
+  {
+    "q": "What is the nurse's primary responsibility during the 'Admission Procedure'? / 'दाखिला प्रक्रिया' के दौरान नर्स की प्राथमिक जिम्मेदारी क्या है?",
+    "o": ["Paying hospital bills", "Orienting the patient to the unit and assessing vitals | रोगी को यूनिट से परिचित कराना और वाइटल की जांच", "Cleaning the ward", "None"],
+    "a": 1,
+    "e": "Orientation helps reduce patient anxiety, and initial vitals establish a baseline for care[cite: 80].",
+    "cat": "technical",
+    "sub": "nursing_foundations"
+  },
+  {
+    "q": "When a patient leaves the hospital against medical advice (LAMA), which document is essential for legal protection? / जब कोई मरीज सलाह के खिलाफ अस्पताल छोड़ता है (LAMA), तो कानूनी सुरक्षा के लिए कौन सा दस्तावेज आवश्यक है?",
+    "o": ["Birth certificate", "LAMA form/Signed refusal of treatment | हस्ताक्षरित उपचार से इनकार फॉर्म", "Aadhaar card", "None"],
+    "a": 1,
+    "e": "A signed refusal protects the hospital and staff from legal liability regarding the patient's condition after leaving[cite: 81, 82].",
+    "cat": "technical",
+    "sub": "nursing_foundations"
+  },
+  {
+    "q": "What is 'Hypothermia' clinically defined as? / चिकित्सकीय रूप से 'हाइपोथर्मिया' (Hypothermia) को कैसे परिभाषित किया जाता है?",
+    "o": ["Body temperature below 95°F (35°C) | 95°F से कम तापमान", "Temperature above 100°F", "Normal room temperature", "None"],
+    "a": 0,
+    "e": "Hypothermia occurs when the body loses heat faster than it can produce it, causing a dangerously low temperature[cite: 90].",
+    "cat": "technical",
+    "sub": "nursing_foundations"
+  },
+  {
+    "q": "Which of the following describes 'Bradypnea'? / निम्नलिखित में से कौन 'ब्रैडिपनिया' (Bradypnea) का वर्णन करता है?",
+    "o": ["Rapid breathing", "Abnormally slow respiratory rate | असामान्य रूप से धीमी श्वसन दर", "No breathing", "Normal breathing"],
+    "a": 1,
+    "e": "Bradypnea refers to a breathing rate that is slower than the normal limit for an adult[cite: 94].",
+    "cat": "technical",
+    "sub": "nursing_foundations"
+  },
+  {
+    "q": "What happens to the blood pressure when the 'Cuff' used is too narrow? / यदि उपयोग किया गया 'कफ' बहुत संकीर्ण है तो रक्तचाप पर क्या प्रभाव पड़ता है?",
+    "o": ["It gives a falsely low reading", "It gives a falsely high reading | गलत तरीके से उच्च रीडिंग", "It does not affect the reading", "The instrument breaks"],
+    "a": 1,
+    "e": "A narrow cuff can result in an overestimation of blood pressure during assessment[cite: 95].",
+    "cat": "technical",
+    "sub": "nursing_foundations"
+  },
+  {
+    "q": "What is the purpose of 'Discharge Planning'? / 'डिस्चार्ज प्लानिंग' का उद्देश्य क्या है?",
+    "o": ["To vacate beds quickly", "To ensure the patient has necessary resources for home care | होम केयर के लिए संसाधन सुनिश्चित करना", "To reduce staff work", "None"],
+    "a": 1,
+    "e": "Effective planning begins at admission to ensure a smooth transition from hospital to home[cite: 81].",
+    "cat": "technical",
+    "sub": "nursing_foundations"
+  },
+  {
+    "q": "The difference between systolic and diastolic pressure is called: / सिस्टोलिक और डायस्टोलिक दबाव के बीच के अंतर को कहा जाता है:",
+    "o": ["Pulse rate", "Pulse pressure | पल्स प्रेशर", "Mean pressure", "Heart rhythm"],
+    "a": 1,
+    "e": "Pulse pressure reflects the force the heart generates each time it contracts[cite: 95].",
+    "cat": "technical",
+    "sub": "nursing_foundations"
+  },
+  {
+    "q": "Which factor generally increases body temperature? / कौन सा कारक आमतौर पर शरीर के तापमान को बढ़ाता है?",
+    "o": ["Sleep", "Physical exercise and infection | शारीरिक व्यायाम और संक्रमण", "Drinking cold water", "Sitting in a fan"],
+    "a": 1,
+    "e": "Metabolic activity during exercise or immune response to infection raises core temperature[cite: 90].",
+    "cat": "technical",
+    "sub": "nursing_foundations"
+  },
+  {
+    "q": "When measuring an apical pulse, where should the stethoscope be placed? / एपिकल पल्स मापते समय स्टेथोस्कोप कहाँ रखा जाना चाहिए?",
+    "o": ["At the wrist", "At the 5th intercostal space, mid-clavicular line | 5वें इंटरकोस्टल स्पेस में", "On the neck", "Behind the knee"],
+    "a": 1,
+    "e": "This is the most accurate site for assessing the heart's true rhythm and rate[cite: 92].",
+    "cat": "technical",
+    "sub": "nursing_foundations"
+  },
+  {
+    "q": "A blood pressure reading of 150/95 mmHg is classified as: / 150/95 mmHg की रक्तचाप रीडिंग को किस रूप में वर्गीकृत किया जाता है?",
+    "o": ["Normal", "Hypertension | उच्च रक्तचाप", "Hypotension", "None"],
+    "a": 1,
+    "e": "Readings consistently above 140/90 indicate hypertension in an adult[cite: 95].",
+    "cat": "technical",
+    "sub": "nursing_foundations"
+  },
+  {
+    "q": "Which route of drug administration involves placing a tablet under the tongue? / दवा प्रशासन के किस मार्ग में जीभ के नीचे टैबलेट रखना शामिल है?",
+    "o": ["Oral", "Sublingual | सबलिंगुअल", "Rectal", "Intradermal"],
+    "a": 1,
+    "e": "Sublingual administration allows the drug to enter the bloodstream directly through the mucous membrane. [cite: 105]",
+    "cat": "technical",
+    "sub": "nursing_foundations"
+  },
+  {
+    "q": "Which of the following is one of the 'Rights' of drug administration? / निम्नलिखित में से कौन सा दवा प्रशासन के 'Rights' में से एक है?",
+    "o": ["Right Cost", "Right Patient | सही मरीज", "Right Color", "Right Size"],
+    "a": 1,
+    "e": "Confirming the right patient is critical for safety and preventing medication errors. [cite: 105]",
+    "cat": "technical",
+    "sub": "nursing_foundations"
+  },
+  {
+    "q": "What is the first step in providing First Aid to a person who is drowning? / डूब रहे व्यक्ति को प्राथमिक चिकित्सा देने का पहला कदम क्या है?",
+    "o": ["Give them a blanket", "Remove them from water and check for breathing | पानी से बाहर निकालें और सांस की जांच करें", "Give them water to drink", "Apply a bandage"],
+    "a": 1,
+    "e": "Ensuring the person is out of the danger zone and checking the airway is the immediate priority. [cite: 109]",
+    "cat": "technical",
+    "sub": "nursing_foundations"
+  },
+  {
+    "q": "The injection given into the muscle is called: / मांसपेशी में दिए जाने वाले इंजेक्शन को कहा जाता है:",
+    "o": ["Intravenous (IV)", "Intramuscular (IM) | इंट्रामास्कुलर", "Subcutaneous", "Intrathecal"],
+    "a": 1,
+    "e": "IM injections are delivered deep into the muscle tissue for faster absorption than subcutaneous routes. [cite: 105]",
+    "cat": "technical",
+    "sub": "nursing_foundations"
+  },
+  {
+    "q": "If a patient has ingested poison, what should the nurse ideally identify first? / यदि किसी मरीज ने जहर खा लिया है, तो नर्स को आदर्श रूप से सबसे पहले क्या पहचानना चाहिए?",
+    "o": ["Patient's address", "Type and quantity of poison | जहर का प्रकार और मात्रा", "Patient's favorite food", "None"],
+    "a": 1,
+    "e": "Identifying the poison is crucial for determining the correct antidote or treatment. [cite: 109]",
+    "cat": "technical",
+    "sub": "nursing_foundations"
+  },
+  {
+    "q": "Dosage calculation requires understanding: / खुराक की गणना के लिए किसकी समझ आवश्यक है?",
+    "o": ["Weights and measures | वजन और माप", "Patient's hairstyle", "Hospital wall color", "None"],
+    "a": 0,
+    "e": "Skill in weights, measures, and math is essential for accurate medicine preparation. [cite: 8]",
+    "cat": "technical",
+    "sub": "basic_sciences"
+  },
+  {
+    "q": "What is the immediate care for a snake bite on a limb? / हाथ या पैर पर सांप के काटने का तत्काल उपचार क्या है?",
+    "o": ["Run fast", "Immobilize the limb and keep it below heart level | अंग को स्थिर करें और हृदय के स्तर से नीचे रखें", "Suck the venom out", "Apply ice directly"],
+    "a": 1,
+    "e": "Immobilization helps slow the spread of venom through the lymphatic system. [cite: 109]",
+    "cat": "technical",
+    "sub": "nursing_foundations"
+  },
+  {
+    "q": "What is the meaning of the abbreviation 't.i.d.' in a prescription? / एक पर्चे (Prescription) में 't.i.d.' संक्षिप्त नाम का क्या अर्थ है?",
+    "o": ["Once a day", "Three times a day | दिन में तीन बार", "Every hour", "At bedtime"],
+    "a": 1,
+    "e": "t.i.d. (ter in die) is a common medical abbreviation for administering medicine thrice daily. [cite: 107]",
+    "cat": "technical",
+    "sub": "nursing_foundations"
+  },
+  {
+    "q": "Which First Aid rule is most important in a fire emergency? / आग लगने की आपात स्थिति में कौन सा प्राथमिक चिकित्सा नियम सबसे महत्वपूर्ण है?",
+    "o": ["Search for belongings", "Rescue the victim from the fire source safely | पीड़ित को सुरक्षित रूप से बाहर निकालें", "Open all windows", "None"],
+    "a": 1,
+    "e": "Saving lives from the immediate hazard is the priority in disaster situations. [cite: 108]",
+    "cat": "technical",
+    "sub": "nursing_foundations"
+  },
+  {
+    "q": "The 'Right Dose' in drug administration ensures: / दवा प्रशासन में 'सही खुराक' सुनिश्चित करती है:",
+    "o": ["The drug is cheap", "The patient receives the exact prescribed amount | सटीक निर्धारित मात्रा", "The drug is colorful", "None"],
+    "a": 1,
+    "e": "Accurate dosing is necessary to achieve therapeutic effects without toxicity. [cite: 105]",
+    "cat": "technical",
+    "sub": "nursing_foundations"
+  },
+  {
+    "q": "A pulse rate above 100 beats per minute in an adult is termed as: / एक वयस्क में 100 बीट्स प्रति मिनट से अधिक की पल्स रेट को क्या कहा जाता है?",
+    "o": ["Bradycardia", "Tachycardia | टैचीकार्डिया", "Apnea", "Hypertension"],
+    "a": 1,
+    "e": "Tachycardia is the medical term for a heart rate that exceeds the normal resting rate. [cite: 92]",
+    "cat": "technical",
+    "sub": "nursing_foundations"
+  },
+  {
+    "q": "Which instrument is used to measure blood pressure? / रक्तचाप मापने के लिए किस उपकरण का उपयोग किया जाता है?",
+    "o": ["Stethoscope", "Sphygmomanometer | स्फिग्मोमैनोमीटर", "Thermometer", "Otoscope"],
+    "a": 1,
+    "e": "A sphygmomanometer consists of an inflatable cuff and a pressure gauge to measure BP. [cite: 95]",
+    "cat": "technical",
+    "sub": "nursing_foundations"
+  },
+  {
+    "q": "In medico-legal issues, who is primarily responsible for the admission of a patient in a medico-legal case? / मेडिको-लीगल मुद्दों में, मेडिको-लीगल केस में मरीज के दाखिले के लिए मुख्य रूप से कौन जिम्मेदार है?",
+    "o": ["Janitor", "Nurse and Admitting Physician | नर्स और दाखिला देने वाला डॉक्टर", "Patient's relative", "Security guard"],
+    "a": 1,
+    "e": "Specific roles and responsibilities are assigned to nursing and medical staff during admission for legal clarity. [cite: 80]",
+    "cat": "technical",
+    "sub": "nursing_foundations"
+  },
+  {
+    "q": "Normal respiratory rate for a healthy adult at rest is: / विश्राम के समय स्वस्थ वयस्क के लिए सामान्य श्वसन दर (Respiratory rate) है:",
+    "o": ["25-30 breaths/min", "12-20 breaths/min | 12-20 सांस प्रति मिनट", "5-10 breaths/min", "40-50 breaths/min"],
+    "a": 1,
+    "e": "A normal adult typically breathes 12 to 20 times per minute. [cite: 93]",
+    "cat": "technical",
+    "sub": "nursing_foundations"
+  },
+  {
+    "q": "What is the primary objective of a 'Planned Discharge'? / 'नियोजित छुट्टी' (Planned Discharge) का प्राथमिक उद्देश्य क्या है?",
+    "o": ["To save money", "To ensure continuity of care and safety | देखभाल और सुरक्षा की निरंतरता सुनिश्चित करना", "To increase hospital beds", "None"],
+    "a": 1,
+    "e": "A planned discharge involves systematic preparation for the patient's recovery at home. [cite: 81]",
+    "cat": "technical",
+    "sub": "nursing_foundations"
+  },
+  {
+    "q": "Hyperthermia is defined as body temperature: / हाइपरथर्मिया को शरीर के किस तापमान के रूप में परिभाषित किया गया है?",
+    "o": ["Below normal", "Significantly above normal | सामान्य से काफी ऊपर", "Exactly 98.6°F", "None"],
+    "a": 1,
+    "e": "Hyperthermia or fever is a state of elevated body temperature due to infection or other factors. [cite: 90]",
+    "cat": "technical",
+    "sub": "nursing_foundations"
+  },
+  {
+    "q": "The sound heard while measuring blood pressure using a stethoscope is called: / स्टेथोस्कोप का उपयोग करके रक्तचाप मापते समय सुनी जाने वाली ध्वनि कहलाती है:",
+    "o": ["Murmur", "Korotkoff sounds | कोरोटकॉफ ध्वनि", "Wheezing", "Snoozing"],
+    "a": 1,
+    "e": "These specific sounds are used to identify systolic and diastolic pressure levels. [cite: 95]",
+    "cat": "technical",
+    "sub": "nursing_foundations"
+  }
+]
