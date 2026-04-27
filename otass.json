@@ -1,1 +1,1843 @@
-
+[
+  {
+    "q": "What is the primary purpose of pre-operative skin scrubbing? / प्री-ऑपरेटिव स्किन स्क्रबिंग का प्राथमिक उद्देश्य क्या है?",
+    "o": ["To make skin soft", "To reduce the microbial count on the skin | त्वचा पर सूक्ष्मजीवों की संख्या कम करना", "To remove hair", "To improve skin color"],
+    "a": 1,
+    "e": "Skin scrubbing with antiseptics reduces transient and resident flora to prevent surgical site infection. [cite: 87]",
+    "cat": "technical",
+    "sub": "general-nursing"
+  },
+  {
+    "q": "Which position is used for Gallbladder surgery? / पित्ताशय (Gallbladder) की सर्जरी के लिए किस पोजीशन का उपयोग किया जाता है?",
+    "o": ["Lithotomy", "Supine with a sandbag under the right shoulder | दाहिने कंधे के नीचे सैंडबैग के साथ सुपाइन", "Prone", "Trendelenburg"],
+    "a": 1,
+    "e": "A sandbag or gall bladder bridge helps in better exposure of the upper abdominal area. [cite: 80]",
+    "cat": "technical",
+    "sub": "general-nursing"
+  },
+  {
+    "q": "The process of placing a sterile sheet over the patient to expose only the surgical site is called: / सर्जिकल साइट को उजागर करने के लिए मरीज पर स्टेराइल शीट बिछाने की प्रक्रिया कहलाती है:",
+    "o": ["Scrubbing", "Draping | ड्रेपिंग (Draping)", "Gowning", "Fumigation"],
+    "a": 1,
+    "e": "Draping creates a sterile field around the incision site to maintain asepsis. [cite: 87]",
+    "cat": "technical",
+    "sub": "general-nursing"
+  },
+  
+  {
+    "q": "What is the standard adult dose of 'Adrenaline' (1:1000) given during Cardiac Arrest via IV route? / कार्डियक अरेस्ट के दौरान IV मार्ग से 'एड्रेनालिन' की मानक वयस्क खुराक क्या है?",
+    "o": ["5 mg", "1 mg | 1 मिलीग्राम (1 mg)", "10 mg", "0.1 mg"],
+    "a": 1,
+    "e": "In ACLS protocols, 1mg of Adrenaline is given every 3-5 minutes during resuscitation[cite: 171]. / कार्डियक अरेस्ट में हर 3-5 मिनट में 1mg एड्रेनालिन दिया जाता है।",
+    "cat": "technical",
+    "sub": "anaesthesia"
+  },
+  {
+    "q": "When should the 'Soda Lime' in the CO2 absorber be replaced? / CO2 एब्जॉर्बर में 'सोडा लाइम' को कब बदला जाना चाहिए?",
+    "o": ["Every day", "When 50-70% of granules change color | जब 50-70% दाने रंग बदल लें", "Once a year", "Never"],
+    "a": 1,
+    "e": "Color change (usually to violet/purple) indicates that the soda lime is exhausted and can no longer absorb CO2[cite: 174]. / रंग बदलना यह दर्शाता है कि सोडा लाइम अब CO2 नहीं सोख सकता।",
+    "cat": "technical",
+    "sub": "anaesthesia"
+  },
+  {
+    "q": "Which specific ET tube size is generally used for a 'Full-term Newborn'? / 'फुल-टर्म नवजात' के लिए आमतौर पर किस आकार की ET ट्यूब का उपयोग किया जाता है?",
+    "o": ["7.0 mm", "3.0 to 3.5 mm | 3.0 से 3.5 मिमी", "5.0 mm", "2.0 mm"],
+    "a": 1,
+    "e": "Pediatric patients require much smaller uncuffed or cuffed tubes compared to adults[cite: 139, 164]. / बच्चों और नवजात शिशुओं के लिए उनकी आयु के अनुसार छोटे आकार की ट्यूब चाहिए होती है।",
+    "cat": "technical",
+    "sub": "anaesthesia"
+  },
+  {
+    "q": "Under the 'Consumer Protection Act', what constitutes 'Medical Negligence' by an OT Assistant? / उपभोक्ता संरक्षण अधिनियम के तहत, OT असिस्टेंट द्वारा 'मेडिकल लापरवाही' क्या मानी जाती है?",
+    "o": ["Patient's long recovery", "Leaving a mop/instrument inside the patient | मरीज के अंदर मॉप या उपकरण छोड़ देना", "High hospital bill", "Late food delivery"],
+    "a": 1,
+    "e": "Failure to count instruments or gauze correctly is a direct legal liability for the OT team[cite: 101, 201]. / उपकरणों की गिनती में गलती करना एक गंभीर कानूनी अपराध है।",
+    "cat": "technical",
+    "sub": "ethics"
+  },
+  {
+    "q": "What is the 'Dermatome' instrument used for in Plastic Surgery? / प्लास्टिक सर्जरी में 'डर्माटोम' उपकरण का उपयोग किसके लिए किया जाता है?",
+    "o": ["To cut bone", "To harvest skin grafts | स्किन ग्राफ्ट निकालने के लिए", "To stop bleeding", "To stitch skin"],
+    "a": 1,
+    "e": "A dermatome is used to cut thin slices of skin from a donor area for grafting[cite: 139]. / यह उपकरण ग्राफ्टिंग के लिए त्वचा की एक समान पतली परत निकालने के काम आता है।",
+    "cat": "technical",
+    "sub": "surgery"
+  },
+  {
+    "q": "Which vital sign is the most sensitive indicator of 'Hemorrhage' in the early stages? / शुरुआती चरणों में 'रक्तस्राव' का सबसे संवेदनशील संकेतक कौन सा वाइटल साइन है?",
+    "o": ["Temperature", "Increasing Pulse Rate (Tachycardia) | बढ़ती हुई नाड़ी दर", "Decreasing height", "Skin color"],
+    "a": 1,
+    "e": "The body compensates for blood loss by increasing the heart rate before the blood pressure drops[cite: 98, 119]. / रक्तचाप गिरने से पहले शरीर धड़कन बढ़ाकर रक्त की कमी की भरपाई करने की कोशिश करता है।",
+    "cat": "technical",
+    "sub": "general-nursing"
+  },
+  {
+    "q": "What is the 'Maintenance' protocol for the Anesthesia Vaporizer? / एनेस्थीसिया वेपोराइज़र के लिए 'रखरखाव' प्रोटोकॉल क्या है?",
+    "o": ["Washing with soap", "Periodic calibration and leak testing | समय-समय पर कैलिब्रेशन और लीक टेस्टिंग", "Keeping it empty", "None"],
+    "a": 1,
+    "e": "Vaporizers must be accurately calibrated to ensure the correct concentration of gas is delivered[cite: 155, 174]. / गैस की सही मात्रा सुनिश्चित करने के लिए वेपोराइज़र की नियमित जांच जरूरी है।",
+    "cat": "technical",
+    "sub": "anaesthesia"
+  },
+  {
+    "q": "The 'Log book' maintained by an OT Assistant should record: / एक OT असिस्टेंट द्वारा रखी जाने वाली 'लॉग बुक' में क्या दर्ज होना चाहिए?",
+    "o": ["Daily weather", "Details of surgeries assisted and equipment used | सहायता की गई सर्जरी और उपकरणों का विवरण", "Staff salary", "Patient's family history"],
+    "a": 1,
+    "e": "A log book is a formal record of a technician's clinical experience and work performed[cite: 201]. / लॉग बुक तकनीशियन के दैनिक कार्यों और अनुभव का आधिकारिक प्रमाण है।",
+    "cat": "technical",
+    "sub": "administration"
+  },
+  {
+    "q": "In Pediatric surgery, 'Fluid management' is more critical because: / बाल रोग सर्जरी में 'तरल प्रबंधन' अधिक महत्वपूर्ण है क्योंकि:",
+    "o": ["Children drink less water", "Children have low tolerance for fluid imbalance | बच्चों में तरल असंतुलन सहने की क्षमता कम होती है", "Surgery is fast", "None"],
+    "a": 1,
+    "e": "Small changes in fluid volume can cause overload or dehydration in infants quickly[cite: 139, 149]. / बच्चों के शरीर में तरल की थोड़ी सी भी कमी या अधिकता जानलेवा हो सकती है।",
+    "cat": "technical",
+    "sub": "anaesthesia"
+  },
+  {
+    "q": "What is the 'Ethical duty' regarding a patient's 'Informed Consent'? / मरीज की 'सूचित सहमति' (Informed Consent) के संबंध में 'नैतिक कर्तव्य' क्या है?",
+    "o": ["To sign for the patient", "Ensuring the patient understands the procedure before signing | यह सुनिश्चित करना कि मरीज प्रक्रिया समझ गया है", "To ignore consent", "None"],
+    "a": 1,
+    "e": "Consent must be voluntary and informed, protecting both the patient and the medical team[cite: 92, 101]. / बिना पूरी जानकारी और सहमति के सर्जरी करना गैर-कानूनी और अनैतिक है।",
+    "cat": "technical",
+    "sub": "ethics"
+  },
+  {
+    "q": "How should 'Laryngoscope blades' be cleaned after use? / उपयोग के बाद 'लैरींगोस्कोप ब्लेड' को कैसे साफ किया जाना चाहिए?",
+    "o": ["Just wiped with a cloth", "Washed and High-level Disinfection/Sterilization | धुलाई और उच्च-स्तरीय कीटाणुशोधन", "Keep in sun", "No cleaning"],
+    "a": 1,
+    "e": "Blades must be thoroughly cleaned and disinfected as they contact mucous membranes[cite: 174].",
+    "cat": "technical",
+    "sub": "anaesthesia"
+  },
+  {
+    "q": "What is the 'Self-inflating bag' used for manual ventilation called? / मैनुअल वेंटिलेशन के लिए उपयोग किए जाने वाले 'सेल्फ-इन्फ्लेटिंग बैग' को क्या कहा जाता है?",
+    "o": ["Soda lime bag", "AMBU bag | एम्बु बैग (AMBU bag)", "Ryle's bag", "Plastic bag"],
+    "a": 1,
+    "e": "AMBU (Artificial Manual Breathing Unit) is essential for emergency ventilation[cite: 173].",
+    "cat": "technical",
+    "sub": "anaesthesia"
+  },
+  {
+    "q": "Which monitor is used to measure 'End-Tidal Carbon Dioxide' (EtCO2)? / 'एंड-टाइडल कार्बन डाइऑक्साइड' (EtCO2) मापने के लिए किस मॉनिटर का उपयोग किया जाता है?",
+    "o": ["Pulse Oximeter", "Capnograph | कैप्नोग्राफ (Capnograph)", "ECG", "Thermometer"],
+    "a": 1,
+    "e": "Capnography confirms correct ET tube placement and adequate ventilation[cite: 164, 169].",
+    "cat": "technical",
+    "sub": "anaesthesia"
+  },
+  {
+    "q": "The 'Magill's Forceps' is used for: / 'मैगिल फोर्सप्स' (Magill's Forceps) का उपयोग किया जाता है:",
+    "o": ["Cutting skin", "Guiding the ET tube during intubation | इंट्यूबेशन के दौरान ट्यूब को निर्देशित करना", "Holding bone", "Cleaning floor"],
+    "a": 1,
+    "e": "Magill's forceps help in nasal intubation or removing foreign bodies from the airway[cite: 164].",
+    "cat": "technical",
+    "sub": "anaesthesia"
+  },
+  {
+    "q": "What is the 'Full form' of C.P.R.? / C.P.R. का 'फुल फॉर्म' क्या है?",
+    "o": ["Cardiac Pulmonary Repair", "Cardiopulmonary Resuscitation | कार्डियोपल्मोनरी रिससिटेशन", "Central Pulmonary Rate", "None"],
+    "a": 1,
+    "e": "CPR is an emergency procedure combining chest compressions and ventilation[cite: 171].",
+    "cat": "technical",
+    "sub": "anaesthesia"
+  },
+  {
+    "q": "A 'Defibrillator' is used to treat which condition? / 'डिफाइब्रिलेटर' का उपयोग किस स्थिति के इलाज के लिए किया जाता है?",
+    "o": ["Low BP", "Ventricular Fibrillation (Cardiac arrest) | वेंट्रिकुलर फिब्रिलेशन", "Diabetes", "Fever"],
+    "a": 1,
+    "e": "It delivers an electric shock to restore normal heart rhythm during cardiac arrest[cite: 171].",
+    "cat": "technical",
+    "sub": "anaesthesia"
+  },
+  {
+    "q": "Which part of the O.T. table allows the patient's head to be tilted down? / ओ.टी. टेबल का कौन सा हिस्सा मरीज के सिर को नीचे झुकाने की अनुमति देता है?",
+    "o": ["Head end", "Trendelenburg mechanism | ट्रेंडलेनबर्ग तंत्र", "Side rails", "Brakes"],
+    "a": 1,
+    "e": "The Trendelenburg position is used for abdominal surgeries and shock management[cite: 145, 174].",
+    "cat": "technical",
+    "sub": "administration"
+  },
+  {
+    "q": "How are 'Rubber goods' (like rebreathing bags) sterilized? / 'रबर के सामान' (जैसे रीब्रीदिंग बैग) को कैसे स्टरलाइज किया जाता है?",
+    "o": ["Boiling", "Chemical disinfection or ETO sterilization | रासायनिक या ईटीओ स्टरलाइजेशन", "Autoclave at high heat", "None"],
+    "a": 1,
+    "e": "Heat-sensitive rubber items require cold sterilization or specific chemicals[cite: 174].",
+    "cat": "technical",
+    "sub": "microbiology"
+  },
+  {
+    "q": "The 'Checklist' for anesthesia safety was introduced by: / एनेस्थीसिया सुरक्षा के लिए 'चेकलिस्ट' किसके द्वारा शुरू की गई थी?",
+    "o": ["NASA", "WHO (World Health Organization) | डब्ल्यूएचओ (WHO)", "Police", "UN"],
+    "a": 1,
+    "e": "The WHO Surgical Safety Checklist helps prevent complications and accidents[cite: 169].",
+    "cat": "technical",
+    "sub": "administration"
+  },
+  {
+    "q": "What is the primary concern for a technician in the 'Postoperative/Recovery room'? / 'पोस्ट-ऑपरेटिव/रिकवरी रूम' में तकनीशियन के लिए प्राथमिक चिंता क्या है?",
+    "o": ["Patient's food", "Continuous monitoring of vitals and airway | वाइटल और वायुमार्ग की निगरानी", "Patient's clothes", "Money"],
+    "a": 1,
+    "e": "Immediate postoperative care focuses on recovery from anesthesia and preventing complications [cite: 193, 199-101].",
+    "cat": "technical",
+    "sub": "general-nursing"
+  },
+  {
+    "q": "Which drug is used to reverse the action of 'Opioids' (like Fentanyl) in case of respiratory depression? / श्वसन अवसाद के मामले में 'ओपिओइड' के प्रभाव को उलटने के लिए किस दवा का उपयोग किया जाता है?",
+    "o": ["Atropine", "Naloxone | नैलोक्सोन (Naloxone)", "Adrenaline", "Diazepam"],
+    "a": 1,
+    "e": "Naloxone is a specific antagonist for opioid overdose or respiratory depression[cite: 165, 169].",
+    "cat": "technical",
+    "sub": "anaesthesia"
+  },
+  {
+    "q": "What is the primary sign of 'Accidental Esophageal Intubation'? / 'गलती से भोजन नली में ट्यूब' (Esophageal Intubation) डलने का प्राथमिक लक्षण क्या है?",
+    "o": ["Rising SpO2", "Absence of breath sounds in lungs and gurgling in stomach | पेट में गड़गड़ाहट और फेफड़ों में आवाज न आना", "Patient talking", "High BP"],
+    "a": 1,
+    "e": "If the ET tube enters the esophagus instead of the trachea, carbon dioxide levels (EtCO2) will drop and lungs won't expand[cite: 164, 169].",
+    "cat": "technical",
+    "sub": "anaesthesia"
+  },
+  {
+    "q": "Which anesthetic agent is preferred for 'Day Care' surgeries due to rapid recovery? / तेजी से रिकवरी के कारण 'डे केयर' सर्जरी के लिए कौन सा एनेस्थेटिक एजेंट पसंद किया जाता है?",
+    "o": ["Ether", "Sevoflurane | सेवोफ्लुरेन (Sevoflurane)", "Ketamine", "Thiopentone"],
+    "a": 1,
+    "e": "Sevoflurane has low solubility and provides very fast induction and emergence[cite: 155].",
+    "cat": "technical",
+    "sub": "anaesthesia"
+  },
+  {
+    "q": "The 'Laryngeal Mask Airway' (LMA) is placed in which part of the airway? / 'लैरिंजियल मास्क एयरवे' (LMA) को वायुमार्ग के किस भाग में रखा जाता है?",
+    "o": ["Inside the trachea", "Above the vocal cords in the pharynx | वोकल कॉर्ड के ऊपर ग्रसनी (pharynx) में", "Inside the nose", "Inside the stomach"],
+    "a": 1,
+    "e": "LMA is a supraglottic device used when full intubation is not required[cite: 164].",
+    "cat": "technical",
+    "sub": "anaesthesia"
+  },
+  {
+    "q": "What is the function of a 'Vaporizer' in an anesthesia machine? / एनेस्थीसिया मशीन में 'वेपोराइज़र' (Vaporizer) का क्या कार्य है?",
+    "o": ["To heat water", "To convert liquid anesthetic into gas | तरल एनेस्थेटिक को गैस में बदलना", "To measure BP", "To store oxygen"],
+    "a": 1,
+    "e": "Vaporizers precisely control the concentration of volatile anesthetic agents[cite: 174].",
+    "cat": "technical",
+    "sub": "anaesthesia"
+  },
+  {
+    "q": "Which local anesthetic is commonly used for 'Epidural' anesthesia? / 'एपिड्यूरल' एनेस्थीसिया के लिए आमतौर पर किस लोकल एनेस्थेटिक का उपयोग किया जाता है?",
+    "o": ["Propofol", "Bupivacaine | बुपिवाकेन (Bupivacaine)", "Halothane", "Nitrous Oxide"],
+    "a": 1,
+    "e": "Bupivacaine is long-acting and preferred for epidural blocks for labor or surgery[cite: 166, 168].",
+    "cat": "technical",
+    "sub": "anaesthesia"
+  },
+  {
+    "q": "An 'Epidural' space is located: / 'एपिड्यूरल' स्पेस कहाँ स्थित होता है?",
+    "o": ["Inside the brain", "Outside the dura mater | ड्यूरा मेटर के बाहर", "In the blood", "In the skin"],
+    "a": 1,
+    "e": "Epidural anesthesia involves injecting medicine into the space around the spinal nerves[cite: 168].",
+    "cat": "technical",
+    "sub": "anaesthesia"
+  },
+  {
+    "q": "Which of these is a 'Depolarizing' muscle relaxant? / इनमें से कौन सा 'डिपोलराइजिंग' मसल रिलैक्सेंट है?",
+    "o": ["Atracurium", "Succinylcholine (Scoline) | सक्सीनिलकोलाइन", "Pancuronium", "Vecuronium"],
+    "a": 1,
+    "e": "Succinylcholine is used for rapid sequence induction due to its quick onset[cite: 165].",
+    "cat": "technical",
+    "sub": "anaesthesia"
+  },
+  {
+    "q": "What is the common side effect of 'Spinal Anaesthesia'? / 'स्पाइनल एनेस्थीसिया' का सामान्य दुष्प्रभाव क्या है?",
+    "o": ["Fever", "Post-Dural Puncture Headache (PDPH) | सिरदर्द", "Hearing loss", "Increased appetite"],
+    "a": 1,
+    "e": "Leaking of CSF through the dural puncture site can cause severe headache after spinal anesthesia[cite: 168, 169].",
+    "cat": "technical",
+    "sub": "anaesthesia"
+  },
+  {
+    "q": "In the O.T., 'Ketamine' is known for causing: / ओ.टी. में 'केटामाइन' किसके लिए जाना जाता है?",
+    "o": ["Deep sleep", "Dissociative anesthesia | डिसोसिएटिव एनेस्थीसिया", "Muscle paralysis", "No effect"],
+    "a": 1,
+    "e": "Ketamine makes the patient appear awake but detached from the environment and pain[cite: 163].",
+    "cat": "technical",
+    "sub": "anaesthesia"
+  },
+  {
+    "q": "In case of 'Cardiac Arrest' in the O.T., what is the technician's immediate role? / ओ.टी. में 'कार्डियक अरेस्ट' होने पर तकनीशियन की तत्काल भूमिका क्या है?",
+    "o": ["Inform the family", "Assist in CPR and bring the Crash Cart/Defibrillator | सीपीआर और क्रैश कार्ट लाना", "Clean the instruments", "Call the canteen"],
+    "a": 1,
+    "e": "Technicians must act quickly to provide equipment and help in resuscitation[cite: 171].",
+    "cat": "technical",
+    "sub": "anaesthesia"
+  },
+  {
+    "q": "What is the 'Golden Hour' in emergency management? / आपातकालीन प्रबंधन में 'गोल्डन आवर' (Golden Hour) क्या है?",
+    "o": ["The first hour after injury where treatment is most effective | चोट के बाद का पहला घंटा", "One hour before surgery", "Lunch break hour", "None"],
+    "a": 0,
+    "e": "Quick medical intervention during the first hour can significantly improve survival rates[cite: 169].",
+    "cat": "technical",
+    "sub": "medicine"
+  },
+  {
+    "q": "Which tube is placed into the 'Trachea' to maintain a patent airway? / पेटेंट एयरवे बनाए रखने के लिए 'ट्रेकिया' में कौन सी ट्यूब डाली जाती है?",
+    "o": ["Ryle's tube", "Endotracheal Tube (ET Tube) | एंडोट्रैकियल ट्यूब", "Urinary catheter", "Chest tube"],
+    "a": 1,
+    "e": "An ET tube is used for mechanical ventilation and airway protection during surgery[cite: 164].",
+    "cat": "technical",
+    "sub": "anaesthesia"
+  },
+  {
+    "q": "The 'Soda Lime' in an anesthesia machine is used to: / एनेस्थीसिया मशीन में 'सोडा लाइम' का उपयोग किसके लिए किया जाता है?",
+    "o": ["Give oxygen", "Absorb Carbon Dioxide (CO2) | कार्बन डाइऑक्साइड को सोखना", "Cool the machine", "Measure BP"],
+    "a": 1,
+    "e": "Soda lime canisters remove CO2 from the patient's exhaled breath in a closed circuit.",
+    "cat": "technical",
+    "sub": "anaesthesia"
+  },
+  {
+    "q": "What should be used to lubricate an ET tube before insertion? / एंडोट्रैकियल ट्यूब डालने से पहले उसे चिकना करने के लिए किसका उपयोग किया जाना चाहिए?",
+    "o": ["Oil", "Water-soluble jelly (Lignocaine jelly) | वॉटर-सॉल्यूबल जेली", "Soap", "Alcohol"],
+    "a": 1,
+    "e": "Water-soluble lubricants prevent injury to the delicate tissues of the airway.",
+    "cat": "technical",
+    "sub": "general-nursing"
+  },
+  {
+    "q": "Maintenance of O.T. equipment includes: / ओ.टी. उपकरणों के रखरखाव (Maintenance) में शामिल है:",
+    "o": ["Selling old machines", "Regular cleaning, sterilization, and calibration | सफाई, स्टरलाइजेशन और कैलिब्रेशन", "Using them until they break", "Hiding manuals"],
+    "a": 1,
+    "e": "Routine maintenance ensures equipment reliability and patient safety[cite: 174].",
+    "cat": "technical",
+    "sub": "administration"
+  },
+  {
+    "q": "What does 'I.C.U.' stand for in the context of postoperative care? / पोस्ट-ऑपरेटिव देखभाल के संदर्भ में 'I.C.U.' का क्या अर्थ है?",
+    "o": ["Internal Care Unit", "Intensive Care Unit | इंटेंसिव केयर यूनिट", "Intermediate Care Unit", "None"],
+    "a": 1,
+    "e": "ICU is for patients needing continuous monitoring and life support[cite: 173].",
+    "cat": "technical",
+    "sub": "medicine"
+  },
+  {
+    "q": "Which fluid is commonly used for 'Volume Replacement' after blood loss? / रक्त की कमी के बाद 'वॉल्यूम रिप्लेसमेंट' के लिए आमतौर पर किस तरल का उपयोग किया जाता है?",
+    "o": ["Distilled water", "Normal Saline or Ringer's Lactate | नॉर्मल सेलाइन या रिंगर लैक्टेट", "Glucose 50%", "Soda"],
+    "a": 1,
+    "e": "Isotonic fluids like NS or RL are used to maintain blood pressure[cite: 149].",
+    "cat": "technical",
+    "sub": "medicine"
+  },
+  {
+    "q": "A 'Pulse Oximeter' measures which of the following? / 'पल्स ऑक्सीमीटर' निम्नलिखित में से किसे मापता है?",
+    "o": ["Body weight", "Oxygen saturation (SpO2) and Pulse rate | ऑक्सीजन सैचुरेशन और पल्स", "Blood sugar", "Temperature"],
+    "a": 1,
+    "e": "It is a vital non-invasive monitor used throughout the perioperative period[cite: 98, 174].",
+    "cat": "technical",
+    "sub": "general-nursing"
+  },
+  {
+    "q": "Who is responsible for checking the 'Anesthesia Machine' before the first case of the day? / दिन के पहले केस से पहले 'एनेस्थीसिया मशीन' की जांच के लिए कौन जिम्मेदार है?",
+    "o": ["Surgeon", "Anesthesiologist and O.T. Technician | एनेस्थेटिस्ट और ओ.टी. तकनीशियन", "Sweeper", "Patient"],
+    "a": 1,
+    "e": "A pre-use checklist is mandatory to ensure all safety systems are functioning[cite: 174].",
+    "cat": "technical",
+    "sub": "administration"
+  },
+  {
+    "q": "Which gas is stored in 'Blue' colored cylinders in the Operation Theatre? / ऑपरेशन थिएटर में 'नीले' रंग के सिलेंडर में कौन सी गैस भरी होती है?",
+    "o": ["Oxygen", "Nitrous Oxide | नाइट्रस ऑक्साइड", "Carbon Dioxide", "Cyclopropane"],
+    "a": 1,
+    "e": "Nitrous Oxide cylinders are color-coded blue, while Oxygen cylinders have a black body with a white shoulder [cite: 153-155].",
+    "cat": "technical",
+    "sub": "anaesthesia"
+  },
+  {
+    "q": "What is the primary function of 'Muscle Relaxants' during surgery? / सर्जरी के दौरान 'मसल रिलैक्सेंट्स' का प्राथमिक कार्य क्या है?",
+    "o": ["To reduce pain", "To provide skeletal muscle paralysis for easier surgery | मांसपेशियों को शिथिल करना", "To make patient sleep", "To stop bleeding"],
+    "a": 1,
+    "e": "Muscle relaxants like Succinylcholine allow the surgeon to work on relaxed tissues and assist in intubation[cite: 165].",
+    "cat": "technical",
+    "sub": "anaesthesia"
+  },
+  {
+    "q": "Which drug is commonly used as an 'Intravenous (IV) Induction Agent'? / 'इंट्रावेनस (IV) इंडक्शन एजेंट' के रूप में आमतौर पर किस दवा का उपयोग किया जाता है?",
+    "o": ["Atropine", "Propofol | प्रोपोफोल (Propofol)", "Insulin", "Penicillin"],
+    "a": 1,
+    "e": "Propofol is a fast-acting IV agent used to induce a state of general anesthesia[cite: 163].",
+    "cat": "technical",
+    "sub": "anaesthesia"
+  },
+  {
+    "q": "In 'Spinal Anaesthesia', where is the local anaesthetic injected? / 'स्पाइनल एनेस्थीसिया' में लोकल एनेस्थेटिक कहाँ इंजेक्ट किया जाता है?",
+    "o": ["Into the muscle", "Into the Subarachnoid space (CSF) | सबअराक्नॉइड स्पेस (CSF) में", "Into the vein", "Into the skin"],
+    "a": 1,
+    "e": "Spinal anesthesia involves placing medication into the cerebrospinal fluid in the lumbar spine[cite: 168].",
+    "cat": "technical",
+    "sub": "anaesthesia"
+  },
+  {
+    "q": "What is the purpose of 'Pre-anaesthetic medication' like Atropine? / एट्रोपिन जैसी 'प्री-एनेस्थेटिक मेडिकेशन' का उद्देश्य क्या है?",
+    "o": ["To increase saliva", "To reduce secretions and prevent bradycardia | स्राव कम करना और हृदय गति बढ़ाना", "To cause vomiting", "To wake the patient up"],
+    "a": 1,
+    "e": "Atropine is used to dry up secretions and prevent the heart rate from dropping during anesthesia[cite: 151].",
+    "cat": "technical",
+    "sub": "anaesthesia"
+  },
+  {
+    "q": "Which equipment is used to visualize the vocal cords for 'Intubation'? / 'इंट्यूबेशन' के लिए वोकल कॉर्ड देखने हेतु किस उपकरण का उपयोग किया जाता है?",
+    "o": ["Stethoscope", "Laryngoscope | लैरींगोस्कोप (Laryngoscope)", "Endoscope", "Microscope"],
+    "a": 1,
+    "e": "A laryngoscope is essential for managing the airway and inserting an endotracheal tube[cite: 164].",
+    "cat": "technical",
+    "sub": "anaesthesia"
+  },
+  {
+    "q": "What does 'T.U.R.P.' surgery usually require for anesthesia? / 'T.U.R.P.' सर्जरी के लिए आमतौर पर किस एनेस्थीसिया की आवश्यकता होती है?",
+    "o": ["General Anesthesia", "Spinal or Epidural block | स्पाइनल या एपिड्यूरल ब्लॉक", "Local spray", "None"],
+    "a": 1,
+    "e": "Regional anesthesia is often preferred for urogenital surgeries like TURP [cite: 135-136, 168].",
+    "cat": "technical",
+    "sub": "anaesthesia"
+  },
+  {
+    "q": "Which of the following is an 'Inhalation Anaesthetic' agent? / निम्नलिखित में से कौन सा 'सूंघने वाला एनेस्थेटिक' (Inhalation Anaesthetic) एजेंट है?",
+    "o": ["Adrenaline", "Halothane or Isoflurane | हेलोथेन या आइसोफ्लुरेन", "Dopamine", "Diazepam"],
+    "a": 1,
+    "e": "Halothane and Isoflurane are gases/vapors used to maintain general anesthesia[cite: 155].",
+    "cat": "technical",
+    "sub": "anaesthesia"
+  },
+  {
+    "q": "The 'Brachial Plexus Block' provides anesthesia to which part of the body? / 'ब्रेकियल प्लेक्सस ब्लॉक' शरीर के किस हिस्से को एनेस्थीसिया प्रदान करता है?",
+    "o": ["Leg", "Upper limb (Arm) | ऊपरी अंग (हाथ)", "Abdomen", "Face"],
+    "a": 1,
+    "e": "This nerve block is used for surgeries on the shoulder, arm, and hand[cite: 167].",
+    "cat": "technical",
+    "sub": "anaesthesia"
+  },
+  {
+    "q": "What is the concentration of Oxygen in the air we breathe? / जिस हवा में हम सांस लेते हैं उसमें ऑक्सीजन की सांद्रता कितनी होती है?",
+    "o": ["100%", "21% | 21 प्रतिशत", "78%", "50%"],
+    "a": 1,
+    "e": "Atmospheric air contains about 21% Oxygen; in O.T., higher concentrations are often delivered[cite: 153].",
+    "cat": "technical",
+    "sub": "anaesthesia"
+  },
+  {
+    "q": "Which bandage is specifically designed to support the 'Perineum'? / कौन सी बैंडेज विशेष रूप से 'पेरिनम' को सहारा देने के लिए डिज़ाइन की गई है?",
+    "o": ["Capeline", "T-bandage | टी-बैंडेज", "Sling", "Figure-of-eight"],
+    "a": 1,
+    "e": "T-bandages are used to hold dressings securely in the perineal and scrotal areas[cite: 143].",
+    "cat": "technical",
+    "sub": "surgery"
+  },
+  {
+    "q": "What is the 'Scrub Technician's' role regarding surgical instruments? / सर्जिकल उपकरणों के संबंध में 'स्कर्ब तकनीशियन' की क्या भूमिका है?",
+    "o": ["Cleaning the floor", "Maintaining sterile field and passing instruments | स्टेराइल क्षेत्र और उपकरणों को सौंपना", "Giving anesthesia", "Talking to relatives"],
+    "a": 1,
+    "e": "They must anticipate the surgeon's needs and provide sterile instruments quickly[cite: 83, 181].",
+    "cat": "technical",
+    "sub": "general-nursing"
+  },
+  {
+    "q": "Which bandaging technique is best for 'Conical' parts like the forearm? / अग्रबाहु (forearm) जैसे 'शंक्वाकार' भागों के लिए कौन सी बैंडेजिंग तकनीक सबसे अच्छी है?",
+    "o": ["Simple spiral", "Spiral reverse bandage | स्पाइरल रिवर्स बैंडेज", "Capeline", "T-bandage"],
+    "a": 1,
+    "e": "Spiral reverse allows the bandage to fit the varying thickness of the limb better.",
+    "cat": "technical",
+    "sub": "surgery"
+  },
+  {
+    "q": "In Orthopaedics, a 'Spica' bandage is commonly used for: / ऑर्थोपेडिक्स में, 'स्पाइका' (Spica) बैंडेज का उपयोग आमतौर पर किसके लिए किया जाता है?",
+    "o": ["Head", "Shoulder or Hip joints | कंधे या कूल्हे के जोड़", "Finger", "Toe"],
+    "a": 1,
+    "e": "It is a figure-of-eight wrap that incorporates a limb and the trunk[cite: 142].",
+    "cat": "technical",
+    "sub": "surgery"
+  },
+  {
+    "q": "The 'Count' of gauze pieces and instruments must be done: / गॉज पीस और उपकरणों की 'गिनती' कब की जानी चाहिए?",
+    "o": ["After the patient leaves", "Before and after the surgery | सर्जरी से पहले और बाद में", "Only once a week", "Never"],
+    "a": 1,
+    "e": "Accurate counting prevents retaining foreign objects inside the patient's body.",
+    "cat": "technical",
+    "sub": "general-nursing"
+  },
+  {
+    "q": "Why is 'Vaseline Gauze' often used for skin graft donor sites? / स्किन ग्राफ्ट डोनर साइटों के लिए अक्सर 'वेसलीन गॉज' का उपयोग क्यों किया जाता है?",
+    "o": ["To make it smell good", "To prevent the dressing from sticking to the wound | ड्रेसिंग को घाव से चिपकने से रोकना", "To increase pain", "To stop breathing"],
+    "a": 1,
+    "e": "Non-adherent dressings are critical for healing skin surfaces.",
+    "cat": "technical",
+    "sub": "surgery"
+  },
+  {
+    "q": "Which position is used to drain 'Chest fluids' after Thorax surgery? / थोरैक्स सर्जरी के बाद 'छाती के तरल पदार्थ' निकालने के लिए किस स्थिति का उपयोग किया जाता है?",
+    "o": ["Prone", "Fowler's position | फाउलर (Fowler's) स्थिति", "Trendelenburg", "Supine"],
+    "a": 1,
+    "e": "A semi-sitting (Fowler's) position helps in easier breathing and fluid drainage from the chest.",
+    "cat": "technical",
+    "sub": "general-nursing"
+  },
+  {
+    "q": "What is 'Autograft' in plastic surgery? / प्लास्टिक सर्जरी में 'ऑटोग्राफ्ट' (Autograft) क्या है?",
+    "o": ["Skin from a twin", "Skin from the same patient's body | उसी मरीज के शरीर से त्वचा", "Synthetic skin", "Skin from a donor"],
+    "a": 1,
+    "e": "An autograft uses the patient's own tissue, which has the best chance of survival.",
+    "cat": "technical",
+    "sub": "surgery"
+  },
+  {
+    "q": "The term 'Evisceration' in wound complications refers to: / घाव की जटिलताओं में 'एविसरेशन' (Evisceration) का तात्पर्य है:",
+    "o": ["Healing", "Protrusion of internal organs through an opened wound | अंगों का घाव से बाहर निकलना", "Stitch removal", "Cleaning"],
+    "a": 1,
+    "e": "It is a surgical emergency where abdominal organs come out of the incision site.",
+    "cat": "technical",
+    "sub": "surgery"
+  },
+  {
+    "q": "Who is responsible for the 'Fumigation' of the O.T. complex? / ओ.टी. कॉम्प्लेक्स के 'धूमीकरण' (Fumigation) के लिए कौन जिम्मेदार है?",
+    "o": ["Pharmacist", "O.T. cleaning and fumigation incharge | ओ.टी. सफाई और धूमीकरण प्रभारी", "Doctor", "Patient"],
+    "a": 1,
+    "e": "Strict coordination is needed to maintain a sterile environment [cite: 197-198].",
+    "cat": "technical",
+    "sub": "microbiology"
+  },
+  {
+    "q": "What is the primary goal of 'Reconstructive Surgery' in plastic surgery? / प्लास्टिक सर्जरी में 'रिकंस्ट्रक्टिव सर्जरी' का प्राथमिक लक्ष्य क्या है?",
+    "o": ["To change hair color", "To restore function and normal appearance | कार्यक्षमता और सामान्य बनावट की बहाली", "To reduce weight", "None"],
+    "a": 1,
+    "e": "Reconstructive surgery focuses on fixing physical defects caused by birth, trauma, or disease[cite: 141].",
+    "cat": "technical",
+    "sub": "surgery"
+  },
+  {
+    "q": "A 'Split-thickness skin graft' involves which layers of the skin? / 'स्प्लिट-थिकनेस स्किन ग्राफ्ट' में त्वचा की कौन सी परतें शामिल होती हैं?",
+    "o": ["Only fat", "Epidermis and part of the dermis | एपिडर्मिस और डर्मिस का हिस्सा", "Whole body skin", "No skin"],
+    "a": 1,
+    "e": "It is used in plastic surgery to cover large areas of skin loss using a thin layer of healthy skin.",
+    "cat": "technical",
+    "sub": "surgery"
+  },
+  {
+    "q": "Which type of 'Surgical Drain' uses a vacuum system to pull fluid? / किस प्रकार का 'सर्जिकल ड्रेन' तरल खींचने के लिए वैक्यूम सिस्टम का उपयोग करता है?",
+    "o": ["Penrose drain", "Redivac or Suction drain | रेडवैक या सक्शन ड्रेन", "Ryle's tube", "Sponge"],
+    "a": 1,
+    "e": "Closed suction drains like Redivac are used to remove blood or fluid from deep surgical sites.",
+    "cat": "technical",
+    "sub": "surgery"
+  },
+  {
+    "q": "The term 'Skin Flap' differs from a 'Graft' because a flap: / 'स्किन फ्लैप' एक 'ग्राफ्ट' से अलग है क्योंकि फ्लैप में:",
+    "o": ["Has its own blood supply | अपनी रक्त आपूर्ति होती है", "Is dead tissue", "Is only for hair", "Is very thin"],
+    "a": 0,
+    "e": "A flap is moved with its blood supply intact, whereas a graft is completely detached.",
+    "cat": "technical",
+    "sub": "surgery"
+  },
+  {
+    "q": "In plastic surgery, 'Cleft Lip' repair is an example of which specialty? / प्लास्टिक सर्जरी में, 'कटे हुए होंठ' (Cleft Lip) की मरम्मत किसका उदाहरण है?",
+    "o": ["Geriatric surgery", "Pediatric & Reconstructive surgery | बाल रोग और पुनर्रचनात्मक सर्जरी", "Orthopaedic", "ENT"],
+    "a": 1,
+    "e": "Correcting congenital defects like cleft lip is a major part of pediatric plastic surgery[cite: 141].",
+    "cat": "technical",
+    "sub": "surgery"
+  },
+  {
+    "q": "What is the primary function of a 'Penrose Drain'? / 'पेनरोस ड्रेन' (Penrose Drain) का प्राथमिक कार्य क्या है?",
+    "o": ["Suction", "Passive drainage by gravity | गुरुत्वाकर्षण द्वारा निष्क्रिय जल निकासी", "Giving oxygen", "Cleaning blood"],
+    "a": 1,
+    "e": "It is an open, soft latex tube that allows fluid to drain out of a wound onto a dressing.",
+    "cat": "technical",
+    "sub": "surgery"
+  },
+  {
+    "q": "Which instrument is used to take a thin slice of skin for grafting? / ग्राफ्टिंग के लिए त्वचा की एक पतली स्लाइस लेने के लिए किस उपकरण का उपयोग किया जाता है?",
+    "o": ["Scissors", "Dermatome | डर्माटोम", "Scalpel", "Needle"],
+    "a": 1,
+    "e": "A dermatome is a specialized surgical tool used to produce thin slices of skin for grafting.",
+    "cat": "technical",
+    "sub": "surgery"
+  },
+  {
+    "q": "What is 'Secondary Intention' healing common in? / 'सेकेंडरी इंटेंशन' हीलिंग किसमें आम है?",
+    "o": ["Clean cut wounds", "Large, infected, or gaping wounds | बड़े या संक्रमित घाव", "Small scratches", "None"],
+    "a": 1,
+    "e": "These wounds are left open to heal from the bottom up by granulation tissue formation.",
+    "cat": "technical",
+    "sub": "surgery"
+  },
+  {
+    "q": "The removal of necrotic (dead) tissue from a wound is called: / घाव से नेक्रोटिक (मृत) ऊतक को हटाना कहलाता है:",
+    "o": ["Suturing", "Debridement | डिब्राइडमेंट", "Dressing", "Bandaging"],
+    "a": 1,
+    "e": "Debridement is essential to clean the wound and promote healthy healing.",
+    "cat": "technical",
+    "sub": "surgery"
+  },
+  {
+    "q": "A 'Pressure Ulcer' (Decubitus ulcer) is most likely to occur in: / 'प्रेशर अल्सर' (डेक्यूबिटस अल्सर) होने की सबसे अधिक संभावना किसमें होती है?",
+    "o": ["Active patients", "Bed-ridden or unconscious patients | बिस्तर पर पड़े या बेहोश मरीज", "Children only", "Athletes"],
+    "a": 1,
+    "e": "Prolonged immobilization on the operation table or bed can cause these ulcers[cite: 73, 89].",
+    "cat": "technical",
+    "sub": "general-nursing"
+  },
+  {
+    "q": "Which bandage is used to provide support to a fractured 'Clavicle' (Collar bone)? / टूटी हुई 'क्लैविकिल' (कॉलर बोन) को सहारा देने के लिए किस बैंडेज का उपयोग किया जाता है?",
+    "o": ["Capeline", "Figure-of-eight bandage | फिगर-ऑफ-एट बैंडेज", "T-bandage", "Spiral"],
+    "a": 1,
+    "e": "The figure-of-eight wrap helps in keeping the shoulders pulled back for bone alignment [cite: 140-141].",
+    "cat": "technical",
+    "sub": "surgery"
+  },
+  {
+    "q": "What is the primary function of a 'Surgical Drain' after a major surgery? / एक प्रमुख सर्जरी के बाद 'सर्जिकल ड्रेन' का प्राथमिक कार्य क्या है?",
+    "o": ["To provide medicine", "To prevent fluid/blood accumulation | तरल/रक्त जमा होने से रोकना", "To measure BP", "To keep wound wet"],
+    "a": 1,
+    "e": "Drains remove excess fluid that could cause infection or pressure[cite: 94].",
+    "cat": "technical",
+    "sub": "general-nursing"
+  },
+  {
+    "q": "Which type of bandaging is used for 'Scalp' wounds? / 'स्कैल्प' (सिर) के घावों के लिए किस प्रकार की बैंडेजिंग का उपयोग किया जाता है?",
+    "o": ["T-bandage", "Capeline bandage | कैपलाइन बैंडेज", "Sling", "Spica"],
+    "a": 1,
+    "e": "Capeline is a specialized wrap that covers the entire head securely[cite: 143].",
+    "cat": "technical",
+    "sub": "surgery"
+  },
+  {
+    "q": "A 'Sling' is used to immobilize and support which part of the body? / 'स्लिंग' (Sling) का उपयोग शरीर के किस भाग को स्थिर और सहारा देने के लिए किया जाता है?",
+    "o": ["Lower limb", "Upper limb (Arm) | ऊपरी अंग (हाथ)", "Neck", "Torso"],
+    "a": 1,
+    "e": "A triangular sling supports the weight of an injured arm or shoulder[cite: 140].",
+    "cat": "technical",
+    "sub": "surgery"
+  },
+  {
+    "q": "What is the purpose of 'Post-operative dressing' on the lips and nose? / होठों और नाक पर 'पोस्ट-ऑपरेटिव ड्रेसिंग' का उद्देश्य क्या है?",
+    "o": ["For beauty", "To protect the surgical site and absorb secretions | सर्जिकल साइट की सुरक्षा", "To hide the face", "No purpose"],
+    "a": 1,
+    "e": "Careful dressing prevents infection and supports delicate repair sites[cite: 143].",
+    "cat": "technical",
+    "sub": "surgery"
+  },
+  {
+    "q": "The term 'Debridement' in wound care refers to: / घाव की देखभाल में 'डिब्राइडमेंट' (Debridement) का तात्पर्य है:",
+    "o": ["Adding sutures", "Removal of infected or dead tissue | संक्रमित या मृत ऊतक को हटाना", "Applying cream", "Changing bandage"],
+    "a": 1,
+    "e": "Cleaning out dead tissue is essential for proper wound healing[cite: 94].",
+    "cat": "technical",
+    "sub": "surgery"
+  },
+  {
+    "q": "Which bandage is most suitable for 'Finger' or 'Toe' injuries? / 'उंगली' या 'पैर के अंगूठे' की चोटों के लिए कौन सी बैंडेज सबसे उपयुक्त है?",
+    "o": ["Spica", "Spiral or Roller bandage | रोलर बैंडेज", "Capeline", "T-bandage"],
+    "a": 1,
+    "e": "Small roller bandages are used to wrap individual digits securely[cite: 143].",
+    "cat": "technical",
+    "sub": "surgery"
+  },
+  {
+    "q": "What is 'Primary Intention' healing? / 'प्राइमरी इंटेंशन' हीलिंग क्या है?",
+    "o": ["Healing of an open wound", "Healing when edges are joined by sutures | टांके द्वारा किनारों को जोड़कर हीलिंग", "No healing", "None"],
+    "a": 1,
+    "e": "Sutured wounds heal quickly with minimal scarring[cite: 94].",
+    "cat": "technical",
+    "sub": "surgery"
+  },
+  {
+    "q": "Why is 'Plaster of Paris' (POP) slab used in Orthopaedic surgery? / ऑर्थोपेडिक सर्जरी में 'प्लास्टर ऑफ पेरिस' (POP) स्लैब का उपयोग क्यों किया जाता है?",
+    "o": ["To cool the bone", "To provide rigid immobilization of fractures | फ्रैक्चर को स्थिर करना", "To clean the skin", "To stop bleeding"],
+    "a": 1,
+    "e": "Slabs and casts keep the broken bones in the correct position to heal[cite: 140].",
+    "cat": "technical",
+    "sub": "surgery"
+  },
+  {
+    "q": "A 'Pressure dressing' is primarily used to: / 'प्रेशर ड्रेसिंग' का मुख्य रूप से उपयोग किया जाता है:",
+    "o": ["Clean the wound", "Control bleeding (Hemorrhage) | रक्तस्राव को नियंत्रित करना", "Identify the patient", "Cool the skin"],
+    "a": 1,
+    "e": "Applying pressure helps in stopping active bleeding at the site[cite: 98].",
+    "cat": "technical",
+    "sub": "general-nursing"
+  },
+  {
+    "q": "Which incision is typically used for a 'Cesarean Section' (Lower segment) in Urogenital surgery? / मूत्रजननांगी सर्जरी में 'सिजेरियन सेक्शन' के लिए आमतौर पर कौन सा चीरा लगाया जाता है?",
+    "o": ["Midline incision", "Pfannenstiel incision | फाननस्टील (Pfannenstiel) चीरा", "Kocher incision", "McBurney incision"],
+    "a": 1,
+    "e": "A Pfannenstiel incision is a transverse lower abdominal incision used for pelvic surgeries[cite: 136].",
+    "cat": "technical",
+    "sub": "surgery"
+  },
+  {
+    "q": "In ENT surgery, 'Tonsillectomy' refers to the removal of: / ENT सर्जरी में 'टॉन्सिलेक्टोमी' (Tonsillectomy) का तात्पर्य किसे निकालने से है?",
+    "o": ["Nose bone", "Tonsils | टॉन्सिल", "Ear drum", "Thyroid"],
+    "a": 1,
+    "e": "Tonsillectomy is a common ENT surgical procedure to remove inflamed tonsils[cite: 124].",
+    "cat": "technical",
+    "sub": "surgery"
+  },
+  {
+    "q": "Which surgical incision is used to access the 'Brain' in Neurological diseases? / न्यूरोलॉजिकल रोगों में 'मस्तिष्क' तक पहुँचने के लिए किस सर्जिकल चीरे का उपयोग किया जाता है?",
+    "o": ["Thoracotomy", "Craniotomy | क्रेनियोटॉमी (Craniotomy)", "Laparotomy", "Nephrectomy"],
+    "a": 1,
+    "e": "Craniotomy involves making a bone flap in the skull to access the brain[cite: 124].",
+    "cat": "technical",
+    "sub": "surgery"
+  },
+  {
+    "q": "The 'Lawn-tennis' or 'Gridiron' incision is another name for: / 'लॉन-टेनिस' या 'ग्रिडिरॉन' चीरा किसका दूसरा नाम है?",
+    "o": ["Midline incision", "McBurney's incision | मैकबर्नी का चीरा", "Collar incision", "None"],
+    "a": 1,
+    "e": "This is a muscle-splitting incision used primarily for an appendectomy[cite: 132].",
+    "cat": "technical",
+    "sub": "surgery"
+  },
+  {
+    "q": "In 'Hepatobiliary surgery', which organ is primarily involved? / 'हेपेटोबिलरी सर्जरी' में मुख्य रूप से कौन सा अंग शामिल होता है?",
+    "o": ["Heart", "Liver and Gallbladder | लिवर और पित्ताशय", "Lungs", "Brain"],
+    "a": 1,
+    "e": "It involves surgeries of the liver, bile ducts, and gallbladder[cite: 134].",
+    "cat": "technical",
+    "sub": "surgery"
+  },
+  {
+    "q": "A 'Z-plasty' is a common technique used in which specialty? / 'Z-प्लास्टी' किस विशेषता में उपयोग की जाने वाली एक सामान्य तकनीक है?",
+    "o": ["Orthopaedic", "Plastic & Reconstructive surgery | प्लास्टिक सर्जरी", "ENT", "General surgery"],
+    "a": 1,
+    "e": "Z-plasty is used to improve the functional and cosmetic appearance of scars[cite: 138].",
+    "cat": "technical",
+    "sub": "surgery"
+  },
+  {
+    "q": "Which incision is used to access the 'Thorax' for lung surgery? / फेफड़ों की सर्जरी के लिए 'थोरैक्स' तक पहुँचने हेतु किस चीरे का उपयोग किया जाता है?",
+    "o": ["Median Sternotomy | मीडियन स्टर्नोटॉमी", "McBurney", "Pfannenstiel", "Neck incision"],
+    "a": 0,
+    "e": "A midline incision through the sternum is used for heart and some lung procedures [cite: 129-130].",
+    "cat": "technical",
+    "sub": "surgery"
+  },
+  {
+    "q": "What is 'Tracheostomy' in ENT surgery? / ENT सर्जरी में 'ट्रेकियोस्टोमी' (Tracheostomy) क्या है?",
+    "o": ["Ear surgery", "Creating an opening in the Windpipe | श्वास नली में छेद करना", "Nose surgery", "Tongue removal"],
+    "a": 1,
+    "e": "It is an incision in the windpipe (trachea) to provide an alternative airway[cite: 124].",
+    "cat": "technical",
+    "sub": "surgery"
+  },
+  {
+    "q": "Which surgery involves the 'Spine region' for correcting disc problems? / डिस्क की समस्याओं को ठीक करने के लिए 'रीढ़ की हड्डी' की कौन सी सर्जरी शामिल है?",
+    "o": ["Laminectomy | लैमिनेक्टोमी", "Nephrectomy", "Gastrectomy", "Thyroidectomy"],
+    "a": 0,
+    "e": "Laminectomy is a spinal surgery that removes part of the vertebra[cite: 124].",
+    "cat": "technical",
+    "sub": "surgery"
+  },
+  {
+    "q": "Pediatric surgery focuses on patients of which age group? / पीडियाट्रिक सर्जरी किस आयु वर्ग के रोगियों पर केंद्रित है?",
+    "o": ["Elderly", "Infants and Children | शिशु और बच्चे", "Adults", "Only teenagers"],
+    "a": 1,
+    "e": "It addresses surgical needs from newborns to adolescents[cite: 138].",
+    "cat": "technical",
+    "sub": "surgery"
+  },
+  {
+    "q": "ऑपरेशन के बाद घाव से तरल पदार्थ (स्राव) निकालने के लिए इस्तेमाल होने वाली नली क्या कहलाती है? / What is the tube used to drain fluids from a wound after surgery called?",
+    "o": ["कैथेटर", "सर्जिकल ड्रेन | सर्जिकल ड्रेन (Surgical Drain)", "राइल्स ट्यूब", "IV सेट"],
+    "a": 1,
+    "e": "Drains are used to prevent the accumulation of fluid (blood/pus) at the surgical site. / ड्रेन घाव के पास तरल जमा होने से रोकते हैं ताकि संक्रमण न हो।",
+    "cat": "technical",
+    "sub": "surgery"
+  },
+  {
+    "q": "स्कैल्प (सिर) की चोट के लिए किस प्रकार की बैंडेज (पट्टी) सबसे उपयुक्त है? / Which type of bandage is best for a scalp injury?",
+    "o": ["टी-बैंडेज", "कैपलाइन बैंडेज | कैपलाइन बैंडेज (Capeline bandage)", "फिगर ऑफ एइट", "स्पाइका बैंडेज"],
+    "a": 1,
+    "e": "Capeline bandage is a specialized head bandage used to hold dressings on the scalp. / सिर की ड्रेसिंग को थामे रखने के लिए कैपलाइन पट्टी का उपयोग होता है।",
+    "cat": "technical",
+    "sub": "surgery"
+  },
+  {
+    "q": "अंगुलियों या पैरों के अंगूठे की बैंडेजिंग के लिए कौन सी तकनीक अपनाई जाती है? / Which technique is used for finger or toe bandaging?",
+    "o": ["सर्कुलर बैंडेज", "स्पाइरल या फिगर ऑफ एइट | स्पाइरल (Spiral) बैंडेज", "टी-बैंडेज", "स्लिंग"],
+    "a": 1,
+    "e": "Spiral or figure-of-eight techniques are used for uniform pressure on cylindrical body parts like fingers. / अंगुलियों जैसे अंगों के लिए स्पाइरल तकनीक सबसे अच्छी है।",
+    "cat": "technical",
+    "sub": "surgery"
+  },
+  {
+    "q": "ड्रेसिंग का मुख्य कार्य क्या है? / What is the main function of a dressing?",
+    "o": ["घाव को केवल सजाना", "संक्रमण से बचाना और स्राव सोखना | सुरक्षा और स्राव सोखना", "मरीज को सुलाना", "दवा बनाना"],
+    "a": 1,
+    "e": "Dressings protect the wound from trauma/infection and absorb inflammatory exudates. / ड्रेसिंग घाव को बाहरी कीटाणुओं से बचाती है और गंदगी सोखती है।",
+    "cat": "technical",
+    "sub": "surgery"
+  },
+  {
+    "q": "कंधे या कूल्हे के जोड़ को स्थिर करने के लिए किस प्रकार की बैंडेज का उपयोग होता है? / Which bandage is used to stabilize shoulder or hip joints?",
+    "o": ["टी-बैंडेज", "स्पाइका बैंडेज | स्पाइका बैंडेज (Spica bandage)", "सर्कुलर पट्टी", "क्रूसीफॉर्म"],
+    "a": 1,
+    "e": "A spica bandage is a figure-of-eight wrap used for joints where the limb meets the trunk. / जहाँ अंग धड़ से जुड़ते हैं, वहां स्पाइका पट्टी का उपयोग होता है।",
+    "cat": "technical",
+    "sub": "surgery"
+  },
+  {
+    "q": "एक 'स्टरिल ड्रेसिंग' (Sterile Dressing) का मतलब क्या है? / What does a 'Sterile Dressing' mean?",
+    "o": ["महंगी पट्टी", "सूक्ष्मजीवों से पूरी तरह मुक्त पट्टी | कीटाणुमुक्त पट्टी", "गीली पट्टी", "रंगीन पट्टी"],
+    "a": 1,
+    "e": "Sterile dressings are processed to be free from all microorganisms to prevent surgical infection. / स्टरिल का अर्थ है ऐसी पट्टी जो पूरी तरह कीटाणुमुक्त हो।",
+    "cat": "technical",
+    "sub": "surgery"
+  },
+  {
+    "q": "अंडकोश (Scrotum) की सर्जरी के बाद कौन सी बैंडेज सहारा देने के लिए इस्तेमाल होती है? / Which bandage is used for support after scrotal surgery?",
+    "o": ["टी-बैंडेज | टी-बैंडेज (T-bandage)", "कैपलाइन बैंडेज", "रोलर पट्टी", "स्लिंग"],
+    "a": 0,
+    "e": "A T-bandage is designed specifically to hold dressings in the perineal region or scrotum. / पेरिनियल क्षेत्र की ड्रेसिंग के लिए 'T' आकार की पट्टी काम आती है।",
+    "cat": "technical",
+    "sub": "surgery"
+  },
+  {
+    "q": "ऑर्थोपेडिक सर्जरी में इस्तेमाल होने वाले 'कास्ट' (Cast) का मुख्य उद्देश्य क्या है? / What is the main purpose of a 'Cast' in orthopedic surgery?",
+    "o": ["खून रोकना", "टूटी हड्डी को पूरी तरह स्थिर करना | हड्डी का स्थिरीकरण", "घाव साफ करना", "वजन बढ़ाना"],
+    "a": 1,
+    "e": "Casts (like Plaster of Paris) immobilize fractured bones to allow proper healing. / कास्ट (प्लास्टर) हड्डी को हिलने से रोकता है ताकि वह जुड़ सके।",
+    "cat": "technical",
+    "sub": "surgery"
+  },
+  {
+    "q": "जब घाव के किनारे आपस में नहीं जुड़ते, तो उसे भरने की प्रक्रिया क्या कहलाती है? / What is the process of wound healing when edges do not meet?",
+    "o": ["फर्स्ट इंटेंशन", "सेकेंडरी इंटेंशन (Secondary Intention) | सेकेंडरी इंटेंशन", "डायरेक्ट हीलिंग", "कोई नहीं"],
+    "a": 1,
+    "e": "Wounds that cannot be sutured heal by granulation and contraction (secondary intention). / खुले घाव जो नीचे से ऊपर की ओर भरते हैं, उन्हें सेकेंडरी इंटेंशन कहते हैं।",
+    "cat": "technical",
+    "sub": "surgery"
+  },
+  {
+    "q": "हाथ के फ्रैक्चर के मामले में हाथ को सहारा देने के लिए किसका उपयोग किया जाता है? / What is used to support the arm in case of a fracture?",
+    "o": ["टी-बैंडेज", "स्लिंग (Sling) | स्लिंग (Sling)", "स्पाइका", "कैपलाइन"],
+    "a": 1,
+    "e": "A triangular bandage or sling supports the weight of the injured arm against the chest. / स्लिंग टूटे हुए हाथ के वजन को छाती के सहारे थामे रखता है।",
+    "cat": "technical",
+    "sub": "surgery"
+  },
+  {
+    "q": "अपेंडिसेक्टोमी (Appendectomy) के लिए आमतौर पर पेट के दाहिने निचले हिस्से में कौन सा चीरा लगाया जाता है? / Which incision is commonly used for Appendectomy?",
+    "o": ["मिडलाइन चीरा (Midline incision)", "मैकबर्नी चीरा (McBurney incision) | मैकबर्नी चीरा", "कोचर चीरा (Kocher incision)", "सबकोस्टल चीरा"],
+    "a": 1,
+    "e": "McBurney's incision is a gridiron incision used specifically to access the appendix. / मैकबर्नी चीरा अपेंडिक्स तक पहुँचने के लिए सबसे सटीक स्थान है।",
+    "cat": "technical",
+    "sub": "surgery"
+  },
+  {
+    "q": "पित्ताशय (Gallbladder) की सर्जरी के लिए पसलियों के नीचे लगाया जाने वाला चीरा क्या कहलाता है? / What is the incision below the ribs for gallbladder surgery called?",
+    "o": ["कोचर का सबकोस्टल चीरा | कोचर का सबकोस्टल चीरा", "पैरामैडियन चीरा", "लम्बार चीरा", "इन्गुइनल चीरा"],
+    "a": 0,
+    "e": "Kocher's subcostal incision provides excellent exposure for open cholecystectomy. / यह चीरा पित्ताशय की सर्जरी के लिए पसलियों के समानांतर लगाया जाता है।",
+    "cat": "technical",
+    "sub": "surgery"
+  },
+  {
+    "q": "थायराइड (Thyroid) सर्जरी के दौरान गर्दन पर लगाया जाने वाला क्षैतिज चीरा क्या कहलाता है? / What is the horizontal incision on the neck for thyroid surgery called?",
+    "o": ["लॉन-टेनिस चीरा", "कॉलर चीरा | कॉलर चीरा (Collar incision)", "क्रूसीफॉर्म चीरा", "वर्टिकल चीरा"],
+    "a": 1,
+    "e": "A transverse collar incision is made in the skin crease of the neck for aesthetic and surgical access. / गर्दन की त्वचा की सिलवटों में लगाया जाने वाला यह चीरा कॉलर की तरह दिखता है।",
+    "cat": "technical",
+    "sub": "surgery"
+  },
+  {
+    "q": "ENT सर्जरी में 'मायरिंगोटॉमी' (Myringotomy) का संबंध किस अंग से है? / Myringotomy in ENT surgery is related to which organ?",
+    "o": ["नाक (Nose)", "गला (Throat)", "कान (Ear) | कान (कान का पर्दा)", "जीभ (Tongue)"],
+    "a": 2,
+    "e": "Myringotomy is a surgical procedure to create a tiny hole in the eardrum to relieve pressure or drain fluid. / कान के पर्दे में छेद करने की प्रक्रिया को मायरिंगोटॉमी कहते हैं।",
+    "cat": "technical",
+    "sub": "surgery"
+  },
+  {
+    "q": "हड्डियों के फ्रैक्चर को ठीक करने के लिए इस्तेमाल होने वाली सर्जरी क्या कहलाती है? / What is the surgery used to fix bone fractures called?",
+    "o": ["लेप्रोस्कोपी", "ऑर्थोपेडिक सर्जरी (ओपन रिडक्शन) | ऑर्थोपेडिक सर्जरी", "प्लास्टिक सर्जरी", "न्यूरोसर्जरी"],
+    "a": 1,
+    "e": "Orthopaedic surgery involves internal or external fixation of bones using plates, screws, or rods. / हड्डियों और जोड़ों से संबंधित सर्जरी ऑर्थोपेडिक के अंतर्गत आती है।",
+    "cat": "technical",
+    "sub": "surgery"
+  },
+  {
+    "q": "मूत्रजननांगी (Urogenital) सर्जरी में 'प्रोस्टेट' को हटाने की प्रक्रिया क्या कहलाती है? / What is the procedure to remove the prostate in urogenital surgery called?",
+    "o": ["नेफरेक्टोमी", "प्रोस्टेटेक्टोमी | प्रोस्टेटेक्टोमी (Prostatectomy)", "सिस्टेक्टोमी", "कोलेसिस्टेक्टोमी"],
+    "a": 1,
+    "e": "Prostatectomy is the surgical removal of all or part of the prostate gland. / प्रोस्टेट ग्रंथि को निकालने की सर्जरी को प्रोस्टेटेक्टोमी कहते हैं।",
+    "cat": "technical",
+    "sub": "surgery"
+  },
+  {
+    "q": "नवजात शिशुओं और बच्चों में होने वाली सर्जरी को क्या कहा जाता है? / What is surgery performed on newborns and children called?",
+    "o": ["जेरियाट्रिक सर्जरी", "पीडियाट्रिक सर्जरी | पीडियाट्रिक (बाल रोग) सर्जरी", "प्लास्टिक सर्जरी", "गायनोकॉलोजिकल सर्जरी"],
+    "a": 1,
+    "e": "Pediatric surgery focuses on the surgical care of infants, children, and adolescents. / बच्चों की सर्जरी को पीडियाट्रिक सर्जरी कहा जाता है।",
+    "cat": "technical",
+    "sub": "surgery"
+  },
+  {
+    "q": "प्लास्टिक सर्जरी में 'स्किन ग्राफ्टिंग' का मुख्य उद्देश्य क्या है? / What is the main purpose of skin grafting in plastic surgery?",
+    "o": ["वजन कम करना", "क्षतिग्रस्त त्वचा को नई त्वचा से ढंकना | त्वचा का प्रत्यारोपण", "हड्डियों को जोड़ना", "बाल उगाना"],
+    "a": 1,
+    "e": "Skin grafting involves taking healthy skin from one part of the body to cover a wound or burn. / शरीर के एक हिस्से से स्वस्थ त्वचा लेकर घाव को भरने की प्रक्रिया ग्राफ्टिंग है।",
+    "cat": "technical",
+    "sub": "surgery"
+  },
+  {
+    "q": "किडनी (वृक्क) को निकालने वाली सर्जरी का क्या नाम है? / What is the name of the surgery to remove the kidney?",
+    "o": ["गैस्ट्रेक्टोमी", "नेफरेक्टोमी | नेफरेक्टोमी (Nephrectomy)", "क्रेनियोटॉमी", "थोरैकोटॉमी"],
+    "a": 1,
+    "e": "Nephrectomy is the surgical removal of a kidney, either partially or completely. / किडनी को शरीर से अलग करने की प्रक्रिया नेफरेक्टोमी कहलाती है।",
+    "cat": "technical",
+    "sub": "surgery"
+  },
+  {
+    "q": "छाती (Thorax) को खोलने के लिए लगाया जाने वाला चीरा क्या कहलाता है? / What is the incision made to open the chest (thorax) called?",
+    "o": ["लेपरोटॉमी", "थोरैकोटॉमी | थोरैकोटॉमी (Thoracotomy)", "सिस्टोटॉमी", "इन्गुइनल चीरा"],
+    "a": 1,
+    "e": "Thoracotomy is an incision into the pleural space of the chest to access lungs or heart. / फेफड़ों या हृदय तक पहुँचने के लिए छाती पर लगाया गया चीरा थोरैकोटॉमी है।",
+    "cat": "technical",
+    "sub": "surgery"
+  },
+  {
+    "q": "What is the characteristic symptom of 'Hepatitis-B' during physical examination? / शारीरिक परीक्षण के दौरान 'हेपेटाइटिस-बी' का विशिष्ट लक्षण क्या है?",
+    "o": ["Blue skin", "Yellowish eyes and skin (Jaundice) | आँखों और त्वचा का पीलापन", "Sneezing", "Earache"],
+    "a": 1,
+    "e": "Jaundice indicates liver inflammation common in Hepatitis[cite: 109, 119].",
+    "cat": "technical",
+    "sub": "medicine"
+  },
+  {
+    "q": "Which system does 'Neurological disease' primarily affect? / 'न्यूरोलॉजिकल रोग' मुख्य रूप से किस तंत्र को प्रभावित करता है?",
+    "o": ["Digestive", "Nervous system (Brain and Spine) | तंत्रिका तंत्र", "Skeletal", "Immune"],
+    "a": 1,
+    "e": "It involves disorders of the brain, spinal cord, and nerves[cite: 105, 124].",
+    "cat": "technical",
+    "sub": "medicine"
+  },
+  {
+    "q": "In a diabetic patient, what does a 'Glucometer' measure? / मधुमेह के रोगी में 'ग्लूकोमीटर' क्या मापता है?",
+    "o": ["Blood pressure", "Blood Glucose levels | ब्लड ग्लूकोज का स्तर", "Temperature", "Heart rate"],
+    "a": 1,
+    "e": "Monitoring sugar is vital for diabetic patients in the O.T.[cite: 103].",
+    "cat": "technical",
+    "sub": "medicine"
+  },
+  {
+    "q": "What is 'Oedema' in a patient with heart or renal disease? / हृदय या गुर्दे की बीमारी वाले रोगी में 'एडिमा' (Oedema) क्या है?",
+    "o": ["Muscle growth", "Swelling due to fluid retention | तरल के कारण सूजन", "Hair growth", "Improved vision"],
+    "a": 1,
+    "e": "It is a sign of organ failure and fluid overload[cite: 119, 120].",
+    "cat": "technical",
+    "sub": "medicine"
+  },
+  {
+    "q": "The term 'Chronic' in COPD means: / COPD में 'क्रोनिक' (Chronic) शब्द का अर्थ है:",
+    "o": ["Short term", "Long-lasting and persistent | लंबे समय तक रहने वाला", "New infection", "None"],
+    "a": 1,
+    "e": "COPD is a progressive lung condition that lasts for a long duration[cite: 122].",
+    "cat": "technical",
+    "sub": "medicine"
+  },
+  {
+    "q": "Which precautions are taken after an HIV positive patient's surgery? / एचआईवी पॉजिटिव मरीज की सर्जरी के बाद क्या सावधानियां बरती जाती हैं?",
+    "o": ["No cleaning", "Strict disinfection and fumigation | सख्त कीटाणुशोधन और धूमीकरण", "Only washing with water", "Ignoring the O.T."],
+    "a": 1,
+    "e": "Infection control is critical to prevent cross-contamination[cite: 111, 118].",
+    "cat": "technical",
+    "sub": "microbiology"
+  },
+  {
+    "q": "A patient with 'Typhoid Fever' may have which symptom? / 'टाइफाइड बुखार' वाले रोगी में कौन सा लक्षण हो सकता है?",
+    "o": ["Sudden cold", "Sustained high fever | लगातार तेज बुखार", "Tooth loss", "Fast pulse initially"],
+    "a": 1,
+    "e": "Typhoid is a systemic infection with high-grade fever[cite: 107].",
+    "cat": "technical",
+    "sub": "medicine"
+  },
+  {
+    "q": "Why is 'C.P.R.' knowledge important for technicians in the O.T.? / ओ.टी. में तकनीशियनों के लिए 'C.P.R.' का ज्ञान क्यों महत्वपूर्ण है?",
+    "o": ["To help in surgeries", "To manage sudden cardiac arrest | अचानक कार्डियक अरेस्ट को संभालना", "To clean instruments", "No importance"],
+    "a": 1,
+    "e": "Technicians must assist the anesthesiologist during life-saving procedures[cite: 171].",
+    "cat": "technical",
+    "sub": "anaesthesia"
+  },
+  {
+    "q": "What is 'Cyanosis' a sign of? / 'साइनोसिस' किसका संकेत है?",
+    "o": ["Good sleep", "Inadequate oxygen in blood | रक्त में ऑक्सीजन की कमी", "High energy", "No disease"],
+    "a": 1,
+    "e": "It is a bluish discoloration of the skin, indicating hypoxia[cite: 119].",
+    "cat": "technical",
+    "sub": "medicine"
+  },
+  {
+    "q": "Monitoring 'Blood Pressure' in the O.T. helps in detecting: / ओ.टी. में 'ब्लड प्रेशर' की निगरानी किसका पता लगाने में मदद करती है?",
+    "o": ["Hunger", "Shock or internal hemorrhage | शॉक या आंतरिक रक्तस्राव", "Patient's age", "None"],
+    "a": 1,
+    "e": "A drop in BP is a critical sign of hemorrhage during surgery[cite: 98].",
+    "cat": "technical",
+    "sub": "medicine"
+  },
+  {
+    "q": "Which is a common symptom of 'Intestinal Tuberculosis'? / 'आंतों की टीबी' (Intestinal TB) का एक सामान्य लक्षण क्या है?",
+    "o": ["Persistent cough", "Abdominal pain and altered bowel habits | पेट दर्द और मल त्याग की आदतों में बदलाव", "Headache", "Blurred vision"],
+    "a": 1,
+    "e": "Abdominal TB often presents with pain, distension, and weight loss[cite: 121].",
+    "cat": "technical",
+    "sub": "medicine"
+  },
+  {
+    "q": "What is 'Pott's disease' in the context of Tuberculosis? / टीबी के संदर्भ में 'पोट्स रोग' (Pott's disease) क्या है?",
+    "o": ["TB of the Lungs", "TB of the Spine (Bone) | रीढ़ की हड्डी की टीबी", "TB of the Skin", "TB of the Brain"],
+    "a": 1,
+    "e": "Tuberculosis of the bone specifically affecting the spine is known as Pott's disease[cite: 121].",
+    "cat": "technical",
+    "sub": "medicine"
+  },
+  {
+    "q": "In 'Valvular Heart Disease', which valve is most commonly affected leading to heart failure? / 'वाल्वुलर हार्ट डिजीज' में कौन सा वाल्व सबसे अधिक प्रभावित होता है जिससे हार्ट फेल्योर होता है?",
+    "o": ["Mitral valve | माइट्रल वाल्व", "Skin valve", "Digestive valve", "None"],
+    "a": 0,
+    "e": "Mitral and Aortic valves are frequently involved in valvular diseases[cite: 120].",
+    "cat": "technical",
+    "sub": "medicine"
+  },
+  {
+    "q": "What is the primary concern for an O.T. technician during surgery on a patient with 'Chronic Renal Failure'? / 'क्रोनिक रीनल फेल्योर' के रोगी की सर्जरी के दौरान ओ.टी. तकनीशियन की प्राथमिक चिंता क्या है?",
+    "o": ["Patient's clothes", "Fluid and electrolyte balance | तरल और इलेक्ट्रोलाइट संतुलन", "Room lighting", "Patient's height"],
+    "a": 1,
+    "e": "Kidney failure affects the body's ability to manage fluids and potassium levels[cite: 104].",
+    "cat": "technical",
+    "sub": "medicine"
+  },
+  {
+    "q": "Neurological diseases of the 'Spine region' may lead to which complications in O.T.? / 'रीढ़ की हड्डी' के न्यूरोलॉजिकल रोगों से ओ.टी. में क्या जटिलताएं हो सकती हैं?",
+    "o": ["Hair loss", "Loss of motor function or paralysis | मोटर फंक्शन की हानि या पक्षाघात", "Toothache", "Improved hearing"],
+    "a": 1,
+    "e": "Spinal diseases can cause sensory and motor deficits, requiring careful positioning[cite: 124].",
+    "cat": "technical",
+    "sub": "medicine"
+  },
+  {
+    "q": "Why is 'Physical Examination' of pallor (paleness) done before surgery? / सर्जरी से पहले 'पेलर' (पीलापन) की शारीरिक जांच क्यों की जाती है?",
+    "o": ["To check skin type", "To screen for Anemia | एनीमिया की स्क्रीनिंग के लिए", "To find infections", "To check age"],
+    "a": 1,
+    "e": "Pallor suggests low hemoglobin, which can increase surgical risk[cite: 119].",
+    "cat": "technical",
+    "sub": "medicine"
+  },
+  {
+    "q": "In a patient with 'Heart Failure', the O.T. assistant should observe for: / 'हार्ट फेल्योर' के रोगी में ओ.टी. सहायक को क्या देखना चाहिए?",
+    "o": ["Fast running", "Difficulty in breathing (Dyspnea) | सांस लेने में कठिनाई", "Increased appetite", "Loud voice"],
+    "a": 1,
+    "e": "Dyspnea is a hallmark sign of a failing heart[cite: 120].",
+    "cat": "technical",
+    "sub": "medicine"
+  },
+  {
+    "q": "What is the O.T. precaution for a patient with 'HIV/AIDS'? / 'HIV/AIDS' वाले रोगी के लिए ओ.टी. में क्या सावधानी है?",
+    "o": ["Double gloving and sharp safety | डबल ग्लव्स और शार्प सुरक्षा", "Avoiding the patient", "Using no gloves", "No specific precaution"],
+    "a": 0,
+    "e": "Universal precautions are strictly followed to prevent needle-stick injuries[cite: 111].",
+    "cat": "technical",
+    "sub": "medicine"
+  },
+  {
+    "q": "Which clinical sign is a priority in monitoring 'Hypertension'? / 'हाइपरटेंशन' की निगरानी में कौन सा नैदानिक संकेत प्राथमिकता है?",
+    "o": ["Temperature", "Blood Pressure (BP) | रक्तचाप", "Weight", "Height"],
+    "a": 1,
+    "e": "High BP must be managed to prevent intraoperative stroke or heart issues[cite: 120].",
+    "cat": "technical",
+    "sub": "medicine"
+  },
+  {
+    "q": "The knowledge of 'Various medical diseases' is important for O.T. technicians to: / ओ.टी. तकनीशियनों के लिए 'विभिन्न चिकित्सा रोगों' का ज्ञान महत्वपूर्ण है:",
+    "o": ["Become a doctor", "Provide safe patient care and handle emergencies | सुरक्षित देखभाल और आपातकाल संभालना", "Charge patients more", "Give medicines without asking"],
+    "a": 1,
+    "e": "Technical knowledge ensures better assistance during surgery[cite: 118].",
+    "cat": "technical",
+    "sub": "medicine"
+  },
+  {
+    "q": "Which virus causes 'HIV/AIDS'? / 'HIV/AIDS' का कारण कौन सा वायरस है?",
+    "o": ["Hepatitis virus", "Human Immunodeficiency Virus | ह्यूमन इम्यूनोडिफीशिएंसी वायरस", "Influenza virus", "None"],
+    "a": 1,
+    "e": "HIV destroys the immune system, making the patient susceptible to infections[cite: 111].",
+    "cat": "technical",
+    "sub": "medicine"
+  },
+  {
+    "q": "The primary symptom of 'Typhoid Fever' is: / 'टाइफाइड बुखार' का प्राथमिक लक्षण है:",
+    "o": ["Step-ladder pattern fever | स्टेप-लैडर पैटर्न बुखार", "Runny nose", "Toothache", "Hair loss"],
+    "a": 0,
+    "e": "Typhoid fever typically presents with a high-grade fever that increases gradually[cite: 107].",
+    "cat": "technical",
+    "sub": "medicine"
+  },
+  {
+    "q": "How is 'Hepatitis-B' primarily transmitted in a hospital setting? / अस्पताल की सेटिंग में 'हेपेटाइटिस-बी' मुख्य रूप से कैसे फैलता है?",
+    "o": ["Through air", "Accidental needle-stick injuries | सुई चुभने वाली चोट", "Through food", "Touching dry skin"],
+    "a": 1,
+    "e": "Contaminated blood and needles are the most common routes of transmission[cite: 109].",
+    "cat": "technical",
+    "sub": "medicine"
+  },
+  {
+    "q": "The clinical sign 'Cyanosis' indicates: / नैदानिक संकेत 'साइनोसिस' (Cyanosis) क्या दर्शाता है?",
+    "o": ["Good health", "Severe lack of oxygen (Hypoxia) | ऑक्सीजन की भारी कमी", "High sugar", "Fast pulse"],
+    "a": 1,
+    "e": "Cyanosis is a bluish discoloration of skin and mucus membranes due to low oxygen[cite: 119].",
+    "cat": "technical",
+    "sub": "medicine"
+  },
+  {
+    "q": "What does 'Oedema' in the feet suggest in a cardiac patient? / कार्डियक रोगी में पैरों में 'एडिमा' (सूजन) क्या संकेत देता है?",
+    "o": ["Strong heart", "Fluid retention due to heart failure | हार्ट फेल्योर के कारण तरल जमा होना", "Hunger", "Good sleep"],
+    "a": 1,
+    "e": "Dependent oedema is a common sign of right-sided heart failure[cite: 119].",
+    "cat": "technical",
+    "sub": "medicine"
+  },
+  {
+    "q": "Why is 'Hepatitis-B' vaccination critical for O.T. Technicians? / ओ.टी. तकनीशियनों के लिए 'हेपेटाइटिस-बी' टीकाकरण क्यों महत्वपूर्ण है?",
+    "o": ["To prevent Typhoid", "To provide prophylaxis against occupational exposure | व्यावसायिक जोखिम से बचाव", "To cure HIV", "None"],
+    "a": 1,
+    "e": "Vaccination is the best defense against Hepatitis-B infection in the O.T.[cite: 63, 64].",
+    "cat": "technical",
+    "sub": "microbiology"
+  },
+  {
+    "q": "Which system is weakened in 'HIV/AIDS'? / 'HIV/AIDS' में कौन सा तंत्र कमजोर हो जाता है?",
+    "o": ["Digestive system", "Immune system | प्रतिरक्षा प्रणाली", "Skeletal system", "Nervous system"],
+    "a": 1,
+    "e": "HIV targets CD4 cells, which are crucial for the body's defense[cite: 111].",
+    "cat": "technical",
+    "sub": "medicine"
+  },
+  {
+    "q": "In a diabetic patient, 'Hypoglycemia' is indicated by: / एक मधुमेह रोगी में, 'हाइपोग्लाइसीमिया' किसके द्वारा सूचित किया जाता है?",
+    "o": ["High fever", "Sweating and confusion | पसीना और भ्रम", "Dry skin", "Loud talking"],
+    "a": 1,
+    "e": "Low blood sugar levels can lead to rapid pulse, sweating, and altered mental state[cite: 119].",
+    "cat": "technical",
+    "sub": "medicine"
+  },
+  {
+    "q": "What clinical symptom is 'Pallor'? / 'पेलर' (Pallor) कौन सा नैदानिक लक्षण है?",
+    "o": ["Yellow skin", "Pale appearance (sign of Anemia) | पीलापन (एनीमिया का संकेत)", "Blue skin", "Red skin"],
+    "a": 1,
+    "e": "Pallor is the paleness of skin and mucous membranes, often seen in anemia[cite: 119].",
+    "cat": "technical",
+    "sub": "medicine"
+  },
+  {
+    "q": "Universal Precautions are mainly followed to prevent: / मुख्य रूप से किसके बचाव के लिए 'यूनिवर्सल प्रिकॉशन' का पालन किया जाता है?",
+    "o": ["Weight gain", "Cross-infection from HIV and Hepatitis | एचआईवी और हेपेटाइटिस का संक्रमण", "Cold", "Hunger"],
+    "a": 1,
+    "e": "Handling every patient sample as potentially infectious prevents the spread of blood-borne diseases[cite: 118].",
+    "cat": "technical",
+    "sub": "medicine"
+  },
+  {
+    "q": "What is the primary indicator of 'Hypertension' during physical examination? / शारीरिक परीक्षण के दौरान 'हाइपरटेंशन' का प्राथमिक संकेतक क्या है?",
+    "o": ["High fever", "Persistent high Blood Pressure | लगातार उच्च रक्तचाप", "Slow pulse", "Yellow skin"],
+    "a": 1,
+    "e": "Hypertension is defined as a systolic BP >140 mmHg or diastolic BP >90 mmHg[cite: 120].",
+    "cat": "technical",
+    "sub": "medicine"
+  },
+  {
+    "q": "A patient with 'Renal Failure' often requires which procedure before surgery to filter blood? / रक्त को छानने के लिए सर्जरी से पहले गुर्दे की विफलता वाले रोगी को अक्सर किस प्रक्रिया की आवश्यकता होती है?",
+    "o": ["Blood transfusion", "Dialysis | डायलिसिस", "Endoscopy", "Oxygen therapy"],
+    "a": 1,
+    "e": "Dialysis is necessary when kidneys cannot remove waste and excess fluid from the body[cite: 104].",
+    "cat": "technical",
+    "sub": "medicine"
+  },
+  {
+    "q": "In 'Valvular Heart Disease', the main problem is with: / 'वाल्वुलर हार्ट डिजीज' में मुख्य समस्या किसके साथ होती है?",
+    "o": ["Heart muscle", "Heart valves (Mitral, Aortic, etc.) | हृदय के वाल्व", "Blood vessels", "Lungs"],
+    "a": 1,
+    "e": "Valvular heart disease involves damage to any of the four valves that control blood flow[cite: 120].",
+    "cat": "technical",
+    "sub": "medicine"
+  },
+  {
+    "q": "Which sign is a characteristic of 'Pulmonary Tuberculosis'? / 'पल्मोनरी ट्यूबरकुलोसिस' (फेफड़ों की टीबी) की विशेषता क्या है?",
+    "o": ["Chronic cough and Hemoptysis | पुरानी खांसी और बलगम में खून", "High hunger", "Weight gain", "Fast running"],
+    "a": 0,
+    "e": "Tuberculosis of the lungs often presents with a persistent cough for more than 2-3 weeks[cite: 121].",
+    "cat": "technical",
+    "sub": "medicine"
+  },
+  {
+    "q": "What happens to the heart's pumping ability in 'Heart Failure'? / 'हार्ट फेल्योर' में हृदय की पंपिंग क्षमता का क्या होता है?",
+    "o": ["It increases", "It becomes inadequate to meet body needs | शरीर की जरूरतों के लिए अपर्याप्त", "It stops completely", "No change"],
+    "a": 1,
+    "e": "Heart failure means the heart muscle doesn't pump blood as well as it should[cite: 120].",
+    "cat": "technical",
+    "sub": "medicine"
+  },
+  {
+    "q": "Which of the following is a common symptom of 'C.O.P.D.'? / 'C.O.P.D.' का एक सामान्य लक्षण निम्नलिखित में से कौन सा है?",
+    "o": ["Improved breathing", "Shortness of breath (Dyspnea) | सांस की तकलीफ", "Cold hands", "Weight gain"],
+    "a": 1,
+    "e": "COPD patients often struggle with chronic airflow limitation and breathing difficulty[cite: 122].",
+    "cat": "technical",
+    "sub": "medicine"
+  },
+  {
+    "q": "Why is 'History Taking' important for a patient with diabetes before surgery? / सर्जरी से पहले मधुमेह वाले रोगी के लिए 'इतिहास लेना' क्यों महत्वपूर्ण है?",
+    "o": ["To check their hobby", "To know about their insulin dosage and timing | इंसुलिन की खुराक और समय जानना", "To find their school", "None"],
+    "a": 1,
+    "e": "Knowing the medication history helps in managing blood sugar during the perioperative period[cite: 119].",
+    "cat": "technical",
+    "sub": "medicine"
+  },
+  {
+    "q": "Which part of the body can be affected by TB other than lungs? / फेफड़ों के अलावा शरीर का कौन सा हिस्सा टीबी से प्रभावित हो सकता है?",
+    "o": ["Intestine and Bone | आंत और हड्डी", "Only skin", "Only hair", "None"],
+    "a": 0,
+    "e": "Extra-pulmonary tuberculosis can affect bones, intestines, and other organs[cite: 121].",
+    "cat": "technical",
+    "sub": "medicine"
+  },
+  {
+    "q": "What is the main concern in 'Neurological diseases' for O.T. assistants? / ओ.टी. सहायकों के लिए 'न्यूरोलॉजिकल रोगों' में मुख्य चिंता क्या है?",
+    "o": ["Patient's voice", "Altered consciousness and motor function | चेतना और मोटर फंक्शन में बदलाव", "Patient's hair color", "Patient's height"],
+    "a": 1,
+    "e": "Neurological status affects the patient's stability and airway management[cite: 105].",
+    "cat": "technical",
+    "sub": "medicine"
+  },
+  {
+    "q": "Monitoring 'Pulse and Blood Pressure' is essential to detect: / 'पल्स और ब्लड प्रेशर' की निगरानी किसका पता लगाने के लिए आवश्यक है?",
+    "o": ["Fever only", "Shock and Hemorrhage | शॉक और रक्तस्राव", "Hunger", "Thirst"],
+    "a": 1,
+    "e": "Vital signs are the first indicators of clinical deterioration[cite: 119].",
+    "cat": "technical",
+    "sub": "medicine"
+  },
+  {
+    "q": "Which organism causes 'Typhoid Fever'? / 'टाइफाइड बुखार' का कारण कौन सा जीव है?",
+    "o": ["Virus", "Salmonella typhi | साल्मोनेला टाइफी", "Amoeba", "Fungi"],
+    "a": 1,
+    "e": "Typhoid is a bacterial infection spread through contaminated food and water[cite: 107].",
+    "cat": "technical",
+    "sub": "medicine"
+  },
+  {
+    "q": "What is the mode of transmission for 'Hepatitis-B'? / 'हेपेटाइटिस-बी' के संचरण का तरीका क्या है?",
+    "o": ["Airborne", "Blood and body fluids | रक्त और शरीर के तरल पदार्थ", "Only through food", "Touching skin"],
+    "a": 1,
+    "e": "Hepatitis-B is highly infectious and spreads through infected blood, needles, and body fluids[cite: 109].",
+    "cat": "technical",
+    "sub": "medicine"
+  },
+  {
+    "q": "The 'HIV' virus primarily attacks which system of the human body? / 'एचआईवी' वायरस मुख्य रूप से मानव शरीर के किस तंत्र पर हमला करता है?",
+    "o": ["Digestive system", "Immune system | प्रतिरक्षा प्रणाली", "Skeletal system", "Respiratory system"],
+    "a": 1,
+    "e": "HIV attacks the CD4 cells, weakening the body's ability to fight infections and diseases[cite: 111].",
+    "cat": "technical",
+    "sub": "medicine"
+  },
+  {
+    "q": "What clinical sign is characterized by the yellowish discoloration of the skin and eyes? / त्वचा और आंखों के पीलेपन की विशेषता वाला नैदानिक लक्षण क्या है?",
+    "o": ["Cyanosis", "Pallor", "Jaundice (Icterus) | पीलिया", "Redness"],
+    "a": 2,
+    "e": "Jaundice is often a sign of liver diseases like Hepatitis[cite: 119].",
+    "cat": "technical",
+    "sub": "medicine"
+  },
+  {
+    "q": "In medical examination, 'Pallor' (paleness) is an indicator of: / चिकित्सा परीक्षण में, 'पेलर' (पीलापन) किसका सूचक है?",
+    "o": ["High blood pressure", "Anemia | एनीमिया (रक्त की कमी)", "Obesity", "Fever"],
+    "a": 1,
+    "e": "Pallor is the pale appearance of the skin or mucous membranes, often due to low hemoglobin[cite: 119].",
+    "cat": "technical",
+    "sub": "medicine"
+  },
+  {
+    "q": "Why is knowledge of HIV/AIDS critical for O.T. Technicians? / ओ.टी. तकनीशियनों के लिए एचआईवी/एड्स का ज्ञान क्यों महत्वपूर्ण है?",
+    "o": ["To cure the patient", "To follow universal precautions and prevent needle-stick injuries | सुरक्षा सावधानी और बचाव के लिए", "To avoid the patient", "No specific reason"],
+    "a": 1,
+    "e": "Understanding HIV is vital for maintaining O.T. safety and preventing cross-contamination[cite: 111, 118].",
+    "cat": "technical",
+    "sub": "medicine"
+  },
+  {
+    "q": "Which of the following is a sign of 'Respiratory Distress'? / निम्नलिखित में से कौन सा 'श्वसन संकट' (Respiratory Distress) का संकेत है?",
+    "o": ["Cyanosis (blue skin) | साइनोसिस (नीली त्वचा)", "Hunger", "Improved hearing", "Warm hands"],
+    "a": 0,
+    "e": "Cyanosis indicates poor oxygenation and is a sign of severe respiratory or cardiac issues[cite: 119].",
+    "cat": "technical",
+    "sub": "medicine"
+  },
+  {
+    "q": "What is 'Chronic' disease? / 'क्रोनिक' (Chronic) रोग क्या है?",
+    "o": ["A disease that lasts for a short time", "A long-lasting condition | लंबे समय तक चलने वाली स्थिति", "A disease that cures itself", "None"],
+    "a": 1,
+    "e": "Chronic diseases like COPD or Diabetes persist for long periods and require continuous management[cite: 122].",
+    "cat": "technical",
+    "sub": "medicine"
+  },
+  {
+    "q": "The term 'Oedema' refers to: / 'एडिमा' (Oedema) शब्द का तात्पर्य है:",
+    "o": ["Hair loss", "Fluid accumulation in tissues causing swelling | सूजन", "Weight loss", "Fever"],
+    "a": 1,
+    "e": "Oedema is common in renal and heart failure patients[cite: 119].",
+    "cat": "technical",
+    "sub": "medicine"
+  },
+  {
+    "q": "Which diagnostic sign helps in assessing blood circulation in the extremities? / हाथ-पैरों में रक्त परिसंचरण का आकलन करने में कौन सा नैदानिक संकेत मदद करता है?",
+    "o": ["Pulse | पल्स (नाड़ी)", "Height", "Eye color", "Voice"],
+    "a": 0,
+    "e": "Checking the peripheral pulse is a standard part of physical examination to assess circulation[cite: 119].",
+    "cat": "technical",
+    "sub": "medicine"
+  },
+  {
+    "q": "Which hormone deficiency is the primary cause of Diabetes Mellitus? / मधुमेह (Diabetes Mellitus) का प्राथमिक कारण किस हार्मोन की कमी है?",
+    "o": ["Thyroxine", "Insulin | इंसुलिन", "Adrenaline", "Glucagon"],
+    "a": 1,
+    "e": "Diabetes is caused by the pancreas' inability to produce enough insulin or the body's inability to use it effectively[cite: 103].",
+    "cat": "technical",
+    "sub": "medicine"
+  },
+  {
+    "q": "What is the clinical term for 'Renal Failure'? / 'गुर्दे की विफलता' के लिए नैदानिक शब्द क्या है?",
+    "o": ["Heart failure", "Kidney failure | किडनी फेल्योर", "Liver cirrhosis", "Apnea"],
+    "a": 1,
+    "e": "Renal failure occurs when kidneys lose the ability to filter waste products from the blood[cite: 104].",
+    "cat": "technical",
+    "sub": "medicine"
+  },
+  {
+    "q": "Which vital sign is most critical to monitor in a patient with 'Hypertension'? / 'हाइपरटेंशन' के मरीज में किस वाइटल साइन की निगरानी सबसे महत्वपूर्ण है?",
+    "o": ["Temperature", "Blood Pressure | रक्तचाप (BP)", "Height", "Weight"],
+    "a": 1,
+    "e": "Hypertension refers to high blood pressure, which must be monitored to prevent complications during surgery[cite: 119, 120].",
+    "cat": "technical",
+    "sub": "medicine"
+  },
+  {
+    "q": "What does 'C.O.P.D.' stand for in respiratory medicine? / श्वसन चिकित्सा में 'C.O.P.D.' का क्या अर्थ है?",
+    "o": ["Common obstructive pulmonary disease", "Chronic Obstructive Pulmonary Disease | क्रोनिक ऑब्स्ट्रक्टिव पल्मोनरी डिजीज", "Cardiac obstructive pulmonary disease", "None"],
+    "a": 1,
+    "e": "COPD is a chronic inflammatory lung disease that causes obstructed airflow from the lungs[cite: 122].",
+    "cat": "technical",
+    "sub": "medicine"
+  },
+  {
+    "q": "A patient with 'Heart Failure' may show which of the following signs? / 'हार्ट फेल्योर' वाले मरीज में निम्नलिखित में से कौन सा लक्षण दिखाई दे सकता है?",
+    "o": ["Extreme energy", "Oedema (Swelling) | एडिमा (सूजन)", "Improved appetite", "Fast running"],
+    "a": 1,
+    "e": "Peripheral oedema or swelling in the legs is a common sign of congestive heart failure[cite: 119, 120].",
+    "cat": "technical",
+    "sub": "medicine"
+  },
+  {
+    "q": "Which condition is characterized by the inflammation of the liver, often caused by a virus? / लीवर की सूजन, जो अक्सर वायरस के कारण होती है, किस स्थिति की विशेषता है?",
+    "o": ["Diabetes", "Hepatitis | हेपेटाइटिस", "Typhoid", "Tuberculosis"],
+    "a": 1,
+    "e": "Hepatitis is an inflammatory condition of the liver, with Hepatitis-B being a major concern in O.T.[cite: 109].",
+    "cat": "technical",
+    "sub": "medicine"
+  },
+  {
+    "q": "The importance of history taking in a medical patient include: / एक मेडिकल मरीज में इतिहास लेने (History taking) के महत्व में शामिल है:",
+    "o": ["To know their bank balance", "To identify pre-existing diseases and allergies | पहले से मौजूद बीमारियों की पहचान", "To find their home address", "No importance"],
+    "a": 1,
+    "e": "A brief history helps the O.T. team prepare for potential medical emergencies during surgery[cite: 118, 119].",
+    "cat": "technical",
+    "sub": "medicine"
+  },
+  {
+    "q": "Which disease is caused by 'Mycobacterium tuberculosis'? / 'माइकोबैक्टीरियम ट्यूबरकुलोसिस' के कारण कौन सा रोग होता है?",
+    "o": ["Typhoid", "Tuberculosis (TB) | तपेदिक (टीबी)", "HIV", "Diabetes"],
+    "a": 1,
+    "e": "TB primarily affects the lungs but can also involve bones and intestines[cite: 121].",
+    "cat": "technical",
+    "sub": "medicine"
+  },
+  {
+    "q": "A 'Valvular heart disease' affects which part of the heart? / 'वाल्वुलर हार्ट डिजीज' हृदय के किस भाग को प्रभावित करती है?",
+    "o": ["Blood vessels", "Heart valves | हृदय के वाल्व", "Heart muscle only", "Outer layer"],
+    "a": 1,
+    "e": "It occurs when one or more of the heart valves do not function properly[cite: 120].",
+    "cat": "technical",
+    "sub": "medicine"
+  },
+  {
+    "q": "In a diabetic patient, what is the risk of 'Hypoglycemia' during surgery? / एक मधुमेह रोगी में, सर्जरी के दौरान 'हाइपोग्लाइसीमिया' का क्या जोखिम है?",
+    "o": ["High blood sugar", "Dangerously low blood sugar | खतरनाक रूप से कम ब्लड शुगर", "High fever", "Thirst"],
+    "a": 1,
+    "e": "Hypoglycemia is a medical emergency that can occur if the patient is fasting for surgery but has taken insulin[cite: 103].",
+    "cat": "technical",
+    "sub": "medicine"
+  },
+  {
+    "q": "Under the 'Consumer Protection Act', an O.T. Technician can be held liable for: / 'उपभोक्ता संरक्षण अधिनियम' के तहत, एक ओ.टी. तकनीशियन को किसके लिए उत्तरदायी ठहराया जा सकता है?",
+    "o": ["Patient's disease", "Medical negligence or lack of care | मेडिकल लापरवाही या देखभाल में कमी", "Hospital building", "Doctor's salary"],
+    "a": 1,
+    "e": "Technicians have legal responsibilities for patient safety during their care[cite: 101].",
+    "cat": "technical",
+    "sub": "ethics"
+  },
+  {
+    "q": "What is the 'Moral duty' of an O.T. Technician toward fellow technicians? / साथी तकनीशियनों के प्रति ओ.टी. तकनीशियन का 'नैतिक कर्तव्य' क्या है?",
+    "o": ["To compete", "Cooperation and professional respect | सहयोग और पेशेवर सम्मान", "To ignore", "To report for no reason"],
+    "a": 1,
+    "e": "Teamwork and mutual respect are essential for the high-pressure O.T. environment[cite: 92].",
+    "cat": "technical",
+    "sub": "ethics"
+  },
+  {
+    "q": "A student of the Diploma in O.T. Assistant course must be on duty during holidays if: / डिप्लोमा इन ओ.टी. असिस्टेंट कोर्स के छात्र को छुट्टियों के दौरान ड्यूटी पर होना चाहिए यदि:",
+    "o": ["They want extra marks", "The O.T. is functioning | यदि ओ.टी. कार्य कर रहा है", "The principal says so", "They are bored"],
+    "a": 1,
+    "e": "The clinical training continues regardless of holidays if surgeries are scheduled [cite: 204-205].",
+    "cat": "technical",
+    "sub": "administration"
+  },
+  {
+    "q": "The 'Movement Register' in the O.T. is used for: / ओ.टी. में 'मूवमेंट रजिस्टर' (Movement Register) का उपयोग किसके लिए किया जाता है?",
+    "o": ["Patient's walking", "Recording entry/exit of staff or equipment | स्टाफ या उपकरणों के आने-जाने का रिकॉर्ड", "Exercise record", "None"],
+    "a": 1,
+    "e": "It helps in tracking the flow of personnel and materials for security and management[cite: 201].",
+    "cat": "technical",
+    "sub": "administration"
+  },
+  {
+    "q": "Coordination with 'Drug supply units' ensures: / 'ड्रग सप्लाई यूनिट' के साथ समन्वय क्या सुनिश्चित करता है?",
+    "o": ["Low prices", "Availability of necessary emergency and routine drugs | आवश्यक दवाओं की उपलब्धता", "Fast delivery of food", "New furniture"],
+    "a": 1,
+    "e": "The O.T. must never run out of critical medications during a procedure[cite: 199].",
+    "cat": "technical",
+    "sub": "administration"
+  },
+  {
+    "q": "What is the purpose of 'Post-operative oxygenation' nursing care? / 'पोस्ट-ऑपरेटिव ऑक्सीजनेशन' नर्सिंग केयर का उद्देश्य क्या है?",
+    "o": ["To make the patient talk", "To maintain adequate oxygen levels after anesthesia | पर्याप्त ऑक्सीजन स्तर बनाए रखना", "To cool the patient", "To reduce pain"],
+    "a": 1,
+    "e": "Anesthesia can depress respiration, requiring supplemental oxygen during recovery[cite: 100].",
+    "cat": "technical",
+    "sub": "general-nursing"
+  },
+  {
+    "q": "Which document is essential for the 'Auditing' process of O.T. expenses? / ओ.टी. खर्चों की 'ऑडिटिंग' प्रक्रिया के लिए कौन सा दस्तावेज आवश्यक है?",
+    "o": ["Patient's diet chart", "Indent and Stock registers | इंडेंट और स्टॉक रजिस्टर", "Staff photos", "Cleanliness report"],
+    "a": 1,
+    "e": "Accurate records of supplies and usage are needed for financial and administrative audits [cite: 201-202].",
+    "cat": "technical",
+    "sub": "administration"
+  },
+  {
+    "q": "Maintaining 'O.T. Discipline' includes: / 'ओ.टी. अनुशासन' बनाए रखने में शामिल है:",
+    "o": ["Talking loudly", "Strict adherence to sterile protocols and noise control | स्टेराइल प्रोटोकॉल का पालन और शोर नियंत्रण", "Eating in O.T.", "Running"],
+    "a": 1,
+    "e": "Discipline is fundamental to maintaining a sterile environment and focus[cite: 203].",
+    "cat": "technical",
+    "sub": "ethics"
+  },
+  {
+    "q": "The 'Circular File' is used to keep: / 'सर्कुलर फाइल' (Circular File) का उपयोग किसे रखने के लिए किया जाता है?",
+    "o": ["Medical bills", "Official notices and guidelines | आधिकारिक नोटिस और दिशा-निर्देश", "Patient prescriptions", "Daily news"],
+    "a": 1,
+    "e": "It ensures that all staff are informed about the latest administrative or clinical protocols[cite: 201].",
+    "cat": "technical",
+    "sub": "administration"
+  },
+  {
+    "q": "Why is 'Physical Examination' of pulse and BP important for O.T. Technicians to know? / ओ.टी. तकनीशियन के लिए पल्स और बीपी की 'शारीरिक जांच' जानना क्यों महत्वपूर्ण है?",
+    "o": ["To act as a doctor", "To assist in monitoring patient stability | मरीज की स्थिरता की निगरानी में मदद करना", "To fill the time", "To impress others"],
+    "a": 1,
+    "e": "Constant vigilance of vital signs allows for rapid response to emergencies[cite: 98, 119].",
+    "cat": "technical",
+    "sub": "medicine"
+  },
+  {
+    "q": "What is the primary risk of using a 'Monopolar Cautery' if the patient plate is not properly attached? / यदि पेशेंट प्लेट ठीक से नहीं लगी है, तो 'मोनोपोलर कॉटरी' के उपयोग का प्राथमिक जोखिम क्या है?",
+    "o": ["Infection", "Cautery burns | कॉटरी बर्न (जलन)", "Bleeding", "Anesthesia failure"],
+    "a": 1,
+    "e": "A loose or poorly placed return electrode (patient plate) can cause accidental electrical burns at the contact site [cite: 89-90].",
+    "cat": "technical",
+    "sub": "general-nursing"
+  },
+  {
+    "q": "During long surgeries, why is it critical to prevent the 'Free fall of arms or legs'? / लंबी सर्जरी के दौरान, हाथ या पैर के 'फ्री फॉल' को रोकना क्यों महत्वपूर्ण है?",
+    "o": ["To prevent muscle fatigue", "To prevent nerve injury and dislocations | तंत्रिका चोट और अव्यवस्था को रोकना", "To keep the patient warm", "To save space"],
+    "a": 1,
+    "e": "Unsupported limbs can lead to nerve stretching or pressure palsies and joint injuries[cite: 80, 90].",
+    "cat": "technical",
+    "sub": "general-nursing"
+  },
+  {
+    "q": "How should an O.T. technician care for a 'Surgical Drain' during patient transfer? / मरीज के ट्रांसफर के दौरान ओ.टी. तकनीशियन को 'सर्जिकल ड्रेन' की देखभाल कैसे करनी चाहिए?",
+    "o": ["Pull it out", "Ensure it is not kinked or pulled and remains below the wound level | सुनिश्चित करें कि यह मुड़ा या खिंचा न हो", "Close it permanently", "Ignore it"],
+    "a": 1,
+    "e": "Drains must be handled carefully to maintain their function and prevent accidental removal[cite: 94, 96].",
+    "cat": "technical",
+    "sub": "general-nursing"
+  },
+  {
+    "q": "What is the risk of 'Electrocution' in the O.T. primarily linked to? / ओ.टी. में 'इलेक्ट्रोक्यूशन' (बिजली का झटका) का जोखिम मुख्य रूप से किससे जुड़ा है?",
+    "o": ["Liquid spills on electrical equipment | बिजली के उपकरणों पर तरल का गिरना", "Oxygen supply", "Cotton drapes", "Patient's clothes"],
+    "a": 0,
+    "e": "Saline or blood spills on ungrounded electrical equipment can cause fatal electric shocks[cite: 90].",
+    "cat": "technical",
+    "sub": "general-nursing"
+  },
+  {
+    "q": "Which part of the body requires special protection against 'Pressure sores' during a 5-hour surgery? / 5 घंटे की सर्जरी के दौरान शरीर के किस हिस्से को 'प्रेशर सोर' से विशेष सुरक्षा की आवश्यकता होती है?",
+    "o": ["Hair", "Bony prominences like heels and sacrum | एड़ी और त्रिकास्थि जैसे हड्डी वाले हिस्से", "Fingernails", "Teeth"],
+    "a": 1,
+    "e": "Prolonged pressure on bony areas reduces blood flow, leading to decubitus ulcers[cite: 80, 89].",
+    "cat": "technical",
+    "sub": "general-nursing"
+  },
+  {
+    "q": "Post-operative dressing and bandaging of the 'Scrotum' requires: / 'अंडकोश' (Scrotum) की पोस्ट-ऑपरेटिव ड्रेसिंग और बैंडेजिंग के लिए आवश्यक है:",
+    "o": ["Tight plaster", "T-bandage or Scrotal support | टी-बैंडेज या स्क्रोटल सपोर्ट", "Plastic wrap", "No dressing"],
+    "a": 1,
+    "e": "Specific areas like the scrotum require specialized bandaging to provide support and reduce edema[cite: 143].",
+    "cat": "technical",
+    "sub": "surgery"
+  },
+  {
+    "q": "Coordination with 'Water, Electric, and Gas supply units' is the duty of: / पानी, बिजली और गैस आपूर्ति इकाइयों के साथ समन्वय करना किसका कर्तव्य है?",
+    "o": ["Surgeon", "O.T. Technician/In-charge | ओ.टी. तकनीशियन/प्रभारी", "Security guard", "Patient"],
+    "a": 1,
+    "e": "Ensuring uninterrupted utility supplies is vital for a functional and safe O.T. environment[cite: 199].",
+    "cat": "technical",
+    "sub": "administration"
+  },
+  {
+    "q": "During operation, 'Eye care' for a general anesthesia patient involves: / ऑपरेशन के दौरान, जनरल एनेस्थीसिया वाले मरीज के लिए 'आई केयर' में शामिल है:",
+    "o": ["Keeping eyes open", "Taping the eyelids closed | पलकों को टेप से बंद करना", "Using bright lights", "Washing with soap"],
+    "a": 1,
+    "e": "Closing the eyes prevents corneal drying and accidental injury during surgery[cite: 80].",
+    "cat": "technical",
+    "sub": "general-nursing"
+  },
+  {
+    "q": "Which register is used to maintain a record of all surgical instruments in the O.T.? / ओ.टी. में सभी सर्जिकल उपकरणों का रिकॉर्ड रखने के लिए किस रजिस्टर का उपयोग किया जाता है?",
+    "o": ["Log book", "Stock register | स्टॉक रजिस्टर", "Attendance register", "Movement register"],
+    "a": 1,
+    "e": "The stock register tracks the inventory and availability of all O.T. equipment[cite: 201].",
+    "cat": "technical",
+    "sub": "administration"
+  },
+  {
+    "q": "What is the O.T. Technician's role in maintaining 'Law and Order' in the O.T. complex? / ओ.टी. कॉम्प्लेक्स में 'कानून और व्यवस्था' बनाए रखने में ओ.टी. तकनीशियन की क्या भूमिका है?",
+    "o": ["To act as police", "Maintaining strict O.T. discipline and restricted entry | अनुशासन और प्रतिबंधित प्रवेश बनाए रखना", "To judge people", "No role"],
+    "a": 1,
+    "e": "Strict discipline is necessary to ensure safety and prevent unauthorized access [cite: 202-203].",
+    "cat": "technical",
+    "sub": "ethics"
+  },
+  {
+    "q": "Which anesthesia technique involves injecting medicine into the cerebrospinal fluid? / किस एनेस्थीसिया तकनीक में दवा को मस्तिष्कमेरु द्रव (CSF) में इंजेक्ट किया जाता है?",
+    "o": ["General Anesthesia", "Spinal Block | स्पाइनल ब्लॉक", "Topical Spray", "Inhalation"],
+    "a": 1,
+    "e": "Spinal anesthesia involves injecting local anesthetics into the subarachnoid space. [cite: 168]",
+    "cat": "technical",
+    "sub": "anaesthesia"
+  },
+  {
+    "q": "What is the common use of 'Nitrous Oxide' in the O.T.? / ओ.टी. में 'नाइट्रस ऑक्साइड' का सामान्य उपयोग क्या है?",
+    "o": ["Cleaning", "Inhalation anesthetic gas | सूंघने वाली एनेस्थेटिक गैस", "Disinfectant", "Hand wash"],
+    "a": 1,
+    "e": "Nitrous oxide is a widely used inhalation gas during general anesthesia. [cite: 153, 155]",
+    "cat": "technical",
+    "sub": "anaesthesia"
+  },
+  {
+    "q": "Which organ is bypassed during Open Heart Surgery? / ओपन हार्ट सर्जरी के दौरान किस अंग को बायपास किया जाता है?",
+    "o": ["Stomach", "Heart and Lungs | हृदय और फेफड़े", "Kidney", "Brain"],
+    "a": 1,
+    "e": "A heart-lung machine takes over the function of these organs during cardiac surgery. [cite: 105, 130]",
+    "cat": "technical",
+    "sub": "surgery"
+  },
+  {
+    "q": "The primary purpose of 'Pre-anaesthetic medication' is: / 'प्री-एनेस्थेटिक मेडिकेशन' का प्राथमिक उद्देश्य है:",
+    "o": ["To wake up the patient", "To reduce anxiety and secretions | चिंता और स्राव को कम करना", "To increase pain", "To feed the patient"],
+    "a": 1,
+    "e": "Pre-medication calms the patient and prepares the body for anesthesia. [cite: 151]",
+    "cat": "technical",
+    "sub": "anaesthesia"
+  },
+  {
+    "q": "Which position is used for Thyroid surgery? / थायराइड की सर्जरी के लिए किस पोजीशन का उपयोग किया जाता है?",
+    "o": ["Prone", "Supine with neck extended | गर्दन को बढ़ाकर सुपाइन स्थिति", "Lateral", "Lithotomy"],
+    "a": 1,
+    "e": "Extending the neck provides proper exposure for thyroid and related neck surgeries. [cite: 128]",
+    "cat": "technical",
+    "sub": "surgery"
+  },
+  {
+    "q": "Which medical condition is a priority concern during anesthesia due to insulin imbalance? / इंसुलिन असंतुलन के कारण एनेस्थीसिया के दौरान कौन सी मेडिकल स्थिति प्राथमिकता वाली चिंता है?",
+    "o": ["Typhoid", "Diabetes Mellitus | मधुमेह", "Hepatitis", "Tuberculosis"],
+    "a": 1,
+    "e": "Blood sugar levels must be strictly monitored in diabetic patients during surgery. [cite: 103]",
+    "cat": "technical",
+    "sub": "medicine"
+  },
+  {
+    "q": "What does 'Artificial Ventilation' refer to? / 'कृत्रिम वेंटिलेशन' (Artificial Ventilation) का क्या अर्थ है?",
+    "o": ["Air conditioning", "Mechanical support for breathing | श्वसन के लिए यांत्रिक सहायता", "Fan in O.T.", "Blowing air by mouth"],
+    "a": 1,
+    "e": "Mechanical ventilators are used when patients cannot breathe on their own. [cite: 173]",
+    "cat": "technical",
+    "sub": "anaesthesia"
+  },
+  {
+    "q": "The use of 'Casts and Slabs' is common in which specialty? / 'कास्ट और स्लैब' का उपयोग किस विशेषता में आम है?",
+    "o": ["Plastic surgery", "Orthopaedic surgery | ऑर्थोपेडिक सर्जरी", "ENT surgery", "Cardiac surgery"],
+    "a": 1,
+    "e": "Casts and slabs are used to immobilize fractured bones in orthopaedics. [cite: 141]",
+    "cat": "technical",
+    "sub": "surgery"
+  },
+  {
+    "q": "What is the 'Indenting procedure' in O.T. management? / ओ.टी. प्रबंधन में 'इंडेन्टिंग प्रक्रिया' (Indenting procedure) क्या है?",
+    "o": ["Cleaning instruments", "Requesting for drug and supply units | दवाओं और आपूर्ति की मांग करना", "Taking patient history", "Fixing lights"],
+    "a": 1,
+    "e": "Indenting is the formal way to request stock and supplies from the hospital store. [cite: 199, 201]",
+    "cat": "technical",
+    "sub": "administration"
+  },
+  {
+    "q": "Post-anaesthesia nursing care for 'Patent Airway' ensures: / 'पेटेंट एयरवे' के लिए पोस्ट-एनेस्थीसिया नर्सिंग देखभाल क्या सुनिश्चित करती है?",
+    "o": ["No hunger", "Unobstructed breathing | निर्बाध श्वसन", "Good sleep", "No fever"],
+    "a": 1,
+    "e": "It prevents tongue fall or obstruction that can lead to suffocation. [cite: 99]",
+    "cat": "technical",
+    "sub": "general-nursing"
+  },
+  {
+    "q": "Which part of the sterile gown is considered 'Unsterile'? / स्टेराइल गाउन का कौन सा हिस्सा 'अनस्टेराइल' माना जाता है?",
+    "o": ["Front chest", "Back of the gown | गाउन का पिछला हिस्सा", "Cuffs of the sleeves", "Above the waist"],
+    "a": 1,
+    "e": "The back of the gown is considered unsterile because it cannot be constantly monitored by the wearer. [cite: 85]",
+    "cat": "technical",
+    "sub": "general-nursing"
+  },
+  {
+    "q": "What is the primary reason for 'Ryle's tube' insertion before abdominal surgery? / पेट की सर्जरी से पहले 'राइल्स ट्यूब' डालने का प्राथमिक कारण क्या है?",
+    "o": ["For oxygen", "To decompress the stomach | पेट को डिकम्प्रेस (खाली) करना", "To measure blood pressure", "For anesthesia"],
+    "a": 1,
+    "e": "Ryle's tube is used for gastric decompression to prevent aspiration during or after surgery. [cite: 76]",
+    "cat": "technical",
+    "sub": "general-nursing"
+  },
+  {
+    "q": "Which position is used for Rectal and Perineal operations? / मलाशय (Rectal) और पेरिनियल ऑपरेशन के लिए किस पोजीशन का उपयोग किया जाता है?",
+    "o": ["Supine", "Lithotomy | लिथो़टमी", "Lateral", "Prone"],
+    "a": 1,
+    "e": "Lithotomy position provides the best exposure for surgeries involving the perineum and rectum. [cite: 80, 135]",
+    "cat": "technical",
+    "sub": "general-nursing"
+  },
+  {
+    "q": "The 'Trendelenburg' position is used to improve blood flow to: / 'ट्रेंडलेनबर्ग' पोजीशन का उपयोग किसके रक्त प्रवाह को सुधारने के लिए किया जाता है?",
+    "o": ["Feet", "Brain and Heart (in shock) | मस्तिष्क और हृदय", "Arms", "Stomach"],
+    "a": 1,
+    "e": "This head-down position helps in returning blood to vital organs during shock or hypotension. [cite: 80, 98]",
+    "cat": "technical",
+    "sub": "general-nursing"
+  },
+  {
+    "q": "What should be checked first when a patient is transferred to the Recovery Room? / जब मरीज को रिकवरी रूम में ट्रांसफर किया जाता है, तो सबसे पहले क्या जांचना चाहिए?",
+    "o": ["Patient's name", "Patent airway | श्वसन मार्ग (Airway) की स्पष्टता", "Bed making", "Surgical bill"],
+    "a": 1,
+    "e": "Maintaining a patent airway is the top priority in post-operative nursing care. [cite: 99]",
+    "cat": "technical",
+    "sub": "general-nursing"
+  },
+  {
+    "q": "What is the recommended method for sterilizing sharp surgical instruments like scalpels? / स्केलपेल जैसे नुकीले सर्जिकल उपकरणों को स्टरलाइज करने की अनुशंसित विधि क्या है?",
+    "o": ["Boiling", "Chemical sterilization or Autoclave | रासायनिक स्टरलाइजेशन या ऑटोक्लेव", "Washing with water", "Sun drying"],
+    "a": 1,
+    "e": "Sharps are sterilized using high-level disinfectants or autoclaving with proper care. [cite: 61, 174]",
+    "cat": "technical",
+    "sub": "microbiology"
+  },
+  {
+    "q": "The legal act that protects patient rights in the medical field is: / मेडिकल क्षेत्र में मरीज के अधिकारों की रक्षा करने वाला कानूनी अधिनियम है:",
+    "o": ["Motor Vehicle Act", "Consumer Protection Act | उपभोक्ता संरक्षण अधिनियम", "Police Act", "Forest Act"],
+    "a": 1,
+    "e": "The Consumer Protection Act covers legal responsibilities regarding patient care in the O.T. [cite: 101]",
+    "cat": "technical",
+    "sub": "general-nursing"
+  },
+  {
+    "q": "What is 'Tachycardia' in vital signs monitoring? / वाइटल साइन्स मॉनिटरिंग में 'टैकीकार्डिया' (Tachycardia) क्या है?",
+    "o": ["Low blood pressure", "Rapid heart rate | तेज हृदय गति", "Slow breathing", "Blue skin"],
+    "a": 1,
+    "e": "A heart rate significantly higher than normal (usually >100 bpm) is termed tachycardia. [cite: 98]",
+    "cat": "technical",
+    "sub": "general-nursing"
+  },
+  {
+    "q": "The use of an 'Endoscopy room' is for: / 'एंडोस्कोपी रूम' का उपयोग किसके लिए किया जाता है?",
+    "o": ["Open surgery", "Viewing internal organs using a camera | कैमरा द्वारा आंतरिक अंगों को देखना", "Bone fixing", "Vaccination"],
+    "a": 1,
+    "e": "Endoscopy is a minimally invasive procedure to view internal body cavities. [cite: 194]",
+    "cat": "technical",
+    "sub": "administration"
+  },
+  {
+    "q": "A 'Log book' in the O.T. complex is used for: / ओ.टी. कॉम्प्लेक्स में 'लॉग बुक' (Log book) का उपयोग किसके लिए किया जाता है?",
+    "o": ["Keeping money", "Maintaining records of work done | किए गए कार्यों का रिकॉर्ड रखना", "Staff address", "Cooking recipes"],
+    "a": 1,
+    "e": "Technicians must maintain a log book to document daily procedures and equipment use. [cite: 201]",
+    "cat": "technical",
+    "sub": "administration"
+  },
+  {
+    "q": "Which drug is used as a 'Pre-anaesthetic medication' to reduce secretions? / स्राव (secretions) को कम करने के लिए प्री-एनेस्थेटिक दवा के रूप में किसका उपयोग किया जाता है?",
+    "o": ["Insulin", "Atropine | एट्रोपिन", "Paracetamol", "Iron"],
+    "a": 1,
+    "e": "Atropine reduces salivary and bronchial secretions to keep the airway clear during anesthesia. [cite: 151, 164]",
+    "cat": "technical",
+    "sub": "anaesthesia"
+  },
+  {
+    "q": "The 'Saddle Block' is a type of: / 'सैडल ब्लॉक' (Saddle Block) किसका एक प्रकार है?",
+    "o": ["General anesthesia", "Spinal anesthesia | स्पाइनल एनेस्थीसिया", "Local spray", "Muscle relaxant"],
+    "a": 1,
+    "e": "Saddle block is a low spinal anesthesia used for perineal or gynecological surgeries. [cite: 168]",
+    "cat": "technical",
+    "sub": "anaesthesia"
+  },
+  {
+    "q": "Which position is required for spinal anesthesia? / स्पाइनल एनेस्थीसिया देने के लिए किस पोजीशन की आवश्यकता होती है?",
+    "o": ["Prone", "Lateral or Sitting with arched back | पार्श्व या झुककर बैठने की स्थिति", "Supine", "Lithotomy"],
+    "a": 1,
+    "e": "The spine must be flexed to open up the intervertebral spaces for needle insertion. [cite: 80, 168]",
+    "cat": "technical",
+    "sub": "general-nursing"
+  },
+  {
+    "q": "The primary role of an O.T. technician during cardiac arrest in O.T. is: / ओ.टी. में कार्डियक अरेस्ट के दौरान तकनीशियन की प्राथमिक भूमिका है:",
+    "o": ["To leave the room", "To assist in CPR and provide emergency equipment | सीपीआर में मदद और आपातकालीन उपकरण देना", "To call the patient's family", "To clean the floor"],
+    "a": 1,
+    "e": "Technicians must be ready with defibrillators and cardiac drugs for immediate management. [cite: 171]",
+    "cat": "technical",
+    "sub": "anaesthesia"
+  },
+  {
+    "q": "Used surgical gloves and linen should be processed in which room? / उपयोग किए गए सर्जिकल ग्लव्स और लिनन को किस कमरे में संसाधित किया जाना चाहिए?",
+    "o": ["Pre-operative room", "Washing & Packing room | धुलाई और पैकिंग रूम", "Endoscopy room", "Medicine store"],
+    "a": 1,
+    "e": "Decontamination, washing, and packing must be done before the next sterilization cycle. [cite: 193, 194]",
+    "cat": "technical",
+    "sub": "administration"
+  },
+  {
+    "q": "Which incision is typically used for Appendectomy? / अपेंडिसेक्टोमी (Appendectomy) के लिए आमतौर पर कौन सा चीरा लगाया जाता है?",
+    "o": ["Midline incision", "McBurney's incision | मैकबर्नी का चीरा", "Subcostal incision", "Neck incision"],
+    "a": 1,
+    "e": "McBurney's incision is a specific abdominal incision used to access the appendix. [cite: 123, 132]",
+    "cat": "technical",
+    "sub": "surgery"
+  },
+  {
+    "q": "What is the antidote for muscle relaxants? / मांसपेशी रिलैक्सेंट्स (Muscle relaxants) का मारक (Antidote) क्या है?",
+    "o": ["Oxygen", "Neostigmine | निओस्टिग्माइन", "Ether", "Adrenaline"],
+    "a": 1,
+    "e": "Neostigmine is used to reverse the effects of non-depolarizing muscle relaxants. [cite: 165]",
+    "cat": "technical",
+    "sub": "anaesthesia"
+  },
+  {
+    "q": "Handling, preserving and transporting samples from O.T. to lab is the responsibility of: / ओ.टी. से लैब तक नमूनों को संभालना, सुरक्षित रखना और पहुँचाना किसकी जिम्मेदारी है?",
+    "o": ["Surgeon", "O.T. Technician | ओ.टी. तकनीशियन", "Patient's relative", "Pharmacist"],
+    "a": 1,
+    "e": "Technicians must ensure specimens like tissue or stones are sent in correct containers (like Formalin). [cite: 57, 196]",
+    "cat": "technical",
+    "sub": "administration"
+  },
+  {
+    "q": "Post-operative nursing care for vomiting includes: / उल्टी (vomiting) के लिए पोस्ट-ऑपरेटिव नर्सिंग देखभाल में शामिल है:",
+    "o": ["Giving food immediately", "Turning the patient's head to one side | मरीज का सिर एक तरफ घुमाना", "Closing the airway", "Making the patient walk"],
+    "a": 1,
+    "e": "Turning the head prevents aspiration of vomit into the lungs (aspiration pneumonia). [cite: 99]",
+    "cat": "technical",
+    "sub": "general-nursing"
+  },
+  {
+    "q": "Which organization's legal responsibilities apply to O.T. patient care? / ओ.टी. मरीज की देखभाल पर किस संगठन की कानूनी जिम्मेदारियां लागू होती हैं?",
+    "o": ["Police Act", "Consumer Protection Act | उपभोक्ता संरक्षण अधिनियम", "Education Act", "Labor Act"],
+    "a": 1,
+    "e": "O.T. technicians are legally responsible for any negligence under the Consumer Protection Act. [cite: 101]",
+    "cat": "technical",
+    "sub": "ethics"
+  },
+  {
+    "q": "Which gas is commonly used for O.T. fumigation? / ओ.टी. के धूमीकरण (Fumigation) के लिए आमतौर पर किस गैस का उपयोग किया जाता है?",
+    "o": ["Oxygen", "Formaldehyde gas | फॉर्मलडिहाइड गैस", "Nitrogen", "Carbon dioxide"],
+    "a": 1,
+    "e": "Formaldehyde is a strong disinfectant used to sterilize the air and surfaces in an O.T. complex. [cite: 61, 198]",
+    "cat": "technical",
+    "sub": "microbiology"
+  },
+  {
+    "q": "A sudden drop in blood pressure and rapid pulse after surgery may indicate: / सर्जरी के बाद रक्तचाप में अचानक गिरावट और तेज़ नाड़ी किसका संकेत हो सकती है?",
+    "o": ["Sleep", "Shock or Hemorrhage | शॉक या रक्तस्राव", "Hunger", "Deep anesthesia"],
+    "a": 1,
+    "e": "Tachycardia and hypotension are clinical signs of internal bleeding or postoperative shock. [cite: 98]",
+    "cat": "technical",
+    "sub": "general-nursing"
+  },
+  {
+    "q": "What is the correct method to open a sterile wrapped packing? / स्टेराइल रैप्ड पैकिंग खोलने का सही तरीका क्या है?",
+    "o": ["Open towards yourself", "Open away from yourself | अपने से दूर की तरफ खोलना", "Open with bare hands", "Use a knife"],
+    "a": 1,
+    "e": "Opening away from the body prevents accidental contamination of the sterile field. [cite: 83]",
+    "cat": "technical",
+    "sub": "general-nursing"
+  },
+  {
+    "q": "Which vital sign indicates 'Cyanosis'? / कौन सा 'वाइटल साइन' साइनोसिस की पहचान है?",
+    "o": ["High temperature", "Blue discoloration of skin/lips | त्वचा या होठों का नीला पड़ना", "Rapid heart rate", "High blood pressure"],
+    "a": 1,
+    "e": "Cyanosis is a sign of inadequate oxygenation of the blood. [cite: 98, 99]",
+    "cat": "technical",
+    "sub": "general-nursing"
+  },
+  {
+    "q": "Decubitus ulcer during long operations can be prevented by: / लंबी सर्जरी के दौरान डेक्यूबिटस अल्सर (Bed sores) को कैसे रोका जा सकता है?",
+    "o": ["Frequent padding of pressure points | दबाव बिंदुओं पर पैडिंग लगाना", "Increasing room temperature", "Applying cold water", "Giving more anesthesia"],
+    "a": 0,
+    "e": "Proper positioning and use of pads prevent tissue ischemia during prolonged immobilization on the table. [cite: 89]",
+    "cat": "technical",
+    "sub": "general-nursing"
+  },
+  {
+    "q": "Insertion of a tube through the nose into the stomach is called: / नाक के माध्यम से पेट में ट्यूब डालने की प्रक्रिया कहलाती है:",
+    "o": ["Catheterization", "Ryle's tube insertion | राइल्स ट्यूब इंसर्शन", "Intubation", "Dialysis"],
+    "a": 1,
+    "e": "Ryle's tube is used for feeding or gastric decompression in pre/post-operative patients. [cite: 76]",
+    "cat": "technical",
+    "sub": "general-nursing"
+  },
+  {
+    "q": "Moral and ethical duties of an O.T. Technician include: / ओ.टी. तकनीशियन के नैतिक कर्तव्यों में शामिल है:",
+    "o": ["Sharing patient secrets", "Maintaining patient confidentiality and discipline | गोपनीयता और अनुशासन बनाए रखना", "Charging extra money", "Ignoring doctor's orders"],
+    "a": 1,
+    "e": "Professional ethics require strict discipline and legal responsibility for patient care. [cite: 92, 101, 203]",
+    "cat": "technical",
+    "sub": "general-nursing"
+  }
+]
