@@ -1,1 +1,2643 @@
-
+[
+  {
+    "q": "Who is known as the father of Pharmacy education in India? / भारत में फार्मेसी शिक्षा के जनक के रूप में किसे जाना जाता है?",
+    "o": ["Mahadeva Lal Schroff | महादेव लाल श्रॉफ", "M.L. Liberman", "Dr. B.C. Roy", "R.N. Chopra"],
+    "a": 0,
+    "e": "Prof. M.L. Schroff started pharmacy education in BHU in 1932, marking the beginning of the profession in India[cite: 405].",
+    "cat": "technical",
+    "sub": "pharmaceutics"
+  },
+  {
+    "q": "The 'Indian Pharmacopoeia' (IP) is published by: / 'इंडियन फार्माकोपिया' (IP) किसके द्वारा प्रकाशित किया जाता है?",
+    "o": ["WHO", "Ministry of Health and Family Welfare | स्वास्थ्य एवं परिवार कल्याण मंत्रालय", "PCI", "AICTE"],
+    "a": 1,
+    "e": "The IP is the official document for drug standards in India, published by the Indian Pharmacopoeia Commission (IPC)[cite: 405].",
+    "cat": "technical",
+    "sub": "pharmaceutics"
+  },
+  {
+    "q": "Which type of glass is also known as 'Borosilicate Glass'? / किस प्रकार के कांच को 'बोरोसिलिकेट ग्लास' के रूप में भी जाना जाता है?",
+    "o": ["Type I | टाइप I", "Type II", "Type III", "NP Glass"],
+    "a": 0,
+    "e": "Type I glass is highly resistant and suitable for parenteral products[cite: 405].",
+    "cat": "technical",
+    "sub": "pharmaceutics"
+  },
+  
+  {
+    "q": "Which enzyme level is most specifically elevated in 'Acute Pancreatitis'? / 'एक्यूट पैंक्रियाटाइटिस' में किस एंजाइम का स्तर सबसे विशिष्ट रूप से बढ़ जाता है?",
+    "o": ["SGOT", "Serum Amylase and Lipase | सीरम एमाइलेज और लाइपेज", "ALP", "Creatinine"],
+    "a": 1,
+    "e": "Amylase and Lipase are digestive enzymes produced by the pancreas; their high level in blood indicates pancreatic inflammation.",
+    "cat": "technical",
+    "sub": "biochemistry"
+  },
+  {
+    "q": "What is the clinical significance of 'Glycosylated Hemoglobin' (HbA1c) test? / 'ग्लाइकोसिलेटेड हीमोग्लोबिन' (HbA1c) परीक्षण का नैदानिक महत्व क्या है?",
+    "o": ["Instant sugar check", "Average blood sugar of last 3 months | पिछले 3 महीनों का औसत शुगर", "Check for anemia", "None"],
+    "a": 1,
+    "e": "HbA1c provides a long-term picture of blood glucose control, which is vital for managing Diabetes.",
+    "cat": "technical",
+    "sub": "biochemistry"
+  },
+  {
+    "q": "Which drug used in TB treatment can cause 'Optic Neuritis' (vision problems)? / टीबी के उपचार में उपयोग की जाने वाली कौन सी दवा 'ऑप्टिक न्यूराइटिस' का कारण बन सकती है?",
+    "o": ["Isoniazid", "Ethambutol | एथमब्यूटोल", "Pyrazinamide", "Rifampicin"],
+    "a": 1,
+    "e": "Ethambutol can cause dose-related visual impairment; patients should have regular eye checkups.",
+    "cat": "technical",
+    "sub": "pharmacotherapeutics"
+  },
+  {
+    "q": "Under the NDPS Act 1985, 'Opium' is classified as a: / NDPS अधिनियम 1985 के तहत, 'अफीम' को किस रूप में वर्गीकृत किया गया है?",
+    "o": ["Non-habit forming drug", "Narcotic Drug | मादक द्रव्य (Narcotic)", "Essential vitamin", "None"],
+    "a": 1,
+    "e": "Opium and its derivatives are strictly regulated due to high addiction potential.",
+    "cat": "technical",
+    "sub": "pharmacy_law"
+  },
+  {
+    "q": "What is the 'Incubation Period' of Plasmodium falciparum (Malaria)? / प्लाज्मोडियम फाल्सीपेरम (मलेरिया) की 'इनक्यूबेशन अवधि' क्या है?",
+    "o": ["1 day", "9 to 14 days | 9 से 14 दिन", "2 months", "None"],
+    "a": 1,
+    "e": "It is the time from the mosquito bite to the first appearance of symptoms.",
+    "cat": "technical",
+    "sub": "pharmacotherapeutics"
+  },
+  {
+    "q": "In LFT, 'Alkaline Phosphatase' (ALP) levels are highly elevated in: / LFT में, 'एल्कलाइन फॉस्फेट' (ALP) का स्तर किसमें अत्यधिक बढ़ जाता है?",
+    "o": ["Muscle pain", "Obstructive Jaundice | पित्त नली में रुकावट/पीलिया", "Diabetes", "Asthma"],
+    "a": 1,
+    "e": "High ALP is a hallmark of biliary obstruction or bone-related disorders.",
+    "cat": "technical",
+    "sub": "biochemistry"
+  },
+  {
+    "q": "The 'Medical Termination of Pregnancy' (MTP) Act was first passed in: / 'गर्भ का चिकित्सीय समापन' (MTP) अधिनियम पहली बार कब पारित किया गया था?",
+    "o": ["1948", "1971 | 1971", "1985", "2021"],
+    "a": 1,
+    "e": "The MTP Act 1971 provides the legal framework for safe and legal abortions in India.",
+    "cat": "technical",
+    "sub": "pharmacy_law"
+  },
+  {
+    "q": "Which electrolyte imbalance is common with 'Digoxin' therapy? / 'डिजॉक्सिन' थेरेपी के साथ कौन सा इलेक्ट्रोलाइट असंतुलन सामान्य है?",
+    "o": ["Hypernatremia", "Hypokalemia (Low Potassium) | हाइपोकैलिमिया", "Hypercalcemia", "None"],
+    "a": 1,
+    "e": "Low potassium levels increase the risk of Digoxin toxicity, leading to heart rhythm problems.",
+    "cat": "technical",
+    "sub": "pharmacology"
+  },
+  {
+    "q": "The 'Blood Urea Nitrogen' (BUN) test is primarily used to evaluate: / 'ब्लड यूरिया नाइट्रोजन' (BUN) परीक्षण का उपयोग मुख्य रूप से किसके मूल्यांकन के लिए किया जाता है?",
+    "o": ["Liver function", "Kidney function | गुर्दा समारोह (Kidney)", "Lung capacity", "None"],
+    "a": 1,
+    "e": "BUN measures the amount of nitrogen in the blood that comes from urea, a waste product filtered by the kidneys.",
+    "cat": "technical",
+    "sub": "biochemistry"
+  },
+  {
+    "q": "Under the 'Medicinal and Toilet Preparations Act', which substance is strictly regulated? / 'औषधीय और प्रसाधन सामग्री अधिनियम' के तहत, किस पदार्थ को कड़ाई से विनियमित किया गया है?",
+    "o": ["Sugar", "Ethyl Alcohol | इथाइल अल्कोहल", "Salt", "Water"],
+    "a": 1,
+    "e": "The act regulates the use of alcohol in medicines to prevent its misuse as a beverage.",
+    "cat": "technical",
+    "sub": "pharmacy_law"
+  },
+  {
+    "q": "Which drug is the preferred 'Beta-blocker' for treating Glaucoma? / ग्लूकोमा के इलाज के लिए पसंदीदा 'बीटा-ब्लॉकर' कौन सी दवा है?",
+    "o": ["Propranolol", "Timolol | टिमोलोल", "Atenolol", "None"],
+    "a": 1,
+    "e": "Timolol eye drops reduce intraocular pressure by decreasing aqueous humor production.",
+    "cat": "technical",
+    "sub": "pharmacotherapeutics"
+  },
+  {
+    "q": "The primary goal of 'Palliative Care' is: / 'पेलिएटिव केयर' (Palliative Care) का प्राथमिक लक्ष्य क्या है?",
+    "o": ["Total cure of disease", "Relieving symptoms and improving quality of life | लक्षणों से राहत", "Performing surgery", "None"],
+    "a": 1,
+    "e": "It is focused on providing relief from pain and stress for patients with serious illnesses.",
+    "cat": "technical",
+    "sub": "pharmacotherapeutics"
+  },
+  {
+    "q": "Which condition is treated with 'Zidovudine' (AZT)? / 'जिडोवुडिन' (AZT) से किस स्थिति का इलाज किया जाता है?",
+    "o": ["Tuberculosis", "HIV/AIDS | एचआईवी/एड्स", "Malaria", "Cancer"],
+    "a": 1,
+    "e": "AZT is a reverse transcriptase inhibitor used in the management of HIV infection.",
+    "cat": "technical",
+    "sub": "pharmacotherapeutics"
+  },
+  {
+    "q": "What is the 'Drug Inspector's' power under Section 22 of the D&C Act? / D&C अधिनियम की धारा 22 के तहत 'ड्रग इंस्पेक्टर' की क्या शक्ति है?",
+    "o": ["To prescribe medicine", "To inspect premises and take samples | निरीक्षण और नमूने लेना", "To change drug price", "None"],
+    "a": 1,
+    "e": "Inspectors can enter, search, and seize records or samples to ensure legal compliance.",
+    "cat": "technical",
+    "sub": "pharmacy_law"
+  },
+  {
+    "q": "In pharmacotherapeutics, what is the 'DASH' diet used for? / फार्माकोथेरेप्यूटिक्स में, 'DASH' आहार का उपयोग किसके लिए किया जाता है?",
+    "o": ["Diabetes", "Hypertension | उच्च रक्तचाप (Hypertension)", "Asthma", "None"],
+    "a": 1,
+    "e": "Dietary Approaches to Stop Hypertension (DASH) focuses on low sodium and high potassium/calcium.",
+    "cat": "technical",
+    "sub": "pharmacotherapeutics"
+  },
+  {
+    "q": "'Schedule J' of the D&C Act contains a list of: / D&C अधिनियम के 'शेड्यूल J' में किसकी सूची शामिल है?",
+    "o": ["Incurable diseases | बीमारियाँ जिन्हें ठीक करने का दावा नहीं किया जा सकता", "Prescription drugs", "Life periods of drugs", "None"],
+    "a": 0,
+    "e": "It lists diseases that a drug may not claim to prevent or cure (e.g., blindness, cancer).",
+    "cat": "technical",
+    "sub": "pharmacy_law"
+  },
+  {
+    "q": "Which laboratory parameter is monitored for patients on 'Warfarin' therapy? / 'वारफारिन' थेरेपी ले रहे रोगियों के लिए किस प्रयोगशाला पैरामीटर की निगरानी की जाती है?",
+    "o": ["Blood sugar", "INR (International Normalized Ratio) | आईएनआर (INR)", "Uric acid", "None"],
+    "a": 1,
+    "e": "INR measures how long it takes for blood to clot, ensuring the dose is safe and effective.",
+    "cat": "technical",
+    "sub": "pharmacotherapeutics"
+  },
+  {
+    "q": "What is 'Evidence-Based Medicine' (EBM)? / 'एविडेंस-बेस्ड मेडिसिन' (EBM) क्या है?",
+    "o": ["Using old beliefs", "Using the best current clinical research for patient care | सर्वोत्तम शोध का उपयोग", "Selling drugs without trial", "None"],
+    "a": 1,
+    "e": "EBM integrates clinical expertise with the best available external clinical evidence.",
+    "cat": "technical",
+    "sub": "pharmacotherapeutics"
+  },
+  {
+    "q": "The 'Drugs and Magic Remedies Act' 1954 prohibits: / 'ड्रग्स एंड मैजिक रेमेडीज एक्ट' 1954 क्या प्रतिबंधित करता है?",
+    "o": ["Selling drugs", "Misleading advertisements of drugs | भ्रामक विज्ञापन", "Importing drugs", "None"],
+    "a": 1,
+    "e": "It prevents claims of 'magical' cures for diseases like cancer or epilepsy in advertisements.",
+    "cat": "technical",
+    "sub": "pharmacy_law"
+  },
+  {
+    "q": "Which drug is used in the 'Step-1' of asthma management as per GINA guidelines? / GINA दिशानिर्देशों के अनुसार अस्थमा प्रबंधन के 'स्टेप-1' में किस दवा का उपयोग किया जाता है?",
+    "o": ["Antibiotics", "SABA (Short-Acting Beta Agonists) | साबा (SABA)", "Statins", "None"],
+    "a": 1,
+    "e": "SABA like Salbutamol is used for quick relief of asthma symptoms.",
+    "cat": "technical",
+    "sub": "pharmacotherapeutics"
+  },
+  {
+    "q": "Which committee in a hospital is responsible for selecting the list of essential drugs? / अस्पताल में आवश्यक दवाओं की सूची चुनने के लिए कौन सी समिति जिम्मेदार है?",
+    "o": ["Finance Committee", "Pharmacy and Therapeutics Committee (PTC) | पीटीसी", "Nursing Committee", "None"],
+    "a": 1,
+    "e": "PTC is responsible for developing the Hospital Formulary and ensuring rational drug use.",
+    "cat": "technical",
+    "sub": "hospital_pharmacy"
+  },
+  {
+    "q": "What is the primary function of a 'Satellite Pharmacy'? / 'सैटेलाइट फार्मेसी' का प्राथमिक कार्य क्या है?",
+    "o": ["Manufacturing drugs", "Providing pharmacy services closer to patient wards | वार्डों के पास सेवा प्रदान करना", "Selling cosmetics", "None"],
+    "a": 1,
+    "e": "Satellite pharmacies are small sub-stations located in specific areas/wards of the hospital for faster drug delivery.",
+    "cat": "technical",
+    "sub": "hospital_pharmacy"
+  },
+  {
+    "q": "Which of the following is a 'Medication Error' of omission? / निम्नलिखित में से कौन सी 'ओमिशन' (omission) की दवा त्रुटि है?",
+    "o": ["Giving wrong dose", "Failing to administer an ordered dose | आदेशित खुराक देना भूल जाना", "Giving drug to wrong patient", "None"],
+    "a": 1,
+    "e": "Omission error occurs when a prescribed dose is not given to the patient at the scheduled time.",
+    "cat": "technical",
+    "sub": "hospital_pharmacy"
+  },
+  {
+    "q": "What is the full form of 'TNP' in clinical nutrition? / क्लीनिकल पोषण में 'TNP' का पूर्ण रूप क्या है?",
+    "o": ["Total Nasal Protein", "Total Parenteral Nutrition | टोटल पैरेंट्रल न्यूट्रिशन", "Technical Pharmacy Part", "None"],
+    "a": 1,
+    "e": "TPN is the intravenous feeding of all necessary nutrients to patients who cannot use their digestive tract.",
+    "cat": "technical",
+    "sub": "hospital_pharmacy"
+  },
+  {
+    "q": "The term 'Inventory Turnover Ratio' indicates: / 'इन्वेंट्री टर्नओवर रेशियो' क्या दर्शाता है?",
+    "o": ["Total area of pharmacy", "How many times stock is replaced in a year | स्टॉक कितनी बार बदला गया", "Number of staff", "None"],
+    "a": 1,
+    "e": "A high ratio suggests efficient inventory management and fast-moving stock.",
+    "cat": "technical",
+    "sub": "hospital_pharmacy"
+  },
+  {
+    "q": "What is 'Drug-Induced Disease' known as? / 'दवा से होने वाली बीमारी' को क्या कहा जाता है?",
+    "o": ["Idiopathic", "Iatrogenic | इट्रोजेनिक (Iatrogenic)", "Congenital", "None"],
+    "a": 1,
+    "e": "Iatrogenic conditions are those caused by medical treatment or drug side effects.",
+    "cat": "technical",
+    "sub": "hospital_pharmacy"
+  },
+  {
+    "q": "Which document is used by nurses to record the time of drug administration? / दवाओं के प्रशासन के समय को रिकॉर्ड करने के लिए नर्सों द्वारा किस दस्तावेज़ का उपयोग किया जाता है?",
+    "o": ["Bin Card", "Medication Administration Record (MAR) | एमएआर (MAR)", "Purchase Order", "None"],
+    "a": 1,
+    "e": "MAR is a legal document used to track the patient's drug intake in the hospital.",
+    "cat": "technical",
+    "sub": "hospital_pharmacy"
+  },
+  {
+    "q": "Which of these is a 'Class A' item in ABC analysis? / ABC विश्लेषण में 'क्लास ए' आइटम कौन सा है?",
+    "o": ["Cheap surgical gauze", "Costly life-saving medicines | महंगी जीवन रक्षक दवाएं", "Cotton wool", "Plastic cups"],
+    "a": 1,
+    "e": "Class A items are few in number (10%) but account for 70% of the total budget.",
+    "cat": "technical",
+    "sub": "hospital_pharmacy"
+  },
+  {
+    "q": "What is 'Clinical Pharmacy'? / 'क्लीनिकल फार्मेसी' क्या है?",
+    "o": ["Selling drugs for profit", "Practice of pharmacy focused on patient-oriented services | रोगी-केंद्रित सेवा", "Manufacturing tablets", "None"],
+    "a": 1,
+    "e": "Clinical pharmacists work directly with doctors and patients to optimize drug therapy.",
+    "cat": "technical",
+    "sub": "hospital_pharmacy"
+  },
+  {
+    "q": "What is the standard temperature for 'Cool Place' storage? / 'ठंडी जगह' (Cool Place) भंडारण के लिए मानक तापमान क्या है?",
+    "o": ["0°C to 2°C", "8°C to 25°C | 8°C से 25°C", "Below 0°C", "Above 30°C"],
+    "a": 1,
+    "e": "As per IP, a cool place is between 8 and 25 degrees Celsius, while a refrigerator is 2 to 8 degrees.",
+    "cat": "technical",
+    "sub": "hospital_pharmacy"
+  },
+  {
+    "q": "Which of the following is a 'Potassium-Sparing' diuretic? / निम्नलिखित में से कौन सा 'पोटेशियम-स्पेयरिंग' मूत्रवर्धक है?",
+    "o": ["Furosemide", "Spironolactone | स्पिरोनोलैक्टोन", "Hydrochlorothiazide", "Mannitol"],
+    "a": 1,
+    "e": "Spironolactone inhibits aldosterone, preventing potassium loss while promoting sodium excretion.",
+    "cat": "technical",
+    "sub": "pharmacology"
+  },
+  {
+    "q": "What does a high level of 'Serum Bilirubin' indicate? / 'सीरम बिलीरुबिन' का उच्च स्तर क्या दर्शाता है?",
+    "o": ["Kidney failure", "Jaundice / Liver dysfunction | पीलिया", "Heart attack", "Diabetes"],
+    "a": 1,
+    "e": "Bilirubin is a byproduct of RBC breakdown; its accumulation causes yellowing of skin and eyes.",
+    "cat": "technical",
+    "sub": "biochemistry"
+  },
+  {
+    "q": "Which drug is used to treat 'Opioid Overdose'? / 'ओपियोइड ओवरडोज़' के इलाज के लिए किस दवा का उपयोग किया जाता है?",
+    "o": ["Morphine", "Naloxone | नैलोक्सोन", "Diazepam", "Atropine"],
+    "a": 1,
+    "e": "Naloxone is an opioid antagonist that rapidly reverses respiratory depression.",
+    "cat": "technical",
+    "sub": "pharmacology"
+  },
+  {
+    "q": "What is the function of 'Glutathione' in the body? / शरीर में 'ग्लूटाथियोन' का क्या कार्य है?",
+    "o": ["Muscle building", "Antioxidant and detoxification | एंटीऑक्सीडेंट", "Energy source", "None"],
+    "a": 1,
+    "e": "Glutathione protects cells from oxidative stress and helps in the metabolism of toxins.",
+    "cat": "technical",
+    "sub": "biochemistry"
+  },
+  {
+    "q": "The 'Therapeutic Index' of a drug is a measure of its: / किसी दवा का 'चिकित्सीय सूचकांक' (Therapeutic Index) किसका माप है?",
+    "o": ["Price", "Safety | सुरक्षा (Safety)", "Taste", "Solubility"],
+    "a": 1,
+    "e": "A higher therapeutic index means the drug is safer, as there is a wide gap between effective and toxic doses.",
+    "cat": "technical",
+    "sub": "pharmacology"
+  },
+  {
+    "q": "Presence of 'Albumin' in urine (Albuminuria) suggests damage to: / मूत्र में 'एल्ब्यूमिन' की उपस्थिति किसके खराब होने का संकेत देती है?",
+    "o": ["Heart", "Glomerular filter of Kidney | किडनी का फिल्टर", "Lungs", "Liver"],
+    "a": 1,
+    "e": "Normally, large proteins like albumin are not filtered into the urine.",
+    "cat": "technical",
+    "sub": "biochemistry"
+  },
+  {
+    "q": "Which hormone is deficient in 'Diabetes Insipidus'? / 'डायबिटीज इंसिपिडस' में किस हार्मोन की कमी होती है?",
+    "o": ["Insulin", "Anti-Diuretic Hormone (ADH) | एडीएच (ADH)", "Glucagon", "Oxytocin"],
+    "a": 1,
+    "e": "ADH deficiency leads to the excretion of large volumes of dilute urine.",
+    "cat": "technical",
+    "sub": "pharmacology"
+  },
+  {
+    "q": "What is 'First-pass metabolism'? / 'फर्स्ट-पास मेटाबॉलिज्म' क्या है?",
+    "o": ["Metabolism in lungs", "Drug metabolism in the liver before reaching systemic circulation | यकृत में चयापचय", "Excretion in urine", "None"],
+    "a": 1,
+    "e": "It significantly reduces the bioavailability of many oral drugs.",
+    "cat": "technical",
+    "sub": "pharmacology"
+  },
+  {
+    "q": "Which inorganic element is essential for 'Thyroid' hormone synthesis? / 'थायराइड' हार्मोन संश्लेषण के लिए कौन सा अकार्बनिक तत्व आवश्यक है?",
+    "o": ["Iron", "Iodine | आयोडीन", "Zinc", "Magnesium"],
+    "a": 1,
+    "e": "Iodine is a key component of T3 and T4 hormones.",
+    "cat": "technical",
+    "sub": "biochemistry"
+  },
+  {
+    "q": "Which drug interaction occurs when 'Tetracycline' is taken with milk? / जब 'टेट्रासाइक्लिन' को दूध के साथ लिया जाता है तो कौन सा ड्रग इंटरेक्शन होता है?",
+    "o": ["Synergism", "Reduced absorption due to chelation | अवशोषण में कमी", "Increased toxicity", "None"],
+    "a": 1,
+    "e": "Calcium in milk binds with tetracycline, preventing its absorption in the gut.",
+    "cat": "technical",
+    "sub": "pharmacology"
+  },
+  {
+    "q": "Which of the following is a 'Potassium-Sparing' diuretic? / निम्नलिखित में से कौन सा 'पोटेशियम-स्पेयरिंग' मूत्रवर्धक है?",
+    "o": ["Furosemide", "Spironolactone | स्पिरोनोलैक्टोन", "Hydrochlorothiazide", "Mannitol"],
+    "a": 1,
+    "e": "Spironolactone inhibits aldosterone, preventing potassium loss while promoting sodium excretion.",
+    "cat": "technical",
+    "sub": "pharmacology"
+  },
+  {
+    "q": "What does a high level of 'Serum Bilirubin' indicate? / 'सीरम बिलीरुबिन' का उच्च स्तर क्या दर्शाता है?",
+    "o": ["Kidney failure", "Jaundice / Liver dysfunction | पीलिया", "Heart attack", "Diabetes"],
+    "a": 1,
+    "e": "Bilirubin is a byproduct of RBC breakdown; its accumulation causes yellowing of skin and eyes.",
+    "cat": "technical",
+    "sub": "biochemistry"
+  },
+  {
+    "q": "Which drug is used to treat 'Opioid Overdose'? / 'ओपियोइड ओवरडोज़' के इलाज के लिए किस दवा का उपयोग किया जाता है?",
+    "o": ["Morphine", "Naloxone | नैलोक्सोन", "Diazepam", "Atropine"],
+    "a": 1,
+    "e": "Naloxone is an opioid antagonist that rapidly reverses respiratory depression.",
+    "cat": "technical",
+    "sub": "pharmacology"
+  },
+  {
+    "q": "What is the function of 'Glutathione' in the body? / शरीर में 'ग्लूटाथियोन' का क्या कार्य है?",
+    "o": ["Muscle building", "Antioxidant and detoxification | एंटीऑक्सीडेंट", "Energy source", "None"],
+    "a": 1,
+    "e": "Glutathione protects cells from oxidative stress and helps in the metabolism of toxins.",
+    "cat": "technical",
+    "sub": "biochemistry"
+  },
+  {
+    "q": "The 'Therapeutic Index' of a drug is a measure of its: / किसी दवा का 'चिकित्सीय सूचकांक' (Therapeutic Index) किसका माप है?",
+    "o": ["Price", "Safety | सुरक्षा (Safety)", "Taste", "Solubility"],
+    "a": 1,
+    "e": "A higher therapeutic index means the drug is safer, as there is a wide gap between effective and toxic doses.",
+    "cat": "technical",
+    "sub": "pharmacology"
+  },
+  {
+    "q": "Presence of 'Albumin' in urine (Albuminuria) suggests damage to: / मूत्र में 'एल्ब्यूमिन' की उपस्थिति किसके खराब होने का संकेत देती है?",
+    "o": ["Heart", "Glomerular filter of Kidney | किडनी का फिल्टर", "Lungs", "Liver"],
+    "a": 1,
+    "e": "Normally, large proteins like albumin are not filtered into the urine.",
+    "cat": "technical",
+    "sub": "biochemistry"
+  },
+  {
+    "q": "Which hormone is deficient in 'Diabetes Insipidus'? / 'डायबिटीज इंसिपिडस' में किस हार्मोन की कमी होती है?",
+    "o": ["Insulin", "Anti-Diuretic Hormone (ADH) | एडीएच (ADH)", "Glucagon", "Oxytocin"],
+    "a": 1,
+    "e": "ADH deficiency leads to the excretion of large volumes of dilute urine.",
+    "cat": "technical",
+    "sub": "pharmacology"
+  },
+  {
+    "q": "What is 'First-pass metabolism'? / 'फर्स्ट-पास मेटाबॉलिज्म' क्या है?",
+    "o": ["Metabolism in lungs", "Drug metabolism in the liver before reaching systemic circulation | यकृत में चयापचय", "Excretion in urine", "None"],
+    "a": 1,
+    "e": "It significantly reduces the bioavailability of many oral drugs.",
+    "cat": "technical",
+    "sub": "pharmacology"
+  },
+  {
+    "q": "Which inorganic element is essential for 'Thyroid' hormone synthesis? / 'थायराइड' हार्मोन संश्लेषण के लिए कौन सा अकार्बनिक तत्व आवश्यक है?",
+    "o": ["Iron", "Iodine | आयोडीन", "Zinc", "Magnesium"],
+    "a": 1,
+    "e": "Iodine is a key component of T3 and T4 hormones.",
+    "cat": "technical",
+    "sub": "biochemistry"
+  },
+  {
+    "q": "Which drug interaction occurs when 'Tetracycline' is taken with milk? / जब 'टेट्रासाइक्लिन' को दूध के साथ लिया जाता है तो कौन सा ड्रग इंटरेक्शन होता है?",
+    "o": ["Synergism", "Reduced absorption due to chelation | अवशोषण में कमी", "Increased toxicity", "None"],
+    "a": 1,
+    "e": "Calcium in milk binds with tetracycline, preventing its absorption in the gut.",
+    "cat": "technical",
+    "sub": "pharmacology"
+  },
+  {
+    "q": "What is the primary role of 'HEPA' filters in hospital pharmacy? / अस्पताल फार्मेसी में 'HEPA' फिल्टर की प्राथमिक भूमिका क्या है?",
+    "o": ["Filtering water", "Providing sterile air in aseptic areas | स्टेराइल हवा प्रदान करना", "Cooling the room", "None"],
+    "a": 1,
+    "e": "High-Efficiency Particulate Air (HEPA) filters are used in laminar airflow benches to prepare sterile IV products.",
+    "cat": "technical",
+    "sub": "hospital_pharmacy"
+  },
+  {
+    "q": "Which element of 'Patient Counseling' involves explaining the frequency of dose? / 'रोगी परामर्श' के किस तत्व में खुराक की आवृत्ति समझाना शामिल है?",
+    "o": ["Price discussion", "Instructions for use | उपयोग के निर्देश", "Greeting", "None"],
+    "a": 1,
+    "e": "Counseling ensures the patient understands how and when to take their medication.",
+    "cat": "technical",
+    "sub": "community_pharmacy"
+  },
+  {
+    "q": "What does 'ABC Analysis' stand for in inventory management? / इन्वेंट्री प्रबंधन में 'ABC विश्लेषण' का क्या अर्थ है?",
+    "o": ["All Best Control", "Always Better Control | ऑलवेज बेटर कंट्रोल", "Alpha Beta Cost", "None"],
+    "a": 1,
+    "e": "It classifies inventory into three categories (A, B, and C) based on their consumption value.",
+    "cat": "technical",
+    "sub": "management"
+  },
+  {
+    "q": "Which condition is characterized by high 'Uric Acid' levels in blood? / रक्त में उच्च 'यूरिक एसिड' स्तर किस स्थिति की विशेषता है?",
+    "o": ["Diabetes", "Gout | गाउट (Gout)", "Hypertension", "Asthma"],
+    "a": 1,
+    "e": "Gout is a type of arthritis caused by the accumulation of urate crystals in joints.",
+    "cat": "technical",
+    "sub": "pharmacotherapeutics"
+  },
+  {
+    "q": "The 'Minimum area' required to open a retail pharmacy is: / रिटेल फार्मेसी खोलने के लिए आवश्यक 'न्यूनतम क्षेत्र' है:",
+    "o": ["5 sq meters", "10 sq meters | 10 वर्ग मीटर", "50 sq meters", "100 sq meters"],
+    "a": 1,
+    "e": "As per the Pharmacy Law, a minimum of 10 square meters is required for a retail outlet.",
+    "cat": "technical",
+    "sub": "pharmacy_law"
+  },
+  {
+    "q": "What is 'Pharmacovigilance'? / 'फार्माकोविजिलेंस' (Pharmacovigilance) क्या है?",
+    "o": ["Buying drugs", "Monitoring drug safety and adverse effects | दवा सुरक्षा की निगरानी", "Testing new drugs", "None"],
+    "a": 1,
+    "e": "It is the science of detecting, assessing, and preventing adverse effects of medicines.",
+    "cat": "technical",
+    "sub": "hospital_pharmacy"
+  },
+  {
+    "q": "Which organization provides 'GPP' (Good Pharmacy Practice) guidelines? / 'GPP' (Good Pharmacy Practice) दिशानिर्देश कौन सा संगठन प्रदान करता है?",
+    "o": ["FIP/WHO | एफआईपी/डब्ल्यूएचओ", "AICTE", "Income Tax Dept", "None"],
+    "a": 0,
+    "e": "International Pharmaceutical Federation (FIP) and WHO provide global standards for pharmacy practice.",
+    "cat": "technical",
+    "sub": "community_pharmacy"
+  },
+  {
+    "q": "In hospital pharmacy, 'LVP' stands for: / अस्पताल फार्मेसी में, 'LVP' का अर्थ है:",
+    "o": ["Low Volume Protein", "Large Volume Parenterals | लार्ज वॉल्यूम पैरेंट्रल", "Long Vital Part", "None"],
+    "a": 1,
+    "e": "LVPs are sterile products like IV fluids (500ml or more) given to patients.",
+    "cat": "technical",
+    "sub": "hospital_pharmacy"
+  },
+  {
+    "q": "Which drug is used as an 'Antidote' for Paracetamol poisoning? / पैरासिटामोल विषाक्तता के लिए 'एंटीडोट' के रूप में किस दवा का उपयोग किया जाता है?",
+    "o": ["Atropine", "N-acetylcysteine | एन-एसिटाइलसिस्टीन", "Naloxone", "Flumazenil"],
+    "a": 1,
+    "e": "N-acetylcysteine restores glutathione levels in the liver to prevent damage.",
+    "cat": "technical",
+    "sub": "pharmacology"
+  },
+  {
+    "q": "What is 'Angina Pectoris'? / 'एंजाइना पेक्टोरिस' (Angina Pectoris) क्या है?",
+    "o": ["Stomach pain", "Chest pain due to reduced blood flow to heart | सीने में दर्द", "Headache", "None"],
+    "a": 1,
+    "e": "It is a primary symptom of Ischemic Heart Disease (IHD).",
+    "cat": "technical",
+    "sub": "pharmacotherapeutics"
+  },
+  {
+    "q": "What is the primary site of drug absorption for most oral medications? / अधिकांश मौखिक दवाओं के अवशोषण का प्राथमिक स्थान क्या है?",
+    "o": ["Stomach", "Small Intestine | छोटी आंत", "Large Intestine", "Esophagus"],
+    "a": 1,
+    "e": "The small intestine has a large surface area (villi), making it ideal for drug absorption.",
+    "cat": "technical",
+    "sub": "pharmacology"
+  },
+  {
+    "q": "Which enzyme is deficient in 'Lactose Intolerance'? / 'लैक्टोज इनटोलरेंस' में किस एंजाइम की कमी होती है?",
+    "o": ["Amylase", "Lactase | लैक्टेज", "Lipase", "Trypsin"],
+    "a": 1,
+    "e": "Lactase is required to break down lactose (milk sugar) into glucose and galactose.",
+    "cat": "technical",
+    "sub": "biochemistry"
+  },
+  {
+    "q": "The Pharmacy Act was passed in India in the year: / भारत में फार्मेसी अधिनियम किस वर्ष पारित किया गया था?",
+    "o": ["1940", "1948 | 1948", "1955", "1919"],
+    "a": 1,
+    "e": "The Pharmacy Act 1948 was enacted to regulate the profession of pharmacy in India.",
+    "cat": "technical",
+    "sub": "pharmacy_law"
+  },
+  {
+    "q": "Which drug is used as a 'First-line' treatment for Anaphylactic Shock? / एनाफिलेक्टिक शॉक के लिए 'प्रथम-पंक्ति' उपचार के रूप में किस दवा का उपयोग किया जाता है?",
+    "o": ["Atropine", "Adrenaline (Epinephrine) | एड्रेनालिन", "Dopamine", "Digoxin"],
+    "a": 1,
+    "e": "Adrenaline is the drug of choice for acute allergic emergencies (anaphylaxis).",
+    "cat": "technical",
+    "sub": "pharmacology"
+  },
+  {
+    "q": "What is the normal range of 'Blood Glucose' in fasting state? / उपवास की स्थिति में 'ब्लड ग्लूकोज' की सामान्य सीमा क्या है?",
+    "o": ["140-200 mg/dL", "70-110 mg/dL | 70-110 मिलीग्राम/डीएल", "50-60 mg/dL", "None"],
+    "a": 1,
+    "e": "Fasting blood sugar between 70-110 mg/dL is considered normal for a healthy adult.",
+    "cat": "technical",
+    "sub": "biochemistry"
+  },
+  {
+    "q": "'Schedule X' of the Drugs and Cosmetics Act includes: / ड्रग्स और कॉस्मेटिक्स एक्ट के 'शेड्यूल X' में शामिल हैं:",
+    "o": ["Vitamins", "Narcotics and Psychotropic drugs | नशीली और साइकोट्रोपिक दवाएं", "Generic drugs", "Surgical items"],
+    "a": 1,
+    "e": "Schedule X drugs require special licenses and record-keeping due to their potential for abuse.",
+    "cat": "technical",
+    "sub": "pharmacy_law"
+  },
+  {
+    "q": "Which type of 'Lipoprotein' is known as 'Good Cholesterol'? / किस प्रकार के 'लिपोप्रोटीन' को 'अच्छा कोलेस्ट्रॉल' कहा जाता है?",
+    "o": ["LDL", "HDL | एचडीएल (HDL)", "VLDL", "Chylomicrons"],
+    "a": 1,
+    "e": "HDL (High-Density Lipoprotein) helps remove cholesterol from the arteries.",
+    "cat": "technical",
+    "sub": "biochemistry"
+  },
+  {
+    "q": "What is 'Polyuria' in clinical pathology? / क्लिनिकल पैथोलॉजी में 'पॉलीयूरिया' (Polyuria) क्या है?",
+    "o": ["Painful urination", "Excessive production of urine | मूत्र का अत्यधिक उत्पादन", "Blood in urine", "No urine"],
+    "a": 1,
+    "e": "Polyuria is a common symptom of uncontrolled Diabetes Mellitus.",
+    "cat": "technical",
+    "sub": "biochemistry"
+  },
+  {
+    "q": "Which schedule deals with 'Life period of drugs'? / दवाओं की 'जीवन अवधि' (Life period) से कौन सा शेड्यूल संबंधित है?",
+    "o": ["Schedule M", "Schedule P | शेड्यूल P", "Schedule Y", "Schedule G"],
+    "a": 1,
+    "e": "Schedule P specifies the expiry periods and storage conditions for various drugs.",
+    "cat": "technical",
+    "sub": "pharmacy_law"
+  },
+  {
+    "q": "The term 'Bioavailability' refers to: / 'जैव उपलब्धता' (Bioavailability) का तात्पर्य है:",
+    "o": ["Drug price", "Fraction of drug reaching systemic circulation | रक्तप्रवाह में पहुँचने वाली दवा का अंश", "Drug color", "None"],
+    "a": 1,
+    "e": "Bioavailability is 100% for drugs given by the intravenous (IV) route.",
+    "cat": "technical",
+    "sub": "pharmacology"
+  },
+  {
+    "q": "What is a major consequence of 'Pharmaceuticals' entering water bodies? / 'फार्मास्युटिकल्स' के जल निकायों में प्रवेश करने का एक प्रमुख परिणाम क्या है?",
+    "o": ["Water becomes sweeter", "Development of Antimicrobial Resistance (AMR) | एंटीमाइक्रोबियल रेजिस्टेंस (AMR)", "Increased fish population", "None"],
+    "a": 1,
+    "e": "Traces of antibiotics in water allow bacteria to evolve and become resistant to treatments.",
+    "cat": "technical",
+    "sub": "social_pharmacy"
+  },
+  {
+    "q": "Which gas is the primary contributor to 'Acid Rain'? / 'अम्लीय वर्षा' के लिए प्राथमिक रूप से कौन सी गैस जिम्मेदार है?",
+    "o": ["Oxygen", "Sulphur Dioxide (SO2) and Nitrogen Oxides | सल्फर डाइऑक्साइड", "Carbon Monoxide", "Argon"],
+    "a": 1,
+    "e": "SO2 and NOx react with water vapor in the atmosphere to form sulfuric and nitric acids.",
+    "cat": "technical",
+    "sub": "social_pharmacy"
+  },
+  {
+    "q": "Which disease is directly associated with 'Water Pollution'? / कौन सी बीमारी सीधे 'जल प्रदूषण' से जुड़ी है?",
+    "o": ["Asthma", "Typhoid and Cholera | टाइफाइड और हैजा", "Goitre", "Scurvy"],
+    "a": 1,
+    "e": "Contaminated water is the main carrier of pathogens causing enteric diseases.",
+    "cat": "technical",
+    "sub": "social_pharmacy"
+  },
+  {
+    "q": "The 'Decibel' (dB) is a unit used to measure: / 'डेसिबल' (dB) किसकी माप के लिए उपयोग की जाने वाली इकाई है?",
+    "o": ["Air quality", "Sound intensity (Noise pollution) | ध्वनि की तीव्रता", "Water purity", "Radiation"],
+    "a": 1,
+    "e": "High decibel levels over time lead to hearing loss and stress-related disorders.",
+    "cat": "technical",
+    "sub": "social_pharmacy"
+  },
+  {
+    "q": "How should 'Expired Medicines' be ideally disposed of by a pharmacist? / एक फार्मासिस्ट द्वारा 'पुरानी/एक्सपायर दवाओं' का निपटान आदर्श रूप से कैसे किया जाना चाहिए?",
+    "o": ["Throwing in the trash", "Returning to manufacturer or biomedical waste incineration | बायोमेडिकल वेस्ट मैनेजमेंट", "Flushing in toilet", "None"],
+    "a": 1,
+    "e": "Correct disposal prevents chemical leaching into the environment and soil.",
+    "cat": "technical",
+    "sub": "social_pharmacy"
+  },
+  {
+    "q": "'Eutrophication' in lakes is caused by the excess of: / झीलों में 'यूट्रोफिकेशन' (Eutrophication) किसकी अधिकता के कारण होता है?",
+    "o": ["Oxygen", "Nitrates and Phosphates (Nutrients) | नाइट्रेट और फास्फेट", "Plastic", "Sand"],
+    "a": 1,
+    "e": "Excess nutrients lead to algal blooms, which deplete oxygen in the water and kill aquatic life.",
+    "cat": "technical",
+    "sub": "social_pharmacy"
+  },
+  {
+    "q": "What is the health effect of chronic 'Air Pollution'? / पुराने 'वायु प्रदूषण' का स्वास्थ्य पर क्या प्रभाव पड़ता है?",
+    "o": ["Stronger bones", "Respiratory diseases like COPD and Lung Cancer | श्वसन रोग", "Better vision", "None"],
+    "a": 1,
+    "e": "Particulate matter (PM2.5) and toxic gases damage the lungs and cardiovascular system.",
+    "cat": "technical",
+    "sub": "social_pharmacy"
+  },
+  {
+    "q": "Which of the following is a 'Biodegradable' waste? / निम्नलिखित में से कौन सा 'बायोडिग्रेडेबल' कचरा है?",
+    "o": ["Glass bottle", "Vegetable peels | सब्जी के छिलके", "Plastic bag", "Aluminium foil"],
+    "a": 1,
+    "e": "Biodegradable waste can be broken down naturally by microorganisms.",
+    "cat": "technical",
+    "sub": "social_pharmacy"
+  },
+  {
+    "q": "What is the primary role of a pharmacist in promoting 'Environmental Health'? / 'पर्यावरणीय स्वास्थ्य' को बढ़ावा देने में फार्मासिस्ट की प्राथमिक भूमिका क्या है?",
+    "o": ["Cleaning the streets", "Educating patients on proper drug disposal | दवाओं के सही निपटान पर शिक्षा", "Planting trees only", "None"],
+    "a": 1,
+    "e": "Pharmacists can prevent 'Pharmaceutical Pollution' by guiding the public on how to handle unused medicines.",
+    "cat": "technical",
+    "sub": "social_pharmacy"
+  },
+  {
+    "q": "The 'Greenhouse Effect' is mainly responsible for: / 'ग्रीनहाउस प्रभाव' मुख्य रूप से किसके लिए जिम्मेदार है?",
+    "o": ["Earthquake", "Global Warming | ग्लोबल वार्मिंग", "Ocean tides", "None"],
+    "a": 1,
+    "e": "Gases like CO2 trap heat in the atmosphere, leading to a rise in the Earth's average temperature.",
+    "cat": "technical",
+    "sub": "social_pharmacy"
+  },
+  {
+    "q": "Which term describes the number of 'new cases' of a disease in a population during a specific period? / एक विशिष्ट अवधि के दौरान जनसंख्या में बीमारी के 'नए मामलों' की संख्या को क्या कहा जाता है?",
+    "o": ["Prevalence", "Incidence | घटना (Incidence)", "Morbidity", "Mortality"],
+    "a": 1,
+    "e": "Incidence focuses on the rate of new occurrences, helping to understand the spread of acute diseases.",
+    "cat": "technical",
+    "sub": "social_pharmacy"
+  },
+  {
+    "q": "What is the formula for 'Case Fatality Rate' (CFR)? / 'केस फेटालिटी रेट' (CFR) का सूत्र क्या है?",
+    "o": ["(Total deaths / Total population) x 100", "(Total deaths from disease / Total cases of disease) x 100 | (बीमारी से मौतें / बीमारी के कुल मामले) x 100", "(Total births / Total deaths) x 100", "None"],
+    "a": 1,
+    "e": "CFR measures the severity of a disease by calculating the percentage of infected people who die.",
+    "cat": "technical",
+    "sub": "social_pharmacy"
+  },
+  {
+    "q": "What is the primary focus of 'Pharmacoeconomics'? / 'फार्माकोइकोनॉमिक्स' का प्राथमिक फोकस क्या है?",
+    "o": ["Making profit from drugs", "Cost-benefit and cost-effectiveness of drug therapy | दवा चिकित्सा की लागत और प्रभावशीलता", "Increasing medicine prices", "None"],
+    "a": 1,
+    "e": "Pharmacoeconomics compares the costs and outcomes of different pharmaceutical products to optimize healthcare spending.",
+    "cat": "technical",
+    "sub": "social_pharmacy"
+  },
+  {
+    "q": "'Morbidity' in a population refers to: / जनसंख्या में 'रुग्णता' (Morbidity) का तात्पर्य है:",
+    "o": ["Death rate", "State of being diseased or unhealthy | रोगग्रस्त या अस्वस्थ होने की अवस्था", "Population growth", "None"],
+    "a": 1,
+    "e": "Morbidity data tracks the prevalence and incidence of various illnesses in a community.",
+    "cat": "technical",
+    "sub": "social_pharmacy"
+  },
+  {
+    "q": "The 'Prevalence' rate is calculated as: / 'प्रसार' (Prevalence) दर की गणना कैसे की जाती है?",
+    "o": ["(New cases / Population)", "(All existing cases / Total population) x 1000 | (कुल मौजूद मामले / कुल जनसंख्या)", "(Total deaths / New cases)", "None"],
+    "a": 1,
+    "e": "Prevalence includes both old and new cases at a specific point in time.",
+    "cat": "technical",
+    "sub": "social_pharmacy"
+  },
+  {
+    "q": "Which study in Pharmacoeconomics measures outcomes in 'Quality-Adjusted Life Years' (QALYs)? / फार्माकोइकोनॉमिक्स का कौन सा अध्ययन 'QALYs' में परिणामों को मापता है?",
+    "o": ["Cost-minimization analysis", "Cost-utility analysis | कॉस्ट-यूटिलिटी विश्लेषण", "Cost-benefit analysis", "None"],
+    "a": 1,
+    "e": "Cost-utility analysis considers both the quantity and quality of life gained through treatment.",
+    "cat": "technical",
+    "sub": "social_pharmacy"
+  },
+  {
+    "q": "'Infant Mortality Rate' (IMR) is the number of deaths of infants under: / 'शिशु मृत्यु दर' (IMR) कितनी उम्र के शिशुओं की मौतों की संख्या है?",
+    "o": ["5 years", "1 year | 1 वर्ष", "10 years", "1 month"],
+    "a": 1,
+    "e": "IMR is calculated per 1000 live births for children below one year of age.",
+    "cat": "technical",
+    "sub": "social_pharmacy"
+  },
+  {
+    "q": "Why is Pharmacoeconomics important for 'National Health Policy'? / 'राष्ट्रीय स्वास्थ्य नीति' के लिए फार्माकोइकोनॉमिक्स क्यों महत्वपूर्ण है?",
+    "o": ["To reduce drug quality", "To decide which medicines should be subsidized/reimbursed | सस्ती दवाओं का चयन करने के लिए", "To stop using vaccines", "None"],
+    "a": 1,
+    "e": "It helps the government allocate limited budgets to the most effective treatments.",
+    "cat": "technical",
+    "sub": "social_pharmacy"
+  },
+  {
+    "q": "The term 'Endemic' means a disease that: / 'एंडेमिक' (Endemic) शब्द का अर्थ है वह बीमारी जो:",
+    "o": ["Occurs globally", "Is constantly present in a specific area | किसी विशिष्ट क्षेत्र में निरंतर मौजूद रहती है", "Is suddenly eradicated", "None"],
+    "a": 1,
+    "e": "Endemic diseases are localized and expected within a specific population (e.g., Malaria in some regions).",
+    "cat": "technical",
+    "sub": "social_pharmacy"
+  },
+  {
+    "q": "What is 'Cost-Minimization Analysis' (CMA)? / 'कॉस्ट-मिनिमाइजेशन विश्लेषण' (CMA) क्या है?",
+    "o": ["Testing drug toxicity", "Comparing two drugs with equal outcomes to find the cheapest | समान परिणामों वाली दवाओं में से सस्ती खोजना", "Increasing marketing cost", "None"],
+    "a": 1,
+    "e": "CMA is used when two therapies have identical clinical results but different costs.",
+    "cat": "technical",
+    "sub": "social_pharmacy"
+  },
+  {
+    "q": "In epidemiology, the term 'Prevalence' refers to: / महामारी विज्ञान में 'प्रसार' (Prevalence) का तात्पर्य है:",
+    "o": ["Only new cases of a disease", "Total number of existing cases (old + new) | कुल मामलों की संख्या", "Number of deaths", "Recovery rate"],
+    "a": 1,
+    "e": "Prevalence measures the total burden of a disease in a population at a specific point in time[cite: 409].",
+    "cat": "technical",
+    "sub": "social_pharmacy"
+  },
+  {
+    "q": "What is 'Pharmacoeconomics'? / 'फार्माकोइकोनॉमिक्स' (Pharmacoeconomics) क्या है?",
+    "o": ["Selling drugs at high price", "Description and analysis of the costs of drug therapy | दवा चिकित्सा की लागत और विश्लेषण", "Creating new drugs", "None"],
+    "a": 1,
+    "e": "It helps in identifying the most cost-effective treatment options for public health programs[cite: 410].",
+    "cat": "technical",
+    "sub": "social_pharmacy"
+  },
+  {
+    "q": "Which of the following is an example of 'Psychosocial Pharmacy' issue? / निम्नलिखित में से कौन सा 'मनोसामाजिक फार्मेसी' मुद्दे का एक उदाहरण है?",
+    "o": ["Bacteria in water", "Drug misuse and substance abuse | नशीली दवाओं का दुरुपयोग", "Vitamin deficiency", "None"],
+    "a": 1,
+    "e": "Psychosocial pharmacy deals with the social impact of habits like narcotics, alcohol, and tobacco use[cite: 409].",
+    "cat": "technical",
+    "sub": "social_pharmacy"
+  },
+  {
+    "q": "'Morbidity' rate measures the: / 'रुग्णता' (Morbidity) दर क्या मापती है?",
+    "o": ["Death rate", "Frequency of illness in a population | जनसंख्या में बीमारी की आवृत्ति", "Birth rate", "Growth rate"],
+    "a": 1,
+    "e": "Morbidity refers to having a disease or the amount of disease within a population.",
+    "cat": "technical",
+    "sub": "social_pharmacy"
+  },
+  {
+    "q": "Environmental pollution due to 'Pharmaceuticals' primarily occurs through: / 'फार्मास्युटिकल्स' के कारण पर्यावरणीय प्रदूषण मुख्य रूप से किसके माध्यम से होता है?",
+    "o": ["Noise", "Improper disposal of expired drugs and excreta | दवाओं का अनुचित निपटान", "Cutting trees", "None"],
+    "a": 1,
+    "e": "Traces of drugs in water bodies can lead to long-term health hazards and antimicrobial resistance[cite: 409].",
+    "cat": "technical",
+    "sub": "social_pharmacy"
+  },
+  {
+    "q": "What is the primary objective of the 'National Health Policy 2017'? / 'राष्ट्रीय स्वास्थ्य नीति 2017' का प्राथमिक उद्देश्य क्या है?",
+    "o": ["Increasing medicine price", "Attaining the highest possible level of health and well-being | स्वास्थ्य और कल्याण का उच्चतम स्तर प्राप्त करना", "Shutting down hospitals", "None"],
+    "a": 1,
+    "e": "NHP 2017 focuses on preventive healthcare and making health services affordable[cite: 408].",
+    "cat": "technical",
+    "sub": "social_pharmacy"
+  },
+  {
+    "q": "Which term describes a sudden outbreak of a disease in a large population? / कौन सा शब्द बड़ी आबादी में बीमारी के अचानक प्रकोप का वर्णन करता है?",
+    "o": ["Endemic", "Epidemic | एपिडेमिक", "Sporadic", "None"],
+    "a": 1,
+    "e": "An epidemic occurs when the incidence of a disease exceeds what is normally expected in a population[cite: 409].",
+    "cat": "technical",
+    "sub": "social_pharmacy"
+  },
+  {
+    "q": "'Noise Pollution' can lead to which health issue? / 'ध्वनि प्रदूषण' से कौन सी स्वास्थ्य समस्या हो सकती है?",
+    "o": ["Diarrhea", "Hypertension and hearing loss | उच्च रक्तचाप और बहरापन", "Anemia", "Scurvy"],
+    "a": 1,
+    "e": "Chronic exposure to loud noise affects cardiovascular health and psychological well-being[cite: 409].",
+    "cat": "technical",
+    "sub": "social_pharmacy"
+  },
+  {
+    "q": "What is 'Millennium Development Goals' (MDGs) focus in health? / स्वास्थ्य में 'मिलेनियम डेवलपमेंट गोल्स' (MDGs) का फोकस क्या है?",
+    "o": ["Increasing pollution", "Reducing child mortality and improving maternal health | बाल मृत्यु दर कम करना", "Building more malls", "None"],
+    "a": 1,
+    "e": "MDGs and SDGs (Sustainable Development Goals) are global targets for improving public health outcomes[cite: 408].",
+    "cat": "technical",
+    "sub": "social_pharmacy"
+  },
+  {
+    "q": "A 'Balanced Diet' must contain: / एक 'संतुलित आहार' में होना चाहिए:",
+    "o": ["Only fats", "All essential nutrients in correct proportions | सही अनुपात में सभी आवश्यक पोषक तत्व", "Only water", "Sugar only"],
+    "a": 1,
+    "e": "It provides all the macronutrients and micronutrients needed for the body's optimal function[cite: 409].",
+    "cat": "technical",
+    "sub": "social_pharmacy"
+  },
+  {
+    "q": "Which part of the Nephron is responsible for 'Filtration'? / नेफ्रॉन का कौन सा भाग 'निस्पंदन' (Filtration) के लिए जिम्मेदार है?",
+    "o": ["Loop of Henle", "Glomerulus | ग्लोमेरुलस", "Collecting duct", "None"],
+    "a": 1,
+    "e": "Blood is filtered in the glomerulus under pressure into Bowman's capsule[cite: 347].",
+    "cat": "technical",
+    "sub": "physiology"
+  },
+  {
+    "q": "The hormone 'Testosterone' is produced by: / 'टेस्टोस्टेरोन' हार्मोन किसके द्वारा निर्मित होता है?",
+    "o": ["Ovaries", "Testes (Leydig cells) | वृषण (Testes)", "Adrenal gland", "Pancreas"],
+    "a": 1,
+    "e": "Testosterone is the primary male sex hormone responsible for secondary sexual characteristics[cite: 348].",
+    "cat": "technical",
+    "sub": "physiology"
+  },
+  {
+    "q": "What is 'Micturition'? / 'मिक्चुरिशन' (Micturition) क्या है?",
+    "o": ["Digestion", "Process of passing urine | पेशाब करने की प्रक्रिया", "Breathing", "None"],
+    "a": 1,
+    "e": "Micturition is the clinical term for the act of emptying the urinary bladder[cite: 347].",
+    "cat": "technical",
+    "sub": "physiology"
+  },
+  {
+    "q": "Where does 'Fertilization' of the egg usually occur in females? / महिलाओं में अंडे का 'निषेचन' (Fertilization) आमतौर पर कहाँ होता है?",
+    "o": ["Uterus", "Fallopian Tube | फैलोपियन ट्यूब", "Vagina", "Ovary"],
+    "a": 1,
+    "e": "Fertilization occurs when the sperm meets the egg in the fallopian tube[cite: 348].",
+    "cat": "technical",
+    "sub": "physiology"
+  },
+  {
+    "q": "Which structure in the 'Ear' maintains 'Body Balance'? / 'कान' की कौन सी संरचना 'शरीर का संतुलन' बनाए रखती है?",
+    "o": ["Eardrum", "Semicircular canals | अर्धवृत्ताकार नलिकाएं", "Cochlea", "Auditory nerve"],
+    "a": 1,
+    "e": "The semicircular canals in the inner ear are vital for maintaining equilibrium[cite: 347].",
+    "cat": "technical",
+    "sub": "physiology"
+  },
+  {
+    "q": "What is the function of 'Melanin' in the skin? / त्वचा में 'मेलानिन' (Melanin) का क्या कार्य है?",
+    "o": ["To make skin soft", "Protection against UV radiation | यूवी विकिरण से सुरक्षा", "To produce sweat", "None"],
+    "a": 1,
+    "e": "Melanin is a pigment that protects the deeper layers of skin from sun damage[cite: 347].",
+    "cat": "technical",
+    "sub": "physiology"
+  },
+  {
+    "q": "Which hormone triggers 'Ovulation' in the menstrual cycle? / मासिक धर्म चक्र में 'ओव्यूलेशन' को कौन सा हार्मोन ट्रिगर करता है?",
+    "o": ["Estrogen", "Luteinizing Hormone (LH) | एलएच (LH)", "Insulin", "None"],
+    "a": 1,
+    "e": "A surge in LH levels midway through the cycle causes the release of the egg[cite: 348].",
+    "cat": "technical",
+    "sub": "physiology"
+  },
+  {
+    "q": "The 'Olfactory' nerve is associated with which sense? / 'घ्राण' (Olfactory) तंत्रिका किस इंद्रिय से जुड़ी है?",
+    "o": ["Vision", "Smell | गंध (Smell)", "Hearing", "Taste"],
+    "a": 1,
+    "e": "The olfactory system is responsible for the sense of smell[cite: 347].",
+    "cat": "technical",
+    "sub": "physiology"
+  },
+  {
+    "q": "What is the role of the 'Prostate Gland' in males? / पुरुषों में 'प्रोस्टेट ग्रंथि' की क्या भूमिका है?",
+    "o": ["Producing urine", "Secreting fluid that nourishes sperm | वीर्य तरल का स्राव", "Storing blood", "None"],
+    "a": 1,
+    "e": "The prostate secretes an alkaline fluid that makes up part of the semen[cite: 348].",
+    "cat": "technical",
+    "sub": "physiology"
+  },
+  {
+    "q": "Which part of the 'Tongue' is most sensitive to 'Bitter' taste? / 'जीभ' का कौन सा भाग 'कड़वे' स्वाद के लिए सबसे अधिक संवेदनशील होता है?",
+    "o": ["Tip", "Back (Posterior) | पिछला भाग", "Sides", "Center"],
+    "a": 1,
+    "e": "Different areas of the tongue have specialized receptors for various tastes[cite: 347].",
+    "cat": "technical",
+    "sub": "physiology"
+  },
+  {
+    "q": "Which of the following is a 'Water-Soluble' vitamin? / निम्नलिखित में से कौन सा 'पानी में घुलनशील' विटामिन है?",
+    "o": ["Vitamin A", "Vitamin C | विटामिन C", "Vitamin D", "Vitamin K"],
+    "a": 1,
+    "e": "Vitamins B and C are water-soluble, while A, D, E, and K are fat-soluble[cite: 646].",
+    "cat": "technical",
+    "sub": "social_pharmacy"
+  },
+  {
+    "q": "What is the recommended dietary allowance (RDA) for 'Iodine' to prevent Goitre? / घेंघा को रोकने के लिए 'आयोडीन' की अनुशंसित दैनिक मात्रा (RDA) क्या है?",
+    "o": ["150 micrograms | 150 माइक्रोग्राम", "10 grams", "100 mg", "None"],
+    "a": 0,
+    "e": "A very small amount of iodine (approx 150 mcg) is needed daily for thyroid health[cite: 409].",
+    "cat": "technical",
+    "sub": "social_pharmacy"
+  },
+  {
+    "q": "The term 'Pasteurization' is primarily used for: / 'पाश्चुरीकरण' (Pasteurization) शब्द का प्रयोग मुख्य रूप से किसके लिए किया जाता है?",
+    "o": ["Cleaning clothes", "Sterilizing milk by heating | दूध का स्टरलाइजेशन", "Growing bacteria", "None"],
+    "a": 1,
+    "e": "It is a process of heating liquids to kill harmful microbes without altering the taste[cite: 409].",
+    "cat": "technical",
+    "sub": "social_pharmacy"
+  },
+  {
+    "q": "Which mineral deficiency causes 'Anaemia'? / किस खनिज की कमी से 'एनीमिया' (Anaemia) होता है?",
+    "o": ["Calcium", "Iron | आयरन (Loha)", "Sodium", "Magnesium"],
+    "a": 1,
+    "e": "Iron is a core component of hemoglobin; its lack reduces oxygen transport[cite: 685].",
+    "cat": "technical",
+    "sub": "social_pharmacy"
+  },
+  {
+    "q": "What is the causative agent of 'Cholera'? / 'हैजा' (Cholera) का कारक जीव क्या है?",
+    "o": ["Mycobacterium", "Vibrio cholerae | विब्रियो कोलेरी", "HIV", "Influenza virus"],
+    "a": 1,
+    "e": "Cholera is an acute intestinal infection caused by ingestion of contaminated water[cite: 409].",
+    "cat": "technical",
+    "sub": "social_pharmacy"
+  },
+  {
+    "q": "Which test is used for the detection of 'Typhoid'? / 'टाइफाइड' का पता लगाने के लिए किस परीक्षण का उपयोग किया जाता है?",
+    "o": ["ELISA", "Widal Test | विडाल टेस्ट", "Mantoux Test", "None"],
+    "a": 1,
+    "e": "The Widal test detects antibodies against Salmonella typhi[cite: 409].",
+    "cat": "technical",
+    "sub": "social_pharmacy"
+  },
+  {
+    "q": "'Artificial Ripening' of fruits is often done using: / फलों को 'कृत्रिम रूप से पकाने' के लिए अक्सर किसका उपयोग किया जाता है?",
+    "o": ["Water", "Calcium Carbide / Ethylene | कैल्शियम कार्बाइड", "Salt", "Sugar"],
+    "a": 1,
+    "e": "Calcium carbide releases acetylene gas, which is used for ripening but can be harmful[cite: 409].",
+    "cat": "technical",
+    "sub": "social_pharmacy"
+  },
+  {
+    "q": "What is 'Food Fortification'? / 'फूड फोर्टिफिकेशन' (Food Fortification) क्या है?",
+    "o": ["Removing fat", "Adding essential micronutrients to food | भोजन में सूक्ष्म पोषक तत्व मिलाना", "Boiling food", "None"],
+    "a": 1,
+    "e": "Fortification increases the nutritional value of food, e.g., adding Iodine to salt[cite: 409].",
+    "cat": "technical",
+    "sub": "social_pharmacy"
+  },
+  {
+    "q": "Which microbe is responsible for 'Chickenpox'? / 'चेचक' (Chickenpox) के लिए कौन सा सूक्ष्मजीव जिम्मेदार है?",
+    "o": ["Bacteria", "Varicella Zoster Virus | वेरिसेला जोस्टर वायरस", "Protozoa", "None"],
+    "a": 1,
+    "e": "Chickenpox is a highly contagious viral infection[cite: 409].",
+    "cat": "technical",
+    "sub": "social_pharmacy"
+  },
+  {
+    "q": "What is the primary objective of 'Antenatal Care' (ANC)? / 'प्रसवपूर्व देखभाल' (ANC) का प्राथमिक उद्देश्य क्या है?",
+    "o": ["Only after birth care", "Health of the mother and fetus during pregnancy | गर्भावस्था के दौरान मां और भ्रूण का स्वास्थ्य", "Hospital building", "None"],
+    "a": 1,
+    "e": "ANC ensures a safe pregnancy and a healthy delivery for both mother and child[cite: 734].",
+    "cat": "technical",
+    "sub": "social_pharmacy"
+  },
+  {
+    "q": "What is the average 'Cardiac Cycle' duration in a healthy human? / एक स्वस्थ मानव में औसत 'कार्डियक चक्र' (Cardiac Cycle) की अवधि क्या है?",
+    "o": ["1 minute", "0.8 seconds | 0.8 सेकंड", "5 seconds", "None"],
+    "a": 1,
+    "e": "The cardiac cycle includes atrial and ventricular contraction and relaxation[cite: 347].",
+    "cat": "technical",
+    "sub": "physiology"
+  },
+  {
+    "q": "Which part of the brain controls 'Respiratory Rate'? / मस्तिष्क का कौन सा भाग 'श्वसन दर' को नियंत्रित करता है?",
+    "o": ["Cerebrum", "Medulla Oblongata | मेडुला ऑब्लोंगाटा", "Cerebellum", "Basal ganglia"],
+    "a": 1,
+    "e": "The Medulla Oblongata contains centers for vital functions like respiration and heart rate[cite: 347].",
+    "cat": "technical",
+    "sub": "physiology"
+  },
+  {
+    "q": "The 'Renin-Angiotensin System' (RAS) primarily regulates: / 'रेनिन-एंजियोटेंसिन सिस्टम' (RAS) मुख्य रूप से किसे नियंत्रित करता है?",
+    "o": ["Digestion", "Blood Pressure and Fluid balance | रक्तचाप और तरल संतुलन", "Sleep", "Vision"],
+    "a": 1,
+    "e": "RAS is a hormone system within the urinary and CVS systems that regulates long-term blood pressure[cite: 347].",
+    "cat": "technical",
+    "sub": "physiology"
+  },
+  {
+    "q": "Which cells in the pancreas produce 'Glucagon'? / अग्न्याशय की कौन सी कोशिकाएं 'ग्लूकागन' का उत्पादन करती हैं?",
+    "o": ["Beta cells", "Alpha cells | अल्फा कोशिकाएं", "Delta cells", "None"],
+    "a": 1,
+    "e": "Alpha cells produce glucagon to increase blood sugar, while beta cells produce insulin[cite: 348].",
+    "cat": "technical",
+    "sub": "physiology"
+  },
+  {
+    "q": "What is the role of 'Platelets' in the haemopoietic system? / हीमोपोएटिक प्रणाली में 'प्लेटलेट्स' की क्या भूमिका है?",
+    "o": ["Carrying oxygen", "Blood clotting and repair | रक्त का थक्का जमना", "Fighting viruses", "None"],
+    "a": 1,
+    "e": "Platelets or Thrombocytes are vital for preventing blood loss during injury[cite: 346, 647].",
+    "cat": "technical",
+    "sub": "physiology"
+  },
+  {
+    "q": "Which organ is responsible for the 'Biotransformation' (Metabolism) of most drugs? / अधिकांश दवाओं के 'बायोट्रांसफॉर्मेशन' (चयापचय) के लिए कौन सा अंग जिम्मेदार है?",
+    "o": ["Kidney", "Liver | यकृत (Liver)", "Lungs", "Heart"],
+    "a": 1,
+    "e": "The liver is the primary site for drug metabolism in the human body[cite: 494, 647].",
+    "cat": "technical",
+    "sub": "physiology"
+  },
+  {
+    "q": "A 'Normal' human blood pressure reading is approximately: / एक 'सामान्य' मानव रक्तचाप रीडिंग लगभग कितनी होती है?",
+    "o": ["80/120 mmHg", "120/80 mmHg | 120/80 mmHg", "100/100 mmHg", "None"],
+    "a": 1,
+    "e": "Systolic pressure is 120 and diastolic is 80 mmHg in a healthy adult[cite: 378].",
+    "cat": "technical",
+    "sub": "physiology"
+  },
+  {
+    "q": "Which hormone is known as the 'Emergency Hormone'? / किस हार्मोन को 'आपातकालीन हार्मोन' के रूप में जाना जाता है?",
+    "o": ["Insulin", "Adrenaline (Epinephrine) | एड्रेनालिन", "Thyroxine", "Progesterone"],
+    "a": 1,
+    "e": "Adrenaline is released from the adrenal glands during stress or danger ('fight or flight')[cite: 348, 496].",
+    "cat": "technical",
+    "sub": "physiology"
+  },
+  {
+    "q": "What does a 'Peak Flow Meter' measure? / 'पीक फ्लो मीटर' क्या मापता है?",
+    "o": ["Blood sugar", "Force of air expelled from lungs | फेफड़ों से हवा का वेग", "Pulse rate", "Body weight"],
+    "a": 1,
+    "e": "It is used to monitor lung function, especially in asthma and COPD patients[cite: 382, 588].",
+    "cat": "technical",
+    "sub": "physiology"
+  },
+  {
+    "q": "Which structure in the 'Eye' is responsible for adjusting the focus (Accommodation)? / 'आंख' में कौन सी संरचना फोकस (समायोजन) को समायोजित करने के लिए जिम्मेदार है?",
+    "o": ["Retina", "Ciliary muscles and Lens | सिलियरी मांसपेशियां और लेंस", "Cornea", "Optic nerve"],
+    "a": 1,
+    "e": "The ciliary muscles change the shape of the lens to focus on objects at different distances[cite: 347, 392].",
+    "cat": "technical",
+    "sub": "physiology"
+  },
+  {
+    "q": "What is the incubation period for 'Tuberculosis' (TB)? / 'तपेदिक' (TB) की इनक्यूबेशन अवधि (Incubation period) क्या है?",
+    "o": ["1-2 days", "Weeks to months | हफ्तों से महीनों तक", "10 years", "None"],
+    "a": 1,
+    "e": "TB is a slow-growing bacterial infection, and the onset of symptoms can take several weeks or months after infection[cite: 409].",
+    "cat": "technical",
+    "sub": "social_pharmacy"
+  },
+  {
+    "q": "Which program was launched to eliminate TB in India by 2025? / 2025 तक भारत में टीबी को खत्म करने के लिए कौन सा कार्यक्रम शुरू किया गया था?",
+    "o": ["NACP", "NTEP (National TB Elimination Programme) | एनटीईपी", "RNTCP", "None"],
+    "a": 1,
+    "e": "NTEP aims for the total elimination of TB in India through early diagnosis and treatment[cite: 459].",
+    "cat": "technical",
+    "sub": "social_pharmacy"
+  },
+  {
+    "q": "The 'Glycemic Index' (GI) of a food measures: / भोजन का 'ग्लाइसेमिक इंडेक्स' (GI) क्या मापता है?",
+    "o": ["Weight of food", "How quickly food increases blood sugar | ब्लड शुगर पर प्रभाव", "Protein content", "Water content"],
+    "a": 1,
+    "e": "GI is used to counsel diabetic patients on which foods to eat or avoid[cite: 450].",
+    "cat": "technical",
+    "sub": "social_pharmacy"
+  },
+  {
+    "q": "What is the primary role of a pharmacist in 'Disaster Management'? / 'आपदा प्रबंधन' में फार्मासिस्ट की प्राथमिक भूमिका क्या है?",
+    "o": ["Cooking food", "Stockpiling and distribution of emergency medicines | आपातकालीन दवाओं का वितरण", "Driving ambulance", "None"],
+    "a": 1,
+    "e": "Pharmacists ensure the availability of essential medicines and first aid during natural or man-made disasters[cite: 444, 458].",
+    "cat": "technical",
+    "sub": "social_pharmacy"
+  },
+  {
+    "q": "Which vitamin is crucial for 'Blood Clotting'? / 'रक्त का थक्का जमने' के लिए कौन सा विटामिन महत्वपूर्ण है?",
+    "o": ["Vitamin A", "Vitamin K | विटामिन K", "Vitamin C", "Vitamin D"],
+    "a": 1,
+    "e": "Vitamin K is essential for the synthesis of clotting factors in the liver[cite: 346, 540].",
+    "cat": "technical",
+    "sub": "physiology"
+  },
+  {
+    "q": "'FSSAI' regulations primarily deal with: / 'FSSAI' नियम मुख्य रूप से किससे संबंधित हैं?",
+    "o": ["Car manufacturing", "Food safety, storage, and labeling | खाद्य सुरक्षा और लेबलिंग", "Air travel", "None"],
+    "a": 1,
+    "e": "FSSAI ensures the quality and safety of food products and supplements[cite: 799].",
+    "cat": "technical",
+    "sub": "social_pharmacy"
+  },
+  {
+    "q": "Which of the following is a 'Macronutrient'? / निम्नलिखित में से कौन सा एक 'मैक्रोन्यूट्रिएंट' (Macronutrient) है?",
+    "o": ["Iron", "Protein | प्रोटीन", "Iodine", "Vitamin B12"],
+    "a": 1,
+    "e": "Proteins, carbohydrates, and fats are needed in large quantities and provide energy[cite: 409].",
+    "cat": "technical",
+    "sub": "social_pharmacy"
+  },
+  {
+    "q": "The WHO definition of health includes which three dimensions? / स्वास्थ्य की WHO परिभाषा में कौन से तीन आयाम शामिल हैं?",
+    "o": ["Physical, mental, and social | शारीरिक, मानसिक और सामाजिक", "Only physical", "Wealth, power, and fame", "None"],
+    "a": 0,
+    "e": "Health is a state of complete physical, mental, and social well-being[cite: 408].",
+    "cat": "technical",
+    "sub": "social_pharmacy"
+  },
+  {
+    "q": "Which minerals are routinely included in 'Oral Rehydration Therapy' (ORT)? / 'ओरल रीहाइड्रेशन थेरेपी' (ORT) में कौन से खनिज शामिल होते हैं?",
+    "o": ["Iron and Calcium", "Sodium, Potassium, and Chloride | इलेक्ट्रोलाइट्स", "Gold and Silver", "None"],
+    "a": 1,
+    "e": "ORT restores electrolyte balance lost during dehydration[cite: 647].",
+    "cat": "technical",
+    "sub": "social_pharmacy"
+  },
+  {
+    "q": "The primary cause of 'Goitre' (enlargement of thyroid) is: / 'घेंघा' (Goitre) का प्राथमिक कारण क्या है?",
+    "o": ["Protein deficiency", "Iodine deficiency | आयोडीन की कमी", "Fat deficiency", "None"],
+    "a": 1,
+    "e": "Iodine is essential for thyroid hormone production; its deficiency leads to Goitre[cite: 647].",
+    "cat": "technical",
+    "sub": "social_pharmacy"
+  },
+  {
+    "q": "What is 'Herbal Drug Interaction'? / 'हर्बल ड्रग इंटरैक्शन' (Herbal Drug Interaction) क्या है?",
+    "o": ["Mixing two herbs", "Interaction between an herb and a modern synthetic drug | जड़ी-बूटी और आधुनिक दवा के बीच प्रतिक्रिया", "Growing herbs together", "None"],
+    "a": 1,
+    "e": "It refers to the clinical significance of taking herbal medicines along with conventional drugs[cite: 328].",
+    "cat": "technical",
+    "sub": "pharmacognosy"
+  },
+  {
+    "q": "Which herb is well-known for interacting with 'Warfarin' and increasing the risk of bleeding? / कौन सी जड़ी-बूटी 'वारफारिन' के साथ प्रतिक्रिया करने और रक्तस्राव के जोखिम को बढ़ाने के लिए जानी जाती है?",
+    "o": ["Tulsi", "Garlic (Lehsun) and Ginkgo | लहसुन और जिन्कगो", "Ashwagandha", "Amla"],
+    "a": 1,
+    "e": "Garlic and Ginkgo have anti-platelet effects that can dangerously enhance the effect of blood thinners[cite: 328].",
+    "cat": "technical",
+    "sub": "pharmacognosy"
+  },
+  {
+    "q": "The process of 'Phytochemical Investigation' starts with which step? / 'फाइटोकेमिकल जांच' की प्रक्रिया किस चरण से शुरू होती है?",
+    "o": ["Marketing", "Extraction | निष्कर्षण (Extraction)", "Testing on humans", "Selling"],
+    "a": 1,
+    "e": "Extraction is the first step to separate active phytoconstituents from the plant matrix[cite: 303].",
+    "cat": "technical",
+    "sub": "pharmacognosy"
+  },
+  {
+    "q": "Which extraction method uses a 'Soxhlet Apparatus' for continuous hot extraction? / निरंतर गर्म निष्कर्षण के लिए किस विधि में 'सॉक्सलेट उपकरण' का उपयोग किया जाता है?",
+    "o": ["Maceration", "Successive Solvent Extraction | क्रमिक विलायक निष्कर्षण", "Infusion", "Decoction"],
+    "a": 1,
+    "e": "Soxhlet extraction is a standard phytochemical process for exhausting a drug of its active constituents[cite: 303].",
+    "cat": "technical",
+    "sub": "pharmacognosy"
+  },
+  {
+    "q": "St. John's Wort (an herb) is famous for reducing the effectiveness of 'Oral Contraceptives' due to: / सेंट जॉन्स वोर्ट 'ओरल कॉन्ट्रासेप्टिव्स' की प्रभावशीलता को कम करने के लिए प्रसिद्ध है क्योंकि:",
+    "o": ["It kills bacteria", "Induction of Liver enzymes (CYP3A4) | लिवर एंजाइमों का प्रेरण", "It adds sugar", "None"],
+    "a": 1,
+    "e": "This herb speeds up the metabolism of many modern drugs, making them less effective[cite: 328].",
+    "cat": "technical",
+    "sub": "pharmacognosy"
+  },
+  {
+    "q": "What is the primary purpose of 'Phytochemical Screening'? / 'फाइटोकेमिकल स्क्रीनिंग' का प्राथमिक उद्देश्य क्या है?",
+    "o": ["To check plant height", "To detect the presence of alkaloids, glycosides, etc. | सक्रिय घटकों की उपस्थिति का पता लगाना", "To water the plant", "None"],
+    "a": 1,
+    "e": "Screening involves chemical tests to identify the classes of compounds present in an extract[cite: 303].",
+    "cat": "technical",
+    "sub": "pharmacognosy"
+  },
+  {
+    "q": "Which solvent is considered a 'Universal Solvent' for extracting a wide range of phytoconstituents? / फाइटोकांस्टिट्यूएंट्स की एक विस्तृत श्रृंखला निकालने के लिए किस विलायक को 'यूनिवर्सल सॉल्वेंट' माना जाता है?",
+    "o": ["Petroleum ether", "Ethanol/Methanol | इथेनॉल/मेथनॉल", "Benzene", "Chloroform"],
+    "a": 1,
+    "e": "Alcoholic solvents are effective for extracting both polar and some non-polar compounds[cite: 303].",
+    "cat": "technical",
+    "sub": "pharmacognosy"
+  },
+  {
+    "q": "Taking 'Digoxin' with 'Senna' can lead to: / 'डिजॉक्सिन' को 'सेना' के साथ लेने से क्या हो सकता है?",
+    "o": ["Increased energy", "Potassium depletion and heart toxicity | पोटेशियम की कमी और हृदय विषाक्तता", "Better sleep", "None"],
+    "a": 1,
+    "e": "Laxatives like Senna can lower potassium levels, which increases the risk of Digoxin toxicity[cite: 328].",
+    "cat": "technical",
+    "sub": "pharmacognosy"
+  },
+  {
+    "q": "What is 'Decoction' in phytochemical investigation? / फाइटोकेमिकल जांच में 'डेकोक्शन' (Decoction) क्या है?",
+    "o": ["Cold soaking", "Boiling the drug in water | पानी में उबालना", "Using alcohol", "None"],
+    "a": 1,
+    "e": "Decoction involves boiling hard plant parts like bark or roots in water to extract constituents[cite: 303].",
+    "cat": "technical",
+    "sub": "pharmacognosy"
+  },
+  {
+    "q": "Which analytical technique is commonly used to 'separate' individual compounds from an extract? / अर्क (extract) से व्यक्तिगत यौगिकों को 'अलग' करने के लिए आमतौर पर किस तकनीक का उपयोग किया जाता है?",
+    "o": ["Maceration", "Chromatography (TLC/HPLC) | क्रोमैटोग्राफी", "Filtration", "Evaporation"],
+    "a": 1,
+    "e": "Chromatography is essential for the isolation and investigation of pure phytoconstituents[cite: 303].",
+    "cat": "technical",
+    "sub": "pharmacognosy"
+  },
+  {
+    "q": "Which 'Plant fibre' is primarily used as a surgical dressing due to its high absorbency? / किस 'पादप फाइबर' का उपयोग इसकी उच्च अवशोषण क्षमता के कारण सर्जिकल ड्रेसिंग के रूप में किया जाता है?",
+    "o": ["Silk", "Absorbent Cotton | शोषक कपास (Cotton)", "Wool", "Nylon"],
+    "a": 1,
+    "e": "Cotton is processed to remove wax, making it 'absorbent' for surgical use[cite: 302].",
+    "cat": "technical",
+    "sub": "pharmacognosy"
+  },
+  {
+    "q": "What is the biological source of 'Silk'? / 'रेशम' (Silk) का जैविक स्रोत क्या है?",
+    "o": ["Gossypium herbaceum", "Bombyx mori | बॉम्बिक्स मोरी (Bombyx mori)", "Ovis aries", "Linum usitatissimum"],
+    "a": 1,
+    "e": "Silk is a natural protein fibre obtained from the cocoons of the silkworm[cite: 302].",
+    "cat": "technical",
+    "sub": "pharmacognosy"
+  },
+  {
+    "q": "'Surgical Catgut' is classified as: / 'सर्जिकल कैटगट' (Surgical Catgut) को किस रूप में वर्गीकृत किया गया है?",
+    "o": ["Non-absorbable suture", "Absorbable suture | शोषक सिवनी (Absorbable suture)", "Ligature only", "None"],
+    "a": 1,
+    "e": "Catgut is an absorbable suture prepared from the intestines of sheep or cattle[cite: 302].",
+    "cat": "technical",
+    "sub": "pharmacognosy"
+  },
+  {
+    "q": "What is the primary protein found in 'Wool' (ऊन)? / 'ऊन' (Wool) में पाया जाने वाला प्राथमिक प्रोटीन क्या है?",
+    "o": ["Fibroin", "Keratin | केराटिन (Keratin)", "Gelatine", "Albumin"],
+    "a": 1,
+    "e": "Wool is a natural animal fibre composed mainly of the protein keratin[cite: 302].",
+    "cat": "technical",
+    "sub": "pharmacognosy"
+  },
+  {
+    "q": "Which of the following is a 'Non-absorbable' natural suture? / निम्नलिखित में से कौन सा एक 'गैर-शोषक' (Non-absorbable) प्राकृतिक सूत्र है?",
+    "o": ["Catgut", "Silk | रेशम (Silk)", "Kangaroo tendon", "Collagen"],
+    "a": 1,
+    "e": "Silk and cotton are examples of non-absorbable sutures that must be removed manually[cite: 302].",
+    "cat": "technical",
+    "sub": "pharmacognosy"
+  },
+  {
+    "q": "'Kangaroo Tendon' is an example of which category? / 'कंगारू टेंडन' किस श्रेणी का उदाहरण है?",
+    "o": ["Absorbable suture | शोषक सिवनी", "Non-absorbable suture", "Surgical dressing", "None"],
+    "a": 0,
+    "e": "It is a specialized natural absorbable suture used in specific surgeries[cite: 302].",
+    "cat": "technical",
+    "sub": "pharmacognosy"
+  },
+  {
+    "q": "What is a 'Ligature' used for in surgery? / सर्जरी में 'लिगेचर' (Ligature) का उपयोग किसके लिए किया जाता है?",
+    "o": ["Stitching skin", "Tying off blood vessels to stop bleeding | रक्त वाहिकाओं को बांधना", "Cleaning wounds", "Covering burns"],
+    "a": 1,
+    "e": "Ligatures are threads used specifically for tying blood vessels[cite: 302].",
+    "cat": "technical",
+    "sub": "pharmacognosy"
+  },
+  {
+    "q": "Which treatment is given to Catgut to delay its absorption time in the body? / शरीर में कैटगट के अवशोषण समय में देरी के लिए उसे क्या उपचार दिया जाता है?",
+    "o": ["Boiling", "Chromicization (Chromic Catgut) | क्रोमीकरण (Chromic Catgut)", "Bleaching", "Oiling"],
+    "a": 1,
+    "e": "Chromic catgut is treated with chromium salts to resist digestion by body enzymes[cite: 302].",
+    "cat": "technical",
+    "sub": "pharmacognosy"
+  },
+  {
+    "q": "The fibre 'Wool' is obtained from the fleece of: / 'ऊन' (Wool) फाइबर किसके ऊन (fleece) से प्राप्त होता है?",
+    "o": ["Silkworm", "Sheep (Ovis aries) | भेड़ (Sheep)", "Plant stem", "Rabbit"],
+    "a": 1,
+    "e": "Wool is the natural animal fibre derived from sheep[cite: 302].",
+    "cat": "technical",
+    "sub": "pharmacognosy"
+  },
+  {
+    "q": "Which surgical dressing is used as a 'filtering medium' and to provide support to fractured limbs (as plaster)? / किस सर्जिकल ड्रेसिंग का उपयोग 'फ़िल्टरिंग माध्यम' और अंगों को सहारा देने के लिए किया जाता है?",
+    "o": ["Silk", "Cotton and Gauze | कपास और धुंध (Gauze)", "Wool", "Nylon"],
+    "a": 1,
+    "e": "Cotton and its derivatives are fundamental in providing mechanical support and protection to wounds[cite: 302].",
+    "cat": "technical",
+    "sub": "pharmacognosy"
+  },
+  {
+    "q": "Which chemical test is used for the identification of 'Alkaloids'? / 'अल्कलॉइड्स' की पहचान के लिए किस रासायनिक परीक्षण का उपयोग किया जाता है?",
+    "o": ["Mayer's Test | मेयर परीक्षण", "Borntrager's Test", "Fehlings Test", "Biuret Test"],
+    "a": 0,
+    "e": "Mayer's, Wagner's, and Dragendorff's tests are standard identification tests for alkaloids[cite: 302, 311].",
+    "cat": "technical",
+    "sub": "pharmacognosy"
+  },
+  {
+    "q": "In the microscopy of 'Senna' leaves, which diagnostic feature is observed? / 'सेना' की पत्तियों की माइक्रोस्कोपी में कौन सी नैदानिक विशेषता देखी जाती है?",
+    "o": ["Wavy walls", "Paracytic stomata and unicellular trichomes | पैरासिटिक स्टोमेटा", "Oil glands", "Starch grains"],
+    "a": 1,
+    "e": "Paracytic stomata are a key anatomical characteristic of Senna leaves[cite: 310, 315].",
+    "cat": "technical",
+    "sub": "pharmacognosy"
+  },
+  {
+    "q": "'Borntrager's Test' is specifically used to identify: / 'बोर्नट्रेजर परीक्षण' विशेष रूप से किसकी पहचान के लिए उपयोग किया जाता है?",
+    "o": ["Tannins", "Anthraquinone Glycosides (Senna/Aloe) | एंथ्राक्विनोन ग्लाइकोसाइड्स", "Alkaloids", "Volatile oils"],
+    "a": 1,
+    "e": "It produces a pink to red color in the ammoniacal layer for glycosides[cite: 302, 316].",
+    "cat": "technical",
+    "sub": "pharmacognosy"
+  },
+  {
+    "q": "Which microscopic feature is characteristic of 'Clove' (flower bud)? / 'लौंग' (पुष्प कली) की कौन सी सूक्ष्म विशेषता विशिष्ट है?",
+    "o": ["Calcium oxalate crystals", "Schizolysigenous oil glands | तेल ग्रंथियां (Oil glands)", "Phloem fibres", "Vessels"],
+    "a": 1,
+    "e": "Clove contains large oil glands containing eugenol[cite: 310, 321].",
+    "cat": "technical",
+    "sub": "pharmacognosy"
+  },
+  {
+    "q": "The 'Goldbeater's skin test' is used for the identification of: / 'गोल्डबीटर स्किन टेस्ट' किसकी पहचान के लिए उपयोग किया जाता है?",
+    "o": ["Alkaloids", "Tannins | टैनिन (Tannins)", "Resins", "Glycosides"],
+    "a": 1,
+    "e": "Tannins have the ability to bind with proteins, which is the basis of this test[cite: 302].",
+    "cat": "technical",
+    "sub": "pharmacognosy"
+  },
+  {
+    "q": "In the T.S. of 'Cinnamon' bark, which of these is absent? / 'दालचीनी' की छाल के T.S. में इनमें से क्या अनुपस्थित होता है?",
+    "o": ["Phloem", "Cork | कॉर्क (Cork)", "Sclereids", "Mucilage cells"],
+    "a": 1,
+    "e": "Cinnamon is a 'channeled' bark where the cork and cortex are usually removed[cite: 310, 321].",
+    "cat": "technical",
+    "sub": "pharmacognosy"
+  },
+  {
+    "q": "Which reagent gives a red precipitate with alkaloids in 'Dragendorff's Test'? / 'ड्रैगडॉर्फ परीक्षण' में अल्कलॉइड के साथ कौन सा अभिकर्मक लाल अवक्षेप देता है?",
+    "o": ["Potassium Mercuric Iodide", "Potassium Bismuth Iodide | पोटेशियम बिस्मथ आयोडाइड", "Iodine in KI", "Picric acid"],
+    "a": 1,
+    "e": "Dragendorff's reagent is a solution of potassium bismuth iodide[cite: 302, 311].",
+    "cat": "technical",
+    "sub": "pharmacognosy"
+  },
+  {
+    "q": "'Keller-Killiani Test' is used to detect: / 'केलर-किलियानी परीक्षण' किसके पता लगाने के लिए उपयोग किया जाता है?",
+    "o": ["Saponins", "Deoxy sugars in Cardiac Glycosides | कार्डिएक ग्लाइकोसाइड्स", "Starch", "Protein"],
+    "a": 1,
+    "e": "This test is specific for the digitoxose sugar found in Digitalis[cite: 302].",
+    "cat": "technical",
+    "sub": "pharmacognosy"
+  },
+  {
+    "q": "The presence of 'Lignified phloem fibres' is a diagnostic feature of which bark? / 'लिग्निफाइड फ्लोएम फाइबर' की उपस्थिति किस छाल की नैदानिक विशेषता है?",
+    "o": ["Cinnamon", "Cinchona | सिंकोना (Cinchona)", "Arjuna", "Aloe"],
+    "a": 1,
+    "e": "Large, spindle-shaped lignified fibres are characteristic of Cinchona bark[cite: 310, 321].",
+    "cat": "technical",
+    "sub": "pharmacognosy"
+  },
+  {
+    "q": "Which test is used for 'Saponin' glycosides based on their ability to cause hemolysis? / 'सैपोनिन' ग्लाइकोसाइड्स के लिए उनकी हेमोलिसिस करने की क्षमता के आधार पर कौन सा परीक्षण उपयोग किया जाता है?",
+    "o": ["Foam test | फोम टेस्ट", "Hemolytic test | हेमोलिटिक परीक्षण", "Legal's test", "None"],
+    "a": 1,
+    "e": "Saponins cause foam when shaken with water and also cause hemolysis of RBCs[cite: 302].",
+    "cat": "technical",
+    "sub": "pharmacognosy"
+  },
+  {
+    "q": "Which 'Herbal oil' is commonly used for promoting hair growth and in cosmetics? / बालों के विकास और कॉस्मेटिक्स में आमतौर पर किस 'हर्बल तेल' का उपयोग किया जाता है?",
+    "o": ["Castor oil", "Almond oil | बादाम का तेल", "Clove oil", "Cinnamon oil"],
+    "a": 1,
+    "e": "Almond oil is a common ingredient in herbal hair and skin cosmetics[cite: 303].",
+    "cat": "technical",
+    "sub": "pharmacognosy"
+  },
+  {
+    "q": "What is the role of 'Omega-3-fatty acids' in health food? / स्वास्थ्य भोजन (health food) में 'ओमेगा-3-फैटी एसिड' की क्या भूमिका है?",
+    "o": ["As a laxative", "Cardiovascular health / Brain function | हृदय स्वास्थ्य", "As a sweetener", "As a dye"],
+    "a": 1,
+    "e": "Omega-3 acids are essential nutraceuticals for heart and brain health[cite: 303].",
+    "cat": "technical",
+    "sub": "pharmacognosy"
+  },
+  {
+    "q": "Which plant is known as 'Holy Basil' and used for its antiseptic and immunity-boosting properties? / किस पौधे को 'पवित्र तुलसी' के रूप में जाना जाता है?",
+    "o": ["Neem", "Tulsi (Ocimum sanctum) | तुलसी", "Turmeric", "Aloe"],
+    "a": 1,
+    "e": "Tulsi is a miscellaneous crude drug with broad therapeutic applications[cite: 302].",
+    "cat": "technical",
+    "sub": "pharmacognosy"
+  },
+  {
+    "q": "In Pharmacognosy, 'Organoleptic evaluation' refers to evaluation by: / फार्माकोग्नॉसी में, 'ऑर्गेनोलेप्टिक मूल्यांकन' का तात्पर्य किसके द्वारा मूल्यांकन से है?",
+    "o": ["Chemical tests", "Sensory organs (Color, Odour, Taste) | इंद्रियों द्वारा", "Microscope", "Physical constants"],
+    "a": 1,
+    "e": "Organoleptic evaluation uses sight, smell, and taste to identify crude drugs[cite: 301].",
+    "cat": "technical",
+    "sub": "pharmacognosy"
+  },
+  {
+    "q": "What is 'Spirulina' categorized as? / 'स्पाइरुलिना' (Spirulina) को किस रूप में वर्गीकृत किया गया है?",
+    "o": ["Synthetic drug", "Nutraceutical / Health food | न्यूट्रस्युटिकल", "Laxative", "Antineoplastic"],
+    "a": 1,
+    "e": "Spirulina is a nutrient-rich blue-green algae used as a dietary supplement[cite: 303].",
+    "cat": "technical",
+    "sub": "pharmacognosy"
+  },
+  {
+    "q": "Which herbal formulation is prepared through the 'Nitration' or 'Calcinations' process in Ayurveda? / आयुर्वेद में 'कैलसिनेशन' प्रक्रिया के माध्यम से कौन सा हर्बल फॉर्मूलेशन तैयार किया जाता है?",
+    "o": ["Gutika", "Bhasma | भस्म", "Churna", "Taila"],
+    "a": 1,
+    "e": "Bhasmas are fine powders prepared by the process of incineration or calcination[cite: 302].",
+    "cat": "technical",
+    "sub": "pharmacognosy"
+  },
+  {
+    "q": "Which oil is derived from 'Sandalwood' and used in perfumes and cosmetics? / 'चंदन' (Sandalwood) से प्राप्त होने वाला कौन सा तेल इत्र और सौंदर्य प्रसाधनों में उपयोग किया जाता है?",
+    "o": ["Lavender oil", "Sandalwood oil | चंदन का तेल", "Olive oil", "Rosemary oil"],
+    "a": 1,
+    "e": "Sandalwood oil is highly valued for its fragrance and cosmetic properties[cite: 303].",
+    "cat": "technical",
+    "sub": "pharmacognosy"
+  },
+  {
+    "q": "'Dietary fibres' are important in the diet for: / आहार में 'आहार फाइबर' किसके लिए महत्वपूर्ण हैं?",
+    "o": ["Instant energy", "Digestive health and preventing constipation | पाचन स्वास्थ्य", "Muscle building", "None"],
+    "a": 1,
+    "e": "Fibers like Ispaghula help in maintaining bowel regularity[cite: 303].",
+    "cat": "technical",
+    "sub": "pharmacognosy"
+  },
+  {
+    "q": "Which crude drug is used as a 'Cardiotonic' besides Digitalis? / डिजिटलिस के अलावा किस क्रूड ड्रग का उपयोग 'कार्डियोटोनिक' के रूप में किया जाता है?",
+    "o": ["Coriander", "Arjuna | अर्जुन (Arjuna)", "Senna", "Aloe"],
+    "a": 1,
+    "e": "Terminalia arjuna bark is used as a cardiotonic in traditional medicine[cite: 302].",
+    "cat": "technical",
+    "sub": "pharmacognosy"
+  },
+  {
+    "q": "Adulteration of crude drugs means: / क्रूड ड्रग्स की 'मिलावट' (Adulteration) का अर्थ है:",
+    "o": ["Cleaning the drug", "Debasement or substitution with inferior substances | घटिया पदार्थों के साथ मिलावट", "Increasing potency", "None"],
+    "a": 1,
+    "e": "Adulteration involves replacing the genuine drug with inferior or exhausted material[cite: 301].",
+    "cat": "technical",
+    "sub": "pharmacognosy"
+  },
+  {
+    "q": "What is the biological source of 'Digitalis', a potent cardiotonic drug? / एक शक्तिशाली कार्डियोटोनिक दवा, 'डिजिटलिस' का जैविक स्रोत क्या है?",
+    "o": ["Digitalis purpurea | डिजिटलिस परप्यूरिया", "Terminalia arjuna", "Aloe barbadensis", "Cassia angustifolia"],
+    "a": 0,
+    "e": "Digitalis purpurea leaves contain glycosides used to treat congestive heart failure[cite: 302].",
+    "cat": "technical",
+    "sub": "pharmacognosy"
+  },
+  {
+    "q": "Which phytoconstituent is primarily responsible for the 'Antimalarial' activity of Cinchona? / सिंकोना (Cinchona) की 'एंटी-मलेरियल' गतिविधि के लिए मुख्य रूप से कौन सा फाइटोकांस्टिट्यूएंट जिम्मेदार है?",
+    "o": ["Emetine", "Quinine | कुनैन (Quinine)", "Reserpine", "Caffeine"],
+    "a": 1,
+    "e": "Quinine is an alkaloid derived from Cinchona bark used in malaria treatment[cite: 302].",
+    "cat": "technical",
+    "sub": "pharmacognosy"
+  },
+  {
+    "q": "'Rauwolfia serpentina' (Sarpagandha) is clinically used as an: / 'रौवोल्फिया सर्पेंटिना' (सर्पगंधा) का नैदानिक रूप से उपयोग किया जाता है:",
+    "o": ["Anti-tussive", "Anti-hypertensive | एंटी-हाइपरटेंसिव", "Laxative", "Vitamin source"],
+    "a": 1,
+    "e": "Rauwolfia is famous for its alkaloid reserpine which lowers blood pressure[cite: 302].",
+    "cat": "technical",
+    "sub": "pharmacognosy"
+  },
+  {
+    "q": "Which drug is used as an 'Anti-rheumatic' in the herbal drug category? / हर्बल ड्रग श्रेणी में 'एंटी-रूमेटिक' के रूप में किस दवा का उपयोग किया जाता है?",
+    "o": ["Ginger", "Colchicum seed | कोल्चिकम बीज", "Coriander", "Fennel"],
+    "a": 1,
+    "e": "Colchicum contains colchicine, which is used in the treatment of gout and rheumatism[cite: 302].",
+    "cat": "technical",
+    "sub": "pharmacognosy"
+  },
+  {
+    "q": "What are the primary chemical constituents of 'Aloe'? / 'एलो' (Aloe) के प्राथमिक रासायनिक घटक क्या हैं?",
+    "o": ["Alkaloids", "Anthraquinone glycosides (Aloin) | एंथ्राक्विनोन ग्लाइकोसाइड्स", "Volatile oils", "Tannins"],
+    "a": 1,
+    "e": "Aloin and barbaloin are the active principles in Aloe used as laxatives[cite: 302].",
+    "cat": "technical",
+    "sub": "pharmacognosy"
+  },
+  {
+    "q": "Which of the following is a 'Pharmaceutical Aid' derived from seaweed? / समुद्री शैवाल (seaweed) से प्राप्त होने वाला 'फार्मास्युटिकल एड' कौन सा है?",
+    "o": ["Beewax", "Agar | अगर (Agar)", "Gelatine", "Lanolin"],
+    "a": 1,
+    "e": "Agar is a polysaccharide obtained from red algae used as a gelling agent[cite: 302].",
+    "cat": "technical",
+    "sub": "pharmacognosy"
+  },
+  {
+    "q": "The therapeutic efficacy of 'Vasaka' is primarily as an: / 'वासाका' (Vasaka) की चिकित्सीय प्रभावकारिता मुख्य रूप से है:",
+    "o": ["Anti-tumoour", "Expectorant / Anti-tussive | एक्सपेक्टोरेंट", "Cardiotonic", "Antiseptic"],
+    "a": 1,
+    "e": "Adhatoda vasica (Vasaka) is widely used for respiratory ailments and cough[cite: 302].",
+    "cat": "technical",
+    "sub": "pharmacognosy"
+  },
+  {
+    "q": "Which enzyme is obtained from 'Papaya'? / 'पपीता' से कौन सा एंजाइम प्राप्त होता है?",
+    "o": ["Diastase", "Papain | पपेन (Papain)", "Yeast", "Pancreatin"],
+    "a": 1,
+    "e": "Papain is a proteolytic enzyme derived from the latex of Carica papaya[cite: 302].",
+    "cat": "technical",
+    "sub": "pharmacognosy"
+  },
+  {
+    "q": "What is the biological source of 'Ashwagandha'? / 'अश्वगंधा' (Ashwagandha) का जैविक स्रोत क्या है?",
+    "o": ["Withania somnifera | विदानिया सोम्निफेरा", "Ocimum sanctum", "Curcuma longa", "Azadirachta indica"],
+    "a": 0,
+    "e": "Withania somnifera is used as a rejuvenating tonic and adaptogen[cite: 302].",
+    "cat": "technical",
+    "sub": "pharmacognosy"
+  },
+  {
+    "q": "Which drug is used as an 'Anti-dysenteric'? / 'एंटी-डिसेंट्रिक' (Anti-dysenteric) के रूप में किस दवा का उपयोग किया जाता है?",
+    "o": ["Senna", "Ipecacuanha | इपेकैकुआना", "Arjuna", "Ginger"],
+    "a": 1,
+    "e": "Ipecac root is used to treat amoebic dysentery[cite: 302].",
+    "cat": "technical",
+    "sub": "pharmacognosy"
+  },
+  {
+    "q": "The term 'Ayurveda' literally means: / 'आयुर्वेद' शब्द का शाब्दिक अर्थ क्या है?",
+    "o": ["Science of Medicine", "Science of Life | जीवन का विज्ञान", "Science of Plants", "Science of Healing"],
+    "a": 1,
+    "e": "Ayurveda is an ancient Indian system focusing on balanced living and herbal medicine[cite: 302].",
+    "cat": "technical",
+    "sub": "pharmacognosy"
+  },
+  {
+    "q": "Which traditional system of medicine is based on the principle 'Similia Similibus Curentur'? / चिकित्सा की कौन सी पारंपरिक प्रणाली 'सिमिलिया सिमिलिबस क्यूरेंटुर' के सिद्धांत पर आधारित है?",
+    "o": ["Siddha", "Homeopathy | होम्योपैथी (Homeopathy)", "Unani", "Ayurveda"],
+    "a": 1,
+    "e": "Homeopathy believes that 'like cures like'[cite: 302].",
+    "cat": "technical",
+    "sub": "pharmacognosy"
+  },
+  {
+    "q": "Which of these is a typical 'Ayurvedic formulation'? / इनमें से कौन सा एक विशिष्ट 'आयुर्वेदिक फॉर्मूलेशन' है?",
+    "o": ["Tincture", "Asava/Arista | आसव/अरिष्ट", "Capsule", "Ointment"],
+    "a": 1,
+    "e": "Asava and Arista are fermented liquid preparations in Ayurveda[cite: 302].",
+    "cat": "technical",
+    "sub": "pharmacognosy"
+  },
+  {
+    "q": "What is the primary use of 'Aloe vera gel' in herbal cosmetics? / हर्बल कॉस्मेटिक्स में 'एलोवेरा जेल' का प्राथमिक उपयोग क्या है?",
+    "o": ["As a coloring agent", "As a skin moisturizer and healing agent | त्वचा मॉइस्चराइज़र के रूप में", "As a perfume", "As a preservative"],
+    "a": 1,
+    "e": "Aloe vera is widely used for its soothing and cosmetic properties[cite: 303].",
+    "cat": "technical",
+    "sub": "pharmacognosy"
+  },
+  {
+    "q": "'Almond oil' (Badam oil) is categorized as: / 'बादाम तेल' (Badam oil) को किस रूप में वर्गीकृत किया गया है?",
+    "o": ["Volatile oil", "Fixed oil/Herbal cosmetic source | हर्बल कॉस्मेटिक स्रोत", "Mineral oil", "Synthetic oil"],
+    "a": 1,
+    "e": "Almond oil is used in various commercial herbal preparations and cosmetics[cite: 303].",
+    "cat": "technical",
+    "sub": "pharmacognosy"
+  },
+  {
+    "q": "The active chemical constituents of 'Senna' are: / 'सेना' के सक्रिय रासायनिक घटक क्या हैं?",
+    "o": ["Alkaloids", "Sennosides (Glycosides) | सेनोसाइड्स (ग्लाइकोसाइड्स)", "Tannins", "Resins"],
+    "a": 1,
+    "e": "Sennosides are the key phytoconstituents responsible for the laxative effect[cite: 302].",
+    "cat": "technical",
+    "sub": "pharmacognosy"
+  },
+  {
+    "q": "Which 'Herbal oil' is famous for its use in aromatherapy and as a cosmetic for its fragrance? / कौन सा 'हर्बल तेल' अपनी सुगंध के लिए अरोमाथेरेपी और कॉस्मेटिक के रूप में प्रसिद्ध है?",
+    "o": ["Castor oil", "Lavender oil | लैवेंडर का तेल", "Fish oil", "Peanut oil"],
+    "a": 1,
+    "e": "Lavender oil is a popular herbal cosmetic and aromatherapy oil[cite: 303].",
+    "cat": "technical",
+    "sub": "pharmacognosy"
+  },
+  {
+    "q": "Which system of medicine originated in Greece but was developed by Arabs? / चिकित्सा की कौन सी प्रणाली ग्रीस (यूनान) में उत्पन्न हुई लेकिन अरबों द्वारा विकसित की गई थी?",
+    "o": ["Ayurveda", "Unani | यूनानी (Unani)", "Siddha", "Homeopathy"],
+    "a": 1,
+    "e": "The Unani system is based on the teachings of Hippocrates and Galen[cite: 302].",
+    "cat": "technical",
+    "sub": "pharmacognosy"
+  },
+  {
+    "q": "What are 'Nutraceuticals'? / 'न्यूट्रस्युटिकल्स' (Nutraceuticals) क्या हैं?",
+    "o": ["Only medicines", "Food products with health/medicinal benefits | स्वास्थ्य लाभ वाले खाद्य उत्पाद", "Synthetic dyes", "Toxic waste"],
+    "a": 1,
+    "e": "Nutraceuticals like Spirulina and Garlic provide both nutrition and health benefits[cite: 303].",
+    "cat": "technical",
+    "sub": "pharmacognosy"
+  },
+  {
+    "q": "'Turmeric' (Haldi) is used as an: / 'हल्दी' (Turmeric) का उपयोग किसके रूप में किया जाता है?",
+    "o": ["Antiseptic and disinfectant | एंटीसेप्टिक और कीटाणुनाशक", "Only as a spice", "Laxative", "Antidiabetic only"],
+    "a": 0,
+    "e": "Curcuma longa (Turmeric) has significant antiseptic and anti-inflammatory properties[cite: 302].",
+    "cat": "technical",
+    "sub": "pharmacognosy"
+  },
+  {
+    "q": "Which classification of crude drugs organizes them based on their plant kingdom hierarchy (Family, Genus, Species)? / क्रूड ड्रग्स का कौन सा वर्गीकरण उन्हें पादप साम्राज्य पदानुक्रम (कुल, वंश, प्रजाति) के आधार पर व्यवस्थित करता है?",
+    "o": ["Alphabetical", "Taxonomical | टैक्सोनॉमिक (Taxonomical)", "Chemical", "Pharmacological"],
+    "a": 1,
+    "e": "Taxonomical classification is based on the botanical or zoological position of the drug[cite: 301].",
+    "cat": "technical",
+    "sub": "pharmacognosy"
+  },
+  {
+    "q": "In the 'Chemical' classification, drugs are grouped according to their: / 'रासायनिक' वर्गीकरण में, दवाओं को किसके अनुसार समूहीकृत किया जाता है?",
+    "o": ["Weight", "Active phytoconstituents | सक्रिय फाइटोकांस्टिट्यूएंट्स", "Color", "Price"],
+    "a": 1,
+    "e": "Chemical classification groups drugs based on their primary chemical constituents like alkaloids or glycosides[cite: 301].",
+    "cat": "technical",
+    "sub": "pharmacognosy"
+  },
+  {
+    "q": "Which of the following is a 'Laxative' drug of natural origin? / निम्नलिखित में से कौन सी प्राकृतिक मूल की 'लेक्सेटिव' (Laxative) दवा है?",
+    "o": ["Digitalis", "Senna | सेना (Senna)", "Arjuna", "Clove"],
+    "a": 1,
+    "e": "Senna contains glycosides that act as a stimulant laxative[cite: 302].",
+    "cat": "technical",
+    "sub": "pharmacognosy"
+  },
+  {
+    "q": "The biological source of 'Arjuna', a cardiotonic drug, is: / एक कार्डियोटोनिक दवा, 'अर्जुन' का जैविक स्रोत क्या है?",
+    "o": ["Digitalis purpurea", "Terminalia arjuna | टर्मिनलिया अर्जुन (Terminalia arjuna)", "Aloe vera", "Coriandrum sativum"],
+    "a": 1,
+    "e": "Terminalia arjuna is used primarily for its heart-strengthening properties[cite: 302].",
+    "cat": "technical",
+    "sub": "pharmacognosy"
+  },
+  {
+    "q": "Which category of drugs is used to expel gas from the gastrointestinal tract? / जठरांत्र संबंधी मार्ग से गैस निकालने के लिए किस श्रेणी की दवाओं का उपयोग किया जाता है?",
+    "o": ["Astringents", "Carminatives | कार्मिनेटिव्स (Carminatives)", "Laxatives", "Antitumor"],
+    "a": 1,
+    "e": "Carminatives like Coriander and Ginger help in relieving flatulence[cite: 302].",
+    "cat": "technical",
+    "sub": "pharmacognosy"
+  },
+  {
+    "q": "What is the primary therapeutic activity of 'Vinca'? / 'विंका' (Vinca) की प्राथमिक चिकित्सीय गतिविधि क्या है?",
+    "o": ["Cardiotonic", "Anti-tumour (Anticancer) | एंटी-ट्यूमर (कैंसर रोधी)", "Laxative", "Carminative"],
+    "a": 1,
+    "e": "Vinca contains alkaloids like vincristine and vinblastine used in cancer treatment[cite: 302].",
+    "cat": "technical",
+    "sub": "pharmacognosy"
+  },
+  {
+    "q": "Which drug acts as an 'Antidiabetic' in the Pharmacognosy syllabus? / फार्माकोग्नॉसी सिलेबस में कौन सी दवा 'एंटी-डायबिटिक' के रूप में कार्य करती है?",
+    "o": ["Digitalis", "Gymnema (Gurmar) | जिम्नेमा (गुड़मार)", "Senna", "Fennel"],
+    "a": 1,
+    "e": "Gymnema sylvestre is known for its blood sugar-lowering properties[cite: 302].",
+    "cat": "technical",
+    "sub": "pharmacognosy"
+  },
+  {
+    "q": "Which part of the 'Clove' plant is used medicinally? / 'लौंग' (Clove) के पौधे का कौन सा भाग औषधीय रूप से उपयोग किया जाता है?",
+    "o": ["Leaf", "Dried flower bud | सूखी फूलों की कली", "Root", "Seed"],
+    "a": 1,
+    "e": "Clove is a carminative and GI regulator derived from the flower bud[cite: 302].",
+    "cat": "technical",
+    "sub": "pharmacognosy"
+  },
+  {
+    "q": "Which of these is a 'Drug acting on the nervous system' derived from natural resources? / इनमें से कौन सा प्राकृतिक संसाधनों से प्राप्त 'तंत्रिका तंत्र पर कार्य करने वाली दवा' है?",
+    "o": ["Arjuna", "Opium | अफीम (Opium)", "Castor oil", "Turmeric"],
+    "a": 1,
+    "e": "Opium acts as a potent analgesic on the central nervous system[cite: 302].",
+    "cat": "technical",
+    "sub": "pharmacognosy"
+  },
+  {
+    "q": "'Black Catechu' and 'Pale Catechu' belong to which therapeutic category? / 'ब्लैक कटेचु' और 'पेल कटेचु' किस चिकित्सीय श्रेणी से संबंधित हैं?",
+    "o": ["Laxatives", "Astringents | कसैले (Astringents)", "Cardiotonics", "Vitamins"],
+    "a": 1,
+    "e": "Astringents are substances that cause contraction of tissues and stop bleeding[cite: 302].",
+    "cat": "technical",
+    "sub": "pharmacognosy"
+  },
+  {
+    "q": "In the assay of 'Ferrous Sulphate' by redox titration, which indicator is used? / रेडॉक्स टाइट्रेशन द्वारा 'फेरस सल्फेट' के परख में किस संकेतक का उपयोग किया जाता है?",
+    "o": ["Methyl orange", "Self-indicator (KMnO4) or Ferroin | स्व-संकेतक (KMnO4)", "Phenolphthalein", "Starch"],
+    "a": 1,
+    "e": "Potassium permanganate acts as a self-indicator in the redox titration of ferrous salts[cite: 278].",
+    "cat": "technical",
+    "sub": "pharmaceutical_chemistry"
+  },
+  {
+    "q": "Which heterocyclic system is present in 'Salbutamol*'? / 'साल्बुटामोल*' में कौन सा हेट्रोसाइक्लिक सिस्टम मौजूद है?",
+    "o": ["Pyridine", "None (It is an amino alcohol) | कोई नहीं (यह अमीनो अल्कोहल है)", "Thiazole", "Imidazole"],
+    "a": 1,
+    "e": "Salbutamol is a phenylethanolamine derivative and does not contain a typical heterocyclic ring [cite: 258-259].",
+    "cat": "technical",
+    "sub": "pharmaceutical_chemistry"
+  },
+  {
+    "q": "What is the primary pharmacological use of 'Cisplatin*'? / 'सिस्प्लैटिन*' का प्राथमिक फार्माकोलॉजिकल उपयोग क्या है?",
+    "o": ["Antibiotic", "Anti-Neoplastic (Anticancer) | एंटी-नियोप्लास्टिक", "Diuretic", "Anaesthetic"],
+    "a": 1,
+    "e": "Cisplatin is an inorganic platinum-based complex used for cancer treatment[cite: 260].",
+    "cat": "technical",
+    "sub": "pharmaceutical_chemistry"
+  },
+  {
+    "q": "The term 'Accuracy' in pharmaceutical analysis means: / फार्मास्युटिकल विश्लेषण में 'सटीकता' (Accuracy) शब्द का अर्थ है:",
+    "o": ["Repeating same result", "Closeness to the true value | वास्तविक मूल्य के करीब होना", "Cleaning lab", "None"],
+    "a": 1,
+    "e": "Accuracy measures how close the experimental value is to the accepted true value[cite: 257].",
+    "cat": "technical",
+    "sub": "pharmaceutical_chemistry"
+  },
+  {
+    "q": "Which drug is synthesized using the 'Alkalimetry' principle in practicals? / प्रैक्टिकल में किस दवा का विश्लेषण 'अल्केलीमेट्री' सिद्धांत का उपयोग करके किया जाता है?",
+    "o": ["Sodium Chloride", "Ibuprofen | इबुप्रोफेन", "Calcium Gluconate", "Ferrous Sulphate"],
+    "a": 1,
+    "e": "Ibuprofen assay is typically performed using alkalimetry titration[cite: 278].",
+    "cat": "technical",
+    "sub": "pharmaceutical_chemistry"
+  },
+  {
+    "q": "What is the chemical class of 'Chlorpromazine Hydrochloride*'? / 'क्लोरप्रोमेज़ीन हाइड्रोक्लोराइड*' का रासायनिक वर्ग क्या है?",
+    "o": ["Barbiturate", "Phenothiazine | फेनोथियाज़िन", "Benzodiazepine", "Sulfonamide"],
+    "a": 1,
+    "e": "Chlorpromazine is the prototype of the phenothiazine antipsychotics[cite: 258].",
+    "cat": "technical",
+    "sub": "pharmaceutical_chemistry"
+  },
+  {
+    "q": "In the limit test for 'Arsenic', which apparatus is used? / 'आर्सेनिक' के लिमिट टेस्ट में किस उपकरण का उपयोग किया जाता है?",
+    "o": ["Nessler cylinder", "Gutzeit Apparatus | गुटज़िट उपकरण", "Burette", "Pipette"],
+    "a": 1,
+    "e": "The Gutzeit test is a standard method for arsenic limit testing in pharmaceuticals[cite: 257].",
+    "cat": "technical",
+    "sub": "pharmaceutical_chemistry"
+  },
+  {
+    "q": "Which reagent is used for the assay of 'Ascorbic Acid' (Vitamin C)? / 'एस्कॉर्बिक एसिड' (विटामिन सी) के परख के लिए किस अभिकर्मक का उपयोग किया जाता है?",
+    "o": ["NaOH", "Iodine (Iodometry) | आयोडीन (आयोडोमेट्री)", "EDTA", "HCl"],
+    "a": 1,
+    "e": "Iodometry is the standard volumetric method for the assay of Ascorbic acid[cite: 278].",
+    "cat": "technical",
+    "sub": "pharmaceutical_chemistry"
+  },
+  {
+    "q": "The chemical name of 'Paracetamol*' is: / 'पैरासिटामोल*' का रासायनिक नाम क्या है?",
+    "o": ["N-(4-hydroxyphenyl)acetamide | N-(4-हाइड्रॉक्सीफेनिल) एसिटामाइड", "Acetylsalicylic acid", "Benzene diamine", "None"],
+    "a": 0,
+    "e": "Paracetamol is also known as Acetaminophen, an important analgesic-antipyretic [cite: 259-260].",
+    "cat": "technical",
+    "sub": "pharmaceutical_chemistry"
+  },
+  {
+    "q": "Why is 'Glycerine' added in the assay of Boric Acid? / बोरिक एसिड के परख (Assay) में 'ग्लिसरीन' क्यों मिलाया जाता है?",
+    "o": ["As a preservative", "To increase the acidity of Boric acid | बोरिक एसिड की अम्लता बढ़ाने के लिए", "As a sweetener", "To change color"],
+    "a": 1,
+    "e": "Boric acid is a very weak acid; glycerine reacts with it to form a strong complex acid that can be titrated with NaOH[cite: 258, 278].",
+    "cat": "technical",
+    "sub": "pharmaceutical_chemistry"
+  },
+  {
+    "q": "Which drug is a 'Direct Acting' Sympathomimetic agent? / कौन सी दवा 'डायरेक्ट एक्टिंग' सिम्पैथोमिमेटिक एजेंट है?",
+    "o": ["Ephedrine", "Epinephrine (Adrenaline) | एपिनेफ्रीन", "Metaraminol", "Pseudoephedrine"],
+    "a": 1,
+    "e": "Epinephrine acts directly on adrenergic receptors. [cite: 258]",
+    "cat": "technical",
+    "sub": "pharmaceutical_chemistry"
+  },
+  {
+    "q": "What is the medical use of 'Propranolol'? / 'प्रोप्रानोलोल' का चिकित्सा उपयोग क्या है?",
+    "o": ["To increase heart rate", "Beta Adrenergic Blocker for Hypertension | उच्च रक्तचाप के लिए बीटा ब्लॉकर", "As an antibiotic", "As a dental cleaner"],
+    "a": 1,
+    "e": "Propranolol is a non-selective beta-blocker used for CVS disorders. [cite: 259]",
+    "cat": "technical",
+    "sub": "pharmaceutical_chemistry"
+  },
+  {
+    "q": "Which drug is used to treat 'Myasthenia Gravis' by inhibiting Cholinesterase? / कोलिनेस्टरेज़ को रोककर 'मायस्थेनिया ग्रेविस' के इलाज के लिए किस दवा का उपयोग किया जाता है?",
+    "o": ["Atropine", "Neostigmine* | निओस्टिग्माइन", "Dopamine", "Prazosin"],
+    "a": 1,
+    "e": "Neostigmine is a cholinesterase inhibitor that improves muscle strength. [cite: 259]",
+    "cat": "technical",
+    "sub": "pharmaceutical_chemistry"
+  },
+  {
+    "q": "'Atropine Sulphate' belongs to which category? / 'एट्रोपिन सल्फेट' किस श्रेणी से संबंधित है?",
+    "o": ["Cholinergic drug", "Cholinergic Blocking Agent (Anticholinergic) | कोलिनेर्जिक ब्लॉकिंग एजेंट", "Diuretic", "Sulphonamide"],
+    "a": 1,
+    "e": "Atropine is a common cholinergic blocking agent used to reduce secretions. [cite: 259]",
+    "cat": "technical",
+    "sub": "pharmaceutical_chemistry"
+  },
+  {
+    "q": "Which drug is an 'Anti-Arrhythmic' agent? / कौन सी दवा 'एंटी-अरिथमिक' (Anti-Arrhythmic) एजेंट है?",
+    "o": ["Insulin", "Quinidine Sulphate | क्विनिडाइन सल्फेट", "Metformin", "Aspirin"],
+    "a": 1,
+    "e": "Quinidine is used to manage abnormal heart rhythms. [cite: 259]",
+    "cat": "technical",
+    "sub": "pharmaceutical_chemistry"
+  },
+  {
+    "q": "What is the primary use of 'Nitroglycerin' (Isosorbide Dinitrate)? / 'नाइट्रोग्लिसरीन' (आइसोसोरबाइड डिनिट्रेट) का प्राथमिक उपयोग क्या है?",
+    "o": ["Antifungal", "Antianginal Agent | एंटी-एंजाइनल एजेंट", "Antacid", "Haematinic"],
+    "a": 1,
+    "e": "Isosorbide dinitrate is used to treat angina pectoris (chest pain). [cite: 259]",
+    "cat": "technical",
+    "sub": "pharmaceutical_chemistry"
+  },
+  {
+    "q": "Which drug is a 'Sulphonamide' anti-infective agent? / कौन सी दवा 'सल्फोनामाइड' एंटी-इंफेक्टिव एजेंट है?",
+    "o": ["Penicillin G", "Sulfamethoxazole (Cotrimoxazole) | सल्फामेथोक्साज़ोल", "Streptomycin", "Acyclovir"],
+    "a": 1,
+    "e": "Sulfamethoxazole is a common sulphonamide often combined with trimethoprim. [cite: 260]",
+    "cat": "technical",
+    "sub": "pharmaceutical_chemistry"
+  },
+  {
+    "q": "'Amphotericin-B' is used to treat which type of infection? / 'एम्फोटेरिसिन-बी' का उपयोग किस प्रकार के संक्रमण के इलाज के लिए किया जाता है?",
+    "o": ["Bacterial", "Fungal | कवक (Fungal)", "Viral", "Malarial"],
+    "a": 1,
+    "e": "Amphotericin-B is a potent antifungal agent. [cite: 259]",
+    "cat": "technical",
+    "sub": "pharmaceutical_chemistry"
+  },
+  {
+    "q": "Which antiviral agent is markable for 'Acyclovir'? / 'एसिक्लोविर' (Acyclovir) के लिए कौन सा एंटीवायरल एजेंट मार्क करने योग्य है?",
+    "o": ["Antibiotic", "Antiviral for Herpes | हर्पीस के लिए एंटीवायरल", "Antifungal", "Anticancer"],
+    "a": 1,
+    "e": "Acyclovir is a key antiviral agent mentioned in the syllabus. [cite: 260]",
+    "cat": "technical",
+    "sub": "pharmaceutical_chemistry"
+  },
+  {
+    "q": "What is the medicinal use of 'Cyclophosphamide'? / 'साइक्लोफॉस्फेमाइड' का औषधीय उपयोग क्या है?",
+    "o": ["Anti-diabetic", "Anti-Neoplastic (Anticancer) | एंटी-नियोप्लास्टिक (कैंसर रोधी)", "Analgesic", "Antipyretic"],
+    "a": 1,
+    "e": "Cyclophosphamide is a common chemotherapy drug for cancer treatment. [cite: 260]",
+    "cat": "technical",
+    "sub": "pharmaceutical_chemistry"
+  },
+  {
+    "q": "What is the primary medicinal use of 'Boric Acid' as a topical agent? / एक टॉपीकल एजेंट के रूप में 'बोरिक एसिड' का प्राथमिक औषधीय उपयोग क्या है?",
+    "o": ["As a sweetener", "As a mild anti-infective/antiseptic | हल्के एंटी-इंफेक्टिव के रूप में", "As a vitamin", "As a lubricant"],
+    "a": 1,
+    "e": "Boric acid is used topically as a weak antiseptic for eyes and skin infections. [cite: 258]",
+    "cat": "technical",
+    "sub": "pharmaceutical_chemistry"
+  },
+  {
+    "q": "In nomenclature, which heterocycle is found in 'Phenobarbital'? / नामकरण में, 'फेनोबार्बिटल' में कौन सा हेट्रोसाइकिल पाया जाता है?",
+    "o": ["Pyridine", "Pyrimidine | पाइरीमिडीन (Pyrimidine)", "Imidazole", "Thiazole"],
+    "a": 1,
+    "e": "Phenobarbital is a barbiturate derivative containing a pyrimidine nucleus. [cite: 258]",
+    "cat": "technical",
+    "sub": "pharmaceutical_chemistry"
+  },
+  {
+    "q": "Which inorganic compound is used as a 'Denture Cleaner'? / कौन सा अकार्बनिक यौगिक 'डेंचर क्लीनर' (Denture Cleaner) के रूप में उपयोग किया जाता है?",
+    "o": ["Silver Nitrate", "Sodium Perborate/Sodium Carbonate | सोडियम कार्बोनेट मिश्रण", "Ferrous sulphate", "Oxygen"],
+    "a": 1,
+    "e": "Dental products like mouth washes and denture cleaners use oxidizing or alkaline agents. [cite: 258]",
+    "cat": "technical",
+    "sub": "pharmaceutical_chemistry"
+  },
+  {
+    "q": "What is the medicinal use of 'Magaldrate' in the GI tract? / जठरांत्र संबंधी मार्ग (GI tract) में 'मगाल्ड्रेट' का औषधीय उपयोग क्या है?",
+    "o": ["As a stimulant", "As an antacid | एंटासिड के रूप में", "As a laxative", "As a sedative"],
+    "a": 1,
+    "e": "Magaldrate is a common gastro-intestinal agent used as an antacid to neutralize stomach acid. [cite: 258]",
+    "cat": "technical",
+    "sub": "pharmaceutical_chemistry"
+  },
+  {
+    "q": "Which drug is used as a 'General Anaesthetic' through intravenous route? / नस के माध्यम से 'सामान्य एनेस्थेटिक' के रूप में किस दवा का उपयोग किया जाता है?",
+    "o": ["Lidocaine", "Thiopental Sodium* | थियोपेंटल सोडियम", "Amitriptyline", "Aspirin"],
+    "a": 1,
+    "e": "Thiopental Sodium is an ultra-short-acting barbiturate used for general anaesthesia. [cite: 258]",
+    "cat": "technical",
+    "sub": "pharmaceutical_chemistry"
+  },
+  {
+    "q": "What is the category of 'Amitriptyline Hydrochloride'? / 'एमिट्रिप्टिलाइन हाइड्रोक्लोराइड' की श्रेणी क्या है?",
+    "o": ["Antipsychotic", "Anti-Depressant | एंटी-डिप्रेसेंट", "Anticonvulsant", "Diuretic"],
+    "a": 1,
+    "e": "Amitriptyline is a tricyclic anti-depressant acting on the central nervous system. [cite: 258]",
+    "cat": "technical",
+    "sub": "pharmaceutical_chemistry"
+  },
+  {
+    "q": "'Haloperidol' belongs to which pharmacological class? / 'हैलोपेरिडोल' किस फार्माकोलॉजिकल वर्ग से संबंधित है?",
+    "o": ["Anaesthetic", "Antipsychotic | एंटी-साइकोटिक", "Hypnotic", "Analgesic"],
+    "a": 1,
+    "e": "Haloperidol is used to treat schizophrenia and other psychiatric conditions. [cite: 258]",
+    "cat": "technical",
+    "sub": "pharmaceutical_chemistry"
+  },
+  {
+    "q": "Which drug is categorized as an 'Antidepressant' that belongs to the SSRI class? / कौन सी दवा SSRI वर्ग से संबंधित है जिसे 'एंटीडिप्रेसेंट' के रूप में वर्गीकृत किया गया है?",
+    "o": ["Phenobarbital", "Fluoxetine* | फ्लुओक्सेटीन", "Diazepam", "Ketamine"],
+    "a": 1,
+    "e": "Fluoxetine is a Selective Serotonin Reuptake Inhibitor (SSRI) used for depression. [cite: 258]",
+    "cat": "technical",
+    "sub": "pharmaceutical_chemistry"
+  },
+  {
+    "q": "'Vigabatrin' and 'Gabapentin' are used for: / 'विगाबाट्रिन' और 'गाबापेंटिन' का उपयोग किसके लिए किया जाता है?",
+    "o": ["Heart attack", "Anticonvulsant/Epilepsy | एंटी-कन्वल्सेंट/मिर्गी", "Diabetes", "Asthma"],
+    "a": 1,
+    "e": "These medicinal compounds are acting on the CNS to manage seizures. [cite: 258]",
+    "cat": "technical",
+    "sub": "pharmaceutical_chemistry"
+  },
+  {
+    "q": "What is the storage condition for most light-sensitive inorganic pharmaceuticals? / अधिकांश प्रकाश-संवेदनशील अकार्बनिक फार्मास्युटिकल्स के लिए भंडारण की स्थिति क्या है?",
+    "o": ["Transparent bottles", "Well-closed, light-resistant containers | प्रकाश-प्रतिरोधी कंटेनर", "Open jars", "None"],
+    "a": 1,
+    "e": "Stability and storage conditions are crucial for medicinal compounds mentioned in the syllabus. [cite: 258]",
+    "cat": "technical",
+    "sub": "pharmaceutical_chemistry"
+  },
+  {
+    "q": "Which drug is used as an 'Anticonvulsant' to treat Epilepsy? / मिर्गी के इलाज के लिए 'एंटी-कन्वल्सेंट' के रूप में किस दवा का उपयोग किया जाता है?",
+    "o": ["Alprazolam", "Phenytoin | फेनिटोइन (Phenytoin)", "Amiodarone", "Insulin"],
+    "a": 1,
+    "e": "Phenytoin is a major anticonvulsant used for generalized tonic-clonic seizures[cite: 466].",
+    "cat": "technical",
+    "sub": "pharmaceutical_chemistry"
+  },
+  {
+    "q": "Which of the following is a 'Loop Diuretic'? / निम्नलिखित में से कौन सा 'लूप मूत्रवर्धक' (Loop Diuretic) है?",
+    "o": ["Metformin", "Frusemide (Furosemide) | फ्रुसेमाइड", "Propranolol", "Aspirin"],
+    "a": 1,
+    "e": "Frusemide is a potent diuretic acting on the loop of Henle[cite: 467].",
+    "cat": "technical",
+    "sub": "pharmaceutical_chemistry"
+  },
+  {
+    "q": "The drug 'Paracetamol' belongs to which category? / 'पैरासिटामोल' दवा किस श्रेणी से संबंधित है?",
+    "o": ["Antipsychotic", "Analgesic and Antipyretic | एनाल्जेसिक और एंटीपायरेटिक", "Antifungal", "Antibiotic"],
+    "a": 1,
+    "e": "Paracetamol is used to relieve pain (analgesic) and reduce fever (antipyretic)[cite: 467].",
+    "cat": "technical",
+    "sub": "pharmaceutical_chemistry"
+  },
+  {
+    "q": "Which of these is used as a 'Sedative and Hypnotic'? / इनमें से किसका उपयोग 'सेडेटिव और हिप्नोटिक' के रूप में किया जाता है?",
+    "o": ["Salbutamol", "Diazepam | डायजेपाम (Diazepam)", "Chlorheixidine", "Nor-Epinephrine"],
+    "a": 1,
+    "e": "Diazepam is a benzodiazepine used for anxiety, sedation, and sleep induction[cite: 466].",
+    "cat": "technical",
+    "sub": "pharmaceutical_chemistry"
+  },
+  {
+    "q": "The drug 'Metformin' is used to treat which condition? / 'मेटफॉर्मिन' दवा का उपयोग किस स्थिति के इलाज के लिए किया जाता है?",
+    "o": ["High BP", "Type 2 Diabetes Mellitus | टाइप 2 मधुमेह", "Bacterial infection", "Depression"],
+    "a": 1,
+    "e": "Metformin is a first-line oral hypoglycemic agent for diabetes[cite: 467].",
+    "cat": "technical",
+    "sub": "pharmaceutical_chemistry"
+  },
+  {
+    "q": "Which category does 'Atenolol' belong to? / 'एटेनोलोल' किस श्रेणी से संबंधित है?",
+    "o": ["Alpha blocker", "Beta Adrenergic Blocker | बीटा ब्लॉकर", "Antiviral", "Diuretic"],
+    "a": 1,
+    "e": "Atenolol is a cardio-selective beta-blocker used for hypertension and angina[cite: 467].",
+    "cat": "technical",
+    "sub": "pharmaceutical_chemistry"
+  },
+  {
+    "q": "Which antibiotic is a 'Macrolide'? / कौन सा एंटीबायोटिक 'मैक्रोलाइड' (Macrolide) है?",
+    "o": ["Penicillin G", "Azithromycin | एजिथ्रोमाइसिन", "Streptomycin", "Doxycycline"],
+    "a": 1,
+    "e": "Azithromycin and Erythromycin are examples of macrolide antibiotics[cite: 468, 705].",
+    "cat": "technical",
+    "sub": "pharmaceutical_chemistry"
+  },
+  {
+    "q": "Which drug is an 'Antipsychotic'? / कौन सी दवा 'एंटी-साइकोटिक' (Antipsychotic) है?",
+    "o": ["Ketamine", "Chlorpromazine Hydrochloride | क्लोरप्रोमेज़ीन", "Ibuprofen", "Verapamil"],
+    "a": 1,
+    "e": "Chlorpromazine is used to manage schizophrenia and other psychotic disorders[cite: 466].",
+    "cat": "technical",
+    "sub": "pharmaceutical_chemistry"
+  },
+  {
+    "q": "What is the medicinal use of 'Salbutamol' (Albuterol)? / 'साल्बुटामोल' का औषधीय उपयोग क्या है?",
+    "o": ["Pain relief", "Bronchodilator (for Asthma) | ब्रोंकोडायलेटर", "Stop bleeding", "Help sleep"],
+    "a": 1,
+    "e": "Salbutamol is a sympathomimetic used to relieve bronchospasm in asthma[cite: 466, 704].",
+    "cat": "technical",
+    "sub": "pharmaceutical_chemistry"
+  },
+  {
+    "q": "'Isoniazid' (INH) is primarily used for the treatment of: / 'आइसोनियाज़िड' (INH) मुख्य रूप से किसके उपचार के लिए उपयोग किया जाता है?",
+    "o": ["Fungal infection", "Tuberculosis (TB) | तपेदिक (टीबी)", "Malaria", "Cancer"],
+    "a": 1,
+    "e": "INH is a key first-line anti-tubercular drug[cite: 468].",
+    "cat": "technical",
+    "sub": "pharmaceutical_chemistry"
+  },
+  {
+    "q": "What is the primary objective of a 'Limit Test' in Pharmaceutical Chemistry? / फार्मास्युटिकल केमिस्ट्री में 'लिमिट टेस्ट' का प्राथमिक उद्देश्य क्या है?",
+    "o": ["To identify the drug", "To control and identify small quantities of impurities | अशुद्धियों को नियंत्रित करना", "To check the color", "To measure weight"],
+    "a": 1,
+    "e": "Limit tests are semi-quantitative tests designed to identify and control small amounts of impurities like chloride, sulphate, and iron[cite: 465].",
+    "cat": "technical",
+    "sub": "pharmaceutical_chemistry"
+  },
+  {
+    "q": "Which reagent is used in the limit test for 'Iron' as per IP? / IP के अनुसार 'आयरन' के लिमिट टेस्ट में किस अभिकर्मक का उपयोग किया जाता है?",
+    "o": ["Silver Nitrate", "Thioglycolic acid | थायोग्लाइकोलिक एसिड", "Barium Chloride", "Ammonia"],
+    "a": 1,
+    "e": "Thioglycolic acid reacts with iron in the presence of ammonia to produce a pale pink to deep reddish-purple color[cite: 465, 486].",
+    "cat": "technical",
+    "sub": "pharmaceutical_chemistry"
+  },
+  {
+    "q": "In volumetric analysis, what is 'Standardization'? / वॉल्यूमेट्रिक विश्लेषण में 'मानकीकरण' (Standardization) क्या है?",
+    "o": ["Determining the weight", "Determining the exact strength of a solution | समाधान की सटीक शक्ति निर्धारित करना", "Cleaning the burette", "Mixing two powders"],
+    "a": 1,
+    "e": "Standardization is the process of finding the exact concentration of a solution using a primary standard[cite: 465, 481].",
+    "cat": "technical",
+    "sub": "pharmaceutical_chemistry"
+  },
+  {
+    "q": "Which type of titration is used for the assay of 'Calcium Gluconate'? / 'कैल्शियम ग्लूकोनेट' के परख (Assay) के लिए किस प्रकार के टाइट्रेशन का उपयोग किया जाता है?",
+    "o": ["Acid-base", "Complexometric titration | कॉम्प्लेक्सोमेट्रिक टाइट्रेशन", "Redox", "Precipitation"],
+    "a": 1,
+    "e": "Complexometric titration using EDTA is the standard method for calcium estimation[cite: 465, 486].",
+    "cat": "technical",
+    "sub": "pharmaceutical_chemistry"
+  },
+  {
+    "q": "Which of the following is a common 'Antacid' used as a Gastro-intestinal agent? / गैस्ट्रो-इंटेस्टाइनल एजेंट के रूप में उपयोग किया जाने वाला सामान्य 'एंटासिड' कौन सा है?",
+    "o": ["Ferrous Sulphate", "Aluminium Hydroxide Gel | एल्युमिनियम हाइड्रॉक्साइड जेल", "Silver Nitrate", "Boric Acid"],
+    "a": 1,
+    "e": "Aluminium hydroxide gel is a non-systemic antacid used to neutralize gastric acidity[cite: 466].",
+    "cat": "technical",
+    "sub": "pharmaceutical_chemistry"
+  },
+  {
+    "q": "What is the medicinal use of 'Ferrous Sulphate'? / 'फेरस सल्फेट' का औषधीय उपयोग क्या है?",
+    "o": ["As an Antacid", "As a Haematinic (to treat Anaemia) | हेमेटिनिक के रूप में", "As a Dental product", "As a Gas"],
+    "a": 1,
+    "e": "Ferrous sulphate is used as a haematinic to treat iron-deficiency anaemia[cite: 466].",
+    "cat": "technical",
+    "sub": "pharmaceutical_chemistry"
+  },
+  {
+    "q": "Which inorganic compound is used as a 'Topical Agent' for its antiseptic properties? / किस अकार्बनिक यौगिक का उपयोग इसके एंटीसेप्टिक गुणों के लिए 'टॉपीकल एजेंट' के रूप में किया जाता है?",
+    "o": ["Calcium Carbonate", "Hydrogen Peroxide | हाइड्रोजन पेरोक्साइड", "Magnesium Hydroxide", "Nitrous Oxide"],
+    "a": 1,
+    "e": "Hydrogen peroxide is a common topical anti-infective and antiseptic[cite: 466].",
+    "cat": "technical",
+    "sub": "pharmaceutical_chemistry"
+  },
+  {
+    "q": "In dental products, 'Sodium Fluoride' is primarily used to: / दंत उत्पादों में, 'सोडियम फ्लोराइड' का मुख्य रूप से उपयोग किया जाता है:",
+    "o": ["Clean dentures", "Prevent dental caries | दंत क्षय (कैविटी) को रोकना", "Bleach teeth", "Reduce swelling"],
+    "a": 1,
+    "e": "Sodium fluoride is an anti-caries agent that strengthens tooth enamel[cite: 466].",
+    "cat": "technical",
+    "sub": "pharmaceutical_chemistry"
+  },
+  {
+    "q": "Which gas is used as an 'Inhalation Anaesthetic'? / 'सांस के साथ लिए जाने वाले एनेस्थेटिक' के रूप में किस गैस का उपयोग किया जाता है?",
+    "o": ["Carbon Dioxide", "Nitrous Oxide | नाइट्रस ऑक्साइड (Laughing gas)", "Oxygen", "Nitrogen"],
+    "a": 1,
+    "e": "Nitrous oxide is a common medicinal gas used for general anaesthesia[cite: 466].",
+    "cat": "technical",
+    "sub": "pharmaceutical_chemistry"
+  },
+  {
+    "q": "What is the source of 'Impurities' in pharmaceuticals? / फार्मास्युटिकल्स में 'अशुद्धियों' का स्रोत क्या है?",
+    "o": ["Raw materials", "Manufacturing process and storage | कच्चा माल और निर्माण प्रक्रिया", "Atmospheric contamination", "All of the above | उपरोक्त सभी"],
+    "a": 3,
+    "e": "Impurities can come from raw materials, reagents, chemical processes, and storage conditions[cite: 465].",
+    "cat": "technical",
+    "sub": "pharmaceutical_chemistry"
+  },
+  {
+    "q": "What is the primary objective of 'Quality Assurance' (QA) in a pharmaceutical plant? / फार्मास्युटिकल प्लांट में 'क्वालिटी एश्योरेंस' (QA) का प्राथमिक उद्देश्य क्या है?",
+    "o": ["To test the final product", "To prevent defects through systematic processes | व्यवस्थित प्रक्रियाओं के माध्यम से दोषों को रोकना", "To sell more drugs", "To reduce staff"],
+    "a": 1,
+    "e": "QA is a broad concept that covers all matters that individually or collectively influence the quality of a product[cite: 406].",
+    "cat": "technical",
+    "sub": "pharmaceutics"
+  },
+  {
+    "q": "The process of proving that an 'instrument' provides accurate results within specified limits is called: / यह साबित करने की प्रक्रिया कि एक 'उपकरण' निर्दिष्ट सीमाओं के भीतर सटीक परिणाम देता है, कहलाती है:",
+    "o": ["Validation", "Calibration | कैलिब्रेशन (Calibration)", "Cleaning", "Maintenance"],
+    "a": 1,
+    "e": "Calibration is the comparison of a measurement device against a known standard to ensure accuracy[cite: 406].",
+    "cat": "technical",
+    "sub": "pharmaceutics"
+  },
+  {
+    "q": "'Validation' provides documented evidence that a specific 'process' will: / 'वैलिडेशन' (Validation) दस्तावेजी प्रमाण प्रदान करता है कि एक विशिष्ट 'प्रक्रिया':",
+    "o": ["Always be cheap", "Consistently produce a product meeting its specifications | लगातार गुणवत्तापूर्ण उत्पाद तैयार करेगी", "Never fail", "Be done by machines only"],
+    "a": 1,
+    "e": "Validation is the documented act of proving that any procedure, process, or activity actually leads to the expected results[cite: 406].",
+    "cat": "technical",
+    "sub": "pharmaceutics"
+  },
+  {
+    "q": "Which of the following is a key requirement for a 'Pharmaceutical Plant Layout'? / 'फार्मास्युटिकल प्लांट लेआउट' के लिए एक प्रमुख आवश्यकता क्या है?",
+    "o": ["Large windows everywhere", "Uni-directional flow of materials and personnel | सामग्री और कर्मियों का एक-दिशीय प्रवाह", "Open ceilings", "None"],
+    "a": 1,
+    "e": "A good layout prevents cross-contamination and mix-ups by ensuring a logical flow of production stages[cite: 406].",
+    "cat": "technical",
+    "sub": "pharmaceutics"
+  },
+  {
+    "q": "Novel Drug Delivery Systems (NDDS) are designed to overcome which challenge? / नोवल ड्रग डिलीवरी सिस्टम (NDDS) को किस चुनौती को दूर करने के लिए डिज़ाइन किया गया है?",
+    "o": ["High cost of drugs", "Frequent dosing and side effects | बार-बार खुराक और दुष्प्रभाव", "Low drug taste", "None"],
+    "a": 1,
+    "e": "NDDS aims to deliver the drug at a controlled rate to a specific site, improving patient compliance[cite: 406].",
+    "cat": "technical",
+    "sub": "pharmaceutics"
+  },
+  {
+    "q": "Which of these is a major 'Challenge' of NDDS? / इनमें से कौन NDDS की एक प्रमुख 'चुनौती' (Challenge) है?",
+    "o": ["Simple manufacturing", "High cost and complex formulation technology | उच्च लागत और जटिल तकनीक", "No need for testing", "None"],
+    "a": 1,
+    "e": "NDDS requires advanced technology, high investment, and complex scale-up processes[cite: 406].",
+    "cat": "technical",
+    "sub": "pharmaceutics"
+  },
+  {
+    "q": "What is an example of a 'Targeted' Drug Delivery System? / 'लक्षित' (Targeted) ड्रग डिलीवरी सिस्टम का एक उदाहरण क्या है?",
+    "o": ["Simple Syrup", "Liposomes for cancer therapy | कैंसर चिकित्सा के लिए लिपोसोम्स", "Paracetamol Tablet", "Calamine Lotion"],
+    "a": 1,
+    "e": "Liposomes can be engineered to deliver drugs specifically to tumor cells, reducing damage to healthy tissues[cite: 406].",
+    "cat": "technical",
+    "sub": "pharmaceutics"
+  },
+  {
+    "q": "A 'Transdermal Patch' is categorized as: / एक 'ट्रांसडर्मल पैच' को किस श्रेणी में रखा गया है?",
+    "o": ["Conventional dosage form", "Novel Drug Delivery System (NDDS) | नोवल ड्रग डिलीवरी सिस्टम", "Sterile formulation", "Gaseous dosage form"],
+    "a": 1,
+    "e": "Transdermal patches provide controlled drug release through the skin into the bloodstream over a long period[cite: 406].",
+    "cat": "technical",
+    "sub": "pharmaceutics"
+  },
+  {
+    "q": "Which area in a pharmaceutical plant requires the highest level of 'Aseptic' control? / फार्मास्युटिकल प्लांट के किस क्षेत्र में 'एसेप्टिक' नियंत्रण के उच्चतम स्तर की आवश्यकता होती है?",
+    "o": ["Warehouse", "Sterile filling area | स्टेराइल फिलिंग क्षेत्र", "Packaging section", "Canteen"],
+    "a": 1,
+    "e": "Sterile areas where injectables or eye drops are filled must be free from any microbial contamination[cite: 406].",
+    "cat": "technical",
+    "sub": "pharmaceutics"
+  },
+  {
+    "q": "The 'Design Qualification' (DQ) is a part of: / 'डिज़ाइन क्वालिफिकेशन' (DQ) किसका हिस्सा है?",
+    "o": ["Calibration", "Validation of equipment | उपकरणों का वैलिडेशन", "Marketing", "Recruitment"],
+    "a": 1,
+    "e": "Validation includes various stages like DQ, IQ (Installation), OQ (Operational), and PQ (Performance)[cite: 406].",
+    "cat": "technical",
+    "sub": "pharmaceutics"
+  },
+  {
+    "q": "What is the main goal of 'Sustained-release' (SR) tablets? / 'सस्टेंड-रिलीज' (SR) टैबलेट का मुख्य लक्ष्य क्या है?",
+    "o": ["Fast action", "Slow and prolonged drug release | धीमी और लंबी अवधि तक दवा रिलीज", "To taste better", "To dissolve in mouth"],
+    "a": 1,
+    "e": "SR tablets release the drug over a long period to maintain a constant blood concentration[cite: 406].",
+    "cat": "technical",
+    "sub": "pharmaceutics"
+  },
+  {
+    "q": "How do 'Fast-dissolving' (Melt-in-mouth) tablets work? / 'फास्ट-डिज़ॉल्विंग' टैबलेट कैसे कार्य करती हैं?",
+    "o": ["Need water to swallow", "Disintegrate within seconds in the mouth | मुंह में सेकंड के भीतर घुलना", "Stay in stomach for days", "None"],
+    "a": 1,
+    "e": "They use highly soluble excipients or 'super-disintegrants' for rapid dissolution without water[cite: 406].",
+    "cat": "technical",
+    "sub": "pharmaceutics"
+  },
+  {
+    "q": "Which technology is often used to create 'Extended-release' (ER) systems? / 'एक्सटेंडेड-रिलीज' (ER) सिस्टम बनाने के लिए अक्सर किस तकनीक का उपयोग किया जाता है?",
+    "o": ["Simple compression", "Polymer coating or Matrix systems | पॉलिमर कोटिंग या मैट्रिक्स सिस्टम", "Adding more sugar", "None"],
+    "a": 1,
+    "e": "Hydrophilic or hydrophobic polymers are used to control the diffusion rate of the drug.",
+    "cat": "technical",
+    "sub": "pharmaceutics"
+  },
+  {
+    "q": "In the pharmaceutical plant, 'Calibration' refers to: / फार्मास्युटिकल प्लांट में, 'कैलिब्रेशन' (Calibration) का तात्पर्य है:",
+    "o": ["Fixing a broken machine", "Checking instrument accuracy against a standard | मानक के विरुद्ध सटीकता की जांच", "Cleaning the floor", "Selling medicine"],
+    "a": 1,
+    "e": "Calibration ensures that weighing scales and equipment provide accurate readings[cite: 406].",
+    "cat": "technical",
+    "sub": "pharmaceutics"
+  },
+  {
+    "q": "What is 'Validation' in the context of cGMP? / cGMP के संदर्भ में 'वैलिडेशन' (Validation) क्या है?",
+    "o": ["One-time test", "Documented proof that a process is consistent | प्रक्रिया की निरंतरता का दस्तावेजी प्रमाण", "Marketing a drug", "None"],
+    "a": 1,
+    "e": "Validation provides a high degree of assurance that a process will consistently produce a quality product[cite: 406].",
+    "cat": "technical",
+    "sub": "pharmaceutics"
+  },
+  {
+    "q": "Which excipient is known as a 'Super-disintegrant' in fast-dissolving tablets? / फास्ट-डिज़ॉल्विंग टैबलेट में किस 'एक्सिपिएंट' को 'सुपर-डििसंटीग्रेंट' के रूप में जाना जाता है?",
+    "o": ["Lactose", "Cross-povidone / Croscarmellose | क्रॉस-पोविडोन", "Starch", "Talc"],
+    "a": 1,
+    "e": "Super-disintegrants swell or wick water rapidly to break the tablet apart in seconds.",
+    "cat": "technical",
+    "sub": "pharmaceutics"
+  },
+  {
+    "q": "The layout of a pharmaceutical plant must follow: / फार्मास्युटिकल प्लांट का लेआउट किसका पालन करना चाहिए?",
+    "o": ["Vastu Shastra", "Schedule M (cGMP) guidelines | शेड्यूल एम (cGMP) दिशानिर्देश", "Local market rules", "None"],
+    "a": 1,
+    "e": "Schedule M of the Drugs and Cosmetics Act specifies the requirements for factory premises[cite: 406].",
+    "cat": "technical",
+    "sub": "pharmaceutics"
+  },
+  {
+    "q": "What is 'Novel Drug Delivery System' (NDDS) advantage? / NDDS का क्या लाभ है?",
+    "o": ["Cheaper than others", "Better patient compliance and reduced toxicity | बेहतर रोगी अनुपालन", "Only for children", "None"],
+    "a": 1,
+    "e": "NDDS aims to deliver drugs to a specific site or at a specific rate to reduce side effects[cite: 406].",
+    "cat": "technical",
+    "sub": "pharmaceutics"
+  },
+  {
+    "q": "A 'Matrix Tablet' is an example of which delivery system? / 'मैट्रिक्स टैबलेट' किस डिलीवरी सिस्टम का उदाहरण है?",
+    "o": ["Immediate release", "Sustained / Controlled release | सस्टेंड / कंट्रोल्ड रिलीज", "Fast dissolving", "None"],
+    "a": 1,
+    "e": "The drug is evenly dispersed in a polymer matrix that slows down its release.",
+    "cat": "technical",
+    "sub": "pharmaceutics"
+  },
+  {
+    "q": "Why is 'Quality Assurance' (QA) broader than 'Quality Control' (QC)? / QA, QC से अधिक व्यापक क्यों है?",
+    "o": ["QA is only about testing", "QA covers the entire system to prevent errors | QA पूरी प्रणाली को कवर करता है", "QC is only for staff", "None"],
+    "a": 1,
+    "e": "QA is proactive and involves the whole process, while QC is reactive and involves testing the product[cite: 406].",
+    "cat": "technical",
+    "sub": "pharmaceutics"
+  },
+  {
+    "q": "Which edition of the Indian Pharmacopoeia (IP) is the latest as of 2022-2024? / 2022-2024 तक भारतीय फार्माकोपिया (IP) का कौन सा संस्करण नवीनतम है?",
+    "o": ["8th Edition", "9th Edition (2022) | 9वां संस्करण", "7th Edition", "10th Edition"],
+    "a": 1,
+    "e": "The 9th edition of IP was published in 2022, containing more than 3100 monographs [cite: 405-406].",
+    "cat": "technical",
+    "sub": "pharmaceutics"
+  },
+  {
+    "q": "What is a salient feature of the IP 2022 regarding 'Biologicals'? / IP 2022 की 'बायोलॉजिकल' के संबंध में एक मुख्य विशेषता क्या है?",
+    "o": ["Removal of all vaccines", "Inclusion of Phytopharmaceuticals & 3 new vaccines | फाइटोफार्मास्युटिकल्स और नई वैक्सीन का समावेश", "No change", "Only for English medicines"],
+    "a": 1,
+    "e": "IP 2022 introduced standards for phytopharmaceuticals and added several new monographs for vaccines and herbal products.",
+    "cat": "technical",
+    "sub": "pharmaceutics"
+  },
+  {
+    "q": "The 'Double Cone Blender' is primarily used for: / 'डबल कोन ब्लेंडर' मुख्य रूप से किसके लिए उपयोग किया जाता है?",
+    "o": ["Liquid mixing", "Dry powder blending | सूखे पाउडर का मिश्रण", "Ointment making", "Gas mixing"],
+    "a": 1,
+    "e": "Double cone blenders are used for uniform mixing of dry powders and granules through tumbling motion[cite: 406].",
+    "cat": "technical",
+    "sub": "pharmaceutics"
+  },
+  {
+    "q": "Which mixer is used to produce extremely fine 'Emulsions' and 'Homogenization'? / बेहद बारीक 'इमल्शन' और 'होमोजेनाइजेशन' बनाने के लिए किस मिक्सर का उपयोग किया जाता है?",
+    "o": ["Propeller mixer", "Silverson mixer homogenizer | सिल्वरसन मिक्सर होमोजेनाइज़र", "Paddle mixer", "Hand whisk"],
+    "a": 1,
+    "e": "Silverson homogenizer uses high-speed shearing to break droplets into micron sizes[cite: 406].",
+    "cat": "technical",
+    "sub": "pharmaceutics"
+  },
+  {
+    "q": "What is the primary role of the 'Triple Roller Mill' in semi-solid manufacturing? / सेमी-सॉलिड निर्माण में 'ट्रिपल रोलर मिल' की प्राथमिक भूमिका क्या है?",
+    "o": ["Heating", "Uniform distribution of solids in ointments | मलहम में ठोस पदार्थों का समान वितरण", "Drying", "Size separation"],
+    "a": 1,
+    "e": "Triple roller mill provides high shear to remove aggregates and ensure smoothness in ointments[cite: 406].",
+    "cat": "technical",
+    "sub": "pharmaceutics"
+  },
+  {
+    "q": "What is the key technical difference between 'Membrane Filter' and 'Sintered Glass Filter'? / 'मेम्ब्रेन फिल्टर' और 'सिंटर्ड ग्लास फिल्टर' के बीच प्रमुख तकनीकी अंतर क्या है?",
+    "o": ["Color", "Disposable vs Reusable | डिस्पोजेबल बनाम पुन: प्रयोज्य", "Price only", "None"],
+    "a": 1,
+    "e": "Membrane filters are usually disposable (single-use), while sintered glass filters are reusable and chemically inert[cite: 406].",
+    "cat": "technical",
+    "sub": "pharmaceutics"
+  },
+  {
+    "q": "Which filter is preferred for 'Cold Sterilization' of heat-sensitive solutions? / ताप-संवेदनशील समाधानों के 'कोल्ड स्टरलाइजेशन' के लिए कौन सा फिल्टर पसंद किया जाता है?",
+    "o": ["Sintered glass", "Membrane filter (0.22 μm) | मेम्ब्रेन फिल्टर", "Filter paper", "Cheesecloth"],
+    "a": 1,
+    "e": "Membrane filters with 0.22-micron pores effectively remove all bacteria from solutions[cite: 406].",
+    "cat": "technical",
+    "sub": "pharmaceutics"
+  },
+  {
+    "q": "In a 'Triple Roller Mill', the rollers rotate at: / 'ट्रिपल रोलर मिल' में, रोलर्स किस गति पर घूमते हैं?",
+    "o": ["Same speed", "Different speeds | अलग-अलग गति", "Very slow speed", "Only one roller rotates"],
+    "a": 1,
+    "e": "Rollers rotate at different speeds to create shear force for effective mixing and size reduction.",
+    "cat": "technical",
+    "sub": "pharmaceutics"
+  },
+  {
+    "q": "The term 'Sintering' in glass filters refers to: / ग्लास फिल्टर में 'सिंटरिंग' (Sintering) शब्द का तात्पर्य है:",
+    "o": ["Breaking glass", "Fusing glass particles without melting them | कांच के कणों को बिना पिघलाए जोड़ना", "Painting glass", "Cooling glass"],
+    "a": 1,
+    "e": "Sintering creates a porous structure that allows liquids to pass while trapping solids.",
+    "cat": "technical",
+    "sub": "pharmaceutics"
+  },
+  {
+    "q": "Which IP edition introduced the 'Orange Book' concept for drug safety? / किस IP संस्करण ने दवा सुरक्षा के लिए 'ऑरेंज बुक' अवधारणा पेश की?",
+    "o": ["IP 1996", "IP 2018/2022 | IP 2018/2022", "IP 1955", "None"],
+    "a": 1,
+    "e": "Recent editions of IP have focused heavily on drug safety, pharmacovigilance, and biosimilars.",
+    "cat": "technical",
+    "sub": "pharmaceutics"
+  },
+  {
+    "q": "Which type of tablet is designed to dissolve under the tongue? / किस प्रकार की टैबलेट को जीभ के नीचे घुलने के लिए डिज़ाइन किया गया है?",
+    "o": ["Enteric coated", "Sublingual tablet | सबलिंगुअल टैबलेट", "Effervescent", "Chewable"],
+    "a": 1,
+    "e": "Sublingual tablets provide rapid drug absorption directly into the systemic circulation. [cite: 406]",
+    "cat": "technical",
+    "sub": "pharmaceutics"
+  },
+  {
+    "q": "Soft gelatin capsules are manufactured using: / सॉफ्ट जिलेटिन कैप्सूल का निर्माण किसका उपयोग करके किया जाता है?",
+    "o": ["Hand filling machine", "Rotary Die Process | रोटरी डाई प्रोसेस", "Hammer mill", "Sieve shaker"],
+    "a": 1,
+    "e": "Softgels are typically produced using a continuous rotary die encapsulation process. [cite: 406]",
+    "cat": "technical",
+    "sub": "pharmaceutics"
+  },
+  {
+    "q": "Which preparation is a clear, sweetened, hydro-alcoholic liquid oral? / कौन सी प्रिपरेशन एक स्पष्ट, मीठा, हाइड्रो-अल्कोहलिक तरल मौखिक है?",
+    "o": ["Syrup", "Elixir | एलि़क्सिर", "Emulsion", "Suspension"],
+    "a": 1,
+    "e": "Elixirs contain alcohol to help dissolve ingredients that are not water-soluble. [cite: 406]",
+    "cat": "technical",
+    "sub": "pharmaceutics"
+  },
+  {
+    "q": "Enteric-coated tablets are designed to release the drug in the: / 'एन्टरिक-कोटेड' टैबलेट को दवा छोड़ने के लिए कहाँ डिज़ाइन किया गया है?",
+    "o": ["Stomach", "Intestine | आंत (Intestine)", "Mouth", "Esophagus"],
+    "a": 1,
+    "e": "Enteric coating prevents the tablet from dissolving in the acidic environment of the stomach. [cite: 406]",
+    "cat": "technical",
+    "sub": "pharmaceutics"
+  },
+  {
+    "q": "What is the role of a 'Humectant' in topical preparations like creams? / क्रीम जैसे टॉपीकल प्रिपरेशंस में 'ह्यूमेक्टेंट' (Humectant) की क्या भूमिका है?",
+    "o": ["To add color", "To prevent drying out of the product | उत्पाद को सूखने से रोकना", "To kill bacteria", "To increase size"],
+    "a": 1,
+    "e": "Humectants like glycerin retain moisture in the formulation. [cite: 406]",
+    "cat": "technical",
+    "sub": "pharmaceutics"
+  },
+  {
+    "q": "A 'Toxoid' is used to provide: / 'टॉक्सोइड' (Toxoid) का उपयोग क्या प्रदान करने के लिए किया जाता है?",
+    "o": ["Passive immunity", "Active immunity against toxins | विषाक्त पदार्थों के खिलाफ सक्रिय प्रतिरक्षा", "Immediate cure", "Nutritional aid"],
+    "a": 1,
+    "e": "Toxoids are inactivated toxins used as vaccines to stimulate the immune system. [cite: 406]",
+    "cat": "technical",
+    "sub": "pharmaceutics"
+  },
+  {
+    "q": "In pharmaceutical plants, 'Quality Control' (QC) primarily focuses on: / फार्मास्युटिकल संयंत्रों में, 'क्वालिटी कंट्रोल' (QC) मुख्य रूप से किस पर ध्यान केंद्रित करता है?",
+    "o": ["Selling products", "Testing of raw materials and finished products | परीक्षण", "Designing the building", "Hiring staff"],
+    "a": 1,
+    "e": "QC involves the sampling, specifications, and testing of materials to ensure quality. [cite: 406]",
+    "cat": "technical",
+    "sub": "pharmaceutics"
+  },
+  {
+    "q": "Which NDDS provides drug release at a constant rate over a long period? / कौन सा NDDS लंबे समय तक एक स्थिर दर पर दवा रिलीज प्रदान करता है?",
+    "o": ["Fast dissolving tablet", "Sustained-release / Extended-release | सस्टेंड-रिलीज", "Simple syrup", "Effervescent powder"],
+    "a": 1,
+    "e": "Modified release tablets reduce the frequency of dosing and maintain steady drug levels. [cite: 406]",
+    "cat": "technical",
+    "sub": "pharmaceutics"
+  },
+  {
+    "q": "The term 'Sera' (Antisera) contains: / 'सीरा' (Antisera) में क्या होता है?",
+    "o": ["Antigens", "Antibodies | एंटीबॉडीज", "Live bacteria", "Sugar"],
+    "a": 1,
+    "e": "Antisera provide immediate passive immunity by delivering pre-formed antibodies. [cite: 406]",
+    "cat": "technical",
+    "sub": "pharmaceutics"
+  },
+  {
+    "q": "Which formulation is specifically used for 'Insufflations'? / कौन सा फॉर्मूलेशन विशेष रूप से 'इनसफ्लेशन' (Insufflations) के लिए उपयोग किया जाता है?",
+    "o": ["Injectables", "Medicated powders blown into body cavities | पाउडर", "Syrups", "Ointments"],
+    "a": 1,
+    "e": "Insufflations are finely divided powders introduced into cavities like the nose or throat. [cite: 406]",
+    "cat": "technical",
+    "sub": "pharmaceutics"
+  },
+  {
+    "q": "Which mill is based on the principle of both 'Impact and Attrition'? / कौन सी मिल 'इम्पैक्ट और एट्रिशन' दोनों के सिद्धांत पर आधारित है?",
+    "o": ["Hammer Mill", "Ball Mill | बॉल मिल (Ball Mill)", "Cutter Mill", "Roller Mill"],
+    "a": 1,
+    "e": "Ball mill uses both impact (falling balls) and attrition (grinding between balls) for size reduction. [cite: 405]",
+    "cat": "technical",
+    "sub": "pharmaceutics"
+  },
+  {
+    "q": "Which equipment works on the principle of 'Centrifugal Force' for size separation? / साइज सेपरेशन के लिए कौन सा उपकरण 'सेंट्रीफ्यूगल फोर्स' के सिद्धांत पर कार्य करता है?",
+    "o": ["Sieve Shaker", "Cyclone Separator | साइक्लोन सेपरेटर", "Vibrating Sieve", "Hammer Mill"],
+    "a": 1,
+    "e": "Cyclone separators use centrifugal force to separate solid particles from gases. [cite: 405]",
+    "cat": "technical",
+    "sub": "pharmaceutics"
+  },
+  {
+    "q": "What is the main disadvantage of 'Plastic' as a packaging material? / पैकेजिंग सामग्री के रूप में 'प्लास्टिक' का मुख्य नुकसान क्या है?",
+    "o": ["Fragility", "Leaching and Sorption | लीचिंग और सोरप्शन", "Heavy weight", "High cost"],
+    "a": 1,
+    "e": "Plastics may interact with the formulation through leaching or absorbing the drug components. [cite: 405]",
+    "cat": "technical",
+    "sub": "pharmaceutics"
+  },
+  {
+    "q": "Which type of mixing equipment is used for 'Triple Roller Mill'? / 'ट्रिपल रोलर मिल' का उपयोग किस प्रकार के मिश्रण के लिए किया जाता है?",
+    "o": ["Dry powder mixing", "Ointments and Creams | मलहम और क्रीम", "Syrup mixing", "Gas mixing"],
+    "a": 1,
+    "e": "Triple roller mill is used for the homogenization and mixing of semi-solids like ointments. [cite: 406]",
+    "cat": "technical",
+    "sub": "pharmaceutics"
+  },
+  {
+    "q": "The 'Fluidized Bed Dryer' (FBD) works on the principle of: / 'फ्लूइडाइज्ड बेड ड्रायर' (FBD) किस सिद्धांत पर कार्य करता है?",
+    "o": ["Conduction", "Convection (Fluidization) | संवहन (फ्लूइडाइजेशन)", "Radiation", "Sublimation"],
+    "a": 1,
+    "e": "FBD ensures rapid drying by suspending particles in a high-velocity hot air stream. [cite: 406]",
+    "cat": "technical",
+    "sub": "pharmaceutics"
+  },
+  {
+    "q": "Which glass type is suitable for non-parenteral use only? / कौन सा कांच केवल गैर-पैरेंट्रल (non-parenteral) उपयोग के लिए उपयुक्त है?",
+    "o": ["Type I", "Type NP Glass | टाइप एनपी (NP) ग्लास", "Type II", "Type III"],
+    "a": 1,
+    "e": "Type NP (Non-Parenteral) glass is used for oral or topical formulations. [cite: 405]",
+    "cat": "technical",
+    "sub": "pharmaceutics"
+  },
+  {
+    "q": "Size reduction is also known as: / 'साइज रिडक्शन' (Size reduction) को और किस नाम से जाना जाता है?",
+    "o": ["Comminution | कॉमिन्यूशन", "Clarification", "Elutriation", "Trituration"],
+    "a": 0,
+    "e": "Comminution is the generic term for reducing the particle size of a solid substance. [cite: 405]",
+    "cat": "technical",
+    "sub": "pharmaceutics"
+  },
+  {
+    "q": "Which filter is used to remove bacteria and achieve sterilization? / बैक्टीरिया को हटाने और स्टरलाइजेशन प्राप्त करने के लिए किस फिल्टर का उपयोग किया जाता है?",
+    "o": ["Filter press", "Membrane filter (0.22 micron) | मेम्ब्रेन फिल्टर", "Cotton wool", "Glass wool"],
+    "a": 1,
+    "e": "Membrane filters with specific pore sizes are used for sterile filtration of heat-sensitive liquids. [cite: 406]",
+    "cat": "technical",
+    "sub": "pharmaceutics"
+  },
+  {
+    "q": "The process of 'Maceration' is a type of: / 'मैसरेशन' (Maceration) की प्रक्रिया एक प्रकार की है:",
+    "o": ["Drying", "Extraction | निष्कर्षण", "Mixing", "Filtration"],
+    "a": 1,
+    "e": "Maceration is a method of extraction where the drug is soaked in a menstruum. [cite: 406]",
+    "cat": "technical",
+    "sub": "pharmaceutics"
+  },
+  {
+    "q": "In packaging, 'Elastomeric closures' refers to: / पैकेजिंग में, 'इलास्टोमेरिक क्लोजर' का तात्पर्य है:",
+    "o": ["Glass bottles", "Rubber stoppers | रबर स्टॉपर्स", "Metal caps", "Plastic bags"],
+    "a": 1,
+    "e": "Rubber is used as an elastomeric closure for vials and IV bottles. [cite: 405]",
+    "cat": "technical",
+    "sub": "pharmaceutics"
+  },
+  {
+    "q": "Which dosage form is intended for placement into the rectum? / कौन सा डोजेज फॉर्म मलाशय (Rectum) में रखने के लिए है?",
+    "o": ["Tablets", "Suppositories | सपोसिटरीज़ (Suppositories)", "Capsules", "Elixirs"],
+    "a": 1,
+    "e": "Suppositories and pessaries are topical/systemic preparations for body cavities[cite: 406].",
+    "cat": "technical",
+    "sub": "pharmaceutics"
+  },
+  {
+    "q": "Hard gelatin capsules are used to fill: / हार्ड जिलेटिन कैप्सूल का उपयोग किसे भरने के लिए किया जाता है?",
+    "o": ["Oils", "Dry powders or granules | सूखा पाउडर या दाने", "Liquids", "Creams"],
+    "a": 1,
+    "e": "Hard gelatine capsules consist of two parts, a body and a cap, used for solids[cite: 406].",
+    "cat": "technical",
+    "sub": "pharmaceutics"
+  },
+  {
+    "q": "A 'Syrup' is a concentrated aqueous solution of: / 'सिरप' किसका केंद्रित जलीय घोल है?",
+    "o": ["Alcohol", "Sucrose | सुक्रोज (चीनी)", "Oil", "Salt"],
+    "a": 1,
+    "e": "Syrups are sweet, viscous liquid oral preparations[cite: 406].",
+    "cat": "technical",
+    "sub": "pharmaceutics"
+  },
+  {
+    "q": "Which of these is a 'Biphasic' liquid dosage form? / इनमें से कौन सा 'द्वि-चरणीय' (Biphasic) तरल डोजेज फॉर्म है?",
+    "o": ["Solution", "Emulsion | इमल्शन (Emulsion)", "Syrup", "Elixir"],
+    "a": 1,
+    "e": "Emulsions and suspensions consist of two phases (oil/water or solid/liquid)[cite: 406].",
+    "cat": "technical",
+    "sub": "pharmaceutics"
+  },
+  {
+    "q": "Sterile formulations include: / स्टेराइल फॉर्मूलेशन (Sterile formulations) में शामिल हैं:",
+    "o": ["Syrups", "Injectables and Eye drops | इंजेक्शन और आई ड्रॉप", "Pastes", "Powders"],
+    "a": 1,
+    "e": "Sterile products must be free from any viable microorganisms[cite: 406].",
+    "cat": "technical",
+    "sub": "pharmaceutics"
+  },
+  {
+    "q": "The term 'cGMP' stands for: / 'cGMP' शब्द का अर्थ है:",
+    "o": ["Current Good Manufacturing Practices | वर्तमान अच्छी निर्माण प्रक्रियाएं", "Common General Medical Practices", "Clinical Good Management Process", "none"],
+    "a": 0,
+    "e": "cGMP ensures that products are consistently produced according to quality standards[cite: 406].",
+    "cat": "technical",
+    "sub": "pharmaceutics"
+  },
+  {
+    "q": "Which of the following is a 'Novel Drug Delivery System' (NDDS)? / निम्नलिखित में से कौन सा 'नोवल ड्रग डिलीवरी सिस्टम' (NDDS) है?",
+    "o": ["Conventional Tablet", "Liposomes | लिपोसोम्स", "Simple Ointment", "Syrup"],
+    "a": 1,
+    "e": "NDDS aims to deliver drugs more effectively with fewer side effects[cite: 406].",
+    "cat": "technical",
+    "sub": "pharmaceutics"
+  },
+  {
+    "q": "What is 'Validation' in pharmaceutical industry? / फार्मास्युटिकल उद्योग में 'वैलिडेशन' (Validation) क्या है?",
+    "o": ["Testing a sample", "Documented evidence of consistency | निरंतरता का दस्तावेजी प्रमाण", "Cleaning the lab", "Selling drugs"],
+    "a": 1,
+    "e": "Validation provides high degree of assurance that a process will consistently produce the desired result[cite: 406].",
+    "cat": "technical",
+    "sub": "pharmaceutics"
+  },
+  {
+    "q": "Sera and Vaccines are examples of: / सीरा और वैक्सीन किसके उदाहरण हैं?",
+    "o": ["Chemical aids", "Immunological products | इम्यूनोलॉजिकल उत्पाद", "Cosmetics", "Unit operations"],
+    "a": 1,
+    "e": "These products are used to induce or provide immunity against diseases[cite: 406].",
+    "cat": "technical",
+    "sub": "pharmaceutics"
+  },
+  {
+    "q": "BCG vaccine is used to provide protection against: / BCG वैक्सीन का उपयोग किसके खिलाफ सुरक्षा प्रदान करने के लिए किया जाता है?",
+    "o": ["Polio", "Tuberculosis | तपेदिक (TB)", "Measles", "Covid"],
+    "a": 1,
+    "e": "BCG is a toxoid/vaccine preparation as per manufacturing methods discussed in syllabus[cite: 406].",
+    "cat": "technical",
+    "sub": "pharmaceutics"
+  },
+  {
+    "q": "The process of 'Size Reduction' using a Hammer Mill works on the principle of: / हैमर मिल का उपयोग करके 'साइज रिडक्शन' की प्रक्रिया किस सिद्धांत पर कार्य करती है?",
+    "o": ["Attrition", "Impact | इम्पैक्ट (प्रभाव)", "Compression", "Cutting"],
+    "a": 1,
+    "e": "Hammer mill reduces size by impact through rapidly moving hammers[cite: 405].",
+    "cat": "technical",
+    "sub": "pharmaceutics"
+  },
+  {
+    "q": "Which equipment is used for the process of 'Freeze Drying'? / 'फ्रीज सुखाने' (Freeze Drying) की प्रक्रिया के लिए किस उपकरण का उपयोग किया जाता है?",
+    "o": ["Fluidized bed dryer", "Lyophilizer | लायोफिलाइज़र", "Tray dryer", "Drum dryer"],
+    "a": 1,
+    "e": "Freeze drying or Lyophilization is used for heat-sensitive materials like vaccines[cite: 406].",
+    "cat": "technical",
+    "sub": "pharmaceutics"
+  },
+  {
+    "q": "What is the primary function of 'Preservatives' in a formulation? / एक फॉर्मूलेशन में 'प्रिजर्वेटिव' का प्राथमिक कार्य क्या है?",
+    "o": ["To add color", "To prevent microbial growth | माइक्रोबियल विकास को रोकना", "To sweeten the syrup", "To reduce size"],
+    "a": 1,
+    "e": "Preservatives are added to multi-dose containers to maintain sterility[cite: 405].",
+    "cat": "technical",
+    "sub": "pharmaceutics"
+  },
+  {
+    "q": "According to IP, 'Sieve No. 10' represents: / IP के अनुसार, 'सीव नंबर 10' (Sieve No. 10) दर्शाता है:",
+    "o": ["Coarse powder | मोटे पाउडर", "Fine powder", "Moderately fine", "Very fine"],
+    "a": 0,
+    "e": "Sieve numbers define the classification of powders according to standards[cite: 405].",
+    "cat": "technical",
+    "sub": "pharmaceutics"
+  },
+  {
+    "q": "Which of the following is an 'Organoleptic Agent'? / निम्नलिखित में से कौन सा एक 'ऑर्गेनोलेप्टिक एजेंट' है?",
+    "o": ["Preservative", "Sweetening agent | मिठास देने वाला एजेंट", "Diluent", "Binder"],
+    "a": 1,
+    "e": "Organoleptic agents improve the appearance and taste of the medicine[cite: 405].",
+    "cat": "technical",
+    "sub": "pharmaceutics"
+  },
+  {
+    "q": "Filtration using a 'Sintered Glass Filter' is best for: / 'सिंटर्ड ग्लास फ़िल्टर' का उपयोग करके निस्पंदन सबसे अच्छा है:",
+    "o": ["Large volumes", "Corrosive liquids and small volumes | संक्षारक तरल पदार्थ", "Syrups", "Ointments"],
+    "a": 1,
+    "e": "Sintered glass filters are chemical resistant and do not shed fibers[cite: 406].",
+    "cat": "technical",
+    "sub": "pharmaceutics"
+  },
+  {
+    "q": "In extraction, the solvent used is often referred to as: / निष्कर्षण (Extraction) में उपयोग किए जाने वाले विलायक को अक्सर कहा जाता है:",
+    "o": ["Marc", "Menstruum | मेन्स्ट्रम (Menstruum)", "Solute", "Extract"],
+    "a": 1,
+    "e": "Menstruum is the solvent, while Marc is the exhausted drug residue[cite: 406].",
+    "cat": "technical",
+    "sub": "pharmaceutics"
+  }
+]
