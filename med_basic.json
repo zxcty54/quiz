@@ -1,1 +1,1284 @@
 
+[
+  {
+    "q": "Which of the following is a classic example of a 'Papulosquamous' disease? / निम्नलिखित में से कौन सा 'पैप्युलोस्क्वैमस' रोग का एक क्लासिक उदाहरण है?",
+    "o": ["Pemphigus Vulgaris", "Psoriasis | सोरायसिस", "Cellulitis", "Melanoma"],
+    "a": 1,
+    "e": "Papulosquamous diseases like Psoriasis and Lichen Planus are characterized by papules and scales.",
+    "cat": "technical",
+    "sub": "dermatology"
+  },
+  {
+    "q": "What is the hallmark clinical feature of 'Vesiculo-bullous' disorders? / 'वेसिकुलो-बुलस' विकारों की प्रमुख नैदानिक विशेषता क्या है?",
+    "o": ["Dry skin", "Formation of blisters and bullae | फफोले और छाले बनना", "Loss of hair", "None"],
+    "a": 1,
+    "e": "These disorders, such as Pemphigus, involve the formation of fluid-filled lesions within or below the epidermis.",
+    "cat": "technical",
+    "sub": "dermatology"
+  },
+  {
+    "q": "Which condition is a disorder of 'Melanocytes' leading to white patches? / मेलानोसाइट्स का कौन सा विकार सफेद धब्बों का कारण बनता है?",
+    "o": ["Albinism", "Vitiligo | विटिलिगो (Vitiligo)", "Melasma", "Lentigo"],
+    "a": 1,
+    "e": "Vitiligo is an autoimmune destruction of melanocytes resulting in depigmented skin patches.",
+    "cat": "technical",
+    "sub": "dermatology"
+  },
+  
+  {
+    "q": "What is the priority intervention for a child in 'Status Epilepticus'? / 'स्टेटस एपिलेप्टिकस' में बच्चे के लिए प्राथमिकता हस्तक्षेप क्या है?",
+    "o": ["Oral medicine", "Ensuring airway and giving Benzodiazepines (e.g., Diazepam) | एयरवे और दवा", "Giving water", "Physical exercise"],
+    "a": 1,
+    "e": "Status epilepticus is a medical emergency; maintaining a clear airway and stopping the seizure is vital.",
+    "cat": "technical",
+    "sub": "paediatrics"
+  },
+  {
+    "q": "Which sign indicates 'Severe Dehydration' in a child with diarrhea? / दस्त वाले बच्चे में 'गंभीर निर्जलीकरण' का संकेत क्या है?",
+    "o": ["Moist tongue", "Sunken eyes and delayed skin pinch return | धँसी हुई आँखें", "Frequent crying", "None"],
+    "a": 1,
+    "e": "Severe dehydration shows clinical signs like loss of skin turgor, sunken fontanelle, and lethargy.",
+    "cat": "technical",
+    "sub": "paediatrics"
+  },
+  {
+    "q": "What is 'ADHD' characterized by? / 'ADHD' की विशेषता क्या है?",
+    "o": ["Sleepiness", "Inattention, hyperactivity, and impulsivity | ध्यान की कमी और अतिसक्रियता", "Quiet behavior", "None"],
+    "a": 1,
+    "e": "Attention-Deficit/Hyperactivity Disorder affects a child's ability to focus and control behavior.",
+    "cat": "technical",
+    "sub": "paediatrics"
+  },
+  {
+    "q": "Which infection is suspected when a child has 'Koplik spots' in the mouth? / जब बच्चे के मुँह में 'कोप्लिक स्पॉट्स' होते हैं तो किस संक्रमण का संदेह होता है?",
+    "o": ["Mumps", "Measles | खसरा (Measles)", "Chickenpox", "None"],
+    "a": 1,
+    "e": "Koplik spots are small white spots inside the cheek, a prodromal sign of Measles.",
+    "cat": "technical",
+    "sub": "paediatrics"
+  },
+  {
+    "q": "What is the hallmark of 'Shock' in a pediatric patient? / पीडियाट्रिक मरीज में 'शॉक' की प्रमुख विशेषता क्या है?",
+    "o": ["High BP", "Inadequate tissue perfusion (Low BP and cold limbs) | ऊतक छिड़काव में कमी", "Fast growth", "None"],
+    "a": 1,
+    "e": "Shock leads to poor oxygen delivery to tissues, often presenting with fast heart rate and weak pulses.",
+    "cat": "technical",
+    "sub": "paediatrics"
+  },
+  {
+    "q": "In pediatric basic life support, what is the 'Compression to Breath' ratio for a single rescuer? / बाल चिकित्सा बीएलएस में, एकल बचावकर्ता के लिए 'संपीड़न से सांस' का अनुपात क्या है?",
+    "o": ["15:2", "30:2 | 30:2", "5:1", "10:2"],
+    "a": 1,
+    "e": "For a single rescuer, 30 chest compressions followed by 2 breaths is the standard ratio.",
+    "cat": "technical",
+    "sub": "paediatrics"
+  },
+  {
+    "q": "What is 'Pertussis' also known as? / 'पर्टुसिस' (Pertussis) को और किस नाम से जाना जाता है?",
+    "o": ["Common cold", "Whooping Cough | काली खांसी (Whooping Cough)", "Flu", "None"],
+    "a": 1,
+    "e": "It is a highly contagious respiratory infection characterized by a severe 'whooping' cough.",
+    "cat": "technical",
+    "sub": "paediatrics"
+  },
+  {
+    "q": "Which behavior is a typical sign of 'Separation Anxiety Disorder'? / 'पृथक्करण चिंता विकार' का विशिष्ट लक्षण क्या है?",
+    "o": ["Enjoying new places", "Excessive distress when away from home or caregivers | देखभाल करने वालों से दूर होने पर तनाव", "Talking to strangers", "None"],
+    "a": 1,
+    "e": "It is normal at a certain age but becomes a disorder if it is excessive and interferes with daily life.",
+    "cat": "technical",
+    "sub": "paediatrics"
+  },
+  {
+    "q": "What is the emergency management for a 'Foreign Body Aspiration' (choking) in an infant? / एक शिशु में 'विदेशी वस्तु एस्पिरेशन' (दम घुटना) के लिए आपातकालीन प्रबंधन क्या है?",
+    "o": ["Abdominal thrusts", "Back blows and chest thrusts | बैक ब्लो और चेस्ट थ्रस्ट", "Drinking water", "None"],
+    "a": 1,
+    "e": "Abdominal thrusts (Heimlich) are not used in infants; instead, back slaps and chest compressions are performed.",
+    "cat": "technical",
+    "sub": "paediatrics"
+  },
+  {
+    "q": "Which electrolyte imbalance is common in a child with severe vomiting? / गंभीर उल्टी वाले बच्चे में कौन सा इलेक्ट्रोलाइट असंतुलन आम है?",
+    "o": ["Hypernatremia", "Hypokalemia and Metabolic Alkalosis | हाइपोकैलिमिया", "Low blood sugar", "None"],
+    "a": 1,
+    "e": "Loss of stomach acid (HCl) and fluids leads to low potassium and high blood pH.",
+    "cat": "technical",
+    "sub": "paediatrics"
+  },
+  {
+    "q": "Which sign is a clinical indicator of 'Pyloric Stenosis' in an infant? / एक शिशु में 'पायलोरिक स्टेनोसिस' का नैदानिक संकेतक कौन सा है?",
+    "o": ["Diarrhea", "Projectile vomiting and olive-shaped mass | प्रोजेक्टाइल उल्टी", "Constipation", "None"],
+    "a": 1,
+    "e": "Hypertrophic pyloric stenosis causes forceful vomiting and a palpable mass in the upper abdomen.",
+    "cat": "technical",
+    "sub": "paediatrics"
+  },
+  {
+    "q": "What is the most common childhood 'Malignancy'? / बच्चों में सबसे आम 'घातक रोग' (Malignancy) कौन सा है?",
+    "o": ["Osteosarcoma", "Acute Lymphoblastic Leukemia (ALL) | एएलएल (ALL)", "Lymphoma", "Neuroblastoma"],
+    "a": 1,
+    "e": "ALL is the most frequent cancer in children, affecting white blood cells in the bone marrow.",
+    "cat": "technical",
+    "sub": "paediatrics"
+  },
+  {
+    "q": "Which condition is characterized by 'painless hematuria' and a large abdominal mass in children? / बच्चों में 'दर्द रहित हेमट्यूरिया' और पेट में बड़े द्रव्यमान की विशेषता क्या है?",
+    "o": ["Appendicitis", "Wilms Tumor (Nephroblastoma) | विल्म्स ट्यूमर", "Hernia", "None"],
+    "a": 1,
+    "e": "Wilms tumor is a common kidney cancer in young children that usually presents as a firm, non-tender mass.",
+    "cat": "technical",
+    "sub": "paediatrics"
+  },
+  {
+    "q": "What is the hallmark of 'Cystic Fibrosis' in the gastrointestinal system? / गैस्ट्रोइंटेस्टाइनल सिस्टम में 'सिस्टिक फाइब्रोसिस' की प्रमुख विशेषता क्या है?",
+    "o": ["Fast digestion", "Steatorrhea (Fatty stools) | स्टीटोरिया (वसायुक्त मल)", "Increased appetite", "None"],
+    "a": 1,
+    "e": "Thick mucus blocks pancreatic ducts, leading to malabsorption of fats and smelly, greasy stools.",
+    "cat": "technical",
+    "sub": "paediatrics"
+  },
+  {
+    "q": "Which type of 'Anemia' is caused by the premature destruction of RBCs? / आरबीसी के समय से पहले विनाश के कारण कौन सा 'एनीमिया' होता है?",
+    "o": ["Iron deficiency anemia", "Hemolytic Anemia | हेमोलिटिक एनीमिया", "Aplastic anemia", "None"],
+    "a": 1,
+    "e": "Hemolytic anemia occurs when the rate of RBC destruction exceeds the rate of production.",
+    "cat": "technical",
+    "sub": "paediatrics"
+  },
+  {
+    "q": "What is 'Cerebral Palsy' primarily? / 'सेरेब्रल पाल्सी' (Cerebral Palsy) मुख्य रूप से क्या है?",
+    "o": ["Muscle infection", "A group of permanent disorders of movement and posture | स्थायी आंदोलन विकार", "Progressive brain decay", "None"],
+    "a": 1,
+    "e": "It is caused by non-progressive damage to the developing brain before or during birth.",
+    "cat": "technical",
+    "sub": "paediatrics"
+  },
+  {
+    "q": "Which hormone is deficient in 'Diabetes Insipidus'? / 'डायबिटीज इंसिपिडस' में किस हार्मोन की कमी होती है?",
+    "o": ["Insulin", "Antidiuretic Hormone (ADH) | एडीएच (ADH)", "Growth hormone", "Thyroxine"],
+    "a": 1,
+    "e": "Lack of ADH leads to the inability of kidneys to conserve water, causing excessive urination and thirst.",
+    "cat": "technical",
+    "sub": "paediatrics"
+  },
+  {
+    "q": "What is 'Talipes Equinovarus' commonly known as? / 'टैलिप्स इक्विनोवेरस' को आमतौर पर किस नाम से जाना जाता है?",
+    "o": ["Flat foot", "Clubfoot | क्लबफुट (Clubfoot)", "Hip dislocation", "None"],
+    "a": 1,
+    "e": "Clubfoot is a congenital deformity where the infant's foot is turned inward and downward.",
+    "cat": "technical",
+    "sub": "paediatrics"
+  },
+  {
+    "q": "The 'Sweat Chloride Test' is the diagnostic gold standard for: / 'स्वेट क्लोराइड टेस्ट' किसके लिए डायग्नोस्टिक गोल्ड स्टैंडर्ड है?",
+    "o": ["Diabetes", "Cystic Fibrosis | सिस्टिक फाइब्रोसिस", "Tuberculosis", "None"],
+    "a": 1,
+    "e": "High levels of chloride in sweat are a definitive indicator of Cystic Fibrosis.",
+    "cat": "technical",
+    "sub": "paediatrics"
+  },
+  {
+    "q": "What is 'Thalassemia'? / 'थैलेसीमिया' (Thalassemia) क्या है?",
+    "o": ["Infection of blood", "Genetic disorder of hemoglobin synthesis | हीमोग्लोबिन संश्लेषण का आनुवंशिक विकार", "Shortness of breath only", "None"],
+    "a": 1,
+    "e": "It leads to the production of abnormal hemoglobin, causing chronic anemia and requiring frequent transfusions.",
+    "cat": "technical",
+    "sub": "paediatrics"
+  },
+  {
+    "q": "What is the most common cause of 'Acute Diarrhea' in children? / बच्चों में 'तीव्र दस्त' का सबसे आम कारण क्या है?",
+    "o": ["Bacteria", "Rotavirus | रोटावायरस", "Fungus", "None"],
+    "a": 1,
+    "e": "Rotavirus is the leading cause of severe dehydrating diarrhea in infants and young children worldwide.",
+    "cat": "technical",
+    "sub": "paediatrics"
+  },
+  {
+    "q": "What is 'Intussusception'? / 'इंटुसुसेप्शन' (Intussusception) क्या है?",
+    "o": ["Stomach ulcer", "Telescoping of one part of the intestine into another | आंत का एक हिस्सा दूसरे में समा जाना", "Liver failure", "None"],
+    "a": 1,
+    "e": "It is a medical emergency that can cause bowel obstruction and is common in infants.",
+    "cat": "technical",
+    "sub": "paediatrics"
+  },
+  {
+    "q": "Which clinical sign is characteristic of 'Nephrotic Syndrome' in children? / बच्चों में 'नेफ्रोटिक सिंड्रोम' का विशिष्ट नैदानिक लक्षण क्या है?",
+    "o": ["High fever", "Generalized edema (Puffiness) and Proteinuria | सूजन और प्रोटीनुरिया", "Fast heart rate", "None"],
+    "a": 1,
+    "e": "Heavy loss of protein in urine leads to fluid shifts and significant swelling, often starting around the eyes.",
+    "cat": "technical",
+    "sub": "paediatrics"
+  },
+  {
+    "q": "What is the 'Gold Standard' for diagnosing 'Hirschsprung Disease'? / 'हिर्शsprung रोग' के निदान के लिए 'गोल्ड स्टैंडर्ड' क्या है?",
+    "o": ["X-ray", "Rectal biopsy | मलाशय बायोप्सी", "Blood test", "Ultrasound"],
+    "a": 1,
+    "e": "Biopsy confirms the absence of ganglion cells in the distal bowel, which is the hallmark of the disease.",
+    "cat": "technical",
+    "sub": "paediatrics"
+  },
+  {
+    "q": "Which neurologic disorder involves 'recurrent unprovoked seizures'? / किस न्यूरोलॉजिकल विकार में 'बार-बार होने वाले अकारण दौरे' शामिल हैं?",
+    "o": ["Meningitis", "Epilepsy | मिर्गी (Epilepsy)", "Cerebral Palsy", "None"],
+    "a": 1,
+    "e": "Epilepsy is diagnosed when a child has repeated seizures not caused by an immediate trigger like fever.",
+    "cat": "technical",
+    "sub": "paediatrics"
+  },
+  {
+    "q": "What is the primary treatment for 'Febrile Seizures'? / 'फेब्राइल सीजर' (बुखार वाले दौरे) का प्राथमिक उपचार क्या है?",
+    "o": ["Long-term antiepileptics", "Controlling fever and parental reassurance | बुखार पर नियंत्रण", "Brain surgery", "None"],
+    "a": 1,
+    "e": "Most febrile seizures are benign and occur due to rapid rise in body temperature in young children.",
+    "cat": "technical",
+    "sub": "paediatrics"
+  },
+  {
+    "q": "Which sign is a characteristic of 'Autism Spectrum Disorder' (ASD)? / 'ऑटिज़्म स्पेक्ट्रम डिसऑर्डर' (ASD) की विशेषता क्या है?",
+    "o": ["Excessive talking", "Impaired social communication and repetitive behaviors | सामाजिक संचार में कमी", "High physical activity", "None"],
+    "a": 1,
+    "e": "Children with ASD often have difficulty with social interactions and restricted, repetitive patterns of interest.",
+    "cat": "technical",
+    "sub": "paediatrics"
+  },
+  {
+    "q": "What is the focus of 'Neonatal Resuscitation'? / 'नवजात पुनर्जीवन' (Neonatal Resuscitation) का केंद्र क्या है?",
+    "o": ["Giving medicine", "Establishing effective ventilation | प्रभावी वेंटिलेशन स्थापित करना", "Heart massage only", "None"],
+    "a": 1,
+    "e": "In newborns, clearing the airway and supporting breathing is the most critical step in resuscitation.",
+    "cat": "technical",
+    "sub": "paediatrics"
+  },
+  {
+    "q": "What is 'Croup' (Laryngotracheobronchitis) characterized by? / 'क्रुप' (Croup) की विशेषता क्या है?",
+    "o": ["Productive cough", "Barking cough and inspiratory stridor | भौंकने जैसी खांसी", "Wheezing only", "None"],
+    "a": 1,
+    "e": "It is a viral infection causing swelling around the vocal cords, leading to a distinctive cough.",
+    "cat": "technical",
+    "sub": "paediatrics"
+  },
+  {
+    "q": "Which emergency condition is suspected in a child with 'sudden onset high fever and drooling'? / 'अचानक तेज बुखार और लार टपकने' वाले बच्चे में किस आपातकालीन स्थिति का संदेह होता है?",
+    "o": ["Asthma", "Acute Epiglottitis | एक्यूट एपिग्लॉटिटिस", "Common cold", "None"],
+    "a": 1,
+    "e": "Epiglottitis is a life-threatening airway emergency; drooling occurs because swallowing is too painful.",
+    "cat": "technical",
+    "sub": "paediatrics"
+  },
+  {
+    "q": "What is the 'Cephalocaudal' principle of growth? / वृद्धि का 'सेफालोकाउडल' (Cephalocaudal) सिद्धांत क्या है?",
+    "o": ["Growth from center to periphery", "Growth from head to toe | सिर से पैर की ओर विकास", "Growth from feet to head", "None"],
+    "a": 1,
+    "e": "Development proceeds from the head downwards to the lower parts of the body.",
+    "cat": "technical",
+    "sub": "paediatrics"
+  },
+  {
+    "q": "What is the hallmark of 'Neonatal Respiratory Distress Syndrome' (RDS)? / 'नियोनेटल रेस्पिरेटरी डिस्ट्रेस सिंड्रोम' (RDS) की प्रमुख विशेषता क्या है?",
+    "o": ["Excessive mucus", "Surfactant deficiency in preterm infants | सरफैक्टेंट की कमी", "High fever", "None"],
+    "a": 1,
+    "e": "RDS occurs primarily in premature babies whose lungs haven't yet produced enough surfactant to stay open.",
+    "cat": "technical",
+    "sub": "paediatrics"
+  },
+  {
+    "q": "At what age does a child usually start 'social smiling'? / बच्चा आमतौर पर किस उम्र में 'सोशल स्माइलिंग' शुरू करता है?",
+    "o": ["Birth", "2 months | 2 महीने", "6 months", "1 year"],
+    "a": 1,
+    "e": "Social smiling is a key developmental milestone occurring around 6-8 weeks of age.",
+    "cat": "technical",
+    "sub": "paediatrics"
+  },
+  {
+    "q": "What is the primary treatment for 'Phototherapy' in neonates? / नवजात शिशुओं में 'फोटोथेरेपी' का प्राथमिक उद्देश्य क्या है?",
+    "o": ["To treat cold", "To reduce unconjugated bilirubin in Jaundice | पीलिया में बिलीरुबिन कम करना", "To increase weight", "None"],
+    "a": 1,
+    "e": "Phototherapy helps break down bilirubin in the skin so it can be excreted, preventing brain damage (kernicterus).",
+    "cat": "technical",
+    "sub": "paediatrics"
+  },
+  {
+    "q": "Which vitamin is administered at birth to prevent 'Hemorrhagic disease of the newborn'? / नवजात के रक्तस्रावी रोग को रोकने के लिए जन्म के समय कौन सा विटामिन दिया जाता है?",
+    "o": ["Vitamin A", "Vitamin K | विटामिन K", "Vitamin C", "Vitamin D"],
+    "a": 1,
+    "e": "Newborns have low Vitamin K stores; an injection is vital for blood clotting factors.",
+    "cat": "technical",
+    "sub": "paediatrics"
+  },
+  {
+    "q": "What is the 'APGAR' score used for? / 'APGAR' स्कोर का उपयोग किसके लिए किया जाता है?",
+    "o": ["Assessing intelligence", "Immediate clinical assessment of newborn at birth | जन्म के समय तत्काल मूल्यांकन", "Growth tracking", "None"],
+    "a": 1,
+    "e": "APGAR assesses heart rate, respiration, muscle tone, reflex irritability, and color at 1 and 5 minutes after birth.",
+    "cat": "technical",
+    "sub": "paediatrics"
+  },
+  {
+    "q": "Exclusive breastfeeding is recommended for the first: / विशेष स्तनपान की सिफारिश पहले कितने समय के लिए की जाती है?",
+    "o": ["3 months", "6 months | 6 महीने", "1 year", "2 years"],
+    "a": 1,
+    "e": "WHO recommends only breast milk for the first 6 months for optimal growth and immunity.",
+    "cat": "technical",
+    "sub": "paediatrics"
+  },
+  {
+    "q": "What is the sign of 'Severe Acute Malnutrition' (SAM) in children? / बच्चों में 'गंभीर तीव्र कुपोषण' (SAM) का संकेत क्या है?",
+    "o": ["Mid-upper arm circumference (MUAC) <11.5 cm | एमयूएसी <11.5 सेमी", "Height >100 cm", "Fast running", "None"],
+    "a": 0,
+    "e": "MUAC is a quick screening tool for malnutrition; a value below 11.5 cm indicates SAM.",
+    "cat": "technical",
+    "sub": "paediatrics"
+  },
+  {
+    "q": "Which congenital heart defect is most common in children? / बच्चों में सबसे आम जन्मजात हृदय दोष कौन सा है?",
+    "o": ["ASD", "Ventricular Septal Defect (VSD) | वेंट्रिकुलर सेप्टल डिफेक्ट", "TOF", "None"],
+    "a": 1,
+    "e": "VSD is a hole in the wall separating the two lower chambers of the heart.",
+    "cat": "technical",
+    "sub": "paediatrics"
+  },
+  {
+    "q": "What is 'Complementary Feeding'? / 'पूरक आहार' (Complementary Feeding) क्या है?",
+    "o": ["Stopping breast milk", "Introducing solid foods along with breast milk after 6 months | 6 महीने बाद ठोस आहार देना", "Giving only water", "None"],
+    "a": 1,
+    "e": "It bridges the gap between the energy provided by breast milk and the child's increasing needs.",
+    "cat": "technical",
+    "sub": "paediatrics"
+  },
+  {
+    "q": "Which type of spinal fracture is commonly caused by vertical compression (e.g., falling from a height)? / ऊर्ध्वाधर संपीड़न (जैसे ऊंचाई से गिरना) के कारण आमतौर पर किस प्रकार का रीढ़ का फ्रैक्चर होता है?",
+    "o": ["Stress fracture", "Compression Fracture | कंप्रेशन फ्रैक्चर", "Spiral fracture", "None"],
+    "a": 1,
+    "e": "Compression fractures often occur in the thoracic or lumbar vertebrae.",
+    "cat": "technical",
+    "sub": "orthopedics"
+  },
+  {
+    "q": "What is the primary objective of 'Spinal Fixation' surgery? / 'स्पाइनल फिक्सेशन' सर्जरी का प्राथमिक उद्देश्य क्या है?",
+    "o": ["To increase flexibility", "To stabilize the spine and protect nerve roots | रीढ़ को स्थिर करना", "To reduce weight", "None"],
+    "a": 1,
+    "e": "Fixation uses rods, screws, or plates to hold vertebrae in place while they fuse together.",
+    "cat": "technical",
+    "sub": "orthopedics"
+  },
+  {
+    "q": "What is 'Cauda Equina Syndrome'? / 'कॉडा इक्विना सिंड्रोम' (Cauda Equina Syndrome) क्या है?",
+    "o": ["Shoulder pain", "Compression of lower spinal nerve roots (Emergency) | निचली रीढ़ की नसों का दबना", "Headache", "None"],
+    "a": 1,
+    "e": "It is a surgical emergency presenting with saddle anesthesia and loss of bowel/bladder control.",
+    "cat": "technical",
+    "sub": "orthopedics"
+  },
+  {
+    "q": "Which ligament injury is known as 'Skier's Thumb'? / किस लिगामेंट की चोट को 'स्कियर थंब' (Skier's Thumb) कहा जाता है?",
+    "o": ["ACL", "Ulnar Collateral Ligament (UCL) of the thumb | अंगूठे का यूसीएल", "MCL", "None"],
+    "a": 1,
+    "e": "It involves a tear of the UCL at the base of the thumb, often due to a fall while skiing.",
+    "cat": "technical",
+    "sub": "orthopedics"
+  },
+  {
+    "q": "What is the hallmark of 'Ankylosing Spondylitis' on X-ray? / एक्स-रे पर 'एंकिलॉजिंग स्पॉन्डिलाइटिस' की प्रमुख विशेषता क्या है?",
+    "o": ["Sunburst appearance", "Bamboo Spine | बैम्बू स्पाइन", "Bone cyst", "None"],
+    "a": 1,
+    "e": "Chronic inflammation leads to fusion of the vertebrae, giving it the appearance of a bamboo stalk.",
+    "cat": "technical",
+    "sub": "orthopedics"
+  },
+  {
+    "q": "Which surgery is performed for a 'Herniated Disc' to relieve nerve pressure? / तंत्रिका दबाव को कम करने के लिए 'हर्नियेटेड डिस्क' के लिए कौन सी सर्जरी की जाती है?",
+    "o": ["Arthroplasty", "Discectomy | डिस्केक्टॉमी", "Arthrodesis", "None"],
+    "a": 1,
+    "e": "Discectomy involves removing the damaged part of a spinal disc that is pressing on a nerve.",
+    "cat": "technical",
+    "sub": "orthopedics"
+  },
+  {
+    "q": "What is 'Scoliosis'? / 'स्कोलोसिस' (Scoliosis) क्या है?",
+    "o": ["Hunchback", "Abnormal lateral (side-to-side) curvature of the spine | रीढ़ का तिरछापन", "Normal posture", "None"],
+    "a": 1,
+    "e": "Scoliosis is a sideways curve of the spine that often develops just before puberty.",
+    "cat": "technical",
+    "sub": "orthopedics"
+  },
+  {
+    "q": "Which fixation device is used for 'Intertrochanteric' femur fractures? / 'इंटरट्रोकेन्टरिक' फीमर फ्रैक्चर के लिए किस फिक्सेशन डिवाइस का उपयोग किया जाता है?",
+    "o": ["K-wire", "Dynamic Hip Screw (DHS) | डायनेमिक हिप स्क्रू", "Cast", "None"],
+    "a": 1,
+    "e": "DHS allows for controlled collapse and compression at the fracture site, promoting healing.",
+    "cat": "technical",
+    "sub": "orthopedics"
+  },
+  {
+    "q": "What is 'Compartment Syndrome'? / 'कंपार्टमेंट सिंड्रोम' (Compartment Syndrome) क्या है?",
+    "o": ["Skin rash", "Increased pressure within a muscle compartment (Emergency) | मांसपेशियों में बढ़ता दबाव", "Common cold", "None"],
+    "a": 1,
+    "e": "It can lead to muscle and nerve death if not treated immediately with a fasciotomy.",
+    "cat": "technical",
+    "sub": "orthopedics"
+  },
+  {
+    "q": "What is the primary treatment for 'Carpal Tunnel Syndrome'? / 'कार्पल टनल सिंड्रोम' का प्राथमिक उपचार क्या है?",
+    "o": ["Walking", "Release of the transverse carpal ligament | कार्पल लिगामेंट रिलीज", "Ear drops", "None"],
+    "a": 1,
+    "e": "Surgery aims to relieve pressure on the median nerve by cutting the ligament that forms the roof of the tunnel.",
+    "cat": "technical",
+    "sub": "orthopedics"
+  },
+  {
+    "q": "Which organism is the most common cause of 'Acute Pyogenic Osteomyelitis'? / 'एक्यूट पायोजेनिक ऑस्टियोमाइलाइटिस' का सबसे आम कारण कौन सा जीव है?",
+    "o": ["Escherichia coli", "Staphylococcus aureus | स्टैफिलोकोकस ऑरियस", "Streptococcus", "Salmonella"],
+    "a": 1,
+    "e": "Staphylococcus aureus is responsible for the majority of bone infections in both children and adults.",
+    "cat": "technical",
+    "sub": "orthopedics"
+  },
+  {
+    "q": "What is 'Sequestrum' in the context of bone infection? / हड्डी के संक्रमण के संदर्भ में 'सेक्वेस्ट्रम' (Sequestrum) क्या है?",
+    "o": ["New bone formation", "A piece of dead bone separated from living tissue | मृत हड्डी का टुकड़ा", "Inflamed joint fluid", "None"],
+    "a": 1,
+    "e": "Sequestrum is dead bone that acts as a reservoir for bacteria, often seen in chronic osteomyelitis.",
+    "cat": "technical",
+    "sub": "orthopedics"
+  },
+  {
+    "q": "Which primary bone tumor is characterized by 'Codman's Triangle' on radiology? / रेडियोलॉजी पर 'कोडमैन्स ट्रायंगल' किस प्राथमिक हड्डी के ट्यूमर की विशेषता है?",
+    "o": ["Giant Cell Tumor", "Osteosarcoma | ऑस्टियोसरकोमा", "Enchondroma", "None"],
+    "a": 1,
+    "e": "Codman's triangle is a type of periosteal reaction seen when a tumor lifts the periosteum away from the bone.",
+    "cat": "technical",
+    "sub": "orthopedics"
+  },
+  {
+    "q": "What is an 'Autograft' in bone grafting? / बोन ग्राफ्टिंग में 'ऑटोग्राफ्ट' (Autograft) क्या है?",
+    "o": ["Bone from a donor", "Bone taken from the patient's own body | मरीज के अपने शरीर से ली गई हड्डी", "Synthetic bone", "None"],
+    "a": 1,
+    "e": "Autografts are the gold standard because they provide living cells and pose no risk of rejection.",
+    "cat": "technical",
+    "sub": "orthopedics"
+  },
+  {
+    "q": "Which condition is a benign bone tumor often found in the epiphysis of long bones? / लंबी हड्डियों के एपिफिसिस में पाया जाने वाला सौम्य हड्डी का ट्यूमर कौन सा है?",
+    "o": ["Osteosarcoma", "Giant Cell Tumor (GCT) | जाइंट सेल ट्यूमर", "Multiple Myeloma", "None"],
+    "a": 1,
+    "e": "GCT is locally aggressive but usually benign, often occurring around the knee joint.",
+    "cat": "technical",
+    "sub": "orthopedics"
+  },
+  {
+    "q": "What is the primary sign of 'Septic Arthritis'? / 'सेप्टिक अर्थराइटिस' का प्राथमिक संकेत क्या है?",
+    "o": ["Mild itching", "Acute joint pain, swelling, and restricted movement | तीव्र जोड़ों का दर्द और सूजन", "Cold skin", "None"],
+    "a": 1,
+    "e": "Septic arthritis is a medical emergency requiring immediate drainage to prevent joint destruction.",
+    "cat": "technical",
+    "sub": "orthopedics"
+  },
+  {
+    "q": "In fracture healing, what is 'Involucrum'? / फ्रैक्चर हीलिंग या संक्रमण में 'इनवोलुक्रम' (Involucrum) क्या है?",
+    "o": ["Dead bone", "A layer of new bone growth around a sequestrum | मृत हड्डी के चारों ओर नई हड्डी", "Muscle tear", "None"],
+    "a": 1,
+    "e": "Involucrum is the body's attempt to form new bone around infected or dead bone tissue.",
+    "cat": "technical",
+    "sub": "orthopedics"
+  },
+  {
+    "q": "Which metabolic disease is known as 'The Silent Thief' of bones? / किस मेटाबॉलिक बीमारी को हड्डियों का 'साइलेंट थीफ' कहा जाता है?",
+    "o": ["Rickets", "Osteoporosis | ऑस्टियोपोरोसिस", "Gout", "Scurvy"],
+    "a": 1,
+    "e": "Osteoporosis reduces bone density without symptoms until a fracture occurs.",
+    "cat": "technical",
+    "sub": "orthopedics"
+  },
+  {
+    "q": "What is an 'Allograft'? / 'एलोग्राफ्ट' (Allograft) क्या है?",
+    "o": ["Animal bone", "Bone tissue from another human donor | दूसरे मानव दाता से ली गई हड्डी", "Metal plate", "None"],
+    "a": 1,
+    "e": "Allografts are often used when the patient does not have enough bone available for an autograft.",
+    "cat": "technical",
+    "sub": "orthopedics"
+  },
+  {
+    "q": "Which site is most commonly used to harvest an 'Autograft'? / ऑटोग्राफ्ट प्राप्त करने के लिए सबसे अधिक किस स्थान का उपयोग किया जाता है?",
+    "o": ["Skull", "Iliac Crest (Pelvis) | इलियाक क्रेस्ट", "Femur", "Ribs"],
+    "a": 1,
+    "e": "The iliac crest provides a rich source of both cortical and cancellous bone.",
+    "cat": "technical",
+    "sub": "orthopedics"
+  },
+  {
+    "q": "What is 'Arthrodesis'? / 'आर्थ्रोडेसिस' (Arthrodesis) क्या है?",
+    "o": ["Joint replacement", "Surgical fusion of a joint | जोड़ का सर्जिकल संलयन (Fusion)", "Joint drainage", "None"],
+    "a": 1,
+    "e": "Arthrodesis is performed to eliminate pain by fusing two bones together, making the joint immobile.",
+    "cat": "technical",
+    "sub": "orthopedics"
+  },
+  {
+    "q": "Which ligament is most commonly injured in a 'Sports Injury' of the knee? / घुटने की 'स्पोर्ट्स इंजरी' में कौन सा लिगामेंट सबसे अधिक घायल होता है?",
+    "o": ["PCL", "Anterior Cruciate Ligament (ACL) | एसीएल (ACL)", "LCL", "None"],
+    "a": 1,
+    "e": "ACL tears are frequent in athletes involved in sports that require sudden stops or changes in direction.",
+    "cat": "technical",
+    "sub": "orthopedics"
+  },
+  {
+    "q": "What is the hallmark of 'Spondylolisthesis'? / 'स्पोंडिलोलिस्थीसिस' (Spondylolisthesis) की प्रमुख विशेषता क्या है?",
+    "o": ["Inflammation of vertebra", "Forward displacement of one vertebra over another | कशेरुका का आगे खिसकना", "Fracture of ribs", "None"],
+    "a": 1,
+    "e": "It typically occurs in the lower spine (lumbar region) and can cause back pain or nerve compression.",
+    "cat": "technical",
+    "sub": "orthopedics"
+  },
+  {
+    "q": "Which minimally invasive technique is used to see and treat joint problems? / जोड़ों की समस्याओं को देखने और इलाज करने के लिए किस मिनिमल इनवेसिव तकनीक का उपयोग किया जाता है?",
+    "o": ["Open surgery", "Arthroscopy | आर्थ्रोस्कोपी", "Ultrasound", "None"],
+    "a": 1,
+    "e": "Arthroscopy uses a small camera (arthroscope) to visualize and repair joint tissues through tiny incisions.",
+    "cat": "technical",
+    "sub": "orthopedics"
+  },
+  {
+    "q": "What is the primary risk of a 'Cervical Spine' injury? / 'सर्वाइकल स्पाइन' की चोट का प्राथमिक जोखिम क्या है?",
+    "o": ["Ankle pain", "Quadriplegia and respiratory failure | चतुर्भुज पक्षाघात (Quadriplegia)", "Hearing loss", "None"],
+    "a": 1,
+    "e": "Injury to the upper spine can paralyze all four limbs and affect the nerves controlling breathing.",
+    "cat": "technical",
+    "sub": "orthopedics"
+  },
+  {
+    "q": "What is a 'Bone Graft' used for? / 'बोन ग्राफ्ट' (Bone Graft) का उपयोग किसके लिए किया जाता है?",
+    "o": ["To reduce fever", "To promote bone healing in non-union or defects | हड्डी के उपचार को बढ़ावा देने के लिए", "To fix a muscle tear", "None"],
+    "a": 1,
+    "e": "Bone grafting provides a scaffold and growth factors to help new bone grow across a gap or defect.",
+    "cat": "technical",
+    "sub": "orthopedics"
+  },
+  {
+    "q": "Which condition is a degenerative disorder of the spine involving the intervertebral disc? / इंटरवर्टेब्रल डिस्क से जुड़ा रीढ़ का अपक्षयी विकार कौन सा है?",
+    "o": ["Scoliosis", "Herniated Nucleus Pulposus (Disc Prolapse) | डिस्क प्रोलैप्स", "Kyphosis", "None"],
+    "a": 1,
+    "e": "Disc herniation occurs when the soft center of a spinal disc pushes through a crack in the tougher exterior.",
+    "cat": "technical",
+    "sub": "orthopedics"
+  },
+  {
+    "q": "What is 'Kyphosis'? / 'काइफोसिस' (Kyphosis) क्या है?",
+    "o": ["Side-to-side curve of spine", "Abnormal outward curvature of the upper back (Hunchback) | कुबड़ापन", "Normal posture", "None"],
+    "a": 1,
+    "e": "Kyphosis results in a rounded upper back, often seen in elderly patients with osteoporosis.",
+    "cat": "technical",
+    "sub": "orthopedics"
+  },
+  {
+    "q": "Which fixation method is 'External Fixation'? / कौन सी फिक्सेशन विधि 'एक्सटर्नल फिक्सेशन' (External Fixation) है?",
+    "o": ["Plates and screws inside the skin", "A frame outside the limb connected by pins through the bone | बाहरी फ्रेम", "A plaster cast only", "None"],
+    "a": 1,
+    "e": "External fixation is often used for complex open fractures where internal hardware cannot be placed immediately.",
+    "cat": "technical",
+    "sub": "orthopedics"
+  },
+  {
+    "q": "What is the 'Tennis Elbow' (Lateral Epicondylitis) a result of? / 'टेनिस एल्बो' (लैटरल एपिकोंडिलाइटिस) किसका परिणाम है?",
+    "o": ["Acute fracture", "Repetitive strain/overuse of forearm muscles | बार-बार होने वाला तनाव", "Bone infection", "None"],
+    "a": 1,
+    "e": "It is a painful condition of the elbow caused by overuse of the muscles that extend the wrist.",
+    "cat": "technical",
+    "sub": "orthopedics"
+  },
+  {
+    "q": "Which metabolic bone disease is characterized by 'softening of bones' due to Vitamin D deficiency in adults? / वयस्कों में विटामिन D की कमी से हड्डियों के नरम होने वाले मेटाबॉलिक रोग को क्या कहते हैं?",
+    "o": ["Osteoporosis", "Osteomalacia | ऑस्टियोमलेशिया", "Rickets", "Paget's disease"],
+    "a": 1,
+    "e": "Osteomalacia is the adult form of Vitamin D deficiency, whereas Rickets occurs in children.",
+    "cat": "technical",
+    "sub": "orthopedics"
+  },
+  {
+    "q": "What is the hallmark of 'Osteomyelitis'? / 'ऑस्टियोमाइलाइटिस' (Osteomyelitis) की प्रमुख विशेषता क्या है?",
+    "o": ["Joint wear and tear", "Infection of the bone and bone marrow | हड्डी और बोन मैरो का संक्रमण", "Bone tumor", "None"],
+    "a": 1,
+    "e": "Osteomyelitis is an inflammatory condition of the bone caused by an infectious organism, usually bacteria.",
+    "cat": "technical",
+    "sub": "orthopedics"
+  },
+  {
+    "q": "Which bone tumor shows a 'Sunburst' appearance on X-ray? / एक्स-रे पर कौन सा हड्डी का ट्यूमर 'सनबर्स्ट' (Sunburst) रूप दिखाता है?",
+    "o": ["Osteoma", "Osteosarcoma | ऑस्टियोसरकोमा", "Ewing's sarcoma", "Osteochondroma"],
+    "a": 1,
+    "e": "Osteosarcoma is a highly malignant primary bone tumor often showing periosteal reaction known as sunburst appearance.",
+    "cat": "technical",
+    "sub": "orthopedics"
+  },
+  {
+    "q": "What is 'Malunion' of a fracture? / फ्रैक्चर का 'मलयूनियन' (Malunion) क्या है?",
+    "o": ["Fracture that never heals", "Healing of a fracture in an abnormal position | गलत स्थिति में हड्डी का जुड़ना", "Infection at site", "None"],
+    "a": 1,
+    "e": "Malunion occurs when the bone pieces join back together but in a misaligned or bent way.",
+    "cat": "technical",
+    "sub": "orthopedics"
+  },
+  {
+    "q": "Which joint is most commonly affected by 'Osteoarthritis'? / 'ऑस्टियोआर्थराइटिस' से सबसे अधिक कौन सा जोड़ प्रभावित होता है?",
+    "o": ["Wrist", "Knee joint | घुटने का जोड़", "Shoulder", "Elbow"],
+    "a": 1,
+    "e": "Osteoarthritis is a degenerative joint disease frequently affecting weight-bearing joints like the knee.",
+    "cat": "technical",
+    "sub": "orthopedics"
+  },
+  {
+    "q": "What is 'Non-union' in fracture healing? / फ्रैक्चर हीलिंग में 'नॉन-यूनियन' (Non-union) क्या है?",
+    "o": ["Healed too fast", "Failure of bone ends to unite after 6-9 months | हड्डी के सिरों का न जुड़ना", "Fracture with infection", "None"],
+    "a": 1,
+    "e": "Non-union is diagnosed when a fracture shows no signs of healing over a prolonged period.",
+    "cat": "technical",
+    "sub": "orthopedics"
+  },
+  {
+    "q": "What does 'Arthroplasty' refer to? / 'आर्थ्रोप्लास्टी' (Arthroplasty) का क्या तात्पर्य है?",
+    "o": ["Fusion of a joint", "Surgical reconstruction or replacement of a joint | जोड़ का प्रतिस्थापन", "Amputation", "None"],
+    "a": 1,
+    "e": "Total Hip or Knee Replacement is a common form of arthroplasty to restore joint function.",
+    "cat": "technical",
+    "sub": "orthopedics"
+  },
+  {
+    "q": "Which material is a common 'Biomaterial' used in orthopedic implants? / ऑर्थोपेडिक इम्प्लांट में इस्तेमाल होने वाला सामान्य 'बायोमटेरियल' कौन सा है?",
+    "o": ["Lead", "Titanium and Stainless Steel | टाइटेनियम और स्टेनलेस स्टील", "Wood", "Plastic only"],
+    "a": 1,
+    "e": "Biomaterials must be biocompatible, corrosion-resistant, and strong enough to support weight.",
+    "cat": "technical",
+    "sub": "orthopedics"
+  },
+  {
+    "q": "A 'Subluxation' is defined as: / 'सब्लक्सेशन' (Subluxation) को इस प्रकार परिभाषित किया गया है:",
+    "o": ["Complete loss of contact between joint surfaces", "Partial dislocation of a joint | जोड़ का आंशिक विस्थापन", "Fracture within the joint", "None"],
+    "a": 1,
+    "e": "Subluxation involves a partial separation of joint surfaces, unlike a complete dislocation.",
+    "cat": "technical",
+    "sub": "orthopedics"
+  },
+  {
+    "q": "What is the primary sign of 'Gouty Arthritis' during an attack? / एक हमले के दौरान 'गाउटी अर्थराइटिस' का प्राथमिक लक्षण क्या है?",
+    "o": ["Chronic back pain", "Sudden severe pain, redness, and swelling (often in big toe) | तीव्र दर्द और सूजन", "Cold limbs", "None"],
+    "a": 1,
+    "e": "Gout is caused by uric acid crystal deposits, most commonly in the first metatarsophalangeal joint.",
+    "cat": "technical",
+    "sub": "orthopedics"
+  },
+  {
+    "q": "What is the hallmark clinical feature of 'Glaucoma'? / 'ग्लूकोमा' की प्रमुख नैदानिक विशेषता क्या है?",
+    "o": ["Cloudy lens", "Increased intraocular pressure and optic nerve damage | बढ़ा हुआ आईओपी", "Red eyes", "None"],
+    "a": 1,
+    "e": "Glaucoma is a group of diseases that damage the optic nerve, often linked to high fluid pressure in the eye.",
+    "cat": "technical",
+    "sub": "ophthalmology"
+  },
+  {
+    "q": "A 'Cataract' is defined as: / 'मोतियाबिंद' (Cataract) को इस प्रकार परिभाषित किया गया है:",
+    "o": ["Infection of cornea", "Opacification of the natural crystalline lens | लेंस का धुंधला होना", "Retinal tear", "None"],
+    "a": 1,
+    "e": "Cataracts cause a progressive, painless decrease in vision due to lens clouding.",
+    "cat": "technical",
+    "sub": "ophthalmology"
+  },
+  {
+    "q": "Which condition involves a 'cherry-red spot' on the macula? / मैकुला पर 'चेरी-रेड स्पॉट' किस स्थिति में दिखाई देता है?",
+    "o": ["Retinal detachment", "Central Retinal Artery Occlusion (CRAO) | केंद्रीय रेटिनल धमनी रोधगलन", "Diabetic retinopathy", "None"],
+    "a": 1,
+    "e": "A cherry-red spot is a classic sign of CRAO, indicating an emergency lack of blood flow to the retina.",
+    "cat": "technical",
+    "sub": "ophthalmology"
+  },
+  {
+    "q": "What is 'Strabismus'? / 'स्ट्रैबिस्मस' (Strabismus) क्या है?",
+    "o": ["Lazy eye", "Misalignment of the eyes (Squint) | आँखों का तिरछापन", "Double vision only", "None"],
+    "a": 1,
+    "e": "Strabismus is a condition where the eyes do not look at the same point at the same time.",
+    "cat": "technical",
+    "sub": "ophthalmology"
+  },
+  {
+    "q": "Which disease is characterized by 'drusen' deposits under the retina? / रेटिना के नीचे 'ड्रुसेन' (drusen) जमा होने की विशेषता क्या है?",
+    "o": ["Glaucoma", "Age-related Macular Degeneration (AMD) | एएमडी", "Cataract", "None"],
+    "a": 1,
+    "e": "Drusen are yellow deposits that are an early sign of dry macular degeneration.",
+    "cat": "technical",
+    "sub": "ophthalmology"
+  },
+  {
+    "q": "What is 'Trachoma' caused by? / 'ट्रैकोमा' (Trachoma) किसके कारण होता है?",
+    "o": ["Virus", "Chlamydia trachomatis | क्लैमिडिया ट्रैकोमैटिस", "Fungus", "None"],
+    "a": 1,
+    "e": "Trachoma is a bacterial infection and a leading cause of preventable blindness worldwide.",
+    "cat": "technical",
+    "sub": "ophthalmology"
+  },
+  {
+    "q": "What is the primary symptom of 'Retinal Detachment'? / 'रेटिनल डिटैचमेंट' का प्राथमिक लक्षण क्या है?",
+    "o": ["Painful red eye", "Sudden flashes of light and floaters | प्रकाश की चमक और फ्लोटर्स", "Yellow discharge", "None"],
+    "a": 1,
+    "e": "The sudden appearance of floaters or a 'curtain' over the vision indicates a detached retina.",
+    "cat": "technical",
+    "sub": "ophthalmology"
+  },
+  {
+    "q": "Which malignant intraocular tumor is most common in children? / बच्चों में सबसे आम घातक इंट्राओकुलर ट्यूमर कौन सा है?",
+    "o": ["Melanoma", "Retinoblastoma | रेटिनोब्लास्टोमा", "Squamous cell carcinoma", "None"],
+    "a": 1,
+    "e": "Retinoblastoma is a rare form of eye cancer that almost exclusively affects young children.",
+    "cat": "technical",
+    "sub": "ophthalmology"
+  },
+  {
+    "q": "What is 'Hypopyon'? / 'हाइपोपियन' (Hypopyon) क्या है?",
+    "o": ["Blood in anterior chamber", "Pus in the anterior chamber | अग्र कक्ष में मवाद", "Clear fluid", "None"],
+    "a": 1,
+    "e": "It is a sign of severe inflammation or infection inside the eye (e.g., endophthalmitis).",
+    "cat": "technical",
+    "sub": "ophthalmology"
+  },
+  {
+    "q": "Which part of the eye is affected in 'Uveitis'? / 'यूवेइिटिस' (Uveitis) में आँख का कौन सा हिस्सा प्रभावित होता है?",
+    "o": ["Cornea", "Uveal tract (Iris, Ciliary body, Choroid) | यूवेअल ट्रैक्ट", "Sclera", "Optic nerve"],
+    "a": 1,
+    "e": "Uveitis refers to inflammation of the middle layer of the eye, which can lead to vision loss if untreated.",
+    "cat": "technical",
+    "sub": "ophthalmology"
+  },
+  {
+    "q": "Which part of the eye is primarily responsible for the majority of 'Refraction'? / आँख का कौन सा हिस्सा मुख्य रूप से 'अपवर्तन' (Refraction) के अधिकांश भाग के लिए जिम्मेदार है?",
+    "o": ["Lens", "Cornea | कॉर्निया", "Retina", "Vitreous humor"],
+    "a": 1,
+    "e": "The cornea provides approximately two-thirds of the eye's total optical power (about 43 diopters).",
+    "cat": "technical",
+    "sub": "ophthalmology"
+  },
+  {
+    "q": "What is the clinical term for 'Nearsightedness'? / 'निकटदृष्टि दोष' के लिए नैदानिक शब्द क्या है?",
+    "o": ["Hyperopia", "Myopia | मायोपिया (Myopia)", "Astigmatism", "Presbyopia"],
+    "a": 1,
+    "e": "In Myopia, light focuses in front of the retina, making distant objects appear blurry.",
+    "cat": "technical",
+    "sub": "ophthalmology"
+  },
+  {
+    "q": "Which cranial nerve innervates the 'Superior Oblique' muscle? / कौन सी कपाल तंत्रिका 'सुपीरियर ऑब्लिक' मांसपेशी को नियंत्रित करती है?",
+    "o": ["CN III (Oculomotor)", "CN IV (Trochlear) | चौथी कपाल तंत्रिका (Trochlear)", "CN VI (Abducens)", "CN II (Optic)"],
+    "a": 1,
+    "e": "The Trochlear nerve (IV) controls the Superior Oblique muscle (LR6SO4 rule).",
+    "cat": "technical",
+    "sub": "ophthalmology"
+  },
+  {
+    "q": "What is the primary function of 'Rods' in the retina? / रेटिना में 'रॉड्स' (Rods) का प्राथमिक कार्य क्या है?",
+    "o": ["Color vision", "Vision in dim light (Scotopic vision) | मंद प्रकाश में दृष्टि", "Central acuity", "None"],
+    "a": 1,
+    "e": "Rods are highly sensitive to light and are responsible for night vision but do not perceive color.",
+    "cat": "technical",
+    "sub": "ophthalmology"
+  },
+  {
+    "q": "Which condition is characterized by an 'irregular curvature' of the cornea or lens? / कॉर्निया या लेंस की 'अनियमित वक्रता' की विशेषता क्या है?",
+    "o": ["Myopia", "Astigmatism | एस्टिग्मैटिज्म (Astigmatism)", "Hyperopia", "None"],
+    "a": 1,
+    "e": "Astigmatism causes light to focus on multiple points on the retina, leading to distorted vision.",
+    "cat": "technical",
+    "sub": "ophthalmology"
+  },
+  {
+    "q": "The 'Aqueous Humor' is primarily produced by which structure? / 'एक्वियस ह्यूमर' का उत्पादन मुख्य रूप से किस संरचना द्वारा किया जाता है?",
+    "o": ["Iris", "Ciliary Body | सिलियरी बॉडी", "Choroid", "Cornea"],
+    "a": 1,
+    "e": "The ciliary processes of the ciliary body secrete aqueous humor into the posterior chamber.",
+    "cat": "technical",
+    "sub": "ophthalmology"
+  },
+  {
+    "q": "What is 'Presbyopia'? / 'प्रेसबायोपिया' (Presbyopia) क्या है?",
+    "o": ["Distance vision loss", "Age-related loss of near focusing ability | उम्र के साथ निकट दृष्टि की कमी", "Infection", "None"],
+    "a": 1,
+    "e": "It occurs due to the gradual loss of elasticity in the lens, usually after age 40.",
+    "cat": "technical",
+    "sub": "ophthalmology"
+  },
+  {
+    "q": "Which histological layer of the cornea is the thickest? / कॉर्निया की कौन सी हिस्टोलॉजिकल परत सबसे मोटी होती है?",
+    "o": ["Epithelium", "Stroma | स्ट्रोमा (Stroma)", "Endothelium", "Bowman's layer"],
+    "a": 1,
+    "e": "The stroma makes up about 90% of the total corneal thickness.",
+    "cat": "technical",
+    "sub": "ophthalmology"
+  },
+  {
+    "q": "What is the 'Optic Disc' also known as? / 'ऑप्टिक डिस्क' को और किस नाम से जाना जाता है?",
+    "o": ["Fovea", "Blind Spot | ब्लाइंड स्पॉट (Blind Spot)", "Macula", "Uvea"],
+    "a": 1,
+    "e": "The optic disc lacks photoreceptors, making it insensitive to light.",
+    "cat": "technical",
+    "sub": "ophthalmology"
+  },
+  {
+    "q": "Which lens is used to correct 'Hyperopia' (Farsightedness)? / 'हाइपरोपिया' (दूरदृष्टि दोष) को ठीक करने के लिए किस लेंस का उपयोग किया जाता है?",
+    "o": ["Concave lens", "Convex lens | उत्तल लेंस (Convex)", "Cylindrical lens", "None"],
+    "a": 1,
+    "e": "Convex lenses converge light rays to focus them correctly on the retina in hyperopic eyes.",
+    "cat": "technical",
+    "sub": "ophthalmology"
+  },
+  {
+    "q": "Which scale is used to assess the level of consciousness in a 'Coma' patient? / 'कोमा' रोगी में चेतना के स्तर का आकलन करने के लिए किस स्केल का उपयोग किया जाता है?",
+    "o": ["Apgar scale", "Glasgow Coma Scale (GCS) | ग्लासगो कोमा स्केल", "Norton scale", "None"],
+    "a": 1,
+    "e": "GCS evaluates eye-opening, verbal, and motor responses to determine brain injury severity.",
+    "cat": "technical",
+    "sub": "general_medicine"
+  },
+  {
+    "q": "What is the underlying pathology in 'Parkinson's Disease'? / 'पार्किंसंस रोग' की अंतर्निहित पैथोफिज़ियोलॉजी क्या है?",
+    "o": ["Loss of Serotonin", "Loss of Dopaminergic neurons in Substantia Nigra | डोपामाइन की कमी", "Excess Acetylcholine", "None"],
+    "a": 1,
+    "e": "The degeneration of dopamine-producing cells leads to tremors, rigidity, and bradykinesia.",
+    "cat": "technical",
+    "sub": "general_medicine"
+  },
+  {
+    "q": "A 'Cerebrovascular Accident' (Stroke) is primarily caused by: / 'सेरेब्रोवास्कुलर एक्सीडेंट' (स्ट्रोक) मुख्य रूप से किसके कारण होता है?",
+    "o": ["High fever", "Ischemia or Hemorrhage in the brain | इस्किमिया या रक्तस्राव", "Vitamin deficiency", "None"],
+    "a": 1,
+    "e": "A stroke occurs when blood supply to part of the brain is interrupted or reduced.",
+    "cat": "technical",
+    "sub": "general_medicine"
+  },
+  {
+    "q": "Which sign is a classic clinical indicator of 'Meningitis'? / 'मेनिन्जाइटिस' का क्लासिक नैदानिक संकेतक कौन सा है?",
+    "o": ["Joint pain", "Nuchal rigidity (Stiff neck) | गर्दन में अकड़न", "Abdominal pain", "None"],
+    "a": 1,
+    "e": "Meningeal irritation causes neck stiffness, fever, and altered mental status.",
+    "cat": "technical",
+    "sub": "general_medicine"
+  },
+  {
+    "q": "What is 'Myasthenia Gravis' primarily a disorder of? / 'मायस्थेनिया ग्रेविस' मुख्य रूप से किसका विकार है?",
+    "o": ["Bone density", "Neuromuscular junction | न्यूरोमस्कुलर जंक्शन", "Lung tissue", "None"],
+    "a": 1,
+    "e": "It is an autoimmune disease where antibodies block receptors at the junction between nerves and muscles.",
+    "cat": "technical",
+    "sub": "general_medicine"
+  },
+  {
+    "q": "Which of the following is a symptom of 'Hypothyroidism'? / निम्नलिखित में से कौन सा 'हाइपोथायरायडिज्म' का लक्षण है?",
+    "o": ["Weight loss", "Weight gain and Cold intolerance | वजन बढ़ना और ठंड बर्दाश्त न होना", "Fast heart rate", "None"],
+    "a": 1,
+    "e": "Low thyroid levels slow down metabolism, leading to fatigue and sensitivity to cold.",
+    "cat": "technical",
+    "sub": "general_medicine"
+  },
+  {
+    "q": "What is the diagnostic hallmark of 'Epilepsy'? / 'मिर्गी' (Epilepsy) की नैदानिक विशेषता क्या है?",
+    "o": ["Occasional headache", "Recurrent unprovoked seizures | बार-बार होने वाले दौरे", "Muscle growth", "None"],
+    "a": 1,
+    "e": "Epilepsy is defined by at least two unprovoked seizures occurring more than 24 hours apart.",
+    "cat": "technical",
+    "sub": "general_medicine"
+  },
+  {
+    "q": "In Rheumatic diseases, 'Rheumatoid Arthritis' typically affects: / संधिविज्ञान रोगों में, 'रुमेटॉइड अर्थराइटिस' आमतौर पर प्रभावित करता है:",
+    "o": ["Single large joint", "Symmetrical small joints (Hands/Feet) | सममित छोटे जोड़", "Spine only", "None"],
+    "a": 1,
+    "e": "It is a chronic inflammatory disorder that usually targets the same joints on both sides of the body.",
+    "cat": "technical",
+    "sub": "general_medicine"
+  },
+  {
+    "q": "What is the primary metabolic complication of 'Obesity'? / 'मोटापा' की प्राथमिक चयापचय जटिलता क्या है?",
+    "o": ["Low blood sugar", "Type 2 Diabetes and Dyslipidemia | टाइप 2 मधुमेह", "Anemia", "None"],
+    "a": 1,
+    "e": "Excess adipose tissue is a major risk factor for metabolic syndrome and cardiovascular disease.",
+    "cat": "technical",
+    "sub": "general_medicine"
+  },
+  {
+    "q": "The 'Encephalitis' is most commonly caused by: / 'एन्सेफलाइटिस' सबसे अधिक किसके कारण होता है?",
+    "o": ["Bacteria", "Viruses (e.g., Herpes Simplex) | वायरस", "Fungi", "None"],
+    "a": 1,
+    "e": "Viral infections are the most frequent cause of acute inflammation of the brain tissue.",
+    "cat": "technical",
+    "sub": "general_medicine"
+  },
+  {
+    "q": "Which of the following is a classic clinical marker for Acute Myocardial Infarction (AMI)? / तीव्र मायोकार्डियल इंफार्क्शन (AMI) के लिए क्लासिक नैदानिक मार्कर कौन सा है?",
+    "o": ["Serum Albumin", "Troponin I and T | ट्रोपोनिन I और T", "Serum Bilirubin", "None"],
+    "a": 1,
+    "e": "Cardiac Troponins are highly specific and sensitive markers for myocardial injury, essential for diagnosing heart attacks.",
+    "cat": "technical",
+    "sub": "general_medicine"
+  },
+  {
+    "q": "What is the primary pathophysiology of 'Type 1 Diabetes Mellitus'? / 'टाइप 1 डायबिटीज मेलिटस' की प्राथमिक पैथोफिज़ियोलॉजी क्या है?",
+    "o": ["Insulin resistance", "Autoimmune destruction of pancreatic beta cells | बीटा कोशिकाओं का विनाश", "Excessive sugar intake", "None"],
+    "a": 1,
+    "e": "Type 1 diabetes results from the immune system attacking and destroying insulin-producing cells in the pancreas.",
+    "cat": "technical",
+    "sub": "general_medicine"
+  },
+  {
+    "q": "Which condition is characterized by 'Reed-Sternberg cells' on lymph node biopsy? / लिम्फ नोड बायोप्सी पर 'रीड-स्टर्नबर्ग कोशिकाओं' की विशेषता क्या है?",
+    "o": ["Leukemia", "Hodgkin Lymphoma | हॉजकिन लिंफोमा", "Multiple Myeloma", "None"],
+    "a": 1,
+    "e": "The presence of these large, multinucleated cells is diagnostic for Hodgkin's lymphoma.",
+    "cat": "technical",
+    "sub": "general_medicine"
+  },
+  {
+    "q": "In Nephrology, 'Nephrotic Syndrome' is primarily defined by: / नेफ्रोलॉजी में, 'नेफ्रोटिक सिंड्रोम' मुख्य रूप से किसके द्वारा परिभाषित किया गया है?",
+    "o": ["Hematuria", "Massive proteinuria (>3.5g/day) and Edema | भारी प्रोटीनुरिया", "High BP only", "None"],
+    "a": 1,
+    "e": "Nephrotic syndrome involves high protein loss in urine, leading to low blood protein and severe body swelling.",
+    "cat": "technical",
+    "sub": "general_medicine"
+  },
+  {
+    "q": "Which genetic disorder is caused by an extra copy of chromosome 21? / क्रोमोसोम 21 की अतिरिक्त प्रति के कारण कौन सा आनुवंशिक विकार होता है?",
+    "o": ["Turner Syndrome", "Down Syndrome | डाउन सिंड्रोम", "Klinefelter Syndrome", "None"],
+    "a": 1,
+    "e": "Trisomy 21 leads to Down syndrome, characterized by intellectual disability and distinct physical features.",
+    "cat": "technical",
+    "sub": "general_medicine"
+  },
+  {
+    "q": "What is the hallmark of 'COPD' (Chronic Obstructive Pulmonary Disease)? / 'COPD' की प्रमुख विशेषता क्या है?",
+    "o": ["Reversible airway obstruction", "Persistent and progressive airflow limitation | लगातार वायुप्रवाह सीमा", "Acute fever", "None"],
+    "a": 1,
+    "e": "COPD involves chronic bronchitis and emphysema, leading to long-term breathing difficulties.",
+    "cat": "technical",
+    "sub": "general_medicine"
+  },
+  {
+    "q": "Which diagnostic finding is indicative of 'Liver Cirrhosis' on physical exam? / शारीरिक परीक्षण पर 'लिवर सिरोसिस' का कौन सा नैदानिक संकेत मिलता है?",
+    "o": ["High fever", "Ascites and Splenomegaly | जलोदर (Ascites)", "Hair growth", "None"],
+    "a": 1,
+    "e": "Portal hypertension in cirrhosis causes fluid buildup in the abdomen (ascites) and an enlarged spleen.",
+    "cat": "technical",
+    "sub": "general_medicine"
+  },
+  {
+    "q": "What is the primary goal of 'Parenteral Nutrition'? / 'पैरेंट्रल पोषण' का प्राथमिक लक्ष्य क्या है?",
+    "o": ["Weight loss", "Nutritional support via IV for non-functional GI tract | चतुर्थ (IV) पोषण", "Treating diabetes", "None"],
+    "a": 1,
+    "e": "It provides essential nutrients directly into the bloodstream when the gut cannot be used.",
+    "cat": "technical",
+    "sub": "general_medicine"
+  },
+  {
+    "q": "Which joint is most commonly affected in 'Acute Gout'? / 'एक्यूट गाउट' में कौन सा जोड़ सबसे अधिक प्रभावित होता है?",
+    "o": ["Shoulder", "First metatarsophalangeal joint (Big toe) | पैर का अंगूठा", "Wrist", "Elbow"],
+    "a": 1,
+    "e": "Gout often presents as sudden, severe pain and swelling in the base of the big toe.",
+    "cat": "technical",
+    "sub": "general_medicine"
+  },
+  {
+    "q": "What is the primary treatment for 'Iron Deficiency Anemia'? / 'आयरन की कमी से होने वाले एनीमिया' का प्राथमिक उपचार क्या है?",
+    "o": ["Vitamin B12 injection", "Oral Iron supplementation | मौखिक आयरन सप्लीमेंट", "Blood transfusion only", "None"],
+    "a": 1,
+    "e": "Replacing iron stores is essential to restore normal hemoglobin levels and RBC production.",
+    "cat": "technical",
+    "sub": "general_medicine"
+  },
+  {
+    "q": "Which staging of Leprosy is characterized by high cell-mediated immunity and few lesions? / कुष्ठ रोग का कौन सा चरण उच्च कोशिका-मध्यस्थ प्रतिरक्षा और कम घावों द्वारा वर्गीकृत है?",
+    "o": ["Lepromatous Leprosy", "Tuberculoid Leprosy | ट्यूबरकुलॉयड कुष्ठ रोग", "Borderline", "None"],
+    "a": 1,
+    "e": "Tuberculoid leprosy (TT) shows limited skin involvement because the host's immune response is strong.",
+    "cat": "technical",
+    "sub": "leprosy"
+  },
+  {
+    "q": "What is the drug combination used in Multi-Drug Therapy (MDT) for 'Multibacillary' Leprosy? / 'मल्टीबैसिलरी' कुष्ठ रोग के लिए MDT में उपयोग किए जाने वाले दवाओं का संयोजन क्या है?",
+    "o": ["Dapsone + Rifampicin", "Rifampicin + Dapsone + Clofazimine | रिफैम्पिसिन + डैप्सोन + क्लोफैजि़माइन", "Penicillin + Dapsone", "None"],
+    "a": 1,
+    "e": "MDT for MB leprosy includes three drugs to prevent antibiotic resistance and ensure cure.",
+    "cat": "technical",
+    "sub": "leprosy"
+  },
+  {
+    "q": "Which STD is caused by 'Haemophilus ducreyi'? / 'हीमोफिलस डुक्रेयी' के कारण कौन सा एसटीडी होता है?",
+    "o": ["Syphilis", "Chancroid | चैनक्रॉइड", "Donovanosis", "Gonorrhea"],
+    "a": 1,
+    "e": "Chancroid presents as painful genital ulcers and regional lymphadenopathy (bubo).",
+    "cat": "technical",
+    "sub": "venereology"
+  },
+  {
+    "q": "What are 'Donovan Bodies' diagnostic of? / 'डोरोवन बॉडीज' (Donovan Bodies) किसके निदान के लिए उपयोग की जाती हैं?",
+    "o": ["Syphilis", "Granuloma Inguinale (Donovanosis) | डोनोवैनोसिस", "Herpes", "Chlamydia"],
+    "a": 1,
+    "e": "Donovan bodies are seen in tissue smears from patients with Granuloma Inguinale.",
+    "cat": "technical",
+    "sub": "venereology"
+  },
+  {
+    "q": "Which ocular complication is common in Lepromatous Leprosy? / लेप्रोमेटस कुष्ठ रोग में कौन सी नेत्र संबंधी जटिलता आम है?",
+    "o": ["Cataract", "Lagophthalmos and Iridocyclitis | लैगोफ्थाल्मोस", "Glaucoma", "None"],
+    "a": 1,
+    "e": "Nerve damage in leprosy can lead to the inability to close eyelids (lagophthalmos), risking blindness.",
+    "cat": "technical",
+    "sub": "leprosy"
+  },
+  {
+    "q": "What is the primary diagnostic test for 'Gonorrhea'? / 'गोनोरिया' के लिए प्राथमिक नैदानिक परीक्षण क्या है?",
+    "o": ["Tzank smear", "Gram stain (Diplococci) and Culture | ग्राम स्टेन और कल्चर", "Widal test", "None"],
+    "a": 1,
+    "e": "Gram stain of urethral discharge showing Gram-negative intracellular diplococci is highly suggestive of Gonorrhea.",
+    "cat": "technical",
+    "sub": "venereology"
+  },
+  {
+    "q": "Which nerve is most frequently enlarged and palpable in Leprosy? / कुष्ठ रोग में कौन सी तंत्रिका सबसे अधिक बड़ी और स्पर्शनीय (palpable) हो जाती है?",
+    "o": ["Optic nerve", "Ulnar nerve | अलनर तंत्रिका (Ulnar nerve)", "Sciatic nerve", "Vagus nerve"],
+    "a": 1,
+    "e": "The ulnar nerve at the elbow is the most common nerve involved in leprosy, often leading to claw hand.",
+    "cat": "technical",
+    "sub": "leprosy"
+  },
+  {
+    "q": "What is the causative agent of 'Genital Herpes'? / 'जेनिटल हर्पीज' का कारक एजेंट क्या है?",
+    "o": ["HPV", "Herpes Simplex Virus Type 2 (HSV-2) | एचएसवी-2", "HIV", "Poxvirus"],
+    "a": 1,
+    "e": "HSV-2 is the most common cause of recurrent painful genital blisters.",
+    "cat": "technical",
+    "sub": "venereology"
+  },
+  {
+    "q": "In Leprosy, 'Leonine Facies' (lion-like face) is a feature of: / कुष्ठ रोग में 'लिओनाइन फेसीज' (शेर जैसा चेहरा) किसकी विशेषता है?",
+    "o": ["Tuberculoid leprosy", "Lepromatous leprosy | लेप्रोमेटस कुष्ठ रोग", "Borderline leprosy", "None"],
+    "a": 1,
+    "e": "Extensive infiltration of the skin of the face leads to thickening and a lion-like appearance in advanced LL.",
+    "cat": "technical",
+    "sub": "leprosy"
+  },
+  {
+    "q": "Which systemic involvement can lead to sterility in male Leprosy patients? / कुष्ठ रोग के पुरुष रोगियों में कौन सी प्रणालीगत संलिप्तता बांझपन का कारण बन सकती है?",
+    "o": ["Bone involvement", "Testicular involvement (Orchitis) | वृषण संलिप्तता", "Mucosal involvement", "None"],
+    "a": 1,
+    "e": "Chronic orchitis in lepromatous leprosy can lead to testicular atrophy and sterility.",
+    "cat": "technical",
+    "sub": "leprosy"
+  },
+  {
+    "q": "Which clinical sign is used to confirm Psoriasis by revealing pinpoint bleeding after scale removal? / सोरायसिस की पुष्टि करने के लिए किस नैदानिक संकेत का उपयोग किया जाता है?",
+    "o": ["Nikolsky sign", "Auspitz sign | ऑस्पिट्ज़ साइन", "Koebner phenomenon", "Darier sign"],
+    "a": 1,
+    "e": "Auspitz sign is characteristic of Psoriasis, where removing a scale reveals underlying pinpoint bleeding points.",
+    "cat": "technical",
+    "sub": "dermatology"
+  },
+  {
+    "q": "What is the primary site of involvement in 'Pemphigus Vulgaris'? / 'पेम्फिगस वल्गेरिस' में संलिप्तता का प्राथमिक स्थल क्या है?",
+    "o": ["Nails", "Oral mucosa | मौखिक श्लेष्मा (Oral mucosa)", "Scalp only", "Palms"],
+    "a": 1,
+    "e": "Pemphigus Vulgaris often starts with painful erosions in the mouth before spreading to the skin.",
+    "cat": "technical",
+    "sub": "dermatology"
+  },
+  {
+    "q": "Which condition is a pre-malignant epidermal tumor often caused by chronic sun exposure? / क्रोनिक सन एक्सपोजर के कारण होने वाला प्री-मैलिग्नेंट एपिडर्मल ट्यूमर कौन सा है?",
+    "o": ["Seborrheic Keratosis", "Actinic Keratosis | एक्टिनिक केराटोसिस", "Lipoma", "Cherry Angioma"],
+    "a": 1,
+    "e": "Actinic keratosis is a rough, scaly patch on the skin that can progress to squamous cell carcinoma.",
+    "cat": "technical",
+    "sub": "dermatology"
+  },
+  {
+    "q": "What is the 'Koebner Phenomenon'? / 'कोबनेर घटना' (Koebner Phenomenon) क्या है?",
+    "o": ["Spontaneous healing", "New lesions appearing at sites of skin trauma | चोट वाली जगह पर नए घाव बनना", "Allergic reaction", "None"],
+    "a": 1,
+    "e": "It is seen in Psoriasis and Lichen Planus where skin injury triggers new disease lesions at the site of trauma.",
+    "cat": "technical",
+    "sub": "dermatology"
+  },
+  {
+    "q": "Which autoimmune rheumatologic disease is associated with 'Heliotrope rash' on the eyelids? / पलकों पर 'हेलियोट्रोप रैश' किस ऑटोइम्यून संधिविज्ञान रोग से जुड़ा है?",
+    "o": ["Scleroderma", "Dermatomyositis | डर्मेटोमायोसाइटिस", "Rheumatoid Arthritis", "Gout"],
+    "a": 1,
+    "e": "Dermatomyositis presents with a distinctive violet rash on the eyelids and muscle weakness.",
+    "cat": "technical",
+    "sub": "dermatology"
+  },
+  {
+    "q": "What is 'Alopecia Areata'? / 'लोपेसिया एरीटा' (Alopecia Areata) क्या है?",
+    "o": ["Total baldness", "Patchy hair loss due to autoimmune response | बालों का पैच में झड़ना", "Fungal infection of hair", "None"],
+    "a": 1,
+    "e": "It is a condition where the immune system attacks hair follicles, causing sudden round patches of hair loss.",
+    "cat": "technical",
+    "sub": "dermatology"
+  },
+  {
+    "q": "Which drug is most commonly associated with 'Toxic Epidermal Necrolysis' (TEN)? / 'टॉक्सिक एपिडर्मल नेक्रोलिसिस' (TEN) के साथ सबसे अधिक कौन सी दवा जुड़ी है?",
+    "o": ["Paracetamol", "Sulfonamides/Anticonvulsants | सल्फोनामाइड्स", "Vitamin D", "Insulin"],
+    "a": 1,
+    "e": "TEN is a severe, life-threatening skin reaction often triggered by medications like sulfonamides or NSAIDs.",
+    "cat": "technical",
+    "sub": "dermatology"
+  },
+  {
+    "q": "What is the characteristic feature of 'Lichen Planus'? / 'लिचेन प्लानस' (Lichen Planus) की विशिष्ट विशेषता क्या है?",
+    "o": ["Yellow crusts", "Purple, pruritic, polygonal papules | बैंगनी और खुजलीदार पैप्युल्स", "Watery blisters", "None"],
+    "a": 1,
+    "e": "Lichen planus is known for the '6 Ps': Planar, Purple, Polygonal, Pruritic, Papules, and Plaques.",
+    "cat": "technical",
+    "sub": "dermatology"
+  },
+  {
+    "q": "Which malignant tumor arises from melanocytes and has the highest mortality? / मेलानोसाइट्स से उत्पन्न होने वाला कौन सा घातक ट्यूमर सबसे अधिक मृत्यु दर वाला है?",
+    "o": ["Basal Cell Carcinoma", "Malignant Melanoma | मैलिग्नेंट मेलानोमा", "Squamous Cell Carcinoma", "None"],
+    "a": 1,
+    "e": "Melanoma is the most dangerous form of skin cancer due to its high potential to metastasize.",
+    "cat": "technical",
+    "sub": "dermatology"
+  },
+  {
+    "q": "What is 'Xeroderma Pigmentosum'? / 'जेरोडर्मा पिगमेंटोसम' (Xeroderma Pigmentosum) क्या है?",
+    "o": ["Oily skin", "Genetic disorder with extreme sensitivity to UV rays | यूवी किरणों के प्रति संवेदनशीलता", "Fungal infection", "None"],
+    "a": 1,
+    "e": "It is a rare condition where the skin cannot repair damage caused by ultraviolet light, leading to early skin cancers.",
+    "cat": "technical",
+    "sub": "dermatology"
+  },
+  {
+    "q": "Which bacteria is the primary causative agent of 'Syphilis'? / 'सिफलिस' का प्राथमिक कारक एजेंट कौन सा बैक्टीरिया है?",
+    "o": ["Neisseria gonorrhoeae", "Treponema pallidum | ट्रेपोनेमा पैलिडम", "Haemophilus ducreyi", "None"],
+    "a": 1,
+    "e": "Syphilis is a chronic bacterial infection transmitted through sexual contact.",
+    "cat": "technical",
+    "sub": "venereology"
+  },
+  {
+    "q": "What is the hallmark of 'Secondary Syphilis'? / 'द्वितीयक सिफलिस' की प्रमुख विशेषता क्या है?",
+    "o": ["Painless chancre", "Generalized maculopapular rash | व्यापक दाने", "Heart failure", "None"],
+    "a": 1,
+    "e": "The second stage involves a widespread rash, often including the palms and soles.",
+    "cat": "technical",
+    "sub": "venereology"
+  },
+  {
+    "q": "Which fungal infection is common in the genital area (Fungal STD)? / जननांग क्षेत्र में कौन सा फंगल संक्रमण आम है (Fungal STD)?",
+    "o": ["Tinea capitis", "Candidiasis | कैंडिडिआसिस", "Aspergillosis", "None"],
+    "a": 1,
+    "e": "Candidiasis is a yeast infection that can cause itching and discharge in both men and women.",
+    "cat": "technical",
+    "sub": "venereology"
+  },
+  {
+    "q": "What causes 'Molluscum Contagiosum'? / 'मोलस्कम कोंटागियोसम' किसके कारण होता है?",
+    "o": ["Fungus", "Poxvirus | पॉक्सवायरस", "Bacteria", "HIV"],
+    "a": 1,
+    "e": "It is a viral skin infection presenting as small, firm, umbilicated papules.",
+    "cat": "technical",
+    "sub": "venereology"
+  },
+  {
+    "q": "What is the causative organism of 'Leprosy'? / 'कुष्ठ रोग' (Leprosy) का कारक जीव क्या है?",
+    "o": ["Mycobacterium tuberculosis", "Mycobacterium leprae | माइकोबैक्टीरियम लेप्री", "Staphylococcus", "None"],
+    "a": 1,
+    "e": "M. leprae is an acid-fast bacillus that primarily affects nerves and skin.",
+    "cat": "technical",
+    "sub": "leprosy"
+  },
+  {
+    "q": "Which cardinal sign is essential for diagnosing Leprosy? / कुष्ठ रोग के निदान के लिए कौन सा प्रमुख संकेत अनिवार्य है?",
+    "o": ["High fever", "Loss of sensation in skin patches | त्वचा के धब्बों में संवेदनहीनता", "Cough", "None"],
+    "a": 1,
+    "e": "Loss of touch, pain, or temperature sensation in a skin lesion is a definitive sign of leprosy.",
+    "cat": "technical",
+    "sub": "leprosy"
+  },
+  {
+    "q": "What is 'Type 1 Reaction' in Leprosy also known as? / कुष्ठ रोग में 'टाइप 1 रिएक्शन' को और किस नाम से जाना जाता है?",
+    "o": ["ENL", "Reversal Reaction | रिवर्सल रिएक्शन", "Silent neuritis", "None"],
+    "a": 1,
+    "e": "Type 1 reaction is a delayed hypersensitivity response causing acute inflammation of existing lesions.",
+    "cat": "technical",
+    "sub": "leprosy"
+  },
+  {
+    "q": "Which STD is characterized by a 'Painful' ulcer (Chancroid)? / 'दर्दनाक' अल्सर (चैनक्रॉइड) किस एसटीडी की विशेषता है?",
+    "o": ["Syphilis", "Chancroid (Haemophilus ducreyi) | चैनक्रॉइड", "HIV", "None"],
+    "a": 1,
+    "e": "Unlike the painless chancre of syphilis, chancroid ulcers are very painful.",
+    "cat": "technical",
+    "sub": "venereology"
+  },
+  {
+    "q": "What is 'Erythema Nodosum Leprosum' (ENL)? / 'एरिथेमा नोडोसम लेप्रोसम' (ENL) क्या है?",
+    "o": ["Type 1 reaction", "Type 2 reaction | टाइप 2 रिएक्शन", "Fungal infection", "None"],
+    "a": 1,
+    "e": "ENL is a systemic immune-complex mediated reaction occurring in lepromatous patients.",
+    "cat": "technical",
+    "sub": "leprosy"
+  },
+  {
+    "q": "Which viral STD is caused by 'Human Papilloma Virus' (HPV)? / 'ह्यूमन पैपिलोमा वायरस' (HPV) के कारण कौन सा वायरल एसटीडी होता है?",
+    "o": ["Herpes", "Genital Warts | जननांग मस्से (Genital Warts)", "Hepatitis", "None"],
+    "a": 1,
+    "e": "Certain types of HPV cause warts, while others are linked to cervical cancer.",
+    "cat": "technical",
+    "sub": "venereology"
+  },
+  {
+    "q": "Skin manifestations like 'Butterfly Rash' are typical of which systemic disease? / 'बटरफ्लाई रैश' जैसे त्वचा के लक्षण किस प्रणालीगत रोग के विशिष्ट हैं?",
+    "o": ["Diabetes", "Systemic Lupus Erythematosus (SLE) | एसएलई", "Hypertension", "None"],
+    "a": 1,
+    "e": "Malar rash (butterfly rash) is a key diagnostic feature of SLE, a rheumatologic disease.",
+    "cat": "technical",
+    "sub": "dermatology"
+  },
+  {
+    "q": "What is 'Acanthosis Nigricans' often a skin manifestation of? / 'एकैंथोसिस निग्रिकन्स' अक्सर किसका त्वचा संबंधी लक्षण होता है?",
+    "o": ["Vitamin C deficiency", "Insulin resistance/Diabetes | इंसुलिन प्रतिरोध", "Fungal infection", "None"],
+    "a": 1,
+    "e": "Dark, velvety patches in body folds are associated with metabolic conditions and internal malignancies.",
+    "cat": "technical",
+    "sub": "dermatology"
+  },
+  {
+    "q": "Which epidermal appendageal disorder is commonly known as 'Acne'? / कौन सा एपिडर्मल उपांग विकार आमतौर पर 'मुँहासे' (Acne) के रूप में जाना जाता है?",
+    "o": ["Alopecia", "Acne Vulgaris | एक्ने वल्गेरिस", "Hirsutism", "None"],
+    "a": 1,
+    "e": "Acne affects the pilosebaceous unit, including hair follicles and sebaceous glands.",
+    "cat": "technical",
+    "sub": "dermatology"
+  },
+  {
+    "q": "Which physical factor causes 'Chilblains' on the skin? / त्वचा पर 'चिलब्लेन्स' किस भौतिक कारक के कारण होता है?",
+    "o": ["Extreme heat", "Cold and damp weather | ठंड और नम मौसम", "UV radiation", "Pressure"],
+    "a": 1,
+    "e": "Chilblains are painful inflammations of small blood vessels in response to cold exposure.",
+    "cat": "technical",
+    "sub": "dermatology"
+  },
+  {
+    "q": "A 'Fixed Drug Eruption' (FDE) typically recurs at: / एक 'फिक्स्ड ड्रग इरप्शन' (FDE) आमतौर पर कहाँ दोबारा होता है?",
+    "o": ["A new site every time", "The same site as previous eruption | पिछले स्थान पर ही", "Internal organs", "None"],
+    "a": 1,
+    "e": "FDE is a type of drug reaction that reappears at exactly the same location upon re-exposure.",
+    "cat": "technical",
+    "sub": "dermatology"
+  },
+  {
+    "q": "What is 'Urticaria' commonly called? / 'अर्टिकेरिया' (Urticaria) को आमतौर पर क्या कहा जाता है?",
+    "o": ["Dry skin", "Hives/Wheals | पित्ती (Hives)", "Scars", "None"],
+    "a": 1,
+    "e": "Urticaria presents as itchy, raised wheals often due to an allergic reaction to drugs or food.",
+    "cat": "technical",
+    "sub": "dermatology"
+  },
+  {
+    "q": "Which neoplastic disorder of the dermis is associated with HIV/AIDS? / डर्मिस का कौन सा नियोप्लास्टिक विकार HIV/AIDS से जुड़ा है?",
+    "o": ["Basal Cell Carcinoma", "Kaposi Sarcoma | कपोसी सरकोमा", "Lipoma", "None"],
+    "a": 1,
+    "e": "Kaposi sarcoma is a vascular tumor caused by HHV-8, frequently seen in immunocompromised patients.",
+    "cat": "technical",
+    "sub": "dermatology"
+  }
+]
