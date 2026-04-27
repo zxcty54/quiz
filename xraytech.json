@@ -1,1 +1,2003 @@
-
+[
+  {
+    "q": "Which type of tissue covers the body surface and lines internal organs? / शरीर की सतह को ढंकने और आंतरिक अंगों को अस्तर देने वाला ऊतक कौन सा है?",
+    "o": ["Connective tissue", "Epithelium | उपकला (Epithelium)", "Muscle tissue", "Nerve tissue"],
+    "a": 1,
+    "e": "Epithelial tissue forms the outer layer of skin and the lining of various systems[cite: 218].",
+    "cat": "technical",
+    "sub": "anatomy"
+  },
+  {
+    "q": "What is the process of bone formation called? / हड्डियों के निर्माण की प्रक्रिया को क्या कहा जाता है?",
+    "o": ["Hemolysis", "Osteogenesis (Ossification) | ऑस्टियोजेनेसिस", "Phagocytosis", "Glycolysis"],
+    "a": 1,
+    "e": "Osteology deals with the formation, function, and growth of bones[cite: 219].",
+    "cat": "technical",
+    "sub": "anatomy"
+  },
+  {
+    "q": "The union of an ovum and a spermatozoon is known as: / एक अंडे और एक शुक्राणु के मिलन को कहा जाता है:",
+    "o": ["Differentiation", "Fertilization | निषेचन (Fertilization)", "Segmentation", "Ovulation"],
+    "a": 1,
+    "e": "Fertilization is the first step in embryology leading to the development of various systems[cite: 220].",
+    "cat": "technical",
+    "sub": "embryology"
+  },
+  
+  {
+    "q": "What is the primary reason for performing a 'Chest Lordotic View'? / 'चेस्ट लॉर्डोटिक व्यू' (Lordotic View) करने का प्राथमिक कारण क्या है?",
+    "o": ["To see the heart better", "To visualize the lung apices without clavicle interference | फेफड़ों के ऊपरी हिस्से (Apices) को देखना", "To see ribs", "To check the stomach"],
+    "a": 1,
+    "e": "The lordotic view moves the clavicles (beauty bones) upward to provide a clear view of the lung apices, often to detect TB or tumors. [cite: 8]",
+    "cat": "technical",
+    "sub": "radiology"
+  },
+  {
+    "q": "A 'Lateral Decubitus' view of the abdomen is primarily used to detect: / पेट का 'लैटरल डिकुबिटस' (Lateral Decubitus) व्यू मुख्य रूप से क्या पता लगाने के लिए किया जाता है?",
+    "o": ["Bone fractures", "Air-fluid levels or free intraperitoneal air | हवा और तरल का स्तर", "Skin color", "Muscle growth"],
+    "a": 1,
+    "e": "This view is used when a patient cannot stand, helping to identify free air (pneumoperitoneum) or fluid levels. [cite: 8]",
+    "cat": "technical",
+    "sub": "radiology"
+  },
+  {
+    "q": "In a 'Left Lateral Decubitus' position, the patient is lying on their: / 'लेफ्ट लैटरल डिकुबिटस' स्थिति में, रोगी अपनी किस तरफ लेटा होता है?",
+    "o": ["Back", "Left side | बाईं करवट", "Right side", "Stomach"],
+    "a": 1,
+    "e": "The view is named after the side the patient is lying on. In this case, the left side is down. [cite: 8]",
+    "cat": "technical",
+    "sub": "radiology"
+  },
+  {
+    "q": "Which type of radiation effect is 'probability-based' and has no threshold dose? / किस प्रकार का विकिरण प्रभाव 'संभावना' पर आधारित है और इसकी कोई सीमा (threshold) नहीं है?",
+    "o": ["Deterministic effect", "Stochastic effect | स्टोकेस्टिक प्रभाव", "Acute effect", "None"],
+    "a": 1,
+    "e": "Stochastic effects, like cancer or genetic mutations, can occur at any dose level; higher dose only increases the probability. [cite: 8]",
+    "cat": "technical",
+    "sub": "radiology"
+  },
+  {
+    "q": "Radiation-induced 'Cataracts' or 'Skin Erythema' (redness) are examples of: / विकिरण के कारण 'मोतियाबिंद' या 'त्वचा की लालिमा' किसके उदाहरण हैं?",
+    "o": ["Stochastic effects", "Deterministic (Non-stochastic) effects | डिटरमिनिस्टिक प्रभाव", "Genetic effects", "None"],
+    "a": 1,
+    "e": "Deterministic effects occur only after reaching a certain threshold dose and their severity increases with the dose. [cite: 8]",
+    "cat": "technical",
+    "sub": "radiology"
+  },
+  {
+    "q": "Which cells in the human body are most sensitive to radiation? / मानव शरीर की कौन सी कोशिकाएं विकिरण के प्रति सबसे अधिक संवेदनशील होती हैं?",
+    "o": ["Nerve cells", "Rapidly dividing cells (Lymphocytes/Bone marrow) | तेजी से विभाजित होने वाली कोशिकाएं", "Muscle cells", "Bone cells"],
+    "a": 1,
+    "e": "According to Bergonie-Tribondeau law, highly metabolic and rapidly dividing cells are most radiosensitive. [cite: 8, 103]",
+    "cat": "technical",
+    "sub": "physiology"
+  },
+  {
+    "q": "The 'Direct Action' of radiation on cells involves damage to: / कोशिकाओं पर विकिरण की 'प्रत्यक्ष क्रिया' (Direct Action) में किसे नुकसान पहुँचता है?",
+    "o": ["Water molecules", "DNA molecule | डीएनए (DNA) अणु", "Cell wall only", "Cytoplasm only"],
+    "a": 1,
+    "e": "Direct action occurs when radiation directly hits and breaks the DNA strands. [cite: 8]",
+    "cat": "technical",
+    "sub": "radiology"
+  },
+  {
+    "q": "The 'Indirect Action' of radiation involves the production of: / विकिरण की 'अप्रत्यक्ष क्रिया' (Indirect Action) में किसका उत्पादन शामिल है?",
+    "o": ["New cells", "Free radicals (from water) | फ्री रेडिकल्स", "Vitamins", "Heat"],
+    "a": 1,
+    "e": "Radiation ionizes water molecules in the cell, creating free radicals that subsequently damage DNA. [cite: 8, 167]",
+    "cat": "technical",
+    "sub": "radiology"
+  },
+  {
+    "q": "A 'Stochastic' effect like Cancer usually has a: / कैंसर जैसा 'स्टोकेस्टिक' प्रभाव आमतौर पर कैसा होता है?",
+    "o": ["Short latency period", "Long latency period (years) | लंबी लेटेंसी अवधि (वर्षों में)", "Immediate onset", "None"],
+    "a": 1,
+    "e": "Cancer caused by radiation often takes many years to manifest after the initial exposure. [cite: 8]",
+    "cat": "technical",
+    "sub": "radiology"
+  },
+  {
+    "q": "Which radiographic position is best for detecting a small 'Pleural Effusion'? / कम मात्रा में 'प्लुरल एफ्यूजन' (फेफड़ों में पानी) का पता लगाने के लिए कौन सी स्थिति सबसे अच्छी है?",
+    "o": ["Supine Chest", "Lateral Decubitus (affected side down) | लैटरल डिकुबिटस", "PA Chest", "Lordotic"],
+    "a": 1,
+    "e": "Gravity causes the fluid to accumulate along the lower side, making even small amounts visible. [cite: 8]",
+    "cat": "technical",
+    "sub": "radiology"
+  },
+  {
+    "q": "What is the main advantage of an 'Automatic Processor' over manual processing? / मैनुअल की तुलना में 'ऑटोमैटिक प्रोसेसर' का मुख्य लाभ क्या है?",
+    "o": ["Cheaper chemicals", "Faster processing and consistency | तेज प्रोसेसिंग और निरंतरता", "Uses no water", "None"],
+    "a": 1,
+    "e": "Automatic processors can develop, fix, and dry a film in 90 seconds with standardized results.",
+    "cat": "technical",
+    "sub": "radiology"
+  },
+  {
+    "q": "What is 'Replenishment' in an automatic film processor? / ऑटोमैटिक फिल्म प्रोसेसर में 'रेप्लेनिशमेंट' (Replenishment) क्या है?",
+    "o": ["Changing the light", "Adding fresh chemicals to maintain strength | रसायनों की पुनः पूर्ति", "Cleaning the rollers", "None"],
+    "a": 1,
+    "e": "As films are processed, chemicals get used up; replenishment pumps add fresh developer and fixer automatically.",
+    "cat": "technical",
+    "sub": "radiology"
+  },
+  {
+    "q": "Which component of the automatic processor moves the film through the tanks? / ऑटोमैटिक प्रोसेसर का कौन सा घटक टैंकों के माध्यम से फिल्म को घुमाता है?",
+    "o": ["Laser", "Roller System | रोलर सिस्टम", "Heater", "Water pump"],
+    "a": 1,
+    "e": "The transport system consists of rollers that move the film at a constant speed.",
+    "cat": "technical",
+    "sub": "radiology"
+  },
+  {
+    "q": "In automatic processing, the 'Dryer Section' uses: / ऑटोमैटिक प्रोसेसिंग में, 'ड्रायर सेक्शन' किसका उपयोग करता है?",
+    "o": ["Cold water", "Heated high-velocity air | गर्म हवा", "Steam", "Vacuum"],
+    "a": 1,
+    "e": "Hot air is blown over both sides of the film to remove all moisture before it exits.",
+    "cat": "technical",
+    "sub": "radiology"
+  },
+  {
+    "q": "What happens if the 'Replenishment Rate' is too low? / यदि 'रेप्लेनिशमेंट दर' बहुत कम हो तो क्या होगा?",
+    "o": ["Darker films", "Loss of contrast and thin (light) images | कंट्रास्ट की कमी और हल्की इमेज", "Fast drying", "None"],
+    "a": 1,
+    "e": "Exhausted chemicals cannot develop the film properly, leading to poor quality images.",
+    "cat": "technical",
+    "sub": "radiology"
+  },
+  {
+    "q": "Why is the 'Developer' temperature kept higher in automatic processors than manual? / ऑटोमैटिक प्रोसेसर में डेवलपर का तापमान मैनुअल की तुलना में अधिक क्यों रखा जाता है?",
+    "o": ["To save water", "To speed up the chemical reaction | रासायनिक प्रतिक्रिया को तेज करने के लिए", "To prevent static", "None"],
+    "a": 1,
+    "e": "High temperature (approx. 35°C) allows for very rapid development of the latent image.",
+    "cat": "technical",
+    "sub": "radiology"
+  },
+  {
+    "q": "What is the function of 'Hardener' in the automatic developer? / ऑटोमैटिक डेवलपर में 'हार्डनर' (Hardener) का क्या कार्य है?",
+    "o": ["To make film black", "To prevent excessive swelling of emulsion | इमल्शन को अधिक फूलने से रोकना", "To clean rollers", "None"],
+    "a": 1,
+    "e": "Hardeners (like Glutaraldehyde) prevent the film from getting stuck or damaged in the rollers.",
+    "cat": "technical",
+    "sub": "radiology"
+  },
+  {
+    "q": "Which artifact is specifically caused by dirty rollers in an automatic processor? / ऑटोमैटिक प्रोसेसर में गंदे रोलर्स के कारण कौन सा आर्टिफैक्ट होता है?",
+    "o": ["Static marks", "Pi Lines (repeating marks) | पाई लाइन्स (Pi Lines)", "Half-moon marks", "Fogging"],
+    "a": 1,
+    "e": "Pi lines appear at regular intervals corresponding to the circumference of the dirty roller.",
+    "cat": "technical",
+    "sub": "radiology"
+  },
+  {
+    "q": "The 'Recirculation System' in a processor helps to: / प्रोसेसर में 'रीसर्कुलेशन सिस्टम' क्या मदद करता है?",
+    "o": ["Save electricity", "Mix chemicals and maintain temperature | रसायनों को मिलाना और तापमान बनाए रखना", "Dry the film", "None"],
+    "a": 1,
+    "e": "It keeps the chemicals agitated and ensures uniform temperature throughout the tank.",
+    "cat": "technical",
+    "sub": "radiology"
+  },
+  {
+    "q": "What is the primary biological effect of ionizing radiation on human cells? / मानव कोशिकाओं पर आयनकारी विकिरण का प्राथमिक जैविक प्रभाव क्या है?",
+    "o": ["Instant growth", "DNA Damage | डीएनए (DNA) क्षति", "Improved vision", "None"],
+    "a": 1,
+    "e": "Radiation can break DNA strands, leading to cell death or mutations (stochastic/deterministic effects).",
+    "cat": "technical",
+    "sub": "radiology"
+  },
+  {
+    "q": "What causes 'Static Marks' (tree-like black streaks) on a radiographic film? / रेडियोग्राफिक फिल्म पर 'स्टैटिक मार्क्स' (पेड़ जैसी काली धारियां) का क्या कारण है?",
+    "o": ["High humidity", "Low humidity and friction | कम आर्द्रता और घर्षण", "Dirty chemicals", "Light leak"],
+    "a": 1,
+    "e": "Static electricity builds up in very dry environments, especially when films are pulled quickly from the box or cassette.",
+    "cat": "technical",
+    "sub": "radiology"
+  },
+  {
+    "q": "A 'Crescent Mark' (half-moon shaped white/black mark) is caused by: / 'क्रिसेंट मार्क' (आधे चाँद के आकार का निशान) किसके कारण होता है?",
+    "o": ["Light leak", "Kinking or bending the film | फिल्म का मुड़ना या झुकना", "Over-development", "Old fixer"],
+    "a": 1,
+    "e": "Bending the film sharply before or after exposure damages the emulsion, causing these marks.",
+    "cat": "technical",
+    "sub": "radiology"
+  },
+  {
+    "q": "What is 'Radiographic Density'? / 'रेडियोग्राफिक डेंसिटी' (Radiographic Density) क्या है?",
+    "o": ["Image sharpness", "Overall blackening of the film | फिल्म का कुल कालापन", "Difference in colors", "Weight of film"],
+    "a": 1,
+    "e": "Density refers to the degree of darkness or blackness on the processed radiograph.",
+    "cat": "technical",
+    "sub": "radiology"
+  },
+  {
+    "q": "Which factor is the primary controller of 'Radiographic Contrast'? / 'रेडियोग्राफिक कंट्रास्ट' का प्राथमिक नियंत्रक कौन सा कारक है?",
+    "o": ["mA", "kVp | केवीप (kVp)", "Exposure time", "Focal spot size"],
+    "a": 1,
+    "e": "kVp controls the energy of the beam; high kVp results in low contrast (more grays), low kVp results in high contrast.",
+    "cat": "technical",
+    "sub": "radiology"
+  },
+  {
+    "q": "How does increasing the 'SID' (Source to Image Distance) affect image detail? / 'SID' बढ़ाने से इमेज डिटेल पर क्या प्रभाव पड़ता है?",
+    "o": ["Decreases detail", "Increases detail (reduces penumbra) | डिटेल बढ़ती है", "Makes it blurry", "No effect"],
+    "a": 1,
+    "e": "A longer SID reduces geometric unsharpness (penumbra), leading to better recorded detail.",
+    "cat": "technical",
+    "sub": "radiology"
+  },
+  {
+    "q": "What is the result of using a 'Large Focal Spot Size' (FSS)? / 'बड़े फोकल स्पॉट साइज' (FSS) के उपयोग का क्या परिणाम होता है?",
+    "o": ["Better sharpness", "Increased geometric blur (unsharpness) | ज्योमेट्रिक धुंधलापन", "Lower dose", "Darker image"],
+    "a": 1,
+    "e": "A smaller focal spot is always preferred for better image detail and sharpness.",
+    "cat": "technical",
+    "sub": "radiology"
+  },
+  {
+    "q": "The 'OID' (Object to Image Distance) should be kept: / 'OID' (वस्तु से इमेज की दूरी) को कैसा रखा जाना चाहिए?",
+    "o": ["As large as possible", "As small as possible | जितना संभव हो उतना कम", "10 feet", "None"],
+    "a": 1,
+    "e": "Keeping the patient as close to the film as possible reduces magnification and blurring.",
+    "cat": "technical",
+    "sub": "radiology"
+  },
+  {
+    "q": "What causes 'Scratches' (white lines) on a processed film? /Processed फिल्म पर 'खरोंच' (सफेद रेखाएं) का क्या कारण है?",
+    "o": ["Soft emulsion damaged by rollers or nails | रोलर्स या नाखूनों द्वारा इमल्शन का खराब होना", "Light exposure", "High kVp", "Fixer too strong"],
+    "a": 0,
+    "e": "Physical handling of wet or soft emulsion leads to permanent scratches and loss of image data.",
+    "cat": "technical",
+    "sub": "radiology"
+  },
+  {
+    "q": "Which factor primarily controls 'Image Density'? / 'इमेज डेंसिटी' को मुख्य रूप से कौन सा कारक नियंत्रित करता है?",
+    "o": ["kVp", "mAs (mA x Time) | एमएएस (mAs)", "SID", "Grid ratio"],
+    "a": 1,
+    "e": "mAs controls the total number of photons produced, which directly affects the blackening of the film.",
+    "cat": "technical",
+    "sub": "radiology"
+  },
+  {
+    "q": "What is 'Penumbra' in radiography? / रेडियोग्राफी में 'पेनम्ब्रा' (Penumbra) क्या है?",
+    "o": ["Perfect sharpness", "Geometric unsharpness at the edges | किनारों पर ज्योमेट्रिक धुंधलापन", "Total darkness", "A type of film"],
+    "a": 1,
+    "e": "Penumbra is the fuzzy, blurry edge of an image caused by the focal spot size and distances.",
+    "cat": "technical",
+    "sub": "radiology"
+  },
+  {
+    "q": "What is the main reducing agent in the 'Developer' solution? / 'डेवलपर' समाधान में मुख्य रिड्यूसिंग एजेंट क्या है?",
+    "o": ["Water", "Hydroquinone and Metol | हाइड्रोक्विनोन और मेटोल", "Acetic acid", "Silver nitrate"],
+    "a": 1,
+    "e": "These chemicals reduce the latent image on the film into visible black metallic silver[cite: 195].",
+    "cat": "technical",
+    "sub": "radiology"
+  },
+  {
+    "q": "The 'Clearing time' in the dark room refers to: / डार्क रूम में 'क्लियरिंग टाइम' (Clearing time) का तात्पर्य है:",
+    "o": ["Time to wash", "Time taken by fixer to remove unexposed silver | फिक्सर द्वारा सिल्वर हटाने का समय", "Developing time", "Drying time"],
+    "a": 1,
+    "e": "It is the time required for the fixer to remove the milky appearance from the film.",
+    "cat": "technical",
+    "sub": "radiology"
+  },
+  {
+    "q": "Why is 'Acetic Acid' added to the Fixer solution? / फिक्सर समाधान में 'एसिटिक एसिड' क्यों मिलाया जाता है?",
+    "o": ["To clean the film", "To neutralize the alkaline developer | क्षारीय डेवलपर को बेअसर करना", "To darken the image", "To save water"],
+    "a": 1,
+    "e": "It acts as a stop bath, halting the development process immediately.",
+    "cat": "technical",
+    "sub": "radiology"
+  },
+  {
+    "q": "Which 'Safelight' filter is used for green-sensitive (orthochromatic) films? / ग्रीन-सेंसिटिव फिल्मों के लिए कौन सा 'सेफलाइट' फिल्टर उपयोग किया जाता है?",
+    "o": ["Green filter", "Red filter (GBX-2) | लाल फिल्टर", "Blue filter", "No filter"],
+    "a": 1,
+    "e": "Red light is outside the sensitivity range of most radiographic films, preventing fogging.",
+    "cat": "technical",
+    "sub": "radiology"
+  },
+  {
+    "q": "What causes 'Film Fog' in the dark room? / डार्क रूम में 'फिल्म फॉग' (Film Fog) का कारण क्या है?",
+    "o": ["Clean water", "Stray light or expired chemicals | आवारा प्रकाश या पुराने रसायन", "Good ventilation", "Lead aprons"],
+    "a": 1,
+    "e": "Fogging reduces image contrast and is caused by light leaks or high chemical temperature.",
+    "cat": "technical",
+    "sub": "radiology"
+  },
+  {
+    "q": "The 'Distance' part of radiation protection states that intensity decreases by: / विकिरण सुरक्षा का 'दूरी' भाग कहता है कि तीव्रता कम होती है:",
+    "o": ["Half", "Inverse square of the distance | दूरी के व्युत्क्रम वर्ग से", "Distance x 2", "None"],
+    "a": 1,
+    "e": "Increasing distance is the most effective way to reduce personal radiation dose.",
+    "cat": "technical",
+    "sub": "radiology"
+  },
+  {
+    "q": "What is the purpose of 'Final Washing' in film processing? / फिल्म प्रोसेसिंग में 'अंतिम धुलाई' का उद्देश्य क्या है?",
+    "o": ["To cool the film", "To remove all residual chemicals (fixer) | बचे हुए रसायनों को हटाना", "To make it shiny", "None"],
+    "a": 1,
+    "e": "If fixer is not washed off, the film will turn brown and fade over time.",
+    "cat": "technical",
+    "sub": "radiology"
+  },
+  {
+    "q": "Which device is used to measure a technician's cumulative radiation dose? / तकनीशियन की संचयी विकिरण खुराक मापने के लिए किस उपकरण का उपयोग किया जाता है?",
+    "o": ["Thermometer", "TLD Badge (Thermo-luminescent Dosimeter) | टीएलडी बैज", "Stethoscope", "X-ray tube"],
+    "a": 1,
+    "e": "TLD badges are sent for analysis periodically to ensure staff safety.",
+    "cat": "technical",
+    "sub": "radiology"
+  },
+  {
+    "q": "A 'Grid' is used in radiography to: / रेडियोग्राफी में 'ग्रिड' (Grid) का उपयोग किया जाता है:",
+    "o": ["Increase dose", "Reduce scatter radiation reaching the film | स्कैटर रेडिएशन को कम करना", "Hold the film", "Cool the patient"],
+    "a": 1,
+    "e": "Grids improve image contrast by absorbing scattered photons from the patient[cite: 207].",
+    "cat": "technical",
+    "sub": "radiology"
+  },
+  {
+    "q": "The 'Latent Image' is formed in which layer of the radiographic film? / रेडियोग्राफिक फिल्म की किस परत में 'गुप्त छवि' (Latent Image) बनती है?",
+    "o": ["Plastic base", "Emulsion layer (Silver halide) | इमल्शन परत", "Protective coat", "Adhesive layer"],
+    "a": 1,
+    "e": "The emulsion contains radiation-sensitive crystals that store the image before processing[cite: 195].",
+    "cat": "technical",
+    "sub": "radiology"
+  },
+  {
+    "q": "What is the specific instruction for a patient before a 'Barium Meal' examination? / 'बेरियम मील' परीक्षण से पहले रोगी के लिए विशिष्ट निर्देश क्या है?",
+    "o": ["Drink plenty of water", "Fasting for at least 6-8 hours (NPO) | कम से कम 6-8 घंटे उपवास", "Eat a heavy meal", "Take laxatives"],
+    "a": 1,
+    "e": "The stomach must be empty to allow the barium to coat the mucosal lining clearly [cite: 204-205].",
+    "cat": "technical",
+    "sub": "radiology"
+  },
+  {
+    "q": "In a 'Trauma' chest X-ray, which position is used if the patient cannot stand? / यदि रोगी खड़ा नहीं हो सकता, तो 'ट्रॉमा' चेस्ट एक्स-रे में किस स्थिति का उपयोग किया जाता है?",
+    "o": ["PA View", "Supine AP View | सुपाइन एपी (AP) व्यू", "Erect PA", "Oblique"],
+    "a": 1,
+    "e": "Stable or critically ill patients are often imaged in the supine position (on their back) for safety [cite: 200-201].",
+    "cat": "technical",
+    "sub": "radiology"
+  },
+  {
+    "q": "Which contrast agent is used in 'GIT' studies like Ba Meal and Ba Enema? / Ba Meal और Ba Enema जैसे GIT अध्ययनों में कौन सा कंट्रास्ट एजेंट उपयोग किया जाता है?",
+    "o": ["Iodine", "Barium Sulphate | बेरियम सल्फेट", "Air only", "Water"],
+    "a": 1,
+    "e": "Barium Sulphate is a radio-opaque suspension that provides high contrast for the digestive tract [cite: 204-205].",
+    "cat": "technical",
+    "sub": "radiology"
+  },
+  {
+    "q": "What is the primary sign of 'Heart Failure' on a chest X-ray? / चेस्ट एक्स-रे पर 'हार्ट फेल्योर' का प्राथमिक लक्षण क्या है?",
+    "o": ["Small heart", "Cardiomegaly (Enlarged heart) | कार्डियोमेगाली (बड़ा हृदय)", "Clear lungs", "Broken ribs"],
+    "a": 1,
+    "e": "An increased cardiothoracic ratio (heart size) is a key finding in CVS diseases[cite: 202].",
+    "cat": "technical",
+    "sub": "radiology"
+  },
+  {
+    "q": "Which study is performed to visualize the 'Duodenum'? / 'डुओडेनम' (ग्रहणी) को देखने के लिए कौन सा अध्ययन किया जाता है?",
+    "o": ["Ba Swallow", "Ba Meal | बेरियम मील (Ba Meal)", "Ba Enema", "Chest X-ray"],
+    "a": 1,
+    "e": "Barium Meal covers the stomach and the first part of the small intestine (duodenum) [cite: 204-205].",
+    "cat": "technical",
+    "sub": "radiology"
+  },
+  {
+    "q": "For an 'AP View' of the heart, the X-ray beam enters from: / हृदय के 'AP व्यू' के लिए, एक्स-रे बीम कहाँ से प्रवेश करती है?",
+    "o": ["The back", "The front (Anterior) | सामने (Anterior) से", "The side", "The top"],
+    "a": 1,
+    "e": "In Antero-posterior (AP) view, the beam enters from the front and exits through the back[cite: 202].",
+    "cat": "technical",
+    "sub": "radiology"
+  },
+  {
+    "q": "The 'Plain Abdomen' X-ray is often used to detect: / 'सादा पेट' एक्स-रे अक्सर किसका पता लगाने के लिए किया जाता है?",
+    "o": ["Brain tumor", "Intestinal obstruction or stones | आंतों में रुकावट या पथरी", "Pneumonia", "Heart rate"],
+    "a": 1,
+    "e": "It helps identify gas patterns, calcifications, and signs of obstruction[cite: 204].",
+    "cat": "technical",
+    "sub": "radiology"
+  },
+  {
+    "q": "What is 'Double Contrast' study in GIT radiography? / GIT रेडियोग्राफी में 'डबल कंट्रास्ट' अध्ययन क्या है?",
+    "o": ["Two doses of barium", "Use of Barium and Air together | बेरियम और हवा का एक साथ उपयोग", "Two X-rays", "None"],
+    "a": 1,
+    "e": "Air is used along with barium to provide better detail of the mucosal surface.",
+    "cat": "technical",
+    "sub": "radiology"
+  },
+  {
+    "q": "In chest trauma, 'Rib fractures' are best visualized in which view? / चेस्ट ट्रॉमा में, 'पसलियों के फ्रैक्चर' किस व्यू में सबसे अच्छे दिखाई देते हैं?",
+    "o": ["PA Chest", "Oblique Rib views | ऑब्लिक (Oblique) रिब व्यू", "Lateral heart", "Supine"],
+    "a": 1,
+    "e": "Specialized rib views provide the best angle to see fractures that might be hidden in PA view[cite: 200].",
+    "cat": "technical",
+    "sub": "radiology"
+  },
+  {
+    "q": "A 'Gastrografin' swallow is used instead of Barium if: / बेरियम के बजाय 'गैस्ट्रोग्राफिन' स्वेलो का उपयोग किया जाता है यदि:",
+    "o": ["Patient is old", "Perforation is suspected | वेध (perforation) का संदेह हो", "Patient likes the taste", "None"],
+    "a": 1,
+    "e": "Gastrografin is water-soluble and safer if it leaks into the body cavity compared to barium.",
+    "cat": "technical",
+    "sub": "radiology"
+  },
+  {
+    "q": "What is the primary function of a 'Safelight' in a dark room? / डार्क रूम में 'सेफलाइट' (Safelight) का प्राथमिक कार्य क्या है?",
+    "o": ["To provide bright light", "To provide illumination without fogging the film | फिल्म को खराब किए बिना प्रकाश", "To heat the room", "None"],
+    "a": 1,
+    "e": "Safelights use filters (usually dark red) to allow the technician to see without exposing the film.",
+    "cat": "technical",
+    "sub": "radiology"
+  },
+  {
+    "q": "The 'Developer' solution in film processing is used to: / फिल्म प्रोसेसिंग में 'डेवलपर' (Developer) समाधान का उपयोग किया जाता है:",
+    "o": ["Wash the film", "Convert latent image to visible image | गुप्त छवि को दृश्य छवि में बदलना", "Dry the film", "Protect from light"],
+    "a": 1,
+    "e": "The developer reduces exposed silver halide crystals into metallic silver.",
+    "cat": "technical",
+    "sub": "radiology"
+  },
+  {
+    "q": "What is the role of 'Fixer' in the dark room technique? / डार्क रूम तकनीक में 'फिक्सर' (Fixer) की क्या भूमिका है?",
+    "o": ["To make the film wet", "To remove unexposed crystals and permanentize the image | छवि को स्थायी बनाना", "To add color", "None"],
+    "a": 1,
+    "e": "The fixer clears the film of undeveloped silver halide and hardens the emulsion.",
+    "cat": "technical",
+    "sub": "radiology"
+  },
+  {
+    "q": "Radiation 'Protection' for staff includes which of the following? / कर्मचारियों के लिए विकिरण 'सुरक्षा' (Protection) में निम्नलिखित में से क्या शामिल है?",
+    "o": ["Sunglasses", "Lead Aprons and TLD badges | लेड एप्रन और टीएलडी बैज", "Paper masks", "None"],
+    "a": 1,
+    "e": "Lead aprons block scatter radiation, and TLD badges monitor occupational dose[cite: 192].",
+    "cat": "technical",
+    "sub": "radiology"
+  },
+  {
+    "q": "Why must a dark room be 'light-tight'? / एक डार्क रूम 'लाइट-टाइट' (light-tight) क्यों होना चाहिए?",
+    "o": ["To keep it cool", "To prevent unwanted exposure/fogging of films | फिल्मों को खराब होने से बचाने के लिए", "To save electricity", "None"],
+    "a": 1,
+    "e": "Any stray light can ruin unexposed radiographic films.",
+    "cat": "technical",
+    "sub": "radiology"
+  },
+  {
+    "q": "What is the standard order of manual film processing? / मैनुअल फिल्म प्रोसेसिंग का मानक क्रम क्या है?",
+    "o": ["Fixing -> Developing -> Washing", "Developing -> Rinsing -> Fixing -> Washing -> Drying | डेवलपर -> रिंसिंग -> फिक्सर -> वाशिंग -> ड्राइंग", "Drying -> Fixing -> Developing", "None"],
+    "a": 1,
+    "e": "The film must follow a specific sequence of chemicals to produce a permanent image.",
+    "cat": "technical",
+    "sub": "radiology"
+  },
+  {
+    "q": "The 'Intensifying Screen' inside an X-ray cassette is used to: / एक्स-रे कैसेट के अंदर 'इंटेन्सिफाइंग स्क्रीन' का उपयोग किया जाता है:",
+    "o": ["Make the cassette heavy", "Reduce patient dose by converting X-rays to light | मरीज की डोज़ कम करना", "Filter the beam", "None"],
+    "a": 1,
+    "e": "The screen glows (phosphorescence) when hit by X-rays, exposing the film more efficiently.",
+    "cat": "technical",
+    "sub": "radiology"
+  },
+  {
+    "q": "Which material is used in the walls of an X-ray room for 'Protection'? / 'सुरक्षा' के लिए एक्स-रे रूम की दीवारों में किस सामग्री का उपयोग किया जाता है?",
+    "o": ["Wood", "Lead lining or thick concrete | लेड लाइनिंग या कंक्रीट", "Glass", "Plastic"],
+    "a": 1,
+    "e": "Lead is highly effective at absorbing X-rays and preventing radiation leakage[cite: 192].",
+    "cat": "technical",
+    "sub": "radiology"
+  },
+  {
+    "q": "What happens if the 'Developer' temperature is too high? / यदि 'डेवलपर' का तापमान बहुत अधिक हो तो क्या होगा?",
+    "o": ["Film stays clear", "Over-development or chemical fog | ओवर-डेवलपमेंट", "Film dries faster", "None"],
+    "a": 1,
+    "e": "Chemical activity increases with temperature, leading to excessive darkening of the film.",
+    "cat": "technical",
+    "sub": "radiology"
+  },
+  {
+    "q": "Which rule is fundamental to radiation protection? / विकिरण सुरक्षा के लिए कौन सा नियम मौलिक है?",
+    "o": ["ALARA (As Low As Reasonably Achievable) | एलारा (ALARA)", "Always use high dose", "No protection needed", "None"],
+    "a": 0,
+    "e": "ALARA principle ensures radiation exposure is kept to the absolute minimum required.",
+    "cat": "technical",
+    "sub": "radiology"
+  },
+  {
+    "q": "Which radiographic view is most commonly used to visualize the heart and lungs in a stable patient? / स्थिर रोगी में हृदय और फेफड़ों को देखने के लिए आमतौर पर किस रेडियोग्राफिक व्यू का उपयोग किया जाता है?",
+    "o": ["AP View", "PA View | पीए (PA) व्यू", "Lateral View", "Oblique View"],
+    "a": 1,
+    "e": "Postero-anterior (PA) view reduces heart magnification, providing a clearer image of the chest and CVS[cite: 200, 202].",
+    "cat": "technical",
+    "sub": "radiology"
+  },
+  {
+    "q": "What is the primary purpose of a 'Barium Swallow' (Ba Swallow)? / 'बेरियम स्वेलो' (Ba Swallow) का प्राथमिक उद्देश्य क्या है?",
+    "o": ["To study the stomach", "To visualize the esophagus | ग्रासनली (Esophagus) को देखना", "To study the colon", "To check kidneys"],
+    "a": 1,
+    "e": "Barium swallow is used to examine the anatomy and function of the esophagus[cite: 204].",
+    "cat": "technical",
+    "sub": "radiology"
+  },
+  {
+    "q": "Which view is essential to detect 'Pneumoperitoneum' (free air) in a plain abdomen X-ray? / सादे पेट के एक्स-रे में 'न्यूमोपेरिटोनियम' (मुक्त हवा) का पता लगाने के लिए कौन सा व्यू आवश्यक है?",
+    "o": ["Supine", "Erect (Upright) | सीधा (Erect) खड़ा होना", "Prone", "Lateral recumbent"],
+    "a": 1,
+    "e": "An erect abdomen film allows free air to rise under the diaphragm, indicating trauma or perforation[cite: 204].",
+    "cat": "technical",
+    "sub": "radiology"
+  },
+  {
+    "q": "In CVS radiography, why is a 'Lateral View' of the chest taken? / CVS रेडियोग्राफी में, छाती का 'लैटरल व्यू' क्यों लिया जाता है?",
+    "o": ["To see the ribs only", "To evaluate the retrocardiac space and heart size | हृदय के आकार का मूल्यांकन", "To see the lungs better", "None"],
+    "a": 1,
+    "e": "Lateral view helps in assessing the depth of the heart and identifying specific chamber enlargements[cite: 202].",
+    "cat": "technical",
+    "sub": "radiology"
+  },
+  {
+    "q": "A 'Barium Enema' is used to visualize which part of the digestive system? / 'बेरियम एनीमा' का उपयोग पाचन तंत्र के किस भाग को देखने के लिए किया जाता है?",
+    "o": ["Stomach", "Large Intestine (Colon) | बड़ी आंत (Colon)", "Small Intestine", "Throat"],
+    "a": 1,
+    "e": "Barium enema is a contrast study for the colon and ileo-caecal junction[cite: 205].",
+    "cat": "technical",
+    "sub": "radiology"
+  },
+  {
+    "q": "What is 'Barium Meal' (Ba Meal) primarily used to study? / 'बेरियम मील' (Ba Meal) का मुख्य रूप से किसके अध्ययन के लिए उपयोग किया जाता है?",
+    "o": ["Lungs", "Stomach and Duodenum | पेट और ग्रहणी", "Heart", "Bladder"],
+    "a": 1,
+    "e": "Ba Meal involves drinking contrast to visualize the stomach and proximal small intestine[cite: 204].",
+    "cat": "technical",
+    "sub": "radiology"
+  },
+  {
+    "q": "Which radiographic sign is often looked for in a chest X-ray of a 'Trauma' patient? / 'ट्रॉमा' (आघात) रोगी के चेस्ट एक्स-रे में अक्सर कौन सा रेडियोग्राफिक संकेत देखा जाता है?",
+    "o": ["Pneumothorax | न्यूमोथोरैक्स (Pneumothorax)", "Bowel gas", "Gallstones", "Renal stones"],
+    "a": 0,
+    "e": "Trauma to the chest can lead to collapsed lungs (pneumothorax) or rib fractures[cite: 200].",
+    "cat": "technical",
+    "sub": "radiology"
+  },
+  {
+    "q": "For visualizing a 'Hiatus Hernia', which contrast study is most effective? / 'हायटस हर्निया' को देखने के लिए कौन सा कंट्रास्ट अध्ययन सबसे प्रभावी है?",
+    "o": ["Plain Chest X-ray", "Ba Meal (Stomach) | बेरियम मील (Ba Meal)", "Ba Enema", "KUB"],
+    "a": 1,
+    "e": "Ba Meal helps identify if the stomach has protruded through the diaphragm [cite: 204-205].",
+    "cat": "technical",
+    "sub": "radiology"
+  },
+  {
+    "q": "Why is the patient asked to 'hold their breath' during a chest X-ray? / चेस्ट एक्स-रे के दौरान मरीज को 'सांस रोकने' के लिए क्यों कहा जाता है?",
+    "o": ["To stay still only", "To ensure maximum inspiration and stop motion | अधिकतम श्वसन सुनिश्चित करना", "To reduce radiation", "None"],
+    "a": 1,
+    "e": "Holding breath in full inspiration expands the lungs and prevents blurring due to respiratory motion[cite: 200].",
+    "cat": "technical",
+    "sub": "radiology"
+  },
+  {
+    "q": "The study of the 'Ileo-caecal junction' is a part of: / 'इलियो-सेकल जंक्शन' का अध्ययन किसका हिस्सा है?",
+    "o": ["Ba Swallow", "Ba Meal / Ba Enema | बेरियम मील / बेरियम एनीमा", "Chest X-ray", "CVS X-ray"],
+    "a": 1,
+    "e": "This junction is evaluated during barium transit or enema studies[cite: 205].",
+    "cat": "technical",
+    "sub": "radiology"
+  },
+  {
+    "q": "Which artificial isotope is most commonly used for 'Thyroid' imaging and treatment? / 'थायराइड' इमेजिंग और उपचार के लिए आमतौर पर किस कृत्रिम आइसोटोप का उपयोग किया जाता है?",
+    "o": ["Technetium-99m", "Iodine-131 | आयोडीन-131", "Carbon-14", "Cobalt-60"],
+    "a": 1,
+    "e": "I-131 is used in radiology for its specific uptake by the thyroid gland[cite: 189, 192].",
+    "cat": "technical",
+    "sub": "radiology"
+  },
+  {
+    "q": "What is the physical half-life of 'Technetium-99m' (Tc-99m)? / 'टेक्नेटियम-99m' (Tc-99m) की भौतिक हाफ-लाइफ क्या है?",
+    "o": ["6 hours | 6 घंटे", "8 days", "30 years", "1 hour"],
+    "a": 0,
+    "e": "Tc-99m is widely used in medical imaging due to its ideal 6-hour half-life[cite: 188].",
+    "cat": "technical",
+    "sub": "radiology"
+  },
+  {
+    "q": "Which type of radiation emitted by isotopes is best for 'Imaging' from outside the body? / शरीर के बाहर से 'इमेजिंग' के लिए आइसोटोप द्वारा उत्सर्जित कौन सा विकिरण सबसे अच्छा है?",
+    "o": ["Alpha radiation", "Gamma radiation | गामा विकिरण", "Beta radiation", "None"],
+    "a": 1,
+    "e": "Gamma rays have high penetration power, allowing them to exit the patient and reach the detector[cite: 188, 197].",
+    "cat": "technical",
+    "sub": "radiology"
+  },
+  {
+    "q": "In the context of 'Radium', what is its approximate half-life? / 'रेडियम' के संदर्भ में, इसकी अनुमानित हाफ-लाइफ क्या है?",
+    "o": ["1600 years | 1600 वर्ष", "5 days", "10 minutes", "100 years"],
+    "a": 0,
+    "e": "Radium has a very long half-life, making its storage and protection critical over long periods[cite: 188].",
+    "cat": "technical",
+    "sub": "radiology"
+  },
+  {
+    "q": "Which isotope is commonly used in 'Brachytherapy' (cancer treatment)? / 'ब्रेकीथेरेपी' (कैंसर उपचार) में आमतौर पर किस आइसोटोप का उपयोग किया जाता है?",
+    "o": ["Oxygen-16", "Cobalt-60 or Iridium-192 | कोबाल्ट-60 या इरिडियम-192", "Nitrogen-14", "Hydrogen-1"],
+    "a": 1,
+    "e": "These isotopes provide intense radiation used to kill tumor cells in controlled dosages[cite: 192].",
+    "cat": "technical",
+    "sub": "radiology"
+  },
+  {
+    "q": "How does 'Artificial Radioactivity' differ from natural radioactivity? / 'कृत्रिम रेडियोधर्मिता' प्राकृतिक रेडियोधर्मिता से किस प्रकार भिन्न है?",
+    "o": ["It is weaker", "It is induced by humans (bombardment) | मनुष्यों द्वारा प्रेरित", "It is safe to touch", "None"],
+    "a": 1,
+    "e": "Artificial radioactivity involves creating unstable isotopes from stable elements in a lab or reactor[cite: 189].",
+    "cat": "technical",
+    "sub": "radiology"
+  },
+  {
+    "q": "Which particle is emitted when a radioactive element undergoes 'Alpha Decay'? / जब कोई रेडियोधर्मी तत्व 'अल्फा क्षय' से गुजरता है तो कौन सा कण उत्सर्जित होता है?",
+    "o": ["Electron", "Helium nucleus | हीलियम नाभिक", "Photon", "Proton only"],
+    "a": 1,
+    "e": "An alpha particle consists of two protons and two neutrons[cite: 188].",
+    "cat": "technical",
+    "sub": "radiology"
+  },
+  {
+    "q": "What is the primary role of 'Filters' in a radioactive isotope container? / रेडियोधर्मी आइसोटोप कंटेनर में 'फिल्टर' की प्राथमिक भूमिका क्या है?",
+    "o": ["To add energy", "To block unwanted low-energy radiation | अवांछित विकिरण को रोकना", "To keep it cold", "None"],
+    "a": 1,
+    "e": "Filters manage the dosage and protect against scatter radiation[cite: 192].",
+    "cat": "technical",
+    "sub": "radiology"
+  },
+  {
+    "q": "The 'Inverse Square Law' in radiation states that intensity: / विकिरण में 'व्युत्क्रम वर्ग नियम' (Inverse Square Law) कहता है कि तीव्रता:",
+    "o": ["Increases with distance", "Decreases as the square of the distance | दूरी के वर्ग के साथ कम होती है", "Stays the same", "None"],
+    "a": 1,
+    "e": "Doubling the distance from a radiation source reduces the intensity to one-fourth (1/4).",
+    "cat": "technical",
+    "sub": "radiology"
+  },
+  {
+    "q": "Which artificial isotope is used in 'PET scans'? / 'PET स्कैन' में किस कृत्रिम आइसोटोप का उपयोग किया जाता है?",
+    "o": ["Fluorine-18 (F-18) | फ्लोरीन-18", "Lead-210", "Uranium-238", "Iron-56"],
+    "a": 0,
+    "e": "F-18 is a positron emitter used in functional imaging for cancer and brain studies[cite: 189].",
+    "cat": "technical",
+    "sub": "radiology"
+  },
+  {
+    "q": "Which effect is primarily responsible for producing 'Contrast' in a diagnostic X-ray image? / डायग्नोस्टिक एक्स-रे इमेज में 'कंट्रास्ट' पैदा करने के लिए मुख्य रूप से कौन सा प्रभाव जिम्मेदार है?",
+    "o": ["Compton Scattering", "Photoelectric Effect | फोटोइलेक्ट्रिक प्रभाव", "Pair Production", "Coherent Scattering"],
+    "a": 1,
+    "e": "The photoelectric effect involves total absorption of the X-ray photon, which helps differentiate between bone and soft tissue[cite: 207].",
+    "cat": "technical",
+    "sub": "radiology"
+  },
+  {
+    "q": "What happens during 'Compton Scattering' in radiography? / रेडियोग्राफी में 'कॉम्पटन प्रकीर्णन' (Compton Scattering) के दौरान क्या होता है?",
+    "o": ["Total absorption", "Photon is deflected and loses some energy | फोटॉन विक्षेपित होता है", "No interaction", "Positron production"],
+    "a": 1,
+    "e": "In Compton scattering, an X-ray photon interacts with an outer-shell electron, resulting in scattered radiation and a recoil electron[cite: 207].",
+    "cat": "technical",
+    "sub": "radiology"
+  },
+  {
+    "q": "The 'Continuous X-ray Spectrum' is produced by which process? / 'सतत एक्स-रे स्पेक्ट्रम' (Continuous X-ray Spectrum) किस प्रक्रिया द्वारा निर्मित होता है?",
+    "o": ["Characteristic radiation", "Bremsstrahlung radiation | ब्रेम्सस्ट्रालुंग विकिरण", "Photoelectric effect", "Pair production"],
+    "a": 1,
+    "e": "Bremsstrahlung (braking radiation) creates a broad range of energies, forming a continuous spectrum[cite: 197].",
+    "cat": "technical",
+    "sub": "radiology"
+  },
+  {
+    "q": "At what energy level does 'Pair Production' typically occur? / 'पेयर प्रोडक्शन' आमतौर पर किस ऊर्जा स्तर पर होता है?",
+    "o": ["Below 10 keV", "Above 1.02 MeV | 1.02 MeV से ऊपर", "At 50 kVp", "None"],
+    "a": 1,
+    "e": "Pair production requires very high energy photons and is not relevant in diagnostic radiography[cite: 207].",
+    "cat": "technical",
+    "sub": "radiology"
+  },
+  {
+    "q": "Which type of X-ray spectrum consists of 'discrete' energy peaks? / किस प्रकार के एक्स-रे स्पेक्ट्रम में 'असतत' (discrete) ऊर्जा शिखर होते हैं?",
+    "o": ["Continuous spectrum", "Characteristic spectrum | विशिष्ट स्पेक्ट्रम", "Heat spectrum", "Visible light"],
+    "a": 1,
+    "e": "Characteristic X-rays have fixed energies specific to the target material's electron shells[cite: 197].",
+    "cat": "technical",
+    "sub": "radiology"
+  },
+  {
+    "q": "The probability of the 'Photoelectric Effect' increases as the: / 'फोटोइलेक्ट्रिक प्रभाव' की संभावना बढ़ जाती है जैसे ही:",
+    "o": ["kVp increases", "Atomic number (Z) of the material increases | सामग्री की परमाणु संख्या बढ़ती है", "kVp decreases only", "Density decreases"],
+    "a": 1,
+    "e": "Materials with higher atomic numbers, like bone, are more likely to absorb X-rays via the photoelectric effect[cite: 207].",
+    "cat": "technical",
+    "sub": "radiology"
+  },
+  {
+    "q": "What is 'Attenuated' radiation? / 'अटेंयूएटेड' (Attenuated) विकिरण क्या है?",
+    "o": ["Gained energy", "Reduction in beam intensity due to absorption/scatter | बीम की तीव्रता में कमी", "Visible light", "No change"],
+    "a": 1,
+    "e": "Attenuation is the total reduction in the number of X-ray photons in the beam as it passes through matter[cite: 207].",
+    "cat": "technical",
+    "sub": "radiology"
+  },
+  {
+    "q": "Which interaction is the main source of 'Occupational Dose' to the X-ray technician? / एक्स-रे तकनीशियन के 'व्यावसायिक जोखिम' (dose) का मुख्य स्रोत कौन सी परस्पर क्रिया है?",
+    "o": ["Photoelectric effect", "Compton scattering | कॉम्पटन प्रकीर्णन", "Coherent scattering", "Pair production"],
+    "a": 1,
+    "e": "Scattered photons from the patient (via Compton effect) are the primary source of radiation exposure to staff[cite: 207].",
+    "cat": "technical",
+    "sub": "radiology"
+  },
+  {
+    "q": "The 'Average' energy of an X-ray beam is approximately what fraction of the peak (kVp)? / एक एक्स-रे बीम की 'औसत' ऊर्जा पीक (kVp) का लगभग कितना हिस्सा होती है?",
+    "o": ["100%", "One-third (1/3) | एक-तिहाई", "Half (1/2)", "Two-thirds (2/3)"],
+    "a": 1,
+    "e": "Most photons in the continuous spectrum have energies significantly lower than the set kVp[cite: 197].",
+    "cat": "technical",
+    "sub": "radiology"
+  },
+  {
+    "q": "Why is 'Filtration' used to change the X-ray spectrum? / एक्स-रे स्पेक्ट्रम को बदलने के लिए 'निस्पंदन' (Filtration) का उपयोग क्यों किया जाता है?",
+    "o": ["To add soft rays", "To remove low-energy photons (Hardening) | कम ऊर्जा वाले फोटॉनों को हटाना", "To change color", "To stop cooling"],
+    "a": 1,
+    "e": "Filtration removes low-energy X-rays that would otherwise be absorbed by the patient's skin without contributing to the image[cite: 192, 198].",
+    "cat": "technical",
+    "sub": "radiology"
+  },
+  {
+    "q": "If a radioactive source has a half-life of 6 hours, how much activity remains after 12 hours? / यदि रेडियोधर्मी स्रोत की हाफ-लाइफ 6 घंटे है, तो 12 घंटे बाद कितनी गतिविधि बचेगी?",
+    "o": ["50%", "25% | 25 प्रतिशत", "0%", "75%"],
+    "a": 1,
+    "e": "After 2 half-lives (6+6=12 hours), the activity reduces to 1/2 of 1/2, which is 1/4 or 25%. [cite: 188]",
+    "cat": "technical",
+    "sub": "radiology"
+  },
+  {
+    "q": "Which unit is used to measure 'Radioactivity' (disintegrations per second)? / 'रेडियोधर्मिता' को मापने के लिए किस इकाई का उपयोग किया जाता है?",
+    "o": ["Roentgen", "Becquerel (Bq) | बेक्वेरल (Bq)", "Joule", "Ampere"],
+    "a": 1,
+    "e": "One Becquerel is defined as one nuclear disintegration per second. [cite: 187, 189]",
+    "cat": "technical",
+    "sub": "radiology"
+  },
+  {
+    "q": "The 'Radium series' ends when it decays into which stable element? / 'रेडियम श्रृंखला' किस स्थिर तत्व में क्षय होने पर समाप्त होती है?",
+    "o": ["Uranium", "Lead (Pb) | सीसा (Lead)", "Helium", "Carbon"],
+    "a": 1,
+    "e": "The natural radioactive series of radium eventually reaches a stable isotope of lead. [cite: 188]",
+    "cat": "technical",
+    "sub": "radiology"
+  },
+  {
+    "q": "What are 'Alpha particles' composed of? / 'अल्फा कण' (Alpha particles) किससे बने होते हैं?",
+    "o": ["Electrons", "2 Protons and 2 Neutrons | 2 प्रोटॉन और 2 न्यूट्रॉन", "Photons", "Hydrogen"],
+    "a": 1,
+    "e": "Alpha particles are helium nuclei emitted from unstable heavy atoms. [cite: 188]",
+    "cat": "technical",
+    "sub": "radiology"
+  },
+  {
+    "q": "What is the charge of a 'Gamma ray'? / 'गामा किरण' (Gamma ray) का आवेश क्या है?",
+    "o": ["Positive", "No charge (Neutral) | कोई आवेश नहीं", "Negative", "Variable"],
+    "a": 1,
+    "e": "Gamma rays are neutral electromagnetic radiation, not particles. [cite: 188]",
+    "cat": "technical",
+    "sub": "radiology"
+  },
+  {
+    "q": "Artificial isotopes like 'Technetium-99m' are used in imaging because: / इमेजिंग में 'टेक्नेटियम-99m' जैसे कृत्रिम आइसोटोप का उपयोग किया जाता है क्योंकि:",
+    "o": ["They last forever", "They have a short half-life and emit gamma | छोटी हाफ-लाइफ", "They are very heavy", "They are cheap"],
+    "a": 1,
+    "e": "Short half-life isotopes reduce radiation dose to the patient while providing clear images. [cite: 189, 192]",
+    "cat": "technical",
+    "sub": "radiology"
+  },
+  {
+    "q": "The process where an unstable nucleus loses energy by emitting radiation is: / वह प्रक्रिया जिसमें एक अस्थिर नाभिक विकिरण उत्सर्जित करके ऊर्जा खो देता है:",
+    "o": ["Ionization", "Radioactive Decay | रेडियोधर्मी क्षय", "Rectification", "Filtration"],
+    "a": 1,
+    "e": "This is the fundamental definition of radioactivity and unstable atoms. [cite: 188]",
+    "cat": "technical",
+    "sub": "radiology"
+  },
+  {
+    "q": "Which type of decay occurs when a neutron turns into a proton and emits an electron? / जब न्यूट्रॉन प्रोटॉन में बदल जाता है और इलेक्ट्रॉन उत्सर्जित करता है, तो कौन सा क्षय होता है?",
+    "o": ["Alpha decay", "Beta decay | बीटा क्षय (Beta decay)", "Gamma decay", "None"],
+    "a": 1,
+    "e": "Beta particles are high-speed electrons or positrons emitted during nuclear decay. [cite: 188]",
+    "cat": "technical",
+    "sub": "radiology"
+  },
+  {
+    "q": "The 'Lead container' used for radium storage is an example of: / रेडियम भंडारण के लिए उपयोग किया जाने वाला 'सीसा कंटेनर' किसका उदाहरण है?",
+    "o": ["Filtration", "Protection/Shielding | सुरक्षा/शील्डिंग", "Amplification", "Source"],
+    "a": 1,
+    "e": "Lead is a high-density material used to block harmful radioactive emissions. [cite: 192]",
+    "cat": "technical",
+    "sub": "radiology"
+  },
+  {
+    "q": "Radioactive 'Tracers' in imaging help to study: / इमेजिंग में रेडियोधर्मी 'ट्रेसर' किसके अध्ययन में मदद करते हैं?",
+    "o": ["Bone color", "Organ function and metabolism | अंग कार्य और चयापचय", "Patient height", "Room temperature"],
+    "a": 1,
+    "e": "Isotopes in imaging provide functional information rather than just structural details. [cite: 189]",
+    "cat": "technical",
+    "sub": "radiology"
+  },
+  {
+    "q": "Why is 'Copper' used in the anode body along with the Tungsten target? / टंगस्टन टारगेट के साथ एनोड बॉडी में 'कॉपर' का उपयोग क्यों किया जाता है?",
+    "o": ["To produce X-rays", "To dissipate heat quickly | गर्मी को जल्दी सोखने के लिए", "To filter rays", "To increase speed"],
+    "a": 1,
+    "e": "Copper is a great thermal conductor, helping to remove the 99% heat generated during X-ray production. [cite: 197]",
+    "cat": "technical",
+    "sub": "radiology"
+  },
+  {
+    "q": "The 'Line Focus Principle' is used in X-ray tubes to: / एक्स-रे ट्यूब में 'लाइन फोकस सिद्धांत' का उपयोग किया जाता है:",
+    "o": ["Increase radiation", "Reduce effective focal spot size | प्रभावी फोकल स्पॉट आकार कम करना", "Change gas", "Stop electricity"],
+    "a": 1,
+    "e": "It allows a large actual focal spot for heat loading while maintaining a small effective focal spot for image sharpness. [cite: 195]",
+    "cat": "technical",
+    "sub": "radiology"
+  },
+  {
+    "q": "What is the relationship between X-ray wavelength and frequency? / एक्स-रे तरंग दैर्ध्य (wavelength) और आवृत्ति (frequency) के बीच क्या संबंध है?",
+    "o": ["Directly proportional", "Inversely proportional | व्युत्क्रमानुपाती (Inversely proportional)", "No relation", "Same"],
+    "a": 1,
+    "e": "Higher frequency means shorter wavelength and higher energy. [cite: 197-198]",
+    "cat": "technical",
+    "sub": "radiology"
+  },
+  {
+    "q": "Which interaction produces 'Characteristic Radiation' in the X-ray tube? / एक्स-रे ट्यूब में कौन सी परस्पर क्रिया 'विशिष्ट विकिरण' (Characteristic Radiation) उत्पन्न करती है?",
+    "o": ["Outer shell ionization", "Inner shell (K-shell) ionization | आंतरिक शेल (K-shell) आयनीकरण", "Nucleus hit", "Heat only"],
+    "a": 1,
+    "e": "Characteristic X-rays are produced when an inner shell electron is ejected and replaced by an outer shell electron. [cite: 197, 207]",
+    "cat": "technical",
+    "sub": "radiology"
+  },
+  {
+    "q": "What is 'Bremsstrahlung' radiation? / 'ब्रेम्सस्ट्रालुंग' (Bremsstrahlung) विकिरण क्या है?",
+    "o": ["Characteristic radiation", "Braking radiation | ब्रेकिंग रेडिएशन", "Heat radiation", "Soft rays"],
+    "a": 1,
+    "e": "It occurs when an electron is slowed down or 'braked' by the nucleus of the target atom. [cite: 197]",
+    "cat": "technical",
+    "sub": "radiology"
+  },
+  {
+    "q": "How does increasing 'mA' (milliamperage) affect the X-ray beam? / 'mA' बढ़ाने से एक्स-रे बीम पर क्या प्रभाव पड़ता है?",
+    "o": ["Increases quality", "Increases quantity of X-rays | एक्स-रे की मात्रा बढ़ाता है", "Increases speed", "None"],
+    "a": 1,
+    "e": "mA controls the number of electrons boiled off the filament, thus controlling beam intensity. [cite: 195, 197]",
+    "cat": "technical",
+    "sub": "radiology"
+  },
+  {
+    "q": "The 'Actual Focal Spot' is located on the: / 'एक्चुअल फोकल स्पॉट' कहाँ स्थित होता है?",
+    "o": ["Cathode", "Anode target | एनोड टारगेट", "Glass envelope", "Filter"],
+    "a": 1,
+    "e": "It is the area on the target that is physically struck by the electron stream. [cite: 197]",
+    "cat": "technical",
+    "sub": "radiology"
+  },
+  {
+    "q": "Which component of the X-ray tube is negatively charged? / एक्स-रे ट्यूब का कौन सा घटक नकारात्मक रूप से आवेशित होता है?",
+    "o": ["Anode", "Cathode (Filament/Cup) | कैथोड", "Target", "Rotor"],
+    "a": 1,
+    "e": "The cathode contains the filament and focusing cup which push electrons toward the anode. [cite: 195]",
+    "cat": "technical",
+    "sub": "radiology"
+  },
+  {
+    "q": "The process of removing low-energy X-ray photons is called: / कम ऊर्जा वाले एक्स-रे फोटॉनों को हटाने की प्रक्रिया कहलाती है:",
+    "o": ["Rectification", "Filtration | निस्पंदन (Filtration)", "Ionization", "Decay"],
+    "a": 1,
+    "e": "Filtration 'hardens' the beam by removing soft X-rays that only add to patient dose. [cite: 192, 198]",
+    "cat": "technical",
+    "sub": "radiology"
+  },
+  {
+    "q": "What percentage of electron energy is converted to X-rays in a standard tube? / एक मानक ट्यूब में इलेक्ट्रॉन ऊर्जा का कितना प्रतिशत एक्स-रे में परिवर्तित होता है?",
+    "o": ["99%", "Less than 1% | 1 प्रतिशत से कम", "50%", "10%"],
+    "a": 1,
+    "e": "Over 99% of kinetic energy is converted to heat, and less than 1% becomes X-rays. [cite: 197]",
+    "cat": "technical",
+    "sub": "radiology"
+  },
+  {
+    "q": "What is 'Half-life' in radioactivity? / रेडियोधर्मिता में 'हाफ-लाइफ' (Half-life) क्या है?",
+    "o": ["Time to double atoms", "Time taken for half of the atoms to decay | आधा क्षय होने में लगा समय", "Total life of element", "None"],
+    "a": 1,
+    "e": "Half-life is the time required for the activity of a radioactive source to reduce by half[cite: 188].",
+    "cat": "technical",
+    "sub": "radiology"
+  },
+  {
+    "q": "Unstable atoms that undergo spontaneous decay are called: / स्वतः क्षय होने वाले अस्थिर परमाणुओं को कहा जाता है:",
+    "o": ["Stable atoms", "Radioactive isotopes | रेडियोधर्मी आइसोटोप", "Inert gases", "Metals"],
+    "a": 1,
+    "e": "Radioactivity is the property of unstable atomic nuclei[cite: 188].",
+    "cat": "technical",
+    "sub": "radiology"
+  },
+  {
+    "q": "Which series describes the natural decay of Radium? / कौन सी श्रृंखला रेडियम के प्राकृतिक क्षय का वर्णन करती है?",
+    "o": ["Uranium series", "Radium series | रेडियम श्रृंखला (Radium series)", "Carbon series", "None"],
+    "a": 1,
+    "e": "The Radium series tracks the stages of decay from parent to stable lead[cite: 188].",
+    "cat": "technical",
+    "sub": "radiology"
+  },
+  {
+    "q": "What are 'Isotopes' used for in medical imaging? / मेडिकल इमेजिंग में 'आइसोटोप' (Isotopes) का उपयोग किसके लिए किया जाता है?",
+    "o": ["As contrast agents", "As radioactive tracers | रेडियोधर्मी ट्रेसर के रूप में", "To cool machines", "To clean films"],
+    "a": 1,
+    "e": "Artificial radioactivity allows isotopes to be used as tracers in functional imaging[cite: 189].",
+    "cat": "technical",
+    "sub": "radiology"
+  },
+  {
+    "q": "The definition of 'Artificial Radioactivity' is: / 'कृत्रिम रेडियोधर्मिता' (Artificial Radioactivity) की परिभाषा है:",
+    "o": ["Natural decay", "Radioactivity induced by bombarding stable elements | प्रेरित रेडियोधर्मिता", "Sunlight", "Static electricity"],
+    "a": 1,
+    "e": "Man-made radioactive elements are produced by bombarding stable nuclei[cite: 189].",
+    "cat": "technical",
+    "sub": "radiology"
+  },
+  {
+    "q": "Which type of 'Radioactive radiation' has the highest penetrating power? / किस प्रकार के 'रेडियोधर्मी विकिरण' में सबसे अधिक मर्मज्ञ शक्ति होती है?",
+    "o": ["Alpha particles", "Gamma rays | गामा किरणें", "Beta particles", "Visible light"],
+    "a": 1,
+    "e": "Gamma rays are high-energy photons with very high penetration[cite: 188].",
+    "cat": "technical",
+    "sub": "radiology"
+  },
+  {
+    "q": "In radiology, 'Radio Dosage' management includes the use of: / रेडियोलॉजी में 'रेडियो डोज' प्रबंधन में किसका उपयोग शामिल है?",
+    "o": ["Loudspeakers", "Filtration and Containers | निस्पंदन और कंटेनर", "Water tanks", "Paper bags"],
+    "a": 1,
+    "e": "Shielding and filtration are used to protect patients and staff from excess dose[cite: 192].",
+    "cat": "technical",
+    "sub": "radiology"
+  },
+  {
+    "q": "What is the primary risk of handling 'Unstable atoms'? / 'अस्थिर परमाणुओं' को संभालने का प्राथमिक जोखिम क्या है?",
+    "o": ["Explosion", "Ionizing radiation exposure | आयनकारी विकिरण जोखिम", "Bad smell", "Staining skin"],
+    "a": 1,
+    "e": "Unstable atoms emit radiation that can cause biological damage[cite: 188, 192].",
+    "cat": "technical",
+    "sub": "radiology"
+  },
+  {
+    "q": "Which applicator is used for 'Protection' against radioactive losses? / रेडियोधर्मी नुकसान के खिलाफ 'सुरक्षा' (Protection) के लिए किस एप्लिकेटर का उपयोग किया जाता है?",
+    "o": ["Plastic bags", "Shielded containers | परिरक्षित कंटेनर (Shielded containers)", "Glass jars", "Wooden boxes"],
+    "a": 1,
+    "e": "Protection involves using containers that block harmful radiation emissions[cite: 192].",
+    "cat": "technical",
+    "sub": "radiology"
+  },
+  {
+    "q": "Radioactive series eventually end with the formation of: / रेडियोधर्मी श्रृंखला अंततः किसके निर्माण के साथ समाप्त होती है?",
+    "o": ["Gold", "Stable Lead | स्थिर सीसा (Stable Lead)", "Helium", "Hydrogen"],
+    "a": 1,
+    "e": "Unstable elements decay until they reach a stable, non-radioactive state[cite: 188].",
+    "cat": "technical",
+    "sub": "radiology"
+  },
+  {
+    "q": "Who discovered X-Rays in the year 1895? / 1895 में एक्स-रे की खोज किसने की थी?",
+    "o": ["Marie Curie", "Wilhelm Conrad Roentgen | विल्हेम कॉनराड रॉन्टगन", "Henri Becquerel", "Thomas Edison"],
+    "a": 1,
+    "e": "X-rays were discovered by Roentgen, which is why they are also called Roentgen Rays[cite: 195].",
+    "cat": "technical",
+    "sub": "radiology"
+  },
+  {
+    "q": "Which material is most commonly used as a 'Target material' in an X-ray tube? / एक्स-रे ट्यूब में 'टारगेट सामग्री' के रूप में आमतौर पर किस सामग्री का उपयोग किया जाता है?",
+    "o": ["Copper", "Tungsten | टंगस्टन (Tungsten)", "Aluminum", "Lead"],
+    "a": 1,
+    "e": "Tungsten is used because of its high atomic number and high melting point[cite: 197].",
+    "cat": "technical",
+    "sub": "radiology"
+  },
+  {
+    "q": "What determines the 'Quality' or penetrating power of X-rays? / एक्स-रे की 'गुणवत्ता' या मर्मज्ञ शक्ति (penetrating power) क्या निर्धारित करती है?",
+    "o": ["Current (mA)", "Voltage (kVp) | वोल्टेज (kVp)", "Exposure time", "Focus size"],
+    "a": 1,
+    "e": "Voltage (kVp) determines the energy and quality of the X-ray beam[cite: 197].",
+    "cat": "technical",
+    "sub": "radiology"
+  },
+  {
+    "q": "What are 'Hard X-rays'? / 'कठोर एक्स-रे' (Hard X-rays) क्या हैं?",
+    "o": ["Low energy rays", "High energy rays with high penetration | उच्च ऊर्जा वाली किरणें", "Visible light", "Soft rays"],
+    "a": 1,
+    "e": "Hard X-rays have shorter wavelengths and higher penetrating power[cite: 198].",
+    "cat": "technical",
+    "sub": "radiology"
+  },
+  {
+    "q": "X-rays are a form of which type of radiation? / एक्स-रे किस प्रकार के विकिरण का एक रूप हैं?",
+    "o": ["Mechanical", "Electromagnetic radiation | विद्युत चुम्बकीय विकिरण", "Acoustic", "Particulate"],
+    "a": 1,
+    "e": "X-rays travel at the speed of light as electromagnetic waves[cite: 197].",
+    "cat": "technical",
+    "sub": "radiology"
+  },
+  {
+    "q": "The interaction of penetrating radiation with 'Matter' involves: / मर्मज्ञ विकिरण की 'पदार्थ' (Matter) के साथ परस्पर क्रिया में शामिल है:",
+    "o": ["Absorption and Scattering | अवशोषण और प्रकीर्णन", "Reflection only", "No interaction", "Heating only"],
+    "a": 0,
+    "e": "When X-rays hit matter, they can be absorbed or scattered[cite: 207].",
+    "cat": "technical",
+    "sub": "radiology"
+  },
+  {
+    "q": "Which property of X-rays makes them useful for medical imaging? / एक्स-रे का कौन सा गुण उन्हें मेडिकल इमेजिंग के लिए उपयोगी बनाता है?",
+    "o": ["Ability to heat water", "Differential absorption by tissues | ऊतकों द्वारा विभेदक अवशोषण", "Their color", "Their smell"],
+    "a": 1,
+    "e": "Different body tissues absorb X-rays at different rates, creating an image[cite: 197].",
+    "cat": "technical",
+    "sub": "radiology"
+  },
+  {
+    "q": "What is the result of using a 'Soft X-ray' beam? / 'नरम एक्स-रे' (Soft X-ray) बीम के उपयोग का परिणाम क्या होता है?",
+    "o": ["High penetration", "Low penetration and higher skin dose | कम मर्मज्ञ शक्ति", "Fastest image", "None"],
+    "a": 1,
+    "e": "Soft X-rays have longer wavelengths and are easily absorbed by the skin[cite: 198].",
+    "cat": "technical",
+    "sub": "radiology"
+  },
+  {
+    "q": "The 'Source' of electrons in a modern X-ray tube is the: / आधुनिक एक्स-रे ट्यूब में इलेक्ट्रॉनों का 'स्रोत' है:",
+    "o": ["Anode", "Heated Filament (Cathode) | गर्म फिलामेंट (कैथोड)", "Glass envelope", "Target"],
+    "a": 1,
+    "e": "Thermionic emission from the filament provides the electrons needed[cite: 195].",
+    "cat": "technical",
+    "sub": "radiology"
+  },
+  {
+    "q": "Why is vacuum maintained inside the X-ray tube? / एक्स-रे ट्यूब के अंदर वैक्यूम क्यों बनाए रखा जाता है?",
+    "o": ["To cool the tube", "To prevent electron collision with air molecules | हवा के अणुओं से टकराव रोकने के लिए", "To produce light", "To increase weight"],
+    "a": 1,
+    "e": "Vacuum allows electrons to travel from cathode to anode without obstruction[cite: 195].",
+    "cat": "technical",
+    "sub": "radiology"
+  },
+  {
+    "q": "Which sense is defined by the term 'Olfaction'? / 'ऑल्फैक्शन' (Olfaction) शब्द किस इंद्रिय को परिभाषित करता है?",
+    "o": ["Sight", "Sense of smell | गंध की अनुभूति", "Taste", "Touch"],
+    "a": 1,
+    "e": "Taste, olfaction, and visceral sensations are key somatic sensations studied.",
+    "cat": "technical",
+    "sub": "physiology"
+  },
+  {
+    "q": "The 'Visceral sensations' relate to which part of the body? / 'विसरल सेंसेशन्स' (Visceral sensations) शरीर के किस भाग से संबंधित हैं?",
+    "o": ["Skin only", "Internal organs | आंतरिक अंग", "Eyes", "Ears"],
+    "a": 1,
+    "e": "Visceral sensations provide information about the status of internal body organs.",
+    "cat": "technical",
+    "sub": "physiology"
+  },
+  {
+    "q": "What happens to 'Fluid distribution' during heavy exercise? / भारी व्यायाम के दौरान 'तरल वितरण' (Fluid distribution) का क्या होता है?",
+    "o": ["It stays same", "Changes due to sweating and metabolic needs | पसीने और मेटाबोलिक जरूरतों के कारण बदलाव", "Blood stops flowing", "None"],
+    "a": 1,
+    "e": "Body fluid changes and exchange are critical responses to exercise and work[cite: 149, 153].",
+    "cat": "technical",
+    "sub": "physiology"
+  },
+  {
+    "q": "Which system is analyzed for 'Skill, Strength, and Endurance'? / 'कौशल, शक्ति और धीरज' के लिए किस तंत्र का विश्लेषण किया जाता है?",
+    "o": ["Digestive", "Neuromuscular and Respiratory | न्यूरोमस्कुलर और श्वसन", "Urinary", "Integumentary"],
+    "a": 1,
+    "e": "Physiological mechanism in movement behavior includes analyzing skill and endurance  [cite: 346-347, 158].",
+    "cat": "technical",
+    "sub": "physiology"
+  },
+  {
+    "q": "Efficiency of 'Muscular work' is affected by: / 'मांसपेशियों के कार्य' की दक्षता किससे प्रभावित होती है?",
+    "o": ["Environmental factors and nutrition | पर्यावरणीय कारक और पोषण", "Hair length", "Eye color", "None"],
+    "a": 0,
+    "e": "Metabolic and environmental aspects like heat affect muscular efficiency.",
+    "cat": "technical",
+    "sub": "physiology"
+  },
+  {
+    "q": "The study of 'Vision' includes the physiological function of: / 'दृष्टि' (Vision) के अध्ययन में किसका शारीरिक कार्य शामिल है?",
+    "o": ["Ear", "Retina and Optic nerve | रेटिना और ऑप्टिक तंत्रिका", "Tongue", "Skin"],
+    "a": 1,
+    "e": "Neuro-physiology covers the mechanics of vision and sensory end organs[cite: 50].",
+    "cat": "technical",
+    "sub": "physiology"
+  },
+  {
+    "q": "What is the result of 'Fatigue' in the body? / शरीर में 'थकान' (Fatigue) का क्या परिणाम होता है?",
+    "o": ["Increased energy", "Temporary decrease in work capacity | कार्य क्षमता में अस्थायी कमी", "Immediate death", "None"],
+    "a": 1,
+    "e": "Fatigue and training involve endurance fatigue and recovery processes.",
+    "cat": "technical",
+    "sub": "physiology"
+  },
+  {
+    "q": "Medical aspects of exercise take into account: / व्यायाम के चिकित्सा पहलुओं में किसे ध्यान में रखा जाता है?",
+    "o": ["Age, Sex, and Race | आयु, लिंग और जाति", "Bank balance", "Phone type", "None"],
+    "a": 0,
+    "e": "Fitness and health stress are analyzed based on individual body types and age[cite: 159, 171].",
+    "cat": "technical",
+    "sub": "physiology"
+  },
+  {
+    "q": "Which part of the nervous system is responsible for the 'Reflex physiology' of organs? / अंगों की 'रिफ्लेक्स फिजियोलॉजी' के लिए तंत्रिका तंत्र का कौन सा भाग जिम्मेदार है?",
+    "o": ["Somatic system", "Autonomic Nervous System | ऑटोनोमिक नर्वस सिस्टम", "Cortex only", "None"],
+    "a": 1,
+    "e": "The autonomic system manages reflex physiology of visceral organs[cite: 130].",
+    "cat": "technical",
+    "sub": "physiology"
+  },
+  {
+    "q": "The term 'Endurance fatigue' refers to exhaustion after: / 'एंड्योरेंस थकान' (Endurance fatigue) का तात्पर्य किसके बाद होने वाली थकावट से है?",
+    "o": ["Resting", "Prolonged physical activity | लंबे समय तक शारीरिक गतिविधि", "Sleeping", "Eating"],
+    "a": 1,
+    "e": "Endurance training aims to delay this specific type of fatigue.",
+    "cat": "technical",
+    "sub": "physiology"
+  },
+  {
+    "q": "The 'Electro-physiological' activity of the heart begins at which natural pacemaker? / हृदय की 'इलेक्ट्रो-फिजियोलॉजिकल' गतिविधि किस प्राकृतिक पेसमेकर से शुरू होती है?",
+    "o": ["AV Node", "SA Node (Sinoatrial node) | एसए नोड (SA Node)", "Purkinje fibers", "Bundle of His"],
+    "a": 1,
+    "e": "The SA node initiates the electrical impulse, studied under the electro-physiological activity of the heart.",
+    "cat": "technical",
+    "sub": "physiology"
+  },
+  {
+    "q": "What does the 'P-wave' represent in a normal ECG? / एक सामान्य ECG में 'P-वेव' क्या दर्शाती है?",
+    "o": ["Ventricular contraction", "Atrial depolarization (contraction) | एट्रियल विद्रुवण (संकुचन)", "Ventricular relaxation", "Heart sound"],
+    "a": 1,
+    "e": "The P-wave indicates the electrical activity and mechanical contraction of the atria.",
+    "cat": "technical",
+    "sub": "physiology"
+  },
+  {
+    "q": "Which part of the brain is responsible for 'Cortical Control' of movements? / गतिविधियों के 'कोर्टिकल कंट्रोल' के लिए मस्तिष्क का कौन सा भाग जिम्मेदार है?",
+    "o": ["Cerebellum", "Cerebral Cortex | सेरेब्रल कॉर्टेक्स", "Medulla", "Spinal cord"],
+    "a": 1,
+    "e": "Cortical control refers to the voluntary management of motor functions by the brain's cortex.",
+    "cat": "technical",
+    "sub": "physiology"
+  },
+  {
+    "q": "The 'Synapse' is a specialized property used for: / 'सिंकैप्स' (Synapse) एक विशिष्ट गुण है जिसका उपयोग किया जाता है:",
+    "o": ["Digesting food", "Communication between two neurons | दो न्यूरॉन्स के बीच संचार", "Filtering blood", "Pumping air"],
+    "a": 1,
+    "e": "Synapses are key sites for nerve impulse transmission and potential gradients.",
+    "cat": "technical",
+    "sub": "physiology"
+  },
+  {
+    "q": "What is 'Supraspinal Control' in neuro-physiology? / न्यूरो-फिजियोलॉजी में 'सुप्रास्पाइनल कंट्रोल' (Supraspinal Control) क्या है?",
+    "o": ["Control by spinal cord only", "Control of reflexes by higher brain centers | उच्च मस्तिष्क केंद्रों द्वारा नियंत्रण", "Control by muscles", "None"],
+    "a": 1,
+    "e": "Supraspinal control involves higher brain regions regulating spinal reflex activity.",
+    "cat": "technical",
+    "sub": "physiology"
+  },
+  {
+    "q": "The 'Coronary circulation' primarily supplies blood to: / 'कोरोनरी सर्कुलेशन' मुख्य रूप से किसे रक्त की आपूर्ति करता है?",
+    "o": ["Brain", "Heart muscles | हृदय की मांसपेशियों", "Lungs", "Kidneys"],
+    "a": 1,
+    "e": "Coronary circulation ensures the heart muscle receives enough oxygen and nutrients.",
+    "cat": "technical",
+    "sub": "physiology"
+  },
+  {
+    "q": "Which ions are primarily responsible for the 'Action Potential' in nerves? / तंत्रिकाओं में 'एक्शन पोटेंशियल' के लिए मुख्य रूप से कौन से आयन जिम्मेदार हैं?",
+    "o": ["Calcium and Iron", "Sodium and Potassium | सोडियम और पोटेशियम", "Magnesium", "Carbon"],
+    "a": 1,
+    "e": "Ionic and potential gradients across the cell membrane create the action potential.",
+    "cat": "technical",
+    "sub": "physiology"
+  },
+  {
+    "q": "The 'Basal ganglia' work with the cerebellum to control: / 'बेसल गैन्ग्लिया' सेरेबेलम के साथ मिलकर किसे नियंत्रित करते हैं?",
+    "o": ["Vision", "Smoothness and planning of movement | आंदोलन की सुगमता", "Digestion", "Hearing"],
+    "a": 1,
+    "e": "Basal ganglia are vital for motor mechanism and biophysics of movement.",
+    "cat": "technical",
+    "sub": "physiology"
+  },
+  {
+    "q": "Which property allows a nerve fiber to respond to a stimulus? / कौन सा गुण तंत्रिका फाइबर को उत्तेजना पर प्रतिक्रिया करने की अनुमति देता है?",
+    "o": ["Excitability | उत्तेजनशीलता (Excitability)", "Inactivity", "Rigidity", "Color"],
+    "a": 0,
+    "e": "Excitability is a special property of nerve trunks and tracts.",
+    "cat": "technical",
+    "sub": "physiology"
+  },
+  {
+    "q": "Mechanical activity of the heart includes which phase? / हृदय की यांत्रिक गतिविधि में कौन सा चरण शामिल है?",
+    "o": ["Thinking", "Systole and Diastole | सिस्टोल और डायस्टोल", "Vision", "Taste"],
+    "a": 1,
+    "e": "Systole (contraction) and Diastole (relaxation) are the mechanical actions of the heart.",
+    "cat": "technical",
+    "sub": "physiology"
+  },
+  {
+    "q": "In the 'Physiology of Exercise', what is meant by 'Endurance'? / 'व्यायाम की फिजियोलॉजी' में 'धीरज' (Endurance) का क्या अर्थ है?",
+    "o": ["Maximum weight lifted", "Ability to sustain activity over time | गतिविधि को लंबे समय तक जारी रखना", "Speed of running", "Muscle size"],
+    "a": 1,
+    "e": "Endurance fatigue and recovery training are key aspects of exercise physiology.",
+    "cat": "technical",
+    "sub": "physiology"
+  },
+  {
+    "q": "How does 'Training' affect fatigue during work? / 'प्रशिक्षण' (Training) कार्य के दौरान थकान को कैसे प्रभावित करता है?",
+    "o": ["Increases fatigue", "Delays fatigue and improves recovery | थकान में देरी और रिकवरी में सुधार", "Has no effect", "Stops blood flow"],
+    "a": 1,
+    "e": "Training improves the body's efficiency and ability to recover from strenuous work.",
+    "cat": "technical",
+    "sub": "physiology"
+  },
+  {
+    "q": "Which metabolic aspect is essential for providing 'Energy' for muscular work? / मांसपेशियों के कार्य के लिए 'ऊर्जा' प्रदान करने के लिए कौन सा मेटाबोलिक पहलू आवश्यक है?",
+    "o": ["Respiration only", "Metabolism and nutrition | चयापचय और पोषण", "Sleep", "Water intake only"],
+    "a": 1,
+    "e": "Energy requirement and nutritional aspects dictate the efficiency of muscular work.",
+    "cat": "technical",
+    "sub": "physiology"
+  },
+  {
+    "q": "The 'Circulatory response' to exercise involves an increase in: / व्यायाम के प्रति 'परिसंचरण प्रतिक्रिया' में किसकी वृद्धि शामिल है?",
+    "o": ["Digestive rate", "Heart rate and blood flow | हृदय गति और रक्त प्रवाह", "Bone density", "Urine production"],
+    "a": 1,
+    "e": "Exercise triggers respiratory and circulatory responses to transport more oxygen.",
+    "cat": "technical",
+    "sub": "physiology"
+  },
+  {
+    "q": "What happens to 'Body Temperature' during heavy muscular work? / भारी मांसपेशियों के काम के दौरान 'शरीर के तापमान' का क्या होता है?",
+    "o": ["It decreases", "It increases | यह बढ़ता है", "It stays constant", "It drops to zero"],
+    "a": 1,
+    "e": "Muscular work generates heat as a metabolic byproduct, raising body temperature.",
+    "cat": "technical",
+    "sub": "physiology"
+  },
+  {
+    "q": "The 'Neuromuscular activity' analysis includes the study of: / 'न्यूरोमस्कुलर गतिविधि' के विश्लेषण में किसका अध्ययन शामिल है?",
+    "o": ["Skin tone", "Human movement and skill behavior | मानव आंदोलन और कौशल व्यवहार", "Hair growth", "Nail strength"],
+    "a": 1,
+    "e": "Exercise physiology studies the physiological mechanism in movement behavior.",
+    "cat": "technical",
+    "sub": "physiology"
+  },
+  {
+    "q": "Which factor is a 'medical aspect' of exercise related to stress? / व्यायाम का कौन सा कारक तनाव से संबंधित 'चिकित्सा पहलू' (Medical aspect) है?",
+    "o": ["Eye color", "Fitness and health stress | फिटनेस और स्वास्थ्य तनाव", "Food taste", "Shoe size"],
+    "a": 1,
+    "e": "Stress, medical aspects, and fitness are studied across different ages and sexes.",
+    "cat": "technical",
+    "sub": "physiology"
+  },
+  {
+    "q": "A 'Reflex arc' is the basic unit of: / 'रिफ्लेक्स आर्क' (Reflex arc) किसकी मूल इकाई है?",
+    "o": ["Blood circulation", "Reflex physiology | रिफ्लेक्स फिजियोलॉजी", "Digestion", "Vision"],
+    "a": 1,
+    "e": "Reflex physiology governs the body's automatic responses to stimuli.",
+    "cat": "technical",
+    "sub": "physiology"
+  },
+  {
+    "q": "What is the primary role of 'Vision' and 'Auditory system' in movement? / आंदोलन में 'दृष्टि' और 'श्रवण प्रणाली' की प्राथमिक भूमिका क्या है?",
+    "o": ["Breathing", "Providing sensory feedback for skill | कौशल के लिए संवेदी प्रतिक्रिया", "Filtering blood", "Digesting food"],
+    "a": 1,
+    "e": "Sensory inputs are crucial for skilled human movement and analysis.",
+    "cat": "technical",
+    "sub": "physiology"
+  },
+  {
+    "q": "Body fluid changes during exercise are often regulated by: / व्यायाम के दौरान शरीर के तरल पदार्थ में परिवर्तन अक्सर किसके द्वारा नियंत्रित होते हैं?",
+    "o": ["Lungs only", "Sweating and Renal regulation | पसीना और गुर्दे का विनियमन", "Bones", "Hair"],
+    "a": 1,
+    "e": "Fluid distribution and exchange are vital during physical environmental stress.",
+    "cat": "technical",
+    "sub": "physiology"
+  },
+  {
+    "q": "Which condition is defined as a deficiency in the amount of oxygen reaching the tissues? / ऊतकों तक पहुँचने वाली ऑक्सीजन की मात्रा में कमी को क्या कहा जाता है?",
+    "o": ["Asphyxia", "Hypoxia | हाइपोक्सिया (Hypoxia)", "Dyspnoea", "Apnea"],
+    "a": 1,
+    "e": "Hypoxia is a critical state studied in respiratory physiology where tissues lack oxygen.",
+    "cat": "technical",
+    "sub": "physiology"
+  },
+  {
+    "q": "What is the clinical term for 'Difficulty in breathing'? / 'सांस लेने में कठिनाई' के लिए नैदानिक शब्द क्या है?",
+    "o": ["Hypoxia", "Dyspnoea | डिस्पनिया (Dyspnoea)", "Asphyxia", "Resuscitation"],
+    "a": 1,
+    "e": "Dyspnoea refers to the sensation of difficult or labored breathing.",
+    "cat": "technical",
+    "sub": "physiology"
+  },
+  {
+    "q": "The process of 'Resuscitation' is primarily used to treat: / 'रिससिटेशन' (Resuscitation) की प्रक्रिया मुख्य रूप से किसके इलाज के लिए उपयोग की जाती है?",
+    "o": ["Dehydration", "Respiratory or Cardiac failure | श्वसन या हृदय की विफलता", "Hunger", "Fatigue"],
+    "a": 1,
+    "e": "Resuscitation includes techniques like CPR to restore breathing and circulation.",
+    "cat": "technical",
+    "sub": "physiology"
+  },
+  {
+    "q": "Which endocrine gland regulates the 'Basal Metabolic Rate' (BMR)? / कौन सी अंतःस्रावी ग्रंथि 'बेसल मेटाबोलिक रेट' (BMR) को नियंत्रित करती है?",
+    "o": ["Pituitary", "Thyroid gland | थायराइड ग्रंथि", "Adrenal", "Gonads"],
+    "a": 1,
+    "e": "The thyroid gland secretes hormones that manage metabolism and energy.",
+    "cat": "technical",
+    "sub": "physiology"
+  },
+  {
+    "q": "The 'Adrenal glands' are located on top of which organ? / 'एड्रिनल ग्रंथियां' किस अंग के ऊपर स्थित होती हैं?",
+    "o": ["Liver", "Kidneys | गुर्दे (Kidneys)", "Heart", "Lungs"],
+    "a": 1,
+    "e": "Adrenal glands produce hormones like adrenaline and are situated above the kidneys.",
+    "cat": "technical",
+    "sub": "physiology"
+  },
+  {
+    "q": "Which part of the brain controls the 'Autonomic Nervous System'? / मस्तिष्क का कौन सा भाग 'ऑटोनोमिक नर्वस सिस्टम' को नियंत्रित करता है?",
+    "o": ["Cerebellum", "Hypothalamus | हाइपोथैलेमस", "Thalamus", "Frontal lobe"],
+    "a": 1,
+    "e": "The hypothalamus serves as the primary control center for the autonomic system.",
+    "cat": "technical",
+    "sub": "physiology"
+  },
+  {
+    "q": "The primary function of the 'Gonads' (Testes/Ovaries) is: / 'गोनाड्स' (वृषण/अंडाशय) का प्राथमिक कार्य क्या है?",
+    "o": ["Digestion", "Reproduction and Sex hormone production | प्रजनन और हार्मोन उत्पादन", "Blood filtration", "Thinking"],
+    "a": 1,
+    "e": "Gonads are part of the endocrine system responsible for reproductive functions.",
+    "cat": "technical",
+    "sub": "physiology"
+  },
+  {
+    "q": "What does 'Renal filtration' produce as a waste product? / 'रीनल फिल्ट्रेशन' अपशिष्ट उत्पाद के रूप में क्या उत्पन्न करता है?",
+    "o": ["Bile", "Urine | मूत्र (Urine)", "Saliva", "Sweat"],
+    "a": 1,
+    "e": "Renal function involves filtering the blood to produce urine for excretion.",
+    "cat": "technical",
+    "sub": "physiology"
+  },
+  {
+    "q": "Which hormone is produced by the 'Pancreas' to lower blood sugar? / रक्त शर्करा को कम करने के लिए 'अग्न्याशय' द्वारा कौन सा हार्मोन बनाया जाता है?",
+    "o": ["Thyroxine", "Insulin | इंसुलिन", "Cortisol", "Estrogen"],
+    "a": 1,
+    "e": "Insulin is critical for regulating glucose levels in the blood system.",
+    "cat": "technical",
+    "sub": "physiology"
+  },
+  {
+    "q": "The exchange of oxygen and carbon dioxide in the alveoli is called: / एल्वियोली में ऑक्सीजन और कार्बन डाइऑक्साइड के विनिमय को कहा जाता है?",
+    "o": ["Internal respiration", "External/Pulmonary gas exchange | बाहरी/पल्मोनरी गैस विनिमय", "Cellular transport", "Digestion"],
+    "a": 1,
+    "e": "Pulmonary gas exchange occurs between the air in the lungs and the blood.",
+    "cat": "technical",
+    "sub": "physiology"
+  },
+  {
+    "q": "The 'Action Potential' in a nerve cell is an example of: / तंत्रिका कोशिका में 'एक्शन पोटेंशियल' किसका एक उदाहरण है?",
+    "o": ["Chemical digestion", "Electrical signal transmission | विद्युत संकेत संचरण", "Muscle fatigue", "Bone growth"],
+    "a": 1,
+    "e": "Action potential is a key part of neuro-physiology and ionic transport. [cite: 315, 317]",
+    "cat": "technical",
+    "sub": "physiology"
+  },
+  {
+    "q": "What is the basic functional unit of muscle contraction? / मांसपेशियों के संकुचन की मूल कार्यात्मक इकाई क्या है?",
+    "o": ["Neuron", "Motor Unit | मोटर यूनिट (Motor Unit)", "Nephron", "Alveoli"],
+    "a": 1,
+    "e": "Motor units are essential for understanding muscle mechanism and biophysics. [cite: 323]",
+    "cat": "technical",
+    "sub": "physiology"
+  },
+  {
+    "q": "The state of reduced capacity for work due to previous activity is called: / पिछली गतिविधि के कारण काम करने की कम क्षमता वाली स्थिति कहलाती है:",
+    "o": ["Fitness", "Fatigue | थकान (Fatigue)", "Endurance", "Skill"],
+    "a": 1,
+    "e": "Fatigue results from metabolic and environmental aspects of exercise and work. [cite: 358, 360]",
+    "cat": "technical",
+    "sub": "physiology"
+  },
+  {
+    "q": "Which system is responsible for 'Reflex physiology'? / 'रिफ्लेक्स फिजियोलॉजी' के लिए कौन सा तंत्र जिम्मेदार है?",
+    "o": ["Endocrine", "Nervous System | तंत्रिका तंत्र", "Digestive", "Urinary"],
+    "a": 1,
+    "e": "Reflex physiology involve synapses and supraspinal control within the nervous system. [cite: 325-329]",
+    "cat": "technical",
+    "sub": "physiology"
+  },
+  {
+    "q": "The 'Auditory system' is responsible for which sense? / 'ऑडिटरी सिस्टम' (Auditory system) किस इंद्रिय के लिए जिम्मेदार है?",
+    "o": ["Vision", "Hearing | श्रवण (सुनना)", "Taste", "Smell"],
+    "a": 1,
+    "e": "The auditory system and vision are key somatic sensations studied in physiology. [cite: 343, 345]",
+    "cat": "technical",
+    "sub": "physiology"
+  },
+  {
+    "q": "During exercise, 'Pulmonary ventilation' increases to: / व्यायाम के दौरान, 'पल्मोनरी वेंटिलेशन' क्यों बढ़ जाता है?",
+    "o": ["Reduce thirst", "Increase gas exchange | गैस विनिमय बढ़ाने के लिए", "Slow down the heart", "Stop sweating"],
+    "a": 1,
+    "e": "Respiratory response to work involves increased gas transport and ventilation. [cite: 354]",
+    "cat": "technical",
+    "sub": "physiology"
+  },
+  {
+    "q": "Which gland regulates calcium levels in the body? / शरीर में कैल्शियम के स्तर को कौन सी ग्रंथि नियंत्रित करती है?",
+    "o": ["Thyroid", "Parathyroid glands | पैराथायराइड ग्रंथियां", "Pituitary", "Adrenal"],
+    "a": 1,
+    "e": "Parathyroid glands are part of the endocrine system alongside the thyroid. [cite: 312]",
+    "cat": "technical",
+    "sub": "physiology"
+  },
+  {
+    "q": "The study of 'Skill, Strength, and Endurance' falls under: / 'कौशल, शक्ति और धीरज' का अध्ययन किसके अंतर्गत आता है?",
+    "o": ["Histology", "Physiology of Exercise | व्यायाम की फिजियोलॉजी", "Embryology", "Osteology"],
+    "a": 1,
+    "e": "Exercise physiology analyzes movement behavior and human performance. [cite: 349-352]",
+    "cat": "technical",
+    "sub": "physiology"
+  },
+  {
+    "q": "Which structure facilitates communication between two neurons? / दो न्यूरॉन्स के बीच संचार की सुविधा कौन सी संरचना प्रदान करती है?",
+    "o": ["Synapse | सिंकैप्स (Synapse)", "Muscle fiber", "Bone marrow", "Cartilage"],
+    "a": 0,
+    "e": "Synapses are the points of connection for nerve impulse transmission. [cite: 327]",
+    "cat": "technical",
+    "sub": "physiology"
+  },
+  {
+    "q": "Environmental aspects of work include the regulation of: / कार्य के पर्यावरणीय पहलुओं में किसका नियमन शामिल है?",
+    "o": ["Blood color", "Heat and body temperature | गर्मी और शरीर का तापमान", "Bone shape", "Hair growth"],
+    "a": 1,
+    "e": "Metabolic and environmental factors affect the efficiency of muscular work. [cite: 358]",
+    "cat": "technical",
+    "sub": "physiology"
+  },
+  {
+    "q": "What is the primary function of the 'Cell Membrane'? / 'कोशिका झिल्ली' (Cell Membrane) का प्राथमिक कार्य क्या है?",
+    "o": ["Energy production", "Selective transport of substances | पदार्थों का चयनात्मक परिवहन", "Protein synthesis", "DNA storage"],
+    "a": 1,
+    "e": "The cell membrane regulates the entry and exit of ions and potential gradients. [cite: 301, 315]",
+    "cat": "technical",
+    "sub": "physiology"
+  },
+  {
+    "q": "Which component of blood is responsible for 'Coagulation'? / रक्त का कौन सा घटक 'कोगुलेशन' (थक्का जमने) के लिए जिम्मेदार है?",
+    "o": ["Hemoglobin", "Platelets and Fibrinogen | प्लेटलेट्स और फाइब्रिनोजेन", "Erythrocytes", "Lymphocytes"],
+    "a": 1,
+    "e": "Coagulation is a vital part of the blood system to prevent excessive bleeding. [cite: 308]",
+    "cat": "technical",
+    "sub": "physiology"
+  },
+  {
+    "q": "The 'Electro-physiological activity' of the heart is recorded using which test? / हृदय की 'इलेक्ट्रो-फिजियोलॉजिकल' गतिविधि को किस टेस्ट का उपयोग करके रिकॉर्ड किया जाता है?",
+    "o": ["EEG", "ECG (Electrocardiogram) | ईसीजी (ECG)", "EMG", "X-Ray"],
+    "a": 1,
+    "e": "Physiology covers both the mechanical and electro-physiological activity of the heart. [cite: 307]",
+    "cat": "technical",
+    "sub": "physiology"
+  },
+  {
+    "q": "What is the primary function of 'Hemoglobin'? / 'हीमोग्लोबिन' का प्राथमिक कार्य क्या है?",
+    "o": ["Blood clotting", "Oxygen transport | ऑक्सीजन का परिवहन", "Fighting infection", "Energy storage"],
+    "a": 1,
+    "e": "Hemoglobin within erythrocytes carries respiratory gases throughout the body. [cite: 308, 311]",
+    "cat": "technical",
+    "sub": "physiology"
+  },
+  {
+    "q": "Which blood cells are primarily involved in the 'Immune response'? / कौन सी रक्त कोशिकाएं मुख्य रूप से 'प्रतिरक्षा प्रतिक्रिया' में शामिल होती हैं?",
+    "o": ["Erythrocytes", "Lymphocytes | लिम्फोसाइट्स (Lymphocytes)", "Granulocytes", "Platelets"],
+    "a": 1,
+    "e": "Lymphocytes are key cells in the body's cell renewal and immune system. [cite: 308]",
+    "cat": "technical",
+    "sub": "physiology"
+  },
+  {
+    "q": "The regulation of 'Hydrogen ion concentration' in body fluids relates to: / शरीर के तरल पदार्थों में 'हाइड्रोजन आयन सांद्रता' का विनियमन किससे संबंधित है?",
+    "o": ["Body temperature", "pH balance (Acid-Base) | पीएच संतुलन", "Blood sugar", "Hunger"],
+    "a": 1,
+    "e": "Maintaining the concentration of hydrogen ions is essential for body fluid distribution. [cite: 308]",
+    "cat": "technical",
+    "sub": "physiology"
+  },
+  {
+    "q": "Which gland is known as the 'Master Gland' of the endocrine system? / अंतःस्रावी तंत्र की किस ग्रंथि को 'मास्टर ग्रंथि' के रूप में जाना जाता है?",
+    "o": ["Thyroid", "Pituitary gland | पिट्यूटरी ग्रंथि", "Adrenal", "Pancreas"],
+    "a": 1,
+    "e": "The pituitary gland regulates other endocrine glands like the thyroid and adrenals. [cite: 312]",
+    "cat": "technical",
+    "sub": "physiology"
+  },
+  {
+    "q": "The 'Mechanical activity' of the heart refers to: / हृदय की 'यांत्रिक गतिविधि' (Mechanical activity) का तात्पर्य है:",
+    "o": ["Electrical signals", "Contraction and Pumping | संकुचन और पंपिंग", "Nerve conduction", "Hormone release"],
+    "a": 1,
+    "e": "Physiology studies the mechanical pumping action and coronary circulation of the heart. [cite: 307]",
+    "cat": "technical",
+    "sub": "physiology"
+  },
+  {
+    "q": "Which process describes the 'exchange of gases' in the lungs? / फेफड़ों में 'गैसों के विनिमय' का वर्णन कौन सी प्रक्रिया करती है?",
+    "o": ["Digestion", "Pulmonary gas exchange | पल्मोनरी गैस विनिमय", "Coagulation", "Renal filtration"],
+    "a": 1,
+    "e": "Pulmonary gas exchange involves the transport of respiratory gases like oxygen and CO2. [cite: 311, 354]",
+    "cat": "technical",
+    "sub": "physiology"
+  },
+  {
+    "q": "Renal function primarily involves the filtration of: / 'रीनल फंक्शन' (Renal function) में मुख्य रूप से किसका निस्पंदन शामिल है?",
+    "o": ["Air", "Blood to form urine | मूत्र बनाने के लिए रक्त", "Food", "Lymph"],
+    "a": 1,
+    "e": "The kidneys filter blood to regulate fluid distribution and exchange. [cite: 308-309]",
+    "cat": "technical",
+    "sub": "physiology"
+  },
+  {
+    "q": "The study of 'Fascias and muscles of head, neck & face' is part of: / 'सिर, गर्दन और चेहरे की मांसपेशियों' का अध्ययन किसका हिस्सा है?",
+    "o": ["Osteology", "Applied Anatomy (Section III) | एप्लाइड एनाटॉमी", "Embryology", "Physiology"],
+    "a": 1,
+    "e": "Section III of the anatomy syllabus covers the musculature of the head and face[cite: 254].",
+    "cat": "technical",
+    "sub": "anatomy"
+  },
+  {
+    "q": "Which type of joints allow for the greatest range of movement? / किस प्रकार के जोड़ सबसे अधिक गति की अनुमति देते हैं?",
+    "o": ["Fibrous joints", "Synovial joints | साइनोवियल जोड़", "Cartilaginous joints", "Fixed joints"],
+    "a": 1,
+    "e": "Movements of joints are classified based on the degree of freedom they offer [cite: 272-274].",
+    "cat": "technical",
+    "sub": "anatomy"
+  },
+  {
+    "q": "Fascias and muscles of the 'Upper Limb' are essential for: / 'ऊपरी अंग' की मांसपेशियां किसके लिए आवश्यक हैं?",
+    "o": ["Walking", "Arm and hand movements | हाथ की गति", "Chewing", "Breathing"],
+    "a": 1,
+    "e": "Muscles of the upper limb facilitate reaching, lifting, and fine motor skills[cite: 267, 281].",
+    "cat": "technical",
+    "sub": "anatomy"
+  },
+  {
+    "q": "Which factor 'limits' the movement of a joint? / कौन सा कारक जोड़ की गति को 'सीमित' करता है?",
+    "o": ["Bone shape and ligaments | हड्डियों का आकार और स्नायुबंधन", "Blood pressure", "Skin color", "Hair growth"],
+    "a": 0,
+    "e": "Anatomy studies the factors permitting and limiting movements in joints[cite: 275].",
+    "cat": "technical",
+    "sub": "anatomy"
+  },
+  {
+    "q": "The joints of the 'Trunks' primarily involve the: / 'धड़' (Trunks) के जोड़ों में मुख्य रूप से शामिल हैं:",
+    "o": ["Shoulder", "Vertebral column | कशेरुका स्तंभ (Vertebral column)", "Elbow", "Wrist"],
+    "a": 1,
+    "e": "Joints of the trunk include the intervertebral joints of the spine[cite: 279].",
+    "cat": "technical",
+    "sub": "anatomy"
+  },
+  {
+    "q": "Which part of the brain coordinates complex muscular movements? / मस्तिष्क का कौन सा भाग जटिल मांसपेशियों की गतिविधियों का समन्वय करता है?",
+    "o": ["Thalamus", "Cerebellum | सेरेबेलम", "Hypothalamus", "Medulla"],
+    "a": 1,
+    "e": "The cerebellum is the center for motor coordination and balance[cite: 256, 333].",
+    "cat": "technical",
+    "sub": "anatomy"
+  },
+  {
+    "q": "Surface Anatomy is used to study: / सर्फेस एनाटॉमी का उपयोग किसके अध्ययन के लिए किया जाता है?",
+    "o": ["Internal cells", "Surface landmarks on the human body | शरीर के सतही स्थलचिह्न", "Microscopic germs", "Chemical reactions"],
+    "a": 1,
+    "e": "Surface anatomy focuses on identifying internal structures via external body landmarks [cite: 283-284].",
+    "cat": "technical",
+    "sub": "anatomy"
+  },
+  {
+    "q": "Muscles of the 'Lower Limb' are primarily responsible for: / 'निचले अंग' की मांसपेशियां मुख्य रूप से किसके लिए जिम्मेदार हैं?",
+    "o": ["Writing", "Walking and Posture | चलना और मुद्रा", "Facial expressions", "Swallowing"],
+    "a": 1,
+    "e": "The lower limb musculature supports the body's weight and enables locomotion[cite: 269, 282].",
+    "cat": "technical",
+    "sub": "anatomy"
+  },
+  {
+    "q": "Which structure facilitates 'Neuromuscular Function'? / 'न्यूरोमस्कुलर फंक्शन' (Neuromuscular Function) को कौन सी संरचना सुगम बनाती है?",
+    "o": ["Joints only", "Neuromuscular junction | न्यूरोमस्कुलर जंक्शन", "Bones only", "Skin"],
+    "a": 1,
+    "e": "Anatomy covers the integration of nerves and muscles for movement[cite: 245].",
+    "cat": "technical",
+    "sub": "anatomy"
+  },
+  {
+    "q": "The 'Basal Ganglia' are involved in which function? / 'बेसल गैन्ग्लिया' (Basal Ganglia) किस कार्य में शामिल हैं?",
+    "o": ["Breathing", "Motor control and Skill learning | मोटर नियंत्रण", "Digestion", "Vision"],
+    "a": 1,
+    "e": "Basal ganglia work with the cerebellum for smooth motor activities[cite: 333].",
+    "cat": "technical",
+    "sub": "anatomy"
+  },
+  {
+    "q": "The 'Superior Colliculi' in the brain are primarily involved in: / मस्तिष्क में 'सुपीरियर कोलीकुली' (Superior Colliculi) मुख्य रूप से किसमें शामिल हैं?",
+    "o": ["Auditory reflexes", "Visual reflexes and tracking | विजुअल रिफ्लेक्सिस", "Smell", "Taste"],
+    "a": 1,
+    "e": "Superior colliculi are part of the midbrain responsible for visual processing and eye movements[cite: 247].",
+    "cat": "technical",
+    "sub": "anatomy"
+  },
+  {
+    "q": "Which part of the brain acts as the primary relay station for almost all sensory information? / मस्तिष्क का कौन सा भाग लगभग सभी संवेदी सूचनाओं के लिए प्राथमिक रिले स्टेशन है?",
+    "o": ["Hypothalamus", "Thalamus | थैलेमस", "Cerebellum", "Medulla"],
+    "a": 1,
+    "e": "The thalamus processes and relays sensory impulses to the cerebral cortex[cite: 258].",
+    "cat": "technical",
+    "sub": "anatomy"
+  },
+  {
+    "q": "The 'Inferior Colliculi' are centers for which type of reflexes? / 'इन्फीरियर कोलीकुली' (Inferior Colliculi) किस प्रकार के रिफ्लेक्सिस के केंद्र हैं?",
+    "o": ["Visual", "Auditory (Hearing) | श्रवण (Auditory)", "Balance", "Touch"],
+    "a": 1,
+    "e": "Inferior colliculi are part of the midbrain involved in the auditory pathway[cite: 237].",
+    "cat": "technical",
+    "sub": "anatomy"
+  },
+  {
+    "q": "Which structure connects the spinal cord to the higher brain centers? / कौन सी संरचना रीढ़ की हड्डी को मस्तिष्क के उच्च केंद्रों से जोड़ती है?",
+    "o": ["Cerebellum", "Brainstem | ब्रेनस्टेम (Brainstem)", "Corpus Striatum", "Hypothalamus"],
+    "a": 1,
+    "e": "The brainstem includes the medulla, pons, and midbrain, connecting the spinal cord to the brain[cite: 246].",
+    "cat": "technical",
+    "sub": "anatomy"
+  },
+  {
+    "q": "The 'Hypothalamus' is located in which region of the brain? / 'हाइपोथैलेमस' मस्तिष्क के किस क्षेत्र में स्थित है?",
+    "o": ["Cerebellum", "Diencephalon | डाइनसेफलॉन (Diencephalon)", "Brainstem", "Occipital lobe"],
+    "a": 1,
+    "e": "The hypothalamus is a key part of the diencephalon regulating homeostasis[cite: 238, 257].",
+    "cat": "technical",
+    "sub": "anatomy"
+  },
+  {
+    "q": "Which area is responsible for the 'Auditory radiation'? / 'ऑडिटरी रेडिएशन' (Auditory radiation) के लिए कौन सा क्षेत्र जिम्मेदार है?",
+    "o": ["Visual cortex", "Temporal lobe / Auditory pathway | ऑडिटरी पाथवे", "Spinal cord", "Frontal lobe"],
+    "a": 1,
+    "e": "Auditory radiation carries sound information from the thalamus to the auditory cortex[cite: 261].",
+    "cat": "technical",
+    "sub": "anatomy"
+  },
+  {
+    "q": "The 'Meninges' consist of how many protective layers? / 'मेनिन्जेस' में कितनी सुरक्षात्मक परतें होती हैं?",
+    "o": ["One", "Three | तीन (Three)", "Five", "Two"],
+    "a": 1,
+    "e": "The meninges include the Dura mater, Arachnoid mater, and Pia mater[cite: 250].",
+    "cat": "technical",
+    "sub": "anatomy"
+  },
+  {
+    "q": "Which structure is involved in 'Intracortical integration'? / 'इंट्राकोर्टिकल इंटीग्रेशन' में कौन सी संरचना शामिल है?",
+    "o": ["Nerve fibers within the cortex | सेरेब्रल कॉर्टेक्स", "Spinal nerves", "Joints", "Muscles"],
+    "a": 0,
+    "e": "Intracortical integration refers to the processing of information within the layers of the cerebral cortex[cite: 253].",
+    "cat": "technical",
+    "sub": "anatomy"
+  },
+  {
+    "q": "The 'Rhinencephalon' is primarily related to which sense? / 'राइनेंसेफलॉन' (Rhinencephalon) मुख्य रूप से किस इंद्रिय से संबंधित है?",
+    "o": ["Sight", "Smell (Olfaction) | गंध (Olfaction)", "Hearing", "Taste"],
+    "a": 1,
+    "e": "The rhinencephalon is the part of the brain involved with the sense of smell[cite: 259].",
+    "cat": "technical",
+    "sub": "anatomy"
+  },
+  {
+    "q": "Which system manages involuntary motor functions and muscle tone? / कौन सा तंत्र अनैच्छिक मोटर कार्यों और मांसपेशियों के टोन को प्रबंधित करता है?",
+    "o": ["Pyramidal system", "Extra-pyramidal system | एक्स्ट्रा-पिरामिडल सिस्टम", "Sensory organs", "Vascular system"],
+    "a": 1,
+    "e": "The extra-pyramidal system regulates posture and involuntary muscle movements[cite: 262].",
+    "cat": "technical",
+    "sub": "anatomy"
+  },
+  {
+    "q": "Which structure provides the 'Blood Supply' to the brain? / मस्तिष्क को 'रक्त आपूर्ति' कौन सी संरचना प्रदान करती है?",
+    "o": ["Spinal Cord", "Circle of Willis / Cerebral arteries | सेरेब्रल धमनियां", "Lateral Ventricles", "Inferior Colliculi"],
+    "a": 1,
+    "e": "The brain receives blood primarily through the internal carotid and vertebral arteries[cite: 260].",
+    "cat": "technical",
+    "sub": "anatomy"
+  },
+  {
+    "q": "The 'Spinal Cord' is divided into various: / 'रीढ़ की हड्डी' को विभिन्न भागों में विभाजित किया गया है:",
+    "o": ["Cerebral hemispheres", "Segments and Areas | खंड (Segments) और क्षेत्र", "Ventricles", "Colliculi"],
+    "a": 1,
+    "e": "The spinal cord consists of segments that correspond to pairs of spinal nerves[cite: 236].",
+    "cat": "technical",
+    "sub": "anatomy"
+  },
+  {
+    "q": "Which part of the brain is responsible for 'Visual Radiation'? / मस्तिष्क का कौन सा भाग 'विजुअल रेडिएशन' के लिए जिम्मेदार है?",
+    "o": ["Cerebellum", "Diencephalon (pathway to visual cortex) | विजुअल रेडिएशन", "Spinal cord", "Peripheral nerves"],
+    "a": 1,
+    "e": "Visual radiation transmits information from the thalamus to the visual cortex[cite: 251].",
+    "cat": "technical",
+    "sub": "anatomy"
+  },
+  {
+    "q": "The 'Cerebellum' is primarily involved in: / 'सेरेबेलम' मुख्य रूप से किसमें शामिल है?",
+    "o": ["Thinking", "Motor coordination and Balance | मोटर समन्वय और संतुलन", "Digestion", "Vision"],
+    "a": 1,
+    "e": "The cerebellum coordinates voluntary movements and posture[cite: 256].",
+    "cat": "technical",
+    "sub": "anatomy"
+  },
+  {
+    "q": "Which ventricles are located within the cerebral hemispheres? / सेरेब्रल हेमिस्फीयर के भीतर कौन से वेंट्रिकल्स स्थित होते हैं?",
+    "o": ["Third ventricle", "Lateral Ventricles | लेटरल वेंट्रिकल्स", "Fourth ventricle", "Central canal"],
+    "a": 1,
+    "e": "There are two lateral ventricles, one in each hemisphere of the cerebrum[cite: 240].",
+    "cat": "technical",
+    "sub": "anatomy"
+  },
+  {
+    "q": "The 'Extra-pyramidal system' is involved in: / 'एक्स्ट्रा-पिरामिडल सिस्टम' किसमें शामिल है?",
+    "o": ["Voluntary movement", "Involuntary and smooth motor control | अनैच्छिक मोटर नियंत्रण", "Sensory perception", "Hearing"],
+    "a": 1,
+    "e": "This system helps regulate muscle tone and posture alongside the pyramidal system[cite: 262].",
+    "cat": "technical",
+    "sub": "anatomy"
+  },
+  {
+    "q": "Fascias and muscles of the 'Trunk' include those of the: / 'धड़' (Trunk) के प्रावरणी और मांसपेशियों में शामिल हैं:",
+    "o": ["Face", "Abdomen and Back | पेट और पीठ", "Upper limb", "Lower limb"],
+    "a": 1,
+    "e": "Trunk muscles support the vertebral column and abdominal wall[cite: 265].",
+    "cat": "technical",
+    "sub": "anatomy"
+  },
+  {
+    "q": "Which part of the brain contains the 'Thalamus and Hypothalamus'? / मस्तिष्क के किस भाग में 'थैलेमस और हाइपोथैलेमस' होते हैं?",
+    "o": ["Cerebellum", "Diencephalon | डाइनसेफलॉन (Diencephalon)", "Brainstem", "Spinal cord"],
+    "a": 1,
+    "e": "The diencephalon is a central region of the brain housing these key structures [cite: 257-258, 238].",
+    "cat": "technical",
+    "sub": "anatomy"
+  },
+  {
+    "q": "The 'Internal Capsule' is a major pathway for: / 'इंटरनल कैप्सूल' किसके लिए एक प्रमुख मार्ग है?",
+    "o": ["CSF flow", "Nerve fibers (white matter) | तंत्रिका फाइबर", "Blood flow", "Airway"],
+    "a": 1,
+    "e": "It contains important ascending and descending tracts to and from the cortex[cite: 241].",
+    "cat": "technical",
+    "sub": "anatomy"
+  },
+  {
+    "q": "The study of 'Joints of the Upper Limb' includes: / 'ऊपरी अंग के जोड़ों' के अध्ययन में शामिल हैं:",
+    "o": ["Knee joint", "Shoulder, Elbow, and Wrist | कंधा, कोहनी और कलाई", "Hip joint", "Ankle joint"],
+    "a": 1,
+    "e": "These joints allow for the wide range of motion in the arm[cite: 281].",
+    "cat": "technical",
+    "sub": "anatomy"
+  },
+  {
+    "q": "The microscopic study of tissues, such as epithelium and connective tissue, is called: / उपकला और संयोजी ऊतक जैसे ऊतकों के सूक्ष्म अध्ययन को कहा जाता है:",
+    "o": ["Osteology", "Histology | हिस्टोलॉजी (Histology)", "Embryology", "Physiology"],
+    "a": 1,
+    "e": "Histology is the branch of anatomy that deals with the microscopic structure of tissues[cite: 218].",
+    "cat": "technical",
+    "sub": "anatomy"
+  },
+  {
+    "q": "Which structure prevents food from entering the trachea during swallowing? / निगलते समय कौन सी संरचना भोजन को श्वासनली में जाने से रोकती है?",
+    "o": ["Larynx", "Epiglottis | एपिग्लॉटिस", "Bronchi", "Pleura"],
+    "a": 1,
+    "e": "The epiglottis acts as a lid to the larynx, ensuring food goes into the esophagus[cite: 233].",
+    "cat": "technical",
+    "sub": "anatomy"
+  },
+  {
+    "q": "The 'Blood Vascular System' includes which of the following components? / 'रक्त संवहनी तंत्र' में निम्नलिखित में से कौन सा घटक शामिल है?",
+    "o": ["Arteries, Capillaries, and Veins | धमनियां, केशिकाएं और नसें", "Only Heart", "Only Lymph", "Nerves"],
+    "a": 0,
+    "e": "The vascular system consists of the heart and the vessels that circulate blood[cite: 232].",
+    "cat": "technical",
+    "sub": "anatomy"
+  },
+  {
+    "q": "Which part of the digestive system is responsible for the microscopic and gross study of food absorption? / पाचन तंत्र का कौन सा भाग भोजन के अवशोषण के सूक्ष्म और स्थूल अध्ययन के लिए जिम्मेदार है?",
+    "o": ["Larynx", "Small Intestine | छोटी आंत", "Trachea", "Heart"],
+    "a": 1,
+    "e": "The digestive system includes organs from the mouth to the anus for processing nutrients [cite: 233-234].",
+    "cat": "technical",
+    "sub": "anatomy"
+  },
+  {
+    "q": "The primary organ of the 'Lymphatic System' that filters lymph is: / 'लसीका तंत्र' का प्राथमिक अंग जो लसीका को फिल्टर करता है, वह है:",
+    "o": ["Artery", "Lymph Node | लिम्फ नोड (Lymph node)", "Vein", "Muscle"],
+    "a": 1,
+    "e": "Lymphatic vessels and nodes work together to maintain fluid balance and immunity[cite: 232].",
+    "cat": "technical",
+    "sub": "anatomy"
+  },
+  {
+    "q": "Which of the following is a major branch of the 'Trachea' entering the lungs? / फेफड़ों में प्रवेश करने वाली 'श्वासनली' की एक प्रमुख शाखा निम्नलिखित में से कौन सी है?",
+    "o": ["Larynx", "Bronchi | ब्रांकाई (Bronchi)", "Pleura", "Esophagus"],
+    "a": 1,
+    "e": "The trachea divides into right and left primary bronchi that lead to each lung[cite: 233].",
+    "cat": "technical",
+    "sub": "anatomy"
+  },
+  {
+    "q": "The study of the development of a 'Fertilized Ovum' is called: / 'निषेचित अंडे' के विकास के अध्ययन को कहा जाता है:",
+    "o": ["Osteology", "Embryology | भ्रूणविज्ञान (Embryology)", "Histology", "Surface Anatomy"],
+    "a": 1,
+    "e": "Embryology covers fertilization, differentiation, and system development[cite: 220].",
+    "cat": "technical",
+    "sub": "embryology"
+  },
+  {
+    "q": "Which system is responsible for the excretion of urine from the body? / शरीर से मूत्र के उत्सर्जन के लिए कौन सा तंत्र जिम्मेदार है?",
+    "o": ["Digestive system", "Urinary system | मूत्र प्रणाली (Urinary system)", "Respiratory system", "Vascular system"],
+    "a": 1,
+    "e": "The urinary system, part of the urogenital system, manages waste removal[cite: 228, 295].",
+    "cat": "technical",
+    "sub": "anatomy"
+  },
+  {
+    "q": "Bones provide which of the following functions in 'Osteology'? / 'ऑस्टियोलॉजी' में हड्डियाँ निम्नलिखित में से कौन सा कार्य प्रदान करती हैं?",
+    "o": ["Digestion", "Formation, Function, and Growth | निर्माण, कार्य और विकास", "Nerve conduction", "Hormone secretion"],
+    "a": 1,
+    "e": "Osteology focuses on the structural and functional aspects of bones[cite: 219].",
+    "cat": "technical",
+    "sub": "anatomy"
+  },
+  {
+    "q": "Which tissue type includes 'Cartilage, Bone, and Lymph'? / किस ऊतक प्रकार में 'कार्टिलेज, हड्डी और लसीका' शामिल हैं?",
+    "o": ["Epithelium", "Connective tissue | संयोजी ऊतक", "Muscle", "Nerve"],
+    "a": 1,
+    "e": "These are specialized forms of connective tissue that support the body[cite: 218].",
+    "cat": "technical",
+    "sub": "anatomy"
+  },
+  {
+    "q": "The largest part of the human brain is: / मानव मस्तिष्क का सबसे बड़ा भाग है:",
+    "o": ["Cerebellum", "Cerebral Hemispheres | सेरेब्रल हेमिस्फीयर", "Thalamus", "Brainstem"],
+    "a": 1,
+    "e": "The cerebral hemispheres control higher functions like thought and action[cite: 239].",
+    "cat": "technical",
+    "sub": "anatomy"
+  },
+  {
+    "q": "Which part of the brain acts as a relay station for sensory information? / मस्तिष्क का कौन सा भाग संवेदी जानकारी के लिए रिले स्टेशन के रूप में कार्य करता है?",
+    "o": ["Hypothalamus", "Thalamus | थैलेमस (Thalamus)", "Cerebellum", "Meninges"],
+    "a": 1,
+    "e": "The thalamus processes and transmits sensory signals to the cerebral cortex[cite: 258].",
+    "cat": "technical",
+    "sub": "anatomy"
+  },
+  {
+    "q": "The membranes that cover and protect the brain and spinal cord are called: / मस्तिष्क और रीढ़ की हड्डी को ढंकने और सुरक्षित करने वाली झिल्लियाँ कहलाती हैं:",
+    "o": ["Pleura", "Meninges | मेनिन्जेस (Meninges)", "Peritoneum", "Fascia"],
+    "a": 1,
+    "e": "Meninges (Dura, Arachnoid, Pia mater) provide protection to the CNS[cite: 250].",
+    "cat": "technical",
+    "sub": "anatomy"
+  },
+  {
+    "q": "Which part of the brain regulates body temperature and hunger? / मस्तिष्क का कौन सा भाग शरीर के तापमान और भूख को नियंत्रित करता है?",
+    "o": ["Cerebellum", "Hypothalamus | हाइपोथैलेमस (Hypothalamus)", "Epithalamus", "Pons"],
+    "a": 1,
+    "e": "The hypothalamus is the main center for homeostasis and autonomic control[cite: 238].",
+    "cat": "technical",
+    "sub": "anatomy"
+  },
+  {
+    "q": "Coordination of voluntary movements and balance is the primary function of: / स्वैच्छिक आंदोलनों और संतुलन का समन्वय किसका प्राथमिक कार्य है?",
+    "o": ["Cerebrum", "Cerebellum | सेरेबेलम (Cerebellum)", "Medulla", "Midbrain"],
+    "a": 1,
+    "e": "The cerebellum ensures smooth and balanced muscular activity[cite: 256].",
+    "cat": "technical",
+    "sub": "anatomy"
+  },
+  {
+    "q": "Joints are classified based on their structure and: / जोड़ों को उनकी संरचना और किसके आधार पर वर्गीकृत किया गया है?",
+    "o": ["Color", "Movements | गति (Movements)", "Weight", "Shape"],
+    "a": 1,
+    "e": "Classification of joints depends on the degree of movement they permit[cite: 272, 274].",
+    "cat": "technical",
+    "sub": "anatomy"
+  },
+  {
+    "q": "The study of surface landmarks on the human body is known as: / मानव शरीर पर सतही स्थलचिह्नों के अध्ययन को कहा जाता है:",
+    "o": ["Microscopic Anatomy", "Surface Anatomy | सर्फेस एनाटॉमी", "Embryology", "Histology"],
+    "a": 1,
+    "e": "Surface anatomy helps in locating internal structures using external landmarks[cite: 230, 283].",
+    "cat": "technical",
+    "sub": "anatomy"
+  },
+  {
+    "q": "Which system is responsible for motor control and voluntary actions? / मोटर नियंत्रण और स्वैच्छिक क्रियाओं के लिए कौन सा तंत्र जिम्मेदार है?",
+    "o": ["Extra-pyramidal system", "Pyramidal system | पिरामिडल सिस्टम", "Sensory system", "Limbic system"],
+    "a": 1,
+    "e": "The pyramidal system is the main pathway for voluntary motor impulses[cite: 252].",
+    "cat": "technical",
+    "sub": "anatomy"
+  },
+  {
+    "q": "Which structure connects the two cerebral hemispheres? / कौन सी संरचना दो सेरेब्रल हेमिस्फीयर को जोड़ती है?",
+    "o": ["Internal capsule", "Corpus Striatum | कॉर्पस स्ट्रिएटम", "Thalamus", "Ventricles"],
+    "a": 1,
+    "e": "The corpus striatum and associated fibers help in connecting brain regions[cite: 249].",
+    "cat": "technical",
+    "sub": "anatomy"
+  },
+  {
+    "q": "Fascia and muscles of the head, neck, and face are studied to understand: / सिर, गर्दन और चेहरे के प्रावरणी (Fascia) और मांसपेशियों का अध्ययन क्या समझने के लिए किया जाता है?",
+    "o": ["Digestion", "Facial expressions and movements | चेहरे के भाव और गति", "Breathing", "Hearing"],
+    "a": 1,
+    "e": "These muscles are responsible for mastication and facial communication[cite: 254].",
+    "cat": "technical",
+    "sub": "anatomy"
+  },
+  {
+    "q": "Which blood vessels carry oxygenated blood away from the heart? / कौन सी रक्त वाहिकाएं ऑक्सीजन युक्त रक्त को हृदय से दूर ले जाती हैं?",
+    "o": ["Veins", "Arteries | धमनियां (Arteries)", "Capillaries", "Lymphatics"],
+    "a": 1,
+    "e": "Arteries carry blood from the heart to the body, except for the pulmonary artery[cite: 232].",
+    "cat": "technical",
+    "sub": "anatomy"
+  },
+  {
+    "q": "The double-layered membrane surrounding the lungs is called: / फेफड़ों के चारों ओर की दोहरी परत वाली झिल्ली कहलाती है:",
+    "o": ["Pericardium", "Pleura | प्लूरा (Pleura)", "Meninges", "Peritoneum"],
+    "a": 1,
+    "e": "The pleura protects the lungs and allows for smooth movement during respiration[cite: 233].",
+    "cat": "technical",
+    "sub": "anatomy"
+  },
+  {
+    "q": "Which part of the respiratory system is also known as the 'Voice Box'? / श्वसन तंत्र के किस भाग को 'वॉयस बॉक्स' के रूप में भी जाना जाता है?",
+    "o": ["Trachea", "Larynx | स्वरयंत्र (Larynx)", "Bronchi", "Pharynx"],
+    "a": 1,
+    "e": "The larynx contains vocal cords and is essential for sound production[cite: 233].",
+    "cat": "technical",
+    "sub": "anatomy"
+  },
+  {
+    "q": "Cartilage is an example of which type of tissue? / कार्टिलेज किस प्रकार के ऊतक का एक उदाहरण है?",
+    "o": ["Epithelial", "Connective tissue | संयोजी ऊतक", "Nervous", "Muscular"],
+    "a": 1,
+    "e": "Cartilage provides structural support and belongs to the connective tissue group[cite: 218].",
+    "cat": "technical",
+    "sub": "anatomy"
+  },
+  {
+    "q": "The Urogenital system includes which two major systems? / मूत्रजननांगी प्रणाली में कौन सी दो प्रमुख प्रणालियाँ शामिल हैं?",
+    "o": ["Digestive and Respiratory", "Urinary and Genital | मूत्र और जननांग प्रणाली", "Nervous and Endocrine", "Circulatory and Lymphatic"],
+    "a": 1,
+    "e": "The urogenital system encompasses organs responsible for waste excretion and reproduction[cite: 228].",
+    "cat": "technical",
+    "sub": "anatomy"
+  },
+  {
+    "q": "Which histological component is responsible for transmitting electrical impulses? / विद्युत आवेगों को प्रसारित करने के लिए कौन सा हिस्टोलॉजिकल घटक जिम्मेदार है?",
+    "o": ["Muscle", "Nerve | तंत्रिका (Nerve)", "Lymph", "Connective"],
+    "a": 1,
+    "e": "Nerve tissue is specialized for rapid communication within the body[cite: 218].",
+    "cat": "technical",
+    "sub": "anatomy"
+  },
+  {
+    "q": "The repair of bones after a fracture is a function studied under: / फ्रैक्चर के बाद हड्डियों की मरम्मत का अध्ययन किसके अंतर्गत किया जाता है?",
+    "o": ["Histology", "Osteology | ऑस्टियोलॉजी", "Embryology", "Neurology"],
+    "a": 1,
+    "e": "Osteology covers the formation, function, growth, and repair of bone tissue[cite: 219].",
+    "cat": "technical",
+    "sub": "anatomy"
+  }
+]
