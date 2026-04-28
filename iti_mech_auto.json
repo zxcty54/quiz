@@ -1,1 +1,2693 @@
-
+[
+  {
+    "q": "What is the SI unit of Luminous Intensity? / ज्योति तीव्रता (Luminous Intensity) की SI इकाई क्या है?",
+    "o": ["Mole", "Kelvin", "Candela | कैंडेला", "Ampere"],
+    "a": 2,
+    "e": "Candela is one of the seven fundamental SI units used to measure light intensity. [cite: 33]",
+    "cat": "technical",
+    "sub": "applied_physics"
+  },
+  {
+    "q": "Which of the following is a 'Scalar' quantity? / निम्नलिखित में से कौन सी एक 'अदिश' (Scalar) राशि है?",
+    "o": ["Velocity", "Force", "Work | कार्य", "Acceleration"],
+    "a": 2,
+    "e": "Work has only magnitude and no direction, making it a scalar quantity. [cite: 37, 43]",
+    "cat": "technical",
+    "sub": "applied_physics"
+  },
+  {
+    "q": "According to Hooke's Law, stress is directly proportional to: / हुक के नियम के अनुसार, प्रतिबल (Stress) किसके सीधे आनुपातिक होता है?",
+    "o": ["Strain | विकृति", "Pressure", "Area", "Force"],
+    "a": 0,
+    "e": "Hooke's Law states that within the elastic limit, stress is proportional to strain. [cite: 51, 197]",
+    "cat": "technical",
+    "sub": "applied_physics"
+  },
+  
+  {
+    "q": "A 'Nozzle' is a device which: / 'नोजल' (Nozzle) एक ऐसा उपकरण है जो:",
+    "o": [
+      "Increases pressure and decreases velocity",
+      "Decreases pressure and increases velocity | दबाव घटाता है और वेग बढ़ाता है",
+      "Keeps energy constant",
+      "None"
+    ],
+    "a": 1,
+    "e": "Nozzles convert the enthalpy (pressure energy) of a fluid into kinetic energy (velocity).",
+    "cat": "technical",
+    "sub": "thermal_engineering"
+  },
+  {
+    "q": "When the exit pressure of a nozzle is less than the critical pressure, it is called: / जब नोजल का निकास दबाव क्रिटिकल प्रेशर से कम होता है, तो इसे कहा जाता है:",
+    "o": [
+      "Under-expansion",
+      "Over-expansion | ओवर-एक्सपेंशन (Over-expansion)",
+      "Choked flow",
+      "None"
+    ],
+    "a": 1,
+    "e": "Over-expansion occurs when the nozzle is designed for a pressure higher than the actual back pressure.",
+    "cat": "technical",
+    "sub": "thermal_engineering"
+  },
+  {
+    "q": "The condition of 'Choked Flow' in a nozzle occurs when the velocity at the throat reaches: / नोजल में 'चोकड फ्लो' (Choked Flow) तब होता है जब थ्रोट पर वेग पहुँच जाता है:",
+    "o": [
+      "Zero",
+      "Sonic velocity (Mach 1) | ध्वनि का वेग (माक 1)",
+      "Supersonic velocity",
+      "None"
+    ],
+    "a": 1,
+    "e": "At choked conditions, the mass flow rate reaches its maximum and cannot be increased by lowering back pressure.",
+    "cat": "technical",
+    "sub": "thermal_engineering"
+  },
+  {
+    "q": "Which nozzle type is used to achieve 'Supersonic' velocities? / 'सुपरसोनिक' वेग प्राप्त करने के लिए किस प्रकार के नोजल का उपयोग किया जाता है?",
+    "o": [
+      "Convergent nozzle",
+      "Divergent nozzle",
+      "Convergent-Divergent (C-D) nozzle | कन्वर्जेंट-डाइवर्जेंट नोजल",
+      "Parallel nozzle"
+    ],
+    "a": 2,
+    "e": "A C-D nozzle allows the fluid to expand further after the throat, accelerating it beyond sonic speed.",
+    "cat": "technical",
+    "sub": "thermal_engineering"
+  },
+  {
+    "q": "A 'Combined Cycle' power plant usually consists of: / एक 'कम्बाइंड साइकिल' पावर प्लांट में आमतौर पर शामिल होते हैं:",
+    "o": [
+      "Two gas turbines",
+      "Gas turbine and Steam turbine | गैस टर्बाइन और स्टीम टर्बाइन",
+      "Diesel engine and Solar",
+      "None"
+    ],
+    "a": 1,
+    "e": "The exhaust of the gas turbine is used to generate steam for a steam turbine, significantly increasing overall efficiency.",
+    "cat": "technical",
+    "sub": "thermal_engineering"
+  },
+  {
+    "q": "What is 'Critical Pressure Ratio' for a steam nozzle? / स्टीम नोजल के लिए 'क्रिटिकल प्रेशर रेशियो' क्या है?",
+    "o": [
+      "Ratio of inlet to exit pressure",
+      "Pressure at throat to inlet pressure | थ्रोट प्रेशर और इनलेट प्रेशर का अनुपात",
+      "Maximum pressure allowed",
+      "None"
+    ],
+    "a": 1,
+    "e": "It is the specific pressure ratio at which the discharge through the nozzle becomes maximum.",
+    "cat": "technical",
+    "sub": "thermal_engineering"
+  },
+  {
+    "q": "The 'Friction' in a nozzle results in: / नोजल में 'घर्षण' (Friction) का परिणाम होता है:",
+    "o": [
+      "Increased exit velocity",
+      "Decreased exit velocity and increased dryness fraction | वेग में कमी और ड्राईनेस फ्रैक्शन में वृद्धि",
+      "No change",
+      "None"
+    ],
+    "a": 1,
+    "e": "Friction converts some kinetic energy back into heat, which re-heats the steam.",
+    "cat": "technical",
+    "sub": "thermal_engineering"
+  },
+  {
+    "q": "What is the function of a 'Steam Jet Air Ejector'? / 'स्टीम जेट एयर इजेक्टर' का कार्य क्या है?",
+    "o": [
+      "To pump water",
+      "To remove non-condensable gases from the condenser | कंडेनसर से गैसों को निकालना",
+      "To heat the steam",
+      "None"
+    ],
+    "a": 1,
+    "e": "It uses high-velocity steam to suck out air that leaks into the vacuum of the condenser.",
+    "cat": "technical",
+    "sub": "thermal_engineering"
+  },
+  {
+    "q": "In a Gas Turbine cycle, 'Reheating' is used to: / गैस टर्बाइन चक्र में, 'रीहीटिंग' का उपयोग क्यों किया जाता है?",
+    "o": [
+      "Increase compressor work",
+      "Increase turbine work output | टर्बाइन वर्क आउटपुट बढ़ाना",
+      "Decrease efficiency",
+      "None"
+    ],
+    "a": 1,
+    "e": "Reheating expands the gas in two stages with intermediate heating, increasing the total work produced.",
+    "cat": "technical",
+    "sub": "thermal_engineering"
+  },
+  {
+    "q": "Which part of the nozzle has the minimum cross-sectional area? / नोजल के किस भाग का क्रॉस-सेक्शनल एरिया न्यूनतम होता है?",
+    "o": [
+      "Inlet",
+      "Exit",
+      "Throat | थ्रोट (Throat)",
+      "None"
+    ],
+    "a": 2,
+    "e": "The throat is the narrowest point of a Convergent-Divergent nozzle where sonic velocity is achieved.",
+    "cat": "technical",
+    "sub": "thermal_engineering"
+  },
+  {
+    "q": "What is the purpose of 'Intercooling' in multi-stage air compressors? / मल्टी-स्टेज एयर कंप्रेशर्स में 'इंटरकूलिंग' का उद्देश्य क्या है?",
+    "o": [
+      "To increase the delivery temperature",
+      "To reduce the work required for compression | संपीड़न के लिए आवश्यक कार्य कम करना",
+      "To decrease the pressure",
+      "None"
+    ],
+    "a": 1,
+    "e": "Intercooling cools the air between stages, bringing it closer to isothermal compression which requires minimum work.",
+    "cat": "technical",
+    "sub": "thermal_engineering"
+  },
+  {
+    "q": "Which type of condenser uses a 'Cooling Tower' to cool the circulating water? / किस प्रकार का कंडेनसर सर्कुलेटिंग पानी को ठंडा करने के लिए 'कूलिंग टॉवर' का उपयोग करता है?",
+    "o": [
+      "Surface condenser | सरफेस कंडेनसर",
+      "Jet condenser",
+      "Evaporative condenser",
+      "None"
+    ],
+    "a": 0,
+    "e": "In surface condensers, cooling water flows through tubes and steam is condensed on the outer surface without mixing.",
+    "cat": "technical",
+    "sub": "thermal_engineering"
+  },
+  {
+    "q": "The function of a 'Steam Trap' is to: / 'स्टीम ट्रैप' (Steam Trap) का कार्य क्या है?",
+    "o": [
+      "Release steam into atmosphere",
+      "Drain condensate without letting steam escape | भाप को रोके बिना कंडेनसेट निकालना",
+      "Increase steam pressure",
+      "None"
+    ],
+    "a": 1,
+    "e": "Steam traps are automatic valves that release condensed water from steam pipes while retaining the steam.",
+    "cat": "technical",
+    "sub": "thermal_engineering"
+  },
+  {
+    "q": "Volumetric efficiency of an air compressor ________ with an increase in clearance volume. / क्लीयरेंस वॉल्यूम बढ़ने के साथ एयर कंप्रेसर की वॉल्यूमेट्रिक दक्षता ________ है।",
+    "o": [
+      "Increases",
+      "Decreases | घटती है",
+      "Remains constant",
+      "None"
+    ],
+    "a": 1,
+    "e": "Larger clearance volume means more high-pressure air remains in the cylinder, reducing the amount of fresh air that can be drawn in.",
+    "cat": "technical",
+    "sub": "thermal_engineering"
+  },
+  {
+    "q": "Which compressor is classified as a 'Rotary' compressor? / किस कंप्रेसर को 'रोटरी' कंप्रेसर के रूप में वर्गीकृत किया गया है?",
+    "o": [
+      "Reciprocating compressor",
+      "Centrifugal compressor | सेंट्रीफ्यूगल कंप्रेसर",
+      "Piston compressor",
+      "None"
+    ],
+    "a": 1,
+    "e": "Centrifugal and axial flow compressors use rotating impellers or blades to compress air.",
+    "cat": "technical",
+    "sub": "thermal_engineering"
+  },
+  {
+    "q": "In a steam power plant, the 'Condenser' creates a: / स्टीम पावर प्लांट में, 'कंडेनसर' क्या बनाता है?",
+    "o": [
+      "High pressure",
+      "Partial vacuum | आंशिक निर्वात (Vacuum)",
+      "High temperature",
+      "None"
+    ],
+    "a": 1,
+    "e": "The condenser maintains a pressure below atmospheric, allowing more expansion in the turbine and higher efficiency.",
+    "cat": "technical",
+    "sub": "thermal_engineering"
+  },
+  {
+    "q": "The heat rejected in a condenser is equal to: / कंडेनसर में छोड़ी गई ऊष्मा किसके बराबर होती है?",
+    "o": [
+      "Latent heat of steam | भाप की गुप्त ऊष्मा",
+      "Sensible heat only",
+      "Work done by turbine",
+      "None"
+    ],
+    "a": 0,
+    "e": "Condensation involves the removal of latent heat at constant temperature and pressure.",
+    "cat": "technical",
+    "sub": "thermal_engineering"
+  },
+  {
+    "q": "Isothermal compression is most efficiently achieved in a compressor by: / कंप्रेसर में आइसोथर्मल संपीड़न सबसे प्रभावी ढंग से किसके द्वारा प्राप्त किया जाता है?",
+    "o": [
+      "High speed operation",
+      "Very slow speed and perfect cooling | बहुत धीमी गति और सही कूलिंग",
+      "Insulating the cylinder",
+      "None"
+    ],
+    "a": 1,
+    "e": "Isothermal compression requires constant temperature, which is only possible if heat is removed as fast as it is generated.",
+    "cat": "technical",
+    "sub": "thermal_engineering"
+  },
+  {
+    "q": "Air leakage in a condenser results in: / कंडेनसर में हवा के रिसाव (Air leakage) का परिणाम होता है:",
+    "o": [
+      "Increased vacuum",
+      "Reduced efficiency and vacuum | दक्षता और वैक्यूम में कमी",
+      "Increased cooling rate",
+      "None"
+    ],
+    "a": 1,
+    "e": "Air in the condenser increases the back pressure and acts as an insulator on the tubes, reducing heat transfer.",
+    "cat": "technical",
+    "sub": "thermal_engineering"
+  },
+  {
+    "q": "A 'Single-stage' reciprocating compressor is generally used for: / 'सिंगल-स्टेज' रेसिप्रोकेटिंग कंप्रेसर का उपयोग आम तौर पर किसके लिए किया जाता है?",
+    "o": [
+      "High pressure ratios",
+      "Low to medium pressure ratios | कम से मध्यम दबाव अनुपात",
+      "Very high mass flow",
+      "None"
+    ],
+    "a": 1,
+    "e": "Multi-staging is required for high pressures to keep temperature and work within safe and efficient limits.",
+    "cat": "technical",
+    "sub": "thermal_engineering"
+  },
+  {
+    "q": "Which of the following is a 'Water-tube' boiler? / निम्नलिखित में से कौन सा 'वॉटर-ट्यूब' बॉयलर है?",
+    "o": [
+      "Lancashire boiler",
+      "Cochran boiler",
+      "Babcock and Wilcox boiler | बैबकॉक और विलकॉक्स बॉयलर",
+      "Cornish boiler"
+    ],
+    "a": 2,
+    "e": "In water-tube boilers, water circulates inside the tubes while hot gases pass over them, allowing higher pressures.",
+    "cat": "technical",
+    "sub": "thermal_engineering"
+  },
+  {
+    "q": "The function of a 'Safety Valve' in a boiler is to: / बॉयलर में 'सेफ्टी वाल्व' का कार्य क्या है?",
+    "o": [
+      "Maintain water level",
+      "Release excess steam pressure automatically | अतिरिक्त भाप के दबाव को स्वचालित रूप से छोड़ना",
+      "Increase steam temperature",
+      "None"
+    ],
+    "a": 1,
+    "e": "Safety valves prevent the boiler from exploding by releasing steam when pressure exceeds the design limit.",
+    "cat": "technical",
+    "sub": "thermal_engineering"
+  },
+  {
+    "q": "Which boiler component is used to heat the feed water using waste heat from flue gases? / फ्लू गैसों की अपशिष्ट गर्मी का उपयोग करके फीड वॉटर को गर्म करने के लिए किस बॉयलर घटक का उपयोग किया जाता है?",
+    "o": [
+      "Superheater",
+      "Economizer | इकोनोमाइज़र (Economizer)",
+      "Air preheater",
+      "Steam separator"
+    ],
+    "a": 1,
+    "e": "An economizer increases the efficiency of the boiler by recovering heat that would otherwise be lost through the chimney.",
+    "cat": "technical",
+    "sub": "thermal_engineering"
+  },
+  {
+    "q": "A boiler 'Mounting' is essential for: / बॉयलर 'माउंटिंग' किसके लिए आवश्यक है?",
+    "o": [
+      "Increasing efficiency",
+      "Safe operation of the boiler | बॉयलर के सुरक्षित संचालन के लिए",
+      "Producing superheated steam",
+      "None"
+    ],
+    "a": 1,
+    "e": "Mountings (like water level indicator, safety valve) are mandatory for the safe operation of any boiler.",
+    "cat": "technical",
+    "sub": "thermal_engineering"
+  },
+  {
+    "q": "What is the purpose of a 'Fusible Plug' in a boiler? / बॉयलर में 'फ्यूसिबल प्लग' का उद्देश्य क्या है?",
+    "o": [
+      "To increase pressure",
+      "To protect the boiler from overheating due to low water level | कम जल स्तर के कारण ओवरहीटिंग से बचाना",
+      "To clean the boiler",
+      "None"
+    ],
+    "a": 1,
+    "e": "It melts when the water level drops too low, allowing steam to extinguish the fire in the furnace.",
+    "cat": "technical",
+    "sub": "thermal_engineering"
+  },
+  {
+    "q": "Which accessory is used to increase the temperature of steam above its saturation point? / संतृप्ति बिंदु (saturation point) से ऊपर भाप का तापमान बढ़ाने के लिए किस एक्सेसरी का उपयोग किया जाता है?",
+    "o": [
+      "Economizer",
+      "Superheater | सुपरहीटर (Superheater)",
+      "Feed pump",
+      "Blow-off cock"
+    ],
+    "a": 1,
+    "e": "Superheated steam prevents condensation in turbines and carries more energy per unit mass.",
+    "cat": "technical",
+    "sub": "thermal_engineering"
+  },
+  {
+    "q": "A 'Fire-tube' boiler is one in which: / 'फायर-ट्यूब' बॉयलर वह है जिसमें:",
+    "o": [
+      "Water is inside the tubes",
+      "Hot gases pass through the tubes | गर्म गैसें ट्यूबों से होकर गुजरती हैं",
+      "Fire is outside the boiler shell",
+      "None"
+    ],
+    "a": 1,
+    "e": "In fire-tube boilers, the tubes are surrounded by water while combustion gases flow inside the tubes.",
+    "cat": "technical",
+    "sub": "thermal_engineering"
+  },
+  {
+    "q": "The ratio of the heat actually used in producing steam to the heat liberated by fuel is: / भाप पैदा करने में उपयोग की गई गर्मी और ईंधन द्वारा मुक्त गर्मी का अनुपात है:",
+    "o": [
+      "Boiler efficiency | बॉयलर दक्षता",
+      "Equivalent evaporation",
+      "Steam capacity",
+      "None"
+    ],
+    "a": 0,
+    "e": "Boiler efficiency measures how effectively the chemical energy of the fuel is converted into the enthalpy of steam.",
+    "cat": "technical",
+    "sub": "thermal_engineering"
+  },
+  {
+    "q": "Which component is used to remove mud and sediments from the bottom of the boiler? / बॉयलर के नीचे से कीचड़ और तलछट निकालने के लिए किस घटक का उपयोग किया जाता है?",
+    "o": [
+      "Stop valve",
+      "Blow-off cock | ब्लो-ऑफ कॉक (Blow-off cock)",
+      "Check valve",
+      "Safety valve"
+    ],
+    "a": 1,
+    "e": "The blow-off cock allows periodic discharge of impurities that settle at the lowest part of the boiler.",
+    "cat": "technical",
+    "sub": "thermal_engineering"
+  },
+  {
+    "q": "Which draft system uses a 'Fan' placed after the boiler (near the chimney)? / कौन सा ड्राफ्ट सिस्टम बॉयलर के बाद (चिमनी के पास) स्थित 'फैन' का उपयोग करता है?",
+    "o": [
+      "Forced draft",
+      "Induced draft | प्रेरित ड्राफ्ट (Induced draft)",
+      "Natural draft",
+      "None"
+    ],
+    "a": 1,
+    "e": "An induced draft fan sucks the gases out of the boiler and creates a partial vacuum in the furnace.",
+    "cat": "technical",
+    "sub": "thermal_engineering"
+  },
+  {
+    "q": "The ratio of brake power to indicated power is known as: / ब्रेक पावर और इंडिकेटेड पावर के अनुपात को कहा जाता है:",
+    "o": [
+      "Thermal efficiency",
+      "Mechanical efficiency | मैकेनिकल दक्षता (Mechanical efficiency)",
+      "Volumetric efficiency",
+      "Relative efficiency"
+    ],
+    "a": 1,
+    "e": "Mechanical efficiency accounts for the power lost due to friction within the engine components.",
+    "cat": "technical",
+    "sub": "thermal_engineering"
+  },
+  {
+    "q": "Which cycle is used as the ideal cycle for Spark Ignition (SI) engines? / स्पार्क इग्निशन (SI) इंजन के लिए आदर्श चक्र के रूप में किस चक्र का उपयोग किया जाता है?",
+    "o": [
+      "Diesel cycle",
+      "Dual cycle",
+      "Otto cycle | ओटो चक्र (Otto cycle)",
+      "Rankine cycle"
+    ],
+    "a": 2,
+    "e": "The Otto cycle consists of two constant volume and two adiabatic processes, modeling the gasoline engine.",
+    "cat": "technical",
+    "sub": "thermal_engineering"
+  },
+  {
+    "q": "In a Gas Turbine, the 'Brayton Cycle' consists of which processes? / गैस टर्बाइन में, 'ब्रेटन चक्र' में कौन सी प्रक्रियाएं शामिल होती हैं?",
+    "o": [
+      "Two isochoric and two isothermal",
+      "Two isentropic and two isobaric | दो आइसेंट्रोपिक और दो आइसोबारिक",
+      "Two isothermal and two isobaric",
+      "None"
+    ],
+    "a": 1,
+    "e": "The Brayton cycle uses constant pressure heat addition and rejection, and isentropic compression and expansion.",
+    "cat": "technical",
+    "sub": "thermal_engineering"
+  },
+  {
+    "q": "What is the function of a 'Regenerator' in a Gas Turbine plant? / गैस टर्बाइन प्लांट में 'रीजेनरेटर' का कार्य क्या है?",
+    "o": [
+      "To cool the exhaust gases",
+      "To preheat compressed air using exhaust gases | निकास गैसों का उपयोग करके संपीड़ित हवा को पहले से गर्म करना",
+      "To increase the turbine speed",
+      "None"
+    ],
+    "a": 1,
+    "e": "Regeneration improves thermal efficiency by recovering waste heat from the turbine exhaust.",
+    "cat": "technical",
+    "sub": "thermal_engineering"
+  },
+  {
+    "q": "The power developed inside the engine cylinder is called: / इंजन सिलेंडर के अंदर विकसित होने वाली शक्ति कहलाती है:",
+    "o": [
+      "Frictional power",
+      "Brake power",
+      "Indicated power | इंडिकेटेड पावर (Indicated power)",
+      "Net power"
+    ],
+    "a": 2,
+    "e": "Indicated power is the theoretical power produced by the combustion of fuel before any mechanical losses.",
+    "cat": "technical",
+    "sub": "thermal_engineering"
+  },
+  {
+    "q": "Which type of Gas Turbine cycle is commonly used in aircraft propulsion? / विमान प्रणोदन (propulsion) में आमतौर पर किस प्रकार के गैस टर्बाइन चक्र का उपयोग किया जाता है?",
+    "o": [
+      "Closed cycle",
+      "Open cycle | ओपन चक्र (Open cycle)",
+      "Combined cycle",
+      "None"
+    ],
+    "a": 1,
+    "e": "Open cycle turbines take in fresh air and exhaust combustion products, making them lighter and suitable for aircraft.",
+    "cat": "technical",
+    "sub": "thermal_engineering"
+  },
+  {
+    "q": "What happens to the efficiency of an Otto cycle if the compression ratio is increased? / यदि संपीड़न अनुपात (compression ratio) बढ़ाया जाता है, तो ओटो चक्र की दक्षता पर क्या प्रभाव पड़ता है?",
+    "o": [
+      "Decreases",
+      "Increases | बढ़ती है",
+      "Remains constant",
+      "Becomes zero"
+    ],
+    "a": 1,
+    "e": "Thermal efficiency of an Otto cycle is directly dependent on the compression ratio (r).",
+    "cat": "technical",
+    "sub": "thermal_engineering"
+  },
+  {
+    "q": "Specific Fuel Consumption (SFC) is defined as: / विशिष्ट ईंधन खपत (SFC) को किस रूप में परिभाषित किया गया है?",
+    "o": [
+      "Fuel consumed per unit time",
+      "Fuel consumed per unit power produced | प्रति इकाई उत्पादित शक्ति पर खपत ईंधन",
+      "Air-fuel ratio",
+      "None"
+    ],
+    "a": 1,
+    "e": "SFC is a measure of engine efficiency, indicating how much fuel is used to produce 1 kW of power.",
+    "cat": "technical",
+    "sub": "thermal_engineering"
+  },
+  {
+    "q": "The 'Morse Test' is used to determine the indicated power of: / 'मोर्स टेस्ट' का उपयोग किसकी इंडिकेटेड पावर निर्धारित करने के लिए किया जाता है?",
+    "o": [
+      "Single cylinder engines",
+      "Multi-cylinder engines | मल्टी-सिलेंडर इंजन",
+      "Gas turbines",
+      "Steam turbines"
+    ],
+    "a": 1,
+    "e": "The Morse test estimates the indicated power of each cylinder by cutting off individual cylinders in a multi-cylinder setup.",
+    "cat": "technical",
+    "sub": "thermal_engineering"
+  },
+  {
+    "q": "What is 'Intercooling' in gas turbines? / गैस टर्बाइन में 'इंटरकूलिंग' क्या है?",
+    "o": [
+      "Cooling the turbine blades",
+      "Cooling the air between compression stages | संपीड़न चरणों के बीच हवा को ठंडा करना",
+      "Cooling the exhaust",
+      "None"
+    ],
+    "a": 1,
+    "e": "Intercooling reduces the work required for compression by cooling the air between two compressors.",
+    "cat": "technical",
+    "sub": "thermal_engineering"
+  },
+  {
+    "q": "The primary function of a 'Seed Drill' is: / 'सीड ड्रिल' का प्राथमिक कार्य क्या है?",
+    "o": [
+      "To irrigate the field",
+      "To place seeds in furrows at a uniform depth and cover them | बीजों को निश्चित गहराई पर बोना और उन्हें ढंकना",
+      "To cut the crop",
+      "None"
+    ],
+    "a": 1,
+    "e": "Seed drills ensure uniform distribution of seeds, saving time and improving germination rates.",
+    "cat": "technical",
+    "sub": "farm_machinery"
+  },
+  {
+    "q": "Which part of the seed drill is responsible for releasing the seeds from the hopper? / सीड ड्रिल का कौन सा हिस्सा हॉपर से बीजों को छोड़ने के लिए जिम्मेदार है?",
+    "o": [
+      "Furrow opener",
+      "Seed metering mechanism | सीड मीटरिंग मैकेनिज्म",
+      "Seed tube",
+      "Ground wheel"
+    ],
+    "a": 1,
+    "e": "The metering mechanism regulates the seed rate (number of seeds per hectare).",
+    "cat": "technical",
+    "sub": "farm_machinery"
+  },
+  {
+    "q": "What is 'Zero Tillage'? / 'जीरो टिलेज' (Zero Tillage) क्या है?",
+    "o": [
+      "Ploughing many times",
+      "Sowing seeds directly into untilled soil | बिना जुताई वाली मिट्टी में सीधे बीज बोना",
+      "Removing all weeds manually",
+      "None"
+    ],
+    "a": 1,
+    "e": "Zero tillage saves fuel and time by skipping primary and secondary tillage operations.",
+    "cat": "technical",
+    "sub": "farm_machinery"
+  },
+  {
+    "q": "A 'Planter' is different from a seed drill because it: / एक 'प्लांटर' (Planter) सीड ड्रिल से अलग है क्योंकि यह:",
+    "o": [
+      "Only uses water",
+      "Places seeds at precise intervals in a row | बीजों को पंक्ति में सटीक अंतराल पर रखता है",
+      "Is pulled by humans",
+      "None"
+    ],
+    "a": 1,
+    "e": "Planters are used for crops like maize or potatoes where specific spacing between seeds is required.",
+    "cat": "technical",
+    "sub": "farm_machinery"
+  },
+  {
+    "q": "The device in a seed drill that opens a small trench in the soil is called: / सीड ड्रिल में मिट्टी में छोटी नाली खोलने वाला उपकरण क्या कहलाता है?",
+    "o": [
+      "Hopper",
+      "Furrow Opener | फरो ओपनर (Furrow Opener)",
+      "Covering device",
+      "None"
+    ],
+    "a": 1,
+    "e": "Furrow openers (like disc or shovel type) create the path where seeds are dropped.",
+    "cat": "technical",
+    "sub": "farm_machinery"
+  },
+  {
+    "q": "Which type of 'Seed Metering' mechanism uses a wheel with grooves to pick up seeds? / किस प्रकार के 'सीड मीटरिंग' तंत्र में बीजों को उठाने के लिए खांचे वाले पहिये का उपयोग किया जाता है?",
+    "o": [
+      "Internal double run",
+      "Fluted feed roller | फ्लूटेड फीड रोलर",
+      "Cup feed",
+      "None"
+    ],
+    "a": 1,
+    "e": "Fluted rollers are very common in seed drills for handling various types of seeds.",
+    "cat": "technical",
+    "sub": "farm_machinery"
+  },
+  {
+    "q": "What is the role of a 'Calibrating' a seed drill? / सीड ड्रिल के 'कैलिब्रेशन' (Calibration) की क्या भूमिका है?",
+    "o": [
+      "To check the color",
+      "To verify the seed rate before actual sowing | बुवाई से पहले बीज दर का सत्यापन करना",
+      "To increase speed",
+      "None"
+    ],
+    "a": 1,
+    "e": "Calibration ensures that the machine drops the exact quantity of seed intended for the area.",
+    "cat": "technical",
+    "sub": "farm_machinery"
+  },
+  {
+    "q": "Which material is used for the 'Frame' of heavy farm machinery for high strength? / उच्च मजबूती के लिए भारी कृषि मशीनरी के 'फ्रेम' के लिए किस सामग्री का उपयोग किया जाता है?",
+    "o": [
+      "Plastic",
+      "Mild Steel | माइल्ड स्टील (Mild Steel)",
+      "Wood",
+      "None"
+    ],
+    "a": 1,
+    "e": "Mild steel provides the necessary structural rigidity and strength to withstand farm stresses.",
+    "cat": "technical",
+    "sub": "farm_machinery"
+  },
+  {
+    "q": "The 'Seed Rate' of a machine can be changed by: / मशीन की 'बीज दर' (Seed Rate) को किसके द्वारा बदला जा सकता है?",
+    "o": [
+      "Changing the tractor driver",
+      "Adjusting the speed of the metering shaft | मीटरिंग शाफ्ट की गति को समायोजित करके",
+      "Changing the tires",
+      "None"
+    ],
+    "a": 1,
+    "e": "Varying the speed or opening of the metering unit changes the quantity of seeds dropped per unit distance.",
+    "cat": "technical",
+    "sub": "farm_machinery"
+  },
+  {
+    "q": "What is the advantage of 'Transplanting' machines (e.g., for Paddy)? / 'ट्रांसप्लांटिंग' मशीनों (जैसे धान के लिए) का क्या लाभ है?",
+    "o": [
+      "It requires more labor",
+      "Uniform spacing and reduced labor cost | समान अंतराल और कम श्रम लागत",
+      "It is slower than manual work",
+      "None"
+    ],
+    "a": 1,
+    "e": "Mechanical transplanters ensure precise depth and spacing, leading to better crop yield.",
+    "cat": "technical",
+    "sub": "farm_machinery"
+  },
+  {
+    "q": "What is the primary objective of 'Tillage'? / 'जुताई' (Tillage) का प्राथमिक उद्देश्य क्या है?",
+    "o": [
+      "To harvest the crop",
+      "To prepare a suitable seedbed for plant growth | पौधों की वृद्धि के लिए उपयुक्त सीडबेड तैयार करना",
+      "To apply fertilizers",
+      "None"
+    ],
+    "a": 1,
+    "e": "Tillage involves mechanical manipulation of soil to provide favorable conditions for seed germination and crop growth.",
+    "cat": "technical",
+    "sub": "farm_machinery"
+  },
+  {
+    "q": "Which of the following is an example of 'Primary Tillage' equipment? / निम्नलिखित में से कौन सा 'प्राथमिक जुताई' (Primary Tillage) उपकरण का उदाहरण है?",
+    "o": [
+      "Harrow",
+      "Cultivator",
+      "Mouldboard (MB) Plough | मोल्डबोर्ड (MB) हल",
+      "Leveller"
+    ],
+    "a": 2,
+    "e": "Primary tillage equipment like MB plough is used for the initial major soil cutting and inversion.",
+    "cat": "technical",
+    "sub": "farm_machinery"
+  },
+  {
+    "q": "The vertical suction in an MB plough helps in: / MB हल में वर्टिकल सक्शन (Vertical suction) किसमें मदद करता है?",
+    "o": [
+      "Inverting the soil",
+      "Maintaining the depth of cut | कटाई की गहराई बनाए रखना",
+      "Turning the plough",
+      "None"
+    ],
+    "a": 1,
+    "e": "Vertical suction ensures the plough stays at the required depth in the soil during operation.",
+    "cat": "technical",
+    "sub": "farm_machinery"
+  },
+  {
+    "q": "Which part of the plough handles the 'Inversion' (turning over) of the soil? / हल का कौन सा हिस्सा मिट्टी को 'पलटने' (Inversion) का कार्य करता है?",
+    "o": [
+      "Share",
+      "Landside",
+      "Moldboard | मोल्डबोर्ड (Moldboard)",
+      "Frog"
+    ],
+    "a": 2,
+    "e": "The moldboard receives the furrow slice from the share and turns it over to bury weeds and trash.",
+    "cat": "technical",
+    "sub": "farm_machinery"
+  },
+  {
+    "q": "A 'Disc Plough' is preferred over an MB plough in which type of soil? / किस प्रकार की मिट्टी में MB हल की तुलना में 'डिस्क हल' को प्राथमिकता दी जाती है?",
+    "o": [
+      "Soft sandy soil",
+      "Hard, stony, and trashy soil | कठोर, पथरीली और कचरे वाली मिट्टी",
+      "Wet clay soil",
+      "None"
+    ],
+    "a": 1,
+    "e": "Disc ploughs can cut through roots and roll over stones where a standard share-plough might break.",
+    "cat": "technical",
+    "sub": "farm_machinery"
+  },
+  {
+    "q": "What is the function of a 'Harrow'? / 'हैरो' (Harrow) का क्या कार्य है?",
+    "o": [
+      "Deep ploughing",
+      "Breaking clods and pulverizing soil (Secondary tillage) | ढेलों को तोड़ना और मिट्टी को भुरभुरा बनाना",
+      "Harvesting",
+      "Sowing seeds"
+    ],
+    "a": 1,
+    "e": "Harrows are secondary tillage tools used to refine the seedbed after primary ploughing.",
+    "cat": "technical",
+    "sub": "farm_machinery"
+  },
+  {
+    "q": "In a 'Disc Harrow', the 'Gang Angle' is used to adjust: / डिस्क हैरो में, 'गैंग एंगल' (Gang Angle) का उपयोग किसे समायोजित करने के लिए किया जाता है?",
+    "o": [
+      "Speed of travel",
+      "The penetration and soil pulverization | मिट्टी में प्रवेश और भुरभुरापन",
+      "The width of the tractor",
+      "None"
+    ],
+    "a": 1,
+    "e": "Increasing the gang angle increases the aggressiveness of the discs and the depth of penetration.",
+    "cat": "technical",
+    "sub": "farm_machinery"
+  },
+  {
+    "q": "What is 'Farm Mechanization'? / 'कृषि मशीनीकरण' क्या है?",
+    "o": [
+      "Manual farming",
+      "Use of mechanical power for various farm operations | कृषि कार्यों के लिए यांत्रिक शक्ति का उपयोग",
+      "Using only animals for farming",
+      "None"
+    ],
+    "a": 1,
+    "e": "Mechanization involves applying engineering principles and machines to increase productivity and reduce human drudgery in farming.",
+    "cat": "technical",
+    "sub": "farm_machinery"
+  },
+  {
+    "q": "Which material is commonly used for manufacturing 'Plough Shares' due to its wear resistance? / घर्षण प्रतिरोध के कारण 'हल के शेयर' बनाने के लिए आमतौर पर किस सामग्री का उपयोग किया जाता है?",
+    "o": [
+      "Cast Iron",
+      "Chilled Cast Iron or High Carbon Steel | चिल्ड कास्ट आयरन या हाई कार्बन स्टील",
+      "Aluminum",
+      "Copper"
+    ],
+    "a": 1,
+    "e": "These materials offer high hardness and durability against constant soil abrasion.",
+    "cat": "technical",
+    "sub": "farm_machinery"
+  },
+  {
+    "q": "The 'Draft' of a plough depends on: / एक हल का 'ड्राफ्ट' (Draft) किस पर निर्भर करता है?",
+    "o": [
+      "Soil resistance and depth of cut | मिट्टी का प्रतिरोध और कटाई की गहराई",
+      "Color of the tractor",
+      "Time of the day",
+      "None"
+    ],
+    "a": 0,
+    "e": "Draft is the horizontal force required to pull the implement, influenced by soil texture and depth.",
+    "cat": "technical",
+    "sub": "farm_machinery"
+  },
+  {
+    "q": "In a Diesel engine, the fuel is ignited by: / डीजल इंजन में, ईंधन किसके द्वारा जलाया जाता है?",
+    "o": [
+      "Spark plug",
+      "Heat of compression | संपीड़न की गर्मी",
+      "Battery",
+      "Carburetor"
+    ],
+    "a": 1,
+    "e": "Diesel engines are compression-ignition engines where highly compressed air reaches a temperature high enough to ignite fuel.",
+    "cat": "technical",
+    "sub": "automobile_structure"
+  },
+  {
+    "q": "What is the function of the 'Clutch' in a vehicle? / वाहन में 'क्लच' का क्या कार्य है?",
+    "o": [
+      "To increase speed",
+      "To engage or disengage the engine from the transmission | इंजन को ट्रांसमिशन से जोड़ना या अलग करना",
+      "To stop the wheels",
+      "None"
+    ],
+    "a": 1,
+    "e": "The clutch allows the driver to shift gears by temporarily cutting power flow from the engine to the gearbox.",
+    "cat": "technical",
+    "sub": "automobile_structure"
+  },
+  {
+    "q": "The component that allows the rear wheels to rotate at different speeds during a turn is: / मोड़ के दौरान पीछे के पहियों को अलग-अलग गति से घूमने की अनुमति देने वाला घटक है:",
+    "o": [
+      "Propeller shaft",
+      "Differential | डिफरेंशियल (Differential)",
+      "Gearbox",
+      "Clutch"
+    ],
+    "a": 1,
+    "e": "The differential is essential for cornering, as the outer wheel must travel a longer distance than the inner wheel.",
+    "cat": "technical",
+    "sub": "automobile_structure"
+  },
+  {
+    "q": "Which type of 'Steering Gear' is most commonly used in modern cars? / आधुनिक कारों में किस प्रकार के 'स्टीयरिंग गियर' का सबसे अधिक उपयोग किया जाता है?",
+    "o": [
+      "Worm and Roller",
+      "Rack and Pinion | रैक और पिनियन",
+      "Recirculating ball",
+      "Cam and Lever"
+    ],
+    "a": 1,
+    "e": "Rack and pinion steering provides direct feedback and is compact, making it ideal for most modern vehicles.",
+    "cat": "technical",
+    "sub": "automobile_structure"
+  },
+  {
+    "q": "What is the purpose of the 'Transmission' (Gearbox)? / 'ट्रांसमिशन' (गियरबॉक्स) का उद्देश्य क्या है?",
+    "o": [
+      "To produce fuel",
+      "To provide necessary torque and speed variations | आवश्यक टॉर्क और गति भिन्नता प्रदान करना",
+      "To steer the car",
+      "None"
+    ],
+    "a": 1,
+    "e": "A gearbox allows the vehicle to move from rest (high torque) and cruise at high speeds (low torque).",
+    "cat": "technical",
+    "sub": "automobile_structure"
+  },
+  {
+    "q": "The 'Fuel Injector' in a petrol engine (MPFI) is responsible for: / पेट्रोल इंजन (MPFI) में 'फ्यूल इंजेक्टर' किसके लिए जिम्मेदार है?",
+    "o": [
+      "Mixing fuel with water",
+      "Atomizing and spraying fuel into the intake manifold | ईंधन का छिड़काव करना",
+      "Storing fuel",
+      "None"
+    ],
+    "a": 1,
+    "e": "Multi-Point Fuel Injection (MPFI) systems use injectors to provide precise fuel amounts for better efficiency.",
+    "cat": "technical",
+    "sub": "automobile_structure"
+  },
+  {
+    "q": "What is 'Caster' in wheel alignment? / व्हील एलाइनमेंट में 'कैस्टर' (Caster) क्या है?",
+    "o": [
+      "Inward tilt of wheels",
+      "Forward or backward tilt of the steering axis | स्टीयरिंग अक्ष का आगे या पीछे की ओर झुकाव",
+      "Distance between wheels",
+      "None"
+    ],
+    "a": 1,
+    "e": "Caster helps in self-centering of the steering and provides directional stability.",
+    "cat": "technical",
+    "sub": "automobile_structure"
+  },
+  {
+    "q": "The 'Propeller Shaft' transmits power from the: / 'प्रोपेलर शाफ्ट' पावर कहाँ से कहाँ पहुँचाती है?",
+    "o": [
+      "Engine to Clutch",
+      "Gearbox to Differential | गियरबॉक्स से डिफरेंशियल तक",
+      "Wheel to Steering",
+      "None"
+    ],
+    "a": 1,
+    "e": "The propeller shaft connects the transmission output to the rear axle input in rear-wheel-drive vehicles.",
+    "cat": "technical",
+    "sub": "automobile_structure"
+  },
+  {
+    "q": "What does 'Power Steering' reduce? / 'पावर स्टीयरिंग' किसे कम करता है?",
+    "o": [
+      "Fuel efficiency",
+      "Steering effort for the driver | ड्राइवर के लिए स्टीयरिंग प्रयास",
+      "Braking distance",
+      "Vehicle weight"
+    ],
+    "a": 1,
+    "e": "Power steering uses hydraulic or electric assistance to make turning the steering wheel easier, especially at low speeds.",
+    "cat": "technical",
+    "sub": "automobile_structure"
+  },
+  {
+    "q": "The 'Universal Joint' is used in the propeller shaft to: / प्रोपेलर शाफ्ट में 'यूनिवर्सल जॉइंट' का उपयोग क्यों किया जाता है?",
+    "o": [
+      "Increase shaft length",
+      "Allow power transmission at varying angles | अलग-अलग कोणों पर पावर ट्रांसमिशन की अनुमति देना",
+      "Stop the car",
+      "None"
+    ],
+    "a": 1,
+    "e": "Universal joints accommodate the vertical movement of the rear axle due to road bumps while the shaft rotates.",
+    "cat": "technical",
+    "sub": "automobile_structure"
+  },
+  {
+    "q": "Which part of the engine is known as the 'Main Frame' and houses the cylinders? / इंजन का वह कौन सा हिस्सा है जिसे 'मेन फ्रेम' कहा जाता है और जिसमें सिलेंडर स्थित होते हैं?",
+    "o": [
+      "Cylinder Head",
+      "Cylinder Block | सिलेंडर ब्लॉक",
+      "Crankcase",
+      "Oil Pan"
+    ],
+    "a": 1,
+    "e": "The cylinder block is the main structural component of the engine that contains cylinders and provides paths for coolant and oil.",
+    "cat": "technical",
+    "sub": "automobile_structure"
+  },
+  {
+    "q": "What is the purpose of 'Piston Rings'? / 'पिस्टन रिंग्स' का उद्देश्य क्या है?",
+    "o": [
+      "To connect piston to crankshaft",
+      "To seal the combustion chamber and prevent oil leakage | कम्बशन चैम्बर को सील करना",
+      "To cool the spark plug",
+      "None"
+    ],
+    "a": 1,
+    "e": "Piston rings provide a tight seal between the piston and cylinder wall to maintain compression and scrap excess oil.",
+    "cat": "technical",
+    "sub": "automobile_structure"
+  },
+  {
+    "q": "In a 'Water-Cooled' engine, the component that dissipates heat to the atmosphere is: / 'वॉटर-कूल्ड' इंजन में, वह घटक जो वायुमंडल में गर्मी छोड़ता है, वह है:",
+    "o": [
+      "Water Pump",
+      "Thermostat",
+      "Radiator | रेडिएटर (Radiator)",
+      "Coolant Jacket"
+    ],
+    "a": 2,
+    "e": "The radiator uses airflow to cool the hot coolant circulating from the engine jackets.",
+    "cat": "technical",
+    "sub": "automobile_structure"
+  },
+  {
+    "q": "The function of a 'Thermostat' in the cooling system is to: / कूलिंग सिस्टम में 'थर्मोस्टेट' का कार्य क्या है?",
+    "o": [
+      "Cool the water fast",
+      "Maintain the optimum operating temperature of the engine | इंजन का इष्टतम तापमान बनाए रखना",
+      "Circulate water",
+      "None"
+    ],
+    "a": 1,
+    "e": "The thermostat remains closed until the engine reaches its working temperature, ensuring efficient engine operation.",
+    "cat": "technical",
+    "sub": "automobile_structure"
+  },
+  {
+    "q": "Which lubrication system is most commonly used in modern passenger cars? / आधुनिक पैसेंजर कारों में कौन सा लुब्रिकेशन सिस्टम सबसे अधिक उपयोग किया जाता है?",
+    "o": [
+      "Mist lubrication",
+      "Pressure feed system | प्रेशर फीड सिस्टम",
+      "Splash lubrication",
+      "Gravity feed"
+    ],
+    "a": 1,
+    "e": "In a pressure feed system, an oil pump forces lubricant to all critical moving parts under pressure.",
+    "cat": "technical",
+    "sub": "automobile_structure"
+  },
+  {
+    "q": "What is the primary function of 'Engine Oil'? / 'इंजन ऑयल' का प्राथमिक कार्य क्या है?",
+    "o": [
+      "To increase fuel consumption",
+      "To reduce friction and wear between moving parts | घर्षण और घिसाव को कम करना",
+      "To produce sparks",
+      "None"
+    ],
+    "a": 1,
+    "e": "Oil forms a protective film between metal surfaces to prevent direct contact and heat generation.",
+    "cat": "technical",
+    "sub": "automobile_structure"
+  },
+  {
+    "q": "Which component connects the piston to the crankshaft? / कौन सा घटक पिस्टन को क्रैंकशाफ्ट से जोड़ता है?",
+    "o": [
+      "Camshaft",
+      "Connecting Rod | कनेक्टिंग रॉड (Connecting Rod)",
+      "Push rod",
+      "Valves"
+    ],
+    "a": 1,
+    "e": "The connecting rod converts the reciprocating motion of the piston into the rotational motion of the crankshaft.",
+    "cat": "technical",
+    "sub": "automobile_structure"
+  },
+  {
+    "q": "The 'Oil Pump' in an engine is usually driven by the: / इंजन में 'ऑयल पंप' आमतौर पर किसके द्वारा संचालित होता है?",
+    "o": [
+      "Flywheel",
+      "Camshaft or Crankshaft | कैमशाफ्ट या क्रैंकशाफ्ट",
+      "Alternator",
+      "Water pump"
+    ],
+    "a": 1,
+    "e": "The oil pump needs to run whenever the engine is running, so it is geared to the main shafts.",
+    "cat": "technical",
+    "sub": "automobile_structure"
+  },
+  {
+    "q": "An 'Antifreeze' solution (like Ethylene Glycol) is added to water to: / पानी में 'एंटीफ्रीज' घोल क्यों मिलाया जाता है?",
+    "o": [
+      "Increase the freezing point",
+      "Lower the freezing point and raise the boiling point | हिमांक कम करना और क्वथनांक बढ़ाना",
+      "Make water thicker",
+      "None"
+    ],
+    "a": 1,
+    "e": "Antifreeze prevents the coolant from freezing in winter and boiling over in extreme heat.",
+    "cat": "technical",
+    "sub": "automobile_structure"
+  },
+  {
+    "q": "Where are the 'Crankshaft Main Bearings' located? / 'क्रैंकशाफ्ट मेन बेयरिंग' कहाँ स्थित होते हैं?",
+    "o": [
+      "Inside the piston",
+      "In the Cylinder Block / Crankcase | सिलेंडर ब्लॉक / क्रैंककेस में",
+      "Inside the radiator",
+      "None"
+    ],
+    "a": 1,
+    "e": "Main bearings support the crankshaft and allow it to rotate smoothly within the engine block.",
+    "cat": "technical",
+    "sub": "automobile_structure"
+  },
+  {
+    "q": "Which type of thread is most commonly used for 'Power Screws' due to its high efficiency? / उच्च दक्षता के कारण 'पावर स्क्रू' के लिए कौन सा थ्रेड सबसे अधिक उपयोग किया जाता है?",
+    "o": [
+      "V-threads",
+      "Square threads | स्क्वायर थ्रेड्स (Square threads)",
+      "Buttress threads",
+      "Acme threads"
+    ],
+    "a": 1,
+    "e": "Square threads have zero radial burst and the highest efficiency as the normal force acts only in the axial direction.",
+    "cat": "technical",
+    "sub": "design_of_machine_elements"
+  },
+  {
+    "q": "What is the primary stress in the wire of a 'Helical Compression Spring'? / 'हेलिकल कंप्रेशन स्प्रिंग' के तार में प्राथमिक प्रतिबल क्या होता है?",
+    "o": [
+      "Direct tensile stress",
+      "Torsional shear stress | टॉर्शनल शियर प्रतिबल",
+      "Bending stress only",
+      "None"
+    ],
+    "a": 1,
+    "e": "When an axial load is applied to a helical spring, the wire undergoes twisting, inducing shear stress.",
+    "cat": "technical",
+    "sub": "design_of_machine_elements"
+  },
+  {
+    "q": "A power screw is said to be 'Self-locking' if: / एक पावर स्क्रू को 'स्व-लॉकिंग' कहा जाता है यदि:",
+    "o": [
+      "Efficiency is more than 50%",
+      "Efficiency is less than 50% | दक्षता 50% से कम है",
+      "Coefficient of friction is zero",
+      "None"
+    ],
+    "a": 1,
+    "e": "In self-locking screws, the friction is high enough to prevent the load from lowering by itself when the effort is removed.",
+    "cat": "technical",
+    "sub": "design_of_machine_elements"
+  },
+  {
+    "q": "Wahl's Stress Factor (K) in spring design is used to account for: / स्प्रिंग डिजाइन में वाहल स्ट्रेस फैक्टर (K) का उपयोग किसके लिए किया जाता है?",
+    "o": [
+      "Atmospheric pressure",
+      "Curvature effect and direct shear | वक्रता प्रभाव और प्रत्यक्ष शियर",
+      "Weight of the spring",
+      "None"
+    ],
+    "a": 1,
+    "e": "Wahl's factor corrects the shear stress calculation by including the effects of wire curvature and direct shear force.",
+    "cat": "technical",
+    "sub": "design_of_machine_elements"
+  },
+  {
+    "q": "Which thread profile is designed to transmit power in 'one direction only'? / कौन सा थ्रेड प्रोफाइल केवल 'एक दिशा' में पावर ट्रांसमिट करने के लिए डिज़ाइन किया गया है?",
+    "o": [
+      "Square thread",
+      "Acme thread",
+      "Buttress thread | बट्रेस थ्रेड (Buttress thread)",
+      "V-thread"
+    ],
+    "a": 2,
+    "e": "Buttress threads combine the high efficiency of square threads with the strength of V-threads for unidirectional loads.",
+    "cat": "technical",
+    "sub": "design_of_machine_elements"
+  },
+  {
+    "q": "Spring 'Stiffness' (k) is defined as: / स्प्रिंग की 'कठोरता' (k) को किस रूप में परिभाषित किया गया है?",
+    "o": [
+      "Deflection per unit load",
+      "Load per unit deflection | प्रति इकाई विक्षेपण भार",
+      "Total energy stored",
+      "None"
+    ],
+    "a": 1,
+    "e": "Stiffness is the ratio of applied load to the resulting deflection (k = W/δ).",
+    "cat": "technical",
+    "sub": "design_of_machine_elements"
+  },
+  {
+    "q": "In a 'Lead Screw' of a Lathe, which thread is used for ease of engagement? / लेथ के 'लीड स्क्रू' में, जुड़ाव की आसानी के लिए किस थ्रेड का उपयोग किया जाता है?",
+    "o": [
+      "Square thread",
+      "Acme thread | एक्मे थ्रेड (Acme thread)",
+      "Buttress thread",
+      "Knuckle thread"
+    ],
+    "a": 1,
+    "e": "Acme threads have a 29° angle which makes them easier to engage with split nuts compared to square threads.",
+    "cat": "technical",
+    "sub": "design_of_machine_elements"
+  },
+  {
+    "q": "When two springs are connected in 'Series', the equivalent stiffness (k) is: / जब दो स्प्रिंग्स 'सीरीज' में जुड़े होते हैं, तो समकक्ष कठोरता (k) होती है:",
+    "o": [
+      "k1 + k2",
+      "(k1 + k2) / 2",
+      "(k1 * k2) / (k1 + k2) | (k1 * k2) / (k1 + k2)",
+      "k1 * k2"
+    ],
+    "a": 2,
+    "e": "In series, the reciprocal of total stiffness is the sum of the reciprocals of individual stiffnesses.",
+    "cat": "technical",
+    "sub": "design_of_machine_elements"
+  },
+  {
+    "q": "The mechanical advantage of a power screw is the ratio of: / पावर स्क्रू का यांत्रिक लाभ किसका अनुपात है?",
+    "o": [
+      "Effort to Load",
+      "Load to Effort | भार और प्रयास का अनुपात",
+      "Pitch to Diameter",
+      "None"
+    ],
+    "a": 1,
+    "e": "Mechanical advantage shows how much the screw multiplies the input effort to lift or move a load.",
+    "cat": "technical",
+    "sub": "design_of_machine_elements"
+  },
+  {
+    "q": "Which type of spring is used in 'Clocks' to store energy? / ऊर्जा संचय करने के लिए 'घड़ियों' में किस प्रकार के स्प्रिंग का उपयोग किया जाता है?",
+    "o": [
+      "Helical compression spring",
+      "Leaf spring",
+      "Spiral torsion spring | स्पाइरल टॉर्शन स्प्रिंग",
+      "Belleville spring"
+    ],
+    "a": 2,
+    "e": "Spiral torsion springs store potential energy when wound up, which is then released slowly to move the clock hands.",
+    "cat": "technical",
+    "sub": "design_of_machine_elements"
+  },
+  {
+    "q": "What is the shape of the Bending Moment Diagram (BMD) for a beam carrying a Uniformly Distributed Load (UDL)? / UDL ले जाने वाली बीम के लिए BMD का आकार क्या होता है?",
+    "o": ["Rectangle", "Triangle", "Parabolic curve | पैराबोलिक वक्र", "Cubic curve"],
+    "a": 2,
+    "e": "For UDL, the Shear Force is linear, and the Bending Moment is a second-degree (parabolic) curve.",
+    "cat": "technical",
+    "sub": "strength_of_materials"
+  },
+  {
+    "q": "The Shear Force Diagram (SFD) for a beam carrying a 'Point Load' shows a: / 'पॉइंट लोड' वाली बीम के लिए SFD क्या दिखाता है?",
+    "o": ["Sudden vertical jump | अचानक वर्टिकल जंप", "Horizontal line only", "Inclined line", "Parabola"],
+    "a": 0,
+    "e": "A point load causes an instantaneous change in the shear force value at that specific section.",
+    "cat": "technical",
+    "sub": "strength_of_materials"
+  },
+  {
+    "q": "A 'Hollow Shaft' of outer diameter 'D' and inner diameter 'd' has a Polar Moment of Inertia (J) of: / बाहरी व्यास 'D' और आंतरिक 'd' वाले खोखले शाफ्ट का J क्या है?",
+    "o": ["π(D^4 - d^4) / 64", "π(D^4 - d^4) / 32 | π(D^4 - d^4) / 32", "π(D^2 - d^2) / 32", "None"],
+    "a": 1,
+    "e": "The polar moment of inertia for a hollow section is the difference between the moments of the outer and inner circles.",
+    "cat": "technical",
+    "sub": "strength_of_materials"
+  },
+  {
+    "q": "In a beam of circular cross-section, the shear stress is zero at: / गोलाकार क्रॉस-सेक्शन की बीम में, शियर स्ट्रेस कहाँ शून्य होता है?",
+    "o": ["Neutral axis", "Extreme fibers | सबसे बाहरी रेशों पर", "Middle of radius", "None"],
+    "a": 1,
+    "e": "Unlike bending stress, shear stress in a beam is maximum at the neutral axis and zero at the top and bottom surfaces.",
+    "cat": "technical",
+    "sub": "strength_of_materials"
+  },
+  {
+    "q": "What is the 'Angle of Twist' (θ) proportional to in a shaft? / शाफ्ट में 'मरोड़ का कोण' (θ) किसके आनुपातिक होता है?",
+    "o": ["Diameter", "Length of the shaft | शाफ्ट की लंबाई", "1 / Torque", "None"],
+    "a": 1,
+    "e": "According to the torsion equation (θ = TL/GJ), the twist increases linearly with the length of the shaft.",
+    "cat": "technical",
+    "sub": "strength_of_materials"
+  },
+  {
+    "q": "A beam is fixed at one end and free at the other. It is called a: / एक बीम जो एक तरफ फिक्स और दूसरी तरफ फ्री है, कहलाती है:",
+    "o": ["Simply supported beam", "Overhanging beam", "Cantilever beam | कैंटिलीवर बीम", "Fixed beam"],
+    "a": 2,
+    "e": "Cantilever beams are common in balconies and crane arms.",
+    "cat": "technical",
+    "sub": "strength_of_materials"
+  },
+  {
+    "q": "The product of Young's Modulus (E) and Moment of Inertia (I) is called: / E और I के गुणनफल को कहा जाता है:",
+    "o": ["Section Modulus", "Flexural Rigidity | फ्लेक्सुरल रिजीडिटी (EI)", "Polar Modulus", "Torsional Rigidity"],
+    "a": 1,
+    "e": "Flexural rigidity (EI) represents the resistance of a beam to bending deformation.",
+    "cat": "technical",
+    "sub": "strength_of_materials"
+  },
+  {
+    "q": "For a shaft, 'Torsional Rigidity' is defined as: / एक शाफ्ट के लिए, 'टॉरसनल रिजीडिटी' को परिभाषित किया गया है:",
+    "o": ["Torque per unit angle of twist | प्रति इकाई मरोड़ कोण टॉर्क (GJ)", "Total torque", "Shear stress / Strain", "None"],
+    "a": 0,
+    "e": "Torsional rigidity (GJ) is the measure of a shaft's resistance to twisting.",
+    "cat": "technical",
+    "sub": "strength_of_materials"
+  },
+  {
+    "q": "When a beam is subjected to 'Pure Bending', the neutral axis is under: / जब बीम 'शुद्ध बेंडिंग' के अधीन होती है, तो न्यूट्रल एक्सिस पर होता है:",
+    "o": ["Maximum tension", "Maximum compression", "Zero stress | शून्य प्रतिबल", "Variable stress"],
+    "a": 2,
+    "e": "The neutral axis is the layer in the beam that undergoes no change in length, hence zero stress.",
+    "cat": "technical",
+    "sub": "strength_of_materials"
+  },
+  {
+    "q": "The slope of the Bending Moment curve at any section gives the: / किसी भी सेक्शन पर बेंडिंग मोमेंट वक्र की ढलान क्या देती है?",
+    "o": ["Shear Force | शियर फोर्स (Shear Force)", "Deflection", "Loading rate", "None"],
+    "a": 0,
+    "e": "Mathematically, the derivative of the bending moment (dM/dx) is equal to the shear force at that section.",
+    "cat": "technical",
+    "sub": "strength_of_materials"
+  },
+  {
+    "q": "The relationship between Young's Modulus (E), Modulus of Rigidity (G), and Poisson's ratio (μ) is: / यंग मापांक (E), रिजीडिटी मापांक (G) और पॉइसन अनुपात (μ) के बीच संबंध है:",
+    "o": ["E = 2G(1 + μ) | E = 2G(1 + μ)", "E = 3G(1 - 2μ)", "E = G(1 + μ)", "E = 2G(1 - μ)"],
+    "a": 0,
+    "e": "This fundamental elastic constant relationship is used to derive one property if the other two are known.",
+    "cat": "technical",
+    "sub": "strength_of_materials"
+  },
+  {
+    "q": "What is the 'Factor of Safety'? / 'सुरक्षा कारक' (Factor of Safety) क्या है?",
+    "o": ["Working Stress / Yield Stress", "Ultimate Stress / Working Stress | अल्टीमेट स्ट्रेस / वर्किंग स्ट्रेस", "Strain / Stress", "None"],
+    "a": 1,
+    "e": "Factor of safety is used in design to ensure that the actual load on a structure is well below its breaking point.",
+    "cat": "technical",
+    "sub": "strength_of_materials"
+  },
+  {
+    "q": "A material that has the same elastic properties in all directions is called: / वह पदार्थ जिसके सभी दिशाओं में समान प्रत्यास्थ गुण होते हैं, कहलाता है:",
+    "o": ["Anisotropic", "Orthotropic", "Isotropic | आइसोट्रोपिक (Isotropic)", "None"],
+    "a": 2,
+    "e": "Isotropic materials, like most metals, have uniform properties regardless of the direction of measurement.",
+    "cat": "technical",
+    "sub": "strength_of_materials"
+  },
+  {
+    "q": "The unit of 'Modulus of Rigidity' is: / 'रिजीडिटी मापांक' (Modulus of Rigidity) की इकाई क्या है?",
+    "o": ["N-m", "N/mm^2 | N/mm^2", "m^4", "Unitless"],
+    "a": 1,
+    "e": "Like all elastic moduli, it is defined as stress divided by strain, resulting in units of pressure.",
+    "cat": "technical",
+    "sub": "strength_of_materials"
+  },
+  {
+    "q": "What is the maximum value of 'Poisson's Ratio' for an ideal elastic material? / एक आदर्श प्रत्यास्थ पदार्थ के लिए 'पॉइसन अनुपात' का अधिकतम मान क्या है?",
+    "o": ["0.25", "1.0", "0.5 | 0.5", "0.33"],
+    "a": 2,
+    "e": "A value of 0.5 indicates a perfectly incompressible material (like rubber). For most metals, it is around 0.3.",
+    "cat": "technical",
+    "sub": "strength_of_materials"
+  },
+  {
+    "q": "In a stress-strain curve, the area under the elastic region represents: / स्ट्रेस-स्ट्रेन कर्व में, इलास्टिक क्षेत्र के नीचे का क्षेत्रफल क्या दर्शाता है?",
+    "o": ["Toughness", "Resilience | रेजिलिएंस (Resilience)", "Hardness", "Ductility"],
+    "a": 1,
+    "e": "Resilience is the capacity of a material to absorb energy when it is deformed elastically.",
+    "cat": "technical",
+    "sub": "strength_of_materials"
+  },
+  {
+    "q": "Which type of stress is induced due to a change in temperature? / तापमान में परिवर्तन के कारण कौन सा प्रतिबल उत्पन्न होता है?",
+    "o": ["Shear stress", "Thermal stress | तापीय प्रतिबल (Thermal stress)", "Compressive stress only", "None"],
+    "a": 1,
+    "e": "Thermal stress develops when a material is prevented from expanding or contracting during temperature changes.",
+    "cat": "technical",
+    "sub": "strength_of_materials"
+  },
+  {
+    "q": "The property of a material to return to its original shape after removing the load is: / भार हटाने के बाद पदार्थ का अपने मूल आकार में लौटने का गुण है:",
+    "o": ["Plasticity", "Elasticity | प्रत्यास्थता (Elasticity)", "Malleability", "Brittleness"],
+    "a": 1,
+    "e": "Elasticity is the fundamental property that allows structures to withstand reversible deformations.",
+    "cat": "technical",
+    "sub": "strength_of_materials"
+  },
+  {
+    "q": "A 'Brittle' material is characterized by: / एक 'भंगुर' (Brittle) पदार्थ की विशेषता है:",
+    "o": ["High ductility", "Large plastic deformation", "Little or no yielding before failure | विफलता से पहले बहुत कम खिंचाव", "High malleability"],
+    "a": 2,
+    "e": "Brittle materials (like cast iron or glass) fail suddenly without showing significant warning signs.",
+    "cat": "technical",
+    "sub": "strength_of_materials"
+  },
+  {
+    "q": "Longitudinal strain is the ratio of: / लॉन्गिट्यूडनल विकृति किसका अनुपात है?",
+    "o": ["Change in diameter to original diameter", "Change in length to original length | लंबाई में परिवर्तन और मूल लंबाई", "Stress to Strain", "None"],
+    "a": 1,
+    "e": "It represents the deformation along the axis of the applied load.",
+    "cat": "technical",
+    "sub": "strength_of_materials"
+  },
+  {
+    "q": "What is the primary stress induced in a shaft subjected to 'Pure Torsion'? / 'शुद्ध मरोड़' के अधीन शाफ्ट में उत्पन्न प्राथमिक प्रतिबल क्या है?",
+    "o": ["Compressive stress", "Shear stress | शियर प्रतिबल (Shear stress)", "Tensile stress", "Bending stress"],
+    "a": 1,
+    "e": "Torsion creates shear stress that varies linearly from zero at the center to maximum at the outer surface.",
+    "cat": "technical",
+    "sub": "strength_of_materials"
+  },
+  {
+    "q": "The 'Polar Moment of Inertia' (J) for a solid circular shaft of diameter 'd' is: / व्यास 'd' वाले ठोस गोलाकार शाफ्ट के लिए 'पोलर जड़त्व आघूर्ण' क्या है?",
+    "o": ["πd^4 / 64", "πd^4 / 32 | πd^4 / 32", "πd^3 / 32", "πd^2 / 4"],
+    "a": 1,
+    "e": "The polar moment of inertia represents the resistance of a cross-section to torsional deformation.",
+    "cat": "technical",
+    "sub": "strength_of_materials"
+  },
+  {
+    "q": "The torsion equation is given by: / मरोड़ समीकरण (Torsion equation) किसके द्वारा दिया जाता है?",
+    "o": ["M/I = σ/y", "T/J = fs/R = Gθ/L | T/J = fs/R = Gθ/L", "P/A = E", "None"],
+    "a": 1,
+    "e": "This equation relates torque (T), polar moment (J), shear stress (fs), and angle of twist (θ).",
+    "cat": "technical",
+    "sub": "strength_of_materials"
+  },
+  {
+    "q": "Between a 'Solid' and a 'Hollow' shaft of the same material and weight, which is stronger? / समान सामग्री और वजन के शाफ्ट में से कौन सा अधिक मजबूत होता है?",
+    "o": ["Solid shaft", "Hollow shaft | खोखला शाफ्ट (Hollow shaft)", "Both are equal", "None"],
+    "a": 1,
+    "e": "Hollow shafts are stronger and stiffer per unit weight because material is distributed further from the axis.",
+    "cat": "technical",
+    "sub": "strength_of_materials"
+  },
+  {
+    "q": "What is the 'Stiffness' of a spring? / स्प्रिंग की 'कठोरता' (Stiffness) क्या है?",
+    "o": ["Load per unit deflection | प्रति इकाई विक्षेपण भार", "Total weight", "Maximum compression", "None"],
+    "a": 0,
+    "e": "Stiffness (k) is the ratio of applied force (P) to the resulting deflection (δ).",
+    "cat": "technical",
+    "sub": "strength_of_materials"
+  },
+  {
+    "q": "In a 'Closed Coil Helical Spring', the wire is primarily subjected to: / 'क्लोज्ड कॉइल हेलिकल स्प्रिंग' में, तार मुख्य रूप से किसके अधीन होता है?",
+    "o": ["Bending", "Torsion | मरोड़ (Torsion)", "Direct tension", "None"],
+    "a": 1,
+    "e": "When an axial load is applied to a helical spring, the wire undergoes twisting or torsional stress.",
+    "cat": "technical",
+    "sub": "strength_of_materials"
+  },
+  {
+    "q": "The maximum shear stress in a solid shaft occurs at: / एक ठोस शाफ्ट में अधिकतम शियर प्रतिबल कहाँ होता है?",
+    "o": ["Center of the shaft", "Outer surface | बाहरी सतह (Outer surface)", "Middle of the radius", "None"],
+    "a": 1,
+    "e": "In torsion, shear stress is directly proportional to the distance from the neutral axis (center).",
+    "cat": "technical",
+    "sub": "strength_of_materials"
+  },
+  {
+    "q": "What happens to the shear stress in a shaft if the 'Torque' is doubled? / यदि 'टॉर्क' दोगुना कर दिया जाए तो शाफ्ट में शियर प्रतिबल पर क्या प्रभाव पड़ेगा?",
+    "o": ["Decreases by half", "Remains same", "Doubled | दोगुना हो जाएगा", "Increases four times"],
+    "a": 2,
+    "e": "Shear stress is directly proportional to the applied torque according to the torsion equation.",
+    "cat": "technical",
+    "sub": "strength_of_materials"
+  },
+  {
+    "q": "The 'Section Modulus' (Z) is the ratio of: / 'सेक्शन मॉड्यूलस' (Z) किसका अनुपात है?",
+    "o": ["I / y_max | I / y_max", "y_max / I", "Force / Area", "Stress / Strain"],
+    "a": 0,
+    "e": "Section modulus is a geometric property used in design to calculate the bending strength of a beam.",
+    "cat": "technical",
+    "sub": "strength_of_materials"
+  },
+  {
+    "q": "For a thin cylindrical shell, the 'Hoop Stress' is ________ the 'Longitudinal Stress'. / एक पतले बेलनाकार खोल के लिए, 'हूप स्ट्रेस', 'लॉन्गिट्यूडनल स्ट्रेस' का ________ होता है।",
+    "o": ["Equal to", "Half of", "Double of | दोगुना", "Triple of"],
+    "a": 2,
+    "e": "Hoop stress (Pd/2t) is twice the longitudinal stress (Pd/4t), making it the critical stress for design.",
+    "cat": "technical",
+    "sub": "strength_of_materials"
+  },
+  {
+    "q": "Which law states that within the elastic limit, stress is directly proportional to strain? / किस नियम के अनुसार प्रत्यास्थता सीमा के भीतर, प्रतिबल (Stress) विकृति (Strain) के सीधे आनुपातिक होता है?",
+    "o": ["Pascal's Law", "Hooke's Law | हुक का नियम", "Newton's Law", "Young's Law"],
+    "a": 1,
+    "e": "Hooke's law is the foundation of linear elasticity, defining the relationship Stress = E × Strain.",
+    "cat": "technical",
+    "sub": "strength_of_materials"
+  },
+  {
+    "q": "The ratio of lateral strain to linear strain is known as: / पार्श्व विकृति (Lateral strain) और रैखिक विकृति (Linear strain) के अनुपात को कहा जाता है:",
+    "o": ["Young's Modulus", "Bulk Modulus", "Poisson's Ratio | पॉइसन अनुपात", "Modulus of Rigidity"],
+    "a": 2,
+    "e": "Poisson's ratio measures the deformation of a material in directions perpendicular to the specific direction of loading.",
+    "cat": "technical",
+    "sub": "strength_of_materials"
+  },
+  {
+    "q": "In a 'Cantilever Beam', the bending moment is maximum at the: / एक 'कैंटिलीवर बीम' में, बेंडिंग मोमेंट कहाँ अधिकतम होता है?",
+    "o": ["Free end", "Middle of the beam", "Fixed end | फिक्स्ड एंड (Fixed end)", "None"],
+    "a": 2,
+    "e": "For a cantilever beam, the internal moment increases towards the fixed support, where it reaches its peak.",
+    "cat": "technical",
+    "sub": "strength_of_materials"
+  },
+  {
+    "q": "What is the unit of 'Young's Modulus of Elasticity'? / 'यंग के प्रत्यास्थता मापांक' की इकाई क्या है?",
+    "o": ["Newton", "N/mm^2 (or Pascal) | N/mm^2", "m/s^2", "Unitless"],
+    "a": 1,
+    "e": "Since strain is unitless, Young's Modulus has the same units as stress (Force/Area).",
+    "cat": "technical",
+    "sub": "strength_of_materials"
+  },
+  {
+    "q": "A 'Simply Supported Beam' of length 'L' carries a central point load 'W'. The maximum bending moment is: / 'L' लंबाई वाली एक बीम पर केंद्र में 'W' भार है। अधिकतम बेंडिंग मोमेंट क्या होगा?",
+    "o": ["WL/2", "WL/8", "WL/4 | WL/4", "WL"],
+    "a": 2,
+    "e": "For a simply supported beam with a central load, the maximum moment occurs at the center and is calculated as WL/4.",
+    "cat": "technical",
+    "sub": "strength_of_materials"
+  },
+  {
+    "q": "The point in a beam where the bending moment changes its sign is called: / बीम का वह बिंदु जहाँ बेंडिंग मोमेंट अपना चिह्न बदलता है, कहलाता है:",
+    "o": ["Point of zero shear", "Point of Contraflexure | कंट्राफ्लेक्सर बिंदु", "Centroid", "Elastic point"],
+    "a": 1,
+    "e": "The point of contraflexure (or inflection) occurs where the curvature of the beam changes, resulting in zero bending moment.",
+    "cat": "technical",
+    "sub": "strength_of_materials"
+  },
+  {
+    "q": "What is 'Strain Energy'? / 'विकृति ऊर्जा' (Strain Energy) क्या है?",
+    "o": ["Energy lost in friction", "Energy stored in a body due to deformation | विरूपण के कारण संचित ऊर्जा", "Energy of motion", "None"],
+    "a": 1,
+    "e": "Strain energy is the internal work done in a body when it is deformed within its elastic limit.",
+    "cat": "technical",
+    "sub": "strength_of_materials"
+  },
+  {
+    "q": "A beam supported at more than two points is known as a: / दो से अधिक बिंदुओं पर सहारा दी गई बीम को कहा जाता है:",
+    "o": ["Simply supported beam", "Continuous beam | निरंतर बीम (Continuous beam)", "Fixed beam", "Overhanging beam"],
+    "a": 1,
+    "e": "Continuous beams are statically indeterminate structures used for long-span constructions.",
+    "cat": "technical",
+    "sub": "strength_of_materials"
+  },
+  {
+    "q": "Shear Force (S.F.) at any section of a beam is the algebraic sum of: / बीम के किसी भी सेक्शन पर शियर फोर्स किसका बीजगणितीय योग है?",
+    "o": ["All moments", "Vertical forces on either side | एक तरफ के सभी ऊर्ध्वाधर बल", "Horizontal forces", "None"],
+    "a": 1,
+    "e": "Shear force is calculated by summing all external vertical forces acting to the left or right of the section.",
+    "cat": "technical",
+    "sub": "strength_of_materials"
+  },
+  {
+    "q": "Which property allows a material to be drawn into thin wires? / कौन सा गुण पदार्थ को पतले तारों में खींचने की अनुमति देता है?",
+    "o": ["Elasticity", "Malleability", "Ductility | तन्यता (Ductility)", "Brittleness"],
+    "a": 2,
+    "e": "Ductility is a measure of a material's ability to undergo significant plastic deformation before rupture.",
+    "cat": "technical",
+    "sub": "strength_of_materials"
+  },
+  {
+    "q": "Which turbine is also known as a 'Propeller' turbine with adjustable blades? / एडजस्टेबल ब्लेड वाले किस टर्बाइन को 'प्रोपेलर' टर्बाइन भी कहा जाता है?",
+    "o": ["Pelton Wheel", "Francis Turbine", "Kaplan Turbine | कपलान टर्बाइन", "Turgo Turbine"],
+    "a": 2,
+    "e": "The Kaplan turbine is an axial-flow reaction turbine with adjustable blades, suitable for low heads and high flow rates.",
+    "cat": "technical",
+    "sub": "fluid_mechanics"
+  },
+  {
+    "q": "What is the relationship between 'Kinematic Viscosity' (ν) and 'Dynamic Viscosity' (μ)? / 'गतिक श्यानता' (ν) और 'शुद्ध श्यानता' (μ) के बीच क्या संबंध है?",
+    "o": ["ν = μ × ρ", "ν = μ / ρ | ν = μ / ρ", "ν = ρ / μ", "ν = μ + ρ"],
+    "a": 1,
+    "e": "Kinematic viscosity is the ratio of dynamic viscosity to the density (ρ) of the fluid.",
+    "cat": "technical",
+    "sub": "fluid_mechanics"
+  },
+  {
+    "q": "The power required to drive a pump is directly proportional to the: / पंप चलाने के लिए आवश्यक शक्ति किसके सीधे आनुपातिक होती है?",
+    "o": ["Density of fluid", "Discharge and Head | डिस्चार्ज और हेड", "Color of fluid", "None"],
+    "a": 1,
+    "e": "Power (P) = ρgQH / η. It depends on the flow rate (Q) and the height (H) the fluid is lifted.",
+    "cat": "technical",
+    "sub": "hydraulic_machinery"
+  },
+  {
+    "q": "Which pump is known as a 'Positive Displacement' pump? / किस पंप को 'पॉजिटिव डिस्प्लेसमेंट' पंप के रूप में जाना जाता है?",
+    "o": ["Centrifugal pump", "Reciprocating pump | रेसिप्रोकेटिंग पंप", "Jet pump", "None"],
+    "a": 1,
+    "e": "Reciprocating pumps move a fixed volume of fluid per cycle, unlike centrifugal pumps which rely on velocity.",
+    "cat": "technical",
+    "sub": "hydraulic_machinery"
+  },
+  {
+    "q": "In a pipe flow, if the Reynolds number is less than 2000, the flow is: / पाइप प्रवाह में, यदि रेनॉल्ड्स संख्या 2000 से कम है, तो प्रवाह है:",
+    "o": ["Turbulent", "Laminar | लैमिनार (Laminar)", "Transition", "Sonic"],
+    "a": 1,
+    "e": "A low Reynolds number indicates that viscous forces are dominant, resulting in smooth, layered flow.",
+    "cat": "technical",
+    "sub": "fluid_mechanics"
+  },
+  {
+    "q": "What is the function of a 'Draft Tube' in a reaction turbine? / रिएक्शन टर्बाइन में 'ड्राफ्ट ट्यूब' (Draft Tube) का क्या कार्य है?",
+    "o": ["To increase speed", "To convert kinetic energy into pressure energy | गतिज ऊर्जा को दबाव ऊर्जा में बदलना", "To stop the water", "None"],
+    "a": 1,
+    "e": "A draft tube allows the turbine to be set above the tailrace level without losing effective head.",
+    "cat": "technical",
+    "sub": "hydraulic_machinery"
+  },
+  {
+    "q": "Which property of fluid causes 'Capillarity'? / द्रव का कौन सा गुण 'केशिकत्व' (Capillarity) का कारण बनता है?",
+    "o": ["Viscosity", "Surface tension and Adhesion | पृष्ठ तनाव और आसंजन", "Compressibility", "None"],
+    "a": 1,
+    "e": "Capillarity is due to the combined effect of surface tension and the attraction between fluid and surface molecules.",
+    "cat": "technical",
+    "sub": "fluid_mechanics"
+  },
+  {
+    "q": "The 'Manometric Head' of a centrifugal pump is the: / सेंट्रीफ्यूगल पंप का 'मैनोमेट्रिक हेड' है:",
+    "o": ["Total height of pump", "Head developed by the impeller | इम्पेलर द्वारा विकसित हेड", "Suction head only", "None"],
+    "a": 1,
+    "e": "Manometric head represents the actual pressure head increase achieved by the pump's impeller.",
+    "cat": "technical",
+    "sub": "hydraulic_machinery"
+  },
+  {
+    "q": "What is 'Negative Slip' in reciprocating pumps? / रेसिप्रोकेटिंग पंपों में 'नेगेटिव स्लिप' क्या है?",
+    "o": ["Efficiency is zero", "Actual discharge is more than theoretical discharge | वास्तविक डिस्चार्ज सैद्धांतिक से अधिक है", "Pump stops working", "None"],
+    "a": 1,
+    "e": "Negative slip can occur when the delivery pipe is short and the suction pipe is long, causing inertia effects.",
+    "cat": "technical",
+    "sub": "hydraulic_machinery"
+  },
+  {
+    "q": "Which valve prevents the backflow of water in a pump's suction pipe? / पंप के सक्शन पाइप में पानी के बैकफ्लो को कौन सा वाल्व रोकता है?",
+    "o": ["Gate valve", "Foot valve | फुट वाल्व (Foot valve)", "Globe valve", "Needle valve"],
+    "a": 1,
+    "e": "A foot valve is a non-return valve that keeps the pump primed by preventing water from draining out.",
+    "cat": "technical",
+    "sub": "hydraulic_machinery"
+  },
+  {
+    "q": "Which turbine is also known as a 'Propeller' turbine with adjustable blades? / एडजस्टेबल ब्लेड वाले किस टर्बाइन को 'प्रोपेलर' टर्बाइन भी कहा जाता है?",
+    "o": ["Pelton Wheel", "Francis Turbine", "Kaplan Turbine | कपलान टर्बाइन", "Turgo Turbine"],
+    "a": 2,
+    "e": "The Kaplan turbine is an axial-flow reaction turbine with adjustable blades, suitable for low heads and high flow rates.",
+    "cat": "technical",
+    "sub": "fluid_mechanics"
+  },
+  {
+    "q": "What is the relationship between 'Kinematic Viscosity' (ν) and 'Dynamic Viscosity' (μ)? / 'गतिक श्यानता' (ν) और 'शुद्ध श्यानता' (μ) के बीच क्या संबंध है?",
+    "o": ["ν = μ × ρ", "ν = μ / ρ | ν = μ / ρ", "ν = ρ / μ", "ν = μ + ρ"],
+    "a": 1,
+    "e": "Kinematic viscosity is the ratio of dynamic viscosity to the density (ρ) of the fluid.",
+    "cat": "technical",
+    "sub": "fluid_mechanics"
+  },
+  {
+    "q": "The power required to drive a pump is directly proportional to the: / पंप चलाने के लिए आवश्यक शक्ति किसके सीधे आनुपातिक होती है?",
+    "o": ["Density of fluid", "Discharge and Head | डिस्चार्ज और हेड", "Color of fluid", "None"],
+    "a": 1,
+    "e": "Power (P) = ρgQH / η. It depends on the flow rate (Q) and the height (H) the fluid is lifted.",
+    "cat": "technical",
+    "sub": "hydraulic_machinery"
+  },
+  {
+    "q": "Which pump is known as a 'Positive Displacement' pump? / किस पंप को 'पॉजिटिव डिस्प्लेसमेंट' पंप के रूप में जाना जाता है?",
+    "o": ["Centrifugal pump", "Reciprocating pump | रेसिप्रोकेटिंग पंप", "Jet pump", "None"],
+    "a": 1,
+    "e": "Reciprocating pumps move a fixed volume of fluid per cycle, unlike centrifugal pumps which rely on velocity.",
+    "cat": "technical",
+    "sub": "hydraulic_machinery"
+  },
+  {
+    "q": "In a pipe flow, if the Reynolds number is less than 2000, the flow is: / पाइप प्रवाह में, यदि रेनॉल्ड्स संख्या 2000 से कम है, तो प्रवाह है:",
+    "o": ["Turbulent", "Laminar | लैमिनार (Laminar)", "Transition", "Sonic"],
+    "a": 1,
+    "e": "A low Reynolds number indicates that viscous forces are dominant, resulting in smooth, layered flow.",
+    "cat": "technical",
+    "sub": "fluid_mechanics"
+  },
+  {
+    "q": "What is the function of a 'Draft Tube' in a reaction turbine? / रिएक्शन टर्बाइन में 'ड्राफ्ट ट्यूब' (Draft Tube) का क्या कार्य है?",
+    "o": ["To increase speed", "To convert kinetic energy into pressure energy | गतिज ऊर्जा को दबाव ऊर्जा में बदलना", "To stop the water", "None"],
+    "a": 1,
+    "e": "A draft tube allows the turbine to be set above the tailrace level without losing effective head.",
+    "cat": "technical",
+    "sub": "hydraulic_machinery"
+  },
+  {
+    "q": "Which property of fluid causes 'Capillarity'? / द्रव का कौन सा गुण 'केशिकत्व' (Capillarity) का कारण बनता है?",
+    "o": ["Viscosity", "Surface tension and Adhesion | पृष्ठ तनाव और आसंजन", "Compressibility", "None"],
+    "a": 1,
+    "e": "Capillarity is due to the combined effect of surface tension and the attraction between fluid and surface molecules.",
+    "cat": "technical",
+    "sub": "fluid_mechanics"
+  },
+  {
+    "q": "The 'Manometric Head' of a centrifugal pump is the: / सेंट्रीफ्यूगल पंप का 'मैनोमेट्रिक हेड' है:",
+    "o": ["Total height of pump", "Head developed by the impeller | इम्पेलर द्वारा विकसित हेड", "Suction head only", "None"],
+    "a": 1,
+    "e": "Manometric head represents the actual pressure head increase achieved by the pump's impeller.",
+    "cat": "technical",
+    "sub": "hydraulic_machinery"
+  },
+  {
+    "q": "What is 'Negative Slip' in reciprocating pumps? / रेसिप्रोकेटिंग पंपों में 'नेगेटिव स्लिप' क्या है?",
+    "o": ["Efficiency is zero", "Actual discharge is more than theoretical discharge | वास्तविक डिस्चार्ज सैद्धांतिक से अधिक है", "Pump stops working", "None"],
+    "a": 1,
+    "e": "Negative slip can occur when the delivery pipe is short and the suction pipe is long, causing inertia effects.",
+    "cat": "technical",
+    "sub": "hydraulic_machinery"
+  },
+  {
+    "q": "Which valve prevents the backflow of water in a pump's suction pipe? / पंप के सक्शन पाइप में पानी के बैकफ्लो को कौन सा वाल्व रोकता है?",
+    "o": ["Gate valve", "Foot valve | फुट वाल्व (Foot valve)", "Globe valve", "Needle valve"],
+    "a": 1,
+    "e": "A foot valve is a non-return valve that keeps the pump primed by preventing water from draining out.",
+    "cat": "technical",
+    "sub": "hydraulic_machinery"
+  },
+  {
+    "q": "Which part of the Lathe machine is used to hold and rotate the workpiece? / लेथ मशीन का कौन सा हिस्सा वर्कपीस को पकड़ने और घुमाने के लिए उपयोग किया जाता है?",
+    "o": ["Tailstock", "Chuck | चक (Chuck)", "Carriage", "Bed"],
+    "a": 1,
+    "e": "The chuck is mounted on the headstock spindle and securely holds the workpiece for machining.",
+    "cat": "technical",
+    "sub": "manufacturing_engineering"
+  },
+  {
+    "q": "In 'MIG' welding, which of the following is used to protect the weld pool? / 'MIG' वेल्डिंग में, वेल्ड पूल की रक्षा के लिए किसका उपयोग किया जाता है?",
+    "o": ["Flux coating", "Inert gas (Argon/Helium) | अक्रिय गैस", "Oxygen", "Water"],
+    "a": 1,
+    "e": "Metal Inert Gas (MIG) welding uses a shielding gas to prevent atmospheric contamination.",
+    "cat": "technical",
+    "sub": "manufacturing_engineering"
+  },
+  {
+    "q": "The process of making gears by a rotating cutter having the same profile as the gear tooth space is: / गियर टूथ स्पेस के समान प्रोफाइल वाले रोटेटिंग कटर द्वारा गियर बनाने की प्रक्रिया है:",
+    "o": ["Gear Shaping", "Gear Hobbing | गियर हॉबिंग", "Gear Milling", "Gear Casting"],
+    "a": 1,
+    "e": "Gear hobbing is a continuous gear-generation process used for high-production sprockets and gears.",
+    "cat": "technical",
+    "sub": "manufacturing_engineering"
+  },
+  {
+    "q": "Which Lathe operation is used to produce a 'taper' or conical surface? / 'टेपर' (Taper) या शंक्वाकार सतह बनाने के लिए किस लेथ ऑपरेशन का उपयोग किया जाता है?",
+    "o": ["Facing", "Knurling", "Taper Turning | टेपर टर्निंग", "Parting off"],
+    "a": 2,
+    "e": "Taper turning is achieved by swivelling the compound rest or using a taper attachment.",
+    "cat": "technical",
+    "sub": "manufacturing_engineering"
+  },
+  {
+    "q": "What is the main function of 'Flux' in Brazing and Soldering? / ब्रेजिंग और सोल्डरिंग में 'फ्लक्स' (Flux) का मुख्य कार्य क्या है?",
+    "o": ["To melt the metal", "To prevent oxidation and clean surfaces | ऑक्सीकरण रोकना और सतहों को साफ करना", "To increase speed", "None"],
+    "a": 1,
+    "e": "Flux removes oxides from the base metal, allowing the filler metal to flow and bond properly.",
+    "cat": "technical",
+    "sub": "manufacturing_engineering"
+  },
+  {
+    "q": "In a 'Universal Milling Machine', the table can be swivelled in: / एक 'यूनिवर्सल मिलिंग मशीन' में, टेबल को घुमाया जा सकता है:",
+    "o": ["Vertical plane only", "Horizontal plane | क्षैतिज तल में", "Circular motion only", "None"],
+    "a": 1,
+    "e": "The swivelling table allows for machining helical gears and complex angles.",
+    "cat": "technical",
+    "sub": "manufacturing_engineering"
+  },
+  {
+    "q": "Which welding defect is caused by the entrapment of gas in the weld metal? / वेल्ड धातु में गैस के फंसने के कारण कौन सा वेल्डिंग दोष होता है?",
+    "o": ["Slag inclusion", "Porosity | पोरोसिटी", "Cracks", "Undercut"],
+    "a": 1,
+    "e": "Porosity appears as tiny holes or bubbles in the weld, weakening the joint.",
+    "cat": "technical",
+    "sub": "manufacturing_engineering"
+  },
+  {
+    "q": "The operation of finishing a previously drilled hole to exact size and smoothness is: / पहले से ड्रिल किए गए छेद को सटीक आकार और चिकनाई देने की क्रिया है:",
+    "o": ["Boring", "Reaming | रीमिंग (Reaming)", "Tapping", "Counter-sinking"],
+    "a": 1,
+    "e": "Reaming uses a multi-edged tool called a reamer to achieve high precision and surface finish.",
+    "cat": "technical",
+    "sub": "manufacturing_engineering"
+  },
+  {
+    "q": "Which flame in gas welding has an excess of oxygen? / गैस वेल्डिंग में किस ज्वाला (Flame) में ऑक्सीजन की अधिकता होती है?",
+    "o": ["Neutral flame", "Carburizing flame", "Oxidizing flame | ऑक्सीडाइजिंग ज्वाला", "None"],
+    "a": 2,
+    "e": "An oxidizing flame is used for welding copper and brass, providing higher temperatures.",
+    "cat": "technical",
+    "sub": "manufacturing_engineering"
+  },
+  {
+    "q": "The distance the cutting tool moves along the work for each revolution of the spindle is: / स्पिंडल के प्रत्येक चक्कर के लिए काटने वाला उपकरण वर्कपीस के साथ जितनी दूरी तय करता है, वह है:",
+    "o": ["Cutting speed", "Depth of cut", "Feed | फीड (Feed)", "RPM"],
+    "a": 2,
+    "e": "Feed is typically measured in mm per revolution (mm/rev) in lathe operations.",
+    "cat": "technical",
+    "sub": "manufacturing_engineering"
+  },
+  {
+    "q": "Which theorem states that for an incompressible, non-viscous fluid, the total energy remains constant along a streamline? / किस प्रमेय के अनुसार एक असंपीड्य, गैर-श्यान द्रव के लिए कुल ऊर्जा एक स्ट्रीमलाइन के साथ स्थिर रहती है?",
+    "o": ["Newton's Law", "Bernoulli's Theorem | बर्नौली की प्रमेय", "Pascal's Law", "Stokes' Law"],
+    "a": 1,
+    "e": "Bernoulli's theorem accounts for the conservation of pressure, kinetic, and potential energy in fluid flow.",
+    "cat": "technical",
+    "sub": "fluid_mechanics"
+  },
+  {
+    "q": "What is the SI unit of 'Dynamic Viscosity'? / 'गतिक श्यानता' (Dynamic Viscosity) की SI इकाई क्या है?",
+    "o": ["Poise", "Pascal-second (Pa-s) | पास्कल-सेकंड", "m^2/s", "Stoke"],
+    "a": 1,
+    "e": "The SI unit of dynamic viscosity is Pa-s or N-s/m², while Poise is the CGS unit.",
+    "cat": "technical",
+    "sub": "fluid_mechanics"
+  },
+  {
+    "q": "Which hydraulic turbine is best suited for 'High Head' and low discharge? / 'उच्च हेड' (High Head) और कम डिस्चार्ज के लिए कौन सा हाइड्रोलिक टर्बाइन सबसे उपयुक्त है?",
+    "o": ["Kaplan turbine", "Francis turbine", "Pelton wheel | पेल्टन व्हील", "Propeller turbine"],
+    "a": 2,
+    "e": "Pelton wheels are impulse turbines designed specifically for high-head power plants.",
+    "cat": "technical",
+    "sub": "hydraulic_machinery"
+  },
+  {
+    "q": "The continuity equation is based on the principle of conservation of: / निरंतरता का समीकरण (Continuity equation) किसके संरक्षण के सिद्धांत पर आधारित है?",
+    "o": ["Energy", "Momentum", "Mass | द्रव्यमान", "Pressure"],
+    "a": 2,
+    "e": "It states that the mass of fluid entering a system per unit time must equal the mass leaving it for steady flow.",
+    "cat": "technical",
+    "sub": "fluid_mechanics"
+  },
+  {
+    "q": "What is 'Priming' in a Centrifugal Pump? / सेंट्रीफ्यूगल पंप में 'प्राइमिंग' (Priming) क्या है?",
+    "o": ["Increasing the speed", "Filling suction pipe and casing with liquid | सक्शन पाइप और केसिंग को द्रव से भरना", "Cleaning the filter", "None"],
+    "a": 1,
+    "e": "Priming is necessary to remove air pockets that prevent the pump from lifting the liquid.",
+    "cat": "technical",
+    "sub": "hydraulic_machinery"
+  },
+  {
+    "q": "Which device is used to measure the rate of flow (discharge) in a pipe? / पाइप में प्रवाह की दर (डिस्चार्ज) को मापने के लिए किस उपकरण का उपयोग किया जाता है?",
+    "o": ["Pitot tube", "Manometer", "Venturimeter | वेंचुरीमीटर", "Barometer"],
+    "a": 2,
+    "e": "Venturimeters measure discharge by creating a pressure difference through a constricted throat.",
+    "cat": "technical",
+    "sub": "fluid_mechanics"
+  },
+  {
+    "q": "What causes 'Cavitation' in hydraulic machines? / हाइड्रोलिक मशीनों में 'कैविटेशन' (Cavitation) का क्या कारण है?",
+    "o": ["High pressure", "Low pressure below vapour pressure | वाष्प दबाव से कम दबाव", "High temperature", "None"],
+    "a": 1,
+    "e": "When pressure drops below vapour pressure, bubbles form and collapse, causing damage to the metal surfaces.",
+    "cat": "technical",
+    "sub": "hydraulic_machinery"
+  },
+  {
+    "q": "Loss of head due to friction in a pipe is calculated by: / पाइप में घर्षण के कारण हेड लॉस की गणना किसके द्वारा की जाती है?",
+    "o": ["Bernoulli's equation", "Darcy-Weisbach equation | डार्सी-वेसबैक समीकरण", "Pascal's law", "None"],
+    "a": 1,
+    "e": "The Darcy-Weisbach formula relates the head loss to pipe length, diameter, and fluid velocity.",
+    "cat": "technical",
+    "sub": "fluid_mechanics"
+  },
+  {
+    "q": "In a reciprocating pump, 'Slip' is the difference between: / एक रेसिप्रोकेटिंग पंप में, 'स्लिप' किसके बीच का अंतर है?",
+    "o": ["Actual and theoretical discharge | वास्तविक और सैद्धांतिक डिस्चार्ज", "Suction and delivery head", "Speed and pressure", "None"],
+    "a": 0,
+    "e": "Slip occurs due to leakages and delayed valve closure during the pumping process.",
+    "cat": "technical",
+    "sub": "hydraulic_machinery"
+  },
+  {
+    "q": "The ratio of specific weight of a fluid to the specific weight of pure water is: / एक द्रव के विशिष्ट भार और शुद्ध पानी के विशिष्ट भार का अनुपात है:",
+    "o": ["Density", "Specific gravity | विशिष्ट गुरुत्व", "Viscosity", "Surface tension"],
+    "a": 1,
+    "e": "Specific gravity is a dimensionless quantity used to compare fluid density with water.",
+    "cat": "technical",
+    "sub": "fluid_mechanics"
+  },
+  {
+    "q": "In a 'Simple Axle and Wheel', if the diameter of the wheel is 30 cm and axle is 10 cm, the V.R. is: / एक 'सरल पहिया और धुरी' में, यदि पहिये का व्यास 30 सेमी और धुरी का 10 सेमी है, तो V.R. क्या है?",
+    "o": ["1/3", "20", "3 | 3", "300"],
+    "a": 2,
+    "e": "Velocity Ratio (V.R.) = D / d = 30 / 10 = 3.",
+    "cat": "technical",
+    "sub": "engineering_mechanics"
+  },
+  {
+    "q": "The center of gravity of a 'Sphere' is located at: / एक 'गोले' का गुरुत्वाकर्षण केंद्र कहाँ स्थित होता है?",
+    "o": ["Any point on surface", "The geometric center | ज्यामितीय केंद्र", "Bottom of the sphere", "None"],
+    "a": 1,
+    "e": "For a uniform sphere, the center of gravity coincides with its geometric center.",
+    "cat": "technical",
+    "sub": "engineering_mechanics"
+  },
+  {
+    "q": "What is the condition for a machine to be 'Reversible'? / किसी मशीन के 'रिवर्सिबल' होने की शर्त क्या है?",
+    "o": ["Efficiency < 50%", "Efficiency > 50% | दक्षता > 50%", "Efficiency = 0%", "None"],
+    "a": 1,
+    "e": "A reversible machine can perform work in the reverse direction when the effort is removed.",
+    "cat": "technical",
+    "sub": "engineering_mechanics"
+  },
+  {
+    "q": "Friction depends on which of the following? / घर्षण निम्नलिखित में से किस पर निर्भर करता है?",
+    "o": ["Area of contact", "Nature of surfaces | सतहों की प्रकृति", "Velocity of body", "None"],
+    "a": 1,
+    "e": "Friction is independent of the area of contact but depends heavily on the roughness/smoothness of the surfaces.",
+    "cat": "technical",
+    "sub": "engineering_mechanics"
+  },
+  {
+    "q": "The mechanical advantage of a machine is always ________ its velocity ratio if friction is present. / यदि घर्षण मौजूद है, तो मशीन का यांत्रिक लाभ हमेशा उसके वेग अनुपात से ________ होता है।",
+    "o": ["Greater than", "Equal to", "Less than | कम", "Double of"],
+    "a": 2,
+    "e": "Due to friction, some input effort is lost, making M.A. lower than the theoretical V.R. (η = M.A./V.R. < 1).",
+    "cat": "technical",
+    "sub": "engineering_mechanics"
+  },
+  {
+    "q": "Which machine uses the principle of 'Inclined Plane' wrapped around a cylinder? / कौन सी मशीन एक सिलेंडर के चारों ओर लिपटे 'झुके हुए तल' के सिद्धांत का उपयोग करती है?",
+    "o": ["Pulley", "Lever", "Screw Jack | स्क्रू जैक", "Wheel and Axle"],
+    "a": 2,
+    "e": "The threads of a screw are essentially an inclined plane in spiral form.",
+    "cat": "technical",
+    "sub": "engineering_mechanics"
+  },
+  {
+    "q": "The 'Law of Machine' (P = mW + c) is a ________ relationship. / 'मशीन का नियम' (P = mW + c) एक ________ संबंध है।",
+    "o": ["Parabolic", "Linear | रैखिक (Linear)", "Logarithmic", "None"],
+    "a": 1,
+    "e": "It represents a straight-line graph between effort (P) and load (W).",
+    "cat": "technical",
+    "sub": "engineering_mechanics"
+  },
+  {
+    "q": "The centroid of a 'Triangle' of height 'h' from its base lies at: / आधार से 'h' ऊंचाई वाले 'त्रिभुज' का सेंट्रॉयड कहाँ स्थित होता है?",
+    "o": ["h/2", "h/4", "h/3 | h/3", "2h/3"],
+    "a": 2,
+    "e": "The centroid of a triangle is located at one-third of its altitude from the base.",
+    "cat": "technical",
+    "sub": "engineering_mechanics"
+  },
+  {
+    "q": "A 'Single Purchase Crab Winch' is used to: / 'सिंगल परचेज क्रैब विंच' का उपयोग किया जाता है:",
+    "o": ["Increase speed", "Lift heavy loads with small effort | कम प्रयास से भारी भार उठाना", "Measure friction", "None"],
+    "a": 1,
+    "e": "It uses gear reduction to provide a high mechanical advantage for lifting.",
+    "cat": "technical",
+    "sub": "engineering_mechanics"
+  },
+  {
+    "q": "Angle of friction (θ) is the angle between: / घर्षण कोण (θ) किसके बीच का कोण है?",
+    "o": ["Friction force and normal reaction", "Resultant of friction & normal reaction, and the normal reaction | परिणामी और लंबवत प्रतिक्रिया", "Applied force and friction", "None"],
+    "a": 1,
+    "e": "It is the angle made by the resultant of limiting friction and normal reaction with the normal reaction axis.",
+    "cat": "technical",
+    "sub": "engineering_mechanics"
+  },
+  {
+    "q": "The center of gravity of a 'Right Circular Cone' of height 'h' from its base lies at: / आधार से 'h' ऊंचाई वाले 'लंब वृत्तीय शंकु' का गुरुत्वाकर्षण केंद्र कहाँ स्थित होता है?",
+    "o": ["h/2", "h/3", "h/4 | h/4", "3h/4"],
+    "a": 2,
+    "e": "For a solid cone, the center of gravity is located on its axis at a height of one-fourth of the total height from the base.",
+    "cat": "technical",
+    "sub": "engineering_mechanics"
+  },
+  {
+    "q": "Dynamic friction is ________ static friction for the same pair of surfaces. / सतहों के एक ही जोड़े के लिए गतिज घर्षण, स्थैतिक घर्षण की तुलना में ________ होता है।",
+    "o": ["Always more", "Always less | हमेशा कम", "Exactly equal", "Double"],
+    "a": 1,
+    "e": "Once the motion starts, the bonding between surface irregularities is weaker, resulting in lower kinetic friction.",
+    "cat": "technical",
+    "sub": "engineering_mechanics"
+  },
+  {
+    "q": "What is the Mechanical Advantage (M.A.) of a machine with 60% efficiency and a velocity ratio of 5? / 60% दक्षता और 5 के वेग अनुपात वाली मशीन का यांत्रिक लाभ (M.A.) क्या है?",
+    "o": ["1.2", "8.33", "3 | 3", "0.12"],
+    "a": 2,
+    "e": "Efficiency (η) = M.A. / V.R. => 0.60 = M.A. / 5 => M.A. = 0.60 × 5 = 3.",
+    "cat": "technical",
+    "sub": "engineering_mechanics"
+  },
+  {
+    "q": "The centroid of a 'Semi-circle' of radius 'r' from its diametral axis is: / अपने व्यास अक्ष से 'r' त्रिज्या वाले 'अर्धवृत्त' का सेंट्रॉयड क्या है?",
+    "o": ["r/2", "4r/3π | 4r/3π", "3r/4π", "2r/π"],
+    "a": 1,
+    "e": "The centroid of a semi-circular area lies on the axis of symmetry at a distance of 4r/3π from the base.",
+    "cat": "technical",
+    "sub": "engineering_mechanics"
+  },
+  {
+    "q": "A machine is said to be 'Self-locking' if its efficiency is: / एक मशीन को 'स्व-लॉकिंग' कहा जाता है यदि उसकी दक्षता है:",
+    "o": ["Equal to 50%", "More than 50%", "Less than 50% | 50% से कम", "None"],
+    "a": 2,
+    "e": "Self-locking occurs when the work lost in friction is greater than the work done by the load itself.",
+    "cat": "technical",
+    "sub": "engineering_mechanics"
+  },
+  {
+    "q": "Which type of friction is experienced by a body lying on a surface when no external force is applied? / जब कोई बाहरी बल नहीं लगाया जाता है, तो सतह पर पड़े पिंड द्वारा किस प्रकार का घर्षण अनुभव किया जाता है?",
+    "o": ["Static friction", "Limiting friction", "Zero | शून्य", "Kinetic friction"],
+    "a": 2,
+    "e": "Friction only develops when there is an attempt at relative motion (external force). No force means no friction.",
+    "cat": "technical",
+    "sub": "engineering_mechanics"
+  },
+  {
+    "q": "The unit of 'Moment' in the SI system is: / SI प्रणाली में 'आघूर्ण' (Moment) की इकाई है:",
+    "o": ["Newton/meter", "Newton-meter | न्यूटन-मीटर (N-m)", "Joule/sec", "Kilogram-meter"],
+    "a": 1,
+    "e": "Moment is the product of force (N) and perpendicular distance (m).",
+    "cat": "technical",
+    "sub": "engineering_mechanics"
+  },
+  {
+    "q": "Which force system has lines of action of all forces meeting at a single point? / किस बल प्रणाली में सभी बलों की क्रिया रेखाएं एक ही बिंदु पर मिलती हैं?",
+    "o": ["Parallel force system", "Concurrent force system | समवर्ती बल प्रणाली", "Non-concurrent system", "None"],
+    "a": 1,
+    "e": "Concurrent forces pass through a common point, allowing them to be analyzed using Lami's theorem.",
+    "cat": "technical",
+    "sub": "engineering_mechanics"
+  },
+  {
+    "q": "The maximum value of the coefficient of friction is usually: / घर्षण गुणांक का अधिकतम मान आमतौर पर होता है:",
+    "o": ["Always 0", "Between 0 and 1 | 0 और 1 के बीच", "Always more than 1", "Negative"],
+    "a": 1,
+    "e": "While μ can exceed 1 for some materials, for most common engineering materials, it ranges between 0 and 1.",
+    "cat": "technical",
+    "sub": "engineering_mechanics"
+  },
+  {
+    "q": "Varignon's theorem is fundamental for finding the ________ of a system of forces. / वेरिग्नन की प्रमेय बलों की प्रणाली के ________ को खोजने के लिए मौलिक है।",
+    "o": ["Work done", "Resultant moment | परिणामी आघूर्ण", "Mass", "Acceleration"],
+    "a": 1,
+    "e": "It states that the moment of the resultant of several concurrent forces is equal to the algebraic sum of the moments of the individual forces.",
+    "cat": "technical",
+    "sub": "engineering_mechanics"
+  },
+  {
+    "q": "Efficiency of a machine is the ratio of: / एक मशीन की दक्षता किसका अनुपात है?",
+    "o": ["Input to Output", "Mechanical Advantage to Velocity Ratio | M.A. और V.R. का अनुपात", "Load to Effort", "None"],
+    "a": 1,
+    "e": "Efficiency (η) = M.A. / V.R., often expressed as a percentage.",
+    "cat": "technical",
+    "sub": "engineering_mechanics"
+  },
+  {
+    "q": "Which factor affects the 'Coefficient of Friction'? / 'घर्षण गुणांक' को कौन सा कारक प्रभावित करता है?",
+    "o": ["Area of contact", "Nature of the surfaces in contact | सतहों की प्रकृति", "Weight of the body", "All of the above"],
+    "a": 1,
+    "e": "Friction depends on the roughness or smoothness of the materials, not the area of contact.",
+    "cat": "technical",
+    "sub": "engineering_mechanics"
+  },
+  {
+    "q": "The resultant of two equal forces 'P' acting at an angle of 90° is: / 90° के कोण पर कार्य करने वाले दो समान बलों 'P' का परिणामी क्या है?",
+    "o": ["2P", "P", "P√2 | P√2", "Zero"],
+    "a": 2,
+    "e": "Using the formula R = √(P² + P² + 2PP cos 90°), we get R = √(2P²) = P√2.",
+    "cat": "technical",
+    "sub": "engineering_mechanics"
+  },
+  {
+    "q": "A 'Reversible Machine' has an efficiency: / एक 'रिवर्सिबल मशीन' की दक्षता होती है:",
+    "o": ["Less than 50%", "Equal to 0%", "Greater than 50% | 50% से अधिक", "Exactly 100%"],
+    "a": 2,
+    "e": "If the efficiency is above 50%, the work lost in friction is less than the work done by the load.",
+    "cat": "technical",
+    "sub": "engineering_mechanics"
+  },
+  {
+    "q": "In the equation of 'Law of Machine' (P = mW + c), 'c' represents: / 'मशीन के नियम' समीकरण (P = mW + c) में 'c' क्या दर्शाता है?",
+    "o": ["Maximum Load", "Effort lost in friction at zero load | शून्य भार पर घर्षण में नष्ट प्रयास", "Velocity ratio", "None"],
+    "a": 1,
+    "e": "'c' is the intercept on the effort axis, representing the initial friction to be overcome.",
+    "cat": "technical",
+    "sub": "engineering_mechanics"
+  },
+  {
+    "q": "What is 'Limiting Friction'? / 'सीमित घर्षण' क्या है?",
+    "o": ["Minimum static friction", "Friction when the body is in motion", "Maximum value of static friction | स्थैतिक घर्षण का अधिकतम मान", "None"],
+    "a": 2,
+    "e": "It is the maximum friction force that acts when a body is just about to slide.",
+    "cat": "technical",
+    "sub": "engineering_mechanics"
+  },
+  {
+    "q": "Lami's Theorem can only be applied to: / लमी की प्रमेय केवल किस पर लागू की जा सकती है?",
+    "o": ["Two forces", "Four forces", "Three coplanar concurrent forces | तीन समतलीय समवर्ती बल", "Parallel forces"],
+    "a": 2,
+    "e": "It is specifically for a system of three forces in equilibrium at a point.",
+    "cat": "technical",
+    "sub": "engineering_mechanics"
+  },
+  {
+    "q": "The ratio of 'Load lifted' to 'Effort applied' is called: / 'उठाए गए भार' और 'लगाए गए प्रयास' के अनुपात को कहा जाता है:",
+    "o": ["Velocity Ratio", "Mechanical Advantage | यांत्रिक लाभ (M.A.)", "Efficiency", "Moment"],
+    "a": 1,
+    "e": "M.A. = Load / Effort, indicating the force-multiplying factor of the machine.",
+    "cat": "technical",
+    "sub": "engineering_mechanics"
+  },
+  {
+    "q": "If a body is lying on an inclined plane, the 'Normal Reaction' acts: / यदि कोई पिंड एक झुके हुए तल पर स्थित है, तो 'लंबवत प्रतिक्रिया' (Normal Reaction) कार्य करती है:",
+    "o": ["Vertically downward", "Parallel to the plane", "Perpendicular to the plane | तल के लंबवत", "Horizontal"],
+    "a": 2,
+    "e": "Normal reaction is always perpendicular to the contact surface.",
+    "cat": "technical",
+    "sub": "engineering_mechanics"
+  },
+  {
+    "q": "In a 'Weston Differential Pulley Block', a high V.R. is achieved by: / 'वेस्टन डिफरेंशियल पुली ब्लॉक' में, उच्च V.R. किसके द्वारा प्राप्त किया जाता है?",
+    "o": ["Increasing the weight", "Difference in the radii of two upper pulleys | दो ऊपरी घिरनियों की त्रिज्याओं के अंतर से", "Using more ropes", "None"],
+    "a": 1,
+    "e": "The small difference in pulley diameters allows for a very slow lifting speed but very high force amplification.",
+    "cat": "technical",
+    "sub": "engineering_mechanics"
+  },
+  {
+    "q": "What is the relation between the coefficient of friction (μ) and the angle of friction (θ)? / घर्षण गुणांक (μ) और घर्षण कोण (θ) के बीच क्या संबंध है?",
+    "o": ["μ = cos θ", "μ = tan θ | μ = tan θ", "μ = sin θ", "μ = 1/tan θ"],
+    "a": 1,
+    "e": "The coefficient of static friction is equal to the tangent of the angle of friction.",
+    "cat": "technical",
+    "sub": "engineering_mechanics"
+  },
+  {
+    "q": "A force that produces a turning effect on a body is known as: / वह बल जो पिंड पर घूमने का प्रभाव पैदा करता है, कहलाता है:",
+    "o": ["Pressure", "Stress", "Moment | आघूर्ण (Moment)", "Work"],
+    "a": 2,
+    "e": "Moment is the measure of the tendency of a force to cause a body to rotate about a specific point.",
+    "cat": "technical",
+    "sub": "engineering_mechanics"
+  },
+  {
+    "q": "Which of the following is a 'Vector' quantity? / निम्नलिखित में से कौन सी एक 'सदिश' (Vector) राशि है?",
+    "o": ["Force | बल", "Mass", "Time", "Energy"],
+    "a": 0,
+    "e": "Force has both magnitude and direction, making it a vector quantity.",
+    "cat": "technical",
+    "sub": "engineering_mechanics"
+  },
+  {
+    "q": "In a 'Self-locking machine', the efficiency is: / एक 'स्व-लॉकिंग मशीन' में, दक्षता होती है:",
+    "o": ["More than 50%", "Exactly 100%", "Less than 50% | 50% से कम", "None"],
+    "a": 2,
+    "e": "Self-locking occurs when the friction is enough to prevent the machine from running backward under load.",
+    "cat": "technical",
+    "sub": "engineering_mechanics"
+  },
+  {
+    "q": "Varignon's Theorem is used to find the ________ of a resultant force. / वेरिग्नन की प्रमेय का उपयोग परिणामी बल के ________ को खोजने के लिए किया जाता है।",
+    "o": ["Magnitude", "Direction", "Point of application (Location) | स्थान (Location)", "All of the above"],
+    "a": 2,
+    "e": "It states that the moment of a resultant force about any point is equal to the sum of the moments of its components.",
+    "cat": "technical",
+    "sub": "engineering_mechanics"
+  },
+  {
+    "q": "What is 'Sliding Friction'? / 'स्लाइडिंग घर्षण' क्या है?",
+    "o": ["Friction when a body rolls", "Friction when one surface slides over another | एक सतह का दूसरी सतह पर फिसलना", "Friction in fluids", "None"],
+    "a": 1,
+    "e": "It is the resistance created by two objects sliding against each other.",
+    "cat": "technical",
+    "sub": "engineering_mechanics"
+  },
+  {
+    "q": "The SI unit of Moment of a force is: / बल के आघूर्ण (Moment) की SI इकाई क्या है?",
+    "o": ["Newton", "Newton-meter | न्यूटन-मीटर (N-m)", "Joule", "Pascal"],
+    "a": 1,
+    "e": "Since Moment = Force × Distance, its unit is Newton multiplied by Meter.",
+    "cat": "technical",
+    "sub": "engineering_mechanics"
+  },
+  {
+    "q": "If three forces acting at a point are in equilibrium, they can be represented by: / यदि एक बिंदु पर कार्य करने वाले तीन बल संतुलन में हैं, तो उन्हें दर्शाया जा सकता है:",
+    "o": ["Sides of a triangle taken in order | एक त्रिभुज की भुजाओं द्वारा", "A straight line", "A square", "None"],
+    "a": 0,
+    "e": "According to the Triangle Law of Forces, they form a closed triangle in vector representation.",
+    "cat": "technical",
+    "sub": "engineering_mechanics"
+  },
+  {
+    "q": "Velocity Ratio (V.R.) of a 'Simple Screw Jack' with pitch 'p' and lever length 'l' is: / पिच 'p' और लीवर लंबाई 'l' वाले 'सिंपल स्क्रू जैक' का V.R. क्या है?",
+    "o": ["p / 2πl", "2πl / p | 2πl / p", "πl / p", "None"],
+    "a": 1,
+    "e": "V.R. = (Distance moved by effort) / (Distance moved by load) = 2πl / p.",
+    "cat": "technical",
+    "sub": "engineering_mechanics"
+  },
+  {
+    "q": "A 'Concurrent Force System' is one where all forces: / एक 'समवर्ती बल प्रणाली' वह है जहाँ सभी बल:",
+    "o": ["Are parallel", "Meet at a single point | एक ही बिंदु पर मिलते हैं", "Are in different planes", "None"],
+    "a": 1,
+    "e": "Concurrent forces intersect at a common point of application.",
+    "cat": "technical",
+    "sub": "engineering_mechanics"
+  },
+  {
+    "q": "Which quantum number determines the 'shape' of an orbital? / कौन सी क्वांटम संख्या कक्षक (Orbital) के 'आकार' को निर्धारित करती है?",
+    "o": ["Principal quantum number", "Magnetic quantum number", "Azimuthal quantum number | दिगंशीय क्वांटम संख्या", "Spin quantum number"],
+    "a": 2,
+    "e": "The azimuthal quantum number (l) defines the subshell and the shape of the orbital (s, p, d, f).",
+    "cat": "technical",
+    "sub": "applied_chemistry"
+  },
+  {
+    "q": "Hardness of water is primarily caused by the salts of: / जल की कठोरता मुख्य रूप से किसके लवणों के कारण होती है?",
+    "o": ["Sodium and Potassium", "Calcium and Magnesium | कैल्शियम और मैग्नीशियम", "Iron and Copper", "None"],
+    "a": 1,
+    "e": "Bicarbonates, chlorides, and sulfates of Calcium and Magnesium are responsible for water hardness.",
+    "cat": "technical",
+    "sub": "applied_chemistry"
+  },
+  {
+    "q": "Which rule states that 'Electrons enter the lowest energy orbital available'? / कौन सा नियम कहता है कि 'इलेक्ट्रॉन उपलब्ध निम्नतम ऊर्जा कक्षक में प्रवेश करते हैं'?",
+    "o": ["Aufbau Principle | औफबाऊ सिद्धांत", "Hund's Rule", "Pauli's Exclusion Principle", "Heisenberg Principle"],
+    "a": 0,
+    "e": "Aufbau principle dictates the order in which orbitals are filled based on their energy levels.",
+    "cat": "technical",
+    "sub": "applied_chemistry"
+  },
+  {
+    "q": "What is the function of 'Zeolite' in water treatment? / जल उपचार में 'जियोलाइट' (Zeolite) का क्या कार्य है?",
+    "o": ["To kill bacteria", "To remove suspended solids", "To soften hard water | कठोर जल को मृदु बनाना", "To add minerals"],
+    "a": 2,
+    "e": "Zeolite process is an ion-exchange method used to remove hardness-causing ions from water.",
+    "cat": "technical",
+    "sub": "applied_chemistry"
+  },
+  {
+    "q": "Which type of fuel has the highest calorific value? / किस प्रकार के ईंधन का कैलोरी मान (Calorific value) सबसे अधिक होता है?",
+    "o": ["Solid fuels", "Liquid fuels", "Gaseous fuels | गैसीय ईंधन", "All are equal"],
+    "a": 2,
+    "e": "Gaseous fuels like Hydrogen and Methane have higher calorific values compared to solid and liquid fuels.",
+    "cat": "technical",
+    "sub": "applied_chemistry"
+  },
+  {
+    "q": "What is 'Vulcanization' of rubber? / रबर का 'वल्केनाइजेशन' क्या है?",
+    "o": ["Melting rubber", "Heating rubber with sulfur | सल्फर के साथ गर्म करना", "Cooling rubber", "Adding water to rubber"],
+    "a": 1,
+    "e": "Vulcanization improves the elasticity, hardness, and durability of natural rubber by adding cross-links of sulfur.",
+    "cat": "technical",
+    "sub": "applied_chemistry"
+  },
+  {
+    "q": "Temporary hardness of water can be removed by: / जल की अस्थायी कठोरता को किसके द्वारा दूर किया जा सकता है?",
+    "o": ["Filtration", "Adding salt", "Boiling | उबालकर", "Sedimentation"],
+    "a": 2,
+    "e": "Boiling decomposes calcium and magnesium bicarbonates into insoluble carbonates.",
+    "cat": "technical",
+    "sub": "applied_chemistry"
+  },
+  {
+    "q": "Which of the following is a 'Thermosetting' plastic? / निम्नलिखित में से कौन सा एक 'थर्मोसेटिंग' प्लास्टिक है?",
+    "o": ["PVC", "Polystyrene", "Bakelite | बैकेलाइट", "Nylon"],
+    "a": 2,
+    "e": "Bakelite does not soften on heating once it is molded, unlike thermoplastics.",
+    "cat": "technical",
+    "sub": "applied_chemistry"
+  },
+  {
+    "q": "What is the chemical composition of 'LPG'? / 'LPG' का रासायनिक संगठन क्या है?",
+    "o": ["Methane and Ethane", "Propane and Butane | प्रोपेन और ब्यूटेन", "Hydrogen and CO", "None"],
+    "a": 1,
+    "e": "LPG (Liquefied Petroleum Gas) is primarily a mixture of propane and butane gases.",
+    "cat": "technical",
+    "sub": "applied_chemistry"
+  },
+  {
+    "q": "The property of a lubricant to resist flow is known as: / एक स्नेहक (Lubricant) के प्रवाह का विरोध करने के गुण को कहा जाता है:",
+    "o": ["Oiliness", "Flash point", "Viscosity | श्यानता (Viscosity)", "Fire point"],
+    "a": 2,
+    "e": "Viscosity is the measure of internal friction or thickness of a fluid.",
+    "cat": "technical",
+    "sub": "applied_chemistry"
+  },
+  {
+    "q": "Which quantum number determines the 'shape' of an orbital? / कौन सी क्वांटम संख्या कक्षक (Orbital) के 'आकार' को निर्धारित करती है?",
+    "o": ["Principal quantum number", "Magnetic quantum number", "Azimuthal quantum number | दिगंशीय क्वांटम संख्या", "Spin quantum number"],
+    "a": 2,
+    "e": "The azimuthal quantum number (l) defines the subshell and the shape of the orbital (s, p, d, f).",
+    "cat": "technical",
+    "sub": "applied_chemistry"
+  },
+  {
+    "q": "Hardness of water is primarily caused by the salts of: / जल की कठोरता मुख्य रूप से किसके लवणों के कारण होती है?",
+    "o": ["Sodium and Potassium", "Calcium and Magnesium | कैल्शियम और मैग्नीशियम", "Iron and Copper", "None"],
+    "a": 1,
+    "e": "Bicarbonates, chlorides, and sulfates of Calcium and Magnesium are responsible for water hardness.",
+    "cat": "technical",
+    "sub": "applied_chemistry"
+  },
+  {
+    "q": "Which rule states that 'Electrons enter the lowest energy orbital available'? / कौन सा नियम कहता है कि 'इलेक्ट्रॉन उपलब्ध निम्नतम ऊर्जा कक्षक में प्रवेश करते हैं'?",
+    "o": ["Aufbau Principle | औफबाऊ सिद्धांत", "Hund's Rule", "Pauli's Exclusion Principle", "Heisenberg Principle"],
+    "a": 0,
+    "e": "Aufbau principle dictates the order in which orbitals are filled based on their energy levels.",
+    "cat": "technical",
+    "sub": "applied_chemistry"
+  },
+  {
+    "q": "What is the function of 'Zeolite' in water treatment? / जल उपचार में 'जियोलाइट' (Zeolite) का क्या कार्य है?",
+    "o": ["To kill bacteria", "To remove suspended solids", "To soften hard water | कठोर जल को मृदु बनाना", "To add minerals"],
+    "a": 2,
+    "e": "Zeolite process is an ion-exchange method used to remove hardness-causing ions from water.",
+    "cat": "technical",
+    "sub": "applied_chemistry"
+  },
+  {
+    "q": "Which type of fuel has the highest calorific value? / किस प्रकार के ईंधन का कैलोरी मान (Calorific value) सबसे अधिक होता है?",
+    "o": ["Solid fuels", "Liquid fuels", "Gaseous fuels | गैसीय ईंधन", "All are equal"],
+    "a": 2,
+    "e": "Gaseous fuels like Hydrogen and Methane have higher calorific values compared to solid and liquid fuels.",
+    "cat": "technical",
+    "sub": "applied_chemistry"
+  },
+  {
+    "q": "What is 'Vulcanization' of rubber? / रबर का 'वल्केनाइजेशन' क्या है?",
+    "o": ["Melting rubber", "Heating rubber with sulfur | सल्फर के साथ गर्म करना", "Cooling rubber", "Adding water to rubber"],
+    "a": 1,
+    "e": "Vulcanization improves the elasticity, hardness, and durability of natural rubber by adding cross-links of sulfur.",
+    "cat": "technical",
+    "sub": "applied_chemistry"
+  },
+  {
+    "q": "Temporary hardness of water can be removed by: / जल की अस्थायी कठोरता को किसके द्वारा दूर किया जा सकता है?",
+    "o": ["Filtration", "Adding salt", "Boiling | उबालकर", "Sedimentation"],
+    "a": 2,
+    "e": "Boiling decomposes calcium and magnesium bicarbonates into insoluble carbonates.",
+    "cat": "technical",
+    "sub": "applied_chemistry"
+  },
+  {
+    "q": "Which of the following is a 'Thermosetting' plastic? / निम्नलिखित में से कौन सा एक 'थर्मोसेटिंग' प्लास्टिक है?",
+    "o": ["PVC", "Polystyrene", "Bakelite | बैकेलाइट", "Nylon"],
+    "a": 2,
+    "e": "Bakelite does not soften on heating once it is molded, unlike thermoplastics.",
+    "cat": "technical",
+    "sub": "applied_chemistry"
+  },
+  {
+    "q": "What is the chemical composition of 'LPG'? / 'LPG' का रासायनिक संगठन क्या है?",
+    "o": ["Methane and Ethane", "Propane and Butane | प्रोपेन और ब्यूटेन", "Hydrogen and CO", "None"],
+    "a": 1,
+    "e": "LPG (Liquefied Petroleum Gas) is primarily a mixture of propane and butane gases.",
+    "cat": "technical",
+    "sub": "applied_chemistry"
+  },
+  {
+    "q": "The property of a lubricant to resist flow is known as: / एक स्नेहक (Lubricant) के प्रवाह का विरोध करने के गुण को कहा जाता है:",
+    "o": ["Oiliness", "Flash point", "Viscosity | श्यानता (Viscosity)", "Fire point"],
+    "a": 2,
+    "e": "Viscosity is the measure of internal friction or thickness of a fluid.",
+    "cat": "technical",
+    "sub": "applied_chemistry"
+  },
+  {
+    "q": "What is the point on the stress-strain curve beyond which the material starts to deform plastically? / स्ट्रेस-स्ट्रेन कर्व पर वह बिंदु क्या कहलाता है जिसके बाद पदार्थ प्लास्टिक रूप से विरूपित होने लगता है?",
+    "o": ["Breaking point", "Elastic limit | प्रत्यास्थता सीमा", "Proportional limit", "Yield point"],
+    "a": 1,
+    "e": "Beyond the elastic limit, the material does not return to its original shape when the load is removed[cite: 51].",
+    "cat": "technical",
+    "sub": "applied_physics"
+  },
+  {
+    "q": "The persistence of sound in an enclosed space after the source has stopped is called: / स्रोत के बंद होने के बाद बंद स्थान में ध्वनि का बना रहना क्या कहलाता है?",
+    "o": ["Echo", "Interference", "Reverberation | प्रतिध्वनि (Reverberation)", "Diffraction"],
+    "a": 2,
+    "e": "Reverberation is caused by multiple reflections of sound waves from the surfaces of an enclosure[cite: 349].",
+    "cat": "technical",
+    "sub": "applied_physics"
+  },
+  {
+    "q": "According to Lenz's Law, the direction of induced EMF is such that it: / लेन्ज़ के नियम के अनुसार, प्रेरित EMF की दिशा ऐसी होती है कि वह:",
+    "o": ["Supports the change in magnetic flux", "Opposes the change in magnetic flux | चुंबकीय फ्लक्स में परिवर्तन का विरोध करता है", "Is always zero", "None"],
+    "a": 1,
+    "e": "Lenz's Law is a consequence of the law of conservation of energy[cite: 365, 402].",
+    "cat": "technical",
+    "sub": "applied_physics"
+  },
+  {
+    "q": "Which property of nanomaterials changes significantly due to their high surface-to-volume ratio? / उच्च सतह-से-आयतन अनुपात के कारण नैनो-मटेरियल्स का कौन सा गुण काफी बदल जाता है?",
+    "o": ["Color", "Chemical reactivity | रासायनिक अभिक्रियाशीलता", "Density", "All of the above"],
+    "a": 1,
+    "e": "Nanomaterials have a larger fraction of atoms at the surface, making them highly reactive[cite: 378].",
+    "cat": "technical",
+    "sub": "applied_physics"
+  },
+  {
+    "q": "Which law is used to analyze complex electrical circuits with multiple loops? / कई लूप वाले जटिल विद्युत सर्किट का विश्लेषण करने के लिए किस नियम का उपयोग किया जाता है?",
+    "o": ["Ohm's Law", "Coulomb's Law", "Kirchhoff's Laws | किरचॉफ के नियम", "Gauss Law"],
+    "a": 2,
+    "e": "Kirchhoff's voltage and current laws are essential for solving complex network problems[cite: 361, 1257].",
+    "cat": "technical",
+    "sub": "applied_physics"
+  },
+  {
+    "q": "What is the unit of 'Thermal Conductivity'? / 'तापीय चालकता' (Thermal Conductivity) की इकाई क्या है?",
+    "o": ["W/m-K | W/m-K", "Joule", "Pascal", "Watt"],
+    "a": 0,
+    "e": "It measures the ability of a material to conduct heat[cite: 58].",
+    "cat": "technical",
+    "sub": "applied_physics"
+  },
+  {
+    "q": "The frequency of a Simple Harmonic Motion (SHM) is the: / सरल आवर्त गति (SHM) की आवृत्ति होती है:",
+    "o": ["Time taken for one cycle", "Number of cycles per second | प्रति सेकंड चक्रों की संख्या", "Maximum displacement", "None"],
+    "a": 1,
+    "e": "Frequency is the reciprocal of the time period[cite: 347, 1242].",
+    "cat": "technical",
+    "sub": "applied_physics"
+  },
+  {
+    "q": "Which material is commonly used as a 'Piezoelectric' transducer? / 'पीजोइलेक्ट्रिक' ट्रांसड्यूसर के रूप में आमतौर पर किस सामग्री का उपयोग किया जाता है?",
+    "o": ["Iron", "Quartz | क्वार्ट्ज (Quartz)", "Copper", "Plastic"],
+    "a": 1,
+    "e": "Quartz crystals generate an electric charge when mechanical stress is applied[cite: 635].",
+    "cat": "technical",
+    "sub": "applied_physics"
+  },
+  {
+    "q": "A 'Wheatstone Bridge' is used to measure unknown: / 'व्हीटस्टोन ब्रिज' का उपयोग किसे मापने के लिए किया जाता है?",
+    "o": ["Current", "Voltage", "Resistance | प्रतिरोध", "Capacitance"],
+    "a": 2,
+    "e": "It is an electrical circuit used to measure an unknown electrical resistance by balancing two legs of a bridge circuit[cite: 361, 1257].",
+    "cat": "technical",
+    "sub": "applied_physics"
+  },
+  {
+    "q": "The formula for 'Capacitance' (C) is: / 'धारिता' (C) का सूत्र क्या है?",
+    "o": ["C = V/Q", "C = Q/V | C = Q/V", "C = QV", "C = Q+V"],
+    "a": 1,
+    "e": "Capacitance is the ratio of the change in electric charge to the corresponding change in its electric potential[cite: 356, 1252].",
+    "cat": "technical",
+    "sub": "applied_physics"
+  },
+  {
+    "q": "Which law states that 'Pressure applied to an enclosed fluid is transmitted undiminished'? / किस नियम के अनुसार 'बंद द्रव पर लगाया गया दबाव बिना कम हुए प्रसारित होता है'?",
+    "o": ["Boyle's Law", "Bernoulli's Law", "Hooke's Law", "Pascal's Law | पास्कल का नियम"],
+    "a": 3,
+    "e": "Pascal's law is the foundation for hydraulic systems like jacks and brakes.",
+    "cat": "technical",
+    "sub": "applied_physics"
+  },
+  {
+    "q": "What is the relationship between 'Torque' (τ) and 'Angular Momentum' (L)? / 'टॉर्क' (τ) और 'कोणीय संवेग' (L) के बीच क्या संबंध है?",
+    "o": ["τ = dL/dt | τ = dL/dt", "τ = L/t", "L = dτ/dt", "τ = L × t"],
+    "a": 0,
+    "e": "The rate of change of angular momentum is equal to the applied torque.",
+    "cat": "technical",
+    "sub": "applied_physics"
+  },
+  {
+    "q": "In 'Fiber Optics', light travels through the core due to: / 'फाइबर ऑप्टिक्स' में, प्रकाश कोर के माध्यम से किसके कारण यात्रा करता है?",
+    "o": ["Refraction", "Scattering", "Total Internal Reflection | पूर्ण आंतरिक परावर्तन", "Diffraction"],
+    "a": 2,
+    "e": "TIR keeps the light trapped inside the core by reflecting it off the cladding.",
+    "cat": "technical",
+    "sub": "applied_physics"
+  },
+  {
+    "q": "The 'Specific Heat' of a substance depends on: / किसी पदार्थ की 'विशिष्ट ऊष्मा' किस पर निर्भर करती है?",
+    "o": ["Mass of the substance", "Nature of the material | सामग्री की प्रकृति", "Volume of the substance", "None"],
+    "a": 1,
+    "e": "Specific heat is an intrinsic property of the material itself.",
+    "cat": "technical",
+    "sub": "applied_physics"
+  },
+  {
+    "q": "Which instrument uses 'Ultrasonic waves' to find the depth of the ocean? / समुद्र की गहराई मापने के लिए किस उपकरण में 'अल्ट्रासोनिक तरंगों' का उपयोग किया जाता है?",
+    "o": ["Radar", "Lidar", "Sonar | सोनार (Sonar)", "Microscope"],
+    "a": 2,
+    "e": "SONAR (Sound Navigation and Ranging) uses sound echoes to detect underwater objects.",
+    "cat": "technical",
+    "sub": "applied_physics"
+  },
+  {
+    "q": "What is the escape velocity from the Earth's surface? / पृथ्वी की सतह से पलायन वेग (Escape Velocity) क्या है?",
+    "o": ["9.8 km/s", "11.2 km/s | 11.2 km/s", "7.9 km/s", "1.1 km/s"],
+    "a": 1,
+    "e": "This is the minimum speed needed for an object to break free from Earth's gravity.",
+    "cat": "technical",
+    "sub": "applied_physics"
+  },
+  {
+    "q": "The phenomenon of 'Rainbow' is due to: / 'इंद्रधनुष' की घटना किसके कारण होती है?",
+    "o": ["Dispersion and Internal Reflection | विक्षेपण और आंतरिक परावर्तन", "Only Reflection", "Only Refraction", "Interference"],
+    "a": 0,
+    "e": "Sunlight is dispersed by water droplets, acting like tiny prisms.",
+    "cat": "technical",
+    "sub": "applied_physics"
+  },
+  {
+    "q": "What is the unit of 'Magnetic Flux'? / 'चुंबकीय फ्लक्स' (Magnetic Flux) की इकाई क्या है?",
+    "o": ["Tesla", "Weber | वेबर (Weber)", "Henry", "Gauss"],
+    "a": 1,
+    "e": "Weber is the SI unit, while Tesla is the unit for magnetic flux density.",
+    "cat": "technical",
+    "sub": "applied_physics"
+  },
+  {
+    "q": "In a 'Full-wave Bridge Rectifier', how many diodes are used? / एक 'फुल-वेव ब्रिज रेक्टिफायर' में कितने डायोड उपयोग किए जाते हैं?",
+    "o": ["2", "1", "6", "4 | 4"],
+    "a": 3,
+    "e": "A bridge configuration uses 4 diodes to provide full-wave rectification without a center-tapped transformer.",
+    "cat": "technical",
+    "sub": "applied_physics"
+  },
+  {
+    "q": "Newton's First Law of Motion defines: / न्यूटन का गति का पहला नियम किसे परिभाषित करता है?",
+    "o": ["Energy", "Inertia | जड़त्व (Inertia)", "Work", "Momentum"],
+    "a": 1,
+    "e": "It states that an object will remain at rest or in motion unless acted upon by an external force.",
+    "cat": "technical",
+    "sub": "applied_physics"
+  },
+  {
+    "q": "What is the dimensional formula for 'Force'? / 'बल' का विमीय सूत्र क्या है?",
+    "o": ["MLT^-1", "ML^2T^-2", "MLT^-2 | MLT^-2", "M^2LT^-2"],
+    "a": 2,
+    "e": "Force = Mass × Acceleration, so [M] × [LT^-2] = [MLT^-2].",
+    "cat": "technical",
+    "sub": "applied_physics"
+  },
+  {
+    "q": "Which type of wave is a 'Sound Wave' in air? / हवा में 'ध्वनि तरंग' किस प्रकार की तरंग है?",
+    "o": ["Longitudinal wave | अनुदैर्ध्य तरंग", "Transverse wave", "Electromagnetic wave", "None"],
+    "a": 0,
+    "e": "Sound waves in air travel as longitudinal waves through compressions and rarefactions.",
+    "cat": "technical",
+    "sub": "applied_physics"
+  },
+  {
+    "q": "What is the unit of 'Power' of a lens? / लेंस की 'शक्ति' (Power) की इकाई क्या है?",
+    "o": ["Meter", "Dioptre | डायोप्टर", "Watt", "Candela"],
+    "a": 1,
+    "e": "Power of a lens is the reciprocal of its focal length in meters, measured in Dioptres.",
+    "cat": "technical",
+    "sub": "applied_physics"
+  },
+  {
+    "q": "In an 'Intrinsic' semiconductor at absolute zero temperature, the conductivity is: / पूर्ण शून्य तापमान पर एक 'शुद्ध' अर्धचालक की चालकता होती है:",
+    "o": ["Infinite", "Very high", "Zero | शून्य", "Moderate"],
+    "a": 2,
+    "e": "At absolute zero, there are no free electrons in the conduction band, so it acts as an insulator.",
+    "cat": "technical",
+    "sub": "applied_physics"
+  },
+  {
+    "q": "The work done by a centripetal force is always: / अभिकेंद्री बल द्वारा किया गया कार्य हमेशा होता है:",
+    "o": ["Positive", "Negative", "Zero | शून्य", "Infinite"],
+    "a": 2,
+    "e": "Since centripetal force is perpendicular to the displacement, the work done (W = Fd cos 90°) is zero.",
+    "cat": "technical",
+    "sub": "applied_physics"
+  },
+  {
+    "q": "Which material is used to make 'Permanent Magnets'? / 'स्थायी चुंबक' बनाने के लिए किस सामग्री का उपयोग किया जाता है?",
+    "o": ["Soft Iron", "Steel | स्टील (Steel)", "Copper", "Aluminum"],
+    "a": 1,
+    "e": "Steel or Alnico are used because they have high retentivity and high coercivity.",
+    "cat": "technical",
+    "sub": "applied_physics"
+  },
+  {
+    "q": "What is the value of 'Atmospheric Pressure' at sea level? / समुद्र तल पर 'वायुमंडलीय दबाव' का मान क्या होता है?",
+    "o": ["1.013 × 10^5 Pa | 1.013 × 10^5 Pa", "10^2 Pa", "76 Pa", "Zero"],
+    "a": 0,
+    "e": "Standard atmospheric pressure is approximately 101.3 kPa.",
+    "cat": "technical",
+    "sub": "applied_physics"
+  },
+  {
+    "q": "A 'Transistor' acts as an 'Open Switch' when it is in: / एक 'ट्रांजिस्टर' 'ओपन स्विच' की तरह कार्य करता है जब वह होता है:",
+    "o": ["Active region", "Saturation region", "Cut-off region | कट-ऑफ क्षेत्र", "None"],
+    "a": 2,
+    "e": "In the cut-off region, no current flows through the transistor, simulating an open switch.",
+    "cat": "technical",
+    "sub": "applied_physics"
+  },
+  {
+    "q": "The magnifying power of a 'Compound Microscope' is the: / एक 'संयुक्त सूक्ष्मदर्शी' की आवर्धन क्षमता होती है:",
+    "o": ["Sum of powers of two lenses", "Product of magnifications of objective and eyepiece | आवर्धन का गुणनफल", "Difference of powers", "None"],
+    "a": 1,
+    "e": "Total magnification M = Mo × Me.",
+    "cat": "technical",
+    "sub": "applied_physics"
+  },
+  {
+    "q": "What is the energy stored in a 'Capacitor' of capacitance 'C' and voltage 'V'? / 'C' धारिता और 'V' वोल्टेज वाले 'कैपेसिटर' में संचित ऊर्जा क्या है?",
+    "o": ["CV", "1/2 CV", "1/2 CV^2 | 1/2 CV^2", "CV^2"],
+    "a": 2,
+    "e": "The energy is stored in the electric field between the plates.",
+    "cat": "technical",
+    "sub": "applied_physics"
+  },
+  {
+    "q": "Which lens is used to correct 'Myopia' (Short-sightedness)? / 'मायोपिया' (निकट दृष्टि दोष) को ठीक करने के लिए किस लेंस का उपयोग किया जाता है?",
+    "o": ["Convex lens", "Concave lens | अवतल लेंस", "Cylindrical lens", "Bifocal lens"],
+    "a": 1,
+    "e": "A concave lens diverges light rays so they focus correctly on the retina. [cite: 351, 1247]",
+    "cat": "technical",
+    "sub": "applied_physics"
+  },
+  {
+    "q": "The principle of 'Total Internal Reflection' is used in: / 'पूर्ण आंतरिक परावर्तन' के सिद्धांत का उपयोग किसमें किया जाता है?",
+    "o": ["Mirrors", "Optical Fibers | ऑप्टिकल फाइबर", "Microscopes", "None"],
+    "a": 1,
+    "e": "Optical fibers use TIR to transmit light signals over long distances with minimal loss. [cite: 352, 1248]",
+    "cat": "technical",
+    "sub": "applied_physics"
+  },
+  {
+    "q": "What is the SI unit of Electric Capacitance? / विद्युत धारिता (Capacitance) की SI इकाई क्या है?",
+    "o": ["Ohm", "Volt", "Farad | फैराड", "Coulomb"],
+    "a": 2,
+    "e": "Farad measures the ability of a body to store an electrical charge. [cite: 356, 1252]",
+    "cat": "technical",
+    "sub": "applied_physics"
+  },
+  {
+    "q": "Ohm's Law is valid only when: / ओम का नियम तभी मान्य होता है जब:",
+    "o": ["Current is constant", "Voltage is constant", "Temperature is constant | तापमान स्थिर हो", "None"],
+    "a": 2,
+    "e": "Resistance changes with temperature, so physical conditions must remain constant for Ohm's law. [cite: 361, 445]",
+    "cat": "technical",
+    "sub": "applied_physics"
+  },
+  {
+    "q": "Which type of material shows 'Ferromagnetism'? / किस प्रकार का पदार्थ 'लौह-चुंबकत्व' (Ferromagnetism) प्रदर्शित करता है?",
+    "o": ["Copper", "Iron | लोहा", "Gold", "Wood"],
+    "a": 1,
+    "e": "Iron, Cobalt, and Nickel are classic examples of ferromagnetic materials. [cite: 364, 1260]",
+    "cat": "technical",
+    "sub": "applied_physics"
+  },
+  {
+    "q": "In a 'Half-wave Rectifier', how many diodes are used? / 'हाफ-वेव रेक्टिफायर' में कितने डायोड उपयोग किए जाते हैं?",
+    "o": ["Two", "Four", "One | एक", "None"],
+    "a": 2,
+    "e": "A single diode is sufficient to block one half of the AC cycle in half-wave rectification. [cite: 370, 454]",
+    "cat": "technical",
+    "sub": "applied_physics"
+  },
+  {
+    "q": "Ultrasonic waves have frequency: / अल्ट्रासोनिक तरंगों की आवृत्ति होती है:",
+    "o": ["Less than 20 Hz", "Between 20 Hz to 20,000 Hz", "Above 20,000 Hz | 20,000 Hz से अधिक", "Zero"],
+    "a": 2,
+    "e": "These waves are beyond the upper limit of human hearing. [cite: 349, 1244]",
+    "cat": "technical",
+    "sub": "applied_physics"
+  },
+  {
+    "q": "What is the function of a 'Capacitor' in a circuit? / एक सर्किट में 'कैपेसिटर' का क्या कार्य है?",
+    "o": ["To block current", "To store electrical energy | विद्युत ऊर्जा संचय करना", "To increase voltage", "None"],
+    "a": 1,
+    "e": "Capacitors store energy in an electric field between two conducting plates. [cite: 356, 1344]",
+    "cat": "technical",
+    "sub": "applied_physics"
+  },
+  {
+    "q": "Which laser is commonly used in laboratories? / प्रयोगशालाओं में आमतौर पर किस लेजर का उपयोग किया जाता है?",
+    "o": ["Ruby laser", "He-Ne laser | ही-ने (He-Ne) लेजर", "CO2 laser", "None"],
+    "a": 1,
+    "e": "Helium-Neon lasers are stable and widely used for scientific and educational purposes. [cite: 375, 456]",
+    "cat": "technical",
+    "sub": "applied_physics"
+  },
+  {
+    "q": "The resistance of a wire is 'Inversely' proportional to its: / एक तार का प्रतिरोध किसके 'व्युत्क्रमानुपाती' होता है?",
+    "o": ["Length", "Resistivity", "Area of cross-section | अनुप्रस्थ काट का क्षेत्रफल", "Temperature"],
+    "a": 2,
+    "e": "A thicker wire (larger area) has less resistance than a thinner one. [cite: 359, 1255]",
+    "cat": "technical",
+    "sub": "applied_physics"
+  },
+  {
+    "q": "What happens to the viscosity of a 'Liquid' when temperature increases? / तापमान बढ़ने पर 'द्रव' की श्यानता (Viscosity) पर क्या प्रभाव पड़ता है?",
+    "o": ["Increases", "Remains same", "Decreases | घटती है", "Becomes zero"],
+    "a": 2,
+    "e": "In liquids, increasing temperature weakens intermolecular forces, thereby decreasing viscosity. [cite: 54, 201]",
+    "cat": "technical",
+    "sub": "applied_physics"
+  },
+  {
+    "q": "The product of Force and Time is known as: / बल और समय के गुणनफल को क्या कहा जाता है?",
+    "o": ["Power", "Impulse | आवेग", "Momentum", "Work"],
+    "a": 1,
+    "e": "Impulse is defined as the total effect of a force acting over a period of time. [cite: 40]",
+    "cat": "technical",
+    "sub": "applied_physics"
+  },
+  {
+    "q": "What is the Least Count of a standard Vernier Caliper? / एक मानक वर्नियर कैलिपर का अल्पतमांक (Least Count) क्या होता है?",
+    "o": ["0.01 mm", "0.1 mm", "0.02 mm | 0.02 mm", "1.0 mm"],
+    "a": 2,
+    "e": "The least count is the smallest measurement that can be taken accurately with the instrument. [cite: 35, 190]",
+    "cat": "technical",
+    "sub": "applied_physics"
+  },
+  {
+    "q": "Surface tension of a liquid decreases with: / तरल का पृष्ठ तनाव किसके साथ घटता है?",
+    "o": ["Increase in area", "Increase in temperature | तापमान में वृद्धि", "Decrease in temperature", "None"],
+    "a": 1,
+    "e": "Increasing temperature reduces the cohesive forces between molecules, lowering surface tension. [cite: 53]",
+    "cat": "technical",
+    "sub": "applied_physics"
+  },
+  {
+    "q": "Kinetic energy of an object of mass 'm' and velocity 'v' is: / 'm' द्रव्यमान और 'v' वेग वाली वस्तु की गतिज ऊर्जा क्या है?",
+    "o": ["mgh", "mv", "1/2 mv^2 | 1/2 mv^2", "ma"],
+    "a": 2,
+    "e": "Kinetic energy is the energy possessed by an object due to its motion. [cite: 44, 199]",
+    "cat": "technical",
+    "sub": "applied_physics"
+  },
+  {
+    "q": "Which mode of heat transfer does not require a medium? / ऊष्मा स्थानांतरण की किस विधि को माध्यम की आवश्यकता नहीं होती है?",
+    "o": ["Conduction", "Convection", "Radiation | विकिरण", "None"],
+    "a": 2,
+    "e": "Radiation transfers heat through electromagnetic waves and can occur in a vacuum. [cite: 57, 204]",
+    "cat": "technical",
+    "sub": "applied_physics"
+  },
+  {
+    "q": "The banking of roads is an application of: / सड़कों की बैंकिंग (Banking) किसका एक अनुप्रयोग है?",
+    "o": ["Centrifugal force", "Centripetal force | अभिकेंद्री बल", "Friction only", "None"],
+    "a": 1,
+    "e": "Banking provides the necessary centripetal force for a vehicle to take a turn safely at high speed. [cite: 41]",
+    "cat": "technical",
+    "sub": "applied_physics"
+  }
+]
