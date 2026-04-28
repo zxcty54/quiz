@@ -1,1 +1,1950 @@
-
+[
+{
+    "q": "Temporary hardness of water can be removed by: / जल की अस्थायी कठोरता को किसके द्वारा दूर किया जा सकता है?",
+    "o": ["Filtration", "Adding salt", "Boiling | उबालकर", "Sedimentation"],
+    "a": 2,
+    "e": "Boiling decomposes calcium and magnesium bicarbonates into insoluble carbonates.",
+    "cat": "technical",
+    "sub": "applied_chemistry"
+  },
+  {
+    "q": "Which of the following is a 'Thermosetting' plastic? / निम्नलिखित में से कौन सा एक 'थर्मोसेटिंग' प्लास्टिक है?",
+    "o": ["PVC", "Polystyrene", "Bakelite | बैकेलाइट", "Nylon"],
+    "a": 2,
+    "e": "Bakelite does not soften on heating once it is molded, unlike thermoplastics.",
+    "cat": "technical",
+    "sub": "applied_chemistry"
+  },
+  {
+    "q": "What is the chemical composition of 'LPG'? / 'LPG' का रासायनिक संगठन क्या है?",
+    "o": ["Methane and Ethane", "Propane and Butane | प्रोपेन और ब्यूटेन", "Hydrogen and CO", "None"],
+    "a": 1,
+    "e": "LPG (Liquefied Petroleum Gas) is primarily a mixture of propane and butane gases.",
+    "cat": "technical",
+    "sub": "applied_chemistry"
+  },
+  
+  {
+    "q": "What is 'Obsolescence'? / 'अप्रचलन' (Obsolescence) क्या है?",
+    "o": ["Physical decay of materials", "Loss in value due to change in design, fashion, or technology | डिजाइन या तकनीक में बदलाव के कारण मूल्य में कमी", "Damage by fire", "None"],
+    "a": 1,
+    "e": "A building may become obsolete if its design becomes outdated, even if it is structurally sound.",
+    "cat": "technical",
+    "sub": "valuation"
+  },
+  {
+    "q": "The value of a property at any particular time during its life is called: / अपने जीवन के दौरान किसी भी विशेष समय पर संपत्ति का मूल्य कहलाता है:",
+    "o": ["Market Value", "Book Value | बुक वैल्यू (Book Value)", "Scrap Value", "Salvage Value"],
+    "a": 1,
+    "e": "Book Value is the cost minus the total depreciation up to that date, as per account books.",
+    "cat": "technical",
+    "sub": "valuation"
+  },
+  {
+    "q": "What is 'Capitalized Value' of a property? / किसी संपत्ति का 'पूंजीकृत मूल्य' (Capitalized Value) क्या है?",
+    "o": ["Cost of construction", "The sum which will yield the net income as interest | वह राशि जो शुद्ध आय को ब्याज के रूप में प्रदान करेगी", "Market price", "None"],
+    "a": 1,
+    "e": "Capitalized Value = Net Income x Year's Purchase (YP).",
+    "cat": "technical",
+    "sub": "valuation"
+  },
+  {
+    "q": "In 'Sinking Fund Method', the annual installment is calculated based on: / 'सिंकिंग फंड विधि' में, वार्षिक किस्त की गणना किसके आधार पर की जाती है?",
+    "o": ["Compound interest | चक्रवृद्धि ब्याज", "Simple interest", "No interest", "None"],
+    "a": 0,
+    "e": "It assumes that the annual fund grows with compound interest to equal the replacement cost at the end of life.",
+    "cat": "technical",
+    "sub": "valuation"
+  },
+  {
+    "q": "What is 'Year's Purchase' (YP)? / 'ईयर्स परचेज' (YP) क्या है?",
+    "o": ["Total years of building life", "The amount required to be invested to get Re. 1/- as annuity | 1/- रुपया प्राप्त करने के लिए आवश्यक निवेश राशि", "Cost of one year's rent", "None"],
+    "a": 1,
+    "e": "YP = 100 / Rate of interest. It is used to convert annual income into capitalized value.",
+    "cat": "technical",
+    "sub": "valuation"
+  },
+  {
+    "q": "Which type of lease is for a very long period, typically 99 or 999 years? / कौन सा पट्टा (Lease) बहुत लंबी अवधि के लिए होता है?",
+    "o": ["Occupation Lease", "Building Lease (Ground Lease) | बिल्डिंग लीज (ग्राउंड लीज)", "Short term lease", "None"],
+    "a": 1,
+    "e": "Long-term leases are common for land where the lessee builds a structure and enjoys it for the lease period.",
+    "cat": "technical",
+    "sub": "valuation"
+  },
+  {
+    "q": "What is 'Annuity'? / 'वार्षिकी' (Annuity) क्या है?",
+    "o": ["Total cost", "Annual periodic payments of a capital sum | पूंजीगत राशि का वार्षिक आवधिक भुगतान", "Tax on building", "None"],
+    "a": 1,
+    "e": "Annuity can be for a fixed term (Annuity Certain) or for life (Life Annuity).",
+    "cat": "technical",
+    "sub": "valuation"
+  },
+  {
+    "q": "The value of a property that has sentimental attachment to the owner is: / जिस संपत्ति का मालिक से भावनात्मक लगाव होता है, उसका मूल्य है:",
+    "o": ["Market Value", "Sentimental Value | भावनात्मक मूल्य (Sentimental Value)", "Speculative Value", "None"],
+    "a": 1,
+    "e": "Sentimental value is usually higher than market value but is not considered by banks or professional valuers.",
+    "cat": "technical",
+    "sub": "valuation"
+  },
+  {
+    "q": "What is 'Gross Income' from a property? / किसी संपत्ति से 'सकल आय' (Gross Income) क्या है?",
+    "o": ["Total rent collected without deducting any expenses | बिना किसी खर्च को घटाए कुल एकत्रित किराया", "Income after tax", "Net profit", "None"],
+    "a": 0,
+    "e": "Net Income = Gross Income - Outgoings (Repairs, Taxes, Management, etc.).",
+    "cat": "technical",
+    "sub": "valuation"
+  },
+  {
+    "q": "A 'Mortgagee' is the person who: / 'बंधकग्राही' (Mortgagee) वह व्यक्ति है जो:",
+    "o": ["Gives the loan | ऋण देता है", "Takes the loan", "Sells the property", "None"],
+    "a": 0,
+    "e": "The lender (usually a bank) is the Mortgagee, and the owner who pledges the property is the Mortgagor.",
+    "cat": "technical",
+    "sub": "valuation"
+  },
+  {
+    "q": "What is 'Liquidated Damages' in a construction contract? / निर्माण अनुबंध में 'परिनिर्धारित हर्जाना' (Liquidated Damages) क्या है?",
+    "o": ["Cost of materials", "Compensation for delay in completing the work | काम पूरा करने में देरी के लिए मुआवजा", "Contractor's bonus", "Tax amount"],
+    "a": 1,
+    "e": "It is a pre-agreed amount that the contractor must pay to the owner if the project is not completed within the stipulated time.",
+    "cat": "technical",
+    "sub": "contracts_tenders"
+  },
+  {
+    "q": "The 'Defect Liability Period' usually starts from: / 'दोष दायित्व अवधि' (Defect Liability Period) आमतौर पर कब शुरू होती है?",
+    "o": ["Date of signing contract", "Date of physical completion of work | कार्य के भौतिक रूप से पूर्ण होने की तिथि से", "Date of first bill", "None"],
+    "a": 1,
+    "e": "During this period (usually 6-12 months), the contractor is responsible for fixing any structural or finishing defects at their own cost.",
+    "cat": "technical",
+    "sub": "contracts_tenders"
+  },
+  {
+    "q": "What is the 'Price Variation Clause' (Escalation) intended for? / 'मूल्य भिन्नता खंड' (Escalation) का उद्देश्य क्या है?",
+    "o": ["To increase profit", "To adjust for changes in cost of labor and materials | श्रम और सामग्री की लागत में परिवर्तन के लिए समायोजन", "To pay for extra items", "None"],
+    "a": 1,
+    "e": "This clause protects the contractor against sudden market price hikes of essential items like steel, cement, and fuel.",
+    "cat": "technical",
+    "sub": "contracts_tenders"
+  },
+  {
+    "q": "What is 'Arbitration'? / 'मध्यस्थता' (Arbitration) क्या है?",
+    "o": ["A type of building material", "Out-of-court settlement of disputes by a third party | तीसरे पक्ष द्वारा विवादों का अदालत से बाहर निपटारा", "Government inspection", "None"],
+    "a": 1,
+    "e": "Arbitration is a legal way to resolve conflicts between the owner and the contractor without lengthy court trials.",
+    "cat": "technical",
+    "sub": "contracts_tenders"
+  },
+  {
+    "q": "If a contractor fails to start the work after winning the tender, what is usually forfeited? / यदि कोई ठेकेदार निविदा जीतने के बाद काम शुरू करने में विफल रहता है, तो आमतौर पर क्या जब्त किया जाता है?",
+    "o": ["Security Deposit", "Earnest Money Deposit (EMD) | बयाना जमा (EMD)", "Final bill", "None"],
+    "a": 1,
+    "e": "EMD is taken to ensure the bidder follows through with the contract after the tender is accepted.",
+    "cat": "technical",
+    "sub": "contracts_tenders"
+  },
+  {
+    "q": "What is 'Subletting' of a contract? / अनुबंध का 'सबलेटिंग' (Subletting) क्या है?",
+    "o": ["Cancelling the work", "Transferring a portion of the work to another agency | कार्य का एक हिस्सा दूसरी एजेंसी को हस्तांतरित करना", "Buying materials", "None"],
+    "a": 1,
+    "e": "Subletting requires prior written approval from the department; otherwise, it is a breach of contract.",
+    "cat": "technical",
+    "sub": "contracts_tenders"
+  },
+  {
+    "q": "The 'Time Extension' for a project is granted due to: / किसी परियोजना के लिए 'समय विस्तार' किसके कारण दिया जाता है?",
+    "o": ["Contractor's personal reasons", "Force Majeure (Natural calamities) | दैवीय शक्ति (प्राकृतिक आपदाएं)", "Labor strike", "Both B and C | B और C दोनों"],
+    "a": 3,
+    "e": "Delays beyond the contractor's control, such as floods or strikes, are valid grounds for extending the deadline.",
+    "cat": "technical",
+    "sub": "contracts_tenders"
+  },
+  {
+    "q": "What is 'Balanced Tender'? / 'संतुलित निविदा' (Balanced Tender) क्या है?",
+    "o": ["Very high rates", "Rates that are close to the department's estimated rates | दरें जो विभाग की अनुमानित दरों के करीब हैं", "Very low rates", "None"],
+    "a": 1,
+    "e": "A balanced tender indicates realistic pricing for all items of work without 'front-loading'.",
+    "cat": "technical",
+    "sub": "contracts_tenders"
+  },
+  {
+    "q": "The 'Retention Money' is generally released: / 'रिटेंशन मनी' आम तौर पर कब जारी की जाती है?",
+    "o": ["With every running bill", "After the successful completion of the Defect Liability Period | दोष दायित्व अवधि के सफल समापन के बाद", "Before the work starts", "None"],
+    "a": 1,
+    "e": "It is kept as a safeguard to ensure the contractor fixes any defects found after the work is finished.",
+    "cat": "technical",
+    "sub": "contracts_tenders"
+  },
+  {
+    "q": "What is 'Administrative Approval' in a project? / किसी परियोजना में 'प्रशासनिक अनुमोदन' क्या है?",
+    "o": ["Formal acceptance of the necessity of work by the authority | प्राधिकारी द्वारा कार्य की आवश्यकता की औपचारिक स्वीकृति", "Technical check of design", "Permission to pay final bill", "None"],
+    "a": 0,
+    "e": "It is the first formal step where the department agrees to the proposal and the estimated cost.",
+    "cat": "technical",
+    "sub": "contracts_tenders"
+  },
+  {
+    "q": "What is 'NIT' in the tendering process? / निविदा प्रक्रिया में 'NIT' क्या है?",
+    "o": ["National Income Tax", "Notice Inviting Tender | निविदा आमंत्रण सूचना", "Net Internal Total", "None"],
+    "a": 1,
+    "e": "NIT is a formal advertisement issued by a department to invite bids from contractors for a project.",
+    "cat": "technical",
+    "sub": "contracts_tenders"
+  },
+  {
+    "q": "Which type of contract is most suitable for a project where the exact quantities of work are NOT known in advance? / उस परियोजना के लिए कौन सा अनुबंध सबसे उपयुक्त है जहाँ कार्य की सटीक मात्रा पहले से ज्ञात नहीं है?",
+    "o": ["Lump-sum Contract", "Item Rate Contract | आइटम रेट अनुबंध", "Percentage Rate Contract", "None"],
+    "a": 1,
+    "e": "In Item Rate contracts, the contractor is paid based on actual measurements of each item completed.",
+    "cat": "technical",
+    "sub": "contracts_tenders"
+  },
+  {
+    "q": "What is 'Scrap Value'? / 'स्क्रैप वैल्यू' (Scrap Value) क्या है?",
+    "o": ["Market value of a new building", "Value of dismantled materials at the end of useful life | उपयोगी जीवन के अंत में तोड़े गए मलबे का मूल्य", "Value for insurance", "None"],
+    "a": 1,
+    "e": "Scrap value is the junk value of materials (like steel, bricks, timber) obtained after demolishing a structure.",
+    "cat": "technical",
+    "sub": "estimating_costing"
+  },
+  {
+    "q": "The 'Straight Line Method' of depreciation assumes that: / मूल्यह्रास की 'सीधी रेखा विधि' (Straight Line Method) यह मानती है कि:",
+    "o": ["Value decreases more in early years", "Value decreases by a constant amount every year | मूल्य हर साल एक स्थिर राशि से घटता है", "Value never decreases", "None"],
+    "a": 1,
+    "e": "Depreciation = (Original Cost - Scrap Value) / Life in years.",
+    "cat": "technical",
+    "sub": "valuation"
+  },
+  {
+    "q": "The value of a property at the end of its useful life, without being dismantled, is: / उपयोगी जीवन के अंत में, बिना तोड़े गए संपत्ति का मूल्य है:",
+    "o": ["Scrap Value", "Salvage Value | साल्वेज वैल्यू (Salvage Value)", "Market Value", "Book Value"],
+    "a": 1,
+    "e": "Salvage value is the value of an asset while it is still in working condition but has reached the end of its intended life.",
+    "cat": "technical",
+    "sub": "valuation"
+  },
+  {
+    "q": "What is 'Earnest Money Deposit' (EMD)? / 'बयाना जमा' (EMD) क्या है?",
+    "o": ["Security for quality", "Amount paid by contractor while submitting a tender | निविदा जमा करते समय ठेकेदार द्वारा भुगतान की गई राशि", "A gift to engineer", "None"],
+    "a": 1,
+    "e": "EMD (usually 1-2%) ensures that the contractor is a serious bidder and will not withdraw their offer.",
+    "cat": "technical",
+    "sub": "contracts_tenders"
+  },
+  {
+    "q": "A 'Lump-sum Contract' is one where: / 'एकमुश्त अनुबंध' (Lump-sum Contract) वह है जहाँ:",
+    "o": ["Payment is by item", "Fixed price is agreed for the whole work as per plan | योजना के अनुसार पूरे कार्य के लिए निश्चित मूल्य तय किया जाता है", "Only labor is paid", "None"],
+    "a": 1,
+    "e": "The contractor agrees to complete the entire project for a single fixed sum.",
+    "cat": "technical",
+    "sub": "contracts_tenders"
+  },
+  {
+    "q": "What is 'Sinking Fund'? / 'सिंकिंग फंड' (Sinking Fund) क्या है?",
+    "o": ["A fund that is lost", "A fund created to accumulate capital for replacing a property | संपत्ति को बदलने के लिए पूंजी जमा करने हेतु बनाया गया फंड", "Contractor's profit", "None"],
+    "a": 1,
+    "e": "A specific amount is set aside every year which, with interest, equals the cost of replacement after the building's life.",
+    "cat": "technical",
+    "sub": "valuation"
+  },
+  {
+    "q": "The value shown in the account books after deducting depreciation is called: / मूल्यह्रास घटाने के बाद खाता बहियों में दिखाया गया मूल्य कहलाता है:",
+    "o": ["Market Value", "Book Value | बुक वैल्यू (Book Value)", "Distress Value", "None"],
+    "a": 1,
+    "e": "Book Value = Original Cost - Accumulated Depreciation.",
+    "cat": "technical",
+    "sub": "valuation"
+  },
+  {
+    "q": "Which type of value is obtained when a property is sold in a hurry under pressure? / दबाव में जल्दी में संपत्ति बेचने पर किस प्रकार का मूल्य प्राप्त होता है?",
+    "o": ["Monopoly Value", "Distress Value | डिस्ट्रेस वैल्यू (Distress Value)", "Sentimental Value", "Scrap Value"],
+    "a": 1,
+    "e": "Distress value is usually much lower than the actual market value due to the urgency of the sale.",
+    "cat": "technical",
+    "sub": "valuation"
+  },
+  {
+    "q": "The process of determining the rates of various items of work including material, labor, and overheads is called: / सामग्री, श्रम और ओवरहेड्स सहित कार्य के विभिन्न मदों की दरें निर्धारित करने की प्रक्रिया कहलाती है:",
+    "o": ["Valuation", "Rate Analysis | दर विश्लेषण (Rate Analysis)", "Detailed Estimate", "Tendering"],
+    "a": 1,
+    "e": "Rate analysis helps in calculating the cost per unit of an item (like 1 cum of concrete) based on current market prices.",
+    "cat": "technical",
+    "sub": "estimating_costing"
+  },
+  {
+    "q": "In a detailed estimate, the quantity of 'Excavation' is calculated as: / एक विस्तृत अनुमान में, 'खुदाई' (Excavation) की मात्रा की गणना किस रूप में की जाती है?",
+    "o": ["Length x Width", "Length x Width x Depth | लंबाई x चौड़ाई x गहराई", "Area of foundation", "Weight of soil"],
+    "a": 1,
+    "e": "Excavation is a volumetric work, hence measured in cubic meters (cum) using three dimensions.",
+    "cat": "technical",
+    "sub": "estimating_costing"
+  },
+  {
+    "q": "What is the standard unit of measurement for 'Brickwork' in the superstructure? / सुपरस्ट्रक्चर में 'ईंट कार्य' के मापन की मानक इकाई क्या है?",
+    "o": ["Square meter", "Cubic meter | घन मीटर (cum)", "Number of bricks", "Running meter"],
+    "a": 1,
+    "e": "General brickwork (more than 10cm thick) is always measured by volume in cubic meters.",
+    "cat": "technical",
+    "sub": "estimating_costing"
+  },
+  {
+    "q": "For 10 cubic meters of 'Concrete (1:2:4)', the dry volume required is approximately: / 10 घन मीटर 'कंक्रीट (1:2:4)' के लिए आवश्यक शुष्क आयतन (Dry volume) लगभग है:",
+    "o": ["10 cum", "12 cum", "15.4 cum | 15.4 घन मीटर", "20 cum"],
+    "a": 2,
+    "e": "A factor of 1.52 to 1.54 is multiplied to the wet volume to account for voids and shrinkage when mixing dry materials.",
+    "cat": "technical",
+    "sub": "estimating_costing"
+  },
+  {
+    "q": "What is the percentage of 'Water Charges' usually added to the total cost? / कुल लागत में आमतौर पर कितना 'जल शुल्क' (Water Charges) जोड़ा जाता है?",
+    "o": ["1% to 1.5% | 1 से 1.5 प्रतिशत", "5%", "10%", "2%"],
+    "a": 0,
+    "e": "Standard engineering practice allows 1.5% of the estimated cost for providing water for construction purposes.",
+    "cat": "technical",
+    "sub": "estimating_costing"
+  },
+  {
+    "q": "The 'Plinth Area' of a building is: / किसी भवन का 'प्लिंथ क्षेत्र' (Plinth Area) है:",
+    "o": ["Floor area only", "The total built-up covered area at floor level | फर्श स्तर पर कुल निर्मित कवर क्षेत्र", "Area excluding walls", "None"],
+    "a": 1,
+    "e": "Plinth area is measured out-to-out of the external walls at the floor level.",
+    "cat": "technical",
+    "sub": "estimating_costing"
+  },
+  {
+    "q": "While estimating 'Concrete work', deductions for openings (like pipes) are NOT made if the area is up to: / 'कंक्रीट कार्य' का अनुमान लगाते समय, छिद्रों के लिए कटौती नहीं की जाती है यदि क्षेत्रफल कहाँ तक है?",
+    "o": ["0.1 sqm | 0.1 वर्ग मीटर", "0.5 sqm", "1.0 sqm", "0.01 sqm"],
+    "a": 0,
+    "e": "According to IS 1200, small openings or embedded items like pipes up to 0.1 sqm area are not deducted from concrete volume.",
+    "cat": "technical",
+    "sub": "estimating_costing"
+  },
+  {
+    "q": "The 'Abstract of Estimate' provides: / 'अनुमान का सार' (Abstract of Estimate) क्या प्रदान करता है?",
+    "o": ["Detailed measurements", "Total cost of each item and the whole project | प्रत्येक मद और पूरी परियोजना की कुल लागत", "List of labor only", "None"],
+    "a": 1,
+    "e": "The abstract sheet summarizes the quantities and their respective rates to arrive at the final total cost.",
+    "cat": "technical",
+    "sub": "estimating_costing"
+  },
+  {
+    "q": "What is 'Task Work' (or Outturn) of a laborer? / मजदूर का 'टास्क वर्क' (Task Work) क्या है?",
+    "o": ["Total work in a month", "Work done by a skilled labor in one day (8 hours) | एक दिन (8 घंटे) में एक कुशल मजदूर द्वारा किया गया कार्य", "The cost of labor", "None"],
+    "a": 1,
+    "e": "Task work helps in calculating the number of laborers required for a specific quantity of work in rate analysis.",
+    "cat": "technical",
+    "sub": "estimating_costing"
+  },
+  {
+    "q": "The measurement of 'Damp Proof Course' (DPC) is done in: / 'डैम्प प्रूफ कोर्स' (DPC) का मापन किया जाता है:",
+    "o": ["Cubic meter", "Square meter | वर्ग मीटर (sqm)", "Running meter", "None"],
+    "a": 1,
+    "e": "DPC is a thin horizontal layer where thickness is fixed, so it is measured as area.",
+    "cat": "technical",
+    "sub": "estimating_costing"
+  },
+  {
+    "q": "What is 'Machine Reconditioning'? / 'मशीन रीकंडीशनिंग' क्या है?",
+    "o": ["Daily oiling", "Restoring a machine to its original specifications by repairing and replacing parts | मूल विशिष्टताओं पर वापस लाना", "Selling the machine", "None"],
+    "a": 1,
+    "e": "Reconditioning extends the life of expensive machinery by rebuilding it to perform like a new machine.",
+    "cat": "technical",
+    "sub": "maintenance_engineering"
+  },
+  {
+    "q": "How can 'Computers' improve maintenance management? / 'कंप्यूटर' रखरखाव प्रबंधन में कैसे सुधार कर सकते हैं?",
+    "o": ["Playing games", "Automating schedules and tracking work orders | शेड्यूल को स्वचालित करना और वर्क ऑर्डर ट्रैक करना", "Increasing weight", "None"],
+    "a": 1,
+    "e": "Software like CMMS helps in planning, generating reports, and keeping accurate digital records of all maintenance activities.",
+    "cat": "technical",
+    "sub": "maintenance_engineering"
+  },
+  {
+    "q": "Which maintenance practice is most suitable for a 'Milling Machine'? / 'मिलिंग मशीन' के लिए कौन सी रखरखाव पद्धति सबसे उपयुक्त है?",
+    "o": ["Ignoring until it breaks", "Periodic lubrication of slides and checking spindle run-out | स्लाइड्स का लुब्रिकेशन और स्पिंडल रन-आउट की जांच", "Painting every day", "None"],
+    "a": 1,
+    "e": "Precision machines like milling require regular checks on alignments and lubrication of moving parts to maintain accuracy.",
+    "cat": "technical",
+    "sub": "maintenance_engineering"
+  },
+  {
+    "q": "What is the 'Criterion of Evaluation' for maintenance management? / रखरखाव प्रबंधन के 'मूल्यांकन का मानदंड' क्या है?",
+    "o": ["Machine downtime", "Cost per repair", "Overall Equipment Effectiveness (OEE) | ओईई (OEE)", "All of the above | उपरोक्त सभी"],
+    "a": 3,
+    "e": "Maintenance is evaluated based on how effectively it keeps machines running while keeping costs and downtime minimal.",
+    "cat": "technical",
+    "sub": "maintenance_engineering"
+  },
+  {
+    "q": "What is 'Routine Maintenance' on a Lathe machine? / खराद मशीन (Lathe) पर 'नियमित रखरखाव' (Routine Maintenance) क्या है?",
+    "o": ["Changing the motor every week", "Cleaning chips and oiling the bed-ways daily | चिप्स की सफाई और बेड-वेज़ की ऑयलिंग", "Polishing the handles", "None"],
+    "a": 1,
+    "e": "Routine maintenance consists of simple daily tasks that prevent wear and keep the machine in good working order.",
+    "cat": "technical",
+    "sub": "maintenance_engineering"
+  },
+  {
+    "q": "The term 'Machine Reliability' refers to: / 'मशीन विश्वसनीयता' शब्द का तात्पर्य है:",
+    "o": ["How fast it runs", "Probability that a machine will perform without failure for a set time | विफलता के बिना कार्य करने की संभावना", "The size of the machine", "None"],
+    "a": 1,
+    "e": "Reliability is a measure of trust in the machine's ability to complete its task without breaking down.",
+    "cat": "technical",
+    "sub": "maintenance_engineering"
+  },
+  {
+    "q": "What is the purpose of 'Maintenance Objectives' from A to Z? / A से Z तक 'रखरखाव उद्देश्यों' का उद्देश्य क्या है?",
+    "o": ["To waste time", "To define clear goals for safety, cost, and availability | सुरक्षा, लागत और उपलब्धता के लिए लक्ष्य परिभाषित करना", "To hire more labor", "None"],
+    "a": 1,
+    "e": "Clear objectives help a maintenance department align its efforts with the overall production goals of the factory.",
+    "cat": "technical",
+    "sub": "maintenance_engineering"
+  },
+  {
+    "q": "In a computer-based maintenance system, what does a 'Dashboard' show? / कंप्यूटर आधारित रखरखाव प्रणाली में, 'डैशबोर्ड' क्या दिखाता है?",
+    "o": ["Current date only", "Visual summary of KPIs like pending work and costs | पेंडिंग वर्क और लागत का सारांश", "Movie list", "None"],
+    "a": 1,
+    "e": "A dashboard provides managers with real-time data to make quick decisions regarding maintenance priorities.",
+    "cat": "technical",
+    "sub": "maintenance_engineering"
+  },
+  {
+    "q": "What is 'Preventive Maintenance' scheduling on a welding machine? / वेल्डिंग मशीन पर 'निवारक रखरखाव' शेड्यूलिंग क्या है?",
+    "o": ["Buying new electrodes", "Checking cables and insulation for damage regularly | केबल और इंसुलेशन की नियमित जांच", "Keeping it in water", "None"],
+    "a": 1,
+    "e": "Electrical safety is paramount for welding machines; regular checks prevent shocks and fire hazards.",
+    "cat": "technical",
+    "sub": "maintenance_engineering"
+  },
+  {
+    "q": "Evaluation of 'Maintenance Management' helps in: / 'रखरखाव प्रबंधन' का मूल्यांकन किसमें मदद करता है?",
+    "o": ["Identifying weaknesses and improving efficiency | कमजोरियों की पहचान और दक्षता में सुधार", "Increasing machine failure", "Hiding the costs", "None"],
+    "a": 0,
+    "e": "Regular evaluation ensures that the maintenance strategies are actually working and providing value to the organization.",
+    "cat": "technical",
+    "sub": "maintenance_engineering"
+  },
+  {
+    "q": "What does the 'Iodine Value' of a lubricant indicate? / एक स्नेहक का 'आयोडीन मान' (Iodine Value) क्या दर्शाता है?",
+    "o": ["Viscosity", "Degree of unsaturation in the oil | तेल में असंतृप्ति की डिग्री", "Acidity", "Moisture"],
+    "a": 1,
+    "e": "Higher iodine value means more unsaturated fatty acids are present, which makes the oil more prone to oxidation and gumming.",
+    "cat": "technical",
+    "sub": "tribology"
+  },
+  {
+    "q": "The 'Neutralization Number' (or Acid Value) of an oil is used to determine: / तेल का 'न्यूट्रलाइजेशन नंबर' (या एसिड वैल्यू) क्या निर्धारित करने के लिए उपयोग किया जाता है?",
+    "o": ["Presence of alkaline additives", "Extent of oil oxidation and acidity | तेल के ऑक्सीकरण और अम्लता की सीमा", "Thickness of oil", "None"],
+    "a": 1,
+    "e": "It represents the amount of KOH (potassium hydroxide) needed to neutralize the acids present in 1 gram of oil.",
+    "cat": "technical",
+    "sub": "tribology"
+  },
+  {
+    "q": "What is 'Carbon Residue' in a lubricant test? / एक स्नेहक परीक्षण में 'कार्बन अवशेष' (Carbon Residue) क्या है?",
+    "o": ["The amount of fuel in oil", "Carbon left behind after evaporation and pyrolysis of oil | तेल के वाष्पीकरण के बाद बचा कार्बन", "Ash content", "None"],
+    "a": 1,
+    "e": "Low carbon residue is desirable as it indicates that the oil will not form heavy deposits in high-temperature zones like engines.",
+    "cat": "technical",
+    "sub": "tribology"
+  },
+  {
+    "q": "Which property measures an oil's resistance to chemical reaction with oxygen? / कौन सा गुण ऑक्सीजन के साथ रासायनिक प्रतिक्रिया के प्रति तेल के प्रतिरोध को मापता है?",
+    "o": ["Viscosity Index", "Oxidation Stability | ऑक्सीकरण स्थिरता (Oxidation Stability)", "Flash Point", "Pour Point"],
+    "a": 1,
+    "e": "Good oxidation stability prevents the formation of sludge, varnish, and corrosive acids during machine operation.",
+    "cat": "technical",
+    "sub": "tribology"
+  },
+  {
+    "q": "The 'Saponification Number' is used to identify: / 'सैपोनिफिकेशन नंबर' (Saponification Number) की पहचान के लिए उपयोग किया जाता है:",
+    "o": ["Mineral oils only", "Presence of fatty oils or fats in a blend | मिश्रण में वसायुक्त तेलों या वसा की उपस्थिति", "Water content", "None"],
+    "a": 1,
+    "e": "It measures the amount of alkali required to saponify the fatty matter present in the lubricant.",
+    "cat": "technical",
+    "sub": "tribology"
+  },
+  {
+    "q": "Which lubricant additive is used to prevent the formation of large wax crystals at low temperatures? / कम तापमान पर बड़े वैक्स क्रिस्टल बनने से रोकने के लिए किस स्नेहक योजक (Additive) का उपयोग किया जाता है?",
+    "o": ["Antioxidants", "Pour Point Depressants | पोर पॉइंट डिप्रेसेंट्स", "Detergents", "Viscosity improvers"],
+    "a": 1,
+    "e": "These additives allow the oil to remain fluid and flow at much lower temperatures than untreated oil.",
+    "cat": "technical",
+    "sub": "tribology"
+  },
+  {
+    "q": "What is the function of 'Extreme Pressure (EP) Additives'? / 'एक्सट्रीम प्रेशर (EP) एडिटिव्स' का कार्य क्या है?",
+    "o": ["To thin the oil", "To prevent metal welding under very high loads | बहुत अधिक भार के तहत धातु वेल्डिंग को रोकना", "To change the color", "None"],
+    "a": 1,
+    "e": "EP additives react with metal surfaces to form a sacrificial layer that prevents seizing and heavy wear under shock loads.",
+    "cat": "technical",
+    "sub": "tribology"
+  },
+  {
+    "q": "How is 'Lubricant Storage' ideally managed in an industry? / एक उद्योग में 'स्नेहक भंडारण' (Storage) आदर्श रूप से कैसे प्रबंधित किया जाता है?",
+    "o": ["Storing drums in direct sunlight", "Horizontal storage with proper labeling and FIFO | लेबलिंग और FIFO के साथ क्षैतिज भंडारण", "Open containers", "None"],
+    "a": 1,
+    "e": "FIFO (First-In, First-Out) ensures older stock is used first, and horizontal storage prevents moisture from entering through the drum bungs.",
+    "cat": "technical",
+    "sub": "tribology"
+  },
+  {
+    "q": "Which health hazard is most common with prolonged skin contact with used engine oils? / पुराने इंजन तेलों के साथ लंबे समय तक त्वचा के संपर्क से कौन सा स्वास्थ्य खतरा सबसे आम है?",
+    "o": ["Fever", "Dermatitis (Skin irritation) | डर्मेटाइटिस (त्वचा में जलन)", "Hearing loss", "Vision blur"],
+    "a": 1,
+    "e": "Used oils contain contaminants and chemicals that can cause severe skin irritation or even long-term health issues if not handled with PPE.",
+    "cat": "technical",
+    "sub": "tribology"
+  },
+  {
+    "q": "Environmental regulations for lubricants focus on: / स्नेहक के लिए पर्यावरणीय नियम किस पर ध्यान केंद्रित करते हैं?",
+    "o": ["Increasing the price", "Proper disposal and use of biodegradable oils | उचित निपटान और बायोडिग्रेडेबल तेलों का उपयोग", "Using more lead", "None"],
+    "a": 1,
+    "e": "Regulations prevent oil pollution in soil and water by mandating recycling and the use of eco-friendly lubricants in sensitive areas.",
+    "cat": "technical",
+    "sub": "tribology"
+  },
+  {
+    "q": "What does the 'Iodine Value' of a lubricant indicate? / एक स्नेहक का 'आयोडीन मान' (Iodine Value) क्या दर्शाता है?",
+    "o": ["Viscosity", "Degree of unsaturation in the oil | तेल में असंतृप्ति की डिग्री", "Acidity", "Moisture"],
+    "a": 1,
+    "e": "Higher iodine value means more unsaturated fatty acids are present, which makes the oil more prone to oxidation and gumming.",
+    "cat": "technical",
+    "sub": "tribology"
+  },
+  {
+    "q": "The 'Neutralization Number' (or Acid Value) of an oil is used to determine: / तेल का 'न्यूट्रलाइजेशन नंबर' (या एसिड वैल्यू) क्या निर्धारित करने के लिए उपयोग किया जाता है?",
+    "o": ["Presence of alkaline additives", "Extent of oil oxidation and acidity | तेल के ऑक्सीकरण और अम्लता की सीमा", "Thickness of oil", "None"],
+    "a": 1,
+    "e": "It represents the amount of KOH (potassium hydroxide) needed to neutralize the acids present in 1 gram of oil.",
+    "cat": "technical",
+    "sub": "tribology"
+  },
+  {
+    "q": "What is 'Carbon Residue' in a lubricant test? / एक स्नेहक परीक्षण में 'कार्बन अवशेष' (Carbon Residue) क्या है?",
+    "o": ["The amount of fuel in oil", "Carbon left behind after evaporation and pyrolysis of oil | तेल के वाष्पीकरण के बाद बचा कार्बन", "Ash content", "None"],
+    "a": 1,
+    "e": "Low carbon residue is desirable as it indicates that the oil will not form heavy deposits in high-temperature zones like engines.",
+    "cat": "technical",
+    "sub": "tribology"
+  },
+  {
+    "q": "Which property measures an oil's resistance to chemical reaction with oxygen? / कौन सा गुण ऑक्सीजन के साथ रासायनिक प्रतिक्रिया के प्रति तेल के प्रतिरोध को मापता है?",
+    "o": ["Viscosity Index", "Oxidation Stability | ऑक्सीकरण स्थिरता (Oxidation Stability)", "Flash Point", "Pour Point"],
+    "a": 1,
+    "e": "Good oxidation stability prevents the formation of sludge, varnish, and corrosive acids during machine operation.",
+    "cat": "technical",
+    "sub": "tribology"
+  },
+  {
+    "q": "The 'Saponification Number' is used to identify: / 'सैपोनिफिकेशन नंबर' (Saponification Number) की पहचान के लिए उपयोग किया जाता है:",
+    "o": ["Mineral oils only", "Presence of fatty oils or fats in a blend | मिश्रण में वसायुक्त तेलों या वसा की उपस्थिति", "Water content", "None"],
+    "a": 1,
+    "e": "It measures the amount of alkali required to saponify the fatty matter present in the lubricant.",
+    "cat": "technical",
+    "sub": "tribology"
+  },
+  {
+    "q": "Which lubricant additive is used to prevent the formation of large wax crystals at low temperatures? / कम तापमान पर बड़े वैक्स क्रिस्टल बनने से रोकने के लिए किस स्नेहक योजक (Additive) का उपयोग किया जाता है?",
+    "o": ["Antioxidants", "Pour Point Depressants | पोर पॉइंट डिप्रेसेंट्स", "Detergents", "Viscosity improvers"],
+    "a": 1,
+    "e": "These additives allow the oil to remain fluid and flow at much lower temperatures than untreated oil.",
+    "cat": "technical",
+    "sub": "tribology"
+  },
+  {
+    "q": "What is the function of 'Extreme Pressure (EP) Additives'? / 'एक्सट्रीम प्रेशर (EP) एडिटिव्स' का कार्य क्या है?",
+    "o": ["To thin the oil", "To prevent metal welding under very high loads | बहुत अधिक भार के तहत धातु वेल्डिंग को रोकना", "To change the color", "None"],
+    "a": 1,
+    "e": "EP additives react with metal surfaces to form a sacrificial layer that prevents seizing and heavy wear under shock loads.",
+    "cat": "technical",
+    "sub": "tribology"
+  },
+  {
+    "q": "How is 'Lubricant Storage' ideally managed in an industry? / एक उद्योग में 'स्नेहक भंडारण' (Storage) आदर्श रूप से कैसे प्रबंधित किया जाता है?",
+    "o": ["Storing drums in direct sunlight", "Horizontal storage with proper labeling and FIFO | लेबलिंग और FIFO के साथ क्षैतिज भंडारण", "Open containers", "None"],
+    "a": 1,
+    "e": "FIFO (First-In, First-Out) ensures older stock is used first, and horizontal storage prevents moisture from entering through the drum bungs.",
+    "cat": "technical",
+    "sub": "tribology"
+  },
+  {
+    "q": "Which health hazard is most common with prolonged skin contact with used engine oils? / पुराने इंजन तेलों के साथ लंबे समय तक त्वचा के संपर्क से कौन सा स्वास्थ्य खतरा सबसे आम है?",
+    "o": ["Fever", "Dermatitis (Skin irritation) | डर्मेटाइटिस (त्वचा में जलन)", "Hearing loss", "Vision blur"],
+    "a": 1,
+    "e": "Used oils contain contaminants and chemicals that can cause severe skin irritation or even long-term health issues if not handled with PPE.",
+    "cat": "technical",
+    "sub": "tribology"
+  },
+  {
+    "q": "Environmental regulations for lubricants focus on: / स्नेहक के लिए पर्यावरणीय नियम किस पर ध्यान केंद्रित करते हैं?",
+    "o": ["Increasing the price", "Proper disposal and use of biodegradable oils | उचित निपटान और बायोडिग्रेडेबल तेलों का उपयोग", "Using more lead", "None"],
+    "a": 1,
+    "e": "Regulations prevent oil pollution in soil and water by mandating recycling and the use of eco-friendly lubricants in sensitive areas.",
+    "cat": "technical",
+    "sub": "tribology"
+  },
+  {
+    "q": "Which property of an oil measures its resistance to flow? / तेल का कौन सा गुण उसके बहने के प्रतिरोध को मापता है?",
+    "o": ["Density", "Viscosity | श्यानता (Viscosity)", "Flash point", "Fire point"],
+    "a": 1,
+    "e": "Viscosity is the most important property of a lubricant, as it determines the film-forming ability under load.",
+    "cat": "technical",
+    "sub": "tribology"
+  },
+  {
+    "q": "The temperature at which an oil gives off enough vapors to ignite momentarily is called: / वह तापमान जिस पर तेल क्षण भर के लिए जलने के लिए पर्याप्त वाष्प छोड़ता है, कहलाता है:",
+    "o": ["Fire point", "Flash point | फ्लैश पॉइंट", "Cloud point", "Pour point"],
+    "a": 1,
+    "e": "Flash point is a safety indicator that shows the maximum temperature at which the oil can be handled safely.",
+    "cat": "technical",
+    "sub": "tribology"
+  },
+  {
+    "q": "The 'Fire Point' of a lubricant is usually ________ than the 'Flash Point'. / स्नेहक का 'फायर पॉइंट' आमतौर पर 'फ्लैश पॉइंट' से ________ होता है।",
+    "o": ["Lower", "Higher | अधिक (Higher)", "Equal", "None"],
+    "a": 1,
+    "e": "Fire point is the temperature where the oil continues to burn for at least 5 seconds, typically $5^{\\circ}C$ to $40^{\\circ}C$ higher than the flash point.",
+    "cat": "technical",
+    "sub": "tribology"
+  },
+  {
+    "q": "What does 'Pour Point' indicate? / 'पोर पॉइंट' (Pour Point) क्या दर्शाता है?",
+    "o": ["Ignition temperature", "Lowest temperature at which oil can flow | वह न्यूनतम तापमान जिस पर तेल बह सकता है", "Boiling point", "None"],
+    "a": 1,
+    "e": "Pour point is critical for machines operating in cold climates to ensure the lubricant reaches the parts.",
+    "cat": "technical",
+    "sub": "tribology"
+  },
+  {
+    "q": "The test for 'Dielectric Strength' in transformer oil is done to check: / ट्रांसफार्मर तेल में 'डाइइलेक्ट्रिक स्ट्रेंथ' का परीक्षण क्या जांचने के लिए किया जाता है?",
+    "o": ["Lubrication ability", "Insulating property and presence of moisture | इंसुलेटिंग गुण और नमी की उपस्थिति", "Viscosity", "Color"],
+    "a": 1,
+    "e": "Dielectric strength measures the voltage the oil can withstand without breaking down; low values indicate moisture or impurities.",
+    "cat": "technical",
+    "sub": "tribology"
+  },
+  {
+    "q": "What is 'Ash Content' in a lubricant test? / स्नेहक परीक्षण में 'राख की मात्रा' (Ash Content) क्या है?",
+    "o": ["Percentage of oil", "Amount of inorganic residue left after burning | जलने के बाद बचा अकार्बनिक अवशेष", "Moisture level", "None"],
+    "a": 1,
+    "e": "High ash content indicates the presence of metallic additives or contaminants that could cause wear.",
+    "cat": "technical",
+    "sub": "tribology"
+  },
+  {
+    "q": "How does 'Viscosity' of most lubricating oils change with an increase in temperature? / तापमान में वृद्धि के साथ अधिकांश लुब्रिकेटिंग तेलों की 'श्यानता' (Viscosity) कैसे बदलती है?",
+    "o": ["It increases", "It decreases | यह घटती है", "It remains constant", "None"],
+    "a": 1,
+    "e": "As temperature rises, the internal friction between oil molecules decreases, causing the oil to thin out (lower viscosity).",
+    "cat": "technical",
+    "sub": "tribology"
+  },
+  {
+    "q": "The 'Viscosity Index' (VI) is a measure of: / 'विस्कोसिटी इंडेक्स' (VI) किसका माप है?",
+    "o": ["Absolute viscosity", "Variation of viscosity with temperature | तापमान के साथ श्यानता में परिवर्तन", "Density of oil", "None"],
+    "a": 1,
+    "e": "A high VI means the oil's viscosity changes very little with temperature, which is desirable for multi-grade oils.",
+    "cat": "technical",
+    "sub": "tribology"
+  },
+  {
+    "q": "A 'Redwood Viscometer' is used to determine: / 'रेडवुड विस्कोमीटर' का उपयोग क्या निर्धारित करने के लिए किया जाता है?",
+    "o": ["Flash point", "Viscosity in terms of time | समय के संदर्भ में श्यानता", "Fire point", "Pour point"],
+    "a": 1,
+    "e": "It measures the time (in seconds) it takes for a fixed volume of oil to flow through a standard orifice.",
+    "cat": "technical",
+    "sub": "tribology"
+  },
+  {
+    "q": "The 'Cloud Point' of an oil is the temperature at which: / तेल का 'क्लाउड पॉइंट' वह तापमान है जिस पर:",
+    "o": ["Oil begins to boil", "Wax crystals begin to form making it cloudy | वैक्स क्रिस्टल बनने लगते हैं जिससे यह धुंधला हो जाता है", "Oil ignites", "None"],
+    "a": 1,
+    "e": "Cloud point occurs just before the pour point and indicates the start of solidification of paraffin wax in the oil.",
+    "cat": "technical",
+    "sub": "tribology"
+  },
+  {
+    "q": "Which type of lubricant is most suitable for high-temperature applications where oils and greases may decompose? / उच्च तापमान वाले अनुप्रयोगों के लिए कौन सा स्नेहक सबसे उपयुक्त है जहाँ तेल और ग्रीस विघटित हो सकते हैं?",
+    "o": ["Liquid lubricants", "Solid lubricants | ठोस स्नेहक (Solid)", "Semi-solid lubricants", "None"],
+    "a": 1,
+    "e": "Solid lubricants like Graphite and Molybdenum Disulphide (MoS2) are used in extreme temperatures where liquid films cannot be maintained.",
+    "cat": "technical",
+    "sub": "tribology"
+  },
+  {
+    "q": "In 'Hydrodynamic Lubrication', the load is supported by: / 'हाइड्रोडायनेमिक लुब्रिकेशन' में, भार किसके द्वारा सहा जाता है?",
+    "o": ["Metal-to-metal contact", "A thick pressure film of lubricant | स्नेहक की एक मोटी दबाव फिल्म", "Air only", "Solid coating"],
+    "a": 1,
+    "e": "Hydrodynamic lubrication occurs when a moving surface creates a pressure film in the lubricant that completely separates the two surfaces.",
+    "cat": "technical",
+    "sub": "tribology"
+  },
+  {
+    "q": "What is the primary characteristic of 'Grease' as a lubricant? / स्नेहक के रूप में 'ग्रीस' की प्राथमिक विशेषता क्या है?",
+    "o": ["High volatility", "It is a semi-solid lubricant containing a thickener | यह एक अर्ध-ठोस स्नेहक है जिसमें थिकनर होता है", "Low viscosity", "None"],
+    "a": 1,
+    "e": "Grease is essentially a lubricating oil mixed with a thickening agent (like soap) to keep it in place on moving parts.",
+    "cat": "technical",
+    "sub": "tribology"
+  },
+  {
+    "q": "Which lubrication regime occurs during the starting and stopping of a machine? / मशीन शुरू होने और रुकने के दौरान कौन सी लुब्रिकेशन व्यवस्था होती है?",
+    "o": ["Hydrodynamic lubrication", "Boundary lubrication | बाउंड्री लुब्रिकेशन", "Thin-film lubrication", "None"],
+    "a": 1,
+    "e": "Boundary lubrication exists when the speed is too low to form a full film, resulting in partial contact between surface asperities.",
+    "cat": "technical",
+    "sub": "tribology"
+  },
+  {
+    "q": "Which of the following is an example of a 'Solid Lubricant'? / निम्नलिखित में से कौन सा 'ठोस स्नेहक' का उदाहरण है?",
+    "o": ["Castor oil", "Graphite | ग्रेफाइट", "Lithium soap", "Mineral oil"],
+    "a": 1,
+    "e": "Graphite has a layered structure that allows its sheets to slide over each other easily, providing lubrication in dry form.",
+    "cat": "technical",
+    "sub": "tribology"
+  },
+  {
+    "q": "The science of friction, wear, and lubrication is known as: / घर्षण, टूट-फूट और स्नेहक के विज्ञान को कहा जाता है:",
+    "o": ["Mechanics", "Tribology | ट्राइबोलॉजी", "Metallurgy", "Thermodynamics"],
+    "a": 1,
+    "e": "Tribology is the study of interacting surfaces in relative motion and the practices related to reducing wear.",
+    "cat": "technical",
+    "sub": "tribology"
+  },
+  {
+    "q": "In 'Thin-film Lubrication', the film thickness is: / 'थिन-फिल्म लुब्रिकेशन' में, फिल्म की मोटाई होती है:",
+    "o": ["Greater than hydrodynamic", "Extremely small, nearly the size of molecules | अत्यंत कम, लगभग अणुओं के आकार की", "Zero", "None"],
+    "a": 1,
+    "e": "Also known as elastohydrodynamic lubrication, it occurs when the lubricant film is very thin but still prevents direct contact.",
+    "cat": "technical",
+    "sub": "tribology"
+  },
+  {
+    "q": "Which type of lubricant is often used in 'Open Gears' where leakage must be avoided? / 'ओपन गियर्स' में किस प्रकार के स्नेहक का उपयोग किया जाता है जहाँ रिसाव से बचना आवश्यक है?",
+    "o": ["Light oil", "Semi-solid (Grease) | अर्ध-ठोस (Grease)", "Water", "None"],
+    "a": 1,
+    "e": "Grease stays in place due to its high consistency and is ideal for parts that are not easily accessible for frequent oiling.",
+    "cat": "technical",
+    "sub": "tribology"
+  },
+  {
+    "q": "Molybdenum Disulphide ($MoS_2$) is primarily used for: / मोलिब्डेनम डाइसल्फाइड ($MoS_2$) मुख्य रूप से किसके लिए उपयोग किया जाता है?",
+    "o": ["Cooling", "Heavy load and high temperature lubrication | भारी भार और उच्च तापमान लुब्रिकेशन", "Cleaning", "None"],
+    "a": 1,
+    "e": "Like graphite, $MoS_2$ is a solid lubricant that performs well under extreme pressure conditions.",
+    "cat": "technical",
+    "sub": "tribology"
+  },
+  {
+    "q": "What happens to the friction coefficient as we move from 'Boundary' to 'Hydrodynamic' lubrication? / 'बाउंड्री' से 'हाइड्रोडायनेमिक' लुब्रिकेशन की ओर बढ़ने पर घर्षण गुणांक (friction coefficient) का क्या होता है?",
+    "o": ["It increases", "It decreases significantly | यह काफी कम हो जाता है", "It remains constant", "None"],
+    "a": 1,
+    "e": "Friction is highest in boundary lubrication and lowest in hydrodynamic lubrication where surfaces are fully separated.",
+    "cat": "technical",
+    "sub": "tribology"
+  },
+  {
+    "q": "In 'ABC Analysis' of inventory, 'A' items represent: / इन्वेंट्री के 'ABC विश्लेषण' में, 'A' आइटम दर्शाते हैं:",
+    "o": ["Low cost items", "High value items with low quantity | कम मात्रा लेकिन उच्च मूल्य वाली वस्तुएं", "Common screws", "None"],
+    "a": 1,
+    "e": "Class A items account for about 70-80% of total inventory value but only 10-20% of the total number of items.",
+    "cat": "technical",
+    "sub": "industrial_management"
+  },
+  {
+    "q": "What is 'VED Analysis' used for in spare parts management? / स्पेयर पार्ट्स प्रबंधन में 'VED विश्लेषण' का उपयोग क्यों किया जाता है?",
+    "o": ["To find cost", "To classify parts based on criticality (Vital, Essential, Desirable) | महत्व के आधार पर वर्गीकरण", "To find weight", "None"],
+    "a": 1,
+    "e": "VED helps prioritize parts based on how much their absence will affect production.",
+    "cat": "technical",
+    "sub": "industrial_management"
+  },
+  {
+    "q": "What does 'Lead Time' mean in the procurement cycle? / खरीद चक्र (Procurement) में 'लीड टाइम' का क्या अर्थ है?",
+    "o": ["Time to use a part", "Time interval between placing an order and receiving it | ऑर्डर देने और प्राप्त करने के बीच का समय", "Time to scrap a part", "None"],
+    "a": 1,
+    "e": "Managing lead time is crucial to ensure that spare parts arrive before the safety stock runs out.",
+    "cat": "technical",
+    "sub": "industrial_management"
+  },
+  {
+    "q": "What is 'Safety Stock'? / 'सेफ्टी स्टॉक' (Safety Stock) क्या है?",
+    "o": ["Stock of safety helmets", "Buffer stock to prevent stockouts during delays | देरी के दौरान कमी को रोकने के लिए बफर स्टॉक", "Discarded parts", "None"],
+    "a": 1,
+    "e": "Safety stock acts as insurance against uncertainties in demand or supply lead time.",
+    "cat": "technical",
+    "sub": "industrial_management"
+  },
+  {
+    "q": "The 'Economic Order Quantity' (EOQ) is the level where: / 'इकोनॉमिक ऑर्डर क्वांटिटी' (EOQ) वह स्तर है जहाँ:",
+    "o": ["Ordering cost is maximum", "Total cost (ordering + carrying) is minimum | कुल लागत (ऑर्डरिंग + कैरिंग) न्यूनतम होती है", "Inventory is zero", "None"],
+    "a": 1,
+    "e": "EOQ helps determine the ideal order size to minimize overall inventory expenses.",
+    "cat": "technical",
+    "sub": "industrial_management"
+  },
+  {
+    "q": "What is the primary purpose of 'Interchangeability' in spare parts? / स्पेयर पार्ट्स में 'विनिमेयता' (Interchangeability) का प्राथमिक उद्देश्य क्या है?",
+    "o": ["To make parts look good", "A part can be used in different machines of the same type | एक ही प्रकार की विभिन्न मशीनों में उपयोग किया जा सके", "To increase weight", "None"],
+    "a": 1,
+    "e": "Standardization ensures that a single type of spare part can fit multiple equipment models, reducing inventory needs.",
+    "cat": "technical",
+    "sub": "industrial_management"
+  },
+  {
+    "q": "Checking the 'Reliability' of a spare part involves: / स्पेयर पार्ट की 'विश्वसनीयता' (Reliability) की जाँच में शामिल है:",
+    "o": ["Counting the parts", "Verifying the part's ability to perform without failure for a period | विफलता के बिना कार्य करने की क्षमता का सत्यापन", "Checking the color", "None"],
+    "a": 1,
+    "e": "Reliability ensures that the spare part meets the quality standards and won't fail prematurely after installation.",
+    "cat": "technical",
+    "sub": "industrial_management"
+  },
+  {
+    "q": "What is 'Bin Card' in a warehouse? / एक गोदाम में 'बिन कार्ड' (Bin Card) क्या है?",
+    "o": ["A credit card", "A record card kept with the stock showing receipts and issues | स्टॉक के साथ रखा जाने वाला रिकॉर्ड कार्ड", "A trash bin label", "None"],
+    "a": 1,
+    "e": "Bin cards provide an on-the-spot physical record of the quantity of an item available in its storage location.",
+    "cat": "technical",
+    "sub": "industrial_management"
+  },
+  {
+    "q": "The process of identifying and removing slow-moving or obsolete spares is called: / धीरे चलने वाले या अप्रचलित पुर्जों की पहचान करने और उन्हें हटाने की प्रक्रिया कहलाती है:",
+    "o": ["Procurement", "Inventory Rationalization (Scrapping) | इन्वेंट्री युक्तिकरण", "Ordering", "Maintenance"],
+    "a": 1,
+    "e": "Removing 'dead' stock frees up capital and warehouse space for more useful items.",
+    "cat": "technical",
+    "sub": "industrial_management"
+  },
+  {
+    "q": "Which software is commonly used for managing industrial maintenance and spares? / औद्योगिक रखरखाव और पुर्जों के प्रबंधन के लिए आमतौर पर किस सॉफ्टवेयर का उपयोग किया जाता है?",
+    "o": ["Photoshop", "CMMS (Computerized Maintenance Management System) | CMMS", "PowerPoint", "None"],
+    "a": 1,
+    "e": "CMMS helps track maintenance schedules, work orders, and inventory levels digitally.",
+    "cat": "technical",
+    "sub": "industrial_management"
+  },
+  {
+    "q": "Which type of maintenance is performed 'before' a failure occurs to prevent breakdown? / ब्रेकडाउन को रोकने के लिए विफलता होने से 'पहले' कौन सा रखरखाव किया जाता है?",
+    "o": ["Breakdown Maintenance", "Preventive Maintenance | निवारक रखरखाव (Preventive)", "Corrective Maintenance", "Emergency Maintenance"],
+    "a": 1,
+    "e": "Preventive maintenance is a planned activity designed to improve equipment life and avoid unplanned downtime.",
+    "cat": "technical",
+    "sub": "maintenance_engineering"
+  },
+  {
+    "q": "What is 'Unplanned Maintenance' also known as? / 'अनियोजित रखरखाव' (Unplanned Maintenance) को और किस नाम से जाना जाता है?",
+    "o": ["Routine Maintenance", "Reactive Maintenance | प्रतिक्रियाशील रखरखाव (Reactive)", "Predictive Maintenance", "None"],
+    "a": 1,
+    "e": "Reactive maintenance happens only after a machine fails, often leading to higher costs and production loss.",
+    "cat": "technical",
+    "sub": "maintenance_engineering"
+  },
+  {
+    "q": "What is the primary goal of 'Plant Shutdown' scheduling? / 'प्लांट शटडाउन' शेड्यूलिंग का प्राथमिक लक्ष्य क्या है?",
+    "o": ["To stop production forever", "To perform deep maintenance safely and efficiently | गहराई से रखरखाव सुरक्षित और कुशलता से करना", "To reduce labor cost", "None"],
+    "a": 1,
+    "e": "Shutdowns allow for major repairs, inspections, and overhauls that cannot be done while the plant is running.",
+    "cat": "technical",
+    "sub": "maintenance_engineering"
+  },
+  {
+    "q": "Which document is essential for 'Maintenance Record-keeping' to track a machine's history? / मशीन के इतिहास को ट्रैक करने के लिए 'रखरखाव रिकॉर्ड-कीपिंग' के लिए कौन सा दस्तावेज़ आवश्यक है?",
+    "o": ["Attendance sheet", "Log Book or History Card | लॉग बुक या हिस्ट्री कार्ड", "Invoice", "Tender"],
+    "a": 1,
+    "e": "A history card records every repair, part replacement, and inspection done on a specific machine over its life.",
+    "cat": "technical",
+    "sub": "maintenance_engineering"
+  },
+  {
+    "q": "What does 'MTBF' stand for in maintenance planning? / रखरखाव योजना में 'MTBF' का क्या अर्थ है?",
+    "o": ["Mean Time Between Failures | मीन टाइम बिटवीन फेलियर्स", "Mean Total Building Factor", "Maximum Time Before Failure", "None"],
+    "a": 0,
+    "e": "MTBF is a key reliability metric representing the average time a system works between two consecutive failures.",
+    "cat": "technical",
+    "sub": "maintenance_engineering"
+  },
+  {
+    "q": "In 'Predictive Maintenance', which technique is used to detect internal cracks in parts? / 'अनुमानित रखरखाव' में, पुर्जों में आंतरिक दरारों का पता लगाने के लिए किस तकनीक का उपयोग किया जाता है?",
+    "o": ["Visual inspection", "Ultrasonic Testing | अल्ट्रासोनिक टेस्टिंग (NDT)", "Painting", "Cleaning"],
+    "a": 1,
+    "e": "Non-Destructive Testing (NDT) like Ultrasonic or X-ray is used to find internal flaws without damaging the part.",
+    "cat": "technical",
+    "sub": "maintenance_engineering"
+  },
+  {
+    "q": "What is 'Corrective Maintenance'? / 'सुधारात्मक रखरखाव' (Corrective Maintenance) क्या है?",
+    "o": ["Cleaning the floor", "Repairing a machine after a fault is detected | खराबी का पता चलने के बाद मशीन की मरम्मत करना", "Buying new machines", "None"],
+    "a": 1,
+    "e": "It involves restoring a failed or faulty machine to its operational state.",
+    "cat": "technical",
+    "sub": "maintenance_engineering"
+  },
+  {
+    "q": "A 'Work Order' in maintenance contains: / रखरखाव में एक 'वर्क ऑर्डर' (Work Order) में होता है:",
+    "o": ["Description of task", "Tools required", "Estimated time", "All of the above | उपरोक्त सभी"],
+    "a": 3,
+    "e": "Work orders provide the formal instructions and resources needed by the maintenance team to perform a job.",
+    "cat": "technical",
+    "sub": "maintenance_engineering"
+  },
+  {
+    "q": "Which maintenance strategy is based on the actual condition of the equipment? / कौन सी रखरखाव रणनीति उपकरण की वास्तविक स्थिति पर आधारित है?",
+    "o": ["Time-based maintenance", "Condition-based maintenance (CBM) | कंडीशन-बेस्ड रखरखाव", "Breakdown maintenance", "None"],
+    "a": 1,
+    "e": "CBM uses real-time data (like vibration or heat) to decide when maintenance is truly needed.",
+    "cat": "technical",
+    "sub": "maintenance_engineering"
+  },
+  {
+    "q": "What is 'Overhauling' of a machine? / मशीन की 'ओवरहॉलिंग' (Overhauling) क्या है?",
+    "o": ["Regular oiling", "Complete dismantling and reconditioning | पूरी तरह से खोलना और फिर से ठीक करना", "Daily cleaning", "None"],
+    "a": 1,
+    "e": "Overhauling returns a machine to a 'near-new' condition by replacing all worn-out components.",
+    "cat": "technical",
+    "sub": "maintenance_engineering"
+  },
+  {
+    "q": "The 'EOG' (End On Generation) system uses: / 'EOG' सिस्टम किसका उपयोग करता है?",
+    "o": ["Axle driven alternators", "Power cars with Diesel Generator sets | डीजल जनरेटर सेट वाली पावर कार", "Loco transformer", "None"],
+    "a": 1,
+    "e": "In EOG trains (like Rajdhani), two power cars at the ends provide electricity for the entire train's lighting and AC.",
+    "cat": "technical",
+    "sub": "electric_traction"
+  },
+  {
+    "q": "Which signal aspect indicates 'Proceed with caution' and stop at the next signal? / कौन सा सिग्नल पहलू 'सावधानी से आगे बढ़ें' और अगले सिग्नल पर रुकने का संकेत देता है?",
+    "o": ["Green", "Double Yellow", "Single Yellow | सिंगल येलो", "Red"],
+    "a": 2,
+    "e": "A single yellow aspect (Caution) informs the driver that the next signal is at 'Danger' (Red).",
+    "cat": "technical",
+    "sub": "electric_traction"
+  },
+  {
+    "q": "What is the primary advantage of 'Metro Rail' using 750V DC third rail supply? / 750V DC थर्ड रेल सप्लाई का उपयोग करने वाली 'मेट्रो रेल' का प्राथमिक लाभ क्या है?",
+    "o": ["Higher speed", "Smaller tunnel diameter | छोटा सुरंग व्यास", "Longer distance", "None"],
+    "a": 1,
+    "e": "Third rail systems don't need overhead wires, allowing for smaller and cheaper tunnel construction.",
+    "cat": "technical",
+    "sub": "electric_traction"
+  },
+  {
+    "q": "In a 'Track Circuit', the presence of a train is detected by: / 'ट्रैक सर्किट' में, ट्रेन की उपस्थिति का पता किसके द्वारा लगाया जाता है?",
+    "o": ["Open circuit", "Short-circuiting of the rails by wheels and axle | पहियों और एक्सल द्वारा पटरियों का शॉर्ट-सर्किट", "Weight sensor", "None"],
+    "a": 1,
+    "e": "The axle shorts the two rails, which de-energizes the track relay, indicating the track is occupied.",
+    "cat": "technical",
+    "sub": "electric_traction"
+  },
+  {
+    "q": "Which type of Traction Motor has high starting torque and simple construction? / किस प्रकार की ट्रैक्शन मोटर में उच्च प्रारंभिक टॉर्क और सरल संरचना होती है?",
+    "o": ["DC Shunt Motor", "3-Phase Induction Motor | 3-फेस इंडक्शन मोटर", "Synchronous Motor", "None"],
+    "a": 1,
+    "e": "Modern trains prefer 3-phase induction motors due to their high power-to-weight ratio and low maintenance.",
+    "cat": "technical",
+    "sub": "electric_traction"
+  },
+  {
+    "q": "What is 'Catenary Wire' in OHE? / OHE में 'कैटनरी वायर' क्या है?",
+    "o": ["Wire that carries current", "The upper support wire that holds the contact wire | ऊपरी सहायक तार जो कांटेक्ट वायर को थामता है", "Ground wire", "None"],
+    "a": 1,
+    "e": "The catenary wire takes the shape of a parabola and supports the contact wire via droppers.",
+    "cat": "technical",
+    "sub": "electric_traction"
+  },
+  {
+    "q": "In 'Regenerative Braking', the motor acts as a: / 'पुनर्योजी ब्रेकिंग' में, मोटर किसके रूप में कार्य करती है?",
+    "o": ["Transformer", "Generator | जनरेटर (Generator)", "Capacitor", "None"],
+    "a": 1,
+    "e": "The back EMF of the motor is increased above the supply voltage, making it act as a generator and pump power back to the grid.",
+    "cat": "technical",
+    "sub": "electric_traction"
+  },
+  {
+    "q": "Which scheme is most environment-friendly for train lighting? / ट्रेन लाइटिंग के लिए कौन सी योजना सबसे पर्यावरण अनुकूल है?",
+    "o": ["EOG", "HOG | HOG (Head On Generation)", "SG", "None"],
+    "a": 1,
+    "e": "HOG is the cleanest as it uses power from the OHE, avoiding diesel consumption and noise pollution of power cars.",
+    "cat": "technical",
+    "sub": "electric_traction"
+  },
+  {
+    "q": "What is the function of a 'Signal Interlocking'? / 'सिग्नल इंटरलॉकिंग' का कार्य क्या है?",
+    "o": ["To increase train speed", "To prevent signals from showing clear if the route is unsafe | असुरक्षित मार्ग होने पर सिग्नल को साफ दिखाने से रोकना", "To charge battery", "None"],
+    "a": 1,
+    "e": "Interlocking is a safety mechanism that ensures points and signals are correctly coordinated to prevent collisions.",
+    "cat": "technical",
+    "sub": "electric_traction"
+  },
+  {
+    "q": "In India, which city first started the 'Metro Rail' system? / भारत में, किस शहर ने सबसे पहले 'मेट्रो रेल' प्रणाली शुरू की?",
+    "o": ["Delhi", "Mumbai", "Kolkata | कोलकाता", "Chennai"],
+    "a": 2,
+    "e": "Kolkata Metro was the first underground metro system in India, starting in 1984.",
+    "cat": "technical",
+    "sub": "electric_traction"
+  },
+  {
+    "q": "Which part of the transformer provides a path for magnetic flux? / ट्रांसफार्मर का कौन सा भाग चुंबकीय फ्लक्स के लिए रास्ता प्रदान करता है?",
+    "o": ["Windings", "Core | कोर (Core)", "Conservator", "Bushings"],
+    "a": 1,
+    "e": "The core is made of high-permeability silicon steel to provide a low-reluctance path for the magnetic flux.",
+    "cat": "technical",
+    "sub": "electrical_machines"
+  },
+  {
+    "q": "In a 3-phase Induction Motor, 'Rotor Resistance Control' is possible only for: / 3-फेस इंडक्शन मोटर में, 'रोटर रेजिस्टेंस कंट्रोल' केवल किसके लिए संभव है?",
+    "o": ["Squirrel cage motor", "Slip ring induction motor | स्लिप रिंग इंडक्शन मोटर", "Both", "None"],
+    "a": 1,
+    "e": "Slip ring (wound rotor) motors have external terminals to connect resistance to the rotor circuit.",
+    "cat": "technical",
+    "sub": "electrical_machines"
+  },
+  {
+    "q": "What is the function of 'Droppers' in an OHE system? / OHE सिस्टम में 'ड्रॉपर्स' (Droppers) का क्या कार्य है?",
+    "o": ["To carry return current", "To maintain the contact wire perfectly horizontal | कांटेक्ट वायर को पूरी तरह क्षैतिज बनाए रखना", "To ground the mast", "None"],
+    "a": 1,
+    "e": "Droppers connect the catenary wire to the contact wire at regular intervals to ensure a level contact surface for the pantograph.",
+    "cat": "technical",
+    "sub": "electric_traction"
+  },
+  {
+    "q": "Which material is used for the 'Contact Strip' of a Pantograph? / पेंटोग्राफ की 'कांटेक्ट स्ट्रिप' के लिए किस सामग्री का उपयोग किया जाता है?",
+    "o": ["Steel", "Metallized Carbon or Copper | मेटलाइज्ड कार्बन या कॉपर", "Aluminum", "Iron"],
+    "a": 1,
+    "e": "Carbon strips are used as they are self-lubricating and cause less wear to the copper contact wire.",
+    "cat": "technical",
+    "sub": "electric_traction"
+  },
+  {
+    "q": "A transformer oil should have high ________. / ट्रांसफार्मर के तेल में उच्च ________ होना चाहिए।",
+    "o": ["Viscosity", "Dielectric strength | डाइइलेक्ट्रिक स्ट्रेंथ", "Moisture content", "None"],
+    "a": 1,
+    "e": "High dielectric strength ensures that the oil acts as an effective insulator even at high voltages.",
+    "cat": "technical",
+    "sub": "electrical_machines"
+  },
+  {
+    "q": "In 'Plugging' (a type of braking), the motor connections are: / 'प्लगिंग' (एक प्रकार की ब्रेकिंग) में, मोटर कनेक्शन होते हैं:",
+    "o": ["Disconnected", "Reversed | उलट दिए जाते हैं", "Kept same", "Shorted"],
+    "a": 1,
+    "e": "Reversing the supply terminals creates a torque in the opposite direction, bringing the motor to a quick stop.",
+    "cat": "technical",
+    "sub": "electrical_machines"
+  },
+  {
+    "q": "What is the typical efficiency of a large power transformer? / एक बड़े पावर ट्रांसफार्मर की विशिष्ट दक्षता क्या होती है?",
+    "o": ["50-60%", "70-80%", "95-99% | 95-99 प्रतिशत", "100%"],
+    "a": 2,
+    "e": "Due to the absence of moving parts (no friction loss), transformers are highly efficient machines.",
+    "cat": "technical",
+    "sub": "electrical_machines"
+  },
+  {
+    "q": "The speed of an Induction Motor ________ with an increase in load. / लोड बढ़ने के साथ इंडक्शन मोटर की गति ________ है।",
+    "o": ["Increases", "Decreases slightly | थोड़ी घटती है", "Remains constant", "None"],
+    "a": 1,
+    "e": "As load increases, the 'slip' increases, which slightly reduces the actual speed of the rotor.",
+    "cat": "technical",
+    "sub": "electrical_machines"
+  },
+  {
+    "q": "Which cooling method is used for very large power transformers in substations? / सबस्टेशनों में बहुत बड़े पावर ट्रांसफार्मर के लिए किस कूलिंग विधि का उपयोग किया जाता है?",
+    "o": ["ONAN", "ONAF", "OFAF | OFAF (Oil Forced Air Forced)", "None"],
+    "a": 2,
+    "e": "OFAF uses pumps to circulate oil and fans to blow air over radiators for maximum heat dissipation.",
+    "cat": "technical",
+    "sub": "electrical_machines"
+  },
+  {
+    "q": "What happens when the 'Pantograph' is lowered? / जब 'पेंटोग्राफ' नीचे किया जाता है तो क्या होता है?",
+    "o": ["Train speed increases", "Electrical supply to the loco is cut off | लोको की विद्युत आपूर्ति कट जाती है", "Emergency brakes are applied", "None"],
+    "a": 1,
+    "e": "Lowering the pantograph breaks the physical connection with the OHE, stopping power flow to the locomotive.",
+    "cat": "technical",
+    "sub": "electric_traction"
+  },
+  {
+    "q": "Which type of 'Braking' returns electrical energy back to the OHE? / किस प्रकार की 'ब्रेकिंग' विद्युत ऊर्जा को वापस OHE को भेजती है?",
+    "o": [
+      "Rheostatic braking",
+      "Plugging",
+      "Regenerative braking | पुनर्योजी ब्रेकिंग (Regenerative)",
+      "Mechanical braking"
+    ],
+    "a": 2,
+    "e": "In regenerative braking, the motors act as generators and convert kinetic energy into electricity, which is fed back to the line.",
+    "cat": "technical",
+    "sub": "electric_traction"
+  },
+  {
+    "q": "What is the standard voltage of the OHE in Indian Railways (AC Traction)? / भारतीय रेलवे (AC ट्रैक्शन) में OHE का मानक वोल्टेज क्या है?",
+    "o": [
+      "1500 V DC",
+      "25 kV AC, 50 Hz | 25 kV AC, 50 Hz",
+      "11 kV AC",
+      "440 V AC"
+    ],
+    "a": 1,
+    "e": "The standard system for mainline electrification in India is 25 kV, single-phase alternating current.",
+    "cat": "technical",
+    "sub": "electric_traction"
+  },
+  {
+    "q": "In the 'HOG' (Head On Generation) scheme, coaches get power from: / 'HOG' स्कीम में, कोचों को पावर कहाँ से मिलती है?",
+    "o": [
+      "Diesel generators in power car",
+      "Axle-driven alternator",
+      "Main Locomotive via OHE | OHE के माध्यम से मुख्य लोकोमोटिव",
+      "None"
+    ],
+    "a": 2,
+    "e": "HOG system uses power from the overhead line via the loco's pantograph, eliminating noisy and polluting diesel generators.",
+    "cat": "technical",
+    "sub": "electric_traction"
+  },
+  {
+    "q": "What is a 'Track Circuit' used for? / 'ट्रैक सर्किट' (Track Circuit) का उपयोग क्यों किया जाता है?",
+    "o": [
+      "To provide current to the train",
+      "To detect the presence of a train on a section | सेक्शन पर ट्रेन की मौजूदगी का पता लगाने के लिए",
+      "To charge batteries",
+      "None"
+    ],
+    "a": 1,
+    "e": "Track circuits are the backbone of signaling, ensuring that a section is occupied or clear for safe train movement.",
+    "cat": "technical",
+    "sub": "electric_traction"
+  },
+  {
+    "q": "The 'Pantograph' is a device used to: / 'पेंटोग्राफ' (Pantograph) एक उपकरण है जिसका उपयोग किया जाता है:",
+    "o": [
+      "Collect current from contact wire | कांटेक्ट वायर से करंट इकट्ठा करना",
+      "Measure train speed",
+      "Operate signals",
+      "None"
+    ],
+    "a": 0,
+    "e": "The pantograph is mounted on the locomotive roof and maintains contact with the OHE to draw power.",
+    "cat": "technical",
+    "sub": "electric_traction"
+  },
+  {
+    "q": "In the OHE system, the 'Contact Wire' is supported by the: / OHE सिस्टम में, 'कांटेक्ट वायर' को किसके द्वारा सहारा दिया जाता है?",
+    "o": [
+      "Insulator",
+      "Catenary Wire | कैटनरी वायर (Catenary Wire)",
+      "Mast",
+      "None"
+    ],
+    "a": 1,
+    "e": "The catenary wire hangs in a curve and supports the contact wire via droppers to keep the contact wire horizontal.",
+    "cat": "technical",
+    "sub": "electric_traction"
+  },
+  {
+    "q": "Which motor is preferred for Metro Rail supply systems in India? / भारत में मेट्रो रेल आपूर्ति प्रणालियों के लिए किस मोटर को प्राथमिकता दी जाती है?",
+    "o": [
+      "DC Series Motor",
+      "3-Phase Induction Motor | 3-फेस इंडक्शन मोटर",
+      "Synchronous Motor",
+      "None"
+    ],
+    "a": 1,
+    "e": "Modern metros use AC induction motors with VFD control due to high efficiency and low maintenance.",
+    "cat": "technical",
+    "sub": "electric_traction"
+  },
+  {
+    "q": "What is the purpose of 'Rheostatic Braking'? / 'रियोस्टैटिक ब्रेकिंग' (Rheostatic Braking) का उद्देश्य क्या है?",
+    "o": [
+      "To return power to OHE",
+      "To dissipate energy in the form of heat in resistors | प्रतिरोधों में गर्मी के रूप में ऊर्जा को नष्ट करना",
+      "To increase speed",
+      "None"
+    ],
+    "a": 1,
+    "e": "In rheostatic braking, the energy generated by the motor (acting as a generator) is wasted as heat in external resistors.",
+    "cat": "technical",
+    "sub": "electric_traction"
+  },
+  {
+    "q": "The 'SG' (Self Generation) system in train lighting uses: / ट्रेन लाइटिंग में 'SG' सिस्टम किसका उपयोग करता है?",
+    "o": [
+      "Power from locomotive",
+      "Alternator driven by the coach axle | कोच एक्सल द्वारा संचालित अल्टरनेटर",
+      "Solar panels",
+      "None"
+    ],
+    "a": 1,
+    "e": "In SG coaches, a belt-driven alternator from the axle charges the batteries while the train is in motion.",
+    "cat": "technical",
+    "sub": "electric_traction"
+  },
+  {
+    "q": "What aspect of a signal indicates that the next block is 'Clear'? / सिग्नल का कौन सा पहलू (Aspect) यह दर्शाता है कि अगला ब्लॉक 'साफ' (Clear) है?",
+    "o": [
+      "Red",
+      "Yellow",
+      "Green | हरा (Green)",
+      "Double Yellow"
+    ],
+    "a": 2,
+    "e": "Green aspect indicates that the train can proceed at maximum permissible speed as the subsequent sections are clear.",
+    "cat": "technical",
+    "sub": "electric_traction"
+  },
+  {
+    "q": "What is the primary reason for 'Laminating' the core of a transformer? / ट्रांसफार्मर के कोर को 'लैमिनेट' करने का प्राथमिक कारण क्या है?",
+    "o": [
+      "To reduce hysteresis loss",
+      "To reduce eddy current loss | एडी करंट लॉस को कम करना",
+      "To increase the voltage",
+      "None"
+    ],
+    "a": 1,
+    "e": "Laminations increase the resistance to eddy currents, thereby reducing the power loss in the form of heat.",
+    "cat": "technical",
+    "sub": "electrical_machines"
+  },
+  {
+    "q": "Which speed control method is commonly used for DC Shunt Motors to get speed 'above' the rated speed? / रेटेड स्पीड से 'ऊपर' की गति प्राप्त करने के लिए DC शंट मोटर्स के लिए आमतौर पर किस स्पीड कंट्रोल विधि का उपयोग किया जाता है?",
+    "o": [
+      "Armature resistance control",
+      "Field flux control | फील्ड फ्लक्स कंट्रोल",
+      "Applied voltage control",
+      "None"
+    ],
+    "a": 1,
+    "e": "Reducing the field flux (by adding resistance in the field circuit) increases the motor speed beyond its base speed.",
+    "cat": "technical",
+    "sub": "electrical_machines"
+  },
+  {
+    "q": "In a transformer, the 'Breather' is used to: / ट्रांसफार्मर में 'ब्रीदर' (Breather) का उपयोग किया जाता है:",
+    "o": [
+      "Cool the oil",
+      "Extract moisture from the air entering the tank | टैंक में प्रवेश करने वाली हवा से नमी निकालना",
+      "Increase the oil level",
+      "None"
+    ],
+    "a": 1,
+    "e": "The breather contains silica gel which absorbs moisture from the air to keep the oil dry and maintain its dielectric strength.",
+    "cat": "technical",
+    "sub": "electrical_machines"
+  },
+  {
+    "q": "The 'V/f control' method of a 3-phase induction motor is used to maintain constant: / 3-फेस इंडक्शन मोटर की 'V/f कंट्रोल' विधि का उपयोग किसे स्थिर बनाए रखने के लिए किया जाता है?",
+    "o": [
+      "Speed",
+      "Air-gap flux | एयर-गैप फ्लक्स",
+      "Resistance",
+      "Voltage"
+    ],
+    "a": 1,
+    "e": "Maintaining a constant ratio of Voltage to frequency (V/f) ensures that the magnetic flux remains constant, preventing saturation.",
+    "cat": "technical",
+    "sub": "electrical_machines"
+  },
+  {
+    "q": "A 'Step-down' transformer has: / एक 'स्टेप-डाउन' ट्रांसफार्मर में होता है:",
+    "o": [
+      "$N_s > N_p$",
+      "$N_s < N_p | N_s < N_p$",
+      "$N_s = N_p$",
+      "None"
+    ],
+    "a": 1,
+    "e": "In a step-down transformer, the number of turns in the secondary winding ($N_s$) is less than the primary winding ($N_p$).",
+    "cat": "technical",
+    "sub": "electrical_machines"
+  },
+  {
+    "q": "Which test is conducted to find the 'Iron Loss' of a transformer? / ट्रांसफार्मर के 'आयरन लॉस' का पता लगाने के लिए कौन सा टेस्ट किया जाता है?",
+    "o": [
+      "Short circuit test",
+      "Open circuit test | ओपन सर्किट टेस्ट",
+      "Polarity test",
+      "None"
+    ],
+    "a": 1,
+    "e": "The open circuit test is performed at rated voltage and frequency to measure core/iron losses as the copper loss is negligible.",
+    "cat": "technical",
+    "sub": "electrical_machines"
+  },
+  {
+    "q": "In 'Ward Leonard' speed control, the motor speed is controlled by varying: / 'वार्ड लियोनार्ड' स्पीड कंट्रोल में, मोटर की गति को बदलकर नियंत्रित किया जाता है:",
+    "o": [
+      "Field current of the motor",
+      "Voltage applied to the armature | आर्मेचर पर लागू वोल्टेज",
+      "Supply frequency",
+      "None"
+    ],
+    "a": 1,
+    "e": "This method provides very smooth and wide-range speed control in both directions by adjusting the generator output voltage.",
+    "cat": "technical",
+    "sub": "electrical_machines"
+  },
+  {
+    "q": "What is the function of 'Conservator' tank in a transformer? / ट्रांसफार्मर में 'कंजर्वेटर' (Conservator) टैंक का कार्य क्या है?",
+    "o": [
+      "To store spare oil",
+      "To allow expansion and contraction of oil | तेल के विस्तार और संकुचन की अनुमति देना",
+      "To cool the transformer",
+      "None"
+    ],
+    "a": 1,
+    "e": "The conservator provides space for oil to expand when heated and contract when cooled without exposing it to the atmosphere.",
+    "cat": "technical",
+    "sub": "electrical_machines"
+  },
+  {
+    "q": "Which motor speed control method is most energy-efficient for AC induction motors? / AC इंडक्शन मोटर्स के लिए कौन सी स्पीड कंट्रोल विधि सबसे अधिक ऊर्जा-कुशल है?",
+    "o": [
+      "Rotor resistance control",
+      "Stator voltage control",
+      "Variable Frequency Drive (VFD) | वेरिएबल फ्रीक्वेंसी ड्राइव (VFD)",
+      "None"
+    ],
+    "a": 2,
+    "e": "VFDs adjust both voltage and frequency to match the required speed, minimizing power wastage.",
+    "cat": "technical",
+    "sub": "electrical_machines"
+  },
+  {
+    "q": "What happens if the 'Secondary' of a current transformer is kept open? / यदि करंट ट्रांसफार्मर (CT) की 'सेकेंडरी' को खुला रखा जाए तो क्या होगा?",
+    "o": [
+      "It will work normally",
+      "High voltage will be induced, damaging the insulation | हाई वोल्टेज उत्पन्न होगा, जो इंसुलेशन को नुकसान पहुंचाएगा",
+      "Current will become zero",
+      "None"
+    ],
+    "a": 1,
+    "e": "An open secondary in CT leads to core saturation and dangerously high induced voltages, which can be fatal.",
+    "cat": "technical",
+    "sub": "electrical_machines"
+  },
+  {
+    "q": "How many pins are there in the 8085 microprocessor? / 8085 माइक्रोप्रोसेसर में कितने पिन होते हैं?",
+    "o": ["20", "40 | 40", "64", "80"],
+    "a": 1,
+    "e": "8085 is a 40-pin IC (Integrated Circuit) that operates on a +5V DC supply.",
+    "cat": "technical",
+    "sub": "microprocessors"
+  },
+  {
+    "q": "Which flag in 8085 indicates an 'overflow' beyond 8 bits during addition? / 8085 में कौन सा फ्लैग जोड़ के दौरान 8 बिट्स से अधिक के 'ओवरफ्लो' को दर्शाता है?",
+    "o": ["Zero Flag", "Sign Flag", "Carry Flag | कैरी फ्लैग (CY)", "Parity Flag"],
+    "a": 2,
+    "e": "The Carry flag is set to 1 if the result of an arithmetic operation exceeds 8 bits.",
+    "cat": "technical",
+    "sub": "microprocessors"
+  },
+  {
+    "q": "In 8085, 'Direct Addressing Mode' means: / 8085 में 'डायरेक्ट एड्रेसिंग मोड' का अर्थ है:",
+    "o": ["Data is in the register", "Address of data is given in the instruction | डेटा का पता निर्देश में दिया गया है", "Data is in the stack", "None"],
+    "a": 1,
+    "e": "In direct addressing, the 16-bit address of the operand is part of the instruction (e.g., LDA 2500H).",
+    "cat": "technical",
+    "sub": "microprocessors"
+  },
+  {
+    "q": "What is the function of the 'Instruction Decoder' in 8085? / 8085 में 'निर्देश डिकोडर' (Instruction Decoder) का कार्य क्या है?",
+    "o": ["To store data", "To interpret the opcode and generate control signals | ऑपकोड की व्याख्या करना और कंट्रोल सिग्नल बनाना", "To add numbers", "None"],
+    "a": 1,
+    "e": "The decoder takes the fetched opcode and tells the CPU what specific task needs to be performed.",
+    "cat": "technical",
+    "sub": "microprocessors"
+  },
+  {
+    "q": "Which pin of 8085 is used to reset the microprocessor? / 8085 की किस पिन का उपयोग माइक्रोप्रोसेसर को रीसेट करने के लिए किया जाता है?",
+    "o": ["READY", "HOLD", "RESET IN | RESET IN", "TRAP"],
+    "a": 2,
+    "e": "When RESET IN is active (low), the Program Counter is cleared (set to 0000H).",
+    "cat": "technical",
+    "sub": "microprocessors"
+  },
+  {
+    "q": "The 'Register Indirect' addressing mode uses which register pair usually? / 'रजिस्टर इनडायरेक्ट' एड्रेसिंग मोड आमतौर पर किस रजिस्टर पेयर का उपयोग करता है?",
+    "o": ["B-C pair", "D-E pair", "H-L pair | H-L पेयर", "Accumulator"],
+    "a": 2,
+    "e": "In indirect addressing, the address of the data is stored in the H-L register pair, referred to as 'M' in instructions.",
+    "cat": "technical",
+    "sub": "microprocessors"
+  },
+  {
+    "q": "What is the purpose of the 'SID' and 'SOD' pins? / 'SID' और 'SOD' पिन का उद्देश्य क्या है?",
+    "o": ["Parallel data transfer", "Serial data input and output | सीरियल डेटा इनपुट और आउटपुट", "Clock generation", "Interrupt handling"],
+    "a": 1,
+    "e": "SID (Serial Input Data) and SOD (Serial Output Data) are used for serial communication with external devices.",
+    "cat": "technical",
+    "sub": "microprocessors"
+  },
+  {
+    "q": "The 'MOV A, B' instruction belongs to which addressing mode? / 'MOV A, B' निर्देश किस एड्रेसिंग मोड के अंतर्गत आता है?",
+    "o": ["Immediate", "Register | रजिस्टर (Register)", "Direct", "Implicit"],
+    "a": 1,
+    "e": "In register addressing mode, the data is moved from one register to another.",
+    "cat": "technical",
+    "sub": "microprocessors"
+  },
+  {
+    "q": "Which part of the 8085 performs all mathematical and logical operations? / 8085 का कौन सा भाग सभी गणितीय और तार्किक संचालन करता है?",
+    "o": ["Stack Pointer", "Control Unit", "ALU | ALU (Arithmetic Logic Unit)", "Program Counter"],
+    "a": 2,
+    "e": "The ALU handles additions, subtractions, AND, OR, XOR operations, and updates the flag register.",
+    "cat": "technical",
+    "sub": "microprocessors"
+  },
+  {
+    "q": "What is the 'Machine Cycle' in 8085? / 8085 में 'मशीन साइकिल' क्या है?",
+    "o": ["Time to execute one program", "Time required to complete one operation (Fetch/Read/Write) | एक ऑपरेशन पूरा करने में लगने वाला समय", "Clock frequency", "None"],
+    "a": 1,
+    "e": "An instruction consists of one or more machine cycles like Opcode Fetch, Memory Read, or I/O Write.",
+    "cat": "technical",
+    "sub": "microprocessors"
+  },
+  {
+    "q": "Which sensor is used to measure the 'Displacement' of an object using magnetic induction? / चुंबकीय प्रेरण का उपयोग करके किसी वस्तु के 'विस्थापन' (Displacement) को मापने के लिए किस सेंसर का उपयोग किया जाता है?",
+    "o": ["Strain Gauge", "LVDT | LVDT", "Hall Effect Sensor", "Thermistor"],
+    "a": 1,
+    "e": "LVDT (Linear Variable Differential Transformer) converts linear motion into a proportional electrical signal through magnetic coupling.",
+    "cat": "technical",
+    "sub": "mechatronics"
+  },
+  {
+    "q": "A 'Strain Gauge' works on the principle of change in ________ when the material is deformed. / 'स्ट्रेन गेज' सामग्री के विरूपित होने पर ________ में परिवर्तन के सिद्धांत पर कार्य करता है।",
+    "o": ["Capacitance", "Inductance", "Electrical Resistance | विद्युत प्रतिरोध", "Magnetic Flux"],
+    "a": 2,
+    "e": "When a wire is stretched or compressed, its length and area change, which alters its electrical resistance.",
+    "cat": "technical",
+    "sub": "mechatronics"
+  },
+  {
+    "q": "Which sensor is specifically designed to detect the presence of a 'Magnetic Field'? / कौन सा सेंसर विशेष रूप से 'चुंबकीय क्षेत्र' की उपस्थिति का पता लगाने के लिए डिज़ाइन किया गया है?",
+    "o": ["Opto-isolator", "Hall Effect Sensor | हॉल इफेक्ट सेंसर", "Piezoelectric sensor", "Capacitive sensor"],
+    "a": 1,
+    "e": "Hall Effect sensors produce a voltage difference when placed in a magnetic field, used for position and speed sensing.",
+    "cat": "technical",
+    "sub": "mechatronics"
+  },
+  {
+    "q": "What is the primary function of an 'Opto-isolator'? / एक 'ऑप्टो-आइसोलेटर' का प्राथमिक कार्य क्या है?",
+    "o": ["To amplify signals", "To electrically isolate two circuits using light | प्रकाश का उपयोग करके दो सर्किट को विद्युत रूप से अलग करना", "To measure pressure", "To sense temperature"],
+    "a": 1,
+    "e": "Opto-isolators prevent high voltages from damaging the control side of a system by transmitting signals via an internal LED and phototransistor.",
+    "cat": "technical",
+    "sub": "mechatronics"
+  },
+  {
+    "q": "Which type of sensor is used to measure 'Fluid Pressure' by converting it into an electrical signal? / द्रव के दबाव (Fluid Pressure) को मापने के लिए किस सेंसर का उपयोग किया जाता है?",
+    "o": ["Bourdon Tube with Transducer | बोर्डन ट्यूब विथ ट्रांसड्यूसर", "Potentiometer", "Tachometer", "None"],
+    "a": 0,
+    "e": "Bourdon tubes or diaphragm-based pressure transducers are standard for measuring gas or liquid pressure in mechatronic systems.",
+    "cat": "technical",
+    "sub": "mechatronics"
+  },
+  {
+    "q": "An 'Ultrasonic Sensor' is commonly used for measuring: / 'अल्ट्रासोनिक सेंसर' का उपयोग आमतौर पर किसके लिए किया जाता है?",
+    "o": ["Light intensity", "Liquid Level or Distance | तरल स्तर या दूरी", "Weight", "Chemical composition"],
+    "a": 1,
+    "e": "By emitting sound waves and measuring the time for the echo to return, it can calculate the level of liquid in a tank.",
+    "cat": "technical",
+    "sub": "mechatronics"
+  },
+  {
+    "q": "Which device is a 'Passive Transducer'? / कौन सा उपकरण 'पैसिव ट्रांसड्यूसर' (Passive Transducer) है?",
+    "o": ["Thermocouple", "Photovoltaic cell", "LVDT | LVDT", "Piezoelectric crystal"],
+    "a": 2,
+    "e": "Passive transducers like LVDT or strain gauges require an external power source to operate.",
+    "cat": "technical",
+    "sub": "mechatronics"
+  },
+  {
+    "q": "What is 'Sensitivity' in a sensor? / एक सेंसर में 'संवेदनशीलता' (Sensitivity) क्या है?",
+    "o": ["The speed of the sensor", "Ratio of change in output to change in input | इनपुट में परिवर्तन के सापेक्ष आउटपुट में परिवर्तन का अनुपात", "The size of the sensor", "None"],
+    "a": 1,
+    "e": "Higher sensitivity means a small change in the physical quantity results in a large change in the electrical output.",
+    "cat": "technical",
+    "sub": "mechatronics"
+  },
+  {
+    "q": "A 'Proximity Sensor' is used to detect: / 'प्रॉक्सिमिटी सेंसर' का उपयोग किसके लिए किया जाता है?",
+    "o": ["Color", "Objects without physical contact | बिना भौतिक संपर्क के वस्तुओं का पता लगाना", "Temperature", "Fluid flow"],
+    "a": 1,
+    "e": "Inductive and capacitive proximity sensors detect nearby objects through electromagnetic or electrostatic fields.",
+    "cat": "technical",
+    "sub": "mechatronics"
+  },
+  {
+    "q": "Which sensor is used to measure 'Angular Velocity'? / 'कोणीय वेग' (Angular Velocity) मापने के लिए किस सेंसर का उपयोग किया जाता है?",
+    "o": ["Accelerometer", "Gyroscope | जाइरोस्कोप", "Proximity sensor", "Strain gauge"],
+    "a": 1,
+    "e": "Gyroscopes measure the rate of rotation around an axis, essential for robotics and drone stability.",
+    "cat": "technical",
+    "sub": "mechatronics"
+  },
+  {
+    "q": "The property of a lubricant to resist flow is known as: / एक स्नेहक (Lubricant) के प्रवाह का विरोध करने के गुण को कहा जाता है:",
+    "o": ["Oiliness", "Flash point", "Viscosity | श्यानता (Viscosity)", "Fire point"],
+    "a": 2,
+    "e": "Viscosity is the measure of internal friction or thickness of a fluid.",
+    "cat": "technical",
+    "sub": "applied_chemistry"
+  },
+  {
+    "q": "Which quantum number determines the 'shape' of an orbital? / कौन सी क्वांटम संख्या कक्षक (Orbital) के 'आकार' को निर्धारित करती है?",
+    "o": ["Principal quantum number", "Magnetic quantum number", "Azimuthal quantum number | दिगंशीय क्वांटम संख्या", "Spin quantum number"],
+    "a": 2,
+    "e": "The azimuthal quantum number (l) defines the subshell and the shape of the orbital (s, p, d, f).",
+    "cat": "technical",
+    "sub": "applied_chemistry"
+  },
+  {
+    "q": "Hardness of water is primarily caused by the salts of: / जल की कठोरता मुख्य रूप से किसके लवणों के कारण होती है?",
+    "o": ["Sodium and Potassium", "Calcium and Magnesium | कैल्शियम और मैग्नीशियम", "Iron and Copper", "None"],
+    "a": 1,
+    "e": "Bicarbonates, chlorides, and sulfates of Calcium and Magnesium are responsible for water hardness.",
+    "cat": "technical",
+    "sub": "applied_chemistry"
+  },
+  {
+    "q": "Which rule states that 'Electrons enter the lowest energy orbital available'? / कौन सा नियम कहता है कि 'इलेक्ट्रॉन उपलब्ध निम्नतम ऊर्जा कक्षक में प्रवेश करते हैं'?",
+    "o": ["Aufbau Principle | औफबाऊ सिद्धांत", "Hund's Rule", "Pauli's Exclusion Principle", "Heisenberg Principle"],
+    "a": 0,
+    "e": "Aufbau principle dictates the order in which orbitals are filled based on their energy levels.",
+    "cat": "technical",
+    "sub": "applied_chemistry"
+  },
+  {
+    "q": "What is the function of 'Zeolite' in water treatment? / जल उपचार में 'जियोलाइट' (Zeolite) का क्या कार्य है?",
+    "o": ["To kill bacteria", "To remove suspended solids", "To soften hard water | कठोर जल को मृदु बनाना", "To add minerals"],
+    "a": 2,
+    "e": "Zeolite process is an ion-exchange method used to remove hardness-causing ions from water.",
+    "cat": "technical",
+    "sub": "applied_chemistry"
+  },
+  {
+    "q": "Which type of fuel has the highest calorific value? / किस प्रकार के ईंधन का कैलोरी मान (Calorific value) सबसे अधिक होता है?",
+    "o": ["Solid fuels", "Liquid fuels", "Gaseous fuels | गैसीय ईंधन", "All are equal"],
+    "a": 2,
+    "e": "Gaseous fuels like Hydrogen and Methane have higher calorific values compared to solid and liquid fuels.",
+    "cat": "technical",
+    "sub": "applied_chemistry"
+  },
+  {
+    "q": "What is 'Vulcanization' of rubber? / रबर का 'वल्केनाइजेशन' क्या है?",
+    "o": ["Melting rubber", "Heating rubber with sulfur | सल्फर के साथ गर्म करना", "Cooling rubber", "Adding water to rubber"],
+    "a": 1,
+    "e": "Vulcanization improves the elasticity, hardness, and durability of natural rubber by adding cross-links of sulfur.",
+    "cat": "technical",
+    "sub": "applied_chemistry"
+  },
+  {
+    "q": "Temporary hardness of water can be removed by: / जल की अस्थायी कठोरता को किसके द्वारा दूर किया जा सकता है?",
+    "o": ["Filtration", "Adding salt", "Boiling | उबालकर", "Sedimentation"],
+    "a": 2,
+    "e": "Boiling decomposes calcium and magnesium bicarbonates into insoluble carbonates.",
+    "cat": "technical",
+    "sub": "applied_chemistry"
+  },
+  {
+    "q": "Which of the following is a 'Thermosetting' plastic? / निम्नलिखित में से कौन सा एक 'थर्मोसेटिंग' प्लास्टिक है?",
+    "o": ["PVC", "Polystyrene", "Bakelite | बैकेलाइट", "Nylon"],
+    "a": 2,
+    "e": "Bakelite does not soften on heating once it is molded, unlike thermoplastics.",
+    "cat": "technical",
+    "sub": "applied_chemistry"
+  },
+  {
+    "q": "What is the chemical composition of 'LPG'? / 'LPG' का रासायनिक संगठन क्या है?",
+    "o": ["Methane and Ethane", "Propane and Butane | प्रोपेन और ब्यूटेन", "Hydrogen and CO", "None"],
+    "a": 1,
+    "e": "LPG (Liquefied Petroleum Gas) is primarily a mixture of propane and butane gases.",
+    "cat": "technical",
+    "sub": "applied_chemistry"
+  },
+  {
+    "q": "The property of a lubricant to resist flow is known as: / एक स्नेहक (Lubricant) के प्रवाह का विरोध करने के गुण को कहा जाता है:",
+    "o": ["Oiliness", "Flash point", "Viscosity | श्यानता (Viscosity)", "Fire point"],
+    "a": 2,
+    "e": "Viscosity is the measure of internal friction or thickness of a fluid.",
+    "cat": "technical",
+    "sub": "applied_chemistry"
+  },
+  {
+    "q": "What is the point on the stress-strain curve beyond which the material starts to deform plastically? / स्ट्रेस-स्ट्रेन कर्व पर वह बिंदु क्या कहलाता है जिसके बाद पदार्थ प्लास्टिक रूप से विरूपित होने लगता है?",
+    "o": ["Breaking point", "Elastic limit | प्रत्यास्थता सीमा", "Proportional limit", "Yield point"],
+    "a": 1,
+    "e": "Beyond the elastic limit, the material does not return to its original shape when the load is removed[cite: 51].",
+    "cat": "technical",
+    "sub": "applied_physics"
+  },
+  {
+    "q": "The persistence of sound in an enclosed space after the source has stopped is called: / स्रोत के बंद होने के बाद बंद स्थान में ध्वनि का बना रहना क्या कहलाता है?",
+    "o": ["Echo", "Interference", "Reverberation | प्रतिध्वनि (Reverberation)", "Diffraction"],
+    "a": 2,
+    "e": "Reverberation is caused by multiple reflections of sound waves from the surfaces of an enclosure[cite: 349].",
+    "cat": "technical",
+    "sub": "applied_physics"
+  },
+  {
+    "q": "According to Lenz's Law, the direction of induced EMF is such that it: / लेन्ज़ के नियम के अनुसार, प्रेरित EMF की दिशा ऐसी होती है कि वह:",
+    "o": ["Supports the change in magnetic flux", "Opposes the change in magnetic flux | चुंबकीय फ्लक्स में परिवर्तन का विरोध करता है", "Is always zero", "None"],
+    "a": 1,
+    "e": "Lenz's Law is a consequence of the law of conservation of energy[cite: 365, 402].",
+    "cat": "technical",
+    "sub": "applied_physics"
+  },
+  {
+    "q": "Which property of nanomaterials changes significantly due to their high surface-to-volume ratio? / उच्च सतह-से-आयतन अनुपात के कारण नैनो-मटेरियल्स का कौन सा गुण काफी बदल जाता है?",
+    "o": ["Color", "Chemical reactivity | रासायनिक अभिक्रियाशीलता", "Density", "All of the above"],
+    "a": 1,
+    "e": "Nanomaterials have a larger fraction of atoms at the surface, making them highly reactive[cite: 378].",
+    "cat": "technical",
+    "sub": "applied_physics"
+  },
+  {
+    "q": "Which law is used to analyze complex electrical circuits with multiple loops? / कई लूप वाले जटिल विद्युत सर्किट का विश्लेषण करने के लिए किस नियम का उपयोग किया जाता है?",
+    "o": ["Ohm's Law", "Coulomb's Law", "Kirchhoff's Laws | किरचॉफ के नियम", "Gauss Law"],
+    "a": 2,
+    "e": "Kirchhoff's voltage and current laws are essential for solving complex network problems[cite: 361, 1257].",
+    "cat": "technical",
+    "sub": "applied_physics"
+  },
+  {
+    "q": "What is the unit of 'Thermal Conductivity'? / 'तापीय चालकता' (Thermal Conductivity) की इकाई क्या है?",
+    "o": ["W/m-K | W/m-K", "Joule", "Pascal", "Watt"],
+    "a": 0,
+    "e": "It measures the ability of a material to conduct heat[cite: 58].",
+    "cat": "technical",
+    "sub": "applied_physics"
+  },
+  {
+    "q": "The frequency of a Simple Harmonic Motion (SHM) is the: / सरल आवर्त गति (SHM) की आवृत्ति होती है:",
+    "o": ["Time taken for one cycle", "Number of cycles per second | प्रति सेकंड चक्रों की संख्या", "Maximum displacement", "None"],
+    "a": 1,
+    "e": "Frequency is the reciprocal of the time period[cite: 347, 1242].",
+    "cat": "technical",
+    "sub": "applied_physics"
+  },
+  {
+    "q": "Which material is commonly used as a 'Piezoelectric' transducer? / 'पीजोइलेक्ट्रिक' ट्रांसड्यूसर के रूप में आमतौर पर किस सामग्री का उपयोग किया जाता है?",
+    "o": ["Iron", "Quartz | क्वार्ट्ज (Quartz)", "Copper", "Plastic"],
+    "a": 1,
+    "e": "Quartz crystals generate an electric charge when mechanical stress is applied[cite: 635].",
+    "cat": "technical",
+    "sub": "applied_physics"
+  },
+  {
+    "q": "A 'Wheatstone Bridge' is used to measure unknown: / 'व्हीटस्टोन ब्रिज' का उपयोग किसे मापने के लिए किया जाता है?",
+    "o": ["Current", "Voltage", "Resistance | प्रतिरोध", "Capacitance"],
+    "a": 2,
+    "e": "It is an electrical circuit used to measure an unknown electrical resistance by balancing two legs of a bridge circuit[cite: 361, 1257].",
+    "cat": "technical",
+    "sub": "applied_physics"
+  },
+  {
+    "q": "The formula for 'Capacitance' (C) is: / 'धारिता' (C) का सूत्र क्या है?",
+    "o": ["C = V/Q", "C = Q/V | C = Q/V", "C = QV", "C = Q+V"],
+    "a": 1,
+    "e": "Capacitance is the ratio of the change in electric charge to the corresponding change in its electric potential[cite: 356, 1252].",
+    "cat": "technical",
+    "sub": "applied_physics"
+  },
+  {
+    "q": "Which law states that 'Pressure applied to an enclosed fluid is transmitted undiminished'? / किस नियम के अनुसार 'बंद द्रव पर लगाया गया दबाव बिना कम हुए प्रसारित होता है'?",
+    "o": ["Boyle's Law", "Bernoulli's Law", "Hooke's Law", "Pascal's Law | पास्कल का नियम"],
+    "a": 3,
+    "e": "Pascal's law is the foundation for hydraulic systems like jacks and brakes.",
+    "cat": "technical",
+    "sub": "applied_physics"
+  },
+  {
+    "q": "What is the relationship between 'Torque' (τ) and 'Angular Momentum' (L)? / 'टॉर्क' (τ) और 'कोणीय संवेग' (L) के बीच क्या संबंध है?",
+    "o": ["τ = dL/dt | τ = dL/dt", "τ = L/t", "L = dτ/dt", "τ = L × t"],
+    "a": 0,
+    "e": "The rate of change of angular momentum is equal to the applied torque.",
+    "cat": "technical",
+    "sub": "applied_physics"
+  },
+  {
+    "q": "In 'Fiber Optics', light travels through the core due to: / 'फाइबर ऑप्टिक्स' में, प्रकाश कोर के माध्यम से किसके कारण यात्रा करता है?",
+    "o": ["Refraction", "Scattering", "Total Internal Reflection | पूर्ण आंतरिक परावर्तन", "Diffraction"],
+    "a": 2,
+    "e": "TIR keeps the light trapped inside the core by reflecting it off the cladding.",
+    "cat": "technical",
+    "sub": "applied_physics"
+  },
+  {
+    "q": "The 'Specific Heat' of a substance depends on: / किसी पदार्थ की 'विशिष्ट ऊष्मा' किस पर निर्भर करती है?",
+    "o": ["Mass of the substance", "Nature of the material | सामग्री की प्रकृति", "Volume of the substance", "None"],
+    "a": 1,
+    "e": "Specific heat is an intrinsic property of the material itself.",
+    "cat": "technical",
+    "sub": "applied_physics"
+  },
+  {
+    "q": "Which instrument uses 'Ultrasonic waves' to find the depth of the ocean? / समुद्र की गहराई मापने के लिए किस उपकरण में 'अल्ट्रासोनिक तरंगों' का उपयोग किया जाता है?",
+    "o": ["Radar", "Lidar", "Sonar | सोनार (Sonar)", "Microscope"],
+    "a": 2,
+    "e": "SONAR (Sound Navigation and Ranging) uses sound echoes to detect underwater objects.",
+    "cat": "technical",
+    "sub": "applied_physics"
+  },
+  {
+    "q": "What is the escape velocity from the Earth's surface? / पृथ्वी की सतह से पलायन वेग (Escape Velocity) क्या है?",
+    "o": ["9.8 km/s", "11.2 km/s | 11.2 km/s", "7.9 km/s", "1.1 km/s"],
+    "a": 1,
+    "e": "This is the minimum speed needed for an object to break free from Earth's gravity.",
+    "cat": "technical",
+    "sub": "applied_physics"
+  },
+  {
+    "q": "The phenomenon of 'Rainbow' is due to: / 'इंद्रधनुष' की घटना किसके कारण होती है?",
+    "o": ["Dispersion and Internal Reflection | विक्षेपण और आंतरिक परावर्तन", "Only Reflection", "Only Refraction", "Interference"],
+    "a": 0,
+    "e": "Sunlight is dispersed by water droplets, acting like tiny prisms.",
+    "cat": "technical",
+    "sub": "applied_physics"
+  },
+  {
+    "q": "What is the unit of 'Magnetic Flux'? / 'चुंबकीय फ्लक्स' (Magnetic Flux) की इकाई क्या है?",
+    "o": ["Tesla", "Weber | वेबर (Weber)", "Henry", "Gauss"],
+    "a": 1,
+    "e": "Weber is the SI unit, while Tesla is the unit for magnetic flux density.",
+    "cat": "technical",
+    "sub": "applied_physics"
+  },
+  {
+    "q": "In a 'Full-wave Bridge Rectifier', how many diodes are used? / एक 'फुल-वेव ब्रिज रेक्टिफायर' में कितने डायोड उपयोग किए जाते हैं?",
+    "o": ["2", "1", "6", "4 | 4"],
+    "a": 3,
+    "e": "A bridge configuration uses 4 diodes to provide full-wave rectification without a center-tapped transformer.",
+    "cat": "technical",
+    "sub": "applied_physics"
+  },
+  {
+    "q": "Newton's First Law of Motion defines: / न्यूटन का गति का पहला नियम किसे परिभाषित करता है?",
+    "o": ["Energy", "Inertia | जड़त्व (Inertia)", "Work", "Momentum"],
+    "a": 1,
+    "e": "It states that an object will remain at rest or in motion unless acted upon by an external force.",
+    "cat": "technical",
+    "sub": "applied_physics"
+  },
+  {
+    "q": "What is the dimensional formula for 'Force'? / 'बल' का विमीय सूत्र क्या है?",
+    "o": ["MLT^-1", "ML^2T^-2", "MLT^-2 | MLT^-2", "M^2LT^-2"],
+    "a": 2,
+    "e": "Force = Mass × Acceleration, so [M] × [LT^-2] = [MLT^-2].",
+    "cat": "technical",
+    "sub": "applied_physics"
+  },
+  {
+    "q": "Which type of wave is a 'Sound Wave' in air? / हवा में 'ध्वनि तरंग' किस प्रकार की तरंग है?",
+    "o": ["Longitudinal wave | अनुदैर्ध्य तरंग", "Transverse wave", "Electromagnetic wave", "None"],
+    "a": 0,
+    "e": "Sound waves in air travel as longitudinal waves through compressions and rarefactions.",
+    "cat": "technical",
+    "sub": "applied_physics"
+  },
+  {
+    "q": "What is the unit of 'Power' of a lens? / लेंस की 'शक्ति' (Power) की इकाई क्या है?",
+    "o": ["Meter", "Dioptre | डायोप्टर", "Watt", "Candela"],
+    "a": 1,
+    "e": "Power of a lens is the reciprocal of its focal length in meters, measured in Dioptres.",
+    "cat": "technical",
+    "sub": "applied_physics"
+  },
+  {
+    "q": "In an 'Intrinsic' semiconductor at absolute zero temperature, the conductivity is: / पूर्ण शून्य तापमान पर एक 'शुद्ध' अर्धचालक की चालकता होती है:",
+    "o": ["Infinite", "Very high", "Zero | शून्य", "Moderate"],
+    "a": 2,
+    "e": "At absolute zero, there are no free electrons in the conduction band, so it acts as an insulator.",
+    "cat": "technical",
+    "sub": "applied_physics"
+  },
+  {
+    "q": "The work done by a centripetal force is always: / अभिकेंद्री बल द्वारा किया गया कार्य हमेशा होता है:",
+    "o": ["Positive", "Negative", "Zero | शून्य", "Infinite"],
+    "a": 2,
+    "e": "Since centripetal force is perpendicular to the displacement, the work done (W = Fd cos 90°) is zero.",
+    "cat": "technical",
+    "sub": "applied_physics"
+  },
+  {
+    "q": "Which material is used to make 'Permanent Magnets'? / 'स्थायी चुंबक' बनाने के लिए किस सामग्री का उपयोग किया जाता है?",
+    "o": ["Soft Iron", "Steel | स्टील (Steel)", "Copper", "Aluminum"],
+    "a": 1,
+    "e": "Steel or Alnico are used because they have high retentivity and high coercivity.",
+    "cat": "technical",
+    "sub": "applied_physics"
+  },
+  {
+    "q": "What is the value of 'Atmospheric Pressure' at sea level? / समुद्र तल पर 'वायुमंडलीय दबाव' का मान क्या होता है?",
+    "o": ["1.013 × 10^5 Pa | 1.013 × 10^5 Pa", "10^2 Pa", "76 Pa", "Zero"],
+    "a": 0,
+    "e": "Standard atmospheric pressure is approximately 101.3 kPa.",
+    "cat": "technical",
+    "sub": "applied_physics"
+  },
+  {
+    "q": "A 'Transistor' acts as an 'Open Switch' when it is in: / एक 'ट्रांजिस्टर' 'ओपन स्विच' की तरह कार्य करता है जब वह होता है:",
+    "o": ["Active region", "Saturation region", "Cut-off region | कट-ऑफ क्षेत्र", "None"],
+    "a": 2,
+    "e": "In the cut-off region, no current flows through the transistor, simulating an open switch.",
+    "cat": "technical",
+    "sub": "applied_physics"
+  },
+  {
+    "q": "The magnifying power of a 'Compound Microscope' is the: / एक 'संयुक्त सूक्ष्मदर्शी' की आवर्धन क्षमता होती है:",
+    "o": ["Sum of powers of two lenses", "Product of magnifications of objective and eyepiece | आवर्धन का गुणनफल", "Difference of powers", "None"],
+    "a": 1,
+    "e": "Total magnification M = Mo × Me.",
+    "cat": "technical",
+    "sub": "applied_physics"
+  },
+  {
+    "q": "What is the energy stored in a 'Capacitor' of capacitance 'C' and voltage 'V'? / 'C' धारिता और 'V' वोल्टेज वाले 'कैपेसिटर' में संचित ऊर्जा क्या है?",
+    "o": ["CV", "1/2 CV", "1/2 CV^2 | 1/2 CV^2", "CV^2"],
+    "a": 2,
+    "e": "The energy is stored in the electric field between the plates.",
+    "cat": "technical",
+    "sub": "applied_physics"
+  },
+  {
+    "q": "Which lens is used to correct 'Myopia' (Short-sightedness)? / 'मायोपिया' (निकट दृष्टि दोष) को ठीक करने के लिए किस लेंस का उपयोग किया जाता है?",
+    "o": ["Convex lens", "Concave lens | अवतल लेंस", "Cylindrical lens", "Bifocal lens"],
+    "a": 1,
+    "e": "A concave lens diverges light rays so they focus correctly on the retina. [cite: 351, 1247]",
+    "cat": "technical",
+    "sub": "applied_physics"
+  },
+  {
+    "q": "The principle of 'Total Internal Reflection' is used in: / 'पूर्ण आंतरिक परावर्तन' के सिद्धांत का उपयोग किसमें किया जाता है?",
+    "o": ["Mirrors", "Optical Fibers | ऑप्टिकल फाइबर", "Microscopes", "None"],
+    "a": 1,
+    "e": "Optical fibers use TIR to transmit light signals over long distances with minimal loss. [cite: 352, 1248]",
+    "cat": "technical",
+    "sub": "applied_physics"
+  },
+  {
+    "q": "What is the SI unit of Electric Capacitance? / विद्युत धारिता (Capacitance) की SI इकाई क्या है?",
+    "o": ["Ohm", "Volt", "Farad | फैराड", "Coulomb"],
+    "a": 2,
+    "e": "Farad measures the ability of a body to store an electrical charge. [cite: 356, 1252]",
+    "cat": "technical",
+    "sub": "applied_physics"
+  },
+  {
+    "q": "Ohm's Law is valid only when: / ओम का नियम तभी मान्य होता है जब:",
+    "o": ["Current is constant", "Voltage is constant", "Temperature is constant | तापमान स्थिर हो", "None"],
+    "a": 2,
+    "e": "Resistance changes with temperature, so physical conditions must remain constant for Ohm's law. [cite: 361, 445]",
+    "cat": "technical",
+    "sub": "applied_physics"
+  },
+  {
+    "q": "Which type of material shows 'Ferromagnetism'? / किस प्रकार का पदार्थ 'लौह-चुंबकत्व' (Ferromagnetism) प्रदर्शित करता है?",
+    "o": ["Copper", "Iron | लोहा", "Gold", "Wood"],
+    "a": 1,
+    "e": "Iron, Cobalt, and Nickel are classic examples of ferromagnetic materials. [cite: 364, 1260]",
+    "cat": "technical",
+    "sub": "applied_physics"
+  },
+  {
+    "q": "In a 'Half-wave Rectifier', how many diodes are used? / 'हाफ-वेव रेक्टिफायर' में कितने डायोड उपयोग किए जाते हैं?",
+    "o": ["Two", "Four", "One | एक", "None"],
+    "a": 2,
+    "e": "A single diode is sufficient to block one half of the AC cycle in half-wave rectification. [cite: 370, 454]",
+    "cat": "technical",
+    "sub": "applied_physics"
+  },
+  {
+    "q": "Ultrasonic waves have frequency: / अल्ट्रासोनिक तरंगों की आवृत्ति होती है:",
+    "o": ["Less than 20 Hz", "Between 20 Hz to 20,000 Hz", "Above 20,000 Hz | 20,000 Hz से अधिक", "Zero"],
+    "a": 2,
+    "e": "These waves are beyond the upper limit of human hearing. [cite: 349, 1244]",
+    "cat": "technical",
+    "sub": "applied_physics"
+  },
+  {
+    "q": "What is the function of a 'Capacitor' in a circuit? / एक सर्किट में 'कैपेसिटर' का क्या कार्य है?",
+    "o": ["To block current", "To store electrical energy | विद्युत ऊर्जा संचय करना", "To increase voltage", "None"],
+    "a": 1,
+    "e": "Capacitors store energy in an electric field between two conducting plates. [cite: 356, 1344]",
+    "cat": "technical",
+    "sub": "applied_physics"
+  },
+  {
+    "q": "Which laser is commonly used in laboratories? / प्रयोगशालाओं में आमतौर पर किस लेजर का उपयोग किया जाता है?",
+    "o": ["Ruby laser", "He-Ne laser | ही-ने (He-Ne) लेजर", "CO2 laser", "None"],
+    "a": 1,
+    "e": "Helium-Neon lasers are stable and widely used for scientific and educational purposes. [cite: 375, 456]",
+    "cat": "technical",
+    "sub": "applied_physics"
+  },
+  {
+    "q": "The resistance of a wire is 'Inversely' proportional to its: / एक तार का प्रतिरोध किसके 'व्युत्क्रमानुपाती' होता है?",
+    "o": ["Length", "Resistivity", "Area of cross-section | अनुप्रस्थ काट का क्षेत्रफल", "Temperature"],
+    "a": 2,
+    "e": "A thicker wire (larger area) has less resistance than a thinner one. [cite: 359, 1255]",
+    "cat": "technical",
+    "sub": "applied_physics"
+  },
+  {
+    "q": "What happens to the viscosity of a 'Liquid' when temperature increases? / तापमान बढ़ने पर 'द्रव' की श्यानता (Viscosity) पर क्या प्रभाव पड़ता है?",
+    "o": ["Increases", "Remains same", "Decreases | घटती है", "Becomes zero"],
+    "a": 2,
+    "e": "In liquids, increasing temperature weakens intermolecular forces, thereby decreasing viscosity. [cite: 54, 201]",
+    "cat": "technical",
+    "sub": "applied_physics"
+  },
+  {
+    "q": "The product of Force and Time is known as: / बल और समय के गुणनफल को क्या कहा जाता है?",
+    "o": ["Power", "Impulse | आवेग", "Momentum", "Work"],
+    "a": 1,
+    "e": "Impulse is defined as the total effect of a force acting over a period of time. [cite: 40]",
+    "cat": "technical",
+    "sub": "applied_physics"
+  },
+  {
+    "q": "What is the Least Count of a standard Vernier Caliper? / एक मानक वर्नियर कैलिपर का अल्पतमांक (Least Count) क्या होता है?",
+    "o": ["0.01 mm", "0.1 mm", "0.02 mm | 0.02 mm", "1.0 mm"],
+    "a": 2,
+    "e": "The least count is the smallest measurement that can be taken accurately with the instrument. [cite: 35, 190]",
+    "cat": "technical",
+    "sub": "applied_physics"
+  },
+  {
+    "q": "Surface tension of a liquid decreases with: / तरल का पृष्ठ तनाव किसके साथ घटता है?",
+    "o": ["Increase in area", "Increase in temperature | तापमान में वृद्धि", "Decrease in temperature", "None"],
+    "a": 1,
+    "e": "Increasing temperature reduces the cohesive forces between molecules, lowering surface tension. [cite: 53]",
+    "cat": "technical",
+    "sub": "applied_physics"
+  },
+  {
+    "q": "Kinetic energy of an object of mass 'm' and velocity 'v' is: / 'm' द्रव्यमान और 'v' वेग वाली वस्तु की गतिज ऊर्जा क्या है?",
+    "o": ["mgh", "mv", "1/2 mv^2 | 1/2 mv^2", "ma"],
+    "a": 2,
+    "e": "Kinetic energy is the energy possessed by an object due to its motion. [cite: 44, 199]",
+    "cat": "technical",
+    "sub": "applied_physics"
+  },
+  {
+    "q": "Which mode of heat transfer does not require a medium? / ऊष्मा स्थानांतरण की किस विधि को माध्यम की आवश्यकता नहीं होती है?",
+    "o": ["Conduction", "Convection", "Radiation | विकिरण", "None"],
+    "a": 2,
+    "e": "Radiation transfers heat through electromagnetic waves and can occur in a vacuum. [cite: 57, 204]",
+    "cat": "technical",
+    "sub": "applied_physics"
+  },
+  {
+    "q": "The banking of roads is an application of: / सड़कों की बैंकिंग (Banking) किसका एक अनुप्रयोग है?",
+    "o": ["Centrifugal force", "Centripetal force | अभिकेंद्री बल", "Friction only", "None"],
+    "a": 1,
+    "e": "Banking provides the necessary centripetal force for a vehicle to take a turn safely at high speed. [cite: 41]",
+    "cat": "technical",
+    "sub": "applied_physics"
+  }
