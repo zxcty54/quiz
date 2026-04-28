@@ -25,6 +25,246 @@
   },
   
   {
+    "q": "Which transmission medium is most immune to Electromagnetic Interference (EMI)? / कौन सा ट्रांसमिशन माध्यम विद्युत चुम्बकीय हस्तक्षेप (EMI) के प्रति सबसे अधिक सुरक्षित है?",
+    "o": ["Coaxial Cable", "Fiber Optic Cable | फाइबर ऑप्टिक केबल", "Twisted Pair Cable", "Shielded Twisted Pair"],
+    "a": 1,
+    "e": "Fiber optics use light pulses instead of electrical signals, making them completely immune to EMI and RFI.",
+    "cat": "technical",
+    "sub": "computer_networking"
+  },
+  {
+    "q": "In which topology is every node connected to a central hub or switch? / किस टोपोलॉजी में प्रत्येक नोड एक केंद्रीय हब या स्विच से जुड़ा होता है?",
+    "o": ["Mesh Topology", "Bus Topology", "Star Topology | स्टार टोपोलॉजी", "Ring Topology"],
+    "a": 2,
+    "e": "Star topology is the most common LAN topology where the central device manages all communications.",
+    "cat": "technical",
+    "sub": "computer_networking"
+  },
+  {
+    "q": "What is the purpose of 'Twisting' the wires in a Twisted Pair cable? / ट्विस्टेड पेयर केबल में तारों को 'ट्विस्ट' (मोड़ने) करने का उद्देश्य क्या है?",
+    "o": ["To increase strength", "To reduce crosstalk and noise | क्रॉसस्टॉक और शोर को कम करना", "To increase speed", "None"],
+    "a": 1,
+    "e": "Twisting cancels out electromagnetic interference from adjacent pairs and external sources.",
+    "cat": "technical",
+    "sub": "computer_networking"
+  },
+  {
+    "q": "Which network topology uses a single backbone cable to which all nodes are attached? / कौन सी नेटवर्क टोपोलॉजी एक एकल बैकबोन केबल का उपयोग करती है जिससे सभी नोड्स जुड़े होते हैं?",
+    "o": ["Star Topology", "Bus Topology | बस टोपोलॉजी", "Tree Topology", "Mesh Topology"],
+    "a": 1,
+    "e": "Bus topology uses a common transmission medium (bus) with terminators at both ends.",
+    "cat": "technical",
+    "sub": "computer_networking"
+  },
+  {
+    "q": "What is the phenomenon where a light ray reflects back into the core of a fiber optic cable? / फाइबर ऑप्टिक केबल के कोर में प्रकाश किरण के वापस परावर्तित होने की घटना क्या कहलाती है?",
+    "o": ["Refraction", "Dispersion", "Total Internal Reflection | पूर्ण आंतरिक परावर्तन", "Scattering"],
+    "a": 2,
+    "e": "Total Internal Reflection (TIR) allows light to travel long distances through the fiber core with minimal loss.",
+    "cat": "technical",
+    "sub": "computer_networking"
+  },
+  {
+    "q": "Which topology is a combination of Star and Bus topologies? / कौन सी टोपोलॉजी स्टार और बस टोपोलॉजी का संयोजन है?",
+    "o": ["Mesh Topology", "Ring Topology", "Tree Topology | ट्री टोपोलॉजी", "Hybrid Topology"],
+    "a": 2,
+    "e": "Tree topology (Hierarchical) consists of star-configured workstations connected to a linear bus backbone.",
+    "cat": "technical",
+    "sub": "computer_networking"
+  },
+  {
+    "q": "In 'Shielded Twisted Pair' (STP), the shield is used to: / 'शील्डेड ट्विस्टेड पेयर' (STP) में शील्ड का उपयोग किया जाता है:",
+    "o": ["Increase weight", "Provide extra protection against noise | शोर के खिलाफ अतिरिक्त सुरक्षा", "Carry more data", "None"],
+    "a": 1,
+    "e": "The metallic foil or braided shield protects the signal from external electromagnetic interference.",
+    "cat": "technical",
+    "sub": "computer_networking"
+  },
+  {
+    "q": "Which transmission medium is commonly used for cable TV networks? / केबल टीवी नेटवर्क के लिए आमतौर पर किस ट्रांसमिशन माध्यम का उपयोग किया जाता है?",
+    "o": ["Coaxial Cable | कोएक्सियल केबल", "Twisted Pair", "Fiber Optics", "Satellite"],
+    "a": 0,
+    "e": "Coaxial cables provide high bandwidth and good shielding, making them suitable for video transmission.",
+    "cat": "technical",
+    "sub": "computer_networking"
+  },
+  {
+    "q": "What is the main disadvantage of a 'Bus Topology'? / 'बस टोपोलॉजी' का मुख्य नुकसान क्या है?",
+    "o": ["High cost", "Complex wiring", "The entire network fails if the backbone breaks | बैकबोन टूटने पर पूरा नेटवर्क फेल हो जाता है", "Difficult to install"],
+    "a": 2,
+    "e": "A fault in the main cable disrupts communication for all connected devices.",
+    "cat": "technical",
+    "sub": "computer_networking"
+  },
+  {
+    "q": "An 'RJ-45' connector is used with which type of cable? / 'RJ-45' कनेक्टर का उपयोग किस प्रकार के केबल के साथ किया जाता है?",
+    "o": ["Coaxial", "Fiber Optic", "Twisted Pair | ट्विस्टेड पेयर (Ethernet)", "Power line"],
+    "a": 2,
+    "e": "RJ-45 is the standard connector used for Ethernet networking over UTP/STP cables.",
+    "cat": "technical",
+    "sub": "computer_networking"
+  },
+  {
+    "q": "Which algorithm is used to find the shortest path between nodes in a network? / नेटवर्क में नोड्स के बीच सबसे छोटा रास्ता खोजने के लिए किस एल्गोरिदम का उपयोग किया जाता है?",
+    "o": ["Leaky Bucket", "Dijkstra's Algorithm | डिज्कस्ट्रा एल्गोरिदम", "Token Bucket", "Distance Vector"],
+    "a": 1,
+    "e": "Dijkstra's algorithm is a link-state routing algorithm used to determine the shortest path tree.",
+    "cat": "technical",
+    "sub": "computer_networking"
+  },
+  {
+    "q": "What is 'Congestion' in a computer network? / कंप्यूटर नेटवर्क में 'कन्जेशन' (Congestion) क्या है?",
+    "o": ["Fast data transfer", "Network overload due to too much traffic | अत्यधिक ट्रैफिक के कारण नेटवर्क ओवरलोड", "Broken cable", "Security breach"],
+    "a": 1,
+    "e": "Congestion occurs when the number of packets sent to the network is greater than the capacity of the network.",
+    "cat": "technical",
+    "sub": "computer_networking"
+  },
+  {
+    "q": "The 'Leaky Bucket' algorithm is primarily used for: / 'लीकी बकेट' एल्गोरिदम का मुख्य रूप से उपयोग किया जाता है:",
+    "o": ["Routing packets", "Traffic shaping and congestion control | ट्रैफिक शेपिंग और कन्जेशन कंट्रोल", "Encryption", "None"],
+    "a": 1,
+    "e": "It converts a bursty flow of packets into a steady, uniform flow at a constant bit rate.",
+    "cat": "technical",
+    "sub": "computer_networking"
+  },
+  {
+    "q": "Which routing algorithm requires each router to know the entire network topology? / किस रूटिंग एल्गोरिदम में प्रत्येक राउटर को पूरे नेटवर्क टोपोलॉजी को जानने की आवश्यकता होती है?",
+    "o": ["Distance Vector", "Static Routing", "Link State Routing | लिंक स्टेट रूटिंग", "Flooding"],
+    "a": 2,
+    "e": "Link state algorithms (like OSPF) build a complete map of the network to calculate paths.",
+    "cat": "technical",
+    "sub": "computer_networking"
+  },
+  {
+    "q": "What is the main difference between 'Adaptive' and 'Non-adaptive' routing? / 'एडेप्टिव' और 'नॉन-एडेप्टिव' रूटिंग के बीच मुख्य अंतर क्या है?",
+    "o": ["Speed of data", "Decision based on current network state | वर्तमान नेटवर्क स्थिति के आधार पर निर्णय", "Type of cable used", "None"],
+    "a": 1,
+    "e": "Adaptive routing changes paths based on traffic or topology changes, whereas non-adaptive (static) routing uses fixed paths.",
+    "cat": "technical",
+    "sub": "computer_networking"
+  },
+  {
+    "q": "The 'Token Bucket' algorithm allows: / 'टोकन बकेट' एल्गोरिदम अनुमति देता है:",
+    "o": ["No traffic", "Only steady traffic", "Controlled bursty traffic | नियंत्रित बर्स्टी ट्रैफिक", "Infinite traffic"],
+    "a": 2,
+    "e": "Unlike leaky bucket, token bucket allows some degree of bursty traffic as long as tokens are available.",
+    "cat": "technical",
+    "sub": "computer_networking"
+  },
+  {
+    "q": "In Distance Vector routing, routers exchange their routing tables with: / डिस्टेंस वेक्टर रूटिंग में, राउटर अपनी रूटिंग टेबल किसके साथ साझा करते हैं?",
+    "o": ["Every node in network", "Only immediate neighbors | केवल तत्काल पड़ोसियों के साथ", "Central server", "None"],
+    "a": 1,
+    "e": "Routers periodically send their entire table to adjacent neighbors to update network paths.",
+    "cat": "technical",
+    "sub": "computer_networking"
+  },
+  {
+    "q": "What is 'Choke Packet' used for? / 'चोक पैकेट' (Choke Packet) का उपयोग किसके लिए किया जाता है?",
+    "o": ["Data encryption", "Congestion notification to source | स्रोत को कन्जेशन की सूचना देना", "Speed measurement", "Routing"],
+    "a": 1,
+    "e": "A router sends a choke packet to the source to request a reduction in the transmission rate during congestion.",
+    "cat": "technical",
+    "sub": "computer_networking"
+  },
+  {
+    "q": "Which metric is commonly used by routing algorithms to calculate the 'best path'? / रूटिंग एल्गोरिदम द्वारा 'सबसे अच्छा रास्ता' चुनने के लिए किस मीट्रिक का उपयोग किया जाता है?",
+    "o": ["Hop count", "Bandwidth", "Delay", "All of the above | उपरोक्त सभी"],
+    "a": 3,
+    "e": "Algorithms consider factors like hops, speed, and congestion to determine the most efficient route.",
+    "cat": "technical",
+    "sub": "computer_networking"
+  },
+  {
+    "q": "The problem of 'Count to Infinity' is associated with which routing algorithm? / 'काउंट टू इनफिनिटी' की समस्या किस रूटिंग एल्गोरिदम से जुड़ी है?",
+    "o": ["Link State", "Distance Vector | डिस्टेंस वेक्टर", "Hierarchical Routing", "Flooding"],
+    "a": 1,
+    "e": "It occurs in distance vector routing when a link fails and routers keep incrementing the hop count based on old info.",
+    "cat": "technical",
+    "sub": "computer_networking"
+  },
+  {
+    "q": "Which transmission medium is most immune to Electromagnetic Interference (EMI)? / कौन सा ट्रांसमिशन माध्यम विद्युत चुम्बकीय हस्तक्षेप (EMI) के प्रति सबसे अधिक सुरक्षित है?",
+    "o": ["Coaxial Cable", "Fiber Optic Cable | फाइबर ऑप्टिक केबल", "Twisted Pair Cable", "Shielded Twisted Pair"],
+    "a": 1,
+    "e": "Fiber optics use light pulses instead of electrical signals, making them completely immune to EMI and RFI.",
+    "cat": "technical",
+    "sub": "computer_networking"
+  },
+  {
+    "q": "In which topology is every node connected to a central hub or switch? / किस टोपोलॉजी में प्रत्येक नोड एक केंद्रीय हब या स्विच से जुड़ा होता है?",
+    "o": ["Mesh Topology", "Bus Topology", "Star Topology | स्टार टोपोलॉजी", "Ring Topology"],
+    "a": 2,
+    "e": "Star topology is the most common LAN topology where the central device manages all communications.",
+    "cat": "technical",
+    "sub": "computer_networking"
+  },
+  {
+    "q": "What is the purpose of 'Twisting' the wires in a Twisted Pair cable? / ट्विस्टेड पेयर केबल में तारों को 'ट्विस्ट' (मोड़ने) करने का उद्देश्य क्या है?",
+    "o": ["To increase strength", "To reduce crosstalk and noise | क्रॉसस्टॉक और शोर को कम करना", "To increase speed", "None"],
+    "a": 1,
+    "e": "Twisting cancels out electromagnetic interference from adjacent pairs and external sources.",
+    "cat": "technical",
+    "sub": "computer_networking"
+  },
+  {
+    "q": "Which network topology uses a single backbone cable to which all nodes are attached? / कौन सी नेटवर्क टोपोलॉजी एक एकल बैकबोन केबल का उपयोग करती है जिससे सभी नोड्स जुड़े होते हैं?",
+    "o": ["Star Topology", "Bus Topology | बस टोपोलॉजी", "Tree Topology", "Mesh Topology"],
+    "a": 1,
+    "e": "Bus topology uses a common transmission medium (bus) with terminators at both ends.",
+    "cat": "technical",
+    "sub": "computer_networking"
+  },
+  {
+    "q": "What is the phenomenon where a light ray reflects back into the core of a fiber optic cable? / फाइबर ऑप्टिक केबल के कोर में प्रकाश किरण के वापस परावर्तित होने की घटना क्या कहलाती है?",
+    "o": ["Refraction", "Dispersion", "Total Internal Reflection | पूर्ण आंतरिक परावर्तन", "Scattering"],
+    "a": 2,
+    "e": "Total Internal Reflection (TIR) allows light to travel long distances through the fiber core with minimal loss.",
+    "cat": "technical",
+    "sub": "computer_networking"
+  },
+  {
+    "q": "Which topology is a combination of Star and Bus topologies? / कौन सी टोपोलॉजी स्टार और बस टोपोलॉजी का संयोजन है?",
+    "o": ["Mesh Topology", "Ring Topology", "Tree Topology | ट्री टोपोलॉजी", "Hybrid Topology"],
+    "a": 2,
+    "e": "Tree topology (Hierarchical) consists of star-configured workstations connected to a linear bus backbone.",
+    "cat": "technical",
+    "sub": "computer_networking"
+  },
+  {
+    "q": "In 'Shielded Twisted Pair' (STP), the shield is used to: / 'शील्डेड ट्विस्टेड पेयर' (STP) में शील्ड का उपयोग किया जाता है:",
+    "o": ["Increase weight", "Provide extra protection against noise | शोर के खिलाफ अतिरिक्त सुरक्षा", "Carry more data", "None"],
+    "a": 1,
+    "e": "The metallic foil or braided shield protects the signal from external electromagnetic interference.",
+    "cat": "technical",
+    "sub": "computer_networking"
+  },
+  {
+    "q": "Which transmission medium is commonly used for cable TV networks? / केबल टीवी नेटवर्क के लिए आमतौर पर किस ट्रांसमिशन माध्यम का उपयोग किया जाता है?",
+    "o": ["Coaxial Cable | कोएक्सियल केबल", "Twisted Pair", "Fiber Optics", "Satellite"],
+    "a": 0,
+    "e": "Coaxial cables provide high bandwidth and good shielding, making them suitable for video transmission.",
+    "cat": "technical",
+    "sub": "computer_networking"
+  },
+  {
+    "q": "What is the main disadvantage of a 'Bus Topology'? / 'बस टोपोलॉजी' का मुख्य नुकसान क्या है?",
+    "o": ["High cost", "Complex wiring", "The entire network fails if the backbone breaks | बैकबोन टूटने पर पूरा नेटवर्क फेल हो जाता है", "Difficult to install"],
+    "a": 2,
+    "e": "A fault in the main cable disrupts communication for all connected devices.",
+    "cat": "technical",
+    "sub": "computer_networking"
+  },
+  {
+    "q": "An 'RJ-45' connector is used with which type of cable? / 'RJ-45' कनेक्टर का उपयोग किस प्रकार के केबल के साथ किया जाता है?",
+    "o": ["Coaxial", "Fiber Optic", "Twisted Pair | ट्विस्टेड पेयर (Ethernet)", "Power line"],
+    "a": 2,
+    "e": "RJ-45 is the standard connector used for Ethernet networking over UTP/STP cables.",
+    "cat": "technical",
+    "sub": "computer_networking"
+  },
+  {
     "q": "How many layers are defined in the original TCP/IP protocol suite? / मूल TCP/IP प्रोटोकॉल सूट में कितनी परतें (Layers) परिभाषित हैं?",
     "o": ["3", "4 | 4", "7", "5"],
     "a": 1,
