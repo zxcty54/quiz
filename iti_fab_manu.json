@@ -25,6 +25,2886 @@
   },
   
   {
+    "q": "What is 'Sintering'? / 'सिंटरिंग' (Sintering) क्या है?",
+    "o": ["Freezing the part", "Heating the green compact below its melting point to bond particles | कणों को जोड़ने के लिए पिघलने वाले बिंदु से नीचे गर्म करना", "Submerging in acid", "None"],
+    "a": 1,
+    "e": "Sintering transforms the weak green compact into a strong metal part through atomic diffusion.",
+    "cat": "technical",
+    "sub": "mechanical_engineering"
+  },
+  {
+    "q": "In which atmosphere is sintering usually performed to prevent oxidation? / ऑक्सीकरण को रोकने के लिए सिंटरिंग आमतौर पर किस वातावरण में की जाती है?",
+    "o": ["Oxygen-rich", "Reducing or Inert atmosphere (like Nitrogen or Hydrogen) | रिड्यूसिंग या अक्रिय वातावरण", "Compressed air", "None"],
+    "a": 1,
+    "e": "A controlled atmosphere ensures that the metal particles don't react with oxygen at high temperatures.",
+    "cat": "technical",
+    "sub": "mechanical_engineering"
+  },
+  {
+    "q": "What is 'Sizing' in powder metallurgy? / पाउडर धातु विज्ञान में 'साइजिंग' (Sizing) क्या है?",
+    "o": ["A secondary pressing operation to improve dimensional accuracy | आयामी सटीकता के लिए द्वितीयक प्रेसिंग", "Melting the part", "Adding color", "None"],
+    "a": 0,
+    "e": "Sizing or 'coining' corrects the slight changes in dimensions that occur during sintering.",
+    "cat": "technical",
+    "sub": "mechanical_engineering"
+  },
+  {
+    "q": "The process of filling the pores of a sintered part with a lower-melting-point metal is called: / सिंटर किए गए भाग के छिद्रों को कम गलनांक वाली धातु से भरने की प्रक्रिया कहलाती है:",
+    "o": ["Sintering", "Infiltration | इनफिल्ट्रेशन (Infiltration)", "Impregnation", "Blanking"],
+    "a": 1,
+    "e": "Infiltration improves the strength and density of the part by filling the internal voids with molten metal (like copper).",
+    "cat": "technical",
+    "sub": "mechanical_engineering"
+  },
+  {
+    "q": "What is 'Impregnation'? / 'इम्प्रेग्नेशन' (Impregnation) क्या है?",
+    "o": ["Filling pores with metal", "Filling pores with oil or lubricant (for self-lubricating bearings) | तेल या स्नेहक के साथ छिद्रों को भरना", "Cutting the part", "None"],
+    "a": 1,
+    "e": "Self-lubricating 'Bushings' are made this way; the oil leaches out when the bearing heats up during use.",
+    "cat": "technical",
+    "sub": "mechanical_engineering"
+  },
+  {
+    "q": "Which of these is a major 'Design Rule' for powder metallurgy parts? / इनमें से कौन सा पाउडर धातु विज्ञान भागों के लिए एक मुख्य 'डिजाइन नियम' है?",
+    "o": ["Avoid sharp corners and thin walls | नुकीले कोनों और पतली दीवारों से बचें", "Parts must be very long", "Use complex threads", "None"],
+    "a": 0,
+    "e": "Sharp corners can lead to stress concentration and crack formation during pressing or sintering.",
+    "cat": "technical",
+    "sub": "mechanical_engineering"
+  },
+  {
+    "q": "Parts made by Powder Metallurgy generally have ________ mechanical properties compared to forged parts. / फोर्ज किए गए भागों की तुलना में पाउडर धातु विज्ञान द्वारा बनाए गए भागों के यांत्रिक गुण आमतौर पर ________ होते हैं।",
+    "o": ["Superior", "Slightly lower (due to residual porosity) | थोड़ा कम (अवशिष्ट सरंध्रता के कारण)", "Exactly same", "Zero"],
+    "a": 1,
+    "e": "Unless 100% density is achieved, the presence of pores slightly reduces the tensile strength and ductility.",
+    "cat": "technical",
+    "sub": "mechanical_engineering"
+  },
+  {
+    "q": "PM is most economical for which type of production? / PM किस प्रकार के उत्पादन के लिए सबसे किफायती है?",
+    "o": ["Single custom parts", "Large volume mass production of small complex parts | छोटे जटिल भागों का बड़े पैमाने पर उत्पादन", "Repairing old machines", "None"],
+    "a": 1,
+    "e": "PM reduces waste (near-net-shape) and is very efficient for producing thousands of identical small components.",
+    "cat": "technical",
+    "sub": "mechanical_engineering"
+  },
+  {
+    "q": "Which product is almost exclusively made by Powder Metallurgy? / कौन सा उत्पाद लगभग विशेष रूप से पाउडर धातु विज्ञान द्वारा बनाया जाता है?",
+    "o": ["Nails", "Tungsten Carbide cutting tools | टंगस्टन कार्बाइड कटिंग टूल्स", "Aluminum cans", "None"],
+    "a": 1,
+    "e": "Materials with extremely high melting points like Tungsten are difficult to cast and are best shaped via PM.",
+    "cat": "technical",
+    "sub": "mechanical_engineering"
+  },
+  {
+    "q": "A 'Blender' is used in PM to: / PM में 'ब्लेंडर' (Blender) का उपयोग किया जाता है:",
+    "o": ["Heat the powder", "Thoroughly mix different powders and additives | विभिन्न पाउडर और एडिटिव्स को अच्छी तरह मिलाना", "Clean the die", "None"],
+    "a": 1,
+    "e": "Blending ensures a uniform distribution of particle sizes and alloying elements.",
+    "cat": "technical",
+    "sub": "mechanical_engineering"
+  },
+  {
+    "q": "What is the primary objective of 'Powder Metallurgy'? / 'पाउडर धातु विज्ञान' (Powder Metallurgy) का प्राथमिक उद्देश्य क्या है?",
+    "o": ["Melting large blocks of metal", "Producing parts from metal powders by heating below melting point | पिघलने वाले बिंदु से नीचे गर्म करके भागों का उत्पादन", "Painting metal surfaces", "None"],
+    "a": 1,
+    "e": "Powder metallurgy (PM) is a process of blending fine powdered materials, pressing them into a shape, and then heating them (sintering) to bond the particles.",
+    "cat": "technical",
+    "sub": "mechanical_engineering"
+  },
+  {
+    "q": "Which method of powder manufacturing involves breaking a stream of molten metal into fine droplets using gas or water jets? / गैस या पानी के जेट का उपयोग करके तरल धातु की धारा को महीन बूंदों में तोड़ने की विधि कहलाती है?",
+    "o": ["Reduction", "Atomization | एटमाइजेशन (Atomization)", "Electrolysis", "Crushing"],
+    "a": 1,
+    "e": "Atomization is the most common method for producing metal powders with controlled particle size and shape.",
+    "cat": "technical",
+    "sub": "mechanical_engineering"
+  },
+  {
+    "q": "In 'Electrolytic Deposition', metal powder is produced by: / 'इलेक्ट्रोलाइटिक डिपोजिशन' में, धातु पाउडर किसके द्वारा तैयार किया जाता है?",
+    "o": ["Burning metal", "Passing electric current through a solution to deposit metal at the cathode | कैथोड पर धातु जमा करने के लिए बिजली प्रवाहित करना", "Grinding rocks", "None"],
+    "a": 1,
+    "e": "This process produces very pure powders, commonly used for Copper and Iron.",
+    "cat": "technical",
+    "sub": "mechanical_engineering"
+  },
+  {
+    "q": "The 'Reduction' method produces metal powder by: / 'रिडक्शन' (Reduction) विधि किसके द्वारा धातु पाउडर बनाती है?",
+    "o": ["Mixing with water", "Removing oxygen from metal oxides using a reducing agent | कम करने वाले एजेंट का उपयोग कर ऑक्साइड से ऑक्सीजन हटाना", "Melting", "None"],
+    "a": 1,
+    "e": "Iron powder is often produced by reducing iron ore with hydrogen or carbon monoxide.",
+    "cat": "technical",
+    "sub": "mechanical_engineering"
+  },
+  {
+    "q": "What is 'Compacting' in the PM process? / PM प्रक्रिया में 'कॉम्पैक्टिंग' (Compacting) क्या है?",
+    "o": ["Heating the powder", "Pressing the powder in a die to form a 'Green' compact | 'ग्रीन' कॉम्पैक्ट बनाने के लिए पाउडर को डाई में दबाना", "Sifting sand", "None"],
+    "a": 1,
+    "e": "Compacting provides the initial shape and sufficient strength (green strength) for the part to be handled.",
+    "cat": "technical",
+    "sub": "mechanical_engineering"
+  },
+  {
+    "q": "The density of a green compact ________ with an increase in compaction pressure. / कॉम्पैक्शन दबाव बढ़ने के साथ ग्रीन कॉम्पैक्ट का घनत्व ________ है।",
+    "o": ["Decreases", "Increases | बढ़ता है", "Remains same", "None"],
+    "a": 1,
+    "e": "Higher pressure forces the particles closer together, reducing the voids or porosity.",
+    "cat": "technical",
+    "sub": "mechanical_engineering"
+  },
+  {
+    "q": "What is the role of a 'Lubricant' mixed with metal powder before compacting? / कॉम्पैक्ट करने से पहले धातु पाउडर के साथ मिश्रित 'स्नेहक' (Lubricant) की भूमिका क्या है?",
+    "o": ["To add weight", "To reduce friction between particles and die walls | कणों और डाई की दीवारों के बीच घर्षण को कम करना", "To help in melting", "None"],
+    "a": 1,
+    "e": "Lubricants like graphite or stearic acid help in easier ejection of the part from the die.",
+    "cat": "technical",
+    "sub": "mechanical_engineering"
+  },
+  {
+    "q": "What is a 'Green Compact'? / 'ग्रीन कॉम्पैक्ट' (Green Compact) क्या है?",
+    "o": ["A finished part", "A part produced after pressing but before sintering | दबाने के बाद लेकिन सिंटरिंग से पहले बना हिस्सा", "A wet part", "None"],
+    "a": 1,
+    "e": "It is fragile and has the shape of the final part but lacks full strength.",
+    "cat": "technical",
+    "sub": "mechanical_engineering"
+  },
+  {
+    "q": "Which property of metal powder describes its ability to flow through a nozzle into a die? / धातु पाउडर का कौन सा गुण नोजल के माध्यम से डाई में बहने की उसकी क्षमता को वर्णित करता है?",
+    "o": ["Hardness", "Flow rate | फ्लो रेट (Flow rate)", "Elasticity", "Color"],
+    "a": 1,
+    "e": "Flow rate is critical for high-speed production to ensure the die is filled uniformly.",
+    "cat": "technical",
+    "sub": "mechanical_engineering"
+  },
+  {
+    "q": "The 'Apparent Density' of powder refers to: / पाउडर का 'अपेरेंट डेंसिटी' (Apparent Density) संदर्भित करता है:",
+    "o": ["Density of solid metal", "Weight per unit volume of loose powder | ढीले पाउडर का प्रति इकाई आयतन भार", "Density after sintering", "None"],
+    "a": 1,
+    "e": "It is a measure of how much space the powder occupies in its natural loose state.",
+    "cat": "technical",
+    "sub": "mechanical_engineering"
+  },
+  {
+    "q": "In 'Blanking' operation, the useful part is: / 'ब्लैंकिंग' ऑपरेशन में, उपयोगी हिस्सा होता है:",
+    "o": ["The remaining sheet", "The piece punched out | बाहर निकाला गया टुकड़ा (Slug)", "The punch itself", "None"],
+    "a": 1,
+    "e": "In blanking, the piece removed from the sheet is the final product, whereas in piercing, it is the waste.",
+    "cat": "technical",
+    "sub": "mechanical_engineering"
+  },
+  {
+    "q": "What is 'Piercing' (or Punching)? / 'पियर्सिंग' (या पंचिंग) क्या है?",
+    "o": ["Making a large cup", "Creating a hole in a sheet metal part where the slug is waste | शीट में छेद करना जहाँ स्लग कचरा होता है", "Bending a corner", "None"],
+    "a": 1,
+    "e": "Piercing is used to create holes or slots in a workpiece.",
+    "cat": "technical",
+    "sub": "mechanical_engineering"
+  },
+  {
+    "q": "The operation of forming a 'cup-shaped' part from a flat sheet is called: / एक सपाट शीट से 'कप के आकार' का हिस्सा बनाने की क्रिया कहलाती है:",
+    "o": ["Curling", "Drawing | ड्राइंग (Drawing)", "Lancing", "Notching"],
+    "a": 1,
+    "e": "Drawing stretches the metal into a hollow three-dimensional shape using a punch and a die.",
+    "cat": "technical",
+    "sub": "mechanical_engineering"
+  },
+  {
+    "q": "What is 'Notching'? / 'नॉचिंग' (Notching) क्या है?",
+    "o": ["Cutting a hole in middle", "Removing metal from the 'edge' of a sheet or strip | शीट के 'किनारे' से धातु निकालना", "Bending the whole part", "None"],
+    "a": 1,
+    "e": "Notching is a shearing operation performed on the boundary of the workpiece.",
+    "cat": "technical",
+    "sub": "mechanical_engineering"
+  },
+  {
+    "q": "Which operation involves 'rolling' the edge of a sheet into a circular cross-section for safety or strength? / सुरक्षा या मजबूती के लिए शीट के किनारे को गोलाकार क्रॉस-सेक्शन में 'रोलिंग' करने की क्रिया कहलाती है?",
+    "o": ["Trimming", "Curling | कर्लिंग (Curling)", "Lancing", "Blanking"],
+    "a": 1,
+    "e": "Curling adds a decorative finish and eliminates sharp edges on sheet metal products like containers.",
+    "cat": "technical",
+    "sub": "mechanical_engineering"
+  },
+  {
+    "q": "What is 'Lancing'? / 'लांसिंग' (Lancing) क्या है?",
+    "o": ["Full cut", "A partial cut (slitting) followed by bending to create a tab or vent | आंशिक कट और बेंडिंग", "A type of welding", "None"],
+    "a": 1,
+    "e": "In lancing, no metal is removed as a slug; instead, a flap is created in the sheet.",
+    "cat": "technical",
+    "sub": "mechanical_engineering"
+  },
+  {
+    "q": "The operation of cutting off 'excess' metal from a formed part to achieve final dimensions is: / अंतिम आयाम प्राप्त करने के लिए बने हुए हिस्से से 'अतिरिक्त' धातु को काटने की क्रिया है:",
+    "o": ["Trimming | ट्रिमिंग (Trimming)", "Piercing", "Blanking", "Drawing"],
+    "a": 0,
+    "e": "Trimming is usually the final shearing step for drawn or forged parts to remove the uneven flash or flange.",
+    "cat": "technical",
+    "sub": "mechanical_engineering"
+  },
+  {
+    "q": "In 'Bending' operations, 'Springback' refers to: / 'बेंडिंग' क्रियाओं में, 'स्प्रिंगबैक' (Springback) का तात्पर्य है:",
+    "o": ["Breaking of the part", "Elastic recovery of the metal after pressure is removed | दबाव हटने के बाद धातु की इलास्टिक रिकवरी", "Metal expansion", "None"],
+    "a": 1,
+    "e": "To compensate for springback, the metal is often 'over-bent' so it returns to the desired angle.",
+    "cat": "technical",
+    "sub": "mechanical_engineering"
+  },
+  {
+    "q": "What is 'Channel Bending'? / 'चैनल बेंडिंग' (Channel Bending) क्या है?",
+    "o": ["Circular bend", "Bending a sheet into a U-shape with two parallel bends | शीट को U-आकार में मोड़ना", "Bending at 45 degrees", "None"],
+    "a": 1,
+    "e": "It produces a channel section with a flat bottom and two vertical flanges.",
+    "cat": "technical",
+    "sub": "mechanical_engineering"
+  },
+  {
+    "q": "In a 'Deep Drawing' operation, if the depth of the cup is more than half the diameter, it is called: / यदि कप की गहराई व्यास के आधे से अधिक है, तो इसे कहा जाता है:",
+    "o": ["Shallow drawing", "Deep drawing | डीप ड्राइंग", "Embossing", "None"],
+    "a": 1,
+    "e": "Deep drawing requires multiple stages or 'reductions' to achieve high depth without tearing the metal.",
+    "cat": "technical",
+    "sub": "mechanical_engineering"
+  },
+  {
+    "q": "Which type of press uses a 'Piston and Cylinder' mechanism driven by high-pressure fluid? / किस प्रकार के प्रेस में उच्च दबाव वाले द्रव द्वारा संचालित 'पिस्टन और सिलेंडर' तंत्र का उपयोग किया जाता है?",
+    "o": ["Mechanical press", "Hydraulic press | हाइड्रोलिक प्रेस", "Screw press", "Pneumatic press"],
+    "a": 1,
+    "e": "Hydraulic presses use Pascal's law to provide a slow but very powerful and constant force throughout the stroke.",
+    "cat": "technical",
+    "sub": "mechanical_engineering"
+  },
+  {
+    "q": "What is the function of a 'Flywheel' in a mechanical press? / एक मैकेनिकल प्रेस में 'फ्लाईव्हील' (Flywheel) का कार्य क्या है?",
+    "o": ["To cool the motor", "To store and supply energy during the working stroke | वर्किंग स्ट्रोक के दौरान ऊर्जा संचय और आपूर्ति करना", "To hold the die", "None"],
+    "a": 1,
+    "e": "The flywheel stores energy during the idle period and releases it when the punch hits the metal, maintaining speed.",
+    "cat": "technical",
+    "sub": "mechanical_engineering"
+  },
+  {
+    "q": "Which press tool is responsible for 'holding' the sheet metal against the die during a drawing operation? / ड्राइंग ऑपरेशन के दौरान शीट मेटल को डाई के खिलाफ 'पकड़कर' रखने के लिए कौन सा प्रेस टूल जिम्मेदार है?",
+    "o": ["Punch", "Blank holder | ब्लैंक होल्डर", "Stripper plate", "Bolster plate"],
+    "a": 1,
+    "e": "A blank holder prevents wrinkles from forming by controlling the flow of metal into the die.",
+    "cat": "technical",
+    "sub": "mechanical_engineering"
+  },
+  {
+    "q": "The 'Stroke' of a press is defined as: / प्रेस का 'स्ट्रोक' (Stroke) किसके रूप में परिभाषित किया गया है?",
+    "o": ["Total height of press", "The distance the ram travels from top to bottom position | रैम द्वारा ऊपर से नीचे की स्थिति तक तय की गई दूरी", "Weight of the punch", "None"],
+    "a": 1,
+    "e": "Stroke length determines the maximum depth of the part that can be formed or drawn.",
+    "cat": "technical",
+    "sub": "mechanical_engineering"
+  },
+  {
+    "q": "What is 'Clearance' in press working? / प्रेस वर्किंग में 'क्लियरेंस' (Clearance) क्या है?",
+    "o": ["Cleaning the tools", "Space between the punch and the die | पंच और डाई के बीच की जगह", "Area of the workshop", "None"],
+    "a": 1,
+    "e": "Correct clearance is essential for clean shearing; it is usually expressed as a percentage of the sheet thickness.",
+    "cat": "technical",
+    "sub": "mechanical_engineering"
+  },
+  {
+    "q": "A 'Double Action Press' has: / एक 'डबल एक्शन प्रेस' में होता है:",
+    "o": ["Two motors", "Two independent rams (usually for blank holding and drawing) | दो स्वतंत्र रैम", "Double speed", "None"],
+    "a": 1,
+    "e": "It is commonly used for deep drawing where one ram holds the blank and the other performs the drawing.",
+    "cat": "technical",
+    "sub": "mechanical_engineering"
+  },
+  {
+    "q": "Which press component provides the 'base' for mounting the die assembly? / कौन सा प्रेस घटक डाई असेंबली को माउंट करने के लिए 'आधार' प्रदान करता है?",
+    "o": ["Ram", "Bolster plate | बोल्स्टर प्लेट", "Punch holder", "Flywheel"],
+    "a": 1,
+    "e": "The bolster plate is a thick plate attached to the press bed that supports the die and provides clearance for slugs.",
+    "cat": "technical",
+    "sub": "mechanical_engineering"
+  },
+  {
+    "q": "In a mechanical press, the 'Crankshaft' converts: / एक मैकेनिकल प्रेस में, 'क्रैंकशाफ्ट' क्या बदलता है?",
+    "o": ["Linear motion to rotary", "Rotary motion to linear motion | रोटरी गति को रैखिक गति में", "Heat to energy", "None"],
+    "a": 1,
+    "e": "The circular motion of the motor/flywheel is converted into the up-and-down movement of the ram.",
+    "cat": "technical",
+    "sub": "mechanical_engineering"
+  },
+  {
+    "q": "What is a 'Stripper' in a press tool? / प्रेस टूल में 'स्ट्रिपर' (Stripper) क्या है?",
+    "o": ["A cleaning brush", "A plate used to remove the scrap or part from the punch | पंच से कचरे या हिस्से को हटाने वाली प्लेट", "A type of lubricant", "None"],
+    "a": 1,
+    "e": "Strippers prevent the sheet metal from sticking to the punch as it moves upward after the stroke.",
+    "cat": "technical",
+    "sub": "mechanical_engineering"
+  },
+  {
+    "q": "Which type of press is most suitable for 'Punching' small parts at high speeds? / उच्च गति पर छोटे पुर्जों की 'पंचिंग' के लिए कौन सा प्रेस सबसे उपयुक्त है?",
+    "o": ["Hydraulic press", "Mechanical Gap-frame press | मैकेनिकल गैप-फ्रेम प्रेस", "Pneumatic press", "Hand press"],
+    "a": 1,
+    "e": "Mechanical presses are much faster than hydraulic ones, making them ideal for high-volume blanking and piercing.",
+    "cat": "technical",
+    "sub": "mechanical_engineering"
+  },
+  {
+    "q": "Which forging method uses the 'Impact' of a falling heavy weight to shape the metal? / धातु को आकार देने के लिए गिरते हुए भारी वजन के 'प्रभाव' (Impact) का उपयोग कौन सी विधि करती है?",
+    "o": ["Press forging", "Drop forging | ड्रॉप फोर्जिंग", "Upset forging", "Roll forging"],
+    "a": 1,
+    "e": "Drop forging uses a series of blows from a hammer to force the metal into die cavities.",
+    "cat": "technical",
+    "sub": "mechanical_engineering"
+  },
+  {
+    "q": "What is 'Upset Forging'? / 'अपसेट फोर्जिंग' (Upset Forging) क्या है?",
+    "o": ["Reducing the length and increasing the diameter | लंबाई कम करना और व्यास बढ़ाना", "Reducing the diameter", "Flattening a sheet", "None"],
+    "a": 1,
+    "e": "Upsetting is used to produce parts like bolt heads, where the cross-section of a rod is increased at one end.",
+    "cat": "technical",
+    "sub": "mechanical_engineering"
+  },
+  {
+    "q": "In 'Press Forging', the metal is shaped by: / 'प्रेस फोर्जिंग' में, धातु को आकार दिया जाता है:",
+    "o": ["Sudden impact", "Continuous slow squeezing pressure | निरंतर धीमा निचोड़ने वाला दबाव", "Vibrations", "None"],
+    "a": 1,
+    "e": "Press forging uses hydraulic or mechanical presses to apply pressure steadily, ensuring deformation reaches the core of the part.",
+    "cat": "technical",
+    "sub": "mechanical_engineering"
+  },
+  {
+    "q": "Which forging process is used to reduce the thickness and increase the length of bars using 'Rollers'? / 'रोलर्स' का उपयोग करके बार की मोटाई कम करने और लंबाई बढ़ाने के लिए किस फोर्जिंग प्रक्रिया का उपयोग किया जाता है?",
+    "o": ["Drop forging", "Roll forging | रोल फोर्जिंग", "Upsetting", "None"],
+    "a": 1,
+    "e": "Roll forging uses two semi-cylindrical rollers with grooves to shape a heated metal bar.",
+    "cat": "technical",
+    "sub": "mechanical_engineering"
+  },
+  {
+    "q": "What is 'Flash' in closed-die forging? / क्लोज्ड-डाई फोर्जिंग में 'फ्लैश' (Flash) क्या है?",
+    "o": ["The heat of the metal", "Excess metal that flows out into the gutters of the die | अतिरिक्त धातु जो डाई के गटर में बाहर निकलती है", "A defect", "None"],
+    "a": 1,
+    "e": "Flash ensures the die is completely filled and is later trimmed off the final part.",
+    "cat": "technical",
+    "sub": "mechanical_engineering"
+  },
+  {
+    "q": "Why is 'Forging' preferred over 'Casting' for making high-strength parts like crankshafts? / क्रैंकशाफ्ट जैसे उच्च-मजबूती वाले हिस्से बनाने के लिए 'कास्टिंग' के बजाय 'फोर्जिंग' को क्यों प्राथमिकता दी जाती है?",
+    "o": ["Forging is cheaper", "Forging provides a continuous grain flow following the shape | फोर्जिंग निरंतर ग्रेन फ्लो प्रदान करती है", "Casting is too fast", "None"],
+    "a": 1,
+    "e": "The grain flow in forged parts aligns with the part's contour, providing superior strength and fatigue resistance.",
+    "cat": "technical",
+    "sub": "mechanical_engineering"
+  },
+  {
+    "q": "Which tool is used in 'Smith Forging' to hold the hot metal? / 'स्मिथ फोर्जिंग' में गर्म धातु को पकड़ने के लिए किस उपकरण का उपयोग किया जाता है?",
+    "o": ["Anvil", "Tongs | चिमटा (Tongs)", "Fuller", "Swage"],
+    "a": 1,
+    "e": "Tongs come in various shapes to securely grip different metal profiles during manual forging.",
+    "cat": "technical",
+    "sub": "mechanical_engineering"
+  },
+  {
+    "q": "What is 'Swaging' in forging? / फोर्जिंग में 'स्वेजिंग' (Swaging) क्या है?",
+    "o": ["Increasing diameter", "Reducing the cross-section of a rod or tube using rotating dies | रोटेटिंग डाई का उपयोग करके क्रॉस-सेक्शन कम करना", "Cutting the metal", "None"],
+    "a": 1,
+    "e": "Swaging is used to taper or reduce the size of cylindrical workpieces.",
+    "cat": "technical",
+    "sub": "mechanical_engineering"
+  },
+  {
+    "q": "The main function of an 'Anvil' is: / 'एनविल' (Anvil) का मुख्य कार्य है:",
+    "o": ["To heat the metal", "To act as a heavy support for hammering | हथौड़े मारने के लिए भारी आधार के रूप में कार्य करना", "To measure the part", "None"],
+    "a": 1,
+    "e": "The anvil provides a solid and heavy surface to resist the energy of the hammer blows during smithy work.",
+    "cat": "technical",
+    "sub": "mechanical_engineering"
+  },
+  {
+    "q": "In which forging operation is the metal squeezed between 'rotating' grooved rolls? / किस फोर्जिंग ऑपरेशन में धातु को 'घूमते हुए' खांचेदार रोल के बीच निचोड़ा जाता है?",
+    "o": ["Piercing", "Roll Forging | रोल फोर्जिंग", "Extrusion", "None"],
+    "a": 1,
+    "e": "Roll forging is an efficient way to produce tapered shafts, leaf springs, and hand tools.",
+    "cat": "technical",
+    "sub": "mechanical_engineering"
+  },
+  {
+    "q": "What is 'Hot Working' of metals? / धातुओं की 'हॉट वर्किंग' (Hot Working) क्या है?",
+    "o": ["Working below room temperature", "Working above the recrystallization temperature | पुनरावर्तन तापमान (Recrystallization) से ऊपर कार्य करना", "Working in water", "None"],
+    "a": 1,
+    "e": "Hot working involves deformation at high temperatures where the metal becomes plastic and no strain hardening occurs.",
+    "cat": "technical",
+    "sub": "mechanical_engineering"
+  },
+  {
+    "q": "A major advantage of 'Cold Working' over hot working is: / हॉट वर्किंग की तुलना में 'कोल्ड वर्किंग' का एक मुख्य लाभ है:",
+    "o": ["Lower strength", "Better surface finish and dimensional accuracy | बेहतर सतह फिनिश और आयामी सटीकता", "Easier to deform", "None"],
+    "a": 1,
+    "e": "Cold working produces parts with smooth surfaces and precise dimensions because there is no oxidation or scaling.",
+    "cat": "technical",
+    "sub": "mechanical_engineering"
+  },
+  {
+    "q": "Which process involves reducing the thickness of a metal slab by passing it between two rotating cylinders? / दो घूमते हुए सिलेंडरों के बीच से गुजारकर धातु की स्लैब की मोटाई कम करने की प्रक्रिया कहलाती है?",
+    "o": ["Forging", "Rolling | रोलिंग (Rolling)", "Upsetting", "Piercing"],
+    "a": 1,
+    "e": "Rolling is a bulk deformation process used to produce sheets, strips, and plates.",
+    "cat": "technical",
+    "sub": "mechanical_engineering"
+  },
+  {
+    "q": "What is 'Recrystallization Temperature'? / 'पुनरावर्तन तापमान' (Recrystallization Temperature) क्या है?",
+    "o": ["Temperature of melting", "The temperature at which new strain-free grains are formed | वह तापमान जिस पर नए तनाव-मुक्त दाने बनते हैं", "Boiling point", "None"],
+    "a": 1,
+    "e": "It is the boundary that distinguishes hot working (above) from cold working (below).",
+    "cat": "technical",
+    "sub": "mechanical_engineering"
+  },
+  {
+    "q": "Which 'Hot Working' operation is used to produce seamless tubes? / सीमलेस ट्यूब (बिना जोड़ वाले पाइप) बनाने के लिए किस 'हॉट वर्किंग' ऑपरेशन का उपयोग किया जाता है?",
+    "o": ["Roll forging", "Piercing | पियर्सिंग (Piercing)", "Upsetting", "Smith forging"],
+    "a": 1,
+    "e": "Rotary piercing uses rollers and a mandrel to create a hole in a solid heated billet.",
+    "cat": "technical",
+    "sub": "mechanical_engineering"
+  },
+  {
+    "q": "A disadvantage of 'Hot Working' is: / 'हॉट वर्किंग' का एक नुकसान है:",
+    "o": ["Fast process", "Poor surface finish due to scale formation | स्केल बनने के कारण खराब सतह फिनिश", "Higher strength", "None"],
+    "a": 1,
+    "e": "High temperatures cause the metal surface to react with oxygen, forming a rough oxide layer called 'scale'.",
+    "cat": "technical",
+    "sub": "mechanical_engineering"
+  },
+  {
+    "q": "Which process increases the 'Strength' and 'Hardness' of the metal during deformation? / विरूपण के दौरान धातु की 'मजबूती' और 'कठोरता' को कौन सी प्रक्रिया बढ़ाती है?",
+    "o": ["Hot working", "Cold working (Strain hardening) | कोल्ड वर्किंग", "Annealing", "None"],
+    "a": 1,
+    "e": "Cold working leads to strain hardening, where the metal becomes harder as it is deformed at low temperatures.",
+    "cat": "technical",
+    "sub": "mechanical_engineering"
+  },
+  {
+    "q": "What is 'Smith Forging'? / 'स्मिथ फोर्जिंग' (Smith Forging) क्या है?",
+    "o": ["Mass production in dies", "Manual forging using hammers and an anvil | हथौड़ों और एनविल का उपयोग करके मैन्युअल फोर्जिंग", "Using large presses", "None"],
+    "a": 1,
+    "e": "Smith forging (or open-die forging) is a traditional method used for small quantities or simple repairs.",
+    "cat": "technical",
+    "sub": "mechanical_engineering"
+  },
+  {
+    "q": "In 'Hot Working', the internal 'Blowholes' and porosity are: / 'हॉट वर्किंग' में, आंतरिक 'ब्लोहोल्स' और सरंध्रता (Porosity):",
+    "o": ["Increased", "Closed or welded together | बंद हो जाते हैं या जुड़ जाते हैं", "Turned into cracks", "None"],
+    "a": 1,
+    "e": "The high heat and pressure during hot working help eliminate internal voids, improving the metal's integrity.",
+    "cat": "technical",
+    "sub": "mechanical_engineering"
+  },
+  {
+    "q": "The 'Grain Structure' of a metal after hot working becomes: / हॉट वर्किंग के बाद धातु की 'ग्रेन संरचना' हो जाती है:",
+    "o": ["Coarse and weak", "Refined and more uniform | परिष्कृत और अधिक समान", "Brittle", "None"],
+    "a": 1,
+    "e": "Hot working breaks down large grains and reforms them into smaller, more uniform grains, improving toughness.",
+    "cat": "technical",
+    "sub": "mechanical_engineering"
+  },
+  {
+    "q": "Which type of test involves breaking or damaging the weld specimen to check its strength? / वेल्ड की मजबूती जांचने के लिए किस प्रकार के परीक्षण में नमूने को तोड़ना या नुकसान पहुँचाना शामिल है?",
+    "o": ["Non-Destructive Test (NDT)", "Destructive Test (DT) | विनाशकारी परीक्षण (DT)", "Visual Test", "Magnetic Test"],
+    "a": 1,
+    "e": "Destructive tests like Tensile, Bend, and Impact tests are used to determine the mechanical properties by destroying the sample.",
+    "cat": "technical",
+    "sub": "welding_inspection"
+  },
+  {
+    "q": "The 'Magnetic Particle Test' (MPT) is used to detect: / 'मैग्नेटिक पार्टिकल टेस्ट' (MPT) का उपयोग क्या पता लगाने के लिए किया जाता है?",
+    "o": ["Internal blowholes", "Surface and sub-surface defects in ferromagnetic materials | सतह और उप-सतह दोष", "Chemical composition", "Weight"],
+    "a": 1,
+    "e": "MPT uses magnetic fields and iron powder to reveal cracks on or just below the surface of iron-based metals.",
+    "cat": "technical",
+    "sub": "welding_inspection"
+  },
+  {
+    "q": "Which NDT method uses 'High-frequency sound waves' to find internal defects? / आंतरिक दोषों का पता लगाने के लिए कौन सी NDT विधि 'उच्च-आवृत्ति ध्वनि तरंगों' का उपयोग करती है?",
+    "o": ["Radiography", "Ultrasonic Test | अल्ट्रासोनिक टेस्ट", "Dye Penetrant", "Visual Inspection"],
+    "a": 1,
+    "e": "Ultrasonic testing (UT) transmits sound waves into the metal; reflections from defects help locate them accurately.",
+    "cat": "technical",
+    "sub": "welding_inspection"
+  },
+  {
+    "q": "In 'Radiographic Testing' (X-ray/Gamma ray), the internal defects appear on: / 'रेडियोग्राफिक टेस्टिंग' में, आंतरिक दोष कहाँ दिखाई देते हैं?",
+    "o": ["A computer screen only", "A photographic film | फोटोग्राफिक फिल्म (Film)", "The metal surface", "None"],
+    "a": 1,
+    "e": "Radiography produces a 'shadow' image of the internal structure, where voids appear as darker spots on the film.",
+    "cat": "technical",
+    "sub": "welding_inspection"
+  },
+  {
+    "q": "Which defect is characterized by a 'groove' melted into the base metal at the edge of the weld? / वेल्ड के किनारे पर बेस मेटल में पिघली हुई 'नाली' (Groove) किस दोष की विशेषता है?",
+    "o": ["Porosity", "Undercut | अंडरकट (Undercut)", "Spatter", "Slag Inclusion"],
+    "a": 1,
+    "e": "Undercut is a major defect caused by excessive current or improper torch angle, which reduces the joint's fatigue strength.",
+    "cat": "technical",
+    "sub": "welding_defects"
+  },
+  {
+    "q": "What is the 'Remedy' for 'Porosity' in a weld? / वेल्ड में 'पोरोसिटी' (Porosity) का 'निवारण' क्या है?",
+    "o": ["Increase moisture", "Proper cleaning of base metal and using dry electrodes | बेस मेटल की सफाई और सूखे इलेक्ट्रोड का उपयोग", "Increasing current to maximum", "None"],
+    "a": 1,
+    "e": "Porosity is caused by trapped gases; keeping the joint clean and moisture-free prevents gas bubbles.",
+    "cat": "technical",
+    "sub": "welding_defects"
+  },
+  {
+    "q": "Which NDT method is most effective for checking 'Internal' slag inclusions and voids in very thick sections? / बहुत मोटे वर्गों में 'आंतरिक' स्लैग इंक्लूजन और रिक्तियों की जांच के लिए कौन सी NDT विधि सबसे प्रभावी है?",
+    "o": ["Magnetic Particle", "Radiography or Ultrasonic Testing | रेडियोग्राफी या अल्ट्रासोनिक", "Dye Penetrant", "Visual"],
+    "a": 1,
+    "e": "Both RT and UT can penetrate deep into the metal to reveal hidden internal defects.",
+    "cat": "technical",
+    "sub": "welding_inspection"
+  },
+  {
+    "q": "What causes 'Spatter' in arc welding? / आर्क वेल्डिंग में 'स्पैटर' (Spatter) किसके कारण होता है?",
+    "o": ["Low voltage", "Too high current or too long arc | बहुत अधिक करंट या बहुत लंबी आर्क", "Clean base metal", "None"],
+    "a": 1,
+    "e": "Spatter consists of small metal droplets thrown out of the arc that stick to the work surface.",
+    "cat": "technical",
+    "sub": "welding_defects"
+  },
+  {
+    "q": "A 'Hot Crack' in welding occurs: / वेल्डिंग में 'हॉट क्रैक' (Hot Crack) होता है:",
+    "o": ["During solidification at high temperature | उच्च तापमान पर जमने के दौरान", "After two days of welding", "Only in winter", "None"],
+    "a": 0,
+    "e": "Hot cracks occur during the cooling phase when the metal is still in a brittle, near-liquid state.",
+    "cat": "technical",
+    "sub": "welding_defects"
+  },
+  {
+    "q": "The 'Visual Inspection' of a weld can detect: / वेल्ड का 'दृश्य निरीक्षण' (Visual Inspection) क्या पता लगा सकता है?",
+    "o": ["Internal pores", "Surface cracks, undercut, and bead profile | सतह की दरारें, अंडरकट और बीड प्रोफाइल", "Internal stress", "None"],
+    "a": 1,
+    "e": "Visual inspection is the first and simplest NDT method used to check the external quality of the weld.",
+    "cat": "technical",
+    "sub": "welding_inspection"
+  },
+  {
+    "q": "Which type of flame is most commonly used for gas welding of 'Ferrous Metals' like Mild Steel? / माइल्ड स्टील जैसी 'लौह धातुओं' (Ferrous Metals) की गैस वेल्डिंग के लिए आमतौर पर किस प्रकार की ज्वाला का उपयोग किया जाता है?",
+    "o": ["Oxidizing flame", "Neutral flame | न्यूट्रल फ्लेम (Neutral)", "Carburizing flame", "None"],
+    "a": 1,
+    "e": "A neutral flame provides the required heat without adding or removing carbon or oxygen from the ferrous base metal.",
+    "cat": "technical",
+    "sub": "welding_technology"
+  },
+  {
+    "q": "The 'Filler Rod' used for gas welding of ferrous metals should ideally have: / लौह धातुओं की गैस वेल्डिंग के लिए उपयोग की जाने वाली 'फिलर रॉड' में आदर्श रूप से होना चाहिए:",
+    "o": ["Different composition than base metal", "Same composition as the base metal | बेस मेटल के समान संरचना", "Only plastic material", "None"],
+    "a": 1,
+    "e": "To ensure a homogeneous and strong joint, the filler rod should match the chemical and physical properties of the ferrous metal being welded.",
+    "cat": "technical",
+    "sub": "welding_technology"
+  },
+  {
+    "q": "What is a major 'Merit' (Advantage) of a welded joint compared to a riveted joint? / रिवेटेड जोड़ की तुलना में वेल्डेड जोड़ का मुख्य 'गुण' (लाभ) क्या है?",
+    "o": ["It is heavier", "Lighter weight and high joint efficiency | हल्का वजन और उच्च जोड़ दक्षता", "Easy to dismantle", "None"],
+    "a": 1,
+    "e": "Welded joints eliminate the need for gusset plates and rivets, making the structure lighter and often stronger than the parent metal.",
+    "cat": "technical",
+    "sub": "welding_technology"
+  },
+  {
+    "q": "A 'Demerit' (Disadvantage) of welded joints is: / वेल्डेड जोड़ों का एक 'दोष' (नुकसान) है:",
+    "o": ["High strength", "Requirement of highly skilled labor and expensive inspection | अत्यधिक कुशल श्रम और महंगी निरीक्षण की आवश्यकता", "No noise during fabrication", "None"],
+    "a": 1,
+    "e": "Welding quality depends heavily on the welder's skill, and internal defects are difficult to detect without specialized testing.",
+    "cat": "technical",
+    "sub": "welding_technology"
+  },
+  {
+    "q": "Which welding technique is used for ferrous plates thicker than 5mm in gas welding? / गैस वेल्डिंग में 5 मिमी से मोटी लौह प्लेटों के लिए किस वेल्डिंग तकनीक का उपयोग किया जाता है?",
+    "o": ["Leftward welding", "Rightward (Backhand) welding | राइटवर्ड (Backhand) वेल्डिंग", "Vertical welding", "None"],
+    "a": 1,
+    "e": "Rightward welding concentrates more heat on the weld pool, allowing for better penetration in thicker ferrous plates.",
+    "cat": "technical",
+    "sub": "welding_technology"
+  },
+  {
+    "q": "In an 'Oxidizing Flame', the excess oxygen is used for welding: / 'ऑक्सीडाइजिंग फ्लेम' में, अतिरिक्त ऑक्सीजन का उपयोग किसकी वेल्डिंग के लिए किया जाता है?",
+    "o": ["Steel", "Copper-base metals (Brass/Bronze) | तांबा-आधारित धातुएं", "Lead", "Aluminum"],
+    "a": 1,
+    "e": "An oxidizing flame is used for brass to form a protective layer of zinc oxide on the pool.",
+    "cat": "technical",
+    "sub": "welding_technology"
+  },
+  {
+    "q": "What is the primary function of 'Coating' on some ferrous filler rods? / कुछ लौह फिलर रॉड्स पर 'कोटिंग' का प्राथमिक कार्य क्या है?",
+    "o": ["To make them shine", "To prevent oxidation and add alloying elements | ऑक्सीकरण रोकना और मिश्र धातु तत्वों को जोड़ना", "To increase weight", "None"],
+    "a": 1,
+    "e": "The coating (flux) protects the molten metal from atmospheric contamination during the gas welding process.",
+    "cat": "technical",
+    "sub": "welding_technology"
+  },
+  {
+    "q": "Welded joints are considered 'Permanent' joints because: / वेल्डेड जोड़ों को 'स्थायी' जोड़ माना जाता है क्योंकि:",
+    "o": ["They can be unscrewed", "They cannot be separated without destroying the joint | उन्हें बिना नष्ट किए अलग नहीं किया जा सकता", "They are made of metal", "None"],
+    "a": 1,
+    "e": "The fusion of base metals creates a continuous structure that is permanent in nature.",
+    "cat": "technical",
+    "sub": "welding_technology"
+  },
+  {
+    "q": "Residual stresses in welded joints are caused by: / वेल्डेड जोड़ों में अवशिष्ट तनाव (Residual stresses) किसके कारण होते हैं?",
+    "o": ["Correct cooling", "Non-uniform heating and cooling | असमान तापन और शीतलन", "Low current", "None"],
+    "a": 1,
+    "e": "Localized heating causes expansion and subsequent contraction, which leads to internal stresses if not properly managed.",
+    "cat": "technical",
+    "sub": "welding_technology"
+  },
+  {
+    "q": "Which joint is easier to inspect visually for surface defects? / सतह के दोषों के लिए किस जोड़ का दृश्य निरीक्षण (Visual inspection) करना आसान है?",
+    "o": ["Butt joint | बट जॉइंट (Butt joint)", "Fillet joint", "Lap joint", "All are same"],
+    "a": 0,
+    "e": "Butt joints allow for easy inspection of penetration and bead profile from both sides.",
+    "cat": "technical",
+    "sub": "welding_technology"
+  },
+  {
+    "q": "What is the main difference between 'Soldering' and 'Brazing'? / 'सोल्डरिंग' और 'ब्रेजिंग' में मुख्य अंतर क्या है?",
+    "o": ["Color of the metal", "The melting point of the filler metal | फिलर धातु का गलनांक", "Type of flux", "None"],
+    "a": 1,
+    "e": "Soldering is done below 450 °C, while brazing is done above 450 °C (but below the melting point of the base metal).",
+    "cat": "technical",
+    "sub": "welding_technology"
+  },
+  {
+    "q": "Which filler metal is commonly used in 'Soldering'? / 'सोल्डरिंग' में आमतौर पर किस फिलर धातु का उपयोग किया जाता है?",
+    "o": ["Copper-Zinc alloy", "Lead-Tin alloy (Soft solder) | लेड-टिन मिश्र धातु", "Aluminum", "Iron rod"],
+    "a": 1,
+    "e": "Soft solder is an alloy of Lead (Pb) and Tin (Sn) with a low melting point, ideal for electrical joints.",
+    "cat": "technical",
+    "sub": "welding_technology"
+  },
+  {
+    "q": "What is 'Spelter' in the context of Brazing? / ब्रेजिंग के संदर्भ में 'स्पैल्टर' (Spelter) क्या है?",
+    "o": ["A type of gas", "A hard filler metal (usually Copper-Zinc alloy) | एक कठोर फिलर धातु (तांबा-जस्ता मिश्र धातु)", "The welding torch", "None"],
+    "a": 1,
+    "e": "Spelter is the traditional name for the brass-based filler material used in the brazing process.",
+    "cat": "technical",
+    "sub": "welding_technology"
+  },
+  {
+    "q": "In 'Brazing', the filler metal enters the joint through: / 'ब्रेजिंग' में, फिलर धातु जोड़ में किसके माध्यम से प्रवेश करती है?",
+    "o": ["Gravity only", "Capillary action | केशिकीय क्रिया (Capillary action)", "Pressure", "None"],
+    "a": 1,
+    "e": "Capillary action draws the molten filler into the tight gap between the workpieces, creating a strong bond.",
+    "cat": "technical",
+    "sub": "welding_technology"
+  },
+  {
+    "q": "Which gas welding technique involves moving the torch from 'Right to Left'? / किस गैस वेल्डिंग तकनीक में टॉर्च को 'दाएं से बाएं' (Right to Left) ले जाया जाता है?",
+    "o": ["Rightward welding", "Leftward welding (Forehand) | लेफ्टवर्ड वेल्डिंग", "Vertical welding", "None"],
+    "a": 1,
+    "e": "In leftward welding, the torch follows the filler rod, commonly used for plates up to 5mm thick.",
+    "cat": "technical",
+    "sub": "welding_technology"
+  },
+  {
+    "q": "The 'Rightward' (Backhand) welding technique is preferred for: / 'राइटवर्ड' (Backhand) वेल्डिंग तकनीक किसके लिए पसंद की जाती है?",
+    "o": ["Thin sheets", "Thicker plates (above 5mm) | मोटी प्लेटें (5 मिमी से ऊपर)", "Plastics", "None"],
+    "a": 1,
+    "e": "Rightward welding provides better heat concentration and better visibility of the weld pool for thick materials.",
+    "cat": "technical",
+    "sub": "welding_technology"
+  },
+  {
+    "q": "What is the function of 'Flux' in Soldering and Brazing? / सोल्डरिंग और ब्रेजिंग में 'फ्लक्स' का कार्य क्या है?",
+    "o": ["To cool the joint", "To remove oxides and promote wetting of the surface | ऑक्साइड हटाना और सतह के गीलेपन (Wetting) को बढ़ावा देना", "To add color", "None"],
+    "a": 1,
+    "e": "Flux prevents re-oxidation during heating and allows the molten filler to flow and bond properly with the base metal.",
+    "cat": "technical",
+    "sub": "welding_technology"
+  },
+  {
+    "q": "Which process produces the 'strongest' joint among these three? / इन तीनों में से कौन सी प्रक्रिया 'सबसे मजबूत' जोड़ बनाती है?",
+    "o": ["Soldering", "Brazing", "Welding | वेल्डिंग (Welding)", "All are same"],
+    "a": 2,
+    "e": "Welding is strongest because the base metals themselves are melted and fused together, whereas soldering and brazing only use a filler metal.",
+    "cat": "technical",
+    "sub": "welding_technology"
+  },
+  {
+    "q": "What is a 'Multi-stage Regulator' in gas welding? / गैस वेल्डिंग में 'मल्टी-स्टेज रेगुलेटर' क्या है?",
+    "o": ["To change flame color", "To reduce high cylinder pressure to a constant working pressure in two steps | सिलेंडर प्रेशर को वर्किंग प्रेशर में बदलना", "To mix gases", "None"],
+    "a": 1,
+    "e": "Multi-stage regulators provide a more steady gas flow compared to single-stage ones as the cylinder pressure drops.",
+    "cat": "technical",
+    "sub": "welding_technology"
+  },
+  {
+    "q": "Why is Acetylene stored in a 'dissolved' state in Acetone? / एसिटिलीन को एसीटोन में 'घुली हुई' अवस्था में क्यों संग्रहित किया जाता है?",
+    "o": ["To make it smell good", "Because free Acetylene is highly unstable at high pressure | क्योंकि मुक्त एसिटिलीन उच्च दबाव पर अत्यधिक अस्थिर होती है", "To increase weight", "None"],
+    "a": 1,
+    "e": "Acetylene cylinders are filled with a porous material soaked in acetone to safely store the gas at high pressure.",
+    "cat": "technical",
+    "sub": "welding_technology"
+  },
+  {
+    "q": "Which welding process uses 'High-Frequency Vibrations' to join thin foils or plastics? / पतली पन्नी (Foils) या प्लास्टिक को जोड़ने के लिए कौन सी वेल्डिंग प्रक्रिया 'उच्च-आवृत्ति कंपन' का उपयोग करती है?",
+    "o": ["Induction welding", "Ultrasonic welding | अल्ट्रासोनिक वेल्डिंग", "Gas welding", "Thermit welding"],
+    "a": 1,
+    "e": "Ultrasonic welding converts high-frequency electrical energy into mechanical vibrations to create a solid-state weld without melting the material.",
+    "cat": "technical",
+    "sub": "welding_technology"
+  },
+  {
+    "q": "In 'Induction Welding', heat is generated by: / 'इंडक्शन वेल्डिंग' में, ऊष्मा किसके द्वारा उत्पन्न होती है?",
+    "o": ["Chemical reaction", "Electromagnetic induction (Eddy currents) | विद्युत चुम्बकीय प्रेरण (एडी करंट)", "Friction", "Plasma arc"],
+    "a": 1,
+    "e": "High-frequency alternating current is passed through an induction coil, which creates eddy currents and heat within the conductive workpieces.",
+    "cat": "technical",
+    "sub": "welding_technology"
+  },
+  {
+    "q": "What is the temperature of an 'Oxy-Acetylene' flame approximately? / 'ऑक्सी-एसिटिलीन' ज्वाला का तापमान लगभग कितना होता है?",
+    "o": ["1000 °C", "2000 °C", "3200 °C | 3200 °C", "5000 °C"],
+    "a": 2,
+    "e": "The combustion of oxygen and acetylene produces one of the hottest gas flames, capable of melting most metals.",
+    "cat": "technical",
+    "sub": "welding_technology"
+  },
+  {
+    "q": "Which type of flame is used for welding 'Low Carbon Steel'? / 'लो कार्बन स्टील' की वेल्डिंग के लिए किस प्रकार की ज्वाला का उपयोग किया जाता है?",
+    "o": ["Oxidizing flame", "Neutral flame | न्यूट्रल फ्लेम (Neutral)", "Carburizing flame", "None"],
+    "a": 1,
+    "e": "A neutral flame has an equal ratio of oxygen and acetylene, ensuring no chemical change in the weld metal.",
+    "cat": "technical",
+    "sub": "welding_technology"
+  },
+  {
+    "q": "The 'Oxidizing Flame' is characterized by: / 'ऑक्सीडाइजिंग फ्लेम' (Oxidizing Flame) की विशेषता क्या है?",
+    "o": ["Excess of acetylene", "Excess of oxygen | ऑक्सीजन की अधिकता", "Equal ratio", "None"],
+    "a": 1,
+    "e": "It has an inner cone that is shorter and sharper, producing a roaring sound; used for welding brass and bronze.",
+    "cat": "technical",
+    "sub": "welding_technology"
+  },
+  {
+    "q": "In 'Gas Welding', the 'Filler Rod' is used to: / 'गैस वेल्डिंग' में, 'फिलर रॉड' का उपयोग किया जाता है:",
+    "o": ["Clean the metal", "Supply additional metal to the weld joint | वेल्ड जोड़ में अतिरिक्त धातु की आपूर्ति करना", "Hold the torch", "None"],
+    "a": 1,
+    "e": "Filler rods match the composition of the base metal and help fill the gap in the joint.",
+    "cat": "technical",
+    "sub": "welding_technology"
+  },
+  {
+    "q": "What is 'Flame Cutting' (Oxy-fuel cutting)? / 'फ्लेम कटिंग' (Flame Cutting) क्या है?",
+    "o": ["Joining two metals", "Rapid oxidation of metal at high temperature using oxygen jet | ऑक्सीजन जेट का उपयोग करके धातु का तेजी से ऑक्सीकरण", "Polishing metal", "None"],
+    "a": 1,
+    "e": "The metal is heated to its ignition temperature, and a high-pressure oxygen stream is used to burn and blow away the metal.",
+    "cat": "technical",
+    "sub": "welding_technology"
+  },
+  {
+    "q": "Which flame type has 'three' distinct zones or cones? / किस ज्वाला (Flame) प्रकार में 'तीन' अलग-अलग क्षेत्र या शंकु होते हैं?",
+    "o": ["Neutral flame", "Carburizing flame | कार्बराइजिंग फ्लेम", "Oxidizing flame", "None"],
+    "a": 1,
+    "e": "The carburizing (reducing) flame has an inner cone, an intermediate 'acetylene feather', and an outer envelope.",
+    "cat": "technical",
+    "sub": "welding_technology"
+  },
+  {
+    "q": "What is the primary advantage of 'Ultrasonic Welding'? / 'अल्ट्रासोनिक वेल्डिंग' का प्राथमिक लाभ क्या है?",
+    "o": ["Can weld very thick steel", "Can join dissimilar materials and thin foils without melting | विभिन्न सामग्रियों और पतली पन्नी को बिना पिघलाए जोड़ना", "Very slow process", "None"],
+    "a": 1,
+    "e": "It is fast, clean, and ideal for micro-electronics and packaging where heat must be minimized.",
+    "cat": "technical",
+    "sub": "welding_technology"
+  },
+  {
+    "q": "A 'Flashback' in gas welding occurs when: / गैस वेल्डिंग में 'फ्लैशबैक' तब होता है जब:",
+    "o": ["The cylinder is full", "The flame travels back into the torch or hoses | ज्वाला टॉर्च या होसेस में वापस चली जाती है", "The light is too bright", "None"],
+    "a": 1,
+    "e": "Flashbacks are dangerous and require 'Flashback Arrestors' to prevent the flame from reaching the cylinders.",
+    "cat": "technical",
+    "sub": "welding_technology"
+  },
+  {
+    "q": "What is 'Undercut' in welding? / वेल्डिंग में 'अंडरकट' (Undercut) क्या है?",
+    "o": ["A deep weld", "A groove melted into the base metal next to the weld toe | वेल्ड के किनारे बेस मेटल में बनी नाली", "A type of electrode", "None"],
+    "a": 1,
+    "e": "Undercut is a common defect caused by high current or incorrect electrode angle, weakening the joint.",
+    "cat": "technical",
+    "sub": "welding_technology"
+  },
+  {
+    "q": "Which defect is caused by the 'trapped' slag within the weld metal? / वेल्ड धातु के भीतर 'फंसी हुई' स्लैग के कारण कौन सा दोष होता है?",
+    "o": ["Porosity", "Slag Inclusion | स्लैग इंक्लूजन", "Spatter", "Undercut"],
+    "a": 1,
+    "e": "It occurs when the molten slag is not removed between passes or is trapped by improper welding technique.",
+    "cat": "technical",
+    "sub": "welding_technology"
+  },
+  {
+    "q": "The 'Dye Penetrant Test' is used to detect: / 'डाई पेनेट्रेंट टेस्ट' का उपयोग क्या पता लगाने के लिए किया जाता है?",
+    "o": ["Internal holes", "Surface cracks and defects | सतह की दरारें और दोष", "Metal thickness", "None"],
+    "a": 1,
+    "e": "It is a Non-Destructive Testing (NDT) method that uses a colored dye to make surface flaws visible.",
+    "cat": "technical",
+    "sub": "welding_technology"
+  },
+  {
+    "q": "Which NDT method is best for detecting 'Internal' blowholes and voids in a weld? / वेल्ड में 'आंतरिक' ब्लोहोल्स और रिक्तियों का पता लगाने के लिए कौन सी NDT विधि सबसे अच्छी है?",
+    "o": ["Visual inspection", "Radiographic Testing (X-ray) | रेडियोग्राफिक टेस्टिंग (एक्स-रे)", "Dye penetrant", "None"],
+    "a": 1,
+    "e": "X-rays can pass through the metal and create an image of the internal structure on a film.",
+    "cat": "technical",
+    "sub": "welding_technology"
+  },
+  {
+    "q": "What is 'Incomplete Penetration'? / 'अपूर्ण पेनेट्रेशन' (Incomplete Penetration) क्या है?",
+    "o": ["Too much metal", "Weld metal fails to reach the root of the joint | वेल्ड धातु का जोड़ की जड़ (Root) तक न पहुँच पाना", "Broken electrode", "None"],
+    "a": 1,
+    "e": "This leads to a weak joint that may fail under load, often caused by incorrect joint design or low current.",
+    "cat": "technical",
+    "sub": "welding_technology"
+  },
+  {
+    "q": "Which eye protection is mandatory during 'Arc Welding' to prevent 'Arc Eye'? / 'आर्क आई' से बचने के लिए आर्क वेल्डिंग के दौरान कौन सा आंखों का संरक्षण अनिवार्य है?",
+    "o": ["Sunglasses", "Welding Helmet with filter lens | फिल्टर लेंस वाला वेल्डिंग हेलमेट", "Safety goggles", "None"],
+    "a": 1,
+    "e": "The dark filter lens protects the eyes from intense Ultraviolet (UV) and Infrared (IR) radiation.",
+    "cat": "technical",
+    "sub": "welding_technology"
+  },
+  {
+    "q": "What is 'Weld Spatter'? / 'वेल्ड स्पैटर' (Weld Spatter) क्या है?",
+    "o": ["Molten metal particles sticking to base metal | बेस मेटल पर चिपकने वाले पिघले हुए धातु के कण", "A cleaning liquid", "A type of joint", "None"],
+    "a": 0,
+    "e": "Spatter is undesirable and is often caused by excessive current or a very long arc.",
+    "cat": "technical",
+    "sub": "welding_technology"
+  },
+  {
+    "q": "The term 'Heat Affected Zone' (HAZ) refers to: / 'हीट अफेक्टेड ज़ोन' (HAZ) शब्द का तात्पर्य है:",
+    "o": ["The weld metal itself", "The portion of base metal not melted but changed in properties | बेस मेटल का वह हिस्सा जो पिघला नहीं पर बदल गया", "The electrode", "None"],
+    "a": 1,
+    "e": "The intense heat changes the microstructure of the surrounding metal, which can lead to localized weakness.",
+    "cat": "technical",
+    "sub": "welding_technology"
+  },
+  {
+    "q": "Which type of 'Cracking' occurs immediately after welding as the metal cools? / वेल्डिंग के तुरंत बाद धातु के ठंडे होने पर किस प्रकार की 'क्रैकिंग' होती है?",
+    "o": ["Cold Cracking", "Hot Cracking | हॉट क्रैकिंग", "Stress corrosion", "None"],
+    "a": 1,
+    "e": "Hot cracking occurs at high temperatures during solidification, often due to impurities like sulfur.",
+    "cat": "technical",
+    "sub": "welding_technology"
+  },
+  {
+    "q": "What is the purpose of 'Post-Weld Heat Treatment' (PWHT)? / 'पोस्ट-वेल्ड हीट ट्रीटमेंट' (PWHT) का उद्देश्य क्या है?",
+    "o": ["To paint the metal", "To relieve residual stresses and improve ductility | अवशिष्ट तनाव को कम करना और लचीलापन बढ़ाना", "To cool it fast", "None"],
+    "a": 1,
+    "e": "PWHT helps prevent brittle failure and cracking by relaxing the internal stresses created by the welding heat.",
+    "cat": "technical",
+    "sub": "welding_technology"
+  },
+  {
+    "q": "Which type of welding is mostly used for joining 'Polymer' sheets or plastics? / 'पॉलिमर' शीट या प्लास्टिक को जोड़ने के लिए मुख्य रूप से किस प्रकार की वेल्डिंग का उपयोग किया जाता है?",
+    "o": ["Arc welding", "Ultrasonic welding | अल्ट्रासोनिक वेल्डिंग", "Thermit welding", "MIG welding"],
+    "a": 1,
+    "e": "Ultrasonic welding uses high-frequency vibrations to create localized heat and join materials, especially plastics and thin foils.",
+    "cat": "technical",
+    "sub": "welding_technology"
+  },
+  {
+    "q": "In 'Laser Beam Welding', the power source is: / 'लेजर बीम वेल्डिंग' में, शक्ति का स्रोत है:",
+    "o": ["Electric arc", "Coherent light beam | सुसंगत प्रकाश पुंज (Coherent light)", "Burning gas", "None"],
+    "a": 1,
+    "e": "Laser welding uses a concentrated beam of light to melt the interface, allowing for high speed and precision.",
+    "cat": "technical",
+    "sub": "welding_technology"
+  },
+  {
+    "q": "Which resistance welding process uses a 'series of small projections' on one of the workpieces? / किस रेजिस्टेंस वेल्डिंग प्रक्रिया में वर्कपीस में से एक पर 'छोटे उभारों की एक श्रृंखला' (Projections) का उपयोग किया जाता है?",
+    "o": ["Spot welding", "Projection welding | प्रोजेक्शन वेल्डिंग", "Seam welding", "Butt welding"],
+    "a": 1,
+    "e": "Projection welding localizes the heat and pressure at the projections, allowing multiple spots to be welded at once.",
+    "cat": "technical",
+    "sub": "welding_technology"
+  },
+  {
+    "q": "What is 'Flash Butt Welding' used for? / 'फ्लैश बट वेल्डिंग' का उपयोग किसके लिए किया जाता है?",
+    "o": ["Joining thin sheets", "Joining heavy sections like rails and pipes end-to-end | भारी रेल और पाइपों को सिरे से जोड़ने के लिए", "Under water welding", "None"],
+    "a": 1,
+    "e": "It produces a flash of metal during the heating cycle, which cleans the surfaces before they are pressed together for a strong weld.",
+    "cat": "technical",
+    "sub": "welding_technology"
+  },
+  {
+    "q": "In 'Plasma Arc Welding' (PAW), the 'Pilot Arc' is struck between: / 'प्लाज्मा आर्क वेल्डिंग' (PAW) में, 'पायलट आर्क' किसके बीच बनता है?",
+    "o": ["Electrode and workpiece", "Electrode and nozzle | इलेक्ट्रोड और नोजल के बीच", "Two electrodes", "None"],
+    "a": 1,
+    "e": "The pilot arc is a low-energy arc that ionizes the gas to help initiate the main welding arc.",
+    "cat": "technical",
+    "sub": "welding_technology"
+  },
+  {
+    "q": "The primary cause of 'Cracking' in the Heat Affected Zone (HAZ) is: / हीट अफेक्टेड ज़ोन (HAZ) में 'क्रैकिंग' का प्राथमिक कारण है:",
+    "o": ["Low temperature", "Hydrogen embrittlement | हाइड्रोजन एम्ब्रिटलमेंट (Hydrogen)", "Excessive flux", "None"],
+    "a": 1,
+    "e": "Hydrogen atoms trapped in the steel can cause brittle fractures, especially in high-strength steels.",
+    "cat": "technical",
+    "sub": "welding_technology"
+  },
+  {
+    "q": "What is 'Cold Welding'? / 'कोल्ड वेल्डिंग' (Cold Welding) क्या है?",
+    "o": ["Welding in snow", "Joining materials using high pressure without applying heat | बिना गर्मी के केवल उच्च दबाव का उपयोग करके जोड़ना", "Using ice", "None"],
+    "a": 1,
+    "e": "Cold welding occurs when the surface oxide layers are removed under pressure, allowing metallic atoms to bond.",
+    "cat": "technical",
+    "sub": "welding_technology"
+  },
+  {
+    "q": "Which shielding gas is a mixture of Argon and Carbon Dioxide ($CO_2$)? / कौन सी शील्डिंग गैस आर्गन और कार्बन डाइऑक्साइड ($CO_2$) का मिश्रण है?",
+    "o": ["C-25 gas | C-25 गैस", "Pure Oxygen", "Helium", "None"],
+    "a": 0,
+    "e": "A mixture (typically 75% Argon and 25% $CO_2$) is commonly used in MIG welding for better arc stability and less spatter.",
+    "cat": "technical",
+    "sub": "welding_technology"
+  },
+  {
+    "q": "In 'Atomic Hydrogen Welding', the arc is produced between: / 'एटॉमिक हाइड्रोजन वेल्डिंग' में, आर्क किसके बीच उत्पन्न होता है?",
+    "o": ["Work and electrode", "Two tungsten electrodes | दो टंगस्टन इलेक्ट्रोड के बीच", "Work and flux", "None"],
+    "a": 1,
+    "e": "The hydrogen gas dissociates into atoms in the arc and recombines at the surface, releasing intense heat.",
+    "cat": "technical",
+    "sub": "welding_technology"
+  },
+  {
+    "q": "What is 'Stud Welding'? / 'स्टड वेल्डिंग' (Stud Welding) क्या है?",
+    "o": ["Welding pipes", "Joining a metal stud (bolt) to a base plate | बेस प्लेट में मेटल स्टड (बोल्ट) को जोड़ना", "Welding gold", "None"],
+    "a": 1,
+    "e": "It is a specialized process where a threaded bolt or stud is welded onto another metal part using arc or resistance heating.",
+    "cat": "technical",
+    "sub": "welding_technology"
+  },
+  {
+    "q": "Which type of 'Resistance Welding' is used to join thin sheets at specific points? / पतली चादरों को विशिष्ट बिंदुओं पर जोड़ने के लिए किस प्रकार की 'रेजिस्टेंस वेल्डिंग' का उपयोग किया जाता है?",
+    "o": ["Seam welding", "Spot welding | स्पॉट वेल्डिंग", "Butt welding", "Thermit welding"],
+    "a": 1,
+    "e": "Spot welding uses two copper electrodes to apply pressure and current to a small area, creating a 'nugget' joint.",
+    "cat": "technical",
+    "sub": "welding_technology"
+  },
+  {
+    "q": "What is 'Seam Welding'? / 'सीम वेल्डिंग' (Seam Welding) क्या है?",
+    "o": ["Single spot weld", "A continuous line of overlapping spot welds | ओवरलैपिंग स्पॉट वेल्ड की एक निरंतर रेखा", "Welding underwater", "None"],
+    "a": 1,
+    "e": "Seam welding uses rotating wheel electrodes to produce a leak-proof continuous joint, common in fuel tanks.",
+    "cat": "technical",
+    "sub": "welding_technology"
+  },
+  {
+    "q": "Which welding process uses a chemical reaction between Aluminum and Iron Oxide to produce heat? / ऊष्मा उत्पन्न करने के लिए एल्यूमीनियम और आयरन ऑक्साइड के बीच रासायनिक प्रतिक्रिया का उपयोग कौन सी प्रक्रिया करती है?",
+    "o": ["Laser welding", "Thermit welding | थर्मिट वेल्डिंग", "Friction welding", "None"],
+    "a": 1,
+    "e": "Thermit welding is widely used for joining railway tracks in remote locations without electrical power.",
+    "cat": "technical",
+    "sub": "welding_technology"
+  },
+  {
+    "q": "In 'Friction Welding', heat is generated by: / 'फ्रिक्शन वेल्डिंग' में, ऊष्मा किसके द्वारा उत्पन्न होती है?",
+    "o": ["Electric arc", "Mechanical rubbing between two surfaces | दो सतहों के बीच यांत्रिक रगड़ (Friction)", "Burning gas", "None"],
+    "a": 1,
+    "e": "One part is rotated at high speed against a stationary part under pressure until the interface becomes plastic.",
+    "cat": "technical",
+    "sub": "welding_technology"
+  },
+  {
+    "q": "Which advanced welding process requires a 'Vacuum' chamber to prevent scattering of the beam? / बीम के बिखरने को रोकने के लिए किस एडवांस वेल्डिंग प्रक्रिया को 'वैक्यूम' (Vacuum) चैंबर की आवश्यकता होती है?",
+    "o": ["Laser beam welding", "Electron beam welding | इलेक्ट्रॉन बीम वेल्डिंग", "Plasma arc", "None"],
+    "a": 1,
+    "e": "Electrons are easily scattered by air molecules, so the process must be carried out in a high vacuum.",
+    "cat": "technical",
+    "sub": "welding_technology"
+  },
+  {
+    "q": "What is the advantage of 'Laser Beam Welding'? / 'लेजर बीम वेल्डिंग' का क्या लाभ है?",
+    "o": ["It is very slow", "Extremely narrow and deep weld with no vacuum needed | अत्यधिक संकीर्ण और गहरी वेल्ड, वैक्यूम की आवश्यकता नहीं", "Low precision", "None"],
+    "a": 1,
+    "e": "Laser welding can be done in air or inert gas and allows for very precise and fast joining of parts.",
+    "cat": "technical",
+    "sub": "welding_technology"
+  },
+  {
+    "q": "In 'Resistance Butt Welding', the parts are joined: / 'रेजिस्टेंस बट वेल्डिंग' में, पुर्जों को जोड़ा जाता है:",
+    "o": ["Overlapping each other", "End-to-end (Edge to edge) | सिरे से सिरा (End-to-end)", "At 90 degrees", "None"],
+    "a": 1,
+    "e": "Butt welding is used to join wires, rods, or tubes of similar cross-section end-to-end.",
+    "cat": "technical",
+    "sub": "welding_technology"
+  },
+  {
+    "q": "Which welding defect is caused by 'trapped gas' within the weld metal? / वेल्ड धातु के भीतर 'फंसी हुई गैस' के कारण कौन सा वेल्डिंग दोष होता है?",
+    "o": ["Undercut", "Porosity | पोरोसिटी (Porosity)", "Spatter", "Slag inclusion"],
+    "a": 1,
+    "e": "Porosity appears as small holes in the weld, often due to moisture or dirty base metal.",
+    "cat": "technical",
+    "sub": "welding_technology"
+  },
+  {
+    "q": "What is 'Spatter' in arc welding? / आर्क वेल्डिंग में 'स्पैटर' (Spatter) क्या है?",
+    "o": ["A type of flux", "Small metal particles thrown out of the arc | आर्क से बाहर निकलने वाले छोटे धातु के कण", "A strong weld", "None"],
+    "a": 1,
+    "e": "Spatter is an undesirable defect that sticks to the base metal surface, usually caused by high current.",
+    "cat": "technical",
+    "sub": "welding_technology"
+  },
+  {
+    "q": "The electrodes used in 'Resistance Welding' are made of: / 'रेजिस्टेंस वेल्डिंग' में उपयोग किए जाने वाले इलेक्ट्रोड किसके बने होते हैं?",
+    "o": ["Iron", "Copper alloys | तांबा मिश्र धातु (Copper)", "Carbon", "Aluminum"],
+    "a": 1,
+    "e": "Copper is used for its excellent electrical and thermal conductivity, helping to localize the heat at the joint.",
+    "cat": "technical",
+    "sub": "welding_technology"
+  },
+  {
+    "q": "Which welding process uses a 'Non-Consumable' Tungsten electrode? / किस वेल्डिंग प्रक्रिया में 'नॉन-कंज्यूमेबल' टंगस्टन इलेक्ट्रोड का उपयोग किया जाता है?",
+    "o": ["MIG Welding", "TIG Welding | TIG वेल्डिंग", "Submerged Arc Welding", "Plasma Arc Welding"],
+    "a": 1,
+    "e": "TIG (Tungsten Inert Gas) welding uses a tungsten electrode that does not melt; the filler metal is added separately if needed.",
+    "cat": "technical",
+    "sub": "welding_technology"
+  },
+  {
+    "q": "In 'MIG Welding', the electrode is in the form of: / 'MIG वेल्डिंग' में, इलेक्ट्रोड किस रूप में होता है?",
+    "o": ["A fixed rod", "A continuously fed wire | एक निरंतर फीड किया जाने वाला तार", "A powder", "None"],
+    "a": 1,
+    "e": "MIG (Metal Inert Gas) welding uses a consumable wire electrode that is automatically fed through the welding gun.",
+    "cat": "technical",
+    "sub": "welding_technology"
+  },
+  {
+    "q": "What is the function of 'Flux' in arc welding? / आर्क वेल्डिंग में 'फ्लक्स' (Flux) का कार्य क्या है?",
+    "o": ["To increase heat", "To protect the molten metal from atmospheric contamination | पिघली हुई धातु को वायुमंडलीय संदूषण से बचाना", "To add weight", "None"],
+    "a": 1,
+    "e": "Flux melts to form a gaseous shield and slag that protects the weld pool from oxygen and nitrogen.",
+    "cat": "technical",
+    "sub": "welding_technology"
+  },
+  {
+    "q": "Which gas is commonly used as a 'Shielding Gas' in TIG welding of Aluminum? / एल्यूमीनियम की TIG वेल्डिंग में 'शील्डिंग गैस' के रूप में आमतौर पर किसका उपयोग किया जाता है?",
+    "o": ["Oxygen", "Argon | आर्गन (Argon)", "Carbon dioxide", "Nitrogen"],
+    "a": 1,
+    "e": "Argon is an inert gas that prevents oxidation and provides a stable arc during the welding process.",
+    "cat": "technical",
+    "sub": "welding_technology"
+  },
+  {
+    "q": "In 'Submerged Arc Welding' (SAW), the arc is: / 'सबमर्ज्ड आर्क वेल्डिंग' (SAW) में, आर्क होता है:",
+    "o": ["Visible to eyes", "Hidden under a layer of granular flux | दानेदार फ्लक्स की परत के नीचे छिपा हुआ", "In a vacuum", "None"],
+    "a": 1,
+    "e": "SAW uses a blanket of granular flux which completely covers the arc, preventing sparks and fumes.",
+    "cat": "technical",
+    "sub": "welding_technology"
+  },
+  {
+    "q": "What is 'Reverse Polarity' (DCEP) in DC welding? / DC वेल्डिंग में 'रिवर्स पोलरिटी' (DCEP) क्या है?",
+    "o": ["Electrode is Negative", "Electrode is Positive | इलेक्ट्रोड धनात्मक (Positive) है", "Both are positive", "None"],
+    "a": 1,
+    "e": "In DCEP, the electrode is connected to the positive terminal, which provides better penetration for thick plates.",
+    "cat": "technical",
+    "sub": "welding_technology"
+  },
+  {
+    "q": "Which process is most suitable for welding very thick plates (above 50mm) in a single pass? / एक ही पास में बहुत मोटी प्लेटों (50 मिमी से ऊपर) को वेल्ड करने के लिए कौन सी प्रक्रिया सबसे उपयुक्त है?",
+    "o": ["TIG", "Electro-slag welding | इलेक्ट्रो-स्लैग वेल्डिंग", "Spot welding", "None"],
+    "a": 1,
+    "e": "Electro-slag welding is a vertical welding process used for heavy plates in shipbuilding and heavy machinery.",
+    "cat": "technical",
+    "sub": "welding_technology"
+  },
+  {
+    "q": "What is the primary equipment used to hold the electrode in manual metal arc welding? / मैनुअल मेटल आर्क वेल्डिंग में इलेक्ट्रोड को पकड़ने के लिए उपयोग किया जाने वाला प्राथमिक उपकरण क्या है?",
+    "o": ["Ground clamp", "Electrode holder | इलेक्ट्रोड होल्डर", "Transformer", "None"],
+    "a": 1,
+    "e": "An electrode holder is an insulated device that allows the welder to control the electrode safely.",
+    "cat": "technical",
+    "sub": "welding_technology"
+  },
+  {
+    "q": "The core wire of a welding electrode has a composition similar to: / वेल्डिंग इलेक्ट्रोड के कोर वायर की संरचना किसके समान होती है?",
+    "o": ["The flux", "The base metal being welded | वेल्ड की जाने वाली मूल धातु", "Aluminum always", "None"],
+    "a": 1,
+    "e": "To ensure a strong joint, the filler material should match the properties of the base metal.",
+    "cat": "technical",
+    "sub": "welding_technology"
+  },
+  {
+    "q": "In 'Plasma Arc Welding', the temperature of the plasma can reach up to: / 'प्लाज्मा आर्क वेल्डिंग' में, प्लाज्मा का तापमान कहाँ तक पहुँच सकता है?",
+    "o": ["1000 °C", "30,000 °C | 30,000 °C", "5000 °C", "None"],
+    "a": 1,
+    "e": "Plasma arc produces extremely high temperatures by constricting the arc through a fine nozzle.",
+    "cat": "technical",
+    "sub": "welding_technology"
+  },
+  {
+    "q": "What is a 'Blowhole' in a casting? / कास्टिंग में 'ब्लोहोल' (Blowhole) क्या है?",
+    "o": ["A large crack", "A smooth-walled cavity caused by trapped gases | फंसी हुई गैसों के कारण होने वाली एक चिकनी दीवार वाली गुहा", "Excess metal on surface", "None"],
+    "a": 1,
+    "e": "Blowholes occur when gases cannot escape from the mould, often due to low permeability or high moisture in the sand.",
+    "cat": "technical",
+    "sub": "casting_defects"
+  },
+  {
+    "q": "The defect caused by the 'shifting' of the cope and drag relative to each other is: / कोप और ड्रैग के एक-दूसरे के सापेक्ष 'खिसकने' (Shifting) से होने वाला दोष है:",
+    "o": ["Swell", "Mismatch (Shift) | मिसमैच (Shift)", "Cold shut", "Hot tear"],
+    "a": 1,
+    "e": "Mismatch results in a casting where the two halves are not properly aligned at the parting line.",
+    "cat": "technical",
+    "sub": "casting_defects"
+  },
+  {
+    "q": "What is a 'Cold Shut'? / 'कोल्ड शट' (Cold Shut) क्या है?",
+    "o": ["A crack due to cooling", "An interface where two streams of metal fail to fuse properly | जहाँ धातु की दो धाराएँ ठीक से जुड़ने में विफल हो जाती हैं", "Moisture in sand", "None"],
+    "a": 1,
+    "e": "It occurs when the pouring temperature is too low or the metal flows too slowly, cooling before it can merge.",
+    "cat": "technical",
+    "sub": "casting_defects"
+  },
+  {
+    "q": "Which defect appears as 'cracks' formed due to hindered contraction of the metal during cooling? / शीतलन के दौरान धातु के बाधित संकुचन के कारण 'दरारों' के रूप में कौन सा दोष दिखाई देता है?",
+    "o": ["Misrun", "Hot Tear | हॉट टियर (Hot Tear)", "Scab", "Swell"],
+    "a": 1,
+    "e": "Hot tears occur when the casting design or the core resists the natural shrinkage of the metal as it cools.",
+    "cat": "technical",
+    "sub": "casting_defects"
+  },
+  {
+    "q": "What is a 'Misrun'? / 'मिसरन' (Misrun) क्या है?",
+    "o": ["Pattern is broken", "Molten metal fails to completely fill the mould cavity | तरल धातु मोल्ड कैविटी को पूरी तरह भरने में विफल रहती है", "Excess sand", "None"],
+    "a": 1,
+    "e": "Misrun is usually caused by low pouring temperature, thin sections, or slow pouring speed.",
+    "cat": "technical",
+    "sub": "casting_defects"
+  },
+  {
+    "q": "The 'removable' sand projection that causes a rough depression on the casting surface is called: / कास्टिंग की सतह पर खुरदरे गड्ढे का कारण बनने वाला रेत का उभार कहलाता है:",
+    "o": ["Swell", "Scab | स्कैब (Scab)", "Blowhole", "None"],
+    "a": 1,
+    "e": "A scab is caused by a layer of sand peeling off the mould surface and becoming embedded in the metal.",
+    "cat": "technical",
+    "sub": "casting_defects"
+  },
+  {
+    "q": "Which remedy is most effective for preventing 'Blowholes'? / 'ब्लोहोल्स' को रोकने के लिए कौन सा उपाय सबसे प्रभावी है?",
+    "o": ["Increase moisture", "Increase permeability and provide proper venting | पारगम्यता बढ़ाना और उचित वेंटिंग प्रदान करना", "Cool the sand", "None"],
+    "a": 1,
+    "e": "Vents allow gases to escape easily, and keeping moisture low reduces the amount of steam generated.",
+    "cat": "technical",
+    "sub": "casting_defects"
+  },
+  {
+    "q": "A 'Swell' defect is caused by: / 'स्वेल' (Swell) दोष किसके कारण होता है?",
+    "o": ["Overheating the metal", "Improper ramming of sand | रेत की अनुचित रैमिंग", "Pattern damage", "None"],
+    "a": 1,
+    "e": "Soft ramming allows the mould wall to move outward under the pressure of molten metal, increasing the casting size.",
+    "cat": "technical",
+    "sub": "casting_defects"
+  },
+  {
+    "q": "What is the cause of 'Sand Inclusion'? / 'सैंड इंक्लूजन' (Sand Inclusion) का क्या कारण है?",
+    "o": ["Metal is too hot", "Loose sand particles falling into the mould or erosion of walls | मोल्ड में गिरने वाले रेत के कण या दीवारों का कटाव", "Gases in metal", "None"],
+    "a": 1,
+    "e": "It results in particles of sand being trapped inside the final metal casting.",
+    "cat": "technical",
+    "sub": "casting_defects"
+  },
+  {
+    "q": "How can 'Hot Tears' be prevented? / 'हॉट टियर्स' (Hot Tears) को कैसे रोका जा सकता है? ",
+    "o": ["By making the core more rigid", "Improving collapsibility of cores and moulds | कोर और मोल्ड्स की कॉलेप्सिबिलिटी में सुधार करना", "Rapid cooling", "None"],
+    "a": 1,
+    "e": "Collapsible cores give way when the metal shrinks, reducing the internal stresses that cause tearing.",
+    "cat": "technical",
+    "sub": "casting_defects"
+  },
+  {
+    "q": "Which casting process uses a 'Wax Pattern' which is later melted away? / किस कास्टिंग प्रक्रिया में 'वैक्स पैटर्न' (Wax Pattern) का उपयोग किया जाता है जिसे बाद में पिघला दिया जाता है? ",
+    "o": ["Shell moulding", "Investment casting | इन्वेस्टमेंट कास्टिंग", "Die casting", "Centrifugal casting"],
+    "a": 1,
+    "e": "Investment casting is also known as the 'Lost-wax process' because the pattern is melted out of the mould before pouring metal.",
+    "cat": "technical",
+    "sub": "casting_technology"
+  },
+  {
+    "q": "In 'Shell Mould Casting', the sand is mixed with which material to form the shell? / 'शेल मोल्ड कास्टिंग' में, शेल बनाने के लिए रेत को किस सामग्री के साथ मिलाया जाता है?",
+    "o": ["Clay", "Thermosetting resin (Phenolic) | थर्मोसेटिंग राल (रेजिन)", "Linseed oil", "Water"],
+    "a": 1,
+    "e": "The resin-coated sand hardens when it comes in contact with a heated metal pattern, forming a thin, strong shell.",
+    "cat": "technical",
+    "sub": "casting_technology"
+  },
+  {
+    "q": "Which process is most suitable for 'Mass Production' of small, non-ferrous parts with high precision? / उच्च सटीकता वाले छोटे, अलौह भागों के 'बड़े पैमाने पर उत्पादन' के लिए कौन सी प्रक्रिया सबसे उपयुक्त है?",
+    "o": ["Sand casting", "Die casting | डाई कास्टिंग (Die casting)", "Continuous casting", "Centrifugal casting"],
+    "a": 1,
+    "e": "Die casting uses permanent metal moulds (dies) and high pressure to produce parts quickly with excellent surface finish.",
+    "cat": "technical",
+    "sub": "casting_technology"
+  },
+  {
+    "q": "What is the main difference between 'Hot Chamber' and 'Cold Chamber' die casting? / 'हॉट चैंबर' और 'कोल्ड चैंबर' डाई कास्टिंग में मुख्य अंतर क्या है?",
+    "o": ["Size of the die", "Location of the melting pot relative to the machine | मशीन के सापेक्ष मेल्टिंग पॉट की स्थिति", "Type of sand used", "None"],
+    "a": 1,
+    "e": "In hot chamber, the furnace is integrated with the machine, while in cold chamber, molten metal is ladled into the machine from an external furnace.",
+    "cat": "technical",
+    "sub": "casting_technology"
+  },
+  {
+    "q": "Which metal is typically cast using 'Cold Chamber' die casting because it would attack the pump parts? / किस धातु को आमतौर पर 'कोल्ड चैंबर' डाई कास्टिंग का उपयोग करके ढाला जाता है क्योंकि यह पंप के हिस्सों को नुकसान पहुंचा सकती है?",
+    "o": ["Lead", "Aluminum | एल्यूमीनियम", "Zinc", "Tin"],
+    "a": 1,
+    "e": "Aluminum has a high melting point and tends to alloy with iron, so it is not suitable for hot chamber machines with submerged pumps.",
+    "cat": "technical",
+    "sub": "casting_technology"
+  },
+  {
+    "q": "What is 'Gravity Die Casting'? / 'ग्रेविटी डाई कास्टिंग' (Gravity Die Casting) क्या है?",
+    "o": ["Casting under high pressure", "Molten metal is poured into a metal mould by gravity | तरल धातु को गुरुत्वाकर्षण द्वारा धातु के मोल्ड में डाला जाता है", "Casting in space", "None"],
+    "a": 1,
+    "e": "Unlike pressure die casting, here the metal fills the mould naturally without external pressure.",
+    "cat": "technical",
+    "sub": "casting_technology"
+  },
+  {
+    "q": "Which process is used for producing 'Hollow Pipes' without the use of cores? / कोर के उपयोग के बिना 'खोखले पाइप' बनाने के लिए किस प्रक्रिया का उपयोग किया जाता है?",
+    "o": ["Investment casting", "True Centrifugal casting | सेंट्रीफ्यूगल कास्टिंग", "Continuous casting", "Die casting"],
+    "a": 1,
+    "e": "The centrifugal force pushes the molten metal against the outer walls of the rotating mould, forming a hollow center.",
+    "cat": "technical",
+    "sub": "casting_technology"
+  },
+  {
+    "q": "In 'Continuous Casting', the final product is produced in the form of: / 'निरंतर कास्टिंग' (Continuous Casting) में, अंतिम उत्पाद किस रूप में तैयार होता है?",
+    "o": ["Small individual parts", "Long billets, blooms or slabs | लंबे बिलेट्स, ब्लूम्स या स्लैब", "Powder", "None"],
+    "a": 1,
+    "e": "Continuous casting allows for the steady production of long metal sections, which are later cut to size.",
+    "cat": "technical",
+    "sub": "casting_technology"
+  },
+  {
+    "q": "Which casting process is used to make highly intricate jewelry and dental crowns? / अत्यधिक जटिल गहने और डेंटल क्राउन बनाने के लिए किस कास्टिंग प्रक्रिया का उपयोग किया जाता है?",
+    "o": ["Sand casting", "Investment casting | इन्वेस्टमेंट कास्टिंग", "Shell moulding", "Continuous casting"],
+    "a": 1,
+    "e": "Investment casting provides unmatched detail and accuracy for very small and complex shapes.",
+    "cat": "technical",
+    "sub": "casting_technology"
+  },
+  {
+    "q": "The 'Dump Box' method is associated with which process? / 'डम्प बॉक्स' (Dump Box) विधि किस प्रक्रिया से जुड़ी है?",
+    "o": ["Die casting", "Shell mould casting | शेल मोल्ड कास्टिंग", "Centrifugal casting", "None"],
+    "a": 1,
+    "e": "A dump box contains the sand-resin mix, which is inverted over a heated pattern to form the shell.",
+    "cat": "technical",
+    "sub": "casting_technology"
+  },
+  {
+    "q": "Which furnace is primarily used for the mass production of 'Cast Iron'? / 'कास्ट आयरन' के बड़े पैमाने पर उत्पादन के लिए मुख्य रूप से किस भट्टी का उपयोग किया जाता है?",
+    "o": ["Blast furnace", "Cupola furnace | क्यूपोला भट्टी (Cupola)", "Crucible furnace", "Electric arc furnace"],
+    "a": 1,
+    "e": "Cupola is a vertical cylindrical furnace used to remelt pig iron and scrap to produce cast iron.",
+    "cat": "technical",
+    "sub": "foundry_technology"
+  },
+  {
+    "q": "What is the raw material used in a 'Blast Furnace' to produce Pig Iron? / पिग आयरन बनाने के लिए 'ब्लास्ट फर्नेस' में किस कच्चे माल का उपयोग किया जाता है?",
+    "o": ["Iron ore", "Coke", "Limestone", "All of the above | उपरोक्त सभी"],
+    "a": 3,
+    "e": "Iron ore provides the metal, coke is the fuel/reducing agent, and limestone acts as a flux to remove impurities.",
+    "cat": "technical",
+    "sub": "metallurgy"
+  },
+  {
+    "q": "Which type of 'Electric Furnace' uses the principle of electromagnetic induction to heat the metal? / किस प्रकार की 'इलेक्ट्रिक भट्टी' धातु को गर्म करने के लिए विद्युत चुम्बकीय प्रेरण के सिद्धांत का उपयोग करती है?",
+    "o": ["Direct Arc", "Indirect Arc", "Induction Furnace | इंडक्शन भट्टी", "Pit furnace"],
+    "a": 2,
+    "e": "Induction furnaces create eddy currents within the metal charge, which generates heat through resistance.",
+    "cat": "technical",
+    "sub": "foundry_technology"
+  },
+  {
+    "q": "In a 'Cupola Furnace', the 'Tuyeres' are used for: / 'क्यूपोला भट्टी' में, 'टुयर्स' (Tuyeres) का उपयोग किसके लिए किया जाता है?",
+    "o": ["Removing slag", "Supplying air for combustion | दहन के लिए हवा की आपूर्ति", "Pouring metal", "None"],
+    "a": 1,
+    "e": "Tuyeres are openings through which air blast is forced into the furnace to burn the coke.",
+    "cat": "technical",
+    "sub": "foundry_technology"
+  },
+  {
+    "q": "Which furnace is used for melting 'small quantities' of non-ferrous metals like Brass or Aluminum? / पीतल या एल्यूमीनियम जैसी 'कम मात्रा' वाली अलौह धातुओं को पिघलाने के लिए किस भट्टी का उपयोग किया जाता है?",
+    "o": ["Blast furnace", "Crucible furnace | क्रूसिबल भट्टी", "Open hearth", "None"],
+    "a": 1,
+    "e": "Crucible furnaces are small and versatile, where the metal is placed in a refractory pot (crucible) and heated.",
+    "cat": "technical",
+    "sub": "foundry_technology"
+  },
+  {
+    "q": "The 'Indirect Arc Furnace' heats the metal primarily through: / 'इनडायरेक्ट आर्क फर्नेस' मुख्य रूप से धातु को किसके माध्यम से गर्म करती है?",
+    "o": ["Direct contact with arc", "Radiation from the arc between electrodes | इलेक्ट्रोड के बीच आर्क से विकिरण", "Burning coke", "None"],
+    "a": 1,
+    "e": "In indirect arc furnaces, the arc is struck between two electrodes above the metal, and heat is radiated to the charge.",
+    "cat": "technical",
+    "sub": "foundry_technology"
+  },
+  {
+    "q": "What is the role of 'Flux' (like Limestone) in a furnace? / भट्टी में 'फ्लक्स' (जैसे चूना पत्थर) की क्या भूमिका है?",
+    "o": ["To act as fuel", "To react with impurities and form slag | अशुद्धियों के साथ प्रतिक्रिया कर स्लैग बनाना", "To cool the furnace", "None"],
+    "a": 1,
+    "e": "Flux lowers the melting point of impurities (gangue) and forms a liquid slag that floats on the metal.",
+    "cat": "technical",
+    "sub": "metallurgy"
+  },
+  {
+    "q": "Which furnace is installed below ground level to conserve heat? / गर्मी बचाने के लिए कौन सी भट्टी जमीन के नीचे स्थापित की जाती है?",
+    "o": ["Pit furnace | पिट फर्नेस", "Cupola", "Electric arc", "None"],
+    "a": 0,
+    "e": "Pit furnaces are recessed into the floor, which helps in insulation and space management for small melting operations.",
+    "cat": "technical",
+    "sub": "foundry_technology"
+  },
+  {
+    "q": "In a 'Direct Arc Furnace', the electric arc is struck between: / 'डायरेक्ट आर्क फर्नेस' में, इलेक्ट्रिक आर्क किसके बीच बनता है?",
+    "o": ["Two electrodes only", "Electrode and the metal charge | इलेक्ट्रोड और धातु चार्ज के बीच", "Walls of furnace", "None"],
+    "a": 1,
+    "e": "The current passes through the metal itself, providing high temperatures suitable for melting steel scrap.",
+    "cat": "technical",
+    "sub": "foundry_technology"
+  },
+  {
+    "q": "Which furnace is known for producing very clean and high-quality alloy steels? / बहुत साफ और उच्च गुणवत्ता वाले मिश्र धातु स्टील (Alloy Steels) बनाने के लिए कौन सी भट्टी जानी जाती है?",
+    "o": ["Blast furnace", "Cupola", "Induction furnace | इंडक्शन भट्टी", "Pit furnace"],
+    "a": 2,
+    "e": "Induction furnaces allow for precise temperature control and minimal contamination, ideal for high-grade alloys.",
+    "cat": "technical",
+    "sub": "foundry_technology"
+  },
+  {
+    "q": "What is the maximum percentage of 'Carbon' that can be dissolved in Iron to be classified as 'Steel'? / लोहे में 'कार्बन' का अधिकतम प्रतिशत कितना हो सकता है कि उसे 'स्टील' के रूप में वर्गीकृत किया जा सके?",
+    "o": ["0.8%", "2.1% | 2.1 प्रतिशत", "4.3%", "6.67%"],
+    "a": 1,
+    "e": "In the Iron-Carbon diagram, alloys with up to 2.1% carbon are called steel, while those above 2.1% are called cast iron.",
+    "cat": "technical",
+    "sub": "metallurgy"
+  },
+  {
+    "q": "The 'Eutectoid' reaction in Iron-Carbon diagram occurs at which temperature? / आयरन-कार्बन डायग्राम में 'यूटेक्टॉइड' (Eutectoid) प्रतिक्रिया किस तापमान पर होती है?",
+    "o": ["1147 °C", "910 °C", "727 °C | 727 °C", "1495 °C"],
+    "a": 2,
+    "e": "At 727 °C and 0.8% carbon, Austenite transforms into Pearlite (a mixture of Ferrite and Cementite).",
+    "cat": "technical",
+    "sub": "metallurgy"
+  },
+  {
+    "q": "Which phase of iron is stable at room temperature and is magnetic? / लोहे का कौन सा चरण कमरे के तापमान पर स्थिर और चुंबकीय होता है?",
+    "o": ["Austenite", "Ferrite (Alpha-iron) | फेराइट (अल्फा-आयरन)", "Cementite", "Delta-iron"],
+    "a": 1,
+    "e": "Ferrite (α-iron) has a BCC structure and is the softest phase in the iron-carbon system at room temperature.",
+    "cat": "technical",
+    "sub": "metallurgy"
+  },
+  {
+    "q": "What is 'Cementite'? / 'सीमेंटाइट' (Cementite) क्या है?",
+    "o": ["Pure iron", "Iron Carbide ($Fe_3C$) | आयरन कार्बाइड ($Fe_3C$)", "Liquid metal", "None"],
+    "a": 1,
+    "e": "Cementite is a hard and brittle intermetallic compound containing 6.67% carbon.",
+    "cat": "technical",
+    "sub": "metallurgy"
+  },
+  {
+    "q": "The 'Austenite' phase of iron has which crystal structure? / लोहे के 'ऑस्टेनाइट' (Austenite) चरण की क्रिस्टल संरचना क्या है?",
+    "o": ["BCC", "FCC | FCC (Face Centered Cubic)", "HCP", "None"],
+    "a": 1,
+    "e": "Austenite (γ-iron) is stable at high temperatures (above 727 °C) and can dissolve more carbon than Ferrite.",
+    "cat": "technical",
+    "sub": "metallurgy"
+  },
+  {
+    "q": "What happens at the 'Eutectic' point (4.3% C) in the Iron-Carbon diagram? / आयरन-कार्बन डायग्राम में 'यूटेक्टिक' बिंदु (4.3% C) पर क्या होता है?",
+    "o": ["Solid turns to gas", "Liquid metal transforms into two solids (Ledeburite) | तरल धातु दो ठोस पदार्थों में बदल जाती है", "Iron melts", "None"],
+    "a": 1,
+    "e": "The eutectic reaction occurs at 1147 °C where liquid transforms into Austenite and Cementite.",
+    "cat": "technical",
+    "sub": "metallurgy"
+  },
+  {
+    "q": "Which micro-constituent of steel is a finger-print like mixture of Ferrite and Cementite? / स्टील का कौन सा सूक्ष्म घटक फेराइट और सीमेंटाइट का फिंगर-प्रिंट जैसा मिश्रण है?",
+    "o": ["Martensite", "Pearlite | पर्लाइट (Pearlite)", "Bainite", "Ledeburite"],
+    "a": 1,
+    "e": "Pearlite consists of alternate lamellae (layers) of Ferrite and Cementite, giving it a characteristic appearance under a microscope.",
+    "cat": "technical",
+    "sub": "metallurgy"
+  },
+  {
+    "q": "The 'Lower Critical Temperature' ($A_1$) line is constant at: / 'लोअर क्रिटिकल टेम्परेचर' ($A_1$) लाइन कहाँ स्थिर है?",
+    "o": ["910 °C", "727 °C | 727 °C", "1147 °C", "None"],
+    "a": 1,
+    "e": "This is the temperature below which Austenite cannot exist under equilibrium conditions.",
+    "cat": "technical",
+    "sub": "metallurgy"
+  },
+  {
+    "q": "Steels with less than 0.8% carbon are called: / 0.8% से कम कार्बन वाले स्टील कहलाते हैं:",
+    "o": ["Hyper-eutectoid steel", "Hypo-eutectoid steel | हाइपो-यूटेक्टॉइड स्टील", "Cast iron", "Stainless steel"],
+    "a": 1,
+    "e": "Hypo-eutectoid steels consist of Ferrite and Pearlite at room temperature.",
+    "cat": "technical",
+    "sub": "metallurgy"
+  },
+  {
+    "q": "What is the Carbon percentage in 'Pure Iron'? / 'शुद्ध लोहे' में कार्बन का प्रतिशत कितना होता है?",
+    "o": ["0.008% | 0.008% से कम", "0.8%", "2.1%", "4.3%"],
+    "a": 0,
+    "e": "Iron with negligible carbon content is called pure iron, which is very soft and ductile.",
+    "cat": "technical",
+    "sub": "metallurgy"
+  },
+  {
+    "q": "What is the primary constituent of 'Core Sand'? / 'कोर सैंड' का प्राथमिक घटक क्या है?",
+    "o": ["Clay", "Silica sand | सिलिका सैंड (Silica sand)", "Aluminum", "Coal"],
+    "a": 1,
+    "e": "Core sand consists mostly of clean silica sand mixed with special binders like oil or resin to provide high strength.",
+    "cat": "technical",
+    "sub": "foundry_technology"
+  },
+  {
+    "q": "Which binder is commonly used in 'Oil-Sands' for core making? / कोर बनाने के लिए 'ऑयल-सैंड्स' में आमतौर पर किस बाइंडर का उपयोग किया जाता है?",
+    "o": ["Water", "Linseed oil | अलसी का तेल (Linseed oil)", "Sodium silicate", "None"],
+    "a": 1,
+    "e": "Linseed oil hardens when baked in an oven, giving the core the necessary strength to resist molten metal pressure.",
+    "cat": "technical",
+    "sub": "foundry_technology"
+  },
+  {
+    "q": "The 'Vent Wire' is used in moulding to: / मोल्डिंग में 'वेंट वायर' (Vent Wire) का उपयोग किसके लिए किया जाता है?",
+    "o": ["Support the core", "Create small holes for gas escape | गैसों के निकलने के लिए छोटे छेद बनाना", "Remove the pattern", "Mix sand"],
+    "a": 1,
+    "e": "Vent holes are pierced into the sand to increase the overall permeability and prevent blowholes in the casting.",
+    "cat": "technical",
+    "sub": "foundry_technology"
+  },
+  {
+    "q": "What is a 'Segmental Pattern'? / 'सेगमेंटल पैटर्न' (Segmental Pattern) क्या है?",
+    "o": ["A full pattern", "A part of a pattern used to form large circular moulds in sections | बड़े गोलाकार मोल्ड बनाने के लिए उपयोग किया जाने वाला पैटर्न का हिस्सा", "A metal pattern", "None"],
+    "a": 1,
+    "e": "Instead of a full circular pattern, a segment is rotated to form the mould, saving material and labor.",
+    "cat": "technical",
+    "sub": "foundry_technology"
+  },
+  {
+    "q": "In a 'Jolt-Squeeze' machine, which part is rammed hardest? / 'जोल्ट-स्क्वीज' मशीन में, कौन सा हिस्सा सबसे ज्यादा रैम (Ram) होता है?",
+    "o": ["Bottom of the mould", "Top of the mould", "Uniformly throughout | पूरे मोल्ड में समान रूप से", "None"],
+    "a": 2,
+    "e": "The combination of jolting (bottom-up) and squeezing (top-down) ensures a very uniform sand density.",
+    "cat": "technical",
+    "sub": "foundry_technology"
+  },
+  {
+    "q": "What is a 'Shell Pattern'? / 'शेल पैटर्न' (Shell Pattern) क्या है?",
+    "o": ["A solid block", "A hollow pattern used for making pipes or drainage fittings | पाइप बनाने के लिए उपयोग किया जाने वाला खोखला पैटर्न", "A type of core", "None"],
+    "a": 1,
+    "e": "Shell patterns are usually made of metal and are hollow to allow for quick heating and cooling in shell moulding.",
+    "cat": "technical",
+    "sub": "foundry_technology"
+  },
+  {
+    "q": "Which type of core is supported by 'Chaplets'? / 'चैपलेट्स' (Chaplets) द्वारा किस प्रकार के कोर को सहारा दिया जाता है?",
+    "o": ["Small cores", "Cores that are not fully supported by core prints | वे कोर जिन्हें कोर प्रिंट्स द्वारा पूरी तरह से सहारा नहीं मिलता", "Vertical cores", "None"],
+    "a": 1,
+    "e": "Chaplets are small metal supports that melt and fuse with the casting metal, keeping the core in position.",
+    "cat": "technical",
+    "sub": "foundry_technology"
+  },
+  {
+    "q": "What is 'Mulling' of sand? / रेत की 'मुलिंग' (Mulling) क्या है?",
+    "o": ["Sieving the sand", "Thoroughly mixing sand, clay, and water to coat each grain | प्रत्येक कण पर परत चढ़ाने के लिए अच्छी तरह मिलाना", "Drying the sand", "None"],
+    "a": 1,
+    "e": "Mulling is done in a sand muller to develop the maximum strength and plasticity of the moulding sand.",
+    "cat": "technical",
+    "sub": "foundry_technology"
+  },
+  {
+    "q": "Which tool is used to lift a pattern out of the mould? / मोल्ड से पैटर्न निकालने के लिए किस उपकरण का उपयोग किया जाता है?",
+    "o": ["Rammer", "Draw spike | ड्रा स्पाइक (Draw spike)", "Slick", "Lifter"],
+    "a": 1,
+    "e": "A draw spike is driven into the pattern or screwed into it to pull it vertically out of the sand.",
+    "cat": "technical",
+    "sub": "foundry_technology"
+  },
+  {
+    "q": "What is the purpose of 'Core Binders'? / 'कोर बाइंडर्स' (Core Binders) का उद्देश्य क्या है?",
+    "o": ["To make the core heavy", "To provide green and dry strength to the core | कोर को मजबूती प्रदान करना", "To color the core", "None"],
+    "a": 1,
+    "e": "Binders hold the sand grains together so the core can withstand handling and the flow of molten metal.",
+    "cat": "technical",
+    "sub": "foundry_technology"
+  },
+  {
+    "q": "Which pattern allowance is provided to compensate for the 'Liquid' and 'Solid' contraction of metal? / धातु के 'तरल' और 'ठोस' संकुचन की भरपाई के लिए कौन सा पैटर्न अलाउंस प्रदान किया जाता है?",
+    "o": ["Draft Allowance", "Shrinkage Allowance | श्रिंकेज अलाउंस", "Shake Allowance", "Machining Allowance"],
+    "a": 1,
+    "e": "Shrinkage allowance is added to the pattern dimensions because most metals shrink during cooling from liquid to solid state.",
+    "cat": "technical",
+    "sub": "foundry_technology"
+  },
+  {
+    "q": "A 'Skeleton Pattern' is used for: / 'स्केलेटन पैटर्न' (Skeleton Pattern) का उपयोग किसके लिए किया जाता है?",
+    "o": ["Small mass production", "Large castings with simple geometrical shapes to save wood | लकड़ी बचाने के लिए सरल आकार की बड़ी कास्टिंग", "Complex small parts", "None"],
+    "a": 1,
+    "e": "It consists of a wooden frame filled with loam sand, reducing the cost of making a full solid wooden pattern for very large objects.",
+    "cat": "technical",
+    "sub": "foundry_technology"
+  },
+  {
+    "q": "What is 'Shake Allowance' (Rapping Allowance)? / 'शेक अलाउंस' (Shake Allowance) क्या है?",
+    "o": ["Added to pattern size", "Subtracted from pattern size | पैटर्न के आकार से घटाया जाता है", "Always zero", "None"],
+    "a": 1,
+    "e": "Rapping the pattern to loosen it increases the mould cavity size, so the pattern is made slightly smaller to compensate.",
+    "cat": "technical",
+    "sub": "foundry_technology"
+  },
+  {
+    "q": "The property of moulding sand to withstand high temperatures without melting is called: / बिना पिघले उच्च तापमान सहने की मोल्डिंग सैंड की क्षमता कहलाती है:",
+    "o": ["Adhesiveness", "Refractoriness | अपवर्तकता (Refractoriness)", "Cohesiveness", "Permeability"],
+    "a": 1,
+    "e": "Refractoriness allows the sand to hold its shape when in contact with molten metal without fusing or sticking.",
+    "cat": "technical",
+    "sub": "foundry_technology"
+  },
+  {
+    "q": "Which type of sand is used for the thin layer surrounding the pattern to get a good surface finish? / अच्छी सतह फिनिश के लिए पैटर्न के चारों ओर की पतली परत के लिए किस रेत का उपयोग किया जाता है?",
+    "o": ["Backing sand", "Facing sand | फेसिंग सैंड (Facing sand)", "Core sand", "Loam sand"],
+    "a": 1,
+    "e": "Facing sand is made of fresh silica sand and carbonaceous materials to produce a clean casting surface.",
+    "cat": "technical",
+    "sub": "foundry_technology"
+  },
+  {
+    "q": "What is 'Cohesiveness' in moulding sand? / मोल्डिंग सैंड में 'संसजकता' (Cohesiveness) क्या है?",
+    "o": ["Ability to stick to flask", "Ability of sand grains to stick to each other | रेत के कणों की एक-दूसरे से चिपकने की क्षमता", "Ability to allow gas flow", "None"],
+    "a": 1,
+    "e": "Cohesiveness (or bond strength) ensures the mould retains its shape during handling and pouring.",
+    "cat": "technical",
+    "sub": "foundry_technology"
+  },
+  {
+    "q": "A 'Split Piece Pattern' is generally split along the: / 'स्प्लिट पीस पैटर्न' को आमतौर पर किसके साथ विभाजित किया जाता है?",
+    "o": ["Vertical axis", "Parting line | पार्टिंग लाइन (Parting line)", "Bottom surface", "None"],
+    "a": 1,
+    "e": "Splitting the pattern at the parting line allows one half to be in the cope and the other in the drag for easy removal.",
+    "cat": "technical",
+    "sub": "foundry_technology"
+  },
+  {
+    "q": "Why is 'Machining Allowance' provided? / 'मशीनिंग अलाउंस' क्यों प्रदान किया जाता है?",
+    "o": ["To make casting light", "To provide extra metal for finishing operations like turning or grinding | फिनिशिंग के लिए अतिरिक्त धातु प्रदान करना", "To reduce cost", "None"],
+    "a": 1,
+    "e": "Castings have rough surfaces; extra material is added so that the final dimensions are achieved after machining.",
+    "cat": "technical",
+    "sub": "foundry_technology"
+  },
+  {
+    "q": "Which sand additive increases the 'Collapsibility' of the core? / कौन सा सैंड एडिटिव कोर की 'कॉलेप्सिबिलिटी' बढ़ाता है?",
+    "o": ["Clay", "Sawdust or Wood flour | लकड़ी का बुरादा (Sawdust)", "Iron oxide", "None"],
+    "a": 1,
+    "e": "Sawdust burns away at high temperatures, creating voids that allow the core to crush easily during metal shrinkage.",
+    "cat": "technical",
+    "sub": "foundry_technology"
+  },
+  {
+    "q": "What is the function of a 'Trowel' in moulding? / मोल्डिंग में 'ट्रॉवेल' (Trowel) का कार्य क्या है?",
+    "o": ["To dig sand", "To finish and smooth flat surfaces of the mould | मोल्ड की सपाट सतहों को चिकना करना", "To lift the flask", "None"],
+    "a": 1,
+    "e": "Trowels are small hand tools used by moulders for repairing and finishing the parting surfaces of the mould.",
+    "cat": "technical",
+    "sub": "foundry_technology"
+  },
+  {
+    "q": "What is a 'Core' used for in foundry? / फाउंड्री में 'कोर' (Core) का उपयोग किसके लिए किया जाता है?",
+    "o": ["To strengthen the mould", "To create internal hollow cavities in the casting | कास्टिंग में आंतरिक खोखली गुहाएं बनाने के लिए", "To melt the metal", "None"],
+    "a": 1,
+    "e": "Cores are placed inside the mould cavity to form holes or internal shapes that the pattern cannot produce.",
+    "cat": "technical",
+    "sub": "foundry_technology"
+  },
+  {
+    "q": "The 'Jolting' action in a moulding machine is used to: / मोल्डिंग मशीन में 'जोल्टिंग' (Jolting) क्रिया का उपयोग किया जाता है:",
+    "o": ["Remove the pattern", "Pack the sand uniformly around the pattern by repeated impact | प्रभाव द्वारा रेत को पैटर्न के चारों ओर समान रूप से पैक करना", "Mix the sand", "None"],
+    "a": 1,
+    "e": "In jolting, the flask and pattern are repeatedly lifted and dropped to settle the sand firmly at the bottom.",
+    "cat": "technical",
+    "sub": "foundry_technology"
+  },
+  {
+    "q": "What is the primary advantage of a 'Sand Slinger'? / 'सैंड स्लिंगर' (Sand Slinger) का प्राथमिक लाभ क्या है?",
+    "o": ["It uses very little sand", "It rams sand at high speed for large moulds | यह बड़े मोल्ड्स के लिए उच्च गति पर रेत को रैम करता है", "It dries the sand", "None"],
+    "a": 1,
+    "e": "Sand slingers throw sand into the flask with great force, achieving uniform ramming for very large castings.",
+    "cat": "technical",
+    "sub": "foundry_technology"
+  },
+  {
+    "q": "The '$CO_2$ Process' of core making uses which binder? / कोर बनाने की '$CO_2$ प्रक्रिया' में किस बाइंडर का उपयोग किया जाता है?",
+    "o": ["Linseed oil", "Sodium Silicate | सोडियम सिलिकेट", "Molasses", "Clay"],
+    "a": 1,
+    "e": "When $CO_2$ gas is passed through sand mixed with sodium silicate, it reacts to form a hard, rigid bond almost instantly.",
+    "cat": "technical",
+    "sub": "foundry_technology"
+  },
+  {
+    "q": "A 'Dry Sand Mould' differs from a 'Green Sand Mould' because: / 'ड्राय सैंड मोल्ड' एक 'ग्रीन सैंड मोल्ड' से अलग है क्योंकि:",
+    "o": ["It is made of metal", "It is baked in an oven to remove moisture before pouring | डालने से पहले नमी हटाने के लिए इसे ओवन में पकाया जाता है", "It is stronger", "None"],
+    "a": 1,
+    "e": "Baking increases the strength and stability of the mould, making it suitable for large and heavy castings.",
+    "cat": "technical",
+    "sub": "foundry_technology"
+  },
+  {
+    "q": "What are 'Core Prints'? / 'कोर प्रिंट्स' (Core Prints) क्या हैं?",
+    "o": ["Images on the core", "Extra projections on patterns to provide seats for cores | कोर के लिए जगह प्रदान करने के लिए पैटर्न पर अतिरिक्त उभार", "Types of sand", "None"],
+    "a": 1,
+    "e": "Core prints create impressions in the mould that support and position the core accurately.",
+    "cat": "technical",
+    "sub": "foundry_technology"
+  },
+  {
+    "q": "Which property allows a core to break easily after the metal solidifies? / कौन सा गुण धातु के जमने के बाद कोर को आसानी से टूटने की अनुमति देता है?",
+    "o": ["Refractoriness", "Collapsibility | कॉलेप्सिबिलिटी", "Permeability", "Hardness"],
+    "a": 1,
+    "e": "Collapsibility ensures that the core does not resist the shrinkage of the metal and can be easily removed from the casting.",
+    "cat": "technical",
+    "sub": "foundry_technology"
+  },
+  {
+    "q": "What is 'Loam Sand'? / 'लोम सैंड' (Loam Sand) क्या है?",
+    "o": ["Pure silica sand", "Sand with high clay content (up to 50%) used in paste form | उच्च मिट्टी वाली रेत (50% तक) पेस्ट के रूप में उपयोग की जाती है", "Dry sand", "None"],
+    "a": 1,
+    "e": "Loam sand is used for very large castings where the mould is built up using bricks and a template (sweep).",
+    "cat": "technical",
+    "sub": "foundry_technology"
+  },
+  {
+    "q": "In a moulding box, the upper part is called ________ and the lower part is ________. / मोल्डिंग बॉक्स में, ऊपरी भाग को ________ और निचले भाग को ________ कहा जाता है।",
+    "o": ["Drag, Cope", "Cope, Drag | कोप (Cope), ड्रैग (Drag)", "Cheek, Drag", "None"],
+    "a": 1,
+    "e": "Cope is the top half and Drag is the bottom half of a standard two-part moulding flask.",
+    "cat": "technical",
+    "sub": "foundry_technology"
+  },
+  {
+    "q": "What is the function of a 'Squeezer Machine'? / 'स्क्वीजर मशीन' (Squeezer Machine) का कार्य क्या है?",
+    "o": ["To melt sand", "To pack sand by applying pressure through a plate | प्लेट के माध्यम से दबाव डालकर रेत को पैक करना", "To rotate the flask", "None"],
+    "a": 1,
+    "e": "Squeezing provides a very uniform hardness to the sand on the top surface of the mould.",
+    "cat": "technical",
+    "sub": "foundry_technology"
+  },
+  {
+    "q": "What is a 'Pattern' in foundry work? / फाउंड्री कार्य में 'पैटर्न' (Pattern) क्या है?",
+    "o": ["The final metal casting", "A replica of the object to be cast | डाली जाने वाली वस्तु की प्रतिकृति", "A type of sand", "A melting furnace"],
+    "a": 1,
+    "e": "A pattern is used to prepare the mould cavity into which molten metal is poured to produce a casting.",
+    "cat": "technical",
+    "sub": "foundry_technology"
+  },
+  {
+    "q": "Which type of pattern is used when the object has complex projections that cannot be withdrawn easily? / जब वस्तु में जटिल उभार होते हैं जिन्हें आसानी से नहीं निकाला जा सकता, तब किस प्रकार के पैटर्न का उपयोग किया जाता है?",
+    "o": ["Solid pattern", "Loose piece pattern | लूज पीस पैटर्न", "Match plate pattern", "Sweep pattern"],
+    "a": 1,
+    "e": "Loose piece patterns have detachable parts that remain in the mould when the main pattern is removed and are taken out separately.",
+    "cat": "technical",
+    "sub": "foundry_technology"
+  },
+  {
+    "q": "A 'Match Plate Pattern' is most suitable for: / 'मैच प्लेट पैटर्न' सबसे उपयुक्त है:",
+    "o": ["Single large castings", "Mass production of small castings | छोटी कास्टिंग के बड़े पैमाने पर उत्पादन के लिए", "Circular objects only", "None"],
+    "a": 1,
+    "e": "It consists of a plate with the cope and drag portions of the pattern mounted on opposite sides, increasing production speed.",
+    "cat": "technical",
+    "sub": "foundry_technology"
+  },
+  {
+    "q": "Why is 'Draft Allowance' provided on patterns? / पैटर्न पर 'ड्राफ्ट अलाउंस' (Draft Allowance) क्यों दिया जाता है?",
+    "o": ["To account for metal shrinkage", "To facilitate easy withdrawal of the pattern from the mould | मोल्ड से पैटर्न को आसानी से निकालने के लिए", "To improve surface finish", "None"],
+    "a": 1,
+    "e": "Draft is a slight taper provided on the vertical faces of the pattern to prevent damage to the mould walls during removal.",
+    "cat": "technical",
+    "sub": "foundry_technology"
+  },
+  {
+    "q": "Which pattern is used for producing large 'Circular' or symmetrical castings like bells? / घंटी जैसी बड़ी 'गोलाकार' या सममित कास्टिंग बनाने के लिए किस पैटर्न का उपयोग किया जाता है?",
+    "o": ["Split pattern", "Sweep pattern | स्वीप पैटर्न", "Skeleton pattern", "Segmental pattern"],
+    "a": 1,
+    "e": "A sweep pattern consists of a board having the shape of the desired profile, which is rotated around a central axis to form the mould.",
+    "cat": "technical",
+    "sub": "foundry_technology"
+  },
+  {
+    "q": "What is 'Permeability' of moulding sand? / मोल्डिंग सैंड की 'पारगम्यता' (Permeability) क्या है?",
+    "o": ["Ability to hold moisture", "Ability to allow gases and steam to escape | गैसों और भाप को बाहर निकलने देने की क्षमता", "Strength of the sand", "None"],
+    "a": 1,
+    "e": "High permeability is essential to prevent casting defects like blowholes by letting gases escape during pouring.",
+    "cat": "technical",
+    "sub": "foundry_technology"
+  },
+  {
+    "q": "Which constituent of moulding sand acts as a 'Binder'? / मोल्डिंग सैंड का कौन सा घटक 'बाइंडर' (Binder) के रूप में कार्य करता है?",
+    "o": ["Silica sand", "Clay | मिट्टी (Clay)", "Moisture", "Coal dust"],
+    "a": 1,
+    "e": "Clay (like Bentonite) provides the necessary bonding strength to the sand grains to hold the shape of the mould.",
+    "cat": "technical",
+    "sub": "foundry_technology"
+  },
+  {
+    "q": "What is 'Green Sand'? / 'ग्रीन सैंड' (Green Sand) क्या है?",
+    "o": ["Sand colored green", "Sand containing moisture in its natural state | अपनी प्राकृतिक अवस्था में नमी युक्त रेत", "Recycled sand", "None"],
+    "a": 1,
+    "e": "Green sand moulds are used immediately after preparation while they still contain moisture.",
+    "cat": "technical",
+    "sub": "foundry_technology"
+  },
+  {
+    "q": "Why is 'Shrinkage Allowance' always positive (added to pattern size)? / 'श्रिंकेज अलाउंस' हमेशा धनात्मक (पैटर्न साइज में जोड़ना) क्यों होता है?",
+    "o": ["Molten metal expands on cooling", "Most metals contract as they solidify and cool | अधिकांश धातुएं जमने और ठंडी होने पर सिकुड़ती हैं", "To make the pattern strong", "None"],
+    "a": 1,
+    "e": "Patterns are made slightly larger than the final casting to compensate for the volume reduction during cooling.",
+    "cat": "technical",
+    "sub": "foundry_technology"
+  },
+  {
+    "q": "What is the function of 'Coal Dust' as an additive in moulding sand? / मोल्डिंग सैंड में एडिटिव के रूप में 'कोयला धूल' (Coal Dust) का कार्य क्या है?",
+    "o": ["To increase strength", "To improve surface finish and prevent sand burning | सतह की फिनिश में सुधार और रेत को जलने से रोकना", "To add color", "None"],
+    "a": 1,
+    "e": "Coal dust reacts at high temperatures to create a gas film that prevents metal from sticking to the sand grains.",
+    "cat": "technical",
+    "sub": "foundry_technology"
+  },
+  {
+    "q": "Which type of 'Canal Lining' is considered most durable and commonly used in India? / भारत में कौन सी 'नहर लाइनिंग' सबसे टिकाऊ और आमतौर पर उपयोग की जाने वाली मानी जाती है?",
+    "o": ["Clay lining", "Cement Concrete lining | सीमेंट कंक्रीट लाइनिंग", "Bentonite lining", "Sodium resinate"],
+    "a": 1,
+    "e": "Cement concrete lining provides a smooth surface, high strength, and effectively stops seepage.",
+    "cat": "technical",
+    "sub": "irrigation_engineering"
+  },
+  {
+    "q": "A 'Cross Regulator' is constructed: / एक 'क्रॉस रेगुलेटर' (Cross Regulator) का निर्माण किया जाता है:",
+    "o": ["At the head of a branch canal", "Across the main canal downstream of an off-take | मुख्य नहर के पार ऑफ-टेक के डाउनस्ट्रीम में", "At the end of the canal", "None"],
+    "a": 1,
+    "e": "It is used to raise the water level in the main canal so that the branch canal can receive its full share of water.",
+    "cat": "technical",
+    "sub": "irrigation_engineering"
+  },
+  {
+    "q": "What is the difference between an 'Aqueduct' and a 'Siphon Aqueduct'? / एक 'एक्वाडक्ट' और एक 'साइफन एक्वाडक्ट' के बीच क्या अंतर है?",
+    "o": ["Canal level", "In Siphon Aqueduct, the drainage HFL is above the canal bed | साइफन एक्वाडक्ट में, ड्रेनेज HFL नहर के तल से ऊपर होता है", "Materials used", "None"],
+    "a": 1,
+    "e": "In a siphon aqueduct, the drain water has to dip under the canal and flow under pressure.",
+    "cat": "technical",
+    "sub": "irrigation_engineering"
+  },
+  {
+    "q": "The side slopes of a canal in 'Cutting' are generally ________ than in 'Embankment'. / 'खुदाई' (Cutting) में नहर की ढलान आमतौर पर 'भराव' (Embankment) की तुलना में ________ होती है।",
+    "o": ["Flatter", "Steeper | अधिक खड़ी (Steeper)", "Equal", "None"],
+    "a": 1,
+    "e": "Excavated soil in cutting is more stable than compacted soil in embankment, allowing for steeper slopes.",
+    "cat": "technical",
+    "sub": "irrigation_engineering"
+  },
+  {
+    "q": "What is a 'Canal Module' (Outlet)? / 'कैनाल मॉड्यूल' (आउटलेट) क्या है?",
+    "o": ["A large dam", "A small structure to release water to a farmer's field channel | किसान के खेत के चैनल में पानी छोड़ने वाली एक छोटी संरचना", "A type of pump", "None"],
+    "a": 1,
+    "e": "Modules are designed to provide a constant or proportional discharge regardless of water level fluctuations in the canal.",
+    "cat": "technical",
+    "sub": "irrigation_engineering"
+  },
+  {
+    "q": "Which Cross Drainage work is the 'cheapest' to construct? / कौन सा क्रॉस ड्रेनेज कार्य निर्माण में 'सबसे सस्ता' है?",
+    "o": ["Aqueduct", "Siphon Aqueduct", "Level Crossing | लेवल क्रॉसिंग", "Super passage"],
+    "a": 2,
+    "e": "Level crossings are cheaper as they don't require expensive bridges or tunnels to separate the two flows.",
+    "cat": "technical",
+    "sub": "irrigation_engineering"
+  },
+  {
+    "q": "The purpose of 'Canal Falls' is to: / 'कैनाल फॉल्स' (Canal Falls) का उद्देश्य है:",
+    "o": ["Increase water speed", "Safely lower the water level and destroy excess energy | पानी के स्तर को सुरक्षित रूप से कम करना और अतिरिक्त ऊर्जा को नष्ट करना", "Pump water", "None"],
+    "a": 1,
+    "e": "Falls prevent the canal bed from being eroded when the ground slope is too steep.",
+    "cat": "technical",
+    "sub": "irrigation_engineering"
+  },
+  {
+    "q": "What is 'Regulating Storage' in a canal network? / नहर नेटवर्क में 'रेगुलेटिंग स्टोरेज' क्या है?",
+    "o": ["Water in the reservoir", "Water stored within the canal itself to meet fluctuating demand | बदलती मांग को पूरा करने के लिए नहर के भीतर जमा पानी", "Rainwater", "None"],
+    "a": 1,
+    "e": "By adjusting regulators, the canal itself acts as a temporary buffer to manage water distribution.",
+    "cat": "technical",
+    "sub": "irrigation_engineering"
+  },
+  {
+    "q": "A 'Non-Modular' outlet is one where the discharge depends on: / एक 'गैर-मॉड्यूलर' आउटलेट वह है जहाँ डिस्चार्ज किस पर निर्भर करता है?",
+    "o": ["Only canal level", "Difference in water levels between canal and field channel | नहर और खेत के चैनल के बीच जल स्तर का अंतर", "Only field level", "None"],
+    "a": 1,
+    "e": "The flow changes if either the canal level or the farmer's water level changes.",
+    "cat": "technical",
+    "sub": "irrigation_engineering"
+  },
+  {
+    "q": "Why is 'Shotcrete' used in canal lining? / नहर की लाइनिंग में 'शॉट्रीट' (Shotcrete) का उपयोग क्यों किया जाता है?",
+    "o": ["To kill weeds", "For quick repair and lining of irregular canal surfaces | अनियमित नहर सतहों की त्वरित मरम्मत और लाइनिंग के लिए", "To make it transparent", "None"],
+    "a": 1,
+    "e": "Shotcrete is a high-velocity spray of concrete that sticks to surfaces, ideal for lining slopes and tunnels.",
+    "cat": "technical",
+    "sub": "irrigation_engineering"
+  },
+  {
+    "q": "The 'Stability' of a gravity dam is primarily checked against: / एक ग्रेविटी बांध की 'स्थिरता' की जांच मुख्य रूप से किसके विरुद्ध की जाती है?",
+    "o": ["Overturning", "Sliding", "Crushing (Compression)", "All of the above | उपरोक्त सभी"],
+    "a": 3,
+    "e": "A gravity dam must be safe against tilting (overturning), moving horizontally (sliding), and material failure due to high pressure.",
+    "cat": "technical",
+    "sub": "dam_engineering"
+  },
+  {
+    "q": "Which part of an earthen dam is most susceptible to 'Erosion' by wind and waves? / मिट्टी के बांध का कौन सा हिस्सा हवा और लहरों द्वारा 'कटाव' के लिए सबसे अधिक संवेदनशील है?",
+    "o": ["Downstream slope", "Upstream face | अपस्ट्रीम फेस", "Foundation", "Core"],
+    "a": 1,
+    "e": "The upstream face is constantly exposed to wave action, requiring stone pitching or rip-rap for protection.",
+    "cat": "technical",
+    "sub": "dam_engineering"
+  },
+  {
+    "q": "A 'Siphon Spillway' works on the principle of: / एक 'साइफन स्पिलवे' किस सिद्धांत पर कार्य करता है?",
+    "o": ["Gravity only", "Negative pressure (Atmospheric pressure difference) | नकारात्मक दबाव (वायुमंडलीय दबाव अंतर)", "Centrifugal force", "None"],
+    "a": 1,
+    "e": "When the water level rises above the crest, a vacuum is created in the siphon pipe, causing water to be 'sucked' out at a high rate.",
+    "cat": "technical",
+    "sub": "dam_engineering"
+  },
+  {
+    "q": "What is the function of 'Grout Curtain' under a dam foundation? / बांध की नींव के नीचे 'ग्राउट कर्टेन' (Grout Curtain) का कार्य क्या है?",
+    "o": ["To increase height", "To reduce seepage through the foundation rocks | नींव की चट्टानों के माध्यम से रिसाव को कम करना", "To support the bridge", "None"],
+    "a": 1,
+    "e": "Cement grout is injected into holes in the foundation to fill cracks and create an impermeable barrier.",
+    "cat": "technical",
+    "sub": "dam_engineering"
+  },
+  {
+    "q": "Which type of 'Energy Dissipater' uses a concrete block to break the force of falling water? / किस प्रकार का 'एनर्जी डिसिपेटर' गिरने वाले पानी के बल को तोड़ने के लिए कंक्रीट ब्लॉक का उपयोग करता है?",
+    "o": ["Stilling Basin with Baffle blocks | बाफल ब्लॉक्स के साथ स्टिलिंग बेसिन", "Ski-jump bucket", "Roller bucket", "None"],
+    "a": 0,
+    "e": "Baffle blocks or friction blocks are placed in the basin to create turbulence and dissipate kinetic energy.",
+    "cat": "technical",
+    "sub": "dam_engineering"
+  },
+  {
+    "q": "In a gravity dam, 'Principal Stress' is maximum at the: / एक ग्रेविटी बांध में, 'मुख्य तनाव' (Principal Stress) अधिकतम होता है:",
+    "o": ["Heel of the dam", "Toe of the dam | बांध के टो (Toe) पर", "Top of the dam", "Middle"],
+    "a": 1,
+    "e": "The combined effect of weight and water pressure creates maximum compressive stress at the downstream toe when the reservoir is full.",
+    "cat": "technical",
+    "sub": "dam_engineering"
+  },
+  {
+    "q": "The 'Filter' provided in an earthen dam prevents: / मिट्टी के बांध में प्रदान किया गया 'फिल्टर' रोकता है:",
+    "o": ["Water from entering", "Migration of soil particles while allowing water to pass | पानी को गुजरने देते हुए मिट्टी के कणों के प्रवास को रोकना", "Earthquakes", "None"],
+    "a": 1,
+    "e": "Filters prevent internal erosion (piping) by letting water out safely while holding back the fine soil grains.",
+    "cat": "technical",
+    "sub": "dam_engineering"
+  },
+  {
+    "q": "What is 'Crest' of a spillway? / स्पिलवे का 'क्रेस्ट' (Crest) क्या है?",
+    "o": ["The lowest point", "The highest point or top of the overflow section | ओवरफ्लो सेक्शन का उच्चतम बिंदु या शीर्ष", "The foundation", "None"],
+    "a": 1,
+    "e": "The height of the crest determines the normal storage level (FRL) of the reservoir.",
+    "cat": "technical",
+    "sub": "dam_engineering"
+  },
+  {
+    "q": "A 'Berm' is provided on the downstream slope of a high earthen dam to: / एक उच्च मिट्टी के बांध के डाउनस्ट्रीम ढलान पर 'बर्म' (Berm) प्रदान किया जाता है:",
+    "o": ["Decrease stability", "Increase stability and break the flow of rainwater | स्थिरता बढ़ाना और वर्षा जल के प्रवाह को तोड़ना", "Store water", "None"],
+    "a": 1,
+    "e": "Berms act as small horizontal terraces that prevent erosion and provide extra width for stability.",
+    "cat": "technical",
+    "sub": "dam_engineering"
+  },
+  {
+    "q": "Which force is neglected in the design of a 'Small' gravity dam? / 'छोटे' ग्रेविटी बांध के डिजाइन में किस बल की उपेक्षा की जाती है?",
+    "o": ["Water pressure", "Self-weight", "Earthquake force | भूकंप बल", "None"],
+    "a": 2,
+    "e": "For low-height dams in non-seismic zones, earthquake forces are often not calculated to simplify design.",
+    "cat": "technical",
+    "sub": "dam_engineering"
+  },
+  {
+    "q": "A canal aligned along the natural watershed line is called: / प्राकृतिक जलक्षेत्र रेखा (Watershed line) के साथ संरेखित नहर कहलाती है:",
+    "o": ["Side slope canal", "Contour canal", "Ridge canal (Watershed canal) | रिज नहर (रिज कैनाल)", "None"],
+    "a": 2,
+    "e": "Ridge canals are highly efficient because they can irrigate land on both sides by gravity.",
+    "cat": "technical",
+    "sub": "irrigation_engineering"
+  },
+  {
+    "q": "What is 'Balancing Depth' in canal design? / नहर डिजाइन में 'बैलेंसिंग डेप्थ' क्या है?",
+    "o": ["Maximum depth of water", "The depth where the volume of cutting equals the volume of filling | वह गहराई जहाँ खुदाई का आयतन भराव के आयतन के बराबर हो", "Depth of lining", "None"],
+    "a": 1,
+    "e": "Designing a canal at balancing depth is most economical as no extra soil is needed or disposed of.",
+    "cat": "technical",
+    "sub": "irrigation_engineering"
+  },
+  {
+    "q": "In an 'Aqueduct', the canal is carried ________ the drainage. / एक 'एक्वाडक्ट' (Aqueduct) में, नहर को ड्रेनेज के ________ ले जाया जाता है।",
+    "o": ["Below", "Across at same level", "Above | ऊपर (Above)", "None"],
+    "a": 2,
+    "e": "An aqueduct is like a bridge that carries the canal over a natural drain or river.",
+    "cat": "technical",
+    "sub": "irrigation_engineering"
+  },
+  {
+    "q": "What is a 'Super Passage'? / 'सुपर पैसेज' (Super Passage) क्या है?",
+    "o": ["Canal over drain", "Natural drain over the canal | नहर के ऊपर प्राकृतिक ड्रेनेज", "Both at same level", "None"],
+    "a": 1,
+    "e": "It is the opposite of an aqueduct; the drain flows above the canal through a bridge-like structure.",
+    "cat": "technical",
+    "sub": "irrigation_engineering"
+  },
+  {
+    "q": "Which Cross Drainage work is used when the canal and drain intersect at the 'same level'? / जब नहर और ड्रेनेज 'समान स्तर' पर मिलते हैं तो किस क्रॉस ड्रेनेज कार्य का उपयोग किया जाता है?",
+    "o": ["Siphon aqueduct", "Level Crossing | लेवल क्रॉसिंग (Level Crossing)", "Super passage", "None"],
+    "a": 1,
+    "e": "In a level crossing, the water of the drain is allowed to mix with the canal water and then regulated through gates.",
+    "cat": "technical",
+    "sub": "irrigation_engineering"
+  },
+  {
+    "q": "What is the primary 'purpose' of Canal Lining? / नहर की लाइनिंग (Lining) का प्राथमिक 'उद्देश्य' क्या है?",
+    "o": ["To increase water loss", "To prevent seepage and increase command area | रिसाव को रोकना और कमान क्षेत्र बढ़ाना", "To grow fishes", "None"],
+    "a": 1,
+    "e": "Lining makes the canal impermeable, reducing water wastage and preventing waterlogging in nearby areas.",
+    "cat": "technical",
+    "sub": "irrigation_engineering"
+  },
+  {
+    "q": "A 'Canal Fall' (Drop) is constructed when: / एक 'कैनाल फॉल' (Canal Fall) तब बनाया जाता है जब:",
+    "o": ["Ground slope is gentler than canal slope", "The natural ground slope is steeper than the designed canal slope | प्राकृतिक भूमि की ढलान डिजाइन की गई नहर की ढलान से अधिक हो", "Water is very clean", "None"],
+    "a": 1,
+    "e": "Falls are provided to lower the water level safely without causing erosion due to high velocity.",
+    "cat": "technical",
+    "sub": "irrigation_engineering"
+  },
+  {
+    "q": "What is the function of a 'Canal Escape'? / 'कैनाल एस्केप' (Canal Escape) का कार्य क्या है?",
+    "o": ["To supply water to farms", "To release surplus or excess water from the canal safely | नहर से अतिरिक्त पानी को सुरक्षित रूप से बाहर निकालना", "To measure discharge", "None"],
+    "a": 1,
+    "e": "Escapes act as safety valves to protect the canal banks from breaching during sudden heavy rains or reduced demand.",
+    "cat": "technical",
+    "sub": "irrigation_engineering"
+  },
+  {
+    "q": "In a 'Siphon Aqueduct', the drainage water flows: / एक 'साइफन एक्वाडक्ट' में, ड्रेनेज का पानी बहता है:",
+    "o": ["By gravity with free surface", "Under pressure through a depressed channel | एक दबे हुए चैनल के माध्यम से दबाव में", "Above the canal", "None"],
+    "a": 1,
+    "e": "The bed of the drain is lowered to pass under the canal, and the flow is under 'siphonic action' (pressure).",
+    "cat": "technical",
+    "sub": "irrigation_engineering"
+  },
+  {
+    "q": "A 'Canal Outlet' (Module) is a structure that: / 'कैनाल आउटलेट' (Module) एक ऐसी संरचना है जो:",
+    "o": ["Connects two canals", "Connects a distributary canal to a field channel | एक वितरक नहर को फील्ड चैनल (खाते) से जोड़ती है", "Stores water", "None"],
+    "a": 1,
+    "e": "It is the final point of management by the irrigation department, from where farmers take water.",
+    "cat": "technical",
+    "sub": "irrigation_engineering"
+  },
+  {
+    "q": "What is the primary function of a 'Diversion Headwork'? / 'डाइवर्जन हेडवर्क' का प्राथमिक कार्य क्या है?",
+    "o": ["To store water for years", "To divert river water into a canal and regulate its supply | नदी के पानी को नहर में मोड़ना और आपूर्ति को नियंत्रित करना", "To generate nuclear power", "None"],
+    "a": 1,
+    "e": "Diversion headworks like weirs and barrages are used to raise the water level in the river so it can flow into the off-taking canal by gravity.",
+    "cat": "technical",
+    "sub": "irrigation_engineering"
+  },
+  {
+    "q": "What is the main difference between a 'Weir' and a 'Barrage'? / एक 'वियर' (Weir) और एक 'बैराज' (Barrage) के बीच मुख्य अंतर क्या है?",
+    "o": ["Weir has gates, Barrage does not", "In a Barrage, the pond level is controlled primarily by gates | बैराज में, पॉन्ड लेवल मुख्य रूप से गेट्स द्वारा नियंत्रित होता है", "Weir is always made of wood", "None"],
+    "a": 1,
+    "e": "A weir raises water mainly by its solid crest, while a barrage uses large adjustable gates for better control over the water level and silt.",
+    "cat": "technical",
+    "sub": "irrigation_engineering"
+  },
+  {
+    "q": "The 'Fish Ladder' in a diversion headwork is provided to: / डाइवर्जन हेडवर्क में 'फिश लैडर' (Fish Ladder) किसके लिए प्रदान की जाती है?",
+    "o": ["Catch fish for sale", "Allow fish to migrate freely across the weir | मछलियों को वियर के पार स्वतंत्र रूप से आने-जाने की अनुमति देना", "Keep the water clean", "None"],
+    "a": 1,
+    "e": "It provides a low-velocity path for fish to move upstream or downstream, preserving the aquatic ecosystem.",
+    "cat": "technical",
+    "sub": "irrigation_engineering"
+  },
+  {
+    "q": "What are 'Under Sluices' (Pocket) in a headwork layout? / हेडवर्क लेआउट में 'अंडर स्लुइस' क्या हैं?",
+    "o": ["Small canals", "Openings provided in the weir near the canal head regulator to remove silt | सिल्ट हटाने के लिए नहर के हेड रेगुलेटर के पास वियर में दिए गए छिद्र", "Drinking water pipes", "None"],
+    "a": 1,
+    "e": "Under sluices keep the approach channel clear of silt and maintain a deep channel in front of the canal intake.",
+    "cat": "technical",
+    "sub": "irrigation_engineering"
+  },
+  {
+    "q": "A 'Divide Wall' is constructed: / एक 'डिवाइड वॉल' (Divide Wall) का निर्माण किया जाता है:",
+    "o": ["Parallel to the river flow | नदी के प्रवाह के समानांतर", "Perpendicular to the weir to separate under sluices from the main weir | मुख्य वियर से अंडर स्लुइस को अलग करने के लिए", "On the canal bank", "None"],
+    "a": 1,
+    "e": "The divide wall helps in creating a 'quiet pocket' of water, facilitating better silt settlement before water enters the canal.",
+    "cat": "technical",
+    "sub": "irrigation_engineering"
+  },
+  {
+    "q": "What is the function of a 'Canal Head Regulator'? / 'नहर हेड रेगुलेटर' का कार्य क्या है?",
+    "o": ["To measure rainfall", "To control the entry of water and silt into the canal | नहर में पानी और सिल्ट के प्रवेश को नियंत्रित करना", "To support the bridge", "None"],
+    "a": 1,
+    "e": "It regulates the discharge entering the canal and can be completely closed during floods to prevent heavy silting.",
+    "cat": "technical",
+    "sub": "irrigation_engineering"
+  },
+  {
+    "q": "A 'K.T. Weir' (Kolhapur Type Weir) is unique because: / 'K.T. वियर' अद्वितीय है क्योंकि:",
+    "o": ["It is a very high dam", "It uses removable needles or shutters and functions as a bridge cum weir | इसमें हटाने योग्य सुइयां या शटर होते हैं और यह ब्रिज कम वियर के रूप में कार्य करता है", "It is built only on mountains", "None"],
+    "a": 1,
+    "e": "K.T. weirs are popular for minor irrigation in Maharashtra, allowing storage after monsoon while keeping the river path clear during floods.",
+    "cat": "technical",
+    "sub": "irrigation_engineering"
+  },
+  {
+    "q": "What is 'Retrogression' of a riverbed? / नदी के तल का 'रेट्रोग्रेशन' (Retrogression) क्या है?",
+    "o": ["Raising of riverbed", "Lowering of the downstream riverbed level after dam construction | बांध निर्माण के बाद डाउनस्ट्रीम नदी तल के स्तर का गिरना", "Widening of river", "None"],
+    "a": 1,
+    "e": "It occurs because the clear water released from the reservoir has more energy to erode the downstream bed.",
+    "cat": "technical",
+    "sub": "irrigation_engineering"
+  },
+  {
+    "q": "Which part of a headwork layout prevents large floating debris from entering the canal? / हेडवर्क लेआउट का कौन सा हिस्सा बड़े तैरते हुए मलबे को नहर में प्रवेश करने से रोकता है?",
+    "o": ["Fish ladder", "Trash Rack / Floating Log Boom | ट्रैश रैक / फ्लोटिंग लॉग बूम", "Under sluices", "None"],
+    "a": 1,
+    "e": "Log booms or racks are placed upstream of the intake to intercept wood, trash, and other floating items.",
+    "cat": "technical",
+    "sub": "irrigation_engineering"
+  },
+  {
+    "q": "A 'Silt Excluder' is constructed: / एक 'सिल्ट एक्सक्लूडर' (Silt Excluder) कहाँ बनाया जाता है?",
+    "o": ["Inside the canal", "In the riverbed in front of the head regulator | हेड रेगुलेटर के सामने नदी के तल में", "At the end of the canal", "None"],
+    "a": 1,
+    "e": "It excludes silt from the water before it enters the canal, whereas a 'Silt Ejector' removes silt after it has entered the canal.",
+    "cat": "technical",
+    "sub": "irrigation_engineering"
+  },
+  {
+    "q": "Which component in a 'Drip Irrigation' system prevents clogs by removing debris? / 'ड्रिप सिंचाई' प्रणाली में कौन सा घटक मलबे को हटाकर रुकावट को रोकता है?",
+    "o": ["Emitter", "Filter (Screen/Disk) | फिल्टर (स्क्रीन/डिस्क)", "Lateral", "Pump"],
+    "a": 1,
+    "e": "Filtration is critical in drip irrigation as the emitters have very small openings that clog easily.",
+    "cat": "technical",
+    "sub": "irrigation_engineering"
+  },
+  {
+    "q": "What is 'Fertigation' in micro-irrigation? / सूक्ष्म सिंचाई में 'फर्टिगेशन' (Fertigation) क्या है?",
+    "o": ["Applying water only", "Applying fertilizers through the irrigation water | सिंचाई के पानी के माध्यम से उर्वरक देना", "Growing crops without water", "None"],
+    "a": 1,
+    "e": "Fertigation allows for the precise delivery of nutrients directly to the plant's root zone.",
+    "cat": "technical",
+    "sub": "irrigation_engineering"
+  },
+  {
+    "q": "In 'Sprinkler Irrigation', water is applied in the form of: / 'स्प्रिंकलर सिंचाई' में, पानी किस रूप में लगाया जाता है?",
+    "o": ["Flood", "Artificial rain | कृत्रिम वर्षा (Artificial rain)", "Fog", "None"],
+    "a": 1,
+    "e": "Sprinklers spray water into the air through nozzles, mimicking natural rainfall.",
+    "cat": "technical",
+    "sub": "irrigation_engineering"
+  },
+  {
+    "q": "Which type of well is constructed by 'drilling' deep into the ground to reach a confined aquifer? / सीमित जलभृत (Confined aquifer) तक पहुँचने के लिए गहरे 'ड्रिलिंग' द्वारा किस प्रकार का कुआं बनाया जाता है?",
+    "o": ["Open well", "Tube well | ट्यूबवेल (Tube well)", "Dug well", "None"],
+    "a": 1,
+    "e": "Tube wells are narrow, deep, and usually powered by electricity or diesel pumps for high yield.",
+    "cat": "technical",
+    "sub": "irrigation_engineering"
+  },
+  {
+    "q": "The 'Yield' of a well is: / कुएं की 'उपज' (Yield) है:",
+    "o": ["The depth of the well", "The volume of water that can be pumped per unit of time | प्रति इकाई समय में पंप किए जा सकने वाले पानी की मात्रा", "The age of the well", "None"],
+    "a": 1,
+    "e": "Yield depends on the permeability of the soil (aquifer) and the drawdown of the water level.",
+    "cat": "technical",
+    "sub": "irrigation_engineering"
+  },
+  {
+    "q": "What is an 'Artesian Well'? / 'आर्टिसियन कुआं' (Artesian Well) क्या है?",
+    "o": ["A well in a desert", "A well where water rises above the aquifer level under natural pressure | प्राकृतिक दबाव में पानी अपने आप ऊपर आता है", "A dry well", "None"],
+    "a": 1,
+    "e": "In artesian wells, the water is trapped between two impermeable layers and flows out without pumping.",
+    "cat": "technical",
+    "sub": "irrigation_engineering"
+  },
+  {
+    "q": "What is the main disadvantage of 'Well Irrigation'? / 'कुआं सिंचाई' का मुख्य नुकसान क्या है?",
+    "o": ["It is expensive to operate due to pumping costs | पंपिंग लागत के कारण संचालन महंगा है", "It causes waterlogging", "It is controlled by nature", "None"],
+    "a": 0,
+    "e": "Unlike canal irrigation, well irrigation requires continuous energy for pumping and regular maintenance of the equipment.",
+    "cat": "technical",
+    "sub": "irrigation_engineering"
+  },
+  {
+    "q": "Which irrigation method is best suited for sandy soil with high permeability? / उच्च पारगम्यता वाली रेतीली मिट्टी के लिए कौन सी सिंचाई विधि सबसे उपयुक्त है?",
+    "o": ["Flood irrigation", "Sprinkler irrigation | स्प्रिंकलर सिंचाई (Sprinkler)", "Canal irrigation", "None"],
+    "a": 1,
+    "e": "Sprinklers are ideal for sandy soils where water would otherwise seep away too quickly in surface channels.",
+    "cat": "technical",
+    "sub": "irrigation_engineering"
+  },
+  {
+    "q": "What are 'Emitters' (Drippers) used for? / 'एमिटर्स' (Emitters) का उपयोग किसके लिए किया जाता है?",
+    "o": ["To pump water", "To discharge water at a very low and controlled rate near the roots | जड़ों के पास नियंत्रित दर पर पानी छोड़ना", "To measure pressure", "None"],
+    "a": 1,
+    "e": "Emitters are the final components of a drip system that release water drop by drop.",
+    "cat": "technical",
+    "sub": "irrigation_engineering"
+  },
+  {
+    "q": "Which type of well is typically larger in diameter but shallower in depth? / किस प्रकार के कुएं का व्यास आमतौर पर बड़ा होता है लेकिन गहराई कम होती है?",
+    "o": ["Tube well", "Open well (Dug well) | खुला कुआं (Dug well)", "Artesian well", "None"],
+    "a": 1,
+    "e": "Open wells tap the unconfined (phreatic) aquifer and have a large storage capacity but lower recharge rates.",
+    "cat": "technical",
+    "sub": "irrigation_engineering"
+  },
+  {
+    "q": "What is a 'Bandhara' in irrigation? / सिंचाई में 'बंधारा' (Bandhara) क्या है?",
+    "o": ["A large dam", "A low masonry weir constructed across a small stream | छोटी धारा के पार बनाया गया एक कम ऊँचाई वाला चिनाई बांध", "A type of pump", "None"],
+    "a": 1,
+    "e": "Bandharas are minor irrigation structures used to divert water from small rivers into canals for local irrigation.",
+    "cat": "technical",
+    "sub": "irrigation_engineering"
+  },
+  {
+    "q": "A 'Solid Bandhara' is one where: / एक 'ठोस बंधारा' (Solid Bandhara) वह है जहाँ:",
+    "o": ["Water flows through gates", "The weir is permanent without any openings or shutters | बिना किसी छिद्र या शटर वाला स्थायी बांध", "It is made of wood", "None"],
+    "a": 1,
+    "e": "In a solid bandhara, water flows over the crest when the level exceeds the height of the weir.",
+    "cat": "technical",
+    "sub": "irrigation_engineering"
+  },
+  {
+    "q": "What is the primary purpose of a 'Percolation Tank'? / 'परकोलेशन टैंक' का प्राथमिक उद्देश्य क्या है?",
+    "o": ["Direct irrigation", "Groundwater recharge by allowing water to seep into the soil | मिट्टी में पानी रिसने देकर भूजल पुनर्भरण", "Power generation", "None"],
+    "a": 1,
+    "e": "These tanks are constructed to store runoff and allow it to percolate into the ground to raise the water table in nearby wells.",
+    "cat": "technical",
+    "sub": "irrigation_engineering"
+  },
+  {
+    "q": "Which site is most suitable for a 'Percolation Tank'? / 'परकोलेशन टैंक' के लिए कौन सा स्थान सबसे उपयुक्त है?",
+    "o": ["Impermeable rocky soil", "Highly permeable soil or fractured rocks | अत्यधिक पारगम्य मिट्टी या खंडित चट्टानें", "Marshy land", "None"],
+    "a": 1,
+    "e": "The soil must allow water to seep through easily to effectively recharge the underground aquifers.",
+    "cat": "technical",
+    "sub": "irrigation_engineering"
+  },
+  {
+    "q": "In a 'Lift Irrigation Scheme', water is transported to the fields by: / 'लिफ्ट सिंचाई योजना' में, पानी को खेतों तक पहुँचाया जाता है:",
+    "o": ["Gravity alone", "Pumping from a lower level to a higher level | निचले स्तर से उच्च स्तर तक पंप करके", "Rainfall", "None"],
+    "a": 1,
+    "e": "Lift irrigation is used where the land is at a higher elevation than the water source (river or canal).",
+    "cat": "technical",
+    "sub": "irrigation_engineering"
+  },
+  {
+    "q": "What is the function of an 'Inlet Well' (or Intake Well) in lift irrigation? / लिफ्ट सिंचाई में 'इनलेट वेल' (Intake Well) का कार्य क्या है?",
+    "o": ["To store seeds", "To collect water from the source and provide a sump for pumps | स्रोत से पानी इकट्ठा करना और पंपों के लिए संप प्रदान करना", "To filter air", "None"],
+    "a": 1,
+    "e": "The intake well ensures a steady supply of water to the pump house even when the river level varies.",
+    "cat": "technical",
+    "sub": "irrigation_engineering"
+  },
+  {
+    "q": "Which component of a Lift Irrigation scheme carries water from the pump house to the delivery chamber? / लिफ्ट सिंचाई योजना का कौन सा घटक पंप हाउस से डिलीवरी चैंबर तक पानी ले जाता है?",
+    "o": ["Canal", "Rising Main (Pressure pipe) | राइजिंग मेन (प्रेशर पाइप)", "Drain", "None"],
+    "a": 1,
+    "e": "The rising main is a pipeline designed to withstand the high pressure created by the pumps.",
+    "cat": "technical",
+    "sub": "irrigation_engineering"
+  },
+  {
+    "q": "An 'Open Bandhara' is usually equipped with: / एक 'ओपन बंधारा' आमतौर पर किससे सुसज्जित होता है?",
+    "o": ["Permanent walls only", "Removable wooden or steel shutters | हटाने योग्य लकड़ी या स्टील के शटर", "Automatic sensors", "None"],
+    "a": 1,
+    "e": "Open bandharas allow more control over the water level and help in flushing out silt during floods.",
+    "cat": "technical",
+    "sub": "irrigation_engineering"
+  },
+  {
+    "q": "What is the advantage of 'Bandhara Irrigation'? / 'बंधारा सिंचाई' का क्या लाभ है?",
+    "o": ["Low capital cost | कम पूंजीगत लागत", "No water loss", "Very high power consumption", "None"],
+    "a": 0,
+    "e": "Bandharas are small-scale and cost-effective structures suitable for small farmers in hilly regions.",
+    "cat": "technical",
+    "sub": "irrigation_engineering"
+  },
+  {
+    "q": "In Lift Irrigation, the 'Delivery Chamber' is located at: / लिफ्ट सिंचाई में, 'डिवरी चैंबर' कहाँ स्थित होता है?",
+    "o": ["The lowest point", "The highest point of the command area | कमान क्षेत्र के उच्चतम बिंदु पर", "Inside the river", "None"],
+    "a": 1,
+    "e": "From the delivery chamber, water flows down to the fields by gravity through distribution canals.",
+    "cat": "technical",
+    "sub": "irrigation_engineering"
+  },
+  {
+    "q": "A 'Gravity Dam' resists the external forces primarily by: / एक 'ग्रेविटी बांध' बाहरी बलों का प्रतिरोध मुख्य रूप से किसके द्वारा करता है?",
+    "o": ["Internal strength", "Its own weight | इसके अपने वजन द्वारा", "Soil pressure", "None"],
+    "a": 1,
+    "e": "Gravity dams are massive structures made of concrete or masonry that use their weight to counter the water pressure.",
+    "cat": "technical",
+    "sub": "dam_engineering"
+  },
+  {
+    "q": "Which is the most important force acting on a gravity dam? / ग्रेविटी बांध पर कार्य करने वाला सबसे महत्वपूर्ण बल कौन सा है?",
+    "o": ["Wind pressure", "Water pressure | जल का दबाव (Water pressure)", "Wave pressure", "None"],
+    "a": 1,
+    "e": "The horizontal thrust of the stored water is the primary force that a gravity dam must resist.",
+    "cat": "technical",
+    "sub": "dam_engineering"
+  },
+  {
+    "q": "A 'Low Gravity Dam' is one where the maximum height is less than: / एक 'लो ग्रेविटी बांध' वह है जहाँ अधिकतम ऊंचाई किससे कम है?",
+    "o": ["30 m", "$H = f / [w(G-C+1)] | H = f / [w(G-C+1)]$", "100 m", "None"],
+    "a": 1,
+    "e": "If the height is below this limiting value, the compressive stress does not exceed the allowable limit.",
+    "cat": "technical",
+    "sub": "dam_engineering"
+  },
+  {
+    "q": "What is the purpose of a 'Drainage Gallery' in a gravity dam? / ग्रेविटी बांध में 'ड्रेनेज गैलरी' (Drainage Gallery) का उद्देश्य क्या है?",
+    "o": ["To provide a walkway", "To collect and remove seepage water and reduce uplift pressure | रिसाव वाले पानी को इकट्ठा करना और अपलिफ्ट प्रेशर कम करना", "To store fish", "None"],
+    "a": 1,
+    "e": "Galleries help monitor the dam's internal health and reduce the dangerous upward pressure of water under the base.",
+    "cat": "technical",
+    "sub": "dam_engineering"
+  },
+  {
+    "q": "What is a 'Spillway'? / 'स्पिलवे' (Spillway) क्या है?",
+    "o": ["A pipe to carry drinking water", "A safety valve to release surplus water during floods | बाढ़ के दौरान अतिरिक्त पानी छोड़ने के लिए एक सुरक्षा वाल्व", "A small bridge", "None"],
+    "a": 1,
+    "e": "Spillways prevent the dam from being overtopped and damaged by large floods.",
+    "cat": "technical",
+    "sub": "dam_engineering"
+  },
+  {
+    "q": "Which type of spillway is also known as a 'Glory Hole' spillway? / किस प्रकार के स्पिलवे को 'ग्लोरी होल' स्पिलवे के रूप में भी जाना जाता है?",
+    "o": ["Ogee spillway", "Shaft spillway | शाफ्ट स्पिलवे (Shaft spillway)", "Siphon spillway", "Chute spillway"],
+    "a": 1,
+    "e": "It is a funnel-shaped vertical shaft that carries water through a tunnel under or through the dam.",
+    "cat": "technical",
+    "sub": "dam_engineering"
+  },
+  {
+    "q": "What is the function of 'Energy Dissipaters'? / 'एनर्जी डिसिपेटर्स' (Energy Dissipaters) का कार्य क्या है?",
+    "o": ["To produce electricity", "To reduce the high kinetic energy of water falling from the spillway | स्पिलवे से गिरने वाले पानी की उच्च गतिज ऊर्जा को कम करना", "To increase speed", "None"],
+    "a": 1,
+    "e": "They prevent scouring and damage to the riverbed on the downstream side by creating a 'Hydraulic Jump'.",
+    "cat": "technical",
+    "sub": "dam_engineering"
+  },
+  {
+    "q": "The 'Ogee' profile of a spillway is designed to match: / स्पिलवे का 'ओगी' (Ogee) प्रोफाइल किसके अनुरूप डिज़ाइन किया गया है?",
+    "o": ["The shape of a wave", "The lower nappe of a freely falling water sheet | स्वतंत्र रूप से गिरने वाली पानी की चादर के निचले नेपे के अनुरूप", "A straight line", "None"],
+    "a": 1,
+    "e": "This profile ensures smooth flow without creating vacuum (negative pressure) on the spillway surface.",
+    "cat": "technical",
+    "sub": "dam_engineering"
+  },
+  {
+    "q": "What are 'Uplift Forces' in a gravity dam? / ग्रेविटी बांध में 'अपलिफ्ट फोर्स' (Uplift Forces) क्या हैं?",
+    "o": ["Wind forces", "Upward pressure exerted by water seeping under the dam base | बांध के आधार के नीचे रिसाव वाले पानी द्वारा लगाया गया ऊपर की ओर दबाव", "Weight of the dam", "None"],
+    "a": 1,
+    "e": "Uplift reduces the effective weight of the dam and its stability against sliding and overturning.",
+    "cat": "technical",
+    "sub": "dam_engineering"
+  },
+  {
+    "q": "In a 'Chute Spillway', water is carried through: / एक 'च्यूट स्पिलवे' (Chute Spillway) में, पानी किसके माध्यम से ले जाया जाता है?",
+    "o": ["A pipe", "An open steep channel | एक खुला खड़ा चैनल", "A tunnel", "None"],
+    "a": 1,
+    "e": "Chute spillways (trough spillways) are commonly used for earthen dams where they are built away from the main embankment.",
+    "cat": "technical",
+    "sub": "dam_engineering"
+  },
+  {
+    "q": "Which type of dam is constructed primarily using locally available soil and gravel? / मुख्य रूप से स्थानीय स्तर पर उपलब्ध मिट्टी और बजरी का उपयोग करके किस प्रकार का बांध बनाया जाता है?",
+    "o": ["Gravity dam", "Earthen dam | मिट्टी का बांध (Earthen dam)", "Arch dam", "Steel dam"],
+    "a": 1,
+    "e": "Earthen dams are embankment dams made by compacting layers of soil, making them economical for sites with weak foundations.",
+    "cat": "technical",
+    "sub": "dam_engineering"
+  },
+  {
+    "q": "In an earthen dam, the central 'Core' or 'Hearting' is provided to: / एक मिट्टी के बांध में, केंद्रीय 'कोर' (Core) या 'हार्टिंग' किसके लिए प्रदान किया जाता है?",
+    "o": ["Increase weight", "Prevent seepage of water | पानी के रिसाव को रोकना", "Support the road", "None"],
+    "a": 1,
+    "e": "The core is made of highly impermeable material like clay to minimize seepage through the dam body.",
+    "cat": "technical",
+    "sub": "dam_engineering"
+  },
+  {
+    "q": "What is 'Piping' failure in an earthen dam? / मिट्टी के बांध में 'पाइपिंग' (Piping) विफलता क्या है?",
+    "o": ["Breaking of water pipes", "Progressive erosion of soil from inside the dam due to seepage | रिसाव के कारण बांध के अंदर से मिट्टी का क्रमिक कटाव", "Overtopping", "None"],
+    "a": 1,
+    "e": "Piping occurs when the seepage velocity is high enough to wash away soil particles, creating a hollow pipe-like structure inside the dam.",
+    "cat": "technical",
+    "sub": "dam_engineering"
+  },
+  {
+    "q": "The downstream slope of an earthen dam is protected from rain wash by: / मिट्टी के बांध के डाउनस्ट्रीम ढलान को बारिश से धोने से बचाने के लिए क्या किया जाता है?",
+    "o": ["Pitching", "Turfing (Growing grass) | टर्फिंग (घास उगाना)", "Core wall", "None"],
+    "a": 1,
+    "e": "Turfing or dry stone pitching prevents surface erosion of the embankment slopes due to heavy rain.",
+    "cat": "technical",
+    "sub": "dam_engineering"
+  },
+  {
+    "q": "What is the function of 'Rock Toe' in an earthen dam? / मिट्टी के बांध में 'रॉक टो' (Rock Toe) का कार्य क्या है?",
+    "o": ["To prevent overtopping", "To facilitate drainage and keep the phreatic line within the dam | जल निकासी की सुविधा और फ्रिएटिक लाइन को बांध के भीतर रखना", "To add beauty", "None"],
+    "a": 1,
+    "e": "Rock toe allows seepage water to escape without eroding the downstream base of the dam.",
+    "cat": "technical",
+    "sub": "dam_engineering"
+  },
+  {
+    "q": "A 'Homogeneous' earthen dam is constructed when: / एक 'सजातीय' (Homogeneous) मिट्टी का बांध तब बनाया जाता है जब:",
+    "o": ["Only one type of soil is available | केवल एक प्रकार की मिट्टी उपलब्ध हो", "Rock is available", "The dam is very high", "None"],
+    "a": 0,
+    "e": "A homogeneous dam consists of the same soil throughout its cross-section, usually for small heights.",
+    "cat": "technical",
+    "sub": "dam_engineering"
+  },
+  {
+    "q": "What is the most common cause of 'Hydraulic failure' in earthen dams? / मिट्टी के बांधों में 'हाइड्रोलिक विफलता' का सबसे आम कारण क्या है?",
+    "o": ["Internal erosion", "Overtopping due to insufficient spillway capacity | अपर्याप्त स्पिलवे क्षमता के कारण ओवरटॉपिंग", "Earthquakes", "None"],
+    "a": 1,
+    "e": "Overtopping happens when flood water flows over the crest, which an earthen dam cannot withstand.",
+    "cat": "technical",
+    "sub": "dam_engineering"
+  },
+  {
+    "q": "The 'Phreatic Line' in an earthen dam is the line of: / मिट्टी के बांध में 'फ्रिएटिक लाइन' (Phreatic Line) किसकी रेखा है?",
+    "o": ["Maximum height", "Zero gauge pressure (Atmospheric pressure) | शून्य गेज दबाव (वायुमंडलीय दबाव)", "Center of gravity", "None"],
+    "a": 1,
+    "e": "It is the top flow line of seepage through the dam, above which the soil is unsaturated.",
+    "cat": "technical",
+    "sub": "dam_engineering"
+  },
+  {
+    "q": "Which construction method involves compacting soil using rollers in thin layers? / किस निर्माण विधि में रोलर्स का उपयोग करके पतली परतों में मिट्टी को संकुचित किया जाता है?",
+    "o": ["Hydraulic fill method", "Rolled fill method | रोल्ड फिल विधि (Rolled fill)", "Stacking", "None"],
+    "a": 1,
+    "e": "Rolled fill is the modern and standard method to ensure maximum density and stability of the embankment.",
+    "cat": "technical",
+    "sub": "dam_engineering"
+  },
+  {
+    "q": "What is 'Upstream Pitching' used for? / 'अपस्ट्रीम पिचिंग' का उपयोग किसके लिए किया जाता है?",
+    "o": ["To prevent seepage", "To protect the upstream slope from wave action | अपस्ट्रीम ढलान को लहरों के प्रभाव से बचाने के लिए", "To support the core", "None"],
+    "a": 1,
+    "e": "Stone pitching or riprap is provided on the upstream face to resist erosion caused by wind-generated waves.",
+    "cat": "technical",
+    "sub": "dam_engineering"
+  },
+  {
+    "q": "Which term describes the amount of water 'lost' through seepage and evaporation in a canal? / नहर में रिसाव और वाष्पीकरण के माध्यम से 'खोए' गए पानी की मात्रा को कौन सा शब्द वर्णित करता है?",
+    "o": ["Delta", "Conveyance Losses | वहन हानि (Conveyance Losses)", "Duty", "Runoff"],
+    "a": 1,
+    "e": "Conveyance losses occur between the reservoir and the farm gate, often reduced by canal lining.",
+    "cat": "technical",
+    "sub": "irrigation_engineering"
+  },
+  {
+    "q": "What is 'Paleo Irrigation'? / 'पेलियो सिंचाई' (Paleo Irrigation) क्या है?",
+    "o": ["Irrigation of old crops", "First watering done before sowing a crop | फसल बोने से पहले की जाने वाली पहली सिंचाई", "Drip irrigation", "None"],
+    "a": 1,
+    "e": "It is done to prepare the soil and provide enough moisture for seeds to germinate.",
+    "cat": "technical",
+    "sub": "irrigation_engineering"
+  },
+  {
+    "q": "The 'Kor-depth' is the depth of water given during: / 'कोर-डेप्थ' (Kor-depth) पानी की वह गहराई है जो कब दी जाती है?",
+    "o": ["Last watering", "The first watering when the crop is a few centimeters high | जब फसल कुछ सेंटीमीटर ऊंची हो जाए", "Harvesting", "None"],
+    "a": 1,
+    "e": "Kor-watering is usually the most critical and maximum watering required by the crop.",
+    "cat": "technical",
+    "sub": "irrigation_engineering"
+  },
+  {
+    "q": "The 'Dead Storage' of a reservoir is provided to: / जलाशय का 'डेड स्टोरेज' (Dead Storage) किसके लिए प्रदान किया जाता है?",
+    "o": ["Generate power", "Accommodate the accumulated silt over its life | अपने जीवन काल में जमा होने वाली गाद के लिए", "Provide drinking water", "None"],
+    "a": 1,
+    "e": "It is the volume of water below the lowest outlet which eventually gets filled with sediment.",
+    "cat": "technical",
+    "sub": "irrigation_engineering"
+  },
+  {
+    "q": "What is the 'Capacity-Inflow Ratio'? / 'क्षमता-प्रवाह अनुपात' (Capacity-Inflow Ratio) क्या है?",
+    "o": ["Ratio of area to depth", "Ratio of reservoir capacity to total annual inflow | जलाशय की क्षमता और कुल वार्षिक प्रवाह का अनुपात", "Speed of water", "None"],
+    "a": 1,
+    "e": "A higher ratio generally leads to a higher 'Trap Efficiency', meaning more silt is captured in the reservoir.",
+    "cat": "technical",
+    "sub": "irrigation_engineering"
+  },
+  {
+    "q": "The 'Trap Efficiency' of a reservoir is a function of: / जलाशय की 'ट्रैप दक्षता' (Trap Efficiency) किसका फलन (Function) है?",
+    "o": ["Type of dam", "Capacity-Inflow ratio | क्षमता-प्रवाह अनुपात", "Water temperature", "None"],
+    "a": 1,
+    "e": "Trap efficiency decreases over time as the reservoir fills with silt and its capacity reduces.",
+    "cat": "technical",
+    "sub": "irrigation_engineering"
+  },
+  {
+    "q": "The 'Minimum Pool Level' is determined by the: / 'न्यूनतम पूल स्तर' किसके द्वारा निर्धारित किया जाता है?",
+    "o": ["Height of the dam", "Elevation of the lowest irrigation outlet | सबसे निचले सिंचाई आउटलेट की ऊंचाई", "Rainfall", "None"],
+    "a": 1,
+    "e": "Water below this level cannot be drawn for use by gravity.",
+    "cat": "technical",
+    "sub": "irrigation_engineering"
+  },
+  {
+    "q": "What is 'Crop Period'? / 'फसल अवधि' (Crop Period) क्या है?",
+    "o": ["Time from first to last watering", "Time from sowing to harvesting | बुवाई से कटाई तक का समय", "Night time", "None"],
+    "a": 1,
+    "e": "Crop period is slightly longer than the 'Base period' used in technical calculations.",
+    "cat": "technical",
+    "sub": "irrigation_engineering"
+  },
+  {
+    "q": "Which method of 'Assessment' is based on the actual volume of water used by the farmer? / 'आकलन' की कौन सी विधि किसान द्वारा उपयोग किए गए पानी की वास्तविक मात्रा पर आधारित है?",
+    "o": ["Flat rate", "Volumetric Assessment | वॉल्यूमेट्रिक आकलन", "Crop-wise assessment", "None"],
+    "a": 1,
+    "e": "This is the most equitable method but requires water meters at every outlet.",
+    "cat": "technical",
+    "sub": "irrigation_engineering"
+  },
+  {
+    "q": "The 'Freeboard' in a dam is the vertical distance between: / बांध में 'फ्रीबोर्ड' (Freeboard) किसके बीच की ऊर्ध्वाधर दूरी है?",
+    "o": ["FRL and MWL", "MWL and Top of the Dam | MWL और बांध के शीर्ष के बीच", "Ground and FRL", "None"],
+    "a": 1,
+    "e": "Freeboard is provided as a safety margin to prevent waves from overtopping the dam during floods.",
+    "cat": "technical",
+    "sub": "irrigation_engineering"
+  },
+  {
+    "q": "In the 'Rational Formula' $Q = CiA$, if the area 'A' is in hectares and intensity 'i' is in mm/hr, the discharge 'Q' is usually expressed in: / 'रेशनल फॉर्मूला' $Q = CiA$ में, यदि क्षेत्रफल 'A' हेक्टेयर में और तीव्रता 'i' मिमी/घंटा में है, तो डिस्चार्ज 'Q' को आमतौर पर किसमें व्यक्त किया जाता है?",
+    "o": ["Cubic meters per second (cumec) | घन मीटर प्रति सेकंड", "Liters per hour", "Millimeters per day", "None"],
+    "a": 0,
+    "e": "To get Q in cumec, a conversion factor of 1/360 is often used when using hectares and mm/hr.",
+    "cat": "technical",
+    "sub": "hydrology"
+  },
+  {
+    "q": "Which of the following is an 'Empirical Formula' used specifically in Southern India for flood estimation? / दक्षिण भारत में बाढ़ के अनुमान के लिए विशेष रूप से किस 'आनुभविक सूत्र' का उपयोग किया जाता है?",
+    "o": ["Dickens' Formula", "Ryves' Formula | रायव्स का फॉर्मूला (Ryves')", "Rational Formula", "Inglis Formula"],
+    "a": 1,
+    "e": "Ryves' formula ($Q = C A^{2/3}$) is commonly used for catchments in Tamil Nadu and parts of South India.",
+    "cat": "technical",
+    "sub": "hydrology"
+  },
+  {
+    "q": "What is the primary difference between 'Dickens' Formula' and 'Ryves' Formula'? / 'डिकेंस' और 'रायव्स' के फार्मूले में प्राथमिक अंतर क्या है?",
+    "o": ["Units of area", "The power of the Catchment Area (A) | जलग्रहण क्षेत्र (A) की घात", "The value of gravitational constant", "None"],
+    "a": 1,
+    "e": "Dickens uses $A^{3/4}$ while Ryves uses $A^{2/3}$ based on regional runoff observations.",
+    "cat": "technical",
+    "sub": "hydrology"
+  },
+  {
+    "q": "The probability that a 'Dependable Yield' of 75% will be met or exceeded is: / इस बात की क्या संभावना है कि 75% की 'भरोसेमंद उपज' पूरी होगी या उससे अधिक होगी?",
+    "o": ["25%", "50%", "75% | 75 प्रतिशत", "100%"],
+    "a": 2,
+    "e": "75% dependable yield means that in 75 out of 100 years, the runoff will be at least this much.",
+    "cat": "technical",
+    "sub": "hydrology"
+  },
+  {
+    "q": "A 'Unit Hydrograph' is defined as the hydrograph of direct runoff resulting from: / 'यूनिट हाइड्रोग्राफ' को किसके परिणामस्वरूप होने वाले प्रत्यक्ष रन-ऑफ के हाइड्रोग्राफ के रूप में परिभाषित किया गया है?",
+    "o": ["1 cm of effective rainfall | 1 सेमी प्रभावी वर्षा", "10 cm of rainfall", "1 mm of rain", "None"],
+    "a": 0,
+    "e": "It represents the response of a catchment to 1 cm of excess rainfall occurring uniformly over a specific duration.",
+    "cat": "technical",
+    "sub": "hydrology"
+  },
+  {
+    "q": "What is 'Infiltration Index' (Φ-index)? / 'इनफिल्ट्रेशन इंडेक्स' (Φ-इंडेक्स) क्या है?",
+    "o": ["Total rainfall", "Average rate of loss of water into the soil during a storm | तूफान के दौरान मिट्टी में पानी के नुकसान की औसत दर", "Speed of wind", "None"],
+    "a": 1,
+    "e": "The Φ-index helps in separating effective rainfall (runoff) from total rainfall by accounting for average infiltration.",
+    "cat": "technical",
+    "sub": "hydrology"
+  },
+  {
+    "q": "The 'Runoff Coefficient' (C) for a concrete surface compared to a forest area is: / वन क्षेत्र की तुलना में कंक्रीट की सतह के लिए 'रन-ऑफ गुणांक' (C) होता है:",
+    "o": ["Much lower", "Exactly same", "Much higher | बहुत अधिक (Higher)", "Zero"],
+    "a": 2,
+    "e": "Impermeable surfaces like concrete produce almost 100% runoff (C near 1.0), whereas forests absorb more water.",
+    "cat": "technical",
+    "sub": "hydrology"
+  },
+  {
+    "q": "If the catchment area 'A' increases, the 'Peak Discharge' per unit area generally: / यदि जलग्रहण क्षेत्र 'A' बढ़ता है, तो प्रति इकाई क्षेत्र में 'पीक डिस्चार्ज' आमतौर पर:",
+    "o": ["Increases", "Decreases | घटता है", "Remains constant", "None"],
+    "a": 1,
+    "e": "Larger catchments have longer travel times and more storage, which tends to flatten the flood peak per unit area.",
+    "cat": "technical",
+    "sub": "hydrology"
+  },
+  {
+    "q": "What is 'Base Flow'? / 'बेस फ्लो' (Base Flow) क्या है?",
+    "o": ["Rainwater flowing on surface", "Groundwater contribution to a stream during dry periods | सूखे समय में नदी में भूजल का योगदान", "Floods during monsoon", "None"],
+    "a": 1,
+    "e": "Base flow keeps rivers perennial (flowing year-round) even when there is no immediate rainfall.",
+    "cat": "technical",
+    "sub": "hydrology"
+  },
+  {
+    "q": "The 'Evapotranspiration' is a combination of: / 'वाष्पोत्सर्जन' (Evapotranspiration) किसका संयोजन है?",
+    "o": ["Rainfall and Runoff", "Evaporation and Transpiration | वाष्पीकरण और वाष्पोत्सर्जन", "Ice and Water", "None"],
+    "a": 1,
+    "e": "It includes water lost from soil/water surfaces and water lost through the leaves of plants.",
+    "cat": "technical",
+    "sub": "hydrology"
+  },
+  {
+    "q": "What is 'Silting' of a reservoir? / जलाशय का 'सिल्टिंग' (Silting) क्या है?",
+    "o": ["Adding salts to water", "Deposition of sediment/soil carried by river water | नदी के पानी द्वारा लाई गई मिट्टी का जमा होना", "Algae growth", "None"],
+    "a": 1,
+    "e": "Silting reduces the effective storage capacity of a reservoir over time.",
+    "cat": "technical",
+    "sub": "irrigation_engineering"
+  },
+  {
+    "q": "The storage capacity between the 'Minimum Pool Level' and 'Dead Storage Level' is called: / 'न्यूनतम पूल स्तर' और 'डेड स्टोरेज स्तर' के बीच की भंडारण क्षमता कहलाती है:",
+    "o": ["Live Storage", "Dead Storage | डेड स्टोरेज (Dead Storage)", "Valley Storage", "None"],
+    "a": 1,
+    "e": "Dead storage is the water that cannot be released through the dam outlets; it is kept to accommodate silting.",
+    "cat": "technical",
+    "sub": "irrigation_engineering"
+  },
+  {
+    "q": "What is an 'Area-Capacity Curve'? / 'एरिया-कैपेसिटी कर्व' क्या है?",
+    "o": ["Graph between population and water", "Relationship between water surface area, depth, and volume | जल सतह क्षेत्र, गहराई और आयतन के बीच संबंध", "Rainfall graph", "None"],
+    "a": 1,
+    "e": "This curve helps in determining the volume of water available in the reservoir at any given water level (elevation).",
+    "cat": "technical",
+    "sub": "irrigation_engineering"
+  },
+  {
+    "q": "Which measure is used to 'control' the silting of a reservoir? / जलाशय के सिल्टिंग को 'नियंत्रित' करने के लिए किस उपाय का उपयोग किया जाता है?",
+    "o": ["Afforestation in catchment area | जलग्रहण क्षेत्र में वृक्षारोपण", "Providing check dams", "Using silt ejectors", "All of the above | उपरोक्त सभी"],
+    "a": 3,
+    "e": "Planting trees reduces soil erosion, and check dams trap sediment before it reaches the main reservoir.",
+    "cat": "technical",
+    "sub": "irrigation_engineering"
+  },
+  {
+    "q": "What is 'Surcharge Storage'? / 'सरचार्ज स्टोरेज' क्या है?",
+    "o": ["Water used for power", "Storage between Full Reservoir Level (FRL) and Maximum Water Level (MWL) | FRL और MWL के बीच का भंडारण", "Water in canal", "None"],
+    "a": 1,
+    "e": "This is temporary storage during floods that is eventually released through spillways.",
+    "cat": "technical",
+    "sub": "irrigation_engineering"
+  },
+  {
+    "q": "The 'Full Reservoir Level' (FRL) is: / 'पूर्ण जलाशय स्तर' (FRL) क्या है?",
+    "o": ["The highest level during flood", "The maximum level to which water is stored for use | वह अधिकतम स्तर जहाँ तक उपयोग के लिए पानी जमा किया जाता है", "The bottom of the dam", "None"],
+    "a": 1,
+    "e": "FRL corresponds to the top of the spillway gates or the spillway crest.",
+    "cat": "technical",
+    "sub": "irrigation_engineering"
+  },
+  {
+    "q": "The rate of silting is higher when the catchment area has: / सिल्टिंग की दर अधिक होती है जब जलग्रहण क्षेत्र में:",
+    "o": ["Thick forest", "Loose soil and steep slopes | ढीली मिट्टी और खड़ी ढलान", "Flat land", "None"],
+    "a": 1,
+    "e": "Steep slopes and lack of vegetation lead to more erosion, increasing the sediment load in the river.",
+    "cat": "technical",
+    "sub": "irrigation_engineering"
+  },
+  {
+    "q": "What is 'Live Storage'? / 'लाइव स्टोरेज' (Live Storage) क्या है?",
+    "o": ["Total water in reservoir", "Water available between FRL and Minimum Pool Level | FRL और न्यूनतम पूल स्तर के बीच उपलब्ध पानी", "Water in river", "None"],
+    "a": 1,
+    "e": "This is the actual useful storage that can be used for irrigation, power, or water supply.",
+    "cat": "technical",
+    "sub": "irrigation_engineering"
+  },
+  {
+    "q": "Before starting an irrigation project, which survey is most critical to find the command area? / सिंचाई परियोजना शुरू करने से पहले, कमान क्षेत्र ज्ञात करने के लिए कौन सा सर्वेक्षण सबसे महत्वपूर्ण है?",
+    "o": ["Geological survey", "Topographical survey | स्थलाकृतिक सर्वेक्षण (Topographical)", "Hydrographic survey", "None"],
+    "a": 1,
+    "e": "Topographical surveys provide contour maps which are essential for deciding the canal alignment and gravity flow.",
+    "cat": "technical",
+    "sub": "irrigation_engineering"
+  },
+  {
+    "q": "What is 'Assessment' of irrigation water? / सिंचाई के पानी का 'आकलन' (Assessment) क्या है?",
+    "o": ["Measuring water speed", "Calculation of water charges to be collected from farmers | किसानों से वसूले जाने वाले पानी के शुल्क की गणना", "Testing water purity", "None"],
+    "a": 1,
+    "e": "Assessment is done based on the area irrigated, type of crop, or volume of water consumed.",
+    "cat": "technical",
+    "sub": "irrigation_engineering"
+  },
+  {
+    "q": "What is 'Irrigation'? / 'सिंचाई' (Irrigation) क्या है?",
+    "o": ["Natural rainfall", "Artificial application of water to land for agriculture | कृषि के लिए भूमि पर पानी का कृत्रिम अनुप्रयोग", "Watering of animals", "None"],
+    "a": 1,
+    "e": "Irrigation is the process of supplying water to crops at regular intervals to fulfill their water requirements during dry periods.",
+    "cat": "technical",
+    "sub": "irrigation_engineering"
+  },
+  {
+    "q": "The total area within the boundaries of an irrigation project is called: / सिंचाई परियोजना की सीमाओं के भीतर कुल क्षेत्र कहलाता है:",
+    "o": ["Culturable Command Area (CCA)", "Gross Command Area (GCA) | सकल कमान क्षेत्र (GCA)", "Net Area", "Intense Area"],
+    "a": 1,
+    "e": "GCA includes the entire area including hills, roads, and unculturable land within the project's reach.",
+    "cat": "technical",
+    "sub": "irrigation_engineering"
+  },
+  {
+    "q": "What is 'Duty' in irrigation? / सिंचाई में 'ड्यूटी' (Duty) क्या है?",
+    "o": ["Amount of work by labor", "Area of land irrigated by 1 cumec of water throughout the base period | बेस पीरियड के दौरान 1 क्यूमेक पानी द्वारा सिंचित भूमि का क्षेत्रफल", "Volume of rainfall", "None"],
+    "a": 1,
+    "e": "Duty represents the relationship between the volume of water and the area of crops it can mature.",
+    "cat": "technical",
+    "sub": "irrigation_engineering"
+  },
+  {
+    "q": "The total depth of water required by a crop during its entire period in the field is called: / खेत में रहने की पूरी अवधि के दौरान फसल के लिए आवश्यक पानी की कुल गहराई कहलाती है:",
+    "o": ["Base Period", "Delta | डेल्टा (Delta)", "Duty", "Intensity"],
+    "a": 1,
+    "e": "Delta is expressed in cm or meters and varies from crop to crop (e.g., Rice has a high Delta).",
+    "cat": "technical",
+    "sub": "irrigation_engineering"
+  },
+  {
+    "q": "What is the relation between Duty (D), Delta (Δ), and Base Period (B)? / ड्यूटी (D), डेल्टा (Δ) और बेस पीरियड (B) के बीच क्या संबंध है?",
+    "o": ["Δ = 8.64 B / D | Δ = 8.64 B / D", "Δ = 8.64 D / B", "D = 8.64 B Δ", "None"],
+    "a": 0,
+    "e": "Here Δ is in meters, B is in days, and D is in hectares/cumec.",
+    "cat": "technical",
+    "sub": "irrigation_engineering"
+  },
+  {
+    "q": "Which type of irrigation method is most efficient for water conservation? / जल संरक्षण के लिए सिंचाई की कौन सी विधि सबसे कुशल है?",
+    "o": ["Surface irrigation", "Drip irrigation | ड्रिप सिंचाई (Drip)", "Sprinkler irrigation", "Flood irrigation"],
+    "a": 1,
+    "e": "Drip irrigation delivers water directly to the root zone, minimizing evaporation and runoff losses.",
+    "cat": "technical",
+    "sub": "irrigation_engineering"
+  },
+  {
+    "q": "The 'Base Period' of a crop is: / फसल का 'बेस पीरियड' (Base Period) है:",
+    "o": ["Time between sowing and harvesting", "Time between first watering and last watering | पहली और आखिरी सिंचाई के बीच का समय", "Night time irrigation", "None"],
+    "a": 1,
+    "e": "Base period is the actual duration (in days) during which irrigation water is supplied to the crop.",
+    "cat": "technical",
+    "sub": "irrigation_engineering"
+  },
+  {
+    "q": "What is 'Intensity of Irrigation'? / 'सिंचाई की तीव्रता' (Intensity of Irrigation) क्या है?",
+    "o": ["Speed of water", "Percentage of CCA proposed to be irrigated annually | सालाना सिंचित किए जाने वाले CCA का प्रतिशत", "Depth of canal", "None"],
+    "a": 1,
+    "e": "If CCA is 100 hectares and intensity is 60%, only 60 hectares will be irrigated in that year.",
+    "cat": "technical",
+    "sub": "irrigation_engineering"
+  },
+  {
+    "q": "Which factor increases the 'Duty' of water? / कौन सा कारक पानी की 'ड्यूटी' (Duty) को बढ़ाता है?",
+    "o": ["High temperature", "Lined canals | लाइनेड नहरें (Lined canals)", "Sandy soil", "High evaporation"],
+    "a": 1,
+    "e": "Lining of canals prevents seepage losses, allowing the same amount of water to irrigate more land (higher Duty).",
+    "cat": "technical",
+    "sub": "irrigation_engineering"
+  },
+  {
+    "q": "In India, the 'Rabi' season starts from: / भारत में 'रबी' का सीजन शुरू होता है:",
+    "o": ["June-July", "October-November | अक्टूबर-नवंबर", "March-April", "None"],
+    "a": 1,
+    "e": "Rabi crops (like Wheat) are sown in winter and harvested in spring.",
+    "cat": "technical",
+    "sub": "irrigation_engineering"
+  },
+  {
+    "q": "What is 'Runoff'? / 'रन-ऑफ' (Runoff) क्या है?",
+    "o": ["Water that evaporates", "Water that flows over the land surface after precipitation | वर्षा के बाद भूमि की सतह पर बहने वाला पानी", "Water stored in soil", "None"],
+    "a": 1,
+    "e": "Runoff is the portion of precipitation that makes its way to streams and rivers.",
+    "cat": "technical",
+    "sub": "hydrology"
+  },
+  {
+    "q": "Which factor most significantly affects the 'Runoff' from a catchment? / जलग्रहण क्षेत्र (Catchment) से 'रन-ऑफ' को कौन सा कारक सबसे अधिक प्रभावित करता है?",
+    "o": ["Type of soil | मिट्टी का प्रकार", "Rainfall intensity and duration | वर्षा की तीव्रता और अवधि", "Slope of the land | भूमि की ढलान", "All of the above | उपरोक्त सभी"],
+    "a": 3,
+    "e": "Runoff depends on rainfall characteristics, soil permeability, vegetation, and the topography of the land.",
+    "cat": "technical",
+    "sub": "hydrology"
+  },
+  {
+    "q": "The 'Rational Method' for calculating maximum flood discharge is given by: / अधिकतम बाढ़ डिस्चार्ज की गणना के लिए 'रेशनल विधि' क्या है?",
+    "o": ["$Q = CiA | Q = CiA$", "Q = AV", "Q = CLH", "None"],
+    "a": 0,
+    "e": "Q = Discharge, C = Runoff coefficient, i = Rainfall intensity, and A = Area of catchment.",
+    "cat": "technical",
+    "sub": "hydrology"
+  },
+  {
+    "q": "What is 'Dependable Yield' of a catchment? / जलग्रहण क्षेत्र की 'भरोसेमंद उपज' (Dependable Yield) क्या है?",
+    "o": ["Maximum possible water", "The amount of water available with a specific probability (e.g., 75%) | एक विशिष्ट संभावना के साथ उपलब्ध पानी की मात्रा", "Average water", "None"],
+    "a": 1,
+    "e": "Dependable yield is used for planning irrigation or power projects to ensure water is available most of the time.",
+    "cat": "technical",
+    "sub": "hydrology"
+  },
+  {
+    "q": "Dickens' formula for maximum flood discharge is $Q = C A^{3/4}$. Here 'A' stands for: / डिकेंस के फार्मूले $Q = C A^{3/4}$ में 'A' का अर्थ है:",
+    "o": ["Average rainfall", "Catchment Area | जलग्रहण क्षेत्र (Catchment Area)", "Annual runoff", "None"],
+    "a": 1,
+    "e": "Dickens' and Ryves' formulas are empirical methods used in India for estimating peak flood based on area.",
+    "cat": "technical",
+    "sub": "hydrology"
+  },
+  {
+    "q": "What is 'Yield' of a catchment? / जलग्रहण क्षेत्र की 'उपज' (Yield) क्या है?",
+    "o": ["Total amount of water reaching the storage site | भंडारण स्थल तक पहुँचने वाले पानी की कुल मात्रा", "Rainfall intensity", "Rate of flow", "None"],
+    "a": 0,
+    "e": "Yield refers to the total volume of runoff water collected from a drainage area over a specific period (usually a year).",
+    "cat": "technical",
+    "sub": "hydrology"
+  },
+  {
+    "q": "Infiltration capacity ________ as the soil becomes saturated. / मिट्टी के संतृप्त होने पर घुसपैठ क्षमता (Infiltration capacity) ________ है।",
+    "o": ["Increases", "Decreases | घटती है", "Remains same", "None"],
+    "a": 1,
+    "e": "As the pores of the soil fill with water, the rate at which it can absorb more water decreases.",
+    "cat": "technical",
+    "sub": "hydrology"
+  },
+  {
+    "q": "The 'Time of Concentration' is the time taken for water to travel from: / 'एकाग्रता का समय' (Time of Concentration) वह समय है जो पानी को कहाँ से कहाँ तक जाने में लगता है?",
+    "o": ["Sky to ground", "The most remote point of catchment to the outlet | जलग्रहण के सबसे दूरस्थ बिंदु से आउटलेट तक", "River to sea", "None"],
+    "a": 1,
+    "e": "It is a key factor in determining peak discharge in the Rational method.",
+    "cat": "technical",
+    "sub": "hydrology"
+  },
+  {
+    "q": "What is an 'Empirical Method' for flood measurement? / बाढ़ मापन के लिए 'आनुभविक विधि' (Empirical Method) क्या है?",
+    "o": ["Scientific calculation", "Formula based on observed regional data and experience | क्षेत्रीय डेटा और अनुभव पर आधारित सूत्र", "Laboratory test", "None"],
+    "a": 1,
+    "e": "Formulas like Dickens' or Ryves' are empirical because they rely on constants (C) derived from regional observations.",
+    "cat": "technical",
+    "sub": "hydrology"
+  },
+  {
+    "q": "The 'Hydrograph' is a graphical representation of: / 'हाइड्रोग्राफ' (Hydrograph) किसका ग्राफिकल प्रतिनिधित्व है?",
+    "o": ["Rainfall vs Time", "Discharge vs Time | डिस्चार्ज (निकासी) बनाम समय", "Pressure vs Depth", "None"],
+    "a": 1,
+    "e": "A hydrograph shows the variation of flow rate (discharge) of a river at a specific point over time.",
+    "cat": "technical",
+    "sub": "hydrology"
+  },
+  {
+    "q": "What is 'Hydrology'? / 'जल विज्ञान' (Hydrology) क्या है?",
+    "o": ["Study of soil", "Science that deals with the occurrence, circulation, and distribution of water | वह विज्ञान जो पानी की उपस्थिति, परिसंचरण और वितरण से संबंधित है", "Study of fishes", "None"],
+    "a": 1,
+    "e": "Hydrology covers the entire cycle of water on earth, including precipitation, runoff, and evaporation.",
+    "cat": "technical",
+    "sub": "hydrology"
+  },
+  {
+    "q": "Which type of rain gauge is the 'Symons Rain Gauge'? / 'सायमन रेन गेज' किस प्रकार का रेन गेज है?",
+    "o": ["Automatic", "Non-recording type | गैर-रिकॉर्डिंग प्रकार (Non-recording)", "Tipping bucket", "Weighing type"],
+    "a": 1,
+    "e": "Symons rain gauge is the most common non-recording rain gauge used in India to measure daily rainfall.",
+    "cat": "technical",
+    "sub": "hydrology"
+  },
+  {
+    "q": "The 'Hydrological Cycle' is a ________ process. / 'जल चक्र' एक ________ प्रक्रिया है।",
+    "o": ["Closed", "Continuous | निरंतर (Continuous)", "Intermittent", "One-time"],
+    "a": 1,
+    "e": "It is a continuous global process of water movement from the ocean to the atmosphere, then to land, and back to the ocean.",
+    "cat": "technical",
+    "sub": "hydrology"
+  },
+  {
+    "q": "Which method of calculating average rainfall is considered most accurate for mountainous regions? / पर्वतीय क्षेत्रों के लिए औसत वर्षा की गणना की कौन सी विधि सबसे सटीक मानी जाती है?",
+    "o": ["Arithmetic Mean Method", "Thiessen Polygon Method", "Isohyetal Method | आइसोहाइटल विधि (Isohyetal)", "None"],
+    "a": 2,
+    "e": "The Isohyetal method accounts for both the spatial distribution and the effect of topography (elevation).",
+    "cat": "technical",
+    "sub": "hydrology"
+  },
+  {
+    "q": "What are 'Isohyets'? / 'आइसोहाइट्स' (Isohyets) क्या हैं?",
+    "o": ["Lines joining points of equal pressure", "Lines joining points of equal rainfall depth | समान वर्षा की गहराई वाले बिंदुओं को जोड़ने वाली रेखाएं", "Lines of equal depth", "None"],
+    "a": 1,
+    "e": "Isohyets are used in hydrology to create maps that show rainfall distribution over an area.",
+    "cat": "technical",
+    "sub": "hydrology"
+  },
+  {
+    "q": "The 'Thiessen Polygon Method' assigns weight to each rain gauge based on its: / 'थीसन पॉलीगन विधि' प्रत्येक रेन गेज को किसके आधार पर महत्व (Weight) देती है?",
+    "o": ["Height", "Represented Area | प्रतिनिधित्व क्षेत्र (Area)", "Rainfall intensity", "None"],
+    "a": 1,
+    "e": "In this method, the area of influence for each gauge is determined by drawing perpendicular bisectors between stations.",
+    "cat": "technical",
+    "sub": "hydrology"
+  },
+  {
+    "q": "Which of the following is an 'Automatic' (Recording) rain gauge? / निम्नलिखित में से कौन सा 'स्वचालित' (रिकॉर्डिंग) रेन गेज है?",
+    "o": ["Symons gauge", "Tipping Bucket type | टिपिंग बकेट प्रकार", "Bucket scale", "None"],
+    "a": 1,
+    "e": "Automatic rain gauges provide a continuous record of rainfall over time (hyetograph).",
+    "cat": "technical",
+    "sub": "hydrology"
+  },
+  {
+    "q": "What is the standard height of a Symons rain gauge's rim above the ground level? / जमीन के स्तर से सायमन रेन गेज के रिम की मानक ऊंचाई कितनी होती है?",
+    "o": ["10 cm", "30.5 cm | 30.5 सेमी", "100 cm", "50 cm"],
+    "a": 1,
+    "e": "The collector is kept at about 12 inches (30.5 cm) above ground to prevent water splashing into it from the surroundings.",
+    "cat": "technical",
+    "sub": "hydrology"
+  },
+  {
+    "q": "Which method is the simplest but least accurate for finding average rainfall in an area? / किसी क्षेत्र में औसत वर्षा ज्ञात करने के लिए कौन सी विधि सबसे सरल लेकिन सबसे कम सटीक है?",
+    "o": ["Arithmetic Mean Method | अंकगणितीय माध्य विधि", "Isohyetal method", "Thiessen method", "None"],
+    "a": 0,
+    "e": "The Arithmetic Mean method simply averages the readings of all gauges without considering their area of influence.",
+    "cat": "technical",
+    "sub": "hydrology"
+  },
+  {
+    "q": "A 'Hyetograph' is a plot of: / एक 'हाइटोग्राफ' (Hyetograph) किसका ग्राफ है?",
+    "o": ["Rainfall intensity vs Time | वर्षा की तीव्रता बनाम समय", "Discharge vs Time", "Cumulative rainfall vs Time", "None"],
+    "a": 0,
+    "e": "A hyetograph shows how the intensity of rain varies during a specific storm event.",
+    "cat": "technical",
+    "sub": "hydrology"
+  },
+  {
     "q": "What is 'Obsolescence'? / 'अप्रचलन' (Obsolescence) क्या है?",
     "o": ["Physical decay of materials", "Loss in value due to change in design, fashion, or technology | डिजाइन या तकनीक में बदलाव के कारण मूल्य में कमी", "Damage by fire", "None"],
     "a": 1,
@@ -1948,3 +4828,4 @@
     "cat": "technical",
     "sub": "applied_physics"
   }
+]
