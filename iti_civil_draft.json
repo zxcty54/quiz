@@ -1,1 +1,1955 @@
-
+[
+ {
+    "q": "What is the function of 'Zeolite' in water treatment? / जल उपचार में 'जियोलाइट' (Zeolite) का क्या कार्य है?",
+    "o": ["To kill bacteria", "To remove suspended solids", "To soften hard water | कठोर जल को मृदु बनाना", "To add minerals"],
+    "a": 2,
+    "e": "Zeolite process is an ion-exchange method used to remove hardness-causing ions from water.",
+    "cat": "technical",
+    "sub": "applied_chemistry"
+  },
+  {
+    "q": "Which type of fuel has the highest calorific value? / किस प्रकार के ईंधन का कैलोरी मान (Calorific value) सबसे अधिक होता है?",
+    "o": ["Solid fuels", "Liquid fuels", "Gaseous fuels | गैसीय ईंधन", "All are equal"],
+    "a": 2,
+    "e": "Gaseous fuels like Hydrogen and Methane have higher calorific values compared to solid and liquid fuels.",
+    "cat": "technical",
+    "sub": "applied_chemistry"
+  },
+  {
+    "q": "What is 'Vulcanization' of rubber? / रबर का 'वल्केनाइजेशन' क्या है?",
+    "o": ["Melting rubber", "Heating rubber with sulfur | सल्फर के साथ गर्म करना", "Cooling rubber", "Adding water to rubber"],
+    "a": 1,
+    "e": "Vulcanization improves the elasticity, hardness, and durability of natural rubber by adding cross-links of sulfur.",
+    "cat": "technical",
+    "sub": "applied_chemistry"
+  },
+  
+  {
+    "q": "The main classification of government expenditure (e.g., Civil Works) is known as: / सरकारी व्यय (जैसे सिविल कार्य) के मुख्य वर्गीकरण को कहा जाता है:",
+    "o": ["Minor Head", "Major Head | मेजर हेड (Major Head)", "Detailed Head", "Sub-head"],
+    "a": 1,
+    "e": "Major Heads represent the main functions of the government, such as 'Public Works' or 'Education'.",
+    "cat": "technical",
+    "sub": "estimating_costing"
+  },
+  {
+    "q": "What is 'Temporary Advance' in engineering accounts? / इंजीनियरिंग खातों में 'अस्थायी अग्रिम' (Temporary Advance) क्या है?",
+    "o": ["Advance for contractor", "Money given to an official for a specific immediate expense | किसी अधिकारी को तत्काल खर्च के लिए दिया गया धन", "Final bill", "None"],
+    "a": 1,
+    "e": "It is a sum given to an employee to meet certain immediate requirements, which must be accounted for within a short time.",
+    "cat": "technical",
+    "sub": "estimating_costing"
+  },
+  {
+    "q": "Under what condition can a department 'Terminate' a contract? / विभाग किस स्थिति में अनुबंध 'समाप्त' (Terminate) कर सकता है?",
+    "o": ["If the contractor is working too fast", "Serious breach of contract or persistent delay by contractor | अनुबंध का गंभीर उल्लंघन या अत्यधिक देरी", "If the weather is good", "None"],
+    "a": 1,
+    "e": "Termination is a legal action taken when the contractor fails to follow safety norms, quality, or the time schedule.",
+    "cat": "technical",
+    "sub": "estimating_costing"
+  },
+  {
+    "q": "What is the difference between an 'Indent' and an 'Invoice'? / 'इंडेन्ट' और 'इनवॉइस' में क्या अंतर है?",
+    "o": ["Indent is a bill, Invoice is a request", "Indent is a request for materials, Invoice is a bill from supplier | इंडेन्ट सामग्री का अनुरोध है, इनवॉइस सप्लायर का बिल है", "They are same", "None"],
+    "a": 1,
+    "e": "Indent is used internally to ask for store items; Invoice is an external document showing the amount due for supplied goods.",
+    "cat": "technical",
+    "sub": "estimating_costing"
+  },
+  {
+    "q": "What happens during 'Suspension of Work' by the department? / विभाग द्वारा 'काम के निलंबन' (Suspension) के दौरान क्या होता है?",
+    "o": ["Contractor is fired", "Work is temporarily stopped and contractor may claim for idle labor | काम अस्थायी रूप से रुक जाता है", "Work is completed fast", "None"],
+    "a": 1,
+    "e": "If the department stops work due to its own reasons, it may have to compensate the contractor for fixed expenses.",
+    "cat": "technical",
+    "sub": "estimating_costing"
+  },
+  {
+    "q": "Which Head of Account deals with specific schemes like 'Construction of School'? / 'स्कूल का निर्माण' जैसी विशिष्ट योजनाओं से कौन सा हेड ऑफ अकाउंट संबंधित है?",
+    "o": ["Major Head", "Minor Head | माइनर हेड (Minor Head)", "Global Head", "None"],
+    "a": 1,
+    "e": "Minor heads provide the sub-division of major heads into specific programs or schemes.",
+    "cat": "technical",
+    "sub": "estimating_costing"
+  },
+  {
+    "q": "What is 'Cash Credit' in government accounting? / सरकारी लेखांकन में 'कैश क्रेडिट' क्या है?",
+    "o": ["Gift from bank", "A limit up to which a department can draw money from the treasury | ट्रेजरी से धन निकालने की सीमा", "Contractor's loan", "None"],
+    "a": 1,
+    "e": "It ensures that the department does not spend beyond its sanctioned budget for a given period.",
+    "cat": "technical",
+    "sub": "estimating_costing"
+  },
+  {
+    "q": "If a contractor sublets the work without permission, the department can: / यदि कोई ठेकेदार बिना अनुमति के काम सबलेट करता है, तो विभाग कर सकता है:",
+    "o": ["Give a prize", "Rescind the contract and forfeit security deposit | अनुबंध रद्द करना और सुरक्षा जमा जब्त करना", "Increase the rates", "None"],
+    "a": 1,
+    "e": "Unauthorized subletting is a violation of the agreement and can lead to blacklisting or legal action.",
+    "cat": "technical",
+    "sub": "estimating_costing"
+  },
+  {
+    "q": "The 'Imprest Account' is usually settled: / 'इम्प्रैस्ट अकाउंट' को आमतौर पर कब सेटल किया जाता है?",
+    "o": ["After 10 years", "Periodically or at the end of the month | समय-समय पर या महीने के अंत में", "Only when the engineer retires", "None"],
+    "a": 1,
+    "e": "The official must submit vouchers to recoup the spent amount and bring the imprest back to its full balance.",
+    "cat": "technical",
+    "sub": "estimating_costing"
+  },
+  {
+    "q": "What is the role of 'Audit' in engineering accounts? / इंजीनियरिंग खातों में 'ऑडिट' की क्या भूमिका है?",
+    "o": ["To design buildings", "To verify the correctness and legality of expenditure | व्यय की शुद्धता और वैधता को सत्यापित करना", "To hire masons", "None"],
+    "a": 1,
+    "e": "Audits ensure that public money is spent as per rules and that there is no misappropriation.",
+    "cat": "technical",
+    "sub": "estimating_costing"
+  },
+  {
+    "q": "What is 'Standard Rent' of a building? / किसी भवन का 'मानक किराया' (Standard Rent) क्या है?",
+    "o": ["Rent decided by the tenant", "Rent fixed by law or local authority based on capital cost | कानून या लागत के आधार पर तय किराया", "Highest market rent", "None"],
+    "a": 1,
+    "e": "Standard rent is fixed to provide a fair return (usually 6-10%) on the capital investment to the owner while protecting the tenant.",
+    "cat": "technical",
+    "sub": "valuation"
+  },
+  {
+    "q": "In a 'Mortgage Deed', the person who borrows money by keeping property as security is: / 'बंधक विलेख' (Mortgage Deed) में, संपत्ति को सुरक्षा के रूप में रखकर पैसा उधार लेने वाला व्यक्ति होता है:",
+    "o": ["Mortgagee", "Mortgagor | बंधककर्ता (Mortgagor)", "Lessor", "Lessee"],
+    "a": 1,
+    "e": "The owner who mortgages the property is the Mortgagor, and the lender (bank/individual) is the Mortgagee.",
+    "cat": "technical",
+    "sub": "valuation"
+  },
+  {
+    "q": "Which of the following is a vital 'Precaution' while making a mortgage? / बंधक बनाते समय निम्नलिखित में से कौन सी एक महत्वपूर्ण 'सावधानी' है?",
+    "o": ["Checking the color of the house", "Verification of original title deeds and encumbrance certificate | मूल शीर्षक विलेखों और भार प्रमाणपत्र का सत्यापन", "Asking the neighbors", "None"],
+    "a": 1,
+    "e": "Verifying the legal ownership and ensuring there are no existing loans on the property is crucial for the lender.",
+    "cat": "technical",
+    "sub": "valuation"
+  },
+  {
+    "q": "What is an 'Occupation Lease'? / 'ऑक्यूपेशन लीज' (Occupation Lease) क्या है?",
+    "o": ["Lease for vacant land", "Lease where the lessee occupies the already built-up property | निर्मित संपत्ति पर कब्जा करने का पट्टा", "Sub-letting to others", "None"],
+    "a": 1,
+    "e": "In this lease, the building is already constructed, and the tenant pays rent for its use and occupation.",
+    "cat": "technical",
+    "sub": "valuation"
+  },
+  {
+    "q": "The value of a property that is likely to increase in the future due to some anticipated development is: / भविष्य में किसी अनुमानित विकास के कारण संपत्ति का वह मूल्य जो बढ़ने की संभावना है:",
+    "o": ["Distress Value", "Speculative Value | सट्टा मूल्य (Speculative Value)", "Monopoly Value", "Book Value"],
+    "a": 1,
+    "e": "Speculative value is based on the hope of future profits, like land price rising near a proposed highway.",
+    "cat": "technical",
+    "sub": "valuation"
+  },
+  {
+    "q": "While fixing 'Standard Rent', the percentage return on the cost of land is usually: / 'मानक किराया' तय करते समय, भूमि की लागत पर प्रतिशत रिटर्न आमतौर पर होता है:",
+    "o": ["1% to 2%", "4% to 6% | 4 से 6 प्रतिशत", "15%", "None"],
+    "a": 1,
+    "e": "Land is a non-depreciating asset, so its return rate is generally lower than the return on building construction.",
+    "cat": "technical",
+    "sub": "valuation"
+  },
+  {
+    "q": "What is a 'Sub-lease'? / 'सब-लीज' (Sub-lease) क्या है?",
+    "o": ["Owner selling the land", "The lessee leasing the property to a third party | पट्टेदार द्वारा किसी तीसरे पक्ष को पट्टे पर देना", "Government taking the land", "None"],
+    "a": 1,
+    "e": "If the original lease agreement allows, the lessee can sub-let the property to another person.",
+    "cat": "technical",
+    "sub": "valuation"
+  },
+  {
+    "q": "The value of a property which possesses some unique advantages of location or design is: / किसी संपत्ति का वह मूल्य जो स्थान या डिजाइन के कुछ अद्वितीय लाभों के कारण होता है:",
+    "o": ["Market Value", "Monopoly Value | एकाधिकार मूल्य (Monopoly Value)", "Scrap Value", "None"],
+    "a": 1,
+    "e": "Monopoly value occurs when a property has no direct competitors in terms of its unique features.",
+    "cat": "technical",
+    "sub": "valuation"
+  },
+  {
+    "q": "In a 'Simple Mortgage', the possession of the property: / 'साधारण बंधक' (Simple Mortgage) में, संपत्ति का कब्जा:",
+    "o": ["Stays with the Mortgagor | बंधककर्ता के पास रहता है", "Is given to the Mortgagee", "Is taken by the court", "None"],
+    "a": 0,
+    "e": "In a simple mortgage, the owner keeps the property but agrees to sell it if the loan is not repaid.",
+    "cat": "technical",
+    "sub": "valuation"
+  },
+  {
+    "q": "Which factor is most important for 'Fixation of Rent' of a commercial building? / व्यावसायिक भवन के 'किराए के निर्धारण' के लिए कौन सा कारक सबसे महत्वपूर्ण है?",
+    "o": ["Age of owner", "Business potential and frontage | व्यावसायिक क्षमता और फ्रंट", "Number of trees around", "None"],
+    "a": 1,
+    "e": "Commercial rent depends heavily on how much business can be generated from that specific location.",
+    "cat": "technical",
+    "sub": "valuation"
+  },
+  {
+    "q": "The main classification of government expenditure (e.g., Civil Works) is known as: / सरकारी व्यय (जैसे सिविल कार्य) के मुख्य वर्गीकरण को कहा जाता है:",
+    "o": ["Minor Head", "Major Head | मेजर हेड (Major Head)", "Detailed Head", "Sub-head"],
+    "a": 1,
+    "e": "Major Heads represent the main functions of the government, such as 'Public Works' or 'Education'.",
+    "cat": "technical",
+    "sub": "estimating_costing"
+  },
+  {
+    "q": "What is 'Temporary Advance' in engineering accounts? / इंजीनियरिंग खातों में 'अस्थायी अग्रिम' (Temporary Advance) क्या है?",
+    "o": ["Advance for contractor", "Money given to an official for a specific immediate expense | किसी अधिकारी को तत्काल खर्च के लिए दिया गया धन", "Final bill", "None"],
+    "a": 1,
+    "e": "It is a sum given to an employee to meet certain immediate requirements, which must be accounted for within a short time.",
+    "cat": "technical",
+    "sub": "estimating_costing"
+  },
+  {
+    "q": "Under what condition can a department 'Terminate' a contract? / विभाग किस स्थिति में अनुबंध 'समाप्त' (Terminate) कर सकता है?",
+    "o": ["If the contractor is working too fast", "Serious breach of contract or persistent delay by contractor | अनुबंध का गंभीर उल्लंघन या अत्यधिक देरी", "If the weather is good", "None"],
+    "a": 1,
+    "e": "Termination is a legal action taken when the contractor fails to follow safety norms, quality, or the time schedule.",
+    "cat": "technical",
+    "sub": "estimating_costing"
+  },
+  {
+    "q": "What is the difference between an 'Indent' and an 'Invoice'? / 'इंडेन्ट' और 'इनवॉइस' में क्या अंतर है?",
+    "o": ["Indent is a bill, Invoice is a request", "Indent is a request for materials, Invoice is a bill from supplier | इंडेन्ट सामग्री का अनुरोध है, इनवॉइस सप्लायर का बिल है", "They are same", "None"],
+    "a": 1,
+    "e": "Indent is used internally to ask for store items; Invoice is an external document showing the amount due for supplied goods.",
+    "cat": "technical",
+    "sub": "estimating_costing"
+  },
+  {
+    "q": "What happens during 'Suspension of Work' by the department? / विभाग द्वारा 'काम के निलंबन' (Suspension) के दौरान क्या होता है?",
+    "o": ["Contractor is fired", "Work is temporarily stopped and contractor may claim for idle labor | काम अस्थायी रूप से रुक जाता है", "Work is completed fast", "None"],
+    "a": 1,
+    "e": "If the department stops work due to its own reasons, it may have to compensate the contractor for fixed expenses.",
+    "cat": "technical",
+    "sub": "estimating_costing"
+  },
+  {
+    "q": "Which Head of Account deals with specific schemes like 'Construction of School'? / 'स्कूल का निर्माण' जैसी विशिष्ट योजनाओं से कौन सा हेड ऑफ अकाउंट संबंधित है?",
+    "o": ["Major Head", "Minor Head | माइनर हेड (Minor Head)", "Global Head", "None"],
+    "a": 1,
+    "e": "Minor heads provide the sub-division of major heads into specific programs or schemes.",
+    "cat": "technical",
+    "sub": "estimating_costing"
+  },
+  {
+    "q": "What is 'Cash Credit' in government accounting? / सरकारी लेखांकन में 'कैश क्रेडिट' क्या है?",
+    "o": ["Gift from bank", "A limit up to which a department can draw money from the treasury | ट्रेजरी से धन निकालने की सीमा", "Contractor's loan", "None"],
+    "a": 1,
+    "e": "It ensures that the department does not spend beyond its sanctioned budget for a given period.",
+    "cat": "technical",
+    "sub": "estimating_costing"
+  },
+  {
+    "q": "If a contractor sublets the work without permission, the department can: / यदि कोई ठेकेदार बिना अनुमति के काम सबलेट करता है, तो विभाग कर सकता है:",
+    "o": ["Give a prize", "Rescind the contract and forfeit security deposit | अनुबंध रद्द करना और सुरक्षा जमा जब्त करना", "Increase the rates", "None"],
+    "a": 1,
+    "e": "Unauthorized subletting is a violation of the agreement and can lead to blacklisting or legal action.",
+    "cat": "technical",
+    "sub": "estimating_costing"
+  },
+  {
+    "q": "The 'Imprest Account' is usually settled: / 'इम्प्रैस्ट अकाउंट' को आमतौर पर कब सेटल किया जाता है?",
+    "o": ["After 10 years", "Periodically or at the end of the month | समय-समय पर या महीने के अंत में", "Only when the engineer retires", "None"],
+    "a": 1,
+    "e": "The official must submit vouchers to recoup the spent amount and bring the imprest back to its full balance.",
+    "cat": "technical",
+    "sub": "estimating_costing"
+  },
+  {
+    "q": "What is the role of 'Audit' in engineering accounts? / इंजीनियरिंग खातों में 'ऑडिट' की क्या भूमिका है?",
+    "o": ["To design buildings", "To verify the correctness and legality of expenditure | व्यय की शुद्धता और वैधता को सत्यापित करना", "To hire masons", "None"],
+    "a": 1,
+    "e": "Audits ensure that public money is spent as per rules and that there is no misappropriation.",
+    "cat": "technical",
+    "sub": "estimating_costing"
+  },
+  {
+    "q": "What is 'Standard Rent' of a building? / किसी भवन का 'मानक किराया' (Standard Rent) क्या है?",
+    "o": ["Rent decided by the tenant", "Rent fixed by law or local authority based on capital cost | कानून या लागत के आधार पर तय किराया", "Highest market rent", "None"],
+    "a": 1,
+    "e": "Standard rent is fixed to provide a fair return (usually 6-10%) on the capital investment to the owner while protecting the tenant.",
+    "cat": "technical",
+    "sub": "valuation"
+  },
+  {
+    "q": "In a 'Mortgage Deed', the person who borrows money by keeping property as security is: / 'बंधक विलेख' (Mortgage Deed) में, संपत्ति को सुरक्षा के रूप में रखकर पैसा उधार लेने वाला व्यक्ति होता है:",
+    "o": ["Mortgagee", "Mortgagor | बंधककर्ता (Mortgagor)", "Lessor", "Lessee"],
+    "a": 1,
+    "e": "The owner who mortgages the property is the Mortgagor, and the lender (bank/individual) is the Mortgagee.",
+    "cat": "technical",
+    "sub": "valuation"
+  },
+  {
+    "q": "Which of the following is a vital 'Precaution' while making a mortgage? / बंधक बनाते समय निम्नलिखित में से कौन सी एक महत्वपूर्ण 'सावधानी' है?",
+    "o": ["Checking the color of the house", "Verification of original title deeds and encumbrance certificate | मूल शीर्षक विलेखों और भार प्रमाणपत्र का सत्यापन", "Asking the neighbors", "None"],
+    "a": 1,
+    "e": "Verifying the legal ownership and ensuring there are no existing loans on the property is crucial for the lender.",
+    "cat": "technical",
+    "sub": "valuation"
+  },
+  {
+    "q": "What is an 'Occupation Lease'? / 'ऑक्यूपेशन लीज' (Occupation Lease) क्या है?",
+    "o": ["Lease for vacant land", "Lease where the lessee occupies the already built-up property | निर्मित संपत्ति पर कब्जा करने का पट्टा", "Sub-letting to others", "None"],
+    "a": 1,
+    "e": "In this lease, the building is already constructed, and the tenant pays rent for its use and occupation.",
+    "cat": "technical",
+    "sub": "valuation"
+  },
+  {
+    "q": "The value of a property that is likely to increase in the future due to some anticipated development is: / भविष्य में किसी अनुमानित विकास के कारण संपत्ति का वह मूल्य जो बढ़ने की संभावना है:",
+    "o": ["Distress Value", "Speculative Value | सट्टा मूल्य (Speculative Value)", "Monopoly Value", "Book Value"],
+    "a": 1,
+    "e": "Speculative value is based on the hope of future profits, like land price rising near a proposed highway.",
+    "cat": "technical",
+    "sub": "valuation"
+  },
+  {
+    "q": "While fixing 'Standard Rent', the percentage return on the cost of land is usually: / 'मानक किराया' तय करते समय, भूमि की लागत पर प्रतिशत रिटर्न आमतौर पर होता है:",
+    "o": ["1% to 2%", "4% to 6% | 4 से 6 प्रतिशत", "15%", "None"],
+    "a": 1,
+    "e": "Land is a non-depreciating asset, so its return rate is generally lower than the return on building construction.",
+    "cat": "technical",
+    "sub": "valuation"
+  },
+  {
+    "q": "What is a 'Sub-lease'? / 'सब-लीज' (Sub-lease) क्या है?",
+    "o": ["Owner selling the land", "The lessee leasing the property to a third party | पट्टेदार द्वारा किसी तीसरे पक्ष को पट्टे पर देना", "Government taking the land", "None"],
+    "a": 1,
+    "e": "If the original lease agreement allows, the lessee can sub-let the property to another person.",
+    "cat": "technical",
+    "sub": "valuation"
+  },
+  {
+    "q": "The value of a property which possesses some unique advantages of location or design is: / किसी संपत्ति का वह मूल्य जो स्थान या डिजाइन के कुछ अद्वितीय लाभों के कारण होता है:",
+    "o": ["Market Value", "Monopoly Value | एकाधिकार मूल्य (Monopoly Value)", "Scrap Value", "None"],
+    "a": 1,
+    "e": "Monopoly value occurs when a property has no direct competitors in terms of its unique features.",
+    "cat": "technical",
+    "sub": "valuation"
+  },
+  {
+    "q": "In a 'Simple Mortgage', the possession of the property: / 'साधारण बंधक' (Simple Mortgage) में, संपत्ति का कब्जा:",
+    "o": ["Stays with the Mortgagor | बंधककर्ता के पास रहता है", "Is given to the Mortgagee", "Is taken by the court", "None"],
+    "a": 0,
+    "e": "In a simple mortgage, the owner keeps the property but agrees to sell it if the loan is not repaid.",
+    "cat": "technical",
+    "sub": "valuation"
+  },
+  {
+    "q": "Which factor is most important for 'Fixation of Rent' of a commercial building? / व्यावसायिक भवन के 'किराए के निर्धारण' के लिए कौन सा कारक सबसे महत्वपूर्ण है?",
+    "o": ["Age of owner", "Business potential and frontage | व्यावसायिक क्षमता और फ्रंट", "Number of trees around", "None"],
+    "a": 1,
+    "e": "Commercial rent depends heavily on how much business can be generated from that specific location.",
+    "cat": "technical",
+    "sub": "valuation"
+  },
+  {
+    "q": "What are 'Extra Items' in a construction contract? / निर्माण अनुबंध में 'अतिरिक्त मद' (Extra Items) क्या हैं?",
+    "o": ["Items for the contractor's use", "Work not included in the original bill of quantities | मूल BOQ में शामिल नहीं किया गया कार्य", "Waste materials", "None"],
+    "a": 1,
+    "e": "Extra items are those works that become necessary during construction but were not part of the initial tender.",
+    "cat": "technical",
+    "sub": "estimating_costing"
+  },
+  {
+    "q": "The 'Price Variation Clause' (Escalation) allows for: / 'मूल्य भिन्नता खंड' (Escalation) अनुमति देता है:",
+    "o": ["Fixed profit", "Adjustment in payment due to market price changes | बाजार मूल्य परिवर्तन के कारण भुगतान में समायोजन", "Reducing the work quality", "None"],
+    "a": 1,
+    "e": "Escalation clauses protect both parties against sudden spikes in the cost of labor, fuel, or materials like steel and cement.",
+    "cat": "technical",
+    "sub": "estimating_costing"
+  },
+  {
+    "q": "What is 'Subletting' of a contract? / अनुबंध का 'सबलेटिंग' (Subletting) क्या है?",
+    "o": ["Selling the materials", "Giving a part of the work to another contractor | कार्य का एक हिस्सा दूसरे ठेकेदार को देना", "Cancelling the contract", "None"],
+    "a": 1,
+    "e": "Subletting is generally not allowed without prior written permission from the department.",
+    "cat": "technical",
+    "sub": "estimating_costing"
+  },
+  {
+    "q": "What does 'L.S.' stand for in an estimate? / एक अनुमान में 'L.S.' का क्या अर्थ है?",
+    "o": ["Long Section", "Lump-Sum | एकमुश्त (Lump-Sum)", "Level Surface", "None"],
+    "a": 1,
+    "e": "L.S. is used for items whose quantities cannot be precisely measured, like architectural finishing or landscaping.",
+    "cat": "technical",
+    "sub": "estimating_costing"
+  },
+  {
+    "q": "The 'Tender Opening' is done in the presence of: / 'निविदा खोलना' किसकी उपस्थिति में किया जाता है?",
+    "o": ["Contractors or their representatives | ठेकेदार या उनके प्रतिनिधि", "Only the engineer", "General public", "None"],
+    "a": 0,
+    "e": "Transparency is maintained by opening sealed or digital bids in the presence of the participating bidders.",
+    "cat": "technical",
+    "sub": "estimating_costing"
+  },
+  {
+    "q": "Which document specifies the quality and workmanship of the materials to be used? / कौन सा दस्तावेज़ उपयोग की जाने वाली सामग्रियों की गुणवत्ता और कारीगरी को निर्दिष्ट करता है?",
+    "o": ["Tender Notice", "Specifications | विनिर्देश (Specifications)", "Bill of Quantities", "Cash Book"],
+    "a": 1,
+    "e": "Specifications provide the technical details that ensure the building meets safety and durability standards.",
+    "cat": "technical",
+    "sub": "estimating_costing"
+  },
+  {
+    "q": "The 'Hand Receipt' is a simple form of: / 'हैंड रसीद' (Hand Receipt) किसका एक सरल रूप है?",
+    "o": ["Contract", "Voucher | वाउचर (Voucher)", "Attendance sheet", "None"],
+    "a": 1,
+    "e": "It is used for recording small miscellaneous payments where a formal bill is not required.",
+    "cat": "technical",
+    "sub": "estimating_costing"
+  },
+  {
+    "q": "What is the penalty for 'Defective Workmanship'? / 'दोषपूर्ण कारीगरी' के लिए क्या दंड है?",
+    "o": ["Bonus payment", "Rejection of work and fixing at contractor's cost | काम की अस्वीकृति और ठेकेदार की लागत पर सुधार", "None", "Award"],
+    "a": 1,
+    "e": "The contractor is legally bound to dismantle and redo any work that does not meet the specified quality.",
+    "cat": "technical",
+    "sub": "estimating_costing"
+  },
+  {
+    "q": "The 'Time Extension' for a contract is granted if: / अनुबंध के लिए 'समय विस्तार' तब दिया जाता है यदि:",
+    "o": ["Contractor wants more profit", "Delay is due to factors beyond contractor's control | देरी ठेकेदार के नियंत्रण से बाहर के कारकों के कारण हो", "Laborers are lazy", "None"],
+    "a": 1,
+    "e": "Reasons like natural calamities or department delays are valid grounds for extending the project deadline without penalty.",
+    "cat": "technical",
+    "sub": "estimating_costing"
+  },
+  {
+    "q": "What is 'Administrative Sanction' in a government department? / एक सरकारी विभाग में 'प्रशासनिक मंजूरी' क्या है?",
+    "o": ["Technical check", "Formal agreement by the authority to incur expenditure | व्यय करने के लिए औपचारिक सहमति", "Payment of final bill", "None"],
+    "a": 1,
+    "e": "Before any project starts, the competent authority must provide administrative sanction for the funds.",
+    "cat": "technical",
+    "sub": "estimating_costing"
+  },
+  {
+    "q": "The deduction for 'Reinforcement Steel' in the volume of R.C.C. work is generally taken as: / R.C.C. कार्य के आयतन में 'सुदृढीकरण स्टील' के लिए कटौती आमतौर पर ली जाती है:",
+    "o": ["1% to 2%", "5%", "None | कोई नहीं", "0.5%"],
+    "a": 2,
+    "e": "In volume calculations for concrete, the volume occupied by steel is so small that it is usually ignored (not deducted).",
+    "cat": "technical",
+    "sub": "estimating_costing"
+  },
+  {
+    "q": "Which unit is used for the measurement of 'R.C.C. Chajja' with a specified thickness? / एक निर्दिष्ट मोटाई वाले 'R.C.C. छज्जा' के मापन के लिए किस इकाई का उपयोग किया जाता है?",
+    "o": ["Running meter", "Cubic meter | घन मीटर (cum)", "Square meter", "None"],
+    "a": 1,
+    "e": "Standard R.C.C. structural members like slabs, beams, and chajjas are measured by volume in cubic meters.",
+    "cat": "technical",
+    "sub": "estimating_costing"
+  },
+  {
+    "q": "The measurement for 'Terrazo Flooring' is done in: / 'टेराज़ो फ्लोरिंग' का मापन किसमें किया जाता है?",
+    "o": ["Cubic meter", "Square meter | वर्ग मीटर (sqm)", "Running meter", "Liters"],
+    "a": 1,
+    "e": "All types of flooring and tiling works are measured based on the net area of the floor covered.",
+    "cat": "technical",
+    "sub": "estimating_costing"
+  },
+  {
+    "q": "What is the unit of measurement for 'G.I. Pipe' for internal water supply? / आंतरिक जल आपूर्ति के लिए 'G.I. पाइप' के मापन की इकाई क्या है?",
+    "o": ["Kilogram", "Square meter", "Running meter | रनिंग मीटर (rm)", "Cubic meter"],
+    "a": 2,
+    "e": "Pipe work is measured along the center line of the pipe including fittings in linear meters.",
+    "cat": "technical",
+    "sub": "estimating_costing"
+  },
+  {
+    "q": "The measurement of 'Steel rolling shutters' is done in: / 'स्टील रोलिंग शटर' का मापन किया जाता है:",
+    "o": ["Number", "Cubic meter", "Square meter | वर्ग मीटर (sqm)", "Kilogram"],
+    "a": 2,
+    "e": "The area of the opening covered by the rolling shutter is measured for payment purposes.",
+    "cat": "technical",
+    "sub": "estimating_costing"
+  },
+  {
+    "q": "In a detailed estimate, 'Skirting' in rooms is measured in: / एक विस्तृत अनुमान में, कमरों में 'स्कर्टिंग' (Skirting) मापी जाती है:",
+    "o": ["Square meter", "Running meter | रनिंग मीटर (rm)", "Cubic meter", "None"],
+    "a": 1,
+    "e": "If the height is less than 30 cm, skirting is usually measured in running meters; otherwise, it's sqm.",
+    "cat": "technical",
+    "sub": "estimating_costing"
+  },
+  {
+    "q": "The unit of measurement for 'Fencing with barbed wire' is: / 'कांटेदार तार से फेंसिंग' के मापन की इकाई है:",
+    "o": ["Running meter | रनिंग मीटर (rm)", "Square meter", "Cubic meter", "None"],
+    "a": 0,
+    "e": "Fencing is measured by the total length of the wire or the length of the fence boundary.",
+    "cat": "technical",
+    "sub": "estimating_costing"
+  },
+  {
+    "q": "What is the weight of one 'standard brick' approximately? / एक 'मानक ईंट' का वजन लगभग कितना होता है?",
+    "o": ["1 kg", "3 kg | 3 किलोग्राम", "5 kg", "10 kg"],
+    "a": 1,
+    "e": "A dry modular brick weighs between 3 kg and 3.5 kg depending on the clay quality.",
+    "cat": "technical",
+    "sub": "estimating_costing"
+  },
+  {
+    "q": "The measurement of 'A.C. Sheet Roofing' is done in: / 'A.C. शीट रूफिंग' का मापन किया जाता है:",
+    "o": ["Cubic meter", "Square meter | वर्ग मीटर (sqm)", "Running meter", "None"],
+    "a": 1,
+    "e": "Roofing materials like AC sheets, GI sheets, or tiles are measured by the area they cover on the slope.",
+    "cat": "technical",
+    "sub": "estimating_costing"
+  },
+  {
+    "q": "Which of the following is measured in 'Quintals'? / निम्नलिखित में से किसे 'क्विंटल' में मापा जाता है?",
+    "o": ["Cement", "Mild steel reinforcement | माइल्ड स्टील सुदृढीकरण", "Bricks", "Sand"],
+    "a": 1,
+    "e": "Steel is a high-density material calculated by weight, with quintal (100 kg) being a common unit in estimates.",
+    "cat": "technical",
+    "sub": "estimating_costing"
+  },
+  {
+    "q": "Which method of depreciation results in an equal amount of deduction every year? / मूल्यह्रास की कौन सी विधि हर साल समान कटौती का परिणाम देती है?",
+    "o": ["Sinking Fund Method", "Straight Line Method | सीधी रेखा विधि", "Constant Percentage Method", "None"],
+    "a": 1,
+    "e": "In the Straight Line Method, (Cost - Scrap Value) / Life gives a constant annual depreciation amount.",
+    "cat": "technical",
+    "sub": "valuation"
+  },
+  {
+    "q": "What is the 'Book Value' of a property after 10 years? / 10 वर्षों के बाद किसी संपत्ति का 'बुक वैल्यू' क्या है?",
+    "o": ["Original cost", "Original cost minus 10 years of depreciation | मूल लागत में से 10 साल का मूल्यह्रास घटाकर", "Market value", "Zero"],
+    "a": 1,
+    "e": "Book value represents the current value of the asset as per the financial records of the owner.",
+    "cat": "technical",
+    "sub": "valuation"
+  },
+  {
+    "q": "The value of a building when it is sold by a bank to recover a loan is usually: / ऋण वसूली के लिए बैंक द्वारा बेचे जाने पर भवन का मूल्य आमतौर पर होता है:",
+    "o": ["Monopoly Value", "Distress Value | डिस्ट्रेस वैल्यू", "Sentimental Value", "Scrap Value"],
+    "a": 1,
+    "e": "Distress value is a forced sale price, often lower than the actual market value.",
+    "cat": "technical",
+    "sub": "valuation"
+  },
+  {
+    "q": "What is the 'Scrap Value' percentage of the total cost of construction normally taken as? / निर्माण की कुल लागत का 'स्क्रैप वैल्यू' प्रतिशत सामान्यतः कितना लिया जाता है?",
+    "o": ["1%", "10% | 10 प्रतिशत", "25%", "50%"],
+    "a": 1,
+    "e": "A standard 10% of the original cost is often assumed as the scrap value for buildings.",
+    "cat": "technical",
+    "sub": "valuation"
+  },
+  {
+    "q": "Which factor most significantly increases the 'Market Value' of a residential plot? / कौन सा कारक आवासीय भूखंड के 'बाजार मूल्य' को सबसे महत्वपूर्ण रूप से बढ़ाता है?",
+    "o": ["Type of soil", "Proximity to amenities (Market, Metro, Hospital) | सुविधाओं से निकटता", "Color of neighbor's house", "None"],
+    "a": 1,
+    "e": "Location and access to infrastructure are the primary drivers of market value in real estate.",
+    "cat": "technical",
+    "sub": "valuation"
+  },
+  {
+    "q": "The 'Life' of a permanent R.C.C. building for valuation purposes is generally taken as: / मूल्यांकन के उद्देश्य से एक स्थायी R.C.C. भवन का 'जीवन' आम तौर पर लिया जाता है:",
+    "o": ["20 years", "50 years", "80 to 100 years | 80 से 100 वर्ष", "200 years"],
+    "a": 2,
+    "e": "Well-constructed R.C.C. structures are expected to serve for about 80 to 100 years before needing major replacement.",
+    "cat": "technical",
+    "sub": "valuation"
+  },
+  {
+    "q": "What is the main advantage of the 'Sinking Fund Method' of depreciation? / मूल्यह्रास की 'सिंकिंग फंड विधि' का मुख्य लाभ क्या है?",
+    "o": ["It is very simple", "It provides the actual cash to replace the asset at the end of its life | जीवन के अंत में संपत्ति बदलने के लिए नकद उपलब्ध कराना", "It requires no interest", "None"],
+    "a": 1,
+    "e": "This method ensures that by the time the building is useless, a fund (with interest) is ready to build a new one.",
+    "cat": "technical",
+    "sub": "valuation"
+  },
+  {
+    "q": "In valuation, 'Outgoings' do NOT include: / मूल्यांकन में, 'व्यय' (Outgoings) में शामिल नहीं है:",
+    "o": ["Property Tax", "Repairs", "Capital cost of the building | भवन की पूंजीगत लागत", "Management charges"],
+    "a": 2,
+    "e": "Outgoings are recurring annual expenses. Capital cost is the initial investment, not an outgoing expense.",
+    "cat": "technical",
+    "sub": "valuation"
+  },
+  {
+    "q": "The 'Year's Purchase' (Y.P.) is higher when the rate of interest is: / 'ईयर्स परचेज' (Y.P.) अधिक होता है जब ब्याज की दर होती है:",
+    "o": ["Higher", "Lower | कम", "Zero", "Fluctuating"],
+    "a": 1,
+    "e": "Y.P. = 100 / Rate of Interest. Therefore, Y.P. is inversely proportional to the interest rate.",
+    "cat": "technical",
+    "sub": "valuation"
+  },
+  {
+    "q": "A 'Freehold' property gives the owner: / एक 'फ्रीहोल्ड' संपत्ति मालिक को देती है:",
+    "o": ["Limited time use", "Permanent ownership of land and building | भूमि और भवन का स्थायी स्वामित्व", "Right to pay rent", "None"],
+    "a": 1,
+    "e": "Freehold ownership is absolute and has no fixed expiry date, unlike a leasehold.",
+    "cat": "technical",
+    "sub": "valuation"
+  },
+  {
+    "q": "What is the standard color of the pages in a physical Measurement Book (MB)? / एक भौतिक मापन पुस्तिका (MB) के पन्नों का मानक रंग क्या होता है?",
+    "o": ["White", "Yellow | पीला", "Light Blue", "Pink"],
+    "a": 1,
+    "e": "Standard MBs usually have machine-numbered yellow pages to prevent tampering and ensure authenticity.",
+    "cat": "technical",
+    "sub": "accounts_payments"
+  },
+  {
+    "q": "Which officer is primarily responsible for the 'First Check Measurement' of work recorded in an MB? / MB में दर्ज कार्य के 'प्रथम चेक मापन' के लिए मुख्य रूप से कौन सा अधिकारी जिम्मेदार है?",
+    "o": ["Junior Engineer", "Assistant Engineer | सहायक अभियंता (AE)", "Executive Engineer", "Accountant"],
+    "a": 1,
+    "e": "While the JE records measurements, the AE must perform a check measurement (usually 25% to 50%) to verify accuracy.",
+    "cat": "technical",
+    "sub": "accounts_payments"
+  },
+  {
+    "q": "What should be done if a page in the Measurement Book is left blank by mistake? / यदि मापन पुस्तिका में कोई पन्ना गलती से खाली रह जाए तो क्या करना चाहिए?",
+    "o": ["Tear the page", "Write 'Blank' and cancel it with a diagonal line | 'Blank' लिखकर तिरछी रेखा से काटें", "Leave it as it is", "None"],
+    "a": 1,
+    "e": "Blank pages must be cancelled and signed by the recording officer to prevent any unauthorized entries later.",
+    "cat": "technical",
+    "sub": "accounts_payments"
+  },
+  {
+    "q": "An 'Interim Bill' is paid to the contractor: / एक 'अंतरिम बिल' (Interim Bill) ठेकेदार को भुगतान किया जाता है:",
+    "o": ["Before starting the work", "During the progress of work | कार्य की प्रगति के दौरान", "After the defect liability period", "None"],
+    "a": 1,
+    "e": "Interim bills (Running Account bills) help the contractor maintain cash flow while the project is ongoing.",
+    "cat": "technical",
+    "sub": "accounts_payments"
+  },
+  {
+    "q": "In an NMR (Nominal Muster Roll), the 'Part-II' usually contains: / NMR के 'भाग-II' में आमतौर पर क्या होता है?",
+    "o": ["Attendance of labor", "Unpaid wages details | अदत्त मजदूरी का विवरण", "Quantity of work done", "Material cost"],
+    "a": 1,
+    "e": "NMR Part-I is for attendance, while Part-II is used to record wages that were not paid during the normal disbursement.",
+    "cat": "technical",
+    "sub": "accounts_payments"
+  },
+  {
+    "q": "The final payment to a contractor is made through which bill form? / ठेकेदार को अंतिम भुगतान किस बिल फॉर्म के माध्यम से किया जाता है?",
+    "o": ["Yellow Bill", "White Bill | व्हाइट बिल (Final Bill)", "Hand Receipt", "None"],
+    "a": 1,
+    "e": "White colored bill forms are generally used for the final settlement of accounts after completion.",
+    "cat": "technical",
+    "sub": "accounts_payments"
+  },
+  {
+    "q": "What is 'First and Final Bill'? / 'प्रथम और अंतिम बिल' (First and Final Bill) क्या है?",
+    "o": ["Payment for large projects", "Single payment for a small work after completion | छोटे कार्यों के लिए एक बार में किया गया पूर्ण भुगतान", "Advance payment", "None"],
+    "a": 1,
+    "e": "For small works or supplies, no running bills are prepared; a single bill is made after the work is finished.",
+    "cat": "technical",
+    "sub": "accounts_payments"
+  },
+  {
+    "q": "Who is the custodian of the 'Measurement Book' at the sub-divisional level? / उप-मंडल स्तर पर 'मापन पुस्तिका' का अभिरक्षक (Custodian) कौन होता है?",
+    "o": ["Divisional Accountant", "Sub-Divisional Officer (SDO) | उप-मंडल अधिकारी", "Head Clerk", "Contractor"],
+    "a": 1,
+    "e": "The SDO/AE is responsible for the safe custody and issuance of MBs in their jurisdiction.",
+    "cat": "technical",
+    "sub": "accounts_payments"
+  },
+  {
+    "q": "The entries in an MB should be made in: / MB में प्रविष्टियाँ (Entries) किसमें की जानी चाहिए?",
+    "o": ["Pencil", "Ink or ball pen | स्याही या बॉल पेन", "Chalk", "None"],
+    "a": 1,
+    "e": "Entries must be permanent; pencil entries are strictly prohibited to avoid erasure or alteration.",
+    "cat": "technical",
+    "sub": "accounts_payments"
+  },
+  {
+    "q": "The 'Register of Works' is used to keep a record of: / 'कार्यों का रजिस्टर' किसका रिकॉर्ड रखने के लिए उपयोग किया जाता है?",
+    "o": ["Labor attendance", "Expenditure on each individual work | प्रत्येक व्यक्तिगत कार्य पर होने वाला व्यय", "Material in stock", "None"],
+    "a": 1,
+    "e": "It helps in monitoring the budget and total money spent against the sanctioned amount for a specific project.",
+    "cat": "technical",
+    "sub": "accounts_payments"
+  },
+  {
+    "q": "Which method of depreciation is most suitable for heavy machinery that loses more value in the early years? / भारी मशीनरी के लिए मूल्यह्रास की कौन सी विधि सबसे उपयुक्त है?",
+    "o": ["Straight Line Method", "Constant Percentage Method | निरंतर प्रतिशत विधि", "Sinking Fund Method", "None"],
+    "a": 1,
+    "e": "This method (also called Reducing Balance Method) deducts a fixed percentage of the remaining book value every year.",
+    "cat": "technical",
+    "sub": "estimating_costing"
+  },
+  {
+    "q": "What is 'Sinking Fund Method' of calculating depreciation? / मूल्यह्रास की गणना की 'सिंकिंग फंड विधि' क्या है?",
+    "o": ["Direct deduction", "Depreciation is equal to the annual sinking fund plus interest | वार्षिक सिंकिंग फंड प्लस ब्याज", "It is zero", "None"],
+    "a": 1,
+    "e": "In this method, the depreciation is considered equal to the amount set aside annually in a sinking fund.",
+    "cat": "technical",
+    "sub": "estimating_costing"
+  },
+  {
+    "q": "The ratio of 'Net Income' to the 'Capitalized Value' is known as: / 'शुद्ध आय' और 'पूंजीकृत मूल्य' के अनुपात को कहा जाता है:",
+    "o": ["Depreciation", "Years' Purchase (Y.P.) | ईयर्स परचेज (Y.P.)", "Annuity", "None"],
+    "a": 1,
+    "e": "Years' Purchase is the capital sum required to be invested to receive an annuity of Re. 1 at a certain rate of interest.",
+    "cat": "technical",
+    "sub": "estimating_costing"
+  },
+  {
+    "q": "What is 'Distress Value' of a property? / किसी संपत्ति का 'डिस्ट्रेस वैल्यू' (Distress Value) क्या है?",
+    "o": ["Highest market price", "Value obtained when the property is sold hurriedly under pressure | दबाव में जल्दी बेचने पर प्राप्त मूल्य", "Insured value", "None"],
+    "a": 1,
+    "e": "Distress value is always lower than the market value as the seller is in urgent need of cash.",
+    "cat": "technical",
+    "sub": "estimating_costing"
+  },
+  {
+    "q": "In valuation, 'Net Income' is calculated by: / मूल्यांकन में, 'शुद्ध आय' की गणना किसके द्वारा की जाती है?",
+    "o": ["Gross Income + Outgoings", "Gross Income - Outgoings | सकल आय - व्यय", "Market Value - Cost", "None"],
+    "a": 1,
+    "e": "Outgoings include taxes, repairs, insurance, and management charges which are deducted from the total rent (Gross Income).",
+    "cat": "technical",
+    "sub": "estimating_costing"
+  },
+  {
+    "q": "A 'Mortgage' is defined as: / 'बंधक' (Mortgage) को किस रूप में परिभाषित किया गया है?",
+    "o": ["Selling a property", "Transfer of interest in specific immovable property as security for a loan | ऋण के लिए सुरक्षा के रूप में संपत्ति का हस्तांतरण", "Renting a house", "None"],
+    "a": 1,
+    "e": "The owner (Mortgagor) gives rights to the lender (Mortgagee) as a guarantee to repay a debt.",
+    "cat": "technical",
+    "sub": "estimating_costing"
+  },
+  {
+    "q": "What is 'Sentimental Value'? / 'भावनात्मक मूल्य' (Sentimental Value) क्या है?",
+    "o": ["Value based on market demand", "Additional value an owner attaches due to personal attachment | व्यक्तिगत लगाव के कारण अतिरिक्त मूल्य", "Value for tax", "None"],
+    "a": 1,
+    "e": "Sentimental value is subjective and usually ignored by professional valuers and banks.",
+    "cat": "technical",
+    "sub": "estimating_costing"
+  },
+  {
+    "q": "The person who is granted a 'Lease' is called: / जिसे 'पट्टा' (Lease) दिया जाता है, वह कहलाता है:",
+    "o": ["Lessor", "Lessee | पट्टेदार (Lessee)", "Mortgagor", "Agent"],
+    "a": 1,
+    "e": "The Lessor is the owner, and the Lessee is the person who uses the property for a fixed period.",
+    "cat": "technical",
+    "sub": "estimating_costing"
+  },
+  {
+    "q": "Which factor primarily affects the 'Market Value' of a building? / कौन सा कारक मुख्य रूप से किसी भवन के 'बाजार मूल्य' को प्रभावित करता है?",
+    "o": ["Location | स्थान (Location)", "Color of walls", "Name of the contractor", "None"],
+    "a": 0,
+    "e": "Location is the most critical factor; a small flat in a city center can be more valuable than a mansion in a remote village.",
+    "cat": "technical",
+    "sub": "estimating_costing"
+  },
+  {
+    "q": "A 'Leasehold Property' returns to the original owner after: / 'लीजहोल्ड संपत्ति' मूल मालिक के पास वापस आ जाती है:",
+    "o": ["One year", "The death of the owner", "The expiry of the lease period | लीज अवधि की समाप्ति के बाद", "None"],
+    "a": 2,
+    "e": "Once the lease term (e.g., 30, 60, or 99 years) ends, the property ownership reverts back to the lessor.",
+    "cat": "technical",
+    "sub": "estimating_costing"
+  },
+  {
+    "q": "What is the full form of 'E-MB' in modern engineering departments? / आधुनिक इंजीनियरिंग विभागों में 'E-MB' का पूर्ण रूप क्या है?",
+    "o": ["Electronic Money Book", "Electronic Measurement Book | इलेक्ट्रॉनिक मेजरमेंट बुक", "Engine Measurement Board", "None"],
+    "a": 1,
+    "e": "E-MB is the digital version of the traditional Measurement Book, used for recording work progress online.",
+    "cat": "technical",
+    "sub": "estimating_costing"
+  },
+  {
+    "q": "Which type of payment is made to a contractor for work done but not yet measured in detail? / ठेकेदार को किए गए उस कार्य के लिए कौन सा भुगतान किया जाता है जिसका अभी तक विस्तार से मापन नहीं किया गया है?",
+    "o": ["Final Payment", "Advance Payment | अग्रिम भुगतान (Advance Payment)", "Secured Advance", "Interim Payment"],
+    "a": 1,
+    "e": "Advance payment is usually a lump-sum amount paid for work done, which is later adjusted in the running account bill.",
+    "cat": "technical",
+    "sub": "estimating_costing"
+  },
+  {
+    "q": "What is 'Secured Advance'? / 'सिक्योर्ड एडवांस' (Secured Advance) क्या है?",
+    "o": ["Payment for labor", "Advance paid on the security of materials brought to site | साइट पर लाए गए सामान की सुरक्षा पर दिया गया अग्रिम", "Payment for tools", "None"],
+    "a": 1,
+    "e": "It is an advance (usually 75% of value) given to the contractor for non-perishable materials brought to the site but not yet used.",
+    "cat": "technical",
+    "sub": "estimating_costing"
+  },
+  {
+    "q": "A 'Voucher' is a document used for: / 'वाउचर' (Voucher) एक दस्तावेज़ है जिसका उपयोग किया जाता है:",
+    "o": ["Measuring work", "Recording proof of payment or receipt of money | भुगतान या धन की प्राप्ति के प्रमाण के रूप में", "Hiring labor", "None"],
+    "a": 1,
+    "e": "Vouchers serve as legal evidence for any financial transaction in the accounts department.",
+    "cat": "technical",
+    "sub": "estimating_costing"
+  },
+  {
+    "q": "The 'Retention Money' is deducted from: / 'रिटेंशन मनी' (Retention Money) किसमें से काटी जाती है?",
+    "o": ["EMD", "Running Account Bills | रनिंग अकाउंट बिल (RA Bills)", "Tender fee", "None"],
+    "a": 1,
+    "e": "Retention money is a percentage kept from every bill to act as a buffer for any defects found later.",
+    "cat": "technical",
+    "sub": "estimating_costing"
+  },
+  {
+    "q": "What is 'Mobilization Advance'? / 'मोबिलाइजेशन एडवांस' (Mobilization Advance) क्या है?",
+    "o": ["Final bill", "Advance given to help contractor start the work | काम शुरू करने में मदद के लिए दिया गया अग्रिम", "Payment for water", "None"],
+    "a": 1,
+    "e": "It is a loan-like advance provided to large-scale contractors to set up their plant and machinery at the start of a project.",
+    "cat": "technical",
+    "sub": "estimating_costing"
+  },
+  {
+    "q": "The 'Cash Book' is maintained by: / 'कैश बुक' (Cash Book) किसके द्वारा बनाए रखी जाती है?",
+    "o": ["Contractor", "Disbursing Officer (e.g., Executive Engineer) | वितरण अधिकारी", "Mason", "None"],
+    "a": 1,
+    "e": "The cash book records all daily receipts and payments of government money handled by the officer.",
+    "cat": "technical",
+    "sub": "estimating_costing"
+  },
+  {
+    "q": "Which document is used for acknowledging the receipt of small payments for which no regular bill is prepared? / छोटे भुगतानों के लिए किस दस्तावेज़ का उपयोग किया जाता है जिनके लिए कोई नियमित बिल तैयार नहीं होता?",
+    "o": ["Measurement Book", "Hand Receipt | हैंड रसीद (Hand Receipt)", "Muster Roll", "Invoice"],
+    "a": 1,
+    "e": "Hand receipts are used for petty payments like daily wages or small local purchases.",
+    "cat": "technical",
+    "sub": "estimating_costing"
+  },
+  {
+    "q": "In 'E-payment' system, the money is transferred: / 'ई-पेमेंट' प्रणाली में, धन स्थानांतरित किया जाता है:",
+    "o": ["By cash", "By gold", "Directly to the contractor's bank account | सीधे ठेकेदार के बैंक खाते में", "By post"],
+    "a": 2,
+    "e": "E-payment ensures transparency and speed in financial transactions by using NEFT/RTGS.",
+    "cat": "technical",
+    "sub": "estimating_costing"
+  },
+  {
+    "q": "What is a 'Suspense Account'? / 'सस्पेंस अकाउंट' (Suspense Account) क्या है?",
+    "o": ["A permanent record", "Temporary record of transactions that cannot be immediately classified | अस्थायी रिकॉर्ड", "Contractor's profit", "None"],
+    "a": 1,
+    "e": "Items are kept in the suspense account until they are finally adjusted to a specific head of account.",
+    "cat": "technical",
+    "sub": "estimating_costing"
+  },
+  {
+    "q": "How is 'Earnest Money' (EMD) different from 'Security Deposit' (SD)? / 'बयाना राशि' (EMD), 'सुरक्षा जमा' (SD) से कैसे भिन्न है?",
+    "o": ["EMD is paid after work starts", "EMD is for bidding, SD is for contract fulfillment | EMD बोली के लिए है, SD अनुबंध पूरा करने के लिए है", "SD is returned immediately after bidding", "None"],
+    "a": 1,
+    "e": "EMD is submitted with the tender to show sincerity, while SD is collected from the successful bidder to ensure quality and completion.",
+    "cat": "technical",
+    "sub": "contracts_tenders"
+  },
+  {
+    "q": "The amount of 'Security Deposit' is usually: / 'सुरक्षा जमा' (SD) की राशि आमतौर पर होती है:",
+    "o": ["1% to 2%", "5% to 10% | 5 से 10 प्रतिशत", "20%", "50%"],
+    "a": 1,
+    "e": "SD is typically 10% of the contract value, which includes the EMD already deposited.",
+    "cat": "technical",
+    "sub": "contracts_tenders"
+  },
+  {
+    "q": "When is the 'Earnest Money' of unsuccessful bidders returned? / असफल बोलीदाताओं की 'बयाना राशि' कब वापस की जाती है?",
+    "o": ["After the work is completed", "Immediately after the tender is awarded to the lowest bidder | निविदा सबसे कम बोलीदाता को दिए जाने के तुरंत बाद", "Never", "After one year"],
+    "a": 1,
+    "e": "Once the contract is finalized with L1, the EMD of all other participants is refunded.",
+    "cat": "technical",
+    "sub": "contracts_tenders"
+  },
+  {
+    "q": "What is the 'Defect Liability Period'? / 'दोष दायित्व अवधि' (Defect Liability Period) क्या है?",
+    "o": ["Period of construction", "Period after completion where the contractor must fix any defects | पूर्णता के बाद की अवधि जिसमें ठेकेदार को दोषों को ठीक करना होगा", "Time to submit tender", "None"],
+    "a": 1,
+    "e": "Security deposit is usually released only after this period (usually 6 to 12 months) is over.",
+    "cat": "technical",
+    "sub": "contracts_tenders"
+  },
+  {
+    "q": "An 'Arbitrator' should ideally be: / एक 'मध्यस्थ' (Arbitrator) को आदर्श रूप से होना चाहिए:",
+    "o": ["A friend of the contractor", "A neutral third party expert | एक तटस्थ तीसरे पक्ष का विशेषज्ञ", "A junior clerk", "None"],
+    "a": 1,
+    "e": "An arbitrator must be impartial and knowledgeable about technical and legal aspects of construction contracts.",
+    "cat": "technical",
+    "sub": "contracts_tenders"
+  },
+  {
+    "q": "What is the advantage of 'Arbitration' over court litigation? / अदालत के मुकदमेबाजी की तुलना में 'मध्यस्थता' (Arbitration) का क्या लाभ है?",
+    "o": ["It is more expensive", "It is faster and less formal | यह तेज़ और कम औपचारिक है", "It is done by the police", "None"],
+    "a": 1,
+    "e": "Arbitration avoids lengthy legal battles in courts, saving time and money for both the department and the contractor.",
+    "cat": "technical",
+    "sub": "contracts_tenders"
+  },
+  {
+    "q": "The 'Arbitration and Conciliation Act' currently in force in India was passed in: / भारत में वर्तमान में लागू 'मध्यस्थता और सुलह अधिनियम' कब पारित किया गया था?",
+    "o": ["1947", "1996 | 1996", "2010", "1857"],
+    "a": 1,
+    "e": "The 1996 Act provides the legal framework for resolving disputes in commercial and construction contracts.",
+    "cat": "technical",
+    "sub": "contracts_tenders"
+  },
+  {
+    "q": "If a contractor fails to complete the work, the 'Security Deposit' can be: / यदि कोई ठेकेदार कार्य पूरा करने में विफल रहता है, तो 'सुरक्षा जमा' (SD) को:",
+    "o": ["Refunded with interest", "Forfeited by the department | विभाग द्वारा जब्त किया जा सकता है", "Given to charity", "None"],
+    "a": 1,
+    "e": "SD acts as a guarantee; if the contract is breached, the department uses this money to complete the work or cover losses.",
+    "cat": "technical",
+    "sub": "contracts_tenders"
+  },
+  {
+    "q": "What is an 'Arbitration Award'? / 'मध्यस्थता निर्णय' (Arbitration Award) क्या है?",
+    "o": ["A cash prize for the best contractor", "The final decision of the arbitrator | मध्यस्थ का अंतिम निर्णय", "A government medal", "None"],
+    "a": 1,
+    "e": "The 'award' is the legally binding judgment passed by the arbitrator to settle the dispute.",
+    "cat": "technical",
+    "sub": "contracts_tenders"
+  },
+  {
+    "q": "Which document contains the detailed conditions of the agreement between the owner and contractor? / किस दस्तावेज़ में मालिक और ठेकेदार के बीच समझौते की विस्तृत शर्तें होती हैं?",
+    "o": ["Notice Inviting Tender", "Contract Agreement | अनुबंध समझौता (Contract Agreement)", "Schedule of Rates", "None"],
+    "a": 1,
+    "e": "The signed contract agreement is the legal document that defines the rights and duties of both parties.",
+    "cat": "technical",
+    "sub": "contracts_tenders"
+  },
+  {
+    "q": "What is the primary document that invites contractors to bid for a construction project? / निर्माण परियोजना के लिए ठेकेदारों को बोली लगाने हेतु आमंत्रित करने वाला प्राथमिक दस्तावेज़ क्या है?",
+    "o": ["Notice Inviting Tender (NIT) | निविदा आमंत्रण सूचना (NIT)", "Work Order", "Agreement", "Bill of Quantities"],
+    "a": 0,
+    "e": "NIT is a public notice issued in newspapers or websites to invite qualified contractors to submit their bids.",
+    "cat": "technical",
+    "sub": "contracts_tenders"
+  },
+  {
+    "q": "Which type of tender is invited by sending notices only to selected reputed firms? / केवल चुनिंदा प्रतिष्ठित फर्मों को नोटिस भेजकर किस प्रकार की निविदा आमंत्रित की जाती है?",
+    "o": ["Open Tender", "Limited Tender | सीमित निविदा (Limited Tender)", "Single Tender", "Global Tender"],
+    "a": 1,
+    "e": "Limited tenders are used when the work is of a specialized nature or for small values where open competition is not necessary.",
+    "cat": "technical",
+    "sub": "contracts_tenders"
+  },
+  {
+    "q": "In which type of contract is the contractor paid the actual cost of construction plus a fixed percentage for profit? / किस प्रकार के अनुबंध में ठेकेदार को निर्माण की वास्तविक लागत और लाभ के लिए एक निश्चित प्रतिशत का भुगतान किया जाता है?",
+    "o": ["Item Rate Contract", "Lump-sum Contract", "Cost Plus Percentage Contract | लागत प्लस प्रतिशत अनुबंध", "Percentage Rate Contract"],
+    "a": 2,
+    "e": "This type of contract is suitable for emergency works where the scope is not defined, although it requires strict supervision of costs.",
+    "cat": "technical",
+    "sub": "contracts_tenders"
+  },
+  {
+    "q": "What is 'Corrigendum' in a tender process? / निविदा प्रक्रिया में 'शुद्धिपत्र' (Corrigendum) क्या है?",
+    "o": ["Cancellation of tender", "An amendment or correction to the original tender document | मूल निविदा दस्तावेज़ में संशोधन या सुधार", "A final bill", "None"],
+    "a": 1,
+    "e": "A corrigendum is issued after the NIT if any changes are made to the specifications, dates, or terms of the tender.",
+    "cat": "technical",
+    "sub": "contracts_tenders"
+  },
+  {
+    "q": "Which contract is most suitable for residential buildings where all items of work are clearly defined? / आवासीय भवनों के लिए कौन सा अनुबंध सबसे उपयुक्त है जहाँ कार्य के सभी मद स्पष्ट रूप से परिभाषित हैं?",
+    "o": ["Lump-sum Contract", "Item Rate Contract | आइटम रेट अनुबंध", "Cost Plus Fee Contract", "None"],
+    "a": 1,
+    "e": "Item rate contracts (unit price contracts) ensure that the contractor is paid only for the actual quantity of work performed.",
+    "cat": "technical",
+    "sub": "contracts_tenders"
+  },
+  {
+    "q": "What is 'Comparative Statement' in tendering? / निविदा प्रक्रिया में 'तुलनात्मक विवरण' (Comparative Statement) क्या है?",
+    "o": ["A list of all materials", "A table comparing the rates of different bidders | विभिन्न बोलीदाताओं की दरों की तुलना करने वाली तालिका", "A certificate of completion", "None"],
+    "a": 1,
+    "e": "After opening the bids, a comparative statement is prepared to find the lowest bidder (L1).",
+    "cat": "technical",
+    "sub": "contracts_tenders"
+  },
+  {
+    "q": "A 'Global Tender' is invited when: / 'ग्लोबल टेंडर' तब आमंत्रित किया जाता है जब:",
+    "o": ["Local contractors are busy", "High-tech equipment or large investment is required from international firms | अंतर्राष्ट्रीय फर्मों से उच्च तकनीक या बड़े निवेश की आवश्यकता हो", "Work value is very small", "None"],
+    "a": 1,
+    "e": "Global tenders allow international competition for very large-scale or complex infrastructure projects.",
+    "cat": "technical",
+    "sub": "contracts_tenders"
+  },
+  {
+    "q": "What is 'Administrative Approval'? / 'प्रशासनिक अनुमोदन' (Administrative Approval) क्या है?",
+    "o": ["Formal acceptance of the proposal by the department head | विभाग प्रमुख द्वारा प्रस्ताव की औपचारिक स्वीकृति", "Technical check of drawings", "Permission to pay bills", "None"],
+    "a": 0,
+    "e": "Administrative approval is the first step where the competent authority agrees to the necessity of the work.",
+    "cat": "technical",
+    "sub": "contracts_tenders"
+  },
+  {
+    "q": "In a 'Percentage Rate Contract', the contractor quotes: / 'प्रतिशत दर अनुबंध' में, ठेकेदार क्या कोट करता है?",
+    "o": ["Specific rates for each item", "Percentage above or below the department's estimated rates | विभाग की अनुमानित दरों से ऊपर या नीचे का प्रतिशत", "A single fixed sum", "None"],
+    "a": 1,
+    "e": "The contractor either offers a percentage 'At Par', 'Above', or 'Below' the Schedule of Rates (SOR).",
+    "cat": "technical",
+    "sub": "contracts_tenders"
+  },
+  {
+    "q": "What is the validity period of a tender? / निविदा की वैधता अवधि (Validity Period) क्या है?",
+    "o": ["Time to complete the work", "Period during which the contractor's offer remains open for acceptance | वह अवधि जिसके दौरान ठेकेदार का प्रस्ताव स्वीकृति के लिए खुला रहता है", "Duration of the warranty", "None"],
+    "a": 1,
+    "e": "Contractors cannot withdraw their bid during this period (usually 90-120 days) without forfeiting their EMD.",
+    "cat": "technical",
+    "sub": "contracts_tenders"
+  },
+  {
+    "q": "In Rate Analysis, the term 'Bhisti' refers to: / दर विश्लेषण में, 'भिश्ती' (Bhisti) शब्द का तात्पर्य है:",
+    "o": ["Head mason", "Skilled carpenter", "Water carrier for curing | क्योरिंग के लिए पानी ढोने वाला", "Blacksmith"],
+    "a": 2,
+    "e": "A Bhisti is the laborer responsible for supplying water for mixing concrete/mortar and for curing the finished work.",
+    "cat": "technical",
+    "sub": "estimating_costing"
+  },
+  {
+    "q": "How many standard bricks are required for 'One Cubic Meter' of brickwork? / 'एक घन मीटर' ईंट कार्य के लिए कितनी मानक ईंटों की आवश्यकता होती है?",
+    "o": ["250", "500 | 500 ईंटें", "750", "1000"],
+    "a": 1,
+    "e": "Considering mortar joints, 500 modular bricks (19x9x9 cm) are required for 1 cubic meter of brickwork.",
+    "cat": "technical",
+    "sub": "estimating_costing"
+  },
+  {
+    "q": "The volume of one bag of cement (50kg) is approximately: / सीमेंट की एक बोरी (50 किग्रा) का आयतन लगभग होता है:",
+    "o": ["0.015 cum", "0.035 cum | 0.035 घन मीटर", "0.050 cum", "0.1 cum"],
+    "a": 1,
+    "e": "This is a standard value (approx. 1.23 cubic feet) used to calculate the number of bags needed for concrete/mortar.",
+    "cat": "technical",
+    "sub": "estimating_costing"
+  },
+  {
+    "q": "Which factor is NOT included in the 'Analysis of Rates'? / 'दरों के विश्लेषण' में कौन सा कारक शामिल नहीं है?",
+    "o": ["Cost of materials at site", "Wages of labor", "Personal insurance of contractor | ठेकेदार का व्यक्तिगत बीमा", "Tools and plants"],
+    "a": 2,
+    "e": "Rate analysis focuses on direct project costs and overheads, not the personal financial liabilities of the contractor.",
+    "cat": "technical",
+    "sub": "estimating_costing"
+  },
+  {
+    "q": "For '1:3:6' concrete mix, the digit '3' represents the proportion of: / '1:3:6' कंक्रीट मिक्स में, अंक '3' किसका अनुपात दर्शाता है?",
+    "o": ["Cement", "Fine Aggregate (Sand) | महीन मिलावा (रेत)", "Coarse Aggregate", "Water"],
+    "a": 1,
+    "e": "The standard ratio format is Cement : Fine Aggregate : Coarse Aggregate.",
+    "cat": "technical",
+    "sub": "estimating_costing"
+  },
+  {
+    "q": "The 'Dry Volume' of concrete is taken as how many times the wet (finished) volume for calculation? / गणना के लिए कंक्रीट का 'शुष्क आयतन' गीले आयतन का कितना गुना लिया जाता है?",
+    "o": ["1.0 times", "1.25 times", "1.52 to 1.54 times | 1.52 से 1.54 गुना", "2.0 times"],
+    "a": 2,
+    "e": "When water is added, the volume of dry materials shrinks due to air voids being filled, so a factor of approx 1.54 is used.",
+    "cat": "technical",
+    "sub": "estimating_costing"
+  },
+  {
+    "q": "In rate analysis, 'Sun-dry bricks' are usually cheaper because: / दर विश्लेषण में, 'धूप में सुखाए गए ईंट' आमतौर पर सस्ते होते हैं क्योंकि:",
+    "o": ["They are stronger", "They do not require coal/wood for burning | उन्हें जलाने के लिए कोयले/लकड़ी की आवश्यकता नहीं होती", "They are larger", "None"],
+    "a": 1,
+    "e": "The cost of fuel for kilns is eliminated, though these bricks are only used for temporary or low-load structures.",
+    "cat": "technical",
+    "sub": "estimating_costing"
+  },
+  {
+    "q": "What is the unit of 'Task Work' for a skilled carpenter in making a door frame? / दरवाजा फ्रेम बनाने में एक कुशल बढ़ई के लिए 'टास्क वर्क' की इकाई क्या है?",
+    "o": ["Running meter", "Cubic meter of wood | लकड़ी का घन मीटर", "Square meter", "None"],
+    "a": 1,
+    "e": "Labor productivity for woodwork is generally measured based on the volume of wood processed per day.",
+    "cat": "technical",
+    "sub": "estimating_costing"
+  },
+  {
+    "q": "Which document gives the rates of various items of work as per the current market trends of a department? / कौन सा दस्तावेज़ किसी विभाग के वर्तमान बाजार रुझानों के अनुसार कार्य के विभिन्न मदों की दरें देता है?",
+    "o": ["Bill of Quantities", "Schedule of Rates (SOR) | दरों की अनुसूची (SOR)", "Muster Roll", "Cash Book"],
+    "a": 1,
+    "e": "The SOR (usually updated yearly) is the reference book used by engineers to prepare estimates.",
+    "cat": "technical",
+    "sub": "estimating_costing"
+  },
+  {
+    "q": "For 'Plastering' work (12mm thick), the quantity of mortar is calculated for how much area? / 'प्लास्टरिंग' कार्य (12 मिमी मोटा) के लिए, मोर्टार की मात्रा कितने क्षेत्रफल के लिए गणना की जाती है?",
+    "o": ["1 sqm", "10 sqm", "100 sqm | 100 वर्ग मीटर", "1 cum"],
+    "a": 2,
+    "e": "It is a standard practice in rate analysis to calculate material requirements for 100 sqm of surface area.",
+    "cat": "technical",
+    "sub": "estimating_costing"
+  },
+  {
+    "q": "While calculating the quantity of 'Earthwork in excavation', the deductions for internal corners in the Center Line Method is: / केंद्र रेखा विधि में खुदाई की मात्रा की गणना करते समय, आंतरिक कोनों के लिए कटौती होती है:",
+    "o": ["None | कोई नहीं", "Half the thickness of the wall", "Full thickness of the wall", "Twice the thickness"],
+    "a": 0,
+    "e": "In a simple rectangular center line, the extra length at outer corners is balanced by the deficit at inner corners, so no deduction is needed.",
+    "cat": "technical",
+    "sub": "estimating_costing"
+  },
+  {
+    "q": "What is the deduction for 'T-junctions' in the Center Line Method of estimation? / अनुमान की केंद्र रेखा विधि में 'T-जंक्शन' के लिए क्या कटौती की जाती है?",
+    "o": ["Full width of wall", "Half the width of the wall | दीवार की चौड़ाई का आधा", "No deduction", "Quarter width"],
+    "a": 1,
+    "e": "At every T-junction, half the width of the wall is deducted from the total center line length to avoid double counting.",
+    "cat": "technical",
+    "sub": "estimating_costing"
+  },
+  {
+    "q": "The measurement of 'Honeycombed brickwork' is usually done in: / 'हनीकॉम्ब ईंट कार्य' का मापन आमतौर पर किया जाता है:",
+    "o": ["Cubic meter", "Square meter | वर्ग मीटर (sqm)", "Running meter", "Number of bricks"],
+    "a": 1,
+    "e": "Since honeycomb brickwork has many openings, it is measured as a surface area with specified thickness.",
+    "cat": "technical",
+    "sub": "estimating_costing"
+  },
+  {
+    "q": "In a detailed estimate, deductions for openings (like windows/doors) in brickwork are NOT made if the area is less than: / विस्तृत अनुमान में, ईंट कार्य में छिद्रों (जैसे खिड़की/दरवाजे) के लिए कटौती नहीं की जाती है यदि क्षेत्रफल किससे कम है?",
+    "o": ["0.5 sqm", "0.1 sqm | 0.1 वर्ग मीटर", "1.0 sqm", "0.01 sqm"],
+    "a": 1,
+    "e": "According to IS 1200, small openings up to 0.1 sqm are ignored in volume calculations for brickwork and plastering.",
+    "cat": "technical",
+    "sub": "estimating_costing"
+  },
+  {
+    "q": "The unit of measurement for 'Woodwork for shutters' of doors and windows is: / दरवाजे और खिड़कियों के 'शटर' के लकड़ी के कार्य के मापन की इकाई है:",
+    "o": ["Cubic meter", "Square meter | वर्ग मीटर (sqm)", "Running meter", "Quintal"],
+    "a": 1,
+    "e": "While frames (Chowkhats) are measured in cum, the shutters are measured based on the area of the opening in sqm.",
+    "cat": "technical",
+    "sub": "estimating_costing"
+  },
+  {
+    "q": "Which of the following is measured in 'Running Meters' (rm)? / निम्नलिखित में से किसे 'रनिंग मीटर' (rm) में मापा जाता है?",
+    "o": ["Plastering", "Cornice work | कॉर्निस का काम", "Flooring", "RCC slab"],
+    "a": 1,
+    "e": "Decorative items like cornices or pipes where length is the dominant dimension are measured in running meters.",
+    "cat": "technical",
+    "sub": "estimating_costing"
+  },
+  {
+    "q": "The weight of one cubic meter of 'Mild Steel' is approximately: / एक घन मीटर 'माइल्ड स्टील' का वजन लगभग होता है:",
+    "o": ["1440 kg", "2400 kg", "7850 kg | 7850 किलोग्राम", "5000 kg"],
+    "a": 2,
+    "e": "The density of mild steel is 7850 kg/cum, which is crucial for calculating reinforcement quantities.",
+    "cat": "technical",
+    "sub": "estimating_costing"
+  },
+  {
+    "q": "In 'Long Wall and Short Wall' method, the length of the long wall ________ from foundation to superstructure. / 'लंबी दीवार और छोटी दीवार' विधि में, लंबी दीवार की लंबाई नींव से सुपरस्ट्रक्चर तक ________ है।",
+    "o": ["Increases", "Decreases | घटती है", "Remains same", "Becomes zero"],
+    "a": 1,
+    "e": "As we move up from the wide foundation to the thinner wall, the length of the 'long wall' decreases (Out-to-out distance reduces).",
+    "cat": "technical",
+    "sub": "estimating_costing"
+  },
+  {
+    "q": "The thickness of 'Plastering' is generally: / 'प्लास्टरिंग' की मोटाई आमतौर पर होती है:",
+    "o": ["6 mm to 20 mm | 6 मिमी से 20 मिमी", "50 mm", "100 mm", "1 mm"],
+    "a": 0,
+    "e": "Standard plastering for walls is usually 12mm, while ceiling plaster is 6mm to 10mm.",
+    "cat": "technical",
+    "sub": "estimating_costing"
+  },
+  {
+    "q": "The measurement of 'Steel Trusses' is done in: / 'स्टील ट्रस' का मापन किया जाता है:",
+    "o": ["Number", "Square meter", "Kilogram or Quintal | किलोग्राम या क्विंटल", "Cubic meter"],
+    "a": 2,
+    "e": "Structural steelwork like trusses and beams are estimated by weight after listing all members.",
+    "cat": "technical",
+    "sub": "estimating_costing"
+  },
+  {
+    "q": "The value of a property at the end of its useful life, without being dismantled, is called: / उपयोगी जीवन के अंत में किसी संपत्ति का मूल्य, बिना तोड़े-फोड़े, कहलाता है:",
+    "o": ["Scrap Value", "Salvage Value | साल्वेज वैल्यू (Salvage Value)", "Market Value", "Book Value"],
+    "a": 1,
+    "e": "Salvage value is the estimated value of an asset at the end of its life while still in working condition.",
+    "cat": "technical",
+    "sub": "estimating_costing"
+  },
+  {
+    "q": "What is 'Depreciation'? / 'मूल्यह्रास' (Depreciation) क्या है?",
+    "o": ["Increase in value", "Gradual decrease in the value of an asset due to wear and tear | टूट-फूट के कारण संपत्ति के मूल्य में धीरे-धीरे कमी", "Total cost of building", "None"],
+    "a": 1,
+    "e": "Depreciation accounts for the aging, usage, and obsolescence of a building or machine over time.",
+    "cat": "technical",
+    "sub": "estimating_costing"
+  },
+  {
+    "q": "The value of a property shown in the account books after deducting depreciation is: / मूल्यह्रास घटाने के बाद खाता बहियों में दिखाई गई संपत्ति का मूल्य है:",
+    "o": ["Market Value", "Distress Value", "Book Value | बुक वैल्यू (Book Value)", "Scrap Value"],
+    "a": 2,
+    "e": "Book Value = Original Cost - Accumulated Depreciation.",
+    "cat": "technical",
+    "sub": "estimating_costing"
+  },
+  {
+    "q": "Which method of calculating depreciation assumes a constant rate of decrease in value? / मूल्यह्रास की गणना करने की कौन सी विधि मूल्य में कमी की एक स्थिर दर मानती है?",
+    "o": ["Straight Line Method | सीधी रेखा विधि", "Sinking Fund Method", "Constant Percentage Method", "None"],
+    "a": 0,
+    "e": "In the straight-line method, an equal amount of depreciation is deducted every year.",
+    "cat": "technical",
+    "sub": "estimating_costing"
+  },
+  {
+    "q": "What is 'Scrap Value'? / 'स्क्रैप वैल्यू' (Scrap Value) क्या है?",
+    "o": ["Highest value", "Value of dismantled materials (junk) | तोड़े गए मलबे का मूल्य (जंक)", "Value for insurance", "None"],
+    "a": 1,
+    "e": "Scrap value is what you get after breaking down the asset into pieces (e.g., steel, bricks).",
+    "cat": "technical",
+    "sub": "estimating_costing"
+  },
+  {
+    "q": "A fund created by setting aside an amount every year to replace an asset after its life is: / किसी संपत्ति के जीवन के बाद उसे बदलने के लिए हर साल एक राशि अलग रखकर बनाया गया फंड है:",
+    "o": ["Reserve Fund", "Sinking Fund | सिंकिंग फंड (Sinking Fund)", "Petty Cash", "None"],
+    "a": 1,
+    "e": "A sinking fund ensures that enough capital is available to replace the structure once it becomes useless.",
+    "cat": "technical",
+    "sub": "estimating_costing"
+  },
+  {
+    "q": "What is 'Obsolescence'? / 'अप्रचलन' (Obsolescence) क्या है?",
+    "o": ["Physical wear", "Loss in value due to new inventions or change in fashion | नए आविष्कारों या फैशन में बदलाव के कारण मूल्य में हानि", "Accidental damage", "None"],
+    "a": 1,
+    "e": "An asset may become obsolete if a better technology comes along, even if it is still in good physical condition.",
+    "cat": "technical",
+    "sub": "estimating_costing"
+  },
+  {
+    "q": "Which type of lease is for a long period, usually 99 years? / कौन सा पट्टा (Lease) लंबी अवधि, आमतौर पर 99 वर्ष के लिए होता है?",
+    "o": ["Short term lease", "Building lease | बिल्डिंग लीज (Long term)", "Occupation lease", "None"],
+    "a": 1,
+    "e": "Long-term leases are common for land where the lessee builds a structure and returns it after the period.",
+    "cat": "technical",
+    "sub": "estimating_costing"
+  },
+  {
+    "q": "The value of a property that can be obtained in the open market at any time is: / वह मूल्य जो किसी भी समय खुले बाजार में प्राप्त किया जा सकता है:",
+    "o": ["Monopoly Value", "Market Value | बाजार मूल्य (Market Value)", "Sentimental Value", "None"],
+    "a": 1,
+    "e": "Market value depends on demand, supply, location, and the current economic situation.",
+    "cat": "technical",
+    "sub": "estimating_costing"
+  },
+  {
+    "q": "A 'Freehold Property' is one where the owner: / 'फ्रीहोल्ड संपत्ति' वह है जहाँ मालिक:",
+    "o": ["Has absolute possession for life | जीवन भर के लिए पूर्ण अधिकार रखता है", "Pays rent to others", "Has limited time ownership", "None"],
+    "a": 0,
+    "e": "In freehold, the owner has full rights over the land and the building forever, with no lease conditions.",
+    "cat": "technical",
+    "sub": "estimating_costing"
+  },
+  {
+    "q": "What is 'Earnest Money Deposit' (EMD)? / 'बयाना जमा' (EMD) क्या है?",
+    "o": ["Part of the contractor's profit", "Security amount paid while submitting a tender | निविदा जमा करते समय भुगतान की गई सुरक्षा राशि", "Final payment to the contractor", "None"],
+    "a": 1,
+    "e": "EMD is usually 1% to 2% of the estimated cost, taken to ensure the contractor is serious about the bid.",
+    "cat": "technical",
+    "sub": "estimating_costing"
+  },
+  {
+    "q": "Which book is considered the 'original record' of all measurements of a construction work? / निर्माण कार्य के सभी मापों का 'मूल रिकॉर्ड' कौन सी पुस्तक मानी जाती है?",
+    "o": ["Cash Book", "Stock Register", "Measurement Book (MB) | मापन पुस्तिका (MB)", "Log Book"],
+    "a": 2,
+    "e": "MB is the most important document for an engineer as it forms the basis for all payments to contractors.",
+    "cat": "technical",
+    "sub": "estimating_costing"
+  },
+  {
+    "q": "A 'Lump-sum Contract' is one where: / 'एकमुश्त अनुबंध' (Lump-sum Contract) वह है जहाँ:",
+    "o": ["Payment is made for each item", "Contractor agrees to do the whole work for a fixed total sum | ठेकेदार एक निश्चित कुल राशि के लिए पूरा काम करने के लिए सहमत होता है", "Materials are provided by the department", "None"],
+    "a": 1,
+    "e": "In this contract, the contractor is paid a fixed amount for the entire project as per plans and specifications.",
+    "cat": "technical",
+    "sub": "estimating_costing"
+  },
+  {
+    "q": "What is the purpose of 'Security Deposit' (SD)? / 'सुरक्षा जमा' (SD) का उद्देश्य क्या है?",
+    "o": ["To pay for labor", "To ensure the contractor fulfills the contract terms | यह सुनिश्चित करना कि ठेकेदार अनुबंध की शर्तों को पूरा करे", "To buy tools", "None"],
+    "a": 1,
+    "e": "SD (usually 10% including EMD) is kept by the department to cover any losses or defects during the liability period.",
+    "cat": "technical",
+    "sub": "estimating_costing"
+  },
+  {
+    "q": "The 'Nominal Muster Roll' (NMR) is used for: / 'नाममात्र मस्टर रोल' (NMR) का उपयोग किसके लिए किया जाता है?",
+    "o": ["Purchasing materials", "Recording attendance and wages of daily labor | दैनिक श्रमिकों की उपस्थिति और मजदूरी दर्ज करना", "Calculating cement", "None"],
+    "a": 1,
+    "e": "NMR is the basic document for making payments to casual labor employed on a daily basis.",
+    "cat": "technical",
+    "sub": "estimating_costing"
+  },
+  {
+    "q": "What is 'Arbitration'? / 'मध्यस्थता' (Arbitration) क्या है?",
+    "o": ["A type of building material", "Settlement of disputes outside of court by a third party | तीसरे पक्ष द्वारा अदालत के बाहर विवादों का निपटारा", "A method of painting", "None"],
+    "a": 1,
+    "e": "Arbitration is a legal process to resolve conflicts between the department and the contractor without going to court.",
+    "cat": "technical",
+    "sub": "estimating_costing"
+  },
+  {
+    "q": "An 'Item Rate Contract' is also known as: / 'आइटम रेट अनुबंध' को इस नाम से भी जाना जाता है:",
+    "o": ["Lump-sum contract", "Unit price contract | यूनिट प्राइस अनुबंध", "Percentage rate contract", "None"],
+    "a": 1,
+    "e": "In this contract, the contractor quotes a rate for each individual item of work in the bill of quantities.",
+    "cat": "technical",
+    "sub": "estimating_costing"
+  },
+  {
+    "q": "The 'Final Bill' is prepared only after: / 'अंतिम बिल' (Final Bill) तभी तैयार किया जाता है जब:",
+    "o": ["The work starts", "The work is completed and measured | कार्य पूरा हो जाए और मापा जाए", "The contractor asks for it", "None"],
+    "a": 1,
+    "e": "Final bill settling all accounts is made after the full completion of the project as per the measurement book.",
+    "cat": "technical",
+    "sub": "estimating_costing"
+  },
+  {
+    "q": "What is 'Liquidated Damages'? / 'परिनिर्धारित हर्जाना' (Liquidated Damages) क्या है?",
+    "o": ["Cost of water", "Compensation for delay in completing the work | काम पूरा करने में देरी के लिए मुआवजा", "Profit of contractor", "None"],
+    "a": 1,
+    "e": "It is a penalty amount fixed in the contract to be recovered from the contractor if the work is not finished on time.",
+    "cat": "technical",
+    "sub": "estimating_costing"
+  },
+  {
+    "q": "Which account form is used for a small amount given to an official for petty expenses? / छोटे खर्चों के लिए किसी अधिकारी को दी गई छोटी राशि के लिए किस खाता फॉर्म का उपयोग किया जाता है?",
+    "o": ["Measurement Book", "Imprest Cash | इम्प्रैस्ट कैश (Imprest Cash)", "Muster Roll", "None"],
+    "a": 1,
+    "e": "Imprest is a standing advance given to meet day-to-day office or site expenses.",
+    "cat": "technical",
+    "sub": "estimating_costing"
+  },
+  {
+    "q": "What are the main factors affecting 'Rate Analysis'? / 'दर विश्लेषण' को प्रभावित करने वाले मुख्य कारक क्या हैं?",
+    "o": ["Material cost", "Labor wages", "Tools and plants", "All of the above | उपरोक्त सभी"],
+    "a": 3,
+    "e": "Rate analysis considers the current market price of materials, labor efficiency, transport, and overheads.",
+    "cat": "technical",
+    "sub": "estimating_costing"
+  },
+  {
+    "q": "What is the standard 'Task Work' (output) of a mason for brickwork in cement mortar per day? / सीमेंट मोर्टार में ईंट कार्य के लिए एक राजमिस्त्री का प्रति दिन मानक 'टास्क वर्क' क्या है?",
+    "o": ["0.5 cum", "1.25 cum | 1.25 घन मीटर", "2.5 cum", "5.0 cum"],
+    "a": 1,
+    "e": "A skilled mason with helpers can usually complete around 1.25 cubic meters of brickwork in an 8-hour shift.",
+    "cat": "technical",
+    "sub": "estimating_costing"
+  },
+  {
+    "q": "The 'Lead' in rate analysis refers to: / दर विश्लेषण में 'लीड' (Lead) का तात्पर्य है:",
+    "o": ["Type of soil", "Horizontal distance of transport | परिवहन की क्षैतिज दूरी", "Vertical distance", "None"],
+    "a": 1,
+    "e": "Lead is the horizontal distance from the source of material to the construction site, usually measured in units of 30m or 500m.",
+    "cat": "technical",
+    "sub": "estimating_costing"
+  },
+  {
+    "q": "How much 'Water Charges' are generally added to the estimate? / अनुमान में आम तौर पर कितना 'जल शुल्क' (Water Charges) जोड़ा जाता है?",
+    "o": ["1% to 2% | 1 से 2 प्रतिशत", "5%", "10%", "0.5%"],
+    "a": 0,
+    "e": "Usually 1.5% of the total cost is allocated for providing water for construction and labor.",
+    "cat": "technical",
+    "sub": "estimating_costing"
+  },
+  {
+    "q": "The measurement of 'Painting' on walls is done in: / दीवारों पर 'पेंटिंग' का मापन किसमें किया जाता है?",
+    "o": ["Cubic meter", "Running meter", "Square meter | वर्ग मीटर (sqm)", "Liters"],
+    "a": 2,
+    "e": "Painting, white-washing, and plastering are surface area works, hence measured in sqm.",
+    "cat": "technical",
+    "sub": "estimating_costing"
+  },
+  {
+    "q": "Which of the following is NOT a unit of 'Labor' in rate analysis? / दर विश्लेषण में निम्नलिखित में से कौन 'श्रम' की इकाई नहीं है?",
+    "o": ["Mason", "Mazdoor", "Bhisti", "Kilogram | किलोग्राम"],
+    "a": 3,
+    "e": "Labor is quantified in numbers of persons (mandays), whereas Kilogram is a unit of weight for materials.",
+    "cat": "technical",
+    "sub": "estimating_costing"
+  },
+  {
+    "q": "For 10 cubic meters of R.C.C. (1:2:4) work, the approximate quantity of cement required is: / 10 घन मीटर R.C.C. (1:2:4) कार्य के लिए आवश्यक सीमेंट की अनुमानित मात्रा है:",
+    "o": ["45 bags", "64 bags | 64 बोरी", "90 bags", "30 bags"],
+    "a": 1,
+    "e": "Based on dry volume calculation (1.52 to 1.54 times wet volume), R.C.C. 1:2:4 requires approx 6.4 bags per cum.",
+    "cat": "technical",
+    "sub": "estimating_costing"
+  },
+  {
+    "q": "What is 'Lift' in construction work? / निर्माण कार्य में 'लिफ्ट' (Lift) क्या है?",
+    "o": ["Horizontal distance", "Vertical distance of transport | परिवहन की ऊर्ध्वाधर दूरी", "Weight of material", "None"],
+    "a": 1,
+    "e": "Lift is the vertical distance through which excavated soil or material is moved, usually measured in units of 1.5m.",
+    "cat": "technical",
+    "sub": "estimating_costing"
+  },
+  {
+    "q": "The measurement of 'Woodwork for door frames' is done in: / 'दरवाजे के फ्रेम' (चौखट) के लकड़ी के कार्य का मापन किया जाता है:",
+    "o": ["Square meter", "Cubic meter | घन मीटर (cum)", "Running meter", "None"],
+    "a": 1,
+    "e": "Door and window frames (Chowkhats) are measured by volume, while shutters are measured by area (sqm).",
+    "cat": "technical",
+    "sub": "estimating_costing"
+  },
+  {
+    "q": "In rate analysis, 'Overhead Charges' include: / दर विश्लेषण में, 'ओवरहेड शुल्क' (Overhead Charges) में शामिल हैं:",
+    "o": ["Office rent and staff salary | कार्यालय किराया और स्टाफ वेतन", "Direct material cost", "Labor wages", "None"],
+    "a": 0,
+    "e": "Overheads are indirect costs like office expenses, taxes, and supervision charges.",
+    "cat": "technical",
+    "sub": "estimating_costing"
+  },
+  {
+    "q": "Which type of estimate is carried out to get an approximate cost in a short time before the detailed design? / विस्तृत डिजाइन से पहले कम समय में अनुमानित लागत प्राप्त करने के लिए किस प्रकार का अनुमान लगाया जाता है?",
+    "o": ["Detailed Estimate", "Preliminary Estimate | प्रारंभिक अनुमान", "Supplementary Estimate", "Revised Estimate"],
+    "a": 1,
+    "e": "A preliminary or approximate estimate is used for administrative approval and to decide the feasibility of a project.",
+    "cat": "technical",
+    "sub": "estimating_costing"
+  },
+  {
+    "q": "The unit of measurement for 'Earthwork in excavation' is: / 'खुदाई के कार्य' (Earthwork) के मापन की इकाई क्या है?",
+    "o": ["Square meter (sqm)", "Running meter (rm)", "Cubic meter (cum) | घन मीटर (cum)", "Kilogram (kg)"],
+    "a": 2,
+    "e": "Earthwork excavation involves volume calculation (Length x Breadth x Depth), hence measured in cubic meters.",
+    "cat": "technical",
+    "sub": "estimating_costing"
+  },
+  {
+    "q": "What is 'Contingencies' in an estimate? / एक अनुमान में 'आकस्मिक व्यय' (Contingencies) क्या है?",
+    "o": ["Cost of materials", "Amount for unforeseen small items | अप्रत्याशित मदों के लिए राशि", "Labor wages", "Contractor profit"],
+    "a": 1,
+    "e": "Usually 3% to 5% of the total estimate is kept for miscellaneous petty items that cannot be classified specifically.",
+    "cat": "technical",
+    "sub": "estimating_costing"
+  },
+  {
+    "q": "The measurement of 'Damp Proof Course' (DPC) is done in: / 'डैम्प प्रूफ कोर्स' (DPC) का मापन किसमें किया जाता है?",
+    "o": ["Cubic meter", "Square meter | वर्ग मीटर (sqm)", "Liters", "Running meter"],
+    "a": 1,
+    "e": "DPC is a thin layer where thickness is specified, so the measurement is based on the area covered.",
+    "cat": "technical",
+    "sub": "estimating_costing"
+  },
+  {
+    "q": "Which method of building estimate is more accurate for quantity calculation? / परिमाण गणना के लिए भवन अनुमान की कौन सी विधि अधिक सटीक है?",
+    "o": ["Center line method | केंद्र रेखा विधि", "Long wall and short wall method | लंबी दीवार और छोटी दीवार विधि", "Plinth area method", "Both A and B | A और B दोनों"],
+    "a": 3,
+    "e": "Both center line and long-short wall methods provide accurate results if applied correctly, though center line is faster for symmetrical buildings.",
+    "cat": "technical",
+    "sub": "estimating_costing"
+  },
+  {
+    "q": "In a detailed estimate, 'Brickwork' in the superstructure is measured in: / एक विस्तृत अनुमान में, सुपरस्ट्रक्चर में 'ईंट का काम' मापा जाता है:",
+    "o": ["Square meter", "Cubic meter | घन मीटर (cum)", "Number of bricks", "None"],
+    "a": 1,
+    "e": "Standard brickwork (more than half-brick thick) is always measured by volume in cum.",
+    "cat": "technical",
+    "sub": "estimating_costing"
+  },
+  {
+    "q": "What is the percentage added for 'Contractor's Profit' in a general estimate? / सामान्य अनुमान में 'ठेकेदार के लाभ' के लिए कितना प्रतिशत जोड़ा जाता है?",
+    "o": ["2%", "5%", "10% | 10 प्रतिशत", "20%"],
+    "a": 2,
+    "e": "A standard 10% is usually added to the total cost of materials and labor as contractor's profit.",
+    "cat": "technical",
+    "sub": "estimating_costing"
+  },
+  {
+    "q": "The 'Plinth Area' of a building does not include: / किसी भवन के 'प्लिंथ क्षेत्र' में शामिल नहीं है:",
+    "o": ["Wall thickness", "Verandah area", "Courtyard area | आंगन का क्षेत्र", "Room area"],
+    "a": 2,
+    "e": "Plinth area is the built-up covered area; open spaces like courtyards are excluded.",
+    "cat": "technical",
+    "sub": "estimating_costing"
+  },
+  {
+    "q": "A 'Revised Estimate' is prepared when the original sanctioned estimate is likely to exceed by more than: / एक 'संशोधित अनुमान' तब तैयार किया जाता है जब मूल स्वीकृत अनुमान के कितने से अधिक होने की संभावना हो?",
+    "o": ["2%", "5% | 5 प्रतिशत", "10%", "15%"],
+    "a": 1,
+    "e": "If the cost increases by more than 5% due to price hike or other reasons, a revised estimate is mandatory.",
+    "cat": "technical",
+    "sub": "estimating_costing"
+  },
+  {
+    "q": "The unit of measurement for 'Reinforcement steel' in R.C.C. work is: / R.C.C. कार्य में 'सुदृढीकरण स्टील' (सरिया) के मापन की इकाई है:",
+    "o": ["Quintal or Tonne | क्विंटल या टन", "Cubic meter", "Running meter", "Square meter"],
+    "a": 0,
+    "e": "Steel is always calculated by weight (kg, quintal, or tonne) after calculating the total length and weight per unit length.",
+    "cat": "technical",
+    "sub": "estimating_costing"
+  },
+  {
+    "q": "Temporary hardness of water can be removed by: / जल की अस्थायी कठोरता को किसके द्वारा दूर किया जा सकता है?",
+    "o": ["Filtration", "Adding salt", "Boiling | उबालकर", "Sedimentation"],
+    "a": 2,
+    "e": "Boiling decomposes calcium and magnesium bicarbonates into insoluble carbonates.",
+    "cat": "technical",
+    "sub": "applied_chemistry"
+  },
+  {
+    "q": "Which of the following is a 'Thermosetting' plastic? / निम्नलिखित में से कौन सा एक 'थर्मोसेटिंग' प्लास्टिक है?",
+    "o": ["PVC", "Polystyrene", "Bakelite | बैकेलाइट", "Nylon"],
+    "a": 2,
+    "e": "Bakelite does not soften on heating once it is molded, unlike thermoplastics.",
+    "cat": "technical",
+    "sub": "applied_chemistry"
+  },
+  {
+    "q": "What is the chemical composition of 'LPG'? / 'LPG' का रासायनिक संगठन क्या है?",
+    "o": ["Methane and Ethane", "Propane and Butane | प्रोपेन और ब्यूटेन", "Hydrogen and CO", "None"],
+    "a": 1,
+    "e": "LPG (Liquefied Petroleum Gas) is primarily a mixture of propane and butane gases.",
+    "cat": "technical",
+    "sub": "applied_chemistry"
+  },
+  {
+    "q": "The property of a lubricant to resist flow is known as: / एक स्नेहक (Lubricant) के प्रवाह का विरोध करने के गुण को कहा जाता है:",
+    "o": ["Oiliness", "Flash point", "Viscosity | श्यानता (Viscosity)", "Fire point"],
+    "a": 2,
+    "e": "Viscosity is the measure of internal friction or thickness of a fluid.",
+    "cat": "technical",
+    "sub": "applied_chemistry"
+  },
+  {
+    "q": "Which quantum number determines the 'shape' of an orbital? / कौन सी क्वांटम संख्या कक्षक (Orbital) के 'आकार' को निर्धारित करती है?",
+    "o": ["Principal quantum number", "Magnetic quantum number", "Azimuthal quantum number | दिगंशीय क्वांटम संख्या", "Spin quantum number"],
+    "a": 2,
+    "e": "The azimuthal quantum number (l) defines the subshell and the shape of the orbital (s, p, d, f).",
+    "cat": "technical",
+    "sub": "applied_chemistry"
+  },
+  {
+    "q": "Hardness of water is primarily caused by the salts of: / जल की कठोरता मुख्य रूप से किसके लवणों के कारण होती है?",
+    "o": ["Sodium and Potassium", "Calcium and Magnesium | कैल्शियम और मैग्नीशियम", "Iron and Copper", "None"],
+    "a": 1,
+    "e": "Bicarbonates, chlorides, and sulfates of Calcium and Magnesium are responsible for water hardness.",
+    "cat": "technical",
+    "sub": "applied_chemistry"
+  },
+  {
+    "q": "Which rule states that 'Electrons enter the lowest energy orbital available'? / कौन सा नियम कहता है कि 'इलेक्ट्रॉन उपलब्ध निम्नतम ऊर्जा कक्षक में प्रवेश करते हैं'?",
+    "o": ["Aufbau Principle | औफबाऊ सिद्धांत", "Hund's Rule", "Pauli's Exclusion Principle", "Heisenberg Principle"],
+    "a": 0,
+    "e": "Aufbau principle dictates the order in which orbitals are filled based on their energy levels.",
+    "cat": "technical",
+    "sub": "applied_chemistry"
+  },
+  {
+    "q": "What is the function of 'Zeolite' in water treatment? / जल उपचार में 'जियोलाइट' (Zeolite) का क्या कार्य है?",
+    "o": ["To kill bacteria", "To remove suspended solids", "To soften hard water | कठोर जल को मृदु बनाना", "To add minerals"],
+    "a": 2,
+    "e": "Zeolite process is an ion-exchange method used to remove hardness-causing ions from water.",
+    "cat": "technical",
+    "sub": "applied_chemistry"
+  },
+  {
+    "q": "Which type of fuel has the highest calorific value? / किस प्रकार के ईंधन का कैलोरी मान (Calorific value) सबसे अधिक होता है?",
+    "o": ["Solid fuels", "Liquid fuels", "Gaseous fuels | गैसीय ईंधन", "All are equal"],
+    "a": 2,
+    "e": "Gaseous fuels like Hydrogen and Methane have higher calorific values compared to solid and liquid fuels.",
+    "cat": "technical",
+    "sub": "applied_chemistry"
+  },
+  {
+    "q": "What is 'Vulcanization' of rubber? / रबर का 'वल्केनाइजेशन' क्या है?",
+    "o": ["Melting rubber", "Heating rubber with sulfur | सल्फर के साथ गर्म करना", "Cooling rubber", "Adding water to rubber"],
+    "a": 1,
+    "e": "Vulcanization improves the elasticity, hardness, and durability of natural rubber by adding cross-links of sulfur.",
+    "cat": "technical",
+    "sub": "applied_chemistry"
+  },
+  {
+    "q": "Temporary hardness of water can be removed by: / जल की अस्थायी कठोरता को किसके द्वारा दूर किया जा सकता है?",
+    "o": ["Filtration", "Adding salt", "Boiling | उबालकर", "Sedimentation"],
+    "a": 2,
+    "e": "Boiling decomposes calcium and magnesium bicarbonates into insoluble carbonates.",
+    "cat": "technical",
+    "sub": "applied_chemistry"
+  },
+  {
+    "q": "Which of the following is a 'Thermosetting' plastic? / निम्नलिखित में से कौन सा एक 'थर्मोसेटिंग' प्लास्टिक है?",
+    "o": ["PVC", "Polystyrene", "Bakelite | बैकेलाइट", "Nylon"],
+    "a": 2,
+    "e": "Bakelite does not soften on heating once it is molded, unlike thermoplastics.",
+    "cat": "technical",
+    "sub": "applied_chemistry"
+  },
+  {
+    "q": "What is the chemical composition of 'LPG'? / 'LPG' का रासायनिक संगठन क्या है?",
+    "o": ["Methane and Ethane", "Propane and Butane | प्रोपेन और ब्यूटेन", "Hydrogen and CO", "None"],
+    "a": 1,
+    "e": "LPG (Liquefied Petroleum Gas) is primarily a mixture of propane and butane gases.",
+    "cat": "technical",
+    "sub": "applied_chemistry"
+  },
+  {
+    "q": "The property of a lubricant to resist flow is known as: / एक स्नेहक (Lubricant) के प्रवाह का विरोध करने के गुण को कहा जाता है:",
+    "o": ["Oiliness", "Flash point", "Viscosity | श्यानता (Viscosity)", "Fire point"],
+    "a": 2,
+    "e": "Viscosity is the measure of internal friction or thickness of a fluid.",
+    "cat": "technical",
+    "sub": "applied_chemistry"
+  },
+  {
+    "q": "What is the point on the stress-strain curve beyond which the material starts to deform plastically? / स्ट्रेस-स्ट्रेन कर्व पर वह बिंदु क्या कहलाता है जिसके बाद पदार्थ प्लास्टिक रूप से विरूपित होने लगता है?",
+    "o": ["Breaking point", "Elastic limit | प्रत्यास्थता सीमा", "Proportional limit", "Yield point"],
+    "a": 1,
+    "e": "Beyond the elastic limit, the material does not return to its original shape when the load is removed[cite: 51].",
+    "cat": "technical",
+    "sub": "applied_physics"
+  },
+  {
+    "q": "The persistence of sound in an enclosed space after the source has stopped is called: / स्रोत के बंद होने के बाद बंद स्थान में ध्वनि का बना रहना क्या कहलाता है?",
+    "o": ["Echo", "Interference", "Reverberation | प्रतिध्वनि (Reverberation)", "Diffraction"],
+    "a": 2,
+    "e": "Reverberation is caused by multiple reflections of sound waves from the surfaces of an enclosure[cite: 349].",
+    "cat": "technical",
+    "sub": "applied_physics"
+  },
+  {
+    "q": "According to Lenz's Law, the direction of induced EMF is such that it: / लेन्ज़ के नियम के अनुसार, प्रेरित EMF की दिशा ऐसी होती है कि वह:",
+    "o": ["Supports the change in magnetic flux", "Opposes the change in magnetic flux | चुंबकीय फ्लक्स में परिवर्तन का विरोध करता है", "Is always zero", "None"],
+    "a": 1,
+    "e": "Lenz's Law is a consequence of the law of conservation of energy[cite: 365, 402].",
+    "cat": "technical",
+    "sub": "applied_physics"
+  },
+  {
+    "q": "Which property of nanomaterials changes significantly due to their high surface-to-volume ratio? / उच्च सतह-से-आयतन अनुपात के कारण नैनो-मटेरियल्स का कौन सा गुण काफी बदल जाता है?",
+    "o": ["Color", "Chemical reactivity | रासायनिक अभिक्रियाशीलता", "Density", "All of the above"],
+    "a": 1,
+    "e": "Nanomaterials have a larger fraction of atoms at the surface, making them highly reactive[cite: 378].",
+    "cat": "technical",
+    "sub": "applied_physics"
+  },
+  {
+    "q": "Which law is used to analyze complex electrical circuits with multiple loops? / कई लूप वाले जटिल विद्युत सर्किट का विश्लेषण करने के लिए किस नियम का उपयोग किया जाता है?",
+    "o": ["Ohm's Law", "Coulomb's Law", "Kirchhoff's Laws | किरचॉफ के नियम", "Gauss Law"],
+    "a": 2,
+    "e": "Kirchhoff's voltage and current laws are essential for solving complex network problems[cite: 361, 1257].",
+    "cat": "technical",
+    "sub": "applied_physics"
+  },
+  {
+    "q": "What is the unit of 'Thermal Conductivity'? / 'तापीय चालकता' (Thermal Conductivity) की इकाई क्या है?",
+    "o": ["W/m-K | W/m-K", "Joule", "Pascal", "Watt"],
+    "a": 0,
+    "e": "It measures the ability of a material to conduct heat[cite: 58].",
+    "cat": "technical",
+    "sub": "applied_physics"
+  },
+  {
+    "q": "The frequency of a Simple Harmonic Motion (SHM) is the: / सरल आवर्त गति (SHM) की आवृत्ति होती है:",
+    "o": ["Time taken for one cycle", "Number of cycles per second | प्रति सेकंड चक्रों की संख्या", "Maximum displacement", "None"],
+    "a": 1,
+    "e": "Frequency is the reciprocal of the time period[cite: 347, 1242].",
+    "cat": "technical",
+    "sub": "applied_physics"
+  },
+  {
+    "q": "Which material is commonly used as a 'Piezoelectric' transducer? / 'पीजोइलेक्ट्रिक' ट्रांसड्यूसर के रूप में आमतौर पर किस सामग्री का उपयोग किया जाता है?",
+    "o": ["Iron", "Quartz | क्वार्ट्ज (Quartz)", "Copper", "Plastic"],
+    "a": 1,
+    "e": "Quartz crystals generate an electric charge when mechanical stress is applied[cite: 635].",
+    "cat": "technical",
+    "sub": "applied_physics"
+  },
+  {
+    "q": "A 'Wheatstone Bridge' is used to measure unknown: / 'व्हीटस्टोन ब्रिज' का उपयोग किसे मापने के लिए किया जाता है?",
+    "o": ["Current", "Voltage", "Resistance | प्रतिरोध", "Capacitance"],
+    "a": 2,
+    "e": "It is an electrical circuit used to measure an unknown electrical resistance by balancing two legs of a bridge circuit[cite: 361, 1257].",
+    "cat": "technical",
+    "sub": "applied_physics"
+  },
+  {
+    "q": "The formula for 'Capacitance' (C) is: / 'धारिता' (C) का सूत्र क्या है?",
+    "o": ["C = V/Q", "C = Q/V | C = Q/V", "C = QV", "C = Q+V"],
+    "a": 1,
+    "e": "Capacitance is the ratio of the change in electric charge to the corresponding change in its electric potential[cite: 356, 1252].",
+    "cat": "technical",
+    "sub": "applied_physics"
+  },
+  {
+    "q": "Which law states that 'Pressure applied to an enclosed fluid is transmitted undiminished'? / किस नियम के अनुसार 'बंद द्रव पर लगाया गया दबाव बिना कम हुए प्रसारित होता है'?",
+    "o": ["Boyle's Law", "Bernoulli's Law", "Hooke's Law", "Pascal's Law | पास्कल का नियम"],
+    "a": 3,
+    "e": "Pascal's law is the foundation for hydraulic systems like jacks and brakes.",
+    "cat": "technical",
+    "sub": "applied_physics"
+  },
+  {
+    "q": "What is the relationship between 'Torque' (τ) and 'Angular Momentum' (L)? / 'टॉर्क' (τ) और 'कोणीय संवेग' (L) के बीच क्या संबंध है?",
+    "o": ["τ = dL/dt | τ = dL/dt", "τ = L/t", "L = dτ/dt", "τ = L × t"],
+    "a": 0,
+    "e": "The rate of change of angular momentum is equal to the applied torque.",
+    "cat": "technical",
+    "sub": "applied_physics"
+  },
+  {
+    "q": "In 'Fiber Optics', light travels through the core due to: / 'फाइबर ऑप्टिक्स' में, प्रकाश कोर के माध्यम से किसके कारण यात्रा करता है?",
+    "o": ["Refraction", "Scattering", "Total Internal Reflection | पूर्ण आंतरिक परावर्तन", "Diffraction"],
+    "a": 2,
+    "e": "TIR keeps the light trapped inside the core by reflecting it off the cladding.",
+    "cat": "technical",
+    "sub": "applied_physics"
+  },
+  {
+    "q": "The 'Specific Heat' of a substance depends on: / किसी पदार्थ की 'विशिष्ट ऊष्मा' किस पर निर्भर करती है?",
+    "o": ["Mass of the substance", "Nature of the material | सामग्री की प्रकृति", "Volume of the substance", "None"],
+    "a": 1,
+    "e": "Specific heat is an intrinsic property of the material itself.",
+    "cat": "technical",
+    "sub": "applied_physics"
+  },
+  {
+    "q": "Which instrument uses 'Ultrasonic waves' to find the depth of the ocean? / समुद्र की गहराई मापने के लिए किस उपकरण में 'अल्ट्रासोनिक तरंगों' का उपयोग किया जाता है?",
+    "o": ["Radar", "Lidar", "Sonar | सोनार (Sonar)", "Microscope"],
+    "a": 2,
+    "e": "SONAR (Sound Navigation and Ranging) uses sound echoes to detect underwater objects.",
+    "cat": "technical",
+    "sub": "applied_physics"
+  },
+  {
+    "q": "What is the escape velocity from the Earth's surface? / पृथ्वी की सतह से पलायन वेग (Escape Velocity) क्या है?",
+    "o": ["9.8 km/s", "11.2 km/s | 11.2 km/s", "7.9 km/s", "1.1 km/s"],
+    "a": 1,
+    "e": "This is the minimum speed needed for an object to break free from Earth's gravity.",
+    "cat": "technical",
+    "sub": "applied_physics"
+  },
+  {
+    "q": "The phenomenon of 'Rainbow' is due to: / 'इंद्रधनुष' की घटना किसके कारण होती है?",
+    "o": ["Dispersion and Internal Reflection | विक्षेपण और आंतरिक परावर्तन", "Only Reflection", "Only Refraction", "Interference"],
+    "a": 0,
+    "e": "Sunlight is dispersed by water droplets, acting like tiny prisms.",
+    "cat": "technical",
+    "sub": "applied_physics"
+  },
+  {
+    "q": "What is the unit of 'Magnetic Flux'? / 'चुंबकीय फ्लक्स' (Magnetic Flux) की इकाई क्या है?",
+    "o": ["Tesla", "Weber | वेबर (Weber)", "Henry", "Gauss"],
+    "a": 1,
+    "e": "Weber is the SI unit, while Tesla is the unit for magnetic flux density.",
+    "cat": "technical",
+    "sub": "applied_physics"
+  },
+  {
+    "q": "In a 'Full-wave Bridge Rectifier', how many diodes are used? / एक 'फुल-वेव ब्रिज रेक्टिफायर' में कितने डायोड उपयोग किए जाते हैं?",
+    "o": ["2", "1", "6", "4 | 4"],
+    "a": 3,
+    "e": "A bridge configuration uses 4 diodes to provide full-wave rectification without a center-tapped transformer.",
+    "cat": "technical",
+    "sub": "applied_physics"
+  },
+  {
+    "q": "Newton's First Law of Motion defines: / न्यूटन का गति का पहला नियम किसे परिभाषित करता है?",
+    "o": ["Energy", "Inertia | जड़त्व (Inertia)", "Work", "Momentum"],
+    "a": 1,
+    "e": "It states that an object will remain at rest or in motion unless acted upon by an external force.",
+    "cat": "technical",
+    "sub": "applied_physics"
+  },
+  {
+    "q": "What is the dimensional formula for 'Force'? / 'बल' का विमीय सूत्र क्या है?",
+    "o": ["MLT^-1", "ML^2T^-2", "MLT^-2 | MLT^-2", "M^2LT^-2"],
+    "a": 2,
+    "e": "Force = Mass × Acceleration, so [M] × [LT^-2] = [MLT^-2].",
+    "cat": "technical",
+    "sub": "applied_physics"
+  },
+  {
+    "q": "Which type of wave is a 'Sound Wave' in air? / हवा में 'ध्वनि तरंग' किस प्रकार की तरंग है?",
+    "o": ["Longitudinal wave | अनुदैर्ध्य तरंग", "Transverse wave", "Electromagnetic wave", "None"],
+    "a": 0,
+    "e": "Sound waves in air travel as longitudinal waves through compressions and rarefactions.",
+    "cat": "technical",
+    "sub": "applied_physics"
+  },
+  {
+    "q": "What is the unit of 'Power' of a lens? / लेंस की 'शक्ति' (Power) की इकाई क्या है?",
+    "o": ["Meter", "Dioptre | डायोप्टर", "Watt", "Candela"],
+    "a": 1,
+    "e": "Power of a lens is the reciprocal of its focal length in meters, measured in Dioptres.",
+    "cat": "technical",
+    "sub": "applied_physics"
+  },
+  {
+    "q": "In an 'Intrinsic' semiconductor at absolute zero temperature, the conductivity is: / पूर्ण शून्य तापमान पर एक 'शुद्ध' अर्धचालक की चालकता होती है:",
+    "o": ["Infinite", "Very high", "Zero | शून्य", "Moderate"],
+    "a": 2,
+    "e": "At absolute zero, there are no free electrons in the conduction band, so it acts as an insulator.",
+    "cat": "technical",
+    "sub": "applied_physics"
+  },
+  {
+    "q": "The work done by a centripetal force is always: / अभिकेंद्री बल द्वारा किया गया कार्य हमेशा होता है:",
+    "o": ["Positive", "Negative", "Zero | शून्य", "Infinite"],
+    "a": 2,
+    "e": "Since centripetal force is perpendicular to the displacement, the work done (W = Fd cos 90°) is zero.",
+    "cat": "technical",
+    "sub": "applied_physics"
+  },
+  {
+    "q": "Which material is used to make 'Permanent Magnets'? / 'स्थायी चुंबक' बनाने के लिए किस सामग्री का उपयोग किया जाता है?",
+    "o": ["Soft Iron", "Steel | स्टील (Steel)", "Copper", "Aluminum"],
+    "a": 1,
+    "e": "Steel or Alnico are used because they have high retentivity and high coercivity.",
+    "cat": "technical",
+    "sub": "applied_physics"
+  },
+  {
+    "q": "What is the value of 'Atmospheric Pressure' at sea level? / समुद्र तल पर 'वायुमंडलीय दबाव' का मान क्या होता है?",
+    "o": ["1.013 × 10^5 Pa | 1.013 × 10^5 Pa", "10^2 Pa", "76 Pa", "Zero"],
+    "a": 0,
+    "e": "Standard atmospheric pressure is approximately 101.3 kPa.",
+    "cat": "technical",
+    "sub": "applied_physics"
+  },
+  {
+    "q": "A 'Transistor' acts as an 'Open Switch' when it is in: / एक 'ट्रांजिस्टर' 'ओपन स्विच' की तरह कार्य करता है जब वह होता है:",
+    "o": ["Active region", "Saturation region", "Cut-off region | कट-ऑफ क्षेत्र", "None"],
+    "a": 2,
+    "e": "In the cut-off region, no current flows through the transistor, simulating an open switch.",
+    "cat": "technical",
+    "sub": "applied_physics"
+  },
+  {
+    "q": "The magnifying power of a 'Compound Microscope' is the: / एक 'संयुक्त सूक्ष्मदर्शी' की आवर्धन क्षमता होती है:",
+    "o": ["Sum of powers of two lenses", "Product of magnifications of objective and eyepiece | आवर्धन का गुणनफल", "Difference of powers", "None"],
+    "a": 1,
+    "e": "Total magnification M = Mo × Me.",
+    "cat": "technical",
+    "sub": "applied_physics"
+  },
+  {
+    "q": "What is the energy stored in a 'Capacitor' of capacitance 'C' and voltage 'V'? / 'C' धारिता और 'V' वोल्टेज वाले 'कैपेसिटर' में संचित ऊर्जा क्या है?",
+    "o": ["CV", "1/2 CV", "1/2 CV^2 | 1/2 CV^2", "CV^2"],
+    "a": 2,
+    "e": "The energy is stored in the electric field between the plates.",
+    "cat": "technical",
+    "sub": "applied_physics"
+  },
+  {
+    "q": "Which lens is used to correct 'Myopia' (Short-sightedness)? / 'मायोपिया' (निकट दृष्टि दोष) को ठीक करने के लिए किस लेंस का उपयोग किया जाता है?",
+    "o": ["Convex lens", "Concave lens | अवतल लेंस", "Cylindrical lens", "Bifocal lens"],
+    "a": 1,
+    "e": "A concave lens diverges light rays so they focus correctly on the retina. [cite: 351, 1247]",
+    "cat": "technical",
+    "sub": "applied_physics"
+  },
+  {
+    "q": "The principle of 'Total Internal Reflection' is used in: / 'पूर्ण आंतरिक परावर्तन' के सिद्धांत का उपयोग किसमें किया जाता है?",
+    "o": ["Mirrors", "Optical Fibers | ऑप्टिकल फाइबर", "Microscopes", "None"],
+    "a": 1,
+    "e": "Optical fibers use TIR to transmit light signals over long distances with minimal loss. [cite: 352, 1248]",
+    "cat": "technical",
+    "sub": "applied_physics"
+  },
+  {
+    "q": "What is the SI unit of Electric Capacitance? / विद्युत धारिता (Capacitance) की SI इकाई क्या है?",
+    "o": ["Ohm", "Volt", "Farad | फैराड", "Coulomb"],
+    "a": 2,
+    "e": "Farad measures the ability of a body to store an electrical charge. [cite: 356, 1252]",
+    "cat": "technical",
+    "sub": "applied_physics"
+  },
+  {
+    "q": "Ohm's Law is valid only when: / ओम का नियम तभी मान्य होता है जब:",
+    "o": ["Current is constant", "Voltage is constant", "Temperature is constant | तापमान स्थिर हो", "None"],
+    "a": 2,
+    "e": "Resistance changes with temperature, so physical conditions must remain constant for Ohm's law. [cite: 361, 445]",
+    "cat": "technical",
+    "sub": "applied_physics"
+  },
+  {
+    "q": "Which type of material shows 'Ferromagnetism'? / किस प्रकार का पदार्थ 'लौह-चुंबकत्व' (Ferromagnetism) प्रदर्शित करता है?",
+    "o": ["Copper", "Iron | लोहा", "Gold", "Wood"],
+    "a": 1,
+    "e": "Iron, Cobalt, and Nickel are classic examples of ferromagnetic materials. [cite: 364, 1260]",
+    "cat": "technical",
+    "sub": "applied_physics"
+  },
+  {
+    "q": "In a 'Half-wave Rectifier', how many diodes are used? / 'हाफ-वेव रेक्टिफायर' में कितने डायोड उपयोग किए जाते हैं?",
+    "o": ["Two", "Four", "One | एक", "None"],
+    "a": 2,
+    "e": "A single diode is sufficient to block one half of the AC cycle in half-wave rectification. [cite: 370, 454]",
+    "cat": "technical",
+    "sub": "applied_physics"
+  },
+  {
+    "q": "Ultrasonic waves have frequency: / अल्ट्रासोनिक तरंगों की आवृत्ति होती है:",
+    "o": ["Less than 20 Hz", "Between 20 Hz to 20,000 Hz", "Above 20,000 Hz | 20,000 Hz से अधिक", "Zero"],
+    "a": 2,
+    "e": "These waves are beyond the upper limit of human hearing. [cite: 349, 1244]",
+    "cat": "technical",
+    "sub": "applied_physics"
+  },
+  {
+    "q": "What is the function of a 'Capacitor' in a circuit? / एक सर्किट में 'कैपेसिटर' का क्या कार्य है?",
+    "o": ["To block current", "To store electrical energy | विद्युत ऊर्जा संचय करना", "To increase voltage", "None"],
+    "a": 1,
+    "e": "Capacitors store energy in an electric field between two conducting plates. [cite: 356, 1344]",
+    "cat": "technical",
+    "sub": "applied_physics"
+  },
+  {
+    "q": "Which laser is commonly used in laboratories? / प्रयोगशालाओं में आमतौर पर किस लेजर का उपयोग किया जाता है?",
+    "o": ["Ruby laser", "He-Ne laser | ही-ने (He-Ne) लेजर", "CO2 laser", "None"],
+    "a": 1,
+    "e": "Helium-Neon lasers are stable and widely used for scientific and educational purposes. [cite: 375, 456]",
+    "cat": "technical",
+    "sub": "applied_physics"
+  },
+  {
+    "q": "The resistance of a wire is 'Inversely' proportional to its: / एक तार का प्रतिरोध किसके 'व्युत्क्रमानुपाती' होता है?",
+    "o": ["Length", "Resistivity", "Area of cross-section | अनुप्रस्थ काट का क्षेत्रफल", "Temperature"],
+    "a": 2,
+    "e": "A thicker wire (larger area) has less resistance than a thinner one. [cite: 359, 1255]",
+    "cat": "technical",
+    "sub": "applied_physics"
+  },
+  {
+    "q": "What happens to the viscosity of a 'Liquid' when temperature increases? / तापमान बढ़ने पर 'द्रव' की श्यानता (Viscosity) पर क्या प्रभाव पड़ता है?",
+    "o": ["Increases", "Remains same", "Decreases | घटती है", "Becomes zero"],
+    "a": 2,
+    "e": "In liquids, increasing temperature weakens intermolecular forces, thereby decreasing viscosity. [cite: 54, 201]",
+    "cat": "technical",
+    "sub": "applied_physics"
+  },
+  {
+    "q": "The product of Force and Time is known as: / बल और समय के गुणनफल को क्या कहा जाता है?",
+    "o": ["Power", "Impulse | आवेग", "Momentum", "Work"],
+    "a": 1,
+    "e": "Impulse is defined as the total effect of a force acting over a period of time. [cite: 40]",
+    "cat": "technical",
+    "sub": "applied_physics"
+  },
+  {
+    "q": "What is the Least Count of a standard Vernier Caliper? / एक मानक वर्नियर कैलिपर का अल्पतमांक (Least Count) क्या होता है?",
+    "o": ["0.01 mm", "0.1 mm", "0.02 mm | 0.02 mm", "1.0 mm"],
+    "a": 2,
+    "e": "The least count is the smallest measurement that can be taken accurately with the instrument. [cite: 35, 190]",
+    "cat": "technical",
+    "sub": "applied_physics"
+  },
+  {
+    "q": "Surface tension of a liquid decreases with: / तरल का पृष्ठ तनाव किसके साथ घटता है?",
+    "o": ["Increase in area", "Increase in temperature | तापमान में वृद्धि", "Decrease in temperature", "None"],
+    "a": 1,
+    "e": "Increasing temperature reduces the cohesive forces between molecules, lowering surface tension. [cite: 53]",
+    "cat": "technical",
+    "sub": "applied_physics"
+  },
+  {
+    "q": "Kinetic energy of an object of mass 'm' and velocity 'v' is: / 'm' द्रव्यमान और 'v' वेग वाली वस्तु की गतिज ऊर्जा क्या है?",
+    "o": ["mgh", "mv", "1/2 mv^2 | 1/2 mv^2", "ma"],
+    "a": 2,
+    "e": "Kinetic energy is the energy possessed by an object due to its motion. [cite: 44, 199]",
+    "cat": "technical",
+    "sub": "applied_physics"
+  },
+  {
+    "q": "Which mode of heat transfer does not require a medium? / ऊष्मा स्थानांतरण की किस विधि को माध्यम की आवश्यकता नहीं होती है?",
+    "o": ["Conduction", "Convection", "Radiation | विकिरण", "None"],
+    "a": 2,
+    "e": "Radiation transfers heat through electromagnetic waves and can occur in a vacuum. [cite: 57, 204]",
+    "cat": "technical",
+    "sub": "applied_physics"
+  },
+  {
+    "q": "The banking of roads is an application of: / सड़कों की बैंकिंग (Banking) किसका एक अनुप्रयोग है?",
+    "o": ["Centrifugal force", "Centripetal force | अभिकेंद्री बल", "Friction only", "None"],
+    "a": 1,
+    "e": "Banking provides the necessary centripetal force for a vehicle to take a turn safely at high speed. [cite: 41]",
+    "cat": "technical",
+    "sub": "applied_physics"
+  }
+]
