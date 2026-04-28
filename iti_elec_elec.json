@@ -1,7 +1,12 @@
 [
   {
     "q": "Which quantum number determines the 'shape' of an orbital? / कौन सी क्वांटम संख्या कक्षक (Orbital) के 'आकार' को निर्धारित करती है?",
-    "o": ["Principal quantum number", "Magnetic quantum number", "Azimuthal quantum number | दिगंशीय क्वांटम संख्या", "Spin quantum number"],
+    "o": [
+      "Principal quantum number",
+      "Magnetic quantum number",
+      "Azimuthal quantum number | दिगंशीय क्वांटम संख्या",
+      "Spin quantum number"
+    ],
     "a": 2,
     "e": "The azimuthal quantum number (l) defines the subshell and the shape of the orbital (s, p, d, f).",
     "cat": "technical",
@@ -9,7 +14,12 @@
   },
   {
     "q": "Hardness of water is primarily caused by the salts of: / जल की कठोरता मुख्य रूप से किसके लवणों के कारण होती है?",
-    "o": ["Sodium and Potassium", "Calcium and Magnesium | कैल्शियम और मैग्नीशियम", "Iron and Copper", "None"],
+    "o": [
+      "None",
+      "Calcium and Magnesium | कैल्शियम और मैग्नीशियम",
+      "Sodium and Potassium",
+      "Iron and Copper"
+    ],
     "a": 1,
     "e": "Bicarbonates, chlorides, and sulfates of Calcium and Magnesium are responsible for water hardness.",
     "cat": "technical",
@@ -17,32 +27,51 @@
   },
   {
     "q": "Which rule states that 'Electrons enter the lowest energy orbital available'? / कौन सा नियम कहता है कि 'इलेक्ट्रॉन उपलब्ध निम्नतम ऊर्जा कक्षक में प्रवेश करते हैं'?",
-    "o": ["Aufbau Principle | औफबाऊ सिद्धांत", "Hund's Rule", "Pauli's Exclusion Principle", "Heisenberg Principle"],
-    "a": 0,
+    "o": [
+      "Heisenberg Principle",
+      "Hund's Rule",
+      "Aufbau Principle | औफबाऊ सिद्धांत",
+      "Pauli's Exclusion Principle"
+    ],
+    "a": 2,
     "e": "Aufbau principle dictates the order in which orbitals are filled based on their energy levels.",
     "cat": "technical",
     "sub": "applied_chemistry"
   },
-  
   {
     "q": "Which transmission medium is most immune to Electromagnetic Interference (EMI)? / कौन सा ट्रांसमिशन माध्यम विद्युत चुम्बकीय हस्तक्षेप (EMI) के प्रति सबसे अधिक सुरक्षित है?",
-    "o": ["Coaxial Cable", "Fiber Optic Cable | फाइबर ऑप्टिक केबल", "Twisted Pair Cable", "Shielded Twisted Pair"],
-    "a": 1,
+    "o": [
+      "Twisted Pair Cable",
+      "Coaxial Cable",
+      "Fiber Optic Cable | फाइबर ऑप्टिक केबल",
+      "Shielded Twisted Pair"
+    ],
+    "a": 2,
     "e": "Fiber optics use light pulses instead of electrical signals, making them completely immune to EMI and RFI.",
     "cat": "technical",
     "sub": "computer_networking"
   },
   {
     "q": "In which topology is every node connected to a central hub or switch? / किस टोपोलॉजी में प्रत्येक नोड एक केंद्रीय हब या स्विच से जुड़ा होता है?",
-    "o": ["Mesh Topology", "Bus Topology", "Star Topology | स्टार टोपोलॉजी", "Ring Topology"],
-    "a": 2,
+    "o": [
+      "Bus Topology",
+      "Star Topology | स्टार टोपोलॉजी",
+      "Mesh Topology",
+      "Ring Topology"
+    ],
+    "a": 1,
     "e": "Star topology is the most common LAN topology where the central device manages all communications.",
     "cat": "technical",
     "sub": "computer_networking"
   },
   {
     "q": "What is the purpose of 'Twisting' the wires in a Twisted Pair cable? / ट्विस्टेड पेयर केबल में तारों को 'ट्विस्ट' (मोड़ने) करने का उद्देश्य क्या है?",
-    "o": ["To increase strength", "To reduce crosstalk and noise | क्रॉसस्टॉक और शोर को कम करना", "To increase speed", "None"],
+    "o": [
+      "To increase strength",
+      "To reduce crosstalk and noise | क्रॉसस्टॉक और शोर को कम करना",
+      "To increase speed",
+      "None"
+    ],
     "a": 1,
     "e": "Twisting cancels out electromagnetic interference from adjacent pairs and external sources.",
     "cat": "technical",
@@ -50,63 +79,103 @@
   },
   {
     "q": "Which network topology uses a single backbone cable to which all nodes are attached? / कौन सी नेटवर्क टोपोलॉजी एक एकल बैकबोन केबल का उपयोग करती है जिससे सभी नोड्स जुड़े होते हैं?",
-    "o": ["Star Topology", "Bus Topology | बस टोपोलॉजी", "Tree Topology", "Mesh Topology"],
-    "a": 1,
+    "o": [
+      "Bus Topology | बस टोपोलॉजी",
+      "Star Topology",
+      "Tree Topology",
+      "Mesh Topology"
+    ],
+    "a": 0,
     "e": "Bus topology uses a common transmission medium (bus) with terminators at both ends.",
     "cat": "technical",
     "sub": "computer_networking"
   },
   {
     "q": "What is the phenomenon where a light ray reflects back into the core of a fiber optic cable? / फाइबर ऑप्टिक केबल के कोर में प्रकाश किरण के वापस परावर्तित होने की घटना क्या कहलाती है?",
-    "o": ["Refraction", "Dispersion", "Total Internal Reflection | पूर्ण आंतरिक परावर्तन", "Scattering"],
-    "a": 2,
+    "o": [
+      "Scattering",
+      "Total Internal Reflection | पूर्ण आंतरिक परावर्तन",
+      "Refraction",
+      "Dispersion"
+    ],
+    "a": 1,
     "e": "Total Internal Reflection (TIR) allows light to travel long distances through the fiber core with minimal loss.",
     "cat": "technical",
     "sub": "computer_networking"
   },
   {
     "q": "Which topology is a combination of Star and Bus topologies? / कौन सी टोपोलॉजी स्टार और बस टोपोलॉजी का संयोजन है?",
-    "o": ["Mesh Topology", "Ring Topology", "Tree Topology | ट्री टोपोलॉजी", "Hybrid Topology"],
-    "a": 2,
+    "o": [
+      "Ring Topology",
+      "Mesh Topology",
+      "Hybrid Topology",
+      "Tree Topology | ट्री टोपोलॉजी"
+    ],
+    "a": 3,
     "e": "Tree topology (Hierarchical) consists of star-configured workstations connected to a linear bus backbone.",
     "cat": "technical",
     "sub": "computer_networking"
   },
   {
     "q": "In 'Shielded Twisted Pair' (STP), the shield is used to: / 'शील्डेड ट्विस्टेड पेयर' (STP) में शील्ड का उपयोग किया जाता है:",
-    "o": ["Increase weight", "Provide extra protection against noise | शोर के खिलाफ अतिरिक्त सुरक्षा", "Carry more data", "None"],
-    "a": 1,
+    "o": [
+      "Increase weight",
+      "None",
+      "Provide extra protection against noise | शोर के खिलाफ अतिरिक्त सुरक्षा",
+      "Carry more data"
+    ],
+    "a": 2,
     "e": "The metallic foil or braided shield protects the signal from external electromagnetic interference.",
     "cat": "technical",
     "sub": "computer_networking"
   },
   {
     "q": "Which transmission medium is commonly used for cable TV networks? / केबल टीवी नेटवर्क के लिए आमतौर पर किस ट्रांसमिशन माध्यम का उपयोग किया जाता है?",
-    "o": ["Coaxial Cable | कोएक्सियल केबल", "Twisted Pair", "Fiber Optics", "Satellite"],
-    "a": 0,
+    "o": [
+      "Satellite",
+      "Coaxial Cable | कोएक्सियल केबल",
+      "Twisted Pair",
+      "Fiber Optics"
+    ],
+    "a": 1,
     "e": "Coaxial cables provide high bandwidth and good shielding, making them suitable for video transmission.",
     "cat": "technical",
     "sub": "computer_networking"
   },
   {
     "q": "What is the main disadvantage of a 'Bus Topology'? / 'बस टोपोलॉजी' का मुख्य नुकसान क्या है?",
-    "o": ["High cost", "Complex wiring", "The entire network fails if the backbone breaks | बैकबोन टूटने पर पूरा नेटवर्क फेल हो जाता है", "Difficult to install"],
-    "a": 2,
+    "o": [
+      "The entire network fails if the backbone breaks | बैकबोन टूटने पर पूरा नेटवर्क फेल हो जाता है",
+      "High cost",
+      "Complex wiring",
+      "Difficult to install"
+    ],
+    "a": 0,
     "e": "A fault in the main cable disrupts communication for all connected devices.",
     "cat": "technical",
     "sub": "computer_networking"
   },
   {
     "q": "An 'RJ-45' connector is used with which type of cable? / 'RJ-45' कनेक्टर का उपयोग किस प्रकार के केबल के साथ किया जाता है?",
-    "o": ["Coaxial", "Fiber Optic", "Twisted Pair | ट्विस्टेड पेयर (Ethernet)", "Power line"],
-    "a": 2,
+    "o": [
+      "Fiber Optic",
+      "Twisted Pair | ट्विस्टेड पेयर (Ethernet)",
+      "Coaxial",
+      "Power line"
+    ],
+    "a": 1,
     "e": "RJ-45 is the standard connector used for Ethernet networking over UTP/STP cables.",
     "cat": "technical",
     "sub": "computer_networking"
   },
   {
     "q": "Which algorithm is used to find the shortest path between nodes in a network? / नेटवर्क में नोड्स के बीच सबसे छोटा रास्ता खोजने के लिए किस एल्गोरिदम का उपयोग किया जाता है?",
-    "o": ["Leaky Bucket", "Dijkstra's Algorithm | डिज्कस्ट्रा एल्गोरिदम", "Token Bucket", "Distance Vector"],
+    "o": [
+      "Distance Vector",
+      "Dijkstra's Algorithm | डिज्कस्ट्रा एल्गोरिदम",
+      "Token Bucket",
+      "Leaky Bucket"
+    ],
     "a": 1,
     "e": "Dijkstra's algorithm is a link-state routing algorithm used to determine the shortest path tree.",
     "cat": "technical",
@@ -114,15 +183,25 @@
   },
   {
     "q": "What is 'Congestion' in a computer network? / कंप्यूटर नेटवर्क में 'कन्जेशन' (Congestion) क्या है?",
-    "o": ["Fast data transfer", "Network overload due to too much traffic | अत्यधिक ट्रैफिक के कारण नेटवर्क ओवरलोड", "Broken cable", "Security breach"],
-    "a": 1,
+    "o": [
+      "Fast data transfer",
+      "Security breach",
+      "Network overload due to too much traffic | अत्यधिक ट्रैफिक के कारण नेटवर्क ओवरलोड",
+      "Broken cable"
+    ],
+    "a": 2,
     "e": "Congestion occurs when the number of packets sent to the network is greater than the capacity of the network.",
     "cat": "technical",
     "sub": "computer_networking"
   },
   {
     "q": "The 'Leaky Bucket' algorithm is primarily used for: / 'लीकी बकेट' एल्गोरिदम का मुख्य रूप से उपयोग किया जाता है:",
-    "o": ["Routing packets", "Traffic shaping and congestion control | ट्रैफिक शेपिंग और कन्जेशन कंट्रोल", "Encryption", "None"],
+    "o": [
+      "Routing packets",
+      "Traffic shaping and congestion control | ट्रैफिक शेपिंग और कन्जेशन कंट्रोल",
+      "None",
+      "Encryption"
+    ],
     "a": 1,
     "e": "It converts a bursty flow of packets into a steady, uniform flow at a constant bit rate.",
     "cat": "technical",
@@ -130,15 +209,25 @@
   },
   {
     "q": "Which routing algorithm requires each router to know the entire network topology? / किस रूटिंग एल्गोरिदम में प्रत्येक राउटर को पूरे नेटवर्क टोपोलॉजी को जानने की आवश्यकता होती है?",
-    "o": ["Distance Vector", "Static Routing", "Link State Routing | लिंक स्टेट रूटिंग", "Flooding"],
-    "a": 2,
+    "o": [
+      "Distance Vector",
+      "Link State Routing | लिंक स्टेट रूटिंग",
+      "Static Routing",
+      "Flooding"
+    ],
+    "a": 1,
     "e": "Link state algorithms (like OSPF) build a complete map of the network to calculate paths.",
     "cat": "technical",
     "sub": "computer_networking"
   },
   {
     "q": "What is the main difference between 'Adaptive' and 'Non-adaptive' routing? / 'एडेप्टिव' और 'नॉन-एडेप्टिव' रूटिंग के बीच मुख्य अंतर क्या है?",
-    "o": ["Speed of data", "Decision based on current network state | वर्तमान नेटवर्क स्थिति के आधार पर निर्णय", "Type of cable used", "None"],
+    "o": [
+      "None",
+      "Decision based on current network state | वर्तमान नेटवर्क स्थिति के आधार पर निर्णय",
+      "Speed of data",
+      "Type of cable used"
+    ],
     "a": 1,
     "e": "Adaptive routing changes paths based on traffic or topology changes, whereas non-adaptive (static) routing uses fixed paths.",
     "cat": "technical",
@@ -146,15 +235,25 @@
   },
   {
     "q": "The 'Token Bucket' algorithm allows: / 'टोकन बकेट' एल्गोरिदम अनुमति देता है:",
-    "o": ["No traffic", "Only steady traffic", "Controlled bursty traffic | नियंत्रित बर्स्टी ट्रैफिक", "Infinite traffic"],
-    "a": 2,
+    "o": [
+      "Controlled bursty traffic | नियंत्रित बर्स्टी ट्रैफिक",
+      "Infinite traffic",
+      "No traffic",
+      "Only steady traffic"
+    ],
+    "a": 0,
     "e": "Unlike leaky bucket, token bucket allows some degree of bursty traffic as long as tokens are available.",
     "cat": "technical",
     "sub": "computer_networking"
   },
   {
     "q": "In Distance Vector routing, routers exchange their routing tables with: / डिस्टेंस वेक्टर रूटिंग में, राउटर अपनी रूटिंग टेबल किसके साथ साझा करते हैं?",
-    "o": ["Every node in network", "Only immediate neighbors | केवल तत्काल पड़ोसियों के साथ", "Central server", "None"],
+    "o": [
+      "Every node in network",
+      "Only immediate neighbors | केवल तत्काल पड़ोसियों के साथ",
+      "None",
+      "Central server"
+    ],
     "a": 1,
     "e": "Routers periodically send their entire table to adjacent neighbors to update network paths.",
     "cat": "technical",
@@ -162,55 +261,90 @@
   },
   {
     "q": "What is 'Choke Packet' used for? / 'चोक पैकेट' (Choke Packet) का उपयोग किसके लिए किया जाता है?",
-    "o": ["Data encryption", "Congestion notification to source | स्रोत को कन्जेशन की सूचना देना", "Speed measurement", "Routing"],
-    "a": 1,
+    "o": [
+      "Congestion notification to source | स्रोत को कन्जेशन की सूचना देना",
+      "Data encryption",
+      "Speed measurement",
+      "Routing"
+    ],
+    "a": 0,
     "e": "A router sends a choke packet to the source to request a reduction in the transmission rate during congestion.",
     "cat": "technical",
     "sub": "computer_networking"
   },
   {
     "q": "Which metric is commonly used by routing algorithms to calculate the 'best path'? / रूटिंग एल्गोरिदम द्वारा 'सबसे अच्छा रास्ता' चुनने के लिए किस मीट्रिक का उपयोग किया जाता है?",
-    "o": ["Hop count", "Bandwidth", "Delay", "All of the above | उपरोक्त सभी"],
-    "a": 3,
+    "o": [
+      "Bandwidth",
+      "All of the above | उपरोक्त सभी",
+      "Delay",
+      "Hop count"
+    ],
+    "a": 1,
     "e": "Algorithms consider factors like hops, speed, and congestion to determine the most efficient route.",
     "cat": "technical",
     "sub": "computer_networking"
   },
   {
     "q": "The problem of 'Count to Infinity' is associated with which routing algorithm? / 'काउंट टू इनफिनिटी' की समस्या किस रूटिंग एल्गोरिदम से जुड़ी है?",
-    "o": ["Link State", "Distance Vector | डिस्टेंस वेक्टर", "Hierarchical Routing", "Flooding"],
-    "a": 1,
+    "o": [
+      "Distance Vector | डिस्टेंस वेक्टर",
+      "Link State",
+      "Hierarchical Routing",
+      "Flooding"
+    ],
+    "a": 0,
     "e": "It occurs in distance vector routing when a link fails and routers keep incrementing the hop count based on old info.",
     "cat": "technical",
     "sub": "computer_networking"
   },
   {
     "q": "Which transmission medium is most immune to Electromagnetic Interference (EMI)? / कौन सा ट्रांसमिशन माध्यम विद्युत चुम्बकीय हस्तक्षेप (EMI) के प्रति सबसे अधिक सुरक्षित है?",
-    "o": ["Coaxial Cable", "Fiber Optic Cable | फाइबर ऑप्टिक केबल", "Twisted Pair Cable", "Shielded Twisted Pair"],
-    "a": 1,
+    "o": [
+      "Twisted Pair Cable",
+      "Coaxial Cable",
+      "Fiber Optic Cable | फाइबर ऑप्टिक केबल",
+      "Shielded Twisted Pair"
+    ],
+    "a": 2,
     "e": "Fiber optics use light pulses instead of electrical signals, making them completely immune to EMI and RFI.",
     "cat": "technical",
     "sub": "computer_networking"
   },
   {
     "q": "In which topology is every node connected to a central hub or switch? / किस टोपोलॉजी में प्रत्येक नोड एक केंद्रीय हब या स्विच से जुड़ा होता है?",
-    "o": ["Mesh Topology", "Bus Topology", "Star Topology | स्टार टोपोलॉजी", "Ring Topology"],
-    "a": 2,
+    "o": [
+      "Star Topology | स्टार टोपोलॉजी",
+      "Mesh Topology",
+      "Ring Topology",
+      "Bus Topology"
+    ],
+    "a": 0,
     "e": "Star topology is the most common LAN topology where the central device manages all communications.",
     "cat": "technical",
     "sub": "computer_networking"
   },
   {
     "q": "What is the purpose of 'Twisting' the wires in a Twisted Pair cable? / ट्विस्टेड पेयर केबल में तारों को 'ट्विस्ट' (मोड़ने) करने का उद्देश्य क्या है?",
-    "o": ["To increase strength", "To reduce crosstalk and noise | क्रॉसस्टॉक और शोर को कम करना", "To increase speed", "None"],
-    "a": 1,
+    "o": [
+      "To increase strength",
+      "To increase speed",
+      "None",
+      "To reduce crosstalk and noise | क्रॉसस्टॉक और शोर को कम करना"
+    ],
+    "a": 3,
     "e": "Twisting cancels out electromagnetic interference from adjacent pairs and external sources.",
     "cat": "technical",
     "sub": "computer_networking"
   },
   {
     "q": "Which network topology uses a single backbone cable to which all nodes are attached? / कौन सी नेटवर्क टोपोलॉजी एक एकल बैकबोन केबल का उपयोग करती है जिससे सभी नोड्स जुड़े होते हैं?",
-    "o": ["Star Topology", "Bus Topology | बस टोपोलॉजी", "Tree Topology", "Mesh Topology"],
+    "o": [
+      "Star Topology",
+      "Bus Topology | बस टोपोलॉजी",
+      "Tree Topology",
+      "Mesh Topology"
+    ],
     "a": 1,
     "e": "Bus topology uses a common transmission medium (bus) with terminators at both ends.",
     "cat": "technical",
@@ -218,15 +352,25 @@
   },
   {
     "q": "What is the phenomenon where a light ray reflects back into the core of a fiber optic cable? / फाइबर ऑप्टिक केबल के कोर में प्रकाश किरण के वापस परावर्तित होने की घटना क्या कहलाती है?",
-    "o": ["Refraction", "Dispersion", "Total Internal Reflection | पूर्ण आंतरिक परावर्तन", "Scattering"],
-    "a": 2,
+    "o": [
+      "Scattering",
+      "Dispersion",
+      "Refraction",
+      "Total Internal Reflection | पूर्ण आंतरिक परावर्तन"
+    ],
+    "a": 3,
     "e": "Total Internal Reflection (TIR) allows light to travel long distances through the fiber core with minimal loss.",
     "cat": "technical",
     "sub": "computer_networking"
   },
   {
     "q": "Which topology is a combination of Star and Bus topologies? / कौन सी टोपोलॉजी स्टार और बस टोपोलॉजी का संयोजन है?",
-    "o": ["Mesh Topology", "Ring Topology", "Tree Topology | ट्री टोपोलॉजी", "Hybrid Topology"],
+    "o": [
+      "Ring Topology",
+      "Hybrid Topology",
+      "Tree Topology | ट्री टोपोलॉजी",
+      "Mesh Topology"
+    ],
     "a": 2,
     "e": "Tree topology (Hierarchical) consists of star-configured workstations connected to a linear bus backbone.",
     "cat": "technical",
@@ -234,55 +378,90 @@
   },
   {
     "q": "In 'Shielded Twisted Pair' (STP), the shield is used to: / 'शील्डेड ट्विस्टेड पेयर' (STP) में शील्ड का उपयोग किया जाता है:",
-    "o": ["Increase weight", "Provide extra protection against noise | शोर के खिलाफ अतिरिक्त सुरक्षा", "Carry more data", "None"],
-    "a": 1,
+    "o": [
+      "Carry more data",
+      "Increase weight",
+      "Provide extra protection against noise | शोर के खिलाफ अतिरिक्त सुरक्षा",
+      "None"
+    ],
+    "a": 2,
     "e": "The metallic foil or braided shield protects the signal from external electromagnetic interference.",
     "cat": "technical",
     "sub": "computer_networking"
   },
   {
     "q": "Which transmission medium is commonly used for cable TV networks? / केबल टीवी नेटवर्क के लिए आमतौर पर किस ट्रांसमिशन माध्यम का उपयोग किया जाता है?",
-    "o": ["Coaxial Cable | कोएक्सियल केबल", "Twisted Pair", "Fiber Optics", "Satellite"],
-    "a": 0,
+    "o": [
+      "Twisted Pair",
+      "Fiber Optics",
+      "Satellite",
+      "Coaxial Cable | कोएक्सियल केबल"
+    ],
+    "a": 3,
     "e": "Coaxial cables provide high bandwidth and good shielding, making them suitable for video transmission.",
     "cat": "technical",
     "sub": "computer_networking"
   },
   {
     "q": "What is the main disadvantage of a 'Bus Topology'? / 'बस टोपोलॉजी' का मुख्य नुकसान क्या है?",
-    "o": ["High cost", "Complex wiring", "The entire network fails if the backbone breaks | बैकबोन टूटने पर पूरा नेटवर्क फेल हो जाता है", "Difficult to install"],
-    "a": 2,
+    "o": [
+      "Complex wiring",
+      "The entire network fails if the backbone breaks | बैकबोन टूटने पर पूरा नेटवर्क फेल हो जाता है",
+      "High cost",
+      "Difficult to install"
+    ],
+    "a": 1,
     "e": "A fault in the main cable disrupts communication for all connected devices.",
     "cat": "technical",
     "sub": "computer_networking"
   },
   {
     "q": "An 'RJ-45' connector is used with which type of cable? / 'RJ-45' कनेक्टर का उपयोग किस प्रकार के केबल के साथ किया जाता है?",
-    "o": ["Coaxial", "Fiber Optic", "Twisted Pair | ट्विस्टेड पेयर (Ethernet)", "Power line"],
-    "a": 2,
+    "o": [
+      "Twisted Pair | ट्विस्टेड पेयर (Ethernet)",
+      "Coaxial",
+      "Fiber Optic",
+      "Power line"
+    ],
+    "a": 0,
     "e": "RJ-45 is the standard connector used for Ethernet networking over UTP/STP cables.",
     "cat": "technical",
     "sub": "computer_networking"
   },
   {
     "q": "How many layers are defined in the original TCP/IP protocol suite? / मूल TCP/IP प्रोटोकॉल सूट में कितनी परतें (Layers) परिभाषित हैं?",
-    "o": ["3", "4 | 4", "7", "5"],
-    "a": 1,
+    "o": [
+      "5",
+      "7",
+      "3",
+      "4 | 4"
+    ],
+    "a": 3,
     "e": "The standard TCP/IP model has four layers: Network Access, Internet, Transport, and Application.",
     "cat": "technical",
     "sub": "computer_networking"
   },
   {
     "q": "Which TCP/IP layer is equivalent to the Network Layer of the OSI model? / कौन सी TCP/IP परत OSI मॉडल की नेटवर्क लेयर के बराबर है?",
-    "o": ["Application Layer", "Transport Layer", "Internet Layer | इंटरनेट लेयर (Internet Layer)", "None"],
-    "a": 2,
+    "o": [
+      "None",
+      "Internet Layer | इंटरनेट लेयर (Internet Layer)",
+      "Transport Layer",
+      "Application Layer"
+    ],
+    "a": 1,
     "e": "The Internet layer handles packet routing and logical addressing (IP) across different networks.",
     "cat": "technical",
     "sub": "computer_networking"
   },
   {
     "q": "TCP (Transmission Control Protocol) is a ________ protocol. / TCP एक ________ प्रोटोकॉल है।",
-    "o": ["Connectionless", "Connection-oriented | कनेक्शन-ओरिएंटेड", "Hardware", "None"],
+    "o": [
+      "Connectionless",
+      "Connection-oriented | कनेक्शन-ओरिएंटेड",
+      "None",
+      "Hardware"
+    ],
     "a": 1,
     "e": "TCP establishes a reliable session between two devices before data transfer begins.",
     "cat": "technical",
@@ -290,15 +469,25 @@
   },
   {
     "q": "Which protocol is used for sending electronic mail? / इलेक्ट्रॉनिक मेल भेजने के लिए किस प्रोटोकॉल का उपयोग किया जाता है?",
-    "o": ["FTP", "SNMP", "SMTP | SMTP", "POP3"],
-    "a": 2,
+    "o": [
+      "SMTP | SMTP",
+      "SNMP",
+      "POP3",
+      "FTP"
+    ],
+    "a": 0,
     "e": "Simple Mail Transfer Protocol (SMTP) is the standard protocol for email transmission.",
     "cat": "technical",
     "sub": "computer_networking"
   },
   {
     "q": "What is the size of an 'IPv4' address? / 'IPv4' पते का आकार क्या होता है?",
-    "o": ["16 bits", "32 bits | 32 बिट्स", "64 bits", "128 bits"],
+    "o": [
+      "64 bits",
+      "32 bits | 32 बिट्स",
+      "128 bits",
+      "16 bits"
+    ],
     "a": 1,
     "e": "IPv4 addresses are 32-bit long, usually represented in dotted-decimal format (e.g., 192.168.1.1).",
     "cat": "technical",
@@ -306,7 +495,12 @@
   },
   {
     "q": "Which protocol is used to map a known IP address to a physical MAC address? / ज्ञात IP पते को भौतिक MAC पते से मैप करने के लिए किस प्रोटोकॉल का उपयोग किया जाता है?",
-    "o": ["DNS", "ARP | ARP", "DHCP", "ICMP"],
+    "o": [
+      "ICMP",
+      "ARP | ARP",
+      "DHCP",
+      "DNS"
+    ],
     "a": 1,
     "e": "Address Resolution Protocol (ARP) resolves logical IP addresses into physical hardware addresses.",
     "cat": "technical",
@@ -314,47 +508,77 @@
   },
   {
     "q": "The 'DNS' protocol works at which layer of the TCP/IP model? / 'DNS' प्रोटोकॉल TCP/IP मॉडल की किस परत पर कार्य करता है?",
-    "o": ["Application Layer | एप्लिकेशन लेयर", "Internet Layer", "Transport Layer", "None"],
-    "a": 0,
+    "o": [
+      "None",
+      "Internet Layer",
+      "Transport Layer",
+      "Application Layer | एप्लिकेशन लेयर"
+    ],
+    "a": 3,
     "e": "Domain Name System (DNS) translates human-readable domain names to IP addresses at the application level.",
     "cat": "technical",
     "sub": "computer_networking"
   },
   {
     "q": "Which of the following is a 'Connectionless' transport layer protocol? / निम्नलिखित में से कौन सा 'कनेक्शनलेस' ट्रांसपोर्ट लेयर प्रोटोकॉल है?",
-    "o": ["TCP", "HTTP", "UDP | UDP", "FTP"],
-    "a": 2,
+    "o": [
+      "TCP",
+      "UDP | UDP",
+      "FTP",
+      "HTTP"
+    ],
+    "a": 1,
     "e": "User Datagram Protocol (UDP) is faster but less reliable than TCP because it doesn't establish a connection or check for errors.",
     "cat": "technical",
     "sub": "computer_networking"
   },
   {
     "q": "What is the function of the 'ICMP' protocol? / 'ICMP' प्रोटोकॉल का कार्य क्या है?",
-    "o": ["File transfer", "Error reporting and diagnostic functions | त्रुटि रिपोर्टिंग और नैदानिक कार्य", "Web browsing", "None"],
-    "a": 1,
+    "o": [
+      "Error reporting and diagnostic functions | त्रुटि रिपोर्टिंग और नैदानिक कार्य",
+      "Web browsing",
+      "File transfer",
+      "None"
+    ],
+    "a": 0,
     "e": "Internet Control Message Protocol (ICMP) is used by devices like routers to send error messages or operational information (e.g., Ping).",
     "cat": "technical",
     "sub": "computer_networking"
   },
   {
     "q": "In TCP/IP, which layer provides end-to-end data integrity? / TCP/IP में, कौन सी परत एंड-टू-एंड डेटा अखंडता (integrity) प्रदान करती है?",
-    "o": ["Network Access Layer", "Internet Layer", "Transport Layer | ट्रांसपोर्ट लेयर", "None"],
-    "a": 2,
+    "o": [
+      "Network Access Layer",
+      "Transport Layer | ट्रांसपोर्ट लेयर",
+      "Internet Layer",
+      "None"
+    ],
+    "a": 1,
     "e": "The Transport layer uses sequence numbers and acknowledgments to ensure data arrives correctly and in order.",
     "cat": "technical",
     "sub": "computer_networking"
   },
   {
     "q": "Which instruction in 8085 is used to add the contents of a register to the accumulator? / 8085 में कौन सा निर्देश रजिस्टर की सामग्री को एक्यूमलेटर में जोड़ने के लिए उपयोग किया जाता है?",
-    "o": ["SUB R", "ADD R | ADD R", "INR R", "MOV A, R"],
-    "a": 1,
+    "o": [
+      "ADD R | ADD R",
+      "SUB R",
+      "MOV A, R",
+      "INR R"
+    ],
+    "a": 0,
     "e": "The ADD R instruction adds the content of the specified register to the accumulator and stores the result in the accumulator.",
     "cat": "technical",
     "sub": "microprocessors"
   },
   {
     "q": "What is 'Immediate Addressing Mode' in 8085? / 8085 में 'इमीडिएट एड्रेसिंग मोड' क्या है?",
-    "o": ["Operand is a register", "Operand is inside memory", "Data is provided within the instruction | डेटा निर्देश के भीतर ही दिया जाता है", "None"],
+    "o": [
+      "Operand is inside memory",
+      "Operand is a register",
+      "Data is provided within the instruction | डेटा निर्देश के भीतर ही दिया जाता है",
+      "None"
+    ],
     "a": 2,
     "e": "In immediate addressing mode, the data (operand) is specified directly in the instruction (e.g., MVI A, 05H).",
     "cat": "technical",
@@ -362,39 +586,64 @@
   },
   {
     "q": "Which instruction performs the logical AND operation between a register and the accumulator? / कौन सा निर्देश रजिस्टर और एक्यूमलेटर के बीच लॉजिकल AND ऑपरेशन करता है?",
-    "o": ["ORA R", "XRA R", "ANA R | ANA R", "CMA"],
-    "a": 2,
+    "o": [
+      "XRA R",
+      "ANA R | ANA R",
+      "ORA R",
+      "CMA"
+    ],
+    "a": 1,
     "e": "ANA R performs bitwise AND and affects the flags (S, Z, P).",
     "cat": "technical",
     "sub": "microprocessors"
   },
   {
     "q": "The 'CMA' instruction in 8085 is used to: / 8085 में 'CMA' निर्देश का उपयोग किया जाता है:",
-    "o": ["Clear accumulator", "Complement the accumulator | एक्यूमलेटर का पूरक (Complement) करना", "Add with carry", "None"],
-    "a": 1,
+    "o": [
+      "Add with carry",
+      "Clear accumulator",
+      "Complement the accumulator | एक्यूमलेटर का पूरक (Complement) करना",
+      "None"
+    ],
+    "a": 2,
     "e": "CMA (Complement Accumulator) performs 1's complement of the accumulator content.",
     "cat": "technical",
     "sub": "microprocessors"
   },
   {
     "q": "How many bytes are used by the instruction 'LDA 2000H'? / 'LDA 2000H' निर्देश द्वारा कितने बाइट्स का उपयोग किया जाता है?",
-    "o": ["1 byte", "2 bytes", "3 bytes | 3 बाइट्स", "4 bytes"],
-    "a": 2,
+    "o": [
+      "4 bytes",
+      "3 bytes | 3 बाइट्स",
+      "1 byte",
+      "2 bytes"
+    ],
+    "a": 1,
     "e": "LDA is a 3-byte instruction: 1 byte for opcode and 2 bytes for the 16-bit memory address.",
     "cat": "technical",
     "sub": "microprocessors"
   },
   {
     "q": "Which stack instruction is used to store a register pair onto the stack? / स्टैक पर रजिस्टर पेयर को स्टोर करने के लिए किस निर्देश का उपयोग किया जाता है?",
-    "o": ["POP RP", "PUSH RP | PUSH RP", "LXI RP", "XTHL"],
-    "a": 1,
+    "o": [
+      "PUSH RP | PUSH RP",
+      "XTHL",
+      "POP RP",
+      "LXI RP"
+    ],
+    "a": 0,
     "e": "PUSH saves the contents of a register pair onto the memory location pointed to by the Stack Pointer.",
     "cat": "technical",
     "sub": "microprocessors"
   },
   {
     "q": "What happens after the execution of the 'XCHG' instruction? / 'XCHG' निर्देश के निष्पादन के बाद क्या होता है?",
-    "o": ["Accumulator is cleared", "Contents of H-L and D-E pairs are swapped | H-L और D-E पेयर की सामग्री आपस में बदल जाती है", "Program stops", "None"],
+    "o": [
+      "None",
+      "Contents of H-L and D-E pairs are swapped | H-L और D-E पेयर की सामग्री आपस में बदल जाती है",
+      "Program stops",
+      "Accumulator is cleared"
+    ],
     "a": 1,
     "e": "XCHG exchanges the 16-bit data between the H-L register pair and the D-E register pair.",
     "cat": "technical",
@@ -402,47 +651,77 @@
   },
   {
     "q": "The instruction 'RRC' stands for: / 'RRC' निर्देश का अर्थ है:",
-    "o": ["Reset Register C", "Rotate Accumulator Right through Carry", "Rotate Accumulator Right | रोटेट एक्यूमलेटर राइट (RRC)", "None"],
-    "a": 2,
+    "o": [
+      "None",
+      "Reset Register C",
+      "Rotate Accumulator Right through Carry",
+      "Rotate Accumulator Right | रोटेट एक्यूमलेटर राइट (RRC)"
+    ],
+    "a": 3,
     "e": "RRC rotates the bits of the accumulator to the right by one position without including the carry flag in the rotation loop.",
     "cat": "technical",
     "sub": "microprocessors"
   },
   {
     "q": "Which flag is NOT affected by the 'INR R' instruction? / 'INR R' निर्देश द्वारा कौन सा फ्लैग प्रभावित नहीं होता है?",
-    "o": ["Zero flag", "Sign flag", "Carry flag | कैरी फ्लैग (CY)", "Parity flag"],
-    "a": 2,
+    "o": [
+      "Parity flag",
+      "Sign flag",
+      "Zero flag",
+      "Carry flag | कैरी फ्लैग (CY)"
+    ],
+    "a": 3,
     "e": "In 8085, the INR (Increment) and DCR (Decrement) instructions do not affect the carry flag.",
     "cat": "technical",
     "sub": "microprocessors"
   },
   {
     "q": "The 'LXI H, 4000H' instruction uses which addressing mode? / 'LXI H, 4000H' निर्देश किस एड्रेसिंग मोड का उपयोग करता है?",
-    "o": ["Direct", "Immediate | इमीडिएट (Immediate)", "Register", "Implicit"],
-    "a": 1,
+    "o": [
+      "Direct",
+      "Implicit",
+      "Register",
+      "Immediate | इमीडिएट (Immediate)"
+    ],
+    "a": 3,
     "e": "LXI (Load Register Pair Immediate) loads a 16-bit constant directly into a register pair.",
     "cat": "technical",
     "sub": "microprocessors"
   },
   {
     "q": "How many layers are there in the OSI Model? / OSI मॉडल में कितनी परतें (Layers) होती हैं?",
-    "o": ["4", "5", "7 | 7", "9"],
-    "a": 2,
+    "o": [
+      "7 | 7",
+      "9",
+      "4",
+      "5"
+    ],
+    "a": 0,
     "e": "The OSI model consists of seven layers: Physical, Data Link, Network, Transport, Session, Presentation, and Application.",
     "cat": "technical",
     "sub": "computer_networking"
   },
   {
     "q": "Which layer is responsible for routing data packets between different networks? / विभिन्न नेटवर्क के बीच डेटा पैकेट को रूट करने के लिए कौन सी परत जिम्मेदार है?",
-    "o": ["Data Link Layer", "Network Layer | नेटवर्क लेयर (Network Layer)", "Transport Layer", "Physical Layer"],
-    "a": 1,
+    "o": [
+      "Network Layer | नेटवर्क लेयर (Network Layer)",
+      "Physical Layer",
+      "Data Link Layer",
+      "Transport Layer"
+    ],
+    "a": 0,
     "e": "The Network layer handles logical addressing and determines the best path (routing) for data transfer.",
     "cat": "technical",
     "sub": "computer_networking"
   },
   {
     "q": "What is the function of the 'Transport Layer'? / 'ट्रांसपोर्ट लेयर' का कार्य क्या है?",
-    "o": ["Bit synchronization", "End-to-end communication and error control | एंड-टू-एंड संचार और त्रुटि नियंत्रण", "Framing", "None"],
+    "o": [
+      "None",
+      "End-to-end communication and error control | एंड-टू-एंड संचार और त्रुटि नियंत्रण",
+      "Framing",
+      "Bit synchronization"
+    ],
     "a": 1,
     "e": "The Transport layer ensures reliable data transfer through protocols like TCP and UDP.",
     "cat": "technical",
@@ -450,23 +729,38 @@
   },
   {
     "q": "Which topology uses a central hub or switch to connect all devices? / कौन सी टोपोलॉजी सभी उपकरणों को जोड़ने के लिए एक केंद्रीय हब या स्विच का उपयोग करती है?",
-    "o": ["Bus Topology", "Ring Topology", "Star Topology | स्टार टोपोलॉजी", "Mesh Topology"],
-    "a": 2,
+    "o": [
+      "Ring Topology",
+      "Star Topology | स्टार टोपोलॉजी",
+      "Bus Topology",
+      "Mesh Topology"
+    ],
+    "a": 1,
     "e": "In a Star topology, all nodes are connected to a central controller; if one cable fails, only that node is affected.",
     "cat": "technical",
     "sub": "computer_networking"
   },
   {
     "q": "What is the maximum data rate of a standard Category 5 (Cat5) twisted-pair cable? / मानक कैट 5 (Cat5) ट्विस्टेड-पेयर केबल की अधिकतम डेटा दर क्या है?",
-    "o": ["10 Mbps", "100 Mbps | 100 एमबीपीएस", "1 Gbps", "10 Gbps"],
-    "a": 1,
+    "o": [
+      "100 Mbps | 100 एमबीपीएस",
+      "10 Mbps",
+      "10 Gbps",
+      "1 Gbps"
+    ],
+    "a": 0,
     "e": "Cat5 cables are designed to support Fast Ethernet speeds up to 100 Mbps.",
     "cat": "technical",
     "sub": "computer_networking"
   },
   {
     "q": "Which device works at the 'Data Link Layer' of the OSI model? / OSI मॉडल की 'डेटा लिंक लेयर' पर कौन सा उपकरण कार्य करता है?",
-    "o": ["Hub", "Repeater", "Switch | स्विच (Switch)", "Router"],
+    "o": [
+      "Repeater",
+      "Router",
+      "Switch | स्विच (Switch)",
+      "Hub"
+    ],
     "a": 2,
     "e": "Switches use MAC addresses to forward frames to the correct destination within a network.",
     "cat": "technical",
@@ -474,23 +768,38 @@
   },
   {
     "q": "Which transmission medium uses light pulses to transmit data? / कौन सा ट्रांसमिशन माध्यम डेटा प्रसारित करने के लिए प्रकाश तरंगों (light pulses) का उपयोग करता है?",
-    "o": ["Coaxial Cable", "Fiber Optic Cable | फाइबर ऑप्टिक केबल", "Twisted Pair", "Satellite"],
-    "a": 1,
+    "o": [
+      "Fiber Optic Cable | फाइबर ऑप्टिक केबल",
+      "Twisted Pair",
+      "Satellite",
+      "Coaxial Cable"
+    ],
+    "a": 0,
     "e": "Fiber optics provide extremely high bandwidth and are immune to electromagnetic interference.",
     "cat": "technical",
     "sub": "computer_networking"
   },
   {
     "q": "What is 'IP Addressing'? / 'IP एड्रेसिंग' क्या है?",
-    "o": ["A physical address", "A logical address for devices on a network | नेटवर्क पर उपकरणों के लिए एक तार्किक पता", "A cable name", "None"],
-    "a": 1,
+    "o": [
+      "A logical address for devices on a network | नेटवर्क पर उपकरणों के लिए एक तार्किक पता",
+      "A physical address",
+      "A cable name",
+      "None"
+    ],
+    "a": 0,
     "e": "IP addresses uniquely identify devices on an internetwork, allowing data to be routed correctly.",
     "cat": "technical",
     "sub": "computer_networking"
   },
   {
     "q": "Which protocol is used for securely browsing the web? / वेब को सुरक्षित रूप से ब्राउज़ करने के लिए किस प्रोटोकॉल का उपयोग किया जाता है?",
-    "o": ["HTTP", "FTP", "HTTPS | HTTPS", "SMTP"],
+    "o": [
+      "SMTP",
+      "FTP",
+      "HTTPS | HTTPS",
+      "HTTP"
+    ],
     "a": 2,
     "e": "HTTPS (Hypertext Transfer Protocol Secure) encrypts data using SSL/TLS for secure communication.",
     "cat": "technical",
@@ -498,7 +807,12 @@
   },
   {
     "q": "In a 'Mesh Topology', if there are 'n' devices, how many cables are needed? / 'मेश टोपोलॉजी' में, यदि 'n' डिवाइस हैं, तो कितने केबलों की आवश्यकता होती है?",
-    "o": ["n", "n-1", "n(n-1)/2 | n(n-1)/2", "n^2"],
+    "o": [
+      "n-1",
+      "n^2",
+      "n(n-1)/2 | n(n-1)/2",
+      "n"
+    ],
     "a": 2,
     "e": "Every device is connected to every other device, leading to high redundancy but complex wiring.",
     "cat": "technical",
@@ -506,7 +820,12 @@
   },
   {
     "q": "What is the size of the 'Accumulator' in the 8085 microprocessor? / 8085 माइक्रोप्रोसेसर में 'एक्यूमलेटर' (Accumulator) का आकार क्या होता है?",
-    "o": ["4-bit", "8-bit | 8-बिट", "16-bit", "32-bit"],
+    "o": [
+      "4-bit",
+      "8-bit | 8-बिट",
+      "16-bit",
+      "32-bit"
+    ],
     "a": 1,
     "e": "The 8085 is an 8-bit microprocessor, and its primary register (Accumulator A) is also 8 bits wide.",
     "cat": "technical",
@@ -514,7 +833,12 @@
   },
   {
     "q": "Which register in 8085 is used to keep track of the memory address of the next instruction? / 8085 में कौन सा रजिस्टर अगली निर्देश के मेमोरी एड्रेस का ट्रैक रखने के लिए उपयोग किया जाता है?",
-    "o": ["Stack Pointer", "Instruction Register", "Program Counter | प्रोग्राम काउंटर (PC)", "Accumulator"],
+    "o": [
+      "Accumulator",
+      "Stack Pointer",
+      "Program Counter | प्रोग्राम काउंटर (PC)",
+      "Instruction Register"
+    ],
     "a": 2,
     "e": "The Program Counter is a 16-bit register that points to the address of the next instruction to be fetched.",
     "cat": "technical",
@@ -522,39 +846,64 @@
   },
   {
     "q": "How many address lines are there in the 8085 microprocessor? / 8085 माइक्रोप्रोसेसर में कितनी एड्रेस लाइनें होती हैं?",
-    "o": ["8", "12", "16 | 16", "20"],
-    "a": 2,
+    "o": [
+      "8",
+      "16 | 16",
+      "20",
+      "12"
+    ],
+    "a": 1,
     "e": "With 16 address lines, the 8085 can access up to 2^16 = 64 KB of memory.",
     "cat": "technical",
     "sub": "microprocessors"
   },
   {
     "q": "Which interrupt in 8085 has the highest priority? / 8085 में किस इंटरप्ट की प्राथमिकता सबसे अधिक होती है?",
-    "o": ["INTR", "RST 7.5", "TRAP | TRAP", "RST 5.5"],
-    "a": 2,
+    "o": [
+      "RST 7.5",
+      "RST 5.5",
+      "INTR",
+      "TRAP | TRAP"
+    ],
+    "a": 3,
     "e": "TRAP is a non-maskable interrupt and has the highest priority among all hardware interrupts.",
     "cat": "technical",
     "sub": "microprocessors"
   },
   {
     "q": "The 'ALE' signal in 8085 stands for: / 8085 में 'ALE' सिग्नल का अर्थ है:",
-    "o": ["Address Latch Enable | एड्रेस लैच इनेबल", "Access Line Enable", "Address Logic Element", "None"],
-    "a": 0,
+    "o": [
+      "Access Line Enable",
+      "Address Logic Element",
+      "None",
+      "Address Latch Enable | एड्रेस लैच इनेबल"
+    ],
+    "a": 3,
     "e": "ALE is used to demultiplex the address/data bus (AD0-AD7) by indicating that the bus currently carries an address.",
     "cat": "technical",
     "sub": "microprocessors"
   },
   {
     "q": "What is the function of the 'Stack Pointer' register? / 'स्टैक पॉइंटर' रजिस्टर का कार्य क्या है?",
-    "o": ["To point to the next instruction", "To store data", "To point to the top of the stack memory | स्टैक मेमोरी के शीर्ष को पॉइंट करना", "None"],
-    "a": 2,
+    "o": [
+      "To point to the next instruction",
+      "To point to the top of the stack memory | स्टैक मेमोरी के शीर्ष को पॉइंट करना",
+      "To store data",
+      "None"
+    ],
+    "a": 1,
     "e": "Stack Pointer (SP) is a 16-bit register that stores the address of the last byte entered into the stack.",
     "cat": "technical",
     "sub": "microprocessors"
   },
   {
     "q": "Which instruction is used to transfer data from a register to memory (indirectly)? / रजिस्टर से मेमोरी में (परोक्ष रूप से) डेटा ट्रांसफर करने के लिए किस निर्देश का उपयोग किया जाता है?",
-    "o": ["MOV M, R | MOV M, R", "LDA", "STAX", "Both A and C"],
+    "o": [
+      "LDA",
+      "STAX",
+      "MOV M, R | MOV M, R",
+      "Both A and C"
+    ],
     "a": 3,
     "e": "MOV M, R and STAX (Store Accumulator Indirect) are used for writing to memory locations.",
     "cat": "technical",
@@ -562,7 +911,12 @@
   },
   {
     "q": "Which flag is set when the result of an arithmetic operation is zero? / जब अंकगणितीय ऑपरेशन का परिणाम शून्य होता है, तो कौन सा फ्लैग सेट होता है?",
-    "o": ["Sign flag", "Zero flag | जीरो फ्लैग (Z)", "Carry flag", "Parity flag"],
+    "o": [
+      "Parity flag",
+      "Zero flag | जीरो फ्लैग (Z)",
+      "Carry flag",
+      "Sign flag"
+    ],
     "a": 1,
     "e": "The Zero flag (Z) is set to 1 if the result of an operation is zero; otherwise, it is reset to 0.",
     "cat": "technical",
@@ -570,15 +924,25 @@
   },
   {
     "q": "How many general-purpose registers are there in 8085? / 8085 में कितने सामान्य-उद्देश्यीय रजिस्टर (General Purpose) होते हैं?",
-    "o": ["4", "6 | 6", "8", "10"],
-    "a": 1,
+    "o": [
+      "8",
+      "4",
+      "10",
+      "6 | 6"
+    ],
+    "a": 3,
     "e": "8085 has six general-purpose registers: B, C, D, E, H, and L.",
     "cat": "technical",
     "sub": "microprocessors"
   },
   {
     "q": "The instruction 'HLT' is used to: / 'HLT' निर्देश का उपयोग किया जाता है:",
-    "o": ["Move data", "Start the program", "Halt the execution of the program | प्रोग्राम के निष्पादन को रोकना", "Clear accumulator"],
+    "o": [
+      "Start the program",
+      "Clear accumulator",
+      "Halt the execution of the program | प्रोग्राम के निष्पादन को रोकना",
+      "Move data"
+    ],
     "a": 2,
     "e": "The HLT (Halt) instruction stops the CPU until an interrupt or reset occurs.",
     "cat": "technical",
@@ -586,7 +950,12 @@
   },
   {
     "q": "Which number system uses only 0 and 1? / कौन सा नंबर सिस्टम केवल 0 और 1 का उपयोग करता है?",
-    "o": ["Decimal", "Octal", "Binary | बाइनरी (Binary)", "Hexadecimal"],
+    "o": [
+      "Hexadecimal",
+      "Octal",
+      "Binary | बाइनरी (Binary)",
+      "Decimal"
+    ],
     "a": 2,
     "e": "Digital systems use the binary system for processing data as it represents two electrical states: ON and OFF.",
     "cat": "technical",
@@ -594,7 +963,12 @@
   },
   {
     "q": "A 'NAND' gate is equivalent to: / एक 'NAND' गेट किसके बराबर है?",
-    "o": ["AND followed by NOT | AND के बाद NOT", "OR followed by NOT", "NOT followed by OR", "None"],
+    "o": [
+      "AND followed by NOT | AND के बाद NOT",
+      "NOT followed by OR",
+      "OR followed by NOT",
+      "None"
+    ],
     "a": 0,
     "e": "NAND gate output is 0 only when both inputs are 1; it is the complement of the AND gate.",
     "cat": "technical",
@@ -602,7 +976,12 @@
   },
   {
     "q": "What is the result of 'A + A' in Boolean Algebra? / Boolean Algebra में 'A + A' का परिणाम क्या है?",
-    "o": ["2A", "0", "1", "A | A"],
+    "o": [
+      "0",
+      "1",
+      "2A",
+      "A | A"
+    ],
     "a": 3,
     "e": "In Boolean algebra, the OR operation with the same variable results in the variable itself (Idempotent Law).",
     "cat": "technical",
@@ -610,39 +989,64 @@
   },
   {
     "q": "Which gate is known as the 'Universal Gate'? / किस गेट को 'यूनिवर्सल गेट' कहा जाता है?",
-    "o": ["XOR Gate", "NOT Gate", "NOR Gate | NOR गेट", "AND Gate"],
-    "a": 2,
+    "o": [
+      "NOT Gate",
+      "XOR Gate",
+      "AND Gate",
+      "NOR Gate | NOR गेट"
+    ],
+    "a": 3,
     "e": "NAND and NOR gates are universal because any logic circuit can be built using only these gates.",
     "cat": "technical",
     "sub": "digital_electronics"
   },
   {
     "q": "How many select lines are required for a '16-to-1 Multiplexer'? / '16-to-1' मल्टीप्लेक्सर के लिए कितनी सेलेक्ट लाइनों की आवश्यकता होती है?",
-    "o": ["2", "3", "4 | 4", "16"],
-    "a": 2,
+    "o": [
+      "4 | 4",
+      "3",
+      "16",
+      "2"
+    ],
+    "a": 0,
     "e": "For 2^n inputs, 'n' select lines are needed. Here 2^4 = 16, so 4 select lines are required.",
     "cat": "technical",
     "sub": "digital_electronics"
   },
   {
     "q": "A 'De-multiplexer' has: / एक 'डी-मल्टीप्लेक्सर' (De-mux) में होता है:",
-    "o": ["Many inputs and one output", "One input and many outputs | एक इनपुट और कई आउटपुट", "Many inputs and many outputs", "None"],
-    "a": 1,
+    "o": [
+      "One input and many outputs | एक इनपुट और कई आउटपुट",
+      "None",
+      "Many inputs and many outputs",
+      "Many inputs and one output"
+    ],
+    "a": 0,
     "e": "A De-mux takes data from a single line and routes it to one of many output lines based on select inputs.",
     "cat": "technical",
     "sub": "digital_electronics"
   },
   {
     "q": "What is the '1's complement' of the binary number 1010? / बाइनरी नंबर 1010 का '1's complement' क्या है?",
-    "o": ["0101 | 0101", "1111", "0000", "1011"],
-    "a": 0,
+    "o": [
+      "0000",
+      "1011",
+      "1111",
+      "0101 | 0101"
+    ],
+    "a": 3,
     "e": "1's complement is obtained by inverting all bits (changing 0 to 1 and 1 to 0).",
     "cat": "technical",
     "sub": "digital_electronics"
   },
   {
     "q": "According to De Morgan's Theorem, (A.B)' is equal to: / डी मॉर्गन प्रमेय के अनुसार, (A.B)' किसके बराबर है?",
-    "o": ["A' + B' | A' + B'", "A' . B'", "A + B", "None"],
+    "o": [
+      "A' + B' | A' + B'",
+      "A' . B'",
+      "None",
+      "A + B"
+    ],
     "a": 0,
     "e": "De Morgan's theorem states that the complement of a product is equal to the sum of the complements.",
     "cat": "technical",
@@ -650,39 +1054,64 @@
   },
   {
     "q": "Which circuit is used to perform the addition of 'three' binary bits? / 'तीन' बाइनरी बिट्स का योग करने के लिए किस सर्किट का उपयोग किया जाता है?",
-    "o": ["Half Adder", "Full Adder | फुल एडर (Full Adder)", "Multiplexer", "Decoder"],
-    "a": 1,
+    "o": [
+      "Multiplexer",
+      "Half Adder",
+      "Decoder",
+      "Full Adder | फुल एडर (Full Adder)"
+    ],
+    "a": 3,
     "e": "A full adder adds two significant bits and an incoming carry bit.",
     "cat": "technical",
     "sub": "digital_electronics"
   },
   {
     "q": "The base (radix) of a 'Hexadecimal' number system is: / 'हेक्साडेसिमल' नंबर सिस्टम का आधार (Base) क्या है?",
-    "o": ["8", "10", "16 | 16", "2"],
-    "a": 2,
+    "o": [
+      "16 | 16",
+      "8",
+      "2",
+      "10"
+    ],
+    "a": 0,
     "e": "Hexadecimal uses sixteen symbols (0-9 and A-F) to represent values.",
     "cat": "technical",
     "sub": "digital_electronics"
   },
   {
     "q": "What is the function of a 'Zener Diode' when used in reverse bias? / रिवर्स बायस में उपयोग किए जाने पर 'जेनर डायोड' का क्या कार्य है?",
-    "o": ["Amplifier", "Voltage Regulator | वोल्टेज रेगुलेटर", "Rectifier", "Oscillator"],
-    "a": 1,
+    "o": [
+      "Amplifier",
+      "Oscillator",
+      "Rectifier",
+      "Voltage Regulator | वोल्टेज रेगुलेटर"
+    ],
+    "a": 3,
     "e": "Zener diodes are designed to operate in the breakdown region to maintain a constant output voltage despite fluctuations.",
     "cat": "technical",
     "sub": "electronics_circuits"
   },
   {
     "q": "In a Bipolar Junction Transistor (BJT), which region is most heavily doped? / एक BJT में, कौन सा क्षेत्र सबसे अधिक डोप्ड (Doped) होता है?",
-    "o": ["Base", "Collector", "Emitter | एमीटर (Emitter)", "None"],
-    "a": 2,
+    "o": [
+      "Collector",
+      "Emitter | एमीटर (Emitter)",
+      "None",
+      "Base"
+    ],
+    "a": 1,
     "e": "The emitter is heavily doped to inject a large number of charge carriers into the base.",
     "cat": "technical",
     "sub": "electronics_circuits"
   },
   {
     "q": "A 'Rectifier' circuit is used to: / एक 'रेक्टिफायर' सर्किट का उपयोग किया जाता है:",
-    "o": ["Convert DC to AC", "Convert AC to DC | AC को DC में बदलना", "Amplify signals", "Filter noise"],
+    "o": [
+      "Filter noise",
+      "Convert AC to DC | AC को DC में बदलना",
+      "Convert DC to AC",
+      "Amplify signals"
+    ],
     "a": 1,
     "e": "Rectifiers use diodes to allow current to flow in only one direction, converting alternating current to direct current.",
     "cat": "technical",
@@ -690,23 +1119,38 @@
   },
   {
     "q": "What is the relation between Alpha (α) and Beta (β) of a transistor? / ट्रांजिस्टर के अल्फा (α) और बीटा (β) के बीच क्या संबंध है?",
-    "o": ["β = α / (1 - α) | β = α / (1 - α)", "α = β / (1 - β)", "β = α + 1", "α = β + 1"],
-    "a": 0,
+    "o": [
+      "β = α + 1",
+      "α = β / (1 - β)",
+      "β = α / (1 - α) | β = α / (1 - α)",
+      "α = β + 1"
+    ],
+    "a": 2,
     "e": "Alpha is the current gain in Common Base, and Beta is the current gain in Common Emitter configuration.",
     "cat": "technical",
     "sub": "electronics_circuits"
   },
   {
     "q": "For a BJT to operate in the 'Active Region', the junctions must be: / 'एक्टिव रीजन' में काम करने के लिए BJT के जंक्शन होने चाहिए:",
-    "o": ["Both Forward Biased", "Both Reverse Biased", "EB Forward and CB Reverse | EB फॉरवर्ड और CB रिवर्स", "EB Reverse and CB Forward"],
-    "a": 2,
+    "o": [
+      "EB Reverse and CB Forward",
+      "Both Forward Biased",
+      "Both Reverse Biased",
+      "EB Forward and CB Reverse | EB फॉरवर्ड और CB रिवर्स"
+    ],
+    "a": 3,
     "e": "This configuration is essential for using the transistor as an amplifier.",
     "cat": "technical",
     "sub": "electronics_circuits"
   },
   {
     "q": "What is the primary purpose of a 'Bridge Rectifier'? / 'ब्रिज रेक्टिफायर' का प्राथमिक उद्देश्य क्या है?",
-    "o": ["Half-wave rectification", "Full-wave rectification | फुल-वेव रेक्टिफिकेशन", "Voltage step-up", "Signal filtering"],
+    "o": [
+      "Signal filtering",
+      "Full-wave rectification | फुल-वेव रेक्टिफिकेशन",
+      "Voltage step-up",
+      "Half-wave rectification"
+    ],
     "a": 1,
     "e": "A bridge rectifier uses four diodes to provide full-wave rectification without needing a center-tapped transformer.",
     "cat": "technical",
@@ -714,191 +1158,311 @@
   },
   {
     "q": "The input impedance of a 'Common Collector' (Emitter Follower) amplifier is: / 'कॉमन कलेक्टर' एम्पलीफायर की इनपुट इम्पीडेंस होती है:",
-    "o": ["Very low", "Zero", "Very high | बहुत अधिक", "Moderate"],
-    "a": 2,
+    "o": [
+      "Very high | बहुत अधिक",
+      "Moderate",
+      "Zero",
+      "Very low"
+    ],
+    "a": 0,
     "e": "Common collector configuration is often used for impedance matching due to its high input and low output impedance.",
     "cat": "technical",
     "sub": "electronics_circuits"
   },
   {
     "q": "A 'Light Emitting Diode' (LED) works on the principle of: / एक 'LED' किसके सिद्धांत पर कार्य करता है?",
-    "o": ["Photoelectric effect", "Electroluminescence | इलेक्ट्रोुमिनेसेंस", "Thermionic emission", "None"],
-    "a": 1,
+    "o": [
+      "None",
+      "Photoelectric effect",
+      "Electroluminescence | इलेक्ट्रोुमिनेसेंस",
+      "Thermionic emission"
+    ],
+    "a": 2,
     "e": "LEDs emit light when charge carriers recombine at the P-N junction under forward bias.",
     "cat": "technical",
     "sub": "electronics_circuits"
   },
   {
     "q": "Which type of 'Coupling' is used in multistage amplifiers for DC amplification? / DC एम्पलीफिकेशन के लिए मल्टीस्टेज एम्पलीफायरों में किस प्रकार की 'कपलिंग' का उपयोग किया जाता है?",
-    "o": ["RC Coupling", "Transformer Coupling", "Direct Coupling | डायरेक्ट कपलिंग", "None"],
-    "a": 2,
+    "o": [
+      "Transformer Coupling",
+      "None",
+      "RC Coupling",
+      "Direct Coupling | डायरेक्ट कपलिंग"
+    ],
+    "a": 3,
     "e": "Direct coupling allows very low-frequency signals (including DC) to pass through stages.",
     "cat": "technical",
     "sub": "electronics_circuits"
   },
   {
     "q": "What is the 'Thermal Runaway' in transistors? / ट्रांजिस्टर में 'थर्मल रनवे' क्या है?",
-    "o": ["Controlled cooling", "Self-destruction due to excessive heat | अत्यधिक गर्मी के कारण स्वयं का विनाश", "Increase in voltage", "None"],
-    "a": 1,
+    "o": [
+      "Self-destruction due to excessive heat | अत्यधिक गर्मी के कारण स्वयं का विनाश",
+      "None",
+      "Controlled cooling",
+      "Increase in voltage"
+    ],
+    "a": 0,
     "e": "Thermal runaway occurs when an increase in temperature increases collector current, which in turn further increases temperature until the device fails.",
     "cat": "technical",
     "sub": "electronics_circuits"
   },
   {
     "q": "In Indian Railways, what is the distance between two 'Traction Substations' (TSS) approximately? / भारतीय रेलवे में, दो 'ट्रैक्शन सबस्टेशन' (TSS) के बीच की दूरी लगभग कितनी होती है?",
-    "o": ["10-20 km", "40-60 km | 40-60 किमी", "100-150 km", "5-10 km"],
-    "a": 1,
+    "o": [
+      "40-60 km | 40-60 किमी",
+      "100-150 km",
+      "10-20 km",
+      "5-10 km"
+    ],
+    "a": 0,
     "e": "TSS are spaced at intervals of 40-60 km to maintain voltage levels along the 25 kV AC line.",
     "cat": "technical",
     "sub": "electric_traction"
   },
   {
     "q": "The 'Contact Wire' in OHE is made of: / OHE में 'कांटेक्ट वायर' (Contact Wire) किसका बना होता है?",
-    "o": ["Aluminum", "Hard-drawn Grooved Copper | हार्ड-ड्रोन ग्रूव्ड कॉपर", "Iron", "Steel"],
-    "a": 1,
+    "o": [
+      "Hard-drawn Grooved Copper | हार्ड-ड्रोन ग्रूव्ड कॉपर",
+      "Aluminum",
+      "Steel",
+      "Iron"
+    ],
+    "a": 0,
     "e": "Hard-drawn copper is used for its high conductivity and resistance to wear from the pantograph.",
     "cat": "technical",
     "sub": "electric_traction"
   },
   {
     "q": "What is the function of a 'Dropper' in OHE? / OHE में 'ड्रॉपर' (Dropper) का क्या कार्य है?",
-    "o": ["To carry main current", "To support and keep contact wire horizontal | कांटेक्ट वायर को सहारा देना और क्षैतिज रखना", "To ground the system", "None"],
-    "a": 1,
+    "o": [
+      "To carry main current",
+      "To ground the system",
+      "None",
+      "To support and keep contact wire horizontal | कांटेक्ट वायर को सहारा देना और क्षैतिज रखना"
+    ],
+    "a": 3,
     "e": "Droppers connect the catenary wire to the contact wire, ensuring the contact wire stays at a uniform height.",
     "cat": "technical",
     "sub": "electric_traction"
   },
   {
     "q": "Which device protects the OHE from high-voltage surges due to lightning? / बिजली गिरने के कारण होने वाले हाई-वोल्टेज सर्ज से OHE की रक्षा कौन सा उपकरण करता है?",
-    "o": ["Circuit Breaker", "Lightning Arrester | लाइटनिंग अरेस्टर", "Isolator", "Fuse"],
-    "a": 1,
+    "o": [
+      "Fuse",
+      "Isolator",
+      "Lightning Arrester | लाइटनिंग अरेस्टर",
+      "Circuit Breaker"
+    ],
+    "a": 2,
     "e": "Lightning arresters provide a low-impedance path to the ground for high-voltage surges.",
     "cat": "technical",
     "sub": "electric_traction"
   },
   {
     "q": "The height of the 'Contact Wire' from the rail level in Indian Railways is generally: / भारतीय रेलवे में रेल स्तर से 'कांटेक्ट वायर' की ऊंचाई आमतौर पर होती है:",
-    "o": ["3.5 meters", "5.5 to 5.8 meters | 5.5 से 5.8 मीटर", "8.0 meters", "2.0 meters"],
-    "a": 1,
+    "o": [
+      "5.5 to 5.8 meters | 5.5 से 5.8 मीटर",
+      "3.5 meters",
+      "2.0 meters",
+      "8.0 meters"
+    ],
+    "a": 0,
     "e": "This height ensures safe clearance for rolling stock while maintaining reliable contact with the pantograph.",
     "cat": "technical",
     "sub": "electric_traction"
   },
   {
     "q": "What is a 'Feeding Post' (FP) in traction? / ट्रैक्शन में 'फीडिंग पोस्ट' (FP) क्या है?",
-    "o": ["A station for coal", "A point where power is fed from TSS to OHE | जहाँ TSS से OHE को पावर दी जाती है", "A training center", "None"],
-    "a": 1,
+    "o": [
+      "None",
+      "A station for coal",
+      "A point where power is fed from TSS to OHE | जहाँ TSS से OHE को पावर दी जाती है",
+      "A training center"
+    ],
+    "a": 2,
     "e": "Feeding post is the physical connection point where the 25 kV supply enters the overhead equipment.",
     "cat": "technical",
     "sub": "electric_traction"
   },
   {
     "q": "Which type of 'Insulator' is used to support OHE wires on structures? / संरचनाओं पर OHE तारों को सहारा देने के लिए किस प्रकार के 'इन्सुलेटर' का उपयोग किया जाता है?",
-    "o": ["Pin insulator", "Stay/Bracket insulator | स्टे/ब्रैकेट इन्सुलेटर", "Shackle insulator", "None"],
-    "a": 1,
+    "o": [
+      "Stay/Bracket insulator | स्टे/ब्रैकेट इन्सुलेटर",
+      "Pin insulator",
+      "Shackle insulator",
+      "None"
+    ],
+    "a": 0,
     "e": "9-tonne or 6-tonne porcelain/composite insulators are used to provide electrical isolation between live wires and masts.",
     "cat": "technical",
     "sub": "electric_traction"
   },
   {
     "q": "What is the use of 'Auto-Tensioning Device' (ATD) in OHE? / OHE में 'ऑटो-टेंशनिंग डिवाइस' (ATD) का क्या उपयोग है?",
-    "o": ["To increase speed", "To keep wire tension constant during temperature changes | तापमान परिवर्तन के दौरान तनाव स्थिर रखना", "To measure voltage", "None"],
-    "a": 1,
+    "o": [
+      "To keep wire tension constant during temperature changes | तापमान परिवर्तन के दौरान तनाव स्थिर रखना",
+      "None",
+      "To increase speed",
+      "To measure voltage"
+    ],
+    "a": 0,
     "e": "ATD uses a pulley and weight system to compensate for the expansion and contraction of wires in summer and winter.",
     "cat": "technical",
     "sub": "electric_traction"
   },
   {
     "q": "In a 25 kV AC system, 'Earthing' of OHE masts is done to: / 25 kV AC सिस्टम में, OHE मास्ट की 'अर्थिंग' क्यों की जाती है?",
-    "o": ["Save electricity", "Ensure safety of personnel and equipment | सुरक्षा सुनिश्चित करने के लिए", "Increase voltage", "None"],
-    "a": 1,
+    "o": [
+      "None",
+      "Save electricity",
+      "Ensure safety of personnel and equipment | सुरक्षा सुनिश्चित करने के लिए",
+      "Increase voltage"
+    ],
+    "a": 2,
     "e": "Earthing ensures that any leakage current or fault is safely directed to the ground, preventing electric shocks.",
     "cat": "technical",
     "sub": "electric_traction"
   },
   {
     "q": "The 'Section Insulator' is used to: / 'सेक्शन इन्सुलेटर' (Section Insulator) का उपयोग किया जाता है:",
-    "o": ["Increase wire strength", "Electrically isolate two sections of OHE while allowing pantograph passage | दो सेक्शन को अलग करना", "Connect two substations", "None"],
-    "a": 1,
+    "o": [
+      "Increase wire strength",
+      "None",
+      "Electrically isolate two sections of OHE while allowing pantograph passage | दो सेक्शन को अलग करना",
+      "Connect two substations"
+    ],
+    "a": 2,
     "e": "It allows a train to move smoothly from one electrical section to another (like at crossovers) without short-circuiting them.",
     "cat": "technical",
     "sub": "electric_traction"
   },
   {
     "q": "What is the primary function of a 'Chopper' in power electronics? / पावर इलेक्ट्रॉनिक्स में 'चॉपर' (Chopper) का प्राथमिक कार्य क्या है?",
-    "o": ["AC to DC conversion", "DC to DC conversion | DC से DC रूपांतरण", "DC to AC conversion", "AC to AC conversion"],
-    "a": 1,
+    "o": [
+      "DC to AC conversion",
+      "AC to AC conversion",
+      "DC to DC conversion | DC से DC रूपांतरण",
+      "AC to DC conversion"
+    ],
+    "a": 2,
     "e": "Choppers are static devices that convert fixed DC input voltage to a variable DC output voltage.",
     "cat": "technical",
     "sub": "power_electronics"
   },
   {
     "q": "A Thyristor (SCR) can be turned off by reducing its current below: / एक थायरिस्टर (SCR) को उसके करंट को किससे कम करके बंद किया जा सकता है?",
-    "o": ["Latching current", "Holding current | होल्डिंग करंट (Holding current)", "Gate current", "Peak current"],
-    "a": 1,
+    "o": [
+      "Gate current",
+      "Peak current",
+      "Holding current | होल्डिंग करंट (Holding current)",
+      "Latching current"
+    ],
+    "a": 2,
     "e": "Holding current is the minimum value of anode current below which the SCR stops conducting and returns to its forward blocking state.",
     "cat": "technical",
     "sub": "power_electronics"
   },
   {
     "q": "Which device is used for 'Step-up' DC-DC conversion? / 'स्टेप-अप' DC-DC रूपांतरण के लिए किस उपकरण का उपयोग किया जाता है?",
-    "o": ["Buck converter", "Boost converter | बूस्ट कन्वर्टर (Boost converter)", "Inverter", "Rectifier"],
-    "a": 1,
+    "o": [
+      "Inverter",
+      "Buck converter",
+      "Rectifier",
+      "Boost converter | बूस्ट कन्वर्टर (Boost converter)"
+    ],
+    "a": 3,
     "e": "A boost converter increases the input DC voltage to a higher output DC level.",
     "cat": "technical",
     "sub": "power_electronics"
   },
   {
     "q": "In an SCR, the 'di/dt' protection is provided by using: / एक SCR में, 'di/dt' सुरक्षा किसके उपयोग से प्रदान की जाती है?",
-    "o": ["Snubber circuit", "Inductor in series | सीरीज में इंडक्टर", "Capacitor in parallel", "Fuse"],
-    "a": 1,
+    "o": [
+      "Fuse",
+      "Capacitor in parallel",
+      "Inductor in series | सीरीज में इंडक्टर",
+      "Snubber circuit"
+    ],
+    "a": 2,
     "e": "An inductor in series with the SCR limits the rate of rise of anode current (di/dt) to prevent local hot spots.",
     "cat": "technical",
     "sub": "power_electronics"
   },
   {
     "q": "What is a 'Cycloconverter'? / 'साइक्लो-कन्वर्टर' (Cycloconverter) क्या है?",
-    "o": ["DC to AC converter", "Frequency changer (AC to AC) | फ्रीक्वेंसी चेंजर (AC से AC)", "Variable DC source", "None"],
-    "a": 1,
+    "o": [
+      "Frequency changer (AC to AC) | फ्रीक्वेंसी चेंजर (AC से AC)",
+      "None",
+      "DC to AC converter",
+      "Variable DC source"
+    ],
+    "a": 0,
     "e": "Cycloconverters convert AC power at one frequency to AC power at a different (usually lower) frequency directly.",
     "cat": "technical",
     "sub": "power_electronics"
   },
   {
     "q": "A 'Snubber Circuit' is used with an SCR to limit the rate of rise of: / एक SCR के साथ 'स्नबर सर्किट' का उपयोग किसके बढ़ने की दर को सीमित करने के लिए किया जाता है?",
-    "o": ["Current (di/dt)", "Voltage (dv/dt) | वोल्टेज (dv/dt)", "Power", "Temperature"],
-    "a": 1,
+    "o": [
+      "Power",
+      "Temperature",
+      "Voltage (dv/dt) | वोल्टेज (dv/dt)",
+      "Current (di/dt)"
+    ],
+    "a": 2,
     "e": "A snubber circuit (RC network) protects the SCR against false triggering due to high voltage spikes.",
     "cat": "technical",
     "sub": "power_electronics"
   },
   {
     "q": "How many layers does a Thyristor (SCR) have? / एक थायरिस्टर (SCR) में कितनी परतें होती हैं?",
-    "o": ["Two", "Three", "Four | चार (Four)", "Five"],
-    "a": 2,
+    "o": [
+      "Three",
+      "Five",
+      "Two",
+      "Four | चार (Four)"
+    ],
+    "a": 3,
     "e": "An SCR is a four-layer (P-N-P-N) semiconductor device with three junctions.",
     "cat": "technical",
     "sub": "power_electronics"
   },
   {
     "q": "Which commutation method is used in DC Choppers? / DC चॉपर्स में किस कम्यूटेशन विधि का उपयोग किया जाता है?",
-    "o": ["Natural commutation", "Forced commutation | फोर्स्ड कम्यूटेशन (Forced commutation)", "Phase commutation", "None"],
-    "a": 1,
+    "o": [
+      "Forced commutation | फोर्स्ड कम्यूटेशन (Forced commutation)",
+      "Natural commutation",
+      "Phase commutation",
+      "None"
+    ],
+    "a": 0,
     "e": "Since DC supply doesn't have natural zero crossings, external circuits are needed to turn off the SCR.",
     "cat": "technical",
     "sub": "power_electronics"
   },
   {
     "q": "The gate-to-cathode resistance of an SCR is: / SCR की गेट-टू-कैथोड रेजिस्टेंस होती है:",
-    "o": ["Very high", "Very low | बहुत कम", "Infinite", "Zero"],
-    "a": 1,
+    "o": [
+      "Zero",
+      "Infinite",
+      "Very low | बहुत कम",
+      "Very high"
+    ],
+    "a": 2,
     "e": "Gate-to-cathode path acts like a forward-biased P-N junction, showing low resistance.",
     "cat": "technical",
     "sub": "power_electronics"
   },
   {
     "q": "What is the typical firing angle (α) range for a fully controlled rectifier? / पूरी तरह से नियंत्रित रेक्टिफायर के लिए विशिष्ट फायरिंग एंगल (α) रेंज क्या है?",
-    "o": ["0 to 90°", "0 to 180° | 0 से 180°", "90 to 270°", "None"],
+    "o": [
+      "0 to 90°",
+      "0 to 180° | 0 से 180°",
+      "None",
+      "90 to 270°"
+    ],
     "a": 1,
     "e": "By varying α from 0 to 180 degrees, the output DC voltage can be controlled from maximum to minimum.",
     "cat": "technical",
@@ -906,7 +1470,12 @@
   },
   {
     "q": "What is the primary purpose of a 'Track Circuit'? / 'ट्रैक सर्किट' (Track Circuit) का प्राथमिक उद्देश्य क्या है?",
-    "o": ["To provide power to train", "To detect train presence on the track | ट्रैक पर ट्रेन की उपस्थिति का पता लगाना", "To measure train speed", "None"],
+    "o": [
+      "None",
+      "To detect train presence on the track | ट्रैक पर ट्रेन की उपस्थिति का पता लगाना",
+      "To provide power to train",
+      "To measure train speed"
+    ],
     "a": 1,
     "e": "Track circuits use the rails as conductors to complete a circuit; when a train is present, it shorts the circuit, signaling an occupied section.",
     "cat": "technical",
@@ -914,23 +1483,38 @@
   },
   {
     "q": "In a 'DC Track Circuit', what happens to the relay when a train enters the section? / 'DC ट्रैक सर्किट' में, जब ट्रेन सेक्शन में प्रवेश करती है तो रिले का क्या होता है?",
-    "o": ["It gets energized", "It gets de-energized | यह डी-एनर्जाइज हो जाता है", "It starts vibrating", "None"],
-    "a": 1,
+    "o": [
+      "None",
+      "It starts vibrating",
+      "It gets energized",
+      "It gets de-energized | यह डी-एनर्जाइज हो जाता है"
+    ],
+    "a": 3,
     "e": "The train's wheels and axle provide a low-resistance path, bypassing the relay and causing it to drop (de-energize).",
     "cat": "technical",
     "sub": "electric_traction"
   },
   {
     "q": "Which signal aspect indicates 'Proceed at normal speed'? / कौन सा सिग्नल एस्पेक्ट 'सामान्य गति से आगे बढ़ें' का संकेत देता है?",
-    "o": ["Red", "Yellow", "Green | हरा (Green)", "Double Yellow"],
-    "a": 2,
+    "o": [
+      "Green | हरा (Green)",
+      "Red",
+      "Double Yellow",
+      "Yellow"
+    ],
+    "a": 0,
     "e": "Green signal indicates that the next two or more blocks are clear.",
     "cat": "technical",
     "sub": "electric_traction"
   },
   {
     "q": "What is the function of an 'Insulated Rail Joint' (IRJ)? / 'इन्सुलेटेड रेल जॉइंट' (IRJ) का कार्य क्या है?",
-    "o": ["To join two rails", "To electrically separate two track circuit sections | दो ट्रैक सर्किट सेक्शन को अलग करना", "To increase strength", "None"],
+    "o": [
+      "None",
+      "To electrically separate two track circuit sections | दो ट्रैक सर्किट सेक्शन को अलग करना",
+      "To increase strength",
+      "To join two rails"
+    ],
     "a": 1,
     "e": "IRJs prevent the track circuit current from leaking into adjacent sections, ensuring precise detection.",
     "cat": "technical",
@@ -938,55 +1522,90 @@
   },
   {
     "q": "A 'Caution' signal (Single Yellow) means the driver should: / 'सावधान' सिग्नल (सिंगल येलो) का मतलब है कि ड्राइवर को:",
-    "o": ["Stop immediately", "Proceed and be prepared to stop at the next signal | अगले सिग्नल पर रुकने के लिए तैयार रहें", "Maintain full speed", "None"],
-    "a": 1,
+    "o": [
+      "Maintain full speed",
+      "None",
+      "Stop immediately",
+      "Proceed and be prepared to stop at the next signal | अगले सिग्नल पर रुकने के लिए तैयार रहें"
+    ],
+    "a": 3,
     "e": "Yellow aspect indicates that the next block is clear but the one after that is occupied.",
     "cat": "technical",
     "sub": "electric_traction"
   },
   {
     "q": "What does 'Interlocking' prevent in railway signaling? / रेलवे सिग्नलिंग में 'इंटरलॉकिंग' क्या रोकता है?",
-    "o": ["Train delay", "Conflicting movements and accidents | विरोधाभासी गति और दुर्घटनाएं", "High fuel consumption", "None"],
-    "a": 1,
+    "o": [
+      "None",
+      "High fuel consumption",
+      "Train delay",
+      "Conflicting movements and accidents | विरोधाभासी गति और दुर्घटनाएं"
+    ],
+    "a": 3,
     "e": "Interlocking ensures that signals and points are set in a way that no two trains are given conflicting routes.",
     "cat": "technical",
     "sub": "electric_traction"
   },
   {
     "q": "Which device is used to detect axle counts for verifying if a train has completely left a section? / यह सत्यापित करने के लिए कि ट्रेन पूरी तरह से सेक्शन छोड़ चुकी है, किस उपकरण का उपयोग किया जाता है?",
-    "o": ["Track circuit", "Axle Counter | एक्सल काउंटर", "Radar", "Speedometer"],
-    "a": 1,
+    "o": [
+      "Axle Counter | एक्सल काउंटर",
+      "Radar",
+      "Track circuit",
+      "Speedometer"
+    ],
+    "a": 0,
     "e": "Axle counters count the number of axles entering and leaving a section; if the count matches, the section is clear.",
     "cat": "technical",
     "sub": "electric_traction"
   },
   {
     "q": "The 'Home Signal' is located: / 'होम सिग्नल' कहाँ स्थित होता है?",
-    "o": ["In the middle of the station", "At the entrance of a station | स्टेशन के प्रवेश द्वार पर", "Inside the locomotive cabin", "None"],
-    "a": 1,
+    "o": [
+      "In the middle of the station",
+      "None",
+      "At the entrance of a station | स्टेशन के प्रवेश द्वार पर",
+      "Inside the locomotive cabin"
+    ],
+    "a": 2,
     "e": "Home signal protects the station limits and controls the entry of trains into the platform area.",
     "cat": "technical",
     "sub": "electric_traction"
   },
   {
     "q": "In automated signaling, 'Fail-safe' principle means: / स्वचालित सिग्नलिंग में, 'फेल-सेफ' सिद्धांत का अर्थ है:",
-    "o": ["System never fails", "If a failure occurs, it results in a safe state (Red signal) | विफलता होने पर सुरक्षित स्थिति (लाल सिग्नल) होना", "System repairs itself", "None"],
-    "a": 1,
+    "o": [
+      "System never fails",
+      "None",
+      "System repairs itself",
+      "If a failure occurs, it results in a safe state (Red signal) | विफलता होने पर सुरक्षित स्थिति (लाल सिग्नल) होना"
+    ],
+    "a": 3,
     "e": "Signaling systems are designed so that any electrical or mechanical failure automatically turns signals to danger (Red).",
     "cat": "technical",
     "sub": "electric_traction"
   },
   {
     "q": "What is the use of 'AWS' (Automatic Warning System) in railways? / रेलवे में 'AWS' का क्या उपयोग है?",
-    "o": ["To check fuel", "To warn the driver about signal aspects | सिग्नल के बारे में ड्राइवर को चेतावनी देना", "To increase speed", "None"],
-    "a": 1,
+    "o": [
+      "None",
+      "To check fuel",
+      "To warn the driver about signal aspects | सिग्नल के बारे में ड्राइवर को चेतावनी देना",
+      "To increase speed"
+    ],
+    "a": 2,
     "e": "AWS provides an audible and visual warning to the driver inside the cab about the upcoming signal's status.",
     "cat": "technical",
     "sub": "electric_traction"
   },
   {
     "q": "Which characteristic of a DC Series Motor makes it ideal for Electric Traction? / DC सीरीज मोटर की कौन सी विशेषता इसे इलेक्ट्रिक ट्रैक्शन के लिए आदर्श बनाती है?",
-    "o": ["Constant speed", "High starting torque | उच्च प्रारंभिक टॉर्क", "Low power consumption", "None"],
+    "o": [
+      "Constant speed",
+      "High starting torque | उच्च प्रारंभिक टॉर्क",
+      "Low power consumption",
+      "None"
+    ],
     "a": 1,
     "e": "Traction requires a very high starting torque to move heavy loads from rest, which is a key feature of DC series motors.",
     "cat": "technical",
@@ -994,7 +1613,12 @@
   },
   {
     "q": "What does 'HOG' stand for in modern train lighting systems? / आधुनिक ट्रेन लाइटिंग सिस्टम में 'HOG' का क्या अर्थ है?",
-    "o": ["High Output Generator", "Head On Generation | हेड ऑन जनरेशन", "Heavy Overhead Gear", "None"],
+    "o": [
+      "Heavy Overhead Gear",
+      "Head On Generation | हेड ऑन जनरेशन",
+      "High Output Generator",
+      "None"
+    ],
     "a": 1,
     "e": "HOG system draws power directly from the OHE via the locomotive to power the entire train, improving efficiency.",
     "cat": "technical",
@@ -1002,15 +1626,25 @@
   },
   {
     "q": "In the 'SG' (Self Generation) system, where is the alternator mounted? / 'SG' (Self Generation) सिस्टम में अल्टरनेटर कहाँ लगा होता है?",
-    "o": ["Inside the engine", "Under the coach frame (Axle driven) | कोच फ्रेम के नीचे (एक्सल संचालित)", "On the roof", "In the power car"],
-    "a": 1,
+    "o": [
+      "In the power car",
+      "Inside the engine",
+      "Under the coach frame (Axle driven) | कोच फ्रेम के नीचे (एक्सल संचालित)",
+      "On the roof"
+    ],
+    "a": 2,
     "e": "In SG systems, an axle-driven belt drives the alternator to charge batteries and power lights while the train is moving.",
     "cat": "technical",
     "sub": "electric_traction"
   },
   {
     "q": "What is the primary advantage of the '3-Phase Induction Motor' in modern electric locomotives? / आधुनिक इलेक्ट्रिक लोकोमोटिव में '3-फेस इंडक्शन मोटर' का प्राथमिक लाभ क्या है?",
-    "o": ["Low speed", "High maintenance", "Robustness and low maintenance | मजबूती और कम रखरखाव", "None"],
+    "o": [
+      "None",
+      "High maintenance",
+      "Robustness and low maintenance | मजबूती और कम रखरखाव",
+      "Low speed"
+    ],
     "a": 2,
     "e": "Modern locomotives use AC induction motors because they are simpler, lighter, and require much less maintenance than DC motors.",
     "cat": "technical",
@@ -1018,47 +1652,77 @@
   },
   {
     "q": "Which type of lighting scheme requires a separate 'Power Car' at both ends of the train? / किस लाइटिंग स्कीम में ट्रेन के दोनों सिरों पर अलग 'पावर कार' की आवश्यकता होती है?",
-    "o": ["SG system", "HOG system", "EOG (End On Generation) | EOG सिस्टम", "None"],
-    "a": 2,
+    "o": [
+      "SG system",
+      "None",
+      "HOG system",
+      "EOG (End On Generation) | EOG सिस्टम"
+    ],
+    "a": 3,
     "e": "EOG systems use diesel generator sets in power cars to supply electricity to the rest of the coaches.",
     "cat": "technical",
     "sub": "electric_traction"
   },
   {
     "q": "The speed-torque characteristic of a Traction Motor should be: / एक ट्रैक्शन मोटर की स्पीड-टॉर्क विशेषता होनी चाहिए:",
-    "o": ["Linear", "Parabolic", "Hyperbolic | अतिपरवलयिक (Hyperbolic)", "Constant"],
-    "a": 2,
+    "o": [
+      "Hyperbolic | अतिपरवलयिक (Hyperbolic)",
+      "Linear",
+      "Parabolic",
+      "Constant"
+    ],
+    "a": 0,
     "e": "A hyperbolic characteristic ensures high torque at low speeds and lower torque at high speeds, which is ideal for vehicle movement.",
     "cat": "technical",
     "sub": "electric_traction"
   },
   {
     "q": "In HOG scheme, what device is used in the locomotive to provide power to coaches? / HOG स्कीम में, कोचों को पावर देने के लिए लोकोमोटिव में किस उपकरण का उपयोग किया जाता है?",
-    "o": ["Rectifier", "Hotel Load Converter | होटल लोड कन्वर्टर", "Step-down transformer", "None"],
-    "a": 1,
+    "o": [
+      "None",
+      "Rectifier",
+      "Hotel Load Converter | होटल लोड कन्वर्टर",
+      "Step-down transformer"
+    ],
+    "a": 2,
     "e": "The Hotel Load Converter converts the OHE power into the required voltage and frequency for coach appliances.",
     "cat": "technical",
     "sub": "electric_traction"
   },
   {
     "q": "What is the nominal battery voltage used in most Indian Railway SG coaches? / अधिकांश भारतीय रेलवे SG कोचों में उपयोग किया जाने वाला नाममात्र बैटरी वोल्टेज क्या है?",
-    "o": ["12V", "24V", "110V | 110V", "230V"],
-    "a": 2,
+    "o": [
+      "230V",
+      "24V",
+      "12V",
+      "110V | 110V"
+    ],
+    "a": 3,
     "e": "Indian Railways uses 110V DC as a standard for lighting and fans in non-AC and AC coaches.",
     "cat": "technical",
     "sub": "electric_traction"
   },
   {
     "q": "Which braking method is most efficient for energy saving in traction? / ट्रैक्शन में ऊर्जा की बचत के लिए कौन सी ब्रेकिंग विधि सबसे कुशल है?",
-    "o": ["Vacuum braking", "Rheostatic braking", "Regenerative braking | पुनर्योजी ब्रेकिंग", "Mechanical braking"],
-    "a": 2,
+    "o": [
+      "Regenerative braking | पुनर्योजी ब्रेकिंग",
+      "Vacuum braking",
+      "Rheostatic braking",
+      "Mechanical braking"
+    ],
+    "a": 0,
     "e": "Regenerative braking feeds the generated electricity back into the OHE line, saving significant energy.",
     "cat": "technical",
     "sub": "electric_traction"
   },
   {
     "q": "The 'Tractive Effort' of a locomotive is the: / एक लोकोमोटिव का 'ट्रैक्टिव एफर्ट' (Tractive Effort) क्या है?",
-    "o": ["Weight of the train", "Force available at the wheel rims for motion | पहियों पर उपलब्ध बल", "Speed of the train", "None"],
+    "o": [
+      "Weight of the train",
+      "Force available at the wheel rims for motion | पहियों पर उपलब्ध बल",
+      "Speed of the train",
+      "None"
+    ],
     "a": 1,
     "e": "Tractive effort is the pulling force exerted by the locomotive to overcome resistance and move the train.",
     "cat": "technical",
@@ -1066,15 +1730,25 @@
   },
   {
     "q": "Which traction system is widely used in India for main-line railways? / भारत में मुख्य-लाइन रेलवे के लिए कौन सी ट्रैक्शन प्रणाली व्यापक रूप से उपयोग की जाती है?",
-    "o": ["DC Traction", "25 kV AC, 50 Hz | 25 kV AC, 50 Hz", "Diesel only", "3-Phase AC"],
-    "a": 1,
+    "o": [
+      "DC Traction",
+      "Diesel only",
+      "3-Phase AC",
+      "25 kV AC, 50 Hz | 25 kV AC, 50 Hz"
+    ],
+    "a": 3,
     "e": "The 25 kV single-phase AC system is the standard for electrification in Indian Railways.",
     "cat": "technical",
     "sub": "electric_traction"
   },
   {
     "q": "What is 'OHE' in railway terminology? / रेलवे शब्दावली में 'OHE' क्या है?",
-    "o": ["Overhead Engine", "Overhead Equipment | ओवरहेड इक्विपमेंट", "Outer High Energy", "None"],
+    "o": [
+      "None",
+      "Overhead Equipment | ओवरहेड इक्विपमेंट",
+      "Overhead Engine",
+      "Outer High Energy"
+    ],
     "a": 1,
     "e": "OHE refers to the system of wires (catenary and contact wire) that supplies power to electric trains.",
     "cat": "technical",
@@ -1082,31 +1756,51 @@
   },
   {
     "q": "The function of a 'Pantograph' is to: / 'पेंटोग्राफ' (Pantograph) का कार्य क्या है?",
-    "o": ["Steer the train", "Collect current from the OHE | OHE से करंट इकट्ठा करना", "Apply brakes", "None"],
-    "a": 1,
+    "o": [
+      "Steer the train",
+      "Apply brakes",
+      "None",
+      "Collect current from the OHE | OHE से करंट इकट्ठा करना"
+    ],
+    "a": 3,
     "e": "The pantograph is mounted on the roof of the locomotive and maintains contact with the overhead wire.",
     "cat": "technical",
     "sub": "electric_traction"
   },
   {
     "q": "Which braking system returns energy back to the supply line? / कौन सी ब्रेकिंग प्रणाली ऊर्जा को वापस सप्लाई लाइन में भेजती है?",
-    "o": ["Mechanical braking", "Rheostatic braking", "Regenerative braking | पुनर्योजी ब्रेकिंग (Regenerative)", "Plug braking"],
-    "a": 2,
+    "o": [
+      "Regenerative braking | पुनर्योजी ब्रेकिंग (Regenerative)",
+      "Plug braking",
+      "Rheostatic braking",
+      "Mechanical braking"
+    ],
+    "a": 0,
     "e": "In regenerative braking, motors act as generators and pump power back into the OHE during deceleration.",
     "cat": "technical",
     "sub": "electric_traction"
   },
   {
     "q": "What is the purpose of a 'Track Circuit'? / 'ट्रैक सर्किट' (Track Circuit) का उद्देश्य क्या है?",
-    "o": ["To charge the train battery", "To detect the presence of a train on a section | ट्रेन की उपस्थिति का पता लगाना", "To provide lighting", "None"],
-    "a": 1,
+    "o": [
+      "To charge the train battery",
+      "To provide lighting",
+      "To detect the presence of a train on a section | ट्रेन की उपस्थिति का पता लगाना",
+      "None"
+    ],
+    "a": 2,
     "e": "Track circuits are fundamental for signaling, ensuring that a section is clear before another train enters.",
     "cat": "technical",
     "sub": "electric_traction"
   },
   {
     "q": "In 'HOG' (Head On Generation) system, power for coaches is taken from: / 'HOG' सिस्टम में, कोचों के लिए पावर कहाँ से ली जाती है?",
-    "o": ["Individual generators in coaches", "Main Locomotive | मुख्य लोकोमोटिव", "Battery banks", "None"],
+    "o": [
+      "None",
+      "Main Locomotive | मुख्य लोकोमोटिव",
+      "Battery banks",
+      "Individual generators in coaches"
+    ],
     "a": 1,
     "e": "HOG takes power directly from the overhead line via the locomotive, eliminating the need for noise-producing power cars.",
     "cat": "technical",
@@ -1114,7 +1808,12 @@
   },
   {
     "q": "Which motor is traditionally preferred for electric traction due to high starting torque? / उच्च प्रारंभिक टॉर्क के कारण इलेक्ट्रिक ट्रैक्शन के लिए पारंपरिक रूप से कौन सा मोटर पसंद किया जाता है?",
-    "o": ["DC Shunt Motor", "DC Series Motor | DC सीरीज मोटर", "Induction Motor", "None"],
+    "o": [
+      "DC Shunt Motor",
+      "DC Series Motor | DC सीरीज मोटर",
+      "Induction Motor",
+      "None"
+    ],
     "a": 1,
     "e": "DC series motors have characteristics perfectly suited for the heavy starting requirements of trains.",
     "cat": "technical",
@@ -1122,7 +1821,12 @@
   },
   {
     "q": "The 'Catenary Wire' in OHE is used to: / OHE में 'कैटनरी वायर' का उपयोग क्यों किया जाता है?",
-    "o": ["Carry current only", "Support the contact wire to keep it horizontal | कांटेक्ट वायर को सहारा देना", "Connect to ground", "None"],
+    "o": [
+      "Carry current only",
+      "Support the contact wire to keep it horizontal | कांटेक्ट वायर को सहारा देना",
+      "Connect to ground",
+      "None"
+    ],
     "a": 1,
     "e": "The catenary wire supports the contact wire via droppers to ensure it stays level for the pantograph.",
     "cat": "technical",
@@ -1130,7 +1834,12 @@
   },
   {
     "q": "What is a 'Neutral Section' in electric traction? / इलेक्ट्रिक ट्रैक्शन में 'न्यूट्रल सेक्शन' क्या है?",
-    "o": ["Section with double voltage", "An un-energized dead zone between two power phases | दो चरणों के बीच का मृत क्षेत्र", "A repair zone", "None"],
+    "o": [
+      "None",
+      "An un-energized dead zone between two power phases | दो चरणों के बीच का मृत क्षेत्र",
+      "Section with double voltage",
+      "A repair zone"
+    ],
     "a": 1,
     "e": "Neutral sections prevent the short-circuiting of two different phases or substations via the pantograph.",
     "cat": "technical",
@@ -1138,23 +1847,38 @@
   },
   {
     "q": "Which relay is commonly used for protection in traction substations? / ट्रैक्शन सबस्टेशन में सुरक्षा के लिए आमतौर पर किस रिले का उपयोग किया जाता है?",
-    "o": ["Distance Relay | डिस्टेंस रिले", "Thermal Relay", "Buchholz Relay", "None"],
-    "a": 0,
+    "o": [
+      "None",
+      "Distance Relay | डिस्टेंस रिले",
+      "Buchholz Relay",
+      "Thermal Relay"
+    ],
+    "a": 1,
     "e": "Distance relays are used to protect the OHE from faults by measuring the impedance of the line.",
     "cat": "technical",
     "sub": "electric_traction"
   },
   {
     "q": "Which power electronic device is also known as a 'Silicon Controlled Rectifier' (SCR)? / किस पावर इलेक्ट्रॉनिक डिवाइस को 'सिलिकॉन कंट्रोल्ड रेक्टिफायर' (SCR) भी कहा जाता है?",
-    "o": ["Transistor", "Thyristor | थायरिस्टर (Thyristor)", "Diode", "Triac"],
-    "a": 1,
+    "o": [
+      "Diode",
+      "Transistor",
+      "Thyristor | थायरिस्टर (Thyristor)",
+      "Triac"
+    ],
+    "a": 2,
     "e": "SCR is the most common member of the thyristor family, used as a controllable switch in power circuits.",
     "cat": "technical",
     "sub": "power_electronics"
   },
   {
     "q": "What is the function of an 'Inverter'? / एक 'इन्वर्टर' (Inverter) का कार्य क्या है?",
-    "o": ["To convert AC to DC", "To convert DC to AC | DC को AC में बदलना", "To increase frequency", "None"],
+    "o": [
+      "None",
+      "To convert DC to AC | DC को AC में बदलना",
+      "To increase frequency",
+      "To convert AC to DC"
+    ],
     "a": 1,
     "e": "Inverters change direct current (DC) into alternating current (AC) at required frequency and voltage.",
     "cat": "technical",
@@ -1162,23 +1886,38 @@
   },
   {
     "q": "Which device is used to convert constant DC voltage to variable DC voltage? / स्थिर DC वोल्टेज को परिवर्तनीय DC वोल्टेज में बदलने के लिए किस उपकरण का उपयोग किया जाता है?",
-    "o": ["Rectifier", "Inverter", "Chopper | चॉपर (Chopper)", "Cycloconverter"],
-    "a": 2,
+    "o": [
+      "Cycloconverter",
+      "Inverter",
+      "Rectifier",
+      "Chopper | चॉपर (Chopper)"
+    ],
+    "a": 3,
     "e": "Choppers act as DC-to-DC converters by high-speed switching to regulate average output voltage.",
     "cat": "technical",
     "sub": "power_electronics"
   },
   {
     "q": "A 'Triac' is a bidirectional device that is equivalent to: / 'ट्राएक' (Triac) एक द्विदिश उपकरण है जो किसके बराबर है?",
-    "o": ["Two diodes in series", "Two SCRs in parallel", "Two SCRs in anti-parallel | दो SCRs एंटी-पैरेलल में", "None"],
-    "a": 2,
+    "o": [
+      "Two SCRs in anti-parallel | दो SCRs एंटी-पैरेलल में",
+      "Two diodes in series",
+      "Two SCRs in parallel",
+      "None"
+    ],
+    "a": 0,
     "e": "Triacs can conduct current in both directions, making them ideal for AC power control.",
     "cat": "technical",
     "sub": "power_electronics"
   },
   {
     "q": "In a Thyristor, 'Latching Current' is ________ than holding current. / थायरिस्टर में, 'लैचिंग करंट', होल्डिंग करंट की तुलना में ________ होता है।",
-    "o": ["Less", "Exactly equal", "More | अधिक", "Half"],
+    "o": [
+      "Exactly equal",
+      "Less",
+      "More | अधिक",
+      "Half"
+    ],
     "a": 2,
     "e": "Latching current is associated with the turn-on process, while holding current is associated with the turn-off process.",
     "cat": "technical",
@@ -1186,31 +1925,51 @@
   },
   {
     "q": "Which cooling method is most common for high-power thyristors? / हाई-पावर थायरिस्टर के लिए कौन सी कूलिंग विधि सबसे आम है?",
-    "o": ["Natural air cooling", "Heat sinks with forced air | हीट सिंक और फोर्स्ड एयर", "Water immersion", "None"],
-    "a": 1,
+    "o": [
+      "Water immersion",
+      "None",
+      "Heat sinks with forced air | हीट सिंक और फोर्स्ड एयर",
+      "Natural air cooling"
+    ],
+    "a": 2,
     "e": "Heat sinks increase the surface area for heat dissipation, often aided by fans.",
     "cat": "technical",
     "sub": "power_electronics"
   },
   {
     "q": "What is a 'Freewheeling Diode' used for in power circuits? / पावर सर्किट में 'फ्रीव्हीलिंग डायोड' का उपयोग क्यों किया जाता है?",
-    "o": ["To increase voltage", "To protect against inductive voltage spikes | इंडक्टिव वोल्टेज स्पाइक्स से सुरक्षा", "To convert AC to DC", "None"],
-    "a": 1,
+    "o": [
+      "To increase voltage",
+      "To convert AC to DC",
+      "To protect against inductive voltage spikes | इंडक्टिव वोल्टेज स्पाइक्स से सुरक्षा",
+      "None"
+    ],
+    "a": 2,
     "e": "It provides a path for the current when the main switch is turned off, preventing damage from stored energy in inductors.",
     "cat": "technical",
     "sub": "power_electronics"
   },
   {
     "q": "Which device is used to change AC power of one frequency to AC power of another frequency directly? / एक आवृत्ति की AC पावर को सीधे दूसरी आवृत्ति की AC पावर में बदलने के लिए किसका उपयोग किया जाता है?",
-    "o": ["Inverter", "Chopper", "Cycloconverter | साइक्लो-कन्वर्टर", "Rectifier"],
-    "a": 2,
+    "o": [
+      "Chopper",
+      "Rectifier",
+      "Inverter",
+      "Cycloconverter | साइक्लो-कन्वर्टर"
+    ],
+    "a": 3,
     "e": "Cycloconverters perform direct AC-to-AC conversion without an intermediate DC link.",
     "cat": "technical",
     "sub": "power_electronics"
   },
   {
     "q": "The gate signal in an SCR is used to: / SCR में गेट सिग्नल का उपयोग किया जाता है:",
-    "o": ["Turn off the device", "Turn on the device | डिवाइस को चालू करने के लिए", "Regulate the voltage", "None"],
+    "o": [
+      "Turn off the device",
+      "Turn on the device | डिवाइस को चालू करने के लिए",
+      "None",
+      "Regulate the voltage"
+    ],
     "a": 1,
     "e": "A small gate current triggers the SCR into conduction mode when it is forward biased.",
     "cat": "technical",
@@ -1218,7 +1977,12 @@
   },
   {
     "q": "What is the typical efficiency of a Power Electronic converter? / पावर इलेक्ट्रॉनिक कन्वर्टर की विशिष्ट दक्षता क्या होती है?",
-    "o": ["Low (around 50%)", "High (above 90%) | उच्च (90% से अधिक)", "Moderate (70%)", "Zero"],
+    "o": [
+      "Moderate (70%)",
+      "High (above 90%) | उच्च (90% से अधिक)",
+      "Low (around 50%)",
+      "Zero"
+    ],
     "a": 1,
     "e": "Due to switching operation rather than linear regulation, power electronic circuits are highly efficient.",
     "cat": "technical",
@@ -1226,23 +1990,38 @@
   },
   {
     "q": "What is the working principle of a 'Transformer'? / 'ट्रांसफॉर्मर' का कार्य सिद्धांत क्या है?",
-    "o": ["Self Induction", "Mutual Induction | अन्योन्य प्रेरण (Mutual Induction)", "Eddy current", "Lorentz force"],
-    "a": 1,
+    "o": [
+      "Lorentz force",
+      "Eddy current",
+      "Self Induction",
+      "Mutual Induction | अन्योन्य प्रेरण (Mutual Induction)"
+    ],
+    "a": 3,
     "e": "Transformers transfer electrical energy between circuits through a varying magnetic field without a direct connection.",
     "cat": "technical",
     "sub": "electrical_machines"
   },
   {
     "q": "In a DC Motor, the function of a 'Commutator' is to: / DC मोटर में 'कम्यूटेटर' का कार्य क्या है?",
-    "o": ["Reduce friction", "Convert AC to DC within the armature | आर्मेचर के अंदर AC को DC में बदलना", "Reverse the current direction in armature | आर्मेचर में धारा की दिशा बदलना", "Increase speed"],
-    "a": 2,
+    "o": [
+      "Reverse the current direction in armature | आर्मेचर में धारा की दिशा बदलना",
+      "Reduce friction",
+      "Increase speed",
+      "Convert AC to DC within the armature | आर्मेचर के अंदर AC को DC में बदलना"
+    ],
+    "a": 0,
     "e": "The commutator maintains unidirectional torque by reversing the current in the armature conductors as they pass magnetic poles.",
     "cat": "technical",
     "sub": "electrical_machines"
   },
   {
     "q": "Which part of a DC machine is laminated to reduce 'Eddy Current Loss'? / 'एडी करंट लॉस' को कम करने के लिए DC मशीन के किस हिस्से को लैमिनेट किया जाता है?",
-    "o": ["Yoke", "Brushes", "Armature Core | आर्मेचर कोर", "Shaft"],
+    "o": [
+      "Brushes",
+      "Shaft",
+      "Armature Core | आर्मेचर कोर",
+      "Yoke"
+    ],
     "a": 2,
     "e": "Laminations break the path of eddy currents, significantly reducing the heat loss in the core.",
     "cat": "technical",
@@ -1250,15 +2029,25 @@
   },
   {
     "q": "A transformer that increases the voltage from primary to secondary is called a: / वह ट्रांसफॉर्मर जो वोल्टेज को प्राइमरी से सेकेंडरी तक बढ़ाता है, कहलाता है:",
-    "o": ["Step-down transformer", "Auto transformer", "Step-up transformer | स्टेप-अप ट्रांसफॉर्मर", "Isolation transformer"],
-    "a": 2,
+    "o": [
+      "Isolation transformer",
+      "Step-down transformer",
+      "Auto transformer",
+      "Step-up transformer | स्टेप-अप ट्रांसफॉर्मर"
+    ],
+    "a": 3,
     "e": "In a step-up transformer, the number of turns in the secondary winding is greater than in the primary.",
     "cat": "technical",
     "sub": "electrical_machines"
   },
   {
     "q": "The 'EMF equation' of a transformer is given by: / ट्रांसफॉर्मर का 'EMF समीकरण' किसके द्वारा दिया जाता है?",
-    "o": ["E = 4.44 f Φ N | E = 4.44 f Φ N", "E = V * I", "E = 2π f L", "None"],
+    "o": [
+      "E = 4.44 f Φ N | E = 4.44 f Φ N",
+      "None",
+      "E = V * I",
+      "E = 2π f L"
+    ],
     "a": 0,
     "e": "The induced EMF depends on frequency (f), maximum flux (Φ), and the number of turns (N).",
     "cat": "technical",
@@ -1266,31 +2055,51 @@
   },
   {
     "q": "What is 'Back EMF' in a DC motor? / DC मोटर में 'बैक EMF' क्या है?",
-    "o": ["External voltage", "Induced EMF that opposes applied voltage | प्रेरित EMF जो लागू वोल्टेज का विरोध करता है", "Voltage at brushes", "None"],
-    "a": 1,
+    "o": [
+      "None",
+      "External voltage",
+      "Voltage at brushes",
+      "Induced EMF that opposes applied voltage | प्रेरित EMF जो लागू वोल्टेज का विरोध करता है"
+    ],
+    "a": 3,
     "e": "Back EMF is generated by the armature rotation in the magnetic field and regulates the motor's current consumption.",
     "cat": "technical",
     "sub": "electrical_machines"
   },
   {
     "q": "Which type of DC motor is most suitable for 'Traction' (Railways) due to its high starting torque? / उच्च प्रारंभिक टॉर्क के कारण 'ट्रैक्शन' (रेलवे) के लिए कौन सा DC मोटर सबसे उपयुक्त है?",
-    "o": ["Shunt motor", "Compound motor", "Series motor | सीरीज मोटर", "Differential motor"],
-    "a": 2,
+    "o": [
+      "Differential motor",
+      "Series motor | सीरीज मोटर",
+      "Compound motor",
+      "Shunt motor"
+    ],
+    "a": 1,
     "e": "DC series motors produce very high torque at low speeds, making them ideal for starting heavy loads like trains.",
     "cat": "technical",
     "sub": "electrical_machines"
   },
   {
     "q": "In an Alternator, what rotates while the armature remains stationary? / एक अल्टरनेटर में, आर्मेचर स्थिर रहने पर क्या घूमता है?",
-    "o": ["Brushes", "Magnetic Field (Rotor) | चुंबकीय क्षेत्र (रोटर)", "Commutator", "None"],
-    "a": 1,
+    "o": [
+      "Commutator",
+      "None",
+      "Brushes",
+      "Magnetic Field (Rotor) | चुंबकीय क्षेत्र (रोटर)"
+    ],
+    "a": 3,
     "e": "Most modern alternators use a rotating field and stationary armature for better insulation and efficiency.",
     "cat": "technical",
     "sub": "electrical_machines"
   },
   {
     "q": "The transformer core is made of 'Silicon Steel' to reduce: / ट्रांसफॉर्मर कोर को 'सिलिकॉन स्टील' से बनाया जाता है ताकि कम किया जा सके:",
-    "o": ["Copper loss", "Hysteresis loss | हिस्टेरेसिस हानि (Hysteresis loss)", "Windage loss", "None"],
+    "o": [
+      "Windage loss",
+      "Hysteresis loss | हिस्टेरेसिस हानि (Hysteresis loss)",
+      "Copper loss",
+      "None"
+    ],
     "a": 1,
     "e": "Silicon steel has low retentivity and high permeability, which minimizes the energy lost during magnetic cycles.",
     "cat": "technical",
@@ -1298,7 +2107,12 @@
   },
   {
     "q": "What happens if a DC motor is connected to an AC supply? / यदि DC मोटर को AC सप्लाई से जोड़ दिया जाए तो क्या होगा?",
-    "o": ["It will run at high speed", "It will spark and overheat | इसमें स्पार्किंग और ओवरहीटिंग होगी", "It will work normally", "None"],
+    "o": [
+      "It will work normally",
+      "It will spark and overheat | इसमें स्पार्किंग और ओवरहीटिंग होगी",
+      "It will run at high speed",
+      "None"
+    ],
     "a": 1,
     "e": "Due to alternating flux, eddy currents and hysteresis losses would be extremely high, and commutation would fail.",
     "cat": "technical",
@@ -1306,63 +2120,103 @@
   },
   {
     "q": "Which law states that the current flowing through a conductor is directly proportional to the potential difference across its ends? / किस नियम के अनुसार चालक से बहने वाली धारा उसके सिरों के बीच विभवांतर के सीधे आनुपातिक होती है?",
-    "o": ["Kirchhoff's Law", "Faraday's Law", "Ohm's Law | ओम का नियम", "Lenz's Law"],
-    "a": 2,
+    "o": [
+      "Ohm's Law | ओम का नियम",
+      "Kirchhoff's Law",
+      "Faraday's Law",
+      "Lenz's Law"
+    ],
+    "a": 0,
     "e": "Ohm's Law (V=IR) is the most basic principle of electrical circuits, provided temperature remains constant.",
     "cat": "technical",
     "sub": "electrical_engineering"
   },
   {
     "q": "According to Kirchhoff's Current Law (KCL), the algebraic sum of currents meeting at a junction is: / किरचॉफ के धारा नियम (KCL) के अनुसार, एक जंक्शन पर मिलने वाली धाराओं का बीजगणितीय योग होता है:",
-    "o": ["Infinity", "Zero | शून्य", "Positive", "Negative"],
-    "a": 1,
+    "o": [
+      "Negative",
+      "Infinity",
+      "Positive",
+      "Zero | शून्य"
+    ],
+    "a": 3,
     "e": "KCL is based on the conservation of charge; whatever current enters a node must leave it.",
     "cat": "technical",
     "sub": "electrical_engineering"
   },
   {
     "q": "The property of a material to oppose the flow of magnetic flux is called: / चुंबकीय फ्लक्स के प्रवाह का विरोध करने वाले पदार्थ के गुण को कहा जाता है:",
-    "o": ["Resistance", "Permeability", "Reluctance | रिलक्टेंस (Reluctance)", "Conductance"],
-    "a": 2,
+    "o": [
+      "Conductance",
+      "Permeability",
+      "Resistance",
+      "Reluctance | रिलक्टेंस (Reluctance)"
+    ],
+    "a": 3,
     "e": "Reluctance in a magnetic circuit is analogous to resistance in an electrical circuit.",
     "cat": "technical",
     "sub": "electrical_engineering"
   },
   {
     "q": "What is the unit of 'Magnetic Flux Density'? / 'चुंबकीय फ्लक्स घनत्व' (Flux Density) की इकाई क्या है?",
-    "o": ["Weber", "Tesla | टेस्ला (Tesla)", "Henry", "Ampere-turn"],
-    "a": 1,
+    "o": [
+      "Ampere-turn",
+      "Weber",
+      "Tesla | टेस्ला (Tesla)",
+      "Henry"
+    ],
+    "a": 2,
     "e": "Tesla (T) is the SI unit for magnetic flux density, defined as Weber per square meter (Wb/m²).",
     "cat": "technical",
     "sub": "electrical_engineering"
   },
   {
     "q": "Which rule is used to find the direction of the magnetic field around a straight current-carrying conductor? / सीधे धारावाही चालक के चारों ओर चुंबकीय क्षेत्र की दिशा खोजने के लिए किस नियम का उपयोग किया जाता है?",
-    "o": ["Left-hand rule", "Right-hand thumb rule | दाएं हाथ के अंगूठे का नियम", "Lenz's law", "None"],
-    "a": 1,
+    "o": [
+      "None",
+      "Lenz's law",
+      "Right-hand thumb rule | दाएं हाथ के अंगूठे का नियम",
+      "Left-hand rule"
+    ],
+    "a": 2,
     "e": "If the thumb points in the direction of current, the curled fingers show the direction of magnetic field lines.",
     "cat": "technical",
     "sub": "electrical_engineering"
   },
   {
     "q": "In a series circuit, if one resistance is increased, the total current will: / एक सीरीज सर्किट में, यदि एक प्रतिरोध बढ़ाया जाता है, तो कुल धारा:",
-    "o": ["Increase", "Decrease | घटेगी", "Remain same", "Become zero"],
-    "a": 1,
+    "o": [
+      "Decrease | घटेगी",
+      "Remain same",
+      "Increase",
+      "Become zero"
+    ],
+    "a": 0,
     "e": "In series, total resistance is the sum of all resistances. Higher resistance leads to lower current for the same voltage.",
     "cat": "technical",
     "sub": "electrical_engineering"
   },
   {
     "q": "Lenz's Law is a consequence of the law of conservation of: / लेन्ज़ का नियम किसके संरक्षण के नियम का परिणाम है?",
-    "o": ["Charge", "Mass", "Energy | ऊर्जा", "Momentum"],
-    "a": 2,
+    "o": [
+      "Energy | ऊर्जा",
+      "Charge",
+      "Momentum",
+      "Mass"
+    ],
+    "a": 0,
     "e": "Lenz's law ensures that the mechanical energy used to change the flux is converted into electrical energy.",
     "cat": "technical",
     "sub": "electrical_engineering"
   },
   {
     "q": "What is the SI unit of 'Inductance'? / 'प्रेरकत्व' (Inductance) की SI इकाई क्या है?",
-    "o": ["Farad", "Ohm", "Henry | हेनरी (Henry)", "Tesla"],
+    "o": [
+      "Tesla",
+      "Ohm",
+      "Henry | हेनरी (Henry)",
+      "Farad"
+    ],
     "a": 2,
     "e": "Inductance is the property of a coil to oppose changes in current, measured in Henry (H).",
     "cat": "technical",
@@ -1370,7 +2224,12 @@
   },
   {
     "q": "The formula for electrical power (P) in a DC circuit is: / DC सर्किट में विद्युत शक्ति (P) का सूत्र है:",
-    "o": ["P = V/I", "P = V^2 * R", "P = V * I | P = V * I", "P = I/V"],
+    "o": [
+      "P = V/I",
+      "P = V^2 * R",
+      "P = V * I | P = V * I",
+      "P = I/V"
+    ],
     "a": 2,
     "e": "Power is the rate at which electrical energy is transferred or consumed, calculated as voltage times current.",
     "cat": "technical",
@@ -1378,39 +2237,64 @@
   },
   {
     "q": "Hysteresis loss in a magnetic material depends on: / चुंबकीय पदार्थ में हिस्टेरेसिस हानि (Hysteresis loss) किस पर निर्भर करती है?",
-    "o": ["Area of hysteresis loop | हिस्टेरेसिस लूप का क्षेत्रफल", "Ambient temperature", "Color of the core", "None"],
-    "a": 0,
+    "o": [
+      "Ambient temperature",
+      "Color of the core",
+      "None",
+      "Area of hysteresis loop | हिस्टेरेसिस लूप का क्षेत्रफल"
+    ],
+    "a": 3,
     "e": "Hysteresis loss represents the energy dissipated as heat during one full cycle of magnetization.",
     "cat": "technical",
     "sub": "electrical_engineering"
   },
   {
     "q": "What is the function of 'Zeolite' in water treatment? / जल उपचार में 'जियोलाइट' (Zeolite) का क्या कार्य है?",
-    "o": ["To kill bacteria", "To remove suspended solids", "To soften hard water | कठोर जल को मृदु बनाना", "To add minerals"],
-    "a": 2,
+    "o": [
+      "To kill bacteria",
+      "To soften hard water | कठोर जल को मृदु बनाना",
+      "To add minerals",
+      "To remove suspended solids"
+    ],
+    "a": 1,
     "e": "Zeolite process is an ion-exchange method used to remove hardness-causing ions from water.",
     "cat": "technical",
     "sub": "applied_chemistry"
   },
   {
     "q": "Which type of fuel has the highest calorific value? / किस प्रकार के ईंधन का कैलोरी मान (Calorific value) सबसे अधिक होता है?",
-    "o": ["Solid fuels", "Liquid fuels", "Gaseous fuels | गैसीय ईंधन", "All are equal"],
-    "a": 2,
+    "o": [
+      "Solid fuels",
+      "Liquid fuels",
+      "All are equal",
+      "Gaseous fuels | गैसीय ईंधन"
+    ],
+    "a": 3,
     "e": "Gaseous fuels like Hydrogen and Methane have higher calorific values compared to solid and liquid fuels.",
     "cat": "technical",
     "sub": "applied_chemistry"
   },
   {
     "q": "What is 'Vulcanization' of rubber? / रबर का 'वल्केनाइजेशन' क्या है?",
-    "o": ["Melting rubber", "Heating rubber with sulfur | सल्फर के साथ गर्म करना", "Cooling rubber", "Adding water to rubber"],
-    "a": 1,
+    "o": [
+      "Adding water to rubber",
+      "Melting rubber",
+      "Heating rubber with sulfur | सल्फर के साथ गर्म करना",
+      "Cooling rubber"
+    ],
+    "a": 2,
     "e": "Vulcanization improves the elasticity, hardness, and durability of natural rubber by adding cross-links of sulfur.",
     "cat": "technical",
     "sub": "applied_chemistry"
   },
   {
     "q": "Temporary hardness of water can be removed by: / जल की अस्थायी कठोरता को किसके द्वारा दूर किया जा सकता है?",
-    "o": ["Filtration", "Adding salt", "Boiling | उबालकर", "Sedimentation"],
+    "o": [
+      "Sedimentation",
+      "Adding salt",
+      "Boiling | उबालकर",
+      "Filtration"
+    ],
     "a": 2,
     "e": "Boiling decomposes calcium and magnesium bicarbonates into insoluble carbonates.",
     "cat": "technical",
@@ -1418,23 +2302,38 @@
   },
   {
     "q": "Which of the following is a 'Thermosetting' plastic? / निम्नलिखित में से कौन सा एक 'थर्मोसेटिंग' प्लास्टिक है?",
-    "o": ["PVC", "Polystyrene", "Bakelite | बैकेलाइट", "Nylon"],
-    "a": 2,
+    "o": [
+      "Bakelite | बैकेलाइट",
+      "PVC",
+      "Polystyrene",
+      "Nylon"
+    ],
+    "a": 0,
     "e": "Bakelite does not soften on heating once it is molded, unlike thermoplastics.",
     "cat": "technical",
     "sub": "applied_chemistry"
   },
   {
     "q": "What is the chemical composition of 'LPG'? / 'LPG' का रासायनिक संगठन क्या है?",
-    "o": ["Methane and Ethane", "Propane and Butane | प्रोपेन और ब्यूटेन", "Hydrogen and CO", "None"],
-    "a": 1,
+    "o": [
+      "None",
+      "Hydrogen and CO",
+      "Methane and Ethane",
+      "Propane and Butane | प्रोपेन और ब्यूटेन"
+    ],
+    "a": 3,
     "e": "LPG (Liquefied Petroleum Gas) is primarily a mixture of propane and butane gases.",
     "cat": "technical",
     "sub": "applied_chemistry"
   },
   {
     "q": "The property of a lubricant to resist flow is known as: / एक स्नेहक (Lubricant) के प्रवाह का विरोध करने के गुण को कहा जाता है:",
-    "o": ["Oiliness", "Flash point", "Viscosity | श्यानता (Viscosity)", "Fire point"],
+    "o": [
+      "Oiliness",
+      "Flash point",
+      "Viscosity | श्यानता (Viscosity)",
+      "Fire point"
+    ],
     "a": 2,
     "e": "Viscosity is the measure of internal friction or thickness of a fluid.",
     "cat": "technical",
@@ -1442,39 +2341,64 @@
   },
   {
     "q": "Which quantum number determines the 'shape' of an orbital? / कौन सी क्वांटम संख्या कक्षक (Orbital) के 'आकार' को निर्धारित करती है?",
-    "o": ["Principal quantum number", "Magnetic quantum number", "Azimuthal quantum number | दिगंशीय क्वांटम संख्या", "Spin quantum number"],
-    "a": 2,
+    "o": [
+      "Azimuthal quantum number | दिगंशीय क्वांटम संख्या",
+      "Magnetic quantum number",
+      "Principal quantum number",
+      "Spin quantum number"
+    ],
+    "a": 0,
     "e": "The azimuthal quantum number (l) defines the subshell and the shape of the orbital (s, p, d, f).",
     "cat": "technical",
     "sub": "applied_chemistry"
   },
   {
     "q": "Hardness of water is primarily caused by the salts of: / जल की कठोरता मुख्य रूप से किसके लवणों के कारण होती है?",
-    "o": ["Sodium and Potassium", "Calcium and Magnesium | कैल्शियम और मैग्नीशियम", "Iron and Copper", "None"],
-    "a": 1,
+    "o": [
+      "Iron and Copper",
+      "None",
+      "Sodium and Potassium",
+      "Calcium and Magnesium | कैल्शियम और मैग्नीशियम"
+    ],
+    "a": 3,
     "e": "Bicarbonates, chlorides, and sulfates of Calcium and Magnesium are responsible for water hardness.",
     "cat": "technical",
     "sub": "applied_chemistry"
   },
   {
     "q": "Which rule states that 'Electrons enter the lowest energy orbital available'? / कौन सा नियम कहता है कि 'इलेक्ट्रॉन उपलब्ध निम्नतम ऊर्जा कक्षक में प्रवेश करते हैं'?",
-    "o": ["Aufbau Principle | औफबाऊ सिद्धांत", "Hund's Rule", "Pauli's Exclusion Principle", "Heisenberg Principle"],
-    "a": 0,
+    "o": [
+      "Heisenberg Principle",
+      "Hund's Rule",
+      "Pauli's Exclusion Principle",
+      "Aufbau Principle | औफबाऊ सिद्धांत"
+    ],
+    "a": 3,
     "e": "Aufbau principle dictates the order in which orbitals are filled based on their energy levels.",
     "cat": "technical",
     "sub": "applied_chemistry"
   },
   {
     "q": "What is the function of 'Zeolite' in water treatment? / जल उपचार में 'जियोलाइट' (Zeolite) का क्या कार्य है?",
-    "o": ["To kill bacteria", "To remove suspended solids", "To soften hard water | कठोर जल को मृदु बनाना", "To add minerals"],
-    "a": 2,
+    "o": [
+      "To add minerals",
+      "To kill bacteria",
+      "To remove suspended solids",
+      "To soften hard water | कठोर जल को मृदु बनाना"
+    ],
+    "a": 3,
     "e": "Zeolite process is an ion-exchange method used to remove hardness-causing ions from water.",
     "cat": "technical",
     "sub": "applied_chemistry"
   },
   {
     "q": "Which type of fuel has the highest calorific value? / किस प्रकार के ईंधन का कैलोरी मान (Calorific value) सबसे अधिक होता है?",
-    "o": ["Solid fuels", "Liquid fuels", "Gaseous fuels | गैसीय ईंधन", "All are equal"],
+    "o": [
+      "Solid fuels",
+      "Liquid fuels",
+      "Gaseous fuels | गैसीय ईंधन",
+      "All are equal"
+    ],
     "a": 2,
     "e": "Gaseous fuels like Hydrogen and Methane have higher calorific values compared to solid and liquid fuels.",
     "cat": "technical",
@@ -1482,31 +2406,51 @@
   },
   {
     "q": "What is 'Vulcanization' of rubber? / रबर का 'वल्केनाइजेशन' क्या है?",
-    "o": ["Melting rubber", "Heating rubber with sulfur | सल्फर के साथ गर्म करना", "Cooling rubber", "Adding water to rubber"],
-    "a": 1,
+    "o": [
+      "Cooling rubber",
+      "Adding water to rubber",
+      "Heating rubber with sulfur | सल्फर के साथ गर्म करना",
+      "Melting rubber"
+    ],
+    "a": 2,
     "e": "Vulcanization improves the elasticity, hardness, and durability of natural rubber by adding cross-links of sulfur.",
     "cat": "technical",
     "sub": "applied_chemistry"
   },
   {
     "q": "Temporary hardness of water can be removed by: / जल की अस्थायी कठोरता को किसके द्वारा दूर किया जा सकता है?",
-    "o": ["Filtration", "Adding salt", "Boiling | उबालकर", "Sedimentation"],
-    "a": 2,
+    "o": [
+      "Boiling | उबालकर",
+      "Adding salt",
+      "Filtration",
+      "Sedimentation"
+    ],
+    "a": 0,
     "e": "Boiling decomposes calcium and magnesium bicarbonates into insoluble carbonates.",
     "cat": "technical",
     "sub": "applied_chemistry"
   },
   {
     "q": "Which of the following is a 'Thermosetting' plastic? / निम्नलिखित में से कौन सा एक 'थर्मोसेटिंग' प्लास्टिक है?",
-    "o": ["PVC", "Polystyrene", "Bakelite | बैकेलाइट", "Nylon"],
-    "a": 2,
+    "o": [
+      "Nylon",
+      "Bakelite | बैकेलाइट",
+      "PVC",
+      "Polystyrene"
+    ],
+    "a": 1,
     "e": "Bakelite does not soften on heating once it is molded, unlike thermoplastics.",
     "cat": "technical",
     "sub": "applied_chemistry"
   },
   {
     "q": "What is the chemical composition of 'LPG'? / 'LPG' का रासायनिक संगठन क्या है?",
-    "o": ["Methane and Ethane", "Propane and Butane | प्रोपेन और ब्यूटेन", "Hydrogen and CO", "None"],
+    "o": [
+      "Hydrogen and CO",
+      "Propane and Butane | प्रोपेन और ब्यूटेन",
+      "None",
+      "Methane and Ethane"
+    ],
     "a": 1,
     "e": "LPG (Liquefied Petroleum Gas) is primarily a mixture of propane and butane gases.",
     "cat": "technical",
@@ -1514,55 +2458,90 @@
   },
   {
     "q": "The property of a lubricant to resist flow is known as: / एक स्नेहक (Lubricant) के प्रवाह का विरोध करने के गुण को कहा जाता है:",
-    "o": ["Oiliness", "Flash point", "Viscosity | श्यानता (Viscosity)", "Fire point"],
-    "a": 2,
+    "o": [
+      "Viscosity | श्यानता (Viscosity)",
+      "Oiliness",
+      "Flash point",
+      "Fire point"
+    ],
+    "a": 0,
     "e": "Viscosity is the measure of internal friction or thickness of a fluid.",
     "cat": "technical",
     "sub": "applied_chemistry"
   },
   {
     "q": "What is the point on the stress-strain curve beyond which the material starts to deform plastically? / स्ट्रेस-स्ट्रेन कर्व पर वह बिंदु क्या कहलाता है जिसके बाद पदार्थ प्लास्टिक रूप से विरूपित होने लगता है?",
-    "o": ["Breaking point", "Elastic limit | प्रत्यास्थता सीमा", "Proportional limit", "Yield point"],
-    "a": 1,
+    "o": [
+      "Yield point",
+      "Breaking point",
+      "Proportional limit",
+      "Elastic limit | प्रत्यास्थता सीमा"
+    ],
+    "a": 3,
     "e": "Beyond the elastic limit, the material does not return to its original shape when the load is removed[cite: 51].",
     "cat": "technical",
     "sub": "applied_physics"
   },
   {
     "q": "The persistence of sound in an enclosed space after the source has stopped is called: / स्रोत के बंद होने के बाद बंद स्थान में ध्वनि का बना रहना क्या कहलाता है?",
-    "o": ["Echo", "Interference", "Reverberation | प्रतिध्वनि (Reverberation)", "Diffraction"],
-    "a": 2,
+    "o": [
+      "Reverberation | प्रतिध्वनि (Reverberation)",
+      "Diffraction",
+      "Interference",
+      "Echo"
+    ],
+    "a": 0,
     "e": "Reverberation is caused by multiple reflections of sound waves from the surfaces of an enclosure[cite: 349].",
     "cat": "technical",
     "sub": "applied_physics"
   },
   {
     "q": "According to Lenz's Law, the direction of induced EMF is such that it: / लेन्ज़ के नियम के अनुसार, प्रेरित EMF की दिशा ऐसी होती है कि वह:",
-    "o": ["Supports the change in magnetic flux", "Opposes the change in magnetic flux | चुंबकीय फ्लक्स में परिवर्तन का विरोध करता है", "Is always zero", "None"],
-    "a": 1,
+    "o": [
+      "Is always zero",
+      "None",
+      "Opposes the change in magnetic flux | चुंबकीय फ्लक्स में परिवर्तन का विरोध करता है",
+      "Supports the change in magnetic flux"
+    ],
+    "a": 2,
     "e": "Lenz's Law is a consequence of the law of conservation of energy[cite: 365, 402].",
     "cat": "technical",
     "sub": "applied_physics"
   },
   {
     "q": "Which property of nanomaterials changes significantly due to their high surface-to-volume ratio? / उच्च सतह-से-आयतन अनुपात के कारण नैनो-मटेरियल्स का कौन सा गुण काफी बदल जाता है?",
-    "o": ["Color", "Chemical reactivity | रासायनिक अभिक्रियाशीलता", "Density", "All of the above"],
-    "a": 1,
+    "o": [
+      "All of the above",
+      "Density",
+      "Chemical reactivity | रासायनिक अभिक्रियाशीलता",
+      "Color"
+    ],
+    "a": 2,
     "e": "Nanomaterials have a larger fraction of atoms at the surface, making them highly reactive[cite: 378].",
     "cat": "technical",
     "sub": "applied_physics"
   },
   {
     "q": "Which law is used to analyze complex electrical circuits with multiple loops? / कई लूप वाले जटिल विद्युत सर्किट का विश्लेषण करने के लिए किस नियम का उपयोग किया जाता है?",
-    "o": ["Ohm's Law", "Coulomb's Law", "Kirchhoff's Laws | किरचॉफ के नियम", "Gauss Law"],
-    "a": 2,
+    "o": [
+      "Kirchhoff's Laws | किरचॉफ के नियम",
+      "Ohm's Law",
+      "Coulomb's Law",
+      "Gauss Law"
+    ],
+    "a": 0,
     "e": "Kirchhoff's voltage and current laws are essential for solving complex network problems[cite: 361, 1257].",
     "cat": "technical",
     "sub": "applied_physics"
   },
   {
     "q": "What is the unit of 'Thermal Conductivity'? / 'तापीय चालकता' (Thermal Conductivity) की इकाई क्या है?",
-    "o": ["W/m-K | W/m-K", "Joule", "Pascal", "Watt"],
+    "o": [
+      "W/m-K | W/m-K",
+      "Joule",
+      "Watt",
+      "Pascal"
+    ],
     "a": 0,
     "e": "It measures the ability of a material to conduct heat[cite: 58].",
     "cat": "technical",
@@ -1570,15 +2549,25 @@
   },
   {
     "q": "The frequency of a Simple Harmonic Motion (SHM) is the: / सरल आवर्त गति (SHM) की आवृत्ति होती है:",
-    "o": ["Time taken for one cycle", "Number of cycles per second | प्रति सेकंड चक्रों की संख्या", "Maximum displacement", "None"],
-    "a": 1,
+    "o": [
+      "Maximum displacement",
+      "Time taken for one cycle",
+      "Number of cycles per second | प्रति सेकंड चक्रों की संख्या",
+      "None"
+    ],
+    "a": 2,
     "e": "Frequency is the reciprocal of the time period[cite: 347, 1242].",
     "cat": "technical",
     "sub": "applied_physics"
   },
   {
     "q": "Which material is commonly used as a 'Piezoelectric' transducer? / 'पीजोइलेक्ट्रिक' ट्रांसड्यूसर के रूप में आमतौर पर किस सामग्री का उपयोग किया जाता है?",
-    "o": ["Iron", "Quartz | क्वार्ट्ज (Quartz)", "Copper", "Plastic"],
+    "o": [
+      "Plastic",
+      "Quartz | क्वार्ट्ज (Quartz)",
+      "Copper",
+      "Iron"
+    ],
     "a": 1,
     "e": "Quartz crystals generate an electric charge when mechanical stress is applied[cite: 635].",
     "cat": "technical",
@@ -1586,47 +2575,77 @@
   },
   {
     "q": "A 'Wheatstone Bridge' is used to measure unknown: / 'व्हीटस्टोन ब्रिज' का उपयोग किसे मापने के लिए किया जाता है?",
-    "o": ["Current", "Voltage", "Resistance | प्रतिरोध", "Capacitance"],
-    "a": 2,
+    "o": [
+      "Voltage",
+      "Resistance | प्रतिरोध",
+      "Current",
+      "Capacitance"
+    ],
+    "a": 1,
     "e": "It is an electrical circuit used to measure an unknown electrical resistance by balancing two legs of a bridge circuit[cite: 361, 1257].",
     "cat": "technical",
     "sub": "applied_physics"
   },
   {
     "q": "The formula for 'Capacitance' (C) is: / 'धारिता' (C) का सूत्र क्या है?",
-    "o": ["C = V/Q", "C = Q/V | C = Q/V", "C = QV", "C = Q+V"],
-    "a": 1,
+    "o": [
+      "C = Q/V | C = Q/V",
+      "C = V/Q",
+      "C = QV",
+      "C = Q+V"
+    ],
+    "a": 0,
     "e": "Capacitance is the ratio of the change in electric charge to the corresponding change in its electric potential[cite: 356, 1252].",
     "cat": "technical",
     "sub": "applied_physics"
   },
   {
     "q": "Which law states that 'Pressure applied to an enclosed fluid is transmitted undiminished'? / किस नियम के अनुसार 'बंद द्रव पर लगाया गया दबाव बिना कम हुए प्रसारित होता है'?",
-    "o": ["Boyle's Law", "Bernoulli's Law", "Hooke's Law", "Pascal's Law | पास्कल का नियम"],
-    "a": 3,
+    "o": [
+      "Pascal's Law | पास्कल का नियम",
+      "Bernoulli's Law",
+      "Hooke's Law",
+      "Boyle's Law"
+    ],
+    "a": 0,
     "e": "Pascal's law is the foundation for hydraulic systems like jacks and brakes.",
     "cat": "technical",
     "sub": "applied_physics"
   },
   {
     "q": "What is the relationship between 'Torque' (τ) and 'Angular Momentum' (L)? / 'टॉर्क' (τ) और 'कोणीय संवेग' (L) के बीच क्या संबंध है?",
-    "o": ["τ = dL/dt | τ = dL/dt", "τ = L/t", "L = dτ/dt", "τ = L × t"],
-    "a": 0,
+    "o": [
+      "τ = L/t",
+      "τ = dL/dt | τ = dL/dt",
+      "τ = L × t",
+      "L = dτ/dt"
+    ],
+    "a": 1,
     "e": "The rate of change of angular momentum is equal to the applied torque.",
     "cat": "technical",
     "sub": "applied_physics"
   },
   {
     "q": "In 'Fiber Optics', light travels through the core due to: / 'फाइबर ऑप्टिक्स' में, प्रकाश कोर के माध्यम से किसके कारण यात्रा करता है?",
-    "o": ["Refraction", "Scattering", "Total Internal Reflection | पूर्ण आंतरिक परावर्तन", "Diffraction"],
-    "a": 2,
+    "o": [
+      "Scattering",
+      "Total Internal Reflection | पूर्ण आंतरिक परावर्तन",
+      "Diffraction",
+      "Refraction"
+    ],
+    "a": 1,
     "e": "TIR keeps the light trapped inside the core by reflecting it off the cladding.",
     "cat": "technical",
     "sub": "applied_physics"
   },
   {
     "q": "The 'Specific Heat' of a substance depends on: / किसी पदार्थ की 'विशिष्ट ऊष्मा' किस पर निर्भर करती है?",
-    "o": ["Mass of the substance", "Nature of the material | सामग्री की प्रकृति", "Volume of the substance", "None"],
+    "o": [
+      "Mass of the substance",
+      "Nature of the material | सामग्री की प्रकृति",
+      "None",
+      "Volume of the substance"
+    ],
     "a": 1,
     "e": "Specific heat is an intrinsic property of the material itself.",
     "cat": "technical",
@@ -1634,135 +2653,220 @@
   },
   {
     "q": "Which instrument uses 'Ultrasonic waves' to find the depth of the ocean? / समुद्र की गहराई मापने के लिए किस उपकरण में 'अल्ट्रासोनिक तरंगों' का उपयोग किया जाता है?",
-    "o": ["Radar", "Lidar", "Sonar | सोनार (Sonar)", "Microscope"],
-    "a": 2,
+    "o": [
+      "Microscope",
+      "Sonar | सोनार (Sonar)",
+      "Radar",
+      "Lidar"
+    ],
+    "a": 1,
     "e": "SONAR (Sound Navigation and Ranging) uses sound echoes to detect underwater objects.",
     "cat": "technical",
     "sub": "applied_physics"
   },
   {
     "q": "What is the escape velocity from the Earth's surface? / पृथ्वी की सतह से पलायन वेग (Escape Velocity) क्या है?",
-    "o": ["9.8 km/s", "11.2 km/s | 11.2 km/s", "7.9 km/s", "1.1 km/s"],
-    "a": 1,
+    "o": [
+      "1.1 km/s",
+      "9.8 km/s",
+      "7.9 km/s",
+      "11.2 km/s | 11.2 km/s"
+    ],
+    "a": 3,
     "e": "This is the minimum speed needed for an object to break free from Earth's gravity.",
     "cat": "technical",
     "sub": "applied_physics"
   },
   {
     "q": "The phenomenon of 'Rainbow' is due to: / 'इंद्रधनुष' की घटना किसके कारण होती है?",
-    "o": ["Dispersion and Internal Reflection | विक्षेपण और आंतरिक परावर्तन", "Only Reflection", "Only Refraction", "Interference"],
-    "a": 0,
+    "o": [
+      "Only Reflection",
+      "Dispersion and Internal Reflection | विक्षेपण और आंतरिक परावर्तन",
+      "Only Refraction",
+      "Interference"
+    ],
+    "a": 1,
     "e": "Sunlight is dispersed by water droplets, acting like tiny prisms.",
     "cat": "technical",
     "sub": "applied_physics"
   },
   {
     "q": "What is the unit of 'Magnetic Flux'? / 'चुंबकीय फ्लक्स' (Magnetic Flux) की इकाई क्या है?",
-    "o": ["Tesla", "Weber | वेबर (Weber)", "Henry", "Gauss"],
-    "a": 1,
+    "o": [
+      "Tesla",
+      "Henry",
+      "Weber | वेबर (Weber)",
+      "Gauss"
+    ],
+    "a": 2,
     "e": "Weber is the SI unit, while Tesla is the unit for magnetic flux density.",
     "cat": "technical",
     "sub": "applied_physics"
   },
   {
     "q": "In a 'Full-wave Bridge Rectifier', how many diodes are used? / एक 'फुल-वेव ब्रिज रेक्टिफायर' में कितने डायोड उपयोग किए जाते हैं?",
-    "o": ["2", "1", "6", "4 | 4"],
-    "a": 3,
+    "o": [
+      "6",
+      "4 | 4",
+      "2",
+      "1"
+    ],
+    "a": 1,
     "e": "A bridge configuration uses 4 diodes to provide full-wave rectification without a center-tapped transformer.",
     "cat": "technical",
     "sub": "applied_physics"
   },
   {
     "q": "Newton's First Law of Motion defines: / न्यूटन का गति का पहला नियम किसे परिभाषित करता है?",
-    "o": ["Energy", "Inertia | जड़त्व (Inertia)", "Work", "Momentum"],
-    "a": 1,
+    "o": [
+      "Energy",
+      "Momentum",
+      "Work",
+      "Inertia | जड़त्व (Inertia)"
+    ],
+    "a": 3,
     "e": "It states that an object will remain at rest or in motion unless acted upon by an external force.",
     "cat": "technical",
     "sub": "applied_physics"
   },
   {
     "q": "What is the dimensional formula for 'Force'? / 'बल' का विमीय सूत्र क्या है?",
-    "o": ["MLT^-1", "ML^2T^-2", "MLT^-2 | MLT^-2", "M^2LT^-2"],
-    "a": 2,
+    "o": [
+      "M^2LT^-2",
+      "MLT^-2 | MLT^-2",
+      "ML^2T^-2",
+      "MLT^-1"
+    ],
+    "a": 1,
     "e": "Force = Mass × Acceleration, so [M] × [LT^-2] = [MLT^-2].",
     "cat": "technical",
     "sub": "applied_physics"
   },
   {
     "q": "Which type of wave is a 'Sound Wave' in air? / हवा में 'ध्वनि तरंग' किस प्रकार की तरंग है?",
-    "o": ["Longitudinal wave | अनुदैर्ध्य तरंग", "Transverse wave", "Electromagnetic wave", "None"],
-    "a": 0,
+    "o": [
+      "None",
+      "Electromagnetic wave",
+      "Longitudinal wave | अनुदैर्ध्य तरंग",
+      "Transverse wave"
+    ],
+    "a": 2,
     "e": "Sound waves in air travel as longitudinal waves through compressions and rarefactions.",
     "cat": "technical",
     "sub": "applied_physics"
   },
   {
     "q": "What is the unit of 'Power' of a lens? / लेंस की 'शक्ति' (Power) की इकाई क्या है?",
-    "o": ["Meter", "Dioptre | डायोप्टर", "Watt", "Candela"],
-    "a": 1,
+    "o": [
+      "Watt",
+      "Meter",
+      "Dioptre | डायोप्टर",
+      "Candela"
+    ],
+    "a": 2,
     "e": "Power of a lens is the reciprocal of its focal length in meters, measured in Dioptres.",
     "cat": "technical",
     "sub": "applied_physics"
   },
   {
     "q": "In an 'Intrinsic' semiconductor at absolute zero temperature, the conductivity is: / पूर्ण शून्य तापमान पर एक 'शुद्ध' अर्धचालक की चालकता होती है:",
-    "o": ["Infinite", "Very high", "Zero | शून्य", "Moderate"],
-    "a": 2,
+    "o": [
+      "Infinite",
+      "Zero | शून्य",
+      "Moderate",
+      "Very high"
+    ],
+    "a": 1,
     "e": "At absolute zero, there are no free electrons in the conduction band, so it acts as an insulator.",
     "cat": "technical",
     "sub": "applied_physics"
   },
   {
     "q": "The work done by a centripetal force is always: / अभिकेंद्री बल द्वारा किया गया कार्य हमेशा होता है:",
-    "o": ["Positive", "Negative", "Zero | शून्य", "Infinite"],
-    "a": 2,
+    "o": [
+      "Negative",
+      "Zero | शून्य",
+      "Positive",
+      "Infinite"
+    ],
+    "a": 1,
     "e": "Since centripetal force is perpendicular to the displacement, the work done (W = Fd cos 90°) is zero.",
     "cat": "technical",
     "sub": "applied_physics"
   },
   {
     "q": "Which material is used to make 'Permanent Magnets'? / 'स्थायी चुंबक' बनाने के लिए किस सामग्री का उपयोग किया जाता है?",
-    "o": ["Soft Iron", "Steel | स्टील (Steel)", "Copper", "Aluminum"],
-    "a": 1,
+    "o": [
+      "Aluminum",
+      "Soft Iron",
+      "Copper",
+      "Steel | स्टील (Steel)"
+    ],
+    "a": 3,
     "e": "Steel or Alnico are used because they have high retentivity and high coercivity.",
     "cat": "technical",
     "sub": "applied_physics"
   },
   {
     "q": "What is the value of 'Atmospheric Pressure' at sea level? / समुद्र तल पर 'वायुमंडलीय दबाव' का मान क्या होता है?",
-    "o": ["1.013 × 10^5 Pa | 1.013 × 10^5 Pa", "10^2 Pa", "76 Pa", "Zero"],
-    "a": 0,
+    "o": [
+      "76 Pa",
+      "Zero",
+      "10^2 Pa",
+      "1.013 × 10^5 Pa | 1.013 × 10^5 Pa"
+    ],
+    "a": 3,
     "e": "Standard atmospheric pressure is approximately 101.3 kPa.",
     "cat": "technical",
     "sub": "applied_physics"
   },
   {
     "q": "A 'Transistor' acts as an 'Open Switch' when it is in: / एक 'ट्रांजिस्टर' 'ओपन स्विच' की तरह कार्य करता है जब वह होता है:",
-    "o": ["Active region", "Saturation region", "Cut-off region | कट-ऑफ क्षेत्र", "None"],
-    "a": 2,
+    "o": [
+      "None",
+      "Cut-off region | कट-ऑफ क्षेत्र",
+      "Saturation region",
+      "Active region"
+    ],
+    "a": 1,
     "e": "In the cut-off region, no current flows through the transistor, simulating an open switch.",
     "cat": "technical",
     "sub": "applied_physics"
   },
   {
     "q": "The magnifying power of a 'Compound Microscope' is the: / एक 'संयुक्त सूक्ष्मदर्शी' की आवर्धन क्षमता होती है:",
-    "o": ["Sum of powers of two lenses", "Product of magnifications of objective and eyepiece | आवर्धन का गुणनफल", "Difference of powers", "None"],
-    "a": 1,
+    "o": [
+      "Product of magnifications of objective and eyepiece | आवर्धन का गुणनफल",
+      "None",
+      "Sum of powers of two lenses",
+      "Difference of powers"
+    ],
+    "a": 0,
     "e": "Total magnification M = Mo × Me.",
     "cat": "technical",
     "sub": "applied_physics"
   },
   {
     "q": "What is the energy stored in a 'Capacitor' of capacitance 'C' and voltage 'V'? / 'C' धारिता और 'V' वोल्टेज वाले 'कैपेसिटर' में संचित ऊर्जा क्या है?",
-    "o": ["CV", "1/2 CV", "1/2 CV^2 | 1/2 CV^2", "CV^2"],
-    "a": 2,
+    "o": [
+      "1/2 CV^2 | 1/2 CV^2",
+      "1/2 CV",
+      "CV^2",
+      "CV"
+    ],
+    "a": 0,
     "e": "The energy is stored in the electric field between the plates.",
     "cat": "technical",
     "sub": "applied_physics"
   },
   {
     "q": "Which lens is used to correct 'Myopia' (Short-sightedness)? / 'मायोपिया' (निकट दृष्टि दोष) को ठीक करने के लिए किस लेंस का उपयोग किया जाता है?",
-    "o": ["Convex lens", "Concave lens | अवतल लेंस", "Cylindrical lens", "Bifocal lens"],
+    "o": [
+      "Bifocal lens",
+      "Concave lens | अवतल लेंस",
+      "Convex lens",
+      "Cylindrical lens"
+    ],
     "a": 1,
     "e": "A concave lens diverges light rays so they focus correctly on the retina. [cite: 351, 1247]",
     "cat": "technical",
@@ -1770,15 +2874,25 @@
   },
   {
     "q": "The principle of 'Total Internal Reflection' is used in: / 'पूर्ण आंतरिक परावर्तन' के सिद्धांत का उपयोग किसमें किया जाता है?",
-    "o": ["Mirrors", "Optical Fibers | ऑप्टिकल फाइबर", "Microscopes", "None"],
-    "a": 1,
+    "o": [
+      "Optical Fibers | ऑप्टिकल फाइबर",
+      "None",
+      "Microscopes",
+      "Mirrors"
+    ],
+    "a": 0,
     "e": "Optical fibers use TIR to transmit light signals over long distances with minimal loss. [cite: 352, 1248]",
     "cat": "technical",
     "sub": "applied_physics"
   },
   {
     "q": "What is the SI unit of Electric Capacitance? / विद्युत धारिता (Capacitance) की SI इकाई क्या है?",
-    "o": ["Ohm", "Volt", "Farad | फैराड", "Coulomb"],
+    "o": [
+      "Ohm",
+      "Volt",
+      "Farad | फैराड",
+      "Coulomb"
+    ],
     "a": 2,
     "e": "Farad measures the ability of a body to store an electrical charge. [cite: 356, 1252]",
     "cat": "technical",
@@ -1786,79 +2900,129 @@
   },
   {
     "q": "Ohm's Law is valid only when: / ओम का नियम तभी मान्य होता है जब:",
-    "o": ["Current is constant", "Voltage is constant", "Temperature is constant | तापमान स्थिर हो", "None"],
-    "a": 2,
+    "o": [
+      "Voltage is constant",
+      "Temperature is constant | तापमान स्थिर हो",
+      "Current is constant",
+      "None"
+    ],
+    "a": 1,
     "e": "Resistance changes with temperature, so physical conditions must remain constant for Ohm's law. [cite: 361, 445]",
     "cat": "technical",
     "sub": "applied_physics"
   },
   {
     "q": "Which type of material shows 'Ferromagnetism'? / किस प्रकार का पदार्थ 'लौह-चुंबकत्व' (Ferromagnetism) प्रदर्शित करता है?",
-    "o": ["Copper", "Iron | लोहा", "Gold", "Wood"],
-    "a": 1,
+    "o": [
+      "Iron | लोहा",
+      "Wood",
+      "Gold",
+      "Copper"
+    ],
+    "a": 0,
     "e": "Iron, Cobalt, and Nickel are classic examples of ferromagnetic materials. [cite: 364, 1260]",
     "cat": "technical",
     "sub": "applied_physics"
   },
   {
     "q": "In a 'Half-wave Rectifier', how many diodes are used? / 'हाफ-वेव रेक्टिफायर' में कितने डायोड उपयोग किए जाते हैं?",
-    "o": ["Two", "Four", "One | एक", "None"],
-    "a": 2,
+    "o": [
+      "One | एक",
+      "None",
+      "Two",
+      "Four"
+    ],
+    "a": 0,
     "e": "A single diode is sufficient to block one half of the AC cycle in half-wave rectification. [cite: 370, 454]",
     "cat": "technical",
     "sub": "applied_physics"
   },
   {
     "q": "Ultrasonic waves have frequency: / अल्ट्रासोनिक तरंगों की आवृत्ति होती है:",
-    "o": ["Less than 20 Hz", "Between 20 Hz to 20,000 Hz", "Above 20,000 Hz | 20,000 Hz से अधिक", "Zero"],
-    "a": 2,
+    "o": [
+      "Zero",
+      "Less than 20 Hz",
+      "Between 20 Hz to 20,000 Hz",
+      "Above 20,000 Hz | 20,000 Hz से अधिक"
+    ],
+    "a": 3,
     "e": "These waves are beyond the upper limit of human hearing. [cite: 349, 1244]",
     "cat": "technical",
     "sub": "applied_physics"
   },
   {
     "q": "What is the function of a 'Capacitor' in a circuit? / एक सर्किट में 'कैपेसिटर' का क्या कार्य है?",
-    "o": ["To block current", "To store electrical energy | विद्युत ऊर्जा संचय करना", "To increase voltage", "None"],
-    "a": 1,
+    "o": [
+      "To increase voltage",
+      "To block current",
+      "None",
+      "To store electrical energy | विद्युत ऊर्जा संचय करना"
+    ],
+    "a": 3,
     "e": "Capacitors store energy in an electric field between two conducting plates. [cite: 356, 1344]",
     "cat": "technical",
     "sub": "applied_physics"
   },
   {
     "q": "Which laser is commonly used in laboratories? / प्रयोगशालाओं में आमतौर पर किस लेजर का उपयोग किया जाता है?",
-    "o": ["Ruby laser", "He-Ne laser | ही-ने (He-Ne) लेजर", "CO2 laser", "None"],
-    "a": 1,
+    "o": [
+      "Ruby laser",
+      "None",
+      "CO2 laser",
+      "He-Ne laser | ही-ने (He-Ne) लेजर"
+    ],
+    "a": 3,
     "e": "Helium-Neon lasers are stable and widely used for scientific and educational purposes. [cite: 375, 456]",
     "cat": "technical",
     "sub": "applied_physics"
   },
   {
     "q": "The resistance of a wire is 'Inversely' proportional to its: / एक तार का प्रतिरोध किसके 'व्युत्क्रमानुपाती' होता है?",
-    "o": ["Length", "Resistivity", "Area of cross-section | अनुप्रस्थ काट का क्षेत्रफल", "Temperature"],
-    "a": 2,
+    "o": [
+      "Area of cross-section | अनुप्रस्थ काट का क्षेत्रफल",
+      "Temperature",
+      "Resistivity",
+      "Length"
+    ],
+    "a": 0,
     "e": "A thicker wire (larger area) has less resistance than a thinner one. [cite: 359, 1255]",
     "cat": "technical",
     "sub": "applied_physics"
   },
   {
     "q": "What happens to the viscosity of a 'Liquid' when temperature increases? / तापमान बढ़ने पर 'द्रव' की श्यानता (Viscosity) पर क्या प्रभाव पड़ता है?",
-    "o": ["Increases", "Remains same", "Decreases | घटती है", "Becomes zero"],
-    "a": 2,
+    "o": [
+      "Decreases | घटती है",
+      "Becomes zero",
+      "Remains same",
+      "Increases"
+    ],
+    "a": 0,
     "e": "In liquids, increasing temperature weakens intermolecular forces, thereby decreasing viscosity. [cite: 54, 201]",
     "cat": "technical",
     "sub": "applied_physics"
   },
   {
     "q": "The product of Force and Time is known as: / बल और समय के गुणनफल को क्या कहा जाता है?",
-    "o": ["Power", "Impulse | आवेग", "Momentum", "Work"],
-    "a": 1,
+    "o": [
+      "Impulse | आवेग",
+      "Power",
+      "Work",
+      "Momentum"
+    ],
+    "a": 0,
     "e": "Impulse is defined as the total effect of a force acting over a period of time. [cite: 40]",
     "cat": "technical",
     "sub": "applied_physics"
   },
   {
     "q": "What is the Least Count of a standard Vernier Caliper? / एक मानक वर्नियर कैलिपर का अल्पतमांक (Least Count) क्या होता है?",
-    "o": ["0.01 mm", "0.1 mm", "0.02 mm | 0.02 mm", "1.0 mm"],
+    "o": [
+      "1.0 mm",
+      "0.01 mm",
+      "0.02 mm | 0.02 mm",
+      "0.1 mm"
+    ],
     "a": 2,
     "e": "The least count is the smallest measurement that can be taken accurately with the instrument. [cite: 35, 190]",
     "cat": "technical",
@@ -1866,23 +3030,38 @@
   },
   {
     "q": "Surface tension of a liquid decreases with: / तरल का पृष्ठ तनाव किसके साथ घटता है?",
-    "o": ["Increase in area", "Increase in temperature | तापमान में वृद्धि", "Decrease in temperature", "None"],
-    "a": 1,
+    "o": [
+      "Increase in area",
+      "Decrease in temperature",
+      "None",
+      "Increase in temperature | तापमान में वृद्धि"
+    ],
+    "a": 3,
     "e": "Increasing temperature reduces the cohesive forces between molecules, lowering surface tension. [cite: 53]",
     "cat": "technical",
     "sub": "applied_physics"
   },
   {
     "q": "Kinetic energy of an object of mass 'm' and velocity 'v' is: / 'm' द्रव्यमान और 'v' वेग वाली वस्तु की गतिज ऊर्जा क्या है?",
-    "o": ["mgh", "mv", "1/2 mv^2 | 1/2 mv^2", "ma"],
-    "a": 2,
+    "o": [
+      "1/2 mv^2 | 1/2 mv^2",
+      "mgh",
+      "ma",
+      "mv"
+    ],
+    "a": 0,
     "e": "Kinetic energy is the energy possessed by an object due to its motion. [cite: 44, 199]",
     "cat": "technical",
     "sub": "applied_physics"
   },
   {
     "q": "Which mode of heat transfer does not require a medium? / ऊष्मा स्थानांतरण की किस विधि को माध्यम की आवश्यकता नहीं होती है?",
-    "o": ["Conduction", "Convection", "Radiation | विकिरण", "None"],
+    "o": [
+      "None",
+      "Convection",
+      "Radiation | विकिरण",
+      "Conduction"
+    ],
     "a": 2,
     "e": "Radiation transfers heat through electromagnetic waves and can occur in a vacuum. [cite: 57, 204]",
     "cat": "technical",
@@ -1890,8 +3069,13 @@
   },
   {
     "q": "The banking of roads is an application of: / सड़कों की बैंकिंग (Banking) किसका एक अनुप्रयोग है?",
-    "o": ["Centrifugal force", "Centripetal force | अभिकेंद्री बल", "Friction only", "None"],
-    "a": 1,
+    "o": [
+      "None",
+      "Centrifugal force",
+      "Friction only",
+      "Centripetal force | अभिकेंद्री बल"
+    ],
+    "a": 3,
     "e": "Banking provides the necessary centripetal force for a vehicle to take a turn safely at high speed. [cite: 41]",
     "cat": "technical",
     "sub": "applied_physics"
