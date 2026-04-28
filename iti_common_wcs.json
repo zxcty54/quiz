@@ -1,56 +1,95 @@
 [
   {
     "q": "Which type of fire extinguisher is used for electrical fires? / बिजली की आग के लिए किस प्रकार के अग्निशामक (fire extinguisher) का उपयोग किया जाता है?",
-    "o": ["Water / पानी", "Foam / फोम", "Halon/CO2 / हेलोन/CO2", "Dry Powder / सूखा पाउडर"],
-    "a": 2,
+    "o": [
+      "Water / पानी",
+      "Halon/CO2 / हेलोन/CO2",
+      "Dry Powder / सूखा पाउडर",
+      "Foam / फोम"
+    ],
+    "a": 1,
     "e": "Halon or CO2 extinguishers do not conduct electricity. / हेलोन या CO2 बुझाने वाले यंत्र बिजली का संचालन नहीं करते हैं।"
   },
   {
     "q": "What is the least count of a standard Vernier Caliper? / एक मानक वर्नियर कैलिपर की अल्पतमांक (Least Count) क्या होती है?",
-    "o": ["0.1 mm", "0.01 mm", "0.02 mm", "0.05 mm"],
-    "a": 2,
+    "o": [
+      "0.02 mm",
+      "0.1 mm",
+      "0.05 mm",
+      "0.01 mm"
+    ],
+    "a": 0,
     "e": "Most common workshop Vernier Calipers have a least count of 0.02 mm. / अधिकांश वर्कशॉप वर्नियर कैलिपर की अल्पतमांक 0.02 मिमी होती है।"
   },
   {
     "q": "Which engine component converts reciprocating motion into rotary motion? / इंजन का कौन सा हिस्सा रेसिप्रोकेटिंग मोशन को रोटरी मोशन में बदलता है?",
-    "o": ["Piston / पिस्टन", "Crankshaft / क्रैंकशाफ्ट", "Camshaft / कैमशाफ्ट", "Valves / वाल्व"],
-    "a": 1,
+    "o": [
+      "Piston / पिस्टन",
+      "Valves / वाल्व",
+      "Camshaft / कैमशाफ्ट",
+      "Crankshaft / क्रैंकशाफ्ट"
+    ],
+    "a": 3,
     "e": "Crankshaft converts the up-down motion of the piston into rotation. / क्रैंकशाफ्ट पिस्टन की ऊपर-नीचे की गति को घूर्णन में बदलता है।"
   },
   {
     "q": "What is the unit of Luminous Intensity? / ज्योति तीव्रता (Luminous Intensity) की इकाई क्या है?",
-    "o": ["Lux / लक्स", "Lumen / लुमेन", "Candela / कैंडेला", "Watt / वाट"],
-    "a": 2,
+    "o": [
+      "Candela / कैंडेला",
+      "Watt / वाट",
+      "Lumen / लुमेन",
+      "Lux / लक्स"
+    ],
+    "a": 0,
     "e": "Candela is the SI unit of luminous intensity. / कैंडेला ज्योति तीव्रता की SI इकाई है।"
   },
-  
   {
     "q": "What is the standard size of an 'A4' drawing sheet in millimeters? / मिलीमीटर में 'A4' ड्राइंग शीट का मानक आकार क्या है?",
-    "o": ["420 x 594", "210 x 297 | 210 x 297", "297 x 420", "841 x 1189"],
-    "a": 1,
+    "o": [
+      "297 x 420",
+      "841 x 1189",
+      "210 x 297 | 210 x 297",
+      "420 x 594"
+    ],
+    "a": 2,
     "e": "A4 is the most common office paper size, measuring 210mm in width and 297mm in height.",
     "cat": "technical",
     "sub": "autocad"
   },
   {
     "q": "Which plotting parameter determines if the drawing is printed in 'Portrait' or 'Landscape'? / कौन सा प्लॉटिंग पैरामीटर यह निर्धारित करता है कि ड्राइंग 'पोर्ट्रेट' या 'लैंडस्केप' में प्रिंट होगी?",
-    "o": ["Plot Scale", "Drawing Orientation | ड्राइंग ओरिएंटेशन (Orientation)", "Paper Units", "Plot Area"],
-    "a": 1,
+    "o": [
+      "Paper Units",
+      "Plot Scale",
+      "Drawing Orientation | ड्राइंग ओरिएंटेशन (Orientation)",
+      "Plot Area"
+    ],
+    "a": 2,
     "e": "Orientation controls the direction of the drawing on the paper.",
     "cat": "technical",
     "sub": "autocad"
   },
   {
     "q": "What does 'Plot Scale' 1:100 mean? / 'प्लॉट स्केल' 1:100 का क्या अर्थ है?",
-    "o": ["1 unit on paper equals 100 units in drawing | कागज पर 1 इकाई ड्राइंग में 100 इकाइयों के बराबर है", "100 units on paper", "Drawing is larger than paper", "None"],
-    "a": 0,
+    "o": [
+      "100 units on paper",
+      "1 unit on paper equals 100 units in drawing | कागज पर 1 इकाई ड्राइंग में 100 इकाइयों के बराबर है",
+      "None",
+      "Drawing is larger than paper"
+    ],
+    "a": 1,
     "e": "A scale of 1:100 is a reduced scale used to fit large architectural or engineering plans onto a standard sheet.",
     "cat": "technical",
     "sub": "autocad"
   },
   {
     "q": "Which 'Plot Area' option prints only the objects that are currently visible on the screen? / कौन सा 'प्लॉट एरिया' विकल्प केवल उन ऑब्जेक्ट्स को प्रिंट करता है जो वर्तमान में स्क्रीन पर दिखाई दे रहे हैं?",
-    "o": ["Extents", "Display | डिस्प्ले (Display)", "Window", "Limits"],
+    "o": [
+      "Extents",
+      "Display | डिस्प्ले (Display)",
+      "Window",
+      "Limits"
+    ],
     "a": 1,
     "e": "Display option captures exactly what you see in the current drawing area view.",
     "cat": "technical",
@@ -58,47 +97,77 @@
   },
   {
     "q": "What is the purpose of 'Print Preview' (Plot Preview)? / 'प्रिंट प्रिव्यू' (Plot Preview) का उद्देश्य क्या है?",
-    "o": ["To save the file", "To see how the drawing will look on paper before printing | प्रिंट करने से पहले कागज पर ड्राइंग कैसी दिखेगी यह देखना", "To edit lines", "None"],
-    "a": 1,
+    "o": [
+      "None",
+      "To save the file",
+      "To see how the drawing will look on paper before printing | प्रिंट करने से पहले कागज पर ड्राइंग कैसी दिखेगी यह देखना",
+      "To edit lines"
+    ],
+    "a": 2,
     "e": "Previewing helps identify errors in scale, orientation, or line weights, saving paper and ink.",
     "cat": "technical",
     "sub": "autocad"
   },
   {
     "q": "Which 'Plot Area' option prints the entire drawing up to its outer boundaries? / कौन सा 'प्लॉट एरिया' विकल्प पूरी ड्राइंग को उसकी बाहरी सीमाओं तक प्रिंट करता है?",
-    "o": ["Window", "Extents | एक्सटेंट (Extents)", "Display", "None"],
-    "a": 1,
+    "o": [
+      "None",
+      "Window",
+      "Extents | एक्सटेंट (Extents)",
+      "Display"
+    ],
+    "a": 2,
     "e": "Extents plots every object in the drawing, ensuring nothing is left out.",
     "cat": "technical",
     "sub": "autocad"
   },
   {
     "q": "What does 'Plot Offset' control? / 'प्लॉट ऑफसेट' क्या नियंत्रित करता है?",
-    "o": ["Color of lines", "The position of the drawing on the paper relative to the origin | कागज पर ड्राइंग की स्थिति", "Thickness of sheet", "None"],
-    "a": 1,
+    "o": [
+      "Thickness of sheet",
+      "Color of lines",
+      "The position of the drawing on the paper relative to the origin | कागज पर ड्राइंग की स्थिति",
+      "None"
+    ],
+    "a": 2,
     "e": "Offset values (X and Y) shift the drawing on the paper; 'Center the Plot' is a common offset setting.",
     "cat": "technical",
     "sub": "autocad"
   },
   {
     "q": "A0 size sheet is equivalent to how many A4 sheets? / A0 साइज की शीट कितनी A4 शीट के बराबर होती है?",
-    "o": ["4", "8", "16 | 16", "32"],
-    "a": 2,
+    "o": [
+      "8",
+      "16 | 16",
+      "32",
+      "4"
+    ],
+    "a": 1,
     "e": "The ISO sheet system works by halving; an A0 sheet can be divided into 16 A4 sheets.",
     "cat": "technical",
     "sub": "autocad"
   },
   {
     "q": "Which 'Plot Area' option allows you to select a specific rectangular area to print? / कौन सा 'प्लॉट एरिया' विकल्प आपको प्रिंट करने के लिए एक विशिष्ट आयताकार क्षेत्र चुनने की अनुमति देता है?",
-    "o": ["Limits", "Window | विंडो (Window)", "Extents", "Display"],
-    "a": 1,
+    "o": [
+      "Display",
+      "Extents",
+      "Window | विंडो (Window)",
+      "Limits"
+    ],
+    "a": 2,
     "e": "The Window option is the most flexible way to define exactly what part of the drawing should be plotted.",
     "cat": "technical",
     "sub": "autocad"
   },
   {
     "q": "When plotting in 'Millimeters', what should the 'Paper Units' be set to? / 'मिलीमीटर' में प्लॉट करते समय, 'पेपर यूनिट्स' को किस पर सेट किया जाना चाहिए?",
-    "o": ["Inches", "mm | mm", "Pixels", "Points"],
+    "o": [
+      "Points",
+      "mm | mm",
+      "Inches",
+      "Pixels"
+    ],
     "a": 1,
     "e": "Matching paper units with drawing units is crucial for maintaining an accurate plot scale.",
     "cat": "technical",
@@ -106,15 +175,25 @@
   },
   {
     "q": "Which dimensioning command is used to measure the distance between two points along a line parallel to the points? / दो बिंदुओं के समानांतर रेखा के साथ उनके बीच की दूरी मापने के लिए किस कमांड का उपयोग किया जाता है?",
-    "o": ["Linear", "Aligned | एलाइंड (Aligned)", "Rotated", "Baseline"],
-    "a": 1,
+    "o": [
+      "Aligned | एलाइंड (Aligned)",
+      "Linear",
+      "Rotated",
+      "Baseline"
+    ],
+    "a": 0,
     "e": "Aligned dimensions are used for inclined lines where the dimension line must be parallel to the object being measured.",
     "cat": "technical",
     "sub": "autocad"
   },
   {
     "q": "What is 'Baseline Dimensioning'? / 'बेसलाइन विमांकन' (Baseline Dimensioning) क्या है?",
-    "o": ["Dimensions in a single line", "Multiple dimensions measured from a common starting point | एक सामान्य शुरुआती बिंदु से मापे गए कई विमा", "Circular dimensions", "None"],
+    "o": [
+      "Circular dimensions",
+      "Multiple dimensions measured from a common starting point | एक सामान्य शुरुआती बिंदु से मापे गए कई विमा",
+      "None",
+      "Dimensions in a single line"
+    ],
     "a": 1,
     "e": "Baseline dimensions (DIMBASELINE) use a single extension line origin for all subsequent dimensions to avoid error accumulation.",
     "cat": "technical",
@@ -122,47 +201,77 @@
   },
   {
     "q": "Which command allows you to add a series of dimensions in a single straight line from the previous dimension? / पिछला विमा समाप्त होने के बाद उसी सीधी रेखा में विमाओं की श्रृंखला जोड़ने के लिए किस कमांड का उपयोग किया जाता है?",
-    "o": ["Baseline", "Continue | कंटीन्यू (Continue)", "Aligned", "Ordinate"],
-    "a": 1,
+    "o": [
+      "Ordinate",
+      "Aligned",
+      "Continue | कंटीन्यू (Continue)",
+      "Baseline"
+    ],
+    "a": 2,
     "e": "Continue dimensioning (DIMCONTINUE) places dimensions end-to-end in a straight row.",
     "cat": "technical",
     "sub": "autocad"
   },
   {
     "q": "Which variable controls the overall size of arrows and text in all dimensions of a drawing? / ड्राइंग के सभी विमाओं में तीरों और टेक्स्ट के समग्र आकार को कौन सा वेरिएबल नियंत्रित करता है?",
-    "o": ["DIMSTYLE", "DIMSCALE | DIMSCALE", "DIMTEXT", "DIMASSOC"],
-    "a": 1,
+    "o": [
+      "DIMSCALE | DIMSCALE",
+      "DIMASSOC",
+      "DIMSTYLE",
+      "DIMTEXT"
+    ],
+    "a": 0,
     "e": "DIMSCALE acts as a global multiplier for all dimensioning elements like arrows, text, and gaps.",
     "cat": "technical",
     "sub": "autocad"
   },
   {
     "q": "The symbol 'R' in a dimension automatically indicates which property? / विमा में 'R' प्रतीक स्वतः ही किस गुण को इंगित करता है?",
-    "o": ["Diameter", "Radius | त्रिज्या (Radius)", "Rotation", "Roughness"],
-    "a": 1,
+    "o": [
+      "Radius | त्रिज्या (Radius)",
+      "Roughness",
+      "Rotation",
+      "Diameter"
+    ],
+    "a": 0,
     "e": "AutoCAD automatically adds 'R' for Radius dimensions and 'φ' for Diameter dimensions.",
     "cat": "technical",
     "sub": "autocad"
   },
   {
     "q": "What is the difference between 'Single Line Text' (TEXT) and 'Multiline Text' (MTEXT)? / 'सिंगल लाइन टेक्स्ट' और 'मल्टीलाइन टेक्स्ट' में क्या अंतर है?",
-    "o": ["MTEXT acts as a single paragraph object | MTEXT एक एकल पैराग्राफ ऑब्जेक्ट के रूप में कार्य करता है", "TEXT has more fonts", "MTEXT cannot be edited", "None"],
-    "a": 0,
+    "o": [
+      "None",
+      "MTEXT cannot be edited",
+      "TEXT has more fonts",
+      "MTEXT acts as a single paragraph object | MTEXT एक एकल पैराग्राफ ऑब्जेक्ट के रूप में कार्य करता है"
+    ],
+    "a": 3,
     "e": "MTEXT provides a word-processor-like interface and treats the entire block as one object, whereas TEXT treats each line separately.",
     "cat": "technical",
     "sub": "autocad"
   },
   {
     "q": "Which dimensioning type measures the angle between two lines? / दो रेखाओं के बीच के कोण को मापने के लिए किस प्रकार के विमांकन का उपयोग किया जाता है?",
-    "o": ["Linear", "Angular | एंगुलर (Angular)", "Rotated", "Baseline"],
-    "a": 1,
+    "o": [
+      "Angular | एंगुलर (Angular)",
+      "Linear",
+      "Rotated",
+      "Baseline"
+    ],
+    "a": 0,
     "e": "Angular dimensioning (DIMANGULAR) measures the internal or external angle between two intersecting lines or arcs.",
     "cat": "technical",
     "sub": "autocad"
   },
   {
     "q": "How can you change the value or appearance of an existing dimension? / मौजूदा विमा के मान या स्वरूप को आप कैसे बदल सकते हैं?",
-    "o": ["Explode command", "Properties Palette or DIMEDIT | प्रॉपर्टीज पैलेट या DIMEDIT", "Delete and redraw", "None"],
+    "o": [
+      "None",
+      "Properties Palette or DIMEDIT | प्रॉपर्टीज पैलेट या DIMEDIT",
+      "Delete and redraw",
+      "Explode command"
+    ],
     "a": 1,
     "e": "The Properties palette (Ctrl+1) allows for granular control over individual dimension settings like text override or arrow style.",
     "cat": "technical",
@@ -170,31 +279,51 @@
   },
   {
     "q": "Which 'Text' command is ideal for creating short labels or single words? / छोटे लेबल या एकल शब्द बनाने के लिए कौन सा 'टेक्स्ट' कमांड आदर्श है?",
-    "o": ["MTEXT", "TEXT (Single Line) | टेक्स्ट (Single Line)", "DTEXT", "None"],
-    "a": 1,
+    "o": [
+      "MTEXT",
+      "None",
+      "TEXT (Single Line) | टेक्स्ट (Single Line)",
+      "DTEXT"
+    ],
+    "a": 2,
     "e": "Single line text is simpler and uses less system resources for simple notations.",
     "cat": "technical",
     "sub": "autocad"
   },
   {
     "q": "A 'Rotated' dimension is used when: / 'रोटेटेड' विमा का उपयोग तब किया जाता है जब:",
-    "o": ["Measuring a circle", "The dimension line must be at a specific angle regardless of the object | विमा रेखा को किसी विशिष्ट कोण पर होना चाहिए", "Dimension is upside down", "None"],
-    "a": 1,
+    "o": [
+      "The dimension line must be at a specific angle regardless of the object | विमा रेखा को किसी विशिष्ट कोण पर होना चाहिए",
+      "None",
+      "Dimension is upside down",
+      "Measuring a circle"
+    ],
+    "a": 0,
     "e": "It allows the user to specify a rotation angle for the dimension line that is different from the object's angle.",
     "cat": "technical",
     "sub": "autocad"
   },
   {
     "q": "Which command is used to remove the part of an object that extends beyond a cutting edge? / कटिंग एज से आगे बढ़ने वाले ऑब्जेक्ट के हिस्से को हटाने के लिए किस कमांड का उपयोग किया जाता है?",
-    "o": ["Delete", "Trim | ट्रिम (Trim)", "Extend", "Offset"],
-    "a": 1,
+    "o": [
+      "Delete",
+      "Offset",
+      "Extend",
+      "Trim | ट्रिम (Trim)"
+    ],
+    "a": 3,
     "e": "TRIM removes unwanted parts of an object at its intersection with another object.",
     "cat": "technical",
     "sub": "autocad"
   },
   {
     "q": "What does the 'OFFSET' command do? / 'OFFSET' कमांड क्या करता है?",
-    "o": ["Moves an object", "Creates a parallel copy of an object at a specified distance | निर्दिष्ट दूरी पर समानांतर प्रतिलिपि बनाना", "Deletes an object", "None"],
+    "o": [
+      "Deletes an object",
+      "Creates a parallel copy of an object at a specified distance | निर्दिष्ट दूरी पर समानांतर प्रतिलिपि बनाना",
+      "Moves an object",
+      "None"
+    ],
     "a": 1,
     "e": "Offset is ideal for creating parallel lines, concentric circles, or similar shapes at a fixed distance.",
     "cat": "technical",
@@ -202,7 +331,12 @@
   },
   {
     "q": "Which command allows you to create multiple copies of objects in a rectangular or polar pattern? / कौन सा कमांड ऑब्जेक्ट्स को आयताकार या ध्रुवीय पैटर्न में कई कॉपियां बनाने की अनुमति देता है?",
-    "o": ["Copy", "Array | एरे (Array)", "Block", "Mirror"],
+    "o": [
+      "Mirror",
+      "Array | एरे (Array)",
+      "Block",
+      "Copy"
+    ],
     "a": 1,
     "e": "ARRAY can be Rectangular (rows/columns) or Polar (rotated around a center point).",
     "cat": "technical",
@@ -210,23 +344,38 @@
   },
   {
     "q": "What is the purpose of 'LAYERS' in AutoCAD? / ऑटोकैड में 'लेयर्स' (Layers) का उद्देश्य क्या है?",
-    "o": ["To make drawing colorful", "To organize and control the visibility/properties of objects | ऑब्जेक्ट्स की दृश्यता और गुणों को व्यवस्थित करना", "To save space", "None"],
-    "a": 1,
+    "o": [
+      "To save space",
+      "To make drawing colorful",
+      "None",
+      "To organize and control the visibility/properties of objects | ऑब्जेक्ट्स की दृश्यता और गुणों को व्यवस्थित करना"
+    ],
+    "a": 3,
     "e": "Layers allow you to group related objects (like dimensions, walls, or text) and hide or lock them as needed.",
     "cat": "technical",
     "sub": "autocad"
   },
   {
     "q": "Which command is used to combine multiple objects into a single named 'symbol' for reuse? / पुन: उपयोग के लिए कई ऑब्जेक्ट्स को एक नामित 'प्रतीक' (Symbol) में संयोजित करने के लिए किस कमांड का उपयोग किया जाता है?",
-    "o": ["Group", "Block | ब्लॉक (Block)", "Layer", "Wblock"],
-    "a": 1,
+    "o": [
+      "Layer",
+      "Wblock",
+      "Block | ब्लॉक (Block)",
+      "Group"
+    ],
+    "a": 2,
     "e": "BLOCKs are reusable symbols that help reduce file size and maintain consistency across the drawing.",
     "cat": "technical",
     "sub": "autocad"
   },
   {
     "q": "Which command increases the length of an object to meet a boundary edge? / कौन सा कमांड किसी ऑब्जेक्ट की लंबाई को बाउंड्री एज तक बढ़ाने के लिए किया जाता है?",
-    "o": ["Trim", "Extend | एक्सटेंड (Extend)", "Stretch", "Lengthen"],
+    "o": [
+      "Stretch",
+      "Extend | एक्सटेंड (Extend)",
+      "Trim",
+      "Lengthen"
+    ],
     "a": 1,
     "e": "EXTEND works the opposite of Trim; it lengthens lines, arcs, or polylines to reach a target edge.",
     "cat": "technical",
@@ -234,31 +383,51 @@
   },
   {
     "q": "What happens when you 'Lock' a layer? / जब आप किसी लेयर को 'Lock' करते हैं, तो क्या होता है?",
-    "o": ["Objects become invisible", "Objects stay visible but cannot be edited | ऑब्जेक्ट दिखाई देते हैं लेकिन एडिट नहीं किए जा सकते", "Objects are deleted", "None"],
-    "a": 1,
+    "o": [
+      "Objects stay visible but cannot be edited | ऑब्जेक्ट दिखाई देते हैं लेकिन एडिट नहीं किए जा सकते",
+      "Objects become invisible",
+      "Objects are deleted",
+      "None"
+    ],
+    "a": 0,
     "e": "Locking a layer prevents accidental changes while still allowing the objects to be used as a reference.",
     "cat": "technical",
     "sub": "autocad"
   },
   {
     "q": "Which command creates a 'Mirror' image of objects about a specified axis? / कौन सा कमांड निर्दिष्ट अक्ष के चारों ओर ऑब्जेक्ट्स की 'मिरर' छवि बनाता है?",
-    "o": ["Copy", "Mirror | मिरर (Mirror)", "Rotate", "Flip"],
-    "a": 1,
+    "o": [
+      "Rotate",
+      "Flip",
+      "Copy",
+      "Mirror | मिरर (Mirror)"
+    ],
+    "a": 3,
     "e": "MIRROR reflects objects across a selected line, which is useful for symmetrical designs.",
     "cat": "technical",
     "sub": "autocad"
   },
   {
     "q": "The command 'EXPLODE' is used to: / 'EXPLODE' कमांड का उपयोग किया जाता है:",
-    "o": ["Delete the drawing", "Break a compound object into its individual components | एक संयुक्त ऑब्जेक्ट को उसके अलग-अलग घटकों में तोड़ना", "Zoom in", "None"],
-    "a": 1,
+    "o": [
+      "Zoom in",
+      "None",
+      "Delete the drawing",
+      "Break a compound object into its individual components | एक संयुक्त ऑब्जेक्ट को उसके अलग-अलग घटकों में तोड़ना"
+    ],
+    "a": 3,
     "e": "Explode is used to break blocks, polylines, or rectangles into separate lines and segments.",
     "cat": "technical",
     "sub": "autocad"
   },
   {
     "q": "In the Layer Properties Manager, what does the 'Freeze' option do? / लेयर प्रॉपर्टीज मैनेजर में, 'Freeze' विकल्प क्या करता है?",
-    "o": ["Changes color", "Hides the layer and prevents it from being processed by the system | लेयर को छिपाता है और सिस्टम प्रोसेसिंग रोकता है", "Permanent delete", "None"],
+    "o": [
+      "Permanent delete",
+      "Hides the layer and prevents it from being processed by the system | लेयर को छिपाता है और सिस्टम प्रोसेसिंग रोकता है",
+      "Changes color",
+      "None"
+    ],
     "a": 1,
     "e": "FREEZE is similar to Turn Off but is more efficient for performance as it doesn't regenerate the layer's objects.",
     "cat": "technical",
@@ -266,7 +435,12 @@
   },
   {
     "q": "Which command is used to create a closed polyline with a specific number of equal sides? / समान भुजाओं वाली एक बंद पॉलीलाइन बनाने के लिए किस कमांड का उपयोग किया जाता है?",
-    "o": ["Rectangle", "Polygon | पॉलीगॉन (Polygon)", "Circle", "Multiline"],
+    "o": [
+      "Rectangle",
+      "Polygon | पॉलीगॉन (Polygon)",
+      "Circle",
+      "Multiline"
+    ],
     "a": 1,
     "e": "The POLYGON command allows you to specify the number of sides (3 to 1024) to create equilateral shapes.",
     "cat": "technical",
@@ -274,31 +448,51 @@
   },
   {
     "q": "In which coordinate system are points measured directly from the 'Origin' (0,0)? / किस कोऑर्डिनेट सिस्टम में बिंदुओं को सीधे 'ऑरिजिन' (0,0) से मापा जाता है?",
-    "o": ["Relative Cartesian", "Absolute Coordinates | एब्सोल्यूट कोऑर्डिनेट्स", "Polar Coordinates", "None"],
-    "a": 1,
+    "o": [
+      "Polar Coordinates",
+      "None",
+      "Relative Cartesian",
+      "Absolute Coordinates | एब्सोल्यूट कोऑर्डिनेट्स"
+    ],
+    "a": 3,
     "e": "Absolute coordinates use the format (X,Y) and always refer to the fixed (0,0) point of the UCS.",
     "cat": "technical",
     "sub": "autocad"
   },
   {
     "q": "What is the prefix used to specify 'Relative' coordinates in AutoCAD? / ऑटोकैड में 'रिलेटिव' कोऑर्डिनेट्स निर्दिष्ट करने के लिए किस प्रीफिक्स (Prefix) का उपयोग किया जाता है?",
-    "o": ["#", "@ | @", "$", "&"],
-    "a": 1,
+    "o": [
+      "$",
+      "#",
+      "@ | @",
+      "&"
+    ],
+    "a": 2,
     "e": "The '@' symbol tells AutoCAD to measure the distance from the last point entered instead of the origin.",
     "cat": "technical",
     "sub": "autocad"
   },
   {
     "q": "Which coordinate format is used to specify a point using distance and an angle (e.g., @10<45)? / दूरी और कोण का उपयोग करके बिंदु निर्दिष्ट करने के लिए किस प्रारूप का उपयोग किया जाता है?",
-    "o": ["Absolute", "Relative Cartesian", "Relative Polar | रिलेटिव पोलर (Relative Polar)", "None"],
-    "a": 2,
+    "o": [
+      "Relative Polar | रिलेटिव पोलर (Relative Polar)",
+      "None",
+      "Absolute",
+      "Relative Cartesian"
+    ],
+    "a": 0,
     "e": "Relative Polar coordinates use the format @distance<angle to locate a point relative to the previous one.",
     "cat": "technical",
     "sub": "autocad"
   },
   {
     "q": "What is the main advantage of using a 'Polyline' (PLINE) over a simple 'Line'? / एक साधारण 'लाइन' के बजाय 'पॉलीलाइन' का उपयोग करने का मुख्य लाभ क्या है?",
-    "o": ["It is always blue", "All segments act as a single object | सभी खंड एक ही ऑब्जेक्ट के रूप में कार्य करते हैं", "It cannot be deleted", "None"],
+    "o": [
+      "It cannot be deleted",
+      "All segments act as a single object | सभी खंड एक ही ऑब्जेक्ट के रूप में कार्य करते हैं",
+      "It is always blue",
+      "None"
+    ],
     "a": 1,
     "e": "A polyline is a single connected sequence of segments, which is easier to select, edit, and use for area calculations.",
     "cat": "technical",
@@ -306,79 +500,129 @@
   },
   {
     "q": "Which command creates a 'single object' consisting of multiple parallel lines? / कौन सा कमांड कई समानांतर रेखाओं वाला एक 'एकल ऑब्जेक्ट' बनाता है?",
-    "o": ["Polyline", "Multiline | मल्टीलाइन (Multiline)", "Offset", "Array"],
-    "a": 1,
+    "o": [
+      "Multiline | मल्टीलाइन (Multiline)",
+      "Offset",
+      "Array",
+      "Polyline"
+    ],
+    "a": 0,
     "e": "MLINE is used to draw parallel lines simultaneously, commonly used for representing walls in architectural plans.",
     "cat": "technical",
     "sub": "autocad"
   },
   {
     "q": "An 'Ellipse' has two main axes. What are they called? / एक 'एलिप्स' के दो मुख्य अक्ष होते हैं। उन्हें क्या कहा जाता है?",
-    "o": ["Long and Short", "Major and Minor | मेजर और माइनर (Major and Minor)", "X and Y", "None"],
-    "a": 1,
+    "o": [
+      "Major and Minor | मेजर और माइनर (Major and Minor)",
+      "Long and Short",
+      "X and Y",
+      "None"
+    ],
+    "a": 0,
     "e": "An ellipse is defined by its center and the lengths of its major and minor axes.",
     "cat": "technical",
     "sub": "autocad"
   },
   {
     "q": "Which 'Circle' option is used to draw a circle that touches three existing lines? / तीन मौजूदा रेखाओं को छूने वाला वृत्त बनाने के लिए किस 'सर्कल' विकल्प का उपयोग किया जाता है?",
-    "o": ["Center, Radius", "Tan, Tan, Tan | Tan, Tan, Tan", "2-Point", "3-Point"],
-    "a": 1,
+    "o": [
+      "2-Point",
+      "Center, Radius",
+      "3-Point",
+      "Tan, Tan, Tan | Tan, Tan, Tan"
+    ],
+    "a": 3,
     "e": "The TTT (Tangent-Tangent-Tangent) option creates a circle tangent to three selected objects.",
     "cat": "technical",
     "sub": "autocad"
   },
   {
     "q": "What is the default direction for measuring angles in AutoCAD? / ऑटोकैड में कोण मापने की डिफ़ॉल्ट दिशा क्या है?",
-    "o": ["Clockwise", "Counter-Clockwise | काउंटर-क्लॉकवाइज (वामावर्त)", "Both", "None"],
-    "a": 1,
+    "o": [
+      "Clockwise",
+      "Both",
+      "None",
+      "Counter-Clockwise | काउंटर-क्लॉकवाइज (वामावर्त)"
+    ],
+    "a": 3,
     "e": "By default, 0 degrees is to the East, and angles increase in the counter-clockwise direction.",
     "cat": "technical",
     "sub": "autocad"
   },
   {
     "q": "Which Draw command requires you to specify the 'Start', 'Center', and 'End'? / किस ड्रॉ कमांड के लिए आपको 'प्रारंभ', 'केंद्र' और 'अंत' निर्दिष्ट करने की आवश्यकता होती है?",
-    "o": ["Line", "Arc | आर्क (Arc)", "Circle", "Rectangle"],
-    "a": 1,
+    "o": [
+      "Line",
+      "Circle",
+      "Rectangle",
+      "Arc | आर्क (Arc)"
+    ],
+    "a": 3,
     "e": "ARC has many methods for creation, including the Start-Center-End (S,C,E) method.",
     "cat": "technical",
     "sub": "autocad"
   },
   {
     "q": "Which command is used to set the measurement system (e.g., Decimal, Engineering) in AutoCAD? / ऑटोकैड में माप प्रणाली (जैसे दशमलव, इंजीनियरिंग) सेट करने के लिए किस कमांड का उपयोग किया जाता है?",
-    "o": ["LIMITS", "UNITS | UNITS", "GRID", "SNAP"],
-    "a": 1,
+    "o": [
+      "SNAP",
+      "LIMITS",
+      "UNITS | UNITS",
+      "GRID"
+    ],
+    "a": 2,
     "e": "The UNITS command opens a dialog box to specify the linear and angular formats and precision.",
     "cat": "technical",
     "sub": "autocad"
   },
   {
     "q": "What does the 'LIMITS' command define in AutoCAD? / ऑटोकैड में 'LIMITS' कमांड क्या परिभाषित करता है?",
-    "o": ["Size of the cursor", "The boundaries of the drawing area | ड्राइंग एरिया की सीमाएं", "Speed of the ram", "None"],
-    "a": 1,
+    "o": [
+      "Speed of the ram",
+      "None",
+      "The boundaries of the drawing area | ड्राइंग एरिया की सीमाएं",
+      "Size of the cursor"
+    ],
+    "a": 2,
     "e": "LIMITS set the lower-left and upper-right corners of the working space, typically matching the paper size.",
     "cat": "technical",
     "sub": "autocad"
   },
   {
     "q": "The 'GRID' command displays: / 'GRID' कमांड क्या प्रदर्शित करता है?",
-    "o": ["A solid color", "A pattern of dots or lines as a visual reference | विज़ुअल रेफरेंस के लिए डॉट्स या लाइनों का पैटर्न", "Coordinates", "None"],
-    "a": 1,
+    "o": [
+      "A pattern of dots or lines as a visual reference | विज़ुअल रेफरेंस के लिए डॉट्स या लाइनों का पैटर्न",
+      "None",
+      "A solid color",
+      "Coordinates"
+    ],
+    "a": 0,
     "e": "The Grid helps the user visualize the size and alignment of the drawing but does not print.",
     "cat": "technical",
     "sub": "autocad"
   },
   {
     "q": "Which feature restricts the cursor movement to specified intervals? / कौन सी सुविधा कर्सर की गति को निर्दिष्ट अंतरालों तक सीमित करती है?",
-    "o": ["Grid", "Snap | स्नैप (Snap)", "Units", "Redo"],
-    "a": 1,
+    "o": [
+      "Units",
+      "Grid",
+      "Snap | स्नैप (Snap)",
+      "Redo"
+    ],
+    "a": 2,
     "e": "SNAP forces the cursor to jump between specific points, making precise drawing easier when used with Grid.",
     "cat": "technical",
     "sub": "autocad"
   },
   {
     "q": "What is the keyboard shortcut for the 'UNDO' action? / 'UNDO' क्रिया के लिए कीबोर्ड शॉर्टकट क्या है?",
-    "o": ["Ctrl + Y", "Ctrl + Z | Ctrl + Z", "Ctrl + X", "Ctrl + C"],
+    "o": [
+      "Ctrl + Y",
+      "Ctrl + Z | Ctrl + Z",
+      "Ctrl + X",
+      "Ctrl + C"
+    ],
     "a": 1,
     "e": "Undo reverses the most recent command or action performed.",
     "cat": "technical",
@@ -386,7 +630,12 @@
   },
   {
     "q": "Which command is used to reverse the effect of the 'Undo' command? / 'Undo' कमांड के प्रभाव को पलटने के लिए किस कमांड का उपयोग किया जाता है?",
-    "o": ["U", "REDO | REDO", "CANCEL", "EXIT"],
+    "o": [
+      "U",
+      "REDO | REDO",
+      "EXIT",
+      "CANCEL"
+    ],
     "a": 1,
     "e": "REDO brings back the action that was just undone; it must be used immediately after an Undo.",
     "cat": "technical",
@@ -394,23 +643,38 @@
   },
   {
     "q": "What happens if 'Limits Check' is set to ON? / यदि 'Limits Check' को ON पर सेट किया जाता है, तो क्या होता है?",
-    "o": ["AutoCAD crashes", "You cannot draw outside the specified limits | आप निर्दिष्ट सीमा के बाहर ड्राइंग नहीं कर सकते", "The grid disappears", "None"],
-    "a": 1,
+    "o": [
+      "You cannot draw outside the specified limits | आप निर्दिष्ट सीमा के बाहर ड्राइंग नहीं कर सकते",
+      "AutoCAD crashes",
+      "The grid disappears",
+      "None"
+    ],
+    "a": 0,
     "e": "With Limits Check ON, AutoCAD rejects points entered outside the defined drawing boundaries.",
     "cat": "technical",
     "sub": "autocad"
   },
   {
     "q": "Which function key toggles the 'GRID' display on and off? / कौन सी फंक्शन की 'GRID' डिस्प्ले को ऑन और ऑफ करती है?",
-    "o": ["F3", "F7 | F7", "F8", "F9"],
-    "a": 1,
+    "o": [
+      "F7 | F7",
+      "F3",
+      "F8",
+      "F9"
+    ],
+    "a": 0,
     "e": "F7 is the standard toggle key for the Grid visibility in AutoCAD.",
     "cat": "technical",
     "sub": "autocad"
   },
   {
     "q": "When setting up 'Units', what is the default unit for 'Decimal' format? / 'Units' सेट करते समय, 'Decimal' प्रारूप के लिए डिफ़ॉल्ट इकाई क्या होती है?",
-    "o": ["Inches", "Unitless or Millimeters | यूनिटलेस या मिलीमीटर", "Feet", "Miles"],
+    "o": [
+      "Inches",
+      "Unitless or Millimeters | यूनिटलेस या मिलीमीटर",
+      "Miles",
+      "Feet"
+    ],
     "a": 1,
     "e": "In Decimal format, the unit depends on the template or user choice, often Millimeters in metric drawings.",
     "cat": "technical",
@@ -418,23 +682,38 @@
   },
   {
     "q": "To start a 'New' file based on an existing setup, you should use: / मौजूदा सेटअप के आधार पर 'New' फाइल शुरू करने के लिए आपको उपयोग करना चाहिए:",
-    "o": ["Open", "Template (.dwt) | टेम्पलेट (.dwt)", "Save", "Import"],
-    "a": 1,
+    "o": [
+      "Save",
+      "Open",
+      "Import",
+      "Template (.dwt) | टेम्पलेट (.dwt)"
+    ],
+    "a": 3,
     "e": "Templates provide a quick way to start new projects with all necessary settings already in place.",
     "cat": "technical",
     "sub": "autocad"
   },
   {
     "q": "Which component of the AutoCAD window displays the name of the current drawing file? / ऑटोकैड विंडो का कौन सा घटक वर्तमान ड्राइंग फाइल का नाम प्रदर्शित करता है?",
-    "o": ["Menu bar", "Title bar | टाइटल बार (Title bar)", "Status bar", "Command window"],
-    "a": 1,
+    "o": [
+      "Menu bar",
+      "Command window",
+      "Title bar | टाइटल बार (Title bar)",
+      "Status bar"
+    ],
+    "a": 2,
     "e": "The Title bar is located at the top of the window and shows the software name and the active file name.",
     "cat": "technical",
     "sub": "autocad"
   },
   {
     "q": "What is the function of the 'UCS Icon' in the drawing area? / ड्राइंग एरिया में 'UCS आइकॉन' का कार्य क्या है?",
-    "o": ["To draw lines", "To show the orientation of X and Y axes | X और Y अक्षों के ओरिएंटेशन को दर्शाना", "To save files", "None"],
+    "o": [
+      "None",
+      "To show the orientation of X and Y axes | X और Y अक्षों के ओरिएंटेशन को दर्शाना",
+      "To save files",
+      "To draw lines"
+    ],
     "a": 1,
     "e": "User Coordinate System (UCS) icon indicates the positive directions of the axes and the current coordinate plane.",
     "cat": "technical",
@@ -442,31 +721,51 @@
   },
   {
     "q": "Which area in AutoCAD is used to type commands and view prompts? / ऑटोकैड में कमांड टाइप करने और प्रॉम्प्ट देखने के लिए किस क्षेत्र का उपयोग किया जाता है?",
-    "o": ["Draw toolbar", "Command Window | कमांड विंडो (Command Window)", "Menu bar", "Modify toolbar"],
-    "a": 1,
+    "o": [
+      "Draw toolbar",
+      "Modify toolbar",
+      "Command Window | कमांड विंडो (Command Window)",
+      "Menu bar"
+    ],
+    "a": 2,
     "e": "The Command Window is essential for interacting with AutoCAD by entering instructions and responding to options.",
     "cat": "technical",
     "sub": "autocad"
   },
   {
     "q": "The 'Crosshair' or 'Cursor' in the drawing area consists of: / ड्राइंग एरिया में 'क्रॉसहेयर' या 'कर्सर' में शामिल हैं:",
-    "o": ["A circle", "Two perpendicular lines with a pickbox | दो लंबवत रेखाएं और एक पिकबॉक्स", "A triangle", "None"],
-    "a": 1,
+    "o": [
+      "A triangle",
+      "None",
+      "Two perpendicular lines with a pickbox | दो लंबवत रेखाएं और एक पिकबॉक्स",
+      "A circle"
+    ],
+    "a": 2,
     "e": "The intersection of the crosshairs marks the precise location of the pointer for drawing and selection.",
     "cat": "technical",
     "sub": "autocad"
   },
   {
     "q": "Which file extension is used for AutoCAD 'Templates'? / ऑटोकैड 'टेम्पलेट्स' के लिए किस फाइल एक्सटेंशन का उपयोग किया जाता है?",
-    "o": [".dwg", ".dwt | .dwt", ".bak", ".dxf"],
-    "a": 1,
+    "o": [
+      ".dxf",
+      ".dwg",
+      ".dwt | .dwt",
+      ".bak"
+    ],
+    "a": 2,
     "e": ".dwt stands for Drawing Template, which stores predefined settings like units and limits for new drawings.",
     "cat": "technical",
     "sub": "autocad"
   },
   {
     "q": "What is the shortcut key to 'Save' an existing drawing in AutoCAD? / ऑटोकैड में मौजूदा ड्राइंग को 'सेव' करने की शॉर्टकट कुंजी क्या है?",
-    "o": ["Ctrl + N", "Ctrl + S | Ctrl + S", "Ctrl + O", "Ctrl + P"],
+    "o": [
+      "Ctrl + P",
+      "Ctrl + S | Ctrl + S",
+      "Ctrl + O",
+      "Ctrl + N"
+    ],
     "a": 1,
     "e": "Ctrl + S is the standard Windows and AutoCAD shortcut for saving work.",
     "cat": "technical",
@@ -474,47 +773,77 @@
   },
   {
     "q": "Which toolbar contains commands like Line, Circle, and Rectangle? / किस टूलबार में लाइन, सर्कल और रेक्टेंगल जैसे कमांड होते हैं?",
-    "o": ["Standard toolbar", "Draw toolbar | ड्रॉ टूलबार (Draw toolbar)", "Modify toolbar", "Properties toolbar"],
-    "a": 1,
+    "o": [
+      "Modify toolbar",
+      "Properties toolbar",
+      "Draw toolbar | ड्रॉ टूलबार (Draw toolbar)",
+      "Standard toolbar"
+    ],
+    "a": 2,
     "e": "The Draw toolbar hosts all basic geometric creation tools.",
     "cat": "technical",
     "sub": "autocad"
   },
   {
     "q": "Where is the 'Status Bar' located in the AutoCAD window? / ऑटोकैड विंडो में 'स्टेटस बार' कहाँ स्थित होता है?",
-    "o": ["At the top", "At the bottom | सबसे नीचे (Bottom)", "Left side", "Right side"],
-    "a": 1,
+    "o": [
+      "At the top",
+      "Left side",
+      "At the bottom | सबसे नीचे (Bottom)",
+      "Right side"
+    ],
+    "a": 2,
     "e": "The Status bar is at the very bottom and contains toggles for Grid, Snap, Ortho, etc.",
     "cat": "technical",
     "sub": "autocad"
   },
   {
     "q": "Which feature allows you to exit the AutoCAD software completely? / कौन सी सुविधा आपको ऑटोकैड सॉफ्टवेयर से पूरी तरह बाहर निकलने की अनुमति देती है?",
-    "o": ["New", "Quit (Exit) | क्विट (Exit)", "Save as", "Template"],
-    "a": 1,
+    "o": [
+      "New",
+      "Template",
+      "Save as",
+      "Quit (Exit) | क्विट (Exit)"
+    ],
+    "a": 3,
     "e": "Quit or Exit closes all open files and the application itself.",
     "cat": "technical",
     "sub": "autocad"
   },
   {
     "q": "What is the purpose of the 'Object Properties' toolbar? / 'ऑब्जेक्ट प्रॉपर्टीज' टूलबार का उद्देश्य क्या है?",
-    "o": ["To draw shapes", "To control color, layer, and linetype of objects | रंग, लेयर और लाइनटाइप को नियंत्रित करना", "To zoom in", "None"],
-    "a": 1,
+    "o": [
+      "None",
+      "To draw shapes",
+      "To control color, layer, and linetype of objects | रंग, लेयर और लाइनटाइप को नियंत्रित करना",
+      "To zoom in"
+    ],
+    "a": 2,
     "e": "This toolbar allows users to view and modify the specific attributes of selected drawing elements.",
     "cat": "technical",
     "sub": "autocad"
   },
   {
     "q": "When converting Orthographic Views into an Isometric View, the 'Height' is measured along the: / ऑर्थोग्राफिक व्यू को आइसोमेट्रिक व्यू में बदलते समय, 'ऊंचाई' को किसके साथ मापा जाता है?",
-    "o": ["Horizontal axis", "Vertical axis | ऊर्ध्वाधर अक्ष (Vertical axis)", "30° axis", "None"],
-    "a": 1,
+    "o": [
+      "Vertical axis | ऊर्ध्वाधर अक्ष (Vertical axis)",
+      "None",
+      "Horizontal axis",
+      "30° axis"
+    ],
+    "a": 0,
     "e": "Height is always represented by the vertical isometric axis.",
     "cat": "technical",
     "sub": "isometric_projection"
   },
   {
     "q": "To draw an isometric view of a 'Square' in the horizontal plane, the sides are drawn at: / क्षैतिज तल में एक 'वर्ग' का आइसोमेट्रिक दृश्य खींचने के लिए, भुजाओं को कहाँ खींचा जाता है?",
-    "o": ["0° and 90°", "30° and 30° to horizontal | क्षैतिज से 30° और 30° पर", "45° and 45°", "None"],
+    "o": [
+      "None",
+      "30° and 30° to horizontal | क्षैतिज से 30° और 30° पर",
+      "45° and 45°",
+      "0° and 90°"
+    ],
     "a": 1,
     "e": "Both sides of the square in the horizontal plane are inclined at 30° to the horizontal reference.",
     "cat": "technical",
@@ -522,7 +851,12 @@
   },
   {
     "q": "A 'Sphere' in isometric projection appears as a: / आइसोमेट्रिक प्रक्षेप में एक 'गोला' (Sphere) कैसा दिखाई देता है?",
-    "o": ["Ellipse", "Circle of true diameter | वास्तविक व्यास का वृत्त", "Circle of reduced diameter", "None"],
+    "o": [
+      "None",
+      "Circle of true diameter | वास्तविक व्यास का वृत्त",
+      "Circle of reduced diameter",
+      "Ellipse"
+    ],
     "a": 1,
     "e": "A sphere looks like a circle from any direction; in isometric projection, its projected diameter is its true diameter.",
     "cat": "technical",
@@ -530,7 +864,12 @@
   },
   {
     "q": "Which orthographic view provides the 'Length' and 'Height' for an isometric drawing? / आइसोमेट्रिक ड्राइंग के लिए कौन सा ऑर्थोग्राफिक दृश्य 'लंबाई' और 'ऊंचाई' प्रदान करता है?",
-    "o": ["Top View", "Front View | फ्रंट व्यू (Front View)", "Side View", "None"],
+    "o": [
+      "Side View",
+      "Front View | फ्रंट व्यू (Front View)",
+      "None",
+      "Top View"
+    ],
     "a": 1,
     "e": "The Front View (Elevation) contains the length and height of the object.",
     "cat": "technical",
@@ -538,23 +877,38 @@
   },
   {
     "q": "In the four-center method, the centers for the larger arcs of the ellipse are located at: / फोर-सेंटर विधि में, दीर्घवृत्त के बड़े चापों के केंद्र कहाँ स्थित होते हैं?",
-    "o": ["Midpoints of sides", "Opposite corners of the rhombus | समचतुर्भुज के विपरीत कोने", "The center of the square", "None"],
-    "a": 1,
+    "o": [
+      "The center of the square",
+      "Midpoints of sides",
+      "None",
+      "Opposite corners of the rhombus | समचतुर्भुज के विपरीत कोने"
+    ],
+    "a": 3,
     "e": "The obtuse angle corners of the isometric rhombus act as centers for the large arcs.",
     "cat": "technical",
     "sub": "isometric_projection"
   },
   {
     "q": "How is a 'Semicircle' or 'Arc' represented in an isometric drawing? / आइसोमेट्रिक ड्राइंग में 'अर्धवृत्त' या 'चाप' को कैसे दर्शाया जाता है?",
-    "o": ["As a true semicircle", "As a part of an isometric ellipse | आइसोमेट्रिक दीर्घवृत्त के एक हिस्से के रूप में", "As a straight line", "None"],
-    "a": 1,
+    "o": [
+      "As a part of an isometric ellipse | आइसोमेट्रिक दीर्घवृत्त के एक हिस्से के रूप में",
+      "As a straight line",
+      "As a true semicircle",
+      "None"
+    ],
+    "a": 0,
     "e": "Any circular arc must be constructed as a corresponding portion of the ellipse formed in that plane.",
     "cat": "technical",
     "sub": "isometric_projection"
   },
   {
     "q": "The 'Box Method' is used in isometric drawing to: / आइसोमेट्रिक ड्राइंग में 'बॉक्स विधि' का उपयोग किया जाता है:",
-    "o": ["Draw hidden lines", "Enclose complex objects in a rectangular prism first | जटिल वस्तुओं को पहले एक आयताकार प्रिज्म में बंद करना", "Measure angles", "None"],
+    "o": [
+      "None",
+      "Enclose complex objects in a rectangular prism first | जटिल वस्तुओं को पहले एक आयताकार प्रिज्म में बंद करना",
+      "Draw hidden lines",
+      "Measure angles"
+    ],
     "a": 1,
     "e": "The box method helps in accurately locating points of non-isometric lines and complex curves.",
     "cat": "technical",
@@ -562,15 +916,25 @@
   },
   {
     "q": "In isometric projection of a 'Cube', all its faces appear as: / एक 'घन' (Cube) के आइसोमेट्रिक प्रक्षेप में, इसके सभी फलक कैसे दिखाई देते हैं?",
-    "o": ["Squares", "Rhombuses | समचतुर्भुज (Rhombuses)", "Rectangles", "Trapezoids"],
-    "a": 1,
+    "o": [
+      "Rhombuses | समचतुर्भुज (Rhombuses)",
+      "Trapezoids",
+      "Rectangles",
+      "Squares"
+    ],
+    "a": 0,
     "e": "The 90° angles of the cube's faces become 60° and 120° in the isometric view, forming rhombuses.",
     "cat": "technical",
     "sub": "isometric_projection"
   },
   {
     "q": "Which orthographic view is used to determine the 'Depth' of an object for isometric conversion? / आइसोमेट्रिक कन्वर्जन के लिए वस्तु की 'गहराई' (Depth) निर्धारित करने के लिए किस ऑर्थोग्राफिक दृश्य का उपयोग किया जाता है?",
-    "o": ["Front View", "Top View or Side View | टॉप व्यू या साइड व्यू", "None", "Both Front and Top"],
+    "o": [
+      "None",
+      "Top View or Side View | टॉप व्यू या साइड व्यू",
+      "Both Front and Top",
+      "Front View"
+    ],
     "a": 1,
     "e": "Depth can be found in the Top View (Plan) or the Side View (End View).",
     "cat": "technical",
@@ -578,15 +942,25 @@
   },
   {
     "q": "Isometric Projection is a type of: / आइसोमेट्रिक प्रक्षेप किसका एक प्रकार है?",
-    "o": ["Perspective Projection", "Axonometric Projection | एक्सोनोमेट्रिक प्रक्षेप", "Oblique Projection", "None"],
-    "a": 1,
+    "o": [
+      "Oblique Projection",
+      "Perspective Projection",
+      "Axonometric Projection | एक्सोनोमेट्रिक प्रक्षेप",
+      "None"
+    ],
+    "a": 2,
     "e": "Isometric is a sub-type of Axonometric projection where all three axes are equally foreshortened.",
     "cat": "technical",
     "sub": "isometric_projection"
   },
   {
     "q": "What is the angle between any two 'Isometric Axes'? / किन्हीं दो 'आइसोमेट्रिक अक्षों' (Isometric Axes) के बीच का कोण कितना होता है?",
-    "o": ["90°", "120° | 120°", "30°", "60°"],
+    "o": [
+      "30°",
+      "120° | 120°",
+      "90°",
+      "60°"
+    ],
     "a": 1,
     "e": "The three axes (one vertical and two at 30° to horizontal) meet at a point and are inclined at 120° to each other.",
     "cat": "technical",
@@ -594,55 +968,90 @@
   },
   {
     "q": "The lines parallel to the isometric axes are called: / आइसोमेट्रिक अक्षों के समानांतर रेखाएं कहलाती हैं:",
-    "o": ["Natural lines", "Isometric lines | आइसोमेट्रिक रेखाएं", "Non-isometric lines", "Vertical lines"],
-    "a": 1,
+    "o": [
+      "Isometric lines | आइसोमेट्रिक रेखाएं",
+      "Vertical lines",
+      "Natural lines",
+      "Non-isometric lines"
+    ],
+    "a": 0,
     "e": "Any line parallel to an isometric axis is an isometric line and can be measured directly using the isometric scale.",
     "cat": "technical",
     "sub": "isometric_projection"
   },
   {
     "q": "What is the ratio of 'Isometric Length' to 'Actual Length'? / 'आइसोमेट्रिक लंबाई' और 'वास्तविक लंबाई' का अनुपात क्या है?",
-    "o": ["1:1", "0.816:1 | 0.816:1", "1.22:1", "None"],
-    "a": 1,
+    "o": [
+      "0.816:1 | 0.816:1",
+      "1.22:1",
+      "None",
+      "1:1"
+    ],
+    "a": 0,
     "e": "Isometric length is approximately 81.6% (or $\\sqrt{2/3}$) of the true/actual length.",
     "cat": "technical",
     "sub": "isometric_projection"
   },
   {
     "q": "What is the main difference between 'Isometric View' and 'Isometric Projection'? / 'आइसोमेट्रिक व्यू' और 'आइसोमेट्रिक प्रोजेक्शन' में मुख्य अंतर क्या है?",
-    "o": ["The angle of axes", "Scale used (Actual vs Isometric) | उपयोग किया गया स्केल (वास्तविक बनाम आइसोमेट्रिक)", "Number of views", "None"],
-    "a": 1,
+    "o": [
+      "Number of views",
+      "None",
+      "The angle of axes",
+      "Scale used (Actual vs Isometric) | उपयोग किया गया स्केल (वास्तविक बनाम आइसोमेट्रिक)"
+    ],
+    "a": 3,
     "e": "Isometric View uses natural/actual scale (True size), while Isometric Projection uses a reduced isometric scale.",
     "cat": "technical",
     "sub": "isometric_projection"
   },
   {
     "q": "At what angle are the two 'receding' (inclined) isometric axes drawn from the horizontal? / क्षैतिज (Horizontal) से दो झुकी हुई आइसोमेट्रिक अक्षों को किस कोण पर खींचा जाता है?",
-    "o": ["15°", "30° | 30°", "45°", "90°"],
-    "a": 1,
+    "o": [
+      "30° | 30°",
+      "90°",
+      "15°",
+      "45°"
+    ],
+    "a": 0,
     "e": "The inclined axes are drawn at 30° on both sides of the horizontal reference line.",
     "cat": "technical",
     "sub": "isometric_projection"
   },
   {
     "q": "A 'Circle' in isometric projection appears as an: / आइसोमेट्रिक प्रक्षेप में एक 'वृत्त' (Circle) कैसा दिखाई देता है?",
-    "o": ["Circle", "Ellipse | दीर्घवृत्त (Ellipse)", "Square", "Parabola"],
-    "a": 1,
+    "o": [
+      "Ellipse | दीर्घवृत्त (Ellipse)",
+      "Circle",
+      "Square",
+      "Parabola"
+    ],
+    "a": 0,
     "e": "Due to the tilting of the plane, a circle appears as an ellipse in isometric views.",
     "cat": "technical",
     "sub": "isometric_projection"
   },
   {
     "q": "Which method is commonly used to draw an 'Isometric Circle'? / 'आइसोमेट्रिक वृत्त' खींचने के लिए आमतौर पर किस विधि का उपयोग किया जाता है?",
-    "o": ["Bisection method", "Four-center method | फोर-सेंटर विधि", "Freehand", "Grid method"],
-    "a": 1,
+    "o": [
+      "Grid method",
+      "Bisection method",
+      "Four-center method | फोर-सेंटर विधि",
+      "Freehand"
+    ],
+    "a": 2,
     "e": "The four-center method is an approximate but widely used method for constructing isometric ellipses.",
     "cat": "technical",
     "sub": "isometric_projection"
   },
   {
     "q": "In isometric scale construction, the 'True Length' is marked on a line at: / आइसोमेट्रिक स्केल निर्माण में, 'वास्तविक लंबाई' को किस कोण की रेखा पर अंकित किया जाता है?",
-    "o": ["30°", "45° | 45°", "90°", "0°"],
+    "o": [
+      "0°",
+      "45° | 45°",
+      "30°",
+      "90°"
+    ],
     "a": 1,
     "e": "To construct the scale, true lengths are marked on a 45° line and projected down to a 30° line to find isometric lengths.",
     "cat": "technical",
@@ -650,7 +1059,12 @@
   },
   {
     "q": "Which dimension remains the same in both Isometric View and Isometric Projection? / आइसोमेट्रिक व्यू और आइसोमेट्रिक प्रोजेक्शन दोनों में कौन सी विमा (Dimension) समान रहती है?",
-    "o": ["Lengths of all edges", "The angles between axes (120°) | अक्षों के बीच का कोण", "The scale factor", "None"],
+    "o": [
+      "Lengths of all edges",
+      "The angles between axes (120°) | अक्षों के बीच का कोण",
+      "None",
+      "The scale factor"
+    ],
     "a": 1,
     "e": "The 120° arrangement of axes remains constant; only the measurement scale changes.",
     "cat": "technical",
@@ -658,7 +1072,12 @@
   },
   {
     "q": "Lines that are NOT parallel to the isometric axes are known as: / जो रेखाएं आइसोमेट्रिक अक्षों के समानांतर नहीं होती हैं, उन्हें कहा जाता है:",
-    "o": ["Axis lines", "Non-isometric lines | नॉन-आइसोमेट्रिक रेखाएं", "Tangent lines", "Oblique lines"],
+    "o": [
+      "Oblique lines",
+      "Non-isometric lines | नॉन-आइसोमेट्रिक रेखाएं",
+      "Axis lines",
+      "Tangent lines"
+    ],
     "a": 1,
     "e": "Non-isometric lines cannot be measured directly; their end-points must be located using isometric coordinates.",
     "cat": "technical",
@@ -666,71 +1085,116 @@
   },
   {
     "q": "When converting a pictorial view of an object with 'Slanting' surfaces, how do they appear in orthographic views? / 'तिरछी' सतहों वाली वस्तु के पिक्टोरियल व्यू को बदलते समय, वे ऑर्थोग्राफिक दृश्यों में कैसे दिखाई देती हैं?",
-    "o": ["Always as a line", "As a foreshortened (reduced) area | एक संक्षिप्त (कम) क्षेत्रफल के रूप में", "In true size", "None"],
-    "a": 1,
+    "o": [
+      "Always as a line",
+      "None",
+      "As a foreshortened (reduced) area | एक संक्षिप्त (कम) क्षेत्रफल के रूप में",
+      "In true size"
+    ],
+    "a": 2,
     "e": "Slanting surfaces appear smaller than their actual size unless the plane of projection is parallel to that surface.",
     "cat": "technical",
     "sub": "orthographic_projection"
   },
   {
     "q": "How is a 'Slot' or 'Hole' that is NOT visible from the front represented in the Front View? / एक 'स्लॉट' या 'छेद' जो सामने से दिखाई नहीं देता है, उसे फ्रंट व्यू में कैसे दर्शाया जाता है?",
-    "o": ["Thick continuous lines", "Dashed thin lines (Hidden lines) | डैश्ड थिन लाइन (Hidden lines)", "Omitted", "None"],
-    "a": 1,
+    "o": [
+      "Dashed thin lines (Hidden lines) | डैश्ड थिन लाइन (Hidden lines)",
+      "None",
+      "Thick continuous lines",
+      "Omitted"
+    ],
+    "a": 0,
     "e": "Internal details or hidden features like slots are represented using dashed lines (hidden lines).",
     "cat": "technical",
     "sub": "orthographic_projection"
   },
   {
     "q": "In the Front View, a 'Cylindrical' surface with its axis perpendicular to VP appears as a: / फ्रंट व्यू में, VP के लंबवत अक्ष वाली एक 'बेलनाकार' सतह कैसी दिखाई देती है?",
-    "o": ["Rectangle", "Circle | वृत्त (Circle)", "Ellipse", "None"],
-    "a": 1,
+    "o": [
+      "Rectangle",
+      "Ellipse",
+      "None",
+      "Circle | वृत्त (Circle)"
+    ],
+    "a": 3,
     "e": "When looking straight at the axis of a cylinder, it appears as its circular base.",
     "cat": "technical",
     "sub": "orthographic_projection"
   },
   {
     "q": "A 'Rib' (or Web) in an object is generally used for: / किसी वस्तु में 'रिब' (Rib) का उपयोग आमतौर पर किसके लिए किया जाता है?",
-    "o": ["Decoration", "Providing structural strength/support | संरचनात्मक मजबूती/सहारा प्रदान करना", "Measurement", "None"],
-    "a": 1,
+    "o": [
+      "None",
+      "Decoration",
+      "Measurement",
+      "Providing structural strength/support | संरचनात्मक मजबूती/सहारा प्रदान करना"
+    ],
+    "a": 3,
     "e": "Ribs are thin supports used to strengthen parts; they are important features in orthographic conversion.",
     "cat": "technical",
     "sub": "orthographic_projection"
   },
   {
     "q": "When viewing an object from the top, a 'Vertical Plain Surface' appears as: / ऊपर से देखने पर, 'लंबवत समतल सतह' कैसी दिखाई देती है?",
-    "o": ["A full rectangle", "A line | एक रेखा (Line)", "A square", "None"],
-    "a": 1,
+    "o": [
+      "A full rectangle",
+      "None",
+      "A line | एक रेखा (Line)",
+      "A square"
+    ],
+    "a": 2,
     "e": "Any surface perpendicular to the plane of projection (HP in this case) appears as a single line (edge view).",
     "cat": "technical",
     "sub": "orthographic_projection"
   },
   {
     "q": "Which view is most suitable to see the 'True Shape' of a horizontal slot? / क्षैतिज स्लॉट का 'सच्चा आकार' देखने के लिए कौन सा दृश्य सबसे उपयुक्त है?",
-    "o": ["Front View", "Top View | टॉप व्यू (Top View)", "Side View", "None"],
-    "a": 1,
+    "o": [
+      "Side View",
+      "Front View",
+      "Top View | टॉप व्यू (Top View)",
+      "None"
+    ],
+    "a": 2,
     "e": "A horizontal slot is parallel to the HP, so its true shape is visible in the Top View.",
     "cat": "technical",
     "sub": "orthographic_projection"
   },
   {
     "q": "In orthographic conversion, what does a 'Center Line' indicate on a cylindrical feature? / ऑर्थोग्राफिक कन्वर्जन में, बेलनाकार आकृति पर 'सेंटर लाइन' क्या दर्शाती है?",
-    "o": ["The boundary", "The axis of symmetry | सममिति का अक्ष", "The thickness", "None"],
-    "a": 1,
+    "o": [
+      "The axis of symmetry | सममिति का अक्ष",
+      "The boundary",
+      "None",
+      "The thickness"
+    ],
+    "a": 0,
     "e": "Center lines (chain thin lines) must be used to show the centers of holes and axes of cylinders.",
     "cat": "technical",
     "sub": "orthographic_projection"
   },
   {
     "q": "If an object has a 'Curved' surface, its orthographic projection onto a parallel plane will show: / यदि किसी वस्तु की सतह 'वक्र' (Curved) है, तो समानांतर समतल पर उसका ऑर्थोग्राफिक प्रक्षेप क्या दिखाएगा?",
-    "o": ["The true length of curve", "The projected width and height | प्रक्षेपित चौड़ाई और ऊंचाई", "A straight line only", "None"],
-    "a": 1,
+    "o": [
+      "The projected width and height | प्रक्षेपित चौड़ाई और ऊंचाई",
+      "None",
+      "A straight line only",
+      "The true length of curve"
+    ],
+    "a": 0,
     "e": "Curved surfaces are projected by their extreme edges (tangent points), appearing as rectangular shapes if viewed from the side.",
     "cat": "technical",
     "sub": "orthographic_projection"
   },
   {
     "q": "In First Angle Projection, if an observer looks from the right, the view is drawn on the: / प्रथम कोणीय प्रक्षेप में, यदि प्रेक्षक दाईं ओर से देखता है, तो दृश्य कहाँ बनाया जाता है?",
-    "o": ["Right of Front View", "Left of Front View | फ्रंट व्यू के बाईं ओर", "Below Front View", "None"],
+    "o": [
+      "None",
+      "Left of Front View | फ्रंट व्यू के बाईं ओर",
+      "Right of Front View",
+      "Below Front View"
+    ],
     "a": 1,
     "e": "The Right Side View (RSV) is projected onto the left profile plane in First Angle method.",
     "cat": "technical",
@@ -738,7 +1202,12 @@
   },
   {
     "q": "Which dimension is common between the 'Front View' and the 'Top View'? / 'फ्रंट व्यू' और 'टॉप व्यू' के बीच कौन सी विमा (Dimension) साझा होती है?",
-    "o": ["Height", "Width (Length) | चौड़ाई (Length)", "Depth", "None"],
+    "o": [
+      "Height",
+      "Width (Length) | चौड़ाई (Length)",
+      "None",
+      "Depth"
+    ],
     "a": 1,
     "e": "Both Front and Top views share the same width/length, while Front and Side views share the same height.",
     "cat": "technical",
@@ -746,23 +1215,38 @@
   },
   {
     "q": "What does 'Orthographic Projection' mean? / 'ऑर्थोग्राफिक प्रोजेक्शन' (Orthographic Projection) का क्या अर्थ है?",
-    "o": ["Drawing an object as it appears to eye", "Projecting views of an object using parallel lines perpendicular to the plane | वस्तु के दृश्यों को समतल के लंबवत समानांतर रेखाओं का उपयोग करके प्रक्षेपित करना", "A 3D perspective drawing", "None"],
-    "a": 1,
+    "o": [
+      "A 3D perspective drawing",
+      "None",
+      "Projecting views of an object using parallel lines perpendicular to the plane | वस्तु के दृश्यों को समतल के लंबवत समानांतर रेखाओं का उपयोग करके प्रक्षेपित करना",
+      "Drawing an object as it appears to eye"
+    ],
+    "a": 2,
     "e": "Orthographic projection represents a 3D object in 2D by projecting its faces onto planes (Front, Top, Side) using parallel projectors.",
     "cat": "technical",
     "sub": "orthographic_projection"
   },
   {
     "q": "In 'First Angle Projection', the object is assumed to be in: / 'प्रथम कोणीय प्रक्षेप' में, वस्तु को कहाँ माना जाता है?",
-    "o": ["First Quadrant | प्रथम चतुर्थांश", "Second Quadrant", "Third Quadrant", "Fourth Quadrant"],
-    "a": 0,
+    "o": [
+      "Fourth Quadrant",
+      "Third Quadrant",
+      "Second Quadrant",
+      "First Quadrant | प्रथम चतुर्थांश"
+    ],
+    "a": 3,
     "e": "In First Angle method, the object lies between the observer and the plane of projection (1st Quadrant).",
     "cat": "technical",
     "sub": "orthographic_projection"
   },
   {
     "q": "Where is the 'Top View' (Plan) placed relative to the 'Front View' (Elevation) in First Angle Projection? / प्रथम कोणीय प्रक्षेप में 'टॉप व्यू' को 'फ्रंट व्यू' के सापेक्ष कहाँ रखा जाता है?",
-    "o": ["Above", "Below | नीचे (Below)", "Left side", "Right side"],
+    "o": [
+      "Right side",
+      "Below | नीचे (Below)",
+      "Above",
+      "Left side"
+    ],
     "a": 1,
     "e": "In First Angle projection, the Top View is always drawn below the Front View.",
     "cat": "technical",
@@ -770,7 +1254,12 @@
   },
   {
     "q": "Which country/standard primarily uses the 'Third Angle Projection' method? / कौन सा देश/मानक मुख्य रूप से 'तृतीय कोणीय प्रक्षेप' विधि का उपयोग करता है?",
-    "o": ["India (BIS)", "Europe", "USA and Canada | अमेरिका और कनाडा", "None"],
+    "o": [
+      "India (BIS)",
+      "Europe",
+      "USA and Canada | अमेरिका और कनाडा",
+      "None"
+    ],
     "a": 2,
     "e": "While India and Europe follow First Angle, North American standards (ANSI) typically use Third Angle projection.",
     "cat": "technical",
@@ -778,55 +1267,90 @@
   },
   {
     "q": "What is the symbol for First Angle Projection? / प्रथम कोणीय प्रक्षेप का प्रतीक (Symbol) क्या है?",
-    "o": ["A circle with a cross", "Frustum of a cone with small circle on left | शंकु का छिन्नक जिसके बाईं ओर छोटा वृत्त हो", "Frustum of a cone with small circle on right", "None"],
-    "a": 1,
+    "o": [
+      "None",
+      "Frustum of a cone with small circle on right",
+      "A circle with a cross",
+      "Frustum of a cone with small circle on left | शंकु का छिन्नक जिसके बाईं ओर छोटा वृत्त हो"
+    ],
+    "a": 3,
     "e": "The symbol shows the front view and side view of a frustum of a cone; for First Angle, the side view (circles) appears on the left.",
     "cat": "technical",
     "sub": "orthographic_projection"
   },
   {
     "q": "In Third Angle Projection, the 'Plane of Projection' is assumed to be: / तृतीय कोणीय प्रक्षेप में, 'प्रक्षेप समतल' (Plane of Projection) को माना जाता है:",
-    "o": ["Behind the object", "Between the observer and the object | प्रेक्षक और वस्तु के बीच", "Opaque", "None"],
-    "a": 1,
+    "o": [
+      "Opaque",
+      "Behind the object",
+      "None",
+      "Between the observer and the object | प्रेक्षक और वस्तु के बीच"
+    ],
+    "a": 3,
     "e": "In Third Angle, the plane is treated as transparent and is situated between the viewer and the object.",
     "cat": "technical",
     "sub": "orthographic_projection"
   },
   {
     "q": "Which view is projected onto the 'Vertical Plane' (VP)? / 'वर्टीकल प्लेन' (VP) पर कौन सा दृश्य प्रक्षेपित किया जाता है?",
-    "o": ["Top View", "Front View | फ्रंट व्यू (Front View)", "Side View", "None"],
-    "a": 1,
+    "o": [
+      "None",
+      "Side View",
+      "Front View | फ्रंट व्यू (Front View)",
+      "Top View"
+    ],
+    "a": 2,
     "e": "The Front View is projected onto the Vertical Plane, while the Top View is projected onto the Horizontal Plane (HP).",
     "cat": "technical",
     "sub": "orthographic_projection"
   },
   {
     "q": "The lines used to project the corners of an object onto the planes are called: / वस्तु के कोनों को समतल पर प्रक्षेपित करने के लिए उपयोग की जाने वाली रेखाएं कहलाती हैं:",
-    "o": ["Dimension lines", "Projectors | प्रोजेक्टर (Projectors)", "Center lines", "Hidden lines"],
-    "a": 1,
+    "o": [
+      "Dimension lines",
+      "Center lines",
+      "Projectors | प्रोजेक्टर (Projectors)",
+      "Hidden lines"
+    ],
+    "a": 2,
     "e": "Projectors are parallel lines that transfer the geometry of the object to the projection planes.",
     "cat": "technical",
     "sub": "orthographic_projection"
   },
   {
     "q": "What is represented by the 'X-Y' line in orthographic drawing? / ऑर्थोग्राफिक ड्राइंग में 'X-Y' रेखा क्या दर्शाती है?",
-    "o": ["The height of the object", "The intersection of HP and VP | HP और VP का प्रतिच्छेदन", "A hidden edge", "None"],
-    "a": 1,
+    "o": [
+      "A hidden edge",
+      "The height of the object",
+      "The intersection of HP and VP | HP और VP का प्रतिच्छेदन",
+      "None"
+    ],
+    "a": 2,
     "e": "The X-Y line (Reference line) represents the intersection of the Horizontal and Vertical planes.",
     "cat": "technical",
     "sub": "orthographic_projection"
   },
   {
     "q": "In First Angle method, the 'Left Side View' is drawn on the: / प्रथम कोणीय विधि में, 'बायां साइड व्यू' (LSV) कहाँ बनाया जाता है?",
-    "o": ["Left of Front View", "Right of Front View | फ्रंट व्यू के दाईं ओर", "Top of Front View", "None"],
-    "a": 1,
+    "o": [
+      "Right of Front View | फ्रंट व्यू के दाईं ओर",
+      "Left of Front View",
+      "Top of Front View",
+      "None"
+    ],
+    "a": 0,
     "e": "In First Angle projection, views are inverted; the view from the left is projected onto the right-side profile plane.",
     "cat": "technical",
     "sub": "orthographic_projection"
   },
   {
     "q": "According to SP-46:2003, in which dimensioning system are the values placed so they can be read from the bottom and right side? / SP-46 के अनुसार, किस विमांकन प्रणाली में मानों को इस तरह रखा जाता है कि उन्हें नीचे और दाईं ओर से पढ़ा जा सके?",
-    "o": ["Unidirectional system", "Aligned system | संरेखित प्रणाली (Aligned system)", "Parallel system", "None"],
+    "o": [
+      "None",
+      "Aligned system | संरेखित प्रणाली (Aligned system)",
+      "Parallel system",
+      "Unidirectional system"
+    ],
     "a": 1,
     "e": "In the aligned system, dimension values are placed perpendicular to the dimension line and can be read from bottom or right.",
     "cat": "technical",
@@ -834,7 +1358,12 @@
   },
   {
     "q": "What is 'Chain Dimensioning'? / 'चेन विमांकन' (Chain Dimensioning) क्या है?",
-    "o": ["Dimensions from a common datum", "Dimensions placed in a single straight line from one feature to next | एक के बाद एक सीधी रेखा में विमांकन", "Circular dimensioning", "None"],
+    "o": [
+      "Dimensions from a common datum",
+      "Dimensions placed in a single straight line from one feature to next | एक के बाद एक सीधी रेखा में विमांकन",
+      "Circular dimensioning",
+      "None"
+    ],
     "a": 1,
     "e": "Chain dimensioning (or continuous dimensioning) is used when the relative distances between features are more important than overall length.",
     "cat": "technical",
@@ -842,15 +1371,25 @@
   },
   {
     "q": "Which type of dimensioning avoids the 'accumulation of errors'? / किस प्रकार का विमांकन 'त्रुटियों के संचय' (accumulation of errors) से बचाता है?",
-    "o": ["Chain dimensioning", "Parallel dimensioning (Datum) | समानांतर विमांकन (Parallel)", "Combined dimensioning", "None"],
-    "a": 1,
+    "o": [
+      "None",
+      "Combined dimensioning",
+      "Chain dimensioning",
+      "Parallel dimensioning (Datum) | समानांतर विमांकन (Parallel)"
+    ],
+    "a": 3,
     "e": "In parallel dimensioning, every dimension starts from a common reference point, so an error in one doesn't affect others.",
     "cat": "technical",
     "sub": "engineering_drawing"
   },
   {
     "q": "The symbol 'φ' (phi) before a numerical value in a drawing indicates: / ड्राइंग में संख्यात्मक मान से पहले 'φ' (फाई) प्रतीक क्या दर्शाता है?",
-    "o": ["Square", "Radius", "Diameter | व्यास (Diameter)", "Angle"],
+    "o": [
+      "Angle",
+      "Square",
+      "Diameter | व्यास (Diameter)",
+      "Radius"
+    ],
     "a": 2,
     "e": "Standard symbols like 'φ' for diameter and 'R' for radius are used as per SP-46 standards.",
     "cat": "technical",
@@ -858,79 +1397,129 @@
   },
   {
     "q": "What is 'Coordinate Dimensioning'? / 'कोऑर्डिनेट विमांकन' (Coordinate Dimensioning) क्या है?",
-    "o": ["Angles only", "Specifying X and Y coordinates from a fixed origin | एक निश्चित मूल बिंदु से X और Y निर्देशांक निर्दिष्ट करना", "Chain style", "None"],
-    "a": 1,
+    "o": [
+      "Angles only",
+      "Chain style",
+      "None",
+      "Specifying X and Y coordinates from a fixed origin | एक निश्चित मूल बिंदु से X और Y निर्देशांक निर्दिष्ट करना"
+    ],
+    "a": 3,
     "e": "Coordinate dimensioning is commonly used for complex parts or hole patterns to define positions accurately.",
     "cat": "technical",
     "sub": "engineering_drawing"
   },
   {
     "q": "In geometrical construction, a line that touches a circle at only one point is called: / ज्यामितीय निर्माण में, एक रेखा जो वृत्त को केवल एक बिंदु पर छूती है, कहलाती है:",
-    "o": ["Chord", "Secant", "Tangent | स्पर्शरेखा (Tangent)", "Normal"],
-    "a": 2,
+    "o": [
+      "Tangent | स्पर्शरेखा (Tangent)",
+      "Normal",
+      "Secant",
+      "Chord"
+    ],
+    "a": 0,
     "e": "A tangent is perpendicular to the radius at the point of contact.",
     "cat": "technical",
     "sub": "engineering_drawing"
   },
   {
     "q": "To bisect an angle of $60^{\\circ}$ without a protractor, which tool is essential? / प्रोट्रैक्टर के बिना $60^{\\circ}$ के कोण को विभाजित करने के लिए कौन सा उपकरण आवश्यक है?",
-    "o": ["Set square", "Compass | परकार (Compass)", "French curve", "Scale"],
-    "a": 1,
+    "o": [
+      "Scale",
+      "Set square",
+      "Compass | परकार (Compass)",
+      "French curve"
+    ],
+    "a": 2,
     "e": "A compass is used to draw arcs from the vertex and intersection points to bisect angles or lines.",
     "cat": "technical",
     "sub": "engineering_drawing"
   },
   {
     "q": "The process of drawing a curve that is 'tangent' to two existing lines or circles is called: / दो मौजूदा रेखाओं या वृत्तों के लिए 'स्पर्शरेखीय' वक्र खींचने की प्रक्रिया कहलाती है:",
-    "o": ["Polygonal construction", "Filleting (Arc construction) | फिलेटिंग (आर्क निर्माण)", "Bisecting", "None"],
-    "a": 1,
+    "o": [
+      "Filleting (Arc construction) | फिलेटिंग (आर्क निर्माण)",
+      "Bisecting",
+      "Polygonal construction",
+      "None"
+    ],
+    "a": 0,
     "e": "Tangency construction is vital for creating smooth transitions in mechanical designs.",
     "cat": "technical",
     "sub": "engineering_drawing"
   },
   {
     "q": "A 'Regular Hexagon' can be constructed if you know the length of: / एक 'नियमित षट्भुज' (Regular Hexagon) का निर्माण किया जा सकता है यदि आपको किसकी लंबाई ज्ञात हो:",
-    "o": ["Only one side | केवल एक भुजा", "Only one angle", "Two sides", "None"],
-    "a": 0,
+    "o": [
+      "Only one angle",
+      "Only one side | केवल एक भुजा",
+      "None",
+      "Two sides"
+    ],
+    "a": 1,
     "e": "All sides and interior angles ($120^{\\circ}$) of a regular hexagon are equal, making it easy to construct using a compass or set-squares.",
     "cat": "technical",
     "sub": "engineering_drawing"
   },
   {
     "q": "The 'Arrowheads' on a dimension line should have a length to width ratio of: / विमा रेखा पर 'तीर के निशान' (Arrowheads) की लंबाई और चौड़ाई का अनुपात होना चाहिए:",
-    "o": ["1:1", "2:1", "3:1 | 3:1", "5:1"],
-    "a": 2,
+    "o": [
+      "5:1",
+      "3:1 | 3:1",
+      "1:1",
+      "2:1"
+    ],
+    "a": 1,
     "e": "Standard drawing practice requires sharp arrowheads with a ratio of 3 (length) to 1 (width).",
     "cat": "technical",
     "sub": "engineering_drawing"
   },
   {
     "q": "Which drawing instrument is used to draw horizontal lines and support set-squares? / क्षैतिज रेखाएं खींचने और सेट-स्क्वायर को सहारा देने के लिए किस ड्राइंग उपकरण का उपयोग किया जाता है?",
-    "o": ["Protractor", "T-Square | टी-स्क्वायर (T-Square)", "French curve", "Divider"],
-    "a": 1,
+    "o": [
+      "Divider",
+      "Protractor",
+      "T-Square | टी-स्क्वायर (T-Square)",
+      "French curve"
+    ],
+    "a": 2,
     "e": "T-square consists of a stock and a blade; it is used to draw horizontal lines and acts as a base for set-squares to draw vertical/inclined lines.",
     "cat": "technical",
     "sub": "engineering_drawing"
   },
   {
     "q": "As per the convention of lines, which line is used to represent 'Hidden' edges? / रेखाओं के सम्मेलन (Convention) के अनुसार, 'छिपे हुए' (Hidden) किनारों को दर्शाने के लिए किस रेखा का उपयोग किया जाता है?",
-    "o": ["Continuous thick line", "Dashed thin line | डैश्ड थिन लाइन (Dashed thin)", "Chain thin line", "Continuous wavy line"],
-    "a": 1,
+    "o": [
+      "Chain thin line",
+      "Continuous thick line",
+      "Dashed thin line | डैश्ड थिन लाइन (Dashed thin)",
+      "Continuous wavy line"
+    ],
+    "a": 2,
     "e": "Dashed lines represent edges or outlines that are not visible from a particular view.",
     "cat": "technical",
     "sub": "engineering_drawing"
   },
   {
     "q": "What is the 'Representative Fraction' (RF) for a 'Full Size Scale'? / 'फुल साइज स्केल' के लिए 'निरूपक भिन्न' (RF) क्या होता है?",
-    "o": ["1:2", "2:1", "1:1 | 1:1", "1:100"],
-    "a": 2,
+    "o": [
+      "2:1",
+      "1:100",
+      "1:2",
+      "1:1 | 1:1"
+    ],
+    "a": 3,
     "e": "Full size scale means the drawing size is equal to the actual object size, hence RF = 1/1.",
     "cat": "technical",
     "sub": "engineering_drawing"
   },
   {
     "q": "A scale of 2:1 is an example of: / 2:1 का पैमाना किसका उदाहरण है?",
-    "o": ["Reduced scale", "Enlarged scale | वर्धित पैमाना (Enlarged scale)", "Full size scale", "Diagonal scale"],
+    "o": [
+      "Reduced scale",
+      "Enlarged scale | वर्धित पैमाना (Enlarged scale)",
+      "Diagonal scale",
+      "Full size scale"
+    ],
     "a": 1,
     "e": "In enlarged scales, the drawing is larger than the actual object. Here, 2 units on drawing represent 1 unit of actual object.",
     "cat": "technical",
@@ -938,47 +1527,77 @@
   },
   {
     "q": "Which scale is used to measure three consecutive units (e.g., meter, decimeter, and centimeter)? / तीन क्रमिक इकाइयों (जैसे मीटर, डेसीमीटर और सेंटीमीटर) को मापने के लिए किस पैमाने का उपयोग किया जाता है?",
-    "o": ["Plain scale", "Diagonal scale | विकर्ण पैमाना (Diagonal scale)", "Vernier scale", "Comparative scale"],
-    "a": 1,
+    "o": [
+      "Plain scale",
+      "Comparative scale",
+      "Vernier scale",
+      "Diagonal scale | विकर्ण पैमाना (Diagonal scale)"
+    ],
+    "a": 3,
     "e": "Diagonal scales use the principle of similar triangles to measure up to three units or a single unit up to two decimal places.",
     "cat": "technical",
     "sub": "engineering_drawing"
   },
   {
     "q": "The lines used to show the limits of a dimension are called: / विमा (Dimension) की सीमा दर्शाने के लिए उपयोग की जाने वाली रेखाएं कहलाती हैं:",
-    "o": ["Dimension lines", "Extension lines | विस्तार रेखाएं (Extension lines)", "Center lines", "Leader lines"],
-    "a": 1,
+    "o": [
+      "Dimension lines",
+      "Leader lines",
+      "Extension lines | विस्तार रेखाएं (Extension lines)",
+      "Center lines"
+    ],
+    "a": 2,
     "e": "Extension lines (or projection lines) extend from the object to indicate the boundaries between which a dimension is placed.",
     "cat": "technical",
     "sub": "engineering_drawing"
   },
   {
     "q": "Which drawing sheet size has the largest area? / किस ड्राइंग शीट साइज का क्षेत्रफल सबसे बड़ा होता है?",
-    "o": ["A4", "A2", "A0 | A0", "A1"],
-    "a": 2,
+    "o": [
+      "A1",
+      "A0 | A0",
+      "A2",
+      "A4"
+    ],
+    "a": 1,
     "e": "A0 sheet has an area of approximately 1 square meter. Subsequent sizes (A1, A2...) are obtained by halving the previous size.",
     "cat": "technical",
     "sub": "engineering_drawing"
   },
   {
     "q": "What is the application of a 'Chain Thin Long-Dashed' line (Center line)? / 'चेन थिन लॉन्ग-डैश्ड' रेखा (सेंटर लाइन) का अनुप्रयोग क्या है?",
-    "o": ["To show boundaries", "To indicate axes of symmetry and centers of circles | सममिति के अक्ष और केंद्रों को दर्शाना", "To show cutting planes", "None"],
-    "a": 1,
+    "o": [
+      "To show boundaries",
+      "To show cutting planes",
+      "None",
+      "To indicate axes of symmetry and centers of circles | सममिति के अक्ष और केंद्रों को दर्शाना"
+    ],
+    "a": 3,
     "e": "Center lines are used for axes of cylinders, cones, and circles to show symmetry.",
     "cat": "technical",
     "sub": "engineering_drawing"
   },
   {
     "q": "If RF = 1/50, and the actual length is 5 meters, what is the 'Length of Scale' (LOS)? / यदि RF = 1/50 है, और वास्तविक लंबाई 5 मीटर है, तो 'स्केल की लंबाई' (LOS) क्या होगी?",
-    "o": ["5 cm", "10 cm | 10 सेमी", "25 cm", "50 cm"],
-    "a": 1,
+    "o": [
+      "10 cm | 10 सेमी",
+      "50 cm",
+      "25 cm",
+      "5 cm"
+    ],
+    "a": 0,
     "e": "LOS = RF x Actual Length = (1/50) x 500 cm = 10 cm.",
     "cat": "technical",
     "sub": "engineering_drawing"
   },
   {
     "q": "A 'Lead' or 'Pencil Grade' suitable for drawing construction lines and center lines is: / कंस्ट्रक्शन लाइन्स और सेंटर लाइन्स खींचने के लिए उपयुक्त पेंसिल ग्रेड है:",
-    "o": ["HB", "2B", "2H or 3H | 2H या 3H", "Soft"],
+    "o": [
+      "Soft",
+      "HB",
+      "2H or 3H | 2H या 3H",
+      "2B"
+    ],
     "a": 2,
     "e": "Harder pencils (H grades) produce thin and light lines, which are ideal for layout and technical details.",
     "cat": "technical",
@@ -986,7 +1605,12 @@
   },
   {
     "q": "Which flux is used for soldering galvanized iron? / गैल्वेनाइज्ड आयरन की सोल्डरिंग के लिए किस फ्लक्स का उपयोग किया जाता है?",
-    "o": ["Resin / राल", "Zinc Chloride / जिंक क्लोराइड", "Hydrochloric Acid / हाइड्रोक्लोरिक एसिड", "Ammonium Chloride / अमोनियम क्लोराइड"],
+    "o": [
+      "Resin / राल",
+      "Ammonium Chloride / अमोनियम क्लोराइड",
+      "Hydrochloric Acid / हाइड्रोक्लोरिक एसिड",
+      "Zinc Chloride / जिंक क्लोराइड"
+    ],
     "a": 2,
     "e": "Hydrochloric acid is commonly used for GI sheets. / GI शीट के लिए हाइड्रोक्लोरिक एसिड का उपयोग किया जाता है।"
   }
