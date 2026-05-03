@@ -1,107 +1,247 @@
 [
   {
-    "q": "<b>Cloze Test (1/5):</b> Select the most appropriate option for <b>Blank No. 1</b>.<br/><br/><i>'The implementation of AI in healthcare is (1)______ to be a game-changer. It can (2)______ vast amounts of data to provide accurate diagnoses. However, we must remain (3)______ about data privacy. Ethical (4)______ should be prioritized to avoid misuse. A collaborative (5)______ between doctors and developers is essential.'</i>",
-    "o": ["poised", "forced", "hesitant", "deterred"],
+    "q": "<b>Cloze Test (1/5):</b> Select the most appropriate option for <b>Blank No. 1</b>.<br/><br/><i>'The recent (1)______ in non-performing assets (NPAs) has caused significant (2)______ among public sector banks. Experts suggest that the (3)______ of credit appraisal processes is the need of the hour. While the government has proposed (4)______ measures, the long-term solution lies in structural reforms. Failure to address this could (5)______ the stability of the entire financial ecosystem.'</i>",
+    "o": ["escalation", "diminution", "stagnation", "abatement"],
     "a": 0,
-    "e": "Blank 1: 'Poised' (तैयार/स्थित) का अर्थ है किसी महत्वपूर्ण बदलाव के लिए पूरी तरह तैयार होना।",
+    "e": "Blank 1: बैंकिंग संदर्भ में NPAs के बढ़ने (Escalation) की बात की जा रही है, जो चिंता का विषय है।",
     "cat": "english", "sub": "cloze-test"
   },
   {
-    "q": "<b>Cloze Test (2/5):</b> Select the most appropriate option for <b>Blank No. 2</b>.<br/><br/><i>'The implementation of AI in healthcare is (1)______ to be a game-changer. It can (2)______ vast amounts of data to provide accurate diagnoses. However, we must remain (3)______ about data privacy. Ethical (4)______ should be prioritized to avoid misuse. A collaborative (5)______ between doctors and developers is essential.'</i>",
-    "o": ["scrutinize", "discard", "overlook", "ignore"],
+    "q": "<b>Cloze Test (2/5):</b> Select the most appropriate option for <b>Blank No. 2</b>.<br/><br/><i>'The recent (1)______ in non-performing assets (NPAs) has caused significant (2)______ among public sector banks. Experts suggest that the (3)______ of credit appraisal processes is the need of the hour. While the government has proposed (4)______ measures, the long-term solution lies in structural reforms. Failure to address this could (5)______ the stability of the entire financial ecosystem.'</i>",
+    "o": ["consternation", "jubilation", "indifference", "serenity"],
     "a": 0,
-    "e": "Blank 2: 'Scrutinize' (बारीकी से जांच करना) डेटा के विश्लेषण के लिए सबसे उपयुक्त शब्द है।",
+    "e": "Blank 2: 'Consternation' (घबराहट/चिंता) NPAs बढ़ने पर बैंकों की स्थिति को दर्शाता है।",
     "cat": "english", "sub": "cloze-test"
   },
   {
-    "q": "<b>Cloze Test (3/5):</b> Select the most appropriate option for <b>Blank No. 3</b>.<br/><br/><i>'The implementation of AI in healthcare is (1)______ to be a game-changer. It can (2)______ vast amounts of data to provide accurate diagnoses. However, we must remain (3)______ about data privacy. Ethical (4)______ should be prioritized to avoid misuse. A collaborative (5)______ between doctors and developers is essential.'</i>",
-    "o": ["vigilant", "careless", "oblivious", "reckless"],
+    "q": "<b>Cloze Test (3/5):</b> Select the most appropriate option for <b>Blank No. 3</b>.<br/><br/><i>'The recent (1)______ in non-performing assets (NPAs) has caused significant (2)______ among public sector banks. Experts suggest that the (3)______ of credit appraisal processes is the need of the hour. While the government has proposed (4)______ measures, the long-term solution lies in structural reforms. Failure to address this could (5)______ the stability of the entire financial ecosystem.'</i>",
+    "o": ["overhaul", "negligence", "continuation", "omission"],
     "a": 0,
-    "e": "Blank 3: 'Vigilant' (सतर्क) निजता (privacy) की सुरक्षा के संदर्भ में सही विशेषण है।",
+    "e": "Blank 3: 'Overhaul' (कायाकल्प/पूरी तरह मरम्मत) प्रक्रियाओं में बड़े सुधार के लिए इस्तेमाल होता है।",
     "cat": "english", "sub": "cloze-test"
   },
   {
-    "q": "<b>Cloze Test (4/5):</b> Select the most appropriate option for <b>Blank No. 4</b>.<br/><br/><i>'The implementation of AI in healthcare is (1)______ to be a game-changer. It can (2)______ vast amounts of data to provide accurate diagnoses. However, we must remain (3)______ about data privacy. Ethical (4)______ should be prioritized to avoid misuse. A collaborative (5)______ between doctors and developers is essential.'</i>",
-    "o": ["considerations", "negligence", "omissions", "delays"],
+    "q": "<b>Cloze Test (4/5):</b> Select the most appropriate option for <b>Blank No. 4</b>.<br/><br/><i>'The recent (1)______ in non-performing assets (NPAs) has caused significant (2)______ among public sector banks. Experts suggest that the (3)______ of credit appraisal processes is the need of the hour. While the government has proposed (4)______ measures, the long-term solution lies in structural reforms. Failure to address this could (5)______ the stability of the entire financial ecosystem.'</i>",
+    "o": ["remedial", "detrimental", "superficial", "spurious"],
     "a": 0,
-    "e": "Blank 4: 'Ethical considerations' (नैतिक विचार) एक मानक वाक्यांश है जो तकनीकी विकास में उपयोग होता है।",
+    "e": "Blank 4: 'Remedial measures' (उपचारात्मक उपाय) समस्या को हल करने के लिए उठाए गए कदम हैं।",
     "cat": "english", "sub": "cloze-test"
   },
   {
-    "q": "<b>Cloze Test (5/5):</b> Select the most appropriate option for <b>Blank No. 5</b>.<br/><br/><i>'The implementation of AI in healthcare is (1)______ to be a game-changer. It can (2)______ vast amounts of data to provide accurate diagnoses. However, we must remain (3)______ about data privacy. Ethical (4)______ should be prioritized to avoid misuse. A collaborative (5)______ between doctors and developers is essential.'</i>",
-    "o": ["endeavor", "clash", "rivalry", "dispute"],
+    "q": "<b>Cloze Test (5/5):</b> Select the most appropriate option for <b>Blank No. 5</b>.<br/><br/><i>'The recent (1)______ in non-performing assets (NPAs) has caused significant (2)______ among public sector banks. Experts suggest that the (3)______ of credit appraisal processes is the need of the hour. While the government has proposed (4)______ measures, the long-term solution lies in structural reforms. Failure to address this could (5)______ the stability of the entire financial ecosystem.'</i>",
+    "o": ["jeopardize", "bolster", "fortify", "facilitate"],
     "a": 0,
-    "e": "Blank 5: 'Endeavor' (प्रयास) का प्रयोग यहाँ एक सामूहिक कार्य या मिशन को दर्शाने के लिए किया गया है।",
+    "e": "Blank 5: 'Jeopardize' (खतरे में डालना) वित्तीय स्थिरता के जोखिम को दर्शाता है।",
     "cat": "english", "sub": "cloze-test"
   },
   {
-    "q": "<b>Error Spotting:</b> No sooner (A) / he had arrived (B) / than the (C) / meeting started (D).",
+    "q": "<b>Error Spotting (1/5):</b> Had the central bank (A) / not intervened in time (B) / the currency value (C) / would have plummeted further (D).",
     "o": ["A", "B", "C", "D"],
+    "a": 4,
+    "e": "No Error: यह Third Conditional का Inversion structure है (Had + Sub + V3... would have + V3), जो पूरी तरह सही है।",
+    "cat": "english", "sub": "error-spotting"
+  },
+  {
+    "q": "<b>Error Spotting (2/5):</b> Not only the (A) / inflation rate increased (B) / but also the (C) / purchasing power decreased (D).",
+    "o": ["A", "B", "C", "D"],
+    "a": 0,
+    "e": "Inversion Rule: जब 'Not only' से वाक्य शुरू हो, तो 'Not only did the inflation rate increase' होना चाहिए।",
+    "cat": "english", "sub": "error-spotting"
+  },
+  {
+    "q": "<b>Error Spotting (3/5):</b> Neither the (A) / Finance Minister nor (B) / the Ministry officials (C) / was able to explain the deficit (D).",
+    "o": ["A", "B", "C", "D"],
+    "a": 3,
+    "e": "Proximity Rule: 'Neither-nor' में verb पास वाले subject (officials - Plural) के अनुसार 'were' होनी चाहिए।",
+    "cat": "english", "sub": "error-spotting"
+  },
+  {
+    "q": "<b>Error Spotting (4/5):</b> The interest rates (A) / offered by this (B) / bank is much higher (C) / than any other bank (D).",
+    "o": ["A", "B", "C", "D"],
+    "a": 2,
+    "e": "Subject-Verb Agreement: मुख्य subject 'rates' (Plural) है, इसलिए 'is' की जगह 'are' आएगा।",
+    "cat": "english", "sub": "error-spotting"
+  },
+  {
+    "q": "<b>Error Spotting (5/5):</b> Scarcely had the (A) / new policy been (B) / announced than (C) / the market crashed (D).",
+    "o": ["A", "B", "C", "D"],
+    "a": 2,
+    "e": "Correlative Rule: 'Scarcely' के साथ हमेशा 'when' लगता है, 'than' नहीं।",
+    "cat": "english", "sub": "error-spotting"
+  },
+  {
+    "q": "<b>Sentence Improvement:</b> The company's profits *have been falling down* for three consecutive quarters.",
+    "o": ["have been falling off", "have been falling", "are falling down", "No improvement"],
     "a": 1,
-    "e": "Inversion Rule: जब वाक्य 'No sooner' से शुरू हो, तो Auxiliary verb (had) subject से पहले आनी चाहिए। सही: 'No sooner had he arrived'।",
-    "cat": "english", "sub": "error-spotting"
-  },
-  {
-    "q": "<b>Error Spotting:</b> The reason (A) / for his failure (B) / is because (C) / he did not work hard (D).",
-    "o": ["A", "B", "C", "D"],
-    "a": 2,
-    "e": "Redundancy: 'The reason' के साथ 'that' का प्रयोग होता है, 'because' का नहीं क्योंकि दोनों कारण ही बताते हैं।",
-    "cat": "english", "sub": "error-spotting"
-  },
-  {
-    "q": "<b>Error Spotting:</b> He is (A) / one of those (B) / people who (C) / is never on time (D).",
-    "o": ["A", "B", "C", "D"],
-    "a": 3,
-    "e": "Relative Pronoun Rule: 'Who' यहाँ 'people' (Plural) के लिए आया है, इसलिए verb 'are' होनी चाहिए, न कि 'is'।",
-    "cat": "english", "sub": "error-spotting"
-  },
-  {
-    "q": "<b>Error Spotting:</b> Having been (A) / found guilty (B) / on murder (C) / he was sentenced to death (D).",
-    "o": ["A", "B", "C", "D"],
-    "a": 2,
-    "e": "Prepositional Error: 'Guilty' के साथ हमेशा 'of' लगता है। सही: 'guilty of murder'।",
-    "cat": "english", "sub": "error-spotting"
-  },
-  {
-    "q": "<b>Error Spotting:</b> Not only did (A) / she bake a cake (B) / but also (C) / prepared some snacks (D).",
-    "o": ["A", "B", "C", "D"],
-    "a": 2,
-    "e": "Parallelism: 'Not only' के बाद verb (did she bake) है, तो 'but also' के बाद भी 'she prepared' या inversion की संरचना संतुलित होनी चाहिए। 'But also she prepared' सही होगा।",
-    "cat": "english", "sub": "error-spotting"
-  },
-  {
-    "q": "<b>Sentence Improvement:</b> If I *had* a million dollars, I would travel the world.",
-    "o": ["If I have", "If I were having", "If I had had", "No improvement"],
-    "a": 3,
-    "e": "Conditional Type 2: 'If + V2 (had), would + V1' काल्पनिक वर्तमान के लिए बिल्कुल सही है।",
+    "e": "Redundancy: 'Fall' के साथ 'down' अनावश्यक है यदि संदर्भ केवल घटने का है। 'Falling' पर्याप्त है।",
     "cat": "english", "sub": "improvement"
   },
   {
+    "q": "<b>Sentence Improvement:</b> No sooner *the manager saw* the error than he called for a meeting.",
+    "o": ["had the manager seen", "did the manager saw", "the manager had seen", "No improvement"],
+    "a": 0,
+    "e": "Inversion: 'No sooner' के तुरंत बाद auxiliary verb (had/did) का आना अनिवार्य है।",
+    "cat": "english", "sub": "improvement"
+  },
+  {
+    "q": "<b>Sentence Improvement:</b> Most of the employees *prefer working from home than* commuting to the office.",
+    "o": ["prefer working from home to", "prefer working from home over", "prefer work from home to", "No improvement"],
+    "a": 0,
+    "e": "'Prefer' के साथ हमेशा 'to' preposition का प्रयोग होता है, 'than' का नहीं।",
+    "cat": "english", "sub": "improvement"
+  },
+  {
+    "q": "<b>Sentence Improvement:</b> He is *the most intelligent* of all other students in the class.",
+    "o": ["the most intelligent of all", "more intelligent of all", "most intelligent than all", "No improvement"],
+    "a": 0,
+    "e": "Superlative Rule: जब 'all' का प्रयोग हो, तो 'other' को हटा दिया जाता है क्योंकि 'most intelligent' में वह स्वयं भी शामिल है।",
+    "cat": "english", "sub": "improvement"
+  },
+  {
+    "q": "<b>Sentence Improvement:</b> The board meeting *was postponed because of* the chairman was ill.",
+    "o": ["was postponed because", "was postponed as", "was postponed due to", "No improvement"],
+    "a": 1,
+    "e": "'Because of' के बाद noun/phrase आता है, जबकि 'Because' या 'As' के बाद पूरा clause (chairman was ill) आता है।",
+    "cat": "english", "sub": "improvement"
+  },
+  {
+    "q": "<b>Synonym of 'ABSTRUSE':</b>",
+    "o": ["Clear", "Obscure", "Simple", "Lucid"],
+    "a": 1,
+    "e": "'Abstruse' का अर्थ है जिसे समझना कठिन हो (गूढ़/Obscure)।",
+    "cat": "english", "sub": "vocab"
+  },
+  {
     "q": "<b>Synonym of 'PERSPICACIOUS':</b>",
-    "o": ["Dull", "Shrewd", "Ignorant", "Unclear"],
+    "o": ["Ignorant", "Astute", "Dull", "Unperceptive"],
     "a": 1,
-    "e": "Perspicacious का अर्थ है बहुत समझदार या सूक्ष्मदर्शी (Insightful/Shrewd)।",
+    "e": "'Perspicacious' का अर्थ है बहुत गहरी समझ वाला (Astute/Shrewd)।",
     "cat": "english", "sub": "vocab"
   },
   {
-    "q": "<b>Antonym of 'NEFARIOUS':</b>",
-    "o": ["Wicked", "Virtuous", "Vile", "Evil"],
+    "q": "<b>Antonym of 'ALACRITY':</b>",
+    "o": ["Enthusiasm", "Lethargy", "Readiness", "Eagerness"],
     "a": 1,
-    "e": "Nefarious (अति दुष्ट) का उल्टा 'Virtuous' (सदाचारी/नेक) होता है।",
+    "e": "'Alacrity' (तत्परता) का उल्टा 'Lethargy' (सुस्ती/आलस) है।",
     "cat": "english", "sub": "vocab"
   },
   {
-    "q": "<b>Active/Passive:</b> They have already completed the task.",
-    "o": ["The task was already completed", "The task has already been completed by them", "The task is completed", "None"],
+    "q": "<b>Antonym of 'PUNITIVE':</b>",
+    "o": ["Vindictive", "Rewarding", "Penal", "Retaliatory"],
     "a": 1,
-    "e": "Present Perfect 'has/have + V3' बदलकर 'has/have + been + V3' हो जाता है।",
+    "e": "'Punitive' (दंडात्मक) का उल्टा 'Rewarding' (पुरस्कार देने वाला) होता है।",
+    "cat": "english", "sub": "vocab"
+  },
+  {
+    "q": "<b>One-word Substitution:</b> A situation where no progress is possible; a deadlock.",
+    "o": ["Impasse", "Harmony", "Breakthrough", "Agreement"],
+    "a": 0,
+    "e": "'Impasse' का अर्थ है ऐसी स्थिति जहाँ से आगे बढ़ना असंभव हो (गतिरोध)।",
+    "cat": "english", "sub": "vocab"
+  },
+  {
+    "q": "<b>One-word Substitution:</b> One who makes an official examination of accounts.",
+    "o": ["Auditor", "Registrar", "Creditor", "Debtor"],
+    "a": 0,
+    "e": "खातों की आधिकारिक जांच करने वाले को 'Auditor' (लेखा परीक्षक) कहते हैं।",
+    "cat": "english", "sub": "vocab"
+  },
+  {
+    "q": "<b>Idiom:</b> 'To cook the books' means:",
+    "o": ["To write a book on cooking", "To manipulate financial records illegally", "To read carefully", "To keep books in order"],
+    "a": 1,
+    "e": "बैंकिंग परीक्षाओं में यह प्रचलित है, इसका अर्थ है खातों में हेराफेरी करना।",
+    "cat": "english", "sub": "vocab"
+  },
+  {
+    "q": "<b>Idiom:</b> 'In the red' means:",
+    "o": ["To be in danger", "To be in debt or losing money", "To be angry", "To be happy"],
+    "a": 1,
+    "e": "'In the red' का अर्थ है वित्तीय नुकसान में होना या कर्ज में होना।",
+    "cat": "english", "sub": "vocab"
+  },
+  {
+    "q": "<b>Active/Passive:</b> The bank manager has sanctioned the loan.",
+    "o": ["The loan was sanctioned by bank manager", "The loan has been sanctioned by the bank manager", "The loan is being sanctioned", "None"],
+    "a": 1,
+    "e": "Present Perfect 'has + V3' बदलकर 'has been + V3' हो जाता है।",
     "cat": "english", "sub": "voice"
   },
   {
-    "q": "<b>Direct/Indirect:</b> 'Will you lend me your pen?' she said to me.",
-    "o": ["She asked me if I would lend her my pen", "She told me to lend pen", "She asked if I will lend", "None"],
+    "q": "<b>Active/Passive:</b> Why did you decline the credit card offer?",
+    "o": ["Why was the credit card offer declined by you?", "Why is the credit card offer declined?", "Why had the offer been declined?", "None"],
     "a": 0,
-    "e": "Interrogative: 'Will' बदलकर 'would' हो जाता है और 'if/whether' का प्रयोग होता है।",
+    "e": "Simple Past Interrogative (did) बदलकर 'was/were + V3' में जाता है।",
+    "cat": "english", "sub": "voice"
+  },
+  {
+    "q": "<b>Active/Passive:</b> Please maintain a minimum balance.",
+    "o": ["A minimum balance should be maintain", "You are requested to maintain a minimum balance", "Let balance be maintained", "None"],
+    "a": 1,
+    "e": "'Please' वाले वाक्यों में 'You are requested to' सबसे सटीक passive form है।",
+    "cat": "english", "sub": "voice"
+  },
+  {
+    "q": "<b>Direct/Indirect:</b> The manager said to the clerk, 'Verify these documents at once.'",
+    "o": ["The manager told clerk verify documents", "The manager ordered the clerk to verify those documents at once", "The manager said to verify documents", "None"],
+    "a": 1,
+    "e": "Imperative (Order) में 'Ordered' और 'these' बदलकर 'those' हो जाता है।",
     "cat": "english", "sub": "narration"
+  },
+  {
+    "q": "<b>Direct/Indirect:</b> He said, 'The bank rate remains unchanged.'",
+    "o": ["He said that the bank rate remained unchanged", "He said that the bank rate remains unchanged", "He told bank rate is same", "None"],
+    "a": 1,
+    "e": "Fact/Information: चूँकि यह एक वर्तमान समाचार या तथ्य है, tense अक्सर unchanged रहता है, या 'remained' भी व्याकरणिक रूप से सही हो सकता है (विकल्प B यहाँ सूचनात्मक है)।",
+    "cat": "english", "sub": "narration"
+  },
+  {
+    "q": "<b>Direct/Indirect:</b> 'Are you interested in the SIP plan?' the agent asked.",
+    "o": ["The agent asked if I was interested in the SIP plan", "The agent asked are you interested", "The agent told me about SIP", "None"],
+    "a": 0,
+    "e": "Interrogative (Yes/No) में 'if/whether' और 'are' बदलकर 'was' हो जाता है।",
+    "cat": "english", "sub": "narration"
+  },
+  {
+    "q": "<b>Sentence Rearrangement:</b> P: digital banking Q: has revolutionized R: the traditional S: banking system",
+    "o": ["PQRS", "QSPR", "RQPS", "SPRQ"],
+    "a": 0,
+    "e": "सही क्रम: 'Digital banking has revolutionized the traditional banking system' (PQRS)।",
+    "cat": "english", "sub": "pqr"
+  },
+  {
+    "q": "<b>Sentence Rearrangement:</b> P: for sustainable growth Q: financial inclusion R: is essential S: in any economy",
+    "o": ["QRPS", "PQRS", "QRSP", "SPQR"],
+    "a": 2,
+    "e": "सही क्रम: 'Financial inclusion is essential for sustainable growth in any economy' (QRSP)।",
+    "cat": "english", "sub": "pqr"
+  },
+  {
+    "q": "<b>Select correctly spelt word:</b>",
+    "o": ["Entrepreneur", "Enterpreneur", "Entreprenure", "Entreprener"],
+    "a": 0,
+    "e": "सही स्पेलिंग 'Entrepreneur' (उद्यमी) है।",
+    "cat": "english", "sub": "vocab"
+  },
+  {
+    "q": "<b>Synonym of 'REDUNDANT':</b>",
+    "o": ["Necessary", "Superfluous", "Crucial", "Vital"],
+    "a": 1,
+    "e": "'Redundant' का अर्थ है फालतू या जिसकी ज़रूरत न हो (Superfluous)।",
+    "cat": "english", "sub": "vocab"
+  },
+  {
+    "q": "<b>Antonym of 'INSOLVENT':</b>",
+    "o": ["Bankrupt", "Wealthy", "Broke", "Destitute"],
+    "a": 1,
+    "e": "'Insolvent' (दिवालिया) का उल्टा 'Wealthy' (धनी) या 'Solvent' होगा।",
+    "cat": "english", "sub": "vocab"
+  },
+  {
+    "q": "<b>Error Spotting:</b> Either the (A) / manager or (B) / the employees (C) / is responsible for the error (D).",
+    "o": ["A", "B", "C", "D"],
+    "a": 3,
+    "e": "Proximity Rule: 'Either-or' में verb पास वाले subject (employees - Plural) के अनुसार 'are' होनी चाहिए।",
+    "cat": "english", "sub": "error-spotting"
   }
 ]
