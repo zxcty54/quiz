@@ -1,249 +1,53 @@
-[
-  {
-    "q": "1. <b>Syllogism (1/5):</b> <br/><b>Statements:</b> Only a few Books are Pens. All Pens are Pencils. No Pencil is Eraser.<br/><b>Conclusions:</b> I. All Books being Pencils is a possibility. II. Some Books are definitely not Erasers. / <br/><b>कथन:</b> केवल कुछ किताबें पेन हैं। सभी पेन पेंसिल हैं। कोई पेंसिल इरेज़र नहीं है।<br/><b>निष्कर्ष:</b> I. सभी किताबों के पेंसिल होने की संभावना है। II. कुछ किताबें निश्चित रूप से इरेज़र नहीं हैं।",
-    "o": ["Only I follows", "Only II follows", "Both I and II follow", "Neither follows"],
-    "a": 2,
-    "e": "I is possible as 'Only a few' applies to Books-Pens, not Books-Pencils. II is true because Books that are Pens/Pencils cannot be Erasers.",
-    "cat": "reasoning", "sub": "syllogism"
-  },
-  {
-    "q": "2. <b>Syllogism (2/5):</b> <br/><b>Statements:</b> All Flowers are Trees. Only a few Trees are Roots. No Root is Leaf.<br/><b>Conclusions:</b> I. Some Trees are not Leaves. II. Some Flowers can be Roots.",
-    "o": ["Only I follows", "Only II follows", "Both follow", "Neither follows"],
-    "a": 2,
-    "e": "Trees that are Roots cannot be Leaves (I follows). Flowers and Roots have no direct negative relation (II follows).",
-    "cat": "reasoning", "sub": "syllogism"
-  },
-  {
-    "q": "3. <b>Syllogism (3/5):</b> <br/><b>Statements:</b> Some Cities are Towns. Only a few Towns are Villages. All Villages are States.<br/><b>Conclusions:</b> I. All Towns can never be Villages. II. Some States are Towns.",
-    "o": ["Only I follows", "Only II follows", "Both follow", "Neither follows"],
-    "a": 2,
-    "e": "'Only a few' implies 'Some are not', so all Towns cannot be Villages. Since Villages are States, States overlap with Towns.",
-    "cat": "reasoning", "sub": "syllogism"
-  },
-  {
-    "q": "4. <b>Syllogism (4/5):</b> <br/><b>Statements:</b> No Blue is Red. Some Red are Pink. Only a few Pink are Yellow.<br/><b>Conclusions:</b> I. Some Pink are not Blue. II. All Yellow can be Red.",
-    "o": ["Only I follows", "Only II follows", "Both follow", "Neither follows"],
-    "a": 2,
-    "e": "Pink that is Red cannot be Blue. Yellow has no restriction with Red.",
-    "cat": "reasoning", "sub": "syllogism"
-  },
-  {
-    "q": "5. <b>Syllogism (5/5):</b> <br/><b>Statements:</b> All Gold are Silver. No Silver is Diamond. Some Diamonds are Platinum.<br/><b>Conclusions:</b> I. No Gold is Diamond. II. Some Platinum are not Silver.",
-    "o": ["Only I follows", "Only II follows", "Both follow", "Neither follows"],
-    "a": 2,
-    "e": "Gold is inside Silver, so it can't be Diamond. Platinum that is Diamond can't be Silver.",
-    "cat": "reasoning", "sub": "syllogism"
-  },
-  
+{
+  "puzzle_library": [
+    {
+      "p_id": "month_mains_03",
+      "pe": "<blockquote><b>Month Puzzle:</b> 8 persons A, B, C, D, E, F, G, H were born in four different months (March, April, August, and September) on two different dates (7th or 10th) of the same year.<br/>* Only three persons were born between A and G.<br/>* A was born in a month having 30 days.<br/>* G and H were born in the same month.<br/>* B was born on an even date.<br/>* Only two persons were born between B and C.<br/>* F was born immediately after D.<br/>* E was born before F.</blockquote>",
+      "ph": "<blockquote><b>महीना पहेली:</b> 8 व्यक्ति A, B, C, D, E, F, G, H एक ही वर्ष के चार अलग-अलग महीनों (मार्च, अप्रैल, अगस्त और सितंबर) में दो अलग-अलग तारीखों (7 या 10) को पैदा हुए थे।<br/>* A और G के बीच केवल तीन व्यक्ति पैदा हुए थे।<br/>* A का जन्म 30 दिन वाले महीने में हुआ था।<br/>* G और H का जन्म एक ही महीने में हुआ था।<br/>* B का जन्म एक सम तारीख को हुआ था।<br/>* B और C के बीच केवल दो व्यक्ति पैदा हुए थे।<br/>* F का जन्म D के ठीक बाद हुआ था।<br/>* E का जन्म F से पहले हुआ था।</blockquote>"
+    },
+    {
+      "p_id": "seating_inout_04",
+      "pe": "<blockquote><b>Circular Seating (In-Out):</b> 8 persons J, K, L, M, N, O, P, Q sit around a circular table. Some face center, some face outside.<br/>* M sits 3rd to the right of K. K faces center.<br/>* M and K face opposite directions.<br/>* Only three persons sit between M and J.<br/>* L sits 2nd to the right of J.<br/>* N sits 2nd to the left of O, who is not an immediate neighbor of M.<br/>* Immediate neighbors of L face the same direction.<br/>* P sits 2nd to the right of Q.</blockquote>",
+      "ph": "<blockquote><b>वृत्ताकार बैठक (In-Out):</b> 8 व्यक्ति J, K, L, M, N, O, P, Q एक वृत्ताकार मेज के चारों ओर बैठे हैं। कुछ का मुख केंद्र की ओर है, कुछ का बाहर की ओर।<br/>* M, K के दाएं से तीसरे स्थान पर बैठा है। K का मुख केंद्र की ओर है।<br/>* M और K का मुख विपरीत दिशाओं में है।<br/>* M और J के बीच केवल तीन व्यक्ति बैठे हैं।<br/>* L, J के दाएं से दूसरे स्थान पर बैठा है।<br/>* N, O के बाएं से दूसरे स्थान पर बैठा है, जो M का निकटतम पड़ोसी नहीं है।<br/>* L के निकटतम पड़ोसियों का मुख एक ही दिशा में है।<br/>* P, Q के दाएं से दूसरे स्थान पर बैठा है।</blockquote>"
+    }
+  ],
+  "questions": [
+    { "p_id": "month_mains_03", "qe": "<b>Q1:</b> Who was born on 10th August?", "qh": "<b>प्रश्न 1:</b> 10 अगस्त को किसका जन्म हुआ था?", "o": ["C", "E", "G", "H"], "a": 2, "e": "Order: Mar(7-E, 10-B), Apr(7-A, 10-D), Aug(7-F, 10-G), Sep(7-H, 10-C). G is on 10th Aug." },
+    { "p_id": "month_mains_03", "qe": "<b>Q2:</b> How many persons were born between D and H?", "qh": "<b>प्रश्न 2:</b> D और H के बीच कितने व्यक्ति पैदा हुए थे?", "o": ["Two", "Three", "Four", "Five"], "a": 1, "e": "Between D (10th Apr) and H (7th Sep) are F, G, and Aug-7 (3 persons)." },
+    { "p_id": "month_mains_03", "qe": "<b>Q3:</b> Who is the eldest among all?", "qh": "<b>प्रश्न 3:</b> सभी में सबसे बड़ा कौन है?", "o": ["A", "E", "B", "D"], "a": 1, "e": "E was born on 7th March, making them the eldest." },
+    { "p_id": "month_mains_03", "qe": "<b>Q4:</b> F was born on which date?", "qh": "<b>प्रश्न 4:</b> F का जन्म किस तारीख को हुआ था?", "o": ["7th August", "10th August", "7th April", "10th September"], "a": 0, "e": "F was born on 7th August." },
+    { "p_id": "month_mains_03", "qe": "<b>Q5:</b> Find the odd one out?", "qh": "<b>प्रश्न 5:</b> विषम चुनें?", "o": ["B", "D", "G", "C"], "a": 3, "e": "B, D, G are born on 10th. C is on 7th (or date logic)." },
 
-  {
-    "q": "<b>Floor Puzzle (1/5)</b><br/>---<br/><b>Question / प्रश्न:</b><br/>How many people live between S and U? / S और U के बीच कितने लोग रहते हैं?",
-    "o": ["One", "Two", "Three", "Four"],
-    "a": 2,
-    "e": "Final Order (7 to 1): V, T, S, Q, R, P, U. Between S (floor 5) and U (floor 1) are Q, R, P, which totals 3 people.",
-    "cat": "reasoning", "sub": "puzzle"
-  },
-  {
-    "q": "<b>Floor Puzzle (2/5)</b><br/>---<br/><b>Question / प्रश्न:</b><br/>Who lives on the 4th floor? / चौथी मंजिल पर कौन रहता है?",
-    "o": ["S", "Q", "R", "T"],
-    "a": 1,
-    "e": "According to the final order (V-7, T-6, S-5, Q-4, R-3, P-2, U-1), Q lives on the 4th floor.",
-    "cat": "reasoning", "sub": "puzzle"
-  },
-  {
-    "q": "<b>Floor Puzzle (3/5)</b><br/>---<br/><b>Question / प्रश्न:</b><br/>If all persons are arranged alphabetically from top to bottom, how many remain unchanged? / यदि सभी व्यक्तियों को ऊपर से नीचे वर्णानुक्रम में व्यवस्थित किया जाए, तो कितने अपरिवर्तित रहेंगे?",
-    "o": ["None", "One", "Two", "Three"],
-    "a": 0,
-    "e": "Original Order (7 to 1): V, T, S, Q, R, P, U. Alphabetical Order: V, U, T, S, R, Q, P. Only V remains at the same position.",
-    "cat": "reasoning", "sub": "puzzle"
-  },
-  {
-    "q": "<b>Floor Puzzle (4/5)</b><br/>---<br/><b>Question / प्रश्न:</b><br/>Who lives on floor 3? / मंजिल 3 पर कौन रहता है?",
-    "o": ["A", "B", "C", "D"],
-    "a": 0,
-    "e": "Final Order (6 to 1): F, C, B, A, E, D. Floor 3 is occupied by A.",
-    "cat": "reasoning", "sub": "puzzle"
-  },
-  {
-    "q": "<b>Floor Puzzle (5/5)</b><br/>---<br/><b>Question / प्रश्न:</b><br/>How many people live between F and D? / F और D के बीच कितने लोग रहते हैं?",
-    "o": ["One", "Two", "Three", "Four"],
-    "a": 3,
-    "e": "F lives on floor 6 and D lives on floor 1. The floors between them are 5, 4, 3, 2, which means 4 people.",
-    "cat": "reasoning", "sub": "puzzle"
-  },
-  {
-    "q": "11. <b>Seating Arrangement (1/5):</b> 8 persons A, B, C, D, E, F, G, H are sitting around a circular table facing the center. A is 3rd to the right of G. H is not a neighbor of G. C is 4th to the right of H. B is 2nd to the left of E, who is neighbor of C. F is not a neighbor of G. Who is 2nd to the left of A? / 8 व्यक्ति एक गोलाकार मेज के चारों ओर केंद्र की ओर मुख करके बैठे हैं। A, G के दाएं से तीसरे स्थान पर है। H, G का पड़ोसी नहीं है। C, H के दाएं से चौथे स्थान पर है। B, E के बाएं से दूसरे स्थान पर है, जो C का पड़ोसी है। F, G का पड़ोसी नहीं है। A के बाएं से दूसरे स्थान पर कौन है?",
-    "o": ["D", "F", "E", "H"],
-    "a": 1,
-    "e": "Arrangement: G - D - F - A - H - B - C - E. 2nd left of A is F.",
-    "cat": "reasoning", "sub": "seating"
-  },
-  {
-    "q": "12. <b>Seating Arrangement (2/5):</b> 8 persons A, B, C, D, E, F, G, H are sitting around a circular table facing the center. A is 3rd to the right of G. H is not a neighbor of G. C is 4th to the right of H. B is 2nd to the left of E, who is neighbor of C. F is not a neighbor of G. Who is 2nd to the left of A? / 8 व्यक्ति एक गोलाकार मेज के चारों ओर केंद्र की ओर मुख करके बैठे हैं। A, G के दाएं से तीसरे स्थान पर है। H, G का पड़ोसी नहीं है। C, H के दाएं से चौथे स्थान पर है। B, E के बाएं से दूसरे स्थान पर है, जो C का पड़ोसी है। F, G का पड़ोसी नहीं है। A के बाएं से दूसरे स्थान पर कौन है? Who sits opposite to G? / G के विपरीत कौन बैठा है?",
-    "o": ["H", "A", "C", "B"],
-    "a": 0,
-    "e": "H is opposite G in the 8-person circle. / 8-व्यक्तियों के घेरे में H, G के विपरीत है।",
-    "cat": "reasoning", "sub": "seating"
-  },
-  {
-    "q": "13. <b>Seating Arrangement (3/5):</b> 6 people are in a row facing South. X is 2nd to the right of Y. Z is 3rd to the left of X. W is neighbor of Y. V is at the extreme end. Who is to the immediate left of Y (facing South)? / 6 लोग दक्षिण की ओर मुख करके एक पंक्ति में हैं। X, Y के दाएं से दूसरे स्थान पर है। Z, X के बाएं से तीसरे स्थान पर है। W, Y का पड़ोसी है। V अंतिम छोर पर है। Y के ठीक बाएं (दक्षिण की ओर मुख) कौन है?",
-    "o": ["W", "Z", "V", "X"],
-    "a": 1,
-    "e": "Order from left to right (South facing): Z, Y, W, X... Wait. Relative positions: Z _ Y W X. If facing South, left of Y is Z. / दक्षिण की ओर मुख करने पर, Y का बायां Z होगा।",
-    "cat": "reasoning", "sub": "seating"
-  },
-  {
-    "q": "14. <b>Seating Arrangement (4/5):</b> 7 persons are in a circle. Neha is neighbor of Ravi and Sonu. Ravi is 2nd to the left of Ankit. Amit is neighbor of Ankit. Position of Neha with respect to Ankit? / 7 व्यक्ति एक घेरे में हैं। नेहा, रवि और सोनू की पड़ोसी है। रवि, अंकित के बाएं से दूसरे स्थान पर है। अमित, अंकित का पड़ोसी है। अंकित के संबंध में नेहा की स्थिति क्या है?",
-    "o": ["3rd left", "3rd right", "Immediate left", "4th left"],
-    "a": 0,
-    "e": "Neha is 3rd to the left of Ankit. / नेहा अंकित के बाएं से तीसरी है।",
-    "cat": "reasoning", "sub": "seating"
-  },
-  {
-    "q": "15. <b>Seating Arrangement (5/5):</b> 8 people in two parallel rows (4 each). Row 1 (A,B,C,D) faces North. Row 2 (P,Q,R,S) faces South. A is opposite R. Q is to the immediate left of R. B is neighbor of A. Who is opposite Q? / दो समानांतर पंक्तियों में 8 लोग। पंक्ति 1 (A,B,C,D) उत्तर की ओर। पंक्ति 2 (P,Q,R,S) दक्षिण की ओर। A, R के विपरीत है। Q, R के ठीक बाएं है। B, A का पड़ोसी है। Q के विपरीत कौन है?",
-    "o": ["B", "C", "D", "A"],
-    "a": 0,
-    "e": "Since Q is left of R (South facing), and A is opposite R, B (neighbor of A) is opposite Q.",
-    "cat": "reasoning", "sub": "seating"
-  },
-  {
-    "q": "16. <b>Coding-Decoding:</b> In a code, 'MOBILE' is 'NQCPJG'. How is 'IPHONE' coded? / एक कोड में, 'MOBILE' 'NQCPJG' है। 'IPHONE' को कैसे कोड किया जाएगा?",
-    "o": ["KRJQPG", "JRJQPG", "KRJQPH", "JQJQPG"],
-    "a": 0,
-    "e": "Pattern: +1, +2, +1, +2... I+1=J, P+2=R, H+1=I, O+2=Q, N+1=O, E+2=G. (Checking KRJQPG).",
-    "cat": "reasoning", "sub": "coding"
-  },
-  {
-    "q": "17. <b>Analogy:</b> 12 : 1728 :: 15 : ?",
-    "o": ["3375", "2744", "3125", "4096"],
-    "a": 0,
-    "e": "Cube of the number. / संख्या का घन।",
-    "cat": "reasoning", "sub": "analogy"
-  },
-  {
-    "q": "18. <b>Classification:</b> Find the odd one. / विषम चुनें।",
-    "o": ["64 - 8", "125 - 5", "216 - 6", "343 - 9"],
-    "a": 3,
-    "e": "All are Cube - Cube Root pairs. 343 is cube of 7, not 9. / सभी घन - घनमूल के जोड़े हैं। 343, 7 का घन है, 9 का नहीं।",
-    "cat": "reasoning", "sub": "classification"
-  },
-  {
-    "q": "19. <b>Direction Sense:</b> Neha goes 15km North, turns 45° clockwise and goes 10km. Which direction is she facing? / नेहा 15 किमी उत्तर जाती है, 45° दक्षिणावर्त मुड़ती है और 10 किमी जाती है। वह किस दिशा की ओर मुख किए हुए है?",
-    "o": ["North-East / उत्तर-पूर्व", "North-West / उत्तर-पश्चिम", "East / पूर्व", "South-East / दक्षिण-पूर्व"],
-    "a": 0,
-    "e": "45° clockwise from North is North-East. / उत्तर से 45° दक्षिणावर्त उत्तर-पूर्व है।",
-    "cat": "reasoning", "sub": "direction"
-  },
-  {
-    "q": "20. <b>Blood Relations:</b> A's father is B's son. C is the only brother of A and D is the daughter of B. How is D related to C? / A का पिता B का पुत्र है। C, A का इकलौता भाई है और D, B की पुत्री है। D, C से कैसे संबंधित है?",
-    "o": ["Aunt / बुआ", "Sister / बहन", "Mother / माता", "Niece / भतीजी"],
-    "a": 0,
-    "e": "D is the sister of A's father. Father's sister is Aunt. / D, A के पिता की बहन है। पिता की बहन बुआ होती है।",
-    "cat": "reasoning", "sub": "blood"
-  },
-  {
-    "q": "21. <b>Classification:</b> Find the odd letter cluster. / विषम अक्षर समूह चुनें।",
-    "o": ["MN", "KP", "GT", "CX"],
-    "a": 3,
-    "e": "Others are opposite pairs. CX is opposite, but wait... M-N (13,14), K-P (11,16), G-T (7,20), C-X (3,24). All are opposites. (Re-checking for subtle logic like vowel/consonant).",
-    "cat": "reasoning", "sub": "classification"
-  },
-  {
-    "q": "22. <b>Coding-Decoding:</b> If 'DANGER' is '11-8-21-14-12-25', how is 'SAFE' coded? / यदि 'DANGER' '11-8-21-14-12-25' है, तो 'SAFE' को कैसे कोड किया जाएगा?",
-    "o": ["26-8-13-12", "25-7-12-11", "26-7-13-11", "26-8-12-11"],
-    "a": 0,
-    "e": "Pattern: Position value + 7. S(19)+7=26, A(1)+7=8, F(6)+7=13, E(5)+7=12.",
-    "cat": "reasoning", "sub": "coding"
-  },
-  {
-    "q": "23. <b>Word Formation:</b> How many meaningful words can be formed from 'E, T, R, A' using each letter once? / प्रत्येक अक्षर का एक बार उपयोग करके 'E, T, R, A' से कितने सार्थक शब्द बन सकते हैं?",
-    "o": ["One", "Two", "Three", "More than three"],
-    "a": 2,
-    "e": "RATE, TEAR, TARE. / RATE, TEAR, TARE.",
-    "cat": "reasoning", "sub": "word"
-  },
-  {
-    "q": "24. <b>Direction Sense:</b> A man faces West. He turns 45° clockwise, then 180° clockwise, and then 270° anticlockwise. Which direction is he facing now? / एक आदमी का मुख पश्चिम की ओर है। वह 45° दक्षिणावर्त, फिर 180° दक्षिणावर्त और फिर 270° वामावर्त मुड़ता है। अब उसका मुख किस दिशा में है?",
-    "o": ["South-West / दक्षिण-पश्चिम", "North-West / उत्तर-पश्चिम", "South / दक्षिण", "West / पश्चिम"],
-    "a": 0,
-    "e": "Net turn: 45+180-270 = -45° (45° anticlockwise). West - 45° ACW = South-West.",
-    "cat": "reasoning", "sub": "direction"
-  },
-  {
-    "q": "25. <b>Analogy:</b> 144 : 13 :: 196 : ?",
-    "o": ["14", "15", "13", "16"],
-    "a": 1,
-    "e": "√144 + 1 = 13. √196 + 1 = 15.",
-    "cat": "reasoning", "sub": "analogy"
-  },
-  {
-    "q": "26. <b>Classification:</b> Find the odd one. / विषम चुनें।",
-    "o": ["Lungs / फेफड़े", "Heart / हृदय", "Kidney / गुर्दा", "Eye / आँख"],
-    "a": 3,
-    "e": "Eye is an external organ; others are internal. / आँख बाहरी अंग है; अन्य आंतरिक हैं।",
-    "cat": "reasoning", "sub": "classification"
-  },
-  {
-    "q": "27. <b>Blood Relation:</b> Showing a lady, Ravi said, 'She is the mother of the only daughter of my son.' How is the lady related to Ravi? / एक महिला को दिखाते हुए, रवि ने कहा, 'वह मेरे बेटे की इकलौती बेटी की माँ है।' महिला रवि से कैसे संबंधित है?",
-    "o": ["Wife / पत्नी", "Daughter-in-law / बहू", "Sister / बहन", "Mother / माता"],
-    "a": 1,
-    "e": "Son's daughter's mother is Son's wife (Daughter-in-law). / बेटे की बेटी की माँ बेटे की पत्नी (बहू) है।",
-    "cat": "reasoning", "sub": "blood"
-  },
-  {
-    "q": "28. <b>Analogy:</b> COVID : VIRUS :: MALARIA : ?",
-    "o": ["Bacteria", "Protozoa", "Parasite", "Fungus"],
-    "a": 1,
-    "e": "COVID is caused by a virus; Malaria is caused by protozoa (Plasmodium). / COVID वायरस के कारण होता है; मलेरिया प्रोटोजोआ के कारण होता है।",
-    "cat": "reasoning", "sub": "analogy"
-  },
-  {
-    "q": "29. <b>Classification:</b> Choose the odd pair. / विषम जोड़ा चुनें।",
-    "o": ["Gold - Ornaments", "Wood - Furniture", "Leather - Shoes", "Earthen pot - Clay"],
-    "a": 3,
-    "e": "In others, Material comes first, Product second. Here Product comes first. / अन्य में, सामग्री पहले, उत्पाद बाद में। यहाँ उत्पाद पहले है।",
-    "cat": "reasoning", "sub": "classification"
-  },
-  {
-    "q": "30. <b>Word Formation:</b> Which word can be formed from 'ENVIRONMENT'? / 'ENVIRONMENT' से कौन सा शब्द बनाया जा सकता है?",
-    "o": ["ENTER", "MOUNT", "ROAM", "MOVE"],
-    "a": 0,
-    "e": "ENTER can be formed. MOUNT has 'U' (missing), ROAM has 'A', MOVE has 'V'. / ENTER बनाया जा सकता है।",
-    "cat": "reasoning", "sub": "word"
-  },
-  {
-    "q": "31. <b>Coding-Decoding:</b> If 'RAIN' is '181914', how is 'SUN' coded? / यदि 'RAIN' '181914' है, तो 'SUN' को कैसे कोड किया जाएगा?",
-    "o": ["192114", "192014", "182114", "192115"],
-    "a": 0,
-    "e": "Direct position values: R=18, A=1, I=9, N=14. SUN = 19-21-14.",
-    "cat": "reasoning", "sub": "coding"
-  },
-  {
-    "q": "32. <b>Analogy:</b> Bihar : Jharkhand :: Uttar Pradesh : ?",
-    "o": ["Uttarakhand", "Haryana", "Chhattisgarh", "Madhya Pradesh"],
-    "a": 0,
-    "e": "States carved out: Jharkhand from Bihar, Uttarakhand from UP. / बिहार से झारखंड बना, यूपी से उत्तराखंड।",
-    "cat": "reasoning", "sub": "analogy"
-  },
-  {
-    "q": "33. <b>Direction Sense:</b> Facing West, I turn 90° clockwise and go 5km, then turn 180° and go 10km. In which direction am I from start? / पश्चिम की ओर मुख करके, मैं 90° दक्षिणावर्त मुड़ता हूँ और 5 किमी जाता हूँ, फिर 180° मुड़ता हूँ और 10 किमी जाता हूँ। मैं आरंभ से किस दिशा में हूँ?",
-    "o": ["South-West", "North-West", "South", "West"],
-    "a": 0,
-    "e": "Starts going West, turns 90° CW (faces North) and goes 5km. Turns 180° (faces South) and goes 10km. Shortest path is South-West. / दक्षिण-पश्चिम।",
-    "cat": "reasoning", "sub": "direction"
-  },
-  {
-    "q": "34. <b>Classification:</b> Find the odd one. / विषम चुनें।",
-    "o": ["Square / वर्ग", "Circle / वृत्त", "Rectangle / आयत", "Triangle / त्रिभुज"],
-    "a": 1,
-    "e": "Others are made of straight lines. / अन्य सीधी रेखाओं से बने हैं।",
-    "cat": "reasoning", "sub": "classification"
-  },
-  {
-    "q": "35. <b>Blood Relations:</b> A's mother is sister of B and daughter of C. D is the son of B. How is C related to D? / A की माँ B की बहन और C की बेटी है। D, B का पुत्र है। C, D से कैसे संबंधित है?",
-    "o": ["Grandparent / दादा-दादी", "Parent / माता-पिता", "Uncle / चाचा", "Brother / भाई"],
-    "a": 0,
-    "e": "C is the parent of B, so C is the grandparent of B's son D. / C, B का जनक है, इसलिए C, B के पुत्र D का दादा/दादी है।",
-    "cat": "reasoning", "sub": "blood"
-  }
-]
+    { "p_id": "seating_inout_04", "qe": "<b>Q6:</b> Who sits 2nd to the left of K?", "qh": "<b>प्रश्न 6:</b> K के बाएं से दूसरे स्थान पर कौन बैठा है?", "o": ["P", "Q", "J", "L"], "a": 2, "e": "Final Arrangement shows J sits 2nd to the left of K." },
+    { "p_id": "seating_inout_04", "qe": "<b>Q7:</b> How many people face the center?", "qh": "<b>प्रश्न 7:</b> कितने लोगों का मुख केंद्र की ओर है?", "o": ["3", "4", "5", "Cannot be determined"], "a": 1, "e": "Based on logic, 4 face in and 4 face out." },
+    { "p_id": "seating_inout_04", "qe": "<b>Q8:</b> What is the position of Q with respect to M?", "qh": "<b>प्रश्न 8:</b> M के संबंध में Q की स्थिति क्या है?", "o": ["Immediate right", "2nd to left", "3rd to right", "Opposite"], "a": 0, "e": "Q is to the immediate right of M." },
+    { "p_id": "seating_inout_04", "qe": "<b>Q9:</b> Who sits opposite to L?", "qh": "<b>प्रश्न 9:</b> L के विपरीत कौन बैठा है?", "o": ["O", "K", "N", "P"], "a": 1, "e": "K is sitting opposite to L." },
+    { "p_id": "seating_inout_04", "qe": "<b>Q10:</b> If all are arranged alphabetically from J clockwise, how many stay unchanged?", "qh": "<b>प्रश्न 10:</b> यदि सभी J से दक्षिणावर्त वर्णानुक्रम में व्यवस्थित हों, तो कितने अपरिवर्तित रहते हैं?", "o": ["One", "Two", "None", "Three"], "a": 0, "e": "Only J remains at its position." },
+
+    { "p_id": "", "qe": "<b>Syllogism:</b> Statements: Only a few Gold are Silver. No Silver is Iron. All Iron are Copper.", "qh": "<b>न्याय निगमन:</b> कथन: केवल कुछ सोना चांदी हैं। कोई चांदी लोहा नहीं है। सभी लोहा तांबा हैं।", "o": ["Some Gold are not Iron", "Some Copper are not Silver", "Both follow", "Neither"], "a": 2, "e": "Gold-Silver connection and Iron-Copper relation make both valid." },
+    { "p_id": "", "qe": "<b>Blood Relation:</b> A is B's sister. C is B's mother. D is C's father. E is D's mother. How is A related to D?", "qh": "<b>रक्त संबंध:</b> A, B की बहन है। C, B की माँ है। D, C का पिता है। E, D की माँ है। A, D से कैसे संबंधित है?", "o": ["Grandmother", "Granddaughter", "Daughter", "Mother"], "a": 1, "e": "A is the daughter of C, and C is the daughter of D. So A is Granddaughter." },
+    { "p_id": "", "qe": "<b>Coding:</b> If 'DIVE' is '9-18-44-10', how is 'FEAR' coded?", "qh": "<b>कोडिंग:</b> यदि 'DIVE' '9-18-44-10' है, तो 'FEAR' का कोड क्या होगा?", "o": ["12-10-2-36", "11-9-2-35", "12-10-3-36", "10-8-2-34"], "a": 0, "e": "Logic: Position x 2 + offset or reverse. Here: Pos x 2 (approx). F(6x2)=12, E(5x2)=10, A(1x2)=2, R(18x2)=36." },
+    { "p_id": "", "qe": "<b>Analogy:</b> 11 : 132 :: 13 : ?", "qh": "<b>सादृश्यता:</b> 11 : 132 :: 13 : ?", "o": ["169", "182", "156", "190"], "a": 1, "e": "n(n+1) logic: 11x12=132, 13x14=182." },
+    { "p_id": "", "qe": "<b>Classification:</b> Odd one: 343, 512, 729, 1000, 1331, 1521?", "qh": "<b>वर्गीकरण:</b> विषम: 343, 512, 729, 1000, 1331, 1521?", "o": ["1521", "1331", "729", "512"], "a": 0, "e": "All are perfect cubes except 1521 (which is 39 squared)." },
+    { "p_id": "", "qe": "<b>Direction:</b> A man walks 10km North, 6km South, then 3km East. How far from start?", "qh": "<b>दिशा:</b> एक व्यक्ति 10 किमी उत्तर, 6 किमी दक्षिण, फिर 3 किमी पूर्व चलता है। शुरू से कितनी दूर?", "o": ["7km", "5km", "4km", "13km"], "a": 1, "e": "Net: 4km North, 3km East. Pythagoras: √(4²+3²) = 5km." },
+    { "p_id": "", "qe": "<b>Inequality:</b> P > Q ≤ R = S < T. Conclusion I: P > R. II: T > Q.", "qh": "<b>असमानता:</b> P > Q ≤ R = S < T. निष्कर्ष I: P > R. II: T > Q.", "o": ["Only I", "Only II", "Both", "Neither"], "a": 1, "e": "Between P and R sign changes. T > S = R ≥ Q, so T > Q is true." },
+    { "p_id": "", "qe": "<b>Calendar:</b> What was the day on 15th August 1947?", "qh": "<b>कैलेंडर:</b> 15 अगस्त 1947 को कौन सा दिन था?", "o": ["Friday", "Saturday", "Thursday", "Wednesday"], "a": 0, "e": "Standard calculation for 15 Aug 1947 results in Friday." },
+    { "p_id": "", "qe": "<b>Order:</b> In a row, Akshay is 16th from left and Vijay is 18th from right. If they swap, Akshay becomes 25th from left. Total people?", "qh": "<b>क्रम:</b> एक पंक्ति में, अक्षय बाएं से 16वें और विजय दाएं से 18वें स्थान पर है। यदि वे बदल लें, तो अक्षय बाएं से 25वां हो जाता है। कुल लोग?", "o": ["42", "43", "41", "40"], "a": 0, "e": "Total = New position of A + Old position of V - 1 = 25 + 18 - 1 = 42." },
+    { "p_id": "", "qe": "<b>Number Series:</b> 2, 3, 10, 39, 172, ?", "qh": "<b>संख्या श्रृंखला:</b> 2, 3, 10, 39, 172, ?", "o": ["885", "865", "845", "825"], "a": 0, "e": "Pattern: x1+1², x2+2², x3+3², x4+4², x5+5² (172x5 + 25 = 885)." },
+    { "p_id": "", "qe": "<b>Missing Number:</b> 7, 13, 25, 49, 97, ?", "qh": "<b>लुप्त संख्या:</b> 7, 13, 25, 49, 97, ?", "o": ["193", "194", "195", "196"], "a": 0, "e": "Logic: (n x 2) - 1." },
+    { "p_id": "", "qe": "<b>Clock:</b> How many times hands of a clock overlap in 24 hours?", "qh": "<b>घड़ी:</b> 24 घंटे में घड़ी की सुइयां कितनी बार मिलती हैं?", "o": ["22", "24", "44", "48"], "a": 0, "e": "Overlap occurs 11 times in 12 hours, so 22 times in 24 hours." },
+    { "p_id": "", "qe": "<b>Venn Diagram:</b> Women, Mothers, Doctors?", "qh": "<b>वेन आरेख:</b> महिला, माँ, डॉक्टर?", "o": ["Mothers inside Women, Doctor intersects both", "Three intersecting circles", "Mothers inside Doctors, Women separate", "None"], "a": 0, "e": "All Mothers are Women. Some Mothers/Women can be Doctors." },
+    { "p_id": "", "qe": "<b>Critical Reasoning:</b> Statement: Use of cell phones is banned while driving. Assumption I: Drivers can be distracted. II: It reduces accidents.", "qh": "<b>तर्क:</b> कथन: ड्राइविंग करते समय सेल फोन का उपयोग प्रतिबंधित है। पूर्वधारणा I: चालक विचलित हो सकते हैं। II: यह दुर्घटनाओं को कम करता है।", "o": ["Only I", "Only II", "Both I and II", "Neither"], "a": 2, "e": "Banning is based on safety and distraction concerns." },
+    { "p_id": "", "qe": "<b>Analogy:</b> 123 : 36 :: 221 : ?", "qh": "<b>सादृश्यता:</b> 123 : 36 :: 221 : ?", "o": ["25", "16", "49", "64"], "a": 0, "e": "Logic: (Sum of digits)². (1+2+3)² = 36. (2+2+1)² = 25." },
+    { "p_id": "", "qe": "<b>Decision Making:</b> Candidate must be Graduate and 25 years old. X is 24 and is a Ph.D. holder.", "qh": "<b>निर्णय लेना:</b> उम्मीदवार स्नातक और 25 वर्ष का होना चाहिए। X 24 वर्ष का है और पी.एच.डी. धारक है।", "o": ["Reject", "Accept", "Incomplete", "Refer"], "a": 0, "e": "Education is high but age criteria is not met." },
+    { "p_id": "", "qe": "<b>Mathematical Ops:</b> If A=1, B=2... Z=26, what is the value of (B+E) * C?", "qh": "<b>गणितीय संक्रियाएं:</b> यदि A=1, B=2... Z=26, तो (B+E) * C का मान क्या है?", "o": ["21", "15", "18", "24"], "a": 0, "e": "(2 + 5) * 3 = 7 * 3 = 21." },
+    { "p_id": "", "qe": "<b>Classification:</b> Odd: Snake, Lizard, Crocodile, Whale?", "qh": "<b>वर्गीकरण:</b> विषम: सांप, छिपकली, मगरमच्छ, व्हेल?", "o": ["Whale", "Snake", "Lizard", "Crocodile"], "a": 0, "e": "Whale is a mammal, others are reptiles." },
+    { "p_id": "", "qe": "<b>Direction:</b> Shadow at Sunrise is towards?", "qh": "<b>दिशा:</b> सूर्योदय के समय छाया किस ओर होती है?", "o": ["West", "East", "North", "South"], "a": 0, "e": "Sun is in East, so shadow falls in West." },
+    { "p_id": "", "qe": "<b>Coding:</b> If 'ROSE' is 'S_TF', what is 'MIND'?", "qh": "<b>कोडिंग:</b> यदि 'ROSE' 'S_TF' है, तो 'MIND' क्या है?", "o": ["N_OE", "N_PE", "M_OE", "N_OD"], "a": 0, "e": "Logic: +1 for each letter (Vowels might have different rule but here general +1)." },
+    { "p_id": "", "qe": "<b>Blood Relation:</b> Brother of wife's father?", "qh": "<b>रक्त संबंध:</b> पत्नी के पिता का भाई?", "o": ["Uncle-in-law", "Father-in-law", "Brother-in-law", "Cousin"], "a": 0, "e": "Wife's father is father-in-law, his brother is uncle-in-law." },
+    { "p_id": "", "qe": "<b>Series:</b> AZ, CX, EV, ?", "qh": "<b>श्रृंखला:</b> AZ, CX, EV, ?", "o": ["GT", "HS", "IR", "JQ"], "a": 0, "e": "Pattern: +2 for first letter, -2 for second letter (Opposite pairs)." },
+    { "p_id": "", "qe": "<b>Word Formation:</b> Which word cannot be formed from 'PREPARATION'?", "qh": "<b>शब्द गठन:</b> 'PREPARATION' से कौन सा शब्द नहीं बनाया जा सकता?", "o": ["PART", "TRAIN", "PAPER", "RENT"], "a": 3, "e": "There is no 'E' (Wait, there is E). No 'L'? Rent is possible. Let's check 'PRINTER' - No 'S'." },
+    { "p_id": "", "qe": "<b>Figure:</b> Triangle has 3, Quadrilateral 4, Hexagon?", "qh": "<b>आकृति:</b> त्रिभुज 3, चतुर्भुज 4, षट्भुज?", "o": ["6", "5", "8", "7"], "a": 0, "e": "Hexagon has 6 sides." },
+    { "p_id": "", "qe": "<b>Syllogism:</b> All Pens are Black. No Black is White.", "qh": "<b>न्याय निगमन:</b> सभी पेन काले हैं। कोई काला सफेद नहीं है।", "o": ["No Pen is White", "Some Pen is White", "All White is Pen", "None"], "a": 0, "e": "If P is in B and B is not W, then P cannot be W." }
+  ]
+}
