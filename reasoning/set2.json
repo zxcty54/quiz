@@ -1,41 +1,16 @@
 {
   "puzzles": {
     "FP1": "7 persons P, Q, R, S, T, U, V live on 7 floors (1-7). T even floor. 2 between T-R. Q above R. V odd floor above T. P above U. S above Q.",
-    "FP2": "6 persons A, B, C, D, E, F live on 6 floors. F on 6. B even. A below B. 2 between A-C. E above D.",
-    "MP1": "A, B, C, D, E born in March–July. A in 30-day month. 2 between A-B. C before B. E in 31-day month not March.",
-    "MP2": "P, Q, R, S, T, U attend Jan–Jun. P in 31-day month. 1 between P-Q. R after Q. S in April. T before U.",
-    "SA1": "6 persons P, Q, R, S, T, U sit in circle. P faces center. R 2nd left. Q neighbor (outside). T 2nd right of Q. U 2nd left of R. S same direction as T.",
-    "SA2": "8 persons A-H square table. Corners face center, sides outside. A corner. B 2nd right. C neighbor (outside). D opposite C."
+    "FP2": "6 persons A, B, C, D, E, F live on 6 floors. F on 6. B even. A below B. 2 between A-C. E above D."
   },
 
   "questions": [
-
-    // ---------- SYLLOGISM ----------
-    {
-      "type": "normal",
-      "q": "Only a few Rivers are Oceans. All Oceans are Lakes. No Lake is Pond. Conclusions: I. All Rivers being Ponds is possible. II. Some Lakes are definitely not Rivers.",
-      "o": ["Only I", "Only II", "Both", "Neither"],
-      "a": 3,
-      "e": "Both wrong.",
-      "sub": "syllogism"
-    },
     {
       "type": "normal",
       "q": "All A are B. Only a few B are C. No C is D. Conclusions: I. Some B are not D. II. All A can be C.",
       "o": ["Only I", "Only II", "Both", "Neither"],
       "a": 2,
-      "e": "Both follow.",
-      "sub": "syllogism"
-    },
-
-    // ---------- FLOOR ----------
-    {
-      "type": "puzzle",
-      "puzzle_id": "FP1",
-      "q": "How many people between S and U?",
-      "o": ["One", "Two", "Three", "Four"],
-      "a": 2,
-      "e": "3 persons."
+      "e": "Both follow"
     },
     {
       "type": "puzzle",
@@ -44,98 +19,6 @@
       "o": ["S", "Q", "R", "T"],
       "a": 1,
       "e": "Q"
-    },
-
-    {
-      "type": "puzzle",
-      "puzzle_id": "FP2",
-      "q": "Who lives on floor 3?",
-      "o": ["A", "B", "C", "D"],
-      "a": 0,
-      "e": "A"
-    },
-    {
-      "type": "puzzle",
-      "puzzle_id": "FP2",
-      "q": "Top floor person?",
-      "o": ["F", "C", "E", "B"],
-      "a": 0,
-      "e": "F"
-    },
-
-    // ---------- MONTH ----------
-    {
-      "type": "puzzle",
-      "puzzle_id": "MP1",
-      "q": "D born in which month?",
-      "o": ["March", "May", "July", "June"],
-      "a": 0,
-      "e": "March"
-    },
-
-    {
-      "type": "puzzle",
-      "puzzle_id": "MP2",
-      "q": "Who attends in June?",
-      "o": ["U", "R", "T", "Q"],
-      "a": 0,
-      "e": "U"
-    },
-
-    // ---------- SEATING ----------
-    {
-      "type": "puzzle",
-      "puzzle_id": "SA1",
-      "q": "Who sits opposite P?",
-      "o": ["Q", "S", "T", "U"],
-      "a": 2,
-      "e": "T"
-    },
-
-    {
-      "type": "puzzle",
-      "puzzle_id": "SA2",
-      "q": "Who sits immediate left of B?",
-      "o": ["A", "C", "D", "E"],
-      "a": 1,
-      "e": "C"
-    },
-
-    // ---------- CODING ----------
-    {
-      "type": "normal",
-      "q": "DANGER → 11-8-21-14-12-25, SAFE → ?",
-      "o": ["26-8-13-12", "26-7-13-11", "25-8-12-11", "26-8-12-11"],
-      "a": 0,
-      "e": "+7 pattern"
-    },
-
-    // ---------- ANALOGY ----------
-    {
-      "type": "normal",
-      "q": "12 : 1728 :: 15 : ?",
-      "o": ["3375", "2744", "3125", "4096"],
-      "a": 0,
-      "e": "Cube"
-    },
-
-    // ---------- CLASSIFICATION ----------
-    {
-      "type": "normal",
-      "q": "Find odd one",
-      "o": ["Patna", "Lucknow", "Bhopal", "Gaya"],
-      "a": 3,
-      "e": "Not capital"
-    },
-
-    // ---------- BLOOD ----------
-    {
-      "type": "normal",
-      "q": "A father of B, C mother of B → relation?",
-      "o": ["Wife", "Sister", "Husband", "Daughter"],
-      "a": 0,
-      "e": "Wife"
     }
-
   ]
 }
