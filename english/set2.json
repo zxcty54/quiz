@@ -1,41 +1,6 @@
 [
   
   {
-    "q": "<b>Error Spotting:</b> No sooner had (A) / the news appeared in the scroll (B) / when there was (C) / a huge rush at the counter (D).",
-    "o": ["A", "B", "C", "D"],
-    "a": 2,
-    "e": "Rule: 'No sooner' ka pair hamesha 'than' hota hai, 'when' nahi.",
-    "cat": "english", "sub": "error-spotting"
-  },
-  {
-    "q": "<b>Error Spotting:</b> The population of Mumbai (A) / is greater (B) / than (C) / Delhi (D).",
-    "o": ["A", "B", "C", "D"],
-    "a": 3,
-    "e": "Rule: Comparison 'than that of Delhi' hona chahiye kyunki hum cities nahi, population compare kar rahe hain.",
-    "cat": "english", "sub": "error-spotting"
-  },
-  {
-    "q": "<b>Error Spotting:</b> If I would have (A) / worked hard (B) / I would have (C) / passed the exam (D).",
-    "o": ["A", "B", "C", "D"],
-    "a": 0,
-    "e": "Conditional: 'If' clause mein 'had + V3' lagta hai, 'would have' nahi.",
-    "cat": "english", "sub": "error-spotting"
-  },
-  {
-    "q": "<b>Error Spotting:</b> Scarcely had I (A) / finished the typing (B) / than the manager (C) / called me (D).",
-    "o": ["A", "B", "C", "D"],
-    "a": 2,
-    "e": "Pairing: Scarcely/Hardly ke sath 'when' lagta hai.",
-    "cat": "english", "sub": "error-spotting"
-  },
-  {
-    "q": "<b>Error Spotting:</b> The news (A) / are (B) / broadcasted (C) / daily (D).",
-    "o": ["A", "B", "C", "D"],
-    "a": 1,
-    "e": "Rule: 'News' singular hai, isliye 'is' lagega. Broadcast ki teeno forms 'broadcast' hi rehti hain.",
-    "cat": "english", "sub": "error-spotting"
-  },
-  {
     "q": "<b>Sentence Improvement:</b> He is *senior than* me in the office.",
     "o": ["senior to", "senior from", "more senior than", "No improvement"],
     "a": 0,
