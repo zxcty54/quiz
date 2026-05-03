@@ -1,0 +1,247 @@
+[
+  {
+    "q": "<b>Number Systems:</b> If the number 48327*8 is completely divisible by 11, then what digit will be at the place of '*'? / यदि संख्या 48327*8, 11 से पूर्णतः विभाजित है, तो '*' के स्थान पर कौन सा अंक होगा?",
+    "o": ["5", "3", "2", "1"],
+    "a": 3,
+    "e": "Divisibility rule of 11: (8+7+3+4) - (*+2+8) = 22 - (*+10) = 12-*. For 11 divisibility, 12-* = 11, so *=1. / 11 का नियम: विषम स्थानों का योग - सम स्थानों का योग। 22 - (*+10) = 12-*. यदि 12-* = 11, तो *=1.",
+    "cat": "aptitude", "sub": "number-system"
+  },
+  {
+    "q": "<b>Decimals & Fractions:</b> Convert 0.3467 (bar on 67) into a vulgar fraction. / 0.3467 (67 पर बार) को साधारण भिन्न में बदलें।",
+    "o": ["3433/9900", "3433/9990", "3467/9900", "3433/9000"],
+    "a": 0,
+    "e": "(3467 - 34) / 9900 = 3433/9900. Bar digits get 9s and non-bar get 0s in denominator. / (3467-34)/9900 = 3433/9900. बार वाले अंकों के लिए 9 और बिना बार वालों के लिए 0.",
+    "cat": "aptitude", "sub": "decimals"
+  },
+  {
+    "q": "<b>Percentage:</b> A student needs 40% marks to pass. He got 178 marks and failed by 22 marks. Maximum marks? / उत्तीर्ण होने के लिए 40% अंक चाहिए। 178 अंक मिले और 22 से फेल हो गया। कुल अंक?",
+    "o": ["400", "500", "600", "800"],
+    "a": 1,
+    "e": "Pass marks = 178+22 = 200. Since 40% = 200, 100% = 500. / पास अंक = 200. 40% की वैल्यू 200 है, तो 100% = 500.",
+    "cat": "aptitude", "sub": "percentage"
+  },
+  {
+    "q": "<b>Ratio & Proportion:</b> If A:B = 2:3 and B:C = 4:5, find A:B:C. / यदि A:B = 2:3 और B:C = 4:5 है, तो A:B:C ज्ञात करें।",
+    "o": ["8:12:15", "2:3:5", "8:10:15", "4:6:15"],
+    "a": 0,
+    "e": "A:B = 8:12, B:C = 12:15. Combining gives 8:12:15. / B को समान करने पर अनुपात 8:12:15 हो जाता है.",
+    "cat": "aptitude", "sub": "ratio"
+  },
+  {
+    "q": "<b>Square Roots:</b> Value of √(0.000441)? / √(0.000441) का मान क्या है?",
+    "o": ["0.21", "0.021", "0.0021", "0.00021"],
+    "a": 1,
+    "e": "√441 = 21. 6 decimal places become 3 in square root. / 441 का वर्गमूल 21. 6 दशमलव स्थान वर्गमूल में 3 हो जाते हैं.",
+    "cat": "aptitude", "sub": "square-root"
+  },
+  {
+    "q": "<b>Averages:</b> Average of 5 consecutive even numbers is 42. Largest number? / 5 क्रमागत सम संख्याओं का औसत 42 है। सबसे बड़ी संख्या?",
+    "o": ["44", "46", "48", "50"],
+    "a": 1,
+    "e": "Numbers are 38, 40, 42, 44, 46. Largest is 46. / संख्याएँ 38, 40, 42, 44, 46 हैं. सबसे बड़ी 46 है.",
+    "cat": "aptitude", "sub": "averages"
+  },
+  {
+    "q": "<b>Simple Interest:</b> Time for ₹5000 to become ₹7000 at 10% PA SI? / ₹5000 की राशि 10% की दर से ₹7000 कितने समय में होगी?",
+    "o": ["2 years", "4 years", "5 years", "3 years"],
+    "a": 1,
+    "e": "SI = 2000. T = (2000*100)/(5000*10) = 4. / ब्याज 2000 है. समय = 4 वर्ष.",
+    "cat": "aptitude", "sub": "interest"
+  },
+  {
+    "q": "<b>Compound Interest:</b> Difference between CI and SI on ₹10000 for 2 yrs at 10%? / ₹10000 पर 2 साल के लिए CI और SI का अंतर?",
+    "o": ["₹100", "₹200", "₹150", "₹50"],
+    "a": 0,
+    "e": "Diff = P(R/100)^2 = 10000(10/100)^2 = 100. / अंतर = P(R/100)^2 = 100.",
+    "cat": "aptitude", "sub": "interest"
+  },
+  {
+    "q": "<b>Profit & Loss:</b> Selling at ₹240 gives 10% loss. Price for 20% gain? / ₹240 में बेचने पर 10% हानि. 20% लाभ के लिए मूल्य?",
+    "o": ["₹300", "₹320", "₹350", "₹360"],
+    "a": 1,
+    "e": "90% = 240, so 120% = (240/90)*120 = 320. / 90% की वैल्यू 240 है, तो 120% = 320.",
+    "cat": "aptitude", "sub": "profit-loss"
+  },
+  {
+    "q": "<b>Discount:</b> Single equivalent discount for 20% and 10%? / 20% और 10% की दो क्रमिक छूट के बराबर एकल छूट?",
+    "o": ["30%", "28%", "25%", "22%"],
+    "a": 1,
+    "e": "x + y - xy/100 = 20 + 10 - 2 = 28%.",
+    "cat": "aptitude", "sub": "discount"
+  },
+  {
+    "q": "<b>Partnership:</b> A and B invest ₹20000 and ₹30000. B's share in ₹10000 profit? / A और B ने ₹20000 और ₹30000 लगाए. ₹10000 लाभ में B का हिस्सा?",
+    "o": ["₹4000", "₹6000", "₹5000", "₹2000"],
+    "a": 1,
+    "e": "Ratio 2:3. B = (3/5)*10000 = 6000. / अनुपात 2:3 है. B का हिस्सा 6000.",
+    "cat": "aptitude", "sub": "partnership"
+  },
+  {
+    "q": "<b>Mixture:</b> Mix ₹60/kg tea with ₹45/kg to get ₹50/kg? / ₹60/kg वाली चाय को ₹45/kg वाली के साथ किस अनुपात में मिलाएं कि मूल्य ₹50 हो?",
+    "o": ["1:2", "2:1", "3:2", "2:3"],
+    "a": 0,
+    "e": "Alligation: (50-45):(60-50) = 5:10 = 1:2. / एलीगेशन से अनुपात 1:2 आता है.",
+    "cat": "aptitude", "sub": "mixture"
+  },
+  {
+    "q": "<b>Time & Distance:</b> Speed 72 km/h in m/s? / 72 km/h की गति m/s में?",
+    "o": ["20 m/s", "25 m/s", "30 m/s", "15 m/s"],
+    "a": 0,
+    "e": "72 * (5/18) = 20 m/s.",
+    "cat": "aptitude", "sub": "time-distance"
+  },
+  {
+    "q": "<b>Time & Work:</b> A in 10 days, B in 15 days. Together? / A 10 दिन, B 15 दिन. दोनों मिलकर?",
+    "o": ["5 days", "6 days", "8 days", "9 days"],
+    "a": 1,
+    "e": "(10*15)/(10+15) = 150/25 = 6 days. / दोनों मिलकर 6 दिन में करेंगे.",
+    "cat": "aptitude", "sub": "time-work"
+  },
+  {
+    "q": "<b>Quadrilaterals:</b> Base 10 cm, height 8 cm of a parallelogram. Area? / समांतर चतुर्भुज का आधार 10, ऊंचाई 8. क्षेत्रफल?",
+    "o": ["40 cm²", "80 cm²", "100 cm²", "60 cm²"],
+    "a": 1,
+    "e": "Area = Base * Height = 10 * 8 = 80 cm².",
+    "cat": "aptitude", "sub": "quadrilaterals"
+  },
+  {
+    "q": "<b>Regular Polygons:</b> Interior angle of a regular hexagon? / नियमित षट्भुज का आंतरिक कोण?",
+    "o": ["90°", "108°", "120°", "135°"],
+    "a": 2,
+    "e": "(n-2)*180/n = (4*180)/6 = 120°.",
+    "cat": "aptitude", "sub": "polygons"
+  },
+  {
+    "q": "<b>Right Prism:</b> Base area 5 cm², height 10 cm. Volume? / प्रिज्म का आधार क्षेत्रफल 5, ऊंचाई 10. आयतन?",
+    "o": ["50 cm³", "25 cm³", "100 cm³", "15 cm³"],
+    "a": 0,
+    "e": "Vol = Base Area * Height = 5 * 10 = 50 cm³.",
+    "cat": "aptitude", "sub": "prism"
+  },
+  {
+    "q": "<b>Right Circular Cone:</b> Radius 7, height 24. Slant height? / शंकु की त्रिज्या 7, ऊंचाई 24. तिरछी ऊंचाई?",
+    "o": ["25 cm", "26 cm", "20 cm", "30 cm"],
+    "a": 0,
+    "e": "l = √(7^2 + 24^2) = 25 cm.",
+    "cat": "aptitude", "sub": "cone"
+  },
+  {
+    "q": "<b>Trigonometric ratio:</b> If sin θ = 3/5, find tan θ. / यदि sin θ = 3/5, तो tan θ?",
+    "o": ["4/3", "3/4", "5/3", "4/5"],
+    "a": 1,
+    "e": "P=3, H=5 -> B=4. tan θ = P/B = 3/4.",
+    "cat": "aptitude", "sub": "trigonometry"
+  },
+  {
+    "q": "<b>Heights & Distances:</b> Shadow is √3 times height. Elevation angle? / छाया ऊंचाई की √3 गुनी है. उन्नयन कोण?",
+    "o": ["30°", "45°", "60°", "90°"],
+    "a": 0,
+    "e": "tan θ = h/(h√3) = 1/√3 -> θ = 30°.",
+    "cat": "aptitude", "sub": "height-distance"
+  },
+  {
+    "q": "<b>Number Systems:</b> Sum of first 50 natural numbers? / प्रथम 50 प्राकृतिक संख्याओं का योग?",
+    "o": ["1225", "1275", "1250", "1300"],
+    "a": 1,
+    "e": "n(n+1)/2 = 50*51/2 = 1275.",
+    "cat": "aptitude", "sub": "number-system"
+  },
+  {
+    "q": "<b>Ratio:</b> Smallest share of ₹6200 in ratio 1/2 : 1/3 : 1/5? / ₹6200 को 1/2:1/3:1/5 में बांटने पर सबसे छोटा हिस्सा?",
+    "o": ["₹1200", "₹1500", "₹1000", "₹2000"],
+    "a": 0,
+    "e": "Ratio: 15:10:6. Smallest = (6/31)*6200 = 1200.",
+    "cat": "aptitude", "sub": "ratio"
+  },
+  {
+    "q": "<b>Time & Work:</b> 12 men in 8 days. 16 men in? / 12 पुरुष 8 दिन में. 16 पुरुष कितने दिन में?",
+    "o": ["6 days", "4 days", "5 days", "7 days"],
+    "a": 0,
+    "e": "M1D1 = M2D2 -> 12*8 = 16*x -> x = 6.",
+    "cat": "aptitude", "sub": "time-work"
+  },
+  {
+    "q": "<b>Mixture:</b> Milk:Water 4:1. Add 5L water, ratio 4:3. Milk qty? / दूध:पानी 4:1. 5L पानी मिलाने पर 4:3. दूध की मात्रा?",
+    "o": ["10L", "12L", "15L", "20L"],
+    "a": 0,
+    "e": "2 units water = 5L. Milk 4 units = 10L. / 2 यूनिट पानी = 5L. दूध 4 यूनिट = 10L.",
+    "cat": "aptitude", "sub": "mixture"
+  },
+  {
+    "q": "<b>Quadrilaterals:</b> Diagonals of rhombus 16, 12. Side? / समचतुर्भुज के विकर्ण 16, 12. भुजा?",
+    "o": ["10 cm", "8 cm", "12 cm", "14 cm"],
+    "a": 0,
+    "e": "Side = √((16/2)^2 + (12/2)^2) = 10.",
+    "cat": "aptitude", "sub": "quadrilaterals"
+  },
+  {
+    "q": "<b>Cone:</b> Base circum 44, height 12. Volume? / आधार परिधि 44, ऊंचाई 12. आयतन?",
+    "o": ["616 cm³", "1232 cm³", "1848 cm³", "308 cm³"],
+    "a": 0,
+    "e": "r=7. Vol = 1/3 * 22/7 * 49 * 12 = 616.",
+    "cat": "aptitude", "sub": "cone"
+  },
+  {
+    "q": "<b>Profit & Loss:</b> Uses 800g for 1kg. Profit %? / 1kg की जगह 800g उपयोग करता है. लाभ %?",
+    "o": ["20%", "25%", "15%", "10%"],
+    "a": 1,
+    "e": "(200/800)*100 = 25%.",
+    "cat": "aptitude", "sub": "profit-loss"
+  },
+  {
+    "q": "<b>Trigonometry:</b> If sec θ + tan θ = 2, find sec θ - tan θ. / यदि sec θ + tan θ = 2, तो sec θ - tan θ?",
+    "o": ["1/2", "2", "1", "0"],
+    "a": 0,
+    "e": "sec^2 - tan^2 = 1. (2)(sec-tan)=1 -> 1/2.",
+    "cat": "aptitude", "sub": "trigonometry"
+  },
+  {
+    "q": "<b>Polygons:</b> 27 diagonals. Sides? / 27 विकर्ण. भुजाएँ?",
+    "o": ["7", "8", "9", "10"],
+    "a": 2,
+    "e": "n(n-3)/2 = 27 -> n=9.",
+    "cat": "aptitude", "sub": "polygons"
+  },
+  {
+    "q": "<b>Time & Distance:</b> Thief 200m ahead. Thief 10km/h, Police 12km/h. Time to catch? / चोर 200m आगे. चोर 10, पुलिस 12. पकड़ने का समय?",
+    "o": ["5 min", "6 min", "10 min", "12 min"],
+    "a": 1,
+    "e": "Relative speed 2km/h = 5/9 m/s. Time = 200/(5/9) = 360s = 6 min.",
+    "cat": "aptitude", "sub": "time-distance"
+  },
+  {
+    "q": "<b>Fractions:</b> Largest of 2/3, 3/5, 5/8, 7/9? / 2/3, 3/5, 5/8, 7/9 में सबसे बड़ी?",
+    "o": ["2/3", "3/5", "5/8", "7/9"],
+    "a": 3,
+    "e": "7/9 = 0.77 (Largest).",
+    "cat": "aptitude", "sub": "decimals"
+  },
+  {
+    "q": "<b>Averages:</b> Avg of 20 is 35. Add 5 to each. New avg? / 20 का औसत 35. प्रत्येक में 5 जोड़ें. नया औसत?",
+    "o": ["35", "40", "45", "30"],
+    "a": 1,
+    "e": "35 + 5 = 40.",
+    "cat": "aptitude", "sub": "averages"
+  },
+  {
+    "q": "<b>Square Roots:</b> √(√625 + √576)? / √(√625 + √576) का मान?",
+    "o": ["7", "49", "9", "8"],
+    "a": 0,
+    "e": "√(25+24) = √49 = 7.",
+    "cat": "aptitude", "sub": "square-root"
+  },
+  {
+    "q": "<b>Heights & Distances:</b> String 100m at 60°. Height? / 100m डोर 60° पर. ऊंचाई?",
+    "o": ["50m", "50√3m", "100√3m", "75m"],
+    "a": 1,
+    "e": "sin 60 = h/100 -> h = 50√3.",
+    "cat": "aptitude", "sub": "height-distance"
+  },
+  {
+    "q": "<b>Interest:</b> ₹8000 in 2 yrs at 5% CI? / ₹8000 पर 5% की दर से 2 साल का CI?",
+    "o": ["₹8820", "₹8800", "₹9000", "₹8500"],
+    "a": 0,
+    "e": "8000(1.05)^2 = 8820.",
+    "cat": "aptitude", "sub": "interest"
+  }
+]
