@@ -246,6 +246,47 @@
       "o": ["Ammeter", "Nanometer", "Kilometer", "None"],
       "a": 0,
       "e": "<b>Logic:</b> Baki sab length (doori) naapte hain, Ammeter Current naapta hai."
-    }
+    },
+    
+  {
+    "p_id": "",
+    "qe": "<b>Dictionary Order:</b> Arrange the following words in the order they appear in an English dictionary:<br/>1. Radiant<br/>2. Radical<br/>3. Radiate<br/>4. Radio<br/>5. Radish",
+    "qh": "<b>शब्दकोश क्रम:</b> निम्नलिखित शब्दों को अंग्रेजी शब्दकोश के क्रम में व्यवस्थित करें:<br/>1. Radiant<br/>2. Radical<br/>3. Radiate<br/>4. Radio<br/>5. Radish",
+    "o": ["1, 3, 2, 4, 5", "1, 2, 3, 4, 5", "3, 1, 2, 4, 5", "1, 3, 4, 2, 5"],
+    "a": 0,
+    "e": "<b>Shortcut:</b> Pehle 4 अक्षर 'Radi' सबमें समान हैं। 5वां अक्षर देखें: a(1), a(3), c(2), o(4), s(5)। 'Radiant' और 'Radiate' में 6वां अक्षर 'n' पहले आता है 't' से। सही क्रम: <b>1, 3, 2, 4, 5</b>."
+  },
+  {
+    "p_id": "",
+    "qe": "<b>Letter Pairs:</b> How many such pairs of letters are there in the word 'DREAM' which have as many letters between them as in the English alphabet?",
+    "qh": "<b>अक्षर युग्म:</b> शब्द 'DREAM' में अक्षरों के ऐसे कितने जोड़े हैं जिनके बीच उतने ही अक्षर हैं जितने अंग्रेजी वर्णमाला में होते हैं?",
+    "o": ["None", "One", "Two", "Three"],
+    "a": 1,
+    "e": "<b>Approach:</b> अक्षरों को गिनें: D(4), R(18), E(5), A(1), M(13)। केवल <b>A और D</b> (A, B, C, D) के बीच दो अक्षर (B, C) होते हैं और यहाँ भी दो हैं (E, R)। केवल 1 जोड़ा है।"
+  },
+  {
+    "p_id": "",
+    "qe": "<b>Meaningful Word:</b> If it is possible to make only one meaningful English word with the 1st, 2nd, 4th, and 5th letters of the word 'BREAK', which of the following will be the third letter of that word? If no such word can be made, give 'X' as the answer.",
+    "qh": "<b>सार्थक शब्द:</b> यदि शब्द 'BREAK' के पहले, दूसरे, चौथे और पांचवें अक्षरों से केवल एक सार्थक अंग्रेजी शब्द बनाना संभव है, तो उस शब्द का तीसरा अक्षर क्या होगा? यदि ऐसा कोई शब्द नहीं बन सकता, तो उत्तर 'X' दें।",
+    "o": ["A", "K", "E", "X"],
+    "a": 0,
+    "e": "<b>Logic:</b> अक्षर हैं: B, R, A, K। इनसे बनने वाला शब्द है 'BARK'। इसका तीसरा अक्षर <b>'A'</b> है।"
+  },
+  {
+    "p_id": "",
+    "qe": "<b>Alphabet Test:</b> Which letter is 5th to the right of the 12th letter from the left end in the English alphabet?",
+    "qh": "<b>वर्णमाला परीक्षण:</b> अंग्रेजी वर्णमाला में बाएं छोर से 12वें अक्षर के दाएं से 5वां अक्षर कौन सा है?",
+    "o": ["P", "Q", "R", "S"],
+    "a": 1,
+    "e": "<b>Shortcut:</b> Left + Right = Left (12 + 5 = 17)। बाएं से 17वां अक्षर <b>'Q'</b> होता है (EJOTY याद रखें)।"
+  },
+  {
+    "p_id": "",
+    "qe": "<b>Logical Sequence:</b> Arrange the following in a logical and meaningful order:<br/>1. Result<br/>2. Exam<br/>3. Study<br/>4. Admission<br/>5. Notification",
+    "qh": "<b>तार्किक क्रम:</b> निम्नलिखित को एक तार्किक और सार्थक क्रम में व्यवस्थित करें:<br/>1. परिणाम<br/>2. परीक्षा<br/>3. अध्ययन<br/>4. प्रवेश<br/>5. अधिसूचना",
+    "o": ["5, 4, 3, 2, 1", "5, 3, 4, 2, 1", "4, 5, 3, 2, 1", "5, 4, 2, 3, 1"],
+    "a": 0,
+    "e": "<b>Logic:</b> सबसे पहले Notification (5) आता है, फिर Admission (4), फिर Study (3), फिर Exam (2), और अंत में Result (1)। सही क्रम: <b>5, 4, 3, 2, 1</b>."
+  }
   ]
 }
