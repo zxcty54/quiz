@@ -1,168 +1,140 @@
 {
   "puzzles": {
-    "FP1": "7 persons P, Q, R, S, T, U, V live on 7 floors (1-7). T even floor. 2 between T-R. Q immediately above R. V odd floor above T. P immediately above U. S above Q.",
-    
-    "FP2": "6 persons A, B, C, D, E, F live on 6 floors. F-6. B even. A immediately below B. 2 between A-C. E above D.",
-    
-    "MP1": "A, B, C, D, E born in March–July. A in 30-day month. 2 between A-B. C immediately before B. E in 31-day month not March.",
-    
-    "MP2": "P, Q, R, S, T, U attend Jan–Jun. P in 31-day month. 1 between P-Q. R after Q. S-April. T before U.",
-    
-    "SA1": "6 persons P, Q, R, S, T, U in circle. P faces center. R 2nd left of P. Q neighbor of R faces outside. T 2nd right of Q. U 2nd left of R. S same direction as T.",
-    
-    "SA2": "8 persons A-H square table. Corners face center, sides outside. A corner. B 2nd right of A. C neighbor of B faces outside. D opposite C."
+    "FP1": "7 persons P, Q, R, S, T, U, V live on 7 floors (1-7). T even floor. 2 between T-R. Q above R. V odd floor above T. P above U. S above Q.",
+    "FP2": "6 persons A, B, C, D, E, F live on 6 floors. F on 6. B even. A below B. 2 between A-C. E above D.",
+    "MP1": "A, B, C, D, E born in March–July. A in 30-day month. 2 between A-B. C before B. E in 31-day month not March.",
+    "MP2": "P, Q, R, S, T, U attend Jan–Jun. P in 31-day month. 1 between P-Q. R after Q. S in April. T before U.",
+    "SA1": "6 persons P, Q, R, S, T, U sit in circle. P faces center. R 2nd left. Q neighbor (outside). T 2nd right of Q. U 2nd left of R. S same direction as T.",
+    "SA2": "8 persons A-H square table. Corners face center, sides outside. A corner. B 2nd right. C neighbor (outside). D opposite C."
   },
 
   "questions": [
 
+    // ---------- SYLLOGISM ----------
     {
-      "puzzle_id": "FP1",
-      "q": "How many people live between S and U?",
-      "o": ["One", "Two", "Three", "Four"],
-      "a": 2,
-      "e": "Order: V T S Q R P U → between S & U = Q,R,P (3).",
-      "cat": "reasoning",
-      "sub": "puzzle"
+      "type": "normal",
+      "q": "Only a few Rivers are Oceans. All Oceans are Lakes. No Lake is Pond. Conclusions: I. All Rivers being Ponds is possible. II. Some Lakes are definitely not Rivers.",
+      "o": ["Only I", "Only II", "Both", "Neither"],
+      "a": 3,
+      "e": "Both wrong.",
+      "sub": "syllogism"
     },
     {
+      "type": "normal",
+      "q": "All A are B. Only a few B are C. No C is D. Conclusions: I. Some B are not D. II. All A can be C.",
+      "o": ["Only I", "Only II", "Both", "Neither"],
+      "a": 2,
+      "e": "Both follow.",
+      "sub": "syllogism"
+    },
+
+    // ---------- FLOOR ----------
+    {
+      "type": "puzzle",
       "puzzle_id": "FP1",
-      "q": "Who lives on the 4th floor?",
+      "q": "How many people between S and U?",
+      "o": ["One", "Two", "Three", "Four"],
+      "a": 2,
+      "e": "3 persons."
+    },
+    {
+      "type": "puzzle",
+      "puzzle_id": "FP1",
+      "q": "Who lives on 4th floor?",
       "o": ["S", "Q", "R", "T"],
       "a": 1,
-      "e": "Q is on 4th floor.",
-      "cat": "reasoning",
-      "sub": "puzzle"
+      "e": "Q"
     },
 
     {
+      "type": "puzzle",
       "puzzle_id": "FP2",
       "q": "Who lives on floor 3?",
       "o": ["A", "B", "C", "D"],
       "a": 0,
-      "e": "Order: F C B A E D → floor 3 = A.",
-      "cat": "reasoning",
-      "sub": "puzzle"
+      "e": "A"
     },
     {
+      "type": "puzzle",
       "puzzle_id": "FP2",
-      "q": "Who lives on the top floor?",
+      "q": "Top floor person?",
       "o": ["F", "C", "E", "B"],
       "a": 0,
-      "e": "F on 6th.",
-      "cat": "reasoning",
-      "sub": "puzzle"
-    },
-    {
-      "puzzle_id": "FP2",
-      "q": "How many floors between C and A?",
-      "o": ["One", "Two", "Three", "None"],
-      "a": 0,
-      "e": "C=5, A=3 → 1 floor.",
-      "cat": "reasoning",
-      "sub": "puzzle"
+      "e": "F"
     },
 
+    // ---------- MONTH ----------
     {
+      "type": "puzzle",
       "puzzle_id": "MP1",
-      "q": "In which month was D born?",
+      "q": "D born in which month?",
       "o": ["March", "May", "July", "June"],
       "a": 0,
-      "e": "D = March.",
-      "cat": "reasoning",
-      "sub": "puzzle"
-    },
-    {
-      "puzzle_id": "MP1",
-      "q": "How many between D and C?",
-      "o": ["One", "Two", "Three", "None"],
-      "a": 1,
-      "e": "Between D & C = A,E → 2.",
-      "cat": "reasoning",
-      "sub": "puzzle"
+      "e": "March"
     },
 
     {
+      "type": "puzzle",
       "puzzle_id": "MP2",
       "q": "Who attends in June?",
       "o": ["U", "R", "T", "Q"],
       "a": 0,
-      "e": "June = U.",
-      "cat": "reasoning",
-      "sub": "puzzle"
-    },
-    {
-      "puzzle_id": "MP2",
-      "q": "T attends in which month?",
-      "o": ["January", "February", "March", "April"],
-      "a": 1,
-      "e": "T = Feb.",
-      "cat": "reasoning",
-      "sub": "puzzle"
-    },
-    {
-      "puzzle_id": "MP2",
-      "q": "Who attends immediately after P?",
-      "o": ["T", "Q", "S", "R"],
-      "a": 0,
-      "e": "After P (Jan) = T (Feb).",
-      "cat": "reasoning",
-      "sub": "puzzle"
+      "e": "U"
     },
 
+    // ---------- SEATING ----------
     {
+      "type": "puzzle",
       "puzzle_id": "SA1",
-      "q": "Who sits opposite to P?",
+      "q": "Who sits opposite P?",
       "o": ["Q", "S", "T", "U"],
       "a": 2,
-      "e": "T opposite P.",
-      "cat": "reasoning",
-      "sub": "seating"
-    },
-    {
-      "puzzle_id": "SA1",
-      "q": "Position of S w.r.t R?",
-      "o": ["Immediate Left", "Immediate Right", "2nd Left", "Opposite"],
-      "a": 0,
-      "e": "S immediate left of R.",
-      "cat": "reasoning",
-      "sub": "seating"
+      "e": "T"
     },
 
     {
-      "puzzle_id": "SA2",
-      "q": "Position of D w.r.t A?",
-      "o": ["3rd to left", "3rd to right", "2nd to left", "Immediate right"],
-      "a": 0,
-      "e": "D is 3rd left of A.",
-      "cat": "reasoning",
-      "sub": "seating"
-    },
-    {
+      "type": "puzzle",
       "puzzle_id": "SA2",
       "q": "Who sits immediate left of B?",
       "o": ["A", "C", "D", "E"],
       "a": 1,
-      "e": "C left of B.",
-      "cat": "reasoning",
-      "sub": "seating"
-    },
-    {
-      "puzzle_id": "SA2",
-      "q": "Who faces outside?",
-      "o": ["A", "B", "C", "D"],
-      "a": 2,
-      "e": "C faces outside.",
-      "cat": "reasoning",
-      "sub": "seating"
+      "e": "C"
     },
 
+    // ---------- CODING ----------
     {
-      "q": "If DANGER = 11-8-21-14-12-25, SAFE = ?",
+      "type": "normal",
+      "q": "DANGER → 11-8-21-14-12-25, SAFE → ?",
       "o": ["26-8-13-12", "26-7-13-11", "25-8-12-11", "26-8-12-11"],
       "a": 0,
-      "e": "+7 pattern.",
-      "cat": "reasoning",
-      "sub": "coding"
+      "e": "+7 pattern"
+    },
+
+    // ---------- ANALOGY ----------
+    {
+      "type": "normal",
+      "q": "12 : 1728 :: 15 : ?",
+      "o": ["3375", "2744", "3125", "4096"],
+      "a": 0,
+      "e": "Cube"
+    },
+
+    // ---------- CLASSIFICATION ----------
+    {
+      "type": "normal",
+      "q": "Find odd one",
+      "o": ["Patna", "Lucknow", "Bhopal", "Gaya"],
+      "a": 3,
+      "e": "Not capital"
+    },
+
+    // ---------- BLOOD ----------
+    {
+      "type": "normal",
+      "q": "A father of B, C mother of B → relation?",
+      "o": ["Wife", "Sister", "Husband", "Daughter"],
+      "a": 0,
+      "e": "Wife"
     }
 
   ]
