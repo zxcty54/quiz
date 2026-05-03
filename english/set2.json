@@ -1,178 +1,247 @@
 [
-  
   {
-    "q": "<b>Sentence Improvement:</b> He is *senior than* me in the office.",
-    "o": ["senior to", "senior from", "more senior than", "No improvement"],
+    "q": "<b>Cloze Test (1/5):</b> Select the most appropriate option for <b>Blank No. 1</b>.<br/><br/><i>'The recent (1)______ in global oil prices has sent shockwaves through the economy. Governments are struggling to (2)______ the impact on common citizens. While some experts suggest (3)______ subsidies, others argue for a long-term shift to renewable energy. This transition, however, is (4)______ with technical and financial hurdles. Only a (5)______ strategy can ensure sustainable growth.'</i>",
+    "o": ["surge", "plunge", "stability", "fluctuation"],
     "a": 0,
-    "e": "Senior/Junior/Superior ke sath 'to' lagta hai.",
-    "cat": "english", "sub": "improvement"
+    "e": "Blank 1: 'Surge' (अचानक वृद्धि) यहाँ सबसे सटीक है क्योंकि 'shockwaves' का उल्लेख है, जो कीमतों के अचानक बढ़ने से पैदा होती हैं।",
+    "cat": "english", "sub": "cloze-test"
   },
   {
-    "q": "<b>Sentence Improvement:</b> If I *was* a king, I would help the poor.",
-    "o": ["If I am", "If I were", "If I had been", "No improvement"],
-    "a": 1,
-    "e": "Imagination ke liye 'were' ka prayog hota hai.",
-    "cat": "english", "sub": "improvement"
-  },
-  {
-    "q": "<b>Sentence Improvement:</b> She *denied to help* me in the project.",
-    "o": ["denied helping", "refused to help", "refused helping", "No improvement"],
-    "a": 1,
-    "e": "Request mana karne ke liye 'refuse' aur facts ke liye 'deny' lagta hai.",
-    "cat": "english", "sub": "improvement"
-  },
-  {
-    "q": "<b>Sentence Improvement:</b> Bread and butter *are* my favorite breakfast.",
-    "o": ["is", "were", "have been", "No improvement"],
+    "q": "<b>Cloze Test (2/5):</b> Select the most appropriate option for <b>Blank No. 2</b>.<br/><br/><i>(Text same as above)</i>",
+    "o": ["mitigate", "aggravate", "intensify", "ignore"],
     "a": 0,
-    "e": "Bread-butter ek single unit hai, isliye singular 'is' lagega.",
-    "cat": "english", "sub": "improvement"
+    "e": "Blank 2: 'Mitigate' (कम करना या शांत करना) का प्रयोग प्रभाव (impact) को कम करने के संदर्भ में होता है।",
+    "cat": "english", "sub": "cloze-test"
   },
   {
-    "q": "<b>Sentence Improvement:</b> The manager requested the staff to *keep off* the unnecessary expenses.",
-    "o": ["keep down", "keep away", "keep up", "No improvement"],
+    "q": "<b>Cloze Test (3/5):</b> Select the most appropriate option for <b>Blank No. 3</b>.<br/><br/><i>(Text same as above)</i>",
+    "o": ["bolstering", "curtailing", "promoting", "igniting"],
+    "a": 1,
+    "e": "Blank 3: 'Curtailing' (कटौती करना) सही है क्योंकि सरकारें सब्सिडी कम करके वित्तीय बोझ कम करने की कोशिश करती हैं।",
+    "cat": "english", "sub": "cloze-test"
+  },
+  {
+    "q": "<b>Cloze Test (4/5):</b> Select the most appropriate option for <b>Blank No. 4</b>.<br/><br/><i>(Text same as above)</i>",
+    "o": ["fraught", "devoid", "aligned", "coupled"],
     "a": 0,
-    "e": "Keep down matlab control/kharch kam karna.",
-    "cat": "english", "sub": "improvement"
+    "e": "Blank 4: 'Fraught with' एक phrasal verb है जिसका अर्थ है 'मुसीबतों या बाधाओं से भरा होना' (filled with something unpleasant)।",
+    "cat": "english", "sub": "cloze-test"
   },
   {
-    "q": "<b>Synonym of 'ABUNDANT':</b>",
-    "o": ["Meager", "Plentiful", "Scanty", "Deficient"],
-    "a": 1,
-    "e": "Abundant matlab prachur/bahut zyada.",
-    "cat": "english", "sub": "vocab"
-  },
-  {
-    "q": "<b>Antonym of 'FRUGAL':</b>",
-    "o": ["Economical", "Thrifty", "Extravagant", "Miserly"],
-    "a": 2,
-    "e": "Frugal matlab kanjoos, Extravagant matlab fuzool-kharch.",
-    "cat": "english", "sub": "vocab"
-  },
-  {
-    "q": "<b>One-word Substitution:</b> A person who believes that pleasure is the most important thing.",
-    "o": ["Hedonist", "Stoic", "Epicure", "Philistine"],
+    "q": "<b>Cloze Test (5/5):</b> Select the most appropriate option for <b>Blank No. 5</b>.<br/><br/><i>(Text same as above)</i>",
+    "o": ["robust", "fragile", "shabby", "nominal"],
     "a": 0,
-    "e": "Hedonist wo hota hai jo sirf sharirik sukh ko mahatva deta hai.",
-    "cat": "english", "sub": "vocab"
+    "e": "Blank 5: 'Robust' (मजबूत और प्रभावी) रणनीति ही विकास सुनिश्चित कर सकती है।",
+    "cat": "english", "sub": "cloze-test"
   },
   {
-    "q": "<b>One-word Substitution:</b> One who knows many languages.",
-    "o": ["Polyglot", "Linguist", "Bilingual", "Monoglot"],
+    "q": "<b>Error Spotting:</b> Not only did he (A) / lose his wallet (B) / but also his (C) / precious documents (D).",
+    "o": ["A", "B", "C", "D"],
     "a": 0,
-    "e": "Bahut bhashayein janne wale ko Polyglot kehte hain.",
-    "cat": "english", "sub": "vocab"
+    "e": "Rule of Parallelism: 'Not only' और 'But also' के बाद समान grammatical structure होना चाहिए। सही वाक्य: 'He lost not only his wallet but also his documents.'",
+    "cat": "english", "sub": "error-spotting"
   },
   {
-    "q": "<b>Idiom:</b> 'At the eleventh hour' means:",
-    "o": ["At the beginning", "At 11 PM", "At the very last moment", "Early morning"],
-    "a": 2,
-    "e": "Iska matlab hota hai ekdam antim samay par.",
-    "cat": "english", "sub": "vocab"
-  },
-  {
-    "q": "<b>Idiom:</b> 'A piece of cake' means:",
-    "o": ["Very tasty", "Very easy", "Small portion", "Difficult task"],
-    "a": 1,
-    "e": "Iska matlab hota hai bahut hi asaan kaam.",
-    "cat": "english", "sub": "vocab"
-  },
-  {
-    "q": "<b>Active/Passive:</b> The police arrested the thief.",
-    "o": ["The thief is arrested", "The thief was arrested by police", "The thief has been arrested", "None"],
-    "a": 1,
-    "e": "Past Simple hamesha 'was + V3' mein badalta hai.",
-    "cat": "english", "sub": "voice"
-  },
-  {
-    "q": "<b>Active/Passive:</b> Who can count the stars?",
-    "o": ["By whom can the stars be counted?", "Can stars be counted by whom?", "Stars can be counted", "None"],
-    "a": 0,
-    "e": "'Who' badal kar 'By whom' aur modal + be + V3 lagta hai.",
-    "cat": "english", "sub": "voice"
-  },
-  {
-    "q": "<b>Active/Passive:</b> Close the door.",
-    "o": ["Door is closed", "Let the door be closed", "Close the door by you", "None"],
-    "a": 1,
-    "e": "Imperative sentences 'Let + Object + be + V3' se bante hain.",
-    "cat": "english", "sub": "voice"
-  },
-  {
-    "q": "<b>Direct/Indirect:</b> He said, 'I am busy'.",
-    "o": ["He said he is busy", "He says he was busy", "He said that he was busy", "None"],
-    "a": 2,
-    "e": "Present 'am' badal kar Past 'was' ho jata hai.",
-    "cat": "english", "sub": "narration"
-  },
-  {
-    "q": "<b>Direct/Indirect:</b> She said, 'Please help me'.",
-    "o": ["She told me to help her", "She requested me to help her", "She asked help", "None"],
-    "a": 1,
-    "e": "'Please' badal kar 'Requested' ho jata hai.",
-    "cat": "english", "sub": "narration"
-  },
-  {
-    "q": "<b>Direct/Indirect:</b> The teacher said, 'The Earth is round'.",
-    "o": ["Earth was round", "Earth is round", "Earth will be round", "None"],
-    "a": 1,
-    "e": "Universal Truth ka tense kabhi nahi badalta.",
-    "cat": "english", "sub": "narration"
-  },
-  {
-    "q": "<b>Sentence Rearrangement:</b> P: football Q: they R: playing S: are",
-    "o": ["QRSP", "QSRP", "PQRS", "RQPS"],
-    "a": 1,
-    "e": "Correct: They are playing football (QSRP).",
-    "cat": "english", "sub": "pqr"
-  },
-  {
-    "q": "<b>Sentence Rearrangement:</b> P: Bihar Q: is R: state S: a big",
-    "o": ["PQRS", "PQSR", "RQPS", "SPQR"],
-    "a": 1,
-    "e": "Correct: Bihar is a big state (PQSR).",
-    "cat": "english", "sub": "pqr"
-  },
-  {
-    "q": "<b>Synonym of 'CANDID':</b>",
-    "o": ["Frank", "Secretive", "Dishonest", "Vague"],
-    "a": 0,
-    "e": "Candid matlab jo saaf-saaf bole (Frank).",
-    "cat": "english", "sub": "vocab"
-  },
-  {
-    "q": "<b>Antonym of 'HAUGHTY':</b>",
-    "o": ["Arrogant", "Proud", "Humble", "Snobbish"],
-    "a": 2,
-    "e": "Haughty matlab ghamandi, Humble matlab vinamra.",
-    "cat": "english", "sub": "vocab"
-  },
-  {
-    "q": "<b>Select correctly spelt word:</b>",
-    "o": ["Occurence", "Occurrence", "Occurance", "Ocurrence"],
-    "a": 1,
-    "e": "Sahi spelling 'Occurrence' hai.",
-    "cat": "english", "sub": "vocab"
-  },
-  {
-    "q": "<b>Select correctly spelt word:</b>",
-    "o": ["Meticulous", "Meticulus", "Meticullous", "Metikulous"],
-    "a": 0,
-    "e": "Sahi spelling 'Meticulous' hai.",
-    "cat": "english", "sub": "vocab"
-  },
-  {
-    "q": "<b>Cloze (Misc):</b> I am looking forward to ________ you.",
-    "o": ["meet", "meeting", "met", "meets"],
-    "a": 1,
-    "e": "'Looking forward to' ke baad Gerund (V1+ing) lagta hai.",
-    "cat": "english", "sub": "grammar"
-  },
-  {
-    "q": "<b>Cloze (Misc):</b> The sun __________ in the east.",
-    "o": ["rise", "rose", "rising", "rises"],
+    "q": "<b>Error Spotting:</b> No sooner had (A) / the bell rung (B) / than the students (C) / have left the class (D).",
+    "o": ["A", "B", "C", "D"],
     "a": 3,
-    "e": "Universal truth: Present Simple (V1+s).",
-    "cat": "english", "sub": "grammar"
+    "e": "Tense Consistency: 'No sooner' वाले हिस्से में 'had' (Past Perfect) है, तो 'than' वाले हिस्से में Simple Past (V2) 'left' आना चाहिए, 'have left' नहीं।",
+    "cat": "english", "sub": "error-spotting"
+  },
+  {
+    "q": "<b>Error Spotting:</b> The reason why (A) / he was rejected (B) / was because (C) / he was too young (D).",
+    "o": ["A", "B", "C", "D"],
+    "a": 2,
+    "e": "Redundancy: 'The reason why' के साथ 'that' का प्रयोग होता है, 'because' का नहीं, क्योंकि दोनों का अर्थ समान है।",
+    "cat": "english", "sub": "error-spotting"
+  },
+  {
+    "q": "<b>Error Spotting:</b> Seldom or ever (A) / have I seen (B) / such a (C) / breathtaking scenery (D).",
+    "o": ["A", "B", "C", "D"],
+    "a": 0,
+    "e": "Idiomatic Error: सही वाक्यांश 'Seldom or never' या 'Seldom if ever' होता है।",
+    "cat": "english", "sub": "error-spotting"
+  },
+  {
+    "q": "<b>Error Spotting:</b> If I was you (A) / I would have (B) / told the chairman (C) / to keep his mouth shut (D).",
+    "o": ["A", "B", "C", "D"],
+    "a": 0,
+    "e": "Subjunctive Mood: काल्पनिक स्थिति में 'I' के साथ हमेशा 'were' लगता है। 'If I were you' सही होगा।",
+    "cat": "english", "sub": "error-spotting"
+  },
+  {
+    "q": "<b>Sentence Improvement:</b> The investigation revealed that *both of the* brothers had a hand in the crime.",
+    "o": ["every of the", "each of the", "all of the", "No improvement"],
+    "a": 3,
+    "e": "जब केवल दो लोगों की बात हो, तो 'Both of the' का प्रयोग बिल्कुल सही है।",
+    "cat": "english", "sub": "improvement"
+  },
+  {
+    "q": "<b>Sentence Improvement:</b> The custom *has been taken* root in the society over centuries.",
+    "o": ["has taken", "had been taken", "is taken", "No improvement"],
+    "a": 0,
+    "e": "'Take root' (जड़ें जमाना) एक active phrase है। यहाँ passive voice 'been taken' की ज़रूरत नहीं है।",
+    "cat": "english", "sub": "improvement"
+  },
+  {
+    "q": "<b>Sentence Improvement:</b> She is the most *intelligent and wise* girl in the class.",
+    "o": ["intelligent and wiser", "more intelligent and wiser", "most intelligent and wisest", "No improvement"],
+    "a": 2,
+    "e": "Rule: जब एक ही व्यक्ति के लिए दो adjectives आएं, तो दोनों एक ही degree (Superlative) में होने चाहिए।",
+    "cat": "english", "sub": "improvement"
+  },
+  {
+    "q": "<b>Sentence Improvement:</b> Hardly had I reached the station *than* the train started.",
+    "o": ["when", "then", "while", "No improvement"],
+    "a": 0,
+    "e": "Rule: 'Hardly/Scarcely' का सही correlative pair 'when' होता है।",
+    "cat": "english", "sub": "improvement"
+  },
+  {
+    "q": "<b>Synonym of 'MELLIFLUOUS':</b>",
+    "o": ["Harsh", "Dulcet", "Loud", "Strong"],
+    "a": 1,
+    "e": "'Mellifluous' का अर्थ होता है मधुर या सुनने में प्यारा। 'Dulcet' इसका सटीक पर्यायवाची है।",
+    "cat": "english", "sub": "vocab"
+  },
+  {
+    "q": "<b>Synonym of 'ESOTERIC':</b>",
+    "o": ["Common", "Abstruse", "Obvious", "Familiar"],
+    "a": 1,
+    "e": "'Esoteric' का अर्थ है जो केवल कुछ ही लोगों को समझ आए (गूढ़)। 'Abstruse' इसका अर्थ भी वही है।",
+    "cat": "english", "sub": "vocab"
+  },
+  {
+    "q": "<b>Antonym of 'ALACRITY':</b>",
+    "o": ["Eagerness", "Apathy", "Speed", "Promptness"],
+    "a": 1,
+    "e": "'Alacrity' का अर्थ है उत्साह/तत्परता। इसका उल्टा 'Apathy' (उदासीनता/बेरुखी) है।",
+    "cat": "english", "sub": "vocab"
+  },
+  {
+    "q": "<b>Antonym of 'CANDID':</b>",
+    "o": ["Honest", "Frank", "Deceptive", "Forthright"],
+    "a": 2,
+    "e": "'Candid' का अर्थ है निष्कपट/साफ़-साफ़ बोलने वाला। इसका उल्टा 'Deceptive' (छलपूर्ण/धोखेबाज़) है।",
+    "cat": "english", "sub": "vocab"
+  },
+  {
+    "q": "<b>One-word Substitution:</b> A person who is long experienced in any occupation.",
+    "o": ["Amateur", "Veteran", "Novice", "Virtuoso"],
+    "a": 1,
+    "e": "'Veteran' उसे कहते हैं जिसे अपने कार्यक्षेत्र का लंबा अनुभव हो। 'Novice' का अर्थ नया सीखने वाला होता है।",
+    "cat": "english", "sub": "vocab"
+  },
+  {
+    "q": "<b>One-word Substitution:</b> The study of the origin and history of words.",
+    "o": ["Etymology", "Entomology", "Ecology", "Ethnology"],
+    "a": 0,
+    "e": "'Etymology' शब्दों के इतिहास का अध्ययन है। (Entomology कीड़ों का अध्ययन है)।",
+    "cat": "english", "sub": "vocab"
+  },
+  {
+    "q": "<b>Idiom:</b> 'A wild goose chase' means:",
+    "o": ["A fruitful search", "A foolish and useless search", "A hunting expedition", "A fast race"],
+    "a": 1,
+    "e": "इसका अर्थ है ऐसी खोज जिसका कोई फल न निकले (बेकार की कोशिश)।",
+    "cat": "english", "sub": "vocab"
+  },
+  {
+    "q": "<b>Idiom:</b> 'To take the bull by the horns' means:",
+    "o": ["To escape danger", "To face a difficulty in a direct and confident way", "To act like a coward", "To hunt animals"],
+    "a": 1,
+    "e": "मुसीबत का डटकर और सीधे सामना करने को यह मुहावरा दर्शाता है।",
+    "cat": "english", "sub": "vocab"
+  },
+  {
+    "q": "<b>Active/Passive:</b> Who tore the curtains?",
+    "o": ["By whom were the curtains torn?", "By whom are the curtains torn?", "Who was torn the curtains?", "None"],
+    "a": 0,
+    "e": "'Who' को 'By whom' में बदलें। 'Tore' (V2) है, इसलिए 'were + V3' (torn) का प्रयोग होगा।",
+    "cat": "english", "sub": "voice"
+  },
+  {
+    "q": "<b>Active/Passive:</b> I remember my sister taking me to the museum.",
+    "o": ["I remember being taken to the museum by my sister", "I remember taking by my sister", "I remember I was taken to museum", "None"],
+    "a": 0,
+    "e": "Gerund (taking) का passive 'being + V3' (being taken) होता है।",
+    "cat": "english", "sub": "voice"
+  },
+  {
+    "q": "<b>Active/Passive:</b> The committee is looking into the matter.",
+    "o": ["The matter is looked into by committee", "The matter is being looked into by the committee", "The matter has been looked into", "None"],
+    "a": 1,
+    "e": "Phrasal verbs (look into) में Preposition अपनी जगह बना रहता है। 'is being + V3' सही है।",
+    "cat": "english", "sub": "voice"
+  },
+  {
+    "q": "<b>Direct/Indirect:</b> He said, 'Let us wait for the result.'",
+    "o": ["He said that we should wait", "He suggested that they should wait for the result", "He proposed we wait", "None"],
+    "a": 1,
+    "e": "'Let us' वाले वाक्यों में Reporting verb 'Suggested/Proposed' में बदलती है और 'should' का प्रयोग होता है।",
+    "cat": "english", "sub": "narration"
+  },
+  {
+    "q": "<b>Direct/Indirect:</b> 'Call the first witness,' said the judge.",
+    "o": ["The judge commanded them to call the first witness", "The judge said call witness", "The judge told to call witness", "None"],
+    "a": 0,
+    "e": "Judge के आदेश के लिए 'Commanded' या 'Ordered' सबसे उपयुक्त शब्द है।",
+    "cat": "english", "sub": "narration"
+  },
+  {
+    "q": "<b>Direct/Indirect:</b> He asked me, 'Where do you live?'",
+    "o": ["He asked me where I lived", "He asked me where did I live", "He asked where I am living", "None"],
+    "a": 0,
+    "e": "Interrogative sentence को Assertive में बदलते समय 'do live' बदलकर Simple Past 'lived' हो जाएगा।",
+    "cat": "english", "sub": "narration"
+  },
+  {
+    "q": "<b>Sentence Rearrangement:</b> P: of its own Q: each country R: and culture S: has a history",
+    "o": ["QSPR", "QRSP", "SQPR", "PQRS"],
+    "a": 0,
+    "e": "सही क्रम: 'Each country has a history and culture of its own' (QSPR).",
+    "cat": "english", "sub": "pqr"
+  },
+  {
+    "q": "<b>Sentence Rearrangement:</b> P: the management Q: the workers R: to increase S: requested",
+    "o": ["QSRP", "PQSR", "RQSP", "SPQR"],
+    "a": 0,
+    "e": "सही क्रम: 'The workers requested the management to increase' (QSRP).",
+    "cat": "english", "sub": "pqr"
+  },
+  {
+    "q": "<b>Synonym of 'REITERATE':</b>",
+    "o": ["Repeat", "Deny", "Forget", "Ignore"],
+    "a": 0,
+    "e": "'Reiterate' का अर्थ है किसी बात को बार-बार दोहराना (Repeat)।",
+    "cat": "english", "sub": "vocab"
+  },
+  {
+    "q": "<b>Antonym of 'GREGARIOUS':</b>",
+    "o": ["Sociable", "Introvert", "Friendly", "Extrovert"],
+    "a": 1,
+    "e": "'Gregarious' का अर्थ है मिलनसार। इसका उल्टा 'Introvert' या 'Reclusive' (अंतर्मुखी) होगा।",
+    "cat": "english", "sub": "vocab"
+  },
+  {
+    "q": "<b>Select correctly spelt word:</b>",
+    "o": ["Privelege", "Privilege", "Privilage", "Previlege"],
+    "a": 1,
+    "e": "सही स्पेलिंग 'Privilege' (विशेषाधिकार) है।",
+    "cat": "english", "sub": "vocab"
+  },
+  {
+    "q": "<b>Select correctly spelt word:</b>",
+    "o": ["Maintenance", "Maintainance", "Maintenence", "Maintennance"],
+    "a": 0,
+    "e": "सही स्पेलिंग 'Maintenance' है। इसमें अक्सर लोग 'tain' के बाद 'ance' लगाकर गलती करते हैं।",
+    "cat": "english", "sub": "vocab"
+  },
+  {
+    "q": "<b>Error Spotting:</b> Scarcely had the function (A) / started (B) / than it (C) / began to rain (D).",
+    "o": ["A", "B", "C", "D"],
+    "a": 2,
+    "e": "Rule: 'Scarcely/Hardly' का जोड़ा 'when' या 'before' होता है, 'than' नहीं।",
+    "cat": "english", "sub": "error-spotting"
   }
 ]
