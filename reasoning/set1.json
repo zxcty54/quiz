@@ -42,14 +42,14 @@
     "cat": "reasoning", "sub": "puzzle"
   },
   {
-    "q": "7. <b>Floor Puzzle (2/5):</b> (Same data as Q6) Who lives on the 4th floor? / चौथी मंजिल पर कौन रहता है?",
+    "q": "7. <b>Floor Puzzle (2/5):</b> 7 persons P, Q, R, S, T, U, V live on 7 different floors (1-7). T lives on an even floor. Only two persons live between T and R. Q lives immediately above R. V lives on an odd floor above T. P lives immediately above U. S lives above Q. How many people live between S and U? / 7 व्यक्ति P, Q, R, S, T, U, V 7 अलग मंजिलों (1-7) पर रहते हैं। T एक सम मंजिल पर रहता है। T और R के बीच केवल दो व्यक्ति रहते हैं। Q, R के ठीक ऊपर रहता है। V, T के ऊपर एक विषम मंजिल पर रहता है। P, U के ठीक ऊपर रहता है। S, Q के ऊपर रहता है। S और U के बीच कितने लोग रहते हैं? Who lives on the 4th floor? / चौथी मंजिल पर कौन रहता है?",
     "o": ["S", "Q", "R", "T"],
     "a": 1,
     "e": "Q lives on the 4th floor. / चौथी मंजिल पर Q रहता है।",
     "cat": "reasoning", "sub": "puzzle"
   },
   {
-    "q": "8. <b>Floor Puzzle (3/5):</b> (Same data as Q6) If all persons are arranged alphabetically from top to bottom, how many remain unchanged? / यदि सभी व्यक्तियों को ऊपर से नीचे वर्णानुक्रम में व्यवस्थित किया जाए, तो कितने अपरिवर्तित रहेंगे?",
+    "q": "8. <b>Floor Puzzle (3/5):</b> 7 persons P, Q, R, S, T, U, V live on 7 different floors (1-7). T lives on an even floor. Only two persons live between T and R. Q lives immediately above R. V lives on an odd floor above T. P lives immediately above U. S lives above Q. How many people live between S and U? / 7 व्यक्ति P, Q, R, S, T, U, V 7 अलग मंजिलों (1-7) पर रहते हैं। T एक सम मंजिल पर रहता है। T और R के बीच केवल दो व्यक्ति रहते हैं। Q, R के ठीक ऊपर रहता है। V, T के ऊपर एक विषम मंजिल पर रहता है। P, U के ठीक ऊपर रहता है। S, Q के ऊपर रहता है। S और U के बीच कितने लोग रहते हैं? If all persons are arranged alphabetically from top to bottom, how many remain unchanged? / यदि सभी व्यक्तियों को ऊपर से नीचे वर्णानुक्रम में व्यवस्थित किया जाए, तो कितने अपरिवर्तित रहेंगे?",
     "o": ["None", "One", "Two", "Three"],
     "a": 0,
     "e": "None will match the original positions. / कोई भी मूल स्थानों से मेल नहीं खाएगा।",
@@ -63,7 +63,7 @@
     "cat": "reasoning", "sub": "puzzle"
   },
   {
-    "q": "10. <b>Floor Puzzle (5/5):</b> (Same data as Q9) How many people live between F and D? / F और D के बीच कितने लोग रहते हैं?",
+    "q": "10. <b>Floor Puzzle (5/5):</b>  6 persons A, B, C, D, E, F live on 6 floors. F lives on floor 6. B lives on an even floor. A is immediately below B. Only two floors between A and C. E is above D. Who lives on floor 3? / 6 व्यक्ति 6 मंजिलों पर रहते हैं। F मंजिल 6 पर रहता है। B एक सम मंजिल पर रहता है। A, B के ठीक नीचे है। A और C के बीच केवल दो मंजिलें हैं। E, D के ऊपर है। मंजिल 3 पर कौन रहता है? How many people live between F and D? / F और D के बीच कितने लोग रहते हैं?",
     "o": ["One", "Two", "Three", "Four"],
     "a": 3,
     "e": "F is on 6, D is on 2. Between them are 5, 4, 3 (Three). Wait, 6 and 2 have 5,4,3 (Three). (Double check order).",
@@ -77,7 +77,7 @@
     "cat": "reasoning", "sub": "seating"
   },
   {
-    "q": "12. <b>Seating Arrangement (2/5):</b> (Same data as Q11) Who sits opposite to G? / G के विपरीत कौन बैठा है?",
+    "q": "12. <b>Seating Arrangement (2/5):</b> 8 persons A, B, C, D, E, F, G, H are sitting around a circular table facing the center. A is 3rd to the right of G. H is not a neighbor of G. C is 4th to the right of H. B is 2nd to the left of E, who is neighbor of C. F is not a neighbor of G. Who is 2nd to the left of A? / 8 व्यक्ति एक गोलाकार मेज के चारों ओर केंद्र की ओर मुख करके बैठे हैं। A, G के दाएं से तीसरे स्थान पर है। H, G का पड़ोसी नहीं है। C, H के दाएं से चौथे स्थान पर है। B, E के बाएं से दूसरे स्थान पर है, जो C का पड़ोसी है। F, G का पड़ोसी नहीं है। A के बाएं से दूसरे स्थान पर कौन है? Who sits opposite to G? / G के विपरीत कौन बैठा है?",
     "o": ["H", "A", "C", "B"],
     "a": 0,
     "e": "H is opposite G in the 8-person circle. / 8-व्यक्तियों के घेरे में H, G के विपरीत है।",
