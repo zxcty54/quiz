@@ -1,0 +1,247 @@
+[
+  {
+    "q": "<b>Floor Puzzle (1/5)</b><br/>---<br/><b>Puzzle Paragraph / पहेली:</b><br/>7 persons P, Q, R, S, T, U, V live on 7 different floors (1-7). T lives on an even floor. Only two persons live between T and R. Q lives immediately above R. V lives on an odd floor above T. P lives immediately above U. S lives above Q.<br/>7 व्यक्ति P, Q, R, S, T, U, V 7 अलग मंजिलों (1-7) पर रहते हैं। T एक सम मंजिल पर रहता है। T और R के बीच केवल दो व्यक्ति रहते हैं। Q, R के ठीक ऊपर रहता है। V, T के ऊपर एक विषम मंजिल पर रहता है। P, U के ठीक ऊपर रहता है। S, Q के ऊपर रहता है।<br/><br/><b>Question / प्रश्न:</b><br/>How many people live between S and U? / S और U के बीच कितने लोग रहते हैं?<br/>---",
+    "o": ["One / एक", "Two / दो", "Three / तीन", "Four / चार"],
+    "a": 2,
+    "e": "Final Order (7-1): V, T, S, Q, R, P, U. Between S(5) and U(1) are Q, R, P (3 people).",
+    "cat": "reasoning", "sub": "puzzle"
+  },
+  {
+    "q": "<b>Floor Puzzle (2/5)</b><br/>---<br/><b>Puzzle Paragraph / पहेली:</b><br/>7 persons P, Q, R, S, T, U, V live on 7 different floors (1-7). T lives on an even floor. Only two persons live between T and R. Q lives immediately above R. V lives on an odd floor above T. P lives immediately above U. S lives above Q.<br/>7 व्यक्ति P, Q, R, S, T, U, V 7 अलग मंजिलों (1-7) पर रहते हैं। T एक सम मंजिल पर रहता है। T और R के बीच केवल दो व्यक्ति रहते हैं। Q, R के ठीक ऊपर रहता है। V, T के ऊपर एक विषम मंजिल पर रहता है। P, U के ठीक ऊपर रहता है। S, Q के ऊपर रहता है।<br/><br/><b>Question / प्रश्न:</b><br/>Who lives on the 4th floor? / चौथी मंजिल पर कौन रहता है?<br/>---",
+    "o": ["S", "Q", "R", "T"],
+    "a": 1,
+    "e": "Q lives on the 4th floor as per the arrangement: V-7, T-6, S-5, Q-4, R-3, P-2, U-1.",
+    "cat": "reasoning", "sub": "puzzle"
+  },
+  {
+    "q": "<b>Floor Puzzle (3/5)</b><br/>---<br/><b>Puzzle Paragraph / पहेली:</b><br/>7 persons P, Q, R, S, T, U, V live on 7 different floors (1-7). T lives on an even floor. Only two persons live between T and R. Q lives immediately above R. V lives on an odd floor above T. P lives immediately above U. S lives above Q.<br/>7 व्यक्ति P, Q, R, S, T, U, V 7 अलग मंजिलों (1-7) पर रहते हैं। T एक सम मंजिल पर रहता है। T और R के बीच केवल दो व्यक्ति रहते हैं। Q, R के ठीक ऊपर रहता है। V, T के ऊपर एक विषम मंजिल पर रहता है। P, U के ठीक ऊपर रहता है। S, Q के ऊपर रहता है।<br/><br/><b>Question / प्रश्न:</b><br/>If all persons are arranged alphabetically from top to bottom, how many remain unchanged? / यदि सभी व्यक्तियों को ऊपर से नीचे वर्णानुक्रम में व्यवस्थित किया जाए, तो कितने अपरिवर्तित रहेंगे?<br/>---",
+    "o": ["None / कोई नहीं", "One / एक", "Two / दो", "Three / तीन"],
+    "a": 0,
+    "e": "Original Order: V, T, S, Q, R, P, U. Alphabetical: V, U, T, S, R, Q, P. Only V matches.",
+    "cat": "reasoning", "sub": "puzzle"
+  },
+  {
+    "q": "<b>Syllogism (1/5)</b><br/>---<br/><b>Statements / कथन:</b><br/>* Only a few Books are Pens. / केवल कुछ किताबें पेन हैं।<br/>* All Pens are Pencils. / सभी पेन पेंसिल हैं।<br/>* No Pencil is Eraser. / कोई पेंसिल इरेज़र नहीं है।<br/><br/><b>Question / प्रश्न:</b><br/>Which conclusions follow? / कौन सा निष्कर्ष अनुसरण करता है?<br/>I. All Books being Pencils is a possibility.<br/>II. Some Books are definitely not Erasers.<br/>---",
+    "o": ["Only I follows", "Only II follows", "Both I and II follow", "Neither follows"],
+    "a": 2,
+    "e": "I is a possibility. II is true because Books that are Pens are inside Pencils, and no Pencil is Eraser.",
+    "cat": "reasoning", "sub": "syllogism"
+  },
+  {
+    "q": "<b>Syllogism (2/5)</b><br/>---<br/><b>Statements / कथन:</b><br/>* All Red are Blue.<br/>* Only a few Blue are Green.<br/>* No Green is Pink.<br/><br/><b>Question / प्रश्न:</b><br/>Which conclusions follow?<br/>I. Some Blue are not Pink.<br/>II. All Green can be Red.<br/>---",
+    "o": ["Only I follows", "Only II follows", "Both I and II follow", "Neither follows"],
+    "a": 2,
+    "e": "Blue that is Green cannot be Pink. Green has no direct restriction with Red.",
+    "cat": "reasoning", "sub": "syllogism"
+  },
+  {
+    "q": "<b>Analogy</b><br/>---<br/><b>Question / प्रश्न:</b><br/>Medicine : Patient :: Education : ? / दवा : रोगी :: शिक्षा : ?",
+    "o": ["Teacher / शिक्षक", "School / स्कूल", "Student / छात्र", "Tuition / ट्यूशन"],
+    "a": 2,
+    "e": "Medicine is for patients; Education is for students.",
+    "cat": "reasoning", "sub": "analogy"
+  },
+  {
+    "q": "<b>Direction Sense</b><br/>---<br/><b>Question / प्रश्न:</b><br/>Neha starts from point A and walks 10m North, then turns 90° right and walks 10m. What is her shortest distance from the start? / नेहा बिंदु A से 10 मीटर उत्तर चलती है, फिर 90° दाएं मुड़ती है और 10 मीटर चलती है। आरंभ से उसकी न्यूनतम दूरी क्या है?",
+    "o": ["10√2 m", "20 m", "10 m", "15 m"],
+    "a": 0,
+    "e": "Pythagoras Theorem: √(10² + 10²) = 10√2.",
+    "cat": "reasoning", "sub": "direction"
+  },
+  {
+    "q": "<b>Blood Relation</b><br/>---<br/><b>Question / प्रश्न:</b><br/>Pointing to a man, a lady said, 'His mother is the only daughter of my mother.' How is the lady related to the man? / एक आदमी की ओर इशारा करते हुए एक महिला ने कहा, 'उसकी माँ मेरी माँ की इकलौती बेटी है।' महिला उस आदमी से कैसे संबंधित है?",
+    "o": ["Sister", "Mother", "Aunt", "Grandmother"],
+    "a": 1,
+    "e": "The woman is talking about herself as the mother of that man.",
+    "cat": "reasoning", "sub": "blood"
+  },
+  {
+    "q": "<b>Coding-Decoding</b><br/>---<br/><b>Question / प्रश्न:</b><br/>If 'KING' is coded as 'PRMT', then how is 'RAIN' coded? / यदि 'KING' को 'PRMT' लिखा जाए, तो 'RAIN' को क्या लिखेंगे?",
+    "o": ["IZRM", "IZRN", "IARM", "IZSM"],
+    "a": 1,
+    "e": "Reverse/Opposite letter logic: R-I, A-Z, I-R, N-M.",
+    "cat": "reasoning", "sub": "coding"
+  },
+  {
+    "q": "<b>Analogy</b><br/>---<br/><b>Question / प्रश्न:</b><br/>8 : 64 :: 11 : ?",
+    "o": ["121", "132", "110", "144"],
+    "a": 0,
+    "e": "Square of the number: 11² = 121.",
+    "cat": "reasoning", "sub": "analogy"
+  },
+  {
+    "q": "<b>Classification</b><br/>---<br/><b>Question / प्रश्न:</b><br/>Find the odd one out. / विषम चुनें।",
+    "o": ["Lungs", "Heart", "Kidney", "Eye"],
+    "a": 3,
+    "e": "Eye is an external organ; others are internal.",
+    "cat": "reasoning", "sub": "classification"
+  },
+  {
+    "q": "<b>Coding-Decoding</b><br/>---<br/><b>Question / प्रश्न:</b><br/>If 'MOBILE' is 'NQCPJG', how is 'IPHONE' coded? / यदि 'MOBILE' 'NQCPJG' है, तो 'IPHONE' का कोड क्या होगा?",
+    "o": ["KRJQPG", "JRJQPG", "KRJQPH", "JQJQPG"],
+    "a": 0,
+    "e": "Pattern: +1, +2, +1, +2...",
+    "cat": "reasoning", "sub": "coding"
+  },
+  {
+    "q": "<b>Direction Sense</b><br/>---<br/><b>Question / प्रश्न:</b><br/>Facing West, a man turns 45° clockwise. Which direction is he facing now? / पश्चिम की ओर मुख करके, एक व्यक्ति 45° दक्षिणावर्त मुड़ता है। अब उसका मुख किस दिशा में है?",
+    "o": ["North-West", "North-East", "South-West", "West"],
+    "a": 0,
+    "e": "45° CW from West is North-West.",
+    "cat": "reasoning", "sub": "direction"
+  },
+  {
+    "q": "<b>Classification</b><br/>---<br/><b>Question / प्रश्न:</b><br/>Find the odd word. / विषम शब्द चुनें।",
+    "o": ["Laptop", "Desktop", "Tablet", "Television"],
+    "a": 3,
+    "e": "Television is not primarily a computing device.",
+    "cat": "reasoning", "sub": "classification"
+  },
+  {
+    "q": "<b>Analogy</b><br/>---<br/><b>Question / प्रश्न:</b><br/>Bihar : Patna :: Jharkhand : ?",
+    "o": ["Ranchi", "Dhanbad", "Jamshedpur", "Bokaro"],
+    "a": 0,
+    "e": "Capital of Jharkhand is Ranchi.",
+    "cat": "reasoning", "sub": "analogy"
+  },
+  {
+    "q": "<b>Floor Puzzle (4/5)</b><br/>---<br/><b>Puzzle Paragraph / पहेली:</b><br/>6 persons A, B, C, D, E, F live on 6 floors. F lives on floor 6. B lives on an even floor. A is immediately below B. Only two floors between A and C. E is above D.<br/>6 व्यक्ति A, B, C, D, E, F 6 मंजिलों पर रहते हैं। F मंजिल 6 पर रहता है। B एक सम मंजिल पर रहता है। A, B के ठीक नीचे है। A और C के बीच केवल दो मंजिलें हैं। E, D के ऊपर है।<br/><br/><b>Question / प्रश्न:</b><br/>Who lives on floor 3? / मंजिल 3 पर कौन रहता है?<br/>---",
+    "o": ["A", "B", "C", "D"],
+    "a": 0,
+    "e": "Final Order: 6-F, 5-C, 4-B, 3-A, 2-E, 1-D. Floor 3 is A.",
+    "cat": "reasoning", "sub": "puzzle"
+  },
+  {
+    "q": "<b>Floor Puzzle (5/5)</b><br/>---<br/><b>Puzzle Paragraph / पहेली:</b><br/>(Same data as Q16) 6 persons A, B, C, D, E, F live on 6 floors... F-6, B-even, A below B, 2 between A-C, E above D.<br/><br/><b>Question / प्रश्न:</b><br/>How many people live between F and D? / F और D के बीच कितने लोग रहते हैं?<br/>---",
+    "o": ["One", "Two", "Three", "Four"],
+    "a": 3,
+    "e": "Between F(6) and D(1) are C, B, A, E (4 people).",
+    "cat": "reasoning", "sub": "puzzle"
+  },
+  {
+    "q": "<b>Syllogism (3/5)</b><br/>---<br/><b>Statements / कथन:</b><br/>* Only a few Towns are Villages.<br/>* All Villages are States.<br/><br/><b>Question / प्रश्न:</b><br/>Conclusions:<br/>I. All Towns can never be Villages.<br/>II. Some States are Towns.<br/>---",
+    "o": ["Only I follows", "Only II follows", "Both I and II follow", "Neither follows"],
+    "a": 2,
+    "e": "'Only a few' means some Towns are not Villages.",
+    "cat": "reasoning", "sub": "syllogism"
+  },
+  {
+    "q": "<b>Syllogism (4/5)</b><br/>---<br/><b>Statements / कथन:</b><br/>* No Blue is Red.<br/>* Some Red are Pink.<br/><br/><b>Question / प्रश्न:</b><br/>Conclusions:<br/>I. Some Pink are not Blue.<br/>II. All Pink being Blue is a possibility.<br/>---",
+    "o": ["Only I follows", "Only II follows", "Both follow", "Neither follows"],
+    "a": 0,
+    "e": "Pink that is Red cannot be Blue. So II is not possible.",
+    "cat": "reasoning", "sub": "syllogism"
+  },
+  {
+    "q": "<b>Syllogism (5/5)</b><br/>---<br/><b>Statements / कथन:</b><br/>* All Gold are Silver.<br/>* No Silver is Diamond.<br/><br/><b>Question / प्रश्न:</b><br/>Conclusions:<br/>I. No Gold is Diamond.<br/>II. Some Gold are Diamonds.<br/>---",
+    "o": ["Only I follows", "Only II follows", "Both follow", "Neither follows"],
+    "a": 0,
+    "e": "Gold is inside Silver, so it can't touch Diamond.",
+    "cat": "reasoning", "sub": "syllogism"
+  },
+  {
+    "q": "<b>Direction Sense</b><br/>---<br/><b>Question / प्रश्न:</b><br/>A man walks 10m West, then turns right and walks 10m. What is his direction from the starting point? / एक व्यक्ति 10 मीटर पश्चिम चलता है, फिर दाएं मुड़कर 10 मीटर चलता है। वह आरंभ से किस दिशा में है?",
+    "o": ["North-West", "North-East", "South-West", "West"],
+    "a": 0,
+    "e": "Resultant direction is North-West.",
+    "cat": "reasoning", "sub": "direction"
+  },
+  {
+    "q": "<b>Blood Relation</b><br/>---<br/><b>Question / प्रश्न:</b><br/>A is brother of B. B is daughter of C. How is C related to A? / A, B का भाई है। B, C की बेटी है। C, A से कैसे संबंधित है?",
+    "o": ["Mother/Father", "Uncle", "Son", "Grandparent"],
+    "a": 0,
+    "e": "C is the parent of both A and B.",
+    "cat": "reasoning", "sub": "blood"
+  },
+  {
+    "q": "<b>Analogy</b><br/>---<br/><b>Question / प्रश्न:</b><br/>Bird : Wings :: Fish : ?",
+    "o": ["Fins", "Gills", "Water", "Scales"],
+    "a": 0,
+    "e": "Wings help birds; fins help fish.",
+    "cat": "reasoning", "sub": "analogy"
+  },
+  {
+    "q": "<b>Coding-Decoding</b><br/>---<br/><b>Question / प्रश्न:</b><br/>If 'APPLE' is '50', what is 'ORANGE'? / यदि 'APPLE' '50' है, तो 'ORANGE' क्या है?",
+    "o": ["60", "65", "70", "55"],
+    "a": 0,
+    "e": "Sum of letter positions.",
+    "cat": "reasoning", "sub": "coding"
+  },
+  {
+    "q": "<b>Classification</b><br/>---<br/><b>Question / प्रश्न:</b><br/>Find the odd number. / विषम संख्या चुनें।",
+    "o": ["27", "64", "125", "144"],
+    "a": 3,
+    "e": "144 is a square; others are cubes.",
+    "cat": "reasoning", "sub": "classification"
+  },
+  {
+    "q": "<b>Direction Sense</b><br/>---<br/><b>Question / प्रश्न:</b><br/>If North becomes East, what will East become? / यदि उत्तर पूर्व बन जाए, तो पूर्व क्या बनेगा?",
+    "o": ["South", "West", "North", "North-West"],
+    "a": 0,
+    "e": "90° clockwise rotation.",
+    "cat": "reasoning", "sub": "direction"
+  },
+  {
+    "q": "<b>Word Formation</b><br/>---<br/><b>Question / प्रश्न:</b><br/>Which word cannot be formed from 'SIGNATURE'? / 'SIGNATURE' से क्या नहीं बन सकता?",
+    "o": ["NATURE", "GATE", "SIGHT", "GUEST"],
+    "a": 2,
+    "e": "'H' is not in SIGNATURE.",
+    "cat": "reasoning", "sub": "word"
+  },
+  {
+    "q": "<b>Analogy</b><br/>---<br/><b>Question / प्रश्न:</b><br/>Hand : Finger :: Feet : ?",
+    "o": ["Toe", "Ankle", "Heel", "Knee"],
+    "a": 0,
+    "e": "Fingers are on hands; toes are on feet.",
+    "cat": "reasoning", "sub": "analogy"
+  },
+  {
+    "q": "<b>Blood Relation</b><br/>---<br/><b>Question / प्रश्न:</b><br/>A's mother is B's sister. D is B's son. How is D related to A? / A की माँ B की बहन है। D, B का बेटा है। D, A से कैसे संबंधित है?",
+    "o": ["Cousin", "Brother", "Uncle", "Nephew"],
+    "a": 0,
+    "e": "B is the maternal uncle/aunt of A, so D is the cousin.",
+    "cat": "reasoning", "sub": "blood"
+  },
+  {
+    "q": "<b>Analogy</b><br/>---<br/><b>Question / प्रश्न:</b><br/>12 : 1728 :: 15 : ?",
+    "o": ["3375", "2744", "3125", "4096"],
+    "a": 0,
+    "e": "Cube: 15³ = 3375.",
+    "cat": "reasoning", "sub": "analogy"
+  },
+  {
+    "q": "<b>Classification</b><br/>---<br/><b>Question / प्रश्न:</b><br/>Find the odd pair. / विषम जोड़ा चुनें।",
+    "o": ["Gold-Ornaments", "Wood-Furniture", "Leather-Shoes", "Pot-Clay"],
+    "a": 3,
+    "e": "Material-Product order. In 4th, it is reversed.",
+    "cat": "reasoning", "sub": "classification"
+  },
+  {
+    "q": "<b>Word Formation</b><br/>---<br/><b>Question / प्रश्न:</b><br/>Meaningful word from 'E, T, R, A' using each once? / 'E, T, R, A' से एक शब्द?",
+    "o": ["RATE", "TEAR", "TARE", "All of these"],
+    "a": 3,
+    "e": "Multiple words are possible.",
+    "cat": "reasoning", "sub": "word"
+  },
+  {
+    "q": "<b>Coding-Decoding</b><br/>---<br/><b>Question / प्रश्न:</b><br/>If 'A'=1, 'CAT'=24, then 'DOG'=?",
+    "o": ["26", "24", "22", "28"],
+    "a": 0,
+    "e": "4 + 15 + 7 = 26.",
+    "cat": "reasoning", "sub": "coding"
+  },
+  {
+    "q": "<b>Direction Sense</b><br/>---<br/><b>Question / प्रश्न:</b><br/>Shortest distance: 3km North, then 4km East? / 3 किमी उत्तर, फिर 4 किमी पूर्व। न्यूनतम दूरी?",
+    "o": ["5km", "7km", "1km", "10km"],
+    "a": 0,
+    "e": "√(3² + 4²) = 5.",
+    "cat": "reasoning", "sub": "direction"
+  },
+  {
+    "q": "<b>Classification</b><br/>---<br/><b>Question / प्रश्न:</b><br/>Odd one: Patna, Lucknow, Bhopal, Gaya?",
+    "o": ["Patna", "Lucknow", "Bhopal", "Gaya"],
+    "a": 3,
+    "e": "Gaya is not a state capital.",
+    "cat": "reasoning", "sub": "classification"
+  }
+]
