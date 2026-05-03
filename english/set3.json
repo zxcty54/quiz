@@ -1,0 +1,247 @@
+[
+  {
+    "q": "<b>Cloze Test (1/5):</b> Select the most appropriate option for <b>Blank No. 1</b>.<br/><br/><i>'The global economy is currently (1)______ a period of unprecedented uncertainty. The (2)______ of new trade barriers has hindered international cooperation. While some nations have (3)______ to protectionist measures, others are trying to (4)______ new alliances. Experts warn that unless structural reforms are (5)______, the recovery will remain sluggish.'</i>",
+    "o": ["undergoing", "witnessing", "experiencing", "enduring"],
+    "a": 0,
+    "e": "Blank 1: 'Undergoing' (गुज़रना) किसी प्रक्रिया या कठिन समय से गुज़रने के लिए सबसे सटीक क्रिया है।",
+    "cat": "english", "sub": "cloze-test"
+  },
+  {
+    "q": "<b>Cloze Test (2/5):</b> Select the most appropriate option for <b>Blank No. 2</b>.<br/><br/><i>(Text same as above)</i>",
+    "o": ["imposition", "abolition", "reduction", "mitigation"],
+    "a": 0,
+    "e": "Blank 2: 'Imposition' (लागू करना/थोपना) का प्रयोग बाधाओं (barriers) या करों के संदर्भ में किया जाता है।",
+    "cat": "english", "sub": "cloze-test"
+  },
+  {
+    "q": "<b>Cloze Test (3/5):</b> Select the most appropriate option for <b>Blank No. 3</b>.<br/><br/><i>(Text same as above)</i>",
+    "o": ["resorted", "adhered", "referred", "appealed"],
+    "a": 0,
+    "e": "Blank 3: 'Resorted to' एक phrasal verb है जिसका अर्थ है मजबूरी में किसी विकल्प को चुनना (to turn to something as a last resort)।",
+    "cat": "english", "sub": "cloze-test"
+  },
+  {
+    "q": "<b>Cloze Test (4/5):</b> Select the most appropriate option for <b>Blank No. 4</b>.<br/><br/><i>(Text same as above)</i>",
+    "o": ["forge", "break", "demolish", "sever"],
+    "a": 0,
+    "e": "Blank 4: 'Forge new alliances' (नए गठबंधन बनाना) एक standard collocation है जिसका अर्थ है कड़ी मेहनत से संबंध बनाना।",
+    "cat": "english", "sub": "cloze-test"
+  },
+  {
+    "q": "<b>Cloze Test (5/5):</b> Select the most appropriate option for <b>Blank No. 5</b>.<br/><br/><i>(Text same as above)</i>",
+    "o": ["implemented", "discarded", "ignored", "postponed"],
+    "a": 0,
+    "e": "Blank 5: 'Implemented' (कार्यान्वित करना) सुधारों (reforms) को लागू करने के लिए सही शब्द है।",
+    "cat": "english", "sub": "cloze-test"
+  },
+  {
+    "q": "<b>Error Spotting:</b> Scarcely had (A) / the function started (B) / than the power (C) / supply failed (D).",
+    "o": ["A", "B", "C", "D"],
+    "a": 2,
+    "e": "Rule of Correlative Conjunctions: 'Scarcely/Hardly' के साथ 'when' का प्रयोग होता है, 'than' का नहीं।",
+    "cat": "english", "sub": "error-spotting"
+  },
+  {
+    "q": "<b>Error Spotting:</b> Not only the (A) / principal but (B) / also the teachers (C) / was present (D).",
+    "o": ["A", "B", "C", "D"],
+    "a": 3,
+    "e": "Subject-Verb Agreement: 'Not only... but also' में verb हमेशा पास वाले subject (teachers - Plural) के अनुसार आती है। 'Was' की जगह 'Were' होगा।",
+    "cat": "english", "sub": "error-spotting"
+  },
+  {
+    "q": "<b>Error Spotting:</b> If I would (A) / have known (B) / your arrival, I (C) / would have met you (D).",
+    "o": ["A", "B", "C", "D"],
+    "a": 0,
+    "e": "Conditional Sentence Type 3: 'If' वाले clause में 'had + V3' लगता है। सही: 'If I had known...'",
+    "cat": "english", "sub": "error-spotting"
+  },
+  {
+    "q": "<b>Error Spotting:</b> Neither of (A) / the five (B) / applicants is (C) / suitable for the post (D).",
+    "o": ["A", "B", "C", "D"],
+    "a": 0,
+    "e": "Rule: 'Neither' का प्रयोग केवल दो के लिए होता है। दो से अधिक (पाँच) के लिए 'None' का प्रयोग होगा।",
+    "cat": "english", "sub": "error-spotting"
+  },
+  {
+    "q": "<b>Error Spotting:</b> He is (A) / enough wise (B) / to understand (C) / your tricks (D).",
+    "o": ["A", "B", "C", "D"],
+    "a": 1,
+    "e": "Adverb Rule: 'Enough' जब Adjective को qualify करता है, तो उसके बाद आता है। सही: 'wise enough'।",
+    "cat": "english", "sub": "error-spotting"
+  },
+  {
+    "q": "<b>Sentence Improvement:</b> She is *the most unique* singer I have ever heard.",
+    "o": ["a most unique", "a unique", "the unique", "No improvement"],
+    "a": 1,
+    "e": "Grammar Rule: 'Unique', 'Ideal', 'Complete' जैसे शब्द अपने आप में पूर्ण होते हैं, इनके साथ Comparative या Superlative degree नहीं लगती।",
+    "cat": "english", "sub": "improvement"
+  },
+  {
+    "q": "<b>Sentence Improvement:</b> Being a rainy day, *I could not go* out.",
+    "o": ["It being a rainy day, I", "As it was a rainy day, I", "Both A and B", "No improvement"],
+    "a": 2,
+    "e": "Dangling Participle: 'Being' का अपना subject 'It' होना चाहिए, अन्यथा 'I' ही बारिश वाला दिन बन जाएगा।",
+    "cat": "english", "sub": "improvement"
+  },
+  {
+    "q": "<b>Sentence Improvement:</b> He *did not and could not* understand the gravity of the situation.",
+    "o": ["did not understand and could not", "did not and could not understood", "did not understand and could not understand", "No improvement"],
+    "a": 0,
+    "e": "Parallelism: 'Did not' और 'Could not' दोनों के बाद V1 आनी चाहिए। यहाँ 'understand' को common नहीं लिया जा सकता क्योंकि auxiliary verbs अलग हैं।",
+    "cat": "english", "sub": "improvement"
+  },
+  {
+    "q": "<b>Sentence Improvement:</b> I *prefer tea than* coffee.",
+    "o": ["prefer tea to", "prefer tea over", "prefer tea instead of", "No improvement"],
+    "a": 0,
+    "e": "Rule: 'Prefer' और 'Preferable' के साथ 'to' का प्रयोग होता है, 'than' का नहीं।",
+    "cat": "english", "sub": "improvement"
+  },
+  {
+    "q": "<b>Synonym of 'EPHEMERAL':</b>",
+    "o": ["Eternal", "Short-lived", "Stable", "Permanent"],
+    "a": 1,
+    "e": "'Ephemeral' का अर्थ है क्षणिक या बहुत कम समय रहने वाला (Transient/Short-lived)।",
+    "cat": "english", "sub": "vocab"
+  },
+  {
+    "q": "<b>Synonym of 'ABHOR':</b>",
+    "o": ["Admire", "Detest", "Love", "Crave"],
+    "a": 1,
+    "e": "'Abhor' का अर्थ है घृणा करना (Hate/Detest)।",
+    "cat": "english", "sub": "vocab"
+  },
+  {
+    "q": "<b>Antonym of 'LOQUACIOUS':</b>",
+    "o": ["Talkative", "Reticent", "Garrulous", "Verbose"],
+    "a": 1,
+    "e": "'Loquacious' (बातूनी) का उल्टा 'Reticent' या 'Taciturn' (कम बोलने वाला) होता है।",
+    "cat": "english", "sub": "vocab"
+  },
+  {
+    "q": "<b>Antonym of 'ZENITH':</b>",
+    "o": ["Peak", "Nadir", "Summit", "Apex"],
+    "a": 1,
+    "e": "'Zenith' (शीर्ष बिंदु) का उल्टा 'Nadir' (सबसे निचला बिंदु) होता है।",
+    "cat": "english", "sub": "vocab"
+  },
+  {
+    "q": "<b>One-word Substitution:</b> A person who is indifferent to pleasure or pain.",
+    "o": ["Hedonist", "Stoic", "Epicure", "Altruist"],
+    "a": 1,
+    "e": "'Stoic' (वैरागी/उदासीन) वह व्यक्ति है जिसे सुख-दुख से कोई फर्क नहीं पड़ता।",
+    "cat": "english", "sub": "vocab"
+  },
+  {
+    "q": "<b>One-word Substitution:</b> One who speaks for others.",
+    "o": ["Spokesman", "Orator", "Linguist", "Verbatim"],
+    "a": 0,
+    "e": "दूसरों की ओर से बोलने वाले को 'Spokesman' (प्रवक्ता) कहा जाता है।",
+    "cat": "english", "sub": "vocab"
+  },
+  {
+    "q": "<b>Idiom:</b> 'To spill the beans' means:",
+    "o": ["To cook beans", "To reveal a secret accidentally", "To work hard", "To waste money"],
+    "a": 1,
+    "e": "इसका अर्थ है किसी गुप्त जानकारी को उजागर कर देना।",
+    "cat": "english", "sub": "vocab"
+  },
+  {
+    "q": "<b>Idiom:</b> 'To read between the lines' means:",
+    "o": ["To read quickly", "To understand the hidden meaning", "To read loudly", "To write well"],
+    "a": 1,
+    "e": "छिपे हुए अर्थ या भावनाओं को समझने को 'Read between the lines' कहते हैं।",
+    "cat": "english", "sub": "vocab"
+  },
+  {
+    "q": "<b>Active/Passive:</b> The news surprised us.",
+    "o": ["We were surprised by the news", "We were surprised at the news", "We were surprised with the news", "None"],
+    "a": 1,
+    "e": "Prepositional Passive: 'Surprise', 'Astonish', 'Amaze' के साथ 'at' का प्रयोग होता है, 'by' का नहीं।",
+    "cat": "english", "sub": "voice"
+  },
+  {
+    "q": "<b>Active/Passive:</b> It is time to take tea.",
+    "o": ["It is time for tea to be taken", "It is time that tea is taken", "Tea should be taken on time", "None"],
+    "a": 0,
+    "e": "Structure: 'It is time + for + object + to be + V3' सही passive form है।",
+    "cat": "english", "sub": "voice"
+  },
+  {
+    "q": "<b>Active/Passive:</b> They said that the earth is round.",
+    "o": ["It is said that the earth is round", "It was said that the earth is round", "The earth is said to be round", "Both A and C"],
+    "a": 3,
+    "e": "Complex Sentence Passive: दोनों ही रूप (It is said... और The earth is said to be...) व्याकरणिक रूप से सही हैं।",
+    "cat": "english", "sub": "voice"
+  },
+  {
+    "q": "<b>Direct/Indirect:</b> He said, 'Bravo! You have done well.'",
+    "o": ["He applauded him saying that he had done well", "He exclaimed with joy he did well", "He told him bravo he did well", "None"],
+    "a": 0,
+    "e": "Exclamatory (Applaud): 'Bravo' वाले वाक्यों में 'Applauded + object + saying that' का प्रयोग होता है।",
+    "cat": "english", "sub": "narration"
+  },
+  {
+    "q": "<b>Direct/Indirect:</b> She said to me, 'Don't go there.'",
+    "o": ["She told me not to go there", "She forbade me to go there", "Both A and B", "None"],
+    "a": 2,
+    "e": "Imperative Negative: 'Forbade' के साथ 'not' नहीं आता, जबकि 'told/asked' के साथ 'not to' आता है।",
+    "cat": "english", "sub": "narration"
+  },
+  {
+    "q": "<b>Direct/Indirect:</b> He said to his servant, 'Go away at once.'",
+    "o": ["He asked servant to go", "He ordered his servant to go away at once", "He requested servant to go", "None"],
+    "a": 1,
+    "e": "Sense: मालिक और नौकर के बीच 'Ordered' या 'Commanded' का प्रयोग सही है।",
+    "cat": "english", "sub": "narration"
+  },
+  {
+    "q": "<b>Sentence Rearrangement:</b> P: as well as Q: physical health R: mental health S: is important",
+    "o": ["PRQS", "RQPS", "RPQS", "SQPR"],
+    "a": 2,
+    "e": "सही क्रम: 'Mental health as well as physical health is important' (RPQS)।",
+    "cat": "english", "sub": "pqr"
+  },
+  {
+    "q": "<b>Sentence Rearrangement:</b> P: to solve Q: it is R: the problem S: impossible",
+    "o": ["QSPR", "PQRS", "RQPS", "SQRP"],
+    "a": 0,
+    "e": "सही क्रम: 'It is impossible to solve the problem' (QSPR)।",
+    "cat": "english", "sub": "pqr"
+  },
+  {
+    "q": "<b>Synonym of 'METICULOUS':</b>",
+    "o": ["Careless", "Thorough/Detailed", "Fast", "Sloppy"],
+    "a": 1,
+    "e": "'Meticulous' का अर्थ है बहुत सावधानी और विस्तार से काम करना।",
+    "cat": "english", "sub": "vocab"
+  },
+  {
+    "q": "<b>Antonym of 'OSTENTATIOUS':</b>",
+    "o": ["Showy", "Modest", "Flashy", "Gaudy"],
+    "a": 1,
+    "e": "'Ostentatious' (दिखावटी) का उल्टा 'Modest' (शालीन/साधारण) होता है।",
+    "cat": "english", "sub": "vocab"
+  },
+  {
+    "q": "<b>Select correctly spelt word:</b>",
+    "o": ["Separate", "Seperate", "Saparate", "Seperete"],
+    "a": 0,
+    "e": "सही स्पेलिंग 'Separate' है।",
+    "cat": "english", "sub": "vocab"
+  },
+  {
+    "q": "<b>Select correctly spelt word:</b>",
+    "o": ["Lieutenant", "Leftenant", "Lieutenent", "Luitenant"],
+    "a": 0,
+    "e": "सही स्पेलिंग 'Lieutenant' है।",
+    "cat": "english", "sub": "vocab"
+  },
+  {
+    "q": "<b>Error Spotting:</b> The scissors (A) / which are (B) / on the table (C) / is mine (D).",
+    "o": ["A", "B", "C", "D"],
+    "a": 3,
+    "e": "Rule: 'Scissors', 'Trousers', 'Spectacles' हमेशा plural verb लेते हैं। 'Is' की जगह 'Are' होगा।",
+    "cat": "english", "sub": "error-spotting"
+  }
+]
