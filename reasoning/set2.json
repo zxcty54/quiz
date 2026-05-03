@@ -1,24 +1,37 @@
-{
-  "puzzles": {
-    "FP1": "7 persons P, Q, R, S, T, U, V live on 7 floors (1-7). T even floor. 2 between T-R. Q above R. V odd floor above T. P above U. S above Q.",
-    "FP2": "6 persons A, B, C, D, E, F live on 6 floors. F on 6. B even. A below B. 2 between A-C. E above D."
+[
+  {
+    "q": "<b>Floor Puzzle (1/5)</b><br/>---<br/><blockquote><b>Puzzle Paragraph / पहेली:</b><br/>7 persons P, Q, R, S, T, U, V live on 7 different floors of a building (numbered 1 to 7, where ground floor is 1).<br/>* T lives on an even numbered floor.<br/>* Only two persons live between T and R.<br/>* Q lives immediately above R.<br/>* V lives on an odd numbered floor above T.<br/>* P lives immediately above U.<br/>* S lives above Q.<br/><br/>7 व्यक्ति P, Q, R, S, T, U, V एक इमारत की 7 अलग-अलग मंजिलों पर रहते हैं (1 से 7, जहाँ सबसे निचली मंजिल 1 है)।<br/>* T एक सम संख्या वाली मंजिल पर रहता है।<br/>* T और R के बीच केवल दो व्यक्ति रहते हैं।<br/>* Q, R के ठीक ऊपर रहता है।<br/>* V, T के ऊपर एक विषम संख्या वाली मंजिल पर रहता है।<br/>* P, U के ठीक ऊपर रहता है।<br/>* S, Q के ऊपर रहता है।</blockquote><br/><b>Question / प्रश्न:</b><br/>How many people live between S and U? / S और U के बीच कितने लोग रहते हैं?",
+    "o": ["One / एक", "Two / दो", "Three / तीन", "Four / चार"],
+    "a": 2,
+    "e": "Final Arrangement (7 to 1): V, T, S, Q, R, P, U. Between S (5th floor) and U (1st floor) are Q, R, and P (3 people).",
+    "cat": "reasoning", "sub": "puzzle"
   },
-
-  "questions": [
-    {
-      "type": "normal",
-      "q": "All A are B. Only a few B are C. No C is D. Conclusions: I. Some B are not D. II. All A can be C.",
-      "o": ["Only I", "Only II", "Both", "Neither"],
-      "a": 2,
-      "e": "Both follow"
-    },
-    {
-      "type": "puzzle",
-      "puzzle_id": "FP1",
-      "q": "Who lives on 4th floor?",
-      "o": ["S", "Q", "R", "T"],
-      "a": 1,
-      "e": "Q"
-    }
-  ]
-}
+  {
+    "q": "<b>Floor Puzzle (2/5)</b><br/>---<br/><blockquote><b>Puzzle Paragraph / पहेली:</b><br/>7 persons P, Q, R, S, T, U, V live on 7 different floors (1-7).<br/>* T lives on an even floor.<br/>* Only two persons live between T and R.<br/>* Q lives immediately above R.<br/>* V lives on an odd floor above T.<br/>* P lives immediately above U.<br/>* S lives above Q.</blockquote><br/><b>Question / प्रश्न:</b><br/>Who lives on the 4th floor? / चौथी मंजिल पर कौन रहता है?",
+    "o": ["S", "Q", "R", "T"],
+    "a": 1,
+    "e": "According to the final arrangement: V-7, T-6, S-5, Q-4, R-3, P-2, U-1. Q is on the 4th floor.",
+    "cat": "reasoning", "sub": "puzzle"
+  },
+  {
+    "q": "<b>Floor Puzzle (3/5)</b><br/>---<br/><blockquote><b>Puzzle Paragraph / पहेली:</b><br/>7 persons P, Q, R, S, T, U, V live on 7 different floors (1-7).<br/>* T lives on an even floor.<br/>* Only two persons live between T and R.<br/>* Q lives immediately above R.<br/>* V lives on an odd floor above T.<br/>* P lives immediately above U.<br/>* S lives above Q.</blockquote><br/><b>Question / प्रश्न:</b><br/>Who lives immediately above T? / T के ठीक ऊपर कौन रहता है?",
+    "o": ["V", "S", "P", "Q"],
+    "a": 0,
+    "e": "V lives on the 7th floor, which is immediately above T on the 6th floor.",
+    "cat": "reasoning", "sub": "puzzle"
+  },
+  {
+    "q": "<b>Floor Puzzle (4/5)</b><br/>---<br/><blockquote><b>Puzzle Paragraph / पहेली:</b><br/>7 persons P, Q, R, S, T, U, V live on 7 different floors (1-7).<br/>* T lives on an even floor.<br/>* Only two persons live between T and R.<br/>* Q lives immediately above R.<br/>* V lives on an odd floor above T.<br/>* P lives immediately above U.<br/>* S lives above Q.</blockquote><br/><b>Question / प्रश्न:</b><br/>If all the persons are arranged alphabetically from top to bottom (floor 7 to 1), how many persons will remain at their original floor? / यदि सभी व्यक्तियों को ऊपर से नीचे (मंजिल 7 से 1) वर्णानुक्रम में व्यवस्थित किया जाए, तो कितने व्यक्ति अपनी मूल मंजिल पर रहेंगे?",
+    "o": ["One / एक", "Two / दो", "Three / तीन", "None / कोई नहीं"],
+    "a": 0,
+    "e": "Original: V,T,S,Q,R,P,U. Alphabetical: V,U,T,S,R,Q,P. Only V (floor 7) matches.",
+    "cat": "reasoning", "sub": "puzzle"
+  },
+  {
+    "q": "<b>Floor Puzzle (5/5)</b><br/>---<br/><blockquote><b>Puzzle Paragraph / पहेली:</b><br/>7 persons P, Q, R, S, T, U, V live on 7 different floors (1-7).<br/>* T lives on an even floor.<br/>* Only two persons live between T and R.<br/>* Q lives immediately above R.<br/>* V lives on an odd floor above T.<br/>* P lives immediately above U.<br/>* S lives above Q.</blockquote><br/><b>Question / प्रश्न:</b><br/>On which floor does S live? / S किस मंजिल पर रहता है?",
+    "o": ["5th floor", "3rd floor", "2nd floor", "7th floor"],
+    "a": 0,
+    "e": "As per the final arrangement, S lives on the 5th floor.",
+    "cat": "reasoning", "sub": "puzzle"
+  }
+]
