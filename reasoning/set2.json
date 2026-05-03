@@ -1,37 +1,27 @@
-[
-  {
-    "qe": "7 persons P, Q, R, S, T, U, V live on 7 floors (1-7). T is on an even floor. 2 between T-R. Q is immediately above R. V is on an odd floor above T. P is immediately above U. S is above Q.<br/><br/><b>Question (1/5):</b> How many people live between S and U?",
-    "qh": "7 व्यक्ति P, Q, R, S, T, U, V 7 अलग मंजिलों (1-7) पर रहते हैं। T सम मंजिल पर है। T-R के बीच 2 लोग हैं। Q, R के ठीक ऊपर है। V, T के ऊपर विषम मंजिल पर है। P, U के ठीक ऊपर है। S, Q के ऊपर है।<br/><br/><b>प्रश्न (1/5):</b> S और U के बीच कितने लोग रहते हैं?",
-    "o": ["One", "Two", "Three", "Four"],
-    "a": 2,
-    "e": "Order (7-1): V, T, S, Q, R, P, U. S(5) and U(1) have 3 people between them."
-  },
-  {
-    "qe": "7 persons P, Q, R, S, T, U, V live on 7 floors (1-7). T is on an even floor. 2 between T-R. Q is immediately above R. V is on an odd floor above T. P is immediately above U. S is above Q.<br/><br/><b>Question (2/5):</b> Who lives on the 4th floor?",
-    "qh": "7 व्यक्ति P, Q, R, S, T, U, V 7 अलग मंजिलों (1-7) पर रहते हैं। T सम मंजिल पर है। T-R के बीच 2 लोग हैं। Q, R के ठीक ऊपर है। V, T के ऊपर विषम मंजिल पर है। P, U के ठीक ऊपर है। S, Q के ऊपर है।<br/><br/><b>प्रश्न (2/5):</b> चौथी मंजिल पर कौन रहता है?",
-    "o": ["S", "Q", "R", "T"],
-    "a": 1,
-    "e": "Q is on the 4th floor."
-  },
-  {
-    "qe": "7 persons P-V live on 7 floors. T-even, 2 between T-R, Q above R, V-odd above T, P above U, S above Q.<br/><br/><b>Question (3/5):</b> Who lives immediately above T?",
-    "qh": "7 व्यक्ति P-V मंजिलों 1-7 पर। T सम मंजिल, T-R के बीच 2, Q, R के ऊपर, V विषम मंजिल पर T के ऊपर, P, U के ऊपर, S, Q के ऊपर।<br/><br/><b>प्रश्न (3/5):</b> T के ठीक ऊपर कौन रहता है?",
-    "o": ["V", "S", "P", "Q"],
-    "a": 0,
-    "e": "V (7) is immediately above T (6)."
-  },
-  {
-    "qe": "<b>Syllogism:</b><br/>Statements: Only a few Books are Pens. All Pens are Pencils.<br/><br/><b>Question:</b> Conclusion I: All Books can be Pens. II: Some Pencils are Books.",
-    "qh": "<b>न्याय निगमन:</b><br/>कथन: केवल कुछ किताबें पेन हैं। सभी पेन पेंसिल हैं।<br/><br/><b>प्रश्न:</b> निष्कर्ष I: सभी किताबें पेन हो सकती हैं। II: कुछ पेंसिल किताबें हैं।",
-    "o": ["Only I", "Only II", "Both", "Neither"],
-    "a": 1,
-    "e": "Only a few means all cannot be. II is true as Books touch Pens which are Pencils."
-  },
-  {
-    "qe": "<b>Blood Relation:</b><br/>Pointing to a man, Neha said, 'His mother is the only daughter of my mother.'<br/><br/><b>Question:</b> How is Neha related to that man?",
-    "qh": "<b>रक्त संबंध:</b><br/>एक आदमी की ओर इशारा करते हुए नेहा ने कहा, 'उसकी माँ मेरी माँ की इकलौती बेटी है।'<br/><br/><b>प्रश्न:</b> नेहा उस आदमी से कैसे संबंधित है?",
-    "o": ["Sister", "Mother", "Aunt", "Daughter"],
-    "a": 1,
-    "e": "The only daughter is Neha herself. So she is the mother."
-  }
-]
+{
+  "puzzle_library": [
+    {
+      "p_id": "floor_mains_01",
+      "pe": "7 persons P-V live on 7 floors (1-7). T-even floor. 2 between T-R. Q above R. V-odd above T. P above U. S above Q.",
+      "ph": "7 व्यक्ति P-V मंजिलों 1-7 पर। T सम मंजिल, T-R के बीच 2, Q, R के ऊपर, V विषम मंजिल पर T के ऊपर, P, U के ऊपर, S, Q के ऊपर।"
+    }
+  ],
+  "questions": [
+    {
+      "p_id": "floor_mains_01",
+      "qe": "<b>Question (1/5):</b> How many people live between S and U?",
+      "qh": "<b>प्रश्न (1/5):</b> S और U के बीच कितने लोग रहते हैं?",
+      "o": ["One", "Two", "Three", "Four"],
+      "a": 2,
+      "e": "Order: V-T-S-Q-R-P-U. (3 people)"
+    },
+    {
+      "p_id": "floor_mains_01",
+      "qe": "<b>Question (2/5):</b> Who lives on the 4th floor?",
+      "qh": "<b>प्रश्न (2/5):</b> चौथी मंजिल पर कौन रहता है?",
+      "o": ["S", "Q", "R", "T"],
+      "a": 1,
+      "e": "Q is on the 4th floor."
+    }
+  ]
+}
