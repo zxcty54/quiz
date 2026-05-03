@@ -34,39 +34,40 @@
     "e": "Gold is inside Silver, so it can't be Diamond. Platinum that is Diamond can't be Silver.",
     "cat": "reasoning", "sub": "syllogism"
   },
+  
   {
-    "q": "6. <b>Floor Puzzle (1/5):</b> 7 persons P, Q, R, S, T, U, V live on 7 different floors (1-7). T lives on an even floor. Only two persons live between T and R. Q lives immediately above R. V lives on an odd floor above T. P lives immediately above U. S lives above Q. How many people live between S and U? / 7 व्यक्ति P, Q, R, S, T, U, V 7 अलग मंजिलों (1-7) पर रहते हैं। T एक सम मंजिल पर रहता है। T और R के बीच केवल दो व्यक्ति रहते हैं। Q, R के ठीक ऊपर रहता है। V, T के ऊपर एक विषम मंजिल पर रहता है। P, U के ठीक ऊपर रहता है। S, Q के ऊपर रहता है। S और U के बीच कितने लोग रहते हैं?",
-    "o": ["One", "Two", "Three", "Four"],
+    "q": "<b>Floor Puzzle (1/5)</b><br/>---<br/><b>Puzzle Paragraph / पहेली:</b><br/>7 persons P, Q, R, S, T, U, V live on 7 different floors (numbered 1 to 7). <br/>* T lives on an even floor.<br/>* Only two persons live between T and R. <br/>* Q lives immediately above R. <br/>* V lives on an odd floor above T. <br/>* P lives immediately above U. <br/>* S lives above Q.<br/><br/>7 व्यक्ति P, Q, R, S, T, U, V 7 अलग मंजिलों (1-7) पर रहते हैं। <br/>* T एक सम मंजिल पर रहता है।<br/>* T और आर के बीच केवल दो व्यक्ति रहते हैं।<br/>* Q, R के ठीक ऊपर रहता है।<br/>* V, T के ऊपर एक विषम मंजिल पर रहता है।<br/>* P, U के ठीक ऊपर रहता है।<br/>* S, Q के ऊपर रहता है।<br/><br/><b>Question / प्रश्न:</b><br/>How many people live between S and U? / S और U के बीच कितने लोग रहते हैं?<br/>---",
+    "o": ["One / एक", "Two / दो", "Three / तीन", "Four / चार"],
     "a": 2,
-    "e": "Final Order (7 to 1): V, T, S, Q, R, P, U. Between S and U are Q, R, P (Three).",
+    "e": "Final Order (7 to 1): V, T, S, Q, R, P, U. Between S (floor 5) and U (floor 1) are Q, R, P (Three).",
     "cat": "reasoning", "sub": "puzzle"
   },
   {
-    "q": "7. <b>Floor Puzzle (2/5):</b> 7 persons P, Q, R, S, T, U, V live on 7 different floors (1-7). T lives on an even floor. Only two persons live between T and R. Q lives immediately above R. V lives on an odd floor above T. P lives immediately above U. S lives above Q. How many people live between S and U? / 7 व्यक्ति P, Q, R, S, T, U, V 7 अलग मंजिलों (1-7) पर रहते हैं। T एक सम मंजिल पर रहता है। T और R के बीच केवल दो व्यक्ति रहते हैं। Q, R के ठीक ऊपर रहता है। V, T के ऊपर एक विषम मंजिल पर रहता है। P, U के ठीक ऊपर रहता है। S, Q के ऊपर रहता है। S और U के बीच कितने लोग रहते हैं? Who lives on the 4th floor? / चौथी मंजिल पर कौन रहता है?",
+    "q": "<b>Floor Puzzle (2/5)</b><br/>---<br/><b>Puzzle Paragraph / पहेली:</b><br/>7 persons P, Q, R, S, T, U, V live on 7 different floors (1-7). T lives on an even floor. Only two persons live between T and R. Q lives immediately above R. V lives on an odd floor above T. P lives immediately above U. S lives above Q.<br/><br/>7 व्यक्ति P, Q, R, S, T, U, V 7 अलग मंजिलों (1-7) पर रहते हैं। T एक सम मंजिल पर रहता है। T और R के बीच केवल दो व्यक्ति रहते हैं। Q, R के ठीक ऊपर रहता है। V, T के ऊपर एक विषम मंजिल पर रहता है। P, U के ठीक ऊपर रहता है। S, Q के ऊपर रहता है।<br/><br/><b>Question / प्रश्न:</b><br/>Who lives on the 4th floor? / चौथी मंजिल पर कौन रहता है?<br/>---",
     "o": ["S", "Q", "R", "T"],
     "a": 1,
-    "e": "Q lives on the 4th floor. / चौथी मंजिल पर Q रहता है।",
+    "e": "According to the arrangement (V-7, T-6, S-5, Q-4, R-3, P-2, U-1), Q lives on the 4th floor.",
     "cat": "reasoning", "sub": "puzzle"
   },
   {
-    "q": "8. <b>Floor Puzzle (3/5):</b> 7 persons P, Q, R, S, T, U, V live on 7 different floors (1-7). T lives on an even floor. Only two persons live between T and R. Q lives immediately above R. V lives on an odd floor above T. P lives immediately above U. S lives above Q. How many people live between S and U? / 7 व्यक्ति P, Q, R, S, T, U, V 7 अलग मंजिलों (1-7) पर रहते हैं। T एक सम मंजिल पर रहता है। T और R के बीच केवल दो व्यक्ति रहते हैं। Q, R के ठीक ऊपर रहता है। V, T के ऊपर एक विषम मंजिल पर रहता है। P, U के ठीक ऊपर रहता है। S, Q के ऊपर रहता है। S और U के बीच कितने लोग रहते हैं? If all persons are arranged alphabetically from top to bottom, how many remain unchanged? / यदि सभी व्यक्तियों को ऊपर से नीचे वर्णानुक्रम में व्यवस्थित किया जाए, तो कितने अपरिवर्तित रहेंगे?",
-    "o": ["None", "One", "Two", "Three"],
+    "q": "<b>Floor Puzzle (3/5)</b><br/>---<br/><b>Puzzle Paragraph / पहेली:</b><br/>7 persons P, Q, R, S, T, U, V live on 7 different floors (1-7). T lives on an even floor. Only two persons live between T and R. Q lives immediately above R. V lives on an odd floor above T. P lives immediately above U. S lives above Q.<br/><br/>7 व्यक्ति P, Q, R, S, T, U, V 7 अलग मंजिलों (1-7) पर रहते हैं। T एक सम मंजिल पर रहता है। T और R के बीच केवल दो व्यक्ति रहते हैं। Q, R के ठीक ऊपर रहता है। V, T के ऊपर एक विषम मंजिल पर रहता है। P, U के ठीक ऊपर रहता है। S, Q के ऊपर रहता है।<br/><br/><b>Question / प्रश्न:</b><br/>If all persons are arranged alphabetically from top to bottom, how many remain unchanged? / यदि सभी व्यक्तियों को ऊपर से नीचे वर्णानुक्रम में व्यवस्थित किया जाए, तो कितने अपरिवर्तित रहेंगे?<br/>---",
+    "o": ["None / कोई नहीं", "One / एक", "Two / दो", "Three / तीन"],
     "a": 0,
-    "e": "None will match the original positions. / कोई भी मूल स्थानों से मेल नहीं खाएगा।",
+    "e": "Original: V, T, S, Q, R, P, U. Alphabetical: V, U, T, S, R, Q, P. None match the original positions.",
     "cat": "reasoning", "sub": "puzzle"
   },
   {
-    "q": "9. <b>Floor Puzzle (4/5):</b> 6 persons A, B, C, D, E, F live on 6 floors. F lives on floor 6. B lives on an even floor. A is immediately below B. Only two floors between A and C. E is above D. Who lives on floor 3? / 6 व्यक्ति 6 मंजिलों पर रहते हैं। F मंजिल 6 पर रहता है। B एक सम मंजिल पर रहता है। A, B के ठीक नीचे है। A और C के बीच केवल दो मंजिलें हैं। E, D के ऊपर है। मंजिल 3 पर कौन रहता है?",
+    "q": "<b>Floor Puzzle (4/5)</b><br/>---<br/><b>Puzzle Paragraph / पहेली:</b><br/>6 persons A, B, C, D, E, F live on 6 floors (1-6). <br/>* F lives on floor 6.<br/>* B lives on an even floor.<br/>* A is immediately below B.<br/>* Only two floors between A and C.<br/>* E is above D.<br/><br/>6 व्यक्ति A, B, C, D, E, F 6 मंजिलों (1-6) पर रहते हैं। <br/>* F मंजिल 6 पर रहता है।<br/>* B एक सम मंजिल पर रहता है।<br/>* A, B के ठीक नीचे है।<br/>* A और C के बीच केवल दो मंजिलें हैं।<br/>* E, D के ऊपर है।<br/><br/><b>Question / प्रश्न:</b><br/>Who lives on floor 3? / मंजिल 3 पर कौन रहता है?<br/>---",
     "o": ["A", "B", "C", "D"],
     "a": 0,
-    "e": "Order: 6-F, 4-B, 3-A, 2-E, 1-D, (Wait, re-arranging: 6-F, 5-E, 4-B, 3-A, 2-D, 1-C? No). 6-F, 4-B, 3-A, 2-E, 1-D and 5 is C. (Check: A and C have two floors 4,5). Floor 3 is A.",
+    "e": "Final Order (6 to 1): F, C, B, A, E, D. Floor 3 is occupied by A.",
     "cat": "reasoning", "sub": "puzzle"
   },
   {
-    "q": "10. <b>Floor Puzzle (5/5):</b>  6 persons A, B, C, D, E, F live on 6 floors. F lives on floor 6. B lives on an even floor. A is immediately below B. Only two floors between A and C. E is above D. Who lives on floor 3? / 6 व्यक्ति 6 मंजिलों पर रहते हैं। F मंजिल 6 पर रहता है। B एक सम मंजिल पर रहता है। A, B के ठीक नीचे है। A और C के बीच केवल दो मंजिलें हैं। E, D के ऊपर है। मंजिल 3 पर कौन रहता है? How many people live between F and D? / F और D के बीच कितने लोग रहते हैं?",
-    "o": ["One", "Two", "Three", "Four"],
+    "q": "<b>Floor Puzzle (5/5)</b><br/>---<br/><b>Puzzle Paragraph / पहेली:</b><br/>6 persons A, B, C, D, E, F live on 6 floors (1-6). F lives on floor 6. B lives on an even floor. A is immediately below B. Only two floors between A and C. E is above D.<br/><br/>6 व्यक्ति A, B, C, D, E, F 6 मंजिलों (1-6) पर रहते हैं। F मंजिल 6 पर रहता है। B एक सम मंजिल पर रहता है। A, B के ठीक नीचे है। A और C के बीच केवल दो मंजिलें हैं। E, D के ऊपर है।<br/><br/><b>Question / प्रश्न:</b><br/>How many people live between F and D? / F और D के बीच कितने लोग रहते हैं?<br/>---",
+    "o": ["One / एक", "Two / दो", "Three / तीन", "Four / चार"],
     "a": 3,
-    "e": "F is on 6, D is on 2. Between them are 5, 4, 3 (Three). Wait, 6 and 2 have 5,4,3 (Three). (Double check order).",
+    "e": "F is on floor 6 and D is on floor 1. Between them are 4 people (C, B, A, E).",
     "cat": "reasoning", "sub": "puzzle"
   },
   {
