@@ -1,215 +1,45 @@
-[
-  {
-    "qe": "<b>Floor Puzzle (1/5)</b><br/>---<br/><blockquote><b>Puzzle Paragraph:</b><br/>7 persons P, Q, R, S, T, U, V live on 7 different floors (numbered 1 to 7).<br/>* T lives on an even numbered floor.<br/>* Only two persons live between T and R.<br/>* Q lives immediately above R.<br/>* V lives on an odd numbered floor above T.<br/>* P lives immediately above U.<br/>* S lives above Q.</blockquote><br/><b>Question:</b> How many people live between S and U?",
-    "qh": "<b>फ्लोर पजल (1/5)</b><br/>---<br/><blockquote><b>पहेली पैराग्राफ:</b><br/>7 व्यक्ति P, Q, R, S, T, U, V 7 अलग-अलग मंजिलों (1 से 7) पर रहते हैं।<br/>* T एक सम संख्या वाली मंजिल पर रहता है।<br/>* T और R के बीच केवल दो व्यक्ति रहते हैं।<br/>* Q, R के ठीक ऊपर रहता है।<br/>* V, T के ऊपर एक विषम संख्या वाली मंजिल पर रहता है।<br/>* P, U के ठीक ऊपर रहता है।<br/>* S, Q के ऊपर रहता है।</blockquote><br/><b>प्रश्न:</b> S और U के बीच कितने लोग रहते हैं?",
-    "o": ["One", "Two", "Three", "Four"],
-    "a": 2,
-    "e": "<b>Solution:</b><br/>Final Order (7 to 1): V, T, S, Q, R, P, U.<br/>S is on 5th floor, U is on 1st floor.<br/>Between them: Q(4), R(3), P(2) = 3 people."
-  },
-  {
-    "qe": "<b>Floor Puzzle (2/5)</b><br/>---<br/><blockquote><b>Puzzle Paragraph:</b><br/>7 persons P, Q, R, S, T, U, V live on 7 different floors (numbered 1 to 7).<br/>* T lives on an even numbered floor.<br/>* Only two persons live between T and R.<br/>* Q lives immediately above R.<br/>* V lives on an odd numbered floor above T.<br/>* P lives immediately above U.<br/>* S lives above Q.</blockquote><br/><b>Question:</b> Who lives on the 4th floor?",
-    "qh": "<b>फ्लोर पजल (2/5)</b><br/>---<br/><blockquote><b>पहेली पैराग्राफ:</b><br/>7 व्यक्ति P-V मंजिलों 1-7 पर रहते हैं। T सम मंजिल पर, T-R के बीच 2 लोग, Q, R के ठीक ऊपर, V, T के ऊपर विषम मंजिल पर, P, U के ठीक ऊपर, S, Q के ऊपर।</blockquote><br/><b>प्रश्न:</b> चौथी मंजिल पर कौन रहता है?",
-    "o": ["S", "Q", "R", "T"],
-    "a": 1,
-    "e": "<b>Solution:</b><br/>From the arrangement: V(7), T(6), S(5), Q(4), R(3), P(2), U(1).<br/>Q lives on floor number 4."
-  },
-  {
-    "qe": "<b>Floor Puzzle (3/5)</b><br/>---<br/><blockquote><b>Puzzle Paragraph:</b><br/>7 persons P, Q, R, S, T, U, V live on 7 different floors (numbered 1 to 7).<br/>* T lives on an even numbered floor.<br/>* Only two persons live between T and R.<br/>* Q lives immediately above R.<br/>* V lives on an odd numbered floor above T.<br/>* P lives immediately above U.<br/>* S lives above Q.</blockquote><br/><b>Question:</b> Who lives immediately above T?",
-    "qh": "<b>फ्लोर पजल (3/5)</b><br/>---<br/><blockquote><b>पहेली पैराग्राफ:</b><br/>7 व्यक्ति P-V मंजिलों 1-7 पर रहते हैं। T सम मंजिल पर, T-R के बीच 2 लोग, Q, R के ठीक ऊपर, V, T के ऊपर विषम मंजिल पर, P, U के ठीक ऊपर, S, Q के ऊपर।</blockquote><br/><b>प्रश्न:</b> T के ठीक ऊपर कौन रहता है?",
-    "o": ["V", "S", "P", "Q"],
-    "a": 0,
-    "e": "<b>Solution:</b><br/>T is on floor 6. V is on floor 7.<br/>So V lives immediately above T."
-  },
-  {
-    "qe": "<b>Floor Puzzle (4/5)</b><br/>---<br/><blockquote><b>Puzzle Paragraph:</b><br/>7 persons P, Q, R, S, T, U, V live on 7 different floors (numbered 1 to 7).<br/>* T lives on an even numbered floor.<br/>* Only two persons live between T and R.<br/>* Q lives immediately above R.<br/>* V lives on an odd numbered floor above T.<br/>* P lives immediately above U.<br/>* S lives above Q.</blockquote><br/><b>Question:</b> If all are arranged alphabetically from top to bottom (7 to 1), how many remain unchanged?",
-    "qh": "<b>फ्लोर पजल (4/5)</b><br/>---<br/><blockquote><b>पहेली पैराग्राफ:</b><br/>7 व्यक्ति P-V मंजिलों 1-7 पर रहते हैं। T सम मंजिल पर, T-R के बीच 2 लोग, Q, R के ठीक ऊपर, V, T के ऊपर विषम मंजिल पर, P, U के ठीक ऊपर, S, Q के ऊपर।</blockquote><br/><b>प्रश्न:</b> यदि सभी को ऊपर से नीचे (7 से 1) वर्णानुक्रम में व्यवस्थित किया जाए, तो कितने अपरिवर्तित रहेंगे?",
-    "o": ["One", "Two", "Three", "None"],
-    "a": 0,
-    "e": "<b>Solution:</b><br/>Original: V, T, S, Q, R, P, U<br/>Alpha: V, U, T, S, R, Q, P<br/>Only V remains at floor 7. (Count = 1)."
-  },
-  {
-    "qe": "<b>Floor Puzzle (5/5)</b><br/>---<br/><blockquote><b>Puzzle Paragraph:</b><br/>7 persons P, Q, R, S, T, U, V live on 7 different floors (numbered 1 to 7).<br/>* T lives on an even numbered floor.<br/>* Only two persons live between T and R.<br/>* Q lives immediately above R.<br/>* V lives on an odd numbered floor above T.<br/>* P lives immediately above U.<br/>* S lives above Q.</blockquote><br/><b>Question:</b> On which floor does S live?",
-    "qh": "<b>फ्लोर पजल (5/5)</b><br/>---<br/><blockquote><b>पहेली पैराग्राफ:</b><br/>7 व्यक्ति P-V मंजिलों 1-7 पर रहते हैं। T सम मंजिल पर, T-R के बीच 2 लोग, Q, R के ठीक ऊपर, V, T के ऊपर विषम मंजिल पर, P, U के ठीक ऊपर, S, Q के ऊपर।</blockquote><br/><b>प्रश्न:</b> S किस मंजिल पर रहता है?",
-    "o": ["5th floor", "3rd floor", "2nd floor", "7th floor"],
-    "a": 0,
-    "e": "<b>Solution:</b><br/>The order is: 7-V, 6-T, 5-S, 4-Q, 3-R, 2-P, 1-U.<br/>S lives on floor 5."
-  },
-  
-  {
-    "qe": "<b>Syllogism (1/5)</b><br/>---<br/><blockquote><b>Statements:</b><br/>* Only a few Rivers are Oceans.<br/>* All Oceans are Lakes.<br/>* No Lake is Pond.</blockquote><br/><b>Question:</b> Which conclusions follow?<br/>I. All Rivers being Ponds is a possibility.<br/>II. Some Lakes are definitely not Ponds.",
-    "qh": "<b>न्याय निगमन (1/5)</b><br/>---<br/><blockquote><b>कथन:</b><br/>* केवल कुछ नदियाँ महासागर हैं।<br/>* सभी महासागर झीलें हैं।<br/>* कोई झील तालाब नहीं है।</blockquote><br/><b>प्रश्न:</b> कौन सा निष्कर्ष अनुसरण करता है?<br/>I. सभी नदियों के तालाब होने की संभावना है।<br/>II. कुछ झीलें निश्चित रूप से तालाब नहीं हैं।",
-    "o": ["Only I", "Only II", "Both", "Neither"],
-    "a": 1,
-    "e": "<b>Solution:</b> Since no Lake is Pond, and all Oceans are Lakes, no Ocean is Pond. Rivers part of Oceans cannot be Ponds. Thus I is false. II is definitely true."
-  },
-  {
-    "qe": "<b>Syllogism (2/5)</b><br/>---<br/><blockquote><b>Statements:</b><br/>* All A are B.<br/>* Only a few B are C.<br/>* No C is D.</blockquote><br/><b>Question:</b> Which conclusions follow?<br/>I. Some B are not D.<br/>II. All A can be C.",
-    "qh": "<b>न्याय निगमन (2/5)</b><br/>---<br/><blockquote><b>कथन:</b><br/>* सभी A, B हैं।<br/>* केवल कुछ B, C हैं।<br/>* कोई C, D नहीं है।</blockquote><br/><b>प्रश्न:</b> कौन सा निष्कर्ष अनुसरण करता है?<br/>I. कुछ B, D नहीं हैं।<br/>II. सभी A, C हो सकते हैं।",
-    "o": ["Only I", "Only II", "Both", "Neither"],
-    "a": 2,
-    "e": "<b>Solution:</b> B that is C cannot be D (I is true). There is no direct negative relation between A and C (II is true)."
-  },
-  {
-    "qe": "<b>Syllogism (3/5)</b><br/>---<br/><blockquote><b>Statements:</b><br/>* Only a few Towns are Villages.<br/>* All Villages are States.<br/>* Some States are Districts.</blockquote><br/><b>Question:</b> Which conclusions follow?<br/>I. All Towns can be Villages.<br/>II. Some Towns are States.",
-    "qh": "<b>न्याय निगमन (3/5)</b><br/>---<br/><blockquote><b>कथन:</b><br/>* केवल कुछ कस्बे गाँव हैं।<br/>* सभी गाँव राज्य हैं।<br/>* कुछ राज्य जिले हैं।</blockquote><br/><b>प्रश्न:</b> कौन सा निष्कर्ष अनुसरण करता है?<br/>I. सभी कस्बे गाँव हो सकते हैं।<br/>II. कुछ कस्बे राज्य हैं।",
-    "o": ["Only I", "Only II", "Both", "Neither"],
-    "a": 1,
-    "e": "<b>Solution:</b> 'Only a few' prevents all Towns from being Villages (I false). Since all Villages are States, Towns that are Villages must be States (II true)."
-  },
-  {
-    "qe": "<b>Syllogism (4/5)</b><br/>---<br/><blockquote><b>Statements:</b><br/>* No Blue is Red.<br/>* Some Red are Pink.<br/>* All Pink are Yellow.</blockquote><br/><b>Question:</b> Which conclusions follow?<br/>I. Some Yellow are not Blue.<br/>II. All Pink can be Blue.",
-    "qh": "<b>न्याय निगमन (4/5)</b><br/>---<br/><blockquote><b>कथन:</b><br/>* कोई नीला लाल नहीं है।<br/>* कुछ लाल गुलाबी हैं।<br/>* सभी गुलाबी पीले हैं।</blockquote><br/><b>प्रश्न:</b> कौन सा निष्कर्ष अनुसरण करता है?<br/>I. कुछ पीले नीले नहीं हैं।<br/>II. सभी गुलाबी नीले हो सकते हैं।",
-    "o": ["Only I", "Only II", "Both", "Neither"],
-    "a": 0,
-    "e": "<b>Solution:</b> Pink that is Red cannot be Blue. Since all Pink is Yellow, that portion of Yellow cannot be Blue (I true). II is false."
-  },
-  {
-    "qe": "<b>Syllogism (5/5)</b><br/>---<br/><blockquote><b>Statements:</b><br/>* All Gold are Silver.<br/>* No Silver is Diamond.<br/>* Some Diamonds are Platinum.</blockquote><br/><b>Question:</b> Which conclusions follow?<br/>I. No Gold is Diamond.<br/>II. Some Platinum are not Silver.",
-    "qh": "<b>न्याय निगमन (5/5)</b><br/>---<br/><blockquote><b>कथन:</b><br/>* सभी सोना चांदी हैं।<br/>* कोई चांदी हीरा नहीं है।<br/>* कुछ हीरे प्लेटिनम हैं।</blockquote><br/><b>प्रश्न:</b> कौन सा निष्कर्ष अनुसरण करता है?<br/>I. कोई सोना हीरा नहीं है।<br/>II. कुछ प्लेटिनम चांदी नहीं हैं।",
-    "o": ["Only I", "Only II", "Both", "Neither"],
-    "a": 2,
-    "e": "<b>Solution:</b> Gold is inside Silver, so no Gold can be Diamond (I true). Platinum part of Diamond cannot be Silver (II true)."
-  },
-  
-  {
-    "qe": "<b>Month Puzzle (1/5)</b><br/>---<br/><blockquote><b>Puzzle Paragraph:</b><br/>5 persons A, B, C, D, E born in Mar, Apr, May, Jun, Jul. A born in 30 days month. 2 between A and B. C born immediately before B. E born in 31 days but not Mar.</blockquote><br/><b>Question:</b> In which month was D born?",
-    "qh": "<b>महीना पहेली (1/5)</b><br/>---<br/><blockquote><b>पहेली पैराग्राफ:</b><br/>5 व्यक्ति A-E मार्च-जुलाई में पैदा हुए। A 30 दिन वाले महीने में पैदा हुआ। A-B के बीच 2 लोग। C, B से ठीक पहले। E 31 दिन वाले में लेकिन मार्च में नहीं।</blockquote><br/><b>प्रश्न:</b> D किस महीने में पैदा हुआ था?",
-    "o": ["March", "May", "July", "June"],
-    "a": 0,
-    "e": "<b>Solution:</b> D(Mar), A(Apr), E(May), C(Jun), B(Jul)."
-  },
-  {
-    "qe": "<b>Month Puzzle (2/5)</b><br/>---<br/><blockquote><b>Puzzle Paragraph:</b><br/>(Same data) D(Mar), A(Apr), E(May), C(Jun), B(Jul).</blockquote><br/><b>Question:</b> Who was born in May?",
-    "qh": "<b>महीना पहेली (2/5)</b><br/>---<br/><blockquote><b>पहेली पैराग्राफ:</b><br/>(वही डेटा) D(मार्च), A(अप्रैल), E(मई), C(जून), B(जुलाई)।</blockquote><br/><b>प्रश्न:</b> मई में कौन पैदा हुआ था?",
-    "o": ["A", "B", "E", "C"],
-    "a": 2,
-    "e": "<b>Solution:</b> E was born in May."
-  },
-  {
-    "qe": "<b>Month Puzzle (3/5)</b><br/>---<br/><blockquote><b>Puzzle Paragraph:</b><br/>(Same data) D(Mar), A(Apr), E(May), C(Jun), B(Jul).</blockquote><br/><b>Question:</b> How many people born between D and C?",
-    "qh": "<b>महीना पहेली (3/5)</b><br/>---<br/><blockquote><b>पहेली पैराग्राफ:</b><br/>(वही डेटा) D(मार्च), A(अप्रैल), E(मई), C(जून), B(जुलाई)।</blockquote><br/><b>प्रश्न:</b> D और C के बीच कितने लोग पैदा हुए थे?",
-    "o": ["One", "Two", "Three", "None"],
-    "a": 1,
-    "e": "<b>Solution:</b> Between D (Mar) and C (Jun) are A and E (2 people)."
-  },
-  {
-    "qe": "<b>Month Puzzle (4/5)</b><br/>---<br/><blockquote><b>Puzzle Paragraph:</b><br/>(Same data) D(Mar), A(Apr), E(May), C(Jun), B(Jul).</blockquote><br/><b>Question:</b> Who born immediately after A?",
-    "qh": "<b>महीना पहेली (4/5)</b><br/>---<br/><blockquote><b>पहेली पैराग्राफ:</b><br/>(वही डेटा) D(मार्च), A(अप्रैल), E(मई), C(जून), B(जुलाई)।</blockquote><br/><b>प्रश्न:</b> A के ठीक बाद कौन पैदा हुआ था?",
-    "o": ["C", "E", "D", "B"],
-    "a": 1,
-    "e": "<b>Solution:</b> E was born immediately after A."
-  },
-  {
-    "qe": "<b>Month Puzzle (5/5)</b><br/>---<br/><blockquote><b>Puzzle Paragraph:</b><br/>(Same data) D(Mar), A(Apr), E(May), C(Jun), B(Jul).</blockquote><br/><b>Question:</b> B born in which month?",
-    "qh": "<b>महीना पहेली (5/5)</b><br/>---<br/><blockquote><b>पहेली पैराग्राफ:</b><br/>(वही डेटा) D(मार्च), A(अप्रैल), E(मई), C(जून), B(जुलाई)।</blockquote><br/><b>प्रश्न:</b> B किस महीने में पैदा हुआ था?",
-    "o": ["July", "June", "May", "March"],
-    "a": 0,
-    "e": "<b>Solution:</b> B was born in July."
-  },
-  {
-    "qe": "<b>Seating Arrangement (1/5)</b><br/>---<br/><blockquote><b>Puzzle Paragraph:</b><br/>6 persons P-U sit in a circle. P faces center. R is 2nd left of P. Q neighbor of R faces out. T is 2nd right of Q. S and U face same as T. U is 2nd left of R.</blockquote><br/><b>Question:</b> Who sits opposite to P?",
-    "qh": "<b>बैठक व्यवस्था (1/5)</b><br/>---<br/><blockquote><b>पहेली पैराग्राफ:</b><br/>6 व्यक्ति P-U वृत्त में बैठे हैं। P केंद्र की ओर है। R, P के बाएं से दूसरा है। Q, R का पड़ोसी बाहर की ओर है। T, Q के दाएं से दूसरा है। S/U, T की दिशा में हैं। U, R के बाएं से दूसरा है।</blockquote><br/><b>प्रश्न:</b> P के विपरीत कौन बैठा है?",
-    "o": ["Q", "S", "T", "U"],
-    "a": 2,
-    "e": "<b>Solution:</b> Arrangement: P(In), T, S, R, Q(Out), U. T opposite P."
-  },
-  {
-    "qe": "<b>Seating Arrangement (2/5)</b><br/>---<br/><blockquote><b>Puzzle Paragraph:</b><br/>(Same data) Arrangement: P(In), T, S, R, Q(Out), U. T, S, U face center.</blockquote><br/><b>Question:</b> Position of S with respect to R?",
-    "qh": "<b>बैठक व्यवस्था (2/5)</b><br/>---<br/><blockquote><b>पहेली पैराग्राफ:</b><br/>(वही डेटा) व्यवस्था: P(In), T, S, R, Q(Out), U.</blockquote><br/><b>प्रश्न:</b> R के संबंध में S की स्थिति क्या है?",
-    "o": ["Immediate Left", "Immediate Right", "2nd Left", "Opposite"],
-    "a": 0,
-    "e": "<b>Solution:</b> S is to the immediate left of R."
-  },
-  {
-    "qe": "<b>Seating Arrangement (3/5)</b><br/>---<br/><blockquote><b>Puzzle Paragraph:</b><br/>(Same data) Arrangement: P(In), T, S, R, Q(Out), U.</blockquote><br/><b>Question:</b> Who faces outside?",
-    "qh": "<b>बैठक व्यवस्था (3/5)</b><br/>---<br/><blockquote><b>पहेली पैराग्राफ:</b><br/>(वही डेटा) व्यवस्था: P(In), T, S, R, Q(Out), U.</blockquote><br/><b>प्रश्न:</b> किसका मुख बाहर की ओर है?",
-    "o": ["P", "Q", "R", "T"],
-    "a": 1,
-    "e": "<b>Solution:</b> Only Q faces outside."
-  },
-  {
-    "qe": "<b>Seating Arrangement (4/5)</b><br/>---<br/><blockquote><b>Puzzle Paragraph:</b><br/>(Same data) Arrangement: P(In), T, S, R, Q(Out), U.</blockquote><br/><b>Question:</b> Who sits 2nd to right of P?",
-    "qh": "<b>बैठक व्यवस्था (4/5)</b><br/>---<br/><blockquote><b>पहेली पैराग्राफ:</b><br/>(वही डेटा) व्यवस्था: P(In), T, S, R, Q(Out), U.</blockquote><br/><b>प्रश्न:</b> P के दाएं से दूसरे स्थान पर कौन बैठा है?",
-    "o": ["Q", "S", "R", "U"],
-    "a": 3,
-    "e": "<b>Solution:</b> U sits 2nd to the right of P."
-  },
-  {
-    "qe": "<b>Seating Arrangement (5/5)</b><br/>---<br/><blockquote><b>Puzzle Paragraph:</b><br/>(Same data) Arrangement: P(In), T, S, R, Q(Out), U.</blockquote><br/><b>Question:</b> Neighbor of T?",
-    "qh": "<b>बैठक व्यवस्था (5/5)</b><br/>---<br/><blockquote><b>पहेली पैराग्राफ:</b><br/>(वही डेटा) व्यवस्था: P(In), T, S, R, Q(Out), U.</blockquote><br/><b>प्रश्न:</b> T का पड़ोसी कौन है?",
-    "o": ["P and S", "P and U", "R and S", "Q and U"],
-    "a": 0,
-    "e": "<b>Solution:</b> T is between P and S."
-  },
-  {
-    "qe": "<b>Coding-Decoding</b><br/>---<br/><b>Question:</b> If 'KING' is 'PRMT', then 'RAIN' is?",
-    "qh": "<b>कोडिंग-डिकोडिंग</b><br/>---<br/><b>प्रश्न:</b> यदि 'KING', 'PRMT' है, तो 'RAIN' क्या है?",
-    "o": ["IZRM", "IZRN", "IARM", "IZSM"],
-    "a": 1,
-    "e": "<b>Solution:</b> Opposite letters: R-I, A-Z, I-R, N-M."
-  },
-  {
-    "qe": "<b>Direction Sense</b><br/>---<br/><b>Question:</b> West faces 45° clockwise?",
-    "qh": "<b>दिशा परीक्षण</b><br/>---<br/><b>प्रश्न:</b> पश्चिम की ओर मुख, 45° दक्षिणावर्त?",
-    "o": ["NW", "NE", "SW", "W"],
-    "a": 0,
-    "e": "<b>Solution:</b> North-West."
-  },
-  {
-    "qe": "<b>Analogy</b><br/>---<br/><b>Question:</b> 8 : 64 :: 11 : ?",
-    "qh": "<b>सादृश्यता</b><br/>---<br/><b>प्रश्न:</b> 8 : 64 :: 11 : ?",
-    "o": ["121", "132", "110", "144"],
-    "a": 0,
-    "e": "<b>Solution:</b> 11² = 121."
-  },
-  {
-    "qe": "<b>Classification</b><br/>---<br/><b>Question:</b> Odd one: Patna, Lucknow, Bhopal, Gaya?",
-    "qh": "<b>वर्गीकरण</b><br/>---<br/><b>प्रश्न:</b> विषम चुनें: पटना, लखनऊ, भोपाल, गया?",
-    "o": ["Patna", "Lucknow", "Bhopal", "Gaya"],
-    "a": 3,
-    "e": "<b>Solution:</b> Gaya is not a capital."
-  },
-  {
-    "qe": "<b>Blood Relation</b><br/>---<br/><b>Question:</b> Mother of my son's daughter?",
-    "qh": "<b>रक्त संबंध</b><br/>---<br/><b>प्रश्न:</b> मेरे बेटे की बेटी की माँ?",
-    "o": ["Wife", "Daughter-in-law", "Sister", "Mother"],
-    "a": 1,
-    "e": "<b>Solution:</b> Daughter-in-law."
-  },
-  {
-    "qe": "<b>Analogy</b><br/>---<br/><b>Question:</b> Architect : Building :: Sculptor : ?",
-    "qh": "<b>सादृश्यता</b><br/>---<br/><b>प्रश्न:</b> वास्तुकार : भवन :: मूर्तिकार : ?",
-    "o": ["Museum", "Stone", "Statue", "Chisel"],
-    "a": 2,
-    "e": "<b>Solution:</b> Statue."
-  },
-  {
-    "qe": "<b>Classification</b><br/>---<br/><b>Question:</b> Odd: 27, 64, 125, 144?",
-    "qh": "<b>वर्गीकरण</b><br/>---<br/><b>प्रश्न:</b> विषम: 27, 64, 125, 144?",
-    "o": ["27", "64", "125", "144"],
-    "a": 3,
-    "e": "<b>Solution:</b> 144 is square."
-  },
-  {
-    "qe": "<b>Direction</b><br/>---<br/><b>Question:</b> 90° CW, 180° CW, 270° ACW. West?",
-    "qh": "<b>दिशा</b><br/>---<br/><b>प्रश्न:</b> 90° CW, 180° CW, 270° ACW. पश्चिम?",
-    "o": ["West", "East", "North", "South"],
-    "a": 0,
-    "e": "<b>Solution:</b> West."
-  },
-  {
-    "qe": "<b>Coding</b><br/>---<br/><b>Question:</b> 'A'=1, 'CAT'=24, 'DOG'=?",
-    "qh": "<b>कोडिंग</b><br/>---<br/><b>प्रश्न:</b> 'A'=1, 'CAT'=24, 'DOG'=?",
-    "o": ["26", "24", "22", "28"],
-    "a": 0,
-    "e": "<b>Solution:</b> 4+15+7=26."
-  },
-  {
-    "qe": "<b>Classification</b><br/>---<br/><b>Question:</b> Odd: Table, Chair, Tree?",
-    "qh": "<b>वर्गीकरण</b><br/>---<br/><b>प्रश्न:</b> विषम: मेज, कुर्सी, पेड़?",
-    "o": ["Table", "Chair", "Cupboard", "Tree"],
-    "a": 3,
-    "e": "<b>Solution:</b> Tree is living."
-  }
-
-]
+{
+  "puzzle_library": [
+    {
+      "p_id": "mains_floor_p1",
+      "pe": "<blockquote>7 persons P, Q, R, S, T, U, V live on 7 different floors (1-7). T lives on an even floor. Only two persons live between T and R. Q lives immediately above R. V lives on an odd floor above T. P lives immediately above U. S lives above Q.</blockquote>",
+      "ph": "<blockquote>7 व्यक्ति P, Q, R, S, T, U, V 7 अलग मंजिलों (1-7) पर रहते हैं। T सम मंजिल पर है। T-R के बीच 2 लोग हैं। Q, R के ठीक ऊपर है। V, T के ऊपर विषम मंजिल पर है। P, U के ठीक ऊपर है। S, Q के ऊपर है।</blockquote>"
+    },
+    {
+      "p_id": "mains_month_p2",
+      "pe": "<blockquote>6 persons P, Q, R, S, T, U attend a seminar in Jan, Feb, Mar, Apr, May, and Jun. P attends in a month having 31 days. Only one person attends between P and Q. R attends immediately after Q. S attends in April. T attends before U.</blockquote>",
+      "ph": "<blockquote>6 व्यक्ति P, Q, R, S, T, U जन, फर, मार्च, अप्रैल, मई और जून में सेमिनार में भाग लेते हैं। P 31 दिन वाले महीने में भाग लेता है। P और Q के बीच केवल एक व्यक्ति भाग लेता है। R, Q के ठीक बाद भाग लेता है। S अप्रैल में भाग लेता है। T, U से पहले भाग लेता है।</blockquote>"
+    },
+    {
+      "p_id": "mains_seating_p3",
+      "pe": "<blockquote>6 persons P, Q, R, S, T, U sit around a circular table. Some face center, some face outside. P faces center. R is 2nd to the left of P. Q is neighbor of R and faces outside. T is 2nd to the right of Q. S and U face the same direction as T. U is 2nd to the left of R.</blockquote>",
+      "ph": "<blockquote>6 व्यक्ति P, Q, R, S, T, U एक वृत्ताकार मेज पर बैठे हैं। कुछ केंद्र की ओर, कुछ बाहर की ओर मुख किए हैं। P केंद्र की ओर है। R, P के बाएं से दूसरा है। Q, R का पड़ोसी है और बाहर की ओर मुख किए है। T, Q के दाएं से दूसरा है। S और U, T की दिशा में हैं। U, R के बाएं से दूसरा है।</blockquote>"
+    }
+  ],
+  "questions": [
+    {
+      "p_id": "mains_floor_p1",
+      "qe": "<b>Floor Puzzle (1/5):</b> How many people live between S and U?",
+      "qh": "<b>फ्लोर पजल (1/5):</b> S और U के बीच कितने लोग रहते हैं?",
+      "o": ["One", "Two", "Three", "Four"],
+      "a": 2,
+      "e": "Order: V(7)-T(6)-S(5)-Q(4)-R(3)-P(2)-U(1). Between S and U are Q, R, P."
+    },
+    {
+      "p_id": "mains_floor_p1",
+      "qe": "<b>Floor Puzzle (2/5):</b> Who lives on the 4th floor?",
+      "qh": "<b>फ्लोर पजल (2/5):</b> चौथी मंजिल पर कौन रहता है?",
+      "o": ["S", "Q", "R", "T"],
+      "a": 1,
+      "e": "Q lives on the 4th floor."
+    },
+    {
+      "p_id": "",
+      "qe": "<b>Syllogism:</b> Only a few Books are Pens. All Pens are Pencils.",
+      "qh": "<b>न्याय निगमन:</b> केवल कुछ किताबें पेन हैं। सभी पेन पेंसिल हैं।",
+      "o": ["Only I follows", "Only II follows", "Both", "Neither"],
+      "a": 1,
+      "e": "Conclusion I: All Books can be Pens (False). II: Some Pencils are Books (True)."
+    }
+  ]
+}
