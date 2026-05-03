@@ -1,93 +1,247 @@
 [
   {
-    "q": "<b>Cloze Test (1/5):</b> Select the most appropriate option for <b>Blank No. 1</b>.<br/><br/><i>'The environment is (1)______ due to human activities. Climate change has led to (2)______ weather patterns. It is high time we (3)______ corrective measures. (4)______ use of plastics must be discouraged. Our future (5)______ on our actions today.'</i>",
-    "o": ["deteriorating", "improving", "flourishing", "expanding"],
+    "q": "<b>Cloze Test (1/5):</b> Select the most appropriate option for <b>Blank No. 1</b>.<br/><br/><i>'The recent (1)______ in cyber-attacks has highlighted the (2)______ of our digital infrastructure. Experts believe that a (3)______ approach is needed to combat these threats. It is not just about installing software; it is about (4)______ a culture of security. Failure to do so could lead to (5)______ consequences for global trade.'</i>",
+    "o": ["surge", "decline", "stability", "recession"],
     "a": 0,
-    "e": "Blank 1: 'Deteriorating' (बिगड़ना) पर्यावरण के खराब होने के लिए सबसे सटीक शब्द है।",
+    "e": "Blank 1: 'Surge' (तेजी से वृद्धि) यहाँ सबसे सटीक है क्योंकि हमलों के बढ़ने का उल्लेख है।",
     "cat": "english", "sub": "cloze-test"
   },
   {
-    "q": "<b>Cloze Test (2/5):</b> Select the most appropriate option for <b>Blank No. 2</b>.<br/><br/><i>'The environment is (1)______ due to human activities. Climate change has led to (2)______ weather patterns. It is high time we (3)______ corrective measures. (4)______ use of plastics must be discouraged. Our future (5)______ on our actions today.'</i>",
-    "o": ["erratic", "consistent", "stable", "predictable"],
+    "q": "<b>Cloze Test (2/5):</b> Select the most appropriate option for <b>Blank No. 2</b>.<br/><br/><i>'The recent (1)______ in cyber-attacks has highlighted the (2)______ of our digital infrastructure. Experts believe that a (3)______ approach is needed to combat these threats. It is not just about installing software; it is about (4)______ a culture of security. Failure to do so could lead to (5)______ consequences for global trade.'</i>",
+    "o": ["vulnerability", "strength", "resilience", "opacity"],
     "a": 0,
-    "e": "Blank 2: 'Erratic' (अनिश्चित) मौसम के बदलते मिजाज के लिए उपयोग होता है।",
+    "e": "Blank 2: 'Vulnerability' (भेद्यता/कमजोरी) का अर्थ है डिजिटल ढांचे की कमजोरियां उजागर होना।",
     "cat": "english", "sub": "cloze-test"
   },
   {
-    "q": "<b>Cloze Test (3/5):</b> Select the most appropriate option for <b>Blank No. 3</b>.<br/><br/><i>'The environment is (1)______ due to human activities. Climate change has led to (2)______ weather patterns. It is high time we (3)______ corrective measures. (4)______ use of plastics must be discouraged. Our future (5)______ on our actions today.'</i>",
-    "o": ["took", "take", "taken", "taking"],
+    "q": "<b>Cloze Test (3/5):</b> Select the most appropriate option for <b>Blank No. 3</b>.<br/><br/><i>'The recent (1)______ in cyber-attacks has highlighted the (2)______ of our digital infrastructure. Experts believe that a (3)______ approach is needed to combat these threats. It is not just about installing software; it is about (4)______ a culture of security. Failure to do so could lead to (5)______ consequences for global trade.'</i>",
+    "o": ["holistic", "fragmented", "casual", "isolated"],
     "a": 0,
-    "e": "Grammar: 'It is high time' के बाद हमेशा Simple Past (V2 - took) का प्रयोग होता है।",
+    "e": "Blank 3: 'Holistic' (समग्र/पूर्ण) दृष्टिकोण का अर्थ है सभी पहलुओं को ध्यान में रखना।",
     "cat": "english", "sub": "cloze-test"
   },
   {
-    "q": "<b>Cloze Test (4/5):</b> Select the most appropriate option for <b>Blank No. 4</b>.<br/><br/><i>'The environment is (1)______ due to human activities. Climate change has led to (2)______ weather patterns. It is high time we (3)______ corrective measures. (4)______ use of plastics must be discouraged. Our future (5)______ on our actions today.'</i>",
-    "o": ["indiscriminate", "selective", "careful", "planned"],
+    "q": "<b>Cloze Test (4/5):</b> Select the most appropriate option for <b>Blank No. 4</b>.<br/><br/><i>'The recent (1)______ in cyber-attacks has highlighted the (2)______ of our digital infrastructure. Experts believe that a (3)______ approach is needed to combat these threats. It is not just about installing software; it is about (4)______ a culture of security. Failure to do so could lead to (5)______ consequences for global trade.'</i>",
+    "o": ["fostering", "hindering", "ignoring", "abolishing"],
     "a": 0,
-    "e": "Blank 4: 'Indiscriminate' (बिना सोचे-समझे/अंधाधुंध) प्लास्टिक के इस्तेमाल के लिए सही शब्द है।",
+    "e": "Blank 4: 'Fostering' (बढ़ावा देना/पालना) सुरक्षा की संस्कृति को विकसित करने के लिए सही शब्द है।",
     "cat": "english", "sub": "cloze-test"
   },
   {
-    "q": "<b>Cloze Test (5/5):</b> Select the most appropriate option for <b>Blank No. 5</b>.<br/><br/><i>'The environment is (1)______ due to human activities. Climate change has led to (2)______ weather patterns. It is high time we (3)______ corrective measures. (4)______ use of plastics must be discouraged. Our future (5)______ on our actions today.'</i>",
-    "o": ["hinges", "fades", "drifts", "withdraws"],
+    "q": "<b>Cloze Test (5/5):</b> Select the most appropriate option for <b>Blank No. 5</b>.<br/><br/><i>'The recent (1)______ in cyber-attacks has highlighted the (2)______ of our digital infrastructure. Experts believe that a (3)______ approach is needed to combat these threats. It is not just about installing software; it is about (4)______ a culture of security. Failure to do so could lead to (5)______ consequences for global trade.'</i>",
+    "o": ["catastrophic", "beneficial", "trivial", "insignificant"],
     "a": 0,
-    "e": "Blank 5: 'Hinges on' (पर निर्भर होना) एक Phrasal Verb है जिसका अर्थ 'Depends on' है।",
+    "e": "Blank 5: 'Catastrophic' (तबाही मचाने वाला) उन गंभीर परिणामों के लिए उपयोग होता है जो व्यापार को रोक सकते हैं।",
     "cat": "english", "sub": "cloze-test"
   },
   {
-    "q": "<b>Error Spotting:</b> Not only the (A) / doctors but (B) / also the nurse (C) / were vigilant (D).",
+    "q": "<b>Error Spotting (1/5):</b> Scarcely had I (A) / started reading (B) / the paper than (C) / the doorbell rang (D).",
     "o": ["A", "B", "C", "D"],
-    "a": 3,
-    "e": "Rule: 'Not only... but also' में verb पास वाले subject (nurse - Singular) के अनुसार 'was' होनी चाहिए।",
+    "a": 2,
+    "e": "Rule: 'Scarcely/Hardly' के साथ 'when' का प्रयोग होता है, 'than' का नहीं।",
     "cat": "english", "sub": "error-spotting"
   },
   {
-    "q": "<b>Error Spotting:</b> He had (A) / scarcely finished (B) / his meal (C) / than the phone rang (D).",
+    "q": "<b>Error Spotting (2/5):</b> If I were (A) / the Prime Minister (B) / I would have (C) / removed corruption (D).",
     "o": ["A", "B", "C", "D"],
-    "a": 3,
-    "e": "Rule: 'Scarcely' के साथ 'when' का प्रयोग होता है, 'than' का नहीं।",
+    "a": 2,
+    "e": "Conditional Type 2: 'If I were' (काल्पनिक वर्तमान) के साथ 'would + V1' (would remove) आता है, 'would have + V3' नहीं।",
     "cat": "english", "sub": "error-spotting"
   },
   {
-    "q": "<b>Error Spotting:</b> I would (A) / rather die (B) / than (C) / to beg (D).",
+    "q": "<b>Error Spotting (3/5):</b> Not only did (A) / he help the (B) / poor but also (C) / the orphans (D).",
     "o": ["A", "B", "C", "D"],
-    "a": 3,
-    "e": "Rule: 'Would rather... than' के बाद bare infinitive (बिना 'to' के V1) आता है। सही: 'than beg'।",
+    "a": 0,
+    "e": "Parallelism: 'Not only' को 'the poor' के पहले होना चाहिए। सही: 'He helped not only the poor but also the orphans.'",
     "cat": "english", "sub": "error-spotting"
   },
   {
-    "q": "<b>Error Spotting:</b> It is (A) / a most (B) / unique (C) / opportunity (D).",
+    "q": "<b>Error Spotting (4/5):</b> Neither of (A) / the three (B) / students has (C) / finished the task (D).",
+    "o": ["A", "B", "C", "D"],
+    "a": 0,
+    "e": "Rule: 'Neither' केवल दो के लिए आता है। तीन के लिए 'None' का प्रयोग होगा।",
+    "cat": "english", "sub": "error-spotting"
+  },
+  {
+    "q": "<b>Error Spotting (5/5):</b> It is (A) / high time (B) / that you (C) / start working (D).",
+    "o": ["A", "B", "C", "D"],
+    "a": 3,
+    "e": "Rule: 'It is high time' के बाद 'Subject + V2' आता है। सही: 'started working' ।",
+    "cat": "english", "sub": "error-spotting"
+  },
+  {
+    "q": "<b>Sentence Improvement:</b> He is the *most unique* person I have ever met.",
+    "o": ["a most unique", "a unique", "the unique", "No improvement"],
+    "a": 1,
+    "e": "Rule: 'Unique', 'Ideal', 'Perfect' जैसे शब्दों की degrees नहीं होतीं।",
+    "cat": "english", "sub": "improvement"
+  },
+  {
+    "q": "<b>Sentence Improvement:</b> Preferring death *than* dishonour is the mark of a hero.",
+    "o": ["rather than", "to", "over", "No improvement"],
+    "a": 1,
+    "e": "Rule: 'Prefer' के साथ हमेशा 'to' का प्रयोग होता है।",
+    "cat": "english", "sub": "improvement"
+  },
+  {
+    "q": "<b>Sentence Improvement:</b> No sooner *he had* reached the station than the train left.",
+    "o": ["had he", "he reached", "did he reached", "No improvement"],
+    "a": 0,
+    "e": "Inversion: 'No sooner' से शुरू होने वाले वाक्यों में auxiliary verb subject से पहले आती है।",
+    "cat": "english", "sub": "improvement"
+  },
+  {
+    "q": "<b>Sentence Improvement:</b> The climate of Patna is better than *Gaya*.",
+    "o": ["that of Gaya", "Gaya's climate", "those of Gaya", "No improvement"],
+    "a": 0,
+    "e": "Rule of Comparison: तुलना दो शहरों की नहीं, उनकी जलवायु की हो रही है। 'that of' लगाना ज़रूरी है।",
+    "cat": "english", "sub": "improvement"
+  },
+  {
+    "q": "<b>Sentence Improvement:</b> I *would rather to* sleep than watch this movie.",
+    "o": ["would rather", "would sooner to", "rather would", "No improvement"],
+    "a": 0,
+    "e": "Rule: 'Would rather' के बाद Bare Infinitive (V1 बिना 'to' के) आता है।",
+    "cat": "english", "sub": "improvement"
+  },
+  {
+    "q": "<b>Synonym of 'EPHEMERAL':</b>",
+    "o": ["Eternal", "Transient", "Stable", "Infinite"],
+    "a": 1,
+    "e": "Ephemeral का अर्थ है क्षणिक या थोड़े समय के लिए रहने वाला (Transient/Short-lived)।",
+    "cat": "english", "sub": "vocab"
+  },
+  {
+    "q": "<b>Synonym of 'LOQUACIOUS':</b>",
+    "o": ["Reticent", "Garrulous", "Silent", "Shy"],
+    "a": 1,
+    "e": "Loquacious का अर्थ है बातूनी। Garrulous इसका सटीक पर्यायवाची है।",
+    "cat": "english", "sub": "vocab"
+  },
+  {
+    "q": "<b>Antonym of 'ALACRITY':</b>",
+    "o": ["Eagerness", "Apathy", "Speed", "Promptness"],
+    "a": 1,
+    "e": "Alacrity (तत्परता/उत्साह) का उल्टा Apathy (उदासीनता/बेरुखी) है।",
+    "cat": "english", "sub": "vocab"
+  },
+  {
+    "q": "<b>Antonym of 'ZENITH':</b>",
+    "o": ["Peak", "Nadir", "Summit", "Acme"],
+    "a": 1,
+    "e": "Zenith (शीर्ष बिंदु) का उल्टा Nadir (सबसे निचला बिंदु) होता है।",
+    "cat": "english", "sub": "vocab"
+  },
+  {
+    "q": "<b>One-word Substitution:</b> A person who hates mankind.",
+    "o": ["Misogynist", "Misanthrope", "Philanthropist", "Optimist"],
+    "a": 1,
+    "e": "Misanthrope वह है जो मानव जाति से घृणा करता है।",
+    "cat": "english", "sub": "vocab"
+  },
+  {
+    "q": "<b>One-word Substitution:</b> A place where birds are kept.",
+    "o": ["Apiary", "Aviary", "Aquarium", "Kennel"],
+    "a": 1,
+    "e": "पक्षीशाला को 'Aviary' कहते हैं। (मधुमक्खी शाला Apiary होती है)।",
+    "cat": "english", "sub": "vocab"
+  },
+  {
+    "q": "<b>Idiom:</b> 'To spill the beans' means:",
+    "o": ["To cook well", "To reveal a secret", "To work hard", "To waste money"],
+    "a": 1,
+    "e": "इसका अर्थ है किसी गुप्त जानकारी या रहस्य को उजागर करना।",
+    "cat": "english", "sub": "vocab"
+  },
+  {
+    "q": "<b>Idiom:</b> 'A wild goose chase' means:",
+    "o": ["A profitable search", "A foolish and useless search", "A fast race", "A hunting trip"],
+    "a": 1,
+    "e": "इसका अर्थ है ऐसी व्यर्थ की खोज जिसका कोई फल न निकले।",
+    "cat": "english", "sub": "vocab"
+  },
+  {
+    "q": "<b>Active/Passive:</b> Who wrote the Ramayana?",
+    "o": ["By whom was the Ramayana written?", "Who was written the Ramayana?", "By whom the Ramayana is written?", "None"],
+    "a": 0,
+    "e": "Who को By whom में बदलकर Simple Past के लिए was/were + V3 लगाते हैं।",
+    "cat": "english", "sub": "voice"
+  },
+  {
+    "q": "<b>Active/Passive:</b> People say that the earth is round.",
+    "o": ["It is said that the earth is round", "Earth is round is said", "Round earth was said", "None"],
+    "a": 0,
+    "e": "Complex sentence में 'It is said that...' वाली संरचना मानक है।",
+    "cat": "english", "sub": "voice"
+  },
+  {
+    "q": "<b>Active/Passive:</b> Close the windows.",
+    "o": ["Let the windows be closed", "Windows should be close", "Close the windows by you", "None"],
+    "a": 0,
+    "e": "Imperative sentence का passive 'Let + Object + be + V3' होता है।",
+    "cat": "english", "sub": "voice"
+  },
+  {
+    "q": "<b>Direct/Indirect:</b> He said, 'I am busy now.'",
+    "o": ["He said that he is busy now", "He said that he was busy then", "He told he was busy", "None"],
+    "a": 1,
+    "e": "Present 'am' बदलकर Past 'was' और 'now' बदलकर 'then' हो जाता है।",
+    "cat": "english", "sub": "narration"
+  },
+  {
+    "q": "<b>Direct/Indirect:</b> The doctor said to him, 'Take your medicines.'",
+    "o": ["The doctor advised him to take his medicines", "Doctor said him to take", "Doctor told him take medicine", "None"],
+    "a": 0,
+    "e": "Doctor की बात अक्सर 'Advised' के रूप में रिपोर्ट की जाती है।",
+    "cat": "english", "sub": "narration"
+  },
+  {
+    "q": "<b>Direct/Indirect:</b> 'Where do you live?' she asked.",
+    "o": ["She asked where I live", "She asked where I lived", "She asked where was I living", "None"],
+    "a": 1,
+    "e": "Assertive structure (Sub+Verb) और Simple Past 'lived' सही है।",
+    "cat": "english", "sub": "narration"
+  },
+  {
+    "q": "<b>Sentence Rearrangement:</b> P: of our country Q: every citizen R: should respect S: the national flag",
+    "o": ["QPRS", "PQRS", "RQPS", "SPRQ"],
+    "a": 0,
+    "e": "सही क्रम: 'Every citizen of our country should respect the national flag' (QPRS)।",
+    "cat": "english", "sub": "pqr"
+  },
+  {
+    "q": "<b>Sentence Rearrangement:</b> P: success Q: hard work R: is S: the key to",
+    "o": ["QRSP", "PQRS", "RQPS", "SPQR"],
+    "a": 0,
+    "e": "सही क्रम: 'Hard work is the key to success' (QRSP)।",
+    "cat": "english", "sub": "pqr"
+  },
+  {
+    "q": "<b>Select correctly spelt word:</b>",
+    "o": ["Maintanance", "Maintenance", "Maintenence", "Maintinance"],
+    "a": 1,
+    "e": "सही स्पेलिंग 'Maintenance' (रखरखाव) है।",
+    "cat": "english", "sub": "vocab"
+  },
+  {
+    "q": "<b>Synonym of 'RECALCITRANT':</b>",
+    "o": ["Compliant", "Stubborn", "Passive", "Obedient"],
+    "a": 1,
+    "e": "Recalcitrant का अर्थ है हठधर्मी या आज्ञा न मानने वाला (Stubborn/Defiant)।",
+    "cat": "english", "sub": "vocab"
+  },
+  {
+    "q": "<b>Antonym of 'GREGARIOUS':</b>",
+    "o": ["Sociable", "Introvert", "Friendly", "Extrovert"],
+    "a": 1,
+    "e": "Gregarious (मिलनसार) का उल्टा 'Introvert' या 'Reclusive' होता है।",
+    "cat": "english", "sub": "vocab"
+  },
+  {
+    "q": "<b>Error Spotting:</b> He is (A) / junior than (B) / all his (C) / colleagues (D).",
     "o": ["A", "B", "C", "D"],
     "a": 1,
-    "e": "Unique के साथ 'most' नहीं लगता। सही: 'a unique opportunity'।",
+    "e": "Rule: Junior, Senior, Superior के साथ हमेशा 'to' लगता है, 'than' नहीं।",
     "cat": "english", "sub": "error-spotting"
-  },
-  {
-    "q": "<b>Error Spotting:</b> I can (A) / rely on (B) / him for (C) / his advices (D).",
-    "o": ["A", "B", "C", "D"],
-    "a": 3,
-    "e": "'Advice' uncountable है, इसका 'advices' नहीं होता। सही: 'his advice'।",
-    "cat": "english", "sub": "error-spotting"
-  },
-  {
-    "q": "<b>Idiom:</b> 'To burn one's boats' means:",
-    "o": ["To leave no means of retreat", "To start a fire", "To act bravely", "To be careless"],
-    "a": 0,
-    "e": "वापस लौटने के सभी रास्ते बंद कर देने को 'Burn one's boats' कहते हैं।",
-    "cat": "english", "sub": "vocab"
-  },
-  {
-    "q": "<b>One-word Substitution:</b> A person who is indifferent to pleasure or pain.",
-    "o": ["Stoic", "Hedonist", "Epicure", "Ascetic"],
-    "a": 0,
-    "e": "Stoic (वैरागी) वह है जिसे सुख-दुख से कोई फर्क न पड़े।",
-    "cat": "english", "sub": "vocab"
-  },
-  {
-    "q": "<b>Direct/Indirect:</b> He said, 'I will do it now.'",
-    "o": ["He said that he would do it then", "He said he will do then", "He told he did now", "None"],
-    "a": 0,
-    "e": "'Will' बदलकर 'would' और 'now' बदलकर 'then' हो जाता है।",
-    "cat": "english", "sub": "narration"
   }
 ]
