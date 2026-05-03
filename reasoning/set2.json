@@ -2,8 +2,13 @@
   "puzzle_library": [
     {
       "p_id": "floor_mains_01",
-      "pe": "7 persons P-V live on 7 floors (1-7). T-even floor. 2 between T-R. Q above R. V-odd above T. P above U. S above Q.",
-      "ph": "7 व्यक्ति P-V मंजिलों 1-7 पर। T सम मंजिल, T-R के बीच 2, Q, R के ऊपर, V विषम मंजिल पर T के ऊपर, P, U के ऊपर, S, Q के ऊपर।"
+      "pe": "7 persons P, Q, R, S, T, U, V live on 7 different floors (1 to 7). T lives on an even floor. Only two persons live between T and R. Q lives immediately above R. V lives on an odd floor above T. P lives immediately above U. S lives above Q.",
+      "ph": "7 व्यक्ति P, Q, R, S, T, U, V 7 अलग मंजिलों (1-7) पर रहते हैं। T सम मंजिल पर है। T-R के बीच 2 लोग हैं। Q, R के ठीक ऊपर है। V, T के ऊपर विषम मंजिल पर है। P, U के ठीक ऊपर है। S, Q के ऊपर है।"
+    },
+    {
+      "p_id": "syllog_mains_01",
+      "pe": "<b>Statements:</b><br/>* Only a few Rivers are Oceans.<br/>* All Oceans are Lakes.<br/>* No Lake is Pond.",
+      "ph": "<b>कथन:</b><br/>* केवल कुछ नदियाँ महासागर हैं।<br/>* सभी महासागर झीलें हैं।<br/>* कोई झील तालाब नहीं है।"
     }
   ],
   "questions": [
@@ -13,7 +18,7 @@
       "qh": "<b>प्रश्न (1/5):</b> S और U के बीच कितने लोग रहते हैं?",
       "o": ["One", "Two", "Three", "Four"],
       "a": 2,
-      "e": "Order: V-T-S-Q-R-P-U. (3 people)"
+      "e": "Order: V(7), T(6), S(5), Q(4), R(3), P(2), U(1). Between S and U are 3 people."
     },
     {
       "p_id": "floor_mains_01",
@@ -21,7 +26,39 @@
       "qh": "<b>प्रश्न (2/5):</b> चौथी मंजिल पर कौन रहता है?",
       "o": ["S", "Q", "R", "T"],
       "a": 1,
-      "e": "Q is on the 4th floor."
+      "e": "Q lives on the 4th floor."
+    },
+    {
+      "p_id": "floor_mains_01",
+      "qe": "<b>Question (3/5):</b> Who lives immediately above T?",
+      "qh": "<b>प्रश्न (3/5):</b> T के ठीक ऊपर कौन रहता है?",
+      "o": ["V", "S", "P", "Q"],
+      "a": 0,
+      "e": "V (7) is above T (6)."
+    },
+    {
+      "p_id": "floor_mains_01",
+      "qe": "<b>Question (4/5):</b> On which floor does S live?",
+      "qh": "<b>प्रश्न (4/5):</b> S किस मंजिल पर रहता है?",
+      "o": ["5th", "3rd", "2nd", "7th"],
+      "a": 0,
+      "e": "S lives on the 5th floor."
+    },
+    {
+      "p_id": "floor_mains_01",
+      "qe": "<b>Question (5/5):</b> How many floors are between T and P?",
+      "qh": "<b>प्रश्न (5/5):</b> T और P के बीच कितनी मंजिलें हैं?",
+      "o": ["One", "Two", "Three", "None"],
+      "a": 2,
+      "e": "Between T(6) and P(2) are floors 5, 4, 3 (Total 3)."
+    },
+    {
+      "p_id": "syllog_mains_01",
+      "qe": "<b>Syllogism (1/5):</b> Conclusion I: All Rivers being Ponds is a possibility. II: Some Lakes are definitely not Ponds.",
+      "qh": "<b>न्याय निगमन (1/5):</b> निष्कर्ष I: सभी नदियों के तालाब होने की संभावना है। II: कुछ झीलें निश्चित रूप से तालाब नहीं हैं।",
+      "o": ["Only I", "Only II", "Both", "Neither"],
+      "a": 1,
+      "e": "Lakes and Ponds have no relation, so II is true. Rivers part of Oceans cannot be Ponds."
     }
   ]
 }
