@@ -2,13 +2,8 @@
   "puzzle_library": [
     {
       "p_id": "floor_mains_01",
-      "pe": "7 persons P, Q, R, S, T, U, V live on 7 different floors (1 to 7). T lives on an even floor. Only two persons live between T and R. Q lives immediately above R. V lives on an odd floor above T. P lives immediately above U. S lives above Q.",
-      "ph": "7 व्यक्ति P, Q, R, S, T, U, V 7 अलग मंजिलों (1-7) पर रहते हैं। T सम मंजिल पर है। T-R के बीच 2 लोग हैं। Q, R के ठीक ऊपर है। V, T के ऊपर विषम मंजिल पर है। P, U के ठीक ऊपर है। S, Q के ऊपर है।"
-    },
-    {
-      "p_id": "syllog_mains_01",
-      "pe": "<b>Statements:</b><br/>* Only a few Rivers are Oceans.<br/>* All Oceans are Lakes.<br/>* No Lake is Pond.",
-      "ph": "<b>कथन:</b><br/>* केवल कुछ नदियाँ महासागर हैं।<br/>* सभी महासागर झीलें हैं।<br/>* कोई झील तालाब नहीं है।"
+      "pe": "<blockquote><b>Floor Puzzle:</b> 7 persons P, Q, R, S, T, U, V live on 7 different floors (1-7). T lives on an even floor. Only two persons live between T and R. Q lives immediately above R. V lives on an odd floor above T. P lives immediately above U. S lives above Q.</blockquote>",
+      "ph": "<blockquote><b>फ्लोर पजल:</b> 7 व्यक्ति P, Q, R, S, T, U, V 7 अलग मंजिलों (1-7) पर रहते हैं। T सम मंजिल पर है। T-R के बीच 2 लोग हैं। Q, R के ठीक ऊपर है। V, T के ऊपर विषम मंजिल पर है। P, U के ठीक ऊपर है। S, Q के ऊपर है।</blockquote>"
     }
   ],
   "questions": [
@@ -18,7 +13,7 @@
       "qh": "<b>प्रश्न (1/5):</b> S और U के बीच कितने लोग रहते हैं?",
       "o": ["One", "Two", "Three", "Four"],
       "a": 2,
-      "e": "Order: V(7), T(6), S(5), Q(4), R(3), P(2), U(1). Between S and U are 3 people."
+      "e": "Order: V-T-S-Q-R-P-U. S(5) and U(1) have 3 people between them."
     },
     {
       "p_id": "floor_mains_01",
@@ -26,7 +21,7 @@
       "qh": "<b>प्रश्न (2/5):</b> चौथी मंजिल पर कौन रहता है?",
       "o": ["S", "Q", "R", "T"],
       "a": 1,
-      "e": "Q lives on the 4th floor."
+      "e": "Q is on the 4th floor."
     },
     {
       "p_id": "floor_mains_01",
@@ -42,23 +37,55 @@
       "qh": "<b>प्रश्न (4/5):</b> S किस मंजिल पर रहता है?",
       "o": ["5th", "3rd", "2nd", "7th"],
       "a": 0,
-      "e": "S lives on the 5th floor."
+      "e": "S lives on floor 5."
     },
     {
       "p_id": "floor_mains_01",
-      "qe": "<b>Question (5/5):</b> How many floors are between T and P?",
+      "qe": "<b>Question (5/5):</b> How many floors between T and P?",
       "qh": "<b>प्रश्न (5/5):</b> T और P के बीच कितनी मंजिलें हैं?",
       "o": ["One", "Two", "Three", "None"],
       "a": 2,
-      "e": "Between T(6) and P(2) are floors 5, 4, 3 (Total 3)."
+      "e": "Between T(6) and P(2) are 5, 4, 3 (3 floors)."
     },
     {
-      "p_id": "syllog_mains_01",
-      "qe": "<b>Syllogism (1/5):</b> Conclusion I: All Rivers being Ponds is a possibility. II: Some Lakes are definitely not Ponds.",
-      "qh": "<b>न्याय निगमन (1/5):</b> निष्कर्ष I: सभी नदियों के तालाब होने की संभावना है। II: कुछ झीलें निश्चित रूप से तालाब नहीं हैं।",
+      "p_id": "",
+      "qe": "<b>Syllogism:</b><br/>Statements: Only a few Rivers are Oceans. All Oceans are Lakes.<br/>Conclusions: I. All Rivers can be Oceans. II. Some Lakes are Rivers.",
+      "qh": "<b>न्याय निगमन:</b><br/>कथन: केवल कुछ नदियाँ महासागर हैं। सभी महासागर झीलें हैं।<br/>निष्कर्ष: I. सभी नदियाँ महासागर हो सकती हैं। II. कुछ झीलें नदियाँ हैं।",
       "o": ["Only I", "Only II", "Both", "Neither"],
       "a": 1,
-      "e": "Lakes and Ponds have no relation, so II is true. Rivers part of Oceans cannot be Ponds."
+      "e": "'Only a few' means all cannot be. Since Oceans are Lakes and Rivers touch Oceans, II is true."
+    },
+    {
+      "p_id": "",
+      "qe": "<b>Blood Relation:</b> Pointing to a man, Neha said, 'His mother is the only daughter of my mother.' How is Neha related to that man?",
+      "qh": "<b>रक्त संबंध:</b> एक आदमी की ओर इशारा करते हुए नेहा ने कहा, 'उसकी माँ मेरी माँ की इकलौती बेटी है।' नेहा उस आदमी से कैसे संबंधित है?",
+      "o": ["Sister", "Mother", "Aunt", "Daughter"],
+      "a": 1,
+      "e": "The only daughter of Neha's mother is Neha herself. So she is the mother."
+    },
+    {
+      "p_id": "",
+      "qe": "<b>Coding:</b> If 'KING' is coded as 'PRMT', then 'RAIN' is?",
+      "qh": "<b>कोडिंग:</b> यदि 'KING' का कोड 'PRMT' है, तो 'RAIN' क्या होगा?",
+      "o": ["IZRM", "IZRN", "IARM", "IZSM"],
+      "a": 1,
+      "e": "Opposite letters: R-I, A-Z, I-R, N-M."
+    },
+    {
+      "p_id": "",
+      "qe": "<b>Direction:</b> A man faces North, turns 90° right, then 45° left. Which direction is he facing?",
+      "qh": "<b>दिशा:</b> एक व्यक्ति उत्तर की ओर है, 90° दाएं मुड़ता है, फिर 45° बाएं। अब वह किस दिशा में है?",
+      "o": ["NE", "SE", "E", "NW"],
+      "a": 0,
+      "e": "North -> East (90° R) -> North-East (45° L)."
+    },
+    {
+      "p_id": "",
+      "qe": "<b>Analogy:</b> 12 : 144 :: 15 : ?",
+      "qh": "<b>सादृश्यता:</b> 12 : 144 :: 15 : ?",
+      "o": ["225", "210", "250", "200"],
+      "a": 0,
+      "e": "15 squared is 225."
     }
   ]
 }
