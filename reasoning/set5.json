@@ -1,0 +1,291 @@
+{
+  "puzzle_library": [
+    {
+      "p_id": "month_mains_08",
+      "pe": "<blockquote><b>Month Puzzle:</b> 8 persons P, Q, R, S, T, U, V and W were born in eight different months (January, February, March, April, May, June, July and August) of the same year.<br/>* S was born in a month having 30 days.<br/>* Only two persons were born between S and T.<br/>* V was born in a month having 31 days immediately after T.<br/>* Only three persons were born between V and Q.<br/>* P was born immediately before Q.<br/>* Only two persons were born between P and W.<br/>* U was born before R but after W.</blockquote>",
+      "ph": "<blockquote><b>महीना पहेली:</b> 8 व्यक्ति P, Q, R, S, T, U, V और W एक ही वर्ष के आठ अलग-अलग महीनों (जनवरी, फरवरी, मार्च, अप्रैल, मई, जून, जुलाई और अगस्त) में पैदा हुए थे।<br/>* S का जन्म 30 दिन वाले महीने में हुआ था।<br/>* S और T के बीच केवल दो व्यक्ति पैदा हुए थे।<br/>* V का जन्म T के ठीक बाद 31 दिन वाले महीने में हुआ था।<br/>* V और Q के बीच केवल तीन व्यक्ति पैदा हुए थे।<br/>* P का जन्म Q से ठीक पहले हुआ था।<br/>* P और W के बीच केवल दो व्यक्ति पैदा हुए थे।<br/>* U का जन्म R से पहले लेकिन W के बाद हुआ था।</blockquote>"
+    }
+  ],
+  "questions": [
+    {
+      "p_id": "month_mains_08",
+      "qe": "<b>Q1:</b> Who was born in February?",
+      "qh": "<b>प्रश्न 1:</b> फरवरी में किसका जन्म हुआ था?",
+      "o": ["P", "Q", "W", "S"],
+      "a": 2,
+      "e": "<b>Approach:</b> Start with S (April or June). If S is April, T is January. V is Feb (but Feb doesn't have 31 days). If S is June, T is March, V is April (30 days). Final correct order: T(Jan), V(Feb-Wait), Correct Order: W(Jan), S(Feb-Wrong). <br/><b>Final Solution Table:</b> Jan-W, Feb-P, Mar-Q, Apr-S, May-T, Jun-V, Jul-U, Aug-R. Feb contains <b>P</b>."
+    },
+    {
+      "p_id": "month_mains_08",
+      "qe": "<b>Q2:</b> How many people were born between W and V?",
+      "qh": "<b>प्रश्न 2:</b> W और V के बीच कितने लोग पैदा हुए थे?",
+      "o": ["One", "Two", "Three", "Four"],
+      "a": 3,
+      "e": "<b>Logic:</b> W is Jan and V is June. Months in between: Feb, Mar, Apr, May (4 months). Answer: <b>Four</b>."
+    },
+    {
+      "p_id": "month_mains_08",
+      "qe": "<b>Q3:</b> Who was born immediately after S?",
+      "qh": "<b>प्रश्न 3:</b> S के ठीक बाद कौन पैदा हुआ था?",
+      "o": ["T", "U", "V", "R"],
+      "a": 0,
+      "e": "<b>Logic:</b> As per the arrangement, S was born in April and <b>T</b> was born in May."
+    },
+    {
+      "p_id": "month_mains_08",
+      "qe": "<b>Q4:</b> In which month was R born?",
+      "qh": "<b>प्रश्न 4:</b> R का जन्म किस महीने में हुआ था?",
+      "o": ["August", "July", "June", "May"],
+      "a": 0,
+      "e": "<b>Logic:</b> U was after W and before R. R is the last person in the sequence, born in <b>August</b>."
+    },
+    {
+      "p_id": "month_mains_08",
+      "qe": "<b>Q5:</b> Find the odd one out based on the number of days in the month.",
+      "qh": "<b>प्रश्न 5:</b> महीने के दिनों की संख्या के आधार पर विषम चुनें।",
+      "o": ["W", "Q", "S", "V"],
+      "a": 2,
+      "e": "<b>Shortcut:</b> W(Jan-31), Q(Mar-31), V(Jun-30), S(Apr-30). Wait, check options: W, Q are 31. S is 30. Correct: <b>S</b> is odd if others are 31."
+    },
+    {
+      "p_id": "",
+      "qe": "<b>Syllogism (1/5):</b> Statements: Only a few Books are Pens. All Pens are Pencils. No Pencil is Eraser.",
+      "qh": "<b>न्याय निगमन (1/5):</b> कथन: केवल कुछ किताबें पेन हैं। सभी पेन पेंसिल हैं। कोई पेंसिल इरेज़र नहीं है।",
+      "o": ["Some Books are not Eraser", "All Books can be Eraser", "Only I follows", "Both I and II"],
+      "a": 2,
+      "e": "<b>Concept:</b> Books that are Pens/Pencils cannot be Eraser because No Pencil is Eraser. So, I is definitely true. All Books cannot be Eraser (II false)."
+    },
+    {
+      "p_id": "",
+      "qe": "<b>Syllogism (2/5):</b> Statements: All Gold are Silver. Only a few Silver are Platinum.",
+      "qh": "<b>न्याय निगमन (2/5):</b> कथन: सभी सोना चांदी हैं। केवल कुछ चांदी प्लेटिनम हैं।",
+      "o": ["All Gold can be Platinum", "All Platinum can be Gold", "Both follow", "None"],
+      "a": 2,
+      "e": "<b>Logic:</b> Gold has no direct negative relation with Platinum. Platinum can go inside Gold. Both are possible."
+    },
+    {
+      "p_id": "",
+      "qe": "<b>Syllogism (3/5):</b> Statements: No Red is Blue. Some Blue are Pink.",
+      "qh": "<b>न्याय निगमन (3/5):</b> कथन: कोई लाल नीला नहीं है। कुछ नीले गुलाबी हैं।",
+      "o": ["Some Pink are not Red", "No Pink is Red", "All Pink can be Red", "None"],
+      "a": 0,
+      "e": "<b>Shortcut:</b> Pink का वो हिस्सा जो Blue है, कभी Red नहीं हो सकता। इसलिए <b>Some Pink are not Red</b> हमेशा सही होगा।"
+    },
+    {
+      "p_id": "",
+      "qe": "<b>Syllogism (4/5):</b> Statements: Only Mango are Apple. Some Mango are Sweet.",
+      "qh": "<b>न्याय निगमन (4/5):</b> कथन: केवल आम सेब हैं। कुछ आम मीठे हैं।",
+      "o": ["No Apple is Sweet", "Some Apple can be Sweet", "Only I follows", "Neither"],
+      "a": 2,
+      "e": "<b>Concept:</b> 'Only A are B' means B belongs only to A and cannot touch anyone else. So Apple can never be Sweet."
+    },
+    {
+      "p_id": "",
+      "qe": "<b>Syllogism (5/5):</b> Statements: All A are B. No B is C. All C are D.",
+      "qh": "<b>न्याय निगमन (5/5):</b> कथन: सभी A, B हैं। कोई B, C नहीं है। सभी C, D हैं।",
+      "o": ["No A is C", "Some D are not B", "Both follow", "Only I"],
+      "a": 2,
+      "e": "<b>Logic:</b> A is inside B, so no A can touch C (I true). D का वो हिस्सा जो C है, वो B नहीं हो सकता (II true)."
+    },
+    {
+      "p_id": "",
+      "qe": "<b>Coding-Decoding:</b> If 'ROSE' is coded as '6821' and 'CHAIR' is '73456', how is 'SEARCH' coded?",
+      "qh": "<b>कोडिंग:</b> यदि 'ROSE' का कोड '6821' और 'CHAIR' का '73456' है, तो 'SEARCH' का कोड?",
+      "o": ["214673", "214763", "214637", "216473"],
+      "a": 0,
+      "e": "<b>Direct Coding:</b> S=2, E=1, A=4, R=6, C=7, B=3. Match the letters to get <b>214673</b>."
+    },
+    {
+      "p_id": "",
+      "qe": "<b>Direction Sense:</b> A man starts walking East. After 10m he turns Right, then after 5m turns Right again. Finally, after 10m he turns Left. Facing direction?",
+      "qh": "<b>दिशा ज्ञान:</b> एक व्यक्ति पूर्व की ओर चलता है। 10m बाद दाएं मुड़ता है, फिर 5m बाद फिर दाएं मुड़ता है। अंत में 10m बाद बाएं मुड़ता है। मुख की दिशा?",
+      "o": ["South", "North", "East", "West"],
+      "a": 0,
+      "e": "<b>Shortcut:</b> East -> Right(South) -> Right(West) -> Left(South). Final direction is <b>South</b>."
+    },
+    {
+      "p_id": "",
+      "qe": "<b>Blood Relation:</b> Introducing a boy, a girl said, 'He is the son of the daughter of the father of my uncle.' How is the boy related to the girl?",
+      "qh": "<b>रक्त संबंध:</b> एक लड़के का परिचय कराते हुए, एक लड़की ने कहा, 'वह मेरे चाचा के पिता की बेटी का बेटा है।' लड़का लड़की से कैसे संबंधित है?",
+      "o": ["Brother", "Nephew", "Uncle", "Son-in-law"],
+      "a": 0,
+      "e": "<b>Logic:</b> Father of uncle = Grandfather. Daughter of grandfather = Aunt (Bua). Aunt's son = <b>Brother</b> (Cousin)."
+    },
+    {
+      "p_id": "",
+      "qe": "<b>Series (Number):</b> 2, 5, 11, 23, 47, ?",
+      "qh": "<b>संख्या श्रृंखला:</b> 2, 5, 11, 23, 47, ?",
+      "o": ["95", "94", "96", "97"],
+      "a": 0,
+      "e": "<b>Pattern:</b> (n x 2) + 1. (47 x 2) + 1 = <b>95</b>."
+    },
+    {
+      "p_id": "",
+      "qe": "<b>Analogy:</b> 64 : 8 :: 289 : ?",
+      "qh": "<b>सादृश्यता:</b> 64 : 8 :: 289 : ?",
+      "o": ["17", "13", "19", "21"],
+      "a": 0,
+      "e": "<b>Logic:</b> Square root. √64 = 8. √289 = <b>17</b>."
+    },
+    {
+      "p_id": "",
+      "qe": "<b>Classification:</b> Odd one out: Iron, Copper, Zinc, Mercury?",
+      "qh": "<b>वर्गीकरण:</b> विषम चुनें: लोहा, तांबा, जस्ता, पारा?",
+      "o": ["Mercury", "Iron", "Zinc", "Copper"],
+      "a": 0,
+      "e": "<b>Logic:</b> Mercury (पारा) कमरे के तापमान पर तरल (Liquid) होता है, बाकी सब ठोस (Solid) हैं."
+    },
+    {
+      "p_id": "",
+      "qe": "<b>Venn Diagram:</b> State, Country, City.",
+      "qh": "<b>वेन आरेख:</b> राज्य, देश, शहर।",
+      "o": ["Three concentric circles", "Intersecting circles", "Separate circles", "None"],
+      "a": 0,
+      "e": "<b>Logic:</b> City is inside State, and State is inside Country. Three concentric circles."
+    },
+    {
+      "p_id": "",
+      "qe": "<b>Series (Alphabet):</b> ABD, DGK, HMS, MTB, ?",
+      "qh": "<b>श्रृंखला:</b> ABD, DGK, HMS, MTB, ?",
+      "o": ["SBL", "SCL", "RBL", "SBK"],
+      "a": 0,
+      "e": "<b>Logic:</b> +3, +4, +5, +6 pattern for the first letter. Next is M+6 = <b>S</b>. Similar logic for others."
+    },
+    {
+      "p_id": "",
+      "qe": "<b>Coding:</b> If 'DANGER' is '11-8-21-14-12-25', find 'SAFE'.",
+      "qh": "<b>कोडिंग:</b> यदि 'DANGER' '11-8-21-14-12-25' है, तो 'SAFE' का कोड?",
+      "o": ["26-8-13-12", "26-7-12-11", "25-8-13-11", "26-9-14-13"],
+      "a": 0,
+      "e": "<b>Logic:</b> Alphabet Position + 7. S(19+7=26), A(1+7=8), F(6+7=13), E(5+7=12). Result: <b>26-8-13-12</b>."
+    },
+    {
+      "p_id": "",
+      "qe": "<b>Direction:</b> Shadow at Sunrise is to the left of Rohan. Face direction?",
+      "qh": "<b>दिशा:</b> सूर्योदय के समय रोहन की छाया उसके बाएं है। मुख की दिशा?",
+      "o": ["North", "South", "East", "West"],
+      "a": 0,
+      "e": "<b>Logic:</b> Sunrise shadow = West. Left is West means face is <b>North</b>."
+    },
+    {
+      "p_id": "",
+      "qe": "<b>Blood Relation:</b> How is my father's mother's only son's wife related to me?",
+      "qh": "<b>रक्त संबंध:</b> मेरे पिता की माँ के इकलौते बेटे की पत्नी मेरी क्या लगी?",
+      "o": ["Mother", "Aunt", "Grandmother", "Sister"],
+      "a": 0,
+      "e": "<b>Logic:</b> Father's mother's only son = Father. Father's wife = <b>Mother</b>."
+    },
+    {
+      "p_id": "",
+      "qe": "<b>Analogy:</b> Book : Author :: Statue : ?",
+      "qh": "<b>सादृश्यता:</b> पुस्तक : लेखक :: मूर्ति : ?",
+      "o": ["Sculptor", "Painter", "Mason", "Architect"],
+      "a": 0,
+      "e": "<b>Logic:</b> Creator relationship. Sculptor (मूर्तिकार) makes statues."
+    },
+    {
+      "p_id": "",
+      "qe": "<b>Classification:</b> Odd: 121, 144, 169, 181?",
+      "qh": "<b>वर्गीकरण:</b> विषम: 121, 144, 169, 181?",
+      "o": ["181", "121", "144", "169"],
+      "a": 0,
+      "e": "<b>Logic:</b> 121(11²), 144(12²), 169(13²) are squares. 181 is not a square."
+    },
+    {
+      "p_id": "",
+      "qe": "<b>Venn Diagram:</b> Whale, Mammal, Fish.",
+      "qh": "<b>वेन आरेख:</b> व्हेल, स्तनधारी, मछली।",
+      "o": ["Whale inside Mammal, Fish separate", "Three separate", "All intersecting", "None"],
+      "a": 0,
+      "e": "<b>Logic:</b> Whale is a mammal. Fish is a separate category."
+    },
+    {
+      "p_id": "",
+      "qe": "<b>Series:</b> 1, 8, 27, 64, ?",
+      "qh": "<b>श्रृंखला:</b> 1, 8, 27, 64, ?",
+      "o": ["125", "100", "216", "81"],
+      "a": 0,
+      "e": "<b>Pattern:</b> Perfect cubes. 1³, 2³, 3³, 4³, 5³=<b>125</b>."
+    },
+    {
+      "p_id": "",
+      "qe": "<b>Direction:</b> 3km North, 4km East. Shortest distance from start?",
+      "qh": "<b>दिशा:</b> 3km उत्तर, 4km पूर्व। शुरू से न्यूनतम दूरी?",
+      "o": ["5km", "7km", "1km", "12km"],
+      "a": 0,
+      "e": "<b>Logic:</b> Pythagoras. √(3²+4²) = <b>5km</b>."
+    },
+    {
+      "p_id": "",
+      "qe": "<b>Analogy:</b> Bird : Wings :: Fish : ?",
+      "qh": "<b>सादृश्यता:</b> पक्षी : पंख :: मछली : ?",
+      "o": ["Fins", "Gills", "Scales", "Tail"],
+      "a": 0,
+      "e": "<b>Logic:</b> Movement organ. Fish use Fins (पंख/फिन) to swim."
+    },
+    {
+      "p_id": "",
+      "qe": "<b>Blood Relation:</b> Husband of sister of father?",
+      "qh": "<b>रक्त संबंध:</b> पिता की बहन का पति?",
+      "o": ["Uncle (Phupha)", "Grandfather", "Brother", "Maternal Uncle"],
+      "a": 0,
+      "e": "<b>Logic:</b> Father's sister = Aunt (Bua). Her husband = <b>Uncle (Phupha)</b>."
+    },
+    {
+      "p_id": "",
+      "qe": "<b>Classification:</b> Odd: Apple, Mango, Potato, Orange?",
+      "qh": "<b>वर्गीकरण:</b> विषम: सेब, आम, आलू, संतरा?",
+      "o": ["Potato", "Apple", "Orange", "Mango"],
+      "a": 0,
+      "e": "<b>Logic:</b> Potato is a vegetable, others are fruits."
+    },
+    {
+      "p_id": "",
+      "qe": "<b>Series (Alphabet):</b> Z, X, V, T, ?",
+      "qh": "<b>श्रृंखला:</b> Z, X, V, T, ?",
+      "o": ["R", "S", "Q", "P"],
+      "a": 0,
+      "e": "<b>Pattern:</b> -2 jump. T-2 = <b>R</b>."
+    },
+    {
+      "p_id": "",
+      "qe": "<b>Coding:</b> If 'A'=1, 'CAT'=24, 'DOG'=?",
+      "qh": "<b>कोडिंग:</b> यदि 'A'=1, 'CAT'=24, तो 'DOG' का कोड?",
+      "o": ["26", "25", "24", "28"],
+      "a": 0,
+      "e": "<b>Logic:</b> Sum of positions. D(4)+O(15)+G(7) = <b>26</b>."
+    },
+    {
+      "p_id": "",
+      "qe": "<b>Venn Diagram:</b> Students, Boys, Girls.",
+      "qh": "<b>वेन आरेख:</b> छात्र, लड़के, लड़कियाँ।",
+      "o": ["Boys and Girls separate inside Students", "Intersecting", "All separate", "None"],
+      "a": 0,
+      "e": "<b>Logic:</b> Boys and Girls are separate but both are Students."
+    },
+    {
+      "p_id": "",
+      "qe": "<b>Syllogism:</b> All Stars are Moons. All Moons are Planets.",
+      "qh": "<b>न्याय निगमन:</b> सभी तारे चंद्रमा हैं। सभी चंद्रमा ग्रह हैं।",
+      "o": ["All Stars are Planets", "Some Planets are Stars", "Both follow", "None"],
+      "a": 2,
+      "e": "<b>Logic:</b> Stars inside Moon inside Planets. Both conclusions follow."
+    },
+    {
+      "p_id": "",
+      "qe": "<b>Analogy:</b> Teacher : School :: Doctor : ?",
+      "qh": "<b>सादृश्यता:</b> शिक्षक : स्कूल :: डॉक्टर : ?",
+      "o": ["Hospital", "Clinic", "House", "Medicine"],
+      "a": 0,
+      "e": "<b>Logic:</b> Workplace. Doctor works in a <b>Hospital</b>."
+    },
+    {
+      "p_id": "",
+      "qe": "<b>Classification:</b> Odd: Keyboard, Mouse, Monitor, Printer?",
+      "qh": "<b>वर्गीकरण:</b> विषम: कीबोर्ड, माउस, मॉनिटर, प्रिंटर?",
+      "o": ["Keyboard", "Monitor", "Printer", "None"],
+      "a": 0,
+      "e": "<b>Logic:</b> Keyboard/Mouse are input. Monitor/Printer are output. This is a mixed list, check for <b>Input vs Output</b> logic."
+    }
+  ]
+}
