@@ -37,38 +37,38 @@
   
 
   {
-    "q": "<b>Floor Puzzle (1/5)</b><br/>---<br/><b>Question / प्रश्न:</b><br/>How many people live between S and U? / S और U के बीच कितने लोग रहते हैं?<br/>---",
-    "o": ["One / एक", "Two / दो", "Three / तीन", "Four / चार"],
+    "q": "<b>Floor Puzzle (1/5)</b><br/>---<br/><b>Question / प्रश्न:</b><br/>How many people live between S and U? / S और U के बीच कितने लोग रहते हैं?",
+    "o": ["One", "Two", "Three", "Four"],
     "a": 2,
-    "e": "Final Order (7 to 1): V, T, S, Q, R, P, U. Between S (floor 5) and U (floor 1) are Q, R, P (Three).",
+    "e": "Final Order (7 to 1): V, T, S, Q, R, P, U. Between S (floor 5) and U (floor 1) are Q, R, P, which totals 3 people.",
     "cat": "reasoning", "sub": "puzzle"
   },
   {
-    "q": "<b>Floor Puzzle (2/5)</b><br/>---<br/><b>Question / प्रश्न:</b><br/>Who lives on the 4th floor? / चौथी मंजिल पर कौन रहता है?<br/>---",
+    "q": "<b>Floor Puzzle (2/5)</b><br/>---<br/><b>Question / प्रश्न:</b><br/>Who lives on the 4th floor? / चौथी मंजिल पर कौन रहता है?",
     "o": ["S", "Q", "R", "T"],
     "a": 1,
-    "e": "According to the arrangement (V-7, T-6, S-5, Q-4, R-3, P-2, U-1), Q lives on the 4th floor.",
+    "e": "According to the final order (V-7, T-6, S-5, Q-4, R-3, P-2, U-1), Q lives on the 4th floor.",
     "cat": "reasoning", "sub": "puzzle"
   },
   {
-    "q": "<b>Floor Puzzle (3/5)</b><br/>---<br/><b>Question / प्रश्न:</b><br/>If all persons are arranged alphabetically from top to bottom, how many remain unchanged? / यदि सभी व्यक्तियों को ऊपर से नीचे वर्णानुक्रम में व्यवस्थित किया जाए, तो कितने अपरिवर्तित रहेंगे?<br/>---",
-    "o": ["None / कोई नहीं", "One / एक", "Two / दो", "Three / तीन"],
+    "q": "<b>Floor Puzzle (3/5)</b><br/>---<br/><b>Question / प्रश्न:</b><br/>If all persons are arranged alphabetically from top to bottom, how many remain unchanged? / यदि सभी व्यक्तियों को ऊपर से नीचे वर्णानुक्रम में व्यवस्थित किया जाए, तो कितने अपरिवर्तित रहेंगे?",
+    "o": ["None", "One", "Two", "Three"],
     "a": 0,
-    "e": "Original: V, T, S, Q, R, P, U. Alphabetical: V, U, T, S, R, Q, P. Only V matches the top position.",
+    "e": "Original Order (7 to 1): V, T, S, Q, R, P, U. Alphabetical Order: V, U, T, S, R, Q, P. Only V remains at the same position.",
     "cat": "reasoning", "sub": "puzzle"
   },
   {
-    "q": "<b>Floor Puzzle (4/5)</b><br/>---<br/><b>Question / प्रश्न:</b><br/>Who lives on floor 3? / मंजिल 3 पर कौन रहता है?<br/>---",
+    "q": "<b>Floor Puzzle (4/5)</b><br/>---<br/><b>Question / प्रश्न:</b><br/>Who lives on floor 3? / मंजिल 3 पर कौन रहता है?",
     "o": ["A", "B", "C", "D"],
     "a": 0,
-    "e": "Final Order (6 to 1): F, C, B, A, E, D. Floor 3 is occupied by A. (Note: Data based on the 6-floor variant).",
+    "e": "Final Order (6 to 1): F, C, B, A, E, D. Floor 3 is occupied by A.",
     "cat": "reasoning", "sub": "puzzle"
   },
   {
-    "q": "<b>Floor Puzzle (5/5)</b><br/>---<br/><b>Question / प्रश्न:</b><br/>How many people live between F and D? / F और D के बीच कितने लोग रहते हैं?<br/>---",
-    "o": ["One / एक", "Two / दो", "Three / तीन", "Four / चार"],
+    "q": "<b>Floor Puzzle (5/5)</b><br/>---<br/><b>Question / प्रश्न:</b><br/>How many people live between F and D? / F और D के बीच कितने लोग रहते हैं?",
+    "o": ["One", "Two", "Three", "Four"],
     "a": 3,
-    "e": "F is on floor 6 and D is on floor 1. Between them are 4 people (C, B, A, E).",
+    "e": "F lives on floor 6 and D lives on floor 1. The floors between them are 5, 4, 3, 2, which means 4 people.",
     "cat": "reasoning", "sub": "puzzle"
   },
   {
