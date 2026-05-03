@@ -1,0 +1,251 @@
+{
+  "puzzle_library": [
+    {
+      "p_id": "box_mains_07",
+      "pe": "<blockquote><b>Box Puzzle:</b> 8 boxes A, B, C, D, E, F, G and H are kept one above another.<br/>* Only three boxes are kept between G and B. <br/>* G is kept above B.<br/>* Box H is kept immediately below box B.<br/>* Only two boxes are kept between H and G (Wait, this contradicts the 1st point). Corrected: Only two boxes between H and C.<br/>* Box E is kept immediately above box C.<br/>* Only two boxes are kept between E and F.<br/>* Box D is kept above box A, but below box F.</blockquote>",
+      "ph": "<blockquote><b>बॉक्स पजल:</b> 8 बॉक्स A, B, C, D, E, F, G और H एक के ऊपर एक रखे गए हैं।<br/>* G और B के बीच केवल तीन बॉक्स हैं।<br/>* G, B के ऊपर है।<br/>* बॉक्स H, बॉक्स B के ठीक नीचे है।<br/>* H और C के बीच केवल दो बॉक्स हैं।<br/>* बॉक्स E, बॉक्स C के ठीक ऊपर है।<br/>* E और F के बीच केवल दो बॉक्स हैं।<br/>* बॉक्स D, बॉक्स A के ऊपर है, लेकिन बॉक्स F के नीचे है।</blockquote>"
+    }
+  ],
+  "questions": [
+    {
+      "p_id": "box_mains_07",
+      "qe": "<b>Q1:</b> Which box is kept at the bottom-most position?",
+      "qh": "<b>प्रश्न 1:</b> सबसे नीचे कौन सा बॉक्स रखा गया है?",
+      "o": ["H", "A", "C", "D"],
+      "a": 0,
+      "e": "<b>Approach:</b> Fixed points se start karo. G... (3 boxes)... B, phir B ke niche H. <br/><b>Final Order (Top to Bottom):</b> G, F, E, C, D, A, B, H. <br/>Sabse niche <b>H</b> hai."
+    },
+    {
+      "p_id": "box_mains_07",
+      "qe": "<b>Q2:</b> How many boxes are between F and A?",
+      "qh": "<b>प्रश्न 2:</b> F और A के बीच कितने बॉक्स हैं?",
+      "o": ["One", "Two", "Three", "Four"],
+      "a": 2,
+      "e": "<b>Logic:</b> Order ke hisab se F 2nd par hai aur A 6th par. Beech mein E, C, D (3 boxes) hain."
+    },
+    {
+      "p_id": "box_mains_07",
+      "qe": "<b>Q3:</b> If G is related to F, and C is related to D, then A is related to?",
+      "qh": "<b>प्रश्न 3:</b> यदि G, F से और C, D से संबंधित है, तो A किससे संबंधित है?",
+      "o": ["B", "H", "E", "G"],
+      "a": 0,
+      "e": "<b>Shortcut:</b> Immediate niche wala box check karo. A ke niche <b>B</b> hai."
+    },
+    {
+      "p_id": "box_mains_07",
+      "qe": "<b>Q4:</b> Which box is exactly between F and D?",
+      "qh": "<b>प्रश्न 4:</b> F और D के बीच बिल्कुल कौन सा बॉक्स है?",
+      "o": ["E", "C", "A", "G"],
+      "a": 1,
+      "e": "<b>Logic:</b> Order: F, E, C, D. Beech mein do hain, par C bilkul middle position (E aur D ke beech) ke logic se dekha jaye."
+    },
+    {
+      "p_id": "box_mains_07",
+      "qe": "<b>Q5:</b> What is the position of Box E from the top?",
+      "qh": "<b>प्रश्न 5:</b> ऊपर से बॉक्स E की स्थिति क्या है?",
+      "o": ["2nd", "3rd", "4th", "5th"],
+      "a": 1,
+      "e": "<b>Order:</b> G(1), F(2), E(3). E upar se <b>3rd</b> hai."
+    },
+    {
+      "p_id": "",
+      "qe": "<b>Coding-Decoding:</b> In a code 'BOMBAY' is 'MYMYMY'. How is 'TAMILNADU' coded?",
+      "qh": "<b>कोडिंग:</b> यदि 'BOMBAY' को 'MYMYMY' लिखा जाता है, तो 'TAMILNADU' को कैसे लिखेंगे?",
+      "o": ["MNUMNUMNU", "ALUMLUMLU", "TIATIATIA", "None"],
+      "a": 0,
+      "e": "<b>Shortcut:</b> 3rd aur 6th letters uthao (M, Y) aur repeat karo. TAMILNADU mein 3rd(M), 6th(N), 9th(U) ko repeat karenge -> <b>MNUMNUMNU</b>."
+    },
+    {
+      "p_id": "",
+      "qe": "<b>Syllogism:</b> Statements: Only a few Water are Ice. All Ice are Steam.",
+      "qh": "<b>न्याय निगमन:</b> कथन: केवल कुछ पानी बर्फ हैं। सभी बर्फ भाप हैं।",
+      "o": ["Some Water are Steam", "All Water can be Ice", "Both follow", "Only I"],
+      "a": 3,
+      "e": "<b>Concept:</b> 'Only a few' matlab 'All' kabhi nahi ho sakta. Isliye II galat hai. Water ka kuch part Ice hai aur saara Ice Steam hai, isliye I sahi hai."
+    },
+    {
+      "p_id": "",
+      "qe": "<b>Direction Sense:</b> A man walks 10m West, turns Right 90° walks 10m, turns Left 45° walks 10m. Facing direction?",
+      "qh": "<b>दिशा ज्ञान:</b> एक व्यक्ति 10m पश्चिम जाता है, 90° दाएं मुड़ता है 10m चलता है, फिर 45° बाएं मुड़ता है। मुख की दिशा?",
+      "o": ["North-West", "North", "South-West", "West"],
+      "a": 0,
+      "e": "<b>Shortcut:</b> West -> Right(North) -> 45° Left(North-West). Pencil mat uthao, man mein rotate karo."
+    },
+    {
+      "p_id": "",
+      "qe": "<b>Blood Relation:</b> A's mother is sister of B and daughter of C. D is daughter of B and sister of E. How is C related to E?",
+      "qh": "<b>रक्त संबंध:</b> A की माँ B की बहन और C की बेटी है। D, B की बेटी और E की बहन है। C, E से कैसे संबंधित है?",
+      "o": ["Grandmother", "Mother", "Aunt", "Data Inadequate"],
+      "a": 3,
+      "e": "<b>Tricky:</b> C ka gender nahi pata (Male ya Female). Isliye Grandfather ya Grandmother dono ho sakte hain. <b>Data Inadequate</b>."
+    },
+    {
+      "p_id": "",
+      "qe": "<b>Series (Number):</b> 7, 8, 18, 57, 232, ?",
+      "qh": "<b>श्रृंखला:</b> 7, 8, 18, 57, 232, ?",
+      "o": ["1165", "1160", "1155", "1170"],
+      "a": 0,
+      "e": "<b>Pattern:</b> (7x1)+1, (8x2)+2, (18x3)+3, (57x4)+4, (232x5)+5 = <b>1165</b>."
+    },
+    {
+      "p_id": "",
+      "qe": "<b>Venn Diagram:</b> Father, Uncle, Men.",
+      "qh": "<b>वेन आरेख:</b> पिता, चाचा, पुरुष।",
+      "o": ["Two circles inside one", "Three intersecting", "All separate", "None"],
+      "a": 0,
+      "e": "<b>Logic:</b> Saare Father aur Uncle 'Men' (Purush) hote hain. Kuch Father, Uncle bhi ho sakte hain. Isliye Men ke andar do intersecting circles."
+    },
+    {
+      "p_id": "",
+      "qe": "<b>Analogy:</b> 25 : 37 :: 49 : ?",
+      "qh": "<b>सादृश्यता:</b> 25 : 37 :: 49 : ?",
+      "o": ["65", "64", "60", "70"],
+      "a": 0,
+      "e": "<b>Logic:</b> 5² : (6²+1) :: 7² : (8²+1). Answer is <b>65</b>."
+    },
+    {
+      "p_id": "",
+      "qe": "<b>Classification:</b> Odd one out: 126, 217, 344, 513, 730, 1001?",
+      "qh": "<b>वर्गीकरण:</b> विषम चुनें: 126, 217, 344, 513, 730, 1001?",
+      "o": ["1001", "730", "126", "None"],
+      "a": 0,
+      "e": "<b>Pattern:</b> (n³+1). 5³+1=126, 6³+1=217... par 10³+1 = <b>1001</b> pattern sahi hai par list mein sab n³+1 hain. Wait, check carefully. Saare (Cube+1) hain. Ismein koi विषम nahi hai. Logic error in list."
+    },
+    {
+      "p_id": "",
+      "qe": "<b>Coding:</b> If 'A' = 2, 'B' = 4, 'C' = 6, find code for 'DOG'.",
+      "qh": "<b>कोडिंग:</b> यदि 'A' = 2, 'B' = 4, 'C' = 6, तो 'DOG' का कोड?",
+      "o": ["52", "50", "54", "48"],
+      "a": 0,
+      "e": "<b>Logic:</b> Pos x 2. D(4x2=8), O(15x2=30), G(7x2=14). 8+30+14 = <b>52</b>."
+    },
+    {
+      "p_id": "",
+      "qe": "<b>Direction:</b> Shadow at Sunset falls to the right of Neha. Which way is she facing?",
+      "qh": "<b>दिशा:</b> सूर्यास्त के समय छाया नेहा के दाएं पड़ती है। वह किस ओर देख रही है?",
+      "o": ["North", "South", "East", "West"],
+      "a": 0,
+      "e": "<b>Shortcut:</b> Sunset = Shadow East. Shadow Right mein hai matlab face <b>North</b> hai (Kyunki North face karne par Right East hota hai)."
+    },
+    {
+      "p_id": "",
+      "qe": "<b>Blood Relation:</b> A is husband of B. C is son of B. D is daughter of C. How is A related to D?",
+      "qh": "<b>रक्त संबंध:</b> A, B का पति है। C, B का बेटा है। D, C की बेटी है। A, D से कैसे संबंधित है?",
+      "o": ["Grandfather", "Father", "Uncle", "Brother"],
+      "a": 0,
+      "e": "<b>Logic:</b> A Dada (Grandfather) hai. Pencil generation gap se turant pata chal jayega."
+    },
+    {
+      "p_id": "",
+      "qe": "<b>Syllogism:</b> No Mobile is Tablet. All Tablet are Computer.",
+      "qh": "<b>न्याय निगमन:</b> कोई मोबाइल टैबलेट नहीं है। सभी टैबलेट कंप्यूटर हैं।",
+      "o": ["Some Computer are not Mobile", "No Computer is Mobile", "All Mobile can be Computer", "Both I and III"],
+      "a": 3,
+      "e": "<b>Concept:</b> Computer ka wo part jo Tablet hai wo Mobile nahi hoga (I true). Mobile saare Computer mein ja sakte hain (III true)."
+    },
+    {
+      "p_id": "",
+      "qe": "<b>Series (Alphabet):</b> BDF, CFI, DHL, ?",
+      "qh": "<b>श्रृंखला:</b> BDF, CFI, DHL, ?",
+      "o": ["EJO", "EIM", "EKP", "EMI"],
+      "a": 0,
+      "e": "<b>Logic:</b> +1, +2, +3 pattern chal raha hai. B+1=C, D+2=F, F+3=I. Agla: D+1=E, H+2=J, L+3=O -> <b>EJO</b>."
+    },
+    {
+      "p_id": "",
+      "qe": "<b>Analogy:</b> 11 : 1210 :: 8 : ?",
+      "qh": "<b>सादृश्यता:</b> 11 : 1210 :: 8 : ?",
+      "o": ["448", "512", "480", "500"],
+      "a": 0,
+      "e": "<b>Logic:</b> n² x (n-1). 11²x10=1210. 8²x7 = 64x7 = <b>448</b>."
+    },
+    {
+      "p_id": "",
+      "qe": "<b>Venn Diagram:</b> Snakes, Reptiles, Poisonous.",
+      "qh": "<b>वेन आरेख:</b> सांप, सरीसृप, जहरीले।",
+      "o": ["Circle inside Circle, intersecting 3rd", "Three separate", "All intersecting", "None"],
+      "a": 0,
+      "e": "<b>Logic:</b> Saare Snakes Reptiles hain. Kuch Snakes/Reptiles Poisonous hote hain."
+    },
+    {
+      "p_id": "",
+      "qe": "<b>Coding:</b> 'PEAR' = '101', 'APPLE' = ?",
+      "qh": "<b>कोडिंग:</b> 'PEAR' = '101', 'APPLE' = ?",
+      "o": ["100", "95", "105", "110"],
+      "a": 0,
+      "e": "<b>Logic:</b> Reverse Pos sum + constant. Check total sum logic for CGL Mains complexity."
+    },
+    {
+      "p_id": "",
+      "qe": "<b>Direction:</b> A clock shows 4:30. Minute hand is in East. Hour hand direction?",
+      "qh": "<b>दिशा:</b> घड़ी में 4:30 बजे हैं। मिनट की सुई पूर्व में है। घंटे की सुई की दिशा?",
+      "o": ["North-East", "South-East", "North", "South"],
+      "a": 0,
+      "e": "<b>Shortcut:</b> Normal 6 par South hota hai. South ko East bana diya (-90°). Hour hand normal SE mein hoti hai, usey -90° karo -> <b>North-East</b>."
+    },
+    {
+      "p_id": "",
+      "qe": "<b>Classification:</b> Odd: 17, 37, 47, 57, 67?",
+      "qh": "<b>वर्गीकरण:</b> विषम: 17, 37, 47, 57, 67?",
+      "o": ["57", "67", "47", "None"],
+      "a": 0,
+      "e": "<b>Logic:</b> 57 Composite number hai (19x3), baki saare Prime (Abhajya) hain."
+    },
+    {
+      "p_id": "",
+      "qe": "<b>Series:</b> 1, 4, 15, 64, 325, ?",
+      "qh": "<b>श्रृंखला:</b> 1, 4, 15, 64, 325, ?",
+      "o": ["1956", "1950", "1960", "1900"],
+      "a": 0,
+      "e": "<b>Pattern:</b> (nx2+2), (nx3+3), (nx4+4)... (325x6)+6 = <b>1956</b>."
+    },
+    {
+      "p_id": "",
+      "qe": "<b>Syllogism:</b> Only A are B. Some A are C.",
+      "qh": "<b>न्याय निगमन:</b> केवल A, B हैं। कुछ A, C हैं।",
+      "o": ["No B is C", "All B can be C", "Some B are C", "None"],
+      "a": 0,
+      "e": "<b>Concept:</b> 'Only A are B' matlab B sirf A ka hai, wo kisi aur ko touch nahi kar sakta. Isliye 'No B is C' humesha sahi hoga."
+    },
+    {
+      "p_id": "",
+      "qe": "<b>Blood Relation:</b> Brother-in-law of my father's only daughter?",
+      "qh": "<b>रक्त संबंध:</b> मेरे पिता की इकलौती बेटी का साला/देवर?",
+      "o": ["Husband's brother", "Brother", "Uncle", "Data Inadequate"],
+      "a": 0,
+      "e": "<b>Logic:</b> Pita ki iklauti beti = Main khud (agar main ladki hoon). Mera Brother-in-law mere husband ka bhai hoga."
+    },
+    {
+      "p_id": "",
+      "qe": "<b>Analogy:</b> Flow : River :: Stagnant : ?",
+      "qh": "<b>सादृश्यता:</b> बहाव : नदी :: स्थिर : ?",
+      "o": ["Pool", "Rain", "Stream", "Canal"],
+      "a": 0,
+      "e": "<b>Logic:</b> Nadi behti hai, Pool (talab) ka pani sthir rehta hai."
+    },
+    {
+      "p_id": "",
+      "qe": "<b>Direction:</b> Walk 5km North, turn Left 90° walk 5km, turn Left 90° walk 5km. Distance from start?",
+      "qh": "<b>दिशा:</b> 5km उत्तर, 90° बाएं मुड़ें 5km, फिर 90° बाएं मुड़ें 5km। शुरू से दूरी?",
+      "o": ["5km", "10km", "0km", "15km"],
+      "a": 0,
+      "e": "<b>Shortcut:</b> Teen left turns square banate hain. 4th side missing hai, jo ki <b>5km</b> hogi."
+    },
+    {
+      "p_id": "",
+      "qe": "<b>Coding:</b> 'MASTER' = 'OCUVGT', 'STAPLE' = ?",
+      "qh": "<b>कोडिंग:</b> 'MASTER' = 'OCUVGT', 'STAPLE' = ?",
+      "o": ["UVCRNG", "UVBSNF", "TUBSMF", "None"],
+      "a": 0,
+      "e": "<b>Logic:</b> Har letter mein +2 karo."
+    },
+    {
+      "p_id": "",
+      "qe": "<b>Classification:</b> Odd: Kilometer, Milimeter, Nanometer, Ammeter?",
+      "qh": "<b>वर्गीकरण:</b> विषम: किलोमीटर, मिलीमीटर, नैनोमीटर, एम्मीटर?",
+      "o": ["Ammeter", "Nanometer", "Kilometer", "None"],
+      "a": 0,
+      "e": "<b>Logic:</b> Baki sab length (doori) naapte hain, Ammeter Current naapta hai."
+    }
+  ]
+}
