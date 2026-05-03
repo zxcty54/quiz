@@ -1,247 +1,247 @@
 [
   {
-    "q": "<b>Number System:</b> What is the remainder when $7^{101} + 9^{101}$ is divided by 16? / जब $7^{101} + 9^{101}$ को 16 से विभाजित किया जाता है, तो शेषफल क्या होगा?",
-    "o": ["0", "1", "2", "15"],
+    "q": "<b>Number System:</b> What is the remainder when $(x^{11} + 1)$ is divided by $(x + 1)$? / जब $(x^{11} + 1)$ को $(x + 1)$ से विभाजित किया जाता है, तो शेषफल क्या होगा?",
+    "o": ["0", "2", "11", "1"],
     "a": 0,
-    "e": "Rule: $a^n + b^n$ is always divisible by $(a+b)$ if $n$ is odd. Here $n=101$ is odd, so $(7+9)=16$ divides it completely. Remainder is 0.",
+    "e": "By Remainder Theorem, put $x = -1$. $(-1)^{11} + 1 = -1 + 1 = 0$.",
     "cat": "aptitude", "sub": "number-system"
   },
   {
-    "q": "<b>Percentage:</b> In an exam, A scored 25% more than B, B scored 10% less than C, and C scored 20% more than D. If D scored 320 out of 500, what marks did A score? / एक परीक्षा में, A ने B से 25% अधिक अंक प्राप्त किए, B ने C से 10% कम अंक प्राप्त किए, और C ने D से 20% अधिक अंक प्राप्त किए। यदि D ने 500 में से 320 अंक प्राप्त किए, तो A ने कितने अंक प्राप्त किए?",
-    "o": ["400", "405", "432", "450"],
-    "a": 2,
-    "e": "D = 320. C = 320 * 1.2 = 384. B = 384 * 0.9 = 345.6. A = 345.6 * 1.25 = 432.",
+    "q": "<b>Percentage:</b> The price of sugar is increased by 20%. By what percentage should a housewife reduce the consumption so that the expenditure remains same? / चीनी की कीमत में 20% की वृद्धि हुई है। एक गृहिणी को खपत में कितने प्रतिशत की कमी करनी चाहिए ताकि व्यय समान रहे?",
+    "o": ["$16\\frac{2}{3}\\%$", "20%", "$25\\%$", "$15\\%$"],
+    "a": 0,
+    "e": "Reduction = $\\frac{R}{100+R} \\times 100 = \\frac{20}{120} \\times 100 = 16\\frac{2}{3}\\%$.",
     "cat": "aptitude", "sub": "percentage"
   },
   {
-    "q": "<b>Ratio & Proportion:</b> ₹11,550 is divided among X, Y, and Z such that X receives 4/5 of what Y and Z together receive, and Y receives 2/3 of what X and Z together receive. Find Z's share. / ₹11,550 को X, Y और Z के बीच इस तरह विभाजित किया जाता है कि X को Y और Z को मिलाकर मिलने वाली राशि का 4/5 प्राप्त होता है, और Y को X और Z को मिलाकर मिलने वाली राशि का 2/3 प्राप्त होता है। Z का हिस्सा ज्ञात कीजिए।",
-    "o": ["₹1,850", "₹2,310", "₹2,500", "₹3,000"],
-    "a": 1,
-    "e": "X:(Y+Z) = 4:5 (Total 9). Y:(X+Z) = 2:3 (Total 5). Make total 45. X=20, Y=18. Z = 45 - (20+18) = 7. Share = (7/45) * 11550 = ₹1,796? Re-calculating: X=4/9*11550=5133. Y=2/5*11550=4620. Z=11550-(5133+4620)=1797. Closest check.",
+    "q": "<b>Ratio & Proportion:</b> If $x : y = 3 : 2$, then find the value of $(5x + 2y) : (3x - y)$. / यदि $x : y = 3 : 2$ है, तो $(5x + 2y) : (3x - y)$ का मान ज्ञात कीजिए।",
+    "o": ["19 : 7", "17 : 5", "15 : 4", "19 : 5"],
+    "a": 0,
+    "e": "Put $x=3, y=2$. $(5\\times3 + 2\\times2) : (3\\times3 - 2) = (15+4) : (9-2) = 19 : 7$.",
     "cat": "aptitude", "sub": "ratio"
   },
   {
-    "q": "<b>Averages:</b> The average weight of some students in a class was 58.4 kg. When 5 students having average weight 62.8 kg joined the class, the average weight of all students increased by 0.55 kg. Number of students initially? / एक कक्षा में कुछ छात्रों का औसत वजन 58.4 किग्रा था। जब 62.8 किग्रा औसत वजन वाले 5 छात्र कक्षा में शामिल हुए, तो सभी छात्रों का औसत वजन 0.55 किग्रा बढ़ गया। प्रारंभ में छात्रों की संख्या?",
-    "o": ["30", "35", "40", "45"],
+    "q": "<b>Square Roots:</b> Find the value of $\\sqrt{30 + \\sqrt{30 + \\sqrt{30 + \\dots \\infty}}}$. / $\\sqrt{30 + \\sqrt{30 + \\sqrt{30 + \\dots \\infty}}}$ का मान ज्ञात कीजिए।",
+    "o": ["5", "6", "7", "30"],
     "a": 1,
-    "e": "Total deviation = 5 * (62.8 - 58.4) = 5 * 4.4 = 22. Let initial students be n. 22 / (n+5) = 0.55. n+5 = 22/0.55 = 40. n = 35.",
+    "e": "Factorize 30 into consecutive numbers: $5 \\times 6$. For '+' sign, the larger factor is the answer. Result = 6.",
+    "cat": "aptitude", "sub": "square-root"
+  },
+  {
+    "q": "<b>Averages:</b> The average age of a group of 20 students is 15 years. When the teacher's age is included, the average increases by 1 year. The teacher's age is: / 20 छात्रों के एक समूह की औसत आयु 15 वर्ष है। जब शिक्षक की आयु शामिल की जाती है, तो औसत 1 वर्ष बढ़ जाता है। शिक्षक की आयु है:",
+    "o": ["35 years", "36 years", "40 years", "41 years"],
+    "a": 1,
+    "e": "Teacher's age = New Avg + (Old Members $\\times$ Increase) = $16 + (20 \\times 1) = 36$.",
     "cat": "aptitude", "sub": "averages"
   },
   {
-    "q": "<b>Simple Interest:</b> A person invested 1/3 of capital at 7%, 1/4 at 8% and the rest at 10% SI. If annual income is ₹561, the capital is: / एक व्यक्ति ने अपनी पूंजी का 1/3 हिस्सा 7% पर, 1/4 हिस्सा 8% पर और शेष 10% साधारण ब्याज पर निवेश किया। यदि वार्षिक आय ₹561 है, तो पूंजी है:",
-    "o": ["₹6,000", "₹6,600", "₹5,400", "₹7,200"],
-    "a": 1,
-    "e": "Let capital be 1200. (400*7 + 300*8 + 500*10)/100 = 28+24+50 = 102 units. 102 = 561. 1200 = (561/102)*1200 = ₹6,600.",
-    "cat": "aptitude", "sub": "interest"
-  },
-  {
-    "q": "<b>Compound Interest:</b> Find CI on ₹12,000 for 1 year and 4 months at 12% p.a. compounded annually. / ₹12,000 पर 1 वर्ष और 4 महीने के लिए 12% वार्षिक दर से चक्रवृद्धि ब्याज ज्ञात कीजिए, यदि ब्याज वार्षिक संयोजित होता है।",
-    "o": ["₹1,890", "₹1,950", "₹2,035.20", "₹2,100"],
-    "a": 2,
-    "e": "1st year Interest = 1440. New Principal = 13440. For 4 months (1/3 year), Rate = 12/3 = 4%. Interest = 13440 * 0.04 = 537.6. Total = 1440 + 537.6 = 1977.6? Wait, calculation check.",
-    "cat": "aptitude", "sub": "interest"
-  },
-  {
-    "q": "<b>Profit & Loss:</b> A shopkeeper bought 80 kg of sugar at ₹13.50/kg and mixed it with 120 kg of sugar at ₹16/kg. At what rate should he sell the mixture to gain 20%? / एक दुकानदार ने ₹13.50/किग्रा पर 80 किग्रा चीनी खरीदी और उसे ₹16/किग्रा पर 120 किग्रा चीनी के साथ मिलाया। 20% लाभ प्राप्त करने के लिए उसे मिश्रण को किस दर पर बेचना चाहिए?",
-    "o": ["₹18", "₹17.40", "₹16.50", "₹18.50"],
+    "q": "<b>Interest:</b> A sum of money at compound interest amounts to thrice itself in 3 years. In how many years will it be 9 times itself? / चक्रवृद्धि ब्याज पर कोई राशि 3 वर्षों में स्वयं की तीन गुनी हो जाती है। कितने वर्षों में यह स्वयं की 9 गुनी हो जाएगी?",
+    "o": ["6 years", "9 years", "12 years", "15 years"],
     "a": 0,
-    "e": "Avg CP = (80*13.5 + 120*16)/200 = (1080 + 1920)/200 = 3000/200 = ₹15. SP for 20% gain = 15 * 1.2 = ₹18.",
+    "e": "$3^1$ times in 3 years. $9 = 3^2$ times in $3 \\times 2 = 6$ years.",
+    "cat": "aptitude", "sub": "interest"
+  },
+  {
+    "q": "<b>Profit & Loss:</b> A man bought 2 apples for ₹3 and sold them at 3 for ₹5. Find his profit percentage. / एक आदमी ने ₹3 में 2 सेब खरीदे और उन्हें ₹5 में 3 के भाव से बेच दिया। उसका लाभ प्रतिशत ज्ञात कीजिए।",
+    "o": ["$11\\frac{1}{9}\\%$", "$10\\%$", "$12\\%$", "$15\\%$"],
+    "a": 0,
+    "e": "CP of 1 = 1.5. SP of 1 = 1.66. Profit% = $\\frac{1.66-1.5}{1.5} \\times 100 = 11.11\\%$.",
     "cat": "aptitude", "sub": "profit-loss"
   },
   {
-    "q": "<b>Discount:</b> An article was sold for ₹512 after two successive discounts of 20% and X% on MP of ₹800. Value of X? / एक वस्तु को ₹800 के अंकित मूल्य पर 20% और X% की दो क्रमिक छूट के बाद ₹512 में बेचा गया। X का मान?",
-    "o": ["15", "18", "20", "25"],
+    "q": "<b>Discount:</b> The marked price of a watch is ₹1600. After two successive discounts, it is sold for ₹1224. If the first discount is 10%, find the second discount. / एक घड़ी का अंकित मूल्य ₹1600 है। दो क्रमिक छूटों के बाद, इसे ₹1224 में बेचा जाता है। यदि पहली छूट 10% है, तो दूसरी छूट ज्ञात कीजिए।",
+    "o": ["10%", "12%", "15%", "18%"],
     "a": 2,
-    "e": "After 20% discount: 800 - 160 = 640. Second discount = 640 - 512 = 128. X = (128/640)*100 = 20%.",
+    "e": "After 10%: $1600 - 160 = 1440$. Second discount = $1440 - 1224 = 216$. $\% = \\frac{216}{1440} \\times 100 = 15\\%$.",
     "cat": "aptitude", "sub": "discount"
   },
   {
-    "q": "<b>Time & Work:</b> 6 men and 8 women can do a work in 10 days, while 26 men and 48 women can do it in 2 days. Time taken by 15 men and 20 women? / 6 पुरुष और 8 महिलाएं एक काम को 10 दिनों में कर सकते हैं, जबकि 26 पुरुष और 48 महिलाएं इसे 2 दिनों में कर सकते हैं। 15 पुरुषों और 20 महिलाओं द्वारा लिया गया समय?",
-    "o": ["4 days", "5 days", "6 days", "8 days"],
+    "q": "<b>Partnership:</b> A and B invest in a business in the ratio 3 : 2. If 5% of total profit goes to charity and A's share is ₹855, find total profit. / A और B एक व्यवसाय में 3 : 2 के अनुपात में निवेश करते हैं। यदि कुल लाभ का 5% दान में जाता है और A का हिस्सा ₹855 है, तो कुल लाभ ज्ञात कीजिए।",
+    "o": ["₹1500", "₹1425", "₹1575", "₹1600"],
     "a": 0,
-    "e": "(6m+8w)*10 = (26m+48w)*2 -> 60m+80w = 52m+96w -> 8m = 16w -> 1m = 2w. Total work in women = (12+8)*10 = 200. 15m+20w = 30w+20w = 50w. Days = 200/50 = 4 days.",
-    "cat": "aptitude", "sub": "time-work"
-  },
-  {
-    "q": "<b>Mixture:</b> From a container of 50L milk, 5L is replaced by water. This process is repeated one more time. Qty of milk left? / 50 लीटर दूध के कंटेनर से 5 लीटर दूध निकालकर पानी डाल दिया जाता है। यह प्रक्रिया एक बार और दोहराई जाती है। शेष दूध की मात्रा?",
-    "o": ["40L", "40.5L", "42.5L", "45L"],
-    "a": 1,
-    "e": "Final Milk = 50 * (1 - 5/50)^2 = 50 * (9/10)^2 = 50 * 0.81 = 40.5L.",
-    "cat": "aptitude", "sub": "mixture"
-  },
-  {
-    "q": "<b>Time & Distance:</b> A boat goes 30 km upstream and 44 km downstream in 10 hours. In 13 hours, it goes 40 km upstream and 55 km downstream. Speed of boat in still water? / एक नाव 10 घंटे में 30 किमी धारा के प्रतिकूल और 44 किमी धारा के अनुकूल जाती है। 13 घंटे में, यह 40 किमी प्रतिकूल और 55 किमी अनुकूल जाती है। शांत जल में नाव की गति?",
-    "o": ["5 km/h", "8 km/h", "11 km/h", "9 km/h"],
-    "a": 1,
-    "e": "Let 1/u = x, 1/d = y. 30x+44y=10, 40x+55y=13. Solving, x=1/5, y=1/11. Upstream=5, Downstream=11. Still water = (11+5)/2 = 8 km/h.",
-    "cat": "aptitude", "sub": "time-distance"
-  },
-  {
-    "q": "<b>Square Roots:</b> Value of $\\sqrt{10 + \\sqrt{24} + \\sqrt{40} + \\sqrt{60}}$? / $\\sqrt{10 + \\sqrt{24} + \\sqrt{40} + \\sqrt{60}}$ का मान?",
-    "o": ["$\\sqrt{2}+\\sqrt{3}+\\sqrt{5}$", "$\\sqrt{3}+\\sqrt{5}+\\sqrt{6}$", "$\\sqrt{2}+\\sqrt{5}+\\sqrt{10}$", "None"],
-    "a": 0,
-    "e": "Matches $(a+b+c)^2 = a^2+b^2+c^2+2(ab+bc+ca)$. Here $a^2+b^2+c^2=10$ and $2(\\sqrt{6}+\\sqrt{10}+\\sqrt{15}) = \\sqrt{24}+\\sqrt{40}+\\sqrt{60}$. So $a=\\sqrt{2}, b=\\sqrt{3}, c=\\sqrt{5}$.",
-    "cat": "aptitude", "sub": "square-root"
-  },
-  {
-    "q": "<b>Partnership:</b> A, B, C enter a partnership. A invests 3 times as much as B and B invests 2/3 of C. If total profit is ₹6,600, B's share? / A, B, C एक साझेदारी करते हैं। A, B से 3 गुना निवेश करता है और B, C का 2/3 निवेश करता है। यदि कुल लाभ ₹6,600 है, तो B का हिस्सा?",
-    "o": ["₹1,200", "₹1,500", "₹1,800", "₹2,100"],
-    "a": 0,
-    "e": "C=3, B=2, A=6. Ratio 6:2:3. B's share = (2/11) * 6600 = ₹1,200.",
+    "e": "A's share of 95% profit = 3/5. $\\frac{3}{5} \\times 95\\% = 855 \\rightarrow 57\\% = 855 \\rightarrow 100\\% = 1500$.",
     "cat": "aptitude", "sub": "partnership"
   },
   {
-    "q": "<b>Quadrilaterals:</b> In a cyclic quadrilateral ABCD, $\\angle A = (4x+20)^\\circ$ and $\\angle C = (3x-15)^\\circ$. Value of x? / एक चक्रीय चतुर्भुज ABCD में, $\\angle A = (4x+20)^\\circ$ और $\\angle C = (3x-15)^\\circ$ है। x का मान?",
-    "o": ["20", "25", "30", "35"],
-    "a": 1,
-    "e": "Sum of opposite angles in cyclic quad = 180. $4x+20 + 3x-15 = 180 \\rightarrow 7x + 5 = 180 \\rightarrow 7x=175 \\rightarrow x=25$.",
-    "cat": "aptitude", "sub": "quadrilaterals"
-  },
-  {
-    "q": "<b>Polygons:</b> Sum of all interior angles of a regular polygon is $1080^\\circ$. Number of diagonals? / एक नियमित बहुभुज के सभी आंतरिक कोणों का योग $1080^\\circ$ है। विकर्णों की संख्या?",
-    "o": ["14", "20", "27", "35"],
-    "a": 1,
-    "e": "$(n-2)*180 = 1080 \\rightarrow n-2 = 6 \\rightarrow n=8$. Diagonals = $8(8-3)/2 = 20$.",
-    "cat": "aptitude", "sub": "polygons"
-  },
-  {
-    "q": "<b>Right Prism:</b> Base of a right prism is a square of side 8cm. If height is 10cm, find TSA. / एक लंब प्रिज्म का आधार 8 सेमी भुजा वाला वर्ग है। यदि ऊंचाई 10 सेमी है, तो कुल पृष्ठीय क्षेत्रफल (TSA) ज्ञात कीजिए।",
-    "o": ["320 cm²", "448 cm²", "480 cm²", "512 cm²"],
-    "a": 1,
-    "e": "Base Area = 64. Perimeter = 32. LSA = $32*10 = 320$. TSA = $320 + 2*64 = 448$ cm².",
-    "cat": "aptitude", "sub": "prism"
-  },
-  {
-    "q": "<b>Cone:</b> Radius and height of a cone are in ratio 3:4. If volume is 301.44 cm³, find slant height. / एक शंकु की त्रिज्या और ऊंचाई का अनुपात 3:4 है। यदि आयतन 301.44 सेमी³ है, तो तिरछी ऊंचाई ज्ञात कीजिए। ($\\pi=3.14$)",
-    "o": ["5 cm", "8 cm", "10 cm", "12 cm"],
-    "a": 2,
-    "e": "$1/3 * 3.14 * (3x)^2 * 4x = 301.44 \\rightarrow 1/3 * 3.14 * 9x^2 * 4x = 301.44 \\rightarrow 37.68x^3 = 301.44 \\rightarrow x^3=8 \\rightarrow x=2$. $r=6, h=8 \\rightarrow l=10$ cm.",
-    "cat": "aptitude", "sub": "cone"
-  },
-  {
-    "q": "<b>Trigonometry:</b> Value of $\\frac{\\sin 30^\\circ}{\\cos 60^\\circ} + \\frac{\\tan 45^\\circ}{\\cot 45^\\circ}$? / $\\frac{\\sin 30^\\circ}{\\cos 60^\\circ} + \\frac{\\tan 45^\\circ}{\\cot 45^\\circ}$ का मान?",
-    "o": ["1", "2", "0", "4"],
-    "a": 1,
-    "e": "$(0.5/0.5) + (1/1) = 1 + 1 = 2$.",
-    "cat": "aptitude", "sub": "trigonometry"
-  },
-  {
-    "q": "<b>Heights & Distances:</b> A ladder leans against a wall making $60^\\circ$ with the ground. If the foot of the ladder is 5m from the wall, length of ladder? / एक सीढ़ी दीवार के सहारे जमीन से $60^\\circ$ का कोण बनाती है। यदि सीढ़ी का पैर दीवार से 5 मीटर दूर है, तो सीढ़ी की लंबाई?",
-    "o": ["10m", "5\\sqrt{3}m", "15m", "20m"],
+    "q": "<b>Mixture:</b> In what ratio must a grocer mix sugar at ₹12/kg and ₹7/kg so as to get a mixture worth ₹8/kg? / एक पंसारी को ₹12/किग्रा और ₹7/किग्रा वाली चीनी को किस अनुपात में मिलाना चाहिए ताकि ₹8/किग्रा वाला मिश्रण प्राप्त हो सके?",
+    "o": ["1 : 4", "4 : 1", "2 : 3", "3 : 2"],
     "a": 0,
-    "e": "$\\cos 60 = 5/L \\rightarrow 1/2 = 5/L \\rightarrow L=10$m.",
-    "cat": "aptitude", "sub": "height-distance"
+    "e": "By Alligation: $(8-7) : (12-8) = 1 : 4$.",
+    "cat": "aptitude", "sub": "mixture"
   },
   {
-    "q": "<b>Number System:</b> Units digit of $23^{45} \\times 24^{46} \\times 25^{47}$? / $23^{45} \\times 24^{46} \\times 25^{47}$ का इकाई अंक?",
-    "o": ["0", "5", "2", "8"],
-    "a": 0,
-    "e": "Contains $24^{even}$ (ends in 6) and $25^{any}$ (ends in 5). $6 \\times 5 = 30$, so units digit is 0.",
-    "cat": "aptitude", "sub": "number-system"
-  },
-  {
-    "q": "<b>Percentage:</b> A's salary is 20% less than B. By what % is B's salary more than A? / A का वेतन B से 20% कम है। B का वेतन A से कितने % अधिक है?",
-    "o": ["20%", "25%", "30%", "15%"],
+    "q": "<b>Time & Distance:</b> A person crosses a 600 m long street in 5 minutes. What is his speed in km/h? / एक व्यक्ति 5 मिनट में 600 मीटर लंबी सड़क पार करता है। किमी/घंटा में उसकी गति क्या है?",
+    "o": ["3.6", "7.2", "8.4", "10"],
     "a": 1,
-    "e": "$20/(100-20) * 100 = 20/80 * 100 = 25%.",
-    "cat": "aptitude", "sub": "percentage"
-  },
-  {
-    "q": "<b>Ratio:</b> If $a:b = 2:3$ and $b:c = 5:7$, then $a:c$? / यदि $a:b = 2:3$ और $b:c = 5:7$, तो $a:c$?",
-    "o": ["10:21", "2:7", "5:3", "None"],
-    "a": 0,
-    "e": "$(2/3) * (5/7) = 10/21.",
-    "cat": "aptitude", "sub": "ratio"
-  },
-  {
-    "q": "<b>Averages:</b> Average of 10 numbers is 7. If each is multiplied by 12, new average? / 10 संख्याओं का औसत 7 है। यदि प्रत्येक को 12 से गुणा किया जाए, तो नया औसत?",
-    "o": ["7", "12", "84", "19"],
-    "a": 2,
-    "e": "$7 * 12 = 84.",
-    "cat": "aptitude", "sub": "averages"
-  },
-  {
-    "q": "<b>Interest:</b> At what rate SI will a sum double itself in 8 years? / किस साधारण ब्याज दर पर कोई राशि 8 वर्षों में दोगुनी हो जाएगी?",
-    "o": ["10%", "12.5%", "15%", "20%"],
-    "a": 1,
-    "e": "$R = 100/T = 100/8 = 12.5%.",
-    "cat": "aptitude", "sub": "interest"
-  },
-  {
-    "q": "<b>Profit & Loss:</b> CP of 15 articles is equal to SP of 10 articles. Profit%? / 15 वस्तुओं का क्रय मूल्य 10 वस्तुओं के विक्रय मूल्य के बराबर है। लाभ%?",
-    "o": ["33.33%", "50%", "25%", "20%"],
-    "a": 1,
-    "e": "Profit = $(15-10)/10 * 100 = 50%.",
-    "cat": "aptitude", "sub": "profit-loss"
-  },
-  {
-    "q": "<b>Time & Work:</b> A can do a work in 12 days, B in 18 days. A starts and they work on alternate days. Total time? / A एक काम 12 दिनों में, B 18 दिनों में कर सकता है। A शुरू करता है और वे बारी-बारी से काम करते हैं। कुल समय?",
-    "o": ["14 days", "14.33 days", "15 days", "13.5 days"],
-    "a": 1,
-    "e": "Total work 36. Eff A=3, B=2. 2 days work = 5. In 14 days, $5*7=35$ work done. Remaining 1 work by A in 1/3 day. Total $14.33$ days.",
-    "cat": "aptitude", "sub": "time-work"
-  },
-  {
-    "q": "<b>Time & Distance:</b> A train 150m long crosses a pole in 6s. Speed in km/h? / 150 मीटर लंबी ट्रेन एक खंभे को 6 सेकंड में पार करती है। किमी/घंटा में गति?",
-    "o": ["90", "75", "100", "80"],
-    "a": 0,
-    "e": "$150/6 = 25 m/s = 25 * 18/5 = 90$ km/h.",
+    "e": "Speed = $600/300 = 2$ m/s. In km/h = $2 \\times \\frac{18}{5} = 7.2$.",
     "cat": "aptitude", "sub": "time-distance"
   },
   {
-    "q": "<b>Trigonometry:</b> $(\\sec^2 \\theta - 1)(\\operatorname{cosec}^2 \\theta - 1)$? / $(\\sec^2 \\theta - 1)(\\operatorname{cosec}^2 \\theta - 1)$?",
-    "o": ["0", "1", "-1", "2"],
-    "a": 1,
-    "e": "$\\tan^2 \\theta \\times \\cot^2 \\theta = 1$.",
-    "cat": "aptitude", "sub": "trigonometry"
+    "q": "<b>Time & Work:</b> A can do a piece of work in 80 days. He works at it for 10 days and then B alone finishes the remaining work in 42 days. Together they can do it in: / A एक काम को 80 दिनों में कर सकता है। वह इस पर 10 दिनों तक काम करता है और फिर B अकेले शेष काम को 42 दिनों में पूरा करता है। वे मिलकर इसे कितने दिनों में कर सकते हैं?",
+    "o": ["24 days", "25 days", "30 days", "35 days"],
+    "a": 2,
+    "e": "Remaining work = 7/8. B does 7/8 in 42 days, so full work in 48 days. Together = $\\frac{80 \\times 48}{128} = 30$ days.",
+    "cat": "aptitude", "sub": "time-work"
   },
   {
-    "q": "<b>Quadrilaterals:</b> Area of a rhombus is 240 cm² and one diagonal is 16 cm. Other diagonal? / एक समचतुर्भुज का क्षेत्रफल 240 सेमी² है और एक विकर्ण 16 सेमी है। दूसरा विकर्ण?",
-    "o": ["20 cm", "25 cm", "30 cm", "35 cm"],
-    "a": 2,
-    "e": "$1/2 * 16 * d2 = 240 \\rightarrow 8 * d2 = 240 \\rightarrow d2 = 30$ cm.",
+    "q": "<b>Quadrilaterals:</b> The area of a rhombus is 150 cm² and one of its diagonals is 10 cm. Find the other diagonal. / एक समचतुर्भुज का क्षेत्रफल 150 सेमी² है और इसका एक विकर्ण 10 सेमी है। दूसरा विकर्ण ज्ञात कीजिए।",
+    "o": ["15 cm", "30 cm", "20 cm", "25 cm"],
+    "a": 1,
+    "e": "Area = $\\frac{1}{2} d_1 d_2 \\rightarrow 150 = \\frac{1}{2} \\times 10 \\times d_2 \\rightarrow d_2 = 30$ cm.",
     "cat": "aptitude", "sub": "quadrilaterals"
   },
   {
-    "q": "<b>Polygons:</b> Each exterior angle of a regular polygon is $45^\\circ$. Number of sides? / एक नियमित बहुभुज का प्रत्येक बाहरी कोण $45^\\circ$ है। भुजाओं की संख्या?",
-    "o": ["6", "8", "10", "12"],
+    "q": "<b>Regular Polygons:</b> The sum of all exterior angles of a regular convex polygon is: / एक नियमित उत्तल बहुभुज के सभी बाहरी कोणों का योग होता है:",
+    "o": ["$180^\\circ$", "$360^\\circ$", "$540^\\circ$", "$720^\\circ$"],
     "a": 1,
-    "e": "$360/45 = 8$.",
+    "e": "The sum of exterior angles of any polygon is always $360^\\circ$.",
     "cat": "aptitude", "sub": "polygons"
   },
   {
-    "q": "<b>Prism:</b> Base of a right prism is a triangle with sides 3, 4, 5 cm. If height is 10 cm, Volume? / एक लंब प्रिज्म का आधार 3, 4, 5 सेमी भुजाओं वाला त्रिभुज है। यदि ऊंचाई 10 सेमी है, तो आयतन?",
-    "o": ["60 cm³", "30 cm³", "120 cm³", "None"],
+    "q": "<b>Right Prism:</b> The base of a right prism is an equilateral triangle of side 4 cm. If its volume is $20\\sqrt{3}$ cm³, find its height. / एक लंब प्रिज्म का आधार 4 सेमी भुजा वाला एक समबाहु त्रिभुज है। यदि इसका आयतन $20\\sqrt{3}$ सेमी³ है, तो इसकी ऊंचाई ज्ञात कीजिए।",
+    "o": ["5 cm", "4 cm", "10 cm", "6 cm"],
     "a": 0,
-    "e": "Base Area = $1/2 * 3 * 4 = 6$. Vol = $6 * 10 = 60$ cm³.",
+    "e": "Base Area = $\\frac{\\sqrt{3}}{4} \\times 4^2 = 4\\sqrt{3}$. Vol = Area $\\times$ h $\\rightarrow 20\\sqrt{3} = 4\\sqrt{3} \\times h \\rightarrow h = 5$.",
     "cat": "aptitude", "sub": "prism"
   },
   {
-    "q": "<b>Square Roots:</b> $\\sqrt{400} + \\sqrt{0.04} + \\sqrt{0.000004}$? / $\\sqrt{400} + \\sqrt{0.04} + \\sqrt{0.000004}$?",
-    "o": ["20.202", "20.22", "22.2", "None"],
+    "q": "<b>Right Circular Cone:</b> If the radius of a cone is doubled and height is halved, what is the ratio of new volume to old volume? / यदि एक शंकु की त्रिज्या दोगुनी कर दी जाए और ऊंचाई आधी कर दी जाए, तो नए आयतन का पुराने आयतन से अनुपात क्या होगा?",
+    "o": ["2 : 1", "1 : 2", "4 : 1", "1 : 1"],
     "a": 0,
-    "e": "$20 + 0.2 + 0.002 = 20.202$.",
-    "cat": "aptitude", "sub": "square-root"
+    "e": "$V_1 = \\frac{1}{3} \\pi r^2 h$. $V_2 = \\frac{1}{3} \\pi (2r)^2 (h/2) = \\frac{1}{3} \\pi 4r^2 (h/2) = 2 V_1$. Ratio 2:1.",
+    "cat": "aptitude", "sub": "cone"
   },
   {
-    "q": "<b>Heights & Distances:</b> Angle of elevation of sun changes from $45^\\circ$ to $30^\\circ$, shadow of tower increases by 10m. Height? / सूर्य का उन्नयन कोण $45^\\circ$ से बदलकर $30^\\circ$ हो जाता है, मीनार की छाया 10 मीटर बढ़ जाती है। ऊंचाई?",
-    "o": ["$5(\\sqrt{3}+1)$m", "$5(\\sqrt{3}-1)$m", "$10\\sqrt{3}$m", "None"],
-    "a": 0,
-    "e": "$h = 10 / (\\cot 30 - \\cot 45) = 10 / (\\sqrt{3} - 1) = 5(\\sqrt{3}+1)$m.",
+    "q": "<b>Trigonometric ratio:</b> Find the value of $(\\sin 45^\\circ + \\cos 45^\\circ)^2$. / $(\\sin 45^\\circ + \\cos 45^\\circ)^2$ का मान ज्ञात कीजिए।",
+    "o": ["1", "2", "0.5", "1.5"],
+    "a": 1,
+    "e": "$(\\frac{1}{\\sqrt{2}} + \\frac{1}{\\sqrt{2}})^2 = (\\frac{2}{\\sqrt{2}})^2 = (\\sqrt{2})^2 = 2$.",
+    "cat": "aptitude", "sub": "trigonometry"
+  },
+  {
+    "q": "<b>Heights & Distances:</b> The angle of elevation of a ladder leaning against a wall is $60^\\circ$ and the foot of the ladder is 4.6 m away from the wall. The length of the ladder is: / एक दीवार के सहारे टिकी सीढ़ी का उन्नयन कोण $60^\\circ$ है और सीढ़ी का पैर दीवार से 4.6 मीटर दूर है। सीढ़ी की लंबाई है:",
+    "o": ["2.3 m", "4.6 m", "7.8 m", "9.2 m"],
+    "a": 3,
+    "e": "$\\cos 60^\\circ = 4.6/L \\rightarrow 1/2 = 4.6/L \\rightarrow L = 9.2$ m.",
     "cat": "aptitude", "sub": "height-distance"
   },
   {
-    "q": "<b>Decimals:</b> $0.57$ (bar on 57) in fraction? / $0.57$ (57 पर बार) भिन्न में?",
-    "o": ["57/100", "57/99", "57/90", "None"],
+    "q": "<b>Number System:</b> What is the units digit in $(256)^{102} + (256)^{103}$? / $(256)^{102} + (256)^{103}$ में इकाई का अंक क्या है?",
+    "o": ["0", "4", "2", "6"],
+    "a": 2,
+    "e": "Units digit of 6 power anything is 6. $6 + 6 = 12$, so units digit is 2.",
+    "cat": "aptitude", "sub": "number-system"
+  },
+  {
+    "q": "<b>Percentage:</b> A's salary is 50% more than B's. How much percent is B's salary less than A's? / A का वेतन B के वेतन से 50% अधिक है। B का वेतन A के वेतन से कितने प्रतिशत कम है?",
+    "o": ["33%", "$33\\frac{1}{3}\\%$", "$50\\%$", "$25\\%$"],
     "a": 1,
-    "e": "Two digits under bar means 99 in denominator. $57/99 = 19/33$.",
+    "e": "$\\frac{50}{150} \\times 100 = 33\\frac{1}{3}\\%$.",
+    "cat": "aptitude", "sub": "percentage"
+  },
+  {
+    "q": "<b>Ratio:</b> If $x/y = 4/5$, then find the value of $(4/7 + (2y-x)/(2y+x))$. / यदि $x/y = 4/5$ है, तो $(4/7 + (2y-x)/(2y+x))$ का मान ज्ञात कीजिए।",
+    "o": ["1", "2", "3", "4"],
+    "a": 0,
+    "e": "Put $x=4, y=5$. Term = $4/7 + (10-4)/(10+4) = 4/7 + 6/14 = 4/7 + 3/7 = 1$.",
+    "cat": "aptitude", "sub": "ratio"
+  },
+  {
+    "q": "<b>Square Roots:</b> Find the value of $\\sqrt{0.01} + \\sqrt{0.81} + \\sqrt{1.21}$. / $\\sqrt{0.01} + \\sqrt{0.81} + \\sqrt{1.21}$ का मान ज्ञात कीजिए।",
+    "o": ["2.1", "2.0", "1.9", "2.2"],
+    "a": 0,
+    "e": "$0.1 + 0.9 + 1.1 = 2.1$.",
+    "cat": "aptitude", "sub": "square-root"
+  },
+  {
+    "q": "<b>Averages:</b> The average of 7 numbers is 5. If one number is removed, the average becomes 4. Find the removed number. / 7 संख्याओं का औसत 5 है। यदि एक संख्या हटा दी जाती है, तो औसत 4 हो जाता है। हटाई गई संख्या ज्ञात कीजिए।",
+    "o": ["11", "6", "9", "10"],
+    "a": 0,
+    "e": "Sum of 7 = 35. Sum of 6 = 24. Removed = $35 - 24 = 11$.",
+    "cat": "aptitude", "sub": "averages"
+  },
+  {
+    "q": "<b>Interest:</b> At what rate per annum simple interest will a sum of money double in 10 years? / किस वार्षिक साधारण ब्याज दर पर कोई राशि 10 वर्षों में दोगुनी हो जाएगी?",
+    "o": ["5%", "8%", "10%", "12%"],
+    "a": 2,
+    "e": "Rate = $100/10 = 10\\%$.",
+    "cat": "aptitude", "sub": "interest"
+  },
+  {
+    "q": "<b>Profit & Loss:</b> The CP of 20 articles is the same as SP of $x$ articles. If profit is 25%, then $x$ is: / 20 वस्तुओं का क्रय मूल्य $x$ वस्तुओं के विक्रय मूल्य के समान है। यदि लाभ 25% है, तो $x$ है:",
+    "o": ["15", "16", "18", "25"],
+    "a": 1,
+    "e": "$\\frac{20-x}{x} \\times 100 = 25 \\rightarrow 20-x = 0.25x \\rightarrow 1.25x = 20 \\rightarrow x = 16$.",
+    "cat": "aptitude", "sub": "profit-loss"
+  },
+  {
+    "q": "<b>Discount:</b> A shopkeeper gives 12% discount and still earns 21% profit. If CP is ₹440, find MP. / एक दुकानदार 12% की छूट देता है और फिर भी 21% लाभ कमाता है। यदि क्रय मूल्य ₹440 है, तो अंकित मूल्य ज्ञात कीजिए।",
+    "o": ["₹605", "₹600", "₹550", "₹650"],
+    "a": 0,
+    "e": "$MP = CP \\times \\frac{100+P}{100-D} = 440 \\times \\frac{121}{88} = 5 \\times 121 = 605$.",
+    "cat": "aptitude", "sub": "discount"
+  },
+  {
+    "q": "<b>Time & Work:</b> 12 men can complete a work in 15 days. In how many days can 20 men complete it? / 12 पुरुष एक काम को 15 दिनों में पूरा कर सकते हैं। 20 पुरुष इसे कितने दिनों में पूरा कर सकते हैं?",
+    "o": ["9 days", "10 days", "12 days", "8 days"],
+    "a": 0,
+    "e": "$M_1 D_1 = M_2 D_2 \\rightarrow 12 \\times 15 = 20 \\times D_2 \\rightarrow 180 = 20 D_2 \\rightarrow D_2 = 9$.",
+    "cat": "aptitude", "sub": "time-work"
+  },
+  {
+    "q": "<b>Quadrilaterals:</b> If the sides of a rectangle are in ratio 3 : 2 and area is 96 cm², find the perimeter. / यदि एक आयत की भुजाएँ 3 : 2 के अनुपात में हैं और क्षेत्रफल 96 सेमी² है, तो परिमाप ज्ञात कीजिए।",
+    "o": ["20 cm", "40 cm", "30 cm", "50 cm"],
+    "a": 1,
+    "e": "$3x \\times 2x = 96 \\rightarrow 6x^2 = 96 \\rightarrow x^2 = 16 \\rightarrow x = 4$. Sides are 12, 8. Perimeter = $2(12+8) = 40$ cm.",
+    "cat": "aptitude", "sub": "quadrilaterals"
+  },
+  {
+    "q": "<b>Polygons:</b> Each interior angle of a regular polygon is $144^\\circ$. Find the number of sides. / एक नियमित बहुभुज का प्रत्येक आंतरिक कोण $144^\\circ$ है। भुजाओं की संख्या ज्ञात कीजिए।",
+    "o": ["8", "10", "12", "15"],
+    "a": 1,
+    "e": "Exterior angle = $180 - 144 = 36^\\circ$. Sides = $360/36 = 10$.",
+    "cat": "aptitude", "sub": "polygons"
+  },
+  {
+    "q": "<b>Right Circular Cone:</b> The curved surface area of a cone of radius 7 cm is 550 cm². Find its slant height. / 7 सेमी त्रिज्या वाले एक शंकु का वक्र पृष्ठीय क्षेत्रफल 550 सेमी² है। इसकी तिरछी ऊंचाई ज्ञात कीजिए।",
+    "o": ["20 cm", "25 cm", "30 cm", "15 cm"],
+    "a": 1,
+    "e": "$\\pi r l = 550 \\rightarrow \\frac{22}{7} \\times 7 \\times l = 550 \\rightarrow 22l = 550 \\rightarrow l = 25$ cm.",
+    "cat": "aptitude", "sub": "cone"
+  },
+  {
+    "q": "<b>Trigonometric ratio:</b> Value of $\\sin^2 30^\\circ + \\cos^2 30^\\circ$ is: / $\\sin^2 30^\\circ + \\cos^2 30^\\circ$ का मान है:",
+    "o": ["0", "1", "0.5", "2"],
+    "a": 1,
+    "e": "Identity: $\\sin^2 \\theta + \\cos^2 \\theta = 1$.",
+    "cat": "aptitude", "sub": "trigonometry"
+  },
+  {
+    "q": "<b>Heights & Distances:</b> A tower is 100 m high. Find the angle of elevation of its top from a point 100 m from its foot. / एक मीनार 100 मीटर ऊँची है। इसके पैर से 100 मीटर की दूरी पर स्थित एक बिंदु से इसके शीर्ष का उन्नयन कोण ज्ञात कीजिए।",
+    "o": ["$30^\\circ$", "$45^\\circ$", "$60^\\circ$", "$90^\\circ$"],
+    "a": 1,
+    "e": "$\\tan \\theta = 100/100 = 1 \\rightarrow \\theta = 45^\\circ$.",
+    "cat": "aptitude", "sub": "height-distance"
+  },
+  {
+    "q": "<b>Number System:</b> Find the number of zeros at the end of 100!. / 100! के अंत में शून्य की संख्या ज्ञात कीजिए।",
+    "o": ["20", "24", "25", "30"],
+    "a": 1,
+    "e": "$100/5 + 100/25 = 20 + 4 = 24$.",
+    "cat": "aptitude", "sub": "number-system"
+  },
+  {
+    "q": "<b>Decimals:</b> Value of $0.\\overline{63} + 0.\\overline{37}$ is: / $0.\\overline{63} + 0.\\overline{37}$ का मान है:",
+    "o": ["1", "$1.\\overline{01}$", "$0.99$", "$1.01$"],
+    "a": 1,
+    "e": "$63/99 + 37/99 = 100/99 = 1.\\overline{01}$.",
     "cat": "aptitude", "sub": "decimals"
   },
   {
-    "q": "<b>Mixture:</b> Ratio of water and spirit in two mixtures is 2:3 and 4:5. Mixed in ratio 1:2. Ratio in final? / दो मिश्रणों में पानी और स्पिरिट का अनुपात 2:3 और 4:5 है। इन्हें 1:2 के अनुपात में मिलाया गया। अंतिम में अनुपात?",
-    "o": ["3:4", "26:37", "5:7", "None"],
-    "a": 1,
-    "e": "Water: $1*(2/5) + 2*(4/9) = 2/5 + 8/9 = 58/45$. Spirit: $1*(3/5) + 2*(5/9) = 3/5 + 10/9 = 77/45$. Ratio 58:77? Re-calc check required. Correct answer 26:37 based on standard mains calc.",
+    "q": "<b>Mixture:</b> A mixture contains alcohol and water in ratio 4 : 3. If 5L water is added, ratio becomes 4 : 5. Qty of alcohol? / एक मिश्रण में अल्कोहल और पानी का अनुपात 4 : 3 है। यदि 5 लीटर पानी मिलाया जाता है, तो अनुपात 4 : 5 हो जाता है। अल्कोहल की मात्रा?",
+    "o": ["10L", "12L", "15L", "20L"],
+    "a": 0,
+    "e": "Water parts increased from 3 to 5 (2 units). 2 units = 5L. Alcohol (4 units) = 10L.",
     "cat": "aptitude", "sub": "mixture"
   }
 ]
