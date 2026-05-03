@@ -1,0 +1,107 @@
+[
+  {
+    "q": "<b>Cloze Test (1/5):</b> Select the most appropriate option for <b>Blank No. 1</b>.<br/><br/><i>'The implementation of AI in healthcare is (1)______ to be a game-changer. It can (2)______ vast amounts of data to provide accurate diagnoses. However, we must remain (3)______ about data privacy. Ethical (4)______ should be prioritized to avoid misuse. A collaborative (5)______ between doctors and developers is essential.'</i>",
+    "o": ["poised", "forced", "hesitant", "deterred"],
+    "a": 0,
+    "e": "Blank 1: 'Poised' (तैयार/स्थित) का अर्थ है किसी महत्वपूर्ण बदलाव के लिए पूरी तरह तैयार होना।",
+    "cat": "english", "sub": "cloze-test"
+  },
+  {
+    "q": "<b>Cloze Test (2/5):</b> Select the most appropriate option for <b>Blank No. 2</b>.<br/><br/><i>'The implementation of AI in healthcare is (1)______ to be a game-changer. It can (2)______ vast amounts of data to provide accurate diagnoses. However, we must remain (3)______ about data privacy. Ethical (4)______ should be prioritized to avoid misuse. A collaborative (5)______ between doctors and developers is essential.'</i>",
+    "o": ["scrutinize", "discard", "overlook", "ignore"],
+    "a": 0,
+    "e": "Blank 2: 'Scrutinize' (बारीकी से जांच करना) डेटा के विश्लेषण के लिए सबसे उपयुक्त शब्द है।",
+    "cat": "english", "sub": "cloze-test"
+  },
+  {
+    "q": "<b>Cloze Test (3/5):</b> Select the most appropriate option for <b>Blank No. 3</b>.<br/><br/><i>'The implementation of AI in healthcare is (1)______ to be a game-changer. It can (2)______ vast amounts of data to provide accurate diagnoses. However, we must remain (3)______ about data privacy. Ethical (4)______ should be prioritized to avoid misuse. A collaborative (5)______ between doctors and developers is essential.'</i>",
+    "o": ["vigilant", "careless", "oblivious", "reckless"],
+    "a": 0,
+    "e": "Blank 3: 'Vigilant' (सतर्क) निजता (privacy) की सुरक्षा के संदर्भ में सही विशेषण है।",
+    "cat": "english", "sub": "cloze-test"
+  },
+  {
+    "q": "<b>Cloze Test (4/5):</b> Select the most appropriate option for <b>Blank No. 4</b>.<br/><br/><i>'The implementation of AI in healthcare is (1)______ to be a game-changer. It can (2)______ vast amounts of data to provide accurate diagnoses. However, we must remain (3)______ about data privacy. Ethical (4)______ should be prioritized to avoid misuse. A collaborative (5)______ between doctors and developers is essential.'</i>",
+    "o": ["considerations", "negligence", "omissions", "delays"],
+    "a": 0,
+    "e": "Blank 4: 'Ethical considerations' (नैतिक विचार) एक मानक वाक्यांश है जो तकनीकी विकास में उपयोग होता है।",
+    "cat": "english", "sub": "cloze-test"
+  },
+  {
+    "q": "<b>Cloze Test (5/5):</b> Select the most appropriate option for <b>Blank No. 5</b>.<br/><br/><i>'The implementation of AI in healthcare is (1)______ to be a game-changer. It can (2)______ vast amounts of data to provide accurate diagnoses. However, we must remain (3)______ about data privacy. Ethical (4)______ should be prioritized to avoid misuse. A collaborative (5)______ between doctors and developers is essential.'</i>",
+    "o": ["endeavor", "clash", "rivalry", "dispute"],
+    "a": 0,
+    "e": "Blank 5: 'Endeavor' (प्रयास) का प्रयोग यहाँ एक सामूहिक कार्य या मिशन को दर्शाने के लिए किया गया है।",
+    "cat": "english", "sub": "cloze-test"
+  },
+  {
+    "q": "<b>Error Spotting:</b> No sooner (A) / he had arrived (B) / than the (C) / meeting started (D).",
+    "o": ["A", "B", "C", "D"],
+    "a": 1,
+    "e": "Inversion Rule: जब वाक्य 'No sooner' से शुरू हो, तो Auxiliary verb (had) subject से पहले आनी चाहिए। सही: 'No sooner had he arrived'।",
+    "cat": "english", "sub": "error-spotting"
+  },
+  {
+    "q": "<b>Error Spotting:</b> The reason (A) / for his failure (B) / is because (C) / he did not work hard (D).",
+    "o": ["A", "B", "C", "D"],
+    "a": 2,
+    "e": "Redundancy: 'The reason' के साथ 'that' का प्रयोग होता है, 'because' का नहीं क्योंकि दोनों कारण ही बताते हैं।",
+    "cat": "english", "sub": "error-spotting"
+  },
+  {
+    "q": "<b>Error Spotting:</b> He is (A) / one of those (B) / people who (C) / is never on time (D).",
+    "o": ["A", "B", "C", "D"],
+    "a": 3,
+    "e": "Relative Pronoun Rule: 'Who' यहाँ 'people' (Plural) के लिए आया है, इसलिए verb 'are' होनी चाहिए, न कि 'is'।",
+    "cat": "english", "sub": "error-spotting"
+  },
+  {
+    "q": "<b>Error Spotting:</b> Having been (A) / found guilty (B) / on murder (C) / he was sentenced to death (D).",
+    "o": ["A", "B", "C", "D"],
+    "a": 2,
+    "e": "Prepositional Error: 'Guilty' के साथ हमेशा 'of' लगता है। सही: 'guilty of murder'।",
+    "cat": "english", "sub": "error-spotting"
+  },
+  {
+    "q": "<b>Error Spotting:</b> Not only did (A) / she bake a cake (B) / but also (C) / prepared some snacks (D).",
+    "o": ["A", "B", "C", "D"],
+    "a": 2,
+    "e": "Parallelism: 'Not only' के बाद verb (did she bake) है, तो 'but also' के बाद भी 'she prepared' या inversion की संरचना संतुलित होनी चाहिए। 'But also she prepared' सही होगा।",
+    "cat": "english", "sub": "error-spotting"
+  },
+  {
+    "q": "<b>Sentence Improvement:</b> If I *had* a million dollars, I would travel the world.",
+    "o": ["If I have", "If I were having", "If I had had", "No improvement"],
+    "a": 3,
+    "e": "Conditional Type 2: 'If + V2 (had), would + V1' काल्पनिक वर्तमान के लिए बिल्कुल सही है।",
+    "cat": "english", "sub": "improvement"
+  },
+  {
+    "q": "<b>Synonym of 'PERSPICACIOUS':</b>",
+    "o": ["Dull", "Shrewd", "Ignorant", "Unclear"],
+    "a": 1,
+    "e": "Perspicacious का अर्थ है बहुत समझदार या सूक्ष्मदर्शी (Insightful/Shrewd)।",
+    "cat": "english", "sub": "vocab"
+  },
+  {
+    "q": "<b>Antonym of 'NEFARIOUS':</b>",
+    "o": ["Wicked", "Virtuous", "Vile", "Evil"],
+    "a": 1,
+    "e": "Nefarious (अति दुष्ट) का उल्टा 'Virtuous' (सदाचारी/नेक) होता है।",
+    "cat": "english", "sub": "vocab"
+  },
+  {
+    "q": "<b>Active/Passive:</b> They have already completed the task.",
+    "o": ["The task was already completed", "The task has already been completed by them", "The task is completed", "None"],
+    "a": 1,
+    "e": "Present Perfect 'has/have + V3' बदलकर 'has/have + been + V3' हो जाता है।",
+    "cat": "english", "sub": "voice"
+  },
+  {
+    "q": "<b>Direct/Indirect:</b> 'Will you lend me your pen?' she said to me.",
+    "o": ["She asked me if I would lend her my pen", "She told me to lend pen", "She asked if I will lend", "None"],
+    "a": 0,
+    "e": "Interrogative: 'Will' बदलकर 'would' हो जाता है और 'if/whether' का प्रयोग होता है।",
+    "cat": "english", "sub": "narration"
+  }
+]
