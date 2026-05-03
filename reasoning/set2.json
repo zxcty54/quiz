@@ -6,7 +6,7 @@
     "cat": "reasoning", "sub": "puzzle"
   },
   {
-    "q": "<blockquote><b>PUZZLE DATA / पहेली डेटा:</b><br/>(Same as above) 7 persons P-V live on floors 1-7. T is on even floor, 2 between T-R, Q is above R, V is on odd floor above T, P is above U, S is above Q.</blockquote><br/><b>QUESTION / प्रश्न:</b><br/>Who lives on the 4th floor? / चौथी मंजिल पर कौन रहता है?",
+    "q": "<blockquote><b>PUZZLE DATA / पहेली डेटा:</b><br/>7 persons P, Q, R, S, T, U, V live on 7 different floors (1 to 7).<br/>* T lives on an even floor.<br/>* Only two persons live between T and R.<br/>* Q lives immediately above R.<br/>* V lives on an odd floor above T.<br/>* P lives immediately above U.<br/>* S lives above Q.</blockquote><br/> Q.</blockquote><br/><b>QUESTION / प्रश्न:</b><br/>Who lives on the 4th floor? / चौथी मंजिल पर कौन रहता है?",
     "o": ["S", "Q", "R", "T"],
     "a": 1,
     "e": "क्रम (V-7, T-6, S-5, Q-4, R-3, P-2, U-1) के अनुसार, Q चौथी मंजिल पर है.",
