@@ -1,241 +1,247 @@
 [
   {
-    "q": "<b>Number System:</b> What is the remainder when $(x^{11} + 1)$ is divided by $(x + 1)$? / जब $(x^{11} + 1)$ को $(x + 1)$ से विभाजित किया जाता है, तो शेषफल क्या होगा?",
-    "o": ["0", "2", "11", "1"],
+    "q": "1. यदि x + y + z = 2, xy + yz + zx = -11 और xyz = -12 है, तो √(x³ + y³ + z³ - 2) का मान ज्ञात कीजिए। \n(If x + y + z = 2, xy + yz + zx = -11 and xyz = -12, find the value of √(x³ + y³ + z³ - 2).)",
+    "o": ["6", "12", "9", "8"],
     "a": 0,
-    "e": "By Remainder Theorem, put $x = -1$. $(-1)^{11} + 1 = -1 + 1 = 0$.",
-    "cat": "aptitude", "sub": "number-system"
+    "e": "Formula: x³+y³+z³-3xyz = (x+y+z)(x²+y²+z² - (xy+yz+zx)). Calculate x²+y²+z² = (2)² - 2(-11) = 26. Then x³+y³+z³-3(-12) = 2(26 - (-11)) = 2(37) = 74. x³+y³+z³ = 74-36 = 38. √(38-2) = √36 = 6.",
+    "cat": "aptitude", "sub": "algebra"
   },
   {
-    "q": "<b>Percentage:</b> The price of sugar is increased by 20%. By what percentage should a housewife reduce the consumption so that the expenditure remains same? / चीनी की कीमत में 20% की वृद्धि हुई है। एक गृहिणी को खपत में कितने प्रतिशत की कमी करनी चाहिए ताकि व्यय समान रहे?",
-    "o": ["$16\\frac{2}{3}\\%$", "20%", "$25\\%$", "$15\\%$"],
-    "a": 0,
-    "e": "Reduction = $\\frac{R}{100+R} \\times 100 = \\frac{20}{120} \\times 100 = 16\\frac{2}{3}\\%$.",
-    "cat": "aptitude", "sub": "percentage"
-  },
-  {
-    "q": "<b>Ratio & Proportion:</b> If $x : y = 3 : 2$, then find the value of $(5x + 2y) : (3x - y)$. / यदि $x : y = 3 : 2$ है, तो $(5x + 2y) : (3x - y)$ का मान ज्ञात कीजिए।",
-    "o": ["19 : 7", "17 : 5", "15 : 4", "19 : 5"],
-    "a": 0,
-    "e": "Put $x=3, y=2$. $(5\\times3 + 2\\times2) : (3\\times3 - 2) = (15+4) : (9-2) = 19 : 7$.",
-    "cat": "aptitude", "sub": "ratio"
-  },
-  {
-    "q": "<b>Square Roots:</b> Find the value of $\\sqrt{30 + \\sqrt{30 + \\sqrt{30 + \\dots \\infty}}}$. / $\\sqrt{30 + \\sqrt{30 + \\sqrt{30 + \\dots \\infty}}}$ का मान ज्ञात कीजिए।",
-    "o": ["5", "6", "7", "30"],
+    "q": "2. एक लंब पिरामिड का आधार 10 सेमी भुजा वाला एक वर्ग है। यदि इसकी ऊंचाई 12 सेमी है, तो इसका कुल पृष्ठीय क्षेत्रफल (TSA) क्या होगा? \n(The base of a right pyramid is a square of side 10 cm. If its height is 12 cm, find its Total Surface Area.)",
+    "o": ["260", "360", "400", "460"],
     "a": 1,
-    "e": "Factorize 30 into consecutive numbers: $5 \\times 6$. For '+' sign, the larger factor is the answer. Result = 6.",
-    "cat": "aptitude", "sub": "square-root"
+    "e": "Slant height (l) = √(h² + (side/2)²) = √(12² + 5²) = 13. LSA = 1/2 * Perimeter * l = 1/2 * 40 * 13 = 260. TSA = LSA + Base Area = 260 + 100 = 360 cm².",
+    "cat": "aptitude", "sub": "mensuration"
   },
   {
-    "q": "<b>Averages:</b> The average age of a group of 20 students is 15 years. When the teacher's age is included, the average increases by 1 year. The teacher's age is: / 20 छात्रों के एक समूह की औसत आयु 15 वर्ष है। जब शिक्षक की आयु शामिल की जाती है, तो औसत 1 वर्ष बढ़ जाता है। शिक्षक की आयु है:",
-    "o": ["35 years", "36 years", "40 years", "41 years"],
+    "q": "3. ₹25,200 की राशि को दो भागों में इस प्रकार बांटा गया है कि 3 वर्ष बाद पहले भाग का 5% चक्रवृद्धि ब्याज और 2 वर्ष बाद दूसरे भाग का साधारण ब्याज समान है। साधारण ब्याज वाला भाग क्या है? \n(A sum of ₹25,200 is divided into two parts such that CI on 1st part at 5% for 3 years is equal to SI on 2nd part for 2 years. Find the SI part.)",
+    "o": ["₹12,000", "₹13,200", "₹10,000", "₹15,000"],
     "a": 1,
-    "e": "Teacher's age = New Avg + (Old Members $\\times$ Increase) = $16 + (20 \\times 1) = 36$.",
-    "cat": "aptitude", "sub": "averages"
-  },
-  {
-    "q": "<b>Interest:</b> A sum of money at compound interest amounts to thrice itself in 3 years. In how many years will it be 9 times itself? / चक्रवृद्धि ब्याज पर कोई राशि 3 वर्षों में स्वयं की तीन गुनी हो जाती है। कितने वर्षों में यह स्वयं की 9 गुनी हो जाएगी?",
-    "o": ["6 years", "9 years", "12 years", "15 years"],
-    "a": 0,
-    "e": "$3^1$ times in 3 years. $9 = 3^2$ times in $3 \\times 2 = 6$ years.",
+    "e": "Calculate the effective rates and equate. This involves ratio of Principal 1 : Principal 2 based on interest equality.",
     "cat": "aptitude", "sub": "interest"
   },
   {
-    "q": "<b>Profit & Loss:</b> A man bought 2 apples for ₹3 and sold them at 3 for ₹5. Find his profit percentage. / एक आदमी ने ₹3 में 2 सेब खरीदे और उन्हें ₹5 में 3 के भाव से बेच दिया। उसका लाभ प्रतिशत ज्ञात कीजिए।",
-    "o": ["$11\\frac{1}{9}\\%$", "$10\\%$", "$12\\%$", "$15\\%$"],
+    "q": "4. यदि cos A + cos² A = 1 है, तो sin¹² A + 3 sin¹⁰ A + 3 sin⁸ A + sin⁶ A - 1 का मान क्या होगा? \n(If cos A + cos² A = 1, find sin¹² A + 3 sin¹⁰ A + 3 sin⁸ A + sin⁶ A - 1.)",
+    "o": ["1", "0", "-1", "2"],
+    "a": 1,
+    "e": "cos A = 1 - cos² A = sin² A. The expression is (sin⁴ A + sin² A)³ - 1. Since sin² A = cos A, it becomes (cos² A + sin² A)³ - 1 = (1)³ - 1 = 0.",
+    "cat": "aptitude", "sub": "trigonometry"
+  },
+  {
+    "q": "5. एक त्रिभुज की भुजाएं 16 सेमी, 30 सेमी और 34 सेमी हैं। इसके अंतःवृत्त (In-circle) की त्रिज्या क्या होगी? \n(Sides of a triangle are 16 cm, 30 cm and 34 cm. Find the radius of its in-circle.)",
+    "o": ["6 सेमी", "8 सेमी", "4 सेमी", "7 सेमी"],
     "a": 0,
-    "e": "CP of 1 = 1.5. SP of 1 = 1.66. Profit% = $\\frac{1.66-1.5}{1.5} \\times 100 = 11.11\\%$.",
+    "e": "It's a right-angled triangle (16, 30, 34). In-radius (r) = (P + B - H)/2 = (16 + 30 - 34)/2 = 12/2 = 6 cm.",
+    "cat": "aptitude", "sub": "geometry"
+  },
+  {
+    "q": "6. एक वस्तु को 18% की छूट देने के बाद ₹492 में बेचा गया। यदि कोई छूट न दी जाती, तो दुकानदार को 20% का लाभ होता। वस्तु का क्रय मूल्य (CP) क्या है? \n(An article was sold for ₹492 after a discount of 18%. Had no discount been given, the profit would have been 20%. Find the CP.)",
+    "o": ["₹500", "₹520", "₹480", "₹600"],
+    "a": 0,
+    "e": "82% = 492 -> 100% (MP) = 600. If SP = 600, Profit = 20%. 120% = 600 -> 100% (CP) = 500.",
     "cat": "aptitude", "sub": "profit-loss"
   },
-  
   {
-    "q": "<b>Partnership:</b> A and B invest in a business in the ratio 3 : 2. If 5% of total profit goes to charity and A's share is ₹855, find total profit. / A और B एक व्यवसाय में 3 : 2 के अनुपात में निवेश करते हैं। यदि कुल लाभ का 5% दान में जाता है और A का हिस्सा ₹855 है, तो कुल लाभ ज्ञात कीजिए।",
-    "o": ["₹1500", "₹1425", "₹1575", "₹1600"],
+    "q": "7. एक बेलन और एक शंकु के आधार की त्रिज्या का अनुपात 3:4 है और उनकी ऊंचाई का अनुपात 2:3 है। उनके आयतन का अनुपात क्या होगा? \n(The ratio of radii of base of a cylinder and a cone is 3:4 and ratio of their heights is 2:3. Find the ratio of their volumes.)",
+    "o": ["9:8", "3:4", "27:16", "9:4"],
     "a": 0,
-    "e": "A's share of 95% profit = 3/5. $\\frac{3}{5} \\times 95\\% = 855 \\rightarrow 57\\% = 855 \\rightarrow 100\\% = 1500$.",
-    "cat": "aptitude", "sub": "partnership"
+    "e": "Vol Cyl / Vol Cone = (π * r1² * h1) / (1/3 * π * r2² * h2) = (3² * 2) / (1/3 * 4² * 3) = 18 / 16 = 9/8.",
+    "cat": "aptitude", "sub": "geometry"
   },
   {
-    "q": "<b>Mixture:</b> In what ratio must a grocer mix sugar at ₹12/kg and ₹7/kg so as to get a mixture worth ₹8/kg? / एक पंसारी को ₹12/किग्रा और ₹7/किग्रा वाली चीनी को किस अनुपात में मिलाना चाहिए ताकि ₹8/किग्रा वाला मिश्रण प्राप्त हो सके?",
-    "o": ["1 : 4", "4 : 1", "2 : 3", "3 : 2"],
+    "q": "8. यदि x = 1 / (√2 + 1) है, तो x² + 2x + 3 का मान ज्ञात कीजिए। \n(If x = 1 / (√2 + 1), find x² + 2x + 3.)",
+    "o": ["4", "2", "3", "√2"],
     "a": 0,
-    "e": "By Alligation: $(8-7) : (12-8) = 1 : 4$.",
-    "cat": "aptitude", "sub": "mixture"
+    "e": "x = √2 - 1. Then x + 1 = √2. Squaring both sides: (x + 1)² = 2 -> x² + 2x + 1 = 2. So x² + 2x + 3 = 2 + 2 = 4.",
+    "cat": "aptitude", "sub": "algebra"
   },
   {
-    "q": "<b>Time & Distance:</b> A person crosses a 600 m long street in 5 minutes. What is his speed in km/h? / एक व्यक्ति 5 मिनट में 600 मीटर लंबी सड़क पार करता है। किमी/घंटा में उसकी गति क्या है?",
-    "o": ["3.6", "7.2", "8.4", "10"],
-    "a": 1,
-    "e": "Speed = $600/300 = 2$ m/s. In km/h = $2 \\times \\frac{18}{5} = 7.2$.",
+    "q": "9. एक नियमित बहुभुज के सभी आंतरिक कोणों का योग 1440 डिग्री है। इसके विकर्णों की संख्या कितनी है? \n(Sum of all interior angles of a regular polygon is 1440 degrees. How many diagonals does it have?)",
+    "o": ["35", "44", "27", "54"],
+    "a": 0,
+    "e": "(n-2)*180 = 1440 -> n-2 = 8 -> n = 10. Diagonals = 10(7)/2 = 35.",
+    "cat": "aptitude", "sub": "geometry"
+  },
+  {
+    "q": "10. एक नाव धारा के प्रतिकूल (Upstream) 30 किमी और धारा के अनुकूल (Downstream) 44 किमी 10 घंटे में जाती है। यह 40 किमी प्रतिकूल और 55 किमी अनुकूल 13 घंटे में जा सकती है। शांत जल में नाव की गति क्या है? \n(A boat goes 30 km upstream and 44 km downstream in 10 hrs. It can go 40 km upstream and 55 km downstream in 13 hrs. Find speed of boat in still water.)",
+    "o": ["8 किमी/घंटा", "5 किमी/घंटा", "11 किमी/घंटा", "3 किमी/घंटा"],
+    "a": 0,
+    "e": "Let 1/U = x, 1/D = y. 30x+44y=10, 40x+55y=13. Solving gives x=1/5 (U=5), y=1/11 (D=11). Boat speed = (11+5)/2 = 8 km/h.",
     "cat": "aptitude", "sub": "time-distance"
   },
   {
-    "q": "<b>Time & Work:</b> A can do a piece of work in 80 days. He works at it for 10 days and then B alone finishes the remaining work in 42 days. Together they can do it in: / A एक काम को 80 दिनों में कर सकता है। वह इस पर 10 दिनों तक काम करता है और फिर B अकेले शेष काम को 42 दिनों में पूरा करता है। वे मिलकर इसे कितने दिनों में कर सकते हैं?",
-    "o": ["24 days", "25 days", "30 days", "35 days"],
-    "a": 2,
-    "e": "Remaining work = 7/8. B does 7/8 in 42 days, so full work in 48 days. Together = $\\frac{80 \\times 48}{128} = 30$ days.",
-    "cat": "aptitude", "sub": "time-work"
-  },
-  {
-    "q": "<b>Quadrilaterals:</b> The area of a rhombus is 150 cm² and one of its diagonals is 10 cm. Find the other diagonal. / एक समचतुर्भुज का क्षेत्रफल 150 सेमी² है और इसका एक विकर्ण 10 सेमी है। दूसरा विकर्ण ज्ञात कीजिए।",
-    "o": ["15 cm", "30 cm", "20 cm", "25 cm"],
-    "a": 1,
-    "e": "Area = $\\frac{1}{2} d_1 d_2 \\rightarrow 150 = \\frac{1}{2} \\times 10 \\times d_2 \\rightarrow d_2 = 30$ cm.",
-    "cat": "aptitude", "sub": "quadrilaterals"
-  },
-  {
-    "q": "<b>Regular Polygons:</b> The sum of all exterior angles of a regular convex polygon is: / एक नियमित उत्तल बहुभुज के सभी बाहरी कोणों का योग होता है:",
-    "o": ["$180^\\circ$", "$360^\\circ$", "$540^\\circ$", "$720^\\circ$"],
-    "a": 1,
-    "e": "The sum of exterior angles of any polygon is always $360^\\circ$.",
-    "cat": "aptitude", "sub": "polygons"
-  },
-  {
-    "q": "<b>Right Prism:</b> The base of a right prism is an equilateral triangle of side 4 cm. If its volume is $20\\sqrt{3}$ cm³, find its height. / एक लंब प्रिज्म का आधार 4 सेमी भुजा वाला एक समबाहु त्रिभुज है। यदि इसका आयतन $20\\sqrt{3}$ सेमी³ है, तो इसकी ऊंचाई ज्ञात कीजिए।",
-    "o": ["5 cm", "4 cm", "10 cm", "6 cm"],
+    "q": "11. एक परीक्षा में उत्तीर्ण छात्रों का अनुत्तीर्ण छात्रों से अनुपात 4:1 था। यदि 35 छात्र कम उपस्थित होते और 9 छात्र अधिक अनुत्तीर्ण होते, तो अनुपात 2:1 हो जाता। कुल छात्रों की संख्या क्या थी? \n(In an exam, ratio of passed to failed students was 4:1. If 35 less had appeared and 9 more had failed, the ratio would be 2:1. Find total students.)",
+    "o": ["155", "145", "150", "160"],
     "a": 0,
-    "e": "Base Area = $\\frac{\\sqrt{3}}{4} \\times 4^2 = 4\\sqrt{3}$. Vol = Area $\\times$ h $\\rightarrow 20\\sqrt{3} = 4\\sqrt{3} \\times h \\rightarrow h = 5$.",
-    "cat": "aptitude", "sub": "prism"
-  },
-  {
-    "q": "<b>Right Circular Cone:</b> If the radius of a cone is doubled and height is halved, what is the ratio of new volume to old volume? / यदि एक शंकु की त्रिज्या दोगुनी कर दी जाए और ऊंचाई आधी कर दी जाए, तो नए आयतन का पुराने आयतन से अनुपात क्या होगा?",
-    "o": ["2 : 1", "1 : 2", "4 : 1", "1 : 1"],
-    "a": 0,
-    "e": "$V_1 = \\frac{1}{3} \\pi r^2 h$. $V_2 = \\frac{1}{3} \\pi (2r)^2 (h/2) = \\frac{1}{3} \\pi 4r^2 (h/2) = 2 V_1$. Ratio 2:1.",
-    "cat": "aptitude", "sub": "cone"
-  },
-  {
-    "q": "<b>Trigonometric ratio:</b> Find the value of $(\\sin 45^\\circ + \\cos 45^\\circ)^2$. / $(\\sin 45^\\circ + \\cos 45^\\circ)^2$ का मान ज्ञात कीजिए।",
-    "o": ["1", "2", "0.5", "1.5"],
-    "a": 1,
-    "e": "$(\\frac{1}{\\sqrt{2}} + \\frac{1}{\\sqrt{2}})^2 = (\\frac{2}{\\sqrt{2}})^2 = (\\sqrt{2})^2 = 2$.",
-    "cat": "aptitude", "sub": "trigonometry"
-  },
-  {
-    "q": "<b>Heights & Distances:</b> The angle of elevation of a ladder leaning against a wall is $60^\\circ$ and the foot of the ladder is 4.6 m away from the wall. The length of the ladder is: / एक दीवार के सहारे टिकी सीढ़ी का उन्नयन कोण $60^\\circ$ है और सीढ़ी का पैर दीवार से 4.6 मीटर दूर है। सीढ़ी की लंबाई है:",
-    "o": ["2.3 m", "4.6 m", "7.8 m", "9.2 m"],
-    "a": 3,
-    "e": "$\\cos 60^\\circ = 4.6/L \\rightarrow 1/2 = 4.6/L \\rightarrow L = 9.2$ m.",
-    "cat": "aptitude", "sub": "height-distance"
-  },
-  {
-    "q": "<b>Number System:</b> What is the units digit in $(256)^{102} + (256)^{103}$? / $(256)^{102} + (256)^{103}$ में इकाई का अंक क्या है?",
-    "o": ["0", "4", "2", "6"],
-    "a": 2,
-    "e": "Units digit of 6 power anything is 6. $6 + 6 = 12$, so units digit is 2.",
-    "cat": "aptitude", "sub": "number-system"
-  },
-  {
-    "q": "<b>Percentage:</b> A's salary is 50% more than B's. How much percent is B's salary less than A's? / A का वेतन B के वेतन से 50% अधिक है। B का वेतन A के वेतन से कितने प्रतिशत कम है?",
-    "o": ["33%", "$33\\frac{1}{3}\\%$", "$50\\%$", "$25\\%$"],
-    "a": 1,
-    "e": "$\\frac{50}{150} \\times 100 = 33\\frac{1}{3}\\%$.",
-    "cat": "aptitude", "sub": "percentage"
-  },
-  {
-    "q": "<b>Ratio:</b> If $x/y = 4/5$, then find the value of $(4/7 + (2y-x)/(2y+x))$. / यदि $x/y = 4/5$ है, तो $(4/7 + (2y-x)/(2y+x))$ का मान ज्ञात कीजिए।",
-    "o": ["1", "2", "3", "4"],
-    "a": 0,
-    "e": "Put $x=4, y=5$. Term = $4/7 + (10-4)/(10+4) = 4/7 + 6/14 = 4/7 + 3/7 = 1$.",
+    "e": "Initial Total = 5x, Fail = x. New Total = 5x - 35, New Fail = x + 9. Ratio Pass:Fail = 2:1 -> Total:Fail = 3:1. (5x-35)/(x+9) = 3/1. 5x-35 = 3x+27 -> 2x=62 -> x=31. Total = 155.",
     "cat": "aptitude", "sub": "ratio"
   },
   {
-    "q": "<b>Square Roots:</b> Find the value of $\\sqrt{0.01} + \\sqrt{0.81} + \\sqrt{1.21}$. / $\\sqrt{0.01} + \\sqrt{0.81} + \\sqrt{1.21}$ का मान ज्ञात कीजिए।",
-    "o": ["2.1", "2.0", "1.9", "2.2"],
+    "q": "12. यदि sec θ + tan θ = p है, तो (p² - 1) / (p² + 1) का मान क्या होगा? \n(If sec θ + tan θ = p, what is the value of (p² - 1) / (p² + 1)?)",
+    "o": ["sin θ", "cos θ", "tan θ", "cosec θ"],
     "a": 0,
-    "e": "$0.1 + 0.9 + 1.1 = 2.1$.",
-    "cat": "aptitude", "sub": "square-root"
-  },
-  {
-    "q": "<b>Averages:</b> The average of 7 numbers is 5. If one number is removed, the average becomes 4. Find the removed number. / 7 संख्याओं का औसत 5 है। यदि एक संख्या हटा दी जाती है, तो औसत 4 हो जाता है। हटाई गई संख्या ज्ञात कीजिए।",
-    "o": ["11", "6", "9", "10"],
-    "a": 0,
-    "e": "Sum of 7 = 35. Sum of 6 = 24. Removed = $35 - 24 = 11$.",
-    "cat": "aptitude", "sub": "averages"
-  },
-  {
-    "q": "<b>Interest:</b> At what rate per annum simple interest will a sum of money double in 10 years? / किस वार्षिक साधारण ब्याज दर पर कोई राशि 10 वर्षों में दोगुनी हो जाएगी?",
-    "o": ["5%", "8%", "10%", "12%"],
-    "a": 2,
-    "e": "Rate = $100/10 = 10\\%$.",
-    "cat": "aptitude", "sub": "interest"
-  },
-  {
-    "q": "<b>Profit & Loss:</b> The CP of 20 articles is the same as SP of $x$ articles. If profit is 25%, then $x$ is: / 20 वस्तुओं का क्रय मूल्य $x$ वस्तुओं के विक्रय मूल्य के समान है। यदि लाभ 25% है, तो $x$ है:",
-    "o": ["15", "16", "18", "25"],
-    "a": 1,
-    "e": "$\\frac{20-x}{x} \\times 100 = 25 \\rightarrow 20-x = 0.25x \\rightarrow 1.25x = 20 \\rightarrow x = 16$.",
-    "cat": "aptitude", "sub": "profit-loss"
-  },
-  {
-    "q": "<b>Discount:</b> A shopkeeper gives 12% discount and still earns 21% profit. If CP is ₹440, find MP. / एक दुकानदार 12% की छूट देता है और फिर भी 21% लाभ कमाता है। यदि क्रय मूल्य ₹440 है, तो अंकित मूल्य ज्ञात कीजिए।",
-    "o": ["₹605", "₹600", "₹550", "₹650"],
-    "a": 0,
-    "e": "$MP = CP \\times \\frac{100+P}{100-D} = 440 \\times \\frac{121}{88} = 5 \\times 121 = 605$.",
-    "cat": "aptitude", "sub": "discount"
-  },
-  {
-    "q": "<b>Time & Work:</b> 12 men can complete a work in 15 days. In how many days can 20 men complete it? / 12 पुरुष एक काम को 15 दिनों में पूरा कर सकते हैं। 20 पुरुष इसे कितने दिनों में पूरा कर सकते हैं?",
-    "o": ["9 days", "10 days", "12 days", "8 days"],
-    "a": 0,
-    "e": "$M_1 D_1 = M_2 D_2 \\rightarrow 12 \\times 15 = 20 \\times D_2 \\rightarrow 180 = 20 D_2 \\rightarrow D_2 = 9$.",
-    "cat": "aptitude", "sub": "time-work"
-  },
-  {
-    "q": "<b>Quadrilaterals:</b> If the sides of a rectangle are in ratio 3 : 2 and area is 96 cm², find the perimeter. / यदि एक आयत की भुजाएँ 3 : 2 के अनुपात में हैं और क्षेत्रफल 96 सेमी² है, तो परिमाप ज्ञात कीजिए।",
-    "o": ["20 cm", "40 cm", "30 cm", "50 cm"],
-    "a": 1,
-    "e": "$3x \\times 2x = 96 \\rightarrow 6x^2 = 96 \\rightarrow x^2 = 16 \\rightarrow x = 4$. Sides are 12, 8. Perimeter = $2(12+8) = 40$ cm.",
-    "cat": "aptitude", "sub": "quadrilaterals"
-  },
-  {
-    "q": "<b>Polygons:</b> Each interior angle of a regular polygon is $144^\\circ$. Find the number of sides. / एक नियमित बहुभुज का प्रत्येक आंतरिक कोण $144^\\circ$ है। भुजाओं की संख्या ज्ञात कीजिए।",
-    "o": ["8", "10", "12", "15"],
-    "a": 1,
-    "e": "Exterior angle = $180 - 144 = 36^\\circ$. Sides = $360/36 = 10$.",
-    "cat": "aptitude", "sub": "polygons"
-  },
-  {
-    "q": "<b>Right Circular Cone:</b> The curved surface area of a cone of radius 7 cm is 550 cm². Find its slant height. / 7 सेमी त्रिज्या वाले एक शंकु का वक्र पृष्ठीय क्षेत्रफल 550 सेमी² है। इसकी तिरछी ऊंचाई ज्ञात कीजिए।",
-    "o": ["20 cm", "25 cm", "30 cm", "15 cm"],
-    "a": 1,
-    "e": "$\\pi r l = 550 \\rightarrow \\frac{22}{7} \\times 7 \\times l = 550 \\rightarrow 22l = 550 \\rightarrow l = 25$ cm.",
-    "cat": "aptitude", "sub": "cone"
-  },
-  {
-    "q": "<b>Trigonometric ratio:</b> Value of $\\sin^2 30^\\circ + \\cos^2 30^\\circ$ is: / $\\sin^2 30^\\circ + \\cos^2 30^\\circ$ का मान है:",
-    "o": ["0", "1", "0.5", "2"],
-    "a": 1,
-    "e": "Identity: $\\sin^2 \\theta + \\cos^2 \\theta = 1$.",
+    "e": "This is a standard trigonometric property where (p²-1)/(p²+1) equals sin θ.",
     "cat": "aptitude", "sub": "trigonometry"
   },
   {
-    "q": "<b>Heights & Distances:</b> A tower is 100 m high. Find the angle of elevation of its top from a point 100 m from its foot. / एक मीनार 100 मीटर ऊँची है। इसके पैर से 100 मीटर की दूरी पर स्थित एक बिंदु से इसके शीर्ष का उन्नयन कोण ज्ञात कीजिए।",
-    "o": ["$30^\\circ$", "$45^\\circ$", "$60^\\circ$", "$90^\\circ$"],
-    "a": 1,
-    "e": "$\\tan \\theta = 100/100 = 1 \\rightarrow \\theta = 45^\\circ$.",
-    "cat": "aptitude", "sub": "height-distance"
+    "q": "13. एक लंब वृत्तीय शंकु का आयतन 1232 घन सेमी है और इसकी ऊंचाई 24 सेमी है। इसका वक्र पृष्ठीय क्षेत्रफल (CSA) ज्ञात कीजिए। \n(Volume of a right circular cone is 1232 cm³ and height is 24 cm. Find its CSA.)",
+    "o": ["550 सेमी²", "616 सेमी²", "704 सेमी²", "462 सेमी²"],
+    "a": 0,
+    "e": "1/3 * π * r² * 24 = 1232 -> r² = 49 -> r = 7. Slant height l = √(24²+7²) = 25. CSA = πrl = 22/7 * 7 * 25 = 550.",
+    "cat": "aptitude", "sub": "mensuration"
   },
   {
-    "q": "<b>Number System:</b> Find the number of zeros at the end of 100!. / 100! के अंत में शून्य की संख्या ज्ञात कीजिए।",
-    "o": ["20", "24", "25", "30"],
-    "a": 1,
-    "e": "$100/5 + 100/25 = 20 + 4 = 24$.",
-    "cat": "aptitude", "sub": "number-system"
+    "q": "14. एक ठोस धातु के गोले की त्रिज्या 6 सेमी है। इसे पिघलाकर 0.2 सेमी त्रिज्या वाला एक तार बनाया जाता है। तार की लंबाई क्या होगी? \n(Radius of a solid metal sphere is 6 cm. It is melted to form a wire of radius 0.2 cm. Find length of wire.)",
+    "o": ["72 मीटर", "36 मीटर", "144 मीटर", "108 मीटर"],
+    "a": 0,
+    "e": "Volume Sphere = Volume Cylinder (Wire). 4/3 * π * 6³ = π * (0.2)² * L. 4/3 * 216 = 0.04 * L. 288 = 0.04L -> L = 7200 cm = 72 m.",
+    "cat": "aptitude", "sub": "geometry"
   },
   {
-    "q": "<b>Decimals:</b> Value of $0.\\overline{63} + 0.\\overline{37}$ is: / $0.\\overline{63} + 0.\\overline{37}$ का मान है:",
-    "o": ["1", "$1.\\overline{01}$", "$0.99$", "$1.01$"],
-    "a": 1,
-    "e": "$63/99 + 37/99 = 100/99 = 1.\\overline{01}$.",
+    "q": "15. ₹12,000 की राशि पर 10% की दर से 1.5 वर्ष का चक्रवृद्धि ब्याज क्या होगा, यदि ब्याज अर्धवार्षिक (Half-yearly) संयोजित होता है? \n(Find CI on ₹12,000 at 10% for 1.5 years, if interest is compounded half-yearly.)",
+    "o": ["₹1,891.50", "₹1,800", "₹1,950", "₹1,861"],
+    "a": 0,
+    "e": "Rate = 5%, Time = 3 periods. CI = 12000 * (1.05³ - 1) = 12000 * 0.157625 = 1891.50.",
+    "cat": "aptitude", "sub": "interest"
+  },
+  {
+    "q": "16. एक दुकानदार 20% की छूट देने के बाद भी 10% का लाभ कमाता है। यदि अंकित मूल्य ₹880 है, तो क्रय मूल्य क्या है? \n(A shopkeeper earns 10% profit even after a 20% discount. If MP is ₹880, find CP.)",
+    "o": ["₹640", "₹600", "₹700", "₹660"],
+    "a": 0,
+    "e": "CP = MP * (100-D)/(100+P) = 880 * 80/110 = 8 * 80 = 640.",
+    "cat": "aptitude", "sub": "profit-loss"
+  },
+  {
+    "q": "17. एक कार की गति 20% कम करने पर एक व्यक्ति 40 मिनट देरी से पहुँचता है। सामान्य समय क्या है? \n(By reducing speed by 20%, a person reaches 40 mins late. What is the usual time?)",
+    "o": ["160 मिनट", "120 मिनट", "200 मिनट", "180 मिनट"],
+    "a": 0,
+    "e": "Speed ratio 5:4 -> Time ratio 4:5. Diff 1 unit = 40 mins. Usual time = 4 units = 160 mins.",
+    "cat": "aptitude", "sub": "time-distance"
+  },
+  {
+    "q": "18. एक पाइप एक टंकी को 6 घंटे में भर सकता है और दूसरा 8 घंटे में खाली कर सकता है। यदि दोनों साथ खोलें, तो आधी टंकी कितने समय में भरेगी? \n(One pipe fills a tank in 6 hrs and another empties in 8 hrs. If both opened together, in how much time will half the tank be filled?)",
+    "o": ["12 घंटे", "24 घंटे", "6 घंटे", "8 घंटे"],
+    "a": 0,
+    "e": "Efficiency: Fills = 4, Empties = 3. Net = 1 unit/hr. Total capacity = 24. Half = 12. Time = 12/1 = 12 hrs.",
+    "cat": "aptitude", "sub": "time-work"
+  },
+  {
+    "q": "19. यदि sin(A+B) = 1 और cos(A-B) = √3/2 है, तो A और B का मान क्या होगा? \n(If sin(A+B) = 1 and cos(A-B) = √3/2, find A and B.)",
+    "o": ["60, 30", "45, 45", "75, 15", "50, 40"],
+    "a": 0,
+    "e": "A+B = 90, A-B = 30. Adding: 2A = 120 -> A=60, B=30.",
+    "cat": "aptitude", "sub": "trigonometry"
+  },
+  {
+    "q": "20. एक वृत्ताकार पथ की चौड़ाई 7 मीटर है। यदि बाहरी परिधि 440 मीटर है, तो पथ का क्षेत्रफल क्या होगा? \n(Width of circular path is 7 m. If outer circumference is 440 m, find area of path.)",
+    "o": ["2926 मी²", "3000 मी²", "2800 मी²", "3100 मी²"],
+    "a": 0,
+    "e": "2πR = 440 -> R = 70. r = 70 - 7 = 63. Area = π(R² - r²) = 22/7 * (70+63)(70-63) = 22 * 133 = 2926.",
+    "cat": "aptitude", "sub": "geometry"
+  },
+  {
+    "q": "21. 0.363636... और 0.636363... का योग क्या होगा? \n(What is the sum of 0.363636... and 0.636363...?)",
+    "o": ["1", "1.1", "0.99", "1.01"],
+    "a": 0,
+    "e": "36/99 + 63/99 = 99/99 = 1.",
     "cat": "aptitude", "sub": "decimals"
   },
   {
-    "q": "<b>Mixture:</b> A mixture contains alcohol and water in ratio 4 : 3. If 5L water is added, ratio becomes 4 : 5. Qty of alcohol? / एक मिश्रण में अल्कोहल और पानी का अनुपात 4 : 3 है। यदि 5 लीटर पानी मिलाया जाता है, तो अनुपात 4 : 5 हो जाता है। अल्कोहल की मात्रा?",
-    "o": ["10L", "12L", "15L", "20L"],
+    "q": "22. यदि x + 1/x = √5 है, तो x³ + 1/x³ का मान ज्ञात कीजिए। \n(If x + 1/x = √5, find x³ + 1/x³.)",
+    "o": ["2√5", "3√5", "5√5", "0"],
     "a": 0,
-    "e": "Water parts increased from 3 to 5 (2 units). 2 units = 5L. Alcohol (4 units) = 10L.",
+    "e": "n³ - 3n = (√5)³ - 3(√5) = 5√5 - 3√5 = 2√5.",
+    "cat": "aptitude", "sub": "algebra"
+  },
+  {
+    "q": "23. एक समबाहु त्रिभुज का क्षेत्रफल 36√3 सेमी² है। इसकी परिधि क्या होगी? \n(Area of equilateral triangle is 36√3 cm². Find its perimeter.)",
+    "o": ["36 सेमी", "24 सेमी", "18 सेमी", "48 सेमी"],
+    "a": 0,
+    "e": "√3/4 * a² = 36√3 -> a² = 144 -> a = 12. Perimeter = 3 * 12 = 36.",
+    "cat": "aptitude", "sub": "geometry"
+  },
+  {
+    "q": "24. दो संख्याओं का योग 40 है और उनका गुणनफल 375 है। उनके व्युत्क्रम (Reciprocals) का योग क्या होगा? \n(Sum of two numbers is 40 and product is 375. Find sum of their reciprocals.)",
+    "o": ["8/75", "1/40", "1/375", "2/15"],
+    "a": 0,
+    "e": "1/a + 1/b = (a+b)/ab = 40/375 = 8/75.",
+    "cat": "aptitude", "sub": "number-system"
+  },
+  {
+    "q": "25. एक घन का विकर्ण √192 सेमी है। इसका आयतन क्या होगा? \n(Diagonal of a cube is √192 cm. Find its volume.)",
+    "o": ["512 सेमी³", "216 सेमी³", "343 सेमी³", "729 सेमी³"],
+    "a": 0,
+    "e": "a√3 = √192 = 8√3 -> a = 8. Vol = 8³ = 512.",
+    "cat": "aptitude", "sub": "mensuration"
+  },
+  {
+    "q": "26. एक शंकु और एक गोलार्द्ध (Hemisphere) का आधार और आयतन समान है। उनकी ऊंचाई का अनुपात क्या होगा? \n(A cone and a hemisphere have same base and volume. Find ratio of their heights.)",
+    "o": ["2:1", "1:2", "1:1", "3:1"],
+    "a": 0,
+    "e": "1/3 * π * r² * h = 2/3 * π * r³ -> h = 2r. Ratio h:r = 2:1.",
+    "cat": "aptitude", "sub": "geometry"
+  },
+  {
+    "q": "27. यदि tan θ = 8/15 है, तो (15 sin θ - 8 cos θ) का मान क्या होगा? \n(If tan θ = 8/15, find (15 sin θ - 8 cos θ).)",
+    "o": ["0", "1", "7/17", "2"],
+    "a": 0,
+    "e": "P=8, B=15 -> H=17. sin θ = 8/17, cos θ = 15/17. Expression = 15(8/17) - 8(15/17) = 0.",
+    "cat": "aptitude", "sub": "trigonometry"
+  },
+  {
+    "q": "28. एक आयत की लंबाई में 10% वृद्धि और चौड़ाई में 10% कमी करने पर क्षेत्रफल में क्या परिवर्तन होगा? \n(Length of rectangle increases by 10% and width decreases by 10%. Change in area?)",
+    "o": ["1% कमी", "1% वृद्धि", "कोई बदलाव नहीं", "2% कमी"],
+    "a": 0,
+    "e": "x² / 100 decrease = 10²/100 = 1% decrease.",
+    "cat": "aptitude", "sub": "percentage"
+  },
+  {
+    "q": "29. एक समचतुर्भुज के विकर्णों का योग 24 सेमी और परिधि 40 सेमी है। इसका क्षेत्रफल क्या होगा? \n(Sum of diagonals of rhombus is 24 cm and perimeter is 40 cm. Find its area.)",
+    "o": ["44 सेमी²", "48 सेमी²", "50 सेमी²", "54 सेमी²"],
+    "a": 0,
+    "e": "d1+d2=24, a=10 -> d1²+d2²=4a²=400. Using (d1+d2)² = d1²+d2² + 2d1d2 -> 576 = 400 + 4*Area -> 176 = 4*Area -> Area = 44.",
+    "cat": "aptitude", "sub": "geometry"
+  },
+  {
+    "q": "30. 0.4777... को साधारण भिन्न में बदलिए। \n(Convert 0.4777... into a simple fraction.)",
+    "o": ["43/90", "47/99", "47/90", "43/99"],
+    "a": 0,
+    "e": "(47 - 4) / 90 = 43/90.",
+    "cat": "aptitude", "sub": "decimals"
+  },
+  {
+    "q": "31. ₹5000 पर 10% की दर से 2 वर्ष के चक्रवृद्धि और साधारण ब्याज का अंतर क्या है? \n(Difference between CI and SI on ₹5000 at 10% for 2 years?)",
+    "o": ["₹50", "₹100", "₹25", "₹75"],
+    "a": 0,
+    "e": "P(R/100)² = 5000 * (1/10)² = 50.",
+    "cat": "aptitude", "sub": "interest"
+  },
+  {
+    "q": "32. यदि sin θ = cos θ है, तो (2 tan² θ + sin² θ - 1) का मान क्या होगा? \n(If sin θ = cos θ, find (2 tan² θ + sin² θ - 1).)",
+    "o": ["1.5", "2", "1", "0.5"],
+    "a": 0,
+    "e": "θ = 45. 2(1)² + (1/√2)² - 1 = 2 + 0.5 - 1 = 1.5.",
+    "cat": "aptitude", "sub": "trigonometry"
+  },
+  {
+    "q": "33. एक त्रिभुज का आधार 15 सेमी और ऊंचाई 12 सेमी है। एक अन्य त्रिभुज जिसका क्षेत्रफल पहले का दोगुना है, का आधार 20 सेमी है, उसकी ऊंचाई क्या होगी? \n(Base of a triangle is 15 cm and height 12 cm. Another triangle with double area has base 20 cm, find its height.)",
+    "o": ["18 सेमी", "15 सेमी", "20 सेमी", "24 सेमी"],
+    "a": 0,
+    "e": "Area 1 = 0.5 * 15 * 12 = 90. Area 2 = 180. 0.5 * 20 * h = 180 -> 10h = 180 -> h = 18.",
+    "cat": "aptitude", "sub": "geometry"
+  },
+  {
+    "q": "34. √(√0.0001) का मान क्या है? \n(Find value of √(√0.0001).)",
+    "o": ["0.1", "0.01", "0.001", "1"],
+    "a": 0,
+    "e": "√0.0001 = 0.01. √0.01 = 0.1.",
+    "cat": "aptitude", "sub": "number-system"
+  },
+  {
+    "q": "35. ₹60 प्रति किलोग्राम वाली चीनी को ₹45 प्रति किलोग्राम वाली चीनी के साथ किस अनुपात में मिलाएं कि ₹50 प्रति किलोग्राम वाला मिश्रण मिले? \n(Ratio to mix sugar of ₹60/kg and ₹45/kg to get mixture of ₹50/kg?)",
+    "o": ["1:2", "2:1", "2:3", "3:2"],
+    "a": 0,
+    "e": "(50-45) : (60-50) = 5:10 = 1:2.",
     "cat": "aptitude", "sub": "mixture"
   }
 ]
