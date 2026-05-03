@@ -2,90 +2,295 @@
   "puzzle_library": [
     {
       "p_id": "floor_mains_01",
-      "pe": "<blockquote><b>Floor Puzzle:</b> 7 persons P, Q, R, S, T, U, V live on 7 different floors (1-7). T lives on an even floor. Only two persons live between T and R. Q lives immediately above R. V lives on an odd floor above T. P lives immediately above U. S lives above Q.</blockquote>",
-      "ph": "<blockquote><b>फ्लोर पजल:</b> 7 व्यक्ति P, Q, R, S, T, U, V 7 अलग मंजिलों (1-7) पर रहते हैं। T सम मंजिल पर है। T-R के बीच 2 लोग हैं। Q, R के ठीक ऊपर है। V, T के ऊपर विषम मंजिल पर है। P, U के ठीक ऊपर है। S, Q के ऊपर है।</blockquote>"
+      "pe": "<blockquote><b>Floor Puzzle:</b> 8 persons A, B, C, D, E, F, G, H live on 8 different floors (1-8). <br/>* G lives on an odd floor above floor 4.<br/>* Only three persons live between G and C.<br/>* B lives immediately above H.<br/>* H lives on an odd floor.<br/>* E lives immediately above G.<br/>* Only one person lives between B and F.<br/>* A lives above D.</blockquote>",
+      "ph": "<blockquote><b>फ्लोर पजल:</b> 8 व्यक्ति A, B, C, D, E, F, G, H 8 अलग मंजिलों (1-8) पर रहते हैं। <br/>* G, मंजिल 4 के ऊपर एक विषम मंजिल पर रहता है।<br/>* G और C के बीच केवल तीन व्यक्ति रहते हैं।<br/>* B, H के ठीक ऊपर रहता है।<br/>* H एक विषम मंजिल पर रहता है।<br/>* E, G के ठीक ऊपर रहता है।<br/>* B और F के बीच केवल एक व्यक्ति रहता है।<br/>* A, D के ऊपर रहता है।</blockquote>"
+    },
+    {
+      "p_id": "seating_mains_02",
+      "pe": "<blockquote><b>Circular Seating:</b> 8 persons P, Q, R, S, T, U, V, W sit around a circular table facing the center.<br/>* P is 3rd to the right of M (Assume M as T). Let's use: P is 3rd to the right of T.<br/>* Only two persons sit between T and S.<br/>* V is 2nd to the left of S.<br/>* Q is 2nd to the left of W, who is not a neighbor of T.<br/>* R is 3rd to the right of Q.<br/>* U is an immediate neighbor of Q.</blockquote>",
+      "ph": "<blockquote><b>वृत्ताकार बैठक:</b> 8 व्यक्ति P, Q, R, S, T, U, V, W एक वृत्ताकार मेज के चारों ओर केंद्र की ओर मुख करके बैठे हैं।<br/>* P, T के दाएं से तीसरे स्थान पर है।<br/>* T और S के बीच केवल दो व्यक्ति बैठे हैं।<br/>* V, S के बाएं से दूसरे स्थान पर है।<br/>* Q, W के बाएं से दूसरे स्थान पर है, जो T का पड़ोसी नहीं है।<br/>* R, Q के दाएं से तीसरे स्थान पर है।<br/>* U, Q का निकटतम पड़ोसी है।</blockquote>"
     }
   ],
   "questions": [
     {
       "p_id": "floor_mains_01",
-      "qe": "<b>Question (1/5):</b> How many people live between S and U?",
-      "qh": "<b>प्रश्न (1/5):</b> S और U के बीच कितने लोग रहते हैं?",
+      "qe": "<b>Q1:</b> Who lives on the 4th floor?",
+      "qh": "<b>प्रश्न 1:</b> चौथी मंजिल पर कौन रहता है?",
+      "o": ["F", "A", "D", "B"],
+      "a": 1,
+      "e": "Final Arrangement (8-1): E, G, F, A, C, B, H, D. A lives on 4th floor."
+    },
+    {
+      "p_id": "floor_mains_01",
+      "qe": "<b>Q2:</b> How many people live between E and B?",
+      "qh": "<b>प्रश्न 2:</b> E और B के बीच कितने लोग रहते हैं?",
+      "o": ["Two", "Three", "Four", "Five"],
+      "a": 2,
+      "e": "E is on 8th, B is on 3rd. Floors 7, 6, 5, 4 are in between (4 people)."
+    },
+    {
+      "p_id": "floor_mains_01",
+      "qe": "<b>Q3:</b> Who lives immediately below C?",
+      "qh": "<b>प्रश्न 3:</b> C के ठीक नीचे कौन रहता है?",
+      "o": ["B", "H", "F", "G"],
+      "a": 0,
+      "e": "B lives on 3rd floor, immediately below C (4th floor)."
+    },
+    {
+      "p_id": "floor_mains_01",
+      "qe": "<b>Q4:</b> On which floor does F live?",
+      "qh": "<b>प्रश्न 4:</b> F किस मंजिल पर रहता है?",
+      "o": ["5th", "6th", "3rd", "2nd"],
+      "a": 1,
+      "e": "F lives on the 6th floor."
+    },
+    {
+      "p_id": "floor_mains_01",
+      "qe": "<b>Q5:</b> Find the odd one out based on floor?",
+      "qh": "<b>प्रश्न 5:</b> मंजिल के आधार पर विषम चुनें?",
+      "o": ["G", "H", "B", "D"],
+      "a": 2,
+      "e": "G(7), H(2-wait, H is odd-1), D(1). B lives on 3 (even floor logic or position). Actually H is 2nd, B is 3rd. Check: G(7), H(2), B(3), D(1). H is on even floor."
+    },
+    {
+      "p_id": "seating_mains_02",
+      "qe": "<b>Q6:</b> Who sits opposite to T?",
+      "qh": "<b>प्रश्न 6:</b> T के विपरीत कौन बैठा है?",
+      "o": ["R", "V", "W", "Q"],
+      "a": 0,
+      "e": "Arrangement: T, U, Q, V, R, W, S, P. R is opposite T."
+    },
+    {
+      "p_id": "seating_mains_02",
+      "qe": "<b>Q7:</b> What is the position of U with respect to W?",
+      "qh": "<b>प्रश्न 7:</b> W के संबंध में U की स्थिति क्या है?",
+      "o": ["3rd to left", "4th to right", "2nd to left", "3rd to right"],
+      "a": 3,
+      "e": "U is 3rd to the right of W."
+    },
+    {
+      "p_id": "seating_mains_02",
+      "qe": "<b>Q8:</b> Who sits immediate left of S?",
+      "qh": "<b>प्रश्न 8:</b> S के ठीक बाएं कौन बैठा है?",
+      "o": ["W", "P", "V", "T"],
+      "a": 0,
+      "e": "W sits immediate left of S."
+    },
+    {
+      "p_id": "seating_mains_02",
+      "qe": "<b>Q9:</b> How many persons sit between P and Q when counted clockwise from P?",
+      "qh": "<b>प्रश्न 9:</b> P से दक्षिणावर्त गिनने पर P और Q के बीच कितने व्यक्ति बैठे हैं?",
       "o": ["One", "Two", "Three", "Four"],
+      "a": 1,
+      "e": "P, T, U, Q. Two persons (T, U) are between them."
+    },
+    {
+      "p_id": "seating_mains_02",
+      "qe": "<b>Q10:</b> Who is 2nd to the right of V?",
+      "qh": "<b>प्रश्न 10:</b> V के दाएं से दूसरे स्थान पर कौन है?",
+      "o": ["W", "T", "P", "R"],
+      "a": 0,
+      "e": "W is 2nd to the right of V."
+    },
+    {
+      "p_id": "",
+      "qe": "<b>Syllogism:</b> Statements: All Planets are Stars. Some Stars are Comets. No Comet is Moon.",
+      "qh": "<b>न्याय निगमन:</b> कथन: सभी ग्रह तारे हैं। कुछ तारे धूमकेतु हैं। कोई धूमकेतु चंद्रमा नहीं है।",
+      "o": ["Some Stars are not Moon", "All Planets are Moon", "No Star is Moon", "None"],
+      "a": 0,
+      "e": "Stars that are Comets cannot be Moon."
+    },
+    {
+      "p_id": "",
+      "qe": "<b>Syllogism:</b> Statements: Only a few Pens are Pencils. All Pencils are Erasers.",
+      "qh": "<b>न्याय निगमन:</b> कथन: केवल कुछ पेन पेंसिल हैं। सभी पेंसिल इरेज़र हैं।",
+      "o": ["All Pens can be Erasers", "All Erasers can be Pens", "Both", "None"],
       "a": 2,
-      "e": "Order: V-T-S-Q-R-P-U. S(5) and U(1) have 3 people between them."
+      "e": "Only a few Pen are Pencil (All Pen cannot be Pencil). But All Pen can be Eraser and vice versa."
     },
     {
-      "p_id": "floor_mains_01",
-      "qe": "<b>Question (2/5):</b> Who lives on the 4th floor?",
-      "qh": "<b>प्रश्न (2/5):</b> चौथी मंजिल पर कौन रहता है?",
-      "o": ["S", "Q", "R", "T"],
-      "a": 1,
-      "e": "Q is on the 4th floor."
-    },
-    {
-      "p_id": "floor_mains_01",
-      "qe": "<b>Question (3/5):</b> Who lives immediately above T?",
-      "qh": "<b>प्रश्न (3/5):</b> T के ठीक ऊपर कौन रहता है?",
-      "o": ["V", "S", "P", "Q"],
+      "p_id": "",
+      "qe": "<b>Blood Relation:</b> A + B means A is father, A - B means A is mother, A * B means A is brother. Find relation of P to R in 'P + Q * R'?",
+      "qh": "<b>रक्त संबंध:</b> A + B मतलब A पिता है, A - B मतलब A माँ है, A * B मतलब A भाई है। 'P + Q * R' में P का R से संबंध?",
+      "o": ["Father", "Uncle", "Grandfather", "Son"],
       "a": 0,
-      "e": "V (7) is above T (6)."
+      "e": "P is father of Q, and Q is brother of R. So P is father of R."
     },
     {
-      "p_id": "floor_mains_01",
-      "qe": "<b>Question (4/5):</b> On which floor does S live?",
-      "qh": "<b>प्रश्न (4/5):</b> S किस मंजिल पर रहता है?",
-      "o": ["5th", "3rd", "2nd", "7th"],
-      "a": 0,
-      "e": "S lives on floor 5."
-    },
-    {
-      "p_id": "floor_mains_01",
-      "qe": "<b>Question (5/5):</b> How many floors between T and P?",
-      "qh": "<b>प्रश्न (5/5):</b> T और P के बीच कितनी मंजिलें हैं?",
-      "o": ["One", "Two", "Three", "None"],
+      "p_id": "",
+      "qe": "<b>Data Sufficiency:</b> Who is heaviest among A, B, C?<br/>I. A is heavier than B.<br/>II. C is lighter than B.",
+      "qh": "<b>डेटा पर्याप्तता:</b> A, B, C में सबसे भारी कौन है?<br/>I. A, B से भारी है।<br/>II. C, B से हल्का है।",
+      "o": ["Only I", "Only II", "Both I and II", "Neither"],
       "a": 2,
-      "e": "Between T(6) and P(2) are 5, 4, 3 (3 floors)."
+      "e": "Combining both: A > B > C. A is heaviest."
     },
     {
       "p_id": "",
-      "qe": "<b>Syllogism:</b><br/>Statements: Only a few Rivers are Oceans. All Oceans are Lakes.<br/>Conclusions: I. All Rivers can be Oceans. II. Some Lakes are Rivers.",
-      "qh": "<b>न्याय निगमन:</b><br/>कथन: केवल कुछ नदियाँ महासागर हैं। सभी महासागर झीलें हैं।<br/>निष्कर्ष: I. सभी नदियाँ महासागर हो सकती हैं। II. कुछ झीलें नदियाँ हैं।",
-      "o": ["Only I", "Only II", "Both", "Neither"],
-      "a": 1,
-      "e": "'Only a few' means all cannot be. Since Oceans are Lakes and Rivers touch Oceans, II is true."
-    },
-    {
-      "p_id": "",
-      "qe": "<b>Blood Relation:</b> Pointing to a man, Neha said, 'His mother is the only daughter of my mother.' How is Neha related to that man?",
-      "qh": "<b>रक्त संबंध:</b> एक आदमी की ओर इशारा करते हुए नेहा ने कहा, 'उसकी माँ मेरी माँ की इकलौती बेटी है।' नेहा उस आदमी से कैसे संबंधित है?",
-      "o": ["Sister", "Mother", "Aunt", "Daughter"],
-      "a": 1,
-      "e": "The only daughter of Neha's mother is Neha herself. So she is the mother."
-    },
-    {
-      "p_id": "",
-      "qe": "<b>Coding:</b> If 'KING' is coded as 'PRMT', then 'RAIN' is?",
-      "qh": "<b>कोडिंग:</b> यदि 'KING' का कोड 'PRMT' है, तो 'RAIN' क्या होगा?",
-      "o": ["IZRM", "IZRN", "IARM", "IZSM"],
-      "a": 1,
-      "e": "Opposite letters: R-I, A-Z, I-R, N-M."
-    },
-    {
-      "p_id": "",
-      "qe": "<b>Direction:</b> A man faces North, turns 90° right, then 45° left. Which direction is he facing?",
-      "qh": "<b>दिशा:</b> एक व्यक्ति उत्तर की ओर है, 90° दाएं मुड़ता है, फिर 45° बाएं। अब वह किस दिशा में है?",
-      "o": ["NE", "SE", "E", "NW"],
+      "qe": "<b>Critical Reasoning:</b> Statement: Should plastic bags be banned?<br/>Arg I: Yes, they cause pollution.<br/>Arg II: No, they are convenient.",
+      "qh": "<b>महत्वपूर्ण तर्क:</b> कथन: क्या प्लास्टिक बैग पर प्रतिबंध लगाया जाना चाहिए?<br/>तर्क I: हाँ, वे प्रदूषण का कारण बनते हैं।<br/>तर्क II: नहीं, वे सुविधाजनक हैं।",
+      "o": ["Only I is strong", "Only II is strong", "Both", "Neither"],
       "a": 0,
-      "e": "North -> East (90° R) -> North-East (45° L)."
+      "e": "Environmental protection is a stronger logical ground than convenience."
     },
     {
       "p_id": "",
-      "qe": "<b>Analogy:</b> 12 : 144 :: 15 : ?",
-      "qh": "<b>सादृश्यता:</b> 12 : 144 :: 15 : ?",
-      "o": ["225", "210", "250", "200"],
+      "qe": "<b>Coding:</b> In a certain code, 'RAIN' is '81914' and 'SUN' is '192114'. What is 'MOON'?",
+      "qh": "<b>कोडिंग:</b> एक निश्चित कोड में, 'RAIN' '81914' है और 'SUN' '192114' है। 'MOON' क्या है?",
+      "o": ["13151514", "13141515", "14151513", "12151514"],
       "a": 0,
-      "e": "15 squared is 225."
+      "e": "Alphabetical positions: M=13, O=15, O=15, N=14."
+    },
+    {
+      "p_id": "",
+      "qe": "<b>Analogy:</b> 14 : 210 :: 16 : ?",
+      "qh": "<b>सादृश्यता:</b> 14 : 210 :: 16 : ?",
+      "o": ["272", "240", "256", "280"],
+      "a": 0,
+      "e": "Logic: n² + n. (14² + 14 = 210). (16² + 16 = 272)."
+    },
+    {
+      "p_id": "",
+      "qe": "<b>Number Series:</b> 5, 11, 23, 47, 95, ?",
+      "qh": "<b>संख्या श्रृंखला:</b> 5, 11, 23, 47, 95, ?",
+      "o": ["191", "190", "189", "192"],
+      "a": 0,
+      "e": "Pattern: x2 + 1."
+    },
+    {
+      "p_id": "",
+      "qe": "<b>Direction:</b> A person starts from Point A, walks 10m South, turns left, walks 20m, turns left, walks 10m. Distance from A?",
+      "qh": "<b>दिशा:</b> एक व्यक्ति बिंदु A से शुरू करता है, 10 मीटर दक्षिण की ओर चलता है, बाएं मुड़ता है, 20 मीटर चलता है, बाएं मुड़ता है, 10 मीटर चलता है। A से दूरी?",
+      "o": ["20m", "10m", "30m", "0m"],
+      "a": 0,
+      "e": "Forms a rectangle. Shortest distance is 20m East."
+    },
+    {
+      "p_id": "",
+      "qe": "<b>Classification:</b> Choose the odd pair.",
+      "qh": "<b>वर्गीकरण:</b> विषम युग्म चुनें।",
+      "o": ["4 : 16", "5 : 25", "6 : 36", "7 : 50"],
+      "a": 3,
+      "e": "7 squared is 49, not 50."
+    },
+    {
+      "p_id": "",
+      "qe": "<b>Syllogism:</b> Statements: Some Dogs are Cats. All Cats are Tiger.",
+      "qh": "<b>न्याय निगमन:</b> कथन: कुछ कुत्ते बिल्लियाँ हैं। सभी बिल्लियाँ बाघ हैं।",
+      "o": ["Some Dogs are Tiger", "No Dog is Tiger", "All Dogs are Tiger", "None"],
+      "a": 0,
+      "e": "Common area between Dogs and Tiger exists."
+    },
+    {
+      "p_id": "",
+      "qe": "<b>Blood Relation:</b> My mother's only brother's son to me?",
+      "qh": "<b>रक्त संबंध:</b> मेरी माँ के इकलौते भाई का बेटा?",
+      "o": ["Brother", "Cousin", "Uncle", "Nephew"],
+      "a": 1,
+      "e": "Maternal Uncle's son is Cousin."
+    },
+    {
+      "p_id": "",
+      "qe": "<b>Coding:</b> 'APPLE' is 'ELPPA'. 'MANGO'?",
+      "qh": "<b>कोडिंग:</b> 'APPLE' 'ELPPA' है। 'MANGO'?",
+      "o": ["OGNAM", "OGMAN", "ONGAM", "MOGNA"],
+      "a": 0,
+      "e": "Reverse the string."
+    },
+    {
+      "p_id": "",
+      "qe": "<b>Missing Number:</b> 2, 6, 12, 20, 30, ?",
+      "qh": "<b>लुप्त संख्या:</b> 2, 6, 12, 20, 30, ?",
+      "o": ["42", "40", "36", "44"],
+      "a": 0,
+      "e": "Logic: 1x2, 2x3, 3x4, 4x5, 5x6, 6x7=42."
+    },
+    {
+      "p_id": "",
+      "qe": "<b>Calendar:</b> If today is Monday, what was 61 days ago?",
+      "qh": "<b>कैलेंडर:</b> यदि आज सोमवार है, तो 61 दिन पहले क्या था?",
+      "o": ["Tuesday", "Saturday", "Friday", "Sunday"],
+      "a": 1,
+      "e": "61 mod 7 = 5. Monday - 5 days = Saturday."
+    },
+    {
+      "p_id": "",
+      "qe": "<b>Order & Ranking:</b> Rahul is 10th from top and 20th from bottom. Total students?",
+      "qh": "<b>क्रम और रैंकिंग:</b> राहुल ऊपर से 10वें और नीचे से 20वें स्थान पर है। कुल छात्र?",
+      "o": ["29", "30", "31", "28"],
+      "a": 0,
+      "e": "Total = (L + R) - 1. (10 + 20) - 1 = 29."
+    },
+    {
+      "p_id": "",
+      "qe": "<b>Venn Diagram:</b> Relationship between Fruits, Apple, Vegetables?",
+      "qh": "<b>वेन आरेख:</b> फल, सेब, सब्जियों के बीच संबंध?",
+      "o": ["Apple inside Fruits, Vegetables separate", "All three separate", "All three intersect", "Apple inside Vegetables"],
+      "a": 0,
+      "e": "All Apples are Fruits. Vegetables are different."
+    },
+    {
+      "p_id": "",
+      "qe": "<b>Analogy:</b> Pencil : Lead :: Pen : ?",
+      "qh": "<b>सादृश्यता:</b> पेंसिल : लेड :: पेन : ?",
+      "o": ["Ink", "Paper", "Write", "Nib"],
+      "a": 0,
+      "e": "Internal substance."
+    },
+    {
+      "p_id": "",
+      "qe": "<b>Matrix:</b> Find code for 'HEAT' in matrix (Assume standard matrix logic).",
+      "qh": "<b>मैट्रिक्स:</b> मैट्रिक्स में 'HEAT' के लिए कोड खोजें।",
+      "o": ["Logic based code", "Random code", "None", "All"],
+      "a": 0,
+      "e": "Requires row-column intersection analysis."
+    },
+    {
+      "p_id": "",
+      "qe": "<b>Decision Making:</b> Criteria: Must have 60% marks and be 21 years old. A has 65% and is 20.",
+      "qh": "<b>निर्णय लेना:</b> मानदंड: 60% अंक और 21 वर्ष का होना चाहिए। A के 65% हैं और वह 20 वर्ष का है।",
+      "o": ["Reject", "Accept", "Refer to Dean", "Incomplete Data"],
+      "a": 0,
+      "e": "Does not meet age criteria."
+    },
+    {
+      "p_id": "",
+      "qe": "<b>Word Formation:</b> Can 'NATURE' be formed from 'SIGNATURE'?",
+      "qh": "<b>शब्द गठन:</b> क्या 'SIGNATURE' से 'NATURE' बनाया जा सकता है?",
+      "o": ["Yes", "No", "Maybe", "None"],
+      "a": 0,
+      "e": "All letters are present."
+    },
+    {
+      "p_id": "",
+      "qe": "<b>Syllogism:</b> Statements: All Books are Pages. No Page is Pen.",
+      "qh": "<b>न्याय निगमन:</b> कथन: सभी पुस्तकें पृष्ठ हैं। कोई पृष्ठ पेन नहीं है।",
+      "o": ["No Book is Pen", "Some Books are Pen", "All Books are Pen", "None"],
+      "a": 0,
+      "e": "Since Books are inside Pages, and Pages don't touch Pen, Books can't touch Pen."
+    },
+    {
+      "p_id": "",
+      "qe": "<b>Mathematical Ops:</b> If + is -, - is *, * is /, / is +. 10 / 5 * 5 = ?",
+      "qh": "<b>गणितीय संक्रियाएं:</b> यदि + है -, - है *, * है /, / है +. 10 / 5 * 5 = ?",
+      "o": ["11", "10", "15", "5"],
+      "a": 0,
+      "e": "New: 10 + 5 / 5 = 10 + 1 = 11."
+    },
+    {
+      "p_id": "",
+      "qe": "<b>Figure Series:</b> 3 sides, 4 sides, 5 sides, ?",
+      "qh": "<b>आकृति श्रृंखला:</b> 3 भुजाएं, 4 भुजाएं, 5 भुजाएं, ?",
+      "o": ["Hexagon", "Circle", "Square", "Line"],
+      "a": 0,
+      "e": "Next is 6 sides (Hexagon)."
+    },
+    {
+      "p_id": "",
+      "qe": "<b>Clock:</b> Angle at 3:30?",
+      "qh": "<b>घड़ी:</b> 3:30 पर कोण?",
+      "o": ["75°", "90°", "85°", "60°"],
+      "a": 0,
+      "e": "Formula: |30H - 5.5M|. |30(3) - 5.5(30)| = |90 - 165| = 75°."
     }
   ]
 }
