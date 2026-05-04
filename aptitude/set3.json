@@ -1,247 +1,492 @@
 [
   {
-    "q": "1. दो धनात्मक संख्याओं का LCM उनके HCF का 28 गुना है। यदि उनके LCM और HCF का योग 1740 है और एक संख्या 420 है, तो दूसरी संख्या ज्ञात कीजिए। \n(The LCM of two positive numbers is 28 times their HCF. If the sum of their LCM and HCF is 1740 and one number is 420, find the other number.)",
-    "o": ["240", "300", "360", "480"],
+    "o": [
+      "240",
+      "300",
+      "360",
+      "480"
+    ],
     "a": 0,
     "e": "L = 28H, L + H = 1740 => 29H = 1740 => H = 60, L = 1680. Product of numbers = L * H => 420 * x = 1680 * 60 => x = 240.",
-    "cat": "aptitude", "sub": "hcf-lcm"
+    "cat": "aptitude",
+    "sub": "hcf-lcm",
+    "qh": "1. दो धनात्मक संख्याओं का LCM उनके HCF का 28 गुना है। यदि उनके LCM और HCF का योग 1740 है और एक संख्या 420 है, तो दूसरी संख्या ज्ञात कीजिए।",
+    "qe": "The LCM of two positive numbers is 28 times their HCF. If the sum of their LCM and HCF is 1740 and one number is 420, find the other number."
   },
   {
-    "q": "2. यदि (5^71 + 5^72 + 5^73) को 31 से विभाजित किया जाता है, तो शेषफल क्या होगा? \n(If (5^71 + 5^72 + 5^73) is divided by 31, what will be the remainder?)",
-    "o": ["0", "1", "5", "30"],
+    "o": [
+      "0",
+      "1",
+      "5",
+      "30"
+    ],
     "a": 0,
     "e": "Take 5^71 common: 5^71(1 + 5 + 25) = 5^71(31). Since 31 is a factor, the remainder is 0.",
-    "cat": "aptitude", "sub": "remainder-theorem"
+    "cat": "aptitude",
+    "sub": "remainder-theorem",
+    "qh": "2. यदि (5^71 + 5^72 + 5^73) को 31 से विभाजित किया जाता है, तो शेषफल क्या होगा?",
+    "qe": "If (5^71 + 5^72 + 5^73) is divided by 31, what will be the remainder?"
   },
   {
-    "q": "3. 1/(1*2) + 1/(2*3) + 1/(3*4) + ... + 1/(99*100) का मान ज्ञात कीजिए। \n(Find the value of 1/(1*2) + 1/(2*3) + 1/(3*4) + ... + 1/(99*100).)",
-    "o": ["0.99", "1", "0.90", "0.95"],
+    "o": [
+      "0.99",
+      "1",
+      "0.90",
+      "0.95"
+    ],
     "a": 0,
     "e": "Series: (1/1 - 1/2) + (1/2 - 1/3) + ... + (1/99 - 1/100) = 1 - 1/100 = 99/100 = 0.99.",
-    "cat": "aptitude", "sub": "decimals-and-fractions"
+    "cat": "aptitude",
+    "sub": "decimals-and-fractions",
+    "qh": "3. 1/(1*2) + 1/(2*3) + 1/(3*4) + ... + 1/(99*100) का मान ज्ञात कीजिए।",
+    "qe": "Find the value of 1/(1*2) + 1/(2*3) + 1/(3*4) + ... + 1/(99*100)."
   },
   {
-    "q": "4. एक परीक्षा में, सफल होने के लिए कुल अंकों का 45% प्राप्त करना आवश्यक है। एक छात्र ने 154 अंक प्राप्त किए और वह 4% अंकों से अनुत्तीर्ण हो गया। अधिकतम अंक क्या हैं? \n(In an exam, it is necessary to get 45% of total marks to pass. A student got 154 marks and failed by 4% marks. What are the maximum marks?)",
-    "o": ["400", "375", "425", "350"],
+    "o": [
+      "400",
+      "375",
+      "425",
+      "350"
+    ],
     "a": 1,
     "e": "Passed % = 45%. Student % = 45% - 4% = 41%. So 41% = 154? Re-calc: 154 is (45-4)=41%? Let's check 41% = 154 is not clean. If fail by 26 marks which is 4%, then 4% = 26+154? No. Correct Logic: 45% - 41% = 4% of total. Let Max be M. 0.41M = 154 => M = 154/0.41 ≈ 375.6. Corrected logic for Mains: (45% - 154) = 4% of total => 41% = 154. Total = 154/41 * 100 = 375.6. Option 375 is closest.",
-    "cat": "aptitude", "sub": "percentage"
+    "cat": "aptitude",
+    "sub": "percentage",
+    "qh": "4. एक परीक्षा में, सफल होने के लिए कुल अंकों का 45% प्राप्त करना आवश्यक है। एक छात्र ने 154 अंक प्राप्त किए और वह 4% अंकों से अनुत्तीर्ण हो गया। अधिकतम अंक क्या हैं?",
+    "qe": "In an exam, it is necessary to get 45% of total marks to pass. A student got 154 marks and failed by 4% marks. What are the maximum marks?"
   },
   {
-    "q": "5. A, B और C की आय का अनुपात 7:9:12 है और उनके खर्च का अनुपात 8:9:15 है। यदि A अपनी आय का 1/4 भाग बचाता है, तो A, B और C की बचत का अनुपात क्या है? \n(Income ratio of A, B, C is 7:9:12 and expenditure ratio is 8:9:15. If A saves 1/4 of his income, find the ratio of their savings.)",
-    "o": ["56:99:69", "69:56:99", "99:56:69", "56:69:99"],
+    "o": [
+      "56:99:69",
+      "69:56:99",
+      "99:56:69",
+      "56:69:99"
+    ],
     "a": 0,
     "e": "Detailed ratio adjustment required (Standard CGL Mains logic). A's Sav = 1/4 Inc => Exp = 3/4 Inc. Equate ratios to find multiplier.",
-    "cat": "aptitude", "sub": "ratio-and-proportion"
+    "cat": "aptitude",
+    "sub": "ratio-and-proportion",
+    "qh": "5. A, B और C की आय का अनुपात 7:9:12 है और उनके खर्च का अनुपात 8:9:15 है। यदि A अपनी आय का 1/4 भाग बचाता है, तो A, B और C की बचत का अनुपात क्या है?",
+    "qe": "Income ratio of A, B, C is 7:9:12 and expenditure ratio is 8:9:15. If A saves 1/4 of his income, find the ratio of their savings."
   },
   {
-    "q": "6. √(10 + 2√(6 + √4 + √16)) का सरलीकृत मान क्या है? \n(What is the simplified value of √(10 + 2√(6 + √4 + √16))?)",
-    "o": ["4", "√14", "2√3", "2"],
+    "o": [
+      "4",
+      "√14",
+      "2√3",
+      "2"
+    ],
     "a": 0,
     "e": "Inner root: √(6 + 2 + 4) = √12. √(10 + 2√12) = √(10 + 4√3). (√6 + √4)? (√7+√3)? Re-calc: √(10+2√12) = √( (√6+√4)² ) = √6+2. No. Correct: √(10+4√3) = √( (√7+√3)² ) is wrong. Correct inner: √(10+2√24). (√6+√4). Result 4 if nested perfectly.",
-    "cat": "aptitude", "sub": "square-roots"
+    "cat": "aptitude",
+    "sub": "square-roots",
+    "qh": "6. √(10 + 2√(6 + √4 + √16)) का सरलीकृत मान क्या है?",
+    "qe": "What is the simplified value of √(10 + 2√(6 + √4 + √16))?"
   },
   {
-    "q": "7. 11 संख्याओं का औसत 50 है। पहली 6 संख्याओं का औसत 49 और अंतिम 6 का औसत 52 है। छठी संख्या ज्ञात कीजिए। \n(Average of 11 numbers is 50. Avg of first 6 is 49 and last 6 is 52. Find the 6th number.)",
-    "o": ["56", "50", "48", "52"],
+    "o": [
+      "56",
+      "50",
+      "48",
+      "52"
+    ],
     "a": 0,
     "e": "Sum of 11 = 550. Sum of (6+6) = 6*49 + 6*52 = 294 + 312 = 606. 6th number = 606 - 550 = 56.",
-    "cat": "aptitude", "sub": "averages"
+    "cat": "aptitude",
+    "sub": "averages",
+    "qh": "7. 11 संख्याओं का औसत 50 है। पहली 6 संख्याओं का औसत 49 और अंतिम 6 का औसत 52 है। छठी संख्या ज्ञात कीजिए।",
+    "qe": "Average of 11 numbers is 50. Avg of first 6 is 49 and last 6 is 52. Find the 6th number."
   },
   {
-    "q": "8. एक निश्चित राशि पर 10% वार्षिक दर से 3 वर्ष के लिए चक्रवृद्धि ब्याज ₹6620 है। समान राशि पर समान दर और समान समय के लिए साधारण ब्याज क्या होगा? \n(CI on a sum at 10% for 3 years is ₹6620. Find SI on same sum, rate, and time.)",
-    "o": ["₹6000", "₹5000", "₹5400", "₹6200"],
+    "o": [
+      "₹6000",
+      "₹5000",
+      "₹5400",
+      "₹6200"
+    ],
     "a": 0,
     "e": "Effective CI rate for 10% for 3 yrs = 33.1%. 33.1% = 6620 => 1% = 200. SI = 30% = 30 * 200 = ₹6000.",
-    "cat": "aptitude", "sub": "interest"
+    "cat": "aptitude",
+    "sub": "interest",
+    "qh": "8. एक निश्चित राशि पर 10% वार्षिक दर से 3 वर्ष के लिए चक्रवृद्धि ब्याज ₹6620 है। समान राशि पर समान दर और समान समय के लिए साधारण ब्याज क्या होगा?",
+    "qe": "CI on a sum at 10% for 3 years is ₹6620. Find SI on same sum, rate, and time."
   },
   {
-    "q": "9. एक डीलर ने एक वस्तु को 2% की हानि पर बेचा। यदि उसने इसे ₹44 अधिक में बेचा होता, तो उसे 20% का लाभ होता। 30% लाभ प्राप्त करने के लिए उसे इसे किस मूल्य पर बेचना चाहिए? \n(A dealer sold an article at 2% loss. Had he sold for ₹44 more, he would gain 20%. At what price should he sell to gain 30%?)",
-    "o": ["₹260", "₹200", "₹240", "₹250"],
+    "o": [
+      "₹260",
+      "₹200",
+      "₹240",
+      "₹250"
+    ],
     "a": 0,
     "e": "Diff (20% - (-2%)) = 22%. 22% = 44 => 100% = 200. SP for 30% gain = 200 * 1.3 = ₹260.",
-    "cat": "aptitude", "sub": "profit-and-loss"
+    "cat": "aptitude",
+    "sub": "profit-and-loss",
+    "qh": "9. एक डीलर ने एक वस्तु को 2% की हानि पर बेचा। यदि उसने इसे ₹44 अधिक में बेचा होता, तो उसे 20% का लाभ होता। 30% लाभ प्राप्त करने के लिए उसे इसे किस मूल्य पर बेचना चाहिए?",
+    "qe": "A dealer sold an article at 2% loss. Had he sold for ₹44 more, he would gain 20%. At what price should he sell to gain 30%?"
   },
   {
-    "q": "10. ₹11,340 के अंकित मूल्य वाली वस्तु पर 10%, 5% और 2% की क्रमिक छूट दी जाती है। विक्रय मूल्य (निकटतम ₹ तक) ज्ञात कीजिए। \n(Successive discounts of 10%, 5%, and 2% are given on MP ₹11,340. Find SP.)",
-    "o": ["₹9503", "₹10000", "₹9400", "₹9650"],
+    "o": [
+      "₹9503",
+      "₹10000",
+      "₹9400",
+      "₹9650"
+    ],
     "a": 0,
     "e": "11340 * 0.9 * 0.95 * 0.98 ≈ ₹9503.",
-    "cat": "aptitude", "sub": "discount"
+    "cat": "aptitude",
+    "sub": "discount",
+    "qh": "10. ₹11,340 के अंकित मूल्य वाली वस्तु पर 10%, 5% और 2% की क्रमिक छूट दी जाती है। विक्रय मूल्य (निकटतम ₹ तक) ज्ञात कीजिए।",
+    "qe": "Successive discounts of 10%, 5%, and 2% are given on MP ₹11,340. Find SP."
   },
   {
-    "q": "11. A और B एक व्यापार में क्रमशः 5:6 के अनुपात में निवेश करते हैं। 8 महीने बाद A अपना निवेश निकाल लेता है। यदि उन्हें 5:9 के अनुपात में लाभ प्राप्त हुआ, तो B ने कितने समय के लिए निवेश किया? \n(A and B invest in ratio 5:6. After 8 months A withdraws. If profit ratio is 5:9, how long did B invest?)",
-    "o": ["12 महीने", "10 महीने", "9 महीने", "15 महीने"],
+    "o": [
+      "12 महीने",
+      "10 महीने",
+      "9 महीने",
+      "15 महीने"
+    ],
     "a": 0,
     "e": "(5 * 8) / (6 * T) = 5 / 9 => 40 / 6T = 5/9 => 1/6T = 1/72 => 6T = 72 => T = 12.",
-    "cat": "aptitude", "sub": "partnership-business"
+    "cat": "aptitude",
+    "sub": "partnership-business",
+    "qh": "11. A और B एक व्यापार में क्रमशः 5:6 के अनुपात में निवेश करते हैं। 8 महीने बाद A अपना निवेश निकाल लेता है। यदि उन्हें 5:9 के अनुपात में लाभ प्राप्त हुआ, तो B ने कितने समय के लिए निवेश किया?",
+    "qe": "A and B invest in ratio 5:6. After 8 months A withdraws. If profit ratio is 5:9, how long did B invest?"
   },
   {
-    "q": "12. 80 लीटर के मिश्रण में दूध और पानी का अनुपात 7:3 है। इसमें कितना पानी मिलाया जाए कि अनुपात 2:1 हो जाए? \n(In 80L mix, Milk:Water is 7:3. How much water to add to make it 2:1?)",
-    "o": ["4 लीटर", "5 लीटर", "6 लीटर", "8 लीटर"],
+    "o": [
+      "4 लीटर",
+      "5 लीटर",
+      "6 लीटर",
+      "8 लीटर"
+    ],
     "a": 0,
     "e": "Milk = 56L, Water = 24L. New ratio 2:1 => 56/Water = 2/1 => Water = 28L. Added = 28 - 24 = 4L.",
-    "cat": "aptitude", "sub": "mixture-and-alligation"
+    "cat": "aptitude",
+    "sub": "mixture-and-alligation",
+    "qh": "12. 80 लीटर के मिश्रण में दूध और पानी का अनुपात 7:3 है। इसमें कितना पानी मिलाया जाए कि अनुपात 2:1 हो जाए?",
+    "qe": "In 80L mix, Milk:Water is 7:3. How much water to add to make it 2:1?"
   },
   {
-    "q": "13. दो ट्रेनें A और B एक-दूसरे की ओर 80 किमी/घंटा और 70 किमी/घंटा की गति से चल रही हैं। जब वे मिलती हैं, तो तेज ट्रेन ने धीमी ट्रेन से 50 किमी अधिक यात्रा की होती है। उनके बीच की प्रारंभिक दूरी क्या थी? \n(Trains A & B move towards each other at 80 and 70 km/h. When they meet, the faster train has covered 50 km more. Find initial distance.)",
-    "o": ["750 किमी", "500 किमी", "600 किमी", "800 किमी"],
+    "o": [
+      "750 किमी",
+      "500 किमी",
+      "600 किमी",
+      "800 किमी"
+    ],
     "a": 0,
     "e": "Diff in speed = 10 km/h. Time taken to cover 50 km extra = 5 hrs. Distance = (80+70)*5 = 750 km.",
-    "cat": "aptitude", "sub": "time-and-distance"
+    "cat": "aptitude",
+    "sub": "time-and-distance",
+    "qh": "13. दो ट्रेनें A और B एक-दूसरे की ओर 80 किमी/घंटा और 70 किमी/घंटा की गति से चल रही हैं। जब वे मिलती हैं, तो तेज ट्रेन ने धीमी ट्रेन से 50 किमी अधिक यात्रा की होती है। उनके बीच की प्रारंभिक दूरी क्या थी?",
+    "qe": "Trains A & B move towards each other at 80 and 70 km/h. When they meet, the faster train has covered 50 km more. Find initial distance."
   },
   {
-    "q": "14. A और B मिलकर एक काम को 12 दिनों में, B और C 15 दिनों में और C और A 20 दिनों में कर सकते हैं। अकेले C इस काम को कितने दिनों में करेगा? \n(A+B in 12 days, B+C in 15 days, C+A in 20 days. How many days will C alone take?)",
-    "o": ["60 दिन", "40 दिन", "30 दिन", "20 दिन"],
+    "o": [
+      "60 दिन",
+      "40 दिन",
+      "30 दिन",
+      "20 दिन"
+    ],
     "a": 0,
     "e": "2(A+B+C) eff = 5+4+3 = 12 => A+B+C = 6. C eff = 6 - (A+B) = 6 - 5 = 1. Days for C = 60/1 = 60.",
-    "cat": "aptitude", "sub": "time-and-work"
+    "cat": "aptitude",
+    "sub": "time-and-work",
+    "qh": "14. A और B मिलकर एक काम को 12 दिनों में, B और C 15 दिनों में और C और A 20 दिनों में कर सकते हैं। अकेले C इस काम को कितने दिनों में करेगा?",
+    "qe": "A+B in 12 days, B+C in 15 days, C+A in 20 days. How many days will C alone take?"
   },
   {
-    "q": "15. एक चक्रीय चतुर्भुज (Cyclic Quadrilateral) ABCD में, कोण A, कोण C का तीन गुना है और कोण D, कोण B का दो गुना है। कोण B और C के माप का योग क्या है? \n(In cyclic quad ABCD, angle A = 3C and D = 2B. Sum of B and C?)",
-    "o": ["105°", "120°", "90°", "110°"],
+    "o": [
+      "105°",
+      "120°",
+      "90°",
+      "110°"
+    ],
     "a": 0,
     "e": "A+C = 180 => 4C = 180 => C = 45°. B+D = 180 => 3B = 180 => B = 60°. B+C = 105°.",
-    "cat": "aptitude", "sub": "quadrilaterals"
+    "cat": "aptitude",
+    "sub": "quadrilaterals",
+    "qh": "15. एक चक्रीय चतुर्भुज (Cyclic Quadrilateral) ABCD में, कोण A, कोण C का तीन गुना है और कोण D, कोण B का दो गुना है। कोण B और C के माप का योग क्या है?",
+    "qe": "In cyclic quad ABCD, angle A = 3C and D = 2B. Sum of B and C?"
   },
   {
-    "q": "16. एक नियमित अष्टभुज (Regular Octagon) के प्रत्येक आंतरिक कोण का माप क्या होता है? \n(What is the measure of each interior angle of a regular octagon?)",
-    "o": ["135°", "120°", "150°", "144°"],
+    "o": [
+      "135°",
+      "120°",
+      "150°",
+      "144°"
+    ],
     "a": 0,
     "e": "(8-2)*180 / 8 = 6 * 22.5 = 135°.",
-    "cat": "aptitude", "sub": "regular-polygons"
+    "cat": "aptitude",
+    "sub": "regular-polygons",
+    "qh": "16. एक नियमित अष्टभुज (Regular Octagon) के प्रत्येक आंतरिक कोण का माप क्या होता है?",
+    "qe": "What is the measure of each interior angle of a regular octagon?"
   },
   {
-    "q": "17. एक प्रिज्म का आधार 6 सेमी भुजा वाला एक समबाहु त्रिभुज है। यदि प्रिज्म का आयतन 108√3 घन सेमी है, तो इसकी ऊंचाई ज्ञात कीजिए। \n(Base of prism is equilateral triangle with side 6cm. Vol is 108√3. Find height.)",
-    "o": ["12 सेमी", "10 सेमी", "15 सेमी", "9 सेमी"],
+    "o": [
+      "12 सेमी",
+      "10 सेमी",
+      "15 सेमी",
+      "9 सेमी"
+    ],
     "a": 0,
     "e": "Base Area = √3/4 * 36 = 9√3. Vol = Area * h => 9√3 * h = 108√3 => h = 12.",
-    "cat": "aptitude", "sub": "right-prism"
+    "cat": "aptitude",
+    "sub": "right-prism",
+    "qh": "17. एक प्रिज्म का आधार 6 सेमी भुजा वाला एक समबाहु त्रिभुज है। यदि प्रिज्म का आयतन 108√3 घन सेमी है, तो इसकी ऊंचाई ज्ञात कीजिए।",
+    "qe": "Base of prism is equilateral triangle with side 6cm. Vol is 108√3. Find height."
   },
   {
-    "q": "18. एक शंकु के आधार का क्षेत्रफल 154 सेमी² और इसका वक्र पृष्ठीय क्षेत्रफल (CSA) 550 सेमी² है। इसका आयतन ज्ञात कीजिए। \n(Base area of cone is 154 and CSA is 550. Find its volume.)",
-    "o": ["1232 सेमी³", "1300 सेमी³", "1150 सेमी³", "1200 सेमी³"],
+    "o": [
+      "1232 सेमी³",
+      "1300 सेमी³",
+      "1150 सेमी³",
+      "1200 सेमी³"
+    ],
     "a": 0,
     "e": "πr²=154 => r=7. πrl=550 => 22/7 * 7 * l = 550 => l=25. h=√(25²-7²)=24. Vol = 1/3 * 154 * 24 = 1232.",
-    "cat": "aptitude", "sub": "right-circular-cone"
+    "cat": "aptitude",
+    "sub": "right-circular-cone",
+    "qh": "18. एक शंकु के आधार का क्षेत्रफल 154 सेमी² और इसका वक्र पृष्ठीय क्षेत्रफल (CSA) 550 सेमी² है। इसका आयतन ज्ञात कीजिए।",
+    "qe": "Base area of cone is 154 and CSA is 550. Find its volume."
   },
   {
-    "q": "19. यदि tan θ + cot θ = 2 है, तो sin² θ + cos² θ का मान क्या होगा? \n(If tan θ + cot θ = 2, find sin² θ + cos² θ.)",
-    "o": ["1", "2", "0.5", "0"],
+    "o": [
+      "1",
+      "2",
+      "0.5",
+      "0"
+    ],
     "a": 0,
     "e": "tan θ + 1/tan θ = 2 => tan θ = 1 => θ = 45°. sin² 45 + cos² 45 = 1 (Identity).",
-    "cat": "aptitude", "sub": "trigonometric-ratio"
+    "cat": "aptitude",
+    "sub": "trigonometric-ratio",
+    "qh": "19. यदि tan θ + cot θ = 2 है, तो sin² θ + cos² θ का मान क्या होगा?",
+    "qe": "If tan θ + cot θ = 2, find sin² θ + cos² θ."
   },
   {
-    "q": "20. एक टावर के पैर से 100 मीटर की दूरी पर स्थित एक बिंदु से टावर के शीर्ष का उन्नयन कोण 30° है। टावर की ऊंचाई क्या है? \n(Angle of elevation of tower top from 100m away is 30°. Height?)",
-    "o": ["100/√3 मी", "100√3 मी", "50 मी", "50√3 मी"],
+    "o": [
+      "100/√3 मी",
+      "100√3 मी",
+      "50 मी",
+      "50√3 मी"
+    ],
     "a": 0,
     "e": "tan 30 = h/100 => 1/√3 = h/100 => h = 100/√3.",
-    "cat": "aptitude", "sub": "heights-and-distances"
+    "cat": "aptitude",
+    "sub": "heights-and-distances",
+    "qh": "20. एक टावर के पैर से 100 मीटर की दूरी पर स्थित एक बिंदु से टावर के शीर्ष का उन्नयन कोण 30° है। टावर की ऊंचाई क्या है?",
+    "qe": "Angle of elevation of tower top from 100m away is 30°. Height?"
   },
   {
-    "q": "21. दो संख्याओं का LCM 4800 और HCF 160 है। यदि एक संख्या 480 है, तो दूसरी संख्या क्या है? \n(LCM is 4800, HCF 160. One number is 480. Find other.)",
-    "o": ["1600", "1500", "1200", "1800"],
+    "o": [
+      "1600",
+      "1500",
+      "1200",
+      "1800"
+    ],
     "a": 0,
     "e": "Product = LCM * HCF => 480 * x = 4800 * 160 => x = 1600.",
-    "cat": "aptitude", "sub": "hcf-lcm"
+    "cat": "aptitude",
+    "sub": "hcf-lcm",
+    "qh": "21. दो संख्याओं का LCM 4800 और HCF 160 है। यदि एक संख्या 480 है, तो दूसरी संख्या क्या है?",
+    "qe": "LCM is 4800, HCF 160. One number is 480. Find other."
   },
   {
-    "q": "22. (13^7 + 11^7) किससे पूर्णतः विभाज्य है? \n(What is (13^7 + 11^7) divisible by?)",
-    "o": ["24", "13", "11", "2"],
+    "o": [
+      "24",
+      "13",
+      "11",
+      "2"
+    ],
     "a": 0,
     "e": "a^n + b^n is divisible by (a+b) if n is odd. 13+11 = 24.",
-    "cat": "aptitude", "sub": "remainder-theorem"
+    "cat": "aptitude",
+    "sub": "remainder-theorem",
+    "qh": "22. (13^7 + 11^7) किससे पूर्णतः विभाज्य है?",
+    "qe": "What is (13^7 + 11^7) divisible by?"
   },
   {
-    "q": "23. 1/3, 2/9, 5/6, 4/27 का LCM ज्ञात कीजिए। \n(Find LCM of 1/3, 2/9, 5/6, 4/27.)",
-    "o": ["20/3", "10/3", "20/9", "5/3"],
+    "o": [
+      "20/3",
+      "10/3",
+      "20/9",
+      "5/3"
+    ],
     "a": 0,
     "e": "LCM of fractions = LCM(Num) / HCF(Den) = LCM(1,2,5,4) / HCF(3,9,6,27) = 20 / 3.",
-    "cat": "aptitude", "sub": "hcf-lcm"
+    "cat": "aptitude",
+    "sub": "hcf-lcm",
+    "qh": "23. 1/3, 2/9, 5/6, 4/27 का LCM ज्ञात कीजिए।",
+    "qe": "Find LCM of 1/3, 2/9, 5/6, 4/27."
   },
   {
-    "q": "24. यदि x + 1/x = 4 है, तो x^4 + 1/x^4 का मान क्या होगा? \n(If x + 1/x = 4, find x^4 + 1/x^4.)",
-    "o": ["194", "196", "1154", "144"],
+    "o": [
+      "194",
+      "196",
+      "1154",
+      "144"
+    ],
     "a": 0,
     "e": "x² + 1/x² = 4² - 2 = 14. x^4 + 1/x^4 = 14² - 2 = 194.",
-    "cat": "aptitude", "sub": "algebra"
+    "cat": "aptitude",
+    "sub": "algebra",
+    "qh": "24. यदि x + 1/x = 4 है, तो x^4 + 1/x^4 का मान क्या होगा?",
+    "qe": "If x + 1/x = 4, find x^4 + 1/x^4."
   },
   {
-    "q": "25. एक आयत का क्षेत्रफल 120 सेमी² और परिमाप 46 सेमी है। इसके विकर्ण की लंबाई क्या होगी? \n(Area of rect is 120, perimeter 46. Find diagonal length.)",
-    "o": ["17 सेमी", "15 सेमी", "13 सेमी", "20 सेमी"],
+    "o": [
+      "17 सेमी",
+      "15 सेमी",
+      "13 सेमी",
+      "20 सेमी"
+    ],
     "a": 0,
     "e": "L+B = 23, LB = 120. Sides are 15, 8. Diagonal = √(15²+8²) = 17.",
-    "cat": "aptitude", "sub": "quadrilaterals"
+    "cat": "aptitude",
+    "sub": "quadrilaterals",
+    "qh": "25. एक आयत का क्षेत्रफल 120 सेमी² और परिमाप 46 सेमी है। इसके विकर्ण की लंबाई क्या होगी?",
+    "qe": "Area of rect is 120, perimeter 46. Find diagonal length."
   },
   {
-    "q": "26. sin 60 * cos 30 + cos 60 * sin 30 का मान क्या होगा? \n(Find value of sin 60 * cos 30 + cos 60 * sin 30.)",
-    "o": ["1", "0", "0.5", "√3/2"],
+    "o": [
+      "1",
+      "0",
+      "0.5",
+      "√3/2"
+    ],
     "a": 0,
     "e": "Identity: sin(A+B) = sin 60 cos 30 + cos 60 sin 30 = sin(60+30) = sin 90 = 1.",
-    "cat": "aptitude", "sub": "trigonometric-ratio"
+    "cat": "aptitude",
+    "sub": "trigonometric-ratio",
+    "qh": "26. sin 60 * cos 30 + cos 60 * sin 30 का मान क्या होगा?",
+    "qe": "Find value of sin 60 * cos 30 + cos 60 * sin 30."
   },
   {
-    "q": "27. एक गोले की त्रिज्या 20% बढ़ा दी जाए, तो उसके आयतन में कितने प्रतिशत की वृद्धि होगी? \n(If radius of sphere increases by 20%, find % increase in volume.)",
-    "o": ["72.8%", "60%", "44%", "80%"],
+    "o": [
+      "72.8%",
+      "60%",
+      "44%",
+      "80%"
+    ],
     "a": 0,
     "e": "(1.2)^3 = 1.728. Increase = 72.8%.",
-    "cat": "aptitude", "sub": "mensuration"
+    "cat": "aptitude",
+    "sub": "mensuration",
+    "qh": "27. एक गोले की त्रिज्या 20% बढ़ा दी जाए, तो उसके आयतन में कितने प्रतिशत की वृद्धि होगी?",
+    "qe": "If radius of sphere increases by 20%, find % increase in volume."
   },
   {
-    "q": "28. 25000 का 2 वर्ष का 12% की दर से चक्रवृद्धि ब्याज क्या होगा? \n(Find CI on 25000 at 12% for 2 years.)",
-    "o": ["₹6360", "₹6000", "₹6500", "₹6200"],
+    "o": [
+      "₹6360",
+      "₹6000",
+      "₹6500",
+      "₹6200"
+    ],
     "a": 0,
     "e": "Effective rate = 12+12 + 1.44 = 25.44%. 25000 * 0.2544 = 6360.",
-    "cat": "aptitude", "sub": "interest"
+    "cat": "aptitude",
+    "sub": "interest",
+    "qh": "28. 25000 का 2 वर्ष का 12% की दर से चक्रवृद्धि ब्याज क्या होगा?",
+    "qe": "Find CI on 25000 at 12% for 2 years."
   },
   {
-    "q": "29. एक दुकानदार ₹1000 के सामान पर 20% की छूट देता है और फिर भी 20% लाभ कमाता है। क्रय मूल्य ज्ञात कीजिए। \n(Shopkeeper gives 20% discount on ₹1000 and gains 20%. Find CP.)",
-    "o": ["₹666.67", "₹800", "₹750", "₹600"],
+    "o": [
+      "₹666.67",
+      "₹800",
+      "₹750",
+      "₹600"
+    ],
     "a": 0,
     "e": "CP = MP * (100-D)/(100+P) = 1000 * 80/120 = 2000/3 = 666.67.",
-    "cat": "aptitude", "sub": "profit-and-loss"
+    "cat": "aptitude",
+    "sub": "profit-and-loss",
+    "qh": "29. एक दुकानदार ₹1000 के सामान पर 20% की छूट देता है और फिर भी 20% लाभ कमाता है। क्रय मूल्य ज्ञात कीजिए।",
+    "qe": "Shopkeeper gives 20% discount on ₹1000 and gains 20%. Find CP."
   },
   {
-    "q": "30. 1000 और 2000 के बीच ऐसी कितनी संख्याएँ हैं जो 2, 3, 4, 5 और 6 से विभाज्य हैं? \n(How many numbers between 1000 and 2000 are divisible by 2, 3, 4, 5, 6?)",
-    "o": ["16", "17", "15", "18"],
+    "o": [
+      "16",
+      "17",
+      "15",
+      "18"
+    ],
     "a": 0,
     "e": "LCM(2,3,4,5,6) = 60. Numbers between 1000 and 2000: (1999/60) - (1000/60) = 33 - 16 = 17? Re-check: 1020, 1080... 1980. Total 17 numbers.",
-    "cat": "aptitude", "sub": "hcf-lcm"
+    "cat": "aptitude",
+    "sub": "hcf-lcm",
+    "qh": "30. 1000 और 2000 के बीच ऐसी कितनी संख्याएँ हैं जो 2, 3, 4, 5 और 6 से विभाज्य हैं?",
+    "qe": "How many numbers between 1000 and 2000 are divisible by 2, 3, 4, 5, 6?"
   },
   {
-    "q": "31. sec A - tan A = 1/4 है, तो sec A + tan A का मान क्या होगा? \n(If sec A - tan A = 1/4, find sec A + tan A.)",
-    "o": ["4", "1/4", "1", "2"],
+    "o": [
+      "4",
+      "1/4",
+      "1",
+      "2"
+    ],
     "a": 0,
     "e": "sec²A - tan²A = 1 => (sec A - tan A)(sec A + tan A) = 1. So 1/4 * x = 1 => x = 4.",
-    "cat": "aptitude", "sub": "trigonometric-ratio"
+    "cat": "aptitude",
+    "sub": "trigonometric-ratio",
+    "qh": "31. sec A - tan A = 1/4 है, तो sec A + tan A का मान क्या होगा?",
+    "qe": "If sec A - tan A = 1/4, find sec A + tan A."
   },
   {
-    "q": "32. एक त्रिभुज की भुजाएँ 5:12:13 के अनुपात में हैं और परिमाप 60 सेमी है। क्षेत्रफल ज्ञात कीजिए। \n(Sides of triangle in ratio 5:12:13, perimeter 60. Find area.)",
-    "o": ["120 सेमी²", "60 सेमी²", "30 सेमी²", "90 सेमी²"],
+    "o": [
+      "120 सेमी²",
+      "60 सेमी²",
+      "30 सेमी²",
+      "90 सेमी²"
+    ],
     "a": 0,
     "e": "Sides are 10, 24, 26. Area = 0.5 * 10 * 24 = 120.",
-    "cat": "aptitude", "sub": "geometry"
+    "cat": "aptitude",
+    "sub": "geometry",
+    "qh": "32. एक त्रिभुज की भुजाएँ 5:12:13 के अनुपात में हैं और परिमाप 60 सेमी है। क्षेत्रफल ज्ञात कीजिए।",
+    "qe": "Sides of triangle in ratio 5:12:13, perimeter 60. Find area."
   },
   {
-    "q": "33. √(0.0001) + √(0.01) का मान क्या होगा? \n(Find √(0.0001) + √(0.01).)",
-    "o": ["0.11", "0.011", "1.1", "0.2"],
+    "o": [
+      "0.11",
+      "0.011",
+      "1.1",
+      "0.2"
+    ],
     "a": 0,
     "e": "0.01 + 0.1 = 0.11.",
-    "cat": "aptitude", "sub": "decimals-and-fractions"
+    "cat": "aptitude",
+    "sub": "decimals-and-fractions",
+    "qh": "33. √(0.0001) + √(0.01) का मान क्या होगा?",
+    "qe": "Find √(0.0001) + √(0.01)."
   },
   {
-    "q": "34. एक समबाहु त्रिभुज की भुजा 4 सेमी है। इसकी ऊंचाई ज्ञात कीजिए। \n(Side of equilateral triangle is 4cm. Find height.)",
-    "o": ["2√3 सेमी", "4√3 सेमी", "3√2 सेमी", "2 सेमी"],
+    "o": [
+      "2√3 सेमी",
+      "4√3 सेमी",
+      "3√2 सेमी",
+      "2 सेमी"
+    ],
     "a": 0,
     "e": "Height = √3/2 * a = √3/2 * 4 = 2√3.",
-    "cat": "aptitude", "sub": "regular-polygons"
+    "cat": "aptitude",
+    "sub": "regular-polygons",
+    "qh": "34. एक समबाहु त्रिभुज की भुजा 4 सेमी है। इसकी ऊंचाई ज्ञात कीजिए।",
+    "qe": "Side of equilateral triangle is 4cm. Find height."
   },
   {
-    "q": "35. 0.123 (23 पर बार) को भिन्न में बदलिए। \n(Convert 0.123 (bar on 23) to fraction.)",
-    "o": ["122/990", "123/990", "121/990", "122/900"],
+    "o": [
+      "122/990",
+      "123/990",
+      "121/990",
+      "122/900"
+    ],
     "a": 0,
     "e": "(123 - 1) / 990 = 122/990.",
-    "cat": "aptitude", "sub": "decimals-and-fractions"
+    "cat": "aptitude",
+    "sub": "decimals-and-fractions",
+    "qh": "35. 0.123 (23 पर बार) को भिन्न में बदलिए।",
+    "qe": "Convert 0.123 (bar on 23) to fraction."
   }
 ]
