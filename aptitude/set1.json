@@ -1,247 +1,492 @@
 [
   {
-    "q": "1. यदि x + y + z = 2, xy + yz + zx = -11 और xyz = -12 है, तो √(x³ + y³ + z³ - 2) का मान ज्ञात कीजिए। \n(If x + y + z = 2, xy + yz + zx = -11 and xyz = -12, find the value of √(x³ + y³ + z³ - 2).)",
-    "o": ["6", "12", "9", "8"],
+    "o": [
+      "6",
+      "12",
+      "9",
+      "8"
+    ],
     "a": 0,
     "e": "Formula: x³+y³+z³-3xyz = (x+y+z)(x²+y²+z² - (xy+yz+zx)). Calculate x²+y²+z² = (2)² - 2(-11) = 26. Then x³+y³+z³-3(-12) = 2(26 - (-11)) = 2(37) = 74. x³+y³+z³ = 74-36 = 38. √(38-2) = √36 = 6.",
-    "cat": "aptitude", "sub": "algebra"
+    "cat": "aptitude",
+    "sub": "algebra",
+    "qh": "1. यदि x + y + z = 2, xy + yz + zx = -11 और xyz = -12 है, तो √(x³ + y³ + z³ - 2) का मान ज्ञात कीजिए।",
+    "qe": "If x + y + z = 2, xy + yz + zx = -11 and xyz = -12, find the value of √(x³ + y³ + z³ - 2)."
   },
   {
-    "q": "2. एक लंब पिरामिड का आधार 10 सेमी भुजा वाला एक वर्ग है। यदि इसकी ऊंचाई 12 सेमी है, तो इसका कुल पृष्ठीय क्षेत्रफल (TSA) क्या होगा? \n(The base of a right pyramid is a square of side 10 cm. If its height is 12 cm, find its Total Surface Area.)",
-    "o": ["260", "360", "400", "460"],
+    "o": [
+      "260",
+      "360",
+      "400",
+      "460"
+    ],
     "a": 1,
     "e": "Slant height (l) = √(h² + (side/2)²) = √(12² + 5²) = 13. LSA = 1/2 * Perimeter * l = 1/2 * 40 * 13 = 260. TSA = LSA + Base Area = 260 + 100 = 360 cm².",
-    "cat": "aptitude", "sub": "mensuration"
+    "cat": "aptitude",
+    "sub": "mensuration",
+    "qh": "2. एक लंब पिरामिड का आधार 10 सेमी भुजा वाला एक वर्ग है। यदि इसकी ऊंचाई 12 सेमी है, तो इसका कुल पृष्ठीय क्षेत्रफल (TSA) क्या होगा?",
+    "qe": "The base of a right pyramid is a square of side 10 cm. If its height is 12 cm, find its Total Surface Area."
   },
   {
-    "q": "3. ₹25,200 की राशि को दो भागों में इस प्रकार बांटा गया है कि 3 वर्ष बाद पहले भाग का 5% चक्रवृद्धि ब्याज और 2 वर्ष बाद दूसरे भाग का साधारण ब्याज समान है। साधारण ब्याज वाला भाग क्या है? \n(A sum of ₹25,200 is divided into two parts such that CI on 1st part at 5% for 3 years is equal to SI on 2nd part for 2 years. Find the SI part.)",
-    "o": ["₹12,000", "₹13,200", "₹10,000", "₹15,000"],
+    "o": [
+      "₹12,000",
+      "₹13,200",
+      "₹10,000",
+      "₹15,000"
+    ],
     "a": 1,
     "e": "Calculate the effective rates and equate. This involves ratio of Principal 1 : Principal 2 based on interest equality.",
-    "cat": "aptitude", "sub": "interest"
+    "cat": "aptitude",
+    "sub": "interest",
+    "qh": "3. ₹25,200 की राशि को दो भागों में इस प्रकार बांटा गया है कि 3 वर्ष बाद पहले भाग का 5% चक्रवृद्धि ब्याज और 2 वर्ष बाद दूसरे भाग का साधारण ब्याज समान है। साधारण ब्याज वाला भाग क्या है?",
+    "qe": "A sum of ₹25,200 is divided into two parts such that CI on 1st part at 5% for 3 years is equal to SI on 2nd part for 2 years. Find the SI part."
   },
   {
-    "q": "4. यदि cos A + cos² A = 1 है, तो sin¹² A + 3 sin¹⁰ A + 3 sin⁸ A + sin⁶ A - 1 का मान क्या होगा? \n(If cos A + cos² A = 1, find sin¹² A + 3 sin¹⁰ A + 3 sin⁸ A + sin⁶ A - 1.)",
-    "o": ["1", "0", "-1", "2"],
+    "o": [
+      "1",
+      "0",
+      "-1",
+      "2"
+    ],
     "a": 1,
     "e": "cos A = 1 - cos² A = sin² A. The expression is (sin⁴ A + sin² A)³ - 1. Since sin² A = cos A, it becomes (cos² A + sin² A)³ - 1 = (1)³ - 1 = 0.",
-    "cat": "aptitude", "sub": "trigonometry"
+    "cat": "aptitude",
+    "sub": "trigonometry",
+    "qh": "4. यदि cos A + cos² A = 1 है, तो sin¹² A + 3 sin¹⁰ A + 3 sin⁸ A + sin⁶ A - 1 का मान क्या होगा?",
+    "qe": "If cos A + cos² A = 1, find sin¹² A + 3 sin¹⁰ A + 3 sin⁸ A + sin⁶ A - 1."
   },
   {
-    "q": "5. एक त्रिभुज की भुजाएं 16 सेमी, 30 सेमी और 34 सेमी हैं। इसके अंतःवृत्त (In-circle) की त्रिज्या क्या होगी? \n(Sides of a triangle are 16 cm, 30 cm and 34 cm. Find the radius of its in-circle.)",
-    "o": ["6 सेमी", "8 सेमी", "4 सेमी", "7 सेमी"],
+    "o": [
+      "6 सेमी",
+      "8 सेमी",
+      "4 सेमी",
+      "7 सेमी"
+    ],
     "a": 0,
     "e": "It's a right-angled triangle (16, 30, 34). In-radius (r) = (P + B - H)/2 = (16 + 30 - 34)/2 = 12/2 = 6 cm.",
-    "cat": "aptitude", "sub": "geometry"
+    "cat": "aptitude",
+    "sub": "geometry",
+    "qh": "5. एक त्रिभुज की भुजाएं 16 सेमी, 30 सेमी और 34 सेमी हैं। इसके अंतःवृत्त (In-circle) की त्रिज्या क्या होगी?",
+    "qe": "Sides of a triangle are 16 cm, 30 cm and 34 cm. Find the radius of its in-circle."
   },
   {
-    "q": "6. एक वस्तु को 18% की छूट देने के बाद ₹492 में बेचा गया। यदि कोई छूट न दी जाती, तो दुकानदार को 20% का लाभ होता। वस्तु का क्रय मूल्य (CP) क्या है? \n(An article was sold for ₹492 after a discount of 18%. Had no discount been given, the profit would have been 20%. Find the CP.)",
-    "o": ["₹500", "₹520", "₹480", "₹600"],
+    "o": [
+      "₹500",
+      "₹520",
+      "₹480",
+      "₹600"
+    ],
     "a": 0,
     "e": "82% = 492 -> 100% (MP) = 600. If SP = 600, Profit = 20%. 120% = 600 -> 100% (CP) = 500.",
-    "cat": "aptitude", "sub": "profit-loss"
+    "cat": "aptitude",
+    "sub": "profit-loss",
+    "qh": "6. एक वस्तु को 18% की छूट देने के बाद ₹492 में बेचा गया। यदि कोई छूट न दी जाती, तो दुकानदार को 20% का लाभ होता। वस्तु का क्रय मूल्य (CP) क्या है?",
+    "qe": "An article was sold for ₹492 after a discount of 18%. Had no discount been given, the profit would have been 20%. Find the CP."
   },
   {
-    "q": "7. एक बेलन और एक शंकु के आधार की त्रिज्या का अनुपात 3:4 है और उनकी ऊंचाई का अनुपात 2:3 है। उनके आयतन का अनुपात क्या होगा? \n(The ratio of radii of base of a cylinder and a cone is 3:4 and ratio of their heights is 2:3. Find the ratio of their volumes.)",
-    "o": ["9:8", "3:4", "27:16", "9:4"],
+    "o": [
+      "9:8",
+      "3:4",
+      "27:16",
+      "9:4"
+    ],
     "a": 0,
     "e": "Vol Cyl / Vol Cone = (π * r1² * h1) / (1/3 * π * r2² * h2) = (3² * 2) / (1/3 * 4² * 3) = 18 / 16 = 9/8.",
-    "cat": "aptitude", "sub": "geometry"
+    "cat": "aptitude",
+    "sub": "geometry",
+    "qh": "7. एक बेलन और एक शंकु के आधार की त्रिज्या का अनुपात 3:4 है और उनकी ऊंचाई का अनुपात 2:3 है। उनके आयतन का अनुपात क्या होगा?",
+    "qe": "The ratio of radii of base of a cylinder and a cone is 3:4 and ratio of their heights is 2:3. Find the ratio of their volumes."
   },
   {
-    "q": "8. यदि x = 1 / (√2 + 1) है, तो x² + 2x + 3 का मान ज्ञात कीजिए। \n(If x = 1 / (√2 + 1), find x² + 2x + 3.)",
-    "o": ["4", "2", "3", "√2"],
+    "o": [
+      "4",
+      "2",
+      "3",
+      "√2"
+    ],
     "a": 0,
     "e": "x = √2 - 1. Then x + 1 = √2. Squaring both sides: (x + 1)² = 2 -> x² + 2x + 1 = 2. So x² + 2x + 3 = 2 + 2 = 4.",
-    "cat": "aptitude", "sub": "algebra"
+    "cat": "aptitude",
+    "sub": "algebra",
+    "qh": "8. यदि x = 1 / (√2 + 1) है, तो x² + 2x + 3 का मान ज्ञात कीजिए।",
+    "qe": "If x = 1 / (√2 + 1), find x² + 2x + 3."
   },
   {
-    "q": "9. एक नियमित बहुभुज के सभी आंतरिक कोणों का योग 1440 डिग्री है। इसके विकर्णों की संख्या कितनी है? \n(Sum of all interior angles of a regular polygon is 1440 degrees. How many diagonals does it have?)",
-    "o": ["35", "44", "27", "54"],
+    "o": [
+      "35",
+      "44",
+      "27",
+      "54"
+    ],
     "a": 0,
     "e": "(n-2)*180 = 1440 -> n-2 = 8 -> n = 10. Diagonals = 10(7)/2 = 35.",
-    "cat": "aptitude", "sub": "geometry"
+    "cat": "aptitude",
+    "sub": "geometry",
+    "qh": "9. एक नियमित बहुभुज के सभी आंतरिक कोणों का योग 1440 डिग्री है। इसके विकर्णों की संख्या कितनी है?",
+    "qe": "Sum of all interior angles of a regular polygon is 1440 degrees. How many diagonals does it have?"
   },
   {
-    "q": "10. एक नाव धारा के प्रतिकूल (Upstream) 30 किमी और धारा के अनुकूल (Downstream) 44 किमी 10 घंटे में जाती है। यह 40 किमी प्रतिकूल और 55 किमी अनुकूल 13 घंटे में जा सकती है। शांत जल में नाव की गति क्या है? \n(A boat goes 30 km upstream and 44 km downstream in 10 hrs. It can go 40 km upstream and 55 km downstream in 13 hrs. Find speed of boat in still water.)",
-    "o": ["8 किमी/घंटा", "5 किमी/घंटा", "11 किमी/घंटा", "3 किमी/घंटा"],
+    "o": [
+      "8 किमी/घंटा",
+      "5 किमी/घंटा",
+      "11 किमी/घंटा",
+      "3 किमी/घंटा"
+    ],
     "a": 0,
     "e": "Let 1/U = x, 1/D = y. 30x+44y=10, 40x+55y=13. Solving gives x=1/5 (U=5), y=1/11 (D=11). Boat speed = (11+5)/2 = 8 km/h.",
-    "cat": "aptitude", "sub": "time-distance"
+    "cat": "aptitude",
+    "sub": "time-distance",
+    "qh": "10. एक नाव धारा के प्रतिकूल (Upstream) 30 किमी और धारा के अनुकूल (Downstream) 44 किमी 10 घंटे में जाती है। यह 40 किमी प्रतिकूल और 55 किमी अनुकूल 13 घंटे में जा सकती है। शांत जल में नाव की गति क्या है?",
+    "qe": "A boat goes 30 km upstream and 44 km downstream in 10 hrs. It can go 40 km upstream and 55 km downstream in 13 hrs. Find speed of boat in still water."
   },
   {
-    "q": "11. एक परीक्षा में उत्तीर्ण छात्रों का अनुत्तीर्ण छात्रों से अनुपात 4:1 था। यदि 35 छात्र कम उपस्थित होते और 9 छात्र अधिक अनुत्तीर्ण होते, तो अनुपात 2:1 हो जाता। कुल छात्रों की संख्या क्या थी? \n(In an exam, ratio of passed to failed students was 4:1. If 35 less had appeared and 9 more had failed, the ratio would be 2:1. Find total students.)",
-    "o": ["155", "145", "150", "160"],
+    "o": [
+      "155",
+      "145",
+      "150",
+      "160"
+    ],
     "a": 0,
     "e": "Initial Total = 5x, Fail = x. New Total = 5x - 35, New Fail = x + 9. Ratio Pass:Fail = 2:1 -> Total:Fail = 3:1. (5x-35)/(x+9) = 3/1. 5x-35 = 3x+27 -> 2x=62 -> x=31. Total = 155.",
-    "cat": "aptitude", "sub": "ratio"
+    "cat": "aptitude",
+    "sub": "ratio",
+    "qh": "11. एक परीक्षा में उत्तीर्ण छात्रों का अनुत्तीर्ण छात्रों से अनुपात 4:1 था। यदि 35 छात्र कम उपस्थित होते और 9 छात्र अधिक अनुत्तीर्ण होते, तो अनुपात 2:1 हो जाता। कुल छात्रों की संख्या क्या थी?",
+    "qe": "In an exam, ratio of passed to failed students was 4:1. If 35 less had appeared and 9 more had failed, the ratio would be 2:1. Find total students."
   },
   {
-    "q": "12. यदि sec θ + tan θ = p है, तो (p² - 1) / (p² + 1) का मान क्या होगा? \n(If sec θ + tan θ = p, what is the value of (p² - 1) / (p² + 1)?)",
-    "o": ["sin θ", "cos θ", "tan θ", "cosec θ"],
+    "o": [
+      "sin θ",
+      "cos θ",
+      "tan θ",
+      "cosec θ"
+    ],
     "a": 0,
     "e": "This is a standard trigonometric property where (p²-1)/(p²+1) equals sin θ.",
-    "cat": "aptitude", "sub": "trigonometry"
+    "cat": "aptitude",
+    "sub": "trigonometry",
+    "qh": "12. यदि sec θ + tan θ = p है, तो (p² - 1) / (p² + 1) का मान क्या होगा?",
+    "qe": "If sec θ + tan θ = p, what is the value of (p² - 1) / (p² + 1)?"
   },
   {
-    "q": "13. एक लंब वृत्तीय शंकु का आयतन 1232 घन सेमी है और इसकी ऊंचाई 24 सेमी है। इसका वक्र पृष्ठीय क्षेत्रफल (CSA) ज्ञात कीजिए। \n(Volume of a right circular cone is 1232 cm³ and height is 24 cm. Find its CSA.)",
-    "o": ["550 सेमी²", "616 सेमी²", "704 सेमी²", "462 सेमी²"],
+    "o": [
+      "550 सेमी²",
+      "616 सेमी²",
+      "704 सेमी²",
+      "462 सेमी²"
+    ],
     "a": 0,
     "e": "1/3 * π * r² * 24 = 1232 -> r² = 49 -> r = 7. Slant height l = √(24²+7²) = 25. CSA = πrl = 22/7 * 7 * 25 = 550.",
-    "cat": "aptitude", "sub": "mensuration"
+    "cat": "aptitude",
+    "sub": "mensuration",
+    "qh": "13. एक लंब वृत्तीय शंकु का आयतन 1232 घन सेमी है और इसकी ऊंचाई 24 सेमी है। इसका वक्र पृष्ठीय क्षेत्रफल (CSA) ज्ञात कीजिए।",
+    "qe": "Volume of a right circular cone is 1232 cm³ and height is 24 cm. Find its CSA."
   },
   {
-    "q": "14. एक ठोस धातु के गोले की त्रिज्या 6 सेमी है। इसे पिघलाकर 0.2 सेमी त्रिज्या वाला एक तार बनाया जाता है। तार की लंबाई क्या होगी? \n(Radius of a solid metal sphere is 6 cm. It is melted to form a wire of radius 0.2 cm. Find length of wire.)",
-    "o": ["72 मीटर", "36 मीटर", "144 मीटर", "108 मीटर"],
+    "o": [
+      "72 मीटर",
+      "36 मीटर",
+      "144 मीटर",
+      "108 मीटर"
+    ],
     "a": 0,
     "e": "Volume Sphere = Volume Cylinder (Wire). 4/3 * π * 6³ = π * (0.2)² * L. 4/3 * 216 = 0.04 * L. 288 = 0.04L -> L = 7200 cm = 72 m.",
-    "cat": "aptitude", "sub": "geometry"
+    "cat": "aptitude",
+    "sub": "geometry",
+    "qh": "14. एक ठोस धातु के गोले की त्रिज्या 6 सेमी है। इसे पिघलाकर 0.2 सेमी त्रिज्या वाला एक तार बनाया जाता है। तार की लंबाई क्या होगी?",
+    "qe": "Radius of a solid metal sphere is 6 cm. It is melted to form a wire of radius 0.2 cm. Find length of wire."
   },
   {
-    "q": "15. ₹12,000 की राशि पर 10% की दर से 1.5 वर्ष का चक्रवृद्धि ब्याज क्या होगा, यदि ब्याज अर्धवार्षिक (Half-yearly) संयोजित होता है? \n(Find CI on ₹12,000 at 10% for 1.5 years, if interest is compounded half-yearly.)",
-    "o": ["₹1,891.50", "₹1,800", "₹1,950", "₹1,861"],
+    "o": [
+      "₹1,891.50",
+      "₹1,800",
+      "₹1,950",
+      "₹1,861"
+    ],
     "a": 0,
     "e": "Rate = 5%, Time = 3 periods. CI = 12000 * (1.05³ - 1) = 12000 * 0.157625 = 1891.50.",
-    "cat": "aptitude", "sub": "interest"
+    "cat": "aptitude",
+    "sub": "interest",
+    "qh": "15. ₹12,000 की राशि पर 10% की दर से 1.5 वर्ष का चक्रवृद्धि ब्याज क्या होगा, यदि ब्याज अर्धवार्षिक (Half-yearly) संयोजित होता है?",
+    "qe": "Find CI on ₹12,000 at 10% for 1.5 years, if interest is compounded half-yearly."
   },
   {
-    "q": "16. एक दुकानदार 20% की छूट देने के बाद भी 10% का लाभ कमाता है। यदि अंकित मूल्य ₹880 है, तो क्रय मूल्य क्या है? \n(A shopkeeper earns 10% profit even after a 20% discount. If MP is ₹880, find CP.)",
-    "o": ["₹640", "₹600", "₹700", "₹660"],
+    "o": [
+      "₹640",
+      "₹600",
+      "₹700",
+      "₹660"
+    ],
     "a": 0,
     "e": "CP = MP * (100-D)/(100+P) = 880 * 80/110 = 8 * 80 = 640.",
-    "cat": "aptitude", "sub": "profit-loss"
+    "cat": "aptitude",
+    "sub": "profit-loss",
+    "qh": "16. एक दुकानदार 20% की छूट देने के बाद भी 10% का लाभ कमाता है। यदि अंकित मूल्य ₹880 है, तो क्रय मूल्य क्या है?",
+    "qe": "A shopkeeper earns 10% profit even after a 20% discount. If MP is ₹880, find CP."
   },
   {
-    "q": "17. एक कार की गति 20% कम करने पर एक व्यक्ति 40 मिनट देरी से पहुँचता है। सामान्य समय क्या है? \n(By reducing speed by 20%, a person reaches 40 mins late. What is the usual time?)",
-    "o": ["160 मिनट", "120 मिनट", "200 मिनट", "180 मिनट"],
+    "o": [
+      "160 मिनट",
+      "120 मिनट",
+      "200 मिनट",
+      "180 मिनट"
+    ],
     "a": 0,
     "e": "Speed ratio 5:4 -> Time ratio 4:5. Diff 1 unit = 40 mins. Usual time = 4 units = 160 mins.",
-    "cat": "aptitude", "sub": "time-distance"
+    "cat": "aptitude",
+    "sub": "time-distance",
+    "qh": "17. एक कार की गति 20% कम करने पर एक व्यक्ति 40 मिनट देरी से पहुँचता है। सामान्य समय क्या है?",
+    "qe": "By reducing speed by 20%, a person reaches 40 mins late. What is the usual time?"
   },
   {
-    "q": "18. एक पाइप एक टंकी को 6 घंटे में भर सकता है और दूसरा 8 घंटे में खाली कर सकता है। यदि दोनों साथ खोलें, तो आधी टंकी कितने समय में भरेगी? \n(One pipe fills a tank in 6 hrs and another empties in 8 hrs. If both opened together, in how much time will half the tank be filled?)",
-    "o": ["12 घंटे", "24 घंटे", "6 घंटे", "8 घंटे"],
+    "o": [
+      "12 घंटे",
+      "24 घंटे",
+      "6 घंटे",
+      "8 घंटे"
+    ],
     "a": 0,
     "e": "Efficiency: Fills = 4, Empties = 3. Net = 1 unit/hr. Total capacity = 24. Half = 12. Time = 12/1 = 12 hrs.",
-    "cat": "aptitude", "sub": "time-work"
+    "cat": "aptitude",
+    "sub": "time-work",
+    "qh": "18. एक पाइप एक टंकी को 6 घंटे में भर सकता है और दूसरा 8 घंटे में खाली कर सकता है। यदि दोनों साथ खोलें, तो आधी टंकी कितने समय में भरेगी?",
+    "qe": "One pipe fills a tank in 6 hrs and another empties in 8 hrs. If both opened together, in how much time will half the tank be filled?"
   },
   {
-    "q": "19. यदि sin(A+B) = 1 और cos(A-B) = √3/2 है, तो A और B का मान क्या होगा? \n(If sin(A+B) = 1 and cos(A-B) = √3/2, find A and B.)",
-    "o": ["60, 30", "45, 45", "75, 15", "50, 40"],
+    "o": [
+      "60, 30",
+      "45, 45",
+      "75, 15",
+      "50, 40"
+    ],
     "a": 0,
     "e": "A+B = 90, A-B = 30. Adding: 2A = 120 -> A=60, B=30.",
-    "cat": "aptitude", "sub": "trigonometry"
+    "cat": "aptitude",
+    "sub": "trigonometry",
+    "qh": "19. यदि sin(A+B) = 1 और cos(A-B) = √3/2 है, तो A और B का मान क्या होगा?",
+    "qe": "If sin(A+B) = 1 and cos(A-B) = √3/2, find A and B."
   },
   {
-    "q": "20. एक वृत्ताकार पथ की चौड़ाई 7 मीटर है। यदि बाहरी परिधि 440 मीटर है, तो पथ का क्षेत्रफल क्या होगा? \n(Width of circular path is 7 m. If outer circumference is 440 m, find area of path.)",
-    "o": ["2926 मी²", "3000 मी²", "2800 मी²", "3100 मी²"],
+    "o": [
+      "2926 मी²",
+      "3000 मी²",
+      "2800 मी²",
+      "3100 मी²"
+    ],
     "a": 0,
     "e": "2πR = 440 -> R = 70. r = 70 - 7 = 63. Area = π(R² - r²) = 22/7 * (70+63)(70-63) = 22 * 133 = 2926.",
-    "cat": "aptitude", "sub": "geometry"
+    "cat": "aptitude",
+    "sub": "geometry",
+    "qh": "20. एक वृत्ताकार पथ की चौड़ाई 7 मीटर है। यदि बाहरी परिधि 440 मीटर है, तो पथ का क्षेत्रफल क्या होगा?",
+    "qe": "Width of circular path is 7 m. If outer circumference is 440 m, find area of path."
   },
   {
-    "q": "21. 0.363636... और 0.636363... का योग क्या होगा? \n(What is the sum of 0.363636... and 0.636363...?)",
-    "o": ["1", "1.1", "0.99", "1.01"],
+    "o": [
+      "1",
+      "1.1",
+      "0.99",
+      "1.01"
+    ],
     "a": 0,
     "e": "36/99 + 63/99 = 99/99 = 1.",
-    "cat": "aptitude", "sub": "decimals"
+    "cat": "aptitude",
+    "sub": "decimals",
+    "qh": "21. 0.363636... और 0.636363... का योग क्या होगा?",
+    "qe": "What is the sum of 0.363636... and 0.636363...?"
   },
   {
-    "q": "22. यदि x + 1/x = √5 है, तो x³ + 1/x³ का मान ज्ञात कीजिए। \n(If x + 1/x = √5, find x³ + 1/x³.)",
-    "o": ["2√5", "3√5", "5√5", "0"],
+    "o": [
+      "2√5",
+      "3√5",
+      "5√5",
+      "0"
+    ],
     "a": 0,
     "e": "n³ - 3n = (√5)³ - 3(√5) = 5√5 - 3√5 = 2√5.",
-    "cat": "aptitude", "sub": "algebra"
+    "cat": "aptitude",
+    "sub": "algebra",
+    "qh": "22. यदि x + 1/x = √5 है, तो x³ + 1/x³ का मान ज्ञात कीजिए।",
+    "qe": "If x + 1/x = √5, find x³ + 1/x³."
   },
   {
-    "q": "23. एक समबाहु त्रिभुज का क्षेत्रफल 36√3 सेमी² है। इसकी परिधि क्या होगी? \n(Area of equilateral triangle is 36√3 cm². Find its perimeter.)",
-    "o": ["36 सेमी", "24 सेमी", "18 सेमी", "48 सेमी"],
+    "o": [
+      "36 सेमी",
+      "24 सेमी",
+      "18 सेमी",
+      "48 सेमी"
+    ],
     "a": 0,
     "e": "√3/4 * a² = 36√3 -> a² = 144 -> a = 12. Perimeter = 3 * 12 = 36.",
-    "cat": "aptitude", "sub": "geometry"
+    "cat": "aptitude",
+    "sub": "geometry",
+    "qh": "23. एक समबाहु त्रिभुज का क्षेत्रफल 36√3 सेमी² है। इसकी परिधि क्या होगी?",
+    "qe": "Area of equilateral triangle is 36√3 cm². Find its perimeter."
   },
   {
-    "q": "24. दो संख्याओं का योग 40 है और उनका गुणनफल 375 है। उनके व्युत्क्रम (Reciprocals) का योग क्या होगा? \n(Sum of two numbers is 40 and product is 375. Find sum of their reciprocals.)",
-    "o": ["8/75", "1/40", "1/375", "2/15"],
+    "o": [
+      "8/75",
+      "1/40",
+      "1/375",
+      "2/15"
+    ],
     "a": 0,
     "e": "1/a + 1/b = (a+b)/ab = 40/375 = 8/75.",
-    "cat": "aptitude", "sub": "number-system"
+    "cat": "aptitude",
+    "sub": "number-system",
+    "qh": "24. दो संख्याओं का योग 40 है और उनका गुणनफल 375 है। उनके व्युत्क्रम (Reciprocals) का योग क्या होगा?",
+    "qe": "Sum of two numbers is 40 and product is 375. Find sum of their reciprocals."
   },
   {
-    "q": "25. एक घन का विकर्ण √192 सेमी है। इसका आयतन क्या होगा? \n(Diagonal of a cube is √192 cm. Find its volume.)",
-    "o": ["512 सेमी³", "216 सेमी³", "343 सेमी³", "729 सेमी³"],
+    "o": [
+      "512 सेमी³",
+      "216 सेमी³",
+      "343 सेमी³",
+      "729 सेमी³"
+    ],
     "a": 0,
     "e": "a√3 = √192 = 8√3 -> a = 8. Vol = 8³ = 512.",
-    "cat": "aptitude", "sub": "mensuration"
+    "cat": "aptitude",
+    "sub": "mensuration",
+    "qh": "25. एक घन का विकर्ण √192 सेमी है। इसका आयतन क्या होगा?",
+    "qe": "Diagonal of a cube is √192 cm. Find its volume."
   },
   {
-    "q": "26. एक शंकु और एक गोलार्द्ध (Hemisphere) का आधार और आयतन समान है। उनकी ऊंचाई का अनुपात क्या होगा? \n(A cone and a hemisphere have same base and volume. Find ratio of their heights.)",
-    "o": ["2:1", "1:2", "1:1", "3:1"],
+    "o": [
+      "2:1",
+      "1:2",
+      "1:1",
+      "3:1"
+    ],
     "a": 0,
     "e": "1/3 * π * r² * h = 2/3 * π * r³ -> h = 2r. Ratio h:r = 2:1.",
-    "cat": "aptitude", "sub": "geometry"
+    "cat": "aptitude",
+    "sub": "geometry",
+    "qh": "26. एक शंकु और एक गोलार्द्ध (Hemisphere) का आधार और आयतन समान है। उनकी ऊंचाई का अनुपात क्या होगा?",
+    "qe": "A cone and a hemisphere have same base and volume. Find ratio of their heights."
   },
   {
-    "q": "27. यदि tan θ = 8/15 है, तो (15 sin θ - 8 cos θ) का मान क्या होगा? \n(If tan θ = 8/15, find (15 sin θ - 8 cos θ).)",
-    "o": ["0", "1", "7/17", "2"],
+    "o": [
+      "0",
+      "1",
+      "7/17",
+      "2"
+    ],
     "a": 0,
     "e": "P=8, B=15 -> H=17. sin θ = 8/17, cos θ = 15/17. Expression = 15(8/17) - 8(15/17) = 0.",
-    "cat": "aptitude", "sub": "trigonometry"
+    "cat": "aptitude",
+    "sub": "trigonometry",
+    "qh": "27. यदि tan θ = 8/15 है, तो (15 sin θ - 8 cos θ) का मान क्या होगा?",
+    "qe": "If tan θ = 8/15, find (15 sin θ - 8 cos θ)."
   },
   {
-    "q": "28. एक आयत की लंबाई में 10% वृद्धि और चौड़ाई में 10% कमी करने पर क्षेत्रफल में क्या परिवर्तन होगा? \n(Length of rectangle increases by 10% and width decreases by 10%. Change in area?)",
-    "o": ["1% कमी", "1% वृद्धि", "कोई बदलाव नहीं", "2% कमी"],
+    "o": [
+      "1% कमी",
+      "1% वृद्धि",
+      "कोई बदलाव नहीं",
+      "2% कमी"
+    ],
     "a": 0,
     "e": "x² / 100 decrease = 10²/100 = 1% decrease.",
-    "cat": "aptitude", "sub": "percentage"
+    "cat": "aptitude",
+    "sub": "percentage",
+    "qh": "28. एक आयत की लंबाई में 10% वृद्धि और चौड़ाई में 10% कमी करने पर क्षेत्रफल में क्या परिवर्तन होगा?",
+    "qe": "Length of rectangle increases by 10% and width decreases by 10%. Change in area?"
   },
   {
-    "q": "29. एक समचतुर्भुज के विकर्णों का योग 24 सेमी और परिधि 40 सेमी है। इसका क्षेत्रफल क्या होगा? \n(Sum of diagonals of rhombus is 24 cm and perimeter is 40 cm. Find its area.)",
-    "o": ["44 सेमी²", "48 सेमी²", "50 सेमी²", "54 सेमी²"],
+    "o": [
+      "44 सेमी²",
+      "48 सेमी²",
+      "50 सेमी²",
+      "54 सेमी²"
+    ],
     "a": 0,
     "e": "d1+d2=24, a=10 -> d1²+d2²=4a²=400. Using (d1+d2)² = d1²+d2² + 2d1d2 -> 576 = 400 + 4*Area -> 176 = 4*Area -> Area = 44.",
-    "cat": "aptitude", "sub": "geometry"
+    "cat": "aptitude",
+    "sub": "geometry",
+    "qh": "29. एक समचतुर्भुज के विकर्णों का योग 24 सेमी और परिधि 40 सेमी है। इसका क्षेत्रफल क्या होगा?",
+    "qe": "Sum of diagonals of rhombus is 24 cm and perimeter is 40 cm. Find its area."
   },
   {
-    "q": "30. 0.4777... को साधारण भिन्न में बदलिए। \n(Convert 0.4777... into a simple fraction.)",
-    "o": ["43/90", "47/99", "47/90", "43/99"],
+    "o": [
+      "43/90",
+      "47/99",
+      "47/90",
+      "43/99"
+    ],
     "a": 0,
     "e": "(47 - 4) / 90 = 43/90.",
-    "cat": "aptitude", "sub": "decimals"
+    "cat": "aptitude",
+    "sub": "decimals",
+    "qh": "30. 0.4777... को साधारण भिन्न में बदलिए।",
+    "qe": "Convert 0.4777... into a simple fraction."
   },
   {
-    "q": "31. ₹5000 पर 10% की दर से 2 वर्ष के चक्रवृद्धि और साधारण ब्याज का अंतर क्या है? \n(Difference between CI and SI on ₹5000 at 10% for 2 years?)",
-    "o": ["₹50", "₹100", "₹25", "₹75"],
+    "o": [
+      "₹50",
+      "₹100",
+      "₹25",
+      "₹75"
+    ],
     "a": 0,
     "e": "P(R/100)² = 5000 * (1/10)² = 50.",
-    "cat": "aptitude", "sub": "interest"
+    "cat": "aptitude",
+    "sub": "interest",
+    "qh": "31. ₹5000 पर 10% की दर से 2 वर्ष के चक्रवृद्धि और साधारण ब्याज का अंतर क्या है?",
+    "qe": "Difference between CI and SI on ₹5000 at 10% for 2 years?"
   },
   {
-    "q": "32. यदि sin θ = cos θ है, तो (2 tan² θ + sin² θ - 1) का मान क्या होगा? \n(If sin θ = cos θ, find (2 tan² θ + sin² θ - 1).)",
-    "o": ["1.5", "2", "1", "0.5"],
+    "o": [
+      "1.5",
+      "2",
+      "1",
+      "0.5"
+    ],
     "a": 0,
     "e": "θ = 45. 2(1)² + (1/√2)² - 1 = 2 + 0.5 - 1 = 1.5.",
-    "cat": "aptitude", "sub": "trigonometry"
+    "cat": "aptitude",
+    "sub": "trigonometry",
+    "qh": "32. यदि sin θ = cos θ है, तो (2 tan² θ + sin² θ - 1) का मान क्या होगा?",
+    "qe": "If sin θ = cos θ, find (2 tan² θ + sin² θ - 1)."
   },
   {
-    "q": "33. एक त्रिभुज का आधार 15 सेमी और ऊंचाई 12 सेमी है। एक अन्य त्रिभुज जिसका क्षेत्रफल पहले का दोगुना है, का आधार 20 सेमी है, उसकी ऊंचाई क्या होगी? \n(Base of a triangle is 15 cm and height 12 cm. Another triangle with double area has base 20 cm, find its height.)",
-    "o": ["18 सेमी", "15 सेमी", "20 सेमी", "24 सेमी"],
+    "o": [
+      "18 सेमी",
+      "15 सेमी",
+      "20 सेमी",
+      "24 सेमी"
+    ],
     "a": 0,
     "e": "Area 1 = 0.5 * 15 * 12 = 90. Area 2 = 180. 0.5 * 20 * h = 180 -> 10h = 180 -> h = 18.",
-    "cat": "aptitude", "sub": "geometry"
+    "cat": "aptitude",
+    "sub": "geometry",
+    "qh": "33. एक त्रिभुज का आधार 15 सेमी और ऊंचाई 12 सेमी है। एक अन्य त्रिभुज जिसका क्षेत्रफल पहले का दोगुना है, का आधार 20 सेमी है, उसकी ऊंचाई क्या होगी?",
+    "qe": "Base of a triangle is 15 cm and height 12 cm. Another triangle with double area has base 20 cm, find its height."
   },
   {
-    "q": "34. √(√0.0001) का मान क्या है? \n(Find value of √(√0.0001).)",
-    "o": ["0.1", "0.01", "0.001", "1"],
+    "o": [
+      "0.1",
+      "0.01",
+      "0.001",
+      "1"
+    ],
     "a": 0,
     "e": "√0.0001 = 0.01. √0.01 = 0.1.",
-    "cat": "aptitude", "sub": "number-system"
+    "cat": "aptitude",
+    "sub": "number-system",
+    "qh": "34. √(√0.0001) का मान क्या है?",
+    "qe": "Find value of √(√0.0001)."
   },
   {
-    "q": "35. ₹60 प्रति किलोग्राम वाली चीनी को ₹45 प्रति किलोग्राम वाली चीनी के साथ किस अनुपात में मिलाएं कि ₹50 प्रति किलोग्राम वाला मिश्रण मिले? \n(Ratio to mix sugar of ₹60/kg and ₹45/kg to get mixture of ₹50/kg?)",
-    "o": ["1:2", "2:1", "2:3", "3:2"],
+    "o": [
+      "1:2",
+      "2:1",
+      "2:3",
+      "3:2"
+    ],
     "a": 0,
     "e": "(50-45) : (60-50) = 5:10 = 1:2.",
-    "cat": "aptitude", "sub": "mixture"
+    "cat": "aptitude",
+    "sub": "mixture",
+    "qh": "35. ₹60 प्रति किलोग्राम वाली चीनी को ₹45 प्रति किलोग्राम वाली चीनी के साथ किस अनुपात में मिलाएं कि ₹50 प्रति किलोग्राम वाला मिश्रण मिले?",
+    "qe": "Ratio to mix sugar of ₹60/kg and ₹45/kg to get mixture of ₹50/kg?"
   }
 ]
