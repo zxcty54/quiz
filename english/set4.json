@@ -1,247 +1,282 @@
 [
   {
-    "q": "<b>Cloze Test (1/5):</b> Select the most appropriate option for <b>Blank No. 1</b>.<br/><br/><i>'The recent (1)______ in non-performing assets (NPAs) has caused significant (2)______ among public sector banks. Experts suggest that the (3)______ of credit appraisal processes is the need of the hour. While the government has proposed (4)______ measures, the long-term solution lies in structural reforms. Failure to address this could (5)______ the stability of the entire financial ecosystem.'</i>",
-    "o": ["escalation", "diminution", "stagnation", "abatement"],
-    "a": 0,
-    "e": "Blank 1: बैंकिंग संदर्भ में NPAs के बढ़ने (Escalation) की बात की जा रही है, जो चिंता का विषय है।",
-    "cat": "english", "sub": "cloze-test"
-  },
-  {
-    "q": "<b>Cloze Test (2/5):</b> Select the most appropriate option for <b>Blank No. 2</b>.<br/><br/><i>'The recent (1)______ in non-performing assets (NPAs) has caused significant (2)______ among public sector banks. Experts suggest that the (3)______ of credit appraisal processes is the need of the hour. While the government has proposed (4)______ measures, the long-term solution lies in structural reforms. Failure to address this could (5)______ the stability of the entire financial ecosystem.'</i>",
-    "o": ["consternation", "jubilation", "indifference", "serenity"],
-    "a": 0,
-    "e": "Blank 2: 'Consternation' (घबराहट/चिंता) NPAs बढ़ने पर बैंकों की स्थिति को दर्शाता है।",
-    "cat": "english", "sub": "cloze-test"
-  },
-  {
-    "q": "<b>Cloze Test (3/5):</b> Select the most appropriate option for <b>Blank No. 3</b>.<br/><br/><i>'The recent (1)______ in non-performing assets (NPAs) has caused significant (2)______ among public sector banks. Experts suggest that the (3)______ of credit appraisal processes is the need of the hour. While the government has proposed (4)______ measures, the long-term solution lies in structural reforms. Failure to address this could (5)______ the stability of the entire financial ecosystem.'</i>",
-    "o": ["overhaul", "negligence", "continuation", "omission"],
-    "a": 0,
-    "e": "Blank 3: 'Overhaul' (कायाकल्प/पूरी तरह मरम्मत) प्रक्रियाओं में बड़े सुधार के लिए इस्तेमाल होता है।",
-    "cat": "english", "sub": "cloze-test"
-  },
-  {
-    "q": "<b>Cloze Test (4/5):</b> Select the most appropriate option for <b>Blank No. 4</b>.<br/><br/><i>'The recent (1)______ in non-performing assets (NPAs) has caused significant (2)______ among public sector banks. Experts suggest that the (3)______ of credit appraisal processes is the need of the hour. While the government has proposed (4)______ measures, the long-term solution lies in structural reforms. Failure to address this could (5)______ the stability of the entire financial ecosystem.'</i>",
-    "o": ["remedial", "detrimental", "superficial", "spurious"],
-    "a": 0,
-    "e": "Blank 4: 'Remedial measures' (उपचारात्मक उपाय) समस्या को हल करने के लिए उठाए गए कदम हैं।",
-    "cat": "english", "sub": "cloze-test"
-  },
-  {
-    "q": "<b>Cloze Test (5/5):</b> Select the most appropriate option for <b>Blank No. 5</b>.<br/><br/><i>'The recent (1)______ in non-performing assets (NPAs) has caused significant (2)______ among public sector banks. Experts suggest that the (3)______ of credit appraisal processes is the need of the hour. While the government has proposed (4)______ measures, the long-term solution lies in structural reforms. Failure to address this could (5)______ the stability of the entire financial ecosystem.'</i>",
-    "o": ["jeopardize", "bolster", "fortify", "facilitate"],
-    "a": 0,
-    "e": "Blank 5: 'Jeopardize' (खतरे में डालना) वित्तीय स्थिरता के जोखिम को दर्शाता है।",
-    "cat": "english", "sub": "cloze-test"
-  },
-  {
-    "q": "<b>Error Spotting (1/5):</b> Had the central bank (A) / not intervened in time (B) / the currency value (C) / would have plummeted further (D).",
+    "p_id": "",
+    "qe": "<b>Error Spotting:</b> Select the part that contains an error: <br/>'The performance (A) / of our players (B) / was worst than (C) / I had expected (D).'",
+    "qh": "<b>त्रुटि पहचानें:</b> उस भाग का चयन करें जिसमें त्रुटि है: <br/>'The performance (A) / of our players (B) / was worst than (C) / I had expected (D).'",
     "o": ["A", "B", "C", "D"],
-    "a": 4,
-    "e": "No Error: यह Third Conditional का Inversion structure है (Had + Sub + V3... would have + V3), जो पूरी तरह सही है।",
-    "cat": "english", "sub": "error-spotting"
+    "a": 2,
+    "e": "<b>Rule:</b> For comparison between two states (expected vs actual), we use the comparative degree <b>'worse'</b> instead of the superlative 'worst'."
   },
   {
-    "q": "<b>Error Spotting (2/5):</b> Not only the (A) / inflation rate increased (B) / but also the (C) / purchasing power decreased (D).",
-    "o": ["A", "B", "C", "D"],
+    "p_id": "",
+    "qe": "<b>Direct/Indirect:</b> The Captain said to the soldiers, 'Don't move from your posts.'",
+    "qh": "<b>अप्रत्यक्ष कथन:</b> The Captain said to the soldiers, 'Don't move from your posts.'",
+    "o": ["The Captain ordered the soldiers not to move from their posts", "The Captain told the soldiers that don't move", "The Captain commanded the soldiers to not move", "The Captain asked the soldiers no moving"],
     "a": 0,
-    "e": "Inversion Rule: जब 'Not only' से वाक्य शुरू हो, तो 'Not only did the inflation rate increase' होना चाहिए।",
-    "cat": "english", "sub": "error-spotting"
+    "e": "<b>Rule:</b> Negative imperative sentences use <b>'ordered/commanded + not to + V1'</b>. 'Your' changes to 'their' to match the object."
   },
   {
-    "q": "<b>Error Spotting (3/5):</b> Neither the (A) / Finance Minister nor (B) / the Ministry officials (C) / was able to explain the deficit (D).",
+    "p_id": "",
+    "qe": "<b>Fill in the blank:</b> 'The manager decided to ______ the meeting until next Monday.'",
+    "qh": "<b>रिक्त स्थान भरें:</b> 'The manager decided to ______ the meeting until next Monday.'",
+    "o": ["put off", "put out", "put away", "put up"],
+    "a": 0,
+    "e": "<b>Phrasal Verb:</b> <b>'Put off'</b> means to postpone. 'Put out' means to extinguish."
+  },
+  {
+    "p_id": "",
+    "qe": "<b>One Word Substitution:</b> 'A person who is fluent in two languages.'",
+    "qh": "<b>एक शब्द:</b> 'वह व्यक्ति जो दो भाषाओं में धाराप्रवाह हो।'",
+    "o": ["Bilingual", "Biologist", "Bigot", "Brittle"],
+    "a": 0,
+    "e": "<b>Vocabulary:</b> <b>Bilingual</b> (द्विभाषी) is the term for someone who can speak two languages fluently."
+  },
+  {
+    "p_id": "",
+    "qe": "<b>Sentence Improvement:</b> 'Hardly <u>had the sun rose</u> when the birds started chirping.'",
+    "qh": "<b>वाक्य सुधार:</b> 'Hardly <u>had the sun rose</u> when the birds started chirping.'",
+    "o": ["had the sun risen", "the sun had risen", "did the sun rise", "No improvement"],
+    "a": 0,
+    "e": "<b>Rule:</b> With 'had', the third form of the verb (V3) is used. The V3 of rise is <b>risen</b> (Rise-Rose-Risen)."
+  },
+  {
+    "p_id": "",
+    "qe": "<b>Synonym:</b> Select the most appropriate synonym of: <b>'TACITURN'</b>",
+    "qh": "<b>समानार्थी:</b> <b>'TACITURN'</b> का पर्यायवाची चुनें।",
+    "o": ["Reticent", "Talkative", "Loud", "Cheerful"],
+    "a": 0,
+    "e": "<b>Meaning:</b> Taciturn means reserved or uncommunicative in speech. <b>Reticent</b> is its closest synonym."
+  },
+  {
+    "p_id": "",
+    "qe": "<b>Antonym:</b> Select the most appropriate antonym of: <b>'ZENITH'</b>",
+    "qh": "<b>विलोम:</b> <b>'ZENITH'</b> का विपरीतार्थक चुनें।",
+    "o": ["Nadir", "Peak", "Summit", "Horizon"],
+    "a": 0,
+    "e": "<b>Meaning:</b> Zenith means the highest point. <b>Nadir</b> (पाताल/न्यूनतम बिंदु) means the lowest point."
+  },
+  {
+    "p_id": "",
+    "qe": "<b>Idiom:</b> 'To hold one's tongue.'",
+    "qh": "<b>मुहावरे:</b> 'To hold one's tongue.'",
+    "o": ["To keep quiet", "To be very angry", "To speak loudly", "To be rude"],
+    "a": 0,
+    "e": "<b>Meaning:</b> To refrain from speaking or to <b>stay silent</b>."
+  },
+  {
+    "p_id": "",
+    "qe": "<b>Active/Passive:</b> 'Who painted this beautiful picture?'",
+    "qh": "<b>वाच्य परिवर्तन:</b> 'Who painted this beautiful picture?'",
+    "o": ["By whom was this beautiful picture painted?", "Who was this picture painted by?", "By whom this picture was painted?", "Both A and B"],
+    "a": 3,
+    "e": "<b>Rule:</b> 'Who' changes to 'By whom' or 'Who...by'. Simple Past (V2) changes to 'was/were + V3'."
+  },
+  {
+    "p_id": "",
+    "qe": "<b>Error Spotting:</b> 'The cost (A) / of living (B) / is higher than (C) / the last year (D).'",
+    "qh": "<b>त्रुटि पहचानें:</b> 'The cost (A) / of living (B) / is higher than (C) / the last year (D).'",
     "o": ["A", "B", "C", "D"],
     "a": 3,
-    "e": "Proximity Rule: 'Neither-nor' में verb पास वाले subject (officials - Plural) के अनुसार 'were' होनी चाहिए।",
-    "cat": "english", "sub": "error-spotting"
+    "e": "<b>Rule:</b> Faulty comparison. We must compare the 'cost' of this year with the 'cost' of last year. Correct: <b>'higher than that of last year'</b>."
   },
   {
-    "q": "<b>Error Spotting (4/5):</b> The interest rates (A) / offered by this (B) / bank is much higher (C) / than any other bank (D).",
+    "p_id": "",
+    "qe": "<b>Spelling Test:</b> Select the correctly spelled word.",
+    "qh": "<b>वर्तनी:</b> सही शब्द चुनें।",
+    "o": ["Hierarchy", "Hierachy", "Heirarchy", "Hierarcky"],
+    "a": 0,
+    "e": "<b>Spelling:</b> <b>Hierarchy</b> is the correct spelling."
+  },
+  {
+    "p_id": "",
+    "qe": "<b>Fill in the blank:</b> 'If you ______ the instructions, you wouldn't have made these mistakes.'",
+    "qh": "<b>रिक्त स्थान भरें:</b> 'If you ______ the instructions, you wouldn't have made these mistakes.'",
+    "o": ["had followed", "followed", "would follow", "follow"],
+    "a": 0,
+    "e": "<b>Conditional:</b> Type 3 Conditional follows the pattern: <b>'If + had + V3, would have + V3'</b>."
+  },
+  {
+    "p_id": "",
+    "qe": "<b>Idiom:</b> 'To play second fiddle.'",
+    "qh": "<b>मुहावरे:</b> 'To play second fiddle.'",
+    "o": ["To be in a subordinate position", "To be the lead player", "To play a musical instrument", "To be happy"],
+    "a": 0,
+    "e": "<b>Meaning:</b> To take a <b>less important</b> or subordinate role compared to someone else."
+  },
+  {
+    "p_id": "",
+    "qe": "<b>Error Spotting:</b> 'Not only the students (A) / but also the teacher (B) / were happy (C) / with the results (D).'",
+    "qh": "<b>त्रुटि पहचानें:</b> 'Not only the students (A) / but also the teacher (B) / were happy (C) / with the results (D).'",
     "o": ["A", "B", "C", "D"],
     "a": 2,
-    "e": "Subject-Verb Agreement: मुख्य subject 'rates' (Plural) है, इसलिए 'is' की जगह 'are' आएगा।",
-    "cat": "english", "sub": "error-spotting"
+    "e": "<b>Rule:</b> For 'Not only...but also', the verb agrees with the <b>nearest subject</b>. 'The teacher' is singular, so it should be 'was'."
   },
   {
-    "q": "<b>Error Spotting (5/5):</b> Scarcely had the (A) / new policy been (B) / announced than (C) / the market crashed (D).",
+    "p_id": "",
+    "qe": "<b>Active/Passive:</b> 'A small boy was flying a colorful kite.'",
+    "qh": "<b>वाच्य परिवर्तन:</b> 'A small boy was flying a colorful kite.'",
+    "o": ["A colorful kite was being flown by a small boy", "A kite was flown", "A kite is being flown", "None"],
+    "a": 0,
+    "e": "<b>Rule:</b> Past Continuous changes to <b>'was/were + being + V3'</b> (Fly-Flew-Flown)."
+  },
+  {
+    "p_id": "",
+    "qe": "<b>Antonym:</b> Antonym of <b>'BENEVOLENT'</b>.",
+    "qh": "<b>विलोम:</b> <b>'BENEVOLENT'</b> का विलोम।",
+    "o": ["Malevolent", "Kind", "Generous", "Friendly"],
+    "a": 0,
+    "e": "<b>Meaning:</b> Benevolent means kind. <b>Malevolent</b> (द्रोही/बुरा चाहने वाला) means having a wish to do evil."
+  },
+  {
+    "p_id": "",
+    "qe": "<b>One Word:</b> 'A person who hates mankind.'",
+    "qh": "<b>एक शब्द:</b> 'वह व्यक्ति जो मानव जाति से घृणा करता है।'",
+    "o": ["Misanthrope", "Philanthropist", "Misogynist", "Misogamist"],
+    "a": 0,
+    "e": "<b>Vocabulary:</b> <b>Misanthrope</b> (मानवद्वेषी) is the correct term. Philanthropist is the opposite."
+  },
+  {
+    "p_id": "",
+    "qe": "<b>Sentence Improvement:</b> 'The news <u>was too good being true</u>.'",
+    "qh": "<b>वाक्य सुधार:</b> 'The news <u>was too good being true</u>.'",
+    "o": ["too good to be true", "very good being true", "too good to true", "No improvement"],
+    "a": 0,
+    "e": "<b>Rule:</b> The structure is <b>'Too + Adjective + To + V1'</b>."
+  },
+  {
+    "p_id": "",
+    "qe": "<b>Direct/Indirect:</b> He asked me, 'Where do you live?'",
+    "qh": "<b>अप्रत्यक्ष कथन:</b> He asked me, 'Where do you live?'",
+    "o": ["He asked me where I lived", "He asked me where did I live", "He asked me where I live", "He asked where was my home"],
+    "a": 0,
+    "e": "<b>Rule:</b> In indirect questions, the sentence becomes assertive (Subject + Verb). Simple Present changes to <b>Simple Past</b>."
+  },
+  {
+    "p_id": "",
+    "qe": "<b>Fill in the blank:</b> 'You must dispense ______ his services.'",
+    "qh": "<b>रिक्त स्थान भरें:</b> 'You must dispense ______ his services.'",
+    "o": ["with", "of", "off", "at"],
+    "a": 0,
+    "e": "<b>Phrasal Verb:</b> <b>'Dispense with'</b> means to stop using or get rid of something."
+  },
+  {
+    "p_id": "",
+    "qe": "<b>Active/Passive:</b> 'Shut all the doors.'",
+    "qh": "<b>वाच्य परिवर्तन:</b> 'Shut all the doors.'",
+    "o": ["Let all the doors be shut", "The doors were shut", "All doors are shut", "You are ordered to shut"],
+    "a": 0,
+    "e": "<b>Rule:</b> Imperative passive starts with <b>'Let + object + be + V3'</b>."
+  },
+  {
+    "p_id": "",
+    "qe": "<b>Synonym:</b> Synonym of <b>'AFFLUENT'</b>.",
+    "qh": "<b>समानार्थी:</b> <b>'AFFLUENT'</b> का पर्यायवाची।",
+    "o": ["Wealthy", "Poor", "Greedy", "Silent"],
+    "a": 0,
+    "e": "<b>Meaning:</b> Affluent means having a great deal of money or <b>wealthy</b>."
+  },
+  {
+    "p_id": "",
+    "qe": "<b>Error Spotting:</b> 'He is senior (A) / than me (B) / in service (C) / No error (D).'",
+    "qh": "<b>त्रुटि पहचानें:</b> 'He is senior (A) / than me (B) / in service (C) / No error (D).'",
     "o": ["A", "B", "C", "D"],
-    "a": 2,
-    "e": "Correlative Rule: 'Scarcely' के साथ हमेशा 'when' लगता है, 'than' नहीं।",
-    "cat": "english", "sub": "error-spotting"
-  },
-  {
-    "q": "<b>Sentence Improvement:</b> The company's profits *have been falling down* for three consecutive quarters.",
-    "o": ["have been falling off", "have been falling", "are falling down", "No improvement"],
     "a": 1,
-    "e": "Redundancy: 'Fall' के साथ 'down' अनावश्यक है यदि संदर्भ केवल घटने का है। 'Falling' पर्याप्त है।",
-    "cat": "english", "sub": "improvement"
+    "e": "<b>Rule:</b> 'Senior' takes the preposition <b>'to'</b>, not 'than'."
   },
   {
-    "q": "<b>Sentence Improvement:</b> No sooner *the manager saw* the error than he called for a meeting.",
-    "o": ["had the manager seen", "did the manager saw", "the manager had seen", "No improvement"],
+    "p_id": "",
+    "qe": "<b>Idiom:</b> 'To bite the dust.'",
+    "qh": "<b>मुहावरे:</b> 'To bite the dust.'",
+    "o": ["To be defeated", "To be successful", "To work hard", "To eat dirt"],
     "a": 0,
-    "e": "Inversion: 'No sooner' के तुरंत बाद auxiliary verb (had/did) का आना अनिवार्य है।",
-    "cat": "english", "sub": "improvement"
+    "e": "<b>Meaning:</b> To fail or <b>be defeated</b>, often in a humiliating way."
   },
   {
-    "q": "<b>Sentence Improvement:</b> Most of the employees *prefer working from home than* commuting to the office.",
-    "o": ["prefer working from home to", "prefer working from home over", "prefer work from home to", "No improvement"],
+    "p_id": "",
+    "qe": "<b>Vocabulary:</b> Correct spelling of 'Maintanance'.",
+    "qh": "<b>वर्तनी:</b> 'Maintanance' की सही वर्तनी चुनें।",
+    "o": ["Maintenance", "Maintainence", "Maintanence", "Maintenence"],
     "a": 0,
-    "e": "'Prefer' के साथ हमेशा 'to' preposition का प्रयोग होता है, 'than' का नहीं।",
-    "cat": "english", "sub": "improvement"
+    "e": "<b>Spelling:</b> The correct spelling is <b>Maintenance</b>."
   },
   {
-    "q": "<b>Sentence Improvement:</b> He is *the most intelligent* of all other students in the class.",
-    "o": ["the most intelligent of all", "more intelligent of all", "most intelligent than all", "No improvement"],
+    "p_id": "",
+    "qe": "<b>Antonym:</b> Antonym of <b>'ARTIFICIAL'</b>.",
+    "qh": "<b>विलोम:</b> <b>'ARTIFICIAL'</b> का विलोम।",
+    "o": ["Natural", "Fake", "Solid", "True"],
     "a": 0,
-    "e": "Superlative Rule: जब 'all' का प्रयोग हो, तो 'other' को हटा दिया जाता है क्योंकि 'most intelligent' में वह स्वयं भी शामिल है।",
-    "cat": "english", "sub": "improvement"
+    "e": "<b>Meaning:</b> The opposite of artificial (कृत्रिम) is <b>Natural</b> (प्राकृतिक)."
   },
   {
-    "q": "<b>Sentence Improvement:</b> The board meeting *was postponed because of* the chairman was ill.",
-    "o": ["was postponed because", "was postponed as", "was postponed due to", "No improvement"],
-    "a": 1,
-    "e": "'Because of' के बाद noun/phrase आता है, जबकि 'Because' या 'As' के बाद पूरा clause (chairman was ill) आता है।",
-    "cat": "english", "sub": "improvement"
-  },
-  {
-    "q": "<b>Synonym of 'ABSTRUSE':</b>",
-    "o": ["Clear", "Obscure", "Simple", "Lucid"],
-    "a": 1,
-    "e": "'Abstruse' का अर्थ है जिसे समझना कठिन हो (गूढ़/Obscure)।",
-    "cat": "english", "sub": "vocab"
-  },
-  {
-    "q": "<b>Synonym of 'PERSPICACIOUS':</b>",
-    "o": ["Ignorant", "Astute", "Dull", "Unperceptive"],
-    "a": 1,
-    "e": "'Perspicacious' का अर्थ है बहुत गहरी समझ वाला (Astute/Shrewd)।",
-    "cat": "english", "sub": "vocab"
-  },
-  {
-    "q": "<b>Antonym of 'ALACRITY':</b>",
-    "o": ["Enthusiasm", "Lethargy", "Readiness", "Eagerness"],
-    "a": 1,
-    "e": "'Alacrity' (तत्परता) का उल्टा 'Lethargy' (सुस्ती/आलस) है।",
-    "cat": "english", "sub": "vocab"
-  },
-  {
-    "q": "<b>Antonym of 'PUNITIVE':</b>",
-    "o": ["Vindictive", "Rewarding", "Penal", "Retaliatory"],
-    "a": 1,
-    "e": "'Punitive' (दंडात्मक) का उल्टा 'Rewarding' (पुरस्कार देने वाला) होता है।",
-    "cat": "english", "sub": "vocab"
-  },
-  {
-    "q": "<b>One-word Substitution:</b> A situation where no progress is possible; a deadlock.",
-    "o": ["Impasse", "Harmony", "Breakthrough", "Agreement"],
+    "p_id": "",
+    "qe": "<b>Fill in the blank:</b> 'I prefer tea ______ coffee.'",
+    "qh": "<b>रिक्त स्थान भरें:</b> 'I prefer tea ______ coffee.'",
+    "o": ["to", "than", "for", "with"],
     "a": 0,
-    "e": "'Impasse' का अर्थ है ऐसी स्थिति जहाँ से आगे बढ़ना असंभव हो (गतिरोध)।",
-    "cat": "english", "sub": "vocab"
+    "e": "<b>Rule:</b> The verb <b>'prefer'</b> takes 'to' for comparison between two nouns."
   },
   {
-    "q": "<b>One-word Substitution:</b> One who makes an official examination of accounts.",
-    "o": ["Auditor", "Registrar", "Creditor", "Debtor"],
+    "p_id": "",
+    "qe": "<b>One Word Substitution:</b> 'A collection of poems.'",
+    "qh": "<b>एक शब्द:</b> 'कविताओं का संग्रह।'",
+    "o": ["Anthology", "Pathology", "Etymology", "Biology"],
     "a": 0,
-    "e": "खातों की आधिकारिक जांच करने वाले को 'Auditor' (लेखा परीक्षक) कहते हैं।",
-    "cat": "english", "sub": "vocab"
+    "e": "<b>Vocabulary:</b> <b>Anthology</b> is the specific word for a collection of literary works."
   },
   {
-    "q": "<b>Idiom:</b> 'To cook the books' means:",
-    "o": ["To write a book on cooking", "To manipulate financial records illegally", "To read carefully", "To keep books in order"],
-    "a": 1,
-    "e": "बैंकिंग परीक्षाओं में यह प्रचलित है, इसका अर्थ है खातों में हेराफेरी करना।",
-    "cat": "english", "sub": "vocab"
-  },
-  {
-    "q": "<b>Idiom:</b> 'In the red' means:",
-    "o": ["To be in danger", "To be in debt or losing money", "To be angry", "To be happy"],
-    "a": 1,
-    "e": "'In the red' का अर्थ है वित्तीय नुकसान में होना या कर्ज में होना।",
-    "cat": "english", "sub": "vocab"
-  },
-  {
-    "q": "<b>Active/Passive:</b> The bank manager has sanctioned the loan.",
-    "o": ["The loan was sanctioned by bank manager", "The loan has been sanctioned by the bank manager", "The loan is being sanctioned", "None"],
-    "a": 1,
-    "e": "Present Perfect 'has + V3' बदलकर 'has been + V3' हो जाता है।",
-    "cat": "english", "sub": "voice"
-  },
-  {
-    "q": "<b>Active/Passive:</b> Why did you decline the credit card offer?",
-    "o": ["Why was the credit card offer declined by you?", "Why is the credit card offer declined?", "Why had the offer been declined?", "None"],
+    "p_id": "",
+    "qe": "<b>Sentence Improvement:</b> 'If I <u>am</u> you, I wouldn't forgive him.'",
+    "qh": "<b>वाक्य सुधार:</b> 'If I <u>am</u> you, I wouldn't forgive him.'",
+    "o": ["were", "was", "had been", "No improvement"],
     "a": 0,
-    "e": "Simple Past Interrogative (did) बदलकर 'was/were + V3' में जाता है।",
-    "cat": "english", "sub": "voice"
+    "e": "<b>Rule:</b> For hypothetical/imaginary situations, <b>'were'</b> is used with all subjects."
   },
   {
-    "q": "<b>Active/Passive:</b> Please maintain a minimum balance.",
-    "o": ["A minimum balance should be maintain", "You are requested to maintain a minimum balance", "Let balance be maintained", "None"],
-    "a": 1,
-    "e": "'Please' वाले वाक्यों में 'You are requested to' सबसे सटीक passive form है।",
-    "cat": "english", "sub": "voice"
-  },
-  {
-    "q": "<b>Direct/Indirect:</b> The manager said to the clerk, 'Verify these documents at once.'",
-    "o": ["The manager told clerk verify documents", "The manager ordered the clerk to verify those documents at once", "The manager said to verify documents", "None"],
-    "a": 1,
-    "e": "Imperative (Order) में 'Ordered' और 'these' बदलकर 'those' हो जाता है।",
-    "cat": "english", "sub": "narration"
-  },
-  {
-    "q": "<b>Direct/Indirect:</b> He said, 'The bank rate remains unchanged.'",
-    "o": ["He said that the bank rate remained unchanged", "He said that the bank rate remains unchanged", "He told bank rate is same", "None"],
-    "a": 1,
-    "e": "Fact/Information: चूँकि यह एक वर्तमान समाचार या तथ्य है, tense अक्सर unchanged रहता है, या 'remained' भी व्याकरणिक रूप से सही हो सकता है (विकल्प B यहाँ सूचनात्मक है)।",
-    "cat": "english", "sub": "narration"
-  },
-  {
-    "q": "<b>Direct/Indirect:</b> 'Are you interested in the SIP plan?' the agent asked.",
-    "o": ["The agent asked if I was interested in the SIP plan", "The agent asked are you interested", "The agent told me about SIP", "None"],
-    "a": 0,
-    "e": "Interrogative (Yes/No) में 'if/whether' और 'are' बदलकर 'was' हो जाता है।",
-    "cat": "english", "sub": "narration"
-  },
-  {
-    "q": "<b>Sentence Rearrangement:</b> P: digital banking Q: has revolutionized R: the traditional S: banking system",
-    "o": ["PQRS", "QSPR", "RQPS", "SPRQ"],
-    "a": 0,
-    "e": "सही क्रम: 'Digital banking has revolutionized the traditional banking system' (PQRS)।",
-    "cat": "english", "sub": "pqr"
-  },
-  {
-    "q": "<b>Sentence Rearrangement:</b> P: for sustainable growth Q: financial inclusion R: is essential S: in any economy",
-    "o": ["QRPS", "PQRS", "QRSP", "SPQR"],
-    "a": 2,
-    "e": "सही क्रम: 'Financial inclusion is essential for sustainable growth in any economy' (QRSP)।",
-    "cat": "english", "sub": "pqr"
-  },
-  {
-    "q": "<b>Select correctly spelt word:</b>",
-    "o": ["Entrepreneur", "Enterpreneur", "Entreprenure", "Entreprener"],
-    "a": 0,
-    "e": "सही स्पेलिंग 'Entrepreneur' (उद्यमी) है।",
-    "cat": "english", "sub": "vocab"
-  },
-  {
-    "q": "<b>Synonym of 'REDUNDANT':</b>",
-    "o": ["Necessary", "Superfluous", "Crucial", "Vital"],
-    "a": 1,
-    "e": "'Redundant' का अर्थ है फालतू या जिसकी ज़रूरत न हो (Superfluous)।",
-    "cat": "english", "sub": "vocab"
-  },
-  {
-    "q": "<b>Antonym of 'INSOLVENT':</b>",
-    "o": ["Bankrupt", "Wealthy", "Broke", "Destitute"],
-    "a": 1,
-    "e": "'Insolvent' (दिवालिया) का उल्टा 'Wealthy' (धनी) या 'Solvent' होगा।",
-    "cat": "english", "sub": "vocab"
-  },
-  {
-    "q": "<b>Error Spotting:</b> Either the (A) / manager or (B) / the employees (C) / is responsible for the error (D).",
+    "p_id": "",
+    "qe": "<b>Error Spotting:</b> 'The jury (A) / were (B) / unanimous (C) / in its decision (D).'",
+    "qh": "<b>त्रुटि पहचानें:</b> 'The jury (A) / were (B) / unanimous (C) / in its decision (D).'",
     "o": ["A", "B", "C", "D"],
-    "a": 3,
-    "e": "Proximity Rule: 'Either-or' में verb पास वाले subject (employees - Plural) के अनुसार 'are' होनी चाहिए।",
-    "cat": "english", "sub": "error-spotting"
+    "a": 1,
+    "e": "<b>Rule:</b> When a collective noun acts as a <b>single unit</b> (unanimous), it takes a singular verb ('was')."
+  },
+  {
+    "p_id": "",
+    "qe": "<b>Direct/Indirect:</b> My mother said, 'Honesty is the best policy.'",
+    "qh": "<b>अप्रत्यक्ष कथन:</b> My mother said, 'Honesty is the best policy.'",
+    "o": ["My mother said that honesty is the best policy", "My mother said that honesty was the best policy", "My mother told honesty is the best policy", "None"],
+    "a": 0,
+    "e": "<b>Rule:</b> Tense does not change for <b>Proverbs/Universal Truths</b>."
+  },
+  {
+    "p_id": "",
+    "qe": "<b>Fill in the blank:</b> 'He died ______ cholera.'",
+    "qh": "<b>रिक्त स्थान भरें:</b> 'He died ______ cholera.'",
+    "o": ["of", "from", "with", "by"],
+    "a": 0,
+    "e": "<b>Rule:</b> 'Die of' is used for <b>diseases</b>."
+  },
+  {
+    "p_id": "",
+    "qe": "<b>Idiom:</b> 'To let the cat out of the bag.'",
+    "qh": "<b>मुहावरे:</b> 'To let the cat out of the bag.'",
+    "o": ["To reveal a secret accidentally", "To keep a pet", "To be careless", "To play a trick"],
+    "a": 0,
+    "e": "<b>Meaning:</b> To reveal a <b>secret</b>, usually by mistake."
+  },
+  {
+    "p_id": "",
+    "qe": "<b>Active/Passive:</b> 'They are laughing at the poor man.'",
+    "qh": "<b>वाच्य परिवर्तन:</b> 'They are laughing at the poor man.'",
+    "o": ["The poor man is being laughed at by them", "The poor man was laughed", "The man is laughed", "None"],
+    "a": 0,
+    "e": "<b>Rule:</b> Present Continuous passive: <b>'is/am/are + being + V3'</b>. Don't forget the preposition 'at'."
+  },
+  {
+    "p_id": "",
+    "qe": "<b>Synonym:</b> Synonym of <b>'CANDID'</b>.",
+    "qh": "<b>समानार्थी:</b> <b>'CANDID'</b> का पर्यायवाची।",
+    "o": ["Frank", "Deceptive", "Sweet", "Greedy"],
+    "a": 0,
+    "e": "<b>Meaning:</b> Candid means honest and straightforward, or <b>Frank</b>."
   }
 ]
