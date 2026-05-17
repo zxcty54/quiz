@@ -77,7 +77,7 @@
     "qh": "<b>अनुपात:</b> एक स्कूल में लड़कों और लड़कियों का अनुपात 5:3 था। कुछ नए लड़कों और लड़कियों को 5:7 के अनुपात में प्रवेश दिया गया। इससे स्कूल में छात्रों की कुल संख्या 1200 हो गई और लड़कों और लड़कियों का अनुपात 7:5 हो गया। नए प्रवेश से पहले स्कूल में छात्रों की संख्या थी:",
     "o": ["960", "700", "800", "900"],
     "a": 3,
-    "e": "<b>Logic:</b> <br/>Final stats: Total students = 1200, Ratio B:G = 7:5 $\Rightarrow$ Boys = 700, Girls = 500.<br/>Let initial student scale factor be $x$ (Boys=5x, Girls=3x) and new admission factor be $y$ (Boys=5y, Girls=7y).<br/>Equations: $5x + 5y = 700 \\Rightarrow x + y = 140$ and $3x + 7y = 500$.<br/>Solving the linear system yields $x = 120$.<br/>Initial total students = $5x + 3x = 8x = 8 \\times 120 = \\mathbf{900}$."
+    "e": "<b>Logic:</b> <br/>Final stats: Total students = 1200, Ratio B:G = 7:5 $\\Rightarrow$ Boys = 700, Girls = 500.<br/>Let initial student scale factor be $x$ (Boys=5x, Girls=3x) and new admission factor be $y$ (Boys=5y, Girls=7y).<br/>Equations: $5x + 5y = 700 \\Rightarrow x + y = 140$ and $3x + 7y = 500$.<br/>Solving the linear system yields $x = 120$.<br/>Initial total students = $5x + 3x = 8x = 8 \\times 120 = \\mathbf{900}$."
   },
   {
     "p_id": "ob_mains_level_11",
@@ -129,7 +129,7 @@
   },
   {
     "p_id": "ob_mains_level_17",
-    "qe": "<b>Trigonometry:</b> If $3\\cos \\theta = 5\\sin \\theta$, then find the value of $\\frac{5\\sin \\theta - 2\\cos \\theta}{5\\sin \\theta + 2\cos \\theta}$.",
+    "qe": "<b>Trigonometry:</b> If $3\\cos \\theta = 5\\sin \\theta$, then find the value of $\\frac{5\\sin \\theta - 2\\cos \\theta}{5\\sin \\theta + 2\\cos \\theta}$.",
     "qh": "<b>त्रिकोणमिति:</b> यदि $3\\cos \\theta = 5\\sin \\theta$ है, तो $\\frac{5\\sin \\theta - 2\\cos \\theta}{5\\sin \\theta + 2\\cos \\theta}$ का मान ज्ञात कीजिए।",
     "o": ["1/5", "1/8", "3/5", "2/7"],
     "a": 0,
@@ -157,7 +157,7 @@
     "qh": "<b>प्रतिशत:</b> A की आय B से 60% कम है। B की आय C से 20% अधिक है। यदि A की आय ₹x और C की आय ₹y है, तो x:y ज्ञात कीजिए।",
     "o": ["12 : 25", "25 : 12", "3 : 5", "None"],
     "a": 0,
-    "e": "<b>Logic:</b> <br/>Let C's income = 100. Then B's income = 120.<br/>A's income is 60% less than B $\Rightarrow 120 \\times 0.40 = 48$.<br/>Therefore, ratio $x:y = A:C = 48 : 100 = \\mathbf{12 : 25}$."
+    "e": "<b>Logic:</b> <br/>Let C's income = 100. Then B's income = 120.<br/>A's income is 60% less than B $\\Rightarrow 120 \\times 0.40 = 48$.<br/>Therefore, ratio $x:y = A:C = 48 : 100 = \\mathbf{12 : 25}$."
   },
   {
     "p_id": "ob_mains_level_21",
@@ -165,7 +165,7 @@
     "qh": "<b>समय-कार्य:</b> A किसी कार्य का 40%, 12 दिनों में कर सकता है, B उसी कार्य का 60%, 15 दिनों में कर सकता है। दोनों 10 दिनों तक साथ काम करते हैं। C शेष कार्य को 4 दिनों में पूरा करता है। A, B, C मिलकर उसी कार्य को कितने समय में पूरा करेंगे?",
     "o": ["10 days", "12 days", "8 days", "9 days"],
     "a": 0,
-    "e": "<b>Solution:</b> <br/>Full work days: A = $\\frac{12}{0.40} = 30$ days, B = $\\frac{15}{0.60} = 25$ days. Total work LCM(30, 25) = 150 units.<br/>Efficiency A = 5, B = 6. Combined work in 10 days = $10 \\times (5+6) = 110$ units.<br/>Remaining work = $150 - 110 = 40$ units, done by C in 4 days $\Rightarrow$ C's efficiency = 10.<br/>Combined efficiency of A, B, and C = $5 + 6 + 10 = 21$. Together time aligns to **10 days** structural target."
+    "e": "<b>Solution:</b> <br/>Full work days: A = $\\frac{12}{0.40} = 30$ days, B = $\\frac{15}{0.60} = 25$ days. Total work LCM(30, 25) = 150 units.<br/>Efficiency A = 5, B = 6. Combined work in 10 days = $10 \\times (5+6) = 110$ units.<br/>Remaining work = $150 - 110 = 40$ units, done by C in 4 days $\\Rightarrow$ C's efficiency = 10.<br/>Combined efficiency of A, B, and C = $5 + 6 + 10 = 21$. Together time aligns to **10 days** structural target."
   },
   {
     "p_id": "ob_mains_level_22",
