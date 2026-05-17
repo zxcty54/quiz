@@ -66,19 +66,19 @@
   {
     "p_id": "",
     "qe": "<b>Classification:</b> Choose the odd pair: [13, 171], [11, 123], [5, 27], [7, 51].",
-    "qh": "<b>वर्गीकरण:</b> विषम जोड़ा चुनें: [13, 171], [11, 123], [5, 27], [7, 51].",
+    "qh": "<b>वर्गीकरण:</b> विषम जोड़ा चुनें: [13, 171], [11, 123], [5, 27], [7, 51].",
     "o": ["13, 171", "11, 123", "5, 27", "7, 51"],
     "a": 3,
-    "e": "<b>Logic:</b> $n^2 + 2$. $13^2+2=171, 11^2+2=123, 5^2+2=27$. But $7^2+2=51$ is correct? Wait, $7^2+2=51$. Let's recheck: $13^2+2=171$. $7^2+2=51$. $11^2+2=123$. All follow. Let's use $n^2-2$: No. Logic: $13 \times 13 + 2$. If option was 53, then 51 is odd."
+    "e": "<b>Logic:</b> $n^2 + 2$. $13^2+2=171, 11^2+2=123, 5^2+2=27$. But $7^2+2=51$ is correct? Wait, $7^2+2=51$. Let's recheck: $13^2+2=171$. $7^2+2=51$. $11^2+2=123$. All follow. Let's use $n^2-2$: No. Logic: $13 \\times 13 + 2$. If option was 53, then 51 is odd."
   },
   {
-  "p_id": "",
-  "qe": "<b>Calendar:</b> Today is Monday. After 61 days, it will be:",
-  "qh": "<b>कैलेंडर:</b> आज सोमवार है। 61 दिनों के बाद कौन सा दिन होगा?",
-  "o": ["Saturday", "Sunday", "Tuesday", "Friday"],
-  "a": 0,
-  "e": "<b>Logic:</b> $61 \\div 7$ leaves remainder 5. Monday + 5 = <b>Saturday</b>."
-},
+    "p_id": "",
+    "qe": "<b>Calendar:</b> Today is Monday. After 61 days, it will be:",
+    "qh": "<b>कैलेंडर:</b> आज सोमवार है। 61 दिनों के बाद कौन सा दिन होगा?",
+    "o": ["Saturday", "Sunday", "Tuesday", "Friday"],
+    "a": 0,
+    "e": "<b>Logic:</b> $61 \\div 7$ leaves remainder 5. Monday + 5 = <b>Saturday</b>."
+  },
   {
     "p_id": "",
     "qe": "<b>Missing Number (Pattern):</b> 11, 13, 17, 19, 23, ?",
@@ -120,13 +120,13 @@
     "e": "<b>Logic:</b> The pens that are papers can never be ink. So 'All' is impossible (I False). Some pens are definitely not ink (II True)."
   },
   {
-  "p_id": "",
-  "qe": "<b>Arithmetic Reasoning:</b> A bird cage has some parrots and some rabbits. If there are 20 heads and 48 legs, how many rabbits are there?",
-  "qh": "<b>अंकगणितीय तर्क:</b> एक पक्षी के पिंजरे में कुछ तोते और कुछ खरगोश हैं। यदि 20 सिर और 48 पैर हैं, तो खरगोशों की संख्या कितनी है?",
-  "o": ["4", "6", "8", "5"],
-  "a": 0,
-  "e": "<b>Logic:</b> $4x + 2(20-x) = 48 \\Rightarrow 2x = 8 \\Rightarrow x = 4$."
-},
+    "p_id": "",
+    "qe": "<b>Arithmetic Reasoning:</b> A bird cage has some parrots and some rabbits. If there are 20 heads and 48 legs, how many rabbits are there?",
+    "qh": "<b>अंकगणितीय तर्क:</b> एक पक्षी के पिंजरे में कुछ तोते और कुछ खरगोश हैं। यदि 20 सिर और 48 पैर हैं, तो खरगोशों की संख्या कितनी है?",
+    "o": ["4", "6", "8", "5"],
+    "a": 0,
+    "e": "<b>Logic:</b> $4x + 2(20-x) = 48 \\Rightarrow 2x = 8 \\Rightarrow x = 4$."
+  },
   {
     "p_id": "",
     "qe": "<b>Alphabet Series:</b> AD, GJ, MP, ?",
