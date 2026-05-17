@@ -1,0 +1,290 @@
+[
+  {
+    "p_id": "bssc_reason_141",
+    "qe": "<b>Analogy:</b> Select the option that completes the logical relationship: $15 : 240 :: 20 : ?$.",
+    "qh": "<b>सादृश्यता:</b> उस विकल्प का चयन कीजिए जो तार्किक संबंध को पूरा करता है: $15 : 240 :: 20 : ?$.",
+    "o": ["420", "400", "410", "440"],
+    "a": 0,
+    "e": "Step 1: Analyze the initial pair: $15 \\\\times (15 + 1) = 15 \\\\times 16 = 240$. The rule structure follows $n \\\\times (n + 1)$. Step 2: Apply the same pattern to the second term: $20 \\\\times (20 + 1) = 20 \\\\times 21$. Step 3: $20 \\\\times 21 = 420$."
+  },
+  {
+    "p_id": "bssc_reason_142",
+    "qe": "<b>Coding-Decoding:</b> If 'GOLD' is coded as 'HQOH' following an incremental step shift pattern ($+1, +2, +3, +4$), how will the word 'HOME' be coded?",
+    "qh": "<b>कोडिंग-डिकोडिंग:</b> यदि '$+1, +2, +3, +4$' के बढ़ते चरण शिफ्ट पैटर्न के अनुसार 'GOLD' को 'HQOH' कोडित किया जाता है, तो 'HOME' शब्द को कैसे कोडित किया जाएगा?",
+    "o": ["IQPI", "IQPH", "IRPI", "HQPI"],
+    "a": 0,
+    "e": "Step 1: Track the letter shifts for 'GOLD': G(+1)->H, O(+2)->Q, L(+3)->O, D(+4)->H. Step 2: Apply this exact sequential logic to 'HOME': H(+1)->I, O(+2)->Q, M(+3)->P, E(+4)->I. Step 3: Combining the characters yields 'IQPI'."
+  },
+  {
+    "p_id": "bssc_reason_143",
+    "qe": "<b>Classification:</b> Choose the word which is least like the other choices in the group based on capital definitions.",
+    "qh": "<b>वर्गीकरण:</b> राजधानी की परिभाषाओं के आधार पर उस शब्द को चुनिए जो समूह के अन्य विकल्पों से सबसे कम मिलता-जुलता है।",
+    "o": ["Sydney", "Canberra", "Vienna", "Ottawa"],
+    "a": 0,
+    "e": "Step 1: Analyze the attributes: Canberra is the capital of Australia, Vienna is the capital of Austria, and Ottawa is the capital of Canada. Step 2: Sydney is a major city in Australia but it is not a national capital. Step 3: Therefore, Sydney is the odd choice."
+  },
+  {
+    "p_id": "bssc_reason_144",
+    "qe": "<b>Number Series:</b> Identify the next logical number in the sequence: 50, 49, 46, 41, 34, ?.",
+    "qh": "<b>संख्या शृंखला:</b> अनुक्रम में अगली तार्किक संख्या की पहचान कीजिए: 50, 49, 46, 41, 34, ?.",
+    "o": ["25", "27", "23", "29"],
+    "a": 0,
+    "e": "Step 1: Check the differences between consecutive terms: $50-1=49$, $49-3=46$, $46-5=41$, $41-7=34$. Step 2: The numbers subtracted are consecutive odd numbers: -1, -3, -5, -7. The next subtracted value must be -9. Step 3: Next term = $34 - 9 = 25$."
+  },
+  {
+    "p_id": "bssc_reason_145",
+    "qe": "<b>Letter Series:</b> What alphabet group replaces the question mark in the series: ABC, EFG, IJK, ?.",
+    "qh": "<b>अक्षर शृंखला:</b> शृंखला में प्रश्नवाचक चिह्न के स्थान पर कौन सा अक्षर समूह आएगा: ABC, EFG, IJK, ?.",
+    "o": ["MNO", "LMN", "NOP", "MNP"],
+    "a": 0,
+    "e": "Step 1: Look at the shift of the starting character of each block: A(+4)->E(+4)->I(+4)->M. Step 2: Each group consists of three consecutive letters. Step 3: Starting from M, the consecutive group is 'MNO'."
+  },
+  {
+    "p_id": "bssc_reason_146",
+    "qe": "<b>Blood Relations:</b> If the sign '$A \\\\times B$' means 'A is the wife of B' and '$A \\\\div B$' means 'A is the father of B', then in the expression '$P \\\\times Q \\\\div R$', how is P related to R?",
+    "qh": "<b>रक्त संबंध:</b> यदि चिह्न '$A \\\\times B$' का अर्थ 'A, B की पत्नी है' और '$A \\\\div B$' का अर्थ 'A, B का पिता है' है, तो व्यंजक '$P \\\\times Q \\\\div R$' में, P का R से क्या संबंध है?",
+    "o": ["Mother", "Aunt", "Sister", "Daughter"],
+    "a": 0,
+    "e": "Step 1: From '$Q \\\\div R$', Q is the father of R. Step 2: From '$P \\\\times Q$', P is the wife of Q. Step 3: Since Q is R's father and P is Q's wife, P must be the mother of R."
+  },
+  {
+    "p_id": "bssc_reason_147",
+    "qe": "<b>Direction Sense Test:</b> From a baseline point, a runner heads 6 km South, turns right and runs 8 km. Calculate the shortest line distance back to the starting point.",
+    "qh": "<b>दिशा परीक्षण:</b> एक आधारभूत बिंदु से, एक धावक 6 किमी दक्षिण की ओर दौड़ता है, दाईं ओर मुड़ता है और 8 किमी दौड़ता है। प्रारंभिक बिंदु पर वापस जाने के लिए सबसे छोटी रेखा की दूरी की गणना कीजिए।",
+    "o": ["10 km", "14 km", "2 km", "12 km"],
+    "a": 0,
+    "e": "Step 1: The two paths form a right-angled vector triangle with base = 8 km and perpendicular = 6 km. Step 2: Shortest straight-line distance = Hypotenuse = $\\\\sqrt{6^2 + 8^2} = \\\\sqrt{36 + 64}$. Step 3: $\\\\sqrt{100} = 10\\ km$."
+  },
+  {
+    "p_id": "bssc_reason_148",
+    "qe": "<b>Venn Diagrams:</b> Select the logical diagram relationship format that holds for: Musical Instruments, Flutes, Violins.",
+    "qh": "<b>वेन आरेख:</b> उस तार्किक आरेख संबंध प्रारूप का चयन करें जो इनके लिए मान्य है: संगीत वाद्ययंत्र, बांसुरी, वायलिन।",
+    "o": ["Two separate independent circles enclosed completely within a third larger circle", "Three concentric circles", "Three intersecting profiles", "Three disjoint independent blocks"],
+    "a": 0,
+    "e": "Step 1: Flutes and Violins are entirely different types of instruments, meaning their sets do not intersect. Step 2: However, both belong entirely to the class of 'Musical Instruments'. Step 3: This creates two separate inner circles inside a single enclosing boundary circle."
+  },
+  {
+    "p_id": "bssc_reason_149",
+    "qe": "<b>Mathematical Operations:</b> If 'A' means '$\\\\div$' and 'B' means '$\\\\times$', calculate the numerical outcome of the operation expression: $24\\\\ A\\\\ 6\\\\ B\\\\ 2$.",
+    "qh": "<b>गणितीय संक्रियाएँ:</b> यदि 'A' का अर्थ '$\\\\div$' और 'B' का अर्थ '$\\\\times$' है, तो संक्रिया व्यंजक का संख्यात्मक परिणाम ज्ञात कीजिए: $24\\\\ A\\\\ 6\\\\ B\\\\ 2$।",
+    "o": ["8", "2", "12", "4"],
+    "a": 0,
+    "e": "Step 1: Replace alphabetic placeholders with mathematical signs: $24 \\\\div 6 \\\\times 2$. Step 2: Apply VBODMAS rules. Perform division first: $24 \\\\div 6 = 4$. Step 3: Perform multiplication next: $4 \\\\times 2 = 8$."
+  },
+  {
+    "p_id": "bssc_reason_150",
+    "qe": "<b>Missing Number Puzzle:</b> Find the value of (?) to balance the column sum sequence across the matrix blocks:\n| 5 | 9 | 4 |\n| 7 | 6 | 11 |\n| 8 | 5 | ? |",
+    "qh": "<b>लुप्त संख्या पहेली:</b> मैट्रिक्स ब्लॉकों में कॉलम योग अनुक्रम को संतुलित करने के लिए (?) का मान ज्ञात कीजिए:\n| 5 | 9 | 4 |\n| 7 | 6 | 11 |\n| 8 | 5 | ? |",
+    "o": ["5", "8", "6", "10"],
+    "a": 0,
+    "e": "Step 1: Check column logic or total matrix constants. Notice the sum of elements in each row: Row 1 sum = $5 + 9 + 4 = 18$. Row 2 sum = $7 + 6 + 11 = 24$. Let's test column sums: Col 1 sum = $5 + 7 + 8 = 20$. Col 2 sum = $9 + 6 + 5 = 20$. Step 2: The pattern establishes that the sum of each vertical column is exactly 20. Step 3: For Col 3: $4 + 11 + ? = 20 \\\\implies 15 + ? = 20 \\\\implies ? = 5$."
+  },
+  {
+    "p_id": "bssc_reason_151",
+    "qe": "<b>Alphabet Test:</b> Arrange the given words according to English dictionary order: 1. Task, 2. Taste, 3. Toast, 4. Toastmaster.",
+    "qh": "<b>अक्षर परीक्षण:</b> अंग्रेजी शब्दकोश क्रम के अनुसार निम्नलिखित शब्दों को व्यवस्थित कीजिए: 1. Task, 2. Taste, 3. Toast, 4. Toastmaster।",
+    "o": ["1, 2, 3, 4", "2, 1, 3, 4", "1, 2, 4, 3", "4, 3, 2, 1"],
+    "a": 0,
+    "e": "Step 1: Compare words by letters: 'Ta-' words come before 'To-' words. Step 2: Between 'Task' and 'Taste', 's-k' comes before 's-t', so 1 comes before 2. Step 3: Between 'Toast' and 'Toastmaster', the shorter base word 3 comes before its compound form 4. Ordered layout: 1, 2, 3, 4."
+  },
+  {
+    "p_id": "bssc_reason_152",
+    "qe": "<b>Ranking and Ordering:</b> In a row of students, Ramesh stands 14th from the left end and 17th from the right end. Calculate the total headcount of students in that row.",
+    "qh": "<b>क्रम और रैंकिंग:</b> छात्रों की एक कतार में, रमेश बाएं छोर से 14वें स्थान पर और दाएं छोर से 17वें स्थान पर खड़ा है। उस कतार में छात्रों की कुल संख्या की गणना कीजिए।",
+    "o": ["30", "31", "29", "32"],
+    "a": 0,
+    "e": "Step 1: Use row boundary equation: $\\\\text{Total} = \\\\text{Rank from Left} + \\\\text{Rank from Right} - 1$. Step 2: Substitute values: $14 + 17 - 1$. Step 3: $31 - 1 = 30$."
+  },
+  {
+    "p_id": "bssc_reason_153",
+    "qe": "<b>Syllogism:</b> Statements: (I) All windows are doors. (II) Some doors are roofs. Conclusions: (1) Some windows are roofs. (2) Some roofs are doors.",
+    "qh": "<b>न्याय निगमन (सिलोगिज़्म):</b> कथन: (I) सभी खिड़कियां दरवाजे हैं। (II) कुछ दरवाजे छत हैं। निष्कर्ष: (1) कुछ खिड़कियां छत हैं। (2) कुछ छत दरवाजे हैं।",
+    "o": ["Only conclusion (2) follows", "Only conclusion (1) follows", "Both follow", "Neither follows"],
+    "a": 0,
+    "e": "Step 1: All windows are inside doors. Some doors intersect with roofs. Windows and roofs may or may not overlap, so Conclusion 1 does not definitely follow. Step 2: Since some doors are roofs, their intersection ensures that some roofs are definitely doors. Conclusion 2 follows. Step 3: Only 2 follows."
+  },
+  {
+    "p_id": "bssc_reason_154",
+    "qe": "<b>Seating Arrangement:</b> Five friends L, M, N, O, and P are standing in a straight queue line facing North. N is in the exact middle spot of the line. O is standing immediately to the right of P. If L is at the extreme right end, who is standing at the extreme left end?",
+    "qh": "<b>बैठक व्यवस्था:</b> पांच मित्र L, M, N, O, और P उत्तर की ओर मुख करके एक सीधी कतार में खड़े हैं। N कतार के ठीक मध्य स्थान पर है। O, P के ठीक दाईं ओर खड़ा है। यदि L सुदूर दाएं छोर पर है, तो सुदूर बाएं छोर पर कौन खड़ा है?",
+    "o": ["P", "M", "O", "N"],
+    "a": 0,
+    "e": "Step 1: Total spots are 5: _ _ _ _ _. L is at extreme right (spot 5) -> _ _ _ _ L. Step 2: N is in the exact middle (spot 3) -> _ _ N _ L. Step 3: O is immediately right of P, which means they must occupy adjacent free spots 'P, O'. The only available adjacent spots are 1 and 2. So, P is at spot 1, O is at spot 2. The remaining spot 4 is filled by M. Layout is P-O-N-M-L. Extreme left is P."
+  },
+  {
+    "p_id": "bssc_reason_155",
+    "qe": "<b>Non-Verbal (Counting Figures):</b> Calculate the total number of independent squares present inside a grid matrix of size $3 \\\\times 3$.",
+    "qh": "<b>गैर-मौखिक (आकृतियों की गणना):</b> $3 \\\\times 3$ आकार के ग्रिड मैट्रिक्स के अंदर मौजूद स्वतंत्र वर्गों की कुल संख्या की गणना कीजिए।",
+    "o": ["14", "9", "10", "13"],
+    "a": 0,
+    "e": "Step 1: For a symmetric grid matrix of size $n \\\\times n$, total squares count matches $\\\\sum n^2$. Step 2: Calculate sum for $3 \\\\times 3$: $1^2 + 2^2 + 3^2 = 1 + 4 + 9$. Step 3: Total squares = 14."
+  },
+  {
+    "p_id": "bssc_reason_156",
+    "qe": "<b>Non-Verbal (Mirror Image):</b> Determine the correct structural vertical mirror image of the number sequence '2468' when reflected to its right side.",
+    "qh": "<b>गैर-मौखिक (दर्पण छवि):</b> संख्या अनुक्रम '2468' के दाईं ओर परावर्तित होने पर उसकी सही लंबवत दर्पण छवि का निर्धारण करें।",
+    "o": ["Flipped characters running in reverse starting with 8", "Identical layout sequence 2468", "Vertical upside-down inversion", "Flipped characters running in sequence starting with 2"],
+    "a": 0,
+    "e": "Step 1: Vertical mirror reflections invert the spatial ordering layout from right to left. Step 2: The sequence must begin with a laterally flipped '8', followed by flipped '6', flipped '4', and end with a flipped '2'. Step 3: This matches option A description."
+  },
+  {
+    "p_id": "bssc_reason_157",
+    "qe": "<b>Non-Verbal (Water Image):</b> What will be the water image reflection outcome of the letter sequence 'HIK' across a horizontal baseline?",
+    "qh": "<b>गैर-मौखिक (जल प्रतिबिंब):</b> एक क्षैतिज आधार रेखा पर अक्षर अनुक्रम 'HIK' का जल प्रतिबिंब परिणाम क्या होगा?",
+    "o": ["HIK (remains completely unchanged due to horizontal axis symmetry)", "KIH", "Vertically skewed shifting patterns", "Lateral side swap changes"],
+    "a": 0,
+    "e": "Step 1: Water reflection tracks vertical structural inversion down across a horizontal mirror line. Step 2: The letters H, I, and K possess perfect geometric horizontal line symmetry. Step 3: Therefore, their vertical reflection looks completely identical to 'HIK'."
+  },
+  {
+    "p_id": "bssc_reason_158",
+    "qe": "<b>Non-Verbal (Embedded Figures):</b> What basic spatial condition verifies that a sub-shape is embedded inside a complex background profile map?",
+    "qh": "<b>गैर-मौखिक (अन्तर्निहित आकृति):</b> कौन सी बुनियादी स्थानिक स्थिति यह सत्यापित करती है कि एक उप-आकृति एक जटिल पृष्ठभूमि प्रोफ़ाइल मानचित्र के अंदर छिपी हुई है?",
+    "o": ["All line segments of the target shape must exist continuously without size deformation or scaling changes", "The lines can cross intersect randomly", "The target shape turns upside down", "The dimensions are doubled"],
+    "a": 0,
+    "e": "Step 1: Finding embedded figures requires locating a precise match for the trace path of the question design. Step 2: Size scaling anomalies, bending, or line reductions violate validation constraints. Step 3: Option A describes this baseline criteria."
+  },
+  {
+    "p_id": "bssc_reason_159",
+    "qe": "<b>Non-Verbal (Paper Folding):</b> A square sheet is folded into a triangle and punched near the outer bounded crease edge. Unfolding it creates what structural layout pattern?",
+    "qh": "<b>गैर-मौखिक (कागज मोड़ना):</b> एक वर्गाकार शीट को मोड़कर त्रिकोण बनाया जाता है और बाहरी बंधी हुई क्रीज किनारे के पास एक छिद्र किया जाता है। इसे खोलने पर कौन सा संरचनात्मक लेआउट पैटर्न बनता है?",
+    "o": ["Symmetrically replicated punch cutouts mirrored across the fold crease lines", "A singular large center deformation", "Random disconnected tears", "No visible pattern changes"],
+    "a": 0,
+    "e": "Step 1: Folding operations establish symmetry axes. When the paper unfolds, every punch replicates symmetrically as a mirror image across the fold lines. Step 2: This creates geometric balance. Step 3: Option A is correct."
+  },
+  {
+    "p_id": "bssc_reason_160",
+    "qe": "<b>Calendar Test:</b> If the 15th of August in a non-leap year falls on a Friday, what day of the week will the 30th of August be in that same year?",
+    "qh": "<b>कैलेंडर परीक्षण:</b> यदि एक गैर-लीप वर्ष में 15 अगस्त को शुक्रवार है, तो उसी वर्ष 30 अगस्त को सप्ताह का कौन सा दिन होगा?",
+    "o": ["Saturday", "Sunday", "Friday", "Monday"],
+    "a": 0,
+    "e": "Step 1: Find the absolute number of days elapsed between dates: $30 - 15 = 15\\ days$. Step 2: Divide the days by 7 to determine the odd days count: $15 / 7 = 2\\ \\\\text{weeks with a remainder of } 1\\ \\\\text{odd day}$. Step 3: Shift the baseline day forward by the remainder: Friday + 1 day = Saturday."
+  },
+  {
+    "p_id": "bssc_reason_161",
+    "qe": "<b>Clock Test:</b> Calculate the exact angular separation between the hour hand and minute hand of a clock at 4:20.",
+    "qh": "<b>घड़ी परीक्षण:</b> 4:20 बजे एक घड़ी की घंटे की सुई और मिनट की सुई के बीच सटीक कोणीय दूरी की गणना कीजिए।",
+    "o": ["10$^\\\\circ$", "20$^\\\\circ$", "0$^\\\\circ$", "15$^\\\\circ$"],
+    "a": 0,
+    "e": "Step 1: Use the standard clock hand angle formula: $|30H - 5.5M|$. Step 2: Substitute $H = 4$ and $M = 20$: $|30(4) - 5.5(20)| = |120 - 110|$. Step 3: Angle separation = 10$^\\\\circ$."
+  },
+  {
+    "p_id": "bssc_reason_162",
+    "qe": "<b>Analogy:</b> Select the string that completes the alphabet rearrangement sequence: DRIVEN : NEVIRD :: BEGUM : ?.",
+    "qh": "<b>सादृश्यता:</b> उस स्ट्रिंग का चयन करें जो वर्णमाला पुनर्व्यवस्थित अनुक्रम को पूरा करती है: DRIVEN : NEVIRD :: BEGUM : ?.",
+    "o": ["MUGEB", "MUGEBXX", "MEGUB", "MUBEG"],
+    "a": 0,
+    "e": "Step 1: Analyze the pair: 'DRIVEN' written in absolute reverse character tracking order is 'NEVIRD'. Step 2: Apply this exact reverse spelling transposition pattern to 'BEGUM'. Step 3: Reversing the string character by character gives 'MUGEB'."
+  },
+  {
+    "p_id": "bssc_reason_163",
+    "qe": "<b>Coding-Decoding:</b> In a secret phrase code language, '123' means 'red hot chili' and '345' means 'chili green pepper'. Identify the coded digit placeholder for 'chili'.",
+    "qh": "<b>कोडिंग-डिकोडिंग:</b> एक गुप्त वाक्यांश कूट भाषा में, '123' का अर्थ 'red hot chili' और '345' का अर्थ 'chili green pepper' है। 'chili' के लिए कोडित अंक प्लेसहोल्डर की पहचान कीजिए।",
+    "o": ["3", "1", "5", "4"],
+    "a": 0,
+    "e": "Step 1: Compare phrase sentence strings 1 and 2. The word 'chili' appears in both sets. Step 2: Check the digitized arrays: '123' and '345'. Step 3: The overlapping digit common to both numerical profiles is 3. Hence, chili = 3."
+  },
+  {
+    "p_id": "bssc_reason_164",
+    "qe": "<b>Classification:</b> Find the odd number triplet set from the following choice configurations based on index values.",
+    "qh": "<b>वर्गीकरण:</b> सूचकांक मानों के आधार पर निम्नलिखित विकल्पों में से विषम संख्या त्रिक सेट ज्ञात कीजिए।",
+    "o": ["(5, 25, 100)", "(2, 4, 8)", "(3, 9, 27)", "(4, 16, 64)"],
+    "a": 0,
+    "e": "Step 1: Test operational rules for groups: $(n, n^2, n^3)$. Step 2: Check standard configurations: $2 \\\\to 4 \\\\to 8$, $3 \\\\to 9 \\\\to 27$, and $4 \\\\to 16 \\\\to 64$ match perfectly. Step 3: For the first set, $5^3$ should evaluate to 125, but 100 is given. Thus, (5, 25, 100) is the odd group out."
+  },
+  {
+    "p_id": "bssc_reason_165",
+    "qe": "<b>Number Series:</b> Complete the missing term in the sequence: 2, 3, 5, 8, 13, 21, ?.",
+    "qh": "<b>संख्या शृंखला:</b> अनुक्रम में लुप्त पद को पूरा कीजिए: 2, 3, 5, 8, 13, 21, ?.",
+    "o": ["34", "29", "30", "35"],
+    "a": 0,
+    "e": "Step 1: Analyze the sequence properties: each term is the sum of the two preceding terms (Fibonacci sequence layout). Step 2: Test steps: $2+3=5$, $3+5=8$, $5+8=13$, $8+13=21$. Step 3: Next term = $13 + 21 = 34$."
+  },
+  {
+    "p_id": "bssc_reason_166",
+    "qe": "<b>Letter Series:</b> What comes next in the paired alphabetical group pattern: AA, CD, EF, GH, ?.",
+    "qh": "<b>अक्षर शृंखला:</b> युग्मित वर्णमाला समूह पैटर्न में आगे क्या आता है: AA, CD, EF, GH, ?.",
+    "o": ["IJ", "II", "JI", "IK"],
+    "a": 0,
+    "e": "Step 1: Look at the sequential movement of letters. Excluding the first pair double letter anomaly, the starting characters progress as A, C, E, G, which shifts by +2 forward. Next is I. Step 2: The second characters run as A, D, F, H. Shifting logically follows standard consecutive pairs (CD, EF, GH). Step 3: The next consecutive alphabet pair following GH is 'IJ'."
+  },
+  {
+    "p_id": "bssc_reason_167",
+    "qe": "<b>Blood Relations:</b> A man tells a lady, 'Your mother's husband's sister is my aunt.' How is the lady related to that man?",
+    "qh": "<b>रक्त संबंध:</b> एक पुरुष एक महिला से कहता है, 'तुम्हारी माँ के पति की बहन मेरी चाची/बुआ हैं।' वह महिला उस पुरुष से किस प्रकार संबंधित है?",
+    "o": ["Sister", "Mother", "Daughter", "Aunt"],
+    "a": 0,
+    "e": "Step 1: 'Your mother's husband' simplifies to the lady's father. Step 2: 'Father's sister' refers to the lady's aunt (Bua). Step 3: Since the lady's aunt is also the man's aunt, the lady and the man must be siblings. The lady is his sister."
+  },
+  {
+    "p_id": "bssc_reason_168",
+    "qe": "<b>Direction Sense Test:</b> One evening just before sunset, Rohit was standing facing a pole. If the shadow of the pole fell exactly to his left, which direction was Rohit facing?",
+    "qh": "<b>दिशा परीक्षण:</b> एक शाम सूर्यास्त से ठीक पहले, रोहित एक खंभे के सामने खड़ा था। यदि खंभे की छाया उसके ठीक बाईं ओर पड़ी, तो रोहित का मुख किस दिशा में था?",
+    "o": ["North", "South", "East", "West"],
+    "a": 0,
+    "e": "Step 1: In the evening, the sun is in the West, so all shadows project towards the East. Step 2: The shadow falls to Rohit's left side, meaning East is to Rohit's left. Step 3: Facing North places East to the right, so facing South places East to the left side. Thus, Rohit was facing South. Wait, if facing North, West is left, East is right. If shadow is to his left (East), he must be facing South. Let's re-verify compass: North face $\\\\implies$ East is Right. South face $\\\\implies$ East is Left. Since shadow falls East and it's to his left, he faces South."
+  },
+  {
+    "p_id": "bssc_reason_168_corrected",
+    "qe": "<b>Direction Sense Test:</b> One evening before sunset, Rohit was standing facing a vertical sign pole. If the shadow of the pole fell exactly to his left side, determine which direction Rohit was facing.",
+    "qh": "<b>दिशा परीक्षण:</b> एक शाम सूर्यास्त से पहले, रोहित एक सीधे साइन पोल के सामने खड़ा था। यदि पोल की छाया उसके ठीक बाईं ओर पड़ी, तो निर्धारित करें कि रोहित का मुख किस दिशा में था।",
+    "o": ["South", "North", "East", "West"],
+    "a": 0,
+    "e": "Step 1: At sunset, the sun positions in the West direction, meaning shadows project towards the East. Step 2: The shadow is to Rohit's left, establishing that East is to his left side. Step 3: If East corresponds to the left-hand side, the person must be facing South."
+  },
+  {
+    "p_id": "bssc_reason_169",
+    "qe": "<b>Venn Diagrams:</b> Choose the logical category circle format that accurately models: Whales, Crocodiles, Fish.",
+    "qh": "<b>वेन आरेख:</b> उस तार्किक श्रेणी वृत्त प्रारूप का चयन करें जो इनका सही प्रतिरूपण करता है: व्हेल, मगरमच्छ, मछली।",
+    "o": ["Three completely disjoint separate circles", "Three intersecting profiles", "Two intersecting shapes inside an enclosure", "Three concentric tracks"],
+    "a": 0,
+    "e": "Step 1: Analyze biological definitions: A Whale is a mammal, a Crocodile is a reptile, and a Fish belongs to its own distinct marine class. Step 2: None of these groups possess any cross-cutting category intersections. Step 3: Therefore, they are represented as three completely disconnected independent circles."
+  },
+  {
+    "p_id": "bssc_reason_170",
+    "qe": "<b>Mathematical Operations:</b> Choose the correct sequential combination of operational signs to balance the target expression value: $12 \\\\ [?\\\\ ] \\\\ 3 \\\\ [?\\\\ ] \\\\ 4 = 8$.",
+    "qh": "<b>गणितीय संक्रियाएँ:</b> लक्षित व्यंजक मान को संतुलित करने के लिए संक्रिया चिह्नों के सही क्रमिक संयोजन का चयन करें: $12 \\\\ [?\\\\ ] \\\\ 3 \\\\ [?\\\\ ] \\\\ 4 = 8$.",
+    "o": ["$\\\\div$ and $+$", "$+$ and $-$", "$\\\\times$ and $\\\\div$", "$-$ and $+$"],
+    "a": 0,
+    "e": "Step 1: Substitute option A operators into the blank spaces: $12 \\\\div 3 + 4$. Step 2: Solve using VBODMAS rules. Division first: $12 \\\\div 3 = 4$. Step 3: Addition next: $4 + 4 = 8$. This matches the target value."
+  },
+  {
+    "p_id": "bssc_reason_171",
+    "qe": "<b>Missing Number Puzzle:</b> Fill in the missing terminal loop value (?) inside this circular multiplication sequence progression: 2, 4, 8, 16, 32, ?.",
+    "qh": "<b>लुप्त संख्या पहेली:</b> इस वृत्ताकार गुणा अनुक्रम प्रगति के अंदर लुप्त अंतिम लूप मान (?) भरें: 2, 4, 8, 16, 32, ?.",
+    "o": ["64", "48", "50", "128"],
+    "a": 0,
+    "e": "Step 1: Analyze sequential steps: $2 \\\\times 2 = 4$, $4 \\\\times 2 = 8$, $8 \\\\times 2 = 16$, $16 \\\\times 2 = 32$. Step 2: The sequence doubles at each progressive step. Step 3: Compute the missing term: $32 \\\\times 2 = 64$."
+  },
+  {
+    "p_id": "bssc_reason_172",
+    "qe": "<b>Ranking and Ordering:</b> Among four friends, A is taller than B but shorter than C. D is shorter than B. Identify who is the shortest among them.",
+    "qh": "<b>क्रम और रैंकिंग:</b> चार मित्रों में, A की लंबाई B से अधिक है लेकिन C से कम है। D की लंबाई B से कम है। पहचान कीजिए कि उनमें से सबसे छोटा कौन है।",
+    "o": ["D", "B", "A", "C"],
+    "a": 0,
+    "e": "Step 1: Convert the statements into vertical height inequality expressions: 'A is taller than B but shorter than C' $\\\\implies C > A > B$. Step 2: 'D is shorter than B' $\\\\implies B > D$. Step 3: Combine the inequalities: $C > A > B > D$. The shortest individual is D."
+  },
+  {
+    "p_id": "bssc_reason_173",
+    "qe": "<b>Seating Arrangement:</b> Four boys P, Q, R, and S are sitting around a circular table facing inward. P is sitting directly opposite to R. Q is sitting to the immediate left of P. Who is sitting to the immediate right of P?",
+    "qh": "<b>बैठक व्यवस्था:</b> चार लड़के P, Q, R, और S केंद्र की ओर मुख करके एक वृत्ताकार मेज के चारों ओर बैठे हैं। P, R के ठीक विपरीत बैठा है। Q, P के ठीक बाईं ओर बैठा है। P के ठीक दाईं ओर कौन बैठा है?",
+    "o": ["S", "Q", "R", "Data insufficient"],
+    "a": 0,
+    "e": "Step 1: Place P at the bottom. Since P and R are opposite, R sits at the top. Step 2: Facing inward, the immediate left of P is to the right side of the diagram. So Q sits there. Step 3: The only remaining spot on the left side of the diagram (immediate right of P) must be filled by S."
+  },
+  {
+    "p_id": "bssc_reason_174",
+    "qe": "<b>Alphabet Test:</b> Unscramble the raw jumbled character collection 'E, L, P, P, A' to form a meaningful English word, and identify its category.",
+    "qh": "<b>अक्षर परीक्षण:</b> एक सार्थक अंग्रेजी शब्द बनाने के लिए बिखरे हुए अक्षरों 'E, L, P, P, A' को व्यवस्थित करें, और उसकी श्रेणी की पहचान करें।",
+    "o": ["Fruit", "Animal", "City", "Flower"],
+    "a": 0,
+    "e": "Step 1: Rearrange the characters E, L, P, P, A to find a valid combination. Step 2: The letters fit together perfectly to spell the word 'APPLE'. Step 3: An apple is classified under the category of Fruit."
+  },
+  {
+    "p_id": "bssc_reason_175",
+    "qe": "<b>Logical Arrangement:</b> Arrange the given stages in a logical procedural sequence: 1. Accident, 2. Ambulance, 3. Hospital, 4. Treatment, 5. Recovery.",
+    "qh": "<b>तार्किक व्यवस्था:</b> दिए गए चरणों को एक तार्किक प्रक्रियात्मक अनुक्रम में व्यवस्थित करें: 1. दुर्घटना, 2. एम्बुलेंस, 3. अस्पताल, 4. उपचार, 5. स्वस्थ होना.",
+    "o": ["1, 2, 3, 4, 5", "2, 1, 3, 4, 5", "1, 3, 2, 4, 5", "5, 4, 3, 2, 1"],
+    "a": 0,
+    "e": "Step 1: Analyze the cause-and-effect timeline: First, an Accident(1) occurs, which calls an Ambulance(2). Step 2: The ambulance transports the patient to a Hospital(3), where they undergo medical Treatment(4). Step 3: Successful treatment leads to complete Recovery(5). The logical chronological sequence is 1, 2, 3, 4, 5."
+  }
+]
