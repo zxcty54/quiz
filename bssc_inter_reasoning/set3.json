@@ -5,7 +5,7 @@
     "qh": "<b>सादृश्यता:</b> उस विकल्प का चयन कीजिए जो दिखाए गए समान तार्किक संबंध को साझा करता है: $8 : 81 :: 64 : ?$.",
     "o": ["625", "512", "125", "729"],
     "a": 0,
-    "e": "Step 1: Analyze the first pair: $8 = 2^3$ and $81 = 3^4$. The logic is $n^3 : (n+1)^4$. Step 2: Apply the same logic to the second pair: $64 = 4^3$. The next term must be $(4+1)^4 = 5^4$. Step 3: Calculate $5^4 = 5 \\\\times 5 \\\\times 5 \\\\times 5 = 625$."
+    "e": "Step 1: Analyze the first pair: $8 = 2^3$ and $81 = 3^4$. The logic is $n^3 : (n+1)^4$. Step 2: Apply the same logic to the second pair: $64 = 4^3$. The next term must be $(4+1)^4 = 5^4$. Step 3: Calculate $5^4 = 5 \\times 5 \\times 5 \\times 5 = 625$."
   },
   {
     "p_id": "bssc_reason_072",
@@ -65,11 +65,11 @@
   },
   {
     "p_id": "bssc_reason_079",
-    "qe": "<b>Mathematical Operations:</b> If '+' means '$\\\\times$', '-' means '$+$', '$\\\\times$' means '$\\\\div$', and '$\\\\div$' means '-', find the value of the expression: $15 \\\\times 3 - 4 + 2 \\\\div 6$.",
-    "qh": "<b>गणितीय संक्रियाएँ:</b> यदि '+' का अर्थ '$\\\\times$', '-' का अर्थ '$+$', '$\\\\times$' का अर्थ '$\\\\div$', और '$\\\\div$' का अर्थ '-' है, तो व्यंजक का मान ज्ञात कीजिए: $15 \\\\times 3 - 4 + 2 \\\\div 6$.",
+    "qe": "<b>Mathematical Operations:</b> If '+' means '$\\times$', '-' means '$+$', '$\\times$' means '$\\div$', and '$\\div$' means '-', find the value of the expression: $15 \\times 3 - 4 + 2 \\div 6$.",
+    "qh": "<b>गणितीय संक्रियाएँ:</b> यदि '+' का अर्थ '$\\times$', '-' का अर्थ '$+$', '$\\times$' का अर्थ '$\\div$', और '$\\div$' का अर्थ '-' है, तो व्यंजक का मान ज्ञात कीजिए: $15 \\times 3 - 4 + 2 \\div 6$.",
     "o": ["7", "9", "12", "5"],
     "a": 0,
-    "e": "Step 1: Substitute the signs as instructed: $15 \\\\div 3 + 4 \\\\times 2 - 6$. Step 2: Apply VBODMAS rule: Division first: $15 \\\\div 3 = 5$. Multiplication next: $4 \\\\times 2 = 8$. Expression becomes $5 + 8 - 6$. Step 3: Solve final layout: $13 - 6 = 7$."
+    "e": "Step 1: Substitute the signs as instructed: $15 \\div 3 + 4 \\times 2 - 6$. Step 2: Apply VBODMAS rule: Division first: $15 \\div 3 = 5$. Multiplication next: $4 \\times 2 = 8$. Expression becomes $5 + 8 - 6$. Step 3: Solve final layout: $13 - 6 = 7$."
   },
   {
     "p_id": "bssc_reason_080",
@@ -77,7 +77,7 @@
     "qh": "<b>लुप्त संख्या पहेली:</b> दिए गए मैट्रिक्स अनुक्रम से लुप्त तत्व का निर्धारण करें:\n| 3 | 5 | 15 |\n| 2 | 4 | 8 |\n| 5 | 6 | ? |",
     "o": ["30", "11", "25", "36"],
     "a": 0,
-    "e": "Step 1: Analyze row logic: Row 1: $3 \\\\times 5 = 15$. Row 2: $2 \\\\times 4 = 8$. Step 2: The pattern is $Col_1 \\\\times Col_2 = Col_3$. Step 3: Apply to Row 3: $5 \\\\times 6 = 30$."
+    "e": "Step 1: Analyze row logic: Row 1: $3 \\times 5 = 15$. Row 2: $2 \\times 4 = 8$. Step 2: The pattern is $Col_1 \\times Col_2 = Col_3$. Step 3: Apply to Row 3: $5 \\times 6 = 30$."
   },
   {
     "p_id": "bssc_reason_081",
@@ -93,7 +93,7 @@
     "qh": "<b>क्रम और रैंकिंग:</b> छात्रों की एक कतार में, अमित बाएं छोर से 11वें स्थान पर है और दीपक दाएं छोर से 9वें स्थान पर है। यदि वे अपने स्थानों को आपस में बदलते हैं, तो अमित बाएं छोर से 18वें स्थान पर हो जाता है। कतार में छात्रों की कुल संख्या ज्ञात कीजिए।",
     "o": ["26", "27", "25", "28"],
     "a": 0,
-    "e": "Step 1: After interchanging, Amit is at Deepak's original position, which is known to be 9th from the right end. Step 2: Amit's new position from the left end is given as 18th. Step 3: Total number of students = $\\\\text{Left position} + \\\\text{Right position} - 1 = 18 + 9 - 1 = 26$."
+    "e": "Step 1: After interchanging, Amit is at Deepak's original position, which is known to be 9th from the right end. Step 2: Amit's new position from the left end is given as 18th. Step 3: Total number of students = $\\text{Left position} + \\text{Right position} - 1 = 18 + 9 - 1 = 26$."
   },
   {
     "p_id": "bssc_reason_083",
@@ -125,7 +125,7 @@
     "qh": "<b>सादृश्यता:</b> संबंध अनुक्रम को पूरा कीजिए: $7 : 56 :: 9 : ?$.",
     "o": ["90", "81", "72", "99"],
     "a": 0,
-    "e": "Step 1: Analyze the first pair: $7 \\\\times (7 + 1) = 7 \\\\times 8 = 56$. The logic pattern is $n \\\\times (n + 1)$. Step 2: Apply to the second pair: $9 \\\\times (9 + 1) = 9 \\\\times 10$. Step 3: Result evaluates to 90."
+    "e": "Step 1: Analyze the first pair: $7 \\times (7 + 1) = 7 \\times 8 = 56$. The logic pattern is $n \\times (n + 1)$. Step 2: Apply to the second pair: $9 \\times (9 + 1) = 9 \\times 10$. Step 3: Result evaluates to 90."
   },
   {
     "p_id": "bssc_reason_087",
@@ -185,8 +185,8 @@
   },
   {
     "p_id": "bssc_reason_094",
-    "qe": "<b>Mathematical Operations:</b> If system elements satisfy $A=1, B=2, C=3, \\\\dots$, find the sum value of the word layout 'CAB'.",
-    "qh": "<b>गणितीय संक्रियाएँ:</b> यदि प्रणाली के तत्व $A=1, B=2, C=3, \\\\dots$ को संतुष्ट करते हैं, तो 'CAB' शब्द का योग मान ज्ञात कीजिए।",
+    "qe": "<b>Mathematical Operations:</b> If system elements satisfy $A=1, B=2, C=3, \\dots$, find the sum value of the word layout 'CAB'.",
+    "qh": "<b>गणितीय संक्रियाएँ:</b> यदि प्रणाली के तत्व $A=1, B=2, C=3, \\dots$ को संतुष्ट करते हैं, तो 'CAB' शब्द का योग मान ज्ञात कीजिए।",
     "o": ["6", "5", "7", "8"],
     "a": 0,
     "e": "Step 1: Find positional alphabet integer values: C=3, A=1, B=2. Step 2: Add values together: $3 + 1 + 2 = 6$. Step 3: The outcome is 6."
@@ -213,7 +213,7 @@
     "qh": "<b>क्रम और रैंकिंग:</b> 50 छात्रों के एक समूह वर्ग विन्यास में, अमित का स्थान शीर्ष से 20वां है। नीचे से मापी गई उसकी स्थिति रैंक क्या है?",
     "o": ["31st", "30th", "32nd", "29th"],
     "a": 0,
-    "e": "Step 1: Use rank mapping formula: $\\\\text{Rank from bottom} = \\\\text{Total items} - \\\\text{Rank from top} + 1$. Step 2: Substitute given values: $50 - 20 + 1$. Step 3: $30 + 1 = 31$st."
+    "e": "Step 1: Use rank mapping formula: $\\text{Rank from bottom} = \\text{Total items} - \\text{Rank from top} + 1$. Step 2: Substitute given values: $50 - 20 + 1$. Step 3: $30 + 1 = 31$st."
   },
   {
     "p_id": "bssc_reason_098",
@@ -241,11 +241,11 @@
   },
   {
     "p_id": "bssc_reason_101",
-    "qe": "<b>Non-Verbal (Series Completion):</b> An arrow inside a circle rotates $45^\\\\circ$ clockwise in each successive step. If it points North-East in the 3rd step, which direction did it point in the 1st step?",
-    "qh": "<b>गैर-मौखिक (शृंखला पूर्ति):</b> एक वृत्त के अंदर एक तीर प्रत्येक क्रमिक चरण में $45^\\\\circ$ दक्षिणावर्त घूमता है। यदि यह तीसरे चरण में उत्तर-पूर्व की ओर इशारा करता है, तो यह पहले चरण में किस दिशा में था?",
+    "qe": "<b>Non-Verbal (Series Completion):</b> An arrow inside a circle rotates $45^\\circ$ clockwise in each successive step. If it points North-East in the 3rd step, which direction did it point in the 1st step?",
+    "qh": "<b>गैर-मौखिक (शृंखला पूर्ति):</b> एक वृत्त के अंदर एक तीर प्रत्येक क्रमिक चरण में $45^\\circ$ दक्षिणावर्त घूमता है। यदि यह तीसरे चरण में उत्तर-पूर्व की ओर इशारा करता है, तो यह पहले चरण में किस दिशा में था?",
     "o": ["North", "North-West", "East", "West"],
     "a": 0,
-    "e": "Step 1: The arrow rotates $+45^\\\\circ$ (clockwise) at each step. Step 2: To backtrack from step 3 to step 1, subtract $45^\\\\circ \\\\times 2 = 90^\\\\circ$ (counter-clockwise move). Step 3: Turning $90^\\\\circ$ counter-clockwise from North-East points to North-West."
+    "e": "Step 1: The arrow rotates $+45^\\circ$ (clockwise) at each step. Step 2: To backtrack from step 3 to step 1, subtract $45^\\circ \\times 2 = 90^\\circ$ (counter-clockwise move). Step 3: Turning $90^\\circ$ counter-clockwise from North-East points to North-West."
   },
   {
     "p_id": "bssc_reason_102",
