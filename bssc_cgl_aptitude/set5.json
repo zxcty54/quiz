@@ -1,0 +1,282 @@
+[
+  {
+    "p_id": "bssc_cgl_mains_q01",
+    "qe": "<b>Time and Work:</b> A can do 1/4 of a work in 5 days, B can do 40% of the same work in 10 days, and C can do 1/3 of the work in 8 days. Who will complete the work first?",
+    "qh": "<b>समय और कार्य:</b> A एक कार्य का 1/4 भाग 5 दिनों में कर सकता है, B उसी कार्य का 40% भाग 10 दिनों में कर सकता है, और C उसी कार्य का 1/3 भाग 8 दिनों में कर सकता है। कार्य को सबसे पहले कौन पूरा करेगा?",
+    "o": ["A", "B", "C", "A and B both"],
+    "a": 0,
+    "e": "A takes 5 * 4 = 20 days. B takes 10 * (100/40) = 25 days. C takes 8 * 3 = 24 days. A completes the work first."
+  },
+  {
+    "p_id": "bssc_cgl_mains_q02",
+    "qe": "<b>Number Puzzle:</b> A pen costs Rs. 14 each and a notebook costs Rs. 5 each. Rohan spends exactly Rs. 43 on these items. Find the number of pens purchased.",
+    "qh": "<b>संख्या पहेली:</b> एक पेन की कीमत ₹14 है और एक नोटबुक की कीमत ₹5 है। रोहन इन वस्तुओं पर ठीक ₹43 खर्च करता है। खरीदे गए पेन की संख्या ज्ञात कीजिए।",
+    "o": ["1", "2", "3", "4"],
+    "a": 1,
+    "e": "Let x be pens and y be notebooks. 14x + 5y = 43. For x = 2, 14(2) + 5y = 43 => 28 + 5y = 43 => 5y = 15 => y = 3. Thus, 2 pens were purchased."
+  },
+  {
+    "p_id": "bssc_cgl_mains_q03",
+    "qe": "<b>Number System:</b> If the sum of two numbers is 24 and their product is 135, then find the absolute difference between the numbers.",
+    "qh": "<b>संख्या पद्धति:</b> यदि दो संख्याओं का योग 24 है और उनका गुणनफल 135 है, तो संख्याओं के बीच का पूर्ण अंतर ज्ञात कीजिए।",
+    "o": ["4", "6", "5", "3"],
+    "a": 1,
+    "e": "Using the identity (a-b)^2 = (a+b)^2 - 4ab: (24)^2 - 4(135) = 576 - 540 = 36. Absolute difference = sqrt(36) = 6."
+  },
+  {
+    "p_id": "bssc_cgl_mains_q04",
+    "qe": "<b>Algebraic Identity:</b> If (55)^2 - (45)^2 = 25Z, then find the value of Z.",
+    "qh": "<b>बीजगणितीय पहचान:</b> यदि (55)^2 - (45)^2 = 25Z है, तो Z का मान ज्ञात कीजिए।",
+    "o": ["40", "36", "50", "44"],
+    "a": 0,
+    "e": "Using a^2 - b^2 = (a-b)(a+b), we get (55-45)(55+45) = 10 * 100 = 1000. Since 25Z = 1000, Z = 1000 / 25 = 40."
+  },
+  {
+    "p_id": "bssc_cgl_mains_q05",
+    "qe": "<b>LCM & HCF:</b> Find the smallest number which when divided by 20, 30 and 45 leaves a remainder of 7 in each case.",
+    "qh": "<b>लघुत्तम समापवर्त्य (LCM):</b> वह छोटी से छोटी संख्या ज्ञात कीजिए जिसे 20, 30 और 45 से विभाजित करने पर प्रत्येक स्थिति में 7 शेषफल बचे।",
+    "o": ["187", "173", "197", "180"],
+    "a": 0,
+    "e": "The LCM of 20, 30, and 45 is 180. Required number = LCM + Remainder = 180 + 7 = 187."
+  },
+  {
+    "p_id": "bssc_cgl_mains_q06",
+    "qe": "<b>Exponents Ratio:</b> The ratio of $9^{3.5} : 3^5$ is same as:",
+    "qh": "<b>घातांक अनुपात:</b> $9^{3.5} : 3^5$ का अनुपात किसके समान है?",
+    "o": ["3:1", "9:1", "2:1", "4:1"],
+    "a": 1,
+    "e": "$9^{3.5}$ can be written as $(3^2)^{3.5} = 3^7$. The ratio becomes $3^7 : 3^5 = 3^{7-5} : 1 = 3^2 : 1 = 9:1$."
+  },
+  {
+    "p_id": "bssc_cgl_mains_q07",
+    "qe": "<b>Average & Ratio:</b> The number of students in each section of a class is 24. After admitting new students, 3 new sections were started. Now, the total number of sections is 12 and there are 20 students in each section. The number of new students admitted is:",
+    "qh": "<b>औसत और अनुपात:</b> एक कक्षा के प्रत्येक अनुभाग में छात्रों की संख्या 24 है। नए छात्रों को प्रवेश देने के बाद, 3 नए अनुभाग शुरू किए गए। अब, अनुभागों की कुल संख्या 12 है और प्रत्येक अनुभाग में 20 छात्र हैं। प्रवेश पाने वाले नए छात्रों की संख्या है:",
+    "o": ["24", "18", "16", "20"],
+    "a": 0,
+    "e": "Original sections = 12 - 3 = 9 sections. Original students = 9 * 24 = 216. New total students = 12 * 20 = 240. New students admitted = 240 - 216 = 24."
+  },
+  {
+    "p_id": "bssc_cgl_mains_q08",
+    "qe": "<b>Average:</b> Find the average of all the natural numbers less than 120.",
+    "qh": "<b>औसत:</b> 120 से कम की सभी प्राकृतिक संख्याओं का औसत ज्ञात कीजिए।",
+    "o": ["60", "59.5", "60.5", "61"],
+    "a": 0,
+    "e": "Natural numbers less than 120 are from 1 to 119. Average of consecutive natural numbers = (First term + Last term) / 2 = (1 + 119) / 2 = 120 / 2 = 60."
+  },
+  {
+    "p_id": "bssc_cgl_mains_q09",
+    "qe": "<b>Simplification:</b> Find the value of: $1 + \\frac{1}{4 \\times 3} + \\frac{1}{4 \\times 3^2} + \\frac{1}{4 \\times 3^3}$",
+    "qh": "<b>सरलीकरण:</b> मान ज्ञात कीजिए: $1 + \\frac{1}{4 \\times 3} + \\frac{1}{4 \\times 3^2} + \\frac{1}{4 \\times 3^3}$",
+    "o": ["107/108", "121/108", "109/108", "115/108"],
+    "a": 1,
+    "e": "Taking the common denominator 108: $(108 + 9 + 3 + 1) / 108 = 121 / 108$."
+  },
+  {
+    "p_id": "bssc_cgl_mains_q10",
+    "qe": "<b>Percentage:</b> When 25% of a number is added to 45, the result is the number itself. Find the number.",
+    "qh": "<b>प्रतिशत:</b> जब किसी संख्या के 25% को 45 में जोड़ा जाता है, तो परिणाम वह संख्या स्वयं होती है। संख्या ज्ञात कीजिए।",
+    "o": ["55", "60", "65", "70"],
+    "a": 1,
+    "e": "Let the number be x. $0.25x + 45 = x \\Rightarrow x - 0.25x = 45 \\Rightarrow 0.75x = 45 \\Rightarrow x = 45 / 0.75 = 60$."
+  },
+  {
+    "p_id": "bssc_cgl_mains_q11",
+    "qe": "<b>Simplification:</b> $\\frac{4.004}{40.04} + \\frac{4004}{400.4}$ is equal to:",
+    "qh": "<b>सरलीकरण:</b> $\\frac{4.004}{40.04} + \\frac{4004}{400.4}$ किसके बराबर है?",
+    "o": ["1.01", "10.1", "10.01", "11.1"],
+    "a": 1,
+    "e": "$4.004 / 40.04 = 0.1$ and $4004 / 400.4 = 10$. Adding them gives $10 + 0.1 = 10.1$."
+  },
+  {
+    "p_id": "bssc_cgl_mains_q12",
+    "qe": "<b>Mixture and Alligation:</b> Three solutions have milk and water in the ratio (1:1), (2:1), and (3:1) respectively. If they are mixed in the ratio 1:2:1, find the ratio of milk and water in the final mixture.",
+    "qh": "<b>मिश्रण और एलीगेशन:</b> तीन विलयनों में दूध और पानी का अनुपात क्रमशः (1:1), (2:1), और (3:1) है। यदि उन्हें 1:2:1 के अनुपात में मिलाया जाता है, तो अंतिम मिश्रण में दूध और पानी का अनुपात ज्ञात कीजिए।",
+    "o": ["31:17", "17:31", "29:19", "19:29"],
+    "a": 0,
+    "e": "Total Milk = $1 \\times (1/2) + 2 \\times (2/3) + 1 \\times (3/4) = 31/12$. Total Water = $1 \\times (1/2) + 2 \\times (1/3) + 1 \\times (1/4) = 17/12$. Ratio = 31:17."
+  },
+  {
+    "p_id": "bssc_cgl_mains_q13",
+    "qe": "<b>Profit and Loss:</b> Find the selling price when the Cost Price (CP) = Rs. 48.60 and Gain% = 10%.",
+    "qh": "<b>लाभ और हानि:</b> विक्रय मूल्य (SP) ज्ञात कीजिए जब क्रय मूल्य (CP) = ₹48.60 और लाभ% = 10% हो।",
+    "o": ["Rs. 53.46", "Rs. 52.80", "Rs. 54.26", "Rs. 53.06"],
+    "a": 0,
+    "e": "Selling Price (SP) = $CP \\times (100 + Gain\\%) / 100 = 48.60 \\times 110 / 100 = Rs. 53.46$."
+  },
+  {
+    "p_id": "bssc_cgl_mains_q14",
+    "qe": "<b>LCM & HCF:</b> Find the L.C.M. of $5^4, 5^9, \\text{ and } 5^{13}$.",
+    "qh": "<b>LCM और HCF:</b> $5^4, 5^9, \\text{ और } 5^{13}$ का लघुत्तम समापवर्त्य (L.C.M.) ज्ञात कीजिए।",
+    "o": ["5^4", "5^9", "5^{13}", "5^{26}"],
+    "a": 2,
+    "e": "For base numbers with exponents, the LCM is the base raised to the highest power. Therefore, LCM of $5^4, 5^9, \\text{ and } 5^{13}$ is $5^{13}$."
+  },
+  {
+    "p_id": "bssc_cgl_mains_q15",
+    "qe": "<b>Arithmetic Progression:</b> Find the 15th term of the A.P. $\\sqrt{3}, 3\\sqrt{3}, 5\\sqrt{3}, \\dots$",
+    "qh": "<b>समांतर श्रेणी (AP):</b> समांतर श्रेणी $\\sqrt{3}, 3\\sqrt{3}, 5\\sqrt{3}, \\dots$ का 15वां पद ज्ञात कीजिए।",
+    "o": ["29\\sqrt{3}", "31\\sqrt{3}", "27\\sqrt{3}", "30\\sqrt{3}"],
+    "a": 0,
+    "e": "First term $a = \\sqrt{3}$, common difference $d = 2\\sqrt{3}$. 15th term = $a + (15-1)d = \\sqrt{3} + 14(2\\sqrt{3}) = \\sqrt{3} + 28\\sqrt{3} = 29\\sqrt{3}$."
+  },
+  {
+    "p_id": "bssc_cgl_mains_q16",
+    "qe": "<b>Number System:</b> What is the remainder when $1522 \\times 1524 \\times 1526$ is divided by 12?",
+    "qh": "<b>संख्या पद्धति:</b> जब $1522 \\times 1524 \\times 1526$ को 12 से विभाजित किया जाता है, तो शेषफल क्या होगा?",
+    "o": ["0", "4", "2", "6"],
+    "a": 0,
+    "e": "1524 is completely divisible by 12 ($1524 / 12 = 127$). Since one of the terms in the product has a remainder of 0, the remainder of the entire product is 0."
+  },
+  {
+    "p_id": "bssc_cgl_mains_q17",
+    "qe": "<b>Percentage Change:</b> The radius of a circle is increased by 4%. What is the percentage increase in its area?",
+    "qh": "<b>प्रतिशत परिवर्तन:</b> एक वृत्त की त्रिज्या में 4% की वृद्धि की जाती है। इसके क्षेत्रफल में कितने प्रतिशत की वृद्धि होगी?",
+    "o": ["8%", "8.16%", "16%", "16.16%"],
+    "a": 1,
+    "e": "Percentage increase in area = $x + y + (xy/100) = 4 + 4 + (4 \\times 4/100) = 8 + 0.16 = 8.16\\%$."
+  },
+  {
+    "p_id": "bssc_cgl_mains_q18",
+    "qe": "<b>Average:</b> The average of 4, 6, 8, and x is 7, and the average of 12, 14, x, and y is 13. Find the value of y.",
+    "qh": "<b>औसत:</b> 4, 6, 8, और x का औसत 7 है, और 12, 14, x, और y का औसत 13 है। y का मान ज्ञात कीजिए।",
+    "o": ["14", "16", "15", "13"],
+    "a": 1,
+    "e": "From the first condition: $(4+6+8+x)/4 = 7 \\Rightarrow 18+x = 28 \\Rightarrow x = 10$. From the second condition: $(12+14+10+y)/4 = 13 \\Rightarrow 36+y = 52 \\Rightarrow y = 16$."
+  },
+  {
+    "p_id": "bssc_cgl_mains_q19",
+    "qe": "<b>Ratio and Proportion:</b> If $9x^2 - 24xy + 16y^2 = 0$, then find the ratio x : y.",
+    "qh": "<b>अनुपात और समानुपात:</b> यदि $9x^2 - 24xy + 16y^2 = 0$ है, तो अनुपात x : y ज्ञात कीजिए।",
+    "o": ["4:3", "3:4", "2:3", "3:2"],
+    "a": 0,
+    "e": "The expression can be factored as $(3x - 4y)^2 = 0 \\Rightarrow 3x - 4y = 0 \\Rightarrow 3x = 4y \\Rightarrow x : y = 4 : 3$."
+  },
+  {
+    "p_id": "bssc_cgl_mains_q20",
+    "qe": "<b>Profit and Loss:</b> A seller calculated his intended selling price at a 10% profit on the cost price. If the profit is reduced by Rs. 150, the profit percentage drops to 7.5%. What is the cost price of the product?",
+    "qh": "<b>लाभ और हानि:</b> एक विक्रेता ने क्रय मूल्य पर 10% लाभ मानकर अपने इच्छित विक्रय मूल्य की गणना की। यदि लाभ में ₹150 की कमी की जाती है, तो लाभ का प्रतिशत गिरकर 7.5% हो जाता है। उत्पाद का क्रय मूल्य क्या है?",
+    "o": ["Rs. 5000", "Rs. 6000", "Rs. 4500", "Rs. 5500"],
+    "a": 1,
+    "e": "The reduction in profit percentage = $10\\% - 7.5\\% = 2.5\\%$. Given, $2.5\\%$ of CP = Rs. 150 $\\Rightarrow CP = (150 / 2.5) \\times 100 = Rs. 6000$."
+  },
+  {
+    "p_id": "bssc_cgl_mains_q21",
+    "qe": "<b>Number System:</b> The difference between two numbers is 480. If 6% of one number is equal to 10% of the other number, find the larger number.",
+    "qh": "<b>संख्या पद्धति:</b> दो संख्याओं का अंतर 480 है। यदि एक संख्या का 6% दूसरी संख्या के 10% के बराबर है, तो बड़ी संख्या ज्ञात कीजिए।",
+    "o": ["1200", "720", "1000", "800"],
+    "a": 0,
+    "e": "6% of A = 10% of B $\\Rightarrow A/B = 10/6 = 5/3$. Let numbers be 5x and 3x. Difference = $5x - 3x = 2x = 480 \\Rightarrow x = 240$. Larger number = $5 \\times 240 = 1200$."
+  },
+  {
+    "p_id": "bssc_cgl_mains_q22",
+    "qe": "<b>Fractions:</b> Which of the following is the largest fraction among $\\frac{5}{6}$, $\\frac{7}{8}$, $\\frac{11}{12}$, and $\\frac{3}{4}$?",
+    "qh": "<b>भिन्न:</b> निम्नलिखित में से कौन सी भिन्न $\\frac{5}{6}$, $\\frac{7}{8}$, $\\frac{11}{12}$, और $\\frac{3}{4}$ में सबसे बड़ी है?",
+    "o": ["5/6", "7/8", "11/12", "3/4"],
+    "a": 2,
+    "e": "Converting to decimals: 5/6 = 0.833, 7/8 = 0.875, 11/12 = 0.916, 3/4 = 0.75. Clearly, 11/12 is the largest."
+  },
+  {
+    "p_id": "bssc_cgl_mains_q23",
+    "qe": "<b>Algebra:</b> The sum of the squares of three numbers is 170, while the sum of their products taken two at a time is 157. Find the sum of these three numbers.",
+    "qh": "<b>बीजगणित:</b> तीन संख्याओं के वर्गों का योग 170 है, जबकि दो-दो करके उनके गुणनफलों का योग 157 है। इन तीनों संख्याओं का योग ज्ञात कीजिए।",
+    "o": ["22", "24", "20", "26"],
+    "a": 0,
+    "e": "Using the identity $(a+b+c)^2 = a^2+b^2+c^2 + 2(ab+bc+ca)$, we get $170 + 2(157) = 170 + 314 = 484$. The sum of numbers is $\\sqrt{484} = 22$."
+  },
+  {
+    "p_id": "bssc_cgl_mains_q24",
+    "qe": "<b>Pipes and Cisterns:</b> A pipe can fill a tank in 30 hours, but takes 10 hours more due to a leak in the bottom. In how many hours can the leak alone empty half of the completely filled tank?",
+    "qh": "<b>पाइप और टंकी:</b> एक पाइप एक टैंक को 30 घंटे में भर सकता है, लेकिन तल में रिसाव के कारण 10 घंटे अधिक लेता है। रिसाव अकेला पूरी तरह से भरे हुए टैंक का आधा भाग कितने घंटों में खाली कर सकता है?",
+    "o": ["60 hours", "40 hours", "50 hours", "120 hours"],
+    "a": 0,
+    "e": "Rate of the leak = $1/30 - 1/40 = 1/120$. The leak alone can empty the full tank in 120 hours. To empty half the tank, it takes $120 / 2 = 60$ hours."
+  },
+  {
+    "p_id": "bssc_cgl_mains_q25",
+    "qe": "<b>Simple Interest:</b> A person takes a loan of Rs. 500 at 10% simple interest per annum. He returns Rs. 150 at the end of the 1st year. How much should he pay at the end of the 2nd year to clear all his dues?",
+    "qh": "<b>साधारण ब्याज:</b> एक व्यक्ति ₹500 का ऋण 10% वार्षिक साधारण ब्याज पर लेता है। वह पहले वर्ष के अंत में ₹150 लौटाता है। अपने सभी बकाये को चुकाने के लिए उसे दूसरे वर्ष के अंत में कितना भुगतान करना चाहिए?",
+    "o": ["Rs. 440", "Rs. 400", "Rs. 385", "Rs. 410"],
+    "a": 0,
+    "e": "Amount at end of Year 1 = $500 + (500 \\times 10 / 100) = Rs. 550$. Paid Rs. 150, remaining principal balance = $550 - 150 = Rs. 400$. Amount at end of Year 2 = $400 + (400 \\times 10 / 100) = Rs. 440$."
+  },
+  {
+    "p_id": "bssc_cgl_mains_q26",
+    "qe": "<b>Fractions LCM:</b> Find the L.C.M. of $\\frac{3}{5}, \\frac{6}{7}, \\frac{9}{10}, \\text{ and } \\frac{12}{5}$.",
+    "qh": "<b>भिन्नों का LCM:</b> $\\frac{3}{5}, \\frac{6}{7}, \\frac{9}{10}, \\text{ और } \\frac{12}{5}$ का लघुत्तम समापवर्त्य (L.C.M.) ज्ञात कीजिए।",
+    "o": ["36", "36/5", "18/5", "12"],
+    "a": 0,
+    "e": "LCM of fractions = LCM of Numerators / HCF of Denominators. LCM of (3,6,9,12) = 36. HCF of (5,7,10,5) = 1. Hence, LCM = 36 / 1 = 36."
+  },
+  {
+    "p_id": "bssc_cgl_mains_q27",
+    "qe": "<b>Simple Interest:</b> At what percentage of simple interest per annum will Rs. 6000 amount to Rs. 7800 in 4 years?",
+    "qh": "<b>साधारण ब्याज:</b> किस वार्षिक साधारण ब्याज की दर से ₹6000 की राशि 4 वर्षों में ₹7800 हो जाएगी?",
+    "o": ["7.5%", "8%", "7%", "6.5%"],
+    "a": 0,
+    "e": "Total Simple Interest (SI) = $7800 - 6000 = Rs. 1800$. Rate = $(SI \\times 100) / (P \\times T) = (1800 \\times 100) / (6000 \\times 4) = 7.5\\%$."
+  },
+  {
+    "p_id": "bssc_cgl_mains_q28",
+    "qe": "<b>Number System:</b> If you write down all the numbers from 1 to 100, how many times do you write the digit 3?",
+    "qh": "<b>संख्या पद्धति:</b> यदि आप 1 से 100 तक की सभी संख्याएँ लिखते हैं, तो आप अंक 3 कितनी बार लिखेंगे?",
+    "o": ["11", "19", "20", "21"],
+    "a": 2,
+    "e": "The digit 3 appears 10 times as a unit digit (3, 13, 23...93) and 10 times as a tens digit (30, 31...39). Total count = 10 + 10 = 20 times."
+  },
+  {
+    "p_id": "bssc_cgl_mains_q29",
+    "qe": "<b>Partnership:</b> A and B invest in a business in the ratio 4 : 5. If A invests for 9 months and B invests for 6 months, find the ratio of their profits.",
+    "qh": "<b>साझेदारी:</b> A और B एक व्यवसाय में 4 : 5 के अनुपात में निवेश करते हैं। यदि A, 9 महीनों के लिए निवेश करता है और B, 6 महीनों के लिए निवेश करता है, तो उनके लाभ का अनुपात ज्ञात कीजिए।",
+    "o": ["6:5", "5:6", "4:5", "3:2"],
+    "a": 0,
+    "e": "Profit ratio = (Investment of A * Time of A) : (Investment of B * Time of B) = (4 * 9) : (5 * 6) = 36 : 30 = 6 : 5."
+  },
+  {
+    "p_id": "bssc_cgl_mains_q30",
+    "qe": "<b>Time and Distance:</b> Two trains of lengths 150 m and 170 m are running in opposite directions on parallel tracks with speeds of 42 km/h and 30 km/h respectively. Find the time taken to cross each other.",
+    "qh": "<b>समय और दूरी:</b> 150 मीटर और 170 मीटर लंबी दो ट्रेनें समानांतर पटरियों पर विपरीत दिशाओं में क्रमशः 42 किमी/घंटा और 30 किमी/घंटा की गति से चल रही हैं। उन्हें एक-दूसरे को पार करने में लगने वाला समय ज्ञात कीजिए।",
+    "o": ["16 seconds", "15 seconds", "18 seconds", "20 seconds"],
+    "a": 0,
+    "e": "Total distance = 150 + 170 = 320 m. Relative speed in opposite direction = 42 + 30 = 72 km/h = $72 \\times (5/18) = 20$ m/s. Time taken = 320 / 20 = 16 seconds."
+  },
+  {
+    "p_id": "bssc_cgl_mains_q31",
+    "qe": "<b>Divisibility:</b> For what least value of * is the number $538^{*}42$ completely divisible by 9?",
+    "qh": "<b>विभाज्यता:</b> * के किस न्यूनतम मान के लिए संख्या $538^{*}42$ पूरी तरह से 9 से विभाज्य है?",
+    "o": ["5", "6", "4", "7"],
+    "a": 0,
+    "e": "Sum of digits = $5 + 3 + 8 + * + 4 + 2 = 22 + *$. The nearest multiple of 9 greater than 22 is 27. Thus, * = 27 - 22 = 5."
+  },
+  {
+    "p_id": "bssc_cgl_mains_q32",
+    "qe": "<b>Boats and Streams:</b> A boat covers a distance of 24 km downstream in 2 hours and the same distance upstream in 4 hours. Find the speed of the boat in still water.",
+    "qh": "<b>नाव और धारा:</b> एक नाव धारा के अनुकूल 24 किमी की दूरी 2 घंटे में तय करती है और धारा के विपरीत समान दूरी 4 घंटे में तय करती है। शांत जल में नाव की गति ज्ञात कीजिए।",
+    "o": ["9 km/h", "8 km/h", "10 km/h", "6 km/h"],
+    "a": 0,
+    "e": "Downstream speed = 24 / 2 = 12 km/h. Upstream speed = 24 / 4 = 6 km/h. Speed in still water = (Downstream + Upstream) / 2 = (12 + 6) / 2 = 9 km/h."
+  },
+  {
+    "p_id": "bssc_cgl_mains_q33",
+    "qe": "<b>Problems on Ages:</b> 5 years ago, the ratio of the ages of a father and his son was 3 : 1. After 5 years, the ratio will become 2 : 1. Find the present age of the father.",
+    "qh": "<b>आयु संबंधी प्रश्न:</b> 5 वर्ष पहले, एक पिता और उसके पुत्र की आयु का अनुपात 3 : 1 था। 5 वर्ष बाद, यह अनुपात 2 : 1 हो जाएगा। पिता की वर्तमान आयु ज्ञात कीजिए।",
+    "o": ["35 years", "40 years", "45 years", "50 years"],
+    "a": 0,
+    "e": "Let their ages 5 years ago be 3x and x. Present ages are 3x+5 and x+5. After 5 years: $(3x+10)/(x+10) = 2/1 \\Rightarrow 3x+10 = 2x+20 \\Rightarrow x = 10$. Father's present age = $3(10) + 5 = 35$ years."
+  },
+  {
+    "p_id": "bssc_cgl_mains_q34",
+    "qe": "<b>Compound Interest:</b> Find the difference between the compound interest and simple interest on a sum of Rs. 4000 for 2 years at 5% per annum.",
+    "qh": "<b>चक्रवृद्धि ब्याज:</b> ₹4000 की राशि पर 2 वर्षों के लिए 5% वार्षिक दर से चक्रवृद्धि ब्याज और साधारण ब्याज के बीच का अंतर ज्ञात कीजिए।",
+    "o": ["Rs. 10", "Rs. 20", "Rs. 15", "Rs. 25"],
+    "a": 0,
+    "e": "Difference between CI and SI for 2 years = $P \\times (R/100)^2 = 4000 \\times (5/100)^2 = 4000 \\times (1/400) = Rs. 10$."
+  },
+  {
+    "p_id": "bssc_cgl_mains_q35",
+    "qe": "<b>Mensuration:</b> If the radius of a cylinder is doubled and its height is halved, find the ratio of the new volume to the original volume.",
+    "qh": "<b>क्षेत्रमिति:</b> यदि एक बेलन की त्रिज्या दोगुनी कर दी जाए और उसकी ऊंचाई आधी कर दी जाए, तो नए आयतन का मूल आयतन से अनुपात ज्ञात कीजिए।",
+    "o": ["2:1", "1:2", "4:1", "1:4"],
+    "a": 0,
+    "e": "Original Volume = $\\pi \\times r^2 \\times h$. New Volume = $\\pi \\times (2r)^2 \\times (h/2) = 2 \\times \\pi \\times r^2 \\times h$. The ratio of the new volume to the original volume is 2 : 1."
+  }
+]
