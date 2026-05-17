@@ -29,7 +29,7 @@
     "qh": "<b>संख्या शृंखला:</b> शृंखला में अगले तार्किक पद की पहचान कीजिए: 3, 5, 9, 17, 33, ?",
     "o": ["65", "66", "64", "67"],
     "a": 0,
-    "e": "Step 1: Check the ascending gaps: $3(+2)->5(+4)->9(+8)->17(+16)->33$. Step 2: The addition difference doubles at each step ($\\\\times 2$). The next gap must be $16 \\\\times 2 = 32$. Step 3: Next term = $33 + 32 = 65$."
+    "e": "Step 1: Check the ascending gaps: $3(+2)->5(+4)->9(+8)->17(+16)->33$. Step 2: The addition difference doubles at each step ($\\times 2$). The next gap must be $16 \\times 2 = 32$. Step 3: Next term = $33 + 32 = 65$."
   },
   {
     "p_id": "bssc_reason_110",
@@ -53,7 +53,7 @@
     "qh": "<b>दिशा परीक्षण:</b> दोपहर 3:00 बजे, एक घड़ी की मिनट की सुई पूर्व की ओर इशारा करती है। उसी समय घंटे की सुई किस दिशा की ओर इशारा करेगी?",
     "o": ["South", "North", "East", "West"],
     "a": 0,
-    "e": "Step 1: At 3:00 PM, the minute hand is at 12 (pointing straight up) and the hour hand is at 3 (pointing right). Step 2: If the minute hand (12 o'clock position) points East, then turning $90^\\\\circ$ clockwise (3 o'clock position) points South. Step 3: The hour hand points South."
+    "e": "Step 1: At 3:00 PM, the minute hand is at 12 (pointing straight up) and the hour hand is at 3 (pointing right). Step 2: If the minute hand (12 o'clock position) points East, then turning $90^\\circ$ clockwise (3 o'clock position) points South. Step 3: The hour hand points South."
   },
   {
     "p_id": "bssc_reason_113",
@@ -65,11 +65,11 @@
   },
   {
     "p_id": "bssc_reason_114",
-    "qe": "<b>Mathematical Operations:</b> If '$\\\\times$' denotes '$+$', '$-$' denotes '$\\\\div$', '$+$' denotes '$\\\\times$', and '$\\\\div$' denotes '$-$', evaluate: $14 - 2 \\\\times 6 + 2 \\\\div 5$.",
-    "qh": "<b>गणितीय संक्रियाएँ:</b> यदि '$\\\\times$' का अर्थ '$+$', '$-$' का अर्थ '$\\\\div$', '$+$' का अर्थ '$\\\\times$', और '$\\\\div$' का अर्थ '$-$' है, तो मान ज्ञात कीजिए: $14 - 2 \\\\times 6 + 2 \\\\div 5$।",
+    "qe": "<b>Mathematical Operations:</b> If '$\\times$' denotes '$+$', '$-$' denotes '$\\div$', '$+$' denotes '$\\times$', and '$\\div$' denotes '$-$', evaluate: $14 - 2 \\times 6 + 2 \\div 5$.",
+    "qh": "<b>गणितीय संक्रियाएँ:</b> यदि '$\\times$' का अर्थ '$+$', '$-$' का अर्थ '$\\div$', '$+$' का अर्थ '$\\times$', और '$\\div$' का अर्थ '$-$' है, तो मान ज्ञात कीजिए: $14 - 2 \\times 6 + 2 \\div 5$।",
     "o": ["14", "12", "16", "10"],
     "a": 0,
-    "e": "Step 1: Swap operators per instructions: $14 \\\\div 2 + 6 \\\\times 2 - 5$. Step 2: Solve division and multiplication: $7 + 12 - 5$. Step 3: $19 - 5 = 14$."
+    "e": "Step 1: Swap operators per instructions: $14 \\div 2 + 6 \\times 2 - 5$. Step 2: Solve division and multiplication: $7 + 12 - 5$. Step 3: $19 - 5 = 14$."
   },
   {
     "p_id": "bssc_reason_115",
@@ -93,7 +93,7 @@
     "qh": "<b>क्रम और रैंकिंग:</b> लड़कियों की एक कतार में, सीमा बाएं से 10वें और पिंकी दाएं से 12वें स्थान पर है। यदि वे आपस में स्थान बदलती हैं, तो सीमा बाएं से 15वें स्थान पर आ जाती है। कतार में कुल कितनी लड़कियां हैं?",
     "o": ["26", "27", "25", "28"],
     "a": 0,
-    "e": "Step 1: After changing positions, Seema occupies Pinky's original position which is 12th from the right. Step 2: Seema's position from the left is now 15th. Step 3: Total girls = $\\\\text{Left} + \\\\text{Right} - 1 = 15 + 12 - 1 = 26$."
+    "e": "Step 1: After changing positions, Seema occupies Pinky's original position which is 12th from the right. Step 2: Seema's position from the left is now 15th. Step 3: Total girls = $\\text{Left} + \\text{Right} - 1 = 15 + 12 - 1 = 26$."
   },
   {
     "p_id": "bssc_reason_118",
@@ -173,7 +173,7 @@
     "qh": "<b>वर्गीकरण:</b> निम्नलिखित विकल्पों में से विषम संख्यात्मक समूह ज्ञात कीजिए: (2, 4), (3, 9), (4, 16), (5, 20)।",
     "o": ["(5, 20)", "(2, 4)", "(3, 9)", "(4, 16)"],
     "a": 0,
-    "e": "Step 1: Check the operational link: $Col_2 = (Col_1)^2$. Step 2: $2^2=4$, $3^2=9$, $4^2=16$ match the pattern. Step 3: For the last group, $5^2 = 25 \\\\neq 20$. Therefore, (5, 20) is the odd group."
+    "e": "Step 1: Check the operational link: $Col_2 = (Col_1)^2$. Step 2: $2^2=4$, $3^2=9$, $4^2=16$ match the pattern. Step 3: For the last group, $5^2 = 25 \\neq 20$. Therefore, (5, 20) is the odd group."
   },
   {
     "p_id": "bssc_reason_128",
@@ -229,7 +229,7 @@
     "qh": "<b>लुप्त संख्या पहेली:</b> खाली स्थान संकेतक मान (?) भरें:\n| 2 | 4 |\n| 8 | ? |",
     "o": ["16", "12", "10", "14"],
     "a": 0,
-    "e": "Step 1: Check the geometric sequence logic: $2 \\\\times 2 = 4$, $4 \\\\times 2 = 8$. Step 2: The sequence multiplies by 2 at each step. Step 3: $8 \\\\times 2 = 16$."
+    "e": "Step 1: Check the geometric sequence logic: $2 \\times 2 = 4$, $4 \\times 2 = 8$. Step 2: The sequence multiplies by 2 at each step. Step 3: $8 \\times 2 = 16$."
   },
   {
     "p_id": "bssc_reason_135",
@@ -237,7 +237,7 @@
     "qh": "<b>अक्षर परीक्षण:</b> मानक अंग्रेजी वर्णमाला में बाएं छोर से 10वें अक्षर के दाईं ओर 5वां अक्षर कौन सा है?",
     "o": ["O", "N", "P", "M"],
     "a": 0,
-    "e": "Step 1: Position from left = $\\\\text{Initial Left Position} + \\\\text{Shift to Right}$. Step 2: Position = $10 + 5 = 15$. Step 3: The 15th letter of the alphabet is O."
+    "e": "Step 1: Position from left = $\\text{Initial Left Position} + \\text{Shift to Right}$. Step 2: Position = $10 + 5 = 15$. Step 3: The 15th letter of the alphabet is O."
   },
   {
     "p_id": "bssc_reason_136",
@@ -245,7 +245,7 @@
     "qh": "<b>क्रम और रैंकिंग:</b> 30 छात्रों की एक कक्षा में, रोहन का स्थान शीर्ष से 10वां है। नीचे से मापी गई उसकी स्थिति रैंक क्या है?",
     "o": ["21st", "20th", "19th", "22nd"],
     "a": 0,
-    "e": "Step 1: Use rank mapping formula: $\\\\text{Rank from bottom} = \\\\text{Total items} - \\\\text{Rank from top} + 1$. Step 2: Substitute values: $30 - 10 + 1$. Step 3: $20 + 1 = 21$st."
+    "e": "Step 1: Use rank mapping formula: $\\text{Rank from bottom} = \\text{Total items} - \\text{Rank from top} + 1$. Step 2: Substitute values: $30 - 10 + 1$. Step 3: $20 + 1 = 21$st."
   },
   {
     "p_id": "bssc_reason_137",
