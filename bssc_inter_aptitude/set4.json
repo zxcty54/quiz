@@ -119,29 +119,29 @@
     "a": 0,
     "e": "Step 1: Let son's present age be x, Father's age = 3x. Step 2: After 12 years: $3x + 12 = 2(x + 12) \\implies 3x + 12 = 2x + 24$. Step 3: $x = 12$. Father's age = $3 \\times 12 = 36\\ years$."
   },
-  {
-    "p_id": "bssc_math_086",
-    "qe": "<b>Science Numerical (Physics):</b> An electric appliance of resistance $440\\ \\Omega$ is connected across a 220V power line. Find the electric current flowing through the appliance.",
-    "qh": "<b>विज्ञान आंकिक (भौतिकी):</b> $440\\ \\Omega$ प्रतिरोध का एक विद्युत उपकरण 220V की पावर लाइन से जुड़ा है। उपकरण से प्रवाहित होने वाली विद्युत धारा ज्ञात कीजिए।",
-    "o": ["0.5 A", "2.0 A", "1.0 A", "0.25 A"],
+ {
+    "p_id": "bssc_math_179",
+    "qe": "<b>Ratio and Proportion:</b> Two numbers are in the ratio $3:4$. If their LCM is 120, find the sum of these two numbers.",
+    "qh": "<b>अनुपात और समानुपात:</b> दो संख्याएँ $3:4$ के अनुपात में हैं। यदि उनका LCM 120 है, तो इन दोनों संख्याओं का योग ज्ञात कीजिए।",
+    "o": ["70", "35", "140", "105"],
     "a": 0,
-    "e": "Step 1: Use Ohm's law: $I = \\frac{V}{R}$. Step 2: Substitute values: $I = \\frac{220}{440}$. Step 3: $I = \\frac{1}{2} = 0.5\\ A$."
+    "e": "Step 1: Let the numbers be $3x$ and $4x$. Their LCM will be $12x$. Step 2: Given $12x = 120 \\implies x = 10$. Step 3: Sum of the numbers = $3x + 4x = 7x = 7 \\times 10 = 70$."
   },
   {
-    "p_id": "bssc_math_087",
-    "qe": "<b>Science Numerical (Physics):</b> A sound wave has a frequency of 2 kHz and a wavelength of 35 cm. How long will it take to travel a distance of 1.4 km?",
-    "qh": "<b>विज्ञान आंकिक (भौतिकी):</b> एक ध्वनि तरंग की आवृत्ति 2 kHz और तरंगदैर्ध्य 35 सेमी है। इसे 1.4 किमी की दूरी तय करने में कितना समय लगेगा?",
-    "o": ["2 seconds", "4 seconds", "1 second", "3 seconds"],
+    "p_id": "bssc_math_180",
+    "qe": "<b>Algebra:</b> If $x - \\frac{1}{x} = 4$, find the value of $x^2 + \\frac{1}{x^2}$.",
+    "qh": "<b>बीजगणित:</b> यदि $x - \\frac{1}{x} = 4$ है, तो $x^2 + \\frac{1}{x^2}$ का मान ज्ञात कीजिए।",
+    "o": ["18", "14", "16", "20"],
     "a": 0,
-    "e": "Step 1: Find wave speed: $v = f \\times \\lambda = 2000\\ Hz \\times 0.35\\ m = 700\\ m/s$. Step 2: Total distance = $1.4\\ km = 1400\\ m$. Step 3: Time = $\\frac{\\text{Distance}}{\\text{Speed}} = \\frac{1400}{700} = 2\\ seconds$."
+    "e": "Step 1: Square both sides of the equation: $(x - \\frac{1}{x})^2 = 4^2$. Step 2: $x^2 + \\frac{1}{x^2} - 2 = 16$. Step 3: $x^2 + \\frac{1}{x^2} = 16 + 2 = 18$."
   },
   {
-    "p_id": "bssc_math_088",
-    "qe": "<b>Science Numerical (Chemistry):</b> A solution is prepared by dissolving 40 grams of common salt in 320 grams of water. Calculate the mass percentage concentration of the solution.",
-    "qh": "<b>विज्ञान आंकिक (रसायन विज्ञान):</b> 320 ग्राम पानी में 40 ग्राम साधारण नमक घोलकर एक विलयन तैयार किया जाता है। विलयन की द्रव्यमान प्रतिशत सांद्रता की गणना कीजिए।",
-    "o": ["11.11%", "12.5%", "10%", "15.2%"],
+    "p_id": "bssc_math_181",
+    "qe": "<b>Profit and Loss:</b> A reduction of 20% in the price of sugar enables a housewife to buy 5 kg more for Rs. 400. Find the reduced price of sugar per kg.",
+    "qh": "<b>लाभ और हानि:</b> चीनी की कीमत में 20% की कमी होने से एक गृहिणी ₹400 में 5 किग्रा अधिक चीनी खरीद सकती है। चीनी की घटी हुई कीमत प्रति किग्रा ज्ञात कीजिए।",
+    "o": ["Rs. 16", "Rs. 20", "Rs. 24", "Rs. 12"],
     "a": 0,
-    "e": "Step 1: Mass of solute = 40g, Mass of solvent = 320g. Total solution mass = $40 + 320 = 360g$. Step 2: Formula = $(\\frac{\\text{Mass of solute}}{\\text{Total mass of solution}}) \\times 100$. Step 3: Concentration = $\\frac{40}{360} \\times 100 = \\frac{100}{9} = 11.11\\%$."
+    "e": "Step 1: Money saved due to reduction = 20% of 400 = Rs. 80. Step 2: With this saved money (Rs. 80), she buys 5 kg more sugar. Step 3: Reduced price per kg = 80 / 5 = Rs. 16."
   },
   {
     "p_id": "bssc_math_089",
@@ -263,14 +263,7 @@
     "a": 0,
     "e": "Step 1: Let efficiency of B be 1 unit/day, then efficiency of A = 2 units/day. Step 2: Total work = Efficiency of B $\\times$ Days taken by B = $1 \\times 18 = 18$ units. Step 3: Days together = $\\frac{\\text{Total work}}{\\text{Combined efficiency}} = \\frac{18}{2 + 1} = \\frac{18}{3} = 6\\ days$."
   },
-  {
-    "p_id": "bssc_math_104",
-    "qe": "<b>Science Numerical (Physics):</b> A solid object weighs 60 N when measured on the surface of the Earth. What will be its approximate weight when measured on the surface of the Moon?",
-    "qh": "<b>विज्ञान आंकिक (भौतिकी):</b> पृथ्वी की सतह पर मापने पर एक ठोस वस्तु का वजन 60 N होता है। चंद्रमा की सतह पर मापने पर इसका अनुमानित वजन क्या होगा?",
-    "o": ["10 N", "60 N", "360 N", "0 N"],
-    "a": 0,
-    "e": "Step 1: Acceleration due to gravity on the moon is approximately $\\frac{1}{6}$-th of that on Earth. Step 2: $Weight_{Moon} = \\frac{Weight_{Earth}}{6}$. Step 3: Weight = $\\frac{60}{6} = 10\\ N$."
-  },
+  
   {
     "p_id": "bssc_math_105",
     "qe": "<b>Algebra:</b> If $a + b + c = 6$ and $a^2 + b^2 + c^2 = 14$, find the value of the expression $(ab + bc + ca)$.",
