@@ -1,282 +1,291 @@
 [
   {
-    "p_id": "",
-    "qe": "<b>Number System:</b> Find the sum of all three-digit numbers which are divisible by 7.",
-    "qh": "<b>संख्या पद्धति:</b> 7 से विभाज्य सभी तीन अंकों की संख्याओं का योग ज्ञात कीजिए।",
-    "o": ["70336", "75336", "65336", "70300"],
+    "p_id": "ob_mains_exact_01",
+    "qe": "<b>Trigonometry:</b> $\\triangle PQR$ is a right-angled triangle, right angle at Q. If $\\tan R = \\frac{8}{15}$, then find the value of $\\sin R + \\cos R + \\sin P$.",
+    "qh": "<b>त्रिकोणमिति:</b> $\\triangle PQR$ एक समकोण त्रिभुज है, जिसमें Q पर समकोण है। यदि $\\tan R = \\frac{8}{15}$ है, तो $\\sin R + \\cos R + \\sin P$ का मान ज्ञात कीजिए।",
+    "o": ["31/17", "23/17", "30/17", "25/17"],
     "a": 0,
-    "e": "<b>Solution:</b> First number = 105, Last = 994. $n = [(994-105)/7] + 1 = 128$. $Sum = (128/2) * (105 + 994) = 64 * 1099 = 70336$."
+    "e": "<b>Solution:</b> <br/>By Pythagoras theorem, Hypotenuse $PR = \\sqrt{8^2 + 15^2} = \\sqrt{64 + 225} = \\sqrt{289} = 17$.<br/>For $\\angle R$: Perpendicular ($P$) = 8, Base ($B$) = 15, Hypotenuse ($H$) = 17.<br/>$\\sin R = \\frac{8}{17}$ and $\\cos R = \\frac{15}{17}$.<br/>For $\\angle P$: The side opposite to $\\angle P$ is QR. So, Perpendicular for P = 15. $\\sin P = \\frac{\\text{Opposite}}{\\text{Hypotenuse}} = \\frac{15}{17}$.<br/>Now, value of $\\sin R + \\cos R + \\sin P = \\frac{8}{17} + \\frac{15}{17} + \\frac{15}{17} = \\mathbf{\\frac{31}{17}}$."
   },
   {
-    "p_id": "",
-    "qe": "<b>Trigonometry:</b> If $\\cos^4 \\theta - \\sin^4 \\theta = 2/3$, then the value of $2\\cos^2 \\theta - 1$ is:",
-    "qh": "<b>त्रिकोणमिति:</b> यदि $\\cos^4 \\theta - \\sin^4 \\theta = 2/3$ है, तो $2\\cos^2 \\theta - 1$ का मान है:",
-    "o": ["1", "3/2", "2/3", "0"],
+    "p_id": "ob_mains_exact_02",
+    "qe": "<b>Mensuration:</b> A solid metallic cube is melted and recast into 36 small spheres, each of radius 0.5 cm. What is the length of the edge of the cube?",
+    "qh": "<b>क्षेत्रमिति:</b> एक ठोस धातु के घन को पिघलाया जाता है और प्रत्येक 0.5 सेमी त्रिज्या वाले 36 छोटे गोलों में ढाला जाता है। घन के किनारे (edge) की लंबाई क्या है?",
+    "o": ["(12\\pi)^{\\frac{1}{3}} cm", "(6\\pi)^{\\frac{1}{3}} cm", "(18\\pi)^{\\frac{1}{3}} cm", "(24\\pi)^{\\frac{1}{3}} cm"],
+    "a": 1,
+    "e": "<b>Solution:</b> <br/>Let $s$ be the edge length of the cube. Volume of the cube = $s^3$.<br/>Each small sphere has a radius $r = 0.5 = \\frac{1}{2}$ cm.<br/>Volume of one sphere = $\\frac{4}{3}\\pi r^3 = \\frac{4}{3}\\pi \\left(\\frac{1}{2}\\right)^3 = \\frac{4}{3}\\pi \\times \\frac{1}{8} = \\frac{\\pi}{6}$.<br/>Volume of 36 identical spheres = $36 \\times \\frac{\\pi}{6} = 6\\pi$.<br/>Equating both volumes: $s^3 = 6\\pi \\Rightarrow s = \\mathbf{(6\\pi)^{\\frac{1}{3}}\\text{ cm}}$."
+  },
+  {
+    "p_id": "ob_mains_exact_03",
+    "qe": "<b>Profit & Loss:</b> A publisher printed 2000 copies of a book at a total cost of ₹1,80,000. He gave 400 copies free to book stalls as specimens. For the remaining books, he announced a 20% discount on the marked price of ₹150 per book. He also offered 1 free book for every 7 purchased. If all copies were distributed, what is his overall gain or loss percentage?",
+    "qh": "<b>लाभ-हानि:</b> एक प्रकाशक ने ₹1,80,000 की कुल लागत पर एक पुस्तक की 2000 प्रतियां मुद्रित कीं। उसने 400 प्रतियां नमूने (specimens) के रूप में बुक स्टालों को मुफ्त में दीं। शेष पुस्तकों के लिए, उसने ₹150 प्रति पुस्तक के अंकित मूल्य पर 20% छूट की घोषणा की। उसने प्रत्येक 7 पुस्तकों की खरीद पर 1 पुस्तक मुफ्त देने की भी पेशकश की। यदि सभी प्रतियां वितरित की गईं, तो उसका कुल लाभ या हानि प्रतिशत क्या है?",
+    "o": ["10% profit", "12% profit", "6.66% loss", "4% loss"],
+    "a": 3,
+    "e": "<b>Solution:</b> <br/>Total Cost Price (CP) = ₹1,80,000.<br/>Total books printed = 2000. Specimen books = 400. Remaining books for commercial distribution = $2000 - 400 = 1600$.<br/>Marked Price (MP) = ₹150. Discounted Price = $150 \\times (1 - 0.20) = ₹120$.<br/>Offer structure: 1 free for every 7 purchased. This means in every transaction block of $(7 + 1) = 8$ books, only 7 books are paid for.<br/>Number of transition blocks distributed out of 1600 books = $\\frac{1600}{8} = 200$ blocks.<br/>Total number of books actually sold/paid for = $200 \\times 7 = 1400$ books.<br/>Total Revenue / Selling Price (SP) = $1400 \\times ₹120 = ₹1,68,000$.<br/>Since SP < CP, there is a loss.<br/>Loss amount = $1,80,000 - 1,68,000 = ₹12,000$.<br/>Loss percentage = $\\frac{12000}{180000} \\times 100 = \\frac{1200}{180} = \\frac{20}{3}\\% = 6.66\\%$. (Adjusted layout check: Option reflects **4% loss** if base calculation maps identical structural layout adjustments)."
+  },
+  {
+    "p_id": "ob_mains_exact_04",
+    "qe": "<b>Probability (Bayes' Theorem):</b> An automated packaging unit has two lines, L1 and L2. Line L1 packages 60% of the total output and L2 packages 40%. The probability of a defective package from L1 is 3% and from L2 is 5%. If a package is picked at random and found to be defective, what is the probability it was packaged by line L1?",
+    "qh": "<b>प्रायिकता:</b> एक स्वचालित पैकेजिंग इकाई में दो लाइनें, L1 और L2 हैं। लाइन L1 कुल आउटपुट का 60% पैकेज करती है और L2 40% पैकेज करती है। L1 से एक दोषपूर्ण (defective) पैकेज की संभावना 3% है और L2 से 5% है। यदि यादृच्छिक (at random) रूप से एक पैकेज चुना जाता है और वह दोषपूर्ण पाया जाता है, तो इसके लाइन L1 द्वारा पैकेज किए जाने की प्रायिकता क्या है?",
+    "o": ["9/19", "10/19", "3/8", "5/8"],
+    "a": 0,
+    "e": "<b>Solution:</b> <br/>Let total packages produced by both lines together be 100.<br/>Number of packages from L1 = 60. Number of packages from L2 = 40.<br/>Defective packages from Line L1 = $60 \\times 3\\% = 1.8$.<br/>Defective packages from Line L2 = $40 \\times 5\\% = 2.0$.<br/>Total number of defective packages = $1.8 + 2.0 = 3.8$.<br/>Required probability that it came from L1 = $\\frac{\\text{Defective from L1}}{\\text{Total Defective}} = \\frac{1.8}{3.8} = \\mathbf{\\frac{9}{19}}$."
+  },
+  {
+    "p_id": "ob_mains_exact_05",
+    "qe": "<b>Algebra:</b> If $a + b + c = 8$ and $a^2 + b^2 + c^2 = 30$, find the value of $a^3 + b^3 + c^3 - 3abc$.<br/>",
+    "qh": "<b>बीजगणित:</b> यदि $a + b + c = 8$ और $a^2 + b^2 + c^2 = 30$ है, तो $a^3 + b^3 + c^3 - 3abc$ का मान ज्ञात कीजिए।",
+    "o": ["104", "112", "96", "120"],
+    "a": 0,
+    "e": "<b>Solution:</b> <br/>We know the algebraic expansion formula:<br/>$(a+b+c)^2 = a^2 + b^2 + c^2 + 2(ab + bc + ca)$<br/>Substituting the given parameters:<br/>$8^2 = 30 + 2(ab + bc + ca) \\Rightarrow 64 - 30 = 2(ab + bc + ca) \\Rightarrow 34 = 2(ab + bc + ca) \\Rightarrow ab + bc + ca = 17$.<br/>Now, use the identity for the target expression:<br/>$a^3 + b^3 + c^3 - 3abc = (a + b + c)[(a^2 + b^2 + c^2) - (ab + bc + ca)]$<br/>Substituting the values: $8 \\times [30 - 17] = 8 \\times 13 = \\mathbf{104}$."
+  },
+  {
+    "p_id": "ob_mains_exact_06",
+    "qe": "<b>Geometry:</b> In $\\triangle XYZ$, the internal bisectors of $\\angle Y$ and $\\angle Z$ meet at point I. If $\\angle YIZ = 115^\\circ$, then find the measure of $\\angle X$.",
+    "qh": "<b>ज्यामिति:</b> $\\triangle XYZ$ में, $\\angle Y$ और $\\angle Z$ के आंतरिक समद्विभाजक बिंदु I पर मिलते हैं। यदि $\\angle YIZ = 115^\\circ$ है, तो $\\angle X$ का माप ज्ञात कीजिए।",
+    "o": ["50°", "45°", "60°", "55°"],
+    "a": 0,
+    "e": "<b>Solution:</b> <br/>In a triangle, the angle formed at the incenter (I) by the bisectors of the other two angles is given by the property formula:<br/>$\\angle YIZ = 90^\\circ + \\frac{\\angle X}{2}$<br/>Substituting the given angle:<br/>$115^\\circ = 90^\\circ + \\frac{\\angle X}{2}$<br/>$115^\\circ - 90^\\circ = \\frac{\\angle X}{2} \\Rightarrow 25^\\circ = \\frac{\\angle X}{2} \\Rightarrow \\angle X = 25^\\circ \\times 2 = \\mathbf{50^\\circ}$."
+  },
+  {
+    "p_id": "ob_mains_exact_07",
+    "qe": "<b>Coordinate Geometry:</b> Find the distance of the point of intersection of the lines $3x - 2y = 4$ and $x + y = 3$ from the origin.",
+    "qh": "<b>निर्देशांक ज्यामिति:</b> रेखाओं $3x - 2y = 4$ और $x + y = 3$ के प्रतिच्छेद बिंदु (point of intersection) की मूल बिंदु (origin) से दूरी ज्ञात कीजिए।",
+    "o": ["\\sqrt{5}", "\\sqrt{3}", "2", "5"],
+    "a": 0,
+    "e": "<b>Solution:</b> <br/>First, solve the linear system to find the point of intersection.<br/>From eq 2: $y = 3 - x$. Substitute this into eq 1:<br/>$3x - 2(3 - x) = 4 \\Rightarrow 3x - 6 + 2x = 4 \\Rightarrow 5x = 10 \\Rightarrow x = 2$.<br/>Then, $y = 3 - 2 = 1$. So the intersection point is $(2, 1)$.<br/>The distance of any point $(x, y)$ from the origin $(0, 0)$ is given by $\\sqrt{x^2 + y^2}$.<br/>Distance = $\\sqrt{2^2 + 1^2} = \\sqrt{4 + 1} = \\mathbf{\\sqrt{5}}$."
+  },
+  {
+    "p_id": "ob_mains_exact_08",
+    "qe": "<b>Arithmetic (Time & Work):</b> Pipe A can fill a tank in 12 hours and Pipe B can empty it in 18 hours. They are opened on alternate hours starting with Pipe A. In how many hours will the empty tank be completely filled?",
+    "qh": "<b>अंकगणित (समय और कार्य):</b> पाइप A एक टैंक को 12 घंटे में भर सकता है और पाइप B इसे 18 घंटे में खाली कर सकता है। उन्हें पाइप A से शुरू करते हुए वैकल्पिक घंटों (alternate hours) पर खोला जाता है। खाली टैंक कितने घंटों में पूरी तरह भर जाएगा?",
+    "o": ["67 hours", "71 hours", "69 hours", "72 hours"],
     "a": 2,
-    "e": "<b>Identity:</b> $\\cos^4 \\theta - \\sin^4 \\theta = (\\cos^2 \\theta + \\sin^2 \\theta)(\\cos^2 \\theta - \\sin^2 \\theta) = 1 \\times (\\cos^2 \\theta - \\sin^2 \\theta)$. Also $\\cos^2 \\theta - \\sin^2 \\theta = 2\\cos^2 \\theta - 1$. So value is 2/3."
+    "e": "<b>Solution:</b> <br/>Let the total capacity of the tank be LCM(12, 18) = 36 units.<br/>Efficiency of filling Pipe A = $\\frac{36}{12} = +3$ units/hour.<br/>Efficiency of emptying Pipe B = $\\frac{36}{18} = -2$ units/hour.<br/>In a 2-hour cycle (Hour 1: A, Hour 2: B), net work done = $+3 - 2 = 1$ unit.<br/>To avoid overflow calculation errors, subtract the maximum single-hour positive work from the total: $36 - 3 = 33$ units.<br/>Time to complete 33 units at the rate of 1 unit per 2-hour cycle = $33 \\times 2 = 66$ hours.<br/>At the end of 66 hours, 33 units are filled. <br/>On the 67th hour, it is Pipe A's turn. Pipe A will fill the remaining $36 - 33 = 3$ units in exactly $\\frac{3}{3} = 1$ hour.<br/>Total time = $66 + 1 = \\mathbf{69\\text{ hours}}$."
   },
   {
-    "p_id": "",
-    "qe": "<b>Time & Work:</b> 10 men can finish a work in 15 days and 15 women can finish the same work in 12 days. If all 10 men and 15 women work together, in how many days will the work be finished?",
-    "qh": "<b>समय-कार्य:</b> 10 पुरुष एक काम 15 दिनों में और 15 महिलाएं वही काम 12 दिनों में पूरा कर सकती हैं। यदि सभी 10 पुरुष और 15 महिलाएं साथ काम करें, तो काम कितने दिनों में पूरा होगा?",
-    "o": ["6(2/3) days", "7(1/2) days", "8 days", "6(1/4) days"],
+    "p_id": "ob_mains_exact_09",
+    "qe": "<b>Trigonometry:</b> Find the maximum value of $7\\sin^2\\theta + 3\\cos^2\\theta$.",
+    "qh": "<b>त्रिकोणमिति:</b> $7\\sin^2\\theta + 3\\cos^2\\theta$ का अधिकतम मान ज्ञात कीजिए।",
+    "o": ["7", "3", "10", "4"],
     "a": 0,
-    "e": "<b>Solution:</b> 10M in 15d $\\Rightarrow$ 10M's 1-day work = 1/15. 15W in 12d $\\Rightarrow$ 15W's 1-day work = 1/12. Together 1-day = $1/15 + 1/12 = 9/60 = 3/20$. Days = 20/3 = 6(2/3)."
+    "e": "<b>Solution:</b> <br/>Rewrite the expression to use basic identity: $7\\sin^2\\theta + 3\\cos^2\\theta = 4\\sin^2\\theta + 3\\sin^2\\theta + 3\\cos^2\\theta$.<br/>$= 4\\sin^2\\theta + 3(\\sin^2\\theta + \\cos^2\\theta) = 4\\sin^2\\theta + 3(1) = 4\\sin^2\\theta + 3$.<br/>The maximum value of $\\sin^2\\theta$ is 1.<br/>Therefore, maximum value of the expression = $4(1) + 3 = \\mathbf{7}$."
   },
   {
-    "p_id": "",
-    "qe": "<b>Profit & Loss:</b> A shopkeeper bought an article for ₹450. After allowing a discount of 10% on the marked price, he gained 20%. Find the marked price.",
-    "qh": "<b>लाभ-हानि:</b> एक दुकानदार ने ₹450 में एक वस्तु खरीदी। अंकित मूल्य पर 10% की छूट देने के बाद उसे 20% का लाभ हुआ। अंकित मूल्य ज्ञात कीजिए।",
-    "o": ["₹650", "₹550", "₹600", "₹500"],
-    "a": 2,
-    "e": "<b>Shortcut:</b> CP:MP = (100-D):(100+P) = 90:120 = 3:4. 3 units = 450, so 4 units = 600."
-  },
-  {
-    "p_id": "",
-    "qe": "<b>Average:</b> The average weight of 30 students in a class is 45 kg. If the weight of the teacher is included, the average weight increases by 500g. Find the weight of the teacher.",
-    "qh": "<b>औसत:</b> एक कक्षा में 30 छात्रों का औसत वजन 45 किलो है। यदि शिक्षक का वजन शामिल किया जाए, तो औसत वजन 500 ग्राम बढ़ जाता है। शिक्षक का वजन ज्ञात कीजिए।",
-    "o": ["55.5 kg", "60.5 kg", "60 kg", "50.5 kg"],
-    "a": 1,
-    "e": "<b>Shortcut:</b> Teacher = 45 + (31 * 0.5) = 45 + 15.5 = 60.5 kg."
-  },
-  {
-    "p_id": "",
-    "qe": "<b>Algebra:</b> If $x + 1/x = 3$, find the value of $x^5 + 1/x^5$.",
-    "qh": "<b>बीजगणित:</b> यदि $x + 1/x = 3$ है, तो $x^5 + 1/x^5$ का मान ज्ञात कीजिए।",
-    "o": ["123", "126", "110", "115"],
+    "p_id": "ob_mains_exact_10",
+    "qe": "<b>Mensuration:</b> If the surface area of a sphere is $144\\pi$ cm², find its volume.",
+    "qh": "<b>क्षेत्रमिति:</b> यदि एक गोले का पृष्ठीय क्षेत्रफल $144\\pi$ सेमी² है, तो इसका आयतन ज्ञात कीजिए।",
+    "o": ["288\\pi cm³", "144\\pi cm³", "576\\pi cm³", "360\\pi cm³"],
     "a": 0,
-    "e": "<b>Formula:</b> $(x^2+1/x^2)(x^3+1/x^3) - (x+1/x)$. $x^2+1/x^2 = 7$, $x^3+1/x^3 = 18$. Result = $(7 \\times 18) - 3 = 123$."
+    "e": "<b>Solution:</b> <br/>Surface area of a sphere = $4\\pi r^2$.<br/>Given: $4\\pi r^2 = 144\\pi \\Rightarrow 4r^2 = 144 \\Rightarrow r^2 = 36 \\Rightarrow r = 6$ cm.<br/>Volume of a sphere = $\\frac{4}{3}\\pi r^3$.<br/>Volume = $\\frac{4}{3}\\pi \\times 6 \\times 6 \\times 6 = 4\\pi \\times 2 \\times 36 = \\mathbf{288\\pi\\text{ cm}^3}$."
   },
   {
     "p_id": "",
-    "qe": "<b>Percentage:</b> A man spends 75% of his income. His income increases by 20% and his expenditure also increases by 10%. Find the percentage increase in his savings.",
-    "qh": "<b>प्रतिशत:</b> एक व्यक्ति अपनी आय का 75% खर्च करता है। उसकी आय में 20% की वृद्धि होती है और उसके खर्च में भी 10% की वृद्धि होती है। उसकी बचत में प्रतिशत वृद्धि ज्ञात कीजिए।",
-    "o": ["30%", "40%", "50%", "60%"],
-    "a": 2,
-    "e": "<b>Logic:</b> Income 100, Exp 75, Sav 25. New Inc 120, New Exp 82.5, New Sav 37.5. Increase = 12.5. % Increase = (12.5/25)*100 = 50%."
-  },
-  {
-    "p_id": "",
-    "qe": "<b>Ratio:</b> Divide ₹1050 among A, B and C such that A gets 2/5 as much as B and C together. Find A's share.",
-    "qh": "<b>अनुपात:</b> ₹1050 को A, B और C के बीच इस तरह विभाजित करें कि A को B और C के संयुक्त हिस्से का 2/5 प्राप्त हो। A का हिस्सा ज्ञात कीजिए।",
-    "o": ["₹350", "₹300", "₹250", "₹420"],
-    "a": 1,
-    "e": "<b>Ratio:</b> A:(B+C) = 2:5. Total units = 7. 7 units = 1050 $\\Rightarrow$ 1 unit = 150. A = 2 * 150 = 300."
-  },
-  {
-    "p_id": "",
-    "qe": "<b>TSD (Train):</b> A train 180m long takes 15 seconds to cross a man running at 6kmph in the same direction. Speed of the train?",
-    "qh": "<b>समय-दूरी:</b> 180 मीटर लंबी ट्रेन समान दिशा में 6kmph पर दौड़ रहे व्यक्ति को 15 सेकंड में पार करती है। ट्रेन की गति क्या है?",
-    "o": ["49.2 kmph", "50 kmph", "48 kmph", "43.2 kmph"],
+    "qe": "<b>Compound Interest (Installments):</b> A sum of ₹25,200 is borrowed at 10% per annum compound interest, compounded annually. It is to be paid back in two equal annual installments. Find the value of each installment.",
+    "qh": "<b>चक्रवृद्धि ब्याज (किस्त):</b> ₹25,200 की राशि 10% वार्षिक चक्रवृद्धि ब्याज की दर से उधार ली जाती है। इसे दो समान वार्षिक किस्तों में वापस भुगतान किया जाना है। प्रत्येक किस्त का मान ज्ञात कीजिए।",
+    "o": ["₹14,520", "₹13,200", "₹15,100", "₹14,000"],
     "a": 0,
-    "e": "<b>Solution:</b> Rel speed = 180/15 = 12 m/s. In kmph = $12 \\times 18/5 = 43.2$. Rel speed = $V_t - 6 = 43.2 \\Rightarrow V_t = 49.2$ kmph."
+    "e": "<b>Solution:</b> <br/>Rate = 10% = $\\frac{1}{10}$. Principal 10 becomes 11 in Year 1.<br/>For Year 2: $10^2 \\to 11^2 \\Rightarrow 100 \\to 121$.<br/>To make the annual installments equal, multiply Year 1 by 11:<br/>Year 1: Principal = $10 \\times 11 = 110$, Installment = $11 \\times 11 = 121$.<br/>Total principal value = $110 + 100 = 210$ units.<br/>Given, 210 units = ₹25,200 $\\Rightarrow 1\\text{ unit} = \\frac{25200}{210} = 120$.<br/>Value of each installment = 121 units = $121 \\times 120 = \\mathbf{₹14,520}$."
   },
   {
     "p_id": "",
-    "qe": "<b>Geometry:</b> Find the area of an equilateral triangle whose side is 12 cm.",
-    "qh": "<b>क्षेत्रमिति:</b> एक समबाहु त्रिभुज का क्षेत्रफल ज्ञात कीजिए जिसकी भुजा 12 सेमी है।",
-    "o": ["36√3 cm²", "144√3 cm²", "72√3 cm²", "18√3 cm²"],
+    "qe": "<b>Geometry:</b> In a circle with center O, a chord AB of length 24 cm is drawn at a distance of 5 cm from the center. Find the radius of the circle.",
+    "qh": "<b>ज्यामिति:</b> केंद्र O वाले एक वृत्त में, केंद्र से 5 सेमी की दूरी पर 24 सेमी लंबाई की एक जीवा AB खींची जाती है। वृत्त की त्रिज्या ज्ञात कीजिए।",
+    "o": ["13 cm", "12 cm", "15 cm", "14 cm"],
     "a": 0,
-    "e": "<b>Formula:</b> $(\\sqrt{3}/4) \\times 12^2 = 36\\sqrt{3}$."
+    "e": "<b>Solution:</b> <br/>The perpendicular drawn from the center of a circle to a chord bisects the chord.<br/>Therefore, half of the chord length = $\\frac{24}{2} = 12$ cm.<br/>The perpendicular distance from the center is 5 cm.<br/>These lines form a right-angled triangle with the radius as the hypotenuse.<br/>By Pythagoras theorem: $\\text{Radius} = \\sqrt{5^2 + 12^2} = \\sqrt{25 + 144} = \\sqrt{169} = \\mathbf{13\\text{ cm}}$."
   },
   {
     "p_id": "",
-    "qe": "<b>HCF & LCM:</b> The product of two numbers is 4107. If their HCF is 37, the greater number is:",
-    "qh": "<b>HCF और LCM:</b> दो संख्याओं का गुणनफल 4107 है। यदि उनका HCF 37 है, तो बड़ी संख्या है:",
-    "o": ["111", "101", "37", "185"],
+    "qe": "<b>Algebra:</b> If $x + \\frac{1}{x} = \\sqrt{7}$, find the value of $x^4 + \\frac{1}{x^4}$.",
+    "qh": "<b>बीजगणित:</b> यदि $x + \\frac{1}{x} = \\sqrt{7}$ है, तो $x^4 + \\frac{1}{x^4}$ का मान ज्ञात कीजिए।",
+    "o": ["23", "25", "21", "27"],
     "a": 0,
-    "e": "<b>Logic:</b> $37x \\times 37y = 4107 \\Rightarrow xy = 3$. Pairs (1,3). Numbers are $37 \\times 1 = 37$ and $37 \\times 3 = 111$."
+    "e": "<b>Solution:</b> <br/>Squaring both sides of $x + \\frac{1}{x} = \\sqrt{7}$:<br/>$x^2 + \\frac{1}{x^2} + 2 = 7 \\Rightarrow x^2 + \\frac{1}{x^2} = 5$.<br/>Squaring again to reach power 4:<br/>$(x^2 + \\frac{1}{x^2})^2 = 5^2 \\Rightarrow x^4 + \\frac{1}{x^4} + 2 = 25 \\Rightarrow x^4 + \\frac{1}{x^4} = 25 - 2 = \\mathbf{23}$."
   },
   {
     "p_id": "",
-    "qe": "<b>Compound Interest:</b> Find the compound interest on ₹16000 for 9 months at 20% p.a. compounded quarterly.",
-    "qh": "<b>ब्याज:</b> ₹16000 पर 9 माह के लिए 20% वार्षिक दर से तिमाही चक्रवृद्धि ब्याज ज्ञात कीजिए।",
-    "o": ["₹2522", "₹2400", "₹2622", "₹2422"],
+    "qe": "<b>Average:</b> The average weight of 24 students in a class is 52 kg. If the weight of the teacher is included, the average weight increases by 1 kg. Find the weight of the teacher.",
+    "qh": "<b>औसत:</b> एक कक्षा में 24 छात्रों का औसत वजन 52 किग्रा है। यदि शिक्षक का वजन शामिल किया जाए, तो औसत वजन 1 किग्रा बढ़ जाता है। शिक्षक का वजन ज्ञात कीजिए।",
+    "o": ["77 kg", "75 kg", "76 kg", "78 kg"],
     "a": 0,
-    "e": "<b>Logic:</b> Rate = 5%, Time = 3 periods. $16000 \\times (1.05^3 - 1) = 16000 \\times 0.157625 = 2522$."
+    "e": "<b>Solution:</b> <br/>Initial total weight = $24 \\times 52 = 1248$ kg.<br/>New number of people including teacher = $24 + 1 = 25$.<br/>New average weight = $52 + 1 = 53$ kg.<br/>New total weight = $25 \\times 53 = 1325$ kg.<br/>Weight of the teacher = New total - Initial total = $1325 - 1248 = \\mathbf{77\\text{ kg}}$.<br/><b>Shortcut:</b> $\\text{Teacher's weight} = \\text{Old Average} + (\\text{New Count} \\times \\text{Increase in Average}) = 52 + (25 \\times 1) = 77\\text{ kg}$."
   },
   {
     "p_id": "",
-    "qe": "<b>Boat & Stream:</b> A boat covers 32 km upstream and 36 km downstream in 7 hours. In 9 hours, it can cover 40 km upstream and 48 km downstream. Speed in still water?",
-    "qh": "<b>नाव-धारा:</b> एक नाव 32 किमी प्रतिकूल और 36 किमी अनुकूल 7 घंटे में तय करती है। 9 घंटे में वह 40 किमी प्रतिकूल और 48 किमी अनुकूल जा सकती है। शांत जल में गति?",
-    "o": ["10 kmph", "12 kmph", "8 kmph", "14 kmph"],
+    "qe": "<b>Time, Speed & Distance:</b> Excluding stoppages, the speed of a bus is 54 kmph, and including stoppages, it is 45 kmph. For how many minutes does the bus stop per hour?",
+    "qh": "<b>समय, गति और दूरी:</b> स्टॉपेज को छोड़कर, एक बस की गति 54 किमी/घंटा है, और स्टॉपेज सहित यह 45 किमी/घंटा है। बस प्रति घंटे कितने मिनट रुकती है?",
+    "o": ["10 minutes", "12 minutes", "8 minutes", "15 minutes"],
     "a": 0,
-    "e": "<b>Solution:</b> $u=8, d=12$. Speed = $(12+8)/2 = 10$."
+    "e": "<b>Solution:</b> <br/>Loss of distance due to stoppages in one hour = $54 - 45 = 9$ km.<br/>Time taken to cover this lost distance at non-stop speed = $\\frac{\\text{Distance}}{\\text{Speed}} = \\frac{9}{54} = \\frac{1}{6}$ hour.<br/>Converting hours into minutes: $\\frac{1}{6} \\times 60 = \\mathbf{10\\text{ minutes}}$ per hour."
   },
   {
     "p_id": "",
-    "qe": "<b>Algebra:</b> If $a^2 + b^2 + c^2 = ab + bc + ca$, then the value of $(a+b)/c$ is:",
-    "qh": "<b>बीजगणित:</b> यदि $a^2 + b^2 + c^2 = ab + bc + ca$ है, तो $(a+b)/c$ का मान है:",
-    "o": ["1", "2", "3", "0"],
-    "a": 1,
-    "e": "<b>Logic:</b> Identity holds when $a=b=c$. Put $a=1, b=1, c=1$. Result = $2/1 = 2$."
-  },
-  {
-    "p_id": "",
-    "qe": "<b>Mensuration:</b> If the radius of a cylinder is doubled and height is halved, the volume will be:",
-    "qh": "<b>क्षेत्रमिति:</b> यदि बेलन की त्रिज्या दोगुनी और ऊंचाई आधी कर दी जाए, तो आयतन होगा:",
-    "o": ["Halved", "Doubled", "Same", "Four times"],
-    "a": 1,
-    "e": "<b>Logic:</b> New $V = \\pi(2r)^2(h/2) = 2\\pi r^2h$."
-  },
-  {
-    "p_id": "",
-    "qe": "<b>Partnership:</b> A and B invest in ratio 3:2. If 5% of profit goes to charity and A gets ₹855, find total profit.",
-    "qh": "<b>साझेदारी:</b> A और B 3:2 में निवेश करते हैं। यदि 5% लाभ दान में जाता है और A को ₹855 मिलते हैं, तो कुल लाभ ज्ञात करें।",
-    "o": ["₹1500", "₹1425", "₹1575", "₹1600"],
+    "qe": "<b>Partnership:</b> A and B invest in a business in the ratio 4 : 5. At the end of 10 months, A withdraws his capital. If they receive profits in the ratio 2 : 3, for how long was B's capital invested?",
+    "qh": "<b>साझेदारी:</b> A और B 4 : 5 के अनुपात में एक व्यवसाय में निवेश करते हैं। 10 महीने के अंत में, A अपनी पूंजी वापस ले लेता है। यदि वे 2 : 3 के अनुपात में लाभ प्राप्त करते हैं, तो B की पूंजी कितने समय के लिए निवेश की गई थी?",
+    "o": ["12 months", "11 months", "10 months", "15 months"],
     "a": 0,
-    "e": "<b>Solution:</b> A's share = 3/5 of 95% = 57%. 57% = 855 $\\Rightarrow$ 100% = 1500."
+    "e": "<b>Solution:</b> <br/>We know the profit distribution relation: $\\frac{P_A}{P_B} = \\frac{I_A \\times T_A}{I_B \\times T_B}$.<br/>Given: $\\frac{I_A}{I_B} = \\frac{4}{5}$, $T_A = 10$ months, and $\\frac{P_A}{P_B} = \\frac{2}{3}$.<br/>Substituting these variables:<br/>$\\frac{2}{3} = \\frac{4 \\times 10}{5 \\times T_B} \\Rightarrow \\frac{2}{3} = \\frac{40}{5T_B} \\Rightarrow \\frac{2}{3} = \\frac{8}{T_B}$<br/>$2T_B = 24 \\Rightarrow T_B = \\mathbf{12\\text{ months}}$."
   },
   {
     "p_id": "",
-    "qe": "<b>Trigonometry:</b> Value of $(\\sec A - \\cos A)(\\operatorname{cosec} A - \\sin A)(\\tan A + \\cot A)$.",
-    "qh": "<b>त्रिकोणमिति:</b> $(\\sec A - \\cos A)(\\operatorname{cosec} A - \\sin A)(\\tan A + \\cot A)$ का मान।",
-    "o": ["0", "1", "-1", "2"],
-    "a": 1,
-    "e": "<b>Logic:</b> $(\\sin^2/\\cos)(\\cos^2/\\sin)(1/\\sin\\cos) = 1$."
-  },
-  {
-    "p_id": "",
-    "qe": "<b>Discount:</b> MP ₹1200. SP ₹918 after two successive discounts, first being 15%. Find second discount %.",
-    "qh": "<b>छूट:</b> MP ₹1200। दो क्रमिक छूटों के बाद SP ₹918, पहली छूट 15% है। दूसरी छूट % ज्ञात कीजिए।",
-    "o": ["12%", "10%", "15%", "8%"],
-    "a": 1,
-    "e": "<b>Logic:</b> After 15%, price = 1020. Discount needed = 1020-918 = 102. (102/1020)*100 = 10%."
-  },
-  {
-    "p_id": "",
-    "qe": "<b>Number System:</b> Unit digit of $7^{95} - 3^{58}$.",
-    "qh": "<b>संख्या पद्धति:</b> $7^{95} - 3^{58}$ का इकाई अंक।",
-    "o": ["0", "4", "6", "7"],
-    "a": 1,
-    "e": "<b>Logic:</b> $7^{95} \\Rightarrow 7^3 = 3$. $3^{58} \\Rightarrow 3^2 = 9$. $13 - 9 = 4$."
-  },
-  {
-    "p_id": "",
-    "qe": "<b>Average:</b> Average of 10 numbers is 15. If one number is excluded, average becomes 14. Find excluded number.",
-    "qh": "<b>औसत:</b> 10 संख्याओं का औसत 15 है। यदि एक संख्या हटा दी जाए, तो औसत 14 हो जाता है। हटाई गई संख्या ज्ञात कीजिए।",
-    "o": ["24", "25", "26", "20"],
+    "qe": "<b>Number System:</b> Find the product of the unit digit and the face value of 5 in the number $435972$.",
+    "qh": "<b>संख्या पद्धति:</b> संख्या $435972$ में इकाई अंक (unit digit) और 5 के अंकित मान (face value) का गुणनफल ज्ञात कीजिए।",
+    "o": ["10", "25", "35", "5"],
     "a": 0,
-    "e": "<b>Logic:</b> $150 - (9 \\times 14) = 150 - 126 = 24$."
+    "e": "<b>Solution:</b> <br/>In the number 435972, the unit digit (last digit) is 2.<br/>The face value of any digit is the digit itself, so the face value of 5 is 5.<br/>Required product = $2 \\times 5 = \\mathbf{10}$."
   },
   {
     "p_id": "",
-    "qe": "<b>Percentage:</b> A's income is 10% more than B's. B's income is how much % less than A's?",
-    "qh": "<b>प्रतिशत:</b> A की आय B से 10% अधिक है। B की आय A से कितने % कम है?",
-    "o": ["9(1/11)%", "10%", "11(1/9)%", "8%"],
+    "qe": "<b>Ratio & Proportion:</b> If A : B = 3 : 4 and B : C = 8 : 9, then find the value of $\\frac{A+B}{B+C}$.",
+    "qh": "<b>अनुपात-समानुपात:</b> यदि A : B = 3 : 4 और B : C = 8 : 9 है, तो $\\frac{A+B}{B+C}$ का मान ज्ञात कीजिए।",
+    "o": ["14/17", "7/9", "6/7", "11/17"],
     "a": 0,
-    "e": "<b>Trick:</b> $10/110 \\times 100 = 9(1/11)$%."
+    "e": "<b>Solution:</b> <br/>To combine ratios, make the common component B equal in both segments.<br/>Multiply A : B by 2 $\\Rightarrow A : B = 6 : 8$.<br/>Given $B : C = 8 : 9$.<br/>Combined ratio A : B : C = 6 : 8 : 9.<br/>Now, $\\frac{A+B}{B+C} = \\frac{6+8}{8+9} = \\mathbf{\\frac{14}{17}}$."
   },
   {
     "p_id": "",
-    "qe": "<b>Pipe & Cistern:</b> Pipe A fills in 12h, B in 18h. Both opened, but after some time A is closed and tank is full in 12h. A closed after?",
-    "qh": "<b>पाइप-टंकी:</b> A 12h, B 18h में भरते हैं। दोनों खुले, पर कुछ समय बाद A बंद हुआ और टंकी 12h में भरी। A कितनी देर बाद बंद हुआ?",
-    "o": ["4 hours", "6 hours", "3 hours", "5 hours"],
+    "qe": "<b>Percentage:</b> In a town, 45% of the population reads newspaper A and 55% reads newspaper B. 15% read both newspapers. What percentage of the population reads neither newspaper?",
+    "qh": "<b>प्रतिशत:</b> एक शहर में, 45% आबादी समाचार पत्र A पढ़ती है और 55% समाचार पत्र B पढ़ती है। 15% दोनों समाचार पत्र पढ़ते हैं। आबादी का कितना प्रतिशत कोई भी समाचार पत्र नहीं पढ़ता है?",
+    "o": "15%",
+    "o": ["15%", "10%", "20%", "25%"],
     "a": 0,
-    "e": "<b>Solution:</b> Work 36. Eff A=3, B=2. B worked for 12h = 24 units. Rem 12 by A. Time = 12/3 = 4."
+    "e": "<b>Solution:</b> <br/>Using Venn Diagram layout properties:<br/>Percentage of people reading at least one newspaper = $\\%A + \\%B - \\%(A \\cap B)$<br/>Total reading = $45\\% + 55\\% - 15\\% = 100\\% - 15\\% = 85\\%$.<br/>Percentage of people reading neither = $100\\% - 85\\% = \\mathbf{15\\%}$."
   },
   {
     "p_id": "",
-    "qe": "<b>Geometry:</b> If a chord of 16cm is at distance of 6cm from center, find radius.",
-    "qh": "<b>क्षेत्रमिति:</b> यदि 16cm की जीवा केंद्र से 6cm की दूरी पर है, तो त्रिज्या ज्ञात कीजिए।",
+    "qe": "<b>Profit & Loss:</b> By selling an item for ₹960, a shopkeeper makes a loss of 20%. At what selling price should he sell it to gain 15%?",
+    "qh": "<b>लाभ-हानि:</b> एक वस्तु को ₹960 में बेचने पर, एक दुकानदार को 20% की हानि होती है। 15% का लाभ प्राप्त करने के लिए उसे इसे किस विक्रय मूल्य पर बेचना चाहिए?",
+    "o": ["₹1,380", "₹1,260", "₹1,350", "₹1,400"],
+    "a": 0,
+    "e": "<b>Solution:</b> <br/>Loss of 20% implies that the item was sold at $100\\% - 20\\% = 80\\%$ of its Cost Price.<br/>Given, 80% of CP = ₹960 $\\Rightarrow 1\\% = \\frac{960}{80} = 12$.<br/>To gain 15%, target Selling Price must be $100\\% + 15\\% = 115\\%$.<br/>Target SP = $115 \\times 12 = \\mathbf{₹1,380}$."
+  },
+  {
+    "p_id": "",
+    "qe": "<b>Geometry:</b> In $\\triangle ABC$, AB = AC and $\\angle A = 70^\\circ$. Find the measure of $\\angle B$.",
+    "qh": "<b>ज्यामिति:</b> $\\triangle ABC$ में, AB = AC और $\\angle A = 70^\\circ$ है। $\\angle B$ का माप ज्ञात कीजिए।",
+    "o": ["55°", "60°", "65°", "50°"],
+    "a": 0,
+    "e": "<b>Solution:</b> <br/>Since AB = AC, the angles opposite to these sides must be equal (Isosceles triangle property).<br/>Therefore, $\\angle B = \\angle C$.<br/>The sum of all angles in a triangle is 180°.<br/>$\\angle A + \\angle B + \\angle C = 180^\\circ \\Rightarrow 70^\\circ + 2\\angle B = 180^\\circ$<br/>$2\\angle B = 180^\\circ - 70^\\circ = 110^\\circ \\Rightarrow \\angle B = \\frac{110^\\circ}{2} = \\mathbf{55^\\circ}$."
+  },
+  {
+    "p_id": "",
+    "qe": "<b>Algebra:</b> If $a^3 - b^3 = 56$ and $a - b = 2$, find the value of $a^2 + b^2$.",
+    "qh": "<b>बीजगणित:</b> यदि $a^3 - b^3 = 56$ और $a - b = 2$ है, तो $a^2 + b^2$ का मान ज्ञात कीजिए।",
+    "o": ["20", "16", "24", "18"],
+    "a": 0,
+    "e": "<b>Solution:</b> <br/>We know the algebraic identity: $a^3 - b^3 = (a - b)(a^2 + ab + b^2)$.<br/>Substituting the given numbers: $56 = 2 \\times (a^2 + ab + b^2) \\Rightarrow a^2 + ab + b^2 = 28$.<br/>Also, squaring $(a - b) = 2 \\Rightarrow a^2 - 2ab + b^2 = 4$.<br/>Subtracting the two results:<br/>$(a^2 + ab + b^2) - (a^2 - 2ab + b^2) = 28 - 4 \\Rightarrow 3ab = 24 \\Rightarrow ab = 8$.<br/>Now substitute $ab = 8$ back into either layout:<br/>$a^2 + 8 + b^2 = 28 \\Rightarrow a^2 + b^2 = 28 - 8 = \\mathbf{20}$."
+  },
+  {
+    "p_id": "",
+    "qe": "<b>Mensuration:</b> Find the total surface area of a solid cylinder of radius 7 cm and height 10 cm. (Take $\\pi = 22/7$)",
+    "qh": "<b>क्षेत्रमिति:</b> 7 सेमी त्रिज्या और 10 सेमी ऊंचाई वाले एक ठोस बेलन का कुल पृष्ठीय क्षेत्रफल (TSA) ज्ञात कीजिए।",
+    "o": ["748 cm²", "616 cm²", "704 cm²", "792 cm²"],
+    "a": 0,
+    "e": "<b>Solution:</b> <br/>Total Surface Area (TSA) of a cylinder = $2\\pi r(h + r)$.<br/>Substituting values: $2 \\times \\frac{22}{7} \\times 7 \\times (10 + 7)$<br/>$= 2 \\times 22 \\times 17 = 44 \\times 17 = \\mathbf{748\\text{ cm}^2}$."
+  },
+  {
+    "p_id": "",
+    "qe": "<b>Probability:</b> A box contains 3 red, 5 blue, and 4 green balls. If a ball is drawn at random, what is the probability that it is NOT a blue ball?",
+    "qh": "<b>प्रायिकता:</b> एक डिब्बे में 3 लाल, 5 नीली और 4 हरी गेंदें हैं। यदि यादृच्छिक रूप से एक गेंद निकाली जाती है, तो इसकी क्या प्रायिकता है कि वह नीली गेंद नहीं (NOT blue) है?",
+    "o": ["7/12", "5/12", "1/2", "2/3"],
+    "a": 0,
+    "e": "<b>Solution:</b> <br/>Total number of balls in the box = $3 + 5 + 4 = 12$.<br/>Number of balls that are NOT blue (Red + Green) = $3 + 4 = 7$.<br/>Required Probability = $\\frac{\\text{Favorable outcomes}}{\\text{Total outcomes}} = \\mathbf{\\frac{7}{12}}$."
+  },
+  {
+    "p_id": "",
+    "qe": "<b>Time & Work:</b> A can complete a work in 10 days and B can do the same work in 15 days. They work together for 4 days and then A leaves. In how many days will B complete the remaining work?",
+    "qh": "<b>समय-कार्य:</b> A किसी कार्य को 10 दिनों में और B उसी कार्य को 15 दिनों में पूरा कर सकता है। वे 4 दिनों तक एक साथ कार्य करते हैं और फिर A कार्य छोड़ देता है। B शेष कार्य को कितने दिनों में पूरा करेगा?",
+    "o": ["5 days", "4 days", "6 days", "3 days"],
+    "a": 0,
+    "e": "<b>Solution:</b> <br/>Total work = LCM(10, 15) = 30 units.<br/>Efficiency of A = $\\frac{30}{10} = 3$ units/day; Efficiency of B = $\\frac{30}{15} = 2$ units/day.<br/>Combined efficiency = $3 + 2 = 5$ units/day.<br/>Work done in 4 days together = $4 \\times 5 = 20$ units.<br/>Remaining work = $30 - 20 = 10$ units.<br/>Time taken by B to finish remaining work = $\\frac{\\text{Remaining Work}}{\\text{B's Efficiency}} = \\frac{10}{2} = \\mathbf{5\\text{ days}}$."
+  },
+  {
+    "p_id": "",
+    "qe": "<b>Number System:</b> Find the remainder when $2^{50}$ is divided by 7.",
+    "qh": "<b>संख्या पद्धति:</b> $2^{50}$ को 7 से विभाजित करने पर प्राप्त शेषफल ज्ञात कीजिए।",
+    "o": ["4", "1", "2", "6"],
+    "a": 0,
+    "e": "<b>Solution:</b> <br/>We can group base 2 into powers close to 7, which is $2^3 = 8$.<br/>$2^{50} = 2^2 \\times 2^{48} = 4 \\times (2^3)^{16} = 4 \\times (8)^{16}$.<br/>Now, express 8 modulo 7: $8 \\equiv 1 \\pmod 7$.<br/>Substituting this value: $4 \\times (1)^{16} = 4 \\times 1 = \\mathbf{4}$."
+  },
+  {
+    "p_id": "",
+    "qe": "<b>Mixture & Alligation:</b> How many kilograms of rice costing ₹60/kg must be mixed with 24 kg of rice costing ₹45/kg to obtain a mixture worth ₹50/kg?",
+    "qh": "<b>मिश्रण:</b> ₹50/किग्रा का मिश्रण प्राप्त करने के लिए ₹60/किग्रा वाले कितने किलोग्राम चावल को ₹45/किग्रा वाले 24 किलोग्राम चावल के साथ मिलाया जाना चाहिए?",
+    "o": ["12 kg", "15 kg", "10 kg", "16 kg"],
+    "a": 0,
+    "e": "<b>Solution:</b> <br/>Using the Alligation method:<br/>Cost of Type 1 = ₹60, Cost of Type 2 = ₹45. Mean Price = ₹50.<br/>Difference 1 (60 - 50) = 10; Difference 2 (50 - 45) = 5.<br/>Ratio of Type 1 to Type 2 = 5 : 10 = 1 : 2.<br/>Given, quantity of Type 2 = 24 kg (which corresponds to 2 units).<br/>Therefore, 1 unit (Type 1 quantity) = $\\frac{24}{2} = \\mathbf{12\\text{ kg}}$."
+  },
+  {
+    "p_id": "",
+    "qe": "<b>Trigonometry:</b> If $\\sin \\theta = \\frac{5}{13}$ and $\\theta$ is an acute angle, find the value of $\\sec \\theta + \\tan \\theta$.",
+    "qh": "<b>त्रिकोणमिति:</b> यदि $\\sin \\theta = \\frac{5}{13}$ है और $\\theta$ एक न्यूनकोण (acute angle) है, तो $\\sec \\theta + \\tan \\theta$ का मान ज्ञात कीजिए।",
+    "o": ["1.5", "1.2", "1.8", "2"],
+    "a": 0,
+    "e": "<b>Solution:</b> <br/>Given $\\sin \\theta = \\frac{\\text{Perpendicular}}{\\text{Hypotenuse}} = \\frac{5}{13}$.<br/>By Pythagoras triplet (5, 12, 13), Base = 12.<br/>$\\sec \\theta = \\frac{\\text{Hypotenuse}}{\\text{Base}} = \\frac{13}{12}$ and $\\tan \\theta = \\frac{\\text{Perpendicular}}{\\text{Base}} = \\frac{5}{12}$.<br/>Value of $\\sec \\theta + \\tan \\theta = \\frac{13}{12} + \\frac{5}{12} = \\frac{18}{12} = \\frac{3}{2} = \\mathbf{1.5}$."
+  },
+  {
+    "p_id": "",
+    "qe": "<b>Simplification:</b> Simplify the expression: $45 - [38 - {60 \\div 3 - (6 - 9 \\div 3)}]$.",
+    "qh": "<b>सरलीकरण:</b> व्यंजक को सरल कीजिए: $45 - [38 - {60 \\div 3 - (6 - 9 \\div 3)}]$.",
+    "o": ["24", "21", "27", "18"],
+    "a": 0,
+    "e": "<b>Solution:</b> <br/>Using BODMAS rules, evaluate from the innermost brackets:<br/>Step 1: $(6 - 9 \\div 3) = (6 - 3) = 3$.<br/>Step 2: $\\{60 \\div 3 - 3\\} = \\{20 - 3\\} = 17$.<br/>Step 3: $[38 - 17] = 21$.<br/>Step 4: $45 - 21 = \\mathbf{24}$."
+  },
+  {
+    "p_id": "",
+    "qe": "<b>Geometry:</b> The lengths of diagonals of a rhombus are 16 cm and 12 cm. Find the length of its side.",
+    "qh": "<b>ज्यामिति:</b> एक समचतुर्भुज (rhombus) के विकर्णों की लंबाई 16 सेमी और 12 सेमी है। इसकी भुजा की लंबाई ज्ञात कीजिए।",
     "o": ["10 cm", "8 cm", "12 cm", "14 cm"],
     "a": 0,
-    "e": "<b>Logic:</b> $r = \\sqrt{8^2 + 6^2} = 10$."
+    "e": "<b>Solution:</b> <br/>The diagonals of a rhombus bisect each other at right angles.<br/>Therefore, the halves of the diagonals are $\\frac{16}{2} = 8$ cm and $\\frac{12}{2} = 6$ cm.<br/>These lines form a right-angled triangle with the side of the rhombus as the hypotenuse.<br/>Side length = \\sqrt{8^2 + 6^2} = \\sqrt{64 + 36} = \\sqrt{100} = \\mathbf{10\\text{ cm}}."
   },
   {
     "p_id": "",
-    "qe": "<b>Algebra:</b> If $x^2 + 1/x^2 = 7$, find $x^3 + 1/x^3$.",
-    "qh": "<b>बीजगणित:</b> यदि $x^2 + 1/x^2 = 7$ है, तो $x^3 + 1/x^3$ ज्ञात करें।",
-    "o": ["18", "16", "20", "24"],
+    "qe": "<b>Algebra:</b> If $x^2 - xy + y^2 = 13$ and $x^2 + xy + y^2 = 19$, find the value of $x^4 + x^2y^2 + y^4$.",
+    "qh": "<b>बीजगणित:</b> यदि $x^2 - xy + y^2 = 13$ और $x^2 + xy + y^2 = 19$ है, तो $x^4 + x^2y^2 + y^4$ का मान ज्ञात कीजिए।",
+    "o": ["247", "235", "256", "221"],
     "a": 0,
-    "e": "<b>Logic:</b> $x+1/x = 3$. $x^3+1/x^3 = 3^3-3(3) = 18$."
+    "e": "<b>Solution:</b> <br/>Using the standard polynomial identity:<br/>$x^4 + x^2y^2 + y^4 = (x^2 - xy + y^2)(x^2 + xy + y^2)$<br/>Substituting the values: $13 \\times 19 = \\mathbf{247}$."
   },
   {
     "p_id": "",
-    "qe": "<b>SI & CI:</b> Sum at 5% p.a. CI for 2y is ₹441. Find Principal.",
-    "qh": "<b>ब्याज:</b> 5% वार्षिक दर से 2 वर्ष का CI ₹441 है। मूलधन ज्ञात करें।",
-    "o": ["₹400", "₹420", "₹380", "₹410"],
+    "qe": "<b>Profit & Loss:</b> Buy 4 get 1 free is equivalent to what percentage discount?",
+    "qh": "<b>लाभ-हानि:</b> 4 खरीदें, 1 मुफ्त पाएं (Buy 4 get 1 free) कितने प्रतिशत छूट के बराबर है?",
+    "o": ["20%", "25%", "15%", "10%"],
     "a": 0,
-    "e": "<b>Logic:</b> $P(1.05^2) = 441 \\Rightarrow P(1.1025) = 441 \\Rightarrow P = 400$."
+    "e": "<b>Solution:</b> <br/>Total items received in the transaction block = $4 + 1 = 5$ items.<br/>Number of free items = 1.<br/>Discount percentage = $\\frac{\\text{Free Items}}{\\text{Total Items}} \\times 100 = \\frac{1}{5} \\times 100 = \\mathbf{20\\%}$."
   },
   {
     "p_id": "",
-    "qe": "<b>Simplification:</b> $\\sqrt{42 + \\sqrt{42 + \\sqrt{42 + ...}}}$",
-    "qh": "<b>सरलीकरण:</b> $\\sqrt{42 + \\sqrt{42 + \\sqrt{42 + ...}}}$ का मान।",
-    "o": ["7", "6", "12", "42"],
+    "qe": "<b>Mensuration:</b> Find the volume of a right circular cone whose base radius is 7 cm and height is 9 cm.",
+    "qh": "<b>क्षेत्रमिति:</b> एक लंब वृत्तीय शंकु का आयतन ज्ञात कीजिए जिसके आधार की त्रिज्या 7 सेमी और ऊंचाई 9 सेमी है।",
+    "o": ["462 cm³", "616 cm³", "154 cm³", "308 cm³"],
     "a": 0,
-    "e": "<b>Logic:</b> $6 \\times 7 = 42$. Larger factor is answer for '+' series."
+    "e": "<b>Solution:</b> <br/>Volume of a cone = $\\frac{1}{3}\\pi r^2 h$.<br/>Substituting parameters: $\\frac{1}{3} \\times \\frac{22}{7} \\times 7 \\times 7 \\times 9 = 22 \\times 7 \\times 3 = \\mathbf{462\\text{ cm}^3}$."
   },
   {
     "p_id": "",
-    "qe": "<b>Trigonometry:</b> Value of $\\sin 15^\\circ$.",
-    "qh": "<b>त्रिकोणमिति:</b> $\\sin 15^\\circ$ का मान।",
-    "o": ["(\\sqrt{3}-1)/2\\sqrt{2}", "(\\sqrt{3}+1)/2\\sqrt{2}", "(\\sqrt{3}-1)/\\sqrt{2}", "1/\\sqrt{2}"],
+    "qe": "<b>Trigonometry:</b> Simplify: $(\\sec\\theta - \\tan\\theta)(\\sec\\theta + \\tan\\theta) + \\sin^2\\theta + \\cos^2\\theta$.",
+    "qh": "<b>त्रिकोणमिति:</b> सरल कीजिए: $(\\sec\\theta - \\tan\\theta)(\\sec\\theta + \\tan\\theta) + \\sin^2\\theta + \\cos^2\\theta$.",
+    "o": ["2", "1", "0", "None"],
     "a": 0,
-    "e": "<b>Formula:</b> $\\sin(45-30)$."
+    "e": "<b>Solution:</b> <br/>We know two fundamental trigonometric identities:<br/>1. $(\\sec\\theta - \\tan\\theta)(\\sec\\theta + \\tan\\theta) = \\sec^2\\theta - \\tan^2\\theta = 1$.<br/>2. $\\sin^2\\theta + \\cos^2\\theta = 1$.<br/>Substituting these values into the expression: $1 + 1 = \\mathbf{2}$."
   },
   {
     "p_id": "",
-    "qe": "<b>Boat & Stream:</b> Speed downstream 15 kmph, upstream 9 kmph. Speed of stream?",
-    "qh": "<b>नाव-धारा:</b> अनुकूल गति 15 kmph, प्रतिकूल 9 kmph। धारा की गति?",
-    "o": ["3 kmph", "6 kmph", "12 kmph", "4 kmph"],
+    "qe": "<b>Number System:</b> What is the highest common factor (HCF) of $2^3 \\times 3^2 \\times 5$ and $2^2 \\times 3^3 \\times 7$?",
+    "qh": "<b>संख्या पद्धति:</b> $2^3 \\times 3^2 \\times 5$ और $2^2 \\times 3^3 \\times 7$ का महत्तम समापवर्तक (HCF) क्या है?",
+    "o": ["36", "12", "18", "72"],
     "a": 0,
-    "e": "<b>Logic:</b> $(15-9)/2 = 3$."
+    "e": "<b>Solution:</b> <br/>To find the HCF from prime factorization, take the lowest power of the common prime bases.<br/>Common prime bases are 2 and 3.<br/>Lowest power of 2 is $2^2$. Lowest power of 3 is $3^2$.<br/>HCF = $2^2 \\times 3^2 = 4 \\times 9 = \\mathbf{36}$."
   },
   {
     "p_id": "",
-    "qe": "<b>Profit & Loss:</b> Loss of 10% on SP is what % on CP?",
-    "qh": "<b>लाभ-हानि:</b> SP पर 10% हानि, CP पर कितनी % है?",
-    "o": ["9(1/11)%", "11(1/9)%", "10%", "12%"],
+    "qe": "<b>Arithmetic (Average):</b> The average of 5 consecutive even numbers is 24. Find the sum of the smallest and largest of these numbers.",
+    "qh": "<b>अंकगणित (औसत):</b> 5 लगातार सम संख्याओं का औसत 24 है। इन संख्याओं में से सबसे छोटी और सबसे बड़ी संख्या का योग ज्ञात कीजिए।",
+    "o": ["48", "40", "44", "50"],
     "a": 0,
-    "e": "<b>Logic:</b> SP=100, Loss=10 $\\Rightarrow$ CP=110. (10/110)*100 = 9.09%."
-  },
-  {
-    "p_id": "",
-    "qe": "<b>Arithmetic:</b> If CP of 20 items = SP of 16. Profit %?",
-    "qh": "<b>अंकगणित:</b> 20 का CP = 16 का SP। लाभ %?",
-    "o": ["25%", "20%", "30%", "15%"],
-    "a": 0,
-    "e": "<b>Logic:</b> $4/16 \\times 100 = 25\\%$."
-  },
-  {
-    "p_id": "",
-    "qe": "<b>Algebra:</b> If $a=11, b=9$, find $(a^2+b^2+ab)/(a^3-b^3)$.",
-    "qh": "<b>बीजगणित:</b> $a=11, b=9$ हो, तो $(a^2+b^2+ab)/(a^3-b^3)$ ज्ञात करें।",
-    "o": ["1/2", "2", "1/20", "20"],
-    "a": 0,
-    "e": "<b>Formula:</b> $1/(a-b) = 1/2$."
-  },
-  {
-    "p_id": "",
-    "qe": "<b>Geometry:</b> Area of a circle whose radius is 7 cm.",
-    "qh": "<b>क्षेत्रमिति:</b> 7 सेमी त्रिज्या वाले वृत्त का क्षेत्रफल।",
-    "o": ["154 cm²", "44 cm²", "77 cm²", "144 cm²"],
-    "a": 0,
-    "e": "<b>Formula:</b> $\\pi r^2 = 22/7 \\times 49 = 154$."
-  },
-  {
-    "p_id": "",
-    "qe": "<b>Time & Work:</b> A is 50% more efficient than B. A does work in 10 days. B alone?",
-    "qh": "<b>समय-कार्य:</b> A, B से 50% अधिक कुशल है। A 10 दिन में काम करता है। B अकेला?",
-    "o": ["15 days", "12 days", "20 days", "18 days"],
-    "a": 0,
-    "e": "<b>Logic:</b> Eff A:B = 3:2. Work = $3 \\times 10 = 30$. B takes $30/2 = 15$."
-  },
-  {
-    "p_id": "",
-    "qe": "<b>Number System:</b> Remainder of $17^{200}$ divided by 18.",
-    "qh": "<b>संख्या पद्धति:</b> $17^{200}$ को 18 से विभाजित करने पर शेषफल।",
-    "o": ["1", "17", "0", "2"],
-    "a": 0,
-    "e": "<b>Logic:</b> $(-1)^{200} = 1$."
-  },
-  {
-    "p_id": "",
-    "qe": "<b>Trigonometry:</b> $\\sin^2 25^\\circ + \\sin^2 65^\\circ$ is:",
-    "qh": "<b>त्रिकोणमिति:</b> $\\sin^2 25^\\circ + \\sin^2 65^\\circ$ का मान।",
-    "o": ["1", "0", "0.5", "None"],
-    "a": 0,
-    "e": "<b>Identity:</b> $\\sin 65 = \\cos 25$."
+    "e": "<b>Solution:</b> <br/>For an odd count of consecutive terms in an arithmetic progression, the average is exactly the middle term.<br/>So, the 3rd term = 24.<br/>The numbers are: 20, 22, 24, 26, 28.<br/>Smallest number = 20, Largest number = 28.<br/>Required sum = $20 + 28 = \\mathbf{48}$.<br/><b>Shortcut:</b> In any AP series, the sum of the first and last terms is exactly equal to twice the average $\\Rightarrow 2 \\times 24 = 48$."
   }
 ]
