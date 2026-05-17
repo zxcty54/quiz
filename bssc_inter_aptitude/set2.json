@@ -41,11 +41,11 @@
   },
   {
     "p_id": "bssc_math_006",
-    "qe": "<b>Number System:</b> Convert the recurring decimal $0.\\\\overline{45}$ into a vulgar fraction.",
-    "qh": "<b>संख्या पद्धति:</b> आवर्ती दशमलव $0.\\\\overline{45}$ को साधारण भिन्न में बदलिए।",
+    "qe": "<b>Number System:</b> Convert the recurring decimal $0.\\overline{45}$ into a vulgar fraction.",
+    "qh": "<b>संख्या पद्धति:</b> आवर्ती दशमलव $0.\\overline{45}$ को साधारण भिन्न में बदलिए।",
     "o": ["5/11", "9/20", "45/100", "4/9"],
     "a": 0,
-    "e": "Step 1: $0.\\\\overline{45}$ can be written as 45/99. Step 2: Simplify by dividing numerator and denominator by 9. Step 3: 45/99 = 5/11."
+    "e": "Step 1: $0.\\overline{45}$ can be written as 45/99. Step 2: Simplify by dividing numerator and denominator by 9. Step 3: 45/99 = 5/11."
   },
   {
     "p_id": "bssc_math_007",
@@ -177,8 +177,8 @@
   },
   {
     "p_id": "bssc_math_023",
-    "qe": "<b>Simplification:</b> Simplify the expression: $45 - [38 - {60 \\\\div 3 - (6 - 9 \\\\div 3)}]$.",
-    "qh": "<b>सरलीकरण:</b> व्यंजक को सरल कीजिए: $45 - [38 - {60 \\\\div 3 - (6 - 9 \\\\div 3)}]$.",
+    "qe": "<b>Simplification:</b> Simplify the expression: $45 - [38 - {60 \\div 3 - (6 - 9 \\div 3)}]$.",
+    "qh": "<b>सरलीकरण:</b> व्यंजक को सरल कीजिए: $45 - [38 - {60 \\div 3 - (6 - 9 \\div 3)}]$.",
     "o": ["24", "42", "20", "38"],
     "a": 0,
     "e": "Step 1: Inner small bracket: 6 - 3 = 3. Step 2: Curly bracket: 20 - 3 = 17. Step 3: Square bracket: 38 - 17 = 21. Final calculation: 45 - 21 = 24."
@@ -201,11 +201,11 @@
   },
   {
     "p_id": "bssc_math_026",
-    "qe": "<b>Science Numerical (Physics):</b> Two resistors of resistance $3\\\\ \\\\Omega$ and $6\\\\ \\\\Omega$ are connected in parallel. Find the equivalent resistance of the combination.",
-    "qh": "<b>विज्ञान आंकिक (भौतिकी):</b> $3\\\\ \\\\Omega$ और $6\\\\ \\\\Omega$ के दो प्रतिरोधक समानांतर क्रम में जुड़े हुए हैं। संयोजन का तुल्य प्रतिरोध ज्ञात कीजिए।",
-    "o": ["9 $\\\\Omega$", "2 $\\\\Omega$", "1.5 $\\\\Omega$", "4.5 $\\\\Omega$"],
+    "qe": "<b>Science Numerical (Physics):</b> Two resistors of resistance $3\\ \\Omega$ and $6\\ \\Omega$ are connected in parallel. Find the equivalent resistance of the combination.",
+    "qh": "<b>विज्ञान आंकिक (भौतिकी):</b> $3\\ \\Omega$ और $6\\ \\Omega$ के दो प्रतिरोधक समानांतर क्रम में जुड़े हुए हैं। संयोजन का तुल्य प्रतिरोध ज्ञात कीजिए।",
+    "o": ["9 $\\Omega$", "2 $\\Omega$", "1.5 $\\Omega$", "4.5 $\\Omega$"],
     "a": 1,
-    "e": "Step 1: Formula for parallel resistance is 1/Rp = 1/R1 + 1/R2. Step 2: 1/Rp = 1/3 + 1/6 = 3/6 = 1/2. Step 3: Rp = 2 $\\\\Omega$."
+    "e": "Step 1: Formula for parallel resistance is 1/Rp = 1/R1 + 1/R2. Step 2: 1/Rp = 1/3 + 1/6 = 3/6 = 1/2. Step 3: Rp = 2 $\\Omega$."
   },
   {
     "p_id": "bssc_math_027",
@@ -265,16 +265,16 @@
   },
   {
     "p_id": "bssc_math_034",
-    "qe": "<b>Number System:</b> Find the unit digit in the product $3^{65} \\\\times 6^{59}$.",
-    "qh": "<b>संख्या पद्धति:</b> गुणनफल $3^{65} \\\\times 6^{59}$ में इकाई का अंक ज्ञात कीजिए।",
+    "qe": "<b>Number System:</b> Find the unit digit in the product $3^{65} \\times 6^{59}$.",
+    "qh": "<b>संख्या पद्धति:</b> गुणनफल $3^{65} \\times 6^{59}$ में इकाई का अंक ज्ञात कीजिए।",
     "o": ["3", "6", "8", "2"],
     "a": 2,
     "e": "Step 1: Cyclicity of 3 is 4. Remainder of 65/4 is 1, so unit digit of $3^{65}$ is $3^1 = 3$. Step 2: Unit digit of any power of 6 is always 6. Step 3: Multiply unit digits: 3 * 6 = 18. Unit digit is 8."
   },
   {
     "p_id": "bssc_math_035",
-    "qe": "<b>Algebra:</b> If $x + \\\\frac{1}{x} = 5$, find the value of $x^2 + \\\\frac{1}{x^2}$.",
-    "qh": "<b>बीजगणित:</b> यदि $x + \\\\frac{1}{x} = 5$ है, तो $x^2 + \\\\frac{1}{x^2}$ का मान ज्ञात कीजिए।",
+    "qe": "<b>Algebra:</b> If $x + \\frac{1}{x} = 5$, find the value of $x^2 + \\frac{1}{x^2}$.",
+    "qh": "<b>बीजगणित:</b> यदि $x + \\frac{1}{x} = 5$ है, तो $x^2 + \\frac{1}{x^2}$ का मान ज्ञात कीजिए।",
     "o": ["25", "23", "27", "20"],
     "a": 1,
     "e": "Step 1: Square both sides of the given equation: $(x + 1/x)^2 = 5^2$. Step 2: $x^2 + 1/x^2 + 2 = 25$. Step 3: $x^2 + 1/x^2 = 25 - 2 = 23$."
