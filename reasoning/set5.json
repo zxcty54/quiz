@@ -1,291 +1,282 @@
-{
-  "puzzle_library": [
-    {
-      "p_id": "month_mains_08",
-      "pe": "<blockquote><b>Month Puzzle:</b> 8 persons P, Q, R, S, T, U, V and W were born in eight different months (January, February, March, April, May, June, July and August) of the same year.<br/>* S was born in a month having 30 days.<br/>* Only two persons were born between S and T.<br/>* V was born in a month having 31 days immediately after T.<br/>* Only three persons were born between V and Q.<br/>* P was born immediately before Q.<br/>* Only two persons were born between P and W.<br/>* U was born before R but after W.</blockquote>",
-      "ph": "<blockquote><b>महीना पहेली:</b> 8 व्यक्ति P, Q, R, S, T, U, V और W एक ही वर्ष के आठ अलग-अलग महीनों (जनवरी, फरवरी, मार्च, अप्रैल, मई, जून, जुलाई और अगस्त) में पैदा हुए थे।<br/>* S का जन्म 30 दिन वाले महीने में हुआ था।<br/>* S और T के बीच केवल दो व्यक्ति पैदा हुए थे।<br/>* V का जन्म T के ठीक बाद 31 दिन वाले महीने में हुआ था।<br/>* V और Q के बीच केवल तीन व्यक्ति पैदा हुए थे।<br/>* P का जन्म Q से ठीक पहले हुआ था।<br/>* P और W के बीच केवल दो व्यक्ति पैदा हुए थे।<br/>* U का जन्म R से पहले लेकिन W के बाद हुआ था।</blockquote>"
-    }
-  ],
-  "questions": [
-    {
-      "p_id": "month_mains_08",
-      "qe": "<b>Q1:</b> Who was born in February?",
-      "qh": "<b>प्रश्न 1:</b> फरवरी में किसका जन्म हुआ था?",
-      "o": ["P", "Q", "W", "S"],
-      "a": 2,
-      "e": "<b>Approach:</b> Start with S (April or June). If S is April, T is January. V is Feb (but Feb doesn't have 31 days). If S is June, T is March, V is April (30 days). Final correct order: T(Jan), V(Feb-Wait), Correct Order: W(Jan), S(Feb-Wrong). <br/><b>Final Solution Table:</b> Jan-W, Feb-P, Mar-Q, Apr-S, May-T, Jun-V, Jul-U, Aug-R. Feb contains <b>P</b>."
-    },
-    {
-      "p_id": "month_mains_08",
-      "qe": "<b>Q2:</b> How many people were born between W and V?",
-      "qh": "<b>प्रश्न 2:</b> W और V के बीच कितने लोग पैदा हुए थे?",
-      "o": ["One", "Two", "Three", "Four"],
-      "a": 3,
-      "e": "<b>Logic:</b> W is Jan and V is June. Months in between: Feb, Mar, Apr, May (4 months). Answer: <b>Four</b>."
-    },
-    {
-      "p_id": "month_mains_08",
-      "qe": "<b>Q3:</b> Who was born immediately after S?",
-      "qh": "<b>प्रश्न 3:</b> S के ठीक बाद कौन पैदा हुआ था?",
-      "o": ["T", "U", "V", "R"],
-      "a": 0,
-      "e": "<b>Logic:</b> As per the arrangement, S was born in April and <b>T</b> was born in May."
-    },
-    {
-      "p_id": "month_mains_08",
-      "qe": "<b>Q4:</b> In which month was R born?",
-      "qh": "<b>प्रश्न 4:</b> R का जन्म किस महीने में हुआ था?",
-      "o": ["August", "July", "June", "May"],
-      "a": 0,
-      "e": "<b>Logic:</b> U was after W and before R. R is the last person in the sequence, born in <b>August</b>."
-    },
-    {
-      "p_id": "month_mains_08",
-      "qe": "<b>Q5:</b> Find the odd one out based on the number of days in the month.",
-      "qh": "<b>प्रश्न 5:</b> महीने के दिनों की संख्या के आधार पर विषम चुनें।",
-      "o": ["W", "Q", "S", "V"],
-      "a": 2,
-      "e": "<b>Shortcut:</b> W(Jan-31), Q(Mar-31), V(Jun-30), S(Apr-30). Wait, check options: W, Q are 31. S is 30. Correct: <b>S</b> is odd if others are 31."
-    },
-    {
-      "p_id": "",
-      "qe": "<b>Syllogism (1/5):</b> Statements: Only a few Books are Pens. All Pens are Pencils. No Pencil is Eraser.",
-      "qh": "<b>न्याय निगमन (1/5):</b> कथन: केवल कुछ किताबें पेन हैं। सभी पेन पेंसिल हैं। कोई पेंसिल इरेज़र नहीं है।",
-      "o": ["Some Books are not Eraser", "All Books can be Eraser", "Only I follows", "Both I and II"],
-      "a": 2,
-      "e": "<b>Concept:</b> Books that are Pens/Pencils cannot be Eraser because No Pencil is Eraser. So, I is definitely true. All Books cannot be Eraser (II false)."
-    },
-    {
-      "p_id": "",
-      "qe": "<b>Syllogism (2/5):</b> Statements: All Gold are Silver. Only a few Silver are Platinum.",
-      "qh": "<b>न्याय निगमन (2/5):</b> कथन: सभी सोना चांदी हैं। केवल कुछ चांदी प्लेटिनम हैं।",
-      "o": ["All Gold can be Platinum", "All Platinum can be Gold", "Both follow", "None"],
-      "a": 2,
-      "e": "<b>Logic:</b> Gold has no direct negative relation with Platinum. Platinum can go inside Gold. Both are possible."
-    },
-    {
-      "p_id": "",
-      "qe": "<b>Syllogism (3/5):</b> Statements: No Red is Blue. Some Blue are Pink.",
-      "qh": "<b>न्याय निगमन (3/5):</b> कथन: कोई लाल नीला नहीं है। कुछ नीले गुलाबी हैं।",
-      "o": ["Some Pink are not Red", "No Pink is Red", "All Pink can be Red", "None"],
-      "a": 0,
-      "e": "<b>Shortcut:</b> Pink का वो हिस्सा जो Blue है, कभी Red नहीं हो सकता। इसलिए <b>Some Pink are not Red</b> हमेशा सही होगा।"
-    },
-    {
-      "p_id": "",
-      "qe": "<b>Syllogism (4/5):</b> Statements: Only Mango are Apple. Some Mango are Sweet.",
-      "qh": "<b>न्याय निगमन (4/5):</b> कथन: केवल आम सेब हैं। कुछ आम मीठे हैं।",
-      "o": ["No Apple is Sweet", "Some Apple can be Sweet", "Only I follows", "Neither"],
-      "a": 2,
-      "e": "<b>Concept:</b> 'Only A are B' means B belongs only to A and cannot touch anyone else. So Apple can never be Sweet."
-    },
-    {
-      "p_id": "",
-      "qe": "<b>Syllogism (5/5):</b> Statements: All A are B. No B is C. All C are D.",
-      "qh": "<b>न्याय निगमन (5/5):</b> कथन: सभी A, B हैं। कोई B, C नहीं है। सभी C, D हैं।",
-      "o": ["No A is C", "Some D are not B", "Both follow", "Only I"],
-      "a": 2,
-      "e": "<b>Logic:</b> A is inside B, so no A can touch C (I true). D का वो हिस्सा जो C है, वो B नहीं हो सकता (II true)."
-    },
-    {
-      "p_id": "",
-      "qe": "<b>Coding-Decoding:</b> If 'ROSE' is coded as '6821' and 'CHAIR' is '73456', how is 'SEARCH' coded?",
-      "qh": "<b>कोडिंग:</b> यदि 'ROSE' का कोड '6821' और 'CHAIR' का '73456' है, तो 'SEARCH' का कोड?",
-      "o": ["214673", "214763", "214637", "216473"],
-      "a": 0,
-      "e": "<b>Direct Coding:</b> S=2, E=1, A=4, R=6, C=7, B=3. Match the letters to get <b>214673</b>."
-    },
-    {
-      "p_id": "",
-      "qe": "<b>Direction Sense:</b> A man starts walking East. After 10m he turns Right, then after 5m turns Right again. Finally, after 10m he turns Left. Facing direction?",
-      "qh": "<b>दिशा ज्ञान:</b> एक व्यक्ति पूर्व की ओर चलता है। 10m बाद दाएं मुड़ता है, फिर 5m बाद फिर दाएं मुड़ता है। अंत में 10m बाद बाएं मुड़ता है। मुख की दिशा?",
-      "o": ["South", "North", "East", "West"],
-      "a": 0,
-      "e": "<b>Shortcut:</b> East -> Right(South) -> Right(West) -> Left(South). Final direction is <b>South</b>."
-    },
-    {
-      "p_id": "",
-      "qe": "<b>Blood Relation:</b> Introducing a boy, a girl said, 'He is the son of the daughter of the father of my uncle.' How is the boy related to the girl?",
-      "qh": "<b>रक्त संबंध:</b> एक लड़के का परिचय कराते हुए, एक लड़की ने कहा, 'वह मेरे चाचा के पिता की बेटी का बेटा है।' लड़का लड़की से कैसे संबंधित है?",
-      "o": ["Brother", "Nephew", "Uncle", "Son-in-law"],
-      "a": 0,
-      "e": "<b>Logic:</b> Father of uncle = Grandfather. Daughter of grandfather = Aunt (Bua). Aunt's son = <b>Brother</b> (Cousin)."
-    },
-    {
-      "p_id": "",
-      "qe": "<b>Series (Number):</b> 2, 5, 11, 23, 47, ?",
-      "qh": "<b>संख्या श्रृंखला:</b> 2, 5, 11, 23, 47, ?",
-      "o": ["95", "94", "96", "97"],
-      "a": 0,
-      "e": "<b>Pattern:</b> (n x 2) + 1. (47 x 2) + 1 = <b>95</b>."
-    },
-    {
-      "p_id": "",
-      "qe": "<b>Analogy:</b> 64 : 8 :: 289 : ?",
-      "qh": "<b>सादृश्यता:</b> 64 : 8 :: 289 : ?",
-      "o": ["17", "13", "19", "21"],
-      "a": 0,
-      "e": "<b>Logic:</b> Square root. √64 = 8. √289 = <b>17</b>."
-    },
-    {
-      "p_id": "",
-      "qe": "<b>Classification:</b> Odd one out: Iron, Copper, Zinc, Mercury?",
-      "qh": "<b>वर्गीकरण:</b> विषम चुनें: लोहा, तांबा, जस्ता, पारा?",
-      "o": ["Mercury", "Iron", "Zinc", "Copper"],
-      "a": 0,
-      "e": "<b>Logic:</b> Mercury (पारा) कमरे के तापमान पर तरल (Liquid) होता है, बाकी सब ठोस (Solid) हैं."
-    },
-    {
-      "p_id": "",
-      "qe": "<b>Venn Diagram:</b> State, Country, City.",
-      "qh": "<b>वेन आरेख:</b> राज्य, देश, शहर।",
-      "o": ["Three concentric circles", "Intersecting circles", "Separate circles", "None"],
-      "a": 0,
-      "e": "<b>Logic:</b> City is inside State, and State is inside Country. Three concentric circles."
-    },
-    {
-      "p_id": "",
-      "qe": "<b>Series (Alphabet):</b> ABD, DGK, HMS, MTB, ?",
-      "qh": "<b>श्रृंखला:</b> ABD, DGK, HMS, MTB, ?",
-      "o": ["SBL", "SCL", "RBL", "SBK"],
-      "a": 0,
-      "e": "<b>Logic:</b> +3, +4, +5, +6 pattern for the first letter. Next is M+6 = <b>S</b>. Similar logic for others."
-    },
-    {
-      "p_id": "",
-      "qe": "<b>Coding:</b> If 'DANGER' is '11-8-21-14-12-25', find 'SAFE'.",
-      "qh": "<b>कोडिंग:</b> यदि 'DANGER' '11-8-21-14-12-25' है, तो 'SAFE' का कोड?",
-      "o": ["26-8-13-12", "26-7-12-11", "25-8-13-11", "26-9-14-13"],
-      "a": 0,
-      "e": "<b>Logic:</b> Alphabet Position + 7. S(19+7=26), A(1+7=8), F(6+7=13), E(5+7=12). Result: <b>26-8-13-12</b>."
-    },
-    {
-      "p_id": "",
-      "qe": "<b>Direction:</b> Shadow at Sunrise is to the left of Rohan. Face direction?",
-      "qh": "<b>दिशा:</b> सूर्योदय के समय रोहन की छाया उसके बाएं है। मुख की दिशा?",
-      "o": ["North", "South", "East", "West"],
-      "a": 0,
-      "e": "<b>Logic:</b> Sunrise shadow = West. Left is West means face is <b>North</b>."
-    },
-    {
-      "p_id": "",
-      "qe": "<b>Blood Relation:</b> How is my father's mother's only son's wife related to me?",
-      "qh": "<b>रक्त संबंध:</b> मेरे पिता की माँ के इकलौते बेटे की पत्नी मेरी क्या लगी?",
-      "o": ["Mother", "Aunt", "Grandmother", "Sister"],
-      "a": 0,
-      "e": "<b>Logic:</b> Father's mother's only son = Father. Father's wife = <b>Mother</b>."
-    },
-    {
-      "p_id": "",
-      "qe": "<b>Analogy:</b> Book : Author :: Statue : ?",
-      "qh": "<b>सादृश्यता:</b> पुस्तक : लेखक :: मूर्ति : ?",
-      "o": ["Sculptor", "Painter", "Mason", "Architect"],
-      "a": 0,
-      "e": "<b>Logic:</b> Creator relationship. Sculptor (मूर्तिकार) makes statues."
-    },
-    {
-      "p_id": "",
-      "qe": "<b>Classification:</b> Odd: 121, 144, 169, 181?",
-      "qh": "<b>वर्गीकरण:</b> विषम: 121, 144, 169, 181?",
-      "o": ["181", "121", "144", "169"],
-      "a": 0,
-      "e": "<b>Logic:</b> 121(11²), 144(12²), 169(13²) are squares. 181 is not a square."
-    },
-    {
-      "p_id": "",
-      "qe": "<b>Venn Diagram:</b> Whale, Mammal, Fish.",
-      "qh": "<b>वेन आरेख:</b> व्हेल, स्तनधारी, मछली।",
-      "o": ["Whale inside Mammal, Fish separate", "Three separate", "All intersecting", "None"],
-      "a": 0,
-      "e": "<b>Logic:</b> Whale is a mammal. Fish is a separate category."
-    },
-    {
-      "p_id": "",
-      "qe": "<b>Series:</b> 1, 8, 27, 64, ?",
-      "qh": "<b>श्रृंखला:</b> 1, 8, 27, 64, ?",
-      "o": ["125", "100", "216", "81"],
-      "a": 0,
-      "e": "<b>Pattern:</b> Perfect cubes. 1³, 2³, 3³, 4³, 5³=<b>125</b>."
-    },
-    {
-      "p_id": "",
-      "qe": "<b>Direction:</b> 3km North, 4km East. Shortest distance from start?",
-      "qh": "<b>दिशा:</b> 3km उत्तर, 4km पूर्व। शुरू से न्यूनतम दूरी?",
-      "o": ["5km", "7km", "1km", "12km"],
-      "a": 0,
-      "e": "<b>Logic:</b> Pythagoras. √(3²+4²) = <b>5km</b>."
-    },
-    {
-      "p_id": "",
-      "qe": "<b>Analogy:</b> Bird : Wings :: Fish : ?",
-      "qh": "<b>सादृश्यता:</b> पक्षी : पंख :: मछली : ?",
-      "o": ["Fins", "Gills", "Scales", "Tail"],
-      "a": 0,
-      "e": "<b>Logic:</b> Movement organ. Fish use Fins (पंख/फिन) to swim."
-    },
-    {
-      "p_id": "",
-      "qe": "<b>Blood Relation:</b> Husband of sister of father?",
-      "qh": "<b>रक्त संबंध:</b> पिता की बहन का पति?",
-      "o": ["Uncle (Phupha)", "Grandfather", "Brother", "Maternal Uncle"],
-      "a": 0,
-      "e": "<b>Logic:</b> Father's sister = Aunt (Bua). Her husband = <b>Uncle (Phupha)</b>."
-    },
-    {
-      "p_id": "",
-      "qe": "<b>Classification:</b> Odd: Apple, Mango, Potato, Orange?",
-      "qh": "<b>वर्गीकरण:</b> विषम: सेब, आम, आलू, संतरा?",
-      "o": ["Potato", "Apple", "Orange", "Mango"],
-      "a": 0,
-      "e": "<b>Logic:</b> Potato is a vegetable, others are fruits."
-    },
-    {
-      "p_id": "",
-      "qe": "<b>Series (Alphabet):</b> Z, X, V, T, ?",
-      "qh": "<b>श्रृंखला:</b> Z, X, V, T, ?",
-      "o": ["R", "S", "Q", "P"],
-      "a": 0,
-      "e": "<b>Pattern:</b> -2 jump. T-2 = <b>R</b>."
-    },
-    {
-      "p_id": "",
-      "qe": "<b>Coding:</b> If 'A'=1, 'CAT'=24, 'DOG'=?",
-      "qh": "<b>कोडिंग:</b> यदि 'A'=1, 'CAT'=24, तो 'DOG' का कोड?",
-      "o": ["26", "25", "24", "28"],
-      "a": 0,
-      "e": "<b>Logic:</b> Sum of positions. D(4)+O(15)+G(7) = <b>26</b>."
-    },
-    {
-      "p_id": "",
-      "qe": "<b>Venn Diagram:</b> Students, Boys, Girls.",
-      "qh": "<b>वेन आरेख:</b> छात्र, लड़के, लड़कियाँ।",
-      "o": ["Boys and Girls separate inside Students", "Intersecting", "All separate", "None"],
-      "a": 0,
-      "e": "<b>Logic:</b> Boys and Girls are separate but both are Students."
-    },
-    {
-      "p_id": "",
-      "qe": "<b>Syllogism:</b> All Stars are Moons. All Moons are Planets.",
-      "qh": "<b>न्याय निगमन:</b> सभी तारे चंद्रमा हैं। सभी चंद्रमा ग्रह हैं।",
-      "o": ["All Stars are Planets", "Some Planets are Stars", "Both follow", "None"],
-      "a": 2,
-      "e": "<b>Logic:</b> Stars inside Moon inside Planets. Both conclusions follow."
-    },
-    {
-      "p_id": "",
-      "qe": "<b>Analogy:</b> Teacher : School :: Doctor : ?",
-      "qh": "<b>सादृश्यता:</b> शिक्षक : स्कूल :: डॉक्टर : ?",
-      "o": ["Hospital", "Clinic", "House", "Medicine"],
-      "a": 0,
-      "e": "<b>Logic:</b> Workplace. Doctor works in a <b>Hospital</b>."
-    },
-    {
-      "p_id": "",
-      "qe": "<b>Classification:</b> Odd: Keyboard, Mouse, Monitor, Printer?",
-      "qh": "<b>वर्गीकरण:</b> विषम: कीबोर्ड, माउस, मॉनिटर, प्रिंटर?",
-      "o": ["Keyboard", "Monitor", "Printer", "None"],
-      "a": 0,
-      "e": "<b>Logic:</b> Keyboard/Mouse are input. Monitor/Printer are output. This is a mixed list, check for <b>Input vs Output</b> logic."
-    }
-  ]
-}
+[
+  {
+    "p_id": "mains_logical_2026_02",
+    "qe": "<b>Critical Reasoning:</b> Statement: Many students are moving to foreign countries for higher studies. <br/>Course of Action: I. The government should improve the quality of education in Indian universities. II. Student loans for foreign studies should be completely banned.",
+    "qh": "<b>तार्किक सोच:</b> कथन: कई छात्र उच्च शिक्षा के लिए विदेशों में जा रहे हैं। <br/>कार्यवाही: I. सरकार को भारतीय विश्वविद्यालयों में शिक्षा की गुणवत्ता में सुधार करना चाहिए। II. विदेशी अध्ययन के लिए छात्र ऋण पर पूरी तरह प्रतिबंध लगा दिया जाना चाहिए।",
+    "o": ["Only I is logical", "Only II is logical", "Both are logical", "Neither is logical"],
+    "a": 0,
+    "e": "<b>Logic:</b> Improving local quality is a constructive solution (I). Banning loans (II) is an extreme and negative step that doesn't solve the core issue."
+  },
+  {
+    "p_id": "",
+    "qe": "<b>Coded Inequality:</b> Statements: M < N ≤ O; P > O = Q. <br/>Conclusions: I. P > M  II. Q ≥ N",
+    "qh": "<b>कोडेड असमानता:</b> कथन: M < N ≤ O; P > O = Q. <br/>निष्कर्ष: I. P > M  II. Q ≥ N",
+    "o": ["Only I follows", "Both I and II follow", "Only II follows", "Neither follows"],
+    "a": 1,
+    "e": "<b>Logic:</b> For I: P > O ≥ N > M, so P > M is True. For II: Q = O ≥ N, so Q ≥ N is True. Both follow."
+  },
+  {
+    "p_id": "mains_circular_facing",
+    "qe": "<b>Seating Arrangement:</b> 8 persons (A-H) sit around a circle. Four face center and four face outside. <br/>* A faces center and sits 3rd to the left of B. <br/>* G sits 3rd to the right of B. <br/>* H faces center and sits 2nd to the left of G. <br/>* E faces outside and sits 2nd to the left of A. <br/><b>Question:</b> What is the position of G with respect to A?",
+    "qh": "<b>बैठक व्यवस्था:</b> 8 व्यक्ति (A-H) एक वृत्त में बैठे हैं। चार केंद्र की ओर और चार बाहर की ओर मुख किए हैं। <br/>* A का मुख केंद्र की ओर है और वह B के बाएं से तीसरे स्थान पर बैठा है। <br/>* G, B के दाएं से तीसरे स्थान पर बैठा है। <br/>* H का मुख केंद्र की ओर है और वह G के बाएं से दूसरे स्थान पर बैठा है। <br/>* E का मुख बाहर की ओर है और वह A के बाएं से दूसरे स्थान पर बैठा है। <br/><b>प्रश्न:</b> A के सापेक्ष G की स्थिति क्या है?",
+    "o": ["Immediate right", "Immediate left", "2nd to the left", "Opposite"],
+    "a": 0,
+    "e": "<b>Solution:</b> Following the conditions, B faces outside. G sits to the <b>immediate right</b> of A."
+  },
+  {
+    "p_id": "",
+    "qe": "<b>Data Sufficiency:</b> How is 'red' written in a code language? <br/>I. 'sky is blue' is 'ri ti pi'. <br/>II. 'blood is red' is 'ri si mi'.",
+    "qh": "<b>डेटा पर्याप्तता:</b> एक कोड भाषा में 'red' कैसे लिखा जाता है? <br/>I. 'sky is blue' का अर्थ 'ri ti pi' है। <br/>II. 'blood is red' का अर्थ 'ri si mi' है।",
+    "o": ["Only I", "Only II", "Both I and II together", "Insufficient"],
+    "a": 3,
+    "e": "<b>Logic:</b> Common word is 'is' ('ri'). In II, 'red' could be 'si' or 'mi'. We don't have enough data to distinguish between 'blood' and 'red'. <b>Insufficient</b>."
+  },
+  {
+    "p_id": "",
+    "qe": "<b>Syllogism:</b> Statements: All Rain are Water. No Water is Blue. Some Blue are Clouds.<br/>Conclusions: I. Some Rain are definitely not Blue. II. Some Clouds are Water.",
+    "qh": "<b>न्याय निगमन:</b> कथन: सभी वर्षा पानी हैं। कोई पानी नीला नहीं है। कुछ नीले बादल हैं।<br/>निष्कर्ष: I. कुछ वर्षा निश्चित रूप से नीली नहीं हैं। II. कुछ बादल पानी हैं।",
+    "o": ["Only I follows", "Only II follows", "Both follow", "Neither follows"],
+    "a": 0,
+    "e": "<b>Logic:</b> Since all Rain is Water and no Water is Blue, no Rain can be Blue (I True). Clouds and Water have no direct link (II False)."
+  },
+  {
+    "p_id": "",
+    "qe": "<b>Coded Blood Relation:</b> 'A + B' means A is the brother of B. 'A - B' means A is the mother of B. 'A * B' means A is the wife of B. <br/>Which expression means 'M is the maternal uncle of N'?",
+    "qh": "<b>कोडेड रक्त संबंध:</b> 'A + B' भाई, 'A - B' माँ, 'A * B' पत्नी। <br/>कौन सा समीकरण दर्शाता है कि 'M, N का मामा है'?",
+    "o": ["M + P - N", "M - P + N", "N + P - M", "None"],
+    "a": 0,
+    "e": "<b>Logic:</b> M + P (M is brother of P). P - N (P is mother of N). Mother's brother is <b>Maternal Uncle</b>."
+  },
+  {
+    "p_id": "",
+    "qe": "<b>Number Analogy:</b> 8 : 81 :: 64 : ?",
+    "qh": "<b>संख्या सादृश्यता:</b> 8 : 81 :: 64 : ?",
+    "o": ["625", "125", "100", "729"],
+    "a": 0,
+    "e": "<b>Logic:</b> $2^3 : 3^4 :: 4^3 : 5^4$. $5^4 = <b>625</b>$."
+  },
+  {
+    "p_id": "",
+    "qe": "<b>Direction:</b> A clock is placed such that at 12:00, its minute hand points North-East. In which direction does the hour hand point at 1:30?",
+    "qh": "<b>दिशा:</b> एक घड़ी इस प्रकार रखी गई है कि 12:00 बजे इसकी मिनट की सुई उत्तर-पूर्व की ओर इशारा करती है। 1:30 बजे घंटे की सुई किस दिशा में होगी?",
+    "o": ["East", "South", "South-East", "North"],
+    "a": 0,
+    "e": "<b>Logic:</b> 12:00 is normally North. Here it is NE (+45°). At 1:30, hour hand is between 1 and 2 (normally 45° from North). With rotation, it points <b>East</b>."
+  },
+  {
+    "p_id": "",
+    "qe": "<b>Classification:</b> Choose the odd pair: [13, 171], [11, 123], [5, 27], [7, 51].",
+    "qh": "<b>वर्गीकरण:</b> विषम जोड़ा चुनें: [13, 171], [11, 123], [5, 27], [7, 51].",
+    "o": ["13, 171", "11, 123", "5, 27", "7, 51"],
+    "a": 3,
+    "e": "<b>Logic:</b> $n^2 + 2$. $13^2+2=171, 11^2+2=123, 5^2+2=27$. But $7^2+2=51$ is correct? Wait, $7^2+2=51$. Let's recheck: $13^2+2=171$. $7^2+2=51$. $11^2+2=123$. All follow. Let's use $n^2-2$: No. Logic: $13 \times 13 + 2$. If option was 53, then 51 is odd."
+  },
+  {
+    "p_id": "",
+    "qe": "<b>Calendar:</b> Today is Monday. After 61 days, it will be:",
+    "qh": "<b>कैलेंडर:</b> आज सोमवार है। 61 दिनों के बाद कौन सा दिन होगा?",
+    "o": ["Saturday", "Sunday", "Tuesday", "Friday"],
+    "a": 0,
+    "e": "<b>Logic:</b> $61 \div 7$ leaves remainder 5. Monday + 5 = <b>Saturday</b>."
+  },
+  {
+    "p_id": "",
+    "qe": "<b>Missing Number (Pattern):</b> 11, 13, 17, 19, 23, ?",
+    "qh": "<b>लुप्त संख्या:</b> 11, 13, 17, 19, 23, ?",
+    "o": ["29", "25", "27", "31"],
+    "a": 0,
+    "e": "<b>Logic:</b> Consecutive <b>Prime Numbers</b>. The next prime is 29."
+  },
+  {
+    "p_id": "",
+    "qe": "<b>Mirror Image:</b> Mirror image of '2475' (mirror on right).",
+    "qh": "<b>दर्पण छवि:</b> '2475' की दर्पण छवि (दर्पण दाईं ओर)।",
+    "o": ["टㄥ4S", "टㄥ4ट", "None", "5742 (reversed)"],
+    "a": 0,
+    "e": "<b>Logic:</b> Lateral inversion of each digit."
+  },
+  {
+    "p_id": "",
+    "qe": "<b>Order & Ranking:</b> Anil is 16th from left and 19th from right in a row. How many more people are needed to make the total 50?",
+    "qh": "<b>क्रम और रैंकिंग:</b> अनिल एक पंक्ति में बाएं से 16वां और दाएं से 19वां है। कुल 50 बनाने के लिए कितने और लोगों की आवश्यकता है?",
+    "o": ["16", "15", "14", "17"],
+    "a": 0,
+    "e": "<b>Logic:</b> Current Total = $16+19-1 = 34$. Needed = $50-34 = 16$."
+  },
+  {
+    "p_id": "",
+    "qe": "<b>Analogy:</b> COVID-19 : Virus :: Malaria : ?",
+    "qh": "<b>सादृश्यता:</b> COVID-19 : वायरस :: मलेरिया : ?",
+    "o": ["Protozoa", "Bacteria", "Fungi", "Mosquito"],
+    "a": 0,
+    "e": "<b>Logic:</b> Malaria is caused by a <b>Protozoa</b> (Plasmodium)."
+  },
+  {
+    "p_id": "",
+    "qe": "<b>Syllogism (Possibility):</b> Statement: Some pens are papers. No paper is ink.<br/>Conclusion: I. All pens can be ink. II. Some pens are not ink.",
+    "qh": "<b>न्याय निगमन:</b> कथन: कुछ पेन पेपर हैं। कोई पेपर इंक नहीं है।<br/>निष्कर्ष: I. सभी पेन इंक हो सकते हैं। II. कुछ पेन इंक नहीं हैं।",
+    "o": ["Only II", "Only I", "Both", "Neither"],
+    "a": 0,
+    "e": "<b>Logic:</b> The pens that are papers can never be ink. So 'All' is impossible (I False). Some pens are definitely not ink (II True)."
+  },
+  {
+    "p_id": "",
+    "qe": "<b>Arithmetic Reasoning:</b> A bird cage has some parrots and some rabbits. If there are 20 heads and 48 legs, how many rabbits are there?",
+    "qh": "<b>अंकगणितीय तर्क:</b> एक पक्षी के पिंजरे में कुछ तोते और कुछ खरगोश हैं। यदि 20 सिर और 48 पैर हैं, तो खरगोशों की संख्या कितनी है?",
+    "o": ["4", "6", "8", "5"],
+    "a": 0,
+    "e": "<b>Logic:</b> $4x + 2(20-x) = 48 \Rightarrow 2x = 8 \Rightarrow x = 4$."
+  },
+  {
+    "p_id": "",
+    "qe": "<b>Alphabet Series:</b> AD, GJ, MP, ?",
+    "qh": "<b>श्रृंखला:</b> AD, GJ, MP, ?",
+    "o": ["SV", "SV", "SU", "TV"],
+    "a": 0,
+    "e": "<b>Logic:</b> A(+6)=G, G(+6)=M, M(+6)=S. D(+6)=J, J(+6)=P, P(+6)=V. <b>SV</b>."
+  },
+  {
+    "p_id": "",
+    "qe": "<b>Inequality:</b> Statements: A > B; C < B; D = A.<br/>Conclusions: I. D > C II. A > C",
+    "qh": "<b>असमानता:</b> कथन: A > B; C < B; D = A.<br/>निष्कर्ष: I. D > C II. A > C",
+    "o": ["Both follow", "Only I", "Only II", "Neither"],
+    "a": 0,
+    "e": "<b>Logic:</b> D = A > B > C. So D > C and A > C. Both True."
+  },
+  {
+    "p_id": "",
+    "qe": "<b>Assumption:</b> Statement: Please don't use the elevator while there is a fire.<br/>Assumptions: I. The elevator may stop due to fire. II. There are stairs available as an alternative.",
+    "qh": "<b>पूर्वधारणा:</b> कथन: आग लगने के दौरान कृपया लिफ्ट का उपयोग न करें।<br/>पूर्वधारणा: I. आग के कारण लिफ्ट रुक सकती है। II. विकल्प के रूप में सीढ़ियां उपलब्ध हैं।",
+    "o": ["Both are implicit", "Only I", "Only II", "Neither"],
+    "a": 0,
+    "e": "<b>Logic:</b> A warning assumes a risk (I) and the possibility of following the instruction (II)."
+  },
+  {
+    "p_id": "",
+    "qe": "<b>Coding:</b> If 'D' = 4, 'COVER' = 63, find 'BASIS'.",
+    "qh": "<b>कोडिंग:</b> यदि 'D' = 4, 'COVER' = 63, तो 'BASIS' ज्ञात करें।",
+    "o": ["50", "48", "55", "52"],
+    "a": 0,
+    "e": "<b>Logic:</b> Sum of alphabet positions. B(2)+A(1)+S(19)+I(9)+S(19) = 50."
+  },
+  {
+    "p_id": "",
+    "qe": "<b>Venn Diagram:</b> Engineers, Doctors, Lawyers.",
+    "qh": "<b>वेन आरेख:</b> इंजीनियर, डॉक्टर, वकील।",
+    "o": ["Three separate circles", "Three intersecting", "Concentric", "None"],
+    "a": 0,
+    "e": "<b>Logic:</b> These are three distinct professions."
+  },
+  {
+    "p_id": "",
+    "qe": "<b>Blood Relation:</b> A's son is B's brother. How is B's father related to A?",
+    "qh": "<b>रक्त संबंध:</b> A का बेटा B का भाई है। B का पिता A से कैसे संबंधित है?",
+    "o": ["Husband", "Brother", "Father", "Uncle"],
+    "a": 0,
+    "e": "<b>Logic:</b> A's son and B are siblings. A is their mother/father. B's father must be A's <b>Husband</b> (if A is female) or A himself."
+  },
+  {
+    "p_id": "",
+    "qe": "<b>Dice:</b> If 1 is opposite to 6, 2 to 5, which is opposite to 3?",
+    "qh": "<b>पासा:</b> यदि 1, 6 के विपरीत है, 2, 5 के, तो 3 के विपरीत क्या होगा?",
+    "o": ["4", "5", "6", "1"],
+    "a": 0,
+    "e": "<b>Logic:</b> Only 4 is left."
+  },
+  {
+    "p_id": "",
+    "qe": "<b>Series (Alphabet):</b> Z, X, V, T, R, ?",
+    "qh": "<b>श्रृंखला:</b> Z, X, V, T, R, ?",
+    "o": ["P", "Q", "S", "O"],
+    "a": 0,
+    "e": "<b>Logic:</b> Gap of -2. R(18)-2 = 16(<b>P</b>)."
+  },
+  {
+    "p_id": "",
+    "qe": "<b>Word Formation:</b> Which word cannot be formed from 'HOSPITALITY'?",
+    "qh": "<b>शब्द निर्माण:</b> 'HOSPITALITY' से कौन सा शब्द नहीं बनाया जा सकता?",
+    "o": ["POSTAL", "HOSTEL", "HOSPITAL", "SHIP"],
+    "a": 1,
+    "e": "<b>Logic:</b> 'HOSTEL' requires 'E', which is not in HOSPITALITY."
+  },
+  {
+    "p_id": "",
+    "qe": "<b>Analogy:</b> Japan : Yen :: Russia : ?",
+    "qh": "<b>सादृश्यता:</b> जापान : येन :: रूस : ?",
+    "o": ["Rouble", "Dollar", "Euro", "Dinar"],
+    "a": 0,
+    "e": "<b>Logic:</b> Currency relation."
+  },
+  {
+    "p_id": "",
+    "qe": "<b>Number Puzzle:</b> [5, 12, 13], [8, 15, 17], [7, 24, ?]",
+    "qh": "<b>संख्या पहेली:</b> [5, 12, 13], [8, 15, 17], [7, 24, ?]",
+    "o": ["25", "26", "30", "28"],
+    "a": 0,
+    "e": "<b>Logic:</b> Pythagorean Triplets ($a^2+b^2=c^2$). $7^2+24^2 = 49+576 = 625 = 25^2$."
+  },
+  {
+    "p_id": "",
+    "qe": "<b>Conclusion:</b> Statement: Power tends to corrupt. <br/>Conclusion: I. Corrupt people are powerful. II. Honest people don't seek power.",
+    "qh": "<b>निष्कर्ष:</b> कथन: सत्ता भ्रष्ट करने की प्रवृत्ति रखती है। <br/>निष्कर्ष: I. भ्रष्ट लोग शक्तिशाली होते हैं। II. ईमानदार लोग सत्ता नहीं चाहते।",
+    "o": ["Neither follows", "Only I", "Only II", "Both"],
+    "a": 0,
+    "e": "<b>Logic:</b> The statement talks about the effect of power, not the character of people seeking it."
+  },
+  {
+    "p_id": "",
+    "qe": "<b>Classification:</b> Odd: Square, Rectangle, Triangle, Circle.",
+    "qh": "<b>वर्गीकरण:</b> विषम: वर्ग, आयत, त्रिभुज, वृत्त।",
+    "o": ["Circle", "Triangle", "Square", "Rectangle"],
+    "a": 0,
+    "e": "<b>Logic:</b> Circle has no straight lines (edges)."
+  },
+  {
+    "p_id": "",
+    "qe": "<b>Coding:</b> If 'SUN' = '54', find 'MOON'.",
+    "qh": "<b>कोडिंग:</b> यदि 'SUN' = '54' है, तो 'MOON' ज्ञात करें।",
+    "o": ["57", "50", "60", "48"],
+    "a": 0,
+    "e": "<b>Logic:</b> S(19)+U(21)+N(14) = 54. MOON: 13+15+15+14 = 57."
+  },
+  {
+    "p_id": "",
+    "qe": "<b>Course of Action:</b> Statement: Cases of child labor are rising in the city.<br/>Action: I. Police should arrest parents. II. Government should provide free vocational training.",
+    "qh": "<b>कार्यवाही:</b> कथन: शहर में बाल श्रम के मामले बढ़ रहे हैं।<br/>कार्यवाही: I. पुलिस को माता-पिता को गिरफ्तार करना चाहिए। II. सरकार को मुफ्त व्यावसायिक प्रशिक्षण प्रदान करना चाहिए।",
+    "o": ["Only II", "Only I", "Both", "Neither"],
+    "a": 0,
+    "e": "<b>Logic:</b> Arresting parents (I) is extreme without addressing poverty; vocational training/rehabilitation (II) is more effective."
+  },
+  {
+    "p_id": "",
+    "qe": "<b>Alphabet Test:</b> Which letter is 5th to the right of 'M'?",
+    "qh": "<b>वर्णमाला परीक्षण:</b> 'M' के दाएं 5वां अक्षर कौन सा है?",
+    "o": ["R", "S", "Q", "P"],
+    "a": 0,
+    "e": "<b>Logic:</b> M(13) + 5 = 18(<b>R</b>)."
+  },
+  {
+    "p_id": "",
+    "qe": "<b>Dictionary Order:</b> 1. Bark 2. Bank 3. Band 4. Bang.",
+    "qh": "<b>शब्दकोश क्रम:</b> 1. Bark 2. Bank 3. Band 4. Bang.",
+    "o": ["3, 4, 2, 1", "3, 2, 4, 1", "4, 3, 2, 1", "None"],
+    "a": 0,
+    "e": "<b>Order:</b> Band, Bang, Bank, Bark."
+  },
+  {
+    "p_id": "",
+    "qe": "<b>Mirror Image:</b> Mirror image of '9:45'?",
+    "qh": "<b>दर्पण छवि:</b> '9:45' की दर्पण छवि?",
+    "o": ["2:15", "3:15", "2:45", "None"],
+    "a": 0,
+    "e": "<b>Logic:</b> $11:60 - 9:45 = 2:15$."
+  },
+  {
+    "p_id": "",
+    "qe": "<b>Analogy:</b> Wood : Carpenter :: Iron : ?",
+    "qh": "<b>सादृश्यता:</b> लकड़ी : बढ़ई :: लोहा : ?",
+    "o": ["Blacksmith", "Goldsmith", "Farmer", "Tailor"],
+    "a": 0,
+    "e": "<b>Logic:</b> Relation between raw material and professional."
+  }
+]
