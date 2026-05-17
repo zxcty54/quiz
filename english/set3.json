@@ -1,247 +1,282 @@
 [
   {
-    "q": "<b>Cloze Test (1/5):</b> Select the most appropriate option for <b>Blank No. 1</b>.<br/><br/><i>'The global economy is currently (1)______ a period of unprecedented uncertainty. The (2)______ of new trade barriers has hindered international cooperation. While some nations have (3)______ to protectionist measures, others are trying to (4)______ new alliances. Experts warn that unless structural reforms are (5)______, the recovery will remain sluggish.'</i>",
-    "o": ["undergoing", "witnessing", "experiencing", "enduring"],
-    "a": 0,
-    "e": "Blank 1: 'Undergoing' (गुज़रना) किसी प्रक्रिया या कठिन समय से गुज़रने के लिए सबसे सटीक क्रिया है।",
-    "cat": "english", "sub": "cloze-test"
-  },
-  {
-    "q": "<b>Cloze Test (2/5):</b> Select the most appropriate option for <b>Blank No. 2</b>.<br/><br/><i>'The global economy is currently (1)______ a period of unprecedented uncertainty. The (2)______ of new trade barriers has hindered international cooperation. While some nations have (3)______ to protectionist measures, others are trying to (4)______ new alliances. Experts warn that unless structural reforms are (5)______, the recovery will remain sluggish.'</i>",
-    "o": ["imposition", "abolition", "reduction", "mitigation"],
-    "a": 0,
-    "e": "Blank 2: 'Imposition' (लागू करना/थोपना) का प्रयोग बाधाओं (barriers) या करों के संदर्भ में किया जाता है।",
-    "cat": "english", "sub": "cloze-test"
-  },
-  {
-    "q": "<b>Cloze Test (3/5):</b> Select the most appropriate option for <b>Blank No. 3</b>.<br/><br/><i>'The global economy is currently (1)______ a period of unprecedented uncertainty. The (2)______ of new trade barriers has hindered international cooperation. While some nations have (3)______ to protectionist measures, others are trying to (4)______ new alliances. Experts warn that unless structural reforms are (5)______, the recovery will remain sluggish.'</i>",
-    "o": ["resorted", "adhered", "referred", "appealed"],
-    "a": 0,
-    "e": "Blank 3: 'Resorted to' एक phrasal verb है जिसका अर्थ है मजबूरी में किसी विकल्प को चुनना (to turn to something as a last resort)।",
-    "cat": "english", "sub": "cloze-test"
-  },
-  {
-    "q": "<b>Cloze Test (4/5):</b> Select the most appropriate option for <b>Blank No. 4</b>.<br/><br/><i>'The global economy is currently (1)______ a period of unprecedented uncertainty. The (2)______ of new trade barriers has hindered international cooperation. While some nations have (3)______ to protectionist measures, others are trying to (4)______ new alliances. Experts warn that unless structural reforms are (5)______, the recovery will remain sluggish.'</i>",
-    "o": ["forge", "break", "demolish", "sever"],
-    "a": 0,
-    "e": "Blank 4: 'Forge new alliances' (नए गठबंधन बनाना) एक standard collocation है जिसका अर्थ है कड़ी मेहनत से संबंध बनाना।",
-    "cat": "english", "sub": "cloze-test"
-  },
-  {
-    "q": "<b>Cloze Test (5/5):</b> Select the most appropriate option for <b>Blank No. 5</b>.<br/><br/><i>'The global economy is currently (1)______ a period of unprecedented uncertainty. The (2)______ of new trade barriers has hindered international cooperation. While some nations have (3)______ to protectionist measures, others are trying to (4)______ new alliances. Experts warn that unless structural reforms are (5)______, the recovery will remain sluggish.'</i>",
-    "o": ["implemented", "discarded", "ignored", "postponed"],
-    "a": 0,
-    "e": "Blank 5: 'Implemented' (कार्यान्वित करना) सुधारों (reforms) को लागू करने के लिए सही शब्द है।",
-    "cat": "english", "sub": "cloze-test"
-  },
-  {
-    "q": "<b>Error Spotting:</b> Scarcely had (A) / the function started (B) / than the power (C) / supply failed (D).",
+    "p_id": "ob_eng_mains_01",
+    "qe": "<b>Error Spotting:</b> Select the part that contains an error: <br/>'The environment (A) / of the city (B) / is much more (C) / healthier than before (D).'",
+    "qh": "<b>त्रुटि पहचानें:</b> उस भाग का चयन करें जिसमें त्रुटि है: <br/>'The environment (A) / of the city (B) / is much more (C) / healthier than before (D).'",
     "o": ["A", "B", "C", "D"],
     "a": 2,
-    "e": "Rule of Correlative Conjunctions: 'Scarcely/Hardly' के साथ 'when' का प्रयोग होता है, 'than' का नहीं।",
-    "cat": "english", "sub": "error-spotting"
+    "e": "<b>Rule:</b> Avoid <b>Double Comparatives</b>. 'Healthier' is already a comparative degree, so 'more' is redundant. Use 'much' for emphasis, but not 'more healthier'."
   },
   {
-    "q": "<b>Error Spotting:</b> Not only the (A) / principal but (B) / also the teachers (C) / was present (D).",
+    "p_id": "ob_eng_mains_02",
+    "qe": "<b>Direct/Indirect:</b> The doctor said to the patient, 'Take these medicines twice a day for a week and come for a follow-up next Monday.'",
+    "qh": "<b>अप्रत्यक्ष कथन:</b> The doctor said to the patient, 'Take these medicines twice a day for a week and come for a follow-up next Monday.'",
+    "o": ["The doctor advised the patient to take those medicines twice a day for a week and go for a follow-up the following Monday", "The doctor told the patient take these medicines", "The doctor asked the patient to take those medicines", "The doctor advised the patient to take these medicines"],
+    "a": 0,
+    "e": "<b>Rule:</b> 'Advised' is appropriate for doctors. 'These' changes to <b>'those'</b>, 'come' changes to <b>'go'</b>, and 'next Monday' changes to <b>'the following Monday'</b>."
+  },
+  {
+    "p_id": "ob_eng_mains_03",
+    "qe": "<b>Fill in the blank:</b> 'In spite of the heavy rains, the match ______ to its logical conclusion.'",
+    "qh": "<b>रिक्त स्थान भरें:</b> 'In spite of the heavy rains, the match ______ to its logical conclusion.'",
+    "o": ["went on", "went off", "went through", "went over"],
+    "a": 0,
+    "e": "<b>Phrasal Verb:</b> <b>'Went on'</b> means continued. The match continued despite the weather."
+  },
+  {
+    "p_id": "ob_eng_mains_04",
+    "qe": "<b>One Word Substitution:</b> 'A small room in a big house, hotel, or ship where glasses, dishes, and food are kept.'",
+    "qh": "<b>एक शब्द:</b> 'बड़े घर, होटल या जहाज का वह छोटा कमरा जहाँ बर्तन और भोजन रखा जाता है।'",
+    "o": ["Pantry", "Larder", "Attic", "Mezzanine"],
+    "a": 0,
+    "e": "<b>Vocabulary:</b> <b>Pantry</b> is the specific word for a room where provisions and kitchenware are stored."
+  },
+  {
+    "p_id": "ob_eng_mains_05",
+    "qe": "<b>Sentence Improvement:</b> 'If I <u>had realized</u> that the road was so slippery, I would not have driven so fast.'",
+    "qh": "<b>वाक्य सुधार:</b> 'If I <u>had realized</u> that the road was so slippery, I would not have driven so fast.'",
+    "o": ["had I realized", "if I realized", "No improvement", "if I have realized"],
+    "a": 2,
+    "e": "<b>Rule:</b> This is a <b>Third Conditional</b> sentence (If + had + V3, would have + V3). The sentence is grammatically correct."
+  },
+  {
+    "p_id": "ob_eng_mains_06",
+    "qe": "<b>Synonym:</b> Select the most appropriate synonym of the word: <b>'EPHEMERAL'</b>",
+    "qh": "<b>समानार्थी:</b> <b>'EPHEMERAL'</b> का सबसे उपयुक्त पर्यायवाची चुनें।",
+    "o": ["Transitory", "Eternal", "Durable", "Constant"],
+    "a": 0,
+    "e": "<b>Meaning:</b> Ephemeral means lasting for a very short time. <b>Transitory</b> (क्षणभंगुर) is the synonym."
+  },
+  {
+    "p_id": "ob_eng_mains_07",
+    "qe": "<b>Antonym:</b> Select the most appropriate antonym of the word: <b>'GREGARIOUS'</b>",
+    "qh": "<b>विलोम:</b> <b>'GREGARIOUS'</b> का सबसे उपयुक्त विपरीतार्थक चुनें।",
+    "o": ["Sociable", "Reserved", "Friendly", "Talkative"],
+    "a": 1,
+    "e": "<b>Meaning:</b> Gregarious means fond of company; sociable. <b>Reserved</b> (अंतर्मुखी) is the opposite."
+  },
+  {
+    "p_id": "ob_eng_mains_08",
+    "qe": "<b>Idiom:</b> 'To spill the beans.'",
+    "qh": "<b>मुहावरे:</b> 'To spill the beans.'",
+    "o": ["To reveal a secret", "To cook food", "To waste money", "To be clumsy"],
+    "a": 0,
+    "e": "<b>Meaning:</b> To accidentally or prematurely <b>reveal a secret</b>."
+  },
+  {
+    "p_id": "ob_eng_mains_09",
+    "qe": "<b>Active/Passive:</b> 'The storm has severely damaged the coastal villages.'",
+    "qh": "<b>वाच्य परिवर्तन:</b> 'The storm has severely damaged the coastal villages.'",
+    "o": ["The coastal villages have been severely damaged by the storm", "The coastal villages were severely damaged", "The coastal villages are being damaged", "The coastal villages had been damaged"],
+    "a": 0,
+    "e": "<b>Rule:</b> Present Perfect (has/have + V3) changes to <b>'has/have + been + V3'</b>."
+  },
+  {
+    "p_id": "ob_eng_mains_10",
+    "qe": "<b>Error Spotting:</b> 'The reason (A) / why he failed (B) / was because (C) / he didn't study (D).'",
+    "qh": "<b>त्रुटि पहचानें:</b> 'The reason (A) / why he failed (B) / was because (C) / he didn't study (D).'",
+    "o": ["A", "B", "C", "D"],
+    "a": 2,
+    "e": "<b>Rule:</b> Avoid redundancy. 'The reason why' should be followed by <b>'that'</b>, not 'because'."
+  },
+  {
+    "p_id": "",
+    "qe": "<b>Vocabulary (Spelling):</b> Select the incorrectly spelled word.",
+    "qh": "<b>वर्तनी:</b> गलत वर्तनी वाले शब्द का चयन करें।",
+    "o": ["Accommodate", "Aggressive", "Acquaintance", "Millenium"],
+    "a": 3,
+    "e": "<b>Spelling:</b> The correct spelling is <b>Millennium</b> (double 'n')."
+  },
+  {
+    "p_id": "",
+    "qe": "<b>Fill in the blank:</b> 'The prisoner was ______ for his crimes.'",
+    "qh": "<b>रिक्त स्थान भरें:</b> 'The prisoner was ______ for his crimes.'",
+    "o": ["hanged", "hung", "hanging", "hang"],
+    "a": 0,
+    "e": "<b>Verb:</b> For execution (legal death), the past participle is <b>'hanged'</b>. 'Hung' is used for objects like pictures."
+  },
+  {
+    "p_id": "",
+    "qe": "<b>Idiom:</b> 'To drive someone up the wall.'",
+    "qh": "<b>मुहावरे:</b> 'To drive someone up the wall.'",
+    "o": ["To annoy someone very much", "To help someone", "To drive fast", "To build a wall"],
+    "a": 0,
+    "e": "<b>Meaning:</b> To make someone <b>extremely irritated</b> or angry."
+  },
+  {
+    "p_id": "",
+    "qe": "<b>Error Spotting:</b> 'Either of the (A) / two paths (B) / lead to (C) / the same destination (D).'",
+    "qh": "<b>त्रुटि पहचानें:</b> 'Either of the (A) / two paths (B) / lead to (C) / the same destination (D).'",
+    "o": ["A", "B", "C", "D"],
+    "a": 2,
+    "e": "<b>Rule:</b> 'Either of', 'Neither of', 'Each of' always take a <b>singular verb</b>. Correct: 'leads to'."
+  },
+  {
+    "p_id": "",
+    "qe": "<b>Active/Passive:</b> 'She is reading a novel.'",
+    "qh": "<b>वाच्य परिवर्तन:</b> 'She is reading a novel.'",
+    "o": ["A novel is being read by her", "A novel was read by her", "A novel is read by her", "None"],
+    "a": 0,
+    "e": "<b>Rule:</b> Continuous tense adds <b>'being'</b>."
+  },
+  {
+    "p_id": "",
+    "qe": "<b>Antonym:</b> Antonym of <b>'EXODUS'</b>.",
+    "qh": "<b>विलोम:</b> <b>'EXODUS'</b> का विलोम।",
+    "o": ["Arrival", "Departure", "Exit", "Escape"],
+    "a": 0,
+    "e": "<b>Meaning:</b> Exodus means a mass departure. <b>Arrival</b> (आगमन) is the opposite."
+  },
+  {
+    "p_id": "",
+    "qe": "<b>One Word:</b> 'A person who is recoverning from an illness.'",
+    "qh": "<b>एक शब्द:</b> 'वह व्यक्ति जो बीमारी से ठीक हो रहा हो।'",
+    "o": ["Convalescent", "Invalid", "Patient", "Senile"],
+    "a": 0,
+    "e": "<b>Vocabulary:</b> <b>Convalescent</b> is the correct term for recovery phase."
+  },
+  {
+    "p_id": "",
+    "qe": "<b>Sentence Improvement:</b> 'I <u>prefer</u> coffee than tea.'",
+    "qh": "<b>वाक्य सुधार:</b> 'I <u>prefer</u> coffee than tea.'",
+    "o": ["prefer coffee to", "prefer coffee over", "like coffee more than", "No improvement"],
+    "a": 0,
+    "e": "<b>Rule:</b> 'Prefer' is followed by the preposition <b>'to'</b>."
+  },
+  {
+    "p_id": "",
+    "qe": "<b>Direct/Indirect:</b> He said, 'I have been working since morning.'",
+    "qh": "<b>अप्रत्यक्ष कथन:</b> He said, 'I have been working since morning.'",
+    "o": ["He said that he had been working since morning", "He said that he has been working", "He said he was working", "None"],
+    "a": 0,
+    "e": "<b>Rule:</b> Present Perfect Continuous changes to <b>Past Perfect Continuous</b>."
+  },
+  {
+    "p_id": "",
+    "qe": "<b>Fill in the blank:</b> 'The old man is ______ weak to walk.'",
+    "qh": "<b>रिक्त स्थान भरें:</b> 'The old man is ______ weak to walk.'",
+    "o": ["too", "very", "so", "much"],
+    "a": 0,
+    "e": "<b>Rule:</b> <b>'Too...to'</b> structure indicates inability."
+  },
+  {
+    "p_id": "",
+    "qe": "<b>Active/Passive:</b> 'Open the window.'",
+    "qh": "<b>वाच्य परिवर्तन:</b> 'Open the window.'",
+    "o": ["Let the window be opened", "The window should opened", "You are ordered open", "None"],
+    "a": 0,
+    "e": "<b>Rule:</b> Imperative passive: <b>'Let + obj + be + V3'</b>."
+  },
+  {
+    "p_id": "",
+    "qe": "<b>Synonym:</b> Synonym of <b>'MEAGER'</b>.",
+    "qh": "<b>समानार्थी:</b> <b>'MEAGER'</b> का पर्यायवाची।",
+    "o": ["Scanty", "Plentiful", "Vast", "Huge"],
+    "a": 0,
+    "e": "<b>Meaning:</b> Meager means very small amount. <b>Scanty</b> is the synonym."
+  },
+  {
+    "p_id": "",
+    "qe": "<b>Error Spotting:</b> 'He was (A) / very tired (B) / so he (C) / laid down (D).'",
+    "qh": "<b>त्रुटि पहचानें:</b> 'He was (A) / very tired (B) / so he (C) / laid down (D).'",
     "o": ["A", "B", "C", "D"],
     "a": 3,
-    "e": "Subject-Verb Agreement: 'Not only... but also' में verb हमेशा पास वाले subject (teachers - Plural) के अनुसार आती है। 'Was' की जगह 'Were' होगा।",
-    "cat": "english", "sub": "error-spotting"
+    "e": "<b>Rule:</b> Confusing verbs. Past of 'Lie' (recline) is <b>'lay'</b>. 'Laid' is the past of 'Lay' (put something down). Correct: 'lay down'."
   },
   {
-    "q": "<b>Error Spotting:</b> If I would (A) / have known (B) / your arrival, I (C) / would have met you (D).",
+    "p_id": "",
+    "qe": "<b>Idiom:</b> 'A piece of cake.'",
+    "qh": "<b>मुहावरे:</b> 'A piece of cake.'",
+    "o": ["Very easy", "Delicious", "Short part", "Expensive"],
+    "a": 0,
+    "e": "<b>Meaning:</b> A task that is <b>very easy</b> to accomplish."
+  },
+  {
+    "p_id": "",
+    "qe": "<b>Vocabulary:</b> Correct spelling of 'Jewellery'.",
+    "qh": "<b>वर्तनी:</b> सही शब्द चुनें।",
+    "o": ["Jewellery", "Jewelery", "Jewelary", "Jewellry"],
+    "a": 0,
+    "e": "<b>Spelling:</b> <b>Jewellery</b> is the British English standard (Double L)."
+  },
+  {
+    "p_id": "",
+    "qe": "<b>Antonym:</b> Antonym of <b>'VIGILANT'</b>.",
+    "qh": "<b>विलोम:</b> <b>'VIGILANT'</b> का विलोम।",
+    "o": ["Careless", "Watchful", "Alert", "Wary"],
+    "a": 0,
+    "e": "<b>Meaning:</b> Vigilant means alert/watchful. <b>Careless</b> is the opposite."
+  },
+  {
+    "p_id": "",
+    "qe": "<b>Fill in the blank:</b> 'She takes pride ______ her beauty.'",
+    "qh": "<b>रिक्त स्थान भरें:</b> 'She takes pride ______ her beauty.'",
+    "o": ["in", "on", "at", "for"],
+    "a": 0,
+    "e": "<b>Preposition:</b> 'Take pride <b>in</b>' is a fixed idiom. (However, 'proud <b>of</b>' is used)."
+  },
+  {
+    "p_id": "",
+    "qe": "<b>One Word Substitution:</b> 'A handwriting that cannot be read.'",
+    "qh": "<b>एक शब्द:</b> 'लिखावट जिसे पढ़ा न जा सके।'",
+    "o": ["Illegible", "Ineligible", "Illiterate", "Edible"],
+    "a": 0,
+    "e": "<b>Vocabulary:</b> <b>Illegible</b> is the term for unreadable writing."
+  },
+  {
+    "p_id": "",
+    "qe": "<b>Sentence Improvement:</b> 'No sooner had he arrived <u>when</u> it started raining.'",
+    "qh": "<b>वाक्य सुधार:</b> 'No sooner had he arrived <u>when</u> it started raining.'",
+    "o": ["than", "then", "that", "No improvement"],
+    "a": 0,
+    "e": "<b>Rule:</b> The pair for 'No sooner' is always <b>'than'</b>."
+  },
+  {
+    "p_id": "",
+    "qe": "<b>Error Spotting:</b> 'If I was him (A) / I would not (B) / accept (C) / the gift (D).'",
+    "qh": "<b>त्रुटि पहचानें:</b> 'If I was him (A) / I would not (B) / accept (C) / the gift (D).'",
     "o": ["A", "B", "C", "D"],
     "a": 0,
-    "e": "Conditional Sentence Type 3: 'If' वाले clause में 'had + V3' लगता है। सही: 'If I had known...'",
-    "cat": "english", "sub": "error-spotting"
+    "e": "<b>Rule:</b> Subjunctive mood for hypothetical cases. Use <b>'If I were he'</b>."
   },
   {
-    "q": "<b>Error Spotting:</b> Neither of (A) / the five (B) / applicants is (C) / suitable for the post (D).",
-    "o": ["A", "B", "C", "D"],
+    "p_id": "",
+    "qe": "<b>Direct/Indirect:</b> He said to me, 'What are you doing?'",
+    "qh": "<b>अप्रत्यक्ष कथन:</b> He said to me, 'What are you doing?'",
+    "o": ["He asked me what I was doing", "He asked me what was I doing", "He told me what am I doing", "None"],
     "a": 0,
-    "e": "Rule: 'Neither' का प्रयोग केवल दो के लिए होता है। दो से अधिक (पाँच) के लिए 'None' का प्रयोग होगा।",
-    "cat": "english", "sub": "error-spotting"
+    "e": "<b>Rule:</b> Indirect question becomes assertive. 'Are doing' changes to <b>'was doing'</b>."
   },
   {
-    "q": "<b>Error Spotting:</b> He is (A) / enough wise (B) / to understand (C) / your tricks (D).",
-    "o": ["A", "B", "C", "D"],
-    "a": 1,
-    "e": "Adverb Rule: 'Enough' जब Adjective को qualify करता है, तो उसके बाद आता है। सही: 'wise enough'।",
-    "cat": "english", "sub": "error-spotting"
-  },
-  {
-    "q": "<b>Sentence Improvement:</b> She is *the most unique* singer I have ever heard.",
-    "o": ["a most unique", "a unique", "the unique", "No improvement"],
-    "a": 1,
-    "e": "Grammar Rule: 'Unique', 'Ideal', 'Complete' जैसे शब्द अपने आप में पूर्ण होते हैं, इनके साथ Comparative या Superlative degree नहीं लगती।",
-    "cat": "english", "sub": "improvement"
-  },
-  {
-    "q": "<b>Sentence Improvement:</b> Being a rainy day, *I could not go* out.",
-    "o": ["It being a rainy day, I", "As it was a rainy day, I", "Both A and B", "No improvement"],
-    "a": 2,
-    "e": "Dangling Participle: 'Being' का अपना subject 'It' होना चाहिए, अन्यथा 'I' ही बारिश वाला दिन बन जाएगा।",
-    "cat": "english", "sub": "improvement"
-  },
-  {
-    "q": "<b>Sentence Improvement:</b> He *did not and could not* understand the gravity of the situation.",
-    "o": ["did not understand and could not", "did not and could not understood", "did not understand and could not understand", "No improvement"],
+    "p_id": "",
+    "qe": "<b>Fill in the blank:</b> 'He is ______ M.A. in English.'",
+    "qh": "<b>रिक्त स्थान भरें:</b> 'He is ______ M.A. in English.'",
+    "o": ["an", "a", "the", "No article"],
     "a": 0,
-    "e": "Parallelism: 'Did not' और 'Could not' दोनों के बाद V1 आनी चाहिए। यहाँ 'understand' को common नहीं लिया जा सकता क्योंकि auxiliary verbs अलग हैं।",
-    "cat": "english", "sub": "improvement"
+    "e": "<b>Article:</b> 'M.A.' starts with a <b>vowel sound</b> ('Em'), so use 'an'."
   },
   {
-    "q": "<b>Sentence Improvement:</b> I *prefer tea than* coffee.",
-    "o": ["prefer tea to", "prefer tea over", "prefer tea instead of", "No improvement"],
+    "p_id": "",
+    "qe": "<b>Idiom:</b> 'To be under the weather.'",
+    "qh": "<b>मुहावरे:</b> 'To be under the weather.'",
+    "o": ["To feel unwell", "To be in rain", "To be happy", "To be lucky"],
     "a": 0,
-    "e": "Rule: 'Prefer' और 'Preferable' के साथ 'to' का प्रयोग होता है, 'than' का नहीं।",
-    "cat": "english", "sub": "improvement"
+    "e": "<b>Meaning:</b> To feel slightly <b>sick or ill</b>."
   },
   {
-    "q": "<b>Synonym of 'EPHEMERAL':</b>",
-    "o": ["Eternal", "Short-lived", "Stable", "Permanent"],
-    "a": 1,
-    "e": "'Ephemeral' का अर्थ है क्षणिक या बहुत कम समय रहने वाला (Transient/Short-lived)।",
-    "cat": "english", "sub": "vocab"
-  },
-  {
-    "q": "<b>Synonym of 'ABHOR':</b>",
-    "o": ["Admire", "Detest", "Love", "Crave"],
-    "a": 1,
-    "e": "'Abhor' का अर्थ है घृणा करना (Hate/Detest)।",
-    "cat": "english", "sub": "vocab"
-  },
-  {
-    "q": "<b>Antonym of 'LOQUACIOUS':</b>",
-    "o": ["Talkative", "Reticent", "Garrulous", "Verbose"],
-    "a": 1,
-    "e": "'Loquacious' (बातूनी) का उल्टा 'Reticent' या 'Taciturn' (कम बोलने वाला) होता है।",
-    "cat": "english", "sub": "vocab"
-  },
-  {
-    "q": "<b>Antonym of 'ZENITH':</b>",
-    "o": ["Peak", "Nadir", "Summit", "Apex"],
-    "a": 1,
-    "e": "'Zenith' (शीर्ष बिंदु) का उल्टा 'Nadir' (सबसे निचला बिंदु) होता है।",
-    "cat": "english", "sub": "vocab"
-  },
-  {
-    "q": "<b>One-word Substitution:</b> A person who is indifferent to pleasure or pain.",
-    "o": ["Hedonist", "Stoic", "Epicure", "Altruist"],
-    "a": 1,
-    "e": "'Stoic' (वैरागी/उदासीन) वह व्यक्ति है जिसे सुख-दुख से कोई फर्क नहीं पड़ता।",
-    "cat": "english", "sub": "vocab"
-  },
-  {
-    "q": "<b>One-word Substitution:</b> One who speaks for others.",
-    "o": ["Spokesman", "Orator", "Linguist", "Verbatim"],
+    "p_id": "",
+    "qe": "<b>Active/Passive:</b> 'They have won the match.'",
+    "qh": "<b>वाच्य परिवर्तन:</b> 'They have won the match.'",
+    "o": ["The match has been won by them", "The match was won", "The match is won", "None"],
     "a": 0,
-    "e": "दूसरों की ओर से बोलने वाले को 'Spokesman' (प्रवक्ता) कहा जाता है।",
-    "cat": "english", "sub": "vocab"
+    "e": "<b>Rule:</b> Present Perfect passive: <b>'has been + V3'</b>."
   },
   {
-    "q": "<b>Idiom:</b> 'To spill the beans' means:",
-    "o": ["To cook beans", "To reveal a secret accidentally", "To work hard", "To waste money"],
-    "a": 1,
-    "e": "इसका अर्थ है किसी गुप्त जानकारी को उजागर कर देना।",
-    "cat": "english", "sub": "vocab"
-  },
-  {
-    "q": "<b>Idiom:</b> 'To read between the lines' means:",
-    "o": ["To read quickly", "To understand the hidden meaning", "To read loudly", "To write well"],
-    "a": 1,
-    "e": "छिपे हुए अर्थ या भावनाओं को समझने को 'Read between the lines' कहते हैं।",
-    "cat": "english", "sub": "vocab"
-  },
-  {
-    "q": "<b>Active/Passive:</b> The news surprised us.",
-    "o": ["We were surprised by the news", "We were surprised at the news", "We were surprised with the news", "None"],
-    "a": 1,
-    "e": "Prepositional Passive: 'Surprise', 'Astonish', 'Amaze' के साथ 'at' का प्रयोग होता है, 'by' का नहीं।",
-    "cat": "english", "sub": "voice"
-  },
-  {
-    "q": "<b>Active/Passive:</b> It is time to take tea.",
-    "o": ["It is time for tea to be taken", "It is time that tea is taken", "Tea should be taken on time", "None"],
+    "p_id": "",
+    "qe": "<b>Synonym:</b> Synonym of <b>'ABUNDANT'</b>.",
+    "qh": "<b>समानार्थी:</b> <b>'ABUNDANT'</b> का पर्यायवाची।",
+    "o": ["Plentiful", "Scarce", "Small", "Brief"],
     "a": 0,
-    "e": "Structure: 'It is time + for + object + to be + V3' सही passive form है।",
-    "cat": "english", "sub": "voice"
-  },
-  {
-    "q": "<b>Active/Passive:</b> They said that the earth is round.",
-    "o": ["It is said that the earth is round", "It was said that the earth is round", "The earth is said to be round", "Both A and C"],
-    "a": 3,
-    "e": "Complex Sentence Passive: दोनों ही रूप (It is said... और The earth is said to be...) व्याकरणिक रूप से सही हैं।",
-    "cat": "english", "sub": "voice"
-  },
-  {
-    "q": "<b>Direct/Indirect:</b> He said, 'Bravo! You have done well.'",
-    "o": ["He applauded him saying that he had done well", "He exclaimed with joy he did well", "He told him bravo he did well", "None"],
-    "a": 0,
-    "e": "Exclamatory (Applaud): 'Bravo' वाले वाक्यों में 'Applauded + object + saying that' का प्रयोग होता है।",
-    "cat": "english", "sub": "narration"
-  },
-  {
-    "q": "<b>Direct/Indirect:</b> She said to me, 'Don't go there.'",
-    "o": ["She told me not to go there", "She forbade me to go there", "Both A and B", "None"],
-    "a": 2,
-    "e": "Imperative Negative: 'Forbade' के साथ 'not' नहीं आता, जबकि 'told/asked' के साथ 'not to' आता है।",
-    "cat": "english", "sub": "narration"
-  },
-  {
-    "q": "<b>Direct/Indirect:</b> He said to his servant, 'Go away at once.'",
-    "o": ["He asked servant to go", "He ordered his servant to go away at once", "He requested servant to go", "None"],
-    "a": 1,
-    "e": "Sense: मालिक और नौकर के बीच 'Ordered' या 'Commanded' का प्रयोग सही है।",
-    "cat": "english", "sub": "narration"
-  },
-  {
-    "q": "<b>Sentence Rearrangement:</b> P: as well as Q: physical health R: mental health S: is important",
-    "o": ["PRQS", "RQPS", "RPQS", "SQPR"],
-    "a": 2,
-    "e": "सही क्रम: 'Mental health as well as physical health is important' (RPQS)।",
-    "cat": "english", "sub": "pqr"
-  },
-  {
-    "q": "<b>Sentence Rearrangement:</b> P: to solve Q: it is R: the problem S: impossible",
-    "o": ["QSPR", "PQRS", "RQPS", "SQRP"],
-    "a": 0,
-    "e": "सही क्रम: 'It is impossible to solve the problem' (QSPR)।",
-    "cat": "english", "sub": "pqr"
-  },
-  {
-    "q": "<b>Synonym of 'METICULOUS':</b>",
-    "o": ["Careless", "Thorough/Detailed", "Fast", "Sloppy"],
-    "a": 1,
-    "e": "'Meticulous' का अर्थ है बहुत सावधानी और विस्तार से काम करना।",
-    "cat": "english", "sub": "vocab"
-  },
-  {
-    "q": "<b>Antonym of 'OSTENTATIOUS':</b>",
-    "o": ["Showy", "Modest", "Flashy", "Gaudy"],
-    "a": 1,
-    "e": "'Ostentatious' (दिखावटी) का उल्टा 'Modest' (शालीन/साधारण) होता है।",
-    "cat": "english", "sub": "vocab"
-  },
-  {
-    "q": "<b>Select correctly spelt word:</b>",
-    "o": ["Separate", "Seperate", "Saparate", "Seperete"],
-    "a": 0,
-    "e": "सही स्पेलिंग 'Separate' है।",
-    "cat": "english", "sub": "vocab"
-  },
-  {
-    "q": "<b>Select correctly spelt word:</b>",
-    "o": ["Lieutenant", "Leftenant", "Lieutenent", "Luitenant"],
-    "a": 0,
-    "e": "सही स्पेलिंग 'Lieutenant' है।",
-    "cat": "english", "sub": "vocab"
-  },
-  {
-    "q": "<b>Error Spotting:</b> The scissors (A) / which are (B) / on the table (C) / is mine (D).",
-    "o": ["A", "B", "C", "D"],
-    "a": 3,
-    "e": "Rule: 'Scissors', 'Trousers', 'Spectacles' हमेशा plural verb लेते हैं। 'Is' की जगह 'Are' होगा।",
-    "cat": "english", "sub": "error-spotting"
+    "e": "<b>Meaning:</b> Abundant means existing in large quantities. <b>Plentiful</b> is the synonym."
   }
 ]
