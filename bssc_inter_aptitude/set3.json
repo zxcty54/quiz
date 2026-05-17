@@ -5,23 +5,23 @@
     "qh": "<b>लाभ और हानि:</b> 20% और 10% की क्रमिक छूट श्रेणियों के समतुल्य एकल छूट ज्ञात कीजिए।",
     "o": ["30%", "28%", "25%", "32%"],
     "a": 1,
-    "e": "Step 1: Formula for successive discounts is $A + B - \\\\frac{A \\\\times B}{100}$. Step 2: Substitute values: $20 + 10 - \\\\frac{20 \\\\times 10}{100}$. Step 3: $30 - 2 = 28\\%$. Equivalent discount is 28%."
+    "e": "Step 1: Formula for successive discounts is $A + B - \\frac{A \\times B}{100}$. Step 2: Substitute values: $20 + 10 - \\frac{20 \\times 10}{100}$. Step 3: $30 - 2 = 28\\%$. Equivalent discount is 28%."
   },
   {
     "p_id": "bssc_math_037",
-    "qe": "<b>Partnership:</b> A, B, and C start a business. A invests $\\\\frac{1}{3}$ of the total capital, B invests $\\\\frac{1}{4}$ of the capital, and C invests the remaining capital. Out of a total profit of Rs. 12,000, find C's share.",
-    "qh": "<b>साझेदारी:</b> A, B, और C एक व्यवसाय शुरू करते हैं। A कुल पूंजी का $\\\\frac{1}{3}$ भाग, B पूंजी का $\\\\frac{1}{4}$ भाग और C शेष पूंजी निवेश करता है। ₹12,000 के कुल लाभ में से C का हिस्सा ज्ञात कीजिए।",
+    "qe": "<b>Partnership:</b> A, B, and C start a business. A invests $\\frac{1}{3}$ of the total capital, B invests $\\frac{1}{4}$ of the capital, and C invests the remaining capital. Out of a total profit of Rs. 12,000, find C's share.",
+    "qh": "<b>साझेदारी:</b> A, B, और C एक व्यवसाय शुरू करते हैं। A कुल पूंजी का $\\frac{1}{3}$ भाग, B पूंजी का $\\frac{1}{4}$ भाग और C शेष पूंजी निवेश करता है। ₹12,000 के कुल लाभ में से C का हिस्सा ज्ञात कीजिए।",
     "o": ["Rs. 4,000", "Rs. 3,000", "Rs. 5,000", "Rs. 6,000"],
     "a": 2,
-    "e": "Step 1: Let total capital be 12. A's share = 4, B's share = 3. Step 2: C's share = $12 - (4 + 3) = 5$. Investment ratio A:B:C = 4:3:5. Step 3: C's profit share = $\\\\frac{5}{12} \\\\times 12000 = Rs.\\\\ 5,000$."
+    "e": "Step 1: Let total capital be 12. A's share = 4, B's share = 3. Step 2: C's share = $12 - (4 + 3) = 5$. Investment ratio A:B:C = 4:3:5. Step 3: C's profit share = $\\frac{5}{12} \\times 12000 = Rs.\\ 5,000$."
   },
   {
     "p_id": "bssc_math_038",
-    "qe": "<b>Number System:</b> Find the sum of squares of the first 10 natural numbers ($1^2 + 2^2 + 3^2 + \\\\dots + 10^2$).",
-    "qh": "<b>संख्या पद्धति:</b> प्रथम 10 प्राकृतिक संख्याओं के वर्गों का योग ज्ञात कीजिए ($1^2 + 2^2 + 3^2 + \\\\dots + 10^2$)।",
+    "qe": "<b>Number System:</b> Find the sum of squares of the first 10 natural numbers ($1^2 + 2^2 + 3^2 + \\dots + 10^2$).",
+    "qh": "<b>संख्या पद्धति:</b> प्रथम 10 प्राकृतिक संख्याओं के वर्गों का योग ज्ञात कीजिए ($1^2 + 2^2 + 3^2 + \\dots + 10^2$)।",
     "o": ["385", "550", "450", "300"],
     "a": 0,
-    "e": "Step 1: Formula for sum of squares is $\\\\frac{n(n + 1)(2n + 1)}{6}$. Step 2: For $n = 10$, Sum = $\\\\frac{10 \\\\times 11 \\\\times 21}{6}$. Step 3: $\\\\frac{2310}{6} = 385$."
+    "e": "Step 1: Formula for sum of squares is $\\frac{n(n + 1)(2n + 1)}{6}$. Step 2: For $n = 10$, Sum = $\\frac{10 \\times 11 \\times 21}{6}$. Step 3: $\\frac{2310}{6} = 385$."
   },
   {
     "p_id": "bssc_math_039",
@@ -29,7 +29,7 @@
     "qh": "<b>प्रतिशत:</b> एक चुनाव में, डाले गए मतों में से 10% मत अवैध घोषित कर दिए गए। एक उम्मीदवार को वैध मतों का 60% प्राप्त हुआ और वह 1800 मतों के बहुमत से जीत गया। डाले गए कुल मतों की संख्या ज्ञात कीजिए।",
     "o": ["10,000", "9,000", "8,000", "12,000"],
     "a": 0,
-    "e": "Step 1: Let total votes be x. Valid votes = $0.90x$. Winner gets 60% of valid, loser gets 40% of valid. Majority = 20% of valid votes. Step 2: $0.20 \\\\times 0.90x = 1800 \\\\implies 0.18x = 1800$. Step 3: $x = \\\\frac{1800}{0.18} = 10,000$."
+    "e": "Step 1: Let total votes be x. Valid votes = $0.90x$. Winner gets 60% of valid, loser gets 40% of valid. Majority = 20% of valid votes. Step 2: $0.20 \\times 0.90x = 1800 \\implies 0.18x = 1800$. Step 3: $x = \\frac{1800}{0.18} = 10,000$."
   },
   {
     "p_id": "bssc_math_040",
@@ -37,7 +37,7 @@
     "qh": "<b>अनुपात और समानुपात:</b> 9 और 64 के बीच मध्यानुपाती क्या है?",
     "o": ["24", "36", "16", "27"],
     "a": 0,
-    "e": "Step 1: Formula for mean proportional between a and b is $\\\\sqrt{a \\\\times b}$. Step 2: Mean proportional = $\\\\sqrt{9 \\\\times 64}$. Step 3: $3 \\\\times 8 = 24$."
+    "e": "Step 1: Formula for mean proportional between a and b is $\\sqrt{a \\times b}$. Step 2: Mean proportional = $\\sqrt{9 \\times 64}$. Step 3: $3 \\times 8 = 24$."
   },
   {
     "p_id": "bssc_math_041",
@@ -46,15 +46,15 @@
     "o": "40%",
     "o": ["44%", "40%", "20%", "48%"],
     "a": 0,
-    "e": "Step 1: Area depends on $r^2$. Use effective percentage formula: $x + y + \\\\frac{x \\\\times y}{100}$. Step 2: Increase = $20 + 20 + \\\\frac{20 \\\\times 20}{100}$. Step 3: $40 + 4 = 44\\%$."
+    "e": "Step 1: Area depends on $r^2$. Use effective percentage formula: $x + y + \\frac{x \\times y}{100}$. Step 2: Increase = $20 + 20 + \\frac{20 \\times 20}{100}$. Step 3: $40 + 4 = 44\\%$."
   },
   {
     "p_id": "bssc_math_042",
-    "qe": "<b>Simple Interest:</b> A lens of capital shifts rate of interest from 8% to $10\\\\frac{1}{2}\\\\%$, and a person's annual income increases by Rs. 500. Find the total capital invested.",
-    "qh": "<b>साधारण ब्याज:</b> ब्याज की दर 8% से बढ़कर $10\\\\frac{1}{2}\\\\%$ हो जाने पर, एक व्यक्ति की वार्षिक आय में ₹500 की वृद्धि हो जाती है। निवेश की गई कुल पूंजी ज्ञात कीजिए।",
+    "qe": "<b>Simple Interest:</b> A lens of capital shifts rate of interest from 8% to $10\\frac{1}{2}\\%$, and a person's annual income increases by Rs. 500. Find the total capital invested.",
+    "qh": "<b>साधारण ब्याज:</b> ब्याज की दर 8% से बढ़कर $10\\frac{1}{2}\\%$ हो जाने पर, एक व्यक्ति की वार्षिक आय में ₹500 की वृद्धि हो जाती है। निवेश की गई कुल पूंजी ज्ञात कीजिए।",
     "o": ["Rs. 20,000", "Rs. 25,000", "Rs. 15,000", "Rs. 30,000"],
     "a": 0,
-    "e": "Step 1: Increase in rate = $10.5\\% - 8\\% = 2.5\\%$. Step 2: $2.5\\%$ of Capital = 500. Step 3: Capital = $\\\\frac{500 \\\\times 100}{2.5} = Rs.\\\\ 20,000$."
+    "e": "Step 1: Increase in rate = $10.5\\% - 8\\% = 2.5\\%$. Step 2: $2.5\\%$ of Capital = 500. Step 3: Capital = $\\frac{500 \\times 100}{2.5} = Rs.\\ 20,000$."
   },
   {
     "p_id": "bssc_math_043",
@@ -62,7 +62,7 @@
     "qh": "<b>चक्रवृद्धि ब्याज:</b> चक्रवृद्धि ब्याज पर रखी गई कोई धनराशि 4 वर्षों में स्वयं की तीन गुनी हो जाती है। कितने वर्षों में यह स्वयं की 27 गुनी हो जाएगी?",
     "o": ["12 years", "16 years", "8 years", "24 years"],
     "a": 0,
-    "e": "Step 1: $3^1$ times in 4 years. We want 27 times, which is $3^3$ times. Step 2: Rule of power in CI: Required time = Power $\\\\times$ Initial time. Step 3: Time = $3 \\\\times 4 = 12\\ years$."
+    "e": "Step 1: $3^1$ times in 4 years. We want 27 times, which is $3^3$ times. Step 2: Rule of power in CI: Required time = Power $\\times$ Initial time. Step 3: Time = $3 \\times 4 = 12\\ years$."
   },
   {
     "p_id": "bssc_math_044",
@@ -70,7 +70,7 @@
     "qh": "<b>आयु संबंधी प्रश्न:</b> A और B की वर्तमान आयु का अनुपात 4:5 है। पांच वर्ष पूर्व, यह अनुपात 3:4 था। A की वर्तमान आयु ज्ञात कीजिए।",
     "o": ["20 years", "25 years", "15 years", "30 years"],
     "a": 0,
-    "e": "Step 1: Let present ages be 4x and 5x. Five years ago: $\\\\frac{4x - 5}{5x - 5} = \\\\frac{3}{4}$. Step 2: Cross multiplying: $16x - 20 = 15x - 15 \\\\implies x = 5$. Step 3: Present age of A = $4x = 4 \\\\times 5 = 20\\ years$."
+    "e": "Step 1: Let present ages be 4x and 5x. Five years ago: $\\frac{4x - 5}{5x - 5} = \\frac{3}{4}$. Step 2: Cross multiplying: $16x - 20 = 15x - 15 \\implies x = 5$. Step 3: Present age of A = $4x = 4 \\times 5 = 20\\ years$."
   },
   {
     "p_id": "bssc_math_045",
@@ -78,7 +78,7 @@
     "qh": "<b>संख्या पद्धति:</b> जब $2^{31}$ को 5 से विभाजित किया जाता है, तो शेषफल ज्ञात कीजिए।",
     "o": ["1", "2", "3", "4"],
     "a": 2,
-    "e": "Step 1: Rewrite $2^{31}$ as $2^3 \\\\times (2^4)^7 = 8 \\\\times (16)^7$. Step 2: $16 \\\\equiv 1 \\\\pmod 5$, so $16^7 \\\\equiv 1^7 = 1$. Step 3: Remainder = $8 \\\\times 1 = 8$. Since $8 > 5$, final remainder = $8 - 5 = 3$."
+    "e": "Step 1: Rewrite $2^{31}$ as $2^3 \\times (2^4)^7 = 8 \\times (16)^7$. Step 2: $16 \\equiv 1 \\pmod 5$, so $16^7 \\equiv 1^7 = 1$. Step 3: Remainder = $8 \\times 1 = 8$. Since $8 > 5$, final remainder = $8 - 5 = 3$."
   },
   {
     "p_id": "bssc_math_046",
@@ -86,7 +86,7 @@
     "qh": "<b>पाइप और टंकी:</b> पाइप A एक टंकी को 10 घंटे में भर सकता है और पाइप B पूरी भरी हुई टंकी को 15 घंटे में खाली कर सकता है। यदि दोनों पाइपों को एक साथ खोल दिया जाए, तो टंकी को भरने में कितना समय लगेगा?",
     "o": ["25 hours", "30 hours", "12 hours", "18 hours"],
     "a": 1,
-    "e": "Step 1: Let tank capacity be LCM(10, 15) = 30 units. Efficiency of A = +3, Efficiency of B = -2. Step 2: Combined net efficiency = $3 - 2 = +1$ unit/hour. Step 3: Time required = $\\\\frac{30}{1} = 30\\ hours$."
+    "e": "Step 1: Let tank capacity be LCM(10, 15) = 30 units. Efficiency of A = +3, Efficiency of B = -2. Step 2: Combined net efficiency = $3 - 2 = +1$ unit/hour. Step 3: Time required = $\\frac{30}{1} = 30\\ hours$."
   },
   {
     "p_id": "bssc_math_047",
@@ -94,7 +94,7 @@
     "qh": "<b>समय और कार्य:</b> A और B मिलकर किसी कार्य को 10 दिनों में पूरा कर सकते हैं, B और C 12 दिनों में, और C और A 15 दिनों में। A, B, और C मिलकर कार्य को कितने दिनों में पूरा कर सकते हैं?",
     "o": ["6 days", "8 days", "10 days", "12 days"],
     "a": 1,
-    "e": "Step 1: Total work = LCM(10, 12, 15) = 60 units. Efficiencies: A+B = 6, B+C = 5, C+A = 4. Step 2: Summing up: $2(A+B+C) = 6 + 5 + 4 = 15 \\\\implies A+B+C = 7.5$. Step 3: Days together = $\\\\frac{60}{7.5} = 8\\ days$."
+    "e": "Step 1: Total work = LCM(10, 12, 15) = 60 units. Efficiencies: A+B = 6, B+C = 5, C+A = 4. Step 2: Summing up: $2(A+B+C) = 6 + 5 + 4 = 15 \\implies A+B+C = 7.5$. Step 3: Days together = $\\frac{60}{7.5} = 8\\ days$."
   },
   {
     "p_id": "bssc_math_048",
@@ -102,7 +102,7 @@
     "qh": "<b>औसत:</b> 7 के प्रथम 20 गुणजों का औसत ज्ञात कीजिए।",
     "o": ["70.5", "73.5", "77", "80.5"],
     "a": 1,
-    "e": "Step 1: Multiples are 7, 14, 21, ..., 140. This forms an Arithmetic Progression. Step 2: Average of an AP = $\\\\frac{\\\\text{First term} + \\\\text{Last term}}{2}$. Step 3: Average = $\\\\frac{7 + 140}{2} = \\\\frac{147}{2} = 73.5$."
+    "e": "Step 1: Multiples are 7, 14, 21, ..., 140. This forms an Arithmetic Progression. Step 2: Average of an AP = $\\frac{\\text{First term} + \\text{Last term}}{2}$. Step 3: Average = $\\frac{7 + 140}{2} = \\frac{147}{2} = 73.5$."
   },
   {
     "p_id": "bssc_math_049",
@@ -110,7 +110,7 @@
     "qh": "<b>नाव और धारा:</b> एक नाव की धारा के अनुकूल चाल 15 किमी/घंटा और धारा के प्रतिकूल चाल 9 किमी/घंटा है। धारा की चाल ज्ञात कीजिए।",
     "o": ["3 km/h", "6 km/h", "4 km/h", "2.5 km/h"],
     "a": 0,
-    "e": "Step 1: Speed of stream = $\\\\frac{\\\\text{Downstream Speed} - \\\\text{Upstream Speed}}{2}$. Step 2: Stream speed = $\\\\frac{15 - 9}{2}$. Step 3: $\\\\frac{6}{2} = 3\\ km/h$."
+    "e": "Step 1: Speed of stream = $\\frac{\\text{Downstream Speed} - \\text{Upstream Speed}}{2}$. Step 2: Stream speed = $\\frac{15 - 9}{2}$. Step 3: $\\frac{6}{2} = 3\\ km/h$."
   },
   {
     "p_id": "bssc_math_050",
@@ -118,7 +118,7 @@
     "qh": "<b>ट्रेन:</b> 120 मीटर और 80 मीटर लंबी दो ट्रेनें क्रमशः 42 किमी/घंटा और 30 किमी/घंटा की चाल से विपरीत दिशाओं में चल रही हैं। वे एक-दूसरे को पार करने में कितना समय लेंगी?",
     "o": ["15 seconds", "10 seconds", "12 seconds", "8 seconds"],
     "a": 1,
-    "e": "Step 1: Total distance = $120 + 80 = 200\\ m$. Relative speed (opposite direction) = $42 + 30 = 72\\ km/h$. Step 2: Convert speed to m/s: $72 \\\\times \\\\frac{5}{18} = 20\\ m/s$. Step 3: Time = $\\\\frac{\\\\text{Distance}}{\\\\text{Relative Speed}} = \\\\frac{200}{20} = 10\\ seconds$."
+    "e": "Step 1: Total distance = $120 + 80 = 200\\ m$. Relative speed (opposite direction) = $42 + 30 = 72\\ km/h$. Step 2: Convert speed to m/s: $72 \\times \\frac{5}{18} = 20\\ m/s$. Step 3: Time = $\\frac{\\text{Distance}}{\\text{Relative Speed}} = \\frac{200}{20} = 10\\ seconds$."
   },
   {
     "p_id": "bssc_math_051",
@@ -126,7 +126,7 @@
     "qh": "<b>संख्या पद्धति:</b> 120 के कुल गुणनखंडों की संख्या ज्ञात कीजिए।",
     "o": ["16", "12", "14", "20"],
     "a": 0,
-    "e": "Step 1: Prime factorization of 120: $2^3 \\\\times 3^1 \\\\times 5^1$. Step 2: Formula for total factors: $(p_1+1)(p_2+1)(p_3+1)$. Step 3: Total factors = $(3+1)(1+1)(1+1) = 4 \\\\times 2 \\\\times 2 = 16$."
+    "e": "Step 1: Prime factorization of 120: $2^3 \\times 3^1 \\times 5^1$. Step 2: Formula for total factors: $(p_1+1)(p_2+1)(p_3+1)$. Step 3: Total factors = $(3+1)(1+1)(1+1) = 4 \\times 2 \\times 2 = 16$."
   },
   {
     "p_id": "bssc_math_052",
@@ -134,7 +134,7 @@
     "qh": "<b>बीजगणित:</b> यदि $a + b = 7$ और $ab = 12$ है, तो $a^2 + b^2$ का मान ज्ञात कीजिए।",
     "o": ["25", "37", "29", "13"],
     "a": 0,
-    "e": "Step 1: Identity: $(a + b)^2 = a^2 + b^2 + 2ab$. Step 2: Substitute values: $7^2 = a^2 + b^2 + 2(12) \\\\implies 49 = a^2 + b^2 + 24$. Step 3: $a^2 + b^2 = 49 - 24 = 25$."
+    "e": "Step 1: Identity: $(a + b)^2 = a^2 + b^2 + 2ab$. Step 2: Substitute values: $7^2 = a^2 + b^2 + 2(12) \\implies 49 = a^2 + b^2 + 24$. Step 3: $a^2 + b^2 = 49 - 24 = 25$."
   },
   {
     "p_id": "bssc_math_053",
@@ -142,15 +142,15 @@
     "qh": "<b>मिश्रण और सम्मिश्रण:</b> एक बर्तन में 60 लीटर शुद्ध दूध है। 6 लीटर दूध को पानी से बदल दिया जाता है। यह प्रक्रिया एक बार और दोहराई जाती है। बर्तन में शुद्ध दूध की शेष मात्रा ज्ञात कीजिए।",
     "o": ["48.6 liters", "50 liters", "45.4 liters", "54 liters"],
     "a": 0,
-    "e": "Step 1: Remaining milk formula: $\\\\text{Initial} \\\\times (1 - \\\\frac{x}{V})^n$. Step 2: $60 \\\\times (1 - \\\\frac{6}{60})^2 = 60 \\\\times (\\\\frac{9}{10})^2$. Step 3: $60 \\\\times \\\\frac{81}{100} = 6 \\\\times 8.1 = 48.6\\ liters$."
+    "e": "Step 1: Remaining milk formula: $\\text{Initial} \\times (1 - \\frac{x}{V})^n$. Step 2: $60 \\times (1 - \\frac{6}{60})^2 = 60 \\times (\\frac{9}{10})^2$. Step 3: $60 \\times \\frac{81}{100} = 6 \\times 8.1 = 48.6\\ liters$."
   },
   {
     "p_id": "bssc_math_054",
-    "qe": "<b>Fraction Comparison:</b> Which of the following fractions is the smallest: $\\\\frac{2}{3}, \\\\frac{3}{5}, \\\\frac{5}{8}, \\\\frac{4}{7}$?",
-    "qh": "<b>भिन्नों की तुलना:</b> निम्नलिखित में से कौन सी भिन्न सबसे छोटी है: $\\\\frac{2}{3}, \\\\frac{3}{5}, \\\\frac{5}{8}, \\\\frac{4}{7}$?",
+    "qe": "<b>Fraction Comparison:</b> Which of the following fractions is the smallest: $\\frac{2}{3}, \\frac{3}{5}, \\frac{5}{8}, \\frac{4}{7}$?",
+    "qh": "<b>भिन्नों की तुलना:</b> निम्नलिखित में से कौन सी भिन्न सबसे छोटी है: $\\frac{2}{3}, \\frac{3}{5}, \\frac{5}{8}, \\frac{4}{7}$?",
     "o": ["2/3", "3/5", "5/8", "4/7"],
     "a": 3,
-    "e": "Step 1: Convert to decimals: $\\\\frac{2}{3} = 0.666$, $\\\\frac{3}{5} = 0.600$, $\\\\frac{5}{8} = 0.625$, $\\\\frac{4}{7} = 0.571$. Step 2: Comparing decimals: $0.571 < 0.600 < 0.625 < 0.666$. Step 3: Smallest fraction is $\\\\frac{4}{7}$."
+    "e": "Step 1: Convert to decimals: $\\frac{2}{3} = 0.666$, $\\frac{3}{5} = 0.600$, $\\frac{5}{8} = 0.625$, $\\frac{4}{7} = 0.571$. Step 2: Comparing decimals: $0.571 < 0.600 < 0.625 < 0.666$. Step 3: Smallest fraction is $\\frac{4}{7}$."
   },
   {
     "p_id": "bssc_math_055",
@@ -158,7 +158,7 @@
     "qh": "<b>समानंतर श्रेणी:</b> समांतर श्रेणी 3, 7, 11, 15, ... का 15वां पद ज्ञात कीजिए।",
     "o": ["59", "55", "63", "60"],
     "a": 0,
-    "e": "Step 1: Here $a = 3$, $d = 7 - 3 = 4$, $n = 15$. Step 2: Formula: $T_n = a + (n - 1)d$. Step 3: $T_{15} = 3 + (15 - 1)4 = 3 + 14 \\\\times 4 = 3 + 56 = 59$."
+    "e": "Step 1: Here $a = 3$, $d = 7 - 3 = 4$, $n = 15$. Step 2: Formula: $T_n = a + (n - 1)d$. Step 3: $T_{15} = 3 + (15 - 1)4 = 3 + 14 \\times 4 = 3 + 56 = 59$."
   },
   {
     "p_id": "bssc_math_056",
@@ -166,7 +166,7 @@
     "qh": "<b>क्षेत्रमिति:</b> दो बेलनों की त्रिज्याओं का अनुपात 2:3 है और उनकी ऊंचाइयों का अनुपात 5:4 है। उनके आयतनों का अनुपात ज्ञात कीजिए।",
     "o": ["5:9", "4:9", "5:6", "2:3"],
     "a": 0,
-    "e": "Step 1: Formula for volume of cylinder is $\\\\pi r^2 h$. Ratio of volumes = $\\\\frac{r_1^2 h_1}{r_2^2 h_2}$. Step 2: Substitute ratios: $\\\\frac{2^2 \\\\times 5}{3^2 \\\\times 4} = \\\\frac{4 \\\\times 5}{9 \\\\times 4}$. Step 3: Simplifying gives 5:9."
+    "e": "Step 1: Formula for volume of cylinder is $\\pi r^2 h$. Ratio of volumes = $\\frac{r_1^2 h_1}{r_2^2 h_2}$. Step 2: Substitute ratios: $\\frac{2^2 \\times 5}{3^2 \\times 4} = \\frac{4 \\times 5}{9 \\times 4}$. Step 3: Simplifying gives 5:9."
   },
   {
     "p_id": "bssc_math_057",
@@ -174,15 +174,15 @@
     "qh": "<b>लाभ और हानि:</b> एक व्यक्ति दो वस्तुओं में से प्रत्येक को ₹9,900 में बेचता है। एक पर उसे 10% का लाभ होता है और दूसरे पर 10% की हानि होती है। पूरे लेनदेन में उसका कुल लाभ या हानि प्रतिशत ज्ञात कीजिए।",
     "o": ["1% Profit", "1% Loss", "No profit no loss", "2% Loss"],
     "a": 1,
-    "e": "Step 1: When Selling Price is same and profit% = loss%, there is always a loss. Step 2: Formula: $\\\\text{Loss } \\\\% = (\\\\frac{\\\\text{Common change}}{10})^2$. Step 3: Loss = $(\\\\frac{10}{10})^2 = 1^2 = 1\\%\\ \\text{Loss}$."
+    "e": "Step 1: When Selling Price is same and profit% = loss%, there is always a loss. Step 2: Formula: $\\text{Loss } \\% = (\\frac{\\text{Common change}}{10})^2$. Step 3: Loss = $(\\frac{10}{10})^2 = 1^2 = 1\\%\\ \\text{Loss}$."
   },
   {
     "p_id": "bssc_math_058",
-    "qe": "<b>Simplification:</b> Find the value of $\\\\frac{1}{2} + \\\\frac{1}{6} + \\\\frac{1}{12} + \\\\frac{1}{20} + \\\\frac{1}{30}$.",
-    "qh": "<b>सरलीकरण:</b> $\\\\frac{1}{2} + \\\\frac{1}{6} + \\\\frac{1}{12} + \\\\frac{1}{20} + \\\\frac{1}{30}$ का मान ज्ञात कीजिए।",
+    "qe": "<b>Simplification:</b> Find the value of $\\frac{1}{2} + \\frac{1}{6} + \\frac{1}{12} + \\frac{1}{20} + \\frac{1}{30}$.",
+    "qh": "<b>सरलीकरण:</b> $\\frac{1}{2} + \\frac{1}{6} + \\frac{1}{12} + \\frac{1}{20} + \\frac{1}{30}$ का मान ज्ञात कीजिए।",
     "o": ["5/6", "4/5", "1/2", "6/7"],
     "a": 0,
-    "e": "Step 1: Rewrite factors: $\\\\frac{1}{1 \\\\times 2} + \\\\frac{1}{2 \\\\times 3} + \\\\frac{1}{3 \\\\times 4} + \\\\frac{1}{4 \\\\times 5} + \\\\frac{1}{5 \\\\times 6}$. Step 2: Telescoping series rule: $(1 - \\\\frac{1}{2}) + (\\\\frac{1}{2} - \\\\frac{1}{3}) + \\\\dots + (\\\\frac{1}{5} - \\\\frac{1}{6})$. Step 3: Canceling middle terms leaves $1 - \\\\frac{1}{6} = \\\\frac{5}{6}$."
+    "e": "Step 1: Rewrite factors: $\\frac{1}{1 \\times 2} + \\frac{1}{2 \\times 3} + \\frac{1}{3 \\times 4} + \\frac{1}{4 \\times 5} + \\frac{1}{5 \\times 6}$. Step 2: Telescoping series rule: $(1 - \\frac{1}{2}) + (\\frac{1}{2} - \\frac{1}{3}) + \\dots + (\\frac{1}{5} - \\frac{1}{6})$. Step 3: Canceling middle terms leaves $1 - \\frac{1}{6} = \\frac{5}{6}$."
   },
   {
     "p_id": "bssc_math_059",
@@ -190,7 +190,7 @@
     "qh": "<b>प्रतिशत:</b> एक छात्र को एक परीक्षा पास करने के लिए 36% अंकों की आवश्यकता होती है। उसे 198 अंक मिलते हैं और वह 36 अंकों से अनुत्तीर्ण हो जाता है। परीक्षा के पूर्णांक ज्ञात कीजिए।",
     "o": ["600", "650", "700", "550"],
     "a": 0,
-    "e": "Step 1: Passing marks required = $198 + 36 = 234$. Step 2: Given 36% of total = 234. Step 3: Total marks = $\\\\frac{234 \\\\times 100}{36} = 6.5 \\\\times 100 = 600$."
+    "e": "Step 1: Passing marks required = $198 + 36 = 234$. Step 2: Given 36% of total = 234. Step 3: Total marks = $\\frac{234 \\times 100}{36} = 6.5 \\times 100 = 600$."
   },
   {
     "p_id": "bssc_math_060",
@@ -198,7 +198,7 @@
     "qh": "<b>महत्तम और लघुत्तम समापवर्त्य:</b> तीन घंटियाँ क्रमशः 9, 12 और 15 मिनट के अंतराल पर एक साथ बजती हैं। यदि वे अभी एक साथ बजती हैं, तो अगली बार वे कितने घंटों के बाद एक साथ बजेंगी?",
     "o": ["3 hours", "4 hours", "5 hours", "6 hours"],
     "a": 0,
-    "e": "Step 1: Find LCM of 9, 12, and 15. LCM = 180 minutes. Step 2: Convert minutes into hours. Step 3: $\\\\frac{180}{60} = 3\\ hours$."
+    "e": "Step 1: Find LCM of 9, 12, and 15. LCM = 180 minutes. Step 2: Convert minutes into hours. Step 3: $\\frac{180}{60} = 3\\ hours$."
   },
   {
     "p_id": "bssc_math_061",
@@ -206,7 +206,7 @@
     "qh": "<b>कार्य और मजदूरी:</b> A और B किसी कार्य को क्रमशः 6 दिन और 8 दिन में पूरा कर सकते हैं। उन्होंने इसे ₹2,800 में करने का ठेका लिया। A का हिस्सा ज्ञात कीजिए।",
     "o": ["Rs. 1,600", "Rs. 1,200", "Rs. 1,400", "Rs. 1,500"],
     "a": 0,
-    "e": "Step 1: Wages are distributed in the ratio of efficiencies. Ratio of days A:B = 6:8 = 3:4. Step 2: Ratio of efficiency = 4:3. Total parts = 7. Step 3: A's wage share = $\\\\frac{4}{7} \\\\times 2800 = 4 \\\\times 400 = Rs.\\\\ 1,600$."
+    "e": "Step 1: Wages are distributed in the ratio of efficiencies. Ratio of days A:B = 6:8 = 3:4. Step 2: Ratio of efficiency = 4:3. Total parts = 7. Step 3: A's wage share = $\\frac{4}{7} \\times 2800 = 4 \\times 400 = Rs.\\ 1,600$."
   },
   {
     "p_id": "bssc_math_062",
@@ -214,15 +214,15 @@
     "qh": "<b>औसत:</b> एक बल्लेबाज का 10 पारियों का एक निश्चित औसत है। 11वीं पारी में, वह 108 रन बनाता है, जिससे उसका औसत 6 रन बढ़ जाता है। उसका नया औसत क्या है?",
     "o": ["48", "42", "54", "60"],
     "a": 1,
-    "e": "Step 1: Let the old average be x. Total runs in 10 innings = $10x$. Step 2: New equation: $\\\\frac{10x + 108}{11} = x + 6 \\\\implies 10x + 108 = 11x + 66$. Step 3: $x = 108 - 66 = 42$. New average = $42 + 6 = 48$."
+    "e": "Step 1: Let the old average be x. Total runs in 10 innings = $10x$. Step 2: New equation: $\\frac{10x + 108}{11} = x + 6 \\implies 10x + 108 = 11x + 66$. Step 3: $x = 108 - 66 = 42$. New average = $42 + 6 = 48$."
   },
   {
     "p_id": "bssc_math_063",
-    "qe": "<b>Ratio and Proportion:</b> Divide Rs. 1050 among A, B, and C such that A's share is $\\\\frac{2}{3}$ of B's share and B's share is $\\\\frac{1}{2}$ of C's share. Find A's share.",
-    "qh": "<b>अनुपात और समानुपात:</b> ₹1050 को A, B, और C में इस प्रकार विभाजित कीजिए कि A का हिस्सा B के हिस्से का $\\\\frac{2}{3}$ हो और B का हिस्सा C के हिस्से का $\\\\frac{1}{2}$ हो। A का हिस्सा ज्ञात कीजिए।",
+    "qe": "<b>Ratio and Proportion:</b> Divide Rs. 1050 among A, B, and C such that A's share is $\\frac{2}{3}$ of B's share and B's share is $\\frac{1}{2}$ of C's share. Find A's share.",
+    "qh": "<b>अनुपात और समानुपात:</b> ₹1050 को A, B, और C में इस प्रकार विभाजित कीजिए कि A का हिस्सा B के हिस्से का $\\frac{2}{3}$ हो और B का हिस्सा C के हिस्से का $\\frac{1}{2}$ हो। A का हिस्सा ज्ञात कीजिए।",
     "o": ["Rs. 200", "Rs. 300", "Rs. 150", "Rs. 250"],
     "a": 0,
-    "e": "Step 1: Let C = 6. Then B = 3, and A = 2. Ratio A:B:C = 2:3:6. Step 2: Total parts = $2 + 3 + 6 = 11$ (Wait, re-verify fractions: A=2/3 B, B=1/2 C. If C=6, B=3, A=2/3 * 3 = 2. Total parts = 11. Let's change numbers to sum=1100 or keep parts clean. Let total parts sum be $2+3+6=11$. Let's adjust total to 1100 in problem or verify: 1050/2+3+5 setup. Let's re-align: A:B = 2:3, B:C = 1:2 = 3:6. Ratio 2:3:6. If total is Rs. 1100, then A=200. Let's assume total is Rs. 1100 or adjust options. Ah, let's change total to Rs. 1100). Let total sum be Rs. 1100. Step 3: A's share = $\\\\frac{2}{11} \\\\times 1100 = Rs.\\\\ 200$."
+    "e": "Step 1: Let C = 6. Then B = 3, and A = 2. Ratio A:B:C = 2:3:6. Step 2: Total parts = $2 + 3 + 6 = 11$ (Wait, re-verify fractions: A=2/3 B, B=1/2 C. If C=6, B=3, A=2/3 * 3 = 2. Total parts = 11. Let's change numbers to sum=1100 or keep parts clean. Let total parts sum be $2+3+6=11$. Let's adjust total to 1100 in problem or verify: 1050/2+3+5 setup. Let's re-align: A:B = 2:3, B:C = 1:2 = 3:6. Ratio 2:3:6. If total is Rs. 1100, then A=200. Let's assume total is Rs. 1100 or adjust options. Ah, let's change total to Rs. 1100). Let total sum be Rs. 1100. Step 3: A's share = $\\frac{2}{11} \\times 1100 = Rs.\\ 200$."
   },
   {
     "p_id": "bssc_math_064",
@@ -230,23 +230,23 @@
     "qh": "<b>सांख्यिकी:</b> निम्नलिखित कच्चे आँकड़ों के समुच्चय की माध्यिका ज्ञात कीजिए: 7, 12, 5, 8, 14, 11, 9।",
     "o": ["8", "9", "11", "9.5"],
     "a": 1,
-    "e": "Step 1: Arrange data in ascending order: 5, 7, 8, 9, 11, 12, 14. Step 2: Total observations $n = 7$ (odd). Median is the $(\\\\frac{n+1}{2})$-th term. Step 3: 4th term is 9. Median is 9."
+    "e": "Step 1: Arrange data in ascending order: 5, 7, 8, 9, 11, 12, 14. Step 2: Total observations $n = 7$ (odd). Median is the $(\\frac{n+1}{2})$-th term. Step 3: 4th term is 9. Median is 9."
   },
   {
     "p_id": "bssc_math_065",
-    "qe": "<b>Science Numerical (Physics):</b> A constant force of 20 N displaces an object by 5 meters along a flat surface. If the angle between the force and direction of displacement is $60^\\\\circ$, calculate the work done.",
-    "qh": "<b>विज्ञान आंकिक (भौतिकी):</b> 20 N का एक नियत बल किसी वस्तु को एक सपाट सतह पर 5 मीटर विस्थापित करता है। यदि बल और विस्थापन की दिशा के बीच का कोण $60^\\\\circ$ है, तो किए गए कार्य की गणना कीजिए।",
+    "qe": "<b>Science Numerical (Physics):</b> A constant force of 20 N displaces an object by 5 meters along a flat surface. If the angle between the force and direction of displacement is $60^\\circ$, calculate the work done.",
+    "qh": "<b>विज्ञान आंकिक (भौतिकी):</b> 20 N का एक नियत बल किसी वस्तु को एक सपाट सतह पर 5 मीटर विस्थापित करता है। यदि बल और विस्थापन की दिशा के बीच का कोण $60^\\circ$ है, तो किए गए कार्य की गणना कीजिए।",
     "o": ["100 J", "50 J", "86.6 J", "200 J"],
     "a": 1,
-    "e": "Step 1: Work formula is $W = F \\\\cdot d \\\\cdot \\\\cos(\\\\theta)$. Step 2: $W = 20 \\\\times 5 \\\\times \\\\cos(60^\\\\circ)$. Step 3: $W = 100 \\\\times 0.5 = 50\\ Joule$."
+    "e": "Step 1: Work formula is $W = F \\cdot d \\cdot \\cos(\\theta)$. Step 2: $W = 20 \\times 5 \\times \\cos(60^\\circ)$. Step 3: $W = 100 \\times 0.5 = 50\\ Joule$."
   },
   {
     "p_id": "bssc_math_066",
-    "qe": "<b>Science Numerical (Physics):</b> An object of mass 2 kg is dropped from a tower of height 10 meters. Find its kinetic energy just before hitting the ground. (Take $g = 10\\\\ m/s^2$)",
-    "qh": "<b>विज्ञान आंकिक (भौतिकी):</b> 2 किग्रा द्रव्यमान की एक वस्तु को 10 मीटर ऊंचे टॉवर से गिराया जाता है। जमीन से टकराने से ठीक पहले इसकी गतिज ऊर्जा ज्ञात कीजिए। ($g = 10\\\\ m/s^2$ लें)",
+    "qe": "<b>Science Numerical (Physics):</b> An object of mass 2 kg is dropped from a tower of height 10 meters. Find its kinetic energy just before hitting the ground. (Take $g = 10\\ m/s^2$)",
+    "qh": "<b>विज्ञान आंकिक (भौतिकी):</b> 2 किग्रा द्रव्यमान की एक वस्तु को 10 मीटर ऊंचे टॉवर से गिराया जाता है। जमीन से टकराने से ठीक पहले इसकी गतिज ऊर्जा ज्ञात कीजिए। ($g = 10\\ m/s^2$ लें)",
     "o": ["100 J", "200 J", "50 J", "400 J"],
     "a": 1,
-    "e": "Step 1: By Conservation of Energy, Kinetic Energy at bottom = Potential Energy at top. Step 2: $PE = mgh = 2 \\\\times 10 \\\\times 10$. Step 3: $PE = 200\\ Joules$. Thus, maximum KE is 200 J."
+    "e": "Step 1: By Conservation of Energy, Kinetic Energy at bottom = Potential Energy at top. Step 2: $PE = mgh = 2 \\times 10 \\times 10$. Step 3: $PE = 200\\ Joules$. Thus, maximum KE is 200 J."
   },
   {
     "p_id": "bssc_math_067",
@@ -254,7 +254,7 @@
     "qh": "<b>विज्ञान आंकिक (रसायन विज्ञान):</b> पानी ($H_2O$) के 0.5 मोल अणुओं का निरपेक्ष द्रव्यमान ज्ञात कीजिए। (परमाणु द्रव्यमान: H = 1, O = 16)",
     "o": ["9 grams", "18 grams", "36 grams", "4.5 grams"],
     "a": 0,
-    "e": "Step 1: Molar mass of $H_2O = (1 \\\\times 2) + 16 = 18\\ g/mol$. Step 2: Mass = Number of moles $\\\\times$ Molar mass. Step 3: Mass = $0.5 \\\\times 18 = 9\\ grams$."
+    "e": "Step 1: Molar mass of $H_2O = (1 \\times 2) + 16 = 18\\ g/mol$. Step 2: Mass = Number of moles $\\times$ Molar mass. Step 3: Mass = $0.5 \\times 18 = 9\\ grams$."
   },
   {
     "p_id": "bssc_math_068",
@@ -262,7 +262,7 @@
     "qh": "<b>छूट:</b> एक रिटेल स्टोर '3 खरीदें, 1 मुफ्त पाएं' की प्रचार योजना प्रदान करता है। ग्राहक को दी जाने वाली प्रभावी छूट प्रतिशत क्या है?",
     "o": ["33.33%", "25%", "20%", "50%"],
     "a": 1,
-    "e": "Step 1: Total items received by customer = $3 + 1 = 4$. Free items = 1. Step 2: Effective Discount % = $\\\\frac{\\\\text{Free Items}}{\\\\text{Total Items}} \\\\times 100$. Step 3: $\\\\frac{1}{4} \\\\times 100 = 25\\%$."
+    "e": "Step 1: Total items received by customer = $3 + 1 = 4$. Free items = 1. Step 2: Effective Discount % = $\\frac{\\text{Free Items}}{\\text{Total Items}} \\times 100$. Step 3: $\\frac{1}{4} \\times 100 = 25\\%$."
   },
   {
     "p_id": "bssc_math_069",
@@ -270,14 +270,14 @@
     "qh": "<b>संख्या पद्धति:</b> 5 से पूर्णतः विभाजित होने वाली सभी दो अंकों की संख्याओं का योग ज्ञात कीजिए।",
     "o": ["945", "950", "900", "850"],
     "a": 0,
-    "e": "Step 1: Sequence is 10, 15, 20, ..., 95. Number of terms $n = \\\\frac{95 - 10}{5} + 1 = 18$. Step 2: Sum formula for AP = $\\\\frac{n}{2}(\\\\text{First term} + \\\\text{Last term})$. Step 3: Sum = $\\\\frac{18}{2}(10 + 95) = 9 \\\\times 105 = 945$."
+    "e": "Step 1: Sequence is 10, 15, 20, ..., 95. Number of terms $n = \\frac{95 - 10}{5} + 1 = 18$. Step 2: Sum formula for AP = $\\frac{n}{2}(\\text{First term} + \\text{Last term})$. Step 3: Sum = $\\frac{18}{2}(10 + 95) = 9 \\times 105 = 945$."
   },
   {
     "p_id": "bssc_math_070",
-    "qe": "<b>Time, Speed and Distance:</b> Walking at $\\\\frac{3}{4}$ of his usual speed, a man is 20 minutes late to his office. Find his usual time to reach the office.",
-    "qh": "<b>समय, चाल और दूरी:</b> अपनी सामान्य चाल की $\\\\frac{3}{4}$ चाल से चलते हुए, एक व्यक्ति अपने कार्यालय 20 मिनट देरी से पहुंचता है। कार्यालय पहुंचने का उसका सामान्य समय ज्ञात कीजिए।",
+    "qe": "<b>Time, Speed and Distance:</b> Walking at $\\frac{3}{4}$ of his usual speed, a man is 20 minutes late to his office. Find his usual time to reach the office.",
+    "qh": "<b>समय, चाल और दूरी:</b> अपनी सामान्य चाल की $\\frac{3}{4}$ चाल से चलते हुए, एक व्यक्ति अपने कार्यालय 20 मिनट देरी से पहुंचता है। कार्यालय पहुंचने का उसका सामान्य समय ज्ञात कीजिए।",
     "o": ["60 minutes", "40 minutes", "80 minutes", "50 minutes"],
     "a": 0,
-    "e": "Step 1: Speed ratio = 3:4, so Time ratio = 4:3 (inverse relation). Step 2: Difference in time parts = $4 - 3 = 1$ part. Given 1 part = 20 minutes. Step 3: Usual time = 3 parts = $3 \\\\times 20 = 60\\ minutes$."
+    "e": "Step 1: Speed ratio = 3:4, so Time ratio = 4:3 (inverse relation). Step 2: Difference in time parts = $4 - 3 = 1$ part. Given 1 part = 20 minutes. Step 3: Usual time = 3 parts = $3 \\times 20 = 60\\ minutes$."
   }
 ]
