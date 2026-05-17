@@ -29,7 +29,7 @@
     "qh": "<b>संख्या शृंखला:</b> अनुक्रम में लुप्त पद को पूरा कीजिए: 5, 11, 23, 47, 95, ?",
     "o": ["191", "190", "189", "192"],
     "a": 0,
-    "e": "Step 1: Observe the growth pattern: $5 \\\\times 2 + 1 = 11$, $11 \\\\times 2 + 1 = 23$, $23 \\\\times 2 + 1 = 47$. Step 2: Following the structure: $95 \\\\times 2 + 1$. Step 3: $190 + 1 = 191$."
+    "e": "Step 1: Observe the growth pattern: $5 \\times 2 + 1 = 11$, $11 \\times 2 + 1 = 23$, $23 \\times 2 + 1 = 47$. Step 2: Following the structure: $95 \\times 2 + 1$. Step 3: $190 + 1 = 191$."
   },
   {
     "p_id": "bssc_reason_005",
@@ -53,7 +53,7 @@
     "qh": "<b>संख्या शृंखला:</b> दी गई शृंखला में गलत संख्या ज्ञात कीजिए: 4, 9, 19, 39, 79, 160, 319।",
     "o": ["160", "39", "79", "19"],
     "a": 0,
-    "e": "Step 1: The logic pattern is $x \\\\times 2 + 1$. $4 \\\\times 2 + 1 = 9$, $9 \\\\times 2 + 1 = 19$, $19 \\\\times 2 + 1 = 39$. Step 2: Check later terms: $39 \\\\times 2 + 1 = 79$, $79 \\\\times 2 + 1 = 159$. Step 3: The number 160 is wrong; it should be 159."
+    "e": "Step 1: The logic pattern is $x \\times 2 + 1$. $4 \\times 2 + 1 = 9$, $9 \\times 2 + 1 = 19$, $19 \\times 2 + 1 = 39$. Step 2: Check later terms: $39 \\times 2 + 1 = 79$, $79 \\times 2 + 1 = 159$. Step 3: The number 160 is wrong; it should be 159."
   },
   {
     "p_id": "bssc_reason_008",
@@ -117,7 +117,7 @@
     "qh": "<b>रक्त संबंध:</b> यदि A, B का भाई है, B, C की बेटी है, और D, C का पिता है, तो A का D से क्या संबंध है?",
     "o": ["Grandson", "Son", "Grandfather", "Brother"],
     "a": 0,
-    "e": "Step 1: B is daughter of C, and A is brother of B $\\\\implies$ A is the son of C. Step 2: D is the father of C. Step 3: C's son A will be the grandson of D."
+    "e": "Step 1: B is daughter of C, and A is brother of B $\\implies$ A is the son of C. Step 2: D is the father of C. Step 3: C's son A will be the grandson of D."
   },
   {
     "p_id": "bssc_reason_016",
@@ -125,7 +125,7 @@
     "qh": "<b>रक्त संबंध:</b> A और B एक विवाहित जोड़ा हैं। X और Y भाई हैं। X, A का भाई है। Y का B से क्या संबंध है?",
     "o": ["Brother-in-law", "Brother", "Son-in-law", "Cousin"],
     "a": 0,
-    "e": "Step 1: X and Y are brothers, and X is brother of A $\\\\implies$ Y is also the brother of A. Step 2: A is married to B. Step 3: B's spouse's brother is Y. Therefore, Y is B's brother-in-law."
+    "e": "Step 1: X and Y are brothers, and X is brother of A $\\implies$ Y is also the brother of A. Step 2: A is married to B. Step 3: B's spouse's brother is Y. Therefore, Y is B's brother-in-law."
   },
   {
     "p_id": "bssc_reason_017",
@@ -141,7 +141,7 @@
     "qh": "<b>दिशा परीक्षण:</b> एक लड़का अपने घर से शुरू करके पश्चिम की ओर 4 किमी दौड़ता है। वह फिर बाईं ओर मुड़ता है और 3 किमी दौड़ता है। अपने घर के बिंदु पर वापस जाने के लिए सबसे छोटी सीधी रेखा की दूरी ज्ञात कीजिए।",
     "o": ["5 km", "7 km", "1 km", "4.5 km"],
     "a": 0,
-    "e": "Step 1: Movements form a right-angled triangle with base = 4 km, perpendicular = 3 km. Step 2: Shortest distance = Hypotenuse = $\\\\sqrt{4^2 + 3^2} = \\\\sqrt{16 + 9}$. Step 3: $\\\\sqrt{25} = 5\\ km$."
+    "e": "Step 1: Movements form a right-angled triangle with base = 4 km, perpendicular = 3 km. Step 2: Shortest distance = Hypotenuse = $\\sqrt{4^2 + 3^2} = \\sqrt{16 + 9}$. Step 3: $\\sqrt{25} = 5\\ km$."
   },
   {
     "p_id": "bssc_reason_019",
@@ -165,7 +165,7 @@
     "qh": "<b>वेन आरेख:</b> एक समूह अध्ययन सेटअप लेआउट में, वृत्त 'शिक्षित' को दर्शाता है, त्रिभुज 'ग्रामीण युवाओं' को दर्शाता है, और आयत 'बेरोजगारों' को दर्शाता है। यदि संख्या 7 वृत्त और त्रिभुज दोनों के अंदर है लेकिन आयत के बाहर है, तो 7 क्या दर्शाता है?",
     "o": ["Educated Rural Youth who are employed", "Unemployed Educated Rural Youth", "Educated Urban Unemployed Youth", "Unemployed Rural Youth"],
     "a": 0,
-    "e": "Step 1: 7 is inside Circle (Educated) and Triangle (Rural Youth) $\\\\implies$ Educated Rural Youth. Step 2: 7 is outside Rectangle (Unemployed), meaning they are not unemployed, i.e., they are employed. Step 3: Hence, 7 represents 'Educated Rural Youth who are employed'."
+    "e": "Step 1: 7 is inside Circle (Educated) and Triangle (Rural Youth) $\\implies$ Educated Rural Youth. Step 2: 7 is outside Rectangle (Unemployed), meaning they are not unemployed, i.e., they are employed. Step 3: Hence, 7 represents 'Educated Rural Youth who are employed'."
   },
   {
     "p_id": "bssc_reason_022",
@@ -177,19 +177,19 @@
   },
   {
     "p_id": "bssc_reason_023",
-    "qe": "<b>Mathematical Operations:</b> If '+' means '$\\\\times$', '-' means '$\\\\div$', '$\\\\times$' means '-' and '$\\\\div$' means '+', find the value of equation: $20 + 4 - 2 \\\\times 5 \\\\div 1$.",
-    "qh": "<b>गणितीय संक्रियाएँ:</b> यदि '+' का अर्थ '$\\\\times$', '-' का अर्थ '$\\\\div$', '$\\\\times$' का अर्थ '-' और '$\\\\div$' का अर्थ '+' है, तो समीकरण का मान ज्ञात कीजिए: $20 + 4 - 2 \\\\times 5 \\\\div 1$।",
+    "qe": "<b>Mathematical Operations:</b> If '+' means '$\\times$', '-' means '$\\div$', '$\\times$' means '-' and '$\\div$' means '+', find the value of equation: $20 + 4 - 2 \\times 5 \\div 1$.",
+    "qh": "<b>गणितीय संक्रियाएँ:</b> यदि '+' का अर्थ '$\\times$', '-' का अर्थ '$\\div$', '$\\times$' का अर्थ '-' और '$\\div$' का अर्थ '+' है, तो समीकरण का मान ज्ञात कीजिए: $20 + 4 - 2 \\times 5 \\div 1$।",
     "o": ["36", "40", "35", "42"],
     "a": 0,
-    "e": "Step 1: Replace signs with actual operations: $20 \\\\times 4 \\\\div 2 - 5 + 1$. Step 2: Apply BODMAS: $20 \\\\times 2 - 5 + 1 \\\\implies 40 - 5 + 1$. Step 3: $35 + 1 = 36$."
+    "e": "Step 1: Replace signs with actual operations: $20 \\times 4 \\div 2 - 5 + 1$. Step 2: Apply BODMAS: $20 \\times 2 - 5 + 1 \\implies 40 - 5 + 1$. Step 3: $35 + 1 = 36$."
   },
   {
     "p_id": "bssc_reason_024",
-    "qe": "<b>Mathematical Operations:</b> Which two mathematical operational signs should be interchanged to make the given equation correct? $8 \\\\times 2 + 4 - 6 \\\\div 2 = 13$.",
-    "qh": "<b>गणितीय संक्रियाएँ:</b> दिए गए समीकरण को सही बनाने के लिए किन दो गणितीय संक्रिया चिह्नों को आपस में बदला जाना चाहिए? $8 \\\\times 2 + 4 - 6 \\\\div 2 = 13$।",
-    "o": ["+ and -", "$\\\\times$ and $\\\\div$", "+ and $\\\\div$", "$\\\\times$ and -"],
+    "qe": "<b>Mathematical Operations:</b> Which two mathematical operational signs should be interchanged to make the given equation correct? $8 \\times 2 + 4 - 6 \\div 2 = 13$.",
+    "qh": "<b>गणितीय संक्रियाएँ:</b> दिए गए समीकरण को सही बनाने के लिए किन दो गणितीय संक्रिया चिह्नों को आपस में बदला जाना चाहिए? $8 \\times 2 + 4 - 6 \\div 2 = 13$।",
+    "o": ["+ and -", "$\\times$ and $\\div$", "+ and $\\div$", "$\\times$ and -"],
     "a": 0,
-    "e": "Step 1: Test option A: Swap + and -. New layout: $8 \\\\times 2 - 4 + 6 \\\\div 2$. Step 2: Solve using BODMAS: $16 - 4 + 3 = 12 + 3 = 15 \\\\neq 13$. Let's check parameters. Wait, if we test standard signs: if equation is $8 + 2 \\\\times 4 - 6 \\\\div 2 = 13 \\\\implies 8 + 8 - 3 = 13$, which is true. So interchanging $\\\\times$ and + in initial layout would give this. Let's adjust option or layout. If option has + and $\\\\times$ swap: initial: $8 \\\\times 2 + 4 - 6 \\\\div 2 = 13$. Let's re-calculate initial layout value: $16 + 4 - 3 = 17 \\\\neq 13$. If we change initial to $8 - 2 + 4 \\\\times 6 \\\\div 2$: let's use a verified pair. Swap $\\\\times$ and +: $8 + 2 \\\\times 4 - 6 \\\\div 2 = 8 + 8 - 3 = 13$. So swapping $\\\\times$ and + is correct. Let's assume option contains + and $\\\\times$ interchange."
+    "e": "Step 1: Test option A: Swap + and -. New layout: $8 \\times 2 - 4 + 6 \\div 2$. Step 2: Solve using BODMAS: $16 - 4 + 3 = 12 + 3 = 15 \\neq 13$. Let's check parameters. Wait, if we test standard signs: if equation is $8 + 2 \\times 4 - 6 \\div 2 = 13 \\implies 8 + 8 - 3 = 13$, which is true. So interchanging $\\times$ and + in initial layout would give this. Let's adjust option or layout. If option has + and $\\times$ swap: initial: $8 \\times 2 + 4 - 6 \\div 2 = 13$. Let's re-calculate initial layout value: $16 + 4 - 3 = 17 \\neq 13$. If we change initial to $8 - 2 + 4 \\times 6 \\div 2$: let's use a verified pair. Swap $\\times$ and +: $8 + 2 \\times 4 - 6 \\div 2 = 8 + 8 - 3 = 13$. So swapping $\\times$ and + is correct. Let's assume option contains + and $\\times$ interchange."
   },
   {
     "p_id": "bssc_reason_025",
@@ -221,7 +221,7 @@
     "qh": "<b>क्रम और रैंकिंग:</b> 35 लड़कों की एक कतार में, राहुल को 4 स्थान दाईं ओर स्थानांतरित किया जाता है। यदि वह अब दाएं छोर से 12वें स्थान पर है, तो बाएं छोर से उसकी मूल स्थिति क्या थी?",
     "o": ["20th", "24th", "19th", "21st"],
     "a": 0,
-    "e": "Step 1: Current position from right = 12th. Since he shifted 4 places right, his original position from right was $12 + 4 = 16$th. Step 2: Use formula: $\\\\text{Position from Left} = \\\\text{Total} - \\\\text{Position from Right} + 1$. Step 3: Left position = $35 - 16 + 1 = 19 + 1 = 20$th."
+    "e": "Step 1: Current position from right = 12th. Since he shifted 4 places right, his original position from right was $12 + 4 = 16$th. Step 2: Use formula: $\\text{Position from Left} = \\text{Total} - \\text{Position from Right} + 1$. Step 3: Left position = $35 - 16 + 1 = 19 + 1 = 20$th."
   },
   {
     "p_id": "bssc_reason_029",
@@ -237,7 +237,7 @@
     "qh": "<b>बैठक व्यवस्था:</b> पांच मित्र P, Q, R, S, और T उत्तर की ओर मुख करके एक कतार में बैठे हैं। R, S के ठीक दाईं ओर बैठा है। P, T के ठीक बाईं ओर बैठा है। Q, P और S के बीच में बैठा है। ठीक मध्य में कौन बैठा है?",
     "o": ["S", "Q", "P", "R"],
     "a": 0,
-    "e": "Step 1: Set up constraints: 'R is right of S' -> SR. 'P is left of T' -> PT. Step 2: 'Q is between P and S' gives order PT + Q + SR -> T-P-Q-S-R or symmetric linear matching. Let's arrange left to right: T, P, Q, S, R. Here P is left of T? No, 'P is left of T' means P is to the left, so PT format. If sequence is T, P, Q, S, R, then P is to the right of T. Let's adjust: P-T configuration. If sequence is P, Q, S, R and we place T: P is left of T $\\\\implies$ P, T. If layout is T, P, Q, S, R, then P is right of T. Correct sequence matching all rules is T-P-Q-S-R or symmetric format. Let's trace middle value: Q is centered."
+    "e": "Step 1: Set up constraints: 'R is right of S' -> SR. 'P is left of T' -> PT. Step 2: 'Q is between P and S' gives order PT + Q + SR -> T-P-Q-S-R or symmetric linear matching. Let's arrange left to right: T, P, Q, S, R. Here P is left of T? No, 'P is left of T' means P is to the left, so PT format. If sequence is T, P, Q, S, R, then P is to the right of T. Let's adjust: P-T configuration. If sequence is P, Q, S, R and we place T: P is left of T $\\implies$ P, T. If layout is T, P, Q, S, R, then P is right of T. Correct sequence matching all rules is T-P-Q-S-R or symmetric format. Let's trace middle value: Q is centered."
   },
   {
     "p_id": "bssc_reason_031",
