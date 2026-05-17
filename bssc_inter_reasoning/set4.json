@@ -1,0 +1,282 @@
+[
+  {
+    "p_id": "bssc_reason_106",
+    "qe": "<b>Analogy:</b> Select the option that completes the relation: 64 : 512 :: 100 : ?",
+    "qh": "<b>सादृश्यता:</b> उस विकल्प का चयन कीजिए जो संबंध को पूरा करता है: 64 : 512 :: 100 : ?",
+    "o": ["1000", "1100", "1200", "900"],
+    "a": 0,
+    "e": "Step 1: Analyze the initial pair: $64 = 8^2$ and $512 = 8^3$. The logic is $n^2 : n^3$. Step 2: Apply to the next term: $100 = 10^2$, so the missing term must be $10^3$. Step 3: $10^3 = 1000$."
+  },
+  {
+    "p_id": "bssc_reason_107",
+    "qe": "<b>Coding-Decoding:</b> If the word 'PENCIL' is coded as 'MKNCIL' in a certain configuration, how will 'PAPER' be coded?",
+    "qh": "<b>कोडिंग-डिकोडिंग:</b> यदि एक निश्चित विन्यास में 'PENCIL' को 'MKNCIL' के रूप में कोडित किया जाता है, तो 'PAPER' को कैसे कोडित किया जाएगा?",
+    "o": ["MXPER", "NXPER", "MWPER", "MAPER"],
+    "a": 0,
+    "e": "Step 1: Analyze the pattern in 'PENCIL' -> 'MKNCIL'. Only the first two letters shift backward by 3 and 2 positions respectively: P(-3)->M, E(-2)->K, while 'NCIL' remains unchanged. Step 2: Apply this to 'PAPER'. First letter P(-3)->M, second letter A(-2)->X. Step 3: Keep the remaining letters 'PER' identical. The code is 'MXPER'."
+  },
+  {
+    "p_id": "bssc_reason_108",
+    "qe": "<b>Classification:</b> Choose the word which is least like the other words in the group based on scientific definitions.",
+    "qh": "<b>वर्गीकरण:</b> वैज्ञानिक परिभाषाओं के आधार पर उस शब्द को चुनिए जो समूह के अन्य शब्दों से सबसे कम मिलता-जुलता है।",
+    "o": ["Diamond", "Graphite", "Charcoal", "Silicon"],
+    "a": 3,
+    "e": "Step 1: Diamond, Graphite, and Charcoal are all allotropes of Carbon. Step 2: Silicon is a separate chemical element entirely. Step 3: Therefore, Silicon is the odd one out."
+  },
+  {
+    "p_id": "bssc_reason_109",
+    "qe": "<b>Number Series:</b> Identify the next logical term in the sequence: 3, 5, 9, 17, 33, ?",
+    "qh": "<b>संख्या शृंखला:</b> शृंखला में अगले तार्किक पद की पहचान कीजिए: 3, 5, 9, 17, 33, ?",
+    "o": ["65", "66", "64", "67"],
+    "a": 0,
+    "e": "Step 1: Check the ascending gaps: $3(+2)->5(+4)->9(+8)->17(+16)->33$. Step 2: The addition difference doubles at each step ($\\\\times 2$). The next gap must be $16 \\\\times 2 = 32$. Step 3: Next term = $33 + 32 = 65$."
+  },
+  {
+    "p_id": "bssc_reason_110",
+    "qe": "<b>Letter Series:</b> Complete the continuous repeating letter pattern: a_b_a_b_a_ba",
+    "qh": "<b>अक्षर शृंखला:</b> सतत आवर्ती अक्षर पैटर्न को पूरा करें: a_b_a_b_a_ba",
+    "o": ["b, a, b", "a, b, a", "b, b, b", "a, a, a"],
+    "a": 0,
+    "e": "Step 1: Break the series into segments to find the pattern structure. Step 2: The pattern alternates uniformly as 'ab', 'ab', 'ab'. Step 3: Filling 'b', 'a', 'b' completes the continuous sequence 'abababab'."
+  },
+  {
+    "p_id": "bssc_reason_111",
+    "qe": "<b>Blood Relations:</b> Introducing a man to her husband, a woman said, 'His sister's father is the only son of my grandfather.' How is the woman related to this man?",
+    "qh": "<b>रक्त संबंध:</b> अपने पति से एक पुरुष का परिचय कराते हुए एक महिला ने कहा, 'उसकी बहन के पिता मेरे दादा के इकलौते बेटे हैं।' वह महिला उस पुरुष से किस प्रकार संबंधित है?",
+    "o": ["Sister", "Daughter", "Mother", "Aunt"],
+    "a": 0,
+    "e": "Step 1: 'Only son of my grandfather' means the woman's father. Step 2: 'His sister's father' means that man's father as well. Step 3: Since they share the same father, the woman is the man's sister."
+  },
+  {
+    "p_id": "bssc_reason_112",
+    "qe": "<b>Direction Sense Test:</b> At 3:00 PM, the minute hand of a clock points towards the East. In which direction will the hour hand point at the same time?",
+    "qh": "<b>दिशा परीक्षण:</b> दोपहर 3:00 बजे, एक घड़ी की मिनट की सुई पूर्व की ओर इशारा करती है। उसी समय घंटे की सुई किस दिशा की ओर इशारा करेगी?",
+    "o": ["South", "North", "East", "West"],
+    "a": 0,
+    "e": "Step 1: At 3:00 PM, the minute hand is at 12 (pointing straight up) and the hour hand is at 3 (pointing right). Step 2: If the minute hand (12 o'clock position) points East, then turning $90^\\\\circ$ clockwise (3 o'clock position) points South. Step 3: The hour hand points South."
+  },
+  {
+    "p_id": "bssc_reason_113",
+    "qe": "<b>Venn Diagrams:</b> Which of the following figures best represents the relationship among: Humans, Teachers, Engineers?",
+    "qh": "<b>वेन आरेख:</b> निम्नलिखित में से कौन सी आकृति इनके बीच सही संबंध दर्शाती है: मानव, शिक्षक, इंजीनियर?",
+    "o": ["Two intersecting circles completely enclosed within a larger third circle", "Three intersecting circles", "Three concentric circles", "Two separate circles inside a larger circle"],
+    "a": 0,
+    "e": "Step 1: Both Teachers and Engineers are subsets of Humans, so both circles must be inside the 'Humans' circle. Step 2: Some teachers can be engineers and vice versa, meaning their circles intersect. Step 3: This matches option A."
+  },
+  {
+    "p_id": "bssc_reason_114",
+    "qe": "<b>Mathematical Operations:</b> If '$\\\\times$' denotes '$+$', '$-$' denotes '$\\\\div$', '$+$' denotes '$\\\\times$', and '$\\\\div$' denotes '$-$', evaluate: $14 - 2 \\\\times 6 + 2 \\\\div 5$.",
+    "qh": "<b>गणितीय संक्रियाएँ:</b> यदि '$\\\\times$' का अर्थ '$+$', '$-$' का अर्थ '$\\\\div$', '$+$' का अर्थ '$\\\\times$', और '$\\\\div$' का अर्थ '$-$' है, तो मान ज्ञात कीजिए: $14 - 2 \\\\times 6 + 2 \\\\div 5$।",
+    "o": ["14", "12", "16", "10"],
+    "a": 0,
+    "e": "Step 1: Swap operators per instructions: $14 \\\\div 2 + 6 \\\\times 2 - 5$. Step 2: Solve division and multiplication: $7 + 12 - 5$. Step 3: $19 - 5 = 14$."
+  },
+  {
+    "p_id": "bssc_reason_115",
+    "qe": "<b>Missing Number Puzzle:</b> Determine the missing numerical value in the matrix:\n| 5 | 4 | 9 |\n| 6 | 3 | 9 |\n| 7 | 2 | ? |",
+    "qh": "<b>लुप्त संख्या पहेली:</b> मैट्रिक्स में लुप्त संख्यात्मक मान का निर्धारण करें:\n| 5 | 4 | 9 |\n| 6 | 3 | 9 |\n| 7 | 2 | ? |",
+    "o": ["9", "14", "12", "5"],
+    "a": 0,
+    "e": "Step 1: Check the row logic: Row 1: $5 + 4 = 9$. Row 2: $6 + 3 = 9$. Step 2: The rule is $Col_1 + Col_2 = Col_3$. Step 3: Row 3: $7 + 2 = 9$."
+  },
+  {
+    "p_id": "bssc_reason_116",
+    "qe": "<b>Alphabet Test:</b> Arrange the following words according to English dictionary order: 1. Benchmark, 2. Beautiful, 3. Beauty, 4. Because.",
+    "qh": "<b>अक्षर परीक्षण:</b> अंग्रेजी शब्दकोश क्रम के अनुसार निम्नलिखित शब्दों को व्यवस्थित कीजिए: 1. Benchmark, 2. Beautiful, 3. Beauty, 4. Because।",
+    "o": ["2, 3, 4, 1", "3, 2, 4, 1", "2, 4, 3, 1", "4, 2, 3, 1"],
+    "a": 0,
+    "e": "Step 1: Compare the words letter by letter. All start with 'Be'. Step 2: 'Beau-' comes before 'Bec-' and 'Ben-'. Between 'Beautiful' (2) and 'Beauty' (3), 'Beautiful' comes first. Step 3: 'Because' (4) comes next, followed by 'Benchmark' (1). Order is 2, 3, 4, 1."
+  },
+  {
+    "p_id": "bssc_reason_117",
+    "qe": "<b>Ranking and Ordering:</b> In a row of girls, Seema is 10th from the left and Pinky is 12th from the right. If they interchange positions, Seema becomes 15th from the left. How many girls are there in the row?",
+    "qh": "<b>क्रम और रैंकिंग:</b> लड़कियों की एक कतार में, सीमा बाएं से 10वें और पिंकी दाएं से 12वें स्थान पर है। यदि वे आपस में स्थान बदलती हैं, तो सीमा बाएं से 15वें स्थान पर आ जाती है। कतार में कुल कितनी लड़कियां हैं?",
+    "o": ["26", "27", "25", "28"],
+    "a": 0,
+    "e": "Step 1: After changing positions, Seema occupies Pinky's original position which is 12th from the right. Step 2: Seema's position from the left is now 15th. Step 3: Total girls = $\\\\text{Left} + \\\\text{Right} - 1 = 15 + 12 - 1 = 26$."
+  },
+  {
+    "p_id": "bssc_reason_118",
+    "qe": "<b>Syllogism:</b> Statements: (I) All singers are actors. (II) All actors are dancers. Conclusions: (1) All singers are dancers. (2) Some dancers are singers.",
+    "qh": "<b>न्याय निगमन (सिलोगिज़्म):</b> कथन: (I) सभी गायक अभिनेता हैं। (II) सभी अभिनेता नर्तक हैं। निष्कर्ष: (1) सभी गायक नर्तक हैं। (2) कुछ नर्तक गायक हैं।",
+    "o": ["Both conclusions follow", "Only conclusion (1) follows", "Only conclusion (2) follows", "Neither follows"],
+    "a": 0,
+    "e": "Step 1: Singers circle is entirely inside Actors, and Actors circle is entirely inside Dancers. This means Singers are inside Dancers, so Conclusion 1 follows. Step 2: Since Singers are inside Dancers, the overlapping region implies Some dancers are singers. Conclusion 2 follows. Step 3: Both conclusions follow."
+  },
+  {
+    "p_id": "bssc_reason_119",
+    "qe": "<b>Seating Arrangement:</b> A, B, C, and D are sitting around a circular table facing inward. C is to the immediate right of A. B is opposite to C. Who is sitting to the immediate left of A?",
+    "qh": "<b>बैठक व्यवस्था:</b> A, B, C, और D एक वृत्ताकार मेज के चारों ओर केंद्र की ओर मुख करके बैठे हैं। C, A के ठीक दाईं ओर बैठा है। B, C के विपरीत है। A के ठीक बाईं ओर कौन बैठा है?",
+    "o": ["D", "B", "C", "A"],
+    "a": 0,
+    "e": "Step 1: Place A at the bottom. C is to the immediate right of A (counter-clockwise). Step 2: B is opposite C. Step 3: The remaining spot to the immediate left of A must be filled by D."
+  },
+  {
+    "p_id": "bssc_reason_120",
+    "qe": "<b>Non-Verbal (Counting Figures):</b> Find the total number of triangles in a simple square containing one internal diagonal path lines.",
+    "qh": "<b>गैर-मौखिक (आकृतियों की गणना):</b> एक आंतरिक विकर्ण रेखा वाले एक साधारण वर्ग में त्रिभुजों की कुल संख्या ज्ञात कीजिए।",
+    "o": ["2", "4", "3", "1"],
+    "a": 0,
+    "e": "Step 1: A single diagonal line splits a square cleanly into 2 distinct right-angled triangles. Step 2: No smaller or combined triangles are generated. Step 3: Count is exactly 2."
+  },
+  {
+    "p_id": "bssc_reason_121",
+    "qe": "<b>Non-Verbal (Analogy):</b> Complete the relationship sequence: Triangle : 3 sides :: Pentagon : ?.",
+    "qh": "<b>गैर-मौखिक (सादृश्यता):</b> संबंध अनुक्रम को पूरा करें: त्रिभुज : 3 भुजाएं :: पंचभुज : ?.",
+    "o": ["5 sides", "4 sides", "6 sides", "8 sides"],
+    "a": 0,
+    "e": "Step 1: Identify geometric properties. A triangle contains 3 sides. Step 2: Determine side count of a pentagon. Step 3: A pentagon contains 5 sides."
+  },
+  {
+    "p_id": "bssc_reason_122",
+    "qe": "<b>Non-Verbal (Paper Folding):</b> A square paper sheet is folded once horizontally in half, and a small triangle is punched near the center crease line. What pattern shows upon unfolding?",
+    "qh": "<b>गैर-मौखिक (कागज मोड़ना):</b> एक वर्गाकार कागज को क्षैतिज रूप से आधा मोड़ा जाता है, और केंद्र की क्रीज रेखा के पास एक छोटा त्रिभुज छिद्रित किया जाता है। खोलने पर कौन सा पैटर्न दिखाई देगा?",
+    "o": ["Two symmetrical triangles facing opposite directions", "A single triangle", "Four separate triangles", "No modification"],
+    "a": 0,
+    "e": "Step 1: Unfolding a single crease creates a symmetrical mirror reflection across the fold line. Step 2: The punched triangle reflects on the other half leaf. Step 3: This results in two symmetrical triangles facing opposite directions."
+  },
+  {
+    "p_id": "bssc_reason_123",
+    "qe": "<b>Calendar Test:</b> If yesterday was Tuesday, what day of the week will it be 4 days after tomorrow?",
+    "qh": "<b>कैलेंडर परीक्षण:</b> यदि बीता हुआ कल मंगलवार था, तो आने वाले कल के 4 दिन बाद सप्ताह का कौन सा दिन होगा?",
+    "o": ["Monday", "Sunday", "Saturday", "Tuesday"],
+    "a": 0,
+    "e": "Step 1: If yesterday was Tuesday, then Today is Wednesday, and Tomorrow is Thursday. Step 2: Count 4 days after Thursday: Friday, Saturday, Sunday, Monday. Step 3: The target day is Monday."
+  },
+  {
+    "p_id": "bssc_reason_124",
+    "qe": "<b>Logical Arrangement:</b> Arrange the given items in a logical meaningful sequence: 1. Root, 2. Stem, 3. Leaf, 4. Flower, 5. Fruit.",
+    "qh": "<b>तार्किक व्यवस्था:</b> दी गई वस्तुओं को एक तार्किक सार्थक अनुक्रम में व्यवस्थित करें: 1. जड़, 2. तना, 3. पत्ती, 4. फूल, 5. फल।",
+    "o": ["1, 2, 3, 4, 5", "2, 1, 3, 4, 5", "1, 3, 2, 4, 5", "5, 4, 3, 2, 1"],
+    "a": 0,
+    "e": "Step 1: Trace the biological development of a plant from ground up. Step 2: It starts at the Root(1), grows into the Stem(2), bears a Leaf(3), blooms into a Flower(4), and yields Fruit(5). Step 3: The logical sequence is 1, 2, 3, 4, 5."
+  },
+  {
+    "p_id": "bssc_reason_125",
+    "qe": "<b>Analogy:</b> Choose the missing term: Ink : Pen :: Blood : ?",
+    "qh": "<b>सादृश्यता:</b> लुप्त पद का चयन कीजिए: स्याही : पेन :: रक्त : ?",
+    "o": ["Veins", "Heart", "Doctor", "Red"],
+    "a": 0,
+    "e": "Step 1: Identify the relationship: Ink flows inside a pen to make it functional. Step 2: Similarly, blood flows inside conduits within the human body. Step 3: Conduits for blood circulation are veins/arteries. Hence, Veins is the correct match."
+  },
+  {
+    "p_id": "bssc_reason_126",
+    "qe": "<b>Coding-Decoding:</b> If 'B' is coded as '4' and 'D' is coded as '8', how will 'JACK' be coded in terms of value sum?",
+    "qh": "<b>कोडिंग-डिकोडिंग:</b> यदि 'B' को '4' और 'D' को '8' कोडित किया जाता है, तो मान योग के संदर्भ में 'JACK' को कैसे कोडित किया जाएगा?",
+    "o": ["48", "24", "36", "50"],
+    "a": 0,
+    "e": "Step 1: Note that alphabet positional values are doubled: B(2*2=4), D(4*2=8). Step 2: Double the values for letters in 'JACK': J(10*2=20), A(1*2=2), C(3*2=6), K(11*2=22). Step 3: Sum the doubled values: $20 + 2 + 6 + 22 = 48$."
+  },
+  {
+    "p_id": "bssc_reason_127",
+    "qe": "<b>Classification:</b> Find the odd numeric group from the following options: (2, 4), (3, 9), (4, 16), (5, 20).",
+    "qh": "<b>वर्गीकरण:</b> निम्नलिखित विकल्पों में से विषम संख्यात्मक समूह ज्ञात कीजिए: (2, 4), (3, 9), (4, 16), (5, 20)।",
+    "o": ["(5, 20)", "(2, 4)", "(3, 9)", "(4, 16)"],
+    "a": 0,
+    "e": "Step 1: Check the operational link: $Col_2 = (Col_1)^2$. Step 2: $2^2=4$, $3^2=9$, $4^2=16$ match the pattern. Step 3: For the last group, $5^2 = 25 \\\\neq 20$. Therefore, (5, 20) is the odd group."
+  },
+  {
+    "p_id": "bssc_reason_128",
+    "qe": "<b>Number Series:</b> What number should replace the question mark: 2, 3, 5, 8, 12, ?",
+    "qh": "<b>संख्या शृंखला:</b> प्रश्नवाचक चिह्न के स्थान पर कौन सी संख्या आनी चाहिए: 2, 3, 5, 8, 12, ?",
+    "o": ["17", "16", "15", "18"],
+    "a": 0,
+    "e": "Step 1: Look at the increasing differences: $2(+1)->3(+2)->5(+3)->8(+4)->12$. Step 2: The steps follow natural numbers +1, +2, +3, +4. The next shift must be +5. Step 3: $12 + 5 = 17$."
+  },
+  {
+    "p_id": "bssc_reason_129",
+    "qe": "<b>Letter Series:</b> Find the missing alphabet group: AB, BC, CD, DE, ?",
+    "qh": "<b>अक्षर शृंखला:</b> लुप्त अक्षर समूह ज्ञात कीजिए: AB, BC, CD, DE, ?",
+    "o": ["EF", "FG", "EE", "EG"],
+    "a": 0,
+    "e": "Step 1: Notice the overlapping pattern: the second character of a group becomes the first character of the next group. Step 2: The sequence tracks consecutive letter pairs. Step 3: After DE, the next group is EF."
+  },
+  {
+    "p_id": "bssc_reason_130",
+    "qe": "<b>Blood Relations:</b> A is the father of B, but B is not his son. What is the relation of B to A?",
+    "qh": "<b>रक्त संबंध:</b> A, B का पिता है, लेकिन B उसका पुत्र नहीं है। B का A से क्या संबंध है?",
+    "o": ["Daughter", "Sister", "Brother", "Nephew"],
+    "a": 0,
+    "e": "Step 1: A is the father of B. B must be either his son or daughter. Step 2: Given that B is not his son. Step 3: Therefore, B must be his daughter."
+  },
+  {
+    "p_id": "bssc_reason_131",
+    "qe": "<b>Direction Sense Test:</b> A boy walks 5 km South, turns left and walks 5 km. Which direction is he facing now?",
+    "qh": "<b>दिशा परीक्षण:</b> एक लड़का 5 किमी दक्षिण की ओर चलता है, बाईं ओर मुड़ता है और 5 किमी चलता है। अब उसका मुख किस दिशा में है?",
+    "o": ["East", "West", "North", "South"],
+    "a": 0,
+    "e": "Step 1: Walks South. Turning left changes his heading to East. Step 2: He walks 5 km towards East. Step 3: He is currently facing East."
+  },
+  {
+    "p_id": "bssc_reason_132",
+    "qe": "<b>Venn Diagrams:</b> Choose the diagram that holds for the relationship: Vehicles, Cars, Motorcycles.",
+    "qh": "<b>वेन आरेख:</b> उस आरेख का चयन करें जो इस संबंध के लिए मान्य है: वाहन, कार, मोटरसाइकिल।",
+    "o": ["Two distinct circles inside a larger enclosing circle", "Three intersecting circles", "Three concentric circles", "Three separate isolated circles"],
+    "a": 0,
+    "e": "Step 1: Cars and Motorcycles are completely separate categories of transport with no overlap. Step 2: However, both are subsets belonging to the class of 'Vehicles'. Step 3: This creates two separate circles inside a larger outer bounding circle."
+  },
+  {
+    "p_id": "bssc_reason_133",
+    "qe": "<b>Mathematical Operations:</b> If operational layout shifts are defined such that '$+$' means '$-$', and '$-$' means '$+$', solve: $20 - 5 + 10$.",
+    "qh": "<b>गणितीय संक्रियाएँ:</b> यदि संक्रियात्मक लेआउट परिवर्तनों को इस प्रकार परिभाषित किया गया है कि '$+$' का अर्थ '$-$' है, और '$-$' का अर्थ '$+$' है, तो हल करें: $20 - 5 + 10$।",
+    "o": ["15", "25", "35", "10"],
+    "a": 0,
+    "e": "Step 1: Swap signs according to rules: $20 + 5 - 10$. Step 2: Perform addition: $25 - 10$. Step 3: Result is 15."
+  },
+  {
+    "p_id": "bssc_reason_134",
+    "qe": "<b>Missing Number Puzzle:</b> Fill in the blank space indicator value (?):\n| 2 | 4 |\n| 8 | ? |",
+    "qh": "<b>लुप्त संख्या पहेली:</b> खाली स्थान संकेतक मान (?) भरें:\n| 2 | 4 |\n| 8 | ? |",
+    "o": ["16", "12", "10", "14"],
+    "a": 0,
+    "e": "Step 1: Check the geometric sequence logic: $2 \\\\times 2 = 4$, $4 \\\\times 2 = 8$. Step 2: The sequence multiplies by 2 at each step. Step 3: $8 \\\\times 2 = 16$."
+  },
+  {
+    "p_id": "bssc_reason_135",
+    "qe": "<b>Alphabet Test:</b> Which letter is the 5th to the right of the 10th letter from the left end in the standard English alphabet?",
+    "qh": "<b>अक्षर परीक्षण:</b> मानक अंग्रेजी वर्णमाला में बाएं छोर से 10वें अक्षर के दाईं ओर 5वां अक्षर कौन सा है?",
+    "o": ["O", "N", "P", "M"],
+    "a": 0,
+    "e": "Step 1: Position from left = $\\\\text{Initial Left Position} + \\\\text{Shift to Right}$. Step 2: Position = $10 + 5 = 15$. Step 3: The 15th letter of the alphabet is O."
+  },
+  {
+    "p_id": "bssc_reason_136",
+    "qe": "<b>Ranking and Ordering:</b> In a class of 30 students, Rohan is ranked 10th from the top. What is his position rank measured from the bottom?",
+    "qh": "<b>क्रम और रैंकिंग:</b> 30 छात्रों की एक कक्षा में, रोहन का स्थान शीर्ष से 10वां है। नीचे से मापी गई उसकी स्थिति रैंक क्या है?",
+    "o": ["21st", "20th", "19th", "22nd"],
+    "a": 0,
+    "e": "Step 1: Use rank mapping formula: $\\\\text{Rank from bottom} = \\\\text{Total items} - \\\\text{Rank from top} + 1$. Step 2: Substitute values: $30 - 10 + 1$. Step 3: $20 + 1 = 21$st."
+  },
+  {
+    "p_id": "bssc_reason_137",
+    "qe": "<b>Syllogism:</b> Statements: (I) Some dogs are faithful. (II) All faithful animals are cats. Conclusions: (1) Some dogs are cats.",
+    "qh": "<b>न्याय निगमन (सिलोगिज़्म):</b> कथन: (I) कुछ कुत्ते वफादार हैं। (II) सभी वफादार जानवर बिल्लियाँ हैं। निष्कर्ष: (1) कुछ कुत्ते बिल्लियाँ हैं।",
+    "o": ["Conclusion (1) follows", "Conclusion (1) does not follow", "Data insufficient", "None of these"],
+    "a": 0,
+    "e": "Step 1: Dogs circle intersects with Faithful circle. Step 2: Since all faithful animals are entirely inside Cats circle, the intersecting part of dogs must also be inside Cats. Step 3: Hence, 'Some dogs are cats' definitely follows."
+  },
+  {
+    "p_id": "bssc_reason_138",
+    "qe": "<b>Seating Arrangement:</b> Four friends P, Q, R, and S are sitting on a bench facing North. P is next to Q. R is next to S. If S is sitting on the extreme left end, who is sitting next to S?",
+    "qh": "<b>बैठक व्यवस्था:</b> चार मित्र P, Q, R, और S उत्तर की ओर मुख करके एक बेंच पर बैठे हैं। P, Q के पास है। R, S के पास है। यदि S सुदूर बाएं छोर पर बैठा है, तो S के ठीक पास कौन बैठा है?",
+    "o": ["R", "P", "Q", "Data insufficient"],
+    "a": 0,
+    "e": "Step 1: S is at the extreme left end. Step 2: Given constraint states 'R is next to S'. Step 3: Therefore, R must be sitting immediately to the right of S."
+  },
+  {
+    "p_id": "bssc_reason_139",
+    "qe": "<b>Dice Puzzle:</b> In a standard dice cube, what number is always on the face opposite to the face showing 5?",
+    "qh": "<b>पासा पहेली:</b> एक मानक पासे में, संख्या 5 वाले फलक के विपरीत फलक पर हमेशा कौन सी संख्या होती है?",
+    "o": ["2", "1", "6", "3"],
+    "a": 0,
+    "e": "Step 1: In any standard dice configuration, the sum of values on opposite faces is always equal to 7. Step 2: Opposite of 5 = $7 - 5$. Step 3: The result is 2."
+  },
+  {
+    "p_id": "bssc_reason_140",
+    "qe": "<b>Non-Verbal (Embedded Figures):</b> What rule defines an embedded figure puzzle matching criteria?",
+    "qh": "<b>गैर-मौखिक (अन्तर्निहित आकृति):</b> अन्तर्निहित आकृति पहेली के मिलान मानदंडों को कौन सा नियम परिभाषित करता है?",
+    "o": ["The exact question shape must be hidden inside the option layout without distortion", "The shape must expand", "The line count must change", "The image turns inverted"],
+    "a": 0,
+    "e": "Step 1: Embedded figures require that the target sub-shape is completely contained within the complex framework layout. Step 2: No structural distortion, resizing, or altering dimensions is valid. Step 3: Option A states this spatial matching rule."
+  }
+]
