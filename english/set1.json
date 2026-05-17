@@ -3,23 +3,38 @@
     "p_id": "ob_eng_adv_01",
     "qe": "<b>Error Spotting:</b> Select the part that contains an error: <br/>'Scarcely had the (A) / function started (B) / than the power (C) / went out (D).'",
     "qh": "<b>त्रुटि पहचानें:</b> उस भाग का चयन करें जिसमें त्रुटि है: <br/>'Scarcely had the (A) / function started (B) / than the power (C) / went out (D).'",
-    "o": ["A", "B", "C", "D"],
-    "a": 2,
+    "o": [
+      "D",
+      "C",
+      "B",
+      "A"
+    ],
+    "a": 1,
     "e": "<b>Rule:</b> The correlative conjunction pair for 'Scarcely' and 'Hardly' is <b>'when'</b> or 'before', not 'than'. 'Than' is used with 'No sooner'."
   },
   {
     "p_id": "ob_eng_adv_02",
     "qe": "<b>Fill in the blank:</b> 'The situation in the flood-affected areas is ______ and requires immediate intervention from the authorities.'",
     "qh": "<b>रिक्त स्थान भरें:</b> 'The situation in the flood-affected areas is ______ and requires immediate intervention from the authorities.'",
-    "o": ["precarious", "placid", "complacent", "superficial"],
-    "a": 0,
+    "o": [
+      "complacent",
+      "precarious",
+      "placid",
+      "superficial"
+    ],
+    "a": 1,
     "e": "<b>Vocabulary:</b> <b>'Precarious'</b> means dangerously likely to fall or collapse; uncertain. 'Placid' means calm, which doesn't fit the context of a disaster."
   },
   {
     "p_id": "ob_eng_adv_03",
     "qe": "<b>Direct/Indirect:</b> He said, 'If I were a king, I would help all the poor people.'",
     "qh": "<b>अप्रत्यक्ष कथन:</b> He said, 'If I were a king, I would help all the poor people.'",
-    "o": ["He said that if he was a king he would help", "He expressed a wish that if he were a king he would help all the poor people", "He said that if he had been a king", "He told that he would help poor people"],
+    "o": [
+      "He told that he would help poor people",
+      "He expressed a wish that if he were a king he would help all the poor people",
+      "He said that if he had been a king",
+      "He said that if he was a king he would help"
+    ],
     "a": 1,
     "e": "<b>Rule:</b> In Subjunctive/Hypothetical sentences, 'were' remains <b>'were'</b> in indirect speech to preserve the imaginary sense."
   },
@@ -27,7 +42,12 @@
     "p_id": "ob_eng_adv_04",
     "qe": "<b>Active/Passive:</b> 'The committee is considering the proposal very carefully.'",
     "qh": "<b>वाच्य परिवर्तन:</b> 'The committee is considering the proposal very carefully.'",
-    "o": ["The proposal is being considered very carefully by the committee", "The proposal has been considered by the committee", "The proposal is considered carefully", "None"],
+    "o": [
+      "The proposal is being considered very carefully by the committee",
+      "The proposal is considered carefully",
+      "None",
+      "The proposal has been considered by the committee"
+    ],
     "a": 0,
     "e": "<b>Rule:</b> Present Continuous passive: <b>'is/am/are + being + V3'</b>."
   },
@@ -35,47 +55,77 @@
     "p_id": "ob_eng_adv_05",
     "qe": "<b>One Word Substitution:</b> 'A government run by a small group of people for their own interests.'",
     "qh": "<b>एक शब्द:</b> 'स्वयं के हितों के लिए लोगों के एक छोटे समूह द्वारा चलाई जाने वाली सरकार।'",
-    "o": ["Oligarchy", "Autocracy", "Aristocracy", "Monarchy"],
-    "a": 0,
+    "o": [
+      "Aristocracy",
+      "Autocracy",
+      "Oligarchy",
+      "Monarchy"
+    ],
+    "a": 2,
     "e": "<b>Vocabulary:</b> <b>Oligarchy</b> (अल्पतंत्र) is the term for government by a small group. Autocracy is by one person."
   },
   {
     "p_id": "ob_eng_adv_06",
     "qe": "<b>Sentence Improvement:</b> 'The students <u>have been studying</u> in this school since five years.'",
     "qh": "<b>वाक्य सुधार:</b> 'The students <u>have been studying</u> in this school since five years.'",
-    "o": ["have been studying for", "are studying since", "have studied for", "No improvement"],
-    "a": 0,
+    "o": [
+      "have studied for",
+      "have been studying for",
+      "are studying since",
+      "No improvement"
+    ],
+    "a": 1,
     "e": "<b>Rule:</b> Use <b>'for'</b> for a period/duration of time (five years). 'Since' is used for a point of time."
   },
   {
     "p_id": "ob_eng_adv_07",
     "qe": "<b>Synonym:</b> Select the most appropriate synonym of the word: <b>'RECALCITRANT'</b>",
     "qh": "<b>समानार्थी:</b> <b>'RECALCITRANT'</b> का सबसे उपयुक्त पर्यायवाची चुनें।",
-    "o": ["Compliant", "Obstinate", "Pliable", "Amiable"],
-    "a": 1,
+    "o": [
+      "Pliable",
+      "Amiable",
+      "Obstinate",
+      "Compliant"
+    ],
+    "a": 2,
     "e": "<b>Meaning:</b> Recalcitrant means having an uncooperative attitude toward authority. <b>Obstinate</b> (जिद्दी/हठी) is its synonym."
   },
   {
     "p_id": "ob_eng_adv_08",
     "qe": "<b>Antonym:</b> Select the most appropriate antonym of the word: <b>'LOQUACIOUS'</b>",
     "qh": "<b>विलोम:</b> <b>'LOQUACIOUS'</b> का सबसे उपयुक्त विपरीतार्थक चुनें।",
-    "o": ["Talkative", "Garrulous", "Reticent", "Verbose"],
-    "a": 2,
+    "o": [
+      "Talkative",
+      "Reticent",
+      "Verbose",
+      "Garrulous"
+    ],
+    "a": 1,
     "e": "<b>Meaning:</b> Loquacious means talkative. <b>Reticent</b> (अल्पभाषी) means not revealing one's thoughts or feelings readily."
   },
   {
     "p_id": "ob_eng_adv_09",
     "qe": "<b>Idiom:</b> 'To keep one's head above water.'",
     "qh": "<b>मुहावरे:</b> 'To keep one's head above water.'",
-    "o": ["To stay out of debt", "To swim for a long time", "To be proud", "To ignore others"],
-    "a": 0,
+    "o": [
+      "To swim for a long time",
+      "To stay out of debt",
+      "To ignore others",
+      "To be proud"
+    ],
+    "a": 1,
     "e": "<b>Meaning:</b> To manage to <b>survive financially</b> or avoid failure during a difficult time."
   },
   {
     "p_id": "ob_eng_adv_10",
     "qe": "<b>Error Spotting:</b> 'Not only the (A) / principal but (B) / the teachers (C) / was present (D).'",
     "qh": "<b>त्रुटि पहचानें:</b> 'Not only the (A) / principal but (B) / the teachers (C) / was present (D).'",
-    "o": ["A", "B", "C", "D"],
+    "o": [
+      "C",
+      "A",
+      "B",
+      "D"
+    ],
     "a": 3,
     "e": "<b>Rule:</b> When subjects are joined by 'Not only...but also', the verb agrees with the <b>nearest subject</b>. 'The teachers' is plural, so it should be 'were'."
   },
@@ -83,103 +133,168 @@
     "p_id": "",
     "qe": "<b>Active/Passive:</b> 'They are playing a match.'",
     "qh": "<b>वाच्य परिवर्तन:</b> 'They are playing a match.'",
-    "o": ["A match is being played by them", "A match was being played", "A match is played", "None"],
-    "a": 0,
+    "o": [
+      "A match was being played",
+      "A match is being played by them",
+      "None",
+      "A match is played"
+    ],
+    "a": 1,
     "e": "<b>Rule:</b> Present continuous adds <b>'being'</b> in passive."
   },
   {
     "p_id": "",
     "qe": "<b>Vocabulary:</b> Select the word with the correct spelling.",
     "qh": "<b>वर्तनी:</b> सही वर्तनी वाला शब्द चुनें।",
-    "o": ["Questionnaire", "Questionaire", "Questionairee", "Questionairy"],
-    "a": 0,
+    "o": [
+      "Questionairee",
+      "Questionaire",
+      "Questionairy",
+      "Questionnaire"
+    ],
+    "a": 3,
     "e": "<b>Spelling:</b> <b>Questionnaire</b> has a double 'n'."
   },
   {
     "p_id": "",
     "qe": "<b>Fill in the blank:</b> 'He is ______ to the environment of this place.'",
     "qh": "<b>रिक्त स्थान भरें:</b> 'He is ______ to the environment of this place.'",
-    "o": ["accustomed", "used", "addicted", "familiar"],
-    "a": 0,
+    "o": [
+      "addicted",
+      "used",
+      "familiar",
+      "accustomed"
+    ],
+    "a": 3,
     "e": "<b>Grammar:</b> <b>'Accustomed to'</b> is a standard phrase meaning used to or in the habit of."
   },
   {
     "p_id": "",
     "qe": "<b>Idiom:</b> 'To burn the candle at both ends.'",
     "qh": "<b>मुहावरे:</b> 'To burn the candle at both ends.'",
-    "o": ["To work very hard", "To waste money", "To be very rich", "To be foolish"],
-    "a": 0,
+    "o": [
+      "To waste money",
+      "To be foolish",
+      "To work very hard",
+      "To be very rich"
+    ],
+    "a": 2,
     "e": "<b>Meaning:</b> To exhaust oneself by <b>working too hard</b> or doing too many things."
   },
   {
     "p_id": "",
     "qe": "<b>Error Spotting:</b> 'The furniture (A) / in this room (B) / are very (C) / expensive (D).'",
     "qh": "<b>त्रुटि पहचानें:</b> 'The furniture (A) / in this room (B) / are very (C) / expensive (D).'",
-    "o": ["A", "B", "C", "D"],
-    "a": 2,
+    "o": [
+      "C",
+      "B",
+      "A",
+      "D"
+    ],
+    "a": 0,
     "e": "<b>Rule:</b> 'Furniture' is an <b>uncountable noun</b> and always takes a singular verb ('is')."
   },
   {
     "p_id": "",
     "qe": "<b>Antonym:</b> Antonym of <b>'FRUGAL'</b>.",
     "qh": "<b>विलोम:</b> <b>'FRUGAL'</b> का विलोम।",
-    "o": ["Extravagant", "Miserly", "Cheap", "Economical"],
-    "a": 0,
+    "o": [
+      "Economical",
+      "Miserly",
+      "Extravagant",
+      "Cheap"
+    ],
+    "a": 2,
     "e": "<b>Meaning:</b> Frugal means economical. <b>Extravagant</b> (फिजूलखर्च) is the opposite."
   },
   {
     "p_id": "",
     "qe": "<b>One Word:</b> 'A person who is recoverning from an illness.'",
     "qh": "<b>एक शब्द:</b> 'वह जो बीमारी से उबर रहा हो।'",
-    "o": ["Convalescent", "Invalid", "Patient", "Senile"],
-    "a": 0,
+    "o": [
+      "Senile",
+      "Convalescent",
+      "Patient",
+      "Invalid"
+    ],
+    "a": 1,
     "e": "<b>Vocabulary:</b> <b>Convalescent</b> is the correct term for recovery."
   },
   {
     "p_id": "",
     "qe": "<b>Sentence Improvement:</b> 'I <u>prefer</u> tea than coffee.'",
     "qh": "<b>वाक्य सुधार:</b> 'I <u>prefer</u> tea than coffee.'",
-    "o": ["prefer tea to", "prefer tea over", "like tea more than", "No improvement"],
-    "a": 0,
+    "o": [
+      "like tea more than",
+      "No improvement",
+      "prefer tea over",
+      "prefer tea to"
+    ],
+    "a": 3,
     "e": "<b>Rule:</b> 'Prefer' takes the preposition <b>'to'</b>."
   },
   {
     "p_id": "",
     "qe": "<b>Direct/Indirect:</b> The teacher said, 'The sun rises in the East.'",
     "qh": "<b>अप्रत्यक्ष कथन:</b> The teacher said, 'The sun rises in the East.'",
-    "o": ["The teacher said that the sun rises in the East", "The teacher said that the sun rose in the East", "The teacher told the sun rises", "None"],
-    "a": 0,
+    "o": [
+      "None",
+      "The teacher said that the sun rose in the East",
+      "The teacher told the sun rises",
+      "The teacher said that the sun rises in the East"
+    ],
+    "a": 3,
     "e": "<b>Rule:</b> No change in tense for <b>Universal Truths</b>."
   },
   {
     "p_id": "",
     "qe": "<b>Fill in the blank:</b> 'Neither of the students ______ present.'",
     "qh": "<b>रिक्त स्थान भरें:</b> 'Neither of the students ______ present.'",
-    "o": ["was", "were", "are", "have"],
-    "a": 0,
+    "o": [
+      "are",
+      "have",
+      "were",
+      "was"
+    ],
+    "a": 3,
     "e": "<b>Rule:</b> 'Neither of' always takes a <b>singular verb</b>."
   },
   {
     "p_id": "",
     "qe": "<b>Active/Passive:</b> 'Who wrote this book?'",
     "qh": "<b>वाच्य परिवर्तन:</b> 'Who wrote this book?'",
-    "o": ["By whom was this book written?", "Who was this book written?", "By whom this book was written?", "None"],
-    "a": 0,
+    "o": [
+      "None",
+      "Who was this book written?",
+      "By whom was this book written?",
+      "By whom this book was written?"
+    ],
+    "a": 2,
     "e": "<b>Rule:</b> 'Who' changes to <b>'By whom'</b>."
   },
   {
     "p_id": "",
     "qe": "<b>Synonym:</b> Synonym of <b>'CANDID'</b>.",
     "qh": "<b>समानार्थी:</b> <b>'CANDID'</b> का पर्यायवाची।",
-    "o": ["Frank", "Deceptive", "Sweet", "Greedy"],
-    "a": 0,
+    "o": [
+      "Deceptive",
+      "Frank",
+      "Sweet",
+      "Greedy"
+    ],
+    "a": 1,
     "e": "<b>Meaning:</b> Candid means honest and straightforward or <b>Frank</b>."
   },
   {
     "p_id": "",
     "qe": "<b>Error Spotting:</b> 'If I was you (A) / I would not (B) / accept the (C) / offer (D).'",
     "qh": "<b>त्रुटि पहचानें:</b> 'If I was you (A) / I would not (B) / accept the (C) / offer (D).'",
-    "o": ["A", "B", "C", "D"],
+    "o": [
+      "A",
+      "D",
+      "C",
+      "B"
+    ],
     "a": 0,
     "e": "<b>Rule:</b> In hypothetical conditions, use <b>'were'</b> with all subjects."
   },
@@ -187,96 +302,156 @@
     "p_id": "",
     "qe": "<b>Idiom:</b> 'To bite the dust.'",
     "qh": "<b>मुहावरे:</b> 'To bite the dust.'",
-    "o": ["To be defeated", "To eat dirt", "To be successful", "To work hard"],
-    "a": 0,
+    "o": [
+      "To work hard",
+      "To be successful",
+      "To be defeated",
+      "To eat dirt"
+    ],
+    "a": 2,
     "e": "<b>Meaning:</b> To fail or <b>be defeated</b>."
   },
   {
     "p_id": "",
     "qe": "<b>Vocabulary:</b> Correct spelling of 'Maintenance'.",
     "qh": "<b>वर्तनी:</b> सही शब्द चुनें।",
-    "o": ["Maintenance", "Maintainance", "Maintanence", "Maintenence"],
-    "a": 0,
+    "o": [
+      "Maintanence",
+      "Maintenence",
+      "Maintainance",
+      "Maintenance"
+    ],
+    "a": 3,
     "e": "<b>Spelling:</b> <b>Maintenance</b> is correct (often misspelled as Maintainance)."
   },
   {
     "p_id": "",
     "qe": "<b>Antonym:</b> Antonym of <b>'ARROGANT'</b>.",
     "qh": "<b>विलोम:</b> <b>'ARROGANT'</b> का विलोम।",
-    "o": ["Humble", "Proud", "Haughty", "Bold"],
-    "a": 0,
+    "o": [
+      "Haughty",
+      "Humble",
+      "Proud",
+      "Bold"
+    ],
+    "a": 1,
     "e": "<b>Meaning:</b> Arrogant means proud. <b>Humble</b> (विनम्र) is the opposite."
   },
   {
     "p_id": "",
     "qe": "<b>Fill in the blank:</b> 'He is senior ______ me.'",
     "qh": "<b>रिक्त स्थान भरें:</b> 'He is senior ______ me.'",
-    "o": ["to", "than", "from", "for"],
-    "a": 0,
+    "o": [
+      "than",
+      "from",
+      "for",
+      "to"
+    ],
+    "a": 3,
     "e": "<b>Rule:</b> Adjectives like Senior, Junior, Superior take <b>'to'</b>."
   },
   {
     "p_id": "",
     "qe": "<b>One Word Substitution:</b> 'The study of ancient societies.'",
     "qh": "<b>एक शब्द:</b> 'प्राचीन समाजों का अध्ययन।'",
-    "o": ["Archaeology", "Anthropology", "Etymology", "History"],
-    "a": 0,
+    "o": [
+      "History",
+      "Archaeology",
+      "Etymology",
+      "Anthropology"
+    ],
+    "a": 1,
     "e": "<b>Vocabulary:</b> <b>Archaeology</b> is the study of human history through excavation."
   },
   {
     "p_id": "",
     "qe": "<b>Sentence Improvement:</b> 'No sooner had I reached the station <u>when</u> the train left.'",
     "qh": "<b>वाक्य सुधार:</b> 'No sooner had I reached the station <u>when</u> the train left.'",
-    "o": ["than", "then", "that", "No improvement"],
-    "a": 0,
+    "o": [
+      "that",
+      "No improvement",
+      "then",
+      "than"
+    ],
+    "a": 3,
     "e": "<b>Rule:</b> 'No sooner' is always paired with <b>'than'</b>."
   },
   {
     "p_id": "",
     "qe": "<b>Error Spotting:</b> 'The news (A) / of his death (B) / were (C) / shocking (D).'",
     "qh": "<b>त्रुटि पहचानें:</b> 'The news (A) / of his death (B) / were (C) / shocking (D).'",
-    "o": ["A", "B", "C", "D"],
-    "a": 2,
+    "o": [
+      "C",
+      "D",
+      "B",
+      "A"
+    ],
+    "a": 0,
     "e": "<b>Rule:</b> 'News' is <b>singular</b> and takes a singular verb ('was')."
   },
   {
     "p_id": "",
     "qe": "<b>Direct/Indirect:</b> He said to me, 'What are you doing?'",
     "qh": "<b>अप्रत्यक्ष कथन:</b> He said to me, 'What are you doing?'",
-    "o": ["He asked me what I was doing", "He asked me what was I doing", "He told me what am I doing", "None"],
-    "a": 0,
+    "o": [
+      "He asked me what was I doing",
+      "He told me what am I doing",
+      "None",
+      "He asked me what I was doing"
+    ],
+    "a": 3,
     "e": "<b>Rule:</b> Assertive word order (Subject + Verb) in indirect questions."
   },
   {
     "p_id": "",
     "qe": "<b>Fill in the blank:</b> 'He is ______ M.A. in History.'",
     "qh": "<b>रिक्त स्थान भरें:</b> 'He is ______ M.A. in History.'",
-    "o": ["an", "a", "the", "No article"],
-    "a": 0,
+    "o": [
+      "a",
+      "an",
+      "the",
+      "No article"
+    ],
+    "a": 1,
     "e": "<b>Article:</b> Use <b>'an'</b> before 'M.A.' because it starts with a vowel sound ('Em')."
   },
   {
     "p_id": "",
     "qe": "<b>Idiom:</b> 'At the eleventh hour.'",
     "qh": "<b>मुहावरे:</b> 'At the eleventh hour.'",
-    "o": ["At the last moment", "Early morning", "Late at night", "At 11 o'clock"],
-    "a": 0,
+    "o": [
+      "Early morning",
+      "At the last moment",
+      "At 11 o'clock",
+      "Late at night"
+    ],
+    "a": 1,
     "e": "<b>Meaning:</b> Doing something at the <b>very last possible moment</b>."
   },
   {
     "p_id": "",
     "qe": "<b>Active/Passive:</b> 'Open the door.'",
     "qh": "<b>वाच्य परिवर्तन:</b> 'Open the door.'",
-    "o": ["Let the door be opened", "The door was opened", "You are ordered open", "None"],
-    "a": 0,
+    "o": [
+      "You are ordered open",
+      "The door was opened",
+      "Let the door be opened",
+      "None"
+    ],
+    "a": 2,
     "e": "<b>Rule:</b> Imperative passive: <b>'Let + object + be + V3'</b>."
   },
   {
     "p_id": "",
     "qe": "<b>Synonym:</b> Synonym of <b>'ABUNDANT'</b>.",
     "qh": "<b>समानार्थी:</b> <b>'ABUNDANT'</b> का पर्यायवाची।",
-    "o": ["Plentiful", "Scarce", "Few", "Tiny"],
-    "a": 0,
+    "o": [
+      "Scarce",
+      "Plentiful",
+      "Tiny",
+      "Few"
+    ],
+    "a": 1,
     "e": "<b>Meaning:</b> Abundant means existing in large quantities or <b>Plentiful</b>."
   }
 ]
