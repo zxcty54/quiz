@@ -1,0 +1,282 @@
+[
+  {
+    "p_id": "bssc_cgl_adv_quant_36",
+    "qe": "<b>Combinations (Committee Formation):</b> A committee of 5 members is to be formed from a group of 6 gentlemen and 4 ladies. In how many distinct ways can the committee be formed such that it contains at least 2 ladies?",
+    "qh": "<b>संचय (समिति गठन):</b> 6 पुरुषों और 4 महिलाओं के एक समूह में से 5 सदस्यों की एक समिति बनाई जानी है। यह समिति कुल कितने अलग-अलग तरीकों से बनाई जा सकती है ताकि इसमें कम से कम 2 महिलाएं अवश्य शामिल हों?",
+    "o": ["186", "200", "120", "246"],
+    "a": 0,
+    "e": "Step 1: Understand the condition 'at least 2 ladies'. The committee can have exactly 2, 3, or 4 ladies. Step 2: Case 1: 2 ladies and 3 gentlemen = 4C2 * 6C3 = 6 * 20 = 120 ways. Step 3: Case 2: 3 ladies and 2 gentlemen = 4C3 * 6C2 = 4 * 15 = 60 ways. Step 4: Case 3: 4 ladies and 1 gentleman = 4C4 * 6C1 = 1 * 6 = 6 ways. Step 5: Total ways = 120 + 60 + 6 = 186."
+  },
+  {
+    "p_id": "bssc_cgl_adv_quant_37",
+    "qe": "<b>Probability (Dependent Events):</b> Two cards are drawn sequentially one after another without replacement from a standard well-shuffled pack of 52 playing cards. What is the exact probability that the first card drawn is a King and the second card drawn is a Queen?",
+    "qh": "<b>प्रायिकता:</b> 52 ताश के पत्तों की एक मानक गड्डी में से बिना प्रतिस्थापन (without replacement) के एक के बाद एक करके दो पत्ते निकाले जाते हैं। इसकी क्या सटीक प्रायिकता होगी कि निकाला गया पहला पत्ता एक बादशाह (King) हो और निकाला गया दूसरा पत्ता एक बेगम (Queen) हो?",
+    "o": ["4/663", "8/663", "2/663", "1/169"],
+    "a": 0,
+    "e": "Step 1: Probability that the first card drawn is a King = 4 / 52 = 1 / 13. Step 2: Since cards are drawn without replacement, 51 cards remain, containing 4 Queens. Step 3: Probability that the second card drawn is a Queen given the first was a King = 4 / 51. Step 4: Total combined probability = (4 / 52) * (4 / 51) = (1 / 13) * (4 / 51) = 4 / 663."
+  },
+  {
+    "p_id": "bssc_cgl_adv_quant_38",
+    "qe": "<b>Quadratic Equations (Nature of Roots):</b> Find the values of k for which the quadratic equation $(k+1)x^2 - 2(k-1)x + 1 = 0$ has real and completely equal roots.",
+    "qh": "<b>द्विघात समीकरण (मूलों की प्रकृति):</b> k के वे मान ज्ञात कीजिए जिनके लिए द्विघात समीकरण $(k+1)x^2 - 2(k-1)x + 1 = 0$ के मूल वास्तविक और पूरी तरह से समान (Equal Roots) हों?",
+    "o": ["k = 0 or k = 3", "k = 1 or k = 2", "k = 0 or k = 4", "k = 2 or k = 5"],
+    "a": 0,
+    "e": "Step 1: For a quadratic equation Ax^2 + Bx + C = 0 to have equal roots, the discriminant D must be zero ($B^2 - 4AC = 0$). Step 2: Here, A = (k+1), B = -2(k-1), and C = 1. Step 3: Substitute into formula: $[-2(k-1)]^2 - 4(k+1)(1) = 0 \\Rightarrow 4(k^2 - 2k + 1) - 4k - 4 = 0$. Step 4: Simplify: $4k^2 - 8k + 4 - 4k - 4 = 0 \\Rightarrow 4k^2 - 12k = 0 \\Rightarrow 4k(k - 3) = 0$. Step 5: Therefore, k = 0 or k = 3."
+  },
+  {
+    "p_id": "bssc_cgl_adv_quant_39",
+    "qe": "<b>Number System (Fermat's Theorem):</b> What will be the exact remainder when the mathematical power expression $2^{100}$ is divided by the prime number 101?",
+    "qh": "<b>संख्या पद्धति (शेषफल प्रमेय):</b> जब गणितीय घात व्यंजक $2^{100}$ को अभाज्य संख्या 101 से विभाजित किया जाता है, तो प्राप्त होने वाला सटीक शेषफल क्या होगा?",
+    "o": ["1", "2", "100", "50"],
+    "a": 0,
+    "e": "Step 1: According to Fermat's Little Theorem, if p is a prime number and 'a' is an integer not divisible by p, then $a^{p-1} \\equiv 1 \\pmod p$. Step 2: Here, base a = 2 and prime p = 101. Step 3: Therefore, $2^{101-1} = 2^{100} \\equiv 1 \\pmod{101}$. Step 4: Thus, the remainder left is exactly 1."
+  },
+  {
+    "p_id": "bssc_cgl_adv_quant_40",
+    "qe": "<b>Time & Work (Assistance Pattern):</b> A, B, and C can independently complete a piece of work in 12, 15, and 20 days respectively. A works continuously on all days, while B and C assist him on alternate days sequentially, starting with B assisting on the first day and C assisting on the second day. In how many days will the entire work be completed?",
+    "qh": "<b>समय और कार्य:</b> A, B, और C एक कार्य को स्वतंत्र रूप से क्रमशः 12, 15 और 20 दिनों में पूरा कर सकते हैं। A सभी दिनों में लगातार कार्य करता है, जबकि B और C वैकल्पिक दिनों में उसकी सहायता करते हैं, जिसकी शुरुआत पहले दिन B द्वारा सहायता करने से और दूसरे दिन C द्वारा सहायता करने से होती है। पूरा कार्य कुल कितने दिनों में समाप्त होगा?",
+    "o": ["7 days", "8 days", "6.5 days", "9 days"],
+    "a": 0,
+    "e": "Step 1: Total work (LCM of 12, 15, 20) = 60 units. Efficiency of A = 60/12 = 5, B = 60/15 = 4, C = 60/20 = 3 units/day. Step 2: Day 1 (A + B) work = 5 + 4 = 9 units. Day 3: Day 2 (A + C) work = 5 + 3 = 8 units. Step 3: In a 2-day alternating block, total work completed = 9 + 8 = 17 units. Step 4: In 3 full blocks (6 days), work completed = 17 * 3 = 51 units. Remaining work = 60 - 51 = 9 units. Step 5: On Day 7, it is (A + B)'s turn. They can complete exactly 9 units in one full day. Total time taken = 6 + 1 = 7 days."
+  },
+  {
+    "p_id": "bssc_cgl_adv_quant_41",
+    "qe": "<b>Pipes & Cistern (Alternating Work):</b> An inlet pipe can fill a reservoir in 10 hours, and an outlet drainage pipe can empty it completely in 15 hours. Both pipes are opened alternately for exactly one hour each, starting with the inlet pipe first. How many total hours will it take to fill the empty reservoir completely?",
+    "qh": "<b>पाइप और टंकी:</b> एक इनलेट पाइप एक जलाशय को 10 घंटे में भर सकता है, और एक आउटलेट पाइप इसे 15 घंटे में पूरी तरह से खाली कर सकता है। दोनों पाइपों को वैकल्पिक रूप से एक-एक घंटे के लिए खोला जाता है, जिसकी शुरुआत पहले इनलेट पाइप से होती है। खाली जलाशय को पूरी तरह से भरने में कुल कितने घंटे लगेंगे?",
+    "o": ["55 hours", "57 hours", "60 hours", "58 hours"],
+    "a": 0,
+    "e": "Step 1: Total capacity (LCM of 10 and 15) = 30 units. Efficiency of inlet = +3 units/hour, outlet = -2 units/hour. Step 2: In a 2-hour cycle, net filling = +3 - 2 = 1 unit. Step 3: Since the inlet can fill 3 units in the last hour, subtract 3 from total to find critical cycle threshold = 30 - 3 = 27 units. Step 4: To fill 27 units, it takes 27 cycles = 27 * 2 = 54 hours. Step 5: At 54 hours, 27 units are full. In the 55th hour, the inlet pipe opens and adds the remaining 3 units, filling the tank completely. Total hours = 55."
+  },
+  {
+    "p_id": "bssc_cgl_adv_quant_42",
+    "qe": "<b>Mixture & Alligation (Variable Replacement):</b> A container contains 60 liters of pure milk. 6 liters of milk is extracted and replaced completely with an equal volume of water. Then, 10 liters of the newly formed mixture is extracted and replaced with an equal volume of water. Find the remaining final volume of pure milk left in the container.",
+    "qh": "<b>मिश्रण (भिन्न प्रतिस्थापन):</b> एक कंटेनर में 60 लीटर शुद्ध दूध है। इसमें से 6 लीटर दूध निकाला जाता है और उसके स्थान पर उतनी ही मात्रा में पानी मिला दिया जाता है। फिर, नए बने मिश्रण में से 10 लीटर निकाला जाता है और उसके स्थान पर उतनी ही मात्रा में पानी मिला दिया जाता है। कंटेनर में बचे हुए शुद्ध दूध की अंतिम मात्रा ज्ञात कीजिए।",
+    "o": ["45 liters", "48 liters", "50 liters", "44 liters"],
+    "a": 0,
+    "e": "Step 1: Formula for sequential variable replacement: Remaining Liquid = Initial Volume * (1 - x1/V) * (1 - x2/V). Step 2: Here, Initial Volume = 60, x1 = 6, and x2 = 10. Step 3: Remaining Milk = 60 * (1 - 6/60) * (1 - 10/60) = 60 * (54/60) * (50/60). Step 4: Simplify calculation = 60 * (9/10) * (5/6) = 45 liters."
+  },
+  {
+    "p_id": "bssc_cgl_adv_quant_43",
+    "qe": "<b>Compound Interest (Variable Rates):</b> A man deposits Rs. 10000 in a fixed savings bank scheme. The compound interest rate for the first year is 4% per annum, for the second year is 5% per annum, and for the third year is 6% per annum. Find the total compound interest earned at the end of 3 years.",
+    "qh": "<b>चक्रवृद्धि ब्याज (परिवर्तनीय दरें):</b> एक व्यक्ति एक निश्चित बचत बैंक योजना में ₹10,000 जमा करता है। पहले वर्ष के लिए चक्रवृद्धि ब्याज की दर 4% वार्षिक, दूसरे वर्ष के लिए 5% वार्षिक और तीसरे वर्ष के लिए 6% वार्षिक है। 3 वर्ष के अंत में अर्जित कुल चक्रवृद्धि ब्याज ज्ञात कीजिए।",
+    "o": ["Rs. 1575.20", "Rs. 1480.00", "Rs. 1620.50", "Rs. 1500.00"],
+    "a": 0,
+    "e": "Step 1: Total accumulated Amount = Principal * (1 + R1/100) * (1 + R2/100) * (1 + R3/100). Step 2: Amount = 10000 * (1.04) * (1.05) * (1.06). Step 3: Step-by-step product: 10000 * 1.04 = 10400. 10400 * 1.05 = 10920. 10920 * 1.06 = Rs. 11575.20. Step 4: Total Compound Interest = Amount - Principal = 11575.20 - 10000 = Rs. 1575.20."
+  },
+  {
+    "p_id": "bssc_cgl_adv_quant_44",
+    "qe": "<b>Profit & Loss (Advanced Splits):</b> A shopkeeper marks his goods up by 50% above the cost price. He sells 40% of the goods at the marked price, 40% of the remaining goods at a discount of 20%, and the rest of the items at a discount of 40%. Find his overall net profit percentage in the entire sale.",
+    "qh": "<b>लाभ और हानि (जटिल विभाजन):</b> एक दुकानदार अपने माल पर क्रय मूल्य से 50% अधिक मूल्य अंकित करता है। वह 40% माल अंकित मूल्य पर बेचता है, शेष माल का 40% भाग 20% की छूट पर बेचता है, और शेष बचे हुए माल को 40% की छूट पर बेचता है। पूरी बिक्री में उसका कुल शुद्ध लाभ प्रतिशत ज्ञात कीजिए।",
+    "o": ["24.4%", "22.5%", "26.8%", "20.0%"],
+    "a": 0,
+    "e": "Step 1: Let total cost price (CP) per unit be Rs. 100 and total items be 100. Total Cost = Rs. 10000. Marked Price (MP) per unit = Rs. 150. Step 2: Case 1: 40 units sold at MP = 40 * 150 = Rs. 6000. Remaining items = 60. Step 3: Case 2: 40% of 60 = 24 units sold at 20% discount on MP (150 * 0.8 = 120) = 24 * 120 = Rs. 2880. Step 4: Case 3: Rest = 60 - 24 = 36 units sold at 40% discount on MP (150 * 0.6 = 90) = 36 * 90 = Rs. 3240. Step 5: Total Revenue = 6000 + 2880 + 3240 = Rs. 12120. Net Profit Percentage = ((12120 - 10000) / 10000) * 100 = 24.4%."
+  },
+  {
+    "p_id": "bssc_cgl_adv_quant_45",
+    "qe": "<b>Partnership (Active Salary):</b> A and B started a business with capitals in the ratio 5 : 6. After 4 months, A withdrew 1/5 of his capital, while B added 33.33% more to his initial capital investment. If A is an active partner and receives Rs. 500 per month as a managing salary from the total profit, and the remaining profit is split by investment ratio, find B's share out of a total annual profit of Rs. 41000.",
+    "qh": "<b>साझेदारी (सक्रिय वेतन):</b> A और B ने 5 : 6 के अनुपात में पूंजी के साथ एक व्यवसाय शुरू किया। 4 महीने बाद, A ने अपनी पूंजी का 1/5 भाग वापस ले लिया, जबकि B ने अपनी प्रारंभिक पूंजी में 33.33% अधिक पूंजी जोड़ दी। यदि A एक सक्रिय साझेदार है और कुल लाभ में से प्रबंधकीय वेतन के रूप में ₹500 प्रति माह प्राप्त करता है, और शेष लाभ को निवेश अनुपात द्वारा विभाजित किया जाता है, तो ₹41,000 के कुल वार्षिक लाभ में से B का हिस्सा ज्ञात कीजिए।",
+    "o": ["Rs. 22000", "Rs. 20000", "Rs. 18000", "Rs. 24000"],
+    "a": 0,
+    "e": "Step 1: Total profit = Rs. 41000. A's annual managing salary = 500 * 12 = Rs. 6000. Remaining profit to distribute = 41000 - 6000 = Rs. 35000. Step 2: Let initial investments be 5x and 6x. A's equivalent monthly capital = (5x * 4) + (4x * 8) = 52x. Step 3: B's investment increases by 33.33% (1/3 of 6x = 2x) to become 8x. B's equivalent monthly capital = (6x * 4) + (8x * 8) = 88x. Step 4: Investment profit ratio A : B = 52 : 88 = 13 : 22. Sum of parts = 13 + 22 = 35 parts. Step 5: B's share = (22 / 35) * 35000 = Rs. 22000."
+  },
+  {
+    "p_id": "bssc_cgl_adv_quant_46",
+    "qe": "<b>Average Speed (Multiple Splits):</b> A transport delivery vehicle covers four consecutive equal distances of 10 km each at average speeds of 10 km/h, 20 km/h, 30 km/h, and 60 km/h respectively. Find the exact average speed of the vehicle for the entire 40 km journey.",
+    "qh": "<b>औसत गति (बहु-विभाजन):</b> एक परिवहन वितरण वाहन क्रमशः 10 किमी/घंटा, 20 किमी/घंटा, 30 किमी/घंटा और 60 किमी/घंटा की औसत गति से 10-10 किमी की चार लगातार समान दूरियां तय करता है। पूरी 40 किमी की यात्रा के लिए वाहन की सटीक औसत गति ज्ञात कीजिए।",
+    "o": ["20 km/h", "24 km/h", "25 km/h", "30 km/h"],
+    "a": 0,
+    "e": "Step 1: Average speed formula = Total Distance / Total Time. Let each equal distance be represented by the LCM of speeds (60 km) to simplify fractions. Total Distance = 4 * 60 = 240 km. Step 2: Calculate individual times: t1 = 60/10 = 10h? No, 6h. t2 = 60/20 = 3h. t3 = 60/30 = 2h. t4 = 60/60 = 1h. Step 3: Total time taken = 6 + 3 + 2 + 1 = 12 hours. Step 4: Average Speed = 240 / 12 = 20 km/h."
+  },
+  {
+    "p_id": "bssc_cgl_adv_quant_47",
+    "qe": "<b>Mensuration 3D (Recasting):</b> Twelve identical solid metallic spheres, each of radius 3 cm, are completely melted down and recast into a single solid right circular cylinder of base radius 6 cm. Find the exact height of the cylinder formed.",
+    "qh": "<b>क्षेत्रमिति 3D (पुनर्विभाजन):</b> त्रिज्या 3 सेमी वाले बारह समान ठोस धातु के गोलों को पूरी तरह से पिघलाया जाता है और आधार त्रिज्या 6 सेमी वाले एक ठोस लंब वृत्तीय बेलन (Cylinder) में ढाला जाता है। बनने वाले बेलन की सटीक ऊंचाई ज्ञात कीजिए।",
+    "o": ["12 cm", "9 cm", "8 cm", "10 cm"],
+    "a": 0,
+    "e": "Step 1: Volume of a single sphere = (4 / 3) * pi * R^3 = (4 / 3) * pi * 3^3 = 36 * pi cm^3. Step 2: Volume of 12 spheres = 12 * 36 * pi = 432 * pi cm^3. Step 3: Volume of the right circular cylinder = pi * r^2 * h = pi * 6^2 * h = 36 * pi * h. Step 4: Since total volume remains constant, equate both expressions: 36 * pi * h = 432 * pi. Step 5: Height (h) = 432 / 36 = 12 cm."
+  },
+  {
+    "p_id": "bssc_cgl_adv_quant_48",
+    "qe": "<b>Number System (Square Factors):</b> Find the total number of positive factors of the composite number 7200 which are perfect squares.",
+    "qh": "<b>संख्या पद्धति (वर्ग गुणनखंड):</b> संयुक्त संख्या 7200 के उन धनात्मक गुणनखंडों की कुल संख्या ज्ञात कीजिए जो पूर्ण वर्ग (Perfect Squares) हैं।",
+    "o": ["12", "8", "6", "10"],
+    "a": 0,
+    "e": "Step 1: Perform prime factorization of 7200: $7200 = 2^5 \\times 3^2 \\times 5^2$. Step 2: For a factor to be a perfect square, the exponents of its prime components must be even numbers. Step 3: Possible even power choices for base 2 are: $2^0, 2^2, 2^4$ (3 choices). Step 4: Possible even power choices for base 3 are: $3^0, 3^2$ (2 choices). Step 5: Possible even power choices for base 5 are: $5^0, 5^2$ (2 choices). Step 6: Total perfect square factors = 3 * 2 * 2 = 12."
+  },
+  {
+    "p_id": "bssc_cgl_adv_quant_49",
+    "qe": "<b>Ratio Application (Dynamic Incomes):</b> The monthly incomes of A and B are in the ratio 5 : 4, and their monthly expenditures are in the ratio 4 : 3. If A saves Rs. 5000 per month and B saves Rs. 6000 per month, calculate the monthly income of A.",
+    "qh": "<b>अनुपात अनुप्रयोग (गतिशील आय):</b> A और B की मासिक आय 5 : 4 के अनुपात में है, और उनका मासिक खर्च 4 : 3 के अनुपात में है। यदि A प्रति माह ₹5,000 की बचत करता है और B प्रति माह ₹6,000 की बचत करता है, तो A की मासिक आय की गणना कीजिए।",
+    "o": ["Rs. 45000", "Rs. 40000", "Rs. 35000", "Rs. 50000"],
+    "a": 0,
+    "e": "Step 1: Let the monthly incomes be 5x and 4x, and expenditures be 4y and 3y. Step 2: Form equations based on Savings = Income - Expenditure: $5x - 4y = 5000$ (Eq 1) and $4x - 3y = 6000$ (Eq 2). Step 3: Multiply Eq 1 by 3 and Eq 2 by 4 to eliminate y: $15x - 12y = 15000$ and $16x - 12y = 24000$. Step 4: Subtracting the equations gives: $16x - 15x = 24000 - 15000 \\Rightarrow x = 9000$. Step 5: A's income = 5x = 5 * 9000 = Rs. 45000."
+  },
+  {
+    "p_id": "bssc_cgl_adv_quant_50",
+    "qe": "<b>Simple Interest (Principal Splitting):</b> A sum of Rs. 15000 is lent out in two parts at simple interest such that the first part earns interest at 6% per annum and the second part at 8% per annum. If the total annual simple interest received at the end of one year is Rs. 1040, find the amount lent out at 8% per annum.",
+    "qh": "<b>साधारण ब्याज:</b> ₹15,000 की राशि को साधारण ब्याज पर दो भागों में इस प्रकार उधार दिया जाता है कि पहले भाग पर 6% वार्षिक और दूसरे भाग पर 8% वार्षिक की दर से ब्याज मिलता है। यदि एक वर्ष के अंत में प्राप्त कुल वार्षिक साधारण ब्याज ₹1,040 है, तो 8% वार्षिक दर पर उधार दी गई राशि ज्ञात कीजिए।",
+    "o": ["Rs. 7000", "Rs. 8000", "Rs. 6000", "Rs. 7500"],
+    "a": 0,
+    "e": "Step 1: Let the part lent at 6% be x. Then the part lent at 8% is (15000 - x). Step 2: Set up the total interest equation: $0.06x + 0.08(15000 - x) = 1040$. Step 3: Simplify: $0.06x + 1200 - 0.08x = 1040 \\Rightarrow 1200 - 0.02x = 1040 \\Rightarrow 0.02x = 160$. Step 4: $x = 160 / 0.02 = Rs. 8000$ (amount at 6%). Step 5: Amount lent at 8% = 15000 - 8000 = Rs. 7000."
+  },
+  {
+    "p_id": "bssc_cgl_adv_quant_51",
+    "qe": "<b>Time, Speed & Distance (Pole Crossing):</b> A train running at a speed of 90 km/h crosses a 250-meter long platform completely in 22 seconds. How many seconds will it take for the same train to completely cross a static electric pole?",
+    "qh": "<b>समय, गति और दूरी:</b> 90 किमी/घंटा की गति से चलने वाली एक ट्रेन 250 मीटर लंबे प्लेटफॉर्म को 22 सेकंड में पूरी तरह पार करती है। इसी ट्रेन को एक स्थिर बिजली के खंभे को पूरी तरह पार करने में कितने सेकंड का समय लगेगा?",
+    "o": ["12 seconds", "10 seconds", "14 seconds", "15 seconds"],
+    "a": 0,
+    "e": "Step 1: Convert speed to m/s = 90 * (5 / 18) = 25 m/s. Step 2: Total distance covered crossing platform = Length of train (L) + 250. Step 3: Distance = Speed * Time $\\Rightarrow L + 250 = 25 * 22 = 550 \\Rightarrow L = 300$ meters. Step 4: Time taken to cross a static pole = Length of train / Speed = 300 / 25 = 12 seconds."
+  },
+  {
+    "p_id": "bssc_cgl_adv_quant_52",
+    "qe": "<b>Geometric Progressions (Summation):</b> Find the exact sum of the first 6 terms of the geometric progression series: 4, 12, 36, 108, ...",
+    "qh": "<b>गुणोत्तर श्रेणी (योग):</b> गुणोत्तर श्रेणी: 4, 12, 36, 108, ... के पहले 6 पदों का सटीक योग ज्ञात कीजिए।",
+    "o": ["1456", "1440", "1364", "1512"],
+    "a": 0,
+    "e": "Step 1: Identify the components: first term a = 4, common ratio r = 12 / 4 = 3. Step 2: Use sum formula: $S_n = a(r^n - 1) / (r - 1)$. Step 3: Substitute for 6 terms: $S_6 = 4(3^6 - 1) / (3 - 1) = 4(729 - 1) / 2$. Step 4: Calculate = 2 * 728 = 1456."
+  },
+  {
+    "p_id": "bssc_cgl_adv_quant_53",
+    "qe": "<b>Algebra (Symmetric Algebraic Terms):</b> If $x + \\frac{1}{x} = 4$, then find the exact numerical value of the higher-degree mathematical expression $x^4 + \\frac{1}{x^4}$.",
+    "qh": "<b>बीजगणित:</b> यदि $x + \\frac{1}{x} = 4$ है, तो गणितीय व्यंजक $x^4 + \\frac{1}{x^4}$ का सटीक संख्यात्मक मान ज्ञात कीजिए।",
+    "o": ["194", "196", "198", "192"],
+    "a": 0,
+    "e": "Step 1: Square the expression once: $(x + 1/x)^2 = 4^2 \\Rightarrow x^2 + 2 + 1/x^2 = 16 \\Rightarrow x^2 + 1/x^2 = 14$. Step 2: Square the new expression a second time: $(x^2 + 1/x^2)^2 = 14^2 \\Rightarrow x^4 + 2 + 1/x^4 = 196$. Step 3: Rearrange to find the final value: $x^4 + 1/x^4 = 196 - 2 = 194$."
+  },
+  {
+    "p_id": "bssc_cgl_adv_quant_54",
+    "qe": "<b>Percentages (Election Majority):</b> In a local municipal election between two candidates, 10% of the total registered voters on the voter list did not cast their votes, and 10% of the votes cast were declared invalid. The winning candidate received 54% of the total valid votes and won by a majority of 1620 votes. Find the total number of voters registered on the voter list.",
+    "qh": "<b>प्रतिशत (चुनाव बहुमत):</b> दो उम्मीदवारों के बीच एक स्थानीय निकाय चुनाव में, मतदाता सूची के कुल मतदाताओं में से 10% ने अपने मत नहीं डाले, और डाले गए मतों में से 10% को अमान्य घोषित कर दिया गया। विजयी उम्मीदवार को वैध मतों का 54% प्राप्त हुआ और वह 1,620 मतों के बहुमत से जीत गया। मतदाता सूची में पंजीकृत कुल मतदाताओं की संख्या ज्ञात कीजिए।",
+    "o": ["25000", "20000", "30000", "22500"],
+    "a": 0,
+    "e": "Step 1: Let the total registered voters be V. Votes cast = 0.90V. Valid votes = 0.90 * 0.90V = 0.81V. Step 2: The winner got 54% of valid votes, meaning the loser got 100 - 54 = 46% of valid votes. Step 3: The vote majority difference = 54% - 46% = 8% of the valid votes. Step 4: Set up equation: 8% of 0.81V = 1620 $\\Rightarrow 0.08 * 0.81 * V = 1620 \\Rightarrow 0.0648V = 1620$. Step 5: V = 1620 / 0.0648 = 25000."
+  },
+  {
+    "p_id": "bssc_cgl_adv_quant_55",
+    "qe": "<b>Fractions & Surds (Infinite Continuous Surd):</b> Evaluate the exact simplified numerical value of the infinite product surd expression: $\\sqrt{7 \\cdot \\sqrt{7 \\cdot \\sqrt{7 \\cdot \\dots \\infty}}}$",
+    "qh": "<b>भिन्न और करणी:</b> अनंत गुणनफल करणी व्यंजक का सटीक सरलीकृत संख्यात्मक मान ज्ञात कीजिए: $\\sqrt{7 \\cdot \\sqrt{7 \\cdot \\sqrt{7 \\cdot \\dots \\infty}}}$",
+    "o": ["7", "1", "49", "sqrt(7)"],
+    "a": 0,
+    "e": "Step 1: Let the infinite product string be equal to x. $x = \\sqrt{7 \\cdot x}$. Step 2: Square both sides of the equation: $x^2 = 7x$. Step 3: Since x represents an infinite real sequence greater than zero ($x \\neq 0$), divide by x on both sides: x = 7."
+  },
+  {
+    "p_id": "bssc_cgl_adv_quant_56",
+    "qe": "<b>LCM & HCF (Remainder Thresholds):</b> Find the greatest 4-digit number which when divided by 12, 16, 24, and 32 leaves a uniform remainder of 5 in each case.",
+    "qh": "<b>LCM और HCF:</b> 4 अंकों की वह सबसे बड़ी संख्या ज्ञात कीजिए जिसे 12, 16, 24, और 32 से विभाजित करने पर प्रत्येक स्थिति में 5 शेषफल बचे।",
+    "o": ["9989", "9995", "9885", "9941"],
+    "a": 0,
+    "e": "Step 1: Find the Least Common Multiple (LCM) of 12, 16, 24, and 32 = 96. Step 2: The largest possible 4-digit number is 9999. Step 3: Divide 9999 by 96 to locate the remainder: 9999 / 96 leaves a remainder of 15. Step 4: Subtract this remainder to find the largest 4-digit multiple of 96 = 9999 - 15 = 9984. Step 5: Add the required remainder constraint: 9984 + 5 = 9989."
+  },
+  {
+    "p_id": "bssc_cgl_adv_quant_57",
+    "qe": "<b>Mensuration 2D (External Paths):</b> A rectangular lawn of dimensions 50 meters by 30 meters is surrounded externally by a uniform gravel path of width 2.5 meters. Calculate the total area of the gravel path.",
+    "qh": "<b>क्षेत्रमिति 2D (बाहरी मार्ग):</b> 50 मीटर गुणा 30 मीटर के आयामों वाले एक आयताकार लॉन के चारों ओर बाहरी रूप से 2.5 मीटर चौड़ाई का एक समान बजरी मार्ग (Gravel Path) बनाया गया है। बजरी मार्ग का कुल क्षेत्रफल ज्ञात कीजिए।",
+    "o": ["425 sq.m", "400 sq.m", "450 sq.m", "375 sq.m"],
+    "a": 0,
+    "e": "Step 1: Inner Area of the lawn = 50 * 30 = 1500 sq.m. Step 2: Calculate the new outer dimensions after adding 2.5 meters on both sides: Outer Length = 50 + 2(2.5) = 55m. Outer Breadth = 30 + 2(2.5) = 35m. Step 3: Outer Area including path = 55 * 35 = 1925 sq.m. Step 4: Area of the path = Outer Area - Inner Area = 1925 - 1500 = 425 sq.m."
+  },
+  {
+    "p_id": "bssc_cgl_adv_quant_58",
+    "qe": "<b>Statistics (Empirical Formula):</b> In a moderately asymmetrical distribution of test marks, the median is calculated to be 45 and the arithmetic mean is calculated to be 42. Using Empirical relationship, find the value of the mode.",
+    "qh": "<b>सांख्यिकी (आनुभविक सूत्र):</b> एक मध्यम विषम परीक्षण अंक वितरण में, माध्यिका (Median) की गणना 45 और समांतर माध्य (Mean) की गणना 42 की गई है। आनुभविक संबंध (Empirical Relationship) का उपयोग करके बहुलक (Mode) का मान ज्ञात कीजिए।",
+    "o": ["51", "48", "54", "46"],
+    "a": 0,
+    "e": "Step 1: The standard empirical statistical relation is: $\\text{Mode} = 3 \\times \\text{Median} - 2 \\times \\text{Mean}$. Step 2: Substitute the given values into the relation: $\\text{Mode} = 3(45) - 2(42)$. Step 3: Calculate: $\\text{Mode} = 135 - 84 = 51$."
+  },
+  {
+    "p_id": "bssc_cgl_adv_quant_59",
+    "qe": "<b>Ages Problems (Product Layout):</b> The ratio of the age of a mother to her daughter is 7 : 2. After 4 years, the product of their ages will be exactly 384. Find the present age of the mother.",
+    "qh": "<b>आयु संबंधी प्रश्न:</b> एक माँ और उसकी पुत्री की आयु का अनुपात 7 : 2 है। 4 वर्ष बाद, उनकी आयु का गुणनफल ठीक 384 होगा। माँ की वर्तमान आयु ज्ञात कीजिए।",
+    "o": ["28 years", "35 years", "42 years", "21 years"],
+    "a": 0,
+    "e": "Step 1: Let the present ages be 7x and 2x. After 4 years, their ages will be (7x + 4) and (2x + 4). Step 2: Set up product equation: $(7x + 4)(2x + 4) = 384 \\Rightarrow 14x^2 + 28x + 8x + 16 = 384$. Step 3: Simplify to standard quadratic equation: $14x^2 + 36x - 368 = 0 \\Rightarrow 7x^2 + 18x - 184 = 0$. Step 4: Solving factors shows x = 4 satisfies the equation ($7(16) + 72 - 184 = 0$). Step 5: Mother's present age = 7x = 7 * 4 = 28 years."
+  },
+  {
+    "p_id": "bssc_cgl_adv_quant_60",
+    "qe": "<b>Number System (Units Position Product):</b> Find the units digit in the final numerical value of the exponential product: $(763)^{45} \\times (827)^{98}$",
+    "qh": "<b>संख्या पद्धति (इकाई स्थान गुणनफल):</b> घात गुणनफल के अंतिम संख्यात्मक मान में इकाई का अंक ज्ञात कीजिए: $(763)^{45} \\times (827)^{98}$",
+    "o": ["7", "3", "9", "1"],
+    "a": 0,
+    "e": "Step 1: The unit digit of $(763)^{45}$ depends on $3^{45}$. Cyclicity of 3 is 4. $45 \\% 4 = 1 \\Rightarrow 3^1 = 3$. Step 2: The unit digit of $(827)^{98}$ depends on $7^{98}$. Cyclicity of 7 is 4. $98 \\% 4 = 2 \\Rightarrow 7^2 = 49$, which ends in 9. Step 3: Multiply both unit digits = 3 * 9 = 27. The final unit digit is 7."
+  },
+  {
+    "p_id": "bssc_cgl_adv_quant_61",
+    "qe": "<b>Work and Wages (Proportional Sharing):</b> A, B, and C can complete a piece of work in 8, 12, and 16 days respectively. They all work together on the task for 2 days, and then A leaves. B and C complete the remaining work. If the total money paid for the entire work is Rs. 7200, find the financial share received by A based on work done.",
+    "qh": "<b>कार्य और मजदूरी:</b> A, B, और C एक कार्य को क्रमशः 8, 12, और 16 दिनों में पूरा कर सकते हैं। वे सभी मिलकर इस कार्य पर 2 दिनों तक कार्य करते हैं, और फिर A छोड़ देता है। B और C शेष कार्य को पूरा करते हैं। यदि पूरे कार्य के लिए भुगतान किया गया कुल पैसा ₹7,200 है, तो किए गए कार्य के आधार पर A द्वारा प्राप्त वित्तीय हिस्सा ज्ञात कीजिए।",
+    "o": ["Rs. 1800", "Rs. 2400", "Rs. 1500", "Rs. 2000"],
+    "a": 0,
+    "e": "Step 1: Total work (LCM of 8, 12, 16) = 48 units. Efficiency of A = 6, B = 4, C = 3 units/day. Step 2: A worked only for the first 2 days with the team. Step 3: Total work volume completed by A = 6 units/day * 2 days = 12 units. Step 4: Share of money is proportional to work share = (Work by A / Total Work) * Total Money = (12 / 48) * 7200 = (1 / 4) * 7200 = Rs. 1800."
+  },
+  {
+    "p_id": "bssc_cgl_adv_quant_62",
+    "qe": "<b>Mixture & Alligation (Dual Concentrations):</b> Two vessels A and B contain mixtures of spirit and water in the ratio 5 : 2 and 7 : 6 respectively. Find the ratio in which these two mixtures must be blended together to obtain a new mixture in vessel C containing spirit and water in the ratio 8 : 5.",
+    "qh": "<b>मिश्रण (दोहरी सांद्रता):</b> दो बर्तनों A और B में स्पिरिट और पानी का मिश्रण क्रमशः 5 : 2 और 7 : 6 के अनुपात में है। बर्तन C में स्पिरिट और पानी का अनुपात 8 : 5 युक्त एक नया मिश्रण प्राप्त करने के लिए इन दोनों मिश्रणों को किस अनुपात में मिलाया जाना चाहिए?",
+    "o": ["7 : 9", "9 : 7", "2 : 3", "3 : 5"],
+    "a": 0,
+    "e": "Step 1: Use spirit concentrations to set up alligation. Concentration in A = 5/7, in B = 7/13, and target in C = 8/13. Step 2: Calculate difference on B side: $8/13 - 7/13 = 1/13$. Step 3: Calculate difference on A side: $5/7 - 8/13 = (65 - 56) / 91 = 9/91$. Step 4: Mixing Ratio = $(1/13) : (9/91) = 1 : (9/7) = 7 : 9$."
+  },
+  {
+    "p_id": "bssc_cgl_adv_quant_63",
+    "qe": "<b>Profit & Loss (Chain Transactions):</b> A publisher sells a textbook to a retail bookseller at a profit of 20% on the cost price. The bookseller then marks up the price and sells it to a student at a profit of 25% on the price he paid. If the student pays Rs. 300 for the textbook, find the original manufacturing cost price for the publisher.",
+    "qh": "<b>लाभ और हानि (श्रृंखला लेनदेन):</b> एक प्रकाशक एक पाठ्यपुस्तक को खुदरा पुस्तक विक्रेता को क्रय मूल्य पर 20% के लाभ पर बेचता है। पुस्तक विक्रेता फिर मूल्य बढ़ाता है और इसे एक छात्र को उसके द्वारा भुगतान किए गए मूल्य पर 25% के लाभ पर बेचता है। यदि छात्र पाठ्यपुस्तक के लिए ₹300 का भुगतान करता है, तो प्रकाशक के लिए मूल विनिर्माण क्रय मूल्य ज्ञात कीजिए।",
+    "o": ["Rs. 200", "Rs. 180", "Rs. 250", "Rs. 220"],
+    "a": 0,
+    "e": "Step 1: Let the original cost price for the publisher be x. Step 2: Price paid by the bookseller = 1.20x. Step 3: Price paid by the student = 1.20x * 1.25 = 1.50x. Step 4: Given student price is Rs. 300, set up equation: $1.50x = 300$. Step 5: $x = 300 / 1.50 = Rs. 200$."
+  },
+  {
+    "p_id": "bssc_cgl_adv_quant_64",
+    "qe": "<b>Simple & Compound Interest Matrix:</b> The simple interest on a certain principal sum of money for 3 years at 10% per annum is Rs. 3000. Find the compound interest on the exact same principal sum for 2 years at the same interest rate, compounded annually.",
+    "qh": "<b>साधारण और चक्रवृद्धि ब्याज:</b> एक निश्चित मूलधन राशि पर 10% वार्षिक दर से 3 वर्ष का साधारण ब्याज ₹3,000 है। समान ब्याज दर पर समान मूलधन राशि पर 2 वर्ष का वार्षिक रूप से संयोजित होने वाला चक्रवृद्धि ब्याज ज्ञात कीजिए।",
+    "o": ["Rs. 2100", "Rs. 2000", "Rs. 2200", "Rs. 1050"],
+    "a": 0,
+    "e": "Step 1: Use simple interest formula to locate principal (P): $SI = (P \\times R \\times T) / 100 \\Rightarrow 3000 = (P \\times 10 \\times 3) / 100 \\Rightarrow 3000 = 0.3P \\Rightarrow P = Rs. 10000$. Step 2: The effective compound interest percentage for 2 years at 10% = $10 + 10 + (10 \\times 10 / 100) = 21\\%$. Step 3: Compound Interest = 21% of Rs. 10000 = Rs. 2100."
+  },
+  {
+    "p_id": "bssc_cgl_adv_quant_65",
+    "qe": "<b>Geometry (Parallel Chords):</b> Find the linear distance (in cm) between two parallel chords of a circle of radius 10 cm, if the lengths of the two parallel chords are 12 cm and 16 cm respectively, and they lie on the opposite sides of the center.",
+    "qh": "<b>ज्यामिति (सनांतर जीवा):</b> त्रिज्या 10 सेमी वाले एक वृत्त की दो समानांतर जीवाओं (Parallel Chords) के बीच की रैखिक दूरी (सेमी में) ज्ञात कीजिए, यदि दोनों समानांतर जीवाओं की लंबाई क्रमशः 12 सेमी और 16 सेमी है, और वे केंद्र के विपरीत पक्षों पर स्थित हैं।",
+    "o": ["14 cm", "12 cm", "10 cm", "15 cm"],
+    "a": 0,
+    "e": "Step 1: Radius R = 10 cm. Half of Chord 1 = 12 / 2 = 6 cm. Perpendicular distance from center to Chord 1 ($d_1$) = $\\sqrt{10^2 - 6^2} = \\sqrt{64} = 8$ cm. Step 2: Half of Chord 2 = 16 / 2 = 8 cm. Perpendicular distance from center to Chord 2 ($d_2$) = $\\sqrt{10^2 - 8^2} = \\sqrt{36} = 6$ cm. Step 3: Since chords lie on opposite sides of the center, add the perpendicular distances = $d_1 + d_2 = 8 + 6 = 14$ cm."
+  },
+  {
+    "p_id": "bssc_cgl_adv_quant_66",
+    "qe": "<b>Permutations (Divisibility Constraint):</b> How many 4-digit numbers can be formed using the digits 1, 3, 5, 7, 8, and 9 such that no digit is repeated within any number and the formed number is completely divisible by 5?",
+    "qh": "<b>क्रमचय (विभाज्यता प्रतिबंध):</b> अंकों 1, 3, 5, 7, 8, और 9 का उपयोग करके 4 अंकों की कितनी संख्याएँ बनाई जा सकती हैं ताकि किसी भी संख्या में किसी भी अंक की पुनरावृत्ति न हो और बनने वाली संख्या 5 से पूरी तरह विभाज्य हो?",
+    "o": ["60", "120", "24", "48"],
+    "a": 0,
+    "e": "Step 1: For a number to be divisible by 5, its units place digit must be 5 or 0. Since 0 is not in the set, the units position has exactly 1 choice (must be 5). Step 2: We need to fill the remaining 3 digit slots (thousands, hundreds, tens) using the remaining 5 available digits. Step 3: Number of distinct permutations = 5P3 = 5 * 4 * 3 = 60 numbers."
+  },
+  {
+    "p_id": "bssc_cgl_adv_quant_67",
+    "qe": "<b>Probability (Calendar Logic):</b> What is the exact mathematical probability that a randomly chosen leap year will contain exactly 53 Sundays?",
+    "qh": "<b>प्रायिकता (कैलेंडर तर्क):</b> इसकी क्या सटीक गणितीय प्रायिकता होगी कि यादृच्छिक रूप से चुने गए एक लीप वर्ष (Leap Year) में ठीक 53 रविवार शामिल हों?",
+    "o": ["2/7", "1/7", "52/365", "3/7"],
+    "a": 0,
+    "e": "Step 1: A leap year contains 366 days, which translates to 52 complete weeks and exactly 2 extra odd days. Step 2: These 2 odd days can form 7 possible consecutive pairs: (Sun-Mon, Mon-Tue, Tue-Wed, Wed-Thu, Thu-Fri, Fri-Sat, Sat-Sun). Step 3: Out of 7 total pairs, 2 pairs contain a Sunday (Sun-Mon and Fri-Sat? No, Sat-Sun). Step 4: Therefore, the favorable outcomes are 2, and the exact probability is 2 / 7."
+  },
+  {
+    "p_id": "bssc_cgl_adv_quant_68",
+    "qe": "<b>Boats & Streams (Time Constraints):</b> A motorboat takes half the time to travel a certain distance downstream than it takes to travel the same distance upstream. If the speed of the river stream current is 4 km/h, find the speed of the motorboat in still water.",
+    "qh": "<b>नाव और धारा:</b> एक मोटरबोट को धारा के अनुकूल एक निश्चित दूरी तय करने में धारा के विपरीत समान दूरी तय करने में लगने वाले समय का आधा समय लगता है। यदि नदी की धारा की गति 4 किमी/घंटा है, तो शांत जल में मोटरबोट की गति ज्ञात कीजिए।",
+    "o": ["12 km/h", "16 km/h", "8 km/h", "10 km/h"],
+    "a": 0,
+    "e": "Step 1: Let speed of boat in still water be v km/h. Downstream Speed = v + 4, Upstream Speed = v - 4. Step 2: Since time is inversely proportional to speed for a fixed distance: Downstream Speed = 2 * Upstream Speed. Step 3: Set up equation: $v + 4 = 2(v - 4) \\Rightarrow v + 4 = 2v - 8$. Step 4: Solve for v: $2v - v = 4 + 8 \\Rightarrow v = 12$ km/h."
+  },
+  {
+    "p_id": "bssc_cgl_adv_quant_69",
+    "qe": "<b>Progressions (Sum of Squares):</b> Calculate the exact value of the sum of the squares of the first 10 natural numbers: $1^2 + 2^2 + 3^2 + \\dots + 10^2$.",
+    "qh": "<b>श्रेणी (वर्गों का योग):</b> पहले 10 प्राकृतिक संख्याओं के वर्गों का सटीक योग ज्ञात कीजिए: $1^2 + 2^2 + 3^2 + \\dots + 10^2$।",
+    "o": ["385", "330", "425", "365"],
+    "a": 0,
+    "e": "Step 1: Use the standard series mathematical formula for the sum of squares of first n natural numbers: $S = [n(n + 1)(2n + 1)] / 6$. Step 2: Substitute n = 10 into the expression: $S = [10 \\times (10 + 1) \\times (2(10) + 1)] / 6$. Step 3: Simplify: $S = (10 \\times 11 \\times 21) / 6 = 2310 / 6 = 385$."
+  },
+  {
+    "p_id": "bssc_cgl_adv_quant_70",
+    "qe": "<b>Number System (Multi-Variable Divisibility):</b> If the 8-digit number $789x531y$ is completely divisible by the composite number 72, then find the exact value of the expression $(2x + y)$ for the smallest possible value of y.",
+    "qh": "<b>संख्या पद्धति (बहु-चर विभाज्यता):</b> यदि 8 अंकों की संख्या $789x531y$ संयुक्त संख्या 72 से पूरी तरह विभाज्य है, तो y के न्यूनतम संभावित मान के लिए व्यंजक $(2x + y)$ का सटीक मान ज्ञात कीजिए।",
+    "o": ["4", "5", "3", "6"],
+    "a": 0,
+    "e": "Step 1: For a number to be divisible by 72, it must be completely divisible by both 8 and 9. Step 2: Test 8 divisibility rule (last 3 digits must be divisible by 8): $31y / 8$. Checking numbers reveals 312 is divisible by 8 ($312/8 = 39$). So the smallest value of y = 2. Step 3: Test 9 divisibility rule (sum of all digits must be a multiple of 9): $7 + 8 + 9 + x + 5 + 3 + 1 + 2 = 35 + x$. Step 4: The next higher multiple of 9 after 35 is 36. Therefore, $35 + x = 36 \\Rightarrow x = 1$. Step 5: Substitute values into the target expression: $(2x + y) = 2(1) + 2 = 4$."
+  }
+]
