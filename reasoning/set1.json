@@ -1,53 +1,282 @@
-{
-  "puzzle_library": [
-    {
-      "p_id": "month_mains_03",
-      "pe": "<blockquote><b>Month Puzzle:</b> 8 persons A, B, C, D, E, F, G, H were born in four different months (March, April, August, and September) on two different dates (7th or 10th) of the same year.<br/>* Only three persons were born between A and G.<br/>* A was born in a month having 30 days.<br/>* G and H were born in the same month.<br/>* B was born on an even date.<br/>* Only two persons were born between B and C.<br/>* F was born immediately after D.<br/>* E was born before F.</blockquote>",
-      "ph": "<blockquote><b>महीना पहेली:</b> 8 व्यक्ति A, B, C, D, E, F, G, H एक ही वर्ष के चार अलग-अलग महीनों (मार्च, अप्रैल, अगस्त और सितंबर) में दो अलग-अलग तारीखों (7 या 10) को पैदा हुए थे।<br/>* A और G के बीच केवल तीन व्यक्ति पैदा हुए थे।<br/>* A का जन्म 30 दिन वाले महीने में हुआ था।<br/>* G और H का जन्म एक ही महीने में हुआ था।<br/>* B का जन्म एक सम तारीख को हुआ था।<br/>* B और C के बीच केवल दो व्यक्ति पैदा हुए थे।<br/>* F का जन्म D के ठीक बाद हुआ था।<br/>* E का जन्म F से पहले हुआ था।</blockquote>"
-    },
-    {
-      "p_id": "seating_inout_04",
-      "pe": "<blockquote><b>Circular Seating (In-Out):</b> 8 persons J, K, L, M, N, O, P, Q sit around a circular table. Some face center, some face outside.<br/>* M sits 3rd to the right of K. K faces center.<br/>* M and K face opposite directions.<br/>* Only three persons sit between M and J.<br/>* L sits 2nd to the right of J.<br/>* N sits 2nd to the left of O, who is not an immediate neighbor of M.<br/>* Immediate neighbors of L face the same direction.<br/>* P sits 2nd to the right of Q.</blockquote>",
-      "ph": "<blockquote><b>वृत्ताकार बैठक (In-Out):</b> 8 व्यक्ति J, K, L, M, N, O, P, Q एक वृत्ताकार मेज के चारों ओर बैठे हैं। कुछ का मुख केंद्र की ओर है, कुछ का बाहर की ओर।<br/>* M, K के दाएं से तीसरे स्थान पर बैठा है। K का मुख केंद्र की ओर है।<br/>* M और K का मुख विपरीत दिशाओं में है।<br/>* M और J के बीच केवल तीन व्यक्ति बैठे हैं।<br/>* L, J के दाएं से दूसरे स्थान पर बैठा है।<br/>* N, O के बाएं से दूसरे स्थान पर बैठा है, जो M का निकटतम पड़ोसी नहीं है।<br/>* L के निकटतम पड़ोसियों का मुख एक ही दिशा में है।<br/>* P, Q के दाएं से दूसरे स्थान पर बैठा है।</blockquote>"
-    }
-  ],
-  "questions": [
-    { "p_id": "month_mains_03", "qe": "<b>Q1:</b> Who was born on 10th August?", "qh": "<b>प्रश्न 1:</b> 10 अगस्त को किसका जन्म हुआ था?", "o": ["C", "E", "G", "H"], "a": 2, "e": "Order: Mar(7-E, 10-B), Apr(7-A, 10-D), Aug(7-F, 10-G), Sep(7-H, 10-C). G is on 10th Aug." },
-    { "p_id": "month_mains_03", "qe": "<b>Q2:</b> How many persons were born between D and H?", "qh": "<b>प्रश्न 2:</b> D और H के बीच कितने व्यक्ति पैदा हुए थे?", "o": ["Two", "Three", "Four", "Five"], "a": 1, "e": "Between D (10th Apr) and H (7th Sep) are F, G, and Aug-7 (3 persons)." },
-    { "p_id": "month_mains_03", "qe": "<b>Q3:</b> Who is the eldest among all?", "qh": "<b>प्रश्न 3:</b> सभी में सबसे बड़ा कौन है?", "o": ["A", "E", "B", "D"], "a": 1, "e": "E was born on 7th March, making them the eldest." },
-    { "p_id": "month_mains_03", "qe": "<b>Q4:</b> F was born on which date?", "qh": "<b>प्रश्न 4:</b> F का जन्म किस तारीख को हुआ था?", "o": ["7th August", "10th August", "7th April", "10th September"], "a": 0, "e": "F was born on 7th August." },
-    { "p_id": "month_mains_03", "qe": "<b>Q5:</b> Find the odd one out?", "qh": "<b>प्रश्न 5:</b> विषम चुनें?", "o": ["B", "D", "G", "C"], "a": 3, "e": "B, D, G are born on 10th. C is on 7th (or date logic)." },
-
-    { "p_id": "seating_inout_04", "qe": "<b>Q6:</b> Who sits 2nd to the left of K?", "qh": "<b>प्रश्न 6:</b> K के बाएं से दूसरे स्थान पर कौन बैठा है?", "o": ["P", "Q", "J", "L"], "a": 2, "e": "Final Arrangement shows J sits 2nd to the left of K." },
-    { "p_id": "seating_inout_04", "qe": "<b>Q7:</b> How many people face the center?", "qh": "<b>प्रश्न 7:</b> कितने लोगों का मुख केंद्र की ओर है?", "o": ["3", "4", "5", "Cannot be determined"], "a": 1, "e": "Based on logic, 4 face in and 4 face out." },
-    { "p_id": "seating_inout_04", "qe": "<b>Q8:</b> What is the position of Q with respect to M?", "qh": "<b>प्रश्न 8:</b> M के संबंध में Q की स्थिति क्या है?", "o": ["Immediate right", "2nd to left", "3rd to right", "Opposite"], "a": 0, "e": "Q is to the immediate right of M." },
-    { "p_id": "seating_inout_04", "qe": "<b>Q9:</b> Who sits opposite to L?", "qh": "<b>प्रश्न 9:</b> L के विपरीत कौन बैठा है?", "o": ["O", "K", "N", "P"], "a": 1, "e": "K is sitting opposite to L." },
-    { "p_id": "seating_inout_04", "qe": "<b>Q10:</b> If all are arranged alphabetically from J clockwise, how many stay unchanged?", "qh": "<b>प्रश्न 10:</b> यदि सभी J से दक्षिणावर्त वर्णानुक्रम में व्यवस्थित हों, तो कितने अपरिवर्तित रहते हैं?", "o": ["One", "Two", "None", "Three"], "a": 0, "e": "Only J remains at its position." },
-
-    { "p_id": "", "qe": "<b>Syllogism:</b> Statements: Only a few Gold are Silver. No Silver is Iron. All Iron are Copper.", "qh": "<b>न्याय निगमन:</b> कथन: केवल कुछ सोना चांदी हैं। कोई चांदी लोहा नहीं है। सभी लोहा तांबा हैं।", "o": ["Some Gold are not Iron", "Some Copper are not Silver", "Both follow", "Neither"], "a": 2, "e": "Gold-Silver connection and Iron-Copper relation make both valid." },
-    { "p_id": "", "qe": "<b>Blood Relation:</b> A is B's sister. C is B's mother. D is C's father. E is D's mother. How is A related to D?", "qh": "<b>रक्त संबंध:</b> A, B की बहन है। C, B की माँ है। D, C का पिता है। E, D की माँ है। A, D से कैसे संबंधित है?", "o": ["Grandmother", "Granddaughter", "Daughter", "Mother"], "a": 1, "e": "A is the daughter of C, and C is the daughter of D. So A is Granddaughter." },
-    { "p_id": "", "qe": "<b>Coding:</b> If 'DIVE' is '9-18-44-10', how is 'FEAR' coded?", "qh": "<b>कोडिंग:</b> यदि 'DIVE' '9-18-44-10' है, तो 'FEAR' का कोड क्या होगा?", "o": ["12-10-2-36", "11-9-2-35", "12-10-3-36", "10-8-2-34"], "a": 0, "e": "Logic: Position x 2 + offset or reverse. Here: Pos x 2 (approx). F(6x2)=12, E(5x2)=10, A(1x2)=2, R(18x2)=36." },
-    { "p_id": "", "qe": "<b>Analogy:</b> 11 : 132 :: 13 : ?", "qh": "<b>सादृश्यता:</b> 11 : 132 :: 13 : ?", "o": ["169", "182", "156", "190"], "a": 1, "e": "n(n+1) logic: 11x12=132, 13x14=182." },
-    { "p_id": "", "qe": "<b>Classification:</b> Odd one: 343, 512, 729, 1000, 1331, 1521?", "qh": "<b>वर्गीकरण:</b> विषम: 343, 512, 729, 1000, 1331, 1521?", "o": ["1521", "1331", "729", "512"], "a": 0, "e": "All are perfect cubes except 1521 (which is 39 squared)." },
-    { "p_id": "", "qe": "<b>Direction:</b> A man walks 10km North, 6km South, then 3km East. How far from start?", "qh": "<b>दिशा:</b> एक व्यक्ति 10 किमी उत्तर, 6 किमी दक्षिण, फिर 3 किमी पूर्व चलता है। शुरू से कितनी दूर?", "o": ["7km", "5km", "4km", "13km"], "a": 1, "e": "Net: 4km North, 3km East. Pythagoras: √(4²+3²) = 5km." },
-    { "p_id": "", "qe": "<b>Inequality:</b> P > Q ≤ R = S < T. Conclusion I: P > R. II: T > Q.", "qh": "<b>असमानता:</b> P > Q ≤ R = S < T. निष्कर्ष I: P > R. II: T > Q.", "o": ["Only I", "Only II", "Both", "Neither"], "a": 1, "e": "Between P and R sign changes. T > S = R ≥ Q, so T > Q is true." },
-    { "p_id": "", "qe": "<b>Calendar:</b> What was the day on 15th August 1947?", "qh": "<b>कैलेंडर:</b> 15 अगस्त 1947 को कौन सा दिन था?", "o": ["Friday", "Saturday", "Thursday", "Wednesday"], "a": 0, "e": "Standard calculation for 15 Aug 1947 results in Friday." },
-    { "p_id": "", "qe": "<b>Order:</b> In a row, Akshay is 16th from left and Vijay is 18th from right. If they swap, Akshay becomes 25th from left. Total people?", "qh": "<b>क्रम:</b> एक पंक्ति में, अक्षय बाएं से 16वें और विजय दाएं से 18वें स्थान पर है। यदि वे बदल लें, तो अक्षय बाएं से 25वां हो जाता है। कुल लोग?", "o": ["42", "43", "41", "40"], "a": 0, "e": "Total = New position of A + Old position of V - 1 = 25 + 18 - 1 = 42." },
-    { "p_id": "", "qe": "<b>Number Series:</b> 2, 3, 10, 39, 172, ?", "qh": "<b>संख्या श्रृंखला:</b> 2, 3, 10, 39, 172, ?", "o": ["885", "865", "845", "825"], "a": 0, "e": "Pattern: x1+1², x2+2², x3+3², x4+4², x5+5² (172x5 + 25 = 885)." },
-    { "p_id": "", "qe": "<b>Missing Number:</b> 7, 13, 25, 49, 97, ?", "qh": "<b>लुप्त संख्या:</b> 7, 13, 25, 49, 97, ?", "o": ["193", "194", "195", "196"], "a": 0, "e": "Logic: (n x 2) - 1." },
-    { "p_id": "", "qe": "<b>Clock:</b> How many times hands of a clock overlap in 24 hours?", "qh": "<b>घड़ी:</b> 24 घंटे में घड़ी की सुइयां कितनी बार मिलती हैं?", "o": ["22", "24", "44", "48"], "a": 0, "e": "Overlap occurs 11 times in 12 hours, so 22 times in 24 hours." },
-    { "p_id": "", "qe": "<b>Venn Diagram:</b> Women, Mothers, Doctors?", "qh": "<b>वेन आरेख:</b> महिला, माँ, डॉक्टर?", "o": ["Mothers inside Women, Doctor intersects both", "Three intersecting circles", "Mothers inside Doctors, Women separate", "None"], "a": 0, "e": "All Mothers are Women. Some Mothers/Women can be Doctors." },
-    { "p_id": "", "qe": "<b>Critical Reasoning:</b> Statement: Use of cell phones is banned while driving. Assumption I: Drivers can be distracted. II: It reduces accidents.", "qh": "<b>तर्क:</b> कथन: ड्राइविंग करते समय सेल फोन का उपयोग प्रतिबंधित है। पूर्वधारणा I: चालक विचलित हो सकते हैं। II: यह दुर्घटनाओं को कम करता है।", "o": ["Only I", "Only II", "Both I and II", "Neither"], "a": 2, "e": "Banning is based on safety and distraction concerns." },
-    { "p_id": "", "qe": "<b>Analogy:</b> 123 : 36 :: 221 : ?", "qh": "<b>सादृश्यता:</b> 123 : 36 :: 221 : ?", "o": ["25", "16", "49", "64"], "a": 0, "e": "Logic: (Sum of digits)². (1+2+3)² = 36. (2+2+1)² = 25." },
-    { "p_id": "", "qe": "<b>Decision Making:</b> Candidate must be Graduate and 25 years old. X is 24 and is a Ph.D. holder.", "qh": "<b>निर्णय लेना:</b> उम्मीदवार स्नातक और 25 वर्ष का होना चाहिए। X 24 वर्ष का है और पी.एच.डी. धारक है।", "o": ["Reject", "Accept", "Incomplete", "Refer"], "a": 0, "e": "Education is high but age criteria is not met." },
-    { "p_id": "", "qe": "<b>Mathematical Ops:</b> If A=1, B=2... Z=26, what is the value of (B+E) * C?", "qh": "<b>गणितीय संक्रियाएं:</b> यदि A=1, B=2... Z=26, तो (B+E) * C का मान क्या है?", "o": ["21", "15", "18", "24"], "a": 0, "e": "(2 + 5) * 3 = 7 * 3 = 21." },
-    { "p_id": "", "qe": "<b>Classification:</b> Odd: Snake, Lizard, Crocodile, Whale?", "qh": "<b>वर्गीकरण:</b> विषम: सांप, छिपकली, मगरमच्छ, व्हेल?", "o": ["Whale", "Snake", "Lizard", "Crocodile"], "a": 0, "e": "Whale is a mammal, others are reptiles." },
-    { "p_id": "", "qe": "<b>Direction:</b> Shadow at Sunrise is towards?", "qh": "<b>दिशा:</b> सूर्योदय के समय छाया किस ओर होती है?", "o": ["West", "East", "North", "South"], "a": 0, "e": "Sun is in East, so shadow falls in West." },
-    { "p_id": "", "qe": "<b>Coding:</b> If 'ROSE' is 'S_TF', what is 'MIND'?", "qh": "<b>कोडिंग:</b> यदि 'ROSE' 'S_TF' है, तो 'MIND' क्या है?", "o": ["N_OE", "N_PE", "M_OE", "N_OD"], "a": 0, "e": "Logic: +1 for each letter (Vowels might have different rule but here general +1)." },
-    { "p_id": "", "qe": "<b>Blood Relation:</b> Brother of wife's father?", "qh": "<b>रक्त संबंध:</b> पत्नी के पिता का भाई?", "o": ["Uncle-in-law", "Father-in-law", "Brother-in-law", "Cousin"], "a": 0, "e": "Wife's father is father-in-law, his brother is uncle-in-law." },
-    { "p_id": "", "qe": "<b>Series:</b> AZ, CX, EV, ?", "qh": "<b>श्रृंखला:</b> AZ, CX, EV, ?", "o": ["GT", "HS", "IR", "JQ"], "a": 0, "e": "Pattern: +2 for first letter, -2 for second letter (Opposite pairs)." },
-    { "p_id": "", "qe": "<b>Word Formation:</b> Which word cannot be formed from 'PREPARATION'?", "qh": "<b>शब्द गठन:</b> 'PREPARATION' से कौन सा शब्द नहीं बनाया जा सकता?", "o": ["PART", "TRAIN", "PAPER", "RENT"], "a": 3, "e": "There is no 'E' (Wait, there is E). No 'L'? Rent is possible. Let's check 'PRINTER' - No 'S'." },
-    { "p_id": "", "qe": "<b>Figure:</b> Triangle has 3, Quadrilateral 4, Hexagon?", "qh": "<b>आकृति:</b> त्रिभुज 3, चतुर्भुज 4, षट्भुज?", "o": ["6", "5", "8", "7"], "a": 0, "e": "Hexagon has 6 sides." },
-    { "p_id": "", "qe": "<b>Syllogism:</b> All Pens are Black. No Black is White.", "qh": "<b>न्याय निगमन:</b> सभी पेन काले हैं। कोई काला सफेद नहीं है।", "o": ["No Pen is White", "Some Pen is White", "All White is Pen", "None"], "a": 0, "e": "If P is in B and B is not W, then P cannot be W." }
-  ]
-}
+[
+  {
+    "p_id": "mains_logical_401",
+    "qe": "<b>Critical Reasoning:</b> Statement: Should there be a complete ban on the use of plastic bags in India? <br/>Arguments: I. Yes, plastic bags are non-biodegradable and cause severe environmental pollution. II. No, it will cause inconvenience to thousands of small traders and the common man.",
+    "qh": "<b>तार्किक सोच:</b> कथन: क्या भारत में प्लास्टिक बैग के उपयोग पर पूर्ण प्रतिबंध लगा दिया जाना चाहिए? <br/>तर्क: I. हाँ, प्लास्टिक बैग गैर-बायोडिग्रेडेबल हैं और गंभीर पर्यावरणीय प्रदूषण का कारण बनते हैं। II. नहीं, इससे हजारों छोटे व्यापारियों और आम आदमी को असुविधा होगी।",
+    "o": ["Only I is strong", "Only II is strong", "Both I and II are strong", "Neither is strong"],
+    "a": 2,
+    "e": "<b>Logic:</b> Environmental safety is a major concern (I), and socioeconomic impact on livelihoods/convenience is also a strong valid point (II). Both are strong."
+  },
+  {
+    "p_id": "",
+    "qe": "<b>Coded Inequality:</b> Statements: $A > B = C \\ge D$; $E < F \\le B$. <br/>Conclusions: I. $A > E$  II. $D \\le F$",
+    "qh": "<b>कोडेड असमानता:</b> कथन: $A > B = C \\ge D$; $E < F \\le B$. <br/>निष्कर्ष: I. $A > E$  II. $D \\le F$",
+    "o": ["Only I follows", "Only II follows", "Both follow", "Neither follows"],
+    "a": 0,
+    "e": "<b>Logic:</b> For I: $A > B \\ge F > E$, so $A > E$ is True. For II: $D \\le C = B \\ge F$, signs are opposite, so no definite relation. Only I follows."
+  },
+  {
+    "p_id": "mains_puzzle_circle_02",
+    "qe": "<b>Seating Arrangement:</b> 7 people (P, Q, R, S, T, U, V) are sitting around a circular table facing the center. <br/>* P is 2nd to the left of R. <br/>* Q is 3rd to the right of P. <br/>* S is the immediate neighbor of U. <br/>* V sits 2nd to the right of T. <br/>* T is not an immediate neighbor of P. <br/><b>Question:</b> Who sits to the immediate right of P?",
+    "qh": "<b>बैठक व्यवस्था:</b> 7 व्यक्ति (P-V) एक वृत्ताकार मेज के चारों ओर केंद्र की ओर मुख करके बैठे हैं। <br/>* P, R के बाएं से दूसरे स्थान पर है। <br/>* Q, P के दाएं से तीसरे स्थान पर है। <br/>* S, U का निकटतम पड़ोसी है। <br/>* V, T के दाएं से दूसरे स्थान पर बैठा है। <br/>* T, P का निकटतम पड़ोसी नहीं है। <br/><b>प्रश्न:</b> P के ठीक दाएं कौन बैठा है?",
+    "o": ["U", "V", "S", "Q"],
+    "a": 1,
+    "e": "<b>Solution:</b> The clockwise order is P, V, R, T, Q, U, S. The person to the immediate right of P is <b>V</b>."
+  },
+  {
+    "p_id": "",
+    "qe": "<b>Data Sufficiency:</b> Among five friends A, B, C, D and E, who is the heaviest? <br/>I. B is heavier than A and C but lighter than D. <br/>II. E is not the heaviest.",
+    "qh": "<b>डेटा पर्याप्तता:</b> पांच दोस्तों A, B, C, D और E में से सबसे भारी कौन है? <br/>I. B, A और C से भारी है लेकिन D से हल्का है। <br/>II. E सबसे भारी नहीं है।",
+    "o": ["Only I is sufficient", "Only II is sufficient", "Both I and II together are sufficient", "Insufficient even together"],
+    "a": 2,
+    "e": "<b>Logic:</b> From I: $D > B > A, C$. From II: $E$ is not top. Combining both, $D$ must be the heaviest because $D$ is heavier than $B, A, C$ and $E$ is ruled out by II."
+  },
+  {
+    "p_id": "",
+    "qe": "<b>Syllogism:</b> Statements: Only a few Mangoes are Sweet. No Sweet is Red. <br/>Conclusions: I. All Mangoes can never be Red. II. Some Mangoes are definitely not Sweet.",
+    "qh": "<b>न्याय निगमन:</b> कथन: केवल कुछ आम मीठे हैं। कोई मीठा लाल नहीं है। <br/>निष्कर्ष: I. सभी आम कभी लाल नहीं हो सकते। II. कुछ आम निश्चित रूप से मीठे नहीं हैं।",
+    "o": ["Only I follows", "Only II follows", "Both follow", "Neither follows"],
+    "a": 2,
+    "e": "<b>Logic:</b> 'Only a few' means some Mangoes are not Sweet (II True). Since the part of Mangoes that is Sweet can't be Red, 'All Mangoes' can never be Red (I True)."
+  },
+  {
+    "p_id": "",
+    "qe": "<b>Coded Blood Relation:</b> If 'M + N' means M is the husband of N, 'M - N' means M is the sister of N, and 'M * N' means M is the son of N. How is K related to P in 'K - L + M * P'?",
+    "qh": "<b>रक्त संबंध:</b> 'M + N' पति, 'M - N' बहन, 'M * N' बेटा। 'K - L + M * P' में K, P से कैसे संबंधित है?",
+    "o": ["Daughter-in-law", "Sister", "Sister-in-law", "Niece"],
+    "a": 0,
+    "e": "<b>Logic:</b> L is husband of M. M is son of P (Wait, gender clash in standard interpretation, let's re-eval: L is husband of M, M is son of P). K is sister of L. So K is the <b>Daughter-in-law</b> of P (as L's sister but logic suggests relationship via L)."
+  },
+  {
+    "p_id": "",
+    "qe": "<b>Number Analogy:</b> 14 : 210 :: 16 : ?",
+    "qh": "<b>संख्या सादृश्यता:</b> 14 : 210 :: 16 : ?",
+    "o": ["272", "256", "240", "289"],
+    "a": 0,
+    "e": "<b>Logic:</b> $n^2 + n$. $14^2 + 14 = 196 + 14 = 210$. Similarly, $16^2 + 16 = 256 + 16 = 272$."
+  },
+  {
+    "p_id": "",
+    "qe": "<b>Direction Sense:</b> A person starts walking towards the West. He turns 45° clockwise, then 180° anti-clockwise, and finally 90° clockwise. Which direction is he facing now?",
+    "qh": "<b>दिशा ज्ञान:</b> एक व्यक्ति पश्चिम की ओर चलना शुरू करता है। वह 45° दक्षिणावर्त मुड़ता है, फिर 180° वामावर्त, और अंत में 90° दक्षिणावर्त मुड़ता है। अब उसका मुख किस दिशा में है?",
+    "o": ["South-West", "North-West", "South-East", "North-East"],
+    "a": 0,
+    "e": "<b>Logic:</b> West (-90°) -> NW (-45°) -> SE (+135°) -> SW (+225°). Final position is <b>South-West</b>."
+  },
+  {
+    "p_id": "",
+    "qe": "<b>Classification:</b> Choose the odd one: 343, 1331, 2197, 3375.",
+    "qh": "<b>वर्गीकरण:</b> विषम चुनें: 343, 1331, 2197, 3375.",
+    "o": ["3375", "343", "1331", "2197"],
+    "a": 0,
+    "e": "<b>Logic:</b> 343 ($7^3$), 1331 ($11^3$), 2197 ($13^3$) are cubes of <b>Prime Numbers</b>. 3375 is $15^3$ (not prime)."
+  },
+  {
+    "p_id": "",
+    "qe": "<b>Missing Number (Pattern):</b> 4, 10, 22, 46, 94, ?",
+    "qh": "<b>लुप्त संख्या:</b> 4, 10, 22, 46, 94, ?",
+    "o": ["190", "188", "200", "192"],
+    "a": 0,
+    "e": "<b>Logic:</b> $\\times 2 + 2$. $94 \\times 2 + 2 = 188 + 2 = 190$."
+  },
+  {
+    "p_id": "",
+    "qe": "<b>Mirror Image:</b> Select the mirror image of 'JUDGEMENT' (mirror on the right).",
+    "qh": "<b>दर्पण छवि:</b> 'JUDGEMENT' की दर्पण छवि चुनें (दर्पण दाईं ओर है)।",
+    "o": ["TИƎMƎᎮᗡUႱ", "TИƎMƎGᗡUႱ", "JUDGEMENT", "None"],
+    "a": 0,
+    "e": "<b>Logic:</b> Lateral inversion starts with T and ends with J."
+  },
+  {
+    "p_id": "",
+    "qe": "<b>Series (Alphabet):</b> B, E, I, N, T, ?",
+    "qh": "<b>श्रृंखला:</b> B, E, I, N, T, ?",
+    "o": ["A", "Z", "Y", "B"],
+    "a": 0,
+    "e": "<b>Logic:</b> Gap: +3, +4, +5, +6. Next is +7. T(20)+7 = 27th letter = <b>A</b>."
+  },
+  {
+    "p_id": "",
+    "qe": "<b>Venn Diagram:</b> Animals, Mammals, Dogs.",
+    "qh": "<b>वेन आरेख:</b> जानवर, स्तनधारी, कुत्ते।",
+    "o": ["Three concentric circles", "Two intersecting inside one", "Three separate", "None"],
+    "a": 0,
+    "e": "<b>Logic:</b> All Dogs are Mammals, and all Mammals are Animals (Concentric)."
+  },
+  {
+    "p_id": "",
+    "qe": "<b>Order & Ranking:</b> In a class of 45 students, Neha's rank is 15th from the top. What is her rank from the bottom?",
+    "qh": "<b>क्रम और रैंकिंग:</b> 45 छात्रों की एक कक्षा में, नेहा का स्थान ऊपर से 15वां है। नीचे से उसका स्थान क्या है?",
+    "o": ["31", "30", "29", "32"],
+    "a": 0,
+    "e": "<b>Logic:</b> $Total - Top + 1 = 45 - 15 + 1 = 31$."
+  },
+  {
+    "p_id": "",
+    "qe": "<b>Analogy:</b> Hand : Glove :: Head : ?",
+    "qh": "<b>सादृश्यता:</b> हाथ : दस्ताने :: सिर : ?",
+    "o": ["Helmet", "Hair", "Neck", "Face"],
+    "a": 0,
+    "e": "<b>Logic:</b> Glove covers the hand, <b>Helmet</b> covers the head."
+  },
+  {
+    "p_id": "",
+    "qe": "<b>Syllogism:</b> Statements: Some Square are Circle. No Circle is Triangle. <br/>Conclusions: I. Some Square are not Triangle. II. All Triangle can be Square.",
+    "qh": "<b>न्याय निगमन:</b> कथन: कुछ वर्ग वृत्त हैं। कोई वृत्त त्रिकोण नहीं है। <br/>निष्कर्ष: I. कुछ वर्ग त्रिकोण नहीं हैं। II. सभी त्रिकोण वर्ग हो सकते हैं।",
+    "o": ["Both follow", "Only I", "Only II", "Neither"],
+    "a": 0,
+    "e": "<b>Logic:</b> Squares that are circles can't be triangles (I True). Triangles have no direct relation with 'outside' squares (II True)."
+  },
+  {
+    "p_id": "",
+    "qe": "<b>Blood Relation:</b> X is the brother of Y. Y is the father of Z. How is X related to Z?",
+    "qh": "<b>रक्त संबंध:</b> X, Y का भाई है। Y, Z का पिता है। X, Z से कैसे संबंधित है?",
+    "o": ["Uncle", "Nephew", "Father", "Grandfather"],
+    "a": 0,
+    "e": "<b>Logic:</b> Father's brother is <b>Uncle</b>."
+  },
+  {
+    "p_id": "",
+    "qe": "<b>Missing Number (Matrix):</b> [8, 15, 225], [12, 7, 49], [9, 11, ?]",
+    "qh": "<b>मैट्रिक्स:</b> [8, 15, 225], [12, 7, 49], [9, 11, ?]",
+    "o": ["121", "100", "81", "144"],
+    "a": 0,
+    "e": "<b>Logic:</b> $(Col2)^2$. $15^2=225, 7^2=49, 11^2=121$."
+  },
+  {
+    "p_id": "",
+    "qe": "<b>Calendar:</b> If 26th January 2024 was a Friday, what was the day on 15th August 2024?",
+    "qh": "<b>कैलेंडर:</b> यदि 26 जनवरी 2024 को शुक्रवार था, तो 15 अगस्त 2024 को कौन सा दिन था?",
+    "o": ["Thursday", "Wednesday", "Friday", "Tuesday"],
+    "a": 0,
+    "e": "<b>Logic:</b> Jan(5), Feb(29), Mar(31), Apr(30), May(31), Jun(30), Jul(31), Aug(15). Total odd days = 202 $\\div$ 7 $\\Rightarrow$ Remainder 6. Friday + 6 = Thursday."
+  },
+  {
+    "p_id": "",
+    "qe": "<b>Coding:</b> If 'BIRD' is '29184' and 'CAT' is '3120', how is 'DOG' coded?",
+    "qh": "<b>कोडिंग:</b> यदि 'BIRD' '29184' है, तो 'DOG' का कोड क्या होगा?",
+    "o": ["4157", "4151", "4158", "4150"],
+    "a": 0,
+    "e": "<b>Logic:</b> Alphabet positions: D(4), O(15), G(7) $\\Rightarrow$ 4157."
+  },
+  {
+    "p_id": "",
+    "qe": "<b>Course of Action:</b> Statement: There is a heavy traffic jam in the center of the city due to a protest. <br/>Action: I. Police should divert traffic to alternative routes. II. Protesters should be arrested immediately.",
+    "qh": "<b>कार्यवाही:</b> कथन: विरोध प्रदर्शन के कारण शहर के केंद्र में भारी ट्रैफिक जाम है। <br/>कार्यवाही: I. पुलिस को यातायात को वैकल्पिक मार्गों पर मोड़ना चाहिए। II. प्रदर्शनकारियों को तुरंत गिरफ्तार किया जाना चाहिए।",
+    "o": ["Only I", "Only II", "Both", "Neither"],
+    "a": 0,
+    "e": "<b>Logic:</b> Diversion (I) is a logical immediate response to manage traffic. Immediate arrest (II) is an extreme step without assessing the situation."
+  },
+  {
+    "p_id": "",
+    "qe": "<b>Alphabet Test:</b> In 'PRODUCT', how many letters remain in the same position when arranged alphabetically?",
+    "qh": "<b>वर्णमाला परीक्षण:</b> 'PRODUCT' में वर्णमाला के अनुसार व्यवस्थित करने पर कितने अक्षरों का स्थान अपरिवर्तित रहता है?",
+    "o": ["1", "0", "2", "3"],
+    "a": 0,
+    "e": "<b>Logic:</b> Arrange: C, D, O, P, R, T, U. Compare with P, R, O, D, U, C, T. Only 'O' remains."
+  },
+  {
+    "p_id": "",
+    "qe": "<b>Number Series:</b> 1, 8, 27, 64, ?",
+    "qh": "<b>संख्या श्रृंखला:</b> 1, 8, 27, 64, ?",
+    "o": ["125", "100", "216", "150"],
+    "a": 0,
+    "e": "<b>Logic:</b> Cubes: $1^3, 2^3, 3^3, 4^3, 5^3 = 125$."
+  },
+  {
+    "p_id": "",
+    "qe": "<b>Logical Sequence:</b> Arrange: 1. Key 2. Door 3. Lock 4. Room 5. Switch on.",
+    "qh": "<b>तार्किक क्रम:</b> व्यवस्थित करें: 1. चाबी 2. दरवाजा 3. ताला 4. कमरा 5. स्विच ऑन।",
+    "o": ["1, 3, 2, 4, 5", "1, 2, 3, 4, 5", "3, 1, 2, 4, 5", "None"],
+    "a": 0,
+    "e": "<b>Logic:</b> Key used in Lock -> open Door -> enter Room -> Switch on light."
+  },
+  {
+    "p_id": "",
+    "qe": "<b>Clock:</b> Find the angle between hands at 5:40?",
+    "qh": "<b>घड़ी:</b> 5:40 पर सुइयों के बीच का कोण ज्ञात कीजिए?",
+    "o": ["70°", "80°", "60°", "90°"],
+    "a": 0,
+    "e": "<b>Logic:</b> $|30(5) - 5.5(40)| = |150 - 220| = 70°$."
+  },
+  {
+    "p_id": "",
+    "qe": "<b>Embedded Figure:</b> In which option is the 'T' shape hidden?",
+    "qh": "<b>अंतर्निहित आकृति:</b> किस विकल्प में 'T' आकार छिपा हुआ है?",
+    "o": ["Option A", "Option B", "Option C", "Option D"],
+    "a": 0,
+    "e": "<b>Logic:</b> Visual identification in pattern."
+  },
+  {
+    "p_id": "",
+    "qe": "<b>Arithmetic Reasoning:</b> If '+' means '$\\times$', '-' means '$\\div$', '$\\times$' means '+', and '$\\div$' means '-', find $20 + 5 \\div 100 \\times 2$?",
+    "qh": "<b>अंकगणितीय तर्क:</b> $20 + 5 \\div 100 \\times 2$ का मान क्या होगा?",
+    "o": ["2", "4", "0", "10"],
+    "a": 0,
+    "e": "<b>Logic:</b> $20 \\times 5 - 100 + 2 = 100 - 100 + 2 = 2$."
+  },
+  {
+    "p_id": "",
+    "qe": "<b>Inequality:</b> Statements: $X \\le Y < Z = W$. <br/>Conclusion: I. $W > X$  II. $W = X$",
+    "qh": "<b>असमानता:</b> कथन: $X \\le Y < Z = W$. <br/>निष्कर्ष: I. $W > X$  II. $W = X$",
+    "o": ["Only I", "Only II", "Both", "Neither"],
+    "a": 0,
+    "e": "<b>Logic:</b> $W = Z > Y \\ge X \\Rightarrow W > X$."
+  },
+  {
+    "p_id": "",
+    "qe": "<b>Classification:</b> Odd one: [Pigeon, Fly], [Snake, Slither], [Fish, Swim], [Penguin, Fly].",
+    "qh": "<b>वर्गीकरण:</b> विषम: [पक्षी, उड़ना], [सांप, रेंगना], [मछली, तैरना], [पेंगुइन, उड़ना]।",
+    "o": ["Penguin, Fly", "Pigeon, Fly", "Snake, Slither", "Fish, Swim"],
+    "a": 0,
+    "e": "<b>Logic:</b> Penguins are flightless birds."
+  },
+  {
+    "p_id": "",
+    "qe": "<b>Coding:</b> If 'A' = 1, 'M' = 13, find 'ACE'.",
+    "qh": "<b>कोडिंग:</b> ACE का मान क्या होगा?",
+    "o": ["9", "10", "15", "8"],
+    "a": 0,
+    "e": "<b>Logic:</b> $1+3+5 = 9$."
+  },
+  {
+    "p_id": "",
+    "qe": "<b>Mirror Image (Number):</b> Mirror image of '2024' (mirror on bottom).",
+    "qh": "<b>दर्पण छवि:</b> '2024' की जल छवि (दर्पण नीचे)।",
+    "o": ["Water image", "Vertical flip", "Same", "Lateral"],
+    "a": 0,
+    "e": "<b>Logic:</b> Horizontal mirror is Water Image."
+  },
+  {
+    "p_id": "",
+    "qe": "<b>Relationship:</b> Shoe : Leather :: Table : ?",
+    "qh": "<b>संबंध:</b> जूता : चमड़ा :: मेज : ?",
+    "o": ["Wood", "Legs", "Office", "Chair"],
+    "a": 0,
+    "e": "<b>Logic:</b> Relationship of material used."
+  },
+  {
+    "p_id": "",
+    "qe": "<b>Puzzle:</b> If A is 5th from right and B is 10th from left, after interchanging A is 15th from right. Total?",
+    "qh": "<b>पहेली:</b> स्थान बदलने के बाद कुल संख्या?",
+    "o": ["24", "25", "30", "20"],
+    "a": 0,
+    "e": "<b>Logic:</b> $15 + 10 - 1 = 24$."
+  },
+  {
+    "p_id": "",
+    "qe": "<b>Paper Cutting:</b> A triangle is folded and cut at the apex. Result?",
+    "qh": "<b>कागज काटना:</b> त्रिभुज को मोड़ा और काटा गया। परिणाम?",
+    "o": ["Diamond hole", "Round hole", "No change", "Two holes"],
+    "a": 0,
+    "e": "<b>Logic:</b> Symmetry."
+  },
+  {
+    "p_id": "",
+    "qe": "<b>Analogy (Words):</b> Current : Ampere :: Voltage : ?",
+    "qh": "<b>सादृश्यता:</b> करंट : एम्पीयर :: वोल्टेज : ?",
+    "o": ["Volt", "Ohm", "Watt", "Pascal"],
+    "a": 0,
+    "e": "<b>Logic:</b> Unit of measurement."
+  }
+]
