@@ -56,10 +56,10 @@
     "qe": "For an electrochemical cell characterized by the shorthand notation $\\text{Cu} \\mid \\text{Cu}^{2+} \\parallel \\text{Cl}^- \\mid \\text{Cl}_2, \\text{Pt}$, which specific half-reactions proceed at the anode and cathode respectively?",
     "qh": "$\\text{Cu} \\mid \\text{Cu}^{2+} \\parallel \\text{Cl}^- \\mid \\text{Cl}_2, \\text{Pt}$ द्वारा दर्शाए गए इलेक्ट्रोकेमिकल सेल के लिए, क्रमशः एनोड और कैथोड पर कौन सी विशिष्ट हाफ-प्रतिक्रियाएं आगे बढ़ती हैं?",
     "o": [
-      "$\text{Anode: } \text{Cl}_2 + 2e^- \\rightarrow 2\text{Cl}^- ; \, \text{Cathode: } \text{Cu} \\rightarrow \text{Cu}^{2+} + 2e^-$",
-      "$\text{Anode: } \text{Cu} \\rightarrow \text{Cu}^{2+} + 2e^- ; \, \text{Cathode: } \text{Cl}_2 + 2e^- \\rightarrow 2\text{Cl}^-$ (एनोड एवं कैथोड हाफ-अभिक्रियाएं)",
-      "$\text{Anode: } 2\text{H}_2\text{O} \\rightarrow \text{O}_2 + 4\text{H}^+ + 4e^- ; \, \text{Cathode: } \text{Na}^+ + e^- \\rightarrow \text{Na}$",
-      "$\text{Anode: } \text{Cu} + \text{Cl}_2 \\rightarrow \text{Cu}^{2+} + 2\text{Cl}^- ; \, \text{Cathode: } 0\\text{ V}$"
+      "$\text{Anode: } \text{Cl}_2 + 2e^- \\rightarrow 2\text{Cl}^- ; \\, \text{Cathode: } \text{Cu} \\rightarrow \text{Cu}^{2+} + 2e^-$",
+      "$\text{Anode: } \text{Cu} \\rightarrow \text{Cu}^{2+} + 2e^- ; \\, \text{Cathode: } \text{Cl}_2 + 2e^- \\rightarrow 2\text{Cl}^-$ (एनोड एवं कैथोड हाफ-अभिक्रियाएं)",
+      "$\text{Anode: } 2\text{H}_2\text{O} \\rightarrow \text{O}_2 + 4\text{H}^+ + 4e^- ; \\, \text{Cathode: } \text{Na}^+ + e^- \\rightarrow \text{Na}$",
+      "$\text{Anode: } \text{Cu} + \text{Cl}_2 \\rightarrow \text{Cu}^{2+} + 2\text{Cl}^- ; \\, \text{Cathode: } 0\\text{ V}$"
     ],
     "a": 1,
     "e": "<b>Explanation:</b> In a standard cell representation, the left hand side tracks the anode compartment where oxidation occurs: $\\text{Cu}(s) \\rightarrow \\text{Cu}^{2+}(aq) + 2e^-$. The right hand side tracks the cathode where reduction takes place: \\text{Cl}_2(g) + 2e^- \\rightarrow 2\\text{Cl}^-(aq)."
@@ -127,7 +127,7 @@
       "Volt ($\\text{V}$)"
     ],
     "a": 1,
-    "e": "<b>Explanation:</b> The cell constant ($G^*$) represents the geometric ratio of electrode separation length ($\ell$) to cross-sectional area ($A$). Calculating this ratio ($\text{cm}/\text{cm}^2$) yields the standard inverse length units: $\text{cm}^{-1}$ or $\text{m}^{-1}$."
+    "e": "<b>Explanation:</b> The cell constant ($G^*$) represents the geometric ratio of electrode separation length ($\\ell$) to cross-sectional area ($A$). Calculating this ratio ($\text{cm}/\text{cm}^2$) yields the standard inverse length units: $\text{cm}^{-1}$ or $\text{m}^{-1}$."
   },
   {
     "p_id": "bpsc_chem_v4_301",
@@ -192,7 +192,7 @@
       "$\\kappa = \\frac{R}{G^*}$"
     ],
     "a": 1,
-    "e": "<b>Explanation:</b> Specific conductivity ($\kappa$) measures current-carrying throughput per unit volume. It is defined mathematically as the ratio of the fixed cell constant ($G^*$) to the measured electrical resistance ($R$): $\\kappa = G^*/R$."
+    "e": "<b>Explanation:</b> Specific conductivity ($\\kappa$) measures current-carrying throughput per unit volume. It is defined mathematically as the ratio of the fixed cell constant ($G^*$) to the measured electrical resistance ($R$): $\\kappa = G^*/R$."
   },
   {
     "p_id": "bpsc_chem_v4_306",
