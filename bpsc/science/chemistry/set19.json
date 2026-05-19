@@ -1,0 +1,392 @@
+[
+  {
+    "p_id": "bpsc_chem_v4_261",
+    "qe": "Which specific configuration of an electrochemical cell will accurately measure the standard electrode potential of a copper electrode ($E^\\circ_{\\text{Cu}^{2+}/\\text{Cu}}$)?",
+    "qh": "इलेक्ट्रोकेमिकल सेल का कौन सा विशिष्ट विन्यास कॉपर इलेक्ट्रोड के मानक इलेक्ट्रोड विभव ($E^\\circ_{\\text{Cu}^{2+}/\\text{Cu}}$) को सटीक रूप से मापेगा?",
+    "o": [
+      "$\\text{Pt}(s) \\mid \\text{H}_2(g, 0.1\\text{ bar}) \\mid \\text{H}^+(aq, 1\\text{ M}) \\parallel \\text{Cu}^{2+}(aq, 1\\text{ M}) \\mid \\text{Cu}$",
+      "$\\text{Pt}(s) \\mid \\text{H}_2(g, 1\\text{ bar}) \\mid \\text{H}^+(aq, 1\\text{ M}) \\parallel \\text{Cu}^{2+}(aq, 2\\text{ M}) \\mid \\text{Cu}$",
+      "$\\text{Pt}(s) \\mid \\text{H}_2(g, 1\\text{ bar}) \\mid \\text{H}^+(aq, 1\\text{ M}) \\parallel \\text{Cu}^{2+}(aq, 1\\text{ M}) \\mid \\text{Cu}$",
+      "$\\text{Pt}(s) \\mid \\text{H}_2(g, 0.1\\text{ bar}) \\mid \\text{H}^+(aq, 0.1\\text{ M}) \\parallel \\text{Cu}^{2+}(aq, 1\\text{ M}) \\mid \\text{Cu}$"
+    ],
+    "a": 2,
+    "e": "<b>Explanation:</b> To measure the standard electrode potential of a copper electrode, it must be paired with a Standard Hydrogen Electrode (SHE). By definition, all reacting ionic concentrations must be exactly 1 M and gas pressures must be balanced at 1 bar, rendering the measured cell potential equal to the standard electrode potential."
+  },
+  {
+    "p_id": "bpsc_chem_v4_262",
+    "qe": "The Nernst equation for a magnesium electrode is written as $E = E^\\circ - \\frac{0.059}{2}\\log\\frac{1}{[\\text{Mg}^{2+}]}$. What type of graph describes the dynamic variation of $E$ versus $\\log[\\text{Mg}^{2+}]$?",
+    "qh": "एक मैग्नीशियम इलेक्ट्रोड के लिए नर्स्ट समीकरण $E = E^\\circ - \\frac{0.059}{2}\\log\\frac{1}{[\\text{Mg}^{2+}]}$ है। $E$ बनाम $\\log[\\text{Mg}^{2+}]$ के गतिशील परिवर्तन को किस प्रकार का ग्राफ दर्शाता है?",
+    "o": [
+      "A straight line with a negative slope and zero intercept",
+      "A straight line with a positive slope equal to $\\frac{0.059}{2}$ and a positive intercept equal to $E^\\circ$ (धनात्मक ढाल वाली सीधी रेखा)",
+      "A curved parabolic line approaching horizontal absolute thresholds",
+      "A strictly horizontal line running completely independent of concentration changes"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Rearranging the equation yields $E = \\left(\\frac{0.059}{2}\\right)\\log[\\text{Mg}^{2+}] + E^\\circ$. This matches the equation of a straight line ($y = mx + c$). Plotting $E$ vs $\\log[\\text{Mg}^{2+}]$ yields a straight line with a positive slope ($m = 0.0295\\text{ V}$) and an intercept ($c$) equal to $E^\\circ$."
+  },
+  {
+    "p_id": "bpsc_chem_v4_263",
+    "qe": "How are the cell potential ($E_{\\text{cell}}$) and the Gibbs free energy change ($\\Delta_r G$) categorized based on thermodynamic definitions of property scale?",
+    "qh": "थर्मोडायनामिक परिभाषाओं के आधार पर सेल विभव ($E_{\\text{cell}}$) और गिब्स मुक्त ऊर्जा परिवर्तन ($\\Delta_r G$) को संपत्ति पैमाने (property scale) के अनुसार कैसे वर्गीकृत किया जाता है?",
+    "o": [
+      "Both are extensive properties scaling with mass indexes",
+      "Both are intensive properties independent of concentration loops",
+      "$E_{\\text{cell}}$ is an intensive property, while $\\Delta_r G$ is an extensive property ($E_{cell}$ गहन गुण तथा $\\Delta_r G$ विस्तीर्ण गुण है)",
+      "$E_{\\text{cell}}$ is an extensive property, while $\\Delta_r G$ is an intensive property"
+    ],
+    "a": 2,
+    "e": "<b>Explanation:</b> Cell potential ($E_{\\text{cell}}$) is an intensive property because its voltage value is independent of the amount of substance or the scale of the system. Conversely, the Gibbs free energy change ($\\Delta_r G$) is extensive because its absolute energy output depends directly on the number of moles of reacting species ($n$)."
+  },
+  {
+    "p_id": "bpsc_chem_v4_264",
+    "qe": "What precise descriptive terminology defines the potential difference developed between two electrodes when zero net electrical current is being drawn from the cell circuit?",
+    "qh": "जब सेल सर्किट से कोई शुद्ध विद्युत धारा नहीं खींची जा रही हो, तो दो इलेक्ट्रोडों के बीच विकसित संभावित अंतर को कौन सी सटीक वर्णनात्मक शब्दावली परिभाषित करती है?",
+    "o": [
+      "Dynamic cell voltage",
+      "Cell Electromotive Force (Cell EMF / सेल विद्युत वाहक बल)",
+      "Vinylic structural overpotential",
+      "Oligomeric internal resistance"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> The potential difference between two half-cells measured under open-circuit conditions (when no external current flows through the setup) is formally defined as the cell electromotive force (EMF)."
+  },
+  {
+    "p_id": "bpsc_chem_v4_265",
+    "qe": "Which operational characteristic is true regarding the function of an inert electrode (such as platinum) inside an electrochemical cell?",
+    "qh": "एक इलेक्ट्रोकेमिकल सेल के भीतर एक अक्रिय इलेक्ट्रोड (जैसे प्लैटिनम) के कार्य के संबंध में कौन सी परिचालन विशेषता सत्य है?",
+    "o": [
+      "It dissolves into the electrolyte to participate directly in the cell reaction",
+      "It provides a surface layer either for oxidation or reduction reactions by facilitating electron conduction without undergoing chemical change (केवल इलेक्ट्रॉन चालन के लिए सतह प्रदान करना)",
+      "It functions as an active cross-linking agent that hardens the solution",
+      "It provides a surface layer for a full simultaneous redox reaction across its face"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> An inert electrode does not enter the net chemical reaction or undergo oxidation/reduction. It serves purely as an unreactive electronic conductor that provides a structural surface for single electron exchange steps."
+  },
+  {
+    "p_id": "bpsc_chem_v4_266",
+    "qe": "Under what structural conditions will a standard Galvanic cell alter its behavior to function as an electrolytic cell?",
+    "qh": "किन संरचनात्मक स्थितियों में एक मानक गैल्वेनिक सेल एक इलेक्ट्रोलाइटिक सेल के रूप में कार्य करने के लिए अपने व्यवहार को बदल देगा?",
+    "o": [
+      "When the internal cell potential drops exactly to zero volts",
+      "When an external opposing voltage exceeds the native cell potential value ($E_{\\text{ext}} > E_{\\text{cell}}$) ($E_{ext} > E_{cell}$ होने पर)",
+      "When the concentration of the electrolyte reaches absolute infinity",
+      "When the salt bridge is completely removed from the compartment setup"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> If an opposing external potential ($E_{\\text{ext}}$) is applied to a Galvanic cell and increased beyond the cell's native potential ($E_{\\text{cell}}$), the net current is forced to flow in the opposite direction. This drives non-spontaneous reactions, transforming it into an electrolytic cell."
+  },
+  {
+    "p_id": "bpsc_chem_v4_267",
+    "qe": "Which factor is incorrectly described regarding its physical influence over the electrical conductivity of an electrolytic solution?",
+    "qh": "एक इलेक्ट्रोलाइटिक समाधान की विद्युत चालकता पर उसके भौतिक प्रभाव के संबंध में कौन सा कारक गलत तरीके से वर्णित है?",
+    "o": [
+      "Conductivity is dependent on the size and mobility of the moving ions",
+      "Conductivity drops significantly when the system operational temperature is raised (तापमान बढ़ने पर चालकता घटने का कथन गलत है)",
+      "Conductivity decreases when the internal viscosity of the solvent expands",
+      "Conductivity is influenced by the degree of solvation anchoring the ions"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> The electrical conductivity of an electrolytic solution expands as temperature rises because higher kinetic energy enhances ion mobility and lowers solvent viscosity. Therefore, stating that conductivity decreases with temperature is incorrect."
+  },
+  {
+    "p_id": "bpsc_chem_v4_268",
+    "qe": "Based on the standard reduction potentials provided: $E^\\circ_{\\text{Cr}_2\\text{O}_7^{2-}/\\text{Cr}^{3+}} = 1.33\\text{ V}$, $E^\\circ_{\\text{Cl}_2/\\text{Cl}^-} = 1.36\\text{ V}$, $E^\\circ_{\\text{MnO}_4^-/\\text{Mn}^{2+}} = 1.51\\text{ V}$, $E^\\circ_{\\text{Cr}^{3+}/\\text{Cr}} = -0.74\\text{ V}$. Which chemical species functions as the strongest reducing agent?",
+    "qh": "दिए गए मानक अपचयन विभवों के आधार पर: $E^\\circ_{\\text{Cr}_2\\text{O}_7^{2-}/\\text{Cr}^{3+}} = 1.33\\text{ V}$, $E^\\circ_{\\text{Cl}_2/\\text{Cl}^-} = 1.36\\text{ V}$, $E^\\circ_{\\text{MnO}_4^-/\\text{Mn}^{2+}} = 1.51\\text{ V}$, $E^\\circ_{\\text{Cr}^{3+}/\\text{Cr}} = -0.74\\text{ V}$। कौन सी रासायनिक प्रजाति सबसे मजबूत अपचायक के रूप में कार्य करती है?",
+    "o": [
+      "$\\text{Cl}^-$",
+      "$\\text{Cr}$ (क्रोमियम धातु)",
+      "$\\text{Cr}^{3+}$",
+      "$\\text{Mn}^{2+}$"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> The strongest reducing agent is the species that undergoes oxidation most easily, corresponding to the most negative standard reduction potential. Chromium metal ($\text{Cr}$) features the lowest reduction potential ($-0.74\text{ V}$), making it the strongest reducing agent listed."
+  },
+  {
+    "p_id": "bpsc_chem_v4_269",
+    "qe": "Using the data: $E^\\circ_{\\text{Cr}_2\\text{O}_7^{2-}/\\text{Cr}^{3+}} = 1.33\\text{ V}$, $E^\\circ_{\\text{Cl}_2/\\text{Cl}^-} = 1.36\\text{ V}$, $E^\\circ_{\\text{MnO}_4^-/\\text{Mn}^{2+}} = 1.51\\text{ V}$, $E^\\circ_{\\text{Cr}^{3+}/\\text{Cr}} = -0.74\\text{ V}$. Identify the strongest oxidizing agent in this group.",
+    "qh": "डेटा का उपयोग करके: $E^\\circ_{\\text{Cr}_2\\text{O}_7^{2-}/\\text{Cr}^{3+}} = 1.33\\text{ V}$, $E^\\circ_{\\text{Cl}_2/\\text{Cl}^-} = 1.36\\text{ V}$, $E^\\circ_{\\text{MnO}_4^-/\\text{Mn}^{2+}} = 1.51\\text{ V}$, $E^\\circ_{\\text{Cr}^{3+}/\\text{Cr}} = -0.74\\text{ V}$। इस समूह में सबसे मजबूत ऑक्सीकरण एजेंट की पहचान करें।",
+    "o": [
+      "$\\text{Cl}_2$",
+      "$\\text{Cr}^{3+}$",
+      "$\\text{MnO}_4^-$ (परमैंगनेट आयन)",
+      "$\\text{Cr}_2\\text{O}_7^{2-}$"
+    ],
+    "a": 2,
+    "e": "<b>Explanation:</b> The strongest oxidizing agent is the species that has the highest tendency to undergo reduction, which corresponds to the largest positive standard reduction potential value. The perpermanganate ion ($\\text{MnO}_4^-$) has the highest value ($1.51\\text{ V}$), making it the strongest oxidizing agent."
+  },
+  {
+    "p_id": "bpsc_chem_v4_270",
+    "qe": "Reviewing the reduction data: $\\text{Mn}^{2+} (1.51\\text{ V})$, $\\text{Cl}_2 (1.36\\text{ V})$, $\\text{Cr}_2\\text{O}_7^{2-} (1.33\\text{ V})$, and $\\text{Cr}^{3+} (-0.74\\text{ V})$, which option correctly sequences the increasing order of reducing power across these species?",
+    "qh": "अपचयन डेटा की समीक्षा करते हुए: $\\text{Mn}^{2+} (1.51\\text{ V})$, $\\text{Cl}_2 (1.36\\text{ V})$, $\\text{Cr}_2\\text{O}_7^{2-} (1.33\\text{ V})$, और $\\text{Cr}^{3+} (-0.74\\text{ V})$, कौन सा विकल्प इन प्रजातियों में अपचायक क्षमता (reducing power) के बढ़ते क्रम को सही ढंग से दर्शाता है?",
+    "o": [
+      "$\\text{Cr}^{3+} < \\text{Cl}^- < \\text{Mn}^{2+} < \\text{Cr}$",
+      "$\\text{Mn}^{2+} < \\text{Cl}^- < \\text{Cr}^{3+} < \\text{Cr}$ (बढ़ती अपचायक क्षमता का सही क्रम)",
+      "$\\text{Cr}^{3+} < \\text{Cr}_2\\text{O}_7^{2-} < \\text{Cl}^- < \\text{MnO}_4^-$",
+      "$\\text{Mn}^{2+} < \\text{Cr}^{3+} < \\text{Cl}^- < \\text{Cr}$"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Reducing power is inversely proportional to the standard reduction potential. As the standard reduction potential decreases from positive values to negative values, the capacity of the species to act as a reducing agent increases, yielding the sequence: $\\text{Mn}^{2+} < \\text{Cl}^- < \\text{Cr}^{3+} < \\text{Cr}$."
+  },
+  {
+    "p_id": "bpsc_chem_v4_271",
+    "qe": "What quantitative magnitude of electrical charge is required to reduce exactly one mole of aluminum ions from an aqueous $\\text{Al}_2\\text{O}_3$ solution into solid aluminum?",
+    "qh": "जलीय $\\text{Al}_2\\text{O}_3$ घोल से बिल्कुल एक मोल एल्यूमीनियम आयनों को ठोस एल्यूमीनियम में अपचयित (reduce) करने के लिए विद्युत आवेश के किस मात्रात्मक परिमाण की आवश्यकता होती है?",
+    "o": [
+      "1 Faraday ($1\\text{ F}$)",
+      "6 Faradays ($6\\text{ F}$)",
+      "3 Faradays ($3\\text{ F}$ - तीन फैराडे आवेश)",
+      "2 Faradays ($2\\text{ F}$)"
+    ],
+    "a": 2,
+    "e": "<b>Explanation:</b> Reducing an aluminum ion involves the addition half-reaction: $\\text{Al}^{3+} + 3e^- \\rightarrow \\text{Al}(s)$. Reducing exactly 1 mole of $\\text{Al}^{3+}$ requires 3 moles of electrons, which is equivalent to 3 Faradays ($3\\text{ F}$) of electrical charge."
+  },
+  {
+    "p_id": "bpsc_chem_v4_272",
+    "qe": "How does the cell constant ($G^*$) of a specific commercial conductivity cell behave when changes are made to the electrolyte concentration or temperature parameters?",
+    "qh": "एक विशिष्ट वाणिज्यिक चालकता सेल का सेल स्थिरांक ($G^*$) कैसा व्यवहार करता है जब इलेक्ट्रोलाइट सांद्रता या तापमान मापदंडों में परिवर्तन किया जाता है?",
+    "o": [
+      "It shifts dynamically whenever the chemical nature of the electrolyte is altered",
+      "It changes linearly alongside modifications in solution temperature",
+      "It remains completely constant for a given cell because it depends strictly on fixed physical dimensions (स्थिर रहना)",
+      "It drops down to absolute zero value when high-purity water is introduced"
+    ],
+    "a": 2,
+    "e": "<b>Explanation:</b> The cell constant ($G^*$) is determined by the fixed physical dimensions of the cell, defined by the ratio of the distance between the electrodes to their area ($G^* = \\ell/A$). It is independent of electrolyte concentration, temperature, or chemical identity."
+  },
+  {
+    "p_id": "bpsc_chem_v4_273",
+    "qe": "What specific chemical transformation occurs at the anode when a depleted commercial lead storage battery is subjected to an external recharging cycle?",
+    "qh": "जब एक डिस्चार्ज हो चुकी वाणिज्यिक लेड स्टोरेज बैटरी को बाहरी रिचार्जिंग चक्र के अधीन किया जाता है तो एनोड पर कौन सा विशिष्ट रासायनिक परिवर्तन होता है?",
+    "o": [
+      "Solid $\\text{PbSO}_4$ is reduced to metallic $\\text{Pb}$ sheets",
+      "Solid $\\text{PbSO}_4$ is oxidized into solid lead dioxide ($\\text{PbO}_2$) bridges (अम्लीय एनोड पर $\\text{PbO}_2$ का बनना)",
+      "Liquid water splits into volatile open-chain carbohydrate networks",
+      "Metallic lead is completely dissolved into volatile open-chain sulfate gases"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> During the external recharging cycle of a lead storage battery, the cell reactions are reversed. The solid lead sulfate ($\text{PbSO}_4$) adhering to the anode undergoes oxidation, converting back into solid lead dioxide ($\text{PbO}_2$): $\text{PbSO}_4(s) + 2\text{H}_2\text{O} \\rightarrow \text{PbO}_2(s) + \text{SO}_4^{2-} + 4\text{H}^+ + 2e^-$."
+  },
+  {
+    "p_id": "bpsc_chem_v4_274",
+    "qe": "According to Kohlrausch's law of independent ion migration, the limiting molar conductivity of ammonium hydroxide [$\\Lambda^\\circ_m(\\text{NH}_4\\text{OH})$] can be calculated using which setup?",
+    "qh": "आयनों के स्वतंत्र प्रवासन के कोलराउश के नियम के अनुसार, अमोनियम हाइड्रॉक्साइड [$\\Lambda^\\circ_m(\\text{NH}_4\\text{OH})$] की सीमित मोलर चालकता की गणना किस सेटअप का उपयोग करके की जा सकती है?",
+    "o": [
+      "$\\Lambda^\\circ_m(\\text{NH}_4\\text{OH}) = \\Lambda^\\circ_m(\\text{NH}_4\\text{Cl}) + \\Lambda^\\circ_m(\\text{HCl}) - \\Lambda^\\circ_m(\\text{NaOH})$",
+      "$\\Lambda^\\circ_m(\\text{NH}_4\\text{OH}) = \\Lambda^\\circ_m(\\text{NH}_4\\text{Cl}) + \\Lambda^\\circ_m(\\text{NaOH}) - \\Lambda^\\circ_m(\\text{NaCl})$ (कोलराउश नियम संयोजन)",
+      "$\\Lambda^\\circ_m(\\text{NH}_4\\text{OH}) = \\Lambda^\\circ_m(\\text{NH}_4\\text{Cl}) + \\Lambda^\\circ_m(\\text{NaCl}) - \\Lambda^\\circ_m(\\text{NaOH})$",
+      "$\\Lambda^\\circ_m(\\text{NH}_4\\text{OH}) = \\Lambda^\\circ_m(\\text{NaOH}) + \\Lambda^\\circ_m(\\text{NaCl}) - \\Lambda^\\circ_m(\\text{NH}_4\\text{Cl})$"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Kohlrausch's law states that the limiting molar conductivity of an electrolyte is the sum of its individual ionic values. Combining the components yields: $\\Lambda^\\circ(\\text{NH}_4^+) + \\Lambda^\\circ(\\text{Cl}^-) + \\Lambda^\\circ(\\text{Na}^+) + \\Lambda^\\circ(\\text{OH}^-) - [\\Lambda^\\circ(\\text{Na}^+) + \\Lambda^\\circ(\\text{Cl}^-)] = \\Lambda^\\circ(\\text{NH}_4^+) + \\Lambda^\\circ(\\text{OH}^-)$, which corresponds to option 2."
+  },
+  {
+    "p_id": "bpsc_chem_v4_275",
+    "qe": "During the industrial electrolysis of a concentrated aqueous sodium chloride solution ($\text{NaCl}$), which specific half-cell reaction selectively proceeds at the anode compartment?",
+    "qh": "सांद्र जलीय सोडियम क्लोराइड समाधान ($\text{NaCl}$) के औद्योगिक विद्युत अपघटन के दौरान एनोड कम्पार्टमेंट पर कौन सी विशिष्ट हाफ-सेल प्रतिक्रिया चुनिंदा रूप से आगे बढ़ती है?",
+    "o": [
+      "$\\text{Na}^+(aq) + e^- \\rightarrow \\text{Na}(s); \\, E^\\circ = -2.71\\text{ V}$",
+      "$2\\text{H}_2\\text{O}(l) \\rightarrow \\text{O}_2(g) + 4\\text{H}^+(aq) + 4e^-; \\, E^\\circ = 1.23\\text{ V}$",
+      "$\\text{Cl}^-(aq) \\rightarrow \\frac{1}{2}\\text{Cl}_2(g) + e^-; \\, E^\\circ = 1.36\\text{ V}$ (क्लोराइड ऑक्सीकरण प्रतिक्रिया)",
+      "$\\text{H}^+(aq) + e^- \\rightarrow \\frac{1}{2}\\text{H}_2(g); \\, E^\\circ = 0.00\\text{ V}$"
+    ],
+    "a": 2,
+    "e": "<b>Explanation:</b> At the anode of an aqueous $NaCl$ cell, chloride ions and water molecules compete for oxidation. Although water has a lower standard potential ($1.23\\text{ V}$), water oxidation is kinetically slow and requires an overvoltage, allowing chloride ions to undergo oxidation preferentially to liberate chlorine gas ($Cl_2$)."
+  },
+  {
+    "p_id": "bpsc_chem_v4_276",
+    "qe": "What does a large positive value for the standard reduction potential of the $\\text{Cu}^{2+}/\\text{Cu}$ redox couple ($+0.34\\text{ V}$) indicate about its chemical behavior relative to the hydrogen couple?",
+    "qh": "$\\text{Cu}^{2+}/\\text{Cu}$ रेडॉक्स युगल ($+0.34\\text{ V}$) के मानक अपचयन विभव का एक बड़ा धनात्मक मान हाइड्रोजन युगल के सापेक्ष इसके रासायनिक व्यवहार के बारे में क्या दर्शाता है?",
+    "o": [
+      "This redox couple is a stronger reducing agent than the hydrogen couple",
+      "The $\\text{Cu}^{2+}$ ion undergoes reduction more easily than $\\text{H}^+$ ions, and copper metal cannot displace $\\text{H}_2$ gas from acids (तांबा अम्लों से हाइड्रोजन विस्थापित नहीं कर सकता)",
+      "Copper metal reacts violently with dilute acids to generate large volumes of hydrogen gas",
+      "The copper electrode functions as a highly volatile liquid non-ionic detergent sheet"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> A positive reduction potential means that $\\text{Cu}^{2+}$ is a stronger oxidizing agent than $\\text{H}^+$, meaning it is reduced more easily. Consequently, metallic copper ($\\text{Cu}$) is more stable than hydrogen gas and cannot displace $\\text{H}_2$ gas from acidic solutions."
+  },
+  {
+    "p_id": "bpsc_chem_v4_277",
+    "qe": "During the quantitative electrolysis of a dilute aqueous sulfuric acid solution ($H_2SO_4$), which explicit reaction takes place at the anode terminal?",
+    "qh": "एक तनु जलीय सल्फ्यूरिक एसिड समाधान ($H_2SO_4$) के मात्रात्मक विद्युत अपघटन के दौरान एनोड टर्मिनल पर कौन सी स्पष्ट प्रतिक्रिया होती है?",
+    "o": [
+      "Sulfate ions are oxidized into peroxodisulfate ions ($S_2O_8^{2-}$)",
+      "Water molecules undergo selective oxidation to liberate oxygen gas ($O_2$) (तनु विलयन में पानी का ऑक्सीकरण होकर $O_2$ निकलना)",
+      "Hydronium ions are reduced to release hydrogen gas streams",
+      "The platinum wire is completely dissolved into volatile open-chain sulfate clusters"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> In a dilute solution of sulfuric acid, water molecules undergo oxidation at the anode preferentially over sulfate ions because water oxidation features a lower potential threshold ($1.23\\text{ V}$ vs $1.96\\text{ V}$ for sulfate), resulting in the continuous evolution of oxygen gas ($O_2$)."
+  },
+  {
+    "p_id": "bpsc_chem_v4_278",
+    "qe": "When an industrial electrolysis operation is shifted to run inside a highly concentrated sulfuric acid solution, what change occurs to the anodic reaction profile?",
+    "qh": "जब एक औद्योगिक विद्युत अपघटन संचालन को अत्यधिक सांद्र सल्फ्यूरिक एसिड समाधान के भीतर चलाने के लिए स्थानांतरित किया जाता है, तो एनोडिक प्रतिक्रिया प्रोफ़ाइल में क्या परिवर्तन होता है?",
+    "o": [
+      "Water oxidation accelerates to release ten times more oxygen gas",
+      "Sulfate ions are oxidized preferentially to synthesize peroxodisulfate ions ($\\text{S}_2\\text{O}_8^{2-}$) (सांद्र विलयन में सल्फेट का ऑक्सीकरण होना)",
+      "The entire solution turns completely bio-degradable within seconds",
+      "Metallic copper plates out onto the anode surface irreversibly"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> In highly concentrated solutions of sulfuric acid ($H_2SO_4$), the high concentration of sulfate ions shifts the anodic preference away from water. Sulfate ions are oxidized preferentially to yield peroxodisulfate ions ($\text{S}_2\text{O}_8^{2-}$): $2\text{SO}_4^{2-} \\rightarrow \text{S}_2\text{O}_8^{2-} + 2e^-$."
+  },
+  {
+    "p_id": "bpsc_chem_v4_279",
+    "qe": "The standard potential of a classic Daniell cell is exactly 1.1 V. Which logarithmic mathematical expression correctly details its thermodynamic equilibrium state at 298 K?",
+    "qh": "एक क्लासिक डेनियल सेल का मानक विभव बिल्कुल 1.1 V है। कौन सा लघुगणकीय गणितीय व्यंजक (logarithmic mathematical expression) 298 K पर इसकी थर्मोडायनामिक संतुलन स्थिति का सही विवरण देता है?",
+    "o": [
+      "$\\log K_C = 1.1 \\times 2F$",
+      "$\\log K_C = \\frac{2.2}{0.059}$ (डेनियल सेल संतुलन समीकरण)",
+      "$\\log K_C = -1.1 \\times nF$",
+      "$\\log K_C = 1.1 \\times 0.059$"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> At chemical equilibrium, the Nernst equation simplifies to: $E^\\circ_{\\text{cell}} = \\frac{0.059}{n}\\log K_C$. For a Daniell cell, substituting $n = 2$ and $E^\\circ_{\\text{cell}} = 1.1\\text{ V}$ yields $1.1 = \\frac{0.059}{2}\\log K_C$, which rearranges directly to $\\log K_C = \\frac{2.2}{0.059}$."
+  },
+  {
+    "p_id": "bpsc_chem_v4_280",
+    "qe": "What precise macro-structural modification describes the spatial architecture of the peroxodisulfate anion ($\\text{S}_2\\text{O}_8^{2-}$), which is synthesized via high-concentration sulfate oxidation?",
+    "qh": "अत्यधिक सांद्र सल्फेट ऑक्सीकरण के माध्यम से संश्लेषित पेरोक्सोडिसल्फेट आयन ($\\text{S}_2\\text{O}_8^{2-}$) की स्थानिक वास्तुकला का क्या सटीक विवरण है?",
+    "o": [
+      "It consists of a simple linear unbranched polyolefin tail chain",
+      "It contains two sulfur atoms linked symmetrically through a central peroxide single bond ($-O-O-$) bridge (पेरोक्साइड एकल बंध पुल की उपस्थिति)",
+      "It features a cyclic pyranose ring closed by an interactive oxygen bridge",
+      "It establishes a permanent shared-electron covalent junction with metal cations"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> The peroxodisulfate ion ($\text{S}_2\text{O}_8^{2-}$, derived from Marshall's acid) features two tetrahedral sulfur atoms linked via a central peroxide single bond oxygen bridge ($-O-O-$), with each sulfur atom holding an additional three oxygen ligands."
+  },
+  {
+    "p_id": "bpsc_chem_v4_281",
+    "qe": "What physical status characterizes the value of a cell's standard reduction potential indicator ($E^\\circ$) relative to mass action effects?",
+    "qh": "द्रव्यमान क्रिया प्रभावों (mass action effects) के सापेक्ष किसी सेल के मानक अपचयन विभव संकेतक ($E^\\circ$) के मान की क्या भौतिक स्थिति विशेषता है?",
+    "o": [
+      "It scales linearly with changes in the mass or volume of the electrolyte",
+      "It is an intensive thermodynamic property that remains entirely constant regardless of stoichiometric coefficients or reaction scaling (गहन गुण होना)",
+      "It converts into an extensive parameter when combined with a salt bridge",
+      "It drops to zero volts when the cell reaches chemical equilibrium parameters"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Standard reduction potential ($E^\\circ$) is an intensive property that is independent of reaction scale or stoichiometric coefficients. This separates it from extensive parameters like the Gibbs free energy change."
+  },
+  {
+    "p_id": "bpsc_chem_v4_282",
+    "qe": "Which specific intermediate chemical compound is isolated during the initial condensation steps of a phenol-formaldehyde reaction before it cross-links to form Bakelite panels?",
+    "qh": "फिनोल-फॉर्मलाडेहाइड प्रतिक्रिया के शुरुआती चरणों में कौन सा विशिष्ट मध्यवर्ती रासायनिक यौगिक (intermediate chemical compound) अलग किया जाता है, इससे पहले कि यह बैकेलाइट बनाने के लिए क्रॉस-लिंक हो?",
+    "o": [
+      "Melamine formal resin sheet",
+      "Novolac linear chain resin (नोवोलेक)",
+      "Polyacrylonitrile fiber strand",
+      "Buna-S synthetic elastomer grid"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> The condensation reaction between phenol and formaldehyde initially produces Novolac, a linear polymer resin. Heating Novolac with excess formaldehyde introduces methylene bridges, cross-linking the chains into the rigid thermosetting plastic Bakelite."
+  },
+  {
+    "p_id": "bpsc_chem_v4_283",
+    "qe": "Which specific organic molecule functions as the initial monomer building block required to construct a natural rubber elastomer network?",
+    "qh": "एक प्राकृतिक रबर इलास्टोमर नेटवर्क के निर्माण के लिए आवश्यक प्रारंभिक मोनोमर बिल्डिंग ब्लॉक के रूप में कौन सा विशिष्ट कार्बनिक अणु कार्य करता है?",
+    "o": [
+      "Chloroprene (2-chlorobuta-1,3-diene)",
+      "Isoprene (2-methylbuta-1,3-diene) (आइसोप्रीन)",
+      "Acrylonitrile (prop-2-enonitrile)",
+      "Styrene (phenylethylene) aromatic"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Natural rubber is a linear homopolymer composed of repeating isoprene units. Under systematic IUPAC rules, isoprene is designated as 2-methylbuta-1,3-diene."
+  },
+  {
+    "p_id": "bpsc_chem_v4_284",
+    "qe": "The ring-opening chemical polymerization of the cyclic amide monomer caprolactam at high temperatures yields which industrial poly-amide material?",
+    "qh": "उच्च तापमान पर चक्रीय एमाइड मोनोमर कैप्रोलैक्टम का रिंग-ओपनिंग रासायनिक पॉलीमराइजेशन किस औद्योगिक पॉली-एमाइड सामग्री को उत्पन्न करता है?",
+    "o": [
+      "Nylon-6,6 fiber sheets",
+      "Nylon-6 poly-amide (नायलॉन-6)",
+      "Melamine formal breakproof resin",
+      "Buna-N synthetic elastomeric rubber"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Heating the seven-membered cyclic lactam caprolactam with water drives a ring-opening polymerization process, aligning the fragments into a linear polyamide chain known as Nylon-6."
+  },
+  {
+    "p_id": "bpsc_chem_v4_285",
+    "qe": "What specific operational designation distinguishes a polymer synthesized by processing two or more entirely different monomer species within the same structural chain framework?",
+    "qh": "कौन सा विशिष्ट परिचालन पदनाम एक ही संरचनात्मक श्रृंखला ढांचे के भीतर दो या दो से अधिक पूरी तरह से अलग मोनोमर प्रजातियों को संसाधित करके संश्लेषित पॉलिमर को अलग करता है?",
+    "o": [
+      "Homopolymer matrix sheet",
+      "Copolymer (सह बहुलक)",
+      "Thermosetting network panel",
+      "Linear tactical oligomer layer"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Polymers synthesized by polymerizing a mixture of two or more structurally distinct monomer species are classified as copolymers (e.g., Buna-S, compiled from butadiene and styrene)."
+  },
+  {
+    "p_id": "bpsc_chem_v4_286",
+    "qe": "What type of intermolecular force stabilizes the secondary structural motifs of proteins, specifically maintaining the shape of alpha-helices and beta-pleated sheets?",
+    "qh": "किस प्रकार का अंतर-आणविक बल प्रोटीन के माध्यमिक संरचनात्मक रूपांकनों (secondary structural motifs) को स्थिर करता है, विशेष रूप से अल्फा-हेलिस और बीटा-प्लीटेड शीट के आकार को बनाए रखता है?",
+    "o": [
+      "Weak van der Waals dispersion forces entirely across chains",
+      "Intermolecular or intramolecular Hydrogen bonds established between amide groups (हाइड्रोजन आबंधन)",
+      "Reversible ester links that undergo rapid biological cleavage",
+      "Cationic quaternary nitrogen halide coordinate grids"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> The secondary structure of proteins is stabilized by hydrogen bonding between the carbonyl oxygen atom ($C=O$) and the amide hydrogen atom ($N-H$) along the peptide backbones."
+  },
+  {
+    "p_id": "bpsc_chem_v4_287",
+    "qe": "Which specific organic functional group connection links consecutive monosaccharide units together to build high molecular weight polysaccharides like starch and cellulose?",
+    "qh": "कौन सा विशिष्ट कार्बनिक कार्यात्मक समूह कनेक्शन लगातार मोनोसेकेराइड इकाइयों को एक साथ जोड़कर स्टार्च और सेलुलोज जैसे उच्च आणविक भार वाले पॉलीसेकेराइड का निर्माण करता है?",
+    "o": [
+      "Peptide linkage holding amino residues",
+      "Glycosidic linkage (ग्लाइकोसिडिक बंध)",
+      "Phosphodiester bridging matrix channel",
+      "Disulfide cross-link bridge system"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Monosaccharide rings couple via condensation reactions to build complex carbohydrates. The resulting carbon-oxygen-carbon covalent connection linking the rings is termed a glycosidic linkage."
+  },
+  {
+    "p_id": "bpsc_chem_v4_288",
+    "qe": "What type of macromolecular structural linkage connects consecutive nucleotide monomers together along a strand of DNA or RNA?",
+    "qh": "डीएनए या आरएनए की एक श्रृंखला के साथ लगातार न्यूक्लियोटाइड मोनोमर्स को किस प्रकार का मैक्रोमोलेक्यूलर संरचनात्मक लिंकेज जोड़ता है?",
+    "o": [
+      "Glycosidic carbon-oxygen linkage bridging components",
+      "Phosphodiester linkage establishing bridges between 5' and 3' carbons (फॉस्फोडिएस्टर बंध / लिंक)",
+      "Methylene bridge framework generated via condensation polymerization",
+      "Amide linkage systematically identical to a biological peptide bond"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Nucleotides polymerize to form nucleic acids through phosphodiester linkages. This covalent bridge connects the 5' carbon atom of one sugar ring to the 3' position of the adjacent nucleotide unit."
+  },
+  {
+    "p_id": "bpsc_chem_v4_289",
+    "qe": "What organizational level of protein structure describes the specific linear sequence in which amino acid residues are covalently linked within a polypeptide chain?",
+    "qh": "प्रोटीन संरचना का कौन सा संगठनात्मक स्तर उस विशिष्ट रैखिक अनुक्रम का वर्णन करता है जिसमें अमीनो एसिड अवशेष एक पॉलीपेप्टाइड श्रृंखला के भीतर सहसंयोजक रूप से जुड़े होते हैं?",
+    "o": [
+      "Primary structure (प्राथमिक संरचना)",
+      "Secondary sheet configuration",
+      "Tertiary global folding matrix",
+      "Quaternary multi-subunit grid layout"
+    ],
+    "a": 0,
+    "e": "<b>Explanation:</b> The primary structure of a protein is defined by the unique linear sequence of its constituent amino acids linked via peptide bonds. This sequence dictates all subsequent folding levels."
+  },
+  {
+    "p_id": "bpsc_chem_v4_290",
+    "qe": "Which specific organic compound name represents the functional molecular structure of Vitamin C?",
+    "qh": "कौन सा विशिष्ट कार्बनिक यौगिक नाम विटामिन सी की कार्यात्मक आणविक संरचना का प्रतिनिधित्व करता है?",
+    "o": [
+      "Thiamine hydrochloride group",
+      "Ascorbic acid (एस्कॉर्बिक अम्ल)",
+      "Heterocyclic caprolactam ring",
+      "Cyanocobalamin core complex"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Vitamin C is an unsaturated sugar acid systematically and chemically designated as ascorbic acid, known for its essential antioxidant roles in biological systems."
+  }
+]
