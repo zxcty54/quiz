@@ -30,7 +30,7 @@
     "qe": "What physical parameter status marks the exact boundary condition where electrical current stops flowing through an active Galvanic cell circuit?",
     "qh": "कौन सी भौतिक पैरामीटर स्थिति उस सटीक सीमा स्थिति को चिह्नित करती है जहां एक सक्रिय गैल्वेनिक सेल सर्किट के माध्यम से विद्युत धारा का प्रवाह रुक जाता है?",
     "o": [
-      "The standard cell potential ($E^\circ_{\text{cell}}$) drops precisely to zero volts",
+      "The standard cell potential ($E^\\circ_{\text{cell}}$) drops precisely to zero volts",
       "The dynamic cell potential ($E_{\text{cell}}$) drops to exactly zero volts as chemical equilibrium is reached ($E_{cell} = 0$ होने पर साम्यावस्था स्थापित होना)",
       "The resistance of the salt bridge matrix climbs to absolute infinity",
       "The total entropy of the surrounding buffer drops to zero"
@@ -40,8 +40,8 @@
   },
   {
     "p_id": "bpsc_chem_v4_324",
-    "qe": "The Nernst equation for a silver half-cell is expressed as $E = E^\circ + 0.0591\log[\text{Ag}^+]$. Based on this mathematical relationship, how does the reduction potential react if the silver ion concentration is systematically expanded?",
-    "qh": "सिल्वर हाफ-सेल के लिए नर्स्ट समीकरण $E = E^\circ + 0.0591\log[\text{Ag}^+]$ है। इस गणितीय संबंध के आधार पर, यदि सिल्वर आयन सांद्रता को व्यवस्थित रूप से बढ़ाया जाए तो अपचयन विभव (reduction potential) कैसे प्रतिक्रिया करता है?",
+    "qe": "The Nernst equation for a silver half-cell is expressed as $E = E^\\circ + 0.0591\\log[\\text{Ag}^+]$. Based on this mathematical relationship, how does the reduction potential react if the silver ion concentration is systematically expanded?",
+    "qh": "सिल्वर हाफ-सेल के लिए नर्स्ट समीकरण $E = E^\\circ + 0.0591\\log[\\text{Ag}^+]$ है। इस गणितीय संबंध के आधार पर, यदि सिल्वर आयन सांद्रता को व्यवस्थित रूप से बढ़ाया जाए तो अपचयन विभव (reduction potential) कैसे प्रतिक्रिया करता है?",
     "o": [
       "The potential decreases linearly because of volume constraints",
       "The potential increases directly because it is positively proportional to the logarithm of silver ion concentration (सिल्वर आयन सांद्रता बढ़ने पर विभव का बढ़ना)",
@@ -49,7 +49,7 @@
       "The potential switches signs from positive to negative values"
     ],
     "a": 1,
-    "e": "<b>Explanation:</b> The Nernst equation for the silver couple ($E_{\text{Ag}^+/\text{Ag}} = E^\circ_{\text{Ag}^+/\text{Ag}} + 0.0591\log[\text{Ag}^+]$) shows a directly proportional relationship between the dynamic potential and the logarithm of the silver ion concentration. Consequently, raising $[\\text{Ag}^+]$ expands the logarithmic term, systematically increasing the electrode potential value."
+    "e": "<b>Explanation:</b> The Nernst equation for the silver couple ($E_{\text{Ag}^+/\text{Ag}} = E^\\circ_{\text{Ag}^+/\text{Ag}} + 0.0591\\log[\text{Ag}^+]$) shows a directly proportional relationship between the dynamic potential and the logarithm of the silver ion concentration. Consequently, raising $[\\text{Ag}^+]$ expands the logarithmic term, systematically increasing the electrode potential value."
   },
   {
     "p_id": "bpsc_chem_v4_325",
@@ -82,8 +82,8 @@
     "qe": "If a coupled cell system features a lower opposing voltage from Cell 'A' ($0.5\text{ V}$) relative to the Daniell cell 'B' ($1.1\text{ V}$), what net electrochemical reactions proceed across the active terminals of Cell 'B'?",
     "qh": "यदि एक युग्मित सेल सिस्टम (coupled cell system) में डेनियल सेल 'B' ($1.1 V$) के सापेक्ष सेल 'A' ($0.5 V$) का कम विरोधी वोल्टेज है, तो सेल 'B' के सक्रिय टर्मिनलों पर क्या नेट इलेक्ट्रोकेमिकल प्रतिक्रियाएं आगे बढ़ती हैं?",
     "o": [
-      "$\text{Anode: } \text{Cu} \rightarrow \text{Cu}^{2+} + 2e^- ; \, \text{Cathode: } \text{Zn}^{2+} + 2e^- \\rightarrow \\text{Zn}$",
-      "$\text{Anode: } \text{Zn} \\rightarrow \\text{Zn}^{2+} + 2e^- ; \, \text{Cathode: } \\text{Cu}^{2+} + 2e^- \\rightarrow \\text{Cu}$ (सेल B गैल्वेनिक सेल की तरह सामान्य रूप से कार्य करेगा)",
+      "$\text{Anode: } \text{Cu} \\rightarrow \\text{Cu}^{2+} + 2e^- ; \\, \text{Cathode: } \text{Zn}^{2+} + 2e^- \\rightarrow \text{Zn}$",
+      "$\text{Anode: } \text{Zn} \\rightarrow \\text{Zn}^{2+} + 2e^- ; \\, \text{Cathode: } \\text{Cu}^{2+} + 2e^- \\rightarrow \\text{Cu}$ (सेल B गैल्वेनिक सेल की तरह सामान्य रूप से कार्य करेगा)",
       "$\\text{Anode: } 2\\text{H}_2\\text{O} \\rightarrow \\text{O}_2 + 4\\text{H}^+ + 4e^- ; \\, \\text{Cathode: } \\text{Na}^+ + e^- \\rightarrow \\text{Na}$",
       "$\\text{Anode: } \\text{PbSO}_4 + 2\\text{H}_2\\text{O} \\rightarrow \\text{PbO}_2 + \\text{SO}_4^{2-} + 4\\text{H}^+ + 2e^-$"
     ],
@@ -183,16 +183,16 @@
   },
   {
     "p_id": "bpsc_chem_v4_335",
-    "qe": "What thermodynamic value is calculated for the standard Gibbs free energy change ($\\Delta_r G^\circ$) of a classic Daniell cell reaction when its standard potential is +1.1 V and $n=2$?",
-    "qh": "एक क्लासिक डेनियल सेल प्रतिक्रिया के मानक गिब्स मुक्त ऊर्जा परिवर्तन ($\\Delta_r G^\circ$) के लिए क्या थर्मोडायनामिक मान प्राप्त होता है जब इसका मानक विभव +1.1 V और $n=2$ हो?",
+    "qe": "What thermodynamic value is calculated for the standard Gibbs free energy change ($\\Delta_r G^\\circ$) of a classic Daniell cell reaction when its standard potential is +1.1 V and $n=2$?",
+    "qh": "एक क्लासिक डेनियल सेल प्रतिक्रिया के मानक गिब्स मुक्त ऊर्जा परिवर्तन ($\\Delta_r G^\\circ$) के लिए क्या थर्मोडायनामिक मान प्राप्त होता है जब इसका मानक विभव +1.1 V और $n=2$ हो?",
     "o": [
-      "$\\Delta_r G^\circ = +2.2 \\cdot F$",
-      "$\\Delta_r G^\circ = -2 \\cdot F \\cdot 1.1 = -2.2\\text{ F}$ (गिब्स ऊर्जा परिवर्तन मान)",
-      "$\\Delta_r G^\circ = \\frac{-1.1}{2F}$",
-      "$\\Delta_r G^\circ = 0\\text{ J/mol}$"
+      "$\\Delta_r G^\\circ = +2.2 \\cdot F$",
+      "$\\Delta_r G^\\circ = -2 \\cdot F \\cdot 1.1 = -2.2\\text{ F}$ (गिब्स ऊर्जा परिवर्तन मान)",
+      "$\\Delta_r G^\\circ = \\frac{-1.1}{2F}$",
+      "$\\Delta_r G^\\circ = 0\\text{ J/mol}$"
     ],
     "a": 1,
-    "e": "<b>Explanation:</b> Using the standard thermodynamic equation $\\Delta_r G^\circ = -nFE^\circ_{\\text{cell}}$, we substitute the reaction parameters for a Daniell cell ($n = 2$, $E^\circ_{\\text{cell}} = 1.1\\text{ V}$). This yields the direct mathematical relationship: $\\Delta_r G^\circ = -2 \\cdot F \\cdot 1.1 = -2.2\\text{ F}$ Joules per mole."
+    "e": "<b>Explanation:</b> Using the standard thermodynamic equation $\\Delta_r G^\\circ = -nFE^\\circ_{\\text{cell}}$, we substitute the reaction parameters for a Daniell cell ($n = 2$, $E^\\circ_{\\text{cell}} = 1.1\\text{ V}$). This yields the direct mathematical relationship: $\\Delta_r G^\\circ = -2 \\cdot F \\cdot 1.1 = -2.2\\text{ F}$ Joules per mole."
   },
   {
     "p_id": "bpsc_chem_v4_336",
@@ -218,7 +218,7 @@
       "$\\text{m}^{-1}$"
     ],
     "a": 1,
-    "e": "<b>Explanation:</b> Specific conductivity ($\kappa$) measures current-carrying capacity per unit volume, which corresponds to the reciprocal of resistivity ($1/\\rho$). Its systematic measurement units are expressed as $\\text{S}\\cdot\\text{cm}^{-1}$ or $\\text{S}\\cdot\\text{m}^{-1}$."
+    "e": "<b>Explanation:</b> Specific conductivity ($\\kappa$) measures current-carrying capacity per unit volume, which corresponds to the reciprocal of resistivity ($1/\\rho$). Its systematic measurement units are expressed as $\\text{S}\\cdot\\text{cm}^{-1}$ or $\\text{S}\\cdot\\text{m}^{-1}$."
   },
   {
     "p_id": "bpsc_chem_v4_338",
