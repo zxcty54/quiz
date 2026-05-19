@@ -1,0 +1,263 @@
+[
+  {
+    "p_id": "bpsc_chem_v4_31",
+    "qe": "Which chemical phenomenon operates uniformly as a single-phase system rather than occurring across a heterogeneous boundary layer interface?",
+    "qh": "कौन सी रासायनिक घटना एक विषम सीमा परत इंटरफ़ेस पर होने के बजाय समान रूप से एकल-चरण प्रणाली (single-phase system) के रूप में कार्य करती है?",
+    "o": [
+      "Recrystallization from solution pools",
+      "Heterogeneous catalysis utilizing solid sheets",
+      "Homogeneous catalysis (समांगी उत्प्रेरण)",
+      "Vascular tissue corrosion of metals"
+    ],
+    "a": 2,
+    "e": "<b>Explanation:</b> Homogeneous catalysis involves a system where the reactants and the catalyst are uniformly distributed within the exact same physical phase (state of matter). Because the system is entirely uniform, the transformation proceeds throughout the bulk volume rather than being restricted to an interfacial surface boundary layer."
+  },
+  {
+    "p_id": "bpsc_chem_v4_32",
+    "qe": "What thermodynamic state condition balances the enthalpy change ($\\Delta H$) against the entropy factor ($T\\Delta S$) when an adsorption process achieves steady-state equilibrium?",
+    "qh": "जब एक अधिशोषण प्रक्रिया स्थिर-अवस्था संतुलन प्राप्त करती है, तो कौन सी ऊष्मागतिकी स्थिति एन्थैल्पी परिवर्तन ($\\Delta H$) को एंट्रॉपी कारक ($T\\Delta S$) के खिलाफ संतुलित करती है?",
+    "o": [
+      "$\\Delta H$ must expand to a value greater than zero",
+      "$\\Delta H = T\\Delta S$ (ऊष्मागतिकी संतुलन स्थिति)",
+      "$\\Delta H > T\\Delta S$ uniformly across all ranges",
+      "$\\Delta H < T\\Delta S$ causing spontaneous chilling"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Thermodynamic criteria specify that at a state of chemical equilibrium, the net Gibbs free energy change drops to exactly zero ($\\Delta G = 0$). Substituting this into the foundational equation $\\Delta G = \\Delta H - T\\Delta S$ yields $0 = \\Delta H - T\\Delta S$, which rearranges directly to $\\Delta H = T\\Delta S$."
+  },
+  {
+    "p_id": "bpsc_chem_v4_33",
+    "qe": "Which physical interface boundary combination is physically impossible to isolate because the participating components are completely miscible?",
+    "qh": "कौन सा भौतिक इंटरफ़ेस सीमा संयोजन (interface boundary combination) भौतिक रूप से अलग करना असंभव है क्योंकि भाग लेने वाले घटक पूरी तरह से मिश्रणीय हैं?",
+    "o": [
+      "Liquid-liquid boundary phase",
+      "Solid-liquid boundary phase",
+      "Liquid-gas boundary layer",
+      "Gas-gas phase profile (गैस-गैस इंटरफेस संभव नहीं है)"
+    ],
+    "a": 3,
+    "e": "<b>Explanation:</b> A distinct interface layer requires a sharp heterogeneous boundary separation. Because all gases diffuse spontaneously to mix completely and form a single, uniform homogeneous phase, a gas-gas interface cannot exist under standard environmental parameters."
+  },
+  {
+    "p_id": "bpsc_chem_v4_34",
+    "qe": "What physical scenario is scientifically represented when a surface chemist employs the comprehensive term 'sorption'?",
+    "qh": "जब एक पृष्ठ रसायनज्ञ व्यापक शब्द 'सॉर्प्शन' (sorption) का उपयोग करता है, तो कौन सा भौतिक परिदृश्य वैज्ञानिक रूप से प्रस्तुत किया जाता है?",
+    "o": [
+      "The exclusive penetration of fluid into a bulk mass",
+      "The exclusive accumulation of chemical units on a surface layer",
+      "A joint process where both adsorption and absorption proceed simultaneously (अधिशोषण एवं अवशोषण दोनों का साथ होना)",
+      "The mechanical desorption driven by high thermal cycles"
+    ],
+    "a": 2,
+    "e": "<b>Explanation:</b> The term sorption is a generalized descriptor used when both surface-bound adsorption and deep-penetrating bulk absorption progress simultaneously within the same structural substrate matrix."
+  },
+  {
+    "p_id": "bpsc_chem_v4_35",
+    "qe": "What operational change systematically expands the steady-state extent of physical adsorption (physisorption) for a gas onto a solid adsorbent?",
+    "qh": "कौन सा परिचालन परिवर्तन ठोस अधिशोषक पर गैस के भौतिक अधिशोषण (physisorption) की स्थिर-अवस्था सीमा को व्यवस्थित रूप से बढ़ाता है?",
+    "o": [
+      "Raising the ambient temperature of the reaction system",
+      "Lowering the operational temperature of the environment (तापमान में कमी करना)",
+      "Minimizing the total structural surface area of the solid",
+      "Scaling down the cohesive magnitude of weak van der Waals forces"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Physisorption is fundamentally an exothermic condensation transition ($\Delta H < 0$). According to thermodynamic principles, lowering the operational temperature minimizes thermal desorption pathways, allowing weak intermolecular van der Waals forces to hold a larger volume of gas molecules onto the surface."
+  },
+  {
+    "p_id": "bpsc_chem_v4_36",
+    "qe": "How does modifying the concentration profile of a solution alter the total extent of solute adsorption onto a solid porous adsorbent?",
+    "qh": "किसी समाधान के सांद्रता प्रोफ़ाइल (concentration profile) को संशोधित करने से ठोस छिद्रपूर्ण अधिशोषक पर विलेय अधिशोषण की कुल सीमा कैसे बदल जाती है?",
+    "o": [
+      "Increasing the absolute amount of adsorbate solute currently present in the solution (विलयन में विलेय की मात्रा बढ़ाना)",
+      "Decreasing the effective exposure surface area of the solid base",
+      "Elevating the system thermal range up to boiling bounds",
+      "Diluting the fluid mixture to minimize solute-adsorbent contact tracks"
+    ],
+    "a": 0,
+    "e": "<b>Explanation:</b> Adsorption from a liquid phase expands when the initial concentration of the solute (adsorbate) is increased. Higher solute concentrations increase molecular collision frequencies against the adsorbent's active sites, enhancing surface accumulation values."
+  },
+  {
+    "p_id": "bpsc_chem_v4_37",
+    "qe": "Which thermodynamic parameter combo incorrectly maps out the energetic adjustments typical of a spontaneous surface adsorption run?",
+    "qh": "कौन सा ऊष्मागतिकी पैरामीटर कॉम्बो स्वतः स्फूर्त सतह अधिशोषण (spontaneous surface adsorption) के विशिष्ट ऊर्जावान परिवर्तनों को गलत तरीके से दर्शाता है?",
+    "o": [
+      "$\\Delta H > 0$ indicating an endothermic heat absorption profile (अधिशोषण के लिए $\\Delta H > 0$ का कथन गलत है)",
+      "$\\Delta G < 0$ tracking a highly feasible spontaneous cascade",
+      "$\\Delta S < 0$ reflecting a drop in molecular chaos as gas organizes",
+      "$\\Delta H < 0$ validating a standard exothermic energy release"
+    ],
+    "a": 0,
+    "e": "<b>Explanation:</b> Adsorption is strictly an exothermic process ($\Delta H < 0$). As adsorbate particles anchor onto the surface, unbalanced residual forces and surface energy are minimized, releasing this excess stability as heat. Therefore, stating $\Delta H > 0$ is chemically incorrect."
+  },
+  {
+    "p_id": "bpsc_chem_v4_38",
+    "qe": "Which environmental condition acts as an unfavorable factor that suppresses the accumulation of gas molecules via physical adsorption?",
+    "qh": "कौन सी पर्यावरणीय स्थिति एक प्रतिकूल कारक के रूप में कार्य करती है जो भौतिक अधिशोषण के माध्यम से गैस अणुओं के संचय को दबाती है?",
+    "o": [
+      "Elevating the gas pressure up to high parameters",
+      "A negative enthalpy change value ($\\Delta H < 0$)",
+      "Utilizing an adsorbate gas displaying a high critical temperature index",
+      "Operating the system under a high temperature environment (उच्च तापमान प्रतिकूल परिस्थिति है)"
+    ],
+    "a": 3,
+    "e": "<b>Explanation:</b> High temperatures are unfavorable for physisorption. Because the binding mechanism relies entirely on weak intermolecular attractions, adding thermal energy increases molecular velocities, causing the gas molecules to overcome these forces and desorb from the surface."
+  },
+  {
+    "p_id": "bpsc_chem_v4_39",
+    "qe": "Under what condition can a gaseous species initially held on a solid surface via weak physical adsorption transition into chemical adsorption?",
+    "qh": "किस परिस्थिति में शुरू में कमजोर भौतिक अधिशोषण के माध्यम से ठोस सतह पर आयोजित गैस प्रजाति रासायनिक अधिशोषण (chemical adsorption) में बदल सकती है?",
+    "o": [
+      "By cooling the system down to lower temperature ranges",
+      "By systematically increasing the operational temperature of the system (तापमान बढ़ाने पर)",
+      "By crushing the solid to minimize exposed boundary areas",
+      "By adding an uncharged non-ionic laundry builder sheet"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Raising the temperature can drive a transition from physisorption to chemisorption. The additional thermal energy helps the system overcome the activation energy barrier required to break original bonds and form strong covalent or ionic valence connections with the surface residues."
+  },
+  {
+    "p_id": "bpsc_chem_v4_40",
+    "qe": "Why do solid adsorbents entirely lack chemical specificity or selective preference for any particular gas molecule during physical adsorption?",
+    "qh": "भौतिक अधिशोषण के दौरान ठोस अधिशोषक किसी विशेष गैस अणु के लिए रासायनिक विशिष्टता या चयनात्मक प्राथमिकता से पूरी तरह से क्यों वंचित होते हैं?",
+    "o": [
+      "Because the weak intermolecular van der Waals forces involved are universal and non-specific (वांडर वाल्स बल सार्वत्रिक होते हैं)",
+      "Because all real gases behave as perfectly ideal gas configurations at low temperatures",
+      "Because the heat released during physisorption runs is exceptionally high",
+      "Because the transition is an irreversible step-growth polymer run"
+    ],
+    "a": 0,
+    "e": "<b>Explanation:</b> Physisorption lacks chemical specificity because the weak intermolecular van der Waals forces driving the attraction are universal. They exist between any solid surface and any gas molecule, regardless of chemical identity."
+  },
+  {
+    "p_id": "bpsc_chem_v4_41",
+    "qe": "Which processing scenario represents an explicit example of deep bulk absorption rather than surface-bound adsorption?",
+    "qh": "कौन सा प्रसंस्करण परिदृश्य सतह-बद्ध अधिशोषण के बजाय गहरे थोक अवशोषण (bulk absorption) का एक स्पष्ट उदाहरण प्रस्तुत करता है?",
+    "o": [
+      "Water vapor tracking onto the surface of dry silica gel crystals",
+      "Water vapor penetrating the interior framework of anhydrous calcium chloride (सोखना / कैल्सियम क्लोराइड पर जलवाष्प)",
+      "Hydrogen gas molecules organizing along finely divided nickel sheets",
+      "Oxygen radicals structuring chemical valence links on a metal face"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Absorption involves the penetration of solute molecules uniformly throughout the entire bulk interior mass of the substrate. Anhydrous calcium chloride absorbs water vapor into its crystal lattice, unlike silica gel, which adsorbs moisture strictly on its surface."
+  },
+  {
+    "p_id": "bpsc_chem_v4_42",
+    "qe": "Based on critical temperature metrics: $\\text{SO}_2 (630\\text{ K})$, $\\text{CO}_2 (304\\text{ K})$, $\\text{CH}_4 (190\\text{ K})$, and $\\text{H}_2 (33\\text{ K})$. Which gas will display the least extent of physical adsorption on a fixed mass of charcoal?",
+    "qh": "क्रिटिकल तापमान मेट्रिक्स के आधार पर: $\\text{SO}_2 (630\\text{ K})$, $\\text{CO}_2 (304\\text{ K})$, $\\text{CH}_4 (190\\text{ K})$, और $\\text{H}_2 (33\\text{ K})$। कौन सी गैस चारकोल के एक निश्चित द्रव्यमान पर भौतिक अधिशोषण की न्यूनतम सीमा प्रदर्शित करेगी?",
+    "o": [
+      "$\\text{SO}_2$ because it is highly polar",
+      "$\\text{CO}_2$ because its mass acts as an extensive property indicator",
+      "$\\text{CH}_4$ due to its tetrahedral symmetric open chain frame",
+      "$\\text{H}_2$ because its low critical temperature reflects exceptionally weak intermolecular attractions (निम्न क्रिटिकल तापमान के कारण $H_2$ का न्यूनतम अधिशोषण)"
+    ],
+    "a": 3,
+    "e": "<b>Explanation:</b> The extent of gas adsorption is directly proportional to its critical temperature ($T_c$). Gases with higher critical temperatures (like $SO_2$) liquefy more easily due to stronger intermolecular forces. Hydrogen ($H_2$) has the lowest critical temperature ($33\\text{ K}$), meaning its intermolecular attractions are very weak, resulting in minimal adsorption."
+  },
+  {
+    "p_id": "bpsc_chem_v4_43",
+    "qe": "Which chemical equation accurately details a reaction configuration driven by heterogeneous catalysis?",
+    "qh": "कौन सा रासायनिक समीकरण विषमांगी उत्प्रेरण (heterogeneous catalysis) द्वारा संचालित प्रतिक्रिया विन्यास का सटीक विवरण देता है?",
+    "o": [
+      "$2\\text{SO}_2(g) + \\text{O}_2(g) \\xrightarrow{\\text{NO}(g)} 2\\text{SO}_3(g)$",
+      "$\\text{CH}_3\\text{COOCH}_3(l) + \\text{H}_2\\text{O}(l) \\xrightarrow{\\text{HCl}(l)} \\text{CH}_3\\text{COOH}(aq) + \\text{CH}_3\\text{OH}(aq)$",
+      "$2\\text{SO}_2(g) + \\text{O}_2(g) \\xrightarrow{\\text{Pt}(s)} 2\\text{SO}_3(g)$ (गैसीय अभिकारक एवं ठोस उत्प्रेरक संयोजन)",
+      "Both options 1 and 2 utilize heterogeneous frameworks safely"
+    ],
+    "a": 2,
+    "e": "<b>Explanation:</b> Heterogeneous catalysis describes a system where the reacting species and the catalyst exist in different physical phases. Oxidizing gaseous $SO_2$ using a solid platinum metal sheet ($Pt(s)$) is a classic example because the gas molecules react at the solid interface."
+  },
+  {
+    "p_id": "bpsc_chem_v4_44",
+    "qe": "When the concentration of surfactant soap molecules dissolved in water is scaled up significantly beyond a critical threshold, what type of colloidal architecture is generated?",
+    "qh": "जब पानी में घुले सर्फेक्टेंट साबुन के अणुओं की सांद्रता को एक महत्वपूर्ण सीमा से काफी बढ़ा दिया जाता है, तो किस प्रकार की कोलाइडल संरचना उत्पन्न होती है?",
+    "o": [
+      "Multimolecular colloidal dispersion",
+      "Associated colloid / Micelle (सहचारी कोलाइड / मिसेल)",
+      "Macromolecular single chain network",
+      "Water-soluble linear synthetic polyolefin block"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Surfactants behave as normal strong electrolytes at low concentrations. When their concentration is increased past the Critical Micelle Concentration (CMC), individual soap molecules aggregate into clusters called micelles, forming an associated colloid."
+  },
+  {
+    "p_id": "bpsc_chem_v4_45",
+    "qe": "Under what structural constraint will an aqueous soap solution exhibit a distinct Tyndall effect when a light beam passes through it?",
+    "qh": "किस संरचनात्मक बाधा के तहत एक जलीय साबुन का घोल एक स्पष्ट टिंडल प्रभाव (Tyndall effect) प्रदर्शित करेगा जब एक प्रकाश किरण इसमें से गुजरेगी?",
+    "o": [
+      "When the soap concentration is kept far below the critical micelle index",
+      "When the soap concentration is raised safely above the critical micelle concentration (CMC) threshold (CMC से अधिक सांद्रता होने पर)",
+      "When the solution is mixed with heavy volumes of volatile petroleum ethers",
+      "When the temperature drops down to absolute zero boundaries"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> The Tyndall effect (light scattering by dispersed particles) is a diagnostic characteristic of colloids. An aqueous soap solution forms colloidal micelles only when its concentration exceeds the CMC threshold, enabling it to scatter passing light beams."
+  },
+  {
+    "p_id": "bpsc_chem_v4_46",
+    "qe": "What formulation technique is applied to a delicate lyophobic sol to insulate its unstable particles from common-ion coagulation hazards?",
+    "qh": "एक नाजुक लायोफोबिक सॉल (lyophobic sol) को सामान्य-आयन जमावट खतरों (coagulation hazards) से बचाने के लिए कौन सी फॉर्मूलेशन तकनीक लागू की जाती है?",
+    "o": [
+      "Subjecting the fluid mixture to prolonged structural boiling cycles",
+      "Introducing a controlled stabilizing volume of a lyophilic sol (द्रवस्नेही सॉल मिलाकर रक्षण करना)",
+      "Adding high concentrations of strong mineral acid electrolytes",
+      "Cleaving the dipeptide linkages using volatile ether solvents"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Lyophobic sols are unstable and easily precipitated by trace electrolytes. Adding a reversible, protective lyophilic sol stabilizes the system; the lyophilic particles form a protective sheath around the lyophobic cores, preventing aggregation."
+  },
+  {
+    "p_id": "bpsc_chem_v4_47",
+    "qe": "What surface chemical designation describes the process where a freshly prepared solid precipitate is converted into a stable colloidal dispersion using a peptizing agent?",
+    "qh": "कौन सा पृष्ठ रासायनिक पदनाम उस प्रक्रिया का वर्णन करता है जहां एक ताज़ा तैयार ठोस अवक्षेप को पेप्टाइज़िंग एजेंट का उपयोग करके एक स्थिर कोलाइडल फैलाव में बदल दिया जाता है?",
+    "o": [
+      "Coagulation network precipitation",
+      "Electrolytic unzipping run",
+      "Peptization (पेप्टीकरण / पेप्टाइजेशन)",
+      "Linear step-growth condensation modification"
+    ],
+    "a": 2,
+    "e": "<b>Explanation:</b> Peptization is the process of converting a freshly prepared precipitate into a colloidal sol by shaking it with a dispersion medium in the presence of a small amount of an electrolyte (peptizing agent), which imparts stabilizing surface charges."
+  },
+  {
+    "p_id": "bpsc_chem_v4_48",
+    "qe": "According to the Hardy-Schulze law, which electrolyte will display the lowest flocculation value (highest coagulating power) for a positively charged sol like $\\text{Ag}/\\text{Ag}^+$?",
+    "qh": "हार्डी-शुल्ज़ नियम के अनुसार, कौन सा इलेक्ट्रोलाइट $\\text{Ag}/\\text{Ag}^+$ जैसे धनात्मक रूप से आवेशित सॉल के लिए न्यूनतम फ्लोकुलेशन मान (न्यूनतम जमावट मान) प्रदर्शित करेगा?",
+    "o": [
+      "$\\text{Na}_2\\text{S}$ supplying sulfide anions",
+      "$\\text{Na}_3\\text{PO}_4$ supplying phosphate anions (फॉस्फेट आयन का सर्वाधिक प्रभाव)",
+      "$\\text{Na}_2\\text{SO}_4$ supplying sulfate options",
+      "$\\text{NaCl}$ supplying chloride fragments"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> The Hardy-Schulze law states that the coagulating power of an ion depends on its valency. For a positively charged sol, the active coagulating ion is the anion. Among the choices—$\\text{Cl}^- (-1)$, $\\text{S}^{2-} (-2)$, $\\text{SO}_4^{2-} (-2)$, and $\\text{PO}_4^{3-} (-3)$—the phosphate ion bears the highest charge, giving it the highest coagulating power and lowest flocculation value."
+  },
+  {
+    "p_id": "bpsc_chem_v4_49",
+    "qe": "What macro-classification defines a colloidal system composed of solid dispersed phase particles distributed throughout a liquid dispersion medium?",
+    "qh": "कौन सा व्यापक-वर्गीकरण एक कोलाइडल प्रणाली को परिभाषित करता है जो एक तरल फैलाव माध्यम (dispersion medium) में वितरित ठोस बिखरे हुए चरण कणों से बनी होती है?",
+    "o": [
+      "Solid sol system",
+      "Gel system with cross-linked structures",
+      "Emulsion liquid fluid matrix",
+      "Sol system (सॉल प्रणाली, जैसे पेंट)",
+      "Volatile uncharged non-polar polyolefin layout"
+    ],
+    "a": 3,
+    "e": "<b>Explanation:</b> A colloidal dispersion where the internal dispersed phase is a solid and the continuous dispersion medium is a liquid is classified as a sol (e.g., commercial paints, inks, cell fluids)."
+  },
+  {
+    "p_id": "bpsc_chem_v4_50",
+    "qe": "Why do colloidal dispersions exhibit significantly lower values for colligative properties (like osmotic pressure) compared to true solutions of identical weight concentrations?",
+    "qh": "समान भार सांद्रता के वास्तविक समाधानों (true solutions) की तुलना में कोलाइडल फैलाव संपार्श्विक गुणों (colligative properties) के लिए काफी कम मूल्य क्यों प्रदर्शित करते हैं?",
+    "o": [
+      "Because colloidal particles display an enormous structural area that traps light",
+      "Because colloidal particles are comparatively fewer in number due to their larger aggregated sizes ($1-1000\\text{ nm}$) (कणों की संख्या का कम होना)",
+      "Because they convert open-chain carbohydrates into stable non-ionic polyols",
+      "Because they contain permanent disulfide links that reduce valence charges to zero"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Colligative properties depend strictly on the total number of dissolved solute particles per unit volume. Because colloidal particles are larger aggregates ($1-1000\\text{ nm}$) compared to single small molecules or ions in a true solution, a colloid contains fewer individual particles per unit volume, resulting in lower colligative property values."
+  }
+]
