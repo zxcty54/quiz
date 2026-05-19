@@ -1,0 +1,652 @@
+[
+  {
+    "p_id": "bpsc_chem_v3_132",
+    "qe": "The word 'Polymer' is derived from a specific classical language. Which language and core meanings structurally define this term?",
+    "qh": "शब्द 'पॉलिमर' एक विशिष्ट शास्त्रीय भाषा से लिया गया है। कौन सी भाषा और मूल अर्थ संरचनात्मक रूप से इस शब्द को परिभाषित करते हैं?",
+    "o": [
+      "Latin; 'Poly' meaning single and 'Mer' meaning element",
+      "Greek; 'Poly' meaning many and 'Mer' meaning unit or part",
+      "German; 'Poly' meaning complex and 'Mer' meaning chain",
+      "French; 'Poly' meaning macro and 'Mer' meaning weight"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> The term polymer is anchored in the Greek language, synthesized from 'poly' (meaning many) and 'mer' (meaning unit or part), representing macro-structures formed by repeating segments."
+  },
+  {
+    "p_id": "bpsc_chem_v3_133",
+    "qe": "What is the typical range of molecular mass exhibited by high-molecular-weight macromolecules classified scientifically as polymers?",
+    "qh": "पॉलिमर के रूप में वैज्ञानिक रूप से वर्गीकृत उच्च आणविक भार वाले मैक्रोमोलेक्यूल्स द्वारा प्रदर्शित विशिष्ट आणविक द्रव्यमान की सीमा क्या है?",
+    "o": [
+      "10 to 10^3 Atomic Mass Units (amu)",
+      "10^3 to 10^7 Atomic Mass Units (amu)",
+      "10^8 to 10^12 Atomic Mass Units (amu)",
+      "Less than 100 Real Daltons"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> High-molecular-weight macromolecules or polymers are structurally defined by an extensive molecular mass range spanning from $10^3$ to $10^7$ atomic mass units (amu)."
+  },
+  {
+    "p_id": "bpsc_chem_v3_134",
+    "qe": "What formal chemical designation is assigned to the small, repeating structural units that serve as the fundamental building blocks of a complete polymer?",
+    "qh": "उन छोटी, आवर्ती संरचनात्मक इकाइयों को क्या औपचारिक रासायनिक नाम दिया जाता है जो एक पूर्ण पॉलिमर के मूलभूत निर्माण खंड के रूप में कार्य करती हैं?",
+    "o": [
+      "Oligomers",
+      "Monomers (एकलक)",
+      "Allosteric builders",
+      "Plasticizers"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Monomers (एकलक) are the fundamental, small chemical units containing reactive functional groups or double bonds that undergo repeating chemical linkages to construct a polymer network."
+  },
+  {
+    "p_id": "bpsc_chem_v3_135",
+    "qe": "Which term describes a specialized category of polymers whose structural network is comprised of relatively few monomeric units, specifically capped around a threshold of more than 100 units?",
+    "qh": "कौन सा शब्द पॉलिमर की एक विशेष श्रेणी का वर्णन करता है जिसका संरचनात्मक नेटवर्क अपेक्षाकृत कम मोनोमेरिक इकाइयों से बना होता है, विशेष रूप से 100 से अधिक इकाइयों की सीमा के आसपास?",
+    "o": [
+      "Monomer",
+      "Oligomer (दीर्घ / अल्पबहुलक)",
+      "Biopolymer",
+      "Thermosetting dynamic plastic"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Polymers containing intermediate structural lengths or clusters comprised of units extending above 100 repeating sections are specialized under the structural classification of oligomers."
+  },
+  {
+    "p_id": "bpsc_chem_v3_136",
+    "qe": "Which polymer represents a natural macromolecule directly harvested from plant or animal tissue sources without human synthetic configuration?",
+    "qh": "कौन सा पॉलिमर सीधे पौधों या जानवरों के ऊतकों के स्रोतों से प्राप्त एक प्राकृतिक मैक्रोमोलेक्यूल का प्रतिनिधित्व करता है, जिसमें मानव सिंथेटिक विन्यास शामिल नहीं होता है?",
+    "o": [
+      "Nylon 6,6",
+      "Starch and Cellulose (स्टार्च एवं सेलुलोज)",
+      "Buna-N rubber",
+      "Teflon (PTFE)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Starch, proteins, and cellulose are natural biopolymers natively synthesized via biochemical processes in plants and animals, making them natural polymers."
+  },
+  {
+    "p_id": "bpsc_chem_v3_137",
+    "qe": "How are polymers like Nylon 6,6, Teflon, and Buna-S classified based on their primary industrial origin and source of genesis?",
+    "qh": "नायलॉन 6,6, टेफ्लॉन और ब्यूना-एस जैसे पॉलिमर को उनके प्राथमिक औद्योगिक मूल और उत्पत्ति के स्रोत के आधार पर कैसे वर्गीकृत किया जाता है?",
+    "o": [
+      "Natively harvested natural structural resins",
+      "Synthetic polymers (संश्लेषित बहुलक)",
+      "Semi-synthetic modified cellulosic derivatives",
+      "Inorganic oligomeric builders"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Polymers entirely engineered and manufactured within industrial laboratories via chemical manipulation of primary chemical reagents are known as synthetic polymers."
+  },
+  {
+    "p_id": "bpsc_chem_v3_138",
+    "qe": "Rayon (Cellulose acetate) and Cellulose nitrate are classified under which category of polymer architecture?",
+    "qh": "रेयान (सेलुलोज एसीटेट) और सेलुलोज नाइट्रेट को पॉलिमर वास्तुकला की किस श्रेणी के तहत वर्गीकृत किया गया है?",
+    "o": [
+      "Purely pristine natural biopolymers",
+      "Semi-synthetic polymers (अर्ध संश्लेषित बहुलक)",
+      "Cross-linked vulcanized network thermosets",
+      "Inert addition oligomers"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Semi-synthetic polymers are created by taking natively occurring natural polymers (like cellulose) and subjecting them to chemical treatments (like acetylation or nitration) to enhance physical properties."
+  },
+  {
+    "p_id": "bpsc_chem_v3_139",
+    "qe": "What happens to the relative empirical formula when monomers undergo a classic chain-growth addition polymerization process?",
+    "qh": "जब मोनोमर्स एक क्लासिक चेन-ग्रोथ एडिशन पॉलीमराइजेशन प्रक्रिया से गुजरते हैं तो सापेक्ष मूलानुपाती सूत्र (empirical formula) का क्या होता है?",
+    "o": [
+      "The empirical formula changes completely due to loss of ammonia gas",
+      "The empirical formula of both the monomer and the resulting addition polymer remains identical",
+      "The empirical formula doubles its oxygen count via atmospheric oxidation",
+      "The empirical formula shifts from unsaturated to a highly branched aromatic group"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Addition polymerization involves the direct linking of unsaturated monomers without the elimination of any secondary byproduct molecules. Thus, the empirical formula of the monomer and polymer remains identical."
+  },
+  {
+    "p_id": "bpsc_chem_v3_140",
+    "qe": "Which byproduct molecule is explicitly excluded from being released during an addition polymerization run?",
+    "qh": "जोड़ पॉलीमराइजेशन (addition polymerization) के दौरान किस उप-उत्पाद अणु (byproduct molecule) को जारी होने से स्पष्ट रूप से बाहर रखा गया है?",
+    "o": [
+      "Hydrochloric acid ($HCl$)",
+      "Water ($H_2O$)",
+      "Ammonia ($NH_3$)",
+      "All of the above are excluded (कोई भी लघु अणु बाहर नहीं निकलता)"
+    ],
+    "a": 3,
+    "e": "<b>Explanation:</b> Addition polymerization occurs via direct unsaturated rearrangement across double or triple bonds. No small molecular weight fragments such as $H_2O, HCl$, or $NH_3$ are expelled during this process."
+  },
+  {
+    "p_id": "bpsc_chem_v3_141",
+    "qe": "What terminology defines a polymer synthesized by propagating a single, identical monomer species throughout the dynamic chain network?",
+    "qh": "गतिशील श्रृंखला नेटवर्क में एक ही, समान मोनोमर प्रजातियों को प्रसारित करके संश्लेषित पॉलिमर को क्या शब्दावली परिभाषित करती है?",
+    "o": [
+      "Copolymer",
+      "Homopolymer (सम बहुलक)",
+      "Thermosetting formal network",
+      "Semi-synthetic dynamic derivative"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Homopolymers are constructed by the repetitive addition of a single chemical monomer species (e.g., converting pure ethylene into polyethylene)."
+  },
+  {
+    "p_id": "bpsc_chem_v3_142",
+    "qe": "Which structural representation accurately tracks the production of standard commercial polyethylene from ethylene?",
+    "qh": "कौन सा संरचनात्मक प्रतिनिधित्व एथिलीन से मानक वाणिज्यिक पॉलीथीन के उत्पादन को सटीक रूप से ट्रैक करता है?",
+    "o": [
+      "$n \\, CH_2=CH_2 \\longrightarrow [-CH_2-CH_2-]_n$",
+      "$n \\, CF_2=CF_2 \\longrightarrow [-CF_2-CF_2-]_n$",
+      "$n \\, CH_2=CH-CN \\longrightarrow [-CH_2-CH(CN)-]_n$",
+      "$n \\, C_6H_5-CH=CH_2 \\longrightarrow [-CH(C_6H_5)-CH_2-]_n$"
+    ],
+    "a": 0,
+    "e": "<b>Explanation:</b> Polyethylene is a homopolymer generated by breaking the $\\pi$-bond of ethylene ($CH_2=CH_2$) under catalytic pressure, yielding repeating saturated ethylene linkages $[-CH_2-CH_2-]_n$."
+  },
+  {
+    "p_id": "bpsc_chem_v3_143",
+    "qe": "What are the two primary structural subclassifications used to group commercial polyethylenes based on density profiles?",
+    "qh": "घनत्व प्रोफाइल के आधार पर वाणिज्यिक पॉलीथीन को वर्गीकृत करने के लिए उपयोग किए जाने वाले दो प्राथमिक संरचनात्मक उपवर्गीकरण क्या हैं?",
+    "o": [
+      "Aromatic and Aliphatic configurations",
+      "High-Density Polyethylene (HDPE) and Low-Density Polyethylene (LDPE)",
+      "Vulcanized and Non-vulcanized elastomer domains",
+      "Biodegradable and Oligomeric clusters"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Commercial polyethylenes are segregated into High-Density Polyethylene (HDPE) and Low-Density Polyethylene (LDPE) due to structural differences in backbone branching."
+  },
+  {
+    "p_id": "bpsc_chem_v3_144",
+    "qe": "What structural classification distinguishes a polymer engineered by combining two or more entirely different monomer species within the same structural backbone?",
+    "qh": "कौन सा संरचनात्मक वर्गीकरण एक ही संरचनात्मक रीढ़ के भीतर दो या दो से अधिक पूरी तरह से अलग मोनोमर प्रजातियों को मिलाकर बनाए गए पॉलिमर को अलग करता है?",
+    "o": [
+      "Homopolymer",
+      "Copolymer (सह बहुलक)",
+      "Prisatane thermoplastic resin",
+      "Linear tactical oligomer"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Copolymers are defined by the joint polymerization of two or more structurally distinct monomer entities within a single macroscopic network (e.g., Buna-S, which combines butadiene and styrene)."
+  },
+  {
+    "p_id": "bpsc_chem_v3_145",
+    "qe": "Which specific chemical compound functions as the core monomer building block for synthesizing commercial Teflon (PTFE)?",
+    "qh": "कौन सा विशिष्ट रासायनिक यौगिक वाणिज्यिक टेफ्लॉन (PTFE) के संश्लेषण के लिए मुख्य मोनोमर बिल्डिंग ब्लॉक के रूप में कार्य करता है?",
+    "o": [
+      "Vinyl chloride",
+      "Tetrafluoroethylene (टेट्राफ्लोरोएथीन - $CF_2=CF_2$)",
+      "Acrylonitrile",
+      "Styrene aromatics"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Teflon is poly-tetrafluoroethylene (PTFE), produced by the free-radical polymerization of unsaturated tetrafluoroethylene monomers ($CF_2=CF_2$)."
+  },
+  {
+    "p_id": "bpsc_chem_v3_146",
+    "qe": "Which specific chemical initiator reagent is required to catalyze the addition polymerization of tetrafluoroethylene into Teflon at elevated pressure?",
+    "qh": "उच्च दाब पर टेट्राफ्लोरोएथीन के टेफ्लॉन में जोड़ पॉलीमराइजेशन को उत्प्रेरित करने के लिए किस विशिष्ट रासायनिक आरंभक अभिकर्मक (initiator reagent) की आवश्यकता होती है?",
+    "o": [
+      "Concentrated Nitric Acid",
+      "Acyl/Acetyl peroxide (एसीटिल परऑक्साइड)",
+      "Aqueous Sodium Hydroxide",
+      "Sulphur cross-linking agents"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> The industrial conversion of tetrafluoroethylene into a solid Teflon matrix is catalyzed using peroxide initiators like acetyl or benzoyl peroxide under elevated pressures."
+  },
+  {
+    "p_id": "bpsc_chem_v3_147",
+    "qe": "Because of its outstanding chemical inertness and high thermal stability, Teflon is highly favored for which consumer application?",
+    "qh": "अपनी उत्कृष्ट रासायनिक निष्क्रियता और उच्च तापीय स्थिरता के कारण, टेफ्लॉन को किस उपभोक्ता अनुप्रयोग के लिए अत्यधिक पसंद किया जाता है?",
+    "o": [
+      "Biodegradable surgical sutures",
+      "Non-stick surface coating for cookware (नॉन-स्टिक बर्तन लेप)",
+      "Highly elastic rubber bands",
+      "Water-soluble structural adhesives"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Teflon resists corrosive chemicals and heat, making it an excellent non-stick layer for kitchen cookware, gaskets, oil seals, and chemical valves."
+  },
+  {
+    "p_id": "bpsc_chem_v3_148",
+    "qe": "What is the structural IUPAC chemical name assigned to the primary monomer utilized in the industrial synthesis of Polyacrylonitrile (PAN)?",
+    "qh": "पॉलीएक्रिलोनाइट्राइल (PAN) के औद्योगिक संश्लेषण में उपयोग किए जाने वाले प्राथमिक मोनोमर को कौन सा संरचनात्मक IUPAC रासायनिक नाम दिया गया है?",
+    "o": [
+      "Tetrafluoroethylene",
+      "Acrylonitrile / Prop-2-enonitrile (एक्रिलोनाइट्राइल)",
+      "2-Methylbuta-1,3-diene",
+      "Styrene vinyl benzene"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Polyacrylonitrile (PAN) is formed from acrylonitrile monomers ($CH_2=CH-CN$), also referred to systematically under IUPAC nomenclature as prop-2-enonitrile."
+  },
+  {
+    "p_id": "bpsc_chem_v3_149",
+    "qe": "Which commercial synthetic material utilizes Polyacrylonitrile as a high-efficiency alternative substitute for natural wool fibers?",
+    "qh": "कौन सी व्यावसायिक सिंथेटिक सामग्री प्राकृतिक ऊन फाइबर के लिए उच्च दक्षता वाले वैकल्पिक विकल्प के रूप में पॉलीएक्रिलोनाइट्राइल का उपयोग करती है?",
+    "o": [
+      "Rayon sheeting",
+      "Orlon / Acrilan fibers (ऑरलॉन / एक्रिलन रेशे)",
+      "Bakelite panels",
+      "Teflon seals"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Polyacrylonitrile features a dense, warm fiber profile that acts as a synthetic wool substitute sold commercially under the brand names Orlon or Acrilan for sweaters and carpets."
+  },
+  {
+    "p_id": "bpsc_chem_v3_150",
+    "qe": "How do step-growth condensation polymerization reactions differ fundamentally from chain-growth addition mechanisms?",
+    "qh": "स्टेप-ग्रोथ कंडेनसेशन पॉलीमराइजेशन प्रतिक्रियाएं मौलिक रूप से चेन-ग्रोथ एडिशन मैकेनिज्म से कैसे भिन्न होती हैं?",
+    "o": [
+      "They occur without any functional groups present on the reagents",
+      "They link bi-functional or poly-functional monomers together alongside the repetitive loss of small byproduct molecules like water",
+      "They require the complete exclusion of oxygen atoms from the structural framework",
+      "They yield identical molecular weights across both types of reactions"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Condensation polymerization involves the reaction of bi-functional or poly-functional monomers, resulting in the formation of covalent links accompanied by the loss of small molecular byproducts like $H_2O$ or $HCl$."
+  },
+  {
+    "p_id": "bpsc_chem_v3_151",
+    "qe": "Which specific category of polymers is classified based on weak intermolecular forces that allow the material to stretch and rebound dynamically?",
+    "qh": "पॉलिमर की कौन सी विशिष्ट श्रेणी कमजोर अंतर-आणविक बलों के आधार पर वर्गीकृत की जाती है जो सामग्री को गतिशील रूप से खींचने और वापस लौटने (rebound) की अनुमति देती है?",
+    "o": [
+      "Fibers",
+      "Elastomers (प्रत्यास्थ बहुलक / इलास्टोमर)",
+      "Thermosetting resins",
+      "Linear crystalline sheets"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Elastomers possess weak intermolecular van der Waals forces, giving them highly elastic properties that allow them to be stretched and return to their original shape."
+  },
+  {
+    "p_id": "bpsc_chem_v3_152",
+    "qe": "What specific chemical link stabilizes the interior structure of dynamic fiber polymers like Nylon 6,6, imparting high tensile strength?",
+    "qh": "नायलॉन 6,6 जैसे गतिशील फाइबर पॉलिमर की आंतरिक संरचना को कौन सा विशिष्ट रासायनिक लिंक स्थिर करता है, जिससे उच्च तन्यता ताकत मिलती है?",
+    "o": [
+      "Weak van der Waals dispersion matrices",
+      "Strong intermolecular Hydrogen bonding (हाइड्रोजन आबंधन)",
+      "Arsenic-arsenic metallic linkages",
+      "Uncharged non-polar ether links"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Fiber polymers feature strong intermolecular forces, primarily driven by dense hydrogen bonding or dipole-dipole interactions, which align the chains into a highly crystalline, high-tensile layout."
+  },
+  {
+    "p_id": "bpsc_chem_v3_153",
+    "qe": "How do thermoplastic polymers structurally react when subjected to cyclic changes in operational temperature?",
+    "qh": "थर्मोप्लास्टिक पॉलिमर संरचनात्मक रूप से कैसे प्रतिक्रिया करते हैं जब उन्हें परिचालन तापमान में चक्रीय परिवर्तनों के अधीन किया जाता है?",
+    "o": [
+      "They undergo permanent charring and become completely infusible",
+      "They soften reversibly upon heating and harden upon cooling (गर्म करने पर मुलायम और ठंडा करने पर कठोर)",
+      "They convert immediately into volatile natural gaseous isomers",
+      "They form permanent cross-linked networks that cannot be remolded"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Thermoplastics consist of linear or slightly branched chains that soften when heated and harden when cooled, a completely reversible transition that allows for recycled remolding."
+  },
+  {
+    "p_id": "bpsc_chem_v3_154",
+    "qe": "Which structural feature differentiates a thermosetting polymer from a standard thermoplastic resin?",
+    "qh": "कौन सी संरचनात्मक विशेषता एक थर्मोसेटिंग पॉलिमर को एक मानक थर्मोप्लास्टिक राल से अलग करती है?",
+    "o": [
+      "Thermosetting systems lack covalent bonds entirely across their domains",
+      "Thermosetting polymers develop extensive, irreversible cross-linked three-dimensional networks upon heating",
+      "Thermosetting resins are linear unbranched chains optimized for cold stretching",
+      "Thermosetting structures revert to original monomer pools upon mild cooling"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Thermosetting polymers undergo chemical cross-linking upon heating, forming irreversible three-dimensional covalent networks that turn solid and cannot be remolded or softened again."
+  },
+  {
+    "p_id": "bpsc_chem_v3_155",
+    "qe": "What is the specific mechanical property associated with brittle thermosetting matrices when struck with an external force?",
+    "qh": "बाहरी बल से टकराने पर भंगुर थर्मोसेटिंग मैट्रिक्स से जुड़ी विशिष्ट यांत्रिक संपत्ति क्या है?",
+    "o": [
+      "Infinite elastic stretching",
+      "High fragility and brittleness (अत्यधिक भंगुर प्रकृति)",
+      "Complete liquefaction into monomeric oils",
+      "Tactical unzipping into linear fragments"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Thermosets have high cross-linking that limits chain movement. When exposed to mechanical impacts, they cannot deform plastically, making them highly brittle and prone to shattering."
+  },
+  {
+    "p_id": "bpsc_chem_v3_156",
+    "qe": "Which monomer pair is condensed together during the industrial manufacturing of the highly resilient fiber Nylon 6,6?",
+    "qh": "अत्यधिक लचीले फाइबर नायलॉन 6,6 के औद्योगिक निर्माण के दौरान किस मोनोमर जोड़ी को एक साथ संघनित (condensed) किया जाता है?",
+    "o": [
+      "Lauryl alcohol and sulfuric acid",
+      "Adipic acid and Hexamethylenediamine (एडीपिक अम्ल एवं हेक्सामेथिलीनडाईऐमीन)",
+      "Phenol and formaldehyde gases",
+      "Ethylene glycol and terephthalic acid"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Nylon 6,6 is a polyamide synthesized by the condensation polymerization of adipic acid ($HOOC-(CH_2)_4-COOH$) and hexamethylenediamine ($H_2N-(CH_2)_6-NH_2$)."
+  },
+  {
+    "p_id": "bpsc_chem_v3_157",
+    "qe": "What is the structural origin of the numeric designation '6,6' in the name of the polyamide polymer Nylon 6,6?",
+    "qh": "पॉलियामाइड पॉलिमर नायलॉन 6,6 के नाम में संख्यात्मक पदनाम '6,6' का संरचनात्मक मूल क्या है?",
+    "o": [
+      "It represents the operational pH required to initiate the reaction",
+      "It indicates that both the diamine and dicarboxylic acid monomers contain exactly six carbon atoms each",
+      "It marks the cross-linking density across the three-dimensional network",
+      "It signifies that the polymer is stable up to 66 degrees Celsius"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> The '6,6' designation indicates that both starting monomers—hexamethylenediamine and adipic acid—contain exactly six carbon atoms within their respective chemical frameworks."
+  },
+  {
+    "p_id": "bpsc_chem_v3_158",
+    "qe": "Which specific cyclic organic compound undergoes ring-opening polymerization to synthesize Nylon 6?",
+    "qh": "नायलॉन 6 को संश्लेषित करने के लिए कौन सा विशिष्ट चक्रीय कार्बनिक यौगिक रिंग-ओपनिंग पॉलीमराइजेशन से गुजरता है?",
+    "o": [
+      "Adipic acid anhydride",
+      "Caprolactam (कैप्रोलैक्टम)",
+      "Styrene oxide monomer",
+      "Phthalic anhydride units"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Nylon 6 is manufactured by heating the single cyclic monomer caprolactam with water at high temperatures, triggering a ring-opening polymerization process."
+  },
+  {
+    "p_id": "bpsc_chem_v3_159",
+    "qe": "How many total carbon atoms are present within the core structure of the repeating unit of the polyamide homopolymer Nylon 6?",
+    "qh": "पॉलियामाइड होमोपॉलिमर नायलॉन 6 की आवर्ती इकाई की मूल संरचना के भीतर कुल कितने कार्बन परमाणु मौजूद हैं?",
+    "o": [
+      "Two carbon units",
+      "Six carbon units (छह कार्बन परमाणु)",
+      "Twelve carbon segments",
+      "Sixty independent carbons"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Nylon 6 features a single monomer origin (caprolactam) containing exactly six carbon atoms, which forms a repeating chain unit $[-NH-(CH_2)_5-CO-]_n$."
+  },
+  {
+    "p_id": "bpsc_chem_v3_160",
+    "qe": "Which monomer pair undergoes esterification during the industrial synthesis of the polyester Dacron (Terylene)?",
+    "qh": "पॉलिएस्टर डेक्रॉन (टेरिलीन) के औद्योगिक संश्लेषण के दौरान किस मोनोमर जोड़ी का एस्टरीकरण (esterification) होता है?",
+    "o": [
+      "Phenol and formaldehyde gas molecules",
+      "Ethylene glycol and Terephthalic acid (एथिलीन ग्लाइकॉहॉल एवं टेरेफथैलिक अम्ल)",
+      "Hexamethylenediamine and adipic acid",
+      "Caprolactam and high pressure water streams"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Dacron (Terylene) is a classic polyester produced by the condensation polymerization of ethylene glycol ($HO-CH_2-CH_2-OH$) and terephthalic acid ($p-HOOC-C_6H_4-COOH$)."
+  },
+  {
+    "p_id": "bpsc_chem_v3_161",
+    "qe": "What specific structural link defines the backbone of commercial polymers like Dacron, classifying it as a polyester?",
+    "qh": "कौन सा विशिष्ट संरचनात्मक लिंक डेक्रॉन जैसे वाणिज्यिक पॉलिमर की रीढ़ को परिभाषित करता है, जो इसे पॉलिएस्टर के रूप में वर्गीकृत करता है?",
+    "o": [
+      "Amide linkage ($-CONH-$)",
+      "Ester linkage ($-COO-$) across repeating blocks",
+      "Arsenic-arsenic metallic coordination linkage",
+      "Quaternary quaternary ammonium matrix"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Dacron is a polyester because its long-chain backbone is held together by repeating ester functional groups ($-COO-$) formed through esterification reactions."
+  },
+  {
+    "p_id": "bpsc_chem_v3_162",
+    "qe": "What is the structural chemical classification and common industrial name of the polymer generated from phenol and formaldehyde?",
+    "qh": "फिनोल और फॉर्मलाडेहाइड से उत्पन्न पॉलिमर का संरचनात्मक रासायनिक वर्गीकरण और सामान्य औद्योगिक नाम क्या है?",
+    "o": [
+      "Polyester resin; Dacron",
+      "Phenol-formaldehyde resin; Bakelite (बैकेलाइट)",
+      "Polyamide structural sheet; Nylon 6",
+      "Elastomeric rubber; Neoprene lattice"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Condensing phenol with formaldehyde under basic or acidic catalysts produces a thermosetting cross-linked resin systematically termed phenol-formaldehyde resin, commonly known as Bakelite."
+  },
+  {
+    "p_id": "bpsc_chem_v3_163",
+    "qe": "Which intermediate linear polymer is generated during the early stages of the phenol-formaldehyde reaction before extensive cross-linking yields Bakelite?",
+    "qh": "व्यापक क्रॉस-लिंकिंग से बैकेलाइट प्राप्त होने से पहले फिनोल-फॉर्मलाडेहाइड प्रतिक्रिया के शुरुआती चरणों में कौन सा मध्यवर्ती रैखिक (linear) पॉलिमर उत्पन्न होता है?",
+    "o": [
+      "Teflon fluid emulsive pools",
+      "Novolac (नोवोलेक)",
+      "Caprolactam structural ring",
+      "Polyacrylonitrile linear mesh"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> The initial condensation of phenol and formaldehyde forms a linear polymer called Novolac, which is used in paints. Further heating with excess formaldehyde induces cross-linking to produce Bakelite."
+  },
+  {
+    "p_id": "bpsc_chem_v3_164",
+    "qe": "What physical byproduct must be systematically eliminated from the reaction matrix during the conversion of Novolac into cross-linked Bakelite?",
+    "qh": "नोवोलेक को क्रॉस-लिंक्ड बैकेलाइट में बदलने के दौरान रिएक्शन मैट्रिक्स से किस भौतिक उप-उत्पाद को व्यवस्थित रूप से समाप्त किया जाना चाहिए?",
+    "o": [
+      "Chlorine gas",
+      "Water ($H_2O$ - जल अणु)",
+      "Sulfur dioxide matrix",
+      "Fluorine radicals"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Bakelite synthesis is a condensation process. When Novolac cross-links with formaldehyde segments, water molecules ($H_2O$) are systematically eliminated as the structural methylene bridges form."
+  },
+  {
+    "p_id": "bpsc_chem_v3_165",
+    "qe": "Because of its excellent electrical insulation properties and high heat resistance, Bakelite is widely used for which industrial product?",
+    "qh": "अपने उत्कृष्ट विद्युत इन्सुलेशन गुणों और उच्च गर्मी प्रतिरोध के कारण, बैकेलाइट का व्यापक रूप से किस औद्योगिक उत्पाद के लिए उपयोग किया जाता है?",
+    "o": [
+      "Elastic clothing and activewear stretch fabrics",
+      "Electrical switches and handles of utensils (बिजली के स्विच एवं बर्तनों के हत्थे)",
+      "Transparent soft drink bottles",
+      "Biodegradable agricultural films"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Bakelite is an electrical insulator and heat-resistant thermoset, making it ideal for manufacturing electrical switches, sockets, circuit boards, and heat-protective handles for kitchen utensils."
+  },
+  {
+    "p_id": "bpsc_chem_v3_166",
+    "qe": "Which monomer pair undergoes condensation to yield Melamine-formaldehyde resin, used for manufacturing shatterproof dinnerware?",
+    "qh": "टूटने से बचने वाले (shatterproof) डिनरवेयर के निर्माण के लिए उपयोग किए जाने वाले मेलामाइन-फॉर्मलाडेहाइड राल को प्राप्त करने के लिए किस मोनोमर जोड़ी का संघनन होता है?",
+    "o": [
+      "Phenol and acetaldehyde molecules",
+      "Melamine and Formaldehyde (मैलेमीन एवं फॉर्मल्डिहाइड)",
+      "Ethylene glycol and adipic acid",
+      "Styrene and acrylonitrile fractions"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Melamine-formaldehyde resin is formed by the condensation polymerization of melamine (a heterocyclic triamine) and formaldehyde, producing a highly durable cross-linked material."
+  },
+  {
+    "p_id": "bpsc_chem_v3_167",
+    "qe": "What is the primary industrial application for cross-linked Melamine-formaldehyde resin?",
+    "qh": "क्रॉस-लिंक्ड मेलामाइन-फॉर्मलाडेहाइड राल के लिए प्राथमिक औद्योगिक अनुप्रयोग क्या है?",
+    "o": [
+      "Soft elastomeric surgical gloves",
+      "Non-breakable, shatterproof crockery and dinnerware (अटूट क्रॉकरी निर्माण)",
+      "High-density commercial explosives",
+      "Volatile coatings for aerospace windshields"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Melamine resin is hard and scratch-resistant, making it a valuable material for manufacturing high-quality, shatterproof plates, cups, and non-breakable plastic dinnerware."
+  },
+  {
+    "p_id": "bpsc_chem_v3_168",
+    "qe": "What chemical compound serves as the fundamental monomer unit for natural rubber?",
+    "qh": "कौन सा रासायनिक यौगिक प्राकृतिक रबर के लिए मूलभूत मोनोमर इकाई के रूप में कार्य करता है?",
+    "o": [
+      "Chloroprene monomers",
+      "Isoprene / 2-Methylbuta-1,3-diene (आइसोप्रीन)",
+      "Acrylonitrile fragments",
+      "Styrene vinyl aromatics"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Natural rubber is a biological addition polymer composed entirely of repeating isoprene units, systematically named 2-methylbuta-1,3-diene under IUPAC guidelines."
+  },
+  {
+    "p_id": "bpsc_chem_v3_169",
+    "qe": "Which spatial geometric configuration characterizes the polymeric configuration of pristine natural rubber harvested from *Hevea brasiliensis*?",
+    "qh": "कौन सा स्थानिक ज्यामितीय विन्यास *Hevea brasiliensis* से प्राप्त प्राकृतिक रबर के पॉलीमेरिक विन्यास को दर्शाता है?",
+    "o": [
+      "All-trans-polyisoprene configuration",
+      "All-cis-polyisoprene layout (शिश-पॉलीआइसोप्रीन रूप)",
+      "Alternating syndiotactic aromatic chains",
+      "Random cross-linked cross networks"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Natural rubber is chemically defined as cis-1,4-polyisoprene. This all-cis configuration prevents tight chain packing, resulting in coiled structures that give the material elastic properties."
+  },
+  {
+    "p_id": "bpsc_chem_v3_170",
+    "qe": "How does the trans-isomer configuration of polyisoprene, known commercially as Gutta-Percha, contrast physically with natural cis-rubber?",
+    "qh": "पॉलीआइसोप्रीन का ट्रांस-आइसोमर विन्यास, जिसे व्यावसायिक रूप से गुट्टा-परचा (Gutta-Percha) कहा जाता है, प्राकृतिक सिस-रबर के साथ भौतिक रूप से कैसे भिन्न है?",
+    "o": [
+      "It exhibits five times greater elasticity and stretchability",
+      "It forms a highly crystalline, non-elastic, and rigid mass (गैर-प्रत्यास्थ तथा अत्यधिक कठोर रूप)",
+      "It undergoes spontaneous conversion into volatile ethanol",
+      "It lacks carbon-carbon double bonds entirely within its framework"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Gutta-Percha is trans-1,4-polyisoprene. The trans-orientation allows the chains to pack closely into a highly crystalline, linear structure, making it rigid and non-elastic compared to cis-natural rubber."
+  },
+  {
+    "p_id": "bpsc_chem_v3_171",
+    "qe": "What milky, colloidal aqueous suspension harvested from rubber trees serves as the primary raw source for extracting raw natural rubber?",
+    "qh": "रबर के पेड़ों से प्राप्त कौन सा दूधिया, कोलाइडल जलीय निलंबन (aqueous suspension) कच्चे प्राकृतिक रबर को निकालने के लिए प्राथमिक कच्चे स्रोत के रूप में कार्य करता है?",
+    "o": [
+      "Novolac syrup solution",
+      "Rubber Latex fluid (लेटेक्स)",
+      "Esterified polyol resin",
+      "Caprolactam alkaline water"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Raw natural rubber is commercially isolated from latex, a milky colloidal fluid harvested by tapping the bark of specialized rubber-producing plants."
+  },
+  {
+    "p_id": "bpsc_chem_v3_172",
+    "qe": "What processing technique is applied to raw natural rubber to eliminate its sticky nature, improve mechanical strength, and reduce temperature sensitivity?",
+    "qh": "कच्चे प्राकृतिक रबर के चिपचिपे स्वभाव को दूर करने, यांत्रिक शक्ति में सुधार करने और तापमान संवेदनशीलता को कम करने के लिए कौन सी प्रसंस्करण तकनीक लागू की जाती है?",
+    "o": [
+      "Acidic nitration using fuming nitric acid",
+      "Vulcanization of rubber with sulfur (रबर का वल्कनीकरण)",
+      "Saponification via basic potassium options",
+      "Linear extraction using volatile ethers"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Vulcanization is the process of heating raw natural rubber with sulfur. This introduces cross-links between the polymer chains, significantly improving mechanical strength, elasticity, and thermal stability while eliminating stickiness."
+  },
+  {
+    "p_id": "bpsc_chem_v3_173",
+    "qe": "What specific chemical bridge is established between rubber chains during the commercial vulcanization process?",
+    "qh": "वाणिज्यिक वल्कनीकरण प्रक्रिया के दौरान रबर श्रृंखलाओं के बीच कौन सा विशिष्ट रासायनिक पुल स्थापित होता है?",
+    "o": [
+      "Phosphate diester linkages",
+      "Inter-chain Disulfide/Sulfur cross-links (सल्फर क्रॉस-लिंक पुल)",
+      "Methylene amide coordinate zones",
+      "Trichloro-substituted sucrose rings"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Vulcanization cross-links the unsaturated positions along polyisoprene chains using linear sulfur bridges (disulfide cross-links), which restricts chain slippage and enhances elasticity."
+  },
+  {
+    "p_id": "bpsc_chem_v3_174",
+    "qe": "Which temperature window is optimized for heating raw natural rubber alongside sulfur agents during commercial vulcanization operations?",
+    "qh": "वाणिज्यिक वल्कनीकरण संचालन के दौरान सल्फर एजेंटों के साथ कच्चे प्राकृतिक रबर को गर्म करने के लिए कौन सी तापमान सीमा अनुकूलित है?",
+    "o": [
+      "200 K to 250 K",
+      "373 K to 415 K (373 K से 415 K तापमान सीमा)",
+      "600 K to 850 K",
+      "Above 1200 K structural absolute threshold"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Industrial vulcanization is carried out by heating the prepared rubber-sulfur mass within an optimized thermal window spanning from 373 K to 415 K."
+  },
+  {
+    "p_id": "bpsc_chem_v3_175",
+    "qe": "Which description highlights a physical limitation of raw un-vulcanized natural rubber that makes it unsuitable for heavy-duty engineering applications?",
+    "qh": "कौन सा वर्णन कच्चे गैर-वल्कनीकृत प्राकृतिक रबर की एक भौतिक सीमा पर प्रकाश डालता है जो इसे भारी-भरकम इंजीनियरिंग अनुप्रयोगों के लिए अनुपयुक्त बनाता है?",
+    "o": [
+      "It turns completely inert and crystalline at boiling point parameters",
+      "It becomes soft and sticky at high temperatures, turn brittle at cold temperatures, and exhibits high water absorption (उच्च तापमान पर मुलायम/चिपचिपा तथा निम्न तापमान पर भंगुर)",
+      "It dissolves instantly when exposed to ice-cold municipal tap water",
+      "It lacks hydrocarbon atoms entirely within its structural framework"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Untreated natural rubber is highly sensitive to temperature, becoming sticky and soft above 335 K and brittle below 283 K. It also absorbs significant water, limiting its use in structural applications."
+  },
+  {
+    "p_id": "bpsc_chem_v3_176",
+    "qe": "What mechanical performance enhancement occurs when a synthetic elastomer is stretched to its operational limit?",
+    "qh": "जब एक सिंथेटिक इलास्टोमर को उसकी परिचालन सीमा तक खींचा जाता है तो यांत्रिक प्रदर्शन में क्या सुधार होता है?",
+    "o": [
+      "It shatters immediately due to lack of internal chemical bonds",
+      "It can be stretched to roughly twice its native unextended structural length without permanent structural failure (अपने मूल आकार के दुगने आकार तक खिंचना)",
+      "It converts irreversibly into a volatile gas phase configuration",
+      "It drops its internal cross-linking density down to zero net links"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Synthetic elastomeric rubbers are designed with flexible backbones that can be stretched to at least twice their resting length before returning to their original dimensions once the stress is removed."
+  },
+  {
+    "p_id": "bpsc_chem_v3_177",
+    "qe": "What specific percentage formulation of monomer reagents defines the copolymer layout of synthetic Buna-N rubber?",
+    "qh": "मोनोमर अभिकर्मकों का कौन सा विशिष्ट प्रतिशत फॉर्मूलेशन सिंथेटिक ब्यूना-एन रबर के कोपोलिमर लेआउट को परिभाषित करता है?",
+    "o": [
+      "95% Styrene and 5% pure caprolactam fluid fractions",
+      "75% Buta-1,3-diene and 25% Acrylonitrile (75% ब्यूटा-1,3-डाईन एवं 25% एक्रिलोनाइट्राइल)",
+      "50% Phenol crystals and 50% basic Novolac chains",
+      "10% Tetrafluoroethylene and 90% sulfur cross-link structures"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Buna-N is a synthetic copolymer manufactured by combining approximately 75% buta-1,3-diene and 25% acrylonitrile under free-radical emulsion conditions."
+  },
+  {
+    "p_id": "bpsc_chem_v3_178",
+    "qe": "Because Buna-N exhibits exceptional resistance to swelling and degradation by organic solvents, it is highly optimized for which application?",
+    "qh": "क्योंकि ब्यूना-एन कार्बनिक विलायकों द्वारा सूजन और क्षरण के प्रति असाधारण प्रतिरोध प्रदर्शित करता है, यह किस अनुप्रयोग के लिए अत्यधिक अनुकूलित है?",
+    "o": [
+      "Water-soluble infant toys",
+      "Tank linings, oil seals, and fuel hoses (तेल सील, टंकी स्तर तथा ईंधन नली निर्माण)",
+      "Novolac structural varnish coatings",
+      "Shatterproof transparent dining plates"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Buna-N resists degradation by oils, petrol, and ozone, making it the preferred industrial choice for manufacturing fuel hoses, automotive oil seals, gaskets, and chemical tank linings."
+  },
+  {
+    "p_id": "bpsc_chem_v3_179",
+    "qe": "Which monomer combination defines the synthetic copolymer network of Buna-S rubber?",
+    "qh": "कौन सा मोनोमर संयोजन ब्यूना-एस रबर के सिंथेटिक कोपोलिमर नेटवर्क को परिभाषित करता है?",
+    "o": [
+      "Melamine and formaldehyde molecules",
+      "Buta-1,3-diene and Styrene (ब्यूटा-1,3-डाईन एवं स्टाइरीन)",
+      "Chloroprene and sulfur agents",
+      "Ethylene glycol and terephthalic acid blocks"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Buna-S (Styrene-Butadiene Rubber or SBR) is an addition copolymer synthesized from buta-1,3-diene ($CH_2=CH-CH=CH_2$) and styrene ($C_6H_5-CH=CH_2$) in a 3:1 ratio."
+  },
+  {
+    "p_id": "bpsc_chem_v3_180",
+    "qe": "What synthetic homopolymer is generated by the free-radical polymerization of 2-chlorobuta-1,3-diene?",
+    "qh": "2-क्लोरोब्यूटा-1,3-डाईन के मुक्त-कण (free-radical) पॉलीमराइजेशन से कौन सा सिंथेटिक होमोपॉलिमर उत्पन्न होता है?",
+    "o": [
+      "Natural rubber latex",
+      "Neoprene (नियोप्रीन)",
+      "Dacron sheet",
+      "Bakelite compound"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Neoprene is a synthetic rubber produced by the linear addition polymerization of chloroprene monomers, chemically designated as 2-chlorobuta-1,3-diene."
+  },
+  {
+    "p_id": "bpsc_chem_v3_181",
+    "qe": "Because of its outstanding resistance to oxidative weathering, chemical attack, and oils, Neoprene is the ideal material for manufacturing which product?",
+    "qh": "ऑक्सीडेटिव अपक्षय, रासायनिक हमले और तेलों के प्रति अपने उत्कृष्ट प्रतिरोध के कारण, नियोप्रीन किस उत्पाद के निर्माण के लिए आदर्श सामग्री है?",
+    "o": [
+      "Water-soluble adhesive starch pastes",
+      "Hoses, gaskets, conveyor belts, and diving suits (कन्वेयर बेल्ट, होज़, वाशर तथा गोताखोर सूट)",
+      "Novolac clear dynamic structural varnishes",
+      "Brittle indoor household electrical switches"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Neoprene resists mechanical wear, oils, and environmental oxidation, making it highly valuable for heavy-duty industrial conveyor belts, automotive hoses, gaskets, and insulated diving wetsuits."
+  }
+]
