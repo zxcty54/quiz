@@ -1,0 +1,392 @@
+[
+  {
+    "p_id": "bpsc_surface_v4_51",
+    "qe": "What specific chemical phenomenon drives the formation of massive geographical deltas at estuarine regions where freshwater rivers meet the ocean?",
+    "qh": "किस विशिष्ट रासायनिक घटना के कारण उन मुहानों (estuarine regions) पर विशाल भौगोलिक डेल्टा का निर्माण होता है जहाँ मीठे पानी की नदियाँ समुद्र से मिलती हैं?",
+    "o": [
+      "Liquid-liquid emulsification",
+      "Peptization of solid particles",
+      "Coagulation of clay particles by ocean electrolytes (नदी के कोलाइडल कणों का अवक्षेपण / स्कंदन)",
+      "Homogeneous catalytic oxidation"
+    ],
+    "a": 2,
+    "e": "<b>Explanation:</b> River water is a heterogeneous colloidal dispersion containing negatively charged clay and silt particles. Ocean water holds a dense concentration of dissolved mineral electrolytes. When they meet, these electrolytes neutralize the surface charges on the mud particles, causing coagulation, precipitation, and delta formation."
+  },
+  {
+    "p_id": "bpsc_surface_v4_52",
+    "qe": "Applying base-10 logarithms to the empirical Freundlich power law converts it into which specific graphical linear relationship?",
+    "qh": "अनुभवजन्य फ्रेंडलिक पावर लॉ (empirical Freundlich power law) पर बेस-10 लघुगणक लागू करने से यह किस विशिष्ट ग्राफिकल रैखिक संबंध में बदल जाता है?",
+    "o": [
+      "A parabolic curve that flattens at absolute thresholds",
+      "A straight line when plotting $\\log(x/m)$ versus $\\log p$, featuring a slope equal to $1/n$ and a y-intercept of $\\log k$ (सीधी रेखा वाला ग्राफ)",
+      "A vertical exponential line running parallel to the mass axis",
+      "A localized hyperbolic plot centered around zero pressure indices"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Taking the logarithm transforms the Freundlich equation into $\\log(x/m) = \\frac{1}{n}\\log p + \\log k$. Plotting $\\log(x/m)$ on the y-axis against $\\log p$ on the x-axis yields a straight line where the slope ($m$) directly equals $\\frac{1}{n}$ and the y-intercept matches $\\log k$."
+  },
+  {
+    "p_id": "bpsc_surface_v4_53",
+    "qe": "Which physical process is entirely unrelated to the origin or stabilization of electrical surface charges across colloidal sol particles?",
+    "qh": "कौन सी भौतिक प्रक्रिया कोलाइडल सॉल कणों पर विद्युत सतह आवेशों (electrical surface charges) की उत्पत्ति या स्थिरीकरण से पूरी तरह से असंबंधित है?",
+    "o": [
+      "Electron capture by sol units during mechanical electro-dispersion",
+      "Preferential adsorption of specific ionic species from the liquid phase",
+      "Deep bulk absorption of ionic species from the surrounding solution (आयनिक प्रजातियों का अवशोषण आवेश के लिए जिम्मेदार नहीं है)",
+      "The architectural formation of a Helmholtz electrical double layer"
+    ],
+    "a": 2,
+    "e": "<b>Explanation:</b> Surface charges on colloids are driven by surface-bound phenomena, such as electron capture during Bredig's arc processing, preferential adsorption of common ions, or Helmholtz double layer formations. Bulk absorption involves interior mass distribution and does not create surface charge."
+  },
+  {
+    "p_id": "bpsc_surface_v4_54",
+    "qe": "What precise surface chemical process explains why passing raw, yellowish-brown sugarcane juice through an active column of animal charcoal yields a clear, colorless filtrate?",
+    "qh": "कौन सी सटीक सतह रासायनिक प्रक्रिया यह बताती है कि एक सक्रिय पशु चारकोल कॉलम के माध्यम से कच्चे, पीले-भूरे रंग के गन्ने के रस को पारित करने से एक स्पष्ट, रंगहीन छानना (filtrate) प्राप्त होता है?",
+    "o": [
+      "Deep internal fluid absorption",
+      "Surface adsorption of colored organic impurities onto the charcoal active sites (चारकोल सतह पर रंगीन अशुद्धियों का अधिशोषण)",
+      "Electrolytic coagulation inside the liquid mass",
+      "Monomolecular emulsification of plant lipids"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Animal charcoal acts as an efficient adsorbent with a vast network of active sites. When raw sugar solution is filtered through it, the charcoal selectively adsorbs the yellowish-brown organic pigment molecules via surface adsorption, leaving behind a clear solution."
+  },
+  {
+    "p_id": "bpsc_surface_v4_55",
+    "qe": "What happens to the structure of aggregated micelles if a concentrated colloidal soap solution is diluted with an excessive volume of pure water?",
+    "qh": "यदि एक सांद्र कोलाइडल साबुन के घोल को शुद्ध पानी की अत्यधिक मात्रा से पतला (dilute) किया जाता है, तो एकत्रित मिसेल्स की संरचना का क्या होता है?",
+    "o": [
+      "They permanently fuse into an insoluble rigid thermosetting block",
+      "The intermolecular forces decrease, causing the micelles to break apart and revert into individual ions (मिसेल का पुनः व्यक्तिगत आयनों में बदलना)",
+      "They undergo spontaneous oxidation into open-chain saccharic acids",
+      "They develop covalent methylene bridges that lock the structure completely"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Micelle formation is a concentration-dependent reversible process that occurs above the Critical Micelle Concentration (CMC). Diluting the solution below this threshold breaks the aggregates apart, causing the surfactant molecules to revert into individual ions behaving like a normal electrolyte."
+  },
+  {
+    "p_id": "bpsc_surface_v4_56",
+    "qe": "How do different solid transition metal catalysts influence the reaction outcome when processing identical starting gaseous reactants like carbon monoxide ($CO$) and hydrogen ($H_2$)?",
+    "qh": "समान प्रारंभिक गैसीय अभिकारकों जैसे कार्बन मोनोऑक्साइड ($CO$) और हाइड्रोजन ($H_2$) को संसाधित करते समय विभिन्न ठोस संक्रमण धातु उत्प्रेरक प्रतिक्रिया के परिणाम को कैसे प्रभावित करते हैं?",
+    "o": [
+      "They yield identical products because catalysts cannot alter reaction pathways",
+      "Different catalysts display unique surface specificities, directing the exact same reactants toward entirely different chemical products (विभिन्न उत्प्रेरकों द्वारा अलग-अलग उत्पाद देना)",
+      "They convert the reactants into water-soluble linear synthetic polyolefins",
+      "They permanently alter the absolute values of the reaction's total mass change"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Catalysts exhibit high selectivity. The same starting materials can yield different products depending on the catalyst used. For example, passing $CO$ and $H_2$ over a nickel catalyst produces methane ($CH_4$), whereas a copper catalyst yields formaldehyde ($HCHO$), demonstrating catalytic selectivity."
+  },
+  {
+    "p_id": "bpsc_surface_v4_57",
+    "qe": "What happens to the standard enthalpy change ($\\Delta H$) of a chemical reaction when a highly active solid catalyst is introduced into the system?",
+    "qh": "जब एक अत्यधिक सक्रिय ठोस उत्प्रेरक को प्रणाली में पेश किया जाता है तो रासायनिक प्रतिक्रिया के मानक एन्थैल्पी परिवर्तन ($\\Delta H$) का क्या होता है?",
+    "o": [
+      "The value of $\\Delta H$ increases exponentially due to local heating parameters",
+      "The value of $\\Delta H$ remains completely unchanged because a catalyst does not alter the energy states of reactants and products (उत्प्रेरक द्वारा enthalpy परिवर्तन न बदलना)",
+      "The value of $\\Delta H$ drops to absolute zero via structural charring",
+      "The reaction switches from an exothermic to an endothermic configuration"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> A catalyst accelerates reaction kinetics by lowering the activation energy barrier. It does not alter the thermodynamic initial energy state of the reactants or the final state of the products. Therefore, the net enthalpy change of the reaction ($\\Delta H$) remains completely unchanged."
+  },
+  {
+    "p_id": "bpsc_surface_v4_58",
+    "qe": "According to the Freundlich isotherm ($x/m = k \\cdot p^{1/n}$), how does the extent of adsorption behave when the exponent factor $\\frac{1}{n}$ drops exactly to zero?",
+    "qh": "फ्रेंडलिक समताप ($x/m = k \\cdot p^{1/n}$) के अनुसार, जब घातांक कारक $\\frac{1}{n}$ बिल्कुल शून्य हो जाता है तो अधिशोषण की सीमा कैसा व्यवहार करती है?",
+    "o": [
+      "The adsorption becomes completely independent of pressure, yielding a horizontal straight line plot ($x/m = k$) (अधिशोषण का दाब से स्वतंत्र होना)",
+      "The adsorption becomes directly proportional to the square root of concentration",
+      "The adsorption increases linearly with pressure up to infinity",
+      "The adsorption drops immediately to a zero absolute neutral index"
+    ],
+    "a": 0,
+    "e": "<b>Explanation:</b> When $\\frac{1}{n} = 0$, the Freundlich equation simplifies to $x/m = k \\cdot p^0 = k$. Under these parameters, the extent of surface adsorption becomes entirely constant and independent of gas pressure, representing saturation conditions."
+  },
+  {
+    "p_id": "bpsc_surface_v4_59",
+    "qe": "Why does hydrogen gas ($H_2$) display exceptionally low surface adsorption on a sample of activated charcoal compared to easily liquefiable gases like sulfur dioxide ($SO_2$)?",
+    "qh": "सल्फर डाइऑक्साइड ($SO_2$) जैसी आसानी से द्रवीकृत होने वाली गैसों की तुलना में हाइड्रोजन गैस ($H_2$) सक्रिय चारकोल के नमूने पर असाधारण रूप से कम सतह अधिशोषण क्यों प्रदर्शित करती है?",
+    "o": [
+      "Because hydrogen atoms contain dense repeating amide networks",
+      "Due to its exceptionally low critical temperature ($33\\text{ K}$), which reflects very weak intermolecular van der Waals forces of attraction (निम्न क्रिटिकल तापमान एवं कमजोर वांडर वाल्स बल)",
+      "Because hydrogen gas undergoes rapid chemical polymerization into a rigid resin",
+      "Because it acts as a permanent suicide enzyme inhibitor on the carbon surface"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> The ease with which a gas adsorbs via physisorption depends directly on its critical temperature ($T_c$). Gases with low critical temperatures, like hydrogen ($T_c = 33\\text{ K}$), have very weak intermolecular van der Waals forces, making it difficult for them to pack and anchor onto surfaces compared to easily liquefiable gases."
+  },
+  {
+    "p_id": "bpsc_surface_v4_60",
+    "qe": "What unique conformational parameter provides long-term kinetic stability to colloidal dispersions, preventing single particles from colliding and precipitating?",
+    "qh": "कौन सा अनूठा संरचनात्मक पैरामीटर कोलाइडल फैलाव (colloidal dispersions) को दीर्घकालिक गतिज स्थिरता प्रदान करता है, एकल कणों को आपस में टकराने और अवक्षेपित होने से रोकता है?",
+    "o": [
+      "The random amorphous looping of unbranched polyolefin tail branches",
+      "The presence of equal and similar electrical charges on all dispersed colloidal particles, causing mutual electrostatic repulsion (कणों पर समान विद्युत आवेश के कारण प्रतिकर्षण)",
+      "The complete conversion of all surface functional groups into volatile non-ionic ethers",
+      "The total presence of short-chain aromatic links that absorb moisture"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Colloidal particles carry a net electrical charge of the same sign. The resulting mutual electrostatic repulsion prevents the particles from aggregating into larger clusters when they collide, stabilizing the colloidal dispersion."
+  },
+  {
+    "p_id": "bpsc_surface_v4_61",
+    "qe": "Why can an established liquid-liquid emulsion typically not be broken or separated by adding an additional volume of the continuous dispersion medium?",
+    "qh": "निरंतर फैलाव माध्यम (dispersion medium) की अतिरिक्त मात्रा मिलाने से आमतौर पर एक स्थापित तरल-तरल इमल्शन (liquid-liquid emulsion) को क्यों नहीं तोड़ा या अलग किया जा सकता है?",
+    "o": [
+      "Because adding the medium merely dilutes the system while the protective emulsifying agent continues to stabilize the droplets (माध्यम मिलाने से केवल तनुकरण होता है, स्थायित्व नहीं बदलता)",
+      "Because it causes the immediate transformation of lipids into linear Novolac strings",
+      "Because the extra fluid triggers high-pressure ring-opening polymerization runs",
+      "Because it eliminates all electrostatic forces of attraction across domains instantly"
+    ],
+    "a": 0,
+    "e": "<b>Explanation:</b> Emulsions are stabilized by emulsifying agents that form a protective film around the dispersed droplets. Adding more dispersion medium simply dilutes the system without disrupting this protective layer, keeping the emulsion stable."
+  },
+  {
+    "p_id": "bpsc_surface_v4_62",
+    "qe": "Which specific category of substances can be added to an aqueous solution to cleanly precipitate a negatively charged emulsion?",
+    "qh": "ऋणात्मक रूप से आवेशित इमल्शन को साफ रूप से अवक्षेपित करने के लिए जलीय घोल में किस विशिष्ट श्रेणी के पदार्थों को मिलाया जा सकता है?",
+    "o": [
+      "Non-electrolytes like glucose or urea that do not yield ions",
+      "Strong mineral electrolytes like $\\text{NaCl}$ or $\\text{KCl}$ that supply counter-cations to neutralize droplet charges (विद्युत अपघट्य या इलेक्ट्रोलाइट्स मिलाकर)",
+      "Linear unbranched polysaccharides derived from plant starches",
+      "Fluorinated vinylic addition thermoplastics processed under vacuum"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Emulsion droplets carry surface charges that stabilize them. Introducing mineral electrolytes (like $NaCl$ or $KCl$) supplies counter-cations that neutralize these negative charges, allowing the droplets to coalesce and precipitate. Non-electrolytes like urea do not produce ions and cannot cause precipitation."
+  },
+  {
+    "p_id": "bpsc_surface_v4_63",
+    "qe": "Which primary category of colloidal dispersions is highly resistant to coagulation and cannot be easily precipitated by trace electrolyte additions?",
+    "qh": "कोलाइडल फैलाव की कौन सी प्राथमिक श्रेणी जमावट (coagulation) के प्रति अत्यधिक प्रतिरोधी है और ट्रेस इलेक्ट्रोलाइट परिवर्धन द्वारा आसानी से अवक्षेपित नहीं हो सकती है?",
+    "o": [
+      "Lyophobic colloids with irreversible architectures",
+      "Lyophilic colloids, also known as reversible colloids (द्रवस्नेही या उत्क्रमणीय कोलाइड)",
+      "Heavily branched cross-linked phenolic net resins",
+      "Unbranched non-ionic long-chain polyolefin bars"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Lyophilic (solvent-loving) colloids are highly stable and reversible. Their stability is driven by matching surface charges and extensive solvation layers that envelope the particles, shielding them from coagulation by trace electrolytes."
+  },
+  {
+    "p_id": "bpsc_surface_v4_64",
+    "qe": "What physical scenario proceeds when a protective lyophilic sol is deliberately blended into an unstable lyophobic sol sample?",
+    "qh": "जब एक सुरक्षात्मक लायोफिलिक सॉल (lyophilic sol) को जानबूझकर एक अस्थिर लायोफोबिक सॉल नमूने में मिलाया जाता है तो कौन सा भौतिक परिदृश्य आगे बढ़ता है?",
+    "o": [
+      "The lyophilic sol undergoes immediate structural denaturation into single amino acids",
+      "The lyophilic particles form a protective film or layer over the lyophobic cores, shielding them from coagulation (लायोफोबिक कणों पर सुरक्षात्मक परत का बनना)",
+      "The mixture converts into a volatile open-chain non-polar gas cloud",
+      "The framework triggers the automatic common-ion precipitation of the medium"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Adding a lyophilic sol protects an unstable lyophobic sol. The lyophilic particles adsorb onto the surface of the lyophobic cores, forming a protective sheath that prevents electrolyte ions from reaching and coagulating the lyophobic particles."
+  },
+  {
+    "p_id": "bpsc_surface_v4_65",
+    "qe": "What surface chemical phenomenon describes the scenario where the continuous dispersion medium begins to migrate through an electric field because the movement of colloidal particles is mechanically blocked?",
+    "qh": "कौन सा पृष्ठ रासायनिक सिद्धांत उस परिदृश्य का वर्णन करता है जहां निरंतर फैलाव माध्यम (dispersion medium) एक विद्युत क्षेत्र के माध्यम से पलायन करना शुरू करता है क्योंकि कोलाइडल कणों की गति यंत्रवत् अवरुद्ध होती है?",
+    "o": [
+      "Reverse osmosis desalination",
+      "Electroosmosis (इलेक्ट्रोऑस्मोसिस)",
+      "Electrophoretic chain unzipping",
+      "Ziegler-Natta coordination polymerization"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Electrophoresis involves the movement of charged colloidal particles under an electric potential. If this particulate movement is mechanically blocked, the liquid dispersion medium moves through the electric field instead, a phenomenon termed electroosmosis."
+  },
+  {
+    "p_id": "bpsc_surface_v4_66",
+    "qe": "In what specific ways can a solid catalyst change physically or qualitatively after completing a chemical reaction cycle, while remaining quantitatively intact?",
+    "qh": "एक ठोस उत्प्रेरक एक रासायनिक प्रतिक्रिया चक्र को पूरा करने के बाद मात्रात्मक रूप से बरकरार रहने के बावजूद भौतिक या गुणात्मक रूप से किन विशिष्ट तरीकों से बदल सकता है?",
+    "o": [
+      "It can change its physical state or surface texture, becoming finer or rougher, while its total mass and chemical composition remain unaltered (भौतिक और गुणात्मक परिवर्तन संभव है)",
+      "It loses its covalent single bonds entirely to transform into a liquid polyol",
+      "It undergoes automatic chemical conversion into an essential amino acid sequence",
+      "It splits into alternative open-chain dicarboxylic saccharic fractions"
+    ],
+    "a": 0,
+    "e": "<b>Explanation:</b> A catalyst remains chemically and quantitatively unchanged at the end of a reaction. However, it can undergo physical or qualitative alterations, such as a smooth metal sheet turning into a finely divided powder due to repeated adsorption-desorption stress during catalysis."
+  },
+  {
+    "p_id": "bpsc_surface_v4_67",
+    "qe": "What twin surface phenomena proceed simultaneously when a dry stick of white chalk is dipped into a container of colored ink?",
+    "qh": "जब सफेद चाक की एक सूखी छड़ी को रंगीन स्याही के कंटेनर में डुबोया जाता है तो कौन सी दोहरी सतह घटनाएं (twin surface phenomena) एक साथ आगे बढ़ती हैं?",
+    "o": [
+      "The continuous free-radical addition polymerization of highly branched vinylic alkenes",
+      "The surface adsorption of colored pigment molecules accompanied by the deep bulk absorption of the solvent liquid (रंगीन पदार्थ का अधिशोषण तथा विलायक का अवशोषण)",
+      "The hydrolytic ring-opening cleavage of cross-linked thermosetting resins",
+      "The absolute laboratory conversion of glucose rings into saccharic acid domains"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Dipping chalk into ink demonstrates both adsorption and absorption. The colored pigment molecules are adsorbed onto the surface layer of the chalk, while the solvent liquid penetrates uniformly into the bulk interior mass of the chalk stick."
+  },
+  {
+    "p_id": "bpsc_surface_v4_68",
+    "qe": "Why is maintaining an ultra-clean solid surface under ultra-high vacuum conditions vital when conducting scientific surface chemistry investigations?",
+    "qh": "वैज्ञानिक पृष्ठ रसायन अनुसंधान करते समय अल्ट्रा-हाई वैक्यूम परिस्थितियों में एक अल्ट्रा-क्लीन ठोस सतह को बनाए रखना क्यों महत्वपूर्ण है?",
+    "o": [
+      "To completely eliminate all carbon-carbon covalent single bonds from the matrix",
+      "To clear away ambient atmospheric gas layers, ensuring that active sites are fully open to adsorb only the desired target species (वांछित प्रजातियों के अधिशोषण के लिए सतह साफ रखना)",
+      "To render the entire solid mass highly water-soluble at room parameters",
+      "To convert the flexible base into a volatile linear non-ionic detergent sheet"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Clean surfaces are essential in surface chemistry studies. If a solid surface is exposed to air, it adsorbs atmospheric gases ($O_2, N_2, CO_2$), blocking its active sites. An ultra-high vacuum clears these contaminants, ensuring only the target species interact with the surface."
+  },
+  {
+    "p_id": "bpsc_surface_v4_69",
+    "qe": "Why is chemical adsorption (chemisorption) often referred to as activated adsorption by physical chemists?",
+    "qh": "भौतिक रसायनविदों द्वारा रासायनिक अधिशोषण (chemisorption) को अक्सर सक्रिय अधिशोषण (activated adsorption) क्यों कहा जाता है?",
+    "o": [
+      "Because it contains an abundance of permanent arsenic-arsenic double bond units",
+      "Because it involves true chemical bond formation, requiring a high activation energy barrier that accelerates with temperature (रासायनिक बंध निर्माण के लिए सक्रियण ऊर्जा की आवश्यकता)",
+      "It is composed entirely of cross-linked phenolic resins containing methylene bridges",
+      "It undergoes rapid environmental biodegradation within natural water cycles"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Chemisorption involves true chemical reaction steps that form covalent or ionic bonds between the gas and solid layers. Because bond formation requires a specific activation energy threshold, the process is often called activated adsorption."
+  },
+  {
+    "p_id": "bpsc_surface_v4_70",
+    "qe": "What architectural change defines the transition of a surfactant soap solution from a true molecular solution into a colloidal dispersion as its concentration is scaled up?",
+    "qh": "सर्फेक्टेंट साबुन के घोल की सांद्रता बढ़ने पर उसका एक वास्तविक आणविक विलयन से कोलाइडल फैलाव में परिवर्तन किस संरचनात्मक परिवर्तन को परिभाषित करता है?",
+    "o": [
+      "The individual ions undergo complete chemical degradation into volatile mineral gases",
+      "Once the concentration passes the critical micelle concentration (CMC), individual soap molecules aggregate into structural clusters called micelles (CMC पार करने पर मिसेल या कोलाइड का बनना)",
+      "The solution enters an intricate non-ionic furanose sugar matrix layer",
+      "The treatment converts the sodium fatty acid salts into narrow-spectrum antibiotics"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> At low concentrations, soap behaves as a normal strong electrolyte in a true solution. Once its concentration reaches the Critical Micelle Concentration (CMC, typically $10^{-4}$ to $10^{-3}\\text{ mol/L}$), individual surfactant units aggregate into clusters called micelles, forming an associated colloid."
+  },
+  {
+    "p_id": "bpsc_surface_v4_71",
+    "qe": "Which specific organic compound functions as the core monomer building block required to construct a synthetic rubber elastomer like Neoprene?",
+    "qh": "सिंथेटिक इलास्टोमर नियोप्रीन जैसे सिंथेटिक रबर का निर्माण करने के लिए आवश्यक मुख्य मोनोमर बिल्डिंग ब्लॉक के रूप में कौन सा विशिष्ट कार्बनिक अणु कार्य करता है?",
+    "o": [
+      "Isoprene (2-methylbuta-1,3-diene)",
+      "Chloroprene (2-chlorobuta-1,3-diene) (क्लोरोप्रीन मोनोमर)",
+      "Acrylonitrile (prop-2-enonitrile)",
+      "Styrene (phenylethylene) vinyl aromatic"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Neoprene is a synthetic rubber produced by the linear addition polymerization of chloroprene monomers, chemically designated as 2-chlorobuta-1,3-diene."
+  },
+  {
+    "p_id": "bpsc_surface_v4_72",
+    "qe": "What type of macromolecular structural linkage connects consecutive nucleotide monomers together along a strand of DNA or RNA?",
+    "qh": "डीएनए या आरएनए की एक श्रृंखला के साथ लगातार न्यूक्लियोटाइड मोनोमर्स को किस प्रकार का मैक्रोमोलेक्यूलर संरचनात्मक लिंकेज जोड़ता है?",
+    "o": [
+      "Glycosidic carbon-oxygen linkage bridging components",
+      "Phosphodiester linkage establishing bridges between 5' and 3' carbons (फॉस्फोडिएस्टर बंध)",
+      "Methylene bridge framework generated via condensation polymerization",
+      "Amide linkage systematically identical to a biological peptide bond"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Nucleotides polymerize to form nucleic acids through phosphodiester linkages. This covalent bridge connects the 5' carbon atom of one sugar ring to the 3' position of the adjacent nucleotide unit."
+  },
+  {
+    "p_id": "bpsc_surface_v4_73",
+    "qe": "What architectural guidelines define a catalytic scenario classified under the structural heading of homogeneous catalysis?",
+    "qh": "कौन से संरचनात्मक दिशानिर्देश समांगी उत्प्रेरण (homogeneous catalysis) के संरचनात्मक शीर्षक के तहत वर्गीकृत एक उत्प्रेरक परिदृश्य को परिभाषित करते हैं?",
+    "o": [
+      "The catalyst must dissolve entirely into the product liquid phase profile",
+      "The reacting chemical species and the catalyst exist in the exact same physical phase (अभिकारक एवं उत्प्रेरक का समान प्रावस्था में होना)",
+      "The system lacks covalent chemical bonds across its reactive domains",
+      "The process must be driven entirely by biological enzyme molecules"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Homogeneous catalysis describes a system where the reactants and the catalyst are uniformly distributed within the same state of matter or phase (e.g., gas-phase reactions where both reactants and catalyst are gases)."
+  },
+  {
+    "p_id": "bpsc_surface_v4_74",
+    "qe": "What specific suffix is universally applied to denote the standard nomenclature of almost all catalytic enzymes in biochemistry?",
+    "qh": "जैव रसायन में लगभग सभी उत्प्रेरक एंजाइमों के मानक नामकरण को दर्शाने के लिए कौन सा विशिष्ट प्रत्यय (suffix) सार्वभौमिक रूप से लागू किया जाता है?",
+    "o": [
+      "The suffix -ose typical of simple carbohydrates",
+      "The suffix -ase (प्रत्यय -ase, जैसे माल्टेस)",
+      "The suffix -ol found across long-chain alcohols",
+      "The suffix -amide marking synthetic fiber strands"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Systematic nomenclature guidelines specify that enzyme names consistently conclude with the specific diagnostic suffix '-ase' (e.g., maltase, invertase, urease)."
+  },
+  {
+    "p_id": "bpsc_surface_v4_75",
+    "qe": "What structural name is assigned to the functional covalent amide bridge generated when glycine and alanine condense into a dipeptide?",
+    "qh": "उस कार्यात्मक सहसंयोजक एमाइड पुल (covalent amide bridge) को क्या संरचनात्मक नाम दिया गया है जो तब उत्पन्न होता है जब ग्लाइसिन और एलेनिन एक डिपेप्टाइड में संघनित होते हैं?",
+    "o": [
+      "Glycosidic connection",
+      "Peptide linkage (पेप्टाइड बंध)",
+      "Phosphodiester channel",
+      "Disulfide bridge link"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Condensing the carboxylic acid group of glycine with the alpha-amino center of alanine expels a water molecule, establishing a covalent amide linkage ($-CONH-$) termed a peptide bond or peptide linkage."
+  },
+  {
+    "p_id": "bpsc_surface_v4_76",
+    "qe": "What happens to the structure of linear Novolac strands if they are mixed with excess formaldehyde gas and subjected to high thermal curing?",
+    "qh": "यदि रैखिक नोवोलेक स्ट्रैंड्स को अतिरिक्त फॉर्मलाडेहाइड गैस के साथ मिलाया जाए और उच्च थर्मल क्यूरिंग के अधीन किया जाए तो उनकी संरचना का क्या होता है?",
+    "o": [
+      "They break down into volatile liquid phenols via hydrolytic cleavage",
+      "They develop extensive covalent methylene cross-links, transforming the linear resin into the rigid thermosetting network Bakelite (क्रॉस-लिंक्ड बैकेलाइट नेटवर्क बनाना)",
+      "They convert into a unbranched biodegradable polyester chain configuration",
+      "They form an explicit water-soluble non-ionic surfactant lattice balanced by sodium"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Novolac is a linear condensation intermediate. Heating Novolac with excess formaldehyde introduces methylene linkages that cross-link the chains into a permanent three-dimensional network, creating the infusible thermosetting polymer Bakelite."
+  },
+  {
+    "p_id": "bpsc_surface_v4_77",
+    "qe": "Which physical properties characteristically separate water-soluble globular proteins like insulin from water-insoluble fibrous options?",
+    "qh": "कौन से भौतिक गुण पानी में घुलनशील ग्लोबुलर प्रोटीन जैसे इंसुलिन को पानी में अघुलनशील रेशेदार विकल्पों से विशिष्ट रूप से अलग करते हैं?",
+    "o": [
+      "Globular proteins are structured as long linear sheets held by coordinate ionic centers",
+      "Globular proteins form compact spherical shapes with polar groups on the exterior, rendering them water-soluble (गोलाकार आकृति एवं जल-घुलनशीलता)",
+      "Globular proteins turn completely volatile under normal room parameters",
+      "Globular proteins contain extensive networks of unbranched synthetic polyolefins"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Globular proteins fold into dense spherical configurations that expose hydrophilic residues to the surrounding environment, making them water-soluble. Fibrous proteins contain parallel strands locked by non-covalent forces, making them insoluble."
+  },
+  {
+    "p_id": "bpsc_chem_v4_255",
+    "qe": "What is the correct mathematical expression used to calculate the degree of dissociation ($\\alpha$) of a weak electrolyte from its molar conductivity values?",
+    "qh": "इलेक्ट्रोलाइट मानों से कमजोर इलेक्ट्रोलाइट के विघटन की डिग्री ($\\alpha$) की गणना करने के लिए उपयोग किया जाने वाला सही गणितीय व्यंजक क्या है?",
+    "o": [
+      "$\\alpha = \\Lambda_m \\cdot \\Lambda_m^\\circ$",
+      "$\\alpha = \\frac{\\Lambda_m}{\\Lambda_m^\\circ}$ (विघटन की डिग्री सूत्र)",
+      "$\\alpha = \\frac{\\kappa \\cdot 1000}{M}$",
+      "$\\alpha = nF E^\\circ_{cell}$"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> The degree of dissociation ($\alpha$) of a weak electrolyte at a specific concentration is calculated as the ratio of its molar conductivity ($\Lambda_m$) to its limiting molar conductivity ($\Lambda_m^\circ$): $\alpha = \\frac{\\Lambda_m}{\\Lambda_m^\circ}$."
+  },
+  {
+    "p_id": "bpsc_chem_v4_245",
+    "qe": "What is the core mathematical formula used to calculate the Molar Conductivity ($\\Lambda_m$) of a solution from its specific conductivity ($\\kappa$) and molarity ($M$) in standard laboratory units?",
+    "qh": "मानक प्रयोगशाला इकाइयों में समाधान की विशिष्ट चालकता ($\\kappa$) और मोलरिटी ($M$) से उसकी मोलर चालकता ($\\Lambda_m$) की गणना करने के लिए उपयोग किया जाने वाला मुख्य गणितीय सूत्र क्या है?",
+    "o": [
+      "$\\Lambda_m = \\frac{M \\cdot \\kappa}{1000}$",
+      "$\\Lambda_m = \\frac{1000 \\cdot \\kappa}{M}$ (मोलर चालकता सूत्र)",
+      "$\\Lambda_m = \\kappa \\cdot G^*$",
+      "$\\Lambda_m = \\frac{\\kappa \\cdot R}{M}$"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> When conductivity $\\kappa$ is measured in $\\text{S}\\cdot\\text{cm}^{-1}$ and concentration $M$ is in $\\text{mol/L}$, the molar conductivity is calculated using the formula: $\\Lambda_m = \\frac{1000 \\cdot \\kappa}{M}$."
+  },
+  {
+    "p_id": "bpsc_biomol_v4_22",
+    "qe": "What architectural spatial arrangement characterizes the alpha-helix conformation commonly encountered in the secondary structure of proteins?",
+    "qh": "प्रोटीन की माध्यमिक संरचना में आमतौर पर सामना किए जाने वाले अल्फा-हेलिक्स विन्यास की कौन सी संरचनात्मक स्थानिक व्यवस्था विशेषता है?",
+    "o": [
+      "Individual strands lying parallel to each other held by broad inter-chain linkages",
+      "A continuous polypeptide chain coiled tightly into a right-handed screw geometry stabilized by hydrogen bonds (दाहिने हाथ की पेंच जैसी कुंडलित ज्यामिति)",
+      "An open open-chain carbohydrate mesh locked by loose glycosidic units",
+      "A cross-linked network layer centered around a quaternary nitrogen group"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> The $\\alpha$-helix is a secondary structural motif where a single polypeptide strand coils tightly into a right-handed screw geometry. This conformation is stabilized by intramolecular hydrogen bonds between consecutive turns of the backbone."
+  }
+]
