@@ -1,0 +1,327 @@
+[
+  {
+    "p_id": "bpsc_chem_v4_321",
+    "qe": "Why does the industrial electrolysis of a concentrated brine solution ($\text{NaCl}$) favor the release of chlorine gas ($Cl_2$) at the anode over oxygen gas ($O_2$), despite water having a lower standard potential requirement?",
+    "qh": "सांद्र नमक के घोल ($\text{NaCl}$) का औद्योगिक विद्युत अपघटन (electrolysis) पानी की तुलना में एनोड पर क्लोरीन गैस ($Cl_2$) के निकलने को क्यों प्राथमिकता देता है, जबकि पानी का मानक विभव कम होता है?",
+    "o": [
+      "Because chlorine atoms are completely insoluble in aqueous mediums",
+      "Because water oxidation is kinetically sluggish and requires a substantial overpotential value to proceed (ऑक्सीजन निर्माण के लिए ओवर-पोटेंशियल की आवश्यकता)",
+      "Because the reaction triggers immediate common-ion precipitation of all materials",
+      "Because it causes the spontaneous degradation of the matching salt bridge gel"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Thermodynamically, water oxidation requires less potential ($1.23\text{ V}$) than chloride oxidation ($1.36\text{ V}$). However, the kinetics of oxygen evolution are highly sluggish, creating a structural voltage barrier known as overpotential or overvoltage. This suppresses water breakdown, causing chloride ions to selectively oxidize into chlorine gas."
+  },
+  {
+    "p_id": "bpsc_chem_v4_322",
+    "qe": "Why must an alternating current (AC) power source be deliberately utilized when measuring the electrical resistance of an ionic solution?",
+    "qh": "एक आयनिक विलयन के विद्युत प्रतिरोध को मापते समय अल्टरनेटिंग करंट (AC) पावर स्रोत का जानबूझकर उपयोग क्यों किया जाना चाहिए?",
+    "o": [
+      "To accelerate the common-ion precipitation of volatile metal halides",
+      "To keep the ion concentration uniform and prevent polarization errors that occur with a DC source (सांद्रता को स्थिर रखना तथा ध्रुवण रोकना)",
+      "To convert the solution into an unbranched biodegradable polyester network",
+      "To lower the activation energy of the water solvent matrix"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Using a direct current (DC) source drives continuous electrolysis, which rapidly alters the local chemical concentration of ions near the electrode surfaces and polarizes the cell. An alternating current (AC) source constantly reverses direction, keeping the solution composition uniform and stable for accurate resistance profiling."
+  },
+  {
+    "p_id": "bpsc_chem_v4_323",
+    "qe": "What physical parameter status marks the exact boundary condition where electrical current stops flowing through an active Galvanic cell circuit?",
+    "qh": "कौन सी भौतिक पैरामीटर स्थिति उस सटीक सीमा स्थिति को चिह्नित करती है जहां एक सक्रिय गैल्वेनिक सेल सर्किट के माध्यम से विद्युत धारा का प्रवाह रुक जाता है?",
+    "o": [
+      "The standard cell potential ($E^\circ_{\text{cell}}$) drops precisely to zero volts",
+      "The dynamic cell potential ($E_{\text{cell}}$) drops to exactly zero volts as chemical equilibrium is reached ($E_{cell} = 0$ होने पर साम्यावस्था स्थापित होना)",
+      "The resistance of the salt bridge matrix climbs to absolute infinity",
+      "The total entropy of the surrounding buffer drops to zero"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> As a Galvanic cell operates, the reacting species continuously shift toward a state of chemical equilibrium. Once absolute chemical equilibrium is achieved, the overall cell potential ($E_{\text{cell}}$) drops to exactly $0\text{ V}$, meaning no net potential difference exists to drive an electron stream, halting the current flow."
+  },
+  {
+    "p_id": "bpsc_chem_v4_324",
+    "qe": "The Nernst equation for a silver half-cell is expressed as $E = E^\circ + 0.0591\log[\text{Ag}^+]$. Based on this mathematical relationship, how does the reduction potential react if the silver ion concentration is systematically expanded?",
+    "qh": "सिल्वर हाफ-सेल के लिए नर्स्ट समीकरण $E = E^\circ + 0.0591\log[\text{Ag}^+]$ है। इस गणितीय संबंध के आधार पर, यदि सिल्वर आयन सांद्रता को व्यवस्थित रूप से बढ़ाया जाए तो अपचयन विभव (reduction potential) कैसे प्रतिक्रिया करता है?",
+    "o": [
+      "The potential decreases linearly because of volume constraints",
+      "The potential increases directly because it is positively proportional to the logarithm of silver ion concentration (सिल्वर आयन सांद्रता बढ़ने पर विभव का बढ़ना)",
+      "The potential drops instantly to zero absolute volts",
+      "The potential switches signs from positive to negative values"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> The Nernst equation for the silver couple ($E_{\text{Ag}^+/\text{Ag}} = E^\circ_{\text{Ag}^+/\text{Ag}} + 0.0591\log[\text{Ag}^+]$) shows a directly proportional relationship between the dynamic potential and the logarithm of the silver ion concentration. Consequently, raising $[\\text{Ag}^+]$ expands the logarithmic term, systematically increasing the electrode potential value."
+  },
+  {
+    "p_id": "bpsc_chem_v4_325",
+    "qe": "Why can an aqueous copper sulfate solution ($\\text{CuSO}_4$) absolutely not be safely stored inside a container fabricated from solid zinc metal sheets?",
+    "qh": "कॉपर सल्फेट ($\\text{CuSO}_4$) के जलीय विलयन को ठोस जिंक धातु की चादरों से बने कंटेनर के भीतर सुरक्षित रूप से क्यों नहीं रखा जा सकता है?",
+    "o": [
+      "Because copper sulfate evaporates into volatile sulfur dioxide gas upon contact with zinc",
+      "Because zinc possesses a negative standard reduction potential making it more reactive than copper, leading to a spontaneous displacement reaction (जिंक कॉपर से अधिक क्रियाशील है)",
+      "Because zinc forms an intricate non-ionic furanose sugar matrix with the solution",
+      "Because the setup initiates immediate structural denaturation of the container wall amides"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Zinc has a negative standard reduction potential ($-0.76\text{ V}$) compared to copper ($+0.34\text{ V}$), meaning it is more reactive and oxidizes more easily. Storing $\text{CuSO}_4$ in a zinc vessel triggers a spontaneous single-displacement reaction where zinc dissolves into the solution as $\text{Zn}^{2+}$ and copper plates out, destroying the container."
+  },
+  {
+    "p_id": "bpsc_chem_v4_326",
+    "qe": "Consider a setup where two cells are coupled together: Cell 'A' is an electrochemical cell with an EMF of 2.0 V, and Cell 'B' is a Daniell cell with a potential of 1.1 V. Which cell will be forced to operate as an electrolytic cell, and what reaction occurs at its anode?",
+    "qh": "एक सेटअप पर विचार करें जहां दो सेलों को एक साथ जोड़ा गया है: सेल 'A' 2.0 V के EMF वाला एक इलेक्ट्रोकेमिकल सेल है, और सेल 'B' 1.1 V के विभव वाला एक डेनियल सेल है। कौन सा सेल इलेक्ट्रोलाइटिक सेल के रूप में कार्य करने के लिए मजबूर होगा, और इसके एनोड पर क्या प्रतिक्रिया होगी?",
+    "o": [
+      "Cell A; Zinc undergoes rapid reduction to metallic sheets",
+      "Cell B; Copper metal undergoes oxidation to dissolve as $\\text{Cu}^{2+}$ ions (सेल B इलेक्ट्रोलाइटिक सेल की तरह कार्य करेगा तथा कॉपर का ऑक्सीकरण होगा)",
+      "Cell A; Liquid water splits into volatile open-chain non-polar gases",
+      "Cell B; Sulfate ions are converted into linear Novolac strings"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Because Cell 'A' delivers a higher opposing voltage ($2.0\text{ V}$) than the native potential of the Daniell cell 'B' ($1.1\text{ V}$), it drives current backward through Cell 'B'. This forces Cell 'B' to function as an electrolytic cell, reversing its natural half-reactions so that copper metal undergoes oxidation at the anode: $\text{Cu}(s) \rightarrow \text{Cu}^{2+} + 2e^-$."
+  },
+  {
+    "p_id": "bpsc_chem_v4_327",
+    "qe": "If a coupled cell system features a lower opposing voltage from Cell 'A' ($0.5\text{ V}$) relative to the Daniell cell 'B' ($1.1\text{ V}$), what net electrochemical reactions proceed across the active terminals of Cell 'B'?",
+    "qh": "यदि एक युग्मित सेल सिस्टम (coupled cell system) में डेनियल सेल 'B' ($1.1 V$) के सापेक्ष सेल 'A' ($0.5 V$) का कम विरोधी वोल्टेज है, तो सेल 'B' के सक्रिय टर्मिनलों पर क्या नेट इलेक्ट्रोकेमिकल प्रतिक्रियाएं आगे बढ़ती हैं?",
+    "o": [
+      "$\text{Anode: } \text{Cu} \rightarrow \text{Cu}^{2+} + 2e^- ; \, \text{Cathode: } \text{Zn}^{2+} + 2e^- \\rightarrow \\text{Zn}$",
+      "$\text{Anode: } \text{Zn} \\rightarrow \\text{Zn}^{2+} + 2e^- ; \, \text{Cathode: } \\text{Cu}^{2+} + 2e^- \\rightarrow \\text{Cu}$ (सेल B गैल्वेनिक सेल की तरह सामान्य रूप से कार्य करेगा)",
+      "$\\text{Anode: } 2\\text{H}_2\\text{O} \\rightarrow \\text{O}_2 + 4\\text{H}^+ + 4e^- ; \\, \\text{Cathode: } \\text{Na}^+ + e^- \\rightarrow \\text{Na}$",
+      "$\\text{Anode: } \\text{PbSO}_4 + 2\\text{H}_2\\text{O} \\rightarrow \\text{PbO}_2 + \\text{SO}_4^{2-} + 4\\text{H}^+ + 2e^-$"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> When the opposing potential from Cell 'A' ($0.5\text{ V}$) is less than the native potential of the Daniell cell 'B' ($1.1\text{ V}$), the Daniell cell operates normally as a Galvanic cell. It drives electrons out, maintaining its natural chemistry: zinc undergoes oxidation at the anode, and copper undergoes reduction at the cathode."
+  },
+  {
+    "p_id": "bpsc_chem_v4_328",
+    "qe": "When an active Zinc-Silver Galvanic cell begins to operate spontaneously, what is the direction of the electron stream through the external circuit, and why?",
+    "qh": "जब एक सक्रिय जिंक-सिल्वर गैल्वेनिक सेल स्वतः कार्य करना शुरू करता है, तो बाहरी सर्किट के माध्यम से इलेक्ट्रॉन प्रवाह की दिशा क्या होती है, और क्यों?",
+    "o": [
+      "Electrons flow from silver to zinc because silver has a more negative reduction potential",
+      "Electrons flow from zinc to silver because zinc has a more negative standard reduction potential, readily undergoing oxidation at the anode (इलेक्ट्रॉन जिंक से सिल्वर की ओर जाएंगे)",
+      "Electrons remain locked within the salt bridge gel matrix channel",
+      "Electrons move back and forth rapidly via an alternating current profile"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Zinc features a more negative standard reduction potential ($-0.76\text{ V}$) than silver ($+0.80\text{ V}$). This means zinc oxidizes more easily, acting as the anode. Electrons flow from the electron-rich anode (zinc) through the external wire to the cathode (silver)."
+  },
+  {
+    "p_id": "bpsc_chem_v4_329",
+    "qe": "Which specific electrode domain serves as the functional location for the reduction half-reaction inside a spontaneous Zinc-Silver electrochemical cell?",
+    "qh": "एक स्वतः जिंक-सिल्वर इलेक्ट्रोकेमिकल सेल के भीतर अपचयन हाफ-प्रतिक्रिया (reduction half-reaction) के लिए कौन सा विशिष्ट इलेक्ट्रोड डोमेन कार्यात्मक स्थान के रूप में कार्य करता है?",
+    "o": [
+      "The zinc plate which acts as the negative anode terminal",
+      "The silver plate which acts as the positive cathode terminal (सिल्वर प्लेट कैथोड की तरह कार्य करेगी)",
+      "The glass boundary layer holding the inert agar-agar gel",
+      "The central porous membrane block containing volatile non-polar fluid"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> In a spontaneous Zinc-Silver cell system, silver ions ($\text{Ag}^+$) gain electrons at the surface of the silver plate ($\text{Ag}^+ + e^- \\rightarrow \text{Ag}(s)$). Because reduction occurs at this interface, the silver plate acts as the cathode."
+  },
+  {
+    "p_id": "bpsc_chem_v4_330",
+    "qe": "What happens to the operational behavior of an active Galvanic cell if its functional salt bridge component is completely removed from the compartment system?",
+    "qh": "यदि किसी सक्रिय गैल्वेनिक सेल के कार्यात्मक लवण सेतु (salt bridge) घटक को कम्पार्टमेंट सिस्टम से पूरी तरह से हटा दिया जाए तो उसके परिचालन व्यवहार का क्या होता है?",
+    "o": [
+      "The cell potential climbs exponentially to twice its normal standard voltage",
+      "The cell instantly stops functioning because the internal electrical circuit is broken, causing the potential to drop to zero (सेल कार्य करना बंद कर देगा क्योंकि विभव शून्य हो जाता है)",
+      "The cell converts into a biodegradable aliphatic polyester storage resin",
+      "The active solutions undergo rapid conversion into volatile open-chain methane"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> A salt bridge completes the internal electrical circuit of a Galvanic cell and maintains charge neutrality by allowing counter-ions to migrate. Completely removing it breaks the circuit, leading to an immediate charge accumulation that drops the cell potential to zero and halts cell function."
+  },
+  {
+    "p_id": "bpsc_chem_v4_331",
+    "qe": "How do the respective chemical concentrations of $\\text{Zn}^{2+}$ and $\\text{Ag}^+$ ions change over time while a Zinc-Silver cell operates spontaneously?",
+    "qh": "एक जिंक-सिल्वर सेल के स्वतः कार्य करने के दौरान समय के साथ $\\text{Zn}^{2+}$ और $\\text{Ag}^+$ आयनों की संबंधित रासायनिक सांद्रता कैसे बदलती है?",
+    "o": [
+      "The concentration of $\\text{Zn}^{2+}$ drops linearly while $[\\text{Ag}^+]$ increases exponentially",
+      "The concentration of $\\text{Zn}^{2+}$ increases due to anode dissolution, while the concentration of $\\text{Ag}^+$ decreases due to cathode plating (Zn2+ की सांद्रता बढ़ेगी तथा Ag+ की घटेगी)",
+      "Both concentrations remain locked at exactly 1 M due to coordination rules",
+      "Both ionic concentrations drop to absolute zero via common-ion effects"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> As the cell operates spontaneously, metallic zinc undergoes continuous oxidation at the anode ($\text{Zn} \\rightarrow \text{Zn}^{2+} + 2e^-$), which increases $[\\text{Zn}^{2+}]$ over time. Simultaneously, silver ions undergo continuous reduction and plate out at the cathode ($\\text{Ag}^+ + e^- \\rightarrow \\text{Ag}$), decreasing $[\\text{Ag}^+]$."
+  },
+  {
+    "p_id": "bpsc_chem_v4_332",
+    "qe": "Once an electrochemical cell achieves a completely 'dead' status, what can be stated about the variation in ionic concentrations inside the electrolyte compartments?",
+    "qh": "एक बार जब इलेक्ट्रोकेमिकल सेल पूरी तरह से 'डेड' (dead) स्थिति प्राप्त कर लेता है, तो इलेक्ट्रोलाइट डिब्बों के भीतर आयनिक सांद्रता में परिवर्तन के बारे में क्या कहा जा सकता है?",
+    "o": [
+      "The concentrations continue to shift rapidly until the fluid evaporates completely",
+      "The system has reached chemical equilibrium, meaning the concentrations of $\\text{Zn}^{2+}$ and $\\text{Ag}^+$ ions stabilize and no longer change (साम्यावस्था पर सांद्रता स्थिर हो जाती है)",
+      "The concentrations drop to zero absolute indicators",
+      "The ions combine to form a rigid cross-linked polymer network sheet"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> A 'dead' cell has reached a state of thermodynamic chemical equilibrium ($E_{\\text{cell}} = 0\\text{ V}$). At chemical equilibrium, the forward and reverse reaction rates balance exactly, meaning the chemical concentrations of all participating ions stabilize and remain constant."
+  },
+  {
+    "p_id": "bpsc_chem_v4_333",
+    "qe": "What thermodynamic parameter defines the maximum electrical work that can be extracted from a Galvanic cell operating under perfectly reversible conditions?",
+    "qh": "परफेक्टली प्रतिवर्ती (reversible) परिस्थितियों में काम करने वाले गैल्वेनिक सेल से निकाले जा सकने वाले अधिकतम विद्युत कार्य को कौन सा ऊष्मागतिक पैरामीटर परिभाषित करता है?",
+    "o": [
+      "The total entropy shift calculated across the boundary layer",
+      "The decrease in the system's Gibbs Free Energy Change ($-\\Delta_r G$) (गिब्स मुक्त ऊर्जा में कमी)",
+      "The linear increase in the internal resistance profile",
+      "The total heat capacity value managed under high pressures"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> When a Galvanic cell operates reversibly, the electrical work performed is at its theoretical maximum. Thermodynamics dictates that this maximum useful electrical work equals the decrease in the Gibbs Free Energy change of the system: $W_{\\text{max}} = -\\Delta_r G$."
+  },
+  {
+    "p_id": "bpsc_chem_v4_334",
+    "qe": "Why is the Gibbs free energy change ($\\Delta_r G$) classified as an extensive thermodynamic property, while the cell potential ($E_{\\text{cell}}$) behaves as an intensive property?",
+    "qh": "गिब्स मुक्त ऊर्जा परिवर्तन ($\\Delta_r G$) को एक विस्तीर्ण ऊष्मागतिक गुण (extensive thermodynamic property) के रूप में क्यों वर्गीकृत किया जाता है, जबकि सेल विभव ($E_{\\text{cell}}$) एक गहन गुण (intensive property) की तरह व्यवहार करता है?",
+    "o": [
+      "$\\Delta_r G$ is extensive because its energy value scales directly with the stoichiometric number of moles ($n$) reacting, while voltage is independent of scale (\\Delta_r G विस्तीर्ण तथा E_cell गहन गुण है)",
+      "$\\Delta_r G$ depends entirely on the cross-linking density of the methylene bridges",
+      "$\\Delta_r G$ is extensive because it converts directly into a volatile open-chain non-polar gas",
+      "There is no difference; both are intensive parameters driven by temperature loops"
+    ],
+    "a": 0,
+    "e": "<b>Explanation:</b> Cell potential ($E_{\\text{cell}}$) is an intensive property because voltage represents an electrical potential field that is independent of reaction scale. Conversely, the Gibbs free energy change is extensive because its energy output values depend directly on the number of moles of electrons transferred ($n$) via the relationship $\\Delta_r G = -nFE_{\\text{cell}}$."
+  },
+  {
+    "p_id": "bpsc_chem_v4_335",
+    "qe": "What thermodynamic value is calculated for the standard Gibbs free energy change ($\\Delta_r G^\circ$) of a classic Daniell cell reaction when its standard potential is +1.1 V and $n=2$?",
+    "qh": "एक क्लासिक डेनियल सेल प्रतिक्रिया के मानक गिब्स मुक्त ऊर्जा परिवर्तन ($\\Delta_r G^\circ$) के लिए क्या थर्मोडायनामिक मान प्राप्त होता है जब इसका मानक विभव +1.1 V और $n=2$ हो?",
+    "o": [
+      "$\\Delta_r G^\circ = +2.2 \\cdot F$",
+      "$\\Delta_r G^\circ = -2 \\cdot F \\cdot 1.1 = -2.2\\text{ F}$ (गिब्स ऊर्जा परिवर्तन मान)",
+      "$\\Delta_r G^\circ = \\frac{-1.1}{2F}$",
+      "$\\Delta_r G^\circ = 0\\text{ J/mol}$"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Using the standard thermodynamic equation $\\Delta_r G^\circ = -nFE^\circ_{\\text{cell}}$, we substitute the reaction parameters for a Daniell cell ($n = 2$, $E^\circ_{\\text{cell}} = 1.1\\text{ V}$). This yields the direct mathematical relationship: $\\Delta_r G^\circ = -2 \\cdot F \\cdot 1.1 = -2.2\\text{ F}$ Joules per mole."
+  },
+  {
+    "p_id": "bpsc_chem_v4_336",
+    "qe": "Which specific inter-unit connection coordinates the monosaccharide building blocks together inside a high molecular weight polysaccharide like cellulose?",
+    "qh": "कौन सा विशिष्ट इंटर-यूनिट कनेक्शन उच्च आणविक भार वाले पॉलीसेकेराइड जैसे सेलुलोज के भीतर मोनोसेकेराइड बिल्डिंग ब्लॉक्स को एक साथ जोड़ता है?",
+    "o": [
+      "Alpha-1,4-peptide bond linkages bridging amino components",
+      "Beta-1,4-glycosidic linkage connecting linear glucose units (बीटा-1,4-ग्लाइकोसिडिक बंध)",
+      "Phosphodiester coordinate bridges linking pentose sugars",
+      "Highly branched cross-link networks typical of starch chains"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Cellulose is an unbranched linear polysaccharide constructed entirely from repeating $\\beta$-D-glucose monomers. These subunits are joined together through regular $\\beta$-1,4-glycosidic linkages to form strong, straight structural fibers."
+  },
+  {
+    "p_id": "bpsc_chem_v4_337",
+    "qe": "What specific operational unit matches the physical measurement designation of specific conductivity ($\\kappa$) in standard electrochemical systems?",
+    "qh": "कौन सी विशिष्ट परिचालन इकाई मानक इलेक्ट्रोकेमिकल प्रणालियों में विशिष्ट चालकता ($\\kappa$) के भौतिक माप पदनाम से मेल खाती है?",
+    "o": [
+      "$\\text{S}\\cdot\\text{cm}^2\\cdot\\text{mol}^{-1}$",
+      "$\\text{S}\\cdot\\text{cm}^{-1}$ or $\\text{S}\\cdot\\text{m}^{-1}$ (विशिष्ट चालकता की इकाई)",
+      "Volt ($\\text{V}$)",
+      "$\\text{m}^{-1}$"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Specific conductivity ($\kappa$) measures current-carrying capacity per unit volume, which corresponds to the reciprocal of resistivity ($1/\\rho$). Its systematic measurement units are expressed as $\\text{S}\\cdot\\text{cm}^{-1}$ or $\\text{S}\\cdot\\text{m}^{-1}$."
+  },
+  {
+    "p_id": "bpsc_chem_v4_338",
+    "qe": "What physical parameter dictates why the limiting molar conductivity of a strong electrolyte like sodium acetate expands only gradually upon progressive dilution?",
+    "qh": "कौन सा भौतिक पैरामीटर यह निर्देशित करता है कि सोडियम एसीटेट जैसे मजबूत इलेक्ट्रोलाइट की सीमित मोलर चालकता प्रगतिशील तनुकरण करने पर केवल धीरे-धीरे क्यों बढ़ती है?",
+    "o": [
+      "The compound undergoes complete structural degradation into volatile chlorine segments",
+      "The strong electrolyte is already fully ionized, and dilution merely increases ion spacing to reduce inter-ionic attractions (केवल अंतर-आयनिक आकर्षण का कम होना)",
+      "The solution enters an intricate non-ionic furanose sugar matrix loop",
+      "The treatment converts the sodium ions into narrow-spectrum antibiotics"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Strong electrolytes are completely dissociated into ions even at standard working concentrations. Diluting the solution does not increase the number of ions; it simply expands the volume, increasing the distance between ions and reducing inter-ionic friction, which results in a gradual, modest increase in $\\Lambda_m$."
+  },
+  {
+    "p_id": "bpsc_chem_v4_339",
+    "qe": "What algebraic expression balances the limiting molar conductivity of an electrolyte to the individual values of its constituent ions under Kohlrausch's law?",
+    "qh": "कोलराउश के नियम के तहत कौन सा बीजगणितीय व्यंजक (algebraic expression) किसी इलेक्ट्रोलाइट की सीमित मोलर चालकता को उसके घटक आयनों के व्यक्तिगत मानों से संतुलित करता है?",
+    "o": [
+      "It represents the direct product of the separate coordinate potential barriers",
+      "It equals the sum of the individual limiting ionic conductivities of its constituent cations and anions (आयनिक चालकताओं का योग)",
+      "It matches the inverse of the logarithmic equilibrium constant value",
+      "It represents the total mass of metal deposited per Faradaic second"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Kohlrausch's law of independent ion migration states that at infinite dilution, all inter-ionic forces disappear. Each ion contributes a fixed amount to the total conductance, meaning the limiting molar conductivity of an electrolyte equals the sum of the individual conductivities of its constituent cations and anions."
+  },
+  {
+    "p_id": "bpsc_chem_v4_340",
+    "qe": "Which specific category of synthetic materials handles the direct conversion of the chemical energy generated from burning hydrogen and oxygen fuels into an electrical current?",
+    "qh": "सिंथेटिक सामग्रियों की कौन सी विशिष्ट श्रेणी हाइड्रोजन और ऑक्सीजन ईंधन को जलाने से उत्पन्न रासायनिक ऊर्जा को सीधे विद्युत प्रवाह में बदलने का काम करती है?",
+    "o": [
+      "Primary dry cell blocks containing limited zinc reactants",
+      "Fuel cells (ईंधन सेल)",
+      "Nickel-Cadmium rechargeable structural batteries",
+      "Mercury button batteries engineered for hearing aids"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Hydrogen-oxygen fuel cells are specialized galvanic systems designed to continuously transform the chemical energy of a fuel combustion reaction ($2\\text{H}_2 + \\text{O}_2 \\rightarrow 2\\text{H}_2\\text{O}$) directly into electrical energy, operating with high efficiency as long as reactants are supplied."
+  },
+  {
+    "p_id": "bpsc_chem_v4_341",
+    "qe": "What specific architectural feature differentiates a synthetic thermoplastic material from a standard thermosetting plastic resin?",
+    "qh": "कौन सी विशिष्ट संरचनात्मक विशेषता एक सिंथेटिक थर्मोप्लास्टिक सामग्री को एक मानक थर्मोसेटिंग प्लास्टिक राल से अलग करती है?",
+    "o": [
+      "Thermoplastics contain a dense network of permanent cross-links that resist melting",
+      "Thermoplastics are composed of linear or slightly branched long chains that lack permanent cross-links, enabling reversible thermal softening and hardening (क्रॉस-लिंक्स का अभाव)",
+      "Thermoplastics completely lack carbon atoms inside their organic skeletons",
+      "Thermoplastics undergo spontaneous conversion into water-soluble linear starch"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Thermoplastics consist of linear or slightly branched chains held together by intermediate intermolecular forces. Because they lack permanent covalent cross-links between individual strands, heating fluidizes the structure reversibly, allowing for remolding and recycling."
+  },
+  {
+    "p_id": "bpsc_chem_v4_342",
+    "qe": "Which structural feature characterises the alpha-helix secondary structure of a protein, keeping the right-handed screw shape stable?",
+    "qh": "कौन सी संरचनात्मक विशेषता एक प्रोटीन की अल्फा-हेलिक्स माध्यमिक संरचना की विशेषता है, जो दाहिने हाथ की पेंच जैसी आकृति को स्थिर रखती है?",
+    "o": [
+      "Weak van der Waals forces acting uniformly across non-polar branches",
+      "Intramolecular hydrogen bonds formed between the N-H group of an amino acid residue and the carbonyl C=O group of an adjacent turn (N-H और C=O के बीच हाइड्रोजन बंध)",
+      "Reversible ester links that undergo rapid reduction with basic catalysts",
+      "Cationic quaternary nitrogen halide cross-linked coordination zones"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> The helical conformation of an $\\alpha$-helix is locked and stabilized by regular hydrogen bonds. These form between the polar amide $N-H$ group located along one turn of the coiled backbone and the carbonyl $C=O$ group belonging to the adjacent loop."
+  },
+  {
+    "p_id": "bpsc_chem_v4_343",
+    "qe": "What direct mechanical consequence occurs when an active biological protein structure undergoes denaturation under intense thermal stress?",
+    "qh": "जब एक सक्रिय जैविक प्रोटीन संरचना तीव्र थर्मल तनाव के तहत विकृतीकरण (denaturation) से गुजरती है तो क्या सीधा यांत्रिक परिणाम होता है?",
+    "o": [
+      "The covalent peptide bonds are completely cleaved, reducing the protein to single units",
+      "The higher-order secondary and tertiary structural folds unfold and disrupt, causing total loss of biological activity (2° एवं 3° संरचना का खुलना या नष्ट होना)",
+      "The carbon framework instantly converts into a volatile open-chain non-polar gas",
+      "The embedded strands form a permanent three-dimensional network typical of Bakelite"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Denaturation breaks down the secondary, tertiary, and quaternary folds of a native protein by disrupting non-covalent interactions (like hydrogen bonds and salt bridges) under physical or chemical stress, destroying its biological function while leaving the primary sequence intact."
+  },
+  {
+    "p_id": "bpsc_chem_v4_344",
+    "qe": "Which organizational level of protein structure remains completely unaltered and structurally intact during a standard chemical denaturation run?",
+    "qh": "एक मानक रासायनिक विकृतीकरण (chemical denaturation) के दौरान प्रोटीन संरचना का कौन सा संगठनात्मक स्तर पूरी तरह से अपरिवर्तित और संरचनात्मक रूप से बरकरार रहता है?",
+    "o": [
+      "The global tertiary folding network",
+      "The primary structure comprising the continuous sequence of amino acids (प्राथमिक संरचना सुरक्षित रहती है)",
+      "The crystalline alpha-helix hydrogen-bonded conformation",
+      "The multi-subunit quaternary orientation layout"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> While denaturation disrupts higher-order folding patterns (secondary, tertiary, and quaternary structures) due to the sensitivity of non-covalent forces, it does not cleave the covalent peptide bonds of the primary backbone, leaving the amino acid sequence intact."
+  },
+  {
+    "p_id": "bpsc_chem_v4_345",
+    "qe": "Why can a prolonged deficiency of calciferol (Vitamin D) inside human operational frameworks cause serious bone weaknesses or rickets in developing children?",
+    "qh": "मानव शरीर के भीतर कैल्सीफेरोल (विटामिन डी) की लंबे समय तक कमी विकासशील बच्चों में गंभीर हड्डी की कमजोरियों या रिकेट्स का कारण क्यों बन सकती है?",
+    "o": [
+      "It converts the skeleton into a water-soluble linear carbohydrate mesh",
+      "It disrupts normal calcium absorption pathways, preventing proper mineralization and hardening of structural bones (कैल्शियम अवशोषण बाधित होना)",
+      "It causes the continuous fuming of volatile nitric acid from tissue layers",
+      "It limits the free-radical polymerization of alkenes throughout the body"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Vitamin D (calciferol) is essential for regulating and optimizing calcium absorption from the gastrointestinal tract. A deficiency prevents proper calcium deposition, leaving structural bone matrices soft and weak, which leads to conditions like rickets in children."
+  }
+]
