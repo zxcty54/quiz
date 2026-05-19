@@ -1,0 +1,322 @@
+[
+  {
+    "p_id": "chemevry_01",
+    "qe": "Which chemical, formerly used as an anaesthesia in surgery, is now primarily utilized in the production of the freon refrigerant R-22?",
+    "qh": "सर्जरी में एनेस्थीसिया के रूप में इस्तेमाल होने वाले किस रसायन का उपयोग अब मुख्य रूप से फ्रीन रेफ्रिजरेंट R-22 के उत्पादन में किया जाता है?",
+    "o": ["Boric acid", "Iodoform", "Chloroform", "Chlorine"],
+    "a": 2,
+    "e": "<b>Explanation:</b> CHCl3 (chloroform) was historically used as an anaesthesia in surgery but is now primarily used in the production of the freon refrigerant R-22."
+  },
+  {
+    "p_id": "chemevry_02",
+    "qe": "How does Iodoform ($CHI_3$) function as an antiseptic when applied to wounds?",
+    "qh": "आयोडोफॉर्म ($CHI_3$) घावों पर लगाने पर एक एंटीसेप्टिक के रूप में कैसे कार्य करता है?",
+    "o": ["It produces iodine upon coming in contact with the skin.", "It acts as a strong oxidizing agent that destroys bacterial DNA.", "It coagulates the blood instantly to form a protective seal.", "It releases chlorine gas which sterilizes the wound."],
+    "a": 0,
+    "e": "<b>Explanation:</b> Iodoform ($CHI_3$) produces iodine on coming in contact with skin, which is the actual agent responsible for its antiseptic properties for wounds."
+  },
+  {
+    "p_id": "chemevry_03",
+    "qe": "Which of the following acts as a weak antiseptic specifically formulated for the eyes in its dilute aqueous solution?",
+    "qh": "निम्नलिखित में से कौन सा अपने तनु जलीय घोल में विशेष रूप से आंखों के लिए एक कमजोर एंटीसेप्टिक के रूप में कार्य करता है?",
+    "o": ["Sodium hydrogencarbonate", "Boric acid ($H_3BO_3$)", "Dilute Sulphur dioxide", "Iodoform"],
+    "a": 1,
+    "e": "<b>Explanation:</b> Boric acid ($H_3BO_3$) in a dilute aqueous solution acts as a weak antiseptic specifically suitable for the eyes."
+  },
+  {
+    "p_id": "chemevry_04",
+    "qe": "At what concentration does Chlorine in an aqueous solution act effectively as a disinfectant?",
+    "qh": "एक जलीय घोल में क्लोरीन कितनी सांद्रता पर कीटाणुनाशक (disinfectant) के रूप में प्रभावी ढंग से कार्य करता है?",
+    "o": ["1.0 to 2.0 ppm", "0.2 to 0.4 ppm", "0.02 to 0.05 ppm", "2.0 to 5.0 ppm"],
+    "a": 1,
+    "e": "<b>Explanation:</b> Chlorine acts as a potent disinfectant when its concentration is maintained between 0.2 to 0.4 ppm in an aqueous solution."
+  },
+  {
+    "p_id": "chemevry_05",
+    "qe": "Sulphur dioxide ($SO_2$) exhibits disinfectant properties under which of the following conditions?",
+    "qh": "सल्फर डाइऑक्साइड ($SO_2$) निम्नलिखित में से किस स्थिति में कीटाणुनाशक गुण प्रदर्शित करता है?",
+    "o": ["In highly concentrated acidic solutions", "When mixed with heavy metals", "In very low concentrations", "When heated above 100°C"],
+    "a": 2,
+    "e": "<b>Explanation:</b> Sulphur dioxide acts as a disinfectant only in very low concentrations."
+  },
+  {
+    "p_id": "chemevry_06",
+    "qe": "Barbiturates are an important class of drugs that are widely used as:",
+    "qh": "बार्बिट्यूरेट्स दवाओं का एक महत्वपूर्ण वर्ग है जिसका व्यापक रूप से किस रूप में उपयोग किया जाता है?",
+    "o": ["Broad spectrum antibiotics", "Hypnotics or sleep-producing agents", "Non-narcotic analgesics", "Antihistamines for allergies"],
+    "a": 1,
+    "e": "<b>Explanation:</b> Barbiturates constitute an important class of tranquilizers. They are commonly used as hypnotics, meaning they act as sleep-producing agents."
+  },
+  {
+    "p_id": "chemevry_07",
+    "qe": "Which of the following compounds is NOT a derivative of barbituric acid (i.e., not a barbiturate)?",
+    "qh": "निम्नलिखित में से कौन सा यौगिक बार्बिट्यूरिक एसिड का व्युत्पन्न (अर्थात बार्बिट्यूरेट) नहीं है?",
+    "o": ["Equanil", "Luminal", "Veronal", "Seconal"],
+    "a": 0,
+    "e": "<b>Explanation:</b> Veronal, luminal, seconal, amytal, and nembutal are all derivatives of barbituric acid. Equanil is a tranquilizer used for controlling depression and hypertension, but it is not a barbiturate."
+  },
+  {
+    "p_id": "chemevry_08",
+    "qe": "What is the specific mechanism by which sulpha drugs destroy bacteria and fungi?",
+    "qh": "सल्फा दवाएं किस विशिष्ट तंत्र द्वारा बैक्टीरिया और कवक को नष्ट करती हैं?",
+    "o": ["By dissolving their lipid membranes", "By interfering with their metabolism", "By raising their internal temperature", "By physically rupturing their cell walls"],
+    "a": 1,
+    "e": "<b>Explanation:</b> Sulpha drugs are antimicrobial agents that kill bacteria and fungi by directly interfering with their metabolic processes."
+  },
+  {
+    "p_id": "chemevry_09",
+    "qe": "Why is the antibacterial drug Sulphapyridine no longer prescribed for the treatment of human infections?",
+    "qh": "मानव संक्रमण के इलाज के लिए जीवाणुरोधी दवा सल्फापायरीडीन अब क्यों नहीं लिखी जाती है?",
+    "o": ["It triggers severe autoimmune responses.", "It induces permanent sleep.", "Its water solubility is pH dependent, risking bladder crystallization.", "It immediately breaks down into toxic arsenic compounds."],
+    "a": 2,
+    "e": "<b>Explanation:</b> Sulphapyridine is no longer prescribed because its water solubility is very pH dependent, creating a high risk of crystallization within the bladder or urethra, which could lead to pain or blockage."
+  },
+  {
+    "p_id": "chemevry_10",
+    "qe": "The antibacterial drug Prontosil, used to treat general bacterial infections in humans, is also chemically known as:",
+    "qh": "मनुष्यों में सामान्य जीवाणु संक्रमण के इलाज के लिए उपयोग की जाने वाली जीवाणुरोधी दवा प्रोंटोसिल (Prontosil) को रासायनिक रूप से किस अन्य नाम से भी जाना जाता है?",
+    "o": ["Sulphapyridine", "Sulphamidochrysoidine", "Iproniazid", "Phenelzine"],
+    "a": 1,
+    "e": "<b>Explanation:</b> Prontosil is an early antibacterial drug that is also chemically referred to as sulphamidochrysoidine."
+  },
+  {
+    "p_id": "chemevry_11",
+    "qe": "Salvarsan is an effective antibacterial drug specifically designed to treat syphilis. It is based on which toxic element?",
+    "qh": "साल्वरसन एक प्रभावी जीवाणुरोधी दवा है जिसे विशेष रूप से सिफलिस के इलाज के लिए बनाया गया है। यह किस विषैले तत्व पर आधारित है?",
+    "o": ["Arsenic", "Mercury", "Lead", "Antimony"],
+    "a": 0,
+    "e": "<b>Explanation:</b> Salvarsan is a synthetic organic arsenic-based antibacterial drug that was widely used in the treatment of syphilis."
+  },
+  {
+    "p_id": "chemevry_12",
+    "qe": "How do antidepressant drugs biochemically alter mood and behavior?",
+    "qh": "एंटीडिप्रेसेंट दवाएं जैव रासायनिक रूप से मूड और व्यवहार को कैसे बदलती हैं?",
+    "o": ["By temporarily numbing the central nervous system.", "By correcting chemical imbalances of neurotransmitters in the brain.", "By reducing the flow of oxygenated blood to the brain.", "By increasing the production of stomach acid."],
+    "a": 1,
+    "e": "<b>Explanation:</b> Antidepressants are substances which correct the chemical imbalances of neurotransmitters in the brain, thereby causing positive changes in mood and behavior."
+  },
+  {
+    "p_id": "chemevry_13",
+    "qe": "Iproniazid is an antidepressant drug that belongs to which specific chemical class?",
+    "qh": "इप्रोनियाज़िड एक एंटीडिप्रेसेंट दवा है जो किस विशिष्ट रासायनिक वर्ग से संबंधित है?",
+    "o": ["Hydrazine drug", "Barbiturate", "Sulphonamide", "Antibiotic"],
+    "a": 0,
+    "e": "<b>Explanation:</b> Iproniazid is a hydrazine drug that is utilized primarily as an antidepressant."
+  },
+  {
+    "p_id": "chemevry_14",
+    "qe": "Phenelzine is a well-known drug used in the treatment of major depressive disorders. What is its common brand name?",
+    "qh": "प्रमुख अवसादग्रस्तता विकारों (major depressive disorders) के उपचार में प्रयुक्त होने वाली प्रसिद्ध दवा फेनेलज़ीन (Phenelzine) का सामान्य ब्रांड नाम क्या है?",
+    "o": ["Nardil", "Equanil", "Luminal", "Prontosil"],
+    "a": 0,
+    "e": "<b>Explanation:</b> Phenelzine is an antidepressant medication that is widely known by its brand name, Nardil."
+  },
+  {
+    "p_id": "chemevry_15",
+    "qe": "The chemical compound Equanil is prescribed to patients primarily for controlling which two conditions?",
+    "qh": "रासायनिक यौगिक इक्वैनिल (Equanil) मुख्य रूप से किन दो स्थितियों को नियंत्रित करने के लिए रोगियों को निर्धारित किया जाता है?",
+    "o": ["Bacterial infections and fevers", "Hyperacidity and gastric ulcers", "Depression and hypertension", "Allergies and runny nose"],
+    "a": 2,
+    "e": "<b>Explanation:</b> Equanil is a tranquilizer that is highly effective and widely used in controlling depression and hypertension."
+  },
+  {
+    "p_id": "chemevry_16",
+    "qe": "Ampicillin and Amoxycillin are widely used drugs in modern medicine. How are they related to Penicillin?",
+    "qh": "आधुनिक चिकित्सा में एम्पीसिलीन और एमोक्सिसिलिन व्यापक रूप से उपयोग की जाने वाली दवाएं हैं। उनका पेनिसिलिन से क्या संबंध है?",
+    "o": ["They act as antagonists to Penicillin.", "They are synthetic modifications of Penicillin.", "They are the raw natural fungi from which Penicillin is extracted.", "They neutralize the toxic effects of Penicillin."],
+    "a": 1,
+    "e": "<b>Explanation:</b> Ampicillin and Amoxycillin are synthetic modifications of the naturally occurring antibiotic Penicillin, developed to broaden its spectrum or improve absorption."
+  },
+  {
+    "p_id": "chemevry_17",
+    "qe": "Penicillin exhibits a bactericidal effect rather than a bacteriostatic one. How does it accomplish this?",
+    "qh": "पेनिसिलिन जीवाणुस्थैतिक (bacteriostatic) के बजाय एक जीवाणुनाशक (bactericidal) प्रभाव प्रदर्शित करता है। यह ऐसा कैसे करता है?",
+    "o": ["By destroying the cell wall of the microorganism.", "By starving the bacteria of oxygen.", "By inhibiting bacterial protein synthesis.", "By neutralizing the acidic environment around the bacteria."],
+    "a": 0,
+    "e": "<b>Explanation:</b> Penicillin destroys bacteria outright by destroying the cell wall of the microorganism, which classifies its action as bactericidal (killing) rather than bacteriostatic (inhibiting growth)."
+  },
+  {
+    "p_id": "chemevry_18",
+    "qe": "Penicillin, as an individual class of antibiotics, is generally categorized based on its action spectrum as a:",
+    "qh": "एंटीबायोटिक दवाओं के एक व्यक्तिगत वर्ग के रूप में पेनिसिलिन को आम तौर पर इसकी क्रिया स्पेक्ट्रम के आधार पर किस रूप में वर्गीकृत किया जाता है?",
+    "o": ["Universal spectrum antibiotic", "Broad spectrum antibiotic", "Narrow spectrum antibiotic", "Placebo antibiotic"],
+    "a": 2,
+    "e": "<b>Explanation:</b> Penicillins as a class are generally considered narrow spectrum antibiotics because they target specific types of bacteria. However, when used in combination with other antibiotics, they can act as broad spectrum."
+  },
+  {
+    "p_id": "chemevry_19",
+    "qe": "Why can excessive consumption of Sodium hydrogencarbonate ($NaHCO_3$) actually worsen stomach acidity issues?",
+    "qh": "सोडियम हाइड्रोजन कार्बोनेट ($NaHCO_3$) का अत्यधिक सेवन वास्तव में पेट की अम्लता (acidity) की समस्या को क्यों बढ़ा सकता है?",
+    "o": ["It solidifies inside the stomach blocking digestion.", "It rapidly absorbs all liquids, causing dehydration.", "It forms toxic chlorine gas upon reacting with stomach acid.", "It makes the stomach alkaline, which triggers the production of even more acid."],
+    "a": 3,
+    "e": "<b>Explanation:</b> While $NaHCO_3$ neutralizes excess acid, excessive intake can make the stomach excessively alkaline. The body's reflex response to an alkaline stomach is to trigger the production of even more hydrochloric acid."
+  },
+  {
+    "p_id": "chemevry_20",
+    "qe": "The popular antacid known as 'Milk of Magnesia' is an aqueous solution of which chemical compound?",
+    "qh": "लोकप्रिय एंटासिड जिसे 'मिल्क ऑफ मैग्नेशिया' के नाम से जाना जाता है, किस रासायनिक यौगिक का जलीय घोल है?",
+    "o": ["Magnesium carbonate", "Magnesium hydroxide", "Magnesium sulphate", "Aluminium hydroxide"],
+    "a": 1,
+    "e": "<b>Explanation:</b> Milk of magnesia, which is used commonly as an antacid, is simply an aqueous suspension/solution of magnesium hydroxide."
+  },
+  {
+    "p_id": "chemevry_21",
+    "qe": "The fundamental cause of hyperacidity is the over-secretion of pepsin and hydrochloric acid in the stomach. Which specific chemical in the body stimulates this secretion?",
+    "qh": "हाइपरएसिडिटी का मूल कारण पेट में पेप्सिन और हाइड्रोक्लोरिक एसिड का अत्यधिक स्राव है। शरीर में कौन सा विशिष्ट रसायन इस स्राव को उत्तेजित करता है?",
+    "o": ["Histamine", "Insulin", "Serotonin", "Adrenaline"],
+    "a": 0,
+    "e": "<b>Explanation:</b> Histamine is a naturally occurring chemical substance in the body that directly stimulates the secretion of pepsin and hydrochloric acid in the stomach walls."
+  },
+  {
+    "p_id": "chemevry_22",
+    "qe": "How did the drug Cimetidine revolutionize the treatment of hyperacidity and stomach ulcers?",
+    "qh": "सिमेटिडाइन (Cimetidine) दवा ने हाइपरएसिडिटी और पेट के अल्सर के उपचार में कैसे क्रांति ला दी?",
+    "o": ["By absorbing acid directly like a sponge.", "By preventing the interaction of histamine with receptors present in the stomach wall.", "By neutralizing the acid to form salt and water instantly.", "By permanently destroying the acid-producing glands."],
+    "a": 1,
+    "e": "<b>Explanation:</b> Cimetidine was uniquely designed to prevent the interaction of histamine with its specific receptors on the stomach wall. As a result, less HCl is released, treating the root cause of hyperacidity."
+  },
+  {
+    "p_id": "chemevry_23",
+    "qe": "Ranitidine is a widely used drug for curing hyperacidity. Based on its mechanism, it falls into which broader category of drugs?",
+    "qh": "रैनिटिडाइन हाइपरएसिडिटी को ठीक करने के लिए व्यापक रूप से इस्तेमाल की जाने वाली दवा है। इसके तंत्र के आधार पर, यह दवाओं की किस व्यापक श्रेणी में आता है?",
+    "o": ["Antihistamine", "Tranquilizer", "Antibiotic", "Analgesic"],
+    "a": 0,
+    "e": "<b>Explanation:</b> Ranitidine, like Cimetidine, cures hyperacidity by blocking histamine receptors in the stomach. Therefore, it structurally falls into the category of antihistamines."
+  },
+  {
+    "p_id": "chemevry_24",
+    "qe": "Brompheniramine is an antihistamine drug. Unlike Ranitidine which treats stomach acidity, Brompheniramine is used to treat:",
+    "qh": "ब्रोम्फेनिरामाइन एक एंटीहिस्टामाइन दवा है। रैनिटिडाइन के विपरीत, जो पेट की अम्लता का इलाज करता है, ब्रोम्फेनिरामाइन का उपयोग किसके इलाज के लिए किया जाता है?",
+    "o": ["Major depressive disorders", "Bacterial infections", "Runny nose, sneezing, itching and watery eyes caused by allergy", "Severe physical pain and inflammation"],
+    "a": 2,
+    "e": "<b>Explanation:</b> While some antihistamines target stomach receptors (like Ranitidine), Brompheniramine targets other histamine receptors and is used to treat allergy symptoms like runny nose, sneezing, itching, and watery eyes."
+  },
+  {
+    "p_id": "chemevry_25",
+    "qe": "Sodium salts of sulphonated long chain alcohols or hydrocarbons (like Sodium lauryl sulphate) belong to which class of cleansing agents?",
+    "qh": "सल्फोनेटेड लंबी श्रृंखला वाले अल्कोहल या हाइड्रोकार्बन (जैसे सोडियम लॉरिल सल्फेट) के सोडियम लवण क्लींजिंग एजेंटों के किस वर्ग से संबंधित हैं?",
+    "o": ["Natural soaps", "Cationic detergents", "Anionic detergents", "Non-ionic detergents"],
+    "a": 2,
+    "e": "<b>Explanation:</b> Anionic detergents are explicitly defined as sodium salts of sulphonated long chain alcohols or hydrocarbons. Sodium lauryl sulphate is a classic example."
+  },
+  {
+    "p_id": "chemevry_26",
+    "qe": "Which type of detergents are chemically described as quarternary ammonium salts of amines with acetates, chlorides, or bromides as anions?",
+    "qh": "रासायनिक रूप से किस प्रकार के डिटर्जेंट को एमाइन के चतुर्धातुक अमोनियम लवण (quarternary ammonium salts) के रूप में वर्णित किया जाता है जिसमें आयनों के रूप में एसीटेट, क्लोराइड या ब्रोमाइड होते हैं?",
+    "o": ["Anionic detergents", "Cationic detergents", "Non-ionic detergents", "Saponified soaps"],
+    "a": 1,
+    "e": "<b>Explanation:</b> Cationic detergents are structurally quarternary ammonium salts of amines with anions such as acetates, chlorides, or bromides (e.g., Cetyltrimethyl ammonium bromide)."
+  },
+  {
+    "p_id": "chemevry_27",
+    "qe": "Cetyltrimethyl ammonium bromide is a popular synthetic cleansing agent. To which category of detergents does it belong?",
+    "qh": "सेटिलट्रिमिथाइल अमोनियम ब्रोमाइड एक लोकप्रिय सिंथेटिक क्लींजिंग एजेंट है। यह डिटर्जेंट की किस श्रेणी से संबंधित है?",
+    "o": ["Cationic detergents", "Anionic detergents", "Non-ionic detergents", "Zwitterionic detergents"],
+    "a": 0,
+    "e": "<b>Explanation:</b> Cetyltrimethyl ammonium bromide is a quarternary ammonium salt with a bromide anion, classifying it as a typical cationic detergent."
+  },
+  {
+    "p_id": "chemevry_28",
+    "qe": "Non-ionic detergents do not contain any ions. They are typically formed by the chemical reaction between:",
+    "qh": "गैर-आयनिक (Non-ionic) डिटर्जेंट में कोई आयन नहीं होता है। वे आमतौर पर किन रसायनों के बीच रासायनिक प्रतिक्रिया से बनते हैं?",
+    "o": ["Lauryl alcohol and concentrated sulfuric acid", "Stearic acid and polyethylene glycol", "Amines and acetate ions", "Benzene and dodecanol"],
+    "a": 1,
+    "e": "<b>Explanation:</b> Non-ionic detergents are formed via an esterification-like reaction between a fatty acid, such as stearic acid, and a polymer like polyethylene glycol."
+  },
+  {
+    "p_id": "chemevry_29",
+    "qe": "Among the different classes of synthetic detergents, which specific class is known to inherently possess germicidal properties?",
+    "qh": "सिंथेटिक डिटर्जेंट के विभिन्न वर्गों में से, किस विशिष्ट वर्ग को स्वाभाविक रूप से रोगाणुनाशक (germicidal) गुण रखने के लिए जाना जाता है?",
+    "o": ["Cationic detergents", "Anionic detergents", "Non-ionic detergents", "Neutral detergents"],
+    "a": 0,
+    "e": "<b>Explanation:</b> Cationic detergents (quarternary ammonium salts) uniquely possess strong germicidal properties alongside their cleansing action."
+  },
+  {
+    "p_id": "chemevry_30",
+    "qe": "Why is the branching of hydrocarbon chains intentionally kept to a minimum in the manufacturing of modern synthetic detergents?",
+    "qh": "आधुनिक सिंथेटिक डिटर्जेंट के निर्माण में हाइड्रोकार्बन श्रृंखलाओं की शाखाओं (branching) को जानबूझकर न्यूनतम क्यों रखा जाता है?",
+    "o": ["To prevent the detergents from exploding under heat.", "To make them easier to dissolve in concentrated acids.", "So that the detergents become easily biodegradable by bacteria.", "To increase their foam-producing capacity in hard water."],
+    "a": 2,
+    "e": "<b>Explanation:</b> Bacteria cannot easily degrade detergents containing highly branched hydrocarbon chains. Minimizing branching ensures the detergents become easily biodegradable, preventing severe environmental water pollution."
+  },
+  {
+    "p_id": "chemevry_31",
+    "qe": "What is a major functional advantage of synthetic detergents over traditional natural soaps?",
+    "qh": "पारंपरिक प्राकृतिक साबुनों की तुलना में सिंथेटिक डिटर्जेंट का एक प्रमुख कार्यात्मक लाभ क्या है?",
+    "o": ["They are completely edible and safe for human consumption.", "They can produce foam even in ice-cold water.", "They act as a permanent cure for skin diseases.", "They contain 100% natural organic oils."],
+    "a": 1,
+    "e": "<b>Explanation:</b> Synthetic detergents are highly efficient cleansing agents that do not react with hard water minerals and can give foam even in ice-cold water, unlike traditional soaps."
+  },
+  {
+    "p_id": "chemevry_32",
+    "qe": "In the context of medicinal chemistry, the term 'drug' specifically refers to chemicals that have an average molecular mass of:",
+    "qh": "औषधीय रसायन विज्ञान के संदर्भ में, 'ड्रग' (drug) शब्द विशेष रूप से उन रसायनों को संदर्भित करता है जिनका औसत आणविक द्रव्यमान (molecular mass) होता है:",
+    "o": ["~1 - 50 u", "~1000 - 5000 u", "~100 - 500 u", "~5000 - 10000 u"],
+    "a": 2,
+    "e": "<b>Explanation:</b> Drugs are defined as chemicals of relatively low molecular masses, typically falling in the range of ~100 to 500 unified atomic mass units (u)."
+  },
+  {
+    "p_id": "chemevry_33",
+    "qe": "The branch of science that involves the systematic use of chemical substances for achieving a therapeutic effect is known as:",
+    "qh": "विज्ञान की वह शाखा जिसमें चिकित्सीय प्रभाव प्राप्त करने के लिए रासायनिक पदार्थों का व्यवस्थित उपयोग शामिल है, क्या कहलाती है?",
+    "o": ["Radiotherapy", "Physiotherapy", "Chemotherapy", "Biotherapy"],
+    "a": 2,
+    "e": "<b>Explanation:</b> The specific use of chemicals for the diagnosis, prevention, and therapeutic treatment of diseases is formally termed Chemotherapy."
+  },
+  {
+    "p_id": "chemevry_34",
+    "qe": "Soframicine is a chemical applied to living tissues like wounds and cuts to prevent microbial growth. Therefore, it is strictly classified as an:",
+    "qh": "सोफ्रामाइसिन (Soframicine) एक रसायन है जिसे घावों और कटने जैसे जीवित ऊतकों पर सूक्ष्मजीवों के विकास को रोकने के लिए लगाया जाता है। इसलिए, इसे कड़ाई से किस रूप में वर्गीकृत किया गया है?",
+    "o": ["Antacid", "Antiseptic", "Antibiotic", "Analgesic"],
+    "a": 1,
+    "e": "<b>Explanation:</b> Antiseptics are chemicals which kill or prevent the growth of microorganisms and are fundamentally safe to be applied to living tissues. Soframicine is a prime example of an antiseptic."
+  },
+  {
+    "p_id": "chemevry_35",
+    "qe": "Receptors are crucial proteins for cellular communication. Where are these receptors structurally located to receive chemical messengers?",
+    "qh": "रिसेप्टर सेलुलर संचार के लिए महत्वपूर्ण प्रोटीन हैं। रासायनिक संदेशवाहकों को प्राप्त करने के लिए ये रिसेप्टर संरचनात्मक रूप से कहाँ स्थित होते हैं?",
+    "o": ["They are embedded on the outer surface of the cell membrane.", "They float freely inside the blood plasma.", "They are located deep within the cell nucleus.", "They are attached inside the mitochondria."],
+    "a": 0,
+    "e": "<b>Explanation:</b> Receptors are embedded on the outer surface of the cell membrane such that their small part possessing the active site projects out to interact with incoming chemical messengers."
+  },
+  {
+    "p_id": "chemevry_36",
+    "qe": "In enzyme chemistry, what is an 'allosteric site'?",
+    "qh": "एंजाइम रसायन विज्ञान में, 'एलोस्टेरिक साइट' (allosteric site) क्या है?",
+    "o": ["The primary site where the substrate binds to undergo a reaction.", "A site where the enzyme permanently breaks down.", "A site different from the active site where a molecule can bind and change the shape of the active site.", "The site that exclusively binds to water molecules."],
+    "a": 2,
+    "e": "<b>Explanation:</b> An allosteric site is a separate location on the enzyme (different from the active site) where non-competitive inhibitors bind. This binding alters the physical shape of the active site, preventing the natural substrate from fitting."
+  },
+  {
+    "p_id": "chemevry_37",
+    "qe": "During a catalytic action, an enzyme holds the substrate securely in its active site. Which of the following forces is generally NOT involved in this binding process?",
+    "qh": "उत्प्रेरक क्रिया के दौरान, एंजाइम सब्सट्रेट को अपनी सक्रिय साइट में सुरक्षित रूप से रखता है। इस बाइंडिंग प्रक्रिया में आमतौर पर निम्नलिखित में से कौन सा बल शामिल नहीं होता है?",
+    "o": ["Hydrogen bonding", "Strong covalent bonding", "Ionic bonding", "Van der Waals' interactions"],
+    "a": 1,
+    "e": "<b>Explanation:</b> Substrates bind to the active site through a variety of weak interactions such as van der Waals' interactions, ionic bonding, hydrogen bonding, or dipole-dipole interactions. Strong permanent covalent bonds are rarely formed."
+  },
+  {
+    "p_id": "chemevry_38",
+    "qe": "Arsphenamine (salvarsan) and azodyes share a distinct structural commonality. What is the fundamental chemical linkage similarity between them?",
+    "qh": "आर्सफेनामाइन (salvarsan) और एज़ोडाई (azodyes) में एक विशिष्ट संरचनात्मक समानता है। उनके बीच मूलभूत रासायनिक लिंकेज समानता क्या है?",
+    "o": ["Both contain a heavy metal bonded to sulfur.", "Arsphenamine possesses an $-As=As-$ linkage which is highly similar to the $-N=N-$ linkage in azodyes.", "Both are synthesized purely from benzene rings without heteroatoms.", "Both exclusively utilize strong carbon-halogen bonds."],
+    "a": 1,
+    "e": "<b>Explanation:</b> The structural commonality between the antibiotic arsphenamine and azodyes is that arsphenamine possesses an $-As=As-$ linkage, which behaves and is structurally similar to the $-N=N-$ (azo) linkage found in azodyes."
+  },
+  {
+    "p_id": "chemevry_39",
+    "qe": "Besides their use as colorants, many azodyes possess significant medicinal properties. What is a primary medical use of azodyes?",
+    "qh": "कलरेंट्स (colorants) के रूप में उनके उपयोग के अलावा, कई एज़ोडाई में महत्वपूर्ण औषधीय गुण होते हैं। एज़ोडाई का प्राथमिक चिकित्सीय उपयोग क्या है?",
+    "o": ["To reduce severe fever instantly.", "To act as powerful anesthetics during surgery.", "To promote epithelial growth in the treatment of ulcers, burns, and wounds.", "To neutralize excess acid in the digestive tract."],
+    "a": 2,
+    "e": "<b>Explanation:</b> Azo dyes are used medically to promote epithelial growth in the treatment of ulcers, burns, and other wounds. Many also have anticoagulation action."
+  },
+  {
+    "p_id": "chemevry_40",
+    "qe": "Sleeping pills are primarily composed of a specific class of neurologically active drugs. Which class of compounds forms the essential component of sleeping pills?",
+    "qh": "नींद की गोलियां मुख्य रूप से न्यूरोलॉजिक रूप से सक्रिय दवाओं के एक विशिष्ट वर्ग से बनी होती हैं। यौगिकों का कौन सा वर्ग नींद की गोलियों का आवश्यक घटक बनाता है?",
+    "o": ["Tranquilizers", "Analgesics", "Antihistamines", "Antacids"],
+    "a": 0,
+    "e": "<b>Explanation:</b> Tranquilizers relieve anxiety, stress, irritability, or excitement by inducing a sense of well-being. Due to these properties, they form the essential active components of sleeping pills."
+  }
+]
