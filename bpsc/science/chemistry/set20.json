@@ -1,0 +1,392 @@
+[
+  {
+    "p_id": "bpsc_chem_v4_261",
+    "qe": "Which physical parameter variations directly determine the electrical conductivity profile of a standard electrolytic solution?",
+    "qh": "कौन से भौतिक पैरामीटर परिवर्तन सीधे एक मानक इलेक्ट्रोलाइटिक समाधान के विद्युत चालकता प्रोफ़ाइल को निर्धारित करते हैं?",
+    "o": [
+      "The chemical nature of the electrolyte and its localized concentration indices (इलेक्ट्रोलाइट की प्रकृति एवं सांद्रता)",
+      "The total power output of the external AC source applied to the circuit",
+      "The physical distance separating the two operational electrodes",
+      "The structural surface area of the platinum sheets immersed in fluid"
+    ],
+    "a": 0,
+    "e": "<b>Explanation:</b> The electrical conductivity ($\kappa$) of an electrolytic solution relies on the presence and migration of mobile ions. Consequently, its magnitude is dictated by the chemical nature of the electrolyte, ionic size, solvation tendencies, concentration parameters, solvent viscosity, and ambient temperature, while electrode geometry has no effect."
+  },
+  {
+    "p_id": "bpsc_chem_v4_262",
+    "qe": "According to Kohlrausch's law of independent ion migration, the limiting molar conductivity of pure water [$\\Lambda^\\circ_m(\\text{H}_2\\text{O})$] can be mathematically derived using which unique combination of strong electrolytes?",
+    "qh": "आयनों के स्वतंत्र प्रवासन के कोलराउश के नियम के अनुसार, शुद्ध पानी की सीमित मोलर चालकता [$\\Lambda^\\circ_m(\\text{H}_2\\text{O})$] को मजबूत इलेक्ट्रोलाइट्स के किस अनूठे संयोजन का उपयोग करके गणितीय रूप से प्राप्त किया जा सकता है?",
+    "o": [
+      "$\\Lambda^\\circ_m(\\text{HNO}_3) + \\Lambda^\\circ_m(\\text{NaNO}_3) - \\Lambda^\\circ_m(\\text{NaOH})$",
+      "$\\Lambda^\\circ_m(\\text{HCl}) + \\Lambda^\\circ_m(\\text{NaOH}) - \\Lambda^\\circ_m(\\text{NaCl})$ (कोलराउश नियम द्वारा पानी का मान)",
+      "$\\Lambda^\\circ_m(\\text{NH}_4\\text{OH}) + \\Lambda^\\circ_m(\\text{HCl}) - \\Lambda^\\circ_m(\\text{NH}_4\\text{Cl})$",
+      "$\\Lambda^\\circ_m(\\text{HNO}_3) + \\Lambda^\\circ_m(\\text{NaOH}) - \\Lambda^\\circ_m(\\text{NaNO}_3)$"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Kohlrausch's law states that at infinite dilution, the total molar conductivity equals the sum of the individual ionic contributions. Combining the strong electrolytes yields: $\\Lambda^\\circ(\\text{H}^+) + \\Lambda^\\circ(\\text{Cl}^-) + \\Lambda^\\circ(\\text{Na}^+) + \\Lambda^\\circ(\\text{OH}^-) - [\\Lambda^\\circ(\\text{Na}^+) + \\Lambda^\\circ(\\text{Cl}^-)] = \\Lambda^\\circ(\\text{H}^+) + \\Lambda^\\circ(\\text{OH}^-) = \\Lambda^\\circ_m(\\text{H}_2\\text{O})$, which matches option 2."
+  },
+  {
+    "p_id": "bpsc_chem_v4_263",
+    "qe": "During the quantitative electrolysis of an aqueous copper sulfate ($\\text{CuSO}_4$) solution using inert platinum electrodes, which distinct products emerge at the cathode and anode respectively?",
+    "qh": "अक्रिय प्लैटिनम इलेक्ट्रोड का उपयोग करके जलीय कॉपर सल्फेट ($\\text{CuSO}_4$) समाधान के मात्रात्मक विद्युत अपघटन के दौरान, क्रमशः कैथोड और एनोड पर कौन से विशिष्ट उत्पाद उभरते हैं?",
+    "o": [
+      "Copper metal dissolves at the anode, and oxygen gas is captured at the cathode",
+      "Metallic copper plates out at the cathode, and oxygen gas is liberated at the anode (कैथोड पर तांबा तथा एनोड पर ऑक्सीजन)",
+      "Hydrogen gas evolves at the cathode, and solid sulfur precipitates at the anode",
+      "Copper metal deposits at the anode, and water undergoes reduction at the cathode"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> In aqueous $\\text{CuSO}_4$ with inert electrodes, $\\text{Cu}^{2+}$ ions undergo reduction at the negative terminal (cathode) more easily than $\\text{H}^+$ ions, depositing metallic copper: $\\text{Cu}^{2+} + 2e^- \\rightarrow \\text{Cu}(s)$. At the positive terminal (anode), water oxidation is favored over sulfate, liberating oxygen gas: $2\\text{H}_2\\text{O} \\rightarrow \\text{O}_2(g) + 4\\text{H}^+ + 4e^-$."
+  },
+  {
+    "p_id": "bpsc_chem_v4_264",
+    "qe": "How does substituting inert platinum with active copper electrodes fundamentally alter the anodic reaction profile during the electrolysis of aqueous $\\text{CuSO}_4$?",
+    "qh": "जलीय $\\text{CuSO}_4$ के विद्युत अपघटन के दौरान अक्रिय प्लैटिनम को सक्रिय कॉपर इलेक्ट्रोड से बदलने से एनोडिक प्रतिक्रिया प्रोफ़ाइल में क्या मौलिक परिवर्तन होता है?",
+    "o": [
+      "Oxygen gas is released at the anode at twice its normal speed",
+      "Copper metal from the active anode undergoes oxidation and dissolves into the solution as $\\text{Cu}^{2+}$ ions (एनोड पर कॉपर का घुलना)",
+      "Sulfate ions are oxidized into peroxodisulfate segments at the anode surface",
+      "Hydrogen gas is selectively liberated at the anode terminal layer"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> When active copper electrodes are utilized, the copper metal at the anode undergoes oxidation more easily than water or sulfate ions. Thus, instead of gas evolution, the copper anode dissolves: $\\text{Cu}(s) \\rightarrow \\text{Cu}^{2+} + 2e^-$, while $\\text{Cu}^{2+}$ deposits at the cathode."
+  },
+  {
+    "p_id": "bpsc_chem_v4_265",
+    "qe": "Which specific equation accurately defines specific conductivity ($\\kappa$) in terms of resistance ($R$) and cell dimensions?",
+    "qh": "कौन सा विशिष्ट समीकरण प्रतिरोध ($R$) और सेल आयामों के संदर्भ में विशिष्ट चालकता ($\\kappa$) को सटीक रूप से परिभाषित करता है?",
+    "o": [
+      "$\\kappa = \\frac{1}{R} \\cdot \\frac{\\ell}{A} = \\frac{G^*}{R}$ (चालकता, प्रतिरोध एवं सेल स्थिरांक संबंध)",
+      "$\\kappa = R \\cdot G^*$",
+      "$\\kappa = \\Lambda_m \\cdot \\frac{A}{\\ell}$",
+      "$\\kappa = \\frac{R}{\\ell \\cdot A}$"
+    ],
+    "a": 0,
+    "e": "<b>Explanation:</b> Conductivity ($\\kappa$) is defined as the reciprocal of resistivity ($\\kappa = 1/\\rho$). Since $\\rho = R \\cdot (A/\\ell)$, substituting this yields $\\kappa = \\frac{1}{R} \\cdot \\left(\\frac{\\ell}{A}\\right) = \\frac{G^*}{R}$, where $G^*$ represents the fixed cell constant."
+  },
+  {
+    "p_id": "bpsc_chem_v4_266",
+    "qe": "Which set of operational parameters governs the dynamic magnitude of molar conductivity for an ionic solution?",
+    "qh": "परिचालन मापदंडों (operational parameters) का कौन सा सेट एक आयनिक समाधान के लिए मोलर चालकता के गतिशील परिमाण को नियंत्रित करता है?",
+    "o": [
+      "The physical distance between electrodes and their total structural surface area",
+      "The system temperature and the localized concentration of electrolytes inside the solution (तापमान एवं इलेक्ट्रोलाइट सांद्रता)",
+      "The absolute volume of gas trapped inside the salt bridge gel matrix",
+      "The thickness of the non-conducting plastic shield surrounding the cell"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Molar conductivity ($\\Lambda_m = \\kappa/C$) is heavily dependent on temperature and concentration. Higher temperatures lower viscosity and increase ionic mobility, expanding $\\Lambda_m$, whereas increasing electrolyte concentration typically decreases $\\Lambda_m$ due to inter-ionic interactions."
+  },
+  {
+    "p_id": "bpsc_chem_v4_267",
+    "qe": "For the standard Galvanic cell notation represented by $\\text{Mg} \\mid \\text{Mg}^{2+} \\parallel \\text{Cu}^{2+} \\mid \\text{Cu}$, what is the correct full cell reaction?",
+    "qh": "$\\text{Mg} \\mid \\text{Mg}^{2+} \\parallel \\text{Cu}^{2+} \\mid \\text{Cu}$ द्वारा दर्शाए गए मानक गैल्वेनिक सेल संकेतन के लिए सही पूर्ण सेल प्रतिक्रिया क्या है?",
+    "o": [
+      "$\\text{Cu} + \\text{Mg}^{2+} \\rightarrow \\text{Cu}^{2+} + \\text{Mg}$",
+      "$\\text{Mg} + \\text{Cu}^{2+} \\rightarrow \\text{Mg}^{2+} + \\text{Cu}$ (सही सेल प्रतिक्रिया)",
+      "$\\text{Mg}^{2+} + \\text{Cu}^{2+} \\rightarrow \\text{Mg} + \\text{Cu}$",
+      "$\\text{Mg} + \\text{Cu} \\rightarrow \\text{Mg}^{2+} + \\text{Cu}^{2+}$"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> In standard notation, the left side tracks the anode oxidation half-reaction ($\text{Mg} \\rightarrow \\text{Mg}^{2+} + 2e^-$), and the right side tracks the cathode reduction half-reaction ($\text{Cu}^{2+} + 2e^- \\rightarrow \\text{Cu}$). Combining these steps yields the net reaction: $\text{Mg} + \text{Cu}^{2+} \\rightarrow \text{Mg}^{2+} + \text{Cu}$."
+  },
+  {
+    "p_id": "bpsc_chem_v4_268",
+    "qe": "Why is it physically impossible to measure the absolute electrode potential profile of an isolated individual half-cell directly?",
+    "qh": "किसी पृथक व्यक्तिगत हाफ-सेल के पूर्ण इलेक्ट्रोड विभव प्रोफाइल को सीधे मापना भौतिक रूप से असंभव क्यों है?",
+    "o": [
+      "Because half-cells turn volatile when isolated from structural air boundaries",
+      "Because a chemical oxidation or reduction half-reaction cannot take place independently without a complementary counter-reaction (अकेले हाफ-सेल में कोई नेट अभिक्रिया संभव नहीं है)",
+      "Because it requires the complete removal of all oxygen groups from the solution",
+      "Because it causes the immediate common-ion precipitation of all ionic reagents"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> An absolute potential of a single electrode cannot be determined because oxidation and reduction half-reactions are coupled processes that cannot occur in isolation. Only relative potential differences can be measured by pairing the half-cell with a standard reference electrode."
+  },
+  {
+    "p_id": "bpsc_chem_v4_269",
+    "qe": "Can the standard cell potential ($E^\\circ_{\\text{cell}}$) or standard Gibbs free energy change ($\\Delta_r G^\\circ$) of a feasible, functioning electrochemical cell ever be equal to zero?",
+    "qh": "क्या एक व्यवहार्य, चालू इलेक्ट्रोकेमिकल सेल का मानक सेल विभव ($E^\\circ_{\\text{cell}}$) या मानक गिब्स मुक्त ऊर्जा परिवर्तन ($\\Delta_r G^\\circ$) कभी शून्य के बराबर हो सकता है?",
+    "o": [
+      "Yes, when the circuit is kept entirely open at room temperature boundaries",
+      "No, because a feasible reaction requires a positive $E^\\circ_{\\text{cell}}$ and a negative $\\Delta_r G^\\circ$; values of zero mean the system is at equilibrium (शून्य होने पर तंत्र साम्यावस्था में होता है)",
+      "Yes, when high concentrations of non-ionic laundry detergent builders are added",
+      "No, because potential scales extensively with the total volume of electrodes"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> For an electrochemical cell to be operational and feasible, $E^\\circ_{\\text{cell}}$ must be positive and $\\Delta_r G^\\circ$ must be negative. When $E_{\\text{cell}} = \\Delta_r G = 0$, the cell has reached chemical equilibrium and can no longer perform work."
+  },
+  {
+    "p_id": "bpsc_chem_v4_270",
+    "qe": "What does a negative standard reduction potential value like $E^\\circ_{\\text{Zn}^{2+}/\\text{Zn}} = -0.76\\text{ V}$ structurally signify about the reactivity of zinc?",
+    "qh": "$E^\\circ_{\\text{Zn}^{2+}/\\text{Zn}} = -0.76\\text{ V}$ जैसा ऋणात्मक मानक अपचयन विभव मान संरचनात्मक रूप से जिंक की प्रतिक्रियाशीलता के बारे में क्या दर्शाता है?",
+    "o": [
+      "Zinc is completely inert and acts as an excellent non-stick layer",
+      "Zinc undergoes reduction more easily than hydronium ions in solution",
+      "Zinc is more reactive than hydrogen, meaning it easily undergoes oxidation to act as an anode against a SHE (जिंक हाइड्रोजन से अधिक क्रियाशील है)",
+      "Zinc forms permanent shared-electron covalent links with passing amides"
+    ],
+    "a": 2,
+    "e": "<b>Explanation:</b> A negative reduction potential ($-0.76\\text{ V}$) relative to the standard hydrogen electrode ($0.00\\text{ V}$) indicates that zinc is more reactive than hydrogen. It readily undergoes oxidation rather than reduction, acting as the anode when paired with a SHE."
+  },
+  {
+    "p_id": "bpsc_chem_v4_271",
+    "qe": "If separate aqueous solutions of copper sulfate ($\\text{CuSO}_4$) and silver nitrate ($\\text{AgNO}_3$) are electrolyzed using an identical 1 ampere current for 10 minutes, how will the deposited masses of copper and silver compare?",
+    "qh": "यदि कॉपर सल्फेट ($\\text{CuSO}_4$) और सिल्वर नाइट्रेट ($\\text{AgNO}_3$) के अलग-अलग जलीय घोलों को 1 एम्पीयर की समान धारा का उपयोग करके 10 मिनट के लिए विद्युत अपघटित किया जाता है, तो जमा हुए तांबे और चांदी के द्रव्यमान की तुलना कैसे होगी?",
+    "o": [
+      "The masses will be identical because the charge passed is exactly the same",
+      "Different masses will be deposited, proportional to their respective chemical equivalent weights (द्रव्यमान भिन्न होंगे, तुल्यांकी भार के समानुपाती)",
+      "No mass will plate out because the current applied is too low",
+      "The entire solution will convert into a volatile gas configuration"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> According to Faraday's second law of electrolysis, when the same quantity of electricity is passed through different electrolytes, the masses of the liberated substances are directly proportional to their chemical equivalent weights ($E = \\text{molar mass}/n$). Since $E_{\\text{Cu}}$ ($63.5/2$) and $E_{\\text{Ag}}$ ($108/1$) differ, the deposited masses will be different."
+  },
+  {
+    "p_id": "bpsc_chem_v4_272",
+    "qe": "Which structural notation accurately highlights the arrangement of components inside a Galvanic cell driving the reaction $\\text{Cu} + 2\\text{Ag}^+ \\rightarrow 2\\text{Ag} + \\text{Cu}^{2+}$?",
+    "qh": "कौन सा संरचनात्मक संकेतन प्रतिक्रिया $\\text{Cu} + 2\\text{Ag}^+ \\rightarrow 2\\text{Ag} + \\text{Cu}^{2+}$ को चलाने वाले गैल्वेनिक सेल के भीतर घटकों की व्यवस्था को सटीक रूप से रेखांकित करता है?",
+    "o": [
+      "$\\text{Ag} \\mid \\text{Ag}^+ \\parallel \\text{Cu}^{2+} \\mid \\text{Cu}$",
+      "$\\text{Cu} \\mid \\text{Cu}^{2+} \\parallel \\text{Ag}^+ \\mid \\text{Ag}$ (गैल्वेनिक सेल का सही संकेतन)",
+      "$\\text{Cu}^{2+} \\mid \\text{Cu} \\parallel \\text{Ag} \\mid \\text{Ag}^+$",
+      "$\\text{Cu} \\mid \\text{Ag}^+ \\parallel \\text{Cu}^{2+} \\mid \\text{Ag}$"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> By electrochemical convention, the anode oxidation half-cell ($\text{Cu} \\mid \\text{Cu}^{2+}$) is written on the left, the cathode reduction half-cell ($\\text{Ag}^+ \\mid \\text{Ag}$) is written on the right, and the salt bridge is represented by parallel vertical lines ($\\parallel$)."
+  },
+  {
+    "p_id": "bpsc_chem_v4_273",
+    "qe": "What specific descriptor explains the potential difference established between a metallic solid electrode and its surrounding aqueous electrolyte solution?",
+    "qh": "कौन सा विशिष्ट विवरण एक धातु ठोस इलेक्ट्रोड और उसके आसपास के जलीय इलेक्ट्रोलाइट समाधान के बीच स्थापित संभावित अंतर को समझाता है?",
+    "o": [
+      "Molar conductivity constant",
+      "Electrode Potential (इलेक्ट्रोड विभव)",
+      "Standard cell EMF profile",
+      "Oligomeric resistance coefficient"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> The potential difference developed at the interface between a metal electrode and its surrounding electrolytic solution due to charge separation is formally defined as the electrode potential."
+  },
+  {
+    "p_id": "bpsc_chem_v4_274",
+    "qe": "Why is an alternating current (AC) intentionally utilized instead of direct current (DC) when measuring the electrical resistance of an electrolytic solution?",
+    "qh": "एक इलेक्ट्रोलाइटिक समाधान के विद्युत प्रतिरोध को मापते समय डायरेक्ट करंट (DC) के बजाय अल्टरनेटिंग करंट (AC) का जानबूझकर उपयोग क्यों किया जाता है?",
+    "o": [
+      "To accelerate the common-ion precipitation of volatile metal halides",
+      "To keep the ion concentration constant near the electrodes and prevent polarization errors (ध्रुवण रोकना एवं सांद्रता स्थिर रखना)",
+      "To convert the solution into an unbranched biodegradable polyester network",
+      "To permanently lower the activation energy of the water solvent matrix"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Using a direct current (DC) causes continuous electrolysis, changing the local concentration of ions around the electrodes and causing polarization. Utilizing an alternating current (AC) reverses the current direction rapidly, keeping the composition stable and ensuring accurate resistance measurements."
+  },
+  {
+    "p_id": "bpsc_chem_v4_275",
+    "qe": "How does the pH of a brine solution (aqueous $\\text{NaCl}$) react when it is subjected to progressive industrial electrolysis processing?",
+    "qh": "जब ब्राइन समाधान (जलीय $\\text{NaCl}$) को प्रगतिशील औद्योगिक विद्युत अपघटन प्रसंस्करण के अधीन किया जाता है तो उसका pH कैसे प्रतिक्रिया करता है?",
+    "o": [
+      "The pH drops sharply toward highly acidic values due to chlorine retention",
+      "The pH rises significantly because $\\text{NaOH}$ is continuously synthesized within the cell matrix (pH का बढ़ना)",
+      "The pH remains completely locked at neutrality under all current inputs",
+      "The pH undergoes conversion into a volatile dicarboxylic acid factor"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Electrolyzing aqueous $NaCl$ yields hydrogen gas ($H_2$) at the cathode and chlorine gas ($Cl_2$) at the anode. Hydroxyl ions ($OH^-$) accumulate in the solution along with spectator $Na^+$ ions to form sodium hydroxide ($NaOH$), making the solution basic and raising the pH."
+  },
+  {
+    "p_id": "bpsc_chem_v4_276",
+    "qe": "Why does a commercial mercury cell display a remarkably constant cell potential throughout its functional operational lifespan, unlike a standard dry cell?",
+    "qh": "एक व्यावसायिक मर्करी सेल अपने पूरे कार्यात्मक परिचालन जीवनकाल में एक उल्लेखनीय रूप से स्थिर सेल विभव क्यों प्रदर्शित करता है, जो कि एक मानक ड्राई सेल के विपरीत है?",
+    "o": [
+      "It consists of highly volatile liquid polyolefins that expand under heat",
+      "The overall cell reaction does not involve any active ions in solution whose concentration can change during discharge (आयनों की सांद्रता में परिवर्तन न होना)",
+      "It contains a high structural concentration of toxic arsenic bridges",
+      "It undergoes spontaneous ring-opening cleavage when exposed to air"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> The mercury cell maintains a stable potential of $1.35\\text{ V}$ because its net chemical reaction ($Zn(Hg) + HgO(s) \\rightarrow ZnO(s) + Hg(l)$) does not involve any dissolved ions whose concentrations fluctuate during discharge, keeping internal resistance stable."
+  },
+  {
+    "p_id": "bpsc_chem_v4_277",
+    "qe": "What macro-architectural layout characterizes a protein structure classified under the structural grouping of a globular protein like insulin?",
+    "qh": "इंसुलिन जैसे ग्लोबुलर प्रोटीन के संरचनात्मक समूह के तहत वर्गीकृत प्रोटीन संरचना की क्या व्यापक-संरचनात्मक व्यवस्था विशेषता है?",
+    "o": [
+      "Polypeptide strands running parallel to each other held by broad links",
+      "Polypeptide chains coiled and wrapped tightly into a compact spherical shape, rendering them water-soluble (गोलाकार आकृति एवं जल में घुलनशील)",
+      "Linear unbranched chains interacting via loose van der Waals fields",
+      "A cross-linked network layer centered around a quaternary ammonium center"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Globular proteins form when long polypeptide chains fold into compact, spherical shapes. This conformation places polar residues on the exterior, making them water-soluble, which distinguishes them from fibrous proteins."
+  },
+  {
+    "p_id": "bpsc_chem_v4_278",
+    "qe": "Which specific organic compound name represents the functional molecular structure of Vitamin B1?",
+    "qh": "कौन सा विशिष्ट कार्बनिक यौगिक नाम विटामिन बी1 की कार्यात्मक आणविक संरचना का प्रतिनिधित्व करता है?",
+    "o": [
+      "Ascorbic acid entry",
+      "Thiamine (थायमीन)",
+      "Riboflavin framework",
+      "Pyridoxine complex"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Under international biochemical guidelines, the essential water-soluble molecule known as Vitamin $B_1$ is designated as thiamine."
+  },
+  {
+    "p_id": "bpsc_chem_v4_279",
+    "qe": "What direct pathological symptom indicates the onset of Scurvy caused by a severe deficiency of ascorbic acid (Vitamin C)?",
+    "qh": "एस्कॉर्बिक एसिड (विटामिन सी) की गंभीर कमी के कारण होने वाले स्कर्वी (Scurvy) की शुरुआत का कौन सा प्रत्यक्ष लक्षण संकेत देता है?",
+    "o": [
+      "Abnormal corneal xerophthalmia and visual drying errors",
+      "Bleeding gums and fragile vascular capillary boundaries (मसूड़ों से खून आना)",
+      "Soft malformation and structural bowing of long leg bones",
+      "Increased blood clotting time after minor mechanical cuts"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Vitamin C (ascorbic acid) is a vital cofactor for collagen synthesis. A deficiency leads to scurvy, which weakens connective tissues and compromises blood vessel walls, characteristically presenting as bleeding gums."
+  },
+  {
+    "p_id": "bpsc_chem_v4_280",
+    "qe": "Which specialized biocatalyst enzyme governs the decomposition of urea into ammonia gas and carbon dioxide?",
+    "qh": "कौन सा विशेष जैवउत्प्रेरक एंजाइम यूरिया के अमोनिया गैस और कार्बन डाइऑक्साइड में अपघटन (decomposition) को नियंत्रित करता है?",
+    "o": [
+      "Invertase sugar clearing fluid",
+      "Urease (यूरिएस)",
+      "Maltase structural enzyme",
+      "Pepsin proteolytic catalyst"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Urease is a highly specific enzyme that catalyzes the hydrolytic breakdown of urea ($NH_2CONH_2$) into ammonia ($NH_3$) and carbon dioxide ($CO_2$)."
+  },
+  {
+    "p_id": "bpsc_chem_v4_281",
+    "qe": "Which nitrogenous heterocyclic base is strictly exclusive to DNA strands, being replaced by uracil inside RNA?",
+    "qh": "कौन सा विशिष्ट नाइट्रोजनयुक्त हेटरोसाइक्लिक बेस विशेष रूप से डीएनए (DNA) धागे के लिए विशिष्ट है, जिसे आरएनए के भीतर यूरेसिल द्वारा प्रतिस्थापित किया जाता है?",
+    "o": [
+      "Adenine purine base",
+      "Thymine (थायमीन)",
+      "Guanine heterocyclic unit",
+      "Cytosine aromatic center"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> DNA strings are structured around four heterocyclic bases: adenine, guanine, cytosine, and thymine. RNA uses a similar set but replaces thymine with uracil."
+  },
+  {
+    "p_id": "bpsc_chem_v4_282",
+    "qe": "What terminology defines a molecule formed when an organic nitrogenous base attaches covalently to the C1' position of a pentose sugar ring?",
+    "qh": "उस अणु को क्या शब्दावली परिभाषित करती है जो तब बनता है जब एक कार्बनिक नाइट्रोजनयुक्त बेस एक पेंटोज शर्करा रिंग की C1' स्थिति से सहसंयोजक रूप से जुड़ता है?",
+    "o": [
+      "Nucleoside (न्यूक्लिओसाइड)",
+      "Nucleotide monomer building block",
+      "Phosphodiester linkage complex",
+      "Zwitterion dipole grid"
+    ],
+    "a": 0,
+    "e": "<b>Explanation:</b> Connecting a purine or pyrimidine base to the C1' carbon of ribose or deoxyribose produces a nucleoside. Once a phosphate group is attached to the 5' position of this sugar, it becomes a nucleotide."
+  },
+  {
+    "p_id": "bpsc_chem_v4_283",
+    "qe": "When two nucleotide blocks combine to construct a dinucleotide chain, which specific carbon centers along the pentose sugars house the phosphodiester bridge?",
+    "qh": "जब दो न्यूक्लियोटाइड ब्लॉक एक डाइन्यूक्लियोटाइड श्रृंखला का निर्माण करने के लिए गठबंधन करते हैं, तो पेंटोज शर्करा के साथ कौन से विशिष्ट कार्बन केंद्र फॉस्फोडिएस्टर पुल को रखते हैं?",
+    "o": [
+      "5' and 3' carbon positions (5' तथा 3' कार्बन स्थान)",
+      "1' and 5' carbon positions",
+      "5' and 5' carbon locations",
+      "3' and 3' carbon targets"
+    ],
+    "a": 0,
+    "e": "<b>Explanation:</b> Polynucleotide chains expand sequentially via step-growth condensation. The linking phosphate group forms a covalent phosphodiester linkage that connects the 5' carbon of one pentose ring to the 3' position of the adjacent sugar."
+  },
+  {
+    "p_id": "bpsc_chem_v4_284",
+    "qe": "Which specific organic functional group is generated when the carboxyl group of one amino acid condenses with the amino group of an adjacent unit to build a protein?",
+    "qh": "कौन सा विशिष्ट कार्बनिक कार्यात्मक समूह तब उत्पन्न होता है जब एक अमीनो एसिड का कार्बोक्सिल समूह प्रोटीन बनाने के लिए आसन्न इकाई के अमीनो समूह के साथ संघनित होता है?",
+    "o": [
+      "Glycosidic connection bridging rings",
+      "Peptide linkage / Amide bond (पेप्टाइड बंध / एमाइड लिंक)",
+      "Phosphodiester coordinate bridge",
+      "Sulfur disulfide cross-link system"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Combining the alpha-carboxyl group of one amino acid with the alpha-amino center of another eliminates a water molecule, establishing a covalent amide linkage ($-CONH-$) termed a peptide bond or peptide linkage."
+  },
+  {
+    "p_id": "bpsc_chem_v4_285",
+    "qe": "What happens to the structure of the cyclic monomer caprolactam when it is heated with water to generate Nylon-6?",
+    "qh": "जब चक्रीय मोनोमर कैप्रोलैक्टम को नायलॉन-6 उत्पन्न करने के लिए पानी के साथ गर्म किया जाता है तो उसकी संरचना का क्या होता है?",
+    "o": [
+      "It cross-links into a three-dimensional network containing permanent methylene bridges",
+      "It undergoes hydrolytic ring-opening cleavage to yield an open amino acid chain that polymerizes into a polyamide (रिंग-ओपनिंग जलअपघटन)",
+      "It undergoes oxidation into a dibasic dicarboxylic acid fragment",
+      "It forms insoluble precipitates via the common-ion effect"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Heating caprolactam with water breaks its internal cyclic amide bond. This ring-opening hydrolytic step yields $\\varepsilon$-aminocaproic acid, which polymerizes into the linear polyamide chain of Nylon-6."
+  },
+  {
+    "p_id": "bpsc_chem_v4_286",
+    "qe": "Which physical properties characteristically separate water-soluble globular proteins from water-insoluble fibrous options?",
+    "qh": "कौन से भौतिक गुण पानी में घुलनशील ग्लोबुलर प्रोटीन को पानी में अघुलनशील रेशेदार विकल्पों से विशिष्ट रूप से अलग करते हैं?",
+    "o": [
+      "Globular proteins are structured as long linear sheets held by coordinate ionic centers",
+      "Globular proteins form compact spherical shapes with polar groups on the exterior, rendering them water-soluble (गोलाकार आकृति एवं जल-घुलनशीलता)",
+      "Globular proteins turn completely volatile under normal room parameters",
+      "Globular proteins contain extensive networks of unbranched synthetic polyolefins"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Globular proteins fold into dense spherical configurations that expose hydrophilic residues to the surrounding environment, making them water-soluble. Fibrous proteins contain parallel strands locked by non-covalent forces, making them insoluble."
+  },
+  {
+    "p_id": "bpsc_chem_v4_287",
+    "qe": "What is the precise modern structural and chemical definition assigned to the macro-class of materials known as carbohydrates?",
+    "qh": "कार्बोहाइड्रेट के रूप में जाने जाने वाले सामग्रियों के व्यापक वर्ग को दी गई सटीक आधुनिक संरचनात्मक और रासायनिक परिभाषा क्या है?",
+    "o": [
+      "Optically inactive linear aromatic hydrocarbons with single bonds",
+      "Optically active polyhydroxy aldehydes or ketones, or compounds yielding them upon hydrolysis (पॉलीहाइड्रॉक्सी एल्डिहाइड या कीटोन)",
+      "Unbranched non-ionic long-chain potassium fatty acid salts",
+      "Suicidal competitive enzyme inhibitors with irreversible networks"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Modern biochemistry defines carbohydrates based on functional features: they are optically active polyhydroxy aldehydes or polyhydroxy ketones, or complex structures that break down into these subunits upon chemical hydrolysis."
+  },
+  {
+    "p_id": "bpsc_chem_v4_288",
+    "qe": "Which specific organic compound name represents the functional molecular structure of Vitamin B2?",
+    "qh": "कौन सा विशिष्ट कार्बनिक यौगिक नाम विटामिन बी2 की कार्यात्मक आणविक संरचना का प्रतिनिधित्व करता है?",
+    "o": [
+      "Ascorbic acid configuration",
+      "Riboflavin (राइबोफ्लेविन)",
+      "Pyridoxine derivative complex",
+      "Thiamine hydrochloride group"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Riboflavin is the systematic chemical designation for Vitamin $B_2$. It is an essential cofactor required for coenzymes involved in cellular respiration and redox pathways."
+  },
+  {
+    "p_id": "bpsc_chem_v4_289",
+    "qe": "What direct pathological symptom outlines the onset of standard Cheilosis caused by a severe deficiency of riboflavin?",
+    "qh": "रिबोफ्लेविन की गंभीर कमी के कारण होने वाले सामान्य कीलोसिस (Cheilosis) की शुरुआत का कौन सा प्रत्यक्ष लक्षण वर्णन करता है?",
+    "o": [
+      "Severe night blindness accompanied by corneal drying anomalies",
+      "Localized cracking and fissuring at the corners of the mouth and lips (मुंह के कोनों और होंठों का फटना)",
+      "Abnormal soft malformation and bending of the long leg bones",
+      "Continuous bleeding from fragile vascular matrices near the gums"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Cheilosis is a clear diagnostic indicator of a Vitamin $B_2$ (riboflavin) deficiency. It presents as localized inflammation, painful fissures, and cracking at the corners of the mouth and lips."
+  },
+  {
+    "p_id": "bpsc_chem_v4_290",
+    "qe": "What happens to the structure of DNA during the replication cycle to ensure that two identical genetic libraries are created for daughter cells?",
+    "qh": "डीएनए की संरचना में प्रतिकृति चक्र (replication cycle) के दौरान क्या होता है ताकि यह सुनिश्चित हो सके कि बेटी कोशिकाओं के लिए दो समान आनुवंशिक पुस्तकालय बनाए गए हैं?",
+    "o": [
+      "The covalent phosphodiester backbones split into random open-chain carbohydrates",
+      "The double helix unwinds as inter-chain hydrogen bonds split, allowing each separate strand to act as a template for synthesizing a new complementary strand (डबल हेलिक्स का खुलना)",
+      "The entire macromolecule converts into a volatile network of non-ionic ethers",
+      "The nitrogenous bases undergo complete cross-linking with ambient proteins"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> During replication, specific enzymes unzip the double helix by disrupting the hydrogen bonds between base pairs. The strands separate, and each acts as a template for building a new complementary strand matching the base rules."
+  }
+]
