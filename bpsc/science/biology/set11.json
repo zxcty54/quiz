@@ -1,0 +1,522 @@
+[
+  {
+    "p_id": "bpsc_mol_v4_181",
+    "qe": "Name a few critical catalytic enzymes dynamically involved during DNA replication other than DNA polymerase and ligase.",
+    "qh": "डीएनए पॉलीमरेज और लाइगेज के अलावा डीएनए प्रतिकृति (DNA replication) में शामिल कुछ अन्य एंजाइमों के नाम बताइए।",
+    "o": [
+      "Protease, amylase, and lipase modules",
+      "Helicase, Topoisomerases, and Primase (हेलीकेज़, टोपोआइसोमेरेज़ एवं प्राइमेज़)",
+      "Invertase, zymase, and maltase frames",
+      "Cellulase, chitinase, and ribonuclease units"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> DNA replication requires a coordinated multi-enzyme network. Helicase unzips the double helix; topoisomerases release torsional strain and supercoiling ahead of the fork; and primase polymerizes short temporary RNA primers to supply free 3'-OH markers."
+  },
+  {
+    "p_id": "bpsc_mol_v4_182",
+    "qe": "Which physical option parameters list three distinct operational viruses that naturally hold single-stranded or double-stranded RNA as their primary genetic material?",
+    "qh": "उन तीन वायरसों के नाम बताइए जिनमें आनुवंशिक सामग्री के रूप में आरएनए (RNA) पाया जाता है?",
+    "o": [
+      "Bacteriophage Lambda, T2 phage, and Variola virus",
+      "Tobacco Mosaic Virus, HIV, and Influenza virus (टीएमवी, एचआईवी एवं इन्फ्लूएंजा वायरस)",
+      "Adenovirus, Herpes simplex virus, and Cauliflower mosaic virus",
+      "Escherichia coli plasmid vectors and cellular standard prions"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> While most organisms rely on double-stranded DNA, several viruses use RNA to store their genetic information, notably Tobacco Mosaic Virus (TMV), Human Immunodeficiency Virus (HIV), and Influenza viruses."
+  },
+  {
+    "p_id": "bpsc_mol_v4_183",
+    "qe": "What surprising phenomenon occurs during Griffith's historic 1928 experiment where non-virulent bacterial cells change their genetic constitution permanently?",
+    "qh": "ग्रिफिथ के ऐतिहासिक 1928 के प्रयोग में रूपांतरण (transformation) की क्या परिभाषा है?",
+    "o": [
+      "The automatic volatilization of viral capsids into gas phases",
+      "Transformation: the genetic alteration of an organism driven by the direct uptake of naked exogenous DNA from its environment (पर्यावरण से बाहरी डीएनए का सीधे ग्रहण करना)",
+      "The random cross-linking of structural proteins into a rigid resin layer",
+      "The absolute loss of all ionizable phosphate centers via chemical shifts"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Griffith's transformation describes a hereditary change where live avirulent rough (R) bacteria absorb bare exogenous DNA released by heat-killed smooth (S) bacteria from the surrounding fluid, integrating it to express a virulent capsule trait."
+  },
+  {
+    "p_id": "bpsc_mol_v4_184",
+    "qe": "Which team of experimental biologists systematically extracted and tested cell fractions to conclusively reveal the precise biochemical nature of Griffith's transforming principle?",
+    "qh": "किस वैज्ञानिक टीम ने ग्रिफिथ के रूपांतरण सिद्धांत (transforming principle) की आनुवंशिक जैव रासायनिक प्रकृति का निश्चित रूप से खुलासा किया?",
+    "o": [
+      "James Watson, Francis Crick, and Rosalind Franklin structural team",
+      "Oswald Avery, Colin MacLeod, and Maclyn McCarty (एवेरी, मैकलियोड एवं मैकार्टी)",
+      "Matthew Meselson, Franklin Stahl, and Herbert Boyer alliance",
+      "Erwin Chargaff, Taylor, and Arthur Kornberg coordination group"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Between 1933 and 1944, Avery, MacLeod, and McCarty purified carbohydrates, proteins, RNA, and DNA from heat-killed S-strain cells. They demonstrated that only pure DNA could transform live R cells, confirming it as the genetic material."
+  },
+  {
+    "p_id": "bpsc_mol_v4_185",
+    "qe": "Why did introducing highly specific deoxyribonuclease (DNase) enzymes selectively halt the transformation of avirulent R-type bacteria into virulent S-type cells during Avery's validation trials?",
+    "qh": "एवेरी के परीक्षणों के दौरान डीऑक्सीराइबोन्यूक्लिएज (DNase) डालने से रूपांतरण की प्रक्रिया क्यों रुक गई?",
+    "o": [
+      "Because DNase converts amino acid chains into volatile industrial elements",
+      "Because DNase specifically degrades and hydrolyzes the transforming DNA template molecule, deactivating its genetic capacity (DNase द्वारा डीएनए का जलअपघटन होना)",
+      "Because DNase forces the sugar framework to undergo permanent cross-linking",
+      "Because DNase uncouples the quaternary nitrogen coordination slots across matrices"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Deoxyribonuclease (DNase) specifically targets and breaks down DNA backbones. Adding DNase degraded the transforming DNA molecules extracted from the S-strain, preventing the transformation of the live R-strain bacteria."
+  },
+  {
+    "p_id": "bpsc_mol_v4_186",
+    "qe": "Why was the heavy, non-radioactive isotope of nitrogen, $^{15}\\text{N}$, critically essential for the execution of Meselson and Stahl's historic replication experiment?",
+    "qh": "मेसेल्सन और स्टाल के ऐतिहासिक प्रतिकृति प्रयोग के लिए नाइट्रोजन का भारी आइसोटोप, $^{15}\\text{N}$, क्यों महत्वपूर्ण रूप से आवश्यक था?",
+    "o": [
+      "It serves as a highly active radioactive fluorescent tracking tag",
+      "It provides a clear mass density difference that can be separated and measured using cesium chloride density gradient centrifugation (सीजियम क्लोराइड घनत्व प्रवणता पृथक्करण)",
+      "It induces the immediate structural conversion of glucose into unbranched starches",
+      "It completely eliminates the metabolic burden of host cells during division"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> $^{15}\\text{N}$ is a stable, heavy isotope of nitrogen, not a radioactive tracer. It contains an extra neutron that increases its mass density, allowing Meselson and Stahl to separate $^{15}\\text{N}$-labeled DNA from light $^{14}\\text{N}$-labeled DNA using cesium chloride ($\text{CsCl}$) density gradient centrifugation."
+  },
+  {
+    "p_id": "bpsc_mol_v4_187",
+    "qe": "What precise multi-band layout profile characteristically develops when an *E. coli* culture grown in heavy $^{15}\\text{N}$ completes exactly one replication generation (20 minutes) inside a light $^{14}\\text{N}$ medium?",
+    "qh": "जब भारी $^{15}\\text{N}$ में विकसित *E. coli* संस्कृति हल्के $^{14}\\text{N}$ माध्यम में ठीक एक प्रतिकृति पीढ़ी (20 मिनट) पूरी करती है, तो कौन सा बैंड प्रोफाइल विकसित होता है?",
+    "o": [
+      "The sample separates cleanly into a heavy lane and a light lane symmetrically",
+      "The extracted DNA resolves into a single, uniform intermediate hybrid density band containing both heavy and light strands ($^{15}\\text{N}$-$^{14}\\text{N}$ हाइब्रिड बैंड)",
+      "The solution transitions completely into a volatile gas phase setup within minutes",
+      "The fragments drop to absolute zero velocity slots inside the collection well"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> After one generation cycle (20 minutes), the parent $^{15}\\text{N}$-$^{15}\\text{N}$ double helix unwinds. Each heavy strand templates the synthesis of a new light $^{14}\\text{N}$ strand. This produces 100% hybrid $^{15}\\text{N}$-$^{14}\\text{N}$ DNA molecules, which form a single intermediate density band."
+  },
+  {
+    "p_id": "bpsc_mol_v4_188",
+    "qe": "What concise molecular definition details a cistron inside double-stranded DNA structural gene layouts?",
+    "qh": "डबल-स्ट्रैंडेड डीएनए संरचनात्मक जीन लेआउट के भीतर एक सिस्ट्रॉन (cistron) की संक्षिप्त आणविक परिभाषा क्या है?",
+    "o": [
+      "An amorphous cross-linked network segment held by sulfur links entirely",
+      "A stretch of nucleotide base sequences that codes for a single functional polypeptide chain (एकल पॉलीपेप्टाइड श्रृंखला को कोड करने वाला अनुक्रम)",
+      "A volatile open-chain aliphatic hydrocarbon sequence missing sugar parts",
+      "A non-conducting protective surround framework that blocks translation lanes"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> A cistron is a functional segment of DNA that contains the genetic code required to synthesize a single polypeptide chain, along with its adjacent regulatory regions."
+  },
+  {
+    "p_id": "bpsc_mol_v4_189",
+    "qe": "Which functional pairing correctly details the distribution of monocistronic and polycistronic structural gene layouts across eukaryotes and prokaryotes?",
+    "qh": "यूकेरियोट्स और प्रोकैरियोट्स में मोनोसिस्ट्रोनिक और पॉलीसिस्ट्रोनिक संरचनात्मक जीन लेआउट के वितरण का कौन सा विवरण सही है?",
+    "o": [
+      "Prokaryotes carry monocistronic frames, while eukaryotes rely on extensive polycistronic matrices",
+      "Eukaryotes possess monocistronic structural genes, while prokaryotes characteristically organize genes into polycistronic units like the lac operon (यूकेरियोट्स मोनोसिस्ट्रोनिक तथा प्रोकैरियोट्स पॉलीसिस्ट्रोनिक होते हैं)",
+      "Both utilize identical unbranched polysaccharide tail strings to process transcripts",
+      "Both are entirely non-functional parameters governed by high pressure fields"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Eukaryotes typically have monocistronic structural genes, where each gene transcript codes for a single polypeptide. Prokaryotes characteristically organize genes into polycistronic units, such as the lac operon, where a single promoter drives the transcription of an mRNA strand encoding multiple proteins."
+  },
+  {
+    "p_id": "bpsc_mol_v4_190",
+    "qe": "What quantitative milestone outlines the total base-pair inventory sequenced across a haploid human genome pool during the Human Genome Project?",
+    "qh": "मानव जीनोम प्रोजेक्ट के दौरान एक अगुणित मानव जीनोम पूल में अनुक्रमित (sequenced) कुल क्षारक-युग्मों की संख्या क्या है?",
+    "o": [
+      "5386 circular single units",
+      "3164.7 million nucleotide bases (3164.7 मिलियन न्यूक्लियोटाइड बेस)",
+      "4.6 billion linear sequences",
+      "231 structural fragments"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> The Human Genome Project established that a haploid human genome pool contains approximately 3164.7 million nucleotide bases ($3.16 \\times 10^9\\text{ bp}$)."
+  },
+  {
+    "p_id": "bpsc_mol_v4_191",
+    "qe": "What is the systematic name of the largest known human structural gene discovered during genome mapping, and what is its length profile?",
+    "qh": "जीनोम मैपिंग के दौरान खोजे गए सबसे बड़े मानव संरचनात्मक जीन का व्यवस्थित नाम क्या है, और इसकी लंबाई प्रोफाइल क्या है?",
+    "o": [
+      "The beta-globin chain sequence spanning 0.34 nanometers",
+      "Dystrophin, spanning approximately 2.4 million nucleotide bases (डिस्ट्रोफिन जीन - 2.4 मिलियन बेस)",
+      "Taq polymerase, containing extensive disulfide cross-link networks",
+      "The lacZ operator segment extending across infinite cell coordinates"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Dystrophin is the largest known human structural gene, spanning an immense length of approximately 2.4 million nucleotide bases ($2.4\\text{ Mb}$)."
+  },
+  {
+    "p_id": "bpsc_mol_v4_192",
+    "qe": "What surprising database metric features the functional assignments of over 50 percent of the discovered genes compiled during human genome sequencing work?",
+    "qh": "मानव जीनोम अनुक्रमण कार्य के दौरान संकलित खोजे गए जीनों में से 50 प्रतिशत से अधिक के कार्यात्मक असाइनमेंट की क्या विशेषता है?",
+    "o": [
+      "They code exclusively for highly volatile petroleum solvent derivatives",
+      "Their exact biological functions and physiological roles remain entirely unknown (50% से अधिक जीनों के कार्य अभी भी अज्ञात हैं)",
+      "They serve as active competitive suicide enzyme inhibitors under stress",
+      "They form permanent cross-linked networks structured like Bakelite plates"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Despite successfully sequencing the entire human genome library, the exact biological functions and cellular roles for over 50 percent of the discovered genes remain unknown."
+  },
+  {
+    "p_id": "bpsc_mol_v4_193",
+    "qe": "What total percentage of the human genome template is explicitly dedicated to coding for protein structures according to the Human Genome Project?",
+    "qh": "मानव जीनोम प्रोजेक्ट के अनुसार मानव जीनोम का कुल कितना प्रतिशत हिस्सा विशेष रूप से प्रोटीन संरचनाओं को कोड करने के लिए समर्पित है?",
+    "o": [
+      "Approximately 99.9 percent high density zones",
+      "Less than 2 percent (2 प्रतिशत से भी कम हिस्सा प्रोटीन को कोड करता है)",
+      "Exactly 50 percent balanced open configurations",
+      "Zero net functional parameters across the layout"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Data from the Human Genome Project showed that less than 2 percent of the total human genome sequence encodes functional protein structures; the remainder consists of non-coding or repetitive sequences."
+  },
+  {
+    "p_id": "bpsc_mol_v4_194",
+    "qe": "Which specific human chromosome pairs exhibit the absolute extreme boundaries of gene counts, mapping the highest and lowest values respectively?",
+    "qh": "कौन से मानव गुणसूत्र क्रमशः जीन संख्या की पूर्ण चरम सीमाओं को प्रदर्शित करते हैं, जो उच्चतम और न्यूनतम मानों को दर्शाते हैं?",
+    "o": [
+      "Chromosome X and Chromosome Y limits",
+      "Chromosome 1 (highest with 2968 genes) and Chromosome Y (lowest with 231 genes) (गुणसूत्र 1 सर्वाधिक, गुणसूत्र Y न्यूनतम)",
+      "Chromosome 11 and Chromosome 21 variants",
+      "Chromosome 22 and Chromosome X slots"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Human chromosome mapping shows that Chromosome 1 contains the highest density of functional genes (2,968 genes), while the Y chromosome contains the lowest (231 genes)."
+  },
+  {
+    "p_id": "bpsc_mol_v4_195",
+    "qe": "What are the single base DNA sequence variation markers identified at over 1.4 million locations across the human genome library?",
+    "qh": "मानव जीनोम लाइब्रेरी में 1.4 मिलियन से अधिक स्थानों पर पहचाने गए एकल बेस डीएनए अनुक्रम भिन्नता मार्कर (single base variation markers) क्या हैं?",
+    "o": [
+      "Polycistronic operon slots",
+      "SNPs / Single Nucleotide Polymorphisms (एसएनपी / सिंगल न्यूक्लियोटाइड बहुरूपता)",
+      "Okazaki fragment structural nicks",
+      "Methylene polymer resin links"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Single Nucleotide Polymorphisms (SNPs, pronounced 'snips') are single-base DNA variations discovered at over 1.4 million locations in the human genome, serving as markers to map disease risks and trace human lineages."
+  },
+  {
+    "p_id": "bpsc_mol_v4_196",
+    "qe": "Why do biological host cells avoid opening their entire genomic DNA double helix at a single instance during replication cycles?",
+    "qh": "प्रतिकृति चक्र के दौरान जैविक मेजबान कोशिकाएं एक ही बार में अपने संपूर्ण जीनोमिक डीएनए डबल हेलिक्स को खोलने से क्यों बचती हैं?",
+    "o": [
+      "Opening the entire strand would cause the molecules to convert into unbranched starch",
+      "Opening the entire molecule concurrently is energetically highly expensive and creates severe supercoiling strains ahead (अत्यधिक ऊर्जा की आवश्यकता और ऐंठन तनाव)",
+      "The single strands would crystallize into a permanent rigid matrix grid",
+      "The replication machinery requires fuming nitric acid to stabilize open templates"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Uncoiling an entire macro DNA molecule at once requires an immense input of metabolic energy (ATP). Furthermore, separating the strands along their entire length creates severe torsional strain and positive supercoiling ahead of the fork, which would disrupt the structural stability of the helix."
+  },
+  {
+    "p_id": "bpsc_mol_v4_197",
+    "qe": "What morphological structural name describes the Y-shaped zone created when helicase unzips a localized stretch of a double-stranded DNA template?",
+    "qh": "उस वाई (Y) के आकार के क्षेत्र को क्या संरचनात्मक नाम दिया गया है जो हेलीकेज़ द्वारा निर्मित होता है जब वह डीएनए टेम्पलेट को खोलता है?",
+    "o": [
+      "Cistronic overlapping interface",
+      "Replication Fork (प्रतिकृतियन चिमटा / रेप्लिकेशन फोर्क)",
+      "Unbranched polyolefin tail matrix slot",
+      "Thermosetting network consolidation node"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> As DNA helicase unwinds the double helix at the origin of replication, it separates the complementary strands to form a Y-shaped region known as the replication fork, which serves as the active site for DNA synthesis."
+  },
+  {
+    "p_id": "bpsc_mol_v4_198",
+    "qe": "What happens to the spatial length profile of a DNA double helix if it is treated with an intercalating compound that inserts itself directly between stacked nitrogenous base pairs?",
+    "qh": "यदि एक डीएनए डबल हेलिक्स को एक ऐसे यौगिक से उपचारित किया जाए जो खुद को नाइट्रोजनस बेस पेयर के बीच व्यवस्थित करता है, तो उसकी लंबाई प्रोफाइल का क्या होता है?",
+    "o": [
+      "The structural layout collapses down to zero linear meters instantly",
+      "The distance between consecutive base pairs expands, increasing the overall extended linear length of the double helix (दूरी बढ़ने से डीएनए की कुल लंबाई का बढ़ना)",
+      "The molecule converts into a highly cross-linked fluid paint matrix",
+      "The sugar-phosphate backbone drops all ionizable centers via substitution loops"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Intercalating agents slide between adjacent stacked base pairs of the double helix. This mechanical disruption pushes the consecutive bases farther apart (e.g., from $0.34\\text{ nm}$ to $0.44\\text{ nm}$), increasing the overall extended linear length of the DNA molecule."
+  },
+  {
+    "p_id": "bpsc_mol_v4_199",
+    "qe": "What serious packaging consequence occurs inside a eukaryotic cell nucleus if its native histone proteins undergo mutation, becoming rich in acidic amino acids like aspartic acid?",
+    "qh": "यदि यूकैरियोटिक कोशिका केंद्रक के भीतर इसके मूल हिस्टोन प्रोटीन उत्परिवर्तित होकर एस्पार्टिक अम्ल जैसे अम्लीय अमीनो अम्ल से समृद्ध हो जाएं तो क्या गंभीर पैकेजिंग परिणाम होता है?",
+    "o": [
+      "The mutated strands undergo rapid homolytic chain propagation loops",
+      "The mutated histones carry negative charges that electrostatically repel the negatively charged DNA, preventing nucleosome packaging and chromatin formation (ऋणात्मक आवेश के कारण डीएनए को प्रतिकर्षित करना और पैकेजिंग न होना)",
+      "The nuclear material transforms into a volatile open-chain carbohydrate tail",
+      "The framework forms permanent cross-linked networks centered around coordination metals"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> DNA packaging depends on electrostatic attraction between the negatively charged DNA phosphate backbone and the positively charged basic residues (lysine and arginine) of histones. If histones mutate to display acidic, negatively charged residues like aspartic acid, they will repel the DNA, preventing nucleosome assembly and chromatin formation."
+  },
+  {
+    "p_id": "bpsc_mol_v4_200",
+    "qe": "Why would Griffith's heat-killed smooth (S) strain of *Pneumococcus* have completely failed to transform the rough (R) strain if RNA was its native genetic material instead of DNA?",
+    "qh": "यदि आरएनए (RNA) डीएनए के बजाय न्यूमोकोकस का मूल आनुवंशिक पदार्थ होता, तो ग्रिफिथ का हीट-किल्ड एस (S) स्ट्रेन रफ (R) स्ट्रेन को रूपांतरित करने में पूरी तरह विफल क्यों रहा होता?",
+    "o": [
+      "Because RNA molecules cross absolute zero temperature filters seamlessly",
+      "Because RNA contains a reactive 2'-OH group that makes it chemically unstable and highly susceptible to rapid thermal degradation upon heating (आरएनए का अस्थिर होना तथा गर्मी से नष्ट हो जाना)",
+      "Because RNA transcripts lack any single base sequences within their system rings",
+      "Because thermal stress converts RNA into an infusible cross-linked polymer network"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> RNA contains a reactive 2'-hydroxyl group ($2'-OH$) on its ribose sugar, making it chemically unstable and susceptible to hydrolysis. Exposing an RNA-based pathogen to heat denatures and degrades the genetic material, preventing it from functioning as a transforming principle."
+  },
+  {
+    "p_id": "bpsc_mol_v4_201",
+    "qe": "Why can substituting the stable radioactive isotope $^{35}\\text{S}$ with the heavy nitrogen isotope $^{15}\\text{N}$ not yield conclusive results during a replication of the Hershey-Chase blender experiment?",
+    "qh": "हर्षे-चेज़ ब्लेंडर प्रयोग के दौरान स्थिर रेडियोधर्मी उपग्रह $^{35}\\text{S}$ को भारी नाइट्रोजन आइसोटोप $^{15}\\text{N}$ से प्रतिस्थापित करने पर निर्णायक परिणाम क्यों नहीं मिल सकते?",
+    "o": [
+      "Because nitrogen atoms turn completely volatile and escape verification channels",
+      "$^{15}\\text{N}$ is a stable, non-radioactive isotope that follows different detection routines, and it would incorporate into both viral DNA bases and protein amino groups, preventing separation (नाइट्रोजन का डीएनए और प्रोटीन दोनों में शामिल होना)",
+      "Because nitrogen structures cause the immediate ring-opening cleavage of sugar matrices",
+      "Because it reduces the required concentration of current carrying ions down to zero"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> $^{15}\\text{N}$ is a non-radioactive, heavy isotope, meaning it cannot be tracked using scintillation counting or autoradiography like radioactive $^{35}\\text{S}$. Furthermore, nitrogen is a constituent element of both nitrogenous bases in DNA and amino groups in proteins. Therefore, labeling with $^{15}\\text{N}$ would flag both fractions, preventing researchers from identifying which molecule entered the host cell."
+  },
+  {
+    "p_id": "bpsc_mol_v4_202",
+    "qe": "What terminology defines a genetic mutation at the third base position of an mRNA codon that introduces zero change to the resulting protein's phenotype due to triplet redundancy?",
+    "qh": "एमआरएनए कोडन की तीसरी बेस स्थिति पर होने वाले आनुवंशिक उत्परिवर्तन को क्या शब्दावली परिभाषित करती है, जो ट्रिप्लेट अतिरेक के कारण प्रोटीन के फेनोटाइप में शून्य परिवर्तन लाता है?",
+    "o": [
+      "Frame shift disruption variant",
+      "Silent Mutation (शांत उत्परिवर्तन / साइलेंट म्यूटेशन)",
+      "Suicide competitive block option",
+      "Inversion loop transformation mesh"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Due to the degeneracy of the genetic code, multiple codons can specify the same amino acid. A mutation at the third position of a codon often changes it into another triplet that codes for the exact same amino acid residue. Because the primary sequence of the protein is unchanged, it is termed a silent mutation."
+  },
+  {
+    "p_id": "bpsc_mol_v4_203",
+    "qe": "Why must a low, baseline level of expression of the polycistronic lac operon occur continuously inside *E. coli* cells, even in the complete absence of environmental lactose?",
+    "qh": "वातावरण में लैक्टोज शर्करा के पूर्ण अभाव में भी *E. coli* कोशिकाओं के भीतर लैक ओपेरॉन का एक कम, आधारभूत स्तर का अभिव्यक्ति (expression) लगातार क्यों होना चाहिए?",
+    "o": [
+      "To prevent the bacterial cell wall from collapsing into single amino units",
+      "To ensure continuous synthesis of permease, which is required to transport lactose into the cell to act as an inducer when it becomes available (लैक्टोज को कोशिका के भीतर पहुंचाने के लिए परमिएज़ की उपस्थिति आवश्यक है)",
+      "To convert cellular carbohydrate pools into volatile non-polar alkanes",
+      "To generate an automated mechanism that lowers internal temperatures down to absolute zero"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> In a fully deactivated state with zero expression, the cell cannot synthesize the enzyme permease. Permease is required to transport lactose across the cell membrane into the cytoplasm. If no permease is present, lactose cannot enter the cell to bind the repressor, keeping the operon permanently locked."
+  },
+  {
+    "p_id": "bpsc_mol_v4_204",
+    "qe": "Why can a molecular biology technician not deploy short DNA probes like Variable Number of Tandem Repeats (VNTRs) to complete a fingerprinting run on a bacteriophage virus?",
+    "qh": "एक आणविक जीव विज्ञान तकनीशियन एक बैक्टीरियोफेज वायरस पर फिंगरप्रिंटिंग रन को पूरा करने के लिए वेरिएबल नंबर ऑफ टेंडेम रिपीट्स (VNTRs) जैसे छोटे डीएनए प्रोब को क्यों तैनात नहीं कर सकता है?",
+    "o": [
+      "Because viral nucleic units lack ionizable phosphate backbones completely across lanes",
+      "Bacteriophages possess small genomes composed almost entirely of coding sequences, completely lacking non-coding repetitive VNTR sequences (छोटे वायरस जीनोम में दोहराव वाले VNTR अनुक्रमों का अभाव होना)",
+      "Because viral templates convert into open-chain saccharic acids when exposed to probes",
+      "Because the probe forces the viral capsule to form an infusible thermosetting resin net"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> DNA fingerprinting relies on variations in non-coding, repetitive sequences like mini-satellites (VNTRs). Viral genomes, such as those of bacteriophages, are small and optimized for efficiency, consisting almost entirely of unique coding sequences with no repetitive, non-coding domains."
+  },
+  {
+    "p_id": "bpsc_mol_v4_205",
+    "qe": "What consequence occurs during *in vitro* enzymatic DNA replication if a researcher substitutes standard deoxynucleoside triphosphates with 2', 3'-dideoxycytidine triphosphate?",
+    "qh": "यदि एक शोधकर्ता *in vitro* डीएनए प्रतिकृति के दौरान मानक न्यूक्लिक इकाइयों के स्थान पर 2', 3'-डाइडिटॉक्सीसाइटिडिन ट्राइफॉस्फेट का उपयोग करता है, तो इसका क्या परिणाम होगा?",
+    "o": [
+      "The rate of chain propagation doubles via free-radical expansion steps",
+      "Chain termination occurs immediately because the lack of a 3'-OH group prevents the formation of the next phosphodiester bond (3'-OH के अभाव में श्रृंखला का विस्तार रुक जाना)",
+      "The DNA strands convert spontaneously into an amorphous non-ionic surfactant lattice",
+      "The nucleotide template undergoes immediate ring-opening cleavage into volatile gases"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> DNA polymerases require a free 3'-hydroxyl group (3'-OH) on the sugar ring of the growing strand to catalyze the formation of a phosphodiester bond with the incoming nucleotide. Incorporating a 2', 3'-dideoxy nucleotide removes this hydroxyl marker, preventing further elongation and causing immediate chain termination."
+  },
+  {
+    "p_id": "bpsc_mol_v4_265",
+    "qe": "What historical database observations and physical inputs did James Watson and Francis Crick assemble to construct their landmark 1953 DNA double helix model?",
+    "qh": "जेम्स वाटसन और फ्रांसिस क्रिक ने अपने ऐतिहासिक 1953 डीएनए डबल हेलिक्स मॉडल के निर्माण के लिए किन विशिष्ट प्रलेखन और भौतिक इनपुटों को इकट्ठा किया था?",
+    "o": [
+      "The Ostwald dilution equations and homolytic free-radical addition velocities",
+      "Erwin Chargaff's base equivalence rules ($A=T, C=G$) and Wilkins and Rosalind Franklin's X-ray diffraction physical metrics (चारग्राफ के नियम एवं एक्स-रे विर्तन डेटा)",
+      "The Haworth projections blueprint combined with dicarboxylic acid sequence loops",
+      "The Faraday quantitative electrolysis constants mixed with zwitterion charge balances"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Watson and Crick developed their double-helical DNA model by integrating two lines of evidence: Erwin Chargaff's chemical data demonstrating base equivalence ratios ($[A]/[T] = [G]/[C] = 1$) and the sharp X-ray diffraction photographs captured by Rosalind Franklin and Maurice Wilkins detailing a helical structure."
+  },
+  {
+    "p_id": "bpsc_mol_v4_207",
+    "qe": "Which specific organic compound is generated when a molecule of natural cane sugar (sucrose) undergoes acidic hydrolysis?",
+    "qh": "जब प्राकृतिक गन्ने की चीनी (सुक्रोज) का एक अणु अम्लीय जलअपघटन से गुजरता है तो कौन सा विशिष्ट कार्बनिक यौगिक उत्पन्न होता है?",
+    "o": [
+      "Two identical units of D-galactose",
+      "An equimolar mixture of D-glucose and D-fructose (ग्लूकोज एवं फ्रुक्टोज मिश्रण)",
+      "Two units of highly branched amylopectin",
+      "One molecule of glycine and one molecule of aminocaproic acid"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Hydrolyzing the disaccharide sucrose breaks its internal glycosidic linkage, releasing an equimolar mixture of one D-glucose molecule and one D-fructose molecule."
+  },
+  {
+    "p_id": "bpsc_mol_v4_208",
+    "qe": "What happens to the structure of the cyclic monomer caprolactam when it is heated with water to generate Nylon-6?",
+    "qh": "जब चक्रीय मोनोमर कैप्रोलैक्टम को नायलॉन-6 उत्पन्न करने के लिए पानी के साथ गर्म किया जाता है तो उसकी संरचना का क्या होता है?",
+    "o": [
+      "It cross-links into a three-dimensional thermosetting network containing methylene bridges",
+      "It undergoes hydrolytic ring-opening cleavage to yield an open amino acid chain that polymerizes into a polyamide (रिंग-ओपनिंग जलअपघटन)",
+      "It undergoes oxidation into a dibasic dicarboxylic acid fragment",
+      "It forms insoluble precipitates via the common-ion effect"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Heating caprolactam with water at elevated temperatures breaks its internal cyclic amide bond. This ring-opening hydrolytic step yields $\\varepsilon$-aminocaproic acid, which polymerizes into the linear polyamide chain of Nylon-6."
+  },
+  {
+    "p_id": "bpsc_mol_v4_209",
+    "qe": "What specific operational role does benzoyl peroxide assume when added to an alkene mixture during free-radical addition polymerization?",
+    "qh": "मुक्त-कण जोड़ पॉलीमराइजेशन के दौरान एल्कीन मिश्रण में मिलाए जाने पर बेंज़ोयल पेरोक्साइड क्या विशिष्ट परिचालन भूमिका निभाता है?",
+    "o": [
+      "It acts as a mechanical filler to increase the total density of the plastic block",
+      "It serves as a reaction initiator by undergoing homolytic cleavage to generate active free radicals (मुक्त मूलक आरंभक)",
+      "It functions as a chemical chemical inhibitor that immediately stops chain propagation",
+      "It clarifies the basification parameters of the solution via acid-base buffer mechanisms"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Benzoyl peroxide is thermally unstable and easily undergoes homolytic cleavage at its oxygen-oxygen single bond ($-O-O-$). This dissociation generates active phenyl free radicals that attack alkene monomers to initiate free-radical chain-growth polymerization."
+  },
+  {
+    "p_id": "bpsc_mol_v4_210",
+    "qe": "The standard cell potential of a classic Daniell cell is exactly 1.1 V. Which logarithmic mathematical expression correctly details its thermodynamic equilibrium state at 298 K?",
+    "qh": "एक क्लासिक डेनियल सेल का मानक विभव बिल्कुल 1.1 V है। कौन सा लघुगणकीय गणितीय व्यंजक 298 K पर इसकी थर्मोडायनामिक संतुलन स्थिति का सही विवरण देता है?",
+    "o": [
+      "$\\log K_C = 1.1 \\times 2F$",
+      "$\\log K_C = \\frac{2.2}{0.059}$ (डेनियल सेल संतुलन समीकरण)",
+      "$\\log K_C = -1.1 \\times nF$",
+      "$\\log K_C = 1.1 \\times 0.059$"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> At chemical equilibrium, the Nernst equation simplifies to: $E^\\circ_{\\text{cell}} = \\frac{0.059}{n}\\log K_C$. For a Daniell cell, substituting $n = 2$ and $E^\\circ_{\\text{cell}} = 1.1\\text{ V}$ yields $1.1 = \\frac{0.059}{2}\\log K_C$, which rearranges directly to $\\log K_C = \\frac{2.2}{0.059}$."
+  },
+  {
+    "p_id": "bpsc_mol_v4_211",
+    "qe": "What name is assigned to the physical status characterized by continuous erratic zig-zag path of colloidal particles inside a sol?",
+    "qh": "एक सॉल के भीतर कोलाइडल कणों के निरंतर अनियमित टेढ़े-मेढ़े मार्ग (continuous erratic zig-zag path) की विशेषता वाली भौतिक स्थिति को क्या नाम दिया गया है?",
+    "o": [
+      "Electrophoresis displacement lines",
+      "Brownian movement (ब्राउनियन गति)",
+      "Tyndall light diffraction layout",
+      "Coagulation network fixing zones"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Brownian motion is the continuous, erratic, zig-zag movement of colloidal particles suspended in a dispersion medium, driven by the constant kinetic bombardment from the liquid molecules."
+  },
+  {
+    "p_id": "bpsc_mol_v4_212",
+    "qe": "Which specific organic functional group is generated when the carboxyl group of one amino acid condenses with the amino group of an adjacent unit to build a protein?",
+    "qh": "कौन सा विशिष्ट कार्बनिक कार्यात्मक समूह तब उत्पन्न होता है जब एक अमीनो एसिड का कार्बोक्सिल समूह प्रोटीन बनाने के लिए आसन्न इकाई के अमीनो समूह के साथ संघनित होता है?",
+    "o": [
+      "Glycosidic connection bridging rings together",
+      "Peptide linkage / Amide bond (पेप्टाइड बंध / एमाइड लिंक)",
+      "Phosphodiester coordinate bridge balancing frames",
+      "Sulfur disulfide cross-link system anchoring paths"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Combining the alpha-carboxyl group of one amino acid with the alpha-amino center of another eliminates a water molecule, establishing a covalent amide linkage ($-CONH-$) termed a peptide bond or peptide linkage."
+  },
+  {
+    "p_id": "bpsc_mol_v4_213",
+    "qe": "What happens to the structure of linear Novolac strands if they are mixed with excess formaldehyde gas and subjected to high thermal curing?",
+    "qh": "यदि रैखिक नोवोलेक स्ट्रैंड्स को अतिरिक्त फॉर्मलाडेहाइड गैस के साथ मिलाया जाए और उच्च थर्मल क्यूरिंग के अधीन किया जाए तो उनकी संरचना का क्या होता है?",
+    "o": [
+      "They break down into volatile liquid phenols via hydrolytic cleavage",
+      "They develop extensive covalent methylene cross-links, transforming the linear resin into the rigid thermosetting network Bakelite (क्रॉस-लिंक्ड बैकेलाइट नेटवर्क)",
+      "They convert into an unbranched biodegradable polyester chain configuration",
+      "They form an explicit water-soluble uncharged non-ionic surfactant lattice balanced by sodium"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Novolac is a linear condensation intermediate. Heating Novolac with excess formaldehyde introduces methylene linkages that cross-link the chains into a permanent three-dimensional network, creating the infusible thermosetting polymer Bakelite."
+  },
+  {
+    "p_id": "bpsc_mol_v4_214",
+    "qe": "Which structural feature characterises the alpha-helix secondary structure of a protein, keeping the right-handed screw shape stable?",
+    "qh": "कौन सी संरचनात्मक विशेषता एक प्रोटीन की अल्फा-हेलिक्स माध्यमिक संरचना की विशेषता है, जो दाहिने हाथ की पेंच जैसी आकृति को स्थिर रखती है?",
+    "o": [
+      "Weak van der Waals forces acting uniformly across non-polar branches",
+      "Intramolecular hydrogen bonds formed between the N-H group of an amino acid residue and the carbonyl C=O group of an adjacent turn (N-H और C=O के बीच हाइड्रोजन बंध)",
+      "Reversible ester links that undergo rapid reduction with basic catalysts",
+      "Cationic quaternary nitrogen halide cross-linked coordination zones"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> The helical conformation of an $\\alpha$-helix is locked and stabilized by a dense network of regular hydrogen bonds. These form between the polar amide $N-H$ groups situated along one loop of the coiling backbone and the carbonyl $C=O$ functional groups of the adjacent turn."
+  },
+  {
+    "p_id": "bpsc_mol_v4_215",
+    "qe": "What precise sequence of structural parts represents the generic composition of a single nucleotide building block inside nucleic acid backbones?",
+    "qh": "न्यूक्लिक एसिड बैकबोन के भीतर एकल न्यूक्लियोटाइड बिल्डिंग ब्लॉक की सामान्य संरचना का प्रतिनिधित्व करने वाला सटीक अनुक्रम क्या है?",
+    "o": [
+      "A long lipophilic carbon chain bound tightly to pure sulfur matrices",
+      "A pentose sugar molecule covalently linked to a heterocyclic base and an esterified phosphate group (शर्करा-बेस-फॉस्फेट असेंबली)",
+      "An aromatic polyol layer mixed with fuming formaldehyde syrup segments",
+      "A glycine residue bound via alternating amide and dicarboxylic bands"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> A single nucleotide is composed of three covalently bound elements: a five-carbon pentose sugar (ribose or deoxyribose), a nitrogenous base attached to the C1' position of the sugar, and a phosphate group esterified to its C5' position."
+  },
+  {
+    "p_id": "bpsc_mol_v4_216",
+    "qe": "What specific operational method describes the primary technique of modern biotechnology, where targeted modifications are introduced directly into an organism's DNA?",
+    "qh": "कौन सी विशिष्ट परिचालन विधि आधुनिक जैव प्रौद्योगिकी की प्राथमिक तकनीक का वर्णन करती है, जहाँ लक्षित संशोधनों को सीधे किसी जीव के डीएनए में पेश किया जाता है?",
+    "o": [
+      "Traditional single breeding hybridization matrices",
+      "Genetic Engineering / Recombinant DNA Technology (आनुवंशिक इंजीनियरिंग)",
+      "Interfacial van der Waals surface adsorption",
+      "High-pressure step-growth condensation polymerization"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Genetic engineering involves modifying an organism's DNA using recombinant DNA technology to express desired traits or produce valuable proteins, bypassing traditional breeding limits."
+  },
+  {
+    "p_id": "bpsc_mol_v4_217",
+    "qe": "Which specific microbial host organism is recognized as a highly optimized, standard platform for expressing cloned genes and manufacturing recombinant proteins?",
+    "qh": "किस विशिष्ट सूक्ष्मजीव मेजबान जीव (microbial host organism) को क्लोन किए गए जीन को व्यक्त करने और पुनः संयोजक प्रोटीन के निर्माण के लिए एक अत्यधिक अनुकूलित, मानक मंच के रूप में मान्यता प्राप्त है?",
+    "o": [
+      "Thermus aquaticus thermophilic bacterium",
+      "Escherichia coli (E. coli) (ई. कोलाई बैक्टीरिया)",
+      "Salmonella typhimurium native cell lines",
+      "Shatterproof heterocyclic triamine grids"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> *Escherichia coli* (*E. coli*) is widely used as a host in molecular biology because of its well-understood genome, rapid replication rates, and ease of transformation with cloning vectors."
+  },
+  {
+    "p_id": "bpsc_mol_v4_218",
+    "qe": "In molecular biology nomenclature, what do the three components of a restriction enzyme's name (e.g., EcoRI) sequentially designate?",
+    "qh": "आणविक जीवविज्ञान नामकरण में, एक प्रतिबंध एंजाइम के नाम (जैसे EcoRI) के तीन घटक क्रमिक रूप से क्या निर्दिष्ट करते हैं?",
+    "o": [
+      "The chemical mass, density profile, and cross-linking indices",
+      "The genus name, species name, and the specific strain of the source bacterium (जीनस, स्पीशीज़ एवं स्ट्रेन नाम)",
+      "The activation energy, thermal window, and pH threshold",
+      "The sugar content, phosphate count, and nitrogen base ratio"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Restriction enzyme names are derived systematically: the first letter indicates the genus (e.g., *Escherichia* $\\rightarrow$ E), the next two letters specify the species (e.g., *coli* $\\rightarrow$ co), and subsequent markers define the strain (e.g., R)."
+  },
+  {
+    "p_id": "bpsc_mol_v4_219",
+    "qe": "What single stranded overhang fragments are generated across DNA backbones when restriction endonucleases introduce staggered cuts?",
+    "qh": "जब रिस्ट्रिक्शन एंडोन्यूक्लिएज कंपित कट (staggered cuts) पेश करते हैं तो डीएनए बैकबोन में कौन से विशिष्ट सिंगल-स्ट्रैंडेड ओवरहैंग टुकड़े उत्पन्न होते हैं?",
+    "o": [
+      "Flush or blunt end configurations",
+      "Sticky ends or Cohesive ends (स्टिकी एंड्स / चिपचिपे सिरे)",
+      "Amorphous Novolac network fragments",
+      "Linear tactical unbranched oligomer units"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Many restriction endonucleases introduce asymmetric, staggered cuts near the center of their recognition sequences, leaving single-stranded overhangs known as sticky or cohesive ends."
+  },
+  {
+    "p_id": "bpsc_mol_v4_220",
+    "qe": "What specific engineering modification must be executed on the native Ti-plasmid of *Agrobacterium tumefaciens* to transform it into a functional cloning vector?",
+    "qh": "*Agrobacterium tumefaciens* के मूल Ti-प्लाज्मिड पर कौन सा विशिष्ट इंजीनियरिंग संशोधन निष्पादित किया जाना चाहिए ताकि इसे एक कार्यात्मक क्लोनिंग वेक्टर में बदला जा सके?",
+    "o": [
+      "The complete conversion of all sugar modules into chlorinated sucrose arrays",
+      "The plasmid is disarmed by selectively deleting its tumor-inducing oncogenes while preserving its T-DNA delivery mechanics (ट्यूमर पैदा करने वाले जीन को हटाकर हानिरहित बनाना)",
+      "The insertion of alternating long-chain non-ionic polyethylene glycol strands",
+      "The full synthesis of an explosive chemotherapeutic chemical across its domains"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> To engineer a cloning vector from *Agrobacterium tumefaciens*, its Ti-plasmid is 'disarmed' by removing the oncogenes responsible for inducing crown gall tumors. This modification ensures the vector is non-pathogenic while retaining its ability to transfer foreign genes into plant genomes."
+  }
+]
