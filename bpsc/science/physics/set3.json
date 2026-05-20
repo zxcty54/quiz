@@ -1,0 +1,522 @@
+[
+  {
+    "p_id": "bpsc_semi_v4_101",
+    "qe": "Why does the electrical conductivity of an intrinsic semiconductor increase when its thermal environment is elevated?",
+    "qh": "तापमान बढ़ने पर किसी आंतरिक अर्धचालक की विद्युत चालकता क्यों बढ़ जाती है?",
+    "o": [
+      "The lattice constant contracts into a rigid uncharged matrix",
+      "The exponential increase in charge carrier density outweighs the slight reduction in carrier relaxation time ($n_e, n_h \\gg \\tau$) (वाहकों की संख्या घनत्व में भारी वृद्धि होना)",
+      "The material undergoes spontaneous transformation into a volatile open-chain amide",
+      "The activation energy barrier drops cleanly down to an absolute zero state"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Elevating temperature reduces the relaxation time ($\\tau$) due to increased lattice vibrations, which increases resistance. However, in semiconductors, the exponential generation of covalent bond ruptures dramatically increases the number density ($n$) of free electrons and holes. This surge heavily dominates, resulting in a net increase in conductivity."
+  },
+  {
+    "p_id": "bpsc_semi_v4_102",
+    "qe": "When an external battery applies a reverse bias potential across a standard PN junction diode, what physical structural change directly alters the potential barrier?",
+    "qh": "जब एक बाहरी बैटरी एक मानक PN जंक्शन डायोड में रिवर्स बायस विभव लगाती है, तो विभव अवरोध (potential barrier) में क्या संरचनात्मक परिवर्तन होता है?",
+    "o": [
+      "The external potential opposes the barrier, narrowing the depletion width",
+      "The applied reverse potential reinforces the internal electric field, broadening the depletion layer and elevating the effective barrier height (अक्षय परत की चौड़ाई और विभव अवरोध का बढ़ना)",
+      "The internal barrier converts into an unbranched non-ionic surfactant lattice",
+      "The space-charge fields drop to a stable zwitterionic zero index layout"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> A reverse bias configuration aligns the external electric field in the exact same direction as the internal field of the depletion region. This reinforces the potential barrier across the junction, pulling majority carriers further away and broadening the depletion width."
+  },
+  {
+    "p_id": "bpsc_semi_v4_103",
+    "qe": "Consider a circuit configuration containing two identical parallel ideal diodes $D_1$ and $D_2$. If the p-side of $D_1$ is anchored to a lower relative potential while the p-side of $D_2$ joins a higher relative potential channel, how will current propagate across the parallel branches?",
+    "qh": "दो समानांतर डायोड $D_1$ और $D_2$ वाले सर्किट में, यदि $D_1$ का p-सिरा कम विभव से और $D_2$ का p-सिरा उच्च विभव से जुड़ा है, तो धारा का प्रवाह कैसे होगा?",
+    "o": [
+      "Branch $D_1$ conducts exclusively while branch $D_2$ acts as an open circuit block",
+      "Branch $D_2$ becomes forward-biased and conducts seamlessly, while branch $D_1$ enters reverse bias and acts as a block (Branch $D_2$ फॉरवर्ड-बायस होकर संचालित होगी और $D_1$ ब्लॉक करेगी)",
+      "Both parallel branches simultaneously engage in full structural forward conduction",
+      "Both parallel branches collapse into completely non-conducting absolute zero pathways"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> A diode enters forward bias when its p-side is at a higher relative potential than its n-side, and enters reverse bias when its p-side is at a lower relative potential. Under these conditions, $D_2$ conducts current seamlessly while $D_1$ blocks it."
+  },
+  {
+    "p_id": "bpsc_semi_v4_104",
+    "qe": "What direct mechanical mechanism defines the concept of a positive electronic 'hole' within solid-state semiconductor physics models?",
+    "qh": "ठोस-अवस्था अर्धचालक भौतिकी मॉडल के भीतर एक धनात्मक इलेक्ट्रॉनिक 'होल' (hole) की अवधारणा को क्या परिभाषित करता है?",
+    "o": [
+      "A fast moving anti-particle of an electron containing antimatter fields",
+      "An electronic vacancy or empty state left behind in a valence band when a valence electron leaves a covalent bond (संयोजक बंध टूटने पर निर्मित इलेक्ट्रॉनिक रिक्ति)",
+      "The absolute spatial absence of any free electrons within the entire lattice body",
+      "An artificially synthesized subatomic tracking matrix created under high pressure"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> A hole is not a physical subatomic particle like a proton. It is a localized electronic vacancy created within the valence band when a valence electron gains sufficient thermal energy to break its covalent bond and leap into the conduction band."
+  },
+  {
+    "p_id": "bpsc_semi_v4_105",
+    "qe": "If a single PN junction diode is configured in series with a load resistor across a sinusoidal AC input loop, what specific operational waveform appears across the junction itself if the forward drop across the series load approaches near maximum during positive cycles?",
+    "qh": "यदि एक PN जंक्शन डायोड को श्रृंखला में जोड़कर AC इनपुट दिया जाए और लोड प्रतिरोध के कारण फॉरवर्ड ड्रॉप अधिकतम हो, तो जंक्शन के सिरों पर आउटपुट कैसा दिखेगा?",
+    "o": [
+      "A perfectly continuous symmetrical baseline direct current output profile",
+      "A rectified waveform displaying exclusively negative output cycles because forward voltage drops across the series load dominate positive phases (केवल नकारात्मक चक्रों वाला आउटपुट तरंग)",
+      "The immediate conversion of the signal into a volatile uncharged gas line",
+      "A zero output state spanning across infinite temporal coordinate marks"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> During positive cycles, the forward-biased diode displays extremely low internal resistance, causing the maximum potential drop to shift across the series load resistor, leaving near-zero output across the junction itself. During negative cycles, the reverse-biased diode exhibits maximum impedance, capturing the entire negative cycle across its boundaries."
+  },
+  {
+    "p_id": "bpsc_semi_v4_106",
+    "qe": "When an external electric field vector is actively applied across a standard semiconductor crystal, what precise spatial energy shifts occur among the mobile charge carrier populations?",
+    "qh": "जब एक अर्धचालक क्रिस्टल पर बाहरी विद्युत क्षेत्र लगाया जाता है, तो गतिशील आवेश वाहकों के बीच कौन सा विशिष्ट ऊर्जा स्तर परिवर्तन होता है?",
+    "o": [
+      "Conduction electrons shift from lower to higher energy levels within the conduction band, while valence holes move from higher to lower energy levels (इलेक्ट्रॉन निम्न से उच्च स्तर पर और होल उच्च से निम्न स्तर पर जाते हैं)",
+      "Conduction electrons drop into absolute zero baseline energy states across bands",
+      "Valence holes cross permanently into highly volatile open-chain gas slots",
+      "Both populations instantly freeze into static cross-linked synthetic polyamide networks"
+    ],
+    "a": 0,
+    "e": "<b>Explanation:</b> Under an applied electric field, free electrons in the conduction band gain kinetic energy and climb from lower to higher available energy states. Conversely, holes in the valence band move in the opposite direction, which corresponds to migrating from higher to lower energy levels on an electron-energy scale."
+  },
+  {
+    "p_id": "bpsc_semi_v4_107",
+    "qe": "Consider an n-p-n bipolar junction transistor operating with its base-emitter junction forward-biased and its collector-base interface reverse-biased. What is the primary behavior of the charge carriers?",
+    "qh": "एक n-p-n ट्रांजिस्टर में, जिसका बेस-एमीटर जंक्शन फॉरवर्ड-बायस और कलेक्टर-बेस जंक्शन रिवर्स-बायस है, आवेश वाहकों का प्राथमिक व्यवहार क्या होता है?",
+    "o": [
+      "Holes migrate aggressively from the base matrix into the collector channel",
+      "Electrons injected from the emitter branch diffuse across the base layer and cross over into the collector region (इलेक्ट्रॉन एमीटर से बेस में जाकर कलेक्टर में प्रवेश करते हैं)",
+      "Electrons from the emitter branch escape fully out of the base without hitting the collector",
+      "Both populations immediately form a permanent cross-linked network across gates"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Forward biasing the emitter-base junction causes majority carrier electrons from the n-type emitter to be injected into the p-type base. Because the base is thin and lightly doped, most of these injected electrons escape recombination and are swept across the reverse-biased collector-base junction into the collector."
+  },
+  {
+    "p_id": "bpsc_semi_v4_108",
+    "qe": "According to the transfer characteristics curve of a base-biased common-emitter transistor circuit, what specific operational mode is activated when the input voltage ($V_i$) sits below the cut-in threshold ($V_i < 0.6\\text{ V}$)?",
+    "qh": "एक कॉमन-एमीटर ट्रांजिस्टर सर्किट के ट्रांसफर करैक्टेरिस्टिक्स वक्र के अनुसार, जब इनपुट वोल्टेज कट-इन दहलीज ($V_i < 0.6\\text{ V}$) से कम होता है, तो कौन सा मोड सक्रिय होता है?",
+    "o": [
+      "The active amplification region where gain parameters reach a maximum plateau",
+      "The cut-off state where collector current is zero, allowing the transistor to operate as an open switch (कट-ऑफ स्थिति; जहां ट्रांजिस्टर बंद स्विच की तरह कार्य करता है)",
+      "The saturation regime where the tissue turns into an infusible cross-linked polymer network",
+      "The spontaneous breakdown lane that drops total impedance down to absolute zero"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> When the input voltage ($V_i$) is below the base-emitter cut-in threshold ($\\sim 0.6\\text{ V}$ for Silicon), the base current is zero, keeping the collector current at zero. The transistor operates in its cut-off state, functioning as an open (turned off) electronic switch."
+  },
+  {
+    "p_id": "bpsc_semi_v4_109",
+    "qe": "Inside a standard junction diode's space-charge depletion zone, what specific component infrastructure balances the region, and what is its net mobile charge density status?",
+    "qh": "एक मानक डायोड के अक्षयी क्षेत्र (depletion zone) के भीतर कौन सी विशिष्ट संरचनात्मक स्थिति होती है, और इसकी शुद्ध गतिशील आवेश स्थिति क्या है?",
+    "o": [
+      "The region is packed with fast-moving free radicals that propagate chains",
+      "The region is entirely devoid of mobile charge carriers, containing only fixed, immobile ionized donor and acceptor atoms (गतिशील वाहकों का अभाव; केवल स्थिर आयनों की उपस्थिति)",
+      "The area converts into an unbranched biodegradable polyester line array",
+      "The zones expand symmetrically to accommodate high volumes of volatile petroleum ethers"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> The depletion region of a PN junction diode is defined by the absence of mobile charge carriers (free electrons and holes). It contains only immobile, fixed charged ions trapped within the crystal lattice framework, balancing the electric fields across the interface."
+  },
+  {
+    "p_id": "bpsc_semi_v4_110",
+    "qe": "What specific engineering adjustments must be made to a capacitor-filtered rectifier circuit to minimize the magnitude of the ripple factor ($r$) across the output load resistor ($R_L$)?",
+    "qh": "कैपेसिटर-फ़िल्टर रेक्टिफायर सर्किट में रिपल फैक्टर ($r$) के परिमाण को न्यूनतम करने के लिए कौन से विशिष्ट इंजीनियरिंग समायोजन किए जाने चाहिए?",
+    "o": [
+      "The input frequency should be decreased and the filter capacitance dropped to zero",
+      "The load resistance ($R_L$), input frequency, and filter capacitance ($C$) should all be increased (लोड प्रतिरोध, इनपुट आवृत्ति और कैपेसिटेंस को बढ़ाना)",
+      "The entire output line must be converted into a volatile open-chain carbohydrate tail",
+      "The layout must exclude all secondary multi-protein assembly lines"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> The ripple voltage of a capacitor-filtered full-wave rectifier is inversely proportional to the load resistance, input frequency, and filtering capacitance ($r \\propto \\frac{1}{f \\cdot C \\cdot R_L}$). Increasing these parameters keeps the capacitor from discharging significantly between peaks, smoothing the DC output."
+  },
+  {
+    "p_id": "bpsc_semi_v4_111",
+    "qe": "What primary physical constraint explains why a reverse breakdown event in a PN junction diode occurs at relatively low voltages when the doping concentration of the lattice is extremely high?",
+    "qh": "अत्यधिक उच्च डोपिंग सांद्रता (high doping concentration) होने पर पीएन जंक्शन डायोड में कम वोल्टेज पर ही रिवर्स ब्रेकडाउन क्यों हो जाता है?",
+    "o": [
+      "High doping levels completely volatilize the sugar-phosphate backbone lines",
+      "High doping concentration creates an exceptionally narrow depletion width, generating a very strong electric field that triggers Zener breakdown at low potentials (अत्यधिक संकीर्ण अक्षयी क्षेत्र के कारण तीव्र विद्युत क्षेत्र का निर्माण होना)",
+      "The doping forces the covalent bonds to form a permanent three-dimensional cross-linked mesh",
+      "The setting forces the material's internal dielectric constant to drop to absolute zero"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> When a semiconductor is heavily doped, the concentration of fixed ions near the junction is very high, which creates an exceptionally narrow depletion region. Applying even a low reverse bias voltage across this narrow width generates a very strong electric field ($\r_E = V / d$) that pulls valence electrons directly out of their covalent bonds (Zener breakdown)."
+  },
+  {
+    "p_id": "bpsc_semi_v4_112",
+    "qe": "Why are the chemical elements used as dopants for Silicon and Germanium semiconductors selected almost exclusively from Group XIII or Group XV of the periodic table?",
+    "qh": "सिलिकॉन और जर्मेनियम अर्धचालकों के लिए डोपेंट तत्व मुख्य रूप से आवर्त सारणी के समूह XIII या समूह XV से ही क्यों चुने जाते हैं?",
+    "o": [
+      "Because these groups contain elements that turn completely volatile under normal current",
+      "Their atomic dimensions closely match Silicon and Germanium, allowing them to substitute into the lattice without introducing severe structural distortions (परमाणु आकार समान होना जिससे जाली संरचना विकृत नहीं होती)",
+      "Because they induce the immediate spontaneous ring-opening cleavage of adjacent cells",
+      "Because they reduce the internal thermodynamic entropy of the host down to absolute zero"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Dopant elements must have an atomic radius similar to the host Silicon or Germanium atoms. This allows them to cleanly substitute into lattice sites without creating mechanical strain or structural defects, while supplying the desired valence configurations (trivalent or pentavalent) to modify conductivity."
+  },
+  {
+    "p_id": "bpsc_semi_v4_113",
+    "qe": "Given that Tin ($\\text{Sn}$), Carbon ($\\text{C}$), Silicon ($\\text{Si}$), and Germanium ($\\text{Ge}$) all reside within Group XIV of the periodic table, what structural energy property classifies Carbon as a clear insulator while Silicon and Germanium operate as semiconductors?",
+    "qh": "आवर्त सारणी के समूह XIV के तत्वों में, कार्बन एक इंसुलेटर है जबकि सिलिकॉन और जर्मेनियम अर्धचालक हैं। इसका मुख्य कारण क्या है?",
+    "o": [
+      "Carbon possesses an overlapping valence and conduction band configuration with zero net gap",
+      "Carbon features an exceptionally wide forbidden energy gap (~5.4 eV), while Silicon and Germanium possess moderate gaps (~1.1 eV and ~0.7 eV) (कार्बन में वर्जित ऊर्जा अंतराल का अत्यधिक बड़ा होना)",
+      "Carbon forms a long-chain lipophilic polyic framework that excludes free electrons entirely",
+      "Carbon completely lacks ionizable phosphate ester bounds across its molecular rings"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Electrical properties are dictated by the width of the forbidden energy gap ($E_g$). For Carbon (in its diamond allotrope), the bandgap is exceptionally wide ($E_g \\sim 5.4\\text{ eV}$), preventing thermal electron excitation. Silicon ($E_g \\sim 1.1\\text{ eV}$) and Germanium ($E_g \\sim 0.7\\text{ eV}$) have smaller energy gaps that allow for semiconductor behavior."
+  },
+  {
+    "p_id": "bpsc_semi_v4_114",
+    "qe": "Why can a technician not accurately measure the internal potential barrier ($V_B$) built across a PN junction diode by simply connecting a standard laboratory voltmeter directly across its external terminals?",
+    "qh": "एक तकनीशियन बाहरी टर्मिनलों पर केवल एक मानक प्रयोगशाला वोल्टमीटर जोड़कर पीएन जंक्शन डायोड के आंतरिक विभव अवरोध ($V_B$) को सटीक रूप से क्यों नहीं माप सकता है?",
+    "o": [
+      "Because voltmeters require absolute zero thermal conditions to read data profiles",
+      "The internal barrier's space-charge field cannot drive current through the voltmeter because the contact potentials formed at the voltmeter-diode terminals exactly neutralize the barrier voltage (टर्मिनल संपर्क विभव द्वारा विभव अवरोध का संतुलित हो जाना)",
+      "Because connecting a voltmeter forces the internal covalent bonds to cross-link into Bakelite panels",
+      "Because the meter uncouples the quaternary coordination slots across the depletion boundaries"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> A voltmeter cannot measure the internal potential barrier of an isolated diode. When connected, new contact potentials form at the connections between the voltmeter leads and the semiconductor regions. These contact potentials exactly balance the junction's internal potential barrier, resulting in a net measured voltage of zero."
+  },
+  {
+    "p_id": "bpsc_semi_v4_115",
+    "qe": "What precise macro-scale layout configuration represents the complete structural map of a single nucleotide component embedded within nucleic acid chains?",
+    "qh": "न्यूक्लिक एसिड श्रृंखलाओं के भीतर एम्बेडेड एकल न्यूक्लियोटाइड घटक (single nucleotide component) की सामान्य संरचना का सही प्रतिनिधित्व क्या है?",
+    "o": [
+      "A long lipophilic unbranched carbon loop bound to pure sulfur matrices",
+      "A five-carbon pentose sugar ring covalently bound to a heterocyclic nitrogenous base and an esterified phosphate group (शर्करा, नाइट्रोजनस बेस और फॉस्फेट समूह की असेंबली)",
+      "An aromatic polyol segment condensed with fuming formaldehyde syrup layers",
+      "A simple glycine molecule held by alternating amide and dicarboxylic bands"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Every single nucleotide building block is composed of three covalently bound segments: a five-carbon pentose sugar ring (ribose or deoxyribose), a heterocyclic nitrogenous base attached to its C1' position, and a phosphate group esterified to its C5' position."
+  },
+  {
+    "p_id": "bpsc_semi_v4_116",
+    "qe": "Which specific biochemical bond connects a heterocyclic nitrogenous base to the anomeric C1' carbon coordinate of a pentose sugar ring within a nucleoside assembly?",
+    "qh": "न्यूक्लिओसाइड असेंबली में कौन सा विशिष्ट जैव रासायनिक बंध एक विषमचक्रीय नाइट्रोजनस बेस को पेंटोज शर्करा के C1' कार्बन से जोड़ता है?",
+    "o": [
+      "Phosphodiester linkage bridging adjacent sugar modules",
+      "N-glycosidic bond (N-ग्लाइकोसिडिक बंध)",
+      "Peptide linkage establishing a covalent amide chain",
+      "Inter-chain disulfide cross-link bridge system"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> The chemical linkage anchoring a purine or pyrimidine base to the C1' position of a ribose or deoxyribose sugar ring is an N-glycosidic bond."
+  },
+  {
+    "p_id": "bpsc_semi_v4_117",
+    "qe": "Which strong covalent linkage connects consecutive nucleotide monomers together along a single-stranded DNA or RNA polymer chain?",
+    "qh": "कौन सा मजबूत सहसंयोजक बंध डीएनए या आरएनए के एक एकल धागे (single strand) के साथ लगातार न्यूक्लियोटाइड मोनोमर्स को एक साथ जोड़ता है?",
+    "o": [
+      "N-glycosidic link bridging rings together",
+      "3'-5' phosphodiester linkage (3'-5' फॉस्फोडिएस्टर बंध)",
+      "Amide linkage systematically identical to a biological peptide bond",
+      "Sulfur disulfide cross-link bridge system anchoring paths"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Nucleotides polymerize into nucleic acid chains via 3'-5' phosphodiester linkages, where a phosphate group forms stable ester covalent bonds between the 3'-hydroxyl group of one sugar ring and the 5'-hydroxyl group of the next."
+  },
+  {
+    "p_id": "bpsc_semi_v4_118",
+    "qe": "What architectural layout configuration details the relative directionality of the two complementary strands inside a DNA double helix model?",
+    "qh": "कौन सा आणविक संरचनात्मक विन्यास डीएनए डबल हेलिक्स मॉडल के भीतर दो पूरक धागों की सापेक्ष दिशात्मकता (relative directionality) का विवरण देता है?",
+    "o": [
+      "They run parallel in the exact same 5' to 3' spatial direction",
+      "They exhibit anti-parallel polarity, where one strand runs 5' to 3' and the other runs 3' to 5' (प्रति-समानांतर ध्रुवता / anti-parallel)",
+      "They are arranged as separate open-chain unlinked carbohydrate blocks",
+      "They cross-link randomly into a single infusible thermosetting net plastic"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> The twin strands of a DNA double helix run anti-parallel to one another. One strand is oriented in the 5' to 3' direction, while its complementary counter-strand features a reverse 3' to 5' alignment."
+  },
+  {
+    "p_id": "bpsc_semi_v4_119",
+    "qe": "Which specific inter-chain bond stabilizes base pairing across the complementary strands of a DNA double helix?",
+    "qh": "कौन सा विशिष्ट अंतर-श्रृंखला बंध डीएनए डबल हेलिक्स के पूरक धागों में क्षारक युग्मन (base pairing) को स्थिर करता है?",
+    "o": [
+      "Strong phosphodiester covalent bridges",
+      "Hydrogen bonds established between complementary purines and pyrimidines (हाइड्रोजन बंध)",
+      "Covalent peptide linkages identical to those in globular proteins",
+      "Quaternary ammonium halide coordinate link systems"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Base pairing between anti-parallel strands is stabilized by hydrogen bonds between complementary purine and pyrimidine bases (A pairs with T via two bonds; G pairs with C via three bonds)."
+  },
+  {
+    "p_id": "bpsc_semi_v4_120",
+    "qe": "How many hydrogen bonds form the complementary pairing between adenine and thymine bases inside a double-stranded DNA block?",
+    "qh": "डबल-स्ट्रैंडेड डीएनए ब्लॉक के भीतर एडेनीन और थायमीन बेस के बीच पूरक युग्मन (complementary pairing) कितने हाइड्रोजन बंध बनाते हैं?",
+    "o": [
+      "Three hydrogen bonds configuration",
+      "Two hydrogen bonds (दो हाइड्रोजन बंध)",
+      "A single irreversible covalent bridge",
+      "Four quaternary coordinate networks"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Adenine couples specifically to thymine across anti-parallel strands through exactly two stable hydrogen bonds ($A = T$)."
+  },
+  {
+    "p_id": "bpsc_semi_v4_121",
+    "qe": "What quantitative count of hydrogen bonds stabilizes the specific pairing interface between guanine and cytosine bases in DNA?",
+    "qh": "डीएनए में ग्वानीन और साइटोसिन बेस के बीच विशिष्ट युग्मन इंटरफ़ेस को हाइड्रोजन बंधों की कौन सी मात्रात्मक संख्या स्थिर करती है?",
+    "o": [
+      "Two hydrogen bonds configuration",
+      "Three hydrogen bonds (तीन हाइड्रोजन बंध)",
+      "One extensive covalent bridge",
+      "Zero net thermodynamic bonds"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Guanine coordinates to cytosine along complementary strands via three hydrogen bonds ($G \\equiv C$), making GC-rich regions thermodynamically robust."
+  },
+  {
+    "p_id": "bpsc_semi_v4_122",
+    "qe": "What is the physical pitch dimension of a single complete turn of a classic B-DNA double helix under standard structural configurations?",
+    "qh": "मानक संरचनात्मक विन्यासों के तहत क्लासिक B-DNA डबल हेलिक्स के एक एकल पूर्ण मोड़ का भौतिक पिच आयाम (pitch dimension) क्या है?",
+    "o": [
+      "0.34 nanometers absolute width",
+      "3.4 nanometers (3.4 नैनोमीटर)",
+      "34 nanometers extensive length",
+      "2.2 meters absolute macro profile"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> In a standard B-DNA model, one full helical turn (pitch) spans a spatial length of 3.4 nanometers ($34\\text{ \\AA}$) along the axis."
+  },
+  {
+    "p_id": "bpsc_semi_v4_123",
+    "qe": "What is the structural spacing interval calculated between consecutive base pairs along the vertical axis of a Scholar double helix?",
+    "qh": "मानक B-DNA डबल हेलिक्स के ऊर्ध्वाधर अक्ष के साथ लगातार क्षारक युग्मों के बीच की दूरी (structural spacing) क्या है?",
+    "o": [
+      "3.4 nanometers total length",
+      "0.34 nanometers (0.34 नैनोमीटर)",
+      "20 nanometers structural area width",
+      "4.6 nanometers calculated index"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Since a single helical turn has a pitch of 3.4 nm and accommodates exactly ten base pairs, the calculated spacing interval between consecutive base pairs is $3.4/10 = 0.34\\text{ nm}$ ($3.4\\text{ \\AA}$)."
+  },
+  {
+    "p_id": "bpsc_semi_v4_124",
+    "qe": "What core mathematical formula used to calculate the Molar Conductivity ($\\Lambda_m$) of an amino solution from specific values?",
+    "qh": "मानक प्रयोगशाला इकाइयों में समाधान की विशिष्ट चालकता ($\\kappa$) और मोलरिटी ($M$) से उसकी मोलर चालकता ($\\Lambda_m$) की गणना करने के लिए उपयोग किया जाने वाला मुख्य गणितीय सूत्र क्या है?",
+    "o": [
+      "$\\Lambda_m = \\frac{M \\cdot \\kappa}{1000}$",
+      "$\\Lambda_m = \\frac{1000 \\cdot \\kappa}{M}$ (मोलर चालकता सूत्र)",
+      "$\\Lambda_m = \\kappa \\cdot G^*$",
+      "$\\Lambda_m = \\frac{\\kappa \\cdot R}{M}$"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> When conductivity $\\kappa$ is measured in $\\text{S}\\cdot\\text{cm}^{-1}$ and concentration $M$ is in $\\text{mol/L}$, the molar conductivity is calculated using the formula: $\\Lambda_m = \\frac{1000 \\cdot \\kappa}{M}$."
+  },
+  {
+    "p_id": "bpsc_semi_v4_125",
+    "qe": "What unique conformational property provides long-term kinetic stability to colloidal dispersions, preventing single particles from colliding and precipitating?",
+    "qh": "कौन सा अनूठा संरचनात्मक पैरामीटर कोलाइडल फैलाव (colloidal dispersions) को दीर्घकालिक गतिज स्थिरता प्रदान करता है, एकल कणों को आपस में टकराने और अवक्षेपित होने से रोकता है?",
+    "o": [
+      "The random helix coiling of unbranched polyolefin branches",
+      "The presence of equal and similar electrical charges on all dispersed colloidal particles, causing mutual electrostatic repulsion (कणों पर समान विद्युत आवेश के कारण प्रतिकर्षण)",
+      "The complete conversion of all surface functional groups into volatile non-ionic ethers",
+      "The total presence of short-chain aromatic links that absorb moisture"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Colloidal particles carry a net electrical charge of the same sign. The resulting mutual electrostatic repulsion prevents the particles from aggregating into larger clusters when they collide, stabilizing the colloidal dispersion."
+  },
+  {
+    "p_id": "bpsc_semi_v4_126",
+    "qe": "What name is assigned to the physical status characterized by continuous erratic zig-zag path of colloidal particles inside a sol?",
+    "qh": "एक सॉल के भीतर कोलाइडल कणों के निरंतर अनियमित टेढ़े-मेढ़े मार्ग (continuous erratic zig-zag path) की विशेषता वाली भौतिक स्थिति को क्या नाम दिया गया है?",
+    "o": [
+      "Electrophoresis displacement lines",
+      "Brownian movement (ब्राउनियन गति)",
+      "Tyndall light diffraction layout",
+      "Coagulation network fixing zones"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Brownian motion is the continuous, erratic, zig-zag movement of colloidal particles suspended in a dispersion medium, driven by the constant kinetic bombardment from the liquid molecules."
+  },
+  {
+    "p_id": "bpsc_semi_v4_127",
+    "qe": "Which specific organic functional group connection links consecutive monosaccharide units together to build high molecular weight polysaccharides like starch and cellulose?",
+    "qh": "कौन सा विशिष्ट कार्बनिक कार्यात्मक समूह कनेक्शन लगातार मोनोसेकेराइड कोशिकाओं को एक साथ जोड़कर स्टार्च और सेलुलोज जैसे उच्च आणविक भार वाले पॉलीसेकेराइड का निर्माण करता है?",
+    "o": [
+      "Peptide linkage holding amino residues together",
+      "Glycosidic linkage (ग्लाइकोसिडिक बंध)",
+      "Phosphodiester bridging matrix channel crossing sugar blocks",
+      "Disulfide cross-link sulfur bridge system anchoring lines"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Monosaccharide rings couple via condensation reactions to build complex carbohydrates. The resulting carbon-oxygen-carbon covalent connection linking the rings is termed a glycosidic linkage."
+  },
+  {
+    "p_id": "bpsc_semi_v4_128",
+    "qe": "What is the correct mathematical expression used to calculate the degree of dissociation ($\\alpha$) of a weak electrolyte from its molar conductivity values?",
+    "qh": "अमीनो एसिड या इलेक्ट्रोलाइट मानों से कमजोर इलेक्ट्रोलाइट के विघटन की डिग्री ($\\alpha$) की गणना करने के लिए उपयोग किया जाने वाला सही गणितीय व्यंजक क्या है?",
+    "o": [
+      "$\\alpha = \\Lambda_m \\cdot \\Lambda_m^\\circ$",
+      "$\\alpha = \\frac{\\Lambda_m}{\\Lambda_m^\\circ}$ (विघटन की डिग्री सूत्र)",
+      "$\\alpha = \\frac{\\kappa \\cdot 1000}{M}$",
+      "$\\alpha = nF E^\\circ_{cell}$"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> The degree of dissociation ($\\alpha$) of a weak electrolyte at a specific concentration is calculated as the ratio of its molar conductivity ($\\Lambda_m$) to its limiting molar conductivity ($\\Lambda_m^\\circ$): $\\alpha = \\frac{\\Lambda_m}{\\Lambda_m^\\circ}$."
+  },
+  {
+    "p_id": "bpsc_semi_v4_129",
+    "qe": "What structural feature characterises the alpha-helix secondary structure of a protein, keeping the right-handed screw shape stable?",
+    "qh": "कौन सी संरचनात्मक विशेषता एक प्रोटीन की अल्फा-हेलिक्स माध्यमिक संरचना की विशेषता है, जो दाहिने हाथ की पेंच जैसी आकृति को स्थिर रखती है?",
+    "o": [
+      "Weak van der Waals forces acting uniformly across non-polar branches",
+      "Intramolecular hydrogen bonds formed between the N-H group of an amino acid residue and the carbonyl C=O group of an adjacent turn (N-H और C=O के बीच हाइड्रोजन बंध)",
+      "Reversible ester links that undergo rapid reduction with basic catalysts",
+      "Cationic quaternary nitrogen halide cross-linked coordination zones"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> The helical conformation of an $\\alpha$-helix is locked and stabilized by a dense network of regular hydrogen bonds. These form between the polar amide $N-H$ groups situated along one loop of the coiling backbone and the carbonyl $C=O$ functional groups of the adjacent turn."
+  },
+  {
+    "p_id": "bpsc_semi_v4_130",
+    "qe": "What direct mechanical change occurs to the native protein architecture inside an egg white when it undergoes thermal coagulation upon boiling?",
+    "qh": "जब एक अंडे की सफेदी को उबालने पर थर्मल जमावट (thermal coagulation) होती है, तो उसके भीतर की प्राकृतिक प्रोटीन संरचना में क्या सीधा यांत्रिक परिवर्तन होता है?",
+    "o": [
+      "The covalent peptide linkages are broken, returning the protein to single units",
+      "The native hydrogen bonds are disrupted, causing structural globules to unfold and helices to uncoil, resulting in a loss of biological activity (विकृतीकरण या डिनेचुरेशन)",
+      "The carbon backbone converts into a volatile open-chain gas cloud",
+      "The functional domains are reduced to non-ionic starch granules"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Boiling an egg white introduces thermal stress that disrupts non-covalent hydrogen bonds and structural constraints. This causes the folded globular proteins to uncoil and denature, cross-linking randomly into an insoluble white mass."
+  },
+  {
+    "p_id": "bpsc_semi_v4_131",
+    "qe": "What descriptive terminology defines the unique architectural feature of the genetic code known as 'degeneracy'?",
+    "qh": "'अपभ्रष्टता' (degeneracy) के रूप में जाने जाने वाले आनुवंशिक कोड की अनूठी संरचनात्मक विशेषता को क्या शब्दावली परिभाषित करती है?",
+    "o": [
+      "A single codon can simultaneously code for multiple different amino acids",
+      "A single amino acid can be specified and coded by more than one distinct codon (एक से अधिक कोडन द्वारा एक अमीनो अम्ल का कोडिंग)",
+      "The codons turn completely volatile and drop down to zero value metrics",
+      "The genetic dictionary changes properties dynamically based on solution pressure"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> The genetic code is redundant or degenerate. Because there are 61 amino-acid-specifying codons but only 20 standard amino acids, many amino acids are specified by more than one distinct codon (e.g., phenylalanine is targeted by both UUU and UUC)."
+  },
+  {
+    "p_id": "bpsc_semi_v4_132",
+    "qe": "Which specific initiation codon serves the dual role of initiating translation while coding for the amino acid methionine?",
+    "qh": "कौन सा विशिष्ट दीक्षा कोडन (initiation codon) अमीनो एसिड मेथिओनिन के लिए कोडिंग करते हुए अनुवाद शुरू करने की दोहरी भूमिका निभाता है?",
+    "o": [
+      "UUU phenylalanine code",
+      "AUG codon (AUG कोडन)",
+      "UAA ochre terminator factor",
+      "UGA opel stop marker segment"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> The triplet codon AUG plays a dual role in molecular genetics: it codes for the essential amino acid methionine and serves as the universal initiation marker that establishes the reading frame for ribosomes."
+  },
+  {
+    "p_id": "bpsc_semi_v4_133",
+    "qe": "Which functional pairing correctly lists the classic nonsense or 'stop' codons that terminate polypeptide chain synthesis?",
+    "qh": "कौन सा कार्यात्मक युग्म क्लासिक नॉनसेंस या 'स्टॉप' कोडन (stop codons) को सही ढंग से सूचीबद्ध करता है जो पॉलीपेप्टाइड श्रृंखला संश्लेषण को समाप्त करते हैं?",
+    "o": [
+      "AUG, GUG, and UUU initiation entries",
+      "UAA, UAG, and UGA (UAA, UAG एवं UGA स्टॉप कोडन)",
+      "GAA, GAG, and GUG alternative blocks",
+      "CCA, CCC, and CCG structural segments"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Three codons do not code for any amino acid residues. Named nonsense or stop codons, the triplet arrangements UAA (ochre), UAG (amber), and UGA (opal) signal release factors to terminate translation."
+  },
+  {
+    "p_id": "bpsc_semi_v4_134",
+    "qe": "What name is assigned to the regions of an area that are situated before the start codon and after the stop codon, which are essential for translation efficiency?",
+    "qh": "एक area के उन क्षेत्रों को क्या नाम दिया गया है जो स्टार्ट कोडन से पहले और स्टॉप कोडन के बाद स्थित होते हैं, जो अनुवाद दक्षता के लिए आवश्यक हैं?",
+    "o": [
+      "Exon coding domains",
+      "Untranslated Regions / UTRs (अननुवादित क्षेत्र / UTRs)",
+      "Cistronic overlapping fields",
+      "Polyamide structural link sets"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Messenger RNA molecules contain sequences flanking the coding frame: located before the start codon at the 5'-end and after the stop codon at the 3'-end, these non-translated segments are designated as Untranslated Regions (UTRs) and are vital for translation efficiency."
+  },
+  {
+    "p_id": "bpsc_semi_v4_135",
+    "qe": "What direct physical consequence characterizes a point mutation, differentiating it from an extensive frame-shift mutation?",
+    "qh": "कौन सा प्रत्यक्ष भौतिक परिणाम एक बिंदु उत्परिवर्तन (point mutation) की विशेषता है, जो इसे व्यापक फ्रेम-शिफ्ट उत्परिवर्तन से अलग करता है?",
+    "o": [
+      "The entire macromolecule cross-links into an insoluble solid net layer",
+      "A change involving the substitution of a single base pair inside the DNA sequence (एकल क्षारक युग्म में परिवर्तन)",
+      "The automatic loss of all nitrogen bases across the targeted cistron",
+      "The sudden volatilization of the sugar phosphate framework profile"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> A point mutation is a genetic change that involves the substitution of a single nucleotide base pair within a DNA sequence, as seen in sickle-cell anemia, distinct from multi-base insertions or deletions that disrupt the reading frame."
+  },
+  {
+    "p_id": "bpsc_semi_v4_136",
+    "qe": "What unique structural molecule acts as the physical adapter that carries specific amino acids to coordinate with matching codons along an mRNA template?",
+    "qh": "कौन सा अनूठा संरचनात्मक अणु भौतिक एडेप्टर (adapter) के रूप में कार्य करता है जो एक mRNA टेम्पलेट के साथ मिलान कोडन के साथ समन्वय करने के लिए विशिष्ट अमीनो एसिड ले जाता है?",
+    "o": [
+      "Ribosomal structural component matrix",
+      "Transfer RNA / tRNA / Adapter RNA (अंतरण आरएनए / tRNA)",
+      "Heterogeneous nuclear transcript block",
+      "Linear step-growth polyamide string segment"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Transfer RNA (tRNA) serves as an adapter molecule. It contains an anti-codon loop that reads and pairs with complementary codons along the mRNA template and an amino acid acceptor stem that carries the corresponding amino acid residue."
+  },
+  {
+    "p_id": "bpsc_semi_v4_137",
+    "qe": "What name is assigned to describe the two-dimensional folded layout model of a transfer RNA (tRNA) molecule?",
+    "qh": "ट्रांसफर आरएनए (tRNA) अणु के द्वि-आयामी मुड़े हुए लेआउट मॉडल का वर्णन करने के लिए क्या मैक्रो नाम दिया गया है?",
+    "o": [
+      "Inverted L-shape layout framework",
+      "Clover-leaf structure (क्लोवर-लीफ / तिपतिया घास की पत्ती जैसी संरचना)",
+      "Linear unbranched polysaccharide matrix sheet",
+      "Thermosetting cross-linked network model mesh"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> In two dimensions, the secondary folding structure of a tRNA molecule folds into loops and arms resembling a clover-leaf blueprint. In three dimensions, it folds into a compact inverted L-shape configuration."
+  },
+  {
+    "p_id": "bpsc_semi_v4_138",
+    "qe": "What name is assigned to the final multi-step processing sequence in biotechnology where cloned products are systematically isolated, separated, and purified?",
+    "qh": "जैव प्रौद्योगिकी में अंतिम बहु-चरणीय प्रसंस्करण अनुक्रम को क्या नाम दिया गया है जहां क्लोन किए गए उत्पादों को व्यवस्थित रूप से अलग, पृथक और परिष्कृत किया जाता है?",
+    "o": [
+      "Upstream radical propagation paths",
+      "Downstream processing (डाउनस्ट्रीम प्रोसेसिंग / अनुप्रवाह संसाधन)",
+      "Homolytic chain termination steps",
+      "Monomeric ring-opening extraction lines"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Downstream processing includes all operations performed on a harvested biological culture to isolate, separate, and purify the target product, ensuring it meets commercial purity and safety standards before marketing."
+  },
+  {
+    "p_id": "bpsc_semi_v4_139",
+    "qe": "Which specific organic compound functions as the initial monomer building block required to construct a synthetic rubber elastomer like Neoprene?",
+    "qh": "सिंथेटिक इलास्टोमर नियोप्रीन जैसे सिंथेटिक रबर का निर्माण करने के लिए आवश्यक मुख्य मोनोमर बिल्डिंग ब्लॉक के रूप में कौन सा विशिष्ट कार्बनिक अणु कार्य करता है?",
+    "o": [
+      "Isoprene (2-methylbuta-1,3-diene)",
+      "Chloroprene (2-chlorobuta-1,3-diene) (क्लोरोप्रीन मोनोमर)",
+      "Acrylonitrile (prop-2-enonitrile)",
+      "Styrene (phenylethylene) vinyl aromatic"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Neoprene is a durable synthetic rubber produced by the linear addition polymerization of chloroprene monomers, chemically designated as 2-chlorobuta-1,3-diene."
+  },
+  {
+    "p_id": "bpsc_semi_v4_140",
+    "qe": "What structural unit remains after a nucleotide monomer loses its terminal esterified phosphate group?",
+    "qh": "एक न्यूक्लियोटाइड मोनोमर जब अपने एस्टरीकृत फॉस्फेट समूह को खो देता है, तो कौन सी संरचनात्मक इकाई शेष बचती है?",
+    "o": [
+      "A volatile aliphatic open-chain non-polar gas matrix",
+      "Nucleoside (न्यूक्लिओसाइड)",
+      "An active free-radical addition polymer initiator",
+      "A cross-linked three-dimensional network panel"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> A nucleoside contains only a pentose sugar linked to a nitrogenous base. Adding a phosphate group to its 5'-position transforms it into a full nucleotide."
+  }
+]
