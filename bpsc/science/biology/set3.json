@@ -258,5 +258,201 @@
     ],
     "a": 1,
     "e": "<b>Explanation:</b> Maintaining expression plasmids requires significant metabolic energy from a host cell. Without an antibiotic in the medium to apply selective pressure, plasmid-free cells (which do not bear this metabolic burden) grow faster and outcompete the recombinants, causing the culture to lose the engineered plasmid over time."
+  },
+
+  {
+    "p_id": "bpsc_biotech_v4_161",
+    "qe": "Based on standard Polymerase Chain Reaction (PCR) workflows, what explicit operational steps do the labels A, B, and C designate in order?",
+    "qh": "मानक पॉलीमरेज़ चेन रिएक्शन (PCR) वर्कफ़्लो के आधार पर, ए, बी और सी लेबल क्रमशः किन विशिष्ट परिचालन चरणों को निर्दिष्ट करते हैं?",
+    "o": [
+      "Annealing, Denaturation, and Extension",
+      "Denaturation, Annealing, and Extension (डिनेचुरेशन, एनिलिंग एवं एक्सटेंशन)",
+      "Extension, Annealing, and Denaturation",
+      "Denaturation, Extension, and Annealing"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> A standard PCR cycle proceeds through three sequential steps: A represents Denaturation (separating double strands via heat), B represents Annealing (binding of synthetic primers to template strands), and C represents Extension (Taq Polymerase synthesizing the complementary strands)."
+  },
+  {
+    "p_id": "bpsc_biotech_v4_162",
+    "qe": "What happens to the relative orientation of double-stranded template DNA when it is subjected to the initial thermal denaturation step (92–94°C) during PCR?",
+    "qh": "PCR के दौरान प्रारंभिक थर्मल डिनेचुरेशन चरण (92-94°C) के अधीन होने पर डबल-स्ट्रैंडेड टेम्पलेट डीएनए के सापेक्ष अभिविन्यास (orientation) का क्या होता है?",
+    "o": [
+      "The phosphodiester linkages are completely cleaved into single bases",
+      "The hydrogen bonds between complementary bases are broken, causing the two strands to unwind and separate (हाइड्रोजन बंध टूटने से दोनों धागे अलग हो जाते हैं)",
+      "The strands convert spontaneously into an amorphous non-ionic polymer network",
+      "The segments develop covalent cross-links typical of a Bakelite lattice"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> The highest thermal threshold in PCR ($\sim 92-94^\circ\text{C}$) targets the hydrogen bonds holding base pairs together. This denaturation step forces the double-stranded structure to unwind and separate into two single strands, each serving as a template for subsequent amplification."
+  },
+  {
+    "p_id": "bpsc_biotech_v4_163",
+    "qe": "During the third procedural step of a PCR cycle, termed extension, how does the thermostable Taq Polymerase elongate the primed template strands?",
+    "qh": "PCR चक्र के तीसरे प्रक्रियात्मक चरण, जिसे एक्सटेंशन कहा जाता है, के दौरान थर्मल-स्थिर टैक पॉलीमरेज़ (Taq Polymerase) प्राइमेड टेम्पलेट धागे को कैसे बढ़ाता है?",
+    "o": [
+      "By adding whole amino acid sequences directly to the C-terminus boundary layer",
+      "By recognizing primers as start tags and sequentially adding free deoxynucleotides complementary to the template starting from the 3' end (प्राइमर के आगे पूरक न्यूक्लियोटाइड जोड़ना)",
+      "By converting the reacting system into a volatile uncharged gas configuration",
+      "By releasing high concentrations of basic sodium propanoate crystals"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> During extension, Taq Polymerase identifies the bound primers as starting markers. It incorporates free deoxynucleoside triphosphates (dNTPs) to elongate the primer strands in the 5' to 3' direction, using the template strands to direct base pairing."
+  },
+  {
+    "p_id": "bpsc_biotech_v4_164",
+    "qe": "In the standard map of the engineered cloning vector pBR322, which specific restriction endonuclease enzyme introduces a clean cut inside the structural domain of the tetracycline resistance gene ($tet^R$)?",
+    "qh": "इंजीनियर क्लोनिंग वेक्टर pBR322 के मानक मानचित्र में, कौन सा विशिष्ट प्रतिबंध एंडोन्यूक्लिएज एंजाइम टेट्रासाइक्लिन प्रतिरोध जीन ($tet^R$) के संरचनात्मक डोमेन के भीतर कट लगाता है?",
+    "o": [
+      "Pst I targeting the ampicillin zone",
+      "Bam HI (बाम एच1 प्रतिबंध एंजाइम)",
+      "Eco RI operating near the control indices",
+      "Pvu II operating inside the Rop region"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> On the pBR322 vector plasmid, the coding sequence for tetracycline resistance ($tet^R$) houses unique recognition sequences for specific restriction enzymes, notably Bam HI and Sal I. Disruption at these sites results in insertional inactivation of tetracycline resistance."
+  },
+  {
+    "p_id": "bpsc_biotech_v4_165",
+    "qe": "What functional role is assigned to the specific region designated as 'Rop' within the architectural blueprint of the cloning vector pBR322?",
+    "qh": "क्लोनिंग वेक्टर pBR322 के संरचनात्मक खाके के भीतर 'Rop' के रूप में नामित विशिष्ट क्षेत्र को क्या कार्यात्मक भूमिका सौंपी गई है?",
+    "o": [
+      "It serves as a selectable marker imparting resistance to kanamycin",
+      "It codes for specific proteins that are directly involved in the replication of the plasmid (प्लाज्मिड की प्रतिकृति से जुड़े प्रोटीन का कोडिंग)",
+      "It acts as a mechanical sieve during agarose gel separation runs",
+      "It coordinates exclusively with non-ionic laundry surfactant builders"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> The 'Rop' (Repressor of Primer) gene region on the pBR322 plasmid codes for small protein modules that are essential for regulating and maintaining the replication cycle of the plasmid vector."
+  },
+  {
+    "p_id": "bpsc_biotech_v4_166",
+    "qe": "Why has screening recombinants via insertional inactivation of a chromogenic substrate marker extensively superceded older screening methods that rely on antibiotic resistance traits?",
+    "qh": "क्रोमोजेनिक सबस्ट्रेट मार्कर के इंसर्शनल इनएक्टिवेशन (insertional inactivation) के माध्यम से पुनः संयोजकों की स्क्रीनिंग ने एंटीबायोटिक प्रतिरोध लक्षणों पर निर्भर पुरानी स्क्रीनिंग विधियों को बड़े पैमाने पर क्यों प्रतिस्थापित कर दिया है?",
+    "o": [
+      "Because antibiotic marker screening completely destroys the host bacterial cell walls",
+      "Because antibiotic screening requires laborious replica-plating onto two separate medium plates over multiple days, whereas chromogenic screening allows direct color differentiation on a single plate (एकल प्लेट पर रंग भेद द्वारा चयन आसान होना)",
+      "Because chromogenic compounds convert non-recombinants into volatile open-chain gases",
+      "Because antibiotic tracking relies entirely on toxic arsenic-arsenic double bonds"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Antibiotic screening requires a multi-step replica-plating workflow across separate plates to detect which colonies lost resistance due to insertional inactivation. Chromogenic screening simplifies this process by using a single plate containing a color-producing compound (like X-gal). Recombinant colonies appear white due to insertional inactivation, while non-recombinants turn blue."
+  },
+  {
+    "p_id": "bpsc_biotech_v4_167",
+    "qe": "Which physical observation identifies a non-recombinant bacterial colony when grown on a single culture medium plate containing an appropriate chromogenic substrate compound?",
+    "qh": "जब एक उपयुक्त क्रोमोजेनिक सबस्ट्रेट यौगिक वाले एकल संवर्धन माध्यम (culture medium) प्लेट पर उगाया जाता है, तो कौन सा भौतिक अवलोकन एक गैर-पुनः संयोजक जीवाणु कॉलोनी (non-recombinant bacterial colony) की पहचान करता है?",
+    "o": [
+      "The colonies show complete structural liquefaction into amorphous oils",
+      "The colonies develop a distinct colored appearance, such as turning blue (नीले रंग की कॉलोनियां गैर-पुनः संयोजक होती हैं)",
+      "The cells remain completely white or colorless under UV illumination",
+      "The colonies generate persistent foaming due to detergent actions"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Non-recombinant colonies retain an intact, active marker gene that codes for an enzyme (such as beta-galactosidase). This functional enzyme hydrolyzes the chromogenic substrate present in the agar medium, producing a distinct blue color."
+  },
+  {
+    "p_id": "bpsc_biotech_v4_168",
+    "qe": "Which specific category of agricultural crops is natively resistant to infection by the soil-inhabiting pathogenic bacterium *Agrobacterium tumefaciens*?",
+    "qh": "कृषि फसलों की कौन सी विशिष्ट श्रेणी मिट्टी में रहने वाले रोगजनक जीवाणु *Agrobacterium tumefaciens* द्वारा संक्रमण के प्रति स्वाभाविक रूप से प्रतिरोधी है?",
+    "o": [
+      "Broad-leaved dicot crops like tomatoes and soybeans",
+      "Cereal crops belonging to monocots (अनाज या एकबीजपत्री फसलें)",
+      "Conjugated fiber-producing cotton plants",
+      "Sunflower oilseed cultivars"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> *Agrobacterium tumefaciens* is a natural pathogen that infects a wide variety of dicotyledonous (broad-leaved) plants (such as tomato, soybean, and sunflower), but it is naturally unable to infect monocotyledonous cereal crops."
+  },
+  {
+    "p_id": "bpsc_biotech_v4_169",
+    "qe": "What specific macromolecular fragment is naturally transferred and integrated from the Ti-plasmid of *Agrobacterium tumefaciens* into the chromosomal DNA of a host plant cell?",
+    "qh/": "*Agrobacterium tumefaciens* के Ti-प्लाज्मिड से कौन सा विशिष्ट मैक्रोमोलेक्यूलर खंड स्वाभाविक रूप से स्थानांतरित होता है और मेजबान संयंत्र कोशिका के गुणसूत्र डीएनए (chromosomal DNA) में एकीकृत होता है?",
+    "o": [
+      "An unbranched non-ionic polyolefin segment",
+      "The T-DNA region (टी-डीएनए खंड)",
+      "A cross-linked phenolic resin sequence",
+      "A linear polyamide link identical to Nylon-6"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> When *Agrobacterium tumefaciens* infects a susceptible plant, it transfers a specific segment of its tumor-inducing (Ti) plasmid, known as the T-DNA (transfer DNA), directly into the plant cell nucleus, where it integrates into the host genome."
+  },
+  {
+    "p_id": "bpsc_biotech_v4_170",
+    "qe": "Why is the modified Ti-plasmid of *Agrobacterium tumefaciens* considered an exceptional cloning vector, despite its pathogenic origin?",
+    "qh": "इसके रोगजनक मूल (pathogenic origin) के बावजूद, *Agrobacterium tumefaciens* के संशोधित Ti-प्लाज्मिड को एक असाधारण क्लोनिंग वेक्टर क्यों माना जाता है?",
+    "o": [
+      "It has been engineered to completely dissolve plant cell walls using volatile ethers",
+      "It is disarmed by removing its tumor-inducing oncogenes while preserving its natural ability to deliver genes of interest into plant cells (हानीकारक जीन हटाकर विजातीय जीन पहुंचाना)",
+      "It converts the plant's internal carbohydrates into zero-calorie cyclic sulfimides",
+      "It contains permanent disulfide links that maximize its stability in hard water"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Molecular biologists 'disarm' the Ti-plasmid by deleting the oncogenes responsible for tumor (crown gall) formation. This modification makes the vector non-pathogenic, while retaining its natural ability to transfer passenger genes into plant genomes."
+  },
+  {
+    "p_id": "bpsc_biotech_v4_171",
+    "qe": "What geometric structural feature characterizes the design of a standard stirred-tank bioreactor to optimize fluid dynamics and mixing efficiency?",
+    "qh": "द्रव गतिशीलता (fluid dynamics) और सम्मिश्रण दक्षता को अनुकूलित करने के लिए एक मानक स्टिरर्ड-टैंक बायोरिएक्टर (stirred-tank bioreactor) के डिजाइन की क्या विशिष्ट संरचनात्मक विशेषता है?",
+    "o": [
+      "A strictly cubical layout with zero internal volume channels",
+      "A cylindrical vessel configuration often featuring a curved base to facilitate thorough mixing of contents (बेलनाकार आकृति एवं घुमावदार आधार)",
+      "An open open-ring cyclic system supported by loose glycosidic components",
+      "A highly branched cross-linked framework typical of a Bakelite lattice"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Commercial stirred-tank bioreactors are designed with a cylindrical body and a curved or rounded base. This geometry eliminates dead corners, helping optimize internal fluid dynamics and ensuring thorough mixing of the culture broth."
+  },
+  {
+    "p_id": "bpsc_biotech_v4_172",
+    "qe": "Which internal system component is integrated into an industrial bioreactor to manage and break down persistent foam generation caused by intense agitation cycles?",
+    "qh": "गहन आंदोलन चक्रों (intense agitation cycles) के कारण होने वाले लगातार झाग को प्रबंधित करने और तोड़ने के लिए एक औद्योगिक बायोरिएक्टर में कौन सा आंतरिक प्रणाली घटक एकीकृत है?",
+    "o": [
+      "A non-ionic polyoxyethylene glycol ester spray",
+      "A foam control system or foam breaker blades (झाग नियंत्रक / फोम ब्रेकर)",
+      "A phosphodiester coordinate bridge channel",
+      "A vulcanized sulfur cross-linking matrix grid"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Rapid stirring and gas sparging inside a bioreactor can generate a thick layer of foam that blocks gas exchange. To manage this, industrial vessels are equipped with a foam control system featuring specialized foam breaker blades to break down the foam."
+  },
+  {
+    "p_id": "bpsc_biotech_v4_173",
+    "qe": "What primary operational distinction separates a standard laboratory culture flask from an industrial bioreactor operating under a continuous culture setup?",
+    "qh": "एक मानक प्रयोगशाला संस्कृति फ्लास्क (laboratory culture flask) को एक निरंतर संवर्धन सेटअप (continuous culture setup) के तहत काम करने वाले औद्योगिक बायोरिएक्टर से कौन सा प्राथमिक परिचालन अंतर अलग करता है?",
+    "o": [
+      "Laboratory flasks use entirely basic chemical mineral buffers that resist temperature shifts",
+      "Laboratory flasks manage small volumes statically for research, whereas continuous culture bioreactors constantly replenish nutrients and drain waste to maintain active log-phase growth (बायोरिएक्टर बड़े पैमाने पर और सतत संवर्धन करता है)",
+      "Laboratory flasks rely on free-radical addition mechanism properties across solutions",
+      "There is no operational difference; both yield identical volumes of biomass per cycle"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Laboratory flasks are small, closed systems used to cultivate low volumes of biomass statically. In contrast, continuous culture bioreactors are large-scale industrial systems ($100-1000\\text{ L}$) that constantly add fresh media and drain away spent broth, maintaining the cells in their active, exponential log phase to maximize product yield."
+  },
+  {
+    "p_id": "bpsc_biotech_v4_174",
+    "qe": "What physical parameter dictates why specialized sampling ports are engineered into the structural framework of an industrial bioreactor?",
+    "qh": "कौन सा भौतिक पैरामीटर यह निर्देशित करता है कि क्यों औद्योगिक बायोरिएक्टर के संरचनात्मक ढांचे के भीतर विशेष नमूना बंदरगाहों (sampling ports) को इंजीनियर किया जाता है?",
+    "o": [
+      "To completely eliminate all carbon-carbon single bonds from the internal vessel matrix",
+      "To allow small volumes of the active culture broth to be withdrawn periodically for monitoring and analysis without stopping the process (समय-समय पर परीक्षण के लिए सैंपल निकालना)",
+      "To convert the inside carbohydrate molecules into volatile open-chain non-polar gases",
+      "To act as a tracking mechanism that clears out non-ionic detergent residues"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Sampling ports are built into bioreactor frameworks to allow operators to routinely extract small aliquots of the culture broth. This permits real-time monitoring of cell density, contamination, nutrient levels, and product accumulation without disrupting the main system."
+  },
+  {
+    "p_id": "bpsc_biotech_v4_175",
+    "qe": "Which specific inter-subunit chemical linkage defines the structure of a synthetic polyamide fiber like Nylon-6,6?",
+    "qh": "कौन सा विशिष्ट अंतर-इकाई रासायनिक लिंकेज नायलॉन-6,6 जैसे सिंथेटिक पॉलियामाइड फाइबर की संरचना को परिभाषित करता है?",
+    "o": [
+      "Glycosidic carbon-oxygen connection bridging rings",
+      "Amide linkage ($-CONH-$) structurally equivalent to a peptide bond (एमाइड या पेप्टाइड लिंक)",
+      "Phosphodiester bridging matrix channel crossing pentose sugar blocks",
+      "Disulfide cross-link sulfur bridge pulling hydrocarbon chains"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Synthetic polyamides (like the Nylons) are polymers held together by repeating amide functional groups ($-CONH-$), which are structurally identical to the peptide bonds that link amino acids together in proteins."
   }
 ]
