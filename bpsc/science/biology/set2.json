@@ -1,0 +1,262 @@
+[
+  {
+    "p_id": "bpsc_biotech_v4_41",
+    "qe": "What specific chemical compound is produced during the fermentation of kneaded flour by *Saccharomyces cerevisiae*, causing dough to rise?",
+    "qh": "*Saccharomyces cerevisiae* द्वारा गूंथे हुए आटे के किण्वन (fermentation) के दौरान कौन सा विशिष्ट रासायनिक यौगिक बनता है, जिससे आटा फूलता है?",
+    "o": [
+      "Oxygen gas ($O_2$)",
+      "Carbon dioxide gas ($CO_2$ - कार्बन डाइऑक्साइड)",
+      "Lactic acid matrix",
+      "Ammonia gas fumes"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Baker's yeast (*Saccharomyces cerevisiae*) ferments the sugars present in wheat flour, producing carbon dioxide ($CO_2$) gas. The trapped gas bubbles expand, causing the dough to puff up and become soft and spongy, which is ideal for baking bread, idli, and dosa."
+  },
+  {
+    "p_id": "bpsc_biotech_v4_42",
+    "qe": "Which specialized class of enzymes is responsible for sequentially removing single nucleotide units directly from the absolute ends of a DNA molecule?",
+    "qh": "एंजाइमों का कौन सा विशिष्ट वर्ग डीएनए अणु के बिल्कुल सिरों (ends) से सीधे एकल न्यूक्लियोटाइड इकाइयों को क्रमिक रूप से हटाने के लिए जिम्मेदार है?",
+    "o": [
+      "Endonucleases making internal cuts",
+      "Exonucleases (एक्सोन्यूक्लिएज)",
+      "DNA Ligases sealing gaps",
+      "DNA Polymerases driving replication"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Nucleases are categorized based on their site of action. Exonucleases cleave phosphodiester bonds and remove nucleotides directly from the terminal ends of a DNA molecule, whereas endonucleases introduce cuts at specific internal locations."
+  },
+  {
+    "p_id": "bpsc_biotech_v4_43",
+    "qe": "What terminology defines the horizontal gene transfer process where a viral vector, like a bacteriophage, transfers genetic material from one bacterium to another?",
+    "qh": "कौन सा नामकरण शब्द उस क्षैतिज जीन स्थानांतरण प्रक्रिया (horizontal gene transfer process) को परिभाषित करता है जहां एक वायरल वेक्टर, जैसे कि एक बैक्टीरियोफेज, एक जीवाणु से दूसरे जीवाणु में आनुवंशिक सामग्री स्थानांतरित करता है?",
+    "o": [
+      "Transduction (पारगमन / ट्रांसडक्शन)",
+      "Conjugation via cell-to-cell bridges",
+      "Transformation via direct naked uptake",
+      "Translation via ribosomal machinery"
+    ],
+    "a": 0,
+    "e": "<b>Explanation:</b> Transduction is the process where a viral vector (bacteriophage) accidentally packages bacterial DNA and injects it into a recipient bacterium. Conjugation requires direct cell-to-cell physical contact, and transformation involves the uptake of free, naked exogenous DNA from the surrounding environment."
+  },
+  {
+    "p_id": "bpsc_biotech_v4_44",
+    "qe": "Under what specific environmental constraint can a molecular biologist successfully visualize separated DNA bands after running an agarose gel electrophoresis gel?",
+    "qh": "एक आणविक जीवविज्ञानी किस विशिष्ट पर्यावरणीय बाधा के तहत एगारोज़ जेल इलेक्ट्रोफोरेसिस जेल चलाने के बाद अलग हुए डीएनए बैंड को सफलतापूर्वक देख सकता है?",
+    "o": [
+      "Exposing unstained clear gel slabs directly to standard room light boundaries",
+      "Staining the gel with ethidium bromide followed by direct exposure to ultraviolet (UV) light (इथिडियम ब्रोमाइड एवं UV प्रकाश द्वारा)",
+      "Mixing the solution with heavy volumes of volatile petroleum ethers",
+      "Treating the matrix exclusively with concentrated nitric acid options"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> DNA molecules are colorless and invisible to the naked eye. To visualize them, the gel is stained with an intercalating dye, ethidium bromide, and illuminated under ultraviolet (UV) light, which causes the bound dye to fluoresce as bright orange bands."
+  },
+  {
+    "p_id": "bpsc_biotech_v4_45",
+    "qe": "What biological function defines the evolutionary presence of the 'restriction modification system' natively found within host bacteria?",
+    "qh": "कौन सा जैविक कार्य मेजबान बैक्टीरिया के भीतर पाए जाने वाले 'प्रतिबंध संशोधन प्रणाली' (restriction modification system) की विकासवादी उपस्थिति को परिभाषित करता है?",
+    "o": [
+      "To accelerate the structural replication rate of invading viral vectors",
+      "To restrict and suppress the multiplication of invading bacteriophages by cleaving their foreign DNA at specific sites (बैक्टीरियोफेज के गुणन को रोकना)",
+      "To convert host structural proteins into volatile uncharged gaseous elements",
+      "To encourage the cross-linking of linear intermediate Novolac resins"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Bacteria employ a restriction-modification defense mechanism to survive viral attacks. The host's restriction endonucleases recognize and cleave the incoming foreign DNA of bacteriophages at specific locations, restricting its propagation and protecting the host."
+  },
+  {
+    "p_id": "bpsc_biotech_v4_46",
+    "qe": "Which specific components are mandatory to build a stable recombinant DNA molecule in a laboratory setting, making *E. coli* non-essential for the primary cell-free ligation step?",
+    "qh": "प्रयोगशाला सेटिंग में एक स्थिर पुनः संयोजक डीएनए अणु बनाने के लिए कौन से विशिष्ट घटक अनिवार्य हैं, जिससे प्राथमिक सेल-मुक्त लिगेशन चरण के लिए *E. coli* गैर-आवश्यक हो जाता है?",
+    "o": [
+      "Only the host bacterial genome and concentrated sodium hydroxide buffers",
+      "Target DNA fragments, cloning vectors, and DNA ligase enzymes (डीएनए टुकड़े, वेक्टर एवं डीएनए लाइगेज)",
+      "Free-radical peroxide catalysts and fuming nitric acid options",
+      "Saponified plant lipid mixtures and volatile petroleum ethers"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Constructing a recombinant DNA molecule *in vitro* requires the target DNA fragments containing the gene of interest, an appropriate cloning vector (like a plasmid), and a DNA ligase enzyme to stitch them together. While *E. coli* serves as a propagation host later, it is not part of the cell-free ligation chemistry."
+  },
+  {
+    "p_id": "bpsc_biotech_v4_47",
+    "qe": "What architectural layout constraint governs the separation speed of DNA fragments across an agarose gel matrix during standard electrophoresis processing?",
+    "qh": "मानक इलेक्ट्रोफोरेसिस प्रसंस्करण के दौरान एगारोज़ जेल मैट्रिक्स में डीएनए टुकड़ों की पृथक्करण गति (separation speed) को कौन सा संरचनात्मक लेआउट प्रतिबंध नियंत्रित करता है?",
+    "o": [
+      "The fragments segregate purely based on variations in their net positive charge configurations",
+      "The fragments separate strictly according to their size and length due to the sieving property of the gel matrix (टुकड़ों का आकार या लंबाई)",
+      "The pieces align themselves based on their structural dicarboxylic acid ratios",
+      "The entire inventory drops to zero absolute velocity under continuous vacuum fields"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Since all DNA fragments possess an identical uniform negative charge-to-size ratio due to their phosphate backbones, they all experience a uniform forward electrical pull. The agarose gel acts as a molecular sieve, separating the fragments strictly based on size and length; smaller fragments pass through the pores more easily and travel farther."
+  },
+  {
+    "p_id": "bpsc_biotech_v4_48",
+    "qe": "What specific operational attribute explains why the origin of replication (ori) is universally recognized as the most critical feature inside a cloning vector?",
+    "qh": "कौन सा विशिष्ट परिचालन गुण यह बताता है कि क्लोनिंग वेक्टर के भीतर प्रतिकृति के मूल (ori) को सार्वभौमिक रूप से सबसे महत्वपूर्ण विशेषता के रूप में क्यों मान्यता दी गई है?",
+    "o": [
+      "It converts the plasmid structure into an insoluble rigid thermosetting network",
+      "It initiates autonomous replication within host cells and directly regulates the copy number of the linked gene (प्रतिकृति शुरू करना एवं प्रतियों की संख्या नियंत्रित करना)",
+      "It functions as a non-competitive irreversible suicide enzyme inhibitor center",
+      "It is composed entirely of unbranched long-chain non-ionic surfactants"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> The origin of replication (ori) is the specific nucleotide sequence required to initiate DNA replication. When a foreign gene is ligated adjacent to this sequence, it replicates autonomously along with the vector. Furthermore, the choice of ori dictates and regulates the copy number of the cloned gene per cell."
+  },
+  {
+    "p_id": "bpsc_biotech_v4_49",
+    "qe": "During the quantitative isolation of intact DNA from a bacterial cell culture, which specialized enzyme is explicitly excluded to prevent breaking down the target nucleic acid?",
+    "qh": "जीवाणु कोशिका संवर्धन (bacterial cell culture) से बरकरार डीएनए के मात्रात्मक अलगाव के दौरान, लक्षित न्यूक्लिक एसिड को टूटने से बचाने के लिए किस विशेष एंजाइम को स्पष्ट रूप से बाहर रखा गया है?",
+    "o": [
+      "Lysozyme utilized to degrade the outer cell walls",
+      "Deoxyribonuclease (डीऑक्सीराइबोन्यूक्लिएज - DNase)",
+      "Ribonuclease utilized to digest interfering RNA molecules",
+      "Protease utilized to break down structural protein complexes"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Isolate intact genomic DNA requires removing cellular contaminants. Lysozyme breaks the cell wall, ribonuclease digests RNA, and proteases remove proteins. Deoxyribonuclease (DNase) must be strictly avoided because it hydrolyzes phosphodiester bonds, destroying the target DNA molecules."
+  },
+  {
+    "p_id": "bpsc_biotech_v4_50",
+    "qe": "Which structural component is essential to drive the efficient exponential replication and amplification of a target gene inside a Polymerase Chain Reaction (PCR) machine?",
+    "qh": "पॉलीमरेज़ चेन रिएक्शन (PCR) मशीन के भीतर एक लक्षित जीन के कुशल घातीय प्रतिकृति (exponential replication) और प्रवर्धन को चलाने के लिए कौन सा संरचनात्मक घटक आवश्यक है?",
+    "o": [
+      "The complete conversion of the medium into basic mineral buffers",
+      "The availability of a heat-stable, thermostable DNA polymerase like Taq Polymerase (थर्मोस्टेबल डीएनए पॉलीमरेज की उपलब्धता)",
+      "The total inclusion of flexible disulfide cross-links across domains",
+      "An automated mechanism that lowers temperatures down to absolute zero indicators"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> PCR involves cyclic thermal shifts, including heating up to 95°C for DNA denaturation. Standard polymerases would denature instantly under these conditions. The availability of a thermostable DNA polymerase (like Taq polymerase from *Thermus aquaticus*) allows the enzyme to remain active throughout the thermal cycles, enabling automated genetic amplification."
+  },
+  {
+    "p_id": "bpsc_biotech_v4_51",
+    "qe": "What formal descriptive name defines the role of antibiotic resistance genes when engineered into a plasmid vector framework?",
+    "qh": "प्लाज्मिड वेक्टर ढांचे में इंजीनियर होने पर एंटीबायोटिक प्रतिरोध जीन (antibiotic resistance genes) की भूमिका को कौन सा औपचारिक वर्णनात्मक नाम परिभाषित करता है?",
+    "o": [
+      "Anomeric intermediate factor",
+      "Selectable Marker (वरणयोग्य चिह्न / सेलेक्टेबल मार्कर)",
+      "Unbranched non-ionic surfactant lattice",
+      "Linear tactical unbranched oligomer chain"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Antibiotic resistance genes (e.g., $amp^R, tet^R$) serve as selectable markers in cloning vectors. They allow researchers to identify and select transformants while suppressing the growth of non-transformants that failed to take up the plasmid."
+  },
+  {
+    "p_id": "bpsc_biotech_v4_52",
+    "qe": "What physical parameter dictates why raw DNA molecules completely fail to cross across biological host cell membranes without specific chemical or thermal treatments?",
+    "qh": "कौन सा भौतिक पैरामीटर यह निर्देशित करता है कि विशिष्ट रासायनिक या थर्मल उपचार के बिना कच्चे डीएनए अणु जैविक मेजबान कोशिका झिल्ली को पार करने में पूरी तरह से विफल क्यों हो जाते हैं?",
+    "o": [
+      "DNA is an extremely volatile open-chain non-polar gas configuration",
+      "DNA is a highly hydrophilic macromolecule carrying a negative charge, which prevents it from diffusing across lipophilic cell membranes (डीएनए का हाइड्रोफिलिक होना)",
+      "DNA structures solidify into an infusible rigid matrix upon contact with lipids",
+      "DNA completely lacks oxygen atoms within its organic sugar segments"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Because of its polyanionic phosphate backbone, DNA is a highly hydrophilic molecule. Lipophilic biological membranes repel charged hydrophilic molecules, preventing bare DNA from crossing the lipid bilayer unless the host cell is made competent via chemical treatment (e.g., $CaCl_2$) or physical methods (e.g., heat shock)."
+  },
+  {
+    "p_id": "bpsc_biotech_v4_53",
+    "qe": "What specific mechanical change occurs within a competent bacterial cell wall during the execution of a classic thermal heat-shock treatment?",
+    "qh": "एक क्लासिक थर्मल हीट-शॉक उपचार (thermal heat-shock treatment) के निष्पादन के दौरान एक सक्षम जीवाणु कोशिका भित्ति के भीतर क्या विशिष्ट यांत्रिक परिवर्तन होता है?",
+    "o": [
+      "The cell wall splits into two identical segments via aromatic substitution",
+      "The rapid temperature shift creates transient pores across the compromised cell wall, enabling the uptake of plasmid DNA (भित्ति में अस्थायी छिद्रों का बनना)",
+      "The cell wall forms a permanent covalent bond with the approaching substrate",
+      "The cell wall becomes coated with unbranched non-ionic polyethylene glycol layers"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Incubating competent cells with recombinant DNA on ice, followed by a brief heat shock at 42°C and returning them to ice, creates transient pores in the bacterial cell wall. This allows the recombinant plasmid to enter the host cell."
+  },
+  {
+    "p_id": "bpsc_biotech_v4_54",
+    "qe": "What precise biochemical task does a DNA ligase execute to stabilize the junction between a cloning vector and an inserted foreign gene fragment?",
+    "qh": "एक क्लोनिंग वेक्टर और एक सम्मिलित विदेशी जीन टुकड़े के बीच जंक्शन को स्थिर करने के लिए डीएनए लाइगेज (DNA ligase) क्या सटीक जैव रासायनिक कार्य करता है?",
+    "o": [
+      "It lower the activation energy of neighboring starch polymers",
+      "It catalyzes the formation of a covalent phosphodiester bond between adjacent DNA fragments, sealing structural gaps (फॉस्फोडिएस्टर बंध का निर्माण)",
+      "It converts the reacting nucleic acids into a volatile uncharged gas phase",
+      "It establishes a permanent cross-linked network typical of Bakelite panels"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> DNA ligase acts as a molecular glue by sealing structural nicks in double-stranded DNA. It catalyzes the formation of a covalent phosphodiester bond between the 3'-hydroxyl group of one nucleotide fragment and the 5'-phosphate group of the adjacent fragment, stabilizing the recombinant DNA molecule."
+  },
+  {
+    "p_id": "bpsc_biotech_v4_55",
+    "qe": "Which microbial organism is a specialized plant pathogen that naturally transfers its T-DNA segment into host plant cells, rather than serving as a standard source for isolating restriction endonucleases?",
+    "qh": "कौन सा सूक्ष्मजीव एक विशिष्ट पादप रोगजनक (plant pathogen) है जो स्वाभाविक रूप से अपने T-DNA खंड को मेजबान संयंत्र कोशिकाओं में स्थानांतरित करता है, बजाय इसके कि प्रतिबंध एंडोन्यूक्लिएज को अलग करने के लिए एक मानक स्रोत के रूप में कार्य करे?",
+    "o": [
+      "Haemophilus influenzae bacterium",
+      "Escherichia coli RY13 strain",
+      "Agrobacterium tumefaciens (एग्रोबैक्टीरियम ट्यूमेफेशियंस)",
+      "Bacillus amyloliquefaciens strain"
+    ],
+    "a": 2,
+    "e": "<b>Explanation:</b> *Agrobacterium tumefaciens* is a soil bacterium and plant pathogen that uses its Ti plasmid to deliver a specific 'T-DNA' segment into dicot plant cells, transforming them into tumors. Reagents like *H. influenzae* (HindII) and *E. coli* (EcoRI) are common sources of restriction endonucleases."
+  },
+  {
+    "p_id": "bpsc_biotech_v4_56",
+    "qe": "During the quantitative thermal cycles of a Polymerase Chain Reaction (PCR), which specific step is driven and catalyzed by the Taq Polymerase enzyme?",
+    "qh": "पॉलीमरेज़ चेन रिएक्शन (PCR) के मात्रात्मक थर्मल चक्रों के दौरान, टैक पॉलीमरेज़ (Taq Polymerase) एंजाइम द्वारा कौन सा विशिष्ट चरण संचालित और उत्प्रेरित होता है?",
+    "o": [
+      "The high-temperature denaturation of the template double helix",
+      "The selective annealing of short primers to the 3' ends of single strands",
+      "The extension step where complementary nucleotides are added to elongate the primer strands (प्राइमर का विस्तार / एक्सटेंशन)",
+      "The structural conversion of the medium into basic mineral buffers"
+    ],
+    "a": 2,
+    "e": "<b>Explanation:</b> Taq polymerase drives the extension/polymerization step of PCR at an optimized temperature of 72°C. It synthesizes a complementary DNA strand by sequentially adding free deoxynucleoside triphosphates (dNTPs) to the 3' end of the annealed primers."
+  },
+  {
+    "p_id": "bpsc_biotech_v4_57",
+    "qe": "Why can expressing a cloned human gene inside a prokaryotic host like *E. coli* turn highly problematic if raw genomic DNA is utilized instead of complementary DNA (cDNA)?",
+    "qh": "यदि पूरक डीएनए (cDNA) के बजाय कच्चे जीनोमिक डीएनए का उपयोग किया जाता है, तो *E. coli* जैसे प्रोकैरियोटिक मेजबान के भीतर एक क्लोन किए गए मानव जीन को व्यक्त करना अत्यधिक समस्याग्रस्त क्यों हो सकता है?",
+    "o": [
+      "Prokaryotic cell walls dissolve completely when exposed to human amino acids",
+      "Human genes contain long non-coding intron sequences that bacteria cannot process because they lack RNA-splicing machinery (बैक्टीरिया में इंट्रॉन्स को हटाने की क्षमता का अभाव)",
+      "The bacterial ribosomes utilize an entirely different set of codons to compile proteins",
+      "The human protein undergoes immediate oxidation into open-chain saccharic acids"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Human structural genes are split genes containing coding exons interspersed with non-coding introns. Prokaryotes lack the complex spliceosome machinery required to splice out introns from primary mRNA transcripts. Therefore, using raw human genomic DNA in bacteria yields a non-functional protein product."
+  },
+  {
+    "p_id": "bpsc_biotech_v4_58",
+    "qe": "Which specific cultural configuration yields the highest biomass and maximum protein throughput when polymerizing recombinant host cells on an industrial scale?",
+    "qh": "औद्योगिक पैमाने पर पुनः संयोजक मेजबान कोशिकाओं (recombinant host cells) को संवर्धित करते समय कौन सा विशिष्ट सांस्कृतिक विन्यास उच्चतम बायोमास और अधिकतम प्रोटीन थ्रूपुट देता है?",
+    "o": [
+      "A closed laboratory flask of the maximum available volume capacity",
+      "A continuous culture system where used medium is systematically drained while fresh medium is added iteratively (निरंतर संवर्धन प्रणाली / continuous culture)",
+      "A stirred-tank bioreactor operating strictly without any inlets or outlets",
+      "An open-air open-ring cyclic system exposed to volatile ether vapors"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Continuous culture systems keep biological cells in their log/exponential growth phase by constantly supplying fresh nutrient medium from one side and draining spent fluid and waste from the other. This prevents stagnation, yielding a larger biomass and higher protein output than batch cultures."
+  },
+  {
+    "p_id": "bpsc_biotech_v4_59",
+    "qe": "Which pioneering molecular biologist was awarded the Nobel Prize for inventing the Polymerase Chain Reaction (PCR) method in 1985?",
+    "qh": "1985 में पॉलीमरेज़ चेन रिएक्शन (PCR) पद्धति का आविष्कार करने के लिए किस अग्रणी आणविक जीवविज्ञानी को नोबेल पुरस्कार से सम्मानित किया गया था?",
+    "o": [
+      "Herbert Boyer who generated the early recombinant plasmids",
+      "Kary Mullis (कैरी मुलिस - PCR के आविष्कारक)",
+      "Arthur Kornberg who isolated the early polymerases",
+      "Hargovind Khurana who mapped out the genetic code libraries"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Kary Mullis developed the Polymerase Chain Reaction (PCR) technique in 1985, which revolutionized molecular biology by enabling automated *in vitro* gene amplification. For this invention, he received the Nobel Prize in Chemistry in 1993."
+  },
+  {
+    "p_id": "bpsc_biotech_v4_60",
+    "qe": "Which statement is incorrect regarding the functional attributes and origins of restriction endonucleases?",
+    "qh": "प्रतिबंध एंडोन्यूक्लिएज (restriction endonucleases) के कार्यात्मक गुणों और उत्पत्ति के संबंध में कौन सा कथन गलत है?",
+    "o": [
+      "They scan the backbone to identify specific palindromic nucleotide sequences",
+      "They are natively isolated from viral vector capsids to enhance host integration (विषाणुओं से प्राप्त होने का कथन गलत है)",
+      "They introduce precise cuts across both strands of a DNA double helix",
+      "They generate consistent sets of sticky or blunt ends depending on their chemical structure"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Restriction endonucleases are isolated exclusively from prokaryotes (bacteria), where they function as a defense mechanism against viral invasions. They are never natively found in viral capsids. Therefore, stating that they are isolated from viruses is incorrect."
+  }
+]
