@@ -1,0 +1,522 @@
+[
+  {
+    "p_id": "bpsc_curr_v4_201",
+    "qe": "What specific terminology defines the current per unit area taken normally to the operational current direction?",
+    "qh": "धारा की दिशा के लंबवत प्रति इकाई क्षेत्रफल में प्रवाहित होने वाली विद्युत धारा को किस विशिष्ट नाम से जाना जाता है?",
+    "o": [
+      "Electromotive force capacity",
+      "Current Density ($\\vec{j} = \\frac{I}{A}$) (धारा घनत्व / Current Density)",
+      "Unbranched linear resistivity scale",
+      "Thermosetting surface expansion loop"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Current density ($\\vec{j}$) is a localized vector parameter defined as the net electrical current passing per unit cross-sectional area taken perpendicular to the flow trajectory ($$\\vec{j} = \\frac{I}{A}$$), scaling linearly with the electric field vector through Ohm's law ($$\\vec{j} = \\sigma \\vec{E}$$)."
+  },
+  {
+    "p_id": "bpsc_curr_v4_202",
+    "qe": "When two distinct batteries with unequal electromotive forces ($\\\\varepsilon_2 > \\\\\varepsilon_1$) and non-zero internal resistances are coupled together in a parallel alignment, what mathematical range bounds the equivalent electromotive force (\\\\$\\varepsilon_{\\\\text{eq}}$)?",
+    "qh": "जब असमान विद्युत वाहक बल वाली दो बैटरियों को ( जहाँ $\\varepsilon_2 > \\varepsilon_1$ है) समानांतर क्रम में जोड़ा जाता है, तो परिणामी समतुल्य विद्युत वाहक बल ($\\varepsilon_{\\text{eq}}$) का मान किसके बीच होगा?",
+    "o": [
+      "The value falls completely below the lower cell potential limit",
+      "The net equivalent potential lies strictly between the lower and higher primary values ($$\\varepsilon_1 < \\varepsilon_{\\text{eq}} < \\varepsilon_2$$) (दोनों मूल मानों के बीच होना)",
+      "The equivalent value scales exactly as the absolute unweighted algebraic sum",
+      "The parameter becomes completely independent of the internal resistance variables"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> The equivalent electromotive force of a parallel combination of two cells is derived as $$\\varepsilon_{\\text{eq}} = \\frac{\\varepsilon_1 r_2 + \\varepsilon_2 r_1}{r_1 + r_2}$$. This algebraic structure functions as a weighted average, meaning the resulting equivalent value must strictly lie within the bounds of the individual values: $$\\varepsilon_1 < \\varepsilon_{\\text{eq}} < \\varepsilon_2$$."
+  },
+  {
+    "p_id": "bpsc_curr_v4_203",
+    "qe": "How can an experimenter minimize the margin of percentage error when evaluating an unknown resistor $R$ across a standard meter bridge wire setup?",
+    "qh": "एक मीटर ब्रिज (meter bridge) सेटअप में अज्ञात प्रतिरोध $R$ को मापते समय प्रतिशत त्रुटि को न्यूनतम करने के लिए संतुलन बिंदु को कहाँ होना चाहिए?",
+    "o": [
+      "By adjusting the standard reference resistor so the null point settles near either extreme edge coordinate",
+      "By selecting standard resistance values that force the null point to settle near the exact center of the bridge wire layout (शून्य बिंदु को तार के मध्य क्षेत्र के पास लाना)",
+      "By converting the bridging terminals into non-conducting urea panels",
+      "By using high frequency alternating potentials to oscillate the null point coordinates"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> The measurement error across a slide-wire meter bridge is minimized when the balanced null point settles near the exact middle of the wire length ($$l_1 \\sim 50\\text{ cm}$$). This central alignment balances the sensitivity of the Wheatstone configuration symmetrically, minimizing the impact of reading errors and end-resistance factors."
+  },
+  {
+    "p_id": "bpsc_curr_v4_204",
+    "qe": "What physical parameter constraint must be satisfied regarding the potential drop along a potentiometer wire to ensure an unknown electromotive force can be successfully evaluated?",
+    "qh": "एक विभवमापी (potentiometer) तार पर कुल विभव पतन (potential drop) के संबंध में किस भौतिक मानदंड को पूरा किया जाना चाहिए ताकि अज्ञात विद्युत वाहक बल को सफलतापूर्वक मापा जा सके?",
+    "o": [
+      "The potential drop must be strictly lower than the primary cell voltage limits under test",
+      "The total potential drop established along the continuous wire length must strictly exceed the electromotive force of the primary cell under test (तार पर विभव पतन अज्ञात EMF से अधिक होना चाहिए)",
+      "The drop must maintain an absolute localized value of exactly zero volts",
+      "The system can achieve dynamic balancing independent of the driving source magnitude"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> A potentiometer can balance and measure an unknown electromotive force only if the total potential difference across its calibrated wire length is greater than the voltage under test. If the wire's potential drop is smaller, no null point can be recorded along the length of the slide wire."
+  },
+  {
+    "p_id": "bpsc_curr_v4_05",
+    "qe": "How does the electrical resistance ($R$) of a metallic conductor change relative to its length ($l$) and cross-sectional area ($A$) under constant material resistivity?",
+    "qh": "नियत सामग्री प्रतिरोधकता के तहत, किसी धात्विक चालक का विद्युत प्रतिरोध ($R$) उसकी लंबाई ($l$) और अनुप्रस्थ काट के क्षेत्रफल ($A$) से किस प्रकार संबंधित होता है?",
+    "o": [
+      "Resistance tracks directly with area and inversely with length",
+      "Resistance is directly proportional to length and inversely proportional to the cross-sectional area ($$R = \\rho \\frac{l}{A}$$) (लंबाई के समानुपाती और क्षेत्रफल के व्युत्क्रमानुपाती होना)",
+      "Resistance scales dynamically as a function of the third root of the mass parameters",
+      "The value remains strictly constant independent of any geometric layout modifications"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> The electrical resistance of any uniform conductor depends on its geometric dimensions according to the formula $$R = \\rho \\frac{l}{A}$$. Therefore, increasing the conduction path length ($l$) or narrowing the cross-sectional area ($A$) directly scales up the internal electrical resistance."
+  },
+  {
+    "p_id": "bpsc_curr_v4_206",
+    "qe": "Which physical motion property of mobile electrons within a conductor determines the macroscopic electrical current magnitude under an applied field?",
+    "qh": "अनुप्रयुक्त क्षेत्र के तहत, एक चालक के भीतर गतिशील इलेक्ट्रॉनों का कौन सा विशिष्ट गति गुण (motion property) मैक्रोस्कोपिक विद्युत धारा के परिमाण को निर्धारित करता है?",
+    "o": [
+      "The directional drift velocity vector ($v_d$) super-imposed by the electric field (विद्युत क्षेत्र द्वारा जनित अपवाह वेग)",
+      "The random isotropic thermal velocity vector fields alone",
+      "The automated step-growth velocity of the biological amide boundaries",
+      "Neither drift nor thermal speeds can alter charge carrier displacement lines"
+    ],
+    "a": 0,
+    "e": "<b>Explanation:</b> Although the thermal velocity of electrons is large ($$\\sim 10^5\\text{ m/s}$$), its random isotropic nature sums to zero net charge transport across any cross-section. The net current is driven strictly by the field-induced drift velocity ($$v_d$$) through the equation $$I = n e A v_d$$."
+  },
+  {
+    "p_id": "bpsc_curr_v4_207",
+    "qe": "Which fundamental conservation milestone forms the physical basis directly reflected through Kirchhoff's Junction Rule?",
+    "qh": "किरचॉफ का जंक्शन नियम (Kirchhoff's Junction Rule) किस मौलिक संरक्षण सिद्धांत पर सीधे आधारित है?",
+    "o": [
+      "The absolute conservation of system linear momentum vectors",
+      "The baseline law of conservation of electric charge (विद्युत आवेश के संरक्षण का नियम)",
+      "The strict conservation of mechanical kinetic energy across nodes",
+      "The complete prevention of any ionizable potential drops across parallel branches"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Kirchhoff's Junction Rule states that the net current entering any electrical node must exactly equal the net current exiting that node ($$\\sum I = 0$$). This rule is an exact reflection of the law of conservation of electric charge, meaning charge cannot accumulate or vanish at a junction."
+  },
+  {
+    "p_id": "bpsc_curr_v4_208",
+    "qe": "How do the charge carrier density ($n$) and collision relaxation time ($\\tau$) control the net resistance behavior of semiconductors as temperature rises?",
+    "qh": "तापमान बढ़ने पर अर्धचालकों (semiconductors) का शुद्ध प्रतिरोध व्यवहार आवेश वाहक घनत्व ($n$) और विश्रांति काल ($\\tau$) द्वारा कैसे नियंत्रित होता है?",
+    "o": [
+      "The number density remains completely frozen, while relaxation time rises to infinity",
+      "The rapid exponential generation of free charge carriers ($n$) heavily dominates over the minor decrease in relaxation time, causing resistance to drop sharply (मुक्त आवेश वाहकों की संख्या में घातीय वृद्धि होना)",
+      "Both parameters collapse down simultaneously to match static unbranched polyolefin states",
+      "The atomic mass of the carrier groups scales dynamically as a function of temperature shifts"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> In semiconductors, thermal energy breaks covalent bonds, causing the free charge carrier concentration ($n$) to grow exponentially with temperature. This massive increase easily overcomes the minor decrease in relaxation time ($\\tau$) caused by thermal lattice vibrations, leading to a net drop in resistivity."
+  },
+  {
+    "p_id": "bpsc_curr_v4_209",
+    "qe": "What physical limitation is encountered if an operator utilizes exceptionally large resistance values across the ratio arms of a Wheatstone bridge?",
+    "qh": "यदि कोई ऑपरेटर व्हीटस्टोन ब्रिज की अनुपाती भुजाओं में अत्यधिक उच्च प्रतिरोध मानों का उपयोग करता है, तो कौन सी भौतिक सीमा उत्पन्न होती है?",
+    "o": [
+      "The entire bridge circuit transforms into a volatile open-chain non-polar gas layer",
+      "The currents traversing the bridge arms become extremely weak, drastically reducing detector sensitivity and making null point localization difficult (धारा का अत्यंत क्षीण होना जिससे शून्य बिंदु खोजना कठिन हो जाता है)",
+      "The system triggers the automated common-ion precipitation of all cell sugar backbones",
+      "The balancing nodes completely lose their capacity to monitor unknown resistors"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Using very high resistances in the arms of a Wheatstone bridge restricts the current through the network to very low levels. This weak current severely limits the galvanometer's deflection response, making it difficult for the experimenter to identify the exact null position accurately."
+  },
+  {
+    "p_id": "bpsc_curr_v4_210",
+    "qe": "Why does the motion of a conduction electron moving through a wire junction not strictly conserve mechanical momentum as a vector?",
+    "qh": "एक तार जंक्शन से गुजरने वाले चालन इलेक्ट्रॉन की गति यांत्रिक संवेग (mechanical momentum) को पूरी तरह से क्यों संरक्षित नहीं रखती है?",
+    "o": [
+      "The electron undergoes instant cross-linking into an insoluble solid resin mass",
+      "Charges accumulate on the wire surfaces at the junction, creating localized additional electric fields that reorient the electron's velocity vector (जंक्शन पर जमा सतही आवेशों द्वारा अतिरिक्त विद्युत क्षेत्रों का निर्माण होना)",
+      "The charge carrier transforms into a volatile gas component within the loop channels",
+      "The interface forces the internal thermodynamic entropy of the current to resolve to zero"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> As electrons pass through a bend or junction in a wire, they maintain a constant drift speed governed by the localized field. However, to change direction along the wire's geometry, they respond to supplementary electric fields generated by tiny surface charges accumulated at the junction, altering the momentum vector."
+  },
+  {
+    "p_id": "bpsc_curr_v4_211",
+    "qe": "Why does the electron relaxation time ($\\tau$) within a metallic lattice change significantly with temperature while remaining nearly independent of an applied external electric field?",
+    "qh": "धात्विक जाली के भीतर इलेक्ट्रॉन विश्रांति काल ($\\tau$) तापमान के साथ महत्वपूर्ण रूप से क्यों बदलता है, जबकि अनुप्रयुक्त बाहरी विद्युत क्षेत्र से लगभग स्वतंत्र रहता है?",
+    "o": [
+      "Because external fields finish the step-growth condensation of amino residues instantly",
+      "The drift velocity added by standard fields ($\\sim 1\\text{ mm/s}$) is negligible compared to the massive thermal velocity modifications ($\\sim 10^2\\text{ m/s}$) driven by temperature variations (अनुप्रयुक्त क्षेत्र द्वारा जनित अपवाह वेग का तापीय वेग की तुलना में नगण्य होना)",
+      "Because applied fields generate a permanent three-dimensional cross-linked network framework",
+      "Because the applied electric field drops the internal electrical permittivity parameters down to zero"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Typical laboratory electric fields introduce a small directed drift velocity component of the order of millimeters per second. In contrast, thermal energy adjustments violently alter the background chaotic root-mean-square thermal velocity of electrons and lattice ions by hundreds of meters per second, directly dominating collision frequencies."
+  },
+  {
+    "p_id": "bpsc_curr_v4_212",
+    "qe": "What clear advantage does the null-point balancing method provide inside a Wheatstone bridge measurement routine?",
+    "qh": "व्हीटस्टोन ब्रिज मापन पद्धति में शून्य-बिंदु संतुलन विधि (null-point method) का क्या मुख्य लाभ है?",
+    "o": [
+      "It transforms the entire wiring layout into an unbranched linear alkane line",
+      "The measurement is completely independent of the detector branch's internal resistance because no current flows through it at balance (संतुलन बिंदु पर डिटेक्टर शाखा के आंतरिक प्रतिरोध और धारा का प्रभाव न होना)",
+      "It completely eliminates the necessity for a load resistance component across the network",
+      "It forces the system's net thermal expansion parameters to drop down to absolute zero"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> The landmark benefit of a null-point balancing workflow is that when the bridge achieves perfect equilibrium, zero current passes through the detector branch. Consequently, the internal resistance of the galvanometer does not affect the balance point calculation."
+  },
+  {
+    "p_id": "bpsc_curr_v4_213",
+    "qe": "Why are thick, heavy metallic copper strips chosen to interconnect individual resistance wires within a potentiometer layout?",
+    "qh": "एक विभवमापी (potentiometer) लेआउट के भीतर अलग-अलग प्रतिरोध तारों को आपस में जोड़ने के लिए भारी धात्विक तांबे की पट्टियों (thick copper strips) का उपयोग क्यों किया जाता है?",
+    "o": [
+      "To maximize the free-radical addition polymerization rate across boundaries",
+      "They exhibit negligible resistance due to their large cross-sectional area, ensuring that potential drops across junctions are near zero and can be ignored (बड़ा अनुप्रस्थ काट क्षेत्रफल और नगण्य प्रतिरोध होना)",
+      "To insulate passing current parameters completely from local gravity lines",
+      "To trigger the automatic common-ion precipitation of carbohydrate rings along slots"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Heavy copper strips feature an exceptionally large cross-sectional area, which reduces their electrical resistance to near zero ($R = \rho \frac{l}{A}$). This configuration ensures that no significant potential drop occurs outside the calibrated resistance wire, allowing the user to measure balancing lengths without correction factors."
+  },
+  {
+    "p_id": "bpsc_curr_v4_214",
+    "qe": "Which combined physical traits make specific alloys like Manganin or Constantan ideal for manufacturing standard laboratory resistance coils?",
+    "qh": "मानक प्रयोगशाला प्रतिरोध कॉइल (standard resistance coils) के निर्माण के लिए मैंगनीन या कॉन्सटेंटन जैसी मिश्र धातुओं को क्यों चुना जाता है?",
+    "o": [
+      "An exceptionally low resistivity value combined with highly volatile structural links",
+      "High electrical resistivity coupled with an exceptionally low temperature coefficient of resistance (उच्च विद्युत प्रतिरोधकता और नगण्य प्रतिरोध तापमान गुणांक)",
+      "A complete absence of any metallic components across its coordinate layers",
+      "A molecular layout configured to harden irreversibly upon mild cooling phases"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Standard resistance coils require materials that maintain a constant resistance despite temperature fluctuations. Alloys like Manganin or Constantan are ideal because they combine a high baseline resistivity with an exceptionally low temperature coefficient of resistance."
+  },
+  {
+    "p_id": "bpsc_curr_v4_215",
+    "qe": "To minimize the power wasted ($P = I^2 R_c$) due to line resistance ($R_c$) along electrical transmission cables over long distances, how should electrical power be transmitted?",
+    "qh": "विद्युत पारेषण केबलों (transmission cables) में लाइन प्रतिरोध ($R_c$) के कारण होने वाले बिजली के नुकसान ($P = I^2 R_c$) को न्यूनतम करने के लिए बिजली का संचरण कैसे किया जाना चाहिए?",
+    "o": [
+      "At low voltage and high current parameters to speed up transport loops",
+      "At exceptionally high voltage levels and correspondingly low current values (उच्च वोल्टेज और अत्यंत निम्न धारा पर बिजली का पारेषण)",
+      "By converting the transmission lines into stable non-polar polyolefin networks",
+      "By establishing a permanent absolute vacuum environment surrounding the core wires"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Power dissipation along transmission cables scales with the square of the current ($P_{\\text{loss}} = I^2 R_c$). By stepping up the voltage to exceptionally high levels at the source, the current required to transmit a given power ($P = VI$) is minimized, reducing Joule heating losses."
+  },
+  {
+    "p_id": "bpsc_curr_v4_216",
+    "qe": "If the series regulatory resistance $R$ connected in the primary circuit of a potentiometer is systematically increased, what direction shift will the balancing null point exhibit for a given constant test cell?",
+    "qh": "यदि एक विभवमापी (potentiometer) के प्राथमिक सर्किट में जुड़े नियामक प्रतिरोध $R$ को बढ़ाया जाता है, तो संतुलन शून्य बिंदु किस दिशा में स्थानांतरित होगा?",
+    "o": [
+      "It collapses back down to zero millimeter parameters instantly",
+      "It shifts downstream towards the higher coordinate terminal boundary $B$ because the potential gradient along the wire has decreased (टर्मिनल $B$ की ओर स्थानांतरित होना क्योंकि विभव प्रवणता घट जाती है)",
+      "It remains locked in an absolute stationary configuration independent of resistance",
+      "It undergoes rapid unaligned cyclic fluctuations tracking ambient humidity"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Increasing the series resistance $R$ reduces the current flowing through the main potentiometer circuit. This lowers the potential difference across the slide-wire, decreasing the potential gradient ($k$). Since the balancing condition requires $\\varepsilon = k l$, a smaller gradient forces the balancing length ($l$) to expand, shifting the null point towards the far end $B$."
+  },
+  {
+    "p_id": "bpsc_curr_v4_217",
+    "qe": "While testing a cell $\\varepsilon_1$ on a potentiometer, a student reports a persistent one-sided galvanometer deflection that decreases as the jockey moves from $A$ to $B$. What is the cause of this behavior?",
+    "qh": "विभवमापी पर एक सेल $\\varepsilon_1$ का परीक्षण करते समय, एक छात्र को लगातार एकतरफा विक्षेप दिखाई देता है जो जॉकी को $A$ से $B$ की ओर ले जाने पर घटता है। इस व्यवहार का कारण क्या है?",
+    "o": [
+      "The cell $\\varepsilon_1$ is completely disconnected from the parallel branch wires",
+      "The positive terminal of $\\varepsilon_1$ is correctly connected at the high potential node $A$, but its magnitude exceeds the total potential drop across the main wire length (\\varepsilon_1 का मान मुख्य तार के कुल विभव पतन से अधिक होना)",
+      "The cell $\\varepsilon_1$ contains an unbranched non-ionic surfactant fluid structure",
+      "The main driving battery has reversed its internal polarity vectors entirely"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> A one-sided deflection that decreases towards the end of the wire indicates that the potential drop along the potentiometer wire is insufficient to balance the test cell. While the polarity is correct (positive terminal tied to high-potential end $A$), the test cell's electromotive force exceeds the total voltage drop across the wire length, preventing a null condition."
+  },
+  {
+    "p_id": "bpsc_curr_v4_218",
+    "qe": "If a student observes that the one-sided galvanometer deflection increases systematically as the jockey is moved away from the high-potential end $A$ toward $B$, what structural error was made?",
+    "qh": "यदि कोई छात्र देखता है कि जॉकी को उच्च विभव वाले सिरे $A$ से $B$ की ओर ले जाने पर एकतरफा विक्षेप लगातार बढ़ता जाता है, तो सर्किट में कौन सी संरचनात्मक त्रुटि हुई है?",
+    "o": [
+      "The load resistance component has cross-linked into a rigid phenolic mesh",
+      "The negative terminal of the test cell $\\varepsilon_1$ was mistakenly connected to the high-potential coordinate node $A$ (टेस्ट सेल $\\varepsilon_1$ का ऋणात्मक टर्मिनल गलती से उच्च विभव वाले सिरे $A$ से जुड़ जाना)",
+      "The potentiometer wire completely lacks ionizable phosphate boundaries",
+      "The primary loop current has dropped to an absolute zero state parameter"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> If the deflection increases as the jockey moves along the wire from $A$ to $B$, the potentials of the primary and auxiliary circuits are adding up rather than opposing each other. This indicates that the negative terminal of the test cell was incorrectly tied to the high-potential starting point $A$."
+  },
+  {
+    "p_id": "bpsc_curr_v4_219",
+    "qe": "Which specific organic functional group linkage defines the backbone architecture of biological proteins and synthetic nylons alike?",
+    "qh": "कौन सा विशिष्ट कूट (linkage) जैविक प्रोटीन और सिंथेटिक नायलॉन दोनों की संरचना की रीढ़ को परिभाषित करता है?",
+    "o": [
+      "Ester linkage bridging components together",
+      "Peptide linkage / Amide bond (पेप्टाइड बंध / एमाइड लिंक)",
+      "Glycosidic linkage derived from cyclic sugar rings",
+      "Phosphodiester linkage supporting nucleic acids"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Both biological proteins and synthetic nylons are polyamides held together by repeating amide linkages ($-CONH-$). In proteins, these linkages are specifically referred to as peptide bonds."
+  },
+  {
+    "p_id": "bpsc_curr_v4_220",
+    "qe": "What precise sequence of structural parts represents the generic composition of a single nucleotide building block inside nucleic acid backbones?",
+    "qh": "न्यूक्लिक एसिड बैकबोन के भीतर एकल न्यूक्लियोटाइड बिल्डिंग ब्लॉक की सामान्य संरचना का प्रतिनिधित्व करने वाला सटीक अनुक्रम क्या है?",
+    "o": [
+      "A long lipophilic carbon chain bound tightly to pure sulfur matrices",
+      "A pentose sugar molecule covalently linked to a heterocyclic base and an esterified phosphate group (शर्करा-बेस-फॉस्फेट असेंबली)",
+      "An aromatic polyol layer mixed with fuming formaldehyde syrup segments",
+      "A glycine residue bound via alternating amide and dicarboxylic bands"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> A single nucleotide is composed of three covalently bound elements: a five-carbon pentose sugar (ribose or deoxyribose), a nitrogenous base attached to the C1' position of the sugar, and a phosphate group esterified to its C5' position."
+  },
+  {
+    "p_id": "bpsc_curr_v4_221",
+    "qe": "What thermodynamically spontaneous criteria must be met regarding the values of cell potential ($E_{\\text{cell}}$) and Gibbs free energy change ($\\Delta G$)?",
+    "qh": "स्वतः स्फूर्त प्रतिक्रिया के लिए सेल विभव ($E_{\\text{cell}}$) और गिब्स मुक्त ऊर्जा परिवर्तन ($\\Delta G$) के मानों के संबंध में क्या मानदंड पूरे होने चाहिए?",
+    "o": [
+      "$E_{\\text{cell}}$ must be negative, and $\\Delta G$ must be positive",
+      "$E_{\\text{cell}}$ must be positive, and $\\Delta G$ must be negative (E_cell धनात्मक तथा \\Delta G ऋणात्मक)",
+      "Both must maintain identical positive charge states simultaneously",
+      "Both must drop to zero absolute neutral indicators"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Spontaneous electrochemical or redox processes require a negative Gibbs Free Energy change ($\\Delta G < 0$) and a matching positive cell voltage potential ($E_{\\text{cell}} > 0$)."
+  },
+  {
+    "p_id": "bpsc_curr_v4_222",
+    "qe": "What name is assigned to the final multi-step processing sequence in biotechnology where cloned products are systematically isolated, separated, and purified?",
+    "qh": "जैव प्रौद्योगिकी में अंतिम बहु-चरणीय प्रसंस्करण अनुक्रम को क्या नाम दिया गया है जहां क्लोन किए गए उत्पादों को व्यवस्थित रूप से अलग, पृथक और परिष्कृत किया जाता है?",
+    "o": [
+      "Upstream radical propagation paths",
+      "Downstream processing (डाउनस्ट्रीम प्रोसेसिंग / अनुप्रवाह संसाधन)",
+      "Homolytic chain termination steps",
+      "Monomeric ring-opening extraction lines"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Downstream processing includes all operations performed on a harvested biological culture to isolate, separate, and purify the target product, ensuring it meets commercial purity and safety standards before marketing."
+  },
+  {
+    "p_id": "bpsc_curr_v4_223",
+    "qe": "Which specific organic compound functions as the initial monomer building block required to construct the synthetic rubber elastomer known as Neoprene?",
+    "qh": "सिंथेटिक इलास्टोमर नियोप्रीन (Neoprene) जैसे सिंथेटिक रबर का निर्माण करने के लिए आवश्यक मुख्य मोनोमर बिल्डिंग ब्लॉक के रूप में कौन सा विशिष्ट कार्बनिक अणु कार्य करता है?",
+    "o": [
+      "Isoprene (2-methylbuta-1,3-diene)",
+      "Chloroprene (2-chlorobuta-1,3-diene) (क्लोरोप्रीन मोनोमर)",
+      "Acrylonitrile (prop-2-enonitrile)",
+      "Styrene (phenylethylene) vinyl aromatic"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Neoprene is a durable synthetic rubber produced by the linear addition polymerization of chloroprene monomers, chemically designated as 2-chlorobuta-1,3-diene."
+  },
+  {
+    "p_id": "bpsc_curr_v4_224",
+    "qe": "What unique conformational property provides long-term kinetic stability to colloidal dispersions, preventing single particles from colliding and precipitating?",
+    "qh": "कौन सा अनूठा संरचनात्मक पैरामीटर कोलाइडल फैलाव (colloidal dispersions) को दीर्घकालिक गतिज स्थिरता प्रदान करता है, एकल कणों को आपस में टकराने और अवक्षेपित होने से रोकता है?",
+    "o": [
+      "The random helix coiling of unbranched polyolefin branches",
+      "The presence of equal and similar electrical charges on all dispersed colloidal particles, causing mutual electrostatic repulsion (कणों पर समान विद्युत आवेश के कारण प्रतिकर्षण)",
+      "The complete conversion of all surface functional groups into volatile non-ionic ethers",
+      "The total presence of short-chain aromatic links that absorb moisture"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Colloidal particles carry a net electrical charge of the same sign. The resulting mutual electrostatic repulsion prevents the particles from aggregating into larger clusters when they collide, stabilizing the colloidal dispersion."
+  },
+  {
+    "p_id": "bpsc_curr_v4_225",
+    "qe": "What direct mechanical change occurs to the native protein architecture inside an egg white when it undergoes thermal coagulation upon boiling?",
+    "qh": "जब एक अंडे की सफेदी को उबालने पर थर्मल जमावट होती है, तो उसके भीतर की प्राकृतिक प्रोटीन संरचना में क्या सीधा यांत्रिक परिवर्तन होता है?",
+    "o": [
+      "The covalent peptide linkages are broken, returning the protein to single units",
+      "The native hydrogen bonds are disrupted, causing structural globules to unfold and helices to uncoil, resulting in a loss of biological activity (विकृतीकरण या डिनेचुरेशन)",
+      "The carbon backbone converts into a volatile open-chain gas cloud",
+      "The functional domains are reduced to non-ionic starch granules"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Boiling an egg white introduces thermal stress that disrupts non-covalent hydrogen bonds and structural constraints. This causes the folded globular proteins to uncoil and denature, cross-linking randomly into an insoluble white mass."
+  },
+  {
+    "p_id": "bpsc_curr_v4_226",
+    "qe": "What is the correct mathematical expression used to calculate the degree of dissociation ($\\alpha$) of a weak electrolyte from its molar conductivity values?",
+    "qh": "कमजोर इलेक्ट्रोलाइट के विघटन की डिग्री ($\\alpha$) की गणना करने के लिए उपयोग किया जाने वाला सही गणितीय व्यंजक क्या है?",
+    "o": [
+      "$\\alpha = \\Lambda_m \\cdot \\Lambda_m^\\circ$",
+      "$\\alpha = \\frac{\\Lambda_m}{\\Lambda_m^\\circ}$ (विघटन की डिग्री सूत्र)",
+      "$\\alpha = \\frac{\\alpha \\cdot 1000}{M}$",
+      "$\\alpha = nF E^\\circ_{cell}$"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> The degree of dissociation ($\\alpha$) of a weak electrolyte at a specific concentration is calculated as the ratio of its molar conductivity ($\\Lambda_m$) to its limiting molar conductivity ($\\Lambda_m^\\circ$): $\\alpha = \\frac{\\Lambda_m}{\\Lambda_m^\\circ}$."
+  },
+  {
+    "p_id": "bpsc_curr_v4_227",
+    "qe": "What is the core mathematical formula used to calculate the Molar Conductivity ($\\Lambda_m$) of a solution from its specific conductivity ($\\kappa$) and molarity ($M$) in standard laboratory units?",
+    "qh": "समाधान की विशिष्ट चालकता ($\\kappa$) और मोलरिटी ($M$) से उसकी मोलर चालकता ($\\Lambda_m$) की गणना करने के लिए उपयोग किया जाने वाला मुख्य गणितीय सूत्र क्या है?",
+    "o": [
+      "$\\Lambda_m = \\frac{M \\cdot \\kappa}{1000}$",
+      "$\\Lambda_m = \\frac{1000 \\cdot \\kappa}{M}$ (मोलर चालकता सूत्र)",
+      "$\\Lambda_m = \\kappa \\cdot G^*$",
+      "$\\Lambda_m = \\frac{\\kappa \\cdot R}{M}$"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> When conductivity $\\kappa$ is measured in $\\text{S}\\cdot\\text{cm}^{-1}$ and concentration $M$ is in $\\text{mol/L}$, the molar conductivity is calculated using the formula: $\\Lambda_m = \\frac{1000 \\cdot \\kappa}{M}$."
+  },
+  {
+    "p_id": "bpsc_curr_v4_228",
+    "qe": "Which specific organic compound is generated when a molecule of natural cane sugar (sucrose) undergoes acidic hydrolysis?",
+    "qh": "जब प्राकृतिक गन्ने की चीनी (सुक्रोज) का एक अणु अम्लीय जलअपघटन से गुजरता है तो कौन सा विशिष्ट कार्बनिक यौगिक उत्पन्न होता है?",
+    "o": [
+      "Two identical units of D-galactose",
+      "An equimolar mixture of D-glucose and D-fructose (ग्लूकोज एवं फ्रुक्टोज मिश्रण)",
+      "Two units of highly branched amylopectin",
+      "One molecule of glycine and one molecule of aminocaproic acid"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Hydrolyzing the disaccharide sucrose breaks its internal glycosidic linkage, releasing an equimolar mixture of one D-glucose molecule and one D-fructose molecule."
+  },
+  {
+    "p_id": "bpsc_curr_v4_229",
+    "qe": "What happens to the structure of the cyclic monomer caprolactam when it is heated with water to generate Nylon-6?",
+    "qh": "जब चक्रीय मोनोमर कैप्रोलैक्टम को नायलॉन-6 उत्पन्न करने के लिए पानी के साथ गर्म किया जाता है तो उसकी संरचना का क्या होता है?",
+    "o": [
+      "It cross-links into a three-dimensional thermosetting network containing methylene bridges",
+      "It undergoes hydrolytic ring-opening cleavage to yield an open amino acid chain that polymerizes into a polyamide (रिंग-ओपनिंग जलअपघटन)",
+      "It undergoes oxidation into a dibasic dicarboxylic acid fragment",
+      "It forms insoluble precipitates via the common-ion effect"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Heating caprolactam with water at elevated temperatures breaks its internal cyclic amide bond. This ring-opening hydrolytic step yields $\\varepsilon$-aminocaproic acid, which polymerizes into the linear polyamide chain of Nylon-6."
+  },
+  {
+    "p_id": "bpsc_curr_v4_230",
+    "qe": "What specific operational role does benzoyl peroxide assume when added to an alkene mixture during free-radical addition polymerization?",
+    "qh": "मुक्त-कण जोड़ पॉलीमराइजेशन के दौरान एल्कीन मिश्रण में मिलाए जाने पर बेंज़ोयल पेरोक्साइड क्या विशिष्ट परिचालन भूमिका निभाता है?",
+    "o": [
+      "It acts as a mechanical filler to increase the total density of the plastic block",
+      "It serves as a reaction initiator by undergoing homolytic cleavage to generate active free radicals (मुक्त मूलक आरंभक)",
+      "It functions as a chemical chemical inhibitor that immediately stops chain propagation",
+      "It clarifies the basification parameters of the solution via acid-base buffer mechanisms"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Benzoyl peroxide is thermally unstable and easily undergoes homolytic cleavage at its oxygen-oxygen single bond ($-O-O-$). This dissociation generates active phenyl free radicals that attack alkene monomers to initiate free-radical chain-growth polymerization."
+  },
+  {
+    "p_id": "bpsc_curr_v4_231",
+    "qe": "What happens to the structure of linear Novolac strands if they are mixed with excess formaldehyde gas and subjected to high thermal curing?",
+    "qh": "यदि रैखिक नोवोलेक स्ट्रैंड्स को अतिरिक्त फॉर्मलाडेहाइड गैस के साथ मिला जाए और उच्च थर्मल क्यूरिंग के अधीन किया जाए तो उनकी संरचना का क्या होता है?",
+    "o": [
+      "They break down into volatile liquid phenols via hydrolytic cleavage",
+      "They develop extensive covalent methylene cross-links, transforming the linear resin into the rigid thermosetting network Bakelite (क्रॉस-लिंक्ड बैकेलाइट नेटवर्क)",
+      "They convert into an unbranched biodegradable polyester chain configuration",
+      "They form an explicit water-soluble uncharged non-ionic surfactant lattice balanced by sodium"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Novolac is a linear condensation intermediate. Heating Novolac with excess formaldehyde introduces methylene linkages that cross-link the chains into a permanent three-dimensional network, creating the infusible thermosetting polymer Bakelite."
+  },
+  {
+    "p_id": "bpsc_curr_v4_232",
+    "qe": "What structural unit remains after a nucleotide monomer loses its terminal esterified phosphate group?",
+    "qh": "एक न्यूक्लियोटाइड मोनोमर जब अपने एस्टरीकृत फॉस्फेट समूह को खो देता है, तो कौन सी संरचनात्मक इकाई शेष बचती है?",
+    "o": [
+      "A volatile aliphatic open-chain non-polar gas matrix",
+      "Nucleoside (न्यूक्लिओसाइड)",
+      "An active free-radical addition polymer initiator",
+      "A cross-linked three-dimensional network panel"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> A nucleoside contains only a pentose sugar linked to a nitrogenous base. Adding a phosphate group to its 5'-position transforms it into a full nucleotide."
+  },
+  {
+    "p_id": "bpsc_curr_v4_233",
+    "qe": "Which strong covalent linkage connects consecutive nucleotide monomers together along a single-stranded DNA or RNA polymer chain?",
+    "qh": "कौन सा मजबूत सहसंयोजक बंध डीएनए या आरएनए के एक एकल धागे (single strand) के साथ लगातार न्यूक्लियोटाइड मोनोमर्स को एक साथ जोड़ता है?",
+    "o": [
+      "N-glycosidic link bridging rings together",
+      "3'-5' phosphodiester linkage (3'-5' फॉस्फोडिएस्टर बंध)",
+      "Amide linkage systematically identical to a biological peptide bond",
+      "Sulfur disulfide cross-link bridge system anchoring paths"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Nucleotides polymerize into nucleic acid chains via 3'-5' phosphodiester linkages, where a phosphate group forms stable ester covalent bonds between the 3'-hydroxyl group of one sugar ring and the 5'-hydroxyl group of the next."
+  },
+  {
+    "p_id": "bpsc_curr_v4_234",
+    "qe": "What molecular architectural arrangement details the relative directionality of the twin strands forming a classic B-DNA double helix model?",
+    "qh": "कौन सा आणविक संरचनात्मक विन्यास डीएनए डबल हेलिक्स मॉडल के भीतर दो पूरक धागों की सापेक्ष दिशात्मकता का विवरण देता है?",
+    "o": [
+      "They run parallel in the exact same 5' to 3' spatial direction",
+      "They exhibit anti-parallel polarity, where one strand runs 5' to 3' and the other runs 3' to 5' (प्रति-समानांतर ध्रुवता / anti-parallel)",
+      "They are arranged as separate open-chain unlinked carbohydrate blocks",
+      "They cross-link randomly into a single infusible thermosetting net plastic"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> The twin strands of a DNA double helix run anti-parallel to one another. One strand is oriented in the 5' to 3' direction, while its complementary counter-strand features a reverse 3' to 5' alignment."
+  },
+  {
+    "p_id": "bpsc_curr_v4_235",
+    "qe": "What structural feature characterises the alpha-helix secondary structure of a protein, keeping the right-handed screw conformation stable?",
+    "qh": "कौन सी संरचनात्मक विशेषता एक प्रोटीन की अल्फा-हेलिक्स माध्यमिक संरचना की विशेषता है, जो दाहिने हाथ की पेंच जैसी आकृति को स्थिर रखती है?",
+    "o": [
+      "Weak van der Waals forces acting uniformly across non-polar branches",
+      "Intramolecular hydrogen bonds formed between the N-H group of an amino acid residue and the carbonyl C=O group of an adjacent turn (N-H और C=O के बीच हाइड्रोजन बंध)",
+      "Reversible ester links that undergo rapid reduction with basic catalysts",
+      "Cationic quaternary nitrogen halide cross-linked coordination zones"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> The helical conformation of an $\\alpha$-helix is locked and stabilized by a dense network of regular hydrogen bonds. These form between the polar amide $N-H$ groups situated along one loop of the coiling backbone and the carbonyl $C=O$ functional groups of the adjacent turn."
+  },
+  {
+    "p_id": "bpsc_curr_v4_236",
+    "qe": "What sequencing workflow strategy was deployed during the Human Genome Project to exclusively map and isolate regions that code for active RNA transcripts?",
+    "qh": "मानव जीनोम प्रोजेक्ट के दौरान केवल उन क्षेत्रों को मैप और अलग करने के लिए किस अनुक्रमण रणनीति को तैनात किया गया था जो सक्रिय आरएनए प्रतिलेखों को कूट करते हैं?",
+    "o": [
+      "Blind sequence annotation blueprint runs",
+      "Expressed Sequence Tags / ESTs (व्यक्त अनुक्रम टैग / ESTs)",
+      "Homolytic chain termination step testing",
+      "Monomeric ring-opening condensation arrays"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> The strategy focused explicitly on identifying all genes that are expressed as functional transcripts. This targeted methodology is designated as Expressed Sequence Tags (ESTs), separating coding genes from vast genomic non-coding sequences."
+  },
+  {
+    "p_id": "bpsc_curr_v4_237",
+    "qe": "What is the structural pitch dimension of a single complete turn of a standard B-DNA double helix along its vertical axis?",
+    "qh": "मानक B-DNA डबल हेलिक्स के उसके ऊर्ध्वाधर अक्ष पर एक एकल पूर्ण मोड़ का संरचनात्मक पिच आयाम क्या होता है?",
+    "o": [
+      "0.34 nanometers absolute width",
+      "3.4 nanometers (3.4 नैनोमीटर)",
+      "34 nanometers extensive length",
+      "2.2 meters absolute macro profile"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> In a standard B-DNA model developed by Watson and Crick, a single complete helical turn around the central axis covers an axial displacement distance of exactly $3.4\\text{ nm}$ ($34\\text{ \\AA}$)."
+  },
+  {
+    "p_id": "bpsc_curr_v4_238",
+    "qe": "What is the calculated spacing interval between consecutive base pairs along the vertical axis of a standard B-DNA double helix?",
+    "qh": "एक मानक B-DNA डबल हेलिक्स के ऊर्ध्वाधर अक्ष के साथ लगातार क्षारक युग्मों के बीच की दूरी का मान क्या होता है?",
+    "o": [
+      "3.4 nanometers total length",
+      "0.34 nanometers (0.34 नैनोमीटर)",
+      "20 nanometers structural area width",
+      "4.6 nanometers calculated index"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Each complete single turn of a B-DNA double helix spans $3.4\\text{ nm}$ and accommodates exactly ten base pairs. Therefore, the distance or step interval separating consecutive stacked base pairs is $3.4 / 10 = 0.34\\text{ nm}$ ($3.4\\text{ \\AA}$)."
+  },
+  {
+    "p_id": "bpsc_curr_v4_239",
+    "qe": "What descriptive terminology defines the unique architectural feature of the genetic code known as 'degeneracy'?",
+    "qh": "'अपभ्रष्टता' (degeneracy) के रूप में जाने जाने वाले आनुवंशिक कोड की अनूठी संरचनात्मक विशेषता को क्या शब्दावली परिभाषित करती है?",
+    "o": [
+      "A single codon can simultaneously code for multiple different amino acids",
+      "A single amino acid can be specified and coded by more than one distinct codon (एक से अधिक कोडन द्वारा एक अमीनो अम्ल का कोडिंग)",
+      "The codons turn completely volatile and drop down to zero value metrics",
+      "The genetic dictionary changes properties dynamically based on solution pressure"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> The genetic code is redundant or degenerate. Because there are 61 amino-acid-specifying codons but only 20 standard amino acids, many amino acids are specified by more than one distinct codon (e.g., phenylalanine is targeted by both UUU and UUC)."
+  },
+  {
+    "p_id": "bpsc_curr_v4_240",
+    "qe": "Which specific initiation codon serves the dual role of initiating translation while coding for the amino acid methionine?",
+    "qh": "कौन सा विशिष्ट दीक्षा कूट (initiation codon) अमीनो एसिड मेथिओनिन के लिए कोडिंग करते हुए अनुवाद शुरू करने की दोहरी भूमिका निभाता है?",
+    "o": [
+      "UUU phenylalanine code",
+      "AUG codon (AUG कोडन)",
+      "UAA ochre terminator factor",
+      "UGA opel stop marker segment"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> The triplet codon AUG plays a dual role in molecular genetics: it codes for the essential amino acid methionine and serves as the universal initiation marker that establishes the reading frame for ribosomes."
+  }
+]
