@@ -1,0 +1,522 @@
+[
+  {
+    "p_id": "bpsc_genetics_v4_01",
+    "qe": "In a standard DNA strand, what specific chemical linkage connects the nucleotide monomers to form a polynucleotide chain?",
+    "qh": "एक मानक डीएनए धागे (DNA strand) में, पॉलिन्यूक्लियोटाइड श्रृंखला बनाने के लिए न्यूक्लियोटाइड मोनोमर्स को कौन सा विशिष्ट रासायनिक बंधन (chemical linkage) जोड़ता है?",
+    "o": [
+      "N-glycosidic bonds",
+      "3'-5' Phosphodiester bonds (3'-5' फॉस्फोडिएस्टर बंध)",
+      "Peptide bonds",
+      "Hydrogen bonds"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Nucleotides are linked together in a DNA strand by 3'-5' phosphodiester bonds, which form between the 3'-hydroxyl group of one sugar and the 5'-phosphate group of the adjacent nucleotide."
+  },
+  {
+    "p_id": "bpsc_genetics_v4_02",
+    "qe": "What structural component is missing in a nucleoside that defines its primary difference from a nucleotide?",
+    "qh": "न्यूक्लियोसाइड (nucleoside) में कौन सा संरचनात्मक घटक अनुपस्थित होता है जो इसे न्यूक्लियोटाइड से अलग बनाता है?",
+    "o": [
+      "Nitrogenous base",
+      "Pentose sugar",
+      "Phosphate group (फॉस्फेट समूह)",
+      "Hydroxyl group"
+    ],
+    "a": 2,
+    "e": "<b>Explanation:</b> A nucleoside consists only of a nitrogenous base and a pentose sugar linked by an N-glycosidic bond. A nucleotide is formed when a phosphate group is esterified to the 5'-OH of the nucleoside."
+  },
+  {
+    "p_id": "bpsc_genetics_v4_03",
+    "qe": "To which chemical class of sugars do both deoxyribose and ribose belong, characterized by having five carbon atoms?",
+    "qh": "डीऑक्सीराइबोज़ और राइबोज़ दोनों शर्कराओं के किस रासायनिक वर्ग (chemical class) से संबंधित हैं, जिसमें पाँच कार्बन परमाणु होते हैं?",
+    "o": [
+      "Trioses",
+      "Hexoses",
+      "Pentoses (पेंटोज़)",
+      "Polysaccharides"
+    ],
+    "a": 2,
+    "e": "<b>Explanation:</b> Both ribose (in RNA) and deoxyribose (in DNA) are five-carbon sugars, placing them in the pentose sugar category."
+  },
+  {
+    "p_id": "bpsc_genetics_v4_04",
+    "qe": "What physical structural characteristic of the DNA double helix is maintained by the specific pairing of purines with pyrimidines?",
+    "qh": डीएनए डबल हेलिक्स की कौन सी भौतिक संरचनात्मक विशेषता प्यूरीन और पिरिमिडीन के विशिष्ट युग्मन (pairing) द्वारा बनाए रखी जाती है?",
+    "o": [
+      "The antiparallel nature of the two strands",
+      "Uniform width throughout the DNA helix (डीएनए की एकसमान चौड़ाई)",
+      "The semi-conservative mode of replication",
+      "Uniform length across all distinct DNA types"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Pairing a bulky purine with a smaller pyrimidine ensures that the distance between the two strands remains constant (approx. 20 Å), resulting in a uniform width across the entire length of the DNA helix."
+  },
+  {
+    "p_id": "bpsc_genetics_v4_05",
+    "qe": "How do the net electric charges of DNA and histones differ when they associate to form nucleosomes?",
+    "qh": जब न्यूक्लियोसोम बनाने के लिए डीएनए और हिस्टोन जुड़ते हैं, तो उनके शुद्ध विद्युत आवेश (net electric charges) कैसे भिन्न होते हैं?",
+    "o": [
+      "Both carry a net positive charge",
+      "Both carry a net negative charge",
+      "DNA is negative, and Histones are positive (डीएनए ऋणात्मक एवं हिस्टोन धनात्मक)",
+      "Both carry zero net charge"
+    ],
+    "a": 2,
+    "e": "<b>Explanation:</b> DNA is negatively charged due to its phosphate backbone. Histones are rich in basic amino acids like lysine and arginine, which carry a net positive charge at physiological pH, allowing for tight electrostatic association."
+  },
+  {
+    "p_id": "bpsc_genetics_v4_06",
+    "qe": "In the transcription unit, where are the promoter and terminator sites located relative to the coding strand?",
+    "qh": ट्रांसक्रिप्शन यूनिट में, कोडिंग धागे के सापेक्ष प्रमोटर (promoter) और टर्मिनेटर (terminator) साइटें कहाँ स्थित होती हैं?",
+    "o": [
+      "Both are located at the 3' (downstream) end",
+      "Promoter is at the 5' (upstream) end, and Terminator is at the 3' (downstream) end (प्रमोटर 5' पर एवं टर्मिनेटर 3' पर)",
+      "Only the 5' end for both sites",
+      "Only the 3' end for both sites"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> In a transcription unit, the promoter serves as the RNA polymerase binding site and is located at the 5' end (upstream) of the structural gene. The terminator defines the end of transcription and is located at the 3' end (downstream)."
+  },
+  {
+    "p_id": "bpsc_genetics_v4_07",
+    "qe": "Why is sickle-cell anaemia accurately classified as a 'molecular disease'?",
+    "qh": सिकल-सेल एनीमिया (sickle-cell anaemia) को 'आणविक रोग' (molecular disease) के रूप में सटीक रूप से क्यों वर्गीकृत किया गया है?",
+    "o": [
+      "Because it can be easily treated with high-dose iron supplements",
+      "Because it is caused by a specific point mutation in the beta-globin chain gene (बीटा-ग्लोबिन जीन में बिंदु उत्परिवर्तन)",
+      "Because it grants complete immunity to malaria infections",
+      "Because it is caused by viral capsid structural folding"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Sickle-cell anaemia is a genetic disorder caused by a single point mutation where the amino acid glutamate is replaced by valine at the sixth position of the beta-globin chain, making it a classic molecular disease."
+  },
+  {
+    "p_id": "bpsc_genetics_v4_08",
+    "qe": "What functional properties define the relationship of the AUG codon in protein synthesis?",
+    "qh": प्रोटीन संश्लेषण में AUG कोडन (AUG codon) के संबंध में कौन से कार्यात्मक गुण सत्य हैं?",
+    "o": [
+      "It codes for methionine, and it functions as an initiation codon (मिथियोनिन के लिए कोड करना एवं दीक्षा कोडन होना)",
+      "It codes for valine only",
+      "It is an exclusively stop codon for both prokaryotes and eukaryotes",
+      "It is ignored by ribosomes during the translation phase"
+    ],
+    "a": 0,
+    "e": "<b>Explanation:</b> AUG is a dual-function codon: it specifies the amino acid methionine and serves as the universal initiation signal for protein synthesis in both prokaryotes and eukaryotes."
+  },
+  {
+    "p_id": "bpsc_genetics_v4_09",
+    "qe": "What scientific evidence suggests that RNA was the first genetic material on Earth?",
+    "qh": कौन सा वैज्ञानिक साक्ष्य यह बताता है कि पृथ्वी पर आरएनए (RNA) पहली आनुवंशिक सामग्री थी?",
+    "o": [
+      "Proteins evolved from RNA, but RNA lacks stability",
+      "Essential life processes, such as metabolism and translation, evolved around RNA, which acts as a catalyst (मेटाबोलिज्म एवं ट्रांसलेशन आरएनए के चारों ओर विकसित हुए)",
+      "DNA was formed from RNA via spontaneous mineral precipitation",
+      "RNA molecules consist of triple-stranded lattice configurations"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Current research suggests life processes like translation and metabolism evolved around RNA. RNA acts as both genetic material and a catalyst, though its reactivity makes it less stable than DNA."
+  },
+  {
+    "p_id": "bpsc_genetics_v4_10",
+    "qe": "In eukaryotic mRNA maturation, which sequences remain in the final transcript?",
+    "qh": यूकैरियोटिक mRNA परिपक्वता (maturation) में, कौन से अनुक्रम अंतिम प्रतिलेख में बने रहते हैं?",
+    "o": [
+      "Introns only",
+      "Exons only (केवल एक्सॉन)",
+      "Both introns and exons",
+      "Neither introns nor exons"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Eukaryotic genes are 'split', meaning they contain non-coding introns and coding exons. During processing, introns are removed (spliced out), and only the exons appear in the mature, processed mRNA."
+  },
+  {
+    "p_id": "bpsc_genetics_v4_11",
+    "qe": "Which human chromosome possesses the highest count of functional genes, and which one contains the fewest?",
+    "qh": मानव गुणसूत्रों में से किसमें कार्यात्मक जीनों की संख्या सबसे अधिक और किसमें सबसे कम है?",
+    "o": [
+      "Chromosome 1 (highest) and Y (lowest) (गुणसूत्र 1 सर्वाधिक, गुणसूत्र Y न्यूनतम)",
+      "Chromosome 11 (highest) and X (lowest)",
+      "Chromosome 21 (highest) and 1 (lowest)",
+      "Chromosome X (highest) and Y (lowest)"
+    ],
+    "a": 0,
+    "e": "<b>Explanation:</b> Human Genome Project data revealed that Chromosome 1 harbors the highest number of genes (approx. 2968), whereas the Y chromosome has the fewest (approx. 231 genes)."
+  },
+  {
+    "p_id": "bpsc_genetics_v4_12",
+    "qe": "Which scientists utilized X-ray diffraction data to propose the double-helix DNA model in 1953?",
+    "qh": 1953 में डीएनए डबल हेलिक्स मॉडल प्रस्तावित करने के लिए किस वैज्ञानिक जोड़ी ने एक्स-रे विवर्तन डेटा (X-ray diffraction data) का उपयोग किया था?",
+    "o": [
+      "Rosalind Franklin and Maurice Wilkins",
+      "James Watson and Francis Crick (वाटसन एवं क्रिक)",
+      "Erwin Chargaff and Arthur Kornberg",
+      "Meselson and Stahl"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> James Watson and Francis Crick proposed the famous double helix model in 1953, utilizing X-ray diffraction data generated by Maurice Wilkins and Rosalind Franklin."
+  },
+  {
+    "p_id": "bpsc_genetics_v4_13",
+    "qe": "Why must the 3'-OH group be removed or replaced when synthesizing artificial DNA strands to prevent uncontrolled polymerization?",
+    "qh": कृत्रिम डीएनए धागों को संश्लेषित करते समय अनियंत्रित पॉलीमराइजेशन को रोकने के लिए 3'-OH समूह को क्यों हटाया या प्रतिस्थापित किया जाना चाहिए?",
+    "o": [
+      "Because purines interfere with pyrimidines at the 3' end",
+      "Because DNA polymerase requires a free 3'-OH group to add new nucleotides; blocking it stops chain extension (3'-OH की अनुपस्थिति से पॉलीमराइजेशन रुक जाता है)",
+      "Because the phosphate group naturally blocks the 3' position",
+      "Because 2'-OH groups initiate explosive cleavage"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> DNA polymerase synthesizes DNA by adding nucleotides to the free 3'-OH group of the growing strand. If the 3'-OH group is blocked or absent, the polymerase cannot add the next nucleotide, effectively stopping the polymerization reaction."
+  },
+  {
+    "p_id": "bpsc_genetics_v4_14",
+    "qe": "Why does the synthesis of the DNA lagging strand proceed in a discontinuous fashion (Okazaki fragments)?",
+    "qh": डीएनए लैगिंग स्ट्रैंड (lagging strand) का संश्लेषण असतत तरीके (ओकाजाकी खंड) से क्यों होता है?",
+    "o": [
+      "Because DNA molecules are too long to synthesize continuously",
+      "Because DNA polymerase can only catalyze polymerization in one direction (5' to 3') (DNA पॉलीमरेज की एकदिशीय प्रकृति)",
+      "Because the process is fundamentally inefficient in bacteria",
+      "Because DNA ligase needs to exert a mechanical force on the strands"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> DNA polymerase only catalyzes synthesis in the 5' to 3' direction. Since the two parent strands are anti-parallel, one strand (leading) is synthesized continuously, while the other (lagging) must be synthesized in short, discontinuous segments known as Okazaki fragments."
+  },
+  {
+    "p_id": "bpsc_genetics_v4_15",
+    "qe": "Which specific enzyme is responsible for the transcription process in prokaryotes?",
+    "qh": प्रोकैरियोट्स में ट्रांसक्रिप्शन (transcription) प्रक्रिया के लिए कौन सा विशिष्ट एंजाइम जिम्मेदार है?",
+    "o": [
+      "DNA Ligase",
+      "DNA-dependent RNA polymerase (डीएनए-निर्भर आरएनए पॉलीमरेज)",
+      "Restriction endonuclease",
+      "Taq Polymerase"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> In prokaryotes, a single type of DNA-dependent RNA polymerase is responsible for the transcription of all types of RNA (mRNA, tRNA, and rRNA)."
+  },
+  {
+    "p_id": "bpsc_genetics_v4_16",
+    "qe": "At what functional level does the regulation of gene expression primarily occur in eukaryotic systems?",
+    "qh": यूकैरियोटिक प्रणालियों में जीन अभिव्यक्ति (gene expression) का विनियमन प्राथमिक रूप से किस कार्यात्मक स्तर पर होता है?",
+    "o": [
+      "During DNA replication",
+      "Transcriptional level, during the formation of primary transcripts (ट्रांसक्रिप्शनल स्तर पर)",
+      "During protein folding in the Golgi apparatus",
+      "None of these"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Gene expression in eukaryotes can be regulated at several levels, including transcriptional (primary transcript formation), processing (splicing), transport of mRNA, and translational levels."
+  },
+  {
+    "p_id": "bpsc_genetics_v4_17",
+    "qe": "Regulatory proteins control transcription by interacting with RNA polymerase. What are the two primary operational modes of these proteins?",
+    "qh": नियामक प्रोटीन (regulatory proteins) आरएनए पॉलीमरेज़ के साथ बातचीत करके ट्रांसक्रिप्शन को नियंत्रित करते हैं। इन प्रोटीनों के दो प्राथमिक परिचालन मोड क्या हैं?",
+    "o": [
+      "They only increase the expression rate",
+      "They only decrease the expression rate",
+      "They act as both activators and repressors (सक्रियकर्ता एवं दमनकारी दोनों के रूप में)",
+      "They bind to RNA but remain inert"
+    ],
+    "a": 2,
+    "e": "<b>Explanation:</b> Regulatory proteins are transcription factors that can either promote (activators) or inhibit (repressors) the binding of RNA polymerase to the DNA promoter region, thereby regulating gene expression."
+  },
+  {
+    "p_id": "bpsc_genetics_v4_18",
+    "qe": "Which chromosome was the last to be sequenced in the Human Genome Project (HGP)?",
+    "qh": मानव जीनोम प्रोजेक्ट (HGP) में अनुक्रमित (sequenced) होने वाला अंतिम मानव गुणसूत्र कौन सा था?",
+    "o": [
+      "Chromosome 1 (गुणसूत्र 1)",
+      "Chromosome 11",
+      "Chromosome 21",
+      "Chromosome X"
+    ],
+    "a": 0,
+    "e": "<b>Explanation:</b> The Human Genome Project was mostly completed in 2003, but the sequence of Chromosome 1, which is the largest human chromosome, was only completed in May 2006."
+  },
+  {
+    "p_id": "bpsc_genetics_v4_19",
+    "qe": "What are the three major classes of RNAs involved in gene expression and protein synthesis?",
+    "qh": जीन अभिव्यक्ति और प्रोटीन संश्लेषण में शामिल आरएनए (RNA) के तीन प्रमुख वर्ग कौन से हैं?",
+    "o": [
+      "mRNA, tRNA, and rRNA (mRNA, tRNA एवं rRNA)",
+      "DNA, cDNA, and mRNA",
+      "Protease, Ligase, and Polymerase",
+      "Codon, Anticodon, and Intron"
+    ],
+    "a": 0,
+    "e": "<b>Explanation:</b> The three major classes of RNA required for protein synthesis are messenger RNA (mRNA) which carries the code, transfer RNA (tRNA) which transports amino acids, and ribosomal RNA (rRNA) which forms the structural components of the ribosome."
+  },
+  {
+    "p_id": "bpsc_genetics_v4_20",
+    "qe": "What conclusion is drawn when an organism's DNA analysis shows that the ratio of A+G to T+C is not equal to one?",
+    "qh": जब किसी जीव के डीएनए विश्लेषण से पता चलता है कि A+G और T+C का अनुपात एक के बराबर नहीं है, तो क्या निष्कर्ष निकाला जाता है?",
+    "o": [
+      "It is a typical double-stranded DNA",
+      "It is a single-stranded DNA molecule (यह एकल-रज्जुकी डीएनए है)",
+      "It is a double-stranded linear chromosome",
+      "No conclusion can be drawn"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Chargaff’s rule dictates that in double-stranded DNA, the ratio of purines (A+G) to pyrimidines (T+C) must equal 1. If this ratio is not 1, the DNA cannot be double-stranded."
+  },
+  {
+    "p_id": "bpsc_genetics_v4_21",
+    "qe": "What is the primary factor that causes the rising of bread or idli dough during the fermentation process?",
+    "qh": किण्वन (fermentation) प्रक्रिया के दौरान ब्रेड या इडली के आटे के फूलने (rising of dough) का प्राथमिक कारण क्या है?",
+    "o": [
+      "Multiplication of yeast cells only",
+      "Production of CO2 gas (CO2 गैस का उत्पादन)",
+      "Emulsification of starch proteins",
+      "Hydrolysis of wheat flour starch into sugars"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Baker's yeast (*Saccharomyces cerevisiae*) performs fermentation on kneaded dough, releasing carbon dioxide ($CO_2$) gas, which gets trapped, puffs up the dough, and makes it soft and spongy."
+  },
+  {
+    "p_id": "bpsc_genetics_v4_22",
+    "qe": "Which class of enzymes can cut DNA at specific positions within the molecule?",
+    "qh": एंजाइमों का कौन सा वर्ग डीएनए को अणु के भीतर विशिष्ट स्थानों पर काट सकता है?",
+    "o": [
+      "Endonuclease (एंडोन्यूक्लिएज)",
+      "Exonuclease",
+      "DNA Ligase",
+      "RNA Polymerase"
+    ],
+    "a": 0,
+    "e": "<b>Explanation:</b> Endonucleases are a class of restriction enzymes that make cuts at specific internal positions within the DNA sequence."
+  },
+  {
+    "p_id": "bpsc_genetics_v4_23",
+    "qe": "What process involves the transfer of genetic material from one bacterium to another via a virus vector?",
+    "qh": कौन सी प्रक्रिया में एक वायरस वेक्टर के माध्यम से एक जीवाणु से दूसरे जीवाणु में आनुवंशिक सामग्री का स्थानांतरण शामिल है?",
+    "o": [
+      "Transduction (ट्रांसडक्शन / पारगमन)",
+      "Conjugation",
+      "Transformation",
+      "Translation"
+    ],
+    "a": 0,
+    "e": "<b>Explanation:</b> Transduction is the transfer of DNA from one bacterium to another by a bacteriophage (virus). Conjugation involves cell-to-cell contact, and transformation is the uptake of naked DNA from the environment."
+  },
+  {
+    "p_id": "bpsc_genetics_v4_24",
+    "qe": "What dye is used to visualize DNA bands after gel electrophoresis?",
+    "qh": जेल इलेक्ट्रोफोरेसिस के बाद डीएनए बैंड को देखने के लिए किस डाई (dye) का उपयोग किया जाता है?",
+    "o": [
+      "Methylene blue",
+      "Ethidium bromide (इथिडियम ब्रोमाइड)",
+      "Bromophenol blue",
+      "Crystal violet"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Ethidium bromide is the standard staining agent used to visualize DNA bands after agarose gel electrophoresis; the bands fluoresce under UV light."
+  },
+  {
+    "p_id": "bpsc_genetics_v4_25",
+    "qe": "What does the term 'restriction' signify in the name 'restriction endonuclease'?",
+    "qh": 'रिस्ट्रिक्शन एंडोन्यूक्लिएज' (restriction endonuclease) नाम में 'रिस्ट्रिक्शन' शब्द क्या दर्शाता है?",
+    "o": [
+      "It cleaves phosphodiester bonds generally",
+      "It restricts the propagation of foreign DNA (bacteriophage) in the host bacterium (विदेशी डीएनए के गुणन को सीमित करना)",
+      "It prevents the bacterial cell from dividing",
+      "It binds to all cell membranes to stop growth"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> The term 'restriction' refers to the enzyme's role in restricting or preventing the survival of foreign viral DNA (bacteriophage) within the host bacterium by cutting it at specific sequences."
+  },
+  {
+    "p_id": "bpsc_genetics_v4_26",
+    "qe": "Which of the following is NOT required for preparing recombinant DNA molecules?",
+    "qh": पुनः संयोजक डीएनए अणु (recombinant DNA molecules) तैयार करने के लिए निम्नलिखित में से किसकी आवश्यकता नहीं होती है?",
+    "o": [
+      "Restriction endonucleases",
+      "DNA ligase",
+      "DNA fragments",
+      "E. coli (for initial ligation) (प्रारंभिक लिगेशन के लिए E. coli की आवश्यकता नहीं)"
+    ],
+    "a": 3,
+    "e": "<b>Explanation:</b> Recombinant DNA molecules are constructed *in vitro* using DNA fragments, restriction enzymes, and DNA ligase. While *E. coli* is used later for transformation, it is not required for the construction step itself."
+  },
+  {
+    "p_id": "bpsc_genetics_v4_27",
+    "qe": "In agarose gel electrophoresis, DNA molecules migrate based on their size; which move the furthest?",
+    "qh": एगारोज़ जेल इलेक्ट्रोफोरेसिस में, डीएनए अणु अपने आकार के आधार पर पलायन करते हैं; कौन सा सबसे दूर जाता है?",
+    "o": [
+      "The largest molecules",
+      "The smallest molecules (सबसे छोटे अणु)",
+      "Molecules with no charge",
+      "Neutral RNA fragments"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Because of the sieving effect of the agarose gel, smaller DNA fragments migrate through the pores more rapidly and thus travel farther than larger fragments."
+  },
+  {
+    "p_id": "bpsc_genetics_v4_28",
+    "qe": "Which feature is the most critical for a plasmid to function successfully as a cloning vector?",
+    "qh": एक क्लोनिंग वेक्टर के रूप में सफलतापूर्वक कार्य करने के लिए प्लाज्मिड में कौन सी विशेषता सबसे महत्वपूर्ण है?",
+    "o": [
+      "Origin of replication (ori) (प्रतिकृतियन का उद्गम)",
+      "High molecular weight",
+      "Presence of specific lipids",
+      "Ability to oxidize glucose"
+    ],
+    "a": 0,
+    "e": "<b>Explanation:</b> The origin of replication (ori) is the most critical feature because it initiates replication. Any DNA fragment linked to this sequence can replicate within host cells, and it also regulates the copy number."
+  },
+  {
+    "p_id": "bpsc_genetics_v4_29",
+    "qe": "During DNA isolation from bacteria, which enzyme should NOT be used to avoid degradation of the target DNA?",
+    "qh": बैक्टीरिया से डीएनए अलग करते समय, लक्षित डीएनए (target DNA) को खराब होने से बचाने के लिए किस एंजाइम का उपयोग नहीं करना चाहिए?",
+    "o": [
+      "Lysozyme",
+      "Ribonuclease",
+      "Deoxyribonuclease (DNase) (डीऑक्सीराइबोन्यूक्लिएज)",
+      "Protease"
+    ],
+    "a": 2,
+    "e": "<b>Explanation:</b> Deoxyribonuclease (DNase) must be avoided because it actively hydrolyzes and degrades the DNA molecule, which is the very target one is trying to isolate."
+  },
+  {
+    "p_id": "bpsc_genetics_v4_30",
+    "qe": "What enzyme is essential for the amplification of specific DNA sequences in a PCR reaction?",
+    "qh": पीसीआर (PCR) प्रतिक्रिया में विशिष्ट डीएनए अनुक्रमों के प्रवर्धन (amplification) के लिए कौन सा एंजाइम आवश्यक है?",
+    "o": [
+      "Thermostable DNA polymerase (Taq polymerase) (थर्मोस्टेबल डीएनए पॉलीमरेज)",
+      "RNA polymerase",
+      "DNA ligase",
+      "Reverse transcriptase"
+    ],
+    "a": 0,
+    "e": "<b>Explanation:</b> PCR amplification requires a heat-stable DNA polymerase, such as Taq polymerase (from *Thermus aquaticus*), to survive the repeated high-temperature denaturation cycles."
+  },
+  {
+    "p_id": "bpsc_genetics_v4_31",
+    "qe": "What is the role of an antibiotic resistance gene in a vector?",
+    "qh": वेक्टर में एंटीबायोटिक प्रतिरोध जीन (antibiotic resistance gene) की क्या भूमिका है?",
+    "o": [
+      "It initiates replication",
+      "It helps in the selection of transformed cells (रूपांतरित कोशिकाओं के चयन में सहायक)",
+      "It cuts the DNA at specific sites",
+      "It joins the DNA fragments"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Selectable markers like antibiotic resistance genes are used to identify and select transformed bacterial cells. Cells containing the vector survive in the presence of the antibiotic, while non-transformed cells die."
+  },
+  {
+    "p_id": "bpsc_genetics_v4_32",
+    "qe": "Why is CaCl2 added to bacterial cells during transformation experiments?",
+    "qh": रूपांतरण प्रयोगों के दौरान जीवाणु कोशिकाओं में CaCl2 क्यों मिलाया जाता है?",
+    "o": [
+      "To kill the bacteria",
+      "To increase the pore size in cell wall for DNA uptake (कोशिका भित्ति की पारगम्यता बढ़ाना)",
+      "To act as a source of energy",
+      "To activate the DNA ligase"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Divalent cations like $\\text{Ca}^{2+}$ (from $\\text{CaCl}_2$) increase the efficiency of DNA uptake by creating transient pores in the bacterial cell wall, making the cells 'competent'."
+  },
+  {
+    "p_id": "bpsc_genetics_v4_33",
+    "qe": "What is the function of DNA ligase?",
+    "qh": डीएनए लाइगेज (DNA ligase) का कार्य क्या है?",
+    "o": [
+      "Breaking phosphodiester bonds",
+      "Joining DNA fragments by forming phosphodiester bonds (डीएनए टुकड़ों को जोड़ना)",
+      "Unwinding the DNA",
+      "Synthesizing RNA"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> DNA ligase acts as a molecular glue. It facilitates the joining of DNA fragments by catalyzing the formation of phosphodiester bonds between the 3'-OH and 5'-phosphate ends."
+  },
+  {
+    "p_id": "bpsc_genetics_v4_34",
+    "qe": "Which of these is NOT a source of restriction enzymes?",
+    "qh": इनमें से कौन प्रतिबंध एंजाइम (restriction enzymes) का स्रोत नहीं है?",
+    "o": [
+      "Haemophilus influenzae",
+      "Escherichia coli",
+      "Agrobacterium tumefaciens (एग्रोबैक्टीरियम ट्यूमेफेशियंस)",
+      "Bacillus amyloliquefaciens"
+    ],
+    "a": 2,
+    "e": "<b>Explanation:</b> *Agrobacterium tumefaciens* is a plant pathogen used as a cloning vector (Ti-plasmid), not as a source of restriction endonucleases, unlike the others listed."
+  },
+  {
+    "p_id": "bpsc_genetics_v4_35",
+    "qe": "Which step in PCR is catalyzed by Taq polymerase?",
+    "qh": पीसीआर में कौन सा चरण टैक पॉलीमरेज़ (Taq polymerase) द्वारा उत्प्रेरित होता है?",
+    "o": [
+      "Denaturation",
+      "Annealing",
+      "Extension (विस्तार / एक्सटेंशन)",
+      "None of these"
+    ],
+    "a": 2,
+    "e": "<b>Explanation:</b> The extension step, where nucleotides are added to the primers to synthesize new DNA strands, is catalyzed by the thermostable Taq polymerase."
+  },
+  {
+    "p_id": "bpsc_genetics_v4_36",
+    "qe": "Why might a human gene cloned in bacteria fail to produce the desired protein?",
+    "qh": बैक्टीरिया में क्लोन किया गया मानव जीन वांछित प्रोटीन का उत्पादन करने में विफल क्यों हो सकता है?",
+    "o": [
+      "Bacteria lack RNA-splicing machinery for eukaryotic introns (बैक्टीरिया में स्प्लिसिंग तंत्र का अभाव)",
+      "The codons are fundamentally different",
+      "The protein is too small",
+      "Bacteria cannot grow at 37°C"
+    ],
+    "a": 0,
+    "e": "<b>Explanation:</b> Eukaryotic genes contain introns (non-coding sequences). Bacteria lack the spliceosome machinery required to remove these introns from the pre-mRNA transcript, so the translated protein is often non-functional or not produced."
+  },
+  {
+    "p_id": "bpsc_genetics_v4_37",
+    "qe": "What system yields higher protein production of a recombinant gene?",
+    "qh": कौन सी प्रणाली पुनः संयोजक जीन (recombinant gene) का उच्च प्रोटीन उत्पादन देती है?",
+    "o": [
+      "Batch culture",
+      "Continuous culture system (निरंतर संवर्धन प्रणाली)",
+      "Small laboratory flask",
+      "None of these"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> A continuous culture system allows the cells to stay in the log/exponential growth phase by constantly adding fresh medium and removing waste, leading to a much higher biomass and protein yield."
+  },
+  {
+    "p_id": "bpsc_genetics_v4_38",
+    "qe": "Who discovered the PCR technique and won a Nobel Prize?",
+    "qh": पीसीआर तकनीक की खोज किसने की और नोबेल पुरस्कार जीता?",
+    "o": [
+      "Herbert Boyer",
+      "Kary Mullis (कैरी मुलिस)",
+      "Arthur Kornberg",
+      "Hargovind Khurana"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Kary Mullis developed the PCR technique in 1985 and was awarded the Nobel Prize for Chemistry in 1993 for this invention."
+  },
+  {
+    "p_id": "bpsc_genetics_v4_39",
+    "qe": "Which of the following is true about restriction enzymes?",
+    "qh": रिस्ट्रिक्शन एंजाइम के बारे में निम्नलिखित में से क्या सत्य है?",
+    "o": [
+      "They are found in viruses",
+      "They recognize palindromic nucleotide sequences (पैलिंड्रोमिक अनुक्रमों को पहचानना)",
+      "They are endonucleases",
+      "Both (b) and (c)"
+    ],
+    "a": 3,
+    "e": "<b>Explanation:</b> Restriction enzymes are indeed endonucleases that recognize specific palindromic DNA sequences to make precise cuts. They are found in bacteria, not viruses."
+  },
+  {
+    "p_id": "bpsc_genetics_v4_40",
+    "qe": "What is the purpose of gel electrophoresis?",
+    "qh": जेल इलेक्ट्रोफोरेसिस का उद्देश्य क्या है?",
+    "o": [
+      "Amplifying DNA",
+      "Separating DNA fragments (डीएनए टुकड़ों को अलग करना)",
+      "Cutting DNA",
+      "Joining DNA"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Gel electrophoresis is a laboratory technique used to separate a mixture of DNA fragments based on their size (molecular weight) as they move through a gel matrix in an electric field."
+  }
+]
