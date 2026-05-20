@@ -1,0 +1,652 @@
+[
+  {
+    "p_id": "bpsc_semi_v4_01",
+    "qe": "Which specific electrical parameter range fundamentally characterizes a semiconductor material compared to standard conductors and insulators?",
+    "qh": "मानक चालकों (conductors) और इंसुलेटरों की तुलना में अर्धचालक (semiconductor) पदार्थ की विद्युत चालकता की सीमा क्या होती है?",
+    "o": [
+      "An absolute net conductivity value calculated at exactly zero",
+      "An intermediate electrical conductivity localized between conductors and insulators (चालकों और इंसुलेटरों के बीच की चालकता)",
+      "A highly volatile fluctuating scale that approaches infinity under compression",
+      "A non-conducting property that matches pure structural thermosetting resins"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Semiconductors are materials whose electrical conductivity resides in the intermediate range between high-density conductors ($\\sim 10^4-10^6 \\text{ S/m}$) and highly resistive insulators ($\\sim 10^{-20}-10^{-10} \\text{ S/m}$)."
+  },
+  {
+    "p_id": "bpsc_semi_v4_02",
+    "qe": "What unique operational phenomenon distinguishes a semiconductor from a metal regarding total charge carrier types involved in conducting current?",
+    "qh": "धारा प्रवाहित करने में शामिल कुल आवेश वाहकों (charge carriers) के संबंध में एक अर्धचालक और धातु में क्या मुख्य अंतर होता है?",
+    "o": [
+      "Metals coordinate current solely through highly rigid stationary proton matrices",
+      "Semiconductors simultaneously utilize two distinct mobile charge carriers: free electrons and holes ($I = I_e + I_h$) (मुक्त इलेक्ट्रॉन और होल दोनों का होना)",
+      "Semiconductors rely entirely on volatile uncharged gas molecules to pass current",
+      "Metals transform passing charge loops into stable three-dimensional cross-linked starches"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> In metallic conductors, electrical current is carried solely by mobile free electrons. In semiconductors, conduction is driven by two distinct mobile charge carriers moving in opposite directions: negative free electrons in the conduction band and positive electronic vacancies (holes) in the valence band."
+  },
+  {
+    "p_id": "bpsc_semi_v4_03",
+    "qe": "Which elemental organic classification describes classical intrinsic semiconductors like Silicon and Germanium regarding their total valence electrons?",
+    "qh": "सिलिकॉन और जर्मेनियम जैसे शास्त्रीय प्राकृतिक अर्धचालकों (intrinsic semiconductors) में वैलेंस इलेक्ट्रॉनों की संख्या कितनी होती है?",
+    "o": [
+      "Trivalent elements containing exactly three structural valence electrons",
+      "Tetravalent elements displaying four valence electrons in their outer shell (चतुष्क-संयोजक / चार वैलेंस इलेक्ट्रॉन)",
+      "Pentavalent arrays housing five chemical links across zones",
+      "Monovalent structures operating with a single covalent electron loop"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Elemental semiconductors like Silicon ($\text{Si}$, atomic number 14) and Germanium ($\text{Ge}$, atomic number 32) are tetravalent, meaning they house exactly four valence electrons in their outer shell, forming stable covalent lattices."
+  },
+  {
+    "p_id": "bpsc_semi_v4_04",
+    "qe": "What chemical bond configuration holds adjacent atoms together within a crystalline Silicon or Germanium semiconductor lattice structure?",
+    "qh": "एक क्रिस्टलीय सिलिकॉन या जर्मेनियम अर्धचालक जाली (lattice) संरचना के भीतर आसन्न परमाणुओं को कौन सा रासायनिक बंध एक साथ रखता है?",
+    "o": [
+      "Highly volatile ionic electron-transfer connection nets",
+      "Covalent bonds formed through the mutual sharing of valence electrons (सहसंयोजक बंध / covalent bonds)",
+      "Pure metallic electron-cloud pooling layers that cross boundaries",
+      "Quaternary coordination networks anchored around specialized heavy metal ions"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Tetravalent semiconductor atoms achieve a stable octet structure by sharing their four valence electrons with four neighboring atoms, establishing robust covalent bonds across the lattice."
+  },
+  {
+    "p_id": "bpsc_semi_v4_05",
+    "qe": "What structural name is assigned to the lower-energy band that is heavily occupied by valence electrons inside a semiconductor energy diagram?",
+    "qh": "अर्धचालक ऊर्जा आरेख (energy diagram) के भीतर वैलेंस इलेक्ट्रॉनों द्वारा भारी रूप से भरे जाने वाले कम-ऊर्जा वाले बैंड को क्या कहा जाता है?",
+    "o": [
+      "The empty uppermost conduction band channel",
+      "The Valence Band ($V_B$) (वैलेंस बैंड / संयोजकता बैंड)",
+      "The volatile open-chain forbidden gas gap slot",
+      "The non-conducting protective plastic surround frame"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> In a solid-state energy band model, the valence band ($V_B$) is the lower energy range that contains the valence electrons responsible for forming covalent bonds between lattice atoms."
+  },
+  {
+    "p_id": "bpsc_semi_v4_06",
+    "qe": "Which structural zone represents the higher-energy band that remains completely vacant of electrons inside a semiconductor at absolute zero temperature ($0\\text{ K}$)?",
+    "qh": "परम शून्य तापमान ($0\\text{ K}$) पर अर्धचालक के भीतर कौन सा उच्च-ऊर्जा बैंड इलेक्ट्रॉनों से पूरी तरह से खाली रहता है?",
+    "o": [
+      "The fully saturated lower valence band track",
+      "The Conduction Band ($C_B$) (चालन बैंड / कंडक्शन बैंड)",
+      "The fixed baseline dicarboxylic framework area",
+      "The cross-linked network alignment factor index"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> The conduction band ($C_B$) is the higher energy band situated above the valence band. At absolute zero temperature ($0\\text{ K}$), electrons lack thermal energy to cross the gap, leaving the conduction band entirely vacant."
+  },
+  {
+    "p_id": "bpsc_semi_v4_07",
+    "qe": "What localized structural milestone separates the valence band from the conduction band inside solid-state electronic energy charts?",
+    "qh": "ठोस-अवस्था इलेक्ट्रॉनिक ऊर्जा चार्ट के भीतर संयोजकता बैंड को चालन बैंड से अलग करने वाले क्षेत्र को क्या कहा जाता है?",
+    "o": [
+      "Anomeric displacement boundary segments",
+      "The Forbidden Energy Gap / Bandgap ($E_g$) (वर्जित ऊर्जा अंतराल / फॉरबिडन एनर्जी गैप)",
+      "The unbranched linear polyolefin extension tail line",
+      "The non-ionic fluid surfactant distribution zone"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> The energy region separating the top of the valence band from the bottom of the conduction band is called the forbidden energy gap or bandgap ($E_g$). Electrons cannot occupy states within this gap."
+  },
+  {
+    "p_id": "bpsc_semi_v4_08",
+    "qe": "What specific bandgap energy dimension ($E_g$) typically bounds a material to be categorized under the semiconductor family rather than an insulator?",
+    "qh": "किसी पदार्थ को इंसुलेटर के बजाय अर्धचालक वर्ग के अंतर्गत वर्गीकृत करने के लिए आमतौर पर उसका ऊर्जा अंतराल ($E_g$) कितना होना चाहिए?",
+    "o": [
+      "An energy gap spanning greater than 10 electron volts permanently",
+      "A relatively narrow bandgap value measured below 3 electron volts ($E_g < 3\\text{ eV}$) (3 इलेक्ट्रॉन वोल्ट से कम का ऊर्जा अंतराल)",
+      "A dynamic shifting metric that equals exactly zero at standard temperature",
+      "A complete lack of ionizable spatial boundaries across its coordinate layout"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Materials with a wide forbidden energy gap ($E_g > 3\\text{ eV}$, such as diamond with $\\sim 5.4\\text{ eV}$) function as insulators. Semiconductors feature a narrow energy gap ($E_g < 3\\text{ eV}$, such as Silicon with $\\sim 1.1\\text{ eV}$ and Germanium with $\\sim 0.7\\text{ eV}$)."
+  },
+  {
+    "p_id": "bpsc_semi_v4_09",
+    "qe": "What molecular architectural arrangement details the relative energy band diagram alignment of a high-density metallic conductor?",
+    "qh": "एक उच्च-घनत्व धात्विक चालक (metallic conductor) का ऊर्जा बैंड आरेख क्या प्रदर्शित करता है?",
+    "o": [
+      "A wide forbidden energy gap measuring up to 6 electron volts",
+      "An overlapping configuration where the valence band and conduction band intersect with zero bandgap ($E_g = 0$) (वैलेंस बैंड और कंडक्शन बैंड का परस्पर अतिव्यापन)",
+      "A separate isolated array of unlinked carbohydrate blocks",
+      "A single infusible thermosetting net plastic setup that blocks electron flow"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Metallic conductors contain no forbidden energy gap ($E_g = 0$). Their valence and conduction bands overlap, allowing free electrons to move seamlessly into conduction states without requiring thermal activation energy."
+  },
+  {
+    "p_id": "bpsc_semi_v4_10",
+    "qe": "What fundamental biological or physical concept explains why a semiconductor material is classified as strictly 'electricially neutral' despite carrying mobile charge carriers?",
+    "qh": "गतिशील आवेश वाहक (mobile charge carriers) होने के बावजूद एक अर्धचालक पदार्थ को 'विद्युत रूप से उदासीन' (electrically neutral) क्यों वर्गीकृत किया जाता है?",
+    "o": [
+      "Because the free electrons evaporate immediately into surrounding gas pockets",
+      "Because every mobile free electron and hole originates internally from neutral atoms, maintaining equal total counts of protons and electrons (प्रोटॉन और इलेक्ट्रॉनों की कुल संख्या समान होना)",
+      "Because the material undergoes permanent structural stabilization via cross-linked resins",
+      "Because the system experiences a total loss of ionizable phosphate backbones"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Semiconductors remain electrically neutral under all operational states. The mobile free electrons and positive holes are generated internally by thermal cleavage of bonds within neutral atoms, ensuring the total number of protons in the lattice exactly balances the total number of electrons."
+  },
+  {
+    "p_id": "bpsc_semi_v4_11",
+    "qe": "What terminology defines a pure, chemically unmodified semiconductor crystal that contains zero intentional dopant impurities?",
+    "qh": "एक शुद्ध, रासायनिक रूप से अपरिवर्तित अर्धचालक क्रिस्टल को क्या कहा जाता है जिसमें कोई भी अशुद्धि (impurities) नहीं मिलाई गई हो?",
+    "o": [
+      "Extrinsic structural network array",
+      "Intrinsic Semiconductor (आंतरिक / शुद्ध अर्धचालक / Intrinsic)",
+      "Zwitterionic non-conducting cell block",
+      "Thermosetting dynamic network layout"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> A pure, chemically un-doped semiconductor crystal is termed an intrinsic semiconductor. Its electrical conductivity is driven solely by internal thermal excitations across the native bandgap."
+  },
+  {
+    "p_id": "bpsc_semi_v4_12",
+    "qe": "What precise mathematical allocation balances the concentrations of free electrons ($n_e$) and positive holes ($n_h$) inside an intrinsic semiconductor?",
+    "qh": "एक आंतरिक अर्धचालक (intrinsic semiconductor) के भीतर मुक्त इलेक्ट्रॉनों ($n_e$) और धनात्मक होलों ($n_h$) की सांद्रता का संतुलन क्या होता है?",
+    "o": [
+      "The count of free electrons is double the total hole count",
+      "The concentration of free electrons exactly equals the hole concentration ($n_e = n_h = n_i$) (इलेक्ट्रॉन और होल की सांद्रता का पूर्णतः समान होना)",
+      "The concentration values drop to zero baseline dimensions simultaneously",
+      "The ratio changes properties dynamically based on solution pressure loops"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> In an intrinsic semiconductor, every free electron that breaks a covalent bond to enter the conduction band leaves behind exactly one electronic vacancy (hole) in the valence band. Therefore, their concentrations are equal ($n_e = n_h = n_i$)."
+  },
+  {
+    "p_id": "bpsc_semi_v4_13",
+    "qe": "What terminology defines the purposeful technology modification step where specific trace impurities are introduced into a pure semiconductor to modify its conductivity?",
+    "qh": "एक शुद्ध अर्धचालक में उसकी चालकता बदलने के लिए विशिष्ट सूक्ष्म अशुद्धियों को मिलाने की प्रक्रिया को क्या कहा जाता है?",
+    "o": [
+      "Homolytic radical propagation",
+      "Doping (डोपिंग / मादन)",
+      "Bredig's mechanical dispersion step",
+      "Ziegler-Natta coordination assembly loops"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Doping is the intentional introduction of trace amounts of specific impurity atoms (dopants) into an intrinsic semiconductor lattice to drastically increase its mobile charge carrier concentration and enhance electrical conductivity."
+  },
+  {
+    "p_id": "bpsc_semi_v4_14",
+    "qe": "What name is assigned to a semiconductor that has undergone chemical modification via doping, transforming it into an impure system?",
+    "qh": "डोपिंग के माध्यम से रासायनिक रूप से संशोधित किए गए एक अशुद्ध अर्धचालक तंत्र को क्या नाम दिया गया है?",
+    "o": [
+      "Intrinsic standard baseline crystal",
+      "Extrinsic Semiconductor (बाह्य / अशुद्ध अर्धचालक / Extrinsic)",
+      "Unbranched non-ionic surfactant unit",
+      "Cross-linked network alignment factor grid"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> A semiconductor containing intentional dopant impurities that dominate its electrical conductivity behavior is classified as an extrinsic semiconductor. These are subdivided into n-type and p-type materials."
+  },
+  {
+    "p_id": "bpsc_semi_v4_15",
+    "qe": "Which specific class of dopant impurity atoms must a technician integrate into a Silicon lattice to synthesize an n-type extrinsic semiconductor?",
+    "qh": "एक एन-टाइप (n-type) बाह्य अर्धचालक को संश्लेषित करने के लिए तकनीशियन को सिलिकॉन जाली में किस विशिष्ट वर्ग की अशुद्धि परमाणु को एकीकृत करना चाहिए?",
+    "o": [
+      "Trivalent impurity atoms displaying three valence links",
+      "Pentavalent impurity atoms containing five valence electrons (पंच-संयोजक अशुद्धि / Pentavalent)",
+      "Monovalent structures operating with a single covalent segment",
+      "Inert metal fillers that form stable three-dimensional starches"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> To produce an n-type semiconductor, an intrinsic tetravalent crystal (like Silicon) is doped with pentavalent atoms (such as Phosphorus, Arsenic, or Antimony) that display five valence electrons in their outer shell."
+  },
+  {
+    "p_id": "bpsc_semi_v4_16",
+    "qe": "Why does doping a pure Silicon crystal with pentavalent atoms like Phosphorus yield an abundance of mobile free electrons inside the lattice?",
+    "qh": "फॉस्फोरस जैसे पंच-संयोजक परमाणुओं के साथ एक शुद्ध सिलिकॉन क्रिस्टल को डोप करने से जाली के भीतर प्रचुर मात्रा में मुक्त इलेक्ट्रॉन क्यों उत्पन्न होते हैं?",
+    "o": [
+      "Because pentavalent atoms dissolve the surrounding sugar rings into gases",
+      "Four of the dopant's valence electrons form covalent bonds with adjacent Silicon atoms, leaving the fifth electron loosely bound and free to conduct (पांचवां इलेक्ट्रॉन बंध मुक्त और स्वतंत्र होना)",
+      "Because the dopant forces the entire lattice to cross-link into an insoluble plastic",
+      "Because pentavalent atoms complete the step-growth condensation of amino residues"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> A pent占valet dopant atom substitutes into a Silicon lattice site. Four of its valence electrons form covalent bonds with the four neighboring Silicon atoms. The fifth valence electron is left unbonded and weakly held, easily becoming a mobile free electron."
+  },
+  {
+    "p_id": "bpsc_semi_v4_17",
+    "qe": "Which mobile charge carrier population acts as the majority carrier group inside an n-type extrinsic semiconductor?",
+    "qh": "एक एन-टाइप (n-type) बाह्य अर्धचालक के भीतर कौन सा आवेश वाहक समूह बहुसंख्यक वाहक (majority carriers) के रूप में कार्य करता है?",
+    "o": [
+      "Positive electronic vacancies termed holes",
+      "Free electrons (मुक्त इलेक्ट्रॉन / electrons)",
+      "Positively charged heavy atomic nuclei",
+      "Zwitterionic static non-conducting ion groups"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> In an n-type semiconductor, pentavalent dopants create a high concentration of mobile free electrons. Consequently, free electrons function as the majority charge carriers, while thermally generated holes are the minority carriers ($n_e \\gg n_h$)."
+  },
+  {
+    "p_id": "bpsc_semi_v4_18",
+    "qe": "What specific class of dopant impurity atoms is required to synthesize a p-type extrinsic semiconductor from an intrinsic Silicon base?",
+    "qh": "एक आंतरिक सिलिकॉन बेस से पी-टाइप (p-type) बाह्य अर्धचालक को संश्लेषित करने के लिए किस विशिष्ट वर्ग के डोपेंट अशुद्धि परमाणु की आवश्यकता होती है?",
+    "o": [
+      "Pentavalent impurity atoms containing five valence segments",
+      "Trivalent impurity atoms possessing exactly three valence electrons (त्रि-संयोजक अशुद्धि / Trivalent)",
+      "Hexavalent arrays displaying six reactive covalent loops",
+      "Non-ionic straight chain alkane tail structures"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> To synthesize a p-type semiconductor, an intrinsic tetravalent crystal is doped with trivalent impurity atoms (such as Boron, Aluminum, or Indium) that possess exactly three valence electrons in their outer shell."
+  },
+  {
+    "p_id": "bpsc_semi_v4_19",
+    "qe": "What localized structural defect is created inside a Silicon lattice when a trivalent dopant atom like Aluminum substitutes into a site, lacking a fourth valence electron?",
+    "qh": "जब एल्युमिनियम जैसा त्रि-संयोजक डोपेंट परमाणु सिलिकॉन जाली में प्रतिस्थापित होता है, तो चौथे वैलेंस इलेक्ट्रॉन की कमी के कारण कौन सा स्थानीयकृत संरचनात्मक दोष उत्पन्न होता है?",
+    "o": [
+      "An unbranched non-ionic polyolefin sequence segment",
+      "An electronic vacancy or positive hole that can accept an electron (इलेक्ट्रॉनिक रिक्ति या धनात्मक होल / hole)",
+      "An automated AUG initiation codon cluster matrix",
+      "A rigid cross-linked phenol-formaldehyde polymer node"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> A trivalent dopant atom has only three valence electrons to share with four neighboring Silicon atoms. This leaves one covalent bond incomplete, creating an electronic vacancy or positive hole ($n_h \\gg n_e$) that can readily accept an electron from an adjacent bond."
+  },
+  {
+    "p_id": "bpsc_semi_v4_20",
+    "qe": "Which specific mobile charge carrier group operates as the majority carrier population inside a p-type extrinsic semiconductor?",
+    "qh": "एक पी-टाइप (p-type) बाह्य अर्धचालक के भीतर कौन सा विशिष्ट गतिशील आवेश वाहक समूह बहुसंख्यक वाहक (majority carriers) के रूप में कार्य करता है?",
+    "o": [
+      "Mobile free electrons in the conduction band",
+      "Positive electronic vacancies or holes in the valence band (धनात्मक छिद्र या होल / holes)",
+      "Anionic intermediate polymer chain segments",
+      "Fixed heavy donor atomic core lattices"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> In a p-type semiconductor, trivalent dopants explicitly create an abundance of electronic vacancies. This makes positive holes the majority charge carriers in the valence band, while free electrons serve as minority carriers."
+  },
+  {
+    "p_id": "bpsc_semi_v4_21",
+    "qe": "What cornerstone solid-state relation describes the Mass Action Law utilized by electronic engineers to calculate charge carrier equilibrium ratios?",
+    "qh": "इलेक्ट्रॉनिक इंजीनियरों द्वारा आवेश वाहक संतुलन अनुपात की गणना करने के लिए उपयोग किए जाने वाले मास एक्शन लॉ (Mass Action Law) को कौन सा ठोस-अवस्था संबंध प्रदर्शित करता है?",
+    "o": [
+      "$n_e + n_h = n_i$",
+      "$n_e \\cdot n_h = n_i^2$ (मास एक्शन लॉ समीकरण)",
+      "$\\alpha = \\frac{\\Lambda_m}{\\Lambda_m^\\circ}$",
+      "$E = E^\\circ - \\frac{0.059}{n}\\log K_C$"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> The Mass Action Law states that under thermal equilibrium conditions, the product of the free electron concentration ($n_e$) and the hole concentration ($n_h$) is a constant for a given semiconductor at a specific temperature, equal to the square of its intrinsic carrier concentration ($n_e \\cdot n_h = n_i^2$)."
+  },
+  {
+    "p_id": "bpsc_semi_v4_22",
+    "qe": "Under what precise architectural naming convention is the discrete localized energy state created by a pentavalent dopant atom designated inside an n-type semiconductor diagram?",
+    "qh": "एक एन-टाइप अर्धचालक आरेख के भीतर एक पंच-संयोजक डोपेंट परमाणु द्वारा निर्मित स्थानीयकृत ऊर्जा स्तर को किस नाम से निर्दिष्ट किया जाता है?",
+    "o": [
+      "The lower structural valence band limit",
+      "The Donor Energy Level situated just below the conduction band (दाता ऊर्जा स्तर / Donor Level)",
+      "The non-polar open-chain aliphatic forbidden slot",
+      "The flexible non-conducting surrounding plastic frame baseline"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Pentavalent dopants create discrete energy levels called donor energy levels. These levels are located just below the bottom of the conduction band, allowing their weakly bound fifth electrons to easily jump into conduction states with minimal energy input ($\\sim 0.01\\text{ eV}$)."
+  },
+  {
+    "p_id": "bpsc_semi_v4_23",
+    "qe": "Where is the discrete Acceptor Energy Level located within the energy band diagram of a p-type extrinsic semiconductor?",
+    "qh": "एक पी-टाइप बाह्य अर्धचालक के ऊर्जा बैंड आरेख के भीतर विशिष्ट स्वीकर्ता ऊर्जा स्तर (Acceptor Energy Level) कहाँ स्थित होता है?",
+    "o": [
+      "Just above the top of the valence band (वैलेंस बैंड के ठीक ऊपर)",
+      "Deep inside the center of the conduction band channels",
+      "Overlapping symmetrically with metallic conduction boundaries",
+      "Separated entirely from the solid-state matrix layout"
+    ],
+    "a": 0,
+    "e": "<b>Explanation:</b> In a p-type semiconductor, trivalent dopant atoms create an acceptor energy level situated just above the top of the valence band. This allows valence electrons from adjacent bonds to easily jump into these states, creating mobile holes in the valence band."
+  },
+  {
+    "p_id": "bpsc_semi_v4_24",
+    "qe": "What architectural boundary zone is generated at the physical junction where a p-type semiconductor interface meets an n-type semiconductor domain?",
+    "qh": "उस संरचनात्मक सीमा क्षेत्र को क्या कहा जाता है जो उस भौतिक स्थान पर उत्पन्न होता है जहाँ एक पी-टाइप अर्धचालक इंटरफ़ेस एक एन-टाइप अर्धचालक डोमेन से मिलता है?",
+    "o": [
+      "The single-stranded terminal poly-A tail line",
+      "The Depletion Region / PN Junction (अक्षय क्षेत्र / डिप्लीशन क्षेत्र / PN जंक्शन)",
+      "The multiple cloning restriction sequence slot",
+      "The linear unbranched caprolactam line zone"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Joining p-type and n-type semiconductor domains creates a PN junction. Mobile charge carriers diffuse across this interface, leaving behind fixed, uncompensated dopant ions that establish an uninsulated boundary zone known as the depletion region."
+  },
+  {
+    "p_id": "bpsc_semi_v4_25",
+    "qe": "What double workflow mechanical processes occur simultaneously across the boundary interface during the initial formation of a PN junction?",
+    "qh": "एक पीएन जंक्शन (PN junction) के प्रारंभिक निर्माण के दौरान सीमा इंटरफ़ेस पर एक साथ कौन सी दो प्रक्रियाएं होती हैं?",
+    "o": [
+      "Saponification and condensation polymerization cycles",
+      "Diffusion of majority carriers and Drift of minority carriers under the internal field (विसरण और अपवाह / Diffusion and Drift)",
+      "The continuous cross-linking of surface carbon molecules using peroxide initiators",
+      "The spontaneous reduction of mobile free radicals into volatile gases"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> PN junction formation is governed by two simultaneous charge transport processes: diffusion (driven by concentration gradients, where majority carriers cross the junction) and drift (driven by the resulting internal electric field, moving minority carriers in the opposite direction)."
+  },
+  {
+    "p_id": "bpsc_semi_v4_26",
+    "qe": "Why does the migration of mobile charge carriers across a freshly formed PN interface leave a region entirely depleted of free carriers near the junction?",
+    "qh": "एक नए बने पीएन इंटरफ़ेस पर गतिशील आवेश वाहकों के प्रवास के कारण जंक्शन के पास मुक्त वाहकों से पूरी तरह से खाली क्षेत्र (depleted region) क्यों बन जाता है?",
+    "o": [
+      "Because the carriers transform spontaneously into an amorphous starch layer",
+      "Diffusing free electrons and holes recombine and annihilate each other near the junction, leaving behind immobile, fixed charged dopant ions (मुक्त इलेक्ट्रॉनों और होलों का परस्पर पुनर्संयोजन होना)",
+      "Because the carriers form a permanent three-dimensional cross-linked network that stalls division",
+      "Because the interface experiences a complete loss of ionizable phosphate groups"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> As majority carriers diffuse across the junction due to concentration differences, free electrons from the n-side and holes from the p-site recombine near the interface. This annihilation leaves behind fixed, immobile donor ($+$) and acceptor ($-$) ions, creating a carrier-free depletion region."
+  },
+  {
+    "p_id": "bpsc_semi_v4_27",
+    "qe": "What electrostatic milestone establishes the internal 'Potential Barrier' ($V_B$) that halts further majority carrier diffusion across a PN junction?",
+    "qh": "कौन सा इलेक्ट्रोस्टैटिक मील का पत्थर आंतरिक 'विभव अवरोध' (Potential Barrier - $V_B$) स्थापित करता है जो पीएन जंक्शन पर बहुसंख्यक वाहकों के विसरण को रोकता है?",
+    "o": [
+      "The random alignment of non-polar linear surfactant molecules",
+      "The internal electric field set up by the immobile, fixed charged ions in the depletion region, which opposes further majority carrier migration (स्थिर आयनों द्वारा निर्मित आंतरिक विद्युत क्षेत्र)",
+      "The complete conversion of purine loops into volatile open-chain amides",
+      "The total presence of short-chain aromatic links that absorb moisture"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> The fixed immobile ions left behind in the depletion region establish an internal electric field pointing from the positive n-side ions to the negative p-side ions. This field sets up an electrostatic barrier (potential barrier, $V_B$) that opposes and eventually halts further majority carrier diffusion."
+  },
+  {
+    "p_id": "bpsc_semi_v4_28",
+    "qe": "What specific operational value parameters describe the baseline internal potential barrier values ($V_B$) for Germanium and Silicon PN junctions at room temperature?",
+    "qh": "कमरे के तापमान पर जर्मेनियम और सिलिकॉन पीएन जंक्शनों के लिए विशिष्ट आंतरिक विभव अवरोध मान (Potential Barrier - $V_B$) क्या होते हैं?",
+    "o": [
+      "Approximately $10\\text{ V}$ and $5\\text{ V}$ high voltage thresholds respectively",
+      "Approximately $0.3\\text{ V}$ for Germanium and $0.7\\text{ V}$ for Silicon (जर्मेनियम के लिए 0.3 V तथा सिलिकॉन के लिए 0.7 V)",
+      "Exactly zero net thermodynamic volts across both systems",
+      " Shifting metrics that scale with the total volume of blood plasma fluids"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> The internal potential barrier ($V_B$) built across a PN junction depends on the semiconductor material's bandgap. At standard room temperature, the barrier potential is approximately $0.3\\text{ V}$ for Germanium devices and $0.7\\text{ V}$ for Silicon devices."
+  },
+  {
+    "p_id": "bpsc_semi_v4_29",
+    "qe": "Which specific physical terminal connection guidelines define the application of 'Forward Biasing' to a PN junction diode circuit?",
+    "qh": "कौन से विशिष्ट भौतिक टर्मिनल कनेक्शन दिशानिर्देश एक पीएन जंक्शन डायोड सर्किट में 'फॉरवर्ड बायसिंग' (Forward Biasing) के अनुप्रयोग को परिभाषित करते हैं?",
+    "o": [
+      "The p-side is connected to the negative terminal and n-side to the positive terminal of the external battery",
+      "The p-side is connected to the positive terminal and the n-side is connected to the negative terminal of the external battery (p-सिरे को धनात्मक और n-सिरे को ऋणात्मक टर्मिनल से जोड़ना)",
+      "Both terminals are linked directly to an uncharged non-polar polyolefin line",
+      "The connections are alternated rapidly using a high-voltage mechanical oscillator"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Forward biasing is achieved by connecting the positive terminal of an external voltage source to the p-type region and the negative terminal to the n-type region of the diode, opposing the internal potential barrier."
+  },
+  {
+    "p_id": "bpsc_semi_v4_30",
+    "qe": "What physical structural change happens to the depletion layer width and the net potential barrier profile when a diode is forward biased?",
+    "qh": "जब एक डायोड फॉरवर्ड बायस (forward biased) होता है, तो उसकी अक्षय परत (depletion layer) की चौड़ाई और शुद्ध विभव अवरोध प्रोफ़ाइल में क्या संरचनात्मक परिवर्तन होता है?",
+    "o": [
+      "The depletion region broadens extensively, increasing internal resistance",
+      "Both the width of the depletion layer and the effective height of the potential barrier decrease significantly (अक्षय परत की चौड़ाई और विभव अवरोध की ऊंचाई का घटना)",
+      "The layer dissolves completely into an amorphous cross-linked network layer",
+      "The configuration transforms spontaneously into an unbranched gas phase"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> In a forward-biased setup, the applied external voltage opposes the internal electric field of the junction. This lowers the effective potential barrier ($V_B - V$) and shrinks the depletion layer width, allowing majority carriers to diffuse across the interface."
+  },
+  {
+    "p_id": "bpsc_semi_v4_31",
+    "qe": "What is the typical current range and primary charge carrier group responsible for generating current in a forward-biased PN junction?",
+    "qh": "एक फॉरवर्ड-बायस पीएन जंक्शन में धारा उत्पन्न करने के लिए मुख्य रूप से कौन सा आवेश वाहक समूह जिम्मेदार होता है, और इसकी विशिष्ट सीमा क्या होती है?",
+    "o": [
+      "Micro-amperes ($\\mu\\text{A}$) driven entirely by minority carrier drift loops",
+      "Milli-amperes (\\text{mA}) driven predominantly by the diffusion of majority charge carriers (मिली-एम्पियर सीमा; बहुसंख्यक वाहकों के विसरण द्वारा संचालित)",
+      "Kilo-amperes (\\text{kA}) flowing across alternative dicarboxylic polymer channels",
+      "Zero net current due to absolute common-ion blocking parameters"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Forward bias allows majority carriers to cross the narrowed junction, producing a relatively large diffusion current measured in the milli-ampere ($\\text{mA}$) range for standard electronic components."
+  },
+  {
+    "p_id": "bpsc_semi_v4_32",
+    "qe": "What structural name is assigned to the threshold voltage in a forward IV characteristic curve, beyond which the current begins to rise sharply?",
+    "qh": "फॉरवर्ड IV विशेषता वक्र (characteristic curve) में उस दहलीज वोल्टेज (threshold voltage) को क्या नाम दिया गया है, जिसके बाद धारा तेजी से बढ़ने लगती है?",
+    "o": [
+      "The reverse breakdown voltage threshold",
+      "The Knee Voltage or Cut-in Voltage (नी वोल्टेज / Knee Voltage या कट-इन वोल्टेज)",
+      "The homolytic chain termination potential slot",
+      "The non-ionic linear surfactant impedance node"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> The voltage point on a forward-biased characteristic curve where the applied potential completely overcomes the internal potential barrier, triggering a sharp, non-linear surge in current, is termed the knee voltage or cut-in voltage."
+  },
+  {
+    "p_id": "bpsc_semi_v4_33",
+    "qe": "Which specific technical terminal connection sequence sets up a 'Reverse Biasing' configuration across a PN junction diode?",
+    "qh": "कौन सा विशिष्ट तकनीकी टर्मिनल कनेक्शन अनुक्रम एक पीएन जंक्शन डायोड में 'रिवर्स बायसिंग' (Reverse Biasing) कॉन्फ़िगरेशन सेट करता है?",
+    "o": [
+      "The p-side is connected to the positive terminal and the n-side to the negative terminal of the battery",
+      "The p-side is connected to the negative terminal and the n-side is connected to the positive terminal of the external battery (p-सिरे को ऋणात्मक और n-सिरे को धनात्मक टर्मिनल से जोड़ना)",
+      "Both domains are short-circuited directly via an unbranched linear alkane line",
+      "The interfaces are insulated using a three-dimensional cross-linked phenolic mesh"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Reverse biasing is established by connecting the negative terminal of an external battery source to the p-type region and the positive terminal to the n-type region of the semiconductor device."
+  },
+  {
+    "p_id": "bpsc_semi_v4_34",
+    "qe": "What direct morphological change occurs to the depletion region width when an external reverse bias voltage is applied to a diode?",
+    "qh": "जब डायोड पर बाहरी रिवर्स बायस वोल्टेज लगाया जाता है, तो उसकी अक्षय क्षेत्र (depletion region) की चौड़ाई में क्या सीधा परिवर्तन होता है?",
+    "o": [
+      "The depletion region shrinks down to zero width parameters immediately",
+      "The depletion layer width widens significantly, and the effective potential barrier height increases (अक्षय परत की चौड़ाई का बढ़ना और विभव अवरोध का मजबूत होना)",
+      "The boundary layer transforms into an unbranched polyolefin tail layout",
+      "The interface experiences a total loss of ionizable chemical groups"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> In a reverse-biased configuration, the external applied voltage aligns in the same direction as the internal electric field of the junction. This acts to pull mobile majority carriers away from the interface, broadening the depletion layer width and increasing the potential barrier height ($V_B + V$)."
+  },
+  {
+    "p_id": "bpsc_semi_v4_35",
+    "qe": "What is the typical current magnitude range encountered in a reverse-biased diode before reaching breakdown, and which carriers generate it?",
+    "qh": "ब्रेकडाउन तक पहुँचने से पहले एक रिवर्स-बायस डायोड में धारा का विशिष्ट परिमाण क्या होता है, और इसे कौन से वाहक उत्पन्न करते हैं?",
+    "o": [
+      "Large milli-amperes ($\\text{mA}$) driven by majority carrier diffusion arrays",
+      "Extremely small micro-amperes (\\mu\\text{A}) or nano-amperes driven by minority carrier drift (अत्यंत सूक्ष्म माइक्रो-एम्पियर सीमा; अल्पसंख्यक वाहकों के अपवाह द्वारा संचालित)",
+      "Volatile dicarboxylic fluid current loops traveling via open chain sets",
+      "Zero absolute current due to complete thermal insulation properties"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Reverse bias blocks majority carriers completely. The remaining leakage current is generated by the drift of minority carriers swept across the junction by the electric field, producing an extremely small current measured in micro-amperes ($\\mu\\text{A}$) or nano-amperes."
+  },
+  {
+    "p_id": "bpsc_semi_v4_36",
+    "qe": "What terminology defines the critical high voltage threshold in a reverse-biased diode curve where the system experiences a sudden, massive surge in current?",
+    "qh": "रिवर्स-बायस डायोड वक्र में उस महत्वपूर्ण उच्च वोल्टेज दहलीज (high voltage threshold) को क्या कहा जाता है जहाँ तंत्र में अचानक और भारी मात्रा में धारा का प्रवाह होने लगता है?",
+    "o": [
+      "The forward cut-in threshold value",
+      "The Reverse Breakdown Voltage (रिवर्स ब्रेकडाउन वोल्टेज / Breakdown Voltage)",
+      "The single-base variation polymer limit",
+      "The non-conducting protective plastic breakdown channel"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> If the reverse bias voltage is increased to a critical threshold, the high internal electric field triggers a sharp, sudden breakdown mechanism, resulting in an abrupt, massive surge in current known as the reverse breakdown voltage."
+  },
+  {
+    "p_id": "bpsc_semi_v4_37",
+    "qe": "Why is the internal electrical resistance of a semiconductor material characterized as 'dynamic' rather than matching a fixed linear value?",
+    "qh": "एक अर्धचालक पदार्थ के आंतरिक विद्युत प्रतिरोध को एक निश्चित रैखिक मान के बजाय 'गतिशील' (dynamic) क्यों कहा जाता है?",
+    "o": [
+      "Because the material turns volatile and disperses under standard current",
+      "Because the current-voltage (IV) characteristic curve is non-linear, meaning resistance changes continuously depending on the operating voltage ($\r_d = \\frac{\\Delta V}{\\Delta I}$) (IV वक्र का गैर-रैखिक होना जिससे प्रतिरोध लगातार बदलता है)",
+      "Because the semiconductor is composed entirely of cross-linked phenolic matrices",
+      "Because the backbones lose their vital phosphate groups via temperature shifts"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Semiconductors do not obey Ohm's law linearly. Their current-voltage relationship forms a non-linear curve, meaning the resistance value depends on the specific operational point. It is calculated dynamically as the ratio of a small change in voltage to a small change in current ($\\Delta V / \\Delta I$)."
+  },
+  {
+    "p_id": "bpsc_semi_v4_38",
+    "qe": "What explicit operational task defines the primary function of an electronic circuit block designed to act as a 'rectifier'?",
+    "qh": "एक 'रेक्टिफायर' (rectifier) के रूप में कार्य करने के लिए डिज़ाइन किए गए इलेक्ट्रॉनिक सर्किट ब्लॉक का प्राथमिक कार्य क्या होता है?",
+    "o": [
+      "To amplify weak audio frequencies into high decibel audio tracks",
+      "To convert alternating current (AC) into unidirectional direct current (DC) (प्रत्यावर्ती धारा (AC) को दिष्ट धारा (DC) में बदलना)",
+      "To initiate the homolytic free-radical addition of commercial polymers",
+      "To isolate single nucleotide polymorphisms across genomic DNA pools"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> A rectifier is an electronic circuit engineered to convert alternating current (AC), which periodically reverses direction, into unidirectional direct current (DC) by leveraging the directional conduction properties of diodes."
+  },
+  {
+    "p_id": "bpsc_semi_v4_39",
+    "qe": "How does a 'half-wave rectifier' circuit process an incoming full-cycle alternating current (AC) input signal?",
+    "qh": "एक 'हाफ-वेव रेक्टिफायर' (half-wave rectifier) सर्किट आने वाले पूर्ण-चक्र प्रत्यावर्ती धारा (AC) इनपुट सिग्नल को कैसे संसाधित करता है?",
+    "o": [
+      "It amplifies both halves of the wave symmetrically to double the total output voltage",
+      "It permits only one half-cycle of the AC input to pass to the output while entirely blocking the alternating half-cycle (केवल आधे चक्र को गुजरने देना और शेष आधे को अवरुद्ध करना)",
+      "It converts the entire input wave into a stable non-polar polyolefin liquid line",
+      "It drops the effective output frequency of the signal down to exactly zero"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> A half-wave rectifier employs a single diode configuration. It conducts current only during the half-cycle where the diode is forward-biased, blocking the alternate half-cycle completely, thereby generating a pulsing, discontinuous DC output."
+  },
+  {
+    "p_id": "bpsc_semi_v4_40",
+    "qe": "What architectural enhancement distinguishes the operational behavior of a 'full-wave rectifier' circuit from a half-wave system?",
+    "qh": "एक 'फुल-वेव रेक्टिफायर' (full-wave rectifier) सर्किट का परिचालन व्यवहार हाफ-वेव सिस्टम से किस प्रकार भिन्न होता है?",
+    "o": [
+      "It uses automated chemical chain retarders to slow down current velocity",
+      "It utilizes a multi-diode arrangement (such as a center-tapped or bridge configuration) to rectify both half-cycles of the AC wave into a continuous unidirectional DC output (दोनों आधे-चक्रों को निरंतर दिष्ट धारा में बदलना)",
+      "It converts both halves of the incoming wave into a single volatile dicarboxylic form",
+      "It eliminates the necessity for an output load resistance component entirely"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> A full-wave rectifier utilizes multiple diodes (e.g., a two-diode center-tapped configuration or a four-diode bridge configuration) to ensure current flows through the output load in the same direction during both the positive and negative half-cycles of the AC input, yielding a continuous unidirectional DC output."
+  },
+  {
+    "p_id": "bpsc_semi_v4_41",
+    "qe": "Which specific organic compound functions as the initial monomer building block required to construct the synthetic rubber elastomer known as Neoprene?",
+    "qh": "सिंथेटिक इलास्टोमर नियोप्रीन (Neoprene) जैसे सिंथेटिक रबर का निर्माण करने के लिए आवश्यक मुख्य मोनोमर बिल्डिंग ब्लॉक के रूप में कौन सा विशिष्ट कार्बनिक अणु कार्य करता है?",
+    "o": [
+      "Isoprene (2-methylbuta-1,3-diene)",
+      "Chloroprene (2-chlorobuta-1,3-diene) (क्लोरोप्रीन मोनोमर)",
+      "Acrylonitrile (prop-2-enonitrile)",
+      "Styrene (phenylethylene) vinyl aromatic"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Neoprene is a durable synthetic rubber produced by the linear addition polymerization of chloroprene monomers, chemically designated as 2-chlorobuta-1,3-diene."
+  },
+  {
+    "p_id": "bpsc_semi_v4_42",
+    "qe": "What unique conformational property provides long-term kinetic stability to colloidal dispersions, preventing single particles from colliding and precipitating?",
+    "qh": "कौन सा अनूठा संरचनात्मक पैरामीटर कोलाइडल फैलाव (colloidal dispersions) को दीर्घकालिक गतिज स्थिरता प्रदान करता है, एकल कणों को आपस में टकराने और अवक्षेपित होने से रोकता है?",
+    "o": [
+      "The random helix coiling of unbranched polyolefin branches",
+      "The presence of equal and similar electrical charges on all dispersed colloidal particles, causing mutual electrostatic repulsion (कणों पर समान विद्युत आवेश के कारण प्रतिकर्षण)",
+      "The complete conversion of all surface functional groups into volatile non-ionic ethers",
+      "The total presence of short-chain aromatic links that absorb moisture"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Colloidal particles carry a net electrical charge of the same sign. The resulting mutual electrostatic repulsion prevents the particles from aggregating into larger clusters when they collide, stabilizing the colloidal dispersion."
+  },
+  {
+    "p_id": "bpsc_semi_v4_43",
+    "qe": "What direct mechanical change occurs to the native protein architecture inside an egg white when it undergoes thermal coagulation upon boiling?",
+    "qh": "जब एक अंडे की सफेदी को उबालने पर थर्मल जमावट (thermal coagulation) होती है, तो उसके भीतर की प्राकृतिक प्रोटीन संरचना में क्या सीधा यांत्रिक परिवर्तन होता है?",
+    "o": [
+      "The covalent peptide linkages are broken, returning the protein to single units",
+      "The native hydrogen bonds are disrupted, causing structural globules to unfold and helices to uncoil, resulting in a loss of biological activity (विकृतीकरण या डिनेचुरेशन)",
+      "The carbon backbone converts into a volatile open-chain gas cloud",
+      "The functional domains are reduced to non-ionic starch granules"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Boiling an egg white introduces thermal stress that disrupts non-covalent hydrogen bonds and structural constraints. This causes the folded globular proteins to uncoil and denature, cross-linking randomly into an insoluble white mass."
+  },
+  {
+    "p_id": "bpsc_semi_v4_44",
+    "qe": "What is the correct mathematical expression used to calculate the degree of dissociation ($\\alpha$) of a weak electrolyte from its molar conductivity values?",
+    "qh": "इलेक्ट्रोलाइट मानों से कमजोर इलेक्ट्रोलाइट के विघटन की डिग्री ($\\alpha$) की गणना करने के लिए उपयोग किया जाने वाला सही गणितीय व्यंजक क्या है?",
+    "o": [
+      "$\\alpha = \\Lambda_m \\cdot \\Lambda_m^\\circ$",
+      "$\\alpha = \\frac{\\Lambda_m}{\\Lambda_m^\\circ}$ (विघटन की डिग्री सूत्र)",
+      "$\\alpha = \\frac{\\alpha \\cdot 1000}{M}$",
+      "$\\alpha = nF E^\\circ_{cell}$"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> The degree of dissociation ($\\alpha$) of a weak electrolyte at a specific concentration is calculated as the ratio of its molar conductivity ($\\Lambda_m$) to its limiting molar conductivity ($\\Lambda_m^\\circ$): $\\alpha = \\frac{\\Lambda_m}{\\Lambda_m^\\circ}$."
+  },
+  {
+    "p_id": "bpsc_semi_v4_45",
+    "qe": "What is the core mathematical formula used to calculate the Molar Conductivity ($\\Lambda_m$) of a solution from its specific conductivity ($\\kappa$) and molarity ($M$) in standard laboratory units?",
+    "qh": "मानक प्रयोगशाला इकाइयों में समाधान की विशिष्ट चालकता ($\\kappa$) और मोलरिटी ($M$) से उसकी मोलर चालकता ($\\Lambda_m$) की गणना करने के लिए उपयोग किया जाने वाला मुख्य गणितीय सूत्र क्या है?",
+    "o": [
+      "$\\Lambda_m = \\frac{M \\cdot \\kappa}{1000}$",
+      "$\\Lambda_m = \\frac{1000 \\cdot \\kappa}{M}$ (मोलर चालकता सूत्र)",
+      "$\\Lambda_m = \\kappa \\cdot G^*$",
+      "$\\Lambda_m = \\frac{\\kappa \\cdot R}{M}$"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> When conductivity $\\kappa$ is measured in $\\text{S}\\cdot\\text{cm}^{-1}$ and concentration $M$ is in $\\text{mol/L}$, the molar conductivity is calculated using the formula: $\\Lambda_m = \\frac{1000 \\cdot \\kappa}{M}$."
+  },
+  {
+    "p_id": "bpsc_semi_v4_46",
+    "qe": "Which specific organic compound is generated when a molecule of natural cane sugar (sucrose) undergoes acidic hydrolysis?",
+    "qh": "जब प्राकृतिक गन्ने की चीनी (सुक्रोज) का एक अणु अम्लीय जलअपघटन से गुजरता है तो कौन सा विशिष्ट कार्बनिक यौगिक उत्पन्न होता है?",
+    "o": [
+      "Two identical units of D-galactose",
+      "An equimolar mixture of D-glucose and D-fructose (ग्लूकोज एवं फ्रुक्टोज मिश्रण)",
+      "Two units of highly branched amylopectin",
+      "One molecule of glycine and one molecule of aminocaproic acid"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Hydrolyzing the disaccharide sucrose breaks its internal glycosidic linkage, releasing an equimolar mixture of one D-glucose molecule and one D-fructose molecule."
+  },
+  {
+    "p_id": "bpsc_semi_v4_47",
+    "qe": "What happens to the structure of the cyclic monomer caprolactam when it is heated with water to generate Nylon-6?",
+    "qh": "जब चक्रीय मोनोमर कैप्रोलैक्टम को नायलॉन-6 उत्पन्न करने के लिए पानी के साथ गर्म किया जाता है तो उसकी संरचना का क्या होता है?",
+    "o": [
+      "It cross-links into a three-dimensional thermosetting network containing methylene bridges",
+      "It undergoes hydrolytic ring-opening cleavage to yield an open amino acid chain that polymerizes into a polyamide (रिंग-ओपनिंग जलअपघटन)",
+      "It undergoes oxidation into a dibasic dicarboxylic acid fragment",
+      "It forms insoluble precipitates via the common-ion effect"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Heating caprolactam with water at elevated temperatures breaks its internal cyclic amide bond. This ring-opening hydrolytic step yields $\\varepsilon$-aminocaproic acid, which polymerizes into the linear polyamide chain of Nylon-6."
+  },
+  {
+    "p_id": "bpsc_semi_v4_48",
+    "qe": "What specific operational role does benzoyl peroxide assume when added to an alkene mixture during free-radical addition polymerization?",
+    "qh": "मुक्त-कण जोड़ पॉलीमराइजेशन के दौरान एल्कीन मिश्रण में मिलाए जाने पर बेंज़ोयल पेरोक्साइड क्या विशिष्ट परिचालन भूमिका निभाता है?",
+    "o": [
+      "It acts as a mechanical filler to increase the total density of the plastic block",
+      "It serves as a reaction initiator by undergoing homolytic cleavage to generate active free radicals (मुक्त मूलक आरंभक)",
+      "It functions as a chemical chemical inhibitor that immediately stops chain propagation",
+      "It clarifies the basification parameters of the solution via acid-base buffer mechanisms"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Benzoyl peroxide is thermally unstable and easily undergoes homolytic cleavage at its oxygen-oxygen single bond ($-O-O-$). This dissociation generates active phenyl free radicals that attack alkene monomers to initiate free-radical chain-growth polymerization."
+  },
+  {
+    "p_id": "bpsc_semi_v4_49",
+    "qe": "Which specific organic functional group is generated when the carboxyl group of one amino acid condenses with the amino group of an adjacent unit to build a protein?",
+    "qh": "कौन सा विशिष्ट कार्बनिक कार्यात्मक समूह तब उत्पन्न होता है जब एक अमीनो एसिड का कार्बोक्सिल समूह प्रोटीन बनाने के लिए आसन्न इकाई के अमीनो समूह के साथ संघनित होता है?",
+    "o": [
+      "Glycosidic connection bridging rings together",
+      "Peptide linkage / Amide bond (पेप्टाइड बंध / एमाइड लिंक)",
+      "Phosphodiester coordinate bridge balancing frames",
+      "Sulfur disulfide cross-link system anchoring paths"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Combining the alpha-carboxyl group of one amino acid with the alpha-amino center of another eliminates a water molecule, establishing a covalent amide linkage ($-CONH-$) termed a peptide bond or peptide linkage."
+  },
+  {
+    "p_id": "bpsc_semi_v4_50",
+    "qe": "What happens to the structure of linear Novolac strands if they are mixed with excess formaldehyde gas and subjected to high thermal curing?",
+    "qh": "यदि रैखिक नोवोलेक स्ट्रैंड्स को अतिरिक्त फॉर्मलाडेहाइड गैस के साथ मिला जाए और उच्च थर्मल क्यूरिंग के अधीन किया जाए तो उनकी संरचना का क्या होता है?",
+    "o": [
+      "They break down into volatile liquid phenols via hydrolytic cleavage",
+      "They develop extensive covalent methylene cross-links, transforming the linear resin into the rigid thermosetting network Bakelite (क्रॉस-लिंक्ड बैकेलाइट नेटवर्क)",
+      "They convert into an unbranched biodegradable polyester chain configuration",
+      "They form an explicit water-soluble uncharged non-ionic surfactant lattice balanced by sodium"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Novolac is a linear condensation intermediate. Heating Novolac with excess formaldehyde introduces methylene linkages that cross-link the chains into a permanent three-dimensional network, creating the infusible thermosetting polymer Bakelite."
+  }
+]
