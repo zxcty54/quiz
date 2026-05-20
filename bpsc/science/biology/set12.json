@@ -1,0 +1,327 @@
+[
+  {
+    "p_id": "bpsc_mol_v4_221",
+    "qe": "What precise mechanical initialization task is coordinated by the 5'-methylated guanine cap during eukaryotic translation?",
+    "qh": "यूकेरियोट्स में ट्रांसलेशन (translation) की शुरुआत के दौरान 5'-मिथाइलेटेड ग्वानिन कैप (methylated guanine cap) कौन सा विशिष्ट कार्य संभालता है?",
+    "o": [
+      "It dissolves the nuclear lipid bilayer membrane natively",
+      "It facilitates the precise binding of mRNA to the smaller ribosomal subunit to initiate translation (छोटे राइबोसोमल सब-यूनिट से जुड़ना सुगम करना)",
+      "It catalyzes the homolytic cleavage of alkene double bonds",
+      "It provides the termination signal to decouple release factors"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> The 7-methylguanosine cap appended to the 5'-terminus of eukaryotic mRNA serves as a crucial recognition marker. It guides and anchors the transcript to the smaller ribosomal subunit ($40\\text{S}$), establishing the baseline template for translation initiation."
+  },
+  {
+    "p_id": "bpsc_mol_v4_222",
+    "qe": "What specific physiological benefit does the template-independent poly-A tail provide to a mature mRNA transcript inside the cytoplasm?",
+    "qh": "एक परिपक्व एमआरएनए (mRNA) में मौजूद पॉली-ए पूंछ (poly-A tail) मुख्य रूप से क्या कार्य करती है?",
+    "o": [
+      "It acts as a mechanical restriction endonuclease filter",
+      "It protects the transcript from exonuclease degradation, enhancing the longevity of mRNA's life (एमआरएनए की लंबी आयु या स्थिरता बढ़ाना)",
+      "It drives the rapid crystallization of amino acid chains",
+      "It converts the single-stranded molecule into an active zwitterion"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> The polyadenylation tail ($poly-A\\text{ tail}$) appended to the 3'-end of mature eukaryotic transcripts protects the molecule from cytoplasmic exonucleases. The length of this adenylate sequence is positively correlated with the longevity and stability of the mRNA."
+  },
+  {
+    "p_id": "bpsc_mol_v4_223",
+    "qe": "Through what precise post-transcriptional mechanism can a single eukaryotic structural gene code for multiple distinct isoproteins or protein variants?",
+    "qh": "किस विशिष्ट पोस्ट-ट्रांसक्रिप्शनल संशोधन द्वारा एक ही संरचनात्मक जीन कई अलग-अलग आइसोप्रोटीन (isoproteins) को कोड करने में सक्षम होता है?",
+    "o": [
+      "Continuous free-radical polymer chain propagation",
+      "Alternate splicing of exons in a tissue-specific or sex-specific manner (एक्जोन की वैकल्पिक स्प्लिसिंग / alternate splicing)",
+      "The complete conversion of purines into volatile aliphatic amides",
+      "The automatic common-ion precipitation of template mineral salts"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Eukaryotes utilize alternative splicing workflows. By selectively including or excluding specific coding exons during the processing of heterogeneous nuclear RNA ($hnRNA$), a single gene can produce different mature mRNA arrangements, encoding several distinct isoproteins."
+  },
+  {
+    "p_id": "bpsc_mol_v4_224",
+    "qe": "Why does the presence of high variability within Variable Number of Tandem Repeats (VNTRs) turn them into exceptional markers for forensic identification?",
+    "qh": "डीएनए फिंगरप्रिंटिंग में वेरिएबल नंबर ऑफ टेंडेम रिपीट्स (VNTRs) की उच्च परिवर्तनशीलता (variability) क्यों उपयोगी साबित होती है?",
+    "o": [
+      "VNTRs dissolve completely into unbranched starch segments under vacuum",
+      "The repeat sequence arrays display high individual-specificity and unique baseline variation patterns for every person (व्यक्ति-विशिष्ट और अद्वितीय होना)",
+      "VNTRs lack oxygen atoms entirely along their constitutional backbones",
+      "VNTRs cause the immediate cross-linking of linear nylon fibers"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Variable Number of Tandem Repeats (VNTRs) are mini-satellite loci with short nucleotide motifs repeated head-to-tail. The specific count of these repeats varies dramatically between individuals, providing unique genetic profiles used in forensic testing and paternity tracking."
+  },
+  {
+    "p_id": "bpsc_mol_v4_225",
+    "qe": "If a molecular biology researcher attempts to execute a complete Hershey-Chase virus tracking protocol using the non-radioactive heavy isotope $^{15}\\text{N}$ instead of $^{35}\\text{S}$, why will the results turn out to be inconclusive?",
+    "qh": "हर्षे-चेज़ प्रयोग में यदि $^{35}\\text{S}$ के स्थान पर गैर-रेडियोधर्मी भारी नाइट्रोजन आइसोटोप $^{15}\\text{N}$ का उपयोग किया जाए, तो परिणाम अनिर्णायक क्यों होंगे?",
+    "o": [
+      "$^{15}\\text{N}$ requires absolute zero thermal conditions to remain stable",
+      "$^{15}\\text{N}$ is non-radioactive and requires mass sorting; additionally, nitrogen incorporates into both viral DNA bases and protein amino acid domains, preventing separate tracking (डीएनए और प्रोटीन दोनों में शामिल होने से पृथक्करण असंभव होना)",
+      "$^{15}\\text{N}$ induces the rapid hydrolytic ring-opening cleavage of all components",
+      "$^{15}\\text{N}$ targets non-conducting quaternary coordination spaces entirely"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Nitrogen ($N$) is present in both nucleic acids (purine/pyrimidine bases) and proteins (amino groups). Unlike $^{35}\\text{S}$ (specific to proteins) and $^{32}\\text{P}$ (specific to DNA), using $^{15}\\text{N}$ will label both components, preventing researchers from tracking them separately after cell fractionation."
+  },
+  {
+    "p_id": "bpsc_mol_v4_226",
+    "qe": "Which core operational criterion must a biomolecule satisfy to be classified as a stable genetic material suited for evolutionary progression?",
+    "qh": "विकासवादी प्रगति के लिए उपयुक्त आनुवंशिक पदार्थ (genetic material) के रूप में कार्य करने के लिए किसी बायोमोलेक्यूल को कौन सा मुख्य मानदंड पूरा करना चाहिए?",
+    "o": [
+      "It must undergo spontaneous structural conversion into volatile gases",
+      "It must replicate its blueprint autonomously, maintain structural/chemical stability, and allow for slow mutations (प्रतिकृति क्षमता, रासायनिक स्थिरता एवं धीमे उत्परिवर्तन का अवसर)",
+      "It must be constructed entirely as an unbranched linear polyamide resin",
+      "It must completely lack any ionizable sugar-phosphate backbone lines"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> A genetic material repository must fulfill four baseline conditions: 1) direct self-duplication (replication), 2) chemical and structural stability, 3) a mechanism for low-frequency changes (slow mutations) to drive evolution, and 4) clear expression as Mendelian traits."
+  },
+  {
+    "p_id": "bpsc_mol_v4_227",
+    "qe": "Why does the structural replacement of uracil with the methyl-substituted base thymine grant an evolutionary advantage to DNA over RNA repositories?",
+    "qh": "आरएनए (RNA) के यूरेसिल की तुलना में डीएनए (DNA) में थायमीन (thymine) की उपस्थिति क्या अतिरिक्त विकासवादी लाभ प्रदान करती है?",
+    "o": [
+      "Thymine permits the double helix to turn completely soluble in volatile ethers",
+      "The methyl group configuration of thymine provides additional chemical and structural stability to the genetic backbone (थायमीन डीएनए को अतिरिक्त रासायनिक स्थिरता देता है)",
+      "Thymine accelerates the free-radical degradation of complementary bases",
+      "Thymine triggers the automatic common-ion precipitation of carbohydrate rings"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Uracil can easily form due to the spontaneous deamination of cytosine, making error tracking difficult in RNA. DNA uses thymine (5-methyluracil) instead. This methyl substitution stabilizes the double helix and allows cell repair machinery to easily recognize and fix cytosine deamination errors."
+  },
+  {
+    "p_id": "bpsc_mol_v4_228",
+    "qe": "Which specific biochemical enzyme handles the post-transcriptional synthesis of eukaryotic transfer RNA (tRNA) inside the cell nucleus?",
+    "qh": "यूकेरियोटिक कोशिका केंद्रक के भीतर ट्रांसफर आरएनए (tRNA) के प्रतिलेखन (transcription) को कौन सा विशिष्ट एंजाइम नियंत्रित करता है?",
+    "o": [
+      "RNA Polymerase I focusing on ribosomal loops",
+      "RNA Polymerase III (आरएनए पॉलीमरेज III)",
+      "RNA Polymerase II managing primary hnRNA",
+      "DNA Polymerase III driving replication extension"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Eukaryotes partition transcription tasks among three nuclear enzymes: RNA Polymerase I handles large rRNAs; RNA Polymerase II transcribes protein-coding genes (hnRNA); and RNA Polymerase III transcribes small RNA templates like tRNA, 5S rRNA, and snRNAs."
+  },
+  {
+    "p_id": "bpsc_mol_v4_229",
+    "qe": "What architectural layout configuration defines the structure of primary heterogeneous nuclear RNA (hnRNA) newly transcribed by RNA polymerase II?",
+    "qh": "आरएनए पॉलीमरेज II द्वारा नए अनुलेखित प्राथमिक हेटेरोजीनस न्यूक्लियर आरएनए (hnRNA) की संरचनात्मक विशेषता क्या है?",
+    "o": [
+      "A single-stranded linear array of unbranched volatile oligomers",
+      "A non-functional precursor transcript containing alternating regions of coding exons and non-coding introns (एक्जोन और इंट्रॉन दोनों युक्त गैर-कार्यात्मक अग्रदूत)",
+      "An amorphous cross-linked network held by stable disulfide bonds",
+      "An open-chain carbohydrate mesh held by glycosidic links"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> RNA Polymerase II generates primary transcripts known as heterogeneous nuclear RNA ($hnRNA$). This molecule is an un-spliced, non-functional precursor that contains both expressed coding sequences (exons) and intervening non-coding sequences (introns)."
+  },
+  {
+    "p_id": "bpsc_mol_v4_230",
+    "qe": "Which specific organic functional group linkage is established by the cellular ribosome during the elongation phase of protein translation?",
+    "qh": "प्रोटीन अनुवाद (translation) के दीर्घीकरण चरण के दौरान सेलुलर राइबोसोम द्वारा कौन सा विशिष्ट रासायनिक बंध स्थापित किया जाता है?",
+    "o": [
+      "Glycosidic connection bridging carbohydrate rings together",
+      "Peptide linkage / Amide bond (पेप्टाइड बंध / एमाइड लिंक)",
+      "Phosphodiester coordinate bridge balancing sugar frames",
+      "Sulfur disulfide cross-link system anchoring paths"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Polypeptide elongation proceeds as amino acids link sequentially. The ribosome catalyzes condensation between the carboxyl group ($-COOH$) of the amino acid at the P-site and the amino group ($-NH_2$) of the incoming amino acid at the A-site, forming a covalent peptide bond (amide linkage)."
+  },
+  {
+    "p_id": "bpsc_mol_v4_231",
+    "qe": "What precise biochemical status describes an activated amino acid residue before it is successfully transported to a matching mRNA codon slot during translation?",
+    "qh": "अनुवाद (translation) प्रक्रिया में ट्रांसफर आरएनए (tRNA) से जुड़ने से पहले एक एमाइनो अम्ल किस रूप में सक्रिय (activated) होता है?",
+    "o": [
+      "It denatures completely into a volatile aliphatic gas component",
+      "It reacts with ATP to form an aminoacyl-AMP-enzyme complex with aminoacyl-tRNA synthetase (एमीनोएसिल-AMP-एंजाइम कॉम्प्लेक्स)",
+      "It cross-links irreversibly into an insoluble three-dimensional network",
+      "It drops all ionizable centers via automated common-ion adjustments"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Amino acid activation is a two-step process catalyzed by aminoacyl-tRNA synthetase. First, the amino acid reacts with ATP to form an enzyme-bound aminoacyl-adenylate ($AA-AMP-enzyme$) complex, releasing pyrophosphate. This complex then transfers the amino acid onto its specific tRNA adapter."
+  },
+  {
+    "p_id": "bpsc_mol_v4_232",
+    "qe": "What terminological descriptor defines a baseline prokaryotic gene arrangement where multiple coordinately regulated structural genes are controlled under a single shared promoter?",
+    "qh": "प्रोकैरियोट्स में एक साझा प्रमोटर के नियंत्रण में समन्वित रूप से विनियमित संरचनात्मक जीनों के समूह को क्या कहा जाता है?",
+    "o": [
+      "Cistronic isolated unit",
+      "Operon (ओपेरॉन)",
+      "Monocistronic variant",
+      "Novolac line layout"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> An operon is a functional unit of prokaryotic gene expression. It consists of a cluster of structural genes (e.g., *lacZ, lacY, lacA*) controlled by a single shared promoter and regulated by an operator site and a repressor protein."
+  },
+  {
+    "p_id": "bpsc_mol_v4_233",
+    "qe": "In the structural mapping of an inducible operon like the lac operon inside *E. coli*, what functional role is handled by the operator sequence?",
+    "qh": "*E. coli* के लैक ओपेरॉन (lac operon) में ऑपरेटर (operator) अनुक्रम की क्या कार्यात्मक भूमिका होती है?",
+    "o": [
+      "It serves as the selective catalytic extended polymerase domain",
+      "It is the specific DNA sequence adjacent to the promoter where active repressor proteins anchor to block transcription (वह स्थान जहाँ दमनकारी प्रोटीन जुड़ता है)",
+      "It codes for a volatile non-polar aliphatic organic solvent carrier",
+      "It cross-links the regulatory subunits into a rigid melamine panel"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> The operator is a regulatory DNA sequence situated between the promoter and the structural genes. It serves as a binding site for the repressor protein. When the repressor binds to the operator, it physically blocks RNA polymerase from transcribing the operon."
+  },
+  {
+    "p_id": "bpsc_mol_v4_234",
+    "qe": "Which specific technical procedures define the collective workflow handled during the 'downstream processing' phase of genetic engineering and commercial protein production?",
+    "qh": "जैव प्रौद्योगिकी विनिर्माण में 'डाउनस्ट्रीम प्रोसेसिंग' (downstream processing) चरण के दौरान संभाले जाने वाले सामूहिक वर्कफ़्लो को कौन सी प्रक्रियाएं परिभाषित करती हैं?",
+    "o": [
+      "Media formulation, sterilizing vessels, and scaling up inoculum volumes",
+      "A series of systematic operations focusing on product separation, purification, polishing, and packaging (उत्पाद पृथक्करण, शुद्धिकरण, पॉलिशिंग एवं पैकेजिंग)",
+      "The homolytic cleavage of alkene double bonds using peroxide initiators",
+      "The spatial alignment of alpha-amino acids into extended zwitterionic grids"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Downstream processing refers to the multi-step sequence used to recover and purify a product after fermentation is complete. This includes cell harvesting, separation (filtration/centrifugation), purification (chromatography), polishing, and final formulation/packaging."
+  },
+  {
+    "p_id": "bpsc_mol_v4_235",
+    "qe": "Which physical option parameters define the foundational core of biotechnology as described across modern biological sciences?",
+    "qh": "आधुनिक जैविक विज्ञान में वर्णित जैव प्रौद्योगिकी (biotechnology) के मूलभूत कोर को कौन से भौतिक विकल्प पैरामीटर परिभाषित करते हैं?",
+    "o": [
+      "The manual extraction tracking planetary movements across grids",
+      "The structural techniques of utilizing living organisms or their enzymes to produce valuable products and services (लिविंग ऑर्गेनिज्म्स या उनके एंजाइमों का उपयोग)",
+      "The complete conversion of water into volatile non-polar gases",
+      "The isolated tracking profile of non-ionic branched polyolefins"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Biotechnology is systematically defined as the application of scientific and engineering principles to process materials using biological agents, such as living organisms or cellular enzymes, to deliver products and services."
+  },
+  {
+    "p_id": "bpsc_mol_v4_236",
+    "qe": "What surprising database discovery features the functional assignments of over 50 percent of the discovered genes compiled during human genome sequencing work?",
+    "qh": "मानव जीनोम अनुक्रमण कार्य के दौरान खोजे गए जीनों में से 50 प्रतिशत से अधिक के कार्यात्मक असाइनमेंट की क्या विशेषता है?",
+    "o": [
+      "They code exclusively for highly volatile petroleum solvent derivatives",
+      "Their exact biological functions and physiological roles remain entirely unknown (50% से अधिक जीनों के कार्य अभी भी अज्ञात हैं)",
+      "They serve as active competitive suicide enzyme inhibitors under stress",
+      "They form permanent cross-linked networks structured like Bakelite plates"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Despite successfully sequencing the entire human genome library, the exact biological functions and cellular roles for over 50 percent of the discovered genes remain unknown."
+  },
+  {
+    "p_id": "bpsc_mol_v4_237",
+    "qe": "What name is assigned to the specialized technical mapping strategy in the Human Genome Project where researchers focused exclusively on sequencing regions that code for RNA transcripts?",
+    "qh": "मानव जीनोम प्रोजेक्ट में उपयोग की जाने वाली उस विशेष तकनीकी मैपिंग रणनीति को क्या नाम दिया गया है जिसमें शोधकर्ताओं ने केवल उन क्षेत्रों के अनुक्रमण पर ध्यान केंद्रित किया जो आरएनए प्रतिलेखों को कोड करते हैं?",
+    "o": [
+      "Blind sequence annotation blueprint runs",
+      "Expressed Sequence Tags / ESTs (व्यक्त अनुक्रम टैग / ESTs)",
+      "Homolytic chain termination step testing",
+      "Monomeric ring-opening condensation arrays"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> The Human Genome Project used two broad sequencing strategies. Expressed Sequence Tags (ESTs) focused on identifying and sequencing only the regions of the genome that are transcribed into RNA. Sequence Annotation was a broader method that sequenced the entire genome, both coding and non-coding regions."
+  },
+  {
+    "p_id": "bpsc_mol_v4_238",
+    "qe": "Which specific technical compound provides the density-gradient matrix medium utilized by Meselson and Stahl to separate heavy, hybrid, and light DNA molecules?",
+    "qh": "कौन सा विशिष्ट तकनीकी यौगिक घनत्व-प्रवणता मैट्रिक्स माध्यम (density-gradient matrix medium) प्रदान करता है जिसका उपयोग मेसेल्सन और स्टाल द्वारा भारी, हाइब्रिड और हल्के डीएनए अणुओं को अलग करने के लिए किया जाता है?",
+    "o": [
+      "Anhydrous calcium chloride fuming syrup",
+      "Cesium Chloride / $\\text{CsCl}$ (सीजियम क्लोराइड / CsCl)",
+      "Ethidium bromide fluorescent alignment liquid",
+      "Methylene cross-linked polyolefin solution gel"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Meselson and Stahl used cesium chloride ($\text{CsCl}$) density-gradient centrifugation. Spinning $\text{CsCl}$ at high speeds sets up a continuous density gradient, allowing DNA molecules to float and band at the position matching their buoyant density."
+  },
+  {
+    "p_id": "bpsc_mol_v4_239",
+    "qe": "Which specific chemical bond forms the linkage that attaches a heterocyclic nitrogenous base to the C1' carbon position of a pentose sugar?",
+    "qh": "कौन सा विशिष्ट रासायनिक बंध उस लिंकेज को बनाता है जो एक विषमचक्रीय नाइट्रोजनस बेस को पेंटोज शर्करा की C1' कार्बन स्थिति से जोड़ता है?",
+    "o": [
+      "Phosphodiester linkage bridging sugar blocks",
+      "N-glycosidic linkage (N-ग्लाइकोसिडिक बंध)",
+      "Peptide linkage systematic covalent chain",
+      "Inter-chain Disulfide cross-link bridge system"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> A nitrogenous base links covalently to the anomeric C1' position of a pentose sugar ring through an N-glycosidic bond, creating a nucleoside component configuration."
+  },
+  {
+    "p_id": "bpsc_mol_v4_240",
+    "qe": "Which strong covalent bond connects consecutive nucleotide monomers together along a single strand of DNA or RNA?",
+    "qh": "कौन सा मजबूत सहसंयोजक बंध डीएनए या आरएनए के एक एकल धागे (single strand) के साथ लगातार न्यूक्लियोटाइड मोनोमर्स को एक साथ जोड़ता है?",
+    "o": [
+      "N-glycosidic link bridging rings together",
+      "3'-5' phosphodiester linkage (3'-5' फॉस्फोडिएस्टर बंध)",
+      "Amide linkage systematically identical to a biological peptide bond",
+      "Sulfur disulfide cross-link bridge system anchoring paths"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Nucleotides fold sequentially into polymers via 3'-5' phosphodiester linkages. This covalent bridge connects the 3'-hydroxyl group of one pentose sugar to the 5'-phosphate group of the next nucleotide."
+  },
+  {
+    "p_id": "bpsc_mol_v4_241",
+    "qe": "What happens to the structure of the insecticidal cry protein when it exists inside the native cell framework of *Bacillus thuringiensis*?",
+    "qh": "जब कीटनाशक क्राई प्रोटीन (cry protein) *Bacillus thuringiensis* के मूल सेल ढांचे के भीतर मौजूद होता है तो उसकी संरचना का क्या होता है?",
+    "o": [
+      "It functions as a highly aggressive active enzyme that digests the host cell",
+      "It accumulates as an inactive crystalline protoxin that does not harm the bacterium (निष्क्रिय क्रिस्टलीय प्रोटॉक्सिन के रूप में रहना)",
+      "It dissolves into volatile open-chain organic solvents under vacuum",
+      "It converts into a linear non-ionic surfactant lattice balanced by sodium"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> *Bacillus thuringiensis* produces insecticidal proteins as inactive crystalline inclusions called protoxins. Because the toxin remains inactive inside the bacterium, it does not harm the host cell structure."
+  },
+  {
+    "p_id": "bpsc_mol_v4_242",
+    "qe": "What specific physiological condition inside an insect's gut triggers the activation of the inert Bt protoxin into an active crystalline toxin?",
+    "qh": "एक क्रीट की आंत (insect's gut) के भीतर कौन सी विशिष्ट शारीरिक स्थिति अक्रिय बीटी प्रोटॉक्सिन को एक सक्रिय क्रिस्टलीय विष में बदलने को ट्रिगर करती है?",
+    "o": [
+      "A highly acidic pH profile that denatures the protein",
+      "The alkaline pH environment of the midgut that solubilizes the protein crystals (आंत का क्षारीय pH)",
+      "The complete absence of water molecules across the digestive tract",
+      "The covalent cross-linking driven by matching active site residues"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> When an insect gains input of Bt protein crystals, the alkaline pH of its midgut environment solubilizes and cleaves the inactive protoxin, transforming it into an active, destructive insecticidal toxin."
+  },
+  {
+    "p_id": "bpsc_mol_v4_243",
+    "qe": "What structural feature dictates the separation speed and final band distribution of DNA fragments during gel electrophoresis processing?",
+    "qh": "जेल इलेक्ट्रोफोरेसिस प्रसंस्करण के दौरान डीएनए टुकड़ों की पृथक्करण गति (separation speed) और अंतिम बैंड वितरण को कौन सी संरचनात्मक विशेषता निर्धारित करती है?",
+    "o": [
+      "The absolute number of fluorine atoms attached to the sugar",
+      "The size and molecular weight of the fragments, where smaller units migrate faster through the gel pores (टुकड़ों का आकार या आणविक भार)",
+      "The total presence of positive quaternary ammonium links",
+      "The complete volatility profile under fuming nitric acid"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Agarose gel provides a sieving effect. When electric potential is applied, smaller DNA fragments encounter less mechanical resistance and travel faster through the gel pores, migrating farther from the wells than larger fragments."
+  },
+  {
+    "p_id": "bpsc_mol_v4_244",
+    "qe": "The standardpotential of a classic Daniell cell is exactly 1.1 V. Which logarithmic mathematical expression correctly details its thermodynamic equilibrium state at 298 K?",
+    "qh": "एक क्लासिक डेनियल सेल का मानक विभव बिल्कुल 1.1 V है। कौन सा लघुगणकीय गणितीय व्यंजक 298 K पर इसकी थर्मोडायनामिक संतुलन स्थिति का सही विवरण देता है?",
+    "o": [
+      "$\\log K_C = 1.1 \\times 2F$",
+      "$\\log K_C = \\frac{2.2}{0.059}$ (डेनियल सेल संतुलन समीकरण)",
+      "$\\log K_C = -1.1 \\times nF$",
+      "$\\log K_C = 1.1 \\times 0.059$"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> At chemical equilibrium, the Nernst equation simplifies to: $E^\\circ_{\\text{cell}} = \\frac{0.059}{n}\\log K_C$. For a Daniell cell, substituting $n = 2$ and $E^\\circ_{\\text{cell}} = 1.1\\text{ V}$ yields $1.1 = \\frac{0.059}{2}\\log K_C$, which rearranges directly to $\\log K_C = \\frac{2.2}{0.059}$."
+  },
+  {
+    "p_id": "bpsc_mol_v4_246",
+    "qe": "What quantitative base-pair payload characterizes the circular double-stranded genomic DNA of *Escherichia coli* (*E. coli*)?",
+    "qh": "*Escherichia coli* (*E. coli*) के गोलाकार डबल-स्ट्रैंडेड जीनोमिक डीएनए की मात्रात्मक क्षारक-युग्म पेलोड (base-pair payload) विशेषता क्या है?",
+    "o": [
+      "5386 single unlinked nucleic units",
+      "$4.6 \\times 10^6$ base pairs ($4.6 \\times 10^6$ क्षारक युग्म)",
+      "48502 linear double strand fragments",
+      "$3.3 \\times 10^9$ extensive mammalian blocks"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> The bacterium *Escherichia coli* houses a circular double-stranded DNA genome containing approximately $4.6 \\times 10^6$ base pairs."
+  }
+]
