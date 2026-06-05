@@ -41554,5 +41554,705 @@
     "sub": "digestive",
     "qe": "An abnormal frequency of bowel movement and increased liquidity of fecal discharge is:",
     "qh": ""
+  },
+  {
+    "cat": "gs",
+    "sub": "motion",
+    "qe": "Why are the states of rest and motion considered relative terms in physics?",
+    "qh": "भौतिकी में 'विराम' (Rest) और 'गति' (Motion) की अवस्थाओं को सापेक्ष (Relative) क्यों माना जाता है?",
+    "o": [
+      "Because the Earth is completely stationary at the center of the universe (क्योंकि पृथ्वी ब्रह्मांड के केंद्र में पूरी तरह स्थिर है)",
+      "Because the state of an object depends entirely on the observer's frame of reference (क्योंकि वस्तु की अवस्था पूरी तरह प्रेक्षक के संदर्भ बिंदु पर निर्भर करती है)",
+      "Because light travels at the same speed in all media (क्योंकि प्रकाश की चाल हर माध्यम में पूर्णतः नियत रहती है)",
+      "Because motion is only possible in a complete vacuum (क्योंकि गति केवल पूर्ण निर्वात में ही संभव है)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> कोई भी वस्तु परम (Absolute) विराम या गति में नहीं होती। एक ही वस्तु एक प्रेक्षक के लिए गति में (जैसे बाहर खड़े व्यक्ति के लिए चलती बस) और दूसरे के लिए विराम में (जैसे सहयात्री के लिए) हो सकती है।"
+  },
+  {
+    "cat": "gs",
+    "sub": "motion",
+    "qe": "Which statement is always true regarding distance and the magnitude of displacement?",
+    "qh": "दूरी और विस्थापन के परिमाण के संदर्भ में निम्नलिखित में से कौन सा कथन सदैव सत्य होता है?",
+    "o": [
+      "Displacement is always greater than the total distance covered (विस्थापन हमेशा तय की गई कुल दूरी से अधिक होता है)",
+      "Distance is always equal to or greater than the magnitude of displacement (तय की गई दूरी हमेशा विस्थापन के परिमाण के बराबर या उससे अधिक होती है)",
+      "If an object moves, its distance covered can be zero (यदि कोई वस्तु गति करती है, तो उसकी दूरी शून्य हो सकती है)",
+      "Distance is a vector quantity while displacement is a scalar quantity (दूरी एक सदिश राशि है जबकि विस्थापन एक अदिश राशि है)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> दूरी वास्तविक पथ की लंबाई है, जबकि विस्थापन प्रारंभिक और अंतिम बिंदु के बीच की न्यूनतम दूरी है। इसलिए दूरी हमेशा विस्थापन के परिमाण से बड़ी या उसके बराबर ($\\text{दूरी} \\ge |\\text{विस्थापन}|$) होती है।"
+  },
+  {
+    "cat": "gs",
+    "sub": "motion",
+    "qe": "An athlete completes one full round of a circular track and returns to the starting point. What is the ratio of distance to displacement?",
+    "qh": "एक धावक किसी वृत्ताकार पथ का एक पूरा चक्कर लगाकर वापस अपने प्रारंभिक बिंदु पर पहुंचता है। उसकी दूरी और विस्थापन का अनुपात क्या होगा?",
+    "o": [
+      "The ratio is zero (अनुपात शून्य होगा)",
+      "The ratio is infinite because displacement is zero (अनुपात अनंत होगा, क्योंकि विस्थापन शून्य है)",
+      "The ratio is always exactly equal to 1 (अनुपात hamesha इकाई 1 के बराबर होगा)",
+      "The ratio is negative (अनुपात ऋणात्मक होगा)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> चूंकि धावक वापस उसी बिंदु पर आ गया है, इसलिए विस्थापन शून्य ($0$) होगा। किसी भी परिमित दूरी को शून्य से विभाजित करने पर परिणाम अनंत ($\\frac{\\text{दूरी}}{0} = \\infty$) प्राप्त होता है।"
+  },
+  {
+    "cat": "gs",
+    "sub": "motion",
+    "qe": "What is the primary difference between scalar and vector quantities, considering speed and velocity?",
+    "qh": "चाल (Speed) व वेग (Velocity) को ध्यान में रखते हुए, अदिश और सदिश राशियों के बीच मुख्य अंतर क्या है?",
+    "o": [
+      "Speed is a vector because it has direction, and velocity is scalar (चाल सदिश है और वेग अदिश है)",
+      "Speed is a scalar because it has only magnitude, while velocity is a vector because it has both magnitude and direction (चाल एक अदिश राशि है क्योंकि इसमें केवल परिमाण होता है, और वेग एक सदिश राशि है क्योंकि इसमें परिमाण के साथ दिशा भी होती है)",
+      "Both are vector quantities because both are related to motion (दोनों ही सदिश राशियां हैं क्योंकि दोनों गति से संबंधित हैं)",
+      "Both are scalar quantities because they share the same SI unit (दोनों अदिश राशियां हैं क्योंकि इनका मात्रक समान होता है)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> चाल केवल यह बताती है कि वस्तु कितनी तेज चल रही है (अदिश), जबकि वेग यह भी निर्दिष्ट करता है कि वस्तु किस निश्चित दिशा में गतिशील है (सदिश)।"
+  },
+  {
+    "cat": "gs",
+    "sub": "motion",
+    "qe": "In physics, what does 'negative displacement' physically mean?",
+    "qh": "भौतिकी में 'ऋणात्मक विस्थापन' (Negative Displacement) का वास्तविक अर्थ क्या होता है?",
+    "o": [
+      "The object has covered zero distance (वस्तु ने कोई दूरी तय नहीं की है)",
+      "The object has traveled in the opposite direction relative to the chosen reference direction (वस्तु ने तय किए गए संदर्भ बिंदु से विपरीत दिशा में दूरी तय की है)",
+      "The object's speed has exceeded the speed of light (वस्तु की गति प्रकाश की चाल से अधिक हो गई है)",
+      "The object has come to a state of complete rest (वस्तु स्थिर अवस्था में आ गई है)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> विस्थापन एक सदिश राशि है। यदि संदर्भ बिंदु (Origin) से दाहिनी दिशा को धनात्मक माना जाए, तो बाईं (विपरीत) दिशा में तय की गई दूरी ऋणात्मक विस्थापन कहलाती है।"
+  },
+  {
+    "cat": "gs",
+    "sub": "motion",
+    "qe": "If an object is executing 'Uniform Motion', what can be inferred about its speed?",
+    "qh": "यदि कोई वस्तु 'एकसमान गति' (Uniform Motion) प्रदर्शित कर रही है, तो उसकी चाल (Speed) के संदर्भ में क्या निष्कर्ष निकाला जा सकता है?",
+    "o": [
+      "Its speed is continuously increasing (उसकी चाल लगातार बढ़ती जा रही है)",
+      "Its speed remains completely constant throughout the journey (उसकी चाल पूरी यात्रा के दौरान पूर्णतः नियत रहती है)",
+      "Its speed drops to zero every second (उसकी चाल हर सेकंड शून्य हो जाती है)",
+      "Its speed changes according to the density of the medium (उसकी चाल माध्यम के घनत्व के अनुसार बदलती है)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> एकसमान गति का अर्थ है कि वस्तु समान समयांतरालों में समान दूरी तय करे। ऐसा केवल तब संभव है जब वस्तु की चाल पूरी यात्रा में पूरी तरह नियत (constant) रहे।"
+  },
+  {
+    "cat": "gs",
+    "sub": "motion",
+    "qe": "During non-uniform motion, what happens to the velocity of an object over time?",
+    "qh": "असतत या असमान गति (Non-uniform Motion) के दौरान किसी वस्तु के वेग (Velocity) में क्या परिवर्तन दिखाई देता है?",
+    "o": [
+      "The velocity remains strictly constant (वेग hamesha अपरिवर्तित रहता है)",
+      "The velocity of the object changes continuously with time (वस्तु का वेग समय के साथ लगातार बदलता रहता है)",
+      "The magnitude of velocity is always zero (वेग का परिमाण hamesha शून्य रहता है)",
+      "The velocity can only increase in the positive direction (वेग केवल धनात्मक दिशा में ही बढ़ सकता है)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> असमान गति में वस्तु समान समयांतरालों में भिन्न-भिन्न दूरियां तय करती है, जिसका अर्थ है कि वस्तु का वेग समय के साथ लगातार घटता या बढ़ता (बदलता) रहता है।"
+  },
+  {
+    "cat": "gs",
+    "sub": "motion",
+    "qe": "What is the universal definition of Average Speed?",
+    "qh": "औसत चाल (Average Speed) का मूल सैद्धांतिक नियम क्या है, और इसे कैसे परिभाषित किया जाता है?",
+    "o": [
+      "It is the simple mathematical average of initial and final speed (यह केवल शुरुआती और अंतिम चाल का सामान्य औसत है)",
+      "It is the ratio of total distance traveled to the total time taken (यह वस्तु द्वारा तय की गई कुल दूरी और उसमें लगे कुल समय का अनुपात होता है)",
+      "It is always the product of displacement and time (यह hamesha विस्थापन और समय का गुणनफल होता है)",
+      "It is inversely proportional to the friction coefficient (यह माध्यम के घर्षण गुणांक के व्युत्क्रमानुपाती होती है)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> औसत चाल का सार्वभौमिक सिद्धांत यह है कि पूरी यात्रा के दौरान तय की गई कुल दूरी को कुल लगे समय से विभाजित किया जाए।"
+  },
+  {
+    "cat": "gs",
+    "sub": "motion",
+    "qe": "Under what condition will the magnitude of average speed be equal to average velocity?",
+    "qh": "किस विशेष परिस्थिति में किसी गतिशील वस्तु की औसत चाल और औसत वेग का परिमाण आपस में बिल्कुल बराबर होगा?",
+    "o": [
+      "When the object moves continuously in a circular path (जब वस्तु किसी वृत्ताकार पथ पर लगातार घूम रही हो)",
+      "When the object moves along a straight line without turning back (जब वस्तु एक सीधी सरल रेखा में बिना अपनी दिशा बदले गति करती है)",
+      "When the acceleration is always less than zero (जब वस्तु का त्वरण hamesha ऋणात्मक हो)",
+      "When the object is thrown vertically upwards under gravity (जब वस्तु गुरुत्वाकर्षण के प्रभाव में ऊपर की ओर फेंकी जाए)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> जब गति बिना मुड़े एक सीधी रेखा में होती है, तो दूरी और विस्थापन का परिमाण बराबर होता है, जिससे औसत चाल और औसत वेग भी बराबर हो जाते हैं।"
+  },
+  {
+    "cat": "gs",
+    "sub": "motion",
+    "qe": "How is 'Acceleration' defined in physics, and what does it indicate?",
+    "qh": "भौतिकी में 'त्वरण' (Acceleration) को किस प्रकार परिभाषित किया जाता है, और यह वस्तु के विषय में क्या बताता है?",
+    "o": [
+      "It is the rate of total distance covered by the object (यह केवल वस्तु द्वारा तय की गई कुल दूरी की दर है)",
+      "It is the rate of change of velocity with time (यह समय के साथ वस्तु के वेग में होने वाले परिवर्तन की दर है)",
+      "It is the change in mass of the body over time (यह वस्तु के द्रव्यमान में समय के साथ होने वाला बदलाव है)",
+      "It is the starting point of the object's position (यह केवल वस्तु की स्थिति का प्रारंभिक बिंदु होता है)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> त्वरण यह निर्दिष्ट करता है कि किसी वस्तु का वेग प्रति इकाई समय में कितना बदल रहा है ($a = \\frac{v-u}{t}$)। यह वेग में परिवर्तन की समय दर है।"
+  },
+  {
+    "cat": "gs",
+    "sub": "motion",
+    "qe": "If the acceleration of an object is positive, what is its theoretical effect on the motion?",
+    "qh": "यदि किसी वस्तु का त्वरण धनात्मक ($+$) है, तो वस्तु की गति पर इसका क्या सैद्धांतिक प्रभाव पड़ेगा?",
+    "o": [
+      "The velocity decreases and the object stops (वस्तु का वेग लगातार घटता जाएगा)",
+      "The velocity of the object increases in the direction of motion (वस्तु का वेग गति की दिशा में लगातार बढ़ता जाएगा)",
+      "The velocity becomes constant forever (वस्तु का वेग hamesha के लिए स्थिर हो जाएगा)",
+      "The path of the object becomes circular (वस्तु का पथ वृत्ताकार हो जाएगा)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> धनात्मक त्वरण का अर्थ है कि त्वरण की दिशा वेग (गति) की दिशा के अनुदिश है, जिसके कारण वस्तु की चाल या वेग समय के साथ बढ़ता जाता है।"
+  },
+  {
+    "cat": "gs",
+    "sub": "motion",
+    "qe": "What does 'Retardation' or 'Deceleration' signify, and what is its standard sign?",
+    "qh": "भौतिकी में 'मंदन' (Retardation) का क्या अर्थ है, और इसका मानक चिह्न क्या होता है?",
+    "o": [
+      "Increase in velocity with a positive sign (वेग का बढ़ना और धनात्मक चिह्न)",
+      "Decrease in velocity over time with a negative sign (समय के साथ वेग का घटना और इसका चिह्न ऋणात्मक होता है)",
+      "Infinite velocity with no specific sign (वस्तु का अनंत वेग और कोई चिह्न नहीं)",
+      "The property of staying at rest (केवल स्थिर अवस्था में रहने का गुण)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> जब किसी वस्तु का वेग समय के साथ कम होता जाता है (जैसे ब्रेक लगाने पर), तो वेग परिवर्तन की दर ऋणात्मक आती है, जिसे मंदन या ऋणात्मक त्वरण कहते हैं।"
+  },
+  {
+    "cat": "gs",
+    "sub": "motion",
+    "qe": "What is the best natural example of Uniformly Accelerated Motion?",
+    "qh": "एकसमान त्वरित गति (Uniformly Accelerated Motion) का सबसे उत्तम प्राकृतिक उदाहरण क्या है?",
+    "o": [
+      "A fish swimming in an irregular manner (एक तैरती हुई मछली की गति)",
+      "An object falling freely under the ideal influence of gravity (गुरुत्वाकर्षण के प्रभाव में स्वतंत्र रूप से गिरती हुई कोई वस्तु)",
+      "A rocket expanding its acceleration while burning fuel (रॉकेट की गति)",
+      "A car moving through heavy city traffic (भारी ट्रैफिक में चलती हुई कार की गति)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> मुक्त रूप से गिरती हुई वस्तु पर पृथ्वी का गुरुत्वीय त्वरण ($g \\approx 9.8\\text{ m/s}^2$) नियत रहता है, जिससे उसका वेग हर सेकंड समान दर से बढ़ता है।"
+  },
+  {
+    "cat": "gs",
+    "sub": "motion",
+    "qe": "What physical quantity is determined by the slope of a Distance-Time Graph?",
+    "qh": "एक दूरी-समय ग्राफ (Distance-Time Graph) की 'ढाल' (Slope) हमें किस भौतिक राशि का मान प्रदान करती है?",
+    "o": [
+      "Acceleration of the object (वस्तु के त्वरण का)",
+      "Speed of the object (वस्तु की चाल का)",
+      "Mass of the object (वस्तु के द्रव्यमान का)",
+      "Net force on the object (वस्तु पर लगने वाले कुल बल का)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> दूरी-समय ग्राफ की ढाल का गणितीय अर्थ $\\frac{\\text{दूरी}}{\\text{समय}}$ ($\\frac{y}{x}$) होता है, जो चाल (Speed) को प्रदर्शित करता है।"
+  },
+  {
+    "cat": "gs",
+    "sub": "motion",
+    "qe": "If a distance-time graph shows a straight line parallel to the time axis, what is the state of the object?",
+    "qh": "यदि दूरी-समय ग्राफ में मिलने वाली रेखा समय अक्ष के बिल्कुल समानांतर एक सीधी रेखा है, तो वस्तु की अवस्था क्या होगी?",
+    "o": [
+      "The object is moving at an extremely high speed (वस्तु अत्यधिक तीव्र गति से चल रही है)",
+      "The object is at a state of rest (वस्तु विराम अवस्था में है)",
+      "The acceleration of the object is infinite (वस्तु का त्वरण अनंत है)",
+      "The object is moving in a circular path (वस्तु वृत्ताकार पथ पर गति कर रही है)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> समय अक्ष के समानांतर रेखा का अर्थ है कि समय बढ़ रहा है लेकिन वस्तु की दूरी का मान बिल्कुल स्थिर है, अर्थात वस्तु चल नहीं रही है (चाल = ढाल = 0)।"
+  },
+  {
+    "cat": "gs",
+    "sub": "motion",
+    "qe": "What physical feature is obtained from the slope of a Velocity-Time Graph?",
+    "qh": "एक वेग-समय ग्राफ (Velocity-Time Graph) की ढाल (Slope) से हमें कौन सी भौतिक राशि प्राप्त होती है?",
+    "o": [
+      "Total distance covered (वस्तु द्वारा तय की गई कुल दूरी)",
+      "Acceleration of the object (वस्तु का त्वरण)",
+      "Initial displacement (वस्तु का प्रारंभिक विस्थापन)",
+      "Refractive index of the medium (माध्यम का अपवर्तनांक)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> वेग-समय ग्राफ की ढाल का अर्थ $\\frac{\\text{वेग में परिवर्तन}}{\\text{समय}}$ ($\\frac{\\Delta v}{\\Delta t}$) होता है, जो सीधे त्वरण (Acceleration) को दर्शाता है।"
+  },
+  {
+    "cat": "gs",
+    "sub": "motion",
+    "qe": "What does the total area enclosed under a Velocity-Time graph represent?",
+    "qh": "वेग-समय ग्राफ (Velocity-Time Graph) के नीचे का कुल क्षेत्रफल (Area under the graph) हमें क्या प्रदान करता है?",
+    "o": [
+      "Final acceleration only (केवल वस्तु का अंतिम त्वरण)",
+      "Distance or Displacement (वस्तु द्वारा तय की गई दूरी या विस्थापन)",
+      "Square of the average velocity (वस्तु की औसत गति का वर्ग)",
+      "Total mass of the body (वस्तु का कुल द्रव्यमान)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> वेग और समय का गुणनफल ($\\text{वेग} \\times \\text{समय}$) विस्थापन या दूरी को दर्शाता है, जो ग्राफिकल रूप में उसके नीचे घिरे क्षेत्रफल के बराबर होता है।"
+  },
+  {
+    "cat": "gs",
+    "sub": "motion",
+    "qe": "If the velocity-time graph of an object is a straight line parallel to the time axis, what does it mean?",
+    "qh": "यदि किसी वस्तु का वेग-समय ग्राफ समय अक्ष के बिल्कुल समानांतर एक सीधी रेखा है, तो इसका क्या अर्थ है?",
+    "o": [
+      "The acceleration is continuously increasing (वस्तु का त्वरण लगातार बढ़ रहा है)",
+      "The object moves with uniform velocity and its acceleration is zero (वस्तु एकसमान वेग से चल रही है और उसका त्वरण शून्य है)",
+      "The object is completely stationary at zero velocity (वस्तु शून्य वेग पर स्थिर खड़ी है)",
+      "The object is under constant retardation (वस्तु का मंदन हो रहा है)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> समय अक्ष के समानांतर रेखा का मतलब है कि वेग का मान समय के साथ स्थिर (constant) है। चूंकि वेग बदल नहीं रहा, इसलिए त्वरण शून्य ($a=0$) होगा।"
+  },
+  {
+    "cat": "gs",
+    "sub": "motion",
+    "qe": "The three famous equations of motion ($v=u+at$, etc.) are strictly valid only under which condition?",
+    "qh": "गति के तीन प्रसिद्ध समीकरण ($v = u + at$, आदि) केवल किस मुख्य प्रतिबंध के तहत ही पूरी तरह मान्य होते हैं?",
+    "o": [
+      "When the acceleration is variable (जब त्वरण लगातार बदल रहा हो)",
+      "When the object moves in a straight line with uniform acceleration (जब वस्तु एक सरल रेखा में नियत या एकसमान त्वरण के साथ गति कर रही हो)",
+      "When the motion is strictly circular (जब गति केवल वृत्ताकार पथ पर हो)",
+      "When the object travels near the speed of light (जब वस्तु की चाल प्रकाश की चाल के बराबर हो)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> ये समीकरण रेखीय गति के लिए हैं जहाँ त्वरण ($a$) का मान पूरी गणना के दौरान एक नियत स्थिरांक (constant) बना रहता है।"
+  },
+  {
+    "cat": "gs",
+    "sub": "motion",
+    "qe": "Which of the following correctly pairs the symbols used in the equations of motion with their meanings?",
+    "qh": "गति के समीकरणों में प्रयुक्त संकेतों के अर्थ के संदर्भ में कौन सा विकल्प सही सुमेलित है?",
+    "o": [
+      "u = final velocity, v = initial velocity (u = अंतिम वेग, v = प्रारंभिक वेग)",
+      "u = initial velocity, v = final velocity, s = distance/displacement (u = प्रारंभिक वेग, v = अंतिम वेग, s = तय की गई दूरी या विस्थापन)",
+      "s = time, t = displacement (s = समय, t = विस्थापन)",
+      "a = average speed (a = औसत चाल)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> भौतिकी के मानक मानकों के अनुसार $u$ प्रारंभिक वेग, $v$ अंतिम वेग, $s$ दूरी/विस्थापन और $t$ समय को प्रदर्शित करता है।"
+  },
+  {
+    "cat": "gs",
+    "sub": "motion",
+    "qe": "If an object starts its motion 'from rest', which quantity is initially taken as zero?",
+    "qh": "यदि कोई वस्तु विराम अवस्था से अपनी गति प्रारंभ करती है (Starts from rest), तो किस राशि का प्रारंभिक मान शून्य ($0$) लिया जाएगा?",
+    "o": [
+      "Final velocity (v) (अंतिम वेग)",
+      "Initial velocity (u) (प्रारंभिक वेग)",
+      "Acceleration (a) (त्वरण)",
+      "Time (t) (समय)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> विराम अवस्था (Rest) का अर्थ ही यह है कि शुरुआत में वस्तु पूरी तरह स्थिर थी, अतः उसका प्रारंभिक वेग $u = 0$ माना जाता है।"
+  },
+  {
+    "cat": "gs",
+    "sub": "motion",
+    "qe": "When brakes are applied to a moving car and it comes to a complete stop, what are the states of final velocity ($v$) and acceleration ($a$)?",
+    "qh": "जब किसी गतिशील वाहन में अचानक ब्रेक लगाया जाता है और वह रुक जाता है, तो अंतिम वेग ($v$) और त्वरण ($a$) की स्थिति क्या होगी?",
+    "o": [
+      "Both will be positive (दोनों धनात्मक होंगे)",
+      "v = 0 and a = negative (mंदन) (v = 0 और a = ऋणात्मक)",
+      "v = negative and a = 0 (v = ऋणात्मक और a = 0)",
+      "Both will reach infinity (दोनों का मान अनंत हो जाएगा)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> चूंकि वाहन अंत में रुक जाता है, इसलिए अंतिम वेग $v = 0$ होगा। ब्रेक लगाने से गति कम होती है, इसलिए त्वरण ऋणात्मक ($-a$, मंदन) होगा।"
+  },
+  {
+    "cat": "gs",
+    "sub": "motion",
+    "qe": "What is unique about the velocity in a Uniform Circular Motion?",
+    "qh": "एकसमान वृत्तीय गति (Uniform Circular Motion) के संदर्भ में निम्नलिखित में से कौन सा कथन सत्य है?",
+    "o": [
+      "Both speed and velocity remain strictly constant (इसमें चाल और वेग दोनों स्थिर रहते हैं)",
+      "The speed remains constant but the velocity changes continuously due to the change in direction (इसमें चाल तो नियत रहती है, लेकिन दिशा बदलने के कारण वेग लगातार बदलता रहता है)",
+      "It is an example of a non-accelerated motion (यह एक गैर-त्वरित गति का उदाहरण है)",
+      "The displacement is always equal to the distance covered (इसमें विस्थापन hamesha दूरी के बराबर होता है)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> वृत्तीय मार्ग पर प्रत्येक बिंदु पर गति की दिशा बदलती है। दिशा बदलने से सदिश राशि होने के कारण वेग (Velocity) निरंतर बदलता रहता है, भले ही चाल स्थिर हो।"
+  },
+  {
+    "cat": "gs",
+    "sub": "motion",
+    "qe": "Why is uniform circular motion considered an accelerated motion despite a constant speed?",
+    "qh": "एकसमान वृत्तीय गति को एक 'त्वरित गति' (Accelerated Motion) क्यों माना जाता है, भले ही उसकी चाल स्थिर हो?",
+    "o": [
+      "Because its mass changes continuously (क्योंकि इसका द्रव्यमान लगातार बदलता है)",
+      "Because the continuous change in direction causes a continuous change in velocity (क्योंकि गति की दिशा लगातार बदलने से वेग में निरंतर परिवर्तन होता है)",
+      "Because it violates the standard limits of light speed (क्योंकि यह प्रकाश की चाल के नियमों का उल्लंघन करती है)",
+      "Because the friction coefficient drops to zero (क्योंकि इसमें घर्षण बल का मान शून्य होता है)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> वेग दिशा और परिमाण दोनों से बनता है। दिशा के लगातार बदलने से वेग में परिवर्तन होता है, और वेग में परिवर्तन की दर ही त्वरण (अभिकेंद्र त्वरण) कहलाती है।"
+  },
+  {
+    "cat": "gs",
+    "sub": "motion",
+    "qe": "If a stone tied to a string moving in a circular path is released suddenly, in which direction does it fly off?",
+    "qh": "यदि एक पत्थर को धागे से बांधकर वृत्ताकार पथ पर घुमाया जा रहा हो और धागा अचानक टूट जाए, तो पत्थर किस दिशा में भागता है?",
+    "o": [
+      "It moves straight towards the center of the circle (वह वृत्त के केंद्र की ओर सीधा आता है)",
+      "It flies off tangentially to the circular path (वह वृत्ताकार पथ के उस बिंदु पर खींची गई स्पर्श रेखा के अनुदिश सीधा निकल जाता है)",
+      "It continues to move in a spiral cloud (वह हवा में गोल-गोल घूमता रहेगा)",
+      "It comes to an immediate stop at that point (वह तुरंत अपनी जगह पर स्थिर रुक जाएगा)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> जड़त्व के नियम के अनुसार, धागा टूटने पर केंद्र की ओर खींचने वाला बल समाप्त हो जाता है और पत्थर उस बिंदु पर वृत्ताकार पथ की स्पर्श रेखा (tangent) की दिशा में सीधा निकल जाता है।"
+  },
+  {
+    "cat": "gs",
+    "sub": "motion",
+    "qe": "The motion of the tip of a clock's hand is an example of:",
+    "qh": "घड़ी की सुई के सिरे की गति (Motion of the tip of a clock's hand) किस प्रकार की गति का उदाहरण है?",
+    "o": [
+      "Uniform linear motion (एकसमान रेखीय गति)",
+      "Uniform circular motion (एकसमान वृत्तीय गति)",
+      "Non-uniform accelerated linear motion (असमान त्वरित रेखीय गति)",
+      "State of absolute rest (विराम अवस्था का उदाहरण)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> घड़ी की सुई का सिरा एक निश्चित वृत्ताकार मार्ग पर बिना अपनी चाल बदले एक समान समय में चक्कर पूरा करता है, जो एकसमान वृत्तीय गति है।"
+  },
+  {
+    "cat": "gs",
+    "sub": "motion",
+    "qe": "What type of motion is depicted if the distance-time graph is a curved line sloping upwards?",
+    "qh": "दूरी-समय ग्राफ (Distance-Time Graph) में यदि रेखा एक वक्र रेखा (Curved Line) के रूप में ऊपर की ओर जा रही है, तो यह क्या प्रदर्शित करती है?",
+    "o": [
+      "Uniform linear motion (एकसमान रेखीय गति को)",
+      "Non-uniform motion (असमान गति को)",
+      "State of complete absolute rest (पूर्ण विराम अवस्था को)",
+      "Zero time interval condition (शून्य समय की स्थिति को)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> दूरी-समय ग्राफ का वक्राकार होना यह दर्शाता है कि समय के साथ दूरी बदलने की दर (चाल) स्थिर नहीं है, जो कि असमान गति (Non-uniform motion) की परिभाषा है।"
+  },
+  {
+    "cat": "gs",
+    "sub": "motion",
+    "qe": "A straight line sloping downwards on a velocity-time graph indicates:",
+    "qh": "एक वेग-समय ग्राफ (Velocity-Time Graph) में यदि रेखा नीचे की ओर झुकी हुई एक सीधी सरल रेखा है, तो यह क्या सूचित करती है?",
+    "o": [
+      "Positive uniform acceleration (धनात्मक एकसमान त्वरण)",
+      "Uniform retardation / deceleration (एकसमान मंदन)",
+      "The body is completely stationary at rest (वस्तु पूरी तरह स्थिर खड़ी है)",
+      "The physical path is zig-zag (वस्तु का पथ टेढ़ा-मेढ़ा है)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> नीचे गिरती सीधी रेखा का अर्थ है कि ग्राफ की ढाल ऋणात्मक और नियत (constant) है। ऋणात्मक नियत ढाल एकसमान मंदन (Uniform retardation) को व्यक्त करती है।"
+  },
+  {
+    "cat": "gs",
+    "sub": "motion",
+    "qe": "If the distance covered by an object is directly proportional to the square of time ($s \\propto t^2$), the acceleration of the object is:",
+    "qh": "यदि किसी वस्तु द्वारा तय की गई दूरी समय के वर्ग के समानुपाती ($s \\propto t^2$) है, तो वस्तु का त्वरण कैसा होगा?",
+    "o": [
+      "Zero (शून्य होगा)",
+      "Constant / Uniform (नियत या एकसमान होगा)",
+      "Continuously decreasing (लगातार घट रहा होगा)",
+      "The object is at rest (वस्तु विराम में होगी)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> गति के द्वितीय समीकरण ($s = ut + \\frac{1}{2}at^2$) के अनुसार, यदि $u=0$ हो, तो $s = \\frac{1}{2}at^2$ बनता है। यहाँ $s \\propto t^2$ तभी संभव है जब त्वरण ($a$) एक नियत स्थिरांक (constant) हो।"
+  },
+  {
+    "cat": "gs",
+    "sub": "motion",
+    "qe": "What is the relationship between linear velocity ($v$), radius ($r$), and time period ($T$) in a uniform circular motion?",
+    "qh": "एकसमान वृत्तीय गति में वस्तु का आवर्तकाल ($T$), रेखीय वेग ($v$) व त्रिज्या ($r$) के बीच क्या संबंध होता है?",
+    "o": [
+      "$v = \\frac{r}{T}$",
+      "$v = \\frac{2\\pi r}{T}$",
+      "$v = 2\\pi r \\times T$",
+      "$v = \\frac{T}{2\\pi r}$"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> वृत्ताकार पथ पर एक पूरा चक्कर लगाने में तय की गई दूरी वृत्त की परिधि ($2\\pi r$) होती है। अतः वेग = $\\frac{\\text{दूरी}}{\\text{समय}} = \\frac{2\\pi r}{T}$ होगा।"
+  },
+  {
+    "cat": "gs",
+    "sub": "motion",
+    "qe": "What instrument installed in vehicles measures the total distance traveled?",
+    "qh": "वाहनों के डैशबोर्ड पर लगा कौन सा यंत्र वाहन द्वारा तय की गई कुल दूरी (Total Distance) को मापता है?",
+    "o": [
+      "Speedometer (स्पीडोमीटर)",
+      "Odometer (ओडोमीटर)",
+      "Accelerometer (त्वरणमीटर)",
+      "Fuel Gauge (ईंधन गेज)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> ओडोमीटर (Odometer) वाहनों द्वारा तय की गई कुल दूरी को किलोमीटर (km) में रिकॉर्ड और प्रदर्शित करता है। स्पीडोमीटर तात्कालिक चाल मापता है।"
+  },
+  {
+    "cat": "gs",
+    "sub": "motion",
+    "qe": "If the displacement of an object is directly proportional to time ($s \\propto t$), the object is moving with:",
+    "qh": "यदि किसी वस्तु का विस्थापन समय के सीधे समानुपाती ($s \\propto t$) है, तो वस्तु की गति कैसी होगी?",
+    "o": [
+      "Increasing acceleration (बढ़ते हुए त्वरण से)",
+      "Constant / Uniform velocity (नियत या एकसमान वेग से)",
+      "Uniform deceleration (एकसमान मंदन से)",
+      "State of complete rest (पूर्ण विराम में)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> विस्थापन का समय के साथ सीधा रैखिक संबंध ($s = v \\times t$) यह दर्शाता है कि वेग ($v$) पूरी यात्रा में नियत (constant) है, जिससे त्वरण शून्य होता है।"
+  },
+  {
+    "cat": "gs",
+    "sub": "motion",
+    "qe": "On a velocity-time graph, if line B is steeper (has a larger angle with the time axis) than line A, which object has a higher acceleration?",
+    "qh": "वेग-समय ग्राफ पर यदि रेखा B का झुकाव समय अक्ष के साथ रेखा A से अधिक (अधिक कोण) है, तो किसका त्वरण अधिक होगा?",
+    "o": [
+      "Object A (वस्तु A का)",
+      "Object B because of its higher slope (झुकाव अधिक होने के कारण वस्तु B का)",
+      "Both have identical acceleration (दोनों का त्वरण बिल्कुल समान होगा)",
+      "Both have zero acceleration (दोनों का त्वरण शून्य होगा)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> वेग-समय ग्राफ की ढाल (slope) ही त्वरण को व्यक्त करती है। समय अक्ष के साथ जिसका झुकाव या कोण जितना अधिक होगा, उसकी ढाल और त्वरण का मान उतना ही अधिक होगा।"
+  },
+  {
+    "cat": "gs",
+    "sub": "motion",
+    "qe": "Is it physically possible for a body to have a constant speed and still be accelerating?",
+    "qh": "क्या यह व्यावहारिक रूप से संभव है कि किसी वस्तु की चाल (Speed) नियत हो लेकिन फिर भी उसमें त्वरण (Acceleration) उपस्थित हो?",
+    "o": [
+      "No, it violates the basic kinematics principles (नही, यह सिद्धांतों के विपरीत है)",
+      "Yes, this is possible in a Uniform Circular Motion (हाँ, एकसमान वृत्तीय गति में ऐसा संभव है)",
+      "Yes, but only when the body is completely at rest (हाँ, केवल तब जब वस्तु विराम अवस्था में हो)",
+      "Yes, only during linear motion with heavy air resistance (हाँ, केवल भारी घर्षण वाले माध्यम में रेखीय गति के दौरान)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> हाँ, वृत्तीय गति में चाल नियत रहने पर भी दिशा बदलने के कारण वेग बदलता है, जिससे उसमें अभिकेंद्र त्वरण (centripetal acceleration) सदैव उपस्थित रहता है।"
+  },
+  {
+    "cat": "gs",
+    "sub": "motion",
+    "qe": "What does a vertical straight line perpendicular to the time axis on a distance-time graph physically imply?",
+    "qh": "यदि दूरी-समय ग्राफ पर एक सीधी रेखा समय अक्ष के ठीक लंबवत (Perpendicular) खड़ी हो, तो यह क्या प्रदर्शित करता है?",
+    "o": [
+      "The object moves with uniform speed (वस्तु एकसमान चाल से चल रही है)",
+      "It represents a physically impossible situation as it implies infinite speed (यह एक व्यावहारिक रूप से असंभव स्थिति है क्योंकि यह एक ही क्षण में अनंत चाल को दर्शाता है)",
+      "The object is at absolute rest (वस्तु विराम अवस्था में खड़ी है)",
+      "The object is dropping under gravity (वस्तु गुरुत्वाकर्षण के प्रभाव में गिर रही है)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> समय अक्ष पर लंबवत खड़ी रेखा का मतलब है कि समय बिल्कुल नहीं बढ़ रहा ($t=0$) लेकिन दूरी अनंत रूप से बढ़ गई, जो कि व्यावहारिक रूप से असंभव (infinite speed) स्थिति है।"
+  },
+  {
+    "cat": "gs",
+    "sub": "motion",
+    "qe": "The SI unit 'meter per second squared' ($\\text{m/s}^2$) belongs to which of the following quantities?",
+    "qh": "मात्रक 'मीटर प्रति सेकंड स्क्वायर' ($\\text{m/s}^2$) निम्नलिखित में से किस भौतिक राशि का मानक मात्रक है?",
+    "o": [
+      "Velocity (वेग का)",
+      "Acceleration (त्वरण का)",
+      "Displacement (विस्थापन का)",
+      "Momentum (संवेग का)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> त्वरण वेग में परिवर्तन की समय दर है, अर्थात् $\\frac{\\text{वेग}}{\\text{समय}} = \\frac{\\text{m/s}}{\\text{s}} = \\text{m/s}^2$।"
+  },
+  {
+    "cat": "gs",
+    "sub": "motion",
+    "qe": "If the slope of a distance-time graph of a moving body is zero, the speed of the body is considered:",
+    "qh": "यदि किसी गतिशील वस्तु के दूरी-समय ग्राफ की ढाल (Slope) का मान शून्य है, तो वस्तु की चाल कितनी होगी?",
+    "o": [
+      "Maximum (अधिकतम)",
+      "Zero (शून्य होगी)",
+      "Constant but non-zero (स्थिर लेकिन गैर-शून्य)",
+      "Infinite (अनंत)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> दूरी-समय ग्राफ की ढाल चाल (Speed) को दर्शाती है। यदि ढाल शून्य है (रेखा क्षैतिज है), तो वस्तु की चाल भी शून्य है अर्थात वस्तु स्थिर है।"
+  },
+  {
+    "cat": "gs",
+    "sub": "motion",
+    "qe": "The rate of change of displacement with respect to time is defined as:",
+    "qh": "समय के साथ विस्थापन में होने वाले परिवर्तन की दर (Rate of change of displacement) को किस रूप में परिभाषित किया जाता है?",
+    "o": [
+      "Speed (चाल)",
+      "Velocity (वेग)",
+      "Acceleration (त्वरण)",
+      "Retardation (मंदन)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> विस्थापन में समय के साथ होने वाले परिवर्तन की दर को वेग (Velocity) कहते हैं। दूरी में परिवर्तन की दर को चाल कहते हैं।"
+  },
+  {
+    "cat": "gs",
+    "sub": "motion",
+    "qe": "A ball is thrown straight upwards. What is its velocity at the highest point of its motion?",
+    "qh": "जब किसी गेंद को सीधे ऊपर की ओर फेंका जाता है, तो उसके उच्चतम बिंदु (Highest Point) पर उसका वेग क्या होगा?",
+    "o": [
+      "Maximum (अधिकतम होगा)",
+      "Zero (शून्य होगा)",
+      "Equal to its initial throwing velocity (प्रारंभिक वेग के बराबर होगा)",
+      "Infinite (अनंत हो जाएगा)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> ऊपर जाते समय गुरुत्वाकर्षण के कारण गेंद का वेग लगातार घटता है और उच्चतम बिंदु पर पहुँचकर एक क्षण के लिए शून्य ($0$) हो जाता है, जिसके बाद वह नीचे गिरने लगती है।"
+  },
+  {
+    "cat": "gs",
+    "sub": "motion",
+    "qe": "Which of the following physical quantities can have a net value of zero at the end of a trip despite continuous motion?",
+    "qh": "लगातार गति में रहने के बावजूद पूरी यात्रा के अंत में निम्नलिखित में से किस भौतिक राशि का कुल मान शून्य हो सकता है?",
+    "o": [
+      "Total distance covered (तय की गई कुल दूरी)",
+      "Net displacement (कुल विस्थापन)",
+      "Instantaneous speed (तात्कालिक चाल)",
+      "Mass of the moving body (गतिशील वस्तु का द्रव्यमान)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> यदि कोई वस्तु अपनी यात्रा समाप्त करके वापस अपने प्रारंभिक बिंदु पर लौट आती है, तो उसका कुल विस्थापन (Net displacement) शून्य हो जाता है, भले ही उसने कुछ दूरी तय की हो।"
+  },
+  {
+    "cat": "gs",
+    "sub": "motion",
+    "qe": "What type of motion is indicated by a straight line sloping upwards from the origin on a velocity-time graph?",
+    "qh": "एक वेग-समय ग्राफ पर मूल बिंदु से ऊपर की ओर जाती हुई एक सीधी सरल रेखा किस प्रकार की गति को प्रदर्शित करती है?",
+    "o": [
+      "Non-uniform acceleration (असतत त्वरण)",
+      "Uniform acceleration (एकसमान त्वरित गति)",
+      "Variable velocity at zero acceleration (शून्य त्वरण गति)",
+      "Uniform speed motion (एकसमान चाल गति)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> वेग-समय ग्राफ की सीधी रेखा एक नियत ढाल को दर्शाती है। चूंकि इसकी ढाल त्वरण है, इसलिए स्थिर ढाल एकसमान त्वरित गति (Uniform acceleration) को निरूपित करती है।"
+  },
+  {
+    "cat": "gs",
+    "sub": "motion",
+    "qe": "A body moves in a circular path of radius $r$. What is its net displacement after completing a quarter ($1/4$) of the circle?",
+    "qh": "एक वस्तु $r$ त्रिज्या वाले वृत्ताकार पथ पर चल रही है। वृत्त का एक-चौथाई ($1/4$) चक्कर पूरा करने के बाद उसका नेट विस्थापन कितना होगा?",
+    "o": [
+      "$\\frac{\\pi r}{2}$",
+      "$\\sqrt{2}r$",
+      "Zero (शून्य)",
+      "$2r$"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> एक-चौथाई चक्कर पर प्रारंभिक और अंतिम बिंदु त्रिज्याओं के साथ $90^\\circ$ का कोण बनाते हैं। पाथागोरस प्रमेय के अनुसार उनके बीच की न्यूनतम सीधी दूरी (विस्थापन) $\\sqrt{r^2 + r^2} = \\sqrt{2}r$ होगी।"
+  },
+  {
+    "cat": "gs",
+    "sub": "motion",
+    "qe": "What does a horizontal line parallel to the time axis on a velocity-time graph physically mean?",
+    "qh": "वेग-समय ग्राफ (Velocity-Time Graph) पर समय अक्ष के समानांतर एक क्षैतिज सीधी रेखा का क्या अर्थ होता है?",
+    "o": [
+      "The object has uniform variable acceleration (वस्तु बदलते त्वरण से चल रही है)",
+      "The object is moving with constant velocity and its acceleration is zero (वस्तु नियत वेग से चल रही है और उसका त्वरण शून्य है)",
+      "The object is completely stationary at zero speed (वस्तु पूरी तरह स्थिर खड़ी है)",
+      "The velocity is dropping uniformly (वेग समान रूप से घट रहा है)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> समय अक्ष के समानांतर रेखा का मतलब है कि वेग का मान समय के साथ स्थिर (constant) है, अर्थात वेग में कोई परिवर्तन नहीं हो रहा, इसलिए त्वरण शून्य है।"
+  },
+  {
+    "cat": "gs",
+    "sub": "motion",
+    "qe": "The numerical ratio of average velocity to average speed for a moving body is always:",
+    "qh": "किसी भी गतिशील वस्तु के लिए औसत वेग और औसत चाल का संख्यात्मक अनुपात हमेशा कैसा होता है?",
+    "o": [
+      "Always greater than 1 (हमेशा 1 से अधिक)",
+      "Equal to or less than 1 (1 के बराबर या 1 से कम)",
+      "Always exactly equal to 1 (हमेशा ठीक 1 के बराबर)",
+      "Always zero (हमेशा शून्य)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> चूंकि विस्थापन का परिमाण दूरी से कभी बड़ा नहीं हो सकता, इसलिए औसत वेग का परिमाण भी औसत चाल से बड़ा नहीं हो सकता। यह अनुपात हमेशा 1 से कम या उसके बराबर ($\\le 1$) होगा।"
+  },
+  {
+    "cat": "gs",
+    "sub": "motion",
+    "qe": "If a vehicle covers unequal distances in equal intervals of time, its motion is classified as:",
+    "qh": "यदि कोई वाहन समान समयांतरालों में असमान दूरी तय करता है, तो उसकी गति को किस श्रेणी में वर्गीकृत किया जाएगा?",
+    "o": [
+      "Uniform motion (एकसमान गति)",
+      "Non-uniform motion (असमान गति)",
+      "State of complete rest (पूर्ण विराम की अवस्था)",
+      "Constant velocity propagation (नियत वेग संचरण)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> जब कोई वस्तु समान समयांतरालों में अलग-अलग (असमान) दूरियां तय करती है, तो उसकी चाल स्थिर नहीं रहती। इसे असमान गति (Non-uniform motion) कहा जाता है।"
+  },
+  {
+    "cat": "gs",
+    "sub": "motion",
+    "qe": "The mathematical expression $v^2 - u^2 = 2as$ represents which equation of motion?",
+    "qh": "गणितीय व्यंजक $v^2 - u^2 = 2as$ गति के किस समीकरण को प्रदर्शित करता है?",
+    "o": [
+      "First equation of motion (प्रथम समीकरण)",
+      "Second equation of motion (द्वितीय समीकरण)",
+      "Third equation of motion (तृतीय समीकरण)",
+      "Universal momentum law (सार्वभौमिक संवेग नियम)"
+    ],
+    "a": 2,
+    "e": "<b>Explanation:</b> नियत त्वरण के तहत रेखीय गति के लिए, $v^2 - u^2 = 2as$ को गति का तीसरा (तृतीय) समीकरण कहा जाता है, जो वेग और स्थिति के संबंध को दर्शाता है।"
+  },
+  {
+    "cat": "gs",
+    "sub": "motion",
+    "qe": "If an object is moving with a constant negative acceleration, the slope of its velocity-time graph will be:",
+    "qh": "यदि कोई वस्तु एक नियत ऋणात्मक त्वरण (मंदन) से चल रही है, तो उसके वेग-समय ग्राफ की ढाल कैसी होगी?",
+    "o": [
+      "Horizontal parallel line (क्षैतिज समानांतर रेखा)",
+      "A straight line sloping downwards (नीचे की ओर झुकती हुई एक सीधी सरल रेखा)",
+      "A curve bending upwards (ऊपर की ओर मुड़ता हुआ एक वक्र)",
+      "Vertical straight line (ऊर्ध्वाधर खड़ी रेखा)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> वेग-समय ग्राफ की ढाल त्वरण को दर्शाती है। ऋणात्मक नियत त्वरण का मतलब है कि ग्राफ की ढाल ऋणात्मक होगी, जो नीचे की ओर गिरती हुई सीधी रेखा के रूप में दिखती है।"
+  },
+  {
+    "cat": "gs",
+    "sub": "motion",
+    "qe": "What happens to the distance covered by an object when it undergoes uniform motion along a straight line?",
+    "qh": "जब कोई वस्तु किसी सीधी रेखा पर एकसमान गति करती है, तो समय के साथ उसकी तय दूरी में कैसा बदलाव आता है?",
+    "o": [
+      "Distance increases non-linearly (दूरी गैर-रैखिक रूप से बढ़ती है)",
+      "Distance increases linearly with time (दूरी समय के साथ रैखिक रूप से यानी सीधे समानुपात में बढ़ती है)",
+      "Distance remains completely constant (दूरी पूरी तरह स्थिर रहती है)",
+      "Distance drops to zero immediately (दूरी तुरंत शून्य हो जाती है)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> एकसमान गति में चाल नियत होती है, जिससे वस्तु हर समान सेकंड में समान दूरी तय करती है। इसलिए दूरी समय के साथ सीधे रैखिक समानुपात ($s \\propto t$) में बढ़ती है।"
+  },
+  {
+    "cat": "gs",
+    "sub": "motion",
+    "qe": "Which velocity components change and which remain constant when a stone is whirled in a horizontal circle at a constant speed?",
+    "qh": "जब किसी पत्थर को एक धागे से बांधकर नियत चाल से क्षैतिज वृत्त में घुमाया जाता है, तो वेग का कौन सा घटक बदलता है?",
+    "o": [
+      "The magnitude changes, direction is constant (परिमाण बदलता है, दिशा स्थिर रहती है)",
+      "The direction changes continuously, changing the velocity vector (दिशा लगातार बदलती है, जिससे वेग सदिश बदलता है)",
+      "Both magnitude and direction remain constant (परिमाण और दिशा दोनों स्थिर रहते हैं)",
+      "The velocity instantly drops to zero (वेग तुरंत शून्य हो जाता है)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> नियत चाल से घूमने पर वेग का परिमाण स्थिर रहता है, लेकिन वृत्ताकार मार्ग के हर बिंदु पर गति की दिशा बदलने के कारण उसका वेग सदिश (Velocity vector) निरंतर बदलता रहता है।"
+  },
+  {
+    "cat": "gs",
+    "sub": "motion",
+    "qe": "The physical area of which mathematical graph helps in deriving the second equation of motion ($s = ut + \\frac{1}{2}at^2$)?",
+    "qh": "किस ग्राफ के नीचे घिरे कुल क्षेत्रफल की मदद से गति का द्वितीय समीकरण ($s = ut + \\frac{1}{2}at^2$) व्युत्पन्न किया जाता है?",
+    "o": [
+      "Distance-Time graph (दूरी-समय ग्राफ)",
+      "Velocity-Time graph (वेग-समय ग्राफ)",
+      "Acceleration-Distance graph (त्वरण-दूरी ग्राफ)",
+      "Position-Mass graph (स्थिति-द्रव्यमान ग्राफ)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> वेग-समय ग्राफ (Velocity-Time Graph) के नीचे का कुल क्षेत्रफल विस्थापन/दूरी ($s$) को दर्शाता है। इसी क्षेत्रफल (आयत + त्रिभुज) की गणना से गति का दूसरा समीकरण प्राप्त होता है।"
   }
 ]
