@@ -21866,5 +21866,495 @@
     ],
     "a": 1,
     "e": "<b>Explanation:</b> सूत्र $P = \\frac{1}{f}$ के अनुसार, फोकस दूरी ($f$) का मान जितना अधिक होगा, लेंस की प्रकाश किरणों को मोड़ने की क्षमता (Power) उतनी ही कम यानी क्षीण होती चली जाएगी।"
+  },
+  {
+    "cat": "gs",
+    "sub": "light",
+    "qe": "When parallel rays of light strike a concave mirror, at which point do they meet after reflection?",
+    "qh": "जब प्रकाश की समानांतर किरणें एक अवतल दर्पण पर आकर टकराती हैं, तो परावर्तन के बाद वे मुख्य अक्ष पर किस बिंदु पर मिलेंगी?",
+    "o": [
+      "Center of Curvature (वक्रता केंद्र पर)",
+      "Principal Focus (मुख्य फोकस पर)",
+      "Pole (ध्रुव पर)",
+      "Infinity (अनंत पर)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> नियम के अनुसार, मुख्य अक्ष (Principal axis) के समानांतर आने वाली प्रकाश किरणें परावर्तन के बाद मुख्य फोकस (F) पर अभिसरित (converge) होती हैं।"
+  },
+  {
+    "cat": "gs",
+    "sub": "light",
+    "qe": "According to the Law of Reflection, the angle of incidence is always equal to the angle of reflection. This law applies to which type of surfaces?",
+    "qh": "परावर्तन के नियम के अनुसार, आपतन कोण हमेशा परावर्तन कोण के बराबर होता है। यह नियम किस प्रकार की सतहों पर लागू होता है?",
+    "o": [
+      "Only plane mirrors (केवल समतल दर्पण पर)",
+      "All spherical and rough reflecting surfaces (सभी गोलीय और खुरदरी परावर्तक सतहों पर)",
+      "Only regular shiny steel plates (केवल चमकदार स्टील प्लेटों पर)",
+      "Only convex mirrors (केवल उत्तल दर्पण पर)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> परावर्तन का नियम ($\\angle i = \\angle r$) एक सार्वभौमिक नियम है जो समतल, अवतल, उत्तल और यहाँ तक कि अनियमित खुरदरी सतहों पर भी समान रूप से लागू होता है।"
+  },
+  {
+    "cat": "gs",
+    "sub": "light",
+    "qe": "The incident ray, the reflected ray, and the normal at the point of incidence all lie in the same:",
+    "qh": "आप्तित किरण, परावर्तित किरण और आपतन बिंदु पर खींचा गया अभिलंब तीनों हमेशा एक ही कहाँ स्थित होते हैं?",
+    "o": [
+      "Horizontal line (क्षैतिज रेखा में)",
+      "Plane (समतल या प्लेन में)",
+      "Curved surface (वक्र सतह में)",
+      "Aperture area (द्वारक क्षेत्र में)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> परावर्तन के दूसरे नियम के अनुसार, आप्तित किरण, परावर्तित किरण और अभिलंब तीनों एक ही काल्पनिक ऊर्ध्वाधर समतल (same vertical plane) में समाहित होते हैं।"
+  },
+  {
+    "cat": "gs",
+    "sub": "light",
+    "qe": "Which mirror is preferred as a rear-view mirror in vehicles due to its wide field of view?",
+    "qh": "वाहनों में पीछे का बड़ा ट्रैफिक देखने के लिए (rear-view mirror) किस दर्पण को प्राथमिकता दी जाती है?",
+    "o": [
+      "Concave mirror (अवतल दर्पण)",
+      "Convex mirror (उत्तल दर्पण)",
+      "Plane mirror (समतल दर्पण)",
+      "Cylindrical mirror (बेलनाकार दर्पण)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> उत्तल दर्पण हमेशा सीधा और छोटा प्रतिबिंब बनाता है, जिससे इसका दृष्टि-क्षेत्र (field of view) बहुत व्यापक हो जाता है और ड्राइवर को पीछे का पूरा ट्रैफिक दिखता है।"
+  },
+  {
+    "cat": "gs",
+    "sub": "light",
+    "qe": "Where should an object be placed in front of a concave mirror to obtain a real, inverted image of the exact same size?",
+    "qh": "एक अवतल दर्पण के सामने किसी वस्तु को कहाँ रखा जाए ताकि उसका वास्तविक, उल्टा और वस्तु के बिल्कुल समान आकार का प्रतिबिंब प्राप्त हो?",
+    "o": [
+      "At the principal focus (मुख्य फोकस पर)",
+      "At the center of curvature (वक्रता केंद्र पर)",
+      "At infinity (अनंत पर)",
+      "Between pole and focus (ध्रुव और फोकस के बीच)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> जब वस्तु वक्रता केंद्र (C) पर होती है, तो प्रकाश किरणें परावर्तित होकर ठीक उसी बिंदु के नीचे मिलती हैं, जिससे समान आकार का वास्तविक प्रतिबिंब बनता है।"
+  },
+  {
+    "cat": "gs",
+    "sub": "light",
+    "qe": "Why do dentists use a concave mirror to examine a patient's teeth?",
+    "qh": "दंत चिकित्सक (Dentists) मरीज के दांतों की जांच करने के लिए अवतल दर्पण का उपयोग क्यों करते हैं?",
+    "o": [
+      "To get a smaller and inverted image (छोटा और उल्टा प्रतिबिंब देखने के लिए)",
+      "To get an erect and magnified virtual image (सीधा और बड़ा आभासी प्रतिबिंब देखने के लिए)",
+      "To decrease the intensity of light (प्रकाश की तीव्रता कम करने के लिए)",
+      "To view teeth through a parallel beam (दांतों को समानांतर बीम से देखने के लिए)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> जब दांतों को अवतल दर्पण के फोकस और ध्रुव के बहुत पास (अंदर) रखा जाता है, तो दर्पण दांत का सीधा, आभासी और काफी बड़ा (magnified) प्रतिबिंब दिखाता है।"
+  },
+  {
+    "cat": "gs",
+    "sub": "light",
+    "qe": "Which mirror is used in solar furnaces to focus sunlight and produce high heat?",
+    "qh": "सौर भट्टियों (Solar Furnaces) में सूर्य के प्रकाश को एक बिंदु पर केंद्रित करके अत्यधिक ऊष्मा उत्पन्न करने के लिए किसका उपयोग किया जाता है?",
+    "o": [
+      "Convex mirror (उत्तल दर्पण)",
+      "Concave mirror (अवतल दर्पण)",
+      "Plane mirror (समतल दर्पण)",
+      "Bifocal lens (द्विफोकसी लेंस)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> अवतल दर्पण एक अभिसारी (converging) दर्पण है, जो अनंत से आने वाली समानांतर सूर्य किरणों को परावर्तित करके अपने फोकस बिंदु पर इकट्ठा कर देता है।"
+  },
+  {
+    "cat": "gs",
+    "sub": "light",
+    "qe": "If the magnification of a spherical mirror is positive ($m = +3$), what does it tell about the nature of the image?",
+    "qh": "यदि किसी गोलीय दर्पण का आवर्धन धनात्मक ($m = +3$) है, तो यह प्रतिबिंब की प्रकृति के बारे में क्या बताता है?",
+    "o": [
+      "Real and inverted (वास्तविक और उल्टा)",
+      "Virtual and erect (आभासी और सीधा)",
+      "Real and diminished (वास्तविक और छोटा)",
+      "Point-sized at focus (फोकस पर बिंदु आकार का)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> धनात्मक आवर्धन ($+$) हमेशा इस बात को सूचित करता है कि प्रतिबिंब सीधा और आभासी (virtual and erect) है। मान 1 से बड़ा होने का मतलब प्रतिबिंब बड़ा है।"
+  },
+  {
+    "cat": "gs",
+    "sub": "light",
+    "qe": "According to the sign convention, the focal length of a concave mirror is always taken as:",
+    "qh": "कार्तिकेय चिह्न परिपाटी के अनुसार, अवतल दर्पण की फोकस दूरी का चिह्न हमेशा क्या लिया जाता है?",
+    "o": [
+      "Positive (धनात्मक)",
+      "Negative (ऋणात्मक)",
+      "Zero (शून्य)",
+      "Depends on object distance (वस्तु की दूरी पर निर्भर करता है)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> अवतल दर्पण का मुख्य फोकस हमेशा परावर्तक सतह के बाईं ओर (प्रकाश की दिशा के विपरीत) होता है, इसलिए इसकी फोकस दूरी सदैव ऋणात्मक (negative) ली जाती है।"
+  },
+  {
+    "cat": "gs",
+    "sub": "light",
+    "qe": "What is the primary cause of refraction when light travels from one medium to another?",
+    "qh": "जब प्रकाश एक माध्यम से दूसरे माध्यम में जाता है, तो होने वाले अपवर्तन (refraction) का मुख्य कारण क्या है?",
+    "o": [
+      "Change in color of light (प्रकाश का रंग बदल जाना)",
+      "Change in the speed of light in different media (अलग-अलग माध्यमों में प्रकाश की चाल का भिन्न होना)",
+      "Absorption of light by the surface (सतह द्वारा प्रकाश का अवशोषण)",
+      "Total internal reflection (पूर्ण आंतरिक परावर्तन)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> अलग-अलग माध्यमों का प्रकाशिक घनत्व अलग होता है, जिससे प्रकाश की चाल (speed of light) बदल जाती है। इसी गति परिवर्तन के कारण किरण अपने मार्ग से मुड़ जाती है।"
+  },
+  {
+    "cat": "gs",
+    "sub": "light",
+    "qe": "When a ray of light enters from an optically rarer medium to an optically denser medium obliquely, it bends:",
+    "qh": "जब प्रकाश की किरण एक प्रकाशिक विरल माध्यम (जैसे हवा) से सघन माध्यम (जैसे कांच) में तिरछी प्रवेश करती है, तो यह किस ओर मुड़ती है?",
+    "o": [
+      "Away from the normal (अभिलंब से दूर)",
+      "Towards the normal (अभिलंब की ओर)",
+      "Goes straight without any deviation (बिना किसी विचलन के सीधी निकलती है)",
+      "Reflects back into the same medium (उसी माध्यम में वापस लौट जाती है)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> सघन माध्यम में प्रकाश की गति धीमी हो जाती है, जिसके कारण अपवर्तित किरण आपतन बिंदु पर खींचे गए अभिलंब की ओर (towards the normal) झुक जाती है।"
+  },
+  {
+    "cat": "gs",
+    "sub": "light",
+    "qe": "Snell's law states that for a given pair of media, the ratio of the sine of the angle of incidence to the sine of the angle of refraction is a:",
+    "qh": "स्नेल का नियम बताता है कि माध्यमों के एक निश्चित जोड़े के लिए, आपतन कोण की ज्या (sin i) और अपवर्तन कोण की ज्या (sin r) का अनुपात क्या होता है?",
+    "o": [
+      "Variable value (परिवर्तनीय मान)",
+      "Constant (स्थिरांक या नियतांक)",
+      "Zero (शून्य)",
+      "Product of their speeds (उनकी चालों का गुणनफल)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> स्नेल के नियमानुसार $\\frac{\\sin i}{\\sin r} = \\text{स्थिरांक}$ होता है। यह स्थिरांक पहले माध्यम के सापेक्ष दूसरे माध्यम का अपवर्तनांक (refractive index) कहलाता है।"
+  },
+  {
+    "cat": "gs",
+    "sub": "light",
+    "qe": "When light passes through a rectangular glass slab, the emergent ray is always to the incident ray.",
+    "qh": "जब प्रकाश की किरण कांच के एक आयताकार स्लैब से होकर गुजरती है, तो निर्गत किरण (emergent ray) हमेशा आपतित किरण के कैसी होती है?",
+    "o": [
+      "Perpendicular (लंबवत)",
+      "Parallel (समानांतर)",
+      "At a $45^\\circ$ angle (45 डिग्री के कोण पर)",
+      "Opposite in direction (विपरीत दिशा में)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> आयताकार स्लैब के दोनों विपरीत फलक समानांतर होते हैं। हवा से कांच और कांच से हवा में होने वाला कुल विचलन बराबर और विपरीत होकर किरण को समानांतर (parallel) बना देता है।"
+  },
+  {
+    "cat": "gs",
+    "sub": "light",
+    "qe": "Why is a convex lens known as a converging lens?",
+    "qh": "एक उत्तल लेंस (Convex Lens) को 'अभिसारी लेंस' (converging lens) क्यों कहा जाता है?",
+    "o": [
+      "Because it diverges light rays (क्योंकि यह प्रकाश किरणों को फैलाता है)",
+      "Because it converges parallel rays of light at a single point (क्योंकि यह मुख्य अक्ष के समानांतर आने वाली किरणों को एक बिंदु पर इकट्ठा करता है)",
+      "Because it changes the wavelength of light (क्योंकि यह प्रकाश की तरंगदैर्ध्य बदलता है)",
+      "Because it absorbs all frequencies (क्योंकि यह सभी आवृत्तियों को अवशोषित करता है)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> उत्तल लेंस अपने मध्य भाग में मोटा होता है। यह मुख्य अक्ष के समानांतर आने वाली प्रकाश किरणों को अपवर्तन के बाद मुख्य फोकस पर एक जगह मिलाता (converge करता) है।"
+  },
+  {
+    "cat": "gs",
+    "sub": "light",
+    "qe": "The power of a lens is inversely proportional to its focal length. What is the SI unit of power of a lens?",
+    "qh": "लेंस की क्षमता उसकी फोकस दूरी के व्युत्क्रमानुपाती होती है। लेंस की क्षमता का एसआई (SI) मात्रक क्या है?",
+    "o": [
+      "Watt (वाट)",
+      "Diopter (डायोप्टर)",
+      "Meter (मीटर)",
+      "Joule (जूल)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> लेंस की क्षमता ($P = \\frac{1}{f}$) को डायोप्टर (D) में मापा जाता है, बशर्ते फोकस दूरी मीटर (m) में मापी गई हो।"
+  },
+  {
+    "cat": "gs",
+    "sub": "light",
+    "qe": "Where should an object be placed in front of a convex lens to get a virtual and erect image?",
+    "qh": "एक उत्तल लेंस के सामने वस्तु को कहाँ रखा जाए ताकि उसका आभासी (virtual) और सीधा प्रतिबिंब प्राप्त हो सके?",
+    "o": [
+      "Between infinity and $2F_1$ (अनंत और 2F1 के बीच)",
+      "Between focus $F_1$ and optical center $O$ (मुख्य फोकस F1 और प्रकाशिक केंद्र O के बीच)",
+      "Exactly at $2F_1$ (ठीक 2F1 पर)",
+      "At focus $F_1$ (फोकस F1 के ऊपर)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> उत्तल लेंस का यह एक विशेष केस है। जब वस्तु फोकस के अंदर (F1 और O के बीच) आती है, तो अपवर्तित किरणें आगे फैल जाती हैं और पीछे बढ़ाने पर एक सीधा, आभासी प्रतिबिंब बनाती हैं।"
+  },
+  {
+    "cat": "gs",
+    "sub": "light",
+    "qe": "When a light ray travels from an optically denser medium to a rarer medium (e.g., glass to air), it bends:",
+    "qh": "प्रकाश के अपवर्तन में जब कोई किरण किसी सघन माध्यम से विरल माध्यम में (जैसे कांच से हवा में) प्रवेश करती है, तो यह किस ओर मुड़ती है?",
+    "o": [
+      "Towards the normal (अभिलंब की ओर)",
+      "Away from the normal (अभिलंब से दूर)",
+      "Goes straight without bending (बिना मुड़े सीधी निकल जाती है)",
+      "Turns back by $90^\\circ$ (90 डिग्री पर वापस घूम जाती है)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> विरल माध्यम में जाने पर प्रकाश की चाल बढ़ जाती है, जिससे अपवर्तित किरण आपतन बिंदु पर खींचे गए अभिलंब से दूर (away from the normal) हट जाती है।"
+  },
+  {
+    "cat": "gs",
+    "sub": "light",
+    "qe": "What is the difference in sign in the magnification formula between a mirror and a lens?",
+    "qh": "आवर्धन (Magnification, m) के सूत्र में दर्पण और लेंस के बीच मुख्य रूप से क्या अंतर होता है?",
+    "o": [
+      "Both have the same formula $m = \\frac{v}{u}$ (दोनों का सूत्र बिल्कुल समान होता है)",
+      "Mirror has $m = -\\frac{v}{u}$ and Lens has $m = +\\frac{v}{u}$ (दर्पण के लिए सूत्र में ऋणात्मक और लेंस के लिए धनात्मक चिह्न होता है)",
+      "Mirror has $m = +\\frac{v}{u}$ and Lens has $m = -\\frac{v}{u}$ (दर्पण के लिए धनात्मक और लेंस के लिए ऋणात्मक चिह्न होता है)",
+      "Magnification cannot be calculated using distances in lenses (लेंस में दूरियों से आवर्धन नहीं निकाला जा सकता)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> चिह्न परिपाटी के नियमों के अनुसार, दर्पण के आवर्धन सूत्र में आगे माइनस लगता है ($m = -\\frac{v}{u}$), जबकि लेंस के आवर्धन सूत्र में केवल धनात्मक $\\frac{v}{u}$ होता है।"
+  },
+  {
+    "cat": "gs",
+    "sub": "light",
+    "qe": "What is the unique property of the optical center of a lens?",
+    "qh": "किसी लेंस के 'प्रकाशिक केंद्र' (Optical Center, O) की सबसे मुख्य विशेषता क्या होती है?",
+    "o": [
+      "It bends light by $90^\\circ$ (यह प्रकाश को 90 डिग्री पर मोड़ देता है)",
+      "A ray of light passes through it without any deviation (यहाँ से गुजरने वाली प्रकाश की किरण बिना किसी विचलन के सीधी निकल जाती है)",
+      "It acts as a perfect reflector (यह एक पूर्ण परावर्तक की तरह कार्य करता है)",
+      "Only red light can pass through it (यहाँ से केवल लाल प्रकाश ही गुजर सकता है)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> लेंस के मुख्य मध्य बिंदु यानी प्रकाशिक केंद्र (O) से होकर गुजरने वाली कोई भी प्रकाश किरण बिना किसी विचलन या झुकाव के अपने मार्ग पर सीधी पार हो जाती है।"
+  },
+  {
+    "cat": "gs",
+    "sub": "light",
+    "qe": "If a lens has a power of $-2.0\\text{ D}$, what type of lens is it and which vision defect is it used to correct?",
+    "qh": "यदि किसी लेंस की क्षमता $-2.0\\text{ D}$ है, तो यह किस प्रकार का लेंस है और इसका उपयोग किस दृष्टि दोष को दूर करने में होता है?",
+    "o": [
+      "Convex lens, Hypermetropia (उत्तल लेंस, दूर-दृष्टि दोष)",
+      "Concave lens, Myopia (अवलत लेंस, निकट-दृष्टि दोष)",
+      "Plane glass, Presbyopia (समतल कांच, जरा-दूरदर्शिता)",
+      "Cylindrical lens, Astigmatism (बेलनाकार लेंस, अबिंदुकता)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> ऋणात्मक क्षमता ($-$) हमेशा अवतल लेंस (concave lens) की होती है। इसका उपयोग निकट-दृष्टि दोष (Myopia) से पीड़ित लोगों के चश्मों में किया जाता है।"
+  },
+  {
+    "cat": "gs",
+    "sub": "light",
+    "qe": "Why is the absolute refractive index of any medium always greater than 1?",
+    "qh": "किसी भी पारदर्शी माध्यम का निरपेक्ष अपवर्तनांक (Absolute Refractive Index) हमेशा 1 से अधिक क्यों होता है?",
+    "o": [
+      "Because speed of light is maximum in glass (क्योंकि कांच में प्रकाश की चाल अधिकतम होती है)",
+      "Because speed of light in vacuum is always greater than the speed of light in any other medium ($n = \\frac{c}{v} > 1$) (क्योंकि वैक्यूम में प्रकाश की चाल हमेशा किसी भी अन्य माध्यम में चाल से अधिक होती है)",
+      "Because refractive index depends on temperature (क्योंकि अपवर्तनांक तापमान पर निर्भर करता है)",
+      "Because light slows down in vacuum (क्योंकि वैक्यूम में प्रकाश धीमा हो जाता है)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> निरपेक्ष अपवर्तनांक का सूत्र $n = \\frac{c}{v}$ है। चूंकि वैक्यूम या हवा में प्रकाश की चाल ($c$) ब्रह्मांड में सबसे तेज है, इसलिए अंश हमेशा हर से बड़ा होगा और मान 1 से अधिक आएगा।"
+  },
+  {
+    "cat": "gs",
+    "sub": "light",
+    "qe": "The plane containing the incident ray, reflected ray, and the normal is perpendicular to the:",
+    "qh": "आप्तित किरण, परावर्तित किरण और अभिलंब को समाहित करने वाला काल्पनिक प्लेन दर्पण की सतह के कैसा होता है?",
+    "o": [
+      "Parallel (समानांतर)",
+      "Perpendicular (लंबवत)",
+      "At a $30^\\circ$ angle (30 डिग्री के कोण पर)",
+      "Depends on the type of mirror (दर्पण के प्रकार पर निर्भर करता है)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> परावर्तन में तीनों रेखाएं जिस समतल में होती हैं, वह समतल दर्पण की परावर्तक सतह पर ठीक ऊर्ध्वाधर यानी लंबवत (perpendicular) खड़ा होता है।"
+  },
+  {
+    "cat": "gs",
+    "sub": "light",
+    "qe": "A virtual image can never be formed on a:",
+    "qh": "एक आभासी (virtual) प्रतिबिंब को कभी भी किस पर प्राप्त नहीं किया जा सकता है?",
+    "o": [
+      "Mirror surface (दर्पण की सतह पर)",
+      "Screen (परदे पर)",
+      "Lens center (लेंस के केंद्र पर)",
+      "Camera sensor (कैमरा सेंसर पर)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> आभासी प्रतिबिंब केवल प्रकाश किरणों के पीछे की ओर मिलने के आभास से बनता है। वास्तविक किरणें वहाँ नहीं कटतीं, इसलिए इसे किसी भौतिक परदे (screen) पर नहीं उतारा जा सकता।"
+  },
+  {
+    "cat": "gs",
+    "sub": "light",
+    "qe": "According to the VMCL rule (Vex Mirror, Cave Lens), what type of image is always formed by a convex mirror?",
+    "qh": "शॉर्टकट नियम 'VMCL' के अनुसार, एक उत्तल दर्पण (Convex Mirror) द्वारा हमेशा किस प्रकार का प्रतिबिंब बनता है?",
+    "o": [
+      "Real, inverted, and magnified (वास्तविक, उल्टा और बड़ा)",
+      "Virtual, erect, and diminished (आभासी, सीधा और छोटा)",
+      "Real, erect, and same size (वास्तविक, सीधा और समान आकार का)",
+      "Virtual, inverted, and point-sized (आभासी, उल्टा और बिंदु आकार का)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> उत्तल दर्पण (Convex Mirror) वस्तु की प्रत्येक स्थिति के लिए सदैव सीधा, छोटा और आभासी (virtual, erect, and diminished) प्रतिबिंब ही बनाता है।"
+  },
+  {
+    "cat": "gs",
+    "sub": "light",
+    "qe": "When a ray of light falls normally on the surface of a transparent medium, what is the angle of refraction?",
+    "qh": "जब प्रकाश की किरण किसी पारदर्शी माध्यम की सतह पर बिल्कुल लंबवत (normally) आकर गिरती है, तो अपवर्तन कोण कितना होगा?",
+    "o": [
+      "$90^\\circ$",
+      "$0^\\circ$",
+      "$45^\\circ$",
+      "$180^\\circ$"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> लंबवत गिरने का मतलब है कि आप्तित किरण अभिलंब के ठीक ऊपर है, यानी आपतन कोण $\\angle i = 0^\\circ$ है। स्नेल के नियम के अनुसार अपवर्तन कोण $\\angle r$ भी $0^\\circ$ हो जाएगा।"
+  },
+  {
+    "cat": "gs",
+    "sub": "light",
+    "qe": "The notation $n_{21}$ represents the refractive index of medium 2 with respect to medium 1. In terms of speed, it is written as:",
+    "qh": "साकेप्स अपवर्तनांक $n_{21}$ माध्यम 2 का माध्यम 1 के सापेक्ष अपवर्तनांक दर्शाता है। गति (चाल) के पदों में इसे कैसे लिखा जाता है?",
+    "o": [
+      "$\\frac{v_2}{v_1}$",
+      "$\\frac{v_1}{v_2}$",
+      "$v_1 \\times v_2$",
+      "$\\frac{1}{v_1 \\times v_2}$"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> अपवर्तनांक और प्रकाश की चाल में व्युत्क्रमानुपाती संबंध होता है। इसलिए $n_{21} = \\frac{n_2}{n_1} = \\frac{v_1}{v_2}$ (माध्यम 1 में चाल / माध्यम 2 में चाल) होता है।"
+  },
+  {
+    "cat": "gs",
+    "sub": "light",
+    "qe": "Why is a concave lens also called a diverging lens?",
+    "qh": "एक अवतल लेंस (Concave Lens) को 'अपसारी लेंस' (diverging lens) क्यों कहा जाता है?",
+    "o": [
+      "Because it brings rays together (क्योंकि यह किरणों को पास लाता है)",
+      "Because it spreads out parallel rays of light after refraction (क्योंकि यह अपने ऊपर आने वाली समानांतर प्रकाश किरणों को बाहर की ओर फैला देता है)",
+      "Because it creates real images only (क्योंकि यह केवल वास्तविक प्रतिबिंब बनाता है)",
+      "Because it blocks all light (क्योंकि यह पूरे प्रकाश को रोक देता है)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> अवतल लेंस बीच में पतला और किनारों पर मोटा होता है। जब इस पर समानांतर किरणें गिरती हैं, तो यह उन्हें बाहर की तरफ फैला (diverge कर) देता है।"
+  },
+  {
+    "cat": "gs",
+    "sub": "light",
+    "qe": "In the mirror formula, all distances are measured from which point of the mirror?",
+    "qh": "दर्पण सूत्र (Mirror Formula) का उपयोग करते समय, सभी दूरियों को दर्पण के किस बिंदु से मापा जाता है?",
+    "o": [
+      "From the center of curvature (वक्रता केंद्र से)",
+      "From the pole of the mirror (दर्पण के ध्रुव से)",
+      "From the principal focus (मुख्य फोकस से)",
+      "From the top edge (ऊपरी सिरे से)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> चिह्न परिपाटी के अनुसार, गोलीय दर्पण में सभी दूरियों को निर्देशांक प्रणाली के मूल बिंदु यानी दर्पण के ध्रुव (Pole, P) से मापा जाता है।"
+  },
+  {
+    "cat": "gs",
+    "sub": "light",
+    "qe": "In lenses, the optical center is considered as the origin. Distances measured in the direction of incident light are taken as:",
+    "qh": "लेंस में प्रकाशिक केंद्र को मूल बिंदु माना जाता है। आप्तित प्रकाश की दिशा में मापी गई दूरियों को क्या माना जाता है?",
+    "o": [
+      "Negative (ऋणात्मक)",
+      "Positive (धनात्मक)",
+      "Zero (शून्य)",
+      "Infinite (अनंत)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> नियम के अनुसार, जिस दिशा में प्रकाश गमन कर रहा है (बाईं से दाईं ओर), उसी दिशा में मापी जाने वाली सभी दूरियां धनात्मक ($+$) मानी जाती हैं।"
+  },
+  {
+    "cat": "gs",
+    "sub": "light",
+    "qe": "An image that is formed by the actual intersection of light rays and can be caught on a screen is called a:",
+    "qh": "वह प्रतिबिंब जो प्रकाश किरणों के वास्तविक कटान से बनता है और परदे पर उतारा जा सकता है, क्या कहलाता है?",
+    "o": [
+      "Virtual image (आभासी प्रतिबिंब)",
+      "Real image (वास्तविक प्रतिबिंब)",
+      "Imaginary image (काल्पनिक प्रतिबिंब)",
+      "Refracted beam (अपवर्तित बीम)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> जब प्रकाश किरणें परावर्तन या अपवर्तन के बाद वास्तव में किसी बिंदु पर मिलती हैं, तो वास्तविक (Real) प्रतिबिंब बनता है। इसे परदे पर देखा जा सकता है।"
+  },
+  {
+    "cat": "gs",
+    "sub": "light",
+    "qe": "If a spherical mirror forms an erect image which is larger than the object, the mirror must be:",
+    "qh": "यदि कोई गोलीय दर्पण किसी वस्तु का सीधा और वस्तु से बड़ा प्रतिबिंब बनाता है, तो वह दर्पण अनिवार्य रूप से कैसा होगा?",
+    "o": [
+      "Convex mirror (उत्तल दर्पण)",
+      "Concave mirror (अवतल दर्पण)",
+      "Plane mirror (समतल दर्पण)",
+      "Parabolic lens (परवलयिक लेंस)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> उत्तल दर्पण हमेशा छोटा प्रतिबिंब बनाता है और समतल दर्पण बराबर। केवल अवतल दर्पण (Concave Mirror) ही अपने विशेष केस में सीधा और बड़ा प्रतिबिंब बना सकता है।"
+  },
+  {
+    "cat": "gs",
+    "sub": "light",
+    "qe": "A medium with a higher refractive index is optically compared to a medium with a lower refractive index.",
+    "qh": "कम अपवर्तनांक वाले माध्यम की तुलना में उच्च अपवर्तनांक वाले माध्यम को प्रकाशिक रूप से क्या माना जाता है?",
+    "o": [
+      "Rarer (विरल)",
+      "Denser (सघन)",
+      "Transparent (पारदर्शी)",
+      "Opaque (अपारदर्शी)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> जिस माध्यम का अपवर्तनांक (refractive index) जितना अधिक होता है, वह उतना ही अधिक प्रकाशिक सघन (optically denser) माना जाता है, क्योंकि वह प्रकाश को ज्यादा रोकता है।"
+  },
+  {
+    "cat": "gs",
+    "sub": "light",
+    "qe": "The perpendicular distance between the original path of the incident ray and the emergent ray coming out of a glass slab is called:",
+    "qh": "कांच के स्लैब से निकलने वाली निर्गत किरण और आपतित किरण के मूल मार्ग के बीच की लंबवत दूरी को क्या कहा जाता है?",
+    "o": [
+      "Linear bending (रैखिक झुकाव)",
+      "Lateral displacement (पार्श्विक विस्थापन)",
+      "Angular dispersion (कोणीय विक्षेपण)",
+      "Focal shift (फोकस विस्थापन)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> कांच के स्लैब में प्रकाश की किरण अपनी मूल दिशा के समानांतर ही बाहर निकलती है, लेकिन थोड़ी बगल में खिसक जाती है। इस खिसकाव को पार्श्विक विस्थापन (Lateral displacement) कहते हैं।"
+  },
+  {
+    "cat": "gs",
+    "sub": "light",
+    "qe": "According to the Cartesian sign convention, heights measured upward and perpendicular to the principal axis are taken as:",
+    "qh": "चिह्न परिपाटी के अनुसार, मुख्य अक्ष के ऊपर लंबवत मापी जाने वाली वस्तु की ऊंचाई को हमेशा क्या लिया जाता है?",
+    "o": [
+      "Negative (ऋणात्मक)",
+      "Positive (धनात्मक)",
+      "Zero (शून्य)",
+      "Depends on the image size (प्रतिबिंब के आकार पर निर्भर करता है)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> मुख्य अक्ष के ऊपर ($+y$ अक्ष की दिशा में) मापी जाने वाली सभी ऊंचाइयों को हमेशा धनात्मक (positive) माना जाता है।"
+  },
+  {
+    "cat": "gs",
+    "sub": "light",
+    "qe": "When three lenses of powers $+2\\text{ D}$, $+1\\text{ D}$, and $-1.5\\text{ D}$ are placed in contact, the net power of the combination is:",
+    "qh": "जब $+2\\text{ D}$, $+1\\text{ D}$ और $-1.5\\text{ D}$ क्षमता वाले तीन लेंसों को आपस में सटाकर रखा जाता है, तो संयोजन की कुल क्षमता क्या होगी?",
+    "o": [
+      "$+4.5\\text{ D}$",
+      "$+1.5\\text{ D}$",
+      "$-1.5\\text{ D}$",
+      "$0\\text{ D}$"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> संपर्क में रखे लेंसों की कुल क्षमता का सूत्र $P = P_1 + P_2 + P_3$ होता है। अतः $P = 2 + 1 + (-1.5) = +1.5\\text{ D}$ होगा।"
   }
 ]
