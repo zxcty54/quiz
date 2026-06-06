@@ -6970,935 +6970,7 @@
     "qe": "Which material is used for 'Magnetic Shielding' of sensitive meters?",
     "qh": "संवेदनशील मीटरों के 'चुंबकीय परिरक्षण' के लिए किस सामग्री का उपयोग होता है?"
   },
-  {
-    "o": [
-      "Equal Dip",
-      "Zero Dip | शून्य नति (Zero Dip)",
-      "Same Force",
-      "None"
-    ],
-    "a": 1,
-    "e": "It represents the Magnetic Equator. / यह चुंबकीय भूमध्य रेखा को दर्शाती है।",
-    "cat": "gs",
-    "sub": "magnetism",
-    "qe": "What is 'Aclinic Line' joining points of?",
-    "qh": "'एक्लिनिक रेखा' किन बिंदुओं को जोड़ती है?"
-  },
-  {
-    "o": [
-      "c",
-      "c/2 | c/2 (approx)",
-      "2c",
-      "None"
-    ],
-    "a": 1,
-    "e": "$v \\approx c / \\sqrt{\\mu_r \\epsilon_r}$. If only $\\mu_r$ is considered, $v \\propto 1/\\sqrt{4} = 1/2$. / चाल पारगम्यता के वर्गमूल के व्युत्क्रमानुपाती होती है।",
-    "cat": "gs",
-    "sub": "magnetism",
-    "qe": "What is the speed of EM waves in a medium with relative permeability $\\mu_r=4$?",
-    "qh": "सापेक्ष पारगम्यता $\\mu_r=4$ वाले माध्यम में EM तरंगों की चाल क्या होगी (vacuum speed c)?"
-  },
-  {
-    "o": [
-      "Right-hand Palm Rule | दाएं हाथ की हथेली का नियम",
-      "Lenz's Law",
-      "Ohm's Law",
-      "None"
-    ],
-    "a": 0,
-    "e": "Thumb gives field direction at center if fingers curl with current. / अंगूठा केंद्र पर क्षेत्र की दिशा बताता है।",
-    "cat": "gs",
-    "sub": "magnetism",
-    "qe": "Which 'Rule' gives the direction of magnetic field for a circular current loop?",
-    "qh": "वृत्ताकार करंट लूप के लिए चुंबकीय क्षेत्र की दिशा कौन सा 'नियम' देता है?"
-  },
-  {
-    "o": [
-      "Magnetic strength",
-      "Energy loss per cycle | प्रति चक्र ऊर्जा हानि",
-      "Speed",
-      "None"
-    ],
-    "a": 1,
-    "e": "Area of the B-H loop represents heat energy loss. / B-H लूप का क्षेत्रफल ऊष्मा ऊर्जा हानि को दर्शाता है।",
-    "cat": "gs",
-    "sub": "magnetism",
-    "qe": "What is 'Hysteresis' area related to?",
-    "qh": "'हिस्टेरेसिस' क्षेत्रफल किससे संबंधित है?"
-  },
-  {
-    "o": [
-      "1 H = 1 Wb/A | 1 H = 1 Wb/A",
-      "1 H = 1 A/Wb",
-      "1 H = 1 Wb-A",
-      "None"
-    ],
-    "a": 0,
-    "e": "Standard definition: $\\Phi = LI \\implies L = \\Phi/I$. / प्रेरकत्व की मानक परिभाषा।",
-    "cat": "gs",
-    "sub": "magnetism",
-    "qe": "What is 'Self Inductance' unit 'Henry' in terms of 'Weber/Ampere'?",
-    "qh": "'हेनरी' वेबर/एम्पीयर के संदर्भ में क्या है?"
-  },
-  {
-    "o": [
-      "Paramagnetic",
-      "Ferromagnetic",
-      "Diamagnetic | प्रति-चुंबकीय (Diamagnetic)",
-      "None"
-    ],
-    "a": 2,
-    "e": "Diamagnets are repelled by magnetic fields. / प्रति-चुंबक क्षेत्र द्वारा प्रतिकर्षित होते हैं।",
-    "cat": "gs",
-    "sub": "magnetism",
-    "qe": "Which 'Substance' moves from 'Stronger' to 'Weaker' part of field?",
-    "qh": "कौन सा 'पदार्थ' क्षेत्र के 'मजबूत' से 'कमजोर' हिस्से की ओर बढ़ता है?"
-  },
-  {
-    "o": [
-      "$B = \\mu H$ | $B = \\mu H$",
-      "$B = \\mu/H$",
-      "$B = H/\\mu$",
-      "None"
-    ],
-    "a": 0,
-    "e": "Total induction is the product of permeability and magnetizing force. / कुल प्रेरण पारगम्यता और चुंबकन बल का गुणनफल है।",
-    "cat": "gs",
-    "sub": "magnetism",
-    "qe": "What is 'Magnetic Induction' ($B$) related to 'Permeability' ($\\mu$) and Intensity ($H$)?",
-    "qh": "'B', '$\\mu$' और 'H' में क्या संबंध है?"
-  },
-  {
-    "o": [
-      "Lenz's Law",
-      "Right-hand Thumb Rule | दाएं हाथ के अंगूठे का नियम",
-      "Left-hand rule",
-      "None"
-    ],
-    "a": 1,
-    "e": "Fingers curl with current, thumb gives moment direction. / उंगलियां करंट के साथ मुड़ती हैं, अंगूठा आघूर्ण की दिशा बताता है।",
-    "cat": "gs",
-    "sub": "magnetism",
-    "qe": "Which 'Rule' gives the direction of 'Magnetic Dipole Moment'?",
-    "qh": "'चुंबकीय द्विध्रुव आघूर्ण' की दिशा कौन सा 'नियम' देता है?"
-  },
-  {
-    "o": [
-      "Zero",
-      "Maximum",
-      "Not defined | परिभाषित नहीं",
-      "45°"
-    ],
-    "a": 2,
-    "e": "Horizontal component is zero at poles, so declination cannot be measured conventionally. / ध्रुवों पर क्षैतिज घटक शून्य होता है।",
-    "cat": "gs",
-    "sub": "magnetism",
-    "qe": "What is 'Magnetic Declination' at the 'Magnetic Poles'?",
-    "qh": "'चुंबकीय ध्रुवों' पर 'चुंबकीय दिकपात' क्या होता है?"
-  },
-  {
-    "o": [
-      "It speeds up current",
-      "It opposes change in current | यह करंट में बदलाव का विरोध करता है",
-      "It generates DC",
-      "None"
-    ],
-    "a": 1,
-    "e": "Like mass opposes change in motion, inductance opposes change in current. / जैसे द्रव्यमान गति परिवर्तन का विरोध करता है, प्रेरकत्व करंट परिवर्तन का।",
-    "cat": "gs",
-    "sub": "magnetism",
-    "qe": "What is 'Self Inductance' of a coil also known as 'Inertia of Electricity'?",
-    "qh": "कुंडली के 'स्व-प्रेरकत्व' को 'विद्युत की जड़ता' क्यों कहा जाता है?"
-  },
-  {
-    "o": [
-      "High retentivity and high coercivity | उच्च धारणशीलता और उच्च निग्राहिता",
-      "Low coercivity",
-      "Zero retentivity",
-      "None"
-    ],
-    "a": 0,
-    "e": "Ensures the magnet stays strong and hard to demagnetize. / सुनिश्चित करता है कि चुंबक मजबूत रहे और विचुंबकित करना कठिन हो।",
-    "cat": "gs",
-    "sub": "magnetism",
-    "qe": "Which material is used for 'Permanent Magnets' like Alnico?",
-    "qh": "एलनिको जैसे 'स्थायी चुंबक' के लिए क्या गुण आवश्यक है?"
-  },
-  {
-    "o": [
-      "$3 \\times 10^8$ m/s | $3 \\times 10^8$ m/s",
-      "332 m/s",
-      "1500 m/s",
-      "Zero"
-    ],
-    "a": 0,
-    "e": "EM waves travel at the speed of light. / EM तरंगें प्रकाश की गति से चलती हैं।",
-    "cat": "gs",
-    "sub": "magnetism",
-    "qe": "What is the speed of EM waves in vacuum approx?",
-    "qh": "निर्वात में EM तरंगों की चाल लगभग क्या है?"
-  },
   
-  {
-    "o": [
-      "Infinite",
-      "Zero | शून्य (Zero)",
-      "Positive",
-      "Negative"
-    ],
-    "a": 1,
-    "e": "Because magnetic monopoles do not exist, net flux is zero. / चुंबकीय एकल ध्रुव मौजूद नहीं हैं, इसलिए कुल फ्लक्स शून्य है।",
-    "cat": "gs",
-    "sub": "magnetism",
-    "qe": "What is 'Magnetic Flux' through a closed spherical surface around a magnet?",
-    "qh": "एक चुंबक के चारों ओर बंद गोलाकार सतह के माध्यम से 'चुंबकीय फ्लक्स' क्या है?"
-  },
-  {
-    "o": [
-      "400",
-      "450 | 450",
-      "500",
-      "1000"
-    ],
-    "a": 1,
-    "e": "We have completed 450 questions! / हमने 450 प्रश्न पूरे कर लिए हैं!",
-    "cat": "gs",
-    "sub": "magnetism",
-    "qe": "What is the total magnetism target completed now?",
-    "qh": "मैग्नेटिज्म में अब तक कुल कितने प्रश्न पूरे हो चुके हैं?"
-  },
-  {
-    "o": [
-      "Large",
-      "Small | छोटा (Small)",
-      "Infinite",
-      "None"
-    ],
-    "a": 1,
-    "e": "Soft iron has a narrow loop to minimize energy loss. / ऊर्जा हानि कम करने के लिए नरम लोहे का लूप संकीर्ण होता है।",
-    "cat": "gs",
-    "sub": "magnetism",
-    "qe": "What is 'Hysteresis Loop' area for 'Soft Iron' core?",
-    "qh": "'नरम लोहा' कोर के लिए 'हिस्टेरेसिस लूप' का क्षेत्रफल कैसा होता है?"
-  },
-  {
-    "o": [
-      "Right-hand Palm rule | दाएं हाथ की हथेली का नियम",
-      "Lenz's Law",
-      "Ohm's Law",
-      "None"
-    ],
-    "a": 0,
-    "e": "Fingers curl with current, thumb points to North pole. / उंगलियां करंट के साथ, अंगूठा उत्तर ध्रुव की ओर।",
-    "cat": "gs",
-    "sub": "magnetism",
-    "qe": "Which 'Rule' gives the direction of magnetic field for a solenoid?",
-    "qh": "परिनालिका के लिए चुंबकीय क्षेत्र की दिशा कौन सा 'नियम' देता है?"
-  },
-  {
-    "o": [
-      "$10^2$",
-      "$10^4$ | $10^4$",
-      "$10^6$",
-      "None"
-    ],
-    "a": 1,
-    "e": "$1 Tesla = 10,000 Gauss$.",
-    "cat": "gs",
-    "sub": "magnetism",
-    "qe": "What is 'Tesla' in terms of Gauss?",
-    "qh": "गॉस के संदर्भ में 'टेस्ला' क्या है?"
-  },
-  {
-    "o": [
-      "Tesla",
-      "Joule/Weber | जूल/वेबर",
-      "Weber",
-      "Henry"
-    ],
-    "a": 1,
-    "e": "Analogous to electric potential (J/C). / विद्युत विभव के समान।",
-    "cat": "gs",
-    "sub": "magnetism",
-    "qe": "What is 'Magnetic Potential' unit?",
-    "qh": "'चुंबकीय विभव' की इकाई क्या है?"
-  },
-  {
-    "o": [
-      "Iron",
-      "Aluminium",
-      "Water | पानी (Diamagnetic)",
-      "None"
-    ],
-    "a": 2,
-    "e": "Diamagnetic materials have small negative susceptibility. / प्रति-चुंबकीय पदार्थों की प्रवृत्ति छोटी और ऋणात्मक होती है।",
-    "cat": "gs",
-    "sub": "magnetism",
-    "qe": "Which 'Substance' has susceptibility $\\chi < 0$?",
-    "qh": "किस 'पदार्थ' की प्रवृत्ति $\\chi < 0$ होती है?"
-  },
-  {
-    "o": [
-      "Inductance",
-      "Magnetic Induction (B) | चुंबकीय प्रेरण (B)",
-      "Susceptibility",
-      "None"
-    ],
-    "a": 1,
-    "e": "Also called magnetic flux density. / इसे चुंबकीय फ्लक्स घनत्व भी कहते हैं।",
-    "cat": "gs",
-    "sub": "magnetism",
-    "qe": "What is the 'Flux' through a unit area perpendicular to the field?",
-    "qh": "क्षेत्र के लंबवत इकाई क्षेत्रफल से गुजरने वाला 'फ्लक्स' क्या है?"
-  },
-  {
-    "o": [
-      "Infinite",
-      "Zero | शून्य (Zero)",
-      "One",
-      "None"
-    ],
-    "a": 1,
-    "e": "Vacuum cannot be magnetized. / निर्वात को चुंबकित नहीं किया जा सकता।",
-    "cat": "gs",
-    "sub": "magnetism",
-    "qe": "What is 'Intensity of Magnetization' for a vacuum?",
-    "qh": "निर्वात के लिए 'चुंबकन की तीव्रता' क्या है?"
-  },
-  {
-    "o": [
-      "$L_1 + L_2$ | $L_1 + L_2$",
-      "$1/L_1 + 1/L_2$",
-      "$L_1 \\cdot L_2$",
-      "None"
-    ],
-    "a": 0,
-    "e": "Inductors in series add up like resistors. / shrenibaddh prerak pratirodhon ki tarah judte hain.",
-    "cat": "gs",
-    "sub": "magnetism",
-    "qe": "What is the equivalent inductance of two inductors $L_1$ and $L_2$ connected in 'Series' (no mutual induction)?",
-    "qh": "'shrenibaddh' (Series) mein jude do prerakon $L_1$ aur $L_2$ ka tulyak prerakatva kya hai?"
-  },
-  {
-    "o": [
-      "$L_1 + L_2$",
-      "$1/L_{eq} = 1/L_1 + 1/L_2$ | $1/L_{eq} = 1/L_1 + 1/L_2$",
-      "$L_1 \\cdot L_2$",
-      "None"
-    ],
-    "a": 1,
-    "e": "Follows the same reciprocal rule as resistors in parallel. / samantar pratirodhon ke niyam ka palan karta hai.",
-    "cat": "gs",
-    "sub": "magnetism",
-    "qe": "What is the equivalent inductance of two inductors connected in 'Parallel'?",
-    "qh": "'samantar' (Parallel) mein jude do prerakon ka tulyak prerakatva kya hota hai?"
-  },
-  {
-    "o": [
-      "Iron",
-      "Magnetite ($Fe_3O_4$) | magnetite",
-      "Aluminium",
-      "Copper"
-    ],
-    "a": 1,
-    "e": "Magnetic moments of sub-lattices are unequal and opposite. / sub-lattices ke chumbakiya aghurn asamanya aur viprit hote hain.",
-    "cat": "gs",
-    "sub": "magnetism",
-    "qe": "Which material shows 'Ferrimagnetism'?",
-    "qh": "kaun sa padarth 'ferrimagnetism' dikhata hai?"
-  },
-  {
-    "o": [
-      "Type of charge carriers | avesh vahakon ka prakar",
-      "Temperature",
-      "Pressure",
-      "None"
-    ],
-    "a": 0,
-    "e": "Identifies if the carriers are electrons or holes in a semiconductor. / batata hai ki vahak electron hain ya holes.",
-    "cat": "gs",
-    "sub": "magnetism",
-    "qe": "What is 'Hall Voltage' ($V_H$) used to determine?",
-    "qh": "'hall voltage' ($V_H$) ka upyog kya nirdharit karne ke liye hota hai?"
-  },
-  {
-    "o": [
-      "Increases",
-      "Decreases",
-      "Induces a moment in opposite direction | viprit disha mein aghurn prerit hota hai",
-      "None"
-    ],
-    "a": 2,
-    "e": "Lenz's law at atomic level causes an opposing moment. / aanvik star par lenz ka niyam viprit aghurn paida karta hai.",
-    "cat": "gs",
-    "sub": "magnetism",
-    "qe": "What happens to the 'Magnetic Moment' of a diamagnetic atom in an external field?",
-    "qh": "ek baahri kshetra mein prati-chumbakiya parmanu ke 'chumbakiya aghurn' ka kya hota hai?"
-  },
- 
-  {
-    "o": [
-      "Inductance",
-      "Magnetic Induction | chumbakiya preran",
-      "Permeability",
-      "None"
-    ],
-    "a": 1,
-    "e": "B = Flux / Area. / B = flux / kshetraphal.",
-    "cat": "gs",
-    "sub": "magnetism",
-    "qe": "What is the 'Flux' through a unit area called in Tesla?",
-    "qh": "Tesla mein ikai kshetraphal se guzarne wale 'flux' ko kya kehte hain?"
-  },
-  {
-    "o": [
-      "$Wb/m^2$ | $Wb/m^2$",
-      "$Wb \\cdot m^2$",
-      "$Wb/m$",
-      "None"
-    ],
-    "a": 0,
-    "e": "1 Tesla is one Weber per square meter. / 1 Tesla = 1 Weber prati varg meter.",
-    "cat": "gs",
-    "sub": "magnetism",
-    "qe": "What is 'Tesla' in terms of Weber?",
-    "qh": "Weber ke sandarbh mein 'Tesla' kya hai?"
-  },
-  {
-    "o": [
-      "0",
-      "1 | 1",
-      "Infinite",
-      "-1"
-    ],
-    "a": 1,
-    "e": "By definition, relative permeability of vacuum is unity. / paribhasha ke anusar, nirvat ki sapeksh pargamyata ek hai.",
-    "cat": "gs",
-    "sub": "magnetism",
-    "qe": "What is the 'Relative Permeability' ($\\mu_r$) for a vacuum?",
-    "qh": "nirvat ke liye 'sapeksh pargamyata' ($\\mu_r$) kya hai?"
-  },
-  {
-    "o": [
-      "Current",
-      "Number of turns",
-      "Core material | core padarth",
-      "None"
-    ],
-    "a": 2,
-    "e": "H depends only on I and n. / H sirf I aur n par nirbhar karti hai.",
-    "cat": "gs",
-    "sub": "magnetism",
-    "qe": "What is 'Magnetic Intensity' (H) inside a solenoid independent of?",
-    "qh": "ek perinalika ke andar 'chumbakiya teevrata' (H) kisse swatantra hai?"
-  },
-  {
-    "o": [
-      "Iron",
-      "Nickel",
-      "Manganese Oxide ($MnO$) | manganese oxide",
-      "Copper"
-    ],
-    "a": 2,
-    "e": "Magnetic moments are equal and opposite, resulting in zero net magnetism. / chumbakiya aghurn barabar aur viprit hote hain.",
-    "cat": "gs",
-    "sub": "magnetism",
-    "qe": "What is 'Antiferromagnetism' example?",
-    "qh": "'antiferromagnetism' ka udaharan kya hai?"
-  },
-  {
-    "o": [
-      "Becomes paramagnetic | anu-chumbakiya ho jata hai",
-      "Becomes diamagnetic",
-      "Increases",
-      "None"
-    ],
-    "a": 0,
-    "e": "Known as the Neel temperature for ferrimagnets. / ferrimagnets ke liye ise neel tapman kehte hain.",
-    "cat": "gs",
-    "sub": "magnetism",
-    "qe": "What happens to 'Ferrimagnetism' above a certain temperature?",
-    "qh": "ek nishchit tapman ke upar 'ferrimagnetism' ka kya hota hai?"
-  },
-  {
-    "o": [
-      "Weber",
-      "Tesla",
-      "Henry | henry",
-      "Ohm"
-    ],
-    "a": 2,
-    "e": "Named after Joseph Henry. / josef henry ke naam par.",
-    "cat": "gs",
-    "sub": "magnetism",
-    "qe": "What is the 'SI Unit' of Inductance?",
-    "qh": "prerakatva ki 'SI ikai' kya hai?"
-  },
-  {
-    "o": [
-      "Right-hand thumb rule | dayein hath ke anguthe ka niyam",
-      "Lenz's Law",
-      "Faraday's Law",
-      "None"
-    ],
-    "a": 0,
-    "e": "Thumb points to current, fingers show field lines. / angutha current ki disha, ungliyan kshetra dikhati hain.",
-    "cat": "gs",
-    "sub": "magnetism",
-    "qe": "Which rule gives the direction of magnetic field due to a straight current?",
-    "qh": "seedhe current ke karan chumbakiya kshetra ki disha kaun sa niyam deta hai?"
-  },
-  {
-    "o": [
-      "0.5 H | 0.5 H",
-      "100 H",
-      "50 H",
-      "None"
-    ],
-    "a": 0,
-    "e": "L = Flux / Current. / L = flux / current.",
-    "cat": "gs",
-    "sub": "magnetism",
-    "qe": "What is 'Self Inductance' of 100 turns coil if 1A current creates 0.5 Wb flux?",
-    "qh": "100 phero wali coil ka sw-prerakatva kya hai yadi 1A current 0.5 Wb flux paida kare?"
-  },
-  {
-    "o": [
-      "Soft Iron",
-      "Steel / Alnico | steel / alnico",
-      "Copper",
-      "None"
-    ],
-    "a": 1,
-    "e": "Used for permanent magnets. / sthayi chumbak ke liye upyog.",
-    "cat": "gs",
-    "sub": "magnetism",
-    "qe": "Which material is used for 'Hard' magnetic materials?",
-    "qh": "'kathor' chumbakiya padarthon ke liye kya upyog hota hai?"
-  },
-  {
-    "o": [
-      "Using soft iron | narm lohe ka upyog karke",
-      "Using steel",
-      "Using copper",
-      "None"
-    ],
-    "a": 0,
-    "e": "Soft iron has a narrow B-H loop. / narm lohe ka B-H loop patla hota hai.",
-    "cat": "gs",
-    "sub": "magnetism",
-    "qe": "What is 'Hysteresis Loss' in a transformer core minimized by?",
-    "qh": "transformer core mein 'hysteresis hani' kaise kam ki jati hai?"
-  },
-  {
-    "o": [
-      "$c = 1/\\sqrt{\\mu_0\\epsilon_0}$ | $c = 1/\\sqrt{\\mu_0\\epsilon_0}$",
-      "$c = \\mu_0\\epsilon_0$",
-      "No relation",
-      "None"
-    ],
-    "a": 0,
-    "e": "Fundamental electromagnetic relation. / maulik vidyut chumbakiya sambandh.",
-    "cat": "gs",
-    "sub": "magnetism",
-    "qe": "What is the speed of light in vacuum related to $\\mu_0$?",
-    "qh": "nirvat mein prakash ki chaal $\\mu_0$ se kaise judi hai?"
-  },
-  {
-    "o": [
-      "< 1",
-      "= 1",
-      ">> 1 | 1 se bahut adhik",
-      "None"
-    ],
-    "a": 2,
-    "e": "They amplify the magnetic field significantly. / ye chumbakiya kshetra ko kaafi badha dete hain.",
-    "cat": "gs",
-    "sub": "magnetism",
-    "qe": "What is 'Magnetic Permeability' of a 'Ferromagnetic' substance?",
-    "qh": "ek 'louh-chumbakiya' padarth ki 'chumbakiya pargamyata' kya hoti hai?"
-  },
-  {
-    "o": [
-      "$4\\pi \\times 10^{-7} T \\cdot m/A$ | $4\\pi \\times 10^{-7} T \\cdot m/A$",
-      "$8.85 \\times 10^{-12}$",
-      "1",
-      "None"
-    ],
-    "a": 0,
-    "e": "Universal magnetic constant. / sarvabhumik chumbakiya niyatank.",
-    "cat": "gs",
-    "sub": "magnetism",
-    "qe": "What is the value of '$\\mu_0$' (Permeability of free space)?",
-    "qh": "'$\\mu_0$' ka maan kya hai?"
-  },
-  {
-    "o": [
-      "Ampere/meter | Ampere/meter",
-      "Tesla",
-      "Weber",
-      "Henry"
-    ],
-    "a": 0,
-    "e": "Magnetic moment per unit volume. / prati ikai aaytan chumbakiya aghurn.",
-    "cat": "gs",
-    "sub": "magnetism",
-    "qe": "What is 'Intensity of Magnetization' unit?",
-    "qh": "'chumbakan ki teevrata' ki ikai kya hai?"
-  },
-  {
-    "o": [
-      "$V \\cdot s / A$ | $V \\cdot s / A$",
-      "$V / (s \\cdot A)$",
-      "$V \\cdot A / s$",
-      "None"
-    ],
-    "a": 0,
-    "e": "Derived from $e = L(dI/dt)$. / $e = L(dI/dt)$ se vyutpann.",
-    "cat": "gs",
-    "sub": "magnetism",
-    "qe": "What is 'Self Inductance' unit Henry in terms of 'Volt, Second, Ampere'?",
-    "qh": "'Volt, Second, Ampere' ke sandarbh mein 'Henry' kya hai?"
-  },
-  {
-    "o": [
-      "Joule/Weber | Joule/Weber",
-      "Tesla",
-      "Ohm",
-      "None"
-    ],
-    "a": 0,
-    "e": "Analogous to electric potential. / vidyut vibhav ke saman.",
-    "cat": "gs",
-    "sub": "magnetism",
-    "qe": "What is 'Magnetic Potential' unit?",
-    "qh": "'chumbakiya vibhav' ki ikai kya hai?"
-  },
-  {
-    "o": [
-      "Magnetic Brake | chumbakiya brake",
-      "Generator",
-      "Transformer",
-      "None"
-    ],
-    "a": 0,
-    "e": "Eddy currents create drag. / bhanwar dharayen khinchav paida karti hain.",
-    "cat": "gs",
-    "sub": "magnetism",
-    "qe": "Which device uses 'Electromagnetic Induction' to stop a moving wheel?",
-    "qh": "gatiman pahiye ko rokne ke liye kaun sa upkaran 'vidyut chumbakiya preran' ka upyog karta hai?"
-  },
-  {
-    "o": [
-      "Maxwell | maxwell",
-      "Weber",
-      "Gauss",
-      "None"
-    ],
-    "a": 0,
-    "e": "1 Wb = $10^8$ Maxwell.",
-    "cat": "gs",
-    "sub": "magnetism",
-    "qe": "What is the 'Flux' unit in CGS?",
-    "qh": "CGS mein 'flux' ki ikai kya hai?"
-  },
-  {
-    "o": [
-      "$10^4$ | $10^4$ Gauss",
-      "$10^2$",
-      "$10^6$",
-      "None"
-    ],
-    "a": 0,
-    "e": "1 Tesla = 10,000 Gauss.",
-    "cat": "gs",
-    "sub": "magnetism",
-    "qe": "What is 'Tesla' in terms of Gauss?",
-    "qh": "Gauss ke sandarbh mein 'Tesla' kya hai?"
-  },
-  {
-    "o": [
-      "Kelvin | kelvin",
-      "Tesla",
-      "None",
-      "Weber"
-    ],
-    "a": 0,
-    "e": "From $\\chi = C/T$. / $\\chi = C/T$ se.",
-    "cat": "gs",
-    "sub": "magnetism",
-    "qe": "What is 'Curie's Law' constant unit?",
-    "qh": "'curie ke niyam' ke niyatank ki ikai kya hai?"
-  },
-  
-  {
-    "o": [
-      "-1 | -1",
-      "0",
-      "1",
-      "Infinite"
-    ],
-    "a": 0,
-    "e": "Total expulsion of field lines. / kshetra rekhaon ka purn nishkasan.",
-    "cat": "gs",
-    "sub": "magnetism",
-    "qe": "What is 'Magnetic Susceptibility' for a 'Perfect Diamagnet'?",
-    "qh": "ek 'purn prati-chumbak' ke liye 'chumbakiya pravritti' kya hai?"
-  },
-  {
-    "o": [
-      "5 H | 5 Henry ($M = e/(dI/dt)$)",
-      "20 H",
-      "0.2 H",
-      "None"
-    ],
-    "a": 0,
-    "e": "M = 10 / 2 = 5 H. / M = 10 / 2 = 5 H.",
-    "cat": "gs",
-    "sub": "magnetism",
-    "qe": "What is 'Mutual Inductance' of two coils if current changes by 2A/s and EMF is 10V?",
-    "qh": "दो कुंडलियों का अन्योन्य प्रेरकत्व क्या होगा यदि करंट 2A/s से बदलता है और EMF 10V है?"
-  },
-  {
-    "o": [
-      "Loss of energy | oorja ki hani",
-      "Loss of oil",
-      "None",
-      "Voltage drop"
-    ],
-    "a": 0,
-    "e": "Primary flux not linking secondary. / prathmik flux ka dwitiyak se na judna.",
-    "cat": "gs",
-    "sub": "magnetism",
-    "qe": "What is 'Flux Leakage' in a transformer?",
-    "qh": "transformer mein 'flux leakage' kya hai?"
-  },
-  {
-    "o": [
-      "Lenz's Law | lenz ka niyam",
-      "Faraday's Law",
-      "Ohm's Law",
-      "None"
-    ],
-    "a": 0,
-    "e": "Opposes the change in flux. / flux badlav ka virodh karta hai.",
-    "cat": "gs",
-    "sub": "magnetism",
-    "qe": "Which 'Rule' gives the direction of 'Induced Current'?",
-    "qh": "'prerit dhara' ki disha kaun sa niyam deta hai?"
-  },
-  {
-    "o": [
-      "Output Power / Input Power | output shakti / input shakti",
-      "Input/Output",
-      "Zero",
-      "None"
-    ],
-    "a": 0,
-    "e": "Ratio of power levels. / shakti staron ka anupat.",
-    "cat": "gs",
-    "sub": "magnetism",
-    "qe": "What is 'Step-up Transformer' efficiency?",
-    "qh": "transformer ki dakshta ka sutra kya hai?"
-  },
-  
-  {
-    "o": [
-      "Negative | rinatmak",
-      "Positive",
-      "Zero",
-      "None"
-    ],
-    "a": 0,
-    "e": "It is a diamagnetic substance. / ye ek prati-chumbakiya padarth hai.",
-    "cat": "gs",
-    "sub": "magnetism",
-    "qe": "What is 'Magnetic Susceptibility' of 'Antimony'?",
-    "qh": "'antimony' ki chumbakiya pravritti kya hai?"
-  },
-  {
-    "o": [
-      "Mu-metal | mu-metal",
-      "Copper",
-      "Wood",
-      "Glass"
-    ],
-    "a": 0,
-    "e": "High permeability alloy. / uchh pargamyata wali mishra dhatu.",
-    "cat": "gs",
-    "sub": "magnetism",
-    "qe": "Which material is used for 'Magnetic Shielding'?",
-    "qh": "'chumbakiya parirakshan' ke liye kya upyog hota hai?"
-  },
-  {
-    "o": [
-      "Magnetic Equator | chumbakiya bhumadhya rekha",
-      "Pole",
-      "Meridian",
-      "None"
-    ],
-    "a": 0,
-    "e": "Line of zero dip. / shunya nati kon wali rekha.",
-    "cat": "gs",
-    "sub": "magnetism",
-    "qe": "What is 'Aclinic Line'?",
-    "qh": "'aclinic rekha' kya hai?"
-  },
-  {
-    "o": [
-      "$N^2$ | $N^2$ (turns squared)",
-      "$N$",
-      "$\\sqrt{N}$",
-      "None"
-    ],
-    "a": 0,
-    "e": "Inductance increases with square of turns. / phero ke varg ke saath badhta hai.",
-    "cat": "gs",
-    "sub": "magnetism",
-    "qe": "What is 'Self Inductance' of a long solenoid proportional to?",
-    "qh": "ek lambi perinalika ka sw-prerakatva kiske samanupati hai?"
-  },
-  {
-    "o": [
-      "$1/2 LI^2$ | $1/2 LI^2$",
-      "$LI$",
-      "$LI^2$",
-      "None"
-    ],
-    "a": 0,
-    "e": "Stored in magnetic field. / chumbakiya kshetra mein sanchit.",
-    "cat": "gs",
-    "sub": "magnetism",
-    "qe": "What is 'Energy' in an inductor?",
-    "qh": "prerak mein sanchit 'oorja' kya hai?"
-  },
-  {
-    "o": [
-      "Larger | bada (Larger)",
-      "Smaller",
-      "Same",
-      "Zero"
-    ],
-    "a": 0,
-    "e": "Steel has more energy loss per cycle. / steel mein prati chakra zyada oorja hani hoti hai.",
-    "cat": "gs",
-    "sub": "magnetism",
-    "qe": "What is 'Hysteresis Loop' area for steel compared to soft iron?",
-    "qh": "soft iron ki tulna mein steel ka hysteresis loop kshetraphal kya hai?"
-  },
-  {
-    "o": [
-      "Fleming's Left-hand rule | Fleming ka baayein hath ka niyam",
-      "Right-hand rule",
-      "Lenz's Law",
-      "None"
-    ],
-    "a": 0,
-    "e": "Thumb = Force, Forefinger = Field. / angutha = bal, tarjani = kshetra.",
-    "cat": "gs",
-    "sub": "magnetism",
-    "qe": "Which 'Rule' gives the direction of force on a moving charge?",
-    "qh": "gatiman avesh par bal ki disha kaun sa niyam deta hai?"
-  },
-  {
-    "o": [
-      "$\\mu_0 I / 2R$ | $\\mu_0 I / 2R$",
-      "$\\mu_0 I / 2\\pi R$",
-      "Zero",
-      "None"
-    ],
-    "a": 0,
-    "e": "Field is strongest at the center. / kendra par kshetra sabse mazboot hota hai.",
-    "cat": "gs",
-    "sub": "magnetism",
-    "qe": "What is 'Magnetic Induction' at center of circular loop?",
-    "qh": "vrittakar loop ke kendra par chumbakiya preran kya hai?"
-  },
-  {
-    "o": [
-      "5 Wb | 5 Wb",
-      "50 Wb",
-      "0.5 Wb",
-      "None"
-    ],
-    "a": 0,
-    "e": "$50 \\times 0.1 = 5$. / 50 x 0.1 = 5.",
-    "cat": "gs",
-    "sub": "magnetism",
-    "qe": "What is the 'Flux' linkage for 50 turns with 0.1 Wb flux each?",
-    "qh": "50 phero ka flux linkage kya hoga yadi har phere mein 0.1 Wb hai?"
-  },
-  {
-    "o": [
-      "Almost Zero | lagbhag shunya",
-      "Infinite",
-      "Constant",
-      "None"
-    ],
-    "a": 0,
-    "e": "Inductance depends on loop geometry. / prerakatva loop ki jyamiti par nirbhar karta hai.",
-    "cat": "gs",
-    "sub": "magnetism",
-    "qe": "What is 'Self Inductance' of a straight wire?",
-    "qh": "seedhe tar ka sw-prerakatva kya hai?"
-  },
-  {
-    "o": [
-      "Positive | dhanatmak",
-      "Negative",
-      "Zero",
-      "None"
-    ],
-    "a": 0,
-    "e": "Oxygen is paramagnetic. / oxygen anu-chumbakiya hai.",
-    "cat": "gs",
-    "sub": "magnetism",
-    "qe": "What is 'Magnetic Susceptibility' of 'Liquid Oxygen'?",
-    "qh": "'liquid oxygen' ki chumbakiya pravritti kya hai?"
-  },
-  {
-    "o": [
-      "Very Low | bahut kam",
-      "Very High",
-      "Infinite",
-      "None"
-    ],
-    "a": 0,
-    "e": "Easy to demagnetize. / vichumbakit karna aasan hai.",
-    "cat": "gs",
-    "sub": "magnetism",
-    "qe": "What is 'Coercivity' of soft iron?",
-    "qh": "soft iron ki 'nigrahita' (Coercivity) kya hai?"
-  },
-
-  {
-    "o": [
-      "Magnetic Induction | chumbakiya preran",
-      "Flux",
-      "Current",
-      "None"
-    ],
-    "a": 0,
-    "e": "Standard SI unit. / manak SI ikai.",
-    "cat": "gs",
-    "sub": "magnetism",
-    "qe": "What is 'Tesla' unit for?",
-    "qh": "'Tesla' kiski ikai hai?"
-  },
-  {
-    "o": [
-      "10 Weber-turn | 10 Weber-turn",
-      "1 Weber",
-      "100 Weber",
-      "None"
-    ],
-    "a": 0,
-    "e": "Total linkage is $N\\Phi$. / kul linkage $N\\Phi$ hai.",
-    "cat": "gs",
-    "sub": "magnetism",
-    "qe": "What is the 'Flux' through 10 turns with 1 Weber flux each?",
-    "qh": "10 phero ka flux linkage kya hoga yadi har phere mein 1 Weber hai?"
-  },
   {
     "o": [
       "Remains constant",
@@ -42254,5 +41326,355 @@
     ],
     "a": 1,
     "e": "<b>Explanation:</b> वेग-समय ग्राफ (Velocity-Time Graph) के नीचे का कुल क्षेत्रफल विस्थापन/दूरी ($s$) को दर्शाता है। इसी क्षेत्रफल (आयत + त्रिभुज) की गणना से गति का दूसरा समीकरण प्राप्त होता है।"
+  },
+  {
+    "cat": "gs",
+    "sub": "magnetism",
+    "qe": "Magnetic field lines are mathematically represented as continuous, unbroken closed loops. What fundamental physical principle distinguishes this behavior from that of an electrostatic dipole configuration?",
+    "qh": "चुंबकीय क्षेत्र रेखाओं को गणितीय रूप से निरंतर, अटूट बंद लूप के रूप में दर्शाया जाता है। कौन सा मौलिक भौतिक सिद्धांत इस व्यवहार को एक स्थिरवैद्युत द्विध्रुव विन्यास (electrostatic dipole configuration) के व्यवहार से अलग करता है?",
+    "o": [
+      "The velocity of magnetic flux propagation undergoes a temporal phase dilation.",
+      "Isolated magnetic north and south poles, known as magnetic monopoles, do not exist in nature.",
+      "The magnetic permeability of free space remains entirely dependent on the electric field vector.",
+      "The total magnetic potential energy drops to absolute zero at the geometric intersection node."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Electrostatic field lines begin at a positive charge and terminate on a negative charge because isolated electric charges exist. In contrast, magnetic monopoles do not exist; slicing a magnet in half simply generates two smaller magnets. Thus, magnetic field lines must form continuous closed loops without start or end points."
+  },
+  {
+    "cat": "gs",
+    "sub": "magnetism",
+    "qe": "By convention, the directional orientation of a magnetic field line at any point in space is defined by the behavior of a compass. What strict directional rule governs these curves internally versus externally?",
+    "qh": "परंपरा के अनुसार, अंतरिक्ष में किसी भी बिंदु पर चुंबकीय क्षेत्र रेखा के दिशात्मक अभिविन्यास को कंपास के व्यवहार द्वारा परिभाषित किया जाता है। आंतरिक बनाम बाहरी रूप से इन वक्रों को कौन सा सख्त दिशात्मक नियम नियंत्रित करता है?",
+    "o": [
+      "They emerge from the south pole and merge at the north pole both internally and externally.",
+      "They emerge from the north pole and merge at the south pole externally, but travel from the south pole to the north pole inside the magnet.",
+      "They oscillate at an acute angle of $45^\\circ$ relative to the geometric axis of the core matrix.",
+      "They are always perpendicular to the mechanical surface plane regardless of location boundary."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Conventionally, external magnetic field lines emerge from the north seeking pole and merge at the south seeking pole. However, to form a continuous closed loop, the direction of the field lines inside the material matrix must point from the south pole to the north pole."
+  },
+  {
+    "cat": "gs",
+    "sub": "magnetism",
+    "qe": "No two magnetic field lines are ever found to cross or intersect each other. What logical paradox would occur at the point of intersection if they did cross?",
+    "qh": "कोई भी दो चुंबकीय क्षेत्र रेखाएं कभी भी एक-दूसरे को काटती या प्रतिच्छेद नहीं करती हैं। यदि वे एक-दूसरे को काटती हैं, तो प्रतिच्छेद बिंदु पर कौन सा तार्किक विरोधाभास उत्पन्न होगा?",
+    "o": [
+      "The total magnetic flux density would scale to infinity instantly.",
+      "The magnetic field direction would not be unique at that point, forcing a compass needle to point toward two different directions simultaneously.",
+      "The electrical current induced in the local loops would break the conservation of mass law.",
+      "The absolute permeability of the surrounding environment would drop to zero."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> The tangent to a magnetic field line indicates the unique direction of the net magnetic field vector $\\mathbf{B}$ at that specific point. If two lines intersected, the field vector would point in two different directions at the same coordinate, which is physically impossible."
+  },
+  {
+    "cat": "gs",
+    "sub": "magnetism",
+    "qe": "When a current is passed through a long straight wire, concentric magnetic field circles are generated. What happens to the geometric spacing and magnitude of this field as the distance from the conductor increases?",
+    "qh": "जब एक लंबे सीधे तार से धारा प्रवाहित की जाती है, तो संकेंद्री चुंबकीय क्षेत्र वृत्त उत्पन्न होते हैं। जैसे-जैसे चालक से दूरी बढ़ती है, इस क्षेत्र की ज्यामितीय दूरी और परिमाण में क्या परिवर्तन होता है?",
+    "o": [
+      "The circles become tighter and the field strength increases exponentially.",
+      "The concentric circles become larger and larger, and the magnitude of the field decreases inversely with distance.",
+      "The concentric field loops flatten into collinear parallel lines with invariant strength.",
+      "The field vector shifts its phase by $\\pi$ radians at fixed macroscopic node intervals."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> The magnitude of the magnetic field produced by a straight current-carrying wire depends inversely on the distance from it. Graphically, the concentric circles representing the field lines grow larger and spread further apart as you move away from the conductor, signifying a weaker field."
+  },
+  {
+    "cat": "gs",
+    "sub": "magnetism",
+    "qe": "A straight current-carrying wire is bent into a single circular loop. As you move from the rim of the loop toward its absolute geometric center, how does the visual pattern of the magnetic field lines change?",
+    "qh": "एक सीधे धारावाही तार को एक एकल वृत्ताकार लूप में मोड़ा जाता है। जैसे-जैसे आप लूप के किनारे से उसके पूर्ण ज्यामितीय केंद्र की ओर बढ़ते हैं, चुंबकीय क्षेत्र रेखाओं का दृश्य पैटर्न कैसे बदलता है?",
+    "o": [
+      "The field lines form tightly wound helical patterns confined to the wire thickness.",
+      "The arcs of the expanding concentric circles flatten out and appear as straight lines at the center.",
+      "The lines cross each other at a fixed acute angle of $45^\\circ$ at the central node.",
+      "The field lines undergo continuous polarization decay and fade out completely."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Near the wire section of the circular loop, the field lines are tight concentric circles. As you move away from the wire toward the center of the loop, the circles grow larger. By the time they reach the center, the arcs of these large circles appear as straight lines perpendicular to the loop plane."
+  },
+  {
+    "cat": "gs",
+    "sub": "magnetism",
+    "qe": "A circular coil consists of $n$ closely wound turns of insulated copper wire. When a current passes through it, the total magnetic field produced at its center is $n$ times larger than that produced by a single turn. Why does this simple scaling happen linearly?",
+    "qh": "एक वृत्ताकार कुंडली में इंसुलेटेड तांबे के तार के $n$ पास-पास लिपटे फेरे शामिल हैं। जब इसमें से धारा गुजरती है, तो इसके केंद्र पर उत्पन्न कुल चुंबकीय क्षेत्र एकल फेरे द्वारा उत्पन्न क्षेत्र से $n$ गुना बड़ा होता है। यह सरल स्केलिंग रैखिक रूप से क्यों होती है?",
+    "o": [
+      "Because multiple turns reduce the effective core resistance to absolute zero.",
+      "Because the current in each circular turn flows in the same direction, causing the magnetic fields due to each individual turn to just add up algebraically.",
+      "Because the multi-turn setup triggers a relativistic mass dilation of the charge carriers.",
+      "Because the mutual inductance factor cancels out the negative flux components."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> In a closely wound coil with $n$ turns, the current in every single turn flows in the identical spatial direction. Consequently, the magnetic field contribution from each individual turn points in the same direction at the center, simply adding up linearly."
+  },
+  {
+    "cat": "gs",
+    "sub": "magnetism",
+    "qe": "The magnetic field lines inside a current-carrying long solenoid are in the form of parallel straight lines. What does this specific geometric alignment signify regarding the nature of the field inside the solenoid?",
+    "qh": "धारावाही लंबे सोलेनोइड (solenoid) के भीतर चुंबकीय क्षेत्र रेखाएं समानांतर सीधी रेखाओं के रूप में होती हैं। यह विशिष्ट ज्यामितीय संरेखण सोलेनोइड के भीतर क्षेत्र की प्रकृति के बारे में क्या दर्शाता है?",
+    "o": [
+      "The field strength is highly unstable and varies rapidly over time.",
+      "The magnetic field is uniform and identical at all points inside the solenoid.",
+      "The internal field vector component normal to the axis is maximized.",
+      "The field undergoes complete mechanical polarization decay at the core boundaries."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Parallel straight field lines indicate that the magnetic field vector has the exact same magnitude and direction at every point inside that region. Thus, the magnetic field is completely uniform inside the current-carrying solenoid."
+  },
+  {
+    "cat": "gs",
+    "sub": "magnetism",
+    "qe": "When a small compass needle of known magnetic moment $\\mathbf{m}$ is placed in a uniform external magnetic field $\\mathbf{B}$ at an angle $\\theta$, it experiences a potential energy $U_m = -\\mathbf{m} \\cdot \\mathbf{B}$. Under what orientation is this system in its most stable equilibrium state versus its most unstable state?",
+    "qh": "जब ज्ञात चुंबकीय आघूर्ण $\\mathbf{m}$ की एक छोटी कंपास सुई को कोण $\\theta$ पर एकसमान बाहरी चुंबकीय क्षेत्र $\\mathbf{B}$ में रखा जाता है, तो यह स्थितिज ऊर्जा $U_m = -\\mathbf{m} \\cdot \\mathbf{B}$ का अनुभव करती है। किस अभिविन्यास (orientation) के तहत यह प्रणाली अपनी सबसे स्थिर संतुलन स्थिति बनाम अपनी सबसे अस्थिर स्थिति में होती है?",
+    "o": [
+      "Most stable at $\\theta = 90^\\circ$ and most unstable at $\\theta = 0^\\circ$.",
+      "Most stable at $\\theta = 0^\\circ$ (parallel) and most unstable at $\\theta = 180^\\circ$ (anti-parallel).",
+      "Most stable at $\\theta = 180^\\circ$ and most unstable at $\\theta = 90^\\circ$.",
+      "Symmetric equilibrium occurs only when the potential energy is strictly positive."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> According to $U_m = -mB \\cos\\theta$, the potential energy reaches its minimum value ($-mB$) when $\\theta = 0^\\circ$ (magnetic moment parallel to the field), which is the most stable state. It reaches its maximum value ($+mB$) when $\\theta = 180^\\circ$ (anti-parallel), representing the most unstable state."
+  },
+  {
+    "cat": "gs",
+    "sub": "magnetism",
+    "qe": "Magnetic materials can be classified using their magnetic susceptibility $\\chi$. For a certain class of materials, $\\chi$ is a small negative number ($-1 \\le \\chi < 0$), rendering its relative permeability $\\mu_r < 1$. What is this class of materials called, and how do they behave in a non-uniform field?",
+    "qh": "चुंबकीय पदार्थों को उनकी चुंबकीय प्रवृत्ति $\\chi$ (magnetic susceptibility) का उपयोग करके वर्गीकृत किया जा सकता है। पदार्थों के एक निश्चित वर्ग के लिए, $\\chi$ एक छोटा ऋणात्मक मान ($-1 \\le \\chi < 0$) होता है, जिससे इसकी सापेक्ष पारगम्यता $\\mu_r < 1$ हो जाती है। पदार्थों के इस वर्ग को क्या कहा जाता है, और वे एक गैर-एकसमान क्षेत्र में कैसा व्यवहार करते हैं?",
+    "o": [
+      "Paramagnetic materials; they move from weak to strong field regions.",
+      "Diamagnetic substances; they have a tendency to move from stronger to the weaker parts of an external magnetic field.",
+      "Ferromagnetic metals; they stay completely invariant to field gradients.",
+      "Superconductors; they alter their chemical valence states dynamically."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Diamagnetic substances have a negative susceptibility $\\chi$. When placed in an external magnetic field, they repel or expel the field lines slightly. In a non-uniform magnetic field, a bar of diamagnetic material will always tend to move from a region of high field to a low field region."
+  },
+  {
+    "cat": "gs",
+    "sub": "magnetism",
+    "qe": "What is the baseline atomic origin of diamagnetism, and why is this phenomenon considered to be universally present in all substances?",
+    "qh": "प्रतिचुंबकत्व (diamagnetism) का मूल परमाणु कारण क्या है, और इस परिघटना को सभी पदार्थों में सार्वभौमिक रूप से उपस्थित क्यों माना जाता है?",
+    "o": [
+      "It arises from the persistent alignment of large macroscopic domain matrices.",
+      "It arises because orbiting electrons act as current loops; an external field induces currents (Lenz's law) that create a net magnetic moment opposing the applied field.",
+      "It is caused exclusively by the electrostatic repulsion of core nuclear protons.",
+      "It is an artifact of the localized thermal stress vectors of non-zero mass bosons."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Orbiting electrons possess an orbital magnetic moment. In diamagnetic substances, the net resultant magnetic moment of an atom is zero. Applying an external field speeds up or slows down specific electrons (via induced currents complying with Lenz's law) such that the substance develops a net magnetic moment pointing opposite to the applied field. Since all substances contain orbiting electrons, diamagnetism is universal."
+  },
+  {
+    "cat": "gs",
+    "sub": "magnetism",
+    "qe": "Superconductors represent an exotic state of matter when cooled to ultra-low critical temperatures. What are the values of their magnetic susceptibility $\\chi$ and relative permeability $\\mu_r$, and what is this total field expulsion phenomenon called?",
+    "qh": "अतिचालक (Superconductors) अत्यधिक कम क्रांतिक तापमान तक ठंडा होने पर पदार्थ की एक अनूठी स्थिति का प्रतिनिधित्व करते हैं। उनकी चुंबकीय प्रवृत्ति $\\chi$ और सापेक्ष पारगम्यता $\\mu_r$ के मान क्या होते हैं, और इस पूर्ण क्षेत्र निष्कासन (total field expulsion) की घटना को क्या कहा जाता है?",
+    "o": [
+      "$\\chi = +1$, $\\mu_r = 2$; Curie transition effect.",
+      "$\\chi = -1$, $\\mu_r = 0$; Meissner effect.",
+      "$\\chi \\to \\infty$, $\\mu_r \\to \\infty$; Faraday induction effect.",
+      "$\\chi = 0$, $\\mu_r = 1$; Oersted deflection phenomenon."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Superconductors exhibit both perfect electrical conductivity and perfect diamagnetism. They completely expel external magnetic fields from their interior volume. For a superconductor, $\\chi = -1$ and $\\mu_r = 0$. This complete expulsion of magnetic flux lines is known as the Meissner effect."
+  },
+  {
+    "cat": "gs",
+    "sub": "magnetism",
+    "qe": "Paramagnetic substances possess a small positive magnetic susceptibility ($0 < \\chi < \\epsilon$). Why do individual atoms of a paramagnetic material have a permanent magnetic dipole moment, yet the bulk sample shows zero net magnetization in the absence of an external field?",
+    "qh": "अनुचुंबकीय (Paramagnetic) पदार्थों में एक छोटी धनात्मक चुंबकीय प्रवृत्ति ($0 < \\chi < \\epsilon$) होती है। अनुचुंबकीय पदार्थ के व्यक्तिगत परमाणुओं में अपना स्थायी चुंबकीय द्विध्रुव आघूर्ण क्यों होता है, फिर भी बाहरी क्षेत्र की अनुपस्थिति में थोक नमूना (bulk sample) शून्य नेट चुंबकन दर्शाता है?",
+    "o": [
+      "Because the internal domains cancel each other out via strong macroscopic quantum coupling.",
+      "On account of the ceaseless random thermal motion of the atoms, which randomizes the orientation of individual dipoles.",
+      "Because the core electronic orbits collapse symmetrically at room temperature.",
+      "Because the absolute permeability of the sample drops to zero without an external field matrix."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Individual atoms or molecules of a paramagnetic material have a permanent magnetic dipole moment due to unpaired electrons. However, due to continuous random thermal agitation (ceaseless thermal motion), these individual dipoles point randomly in all directions, averaging out to zero bulk magnetization when no external field is applied."
+  },
+  {
+    "cat": "gs",
+    "sub": "light",
+    "qe": "Ferromagnetic materials exhibit a spontaneous cooperative alignment of atomic dipole moments over a macroscopic volume. What is this localized unified structural region called, and what occurs to it when an external field $B_0$ is applied?",
+    "qh": "लौहचुंबकीय (Ferromagnetic) पदार्थ एक मैक्रोस्कोपिक आयतन पर परमाणु द्विध्रुव आघूर्णों के एक स्वतः सहकारी संरेखण (spontaneous cooperative alignment) को प्रदर्शित करते हैं। इस स्थानीयकृत एकीकृत संरचनात्मक क्षेत्र को क्या कहा जाता है, और बाहरी क्षेत्र $B_0$ लगाने पर इसमें क्या होता है?",
+    "o": [
+      "A flux grid; it completely melts down symmetrically.",
+      "A domain; the domains orient themselves parallel to $B_0$ and those aligned with the field grow in size.",
+      "A Meissner cell; it expels the flux lines to the peripheral boundary layers.",
+      "An unpolarized phase node; it drops its relative permeability value to unity."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> In ferromagnetic materials, individual atoms interact via quantum mechanical forces to form macroscopic regions ($\"1\\text{ mm}\"$ scale containing $\\approx 10^{11}$ atoms) called domains, where all dipoles are aligned spontaneously in a common direction. Applying an external field $B_0$ forces the domains to rotate and align with $B_0$, while simultaneously making the favorably aligned domains grow in size."
+  },
+  {
+    "cat": "gs",
+    "sub": "light",
+    "qe": "Ferromagnetic substances are categorized into hard magnetic materials and soft magnetic materials based on their behavior after an external field is removed. Which option correctly identifies a soft magnetic material and its primary attribute?",
+    "qh": "बाहरी क्षेत्र को हटाने के बाद उनके व्यवहार के आधार पर लौहचुंबकीय पदार्थों को कठोर चुंबकीय पदार्थों और नरम चुंबकीय पदार्थों में वर्गीकृत किया जाता है। कौन सा विकल्प एक नरम चुंबकीय पदार्थ और उसके प्राथमिक गुण की सही पहचान करता है?",
+    "o": [
+      "Alnico; the magnetization persists permanently even without a field.",
+      "Soft iron; the magnetization disappears almost completely upon the removal of the external field.",
+      "Lodestone; it undergoes continuous structural domain expansion.",
+      "Gadolinium; its relative magnetic permeability drops to zero instantly."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Soft ferromagnetic materials, such as soft iron, are those whose induced magnetization disappears almost immediately when the external driving magnetic field is removed. Hard ferromagnets, like Alnico, retain their magnetization permanently to form permanent magnets."
+  },
+  {
+    "cat": "gs",
+    "sub": "light",
+    "qe": "What happens to the intrinsic domain structure and macroscopic properties of a ferromagnetic material when its temperature is raised beyond a specific critical limit?",
+    "qh": "जब किसी लौहचुंबकीय पदार्थ का तापमान एक विशिष्ट क्रांतिक सीमा से अधिक बढ़ा दिया जाता है, तो उसकी आंतरिक डोमेन संरचना और मैक्रोस्कोपिक गुणों का क्या होता है?",
+    "o": [
+      "The material transforms into a perfect superconductor with zero internal resistance.",
+      "The domain structure disintegrates due to thermal agitation, and the ferromagnet gradually transforms into a paramagnet.",
+      "The domains lock permanently into a hard magnetic state that cannot be demagnetized.",
+      "The relative magnetic permeability increases linearly toward infinity."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Ferromagnetism is highly temperature-dependent. As temperature rises, thermal agitation disrupts the cooperative alignment. Beyond a specific critical temperature (known as the Curie temperature), the domain structure disintegrates entirely, and the material transitions into a normal paramagnetic state."
+  },
+  {
+    "cat": "gs",
+    "sub": "magnetism",
+    "qe": "Michael Faraday and Joseph Henry independently discovered electromagnetic induction around 1830. Their series of experiments conclusively demonstrated that an electric current is generated in a closed coil if and only if:",
+    "qh": "माइकेल फैराडे और जोसेफ हेनरी ने स्वतंत्र रूप से 1830 के आसपास विद्युत चुंबकीय प्रेरण (electromagnetic induction) की खोज की थी। उनके प्रयोगों की श्रृंखला ने निर्णायक रूप से प्रदर्शित किया कि एक बंद कुंडली में विद्युत धारा उत्पन्न होती है यदि और केवल यदि:",
+    "o": [
+      "A high-intensity static magnetic field vector is permanently maintained inside the core.",
+      "The closed coil is subjected to a changing magnetic flux over time.",
+      "The absolute temperature of the copper loops drops to absolute zero.",
+      "The current loop is aligned strictly parallel to the stationary lines of force."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Faraday and Henry's historic experiments proved that a static magnetic field, no matter how strong, cannot induce a current in a stationary coil. An electromotive force (emf) and current are induced in a closed loop if and only if there is a time rate of change of magnetic flux linked through the circuit area."
+  },
+  {
+    "cat": "gs",
+    "sub": "magnetism",
+    "qe": "In Faraday's Experiment 6.3, two stationary coils $C_1$ and $C_2$ are placed near each other without any relative motion. Why does a momentary deflection appear in the galvanometer connected to $C_1$ only at the exact instants when the tapping key in $C_2$ is pressed or released?",
+    "qh": "फैराडे के प्रयोग 6.3 में, दो स्थिर कुंडलियां $C_1$ और $C_2$ बिना किसी सापेक्ष गति के एक-दूसरे के पास रखी गई हैं। $C_1$ से जुड़े गैल्वेनोमीटर में केवल उन्हीं सटीक क्षणों में एक क्षणिक विचलन क्यों दिखाई देता है जब $C_2$ की टैपिंग कुंजी को दबाया या छोड़ा जाता है?",
+    "o": [
+      "Because the copper material undergoing static pressure creates an electrostatic displacement charge.",
+      "Because during the press or release instants, the current in $C_2$ rises or falls, creating a time-varying magnetic field that alters the magnetic flux through $C_1$.",
+      "Because internal mechanical resistance inside the key generates an alternate high frequency wave.",
+      "Because the mutual inductance between stationary elements requires a touch impact to trigger."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> When the key is pressed or released, the current in $C_2$ changes rapidly between zero and its maximum value. This changing current produces a time-varying magnetic field, which transiently changes the magnetic flux passing through the neighboring coil $C_1$, inducing a temporary emf. When the current is steady, $\\frac{d\\Phi_B}{dt} = 0$, so no current is induced."
+  },
+  {
+    "cat": "gs",
+    "sub": "magnetism",
+    "qe": "Magnetic flux $\\Phi_B$ through a flat plane area $A$ placed in a uniform field $\\mathbf{B}$ is mathematically defined as $\\Phi_B = \\mathbf{B} \\cdot \\mathbf{A} = BA \\cos\\theta$. What is the primary physical nature of magnetic flux, and what is its standard SI unit?",
+    "qh": "एकसमान क्षेत्र $\\mathbf{B}$ में रखे समतल क्षेत्र $A$ के माध्यम से चुंबकीय प्रवाह $\\Phi_B$ को गणितीय रूप से $\\Phi_B = \\mathbf{B} \\cdot \\mathbf{A} = BA \\cos\\theta$ के रूप में परिभाषित किया गया है। चुंबकीय प्रवाह की प्राथमिक भौतिक प्रकृति क्या है, और इसका मानक एसआई (SI) मात्रक क्या है?",
+    "o": [
+      "It is a vector quantity; measured in Oersteds.",
+      "It is a scalar quantity; measured in Weber (Wb) or Tesla meter squared ($\\text{T m}^2$).",
+      "It is a complex tensor field; measured in Henry per second.",
+      "It is a dimensionless linear constant mapping the loop orientation variables."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Magnetic flux is a scalar quantity obtained from the dot product of the magnetic field vector and the area vector. Its designated SI unit is the Weber (Wb), which is dimensional equivalent to Tesla meter squared ($\\text{T m}^2$)."
+  },
+  {
+    "cat": "gs",
+    "sub": "magnetism",
+    "qe": "Faraday’s law of electromagnetic induction states that the magnitude of the induced emf ($\\epsilon$) in a closely wound coil of $N$ turns is directly proportional to:",
+    "qh": "फैराडे के विद्युत चुंबकीय प्रेरण के नियम के अनुसार $N$ फेरों वाली पास-पास लिपटी कुंडली में प्रेरित विद्युत वाहक बल (emf, $\\epsilon$) का परिमाण सीधे किसके समानुपाती होता है?",
+    "o": [
+      "The total internal surface area of the wire cross-section.",
+      "The time rate of change of magnetic flux through the circuit: $\\epsilon = -N \\frac{d\\Phi_B}{dt}$.",
+      "The absolute constant electrostatic potential difference across the battery terminals.",
+      "The mechanical velocity of the rotating armature divided by mass."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Faraday's law states that the induced electromotive force in a circuit is mathematically equal to the time rate of change of magnetic flux linked through it. For a coil with $N$ closely wound turns, the net emf is multiplied by the number of turns: $\\epsilon = -N \\frac{d\\Phi_B}{dt}$."
+  },
+  {
+    "cat": "gs",
+    "sub": "magnetism",
+    "qe": "Lenz’s law states that the polarity of an induced emf is such that it tends to produce a current which opposes the change in magnetic flux that produced it. This fundamental law is a direct consequence of which conservation law?",
+    "qh": "लेंस का नियम (Lenz’s law) बताता है कि प्रेरित विद्युत वाहक बल (emf) की ध्रुवीयता ऐसी होती है कि यह एक ऐसी धारा उत्पन्न करती है जो चुंबकीय प्रवाह में होने वाले उस परिवर्तन का विरोध करती है जिसने इसे उत्पन्न किया था। यह मौलिक नियम किस संरक्षण नियम का सीधा परिणाम है?",
+    "o": [
+      "The law of conservation of electric charge vectors.",
+      "The law of conservation of energy.",
+      "The principle of conservation of total material mass.",
+      "The law of linear momentum conservation in an isolated system."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Lenz's law is a manifestation of the law of conservation of energy. If the induced current aided the flux change instead of opposing it, a small push on a magnet would cause it to accelerate indefinitely, creating kinetic energy out of nothing (a perpetual motion machine), which violates energy conservation."
+  },
+  {
+    "cat": "gs",
+    "sub": "magnetism",
+    "qe": "When a person pushes the north pole of a bar magnet toward a closed conducting loop, the induced current creates an opposing north magnetic pole at the face of the coil. What happens to the mechanical work spent by the person in overcoming this repulsive force?",
+    "qh": "जब कोई व्यक्ति छड़ चुंबकीय उत्तरी ध्रुव को एक बंद चालक लूप की ओर धकेलता है, तो प्रेरित धारा कुंडली के फलक पर एक विरोधी उत्तरी चुंबकीय ध्रुव बनाती है। इस प्रतिकर्षण बल पर काबू पाने में व्यक्ति द्वारा खर्च किया गया यांत्रिक कार्य (mechanical work) भौतिक रूप से कहाँ जाता है?",
+    "o": [
+      "The work is completely destroyed due to non-conservative atomic friction.",
+      "The energy spent is dissipated as Joule heating produced by the induced current flowing in the loop.",
+      "The work transforms into an alternate electrostatic charge accumulated at the loop center.",
+      "The mechanical energy dilates the spatial coordinates of the primary magnet matrix."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> The mechanical work performed by a person to overcome the magnetic repulsion during induction is not lost. According to energy conservation, this mechanical energy is converted directly into electrical energy, which is subsequently dissipated as heat due to Joule heating ($I^2Rt$) within the resistance of the loop wire."
+  },
+  {
+    "cat": "gs",
+    "sub": "magnetism",
+    "qe": "Inductance is defined under electromagnetic theory as the ratio of total flux linkage to the current ($N\\Phi_B / I$). What intrinsic attributes uniquely determine the total inductance of a closely wound coil?",
+    "qh": "विद्युत चुंबकीय सिद्धांत के अंतर्गत प्रेरकत्व (Inductance) को कुल फ्लक्स लिंकेज और धारा के अनुपात ($N\\Phi_B / I$) के रूप में परिभाषित किया गया है। कौन सी अंतर्निहित विशेषताएं विशिष्ट रूप से एक पास-पास लिपटी कुंडली के कुल प्रेरकत्व को निर्धारित करती हैं?",
+    "o": [
+      "The velocity of the charge carriers and the external field strength.",
+      "The geometry of the coil and the intrinsic magnetic permeability properties of the medium.",
+      "The time duration for which the current is maintained through the branch.",
+      "The total electrostatic capacity of the insulation boundary layers."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Inductance, like capacitance, is a pure geometric and material attribute. It is completely independent of the actual current or flux values; it is uniquely determined by the geometric layout of the coil (number of turns, area, length) and the magnetic permeability of the core material inside the coil volume."
+  },
+  {
+    "cat": "gs",
+    "sub": "magnetism",
+    "qe": "When a current passing through a single isolated coil varies over time, an emf is induced in that same coil. This self-induced emf ($\\epsilon = -L \\frac{dI}{dt}$) plays what specific physical role in electrical circuits?",
+    "qh": "जब एक एकल पृथक कुंडली (isolated coil) से गुजरने वाली धारा समय के साथ बदलती है, तो उसी कुंडली में एक विद्युत वाहक बल (emf) प्रेरित होता है। यह स्व-प्रेरित विद्युत वाहक बल ($\\epsilon = -L \\frac{dI}{dt}$) विद्युत सर्किट में क्या विशिष्ट भौतिक भूमिका निभाता है?",
+    "o": [
+      "It acts as a mechanical catalyst speeding up the charge transfer rate.",
+      "It plays the role of inertia, acting as a 'back emf' that always opposes any change (increase or decrease) of current in the circuit.",
+      "It completely eliminates the resistance of the copper loops at room temperature.",
+      "It transforms alternating current into a continuous direct current mode instantly."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Self-inductance $L$ is the electrical analogue of mechanical mass or inertia. The self-induced emf is called 'back emf' because it opposes any variation in current; it resists the growth of current when the circuit is switched on and resists its decay when switched off."
+  },
+  {
+    "cat": "gs",
+    "sub": "light",
+    "qe": "An alternating current (AC) generator converts mechanical energy into electrical energy by exploiting electromagnetic induction. What basic operating principle allows the continuous generation of a varying flux inside the rotating armature coil?",
+    "qh": "एक प्रत्यावर्ती धारा (AC) जनरेटर विद्युत चुंबकीय प्रेरण का उपयोग करके यांत्रिक ऊर्जा को विद्युत ऊर्जा में बदलता है। कौन सा बुनियादी परिचालन सिद्धांत घूमती हुई आर्मेचर कुंडली के भीतर एक बदलते प्रवाह (varying flux) के निरंतर उत्पादन की अनुमति देता है?",
+    "o": [
+      "The continuous expansion and contraction of the wire thickness dimensions.",
+      "The periodic alteration of the coil's spatial orientation (angle $\\theta$) relative to a uniform magnetic field, changing its effective exposure area over time.",
+      "The rapid chemical degradation of nuclear fuel rods enclosed inside the core chassis.",
+      "The structural polarization of the non-conducting insulation shields."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> An AC generator operates by mechanically rotating an armature coil of area $A$ with a constant angular speed $\\omega$ in a uniform field $B$. This continuous rotation causes the angle $\\theta = \\omega t$ between the field vector and the area vector to change periodically. This alters the effective loop area exposed to the flux lines ($A \\cos\\omega t$), inducing a sinusoidal alternating emf."
+  },
+  {
+    "cat": "gs",
+    "sub": "light",
+    "qe": "The instantaneous electromotive force produced by a rotating armature coil in an AC generator is expressed mathematically as $\\epsilon = \\epsilon_0 \\sin(\\omega t)$. At what geometric orientations of the coil relative to the magnetic field vector does the emf reach its maximum extremum values?",
+    "qh": "एक एसी (AC) जनरेटर में घूमती हुई आर्मेचर कुंडली द्वारा उत्पन्न तात्कालिक विद्युत वाहक बल (emf) को गणितीय रूप से $\\epsilon = \\epsilon_0 \\sin(\\omega t)$ के रूप में व्यक्त किया जाता है। चुंबकीय क्षेत्र सदिश के सापेक्ष कुंडली के किन ज्यामितीय अभिविन्यासों (orientations) पर emf अपने अधिकतम चरम मानों (extremum values) तक पहुँचता है?",
+    "o": [
+      "When $\\theta = 0^\\circ$ or $\\theta = 180^\\circ$, when the coil plane is perfectly perpendicular to the field lines.",
+      "When $\\theta = 90^\\circ$ or $\\theta = 270^\\circ$, because the time rate of change of magnetic flux is greatest at these points when the coil plane is parallel to the field lines.",
+      "The value stays maximum everywhere because the angular speed is kept uniform.",
+      "The extremum depends exclusively on whether the generator is thermal or hydro-electric."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Although the magnetic flux $\\Phi_B = BA \\cos\\theta$ is zero when the coil is parallel to the field lines ($\\theta = 90^\\circ, 270^\\circ$), the derivative or *rate of change of flux* ($\\frac{d\\Phi_B}{dt} \\propto \\sin\\theta$) reaches its maximum absolute value at these angles. According to Faraday's law, this results in peak induced emf extremums."
   }
 ]
