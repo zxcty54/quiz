@@ -22356,5 +22356,635 @@
     ],
     "a": 1,
     "e": "<b>Explanation:</b> संपर्क में रखे लेंसों की कुल क्षमता का सूत्र $P = P_1 + P_2 + P_3$ होता है। अतः $P = 2 + 1 + (-1.5) = +1.5\\text{ D}$ होगा।"
+  },
+  {
+    "cat": "gs",
+    "sub": "light",
+    "qe": "Which part of the human eye is responsible for the maximum refraction of light rays entering the eye?",
+    "qh": "मानव नेत्र का कौन सा भाग आंख में प्रवेश करने वाली प्रकाश की किरणों के अधिकतम अपवर्तन (Refraction) के लिए मुख्य रूप से जिम्मेदार होता है?",
+    "o": [
+      "Crystalline Lens (क्रिस्टलीय लेंस)",
+      "Outer surface of the Cornea (कॉर्निया की बाहरी सतह)",
+      "Iris (आइरिस)",
+      "Pupil (पुतली)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> आंख में प्रवेश करने वाली प्रकाश किरणों का लगभग 80% अपवर्तन कॉर्निया की बाहरी पारदर्शी सतह पर होता है, जबकि लेंस केवल अंतिम सूक्ष्म समायोजन करता है।"
+  },
+  {
+    "cat": "gs",
+    "sub": "light",
+    "qe": "What is the physical nature and approximate diameter of the human eye ball?",
+    "qh": "मानव नेत्र गोलक (Eye Ball) की भौतिक प्रकृति और उसका अनुमानित व्यास (Diameter) लगभग कितना होता है?",
+    "o": [
+      "Perfect cube, 5 cm (पूर्ण घन, 5 सेमी)",
+      "Approximately spherical, 2.3 cm (लगभग गोलीय, 2.3 सेमी)",
+      "Cylindrical, 1.5 cm (बेलनाकार, 1.5 सेमी)",
+      "Completely flat, 3.2 cm (पूरी तरह समतल, 3.2 सेमी)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> मानव आंख की संरचना लगभग एक गोले (Sphere) जैसी होती है, जिसका व्यास अग्र-पश्च दिशा में लगभग 2.3 सेंटीमीटर होता है।"
+  },
+  {
+    "cat": "gs",
+    "sub": "light",
+    "qe": "The dark, muscular diaphragm that controls the size of the pupil in the human eye is called:",
+    "qh": "मानव आंख में पुतली (Pupil) के आकार को नियंत्रित करने वाले काले, पेशीय डायफ्राम को क्या कहा जाता है?",
+    "o": [
+      "Cornea (कॉर्निया)",
+      "Iris (आइरिस)",
+      "Retina (रेटीना)",
+      "Ciliary Muscles (पक्ष्माभी पेशियां)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> आइरिस आंख का वह रंगीन भाग है जो एक शटर की तरह काम करता है और पुतली के व्यास को छोटा या बड़ा करके आंख में जाने वाले प्रकाश को नियंत्रित करता है।"
+  },
+  {
+    "cat": "gs",
+    "sub": "light",
+    "qe": "When a person moves from a brightly lit environment into a dark room, what happens to the pupil?",
+    "qh": "जब कोई व्यक्ति अत्यधिक चमकीले प्रकाश वाले वातावरण से अचानक एक अंधेरे कमरे में प्रवेश करता है, तो उसकी पुतली (Pupil) पर क्या प्रभाव पड़ता है?",
+    "o": [
+      "It constricts immediately (यह तुरंत सिकुड़ जाती है)",
+      "It expands or dilates to allow more light (यह अधिक प्रकाश को प्रवेश देने के लिए फैल जाती है)",
+      "It changes its color (यह अपना रंग बदल लेती है)",
+      "It closes completely permanently (यह स्थायी रूप से बंद हो जाती है)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> कम रोशनी वाले कमरे में वस्तुओं को स्पष्ट देखने के लिए अधिक प्रकाश की आवश्यकता होती है, इसलिए आइरिस फैलकर पुतली के मार्ग (hole) को बड़ा कर देती है।"
+  },
+  {
+    "cat": "gs",
+    "sub": "light",
+    "qe": "What type of lens is present inside the human eye, and what type of image does it project on the retina?",
+    "qh": "मानव नेत्र के भीतर किस प्रकार का प्राकृतिक लेंस उपस्थित होता है, और यह रेटीना पर किस प्रकार का प्रतिबिंब प्रक्षेपित करता है?",
+    "o": [
+      "Concave lens, Virtual and erect (अवतल लेंस, आभासी और सीधा)",
+      "Convex lens, Real and inverted (उत्तल लेंस, वास्तविक और उल्टा)",
+      "Plano-concave lens, Real and erect (समलतावतल लेंस, वास्तविक और सीधा)",
+      "Cylindrical lens, Virtual and inverted (बेलनाकार लेंस, आभासी और उल्टा)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> मानव नेत्र लेंस एक लचीला क्रिस्टलीय उत्तल (Convex) लेंस है, जो आने वाली प्रकाश किरणों को अभिसरित करके रेटीना पर वास्तविक और उल्टा प्रतिबिंब बनाता है।"
+  },
+  {
+    "cat": "gs",
+    "sub": "light",
+    "qe": "The ability of the eye lens to adjust its focal length to view both nearby and distant objects clearly is known as:",
+    "qh": "पास और दूर की दोनों वस्तुओं को स्पष्ट रूप से देखने के लिए नेत्र लेंस द्वारा अपनी फोकस दूरी को समायोजित करने की क्षमता को क्या कहा जाता है?",
+    "o": [
+      "Refraction Power (अपवर्तन क्षमता)",
+      "Power of Accommodation (समंजन क्षमता)",
+      "Visual Dispersion (दृष्टि विक्षेपण)",
+      "Optical Resolution (प्रकाशिक विभेदन)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> पक्ष्माभी पेशियों की मदद से नेत्र लेंस की फोकस दूरी को आवश्यकतानुसार बदलने की स्वतः क्षमता को आंख की समंजन क्षमता (Power of Accommodation) कहते हैं।"
+  },
+  {
+    "cat": "gs",
+    "sub": "light",
+    "qe": "When the ciliary muscles of the human eye are completely relaxed, how do the eye lens and its focal length change?",
+    "qh": "जब मानव नेत्र की पक्ष्माभी पेशियां (Ciliary Muscles) पूरी तरह शिथिल (Relaxed) अवस्था में होती हैं, तो नेत्र लेंस और उसकी फोकस दूरी पर क्या प्रभाव पड़ता है?",
+    "o": [
+      "The lens becomes thick, and focal length decreases (लेंस मोटा हो जाता है और फोकस दूरी घटती है)",
+      "The lens becomes thin, and focal length increases to its maximum (लेंस पतला हो जाता है और फोकस दूरी अधिकतम हो जाती है)",
+      "The lens becomes completely flat with zero focal length (लेंस पूरी तरह चपटा हो जाता है)",
+      "The lens detaches from the suspension ligaments (लेंस अपनी जगह से खिसक जाता है)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> पेशियों के शिथिल होने पर वे लेंस को खींचकर पतला और लंबा कर देती हैं। पतला लेंस कम शक्तिशाली होता है, जिससे उसकी फोकस दूरी दूर की वस्तुओं को देखने के लिए बढ़ जाती है।"
+  },
+  {
+    "cat": "gs",
+    "sub": "light",
+    "qe": "To focus clearly on nearby objects, what changes occur in the ciliary muscles and the eye lens?",
+    "qh": "पास की वस्तुओं पर स्पष्ट रूप से ध्यान केंद्रित करने के लिए पक्ष्माभी पेशियों और नेत्र लेंस में कौन से परिवर्तन होते हैं?",
+    "o": [
+      "Ciliary muscles relax, making the lens thin (पेशियां शिथिल होती हैं जिससे लेंस पतला होता है)",
+      "Ciliary muscles contract, making the lens thicker and increasing its curvature (पक्ष्माभी पेशियां सुकड़ती हैं, जिससे लेंस मोटा हो जाता है और उसका कर्वेचर बढ़ जाता है)",
+      "The lens shifts forward physically without changing shape (लेंस बिना आकार बदले आगे खिसक जाता है)",
+      "The cornea flattens to reduce total bending (कॉर्निया चपटा हो जाता है)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> पास की वस्तु देखने के लिए अधिक अपवर्तन शक्ति चाहिए। पेशियां सिकुड़कर लेंस को दबा देती हैं, जिससे वह मोटा हो जाता है, उसकी शक्ति बढ़ती है और फोकस दूरी घटती है।"
+  },
+  {
+    "cat": "gs",
+    "sub": "light",
+    "qe": "What is the standard value of the near point (least distance of distinct vision) for a young adult with normal vision?",
+    "qh": "सामान्य दृष्टि वाले एक युवा वयस्क के लिए स्पष्ट दृष्टि की न्यूनतम दूरी (Near Point) का मानक मान कितना होता है?",
+    "o": [
+      "10 cm",
+      "25 cm",
+      "50 cm",
+      "Infinite (अनंत)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> बिना किसी तनाव के आंख के सबसे पास रखी वस्तु को स्पष्ट देखने की न्यूनतम दूरी 25 सेंटीमीटर होती है, इसे स्पष्ट दृष्टि की न्यूनतम दूरी कहते हैं।"
+  },
+  {
+    "cat": "gs",
+    "sub": "light",
+    "qe": "What is the position of the far point for a normal human eye?",
+    "qh": "एक सामान्य और स्वस्थ मानव नेत्र के लिए दूर-बिंदु (Far Point) कहाँ स्थित होता है?",
+    "o": [
+      "At 25 cm (25 सेमी पर)",
+      "At 100 cm (100 सेमी पर)",
+      "At Infinity (अनंत पर)",
+      "Depends on the size of the cornea (कॉर्निया के आकार पर निर्भर करता है)"
+    ],
+    "a": 2,
+    "e": "<b>Explanation:</b> एक स्वस्थ आंख बिना किसी अतिरिक्त समंजन प्रयास के अत्यधिक दूर स्थित वस्तुओं (जैसे तारों) को स्पष्ट देख सकती है, इसलिए सुदूर बिंदु अनंत माना जाता है।"
+  },
+  {
+    "cat": "gs",
+    "sub": "light",
+    "qe": "The light-sensitive inner layer of the human eye that acts as a screen for image projection is called:",
+    "qh": "मानव नेत्र की आंतरिक प्रकाश-संवेदी परत जो प्रतिबिंब प्रक्षेपण के लिए एक परदे (Screen) की तरह कार्य करती है, क्या कहलाती है?",
+    "o": [
+      "Sclera (श्वेतपटल)",
+      "Retina (दृष्टिपटल या रेटीना)",
+      "Choroid (रक्तकपटल)",
+      "Iris (आइरिस)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> रेटीना आंख का पिछला पर्दा है जिसमें लाखों प्रकाश-संवेदी कोशिकाएं होती हैं। यहीं पर लेंस द्वारा वास्तविक और उल्टा प्रतिबिंब प्रक्षेपित किया जाता है।"
+  },
+  {
+    "cat": "gs",
+    "sub": "light",
+    "qe": "Which cells on the retina are specialized for low-light vision, and which are responsible for color vision?",
+    "qh": "रेटीना पर उपस्थित कौन सी कोशिकाएं कम रोशनी (मंद प्रकाश) में देखने के लिए और कौन सी रंगीन दृष्टि (Color vision) के लिए विशिष्ट होती हैं?",
+    "o": [
+      "Cones for low light, Rods for color (शंकु मंद प्रकाश के लिए, छड़ रंग के लिए)",
+      "Rods for low light, Cones for color (छड़/रॉड्स मंद प्रकाश के लिए, शंकु/कोन्स रंग के लिए)",
+      "Both do the same function (दोनों समान कार्य करते हैं)",
+      "Optic nerve fiber cells only (केवल ऑप्टिक तंत्रिका कोशिकाएं)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> रॉड्स (छड़ कोशिकाएं) प्रकाश की तीव्रता या मंद प्रकाश के प्रति संवेदनशील होती हैं, जबकि कोन्स (शंकु कोशिकाएं) रंगों की पहचान और तीक्ष्ण प्रकाश के लिए जिम्मेदार होती हैं।"
+  },
+  {
+    "cat": "gs",
+    "sub": "light",
+    "qe": "The fluid present between the cornea and the eye lens is called:, and the fluid between the lens and retina is:",
+    "qh": "कॉर्निया और नेत्र लेंस के बीच उपस्थित जलीय द्रव को क्या कहते हैं, और लेंस व रेटीना के बीच के गाढ़े द्रव को क्या कहते हैं?",
+    "o": [
+      "Vitreous humor, Aqueous humor (कांच द्रव, जलीय द्रव)",
+      "Aqueous humor, Vitreous humor (नेत्रोद/जलीय द्रव, काचाभ द्रव/कांच द्रव)",
+      "Plasma, Cytoplasm (प्लाज्मा, साइटोप्लाज्म)",
+      "Cerebrospinal fluid, Lymph (मस्तिष्कमेरु द्रव, लसीका)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> कॉर्निया और लेंस के बीच पानी जैसा पारदर्शी 'एक्वस ह्यूमर' (जलीय द्रव) होता है, और पीछे लेंस व रेटीना के बीच आईबॉल को आकार देने वाला जेल जैसा 'विट्रस ह्यूमर' (कांच द्रव) भरा होता है।"
+  },
+  {
+    "cat": "gs",
+    "sub": "light",
+    "qe": "A person suffering from Myopia (near-sightedness) face difficulty in viewing which objects, and where is the image formed?",
+    "qh": "निकट-दृष्टि दोष (Myopia) से पीड़ित व्यक्ति को कहाँ की वस्तुएं देखने में कठिनाई होती है, और इस दोष में दूर की वस्तु का प्रतिबिंब कहाँ बनता है?",
+    "o": [
+      "Nearby objects, behind the retina (पास की वस्तुएं, रेटीना के पीछे)",
+      "Distant objects, in front of the retina (दूर की वस्तुएं, रेटीना के पहले/सामने)",
+      "Nearby objects, on the blind spot (पास की वस्तुएं, अंध बिंदु पर)",
+      "Distant objects, behind the retina (दूर की वस्तुएं, रेटीना के पीछे)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> मायोपिया में पास का तो साफ दिखता है परंतु दूर का धुंधला दिखता है, क्योंकि दूर से आने वाली समानांतर किरणें अत्यधिक अपवर्तन के कारण रेटीना पर न कटकर उसके पहले ही कट जाती हैं।"
+  },
+  {
+    "cat": "gs",
+    "sub": "light",
+    "qe": "What are the two major causes responsible for the development of Myopia in human eye?",
+    "qh": "मानव नेत्र में निकट-दृष्टि दोष (Myopia) के उत्पन्न होने के दो मुख्य संरचनात्मक कारण क्या हो सकते हैं?",
+    "o": [
+      "Decrease in eye ball length and flattening of lens (नेत्र गोलक का छोटा होना और लेंस का चपटा होना)",
+      "Excessive curvature of the eye lens and elongation of the eye ball (नेत्र लेंस का अत्यधिक वक्र होना/मोटा होना और नेत्र गोलक का लंबा हो जाना)",
+      "Opacification of the crystalline lens (क्रिस्टलीय लेंस का अपारदर्शी हो जाना)",
+      "Weakening of ciliary muscles only (केवल पक्ष्माभी पेशियों का कमजोर होना)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> मायोपिया तब होता है जब लेंस अत्यधिक मोटा (उच्च क्षमता का) हो जाता है या आईबॉल सामान्य से अधिक लंबी हो जाती है, जिससे किरणें रेटीना से पहले ही अभिसरित हो जाती हैं।"
+  },
+  {
+    "cat": "gs",
+    "sub": "light",
+    "qe": "Which lens is used as a corrective measure for Myopia, and what type of power does it have?",
+    "qh": "निकट-दृष्टि दोष (Myopia) के निवारण के लिए चश्मे में किस लेंस का उपयोग किया जाता है, और उसकी क्षमता (Power) का चिह्न क्या होता है?",
+    "o": [
+      "Convex lens, Positive power (उत्तल लेंस, धनात्मक क्षमता)",
+      "Concave lens, Negative power (अवलत लेंस, ऋणात्मक क्षमता)",
+      "Bifocal lens, Neutral power (द्विफोकसी लेंस, उदासीन क्षमता)",
+      "Cylindrical lens, Positive power (बेलनाकार लेंस, धनात्मक क्षमता)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> चूंकि मायोपिया में किरणें पहले ही कट जाती हैं, इसलिए एक अवतल (Concave) लेंस लगाया जाता है जो किरणों को थोड़ा फैला (diverge) देता है ताकि वे ठीक रेटीना पर मिलें। अवतल लेंस की क्षमता हमेशा ऋणात्मक ($-$) होती है।"
+  },
+  {
+    "cat": "gs",
+    "sub": "light",
+    "qe": "Hypermetropia (far-sightedness) causes inability to see nearby objects clearly. Where is the image projected in this defect?",
+    "qh": "दीर्घ-दृष्टि दोष (Hypermetropia) के कारण पास की वस्तुएं धुंधली दिखती हैं। इस दोष में पास की वस्तु से आने वाली किरणों का प्रतिबिंब कहाँ बनता है?",
+    "o": [
+      "In front of the retina (रेटीना के ठीक सामने)",
+      "Behind the retina (रेटीना के पीछे)",
+      "Directly on the iris surface (आइरिस की सतह पर)",
+      "Inside the crystalline lens core (क्रिस्टलीय लेंस के भीतर)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> हाइपरमेट्रोपिया में आंख की अपवर्तन शक्ति कम हो जाती है, जिससे पास की वस्तु से आने वाली किरणें पर्याप्त रूप से मुड़ नहीं पातीं और रेटीना के पीछे (behind the retina) जाकर फोकस होती हैं।"
+  },
+  {
+    "cat": "gs",
+    "sub": "light",
+    "qe": "What are the structural causes that lead to Hypermetropia in the human eye?",
+    "qh": "मानव नेत्र में दीर्घ-दृष्टि दोष (Hypermetropia) होने के पीछे कौन से संरचनात्मक कारण जिम्मेदार होते हैं?",
+    "o": [
+      "Elongation of the eye ball and thick lens (नेत्र गोलक का लंबा होना और मोटा लेंस)",
+      "Focal length of the eye lens is too long or the eye ball has become too small (नेत्र लेंस की फोकस दूरी का अत्यधिक बढ़ जाना या नेत्र गोलक का बहुत छोटा हो जाना)",
+      "Liquefaction of the vitreous humor (कांच द्रव का पतला हो जाना)",
+      "Continuous blinking of the eyelids (पलकों का लगातार झपकना)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> यह दोष तब उत्पन्न होता है जब नेत्र लेंस बहुत पतला (कम क्षमता का) रह जाता है जिससे उसकी फोकस दूरी बढ़ जाती है, या आईबॉल सामान्य आकार से छोटी (श्रिंक) हो जाती है।"
+  },
+  {
+    "cat": "gs",
+    "sub": "light",
+    "qe": "To correct Hypermetropia, which type of lens is prescribed by an ophthalmologist?",
+    "qh": "दूर-दृष्टि दोष (Hypermetropia) को ठीक करने के लिए नेत्र विशेषज्ञ द्वारा चश्मे में किस लेंस की सलाह दी जाती है?",
+    "o": [
+      "Concave lens (अवलत लेंस)",
+      "Convex lens (उत्तल लेंस)",
+      "Cylindrical lens (बेलनाकार लेंस)",
+      "Bifocal plane plate (द्विफोकसी समतल प्लेट)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> हाइपरमेट्रोपिया के सुधार के लिए एक उपयुक्त क्षमता वाले उत्तल (Convex) लेंस का उपयोग किया जाता है। यह लेंस किरणों को पहले ही थोड़ा मोड़ देता है जिससे आंख का कमजोर लेंस उन्हें ठीक रेटीना पर मिला पाता है।"
+  },
+  {
+    "cat": "gs",
+    "sub": "light",
+    "qe": "What is Presbyopia, and what is its primary biological reason during old age?",
+    "qh": "जरा-दूरदर्शिता (Presbyopia) क्या है, और वृद्धावस्था के दौरान इसका मुख्य जैविक कारण क्या होता है?",
+    "o": [
+      "Opacification of cornea due to calcium deposition (कैल्शियम जमा होने से कॉर्निया का धुंधला होना)",
+      "Gradual weakening of ciliary muscles and diminishing flexibility of the eye lens (पक्ष्माभी पेशियों का धीरे-धीरे कमजोर होना और नेत्र लेंस के लचीलेपन में कमी आना)",
+      "Elongation of the optic nerve cords (ऑप्टिक तंत्रिका रस्सियों का लंबा होना)",
+      "Infection in the vitreous humor fluid (कांच द्रव में संक्रमण होना)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> उम्र बढ़ने के साथ आंख की समंजन क्षमता घट जाती है, क्योंकि पक्ष्माभी पेशियां कमजोर हो जाती हैं और क्रिस्टलीय लेंस अपना लचीलापन (flexibility) खो देता है, जिससे मुख्य रूप से पास का देखना कठिन हो जाता है।"
+  },
+  {
+    "cat": "gs",
+    "sub": "light",
+    "qe": "A person suffering from old-age presbyopia often needs bifocal lenses. What do the upper and lower parts of a bifocal lens consist of?",
+    "qh": "जरा-दूरदर्शिता से पीड़ित वृद्ध व्यक्तियों को अक्सर द्विफोकसी (Bifocal) लेंस की आवश्यकता होती है। इस लेंस के ऊपरी और निचले भाग में क्रमशः क्या शामिल होता है?",
+    "o": [
+      "Upper part is convex, lower part is concave (ऊपरी भाग उत्तल, निचला अवतल)",
+      "Upper part is concave for distant vision, lower part is convex for near vision (ऊपरी भाग दूर की दृष्टि के लिए अवतल, और निचला भाग पास की दृष्टि के लिए उत्तल होता है)",
+      "Both parts are made of concave lenses (दोनों भाग अवतल लेंस के होते हैं)",
+      "Both parts are made of flat glass screens (दोनों भाग समतल कांच के होते हैं)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> जब किसी व्यक्ति को दूर और पास दोनों का धुंधला दिखता है, तो द्विफोकसी लेंस का उपयोग होता है। ऊपरी हिस्सा अवतल (Distant vision) और नीचे का अर्धचन्द्राकार हिस्सा उत्तल (Reading/Near vision) होता है।"
+  },
+  {
+    "cat": "gs",
+    "sub": "light",
+    "qe": "The medical condition in old age where the crystalline lens of the eye becomes milky and cloudy, causing blurred vision, is called:",
+    "qh": "वृद्धावस्था की वह चिकित्सीय स्थिति जिसमें आंख का क्रिस्टलीय लेंस दूधिया (Milky) और धुंधला (Cloudy) हो जाता है जिससे दृष्टि बाधित होती है, क्या कहलाती है?",
+    "o": [
+      "Presbyopia (जरा-दूरदर्शिता)",
+      "Cataract (मोतियाबिंद)",
+      "Astigmatism (अबिंदुकता)",
+      "Glaucoma (कांचबिंदु)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> मोतियाबिंद (Cataract) में लेंस के ऊपर एक धुंधली परत चढ़ जाती है जिससे लेंस अपारदर्शी होने लगता है। इसे केवल मोतियाबिंद सर्जरी (Cataract surgery) द्वारा कृत्रिम लेंस लगाकर ही ठीक किया जा सकता है।"
+  },
+  {
+    "cat": "gs",
+    "sub": "light",
+    "qe": "How many triangular and rectangular faces are present in a standard glass prism?",
+    "qh": "एक मानक कांच के प्रिज्म (Glass Prism) में कुल कितने त्रिकोणीय (Triangular) और कितने आयताकार (Rectangular) फलक उपस्थित होते हैं?",
+    "o": [
+      "Three triangular, two rectangular (तीन त्रिकोणीय, दो आयताकार फलक)",
+      "Two triangular, three rectangular (दो त्रिकोणीय और तीन आयताकार फलक)",
+      "Four triangular, one rectangular (चार त्रिकोणीय, एक आयताकार फलक)",
+      "Five rectangular faces only (केवल पांच आयताकार फलक)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> एक त्रिकोणीय प्रिज्म में दो समानांतर त्रिकोणीय आधार (triangular faces) होते हैं और तीन आयताकार पार्श्व सतहें (rectangular faces) होती हैं।"
+  },
+  {
+    "cat": "gs",
+    "sub": "light",
+    "qe": "The angle between the two lateral refracting faces of a prism is fundamentally known as:",
+    "qh": "एक प्रिज्म की दो पार्श्व अपवर्तक सतहों के बीच बनने वाले आंतरिक कोण को मुख्य रूप से क्या कहा जाता है?",
+    "o": [
+      "Angle of Incidence (आपतन कोण)",
+      "Angle of the Prism (प्रिज्म कोण)",
+      "Angle of Deviation (विचलन कोण)",
+      "Angle of Emergence (निर्गत कोण)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> प्रिज्म के दो अपवर्तक फलकों के बीच के कोण को प्रिज्म कोण (Angle of Prism, A) कहा जाता है। यह प्रिज्म की ज्यामिति को निर्धारित करता है।"
+  },
+  {
+    "cat": "gs",
+    "sub": "light",
+    "qe": "What is defined as the 'Angle of Deviation' ($D$) in a prism interaction?",
+    "qh": "प्रिज्म की प्रकाश क्रिया में 'विचलन कोण' (Angle of Deviation, D) को किस प्रकार परिभाषित किया जाता है?",
+    "o": [
+      "The angle between the incident ray and the normal (आपतन किरण और अभिलंब के बीच का कोण)",
+      "The angle between the emergent ray and the normal (निर्गत किरण और अभिलंब के बीच का कोण)",
+      "The angle between the extended incident ray and the emergent ray traced backwards (आपतित किरण के मूल मार्ग और निर्गत किरण को पीछे बढ़ाने पर उनके बीच बनने वाला कोण)",
+      "The angle at the bottom base of the prism (प्रिज्म के निचले आधार पर बनने वाला कोण)"
+    ],
+    "a": 2,
+    "e": "<b>Explanation:</b> विचलन कोण यह मापता है कि प्रिज्म ने आपतित प्रकाश किरण को उसके मूल मार्ग से कुल कितने कोण पर झुका या भटका दिया है।"
+  },
+  {
+    "cat": "gs",
+    "sub": "light",
+    "qe": "The phenomenon of splitting of white light into its component colors when passed through a refracting medium is called:",
+    "qh": "जब श्वेत प्रकाश की किरण किसी अपवर्तक माध्यम (जैसे प्रिज्म) से गुजरती है, तो उसका अपने विभिन्न अवयवी रंगों में विभाजित होना क्या कहलाता है?",
+    "o": [
+      "Atmospheric Refraction (वायुमंडलीय अपवर्तन)",
+      "Dispersion of Light (प्रकाश का विक्षेपण या वर्ण-विक्षेपण)",
+      "Scattering of Light (प्रकाश का प्रकीर्णन)",
+      "Internal Reflection (आंतरिक परावर्तन)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> श्वेत प्रकाश सात मुख्य रंगों का मिश्रण है। माध्यम बदलने पर सभी रंगों का झुकाव अलग होने से वे अलग-अलग बिखर जाते हैं, इस घटना को प्रकाश का विक्षेपण (Dispersion) कहते हैं।"
+  },
+  {
+    "cat": "gs",
+    "sub": "light",
+    "qe": "The band of the colored components of a light beam obtained on a screen after dispersion is scientifically termed as:",
+    "qh": "वर्ण-विक्षेपण के बाद किसी परदे पर प्राप्त होने वाले प्रकाश के रंगीन घटकों के बैंड (पैटर्न) को वैज्ञानिक रूप से क्या कहा जाता है?",
+    "o": [
+      "Prism Shadow (प्रिज्म छाया)",
+      "Spectrum (स्पेक्ट्रम या वर्णक्रम)",
+      "Rainbow Ring (इंद्रधनुष वलय)",
+      "Diffraction Grid (विवर्तन ग्रिड)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> विक्षेपण के बाद परदे पर दिखने वाले रंगों के क्रमबद्ध समूह (VIBGYOR) को स्पेक्ट्रम (Spectrum) या वर्णक्रम कहा जाता है।"
+  },
+  {
+    "cat": "gs",
+    "sub": "light",
+    "qe": "When white light passes through a glass prism, which color bends the most and which color bends the least?",
+    "qh": "जब श्वेत प्रकाश एक कांच के प्रिज्म से गुजरता है, तो किस रंग की किरण का विचलन (Bending) सबसे अधिक और किस रंग का सबसे कम होता है?",
+    "o": [
+      "Red bends most, Violet bends least (लाल सबसे अधिक, बैंगनी सबसे कम)",
+      "Violet bends most, Red bends least (बैंगनी का विचलन सबसे अधिक, और लाल का विचलन सबसे कम होता है)",
+      "Green bends most, Yellow bends least (हरा सबसे अधिक, पीला सबसे कम)",
+      "All colors bend at the exact same angle (सभी रंग बिल्कुल समान कोण पर झुकते हैं)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> कांच में बैंगनी (Violet) रंग के प्रकाश की चाल सबसे कम होती है जिससे उसका अपवर्तनांक अधिकतम होता है और वह सबसे ज्यादा झुकता है। लाल (Red) की चाल सर्वाधिक होने से वह सबसे कम मुड़ता है।"
+  },
+  {
+    "cat": "gs",
+    "sub": "light",
+    "qe": "What is the primary scientific reason behind the phenomenon of dispersion of white light in a prism?",
+    "qh": "श्वेत प्रकाश के प्रिज्म में से गुजरने पर होने वाले वर्ण-विक्षेपण का मुख्य वैज्ञानिक कारण क्या है?",
+    "o": [
+      "The prism surface contains pre-existing colorful stains (प्रिज्म की सतह पर पहले से रंगीन धब्बे होते हैं)",
+      "Different colors of light travel with different speeds in glass, leading to different angles of deviation (कांच के भीतर प्रकाश के अलग-अलग रंगों की चाल अलग-अलग होती है, जिससे उनका विचलन कोण भी भिन्न हो जाता है)",
+      "Friction inside the glass filters out the white rays (कांच के भीतर का घर्षण श्वेत किरणों को छान देता है)",
+      "The light rays react chemically with the silicon molecules (प्रकाश किरणें सिलिकॉन अणुओं के साथ रासायनिक क्रिया करती हैं)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> हवा में सभी रंगों की चाल समान है, परंतु कांच के भीतर प्रवेश करते ही VIBGYOR के सभी रंगों की गति भिन्न हो जाती है। गति भिन्न होने से सबका झुकाव कोण अलग हो जाता है और वे पृथक हो जाते हैं।"
+  },
+  {
+    "cat": "gs",
+    "sub": "light",
+    "qe": "Sir Isaac Newton used a second inverted prism identical to the first one to demonstrate that:",
+    "qh": "सर आइजैक न्यूटन ने पहले प्रिज्म के सापेक्ष एक दूसरा उल्टा (Inverted) प्रिज्म सटाकर रखा। इस प्रयोग द्वारा उन्होंने क्या सिद्ध किया?",
+    "o": [
+      "The second prism creates more new colors (दूसरा प्रिज्म और नए रंग बनाता है)",
+      "The inverted prism recombines the split colors back into white light, proving white light is made of these colors (उल्टा प्रिज्म अलग हुए रंगों को दोबारा जोड़कर श्वेत प्रकाश बना देता है, जिससे सिद्ध हुआ कि श्वेत प्रकाश इन रंगों से बना है)",
+      "Light completely gets absorbed inside the second prism (प्रकाश दूसरे प्रिज्म में पूरी तरह अवशोषित हो जाता है)",
+      "The spectrum turns completely monochromatic green (स्पेक्ट्रम पूरी तरह हरे रंग में बदल जाता है)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> इस ऐतिहासिक प्रयोग (Recombination of spectrum) द्वारा न्यूटन ने यह साबित किया कि प्रिज्म खुद रंग नहीं बनाता, बल्कि श्वेत प्रकाश के भीतर ही वे सात रंग मौजूद हैं जिन्हें उल्टा प्रिज्म वापस जोड़ देता है।"
+  },
+  {
+    "cat": "gs",
+    "sub": "light",
+    "qe": "A rainbow is a natural spectrum caused by the dispersion of sunlight. What components in nature act as tiny prisms to cause this?",
+    "qh": "इंद्रधनुष (Rainbow) सूर्य के प्रकाश के विक्षेपण के कारण बनने वाला एक प्राकृतिक स्पेक्ट्रम है। प्रकृति में उपस्थित कौन से घटक छोटे प्रिज्म की तरह कार्य करते हैं?",
+    "o": [
+      "Dust particles floating in the desert (रेगिस्तान में उड़ते धूल के कण)",
+      "Tiny water droplets suspended in the atmosphere after rain (बारिश के बाद वायुमंडल में निलंबित पानी की छोटी-छोटी बूंदें)",
+      "Ice crystals inside the high polar mountains (ध्रुवीय पहाड़ों के भीतर बर्फ के क्रिस्टल)",
+      "Leaves of trees reflecting light at night (पेड़ों की पत्तियां)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> वर्षा के पश्चात हवा में रुकी हुई पानी की नन्हीं बूंदें (Water droplets) छोटे प्रिज्मों की भांति कार्य करती हैं। जब उन पर सूर्य की किरणें गिरती हैं, तो वे विक्षेपण उत्पन्न करती हैं।"
+  },
+  {
+    "cat": "gs",
+    "sub": "light",
+    "qe": "What are the sequential optical phenomena that occur inside a water droplet during the formation of a rainbow?",
+    "qh": "इंद्रधनुष के निर्माण के दौरान एक पानी की बूंद के भीतर क्रमिक रूप से कौन सी प्रकाशिक घटनाएं घटित होती हैं?",
+    "o": [
+      "Only total absorption occurs (केवल पूर्ण अवशोषण होता है)",
+      "Refraction, Dispersion, Internal Reflection, and final Refraction (पहले सतह पर अपवर्तन व विक्षेपण, फिर आंतरिक परावर्तन, और अंत में पुनः अपवर्तन)",
+      "Direct reflection without entering the droplet (बिंदु के भीतर प्रवेश किए बिना सीधा परावर्तन)",
+      "Scattering followed by diffraction only (केवल प्रकीर्णन और उसके बाद विवर्तन)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> पानी की बूंद में प्रवेश करते समय प्रकाश का अपवर्तन (Refraction) और विक्षेपण (Dispersion) होता है, फिर वह आंतरिक सतह से टकराकर आंतरिक रूप से परावर्तित (Internal reflection) होती है, और बाहर निकलते समय पुनः अपवर्तित होती है।"
+  },
+  {
+    "cat": "gs",
+    "sub": "light",
+    "qe": "In which direction is a rainbow always observed with respect to the position of the Sun?",
+    "qh": "सूर्य की स्थिति के सापेक्ष इंद्रधनुष हमेशा आकाश में किस दिशा में दिखाई देता है?",
+    "o": [
+      "In the exact direction facing the Sun (ठीक सूर्य की ही दिशा में सामने)",
+      "In a direction always opposite to that of the Sun (हमेशा सूर्य की स्थिति के विपरीत दिशा में)",
+      "At a right angle ($90^\\circ$) to the Sun only (केवल सूर्य से 90 डिग्री के कोण पर)",
+      "Directly below the baseline horizon at noon (दोपहर में क्षितिज के ठीक नीचे)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> इंद्रधनुष बनने की अनिवार्य शर्त यह है कि प्रेक्षक (Observer) की पीठ सूर्य की तरफ होनी चाहिए, अर्थात सूर्य हमेशा पीछे होगा और इंद्रधनुष ठीक उसके विपरीत दिशा (Opposite direction) में सामने बनेगा।"
+  },
+  {
+    "cat": "gs",
+    "sub": "light",
+    "qe": "What physical property of the Earth's atmosphere causes Atmospheric Refraction?",
+    "qh": "पृथ्वी के वायुमंडल का कौन सा भौतिक गुण वायुमंडलीय अपवर्तन (Atmospheric Refraction) का मुख्य कारण बनता है?",
+    "o": [
+      "The static color of the upper air layers (ऊपरी हवा की परतों का स्थिर रंग)",
+      "The changing optical densities of different layers of air due to temperature and pressure variations (तापमान और दबाव में बदलाव के कारण हवा की विभिन्न परतों का बदलता प्रकाशिक घनत्व)",
+      "The magnetic field wrapping the globe (ग्लोब को घेरने वाला चुंबकीय क्षेत्र)",
+      "The gravitational pull on light photons (प्रकाश फोटॉन पर गुरुत्वाकर्षण का खिंचाव)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> वायुमंडल में हवा की परतें स्थिर नहीं हैं। ऊपर की हवा विरल है और नीचे आते-आते ठंडी सघन हवा मिलती है। इस निरंतर बदलते अपवर्तनांक के कारण प्रकाश का मार्ग लगातार मुड़ता रहता है।"
+  },
+  {
+    "cat": "gs",
+    "sub": "light",
+    "qe": "Due to atmospheric refraction, the apparent position of a star appears slightly compared to its actual position.",
+    "qh": "वायुमंडलीय अपवर्तन के कारण, किसी तारे की आभासी स्थिति (Apparent position) उसकी वास्तविक स्थिति की तुलना में कैसी दिखाई देती है?",
+    "o": [
+      "Slightly lower (थोड़ी नीचे की ओर)",
+      "Slightly higher (थोड़ी ऊपर की ओर उठी हुई)",
+      "At the exact same coordinate fixed (बिल्कुल उसी स्थान पर नियत)",
+      "Shifting continuously to the left side (लगातार बाईं ओर खिसकती हुई)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> तारों से आने वाला प्रकाश जैसे-जैसे नीचे आता है, वह सघन माध्यम के कारण अभिलंब की ओर झुकता जाता है। हमारी आँखें जब इन किरणों को सीधा पीछे बढ़ाती हैं, तो तारा अपनी वास्तविक स्थिति से थोड़ा ऊपर (higher) दिखता है।"
+  },
+  {
+    "cat": "gs",
+    "sub": "light",
+    "qe": "The phenomenon of early sunrise (advanced sunrise) and delayed sunset is caused by atmospheric refraction. What is the time difference for each?",
+    "qh": "वायुमंडलीय अपवर्तन के कारण अग्रिम सूर्योदय (Early sunrise) और विलंबित सूर्यास्त (Delayed sunset) की घटना होती है। प्रत्येक के लिए समय का अंतर कितना होता है?",
+    "o": [
+      "10 minutes each (10 मिनट प्रत्येक)",
+      "2 minutes each (2 मिनट प्रत्येक)",
+      "5 minutes total only (कुल केवल 5 मिनट)",
+      "Depends on the moon cycle (चंद्र चक्र पर निर्भर करता है)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> अपवर्तन के कारण सूर्य वास्तविक रूप से क्षितिज (Horizon) के ऊपर आने से 2 मिनट पहले ही दिखाई देने लगता है, और सूर्यास्त के समय क्षितिज के नीचे चले जाने के बाद भी 2 मिनट तक दिखता रहता है। कुल दिन 4 मिनट बड़ा हो जाता है।"
+  },
+  {
+    "cat": "gs",
+    "sub": "light",
+    "qe": "Why do stars twinkle at night, while planets do not twinkle?",
+    "qh": "रात में तारे टिमटिमाते (Twinkle) हुए प्रतीत होते हैं, जबकि ग्रह नहीं टिमटिमाते। इसका मुख्य कारण क्या है?",
+    "o": [
+      "Planets have their own massive constant battery lights (ग्रहों के पास अपनी विशाल स्थिर लाइट होती है)",
+      "Stars are distant point sources whose light pathways fluctuate, while planets are closer extended sources that average out the variation (तारे बहुत दूर बिंदु स्रोत हैं जिनकी रोशनी का मार्ग बदलता है, जबकि ग्रह पास होने के कारण विस्तृत स्रोत हैं जो इस प्रभाव को शून्य कर देते हैं)",
+      "Stars are covered by cosmic dust storms (तारे ब्रह्मांडीय धूल के तूफानों से घिरे होते हैं)",
+      "Planets reflect light only in vacuum space (ग्रह केवल निर्वात में प्रकाश परावर्तित करते हैं)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> तारा बहुत दूर होने से 'बिंदु स्रोत' (point source) है, जिससे वायुमंडल की हलचल से प्रकाश की मात्रा कम-ज्यादा होने पर वह टिमटमाता है। ग्रह पास होने से 'विस्तृत स्रोत' (extended source) हैं, जिनका कुल प्रकाश औसत रूप से स्थिर रहता है।"
+  },
+  {
+    "cat": "gs",
+    "sub": "light",
+    "qe": "The scattering of a beam of light by colloidal particles suspended in a medium is scientifically known as:",
+    "qh": "किसी माध्यम में निलंबित कोलाइडल कणों (Colloidal particles) द्वारा प्रकाश की किरण का प्रकीर्णन (फैलाव) होना वैज्ञानिक रूप से क्या कहलाता है?",
+    "o": [
+      "Newton Effect (न्यूटन प्रभाव)",
+      "Tyndall Effect (टिंडल प्रभाव)",
+      "Prism Dispersion (प्रिज्म विक्षेपण)",
+      "Atmospheric Reflection (वायुमंडलीय परावर्तन)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> जब प्रकाश की किरण किसी कोलाइडल विलयन (जैसे धुएं से भरा कमरा, दूधिया पानी) से गुजरती है, तो बड़े कण प्रकाश को फैला देते हैं जिससे उसका मार्ग दिखने लगता है। इसे टिंडल प्रभाव (Tyndall Effect) कहते हैं।"
+  },
+  {
+    "cat": "gs",
+    "sub": "light",
+    "qe": "The color of scattered light depends significantly on the size of the scattering particles. Very fine (small) particles scatter mainly:",
+    "qh": "प्रकीर्णित प्रकाश का रंग प्रकीर्णन करने वाले कणों के आकार पर निर्भर करता है। वायुमंडल के अत्यंत सूक्ष्म (छोटे) कण मुख्य रूप से किस रंग को फैलाते हैं?",
+    "o": [
+      "Red light (लाल प्रकाश को)",
+      "Blue light (नीले प्रकाश को)",
+      "White light completely (पूर्णतः श्वेत प्रकाश को)",
+      "Yellow light core (पीले प्रकाश को)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> सूक्ष्म कणों का आकार छोटी तरंगदैर्ध्य (wavelength) वाले प्रकाश को रोकने के अनुकूल होता है। चूंकि नीले रंग की तरंगदैर्ध्य कम होती है, इसलिए सूक्ष्म कण मुख्य रूप से नीले (Blue) प्रकाश को प्रकीर्णित करते हैं।"
+  },
+  {
+    "cat": "gs",
+    "sub": "light",
+    "qe": "Why does the clear sky appear blue during a bright sunny day?",
+    "qh": "एक साफ धूप वाले दिन में आकाश का रंग नीला (Blue) क्यों दिखाई देता है?",
+    "o": [
+      "Due to the reflection of oceans on the sky dome (आकाश पर महासागरों के परावर्तन के कारण)",
+      "Fine air molecules scatter shorter wavelengths of blue light more dominantly than red light (हवा के बारीक अणु लाल प्रकाश की तुलना में कम तरंगदैर्ध्य वाले नीले प्रकाश को अधिक तीव्रता से चारों ओर फैला देते हैं)",
+      "Because oxygen gas is naturally blue in liquid state (क्योंकि ऑक्सीजन गैस नीली होती है)",
+      "Due to the presence of blue colored ozone shield (नीली ओजोन परत की उपस्थिति के कारण)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> सूर्य का प्रकाश जब वायुमंडल से गुजरता है, तो हवा के महीन अणु नीले प्रकाश को (कम तरंगदैर्ध्य के कारण) सबसे ज्यादा प्रकीर्णित करते हैं। यह फैला हुआ नीला प्रकाश हमारी आँखों में प्रवेश करता है और आकाश नीला दिखता है।"
+  },
+  {
+    "cat": "gs",
+    "sub": "light",
+    "qe": "If the Earth had no atmosphere, what would the sky look like to an observer, or to astronauts in deep space?",
+    "qh": "यदि पृथ्वी पर कोई वायुमंडल (Atmosphere) न होता, तो किसी प्रेक्षक या अंतरिक्ष यात्रियों को आकाश किस रंग का दिखाई देता?",
+    "o": [
+      "Bright white (चमकीला श्वेत)",
+      "Dark / Black (काला या अंधकारमय)",
+      "Deep purple (गहरा बैंगनी)",
+      "Light yellow (हल्का पीला)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> वायुमंडल न होने पर प्रकाश का प्रकीर्णन (Scattering) करने के लिए कोई कण उपलब्ध नहीं होगा। जब प्रकाश फैलेगा ही नहीं, तो आकाश पूरी तरह काला (Dark/Black) दिखाई देगा, जैसा अंतरिक्ष में दिखता है।"
+  },
+  {
+    "cat": "gs",
+    "sub": "light",
+    "qe": "Why do danger signal lights installed on top of buildings and traffic poles use red color?",
+    "qh": "भवनों के शीर्ष और ट्रैफिक सिग्नलों पर लगाए जाने वाले खतरे के संकेत (Danger signals) हमेशा लाल रंग के क्यों होते हैं?",
+    "o": [
+      "Red light attracts bugs at night (लाल रंग कीड़ों को आकर्षित करता है)",
+      "Red color has the longest wavelength and is least scattered by smoke or fog, making it visible from long distances (लाल रंग की तरंगदैर्ध्य सबसे अधिक होती है जिससे यह धुएं या कोहरे द्वारा सबसे कम प्रकीर्णित होता है और दूर से भी साफ दिखता है)",
+      "Red light travels faster than blue light in air vacuum (लाल रंग हवा में नीले से तेज चलता है)",
+      "It is cheaper to manufacture red filters (लाल रंग बनाना सस्ता होता है)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> लाल रंग की तरंगदैर्ध्य विज़िबल स्पेक्ट्रम में सर्वाधिक है। कम प्रकीर्णन होने के कारण कोहरे, धुएं या धूल में भी यह बिना फैले सीधे दूर तक जाता है, जिससे खतरा दूर से ही भांपा जा सकता है।"
+  },
+  {
+    "cat": "gs",
+    "sub": "light",
+    "qe": "Why does the Sun appear reddish or crimson during sunrise and sunset?",
+    "qh": "सूर्योदय और सूर्यास्त के समय सूर्य और उसके आस-पास का आकाश लाल (Reddish) क्यों प्रतीत होता है?",
+    "o": [
+      "The Sun physically cools down at the horizon edge (क्षितिज पर सूर्य ठंडा हो जाता है)",
+      "Light travels a longer distance through thick atmosphere, scattering away most blue light and leaving only red to reach our eyes (क्षितिज के पास प्रकाश को अधिक दूरी तय करनी पड़ती है, जिससे नीला प्रकाश रास्ते में ही बिखर जाता है और केवल कम प्रकीर्णित होने वाला लाल रंग हमारी आँखों तक पहुंचता है)",
+      "Due to the chemical reflection of volcanic dust clouds (ज्वालामुखी धूल के कारण)",
+      "The moon's shadow shifts the spectrum core (चंद्रमा की छाया स्पेक्ट्रम को बदल देती है)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> सुबह और शाम को सूर्य क्षितिज के पास होता है जहाँ से प्रकाश को हमारी आँखों तक आने के लिए वायुमंडल की मोटी परतों से लंबी दूरी तय करनी पड़ती है। इस लंबी यात्रा में नीला और कम तरंगदैर्ध्य का प्रकाश पूरी तरह बिखर जाता है, और केवल लाल प्रकाश बचता है।"
+  },
+  {
+    "cat": "gs",
+    "sub": "light",
+    "qe": "At noon, why does the Sun appear white rather than reddish?",
+    "qh": "दोपहर के समय सूर्य लाल दिखने के बजाय बिल्कुल श्वेत (White) क्यों प्रतीत होता है?",
+    "o": [
+      "Because the Sun stops emitting colors at noon (क्योंकि दोपहर में सूर्य रंग उत्सर्जित करना बंद कर देता है)",
+      "Light travels relatively shorter distance overhead, resulting in very little scattering of all colors (दोपहर में सूर्य ठीक सिर के ऊपर होता है जिससे प्रकाश को कम दूरी तय करनी पड़ती है और बहुत कम मात्रा में ही प्रकाश का प्रकीर्णन हो पाता है)",
+      "Due to high humidity levels absorbing the spectrum lines (उच्च आर्द्रता के कारण)",
+      "The Earth's speed slows down at noon core (दोपहर में पृथ्वी की गति धीमी हो जाती है)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> दोपहर में सूर्य सबसे कम दूरी पर (overhead) होता है। प्रकाश को वायुमंडल की कम मोटाई पार करनी पड़ती है, जिससे प्रकीर्णन न्यूनतम होता है और सभी रंग लगभग बिना बिखरे सीधे पहुँचते हैं, जिससे सूर्य सफेद दिखता है।"
+  },
+  {
+    "cat": "gs",
+    "sub": "light",
+    "qe": "If large particles like dust and water droplets are present in abundance in the air, the scattered light appears:",
+    "qh": "यदि वायुमंडल में धूल और पानी की बूंदों जैसे बड़े आकार के कण प्रचुर मात्रा में उपस्थित हों, तो प्रकीर्णित प्रकाश का रंग कैसा दिखाई देता है?",
+    "o": [
+      "Completely Blue (पूर्णतः नीला)",
+      "Completely White (पूर्णतः श्वेत)",
+      "Dark Orange (गहरा नारंगी)",
+      "Invisible transparent beam (अदृश्य पारदर्शी बीम)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> जब प्रकीर्णन करने वाले कणों का आकार प्रकाश की तरंगदैर्ध्य से बहुत बड़ा होता है (जैसे बादलों में पानी की बूंदें), तो वे सभी रंगों को समान रूप से प्रकीर्णित (फैला) करते हैं। सभी रंगों के समान रूप से मिलने पर प्रकाश श्वेत (White) दिखता है।"
   }
 ]
