@@ -25226,5 +25226,495 @@
     ],
     "a": 1,
     "e": "<b>Explanation:</b> In classical mechanics, if a string has a completely negligible mass (massless approximation), the internal restoring tension vector $T$ stays completely uniform and constant across every single point along its entire continuous length."
+  },
+  {
+    "cat": "gs",
+    "sub": "motion",
+    "qe": "When an external shear stress is applied to a fluid system at rest, how does its mechanical response differ fundamentally from that of a solid, and what is the scale of this property?",
+    "qh": "जब विराम अवस्था में किसी तरल निकाय (fluid system) पर एक बाहरी अपरूपण प्रतिबल (shear stress) लगाया जाता है, तो इसकी यांत्रिक प्रतिक्रिया एक ठोस से किस प्रकार भिन्न होती है, और इस गुण का पैमाना क्या है?",
+    "o": [
+      "Fluids store the shear stress as elastic potential energy symmetrically.",
+      "Fluids offer zero resistance to shear strain over time, and their shearing stress is about a million times smaller than that of solids.",
+      "Fluids undergo instantaneous volumetric expansion matching the stress vector.",
+      "Fluids execute transverse wave resonance to maintain their original shape boundary."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> The text explicitly states that fluids offer very little resistance to shear stress. Their shape changes continuously with time by the application of a very small shear stress, and their shearing stress is about a million times smaller than that of solids."
+  },
+  {
+    "cat": "gs",
+    "sub": "motion",
+    "qe": "When an object is completely submerged in a fluid at rest, the fluid exerts a macroscopic force on the object's surface. What strict condition governs the orientation of this force vector, and why?",
+    "qh": "जब कोई वस्तु विराम अवस्था में किसी तरल में पूरी तरह से डूब जाती है, तो तरल वस्तु की सतह पर एक मैक्रोस्कोपिक बल लगाता है। इस बल सदिश (force vector) के अभिविन्यास को कौन सा सख्त प्रतिबंध संचालित करता है, और क्यों?",
+    "o": [
+      "The force is always parallel to the surface plane due to Newton's second law limits.",
+      "The force is always normal (perpendicular) to the object's surface because a fluid at rest cannot sustain any parallel force component without flowing.",
+      "The force acts at a fluctuating acute angle of $45^\\circ$ to clear the boundary layer friction.",
+      "The force vector points exclusively downward towards the earth's core matrix."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> If there were a component of force parallel to the surface, by Newton's third law, the fluid would experience an equal and opposite parallel force causing it to flow. Since the fluid is explicitly defined to be at rest, no parallel component can exist, meaning the force must be strictly normal to the surface."
+  },
+  {
+    "cat": "gs",
+    "sub": "motion",
+    "qe": "Pressure is defined under fluid mechanics in a limiting sense as the normal force component per unit area. What is the true tensor classification of pressure, and what false impression does its basic definition often generate?",
+    "qh": "तरल यांत्रिकी के अंतर्गत दाब (pressure) को प्रति इकाई क्षेत्रफल पर लगने वाले सामान्य बल घटक के रूप में एक सीमित अर्थ में परिभाषित किया गया है। दाब का वास्तविक वर्गीकरण क्या है, और इसकी मूल परिभाषा अक्सर क्या गलत धारणा पैदा करती है?",
+    "o": [
+      "It is a vector quantity because force is in the numerator.",
+      "It is a scalar quantity, although the phrase 'force per unit area' creates a false impression that it is a vector; it represents normal force component magnitude, not a vector direction.",
+      "It is a non-differentiable complex vector mapping the spatial coordinate kinks.",
+      "It is a localized localized tension parameter pointing strictly downward."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Pressure is a scalar quantity. The definition 'force per unit area' often creates a false impression that pressure is a vector. The force in the numerator is strictly the magnitude of the component of force normal to the area under consideration, meaning no vector direction can be assigned to pressure."
+  },
+  {
+    "cat": "gs",
+    "sub": "motion",
+    "qe": "When evaluating the absolute mass density ($\\rho$) of different phases of matter under varying external pressures, what counter-intuitive behavioral contrast is observed between liquids and gases?",
+    "qh": "विभिन्न बाहरी दाबों के तहत पदार्थ के विभिन्न चरणों के पूर्ण द्रव्यमान घनत्व (\\rho) का मूल्यांकन करते समय, द्रवों और गैसों के बीच कौन सा विरोधाभासी व्यवहार देखा जाता है?",
+    "o": [
+      "Liquids vary their densities exponentially with pressure changes while gases stay constant.",
+      "A liquid is largely incompressible, rendering its density nearly constant at all pressures, whereas gases exhibit a large variation in densities with pressure.",
+      "Both maintain identical, constant density values to satisfy mass conservation rules.",
+      "The density of a liquid drops to zero at high pressure due to the elastic energy breakdown."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Liquids are largely incompressible, meaning external pressure changes cause negligible changes in their volume, rendering their density nearly constant. Conversely, gases are highly compressible and show massive variations in density as pressure changes."
+  },
+  {
+    "cat": "gs",
+    "sub": "motion",
+    "qe": "Blaise Pascal formulated a fundamental law regarding the distribution of hydrostatic pressure inside a fluid at rest. According to Pascal's law, pressure is identical at all points if they are:",
+    "qh": "ब्लेज पास्कल ने विराम अवस्था में एक तरल के भीतर द्रवस्थैतिक दाब (hydrostatic pressure) के वितरण के संबंध में एक मौलिक नियम प्रतिपादित किया था। पास्कल के नियम के अनुसार, दाब सभी बिंदुओं पर समान होता है यदि वे:",
+    "o": [
+      "Aligned parallel along the vertical axis of gravity propagation.",
+      "Located at the exact same horizontal level (same height/depth) in a fluid at rest.",
+      "Confined to a container with perfectly symmetrical boundary walls.",
+      "Moving at a constant critical velocity through a non-viscous pipe configuration."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Pascal's law for a fluid at rest states that the hydrostatic pressure is identical at all points that lie at the same horizontal height or depth level, independent of the orientation or shape of the boundary container."
+  },
+  {
+    "cat": "gs",
+    "sub": "motion",
+    "qe": "Consider a fluid element in the form of a horizontal bar of uniform cross-section contained inside a liquid at rest. If the pressures at the two ends of this horizontal bar were not equal, what would occur?",
+    "qh": "विराम अवस्था में किसी द्रव के भीतर समान अनुप्रस्थ-काट (uniform cross-section) की एक क्षैतिज पट्टी के रूप में एक तरल तत्व पर विचार करें। यदि इस क्षैतिज पट्टी के दोनों सिरों पर दाब समान न हो, तो क्या होगा?",
+    "o": [
+      "The bar would undergo spontaneous mechanical polarization without spatial translation.",
+      "The fluid would immediately flow due to a net horizontal force, violating the condition of being a fluid at rest.",
+      "The absolute mass density would drop to zero at the low-pressure node.",
+      "The spring constant of the boundary layers would absorb the pressure difference symmetrically."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Since the fluid is at rest, every horizontal element must be in static equilibrium. If the horizontal forces (pressures) at the two ends were unbalanced, a net force would act on the fluid element, causing it to flow parallel to the plane. Thus, in the absence of flow, pressure must be identical everywhere in a horizontal plane."
+  },
+  {
+    "cat": "gs",
+    "sub": "motion",
+    "qe": "The mathematical expression for hydrostatic pressure difference between two points separated by a vertical distance $h$ is given as $P_2 - P_1 = \\rho gh$. What specific underlying condition must be strictly satisfied for this linear relation to hold true?",
+    "qh": "लंबवत दूरी $h$ द्वारा अलग किए गए दो बिंदुओं के बीच द्रवस्थैतिक दाब अंतर का गणितीय व्यंजक $P_2 - P_1 = \\rho gh$ दिया गया है। इस रैखिक संबंध को कड़ाई से सत्य होने के लिए किस विशिष्ट अंतर्निहित शर्त को पूरा किया जाना चाहिए?",
+    "o": [
+      "The fluid must be highly compressible with variable spatial velocities.",
+      "The fluid must be completely incompressible so that its mass density ($\\rho$) stays uniform and constant with height.",
+      "The total cross-sectional area of the liquid column must be infinitely large.",
+      "The container walls must be oriented at a fixed acute angle of $45^\\circ$ relative to gravity."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> The expression $P_2 - P_1 = \\rho gh$ assumes that the mass density $\\rho$ of the fluid column is uniform and constant throughout the vertical distance. This holds true for liquids, which are largely incompressible, but fails for columns of compressible gases where density varies with height."
+  },
+  {
+    "cat": "gs",
+    "sub": "motion",
+    "qe": "The absolute pressure expression at a depth $h$ below the open surface of a liquid is $P = P_a + \\rho gh$. This equation demonstrates that the gauge pressure ($P - P_a$) depends strictly on:",
+    "qh": "किसी द्रव की खुली सतह से नीचे $h$ गहराई पर पूर्ण दाब का व्यंजक $P = P_a + \\rho gh$ है। यह समीकरण दर्शाता है कि गेज दाब ($P - P_a$) कड़ाई से किस पर निर्भर करता है?",
+    "o": [
+      "The total cross-sectional base area of the container vessel.",
+      "The geometric shape and orientation profile of the bounding walls.",
+      "The vertical height of the fluid column, fluid density, and acceleration due to gravity.",
+      "The total mass of the liquid contained inside the reservoir matrix."
+    ],
+    "a": 2,
+    "e": "<b>Explanation:</b> The area of the cylinder or the shape of the container does not appear in the expression for gauge or absolute pressure. The hydrostatic pressure difference depends strictly on the vertical distance $h$, fluid mass density $\\rho$, and the local acceleration due to gravity $g$."
+  },
+  {
+    "cat": "gs",
+    "sub": "motion",
+    "qe": "The 'Hydrostatic Paradox' describes a counter-intuitive observation where three vessels of radically different shapes connected at the bottom hold different amounts of water but maintain an identical water level height. This occurs because:",
+    "qh": "'द्रवस्थैतिक विरोधाभास' (Hydrostatic Paradox) एक विरोधाभासी अवलोकन का वर्णन करता है जहाँ नीचे जुड़े हुए बिल्कुल अलग आकारों के तीन बर्तन पानी की अलग-अलग मात्रा रखते हैं लेकिन एक समान पानी के स्तर की ऊँचाई बनाए रखते हैं। ऐसा इसलिए होता है क्योंकि:",
+    "o": [
+      "The surface tension forces pull the liquid columns upward symmetrically.",
+      "The liquid pressure at the bottom depends strictly on the height of the fluid column and not on the shape or cross-sectional area of the vessel.",
+      "The atmospheric pressure vanishes inside asymmetrical boundary walls.",
+      "The mass density of water changes as a function of the local container volume."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Liquid pressure at the baseline is a function of depth ($h$) and density alone. Since all three interconnected vessels share a common horizontal pipe at the bottom, water flows until the pressure beneath each column is identical, which requires the fluid columns to reach the exact same vertical height, regardless of vessel shape."
+  },
+  {
+    "cat": "gs",
+    "sub": "motion",
+    "qe": "Evangelista Torricelli devised the first mercury barometer to measure atmospheric pressure ($P_a$). In his configuration, the space inside the inverted glass tube located above the column of mercury contains:",
+    "qh": "इवेंजेलिस्टा टॉरीसेली ने वायुमंडलीय दाब ($P_a$) को मापने के लिए पहले पारा बैरोमीटर का आविष्कार किया था। उनके विन्यास में, पारे के स्तंभ के ऊपर स्थित उल्टी कांच की नली के भीतर के स्थान में क्या होता है?",
+    "o": [
+      "Compressed atmospheric air at a standard pressure of 1 atm.",
+      "Only mercury vapour whose pressure is so small that it may be safely neglected, creating a near vacuum at the top.",
+      "Pure liquid nitrogen gas acting as a thermal stabilizer matrix.",
+      "A high-density oil layer preventing structural vacuum leaks."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> The closed space above the mercury column in Torricelli's barometer contains only mercury vapour. At room temperature, its vapour pressure is infinitesimally small and can be completely neglected, rendering the pressure at the top point $A \\approx 0$ (Torricellian vacuum)."
+  },
+  {
+    "cat": "gs",
+    "sub": "motion",
+    "qe": "Another form of Pascal's law states that external pressure applied on any part of an enclosed fluid is transmitted undiminished and equally in all directions. Which daily life engineering device utilizes this principle as its baseline 'mechanical advantage'?",
+    "qh": "पास्कल के नियम का दूसरा रूप बताता है कि एक बंद तरल (enclosed fluid) के किसी भी हिस्से पर लगाया गया बाहरी दाब पूरे तरल और बर्तन की दीवारों पर बिना कम हुए और समान रूप से संचारित होता है। कौन सा दैनिक जीवन इंजीनियरिंग उपकरण इस सिद्धांत का अपने मुख्य 'यांत्रिक लाभ' (mechanical advantage) के रूप में उपयोग करता है?",
+    "o": [
+      "A mercury barometer tube system.",
+      "A hydraulic lift and hydraulic brakes system.",
+      "An open tube fluid manometer configuration.",
+      "A single-slit aerodynamic aerofoil structure."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Devices such as hydraulic lifts and hydraulic brakes utilize Pascal's law of pressure transmission. By exerting a small force $F_1$ on a small area $A_1$, the generated pressure $P$ is transmitted undiminished to a larger area $A_2$, creating a massive upward force $F_2 = P \\times A_2$."
+  },
+  {
+    "cat": "gs",
+    "sub": "motion",
+    "qe": "In fluid dynamics, the flow of a fluid is scientifically defined as 'steady' or 'streamline' if, at any given point in space:",
+    "qh": "तरल गतिकी (fluid dynamics) में, किसी तरल के प्रवाह को वैज्ञानिक रूप से 'स्थिर' (steady) या 'धारारेखीय' (streamline) परिभाषित किया जाता है यदि, समष्टि में किसी भी दिए गए बिंदु पर:",
+    "o": [
+      "The velocities of all fluid particles across the entire pipe are completely identical.",
+      "The velocity of each passing fluid particle at that specific point remains constant in time.",
+      "The fluid particles stop accelerating horizontally along the boundary limits.",
+      "The total kinetic energy drops to zero to maintain a stationary flow map."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Steady flow means that at any fixed point in space, the velocity of every fluid particle passing that point remains constant over time. It does not mean velocities at different points in space are identical; a single particle's velocity can change as it moves from one coordinate to another."
+  },
+  {
+    "cat": "gs",
+    "sub": "motion",
+    "qe": "A streamline is defined as a curve whose tangent at any point is in the direction of fluid velocity at that point. Why is it physically impossible for two streamlines to cross each other in a steady flow?",
+    "qh": "एक धारारेखा (streamline) को एक ऐसे वक्र के रूप में परिभाषित किया जाता है जिसकी किसी भी बिंदु पर स्पर्श रेखा (tangent) उस बिंदु पर तरल के वेग की दिशा में होती है। एक स्थिर प्रवाह में दो धारारेखाओं का एक-दूसरे को काटना भौतिक रूप से क्यों असंभव है?",
+    "o": [
+      "Because the fluid mass would turn negative at the intersection coordinate.",
+      "Because if they crossed, an oncoming fluid particle could move in two different directions at the intersection point, destroying the condition of steady flow.",
+      "Because the coefficient of viscosity would become infinite at the sharp kink point.",
+      "Because the local hydrostatic pressure would undergo spontaneous volumetric collapse."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> If two streamlines intersected, it would mean that at the point of intersection, a fluid particle would have two alternative directions of velocity simultaneously. This would mean the velocity at that fixed point is not unique or constant in time, violating the fundamental definition of steady flow."
+  },
+  {
+    "cat": "gs",
+    "sub": "motion",
+    "qe": "The equation of continuity ($Av = \\text{constant}$) for fluid flow through a pipe is a direct mathematical statement of which conservation law?",
+    "qh": "किसी नली से तरल प्रवाह के लिए सांतत्य समीकरण ($Av = \\text{constant}$) किस संरक्षण नियम का सीधा गणितीय कथन है?",
+    "o": [
+      "Law of conservation of linear momentum.",
+      "Statement of conservation of mass in the flow of incompressible fluids.",
+      "Law of conservation of total mechanical energy.",
+      "Statement of conservation of angular vector orientation."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> The equation of continuity ($A_1v_1 = A_2v_2$) is derived from the principle that for a steady flow of an incompressible fluid, the mass of liquid flowing into a pipe section in time $\\Delta t$ must equal the mass flowing out in that same interval. It is a statement of conservation of mass."
+  },
+  {
+    "cat": "gs",
+    "sub": "motion",
+    "qe": "Based on the equation of continuity, what occurs to the velocity of fluid particles at the narrower portions of a pipe where the streamlines are closely spaced?",
+    "qh": "सांतत्य समीकरण के आधार पर, किसी नली के संकीर्ण भागों (narrower portions) में जहाँ धारारेखाएँ पास-पास होती हैं, तरल कणों के वेग का क्या होता है?",
+    "o": [
+      "The velocity drops to zero due to boundary layer friction restrictions.",
+      "The velocity increases inversely relative to the cross-sectional area contraction.",
+      "The velocity stays completely invariant while the fluid density drops.",
+      "The velocity vector undergoes an abrupt directional phase shift of $180^\\circ$."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Since $Av = \\text{constant}$, the cross-sectional area $A$ and fluid velocity $v$ are inversely proportional. At narrower portions where the pipe constricts ($A$ decreases) and streamlines get crowded, the fluid velocity must increase proportionally."
+  },
+  {
+    "cat": "gs",
+    "sub": "light",
+    "qe": "When a steady fluid flow exceeds a certain limiting speed, it loses its steadiness and transforms into a turbulent flow. What is this limiting speed parameter called?",
+    "qh": "जब एक स्थिर तरल प्रवाह एक निश्चित सीमित गति से अधिक हो जाता है, तो यह अपनी स्थिरता खो देता है और एक विक्षुब्ध प्रवाह (turbulent flow) में बदल जाता है। इस सीमित गति पैरामीटर को क्या कहा जाता है?",
+    "o": [
+      "Terminal velocity ($v_t$)",
+      "Critical speed",
+      "Efflux velocity",
+      "Mach number limit"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> The text explicitly defines that the steady or streamline flow of a fluid is maintained at low speeds. Beyond a limiting value called the critical speed, the flow loses its steadiness, becomes chaotic, and transforms into turbulent flow."
+  },
+  {
+    "cat": "gs",
+    "sub": "light",
+    "qe": "Bernoulli's equation ($P + \\frac{1}{2}\\rho v^2 + \\rho gh = \\text{constant}$) relates pressure, velocity, and height along a streamline. This principle is fundamentally an application of:",
+    "qh": "बर्नूली का समीकरण ($P + \\frac{1}{2}\\rho v^2 + \\rho gh = \\text{constant}$) एक धारारेखा के अनुदिश दाब, वेग और ऊँचाई को जोड़ता है। यह सिद्धांत मूल रूप से किसका एक अनुप्रयोग है?",
+    "o": [
+      "The law of conservation of linear momentum for moving particle grids.",
+      "The principle of conservation of energy applied to non-viscous, incompressible fluid motion in a steady state.",
+      "The second law of thermodynamics mapping entropy variations.",
+      "The law of universal gravitational stress mapping the fluid boundaries."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Bernoulli's principle is a mathematical manifestation of the law of conservation of energy applied to the steady flow of an ideal fluid—one that is strictly incompressible and has zero internal friction (non-viscous)."
+  },
+  {
+    "cat": "gs",
+    "sub": "light",
+    "qe": "Bernoulli's theorem explicitly neglects internal fluid friction. In any realistic fluid flow, some mechanical energy is lost due to layers exerting frictional forces on each other. What is this property called, and into what energy form is the lost kinetic energy converted?",
+    "qh": "बर्नूली की प्रमेय विशेष रूप से आंतरिक तरल घर्षण की उपेक्षा करती है। किसी भी वास्तविक तरल प्रवाह में, परतों द्वारा एक-दूसरे पर घर्षण बल लगाने के कारण कुछ यांत्रिक ऊर्जा नष्ट हो जाती है। इस गुण को क्या कहा जाता है, और नष्ट हुई गतिज ऊर्जा किस ऊर्जा रूप में बदल जाती है?",
+    "o": [
+      "Surface tension, converted into elastic potential energy layers.",
+      "Viscosity, and the lost kinetic energy gets converted into heat energy.",
+      "Capillarity, converted into gravitational field torque vectors.",
+      "Turbulence, converted into localized quantum mass fields."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Realistic fluids possess internal friction between their layers known as viscosity. When layers slide past each other at different velocities, viscous forces cause energy dissipation, converting the lost mechanical kinetic energy directly into non-conservative heat energy."
+  },
+  {
+    "cat": "gs",
+    "sub": "light",
+    "qe": "According to Torricelli's Law of efflux, the speed of fluid outflow from a small hole in an open tank is identical to the velocity achieved by:",
+    "qh": "टॉरीसेली के बहिर्प्रवाह (efflux) के नियम के अनुसार, एक खुले टैंक में एक छोटे से छेद से तरल के बाहर निकलने की गति किसके द्वारा प्राप्त वेग के बिल्कुल समान होती है?",
+    "o": [
+      "A transverse electromagnetic wave propagating in free space vacuum.",
+      "A freely falling body dropping under gravity from the same fluid surface height.",
+      "A laminar layer sliding over a flat table substrate under high shear stress.",
+      "A spinning sphere executing Magnus effect dynamic lift vectors."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Torricelli discovered that the speed of efflux from an open tank hole at a depth $h$ below the fluid surface is given by $v = \\sqrt{2gh}$, which is identical to the speed achieved by a mechanical body falling freely under gravity from rest through a vertical distance $h$."
+  },
+  {
+    "cat": "gs",
+    "sub": "light",
+    "qe": "When a fast-moving cricket or tennis ball spins through air, it deviates from its normal parabolic trajectory. What is this dynamic lift phenomenon called, and what is its underlying scientific cause?",
+    "qh": "जब एक तेजी से चलती हुई क्रिकेट या टेनिस गेंद हवा में स्पिन (घूर्णन) करती है, तो वह अपने सामान्य परवलयिक प्रक्षेपवक्र से विचलित हो जाती है। इस गतिशील लिफ्ट (dynamic lift) परिघटना को क्या कहा जाता है, और इसका अंतर्निहित वैज्ञानिक कारण क्या है?",
+    "o": [
+      "Tyndall effect, caused by dust particle light scattering channels.",
+      "Magnus effect, caused by a velocity and pressure difference between the upper and lower faces due to air being dragged by the spin.",
+      "Stokes' drag vector, caused by radius square acceleration caps.",
+      "Pascal shift, caused by undiminished pressure transmission tensors."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> A spinning ball drags air along with it. This drag increases air velocity on one side (where spin aligns with wind direction) and decreases it on the other. By Bernoulli's principle, this velocity asymmetry creates a pressure difference across the ball faces, generating a net lifting force called the Magnus effect."
+  },
+  {
+    "cat": "gs",
+    "sub": "motion",
+    "qe": "The cross-section of an airplane wing is shaped like an aerofoil. When moving horizontally against the wind, how does this geometric shape generate an upward dynamic lift to balance the aircraft's weight?",
+    "qh": "हवाई जहाज के पंख का अनुप्रस्थ-काट एक एयरोफॉइल (aerofoil) जैसा होता है। जब यह हवा के विरुद्ध क्षैतिज रूप से गति करता है, तो यह ज्यामितीय आकार हवाई जहाज के वजन को संतुलित करने के लिए ऊपर की ओर गतिशील लिफ्ट (dynamic lift) कैसे उत्पन्न करता है?",
+    "o": [
+      "The wing edges compress the air matrix to create magnetic buoyancy.",
+      "The shape causes streamlines to crowd together more above the wing than below it, making flow speed higher on top and reducing pressure there relative to the bottom face.",
+      "The wing surface blocks the gravitational field photons locally.",
+      "The aerofoil geometry creates a uniform vacuum bubble beneath the chassis plane."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> The aerofoil shape forces air streamlines to crowd together on the upper curved surface. According to the equation of continuity and Bernoulli's principle, the higher flow speed on top creates a low-pressure region relative to the bottom face, generating a net upward force (dynamic lift)."
+  },
+  {
+    "cat": "gs",
+    "sub": "motion",
+    "qe": "When a fluid is enclosed between two plates, the layer in contact with the fixed bottom plate is stationary, while the velocities of upper layers increase uniformly toward the top plate. This orderly type of fluid flow is known as:",
+    "qh": "जब कोई तरल दो पट्टियों के बीच बंद होता है, तो स्थिर निचली पट्टी के संपर्क में रहने वाली परत स्थिर होती है, जबकि ऊपरी परतों के वेग ऊपर की पट्टी की ओर समान रूप से बढ़ते हैं। इस व्यवस्थित प्रकार के तरल प्रवाह को क्या कहा जाता है?",
+    "o": [
+      "Turbulent eddy flow (विक्षुब्ध प्रवाह)",
+      "Laminar flow (पटलीय या धारारेखीय प्रवाह)",
+      "Rotational whirlpool rapid (घूर्णी भंवर प्रवाह)",
+      "Viscous singularity field (श्यान विलक्षणता प्रवाह)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> When fluid layers slide over one another smoothly like pages of a book, with a uniform velocity gradient from zero at the fixed wall to a maximum at the moving boundary, the flow is defined as laminar."
+  },
+  {
+    "cat": "gs",
+    "sub": "motion",
+    "qe": "Unlike a solid where shear stress depends directly on the shear strain, the shear stress in a flowing fluid is experimentally found to depend on the:",
+    "qh": "एक ठोस के विपरीत जहाँ अपरूपण प्रतिबल (shear stress) सीधे अपरूपण विकृति (shear strain) पर निर्भर करता है, एक बहते हुए तरल में अपरूपण प्रतिबल प्रयोगात्मक रूप से किस पर निर्भर पाया जाता है?",
+    "o": [
+      "Absolute volume parameter of the fluid vessel core.",
+      "Time rate of shearing strain or 'strain rate' ($\\frac{v}{l}$).",
+      "Total potential energy per unit volume grid constants.",
+      "Square of the contact surface area layout dimensions."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Fluids cannot sustain static shear strain. When a horizontal force is applied, the strain grows continuously with time. Thus, fluid shear stress depends on the velocity gradient or time rate of shearing strain (strain rate $\\frac{v}{l}$), and the ratio defines the coefficient of viscosity $\\eta$."
+  },
+  {
+    "cat": "gs",
+    "sub": "motion",
+    "qe": "What is the primary SI unit of the coefficient of viscosity ($\\eta$), and what are its dimensions?",
+    "qh": "श्यानता गुणांक (coefficient of viscosity, $\\eta$) का मुख्य एसआई (SI) मात्रक क्या है, और इसकी विमाएँ (dimensions) क्या हैं?",
+    "o": [
+      "Pascal per meter ($\text{Pa/m}$), with dimensions of $[\\text{M L T}^{-2}]$.",
+      "Poiseuille (Pl) or $\\text{Pa s}$, with dimensions of $[\\text{M L}^{-1}\\text{ T}^{-1}]$.",
+      "Newton meter per second, with dimensions matching kinetic energy.",
+      "Dimensionless scalar constant mapping the fluid layer limits."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> The SI unit of viscosity is Poiseuille (Pl), equivalent to $\\text{N s m}^{-2}$ or $\\text{Pa s}$. Its dimensional formula is derived as $[\\text{M L}^{-1}\\text{ T}^{-1}]$ from the stress-to-strain-rate ratio."
+  },
+  {
+    "cat": "gs",
+    "sub": "motion",
+    "qe": "Sir George G. Stokes enunciated a law defining the viscous retarding drag force ($F$) acting on a spherical body falling through a fluid matrix. According to Stokes' law, this force is directly proportional to:",
+    "qh": "सर जॉर्ज जी. स्टोक्स ने एक श्यान माध्यम से गिरते हुए एक गोलीय पिंड पर कार्य करने वाले श्यान मंदक खिंचाव बल (viscous retarding drag force, $F$) को परिभाषित करने वाला एक नियम प्रतिपादित किया था। स्टोक्स के नियम के अनुसार, यह बल सीधे किसके समानुपाती होता है?",
+    "o": [
+      "The square of the acceleration due to gravity column.",
+      "The viscosity of the fluid, the radius of the sphere, and the velocity of the object ($F = 6\\pi\\eta av$).",
+      "The horizontal surface cross-sectional area of the fluid reservoir.",
+      "The inverse cube of the distance separating the falling layers."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Stokes' law states that a spherical body of radius $a$ moving with velocity $v$ through a fluid of viscosity $\\eta$ experiences an opposing viscous drag force expressed mathematically as $F = 6\\pi\\eta av$."
+  },
+  {
+    "cat": "gs",
+    "sub": "motion",
+    "qe": "When a raindrop falls through air, it initially accelerates due to gravity. Eventually, it achieves a constant, non-zero 'terminal velocity' ($v_t$) and stops accelerating. This equilibrium state is reached when:",
+    "qh": "जब बारिश की एक बूंद हवा से होकर गिरती है, तो शुरुआत में गुरुत्वाकर्षण के कारण वह त्वरित होती है। अंततः, वह एक नियत, गैर-शून्य 'अंतिम वेग' (terminal velocity, $v_t$) प्राप्त कर लेती है और उसका त्वरण शून्य हो जाता है। यह संतुलन स्थिति तब प्राप्त होती है जब:",
+    "o": [
+      "The mass density of the raindrop drops exactly to zero.",
+      "The opposing viscous drag force plus the buoyant force becomes exactly equal to the downward force due to gravity.",
+      "The air resistance pushes the drop into a horizontal parabolic flight track.",
+      "The elastic potential energy of the air layers completely undergoes thermal melting."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> As the velocity of the falling raindrop increases, the upward viscous drag force also increases linearly according to Stokes' law. When the sum of this upward viscous force and the buoyant force perfectly matches the downward weight of the drop, the net external force becomes zero, resulting in a constant terminal velocity."
+  },
+  {
+    "cat": "gs",
+    "sub": "motion",
+    "qe": "According to the derived expression, the terminal velocity ($v_t$) of a spherical sphere descending through a viscous medium depends on which geometric aspect of the sphere?",
+    "qh": "व्युत्पन्न व्यंजक के अनुसार, एक श्यान माध्यम से नीचे गिरते हुए एक गोलीय पिंड का अंतिम वेग ($v_t$) पिंड के किस ज्यामितीय पहलू पर निर्भर करता है?",
+    "o": [
+      "It depends linearly on the circumference of the boundary circle.",
+      "It depends directly on the square of the radius of the sphere ($v_t \\propto a^2$).",
+      "It is completely independent of the dimensions or size of the falling sphere.",
+      "It varies as an inverse function of the total surface area layout."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> The equation for terminal velocity is $v_t = \\frac{2a^2(\\rho-\\sigma)g}{9\\eta}$. This shows that the terminal velocity is directly proportional to the square of the radius ($a^2$) of the falling sphere and inversely proportional to the viscosity."
+  },
+  {
+    "cat": "gs",
+    "sub": "motion",
+    "qe": "Surface tension is a distinctive phenomenon observed in fluids. Why is surface tension concerned exclusively with liquid phases, failing to manifest inside gases?",
+    "qh": "पृष्ठ तनाव (Surface tension) तरल पदार्थों में देखा जाने वाला एक विशिष्ट लक्षण है। पृष्ठ तनाव का संबंध विशेष रूप से केवल द्रव चरणों (liquid phases) से क्यों है, और यह गैसों के भीतर क्यों प्रदर्शित नहीं होता है?",
+    "o": [
+      "Because gas molecules have a negative massRest value.",
+      "Because liquids acquire a free surface when poured in a container due to fixed volume, whereas gases do not possess free surfaces as they fill the entire volume.",
+      "Because the surface tension constant of all gases is strictly an imaginary number.",
+      "Because gas molecules cannot undergo intermolecular attraction forces."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Surface tension is a phenomenon fundamentally linked to the existence of a free surface interface. Because liquids have a definite volume but no fixed shape, they acquire a free boundary surface when poured into a vessel. Gases expand to fill any container completely and thus cannot possess a free surface."
+  },
+  {
+    "cat": "gs",
+    "sub": "motion",
+    "qe": "What is the baseline molecular origin of surface energy and surface tension inside a liquid medium?",
+    "qh": "किसी द्रव माध्यम के भीतर कड़ाई से पृष्ठ ऊर्जा (surface energy) और पृष्ठ तनाव का मूल आणविक कारण क्या होता है?",
+    "o": [
+      "The radioactive decay of unstable isotopes at the top surface layers.",
+      "Molecules on the liquid surface have excess potential energy because they are surrounded by fewer attracting liquid molecules compared to molecules in the interior bulk.",
+      "The sudden volumetric expansion of fluid molecules near the solid bounding walls.",
+      "The presence of a uniform electrostatic repulsion matrix across the meniscus plane."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> A molecule inside the bulk liquid is attracted uniformly from all sides by surrounding molecules, keeping its average potential energy low (negative). A molecule on the surface is only surrounded by liquid molecules on its lower half. It experiences a net inward pull, giving it excess potential energy compared to the interior. The liquid minimizes this area to achieve low energy."
+  },
+  {
+    "cat": "gs",
+    "sub": "motion",
+    "qe": "When stretching a liquid film enclosed in a wire frame with a movable bar, work is done against an internal force. Surface tension ($S$) can be mathematically defined from this configuration as:",
+    "qh": "जब एक चल पट्टी (movable bar) वाले तार के फ्रेम में बंद एक द्रव की फिल्म को फैलाया जाता है, तो एक आंतरिक बल के विरुद्ध कार्य किया जाता है। इस विन्यास से पृष्ठ तनाव ($S$) को गणितीय रूप से कैसे परिभाषित किया जा सकता है?",
+    "o": [
+      "The product of applied force and the total surface area matrix.",
+      "The surface energy per unit area of the liquid interface, which is also equal to the force per unit length ($S = \\frac{F}{2l}$ because a film has two surfaces).",
+      "The ratio of viscous drag to the strain rate parameter across the interface.",
+      "A dimensionless scalar constant mapping the critical speed of the moving bar."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Surface tension $S$ is equal to the extra surface energy per unit area. For a liquid film, there are two separate liquid-air interfaces (two sides). Thus, the change in area is $2dl$. Work done $Fd = S(2dl)$, which gives the force per unit length magnitude as $S = \\frac{F}{2l}$."
+  },
+  {
+    "cat": "gs",
+    "sub": "motion",
+    "qe": "How does the coefficient of viscosity ($\\eta$) and the magnitude of surface tension ($S$) of a typical liquid change as its absolute temperature increases?",
+    "qh": "किसी विशिष्ट द्रव के तापमान में वृद्धि होने पर उसके श्यानता गुणांक (\\eta) और पृष्ठ तनाव (\\s) के मान में क्या परिवर्तन होता है?",
+    "o": [
+      "Both increase exponentially as molecules gain more kinetic energy.",
+      "Both the coefficient of viscosity and the surface tension of a liquid fall or decrease with an increase in temperature.",
+      "Viscosity increases while the surface tension falls to absolute zero.",
+      "They remain completely constant because they are intrinsic constants of the material phase."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> As temperature rises, thermal agitation increases, making atoms more mobile, which causes the coefficient of viscosity $\\eta$ to fall. Similarly, increased molecular motion weakens intermolecular attraction forces at the interface, causing the surface tension $S$ to decrease with temperature."
+  },
+  {
+    "cat": "gs",
+    "sub": "motion",
+    "qe": "The angle between the tangent to the liquid surface at the point of contact and the solid surface inside the liquid is defined as the angle of contact ($\\theta$). What physical condition nirdharit karta hai (determines) whether a liquid will form droplets or spread over a flat solid plane?",
+    "qh": "संपर्क बिंदु पर द्रव की सतह की स्पर्श रेखा और द्रव के भीतर ठोस की सतह के बीच के कोण को संपर्क कोण (\\theta) के रूप में परिभाषित किया जाता है। कौन सी भौतिक स्थिति यह निर्धारित करती है कि कोई द्रव बूंदें बनाएगा या एक समतल ठोस तल पर फैल जाएगा?",
+    "o": [
+      "The absolute mass density of the solid substrate matrix.",
+      "The value of $\\theta$; an acute angle causes spreading (wetting), while an obtuse angle causes droplet formation (non-wetting).",
+      "The total height of the liquid column open to the atmosphere.",
+      "The critical velocity of fluid particles along the baseline interface plane."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> If $\\theta$ is acute ($< 90^\\circ$), liquid molecules are strongly attracted to solid molecules (wetting agent), and the liquid spreads (e.g., water on glass). If $\\theta$ is obtuse ($> 90^\\circ$), liquid molecules attract each other strongly and solid weakly (non-wetting), causing droplet formation (e.g., water on lotus leaf, or mercury on glass)."
+  },
+  {
+    "cat": "gs",
+    "sub": "motion",
+    "qe": "Soaps, detergents, and dyeing substances are added to water during washing or processing. From a surface tension perspective, these wetting agents act by:",
+    "qh": "धुलाई या प्रसंस्करण के दौरान पानी में साबुन, डिटर्जेंट और रंगने वाले पदार्थ मिलाए जाते हैं। पृष्ठ तनाव के दृष्टिकोण से, ये भीगने वाले एजेंट (wetting agents) कैसे कार्य करते हैं?",
+    "o": [
+      "Increasing the surface tension of water to form giant stable bubbles.",
+      "Reducing the angle of contact between the water and the fabric fibers so that the liquid can penetrate well.",
+      "Converting the liquid phase into a high-density viscous gel layer.",
+      "Symmetrically blocking the hydrostatic gauge pressure inside the fabric holes."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Wetting agents like soaps and detergents function by decreasing the surface tension of water and reducing the angle of contact $\\theta$. A smaller angle of contact allows the liquid to spread easily, wet the fabric fibers completely, and penetrate narrow pores effectively to clean dirt."
+  },
+  {
+    "cat": "gs",
+    "sub": "motion",
+    "qe": "One prominent consequence of surface tension is that free liquid drops and soap bubbles are always spherical when gravity is negligible. Why does a fluid mass naturally take a spherical shape?",
+    "qh": "पृष्ठ तनाव का एक प्रमुख परिणाम यह है कि गुरुत्वाकर्षण नगण्य होने पर मुक्त द्रव की बूंदें और साबुन के बुलबुले हमेशा गोल (spherical) होते हैं। एक तरल द्रव्यमान स्वाभाविक रूप से एक गोलाकार आकार क्यों लेता है?",
+    "o": [
+      "Because a sphere experiences the highest atmospheric pressure components.",
+      "Because for a given fixed volume, a sphere has the least surface area, minimizing its surface energy.",
+      "Because the coefficient of viscosity reaches its maximum value in a spherical boundary profile.",
+      "Because the hydrostatic gauge pressure drops to absolute zero inside a sphere."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> A liquid-air interface possesses surface energy. To attain stable equilibrium, the liquid minimizes its surface potential energy by minimizing its surface area for a given volume. Geometrically, a sphere has the least surface area for a given volume, making drops and bubbles spherical."
+  },
+  {
+    "cat": "gs",
+    "sub": "motion",
+    "qe": "Due to the curved liquid-air interface of a spherical drop or bubble, there is a distinct pressure difference between its bheetar (inside) and bahar (outside). How does the excess pressure inside a soap bubble relate to that of a liquid drop of the same radius $r$?",
+    "qh": "एक गोलाकार बूंद या बुलबुले के घुमावदार द्रव-वायु इंटरफ़ेस के कारण, इसके भीतर (inside) और बाहर (outside) के बीच एक स्पष्ट दाब अंतर होता है। एक ही त्रिज्या $r$ के साबुन के बुलबुले के भीतर का अतिरिक्त दाब (excess pressure) द्रव की बूंद के अतिरिक्त दाब से किस प्रकार संबंधित होता है?",
+    "o": [
+      "They are exactly identical because both share the same curvature radius.",
+      "The excess pressure inside a soap bubble is twice that of a liquid drop ($P_i - P_o = \\frac{4S}{r}$ versus $\\frac{2S}{r}$) because a bubble has two free surfaces.",
+      "The excess pressure inside the bubble is zero due to air trapping inside.",
+      "The pressure difference varies inversely with the absolute mass density of the substrate fluid."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> A liquid drop has only one single liquid-air interface, so its excess pressure is $P_i - P_o = \\frac{2S}{r}$. A soap bubble is a thin film enclosing air, meaning it possesses two separate free surfaces (inner and outer liquid-air boundaries). Therefore, its energy cost is doubled, making its excess pressure $P_i - P_o = \\frac{4S}{r}$."
   }
 ]
