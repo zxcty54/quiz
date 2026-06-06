@@ -24736,5 +24736,495 @@
     ],
     "a": 1,
     "e": "<b>Explanation:</b> A key principle of mechanics highlighted in the text is that two-dimensional motion with constant acceleration can be broken down into two completely independent, simultaneous one-dimensional linear motions along mutually perpendicular axes ($x$ and $y$)."
+  },
+  {
+    "cat": "gs",
+    "sub": "motion",
+    "qe": "Aristotle's law of motion states that an external force is always required to keep a body in uniform motion. What is the fundamental logical flaw in this argument according to Newtonian mechanics?",
+    "qh": "अरस्तू के गति के नियम के अनुसार किसी पिंड को एकसमान गति में रखने के लिए हमेशा एक बाहरी बल की आवश्यकता होती है। न्यूटनियन यांत्रिकी के अनुसार इस तर्क में मूलभूत तार्किक त्रुटि क्या है?",
+    "o": [
+      "It fails to consider that mass increases with uniform velocity.",
+      "It fails to recognize that a force applied by an external agency is actually required only to counter opposing frictional forces, not to maintain motion itself.",
+      "It assumes that acceleration is a scalar invariant in terrestrial systems.",
+      "It considers gravitational interaction to be a contact force instead of a field force."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Aristotle's flaw was coding everyday practical experience into a basic law. In uniform linear motion, the applied external force merely cancels out the opposing force of friction, resulting in a net external force of zero. If friction were completely absent, no external force would be required to maintain uniform velocity."
+  },
+  {
+    "cat": "gs",
+    "sub": "motion",
+    "qe": "Galileo’s idealised double inclined plane experiment led to a profound insight regarding horizontal motion. In the limiting case where the slope of the second plane is reduced to zero (horizontal surface), what happens to a rolling ball in a completely frictionless universe?",
+    "qh": "गैलीलियो के आदर्श डबल झुके हुए तल (double inclined plane) के प्रयोग ने क्षैतिज गति के संबंध में एक गहरा दृष्टिकोण दिया। उस सीमांत मामले में जहां दूसरे तल का ढाल शून्य (क्षैतिज सतह) कर दिया जाता है, पूरी तरह से घर्षण रहित ब्रह्मांड में लुढ़कती हुई गेंद के साथ क्या होगा?",
+    "o": [
+      "It will rapidly decelerate due to its internal inertia parameters.",
+      "It will continue to move with a constant velocity over an infinite distance without ceasing.",
+      "It will convert its translational kinetic energy entirely into mechanical polarization.",
+      "It will stop abruptly after covering a distance exactly proportional to its radius."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Galileo concluded that in an ideal frictionless scenario, a ball rolling down an incline will climb to the same initial height on the opposing incline. If the second plane is horizontal (slope = 0), the ball will travel an infinite distance trying to reach its original height, meaning its motion will never cease."
+  },
+  {
+    "cat": "gs",
+    "sub": "motion",
+    "qe": "Newton's first law of motion equates the state of mechanical rest with the state of uniform linear motion. What absolute parameter is identical in both states?",
+    "qh": "न्यूटन के गति का पहला नियम यांत्रिक विराम (mechanical rest) की अवस्था को एकसमान रैखिक गति (uniform linear motion) की अवस्था के समतुल्य मानता है। दोनों अवस्थाओं में कौन सा परम पैरामीटर बिल्कुल समान होता है?",
+    "o": [
+      "The spatial coordinate magnitude relative to the origin.",
+      "The net external force is zero, which strictly implies that acceleration is zero.",
+      "The kinetic energy matrix of the underlying point particles.",
+      "The instantaneous momentum vector relative to the environment."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Under Newton's first law, both a state of rest (velocity = 0) and a state of uniform linear motion (constant velocity) imply a state of zero acceleration ($a = 0$). This directly indicates that the net external force acting on the body is mathematically zero in both situations."
+  },
+  {
+    "cat": "gs",
+    "sub": "motion",
+    "qe": "Ancient Indian thinkers developed an elaborate system of ideas on motion. The concept of 'Vega' in the Vaisesika theory comes closest to which modern mechanical concept?",
+    "qh": "प्राचीन भारतीय विचारकों ने गति पर विचारों की एक विस्तृत प्रणाली विकसित की थी। वैशेषिक गति सिद्धांत में 'वेग' (Vega) की अवधारणा आधुनिक यांत्रिकी की किस अवधारणा के सबसे करीब है?",
+    "o": [
+      "The concept of Gravitational constant ($G$).",
+      "The concept of Inertia (resistance to change in state).",
+      "The concept of Viscous Drag coefficient.",
+      "The concept of Non-inertial Reference Frame transformation."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> In the Vaisesika theory of motion, 'Vega' is defined as the persistent tendency of a body to continue moving in a straight line, which is directly analogous to the modern scientific concept of inertia. It was also noted to be opposed by atmospheric contact, anticipating friction."
+  },
+  {
+    "cat": "gs",
+    "sub": "motion",
+    "qe": "A book rests flat on a stationary horizontal table. The downward force of gravity (weight, $W$) is balanced by the upward normal force ($R$) applied by the table. What is the scientifically correct reasoning for this equilibrium according to Newton's laws?",
+    "qh": "एक पुस्तक स्थिर क्षैतिज मेज पर रखी है। गुरुत्वाकर्षण का नीचे की ओर लगने वाला बल (भार, $W$) मेज द्वारा लगाए गए ऊपर की ओर सामान्य बल ($R$) द्वारा संतुलित होता है। न्यूटन के नियमों के अनुसार इस संतुलन का वैज्ञानिक रूप से सही तर्क क्या है?",
+    "o": [
+      "Since $W$ and $R$ form a action-reaction pair under the Third Law, they cancel out.",
+      "Since the book is observed to be at rest, the net external force must be zero according to the First Law, implying that the normal force $R$ is equal and opposite to $W$.",
+      "The forces cancel out because normal reaction is a non-material imaginary field.",
+      "The book remains at rest because internal forces overpower the external gravitational tensor."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> The text highlights a common misconception: $W$ and $R$ are NOT action-reaction pairs (they act on the same body). The correct reasoning is that since the book is observed to be in an unaccelerated state (rest), the First Law mandates that the net external force is zero, meaning $R$ must be equal and opposite to $W$."
+  },
+  {
+    "cat": "gs",
+    "sub": "motion",
+    "qe": "A car accelerates from rest along a flat, smooth, straight road. What is the actual external force responsible for accelerating the car as a whole?",
+    "qh": "एक कार समतल, चिकनी, सीधी सड़क पर विराम अवस्था से त्वरित होती है। पूरी कार को त्वरित करने के लिए जिम्मेदार वास्तविक बाहरी बल कौन सा है?",
+    "o": [
+      "The internal force exerted by the engine on the chassis.",
+      "The force of friction exerted by the road on the tyres of the car.",
+      "The normal reaction vector pointing vertically upward from the surface.",
+      "The sudden expansion of exhaust gases exiting the tailpipe system."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Internal forces cannot cause a system's center of mass to accelerate. The acceleration of the car as a whole must be due to an external force. The only external force operating parallel to the road interface is the force of static friction exerted by the road surface on the car's tyres."
+  },
+  {
+    "cat": "gs",
+    "sub": "motion",
+    "qe": "When a stationary bus suddenly moves forward, a standing passenger gets thrown backward relative to the bus. This common experience occurs because:",
+    "qh": "जब एक स्थिर बस अचानक आगे बढ़ती है, तो खड़ा यात्री बस के सापेक्ष पीछे की ओर गिर जाता है। यह सामान्य अनुभव इसलिए होता है क्योंकि:",
+    "o": [
+      "An active pseudo-force acts on the upper body pulling it backward horizontally.",
+      "The feet move forward with the bus due to friction, while the rest of the body remains where it was due to inertia.",
+      "The body experiences an immediate shift in its fundamental mass center matrix.",
+      "The bus floor cancels out the passenger's gravitational weight vector completely."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Due to friction between the passenger's feet and the bus floor, the feet accelerate forward along with the bus. However, the upper body is deformable and tends to maintain its state of rest due to inertia, causing a relative backward displacement until muscular forces pull it forward."
+  },
+  {
+    "cat": "gs",
+    "sub": "motion",
+    "qe": "Newton's second law of motion establishes that the rate of change of momentum of a body is directly proportional to the applied force. In this context, if a fixed force is applied for an identical interval of time on two bodies of radically different masses initially at rest, what parameter will be identical for both at the end of that interval?",
+    "qh": "न्यूटन के गति का दूसरा नियम स्थापित करता है कि किसी पिंड के संवेग परिवर्तन की दर लगाए गए बल के सीधे समानुपाती होती है। इस संदर्भ में, यदि शुरुआत में विराम में स्थित दो अलग-अलग द्रव्यमानों वाले पिंडों पर समान समय के लिए एक निश्चित बल लगाया जाए, तो उस अंतराल के अंत में दोनों के लिए कौन सा पैरामीटर बिल्कुल समान होगा?",
+    "o": [
+      "Both bodies will acquire the exact same final speed.",
+      "Both bodies will acquire the exact same change in momentum vector.",
+      "The lighter body will experience less acceleration than the heavier mass.",
+      "The kinetic energy developed will be identical across both particle domains."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Newton's second law ($\mathbf{F} = \\frac{\\Delta\\mathbf{p}}{\\Delta t}$) dictates that the change in momentum is the product of force and time duration (Impulse). Since the same force is applied for the same time interval on both masses, both bodies acquire the exact same change in momentum, irrespective of their masses."
+  },
+  {
+    "cat": "gs",
+    "sub": "motion",
+    "qe": "A seasoned cricketer draws his hands backward while catching a fast-moving cricket ball. What is the exact scientific reason behind this technique?",
+    "qh": "एक अनुभवी क्रिकेटर तेजी से आती हुई क्रिकेट गेंद को कैच करते समय अपने हाथों को पीछे की ओर खींचता है। इस तकनीक के पीछे का सटीक वैज्ञानिक कारण क्या है?",
+    "o": [
+      "It minimizes the total change in momentum vector of the ball.",
+      "It increases the time duration of the impact, thereby reducing the rate of change of momentum and minimizing the force exerted on the hands.",
+      "It alters the gravitational potential energy of the incoming projectile pulse.",
+      "It polarizes the mechanical waves travelling through the leather substrate."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> The force experienced is inversely proportional to the time taken to bring about the change in momentum ($\\mathbf{F} = \\frac{\\Delta\\mathbf{p}}{\\Delta t}$). By drawing the hands backward, the cricketer extends the time interval $\\Delta t$ required to stop the ball, reducing the force of impact to prevent injury."
+  },
+  {
+    "cat": "gs",
+    "sub": "motion",
+    "qe": "If a force acting on a point particle is not parallel to its instantaneous velocity vector but makes an arbitrary angle with it, how does it alter the object's motion?",
+    "qh": "यदि किसी बिंदु कण पर कार्य करने वाला बल उसके तात्कालिक वेग सदिश के समानांतर नहीं है, बल्कि उसके साथ एक मनमाना कोण बनाता है, तो यह वस्तु की गति को कैसे बदलता है?",
+    "o": [
+      "It completely destroys the linear properties of the mass velocity matrix.",
+      "It changes only the component of velocity along the direction of the force, leaving the normal component completely unchanged.",
+      "It causes an instantaneous acceleration shift pointing strictly opposite to the net force vector.",
+      "It dialates the spatial dimensions of the particle trajectory field continuously."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Newton's second law is a vector law ($\mathbf{F} = m\mathbf{a}$). This implies that the component of force along a specific axis alters only the component of velocity along that corresponding direction; any component of velocity perpendicular (normal) to the force remains completely invariant."
+  },
+  {
+    "cat": "gs",
+    "sub": "motion",
+    "qe": "Newton's second law of motion ($\mathbf{F} = m\mathbf{a}$) is stated to be a 'local relation'. What is the precise physical meaning of this statement?",
+    "qh": "न्यूटन के गति के दूसरे नियम ($\mathbf{F} = m\mathbf{a}$) को एक 'स्थानीय संबंध' (local relation) कहा जाता है। इस कथन का सटीक भौतिक अर्थ क्या है?",
+    "o": [
+      "The force vector depends on the global macroscopic mass allocation layout.",
+      "The acceleration of a particle at a given point in space and instant of time depends strictly on the force acting at that point at that specific instant, carrying no memory of past history.",
+      "The equation is valid only in localized non-inertial reference systems.",
+      "The net force vector must vary as a function of the local gravitational field curvature."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> A local relation means that the acceleration 'here and now' is uniquely determined by the net external force operating 'here and now'. It does not depend on the prior trajectory or history of the particle's motion; the moment an external force is removed, its associated acceleration vanishes instantly."
+  },
+  {
+    "cat": "gs",
+    "sub": "motion",
+    "qe": "A stone is dropped out of the window of a train that is accelerating forward horizontally. The moment after the stone is released, what is its horizontal acceleration, neglecting air resistance?",
+    "qh": "एक ट्रेन जो क्षैतिज रूप से आगे की ओर त्वरित हो रही है, उसकी खिड़की से एक पत्थर गिराया जाता है। पत्थर छोड़े जाने के ठीक अगले क्षण, वायु प्रतिरोध को नगण्य मानते हुए, उसका क्षैतिज त्वरण क्या होगा?",
+    "o": [
+      "It retains the identical horizontal acceleration value of the train due to kinetic memory.",
+      "It is zero, because there is no horizontal force acting on the stone once it is out of the train.",
+      "It drops to a negative value proportional to the forward speed of the compartment.",
+      "It becomes infinite momentarily before transforming into a parabolic vector."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Force is a local relation and cannot be carried by a body from its history. Once the stone leaves the train, there is no material agency to apply a horizontal force on it (neglecting air resistance). Therefore, its horizontal acceleration drops to zero instantly, and it experiences only the vertical force of gravity ($mg$)."
+  },
+  {
+    "cat": "gs",
+    "sub": "motion",
+    "qe": "Impulse is defined under mechanics as the product of force and its short time duration of action. What is the fundamental physical equivalent of impulse?",
+    "qh": "यांत्रिकी के अंतर्गत आवेग (Impulse) को बल और उसकी क्रिया की अल्प समयावधि के गुणनफल के रूप में परिभाषित किया गया है। आवेग का मूलभूत भौतिक समतुल्य क्या है?",
+    "o": [
+      "The net change in the kinetic energy tensor of the particle.",
+      "The net change in the momentum vector of the body.",
+      "The scalar product of mass and instantaneous positional displacement.",
+      "The rate at which total mechanical power is dissipated as thermal stress."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> According to the integrated form of the second law, Impulse = $\mathbf{F} \\times \\Delta t = \\Delta\\mathbf{p}$. This means that impulse is mathematically and physically identical to the total change in the momentum vector of the body during the impact duration."
+  },
+  {
+    "cat": "gs",
+    "sub": "motion",
+    "qe": "Newton’s third law of motion states that to every action, there is always an equal and opposite reaction. What is a critical structural constraint regarding where these 'action' and 'reaction' forces act?",
+    "qh": "न्यूटन के गति के तीसरे नियम के अनुसार प्रत्येक क्रिया की हमेशा एक समान और विपरीत प्रतिक्रिया होती है। ये 'क्रिया' (action) और 'प्रतिक्रिया' (reaction) बल कहाँ कार्य करते हैं, इसके संबंध में एक महत्वपूर्ण संरचनात्मक प्रतिबंध क्या है?",
+    "o": [
+      "They must act on the exact same material point particle sequentially.",
+      "They always act on different bodies, never on the same body simultaneously.",
+      "They act on the environment frame only after a finite time delay $\\Delta t$.",
+      "They balance each other out completely within a single localized isolated mass particle."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Action and reaction forces are mutual simultaneous interactions between a PAIR of bodies. Therefore, they always act on two completely different bodies. Because they act on different systems, they never cancel each other out when analyzing the motion of an individual body."
+  },
+  {
+    "cat": "gs",
+    "sub": "motion",
+    "qe": "The law of conservation of momentum states that the total momentum of an isolated system of interacting particles is permanently conserved. For this law to apply strictly, what constraint must be satisfied?",
+    "qh": "संवेग संरक्षण का नियम बताता है कि परस्पर क्रिया करने वाले कणों के एक पृथक निकाय (isolated system) का कुल संवेग स्थायी रूप से संरक्षित रहता है। इस नियम को कड़ाई से लागू करने के लिए किस प्रतिबंध को पूरा किया जाना चाहिए?",
+    "o": [
+      "The collisions between internal particles must be perfectly elastic only.",
+      "The net external force acting on the chosen system must be strictly zero.",
+      "The velocity vectors of all constituent masses must remain parallel to each other.",
+      "The system must operate inside a zero-gravity quantum fields domain."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> The conservation of total momentum is rooted in the absence of external agencies. In an isolated system, the net external force is zero ($\mathbf{F}_{ext} = 0$). Internal mutual forces cancel out in pairs due to the Third Law, leaving the total momentum invariant, whether collisions are elastic or inelastic."
+  },
+  {
+    "cat": "gs",
+    "sub": "motion",
+    "qe": "When two macroscopic bodies undergo an inelastic collision in an isolated system, what is the status of their total momentum and total kinetic energy?",
+    "qh": "जब दो स्थूल पिंड एक पृथक निकाय (isolated system) में एक अप्रत्यास्थ (inelastic) टक्कर से गुजरते हैं, तो उनके कुल संवेग और कुल गतिज ऊर्जा की स्थिति क्या होती है?",
+    "o": [
+      "Both total momentum and total kinetic energy are strictly conserved.",
+      "Total momentum is strictly conserved, but total kinetic energy is not conserved.",
+      "Total kinetic energy is conserved, but total momentum undergoes linear decay.",
+      "Neither momentum nor kinetic energy can be conserved due to internal frictional stress."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> The law of conservation of total momentum applies to all isolated systems ($\mathbf{F}_{ext} = 0$) regardless of the collision type. Therefore, total final momentum equals total initial momentum. However, in an inelastic collision, a portion of the initial kinetic energy is dissipated into internal heat or deformation, so total kinetic energy is NOT conserved."
+  },
+  {
+    "cat": "gs",
+    "sub": "motion",
+    "qe": "In the context of standard classical mechanics, what does the term 'Equilibrium of a particle' mathematically signify?",
+    "qh": "मानक शास्त्रीय यांत्रिकी के संदर्भ में, 'कण का संतुलन' (Equilibrium of a particle) शब्द गणितीय रूप से क्या दर्शाता है?",
+    "o": [
+      "The particle must be permanently at a state of absolute spatial rest.",
+      "The vector sum of all external forces acting on the particle is strictly zero.",
+      "The scalar product of its mass and acceleration vector is a non-zero constant.",
+      "The internal energy bounds match the environmental potential matrix."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Equilibrium of a particle means that the net external force operating on that particle is zero ($\\sum\\mathbf{F} = 0$). According to the First Law, this implies that the particle is either permanently at rest OR moving with a uniform linear velocity (constant velocity vector)."
+  },
+  {
+    "cat": "gs",
+    "sub": "motion",
+    "qe": "All everyday macro-mechanical contact forces, such as friction, normal reaction, tension in a string, and viscous drag, fundamentally originate from which basic force of nature at a microscopic level?",
+    "qh": "सभी रोज़मर्रा के मैक्रो-मेकेनिकल संपर्क बल, जैसे कि घर्षण, सामान्य प्रतिक्रिया, डोरी में तनाव और श्यान खिंचाव (viscous drag), सूक्ष्म स्तर पर प्रकृति के किस मूल बल से उत्पन्न होते हैं?",
+    "o": [
+      "The weak nuclear decay force parameters.",
+      "The gravitational attraction field tensors of the underlying atoms.",
+      "The electrical forces operating between the charged constituents (nuclei and electrons) of different bodies.",
+      "The strong color-charge interactions binding the core quarks together."
+    ],
+    "a": 2,
+    "e": "<b>Explanation:</b> At a microscopic scale, all materials are composed of charged entities (atomic nuclei and shielding electrons). Therefore, all contact forces—arising from intermolecular collisions, dynamic impacts, or elastic support stresses—can ultimately be traced to the fundamental electrical forces operating between these charged constituents."
+  },
+  {
+    "cat": "gs",
+    "sub": "motion",
+    "qe": "A body of mass $m$ rests on a flat horizontal table. A small horizontal force $F$ is applied, but the body remains completely stationary. Why does a small applied force fail to cause acceleration?",
+    "qh": "द्रव्यमान $m$ का एक पिंड एक सपाट क्षैतिज मेज पर रखा है। एक छोटा क्षैतिज बल $F$ लगाया जाता है, लेकिन पिंड पूरी तरह से स्थिर रहता है। छोटा लगाया गया बल त्वरण उत्पन्न करने में क्यों विफल रहता है?",
+    "o": [
+      "Because the applied force is converted entirely into vertical normal reaction.",
+      "Because a self-adjusting static frictional force ($f_s$) comes into play parallel to the interface, matching and canceling the applied force exactly.",
+      "Because the mass of a resting object becomes mathematically infinite until motion begins.",
+      "Because the force constant of the horizontal table plane drops to zero."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Static friction ($f_s$) is a self-adjusting force that does not have a fixed value. It comes into existence the moment an external force is applied. As the applied force $F$ increases, $f_s$ increases proportionally, remaining equal and opposite to $F$, keeping the net horizontal force zero until a maximum limit is crossed."
+  },
+  {
+    "cat": "gs",
+    "sub": "motion",
+    "qe": "What does the term 'impending motion' signify in the context of static friction mechanics?",
+    "qh": "स्थैतिक घर्षण यांत्रिकी (static friction mechanics) के संदर्भ में 'आसन्न गति' (impending motion) शब्द क्या दर्शाता है?",
+    "o": [
+      "The motion that occurs when kinetic friction reaches its absolute minimum value.",
+      "The motion that would take place under an applied force if friction were completely absent from the system interface.",
+      "The uniform circular rotation achieved after crossing the normal reaction cap.",
+      "The structural relaxation of long-chain polymer strings under load."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Static friction opposes what is termed 'impending motion'—the motion that is on the verge of taking place under the action of an applied external force, but does not actually happen because static friction balances the force completely."
+  },
+  {
+    "cat": "gs",
+    "sub": "motion",
+    "qe": "Experimentally, how does the limiting (maximum) value of static friction $(f_s)_{\\max}$ relate to the area of contact between the two solid surfaces?",
+    "qh": "प्रयोगात्मक रूप से, स्थैतिक घर्षण का सीमांत (अधिकतम) मान $(f_s_{\\max})$ दो ठोस सतहों के बीच संपर्क के क्षेत्रफल से किस प्रकार संबंधित होता है?",
+    "o": [
+      "It is directly proportional to the total microscopic area of contact.",
+      "It is completely independent of the macroscopic area of contact.",
+      "It decreases linearly as the overlapping surface geometry increases.",
+      "It varies as a function of the square of the contact profile dimensions."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> A fundamental empirical law of friction states that the limiting value of static friction, written as $(f_s)_{\\max} = \\mu_s N$, is completely independent of the macroscopic area of contact between the surfaces. It depends solely on the normal reaction force $N$ and the nature of the materials."
+  },
+  {
+    "cat": "gs",
+    "sub": "motion",
+    "qe": "When an external applied force exceeds the maximum limiting static friction $(f_s)_{\\max}$, the body begins to slide. What happens to the frictional force at the interface the moment relative motion starts?",
+    "qh": "जब एक बाहरी लगाया गया बल अधिकतम सीमांत स्थैतिक घर्षण $(f_s_{\\max})$ से अधिक हो जाता है, तो पिंड फिसलने लगता है। सापेक्ष गति (relative motion) शुरू होते ही इंटरफ़ेस पर घर्षण बल का क्या होता है?",
+    "o": [
+      "It increases exponentially to match the sliding velocity vector.",
+      "It decreases from the maximum static value to a lower nearly constant value called kinetic friction ($f_k$).",
+      "It drops instantly to absolute zero due to dynamic thermal melting.",
+      "It transforms into an orthogonal force vector parallel to the normal reaction."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Once relative motion begins between the two surfaces, the interface friction shifts from static to kinetic friction ($f_k$). Experimental observations show that kinetic friction is slightly less than the maximum limiting value of static friction ($\\mu_k < \\mu_s$), causing a slight drop in resistance."
+  },
+  {
+    "cat": "gs",
+    "sub": "motion",
+    "qe": "Friction is defined as a component of the contact force parallel to the surfaces. What specific condition does the frictional force oppose?",
+    "qh": "घर्षण को सतहों के समानांतर संपर्क बल के एक घटक के रूप में परिभाषित किया गया है। घर्षण बल किस विशिष्ट स्थिति का विरोध करता है?",
+    "o": [
+      "It opposes the absolute motion of the body relative to the coordinate origin.",
+      "It opposes the relative motion or impending relative motion between the two surfaces in contact.",
+      "It opposes the normal reaction force vector pointing vertically.",
+      "It opposes the gravitational mass matrix transformation fields."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Friction does NOT oppose absolute motion; it strictly opposes *relative motion* (or impending relative motion) between the surfaces in contact. This is why friction can actually cause an object to move forward to prevent relative slip, as seen in a box resting inside an accelerating train."
+  },
+  {
+    "cat": "gs",
+    "sub": "motion",
+    "qe": "A box lies stationary on the floor of a train compartment that is accelerating forward. What force is directly responsible for accelerating the box along with the train?",
+    "qh": "एक बॉक्स एक ट्रेन के डिब्बे के फर्श पर स्थिर रखा है जो आगे की ओर त्वरित हो रही है। ट्रेन के साथ बॉक्स को त्वरित करने के लिए सीधे तौर पर कौन सा बल जिम्मेदार है?",
+    "o": [
+      "The internal inertia tensor of the box substrate matter.",
+      "The static frictional force ($f_s$) exerted by the train floor on the bottom surface of the box.",
+      "The normal reaction force acting vertically up from the train deck.",
+      "The horizontal kinetic force carried from the train's station history."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> If the floor were perfectly frictionless, the train would slide out from under the box, and the box would hit the back wall due to inertia. The impending relative motion (slipping backward) is opposed by static friction, which acts forward on the box, providing it with the exact same acceleration as the train."
+  },
+  {
+    "cat": "gs",
+    "sub": "motion",
+    "qe": "In an idealized mechanical universe, a perfectly rigid ring or sphere rolling without slipping over a horizontal plane would experience no friction. In practice, why does rolling friction always exist?",
+    "qh": "एक आदर्श यांत्रिक ब्रह्मांड में, एक क्षैतिज तल पर बिना फिसले लुढ़कने वाला एक पूरी तरह से कठोर छल्ला या गोला कोई घर्षण महसूस नहीं करेगा। व्यवहार में, रोलिंग घर्षण (rolling friction) हमेशा क्यों मौजूद होता है?",
+    "o": [
+      "Because the kinetic friction coefficient increases linearly with angular velocity.",
+      "Because the surfaces in contact undergo momentary structural deformation, resulting in a finite area of contact rather than a single mathematical point, creating a resisting contact component.",
+      "Because gravity pulls the rolling edge into a non-Euclidean path matrix.",
+      "Because the rolling body undergoes localized atomic decay at its rotation boundaries."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Rolling friction has a complex origin linked to material deformability. In reality, both the rolling body and the horizontal plane undergo slight, temporary deformations at the interface. This transforms the mathematical single point of contact into a finite area, generating a net contact force component that opposes the rolling motion."
+  },
+  {
+    "cat": "gs",
+    "sub": "motion",
+    "qe": "For a fixed weight and identical material interface, how does the magnitude of rolling friction compare to static or sliding friction?",
+    "qh": "एक निश्चित भार और समान सामग्री इंटरफ़ेस के लिए, रोलिंग घर्षण (rolling friction) के परिमाण की तुलना स्थैतिक या सर्पी (static or sliding) घर्षण से किस प्रकार की जाती है?",
+    "o": [
+      "Rolling friction is significantly larger than sliding friction by several orders of magnitude.",
+      "Rolling friction is much smaller, even by 2 or 3 orders of magnitude, than static or sliding friction.",
+      "They are exactly identical because both belong to the contact force family.",
+      "Rolling friction vanishes to absolute zero in all macroscopic environments."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Rolling friction is dramatically smaller than static or sliding friction—often by two to three orders of magnitude. This tremendous reduction in resistive force is why the invention of the wheel represents a critical milestone in human technological history."
+  },
+  {
+    "cat": "gs",
+    "sub": "motion",
+    "qe": "Lubricants and ball bearings are extensively utilized in industrial machinery. What is their core mechanical purpose from a wave/force perspective?",
+    "qh": "औद्योगिक मशीनरी में स्नेहक (lubricants) और बॉल बेयरिंग का बड़े पैमाने पर उपयोग किया जाता है। तरंग/बल के दृष्टिकोण से उनका मुख्य यांत्रिक उद्देश्य क्या है?",
+    "o": [
+      "To increase the structural normal reaction force coefficient.",
+      "To replace high-resistance kinetic/sliding friction with much smaller rolling friction, reducing power dissipation as heat.",
+      "To convert external forces into internal particle alignment arrays.",
+      "To completely eliminate the gravitational weight tensor of the moving parts."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Friction dissipates useful power into non-conservative thermal stress (heat). Ball bearings are placed between moving parts to convert sliding friction into rolling friction, which is orders of magnitude smaller, minimizing power loss and mechanical wear."
+  },
+  {
+    "cat": "gs",
+    "sub": "motion",
+    "qe": "When a car takes a sharp circular turn on a flat, level horizontal road, what specific real force serves as the mandatory centripetal force required to maintain its circular path?",
+    "qh": "जब एक कार एक सपाट, समतल क्षैतिज सड़क पर एक तीखा वृत्ताकार मोड़ लेती है, तो उसके वृत्ताकार पथ को बनाए रखने के लिए आवश्यक अनिवार्य अभिकेंद्र बल के रूप में कौन सा विशिष्ट वास्तविक बल कार्य करता है?",
+    "o": [
+      "The downward gravitational weight vector ($mg$).",
+      "The force of static friction between the road surface and the car tyres.",
+      "The vertical normal reaction force vector ($N$).",
+      "An active outward centrifugal force generated by the engine transmission."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Centripetal force is simply a structural name for any center-pointing force in circular motion. For a car turning on a level road, there is no banking component. The inward radial acceleration can only be provided by the static friction operating parallel to the road interface between the tyres and the asphalt."
+  },
+  {
+    "cat": "gs",
+    "sub": "motion",
+    "qe": "For a car executing a turn on a flat level horizontal road with a coefficient of static friction $\\mu_s$, the derived maximum safe speed $v_{\\max}$ is given by $v_{\\max} = \\sqrt{\\mu_s R g}$. What deep physical insight does this relation reveal regarding the mass of the car?",
+    "qh": "समतल क्षैतिज सड़क पर स्थैतिक घर्षण गुणांक $\\mu_s$ के साथ मोड़ लेने वाली कार के लिए, व्युत्पन्न अधिकतम सुरक्षित गति $v_{\\max}$, $v_{\\max} = \\sqrt{\\mu_s R g}$ द्वारा दी जाती है। यह संबंध कार के द्रव्यमान (mass) के संबंध में क्या गहरी भौतिक अंतर्दृष्टि प्रकट करता है?",
+    "o": [
+      "Heavy luxury cars can turn at much higher velocities safely than lightweight cars.",
+      "The maximum safe speed is completely independent of the mass of the vehicle.",
+      "The safe speed decreases linearly as a function of the total payload weight.",
+      "The vehicle mass shifts the critical path angle to a negative coordinate value."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> The expression $v_{\\max} = \\sqrt{\\mu_s R g}$ contains no mass variable '$m$'. This proves that the maximum safe boundary speed for skidding on a level curved road is a geometric and material attribute, completely identical for a light car or a heavy loaded truck."
+  },
+  {
+    "cat": "gs",
+    "sub": "motion",
+    "qe": "When solving complex engineering systems in mechanics, a standard structured approach utilizes a 'free-body diagram'. What is the strict rule regarding what forces must be shubh shamil (included) in a free-body diagram?",
+    "qh": "यांत्रिकी में जटिल इंजीनियरिंग प्रणालियों को हल करते समय, एक मानक संरचित दृष्टिकोण 'फ्री-बॉडी आरेख' (free-body diagram) का उपयोग करता है। फ्री-बॉडी आरेख में कौन से बल शामिल किए जाने चाहिए, इसके संबंध में सख्त नियम क्या है?",
+    "o": [
+      "It must include all internal molecular forces holding the body particles together.",
+      "It must show the chosen system isolated, displaying all external forces exerted ON the system by the remaining environment, while excluding forces exerted BY the system on the environment.",
+      "It must show only the gravitational weight vector, completely ignoring contact points.",
+      "It must be constructed exclusively when the net resultant acceleration vector is zero."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> A free-body diagram isolates a specific chosen part of an assembly (the system). It must map every single external force exerted ON that system by other components or fields. Crucially, it must completely omit any forces that this system exerts back on its environment to avoid mathematical doubling errors."
+  },
+  {
+    "cat": "gs",
+    "sub": "motion",
+    "qe": "A basic mechanical maxim states: 'Force is not always in the direction of motion.' Under what geometric configuration does the net force vector point perfectly perpendicular (normal) to the instantaneous velocity vector?",
+    "qh": "यांत्रिकी का एक मूल सिद्धांत बताता है: 'बल हमेशा गति की दिशा में नहीं होता है।' किस ज्यामितीय विन्यास के तहत नेट बल सदिश तात्कालिक वेग सदिश के बिल्कुल लंबवत (perpendicular) इंगित करता है?",
+    "o": [
+      "When an object undergoes uniform linear acceleration along a straight horizontal path.",
+      "When an object executes uniform circular motion at a constant speed.",
+      "When a moving car slows down uniformly after brakes are applied.",
+      "When a particle is momentarily at a state of absolute structural rest."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Force is always parallel to the acceleration vector ($\mathbf{F} = m\mathbf{a}$), not necessarily the velocity vector. In uniform circular motion, the speed is constant, so there is no tangential force component; the entire centripetal force points radially inward toward the center, which is strictly normal ($90^\\circ$) to the tangential velocity vector."
+  },
+  {
+    "cat": "gs",
+    "sub": "motion",
+    "qe": "When a ball thrown vertically upward reaches its maximum absolute height, its instantaneous velocity vector is zero ($v = 0$). What are the values of force and acceleration acting on the ball at that precise peak instant?",
+    "qh": "जब सीधे ऊपर की ओर फेंकी गई गेंद अपनी अधिकतम पूर्ण ऊंचाई पर पहुंचती है, तो उसका तात्कालिक वेग सदिश शून्य ($v = 0$) होता है। उस सटीक शीर्ष क्षण में गेंद पर कार्य करने वाले बल और त्वरण के मान क्या होते हैं?",
+    "o": [
+      "Both force and acceleration drop to absolute zero momentarily.",
+      "The force is zero, but the acceleration continues to be equal to $g$.",
+      "The net force continues to be its material weight $mg$, and its acceleration is not zero but equal to $g$ downward.",
+      "The acceleration inverts its sign to a positive value tending to infinity."
+    ],
+    "a": 2,
+    "e": "<b>Explanation:</b> Having zero velocity does not imply zero force or acceleration. At the apex, the ball stops moving for an instant ($v=0$). However, the earth continues to exert a material gravitational force equal to its weight ($mg$). Therefore, the downward acceleration stays constant at $g$, which causes the velocity to change and the ball to descend."
+  },
+  {
+    "cat": "gs",
+    "sub": "motion",
+    "qe": "In the fundamental equation of motion $\mathbf{F} = m\mathbf{a}$, what does the term '$m\mathbf{a}$' physically signify, and how should it be treated in a free-body layout?",
+    "qh": "गति के मूल समीकरण $\mathbf{F} = m\mathbf{a}$ में, '$m\mathbf{a}$' पद भौतिक रूप से क्या दर्शाता है, और इसे फ्री-बॉडी लेआउट में कैसे माना जाना चाहिए?",
+    "o": [
+      "It represents an additional active inertial force external to the particle matter.",
+      "It is simply the inertial effect of the net external force $\mathbf{F}$ on mass $m$, and must never be treated as an independent force in a free-body diagram.",
+      "It is a pseudo-vector field force tracking the choice of perpendicular coordinate axes.",
+      "It balances out the weight vector to maintain complete structural equilibrium."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> In $\mathbf{F} = m\mathbf{a}$, $\mathbf{F}$ is the net sum of all real external material forces acting on the body. The term $m\mathbf{a}$ is the kinematic *effect* of that net force on the mass. It is a common error to treat $m\mathbf{a}$ as an independent material force acting on the body; it should never appear as a force arrow in an FBD."
+  },
+  {
+    "cat": "gs",
+    "sub": "motion",
+    "qe": "The familiar mechanical expression $mg = R$ is often written for a block resting on a level table. Under what strict kinematic constraint is this linear algebraic equality true?",
+    "qh": "मेज पर रखे ब्लॉक के लिए अक्सर परिचित यांत्रिक अभिव्यक्ति $mg = R$ लिखी जाती है। यह रैखिक बीजगणितीय तुल्यता किस कड़े गतिज प्रतिबंध के तहत सत्य होती है?",
+    "o": [
+      "It is a saarvabhaumik identity guaranteed by Newton's third law of motion.",
+      "It is true only if the body is in complete equilibrium along the vertical axis, with zero vertical acceleration.",
+      "It applies exclusively when the contact plane undergoes continuous kinetic sliding friction.",
+      "It is valid only when the material mass executes uniform motion inside an accelerated elevator."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> The relation $mg = R$ is NOT a fundamental identities or a consequence of the third law. It is a local equilibrium condition derived from $\\sum F_y = 0$. If the system accelerates vertically (such as inside an accelerated lift or elevator), the normal reaction $R$ will change dynamically, rendering $mg = R$ false."
+  },
+  {
+    "cat": "gs",
+    "sub": "light",
+    "qe": "For a physical string of completely negligible mass (massless string) that is inextensible, what is the behavior of the restoring force known as 'Tension' throughout its length?",
+    "qh": "एक पूरी तरह से नगण्य द्रव्यमान (massless string) वाली भौतिक डोरी जो अविस्तार्य (inextensible) है, उसके लिए उसकी पूरी लंबाई में 'तनाव' (Tension) नामक पुनरुत्थान बल का व्यवहार क्या होता है?",
+    "o": [
+      "The tension increases linearly from the tail toward the tip of the string segment.",
+      "The tension remains completely constant throughout the entire length of the string.",
+      "The tension drops to absolute zero at the exact geometric midpoint node.",
+      "The tension changes its orientation vector randomly as a function of elapsed time."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> In classical mechanics, if a string has a completely negligible mass (massless approximation), the internal restoring tension vector $T$ stays completely uniform and constant across every single point along its entire continuous length."
   }
 ]
