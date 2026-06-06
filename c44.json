@@ -23756,5 +23756,565 @@
     ],
     "a": 1,
     "e": "<b>Explanation:</b> The aligned long-chain molecules absorb the electric vectors parallel to their length. Therefore, the transmitted light vector oscillates strictly along a direction perpendicular to these chains, which defines the pass-axis of the polaroid sheet."
+  },
+  {
+    "cat": "gs",
+    "sub": "motion",
+    "qe": "According to Newton's Universal Law of Gravitation, the gravitational force of attraction acts between any two masses in the universe. This force fundamentally operates along which geometric path?",
+    "qh": "न्यूटन के गुरुत्वाकर्षण के सार्वभौमिक नियम के अनुसार, ब्रह्मांड में किन्हीं भी दो द्रव्यमानों के बीच गुरुत्वाकर्षण बल कार्य करता है। यह बल मूल रूप से किस ज्यामितीय मार्ग के अनुदिश कार्य करता है?",
+    "o": [
+      "Along a curved trajectory determined by the smaller mass (छोटे द्रव्यमान द्वारा निर्धारित वक्राकार पथ पर)",
+      "Along the line joining the centers of the two objects (दोनों वस्तुओं के केंद्रों को जोड़ने वाली रेखा के अनुदिश)",
+      "Strictly horizontal to the surface plane (सतह के समतल के बिल्कुल क्षैतिज दिशा में)",
+      "Symmetrically opposite to the rotation axis (घूर्णन अक्ष के विपरीत दिशा में)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> न्यूटन का नियम स्पष्ट करता है कि दो पिंडों के बीच लगने वाला गुरुत्वाकर्षण बल हमेशा उनके केंद्रों को जोड़ने वाली सीधी रेखा (line joining the centers) के अनुदिश ही कार्य करता है।"
+  },
+  {
+    "cat": "gs",
+    "sub": "motion",
+    "qe": "Object A attracts Object B with a gravitational force $F$. According to Newton's third law of motion, with what force does Object B simultaneously attract Object A?",
+    "qh": "वस्तु A, वस्तु B को गुरुत्वाकर्षण बल $F$ से अपनी ओर आकर्षित करती है। न्यूटन के गति के तीसरे नियम के अनुसार, वस्तु B उसी क्षण वस्तु A को कितने बल से आकर्षित करती है?",
+    "o": [
+      "With a force strictly proportional to the surface area of B (B के पृष्ठीय क्षेत्रफल के समानुपाती बल से)",
+      "With an equal and opposite force $F$ (समान और विपरीत बल F से)",
+      "With a significantly smaller force because A is stationary (बहुत कम बल से क्योंकि A स्थिर है)",
+      "With zero force as only the larger mass can exert pull (शून्य बल से क्योंकि केवल बड़ा द्रव्यमान ही खींच सकता है)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> न्यूटन के तीसरे नियम के अनुसार प्रत्येक क्रिया की समान और विपरीत प्रतिक्रिया होती है। इसलिए, दोनों वस्तुएं एक-दूसरे पर बिल्कुल समान परिमाण का आकर्षण बल लगाती हैं।"
+  },
+  {
+    "cat": "gs",
+    "sub": "motion",
+    "qe": "What is the correct derived SI unit for the Universal Gravitational Constant ($G$)?",
+    "qh": "सार्वभौमिक गुरुत्वाकर्षण नियतांक ($G$) के लिए सही व्युत्पन्न एसआई (SI) मात्रक क्या है?",
+    "o": [
+      "$\\text{N m}^2 \\text{ kg}^{-2}$",
+      "$\\text{N m kg}^{-1}$",
+      "$\\text{N m}^{-2} \\text{ kg}^2$",
+      "$\\text{m s}^{-2}$"
+    ],
+    "a": 0,
+    "e": "<b>Explanation:</b> सूत्र $F = \\frac{G m_1 m_2}{d^2}$ से जब $G$ को पृथक किया जाता है, तो $G = \\frac{F d^2}{m_1 m_2}$ प्राप्त होता है, जिसका मात्रक $\\text{N m}^2 \\text{ kg}^{-2}$ बनता है।"
+  },
+  {
+    "cat": "gs",
+    "sub": "motion",
+    "qe": "Why do we not visibly feel or observe the gravitational force of attraction between ordinary everyday objects like two people or chairs sitting in a room?",
+    "qh": "हम किसी कमरे में बैठे दो व्यक्तियों या कुर्सियों जैसी सामान्य रोज़मर्रा की वस्तुओं के बीच गुरुत्वाकर्षण बल को प्रत्यक्ष रूप से क्यों महसूस या देख नहीं पाते हैं?",
+    "o": [
+      "Because the force exists only in the presence of liquid fluids (क्योंकि यह बल केवल तरल पदार्थों में ही मौजूद होता है)",
+      "Because the value of $G$ is extremely small, making the force negligible for small masses (क्योंकि G का मान अत्यंत छोटा है, जिससे छोटे द्रव्यमानों के लिए यह बल नगण्य हो जाता है)",
+      "Because ordinary objects do not contain non-zero mass (क्योंकि सामान्य वस्तुओं में द्रव्यमान नहीं होता)",
+      "Because atmospheric pressure cancels out the gravitation matrix (क्योंकि वायुमंडलीय दबाव गुरुत्वाकर्षण को रद्द कर देता है)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> सार्वभौमिक नियतांक $G$ का मान अत्यंत सूक्ष्म ($6.67 \\times 10^{-11}$) होता है। जब तक कि पिंडों का द्रव्यमान बहुत अधिक (जैसे ग्रह) न हो, यह बल व्यावहारिक रूप से महसूस नहीं होता।"
+  },
+  {
+    "cat": "gs",
+    "sub": "motion",
+    "qe": "The Inverse Square Law of gravitation implies that if the distance '$d$' between the centers of two stationary masses is altered, the force changes. If the distance is doubled, the force becomes:",
+    "qh": "गुरुत्वाकर्षण का व्युत्क्रम वर्ग नियम (Inverse Square Law) यह दर्शाता है कि यदि दो द्रव्यमानों के बीच की दूरी '$d$' को बदला जाए, तो बल बदलता है। यदि दूरी को दोगुना कर दिया जाए, तो बल कितना हो जाएगा?",
+    "o": [
+      "Doubled ($2F$)",
+      "One-fourth ($\\frac{1}{4}F$)",
+      "Four times ($4F$)",
+      "Remains completely unchanged (अपरिवर्तित रहेगा)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> गुरुत्वाकर्षण बल दूरी के वर्ग के व्युत्क्रमानुपाती ($F \\propto \\frac{1}{d^2}$) होता है। दूरी को दोगुना ($2d$) करने पर बल घटकर मूल मान का एक-चौथाई ($\\frac{1}{4}$) रह जाता है।"
+  },
+  {
+    "cat": "gs",
+    "sub": "motion",
+    "qe": "What happens to the gravitational force between two masses if the distance between their centers is reduced to exactly half?",
+    "qh": "यदि दो द्रव्यमानों के बीच उनके केंद्रों की दूरी को घटाकर ठीक आधा कर दिया जाए, तो उनके बीच गुरुत्वाकर्षण बल पर क्या प्रभाव पड़ेगा?",
+    "o": [
+      "It decreases to half (घटकर आधा हो जाएगा)",
+      "It increases to four times (बढ़कर चार गुना हो जाएगा)",
+      "It decreases to one-fourth (घटकर एक-चौथाई हो जाएगा)",
+      "It remains absolutely the same (बिल्कुल समान रहेगा)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> दूरी को आधा ($\\frac{d}{2}$) करने पर, व्युत्क्रम वर्ग नियम के अनुसार बल का मान $2^2$ अर्थात् चार गुना ($4F$) बढ़ जाता है क्योंकि वस्तुएं एक-दूसरे के निकट आ गई हैं।"
+  },
+  {
+    "cat": "gs",
+    "sub": "motion",
+    "qe": "What is the primary significance of the centripetal force in the orbit of the Moon around the Earth?",
+    "qh": "पृथ्वी के चारों ओर चंद्रमा की कक्षा में अभिकेंद्र बल (Centripetal Force) का मुख्य सैद्धांतिक महत्व क्या है?",
+    "o": [
+      "It increases the mass of the Moon continuously (यह चंद्रमा के द्रव्यमान को बढ़ाता है)",
+      "It continuously changes the direction of motion of the Moon, keeping it in a circular path (यह लगातार चंद्रमा की गति की दिशा बदलता है, जिससे वह वृत्ताकार पथ पर बना रहता है)",
+      "It pushes the Moon directly into outer space away from gravity (यह चंद्रमा को अंतरिक्ष में बाहर धकेलता है)",
+      "It slows down the rotation of the Earth's axis (यह पृथ्वी के अक्ष के घूर्णन को धीमा करता है)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> वृत्तीय गति में किसी वस्तु की दिशा हर क्षण बदलती है। अभिकेंद्र बल ही वह आवश्यक बल है जो दिशा बदलकर वस्तु को सीधे रैखिक मार्ग पर जाने के बजाय वृत्ताकार पथ पर बनाए रखता है।"
+  },
+  {
+    "cat": "gs",
+    "sub": "motion",
+    "qe": "In the case of the Moon revolving around the Earth, which actual force acts as the required centripetal force?",
+    "qh": "पृथ्वी के चक्कर लगाने वाले चंद्रमा के मामले में, कौन सा वास्तविक बल आवश्यक अभिकेंद्र बल (Centripetal Force) के रूप में कार्य करता है?",
+    "o": [
+      "Magnetic repulsion of the polar grids (ध्रुवीय ग्रिड का चुंबकीय प्रतिकर्षण)",
+      "The gravitational force of attraction between the Earth and the Moon (पृथ्वी और चंद्रमा के बीच का गुरुत्वाकर्षण आकर्षण बल)",
+      "Atmospheric friction of free space (मुक्त अंतरिक्ष का वायुमंडलीय घर्षण)",
+      "Electrostatic force of ionized particles (आयनीकृत कणों का स्थिरवैद्युत बल)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> अभिकेंद्र बल कोई नया बल नहीं है; वृत्तीय गति में उपस्थित कोई भी वास्तविक बल यह भूमिका निभा सकता है। यहाँ पृथ्वी का गुरुत्वाकर्षण बल ही अभिकेंद्र बल का कार्य करता है।"
+  },
+  {
+    "cat": "gs",
+    "sub": "motion",
+    "qe": "If the gravitational force between the Earth and the Moon suddenly vanished into zero, how would the Moon theoretically move?",
+    "qh": "यदि पृथ्वी और चंद्रमा के बीच का गुरुत्वाकर्षण बल अचानक शून्य होकर समाप्त हो जाए, तो चंद्रमा सैद्धांतिक रूप से कैसे गति करेगा?",
+    "o": [
+      "It would fall straight to the center of the Earth (यह सीधे पृथ्वी के केंद्र पर आकर गिरेगा)",
+      "It would fly off along a straight line tangent to its circular orbit (यह अपनी वृत्ताकार कक्षा की स्पर्श रेखा के अनुदिश एक सीधी रेखा में निकल जाएगा)",
+      "It would stop moving instantly and stay frozen (यह तुरंत रुक जाएगा और स्थिर हो जाएगा)",
+      "It would start moving in a smaller spiral counter-clockwise (यह छोटे सर्पिलाकार मार्ग पर घूमने लगेगा)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> न्यूटन के गति के प्रथम नियम (जड़त्व) के अनुसार, अभिकेंद्र बल हटने पर वस्तु अपनी दिशा को बनाए रखने के लिए उस बिंदु पर कक्षा की स्पर्श रेखा (tangent) के अनुदिश सीधी दिशा में आगे बढ़ जाएगी।"
+  },
+  {
+    "cat": "gs",
+    "sub": "motion",
+    "qe": "We observe that the Moon revolves around the Earth, but the Earth does not visibly accelerate toward the Moon. Why is the acceleration of the Earth negligible in this interaction?",
+    "qh": "हम देखते हैं कि चंद्रमा पृथ्वी के चक्कर लगाता है, लेकिन पृथ्वी चंद्रमा की ओर प्रत्यक्ष रूप से त्वरित नहीं होती है। इस अन्योन्यक्रिया में पृथ्वी का त्वरण नगण्य क्यों होता है?",
+    "o": [
+      "Because the Moon does not exert any force on the Earth (क्योंकि चंद्रमा पृथ्वी पर कोई बल नहीं लगाता)",
+      "Because the mass of the Earth is extremely large compared to the Moon, making its acceleration mathematically imperceptible (क्योंकि पृथ्वी का द्रव्यमान चंद्रमा की तुलना में बहुत अधिक है, जिससे इसका त्वरण नगण्य हो जाता है)",
+      "Because Earth is protected by its magnetic shield (क्योंकि पृथ्वी अपने चुंबकीय कवच द्वारा सुरक्षित है)",
+      "Because the velocity of Earth is absolute in vacuum (क्योंकि निर्वात में पृथ्वी का वेग परम होता है)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> सूत्र $a = \\frac{F}{m}$ के अनुसार, बल समान होने पर भी पृथ्वी का द्रव्यमान ($m$) बहुत अधिक होने के कारण उसका उत्पन्न त्वरण ($a$) इतना सूक्ष्म होता है कि वह दिखाई नहीं देता।"
+  },
+  {
+    "cat": "gs",
+    "sub": "motion",
+    "qe": "What is the scientific distinction between the 'Mass' of an object and its 'Weight'?",
+    "qh": "किसी वस्तु के 'द्रव्यमान' (Mass) और उसके 'भार' (Weight) के बीच वैज्ञानिक अंतर क्या है?",
+    "o": [
+      "Mass changes with location, Weight remains constant (द्रव्यमान स्थान के साथ बदलता है, भार स्थिर रहता है)",
+      "Mass is the measure of matter and remains constant everywhere, while Weight is the gravitational force acting on it and changes with location (द्रव्यमान पदार्थ की मात्रा है और हर जगह स्थिर रहता है, जबकि भार उस पर लगने वाला गुरुत्वाकर्षण बल है और स्थान के साथ बदलता है)",
+      "Both are vector quantities measuring coordinates (दोनों सदिश राशियां हैं)",
+      "Mass is measured in Newtons and Weight in Kilograms (द्रव्यमान न्यूटन में मापा जाता है और भार किलोग्राम में)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> द्रव्यमान वस्तु का एक बुनियादी अपरिवर्तनीय गुण है, जबकि भार $W = mg$ गुरुत्वीय त्वरण पर निर्भर करता है, जो स्थान बदलने पर बदल सकता है।"
+  },
+  {
+    "cat": "gs",
+    "sub": "motion",
+    "qe": "The standard SI unit for measuring the 'Weight' of an object is fundamentally identical to the unit of:",
+    "qh": "किसी वस्तु के 'भार' (Weight) को मापने का मानक एसआई (SI) मात्रक मूल रूप से किसके मात्रक के समान होता है?",
+    "o": [
+      "Mass (द्रव्यमान के)",
+      "Force (बल के)",
+      "Pressure (दाब के)",
+      "Density (घनत्व के)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> भार वास्तव में वह आकर्षण बल है जिससे पृथ्वी किसी वस्तु को अपने केंद्र की ओर खींचती है। बल होने के कारण इसका मात्रक भी न्यूटन (N) ही होता है।"
+  },
+  {
+    "cat": "gs",
+    "sub": "motion",
+    "qe": "Where is the value of acceleration due to gravity ($g$) maximum and minimum on the surface of the Earth?",
+    "qh": "पृथ्वी की सतह पर गुरुत्वीय त्वरण ($g$) का मान कहाँ अधिकतम और कहाँ न्यूनतम होता है?",
+    "o": [
+      "Maximum at the equator, minimum at the poles (भूमध्य रेखा पर अधिकतम, ध्रुवों पर न्यूनतम)",
+      "Maximum at the poles and minimum at the equator (ध्रुवों पर अधिकतम और भूमध्य रेखा पर न्यूनतम)",
+      "Zero everywhere on the surface plane (सतह पर हर जगह शून्य)",
+      "Depends strictly on the ocean tides matrix (पूरी तरह से समुद्री ज्वार पर निर्भर)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> पृथ्वी पूरी तरह गोल नहीं है; ध्रुवों पर त्रिज्या कम होने के कारण $g$ का मान अधिकतम होता है, और भूमध्य रेखा (equator) पर त्रिज्या अधिक होने के कारण $g$ का मान न्यूनतम होता है।"
+  },
+  {
+    "cat": "gs",
+    "sub": "motion",
+    "qe": "If a trader buys gold by weight at the poles of the Earth and sells it by weight at the equator using a highly sensitive spring balance, what financial outcome will occur?",
+    "qh": "यदि कोई व्यापारी पृथ्वी के ध्रुवों पर भार के अनुसार सोना खरीदता है और भूमध्य रेखा पर उसी संवेदनशील स्प्रिंग बैलेंस से भार के अनुसार बेचता है, तो उसे क्या वित्तीय परिणाम प्राप्त होगा?",
+    "o": [
+      "He will gain a huge profit because weight increases at the equator (उसे भारी लाभ होगा क्योंकि भूमध्य रेखा पर भार बढ़ता है)",
+      "He will experience a loss because the value of $g$ decreases at the equator, reducing the measured weight (उसे घाटा होगा क्योंकि भूमध्य रेखा पर g का मान कम होने से सोने का मापा गया भार घट जाएगा)",
+      "There will be no change since mass is absolute (कोई परिवर्तन नहीं होगा क्योंकि द्रव्यमान स्थिर है)",
+      "The spring balance will stop operating due to internal vacuum metrics (स्प्रिंग बैलेंस काम करना बंद कर देगा)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> स्प्रिंग बैलेंस भार ($mg$) मापता है। चूंकि ध्रुवों की तुलना में भूमध्य रेखा पर $g$ का मान कम होता है, इसलिए वहाँ सोने का मापा गया भार घट जाएगा, जिससे व्यापारी को नुकसान होगा।"
+  },
+  {
+    "cat": "gs",
+    "sub": "motion",
+    "qe": "How does the acceleration due to gravity ($g$) change as one moves deep inside a gold mine or high up into the atmosphere away from the Earth's surface?",
+    "qh": "जैसे-जैसे कोई व्यक्ति सोने की गहरी खदान के भीतर जाता है या पृथ्वी की सतह से दूर वायुमंडल में ऊपर जाता है, तो गुरुत्वीय त्वरण ($g$) के मान में क्या परिवर्तन होता है?",
+    "o": [
+      "It increases in both cases (दोनों ही स्थितियों में बढ़ता है)",
+      "It decreases in both cases (दोनों ही स्थितियों में घटता है)",
+      "It increases going up and decreases going down (ऊपर जाने पर बढ़ता है और नीचे जाने पर घटता है)",
+      "It remains absolutely constant at 9.8 (हमेशा 9.8 पर स्थिर रहता है)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> गुरुत्वीय त्वरण ($g$) का मान पृथ्वी की सतह पर अधिकतम होता है। सतह से ऊपर जाने पर या पृथ्वी के भीतर गहराई में जाने पर $g$ का मान हमेशा घटता है।"
+  },
+  {
+    "cat": "gs",
+    "sub": "motion",
+    "qe": "What is the theoretical value of the acceleration due to gravity at the absolute center of the Earth?",
+    "qh": "पृथ्वी के बिल्कुल केंद्र (Absolute Center) पर गुरुत्वीय त्वरण ($g$) का सैद्धांतिक मान कितना होता है?",
+    "o": [
+      "$9.8 \\text{ m/s}^2$",
+      "Zero (शून्य)",
+      "Infinite (अनंत)",
+      "Negative $9.8 \\text{ m/s}^2$"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> पृथ्वी के केंद्र पर जाने पर चारों ओर का द्रव्यमान खिंचाव संतुलित हो जाता है, जिससे वहाँ कुल गुरुत्वाकर्षण बल और गुरुत्वीय त्वरण ($g$) का मान शून्य हो जाता है।"
+  },
+  {
+    "cat": "gs",
+    "sub": "motion",
+    "qe": "The acceleration due to gravity on the surface of the Moon relates to that on the Earth. How does the weight of an object change on the Moon?",
+    "qh": "चंद्रमा की सतह पर गुरुत्वीय त्वरण का पृथ्वी के त्वरण से एक निश्चित संबंध है। चंद्रमा पर किसी वस्तु का भार किस प्रकार बदलता है?",
+    "o": [
+      "It increases by six times (छह गुना बढ़ जाता है)",
+      "It becomes one-sixth ($\\frac{1}{6}$) of its weight on the Earth (यह पृथ्वी पर उसके भार का एक-छह (1/6) भाग रह जाता है)",
+      "It drops to absolute zero due to lack of air atmosphere (हवा न होने के कारण शून्य हो जाता है)",
+      "It doubles its mass coordinate value (इसका द्रव्यमान दोगुना हो जाता है)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> चंद्रमा का द्रव्यमान और त्रिज्या कम होने से वहाँ $g$ का मान पृथ्वी का $\\frac{1}{6}$ होता है, इसलिए वहाँ वस्तु का भार भी पृथ्वी के भार का ठीक $\\frac{1}{6}$ रह जाता है।"
+  },
+  {
+    "cat": "gs",
+    "sub": "motion",
+    "qe": "If an object has a mass of $60\\text{ kg}$ on the Earth, what will be its mass and weight when measured on the surface of the Moon? (Assume $g_{\\text{earth}} = 10\\text{ m/s}^2$)",
+    "qh": "यदि किसी वस्तु का द्रव्यमान पृथ्वी पर $60\\text{ kg}$ है, तो चंद्रमा की सतह पर मापने पर उसका द्रव्यमान और भार क्रमशः कितना होगा? (मानें $g_{\\text{earth}} = 10\\text{ m/s}^2$)",
+    "o": [
+      "$10\\text{ kg}$ and $100\\text{ N}$",
+      "$60\\text{ kg}$ and $100\\text{ N}$",
+      "$10\\text{ kg}$ and $600\\text{ N}$",
+      "$60\\text{ kg}$ and $600\\text{ N}$"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> द्रव्यमान ब्रह्मांड में हर जगह नियत रहता है, इसलिए चंद्रमा पर भी द्रव्यमान $60\\text{ kg}$ ही रहेगा। पृथ्वी पर भार $600\\text{ N}$ है, तो चंद्रमा पर भार $\\frac{1}{6}$ अर्थात् $100\\text{ N}$ होगा।"
+  },
+  {
+    "cat": "gs",
+    "sub": "motion",
+    "qe": "What is the physical state of an object undergoing 'Free Fall' towards the Earth under gravity alone in the absence of air resistance?",
+    "qh": "हवा के प्रतिरोध की अनुपस्थिति में केवल गुरुत्वाकर्षण के प्रभाव में पृथ्वी की ओर 'मुक्त पतन' (Free Fall) कर रही वस्तु की भौतिक स्थिति क्या होती है?",
+    "o": [
+      "It moves with a constant velocity (यह नियत वेग से गति करती है)",
+      "It moves with a constant acceleration of $9.8 \\text{ m/s}^2$ irrespective of its mass (यह अपने द्रव्यमान पर निर्भर किए बिना 9.8 मी/से² के नियत त्वरण से गति करती है)",
+      "Its weight increases exponentially every second (इसका भार हर सेकंड तेजी से बढ़ता है)",
+      "It undergoes continuous mechanical polarization (यह निरंतर यांत्रिक ध्रुवण से गुजरती है)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> मुक्त पतन में वस्तु पर केवल गुरुत्वीय त्वरण कार्य करता है, जो वस्तु के द्रव्यमान से स्वतंत्र होता है। इसलिए सभी वस्तुएं समान नियत त्वरण ($9.8\\text{ m/s}^2$) से नीचे गिरती हैं।"
+  },
+  {
+    "cat": "gs",
+    "sub": "motion",
+    "qe": "If a heavy iron hammer and a light bird feather are dropped simultaneously from the exact same height in a complete vacuum chamber, what will be observed?",
+    "qh": "यदि एक भारी लोहे के हथौड़े और एक हल्के पक्षी के पंख को एक पूर्ण निर्वात कक्ष (vacuum chamber) में बिल्कुल समान ऊंचाई से एक साथ छोड़ा जाए, तो क्या देखा जाएगा?",
+    "o": [
+      "The hammer will reach the bottom much faster because it is heavier (हथौड़ा भारी होने के कारण पहले नीचे पहुंचेगा)",
+      "Both will reach the bottom at the exact same time (दोनों बिल्कुल एक ही समय में नीचे पहुंचेंगे)",
+      "The feather will float upwards due to buoyancy matrix (पंख उत्प्लावन के कारण ऊपर तैरने लगेगा)",
+      "The velocity of both objects drops to absolute zero inside vacuum (निर्वात में दोनों का वेग शून्य हो जाएगा)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> निर्वात में वायु का प्रतिरोध (air resistance) शून्य होता है। चूंकि मुक्त पतन में त्वरण द्रव्यमान पर निर्भर नहीं करता, इसलिए दोनों वस्तुएं बिल्कुल समान दर से गिरकर एक ही समय में नीचे पहुंचेंगी।"
+  },
+  {
+    "cat": "gs",
+    "sub": "motion",
+    "qe": "Why does a flat sheet of paper fall slower than the same sheet of paper crumpled into a tight ball when dropped in a normal room with air?",
+    "qh": "सामान्य हवा वाले कमरे में छोड़ने पर कागज की एक समतल शीट उसी कागज को मोड़कर बनाई गई छोटी गेंद की तुलना में धीमी क्यों गिरती है?",
+    "o": [
+      "Because crumpling changes the mass of the paper (क्योंकि मोड़ने से कागज का द्रव्यमान बदल जाता है)",
+      "Because the flat sheet has a larger surface area and experiences greater air resistance (क्योंकि समतल शीट का पृष्ठीय क्षेत्रफल अधिक होता है और वह अधिक वायु प्रतिरोध का अनुभव करती है)",
+      "Because the crumpled ball gains extra gravitational constant (क्योंकि गेंद को अतिरिक्त गुरुत्वाकर्षण मिलता है)",
+      "Because flat shapes are repelled by the Earth's magnetic core (क्योंकि समतल आकारों को पृथ्वी का चुंबकीय कोर प्रतिकर्षित करता है)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> वास्तविक दुनिया में हवा का प्रतिरोध गति का विरोध करता है। समतल शीट का क्षेत्रफल अधिक होने से उस पर लगने वाला वायु प्रतिरोध (air resistance) अधिक होता है, जो उसे धीमा कर देता है।"
+  },
+  {
+    "cat": "gs",
+    "sub": "motion",
+    "qe": "In physics, what is the core distinction between the terms 'Thrust' and 'Pressure'?",
+    "qh": "भौतिकी में 'प्रणोद' (Thrust) और 'दाब' (Pressure) शब्दों के बीच मुख्य अंतर क्या है?",
+    "o": [
+      "Thrust is a scalar quantity and Pressure is a vector vector (प्रणोद अदिश है और दाब सदिश है)",
+      "Thrust is the total perpendicular force acting on a surface, while Pressure is the thrust acting per unit area (प्रणोद सतह पर लगने वाला कुल लंबवत बल है, जबकि दाब प्रति इकाई क्षेत्रफल पर लगने वाला प्रणोद है)",
+      "Both measure the same parameters with identical units (दोनों समान मात्रक वाले पैरामीटर हैं)",
+      "Pressure does not depend on the surface area parameter (दाब सतह के क्षेत्रफल पर निर्भर नहीं करता)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> प्रणोद सतह पर लगने वाला कुल लंबवत बल (total perpendicular force) है, जबकि दाब इस बल का प्रति इकाई क्षेत्रफल प्रभाव ($P = \\frac{\\text{Thrust}}{\\text{Area}}$) होता है।"
+  },
+  {
+    "cat": "gs",
+    "sub": "motion",
+    "qe": "What is the derived SI unit of Pressure, and what is its alternative scientific name named after a famous physicist?",
+    "qh": "दाब (Pressure) का व्युत्पन्न एसआई (SI) मात्रक क्या है, और एक प्रसिद्ध भौतिकविद् के नाम पर इसका वैकल्पिक वैज्ञानिक नाम क्या है?",
+    "o": [
+      "Newtons per meter, Joule (न्यूटन प्रति मीटर, जूल)",
+      "Newtons per square meter ($\text{N/m}^2$), Pascal (PA) (न्यूटन प्रति वर्ग मीटर, पास्कल)",
+      "Kilograms per cubic meter, Hertz (किलोग्राम प्रति घन मीटर, हर्ट्ज़)",
+      "Watts per second, Newton (वाट प्रति सेकंड, न्यूटन)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> दाब बल और क्षेत्रफल का अनुपात है, इसलिए इसका मात्रक $\\text{N/m}^2$ होता है। ब्लेज़ पास्कल के सम्मान में इसे पास्कल (Pa) भी कहा जाता है।"
+  },
+  {
+    "cat": "gs",
+    "sub": "motion",
+    "qe": "Why does a person sink deep into loose sand when standing on feet, but does not sink much when lying down on the same sand?",
+    "qh": "कोई व्यक्ति रेत पर पैरों के बल खड़ा होने पर उसमें गहरा धंस जाता है, लेकिन उसी रेत पर लेटने पर वह बहुत कम धंसता है। ऐसा क्यों होता है?",
+    "o": [
+      "Because the mass of the body decreases when lying down (क्योंकि लेटने पर शरीर का द्रव्यमान घट जाता है)",
+      "Because standing concentrates the weight on a smaller area creating higher pressure, while lying down spreads the force over a large area reducing pressure (खड़े होने पर भार कम क्षेत्रफल पर केंद्रित होता है जिससे दाब अधिक बनता है, जबकि लेटने पर बल बड़े क्षेत्रफल पर फैल जाता है जिससे दाब घट जाता है)",
+      "Because loose sand absorbs horizontal force components (क्योंकि रेत क्षैतिज बल को अवशोषित करती है)",
+      "Because gravity pull decreases in a horizontal posture (क्योंकि क्षैतिज मुद्रा में गुरुत्वाकर्षण खिंचाव कम हो जाता है)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> दोनों स्थितियों में भार (बल) समान है। खड़े होने पर पैरों का क्षेत्रफल कम होने से दाब ($P = \\frac{F}{A}$) बहुत बढ़ जाता है, जिससे पैर रेत में धंस जाते हैं। लेटने पर क्षेत्रफल बढ़ने से दाब घट जाता है।"
+  },
+  {
+    "cat": "gs",
+    "sub": "motion",
+    "qe": "Why are heavy transport trucks designed with multiple wide and thick tires instead of thin normal tires?",
+    "qh": "भारी परिवहन ट्रकों को पतले सामान्य टायरों के बजाय कई चौड़े और मोटे टायरों के साथ क्यों डिज़ाइन किया जाता है?",
+    "o": [
+      "To increase the structural weight of the truck core (ट्रक का वजन बढ़ाने के लिए)",
+      "To increase the area of contact with the ground, thereby reducing the pressure exerted by the heavy weight on the road (जमीन के साथ संपर्क क्षेत्रफल बढ़ाने के लिए, जिससे सड़क पर भारी वजन द्वारा लगने वाला दाब कम हो जाता है)",
+      "To maximize the speed of the axle in vacuum (लेंस की एक्सल गति बढ़ाने के लिए)",
+      "To block the magnetic friction of the ground plane (जमीन के चुंबकीय घर्षण को रोकने के लिए)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> भारी ट्रकों का वजन बहुत अधिक होता है। चौड़े टायर जमीन के साथ संपर्क क्षेत्रफल (Area) बढ़ा देते हैं, जिससे सड़क पर लगने वाला दाब कम हो जाता है और सड़क धंसने या टूटने से बच जाती है।"
+  },
+  {
+    "cat": "gs",
+    "sub": "motion",
+    "qe": "Why do camels walk and run across loose desert sand much more comfortably compared to horses or humans?",
+    "qh": "घोड़ों या मनुष्यों की तुलना में ऊँट रेगिस्तान की ढीली रेत पर बहुत अधिक आराम से क्यों चल और दौड़ सकते हैं?",
+    "o": [
+      "Because camels possess zero mass configuration (क्योंकि ऊँटों में द्रव्यमान नहीं होता)",
+      "Because camels have wide, padded feet that increase the contact area and reduce the pressure on the sand (क्योंकि ऊँटों के पैर चौड़े और गद्देदार होते हैं जो संपर्क क्षेत्रफल बढ़ाते हैं और रेत पर दाब कम करते हैं)",
+      "Because camels are not affected by the Earth's gravity grid (क्योंकि ऊँटों पर गुरुत्वाकर्षण का प्रभाव नहीं पड़ता)",
+      "Because their skin absorbs thermal sand molecules (क्योंकि उनकी त्वचा रेत को अवशोषित करती है)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> ऊँटों के पैर चौड़े होने के कारण रेत पर उनके शरीर के भार द्वारा लगाया जाने वाला दाब काफी कम हो जाता है, जिससे उनके पैर रेत में नहीं धंसते और वे आसानी से दौड़ पाते हैं।"
+  },
+  {
+    "cat": "gs",
+    "sub": "motion",
+    "qe": "Cutting tools like knives, axes, and nails are explicitly manufactured with sharp edges or pointed ends. This geometric design aims to:",
+    "qh": "चाकू, कुल्हाड़ी और कील जैसे काटने वाले औजारों को जानबूझकर तेज किनारों (sharp edges) या नुकीले सिरों के साथ बनाया जाता है। इस ज्यामितीय डिज़ाइन का उद्देश्य क्या है?",
+    "o": [
+      "To maximize the surface area of contact (संपर्क के पृष्ठीय क्षेत्रफल को अधिकतम करना)",
+      "To minimize the contact area so that a small force produces a very large pressure to cut or pierce (संपर्क क्षेत्रफल को न्यूनतम करना ताकि एक छोटा बल भी काटने या छेदने के लिए बहुत बड़ा दाब उत्पन्न करे)",
+      "To change the chemical composition of the objects being cut (काटी जा रही वस्तुओं की रासायनिक संरचना बदलना)",
+      "To absorb the internal mechanical stress vectors (आंतरिक यांत्रिक तनाव को अवशोषित करना)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> नुकीला या तेज सिरा संपर्क क्षेत्रफल ($A$) को अत्यंत सूक्ष्म कर देता है। इसके कारण जब थोड़ा सा भी बल लगाया जाता है, तो दाब ($P = \\frac{F}{A}$) बहुत अधिक बनता है, जिससे वस्तु आसानी से कट जाती है।"
+  },
+  {
+    "cat": "gs",
+    "sub": "motion",
+    "qe": "Fluids (liquids and gases) exert pressure inside a closed container. Unlike solids, how do fluids transmit this pressure?",
+    "qh": "तरल पदार्थ (द्रव और गैस) एक बंद बर्तन के भीतर दाब लगाते हैं। ठोस पदार्थों के विपरीत, तरल पदार्थ इस दाब को किस प्रकार संचारित करते हैं?",
+    "o": [
+      "Only in the downward direction due to weight parameters (केवल नीचे की दिशा में अपने वजन के कारण)",
+      "Symmetrically in all directions, onto the base as well as against the walls of the container (सभी दिशाओं में समान रूप से, बर्तन के आधार पर और उसकी दीवारों के विरुद्ध भी)",
+      "Only along the vertical orientation vector lines (केवल ऊर्ध्वाधर रेखाओं के अनुदिश)",
+      "Fluids cannot exert any lateral pressure components (तरल पदार्थ दीवारों पर कोई दाब नहीं लगा सकते)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> ठोस केवल नीचे की ओर दाब लगाते हैं, परंतु तरल पदार्थों के अणु गति करने के लिए स्वतंत्र होते हैं। वे बर्तन के आधार के साथ-साथ उसकी दीवारों से भी टकराते हैं, अतः दाब सभी दिशाओं में लगता है।"
+  },
+  {
+    "cat": "gs",
+    "sub": "motion",
+    "qe": "How does the hydrostatic pressure inside a static liquid layer fundamentally change with the depth of the fluid?",
+    "qh": "एक स्थिर द्रव परत के भीतर द्रवस्थैतिक दाब (hydrostatic pressure) मूल रूप से द्रव की गहराई (Depth) के साथ किस प्रकार बदलता है?",
+    "o": [
+      "It decreases continuously as you go deeper (गहराई में जाने पर लगातार घटता है)",
+      "It increases continuously with depth due to the increasing weight of the liquid column above (गहराई के साथ लगातार बढ़ता है क्योंकि ऊपर के द्रव कॉलम का वजन बढ़ता जाता है)",
+      "It remains completely constant everywhere regardless of depth (गहराई के बावजूद हर जगह स्थिर रहता है)",
+      "It drops to zero at the exact center of the pool grid (तालाब के केंद्र में शून्य हो जाता है)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> जैसे-जैसे हम द्रव में नीचे गहराई में जाते हैं, हमारे ऊपर स्थित द्रव की मात्रा (कॉलम का भार) बढ़ती जाती है। इस भार वृद्धि के कारण गहराई के साथ दाब भी लगातार बढ़ता जाता है।"
+  },
+  {
+    "cat": "gs",
+    "sub": "motion",
+    "qe": "Two distinct liquids, Liquid X (highly dense) and Liquid Y (less dense), are filled to the same height in identical tubes. Which liquid will exert more pressure at the base?",
+    "qh": "दो अलग-अलग द्रव, द्रव X (उच्च घनत्व) और द्रव Y (कम घनत्व), समान ऊंचाई तक दो समान नलियों में भरे गए हैं। कौन सा द्रव आधार पर अधिक दाब लगाएगा?",
+    "o": [
+      "Liquid Y, because less dense liquids move faster (द्रव Y, क्योंकि कम घनत्व वाले द्रव तेज चलते हैं)",
+      "Liquid X, because a liquid with more density exerts more pressure at a given depth (द्रव X, क्योंकि अधिक घनत्व वाला द्रव एक निश्चित गहराई पर अधिक दाब लगाता है)",
+      "Both will exert the exact same pressure since heights are equal (दोनों समान दाब लगाएंगे क्योंकि ऊंचाइयां बराबर हैं)",
+      "Neither liquid can exert pressure at the base matrix (कोई भी द्रव आधार पर दाब नहीं लगा सकता)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> दाब द्रव के स्तंभ के भार पर निर्भर करता है। उच्च घनत्व (optically/mass denser) वाले द्रव का भार समान आयतन के लिए अधिक होगा, इसलिए वह आधार पर अधिक दाब लगाएगा।"
+  },
+  {
+    "cat": "gs",
+    "sub": "motion",
+    "qe": "What is the phenomenon of 'Buoyancy' or 'Upthrust' encountered when an object is immersed in a fluid?",
+    "qh": "जब किसी वस्तु को किसी तरल पदार्थ में डुबोया जाता है, तो सामने आने वाली 'उत्प्लावकता' (Buoyancy) या 'उत्प्लावन बल' (Upthrust) की घटना क्या है?",
+    "o": [
+      "A downward mechanical force pulling the object to the bottom (नीचे की ओर खींचने वाला बल)",
+      "The net upward force exerted by a fluid on any object immersed in it, opposing its weight (किसी तरल द्वारा उसमें डूबी वस्तु पर ऊपर की ओर लगाया जाने वाला नेट बल, जो उसके भार का विरोध करता है)",
+      "The surface tension breaking code at the liquid boundary (सतह के तनाव को तोड़ने वाला बल)",
+      "A horizontal drag slowing down the spatial vector velocity (वेग को धीमा करने वाला क्षैतिज खिंचाव)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> जब किसी वस्तु को तरल में डुबोया जाता है, तो तरल उस पर ऊपर की ओर एक नेट बल लगाता है। इस ऊर्ध्वाधर ऊपर की ओर लगने वाले बल को ही उत्प्लावन बल या अपथ्रस्ट कहते हैं।"
+  },
+  {
+    "cat": "gs",
+    "sub": "motion",
+    "qe": "An empty plastic bottle with its cap tightly sealed is pushed hard into a bucket of water. When released, it immediate jumps back to the surface. What force causes this behavior?",
+    "qh": "एक खाली प्लास्टिक की बोतल जिसका ढक्कन कसकर बंद है, पानी की बाल्टी में नीचे की ओर धकेली जाती है। छोड़ने पर वह तुरंत सतह पर वापस कूदती है। कौन सा बल इस व्यवहार का कारण बनता है?",
+    "o": [
+      "Gravitational pull of the upper cloud matrix (ऊपरी बादलों का गुरुत्वाकर्षण खिंचाव)",
+      "The upward buoyant force (upthrust) exerted by water which is greater than the weight of the empty bottle (पानी द्वारा लगाया गया ऊपर की ओर उत्प्लावन बल जो खाली बोतल के भार से बहुत अधिक है)",
+      "The electrostatic repulsion of plastic polymers (प्लास्टिक का स्थिरवैद्युत प्रतिकर्षण)",
+      "Atmospheric pressure pressing from the sides (दीवारों से दबाव)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> खाली बोतल का भार (नीचे की ओर बल) बहुत कम होता है, लेकिन पानी द्वारा उस पर लगाया जाने वाला उत्प्लावन बल (ऊपर की ओर बल) बहुत अधिक होता है। यह नेट ऊपर की ओर बल बोतल को सतह पर वापस भेज देता है।"
+  },
+  {
+    "cat": "gs",
+    "sub": "motion",
+    "qe": "What core discovery did the ancient scientist Archimedes state regarding the magnitude of the buoyant force acting on a body?",
+    "qh": "प्राचीन वैज्ञानिक आर्कमीडीज ने किसी पिंड पर कार्य करने वाले उत्प्लावन बल के परिमाण के संबंध में कौन सी मुख्य खोज बताई थी?",
+    "o": [
+      "The buoyant force is equal to the total mass of the object immersed (उत्प्लावन बल वस्तु के कुल द्रव्यमान के बराबर होता है)",
+      "The buoyant force experienced by a body immersed fully or partially in a fluid is exactly equal to the weight of the fluid displaced by it (किसी तरल में पूरी या आंशिक रूप से डूबी वस्तु द्वारा अनुभव किया जाने वाला उत्प्लावन बल उसके द्वारा हटाए गए तरल के भार के ठीक बराबर होता है)",
+      "The upthrust depends only on the color of the fluid matrix (उत्प्लावन बल केवल तरल के रंग पर निर्भर करता है)",
+      "The upward force is strictly zero inside clean vacuum spaces (साफ निर्वात में ऊपर की ओर बल शून्य होता है)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> आर्कमीडीज का सिद्धांत स्पष्ट करता है कि जब कोई पिंड किसी तरल में डूबा होता है, तो उस पर लगने वाला अपथ्रस्ट बल पिंड द्वारा हटाए गए (displaced) तरल के वास्तविक भार के बिल्कुल बराबर होता है।"
+  },
+  {
+    "cat": "gs",
+    "sub": "motion",
+    "qe": "According to Archimedes' principle, what factors directly determine the total magnitude of the upthrust experienced by an immersed object?",
+    "qh": "आर्कमीडीज के सिद्धांत के अनुसार, कौन से कारक डूबी हुई वस्तु द्वारा अनुभव किए जाने वाले उत्प्लावन बल के कुल परिमाण को सीधे निर्धारित करते हैं?",
+    "o": [
+      "The mass and color profile of the object substrate (वस्तु का द्रव्यमान और उसका रंग)",
+      "The volume of the object immersed inside the fluid and the density of that fluid (तरल के भीतर डूबी हुई वस्तु का आयतन और उस तरल का घनत्व)",
+      "The absolute atmospheric pressure outside the container (बर्तन के बाहर का वायुमंडलीय दबाव)",
+      "The depth of the pool floor from the surface plane (सतह से पूल के फर्श की गहराई)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> हटाए गए द्रव का भार उसके आयतन ($V$) और घनत्व ($\\rho$) पर निर्भर करता है ($W = V\\rho g$)। इसलिए डूबा हुआ आयतन जितना अधिक होगा और द्रव जितना घना होगा, उत्प्लावन बल उतना ही अधिक होगा।"
+  },
+  {
+    "cat": "gs",
+    "sub": "motion",
+    "qe": "Why is it historically much easier for a human body to float and swim in sea water compared to fresh water pools or rivers?",
+    "qh": "ताजे पानी के तालाबों या नदियों की तुलना में मानव शरीर के लिए समुद्र के पानी (Sea Water) में तैरना ऐतिहासिक रूप से बहुत आसान क्यों होता है?",
+    "o": [
+      "Because sea water contains no gravitational constant fields (क्योंकि समुद्र के पानी में गुरुत्वाकर्षण नहीं होता)",
+      "Because sea water contains dissolved salts which increase its density, thereby exerting a greater buoyant upthrust on the swimmer (क्योंकि समुद्र के पानी में घुले हुए नमक होते हैं जो इसका घनत्व बढ़ाते हैं, जिससे तैराक पर अधिक उत्प्लावन बल लगता है)",
+      "Because the waves of the sea always push everything upwards horizontally (क्योंकि समुद्र की लहरें क्षैतिज रूप से धक्का देती हैं)",
+      "Because sea water triggers a lower surface area coordinate (क्योंकि समुद्र का पानी पृष्ठीय क्षेत्रफल कम करता है)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> समुद्र के पानी में लवण घुले होने के कारण उसका घनत्व (density) साधारण नदी के पानी से अधिक होता है। आर्कमीडीज के नियमानुसार, अधिक घनत्व के कारण वह शरीर पर अधिक उत्प्लावन बल लगाता है, जिससे तैरना आसान हो जाता।"
+  },
+  {
+    "cat": "gs",
+    "sub": "motion",
+    "qe": "An iron nail sinks immediately when dropped in water, but a massive cargo ship constructed out of the same iron floats smoothly. Why does the massive ship float?",
+    "qh": "लोहे की एक कील पानी में तुरंत डूब जाती है, लेकिन उसी लोहे से बना एक विशाल मालवाहक जहाज आसानी से तैरता है। विशाल जहाज क्यों तैरता है?",
+    "o": [
+      "Because the ship alters the fundamental mass of the iron grid (क्योंकि जहाज लोहे का द्रव्यमान बदल देता है)",
+      "Because the ship is hollow and encloses a large volume of air, allowing it to displace a huge weight of water equal to or more than its own weight (क्योंकि जहाज खोखला होता है और उसमें हवा का बड़ा आयतन होता है, जिससे वह अपने भार के बराबर या उससे अधिक पानी का भारी वजन हटा पाता है)",
+      "Because large shapes are naturally repelled by water molecules (क्योंकि बड़े आकारों को पानी के अणु प्रतिकर्षित करते हैं)",
+      "Because the ship moves faster than the nail matrix (क्योंकि जहाज की गति कील से तेज होती है)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> लोहे की कील ठोस है, वह अपने भार से अधिक पानी नहीं हटा पाती। जहाज विशाल और भीतर से खोखला (hollow) होता है। बड़ा आयतन होने के कारण वह अपने कुल भार के बराबर पानी आसानी से विस्थापित कर देता है और तैरता है।"
+  },
+  {
+    "cat": "gs",
+    "sub": "motion",
+    "qe": "When you stand on a highly sensitive weighing machine in a room filled with air, the machine tracks your mass. How does this recorded reading compare to your actual true mass?",
+    "qh": "जब आप हवा से भरे कमरे में एक संवेदनशील वेइंग मशीन पर खड़े होते हैं, तो मशीन आपका द्रव्यमान रिकॉर्ड करती है। यह रिकॉर्ड की गई रीडिंग आपके वास्तविक सच्चे द्रव्यमान से किस प्रकार तुलना करती है?",
+    "o": [
+      "The machine shows exactly your true absolute mass (मशीन बिल्कुल आपका सच्चा द्रव्यमान दिखाती है)",
+      "The machine shows a slightly lower reading than your true mass because the surrounding air exerts a small upward buoyant force on your body (मशीन आपके वास्तविक द्रव्यमान से थोड़ा कम रीडिंग दिखाती है क्योंकि आसपास की हवा आपके शरीर पर थोड़ा ऊपर की ओर उत्प्लावन बल लगाती है)",
+      "The machine shows a highly exaggerated increased mass vector (मशीन बहुत बढ़ा हुआ द्रव्यमान दिखाती है)",
+      "The reading drops to zero due to atmospheric friction metrics (वायुमंडलीय घर्षण के कारण रीडिंग शून्य हो जाती है)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> हम हवा के सागर में डूबे हैं। हमारा शरीर जितनी हवा हटाता है, वह हवा हम पर ऊपर की ओर एक छोटा सा उत्प्लावन बल (upthrust) लगाती है। यह बल हमारे आभासी भार को कम कर देता है, जिससे मशीन थोड़ा कम मान दिखाती है।"
+  },
+  {
+    "cat": "gs",
+    "sub": "motion",
+    "qe": "If we compare $100\\text{ kg}$ of cotton and $100\\text{ kg}$ of iron measured on a standard spring balance exposed to air, which one possesses more actual true mass when evaluated in a vacuum?",
+    "qh": "यदि हम हवा में एक मानक स्प्रिंग बैलेंस पर मापे गए $100\\text{ kg}$ कपास (Cotton) और $100\\text{ kg}$ लोहे (Iron) की तुलना करें, तो निर्वात में मूल्यांकन करने पर किसके पास अधिक वास्तविक सच्चा द्रव्यमान होगा?",
+    "o": [
+      "Both will possess the exact identical true mass matrix (दोनों का सच्चा द्रव्यमान बिल्कुल समान होगा)",
+      "$100\\text{ kg}$ of cotton possesses more actual true mass because its large volume experiences a much greater upward buoyant force from air (100 किग्रा कपास में अधिक वास्तविक द्रव्यमान होगा क्योंकि इसका आयतन बड़ा होने से यह हवा से बहुत अधिक उत्प्लावन बल का अनुभव करता है)",
+      "$100\\text{ kg}$ of iron possesses more true mass because iron is dense (100 किग्रा लोहे में अधिक सच्चा द्रव्यमान होगा क्योंकि लोहा सघन है)",
+      "The true mass cannot be evaluated due to space constants breakdown (सच्चे द्रव्यमान का मूल्यांकन नहीं किया जा सकता)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> कपास का घनत्व बहुत कम होता है, इसलिए 100 किग्रा कपास का आयतन लोहे से बहुत विशाल होगा। बड़ा आयतन होने के कारण हवा उस पर बहुत अधिक उत्प्लावन बल लगाएगी। हवा में 100 किग्रा दिखने के लिए उसका वास्तविक द्रव्यमान लोहे से अधिक होना चाहिए।"
+  },
+  {
+    "cat": "gs",
+    "sub": "motion",
+    "qe": "What is the primary scientific criterion that determines whether a given solid object will float or sink when placed on the surface of a fluid?",
+    "qh": "वह मुख्य वैज्ञानिक मानदंड क्या है जो यह निर्धारित करता है कि कोई ठोस वस्तु किसी तरल की सतह पर रखने पर तैरेगी (Float) या डूब जाएगी (Sink)?",
+    "o": [
+      "The total absolute weight of the object regardless of size (वस्तु का कुल भार चाहे आकार कुछ भी हो)",
+      "The comparison between the density of the object and the density of the fluid (वस्तु के घनत्व और तरल के घनत्व के बीच की तुलना)",
+      "The total depth of the container substrate (बर्तन की कुल गहराई)",
+      "The chemical cross-action of surface polymers (सतह के पॉलीमर की रासायनिक क्रिया)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> यदि वस्तु का घनत्व तरल के घनत्व से अधिक ($\\rho_{\\text{object}} > \\rho_{\\text{fluid}}$) है, तो वह डूब जाएगी। यदि वस्तु का घनत्व तरल से कम है, तो वह तरल की सतह पर तैरेगी।"
+  },
+  {
+    "cat": "gs",
+    "sub": "motion",
+    "qe": "An object whose density is exactly equal to the density of the liquid is placed completely inside that liquid. What unique state of motion will it exhibit?",
+    "qh": "एक वस्तु जिसका घनत्व द्रव के घनत्व के बिल्कुल बराबर है, पूरी तरह से उस द्रव के भीतर रखी जाती है। वह गति की कौन सी अनूठी स्थिति प्रदर्शित करेगी?",
+    "o": [
+      "It will instantly shoot upwards and jump out of the surface (यह तुरंत ऊपर की ओर जाएगी और सतह से बाहर कूद जाएगी)",
+      "It will remain suspended and stay at whatever depth it is placed within the liquid (यह लिक्विड में निलंबित रहेगी और इसे द्रव में जिस गहराई पर भी छोड़ेंगे, यह वहीं बनी रहेगी)",
+      "It will immediately drop down to the bottom floor like a stone (यह पत्थर की तरह तुरंत नीचे फर्श पर गिर जाएगी)",
+      "It will start rotating along the center axis at infinite speed (यह अनंत गति से केंद्र अक्ष पर घूमने लगेगी)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> जब वस्तु और द्रव का घनत्व बिल्कुल बराबर होता है, तो वस्तु पर लगने वाला अपथ्रस्ट बल उसके भार को पूरी तरह संतुलित कर देता है। ऐसी वस्तु को द्रव में जहाँ भी छोड़ा जाता है, वह वहीं निलंबित (suspended) बनी रहती है।"
   }
 ]
