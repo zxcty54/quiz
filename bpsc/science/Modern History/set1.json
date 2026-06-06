@@ -1,352 +1,437 @@
 [
   {
-    "p_id": "bpsc_hist_fresh_01",
-    "qe": "During the 19th century, a regressive social custom under the name of 'Kulinism' heavily degraded the position of women through institutionalized polygamy and mismatched marriages. This system was predominantly prevalent in which region of India?",
-    "qh": "19वीं शताब्दी के दौरान, 'कुलीनवाद' (Kulinism) नाम से प्रचलित एक प्रतिगामी सामाजिक प्रथा ने संस्थागत बहुविवाह और बेमेल विवाहों के माध्यम से महिलाओं की स्थिति को भारी ठेस पहुँचाई। यह व्यवस्था मुख्य रूप से भारत के किस क्षेत्र में प्रचलित थी?",
-    "o": ["Bengal", "Madras Presidency", "Punjab", "Maharashtra"],
-    "a": 0,
-    "e": "<b>Detailed Explanation:</b> In 19th-century Bengal, under the social system of Kulinism, highly exploitative forms of polygamy were practiced. Under this custom, even elderly men belonging to upper castes married very young girls, often leaving them abandoned or destitute, which severely degraded the overall position of women."
-  },
-  {
-    "p_id": "bpsc_hist_fresh_02",
-    "qe": "Which prominent early socio-religious reformer explicitly challenged orthodox clerical groups by condemning the practice of Sati as a 'murder according to every shastra'?",
-    "qh": "किस प्रमुख प्रारंभिक सामाजिक-धार्मिक सुधारक ने सती प्रथा की स्पष्ट रूप से 'प्रत्येक शास्त्र के अनुसार हत्या' के रूप में निंदा करके रूढ़िवादी लिपिकीय समूहों को चुनौती दी थी?",
-    "o": ["Ishwar Chandra Vidyasagar", "Raja Rammohan Roy", "Dayanand Saraswati", "Mahadev Govind Ranade"],
-    "a": 1,
-    "e": "<b>Detailed Explanation:</b> Raja Rammohan Roy was the pioneering reformer of modern India who led a historic campaign against the practice of Sati. He used scriptural analysis to fight orthodox opposition, explicitly stating that the forced immolation of widows was nothing short of a 'murder according to every shastra'."
-  },
-  {
-    "p_id": "bpsc_hist_fresh_03",
-    "qe": "The rigid stratification and social segregation associated with the caste system in modern India created major barriers against which democratic development?",
-    "qh": "आधुनिक भारत में जाति व्यवस्था से जुड़े कड़े स्तरीकरण और सामाजिक अलगाव ने किस लोकतांत्रिक विकास के खिलाफ प्रमुख बाधाएं पैदा कीं?",
-    "o": ["The growth of a united national feeling and democratic spirit", "The introduction of land revenue collection frameworks", "The establishing of cross-border maritime trading networks", "The direct legal translation of Western scientific texts"],
-    "a": 0,
-    "e": "<b>Detailed Explanation:</b> The rigid caste system in India checked social mobility, checked individual initiative, and splintered society into numerous fragmented groups based on ritual status. In modern times, this fragmentation became a major structural obstacle to the development of a united national feeling and the spread of democracy."
-  },
-  {
-    "p_id": "bpsc_hist_fresh_04",
-    "qe": "The dissemination of colonial culture and ideology as the dominant current by British rule triggered a reactive cultural movement among 19th-century Indian intellectuals. This response was characterized by:",
-    "qh": "ब्रिटिश शासन द्वारा औपनिवेशिक संस्कृति और विचारधारा के प्रसार ने 19वीं शताब्दी के भारतीय बुद्धिजीवियों के बीच एक प्रतिक्रियात्मक सांस्कृतिक आंदोलन को जन्म दिया। इस प्रतिक्रिया की विशेषता क्या थी?",
-    "o": ["An immediate and total legal conversion to Western religious practices", "An attempt to reinvigorate traditional institutions and realize the potential of traditional culture", "The total abandonment of scriptural studies across all local languages", "A spontaneous mass migration toward non-colonized European territories"],
-    "a": 1,
-    "e": "<b>Detailed Explanation:</b> Faced with the challenge of an intrusive colonial culture and ideology, enlightened Indian thinkers did not blindly accept Westernization. Instead, they sought to reinvigorate traditional institutions, purge them of social evils, and realize the true reforming potential of traditional culture."
-  },
-  {
-    "p_id": "bpsc_hist_fresh_05",
-    "qe": "What primary realization catalyzed the shared conviction among English-educated Indian youth in the late 19th century to reform their own socio-religious structures?",
-    "qh": "19वीं शताब्दी के उत्तरार्ध में अंग्रेजी-शिक्षित भारतीय युवाओं के बीच अपने स्वयं के सामाजिक-धार्मिक ढांचों में सुधार करने के साझा विश्वास को किस प्राथमिक अहसास ने प्रेरित किया?",
-    "o": ["The awareness that India was colonized due to internal weaknesses within its own social structure and culture", "The absolute lack of rich mineral reservoirs in the sub-Himalayan zones", "The dynamic degradation of linear agricultural productivity indices", "The sudden structural breakdown of natural wildlife biomes"],
-    "a": 0,
-    "e": "<b>Detailed Explanation:</b> The impact of modern Western ideas and the reality of defeat by a foreign power made educated Indians introspect. They realized that a vast country like India had been colonized by a handful of foreigners primarily because of deep structural weaknesses, superstitions, and social fragmentation within the Indian society and culture, which highlighted the urgent need for internal reform."
-  },
-  {
-    "p_id": "bpsc_gs_set4_01",
-    "qe": "During the 19th century, social reformers initially linked social movements directly with religious reforms. What was the primary reason for this close structural linkage?",
-    "qh": "19वीं शताब्दी के दौरान, सामाजिक सुधारकों ने शुरू में सामाजिक आंदोलनों को सीधे धार्मिक सुधारों से जोड़ा। इस करीबी संरचनात्मक जुड़ाव का प्राथमिक कारण क्या था?",
+    "id": 1,
+    "qe": "What was the overarching administrative aim of the British policy-makers in India immediately following the post-war national scenario of 1946?",
+    "qh": "1946 के युद्धोत्तर राष्ट्रीय परिदृश्य के तुरंत बाद भारतीय शासन के संबंध में ब्रिटिश नीति-निर्माताओं का सर्वोपरि प्रशासनिक उद्देश्य क्या था?",
     "o": [
-      "Nearly all social ills like untouchability and gender inequality derived institutional legitimacy from religion",
-      "The colonial government mandated that all social changes must be cleared by religious bodies",
-      "Indian languages lacked secular terms to propagate ideas to the lower strata of society",
-      "The early upper-class reformers aimed to establish a new monotheistic state religion legally"
+      "A graceful withdrawal after a settlement on the modalities of the transfer of power",
+      "The complete, permanent dynamic expansion of direct imperial crown colonies",
+      "The immediate military suppression of all regional legislative assemblies",
+      "A total structural liquidation of the entire Indian Civil Service infrastructure"
     ],
     "a": 0,
-    "e": "<b>Detailed Explanation:</b> Social reform movements were initially tied to religion because major social evils, including untouchability and gender-based discrimination, derived their validation, authority, and structural legitimacy from misinterpreted religious traditions and scriptures."
+    "e": "<b>Detailed Explanation:</b> By 1946, the British government realized that a settlement was necessary for burying the ghost of mass movements. The primary objective shifted entirely toward executing a graceful withdrawal after reaching an agreement on the modalities of the transfer of power and the nature of post-imperial India-Britain relations."
   },
   {
-    "p_id": "bpsc_gs_set4_02",
-    "qe": "Which of the following organizations was among the earliest institutional setups instrumental in spearheading social reforms in India before the national movement took over leadership in the 20th century?",
-    "qh": "20वीं शताब्दी में राष्ट्रीय आंदोलन द्वारा नेतृत्व संभालने से पहले, भारत में सामाजिक सुधारों का नेतृत्व करने में सहायक शुरुआती संस्थागत सेटअपों में से कौन सा संगठन शामिल था?",
+    "id": 2,
+    "qe": "On the eve of the Cabinet Mission’s arrival, what specific timeline sequence did the Congress demand regarding the settlement of minorities’ demands?",
+    "qh": "कैबिनेट मिशन के आगमन की पूर्व संध्या पर, अल्पसंख्यकों की मांगों के निपटारे के संबंध में कांग्रेस ने किस विशिष्ट समय-सीमा के अनुक्रम की मांग की थी?",
     "o": [
-      "The Indian National Social Conference",
-      "The All India Scheduled Castes Federation",
-      "The Congress Khilafat Swaraj Party",
-      "The Bahishkrit Hitakarini Sabha"
+      "Minorities' demands must be worked out in an institutional framework only after the British left the country",
+      "The demands of the minorities had to be finalized before any transfer of central executive power could occur",
+      "A complete structural resolution enforced by a special three-judge panel of the High Court in London",
+      "The immediate and absolute implementation of a separate electorate blueprint before the war ended"
     ],
     "a": 0,
-    "e": "<b>Detailed Explanation:</b> In the initial stages, localized organizations such as the Indian National Social Conference, the Servants of India Society, Christian missionaries, and enlightened individuals laid the foundation for social reform long before the Indian National Congress adopted it on a mass scale."
+    "e": "<b>Detailed Explanation:</b> The Congress demanded that power be transferred to one central authority first. They maintained that minorities' demands should be worked out in a framework ranging from autonomy to self-determination, but strictly *only after* the British left."
   },
   {
-    "p_id": "bpsc_gs_set4_03",
-    "qe": "To effectively reach and mobilize the masses, 19th-century socio-religious reformers primarily relied on which communicative tool?",
-    "qh": "जनता तक प्रभावी ढंग से पहुँचने और उन्हें लामबंद करने के लिए, 19वीं शताब्दी के सामाजिक-धार्मिक सुधारक मुख्य रूप से किस संचार साधन पर निर्भर थे?",
+    "id": 3,
+    "qe": "Why did the British administration structurally prefer a united and friendly India over partition in their 1946 strategic defense policy?",
+    "qh": "ब्रिटिश प्रशासन ने अपने 1946 के रणनीतिक रक्षा नीति में विभाजन के बजाय एक संयुक्त और मित्रवत भारत को संरचनात्मक रूप से क्यों प्राथमिकता दी थी?",
     "o": [
-      "English-only political pamphlets distributed to the intelligentsia",
-      "Indian vernacular languages propagated through literature, press, and drama",
-      "Direct legal appeals filed inside the Federal Privy Council channels",
-      "Spontaneous radio broadcasts managed from non-colonial European centers"
-    ],
-    "a": 1,
-    "e": "<b>Detailed Explanation:</b> Reformers recognized that westernized media was confined to the upper classes. To penetrate the lower strata, they actively used Indian vernacular languages and multiple formats—novels, dramas, poetry, short stories, and the local press."
-  },
-  {
-    "p_id": "bpsc_gs_set4_04",
-    "qe": "The comprehensive agenda of the early socio-religious reform movements in India was fundamentally anchored on which two-point core objective?",
-    "qh": "भारत में शुरुआती सामाजिक-धार्मिक सुधार आंदोलनों का व्यापक एजेंडा मुख्य रूप से किन दो बिंदुओं के मुख्य उद्देश्य पर आधारित था?",
-    "o": [
-      "Betterment of the status of women and removal of disabilities arising out of untouchability",
-      "The absolute expansion of private land sales and total abolition of local panchayats",
-      "Promoting Western dress codes and implementing English-only educational test metrics",
-      "Securing military representations for native intermediate castes inside colonial setups"
+      "A divided India would lack in defense capability and would be a blot on Britain’s diplomacy",
+      "The princely states completely refused to award any seats to a partitioned union legislature",
+      "A united India was legally required to route 100% of its budget to the British Treasury",
+      "The separate communal electorates framework could only function within a single geographic list"
     ],
     "a": 0,
-    "e": "<b>Detailed Explanation:</b> Although the reform movements covered many diverse aspects, their core agenda focused on two major areas: improving the status and rights of women in society, and eliminating the disabilities arising from untouchability."
+    "e": "<b>Detailed Explanation:</b> The British actively bid for a united and friendly India to serve as an active partner in the defense of the Commonwealth. They calculated that a divided India would lack sufficient defense capabilities and its creation would be viewed as a failure of British diplomacy."
   },
   {
-    "p_id": "bpsc_gs_set4_05",
-    "qe": "In the 19th century, Muslim women under Islamic legal traditions possessed what specific property right compared to their contemporary Hindu counterparts?",
-    "qh": "19वीं शताब्दी में, इस्लामी कानूनी परंपराओं के तहत मुस्लिम महिलाओं के पास उनकी समकालीन हिंदू महिलाओं की तुलना में कौन सा विशिष्ट संपत्ति का अधिकार था?",
+    "id": 4,
+    "qe": "Which British Prime Minister delivered a historic speech on March 15, 1946, explicitly declaring that a minority cannot allow their veto to place a brake on the advance of the majority?",
+    "qh": "किस ब्रिटिश प्रधानमंत्री ने 15 मार्च, 1946 को एक ऐतिहासिक भाषण दिया था, जिसमें स्पष्ट रूप से घोषित किया गया था कि एक अल्पसंख्यक को बहुसंख्यक वर्ग की प्रगति पर वीटो लगाने की अनुमति नहीं दी जा सकती?",
+    "o": ["Clement Attlee", "Winston Churchill", "Ramsay MacDonald", "Stanley Baldwin"],
+    "a": 0,
+    "e": "<b>Detailed Explanation:</b> In a sharp departure from earlier partisan policies, British Prime Minister Clement Attlee stated on March 15, 1946: '...though mindful of the rights of minorities... cannot allow a minority to place their veto on advance of the majority.'"
+  },
+  {
+    "id": 5,
+    "qe": "The high-powered Cabinet Mission arrived in Delhi on March 24, 1946. What were the two core issues designated for its prolonged discussions with Indian leaders?",
+    "qh": "उच्च अधिकार प्राप्त कैबिनेट मिशन 24 मार्च, 1946 को दिल्ली पहुंचा। भारतीय नेताओं के साथ इसकी लंबी चर्चा के लिए कौन से दो मुख्य मुद्दे तय किए गए थे?",
     "o": [
-      "They could inherit property, but only half as much as men could",
-      "They enjoyed complete absolute equality with men in inheriting full agricultural holdings",
-      "They were legally barred from owning any physical real estate asset entirely",
-      "They could inherit property only if they terminated their existing marriage lines"
+      "The formation of an interim government, and the principles and procedures for framing a new constitution",
+      "The immediate boundary demarcation of Pakistan, and the collection of wartime fiscal arrears",
+      "The complete administrative liquidation of Zila Courts, and enforcing English-medium education",
+      "The allocation of independent fiat currency printing licenses among different princely states"
     ],
     "a": 0,
-    "e": "<b>Detailed Explanation:</b> Unlike 19th-century Hindu women who lacked the right to inherit property, Muslim women could inherit property under Islamic law. However, gender inequality remained, as they were legally entitled to inherit only half as much share as men could."
+    "e": "<b>Detailed Explanation:</b> The Cabinet Mission held extensive discussions with all major political parties and groups focused specifically on two crucial themes: (i) the formation of an interim government, and (ii) the principles and procedures for framing a new constitution giving freedom to India."
   },
   {
-    "p_id": "bpsc_gs_set4_06",
-    "qe": "Social reformers actively targeted reforms in the domestic sphere, arguing that a radical change in the household was essential because:",
-    "qh": "सामाजिक सुधारकों ने घरेलू क्षेत्र (domestic sphere) में सुधारों को सक्रिय रूप से लक्षित किया, यह तर्क देते हुए कि घर में आमूल-चूल परिवर्तन आवश्यक था क्योंकि:",
+    "id": 6,
+    "qe": "Why did the Cabinet Mission Plan explicitly reject the Muslim League's demand for a full-fledged sovereign Pakistan in May 1946?",
+    "qh": "कैबिनेट मिशन योजना ने मई 1946 में एक पूर्ण संप्रभु पाकिस्तान के लिए मुस्लिम लीग की मांग को स्पष्ट रूप से क्यों खारिज कर दिया था?",
     "o": [
-      "The initial socialization of individuals takes place in the home, where women play a crucial role",
-      "The colonial government offered financial subsidies only to reformed households",
-      "The domestic sphere was the primary source of state agricultural tax collections",
-      "They aimed to completely eliminate traditional family structures in favor of Western systems"
+      "The proposed Pakistan would include massive non-Muslim populations (38% in the North-West and 48% in the North-East) and its formation would disrupt deep-seated regional ties",
+      "The central Legislative Assembly had passed an absolute resolution banning any geographic partition lists",
+      "The princely states refused to extend any financial credit inputs to support a separate Muslim nation",
+      "The project lacked any technical approval or clearance from the newly established Federal Court room"
     ],
     "a": 0,
-    "e": "<b>Detailed Explanation:</b> Reformers understood that the domestic sphere is where the initial socialization of individuals occurs. Because women play a central role in rearing children, transforming the domestic environment was seen as key to shaping reformed citizens."
+    "e": "<b>Detailed Explanation:</b> The mission rejected a full-fledged Pakistan because it would contain vast non-Muslim minorities (38% in the North-West, 48% in the North-East). Furthermore, it would trigger the partition of Bengal and Punjab, disrupting deep-seated regional ties and creating severe economic, communication, and military problems."
   },
   {
-    "p_id": "bpsc_gs_set4_07",
-    "qe": "When launching a frontal attack against the practice of Sati, Raja Rammohan Roy and his followers used which argument to strengthen their appeal?",
-    "qh": "सती प्रथा के खिलाफ मोर्चा खोलते समय राजा राममोहन राय और उनके अनुयायियों ने अपने आह्वान को मजबूत करने के लिए किस तर्क का इस्तेमाल किया?",
+    "id": 7,
+    "qe": "Under the structural grouping parameters of the Cabinet Mission Plan, which of the following regions constituted 'Section-B'?",
+    "qh": "कैबिनेट मिशन योजना के संरचनात्मक समूहन (grouping) मापदंडों के तहत, निम्नलिखित में से कौन सा क्षेत्र 'सेक्शन-बी' (Section-B) के अंतर्गत आता था?",
     "o": [
-      "They argued that true religion and scriptures did not sanction an inferior status or forced death for women",
-      "They appealed to the financial benefits that British landlords would gain from widow estates",
-      "They stated that the practice was imported recently from non-Asian colonial systems",
-      "They advocated that the custom should be restricted strictly to lower castes"
+      "Punjab, North-West Frontier Province, and Sindh",
+      "Madras, Bombay, Central Provinces, United Provinces, Bihar, and Orissa",
+      "Bengal and Assam exclusively",
+      "The chief commissioner’s provinces combined solely with Burma"
     ],
     "a": 0,
-    "e": "<b>Detailed Explanation:</b> To counter orthodox opposition, Raja Rammohan Roy turned to scripture. He argued from a rationalist perspective that the true, uncorrupted core of religion did not support an inferior status or the forced immolation of widows, describing it as a violation of human dignity."
+    "e": "<b>Detailed Explanation:</b> The Cabinet Mission Plan systematically grouped the existing provincial assemblies into three sections. Section-B was structured to include the Muslim-majority northwestern provinces: Punjab, the North-West Frontier Province (NWFP), and Sindh."
   },
   {
-    "p_id": "bpsc_gs_set4_08",
-    "qe": "The historic anti-Sati regulation enacted under Lord William Bentinck, which declared the custom illegal and punishable as culpable homicide, was formally designated as:",
-    "qh": "लॉर्ड विलियम बेंटिक के तहत अधिनियमित ऐतिहासिक सती-विरोधी नियम, जिसने इस प्रथा को अवैध और आपराधिक मानव वध के रूप में दंडनीय घोषित किया, उसे औपचारिक रूप से क्या कहा गया था?",
-    "o": ["Regulation XVII, A.D. 1829 of the Bengal Code", "Bengal Infanticide Restriction Act of 1795", "Native Civil Marriage Act of 1872", "Age of Consent Code, 1891"],
-    "a": 0,
-    "e": "<b>Detailed Explanation:</b> The practice was declared illegal and punishable by criminal courts as culpable homicide under Regulation XVII, A.D. 1829 of the Bengal Code. Initially applicable to the Bengal Presidency, it was extended to Madras and Bombay in 1830."
-  },
-  {
-    "p_id": "bpsc_gs_set4_09",
-    "qe": "In 1870, the colonial government passed a specific legislative Act targeting the secret practice of female infanticide. What did this Act make compulsory for parents?",
-    "qh": "1870 में, औपनिवेशिक सरकार ने कन्या भ्रूण हत्या/शिशु हत्या की गुप्त प्रथा को लक्षित करते हुए एक विशिष्ट अधिनियम पारित किया। इस अधिनियम ने माता-पिता के लिए क्या अनिवार्य कर दिया?",
+    "id": 8,
+    "qe": "Which specific provinces were grouped together to form the high-population, Hindu-majority 'Section-A' under the 1946 Cabinet Mission Plan layout?",
+    "qh": "1946 की कैबिनेट मिशन योजना के खाके के तहत उच्च जनसंख्या वाले, हिंदू-बहुसंख्यक 'सेक्शन-ए' (Section-A) को बनाने के लिए किन विशिष्ट प्रांतों को एक साथ समूहित किया गया था?",
     "o": [
-      "The mandatory registration of the birth of all babies and subsequent verification of female infants",
-      "The compulsory enrollment of all female children into Christian missionary boarding facilities",
-      "Paying a direct metabolic tax surcharge to the local district revenue collectorate",
-      "Surrendering ownership of all ancestral property to female heirs immediately"
+      "Madras, Bombay, Central Provinces, United Provinces, Bihar, and Orissa",
+      "Punjab, North-West Frontier Province, and Sindh",
+      "Bengal, Assam, and the Chief Commissioner's administrative tracts",
+      "Bihar, Orissa, and Assam exclusively"
     ],
     "a": 0,
-    "e": "<b>Detailed Explanation:</b> To combat female infanticide practiced in secrecy among certain upper classes, the Female Infanticide Prevention Act of 1870 made it compulsory for parents to register all births and introduced verification checks on female infants for several years."
+    "e": "<b>Detailed Explanation:</b> Section-A under the grouping system contained the core Hindu-majority provinces of British India: Madras, Bombay, Central Provinces, United Provinces, Bihar, and Orissa."
   },
   {
-    "p_id": "bpsc_gs_set4_10",
-    "qe": "The enactment of the landmark Hindu Widows' Remarriage Act, 1856, which legalised widow remarriage and legitimized their issues, was primarily due to the relentless efforts of which scholar?",
-    "qh": "ऐतिहासिक हिंदू विधवा पुनर्विवाह अधिनियम, 1856 का पारित होना, जिसने विधवा विवाह को वैध बनाया, मुख्य रूप से किस विद्वान के अथक प्रयासों के कारण हुआ था?",
-    "o": ["Pandit Ishwar Chandra Vidyasagar", "Raja Rammohan Roy", "Karsondas Mulji", "Professor D.K. Karve"],
+    "id": 9,
+    "qe": "According to the compositional blueprints of the proposed 389-member Constituent Assembly, exactly how many seats were allocated to be nominated by the native Princely States?",
+    "qh": "प्रस्तावित 389 सदस्यीय संविधान सभा के संगठनात्मक खाके के अनुसार, देशी रियासतों (Princely States) द्वारा मनोनीत किए जाने के लिए सटीक रूप से कितनी सीटें आवंटित की गई थीं?",
+    "o": ["93 members", "292 members", "4 members", "52 members"],
     "a": 0,
-    "e": "<b>Detailed Explanation:</b> Pandit Ishwar Chandra Vidyasagar, serving as the principal of Sanskrit College in Calcutta, led the campaign for widow remarriage. He famously cited Vedic texts to prove to the orthodox community that Hindu traditions originally permitted the practice."
+    "e": "<b>Detailed Explanation:</b> The Cabinet Mission Plan provided for a 389-member Constituent Assembly elected via proportional representation. Within this layout, British Indian provinces sent 292 members, chief commissioner's provinces sent 4, and the princely states were allocated exactly 93 members."
   },
   {
-    "p_id": "bpsc_gs_set4_11",
-    "qe": "Who among the following reformers established the specialized journal 'Satya Prakash' in Gujarati in 1852 to advocate for the right of widow remarriage?",
-    "qh": "निम्नलिखित सुधारकों में से किसने विधवा पुनर्विवाह के अधिकार की वकालत करने के लिए 1852 में गुजराती में 'सत्य प्रकाश' (Satya Prakash) पत्रिका की शुरुआत की थी?",
-    "o": ["Karsondas Mulji", "Vishnu Shastri Pandit", "Veerasalingam Pantulu", "B.M. Malabari"],
-    "a": 0,
-    "e": "<b>Detailed Explanation:</b> Karsondas Mulji was a pioneering reformer who used journalism for social change. In 1852, he launched the Gujarati weekly 'Satya Prakash' to challenge orthodox practices and advocate for widow remarriage in western India."
-  },
-  {
-    "p_id": "bpsc_gs_set4_12",
-    "qe": "Professor D.K. Karve made outstanding structural contributions to the upliftment of high-caste Hindu widows in western India. Which practical measure did he initiate in Poona?",
-    "qh": "प्रोफेसर डी.के. कर्वे ने पश्चिमी भारत में उच्च जाति की हिंदू विधवाओं के उत्थान में उत्कृष्ट योगदान दिया। उन्होंने पूना में कौन सा व्यावहारिक कदम शुरू किया?",
+    "id": 10,
+    "qe": "What procedural sequencing did the Cabinet Mission Plan establish for formulating the respective provincial and union constitutions inside the Constituent Assembly?",
+    "qh": "संविधान सभा के भीतर संबंधित प्रांतीय और संघीय संविधानों को तैयार करने के लिए कैबिनेट मिशन योजना ने कौन सा विशिष्ट प्रक्रियात्मक अनुक्रम स्थापित किया था?",
     "o": [
-      "He opened a dedicated widows' home providing facilities for vocational training",
-      "He introduced an aggressive legal suit inside the local high court against the priestly class",
-      "He completely banned the entry of lower castes into local standard schooling spaces",
-      "He established the first native maritime shipping company managed by women"
+      "Members from sections A, B, and C would sit separately to decide provincial constitutions first, then combine to formulate the union constitution",
+      "The entire assembly would sit together to finalize the union constitution before any provincial lists could be discussed",
+      "The princely states nominees held an absolute initial veto to dissolve the assembly sessions at will",
+      "All constitutional rules had to be verified and cleared by the provincial premiers prior to assembly voting"
     ],
     "a": 0,
-    "e": "<b>Detailed Explanation:</b> Professor D.K. Karve dedicated his life to the welfare of widows. He opened a widows' home in Poona to provide high-caste widows with shelter, education, and vocational training, helping them achieve independence and purpose."
+    "e": "<b>Detailed Explanation:</b> Procedurally, members of groups A, B, and C were to sit separately first to decide the constitutions for their respective provinces and sections. Only after that phase would the entire combined assembly sit together to formulate the overarching Union constitution."
   },
   {
-    "p_id": "bpsc_gs_set4_13",
-    "qe": "The Native Marriage Act (or Civil Marriage Act) of 1872 introduced legislative restrictions against child marriage, but it had a limited impact across India because:",
-    "qh": "1872 के नेटिव मैरिज एक्ट (या सिविल मैरिज एक्ट) ने बाल विवाह के खिलाफ विधायी प्रतिबंध पेश किए, लेकिन भारत भर में इसका सीमित प्रभाव पड़ा क्योंकि:",
+    "id": 11,
+    "qe": "Under the federal structure designed by the Cabinet Mission Plan, which specific subjects were to be controlled exclusively by a common centre?",
+    "qh": "कैबिनेट मिशन योजना द्वारा तैयार किए गए संघीय ढांचे के तहत, किन विशिष्ट विषयों को एक साझा केंद्र (common centre) द्वारा विशेष रूप से नियंत्रित किया जाना था?",
+    "o": ["Defence, communication, and external affairs", "Education, public health, and land revenue administration", "Internal security, civil service rights, and judicial high courts", "Currency valuation, agricultural credit lines, and local trade union lists"],
+    "a": 0,
+    "e": "<b>Detailed Explanation:</b> The Plan envisaged a limited common center that would execute federal authority over three specific interconnected portfolios: defence, communication, and external affairs."
+  },
+  {
+    "id": 12,
+    "qe": "How were controversial communal questions to be decided within the central legislature according to the 1946 Cabinet Mission guidelines?",
+    "qh": "1946 के कैबिनेट मिशन के दिशानिर्देशों के अनुसार केंद्रीय विधायिका के भीतर विवादास्पद सांप्रदायिक प्रश्नों का निर्णय कैसे किया जाना था?",
     "o": [
-      "The Act was explicitly not applicable to Hindus, Muslims, and other recognized mainstream faiths",
-      "The colonial judiciary struck down the entire regulation as unconstitutional within a year",
-      "It raised the legal marriage age artificially to an unmanageable baseline of 25 years",
-      "The law was enforceable only within the remote limits of the Madras Presidency"
+      "By a simple majority of both communities present and voting",
+      "Through an absolute veto power granted exclusively to the Muslim League nominees",
+      "By referring the issue directly to a special three-judge panel of the High Court",
+      "According to the unilateral written certification issued by the central Governor-General"
     ],
     "a": 0,
-    "e": "<b>Detailed Explanation:</b> The Native Marriage Act of 1872 prohibited child marriage and permitted inter-caste marriages, but its scope was extremely narrow because it did not apply to Hindus, Muslims, or other major established religious faiths."
+    "e": "<b>Detailed Explanation:</b> To prevent majoritarian override on sensitive religious issues, the Plan stipulated that any communal question arising in the central legislature must be decided by a simple majority of both separate communities present and voting."
   },
   {
-    "p_id": "bpsc_gs_set4_14",
-    "qe": "The relentless efforts of the Parsi reformer B.M. Malabari directly culminated in the enactment of which piece of colonial legislation that prohibited the marriage of girls below the age of 12?",
-    "qh": "पारसी सुधारक बी.एम. मालाबारी के अथक प्रयासों के परिणामस्वरूप कौन सा औपनिवेशिक कानून लागू हुआ, जिसने 12 वर्ष से कम उम्र की लड़कियों के विवाह को प्रतिबंधित कर दिया?",
-    "o": ["Age of Consent Act, 1891", "Sarda Act, 1930", "Native Marriage Act, 1872", "Child Marriage Restraint Amendment Act, 1978"],
+    "id": 13,
+    "qe": "What timeline indicator was provided by the Cabinet Mission Plan for a province to exercise its freedom to call for a reconsideration of the group or union constitution?",
+    "qh": "कैबिनेट मिशन योजना द्वारा किसी प्रांत को समूह या संघ के संविधान पर पुनर्विचार करने का आह्वान करने की स्वतंत्रता का प्रयोग करने के लिए कौन सा विशिष्ट समय-सीमा संकेतक प्रदान किया गया था?",
+    "o": ["After 10 years", "After the first six months of assembly sessions", "Concurrent with the first annual budget presentation", "Only after a flat period of twenty-five consecutive years"],
     "a": 0,
-    "e": "<b>Detailed Explanation:</b> B.M. Malabari campaigned vigorously against child marriage and the treatment of child widows. His efforts led to the passage of the Age of Consent Act in 1891, which raised the legal age of consent for marriage for girls to 12 years."
+    "e": "<b>Detailed Explanation:</b> The Plan provided a safety valve for provinces: after the execution of the first general elections, a province could choose to leave its assigned group, and after a duration of 10 years, it was free to call for a comprehensive reconsideration of the group or union constitution."
   },
   {
-    "p_id": "bpsc_gs_set4_15",
-    "qe": "The highly influential Sarda Act of 1930 pushed up the minimum legal marriage age boundaries across British India to which standard parameters?",
-    "qh": "1930 के अत्यधिक प्रभावशाली शारदा अधिनियम (Sarda Act) ने ब्रिटिश भारत में न्यूनतम कानूनी विवाह आयु सीमा को बढ़ाकर कितना कर दिया था?",
-    "o": ["18 years for boys and 14 years for girls", "21 years for boys and 18 years for girls", "16 years for boys and 12 years for girls", "20 years for boys and 15 years for girls"],
-    "a": 0,
-    "e": "<b>Detailed Explanation:</b> The Child Marriage Restraint Act of 1929 (popularly known as the Sarda Act after its sponsor Rai Sahib Harbilas Sarda), which came into effect in 1930, fixed the minimum legal marriage age at 18 years for boys and 14 years for girls."
-  },
-  {
-    "p_id": "bpsc_gs_set4_16",
-    "qe": "Which educational institution, established in Calcutta in 1849, is recognized as the first major fruit of the powerful movement for women's higher education in India?",
-    "qh": "1849 में कलकत्ता में स्थापित कौन सा शैक्षणिक संस्थान, भारत में महिलाओं की उच्च शिक्षा के शक्तिशाली आंदोलन के पहले प्रमुख परिणाम के रूप में मान्यता प्राप्त है?",
-    "o": ["The Bethune School, founded by J.E.D. Bethune", "The Calcutta Female Juvenile Society", "The Lady Hardinge Medical College", "The Indian Women’s University"],
-    "a": 0,
-    "e": "<b>Detailed Explanation:</b> The Bethune School, founded in 1849 by John Elliot Drinkwater Bethune (President of the Council of Education), was a milestone. It was the first secular school for girls in India and triggered a broader movement for female education."
-  },
-  {
-    "p_id": "bpsc_gs_set4_17",
-    "qe": "Apart from his pioneering role in scriptural analysis for widow remarriage, Pandit Ishwar Chandra Vidyasagar was actively associated as an organizer with how many girls' schools in Bengal?",
-    "qh": "विधवा पुनर्विवाह के लिए शास्त्रीय विश्लेषण में अपनी अग्रणी भूमिका के अलावा, पंडित ईश्वर चंद्र विद्यासागर बंगाल में कितने लड़कियों के स्कूलों के आयोजक के रूप में सक्रिय रूप से जुड़े हुए थे?",
-    "o": ["No less than 35 girls' schools", "Exactly 5 girls' schools", "More than 100 girls' schools", "Strictly 12 girls' schools"],
-    "a": 0,
-    "e": "<b>Detailed Explanation:</b> Ishwar Chandra Vidyasagar was a passionate advocate for female literacy. In his capacity as a government inspector of schools, he used his position and personal funds to organize and establish no less than 35 girls' schools across Bengal."
-  },
-  {
-    "p_id": "bpsc_gs_set4_18",
-    "qe": "Which landmark historical document on educational policy explicitly laid great structural stress on the urgent need for female education in British India in 1854?",
-    "qh": "शिक्षा नीति पर किस ऐतिहासिक दस्तावेज़ ने 1854 में ब्रिटिश भारत में महिला शिक्षा की तत्काल आवश्यकता पर विशेष संरचनात्मक बल दिया था?",
-    "o": ["Charles Wood’s Despatch on Education", "Macaulay’s Minute on Indian Education", "The Hunter Commission Report", "The Raleigh University Commission Guidelines"],
-    "a": 0,
-    "e": "<b>Detailed Explanation:</b> Sir Charles Wood's Despatch on Education of 1854, often called the 'Magna Carta of English Education in India', explicitly highlighted the importance of female education and recommended government grants to support girls' schools."
-  },
-  {
-    "p_id": "bpsc_gs_set4_19",
-    "qe": "The outstanding institution known as the 'Indian Women’s University', which provided specialized higher education infrastructure to women, was set up in 1916 by which reformer?",
-    "qh": "महिलाओं को विशेष उच्च शिक्षा बुनियादी ढांचा प्रदान करने वाले 'इंडियन विमेंस यूनिवर्सिटी' (Indian Women's University) की स्थापना 1916 में किस सुधारक द्वारा की गई थी?",
-    "o": ["Professor D.K. Karve", "Ramabai Ranade", "Sarla Devi Chaudhurani", "Pandita Ramabai Saraswati"],
-    "a": 0,
-    "e": "<b>Detailed Explanation:</b> In 1916, Professor D.K. Karve established the Indian Women's University (now known as SNDT Women's University) in Pune, marking a historic milestone as the first university dedicated exclusively to women in India."
-  },
-  {
-    "p_id": "bpsc_gs_set4_20",
-    "qe": "During the opening decades of the twentieth century, which mass political events served as the primary liberating experience for otherwise home-centered Indian women?",
-    "qh": "बीसवीं शताब्दी के शुरुआती दशकों के दौरान, किन जन-राजनीतिक घटनाओं ने मुख्य रूप से घरेलू स्तर पर केंद्रित भारतीय महिलाओं के लिए प्राथमिक मुक्ति के अनुभव के रूप में कार्य किया?",
-    "o": ["Participation in the Swadeshi, anti-partition, and Home Rule movements", "Attending secret commercial banking tracking seminars in Bombay", "Filing joint civil lawsuits against local village panchayats", "Enrolling into newly opened British military administrative services"],
-    "a": 0,
-    "e": "<b>Detailed Explanation:</b> Entering the public sphere during the Swadeshi (1905), anti-partition, and Home Rule movements marked a major turning point for Indian women. They stepped out of domestic isolation to join processions, picket shops, and engage in political activism."
-  },
-  {
-    "p_id": "bpsc_gs_set4_21",
-    "qe": "The organization named 'Bharat Stree Mahamandal', which held its first historical meeting in Allahabad in 1910, was founded by which prominent woman leader?",
-    "qh": "1910 में इलाहाबाद में अपनी पहली ऐतिहासिक बैठक आयोजित करने वाले 'भारत स्त्री महामंडल' (Bharat Stree Mahamandal) नामक संगठन की स्थापना किस प्रमुख महिला नेता द्वारा की गई थी?",
-    "o": ["Sarla Devi Chaudhurani", "Ramabai Ranade", "Pandita Ramabai", "Sarojini Naidu"],
-    "a": 0,
-    "e": "<b>Detailed Explanation:</b> Sarla Devi Chaudhurani convened the first meeting of the Bharat Stree Mahamandal in Allahabad in 1910. It is widely considered the first major pan-Indian women's organization established by a woman, aimed at promoting female education and abolishing the purdah system."
-  },
-  {
-    "p_id": "bpsc_gs_set4_22",
-    "qe": "The prominent 'Ladies Social Conference' (Bharat Mahila Parishad) was founded in 1904 in Bombay as a specialized wing under the structural guidance of which parent body?",
-    "qh": "प्रसिद्ध 'लेडीज सोशल कॉन्फ्रेंस' (भारत महिला परिषद) की स्थापना 1904 में बॉम्बे में किस मूल संस्था के संरचनात्मक मार्गदर्शन में एक विशेष शाखा के रूप में की गई थी?",
-    "o": ["The National Social Conference", "The Brahmo Samaj Core Council", "The Arya Mahila Samaj", "The All India Women’s Conference"],
-    "a": 0,
-    "e": "<b>Detailed Explanation:</b> Ramabai Ranade founded the Ladies Social Conference (Bharat Mahila Parishad) in 1904 in Bombay. It operated as a specialized branch under the aegis of the National Social Conference, focusing on targeted social reforms for women."
-  },
-  {
-    "p_id": "bpsc_gs_set4_23",
-    "qe": "The 'All India Women’s Conference' (AIWC), recognized as one of the first major women's organizations with an egalitarian approach, was founded in 1927 by whom?",
-    "qh": "एक समतावादी दृष्टिकोण (egalitarian approach) के साथ पहले प्रमुख महिला संगठनों में से एक के रूप में मान्यता प्राप्त 'अखिल भारतीय महिला सम्मेलन' (AIWC) की स्थापना 1927 में किसके द्वारा की गई थी?",
-    "o": ["Margaret Cousins", "Sarla Devi Chaudhurani", "Mehribai Tata", "Cornelia Sorabji"],
-    "a": 0,
-    "e": "<b>Detailed Explanation:</b> The All India Women’s Conference (AIWC) was founded by Margaret Cousins in 1927. Its first conference was hosted at Fergusson College, Pune, with founding members including Sarojini Naidu and Kamladevi Chattopadhyaya."
-  },
-  {
-    "p_id": "bpsc_gs_set4_24",
-    "qe": "Which of the following objective principles formed the core constitutional vision of the All India Women’s Conference (AIWC) when it expanded its platform in 1927?",
-    "qh": "निम्नलिखित में से कौन सा उद्देश्य सिद्धांत अखिल भारतीय महिला सम्मेलन (AIWC) के मुख्य संवैधानिक दृष्टिकोण का हिस्सा था जब उसने 1927 में अपने मंच का विस्तार किया था?",
+    "id": 14,
+    "qe": "How did the internal political interpretation of the 'grouping clause' differ fundamentally between the Congress and the Muslim League high commands?",
+    "qh": "कांग्रेस और मुस्लिम लीग कमान के बीच 'समूहन खंड' (grouping clause) की आंतरिक राजनीतिक व्याख्या मौलिक रूप से किस प्रकार भिन्न थी?",
     "o": [
-      "To work for a society based on principles of social justice, integrity, equal rights, and opportunities",
-      "To enforce the strict insulation of intermediate caste tracking across legislatures",
-      "To structurally support the retention of the medieval purdah status systems",
-      "To dynamically channelize land ownership exclusively to wealthy banking families"
+      "Congress viewed grouping as optional, while the Muslim League believed Pakistan to be implied in compulsory grouping",
+      "Congress demanded compulsory structural grouping, while the League insisted on it being entirely optional",
+      "League argued that grouping required the immediate legal dissolution of the Constituent Assembly",
+      "Both held identical interpretations that grouping was a temporary tool to preserve British paramountcy"
     ],
     "a": 0,
-    "e": "<b>Detailed Explanation:</b> The AIWC was built on an egalitarian philosophy. Its stated goals were to fight for a society rooted in social justice, integrity, equal rights, and opportunities, ensuring the essentials of life were distributed based on fairness rather than accident of birth or sex."
+    "e": "<b>Detailed Explanation:</b> The interpretation was split. The Congress believed that the plan rejected Pakistan because grouping was optional and a single constituent assembly was created. The League accepted the plan on the ground that it implied Pakistan through compulsory grouping (which the Mission later confirmed was compulsory)."
   },
   {
-    "p_id": "bpsc_gs_set4_25",
-    "qe": "The rigid structural concept of Hindu 'chaturvarnashrama' dictated that a person's caste status systematically determined which social privileges before birth?",
-    "qh": "हिंदू 'चातुर्वर्णश्रम' की कठोर संरचनात्मक अवधारणा यह निर्देशित करती थी कि किसी व्यक्ति की जाति की स्थिति जन्म से पहले ही किन सामाजिक विशेषाधिकारों को व्यवस्थित रूप से निर्धारित करती थी?",
+    "id": 15,
+    "qe": "What primary organizational objection did the Congress lodge against the text composition of the proposed Constituent Assembly under the Cabinet Mission Plan?",
+    "qh": "कैबिनेट मिशन योजना के तहत प्रस्तावित संविधान सभा के पाठ्य संगठन (text composition) के खिलाफ कांग्रेस ने कौन सा प्राथमिक संगठनात्मक विरोध दर्ज कराया था?",
     "o": [
-      "Access to education, land ownership, profession, and sources of drinking water",
-      "The precise volume of international maritime import trade parameters",
-      "Direct baseline tracking metrics of judicial high court appeals",
-      "The structural layout of currency print velocity values inside local markets"
+      "The absence of a provision for elected members from the princely states, as they could only be nominated by the princes",
+      "The inclusion of separate electorates based on the older Communal Award metrics",
+      "The mandatory restriction barring any vernacular-speaking delegates from entering the assembly",
+      "The statistical expansion of the house membership threshold up to 500 seats"
     ],
     "a": 0,
-    "e": "<b>Detailed Explanation:</b> Under the rigid chaturvarnashrama framework, caste dictated almost every aspect of an individual's social life before birth—including access to education, ownership of landed property, professional pursuits, sources of drinking water, and temple entry rules."
+    "e": "<b>Detailed Explanation:</b> A major point of objection for the Congress was the non-democratic selection inside the princely states. The Plan contained no provision for elected representatives from the states, allowing them to be nominated exclusively by the autocratic princes."
   },
   {
-    "p_id": "bpsc_gs_set4_26",
-    "qe": "How did the introduction of British administrative and legal measures indirectly deal a severe blow to traditional caste-based inequalities in India?",
-    "qh": "ब्रिटिश प्रशासनिक और कानूनी उपायों की शुरूआत ने अप्रत्यक्ष रूप से भारत में पारंपरिक जाति-आधारित असमानताओं को कैसे गहरा झटका दिया?",
+    "id": 16,
+    "qe": "Viceroy Lord Wavell presented a specialized 'Breakdown Plan' to the Cabinet Mission in May 1946. What tactical operational course did this plan project?",
+    "qh": "वायसराय लॉर्ड वेवेल ने मई 1946 में कैबिनेट मिशन के सामने एक विशेष 'ब्रेकडाउन प्लान' (Breakdown Plan) प्रस्तुत किया था। इस योजना ने किस रणनीतिक परिचालन मार्ग का अनुमान लगाया था?",
     "o": [
-      "By introducing the concept of equality before law in a uniformly applied system of law and stripping caste panchayats of judicial functions",
-      "By legally forcing all intermediate castes to engage in uniform agricultural vocations",
-      "By mandating that scriptural studies must be cleared by British military tribunals",
-      "By entirely freezing urban mobility and eliminating private property in land"
+      "The withdrawal of the British Army and officials to the Muslim provinces of the North-West and North-East, handing the rest to the Congress",
+      "The immediate and complete dynamic expansion of direct military rule across all provinces permanently",
+      "The absolute encapsulation of all Congress Working Committee leaders inside Yerwada jail",
+      "A complete synchronization of the British Indian Army with the Japanese frontline forces"
     ],
     "a": 0,
-    "e": "<b>Detailed Explanation:</b> The British administration introduced a uniform legal system based on the principle of equality before the law. By removing judicial powers from traditional caste panchayats and opening administrative services to all castes on secular lines, it structurally undermined old caste hierarchies."
+    "e": "<b>Detailed Explanation:</b> Wavell's Breakdown Plan visualised a middle course between 'repression' and 'scuttle'. It envisioned a strategic military withdrawal of the British Army and administrative officials exclusively to the Muslim-majority provinces of the North-West and North-East, leaving the rest of the country to the Congress."
   },
   {
-    "p_id": "bpsc_gs_set4_27",
-    "qe": "Mahatma Gandhi launched a comprehensive national crusade to eradicate untouchability root and branch. Which specialized organization did he establish in 1932 to advance this cause?",
-    "qh": "महात्मा गांधी ने अस्पृश्यता को जड़ से खत्म करने के लिए एक व्यापक राष्ट्रीय अभियान शुरू किया। इस उद्देश्य को आगे बढ़ाने के लिए उन्होंने 1932 में किस विशेष संगठन की स्थापना की?",
-    "o": ["All India Harijan Sangh", "Bahishkrit Hitakarini Sabha", "All India Scheduled Castes Federation", "Self-Respect Movement Front"],
-    "a": 0,
-    "e": "<b>Detailed Explanation:</b> Anchoring his campaign on humanism and reason, Mahatma Gandhi founded the All India Harijan Sangh in 1932 to combat untouchability and launched the weekly publication 'Harijan' to advocate for the civil rights of the depressed classes."
-  },
-  {
-    "p_id": "bpsc_gs_set4_28",
-    "qe": "In Maharashtra, the powerful anti-caste movement challenging Brahminical domination and prioritizing lower-caste and female literacy was spearheaded by which iconic reformer?",
-    "qh": "महाराष्ट्र में, ब्राह्मणवादी वर्चस्व को चुनौती देने वाले और निचली जाति तथा महिला साक्षरता को प्राथमिकता देने वाले शक्तिशाली जाति-विरोधी आंदोलन का नेतृत्व किस प्रसिद्ध सुधारक ने किया था?",
-    "o": ["Jyotiba Phule", "Dr. B.R. Ambedkar", "The Maharaja of Kolhapur", "Ramabai Ranade"],
-    "a": 0,
-    "e": "<b>Detailed Explanation:</b> Jyotiba Phule, born into a low-caste Mali family, led a historic movement against upper-caste hegemony in Maharashtra. He prioritized education for the lower strata and established several pioneering schools for girls and lower-caste children."
-  },
-  {
-    "p_id": "bpsc_gs_set4_29",
-    "qe": "Dr. B.R. Ambedkar led the historic 'Mahad Satyagraha' in March 1927. What specific civil right was targeted during this public demonstration?",
-    "qh": "डॉ. बी.आर. अंबेडकर ने मार्च 1927 में ऐतिहासिक 'महाद सत्याग्रह' (Mahad Satyagraha) का नेतृत्व किया था। इस सार्वजनिक प्रदर्शन के दौरान किस विशिष्ट नागरिक अधिकार को लक्षित किया गया था?",
+    "id": 17,
+    "qe": "What did the subsequent formulation of Lord Wavell's Breakdown Plan reveal regarding high colonial official circles in May 1946?",
+    "qh": "लॉर्ड वेवेल के ब्रेकडाउन प्लान के बाद के निरूपण ने मई 1946 में उच्च औपनिवेशिक आधिकारिक हलकों के संबंध में क्या प्रकट किया था?",
     "o": [
-      "The right of untouchables to draw water from the public Chawdar tank",
-      "Securing separate political representation parameters inside local district boards",
-      "Forcing the colonial judiciary to completely ban the free sale of land",
-      "Demanding the immediate closure of all high-cost British educational facilities"
+      "British recognition of the impossibility of suppressing any future Congress-led rebellion and a desire to make a 'Northern Ireland' of Pakistan",
+      "A firm belief that the British administration possessed enough resources to crush mass movements indefinitely",
+      "The complete endorsement of the universal adult franchise metrics by the permanent civil bureaucracy",
+      "A calculated decision to permanently shift the imperial capital from Delhi back to Calcutta port"
     ],
     "a": 0,
-    "e": "<b>Detailed Explanation:</b> The Mahad Satyagraha of March 1927 was an iconic civil rights campaign led by Dr. B.R. Ambedkar. He led a procession of thousands of untouchables to the Chawdar tank in Mahad to assert their right to use a public water source that had historically been denied to them by orthodox caste groups."
+    "e": "<b>Detailed Explanation:</b> Though superseded, Wavell's Breakdown Plan provided clear historical evidence of two factors: (i) the British recognition that it was impossible to suppress another massive Congress-led rebellion, and (ii) a desire among high official ranks to create a strategic 'Northern Ireland' out of Pakistan."
   },
   {
-    "p_id": "bpsc_gs_set4_30",
-    "qe": "The specialized organization named 'Bahishkrit Hitakarini Sabha', which operated under the transformative motto 'Educate, Agitate and Organise', was established in 1924 by whom?",
-    "qh": "परिवर्तनकारी आदर्श वाक्य 'शिक्षित करो, संघर्ष करो और संगठित बनो' (Educate, Agitate and Organise) के तहत काम करने वाले 'बहिष्कृत हितकारिणी सभा' (Bahishkrit Hitakarini Sabha) की स्थापना 1924 में किसके द्वारा की गई थी?",
-    "o": ["Dr. Bhimrao Ambedkar", "Jyotiba Phule", "E.V. Ramaswamy Naicker", "Sri Narayana Guru"],
+    "id": 18,
+    "qe": "On July 10, 1946, Jawaharlal Nehru delivered a provocative public statement regarding the sovereignty of the Constituent Assembly. What was his core assertion?",
+    "qh": "10 जुलाई, 1946 को जवाहरलाल नेहरू ने संविधान सभा की संप्रभुता के संबंध में एक उत्तेजक सार्वजनिक बयान दिया था। उनका मुख्य दावा क्या था?",
+    "o": [
+      "That the Congress was not bound by a single thing except its decision to enter the Constituent Assembly, which would decide its own rules",
+      "That the Congress would fully endorse the compulsory grouping parameters inside sections B and C",
+      "That the entire assembly must be financially subordinated to the guidelines of the Chamber of Princes",
+      "That the rules of procedure were strictly dependent on the prior written clearance of Viceroy Wavell"
+    ],
     "a": 0,
-    "e": "<b>Detailed Explanation:</b> Dr. B.R. Ambedkar founded the Bahishkrit Hitakarini Sabha in Bombay in 1924. The organization was designed to bring the grievances of Dalits to the government's attention, promote education, and improve their socio-economic conditions under the banner: 'Educate, Agitate and Organise'."
+    "e": "<b>Detailed Explanation:</b> Nehru delivered a speech on July 10, 1946, stating: 'We are not bound by a single thing except that we have decided to go into the Constituent Assembly...' This implied the assembly was a sovereign body that would formulate its own rules, complicating the compulsory grouping agreements."
+  },
+  {
+    "id": 19,
+    "qe": "How did the Muslim League react to Nehru’s provocative July 10 statement, permanently altering the course of the constitutional transition in July 1946?",
+    "qh": "मुलाकात के बाद जुलाई 1946 में नेहरू के 10 जुलाई के उत्तेजक बयान पर मुस्लिम लीग ने कैसी प्रतिक्रिया दी, जिसने संवैधानिक संक्रमण के मार्ग को स्थायी रूप से बदल दिया?",
+    "o": [
+      "The League withdrew its acceptance of the long-term plan and gave a call for 'direct action' from August 16 to achieve Pakistan",
+      "The League voluntarily dissolved its infrastructure to integrate fully with the Congress provincial cabinets",
+      "They petitioned the central legislative assembly to implement an immediate flat tax on Hindu zamindars",
+      "They signed a joint pact with the Sikh League to enforce universal adult franchise loop frameworks"
+    ],
+    "a": 0,
+    "e": "<b>Detailed Explanation:</b> Infuriated by Nehru's speech, the Muslim League held a session on July 29, 1946, where they formally withdrew their previous acceptance of the Cabinet Mission's long-term plan. In retaliation, they issued a call for nationwide 'direct action' starting from August 16 to forcibly achieve Pakistan."
+  },
+  {
+    "id": 20,
+    "qe": "A Congress-dominated Interim Government headed by Jawaharlal Nehru was sworn in on September 2, 1946. What strategic fear compelled the British to take this step?",
+    "qh": "जवाहरलाल नेहरू के नेतृत्व में एक कांग्रेस-बहुल अंतरिम सरकार ने 2 सितंबर, 1946 को शपथ ली थी। किस रणनीतिक डर ने अंग्रेजों को यह कदम उठाने के लिए मजबूर किया था?",
+    "o": [
+      "Fearing mass action by the Congress if the formation of government was delayed",
+      "The threat of an immediate economic blockade of coastal ports by British managing agencies",
+      "An absolute judicial injunction issued by the Chief Justice of the consolidated Federal Court",
+      "The physical threat of a synchronized mutiny breaking out inside the Royal Indian Navy ratings"
+    ],
+    "a": 0,
+    "e": "<b>Detailed Explanation:</b> Fearing that any further administrative delay would prompt another massive, uncontrollable wave of mass action by the Congress, the colonial government quickly swore in the Congress-dominated Interim Government on September 2, 1946."
+  },
+  {
+    "id": 21,
+    "qe": "Despite its transition title, how did the actual executive functioning of the 1946 Interim Government remain constrained, as illustrated by Wavell's actions in March 1947?",
+    "qh": "अपने संक्रमणकालीन शीर्षक के बावजूद, 1946 की अंतरिम सरकार का वास्तविक कार्यकारी कामकाज कैसे सीमित रहा, जैसा कि मार्च 1947 में वेवेल के कार्यों द्वारा स्पष्ट होता है?",
+    "o": [
+      "It was little more than a continuation of the old executive of the Viceroy, who famously overruled ministers on the release of INA prisoners",
+      "The popular Indian ministers held zero authority to assign portfolios or pass provincial tax laws",
+      "The entire cabinet framework was legally subordinated to the non-elected Chamber of Princes",
+      "Ministers were paid entirely out of personal donations realized from the Tilak Swaraj Fund savings"
+    ],
+    "a": 0,
+    "e": "<b>Detailed Explanation:</b> Institutionally, the Interim Government was little more than a continuation of the old autocratic executive council of the Viceroy. This was made clear when Wavell used his overriding powers to overrule his ministers on the release of Indian National Army (INA) prisoners during his final cabinet assembly in March 1947."
+  },
+  {
+    "id": 22,
+    "qe": "Viceroy Lord Wavell quietly brought the Muslim League into the Interim Government on October 26, 1946. Under what extraordinary political parameters was this entry permitted?",
+    "qh": "वायसराय लॉर्ड वेवेल ने 26 अक्टूबर, 1946 को चुपचाप मुस्लिम लीग को अंतरिम सरकार में शामिल कर लिया। किस असाधारण राजनीतिक मापदंड के तहत इस प्रवेश की अनुमति दी गई थी?",
+    "o": [
+      "The League joined without giving up 'direct action' and despite its rejection of both the long-term and short-term plans",
+      "The League was forced to formally surrender its demand for a separate Pakistan before entering the cabinet room",
+      "Jinnah had to sign a binding treaty pledging absolute structural compliance with Congress guidelines",
+      "The nominees were required to be chosen via competitive testing metrics managed by the general electorate"
+    ],
+    "a": 0,
+    "e": "<b>Detailed Explanation:</b> Wavell brought the League into the government on October 26, 1946, as a political counterweight. In doing so, he compromised basic guidelines: the League was permitted to enter without renouncing its 'direct action' campaign and despite its explicit rejection of both the short-term and long-term Cabinet Mission plans."
+  },
+  {
+    "id": 23,
+    "qe": "Who among the following leaders held the crucial portfolio of Finance inside the 14-member Interim Government cabinet between September 1946 and August 1947?",
+    "qh": "निम्नलिखित नेताओं में से किसने सितंबर 1946 और अगस्त 1947 के बीच 14 सदस्यीय अंतरिम सरकार के मंत्रिमंडल के भीतर वित्त (Finance) का महत्वपूर्ण पोर्टफोलियो संभाला था?",
+    "o": ["Liaquat Ali Khan", "Jawaharlal Nehru", "Vallabhbhai Patel", "Dr. John Mathai"],
+    "a": 0,
+    "e": "<b>Detailed Explanation:</b> When the Muslim League integrated into the 14-member Interim Government cabinet, its prominent leader Liaquat Ali Khan was assigned the vital administrative portfolio of Finance."
+  },
+  {
+    "id": 24,
+    "qe": "During the structural allocation of portfolios within the 1946 Interim Government, who was designated as the Minister of Labour?",
+    "qh": "1946 की अंतरिम सरकार के भीतर विभागों के संरचनात्मक आवंटन के दौरान, किसे श्रम मंत्री (Minister of Labour) के रूप में नामित किया गया था?",
+    "o": ["Jagjivan Ram", "Rajendra Prasad", "Asaf Ali", "Jogendra Nath Mandal"],
+    "a": 0,
+    "e": "<b>Detailed Explanation:</b> Within the 14 ministers of the Interim Government that functioned until August 15, 1947, the portfolio of Labour was held by the nationalist leader Jagjivan Ram."
+  },
+  {
+    "id": 25,
+    "qe": "Which Muslim League nominee was assigned the portfolio of Law within the 14-member Interim Government framework?",
+    "qh": "14 सदस्यीय अंतरिम सरकार के ढांचे के भीतर किस मुस्लिम लीग के नामांकित व्यक्ति को कानून (Law) का पोर्टफोलियो सौंपा गया था?",
+    "o": ["Jogendra Nath Mandal", "Ghaznafar Ali Khan", "Ibrahim Ismail Chundrigar", "Abdur Rab Nishtar"],
+    "a": 0,
+    "e": "<b>Detailed Explanation:</b> To represent Dalit configurations aligned with their platform, the Muslim League nominated Jogendra Nath Mandal, who was assigned the portfolio of Law inside the Interim Government."
+  },
+  {
+    "id": 26,
+    "qe": "In the historical evolution of the anti-Congress front, which Viceroy collaborated with Colvin in 1887 to launch a frontal attack on the Congress, propping up Syed Ahmed Khan?",
+    "qh": "एंटी-कांग्रेस मोर्चे के ऐतिहासिक विकास में, किस वायसराय ने 1887 में कांग्रेस पर सीधा हमला करने के लिए कोल्विन के साथ सहयोग किया था, और सैयद अहमद खान को बढ़ावा दिया था?",
+    "o": ["Lord Dufferin", "Lord Minto", "Lord Curzon", "Lord Irwin"],
+    "a": 0,
+    "e": "<b>Detailed Explanation:</b> The containment policy against nationalism started early. In 1887, Viceroy Lord Dufferin alongside Colvin (Lt. Governor of UP) executed a frontal attack on the Congress and propped up conservative counters like Syed Ahmed Khan and Raja Shiv Prasad of Bhinga as an anti-Congress front."
+  },
+  {
+    "id": 27,
+    "qe": "The 'Shimla Delegation' of October 1906 led by the Agha Khan met Viceroy Lord Minto to demand separate electorates. What specific justification did they offer for representation in excess of their numerical strength?",
+    "qh": "अक्टूबर 1906 में आगा खान के नेतृत्व में 'शिमला प्रतिनिधिमंडल' ने अलग निर्वाचन क्षेत्र की मांग के लिए वायसराय लॉर्ड मिंटो से मुलाकात की थी। उन्होंने अपनी सांख्यिकीय संख्या से अधिक प्रतिनिधित्व के लिए क्या विशिष्ट औचित्य दिया था?",
+    "o": [
+      "Their political importance and their contribution to the British Empire",
+      "Their exclusive mastery over the maritime transport routes crossing the western coast",
+      "The total absolute acreage of agricultural lands they managed under the Permanent Settlement",
+      "Their unique capacity to compile legal codes in English characters for the legislative councils"
+    ],
+    "a": 0,
+    "e": "<b>Detailed Explanation:</b> The 1906 Shimla delegation argued that Muslim representation should be commensurate not merely with their baseline numeric strength, but explicitly with their 'political importance and their contribution to the British Empire'."
+  },
+  {
+    "id": 28,
+    "qe": "Which group of aristocratic leaders founded the All India Muslim League in December 1906 to preach loyalty to the British government and isolate the Muslim intelligentsia from the Congress?",
+    "qh": "दिसंबर 1906 में किन कुलीन नेताओं के समूह ने ब्रिटिश सरकार के प्रति निष्ठा का उपदेश देने और मुस्लिम बुद्धिजीवियों को कांग्रेस से अलग रखने के लिए अखिल भारतीय मुस्लिम लीग की स्थापना की थी?",
+    "o": [
+      "The Agha Khan, Nawab Salimullah of Dacca, Nawab Mohsin-ul-Mulk, and Nawab Waqar-ul-Mulk",
+      "Syed Ahmed Khan and Raja Shiv Prasad of Bhinga exclusively",
+      "Badruddin Tyabji, Mir Musharraf Hussain, and Hamid Ali Khan",
+      "U.N. Mukherji, Lal Chand, and the Maharaja of Kasim Bazar"
+    ],
+    "a": 0,
+    "e": "<b>Detailed Explanation:</b> The Muslim League was institutionalized in December 1906 by conservative elites including the Agha Khan, Nawab Salimullah of Dacca, Nawab Mohsin-ul-Mulk, and Nawab Waqar-ul-Mulk to ensure political loyalty to the Crown."
+  },
+  {
+    "id": 29,
+    "qe": "In the history of communal polarization during the 1920s, which retaliatory movements were started by Muslim groups to counter the Hindu Shuddhi and Sangathan campaigns?",
+    "qh": "1920 के दशक के दौरान सांप्रदायिक ध्रुवीकरण के इतिहास में, हिंदू शुद्धि और संगठन अभियानों का मुकाबला करने के लिए मुस्लिम समूहों द्वारा कौन से प्रतिशोधात्मक आंदोलन शुरू किए गए थे?",
+    "o": ["Tabligh and Tanzeem movements", "Faraizi and Wahabi insurrections", "Aligarh and Deoband school loops", "Karachi and Dacca direct action councils"],
+    "a": 0,
+    "e": "<b>Detailed Explanation:</b> The 1920s saw severe communal friction. In response to the Arya Samajist Shuddhi (purification) and Sangathan (organization) movements aimed at reconverting populations, Muslim communal groups retaliated by launching the Tabligh and Tanzeem movements."
+  },
+  {
+    "id": 30,
+    "qe": "Nationalist analysts note that the Congress committed a series of mistakes by negotiating with the Muslim League over constitutional reforms like the Nehru Report in 1928. Which of the following highlights one of these analytical mistakes?",
+    "qh": "राष्ट्रवादी विश्लेषकों का मानना है कि कांग्रेस ने 1928 में नेहरू रिपोर्ट जैसे संवैधानिक सुधारों पर मुस्लिम लीग के साथ बातचीत करके कई गलतियाँ कीं। निम्नलिखित में से कौन सा इन विश्लेषणात्मक गलतियों में से एक को रेखांकित करता है?",
+    "o": [
+      "It gave legitimacy to the politics of the League, recognized the division of society into separate communities with separate interests, and undermined secular, nationalist Muslims",
+      "It forced the complete structural dissolution of the Congress Working Committee network permanently",
+      "It legally compelled the lower Federal Assembly to adopt a unicameral composition layout",
+      "It required all future national agitations to be funded by foreign managing agencies directly"
+    ],
+    "a": 0,
+    "e": "<b>Detailed Explanation:</b> By entering into compromises on a communal baseline, the Congress gave political legitimacy to the League's divisive narratives, implicitly recognized that society was divided into separate communities with separate interests, and severely undermined the position of secular, nationalist Muslims."
+  },
+  {
+    "id": 31,
+    "qe": "When did the shift occur from liberal communalism—centered around safeguards and reservations—to extreme communalism organized as a mass movement based on fear and hatred?",
+    "qh": "सुरक्षा उपायों और आरक्षणों के इर्द-गिर्द केंद्रित उदारवादी सांप्रदायिकता से, भय और घृणा पर आधारित जन आंदोलन के रूप में संगठित चरम सांप्रदायिकता में बदलाव कब हुआ था?",
+    "o": ["After the 1937 provincial elections, following the poor performance of the Muslim League", "Immediately after the formal declaration of the Morley-Minto reforms in 1909", "Following the sudden suspension of the Non-Cooperation Movement in August 1920", "During the constitutional compilation of the Nehru Report parameters in August 1928"],
+    "a": 0,
+    "e": "<b>Detailed Explanation:</b> Prior to 1937, liberal communalism predominated. However, after the Muslim League performed poorly in the 1937 provincial elections, it abandoned constitutional bargaining and shifted to extreme communalism, mobilizing the middle and upper classes via fear, hatred, and aggressive propaganda."
+  },
+  {
+    "id": 32,
+    "qe": "Between 1937 and 1939, Mohammad Ali Jinnah effectively blocked all avenues for political conciliation by forwarding which impossible prerequisite demand to the Congress?",
+    "qh": "1937 और 1939 के बीच, मोहम्मद अली जिन्ना ने कांग्रेस के सामने कौन सी असंभव पूर्व-शर्त मांग रखकर राजनीतिक सुलह के सभी रास्तों को प्रभावी रूप से बंद कर दिया था?",
+    "o": [
+      "That the Congress must declare itself a Hindu organisation and recognise the Muslim League as the sole representative of Indian Muslims",
+      "That the Congress must completely dissolve its central working committee infrastructure inside Wardha",
+      "The immediate and complete absolute termination of any ongoing anti-imperialist campaigns across provinces",
+      "That the party must adopt English characters exclusively as its sole communication medium internally"
+    ],
+    "a": 0,
+    "e": "<b>Detailed Explanation:</b> Jinnah stalled all negotiations between 1937 and 1939 by raising an extreme prerequisite: he demanded that the secular Indian National Congress must formally declare itself a purely Hindu body and explicitly recognize the Muslim League as the single, exclusive representative of all Indian Muslims."
+  },
+  {
+    "id": 33,
+    "qe": "On March 24, 1940, the historic 'Pakistan Resolution' was formally passed by the Muslim League. In which annual session did this landmark development occur?",
+    "qh": "24 मार्च, 1940 को मुस्लिम लीग द्वारा ऐतिहासिक 'पाकिस्तान प्रस्ताव' (Pakistan Resolution) आधिकारिक रूप से पारित किया गया था। यह ऐतिहासिक विकास किस वार्षिक सत्र में हुआ था?",
+    "o": ["The Lahore session", "The Calcutta session", "The Simla deputation assembly", "The Karachi conference"],
+    "a": 0,
+    "e": "<b>Detailed Explanation:</b> The formal demand for partition was institutionalized on March 24, 1940, when the Muslim League passed the historic 'Pakistan Resolution' during its annual session convened at Lahore."
+  },
+  {
+    "id": 34,
+    "qe": "What structural privilege granted by the British India Government during the Second World War allowed the Muslim League to consistently stick to its demand for a separate Pakistan throughout all negotiations?",
+    "qh": "द्वितीय विश्व युद्ध के दौरान ब्रिटिश भारत सरकार द्वारा दिए गए किस संरचनात्मक विशेषाधिकार ने मुस्लिम लीग को सभी वार्ताओं में एक अलग पाकिस्तान की अपनी मांग पर लगातार टिके रहने की अनुमति दी?",
+    "o": [
+      "The government gave a virtual veto to the League on any future political settlement",
+      "The state granted the League absolute control over 100% of the provincial list revenues",
+      "The direct judicial appointment of Jinnah as the permanent head of the executive council",
+      "Providing unlimited capital grant subsidies to fund the direct action volunteer corps"
+    ],
+    "a": 0,
+    "e": "<b>Detailed Explanation:</b> During the war years, the British administration used the League to counter the Congress's anti-colonial campaigns by granting the League a virtual veto over any future political or constitutional settlement. The League fully leveraged this veto to stall the August Offer, Cripps proposals, Shimla Conference, and Cabinet Mission Plan."
+  },
+  {
+    "id": 35,
+    "qe": "A logistic supply tracking pathway charts a precise right-angled triangular layout. A delivery car moves 24 km North from central yard O, and then changes orientations to drive 7 km East to reach storage spot B. Find the absolute straight-line distance from O to B.",
+    "qh": "एक वाहन जंक्शन O से 24 किमी उत्तर की ओर चलता है, और फिर दिशा बदलकर पूर्व की ओर 7 किमी जाकर बिंदु B पर पहुँचता है। O से B की सीधी रेखा की दूरी ज्ञात कीजिए।",
+    "o": ["25 km", "31 km", "28 km", "30 km"],
+    "a": 0,
+    "e": "<b>Detailed Explanation:</b> This spatial path sets up a classic right-angled triangle with perpendicular legs of 24 km and 7 km. The straight-line distance is the hypotenuse. <br/>By applying the Pythagoras theorem: $\\text{Distance} = \\sqrt{24^2 + 7^2} = \\sqrt{576 + 49} = \\sqrt{625} = \\mathbf{25\\text{ km}}$."
+  },
+  {
+    "id": 36,
+    "qe": "In a biological ecosystem study tracking energy metrics, if the Net Primary Productivity (NPP) of an alluvial marsh tract is measured at 46,000 units and the energy spent during metabolic plant respiration (R) accumulates to 14,000 units, calculate the Gross Primary Productivity (GPP).",
+    "qh": "एक पारिस्थितिकी उत्पादकता सर्वेक्षण में, यदि एक मैदानी क्षेत्र की शुद्ध प्राथमिक उत्पादकता (NPP) 46,000 इकाइयाँ है और पौधों के श्वसन (R) के दौरान खर्च की गई ऊर्जा 14,000 इकाइयाँ है, तो सकल प्राथमिक उत्पादकता (GPP) की गणना करें।",
+    "o": ["60,000 units", "32,000 units", "48,000 units", "54,000 units"],
+    "a": 0,
+    "e": "<b>Detailed Explanation:</b> Utilizing the foundational ecological productivity equation: $NPP = GPP - R$, we isolate Gross Primary Productivity: $GPP = NPP + R$. <br/>Substituting the values: $GPP = 46,000 + 14,000 = \\mathbf{60,000\\text{ units}}$."
+  },
+  {
+    "id": 37,
+    "qe": "Under the system of Dyarchy introduced by the Government of India Act 1919 at the provincial level, which of the following subjects was kept under the 'Reserved' list, managed directly by the Governor's bureaucratic executive council?",
+    "qh": "प्रांतीय स्तर पर भारत सरकार अधिनियम 1919 द्वारा शुरू की गई द्वैध शासन व्यवस्था के तहत, निम्नलिखित में से कौन सा विषय 'आरक्षित' (Reserved) सूची के तहत रखा गया था, जिसका प्रबंधन सीधे राज्यपाल की नौकरशाही कार्यकारी परिषद द्वारा किया जाता था?",
+    "o": ["Law and order, finance, land revenue, and irrigation", "Education, public health, local self-government, and agriculture", "Vernacular media publication, registration procedures, and library management", "The corporate financing of swadeshi textile mills and indigenous shops"],
+    "a": 0,
+    "e": "<b>Detailed Explanation:</b> Dyarchy divided provincial portfolios into two bands. Crucial administrative and financial subjects—such as law and order, public finance, land revenue, justice, and irrigation—were kept under the 'Reserved' list, managed directly by the Governor and his council of bureaucrats without accountability to the legislature."
+  },
+  {
+    "id": 38,
+    "qe": "What macro-level transformation occurred to India's dynamic share of global manufacturing exports across the centuries of British colonial rule?",
+    "qh": "ब्रिटिश औपनिवेशिक शासन के सदियों के दौरान वैश्विक विनिर्माण निर्यात (world manufacturing exports) में भारत कीं गतिशील हिस्सेदारी में बड़े पैमाने पर क्या परिवर्तन आया?",
+    "o": ["It dramatically fell from 27 per cent down to a mere 2 per cent", "It increased steadily from 2 per cent up to an optimized 27 per cent", "It remained perfectly constant at a balanced 10 per cent layout", "It dropped to zero instantly within the first decade of the Charter Act of 1813"],
+    "a": 0,
+    "e": "<b>Detailed Explanation:</b> As highlighted by modern economic historians, the systemic deindustrialization and forced commercialization under British rule caused India's share of world manufacturing exports to crash from a dominant 27 per cent down to a mere 2 per cent by the end of the colonial era."
+  },
+  {
+    "id": 39,
+    "qe": "The judicial framework of the Cornwallis Code of 1793 established a major milestone in modern Indian administrative history by firmly introducing which concept?",
+    "qh": "1793 के 'कॉर्नवॉलिस कोड' ने किस प्रमुख अवधारणा कों दृढ़ता से पेश करके आधुनिक भारतीय प्रशासनिक इतिहास में एक बुनियादी मील का पत्थर स्थापित किया?",
+    "o": ["The principle of the sovereignty of law and the separation of revenue and justice administration", "The absolute legal immunity of all colonial government officials from civil court oversight", "The mandatory use of English instead of vernacular languages across all local lower subdivisions", "The total structural centralization of all judicial functions under the district Collector"],
+    "a": 0,
+    "e": "<b>Detailed Explanation:</b> The Cornwallis Code of 1793 was a landmark because it established the sovereignty of law and the separation of powers. It separated revenue administration from justice, divested the Collector of judicial duties, and made government officials answerable to civil courts for official actions."
+  },
+  {
+    "id": 40,
+    "qe": "What retrogressive evaluation did the Simon Commission outline in its May 1930 report regarding the efficiency and financial management of local self-governing bodies since 1919?",
+    "qh": "साइमन कमीशन ने मई 1930 की अपनी रिपोर्ट में 1919 के बाद से स्थानीय स्वशासी निकायों के कुशल और वित्तीय प्रबंधन के संबंध में कौन सा प्रतिगामी (retrogressive) मूल्यांकन प्रस्तुत किया था?",
+    "o": ["It claimed that the management of finances had deteriorated, and suggested the retrograde step of increasing provincial bureaucratic control over local bodies", "It celebrated the village panchayats for successfully achieving absolute financial independence across all provinces", "It demanded that 100% of local tax revenues must be channeled directly to support the All India Kisan Sabha", "The Commission recommended the complete permanent legal abolition of the office of the district magistrate"],
+    "a": 0,
+    "e": "<b>Detailed Explanation:</b> The Simon Commission (May 1930) noted that the financial management of local bodies had deteriorated since the introduction of the 1919 reforms, pointing out a lack of progress in village panchayats. Instead of expanding democracy, it recommended a retrograde step: increasing tight provincial bureaucratic control over these local bodies in the name of efficiency."
   }
 ]
