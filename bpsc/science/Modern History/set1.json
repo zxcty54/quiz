@@ -12,19 +12,7 @@
 "a": 0,
 "e": "Explanation: Statements 1 and 2 are historically accurate. The first split in 1866 created the Brahmo Samaj of India (Keshub Chandra Sen) and left the original body as the Adi Brahmo Samaj under Debendranath Tagore. The second split in 1878 happened due to the Cooch Behar marriage controversy. However, Statement 3 is incorrect because the faction that broke away from Sen in 1878 established the Sadharan Brahmo Samaj, not the Adi Brahmo Samaj."
 },
-{
-"p_id": "bpsc_mix_mock_02",
-"qe": "Consider the following statements regarding the behavior of sound waves under varying environmental and physical conditions:\n1. If the atmospheric pressure of an ideal gas double at a constant temperature, the velocity of sound through that gas will also double.\n2. The speed of sound in humid air is higher than that in dry air at the same temperature because the presence of water vapor decreases the effective density of the air.\n3. When a sound wave travels from air into water, both its frequency and its wavelength increase proportionally to match the higher density of the medium.",
-"qh": "विभिन्न पर्यावरणीय और भौतिक परिस्थितियों में ध्वनि तरंगों के व्यवहार के संबंध में निम्नलिखित कथनों पर विचार कीजिए:\n1. यदि किसी आदर्श गैस का वायुमंडलीय दाब स्थिर तापमान पर दोगुना हो जाता है, तो उस गैस में ध्वनि का वेग भी दोगुना हो जाएगा।\n2. समान तापमान पर शुष्क हवा की तुलना में आर्द्र हवा में ध्वनि की गति अधिक होती है क्योंकि जल वाष्प की उपस्थिति हवा के प्रभावी घनत्व को कम कर देती है।\n3. जब कोई ध्वनि तरंग हवा से पानी में प्रवेश करती है, तो माध्यम के उच्च घनत्व से मेल खाने के लिए इसकी आवृत्ति और तरंगदैर्ध्य दोनों आनुपातिक रूप से बढ़ जाते हैं।",
-"o": [
-"Only 1 and 2 are correct",
-"Only 2 is correct",
-"Only 1 and 3 are correct",
-"More than one of the above / None of the above"
-],
-"a": 1,
-"e": "Explanation: Statement 1 is false because the speed of sound in an ideal gas is completely independent of pressure changes if the temperature remains constant ($v = \sqrt{\gamma RT/M}$). Statement 2 is correct; water vapor has a lower molecular weight than standard air, so humid air is less dense, which increases the speed of sound ($v \propto 1/\sqrt{\rho}$). Statement 3 is false because when any wave changes medium, its frequency remains strictly constant as it depends solely on the source, while only its velocity and wavelength change."
-},
+
 {
 "p_id": "bpsc_mix_mock_03",
 "qe": "Consider the following statements regarding the land revenue systems and peasant movements in colonial Bihar:\n1. The Indigo Unrest in Tirhut division led to the appointment of the Champaran Agrarian Committee, in which Mahatma Gandhi was included as a member to evaluate the Tinkathia system.\n2. The Bihar Provincial Kisan Sabha (BPKS) was formed at the Sonepur Mela in 1929 by Swami Sahajanand Saraswati to voice peasant grievances against the zamindari oppression.\n3. The Bakasht land movement of the late 1930s, led by Karyanand Sharma in the Monghyr district, demanded the restoration of lands occupancy rights that peasants had lost during the Great Depression.",
@@ -75,7 +63,7 @@
 "More than one of the above / None of the above"
 ],
 "a": 1,
-"e": "Explanation: Statement 1 is false according to Bernoulli's Principle ($P + \frac{1}{2}\rho v^2 = \text{constant}$), which dictates that where velocity is highest, the pressure is lowest. Statement 2 is perfectly correct; at the exact design speed ($v = \sqrt{rg \tan \theta}$), the normal reaction's component handles centripetal force without needing friction. Statement 3 is false because a convex mirror always forms a diminished (smaller) image, which provides a wider field of view."
+"e": "Explanation: Statement 1 is false according to Bernoulli's Principle ($P + \frac{1}{2}\rho v^2 = \text{constant}$), which dictates that where velocity is highest, the pressure is lowest. Statement 2 is perfectly correct; at the exact design speed ($v = \\sqrt{rg \tan \theta}$), the normal reaction's component handles centripetal force without needing friction. Statement 3 is false because a convex mirror always forms a diminished (smaller) image, which provides a wider field of view."
 },
 {
 "p_id": "bpsc_mix_mock_07",
@@ -283,7 +271,7 @@
 "More than one of the above / None of the above"
 ],
 "a": 0,
-"e": "Explanation: Statements 1 and 2 are accurate concepts of optical physics ($I \propto 1/\lambda^4$ for Rayleigh scattering; TIR requires dense-to-rare path and $i > i_c$). Statement 3 is false because a mirage occurs precisely because the refractive index of the air is not uniform; intense heat near the ground creates a temperature gradient, causing a variable refractive index that bends light rays upward."
+"e": "Explanation: Statements 1 and 2 are accurate concepts of optical physics ($I \\propto 1/\\lambda^4$ for Rayleigh scattering; TIR requires dense-to-rare path and $i > i_c$). Statement 3 is false because a mirage occurs precisely because the refractive index of the air is not uniform; intense heat near the ground creates a temperature gradient, causing a variable refractive index that bends light rays upward."
 },
 {
 "p_id": "bpsc_mix_mock_23",
