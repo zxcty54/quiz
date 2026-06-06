@@ -24847,7 +24847,7 @@
       "The kinetic energy developed will be identical across both particle domains."
     ],
     "a": 1,
-    "e": "<b>Explanation:</b> Newton's second law ($\mathbf{F} = \\frac{\\Delta\\mathbf{p}}{\\Delta t}$) dictates that the change in momentum is the product of force and time duration (Impulse). Since the same force is applied for the same time interval on both masses, both bodies acquire the exact same change in momentum, irrespective of their masses."
+    "e": "<b>Explanation:</b> Newton's second law ($\\mathbf{F} = \\frac{\\Delta\\mathbf{p}}{\\Delta t}$) dictates that the change in momentum is the product of force and time duration (Impulse). Since the same force is applied for the same time interval on both masses, both bodies acquire the exact same change in momentum, irrespective of their masses."
   },
   {
     "cat": "gs",
@@ -24875,13 +24875,13 @@
       "It dialates the spatial dimensions of the particle trajectory field continuously."
     ],
     "a": 1,
-    "e": "<b>Explanation:</b> Newton's second law is a vector law ($\mathbf{F} = m\mathbf{a}$). This implies that the component of force along a specific axis alters only the component of velocity along that corresponding direction; any component of velocity perpendicular (normal) to the force remains completely invariant."
+    "e": "<b>Explanation:</b> Newton's second law is a vector law ($\\mathbf{F} = m\\mathbf{a}$). This implies that the component of force along a specific axis alters only the component of velocity along that corresponding direction; any component of velocity perpendicular (normal) to the force remains completely invariant."
   },
   {
     "cat": "gs",
     "sub": "motion",
-    "qe": "Newton's second law of motion ($\mathbf{F} = m\mathbf{a}$) is stated to be a 'local relation'. What is the precise physical meaning of this statement?",
-    "qh": "न्यूटन के गति के दूसरे नियम ($\mathbf{F} = m\mathbf{a}$) को एक 'स्थानीय संबंध' (local relation) कहा जाता है। इस कथन का सटीक भौतिक अर्थ क्या है?",
+    "qe": "Newton's second law of motion ($\\mathbf{F} = m\\mathbf{a}$) is stated to be a 'local relation'. What is the precise physical meaning of this statement?",
+    "qh": "न्यूटन के गति के दूसरे नियम ($\\mathbf{F} = m\\mathbf{a}$) को एक 'स्थानीय संबंध' (local relation) कहा जाता है। इस कथन का सटीक भौतिक अर्थ क्या है?",
     "o": [
       "The force vector depends on the global macroscopic mass allocation layout.",
       "The acceleration of a particle at a given point in space and instant of time depends strictly on the force acting at that point at that specific instant, carrying no memory of past history.",
@@ -24917,7 +24917,7 @@
       "The rate at which total mechanical power is dissipated as thermal stress."
     ],
     "a": 1,
-    "e": "<b>Explanation:</b> According to the integrated form of the second law, Impulse = $\mathbf{F} \\times \\Delta t = \\Delta\\mathbf{p}$. This means that impulse is mathematically and physically identical to the total change in the momentum vector of the body during the impact duration."
+    "e": "<b>Explanation:</b> According to the integrated form of the second law, Impulse = $\\mathbf{F} \\times \\Delta t = \\Delta\\mathbf{p}$. This means that impulse is mathematically and physically identical to the total change in the momentum vector of the body during the impact duration."
   },
   {
     "cat": "gs",
@@ -24945,7 +24945,7 @@
       "The system must operate inside a zero-gravity quantum fields domain."
     ],
     "a": 1,
-    "e": "<b>Explanation:</b> The conservation of total momentum is rooted in the absence of external agencies. In an isolated system, the net external force is zero ($\mathbf{F}_{ext} = 0$). Internal mutual forces cancel out in pairs due to the Third Law, leaving the total momentum invariant, whether collisions are elastic or inelastic."
+    "e": "<b>Explanation:</b> The conservation of total momentum is rooted in the absence of external agencies. In an isolated system, the net external force is zero ($\\mathbf{F}_{ext} = 0$). Internal mutual forces cancel out in pairs due to the Third Law, leaving the total momentum invariant, whether collisions are elastic or inelastic."
   },
   {
     "cat": "gs",
@@ -24959,7 +24959,7 @@
       "Neither momentum nor kinetic energy can be conserved due to internal frictional stress."
     ],
     "a": 1,
-    "e": "<b>Explanation:</b> The law of conservation of total momentum applies to all isolated systems ($\mathbf{F}_{ext} = 0$) regardless of the collision type. Therefore, total final momentum equals total initial momentum. However, in an inelastic collision, a portion of the initial kinetic energy is dissipated into internal heat or deformation, so total kinetic energy is NOT conserved."
+    "e": "<b>Explanation:</b> The law of conservation of total momentum applies to all isolated systems ($\\mathbf{F}_{ext} = 0$) regardless of the collision type. Therefore, total final momentum equals total initial momentum. However, in an inelastic collision, a portion of the initial kinetic energy is dissipated into internal heat or deformation, so total kinetic energy is NOT conserved."
   },
   {
     "cat": "gs",
@@ -25169,7 +25169,7 @@
       "When a particle is momentarily at a state of absolute structural rest."
     ],
     "a": 1,
-    "e": "<b>Explanation:</b> Force is always parallel to the acceleration vector ($\mathbf{F} = m\mathbf{a}$), not necessarily the velocity vector. In uniform circular motion, the speed is constant, so there is no tangential force component; the entire centripetal force points radially inward toward the center, which is strictly normal ($90^\\circ$) to the tangential velocity vector."
+    "e": "<b>Explanation:</b> Force is always parallel to the acceleration vector ($\\mathbf{F} = m\\mathbf{a}$), not necessarily the velocity vector. In uniform circular motion, the speed is constant, so there is no tangential force component; the entire centripetal force points radially inward toward the center, which is strictly normal ($90^\\circ$) to the tangential velocity vector."
   },
   {
     "cat": "gs",
@@ -25188,16 +25188,16 @@
   {
     "cat": "gs",
     "sub": "motion",
-    "qe": "In the fundamental equation of motion $\mathbf{F} = m\mathbf{a}$, what does the term '$m\mathbf{a}$' physically signify, and how should it be treated in a free-body layout?",
-    "qh": "गति के मूल समीकरण $\mathbf{F} = m\mathbf{a}$ में, '$m\mathbf{a}$' पद भौतिक रूप से क्या दर्शाता है, और इसे फ्री-बॉडी लेआउट में कैसे माना जाना चाहिए?",
+    "qe": "In the fundamental equation of motion $\\mathbf{F} = m\\mathbf{a}$, what does the term '$m\\mathbf{a}$' physically signify, and how should it be treated in a free-body layout?",
+    "qh": "गति के मूल समीकरण $\\mathbf{F} = m\\mathbf{a}$ में, '$m\\mathbf{a}$' पद भौतिक रूप से क्या दर्शाता है, और इसे फ्री-बॉडी लेआउट में कैसे माना जाना चाहिए?",
     "o": [
       "It represents an additional active inertial force external to the particle matter.",
-      "It is simply the inertial effect of the net external force $\mathbf{F}$ on mass $m$, and must never be treated as an independent force in a free-body diagram.",
+      "It is simply the inertial effect of the net external force $\\mathbf{F}$ on mass $m$, and must never be treated as an independent force in a free-body diagram.",
       "It is a pseudo-vector field force tracking the choice of perpendicular coordinate axes.",
       "It balances out the weight vector to maintain complete structural equilibrium."
     ],
     "a": 1,
-    "e": "<b>Explanation:</b> In $\mathbf{F} = m\mathbf{a}$, $\mathbf{F}$ is the net sum of all real external material forces acting on the body. The term $m\mathbf{a}$ is the kinematic *effect* of that net force on the mass. It is a common error to treat $m\mathbf{a}$ as an independent material force acting on the body; it should never appear as a force arrow in an FBD."
+    "e": "<b>Explanation:</b> In $\\mathbf{F} = m\\mathbf{a}$, $\\mathbf{F}$ is the net sum of all real external material forces acting on the body. The term $m\\mathbf{a}$ is the kinematic *effect* of that net force on the mass. It is a common error to treat $m\\mathbf{a}$ as an independent material force acting on the body; it should never appear as a force arrow in an FBD."
   },
   {
     "cat": "gs",
