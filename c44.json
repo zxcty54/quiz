@@ -22986,5 +22986,775 @@
     ],
     "a": 1,
     "e": "<b>Explanation:</b> जब प्रकीर्णन करने वाले कणों का आकार प्रकाश की तरंगदैर्ध्य से बहुत बड़ा होता है (जैसे बादलों में पानी की बूंदें), तो वे सभी रंगों को समान रूप से प्रकीर्णित (फैला) करते हैं। सभी रंगों के समान रूप से मिलने पर प्रकाश श्वेत (White) दिखता है।"
+  },
+  {
+    "cat": "gs",
+    "sub": "light",
+    "qe": "According to the corpuscular model of light proposed by René Descartes and Isaac Newton, what counter-intuitive prediction was made regarding the behavior of light passing from a rarer to a denser medium?",
+    "qh": "रेने डेकार्टेस और आइजैक न्यूटन द्वारा प्रस्तावित प्रकाश के कणिका मॉडल (corpuscular model) के अनुसार, प्रकाश के विरल से सघन माध्यम में प्रवेश करने के संबंध में कौन सा विरोधाभासी अनुमान लगाया गया था?",
+    "o": [
+      "Light completely stops at the interface due to immediate energy dissipation.",
+      "The speed of light increases in the second, denser medium if the ray bends towards the normal.",
+      "The wavelength increases while the frequency drops to absolute zero.",
+      "The light undergoes total internal reflection irrespective of the critical angle criteria."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> The corpuscular model predicted that if a ray of light bends towards the normal during refraction, its speed must be greater in the second (denser) medium ($v_2 > v_1$). This was later disproved by Foucault's experiment in 1850, which proved that the wave theory prediction ($v_2 < v_1$) is correct."
+  },
+  {
+    "cat": "gs",
+    "sub": "light",
+    "qe": "In 1850, which physicist experimentally proved the invalidity of the Newtonian corpuscular model by demonstrating that the speed of light in water is less than that in air?",
+    "qh": "1850 में, किस भौतिकविद् ने यह प्रयोगात्मक रूप से सिद्ध किया कि पानी में प्रकाश की गति हवा की तुलना में कम होती है, जिससे न्यूटन के कणिका मॉडल को अमान्य घोषित किया गया?",
+    "o": [
+      "Thomas Young",
+      "Jean Bernard Léon Foucault",
+      "Christiaan Huygens",
+      "Heinrich Hertz"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Foucault carried out the historic experiment in 1850 showing that the speed of light in water is less than the speed in air, validating Huygens' wave model over Newton's corpuscular theory."
+  },
+  {
+    "cat": "gs",
+    "sub": "light",
+    "qe": "The boundary of geometrical optics, where light is assumed to travel strictly along linear rays, represents a definitive mathematical limit. This approximation is valid when:",
+    "qh": "ज्यामितीय प्रकाशिकी (geometrical optics) की सीमा, जहाँ यह माना जाता है कि प्रकाश सख्ती से रेखीय किरणों में यात्रा करता है, एक निश्चित गणितीय सीमा को दर्शाती है। यह सन्निकटन कब मान्य होता है?",
+    "o": [
+      "The finiteness of the wavelength is completely comparable to obstacle dimensions.",
+      "The wavelength of light tends to zero relative to the macroscopic dimensions of lenses or mirrors.",
+      "The frequency of propagation becomes absolutely independent of wave speed.",
+      "The medium undergoes complete mechanical polarization."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Geometrical optics is a limiting case where the finiteness of the wavelength is completely neglected. A ray is defined as the path of energy propagation in the mathematical limit of wavelength tending to zero ($\\lambda \\to 0$)."
+  },
+  {
+    "cat": "gs",
+    "sub": "light",
+    "qe": "James Clerk Maxwell resolved the ultimate mechanical dilemma of wave theory regarding how light propagates through a vacuum without a material medium. His equations proved that light propagates via:",
+    "qh": "जेम्स क्लर्क मैक्सवेल ने तरंग सिद्धांत की इस मूलभूत दुविधा को हल किया कि बिना किसी भौतिक माध्यम के प्रकाश निर्वात में कैसे गमन करता है। उनके समीकरणों ने सिद्ध किया कि प्रकाश का संचरण किसके द्वारा होता है?",
+    "o": [
+      "Continuous acoustic-pressure fluctuations of the underlying cosmic ether matrix.",
+      "Time and space-varying electric and magnetic fields generating each other mutually.",
+      "Longitudinal corpuscular elastic stress vectors mapping the free space topology.",
+      "Localized mechanical thermal vibrations of non-zero mass cosmic neutrinos."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> According to Maxwell's electromagnetic theory, light waves do not require a material medium because they are associated with changing electric and magnetic fields; a changing electric field produces a time- and space-varying magnetic field, and vice versa."
+  },
+  {
+    "cat": "gs",
+    "sub": "light",
+    "qe": "A wavefront is fundamentally defined under wave mechanics as a surface of constant phase. What determines the direction of energy propagation relative to this surface?",
+    "qh": "तरंग यांत्रिकी के अंतर्गत एक तरंगाग्र (wavefront) को मुख्य रूप से समान कला (constant phase) की सतह के रूप में परिभाषित किया जाता है। इस सतह के सापेक्ष ऊर्जा संचरण की दिशा किसके द्वारा निर्धारित होती है?",
+    "o": [
+      "Energy travels strictly parallel along the continuous perimeter of the wavefront plane.",
+      "Energy propagates in a direction perpendicular to the wavefront surface.",
+      "Energy vectors oscillate randomly at an acute angle of $45^\\circ$ to the envelope.",
+      "Energy remains entirely localized and cannot propagate beyond the locus point."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> The text explicitly states that the energy of a wave always travels in a direction strictly perpendicular to the wavefront surface."
+  },
+  {
+    "cat": "gs",
+    "sub": "light",
+    "qe": "When a point source emits waves uniformly in three-dimensional isotropic space, the resulting wavefronts close to the source are spherical. What geometric transition occurs to these wavefronts at a very large distance from the source?",
+    "qh": "जब एक बिंदु स्रोत त्रिविमीय समदैशिक (isotropic) स्थान में समान रूप से तरंगें उत्सर्जित करता है, तो स्रोत के निकट बनने वाले तरंगाग्र गोलीय होते हैं। स्रोत से बहुत अधिक दूरी पर इन तरंगाग्रों में कौन सा ज्यामितीय परिवर्तन होता है?",
+    "o": [
+      "They collapse into single-dimensional collinear rays.",
+      "A small portion of the expanding sphere can be approximated as a plane wave.",
+      "They transform into irregular, non-congruent cylindrical envelopes.",
+      "The phase difference varies randomly, destroying the wavefront geometry."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> At a sufficiently large distance from a point source, a small portion of the expanding spherical sphere has a negligible curvature and can be approximated as a plane wave."
+  },
+  {
+    "cat": "gs",
+    "sub": "light",
+    "qe": "Huygens' geometrical construction utilizes secondary wavelets to determine the forward wavefront position at a later time $t$. However, this model faces a mathematical challenge due to the prediction of a backwave. Huygens explained away the absence of the backwave by making which ad-hoc assumption?",
+    "qh": "हाइजेंस की ज्यामितीय संरचना बाद के समय $t$ पर अग्रगामी तरंगाग्र की स्थिति निर्धारित करने के लिए द्वितीयक तरंगिकाओं का उपयोग करती है। हालांकि, इस मॉडल को एक पश्चतरंग (backwave) के अनुमान के कारण गणितीय चुनौती का सामना करना पड़ता है। हाइजेंस ने किस तदर्थ (ad-hoc) धारणा को मानकर पश्चतरंग की अनुपस्थिति की व्याख्या की?",
+    "o": [
+      "The speed of the backwave becomes negative, causing instantaneous structural collapse.",
+      "The amplitude of the secondary wavelets is maximum in the forward direction and zero in the backward direction.",
+      "The backwave undergoes instantaneous destructive interference with the primary source.",
+      "The backward envelope is completely absorbed by the mass density of the primary emitter."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> To explain the absence of the backwave, Huygens assumed that the amplitude of secondary wavelets is directional—maximum in the forward direction and zero in the backward direction. Modern rigorous wave theory later justified this absence without ad-hoc assumptions."
+  },
+  {
+    "cat": "gs",
+    "sub": "light",
+    "qe": "When a plane wave undergoing refraction bends towards the normal, Huygens' principle derives Snell's law based on wave behavior at the interface. This bending towards the normal strictly implies that the wavelength of light in the second medium ($\\lambda_2$) compared to the first medium ($\\lambda_1$) must:",
+    "qh": "जब अपवर्तन से गुजरने वाला एक समतल तरंगाग्र अभिलंब की ओर झुकता है, तो हाइजेंस का सिद्धांत इंटरफेस पर तरंग के व्यवहार के आधार पर स्नेल के नियम को व्युत्पन्न करता है। अभिलंब की ओर झुकने का सीधा तात्पर्य यह है कि पहले माध्यम ($\\lambda_1$) की तुलना में दूसरे माध्यम में प्रकाश की तरंगदैर्ध्य ($\\lambda_2$) को:",
+    "o": [
+      "Increase exponentially relative to the refraction angle change.",
+      "Decrease proportionally along with the velocity of propagation.",
+      "Remain completely invariant to satisfy the law of conservation of momentum.",
+      "Become imaginary beyond the boundary limits of critical incidence."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> According to the derived relations, $\\frac{v_1}{v_2} = \\frac{\\lambda_1}{\\lambda_2}$. If $v_1 > v_2$ (ray bends towards the normal in a denser medium), the wavelength $\\lambda_2$ decreases proportionally with the speed, while the frequency remains unchanged."
+  },
+  {
+    "cat": "gs",
+    "sub": "light",
+    "qe": "When light passes from an optically rarer medium to an optically denser medium, which physical parameter remains strictly invariant?",
+    "qh": "जब प्रकाश एक प्रकाशिक रूप से विरल माध्यम से प्रकाशिक रूप से सघन माध्यम में प्रवेश करता है, तो कौन सा भौतिक पैरामीटर कड़ाई से अपरिवर्तित रहता है?",
+    "o": [
+      "Velocity of propagation ($v$)",
+      "Wavelength of the wave ($\\lambda$)",
+      "Frequency of the wave ($\\nu$)",
+      "Amplitude of the electric field vector ($a$)"
+    ],
+    "a": 2,
+    "e": "<b>Explanation:</b> When a wave is refracted into a denser medium, its wavelength and speed of propagation decrease simultaneously, but the frequency $\\nu = \\frac{v}{\\lambda}$ remains strictly constant because it is determined by the source oscillator."
+  },
+  {
+    "cat": "gs",
+    "sub": "light",
+    "qe": "Based on the wave theory derivation of refraction, if the angle of incidence ($i$) exceeds the critical angle ($i_c$) when light attempts to enter an optically rarer medium from a denser medium, what occurs?",
+    "qh": "अपवर्तन के तरंग सिद्धांत के व्युत्पन्न के आधार पर, यदि प्रकाश एक सघन माध्यम से विरल माध्यम में प्रवेश करने का प्रयास करता है और आपतन कोण ($i$) क्रांतिक कोण ($i_c$) से अधिक हो जाता है, तो क्या होता है?",
+    "o": [
+      "The wave speed becomes infinite, causing a structural singularity.",
+      "No refracted wave can exist, and the entire wave undergoes total internal reflection.",
+      "The wave breaks down into non-collinear corpuscular fragments.",
+      "The refracted wavefront aligns exactly parallel to the normal vector."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> For $i > i_c$, $\\sin r > 1$, which is mathematically impossible for a real refracted angle. Thus, there cannot be any refracted wave, and the wave undergoes total internal reflection."
+  },
+  {
+    "cat": "gs",
+    "sub": "light",
+    "qe": "Using Huygens' principle to analyze the reflection of a plane wave by a flat reflecting surface, the congruence of triangles formed by the incident and reflected wavefront structures directly proves that:",
+    "qh": "एक समतल परावर्तक सतह द्वारा समतल तरंगाग्र के परावर्तन का विश्लेषण करने के लिए हाइजेंस के सिद्धांत का उपयोग करने पर, आपतित और परावर्तित तरंगाग्र संरचनाओं द्वारा गठित त्रिभुजों की सर्वांगसमता (congruence) सीधे क्या सिद्ध करती है?",
+    "o": [
+      "The frequency doubles post-reflection.",
+      "The angle of incidence is strictly equal to the angle of reflection.",
+      "The reflected phase undergoes a continuous spatial shift of $\\frac{\\pi}{4}$.",
+      "The velocity component perpendicular to the surface is completely absorbed."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> The geometric construction proves that triangle $EAC$ and triangle $BAC$ are congruent. Consequently, the linear angles $i$ and $r$ are equal, validating the fundamental law of reflection."
+  },
+  {
+    "cat": "gs",
+    "sub": "light",
+    "qe": "When a plane wavefront passes through a thin glass prism, the emerging wavefront undergoes a distinct structural tilt. According to wave optics, this tilt occurs because:",
+    "qh": "जब एक समतल तरंगाग्र एक पतले कांच के प्रिज्म से होकर गुजरता है, तो निकलने वाला तरंगाग्र एक निश्चित संरचनात्मक झुकाव से गुजरता है। तरंग प्रकाशिकी के अनुसार, यह झुकाव इसलिए होता है क्योंकि:",
+    "o": [
+      "The upper portion of the wavefront undergoes localized polarization at the apex.",
+      "The lower portion of the incoming wavefront travels through the greatest thickness of glass and experiences the maximum delay due to the lower speed of light in glass.",
+      "The prism alters the fundamental frequency of the base wave modes.",
+      "The total energy collapses symmetrically at the sharp edge of the upper boundary."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Since the speed of light waves is less in glass, the lower portion of the incoming wavefront, which traverses the thickest section of the glass prism, gets delayed the most, resulting in a geometric tilt in the emerging wavefront."
+  },
+  {
+    "cat": "gs",
+    "sub": "light",
+    "qe": "A plane wave is incident normally on a thin convex lens. After emerging from the lens, the wavefront transforms into a spherical wave converging toward the focus. This specific alteration in shape is due to the fact that:",
+    "qh": "एक समतल तरंग सामान्य रूप से एक पतले उत्तल लेंस पर आपतित होती है। लेंस से निकलने के बाद, तरंगाग्र फोकस की ओर अभिसरित होने वाली एक गोलीय तरंग में बदल जाता है। आकार में यह विशिष्ट परिवर्तन इस तथ्य के कारण होता है कि:",
+    "o": [
+      "The edges of the lens completely absorb the wave amplitude.",
+      "The central part of the incident plane wave traverses the thickest portion of the lens and is delayed the most.",
+      "The frequency increases maximum at the peripheral boundaries of the glass matrix.",
+      "The lens imparts a localized linear phase shift of exactly $\\pi$ radians everywhere."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> The central part of the wavefront passes through the thickest part of the convex lens and experiences the maximum propagation delay. This produces a geometric depression at the center, rendering the emerging wavefront spherical and convergent."
+  },
+  {
+    "cat": "gs",
+    "sub": "light",
+    "qe": "When a convex lens focuses light to form a real image, rays traveling near the edge of the lens traverse a longer physical path than the central ray. Yet, they reach the image point in phase. How does wave theory explain this?",
+    "qh": "जब एक उत्तल लेंस वास्तविक प्रतिबिंब बनाने के लिए प्रकाश को फोकस करता है, तो लेंस के किनारे के पास यात्रा करने वाली किरणें केंद्रीय किरण की तुलना में अधिक लंबे भौतिक पथ को तय करती हैं। फिर भी, वे समान कला में प्रतिबिंब बिंदु तक पहुंचती हैं। तरंग सिद्धांत इसकी व्याख्या कैसे करता है?",
+    "o": [
+      "The peripheral rays travel faster in air than the speed of light in vacuum.",
+      "The total time taken from a point on the object to the corresponding point on the image is identical along any ray because the central ray spends more time in the slower glass medium.",
+      "The phase difference is completely randomized by the curvature, making synchronization irrelevant.",
+      "The lens edges act as localized relativistic spaces accelerating the boundary photons."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Although the ray passing through the center traverses a shorter spatial path, it spends more time traveling through the thicker glass where its speed is slower. As a result, the total time taken along any path from the object point to the image point is identical."
+  },
+  {
+    "cat": "gs",
+    "sub": "light",
+    "qe": "The entire phenomenon of wave interference is governed fundamentally by the principle of superposition. According to this principle, the resultant displacement at a point is the:",
+    "qh": "तरंग व्यतिकरण (wave interference) की संपूर्ण परिघटना मूल रूप से अध्यारोपण के सिद्धांत (principle of superposition) द्वारा संचालित होती है। इस सिद्धांत के अनुसार, किसी बिंदु पर परिणामी विस्थापन क्या होता है?",
+    "o": [
+      "Scalar sum of the intensities of individual wave modes.",
+      "Vector sum of the displacements produced by each individual wave.",
+      "Geometric mean of the peak amplitudes of the participating pulses.",
+      "Product of the individual wave phase constants divided by time."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> The principle of superposition states that at a particular point in the medium, the resultant displacement produced by a number of waves is the vector sum of the displacements produced by each individual wave."
+  },
+  {
+    "cat": "gs",
+    "sub": "light",
+    "qe": "Two distinct light sources are said to be strictly coherent if the phase difference between the displacements they produce at a given point:",
+    "qh": "दो अलग-अलग प्रकाश स्रोतों को कड़ाई से कला-संबद्ध (coherent) कहा जाता है यदि किसी दिए गए बिंदु पर उनके द्वारा उत्पन्न विस्थापन के बीच का कलांतर (phase difference):",
+    "o": [
+      "Changes randomly in intervals of $10^{-10}$ seconds.",
+      "Does not change with time.",
+      "Is an odd integer multiple of the wave amplitude matrix.",
+      "Varies linearly with the absolute temperature of the medium."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Coherent sources are defined as those that emit light waves with a zero or stable phase difference that does not change with time."
+  },
+  {
+    "cat": "gs",
+    "sub": "light",
+    "qe": "At any point on the perpendicular bisector of the line joining two identical coherent wave sources vibrating in phase, the resultant intensity $I$ relates to the individual source intensity $I_0$ as:",
+    "qh": "समान कला में कंपन करने वाले दो समान कला-संबद्ध तरंग स्रोतों को जोड़ने वाली रेखा के लंब समद्विभाजक (perpendicular bisector) पर किसी भी बिंदु पर, परिणामी तीव्रता $I$ का व्यक्तिगत स्रोत की तीव्रता $I_0$ से क्या संबंध होता है?",
+    "o": [
+      "$I = I_0$",
+      "$I = 2I_0$",
+      "$I = 4I_0$",
+      "$I = 0$"
+    ],
+    "a": 2,
+    "e": "<b>Explanation:</b> On the perpendicular bisector, the path difference is zero, meaning the waves arrive in phase. The resultant amplitude doubles ($2a$), and since intensity is proportional to the square of amplitude, the resultant intensity becomes $4I_0$ (constructive interference)."
+  },
+  {
+    "cat": "gs",
+    "sub": "light",
+    "qe": "For two coherent sources $S_1$ and $S_2$ vibrating in phase, constructive interference occurs at an arbitrary point $P$ whenever the path difference $|S_1P - S_2P|$ is equal to:",
+    "qh": "समान कला में कंपन करने वाले दो कला-संबद्ध स्रोतों $S_1$ और $S_2$ के लिए, एक मनमाने बिंदु $P$ पर संपोषी व्यतिकरण (constructive interference) तब होता है जब भी पथ अंतर $|S_1P - S_2P|$ किसके बराबर होता है?",
+    "o": [
+      "An odd integer multiple of half wavelength: $(n + \\frac{1}{2})\\lambda$",
+      "An integral multiple of the wavelength: $n\\lambda$ (where $n = 0, 1, 2, 3,...$)",
+      "An arbitrary fraction of the source dimension parameter.",
+      "Strictly zero, failing to execute at any non-zero path vector."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Constructive interference occurs whenever the path difference between the waves from two coherent sources is an integral multiple of the wavelength, i.e., $n\\lambda$, where $n = 0, 1, 2, 3...$"
+  },
+  {
+    "cat": "gs",
+    "sub": "light",
+    "qe": "Destructive interference occurs at an arbitrary point $P$ due to two coherent sources vibrating in phase when the path difference satisfies which mathematical criterion?",
+    "qh": "समान कला में कंपन करने वाले दो कला-संबद्ध स्रोतों के कारण किसी मनमाने बिंदु $P$ पर विनाशी व्यतिकरण (destructive interference) तब होता है जब पथ अंतर किस गणितीय मानदंड को पूरा करता है?",
+    "o": [
+      "Path difference $= n\\lambda$",
+      "Path difference $= (n + \\frac{1}{2})\\lambda$ (where $n = 0, 1, 2, 3,...$)",
+      "Path difference $= 2n\\pi$",
+      "Path difference $= \\frac{n\\lambda}{4}$"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Destructive interference takes place when the path difference between the waves arriving at a point is an odd integral multiple of half the wavelength, written as $(n + \\frac{1}{2})\\lambda$ where $n = 0, 1, 2, 3...$"
+  },
+  {
+    "cat": "gs",
+    "sub": "light",
+    "qe": "If two identical wave sources are completely incoherent, the phase difference between their displacements at any given point changes very rapidly with time. The resulting time-averaged intensity observed on a screen will be:",
+    "qh": "यदि दो समान तरंग स्रोत पूरी तरह से कला-असंबद्ध (incoherent) हैं, तो किसी दिए गए बिंदु पर उनके विस्थापन के बीच का कलांतर समय के साथ बहुत तेज़ी से बदलता है। परदे पर देखी जाने वाली परिणामी समय-औसत तीव्रता (time-averaged intensity) क्या होगी?",
+    "o": [
+      "Zero everywhere across the spatial field.",
+      "The sum of the individual source intensities: $2I_0$ at all points.",
+      "A sharp, stable high-contrast fringe pattern fluctuating between $4I_0$ and zero.",
+      "An exponential function of the distance separating the slits."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> For incoherent sources, the interference term averages out to zero over time due to rapid variations. The intensities simply add up linearly, giving a constant time-averaged intensity of $I = I_0 + I_0 = 2I_0$ at all points."
+  },
+  {
+    "cat": "gs",
+    "sub": "light",
+    "qe": "Two standard independent sodium lamps illuminating two close pinholes fail to produce a stable interference pattern on a screen. This lack of fringes is primarily because independent light sources:",
+    "qh": "दो मानक स्वतंत्र सोडियम लैंप जो दो पास के पिनहोलों को रोशन करते हैं, परदे पर एक स्थिर व्यतिकरण पैटर्न उत्पन्न करने में विफल रहते हैं। फ्रिंजों की यह कमी मुख्य रूप से इसलिए होती है क्योंकि स्वतंत्र प्रकाश स्रोत:",
+    "o": [
+      "Emit light waves of radically different wave speeds.",
+      "Undergo abrupt phase changes in times of the order of $10^{-10}$ seconds, making them incoherent.",
+      "Suffer from immediate quantum polarization decay at the pinhole interface.",
+      "Fail to conserve energy in the macroscopic domain."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Light waves emitted from ordinary independent sources undergo abrupt, random phase changes in times of the order of $10^{-10}$ seconds. Thus, they cannot maintain a stable phase relationship and are incoherent, preventing the formation of an interference pattern."
+  },
+  {
+    "cat": "gs",
+    "sub": "light",
+    "qe": "Thomas Young ingeniously locked the relative phases of waves emanating from slits $S_1$ and $S_2$ in his historic 1801 experiment. He achieved this phase locking by:",
+    "qh": "थॉमस यंग ने अपने ऐतिहासिक 1801 के प्रयोग में स्लिट्स $S_1$ और $S_2$ से निकलने वाली तरंगों की सापेक्ष कलाओं (phases) को चतुराई से लॉक कर दिया था। उन्होंने यह फेज लॉकिंग कैसे प्राप्त की?",
+    "o": [
+      "Using two distinct sodium lamps stabilized via a thermal cooling grid.",
+      "Deriving both secondary wavefronts from a single original pinhole source $S$.",
+      "Placing a polarizing filter between the two independent emitters.",
+      "Vibrating the screen at a high frequency synchronized with the wave mode."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Young illuminated two pinholes $S_1$ and $S_2$ using a single primary pinhole $S$. Because the light waves exiting $S_1$ and $S_2$ are derived from the same original source wavefront, any sudden phase change in $S$ occurs identically in both slits, keeping them permanently coherent."
+  },
+  {
+    "cat": "gs",
+    "sub": "motion",
+    "qe": "In a standard Young's double-slit experiment setup, the condition for constructive interference at a point $P$ on the screen yields bright fringes. The linear distance $x_n$ of the $n$-th bright fringe from the central maximum is defined as:",
+    "qh": "एक मानक यंग के डबल-स्लिट प्रयोग सेटअप में, परदे पर एक बिंदु $P$ पर संपोषी व्यतिकरण की स्थिति से चमकीली फ्रिंज प्राप्त होती हैं। केंद्रीय उच्चिष्ट से $n$-वीं चमकीली फ्रिंज की रैखिक दूरी $x_n$ को किस रूप में परिभाषित किया गया है?",
+    "o": [
+      "$x_n = \\frac{ndD}{\\lambda}$",
+      "$x_n = \\frac{n\\lambda D}{d}$",
+      "$x_n = (n + \\frac{1}{2})\\frac{\\lambda D}{d}$",
+      "$x_n = \\frac{n\\lambda d}{D}$"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> The position of the $n$-th bright fringe is mathematically derived as $x_n = \\frac{n\\lambda D}{d}$ where $n = 0, \\pm 1, \\pm 2...$, $D$ is the screen distance, and $d$ is the slit separation."
+  },
+  {
+    "cat": "gs",
+    "sub": "motion",
+    "qe": "According to the expressions derived for Young's double-slit experiment, the spatial separation between any two successive dark fringes or bright fringes is:",
+    "qh": "यंग के डबल-स्लिट प्रयोग के लिए व्युत्पन्न व्यंजकों के अनुसार, किन्हीं दो क्रमिक काली फ्रिंजों या चमकीली फ्रिंजों के बीच की स्थानिक दूरी (spatial separation) क्या होती है?",
+    "o": [
+      "Inversely proportional to the screen distance $D$.",
+      "Equally spaced and constant across the fringe field.",
+      "Dependent exponentially on the order number $n$.",
+      "Directly proportional to the slit width parameter $d$."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> The equations show that the fringe width $\\beta = \\frac{\\lambda D}{d}$ is identical for both consecutive bright and dark bands, meaning that the fringes are completely equally spaced."
+  },
+  {
+    "cat": "gs",
+    "sub": "light",
+    "qe": "When a single narrow slit is illuminated by a monochromatic source, a diffraction pattern is observed instead of a sharp geometrical shadow. The first intensity minima (zero intensity) occur at angles $\\theta$ satisfying:",
+    "qh": "जब एक सिंगल संकीर्ण स्लिट को एकवर्णी (monochromatic) स्रोत द्वारा रोशन किया जाता है, तो एक तीव्र ज्यामितीय छाया के बजाय एक विवर्तन पैटर्न देखा जाता है। पहला तीव्रता निम्निष्ट (शून्य तीव्रता) किस कोण $\\theta$ पर होता है?",
+    "o": [
+      "$\\theta = \\pm \\frac{\\lambda}{2a}$",
+      "$\\theta = \\pm \\frac{\\lambda}{a}$",
+      "$\\theta = 0$",
+      "$\\theta = \\pm (n + \\frac{1}{2})\\frac{\\lambda}{a}$"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> For single-slit diffraction of slit width $a$, the conditions for intensity minima (zero intensity) are given by $\\theta = \\frac{n\\lambda}{a}$ where $n = \\pm 1, \\pm 2, \\pm 3...$. Thus, the first minima occur at $\\theta = \\pm \\frac{\\lambda}{a}$."
+  },
+  {
+    "cat": "gs",
+    "sub": "light",
+    "qe": "In a single-slit diffraction experiment, the secondary intensity maxima occur at angles approximately defined by:",
+    "qh": "एक सिंगल-स्लिट विवर्तन प्रयोग में, द्वितीयक तीव्रता उच्चिष्ट (secondary intensity maxima) लगभग किस कोण पर होते हैं?",
+    "o": [
+      "$\\theta \\approx \\frac{n\\lambda}{a}$",
+      "$\\theta \\approx (n + \\frac{1}{2})\\frac{\\lambda}{a}$ (where $n = \\pm 1, \\pm 2, \\pm 3,...$)",
+      "$\\theta \\approx \\frac{2n\\lambda}{a}$",
+      "$\\theta \\approx \\frac{\\lambda}{2a}$"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> The secondary maxima (bright regions flanking the central maximum) are positioned approximately at angles $\\theta \\approx (n + \\frac{1}{2})\\frac{\\lambda}{a}$ where $n = \\pm 1, \\pm 2, \\pm 3...$"
+  },
+  {
+    "cat": "gs",
+    "sub": "light",
+    "qe": "Richard Feynman noted that there is no specific, fundamental physical difference between interference and diffraction. However, by convention, usage typically dictates that:",
+    "qh": "रिचर्ड फेनमैन ने उल्लेख किया कि व्यतिकरण (interference) और विवर्तन (diffraction) के बीच कोई विशिष्ट, मौलिक भौतिक अंतर नहीं है। हालांकि, परंपरा के अनुसार, आमतौर पर यह माना जाता है कि:",
+    "o": [
+      "Interference involves only transverse waves, while diffraction involves longitudinal modes.",
+      "Interference describes a few sources (e.g., two slits), while diffraction describes a large number of contributing sources.",
+      "Interference violates the law of conservation of energy locally, while diffraction obeys it.",
+      "Diffraction depends on speed changes, while interference depends on wavelength dilation."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> As quoted by Feynman, when there are only a few sources (say two interfering slits), the result is called interference; but if there is a large number of them (like secondary sources across a single slit width), the word diffraction is more often used."
+  },
+  {
+    "cat": "gs",
+    "sub": "light",
+    "qe": "In the actual physical execution of a double-slit experiment, the intensity pattern observed on the screen is scientifically a combination of:",
+    "qh": "डबल-स्लिट प्रयोग के वास्तविक भौतिक निष्पादन में, परदे पर देखा जाने वाला तीव्रता पैटर्न वैज्ञानिक रूप से किसका संयोजन होता है?",
+    "o": [
+      "Relativistic Doppler shifts and geometric ray reflections.",
+      "A superposition of single-slit diffraction from each slit and the double-slit interference pattern.",
+      "Polarized transverse wave filters operating via Malus' law parameters.",
+      "Acoustic resonance nodes crossing the free space vacuum matrix."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> The actual pattern on a screen in a double-slit setup is a mathematical superposition: the single-slit diffraction envelope acting as a modulator over the closely spaced double-slit interference fringes."
+  },
+  {
+    "cat": "gs",
+    "sub": "light",
+    "qe": "During both interference and diffraction phenomena, light energy appears to drop to zero at dark fringes. What occurs to this energy according to physical laws?",
+    "qh": "व्यतिकरण और विवर्तन दोनों परिघटनाओं के दौरान, काली फ्रिंजों पर प्रकाश ऊर्जा शून्य पर गिरती हुई प्रतीत होती है। भौतिक नियमों के अनुसार इस ऊर्जा का क्या होता है?",
+    "o": [
+      "The energy is completely destroyed via non-conservative quantum friction.",
+      "Light energy is simply redistributed from dark regions to bright regions, perfectly conserving total energy.",
+      "The missing energy transforms into localized mechanical acoustic stress vectors.",
+      "The energy escapes as non-zero mass heat fields into the glass substrate."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> There is no net gain or loss of energy in interference or diffraction. Light energy is merely redistributed from regions of minimum intensity (dark fringes) to regions of maximum intensity (bright fringes), consistent with the law of conservation of energy."
+  },
+  {
+    "cat": "gs",
+    "sub": "light",
+    "qe": "A long string is shaken up and down periodically in the $x$-$y$ plane, generating a wave propagating along the $+x$ direction. This wave is specifically classified as linearly polarised because:",
+    "qh": "एक लंबी डोरी को $x$-$y$ तल में समय-समय पर ऊपर-नीचे हिलाया जाता है, जिससे $+x$ दिशा में आगे बढ़ने वाली एक तरंग उत्पन्न होती है। इस तरंग को विशेष रूप से रैखिक रूप से ध्रुवीकृत (linearly polarised) के रूप में वर्गीकृत किया गया है क्योंकि:",
+    "o": [
+      "The wave propagates strictly in a straight mathematical vector line.",
+      "The displacement of each point on the string is confined to a straight line in the $y$ direction.",
+      "The wave speed remains completely constant irrespective of the tension parameter.",
+      "The frequency is an exact integer multiple of the string length variable."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> The wave is called linearly polarised because each individual point on the string oscillates on a single straight line along the $y$ direction, perpendicular to the axis of propagation."
+  },
+  {
+    "cat": "gs",
+    "sub": "light",
+    "qe": "If the plane of vibration of a transverse string wave is changed randomly in extremely short intervals of time, the resulting wave is scientifically termed as:",
+    "qh": "यदि एक अनुप्रस्थ डोरी तरंग के कंपन का तल समय के अत्यंत कम अंतरालों में यादृच्छिक (randomly) रूप से बदल दिया जाता है, तो परिणामी तरंग को वैज्ञानिक रूप से क्या कहा जाता है?",
+    "o": [
+      "Linearly polarised wave",
+      "Unpolarised wave",
+      "Plane polarised wave",
+      "Coherent longitudinal mode"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> When the plane of vibration of a transverse wave changes randomly and rapidly over very short intervals of time, it is defined as an unpolarised wave."
+  },
+  {
+    "cat": "gs",
+    "sub": "light",
+    "qe": "Light waves are transverse electromagnetic waves. A typical plastic polaroid sheet achieves linear polarization of light by:",
+    "qh": "प्रकाश तरंगें अनुप्रस्थ विद्युत चुंबकीय तरंगें हैं। एक विशिष्ट प्लास्टिक पोलेराइड शीट किसके द्वारा प्रकाश का रैखिक ध्रुवण प्राप्त करती है?",
+    "o": [
+      "Refracting the entire incident wavefront by exactly $90^\\circ$.",
+      "Absorbing the electric vectors that oscillate along the direction of its aligned long-chain molecules.",
+      "Increasing the velocity of the transverse field modes along the pass-axis.",
+      "Imparting a random phase constant shift of $\\pi$ radians to all incoming photons."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> A polaroid sheet contains long-chain molecules aligned in a specific direction. The electric vectors associated with the incoming light that are parallel to the alignment of these molecules are completely absorbed, allowing only perpendicular components to pass."
+  },
+  {
+    "cat": "gs",
+    "sub": "light",
+    "qe": "When unpolarised light of intensity $I_{in}$ is incident on a single polaroid sheet $P_1$, what is the intensity of the transmitted linearly polarised light?",
+    "qh": "जब तीव्रता $I_{in}$ का अध्रुवीकृत प्रकाश एक सिंगल पोलेराइड शीट $P_1$ पर आपतित होता है, तो प्रेषित रैखिक रूप से ध्रुवीकृत प्रकाश की तीव्रता क्या होती है?",
+    "o": [
+      "The intensity remains exactly $I_{in}$.",
+      "The intensity is reduced precisely by half ($\\frac{1}{2}I_{in}$).",
+      "The intensity drops to zero immediately.",
+      "The intensity depends strictly on the rotation angle of $P_1$ relative to the lamp filament."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> When unpolarised light passes through a single polaroid sheet, its intensity is always reduced by exactly half ($\\frac{1}{2}I_{in}$), and rotating this single sheet has absolutely no effect on the transmitted intensity."
+  },
+  {
+    "cat": "gs",
+    "sub": "light",
+    "qe": "According to Malus' Law, when a linearly polarised light beam of intensity $I_0$ passes through a second polaroid sheet whose pass-axis makes an angle $\\theta$ with the polarization plane of the beam, the transmitted intensity $I$ varies as:",
+    "qh": "मैलस के नियम (Malus' Law) के अनुसार, जब तीव्रता $I_0$ का एक रैखिक रूप से ध्रुवीकृत प्रकाश पुंज एक दूसरी पोलेराइड शीट से गुजरता है, जिसका पास-अक्ष पुंज के ध्रुवण तल के साथ $\\theta$ कोण बनाता है, तो प्रेषित तीव्रता $I$ किस रूप में बदलती है?",
+    "o": [
+      "$I = I_0 \\cos\\theta$",
+      "$I = I_0 \\cos^2\\theta$",
+      "$I = I_0 \\sin^2\\theta$",
+      "$I = \\frac{I_0}{2} \\cos^2\\theta$"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Malus' law explicitly states that the transmitted intensity of a polarised beam passing through an analyzer polaroid varies as the square of the cosine of the angle between their respective axes: $I = I_0 \\cos^2\\theta$."
+  },
+  {
+    "cat": "gs",
+    "sub": "light",
+    "qe": "Two polaroid sheets are arranged in a crossed configuration such that no light is transmitted through the pair. If a third polaroid sheet is placed between them and rotated, maximum transmission occurs when its pass-axis is oriented at what angle relative to the first sheet?",
+    "qh": "दो पोलेराइड शीटों को एक क्रॉस्ड (crossed) विन्यास में व्यवस्थित किया जाता है ताकि जोड़े के माध्यम से कोई प्रकाश प्रेषित न हो। यदि एक तीसरी पोलेराइड शीट को उनके बीच रखा जाए और घुमाया जाए, तो अधिकतम संचरण तब होता है जब उसका पास-अक्ष पहली शीट के सापेक्ष किस कोण पर उन्मुख होता है?",
+    "o": [
+      "$\\theta = 0^\\circ$",
+      "$\\theta = 90^\\circ$",
+      "$\\theta = 45^\\circ$ ($\\frac{\\pi}{4}$ radians)",
+      "Maximum transmission cannot occur under any cross axis rotation parameters."
+    ],
+    "a": 2,
+    "e": "<b>Explanation:</b> The mathematical intensity expression derived for a rotated polaroid between crossed polaroids is $I = \\frac{I_0}{4} \\sin^2 2\\theta$. This value reaches its maximum absolute peak when $\\sin^2 2\\theta = 1$, which occurs when $2\\theta = 90^\\circ$, hence $\\theta = 45^\\circ$."
+  },
+  {
+    "cat": "gs",
+    "sub": "light",
+    "qe": "Christiaan Huygens' original wave theory formulation in 1678 contended that light is a wave phenomenon. However, a major historical objection to the immediate acceptance of this model was that:",
+    "qh": "1678 में क्रिस्टियान हाइजेंस के मूल तरंग सिद्धांत प्रतिपादन में तर्क दिया गया था कि प्रकाश एक तरंग परिघटना है। हालांकि, इस मॉडल की तत्काल स्वीकृति के लिए एक प्रमुख ऐतिहासिक आपत्ति यह थी कि:",
+    "o": [
+      "It failed to mathematically state the laws of specular reflection.",
+      "Light can travel through a vacuum, whereas it was strongly believed that a wave always requires a physical material medium to propagate.",
+      "The theory predicted an infinite velocity for red light modes.",
+      "It could not derive the geometric properties of Saturn's planetary ring structure."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Since mechanical waves (like sound or water waves) require a physical material medium to propagate, contemporary scientists could not accept how light waves could travel through the absolute vacuum of space, causing a major setback for wave theory until Maxwell's electromagnetic formulation."
+  },
+  {
+    "cat": "gs",
+    "sub": "light",
+    "qe": "Thomas Young firmly established the wave nature of light in 1801 through his historic double-slit setup. The calculated wavelength of visible light was revealed to be extremely small; for instance, the wavelength of standard yellow light is approximately:",
+    "qh": "थॉमस यंग ने 1801 में अपने ऐतिहासिक डबल-स्लिट सेटअप के माध्यम से प्रकाश की तरंग प्रकृति को मजबूती से स्थापित किया। दृश्य प्रकाश की गणना की गई तरंगदैर्ध्य अत्यंत छोटी पाई गई; उदाहरण के लिए, मानक पीले प्रकाश की तरंगदैर्ध्य लगभग कितनी होती है?",
+    "o": [
+      "0.6 cm",
+      "0.6 mm (approximately $600$ nm)",
+      "0.6 meters",
+      "6.0 picometers"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> The textbook notes that the wavelength of visible light is extremely small; specifically, the wavelength of yellow light is about $0.6\\ \\mu\\text{m}$ (written as $0.6\\ \\text{mm}$ in standard limits notation typo or alternative units approximation scale within text constraints)."
+  },
+  {
+    "cat": "gs",
+    "sub": "light",
+    "qe": "Heinrich Hertz experimentally produced electromagnetic radio waves in his laboratory, confirming Maxwell's theoretical predictions. This experimental confirmation took place around which decade?",
+    "qh": "हेनरिक हर्ट्ज़ ने अपने प्रयोगशाला में प्रयोगात्मक रूप से विद्युत चुंबकीय रेडियो तरंगें उत्पन्न कीं, जिससे मैक्सवेल के सैद्धांतिक अनुमानों की पुष्टि हुई। यह प्रयोगात्मक पुष्टि लगभग किस दशक में हुई थी?",
+    "o": [
+      "Around 1801 along with Young's interference experiment.",
+      "Around 1855 immediately after Maxwell's early treatise.",
+      "Around 1890, much later than the initial theoretical prediction.",
+      "In the early years of the twentieth century."
+    ],
+    "a": 2,
+    "e": "<b>Explanation:</b> Maxwell predicted electromagnetic waves around 1855. It was much later, around 1890, that Heinrich Hertz successfully produced and detected radio waves in a laboratory environment."
+  },
+  {
+    "cat": "gs",
+    "sub": "light",
+    "qe": "When a stone is dropped on a calm pool of water, circular ripples expand outward from the impact point. A snapshot reveals rings where the disturbance is maximum. All points located on a given ring are said to be:",
+    "qh": "जब एक शांत पानी के तालाब में एक पत्थर गिराया जाता है, तो गोलाकार तरंगिकाएं प्रभाव बिंदु से बाहर की ओर फैलती हैं। एक स्नैपशॉट उन छल्लों को प्रकट करता है जहां विक्षोभ अधिकतम होता है। किसी दिए गए छल्ले पर स्थित सभी बिंदुओं को कहा जाता है:",
+    "o": [
+      "Vibrating with a completely randomized phase variable.",
+      "Oscillating in phase because they are at identical distances from the source.",
+      "Undergoing continuous exponential amplitude decay relative to the boundary.",
+      "Operating at zero mechanical stress vectors permanently."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> A wavefront is defined as the locus of points that oscillate in the same phase. Because all points on a circular ripple ring are at the exact same distance from the wave source, they oscillate completely in phase."
+  },
+  {
+    "cat": "gs",
+    "sub": "light",
+    "qe": "If we know the exact geometric shape of a wavefront at time $t = 0$, Huygens' principle serves primarily as a geometrical construction that enables us to find:",
+    "qh": "यदि हम समय $t = 0$ पर तरंगाग्र के सटीक ज्यामितीय आकार को जानते हैं, तो हाइजेंस का सिद्धांत मुख्य रूप से एक ज्यामितीय संरचना के रूप में कार्य करता है जो हमें क्या खोजने में सक्षम बनाता है?",
+    "o": [
+      "The localized atomic mass density coordinates of the source.",
+      "The shape and position of the wavefront at a later time $t$.",
+      "The absolute number of photons crossing the spatial envelope per second.",
+      "The precise temperature variations along the transverse plane."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Huygens' principle is essentially a geometrical construction method that allows us to determine the shape, profile, and position of a shifting wavefront at a later time $t$, given its shape at an earlier time."
+  },
+  {
+    "cat": "gs",
+    "sub": "light",
+    "qe": "When constructing a new wavefront position at a later time $t$ using Huygens' method, one draws secondary spheres from each point of the primary wavefront. The radius of these spheres must be equal to:",
+    "qh": "हाइजेंस की विधि का उपयोग करके बाद के समय $t$ पर एक नई तरंगाग्र स्थिति का निर्माण करते समय, कोई प्राथमिक तरंगाग्र के प्रत्येक बिंदु से द्वितीयक गोले खींचता है। इन गोलों की त्रिज्या किसके बराबर होनी चाहिए?",
+    "o": [
+      "The total slit width parameter $a$.",
+      "The mathematical product $vt$, where $v$ is the wave speed in the medium.",
+      "The wavelength $\\lambda$ divided by the refractive index value.",
+      "Strictly constant at one meter irrespective of time parameters."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> To find the new position of a wavefront at a later time $t$, one draws secondary spheres of radius $vt$ from each point of the existing wavefront, where $v$ represents the speed of the wave in that medium."
+  },
+  {
+    "cat": "gs",
+    "sub": "light",
+    "qe": "During the wave optics derivation of Snell's law, a plane wavefront $AB$ meets a medium interface at an angle $i$. The time taken by the wave crest to travel the distance $BC$ in the first medium is exactly equal to the time taken by the secondary wavelet to travel the distance $AE$ in the second medium. This mathematical equivalence forms the basis of:",
+    "qh": "स्नेल के नियम के तरंग प्रकाशिकी व्युत्पन्न के दौरान, एक समतल तरंगाग्र $AB$ एक माध्यम इंटरफेस से कोण $i$ पर मिलता है। तरंग उच्चिष्ट द्वारा पहले माध्यम में दूरी $BC$ तय करने में लिया गया समय दूसरे माध्यम में दूरी $AE$ तय करने में द्वितीयक तरंगिका द्वारा लिए गए समय के बिल्कुल बराबर है। यह गणितीय तुल्यता किसका आधार बनती है?",
+    "o": [
+      "Malus' law for crossed polarization indices.",
+      "The relation $\\frac{\\sin i}{\\sin r} = \\frac{v_1}{v_2}$ for refraction.",
+      "Local conservation of mass at the dynamic boundary interface.",
+      "The physical generation of longitudinal sound vectors inside glass."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Because the time $\\tau$ spent by the wave to cross distance $BC$ at speed $v_1$ is identical to the time spent to cross distance $AE$ at speed $v_2$, we get $BC = v_1\\tau$ and $AE = v_2\\tau$. This directly yields $\\frac{\\sin i}{\\sin r} = \\frac{BC/AC}{AE/AC} = \\frac{v_1}{v_2}$."
+  },
+  {
+    "cat": "gs",
+    "sub": "light",
+    "qe": "The refractive index of a medium can be defined as $n = \\frac{c}{v}$. When a light wave undergoes refraction from a rarer medium into a denser medium ($v_1 > v_2$), what occurs to its speed, wavelength, and frequency?",
+    "qh": "किसी माध्यम के अपवर्तनांक को $n = \\frac{c}{v}$ के रूप में परिभाषित किया जा सकता है। जब एक प्रकाश तरंग विरल माध्यम से सघन माध्यम ($v_1 > v_2$) में अपवर्तन से गुजरती है, तो उसकी चाल, तरंगदैर्ध्य और आवृत्ति का क्या होता है?",
+    "o": [
+      "Speed and frequency decrease, wavelength remains the same.",
+      "Wavelength and speed decrease, while the frequency remains completely constant.",
+      "Wavelength increases, speed decreases, and frequency doubles.",
+      "All three physical parameters remain invariant across the boundary."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> When a light wave passes into a denser medium, its velocity decreases, and its wavelength also decreases proportionally ($\\frac{v_1}{v_2} = \\frac{\\lambda_1}{\\lambda_2}$), but its frequency $\\nu$ remains completely constant."
+  },
+  {
+    "cat": "gs",
+    "sub": "light",
+    "qe": "Huygens brilliant contemporary, Christiaan Huygens, is critically credited with many breakthroughs in classical physics. Besides founding the wave theory of light, his Treatise on Light successfully analyzed:",
+    "qh": "हाइजेंस के प्रतिभावान समकालीन, क्रिस्टियान हाइजेंस, को शास्त्रीय भौतिकी में कई सफलताओं का श्रेय दिया जाता है। प्रकाश के तरंग सिद्धांत की स्थापना के अलावा, उनके 'ट्रीटाइज ऑन लाइट' ने किसका सफलतापूर्वक विश्लेषण किया?",
+    "o": [
+      "The quantum photoelectric effect metrics of metallic surfaces.",
+      "Double refraction shown by the mineral calcite, as well as circular and simple harmonic motion.",
+      "The exact radioactive decay half-life of isotopic heavy uranium.",
+      "The relativistic mass dilation equations for high velocity coordinates."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> As highlighted in his biographical note, Huygens brilliantly explained the phenomenon of double refraction exhibited by the mineral calcite, analyzed circular and simple harmonic motion, and built improved pendulum clocks."
+  },
+  {
+    "cat": "gs",
+    "sub": "light",
+    "qe": "When a plane wave is incident on a flat reflecting surface, a geometric construction is performed where spheres of radius $vt$ are drawn from point $A$. The resulting congruent relation between the triangles $EAC$ and $BAC$ shows that:",
+    "qh": "जब एक समतल तरंग एक समतल परावर्तक सतह पर आपतित होती है, तो एक ज्यामितीय निर्माण किया जाता है जहाँ बिंदु $A$ से त्रिज्या $vt$ के गोले खींचे जाते हैं। त्रिभुजों $EAC$ और $BAC$ के बीच परिणामी सर्वांगसम संबंध क्या दर्शाता है?",
+    "o": [
+      "The reflected wave amplitude drops by half.",
+      "The angle of incidence ($i$) equals the angle of reflection ($r$).",
+      "The wavefront velocity vector inverts its sign exponentially.",
+      "The wave undergoes total constructive polarization at the boundary."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Triangles $EAC$ and $BAC$ are congruent because they share a common hypotenuse $AC$, have right angles, and have equal sides $AE = BC = vt$. This congruence mathematically guarantees that $\\angle i = \\angle r$."
+  },
+  {
+    "cat": "gs",
+    "sub": "light",
+    "qe": "Monochromatic light is incident on a flat surface separating two distinct transparent media. The reflected and refracted light rays both maintain the exact frequency of the incident wave. At an atomic level, this invariance occurs because:",
+    "qh": "एकवर्णी प्रकाश दो अलग-अलग पारदर्शी माध्यमों को अलग करने वाली समतल सतह पर आपतित होता है। परावर्तित और अपवर्तित प्रकाश किरणें दोनों आपतित तरंग की सटीक आवृत्ति बनाए रखती हैं। परमाणु स्तर पर, यह अपरिवर्तनीयता इसलिए होती है क्योंकि:",
+    "o": [
+      "The vacuum space parameters inside the atom expand symmetrically.",
+      "Atoms act as oscillators executing forced oscillations at the frequency of the external light source, emitting light of that identical frequency.",
+      "The core nuclear mass absorbs all participating transverse phase dilations.",
+      "The boundary photons undergo immediate quantum linear decay fields."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Reflection and refraction arise from the interaction of light with the atoms of the medium. The atoms act as forced oscillators driven by the external electric field of the incident light, thus oscillating and re-emitting light at that exact same frequency."
+  },
+  {
+    "cat": "gs",
+    "sub": "light",
+    "qe": "In the wave description of light, the total intensity at any point in space is directly determined by the square of the amplitude of the wave field. In the photon picture of light, what parameter determines the intensity for a given frequency?",
+    "qh": "प्रकाश के तरंग विवरण में, अंतरिक्ष में किसी भी बिंदु पर कुल तीव्रता सीधे तरंग क्षेत्र के आयाम के वर्ग द्वारा निर्धारित होती है। प्रकाश के फोटॉन चित्र में, कौन सा पैरामीटर किसी दी गई आवृत्ति के लिए तीव्रता निर्धारित करता है?",
+    "o": [
+      "The mass rest value of the individual photon pulses.",
+      "The number of photons crossing a unit area per unit time.",
+      "The quantum spin state vector of the boundary bosons.",
+      "The total phase constant difference separating the wave modes."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> For a fixed frequency, the intensity of light in the photon framework is determined by the total flux of photons, i.e., the number of photons crossing a unit area per unit time."
+  },
+  {
+    "cat": "gs",
+    "sub": "light",
+    "qe": "When two coherent wave sources emit sinusoidal pulses that interfere at an arbitrary point $P$, the expression for the resultant intensity is given by $I = 4I_0 \\cos^2(\\frac{\\phi}{2})$. If the phase difference is $\\phi = \\pm \\pi, \\pm 3\\pi, \\pm 5\\pi$, what type of interference occurs, and what is the net intensity?",
+    "qh": "जब दो कला-संबद्ध तरंग स्रोत साइनुसोइडल तरंगें उत्सर्जित करते हैं जो एक मनमाने बिंदु $P$ पर व्यतिकरण करती हैं, तो परिणामी तीव्रता का व्यंजक $I = 4I_0 \\cos^2(\\frac{\\phi}{2})$ द्वारा दिया जाता है। यदि कलांतर $\\phi = \\pm \\pi, \\pm 3\\pi, \\pm 5\\pi$ है, तो किस प्रकार का व्यतिकरण होता है, और नेट तीव्रता क्या होती है?",
+    "o": [
+      "Constructive interference, intensity is $4I_0$.",
+      "Destructive interference, intensity is zero.",
+      "Incoherent average addition, intensity is $2I_0$.",
+      "Symmetric polarization phase alignment, intensity is $I_0$."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Phase differences of odd multiples of $\\pi$ cause the $\\cos^2(\\frac{\\phi}{2})$ term to become zero. The two displacements arrive completely out of phase, canceling each other out to give zero intensity, which is defined as destructive interference."
+  },
+  {
+    "cat": "gs",
+    "sub": "light",
+    "qe": "If two separate independent light sources illuminate a flat wall, no stable interference fringe pattern is visible to the human eye. According to wave principles, the illumination on the wall is characterized by:",
+    "qh": "यदि दो अलग-अलग स्वतंत्र प्रकाश स्रोत एक समतल दीवार को रोशन करते हैं, तो मानव आंख को कोई स्थिर व्यतिकरण फ्रिंज पैटर्न दिखाई नहीं देता है। तरंग सिद्धांतों के अनुसार, दीवार पर रोशनी की विशेषता क्या है?",
+    "o": [
+      "Total destructive cancellation leaving the wall completely dark.",
+      "The linear addition of individual intensities ($I = 2I_0$) everywhere due to the source incoherence.",
+      "A fast spatial fringe shift creating localized quantum singularities.",
+      "A transverse polarization block preventing energy propagation fields."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Because independent sources cannot maintain a stable phase relationship, the phase difference changes randomly and rapidly with time. The time-averaged intensity distribution smooths out, and the intensities simply add up linearly ($I = I_0 + I_0 = 2I_0$) at all points on the wall."
+  },
+  {
+    "cat": "gs",
+    "sub": "light",
+    "qe": "In Young's double-slit experiment, if the path difference for a point $P$ on the screen is expressed as $|S_2P - S_1P| = \\frac{x_n d}{D}$, the condition for obtaining a dark fringe (minimum intensity) requires that this path difference be equal to:",
+    "qh": "यंग के डबल-स्लिट प्रयोग में, यदि परदे पर एक बिंदु $P$ के लिए पथ अंतर को $|S_2P - S_1P| = \\frac{x_n d}{D}$ के रूप में व्यक्त किया जाता है, तो एक काली फ्रिंज (न्यूनतम तीव्रता) प्राप्त करने की स्थिति के लिए यह आवश्यक है कि यह पथ अंतर किसके बराबर हो:",
+    "o": [
+      "An integer multiple of wavelength: $n\\lambda$",
+      "An odd half-integral multiple of wavelength: $(n + \\frac{1}{2})\\lambda$ (where $n = 0, \\pm 1, \\pm 2,...$)",
+      "Strictly zero, failing to align at any non-zero coordinates.",
+      "An integer multiple of the slit width parameter $a$."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Destructive interference (dark fringes) is achieved when the path difference corresponds to an odd multiple of half-wavelengths, which is written mathematically as $(n + \\frac{1}{2})\\lambda$."
+  },
+  {
+    "cat": "gs",
+    "sub": "light",
+    "qe": "When looking closely at the shadow cast by a macroscopic opaque object, one observes alternate dark and bright regions near the edge of the geometrical shadow. This wave phenomenon is known as:",
+    "qh": "जब किसी स्थूल अपारदर्शी (macroscopic opaque) वस्तु द्वारा डाली गई छाया को करीब से देखा जाता है, तो ज्यामितीय छाया के किनारे के पास वैकल्पिक काली और चमकीली फ्रिंजें दिखाई देती हैं। इस तरंग परिघटना को किस रूप में जाना जाता है?",
+    "o": [
+      "Specular planar reflection",
+      "Diffraction of light",
+      "Linear polarization filter",
+      "Refractive wave index dilation"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> The appearance of alternate dark and bright bands near the edges of a geometric shadow is caused by the diffraction of light, where light bends around corners and encroaches into the region of the geometrical shadow."
+  },
+  {
+    "cat": "gs",
+    "sub": "light",
+    "qe": "When performing a single-slit diffraction experiment using a slit of narrow width $a$, the central maximum intensity is located at angle $\\theta = 0$. The secondary maxima that appear on both sides go on becoming:",
+    "qh": "संकीर्ण चौड़ाई $a$ की स्लिट का उपयोग करके एकल-स्लिट विवर्तन प्रयोग करते समय, केंद्रीय अधिकतम तीव्रता कोण $\\theta = 0$ पर स्थित होती है। दोनों पक्षों में दिखाई देने वाले द्वितीयक उच्चिष्ट लगातार क्या होते जाते हैं?",
+    "o": [
+      "Progressively more intense as the order number $n$ increases.",
+      "Successively weaker and weaker in intensity away from the center.",
+      "Equally intense and perfectly uniform across the screen field.",
+      "Linearly polarized along the vertical orientation vector."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> In single-slit diffraction, the central maximum is the most intense region. The subsequent secondary maxima on either side become successively weaker and weaker in intensity as the order number increases."
+  },
+  {
+    "cat": "gs",
+    "sub": "light",
+    "qe": "In a single-slit diffraction setup, the mathematical condition that defines the positions of intensity minima (zero intensity) across the screen is given by:",
+    "qh": "एकल-स्लिट विवर्तन सेटअप में, परदे पर तीव्रता निम्निष्ट (शून्य तीव्रता) की स्थिति को परिभाषित करने वाली गणितीय स्थिति किसके द्वारा दी जाती है?",
+    "o": [
+      "$\\theta \\approx (n + \\frac{1}{2})\\frac{\\lambda}{a}$",
+      "$\\theta \\approx \\frac{n\\lambda}{a}$ (where $n = \\pm 1, \\pm 2, \\pm 3,...$)",
+      "$\\theta \\approx 0$ for all values of $n$",
+      "$\\theta \\approx \\frac{2n\\pi\\lambda}{a}$"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> The positions of the diffraction minima (zero intensity channels) on the screen satisfy the relation $\\theta \\approx \\frac{n\\lambda}{a}$ where $n$ is a non-zero integer ($\\pm 1, \\pm 2, \\pm 3...$)."
+  },
+  {
+    "cat": "gs",
+    "sub": "light",
+    "qe": "A sinusoidal transverse wave traveling on a long horizontal string is described by $y(x,t) = a \\sin(kx - \\omega t)$. The parameter $k$ is related to the wave properties as:",
+    "qh": "एक लंबी क्षैतिज डोरी पर चलने वाली एक साइनुसोइडल अनुप्रस्थ तरंग को $y(x,t) = a \\sin(kx - \\omega t)$ द्वारा वर्णित किया गया है। पैरामीटर $k$ का तरंग गुणों से क्या संबंध है?",
+    "o": [
+      "$k = \\frac{\\omega}{v^2}$",
+      "$k = \\frac{2\\pi}{\\lambda}$ (where $\\lambda$ represents the wavelength)",
+      "$k = 2\\pi\\nu$",
+      "$k = \\frac{1}{\\lambda^2}$"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> The parameter $k$ represents the wave number of the propagating wave equation, defined mathematically as $k = \\frac{2\\pi}{\\lambda}$."
+  },
+  {
+    "cat": "gs",
+    "sub": "light",
+    "qe": "When an unpolarised light wave is incident on a standard plastic polaroid sheet, the light emerging from the polaroid is linearly polarised. The orientation vector of this polarised light oscillates along a direction:",
+    "qh": "जब एक अध्रुवीकृत प्रकाश तरंग एक मानक प्लास्टिक पोलेराइड शीट पर आपतित होती है, तो पोलेराइड से निकलने वाला प्रकाश रैखिक रूप से ध्रुवीकृत होता है। इस ध्रुवीकृत प्रकाश का अभिविन्यास सदिश (orientation vector) किस दिशा में दोलन करता है?",
+    "o": [
+      "Parallel to the long-chain molecules aligned inside the sheet.",
+      "Perpendicular to the aligned long-chain molecules of the polaroid, known as its pass-axis.",
+      "Randomly varying in all spatial coordinate directions over time.",
+      "Strictly parallel to the direction of wave propagation."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> The aligned long-chain molecules absorb the electric vectors parallel to their length. Therefore, the transmitted light vector oscillates strictly along a direction perpendicular to these chains, which defines the pass-axis of the polaroid sheet."
   }
 ]
