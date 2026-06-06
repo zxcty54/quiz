@@ -24316,5 +24316,425 @@
     ],
     "a": 1,
     "e": "<b>Explanation:</b> जब वस्तु और द्रव का घनत्व बिल्कुल बराबर होता है, तो वस्तु पर लगने वाला अपथ्रस्ट बल उसके भार को पूरी तरह संतुलित कर देता है। ऐसी वस्तु को द्रव में जहाँ भी छोड़ा जाता है, वह वहीं निलंबित (suspended) बनी रहती है।"
+  },
+  {
+    "cat": "gs",
+    "sub": "motion",
+    "qe": "When evaluating macroscopic motion over a finite time interval, the average speed of an object is generally greater than or equal to the magnitude of its average velocity. Under what strict kinematic condition do these two quantities become completely identical?",
+    "qh": "किसी निश्चित समयांतराल में, किसी वस्तु की औसत चाल (average speed) सामान्यतः उसके औसत वेग (average velocity) के परिमाण से अधिक या उसके बराबर होती है। किस कड़े गतिज प्रतिबंध के तहत ये दोनों राशियाँ पूर्णतः समान हो जाती हैं?",
+    "o": [
+      "When the object executes periodic motion with constant angular acceleration.",
+      "When the object moves strictly in a single straight line without changing its direction during the course of motion.",
+      "When the instantaneous acceleration vector remains permanently orthogonal to the velocity vector.",
+      "When the motion is completely confined to a boundary field where total displacement is zero."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Average speed equals total path length divided by time, whereas average velocity magnitude equals net displacement divided by time. Path length and displacement magnitude are identical if and only if the object moves in a straight line without changing its direction. In all other cases, the path length, and thus the average speed, is greater."
+  },
+  {
+    "cat": "gs",
+    "sub": "motion",
+    "qe": "In the foundational limits of calculus applied to kinematics, instantaneous speed at any precise moment is stated to be exactly equal to the magnitude of the instantaneous velocity at that instant. Why does the inequality that applies to their 'average' counterparts vanish in the instantaneous limit?",
+    "qh": "गतिकी में प्रयुक्त कलन (calculus) के मूलभूत सिद्धांतों के अनुसार, किसी विशिष्ट क्षण पर तात्कालिक चाल (instantaneous speed) का मान उस क्षण पर तात्कालिक वेग (instantaneous velocity) के परिमाण के ठीक बराबर होता है। इनके 'औसत' समकक्षों पर लागू होने वाली असमानता तात्कालिक सीमा में क्यों समाप्त हो जाती है?",
+    "o": [
+      "Because the path length undergoes quantum contraction in a vacuum.",
+      "Because over an infinitesimally small time interval ($\\Delta t \\to 0$), the object cannot change its direction of motion, making path length equal to the magnitude of displacement.",
+      "Because the acceleration vector drops to absolute zero during an instantaneous measurement.",
+      "Because instantaneous speed is a vector quantity that inherently accounts for spatial curvature."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Over an infinitesimally small time interval $\\Delta t \\to 0$, the direction of motion of an object cannot change. Consequently, the actual path length traveled becomes strictly equal to the magnitude of the displacement vector ($|\\Delta \\mathbf{r}| = \\Delta x$), causing the instantaneous speed to exactly match the magnitude of instantaneous velocity."
+  },
+  {
+    "cat": "gs",
+    "sub": "motion",
+    "qe": "Galileo Galilei conducted experiments on freely falling objects and objects sliding down inclined planes to establish the true nature of acceleration. What counter-intuitive fact did his studies unearth regarding a change in velocity?",
+    "qh": "गैलीलियो गैलीली ने त्वरण की वास्तविक प्रकृति को स्थापित करने के लिए मुक्त रूप से गिरती वस्तुओं और झुके हुए तलों पर फिसलने वाली वस्तुओं पर प्रयोग किए। उनके अध्ययनों ने वेग में परिवर्तन के संबंध में किस विरोधाभासी तथ्य को उजागर किया?",
+    "o": [
+      "The rate of change of velocity with distance is a permanent constant of motion.",
+      "The rate of change of velocity with time is a constant of motion for all objects in free fall, whereas the change in velocity with distance is not constant.",
+      "The velocity changes abruptly at distinct structural kinks without continuous transformation.",
+      "Acceleration due to gravity is directly proportional to the physical surface area of the falling mass."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Galileo's historic breakthrough established that for all freely falling objects, the rate of change of velocity with time is a constant of motion (constant acceleration). Conversely, the rate of change of velocity with distance is not constant; it systematically decreases as the distance of the fall increases."
+  },
+  {
+    "cat": "gs",
+    "sub": "motion",
+    "qe": "When analyzing a position-time ($x-t$) curve, how can one graphically deduce whether the moving object possesses a positive, negative, or zero acceleration?",
+    "qh": "एक स्थिति-समय ($x-t$) वक्र का विश्लेषण करते समय, कोई व्यक्ति ग्राफिकल रूप से कैसे निष्कर्ष निकाल सकता है कि गतिशील वस्तु का त्वरण धनात्मक, ऋणात्मक या शून्य है?",
+    "o": [
+      "By calculating the total physical area under the curve relative to the origin coordinate.",
+      "The curve bends upward for positive acceleration, bends downward for negative acceleration, and is a straight line for zero acceleration.",
+      "A vertical straight line represents positive acceleration, and a horizontal line represents negative acceleration.",
+      "By analyzing the sharp structural kinks on the time axis domain."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> The text explicitly states that for motion with constant acceleration, the position-time graph curves upward (convex downward) for positive acceleration, curves downward (convex upward) for negative acceleration, and simplifies into a linear straight line for zero acceleration."
+  },
+  {
+    "cat": "gs",
+    "sub": "motion",
+    "qe": "In any realistic, physically achievable physical situation, the curves representing position ($x-t$) and velocity ($v-t$) as a function of time cannot have sharp kinks. What is the deep physical meaning behind this smooth, differentiable graph requirement?",
+    "qh": "किसी भी वास्तविक और भौतिक रूप से प्राप्त करने योग्य स्थिति में, समय के फलन के रूप में स्थिति ($x-t$) और वेग ($v-t$) को दर्शाने वाले वक्रों में तीखे मोड़ (sharp kinks) नहीं हो सकते। इस सुचारू और अवकलनीय (smooth and differentiable) ग्राफ की आवश्यकता के पीछे गहरा भौतिक अर्थ क्या है?",
+    "o": [
+      "The mechanical kinetic energy of a macroscopic mass must remain zero permanently.",
+      "Acceleration and velocity cannot change their values abruptly at an instant; changes are always continuous.",
+      "The position vector must remain entirely independent of the choice of coordinate origin.",
+      "The velocity vector must align perfectly parallel to the time axis at all measurement nodes."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> In a realistic situation, the mathematical functions for velocity and position must be continuous and differentiable at all points. Physically, this means that an object's velocity or acceleration cannot jump or change values abruptly at an instant; transitions are always smooth and continuous."
+  },
+  {
+    "cat": "gs",
+    "sub": "motion",
+    "qe": "When plotting a velocity-time ($v-t$) curve, the area under the curve between two time coordinates yields a specific geometric value. What physical vector quantity is represented by this area, and how is its dimension justified?",
+    "qh": "वेग-समय ($v-t$) वक्र खींचते समय, दो समय निर्देशांकों के बीच वक्र के नीचे का क्षेत्र एक विशिष्ट ज्यामितीय मान देता है। यह क्षेत्र किस भौतिक सदिश राशि को दर्शाता है, और इसका आयाम कैसे सिद्ध होता है?",
+    "o": [
+      "It represents instantaneous acceleration, with dimensions of $\\text{L T}^{-2}$.",
+      "It represents net displacement, because the product of the coordinate dimensions $(\\text{m s}^{-1} \\times \\text{s})$ simplifies to meters $(\\text{L})$.",
+      "It represents total kinetic stress, with dimensions matching mass density variables.",
+      "It represents a dimensionless scalar constant mapping the trajectory field."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> The area under a velocity-time curve represents the net displacement. By multiplying the dimensions of the quantities plotted on the two axes—velocity $(\\text{L T}^{-1})$ on the vertical axis and time $(\\text{T})$ on the horizontal axis—the units resolve to meters $(\\text{L})$, which is the dimension of displacement."
+  },
+  {
+    "cat": "gs",
+    "sub": "motion",
+    "qe": "Why are the standard kinematic equations for uniform acceleration (such as $v = v_0 + at$) strictly inapplicable to the analysis of uniform circular motion, even though the magnitude of acceleration remains completely constant in both cases?",
+    "qh": "एकसमान त्वरण वाले मानक गतिज समीकरण (जैसे $v = v_0 + at$) एकसमान वृत्तीय गति के विश्लेषण में कड़ाई से अनुपयुक्त क्यों हैं, भले ही दोनों मामलों में त्वरण का परिमाण पूरी तरह से नियत रहता है?",
+    "o": [
+      "Because uniform circular motion occurs exclusively in a non-inertial quantum vacuum field.",
+      "Because in uniform circular motion, the magnitude of acceleration is constant but its direction is continuously changing, violating the criteria of a constant vector.",
+      "Because the velocity vector in circular path fields must be a scalar constant.",
+      "Because circular trajectories are independent of time-dilation parameters."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> The standard kinematic equations are derived on the strict condition that acceleration is a constant vector (constant in both magnitude and direction). In uniform circular motion, while the magnitude of centripetal acceleration is constant, its direction changes continuously (always pointing toward the center), rendering those equations invalid."
+  },
+  {
+    "cat": "gs",
+    "sub": "motion",
+    "qe": "The shape of the physical trajectory or path followed by a moving object is a fundamental observation in mechanics. According to physics principles, the shape of this trajectory is determined uniquely by:",
+    "qh": "किसी गतिशील वस्तु द्वारा तय किए गए भौतिक पथ या प्रक्षेपवक्र (trajectory) का आकार यांत्रिकी में एक मूलभूत अवलोकन है। भौतिकी के सिद्धांतों के अनुसार, इस प्रक्षेपवक्र का आकार विशिष्ट रूप से किसके द्वारा निर्धारित होता है?",
+    "o": [
+      "The acceleration vector alone acting on the mass matrix.",
+      "Neither acceleration nor velocity, depending entirely on the mass of the object.",
+      "Both the acceleration and the initial conditions of motion (initial position and initial velocity).",
+      "The strict choice of mutually perpendicular coordinate reference axes."
+    ],
+    "a": 2,
+    "e": "<b>Explanation:</b> The trajectory of a moving object is not dictated by acceleration alone. It depends heavily on initial conditions. For instance, an object moving under identical constant acceleration due to gravity can follow a straight vertical line or a parabolic curve, depending entirely on its initial velocity direction."
+  },
+  {
+    "cat": "gs",
+    "sub": "motion",
+    "qe": "When an object moving in a two-dimensional plane is simultaneously subjected to two separate velocities $\\mathbf{v}_1$ and $\\mathbf{v}_2$, how is its resultant velocity vector defined in contrast to the relative velocity vector $\\mathbf{v}_{12}$ of object 1 with respect to object 2?",
+    "qh": "जब एक द्विविमीय तल में गतिशील वस्तु पर एक साथ दो अलग-अलग वेग $\\mathbf{v}_1$ और $\\mathbf{v}_2$ आरोपित होते हैं, तो इसके परिणामी वेग सदिश की परिभाषा, वस्तु 2 के सापेक्ष वस्तु 1 के सापेक्ष वेग सदिश $\\mathbf{v}_{12}$ से किस प्रकार भिन्न होती है?",
+    "o": [
+      "The resultant is $\\mathbf{v} = \\mathbf{v}_1 - \\mathbf{v}_2$, and the relative velocity is $\\mathbf{v}_{12} = \\mathbf{v}_1 + \\mathbf{v}_2$.",
+      "The resultant is $\\mathbf{v} = \\mathbf{v}_1 + \\mathbf{v}_2$, and the relative velocity is $\\mathbf{v}_{12} = \\mathbf{v}_1 - \\mathbf{v}_2$.",
+      "Both vectors are mathematically identical because subtraction is commutative in a plane.",
+      "The vectors depend strictly on whether the coordinate frame origin is localized or free."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> If an object experiences two physical velocities simultaneously, they add vectorially to yield a net resultant velocity: $\\mathbf{v} = \\mathbf{v}_1 + \\mathbf{v}_2$. Conversely, the relative velocity of one moving object with respect to another in a common frame is a vector difference: $\\mathbf{v}_{12} = \\mathbf{v}_1 - \\mathbf{v}_2$."
+  },
+  {
+    "cat": "gs",
+    "sub": "motion",
+    "qe": "A physical quantity in physics is classified strictly as a vector if it possesses both a magnitude and a direction. What is the third mandatory mathematical criterion that a quantity must satisfy to be validated as a vector?",
+    "qh": "भौतिकी में किसी भौतिक राशि को सख्ती से सदिश के रूप में वर्गीकृत किया जाता है यदि उसमें परिमाण और दिशा दोनों हों। किसी राशि को सदिश के रूप में मान्य होने के लिए तीसरी अनिवार्य गणितीय शर्त क्या पूरी करनी होगी?",
+    "o": [
+      "It must be completely independent of any chosen system of measurement units.",
+      "It must obey the triangle law of addition or equivalently the parallelogram law of addition.",
+      "Its absolute value must vary linearly as a function of the elapsed time interval.",
+      "It must be differentiable at sharp spatial kinks across a two-dimensional plane."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Having magnitude and direction is insufficient for a quantity to be a vector. It must strictly obey the vector laws of addition—specifically, the triangle law or the equivalent parallelogram law of addition. For example, electric current has magnitude and direction but adds scalarly, so it is not a vector."
+  },
+  {
+    "cat": "gs",
+    "sub": "motion",
+    "qe": "Consider two vectors $\\mathbf{A}$ and $\\mathbf{B}$ located in an open coordinate space. Under what specific condition can these two free vectors be mathematically declared as completely equal?",
+    "qh": "खुले समन्वय समष्टि (coordinate space) में स्थित दो सदिशों $\\mathbf{A}$ और $\\mathbf{B}$ पर विचार करें। किस विशिष्ट स्थिति के तहत इन दोनों मुक्त सदिशों (free vectors) को गणितीय रूप से पूरी तरह से समान घोषित किया जा सकता है?",
+    "o": [
+      "When they originate from the exact same physical localized coordinates on the plane.",
+      "If, and only if, they have the same magnitude and the same direction.",
+      "When their scalar dot product yields an absolute value tending to infinity.",
+      "When they point along parallel axes but possess inverted scalar multipliers."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Two vectors are equal if and only if they possess identical magnitudes and point in the exact same direction. Since free vectors can be shifted parallel to themselves without altering their physical value, their specific spatial location does not affect equality."
+  },
+  {
+    "cat": "gs",
+    "sub": "motion",
+    "qe": "What is the defining geometric characteristic of a null or zero vector ($\\mathbf{0}$), and what unique property does it exhibit when multiplied by an arbitrary non-zero vector $\\mathbf{A}$ or a real scalar number $\\lambda$?",
+    "qh": "एक शून्य सदिश (null or zero vector $\\mathbf{0}$) की परिभाषित ज्यामितीय विशेषता क्या है, और किसी मनमाने गैर-शून्य सदिश $\\mathbf{A}$ या एक वास्तविक अदिश संख्या $\\lambda$ से गुणा करने पर यह कौन सा अनूठा गुण प्रदर्शित करता है?",
+    "o": [
+      "It has a fixed vertical direction and yields $\\lambda \\mathbf{0} = \\lambda$.",
+      "It has zero magnitude, requires no specific direction specification, and satisfies $\\lambda \\mathbf{0} = \\mathbf{0}$ and $0 \\mathbf{A} = \\mathbf{0}$.",
+      "It aligns parallel to the horizontal time axis and drops the vector dimensions to meters.",
+      "It shifts the initial coordinate origin parallel to itself exponentially."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> A null vector has zero magnitude, meaning its specific direction is indeterminate and need not be specified. Multiplying it by a scalar yields a null vector ($\\lambda\\mathbf{0} = \\mathbf{0}$), and multiplying the scalar number zero by any vector also results in a null vector ($0\\mathbf{A} = \\mathbf{0}$)."
+  },
+  {
+    "cat": "gs",
+    "sub": "motion",
+    "qe": "When an object executes motion in a two-dimensional plane, its position vector is plotted relative to an origin. The instantaneous velocity vector $\\mathbf{v}$ at any given moment relates geometrically to the object's physical path curve as:",
+    "qh": "जब कोई वस्तु द्विविमीय तल में गति करती है, तो उसका स्थिति सदिश मूल बिंदु के सापेक्ष खींचा जाता है। किसी भी क्षण तात्कालिक वेग सदिश $\\mathbf{v}$ ज्यामितीय रूप से वस्तु के भौतिक पथ वक्र से किस प्रकार संबंधित होता है?",
+    "o": [
+      "It always points perpendicular (orthogonal) to the path curve toward the origin.",
+      "It is always tangent to the curve representing the physical path of the object at that instant.",
+      "It points symmetrically opposite to the direction of the displacement vector.",
+      "It oscillates at a fixed acute angle of $45^\\circ$ relative to the acceleration vector axis."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> In unit vector notation, as the time interval approaches zero, the displacement vector $\\Delta \\mathbf{r}$ aligns with the curve. Thus, the instantaneous velocity vector $\\mathbf{v} = \\frac{d\\mathbf{r}}{dt}$ is always tangentially aligned to the curve representing the object's path at that specific point."
+  },
+  {
+    "cat": "gs",
+    "sub": "motion",
+    "qe": "When a projectile is launched into flight with an initial velocity $\\mathbf{v}_0$ at an angle $\\theta_0$ with the horizontal axis, its net acceleration vector during the entire flight (neglecting air resistance) is:",
+    "qh": "जब एक प्रक्षेप्य (projectile) को क्षैतिज अक्ष के साथ $\\theta_0$ कोण पर प्रारंभिक वेग $\\mathbf{v}_0$ के साथ उड़ान में प्रक्षेपित किया जाता है, तो पूरी उड़ान के दौरान (वायु प्रतिरोध को नगण्य मानते हुए) उसका नेट त्वरण सदिश क्या होता है?",
+    "o": [
+      "Varies continuously as a function of the changing parabolic path coordinates.",
+      "Is directed vertically downward with a constant magnitude equal to $g$.",
+      "Becomes absolutely zero at the point of maximum trajectory height.",
+      "Points parallel to the instantaneous velocity vector at all measurement nodes."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Once projected, a projectile is a freely falling body subject exclusively to the force of gravity. Therefore, its horizontal acceleration component is permanently zero ($a_x = 0$), and its vertical acceleration component is a downward constant ($a_y = -g$)."
+  },
+  {
+    "cat": "gs",
+    "sub": "motion",
+    "qe": "Galileo Galilei made a profound declaration in 1632 regarding the physical components of projectile motion. In his 'Dialogue on the Great World Systems', he stated that:",
+    "qh": "गैलीलियो गैलीली ने 1632 में प्रक्षेप्य गति (projectile motion) के भौतिक घटकों के संबंध में एक गहन घोषणा की थी। अपने 'डायलॉग ऑन द ग्रेट वर्ल्ड सिस्टम्स' में उन्होंने उल्लेख किया था कि:",
+    "o": [
+      "The horizontal and vertical components of projectile motion are completely independent of each other.",
+      "A projectile cannot maintain a horizontal velocity component without an active mechanical thrust force.",
+      "The path trajectory is strictly a straight line in a relativistic coordinate system.",
+      "The time of flight depends exponentially on the mass density of the projected sphere."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Galileo was the first to explicitly state the core principle of independence of the horizontal and vertical components of projectile motion. The horizontal component stays constant due to zero acceleration, while the vertical component changes independently under constant gravitational acceleration."
+  },
+  {
+    "cat": "gs",
+    "sub": "motion",
+    "qe": "During the flight of a projectile, one of its velocity components remains completely constant throughout the journey, while the other changes continuously. Which component is invariant, and why?",
+    "qh": "किसी प्रक्षेप्य की उड़ान के दौरान, उसका एक वेग घटक पूरी यात्रा में पूरी तरह से नियत रहता है, जबकि दूसरा लगातार बदलता रहता है। कौन सा घटक अपरिवर्तित रहता है, और क्यों?",
+    "o": [
+      "The $y$-component remains constant because gravity acts horizontally.",
+      "The $x$-component (horizontal) remains constant because there is no acceleration acting in the horizontal direction.",
+      "Both components change symmetrically to maintain the parabolic path curvature.",
+      "The component tangent to the apex point stays constant due to mass conservation."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Because gravity acts strictly in the vertically downward direction, there is no physical force or acceleration acting along the horizontal $x$-axis ($a_x = 0$). Thus, the horizontal velocity component $v_x = v_{0x} = v_0 \\cos\\theta_0$ remains constant throughout the entire motion."
+  },
+  {
+    "cat": "gs",
+    "sub": "motion",
+    "qe": "At the absolute highest point (apex) of a projectile's parabolic trajectory, what are the values of its velocity components?",
+    "qh": "किसी प्रक्षेप्य के परवलयिक प्रक्षेपवक्र (parabolic trajectory) के बिल्कुल उच्चतम बिंदु (शीर्ष) पर, इसके वेग घटकों के मान क्या होते हैं?",
+    "o": [
+      "Both the horizontal and vertical velocity components drop to absolute zero.",
+      "The vertical component $v_y$ is zero, and the horizontal component $v_x$ is equal to $v_0 \\cos\\theta_0$.",
+      "The horizontal component is zero, and the vertical component equals $v_0 \\sin\\theta_0$.",
+      "The velocity vector undergoes an abrupt phase inversion of $\\pi$ radians."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> At the peak of its trajectory, the projectile cannot ascend any further, meaning its vertical velocity component drops exactly to zero ($v_y = 0$). However, its horizontal velocity remains unaffected and is equal to $v_x = v_0 \\cos\\theta_0$."
+  },
+  {
+    "cat": "gs",
+    "sub": "motion",
+    "qe": "By eliminating the time variable '$t$' between the coordinate expressions for $x$ and $y$ of a projectile, we obtain the path equation: $y = (\\tan\\theta_0)x - \\frac{g}{2(v_0 \\cos\\theta_0)^2}x^2$. Mathematically, this specific function proves that the trajectory is a:",
+    "qh": "एक प्रक्षेप्य के $x$ और $y$ के समन्वय व्यंजकों के बीच समय चर '$t$' को समाप्त करके, हम पथ समीकरण प्राप्त करते हैं: $y = (\\tan\\theta_0)x - \\frac{g}{2(v_0 \\cos\\theta_0)^2}x^2$। गणितीय रूप से, यह विशिष्ट फलन यह सिद्ध करता है कि प्रक्षेपवक्र एक:",
+    "o": [
+      "Perfect circle with radius determined by initial speed.",
+      "Parabola, meaning the path followed is strictly parabolic.",
+      "Hyperbola mapping a symmetrical non-zero stress vector.",
+      "Straight line inclined at an angle $\\theta_0$ to the origin axis."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> The derived path equation is of the standard mathematical form $y = ax + bx^2$, where $a$ and $b$ are constants. This quadratic profile is the algebraic equation of a parabola, proving that the flight trajectory is strictly a parabola."
+  },
+  {
+    "cat": "gs",
+    "sub": "motion",
+    "qe": "The total time of flight $T_f$ of a projectile is derived as $T_f = \\frac{2v_0 \\sin\\theta_0}{g}$. This total duration relates to the time taken to reach the maximum height $t_m$ as $T_f = 2t_m$. What physical attribute of the motion justifies this exact doubling?",
+    "qh": "एक प्रक्षेप्य की उड़ान का कुल समय $T_f$, $T_f = \\frac{2v_0 \\sin\\theta_0}{g}$ के रूप में व्युत्पन्न होता है। यह कुल अवधि अधिकतम ऊंचाई तक पहुंचने में लगे समय $t_m$ से $T_f = 2t_m$ के रूप में संबंधित है। गति का कौन सा भौतिक गुण इस सटीक दोगुने होने की पुष्टि करता है?",
+    "o": [
+      "The non-inertial properties of free space vacuum coordinates.",
+      "The structural symmetry of the parabolic path followed by the object.",
+      "The mass conservation parameter of the projected mass matrix.",
+      "The linear alignment of the unit vectors along the horizontal plane."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> The relation $T_f = 2t_m$ is an expected kinematic result due to the perfect structural symmetry of the parabolic path under a constant, uniform downward acceleration field."
+  },
+  {
+    "cat": "gs",
+    "sub": "motion",
+    "qe": "For a projectile launched with a fixed initial speed $v_0$, the horizontal range $R$ depends heavily on the angle of projection $\\theta_0$. Under what condition does this horizontal range reach its absolute maximum value?",
+    "qh": "एक निश्चित प्रारंभिक गति $v_0$ के साथ प्रक्षेपित प्रक्षेप्य के लिए, क्षैतिज परास (horizontal range) $R$ प्रक्षेप कोण $\\theta_0$ पर बहुत अधिक निर्भर करता है। किस स्थिति में यह क्षैतिज परास अपने पूर्ण अधिकतम मान तक पहुँचता है?",
+    "o": [
+      "When the angle of projection is $\\theta_0 = 90^\\circ$ (vertical launch).",
+      "When the angle of projection is $\\theta_0 = 45^\\circ$.",
+      "When the projection angle matches the critical reflection index.",
+      "When the horizontal component of acceleration matches the vertical component."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> The range formula contains the trigonometric term $\\sin 2\\theta_0$. The maximum value of the sine function is 1, which occurs when its argument is $90^\\circ$. Therefore, $2\\theta_0 = 90^\\circ$, which implies the projection angle must be exactly $\\theta_0 = 45^\\circ$."
+  },
+  {
+    "cat": "gs",
+    "sub": "motion",
+    "qe": "When a real scalar number $\\lambda$ is multiplied by a vector $\\mathbf{A}$, the result is a new vector. What dictates the magnitude and directional orientation of this resulting vector?",
+    "qh": "जब एक वास्तविक अदिश संख्या $\\lambda$ को एक सदिश $\\mathbf{A}$ से गुणा किया जाता है, तो परिणाम एक नया सदिश होता है। इस परिणामी सदिश के परिमाण और दिशात्मक अभिविन्यास को क्या निर्धारित करता है?",
+    "o": [
+      "The magnitude is unchanged, and direction rotates by $90^\\circ$ permanently.",
+      "The magnitude becomes $|\\lambda|$ times that of $\\mathbf{A}$, and the direction is identical or directly opposite depending on whether $\\lambda$ is positive or negative.",
+      "The dimension shifts from a vector to a scalar constant mapping the coordinate grid.",
+      "The path length drops linearly to zero irrespective of the sign of $\\lambda$."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Multiplying a vector $\\mathbf{A}$ by a real number $\\lambda$ scales its magnitude by the absolute value of $\\lambda$. The direction remains the same if $\\lambda$ is positive, and points in the exact opposite direction if $\\lambda$ is a negative number."
+  },
+  {
+    "cat": "gs",
+    "sub": "motion",
+    "qe": "Vector addition can be achieved graphically using either the head-to-tail method or the parallelogram method. These geometric constructions demonstrate that vector addition is commutative, meaning:",
+    "qh": "सदिश योग (Vector addition) को ग्राफिकल रूप से हेड-टू-टेल विधि या समानांतर चतुर्भुज विधि का उपयोग करके प्राप्त किया जा सकता है। ये ज्यामितीय निर्माण दर्शाते हैं कि सदिश योग क्रमविनिमेय (commutative) है, जिसका अर्थ है:",
+    "o": [
+      "$(\\mathbf{A} + \\mathbf{B}) + \\mathbf{C} = \\mathbf{A} + (\\mathbf{B} + \\mathbf{C})$",
+      "$\\mathbf{A} + \\mathbf{B} = \\mathbf{B} + \\mathbf{A}$",
+      "$\\mathbf{A} - \\mathbf{B} = \\mathbf{B} - \\mathbf{A}$",
+      "$\\lambda(\\mathbf{A} + \\mathbf{B}) = \\lambda\\mathbf{A} + \\lambda\\mathbf{B}$"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> The commutative property of vector addition states that the order in which two vectors are added does not alter the final resultant vector, written algebraically as $\\mathbf{A} + \\mathbf{B} = \\mathbf{B} + \\mathbf{A}$."
+  },
+  {
+    "cat": "gs",
+    "sub": "motion",
+    "qe": "The subtraction of a vector $\\mathbf{B}$ from a vector $\\mathbf{A}$ is mathematically defined in vector algebra as:",
+    "qh": "सदिश बीजगणित (vector algebra) में एक सदिश $\\mathbf{A}$ में से सदिश $\\mathbf{B}$ के घटाव (subtraction) को गणितीय रूप से किस प्रकार परिभाषित किया गया है?",
+    "o": [
+      "The scalar product of their absolute baseline magnitudes.",
+      "The vector sum of $\\mathbf{A}$ and the negative vector $-\\mathbf{B}$, written as $\\mathbf{A} + (-\\mathbf{B})$.",
+      "The geometric inversion of their plane component axes coordinates.",
+      "A cross-axis division process breaking down the unit scalars."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Vector subtraction is not a unique operation; it is formally defined as the vector addition of the negative of the vector to be subtracted: $\\mathbf{A} - \\mathbf{B} = \\mathbf{A} + (-\\mathbf{B})$."
+  },
+  {
+    "cat": "gs",
+    "sub": "motion",
+    "qe": "A unit vector associated with a given vector $\\mathbf{A}$ has a magnitude of exactly 1. What is its mukhya physical purpose, and how is it mathematically represented?",
+    "qh": "किसी दिए गए सदिश $\\mathbf{A}$ से जुड़े एक एकांक सदिश (unit vector) का परिमाण ठीक 1 होता है। इसका मुख्य भौतिक उद्देश्य क्या है, और इसे गणितीय रूप से कैसे दर्शाया जाता है?",
+    "o": [
+      "It scales the mass dimension, represented by $\\mathbf{\\hat{n}} = \\mathbf{A} \\times |\\mathbf{A}|$.",
+      "It specifies a unique direction in space without changing the dimensions, represented as $\\mathbf{\\hat{n}} = \\frac{\\mathbf{A}}{|\\mathbf{A}|}$.",
+      "It shifts the coordinate origin to a free orientation vector grid.",
+      "It eliminates the differentiation kinks across the horizontal baseline axis."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Unit vectors are dimensionless vectors used solely to specify a direction in space. They are denoted by a hat symbol over the letter and calculated by dividing the vector by its absolute magnitude: $\\mathbf{\\hat{n}} = \\frac{\\mathbf{A}}{A}$."
+  },
+  {
+    "cat": "gs",
+    "sub": "motion",
+    "qe": "In a right-handed Cartesian coordinate system, the symbols $\\mathbf{\\hat{i}}$, $\\mathbf{\\hat{j}}$, and $\\mathbf{\\hat{k}}$ represent unit vectors. What are their respective designated directions?",
+    "qh": "एक दक्षिणहस्त कार्तिकेय समन्वय प्रणाली (right-handed Cartesian coordinate system) में, संकेत $\\mathbf{\\hat{i}}$, $\\mathbf{\\hat{j}}$, और $\\mathbf{\\hat{k}}$ एकांक सदिशों को दर्शाते हैं। उनकी क्रमशः निर्दिष्ट दिशाएँ क्या हैं?",
+    "o": [
+      "They point along randomly changing non-orthogonal spatial vectors over time.",
+      "They point along the positive $x$-, $y$-, and $z$-axes, respectively.",
+      "They line up parallel to the changing trajectory velocity coordinates.",
+      "They designate the localized thermal stress axes of the medium matrix."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> By standard convention, $\\mathbf{\\hat{i}}$, $\\mathbf{\\hat{j}}$, and $\\mathbf{\\hat{k}}$ are orthogonal unit vectors pointing strictly along the positive directions of the $x$, $y$, and $z$ coordinate axes, respectively."
+  },
+  {
+    "cat": "gs",
+    "sub": "motion",
+    "qe": "If a vector $\\mathbf{A}$ lies in the $x$-$y$ plane and makes an angle $\\theta$ with the horizontal $x$-axis, its component vectors along the two axes are resolved as:",
+    "qh": "यदि एक सदिश $\\mathbf{A}$ $x$-$y$ तल में स्थित है और क्षैतिज $x$-अक्ष के साथ $\\theta$ कोण बनाता है, तो दोनों अक्षों के अनुदिश इसके घटक सदिशों को किस रूप में हल किया जाता है?",
+    "o": [
+      "$A_x = A \\sin\\theta$ and $A_y = A \\cos\\theta$",
+      "$A_x = A \\cos\\theta$ and $A_y = A \\sin\\theta$",
+      "$A_x = A^2 \\cos\\theta$ and $A_y = A^2 \\sin\\theta$",
+      "$A_x = \\frac{A}{\\cos\\theta}$ and $A_y = \\frac{A}{\\sin\\theta}$"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Using simple trigonometry on a right-angled vector triangle layout, the component adjacent to the angle is the cosine component ($A_x = A \\cos\\theta$), and the perpendicular component is the sine component ($A_y = A \\sin\\theta$)."
+  },
+  {
+    "cat": "gs",
+    "sub": "motion",
+    "qe": "The absolute magnitude of a two-dimensional vector $\\mathbf{A} = A_x\\mathbf{\\hat{i}} + A_y\\mathbf{\\hat{j}}$ is mathematically derived from its components using which relation?",
+    "qh": "एक द्विविमीय सदिश $\\mathbf{A} = A_x\\mathbf{\\hat{i}} + A_y\\mathbf{\\hat{j}}$ का निरपेक्ष परिमाण इसके घटकों से किस संबंध का उपयोग करके गणितीय रूप से निकाला जाता है?",
+    "o": [
+      "$A = A_x + A_y$",
+      "$A = \\sqrt{A_x^2 + A_y^2}$",
+      "$A = (A_x^2 + A_y^2)^2$",
+      "$A = \\frac{A_y}{A_x}$"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Based on the Pythagorean theorem applied to perpendicular vector components in a plane, the total magnitude is the square root of the sum of the squares of its individual components: $A = \\sqrt{A_x^2 + A_y^2}$."
+  },
+  {
+    "cat": "gs",
+    "sub": "motion",
+    "qe": "When an object undergoes a displacement $\\Delta \\mathbf{r}$ in a time interval $\\Delta t$, its average velocity is $\\mathbf{\\bar{v}} = \\frac{\\Delta \\mathbf{r}}{\\Delta t}$. What mathematical operation defines the transition from this average value to instantaneous velocity $\\mathbf{v}$?",
+    "qh": "जब कोई वस्तु समयांतराल $\\Delta t$ में विस्थापन $\\Delta \\mathbf{r}$ से गुजरती है, तो उसका औसत वेग $\\mathbf{\\bar{v}} = \\frac{\\Delta \\mathbf{r}}{\\Delta t}$ होता है। कौन सी गणितीय संक्रिया इस औसत मान से तात्कालिक वेग $\\mathbf{v}$ में संक्रमण को परिभाषित करती है?",
+    "o": [
+      "Taking the mathematical product of the displacement and elapsed time.",
+      "Taking the limiting value of the ratio as the time interval $\\Delta t$ approaches zero: $\\mathbf{v} = \\lim_{\\Delta t \\to 0} \\frac{\\Delta \\mathbf{r}}{\\Delta t} = \\frac{d\\mathbf{r}}{dt}$.",
+      "Integrating the acceleration function over an infinite spatial domain.",
+      "Squaring the component unit vectors across a right-handed system."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Instantaneous velocity is rigorously defined as the average velocity evaluated over an infinitesimally short time interval. Mathematically, this is the first derivative of position with respect to time, achieved by taking the calculus limit as $\\Delta t \\to 0$."
+  },
+  {
+    "cat": "gs",
+    "sub": "motion",
+    "qe": "In unit vector notation, the instantaneous acceleration vector $\\mathbf{a}$ of an object moving in space is written as $\\mathbf{a} = a_x\\mathbf{\\hat{i}} + a_y\\mathbf{\\hat{j}} + a_z\\mathbf{\\hat{k}}$. How are these scalar components $a_x$, $a_y$, and $a_z$ derived from velocity components?",
+    "qh": "एकांक सदिश संकेतन में, समष्टि में गतिमान किसी वस्तु के तात्कालिक त्वरण सदिश $\\mathbf{a}$ को $\\mathbf{a} = a_x\\mathbf{\\hat{i}} + a_y\\mathbf{\\hat{j}} + a_z\\mathbf{\\hat{k}}$ के रूप में लिखा जाता है। ये अदिश घटक $a_x$, $a_y$, और $a_z$ वेग घटकों से कैसे प्राप्त किए जाते हैं?",
+    "o": [
+      "$a_x = v_x \\times t$, $a_y = v_y \\times t$, $a_z = v_z \\times t$",
+      "$a_x = \\frac{dv_x}{dt}$, $a_y = \\frac{dv_y}{dt}$, $a_z = \\frac{dv_z}{dt}$",
+      "$a_x = v_x^2$, $a_y = v_y^2$, $a_z = v_z^2$",
+      "They represent the integrated displacement values over the axes parameters."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Instantaneous acceleration components are the first time derivatives of their respective instantaneous velocity components along each axis, represented as $a_x = \\frac{dv_x}{dt}$, $a_y = \\frac{dv_y}{dt}$, and $a_z = \\frac{dv_z}{dt}$."
+  },
+  {
+    "cat": "gs",
+    "sub": "motion",
+    "qe": "If an object is moving in a two-dimensional plane with a constant acceleration vector $\\mathbf{a} = a_x\\mathbf{\\hat{i}} + a_y\\mathbf{\\hat{j}}$, its position vector $\\mathbf{r}$ at any time '$t$' is derived as $\\mathbf{r} = \\mathbf{r}_0 + \\mathbf{v}_0t + \\frac{1}{2}\\mathbf{a}t^2$. What physical insight does this vector equation provide about motion in a plane?",
+    "qh": "यदि कोई वस्तु एक नियत त्वरण सदिश $\\mathbf{a} = a_x\\mathbf{\\hat{i}} + a_y\\mathbf{\\hat{j}}$ के साथ एक द्विविमीय तल में गति कर रही है, तो किसी भी समय '$t$' पर उसका स्थिति सदिश $\\mathbf{r}$ $\\mathbf{r} = \\mathbf{r}_0 + \\mathbf{v}_0t + \\frac{1}{2}\\mathbf{a}t^2$ के रूप में व्युत्पन्न होता है। यह सदिश समीकरण एक तल में गति के बारे में क्या भौतिक अंतर्दृष्टि प्रदान करता है?",
+    "o": [
+      "Motion in a plane is a single coupled one-dimensional relativistic phenomenon.",
+      "Motion in a plane can be treated as the superposition of two separate, simultaneous one-dimensional motions along two perpendicular directions.",
+      "The velocity vector must remain permanently parallel to the position vector origin.",
+      "The horizontal position coordinate $x$ depends exponentially on the vertical acceleration component."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> A key principle of mechanics highlighted in the text is that two-dimensional motion with constant acceleration can be broken down into two completely independent, simultaneous one-dimensional linear motions along mutually perpendicular axes ($x$ and $y$)."
   }
 ]
