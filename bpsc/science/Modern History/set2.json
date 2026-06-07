@@ -1,242 +1,691 @@
 [
   {
-    "p_id": "bpsc_eco_gs_01",
-    "qe": "In 1814, Raja Rammohan Roy established an early promotional platform in Calcutta to campaign against idolatry, caste rigidities, and meaningless rituals. What was the name of this organization?",
-    "qh": "1814 में, राजा राममोहन राय ने मूर्तिपूजा, जातिगत कठोरता और निरर्थक कर्मकांडों के खिलाफ अभियान चलाने के लिए कलकत्ता में एक प्रारंभिक मंच की स्थापना की थी। इस संगठन का नाम क्या था?",
-    "o": ["Atmiya Sabha", "Tattvabodhini Sabha", "Paramahansa Mandali", "Manav Dharma Sabha"],
-    "a": 0,
-    "e": "<b>Detailed Explanation:</b> Raja Rammohan Roy founded the Atmiya Sabha (Society of Friends) in Calcutta in 1814 to propagate the monotheistic ideals of the Vedanta and to challenge social evils."
+    "p_id": "bpsc_mix_mock_31",
+    "qe": "Consider the following statements regarding the structural splits within the Indian National Congress during the early 20th century:",
+    "qh": "20वीं शताब्दी के आरंभ में भारतीय राष्ट्रीय कांग्रेस के भीतर संगठनात्मक और वैचारिक विभाजनों के संबंध में निम्नलिखित कथनों पर विचार कीजिए:",
+    "se": [
+      "The Surat split of 1907 was triggered directly by disagreements over the expansion of the Boycott movement outside Bengal and the selection of the session's president.",
+      "The Lucknow Pact of 1916 achieved the re-entry of the Extremists into the Congress, largely due to the structural mediation of Annie Besant and Bal Gangadhar Tilak.",
+      "The second formal split in the Congress occurred in 1918 over the opposition to the Montagu-Chelmsford reform proposals, leading to the formation of the National Liberal Federation."
+    ],
+    "sh": [
+      "1907 का सूरत विभाजन सीधे तौर पर बंगाल के बाहर बहिष्कार आंदोलन के विस्तार और सत्र के अध्यक्ष के चयन को लेकर उपजे मतभेदों के कारण हुआ था।",
+      "1916 के लखनऊ समझौते के माध्यम से कांग्रेस में उग्रवादियों (Extremists) की वापसी हुई, जिसमें मुख्य रूप से एनी बेसेंट और बाल गंगाधर तिलक ने मध्यस्थता की थी।",
+      "कांग्रेस में दूसरा औपचारिक विभाजन 1918 में मोंटेग्यू-चेम्सफोर्ड सुधार प्रस्तावों के विरोध को लेकर हुआ, जिसके कारण नेशनल लिबरल फेडरेशन का गठन हुआ।"
+    ],
+    "o": [
+      "Only 1 and 2 are correct",
+      "Only 2 and 3 are correct",
+      "1, 2 and 3 all are correct",
+      "More than one of the above / None of the above"
+    ],
+    "a": 2,
+    "e": "All three statements are historically accurate. The Surat split occurred because Moderates wanted to limit the Boycott movement to Bengal while Extremists wanted it nationwide, along with disputes over choosing Rash Behari Ghosh over Lala Lajpat Rai. In 1916, Tilak and Besant successfully reunited the factions. In 1918, Surendranath Banerjee led the moderates out of the Congress to form the National Liberal Federation because they wanted to accept the Montagu-Chelmsford reforms, creating the second split."
   },
   {
-    "p_id": "bpsc_eco_gs_02",
-    "qe": "Raja Rammohan Roy published a strategic theological treatise in 1820 where he attempted to separate the moral and philosophical message of the New Testament from its miracle stories. What was the title of this work?",
-    "qh": "राजा राममोहन राय ने 1820 में एक रणनीतिक धार्मिक ग्रंथ प्रकाशित किया, जिसमें उन्होंने न्यू टेस्टामेंट (New Testament) के नैतिक और दार्शनिक संदेश को उसकी चमत्कारिक कहानियों से अलग करने का प्रयास किया। इस कृति का शीर्षक क्या था?",
-    "o": ["Precepts of Jesus", "Gift to Monotheists", "Tattvabodhini Patrika", "Satya Prakash"],
-    "a": 0,
-    "e": "<b>Detailed Explanation:</b> In his work 'Precepts of Jesus' (1820), Raja Rammohan Roy praised the moral and philosophical message of the New Testament while separating it from miracle stories, which earned him the ire of Christian missionaries."
+    "p_id": "bpsc_mix_mock_32",
+    "qe": "Consider the following statements regarding the thermodynamic behavior of water and its density anomalies:",
+    "qh": "जल के ऊष्मागतिकीय (thermodynamic) व्यवहार और इसके घनत्व की विसंगतियों के संबंध में निम्नलिखित कथनों पर विचार कीजिए:",
+    "se": [
+      "As pure water is cooled from 10°C down to 0°C, its density increases continuously until it undergoes a sudden phase transformation into ice at 0°C.",
+      "The anomalous expansion of water between 4°C and 0°C is fundamentally caused by the orientation of hydrogen bonds forming an open, cage-like crystalline structure.",
+      "In deep freshwater lakes during peak winter, the deepest layers of water remain stable at approximately 4°C due to its maximum density, preserving aquatic ecosystems."
+    ],
+    "sh": [
+      "जब शुद्ध जल को 10°C से 0°C तक ठंडा किया जाता है, तो इसका घनत्व लगातार बढ़ता है जब तक कि यह 0°C पर अचानक बर्फ में परिवर्तित न हो जाए।",
+      "4°C और 0°C के बीच जल का असामान्य प्रसार (anomalous expansion) मौलिक रूप से हाइड्रोजन बंधों के संरेखण के कारण होता है जो एक खुली, पिंजरे जैसी क्रिस्टलीय संरचना बनाते हैं।",
+      "भीषण सर्दियों के दौरान गहरी मीठे पानी की झीलों में, पानी की सबसे गहरी परतें इसके अधिकतम घनत्व के कारण लगभग 4°C पर स्थिर रहती हैं, जो जलीय पारिस्थितिकी प्रणालियों को सुरक्षित रखती हैं।"
+    ],
+    "o": [
+      "Only 1 and 2 are correct",
+      "Only 2 and 3 are correct",
+      "1, 2 and 3 all are correct",
+      "More than one of the above / None of the above"
+    ],
+    "a": 1,
+    "e": "Statements 2 and 3 are correct. Statement 1 is incorrect because water reaches its maximum density at 4°C. When cooled further from 4°C down to 0°C, its density actually *decreases* (expands) rather than increasing continuously, which is why ice floats."
   },
   {
-    "p_id": "bpsc_eco_gs_03",
-    "qe": "The long-term reformative agenda of the Brahmo Samaj, which focused on purifying Hinduism and preaching monotheism, was anchored fundamentally on which two pillars?",
-    "qh": "हिंदू धर्म को शुद्ध करने और एकेश्वरवाद का उपदेश देने पर केंद्रित ब्रह्म समाज का दीर्घकालिक सुधार एजेंडा मौलिक रूप से किन दो स्तंभों पर आधारित था?",
-    "o": ["Reason and the Vedas/Upanishads", "Divine Avataras and Karma", "Bhakti cult and Blind faith", "Western sciences and Puranas"],
-    "a": 0,
-    "e": "<b>Detailed Explanation:</b> The baseline working strategy of the Brahmo Samaj was structurally anchored on the twin pillars of human reason and the ancient teachings of the Vedas and Upanishads."
+    "p_id": "bpsc_mix_mock_33",
+    "qe": "Consider the following statements regarding the execution and socio-economic targets of the land ceiling reforms in Bihar:",
+    "qh": "बिहार में भूमि सीमा (land ceiling) सुधारों के कार्यान्वयन और सामाजिक-आर्थिक लक्ष्यों के संबंध में निम्नलिखित कथनों पर विचार कीजिए:",
+    "se": [
+      "The Bihar Land Reforms (Fixation of Ceiling Area and Acquisition of Surplus Land) Act was originally enacted in 1961 to redistribute land to landless agricultural laborers.",
+      "Under the statutory structural provisions, land classification for ceiling limits is determined uniformly across the state without factoring in irrigation access or soil quality.",
+      "The amendments introduced in the 1970s lowered the maximum permissible land ceiling holding capacity per family unit to accelerate the acquisition of surplus pools."
+    ],
+    "sh": [
+      "भूमिहीन कृषि श्रमिकों को भूमि पुनर्वितरित करने के लिए मूल रूप से 1961 में बिहार भूमि सुधार (सीलिंग क्षेत्र का निर्धारण और अधिशेष भूमि का अधिग्रहण) अधिनियम लागू किया गया था।",
+      "वैधानिक संरचनात्मक प्रावधानों के तहत, सीलिंग सीमा के लिए भूमि का वर्गीकरण सिंचाई की उपलब्धता या मिट्टी की गुणवत्ता को ध्यान में रखे बिना पूरे राज्य में समान रूप से निर्धारित किया जाता है।",
+      "अधिशेष भूमि के अधिग्रहण को गति देने के लिए 1970 के दशक में पेश किए गए संशोधनों द्वारा प्रति परिवार इकाई अधिकतम अनुमेय भूमि सीलिंग धारण क्षमता को कम कर दिया गया था।"
+    ],
+    "o": [
+      "Only 1 and 2 are correct",
+      "Only 1 and 3 are correct",
+      "1, 2 and 3 all are correct",
+      "More than one of the above / None of the above"
+    ],
+    "a": 1,
+    "e": "Statements 1 and 3 are correct. Statement 2 is incorrect because the land ceiling limits under the Act are explicitly *not* uniform; they categorize land into distinct classes (Class I to Class VI) based on structural benchmarks such as assured canal irrigation, private tube-well irrigation, orchards, or uncultivable wasteland."
   },
   {
-    "p_id": "bpsc_eco_gs_04",
-    "qe": "Which orthodox socio-cultural organization was explicitly founded by Raja Radhakant Deb to counter the progressive socio-religious propaganda of the Brahmo Samaj?",
-    "qh": "ब्रह्म समाज के प्रगतिशील सामाजिक-धार्मिक प्रचार का मुकाबला करने के लिए राजा राधाकांत देव द्वारा किस रूढ़िवादी सामाजिक-सांस्कृतिक संगठन की स्थापना की गई थी?",
-    "o": ["Dharma Sabha", "Tattvabodhini Sabha", "Paramahansa Sabha", "Atmiya Sabha"],
-    "a": 0,
-    "e": "<b>Detailed Explanation:</b> To oppose the anti-idolatry and progressive steps of Raja Rammohan Roy, Raja Radhakant Deb organized the 'Dharma Sabha' as an orthodox counter-front."
+    "p_id": "bpsc_mix_mock_34",
+    "qe": "Consider the following statements regarding the structural composition and limitations of the Panchayati Raj financial architecture under Article 243-I of the Constitution of India:",
+    "qh": "भारत के संविधान के अनुच्छेद 243-I के तहत पंचायती राज वित्तीय संरचना की संरचनात्मक बनावट और सीमाओं के संबंध में निम्नलिखित कथनों पर विचार कीजिए:",
+    "se": [
+      "The State Finance Commission is constituted by the Governor every fifth year to review the financial position of the Panchayats and recommend devolution models.",
+      "The recommendations made by the State Finance Commission are constitutionally binding upon the State Government, leaving no room for legislative modifications.",
+      "The Governor is required to cause every recommendation made by the Commission, along with an explanatory memorandum of action taken, to be laid before the State Legislature."
+    ],
+    "sh": [
+      "पंचायतों की वित्तीय स्थिति की समीक्षा करने और हस्तांतरण मॉडल की सिफारिश करने के लिए राज्यपाल द्वारा प्रत्येक पांचवें वर्ष राज्य वित्त आयोग का गठन किया जाता है।",
+      "राज्य वित्त आयोग द्वारा की गई सिफारिशें राज्य सरकार पर संवैधानिक रूप से बाध्यकारी होती हैं, जिससे विधायी संशोधनों की कोई गुंजाइश नहीं बचती है।",
+      "राज्यपाल के लिए यह आवश्यक है कि वह आयोग द्वारा की गई प्रत्येक सिफारिश को, की गई कार्रवाई के स्पष्टीकरण ज्ञापन के साथ, राज्य विधानमंडल के समक्ष रखवाए।"
+    ],
+    "o": [
+      "Only 1 and 2 are correct",
+      "Only 1 and 3 are correct",
+      "1, 2 and 3 all are correct",
+      "More than one of the above / None of the above"
+    ],
+    "a": 1,
+    "e": "Statements 1 and 3 are correct. Statement 2 is incorrect because the recommendations of the State Finance Commission are advisory in nature and are *not* legally or constitutionally binding upon the State Government, which retains final legislative authority on implementation."
   },
   {
-    "p_id": "bpsc_eco_gs_05",
-    "qe": "Raja Rammohan Roy took specific progressive stances on macroeconomic and land revenue issues. Which of the following fields reflects his economic demands under the British Raj?",
-    "qh": "राजा राममोहन राय ने समष्टि अर्थशास्त्र और भूमि राजस्व के मुद्दों पर प्रगतिशील रुख अपनाया। निम्नलिखित में से कौन सा क्षेत्र ब्रिटिश राज के तहत उनकी आर्थिक मांगों को दर्शाता है?",
-    "o": ["Fixation of maximum rents for Bengali zamindars and reduction of export duties on Indian goods abroad", "The total privatization of all tax-free lands in rural Bengal", "An immediate implementation of high export tariffs on native manufacturing units", "The absolute expansion of the East India Company's exclusive monopoly trading rights"],
+    "p_id": "bpsc_mix_mock_35",
+    "qe": "Consider the following statements regarding the administrative machinery and fiscal policies introduced by Sher Shah Suri:",
+    "qh": "शेरशाह सूरी द्वारा शुरू की गई प्रशासनिक व्यवस्था और वित्तीय नीतियों के संबंध में निम्नलिखित कथनों पर विचार कीजिए:",
+    "se": [
+      "He introduced the 'Rai' system, which was a compiled schedule of crop rates based on state land classification to streamline revenue assessments.",
+      "For local administrative security, he enforced the principle of collective responsibility, holding village headmen (Muqaddams) legally accountable for crimes committed within their jurisdiction.",
+      "He completely abolished all internal transit duties (Zakat and Shukrana) across his empire, charging taxes exclusively at the points of entry and sale."
+    ],
+    "sh": [
+      "उन्होंने राजस्व मूल्यांकन को सुव्यवस्थित करने के लिए 'रई' (Rai) प्रणाली की शुरुआत की, जो राज्य भूमि वर्गीकरण के आधार पर फसल दरों की एक संकलित अनुसूची थी।",
+      "स्थानीय प्रशासनिक सुरक्षा के लिए, उन्होंने सामूहिक जिम्मेदारी के सिद्धांत को लागू किया, जिसके तहत ग्राम प्रधानों (मुकद्दमों) को उनके अधिकार क्षेत्र में होने वाले अपराधों के लिए कानूनी रूप से जवाबदेह ठहराया जाता था।",
+      "उन्होंने अपने पूरे साम्राज्य में सभी आंतरिक पारगमन शुल्कों (जकात और शुकराना) को पूरी तरह से समाप्त कर दिया, और केवल प्रवेश तथा बिक्री के बिंदुओं पर कर वसूल किया।"
+    ],
+    "o": [
+      "Only 1 and 2 are correct",
+      "Only 2 and 3 are correct",
+      "1, 2 and 3 all are correct",
+      "More than one of the above / None of the above"
+    ],
     "a": 0,
-    "e": "<b>Detailed Explanation:</b> As a political activist, Roy condemned the oppressive practices of Bengali zamindars, demanded the fixation of maximum rents, called for a reduction of export duties on Indian goods abroad, and sought the abolition of the East India Company's trading rights."
+    "e": "Statements 1 and 2 are correct. Statement 3 is incorrect because while Sher Shah minimized random extortion by abolishing numerous vexatious cesses, he retained custom duties levied strictly at two specific nodes: when goods entered the empire's frontiers (such as Sonargaon or the Indus) and at the actual place of sale, but the specific institutional names of internal duties removed did not encompass universal abolition of administrative fees."
   },
   {
-    "p_id": "bpsc_eco_gs_06",
-    "qe": "Before informally integrating with the Brahmo Samaj in 1842 to give it a new lease of life, Maharishi Debendranath Tagore headed which systematic study platform established in 1839?",
-    "qh": "1842 में ब्रह्म समाज के साथ अनौपचारिक रूप से जुड़ने से पहले, महर्षि देवेंद्रनाथ टैगोर ने 1839 में स्थापित किस व्यवस्थित अध्ययन मंच का नेतृत्व किया था?",
-    "o": ["Tattvabodhini Sabha", "Paramahansa Mandali", "Satyashodhak Samaj", "Social Service League"],
-    "a": 0,
-    "e": "<b>Detailed Explanation:</b> Debendranath Tagore headed the Tattvabodhini Sabha (founded in 1839), which along with its organ Tattvabodhini Patrika, was entirely devoted to the systematic study of India's past with a rational outlook."
+    "p_id": "bpsc_mix_mock_36",
+    "qe": "Consider the following statements regarding the physical mechanics of electricity and alternating current (AC) circuits containing reactive components:",
+    "qh": "विद्युत के भौतिक यांत्रिकी और प्रतिक्रियाशील घटकों (reactive components) से युक्त प्रत्यावर्ती धारा (AC) सर्किट के व्यवहार के संबंध में निम्नलिखित कथनों पर विचार कीजिए:",
+    "se": [
+      "In a purely inductive AC circuit, the alternating electric current leads the alternating voltage by a precise phase angle of 90 degrees.",
+      "The power factor of an electrical circuit drops to exactly zero when it contains purely capacitive or purely inductive loads, resulting in 'wattless current'.",
+      "An electrical transformer modifies the frequency of an alternating current to prevent heat dissipation losses during long-distance transmission."
+    ],
+    "sh": [
+      "एक विशुद्ध रूप से प्रेरक (inductive) AC सर्किट में, प्रत्यावर्ती विद्युत धारा एक सटीक 90 डिग्री के चरण कोण (phase angle) से प्रत्यावर्ती वोल्टेज से आगे चलती है।",
+      "जब किसी विद्युत सर्किट में विशुद्ध रूप से संधारित (capacitive) या विशुद्ध रूप से प्रेरक (inductive) लोड होता है, तो उसका पावर फैक्टर घटकर बिल्कुल शून्य हो जाता है, जिससे 'वाटहीन धारा' (wattless current) उत्पन्न होती है।",
+      "एक विद्युत ट्रांसफार्मर लंबी दूरी के संचरण के दौरान गर्मी के नुकसान को रोकने के लिए प्रत्यावर्ती धारा की आवृत्ति (frequency) को संशोधित करता है।"
+    ],
+    "o": [
+      "Only 1 is correct",
+      "Only 2 is correct",
+      "1, 2 and 3 all are correct",
+      "More than one of the above / None of the above"
+    ],
+    "a": 1,
+    "e": "Statement 2 is correct. Statement 1 is incorrect because in a purely inductive circuit, current *lags* behind the voltage by 90 degrees (voltage leads current). Statement 3 is incorrect because a transformer changes voltage and current levels but keeps the AC frequency absolutely invariant."
   },
   {
-    "p_id": "bpsc_eco_gs_07",
-    "qe": "The dismissal of Keshab Chandra Sen from the office of acharya in 1865 by Debendranath Tagore led to an operational split in the Brahmo Samaj. What was the name of the new organization founded by Sen in 1866?",
-    "qh": "देवेंद्रनाथ टैगोर द्वारा 1865 में केशव चंद्र सेन को आचार्य के पद से बर्खास्त करने के कारण ब्रह्म समाज में विभाजन हुआ। 1866 में सेन द्वारा स्थापित नए संगठन का क्या नाम था?",
-    "o": ["Brahmo Samaj of India", "Adi Brahmo Samaj", "Sadharan Brahmo Samaj", "Prarthana Samaj"],
+    "p_id": "bpsc_mix_mock_37",
+    "qe": "Consider the following statements regarding the evolution of the revolutionary nationalist movement in Bihar during the early decades of the 20th century:",
+    "qh": "20वीं शताब्दी के शुरुआती दशकों के दौरान बिहार में क्रांतिकारी राष्ट्रवादी आंदोलन के विकास के संबंध में निम्नलिखित कथनों पर विचार कीजिए:",
+    "se": [
+      "Sachindra Nath Sanyal established a formal branch of the Anushilan Samiti in Patna in 1913 to coordinate underground operations.",
+      "The 'Pataliputra Yuvak Sangh' was founded in 1929 under the leadership of Rambriksh Benipuri and Ambika Kant Sinha to mobilize youth.",
+      "The revolutionary journal 'Yugantar' was edited and published directly from Bhagalpur by Phanindra Nath Ghosh to advocate armed resistance."
+    ],
+    "sh": [
+      "शचींद्र नाथ सान्याल ने भूमिगत गतिविधियों के समन्वय के लिए 1913 में पटना में अनुशीलन समिति की एक औपचारिक शाखा स्थापित की थी।",
+      "युवाओं को संगठित करने के लिए 1929 में रामवृक्ष बेनीपुरी और अंबिका कांत सिन्हा के नेतृत्व में 'पाटलिपुत्र युवक संघ' की स्थापना की गई थी।",
+      "सशस्त्र प्रतिरोध की वकालत करने के लिए फणींद्र नाथ घोष द्वारा भागलपुर से सीधे क्रांतिकारी पत्रिका 'युगांतर' का संपादन और प्रकाशन किया गया था।"
+    ],
+    "o": [
+      "Only 1 and 2 are correct",
+      "Only 1 and 3 are correct",
+      "1, 2 and 3 all are correct",
+      "More than one of the above / None of the above"
+    ],
     "a": 0,
-    "e": "<b>Detailed Explanation:</b> Following the 1865 split, Keshab Chandra Sen and his progressive followers founded the 'Brahmo Samaj of India' in 1866, while Debendranath Tagore's conservative wing became known as the 'Adi Brahmo Samaj'."
+    "e": "Statements 1 and 2 are correct. Statement 3 is incorrect because 'Yugantar' was a prominent revolutionary newspaper founded in Calcutta by Barindra Kumar Ghosh and Bhupendranath Dutt, not by Phanindra Nath Ghosh in Bhagalpur. Phanindra Nath Ghosh was a leader of the Hindustan Socialist Republican Association (HSRA) in Bihar but did not publish Yugantar."
   },
   {
-    "p_id": "bpsc_eco_gs_08",
-    "qe": "In 1878, a major split occurred within Keshab Chandra Sen's Brahmo Samaj of India, resulting in the creation of the Sadharan Brahmo Samaj. Who among the following leaders spearheaded this development?",
-    "qh": "1878 में, केशव चंद्र सेन के ब्रह्म समाज ऑफ इंडिया के भीतर एक बड़ा विभाजन हुआ, जिसके परिणामस्वरूप साधारण ब्रह्म समाज का गठन हुआ। निम्नलिखित में से किस नेता ने इस विकास का नेतृत्व किया था?",
-    "o": ["Ananda Mohan Bose, Shibchandra Deb, and Umesh Chandra Datta", "Atmaram Pandurang and R.G. Bhandarkar", "Dadoba Pandurang and Mehtaji Durgaram", "Gopal Krishna Gokhale and N.M. Joshi"],
+    "p_id": "bpsc_mix_mock_38",
+    "qe": "Consider the following statements regarding atmospheric dynamics and the Coriolis effect on global planetary wind systems:",
+    "qh": "वायुमंडलीय गतिकी और वैश्विक ग्रहीय पवन प्रणालियों पर कोरियोलिस प्रभाव के संबंध में निम्नलिखित कथनों पर विचार कीजिए:",
+    "se": [
+      "The Coriolis force is directly proportional to the sine of the latitude, reaching its absolute maximum at the geographical poles and dropping to zero at the equator.",
+      "According to Ferrel's Law, winds blowing in the Northern Hemisphere are systematically deflected to their left relative to their path of motion.",
+      "The geostrophic wind occurs when the pressure gradient force is balanced perfectly by the Coriolis force, causing the wind to blow parallel to the isobars."
+    ],
+    "sh": [
+      "कोरियोलिस बल अक्षांश के ज्या (sine) के सीधे आनुपातिक होता है, जो भौगोलिक ध्रुवों पर अपने पूर्ण अधिकतम स्तर पर पहुंच जाता है और भूमध्य रेखा पर शून्य हो जाता है।",
+      "फेरेल के नियम के अनुसार, उत्तरी गोलार्ध में चलने वाली हवाएं अपने गति मार्ग के सापेक्ष व्यवस्थित रूप से अपनी बाईं ओर विक्षेपित (deflected) हो जाती हैं।",
+      "भू-विक्षेपी पवन (geostrophic wind) तब चलती है जब दाब प्रवणता बल (pressure gradient force) कोरियोलिस बल द्वारा पूरी तरह से संतुलित हो जाता है, जिससे हवा समदाब रेखाओं (isobars) के समानांतर चलने लगती है।"
+    ],
+    "o": [
+      "Only 1 and 3 are correct",
+      "Only 2 and 3 are correct",
+      "1, 2 and 3 all are correct",
+      "More than one of the above / None of the above"
+    ],
     "a": 0,
-    "e": "<b>Detailed Explanation:</b> Disgusted by Keshab's action of marrying his underage daughter using orthodox Hindu rituals, his progressive followers broke away to found the Sadharan Brahmo Samaj under the leadership of Ananda Mohan Bose, Shibchandra Deb, and Umesh Chandra Datta."
+    "e": "Statements 1 and 3 are correct. Statement 2 is incorrect because Ferrel's Law states that due to the Coriolis effect, winds in the Northern Hemisphere are deflected to their *right* relative to their direction of motion, while winds in the Southern Hemisphere are deflected to their left."
   },
   {
-    "p_id": "bpsc_eco_gs_09",
-    "qe": "The Prarthana Samaj, founded in Bombay in 1867 with the assistance of Keshab Chandra Sen, owed its widespread popularity and national character to the tireless efforts of which leader who joined it in 1870?",
-    "qh": "1867 में केशव चंद्र सेन की सहायता से बॉम्बे में स्थापित प्रार्थना समाज को व्यापक लोकप्रियता और राष्ट्रीय स्वरूप 1870 में शामिल होने वाले किस नेता के अथक प्रयासों के कारण मिला?",
-    "o": ["Mahadeo Govind Ranade", "Atmaram Pandurang", "Balshastri Jambhekar", "Gopalhari Deshmukh"],
-    "a": 0,
-    "e": "<b>Detailed Explanation:</b> Mahadeo Govind Ranade joined the Prarthana Samaj in 1870, and his extensive efforts elevated the society's activities, transforming it into an organization with an all-India character focused on social reforms."
+    "p_id": "bpsc_mix_mock_39",
+    "qe": "Consider the following statements regarding the dynamic phases of the tribal uprising known as the Santhal Hool (1855-56) inside the Rajmahal hills:",
+    "qh": "राजमहल की पहाड़ियों के भीतर संताल हुल (1855-56) के नाम से जाने जाने वाले जनजातीय विद्रोह के गतिशील चरणों के संबंध में निम्नलिखित कथनों पर विचार कीजिए:",
+    "se": [
+      "The core operational catalyst for the rebellion was the institutional oppression by the 'Dikus' (outsiders), comprising moneylenders, traders, and British revenue agents.",
+      "The military operations of the Santhals were directed by the brothers Sidhu and Kanhu, who claimed divine interventions authorized their armed resistance.",
+      "The British administration suppressed the movement and created a separate administrative zone called non-regulation district of 'Santhal Pargana' to insulate the region."
+    ],
+    "sh": [
+      "विद्रोह का मुख्य परिचालन उत्प्रेरक 'दिकुओं' (बाहरी लोगों) द्वारा किया जाने वाला संस्थागत उत्पीड़न था, जिसमें साहूकार, व्यापारी और ब्रिटिश राजस्व एजेंट शामिल थे।",
+      "संतालों के सैन्य अभियानों का निर्देशन सिद्धू और कान्हू भाइयों द्वारा किया गया था, जिन्होंने दावा किया था कि दैवीय हस्तक्षेप ने उनके सशस्त्र प्रतिरोध को अधिकृत किया था।",
+      "ब्रिटिश प्रशासन ने आंदोलन को दबा दिया और क्षेत्र को अलग रखने के लिए 'संताल परगना' नामक एक अलग गैर-विनियमन जिला (non-regulation district) बनाया।"
+    ],
+    "o": [
+      "Only 1 and 2 are correct",
+      "Only 2 and 3 are correct",
+      "1, 2 and 3 all are correct",
+      "More than one of the above / None of the above"
+    ],
+    "a": 2,
+    "e": "All statements 1, 2, and 3 are entirely correct. The Santhal Hool targeted the Diku system. Sidhu and Kanhu issued declarations claiming divine mandate, and after crushing the rebellion, the British passed the Santhal Parganas Tenancy Act and created the Santhal Pargana district under special non-regulation administrative frameworks."
   },
   {
-    "p_id": "bpsc_eco_gs_10",
-    "qe": "The radical intellectual trend of the late 1820s known as the 'Young Bengal Movement' was inspired by which foundational international event?",
-    "qh": "1820 के दशक के उत्तरार्ध के क्रांतिकारी बौद्धिक रुझान, जिसे 'यंग बंगाल आंदोलन' (Young Bengal Movement) के रूप में जाना जाता है, को किस मौलिक अंतर्राष्ट्रीय घटना से प्रेरणा मिली थी?",
-    "o": ["The French Revolution", "The American War of Independence", "The Industrial Revolution", "The Unification of Italy"],
+    "p_id": "bpsc_mix_mock_40",
+    "qe": "Consider the following statements regarding human physiological biochemistry and enzyme-mediated metabolic regulation loops:",
+    "qh": "मानव शारीरिक जैव रसायन (physiological biochemistry) और एंजाइम-मध्यस्थ चयापचय विनियमन लूप (metabolic regulation loops) के संबंध में निम्नलिखित कथनों पर विचार कीजिए:",
+    "se": [
+      "Enzymes optimize biochemical reactions by significantly increasing the activation energy required for transitioning substrates into products.",
+      "Competitive inhibition occurs when an inhibitor molecule temporarily binds to an allosteric site away from the active enzyme surface, permanently altering its structure.",
+      "The optimum operating pH for the digestive enzyme Pepsin secreted in the stomach matrix is highly acidic, typically hovering between 1.5 and 2.5."
+    ],
+    "sh": [
+      "एंजाइम सबस्ट्रेट्स को उत्पादों में परिवर्तित करने के लिए आवश्यक सक्रियण ऊर्जा (activation energy) को महत्वपूर्ण रूप से बढ़ाकर जैव रासायनिक प्रतिक्रियाओं को अनुकूलित करते हैं।",
+      "प्रतिस्पर्धी अवरोध (Competitive inhibition) तब होता है जब एक अवरोधक अणु सक्रिय एंजाइम सतह से दूर एक एलोस्टेरिक साइट से अस्थायी रूप से जुड़ जाता है, जिससे इसकी संरचना स्थायी रूप से बदल जाती है।",
+      "आमाशय (stomach) में स्रावित होने वाले पाचक एंजाइम पेप्सिन के लिए अनुकूलतम पीएच (pH) अत्यधिक अम्लीय होता है, जो आमतौर पर 1.5 और 2.5 के बीच रहता है।"
+    ],
+    "o": [
+      "Only 3 is correct",
+      "Only 1 and 3 are correct",
+      "1, 2 and 3 all are correct",
+      "More than one of the above / None of the above"
+    ],
     "a": 0,
-    "e": "<b>Detailed Explanation:</b> Henry Vivian Derozio, an Anglo-Indian teacher at Hindu College, inspired his pupils to think freely by drawing deep structural inspiration from the radical ideals of the French Revolution."
+    "e": "Statement 3 is correct. Statement 1 is incorrect because enzymes accelerate reaction rates by *lowering* the activation energy, not increasing it. Statement 2 is incorrect because competitive inhibitors bind directly to the *active site* (competing with the substrate), whereas binding to an allosteric site describes *non-competitive* inhibition."
   },
   {
-    "p_id": "bpsc_eco_gs_11",
-    "qe": "What primary operational limitation caused the radical Young Bengal Movement to achieve only limited success and fail to secure a long-term impact on the masses?",
-    "qh": "किस प्राथमिक परिचालन सीमा के कारण क्रांतिकारी यंग बंगाल आंदोलन केवल सीमित सफलता प्राप्त कर सका और जनता पर दीर्घकालिक प्रभाव डालने में विफल रहा?",
-    "o": ["Their radicalism was bookish in character and they lacked any real organizational link with the masses", "They strictly opposed the spread of modern Western physical sciences", "They were legally barred from publishing journals by the colonial courts", "They integrated fully with the conservative orthodox zamindars of Bengal"],
-    "a": 0,
-    "e": "<b>Detailed Explanation:</b> The Derozians failed to build a lasting mass movement because their radical ideas were mostly bookish and lacked deep roots in prevailing social conditions. Additionally, they failed to rally any supporting classes, such as the peasantry."
+    "p_id": "bpsc_mix_mock_41",
+    "qe": "Consider the following statements regarding the industrial, corporate, and agricultural credit policy provisions in the recent Bihar State Budget:",
+    "qh": "हाल के बिहार राज्य के बजट में औद्योगिक, कॉर्पोरेट और कृषि ऋण नीति के प्रावधानों के संबंध में निम्नलिखित कथनों पर विचार कीजिए:",
+    "se": [
+      "The budgetary framework allocates separate interest subvention pools exclusively for women entrepreneurs under the Mukhyamantri Mahila Udyami Yojana.",
+      "The state budget completely phased out capital expenditures allocated for agricultural mechanization to divert fiscal resource targets to green hydrogen pilots.",
+      "To attract institutional investments, the state has authorized 100 percent tax holidays on State Goods and Services Tax (SGST) for multi-tier logistic parks under its structural industrial policy."
+    ],
+    "sh": [
+      "बजटीय ढांचा मुख्यमंत्री महिला उद्यमी योजना के तहत विशेष रूप से महिला उद्यमियों के लिए अलग ब्याज सहायता (interest subvention) पूल आवंटित करता है।",
+      "राज्य के बजट ने हरित हाइड्रोजन पायलटों के लिए राजकोषीय संसाधन लक्ष्यों को स्थानांतरित करने के लिए कृषि यंत्रीकरण के लिए आवंटित पूंजीगत व्यय को पूरी तरह से समाप्त कर दिया है।",
+      "संस्थागत निवेश को आकर्षित करने के लिए, राज्य ने अपनी संरचनात्मक औद्योगिक नीति के तहत बहु-स्तरीय लॉजिस्टिक पार्कों के लिए राज्य वस्तु एवं सेवा कर (SGST) पर 100 प्रतिशत टैक्स हॉलिडे को मंजूरी दी है।"
+    ],
+    "o": [
+      "Only 1 and 2 are correct",
+      "Only 1 and 3 are correct",
+      "1, 2 and 3 all are correct",
+      "More than one of the above / None of the above"
+    ],
+    "a": 1,
+    "e": "Statements 1 and 3 are correct according to the industrial promotion and startup enablement architecture of Bihar's recent fiscal cycles. Statement 2 is completely incorrect because agricultural mechanization subsidies and associated capital expenditures remain a top core priority in Bihar's Krishi Road Map frameworks to sustain crop yields, and have not been phased out."
   },
   {
-    "p_id": "bpsc_eco_gs_12",
-    "qe": "Pandit Ishwar Chandra Vidyasagar became the principal of Sanskrit College in 1850. Which progressive structural reform did he implement to break the monopoly of scriptural knowledge?",
-    "qh": "पंडित ईश्वर चंद्र विद्यासागर 1850 में संस्कृत कॉलेज के प्राचार्य बने। स्क्रिप्टुरल ज्ञान के एकाधिकार को तोड़ने के लिए उन्होंने कौन सा प्रगतिशील संरचनात्मक सुधार लागू किया?",
-    "o": ["He opened the enrollment of Sanskrit College to non-brahmins", "He systematically banned the teaching of all traditional Vedic scripts", "He restricted the study of Sanskrit solely to English administrative officers", "He aligned the college platform exclusively with the orthodox Dharma Sabha"],
-    "a": 0,
-    "e": "<b>Detailed Explanation:</b> Determined to break the traditional priestly monopoly over scriptural knowledge, Vidyasagar opened the Sanskrit College to non-brahmin students and introduced Western thought to enhance Sanskritic learning."
+    "p_id": "bpsc_mix_mock_42",
+    "qe": "Consider the following statements regarding the operational jurisdiction and judicial parameters of the High Courts under Article 226 of the Constitution of India:",
+    "qh": "भारत के संविधान के अनुच्छेद 226 के तहत उच्च न्यायालयों के परिचालन क्षेत्राधिकार और न्यायिक मापदंडों के संबंध में निम्नलिखित कथनों पर विचार कीजिए:",
+    "se": [
+      "The writ jurisdiction of a High Court under Article 226 is constitutionally broader than that of the Supreme Court under Article 32, as it extends to ordinary legal rights.",
+      "A High Court can issue writs to any person or authority outside its territorial jurisdiction provided the cause of action arises entirely within its borders.",
+      "The power of judicial review exercised by the High Court explicitly allows it to declare an act of Parliament unconstitutional if it violates Part III elements."
+    ],
+    "sh": [
+      "अनुच्छेद 226 के तहत उच्च न्यायालय का रिट क्षेत्राधिकार संवैधानिक रूप से अनुच्छेद 32 के तहत सर्वोच्च न्यायालय के क्षेत्राधिकार से अधिक व्यापक है, क्योंकि इसका विस्तार सामान्य कानूनी अधिकारों तक भी है।",
+      "एक उच्च न्यायालय अपनी क्षेत्रीय सीमा से बाहर के किसी भी व्यक्ति या प्राधिकरण को रिट जारी कर सकता है बशर्ते कि कार्रवाई का कारण (cause of action) पूरी तरह से उसकी सीमाओं के भीतर उत्पन्न हुआ हो।",
+      "उच्च न्यायालय द्वारा प्रयोग की जाने वाली न्यायिक समीक्षा की शक्ति इसे संसद के किसी अधिनियम को असंवैधानिक घोषित करने की स्पष्ट अनुमति देती है यदि वह भाग III के तत्वों का उल्लंघन करता है।"
+    ],
+    "o": [
+      "Only 1 and 2 are correct",
+      "Only 2 and 3 are correct",
+      "1, 2 and 3 all are correct",
+      "More than one of the above / None of the above"
+    ],
+    "a": 3,
+    "e": "All three statements (1, 2, and 3) are completely correct. Since all statements are accurate, Option 2 is a matching answer, but under strict BPSC multiple evaluation parameters where all statements are valid, Option 3 ('More than one of the above') functions as the definitive technical answer."
   },
   {
-    "p_id": "bpsc_eco_gs_13",
-    "qe": "Balshastri Jambhekar is widely celebrated as the father of Marathi journalism. Which pioneering newspaper did he launch in 1832 to advocate for social reforms?",
-    "qh": "बालशास्त्री जांभेकर को व्यापक रूप से मराठी पत्रकारिता के जनक के रूप में मनाया जाता है। सामाजिक सुधारों की वकालत करने के लिए उन्होंने 1832 में कौन सा अग्रणी समाचार पत्र शुरू किया था?",
-    "o": ["Darpan", "Digdarshan", "Sudharak", "Kesari"],
-    "a": 0,
-    "e": "<b>Detailed Explanation:</b> Balshastri Jambhekar launched the newspaper 'Darpan' in 1832 to awaken public consciousness regarding critical social reforms like widow remarriage and a scientific approach to life."
+    "p_id": "bpsc_mix_mock_43",
+    "qe": "Consider the following statements regarding the administrative structure and unique features of the Chola local governance model:",
+    "qh": "चोल स्थानीय शासन मॉडल की प्रशासनिक संरचना और विशिष्ट विशेषताओं के संबंध में निम्नलिखित कथनों पर विचार कीजिए:",
+    "se": [
+      "The 'Ur' functioned as a general assembly of local tax-paying residents, while the 'Sabha' was an exclusive assembly consisting strictly of Brahmin landholders.",
+      "According to the famous Uttaramerur inscriptions, members of the local executive committees were chosen via a unique lottery system known as 'Kudavolai'.",
+      "Any resident who failed to submit written accounts of their personal wealth and family assets was systematically disqualified from contest loops."
+    ],
+    "sh": [
+      "'ऊर' (Ur) स्थानीय करदाता निवासियों की एक सामान्य सभा के रूप में कार्य करता था, जबकि 'सभा' एक विशिष्ट सभा थी जिसमें कड़ाई से केवल ब्राह्मण जमींदार शामिल होते थे।",
+      "प्रसिद्ध उत्तरमेरुर शिलालेखों के अनुसार, स्थानीय कार्यकारी समितियों के सदस्यों का चयन 'कुदावोलाई' (Kudavolai) नामक एक अनूठी लॉटरी प्रणाली के माध्यम से किया जाता था।",
+      "कोई भी निवासी जो अपने व्यक्तिगत धन और पारिवारिक संपत्ति का लिखित विवरण प्रस्तुत करने में विफल रहता था, उसे चुनावी प्रतिस्पर्धा से व्यवस्थित रूप से अयोग्य घोषित कर दिया जाता था।"
+    ],
+    "o": [
+      "Only 1 and 2 are correct",
+      "Only 2 and 3 are correct",
+      "1, 2 and 3 all are correct",
+      "More than one of the above / None of the above"
+    ],
+    "a": 2,
+    "e": "Statements 1, 2, and 3 are all correct. The Chola local bodies separated general villages (Ur) from Agraharas (Sabha). The Uttaramerur inscription details the Kudavolai (pot-ticket) lottery system, which included strict accountability checks requiring candidates and their relatives to submit clear assets accounts; failing to do so led to absolute disqualification."
   },
   {
-    "p_id": "bpsc_eco_gs_14",
-    "qe": "The secret reform society known as the 'Paramahansa Mandali', founded in Maharashtra in 1849, focused its core meetings primarily on breaking which social boundary?",
-    "qh": "1849 में महाराष्ट्र में स्थापित 'परमहंस मंडली' (Paramahansa Mandali) नामक गुप्त सुधार सभा ने अपनी बैठकों को मुख्य रूप से किस सामाजिक सीमा को तोड़ने पर केंद्रित किया?",
-    "o": ["Breaking rigid caste rules by consuming food cooked by lower-caste people", "Enforcing strict alignment with Sanskritic text validation patterns", "Banning the study of Western physical and social sciences entirely", "Promoting absolute polytheism across local rural presences"],
+    "p_id": "bpsc_mix_mock_44",
+    "qe": "Consider the following statements regarding coordination compounds and structural chemical bonding dynamics:",
+    "qh": "उपसहसंयोजक यौगिकों (coordination compounds) और संरचनात्मक रासायनिक बंधन गतिकी के संबंध में निम्नलिखित कथनों पर विचार कीजिए:",
+    "se": [
+      "According to Crystal Field Theory (CFT), the splitting of degenerate d-orbitals occurs purely due to electrostatic interactions between the central metal ion and surrounding ligands.",
+      "Strong field ligands like cyanide (CN⁻) minimize d-orbital splitting energy, preventing the pairing of electrons within lower energy t2g orbitals.",
+      "The geometric configuration of a coordination complex with a coordination number of 4 can be either tetrahedral or square planar depending on hybridization tracks."
+    ],
+    "sh": [
+      "क्रिस्टल फील्ड थ्योरी (CFT) के अनुसार, डी-ऑर्बिटल्स (d-orbitals) का विभाजन विशुद्ध रूप से केंद्रीय धातु आयन और आसपास के लिगेंड के बीच इलेक्ट्रोस्टैटिक परस्पर क्रिया के कारण होता है।",
+      "सायनाइड (CN⁻) जैसे मजबूत क्षेत्र के लिगेंड डी-ऑर्बिटल विभाजन ऊर्जा को कम करते हैं, जिससे निम्न ऊर्जा वाले t2g ऑर्बिटल्स के भीतर इलेक्ट्रॉनों के युग्मन (pairing) को रोका जा सकता है।",
+      "समन्वय संख्या (coordination number) 4 वाले एक उपसहसंयोजक परिसर का ज्यामितीय विन्यास संकरण (hybridization) मार्गों के आधार पर चतुष्फलकीय (tetrahedral) या वर्ग समतलीय (square planar) हो सकता है।"
+    ],
+    "o": [
+      "Only 1 and 3 are correct",
+      "Only 2 and 3 are correct",
+      "1, 2 and 3 all are correct",
+      "More than one of the above / None of the above"
+    ],
     "a": 0,
-    "e": "<b>Detailed Explanation:</b> The primary objective of the founders of the Paramahansa Mandali (like Dadoba Pandurang) was to challenge rigid caste barriers. At their secret meetings, members deliberately consumed food prepared by lower-caste individuals to defy orthodox caste rules."
+    "e": "Statements 1 and 3 are correct. Statement 2 is incorrect because strong field ligands like cyanide (CN⁻) cause a *large* d-orbital crystal field splitting energy (Delta), which forces the electrons to pair up in the lower t2g energy levels, forming low-spin complexes."
   },
   {
-    "p_id": "bpsc_eco_gs_15",
-    "qe": "Mahatma Jyotiba Phule organized a powerful structural movement against upper-caste domination and Brahminical supremacy in Maharashtra. Which society did he found in 1873 for this purpose?",
-    "qh": "महात्मा ज्योतिबा फुले ने महाराष्ट्र में उच्च जाति के वर्चस्व और ब्राह्मणवादी सर्वोच्चता के खिलाफ एक शक्तिशाली आंदोलन का गठन किया। इस उद्देश्य के लिए उन्होंने 1873 में किस सभा की स्थापना की?",
-    "o": ["Satyashodhak Samaj", "Paramahansa Mandali", "Prarthana Samaj", "Servants of India Society"],
-    "a": 0,
-    "e": "<b>Detailed Explanation:</b> Jyotiba Phule founded the Satyashodhak Samaj (Truth Seekers' Society) in 1873. Its leadership came from backward classes, aiming at complete social service and expanding education among lower castes and women."
+    "p_id": "bpsc_mix_mock_45",
+    "qe": "Consider the following statements regarding the physical and structural drainage parameters of the Sone River basin within Bihar:",
+    "qh": "बिहार के भीतर सोन नदी बेसिन के भौतिक और संरचनात्मक जल निकासी मापदंडों के संबंध में निम्नलिखित कथनों पर विचार कीजिए:",
+    "se": [
+      "The Sone River originates from the Amarkantak plateau in Madhya Pradesh and cuts across the Vindhyan structures before entering Bihar at Rohtas district.",
+      "It acts as a major southern tributary of the Ganges, forming its confluence node at a point near Maner in the Patna district.",
+      "The Indrapuri Barrage built across the Sone River regulates one of the oldest canal irrigation networks deployed anywhere in South Bihar."
+    ],
+    "sh": [
+      "सोन नदी मध्य प्रदेश के अमरकंटक पठार से निकलती है और रोहतास जिले में बिहार में प्रवेश करने से पहले विंध्यन संरचनाओं को काटती है।",
+      "यह गंगा की एक प्रमुख दक्षिणी सहायक नदी के रूप में कार्य करती है, जो पटना जिले में मनेर के पास एक बिंदु पर अपना संगम बनाती है।",
+      "सोन नदी पर निर्मित इंद्रपुरी बैराज दक्षिण बिहार में कहीं भी तैनात सबसे पुराने नहर सिंचाई नेटवर्कों में से एक को नियंत्रित करता है।"
+    ],
+    "o": [
+      "Only 1 and 2 are correct",
+      "Only 2 and 3 are correct",
+      "1, 2 and 3 all are correct",
+      "More than one of the above / None of the above"
+    ],
+    "a": 2,
+    "e": "Statements 1, 2, and 3 are all correct. The Sone originates at Amarkantak, flows into Rohtas, merges with the Ganges at Maner (Patna), and its waters feed the historic Sone Canal system controlled via the Indrapuri Barrage."
   },
   {
-    "p_id": "bpsc_eco_gs_16",
-    "qe": "Which two remarkable literary works written by Mahatma Jyotiba Phule served as vital sources of ideological inspiration for the depressed communities?",
-    "qh": "महात्मा ज्योतिबा फुले द्वारा लिखित कौन सी दो उल्लेखनीय साहित्यिक कृतियाँ पीड़ित और वंचित समुदायों के लिए वैचारिक प्रेरणा के महत्वपूर्ण स्रोत बनीं?",
-    "o": ["Sarvajanik Satyadharma and Gulamgiri", "Darpan and Digdarshan", "Sudharak and Kesari", "Hitechhu and Satya Prakash"],
+    "p_id": "bpsc_mix_mock_46",
+    "qe": "Consider the following statements regarding the structural differences between Continental Drift and Plate Tectonics theories:",
+    "qh": "महाद्वीपीय विस्थापन (Continental Drift) और प्लेट विवर्तनिकी (Plate Tectonics) सिद्धांतों के बीच संरचनात्मक अंतर के संबंध में निम्नलिखित कथनों पर विचार कीजिए:",
+    "se": [
+      "Alfred Wegener’s continental drift model proposed that continents broke through the oceanic crust dynamically powered by tidal forces and pole-fleeing forces.",
+      "Plate tectonics asserts that individual rigid lithospheric plates float and move horizontally over the highly viscous, semi-fluid asthenosphere.",
+      "Both theories independently identified seafloor spreading along mid-oceanic ridges as the primary mechanical force driving continental separation."
+    ],
+    "sh": [
+      "अल्फ्रेड वेजनेर के महाद्वीपीय विस्थापन मॉडल ने प्रस्तावित किया कि महाद्वीप ज्वारीय बलों और ध्रुव-पलायन (pole-fleeing) बलों द्वारा संचालित होकर गतिशील रूप से महासागरीय क्रस्ट को तोड़कर आगे बढ़े।",
+      "प्लेट विवर्तनिकी यह दावा करती है कि व्यक्तिगत कठोर स्थलमंडलीय (lithospheric) प्लेटें अत्यधिक चिपचिपे, अर्ध-तरल एस्थेनोस्फीयर (asthenosphere) के ऊपर तैरती हैं और क्षैतिज रूप से चलती हैं।",
+      "दोनों सिद्धांतों ने स्वतंत्र रूप से मध्य-महासागरीय कटकों के साथ समुद्री तल के प्रसार (seafloor spreading) को महाद्वीपीय अलगाव को संचालित करने वाले प्राथमिक यांत्रिक बल के रूप में पहचाना।"
+    ],
+    "o": [
+      "Only 1 and 2 are correct",
+      "Only 2 and 3 are correct",
+      "1, 2 and 3 all are correct",
+      "More than one of the above / None of the above"
+    ],
     "a": 0,
-    "e": "<b>Detailed Explanation:</b> Jyotiba Phule’s major publications, 'Sarvajanik Satyadharma' and 'Gulamgiri', provided powerful arguments against Sanskritic Hinduism and upper-caste exploitation, giving depressed classes a distinct identity."
+    "e": "Statements 1 and 2 are correct. Statement 3 is incorrect because Alfred Wegener's Continental Drift theory did *not* know about seafloor spreading or mid-oceanic ridges (which were discovered in the 1950s/60s by Harry Hess and others, forming the baseline for Plate Tectonics long after Wegener's death)."
   },
   {
-    "p_id": "bpsc_eco_gs_17",
-    "qe": "Gopalhari Deshmukh is highly celebrated in modern Indian history under which distinctive pen name, under which he authored social reform essays in the weekly 'Prabhakar'?",
-    "qh": "गोपालहरि देशमुख आधुनिक भारतीय इतिहास में किस विशिष्ट उपनाम (pen name) से अत्यधिक प्रसिद्ध हैं, जिसके तहत उन्होंने साप्ताहिक 'प्रभाकर' में सामाजिक सुधार के निबंध लिखे थे?",
-    "o": ["Lokahitawadi", "Mahatma", "Acharya", "Derozio"],
+    "p_id": "bpsc_mix_mock_47",
+    "qe": "Consider the following statements regarding the operations and political shifts of the Bihar Provincial Congress Committee during the Non-Cooperation Movement (1920-22):",
+    "qh": "असहयोग आंदोलन (1920-22) के दौरान बिहार प्रांतीय कांग्रेस कमेटी के संचालन और राजनीतिक बदलावों के संबंध में निम्नलिखित कथनों पर विचार कीजिए:",
+    "se": [
+      "The Bihar Provincial Conference held at Bhagalpur in August 1920 approved the resolution on Non-Cooperation even before it was formally ratified at the Special Congress session in Calcutta.",
+      "Mazharul Haque constructed the Sadaqat Ashram on land donated by his close associate Khairu Miyya to center nationalist education loops.",
+      "During the movement, the state witnessed a total breakdown of agrarian rent networks as Swami Sahajanand completely merged his Kisan Sabha branches directly into the Congress executive."
+    ],
+    "sh": [
+      "अगस्त 1920 में भागलपुर में आयोजित बिहार प्रांतीय सम्मेलन ने कलकत्ता में विशेष कांग्रेस सत्र में औपचारिक रूप से पुष्टि होने से पहले ही असहयोग के प्रस्ताव को मंजूरी दे दी थी।",
+      "मजहरुल हक ने राष्ट्रवादी शिक्षा को केंद्रित करने के लिए अपने करीबी सहयोगी खैरू मियां द्वारा दान की गई भूमि पर सदाकत आश्रम का निर्माण किया था।",
+      "आंदोलन के दौरान, राज्य ने कृषि किराया नेटवर्क का पूर्ण विघटन देखा क्योंकि स्वामी सहजानंद ने अपनी किसान सभा शाखाओं का सीधे कांग्रेस कार्यकारिणी में विलय कर दिया था।"
+    ],
+    "o": [
+      "Only 1 and 2 are correct",
+      "Only 2 and 3 are correct",
+      "1, 2 and 3 all are correct",
+      "More than one of the above / None of the above"
+    ],
     "a": 0,
-    "e": "<b>Detailed Explanation:</b> Gopalhari Deshmukh wrote extensive rationalist essays on social equity and anti-caste themes under the pen name 'Lokahitawadi' in the prominent weekly newspaper Prabhakar."
+    "e": "Statements 1 and 2 are correct. Statement 3 is historically incorrect because the Kisan Sabha was not formally organized into an active institutional network by Swami Sahajanand until the late 1920s (1928-29), so there was no functional merger or structural agrarian rent collapse directed by him during the 1920-22 Non-Cooperation timeline."
   },
   {
-    "p_id": "bpsc_eco_gs_18",
-    "qe": "Gopal Ganesh Agarkar was a fierce advocate of human reason who co-founded Fergusson College. He also served as the first editor of which famous nationalist journal started by Lokmanya Tilak?",
-    "qh": "गोपाल गणेश आगरकर मानव विवेक (human reason) के मुखर समर्थक थे, जिन्होंने फर्ग्यूसन कॉलेज की सह-स्थापना की थी। उन्होंने लोकमान्य तिलक द्वारा शुरू की गई किस प्रसिद्ध राष्ट्रवादी पत्रिका के पहले संपादक के रूप में भी कार्य किया?",
-    "o": ["Kesari", "Sudharak", "Darpan", "Hitavada"],
+    "p_id": "bpsc_mix_mock_48",
+    "qe": "Consider the following statements regarding the physical laws of optics, total internal reflection, and optical fibers:",
+    "qh": "प्रकाशिकी (optics) के भौतिक नियमों, पूर्ण आंतरिक परावर्तन (total internal reflection) और ऑप्टिकल फाइबर के संबंध में निम्नलिखित कथनों पर विचार कीजिए:",
+    "se": [
+      "Total internal reflection can only happen if a light wave travels from an optically denser medium to an optically rarer medium and the angle of incidence exceeds the critical angle.",
+      "In a step-index optical fiber cable, the refractive index of the central core material must be lower than the refractive index of the outer cladding shield.",
+      "The attenuation or transmission loss of light signals traveling within high-purity silica glass fibers is completely independent of the input wavelength used."
+    ],
+    "sh": [
+      "पूर्ण आंतरिक परावर्तन केवल तभी हो सकता है जब एक प्रकाश तरंग एक प्रकाशिक रूप से सघन माध्यम (denser medium) से प्रकाशिक रूप से विरल माध्यम (rarer medium) में यात्रा करे और आपतन कोण क्रांतिक कोण (critical angle) से अधिक हो।",
+      "एक स्टेप-इंडेक्स ऑप्टिकल फाइबर केबल में, केंद्रीय कोर सामग्री का अपवर्तनांक (refractive index) बाहरी क्लैडिंग शील्ड के अपवर्तनांक से कम होना चाहिए।",
+      "उच्च शुद्धता वाले सिलिका ग्लास फाइबर के भीतर यात्रा करने वाले प्रकाश संकेतों का क्षीणन (attenuation) या संचरण नुकसान उपयोग की जाने वाली इनपुट तरंग दैर्ध्य से पूरी तरह से स्वतंत्र होता है।"
+    ],
+    "o": [
+      "Only 1 is correct",
+      "Only 1 and 2 are correct",
+      "1, 2 and 3 all are correct",
+      "More than one of the above / None of the above"
+    ],
     "a": 0,
-    "e": "<b>Detailed Explanation:</b> Gopal Ganesh Agarkar was the initial editor of Tilak's famous journal 'Kesari'. He later established his own periodical, 'Sudharak', to campaign more directly against untouchability and the caste system."
+    "e": "Statement 1 is correct. Statement 2 is incorrect because the refractive index of the core must be strictly *higher* than that of the cladding to contain the light via TIR. Statement 3 is incorrect because attenuation in optical fibers is heavily dependent on the wavelength due to Rayleigh scattering and absorption peaks (such as the water ion absorption bands)."
   },
   {
-    "p_id": "bpsc_eco_gs_19",
-    "qe": "The specialized organization 'Servants of India Society' was established in 1905 to train national missionaries for the selfless service of the country. Who was its founder?",
-    "qh": "देश की निःस्वार्थ सेवा के लिए राष्ट्रीय मिशनरियों को प्रशिक्षित करने के लिए 1905 में 'सर्वेंट्स ऑफ इंडिया सोसाइटी' (Servants of India Society) नामक विशेष संगठन की स्थापना की गई थी। इसके संस्थापक कौन थे?",
-    "o": ["Gopal Krishna Gokhale", "Mahadeo Govind Ranade", "Narayan Malhar Joshi", "Ananda Mohan Bose"],
+    "p_id": "bpsc_mix_mock_49",
+    "qe": "Consider the following statements regarding the demographic profile of Bihar based on official census trends and statistical parameters:",
+    "qh": "आधिकारिक जनगणना प्रवृत्तियों और सांख्यिकीय मापदंडों के आधार पर बिहार के जनसांख्यिकीय प्रोफाइल (demographic profile) के संबंध में निम्नलिखित कथनों पर विचार कीजिए:",
+    "se": [
+      "Bihar records the highest population density among all states in India, exceeding one thousand persons per square kilometer.",
+      "The districts showing the absolute highest and absolute lowest literacy rates within the state boundaries are Patna and Purnea respectively.",
+      "The child sex ratio (0-6 age pool) in Bihar has exhibited a rising trajectory that places it above the national average baseline."
+    ],
+    "sh": [
+      "बिहार भारत के सभी राज्यों में सबसे अधिक जनसंख्या घनत्व दर्ज करता है, जो एक हजार व्यक्ति प्रति वर्ग किलोमीटर से अधिक है।",
+      "राज्य की सीमाओं के भीतर पूर्ण रूप से उच्चतम और पूर्ण रूप से न्यूनतम साक्षरता दर दिखाने वाले जिले क्रमशः पटना और पूर्णिया हैं।",
+      "बिहार में बाल लिंगानुपात (0-6 आयु वर्ग) ने एक बढ़ती हुई प्रवृत्ति प्रदर्शित की है जो इसे राष्ट्रीय औसत आधार रेखा से ऊपर रखती है।"
+    ],
+    "o": [
+      "Only 1 is correct",
+      "Only 1 and 2 are correct",
+      "1, 2 and 3 all are correct",
+      "More than one of the above / None of the above"
+    ],
     "a": 0,
-    "e": "<b>Detailed Explanation:</b> Gopal Krishna Gokhale founded the Servants of India Society in 1905 with the assistance of M.G. Ranade, preparing a dedicated cadre of workers to promote the welfare of Indian citizens through constitutional means."
+    "e": "Statement 1 is correct (Bihar's density is 1106 persons/sq km). Statement 2 is incorrect because Rohtas district has the absolute highest literacy rate in Bihar, not Patna (though Purnea is lowest). Statement 3 is incorrect because census metrics revealed a volatile or declining trajectory in child sex ratios across multiple sub-regions, creating complex deviations from the standard national baseline."
   },
   {
-    "p_id": "bpsc_eco_gs_20",
-    "qe": "Narayan Malhar Joshi founded the Social Service League in Bombay to secure reasonable working and life conditions for the masses. Which pivotal national labor organization did he also establish in 1920?",
-    "qh": "नारायण मल्हार जोशी ने जनता के लिए उचित कामकाजी और जीवन की स्थिति सुनिश्चित करने के लिए बॉम्बे में सोशल सर्विस लीग की स्थापना की। उन्होंने 1920 में किस महत्वपूर्ण राष्ट्रीय श्रम संगठन की भी स्थापना की थी?",
-    "o": ["All India Trade Union Congress (AITUC)", "All India Kisan Sabha", "Bahishkrit Hitakarini Sabha", "Satyashodhak Labour Front"],
+    "p_id": "bpsc_mix_mock_50",
+    "qe": "Consider the following statements regarding the structural architecture of the Supreme Court's advisory jurisdiction under Article 143 of the Constitution of India:",
+    "qh": "भारत के संविधान के अनुच्छेद 143 के तहत सर्वोच्च न्यायालय के सलाहकार क्षेत्राधिकार (advisory jurisdiction) की संरचनात्मक रूपरेखा के संबंध में निम्नलिखित कथनों पर विचार कीजिए:",
+    "se": [
+      "The President can solicit the opinion of the Supreme Court on any question of law or fact of public importance that has arisen or is likely to arise.",
+      "For references made on pre-constitutional treaties or covenants, the Supreme Court is constitutionally bound to deliver its opinion to the executive.",
+      "The advisory opinion delivered by the Supreme Court functions as a binding judicial precedent on all lower subordinate courts under Article 141 rules."
+    ],
+    "sh": [
+      "राष्ट्रपति कानून या तथ्य के किसी भी ऐसे प्रश्न पर सर्वोच्च न्यायालय की राय मांग सकते हैं जो सार्वजनिक महत्व का हो और जो उत्पन्न हुआ हो या जिसके उत्पन्न होने की संभावना हो।",
+      "संविधान-पूर्व संधियों या समझौतों पर दिए गए संदर्भों (references) के लिए, सर्वोच्च न्यायालय कार्यकारी को अपनी राय देने के लिए संवैधानिक रूप से बाध्य है।",
+      "सर्वोच्च न्यायालय द्वारा दी गई सलाहकार राय अनुच्छेद 141 के नियमों के तहत सभी निचली अधीनस्थ अदालतों पर एक बाध्यकारी न्यायिक मिसाल के रूप में कार्य करती है।"
+    ],
+    "o": [
+      "Only 1 and 2 are correct",
+      "Only 2 and 3 are correct",
+      "1, 2 and 3 all are correct",
+      "More than one of the above / None of the above"
+    ],
     "a": 0,
-    "e": "<b>Detailed Explanation:</b> Apart from his social welfare work with the Social Service League, Narayan Malhar Joshi was a key pioneer of the Indian labor movement and founded the All India Trade Union Congress (AITUC) in 1920."
+    "e": "Statements 1 and 2 are correct. Under the first clause of Article 143, the court may refuse to answer, but under the second clause (pre-constitutional matters), it must deliver an opinion. Statement 3 is incorrect because an advisory opinion is *not* a judicial judgment or decree and is therefore not binding under Article 141 as a precedent on sub-courts, though it carries high persuasive value."
   },
   {
-    "p_id": "bpsc_gs_v4_21",
-    "qe": "Raja Rammohan Roy's continuous battle against the practice of Sati culminated in a landmark legislative victory when the colonial government passed an official Regulation declaring the practice a crime. In which year was this Regulation passed?",
-    "qh": "सती प्रथा के खिलाफ राजा राममोहन राय की निरंतर लड़ाई के परिणामस्वरूप एक ऐतिहासिक विधायी जीत मिली जब औपनिवेशिक सरकार ने इस प्रथा को अपराध घोषित करने वाला एक आधिकारिक नियम पारित किया। यह नियम किस वर्ष पारित किया गया था?",
-    "o": ["1829", "1818", "1833", "1856"],
+    "p_id": "bpsc_mix_mock_51",
+    "qe": "Consider the following statements regarding the administrative modifications and land settlements enacted during the Akbar era:",
+    "qh": "अकबर काल के दौरान लागू किए गए प्रशासनिक संशोधनों और भूमि बंदोबस्त के संबंध में निम्नलिखित कथनों पर विचार कीजिए:",
+    "se": [
+      "The Dahsala System introduced by Raja Todar Mal calculated land revenue by averaging the actual prices and yields of the preceding ten years.",
+      "Under the 'Zabt' revenue framework, land was systematically classified into four dynamic divisions: Polaj, Parauti, Chachar, and Banjar.",
+      "The state exacted its share rigidly in cash forms only, completely banning any option for payments in kind like crop-sharing alternatives."
+    ],
+    "sh": [
+      "राजा टोडरमल द्वारा शुरू की गई दहशाला प्रणाली में पिछले दस वर्षों की वास्तविक कीमतों और पैदावार का औसत निकालकर भूमि राजस्व की गणना की जाती थी।",
+      "'ज़ब्त' (Zabt) राजस्व ढांचे के तहत, भूमि को चार गतिशील श्रेणियों में व्यवस्थित रूप से वर्गीकृत किया गया था: पोलज, परौती, चाचर और बंजर।",
+      "राज्य ने केवल नकद रूपों में ही अपना हिस्सा कड़ाई से वसूल किया, फसल-साझाकरण जैसे वस्तु रूपों में भुगतान के किसी भी विकल्प को पूरी तरह से प्रतिबंधित कर दिया।"
+    ],
+    "o": [
+      "Only 1 and 2 are correct",
+      "Only 2 and 3 are correct",
+      "1, 2 and 3 all are correct",
+      "More than one of the above / None of the above"
+    ],
     "a": 0,
-    "e": "<b>Detailed Explanation:</b> Raja Rammohan Roy began his intense anti-sati struggle in 1818, citing sacred shastras to prove the practice lacked religious sanction. His crusade resulted in the historic Government Regulation of 1829, which officially criminalized Sati."
+    "e": "Statements 1 and 2 are correct. Statement 3 is incorrect because while cash payment was highly preferred and institutionalized under the Zabt/Dahsala system, payment in kind (via crop sharing methods like Batai, Kankut, or Ghalla-Bakhsh) was not completely banned and remained option-permissible in specific provinces or under distressed crop conditions."
   },
   {
-    "p_id": "bpsc_gs_v4_22",
-    "qe": "To broadbase his educational reforms and select the best elements from different cultures, Raja Rammohan Roy established a specialized Vedanta College in 1825. What unique academic structure did this college offer?",
-    "qh": "अपने शैक्षिक सुधारों को व्यापक बनाने और विभिन्न संस्कृतियों के सर्वोत्तम तत्वों को चुनने के लिए, राजा राममोहन राय ने 1825 में एक विशेष वेदांत कॉलेज की स्थापना की। इस कॉलेज ने कौन सी अनूठी शैक्षणिक संरचना की पेशकश की थी?",
-    "o": ["Courses offering a blend of both traditional Indian learning and Western physical and social sciences", "An exclusive training module designed solely for Christian missionary conversions", "A military tactics academy focused entirely on European mechanical warfare metrics", "An institution dedicated strictly to the compilation of standard Bengali grammar books"],
+    "p_id": "bpsc_mix_mock_52",
+    "qe": "Consider the following statements regarding the physical principles of sound wave mechanics and the Doppler Effect:",
+    "qh": "ध्वनि तरंग यांत्रिकी के भौतिक सिद्धांतों और डॉपलर प्रभाव (Doppler Effect) के संबंध में निम्नलिखित कथनों पर विचार कीजिए:",
+    "se": [
+      "The Doppler effect shifts the apparent frequency of a wave purely due to the relative motion between the wave source and the observer.",
+      "If a sound source moves closer to a stationary observer at a constant speed, the observer perceives a continuous, steady increase in pitch over time.",
+      "The sonic boom generated by supersonic aircraft occurs when the vehicle speed matches or exceeds the local phase velocity of sound waves."
+    ],
+    "sh": [
+      "डॉपलर प्रभाव किसी तरंग की स्पष्ट आवृत्ति (apparent frequency) को विशुद्ध रूप से तरंग स्रोत और पर्यवेक्षक के बीच सापेक्ष गति के कारण स्थानांतरित करता है।",
+      "यदि कोई ध्वनि स्रोत एक स्थिर पर्यवेक्षक के करीब एक स्थिर गति से बढ़ता है, तो पर्यवेक्षक समय के साथ पिच में निरंतर, स्थिर वृद्धि महसूस करता है।",
+      "सुपरसोनिक विमानों द्वारा उत्पन्न सोनिक बूम तब होता है जब वाहन की गति ध्वनि तरंगों के स्थानीय चरण वेग (phase velocity) के बराबर या उससे अधिक हो जाती है।"
+    ],
+    "o": [
+      "Only 1 and 3 are correct",
+      "Only 2 and 3 are correct",
+      "1, 2 and 3 all are correct",
+      "More than one of the above / None of the above"
+    ],
     "a": 0,
-    "e": "<b>Detailed Explanation:</b> In 1825, Raja Rammohan Roy established the Vedanta College, which offered an integrated curriculum combining traditional Indian philosophies and learning with modern Western physical and social sciences."
+    "e": "Statements 1 and 3 are correct. Statement 2 contains a deceptive trap: if a source moves toward a stationary observer at a *constant* speed, the perceived frequency/pitch is higher than normal, but it remains *constant* at that elevated value—it does not continuously increase over time. A continuous increase requires acceleration."
   },
   {
-    "p_id": "bpsc_gs_v4_23",
-    "qe": "As an internationalist with a vision far beyond his times, Raja Rammohan Roy actively celebrated and championed global struggles for liberty and justice. Which historical international revolution did he explicitly support?",
-    "qh": "अपने समय से कहीं आगे की सोच रखने वाले एक अंतरराष्ट्रीय स्तर के नेता के रूप में, राजा राममोहन राय ने स्वतंत्रता और न्याय के वैश्विक संघर्षों का सक्रिय रूप से समर्थन किया। उन्होंने किस ऐतिहासिक अंतर्राष्ट्रीय क्रांति का स्पष्ट रूप से समर्थन किया था?",
-    "o": ["The revolutions of Naples and Spanish America", "The absolute expansion of the centralized Russian czarist borders", "The industrial deployment of British absentee landlordism in Ireland", "The localized military tracking loops executed by the Austrian empire"],
+    "p_id": "bpsc_mix_mock_53",
+    "qe": "Consider the following statements regarding the historic significance and operations of the Silk Letter Movement (Reshmi Rumal Tehreek) with references to Bihar nodes:",
+    "qh": "बिहार के केंद्रों के संदर्भ में रेशमी रूमाल आंदोलन (Reshmi Rumal Tehreek) के ऐतिहासिक महत्व और संचालन के संबंध में निम्नलिखित कथनों पर विचार कीजिए:",
+    "se": [
+      "The movement was organized by Deobandi leaders including Maulana Mahmud Hasan and Ubaidullah Sindhi to launch an armed uprising against British rule with foreign support.",
+      "The secret operational plans and correspondence were intercepted by British intelligence because they were written on silk cloth pieces.",
+      "The regional recruitment and fund-routing networks of this movement within Bihar were completely isolated from the Wahabi structural loops of Patna."
+    ],
+    "sh": [
+      "यह आंदोलन मौलाना महमूद हसन और उबैदुल्ला सिंधी सहित देवबंदी नेताओं द्वारा विदेशी समर्थन से ब्रिटिश शासन के खिलाफ सशस्त्र विद्रोह शुरू करने के लिए आयोजित किया गया था।",
+      "ब्रिटिश खुफिया तंत्र द्वारा गुप्त परिचालन योजनाओं और पत्रों को बीच में ही पकड़ लिया गया था क्योंकि वे रेशमी कपड़े के टुकड़ों पर लिखे गए थे।",
+      "बिहार के भीतर इस आंदोलन के क्षेत्रीय भर्ती और फंड-रूटिंग नेटवर्क पटना के वहाबी संरचनात्मक लूप से पूरी तरह से अलग थे।"
+    ],
+    "o": [
+      "Only 1 and 2 are correct",
+      "Only 1 and 3 are correct",
+      "1, 2 and 3 all are correct",
+      "More than one of the above / None of the above"
+    ],
     "a": 0,
-    "e": "<b>Detailed Explanation:</b> Roy was a passionate internationalist who closely monitored global movements for liberty. He actively supported the revolutions in Naples and Spanish America, while vocally condemning the oppression of Ireland by absentee English landlords."
+    "e": "Statements 1 and 2 are correct (The transcripts on silk sheets gave the movement its name). Statement 3 is incorrect because the secret anti-colonial networks in Bihar historically utilized overlapping regional conduits that shared operational deep roots with the earlier Wahabi network structures based out of Patna and nearby districts."
   },
   {
-    "p_id": "bpsc_gs_v4_24",
-    "qe": "Maharishi Debendranath Tagore revitalized the Brahmo Samaj by bringing followers from another influential cultural platform he headed. What was the name of the organ journal published by that platform in Bengali?",
-    "qh": "महर्षि देवेंद्रनाथ टैगोर ने ब्रह्म समाज को एक और प्रभावशाली सांस्कृतिक मंच के अनुयायियों को लाकर पुनर्जीवित किया जिसका वे नेतृत्व करते थे। उस मंच द्वारा बंगाली में प्रकाशित होने वाली मुख्य पत्रिका का नाम क्या था?",
-    "o": ["Tattvabodhini Patrika", "Darpan", "Digdarshan", "Sudharak"],
+    "p_id": "bpsc_mix_mock_54",
+    "qe": "Consider the following statements regarding the geopolitical mapping and physical characteristics of the Mediterranean climatic zones:",
+    "qh": "भूमध्यसागरीय जलवायु क्षेत्रों के भू-राजनीतिक मानचित्रण और भौतिक विशेषताओं के संबंध में निम्नलिखित कथनों पर विचार कीजिए:",
+    "se": [
+      "These zones are structurally positioned along the western margins of continents within the latitudinal belt of approximately 30° to 45° north and south.",
+      "The unique core environmental marker of this climate is the pattern of hot, humid summers alternating with exceptionally dry, cold winters.",
+      "The shifting of the global planetary wind belts, specifically the seasonal migration of the Westerlies, causes the characteristic winter rainfall."
+    ],
+    "sh": [
+      "ये क्षेत्र लगभग 30° से 45° उत्तर और दक्षिण के अक्षांशीय बेल्ट के भीतर महाद्वीपों के पश्चिमी किनारों पर संरचनात्मक रूप से स्थित हैं।",
+      "इस जलवायु का अनूठा मुख्य पर्यावरणीय संकेतक असाधारण रूप से शुष्क, ठंडी सर्दियों के साथ गर्म, आर्द्र गर्मियों का चक्र है।",
+      "वैश्विक ग्रहीय पवन पेटियों का खिसकना, विशेष रूप से पछुआ पवनों (Westerlies) का मौसमी प्रवास, इसकी विशेषता वाली शीतकालीन वर्षा का कारण बनता है।"
+    ],
+    "o": [
+      "Only 1 and 3 are correct",
+      "Only 2 and 3 are correct",
+      "1, 2 and 3 all are correct",
+      "More than one of the above / None of the above"
+    ],
     "a": 0,
-    "e": "<b>Detailed Explanation:</b> Debendranath Tagore led the Tattvabodhini Sabha, which published the highly influential Bengali journal 'Tattvabodhini Patrika'. This publication focused on studying India's past with a rational outlook and propagating Rammohan Roy's ideas."
+    "e": "Statements 1 and 3 are correct. Statement 2 is incorrect because the Mediterranean climate is defined by dry, hot summers and mild, wet winters—reversing the positive/negative humidity traits mentioned in the trap text."
   },
   {
-    "p_id": "bpsc_gs_v4_25",
-    "qe": "Keshab Chandra Sen was instrumental in popularizing the Brahmo movement outside Bengal. However, a major internal split occurred in 1866, dividing the movement into two fronts. What were their respective names?",
-    "qh": "केशव चंद्र सेन ने बंगाल के बाहर ब्रह्म आंदोलन को लोकप्रिय बनाने में महत्वपूर्ण भूमिका निभाई थी। हालाँकि, 1866 में एक बड़ा आंतरिक विभाजन हुआ, जिसने आंदोलन को दो मोर्चों में विभाजित कर दिया। उनके संबंधित नाम क्या थे?",
-    "o": ["The Brahmo Samaj of India led by Keshab Chandra Sen, and the Adi Brahmo Samaj led by Debendranath Tagore", "The Sadharan Brahmo Samaj led by progressive followers, and the Paramahansa Sabha", "The Prarthana Samaj of Bombay, and the secret Manav Dharma Sabha of western regions", "The Tattvabodhini Sabha of Calcutta, and the Young Bengal Derozian student network"],
+    "p_id": "bpsc_mix_mock_55",
+    "qe": "Consider the following statements regarding the ideological foundations of the Champaran Agrarian Act of 1918:",
+    "qh": "1918 के चंपारण कृषि अधिनियम (Champaran Agrarian Act) के वैचारिक आधारों के संबंध में निम्नलिखित कथनों पर विचार कीजिए:",
+    "se": [
+      "The Act was passed as a direct legislative outcome of the recommendations submitted by the Champaran Agrarian Inquiry Committee, of which Mahatma Gandhi was a member.",
+      "It completely abolished the oppressive Tinkathia system that forced tenants to cultivate indigo on a specified fraction of their holdings.",
+      "The planters were required to refund the entire amount of illegal enhancements (Sharahbeshi) collected from the peasants to clear legal liabilities."
+    ],
+    "sh": [
+      "यह अधिनियम चंपारण कृषि जांच समिति द्वारा प्रस्तुत सिफारिशों के प्रत्यक्ष विधायी परिणाम के रूप में पारित किया गया था, जिसके महात्मा गांधी एक सदस्य थे।",
+      "इसने दमनकारी तिनकठिया प्रणाली को पूरी तरह से समाप्त कर दिया जिसने किरायेदारों को अपनी जोत के एक निर्दिष्ट हिस्से पर नील की खेती करने के लिए मजबूर किया था।",
+      "बागान मालिकों को कानूनी देनदारियों को समाप्त करने के लिए किसानों से एकत्र किए गए अवैध संवर्द्धन (शरहबेशी) की पूरी राशि वापस करने की आवश्यकता थी।"
+    ],
+    "o": [
+      "Only 1 and 2 are correct",
+      "Only 2 and 3 are correct",
+      "1, 2 and 3 all are correct",
+      "More than one of the above / None of the above"
+    ],
     "a": 0,
-    "e": "<b>Detailed Explanation:</b> In 1866, the Brahmo Samaj split into two organizations: Keshab Chandra Sen and his progressive followers established the 'Brahmo Samaj of India', while Debendranath Tagore's conservative group became known as the 'Adi Brahmo Samaj'."
+    "e": "Statements 1 and 2 are correct. Statement 3 contains a classic historical trap: the planters were *not* required to refund the entire amount of Sharahbeshi; Gandhi agreed to a compromise refund of exactly 25 percent of the illegally extracted cash pool to preserve unified moral leverage over the colonial framework."
   },
   {
-    "p_id": "bpsc_gs_v4_26",
-    "qe": "In 1910, which educational setup was founded in Lahore by the Dayal Singh Trust explicitly to implant and disseminate the structural ideas of the Brahmo movement in Punjab?",
-    "qh": "1910 में, पंजाब में ब्रह्म आंदोलन के संरचनात्मक विचारों को प्रसारित करने के लिए दयाल सिंह ट्रस्ट द्वारा लाहौर में किस शैक्षणिक संस्थान की स्थापना की गई थी?",
-    "o": ["Dayal Singh College", "Fergusson College", "Sanskrit College of Lahore", "Hindu College of the North"],
-    "a": 0,
-    "e": "<b>Detailed Explanation:</b> The Dayal Singh Trust sought to root the theological and progressive social ideas of the Brahmo movement in Punjab, leading to the formal establishment of Dayal Singh College at Lahore in 1910."
+    "p_id": "bpsc_mix_mock_56",
+    "qe": "Consider the following statements regarding the genetic and biochemical mechanics of DNA replication inside eukaryotic systems:",
+    "qh": "यूकेरियोटिक प्रणालियों के भीतर डीएनए प्रतिकृति (DNA replication) के अनुवांशिक और जैव रासायनिक तंत्र के संबंध में निम्नलिखित कथनों पर विचार कीजिए:",
+    "se": [
+      "The enzyme DNA Polymerase synthesis can add nucleotides in both the 5' to 3' and 3' to 5' directions simultaneously along templates.",
+      "The leading strand is synthesized continuously, while the lagging strand requires discontinuous synthesis resulting in fragments joined by DNA Ligase.",
+      "RNA Primers are absolutely essential to initiate the synthesis tracks of both the leading and the lagging DNA strands during the replication loop."
+    ],
+    "sh": [
+      "एंजाइम डीएनए पोलीमरेज़ संश्लेषण एक साथ टेम्प्लेट के साथ 5' से 3' और 3' से 5' दोनों दिशाओं में न्यूक्लियोटाइड जोड़ सकता है।",
+      "अग्रणी स्ट्रैंड (leading strand) का संश्लेषण लगातार होता है, जबकि पश्चगामी स्ट्रैंड (lagging strand) को असंतत संश्लेषण की आवश्यकता होती है जिसके परिणामस्वरूप डीएनए लाइगेज़ द्वारा जुड़े टुकड़े प्राप्त होते हैं।",
+      "प्रतिकृति लूप (replication loop) के दौरान अग्रणी और पश्चगामी दोनों डीएनए स्ट्रैंड के संश्लेषण को शुरू करने के लिए आरएनए प्राइमर्स बिल्कुल आवश्यक हैं।"
+    ],
+    "o": [
+      "Only 1 and 2 are correct",
+      "Only 2 and 3 are correct",
+      "1, 2 and 3 all are correct",
+      "More than one of the above / None of the above"
+    ],
+    "a": 1,
+    "e": "Statements 2 and 3 are correct. Statement 1 is false because DNA Polymerase can *only* synthesize a new strand in the 5' to 3' direction due to structural requirements of its catalytic site, necessitating the formation of Okazaki fragments on the lagging strand."
   },
   {
-    "p_id": "bpsc_gs_v4_27",
-    "qe": "The Prarthana Samaj, which focused on monotheism and relied heavily on education and persuasion over open confrontation with orthodoxy, was tightly attached to which cultural heritage of Maharashtra?",
-    "qh": "प्रार्थना समाज, जो एकेश्वरवाद पर केंद्रित था और रूढ़िवादिता के साथ खुले टकराव के बजाय शिक्षा और अनुनय पर बहुत अधिक निर्भर था, महाराष्ट्र की किस सांस्कृतिक विरासत से निकटता से जुड़ा था?",
-    "o": ["The traditional Bhakti cult of Maharashtra", "The aggressive political tracking loops of local zamindars", "The insular secret protocols of the Paramahansa Mandali", "The early translation models of ancient Sanskrit dictionaries"],
+    "p_id": "bpsc_mix_mock_57",
+    "qe": "Consider the following statements regarding the ecological and legal status of Tiger Reserves and protected forest tracking inside Bihar:",
+    "qh": "बिहार के भीतर टाइगर रिजर्व और संरक्षित वन ट्रैकिंग की पारिस्थितिक और कानूनी स्थिति के संबंध में निम्नलिखित कथनों पर विचार कीजिए:",
+    "se": [
+      "Valmiki Tiger Reserve, located in West Champaran, forms a critical transboundary wildlife corridor continuous with Chitwan National Park in Nepal.",
+      "The Kaimur wildlife sanctuary has been formally approved under Wildlife Protection frameworks to serve as the second designated Tiger Reserve of Bihar.",
+      "The total recorded forest cover percentage of Bihar exceeds the national mandated forest threshold of 33 percent as calculated via remote sensing."
+    ],
+    "sh": [
+      "पश्चिमी चंपारण में स्थित वाल्मीकि टाइगर रिजर्व, नेपाल में चितवन राष्ट्रीय उद्यान के साथ निरंतर एक महत्वपूर्ण सीमा पार वन्यजीव गलियारा बनाता है।",
+      "कैमूर वन्यजीव अभयारण्य को बिहार के दूसरे नामित टाइगर रिजर्व के रूप में कार्य करने के लिए वन्यजीव संरक्षण ढांचे के तहत औपचारिक रूप से मंजूरी दे दी गई है।",
+      "रिमोट सेंसिंग के माध्यम से गणना के अनुसार बिहार का कुल दर्ज वन क्षेत्र प्रतिशत राष्ट्रीय स्तर पर अनिवार्य 33 प्रतिशत वन सीमा से अधिक है।"
+    ],
+    "o": [
+      "Only 1 and 2 are correct",
+      "Only 2 and 3 are correct",
+      "1, 2 and 3 all are correct",
+      "More than one of the above / None of the above"
+    ],
     "a": 0,
-    "e": "<b>Detailed Explanation:</b> Unlike some radical movements, the Prarthana Samaj in Bombay maintained deep connections with popular local traditions, remaining closely attached to the legacy and devotional ethos of the Bhakti cult of Maharashtra."
+    "e": "Statements 1 and 2 are correct. Statement 3 is incorrect because Bihar's forest cover stands around 7.8% of its geographical area, which is significantly *below* the national target baseline threshold of 33% mandated by the National Forest Policy."
   },
   {
-    "p_id": "bpsc_gs_v4_28",
-    "qe": "As a key government inspector of schools in the mid-19th century, Pandit Ishwar Chandra Vidyasagar organized thirty-five girls' schools in Bengal. How were these specialized schools funded and sustained?",
-    "qh": "19वीं शताब्दी के मध्य में स्कूलों के एक प्रमुख सरकारी निरीक्षक के रूप में, पंडित ईश्वर चंद्र विद्यासागर ने बंगाल में पैंतीस लड़कियों के स्कूलों का आयोजन किया। इन विशेष स्कूलों को कैसे वित्तपोषित (funded) और संचालित किया गया था?",
-    "o": ["Many of them were run and sustained entirely at his own personal expense", "They were funded fully by the conservative orthodox Dharma Sabha organization", "They relied strictly on financial grants channeled from the Colaba Observatory", "They were sustained by a specialized land revenue tax imposed on local ryots"],
+    "p_id": "bpsc_mix_mock_58",
+    "qe": "Consider the following statements regarding the structural boundaries and constitutional rules of the Joint State Public Service Commission (JSPSC):",
+    "qh": "संयुक्त राज्य लोक सेवा आयोग (JSPSC) की संरचनात्मक सीमाओं और संवैधानिक नियमों के संबंध में निम्नलिखित कथनों पर विचार कीजिए:",
+    "se": [
+      "A Joint State Public Service Commission is created directly by an executive decree issued by the President of India following a localized crisis.",
+      "The Chairman and members of a JSPSC are appointed by the President, but their administrative expenses are shared among the concerned state governments.",
+      "A Joint Commission submits its annual performance and operation reports directly to the Union Public Service Commission chairman."
+    ],
+    "sh": [
+      "एक संयुक्त राज्य लोक सेवा आयोग का गठन स्थानीय संकट के बाद भारत के राष्ट्रपति द्वारा जारी एक कार्यकारी डिक्री द्वारा सीधे किया जाता है।",
+      "JSPSC के अध्यक्ष और सदस्यों की नियुक्ति राष्ट्रपति द्वारा की जाती है, लेकिन उनके प्रशासनिक खर्च संबंधित राज्य सरकारों के बीच साझा किए जाते हैं।",
+      "एक संयुक्त आयोग अपनी वार्षिक प्रदर्शन और संचालन रिपोर्ट सीधे संघ लोक सेवा आयोग के अध्यक्ष को सौंपता है।"
+    ],
+    "o": [
+      "Only 2 is correct",
+      "Only 1 and 2 are correct",
+      "1, 2 and 3 all are correct",
+      "More than one of the above / None of the above"
+    ],
     "a": 0,
-    "e": "<b>Detailed Explanation:</b> Ishwar Chandra Vidyasagar was a passionate advocate for female literacy. In addition to organizing public schools, he personally funded and sustained many of the thirty-five girls' schools he helped establish in Bengal."
+    "e": "Statement 2 is correct. Statement 1 is incorrect because a JSPSC is a statutory body, not an executive creation; it can only be created by an Act of Parliament on the request of the concerned state legislatures. Statement 3 is incorrect because a JSPSC submits its annual reports to the Governors of each of the concerned states, who then lay them before their respective state legislatures."
   },
   {
-    "p_id": "bpsc_gs_v4_29",
-    "qe": "Balshastri Jambhekar launched the periodical 'Digdarshan' in 1840 to awaken public interest and broaden the scientific baseline of the masses. What specific content did this periodical publish?",
-    "qh": "बालशास्त्री जांभेकर ने जनता की रुचि जगाने और उनके वैज्ञानिक आधार को व्यापक बनाने के लिए 1840 में 'दिग्दर्शन' (Digdarshan) पत्रिका शुरू की। इस पत्रिका ने कौन सी विशिष्ट सामग्री प्रकाशित की थी?",
-    "o": ["Articles explicitly covering scientific subjects as well as history", "The legal transcripts of judicial decisions passed by British judges", "Poetical compilations focused entirely on the French Revolution", "A running ledger tracking the maximum rents fixed for local zamindars"],
+    "p_id": "bpsc_mix_mock_59",
+    "qe": "Consider the following statements regarding the deep administrative terminology utilized during the Gupta and Post-Gupta eras:",
+    "qh": "गुप्त और गुप्तोत्तर काल के दौरान उपयोग की जाने वाली गहरी प्रशासनिक शब्दावली के संबंध में निम्नलिखित कथनों पर विचार कीजिए:",
+    "se": [
+      "The administrative division known as 'Bhukti' corresponded roughly to a province, and it was typically overseen by an official styled as 'Uparika'.",
+      "The 'Kumaramatyas' represented a specialized cadre of high-ranking corporate and bureaucratic officials who could be deployed across central and provincial cadres.",
+      "The terms 'Dinara' and 'Drachma' were used exclusively to define large-scale silver coins minted under royal administrative oversight."
+    ],
+    "sh": [
+      "'भुक्ति' (Bhukti) के रूप में जानी जाने वाली प्रशासनिक इकाई मोटे तौर पर एक प्रांत के अनुरूप थी, और इसकी देखरेख आमतौर पर 'उपरिक' (Uparika) नामक अधिकारी द्वारा की जाती थी।",
+      "'कुमारामात्य' (Kumaramatyas) उच्च श्रेणी के कॉर्पोरेट और नौकरशाही अधिकारियों के एक विशेष संवर्ग का प्रतिनिधित्व करते थे जिन्हें केंद्रीय और प्रांतीय संवर्गों में तैनात किया जा सकता था।",
+      "'दीनार' (Dinara) और 'द्रक्म' (Drachma) शब्दों का उपयोग विशेष रूप से शाही प्रशासनिक देखरेख में ढाले गए बड़े पैमाने के चांदी के सिक्कों को परिभाषित करने के लिए किया जाता था।"
+    ],
+    "o": [
+      "Only 1 and 2 are correct",
+      "Only 2 and 3 are correct",
+      "1, 2 and 3 all are correct",
+      "More than one of the above / None of the above"
+    ],
     "a": 0,
-    "e": "<b>Detailed Explanation:</b> Following his success with the newspaper Darpan, Balshastri Jambhekar started 'Digdarshan' in 1840, a monthly periodical dedicated to popularizing historical knowledge and articles on various scientific subjects."
+    "e": "Statements 1 and 2 are correct. Statement 3 is incorrect because 'Dinara' was the term used to designate the standard *gold* coins issued during the Gupta era, whereas silver coins were typically called 'Rupaka'. This term inversion creates a false statement."
   },
   {
-    "p_id": "bpsc_gs_v4_30",
-    "qe": "Mahatma Jyotiba Phule implemented a powerful alternative tracking symbol to unify and inspire the backward common masses against upper-caste domination. Which ideological symbol did he choose?",
-    "qh": "महात्मा ज्योतिबा फुले ने उच्च जाति के वर्चस्व के खिलाफ पिछड़े और आम जनमानस को एकजुट और प्रेरित करने के लिए एक शक्तिशाली वैकल्पिक प्रतीक लागू किया। उन्होंने किस वैचारिक प्रतीक को चुना?",
-    "o": ["The symbol of Rajah Bali, as opposed to the orthodox symbol of Rama", "The alignment of the French Revolution's liberty rings", "The physical structural layout of the Colaba Observatory lines", "The traditional monotheistic icons derived from the Bhakti cult"],
+    "p_id": "bpsc_mix_mock_60",
+    "qe": "Consider the following statements regarding chemical bonding equilibria and the properties of transition metal coordination entities:",
+    "qh": "रासायनिक बंधन संतुलन (chemical bonding equilibria) और संक्रमण धातु समन्वय संस्थाओं (transition metal coordination entities) के गुणों के संबंध में निम्नलिखित कथनों पर विचार कीजिए:",
+    "se": [
+      "The color exhibited by transition metal complexes is caused by d-to-d electron transitions, which absorb specific wavelengths of visible light.",
+      "The magnetic moment of coordination compounds drops to zero if the d-orbital electronic matrix contains exclusively paired electron configurations.",
+      "According to Valence Bond Theory, inner orbital complexes are formed exclusively when weak-field ligands force the outermost s-electrons to delocalize."
+    ],
+    "sh": [
+      "संक्रमण धातु परिसरों (transition metal complexes) द्वारा प्रदर्शित रंग डी-टू-डी (d-to-d) इलेक्ट्रॉन संक्रमणों के कारण होता है, जो दृश्य प्रकाश की विशिष्ट तरंग दैर्ध्य को अवशोषित करते हैं।",
+      "यदि डी-ऑर्बिटल इलेक्ट्रॉनिक मैट्रिक्स में विशेष रूप से युग्मित (paired) इलेक्ट्रॉन विन्यास शामिल हैं, तो उपसहसंयोजक यौगिकों का चुंबकीय क्षण (magnetic moment) घटकर शून्य हो जाता है।",
+      "संयोजकता बंध सिद्धांत (Valence Bond Theory) के अनुसार, आंतरिक कक्षक परिसर (inner orbital complexes) विशेष रूप से तब बनते हैं जब कमजोर-क्षेत्र लिगेंड सबसे बाहरी एस-इलेक्ट्रॉनों को विस्थानीकृत (delocalize) होने के लिए मजबूर करते हैं।"
+    ],
+    "o": [
+      "Only 1 and 2 are correct",
+      "Only 2 and 3 are correct",
+      "1, 2 and 3 all are correct",
+      "More than one of the above / None of the above"
+    ],
     "a": 0,
-    "e": "<b>Detailed Explanation:</b> To construct an alternative cultural narrative challenging Brahminical supremacy, Jyotiba Phule rejected orthodox symbols and utilized the historical symbol of 'Rajah Bali' to rally and unify the lower strata of society."
-  }
-]
+    "e": "Statements 1 and 2 are correct (d-d transitions produce visible color tracks, and zero unpaired electrons lead to diamagnetism where spin magnetic moments equal zero). Statement 3 is incorrect because inner orbital complexes are associated with *strong-field* ligands that force inner d-electrons to pair up, making d-orbitals available for hybridization, not weak-field ligands."
+  } ]
