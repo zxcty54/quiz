@@ -1564,6 +1564,266 @@
     ],
     "a": 1,
     "e": "<b>Explanation:</b> Option 1 is incorrect because extragenomic DNA is not found in the ER channels and is circular, not linear. Option 2 is correct because the text points out that extragenomic/extrachromosomal DNA is present in both prokaryotes (as plasmids) and eukaryotes. In eukaryotic plant cells, this extra DNA exists as small, double-stranded circular DNA molecules located inside two specific energy-transforming organelles: the matrix of mitochondria and the stroma of plastids (chloroplasts). Because they possess this independent DNA along with their own ribosomes, they can synthesize their own proteins and replicate via fission, making them semi-autonomous organelles. Option 3 and Option 4 mix chromosome assembly and cell cycle exceptions incorrectly."
+  },
+  
+  {
+    "p_id": "bpsc_cell_v8_01",
+    "qe": "At which precise meiotic phase is the definitive genetic constitution of haploid gametes determined, turning the parental ploidy from diploid to haploid?",
+    "qh": "अर्धसूत्रीविभाजन के किस सटीक चरण में अगुणित युग्मकों (haploid gametes) का अंतिम आनुवंशिक विन्यास निर्धारित होता है, जो पैतृक प्लॉइडी को द्विगुणित से अगुणित में बदल देता है?",
+    "o": [
+      "Metaphase I, when bivalents align at the equatorial plate.",
+      "Anaphase I, when homologous chromosomes separate and move toward opposite poles.",
+      "Anaphase II, when sister chromatids separate simultaneously.",
+      "Telophase II, when the tetrad nuclear envelopes are fully reconstructed."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 1 is incorrect because during metaphase I, chromosomes merely align at the metaphasic plate [the imaginary plane at the equator where chromosome pairs gather] without altering the cell's genetic state. Option 2 is correct because the source text explicitly establishes that the genetic constitution of gametes is finally decided at Anaphase I. During this phase, the two homologous chromosomes of each pair separate and move toward opposite poles, reducing the chromosome number per cell from 2n to n. Option 3 is incorrect because Anaphase II splits sister chromatids [identical copies generated during the S phase replication] but does not change the baseline haploid chromosome number established in Meiosis I. Option 4 is the final stage of nuclear enclosure, long after the genetic ploidy decision has taken place."
+  },
+  {
+    "p_id": "bpsc_cell_v8_02",
+    "qe": "A bivalent or tetrad complex formed during meiotic synapsis possesses a specific structural stoichiometry. Which of the following accurately describes this complex?",
+    "qh": "अर्धसूत्री सिनैप्सिस (meiotic synapsis) के दौरान बनने वाले एक बाईवैलेंट (bivalent) या टेट्राड कॉम्प्लेक्स में एक विशिष्ट संरचनात्मक अनुपात होता है। निम्नलिखित में से कौन सा इसे सटीक रूप से वर्णित करता है?",
+    "o": [
+      "A single centromere associated with two identical sister chromatids.",
+      "Two distinct centromeres holding a total of four chromatids.",
+      "Four independent centromeres linked together by a zipper protein.",
+      "Zero centromeres, as the complex forms completely inside the cytoplasm."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 1 describes a single univalent duplicated chromosome, not a paired complex. Option 2 is correct because the text notes that the complex formed by a pair of synapsed homologous chromosomes is called a bivalent or a tetrad. Because it consists of two homologous chromosomes that have duplicated, it features exactly two centromeres [the primary constriction points of chromosomes] holding a total of four chromatids. Option 3 is incorrect because four centromeres would imply two bivalents joined together abnormally. Option 4 is false because chromosomes and their centromeres are strictly nuclear structures."
+  },
+  {
+    "p_id": "bpsc_cell_v8_03",
+    "qe": "Why do mature mammalian neurons and cardiac muscle cells remain permanently locked in the quiescent stage (G0) of the cell cycle throughout adult life?",
+    "qh": "वयस्क जीवन के दौरान परिपक्व स्तनधारी न्यूरॉन्स और हृदय की मांसपेशी कोशिकाएं स्थायी रूप से कोशिका चक्र के शांत चरण (G0) में क्यों बंद रहती हैं?",
+    "o": [
+      "They undergo rapid and continuous endoreplication without cell growth.",
+      "They exit the active cycle at the G1 stage because they are highly specialized and lack proliferative behavior.",
+      "They fail to synthesize basic lipids at their peripheral cell walls.",
+      "They lack active cytoplasmic ribosomes, preventing all protein biogenesis."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 1 describes a variant replication pattern seen in specific polyploid cells, not the dormant non-dividing state of neurons or heart cells. Option 2 is correct because the text highlights that specialized cells like heart cells, neurons, and mature muscle cells do not exhibit division. They exit the active cell cycle at the G1 phase to enter an inactive stage called the quiescent stage (G0) [a non-proliferative state where cells maintain basic function but do not replicate]. They remain metabolically active but do not proliferate unless specific tissue repair demands it. Option 3 is incorrect because animal cells lack cell walls entirely. Option 4 is incorrect because these cells require active ribosomes to sustain live protein synthesis."
+  },
+  {
+    "p_id": "bpsc_cell_v8_04",
+    "qe": "Which of the following biological phenomena is strictly restricted to meiotic cell division pathways and is entirely absent from somatic mitotic pathways?",
+    "qh": "निम्नलिखित में से कौन सी जैविक घटना कड़ाई से अर्धसूत्री कोशिका विभाजन (meiotic cell division) तक सीमित है और कायिक समसूत्री (somatic mitotic) पथों से पूरी तरह अनुपस्थित है?",
+    "o": [
+      "The spatial replication of nuclear chromatin threads during interphase.",
+      "The phenomenon of genetic crossing over between homologous chromosomes.",
+      "The continuous increase of cytoplasmic volume during the post-mitotic gap.",
+      "The longitudinal splitting of chromosomes during late metaphase."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 1, Option 3, and Option 4 are incorrect because DNA replication, cytoplasmic growth, and chromosomal splitting are shared features that occur during mitosis and meiosis II. Option 2 is correct because crossing over [the physical exchange of genetic material between non-sister chromatids of homologous chromosomes] is a characteristic feature unique to meiotic division (specifically within pachytene of prophase I). This mechanism drives genetic recombination and introduces the variation necessary for evolution, which does not occur during standard equational mitosis."
+  },
+  {
+    "p_id": "bpsc_cell_v8_05",
+    "qe": "If a plant species takes exactly 24 hours to complete its overall vegetative cell cycle, how much time will this cell typically spend inside the preparatory interphase stage?",
+    "qh": "यदि एक पौधे की प्रजाति को अपने समग्र वानस्पतिक कोशिका चक्र (vegetative cell cycle) को पूरा करने में ठीक 24 घंटे लगते हैं, तो यह कोशिका आम तौर पर तैयारी के इंटरफेज चरण (interphase stage) के भीतर कितना समय बिताएगी?",
+    "o": [
+      "Approximately 1 to 2 hours maximum.",
+      "Roughly 18 to 20 hours or more, matching over 95% of the total cycle duration.",
+      "Exactly 90 minutes, identical to the cycle duration of yeast cells.",
+      "Zero hours, as plant vegetative cells bypass interphase entirely."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 1 describes the brief duration of the actual M phase (mitosis proper), not the lengthy interphase. Option 2 is correct because the source text notes that the preparatory interphase lasts more than 95% of the total duration of the cell cycle. If a cell takes 24 hours to divide (similar to human cells in culture), it will spend approximately 18 to 20 hours inside the interphase stage to replicate its genome and grow. Option 3 describes the entire lifecycle length of a single yeast cell, not an interphase fraction. Option 4 is false because cells must copy their genomes before dividing."
+  },
+  {
+    "p_id": "bpsc_cell_v8_06",
+    "qe": "What specific cytological disruption occurs if a eukaryotic cell successfully completes continuous nuclear karyokinesis but fails to initiate cytokinesis?",
+    "qh": "यदि एक यूकेरियोटिक कोशिका सफलतापूर्वक परमाणु कैरियोकाइनेसिस (nuclear karyokinesis) को पूरा करती है लेकिन साइटोकिनेसिस (cytokines) शुरू करने में विफल रहती है, तो कौन सा विशिष्ट साइटोलॉजिकल व्यवधान उत्पन्न होता है?",
+    "o": [
+      "The immediate cell reduction into a single haploid male honey bee variant.",
+      "The formation of a multinucleate condition called a coenocyte or syncytium.",
+      "The rapid chromosomal condensation into a terminal telocentric configuration.",
+      "The mechanical transition of the plasma membrane into a rigid cell wall framework."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 1 describes an insect lineage ploidy trait, not a failure of cytoplasmic division. Option 2 is correct because if cytokinesis [the separation of the cytoplasm into distinct daughter units] does not occur following nuclear division (karyokinesis), the multiple nuclei remain trapped within a single shared cytoplasm. This produces a multinucleate condition called a coenocyte or syncytium [a multinucleated mass of cytoplasm formed by continuous nuclear divisions without cellular wall separation], as seen in organisms like <i>Rhizopus</i>, <i>Vaucheria</i>, or the liquid endosperm of coconut. Option 3 and Option 4 are structurally unrelated distractors."
+  },
+  {
+    "p_id": "bpsc_cell_v8_07",
+    "qe": "During a cytogenetic study, a researcher utilizes Acetocarmine or Giemsa solution on an active cell culture. Which specific macro-structural components are targeted by these stains?",
+    "qh": "एक साइटोजेनेटिक अध्ययन के दौरान, एक शोधकर्ता एक सक्रिय सेल कल्चर पर एसिटोकारमाइन (Acetocarmine) या गिएम्सा (Giemsa) घोल का उपयोग करता है। इन रंजकों (stains) द्वारा किन विशिष्ट व्यापक-संरचनात्मक घटकों को लक्षित किया जाता है?",
+    "o": [
+      "The porous channels of the outer smooth endoplasmic reticulum sheet.",
+      "The thickest and shortest condensed chromosomes at the metaphase stage.",
+      "The non-polar hydrophobic hydrocarbon tails of the phospholipid bilayer.",
+      "The proteinaceous radial linkers located inside the flagellar hook."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 1 describes ER components which do not selectively bind these specific basic nuclear dyes. Option 2 is correct because the text indicates that chromosomes are the thickest and the shortest at the metaphase stage, which makes this phase ideal for karyotyping [the biological process of sorting and pairing chromosomes for analysis]. Acetocarmine and Giemsa stains are basic dyes that bind strongly to nucleic acids and condensed chromatin, making them the primary reagents used to visualize chromosome morphology. Option 3 describes lipid membrane domains. Option 4 describes flagellar structural components."
+  },
+  {
+    "p_id": "bpsc_cell_v8_08",
+    "qe": "What unique macro-structural arrangement describes the configuration of the meiotic chromosomes during the initial leptotene stage of Prophase I?",
+    "qh": "अगुणित प्रोफेज I (Prophase I) के प्रारंभिक लेप्टोटीन (leptotene) चरण के दौरान अर्धसूत्री गुणसूत्रों के विन्यास को कौन सी अनूठी व्यापक-संरचनात्मक व्यवस्था वर्णित करती है?",
+    "o": [
+      "They line up evenly at the imaginary equatorial plate plane.",
+      "The chromatin network opens out, presenting as thin, slender, and long threads.",
+      "They undergo automatic cleavage at their primary centromere constrictions.",
+      "They fuse with peripheral proteins to build the mitotic apparatus."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 1 describes metaphase alignment, not prophase I initiation. Option 2 is correct because the text notes that during the leptotene stage of meiotic prophase I, the chromatin network opens out and the individual threads become progressively clearer. The chromosomes are characterized by being thin, slender, and long while maintaining their diploid number, before moving into the pairing phase. Option 3 describes anaphase splitting. Option 4 describes the role of centrosomes in forming the spindle framework, which is distinct from chromosome alignment."
+  },
+  {
+    "p_id": "bpsc_cell_v8_09",
+    "qe": "What specific operational defect occurs during nuclear division if the cell's nuclear membrane fails to disintegrate at the end of prophase?",
+    "qh": "यदि प्रोफेज के अंत में कोशिका की परमाणु झिल्ली (nuclear membrane) विघटित होने में विफल रहती है, तो परमाणु विभाजन के दौरान कौन सा विशिष्ट परिचालन दोष उत्पन्न होता है?",
+    "o": [
+      "Spindle fibres are physically blocked from reaching the kinetochores of the chromosomes.",
+      "The genomic DNA automatically duplicates a second time inside the S phase.",
+      "The cell plate immediately reverses its direction of growth from outward to inward.",
+      "The ribosomes detach from the rough endoplasmic reticulum channels."
+    ],
+    "a": 0,
+    "e": "<b>Explanation:</b> Option 1 is correct because if the nuclear membrane fails to disintegrate, the cytoplasmic spindle fibres [microtubule arrays responsible for moving chromosomes] cannot access the nuclear space to bind to the kinetochores on the centromeres. This blocks normal chromosome migration to opposite poles. The text notes that in some protozoans like <i>Amoeba</i>, an exception occurs where the spindle forms entirely within an intact nucleus, a process termed intranuclear mitosis or pre-mitosis. Option 2 is incorrect because DNA replication is governed by S-phase checkpoints, not prophase envelope mechanics. Option 3 and Option 4 describe unrelated cytological events."
+  },
+  {
+    "p_id": "bpsc_cell_v8_10",
+    "qe": "During the meiotic prophase I stage of zygotene, chromosomes undergo synapsis. How specific is this pairing process?",
+    "qh": "जाइगोटीन (zygotene) के अर्धसूत्री प्रोफेज I चरण के दौरान, गुणसूत्र सिनैप्सिस (synapsis) से गुजरते हैं। यह युग्मन प्रक्रिया कितनी विशिष्ट होती है?",
+    "o": [
+      "It is a random collision between non-homologous linear chromosome fragments.",
+      "It is an exact association that occurs not merely between corresponding chromosomes but between individual corresponding units.",
+      "It involves the random fusion of circular plasmids with the main bacterial nucleoid.",
+      "It is restricted entirely to the non-staining distal satellite regions."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 1 describes non-homologous rearrangements, which represent cellular mutations rather than normal synapsis. Option 2 is correct because the source text emphasizes that during zygotene, corresponding homologous chromosomes intimately associate through synapsis. This pairing process is highly precise: it occurs not merely between the matching chromosomes as a whole, but aligns individual corresponding genetic units exactly along their structural length. Option 3 describes prokaryotic genetic integration, which is unrelated to meiotic eukaryotes. Option 4 is incorrect because synapsis spans across the entire length of the chromosome arms."
+  },
+  {
+    "p_id": "bpsc_cell_v8_11",
+    "qe": "What biological term describes the zipper-like macromolecular structures assembled between homologous chromosomes to control the distribution of reciprocal exchanges during prophase I?",
+    "qh": "प्रोफेज I के दौरान पारस्परिक आदान-प्रदान (reciprocal exchanges) के वितरण को नियंत्रित करने के लिए समजात गुणसूत्रों के बीच इकट्ठे होने वाले ज़िप जैसी मैक्रोमोलेक्युलर संरचनाओं को कौन सा जैविक शब्द वर्णित करता है?",
+    "o": [
+      "Pericentriolar matrices",
+      "Synaptonemal complexes",
+      "Kinetochore linkers",
+      "Chromatophore vesicles"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 1 describes the amorphous cloud surrounding centrioles. Option 2 is correct because synaptonemal complexes are zipper-like protein structures assembled between homologous chromosomes during meiotic prophase. Their assembly and disassembly correlate with chromatin rearrangements, and they are responsible for controlling the number and distribution of reciprocal exchanges [crossing over points] between homologous partners and converting them into functional chiasmata. Option 3 describes outer centromeric discs. Option 4 describes prokaryotic pigment pouches."
+  },
+  {
+    "p_id": "bpsc_cell_v8_12",
+    "qe": "During a genetic anomaly tracking study, an adult organism displays a specific cellular population segment containing 16 chromosomes alongside standard cells with 32 chromosomes. What developmental error causes this mosaicism?",
+    "qh": "एक आनुवंशिक विसंगति ट्रैकिंग अध्ययन के दौरान, एक वयस्क जीव 32 गुणसूत्रों वाली मानक कोशिकाओं के साथ 16 गुणसूत्रों से युक्त एक विशिष्ट कोशिकीय जनसंख्या खंड प्रदर्शित करता है। कौन सी विकासात्मक त्रुटि इस मोज़ेकवाद (mosaicism) का कारण बनती है?",
+    "o": [
+      "The complete absence of basic amino acids inside the core nucleosome.",
+      "Mechanisms such as non-disjunction, anaphase lagging, or endoreplication anomalies during development.",
+      "The direct transformation of mitochondrial matrix cristae into cell wall plate units.",
+      "The premature active expulsion of gas vacuoles through the plasma membrane leaf."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 1 is incorrect because histone deficiencies alter DNA packing stability rather than generating specific mosaic ploidy populations. Option 2 is correct because the text notes that mosaicism [the presence of two or more cell populations with different genotypes in a single individual] can result from developmental mutations or mitotic errors such as non-disjunction [the failure of sister chromatids to separate correctly], anaphase lagging [where a chromosome fails to migrate to the pole fast enough and is left out of the new nucleus], or endoreplication. In this scenario, cells with 16 chromosomes arose from abnormal divisions of the primary 32-chromosome lineage. Option 3 and Option 4 mix unrelated organelle traits into a question about chromosome genetics."
+  },
+  {
+    "p_id": "bpsc_cell_v8_13",
+    "qe": "During the meiotic prophase I transition, chiasmata tend to slip out toward the distal ends of the shifting chromosomes. What is this cytological event called?",
+    "qh": "अर्धसूत्री प्रोफेज I संक्रमण के दौरान, काइअस्माटा (chiasmata) बदलते गुणसूत्रों के दूरस्थ सिरों (distal ends) की ओर खिसक जाते हैं। इस साइटोलॉजिकल घटना को क्या कहा जाता है?",
+    "o": [
+      "Synapsis pairing",
+      "Terminalisation of chiasmata",
+      "Membrane biogenesis",
+      "Centrosomal duplication"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 1 describes the initial step of chromosome pairing during the zygotene phase, which is the reverse of chiasmata movement. Option 2 is correct because during the diplotene stage of meiotic prophase I, homologous chromosomes begin separating from each other. As they pull apart, the chiasmata [the X-shaped physical connections at crossover sites] tend to shift or slip out toward the very ends of the chromosome arms. This biological shifting event is termed the terminalisation of chiasmata, which concludes during diakinesis. Option 3 describes membrane lipid synthesis. Option 4 describes centriole duplication during the S phase."
+  },
+  {
+    "p_id": "bpsc_cell_v8_14",
+    "qe": "During a meiotic arrest study in female mammals, oocytes are found held in a specialized dormant configuration for months or years. What is this arrested state called, and at which meiotic stage does it occur?",
+    "qh": "मादा स्तनधारियों में एक अर्धसूत्रीविभाजन ठहराव (meiotic arrest) अध्ययन के दौरान, ऊसैट्स (oocytes) महीनों या वर्षों के लिए एक विशिष्ट सुप्त विन्यास में पाए जाते हैं। इस ठहरे हुए चरण को क्या कहा जाता है, और यह किस अर्धसूत्री चरण में होता है?",
+    "o": [
+      "The quiescent stage (G0) arising from the post-mitotic gap phase.",
+      "The dictyate stage occurring during the diplotene phase of Prophase I.",
+      "The syncytium phase triggered by the absolute loss of nuclear envelopes.",
+      "The amitosis state typical of primitive single-celled protozoans."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 1 describes the mitotic withdrawal state of somatic cells like heart tissue, not meiotic oocyte behavior. Option 2 is correct because the text highlights an exception: meiotic arrest commonly occurs in mammalian oocytes. In females, meiosis initiates in the embryo and proceeds until the diplotene stage of prophase I, where the chromosomes become diffused. The cells enter a prolonged arrested state referred to as the dictyate stage [a modified diplotene arrest phase in female oogenesis], which remains under hormonal control until ovulation. Option 3 describes a multinucleated state. Option 4 describes a simple direct cell splitting mechanism seen in prokaryotes or unicellular systems."
+  },
+  {
+    "p_id": "bpsc_cell_v8_15",
+    "qe": "During the prolonged meiotic arrest phase in certain amphibian and insect oocytes, specialized loops of DNA transcribe large volumes of RNA. What are these chromosomes called?",
+    "qh": "कुछ उभयचरों (amphibian) और कीटों के ऊसैट्स में लंबे समय तक अर्धसूत्रीविभाजन ठहराव चरण के दौरान, DNA के विशेष लूप बड़ी मात्रा में RNA का प्रतिलेखन (transcribe) करते हैं। इन गुणसूत्रों को क्या कहा जाता है?",
+    "o": [
+      "Metacentric equal-armed structures",
+      "Lampbrush chromosomes",
+      "Non-staining satellite fragments",
+      "Peptidoglycan transformation vectors"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 1 is a general structural classification based on centromere placement, not transcription status. Option 2 is correct because the text notes that during the extended dictyate/diplotene arrest phase in amphibian oocytes, the chromosomes develop large, extended lateral DNA loops. This gives them a characteristic appearance under a microscope, leading to the name lampbrush chromosomes [giant chromosomes characterized by extensive fine loops that are actively transcribing RNA]. Most of the genes in these loops are actively expressed to store maternal components. Option 3 describes a structural chromosomal constriction. Option 4 describes bacterial envelope components."
+  },
+  {
+    "p_id": "bpsc_cell_v8_16",
+    "qe": "Prokaryotic cell cycles display distinct kinetic differences when compared directly to advanced eukaryotic counterparts. What is their primary operational distinction?",
+    "qh": "उन्नत यूकेरियोटिक समकक्षों की तुलना में प्रोकेरियोटिक कोशिका चक्र (Prokaryotic cell cycles) विशिष्ट गतिज अंतर (kinetic differences) प्रदर्शित करते हैं। उनका प्राथमिक परिचालन अंतर क्या है?",
+    "o": [
+      "Prokaryotic cells require histone octamer cores to complete chromosome fission.",
+      "Prokaryotic cells have a significantly shorter cell cycle duration than eukaryotic cells.",
+      "They must remain locked inside the quiescent G0 state for at least 24 hours.",
+      "They construct a complex 9+2 axoneme array to divide their nuclear matrix."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 1 is incorrect because prokaryotes lack basic histone proteins. Option 2 is correct because the text notes that prokaryotic cells possess a simpler cellular organization and a much faster rate of proliferation, which gives them a significantly shorter cell cycle duration than eukaryotes. For example, while a cultured human cell takes roughly 24 hours to divide, a simple prokaryote can complete replication and division cycles in a fraction of that time. Option 3 describes eukaryotic somatic cell dormancy. Option 4 describes ciliary and flagellar core architecture."
+  },
+  {
+    "p_id": "bpsc_cell_v8_17",
+    "qe": "Which meiotic stage is characterized by the physical alignment of pairs of homologous chromosomes across an imaginary plane equidistant from the two spindle poles?",
+    "qh": "कौन सा अर्धसूत्री चरण दो धुरी ध्रुवों (spindle poles) से समान दूरी पर एक काल्पनिक समतल पर समजात गुणसूत्रों के जोड़ों के भौतिक संरेखण (physical alignment) की विशेषता दर्शाता है?",
+    "o": [
+      "Prophase II complex stage",
+      "Metaphase I at the equatorial plate",
+      "Anaphase I separation phase",
+      "Interkinesis transition interlude"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 1 describes an unaligned, condensed chromatin stage in the second division cycle. Option 2 is correct because the text indicates that during Metaphase I, bivalent chromosomes align on the equatorial plate [metaphase plate: an imaginary line that is equidistant from the two centrosome poles]. Opposing kinetochore microtubules from opposite poles attach to the homologous chromosomes to hold them securely along this plane. Option 3 describes active poleward segregation. Option 4 is the short resting interlude that occurs between the two division cycles."
+  },
+  {
+    "p_id": "bpsc_cell_v8_18",
+    "qe": "Why is the process of Mitosis functionally defined as an 'equational division' within the life history of multicellular organisms?",
+    "qh": "बहुकोशकीय जीवों के जीवन इतिहास में समसूत्री विभाजन (Mitosis) की प्रक्रिया को कार्यात्मक रूप से 'समीकरण विभाजन' (equational division) क्यों कहा जाता है?",
+    "o": [
+      "It reduces the genetic material by exactly half inside the gamete cells.",
+      "The chromosome numbers in the resulting daughter cells remain identical to that of the parent cell.",
+      "It combines simple sugar residues into complex calcium carbonate structures.",
+      "It balances the absolute volumetric counts of 70S and 80S ribosomes."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 1 describes meiosis, which is a reductional division rather than an equational one. Option 2 is correct because mitosis is characterized by equal division. This ensures that the chromosome number in the resulting daughter cells remains the same as that of the dividing parent cell, preserving the genetic complement throughout somatic tissues during growth and repair. Option 3 and Option 4 are biological distractors that mix cell wall components and ribosome types into a question about division kinetics."
+  },
+  {
+    "p_id": "bpsc_cell_v8_19",
+    "qe": "How do unicellular organisms structurally execute the direct division of their somatic bodies, and how does this process compare with multicellular reproduction?",
+    "qh": "एककोशकीय जीव संरचनात्मक रूप से अपने कायिक निकायों के सीधे विभाजन (direct division) को कैसे निष्पादित करते हैं, और बहुकोशकीय प्रजनन से इस प्रक्रिया की तुलना कैसे की जाती है?",
+    "o": [
+      "They construct an elaborate 9+0 cartwheel triplet hub across the cell envelope.",
+      "They undergo amitosis, where the somatic cell divides directly into two parts, whereas multicellular organisms rely on complex indirect divisions.",
+      "They utilize meiotic recombinase to systematically double their ploidy count.",
+      "They require an extended dictyate arrest lasting for several months."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 1 describes centriole construction, which does not govern direct cell fission. Option 2 is correct because the text notes that in unicellular organisms, cell division follows a direct splitting path known as amitosis [a direct form of cell division characterized by the simple cleavage of the nucleus and cytoplasm without chromosome tracking]. In contrast, multicellular organisms rely on more complex, highly coordinated indirect pathways like mitosis and meiosis to manage tissue development and gametogenesis. Option 3 is incorrect because recombinase mediates genetic exchange during reductional division, not ploidy doubling. Option 4 describes mammalian egg maturation arrest."
+  },
+  {
+    "p_id": "bpsc_cell_v8_20",
+    "qe": "What specific developmental requirement drives a multicellular organism to continuously initiate mitotic divisions within its somatic tissue layers?",
+    "qh": "कौन सी विशिष्ट विकासात्मक आवश्यकता एक बहुकोशकीय जीव को उसकी कायिक ऊतक परतों (somatic tissue layers) के भीतर लगातार समसूत्री विभाजन शुरू करने के लिए प्रेरित करती है?",
+    "o": [
+      "The reduction of chromosome numbers to facilitate cross-over variations.",
+      "Cell repair, growth, and the constant structural replacement of worn-out cells.",
+      "The synthesis of autonomous circular plasmid arrays within the cytoplasm.",
+      "The deliberate structural accumulation of gas vesicles to manage buoyancy."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 1 describes meiotic goals that support sexual reproduction, not somatic maintenance. Option 2 is correct because the primary contributions of mitosis in multicellular organisms are growth, development from a single cell, and cell repair. Somatic tissue layers—such as the upper layer of the epidermis, the lining of the gut, and circulating blood cells—are subject to continuous wear and tear, and rely on regular mitotic divisions to replace damaged or lost cells. Option 3 describes prokaryotic genetic structures. Option 4 describes buoyancy adjustments unique to photosynthetic bacteria."
   }
 ]
-
