@@ -781,5 +781,789 @@
     ],
     "a": 1,
     "e": "<b>Explanation:</b> Option 1 is incorrect because these organelles contain extensive metabolic enzymes (e.g., ATP-synthase in mitochondria, RuBisCO in chloroplasts). Option 2 is correct because the classification of organelles under the endomembrane system [a collaborative network of cellular membranes whose activities are interrelated] is determined strictly by functional coordination. The endomembrane system includes the endoplasmic reticulum (ER), golgi complex, lysosomes, and vacuoles because their synthetic, packaging, and trafficking functions are coordinated. Mitochondria, chloroplasts, and peroxisomes act independently, and since their functions are not coordinated with these components, they are excluded from this system. Option 3 is a fabricated distractor regarding lipid channels. Option 4 is incorrect because while mitochondria and chloroplasts contain internal 70S ribosomes due to endosymbiotic evolution, this structural trait is not why they are excluded from the functional endomembrane coordination network."
+  },
+  
+  {
+    "p_id": "bpsc_cellcycle_v1_01",
+    "qe": "During the eukaryotic cell cycle, cell growth in terms of cytoplasmic increase and DNA synthesis are characterized by which operational pattern?",
+    "qh": "यूकेरियोटिक कोशिका चक्र के दौरान, साइटोप्लाज्मिक वृद्धि (cytoplasmic increase) के संदर्भ में कोशिका वृद्धि और DNA संश्लेषण किस परिचालन पैटर्न द्वारा विशेषता दर्शाते हैं?",
+    "o": [
+      "Both cell growth and DNA synthesis are strictly discontinuous events limited to the M phase.",
+      "Cell growth is a continuous process, whereas DNA synthesis occurs only during one specific stage.",
+      "DNA synthesis is completely continuous, while cytoplasmic increase occurs only during the quiescent stage.",
+      "Both processes run concurrently and continuously across all phases including karyokinesis."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 1 is incorrect because neither process is restricted to the M phase; rather, interphase accommodates them. Option 2 is correct because the source text explicitly notes that although cell growth (in terms of cytoplasmic increase) is a continuous process spanning almost the entire cell cycle, DNA synthesis or replication is highly restricted, occurring only during one specific stage, which is the S phase [Synthesis phase: the specific period of interphase dedicated to genomic duplication]. Option 3 is incorrect because DNA synthesis is highly discontinuous in the context of the whole cycle. Option 4 is incorrect because DNA synthesis ceases entirely during the G1, G2, and M phases."
+  },
+  {
+    "p_id": "bpsc_cellcycle_v1_02",
+    "qe": "A cultured human somatic cell has a baseline DNA content of 2C and a diploid chromosome number of 2n during the G1 phase. What will be its genetic configuration upon completing the S phase?",
+    "qh": "एक संवर्धित मानव कायिक कोशिका (somatic cell) में G1 चरण के दौरान 2C की आधारभूत DNA सामग्री और 2n की द्विगुणित गुणसूत्र संख्या होती है। S चरण को पूरा करने पर इसका आनुवंशिक विन्यास क्या होगा?",
+    "o": [
+      "DNA content increases to 4C, and the chromosome number doubles to 4n.",
+      "DNA content doubles to 4C, while the chromosome number remains strictly at 2n.",
+      "DNA content remains at 2C, but the chromosome number reduces to haploid n.",
+      "Both DNA content and chromosome number decrease by half due to premature fission."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 1 is incorrect because the chromosome number does not double during the S phase. Option 2 is correct because the text highlights a crucial conceptual exception: during the S (Synthesis) phase, DNA replication takes place, doubling the amount of DNA per cell from 2C to 4C. However, there is no increase in the chromosome number. If the cell had a diploid or 2n number of chromosomes at G1, even after the S phase the number of chromosomes remains the same, i.e., 2n, because the sister chromatids remain attached at the single centromere [the primary constriction region of a chromosome that holds sister chromatids together]. Option 3 and Option 4 present inaccurate genomic distributions that contradict standard interphase mechanics."
+  },
+  {
+    "p_id": "bpsc_cellcycle_v1_03",
+    "qe": "Which of the following cellular events occurs exclusively in the cytoplasm of animal cells during the Synthesis (S) phase of the cell cycle, running parallel to nuclear DNA replication?",
+    "qh": "कोशिका चक्र के संश्लेषण (S) चरण के दौरान जंतु कोशिकाओं के साइटोप्लाज्म में परमाणु DNA प्रतिकृति (nuclear DNA replication) के समानांतर विशेष रूप से कौन सी कोशिकीय घटना घटित होती है?",
+    "o": [
+      "The rapid assembly of the rigid cellulosic cell plate matrix.",
+      "The spatial duplication of the centrosome's centrioles.",
+      "The metabolic synthesis of structural proteins required for spindle assembly.",
+      "The definitive breakdown of the nuclear envelope."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 1 describes plant cell cytokinesis, which occurs at the end of the M phase, not during the S phase of animal cells. Option 2 is correct because the text highlights a specific compartment division: in animal cells, while DNA replication begins inside the nucleus during the S phase, the centrosome [a non-membrane bound cytoplasmic organelle containing a pair of perpendicular centrioles] undergoes duplication simultaneously within the cytoplasm. Option 3 describes G2 phase activity where proteins are synthesized in preparation for mitosis. Option 4 describes the start of prophase/metaphase nuclear division."
+  },
+  {
+    "p_id": "bpsc_cellcycle_v1_04",
+    "qe": "Adult animal tissues contain certain specialized cells, such as mature heart cells, that exit the active cell cycle to enter the quiescent stage (G0). How are these cells characterized metabolically and proliferationally?",
+    "qh": "वयस्क जंतु ऊतकों में कुछ विशिष्ट कोशिकाएं होती हैं, जैसे कि परिपक्व हृदय कोशिकाएं, जो शांत चरण (G0) में प्रवेश करने के लिए सक्रिय कोशिका चक्र से बाहर निकल जाती हैं। चयापचय और प्रसार (proliferation) के संदर्भ में इन कोशिकाओं की क्या विशेषता है?",
+    "o": [
+      "They become metabolically inactive and undergo immediate programmed autolysis.",
+      "They remain metabolically active but no longer proliferate unless specifically called on to do so by the organism.",
+      "They continuously replicate their genomic DNA without ever entering karyokinesis.",
+      "They lose their plasma membrane and fuse into a multinucleate syncytium."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 1 is incorrect because G0 cells are functional and not undergoing cell death. Option 2 is correct because cells that do not divide further exit the G1 phase to enter an inactive proliferative stage called the quiescent stage (G0) [a reversible state of cellular dormancy where the cell withdraws from the active cell cycle]. In this stage, the cells remain completely metabolically active but do not undergo division or proliferation unless required by the organism to replace lost or damaged tissue. Option 3 is incorrect because DNA replication is arrested in G0. Option 4 describes a multinucleate state, which is unrelated to the G0 phase definition."
+  },
+  {
+    "p_id": "bpsc_cellcycle_v1_05",
+    "qe": "When evaluating the capacity for mitotic cell division across biological kingdoms, what distinct evolutionary exception differentiates animals from plants?",
+    "qh": "जैविक जगतों में समसूत्री कोशिका विभाजन (mitotic cell division) की क्षमता का मूल्यांकन करते समय, कौन सा विशिष्ट विकासवादी अपवाद जंतुओं को पौधों से अलग करता है?",
+    "o": [
+      "Animals exhibit mitotic divisions in both haploid and diploid somatic lineages universally.",
+      "In animals, mitosis is strictly restricted to diploid somatic cells with rare exceptions like male honey bees, whereas plants display mitosis in both haploid and diploid cells.",
+      "Plants restrict mitotic equational division exclusively to specialized triploid endosperm tissues.",
+      "Haploid insect cells undergo meiosis instead of mitosis to increase their chromosome number."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 1 is incorrect because typical animal somatic lines do not allow haploid mitosis. Option 2 is correct because the text outlines a major taxonomic difference: in animals, mitotic equational cell division is generally restricted to diploid somatic cells [typical body cells containing two complete sets of chromosomes]. A notable exception occurs in social insects like male honey bees (drones), which are haploid and divide by mitosis. In contrast, plants regularly demonstrate mitotic divisions in both their haploid and diploid cells, driving the alternation of generations [the life cycle pattern alternating between a haploid gametophyte phase and a diploid sporophyte phase]. Option 3 and Option 4 present inaccurate biological definitions."
+  },
+  {
+    "p_id": "bpsc_cellcycle_v1_06",
+    "qe": "During which specific stage of mitotic karyokinesis can the physical morphology and structural layout of chromosomes be most easily and accurately studied under a light microscope?",
+    "qh": "समसूत्री कैरियोकाइनेसिस (mitotic karyokinesis) के किस विशिष्ट चरण के दौरान प्रकाश सूक्ष्मदर्शी के तहत गुणसूत्रों की भौतिक आकृति विज्ञान (morphology) और संरचनात्मक विन्यास का सबसे आसानी से और सटीक रूप से अध्ययन किया जा सकता है?",
+    "o": [
+      "Initiation phase of chromatin untangling during Prophase",
+      "Metaphase, when chromosome condensation is complete and they align at the equator",
+      "Late Anaphase, as centromeres split and migrate to opposite spindle poles",
+      "Telophase decondensation, when chromosomes lose their individuality"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 1 is incorrect because prophase chromosome condensation is still ongoing, leaving chromatin somewhat intertwined. Option 2 is correct because by the metaphase stage, the condensation of chromosomes is fully completed. As a result, the chromosomes are spread through the cytoplasm and appear highly distinct, making this the ideal stage at which the morphology of chromosomes is most easily studied. They align along the metaphase plate [the plane of alignment of chromosomes at the cell equator during metaphase]. Option 3 is incorrect because anaphase tracks moving chromatids rather than baseline morphology. Option 4 describes the loss of chromosomal structure."
+  },
+  {
+    "p_id": "bpsc_cellcycle_v1_07",
+    "qe": "What are the small disc-shaped structures present at the surface of the centromeres that serve as the specific attachment sites for spindle fibres during mitosis?",
+    "qh": "गुणसूत्रबिंदु (centromeres) की सतह पर मौजूद छोटी डिस्क के आकार की संरचनाएं कौन सी हैं जो समसूत्री विभाजन के दौरान धुरी तंतुओं (spindle fibres) के लिए विशिष्ट लगाव स्थलों के रूप में कार्य करती हैं?",
+    "o": [
+      "Astrospheres",
+      "Kinetochores",
+      "Synaptonemal complexes",
+      "Recombination nodules"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 1 is incorrect because asters are radiating microtubule structures around the centrosome, not disc structures on centromeres. Option 2 is correct because the text notes that small disc-shaped structures at the surface of the centromeres are called kinetochores [specialized protein complexes assembled on the centromere that face opposite poles]. These structures serve as the mechanical sites of attachment for the spindle fibres to ensure the chromosomes are moved and aligned correctly. Option 3 describes a structure formed during meiotic pairing. Option 4 describes the sites where crossing over occurs in meiotic prophase I."
+  },
+  {
+    "p_id": "bpsc_cellcycle_v1_08",
+    "qe": "If a laboratory technician monitors a cell under a microscope and observes cells that do not show Golgi complexes, endoplasmic reticulum, nucleolus, and the nuclear envelope, what stage of mitosis has just concluded?",
+    "qh": "यदि एक प्रयोगशाला तकनीशियन सूक्ष्मदर्शी के नीचे एक कोशिका की निगरानी करता है और ऐसी कोशिकाओं को देखता है जिनमें गोल्गी कॉम्प्लेक्स, एंडोप्लाज्मिक रेटिकुलम, न्यूक्लियोलस और परमाणु लिफाफा दिखाई नहीं देते हैं, तो समसूत्री विभाजन का कौन सा चरण अभी समाप्त हुआ है?",
+    "o": [
+      "Interphase resting period",
+      "Prophase",
+      "Anaphase separation",
+      "Telophase reformation"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 1 is incorrect because these organelles are fully intact and functional during interphase. Option 2 is correct because the source text explicitly establishes that cells at the end of prophase, when viewed under the microscope, do not show golgi complexes, endoplasmic reticulum, nucleolus, and the nuclear envelope. These structures undergo disassembly or breakdown to facilitate spindle apparatus operation and chromosome distribution. Option 3 is incorrect because anaphase deals with moving chromatids. Option 4 describes the exact reverse process where these structures reappear."
+  },
+  {
+    "p_id": "bpsc_cellcycle_v1_09",
+    "qe": "What precise mechanical transformation marks the definitive onset and characterization of the Anaphase stage in mitotic nuclear division?",
+    "qh": "समसूत्री परमाणु विभाजन में एनाफेज (Anaphase) चरण की निश्चित शुरुआत और विशेषता को कौन सा सटीक यांत्रिक रूपांतरण (mechanical transformation) चिह्नित करता है?",
+    "o": [
+      "The gradual initiation of chromatin fiber condensation within an intact nucleus.",
+      "The alignment of intact bivalents along the equatorial plate plane.",
+      "The simultaneous splitting of centromeres and separation of sister chromatids into daughter chromosomes.",
+      "The fusion of the nuclear envelope around chromosome clusters at opposite poles."
+    ],
+    "a": 2,
+    "e": "<b>Explanation:</b> Option 1 describes early prophase dynamics. Option 2 describes metaphase positioning. Option 3 is correct because the text states that at the onset of anaphase, each chromosome arranged at the metaphase plate is split simultaneously, and the two daughter chromatids, now referred to as daughter chromosomes, begin their migration towards the two opposite poles driven by spindle fiber shortening. The centromere leads the migration with the chromosome arms trailing behind. Option 4 describes telophase mechanics."
+  },
+  {
+    "p_id": "bpsc_cellcycle_v1_10",
+    "qe": "Why must a proliferating cell undergo mitotic division when its overall size increases significantly during continuous interphase growth?",
+    "qh": "सक्रिय रूप से बढ़ने वाली कोशिका को समसूत्री विभाजन (mitotic division) से क्यों गुजरना पड़ता है जब निरंतर इंटरफेज वृद्धि के दौरान उसका कुल आकार काफी बढ़ जाता है?",
+    "o": [
+      "To double the number of circular plasmid DNA strands inside the nucleoid.",
+      "To restore the disturbed nucleo-cytoplasmic ratio caused by cytoplasmic growth.",
+      "To force the active degradation of structural histone proteins.",
+      "To transform the extracellular middle lamella into an elastic plasma membrane."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 1 describes prokaryotic plasmid tracking, which is unrelated to mitotic cell scaling. Option 2 is correct because the source text establishes a fundamental physiological driver for cell division: cell growth results in expanding the cytoplasm considerably, which disturbs the normal balance or ratio between the nucleus and the cytoplasm. It therefore becomes essential for the cell to divide to restore the nucleo-cytoplasmic ratio [the volumetric relationship between the genetic nucleus and the functional cytoplasm it controls]. Option 3 and Option 4 present scientifically inaccurate distractors."
+  },
+  {
+    "p_id": "bpsc_cellcycle_v1_11",
+    "qe": "What structural precursor is synthesized at the center of a plant cell during cytokinesis, growing outward to form the middle lamella between adjacent cell walls?",
+    "qh": "साइटोकिनेसिस के दौरान एक पादप कोशिका के केंद्र में कौन सा संरचनात्मक अग्रदूत (structural precursor) संश्लेषित होता है, जो आसन्न कोशिका भित्तियों के बीच मध्य पटलिका (middle lamella) बनाने के लिए बाहर की ओर बढ़ता है?",
+    "o": [
+      "A flexible plasma furrow invagination",
+      "A simple precursor called the cell-plate",
+      "A non-membranous inclusion body",
+      "A single circular centriolar ring"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 1 describes animal cell cytokinesis, which utilizes a contractile ring to form a furrow deepening inward. Option 2 is correct because plant cells are enclosed by a rigid, inextensible cell wall, preventing them from forming an invaginating cleavage furrow. Instead, wall formation initiates in the center of the cell and grows outward via the assembly of a structural precursor called the cell-plate [the primitive equatorial partition formed by fusing Golgi vesicles in plants], which eventually matures into the middle lamella between the walls of two adjacent cells. Option 3 and Option 4 are unrelated structures."
+  },
+  {
+    "p_id": "bpsc_cellcycle_v1_12",
+    "qe": "In some organisms, karyokinesis is not followed by cytokinesis. What specific cellular condition arises from this phenomenon, and what is an example provided in the text?",
+    "qh": "कुछ जीवों में, कैरियोकाइनेसिस के बाद साइटोकिनेसिस नहीं होता है। इस घटना से कौन सी विशिष्ट कोशिकीय स्थिति उत्पन्न होती है, और पाठ में इसका क्या उदाहरण दिया गया है?",
+    "o": [
+      "A haploid cell lineage; observed in male honey bees.",
+      "A multinucleate condition leading to the formation of a syncytium; seen in the liquid endosperm in coconut.",
+      "An inactive quiescent phase; typical of adult mammalian heart tissue.",
+      "Complete structural autolysis; characteristic of viral particle multiplication."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 1 describes a normal ploidy level in certain insects, not a failure of cytokinesis. Option 2 is correct because when nuclear division (karyokinesis) occurs repeatedly without the subsequent division of the cytoplasm (cytokinesis), a multi-nuclear state develops. This multinucleate cellular condition is termed a syncytium [a single large cytoplasmic mass containing multiple functional nuclei]. A prominent biological example highlighted in the text is the liquid endosperm in coconut. Option 3 describes the G0 state, which is a single-nucleated dormant phase. Option 4 describes viral lysis."
+  },
+  {
+    "p_id": "bpsc_cellcycle_v1_13",
+    "qe": "What fundamental evolutionary role does the process of Meiosis perform in the life cycle of sexually reproducing organisms, balancing the effects of fertilization?",
+    "qh": "निषेचन (fertilization) के प्रभावों को संतुलित करते हुए, यौन रूप से प्रजनन करने वाले जीवों के जीवन चक्र में अर्धसूत्रीविभाजन (Meiosis) की प्रक्रिया क्या मौलिक विकासवादी भूमिका निभाती है?",
+    "o": [
+      "It doubles the chromosome number in gametes to ensure genetic superiority.",
+      "It ensures the production of a haploid phase by reducing the chromosome number by half, while fertilization restores the diploid phase.",
+      "It maintains a completely static nucleo-cytoplasmic ratio across all somatic cells.",
+      "It prevents the formation of cross-over chiasmata linkages to maintain structural stability."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 1 is incorrect because meiosis halves the chromosome number rather than doubling it. Option 2 is correct because the production of offspring by sexual reproduction includes the fusion of two gametes, which would double the chromosome number each generation if left unchecked. Meiosis is a specialized cell division that reduces the chromosome number by half, ensuring the production of the haploid phase [having a single set of unpaired chromosomes] during gametogenesis, while fertilization subsequently restores the diploid phase [having two complete sets of chromosomes]. Option 3 describes a general mitotic purpose. Option 4 is incorrect because meiosis actively promotes chiasmata formation."
+  },
+  {
+    "p_id": "bpsc_cellcycle_v1_14",
+    "qe": "Meiosis involves two sequential cycles of nuclear and cellular division but features a distinct operational restriction regarding its replication cycles. What is this restriction?",
+    "qh": "अर्धसूत्रीविभाजन (Meiosis) में परमाणु और कोशिकीय विभाजन के दो क्रमिक चक्र शामिल होते हैं लेकिन इसके प्रतिकृति चक्र (replication cycles) के संबंध में एक विशिष्ट परिचालन प्रतिबंध होता है। यह प्रतिबंध क्या है?",
+    "o": [
+      "It requires two separate rounds of genomic DNA replication, one before each division cycle.",
+      "It features only a single cycle of DNA replication initiated before Meiosis I.",
+      "DNA replication occurs entirely during the active Prophase II stage.",
+      "It skips DNA replication completely, utilizing stored chloroplast carbohydrates instead."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 1 is incorrect because a second round of replication would defeat the reductional purpose of meiosis, preventing the formation of haploid gametes. Option 2 is correct because the text states that meiosis involves two sequential cycles of nuclear and cell division called meiosis I and meiosis II, but features only a single cycle of DNA replication. This single replication occurs during the pre-meiotic interphase S phase. The cell then divides twice without replicating its DNA again, producing four haploid daughter cells. Option 3 and Option 4 are biologically incorrect."
+  },
+  {
+    "p_id": "bpsc_cellcycle_v1_15",
+    "qe": "During Prophase I of meiotic division, the process of synapsis takes place. What structural assembly accompanies this pairing of homologous chromosomes?",
+    "qh": "अर्धसूत्रीविभाजन के प्रोफेज I (Prophase I) के दौरान, सिनैप्सिस (synapsis) की प्रक्रिया होती है। समजात गुणसूत्रों (homologous chromosomes) के इस युग्मन के साथ कौन सा संरचनात्मक संयोजन होता है?",
+    "o": [
+      "The rapid extrusion of peripheral flagellar doublets.",
+      "The formation of a complex structure called the synaptonemal complex.",
+      "The immediate cleavage of centromeres by kinetochores.",
+      "The breakdown of the non-staining chromosome satellite fragment."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 1 describes flagellar architecture, which is unrelated to nuclear division. Option 2 is correct because during the zygotene stage of prophase I, homologous chromosomes start pairing together via a process called synapsis. The text points out that electron micrographs indicate that chromosome synapsis is accompanied by the formation of an elaborate proteinaceous lattice called the synaptonemal complex [a protein structure formed between two homologous chromosomes during meiosis that mediates chromosome pairing and recombination]. The resulting structure is termed a bivalent or a tetrad. Option 3 occurs during anaphase, not prophase I. Option 4 describes an unrelated genomic fragment trait."
+  },
+  {
+    "p_id": "bpsc_cellcycle_v1_16",
+    "qe": "A meiotic cell progresses into the pachytene stage of Prophase I. Which of the following structural landmarks characterizes this specific phase of chromosomal behavior?",
+    "qh": "एक अर्धसूत्री कोशिका प्रोफेज I के पैकीटीन (pachytene) चरण में आगे बढ़ती है। निम्नलिखित में से कौन सा संरचनात्मक मील का पत्थर गुणसूत्र व्यवहार के इस विशिष्ट चरण की विशेषता बताता है?",
+    "o": [
+      "The initial visibility of long, thin uncompacted chromatin threads.",
+      "The appearance of recombination nodules, the sites at which crossing over occurs between non-sister chromatids.",
+      "The complete terminalisation of X-shaped chiasmata configurations.",
+      "The immediate reconstruction of the broken nuclear envelope."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 1 describes the earlier leptotene stage where compaction is just beginning. Option 2 is correct because pachytene is a relatively long-lived stage characterized by the four chromatids of each bivalent chromosome becoming distinct and appearing clearly as tetrads. Crucially, it is marked by the appearance of recombination nodules [multienzyme complexes localized at recombination sites], which serve as the physical sites where crossing over—the enzyme-mediated exchange of genetic material between non-sister chromatids of homologous chromosomes—takes place. Option 3 describes diakinesis behavior. Option 4 describes telophase dynamics."
+  },
+  {
+    "p_id": "bpsc_cellcycle_v1_17",
+    "qe": "Which specific enzyme acts as the essential biocatalyst responsible for mediating the physical exchange of genetic material between homologous chromosomes during pachytene?",
+    "qh": "पैकीटीन के दौरान समजात गुणसूत्रों के बीच आनुवंशिक सामग्री के भौतिक आदान-प्रदान (exchange of genetic material) को मध्यस्थ करने के लिए कौन सा विशिष्ट एंजाइम आवश्यक जैव-उत्प्रेरक (biocatalyst) के रूप में कार्य करता है?",
+    "o": [
+      "Adenosine Triphosphatase (ATPase)",
+      "Recombinase",
+      "Calcium Pectate Synthesase",
+      "Lipase Hydrolase"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 1 is an energy-cleaving enzyme involved in active transport or motor functions, not recombination. Option 2 is correct because the source text explicitly defines crossing over as an enzyme-mediated process, highlighting that the specific enzyme involved in driving this genetic recombination is called recombinase [a complex assembly of enzymes that coordinates the breaking and rejoining of homologous DNA strands]. Option 3 describes a plant cell wall enzyme. Option 4 is a lysosomal digestive enzyme."
+  },
+  {
+    "p_id": "bpsc_cellcycle_v1_18",
+    "qe": "The transition into the diplotene stage of meiotic prophase I is recognized by which distinct physical change in the synapsed chromosomal architecture?",
+    "qh": "अर्धसूत्री प्रोफेज I के डिप्लोटीन (diplotene) चरण में संक्रमण को सिनैप्सड गुणसूत्र वास्तुकला में किस विशिष्ट भौतिक परिवर्तन द्वारा पहचाना जाता है?",
+    "o": [
+      "The rapid fusion of nuclear pores with outer rough endoplasmic reticulum components.",
+      "The dissolution of the synaptonemal complex and the appearance of X-shaped structures called chiasmata.",
+      "The alignment of individual unlinked sister chromatids along the metaphase plate.",
+      "The sudden fission of the circular mitochondrial DNA loop."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 1 describes an interphase/prophase layout link, not a meiotic dissolution step. Option 2 is correct because the text notes that the beginning of diplotene is recognized by the dissolution of the synaptonemal complex. The homologous chromosomes within the bivalents tend to separate from each other due to this structural breakdown, but remain linked at the specific crossover points, creating visible X-shaped structures called chiasmata [the physical manifestation of crossing over where non-sister chromatids remain connected]. Option 3 describes a metaphase layout. Option 4 describes mitochondrial replication, which is separate from nuclear meiosis."
+  },
+  {
+    "p_id": "bpsc_cellcycle_v1_19",
+    "qe": "In the meiotic lifecycle of certain organisms, a prolonged arrest during the diplotene stage can occur. In which specific animal cell type can this stage last for months or years?",
+    "qh": "कुछ जीवों के अर्धसूत्री जीवन चक्र में, डिप्लोटीन चरण के दौरान एक लंबा ठहराव (prolonged arrest) हो सकता है। किस विशिष्ट जंतु कोशिका प्रकार में यह चरण महीनों या वर्षों तक चल सकता है?",
+    "o": [
+      "Somatic cells of adult vertebrate heart tissues.",
+      "Oocytes of some vertebrates.",
+      "Epidermal cells lining the insect gut wall.",
+      "Mature erythrocytes circulating in human blood vascular networks."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 1 is incorrect because heart tissue cells withdraw into the mitotic G0 stage, not meiotic prophase variants. Option 2 is correct because the textbook highlights an important physiological exception: in the oocytes [immature egg cells developing during female gametogenesis] of some vertebrate animals, the diplotene stage can undergo metabolic arrest, lasting for months or even years before resuming development. Option 3 describes somatic lines that multiply rapidly via standard mitosis. Option 4 describes enucleated dead cells that cannot execute meiosis."
+  },
+  {
+    "p_id": "bpsc_cellcycle_v1_20",
+    "qe": "What specific chromosomal milestone marks the final stage of meiotic prophase I (diakinesis), completing the transition to metaphase I?",
+    "qh": "कौन सा विशिष्ट गुणसूत्र मील का पत्थर अर्धसूत्री प्रोफेज I के अंतिम चरण (डायकाइनेसिस) को चिह्नित करता है, जो मेटाफेज I में संक्रमण को पूरा करता है?",
+    "o": [
+      "The replication of circular plasmid structures outside the nucleus.",
+      "The terminalisation of chiasmata along with the complete breakdown of the nuclear envelope.",
+      "The synthesis of structural cellulose fibers to establish a cell plate.",
+      "The alignment of sister chromatids at opposite centriole aster poles."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 1 refers to prokaryotic elements that lack a nuclear envelope or meiotic prophase. Option 2 is correct because diakinesis is the final stage of meiotic prophase I and is characterized by the terminalisation of chiasmata [the shifting of chiasmata links toward the very ends of the chromosomes]. The chromosomes become fully condensed, the meiotic spindle is assembled, the nucleolus disappears, and the complete breakdown of the nuclear envelope occurs, signaling the clear transition into metaphase I. Option 3 describes plant cytokinesis. Option 4 describes anaphase orientation parameters."
+  },
+  
+  {
+    "p_id": "bpsc_cell_v6_01",
+    "qe": "During the chromosomal segregation phase of Meiosis I, which structural configuration prevents the early absolute separation of sister chromatids to opposite poles?",
+    "qh": "अर्धसूत्रीविभाजन I (Meiosis I) के गुणसूत्र पृथक्करण चरण के दौरान, कौन सा संरचनात्मक विन्यास विपरीत ध्रुवों की ओर सिस्टर क्रोमैटिड्स के शुरुआती पूर्ण पृथक्करण को रोकता है?",
+    "o": [
+      "The complete terminalisation of chiasmata linkages along the equatorial plate.",
+      "The split of centromeres driven by the rapid shortening of kinetochore tubules.",
+      "The homologous chromosomes separate while sister chromatids remain associated at their centromeres.",
+      "The transient formation of a multinucleate syncytium inside the cytoplasmic matrix."
+    ],
+    "a": 2,
+    "e": "<b>Explanation:</b> Option 1 describes an event of early meiotic prophase I/metaphase I transition, not a mechanism protecting sister chromatids during segregation. Option 2 describes the mechanical process of mitosis or meiosis II, where centromeres split. Option 3 is correct because the source text notes a major conceptual distinction for Anaphase I: the homologous chromosomes [pairs of maternal and paternal chromosomes that align together] separate and migrate to opposite poles, while sister chromatids [identical copies formed by DNA replication] remain structurally associated at their centromeres. This prevents their separation until Anaphase II. Option 4 is an unrelated distractor describing coenocytic nuclear divisions."
+  },
+  {
+    "p_id": "bpsc_cell_v6_02",
+    "qe": "What physical feature and ploidy status define the temporary cellular stage known as the 'dyad of cells' formed at the completion of Telophase I?",
+    "qh": "टेलोफेज I (Telophase I) के पूरा होने पर बनने वाले 'कोशिकाओं के डायड' (dyad of cells) के रूप में जाने जाने वाले अस्थायी कोशिकीय चरण को कौन सी भौतिक विशेषता और प्लॉइडी स्थिति परिभाषित करती है?",
+    "o": [
+      "Four distinct haploid nuclei enclosed inside a single rigid cell plate.",
+      "Two cells with reconstituted nuclear envelopes containing partially dispersed chromosomes that have not reached an interphase state.",
+      "A single multinucleate syncytium containing completely elongated naked genomic DNA complexes.",
+      "Two diploid somatic units showing completely duplicated perpendicular centriole hubs."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 1 describes a tetrad of cells formed at the end of meiosis II, not telophase I. Option 2 is correct because the text states that at Telophase I, the nuclear membrane and nucleolus reappear, followed by cytokinesis to form a dyad of cells [a pair of haploid cells resulting from the first meiotic division]. Crucially, although the chromosomes undergo some dispersion, they do not reach the extremely extended, uncoiled state of the true interphase nucleus. Option 3 describes an undivided liquid endosperm configuration. Option 4 is incorrect because the resulting cells are already haploid in terms of chromosome sets, although each chromosome consists of two chromatids."
+  },
+  {
+    "p_id": "bpsc_cell_v6_03",
+    "qe": "The metabolic interlude between Meiosis I and Meiosis II is designated as interkinesis. What operational constraint distinguishes this stage from a true interphase?",
+    "qh": "अर्धसूत्रीविभाजन I और II के बीच के चयापचय अंतराल (metabolic interlude) को इंटरकिनेसिस (interkinesis) कहा जाता है। कौन सा परिचालन प्रतिबंध इस चरण को एक सच्चे इंटरफेज से अलग करता है?",
+    "o": [
+      "There is no replication of DNA during interkinesis.",
+      "The continuous biogenesis of a peptidoglycan layer occurs instead of protein tracking.",
+      "Ribosomes are fully digested by aggressive vacuolar hydrolases.",
+      "Chromosomes undergo complete elongation into an uncoiled chromatin mesh."
+    ],
+    "a": 0,
+    "e": "<b>Explanation:</b> Option 1 is correct because the text notes that the stage between the two meiotic divisions is called interkinesis and is generally short-lived. Crucially, there is no replication of DNA during interkinesis [the brief transitional resting phase between meiosis I and II]. This lack of replication ensures that the reductional work of meiosis I is maintained, allowing meiosis II to divide the remaining sister chromatids. Option 2 is incorrect because peptidoglycan is specific to bacterial cells, not meiotic eukaryotes. Option 3 describes an autolytic cell death pattern. Option 4 is incorrect because chromosomes remain partially condensed during this brief gap."
+  },
+  {
+    "p_id": "bpsc_cell_v6_04",
+    "qe": "What mechanical milestone marks the precise initiation of Anaphase II during the equatorial segregation of chromosomes?",
+    "qh": "गुणसूत्रों के भूमध्यरेखीय पृथक्करण (equatorial segregation) के दौरान कौन सा यांत्रिक मील का पत्थर एनाफेज II (Anaphase II) की सटीक शुरुआत को चिह्नित करता है?",
+    "o": [
+      "The dissolution of the radial spoke linkers inside the basal body.",
+      "The simultaneous splitting of the centromere of each chromosome that was holding sister chromatids together.",
+      "The terminalisation of chiasmata across non-homologous arms.",
+      "The active fusion of specialized lipid vesicles to establish a central cell plate."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 1 is incorrect because basal bodies anchor cilia and flagella, having no role in nuclear chromosome splitting. Option 2 is correct because Anaphase II begins with the simultaneous splitting of the centromere of each chromosome, which had held the sister chromatids together. This allows them to move toward opposite poles of the cell via the shortening of microtubules attached to kinetochores [protein complexes built on the centromeric DNA where spindle fibers bind]. Option 3 describes prophase I transition dynamics. Option 4 describes plant cell cytokinesis."
+  },
+  {
+    "p_id": "bpsc_cell_v6_05",
+    "qe": "Biologists frequently observe a profound evolutionary paradox in meiosis. What is this paradox, and how is it resolved across generations of sexually reproducing organisms?",
+    "qh": "जीवविज्ञानी अक्सर अर्धसूत्रीविभाजन में एक गहरा विकासवादी विरोधाभास (evolutionary paradox) देखते हैं। यह विरोधाभास क्या है, और यौन रूप से प्रजनन करने वाले जीवों की पीढ़ियों में इसे कैसे हल किया जाता है?",
+    "o": [
+      "It completely halts the synthesis of ribosomal RNA while maximizing the numbers of nucleoli.",
+      "It reduces the chromosome number by half per se, yet achieves the conservation of specific species chromosome numbers across generations.",
+      "It causes rapid genetic mutations that eliminate the capacity for natural evolution.",
+      "It requires the simultaneous assembly of both 70S and 80S ribosomes in the outer envelope."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 1 is incorrect because meiotic stages do not target rRNA synthesis as an evolutionary paradox. Option 2 is correct because the text notes that meiosis is the mechanism by which conservation of the specific chromosome number of each species is achieved across generations in sexually reproducing organisms, even though the process, per se, paradoxically results in the reduction of chromosome number by half. This reduction is balanced by fertilization [the fusion of two haploid gametes], which restores the correct diploid number. Option 3 is incorrect because meiosis increases genetic variability, which supports evolution. Option 4 is an unrelated structural distractor."
+  },
+  {
+    "p_id": "bpsc_cell_v6_06",
+    "qe": "A mature plant cell and a mature mammalian blood cell are compared under an electron microscope. Which structural configuration do they uniquely share as an evolutionary or developmental adaptation?",
+    "qh": "एक परिपक्व पादप कोशिका और एक परिपक्व स्तनधारी रक्त कोशिका की तुलना इलेक्ट्रॉन सूक्ष्मदर्शी के नीचे की जाती है। वे एक विकासवादी या विकासात्मक अनुकूलन के रूप में विशिष्ट रूप से कौन सा संरचनात्मक विन्यास साझा करते हैं?",
+    "o": [
+      "The complete absence of mitochondria and internal proteinaceous cytoskeleton networks.",
+      "The total absence of a nucleus at their mature operational stage.",
+      "The presence of a thick cellulosic cell wall combined with hemoglobin pigments.",
+      "The utilization of silver nitrate solutions to alter nuclear membrane permeability."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 1 is incorrect because plant sieve tubes lack a nucleus but mammalian erythrocytes lack mitochondria, meaning they do not share a complete absence of both. Option 2 is correct because the text states that the common characteristic feature of plant sieve tube cells [specialized phloem components responsible for sugar transport] and mammalian erythrocytes [red blood cells specialized for gaseous exchange] is the absolute absence of a nucleus at maturity. This allows maximum space for transport functions. Option 3 is incorrect because erythrocytes lack cell walls and sieve tubes lack hemoglobin. Option 4 describes a laboratory technique, not a shared cellular adaptation."
+  },
+  {
+    "p_id": "bpsc_cell_v6_07",
+    "qe": "Why is it scientifically inaccurate to state that ribosomes are entirely passive particles with no role in protein synthesis?",
+    "qh": "यह कहना वैज्ञानिक रूप से गलत क्यों है कि राइबोसोम पूरी तरह से निष्क्रिय कण हैं जिनकी प्रोटीन संश्लेषण में कोई भूमिका नहीं है?",
+    "o": [
+      "They function as the primary energy houses that synthesize chemical ATP molecules.",
+      "They are specialized protein factories that read mRNA strands to translate polypeptides.",
+      "They act as acidic membrane-bound bags that digest incoming organic polymers.",
+      "They physically generate the mitotic spindle apparatus from perpendicular tubulin hubs."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 1 describes the function of mitochondria, not ribosomes. Option 2 is correct because the text states that ribosomes are truly called the protein factories of the cell, playing a vital role in protein synthesis. They bind messenger RNA (mRNA) and coordinate the translation of genetic codes into functional polypeptide chains. Option 3 describes lysosomes. Option 4 describes the role of centrosomes/centrioles during nuclear division."
+  },
+  {
+    "p_id": "bpsc_cell_v6_08",
+    "qe": "An unknown specimen is isolated from a biological sample. It completely lacks membrane-bound organelles and a nuclear envelope. Which of the following genera matches this structural profile?",
+    "qh": "एक जैविक नमूने से एक अज्ञात नमूना अलग किया जाता है। इसमें झिल्लीबद्ध अंगकों (membrane-bound organelles) और परमाणु लिफाफे का पूरी तरह से अभाव है। निम्नलिखित में से कौन सा वंश (genus) इस संरचनात्मक प्रोफ़ाइल से मेल खाता है?",
+    "o": [
+      "Spirogyra",
+      "Anabaena",
+      "Euglena",
+      "Agaricus"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 1, Option 3, and Option 4 are incorrect because Spirogyra (a green alga), Euglena (a protist), and Agaricus (a fungus) are all eukaryotic organisms that possess well-defined nuclei bound by a nuclear envelope, along with membrane-enclosed organelles like mitochondria. Option 2 is correct because <i>Anabaena</i> is a cyanobacterium [blue-green alga], which is a prokaryote. It is structurally characterized by the absolute absence of membrane-bound organelles and a poorly defined, naked nuclear region containing nucleic acids without a nuclear membrane."
+  },
+  {
+    "p_id": "bpsc_cell_v6_09",
+    "qe": "A cytologist needs a basic dye that can specifically bind to negatively charged nucleic acids and chromosomes, turning them a distinct pink color under a microscope. Which stain should they select?",
+    "qh": "एक कोशिकाविज्ञानी (cytologist) को एक बुनियादी रंजक (basic dye) की आवश्यकता होती है जो विशेष रूप से नकारात्मक रूप से आवेशित न्यूक्लिक एसिड और गुणसूत्रों से बंध सके, जिससे वे सूक्ष्मदर्शी के नीचे एक विशिष्ट गुलाबी रंग के दिखाई दें। उन्हें किस रंजक का चयन करना चाहिए?",
+    "o": [
+      "Safranin counterstain",
+      "Carmine",
+      "Basic Fuschin",
+      "Janus Green B indicator"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 1 is incorrect because safranin is used as a counterstain for bacterial cell walls or lignified plant tissue, not for specialized pink chromosomal profiling. Option 2 is correct because the text specifies that Carmine is a basic dye used to stain nucleic acids and chromosomes. Because chromosomes possess a negative charge, they bind this basic dye, giving them a distinct pink color that differentiates them from other cellular organelles. Option 3 is incorrect because Basic Fuschin targets human elastic fibers or muscle tissues. Option 4 is an indicator stain specific to mitochondria."
+  },
+  {
+    "p_id": "bpsc_cell_v6_10",
+    "qe": "Which of the following choices correctly arranges the cells in an ascending order based strictly on their physical dimensions?",
+    "qh": "निम्नलिखित में से कौन सा विकल्प कोशिकाओं को उनके भौतिक आयामों (physical dimensions) के आधार पर बढ़ते क्रम में सही ढंग से व्यवस्थित करता है?",
+    "o": [
+      "Human RBC $\\rightarrow$ Mycoplasma $\\rightarrow$ Bacteria $\\rightarrow$ Ostrich egg",
+      "Mycoplasma $\\rightarrow$ Bacteria $\\rightarrow$ Human RBC $\\rightarrow$ Ostrich egg",
+      "Bacteria $\\rightarrow$ Mycoplasma $\\rightarrow$ Ostrich egg $\\rightarrow$ Human RBC",
+      "Ostrich egg $\\rightarrow$ Human RBC $\\rightarrow$ Bacteria $\\rightarrow$ Mycoplasma"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 1, Option 3, and Option 4 present incorrect sequences that misrepresent the physical scales of these cells. Option 2 is correct because the text gives clear metrics: Mycoplasmas are the smallest cells at only 0.3 $\\mu$m in length. Bacterial cells measure between 3 to 5 $\\mu$m. Human red blood cells (RBCs) have a diameter of approximately 7.0 $\\mu$m. The single isolated egg of an ostrich is the largest known cell, measuring around 15 $\\times$ 13 cm. This yields the correct ascending sequence: Mycoplasma $\\rightarrow$ Bacteria $\\rightarrow$ Human RBC $\\rightarrow$ Ostrich egg."
+  },
+  {
+    "p_id": "bpsc_cell_v6_11",
+    "qe": "Which cellular component can be observed in both prokaryotic bacterial cells and eukaryotic plant cells, while being entirely absent from animal cell matrices?",
+    "qh": "कौन सा कोशिकीय घटक प्रोकेरियोटिक बैक्टीरियल कोशिकाओं और यूकेरियोटिक पादप कोशिकाओं दोनों में देखा जा सकता है, जबकि जंतु कोशिका मैट्रिसेस से पूरी तरह अनुपस्थित होता है?",
+    "o": [
+      "Naked circular genomic chromatin threads",
+      "A protective cell wall",
+      "A double-membrane bound nuclear envelope",
+      "An elaborate network of intermediate filaments"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 1 describes a prokaryotic trait that is absent in eukaryotic plants. Option 2 is correct because the text notes that the presence of a cell wall is a common structural feature observed in both prokaryotes (bacteria) and some eukaryotes (plants and fungi), while being completely absent in animal cells. The cell wall provides structural support, protection, and shape. Option 3 is incorrect because prokaryotes lack a nuclear envelope. Option 4 describes advanced eukaryotic cytoskeletal arrays."
+  },
+  {
+    "p_id": "bpsc_cell_v6_12",
+    "qe": "A biochemist analyzes a plasma membrane and isolates a set of carbohydrates. Which statement accurately addresses the validity of this finding based on historical cell membrane models?",
+    "qh": "एक जैव रसायनविज्ञानी प्लाज्मा झिल्ली का विश्लेषण करता है और कार्बोहाइड्रेट के एक समूह को अलग करता है। कौन सा कथन ऐतिहासिक सेल झिल्ली मॉडल के आधार पर इस खोज की सत्यता को सटीक रूप से संबोधित करता है?",
+    "o": [
+      "The finding is invalid because membranes are strictly composed of 100% phosphoglycerides.",
+      "The finding is valid because biochemical investigations clearly demonstrate that membranes possess protein, lipid, and carbohydrate components.",
+      "The finding is invalid because carbohydrates are only synthesized inside mitochondrial cristae folds.",
+      "The finding is valid because carbohydrates form the internal hydrophobic tail core of the bilayer."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 1 is incorrect because membranes are not made purely of lipids. Option 2 is correct because the text states that the old view that carbohydrates are never found in the plasma membrane is false. Modern biochemical investigations demonstrate that cell membranes possess protein, lipid, and carbohydrate components. These carbohydrates link to lipids or proteins on the outer leaflet to aid intercellular interactions. Option 3 is incorrect because carbohydrates are not made in mitochondrial cristae. Option 4 is incorrect because the hydrophobic core consists of nonpolar fatty acid hydrocarbon tails."
+  },
+  {
+    "p_id": "bpsc_cell_v6_13",
+    "qe": "What precise structural component distinguishes a chloroplast plastid from a mitochondrion when evaluating their double-membrane profiles under a microscope?",
+    "qh": "सूक्ष्मदर्शी के नीचे उनकी दोहरी झिल्ली प्रोफाइल का मूल्यांकन करते समय कौन सा सटीक संरचनात्मक घटक एक क्लोरोप्लास्ट प्लास्टिड को माइटोकॉन्ड्रियन से अलग करता है?",
+    "o": [
+      "The presence of an independent circular DNA loop.",
+      "The presence of internal thylakoids stacked into grana structures.",
+      "The complete absence of functional 70S matrix ribosomes.",
+      "The capacity to undergo binary replication via simple fission."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 1 is incorrect because both organelles possess their own independent circular DNA. Option 2 is correct because chloroplasts contain thylakoids [flattened, organized membranous sacs present in the stroma that stack like coin piles into grana]. This architecture is unique to photosynthetic plastids. Mitochondria lack thylakoids and possess deep inner membrane infoldings called cristae instead. Option 3 is incorrect because both contain 70S ribosomes. Option 4 is incorrect because both organelles multiply via division processes like fission."
+  },
+  {
+    "p_id": "bpsc_cell_v6_14",
+    "qe": "The cytoskeleton plays multiple dynamic roles inside eukaryotic cells. Which of the following processes is a function *excluded* from the operations of the cytoskeleton network?",
+    "qh": "यूकेरियोटिक कोशिकाओं के भीतर साइटोस्केलेटन कई गतिशील भूमिकाएं निभाता है। निम्नलिखित में से कौन सी प्रक्रिया साइटोस्केलेटन नेटवर्क के कार्यों से *बाहर* है?",
+    "o": [
+      "Providing mechanical support to maintain cell shape.",
+      "Intracellular bulk transport of materials along concentration gradients.",
+      "Assisting in cellular motility and layout organization.",
+      "Keeping organelles separated from one another to prevent functional interference."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 1, Option 3, and Option 4 are incorrect because they represent verified functions of the cytoskeleton network, which provides mechanical support, aids motility, maintains shape, and keeps internal organelles physically separated to prevent operational interference. Option 2 is correct because the text explicitly clarifies that the cytoskeleton is not associated with the passive intracellular transport of materials along concentration gradients; transport is managed by diffusion, carrier proteins, or vesicle trafficking rather than cytoskeletal filaments themselves."
+  },
+  {
+    "p_id": "bpsc_cell_v6_15",
+    "qe": "A researcher wishes to specifically stain active mitochondria to monitor respiration paths. Which specialized indicator dye should they utilize?",
+    "qh": "एक शोधकर्ता श्वसन पथों की निगरानी के लिए विशेष रूप से सक्रिय माइटोकॉन्ड्रिया को रंगना (stain) चाहता है। उन्हें किस विशिष्ट संकेतक रंजक (indicator dye) का उपयोग करना चाहिए?",
+    "o": [
+      "Acetocarmine solution",
+      "Janus Green B",
+      "Fast Green at alkaline pH",
+      "Suberized Safranin counterstain"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 1 is incorrect because acetocarmine targets nucleic acids and nuclear chromosomes. Option 2 is correct because Janus Green B acts as a specialized indicator dye used to stain mitochondria. It changes color according to the local oxygen concentration, oxidizing to a blue color in the presence of oxygen within the active respiratory respiratory matrices, and changing to pink in its absence. Option 3 is used to stain histones after acid extraction. Option 4 is used for nuclei and cell walls."
+  },
+  {
+    "p_id": "bpsc_cell_v6_16",
+    "qe": "When calculating the biophysical behavior of cell fractions during high-speed ultracentrifugation, what actual duration value corresponds to one Svedberg Unit (1S)?",
+    "qh": "उच्च गति अल्ट्रासेंट्रीफ्यूजेशन (ultracentrifugation) के दौरान सेल अंशों के जैव-भौतिक व्यवहार की गणना करते समय, एक स्वेडबर्ग यूनिट (1S) का वास्तविक मूल्य क्या होता है?",
+    "o": [
+      "$10^{-3}$ seconds",
+      "$10^{-13}$ seconds",
+      "$10^{-23}$ seconds",
+      "$10^{-6}$ seconds"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 1, Option 3, and Option 4 present incorrect physical exponents that are mathematically invalid. Option 2 is correct because the text establishes that 'S' refers to Svedberg's unit for the sedimentation coefficient [a physical value tracking how fast an organelle travels down a centrifugal field]. The absolute physical value of 1S is precisely equal to $10^{-13}$ seconds, serving as a direct metric of macromolecular size and density profile."
+  },
+  {
+    "p_id": "bpsc_cell_v6_17",
+    "qe": "Which of the following prokaryotic structures represents a specialized sub-microscopic assembly surrounded by a thin protein membrane, designed to store metabolic gases and regulate buoyancy?",
+    "qh": "निम्नलिखित में से कौन सी प्रोकेरियोटिक संरचना एक पतली प्रोटीन झिल्ली से घिरे एक विशेष उप-सूक्ष्म संयोजन का प्रतिनिधित्व करती है, जिसे चयापचय गैसों को संग्रहीत करने और उछाल (buoyancy) को विनियमित करने के लिए डिज़ाइन किया गया है?",
+    "o": [
+      "A rigid peptidoglycan flagellum hook",
+      "Gas vacuoles (pseudovacuoles)",
+      "Dense phosphate inclusion bodies",
+      "Concentric Golgi cisternae stacks"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 1 describes a mechanical component of flagellar motility, not a gas storage organelle. Option 2 is correct because gas vacuoles, also known as pseudovacuoles or air vacuoles, are specialized inclusion bodies found in prokaryotes like blue-green, purple, and green photosynthetic bacteria. Each gas vesicle within these structures is surrounded by a thin protein membrane and stores metabolic gases to regulate buoyancy [the ability to float or adjust position in a liquid column]. Option 3 describes solid mineral storage inclusions. Option 4 describes a eukaryotic organelle system."
+  },
+  {
+    "p_id": "bpsc_cell_v6_18",
+    "qe": "During active polypeptide elongation in the cytoplasm, several ribosomes are often held together simultaneously by a single strand of messenger RNA. What is this group called?",
+    "qh": "साइटोप्लाज्म में सक्रिय पॉलीपेप्टाइड बढ़ाव (polypeptide elongation) के दौरान, कई राइबोसोम अक्सर मैसेंजर RNA के एक एकल स्ट्रैंड द्वारा एक साथ जुड़े होते हैं। इस समूह को क्या कहा जाता है?",
+    "o": [
+      "A bivalent tetrad assembly",
+      "A polysome or polyribosome",
+      "An axoneme core doublet",
+      "A nucleolar organizer region"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 1 describes paired homologous chromosomes in meiotic prophase I. Option 2 is correct because the text notes that a cluster of ribosomes held simultaneously by a single strand of messenger RNA (mRNA) in a rosette or helical group forms a polysome or polyribosome. This arrangement allows the cell to produce multiple identical copies of the same polypeptide chain simultaneously from a single transcript during active protein synthesis. Option 3 describes ciliary microtubule arrangements. Option 4 describes a specific chromosome constriction region associated with the nucleolus."
+  },
+  {
+    "p_id": "bpsc_cell_v6_19",
+    "qe": "If a chromosome exhibits a median centromere that sits exactly in the middle portion of the structural rod, what configuration arms are generated?",
+    "qh": "यदि एक गुणसूत्र (chromosome) एक मध्यिका सेंट्रोमीयर (median centromere) प्रदर्शित करता है जो संरचनात्मक छड़ के बिल्कुल मध्य भाग में बैठता है, तो कौन सी विन्यास भुजाएँ (configuration arms) उत्पन्न होती हैं?",
+    "o": [
+      "One extremely short arm and one trailing satellite fragment.",
+      "Two equal arms, forming a metacentric chromosome.",
+      "One shorter arm and one much longer trailing arm.",
+      "A terminal constriction lacking any distal arms."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 1 describes an acrocentric chromosome pattern with an added satellite. Option 2 is correct because based on the position of the centromere, a chromosome with a median centromere lying precisely in the middle portion forms two equal arms. This symmetrical layout is classified as a metacentric chromosome. Option 3 describes a sub-metacentric layout. Option 4 describes a telocentric chromosome with a terminal centromere."
+  },
+  {
+    "p_id": "bpsc_cell_v6_20",
+    "qe": "The nucleolus is a distinct, irregular structure located within the nuclear matrix. What specific chromosomal zone serves as its physical attachment site?",
+    "qh": "न्यूक्लियोलस (Nucleolus) न्यूक्लियर मैट्रिक्स के भीतर स्थित एक विशिष्ट, अनियमित संरचना है। कौन सा विशिष्ट गुणसूत्र क्षेत्र इसके भौतिक लगाव स्थल (physical attachment site) के रूप में कार्य करता है?",
+    "o": [
+      "The primary kinetochore disc",
+      "The Nucleolar Organizer Region (NOR) of chromatin",
+      "The terminal telocentric centromere cap",
+      "The nonpolar hydrophobic inner membrane leaflet"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 1 is incorrect because kinetochores attach spindle fibers, not the nucleolus. Option 2 is correct because the nucleolus is a naked, round, slightly irregular structure present in the nucleoplasm that is attached to the chromatin at a specific region called the Nucleolar Organizer Region (NOR) [a chromosomal region containing the genes that code for ribosomal RNA]. This physical link anchors the site where active rRNA synthesis occurs. Option 3 and Option 4 describe structural boundaries that do not serve as nucleolar attachment scaffolds."
+  },
+  
+  {
+    "p_id": "bpsc_cell_v7_01",
+    "qe": "Which of the following processes represents a primary operational function of the eukaryotic nucleolus during the biogenesis of translational machinery?",
+    "qh": "अनुवादन मशीनरी (translational machinery) के जैवजनन के दौरान यूकेरियोटिक न्यूक्लियोलस का एक प्राथमिक परिचालन कार्य निम्नलिखित में से कौन सा है?",
+    "o": [
+      "The covalent replication of independent circular extragenomic DNA loops.",
+      "The synthesis of ribosomal RNA and assembly of ribosomal subunits.",
+      "The oxidative breakdown of glucose 6-phosphate into glycogen matrices.",
+      "The mechanical alignment of peripheral triplet fibrils at the spindle pole."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 1 describes mitochondrial or plastid DNA behavior, not nucleolar functions. Option 2 is correct because the source text explicitly establishes that the nucleolus is the chief site for active ribosomal RNA (rRNA) synthesis [the biochemical transcription of structural RNA components] and serves as the assembly center where rRNA combines with cytoplasmically imported proteins to form ribosomal subunits. These subunits then export to the cytoplasm. Option 3 describes a smooth endoplasmic reticulum metabolic pathway, not nucleolar operations. Option 4 describes centriolar spindle mechanics during karyokinesis."
+  },
+  {
+    "p_id": "bpsc_cell_v7_02",
+    "qe": "How do short branched chains of carbohydrates structuralized on the outer leaflet of human red blood cells determine specific ABO blood group identities?",
+    "qh": "मानव लाल रक्त कोशिकाओं (RBCs) के बाहरी लीफलेट पर संरचनात्मक रूप से व्यवस्थित कार्बोहाइड्रेट की छोटी शाखित श्रृंखलाएं (short branched chains) विशिष्ट ABO रक्त समूह की पहचान कैसे निर्धारित करती हैं?",
+    "o": [
+      "By altering the absolute physical thickness of the non-polar lipid bilayer core.",
+      "By acting as highly specific cell recognition antigens based on their varied chain arrangements.",
+      "By serving as energy-generating substrates that actively synthesize hemoglobin molecules.",
+      "By chemically cleaving peripheral proteins into functional lysosomal vesicles."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 1 is incorrect because carbohydrates do not cross or form the inner hydrophobic core of the bilayer. Option 2 is correct because the text notes that carbohydrates/sugar residues attach to membrane lipids or proteins, making up less than 10% of membrane weight. On the surface of RBCs, these carbohydrates are arranged in branched chains; differences in their unique structural arrangement give rise to different blood group antigens [surface molecules that trigger a specific immune response], thereby governing cell recognition and specificity for hormones, drugs, or pathogens. Option 3 and Option 4 are scientifically inaccurate distractors concerning hemoglobin and lysosome synthesis."
+  },
+  {
+    "p_id": "bpsc_cell_v7_03",
+    "qe": "What precise geometric arrangement characterizes the microtubular architecture of a eukaryotic centriole core, and how does it compare with the axoneme of a motile flagellum?",
+    "qh": "एक यूकेरियोटिक सेंट्रीओल कोर की सूक्ष्मनलिका वास्तुकला (microtubular architecture) को कौन सा सटीक ज्यामितीय विन्यास परिभाषित करता है, और एक गतिशील फ्लैगेलम के एक्सोनम से इसकी तुलना कैसे की जाती है?",
+    "o": [
+      "A 9+2 array composed entirely of central triplets and peripheral doublets.",
+      "A 9+0 array consisting of 9 peripheral triplet fibrils with an absolute absence of fibrils in the center.",
+      "A loose, unorganized protein network lacking radial spokes or a central hub matrix.",
+      "A single linear column of saturated phosphoglyceride vesicles anchored to the cell wall."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 1 describes the 9+2 array characteristic of motile ciliary or flagellar axonemes [the core structure of cilia and flagella containing doublets and a central pair]. Option 2 is correct because the text establishes that a centriole features a cartwheel-like 9+0 arrangement [a specific microtubular layout consisting of 9 peripheral fibrils with zero microtubules in the center]. Each of these 9 peripheral fibrils is structured as a triplet fibril made of 3 sub-fibres, connected to a central proteinaceous hub via radial spokes. Option 3 is incorrect because centrioles are highly organized structures. Option 4 is an chemically invalid distractor mixing lipids with tubulin protein geometry."
+  },
+  {
+    "p_id": "bpsc_cell_v7_04",
+    "qe": "Historical reviews show that Schleiden and Schwann's classical cell theory (1838-1839) had a major operational limitation. Which concept required Carl Nageli and Rudolf Virchow's interventions to provide a resolution?",
+    "qh": "ऐतिहासिक समीक्षाओं से पता चलता है कि श्लेडेन और श्वान के क्लासिक कोशिका सिद्धांत (1838-1839) की एक प्रमुख परिचालन सीमा थी। किस अवधारणा को हल करने के लिए कार्ल नागेली और रुडोल्फ विरचो के हस्तक्षेप की आवश्यकता थी?",
+    "o": [
+      "The chemical composition of the non-polar lipid bilayer matrix.",
+      "The exact structural mechanisms detailing the continuous origin and formation of new cells.",
+      "The structural identification of 70S ribosomes within the fluid stroma.",
+      "The verification of viral self-regulation within intracellular spaces."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 1 describes membrane biophysical properties resolved in the 1970s. Option 2 is correct because the classical cell theory stated by Schleiden and Schwann failed to explain the question of the origin of cells. Carl Nageli (1846) first expressed the basic concept, which was later expanded with extensive evidence by Rudolf Virchow (1855) through the landmark dictum <i>'Omnis cellula e cellula'</i>, establishing that all cells arise from pre-existing cells via cell division. Option 3 describes Palade's ribosome tracking. Option 4 is incorrect because viruses are non-cellular exceptions that cannot self-regulate."
+  },
+  {
+    "p_id": "bpsc_cell_v7_05",
+    "qe": "Why are viruses universally classified as structural exceptions to the modern tenets of the Cell Theory?",
+    "qh": "विषाणुओं (viruses) को सार्वभौमिक रूप से कोशिका सिद्धांत (Cell Theory) के आधुनिक सिद्धांतों के संरचनात्मक अपवाद के रूप में क्यों वर्गीकृत किया जाता है?",
+    "o": [
+      "They undergo rapid binary fission inside extracellular fluid matrices without utilizing host energy.",
+      "They are non-cellular entities composed of a nucleic acid core enclosed in a protein sheath, incapable of independent existence.",
+      "They possess complex 9+0 triplet centriole hubs that actively synthesize their own cellular boundaries.",
+      "They contain basic histone octamers that prevent genomic replication cycles."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 1 describes bacterial replication behavior, whereas viruses are inert outside a host. Option 2 is correct because the source text explicitly highlights that viruses are exceptions to the cell theory because they are not composed of cells [the baseline structural and functional unit of life]. Instead, they consist merely of a nucleic acid (DNA or RNA) core surrounded by a protective protein sheath and completely lack independent existence, self-regulation, and self-reproduction until they invade a living cellular system. Option 3 and Option 4 incorrectly mix centriole and chromosome structural terms into viral biology."
+  },
+  {
+    "p_id": "bpsc_cell_v7_06",
+    "qe": "When evaluating structural architecture under an electron microscope, what primary morphological feature differentiates the membrane network of Rough ER (RER) from Smooth ER (SER)?",
+    "qh": "इलेक्ट्रॉन सूक्ष्मदर्शी के तहत संरचनात्मक वास्तुकला का मूल्यांकन करते समय, कौन सी प्राथमिक रूपात्मक विशेषता (morphological feature) रफ ER (RER) के झिल्ली नेटवर्क को स्मूथ ER (SER) से अलग करती है?",
+    "o": [
+      "RER is primarily localized in the outermost peripheral margins connected to the plasmalemma.",
+      "RER is mainly formed of flat cisternae with attached surface ribosomes, whereas SER is predominantly composed of vesicles and tubules.",
+      "RER contains a high density of active detoxification enzymes within its luminal space.",
+      "RER completely lacks any structural connections with the double-layered nuclear envelope."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 1 describes the peripheral positioning typical of the SER, not the internal RER. Option 2 is correct because the text outlines distinct structural differences: RER possesses ribosomes attached to its outer surface and is mainly formed of flat cisternae [disc-shaped membranous sacs] and a few tubules. Conversely, SER lacks attached ribosomes and is mainly formed of vesicles [small spherical fluid-filled sacs] and tubules. Option 3 describes an attribute unique to the SER, as RER lacks detoxification enzymes. Option 4 is false because RER develops from and remains continuous with the nuclear envelope."
+  },
+  {
+    "p_id": "bpsc_cell_v7_07",
+    "qe": "A pharmacological compound selectively blocks the enzymatic machinery inside the Smooth Endoplasmic Reticulum (SER). Which of the following biosynthetic pathways will be directly disrupted by this drug?",
+    "qh": "एक औषधीय यौगिक (pharmacological compound) चिकनी अंतःप्रद्रव्यी जालिका (SER) के भीतर एंजाइमी मशीनरी को चुनिंदा रूप से अवरुद्ध करता है। इस दवा से निम्नलिखित में से कौन सा जैवसंश्लेषण पथ (biosynthetic pathway) सीधे बाधित होगा?",
+    "o": [
+      "The transcription of ribosomal RNA strands within the nucleolus core.",
+      "The synthesis of lipids, glycogen, and steroidal hormones.",
+      "The initial assembly of basic amino acid pairs into primary lysosomal proteins.",
+      "The formation of calcium carbonate minerals within the algal envelope."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 1 describes nucleolar transcriptions, which are independent of the cytoplasmic ER. Option 2 is correct because the source text explicitly states that the Smooth Endoplasmic Reticulum (SER) takes part in the synthesis of glycogen, lipids, and steroids [lipid-based regulatory hormones]. Disrupting SER enzymes directly halts these specific lipophilic metabolic pathways. Option 3 describes a function of the ribosome-studded RER network. Option 4 describes an extracellular cell wall process found in specific algae."
+  },
+  {
+    "p_id": "bpsc_cell_v7_08",
+    "qe": "What quantitative chemical distribution characterizes the baseline structural frame of a typical biological unit membrane?",
+    "qh": "एक विशिष्ट जैविक इकाई झिल्ली (unit membrane) के आधारभूत संरचनात्मक फ्रेम को कौन सा मात्रात्मक रासायनिक वितरण (quantitative chemical distribution) परिभाषित करता है?",
+    "o": [
+      "Water occupies 95%, while structural lipids are restricted to less than 1% total weight.",
+      "Lipids range from 20-79% and proteins comprise 20-70%, forming a continuous molecular frame.",
+      "Carbohydrates dominate the internal core, representing 50-60% of total framework mass.",
+      "Saturated basic histone proteins occur in pairs to make up 90% of the surface weight."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 1 and Option 3 present skewed biochemical values that contradict standard analytical data for cell boundaries. Option 2 is correct because the text outlines the baseline chemical composition of the plasma membrane: lipids make up 20-79%, proteins comprise 20-70%, carbohydrates constitute 1-5%, and water accounts for roughly 20%. Lipids form the continuous structural bilayer frame into which functional membrane proteins are embedded. Option 4 describes chromatin protein structures, which are absent in plasma membranes."
+  },
+  {
+    "p_id": "bpsc_cell_v7_09",
+    "qe": "The fundamental structural lipids of the plasma membrane are amphipathic. How are their polar and non-polar domains precisely oriented within the bilayer architecture?",
+    "qh": "प्लाज्मा झिल्ली के मौलिक संरचनात्मक लिपिड एम्फीपैथिक (amphipathic) होते हैं। उनके ध्रुवीय (polar) और गैर-ध्रुवीय (non-polar) डोमेन द्विसतह (bilayer) वास्तुकला के भीतर सटीक रूप से कैसे उन्मुख होते हैं?",
+    "o": [
+      "Hydrophobic fatty acid tails face the outer aqueous environment, while hydrophilic heads face inward.",
+      "Hydrophilic polar heads are directed outwards, while the non-polar hydrophobic fatty acid tails face towards the center.",
+      "Both domains are mixed randomly without forming a distinct double-layered unit sheet.",
+      "The polar heads integrate exclusively into the peripheral triplet networks of the spindle."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 1 presents the reverse orientation, which is thermodynamically unstable in aqueous media. Option 2 is correct because lipid molecules possess both a polar hydrophilic [water-loving] head region and a non-polar hydrophobic [water-repelling] region consisting of two fatty acid tails. In the membrane bilayer, the hydrophilic heads face outward toward the aqueous cytoplasm and extracellular fluid, while the hydrophobic tails point inward toward the center, protecting the non-polar chains from the surrounding water. Option 3 and Option 4 are physically and structurally incorrect."
+  },
+  {
+    "p_id": "bpsc_cell_v7_10",
+    "qe": "In molecular biology, what specific property allows an autonomous bacterial plasmid to be heavily utilized as a cloning vector in genetic recombination experiments?",
+    "qh": "आणविक जीव विज्ञान में, कौन सा विशिष्ट गुण एक स्वायत्त बैक्टीरियल प्लास्मिड (bacterial plasmid) को आनुवंशिक पुनर्संयोजन प्रयोगों में एक क्लोनिंग वेक्टर के रूप में भारी मात्रा में उपयोग करने की अनुमति देता है?",
+    "o": [
+      "Its capacity to synthesize basic histone octamers under high thermal heat stress.",
+      "Its ability to exist as an extrachromosomal, double-stranded DNA unit that replicates autonomously.",
+      "Its mechanical role in anchoring ciliary axoneme doublets during bacterial conjugation.",
+      "Its absolute structural dependency on the main host nucleoid chromosome for initiation."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 1 is incorrect because histones are eukaryotic proteins, and plasmids do not code for octamer cores. Option 2 is correct because a plasmid is defined as a circular (or occasionally linear), extrachromosomal double-stranded DNA molecule that replicates autonomously [independent replication separate from host genomic control]. This independence allows scientists to insert foreign genes into plasmids to monitor transformation or amplify target DNA sequences as cloning vectors. Option 3 mixes flagellar motility parts with genetic structures. Option 4 contradicts the core feature of autonomous replication."
+  },
+  {
+    "p_id": "bpsc_cell_v7_11",
+    "qe": "Eukaryotic cells package lengthy genomic DNA strands inside a tiny nucleus by utilizing a specialized group of basic proteins called histones. What specific biochemical trait facilitates this tight binding?",
+    "qh": "यूकेरियोटिक कोशिकाएं हिस्टोन (histones) नामक बुनियादी प्रोटीनों के एक विशिष्ट समूह का उपयोग करके एक छोटे से केंद्रक के भीतर लंबे जीनोमिक DNA स्ट्रैंड्स को पैक करती हैं। कौन सा विशिष्ट जैव रासायनिक लक्षण इस कड़े बंधन को सुगम बनाता है?",
+    "o": [
+      "Histones contain high concentrations of acidic amino acids that repel negative DNA nucleotides.",
+      "Histones bear positively charged ends rich in arginine and lysine that attract negatively charged DNA strands.",
+      "They undergo complete heat coagulation when exposed to normal physiological temperatures.",
+      "They are enclosed within a single lipoprotein membrane called the tonoplast sheath."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 1 is incorrect because histones are basic, not acidic, and attraction rather than repulsion drives DNA packaging. Option 2 is correct because histones are a group of basic globular proteins with a high content of basic amino acids, specifically arginine and lysine. Because these amino acid side chains carry positive charges, they strongly attract the negatively charged phosphate backbone of the DNA strands, providing a structural scaffold around which DNA winds to form chromatin material. Option 3 is false because histones are stable and do not coagulate with heat. Option 4 describes the vacuolar membrane, not nuclear proteins."
+  },
+  {
+    "p_id": "bpsc_cell_v7_12",
+    "qe": "Four of the five distinct types of histone proteins assemble in pairs to form a structural core called a Nu-body or nucleosome core. Which histone variant is *excluded* from this octamer assembly?",
+    "qh": "पांच अलग-अलग प्रकार के हिस्टोन प्रोटीनों में से चार जोड़े में एकत्रित होकर एक संरचनात्मक कोर बनाते हैं जिसे नु-बॉडी (Nu-body) या न्यूक्लिओसोम कोर कहा जाता है। कौन सा हिस्टोन संस्करण इस ऑक्टामर असेंबली (octamer assembly) से *बाहर* है?",
+    "o": [
+      "$H2A$",
+      "$H1$",
+      "$H3$",
+      "$H4$"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 1, Option 3, and Option 4 are incorrect because $H2A$, $H2B$, $H3$, and $H4$ are the four core histone proteins that occur in pairs $(2 \\times 4 = 8)$ to build the histone octamer core. Option 2 is correct because the text notes there are five total histone variants ($H1$, $H2A$, $H2B$, $H3$, $H4$). The $H1$ histone variant sits outside the main octamer core, acting as a linker histone that secures the DNA strand as it enters and exits the nucleosome bead assembly, making it the distinct variant excluded from the octamer itself."
+  },
+  {
+    "p_id": "bpsc_cell_v7_13",
+    "qe": "A plant tissue culture experiment demonstrates the phenomenon of 'totipotency' from an isolated single somatic cell. What does this property fundamentally imply?",
+    "qh": "एक पादप ऊतक संवर्धन (plant tissue culture) प्रयोग एक पृथक एकल कायिक कोशिका से 'पूर्णशक्तता' (totipotency) की घटना को प्रदर्शित करता है। इस गुण का मौलिक रूप से क्या तात्पर्य है?",
+    "o": [
+      "The capacity of a cell to actively digest its own contents via lysosomal bursting pathways.",
+      "The inherent biological capability of a single cell to develop into a complete, new organism.",
+      "The restriction of mitotic equational division exclusively to haploid male honey bees.",
+      "The continuous metabolic detoxification of foreign drug elements by internal cristae."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 1 describes autolysis, not developmental potential. Option 2 is correct because the source text explicitly defines the property of totipotency as a cell being capable of developing into a complete new organism. This reflects the reality that an individual cell contains the entire genetic blueprint and operational machinery necessary to drive complete morphogenesis when given appropriate physiological cues. Option 3 describes an insect ploidy exception. Option 4 describes SER and mitochondrial functions."
+  },
+  {
+    "p_id": "bpsc_cell_v7_14",
+    "qe": "The division of labour inside a living cell is achieved through the differential distribution of specialized structural units. How is this phenomenon organized within a eukaryotic cell?",
+    "qh": "एक जीवित कोशिका के भीतर श्रम का विभाजन (division of labour) विशेष संरचनात्मक इकाइयों के विभेदक वितरण के माध्यम से प्राप्त किया जाता है। एक यूकेरियोटिक कोशिका के भीतर यह घटना कैसे व्यवस्थित होती है?",
+    "o": [
+      "All metabolic processes are concentrated exclusively within the nuclear matrix loops.",
+      "Specific cell organelles are compartmentalized, each executing dedicated, specialized physiological functions.",
+      "The cell wall continuously synthesizes steroidal hormones via peripheral plasmodesmata.",
+      "Ribosomes dynamically convert simple sugars into calcium carbonate crystals."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 1 is incorrect because the cytoplasm is the main arena of metabolic activities, not just the nucleus. Option 2 is correct because the text notes that cells exhibit a distinct division of labour. Eukaryotic cells use extensive membrane-bound compartments called organelles (such as mitochondria for respiration, Golgi for packaging, and lysosomes for digestion), with each organelle specialized to perform a specific function to maintain the cell's living state. Option 3 is incorrect because the cell wall provides mechanical protection and does not make steroidal hormones. Option 4 describes an chemically invalid pathways for ribosomes."
+  },
+  {
+    "p_id": "bpsc_cell_v7_15",
+    "qe": "Which of the following cellular structures functions as an extensive, three-dimensional interconnected network of membrane-lined channels dividing the intracellular space into luminal and extra-luminal compartments?",
+    "qh": "निम्नलिखित में से कौन सी कोशिकीय संरचना झिल्ली-रेखीय चैनलों के एक विस्तृत, त्रि-आयामी परस्पर जुड़े नेटवर्क के रूप में कार्य करती है जो अंतःकोशकीय स्थान को ल्यूमिनल (luminal) और एक्स्ट्रा-ल्यूमिनलCompartments में विभाजित करती है?",
+    "o": [
+      "The central axoneme sheath",
+      "The Endoplasmic Reticulum (ER)",
+      "The amorphous pericentriolar matrix",
+      "The middle lamella pectin matrix"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 1 is part of ciliary movement cores. Option 2 is correct because the text defines the Endoplasmic Reticulum (ER), discovered by Porter and Thompson, as a three-dimensional, complicated, and interconnected network of membrane-like channels running through the cytoplasm. This structural network divides the internal space of the cell into two distinct zones: the luminal compartment [inside the ER channels] and the extra-luminal compartment [the surrounding ground cytoplasm matrix]. Option 3 describes centrosomal coatings. Option 4 describes the extracellular plant cell cement layer."
+  },
+  {
+    "p_id": "bpsc_cell_v7_16",
+    "qe": "During cellular development, a cell organelle is observed directly budding from the nuclear envelope, composed primarily of flat cisternae, and participating in protein translation. Identify this structure.",
+    "qh": "कोशिका के विकास के दौरान, एक कोशिका अंगक को सीधे परमाणु लिफाफे (nuclear envelope) से निकलते हुए देखा जाता है, जो मुख्य रूप से चपटी सिस्टर्नी से बना होता है, और प्रोटीन अनुवाद में भाग लेता है। इस संरचना को पहचानें।",
+    "o": [
+      "Smooth Endoplasmic Reticulum (SER)",
+      "Rough Endoplasmic Reticulum (RER)",
+      "Autonomous Bacterial Plasmid",
+      "Haploid Centrosome Hub"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 1 is incorrect because the SER lacks ribosomes, is primarily composed of tubules and vesicles rather than flat cisternae, and handles lipid synthesis rather than protein translation. Option 2 is correct because the Rough Endoplasmic Reticulum (RER) develops directly from the outer membrane of the nuclear envelope, is mainly formed of flat cisternae stacks, and has ribosomes attached to its surface to actively synthesize proteins and enzymes. Option 3 describes an independent prokaryotic DNA loop. Option 4 describes a microtubule organizing core."
+  },
+  {
+    "p_id": "bpsc_cell_v7_17",
+    "qe": "Which membrane-bound organelle is directly generated through the functional agency of the Golgi apparatus utilizing precursors synthesized by the Rough Endoplasmic Reticulum?",
+    "qh": "रफ एंडोप्लाज्मिक रेटिकुलम द्वारा संश्लेषित अग्रदूतों का उपयोग करके गोल्गी उपकरण (Golgi apparatus) की कार्यात्मक एजेंसी के माध्यम से कौन सा झिल्लीबद्ध अंगक सीधे उत्पन्न होता है?",
+    "o": [
+      "Sphaerosome vesicles",
+      "Lysosomes",
+      "Mitochondrial cristae folds",
+      "Extrachromosomal plasmids"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 1 is incorrect because sphaerosomes develop from the Smooth Endoplasmic Reticulum (SER), not the RER-Golgi pathway. Option 2 is correct because the source text notes that the Rough Endoplasmic Reticulum synthesizes hydrolytic digestive enzymes, which are then packaged and modified within the Golgi apparatus. The vesicles that bud off from the Golgi complex containing these active enzymes form lysosomes [single membrane-bound vesicles specialized for intracellular digestion]. Option 3 describes an autonomous mitochondrial structure. Option 4 describes free cytoplasmic bacterial DNA molecules."
+  },
+  {
+    "p_id": "bpsc_cell_v7_18",
+    "qe": "Plant cell plastids display remarkable structural flexibility under varying environmental conditions. What biological phenomenon is demonstrated when potato tubers are continuously exposed to direct sunlight?",
+    "qh": "विभिन्न पर्यावरणीय परिस्थितियों में पादप कोशिका प्लास्टिड्स (plastids) उल्लेखनीय संरचनात्मक लचीलापन प्रदर्शित करते हैं। जब आलू के कंदों (potato tubers) को लगातार सीधे सूर्य के प्रकाश में लाया जाता है तो कौन सी जैविक घटना प्रदर्शित होती है?",
+    "o": [
+      "The active transformation of starch-storing leucoplasts (amyloplasts) into green chloroplasts.",
+      "The permanent degradation of carotenoid pigments into simple sugar residues.",
+      "The immediate fission of the central cell vacuole into a multinucleate syncytium.",
+      "The complete conversion of cellulose cell walls into non-polar lipid sheets."
+    ],
+    "a": 0,
+    "e": "<b>Explanation:</b> Option 1 is correct because the text notes that plastids are interchangeable in their form depending upon environmental circumstances. For instance, the leucoplasts (specifically amyloplasts [colourless plastids that store starch]) present inside the stem tubers of a potato will transform into green, light-trapping chloroplasts when exposed to continuous sunlight. Another example is Capsicum ovary leucoplasts converting to chloroplasts and then to red chromoplasts during fruit ripening. Option 2, Option 3, and Option 4 are scientifically inaccurate distractors that misrepresent vacuole and cell wall dynamics."
+  },
+  {
+    "p_id": "bpsc_cell_v7_19",
+    "qe": "A mature plant cell vacuole maintains a highly concentrated internal environment using its tonoplast membrane. How does this boundary maintain solute accumulation against concentration gradients?",
+    "qh": "एक परिपक्व पादप कोशिका रिक्तिका (vacuole) अपनी टोनोप्लास्ट झिल्ली (tonoplast membrane) का उपयोग करके एक अत्यधिक सांद्रित आंतरिक वातावरण बनाए रखती है। यह सीमा सांद्रता प्रवणता के विपरीत विलेय संचय को कैसे बनाए रखती है?",
+    "o": [
+      "Through passive simple diffusion across porous calcium carbonate mineral channels.",
+      "By executing active transport that facilitates the influx of ions against concentration gradients into the vacuole.",
+      "By matching the exact fluid composition of the external neutral cytoplasm.",
+      "Through the mechanical terminalisation of surrounding chromatin networks."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 1 is incorrect because passive diffusion would cause solutes to leak out of the vacuole down the gradient. Option 2 is correct because the single bounding membrane of the plant vacuole, called the tonoplast, actively facilitates the transport of ions and other materials *against concentration gradients* into the vacuole. This active, energy-consuming influx creates a significantly higher solute concentration inside the vacuole than in the surrounding cytoplasm, maintaining cellular turgidity. Option 3 contradicts the concentration gradient data. Option 4 describes a meiotic chromosome prophase step."
+  },
+  {
+    "p_id": "bpsc_cell_v7_20",
+    "qe": "Which of the following descriptions accurately characterizes the structural framework and phenotypic role of extrachromosomal DNA inside eukaryotic plant cells?",
+    "qh": "निम्नलिखित में से कौन सा विवरण यूकेरियोटिक पादप कोशिकाओं के भीतर एक्स्ट्राक्रोमोसोमल DNA (extrachromosomal DNA) के संरचनात्मक ढांचे और फेनोटाइपिक भूमिका को सटीक रूप से वर्गीकृत करता है?",
+    "o": [
+      "It exists as naked linear strands floating exclusively within the peripheral rough endoplasmic channels.",
+      "It is present as small, double-stranded circular DNA molecules inside the matrix of mitochondria and stroma of plastids, rendering them semi-autonomous.",
+      "It forms a basic histone octamer core that wraps around the extracellular primary cell wall.",
+      "It is completely restricted to social insects like male honey bees to govern mitotic lines."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 1 is incorrect because extragenomic DNA is not found in the ER channels and is circular, not linear. Option 2 is correct because the text points out that extragenomic/extrachromosomal DNA is present in both prokaryotes (as plasmids) and eukaryotes. In eukaryotic plant cells, this extra DNA exists as small, double-stranded circular DNA molecules located inside two specific energy-transforming organelles: the matrix of mitochondria and the stroma of plastids (chloroplasts). Because they possess this independent DNA along with their own ribosomes, they can synthesize their own proteins and replicate via fission, making them semi-autonomous organelles. Option 3 and Option 4 mix chromosome assembly and cell cycle exceptions incorrectly."
   }
 ]
+
