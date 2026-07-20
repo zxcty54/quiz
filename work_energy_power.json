@@ -1,0 +1,523 @@
+[
+  {
+    "p_id": "bpsc_phys_m27_01",
+    "qe": "Evaluating the mathematical work formula $W = F \\cdot s \\cdot \\cos\\theta$ reveals distinct directional relationships between force and displacement vectors. What specific condition results in strictly Zero Work ($W = 0$) even when both force magnitude and displacement length are non-zero?",
+    "qh": "गणितीय कार्य सूत्र $W = F \\cdot s \\cdot \\cos\\theta$ का मूल्यांकन बल और विस्थापन सदिशों के बीच विशिष्ट दिशात्मक संबंधों को प्रकट करता है। बल के परिमाण और विस्थापन की लंबाई दोनों के गैर-शून्य होने पर भी कौन सी विशिष्ट स्थिति के परिणामस्वरूप strictly शून्य कार्य ($W = 0$) होता है?",
+    "o": [
+      "The force vector acts strictly parallel to the displacement vector ($\\theta = 0^\\circ$).",
+      "The force vector acts strictly perpendicular to the displacement vector ($\\theta = 90^\\circ$).",
+      "The force vector acts directly opposite to the displacement vector ($\\theta = 180^\\circ$).",
+      "The displacement occurs along a inclined plane at an angle of $45^\\circ$."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 results in maximum positive work ($W = F \\cdot s$) because $\\cos 0^\\circ = 1$. Option 1 is correct because mechanical work is defined as $W = F \\cdot s \\cdot \\cos\\theta$, where $\\theta$ is the angle between the applied force vector and the displacement vector. When the force is perpendicular to displacement ($\\theta = 90^\\circ$), we have $\\cos 90^\\circ = 0$, yielding **Zero Work ($W = 0$)**. This occurs, for example, when a coolie carries a load horizontally across a platform, as the vertical downward gravitational weight force acts at $90^\\circ$ to the horizontal movement. Option 2 yields maximum negative work ($W = -F \\cdot s$) because $\\cos 180^\\circ = -1$. Option 3 yields $W = F \\cdot s \\cdot \\cos 45^\\circ = \\frac{F \\cdot s}{\\sqrt{2}}$, which is non-zero."
+  },
+  {
+    "p_id": "bpsc_phys_m27_02",
+    "qe": "Work and force measurements rely on standardized dimensional unit conversions across metric frameworks. What is the exact conversion factor relating 1 Joule (SI unit) to ergs (CGS unit)?",
+    "qh": "कार्य और बल का माप मीट्रिक ढांचे में मानकीकृत विमीय इकाई परिवर्तनों पर निर्भर करता है। 1 जूल (SI इकाई) को अर्ग (CGS इकाई) से जोड़ने वाला सटीक रूपांतरण गुणक क्या है?",
+    "o": [
+      "$1\\text{ joule} = 10^5\\text{ ergs}$",
+      "$1\\text{ joule} = 10^7\\text{ ergs}$",
+      "$1\\text{ joule} = 10^{-7}\\text{ ergs}$",
+      "$1\\text{ joule} = 3.6 \\times 10^6\\text{ ergs}$"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 uses $10^5$, which is the conversion factor for forces ($1\\text{ Newton} = 10^5\\text{ dynes}$). Option 1 is correct because $1\\text{ Joule} = 1\\text{ N} \\cdot 1\\text{ m}$. Converting SI base units to CGS base units ($1\\text{ N} = 10^5\\text{ dynes}$ and $1\\text{ m} = 10^2\\text{ cm}$) yields: <br>$$1\\text{ Joule} = (10^5\\text{ dynes}) \\times (10^2\\text{ cm}) = 10^7\\text{ dyne}\\cdot\\text{cm} = \\mathbf{10^7\\text{ ergs}}$$ <br>Option 2 gives the inverted conversion factor ($1\\text{ erg} = 10^{-7}\\text{ Joules}$). Option 3 gives the conversion value of $1\\text{ kilowatt-hour}$ ($1\\text{ kWh} = 3.6 \\times 10^6\\text{ Joules}$)."
+  },
+  {
+    "p_id": "bpsc_phys_m27_03",
+    "qe": "Analyzing negative mechanical work requires evaluating energy transfer dynamics. Which physical scenario represents Negative Work ($W < 0$)?",
+    "qh": "ऋणात्मक यांत्रिक कार्य का विश्लेषण करने के लिए ऊर्जा हस्तांतरण गतिकी का मूल्यांकन करने की आवश्यकता होती है। कौन सा भौतिक परिदृश्य ऋणात्मक कार्य ($W < 0$) का प्रतिनिधित्व करता है?",
+    "o": [
+      "A boy pulling a toy cart along a smooth floor in his direction of motion.",
+      "Friction acting on a block sliding across a rough horizontal surface.",
+      "A satellite revolving in a stable circular orbit around the Earth.",
+      "A compressed spring relaxing back to its natural unstretched length."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 describes positive work because force and displacement share the same direction ($\\theta = 0^\\circ$). Option 1 is correct because kinetic friction acts parallel to the contact surface but directly opposite to the direction of motion ($\\theta = 180^\\circ$). Substituting $\\theta = 180^\\circ$ into $W = F \\cdot s \\cdot \\cos\\theta$ yields $W = F \\cdot s \\cdot (-1) = -F \\cdot s$, which constitutes **Negative Work**. Negative work indicates that energy is being extracted from the moving body by the opposing force. Option 2 represents zero work because centripetal force is perpendicular to instantaneous orbital velocity ($\\theta = 90^\\circ$). Option 3 represents positive work done by spring elasticity."
+  },
+  {
+    "p_id": "bpsc_phys_m27_04",
+    "qe": "Power measures the time rate of performing mechanical work or consuming energy. What is the equivalent value of 1 Horsepower (HP) and 1 kilowatt-hour (kWh) expressed in SI base units?",
+    "qh": "शक्ति यांत्रिक कार्य करने या ऊर्जा की खपत की समय दर को मापती है। SI मूल इकाइयों में व्यक्त 1 हॉर्सपावर (HP) और 1 किलोवाट-घंटे (kWh) का समतुल्य मान क्या है?",
+    "o": [
+      "$1\\text{ HP} = 1000\\text{ W}$; $1\\text{ kWh} = 3.6 \\times 10^3\\text{ J}$",
+      "$1\\text{ HP} = 746\\text{ W}$; $1\\text{ kWh} = 3.6 \\times 10^6\\text{ J}$",
+      "$1\\text{ HP} = 500\\text{ W}$; $1\\text{ kWh} = 10^6\\text{ J}$",
+      "$1\\text{ HP} = 746\\text{ kW}$; $1\\text{ kWh} = 3.6\\text{ ergs}$"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 uses metric rounded values. Option 1 is correct because standard imperial-to-metric power equivalence establishes that **$1\\text{ Horsepower (HP)} = 746\\text{ Watts (W)}$**. Furthermore, a kilowatt-hour is a commercial unit of electrical energy representing power consumed over time: <br>$$1\\text{ kWh} = 1\\text{ kW} \\times 1\\text{ hour} = (10^3\\text{ W}) \\times (3600\\text{ s}) = 3.6 \\times 10^6\\text{ Joules (J)} = 3.6\\text{ Megajoules (MJ)}$$ <br>Option 2 lists arbitrary values. Option 3 misapplies unit prefixes by equating $746\\text{ W}$ to $746\\text{ kW}$."
+  },
+  {
+    "p_id": "bpsc_phys_m27_05",
+    "qe": "Translational kinetic energy ($KE$) can be expressed using either linear velocity ($v$) or linear momentum ($p$). If the linear momentum of a body of mass $m$ is doubled while its mass remains constant, by what factor does its Kinetic Energy increase?",
+    "qh": "स्थानांतरीय गतिज ऊर्जा ($KE$) को रैखिक वेग ($v$) या रैखिक संवेग ($p$) दोनों का उपयोग करके व्यक्त किया जा सकता है। यदि स्थिर द्रव्यमान $m$ वाले पिंड के रैखिक संवेग को दोगुना कर दिया जाए, तो उसकी गतिज ऊर्जा किस गुणांक से बढ़ जाएगी?",
+    "o": [
+      "Kinetic energy doubles (increases by a factor of 2).",
+      "Kinetic energy quadruples (increases by a factor of 4).",
+      "Kinetic energy increases by a factor of 8.",
+      "Kinetic energy remains unchanged."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 assumes a linear relationship between kinetic energy and momentum. Option 1 is correct because kinetic energy expressed in terms of linear momentum $p = mv$ is: <br>$$KE = \\frac{1}{2}mv^2 = \\frac{(mv)^2}{2m} = \\frac{p^2}{2m}$$ <br>If momentum is doubled ($p' = 2p$), substituting $p'$ yields: <br>$$KE' = \\frac{(2p)^2}{2m} = \\frac{4p^2}{2m} = 4 \\cdot KE$$ <br>Thus, doubling linear momentum **quadruples (increases by a factor of 4)** the kinetic energy. Options 2 and 3 fail to account for the quadratic dependence ($p^2$)."
+  },
+  {
+    "p_id": "bpsc_phys_m27_06",
+    "qe": "The Work-Energy Theorem provides a fundamental principle linking net applied forces to kinematic state changes. According to this theorem, what physical quantity equals the net work done on a body by all acting forces?",
+    "qh": "कार्य-ऊर्जा प्रमेय (Work-Energy Theorem) एक मौलिक सिद्धांत प्रदान करता है जो लागू किए गए शुद्ध बलों को गतिक अवस्था परिवर्तनों से जोड़ता है। इस प्रमेय के अनुसार, सभी कार्यरत बलों द्वारा किसी पिंड पर किया गया शुद्ध कार्य किस भौतिक राशि के बराबर होता है?",
+    "o": [
+      "The total change in gravitational potential energy.",
+      "The change in kinetic energy of the body.",
+      "The rate of change of linear momentum per unit time.",
+      "The total heat energy dissipated into the surroundings."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 restricts the theorem exclusively to conservative field work. Option 1 is correct because the **Work-Energy Theorem** states that the net work done by all forces (conservative, non-conservative, internal, and external) acting on a body equals the total change in its kinetic energy: <br>$$W_{\\text{net}} = \\Delta KE = \\frac{1}{2}mv_f^2 - \\frac{1}{2}mv_i^2$$ <br>Option 2 describes net force according to Newton's Second Law ($F = \\frac{dp}{dt}$). Option 3 represents dissipated thermal energy in non-conservative systems."
+  },
+  {
+    "p_id": "bpsc_phys_m27_07",
+    "qe": "Conservation of Mechanical Energy governs ideal conservative systems. When a heavy stone dropped from rest falls freely under gravity (ignoring air drag), how do its potential energy ($PE$) and kinetic energy ($KE$) vary during the fall?",
+    "qh": "यांत्रिक ऊर्जा का संरक्षण आदर्श संरक्षी प्रणालियों को नियंत्रित करता me है। जब विराम से छोड़ा गया एक भारी पत्थर गुरुत्वाकर्षण के तहत स्वतंत्र रूप से गिरता है (वायु प्रतिरोध को नजरअंदाज करते हुए), तो गिरने के दौरान उसकी स्थितिज ऊर्जा ($PE$) और गतिज ऊर्जा ($KE$) कैसे परिवर्तित होती है?",
+    "o": [
+      "Both $PE$ and $KE$ increase simultaneously due to gravitational acceleration.",
+      "$PE$ continuously decreases while $KE$ continuously increases, keeping total mechanical energy ($PE + KE$) strictly constant at every point.",
+      "$PE$ remains constant while $KE$ increases exponentially.",
+      "Both $PE$ and $KE$ decrease to zero before impact."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 violates conservation of energy by creating energy during fall. Option 1 is correct because in a conservative gravitational field, total mechanical energy $E = PE + KE = mgh + \\frac{1}{2}mv^2$ remains constant. As the stone drops, its height $h$ decreases, causing **$PE$ to continuously convert into $KE$**. The loss in potential energy at any height interval equals the gain in kinetic energy ($\\|\\Delta PE\\| = \\Delta KE$), keeping $E$ invariant. Option 2 violates energy conversion mechanics, and Option 3 violates energy conservation."
+  },
+  {
+    "p_id": "bpsc_phys_m27_08",
+    "qe": "Albert Einstein redefined physics by establishing the equivalence of mass and energy through special relativity. According to $E = mc^2$, what is the exact physical meaning of $c$, and what happens during mass-energy transformations?",
+    "qh": "अल्बर्ट आइंस्टीन ने विशेष सापेक्षता के माध्यम से द्रव्यमान और ऊर्जा की समतुल्यता स्थापित करके भौतिकी को पुनः परिभाषित किया। $E = mc^2$ के अनुसार, $c$ का सटीक भौतिक अर्थ क्या है, और द्रव्यमान-ऊर्जा परिवर्तनों के दौरान क्या होता है?",
+    "o": [
+      "$c$ is the speed of sound ($340\\text{ m/s}$); mass and energy are independently conserved.",
+      "$c$ is the speed of light in vacuum ($3 \\times 10^8\\text{ m/s}$); mass and energy are not individually conserved, but are interconvertible, preserving unified mass-energy globally.",
+      "$c$ is the universal gravitational constant; mass converts into electrical charge.",
+      "$c$ is the specific heat capacity of water; mass remains invariant in nuclear reactions."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 incorrectly uses the speed of sound and claims independent conservation. Option 1 is correct because Einstein's mass-energy relation $E = mc^2$ establishes that mass ($m$) and energy ($E$) are unified quantities, where **$c$ is the speed of light in vacuum ($3 \\times 10^8\\text{ m/s}$)**. Neither mass nor energy is conserved individually in nuclear reactions (fission/fusion); instead, lost mass (mass defect) is converted directly into energy ($E = \\Delta m \\cdot c^2$). Options 2 and 3 misidentify the physical constant $c$."
+  },
+  {
+    "p_id": "bpsc_phys_m27_09",
+    "qe": "Evaluating energy resources distinguishes renewable sources from non-renewable sources based on replenishment cycles. Which choice represents a Non-Renewable Energy Source?",
+    "qh": "ऊर्जा संसाधनों का मूल्यांकन पुनर्भरण चक्र (replenishment cycles) के आधार पर नवीकरणीय स्रोतों को गैर-नवीकरणीय स्रोतों से अलग करता है। कौन सा विकल्प गैर-नवीकरणीय ऊर्जा स्रोत (Non-Renewable Energy Source) का प्रतिनिधित्व करता है?",
+    "o": [
+      "Bio-fuels derived from sugarcane alcohol and fuelwood",
+      "Fissionable nuclear materials (such as Uranium isotopes) and Coal deposits",
+      "Ocean Thermal Energy Conversion (OTEC) systems",
+      "Tidal and wave energy systems"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 describes renewable bio-fuels continuously replenished via photosynthesis. Option 1 is correct because **Non-Renewable Energy Sources** exist in finite quantities formed over geological timescales (millions of years) and cannot be replenished within human timescales once exhausted. This category includes **fossil fuels (coal, petroleum, natural gas)** and **fissionable nuclear minerals (Uranium/Thorium)**. Options 2 and 3 are naturally replenished, inexhaustible solar-driven ocean energy systems."
+  },
+  {
+    "p_id": "bpsc_phys_m27_10",
+    "qe": "Selecting fuels for commercial energy production requires evaluating combustion quality metrics. What technical terms define the amount of heat released per unit mass of fuel and the minimum temperature required to sustain combustion, respectively?",
+    "qh": "वाणिज्यिक ऊर्जा उत्पादन के लिए ईंधन का चयन करने के लिए दहन गुणवत्ता मेट्रिक्स का मूल्यांकन करने की आवश्यकता होती है। ईंधन के प्रति इकाई द्रव्यमान से जारी गर्मी की मात्रा और दहन को बनाए रखने के लिए आवश्यक न्यूनतम तापमान को क्रमशः कौन से तकनीकी शब्द परिभाषित करते हैं?",
+    "o": [
+      "Latent Heat and Boiling Point",
+      "Calorific Value and Ignition Temperature",
+      "Specific Heat Capacity and Flash Point",
+      "Thermal Conductivity and Critical Temperature"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 describes phase-change thermodynamics. Option 1 is correct because: (1) **Calorific Value** is the total quantity of heat energy released by the complete combustion of a unit mass (or unit volume) of fuel (measured in $\\text{kJ/kg}$); (2) **Ignition Temperature** is the minimum threshold temperature to which a fuel must be heated for it to catch fire and sustain combustion without external heating. Option 2 describes heat absorption and fuel vapor flash points."
+  },
+  {
+    "p_id": "bpsc_phys_m27_11",
+    "qe": "Combustion of fossil fuels in thermal power plants releases several gaseous byproducts into the atmosphere. Which gaseous emissions are primarily responsible for causing Acid Rain?",
+    "qh": "थर्मल पावर प्लांटों में जीवाश्म ईंधन के दहन से वायुमंडल में कई गैसीय उप-उत्पाद निकलते हैं। अम्ल वर्षा (Acid Rain) का कारण बनने के लिए मुख्य रूप से कौन से गैसीय उत्सर्जन जिम्मेदार हैं?",
+    "o": [
+      "Carbon monoxide and pure hydrogen gas",
+      "Acidic oxides of sulfur ($\\text{SO}_2$) and nitrogen ($\\text{NO}_x$)",
+      "Methane and noble helium gases",
+      "Water vapor and ozone"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 lists toxic carbon monoxide and combustible hydrogen, which do not directly cause acid rain. Option 1 is correct because burning coal and oil in thermal power stations releases **acidic oxides of sulfur (sulfur dioxide, $\\text{SO}_2$) and nitrogen (nitrogen oxides, $\\text{NO}_x$)**. When released into the atmosphere, these gases react with moisture and oxygen to form sulfuric acid ($\\text{H}_2\\text{SO}_4$) and nitric acid ($\\text{HNO}_3$), falling back to Earth as **Acid Rain**, which degrades soil, forest, and aquatic ecosystems. Option 2 lists greenhouse methane, and Option 3 lists benign water vapor."
+  },
+  {
+    "p_id": "bpsc_phys_m27_12",
+    "qe": "Hydroelectric power plants generate electricity by utilizing energy transformations in impounded river water. What sequence of energy transformations drives the electrical generator turbine in a hydroelectric plant?",
+    "qh": "जलविद्युत संयंत्र (Hydroelectric power plants) बांध के पानी में ऊर्जा परिवर्तनों का उपयोग करके बिजली उत्पन्न करते हैं। जलविद्युत संयंत्र में विद्युत जनरेटर टरबाइन को कौन सा ऊर्जा परिवर्तन क्रम संचालित करता है?",
+    "o": [
+      "Chemical Energy $\\to$ Heat Energy $\\to$ Electrical Energy",
+      "Gravitational Potential Energy of stored reservoir water $\\to$ Kinetic Energy of flowing water $\\to$ Mechanical Kinetic Energy of rotating turbine $\\to$ Electrical Energy",
+      "Nuclear Fission Energy $\\to$ Steam Kinetic Energy $\\to$ Electrical Energy",
+      "Solar Radiant Energy $\\to$ Chemical Potential Energy $\\to$ Electrical Energy"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 describes thermal power generation from fossil fuels. Option 1 is correct because in hydroelectric plants: (1) Water stored at height behind a dam possesses **Gravitational Potential Energy ($mgh$)**; (2) Releasing water through penstock pipes converts potential energy into **Kinetic Energy ($\\frac{1}{2}mv^2$)** of flowing water; (3) Flowing water strikes turbine blades, converting fluid motion into **Mechanical Kinetic Energy** of rotation; (4) Rotating turbines drive the generator armature, producing **Electrical Energy** via electromagnetic induction. Option 2 describes nuclear plants, and Option 3 describes solar photo-voltaic conversion."
+  },
+  {
+    "p_id": "bpsc_phys_m27_13",
+    "qe": "Human physiological metabolic functions consume power at varying rates depending on activity levels. According to standard physiological averages, what is the approximate baseline power consumption of the human heart beat and a sleeping adult?",
+    "qh": "मानव शारीरिक चयापचय (metabolic) कार्य गतिविधियों के स्तर के आधार पर अलग-अलग दरों पर शक्ति की खपत करते हैं। मानक शारीरिक औसतों के अनुसार, मानव हृदय की धड़कन (heart beat) और सोते हुए वयस्क की अनुमानित आधारभूत (baseline) शक्ति खपत क्या है?",
+    "o": [
+      "Heart beat: $100\\text{ W}$; Sleeping: $500\\text{ W}$",
+      "Heart beat: $1.2\\text{ W}$; Sleeping: $75\\text{ W}$",
+      "Heart beat: $50\\text{ W}$; Sleeping: $200\\text{ W}$",
+      "Heart beat: $0.1\\text{ W}$; Sleeping: $10\\text{ W}$"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 overstates heart power consumption. Option 1 is correct because standard biological energy metrics establish that: (1) The continuous mechanical pumping action of the human **heart beat consumes approximately $1.2\\text{ Watts}$**; (2) The basal metabolic rate of a **sleeping human adult consumes approximately $75\\text{ Watts}$** (which increases to $\\sim 200\\text{ W}$ during slow walking and $\\sim 500\\text{ W}$ during bicycling). Options 2 and 3 list incorrect power consumption metrics."
+  },
+  {
+    "p_id": "bpsc_phys_m27_14",
+    "qe": "Evaluating the energy transformation chain in living organisms reveals specific physiological pathways. What energy transformation occurs during plant photosynthesis and subsequent human muscular running?",
+    "qh": "जीवों में ऊर्जा परिवर्तन श्रृंखला का मूल्यांकन विशिष्ट शारीरिक मार्गों को उजागर करता है। पादप प्रकाश संश्लेषण (photosynthesis) और उसके बाद मानव मांसपेशियों के दौड़ने के दौरान कौन सा ऊर्जा परिवर्तन होता है?",
+    "o": [
+      "Photosynthesis: Nuclear Energy $\\to$ Heat Energy; Running: Heat Energy $\\to$ Electrical Energy",
+      "Photosynthesis: Solar Radiant Energy $\\to$ Chemical Energy; Running: Internal Chemical Energy $\\to$ Mechanical Kinetic Energy",
+      "Photosynthesis: Gravitational Energy $\\to$ Solar Energy; Running: Kinetic Energy $\\to$ Potential Energy",
+      "Photosynthesis: Electrical Energy $\\to$ Chemical Energy; Running: Sound Energy $\\to$ Kinetic Energy"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 misidentifies photosynthesis as a nuclear reaction. Option 1 is correct because: (1) Green plants capture **Solar Radiant Energy** and convert it into stored **Chemical Energy** (glucose/carbohydrates) via photosynthesis; (2) Humans digest plant/food chemical energy into cellular internal energy (ATP), which muscle fibers convert into **Mechanical Kinetic Energy** when an athlete runs. Options 2 and 3 present invalid biological transformation sequences."
+  },
+  {
+    "p_id": "bpsc_phys_m27_15",
+    "qe": "Energy dissipation describes the transformation of useful mechanical energy into non-recoverable forms. Which everyday example demonstrates mechanical work converting directly into thermal dissipation?",
+    "qh": "ऊर्जा क्षय (Energy dissipation) उपयोगी यांत्रिक ऊर्जा के गैर-पुनर्प्राप्त करने योग्य रूपों में परिवर्तन का वर्णन करता है। कौन सा दैनिक उदाहरण यांत्रिक कार्य के सीधे तापीय क्षय में परिवर्तित होने का प्रदर्शन करता है?",
+    "o": [
+      "Water evaporating silently in a cool shadow",
+      "Striking two flint stones together to generate a spark, or sharpening a knife against a revolving grinding stone",
+      "A magnet attracting an iron nail across a smooth table",
+      "A satellite orbiting in deep atmospheric vacuum"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 describes phase transformation driven by ambient heat absorption. Option 1 is correct because rubbing or striking mechanical objects performs work against friction and impact forces. When **two stones are struck forcefully**, mechanical work converts into localized high heat, producing incandescent **sparks**. Similarly, **sharpening a knife against a grinding stone** converts mechanical rotation work into localized heat and friction sparks via mechanical dissipation. Options 2 and 3 involve zero friction dissipation mechanisms."
+  },
+  {
+    "p_id": "bpsc_phys_m27_16",
+    "qe": "Ideal fuels possess specific chemical and physical characteristics to maximize combustion efficiency while minimizing hazards. Which property represents an desirable feature of a Good Fuel?",
+    "qh": "आदर्श ईंधन में खतरों को कम करते हुए दहन दक्षता को अधिकतम करने के लिए विशिष्ट रासायनिक और भौतिक विशेषताएं होती हैं। कौन सा गुण एक अच्छे ईंधन (Good Fuel) की वांछनीय विशेषता का प्रतिनिधित्व करता है?",
+    "o": [
+      "Extremely low calorific value with high unburnt ash residue",
+      "High calorific value, proper ignition temperature, low smoke emissions, and cheap/safe handling",
+      "Instant explosive combustion rate at sub-zero temperatures",
+      "High concentration of sulfur impurities to maximize flame brightness"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 describes poor-quality fuels that waste energy and leave ash residue. Option 1 is correct because an **Ideal/Good Fuel** must feature: (1) **High Calorific Value** (releases maximum energy per unit mass); (2) **Proper Ignition Temperature** (neither too low to explode spontaneously nor too high to resist lighting); (3) **Low pollution** (minimal toxic gas/ash residue); (4) **Economical, stable, and safe** storage and transport. Option 2 describes dangerous explosive hazards, and Option 3 adds acid-rain-forming pollutants."
+  },
+  {
+    "p_id": "bpsc_phys_m27_17",
+    "qe": "Gravitational potential energy ($U$) measures work done against gravity when elevating a mass. What is the gravitational potential energy formula for a body of mass $m$ raised to height $h$ near Earth's surface, and what happens if $h = 0$ at the chosen reference plane?",
+    "qh": "गुरुत्वीय स्थितिज ऊर्जा ($U$) किसी द्रव्यमान को ऊपर उठाते समय गुरुत्वाकर्षण के विरुद्ध किए गए कार्य को मापती है। पृथ्वी की सतह के पास ऊंचाई $h$ तक उठाए गए द्रव्यमान $m$ के पिंड के लिए गुरुत्वीय स्थितिज ऊर्जा का सूत्र क्या है, और यदि चुने गए संदर्भ तल पर $h = 0$ हो तो क्या होता है?",
+    "o": [
+      "$U = \\frac{1}{2}mgh^2$; Potential energy becomes infinite at $h = 0$.",
+      "$U = mgh$; Potential energy is zero ($U = 0$) at the reference plane ($h = 0$).",
+      "$U = \\frac{mg}{h}$; Potential energy is independent of height.",
+      "$U = mgh + c^2$; Potential energy depends on the speed of light."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 uses a quadratic height term ($h^2$). Option 1 is correct because work done against constant acceleration due to gravity $g$ in raising mass $m$ through vertical height $h$ is $W = F \\cdot h = (mg) \\cdot h$. This stored work constitutes **Gravitational Potential Energy ($U = mgh$)**. Setting $h = 0$ at the reference surface yields **$U = 0$**. Options 2 and 3 state incorrect non-gravitational mathematical formulations."
+  },
+  {
+    "p_id": "bpsc_phys_m27_18",
+    "qe": "Evaluating electrical power distribution highlights efficiency differences between fuel transport and high-voltage transmission. Why are thermal power stations typically constructed near coal or oil fields rather than near distant consumer cities?",
+    "qh": "विद्युत शक्ति वितरण का मूल्यांकन ईंधन परिवहन और उच्च-वोल्टेज पारेषण (transmission) के बीच दक्षता के अंतर को उजागर करता है। थर्मल पावर स्टेशन आमतौर पर दूरस्थ उपभोक्ता शहरों के बजाय कोयला या तेल क्षेत्रों के पास क्यों बनाए जाते हैं?",
+    "o": [
+      "Because coal loses its calorific value when transported over long distances.",
+      "Because transmitting electrical energy over long distances via power lines is significantly more efficient and economical than transporting bulk coal or petroleum over identical distances.",
+      "Because thermal turbines can only boil water if coal is burned immediately after extraction.",
+      "Because burning coal near cities creates zero greenhouse gas emissions."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 incorrectly claims coal degrades during transport. Option 1 is correct because bulk transport of heavy fossil fuels (coal/oil) via railway or road incurs significant fuel consumption, freight costs, and logistical delays. In contrast, **transmitting electricity via high-voltage electrical power lines is vastly more efficient, cost-effective, and continuous**. Thus, thermal power plants are deliberately located near fuel sources (coal/oil fields) and water bodies. Options 2 and 3 present false physical claims."
+  },
+  {
+    "p_id": "bpsc_phys_m27_19",
+    "qe": "Potential energy can be stored in mechanical systems through shape deformation. Which real-world example represents potential energy stored due to a change in shape/configuration rather than elevation height?",
+    "qh": "स्थितिज ऊर्जा को आकृति के विरूपण (shape deformation) के माध्यम से यांत्रिक प्रणालियों में संग्रहीत किया जा सकता है। कौन सा दैनिक उदाहरण ऊंचाई के बजाय आकृति/कॉन्फ़िगरेशन में परिवर्तन के कारण संग्रहीत स्थितिज ऊर्जा का प्रतिनिधित्व करता है?",
+    "o": [
+      "Water impounded in a high mountain dam reservoir",
+      "A wound spring inside a mechanical wrist watch or a stretched rubber bowstring",
+      "A heavy boulder resting on a high cliff edge",
+      "A cricket ball flying through the air at high speed"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 represents gravitational potential energy stored due to elevated position ($mgh$). Option 1 is correct because **Elastic Potential Energy** is stored in an object when work is performed to deform its physical shape or configuration against elastic restoring forces. Examples include a **wound mainspring in a mechanical watch** or a **stretched rubber bowstring**. When released, this stored configuration energy converts back into kinetic motion. Option 2 is elevated gravitational potential energy, and Option 3 is translational kinetic energy."
+  },
+  {
+    "p_id": "bpsc_phys_m27_20",
+    "qe": "Mechanical power ($P$) connects work performed ($W$) to time duration ($t$). If two cranes, A and B, lift identical $1000\\text{ kg}$ masses to an equal height of $20\\text{ meters}$, but Crane A takes $10\\text{ seconds}$ while Crane B takes $40\\text{ seconds}$, how do their work done ($W$) and power output ($P$) compare?",
+    "qh": "यांत्रिक शक्ति ($P$) किए गए कार्य ($W$) को समय की अवधि ($t$) से जोड़ती है। यदि दो क्रेन, A और B, समान $1000\\text{ kg}$ द्रव्यमान को $20\\text{ मीटर}$ की समान ऊंचाई तक उठाती हैं, लेकिन क्रेन A को $10\\text{ सेकंड}$ लगते हैं जबकि क्रेन B को $40\\text{ सेकंड}$ लगते हैं, तो उनके द्वारा किए गए कार्य ($W$) और शक्ति आउटपुट ($P$) की तुलना कैसे होगी?",
+    "o": [
+      "Crane A does 4 times more work than Crane B; Power outputs are equal.",
+      "Both cranes perform identical work ($W_A = W_B = mgh$), but Crane A delivers 4 times higher power output ($P_A = 4 P_B$) because it completes the work in one-fourth the time.",
+      "Crane B delivers higher power because it operates for a longer time duration.",
+      "Neither crane performs work because lifting is perpendicular to Earth."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 incorrectly states work depends on time. Option 1 is correct because: (1) Work done in lifting a mass depends solely on potential energy change: $W = mgh$. Since both cranes lift equal mass ($1000\\text{ kg}$) to equal height ($20\\text{ m}$), **Work done is strictly identical ($W_A = W_B$)**; (2) Power is the rate of doing work ($P = \\frac{W}{t}$). Since Crane A takes $10\\text{ s}$ and Crane B takes $40\\text{ s}$: <br>$$P_A = \\frac{W}{10}, \\quad P_B = \\frac{W}{40} \\implies P_A = 4 P_B$$ <br>Thus, Crane A operates at **4 times higher power output**. Option 2 confuses duration with power delivery, and Option 3 misinterprets vertical lift displacement angles."
+  },
+  
+  {
+    "p_id": "bpsc_phys_m28_01",
+    "qe": "Anaerobic decomposition of organic waste in a bio-gas digester converts complex biomass into a combustible gaseous mixture. What are the primary chemical constituents of bio-gas, and what role does cow-dung play in the process?",
+    "qh": "बायो-गैस डाइजेस्टर में जैविक कचरे का अवायवीय अपघटन (anaerobic decomposition) जटिल बायोमास को एक ज्वलनशील गैसीय मिश्रण में परिवर्तित करता है। बायो-गैस के प्राथमिक रासायनिक घटक क्या हैं, और इस प्रक्रिया में गाय के गोबर की क्या भूमिका है?",
+    "o": [
+      "Bio-gas consists primarily of pure oxygen and carbon monoxide; cow-dung acts as a chemical catalyst.",
+      "Bio-gas is a mixture of methane ($CH_4$), carbon dioxide ($CO_2$), hydrogen ($H_2$), and hydrogen sulphide ($H_2S$), with methane as the major combustible component; cow-dung serves as the primary organic substrate (gobar-gas).",
+      "Bio-gas consists exclusively of butane and propane gas under high compression.",
+      "Bio-gas is composed of nitrogen dioxide and sulfur dioxide generated by high-temperature combustion."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 misidentifies bio-gas as oxygen and carbon monoxide. Option 1 is correct because <b>Bio-gas</b> is produced via the anaerobic decomposition of animal/plant wastes (such as cattle dung) by methanogenic bacteria in the absence of oxygen. Its primary constituents are <b>Methane ($CH_4$, up to 75%)</b>, along with <b>Carbon Dioxide ($CO_2$), Hydrogen ($H_2$), and Hydrogen Sulphide ($H_2S$)</b>. Methane provides its high calorific value. Because cow-dung is the principal starting biomass raw material in rural India, it is popularly known as <b>Gobar-gas</b>. Option 2 describes Liquefied Petroleum Gas (LPG), and Option 3 describes acidic combustion pollutants."
+  },
+  {
+    "p_id": "bpsc_phys_m28_02",
+    "qe": "Evaluating bio-gas production highlights agricultural and waste management benefits. What remains in the outlet chamber after anaerobic digestion in a bio-gas plant, and what is its agricultural utility?",
+    "qh": "बायो-गैस उत्पादन का मूल्यांकन कृषि और अपशिष्ट प्रबंधन के लाभों को उजागर करता है। बायो-गैस संयंत्र में अवायवीय पाचन के बाद आउटलेट कक्ष में क्या बचता है, और इसकी कृषि उपयोगिता क्या है?",
+    "o": [
+      "Toxic ash residue that must be buried in hazardous landfill sites.",
+      "Spent slurry rich in nitrogen and phosphorus, serving as an excellent organic fertilizer.",
+      "Pure silicon crystals used to manufacture photovoltaic solar cells.",
+      "Non-biodegradable synthetic polymers that pollute crop soil."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 incorrectly states bio-gas leaves ash residue (bio-gas burns cleanly without leaving ash). Option 1 is correct because during bio-gas extraction, the organic slurry undergoes anaerobic digestion inside the sealed digester. The remaining digested liquid/solid residue (spent slurry) extracted from the outlet chamber is depleted of volatile carbon but remains **highly enriched in essential plant nutrients, particularly Nitrogen ($N$) and Phosphorus ($P$)**. This slurry forms an **excellent organic manure/fertilizer**, enhancing soil health without chemical contamination. Option 2 confuses bio-gas slurry with solar wafer materials, and Option 3 describes synthetic plastics."
+  },
+  {
+    "p_id": "bpsc_phys_m28_03",
+    "qe": "Windmills convert atmospheric kinetic energy into mechanical or electrical power. What specific nation is globally designated as the 'Country of Winds' due to its massive reliance on wind-generated electricity?",
+    "qh": "पवन चक्की (Windmills) वायुमंडलीय गतिज ऊर्जा को यांत्रिक या विद्युत शक्ति में परिवर्तित करती है। पवन-जनित बिजली पर अत्यधिक निर्भरता के कारण वैश्विक स्तर पर किस राष्ट्र को 'पवनों का देश' (Country of Winds) के रूप में नामित किया गया है?",
+    "o": [
+      "India",
+      "Denmark",
+      "France",
+      "Germany"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 is home to large wind energy farms (such as Kanyakumari), but is not termed the 'Country of Winds'. Option 1 is correct because <b>Denmark</b> is internationally known as the <b>'Country of Winds'</b> because over 25% (now a major proportion) of its total domestic electricity demand is generated through a widespread network of high-efficiency wind turbine generators. Option 2 houses the world's largest solar furnace, and Option 3 is a major European wind power producer but lacks this specific designation."
+  },
+  {
+    "p_id": "bpsc_phys_m28_04",
+    "qe": "Commercial wind energy farms require specific environmental and meteorological conditions to sustain continuous electrical power generation. What is the minimum threshold wind speed necessary for the satisfactory operational working of a wind turbine generator?",
+    "qh": "वाणिज्यिक पवन ऊर्जा फार्मों (wind energy farms) को निरंतर विद्युत शक्ति उत्पादन को बनाए रखने के लिए विशिष्ट पर्यावरणीय और मौसम संबंधी स्थितियों की आवश्यकता होती है। पवन टर्बाइन जनरेटर के संतोषजनक परिचालन कार्य के लिए न्यूनतम सीमा पवन गति (minimum threshold wind speed) क्या आवश्यक है?",
+    "o": [
+      "$5 \\text{ km/h}$",
+      "$15 \\text{ km/h}$",
+      "$50 \\text{ km/h}$",
+      "$100 \\text{ km/h}$"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 is too weak to overcome the mechanical rotational inertia of heavy turbine blades. Option 1 is correct because a wind generator relies on moving air's kinetic energy to turn turbine blades attached to an alternator shaft. To sustain continuous rotation and produce commercial electricity efficiently, the <b>minimum threshold wind speed required is strictly $15 \\text{ km/h}$</b>. If wind velocity drops below $15 \\text{ km/h}$, generated torque is insufficient. Options 2 and 3 represent storm-level wind speeds that can structurally damage wind turbines."
+  },
+  {
+    "p_id": "bpsc_phys_m28_05",
+    "qe": "Establishing a large-scale commercial wind energy farm involves significant spatial and technical constraints. Approximately how much land area is required to set up a $1 \\text{ MW}$ commercial wind generator installation?",
+    "qh": "बड़े पैमाने पर वाणिज्यिक पवन ऊर्जा फार्म स्थापित करने में महत्वपूर्ण स्थानिक और तकनीकी बाधाएं शामिल हैं। $1 \\text{ MW}$ वाणिज्यिक पवन जनरेटर स्थापना स्थापित करने के लिए लगभग कितनी भूमि क्षेत्र की आवश्यकता होती है?",
+    "o": [
+      "$0.1 \\text{ hectares}$",
+      "$2 \\text{ hectares}$",
+      "$20 \\text{ hectares}$",
+      "$100 \\text{ hectares}$"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 drastically underestimates the land required for blade clearance and wind dynamics. Option 1 is correct because commercial wind turbines require substantial spatial buffer zones between individual towers to prevent aerodynamic wind turbulence interference between adjacent rotors. Establishing a commercial **$1 \\text{ MW}$ wind energy farm requires approximately $2 \\text{ hectares}$ of land**. Option 2 and Option 3 overstate the land footprint required per megawatt."
+  },
+  {
+    "p_id": "bpsc_phys_m28_06",
+    "qe": "Large-scale commercial wind power harnessing in India is concentrated in specific wind-rich coastal corridors. Where is the largest operational wind energy farm in India established, and what is its maximum generation capacity?",
+    "qh": "भारत में बड़े पैमाने पर वाणिज्यिक पवन ऊर्जा दोहन विशिष्ट पवन-समृद्ध तटीय गलियारों में केंद्रित है। भारत में सबसे बड़ा परिचालन पवन ऊर्जा फार्म कहां स्थापित है, और इसकी अधिकतम उत्पादन क्षमता क्या है?",
+    "o": [
+      "Jaisalmer in Rajasthan ($100 \\text{ MW}$)",
+      "Near Kanyakumari in Tamil Nadu ($380 \\text{ MW}$)",
+      "Rann of Kutch in Gujarat ($50 \\text{ MW}$)",
+      "Shimla in Himachal Pradesh ($1000 \\text{ MW}$)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 misidentifies Rajasthan as the largest cluster mentioned in the standard curriculum. Option 1 is correct because the largest wind energy farm cluster in India was established **near Kanyakumari in Tamil Nadu**, capable of generating **$380 \\text{ MW}$ of electricity** by tapping strong ocean-to-land monsoonal wind corridors. Options 2 and 3 list incorrect geographic locations and capacities."
+  },
+  {
+    "p_id": "bpsc_phys_m28_07",
+    "qe": "Solar heating devices (such as box-type solar cookers) utilize specific optical components to maximize thermal absorption and heat retention. Why are internal cooker box surfaces painted dull black, and what is the role of the top glass sheet cover?",
+    "qh": "सौर तापन उपकरण (जैसे बॉक्स-प्रकार के सौर कुकर) तापीय अवशोषण और गर्मी प्रतिधारण को अधिकतम करने के लिए विशिष्ट ऑप्टिकल घटकों का उपयोग करते हैं। कुकर बॉक्स की आंतरिक सतहों को सुस्त काले रंग से क्यों रंगा जाता है, और शीर्ष कांच की शीट कवर की क्या भूमिका होती है?",
+    "o": [
+      "Black paint reflects sunlight; the glass cover converts light into UV radiation.",
+      "Black paint maximizes heat absorption; the glass sheet cover traps reflected infrared radiation to create an internal Greenhouse Effect.",
+      "Black paint prevents rusting; the glass sheet acts as an electrical insulator.",
+      "Black paint cools the interior; the glass sheet allows heat to escape into the atmosphere."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 incorrectly states black paint reflects heat. Option 1 is correct because: (1) **Dull black surfaces are excellent absorbers** (and poor reflectors) of light and thermal radiation, absorbing up to 95% of incoming solar rays to maximize heat collection; (2) The **thick glass sheet cover** allows short-wavelength visible and infrared solar rays to enter the box easily, but prevents long-wavelength infrared thermal radiation emitted by the hot interior from escaping. This heat-trapping mechanism creates an internal **Greenhouse Effect**, raising internal temperatures up to $100^\\circ\\text{C}-140^\\circ\\text{C}$. Option 2 and Option 3 misidentify the thermal optics."
+  },
+  {
+    "p_id": "bpsc_phys_m28_08",
+    "qe": "Box-type solar cookers provide an eco-friendly cooking option but have practical culinary limitations. Which cooking operation CANNOT be performed using a standard box-type solar cooker?",
+    "qh": "बॉक्स-प्रकार के सौर कुकर एक पर्यावरण के अनुकूल खाना पकाने का विकल्प प्रदान करते हैं लेकिन उनकी व्यावहारिक पाक सीमाएं हैं। मानक बॉक्स-प्रकार के सौर कुकर का उपयोग करके कौन सा पकाने का कार्य नहीं किया जा सकता है?",
+    "o": [
+      "Boiling rice and lentils (dal)",
+      "Baking bread or chapattis, and deep frying foods",
+      "Cooking vegetables slowly to retain nutrients",
+      "Heating water to $100^\\circ\\text{C}$"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 can be performed inside a solar cooker. Option 1 is correct because box-type solar cookers achieve maximum internal temperatures of $100^\\circ\\text{C}$ to $140^\\circ\\text{C}$ via trapped solar heat. While suitable for slow boiling (rice, dal, vegetables) without burning or destroying delicate nutrients, **they cannot achieve the intense, localized high temperatures required for baking chapattis or deep-frying foods**. Options 2 and 3 represent operations easily accomplished by solar cookers."
+  },
+  {
+    "p_id": "bpsc_phys_m28_09",
+    "qe": "Atmospheric trapping of thermal radiation maintains Earth's habitable surface temperature. Which set of gases constitutes the primary atmospheric Greenhouse Gases responsible for the Greenhouse Effect?",
+    "qh": "तापीय विकिरण का वायुमंडलीय फंसाव (trapping) पृथ्वी के रहने योग्य सतह के तापमान को बनाए रखता है। गैसों का कौन सा समूह ग्रीनहाउस प्रभाव के लिए जिम्मेदार प्राथमिक वायुमंडलीय ग्रीनहाउस गैसों (Greenhouse Gases) का गठन करता है?",
+    "o": [
+      "Nitrogen ($N_2$), Oxygen ($O_2$), and Argon ($Ar$)",
+      "Carbon Dioxide ($CO_2$), Water Vapour ($H_2O$), and Methane ($CH_4$)",
+      "Helium ($He$), Neon ($Ne$), and Krypton ($Kr$)",
+      "Chlorine ($Cl_2$), Fluorine ($F_2$), and Hydrogen ($H_2$)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 lists major atmospheric gases ($N_2, O_2$) that do not absorb thermal infrared radiation. Option 1 is correct because the **Greenhouse Effect** occurs when thermal infrared radiation reflected/emitted by Earth's surface is absorbed by specific polyatomic gases in the atmosphere. The primary naturally occurring greenhouse gases are **Carbon Dioxide ($CO_2$), Water Vapour ($H_2O$), and Methane ($CH_4$)**. Option 2 lists monoatomic noble gases, and Option 3 lists elemental halogen gases."
+  },
+  {
+    "p_id": "bpsc_phys_m28_10",
+    "qe": "Solar photovoltaic cells convert incident sunlight directly into electrical energy via semiconductor physics. What semiconductor materials are primarily used to manufacture solar cells, and what voltage does a single cell typical unit generate?",
+    "qh": "सौर फोटोवोल्टिक सेल अर्धचालक भौतिकी के माध्यम से आपतित सूर्य के प्रकाश को सीधे विद्युत ऊर्जा में परिवर्तित करते हैं। मुख्य रूप से सौर सेल के निर्माण के लिए किन अर्धचालक सामग्रियों का उपयोग किया जाता है, और एक एकल सेल विशिष्ट इकाई कितना वोल्टेज उत्पन्न करती है?",
+    "o": [
+      "Copper and Iron; potential difference of $220 \\text{ V}$",
+      "Semiconductors like Silicon ($Si$), Gallium ($Ga$), and Germanium ($Ge$); potential difference of $0.5\\text{-}1 \\text{ V}$",
+      "Lead and Aluminum; potential difference of $12 \\text{ V}$",
+      "Graphite and Sulfur; potential difference of $50 \\text{ V}$"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 misidentifies metallic conductors and gives household AC voltage. Option 1 is correct because **Photovoltaic (Solar) Cells** are fabricated using semiconductor materials such as **Silicon ($Si$), Gallium ($Ga$), and Germanium ($Ge$)**. When light strikes the semiconductor wafer's $p\\text{-}n$ junction, photons release electron-hole pairs, developing a potential difference across the cell. A typical single solar cell (e.g., a $2 \\text{ cm}^2$ silicon wafer) produces a **potential difference of about $0.5 \\text{ to } 1 \\text{ V}$** and delivers approximately $0.7 \\text{ W}$ of power. Options 2 and 3 list non-semiconductor materials and incorrect cell voltages."
+  },
+  {
+    "p_id": "bpsc_phys_m28_11",
+    "qe": "Photovoltaic solar cell technology offers distinct operational advantages for remote energy deployment. Which operational feature represents a major advantage of Solar Cells?",
+    "qh": "फोटोवोल्टिक सोलर सेल तकनीक दूरस्थ ऊर्जा परिनियोजन के लिए विशिष्ट परिचालन लाभ प्रदान करती है। कौन सी परिचालन विशेषता सोलर सेल का एक प्रमुख लाभ दर्शाती है?",
+    "o": [
+      "They rely on mechanical high-speed turbine rotors that require frequent lubrication.",
+      "They have no moving parts, require minimal maintenance, operate without focusing devices, and can be installed in remote/inaccessible locations.",
+      "They require continuous combustion of natural gas during night hours.",
+      "They emit greenhouse gases during operation."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 describes mechanical generators. Option 1 is correct because **Solar (Photovoltaic) Cells** feature key technical advantages: (1) **No moving mechanical parts**, eliminating friction wear and tear; (2) **Minimal maintenance requirements** and long operating lifespans; (3) **Function without solar-tracking focusing mirrors**; (4) **Ideal for remote/inaccessible areas** (space satellites, remote weather stations, rural streetlights) where building transmission lines is economically unfeasible. Options 2 and 3 state false operational features."
+  },
+  {
+    "p_id": "bpsc_phys_m28_12",
+    "qe": "Solar panels combine multiple individual solar cells to increase output power. What precious metal is extensively used for interconnecting individual solar cells within a solar panel, making commercial manufacturing expensive?",
+    "qh": "सोलर पैनल आउटपुट पावर बढ़ाने के लिए कई व्यक्तिगत सोलर सेलों को जोड़ते हैं। सोलर पैनल के भीतर व्यक्तिगत सोलर सेलों को आपस में जोड़ने (interconnecting) के लिए किस कीमती धातु का व्यापक रूप से उपयोग किया जाता है, जिससे वाणिज्यिक निर्माण महंगा हो जाता है?",
+    "o": [
+      "Copper ($Cu$)",
+      "Silver ($Ag$)",
+      "Platinum ($Pt$)",
+      "Aluminum ($Al$)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 is cheaper but oxidizes easily, causing higher internal cell resistance over time. Option 1 is correct because individual solar cells are connected in series-parallel arrays inside a **Solar Panel** to increase net voltage and current output. **Silver ($Ag$) metal** is used for electrical interconnections between cells due to its exceptionally low electrical resistivity and high oxidation resistance. However, using silver significantly increases the overall manufacturing cost of solar panels. Options 2 and 3 are not the primary interconnecting metal used in standard arrays."
+  },
+  {
+    "p_id": "bpsc_phys_m28_13",
+    "qe": "Solar concentrators use mirrors to focus sunlight onto small boilers to produce high-temperature steam. Where is the world's largest Solar Furnace located?",
+    "qh": "सोलर कंसंट्रेटर उच्च तापमान वाली भाप उत्पन्न करने के लिए छोटे बॉयलरों पर सूर्य के प्रकाश को केंद्रित करने के लिए दर्पणों का उपयोग करते हैं। विश्व का सबसे बड़ा सोलर फर्नेस (Solar Furnace) कहाँ स्थित है?",
+    "o": [
+      "Denmark",
+      "France",
+      "India",
+      "Germany"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 is known as the 'Country of Winds'. Option 1 is correct because the **world's largest Solar Furnace (Odeillo Solar Furnace)** is located in **Odeillo, France**. It utilizes a massive array of parabolic mirrors to concentrate solar radiation onto a central focal point, achieving temperatures exceeding $3,000^\\circ\\text{C}$ for high-temperature material testing and power generation. Options 2 and 3 do not host the world's largest solar furnace."
+  },
+  {
+    "p_id": "bpsc_phys_m28_14",
+    "qe": "Tidal Energy harnesses coastal ocean dynamics driven by celestial mechanics. What celestial interaction primarily drives the high and low ocean tides used to generate Tidal Power?",
+    "qh": "ज्वारीय ऊर्जा (Tidal Energy) आकाशीय यांत्रिकी द्वारा संचालित तटीय महासागरीय गतिकी का दोहन करती है। ज्वारीय शक्ति उत्पन्न करने के लिए उपयोग किए जाने वाले उच्च और निम्न महासागरीय ज्वार-भाटे को मुख्य रूप से कौन सी आकाशीय अंतःक्रिया संचालित करती है?",
+    "o": [
+      "The magnetic field of Mars repelling Earth's oceans.",
+      "The gravitational pull of the Moon (and Sun) acting on Earth's ocean water, creating twice-daily high and low tides.",
+      "Geothermal magma vents heating ocean floor water.",
+      "Atmospheric wind pressure pushing surface currents."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 incorrectly attributes tides to Mars's magnetic field. Option 1 is correct because **Tidal Energy** is driven by the periodic rise (high tide) and fall (low tide) of sea water caused by the **gravitational attraction of the Moon and the Sun** on Earth's rotating oceans. This twice-daily movement of coastal water is trapped by constructing a **tidal barrage or dam** across a narrow sea opening, driving water turbines as tides ebb and flow. Option 2 describes geothermal energy, and Option 3 describes wave/surface wind dynamics."
+  },
+  {
+    "p_id": "bpsc_phys_m28_15",
+    "qe": "Bio-gas plant architectures are broadly classified into fixed-dome and floating gas-holder types. What structural feature distinguishes a Fixed-Dome Bio-Gas Plant?",
+    "qh": "बायो-गैस संयंत्र वास्तुकला को मोटे तौर पर फिक्स्ड-डोम (fixed-dome) और फ्लोटिंग गैस-होल्डर (floating gas-holder) प्रकारों में वर्गीकृत किया जाता है। कौन सी संरचनात्मक विशेषता फिक्स्ड-डोम बायो-गैस संयंत्र को अलग करती है?",
+    "o": [
+      "A moving steel drum that floats up and down as gas collects.",
+      "A non-moving, static brick dome structure where gas pressure builds up inside the upper dome space.",
+      "An open-air wooden pit without any top cover.",
+      "A subterranean glass vessel exposed to direct sunlight."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 describes a Floating Gas Holder type plant. Option 1 is correct because a **Fixed-Dome Bio-Gas Plant** is constructed entirely of **bricks and cement as a static, non-moving underground structure**. Bio-gas produced by slurry decomposition accumulates in the fixed masonry dome above the digester, forcing spent slurry into the outlet chamber via displacement pressure. Option 2 would allow gas to escape into the atmosphere, preventing collection, and Option 3 violates anaerobic conditions."
+  },
+  {
+    "p_id": "bpsc_phys_m28_16",
+    "qe": "Photovoltaic silicon wafers must meet strict physical purity standards to achieve practical photoelectric conversion efficiency. What is the approximate electrical conversion efficiency of modern silicon solar cells?",
+    "qh": "व्यावहारिक फोटोइलेक्ट्रिक रूपांतरण दक्षता प्राप्त करने के लिए फोटोवोल्टिक सिलिकॉन वेफर्स को सख्त भौतिक शुद्धता मानकों को पूरा करना चाहिए। आधुनिक सिलिकॉन सोलर सेलों की अनुमानित विद्युत रूपांतरण दक्षता क्या है?",
+    "o": [
+      "$5\\%$",
+      "$25\\%$",
+      "$75\\%$",
+      "$99\\%$"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 represents obsolete early experimental solar cells. Option 1 is correct because modern commercial high-purity silicon solar cells achieve an electrical conversion efficiency of **approximately $25\\%$** (converting ~25% of incident light energy into electrical power). Options 2 and 3 exceed the theoretical Shockley-Queisser efficiency limit for single-junction silicon cells."
+  },
+  {
+    "p_id": "bpsc_phys_m28_17",
+    "qe": "Wind energy is harnessed using wind turbines to drive electrical generators. Which component inside a wind generator armature converts mechanical rotational motion into electrical power?",
+    "qh": "पवन टर्बाइन का उपयोग करके विद्युत जनरेटर चलाने के लिए पवन ऊर्जा का दोहन किया जाता है। पवन जनरेटर आर्मेचर के अंदर कौन सा घटक यांत्रिक घूर्णी गति को विद्युत शक्ति में परिवर्तित करता है?",
+    "o": [
+      "Solar photovoltaic wafer array",
+      "Coil of wire rotating inside a magnetic field (Armature Generator)",
+      "Anaerobic methanogenic bacterial slurry",
+      "Parabolic mirror reflector"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 converts light directly to electricity without rotation. Option 1 is correct because a **Wind Generator (Wind Turbine)** uses moving air currents to force turbine blades into rotation. The rotating blade shaft turns a gear assembly connected to an **electric generator armature (a wire coil rotating within a magnetic field)**, generating electrical current via electromagnetic induction. Option 2 is a bio-gas component, and Option 3 is a solar concentrator component."
+  },
+  {
+    "p_id": "bpsc_phys_m28_18",
+    "qe": "Developing countries emphasize bio-gas adoption in rural agricultural sectors. Which statement accurately highlights a major environmental and domestic advantage of bio-gas over traditional fuelwood?",
+    "qh": "विकासशील देश ग्रामीण कृषि क्षेत्रों में बायो-गैस अपनाने पर जोर देते हैं। कौन सा कथन पारंपरिक ईंधन लकड़ी (fuelwood) की तुलना में बायो-गैस के एक प्रमुख पर्यावरणीय और घरेलू लाभ को सटीक रूप से उजागर करता है?",
+    "o": [
+      "Bio-gas produces heavy particulate smoke that deters insects.",
+      "Bio-gas burns cleanly without smoke, leaves no ash residue, has a high calorific value, and provides safe waste disposal.",
+      "Bio-gas requires cutting down forests to obtain starting biomass.",
+      "Bio-gas lowers soil nitrogen content when slurry is discarded."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 incorrectly lists particulate smoke as a benefit (fuelwood smoke causes indoor pollution). Option 1 is correct because **Bio-gas** offers clear domestic and environmental advantages: (1) **Clean combustion:** Burns with a blue, smokeless flame without producing soot or ash; (2) **High heating efficiency:** Possesses a high calorific value due to $CH_4$; (3) **Sanitation:** Provides an hygienic waste disposal method for animal dung/organic waste; (4) **Nutrient recycling:** Preserves nitrogen and phosphorus in slurry for farm soil. Options 2 and 3 state false negative impacts."
+  },
+  {
+    "p_id": "bpsc_phys_m28_19",
+    "qe": "Harnessing wind energy through large wind farms faces environmental and meteorological limitations. Which environmental issue is specifically identified as a limitation of wind energy farms?",
+    "qh": "विशाल पवन फार्मों के माध्यम से पवन ऊर्जा का दोहन पर्यावरणीय और मौसम संबंधी सीमाओं का सामना करता है। पवन ऊर्जा फार्मों की सीमा के रूप में किस पर्यावरणीय समस्या की विशेष रूप से पहचान की गई है?",
+    "o": [
+      "Erosion of the ozone layer by rotating turbine blades",
+      "Disturbance of local rainfall patterns and requirement of large land areas ($2 \\text{ hectares/MW}$)",
+      "High emissions of sulfur dioxide causing severe acid rain",
+      "Depletion of subterranean groundwater tables"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 presents an impossible atmospheric claim. Option 1 is correct because key limitations of large-scale **Wind Energy Farms** include: (1) High initial capital setup costs; (2) **Disruption of local wind micro-climates and rainfall patterns**; (3) **Vast land requirements** (~$2 \\text{ hectares}$ per megawatt); (4) Severe exposure to weathering (storms, cyclones) requiring high maintenance; (5) Intermittent operation restricted to areas with speeds $> 15 \\text{ km/h}$. Options 2 and 3 describe fossil fuel or agricultural issues."
+  },
+  {
+    "p_id": "bpsc_phys_m28_20",
+    "qe": "Solar devices employ parabolic or spherical reflectors when extremely high temperatures are required. What function does a reflector serve in a solar energy collector?",
+    "qh": "अत्यधिक उच्च तापमान की आवश्यकता होने पर सौर उपकरण परवलयिक (parabolic) या गोलाकार रिफ्लेक्टर का उपयोग करते हैं। सौर ऊर्जा संग्राहक में रिफ्लेक्टर क्या कार्य करता है?",
+    "o": [
+      "It converts visible light rays into nuclear fission radiation.",
+      "It focuses sunlight from a large surface area onto a smaller focal area to concentrate solar energy and elevate internal temperatures.",
+      "It cools the collector surface by reflecting heat away into deep space.",
+      "It absorbs carbon dioxide gas from the atmosphere."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 presents a nuclear transformation claim. Option 1 is correct because a **Reflector** (a plane mirror or parabolic/spherical mirror) in solar heating devices intercepts sunlight over a broad surface area and redirects/focuses those light rays onto a smaller target zone (the absorber box or boiler). This **increases the effective solar radiation flux density per unit area**, allowing concentrator systems to achieve the significantly higher temperatures required for cooking or steam power generation. Option 2 describes heat rejection, and Option 3 describes carbon capture."
+  }
+]
