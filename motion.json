@@ -1,0 +1,329 @@
+[
+  {
+    "p_id": "bpsc_phys_m23_01",
+    "qe": "Categorizing physical motion depends on the minimum number of independent spatial coordinates required to specify an object's position over time. Which everyday scenario represents purely three-dimensional motion?",
+    "qh": "भौतिक गति का वर्गीकरण समय के साथ किसी वस्तु की स्थिति को निर्दिष्ट करने के लिए आवश्यक स्वतंत्र स्थानिक निर्देशांकों की न्यूनतम संख्या पर निर्भर करता है। कौन सा दैनिक परिदृश्य विशुद्ध रूप से त्रि-आयामी गति का प्रतिनिधित्व करता है?",
+    "o": [
+      "A railway train running along a perfectly straight track",
+      "A planet orbiting in an elliptical path around the Sun",
+      "A kite swaying and flying randomly in a turbulent sky",
+      "A coin sliding across a smooth, flat carrom board surface"
+    ],
+    "a": 2,
+    "e": "<b>Explanation:</b> Option 0 describes One-Dimensional (1D) Motion, where position changes along a single straight line axis ($x$). Option 1 and Option 3 describe Two-Dimensional (2D) Motion, where position changes within a single plane requiring two coordinates ($x, y$), such as planetary orbits or planar sliding. Option 2 is correct because the erratic flight of a kite, bird, or butterfly in atmospheric air occurs across three mutually perpendicular spatial axes ($x, y, z$). This constitutes <b>Three-Dimensional (3D) Motion</b> [motion in space where three independent coordinates are required to track position as a function of time]. Option 0 is 1D, while Options 1 and 3 are 2D."
+  },
+  {
+    "p_id": "bpsc_phys_m23_02",
+    "qe": "Measuring physical movement requires distinguishing between path-dependent scalar distances and path-independent vector displacements. What is the strict mathematical boundary governing the displacement-to-distance ratio for any real particle course of motion?",
+    "qh": "भौतिक गति को मापने के लिए पथ-निर्भर अदिश दूरियों और पथ-स्वतंत्र सदिश विस्थापनों के बीच अंतर करने की आवश्यकता होती है। किसी भी वास्तविक कण गति मार्ग के लिए विस्थापन-से-दूरी अनुपात को नियंत्रित करने वाली सख्त गणितीय सीमा क्या है?",
+    "o": [
+      "The ratio of magnitude of displacement to distance is strictly greater than 1.",
+      "The ratio of magnitude of displacement to distance is always less than or equal to 1.",
+      "Displacement can exceed distance if the particle experiences uniform acceleration.",
+      "Distance becomes zero whenever displacement is negative."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 asserts an impossible geometry where straight-line distance is shorter than displacement. Option 1 is correct because <b>Distance</b> is the actual length of the path traversed by a body (a non-negative scalar), whereas <b>Displacement</b> is the shortest straight-line vector directed from the initial to the final position. Since the shortest distance between two points is a straight line, magnitude of displacement can never exceed distance: <b>$$\\text{Displacement} \\le \\text{Distance} \\implies \\frac{|\\text{Displacement}|}{\\text{Distance}} \\le 1$$</b> The ratio equals 1 only for unidirectional motion along a straight line without reversing. Option 2 is false because acceleration cannot alter fundamental space metric constraints. Option 3 is incorrect because distance is cumulative and scalar, remaining positive whenever motion occurs."
+  },
+  {
+    "p_id": "bpsc_phys_m23_03",
+    "qe": "An automobile instrument panel contains specialized meters for tracking vehicle motion metrics. What physical quantity is directly recorded by a vehicle's odometer?",
+    "qh": "एक ऑटोमोबाइल उपकरण पैनल में वाहन गति मीट्रिक को ट्रैक करने के लिए विशेष मीटर होते हैं। वाहन के ओडोमीटर द्वारा सीधे किस भौतिक राशि को रिकॉर्ड किया जाता है?",
+    "o": [
+      "Instantaneous velocity vector",
+      "Total cumulative path length (distance traveled)",
+      "Net vector displacement from the garage origin",
+      "Average acceleration rate over time"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 describes the speedometer, which measures scalar instantaneous speed. Option 1 is correct because an <b>Odometer</b> is an onboard mechanical or digital device that records the actual scalar <b>Path Length (Distance Traveled)</b> covered by a vehicle over its operational lifespan, regardless of direction changes or reversals. Option 2 is incorrect because the odometer does not reset or compute vector displacement; traversing a closed circular loop adds to the odometer reading even though net displacement is zero. Option 3 describes an accelerometer."
+  },
+  {
+    "p_id": "bpsc_phys_m23_04",
+    "qe": "Evaluating kinematics requires distinguishing vector velocity from scalar speed. How can the velocity of a moving body be altered even if its speed remains perfectly constant?",
+    "qh": "किनेमैटिक्स के मूल्यांकन के लिए सदिश वेग को अदिश चाल से अलग करने की आवश्यकता होती है। किसी गतिमान पिंड के वेग को उसकी चाल पूर्णतः स्थिर रहने पर भी कैसे बदला जा सकता है?",
+    "o": [
+      "Velocity can never change if speed remains strictly constant.",
+      "By changing its direction of motion continuously without changing its numerical speed.",
+      "By increasing its total scalar path length while keeping time fixed.",
+      "By reversing the sign of gravitational acceleration."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 incorrectly treats velocity as a pure scalar. Option 1 is correct because <b>Velocity</b> is a vector quantity defined as <b>$$\\vec{v} = \\frac{\\vec{s}}{t}$$</b> featuring both numerical magnitude (speed) and directional vector orientation. Therefore, velocity changes if: (1) speed changes, (2) direction of motion changes, or (3) both change. In uniform circular motion, a particle moves at constant speed, but its velocity continuously changes at every point because its directional tangent vector rotates continuously. Options 2 and 3 present invalid physical mechanisms."
+  },
+  {
+    "p_id": "bpsc_phys_m23_05",
+    "qe": "Relative velocity governs the apparent motion of one body observed from the moving reference frame of another. If two trains, A and B, move parallel to each other along adjacent tracks at velocities $v_A$ and $v_B$ in opposite directions, what is the relative velocity of train A with respect to train B ($v_{AB}$)?",
+    "qh": "सापेक्ष वेग (Relative velocity) किसी अन्य गतिमान संदर्भ फ्रेम से देखे गए पिंड की आभासी गति को नियंत्रित करता है। यदि दो ट्रेनें, A और B, समानांतर पटरियों पर विपरीत दिशाओं में $v_A$ और $v_B$ वेग से गति कर रही हैं, तो ट्रेन B के सापेक्ष ट्रेन A का सापेक्ष वेग ($v_{AB}$) क्या है?",
+    "o": [
+      "$v_{AB} = v_A - v_B$",
+      "$v_{AB} = v_A + v_B$",
+      "$v_{AB} = \\sqrt{v_A^2 + v_B^2}$",
+      "$v_{AB} = \\frac{v_A \\cdot v_B}{v_A + v_B}$"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 gives relative velocity for bodies moving in the <i>same</i> direction. Option 1 is correct because vector relative velocity is defined as $\\vec{v}_{AB} = \\vec{v}_A - \\vec{v}_B$. When two objects move in <b>opposite directions</b> along a line, if train A moves right ($+v_A$), train B moves left ($-v_B$). Substituting into the vector equation yields: <b>$$v_{AB} = v_A - (-v_B) = v_A + v_B$$</b> Thus, the relative speed increases, making each train appear to move faster relative to an observer aboard the other. Option 2 applies to perpendicular 2D relative motion, and Option 3 is a reduced mass harmonic term."
+  },
+  {
+    "p_id": "bpsc_phys_m23_06",
+    "qe": "Deceleration (retardation) describes a specific dynamic state of a particle moving in one dimension. What mathematical relationship between initial velocity ($u$) and final velocity ($v$) over a time interval defines negative acceleration?",
+    "qh": "मंदन (Deceleration/Retardation) एक आयाम में गतिमान कण की एक विशिष्ट गतिक अवस्था का वर्णन करता है। किसी समयांतराल पर प्रारंभिक वेग ($u$) और अंतिम वेग ($v$) के बीच कौन सा गणितीय संबंध ऋणात्मक त्वरण को परिभाषित करता है?",
+    "o": [
+      "$v > u$ (velocity increases over time)",
+      "$v < u$ (velocity decreases over time)",
+      "$v = u = 0$ (particle remains at rest)",
+      "$v = -u$ (particle moves at uniform speed in a circle)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 defines positive acceleration ($a > 0$). Option 1 is correct because <b>Negative Acceleration (Deceleration or Retardation)</b> occurs when the magnitude of velocity decreases with respect to time, meaning <b>$$v < u \\implies a = \\frac{v - u}{t} < 0$$</b> Here, the acceleration vector points in the direction opposite to the direction of motion (velocity vector), reducing the particle's speed. Option 2 describes static rest, and Option 3 describes direction reversal."
+  },
+  {
+    "p_id": "bpsc_phys_m23_07",
+    "qe": "Translational kinematics classifies rectilinear motion based on force requirements and velocity consistency. What net force is required to maintain a body in pure uniform motion along a straight path?",
+    "qh": "स्थानांतरणीय किनेमैटिक्स बल की आवश्यकताओं और वेग की निरंतरता के आधार पर सीधी रेखा की गति को वर्गीकृत करता है। एक सीधे पथ के साथ शुद्ध एकसमान गति (pure uniform motion) में किसी पिंड को बनाए रखने के लिए कितने शुद्ध बल (net force) की आवश्यकता होती है?",
+    "o": [
+      "A constant non-zero net force proportional to velocity",
+      "Zero net force ($\\\\sum \\\\vec{F} = 0$)",
+      "A continuously increasing centripetal force",
+      "A force equal to the gravitational weight of the body"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 reflects Aristotelian misconception where force is needed to sustain motion. Option 1 is correct because according to Newton's First Law of Motion, a body in **Uniform Motion** moves along a straight line with **constant velocity** (zero acceleration, $a = 0$). By Newton's Second Law ($\\\\vec{F}_{\\\\text{net}} = m\\\\vec{a}$), if acceleration is zero, the **Net External Force required to maintain uniform motion is strictly Zero ($\\\\sum \\\\vec{F} = 0$)**. Option 2 applies to circular motion, and Option 3 applies to free-fall or vertical support."
+  },
+  {
+    "p_id": "bpsc_phys_m23_08",
+    "qe": "Analyzing displacement-time ($s-t$) graphs reveals the instantaneous kinematic state of an object. What structural feature on an $s-t$ graph indicates that an object is at rest?",
+    "qh": "विस्थापन-समय ($s-t$) रेखाचित्रों का विश्लेषण किसी वस्तु की तात्कालिक गतिक अवस्था को उजागर करता है। $s-t$ ग्राफ पर कौन सी संरचनात्मक विशेषता यह दर्शाती है कि वस्तु विराम अवस्था में है?",
+    "o": [
+      "A straight line sloping upward at a $45^\\circ$ angle to the time axis",
+      "A straight line parallel to the time axis",
+      "A parabolic curve bending toward the displacement axis",
+      "A vertical line parallel to the displacement axis"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 describes uniform non-zero velocity. Option 1 is correct because on a **Displacement-Time ($s-t$) Graph**, the slope $\\frac{ds}{dt}$ represents velocity. When an object is at rest, its displacement $s$ remains constant as time $t$ progresses. This yields a **straight horizontal line parallel to the time axis**, whose slope is zero ($v = 0$). Option 2 represents constant non-zero acceleration, and Option 3 represents infinite speed (physically impossible)."
+  },
+  {
+    "p_id": "bpsc_phys_m23_09",
+    "qe": "Velocity-time ($v-t$) graphs provide quantitative information regarding particle acceleration and spatial translation. What specific kinematic quantities are derived from the slope and area under a $v-t$ graph, respectively?",
+    "qh": "वेग-समय ($v-t$) ग्राफ कण त्वरण और स्थानिक स्थानांतरण के संबंध में मात्रात्मक जानकारी प्रदान करते हैं। $v-t$ ग्राफ के ढाल (slope) और अंतर्गत क्षेत्रफल (area under graph) से क्रमशः कौन सी विशिष्ट गतिक राशियां प्राप्त होती हैं?",
+    "o": [
+      "Slope gives distance; Area gives acceleration.",
+      "Slope gives Acceleration; Area under the curve gives Displacement or Distance traveled.",
+      "Slope gives force; Area gives power.",
+      "Slope gives impulse; Area gives momentum."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 reverses slope and integral properties. Option 1 is correct because in a $v-t$ graph:\n1. **Slope:** The derivative $\\frac{dv}{dt}$ represents the rate of change of velocity, which is **Acceleration**.\n2. **Area under the curve:** The integral $\\int v \\, dt = \\int \\frac{ds}{dt} \\, dt$ yields the net **Displacement** (or total **Distance Traveled** if evaluating the absolute magnitude area).\nOption 2 and Option 3 list non-kinematic force/energy metrics."
+  },
+  {
+    "p_id": "bpsc_phys_m23_10",
+    "qe": "An object launched vertically upward under gravity experiences linear retardation until reaching its apex. What are the velocity and acceleration of the object at its highest point?",
+    "qh": "गुरुत्वाकर्षण के तहत लंबवत रूप से ऊपर की ओर फेंकी गई वस्तु अपने उच्चतम बिंदु (apex) तक पहुंचने तक रैखिक मंदन का अनुभव करती है। अपने उच्चतम बिंदु पर वस्तु का वेग और त्वरण क्या होता है?",
+    "o": [
+      "Velocity is zero; Acceleration is zero.",
+      "Velocity is zero; Acceleration is non-zero and directed vertically downward ($-g$).",
+      "Velocity is maximum; Acceleration is zero.",
+      "Velocity is $-g$; Acceleration is $+g$."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 is a common conceptual trap assuming zero motion implies zero force. Option 1 is correct because when a body is projected vertically upward, gravity continuously exerts a downward acceleration ($-g$). At the highest peak (apex), the body momentarily stops before reversing direction, so its **Instantaneous Velocity is Zero ($v = 0$)**. However, Earth's gravitational force acts continuously, so its **Acceleration remains non-zero and equal to $-g$ ($9.8 \\text{ m/s}^2$ downward)**. If acceleration were also zero at the peak, the object would hover indefinitely. Option 2 and Option 3 state incorrect vector values."
+  },
+  {
+    "p_id": "bpsc_phys_m23_11",
+    "qe": "Earth's gravitational field exerts a uniform downward acceleration ($g$) on falling bodies when air resistance is negligible. What initial condition and acceleration sign conventions govern a body dropped freely from rest?",
+    "qh": "हवा के प्रतिरोध नगण्य होने पर पृथ्वी का गुरुत्वाकर्षण क्षेत्र गिरते हुए पिंडों पर एकसमान नीचे की ओर त्वरण ($g$) लगाता है। विराम अवस्था से स्वतंत्र रूप से छोड़े गए पिंड के लिए कौन सी प्रारंभिक स्थिति और त्वरण चिह्न परिपाटी (sign convention) लागू होती है?",
+    "o": [
+      "Initial velocity $u > 0$; Acceleration $a = 0$",
+      "Initial velocity $u = 0$; Acceleration due to gravity is taken as $+g$ (if downward direction is positive) as velocity increases.",
+      "Initial velocity $u = -g$; Acceleration is variable.",
+      "Initial velocity $u = \\infty$; Acceleration $a = -g$"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 asserts non-zero initial speed for a dropped body. Option 1 is correct because when an object is **dropped freely from rest**, its **Initial Velocity is strictly Zero ($u = 0$)**. As it falls downward under gravity, its speed increases linearly over time ($v = gt$). Taking the downward direction of motion as positive, the **acceleration due to gravity is $+g$** ($+9.8 \\text{ m/s}^2$). Option 2 and Option 3 assign invalid non-zero initial velocities."
+  },
+  {
+    "p_id": "bpsc_phys_m23_12",
+    "qe": "In idealized free-fall motion near Earth's surface (ignoring atmospheric drag), symmetry governs ascent and descent trajectories. How does the time of ascent ($t_a$) to maximum height compare to the time of descent ($t_d$) back to projection level?",
+    "qh": "पृथ्वी की सतह के पास आदर्श मुक्त-पतन गति (मुक्त-ऊर्ध्वपात) में (वायुमंडलीय ड्रैग को नजरअंदाज करते हुए), समरूपता आरोहण और अवरोहण के प्रक्षेपवक्र को नियंत्रित करती है। अधिकतम ऊंचाई तक आरोहण का समय ($t_a$) प्रक्षेपण स्तर पर वापस आने के अवरोहण के समय ($t_d$) से कैसे तुलना करता है?",
+    "o": [
+      "$t_a > t_d$ because gravity resists upward motion.",
+      "$t_a = t_d = \\frac{u \\sin \\theta}{g}$ (Time taken to rise equals time taken to fall).",
+      "$t_a < t_d$ because the object gains mass at the top.",
+      "$t_a = 2 t_d$ due to parabolic velocity splitting."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 incorrectly assumes gravity affects ascent longer than descent. Option 1 is correct because in the absence of air resistance, motion under constant gravitational acceleration $g$ is perfectly conservative and time-symmetric. For an object thrown vertically or in projectile motion, the time required to decelerate from initial vertical velocity $u_y$ to zero at the peak (**Time of Ascent, $t_a = \\frac{u_y}{g}$**) exactly equals the time required to accelerate back from zero to $u_y$ at the base level (**Time of Descent, $t_d = \\frac{u_y}{g}$**). Thus, **$$t_a = t_d$$**. Options 0, 2, and 3 violate kinematic trajectory symmetry."
+  },
+  {
+    "p_id": "bpsc_phys_m23_13",
+    "qe": "Projectile motion involves two-dimensional motion in a vertical plane under constant gravity. What geometric curve describes the actual trajectory followed by a projectile?",
+    "qh": "प्रक्षेप्य गति (Projectile motion) में स्थिर गुरुत्वाकर्षण के तहत लंबवत समतल में दो-आयामी गति शामिल होती है। प्रक्षेप्य द्वारा तय किए गए वास्तविक पथ (trajectory) को कौन सा ज्यामितीय वक्र वर्णित करता है?",
+    "o": [
+      "A perfect circle",
+      "A parabolic curve",
+      "A hyperbola",
+      "A straight logarithmic spiral"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 describes central orbital motion. Option 1 is correct because when an object is thrown obliquely near Earth's surface, its horizontal displacement is $x = (u \\cos \\theta)t \\implies t = \\frac{x}{u \\cos \\theta}$, and its vertical displacement is $y = (u \\sin \\theta)t - \\frac{1}{2}gt^2$. Substituting $t$ yields the trajectory equation: <b>$$y = x \\tan \\theta - \\frac{g}{2 u^2 \\cos^2 \\theta} x^2$$</b> This equation takes the standard mathematical form $y = ax - bx^2$, which defines a <b>Parabolic Curve</b>. Option 2 describes hyperbolic escape trajectories, and Option 3 describes non-gravitational damping spirals."
+  },
+  {
+    "p_id": "bpsc_phys_m23_14",
+    "qe": "Resolving initial projectile velocity $\\vec{u}$ into orthogonal components separates horizontal and vertical motion. Assuming zero air resistance, how do the horizontal ($u_x$) and vertical ($u_y$) velocity components behave throughout flight?",
+    "qh": "प्रारंभिक प्रक्षेप्य वेग $\\vec{u}$ को लंबवत घटकों में विघटित करने से क्षैतिज और लंबवत गति अलग हो जाती है। शून्य वायु प्रतिरोध मानते हुए, पूरे उड़ान के दौरान क्षैतिज ($u_x$) और लंबवत ($u_y$) वेग घटक कैसे व्यवहार करते हैं?",
+    "o": [
+      "Both $u_x$ and $u_y$ decrease to zero at the highest point.",
+      "$u_x = u \\cos \\theta$ remains strictly constant throughout flight, while $u_y = u \\sin \\theta$ changes continuously due to gravitational acceleration.",
+      "$u_x$ increases continuously, while $u_y$ remains constant.",
+      "Both $u_x$ and $u_y$ accelerate at a rate of $+g$ horizontally."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 incorrectly claims horizontal velocity drops to zero at the peak. Option 1 is correct because projectile motion is a combination of two independent 1D motions:\n1. **Horizontal Direction:** No horizontal forces act ($sum F_x = 0 implies a_x = 0$). Thus, **$$u_x = u cos \theta$$ remains strictly constant** across the entire trajectory.\n2. **Vertical Direction:** Gravitational force acts downward ($a_y = -g$). Thus, **$$u_y = u sin \theta$$ changes continuously**, decreasing during ascent, becoming zero at the peak, and increasing downward during descent.\nOption 2 and Option 3 falsely assign horizontal acceleration."
+  },
+  {
+    "p_id": "bpsc_phys_m23_15",
+    "qe": "Real-world scenarios often display projectile motion dynamics. Which choice represents a classic real-world example of projectile motion?",
+    "qh": "वास्तविक दुनिया के परिदृश्य अक्सर प्रक्षेप्य गति गतिकी को प्रदर्शित करते हैं। कौन सा विकल्प प्रक्षेप्य गति के एक उत्कृष्ट वास्तविक दुनिया के उदाहरण का प्रतिनिधित्व करता है?",
+    "o": [
+      "A commercial airliner cruising at constant altitude and uniform velocity",
+      "A bomb released from a horizontally flying airplane, or a bullet fired obliquely from a tank",
+      "An elevator moving up a vertical shaft at constant speed",
+      "A charged particle moving parallel to a uniform magnetic field"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 describes 1D uniform linear motion. Option 1 is correct because a **bomb dropped from a horizontally moving airplane** (or a bullet fired obliquely from a tank) possesses an initial velocity and subsequently moves freely under the influence of Earth's gravity alone. This traces a curved parabolic path, constituting classic **Projectile Motion**. Option 2 describes 1D constrained vertical motion, and Option 3 describes force-free straight-line magnetic deflection."
+  },
+  {
+    "p_id": "bpsc_phys_m23_16",
+    "qe": "At the apex (maximum height) of a projectile's parabolic trajectory, its motion undergoes a specific vector reduction. What is the magnitude and direction of the projectile's net velocity at its highest point?",
+    "qh": "किसी प्रक्षेप्य के परवलयिक पथ के शीर्ष (अधिकतम ऊंचाई) पर, इसकी गति एक विशिष्ट सदिश कमी से गुजरती है। इसके उच्चतम बिंदु पर प्रक्षेप्य के शुद्ध वेग का परिमाण और दिशा क्या होती है?",
+    "o": [
+      "Net velocity is zero in all directions.",
+      "Net velocity is non-zero, equal to its horizontal component $u \\cos \\theta$, directed horizontally.",
+      "Net velocity is equal to initial projection velocity $u$, directed vertically downward.",
+      "Net velocity is $u \\sin \\theta$, directed at $45^\\circ$ to the horizontal."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 incorrectly assumes motion ceases completely at the peak. Option 1 is correct because at the highest point of a projectile's trajectory, the vertical velocity component vanishes ($v_y = 0$). However, the horizontal velocity component remains unattenuated ($v_x = u \\cos \\theta$). Therefore, the **Net Velocity at the highest point is non-zero, equal to $$v_{\\text{top}} = \\sqrt{v_x^2 + v_y^2} = u \\cos \\theta$$**, directed **purely horizontally**. Option 2 incorrectly substitutes full initial speed, and Option 3 uses the vanished vertical component."
+  },
+  {
+    "p_id": "bpsc_phys_m23_17",
+    "qe": "An object undergoes uniform rectilinear motion along the positive $x$-axis. What is the shape of its acceleration-time ($a-t$) graph?",
+    "qh": "एक वस्तु धनात्मक $x$-अक्ष के अनुदिश एकसमान रैखिक गति से गुजरती है। इसके त्वरण-समय ($a-t$) ग्राफ का आकार क्या होगा?",
+    "o": [
+      "A straight line with a positive constant slope sloping upward",
+      "A straight line coinciding with the time axis ($a = 0$)",
+      "A parabolic curve opening upward",
+      "A vertical line parallel to the acceleration axis"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 describes uniformly increasing acceleration (jerk). Option 1 is correct because <b>Uniform Rectilinear Motion</b> implies that the body moves with a constant velocity vector, meaning its rate of change of velocity is zero ($\\\\vec{a} = \\frac{d\\vec{v}}{dt} = 0$). Consequently, the <b>Acceleration-Time ($a-t$) Graph is a straight horizontal line lying directly along (coinciding with) the time axis at $a = 0$</b>. Option 2 describes variable acceleration, and Option 3 is physically invalid."
+  },
+  {
+    "p_id": "bpsc_phys_m23_18",
+    "qe": "Evaluating a velocity-time ($v-t$) graph reveals a straight line sloping upward that starts above the origin at $t = 0$. What kinematic state does this specific graph represent?",
+    "qh": "वेग-समय ($v-t$) ग्राफ का मूल्यांकन एक ऊपर की ओर झुकी हुई सीधी रेखा को दर्शाता है जो $t = 0$ पर मूल बिंदु के ऊपर से शुरू होती है। यह विशिष्ट ग्राफ किस गतिक अवस्था का प्रतिनिधित्व करता है?",
+    "o": [
+      "Motion with zero initial velocity and non-uniform acceleration",
+      "Motion with a non-zero initial velocity ($u \\neq 0$) undergoing constant (uniform) positive acceleration",
+      "An object remaining permanently at rest",
+      "Uniform motion with zero net acceleration"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 describes a graph passing through the origin. Option 1 is correct because: (1) A straight line on a $v-t$ graph indicates a constant slope, meaning **Constant (Uniform) Acceleration**; (2) Intersecting the velocity axis above the origin at $t = 0$ indicates that the object possesses a **Non-Zero Initial Velocity ($u \\neq 0$)**. Thus, the graph represents $v = u + at$. Option 2 describes a line on the time axis ($v = 0$), and Option 3 describes a horizontal line parallel to the time axis ($v = c$)."
+  },
+  {
+    "p_id": "bpsc_phys_m23_19",
+    "qe": "The total time of flight ($T$) of a projectile is the total time it remains in the air before returning to the projection plane. What formula expresses $T$ in terms of initial projection speed $u$, projection angle $\\theta$, and gravity $g$?",
+    "qh": "किसी प्रक्षेप्य की कुल उड़ान का समय ($T$) वह कुल समय है जब तक वह प्रक्षेपण तल पर लौटने से पहले हवा में रहता है। प्रारंभिक प्रक्षेपण चाल $u$, प्रक्षेपण कोण $\\theta$, और गुरुत्वाकर्षण $g$ के संदर्भ में $T$ को व्यक्त करने वाला सूत्र क्या है?",
+    "o": [
+      "$T = \\frac{u \\cos \\theta}{g}$",
+      "$T = t_a + t_d = \\frac{2 u \\sin \\theta}{g}$",
+      "$T = \\frac{u^2 \\sin^2 \\theta}{2g}$",
+      "$T = \\frac{u^2 \\sin 2\\theta}{g}$"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 uses the horizontal velocity component instead of vertical. Option 1 is correct because the total **Time of Flight ($T$)** is the sum of the time of ascent ($t_a$) and time of descent ($t_d$). Since $t_a = t_d = \\frac{u \\sin \\theta}{g}$, combining them yields: <b>$$T = t_a + t_d = \\frac{u \\sin \\theta}{g} + \\frac{u \\sin \\theta}{g} = \\frac{2 u \\sin \\theta}{g}$$</b> Option 2 is the formula for Maximum Height ($H_{\\text{max}}$), and Option 3 is the formula for Horizontal Range ($R$)."
+  },
+  {
+    "p_id": "bpsc_phys_m23_20",
+    "qe": "Reference frames provide the spatial coordinate origin for describing motion. When is an object formally defined to be in a state of motion?",
+    "qh": "संदर्भ फ्रेम (Reference frames) गति का वर्णन करने के लिए स्थानिक निर्देशांक मूल बिंदु प्रदान करते हैं। किसी वस्तु को औपचारिक रूप से गति की अवस्था में कब माना जाता है?",
+    "o": [
+      "When its total mass continuously decreases over time",
+      "When its spatial position changes continuously with respect to a chosen fixed reference point (origin) as time passes",
+      "Only when its temperature rises above ambient surroundings",
+      "When it travels in a closed circular loop at infinite speed"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 describes mass decay. Option 1 is correct because **Motion** is a relative concept. An object is formally defined to be in a state of motion if its **spatial position coordinates change continuously relative to a specified fixed reference point (origin)** over time. If position coordinates remain unchanged with time relative to that frame, the object is at rest. Option 2 describes thermal dynamics, and Option 3 states an impossible kinetic scenario."
+  },
+  
+  {
+    "p_id": "bpsc_phys_m24_01",
+    "qe": "Evaluating the trajectory parameters of a projectile launched obliquely at an angle $\\theta$ to the horizontal reveals specific relationships between range and maximum height. When a projectile is launched at an optimal angle of $45^\\circ$ to achieve maximum horizontal range ($R_{\\text{max}}$), what is the exact mathematical relationship between its maximum vertical height ($H$) and $R_{\\text{max}}$?",
+    "qh": "क्षैतिज से $\\theta$ कोण पर तिरछे प्रक्षेपित प्रक्षेप्य के प्रक्षेपवक्र मापदंडों का मूल्यांकन सीमा और अधिकतम ऊंचाई के बीच विशिष्ट संबंधों को उजागर करता है। जब एक प्रक्षेप्य को अधिकतम क्षैतिज परास ($R_{\\text{max}}$) प्राप्त करने के लिए $45^\\circ$ के अनुकूलतम कोण पर प्रक्षेपित किया जाता है, तो इसकी अधिकतम ऊर्ध्वाधर ऊंचाई ($H$) और $R_{\\text{max}}$ के बीच सटीक गणितीय संबंध क्या है?",
+    "o": [
+      "$H = R_{\\text{max}}$",
+      "$H = \\frac{R_{\\text{max}}}{4}$",
+      "$H = 2 R_{\\text{max}}$",
+      "$H = \\frac{R_{\\text{max}}}{2}$"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 assumes equal vertical and horizontal displacements. Option 1 is correct because the general formula for maximum height is <b>$$H = \\frac{u^2 \\sin^2 \\theta}{2g}$$</b> and for horizontal range is <b>$$R = \\frac{u^2 \\sin 2\\theta}{g} = \\frac{2 u^2 \\sin \\theta \\cos \\theta}{g}$$</b> For maximum range, $\\sin 2\\theta = 1 \\implies 2\\theta = 90^\\circ \\implies \\theta = 45^\\circ$. Substituting $\\theta = 45^\\circ$ into the height formula gives: <b>$$H = \\frac{u^2 \\sin^2 45^\\circ}{2g} = \\frac{u^2 (1/\\sqrt{2})^2}{2g} = \\frac{u^2}{4g}$$</b> Since $R_{\\text{max}} = \\frac{u^2}{g}$, it directly follows that <b>$$H = \\frac{R_{\\text{max}}}{4}$$</b> Thus, at maximum range, the maximum height reached is exactly one-quarter of the maximum horizontal range. Option 2 and Option 3 state incorrect algebraic ratios."
+  },
+  {
+    "p_id": "bpsc_phys_m24_02",
+    "qe": "Symmetry in trigonometric double-angle identities governs projectile horizontal range behavior across different launch angles. Given a constant initial launch velocity ($u$), which pair of launch angles yields an identical horizontal range ($R$)?",
+    "qh": "त्रिकोणमितीय द्वि-कोण पहचान में समरूपता विभिन्न प्रक्षेपण कोणों पर प्रक्षेप्य क्षैतिज परास के व्यवहार को नियंत्रित करती है। स्थिर प्रारंभिक प्रक्षेपण वेग ($u$) दिए जाने पर, प्रक्षेपण कोणों का कौन सा युग्म समान क्षैतिज परास ($R$) प्रदान करता है?",
+    "o": [
+      "Complementary launch angles that add up to $90^\\circ$ (i.e., $\\theta$ and $90^\\circ - \\theta$)",
+      "Supplementary launch angles that add up to $180^\\circ$ (i.e., $\\theta$ and $180^\\circ - \\theta$)",
+      "Identical launch angles separated by $45^\\circ$",
+      "Opposite angles differing by $180^\\circ$"
+    ],
+    "a": 0,
+    "e": "<b>Explanation:</b> Option 0 is correct because the horizontal range formula is <b>$$R = \\frac{u^2 \\sin 2\\theta}{g}$$</b> For a launch angle of $(90^\\circ - \\theta)$, the range becomes: <b>$$R' = \\frac{u^2 \\sin[2(90^\\circ - \\theta)]}{g} = \\frac{u^2 \\sin(180^\\circ - 2\\theta)}{g}$$</b> Since $\\sin(180^\\circ - x) = \\sin x$, we have $\\sin(180^\\circ - 2\\theta) = \\sin 2\\theta$, which proves <b>$$R' = R$$</b> Therefore, two <b>complementary launch angles whose sum equals $90^\\circ$</b> (such as $30^\\circ$ and $60^\\circ$, or $15^\\circ$ and $75^\\circ$) yield the exact same horizontal range for a given initial velocity. Option 1 misapplies supplementary angles, and Option 2/Option 3 list invalid angle relationships."
+  },
+  {
+    "p_id": "bpsc_phys_m24_03",
+    "qe": "Athletes in field events like javelin throw and long jump optimize projectile kinematics to maximize horizontal coverage. What primary angle of projection do athletes target to achieve maximum distance, and what speed condition applies at the apex of flight?",
+    "qh": "भाला फेंक (javelin throw) और लंबी कूद (long jump) जैसी मैदानी स्पर्धाओं में एथलीट क्षैतिज दूरी को अधिकतम करने के लिए प्रक्षेप्य किनेमैटिक्स का अनुकूलन करते हैं। अधिकतम दूरी प्राप्त करने के लिए एथलीट मुख्य रूप से किस प्रक्षेपण कोण को लक्षित करते हैं, और उड़ान के शीर्ष पर कौन सी चाल स्थिति लागू होती है?",
+    "o": [
+      "Projection angle close to $90^\\circ$; Speed at apex is zero.",
+      "Projection angle close to $45^\\circ$; Speed at apex is at its absolute minimum and equals $u \\cos \\theta$.",
+      "Projection angle close to $0^\\circ$; Speed at apex is maximum and equals $u \\sin \\theta$.",
+      "Projection angle close to $60^\\circ$; Speed at apex equals initial speed $u$."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 describes vertical throw where range is zero. Option 1 is correct because: (1) Horizontal range $R = \\frac{u^2 \\sin 2\\theta}{g}$ reaches its mathematical maximum when $\\sin 2\\theta = 1 \\implies \\theta = 45^\\circ$. Hence, athletes aim for a **launch angle close to $45^\\circ$** along with maximum initial velocity; (2) Throughout flight, the horizontal velocity component ($u_x = u \\cos \\theta$) remains strictly constant while the vertical component ($u_y$) continuously changes due to gravity, becoming zero at the highest point (apex). Consequently, the net speed at the peak reaches its **absolute minimum value, equal to $u \\cos \\theta$**. Option 2 and Option 3 state incorrect angles or apex velocity components."
+  },
+  {
+    "p_id": "bpsc_phys_m24_04",
+    "qe": "Rotational kinematics establishes specific mathematical relationships between frequency, time period, and angular velocity for uniform circular motion. If an object completes $n$ full circular revolutions per second, what is its angular velocity ($\\omega$) in radians per second?",
+    "qh": "घूर्णी किनेमैटिक्स एकसमान वृत्तीय गति के लिए आवृत्ति, आवर्तकाल और कोणीय वेग के बीच विशिष्ट गणितीय संबंध स्थापित करता है। यदि कोई वस्तु प्रति सेकंड $n$ पूर्ण वृत्तीय चक्कर पूरे करती है, तो रेडियन प्रति सेकंड में इसका कोणीय वेग ($\\omega$) क्या है?",
+    "o": [
+      "$\\omega = \\frac{n}{2\\pi}$",
+      "$\\omega = 2\\pi n = \\frac{2\\pi}{T}$",
+      "$\\omega = 2\\pi T$",
+      "$\\omega = \\frac{1}{2\\pi n}$"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 inverts the $2\\pi$ factor. Option 1 is correct because: (1) A single complete circular revolution corresponds to an angular displacement of $\\theta = 2\\pi \\text{ radians}$; (2) Frequency ($n$) is the number of revolutions per second ($n = \\frac{1}{T}$, where $T$ is the time period); (3) **Angular Velocity ($\\omega$)** is defined as the time rate of change of angular displacement: <b>$$\\omega = \\frac{\\theta}{t} = \\frac{2\\pi}{T} = 2\\pi n$$</b> Measured in $\\text{rad/s}$, this links linear frequency directly to rotational rate. Option 2 incorrectly multiplies by $T$ instead of dividing, and Option 3 is the inverse form."
+  },
+  {
+    "p_id": "bpsc_phys_m24_05",
+    "qe": "Passengers riding in a bus traveling along a winding, hilly, or sloped road frequently experience motion sickness and nausea. What biomechanical mechanism accounts for this physiological discomfort during curved hill motion?",
+    "qh": "मोड़दार, पहाड़ी या ढलान वाली सड़क पर चलने वाली बस में यात्रा करने वाले यात्री अक्सर मोशन सिकनेस (motion sickness) और उल्टी का अनुभव करते हैं। पहाड़ी घुमावदार गति के दौरान इस शारीरिक परेशानी के लिए कौन सा बायोटेक्निकल तंत्र जिम्मेदार है?",
+    "o": [
+      "Rapid change in atmospheric pressure causing instant ear drum rupture.",
+      "Rapid, continuous shifts in centripetal and tangential acceleration vectors causing fluid in the human stomach and inner ear vestibular system to struggle to adapt.",
+      "Complete loss of gravity inside the vehicle on curved slopes.",
+      "Excessive buildup of carbon dioxide gas inside the vehicle engine."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 misidentifies motion sickness as ear drum damage from pressure. Option 1 is correct because when a vehicle navigates a sloppy, winding road, it continuously undergoes changes in direction and speed, subjecting passengers to fluctuating **Centripetal Acceleration** [radially inward acceleration altering velocity direction] and **Tangential Acceleration** [acceleration along the path altering speed]. These rapidly changing, uneven acceleration vectors cause the **fluid in the human stomach and the inner ear vestibular system (semicircular canals)** to experience continuous, unpredictable displacement. The brain receives conflicting sensory signals from visual and vestibular pathways, triggering motion sickness, nausea, and vomiting. Option 2 and Option 3 present invalid physical claims."
+  },
+  
+]
