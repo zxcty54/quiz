@@ -1,1 +1,1176 @@
-
+[
+  {
+    "p_id": "bpsc_chem_m9_01",
+    "qe": "Evaluating the nuclear characteristics of carbon isotopes shows distinct physical and radioactive properties. Which isotope of carbon serves as the international standard for atomic mass units ($\\\\text{amu}$), and which isotope is a naturally occurring beta-emitter used in radiocarbon dating?",
+    "qh": "कार्बन समस्थानिकों (carbon isotopes) के नाभिकीय गुणों का मूल्यांकन विशिष्ट भौतिक और रेडियोधर्मी गुणों को दर्शाता है। कार्बन का कौन सा समस्थानिक परमाणु द्रव्यमान इकाइयों ($\\\\text{amu}$) के लिए अंतर्राष्ट्रीय मानक के रूप में कार्य करता है, और कौन सा समस्थानिक बीटा-उत्सर्जक है जिसका उपयोग रेडियोकार्बन डेटिंग में किया जाता है?",
+    "o": [
+      "Standard: $^{13}\\\\text{C}$; Beta-emitter: $^{12}\\\\text{C}$ (half-life 5770 years)",
+      "Standard: $^{12}\\\\text{C}$; Beta-emitter: $^{14}\\\\text{C}$ (half-life 5770 years)",
+      "Standard: $^{14}\\\\text{C}$; Beta-emitter: $^{15}\\\\text{C}$ (half-life 100 years)",
+      "Standard: $^{16}\\\\text{C}$; Beta-emitter: $^{13}\\\\text{C}$ (stable isotope)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 swaps the atomic weight standard with $^{13}\\\\text{C}$ and incorrectly labels stable $^{12}\\\\text{C}$ as a beta-emitter. Option 1 is correct because **Carbon-12 ($^{12}\\\\text{C}$)** is the international standard defined as exactly $12\\\\text{ amu}$ for relative atomic mass measurements. **Carbon-14 ($^{14}\\\\text{C}$)** is a naturally occurring radioactive isotope that undergoes **Beta Decay** [a radioactive decay process where an unstable atomic nucleus emits a beta particle (electron) to transform a neutron into a proton] with a half-life of $5770\\\\text{ years}$, enabling radiocarbon dating of organic matter. Option 2 and Option 3 misidentify standard mass isotopes or designate stable $^{13}\\\\text{C}$ as radioactive."
+  },
+  {
+    "p_id": "bpsc_chem_m9_02",
+    "qe": "Diamond is the hardest naturally occurring substance on Earth. What specific crystallographic geometry and bonding network account for its extreme hardness and high thermal conductivity?",
+    "qh": "हीरा पृथ्वी पर स्वाभाविक रूप से पाया जाने वाला सबसे कठोर पदार्थ है। कौन सी विशिष्ट क्रिस्टलोग्राफिक ज्यामिति और बॉन्डिंग नेटवर्क इसकी अत्यधिक कठोरता और उच्च तापीय चालकता का कारण बनते हैं?",
+    "o": [
+      "Planar $sp^2$ hexagonal sheets bound by weak van der Waals forces.",
+      "Three-dimensional rigid framework where each carbon atom is $sp^3$ hybridized and tetrahedrally bonded to four other carbon atoms via directional covalent bonds.",
+      "Linear $sp$ hybridized carbon chains with delocalized pi-electrons floating between layers.",
+      "Cage-like spherical geometry held together by ionic bonds between carbon nuclei."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 describes the layered structure of graphite. Option 1 is correct because in **Diamond**, every carbon atom undergoes **$sp^3$ Hybridization** [the intermixing of one $s$ and three $p$ atomic orbitals to form four equivalent hybrid orbitals directed toward the corners of a tetrahedron]. Each carbon atom forms four strong directional $\\\\sigma$-covalent bonds with neighboring carbon atoms in a continuous, three-dimensional tetrahedral lattice. Breaking this extended covalent network requires tremendous energy, giving diamond its extreme hardness and allowing lattice vibrations (phonons) to conduct heat efficiently. Option 2 describes alkyne/carbynoid bonding, and Option 3 describes fullerenes."
+  },
+  {
+    "p_id": "bpsc_chem_m9_03",
+    "qe": "Diamond and graphite behave differently when exposed to high-energy radiation and electric fields. Which choice correctly compares their electrical conductivity and behavior under X-rays?",
+    "qh": "हीरा और ग्रेफाइट उच्च ऊर्जा विकिरण और विद्युत क्षेत्रों के संपर्क में आने पर अलग-अलग व्यवहार करते हैं। कौन सा विकल्प उनकी विद्युत चालकता और एक्स-रे के तहत व्यवहार की सही तुलना करता है?",
+    "o": [
+      "Diamond conducts electricity due to free electrons; pure diamond is opaque to X-rays.",
+      "Diamond lacks free electrons making it an electrical insulator, and pure diamond is transparent to X-rays; Graphite has delocalized electrons making it a conductor.",
+      "Graphite is an insulator because all four valence electrons are fixed; graphite is transparent to X-rays.",
+      "Both diamond and graphite are superconductors at room temperature and opaque to X-rays."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 incorrectly attributes free electrons and X-ray opacity to diamond. Option 1 is correct because all four valence electrons in diamond are locked into localized $\\\\sigma$-bonds, leaving no free mobile charge carriers (**Electrical Insulator**). Pure diamond lacks heavy element impurities, making it transparent to high-frequency X-rays (a property used to distinguish real diamonds from fake glass/zirconia imitations). Conversely, **Graphite** uses only three valence electrons for $sp^2$ planar $\\\\sigma$-bonds, leaving the fourth electron delocalized across the $\\\\pi$-system to conduct electricity. Option 2 reverses graphite's electrical properties, and Option 3 claims room-temperature superconductivity."
+  },
+  {
+    "p_id": "bpsc_chem_m9_04",
+    "qe": "Although diamond is chemical inert, it can be oxidized under extreme laboratory conditions. What chemical product is evolved when diamond is heated to $200^\\circ\\text{C}$ with Potassium Dichromate ($\\\\text{K}_2\\\\text{Cr}_2\\\\text{O}_7$) and concentrated $\\\\text{H}_2\\\\text{SO}_4$?",
+    "qh": "यद्यपि हीरा रासायनिक रूप से अक्रिय है, इसे चरम प्रयोगशाला स्थितियों के तहत ऑक्सीकृत किया जा सकता है। जब हीरे को पोटेशियम डाइक्रोमेट ($\\\\text{K}_2\\\\text{Cr}_2\\\\text{O}_7$) और सांद्र $\\\\text{H}_2\\\\text{SO}_4$ के साथ $200^\\\\circ\\\\text{C}$ पर गर्म किया जाता है तो कौन सा रासायनिक उत्पाद निकलता है?",
+    "o": [
+      "Carbon monoxide gas ($\\\\text{CO}$)",
+      "Carbon dioxide gas ($\\\\text{CO}_2$)",
+      "Methane gas ($\\\\text{CH}_4$)",
+      "Ozone gas ($\\\\text{O}_3$)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 lists incomplete combustion products. Option 1 is correct because diamond resists mild acids and alkalis, but strong oxidizing mixtures—such as **Potassium Dichromate ($\\\\text{K}_2\\\\text{Cr}_2\\\\text{O}_7$) in concentrated Sulfuric Acid ($\\\\text{H}_2\\\\text{SO}_4$)** at $200^\\\\circ\\\\text{C}$—oxidize its surface carbon atoms completely into **Carbon Dioxide Gas ($\\\\text{CO}_2$)**. The same $\\\\text{CO}_2$ evolution occurs when diamond burns in air above $700-900^\\\\circ\\\\text{C}$. Option 2 and Option 3 propose reduction or ozone liberation pathways that do not occur."
+  },
+  {
+    "p_id": "bpsc_chem_m9_05",
+    "qe": "Commercial diamonds are classified by color and clarity. What term defines black, non-gem grade diamond, and what primary industrial application relies on its extreme hardness?",
+    "qh": "वाणिज्यिक हीरों को रंग और स्पष्टता द्वारा वर्गीकृत किया जाता है। कौन सा शब्द काले, गैर-रत्न श्रेणी के हीरे को परिभाषित करता है, और कौन सा प्राथमिक औद्योगिक अनुप्रयोग इसकी अत्यधिक कठोरता पर निर्भर करता है?",
+    "o": [
+      "Cullinan; used as a nuclear moderator in breeder reactors.",
+      "Carbonado (or Boort); used as an industrial abrasive for rock drilling, glass cutting, and gem shaping.",
+      "Kohinoor; used as a semiconductor substrate in touchscreens.",
+      "Hope; used to produce synthetic petrol."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 names the Cullinan gem diamond ($3032\\\\text{ carats}$) and misassigns nuclear reactor functions. Option 1 is correct because black, opaque, highly defective industrial diamond is commercially known as **Carbonado** (or **Boort**). Because it retains diamond's crystal hardness without possessing gem transparency, it is utilized as an **Industrial Abrasive** in heavy-duty equipment such as rock-drilling bit crowns, glass-cutting tools, wire-drawing dies, and precision gem cutters. Option 2 and Option 3 list famous historic gem diamonds (Kohinoor, Hope) with incorrect industrial uses."
+  },
+  {
+    "p_id": "bpsc_chem_m9_06",
+    "qe": "Graphite possesses a two-dimensional sheet structure that gives it self-lubricating properties. What force holds these hexagonal planar carbon sheets together, allowing them to slide over one another easily?",
+    "qh": "ग्रेफाइट में दो-आयामी शीट संरचना होती है जो इसे स्व-स्नेहक गुण (self-lubricating properties) प्रदान करती है। कौन सा बल इन षट्कोणीय समतलीय कार्बन शीटों को एक साथ रखता है, जिससे वे आसानी से एक-दूसरे के ऊपर फिसल सकती हैं?",
+    "o": [
+      "Strong triple ionic bonds between adjacent carbon layers.",
+      "Weak inter-layer van der Waals forces operating between parallel $sp^2$ planar sheets.",
+      "Metallic bonding between free valence protons.",
+      "Coordinate covalent bonds formed by potassium ions."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 incorrectly proposes ionic bonds between carbon atoms. Option 1 is correct because within each layer of **Graphite**, carbon atoms are strongly bound via covalent $sp^2$ hybrid bonds in a planar hexagonal array. However, adjacent parallel sheets are held together only by weak **van der Waals Forces** [secondary intermolecular attractive forces operating between uncharged molecular planes]. Because these inter-layer forces are weak, the hexagonal sheets easily shear or slide over one another under mechanical stress, giving graphite its soft, greasy feel and enabling its use as a solid dry lubricant in high-temperature machinery. Option 2 and Option 3 list metallic or coordinate bond distractors."
+  },
+  {
+    "p_id": "bpsc_chem_m9_07",
+    "qe": "Synthetic phase transformations between carbon allotropes are thermodynamically asymmetric. Which transformation is industrially achievable, and under what processing conditions?",
+    "qh": "कार्बन एलोट्रोप्स के बीच सिंथेटिक चरण परिवर्तन (Synthetic phase transformations) थर्मोडायनामिक रूप से असममित हैं। कौन सा परिवर्तन औद्योगिक रूप से प्राप्त करने योग्य है, और किन प्रसंस्करण स्थितियों के तहत?",
+    "o": [
+      "Diamond into graphite at room temperature and pressure using water.",
+      "Graphite into diamond under very high pressure, high temperature ($\\\\sim 1500-3000^\\\\circ\\\\text{C}$), and in the presence of a transition metal catalyst.",
+      "Fullerene into coal by exposure to atmospheric nitrogen gas.",
+      "Lamp black into graphene by washing with dilute acids."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 incorrectly states diamond spontaneously converts to graphite under ambient water washing. Option 1 is correct because **Graphite** is the thermodynamically most stable allotrope of carbon at standard temperature and pressure ($1\\\\text{ atm}, 298\\\\text{ K}$). Converting graphite into **Synthetic Diamond** requires overcoming a massive activation energy barrier to collapse the two-dimensional sheets into a 3D network; this is achieved industrially under extreme **High Pressure and High Temperature (HPHT)** conditions ($>50,000\\\\text{ atm}$, $>1500^\\\\circ\\\\text{C}$) using transition metal catalysts (such as $\\\\text{Fe, Ni, Cr}$). Option 2 and Option 3 propose non-existent coal or graphene conversions."
+  },
+  {
+    "p_id": "bpsc_chem_m9_08",
+    "qe": "Common writing pencils are labeled 'lead pencils' and leave dark marks on paper. What is the actual elemental composition of pencil lead, and what is the percentage of lead ($\\\\text{Pb}$) present in it?",
+    "qh": "आम लिखने वाली पेंसिलों को 'लेड पेंसिल' कहा जाता है और वे कागज पर काले निशान छोड़ती हैं। पेंसिल लेड की वास्तविक तात्विक संरचना क्या है, और इसमें मौजूद सीसा ($\\\\text{Pb}$) का प्रतिशत क्या है?",
+    "o": [
+      "Made of pure metallic lead ($\\\\text{Pb}$); contains $100\\\\%$ lead.",
+      "Made of a mixture of graphite and clay (kaolin); contains $0\\\\%$ elemental lead ($\\\\text{Pb}$).",
+      "Made of lead acetate salt; contains $50\\\\%$ lead.",
+      "Made of leaded petrol residue; contains $25\\\\%$ lead."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 succumbs to the misnomer and claims pencil lead is $100\\%$ metallic lead. Option 1 is correct because the term 'lead pencil' is a historical misnomer dating back to when graphite was mistaken for a form of lead ore ('black lead' or plumbago). Pencil cores contain **zero percent ($0\\%$) elemental lead ($\\\\text{Pb}$)**. They are manufactured by blending powdered **Graphite** (which provides dark marking capability via its sloughing hexagonal layers) with **Clay / Kaolin** binders (which control hardness) and baking at high temperatures. Option 2 and Option 3 list lead acetate or leaded petrol."
+  },
+  {
+    "p_id": "bpsc_chem_m9_09",
+    "qe": "Graphene is a revolutionary two-dimensional carbon nanomaterial described by Hanns-Peter Boehm in 1962. What structural feature defines Graphene, and what physical property makes it suitable for advanced electronic touchscreens?",
+    "qh": "ग्राफीन (Graphene) एक क्रांतिकारी दो-आयामी कार्बन नैनोमैटेरियल है जिसे 1962 में हैंन्स-पीटर बोहम द्वारा वर्णित किया गया था। कौन सी संरचनात्मक विशेषता ग्राफीन को परिभाषित करती है, और कौन सा भौतिक गुण इसे उन्नत इलेक्ट्रॉनिक टचस्क्रीन के लिए उपयुक्त बनाता है?",
+    "o": [
+      "A spherical 3D cage of 60 carbon atoms; functions as an electrical insulator.",
+      "A single layer of carbon atoms arranged in a planar, two-dimensional honeycomb crystal lattice; exhibits extraordinary electrical conductivity, optical transparency, and mechanical strength.",
+      "A porous amorphous aggregate of bone ash; functions as a gas mask absorbent.",
+      "A heavy liquid alloy of carbon and mercury; functions as a battery acid."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 describes the 3D spherical cage of Buckminsterfullerene ($\\\\text{C}_{60}$). Option 1 is correct because **Graphene** is an allotrope consisting of a **Single Atom-Thick Planar Sheet** of $sp^2$-hybridized carbon atoms packed densely into a two-dimensional honeycomb lattice. Because charge carriers move through its ballistic electron network with minimal resistance while the single-atom layer remains optically transparent and flexible, graphene is used as a conductive film in flexible touchscreens, LCDs, and OLED displays. Option 2 describes bone charcoal, and Option 3 describes a liquid amalgam."
+  },
+  {
+    "p_id": "bpsc_chem_m9_10",
+    "qe": "Fullerenes represent a unique class of pure carbon allotropes discovered by Kroto, Smalley, and Curl. How is Buckminsterfullerene ($\\\\text{C}_{60}$) synthesized in the laboratory, and what is its molecular geometry?",
+    "qh": "फुलरीन (Fullerenes) क्रोटो, स्माले और कर्ल द्वारा खोजे गए शुद्ध कार्बन एलोट्रोप की एक अनूठी श्रेणी का प्रतिनिधित्व करते हैं। प्रयोगशाला में बकमिंस्टरफुलरीन ($\\\\text{C}_{60}$) का संश्लेषण कैसे किया जाता है, और इसकी आणविक ज्यामिति क्या है?",
+    "o": [
+      "Synthesized by boiling sugar in nitric acid; forms a flat triangular sheet.",
+      "Synthesized by heating graphite in an electric arc in the presence of inert gases (Helium or Argon); forms a cage-like truncated icosahedron (soccer-ball shape).",
+      "Synthesized by passing steam over red-hot coal; forms an amorphous liquid droplet.",
+      "Synthesized by calcining bauxite ore; forms an octahedral crystal."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 describes sugar acid reactions. Option 1 is correct because **Fullerenes** (such as **Buckminsterfullerene, $\\\\text{C}_{60}$**) are synthesized by vaporizing **Graphite in an Electric Arc** under an atmosphere of inert gas like **Helium or Argon**. The condensation of carbon vapor yields cage-like soot molecules. $\\\\text{C}_{60}$ possesses a truncated icosahedron geometry consisting of 20 hexagonal and 12 pentagonal rings resembling a soccer ball (geodesic dome structure inspired by architect Buckminster Fuller). Option 2 describes coal gas production, and Option 3 describes bauxite calcination."
+  },
+  {
+    "p_id": "bpsc_chem_m9_11",
+    "qe": "Fullerenes are described as the 'only pure form of carbon' compared to diamond or graphite. Why are fullerenes considered chemically purer allotropes than diamond or graphite?",
+    "qh": "हीरे या ग्रेफाइट की तुलना में फुलरीन को 'कार्बन का एकमात्र शुद्ध रूप' के रूप में वर्णित किया गया है। फुलरीन को हीरे या ग्रेफाइट की तुलना में रासायनिक रूप से शुद्ध एलोट्रोप क्यों माना जाता है?",
+    "o": [
+      "Because fullerenes contain zero radioactive isotopes of carbon.",
+      "Because fullerenes consist of discrete, closed cage-like molecules with no dangling surface bonds that require hydrogen or oxygen heteroatoms to satisfy valency.",
+      "Because fullerenes dissolve in water to form pure carbon hydroxide.",
+      "Because fullerenes are extracted directly from absolute vacuum in space."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 misidentifies isotopic purity as the structural chemical purity cause. Option 1 is correct because extended crystalline networks like diamond and graphite have infinite surface boundaries where peripheral carbon atoms possess unfulfilled valence electrons (**Dangling Bonds**). These surface bonds inevitably bind foreign heteroatoms (such as $-\\\\text{H}, -\\\\text{OH}$, or $=\\\\text{O}$) to satisfy valency. In contrast, **Fullerenes** ($\\\\text{C}_{60}, \\\\text{C}_{70}$) are discrete, smooth, closed-cage nanostructures with no edges or dangling surface bonds, making them chemically pure molecular allotropes of carbon. Option 2 and Option 3 present invalid chemical dissolution or space vacuum claims."
+  },
+  {
+    "p_id": "bpsc_chem_m9_12",
+    "qe": "Lamp black is an amorphous form of carbon containing up to 95% carbon. What industrial process yields lamp black, and what is its primary application in the automotive industry?",
+    "qh": "काजल (Lamp black) कार्बन का एक अनाकार रूप (amorphous form) है जिसमें 95% तक कार्बन होता है। कौन सी औद्योगिक प्रक्रिया काजल का उत्पादन करती है, और ऑटोमोटive उद्योग में इसका प्राथमिक अनुप्रयोग क्या है?",
+    "o": [
+      "Destructive distillation of bone; used as a brake fluid.",
+      "Burning hydrocarbons (like petroleum oil or natural gas) in a limited supply of air; used as a reinforcing filler in automobile tires and as a black ink pigment.",
+      "Heating coal at $2000^\\\\circ\\\\text{C}$ in oxygen; used as an engine coolant.",
+      "Leaching bauxite with caustic soda; used as a battery separator."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 describes bone charcoal synthesis. Option 1 is correct because **Lamp Black** is a finely divided amorphous carbon powder ($95\\\\% \\\\text{ C}$) produced by collecting the soot from **Burning Hydrocarbons** (vegetable oils, petroleum residues, or natural gas) in a **Limited Supply of Oxygen/Air**. In the rubber and automotive industry, lamp black (carbon black) is incorporated as a **Reinforcing Filler** in vehicle tires to improve tensile strength, dissipate heat, and increase wear resistance. It is also used as a black pigment in printing inks and shoe polish. Option 2 and Option 3 describe gasification or alumina leaching."
+  },
+  {
+    "p_id": "bpsc_chem_m9_13",
+    "qe": "Charcoal allotropes are porous materials with high surface areas. Which specific charcoal variety is produced by the destructive distillation of bones, and what is its chief industrial application?",
+    "qh": "चारकोल एलोट्रोप उच्च सतह क्षेत्रों वाले झरझरा (porous) पदार्थ हैं। हड्डियों के भंजक आसवन (destructive distillation) से कौन सी विशिष्ट चारकोल किस्म का उत्पादन होता है, और इसका मुख्य औद्योगिक अनुप्रयोग क्या है?",
+    "o": [
+      "Wood Charcoal; used to refine nuclear fuel.",
+      "Bone Charcoal (Animal Charcoal); used as a decolorizing and bleaching agent for refining crude sugar and organic substances.",
+      "Sugar Charcoal; used as an explosive propellant in rocketry.",
+      "Blood Charcoal; used to coat solar panels."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 misidentifies wood charcoal as bone charcoal. Option 1 is correct because **Bone Charcoal** (also called animal charcoal) is manufactured via the **Destructive Distillation of Animal Bones** in sealed retorts. It contains calcium phosphate ($\\\\sim 80\\\\%$) and porous carbon ($\\\\sim 10\\\\%$). Its porous carbon matrix possesses a strong adsorption capacity for complex organic pigments, making it useful in chemical refining as a **Decolorizing and Bleaching Agent** to clarify raw sugar syrups, syrups, and organic solutions. Option 2 and Option 3 list incorrect sugar/blood charcoal applications."
+  },
+  {
+    "p_id": "bpsc_chem_m9_14",
+    "qe": "Activated wood charcoal is deployed in gas masks worn by industrial workers and miners. What surface phenomenon enables activated charcoal to protect workers from toxic industrial gases?",
+    "qh": "सक्रिय लकड़ी चारकोल (Activated wood charcoal) औद्योगिक श्रमिकों और खनिकों द्वारा पहने जाने वाले गैस मास्क में तैनात किया जाता है। कौन सी सतह घटना सक्रिय चारकोल को हानिकारक औद्योगिक गैसों से श्रमिकों की रक्षा करने में सक्षम बनाती है?",
+    "o": [
+      "Absorption, where poisonous gases dissolve homogeneously into the bulk interior of charcoal cells.",
+      "Adsorption, where volatile toxic gas molecules adhere to the high internal surface area of porous charcoal via surface attractive forces.",
+      "Sublimation, where charcoal converts poisonous gases into solid salt crystals.",
+      "Nuclear fission, where charcoal splits heavy gas atoms into helium."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 confuses bulk absorption with surface adsorption. Option 1 is correct because **Wood Charcoal** activated by steam treatment exhibits an extraordinarily high surface area per unit mass ($500-1500\\\\text{ m}^2/\\\\text{g}$). It operates via **Adsorption** [a surface phenomenon where fluid molecules (adsorbate) concentrate on the solid surface of a porous material (adsorbent) due to unbalanced surface van der Waals forces]. In gas masks, toxic industrial fumes (such as phosgene, chlorine, or sulfur dioxide) are trapped on the porous charcoal surface while breathable oxygen passes through. Option 2 and Option 3 propose impossible sublimation or nuclear fission mechanisms."
+  },
+  {
+    "p_id": "bpsc_chem_m9_15",
+    "qe": "Coke is an amorphous carbon residue containing 80% to 85% carbon. How is coke produced from raw coal, and what dual role does it play in metallurgical blast furnaces?",
+    "qh": "कोक (Coke) कार्बन का एक अनाकार अवशेष है जिसमें 80% से 85% कार्बन होता है। कच्चे कोयले से कोक का उत्पादन कैसे किया जाता है, और यह धातुकर्म ब्लास्ट भट्टियों में कौन सी दोहरी भूमिका निभाता है?",
+    "o": [
+      "Produced by washing coal in nitric acid; acts as a coolant and fluxing agent.",
+      "Produced by heating coal at high temperatures in the absence of air (destructive distillation); acts as a thermal fuel and a chemical reducing agent.",
+      "Produced by exposing peat to atmospheric oxygen; acts as an electrical insulator and pigment.",
+      "Produced by polymerizing methane gas; acts as a lubricating oil."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 lists acid washing rather than pyrolysis. Option 1 is correct because **Coke** is produced by the **Destructive Distillation (Pyrolysis)** of bituminous coal—heating coal to over $1000^\\\\circ\\\\text{C}$ in sealed ovens without air to drive off volatile moisture, coal gas, and tar. The resulting porous residue ($80-85\\\\% \\\\text{ C}$) serves a dual role in pyrometallurgy (e.g., iron extraction): (1) as a high-calorie **Thermal Fuel** that burns with oxygen to heat the furnace, and (2) as a **Chemical Reducing Agent** that generates carbon monoxide ($\\\\text{CO}$) to reduce metal oxides ($\\\\text{Fe}_2\\\\text{O}_3 \\\\rightarrow \\\\text{Fe}$). Option 2 and Option 3 describe peat oxidation or methane polymerization."
+  },
+  {
+    "p_id": "bpsc_chem_m9_16",
+    "qe": "Coal formation occurs through geological carbonization over millions of years. What choice lists the four primary varieties of coal in increasing order of carbon content and energy quality?",
+    "qh": "कोयला निर्माण लाखों वर्षों में भूवैज्ञानिक कार्बनिकीकरण (carbonization) के माध्यम से होता है। कौन सा विकल्प कार्बन सामग्री और ऊर्जा गुणवत्ता के बढ़ते क्रम में कोयले की चार प्राथमिक किस्मों को सूचीबद्ध करता है?",
+    "o": [
+      "Anthracite $\\\\rightarrow$ Bituminous $\\\\rightarrow$ Lignite $\\\\rightarrow$ Peat",
+      "Peat ($50-60\\\\%$) $\\\\rightarrow$ Lignite ($60-70\\\\%$) $\\\\rightarrow$ Bituminous ($78-86\\\\%$) $\\\\rightarrow$ Anthracite ($94-98\\\\%$)",
+      "Bituminous $\\\\rightarrow$ Peat $\\\\rightarrow$ Anthracite $\\\\rightarrow$ Lignite",
+      "Lignite $\\\\rightarrow$ Anthracite $\\\\rightarrow$ Peat $\\\\rightarrow$ Bituminous"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 reverses the order, listing highest-grade Anthracite first. Option 1 is correct because **Carbonization** [the gradual geochemical transformation of buried plant matter into carbon-rich mineral deposits under elevated crustal temperature and pressure] progresses through four stages: (1) **Peat** ($50-60\\\\% \\\\text{ C}$, low-grade precursor); (2) **Lignite / Brown Coal** ($60-70\\\\% \\\\text{ C}$, high moisture content); (3) **Bituminous Coal** ($78-86\\\\% \\\\text{ C}$, soft household/industrial coal); and (4) **Anthracite Coal** ($94-98\\\\% \\\\text{ C}$, hard, high-density, smokeless premium coal). Option 2 and Option 3 scramble the ranks."
+  },
+  {
+    "p_id": "bpsc_chem_m9_17",
+    "qe": "Artificial graphite is produced on an industrial scale for electrode manufacturing. What process name defines the industrial synthesis of artificial graphite from anthracite coal or petroleum coke?",
+    "qh": "इलेक्ट्रोड निर्माण के लिए औद्योगिक पैमाने पर कृत्रिम ग्रेफाइट (Artificial graphite) का उत्पादन किया जाता है। कौन सा प्रक्रिया नाम एंथ्रेसाइट कोयले या पेट्रोलियम कोक से कृत्रिम ग्रेफाइट के औद्योगिक संश्लेषण को परिभाषित करता है?",
+    "o": [
+      "Baeyer's Process",
+      "Acheson Process",
+      "Solvay Process",
+      "Serpek's Process"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 is Baeyer's process for bauxite ore concentration. Option 1 is correct because **Artificial Graphite** is synthesized via the **Acheson Process**, invented by Edward Goodrich Acheson. Powdered anthracite coal or petroleum coke mixed with sand ($\\\\text{SiO}_2$) and pitch binder is heated in an electric resistance furnace to temperatures exceeding $2500-3000^\\\\circ\\\\text{C}$. The silicon carbide ($\\\\text{SiC}$) formed as an intermediate dissociates at high heat, leaving behind highly crystalline artificial graphite suitable for electric arc furnace electrodes. Option 2 is the Solvay process for soda ash, and Option 3 is Serpek's process for white bauxite."
+  },
+  {
+    "p_id": "bpsc_chem_m9_18",
+    "qe": "Noble gases (Group-18 elements) can be separated from gaseous mixtures using selective temperature-dependent charcoal adsorption. Which specific charcoal variety is used in the Dewar flask method for separating inert gases?",
+    "qh": "उत्कृष्ट गैसों (समूह-18 तत्वों) को चयनात्मक तापमान-निर्भर चारकोल सोखना का उपयोग करके गैसीय मिश्रण से अलग किया जा सकता है। अक्रिय गैसों को अलग करने के लिए देवर फ्लास्क विधि (Dewar flask method) में किस विशिष्ट चारकोल किस्म का उपयोग किया जाता है?",
+    "o": [
+      "Bone Charcoal",
+      "Coconut Charcoal",
+      "Sugar Charcoal",
+      "Lamp Black"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 lists bone charcoal (used for sugar bleaching). Option 1 is correct because **Coconut Charcoal** possesses uniform micropores ideal for selective gas adsorption at cryogenic temperatures. In the **Dewar Charcoal Process**, a mixture of noble gases (He, Ne, Ar, Kr, Xe) is exposed to coconut charcoal cooled in liquid air or liquid hydrogen. Based on atomic weight and polarizability, heavier inert gases (Ar, Kr, Xe) are adsorbed onto coconut charcoal at $-180^\\\\circ\\\\text{C}$, while lighter gases (He, Ne) remain unadsorbed, enabling step-wise thermal fractionation. Option 2 and Option 3 list sugar charcoal or carbon black."
+  },
+  {
+    "p_id": "bpsc_chem_m9_19",
+    "qe": "High-performance sports equipment (like tennis rackets and fishing rods) and modern aircraft components utilize carbon fiber composites. How are these composites constructed?",
+    "qh": "उच्च-प्रदर्शन वाले खेल के उपकरण (जैसे टेनिस रैकेट और मछली पकड़ने की छड़ें) और आधुनिक विमान घटक कार्बन फाइबर कंपोजिट का उपयोग करते हैं। इन कंपोजिट्स का निर्माण कैसे किया जाता है?",
+    "o": [
+      "By embedding diamond dust inside liquid mercury.",
+      "By embedding high-tensile graphite fibers inside a plastic resin matrix.",
+      "By dissolving fullerene molecules inside molten lead.",
+      "By compressing peat coal with sand at room temperature."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 proposes embedding diamond in mercury amalgams. Option 1 is correct because **Carbon Fiber Reinforced Polymers (CFRP)** are composite materials made by weaving microscopic, high-tensile **Graphite Fibers** and embedding them within a **Plastic / Epoxy Resin Matrix**. The graphite fibers supply high axial tensile strength and stiffness along the carbon bonding planes, while the polymer matrix distributes structural loads and protects the fibers. This produces a structural material that is lighter than aluminium yet stronger than steel, useful in aerospace engineering, tennis rackets, and fishing rods. Option 2 and Option 3 list fullerenes in lead or peat coal."
+  },
+  {
+    "p_id": "bpsc_chem_m9_20",
+    "qe": "Carbon exhibits catenation to a far greater extent than any other Group-14 element (such as Silicon or Germanium). What chemical property accounts for carbon's unique catenation capacity?",
+    "qh": "कार्बन किसी भी अन्य समूह-14 तत्व (जैसे सिलिकॉन या जर्मेनियम) की तुलना में बहुत अधिक सीमा तक श्रृंखलन (catenation) प्रदर्शित करता है। कौन सा रासायनिक गुण कार्बन की इस अनूठी श्रृंखलन क्षमता का कारण बनता है?",
+    "o": [
+      "Large atomic radius and weak $\\\\text{C}-\\\\text{C}$ single bond energy.",
+      "Small atomic radius and exceptionally high $\\\\text{C}-\\\\text{C}$ single covalent bond enthalpy ($\\\\sim 348\\\\text{ kJ/mol}$).",
+      "Presence of vacant $d$-orbitals in its valence shell.",
+      "Ability to form ionic bonds with noble gases."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 incorrectly attributes catenation to large atomic radii and weak bond energy. Option 1 is correct because **Catenation** [the ability of atoms of an element to link together via covalent bonds to form stable, extended open chains, branched structures, or closed rings] depends on bond strength. Carbon has a **Small Atomic Radius**, allowing its $2p$ orbitals to overlap efficiently and form an exceptionally strong **$\\\\text{C}-\\\\text{C}$ Single Covalent Bond** ($348\\\\text{ kJ/mol}$). In heavier Group-14 elements like Silicon ($\\\\text{Si}-\\\\text{Si}$, $297\\\\text{ kJ/mol}$) or Germanium, larger diffuse orbitals yield weaker single bonds that readily cleave, limiting their catenation. Option 2 is wrong because carbon ($n=2$) lacks vacant $d$-orbitals."
+  },
+  
+  {
+    "p_id": "bpsc_chem_m10_01",
+    "qe": "Carbon Monoxide (CO) is a highly toxic gas produced by incomplete combustion. What is the physiological mechanism responsible for its extreme toxicity in the human bloodstream?",
+    "qh": "कार्बन मोनोऑक्साइड (CO) अपूर्ण दहन से उत्पन्न एक अत्यधिक विषैली गैस है। मानव रक्तप्रवाह में इसकी अत्यधिक विषाक्तता के लिए कौन सा शारीरिक तंत्र जिम्मेदार है?",
+    "o": [
+      "It oxidizes blood plasma directly, lowering blood pH to absolute zero.",
+      "It binds with hemoglobin to form carboxyhemoglobin approximately 200 times more readily than oxygen, severely reducing blood oxygen-carrying capacity.",
+      "It reacts with blood water to form carbonic acid, causing rapid pulmonary edema.",
+      "It precipitates red blood cells into insoluble calcium carbonate crystals."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 is incorrect because CO does not alter plasma to absolute zero. Option 1 is correct because **Carbon Monoxide (CO)** binds to the iron centers of **Hemoglobin** [the iron-containing oxygen-transport metalloprotein in red blood cells] with an affinity approximately 200 times greater than that of oxygen, forming **Carboxyhemoglobin** ($\\\\text{HbCO}$). This blocks oxygen binding sites and prevents oxygen delivery to vital tissues, leading to cellular hypoxia and asphyxiation. Option 2 describes $\\\\text{CO}_2$ dissolution rather than CO poisoning. Option 3 proposes an impossible chemical precipitation of blood cells."
+  },
+  {
+    "p_id": "bpsc_chem_m10_02",
+    "qe": "When Carbon Monoxide (CO) reacts with chlorine gas ($\\\\text{Cl}_2$) in the presence of sunlight, what toxic gas is synthesized?",
+    "qh": "जब कार्बन मोनोऑक्साइड (CO) सूर्य के प्रकाश की उपस्थिति में क्लोरीन गैस ($\\\\text{Cl}_2$) के साथ प्रतिक्रिया करता है, तो किस विषैली गैस का संश्लेषण होता है?",
+    "o": [
+      "Mustard gas (Dichlorodiethyl sulfide)",
+      "Phosgene (Carbonyl chloride, $\\\\text{COCl}_2$)",
+      "Tear gas (Chloropicrin)",
+      "Sarin gas (Organophosphate nerve agent)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 describes a thioether derivative. Option 1 is correct because when carbon monoxide reacts with chlorine gas under photochemical activation (sunlight) or over an activated carbon catalyst, it forms **Phosgene (Carbonyl Chloride, $\\\\text{COCl}_2$)**: $\\\\text{CO} + \\\\text{Cl}_2 \\\\xrightarrow{h\\\\nu} \\\\text{COCl}_2$. Phosgene is a insidious pulmonary irritant used as a chemical weapon in WWI. Option 2 describes chloropicrin ($\\\\text{CCl}_3\\\\text{NO}_2$), and Option 3 describes organophosphorus agents."
+  },
+  {
+    "p_id": "bpsc_chem_m10_03",
+    "qe": "Industrial synthesis gas formulations utilize carbon monoxide as a key reactive constituent. What are the precise compositions of Water Gas and Producer Gas respectively?",
+    "qh": "औद्योगिक संश्लेषण गैस फॉर्मूलेशन कार्बन मोनोऑक्साइड का उपयोग एक प्रमुख प्रतिक्रियाशील घटक के रूप में करते हैं। वॉटर गैस (Water Gas) और प्रोड्यूसर गैस (Producer Gas) की सटीक संरचनाएं क्रमशः क्या हैं?",
+    "o": [
+      "Water Gas: $\\\\text{CO}_2 + \\\\text{H}_2$; Producer Gas: \\\\text{CO}_2 + \\\\text{N}_2",
+      "Water Gas: $\\\\text{CO} + \\\\text{H}_2$; Producer Gas: $\\\\text{CO} + \\\\text{N}_2$",
+      "Water Gas: $\\\\text{CH}_4 + \\\\text{H}_2\\\\text{O}$; Producer Gas: $\\\\text{NH}_3 + \\\\text{O}_2$",
+      "Water Gas: $\\\\text{CO} + \\\\text{O}_2$; Producer Gas: $\\\\text{CO}_2 + \\\\text{H}_2$"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 uses carbon dioxide instead of reactive carbon monoxide. Option 1 is correct because **Water Gas (Synthesis Gas)** is an equimolar industrial fuel mixture composed of **Carbon Monoxide and Hydrogen ($\\\\text{CO} + \\\\text{H}_2$)**, produced by passing steam over red-hot coke. **Producer Gas** is a fuel gas mixture composed of **Carbon Monoxide and Nitrogen ($\\\\text{CO} + \\\\text{N}_2$)**, produced by passing air over incandescent coke. Option 2 and Option 3 mix up natural gas or ammonia components."
+  },
+  {
+    "p_id": "bpsc_chem_m10_04",
+    "qe": "When carbon dioxide gas ($\\\\text{CO}_2$) is passed into clear lime water, it initially turns milky, but continued bubbling causes the solution to become clear again. What chemical transformations govern this two-stage process?",
+    "qh": "जब कार्बन डाइऑक्साइड गैस ($\\\\text{CO}_2$) को स्पष्ट चूने के पानी में प्रवाहित किया जाता है, तो यह प्रारंभ में दूधिया हो जाता है, लेकिन निरंतर बुलबुले बनाने से घोल फिर से स्पष्ट हो जाता है। कौन से रासायनिक परिवर्तन इस दो-चरण प्रक्रिया को नियंत्रित करते हैं?",
+    "o": [
+      "Initial milkiness: Soluble $\\\\text{CaCl}_2$; Clearing: Insoluble $\\\\text{CaCO}_3$ precipitate.",
+      "Initial milkiness: Insoluble white Calcium Carbonate ($\\\\text{CaCO}_3$) precipitate; Clearing: Conversion to soluble Calcium Bicarbonate [$\\\\text{Ca(HCO}_3)_2$].",
+      "Initial milkiness: Formation of active $\\\\text{CaO}$; Clearing: Decomposition into elemental carbon.",
+      "Initial milkiness: Precipitation of $\\\\text{CaSO}_4$; Clearing: Formation of $\\\\text{Ca(OH)}_2$ solution."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 reverses the solubility states of the calcium salts. Option 1 is correct because passing $\\\\text{CO}_2$ into lime water [$\\\\text{Ca(OH)}_2$] precipitates insoluble **Calcium Carbonate ($\\\\text{CaCO}_3$)**, turning the liquid milky: $\\\\text{Ca(OH)}_2 + \\\\text{CO}_2 \\\\rightarrow \\\\text{CaCO}_3\\\\downarrow + \\\\text{H}_2\\\\text{O}$. When excess $\\\\text{CO}_2$ is bubbled through, the insoluble carbonate converts into water-soluble **Calcium Bicarbonate [$\\\\text{Ca(HCO}_3)_2$]**, causing the milkiness to clear: $\\\\text{CaCO}_3 + \\\\text{H}_2\\\\text{O} + \\\\text{CO}_2 \\\\rightarrow \\\\text{Ca(HCO}_3)_2$. Option 2 and Option 3 describe non-existent calcium pathways."
+  },
+  {
+    "p_id": "bpsc_chem_m10_05",
+    "qe": "Maintaining human arterial blood pH within the narrow physiological range of 7.42 to 7.45 is essential for metabolic survival. What key chemical buffer system stabilizes blood pH?",
+    "qh": "मानव धमनी रक्त pH को 7.42 से 7.45 के संकीर्ण शारीरिक दायरे के भीतर बनाए रखना चयापचय अस्तित्व के लिए आवश्यक है। कौन सी प्रमुख रासायनिक बफर प्रणाली रक्त pH को स्थिर करती है?",
+    "o": [
+      "$\\\\text{HCl} / \\\\text{NaCl}$ buffer system",
+      "Carbonic acid / Bicarbonate buffer system ($\\\\text{H}_2\\\\text{CO}_3 / \\\\text{HCO}_3^-$)",
+      "$\\\\text{NH}_4\\\\text{OH} / \\\\text{NH}_4\\\\text{Cl}$ buffer system",
+      "Citric acid / Sodium citrate buffer system"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 is a strong acid/salt mixture unable to buffer biological systems. Option 1 is correct because physiological arterial pH ($7.42 - 7.45$) is maintained primarily by the **Carbonic Acid / Bicarbonate Buffer System ($\\\\text{H}_2\\\\text{CO}_3 / \\\\text{HCO}_3^-$)**. Dissolved carbon dioxide reacts with water via carbonic anhydrase to form carbonic acid ($\\\\text{H}_2\\\\text{CO}_3$), a weak acid that equilibrium-dissociates into hydrogen ions and bicarbonate ions ($\\\\text{HCO}_3^-$). Respiratory ventilation regulates $\\\\text{CO}_2$ levels, while renal excretion regulates $\\\\text{HCO}_3^-$. Option 2 is an alkaline laboratory buffer, and Option 3 is a food preservative buffer."
+  },
+  {
+    "p_id": "bpsc_chem_m10_06",
+    "qe": "Silicon carbide ($\\\\text{SiC}$) is a synthetic covalent network solid used in high-temperature industrial cutting tools. What is its common commercial name?",
+    "qh": "सिलिकॉन कार्बाइड ($\\\\text{SiC}$) एक सिंथेटिक सहसंयोजक नेटवर्क ठोस है जिसका उपयोग उच्च तापमान वाले औद्योगिक काटने के उपकरणों में किया जाता है। इसका सामान्य व्यावसायिक नाम क्या है?",
+    "o": [
+      "Quartz",
+      "Carborundum",
+      "Silica gel",
+      "Asbestos"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 refers to crystalline silicon dioxide ($\\\\text{SiO}_2$). Option 1 is correct because **Silicon Carbide ($\\\\text{SiC}$)** is commercially known as **Carborundum**. It possesses a tetrahedral covalent network structure similar to diamond, giving it extreme hardness (9.5 on the Mohs scale), high thermal conductivity, and resistance to chemical corrosion. It is widely used as an industrial abrasive, grinding wheel constituent, and heat-resistant ceramic component. Option 2 is an amorphous porous desiccant form of silica, and Option 3 is a fibrous silicate mineral."
+  },
+  {
+    "p_id": "bpsc_chem_m10_07",
+    "qe": "Silicones are synthetic organosilicon polymers valued for their thermal stability, water repellency, and physiological inertness. What basic structural repeat unit defines organosilicone polymers?",
+    "qh": "सिलिकॉन (Silicones) सिंथेटिक ऑर्गनोसिलिकॉन पॉलिमर हैं जो अपनी तापीय स्थिरता, जल विकर्षण और शारीरिक अक्रियता के लिए मूल्यवान हैं। कौन सी बुनियादी संरचनात्मक दोहराव इकाई ऑर्गनोसिलिकॉन पॉलिमर को परिभाषित करती है?",
+    "o": [
+      "$\\\\text{[-C-C-O-]_n}$ ether chains",
+      "$\\\\text{[-R}_2\\\\text{Si-O-]_n}$ siloxane chains with alkyl/aryl side groups",
+      "$\\\\text{[-Si-Si-Si-]_n}$ pure elemental silicon chains",
+      "$\\\\text{[-N-H-Si-]_n}$ silazane chains"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 describes polyether organic chains. Option 1 is correct because **Silicones** are synthetic polymers containing a backbone of alternating silicon and oxygen atoms with organic side groups attached to silicon: **$\\\\text{[-R}_2\\\\text{Si-O-]_n}$** (where R is an alkyl group like methyl or an aryl group like phenyl). The strong $\\\\text{Si-O}$ siloxane bond provides thermal stability, while the hydrophobic organic side chains impart water-proofing properties. Silicones are utilized as sealants, high-temperature greases, electrical insulators, and in medical/cosmetic implants. Option 2 describes polysilanes, and Option 3 describes silazanes."
+  },
+  {
+    "p_id": "bpsc_chem_m10_08",
+    "qe": "Nitrogen gas ($\\\\text{N}_2$) makes up approximately 78% of the Earth's atmosphere by volume, yet it remains chemically inert under ambient conditions. What fundamental molecular property accounts for this chemical inertness?",
+    "qh": "नाइट्रोजन गैस ($\\\\text{N}_2$) आयतन के हिसाब से पृथ्वी के वायुमंडल का लगभग 78% हिस्सा बनाती है, फिर भी यह परिवेश की स्थितियों में रासायनिक रूप से अक्रिय रहती है। कौन सा मौलिक आणविक गुण इस रासायनिक अक्रियता का कारण है?",
+    "o": [
+      "Presence of a weak single covalent bond that resists polarity.",
+      "An exceptionally high bond dissociation enthalpy ($941.4\\\\text{ kJ/mol}$) due to a strong triple covalent bond ($\\\\text{N}\\\\equiv\\\\text{N}$) between nitrogen atoms.",
+      "Spontaneous ionization into nitrogen ions at room temperature.",
+      "High solubility in liquid water that removes gas molecules from air."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 incorrectly states nitrogen contains a weak single bond. Option 1 is correct because a diatomic nitrogen molecule ($\\\\text{N}_2$) contains a non-polar **Triple Covalent Bond ($\\\\text{N}\\\\equiv\\\\text{N}$)** consisting of one $\\\\sigma$-bond and two $\\\\pi$-bonds. Breaking this triple bond requires an extraordinarily high **Bond Dissociation Enthalpy** ($941.4\\\\text{ kJ/mol}$), making atmospheric nitrogen gas chemically unreactive at ambient temperatures and pressures. Reaction occurs only under high thermal activation, lightning discharge, or catalytic synthesis. Option 2 and Option 3 present invalid ionization or solubility claims."
+  },
+  {
+    "p_id": "bpsc_chem_m10_09",
+    "qe": "Nitrogen is stored naturally in mineral deposits across the Earth's crust. Which choice correctly coordinates the common name with the chemical formula for Chile Saltpetre and Indian Saltpetre?",
+    "qh": "नाइट्रोजन प्राकृतिक रूप से पृथ्वी की पपड़ी में खनिज जमा में संग्रहीत होता है। कौन सा विकल्प चिली साल्टपीटर और इंडियन साल्टपीटर के रासायनिक सूत्र के साथ सामान्य नाम को सही ढंग से मिलाता है?",
+    "o": [
+      "Chile Saltpetre: $\\\\text{KNO}_3$; Indian Saltpetre: $\\\\text{NaNO}_3$",
+      "Chile Saltpetre: Sodium Nitrate ($\\\\text{NaNO}_3$); Indian Saltpetre: Potassium Nitrate ($\\\\text{KNO}_3$)",
+      "Chile Saltpetre: $\\\\text{NH}_4\\\\text{Cl}$; Indian Saltpetre: $\\\\text{Ca(NO}_3)_2$",
+      "Chile Saltpetre: $\\\\text{Na}_2\\\\text{CO}_3$; Indian Saltpetre: $\\\\text{K}_2\\\\text{CO}_3$"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 reverses the alkali metal assignments for Chile and Indian saltpetre. Option 1 is correct because naturally occurring inorganic nitrate deposits include: **Chile Saltpetre**, which is **Sodium Nitrate ($\\\\text{NaNO}_3$)**, found abundantly in South American desert deposits; and **Indian Saltpetre**, which is **Potassium Nitrate ($\\\\text{KNO}_3$)**, historically harvested from nitre-rich soils in India. Option 2 lists ammonium chloride or calcium nitrate, and Option 3 lists alkali carbonates."
+  },
+  {
+    "p_id": "bpsc_chem_m10_10",
+    "qe": "In industrial inorganic chemistry, Nitrogen gas ($\\\\text{N}_2$) is isolated from air on a massive scale. What physical process is deployed for the commercial manufacture of nitrogen from atmospheric air?",
+    "qh": "औद्योगिक अकार्बनिक रसायन विज्ञान में, नाइट्रोजन गैस ($\\\\text{N}_2$) को बड़े पैमाने पर हवा से अलग किया जाता है। वायुमंडलीय हवा से नाइट्रोजन के व्यावसायिक निर्माण के लिए कौन सी भौतिक प्रक्रिया तैनात की जाती है?",
+    "o": [
+      "Electrolysis of water followed by magnetic separation.",
+      "Liquefaction and fractional distillation of air based on boiling point differences.",
+      "Heating limestone with coke in a blast furnace.",
+      "Passing steam over activated charcoal."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 misidentifies water electrolysis (which yields $\\\\text{H}_2$ and $\\\\text{O}_2$). Option 1 is correct because atmospheric air is a mechanical mixture of gases. Industrially, pure nitrogen gas is manufactured by **Liquefaction and Fractional Distillation of Air**. Air is compressed, cooled, and expanded to convert it into a liquid state. Upon gradual warming in a fractional distillation column, nitrogen boils off first at its lower boiling point (77.3 K / $-195.8^\\\\circ\\\\text{C}$), leaving liquid oxygen (boiling point 90.2 K / $-183^\\\\circ\\\\text{C}$) behind at the bottom of the column. Option 2 is lime calcination, and Option 3 is water gas synthesis."
+  },
+  {
+    "p_id": "bpsc_chem_m10_11",
+    "qe": "Modern automotive safety systems deploy inflatable airbags to protect passengers during head-on collisions. What chemical compound is stored inside the airbag module, and what gas inflates the bag upon impact?",
+    "qh": "आधुनिक ऑटोमोटिव सुरक्षा प्रणालियाँ आमने-सामने की टक्कर के दौरान यात्रियों की सुरक्षा के लिए फुलाने योग्य एयरबैग तैनात करती हैं। एयरबैग मॉड्यूल के भीतर कौन सा रासायनिक यौगिक संग्रहीत होता है, और प्रभाव के बाद कौन सी गैस बैग को फुलाती है?",
+    "o": [
+      "Compound: Ammonium nitrate; Gas: Carbon dioxide ($\\\\text{CO}_2$)",
+      "Compound: Sodium Azide ($\\\\text{NaN}_3$); Gas: Nitrogen gas ($\\\\text{N}_2$)",
+      "Compound: Calcium carbide; Gas: Acetylene gas ($\\\\text{C}_2\\\\text{H}_2$)",
+      "Compound: Potassium chlorate; Gas: Oxygen gas ($\\\\text{O}_2$)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 misidentifies the propellant compound and gas. Option 1 is correct because automotive safety airbags contain solid **Sodium Azide ($\\\\text{NaN}_3$)** along with an electric igniter circuit. Upon crash impact, an electronic sensor triggers rapid thermal decomposition of sodium azide: $2\\\\text{NaN}_3 \\\\xrightarrow{\\\\Delta} 2\\\\text{Na} + 3\\\\text{N}_2\\\\uparrow$. The reaction liberates volume-expanding, non-toxic **Nitrogen Gas ($\\\\text{N}_2$)** within $30-40\\\\text{ milliseconds}$, instantly inflating the nylon bag to cushion the driver. Secondary reagents consume the sodium metal byproduct safely. Option 2 and Option 3 describe explosive acetylene or oxygen generation."
+  },
+  {
+    "p_id": "bpsc_chem_m10_12",
+    "qe": "Nitrogen Fixation and Denitrification are complementary pathways in the global nitrogen cycle. What biological transformations define Nitrogen Fixation versus Denitrification?",
+    "qh": "नाइट्रोजन स्थिरीकरण (Nitrogen Fixation) और विनाइट्रीकरण (Denitrification) वैश्विक नाइट्रोजन चक्र में पूरक मार्ग हैं। कौन से जैविक परिवर्तन विनाइट्रीकरण बनाम नाइट्रोजन स्थिरीकरण को परिभाषित करते हैं?",
+    "o": [
+      "Fixation: Conversion of nitrates into ammonia gas; Denitrification: Conversion of urea into proteins.",
+      "Fixation: Conversion of atmospheric $\\\\text{N}_2$ into usable plant nitrates/nitrites; Denitrification: Conversion of soil nitrogenous compounds back into gaseous $\\\\text{N}_2$ by denitrifying bacteria.",
+      "Fixation: Conversion of oxygen into nitrogen oxides; Denitrification: Fixation of nitrogen by algae.",
+      "Fixation: Burning coal to release $\\\\text{NO}_2$; Denitrification: Dissolving saltpetre in water."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 reverses and misidentifies nitrogen cycle pathways. Option 1 is correct because: (1) **Nitrogen Fixation** is the biological or chemical process that converts unreactive atmospheric nitrogen gas ($\\\\text{N}_2$) into bioavailable forms like nitrates ($\\\\text{NO}_3^-$) and ammonium ions ($\\\\text{NH}_4^+$), driven naturally by lightning or symbiotic bacteria like *Rhizobium*; (2) **Denitrification** is the anaerobic metabolic pathway where specialized denitrifying bacteria (e.g., *Pseudomonas*) reduce soil nitrates back into volatile **Nitrogen Gas ($\\\\text{N}_2$)**, releasing it into the atmosphere and completing the nitrogen cycle. Option 2 and Option 3 present invalid industrial or physical distractors."
+  },
+  {
+    "p_id": "bpsc_chem_m10_13",
+    "qe": "Ammonia ($\\\\text{NH}_3$) was first isolated by Joseph Priestley in 1774 by heating ammonium chloride with calcium hydroxide. What historical name was given to ammonia gas during that era?",
+    "qh": "अमोनिया ($\\\\text{NH}_3$) को पहली बार 1774 में जोसेफ प्रिस्टले द्वारा अमोनियम क्लोराइड और कैल्शियम हाइड्रोक्साइड को गर्म करके अलग किया गया था। उस युग के दौरान अमोनिया गैस को क्या ऐतिहासिक नाम दिया गया था?",
+    "o": [
+      "Dephlogisticated air",
+      "Alkaline air",
+      "Fixed air",
+      "Inflammable air"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 refers to oxygen gas (Priestley's term for oxygen). Option 1 is correct because when Joseph Priestley heated ammonium chloride ($\\\\text{NH}_4\\\\text{Cl}$) with slaked lime [$\\\\text{Ca(OH)}_2$], he collected a pungent, water-soluble, basic gas which he named **Alkaline Air**: $2\\\\text{NH}_4\\\\text{Cl} + \\\\text{Ca(OH)}_2 \\\\rightarrow \\\\text{CaCl}_2 + 2\\\\text{H}_2\\\\text{O} + 2\\\\text{NH}_3\\\\uparrow$. Option 2 was the historical name for carbon dioxide (given by Black), and Option 3 was the historical name for hydrogen gas (given by Cavendish)."
+  },
+  {
+    "p_id": "bpsc_chem_m10_14",
+    "qe": "Large-scale industrial production of Ammonia ($\\\\text{NH}_3$) relies on Haber's Process. What catalysts and promoters were used historically versus the optimized chemical catalyst systems deployed in modern Haber reactors?",
+    "qh": "अमोनिया ($\\\\text{NH}_3$) का बड़े पैमाने पर औद्योगिक उत्पादन हैबर की प्रक्रिया (Haber's Process) पर निर्भर करता है। आधुनिक हैबर रिएक्टरों में तैनात अनुकूलित रासायनिक उत्प्रेरक प्रणालियों के विपरीत ऐतिहासिक रूप से किन उत्प्रेरकों और वर्धकों (promoters) का उपयोग किया गया था?",
+    "o": [
+      "Historical: Platinum catalyst + Copper promoter; Modern: Nickel catalyst + Water promoter.",
+      "Historical: Finely divided Iron (Fe) catalyst + Molybdenum (Mo) promoter; Modern: Iron Oxide ($\\\\text{Fe}_2\\\\text{O}_3$) catalyst + Aluminium Oxide ($\\\\text{Al}_2\\\\text{O}_3$) and Potassium Oxide ($\\\\text{K}_2\\\\text{O}$) promoters.",
+      "Historical: Pure Gold catalyst + Silver promoter; Modern: Lead oxide catalyst + Carbon promoter.",
+      "Historical: Sodium catalyst + Mercury promoter; Modern: Calcium oxide catalyst + Silica promoter."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 lists platinum and nickel systems used for hydrogenation or nitric acid synthesis. Option 1 is correct because **Haber's Process** synthesizes ammonia via direct exothermic combination: $\\\\text{N}_2(g) + 3\\\\text{H}_2(g) \\\\rightleftharpoons 2\\\\text{NH}_3(g)$. Historically, the process used finely divided **Iron (Fe) as Catalyst** with **Molybdenum (Mo) as Promoter** [a chemical substance that increases the catalytic activity of a catalyst]. In modern industrial plants, the catalyst system has been optimized to **Iron Oxide ($\\\\text{Fe}_2\\\\text{O}_3$)** mixed with small amounts of **$\\\\text{Al}_2\\\\text{O}_3$ and $\\\\text{K}_2\\\\text{O}$ as Promoters** to improve structural stability and surface activity at $450-500^\\\\circ\\\\text{C}$ and $200\\\\text{ atm}$. Option 2 and Option 3 list non-catalytic metals."
+  },
+  {
+    "p_id": "bpsc_chem_m10_15",
+    "qe": "Ammonia molecules ($\\\\text{NH}_3$) possess a specific molecular geometry and valence electron distribution. What is the hybridization of the nitrogen atom and the geometric shape of the ammonia molecule?",
+    "qh": "अमोनिया अणुओं ($\\\\text{NH}_3$) में एक विशिष्ट आणविक ज्यामिति और वैलेंस इलेक्ट्रॉन वितरण होता है। नाइट्रोजन परमाणु का संकरण (hybridization) और अमोनिया अणु का ज्यामितीय आकार क्या है?",
+    "o": [
+      "Hybridization: $sp^2$; Shape: Planar trigonal",
+      "Hybridization: $sp^3$; Shape: Trigonal Pyramidal (due to one non-bonded lone pair)",
+      "Hybridization: $sp$; Shape: Linear",
+      "Hybridization: $d^2sp^3$; Shape: Octahedral"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 ignores the non-bonded lone pair and claims planar geometry. Option 1 is correct because the central nitrogen atom in ammonia ($\\\\text{NH}_3$) has 5 valence electrons. It forms three $\\\\sigma$-bonds with hydrogen atoms and retains one **Non-Bonded Lone Pair**, giving a steric number of 4 and **$sp^3$ Hybridization**. While the electron-pair arrangement is tetrahedral, the repulsion exerted by the lone pair distorts the bond angles from $109.5^\\\\circ$ to $107^\\\\circ$, resulting in a **Trigonal Pyramidal** molecular shape. Option 2 lists linear $sp$ shapes, and Option 3 lists transition metal complexes."
+  },
+  {
+    "p_id": "bpsc_chem_m10_16",
+    "qe": "Public urinals, railway station facilities, and agricultural urea storage areas often emit a strong, pungent odor. What chemical reaction causes this pungent smell?",
+    "qh": "सार्वजनिक मूत्रालयों, रेलवे स्टेशन सुविधाओं और कृषि यूरिया भंडारण क्षेत्रों से अक्सर एक तीव्र, तीखी गंध निकलती है। किस रासायनिक प्रतिक्रिया के कारण यह तीखी गंध आती है?",
+    "o": [
+      "Sublimation of solid sodium chloride into chlorine gas.",
+      "Enzymatic decomposition of Urea [$\\\\text{CO(NH}_2)_2$] in urine into volatile Ammonia gas ($\\\\text{NH}_3$) and carbon dioxide.",
+      "Oxidation of uric acid into nitrogen dioxide brown fumes.",
+      "Reduction of sulphate ions into hydrogen sulfide gas."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 claims sodium chloride sublimes into chlorine gas, which does not occur under physiological conditions. Option 1 is correct because human urine contains **Urea [$\\\\text{CO(NH}_2)_2$]**. Environmental bacteria secreting the enzyme *urease* catalyze the hydrolysis of excreted urea into ammonium carbonate, which rapidly decomposes into volatile **Ammonia Gas ($\\\\text{NH}_3$)** and carbon dioxide: $\\\\text{CO(NH}_2)_2 + 2\\\\text{H}_2\\\\text{O} \\\\xrightarrow{\\\\text{urease}} (\\\\text{NH}_4)_2\\\\text{CO}_3 \\\\rightarrow 2\\\\text{NH}_3\\\\uparrow + \\\\text{CO}_2\\\\uparrow + \\\\text{H}_2\\\\text{O}$. The pungent odor characteristic of public toilets is caused by escaping gaseous ammonia. Option 2 and Option 3 list nitrogen dioxide or hydrogen sulfide."
+  },
+  {
+    "p_id": "bpsc_chem_m10_17",
+    "qe": "Liquid ammonia is stored in thick steel cylinders. Why must bottles containing concentrated liquid ammonia be cooled thoroughly in ice before opening in a laboratory?",
+    "qh": "तरल अमोनिया को मोटे स्टील सिलेंडर में संग्रहित किया जाता है। प्रयोगशाला में खोलने से पहले सांद्र तरल अमोनिया वाली बोतलों को बर्फ में अच्छी तरह ठंडा क्यों किया जाना चाहिए?",
+    "o": [
+      "To prevent the liquid from solidifying into ice crystals instantly.",
+      "To lower the extremely high vapor pressure of dissolved ammonia gas inside the bottle and prevent violent splashing/explosion upon releasing the stopper.",
+      "To accelerate the internal oxidation of ammonia into nitric acid.",
+      "To increase the weight of the glass bottle."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 incorrectly claims cooling prevents freezing (cooling actually promotes freezing). Option 1 is correct because concentrated aqueous ammonia solution (liquor ammonia) contains a high concentration of dissolved ammonia gas under pressure. At room temperature, the dissolved gas exerts an extraordinarily high **Vapor Pressure** [the equilibrium pressure exerted by a vapor above its liquid phase in a sealed container] against the stopper. If opened at ambient temperature, the sudden pressure drop causes the gas to erupt violently out of solution, spraying corrosive liquid into the operator's face. Cooling the bottle in ice drastically lowers the kinetic energy and vapor pressure of $\\\\text{NH}_3$, allowing safe opening. Option 2 and Option 3 describe nitric acid formation or bottle weight changes."
+  },
+  {
+    "p_id": "bpsc_chem_m10_18",
+    "qe": "Specialized ammonium salts serve distinct medical, analytical, and industrial purposes. What are the common names and applications of 'Smelling Salt' and 'Pink Salt' respectively?",
+    "qh": "विशिष्ट अमोनियम लवण अलग-अलग चिकित्सा, विश्लेषणात्मक और औद्योगिक उद्देश्यों को पूरा करते हैं। 'स्मेलिंग साल्ट' (Smelling Salt) और 'पिंक साल्ट' (Pink Salt) के क्रमशः सामान्य नाम और अनुप्रयोग क्या हैं?",
+    "o": [
+      "Smelling Salt: Ammonium chloride; Pink Salt: Ammonium nitrate.",
+      "Smelling Salt: Ammonium Carbonate [$(\\\\text{NH}_4)_2\\\\text{CO}_3$], used to revive unconscious/fainting persons; Pink Salt: Ammonium Chlorostannate [$(\\\\text{NH}_4)_2\\\\text{SnCl}_6$], used as a mordant in dyeing.",
+      "Smelling Salt: Sodium carbonate; Pink Salt: Potassium permanganate.",
+      "Smelling Salt: Calcium phosphate; Pink Salt: Ferrous sulphate."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 misidentifies smelling salt as simple sal ammoniac. Option 1 is correct because: (1) **Smelling Salt** is **Ammonium Carbonate [$(\\\\text{NH}_4)_2\\\\text{CO}_3$]**; it slowly decomposes to release small amounts of ammonia gas, which irritates the nasal membranes and triggers an involuntary inhalation reflex to revive fainting or unconscious individuals; (2) **Pink Salt** is chemically **Ammonium Hexachlorostannate(IV) [$(\\\\text{NH}_4)_2\\\\text{SnCl}_6$]**, synthesized by reacting ammonium chloride with chlorostannic acid. It is used in textile dyeing and calico printing as a mordant. Option 2 and Option 3 confuse smelling salts with soda ash or permanganate."
+  },
+  {
+    "p_id": "bpsc_chem_m10_19",
+    "qe": "Carbon dioxide ($\\\\text{CO}_2$) is used as a fire extinguishing agent. What two physical and chemical properties make $\\\\text{CO}_2$ an effective fire extinguisher?",
+    "qh": "कार्बन डाइऑक्साइड ($\\\\text{CO}_2$) का उपयोग आग बुझाने वाले एजेंट के रूप में किया जाता है। कौन से दो भौतिक और रासायनिक गुण $\\\\text{CO}_2$ को एक प्रभावी अग्निशामक बनाते हैं?",
+    "o": [
+      "It is lighter than air and highly explosive.",
+      "It is non-inflammable and heavier than air, forming a heavy smothering blanket that displaces oxygen and cuts off atmospheric air supply to the fire.",
+      "It oxidizes fuel instantly into water vapor.",
+      "It lowers the ignition temperature by generating ozone."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 incorrectly states $\\\\text{CO}_2$ is lighter than air and explosive. Option 1 is correct because carbon dioxide ($\\\\text{CO}_2$) has a molecular weight of $44\\\\text{ g/mol}$, making it significantly **Heavier than Air** (average molecular weight $\\\\sim 29\\\\text{ g/mol}$). Furthermore, it is **Non-Inflammable** and does not support combustion. When released over a fire from an extinguisher, the dense $\\\\text{CO}_2$ gas sinks and blankets the burning material, displacing atmospheric oxygen and smothering the flame. Option 2 and Option 3 list fuel oxidation or ozone generation."
+  },
+  {
+    "p_id": "bpsc_chem_m10_20",
+    "qe": "Liquid Carbon Dioxide under high pressure expands rapidly when released, forming 'Dry Ice' (or drikold). What temperature/phase behavior defines Dry Ice, and why does it leave no liquid residue?",
+    "qh": "उच्च दबाव के तहत तरल कार्बन डाइऑक्साइड छोड़े जाने पर तेजी से फैलती है, जिससे 'ड्राई आइस' (या ड्रिकोल्ड) बनती है। कौन सा तापमान/चरण व्यवहार ड्राई आइस को परिभाषित करता है, और यह कोई तरल अवशेष क्यों नहीं छोड़ती है?",
+    "o": [
+      "It melts into liquid water at $0^\\\\circ\\\\text{C}$ and evaporates.",
+      "It is solid Carbon Dioxide ($\\\\text{CO}_2$) at $-78.5^\\\\circ\\\\text{C}$ ($194.7\\\\text{ K}$) that undergoes Sublimation directly from solid to gas at atmospheric pressure without melting into a liquid.",
+      "It is frozen nitrogen gas that converts into liquid ammonia.",
+      "It is a mixture of ice and salt that boils at $100^\\\\circ\\\\text{C}$."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 confuses dry ice with water ice. Option 1 is correct because **Dry Ice (Drikold)** is **Solid Carbon Dioxide ($\\\\text{CO}_2$)**. At standard atmospheric pressure ($1\\\\text{ atm}$), solid $\\\\text{CO}_2$ has a temperature of $-78.5^\\\\circ\\\\text{C}$ ($194.7\\\\text{ K}$). It undergoes **Sublimation** [the direct phase transition of a substance from the solid state to the gaseous state without passing through an intermediate liquid phase]. Because it transitions straight to gas without producing a wet liquid phase, it is called 'dry' ice and is used as a clean commercial refrigerant for preserving frozen foods, ice cream, and biological specimens. Option 2 and Option 3 list frozen nitrogen or boiling salt ice."
+  },
+  
+  {
+    "p_id": "bpsc_chem_m11_01",
+    "qe": "Evaluating the oxidation states and acid-base characteristics of nitrogen oxides reveals distinct periodic trends. Which pair of nitrogen oxides is strictly chemically neutral, while all other higher oxides are acidic in nature?",
+    "qh": "नाइट्रोजन के ऑक्साइडों की ऑक्सीकरण अवस्थाओं और अम्ल-क्षार विशेषताओं का मूल्यांकन विशिष्ट आवर्त प्रवृत्तियों को दर्शाता है। नाइट्रोजन ऑक्साइड का कौन सा जोड़ा कड़ाई से रासायनिक रूप से उदासीन है, जबकि अन्य सभी उच्च ऑक्साइड प्रकृति में अम्लीय हैं?",
+    "o": [
+      "$\\\\text{NO}_2$ and $\\\\text{N}_2\\\\text{O}_4$",
+      "$\\\\text{N}_2\\\\text{O}$ (Nitrous Oxide) and $\\\\text{NO}$ (Nitric Oxide)",
+      "$\\\\text{N}_2\\\\text{O}_3$ and $\\\\text{N}_2\\\\text{O}_5$",
+      "$\\\\text{NO}_2$ and $\\\\text{N}_2\\\\text{O}_5$"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 lists $\\\\text{NO}_2$ and $\\\\text{N}_2\\\\text{O}_4$, which are mixed acid anhydrides forming nitrous and nitric acids in water. Option 1 is correct because **Dinitrogen Oxide ($\\\\text{N}_2\\\\text{O}$, nitrous oxide)** and **Nitrogen Monoxide ($\\\\text{NO}$, nitric oxide)** are low oxidation state ($+1$ and $+2$ respectively) **Neutral Oxides** [oxides that display neither acidic nor basic properties and do not react with water to form salts or change the color of litmus paper]. All other oxides ($\\\\text{N}_2\\\\text{O}_3, \\\\text{NO}_2, \\\\text{N}_2\\\\text{O}_4, \\\\text{N}_2\\\\text{O}_5$) feature higher oxidation states ($+3$ to $+5$) and are acidic anhydrides. Option 2 and Option 3 list purely acidic oxide pairs."
+  },
+  {
+    "p_id": "bpsc_chem_m11_02",
+    "qe": "Nitric acid ($\\\\text{HNO}_3$) was historically known as 'aqua fortis' (strong water) due to its aggressive reaction with metals. However, certain metals remain immune to dissolution in concentrated $\\\\text{HNO}_3$. Which choice correctly lists metals that are rendered passive by concentrated nitric acid versus noble metals that do not react at all?",
+    "qh": "नाइट्रिक अम्ल ($\\\\text{HNO}_3$) को ऐतिहासिक रूप से धातुओं के साथ इसकी आक्रामक प्रतिक्रिया के कारण 'एक्वा फोर्टिस' (मजबूत पानी) के रूप में जाना जाता था। हालाँकि, कुछ धातुएँ सांद्र $\\\\text{HNO}_3$ में घुलने से बची रहती हैं। कौन सा विकल्प उन धातुओं को सही ढंग से सूचीबद्ध करता है जो सांद्र नाइट्रिक अम्ल द्वारा निष्क्रिय हो जाती हैं बनाम नोबल धातुएं जो बिल्कुल भी प्रतिक्रिया नहीं करती हैं?",
+    "o": [
+      "Passivated: Gold and Platinum; Noble (unreactive): Iron and Aluminium",
+      "Passivated: Iron ($\\\\text{Fe}$), Aluminium ($\\\\text{Al}$), and Chromium ($\\\\text{Cr}$); Noble (unreactive): Gold ($\\\\text{Au}$) and Platinum ($\\\\text{Pt}$)",
+      "Passivated: Copper and Zinc; Noble (unreactive): Sodium and Calcium",
+      "Passivated: Lead and Mercury; Noble (unreactive): Silver and Magnesium"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 swaps the passivated transition metals with noble metals. Option 1 is correct because **Iron ($\\\\text{Fe}$), Aluminium ($\\\\text{Al}$), and Chromium ($\\\\text{Cr}$)** undergo **Passivation** [the formation of a microscopic, insoluble, non-porous surface oxide film ($\\\\text{M}_2\\\\text{O}_3$ or $\\\\text{M}_3\\\\text{O}_4$) when treated with concentrated oxidizing acid, halting further oxidation]. Conversely, **Gold ($\\\\text{Au}$) and Platinum ($\\\\text{Pt}$)** are unreactive noble metals that do not react with concentrated $\\\\text{HNO}_3$ under any concentration because of their extremely low standard reduction potentials; they require aqua-regia to dissolve. Option 2 and Option 3 list reactive metals that dissolve with gas evolution."
+  },
+  {
+    "p_id": "bpsc_chem_m11_03",
+    "qe": "Safety matchsticks rely on a carefully engineered friction ignition mechanism involving two distinct chemical coatings. What are the chemical compositions present on the matchstick head versus the striking surface on the sides of the matchbox?",
+    "qh": "सेफ्टी माचिस दो विशिष्ट रासायनिक कोटिंग्स को शामिल करते हुए एक सावधानीपूर्वक इंजीनियर घर्षण प्रज्वलन तंत्र पर निर्भर करती है। माचिस की तीली के सिर बनाम माचिस के डिब्बे के किनारों पर स्ट्राइकिंग सतह पर मौजूद रासायनिक संरचनाएँ क्या हैं?",
+    "o": [
+      "Matchstick Head: White phosphorus + Lead; Striking Surface: Pure sodium + Sulphur",
+      "Matchstick Head: Antimony Trisulphide ($\\\\text{Sb}_2\\\\text{S}_3$) + Potassium Chlorate ($\\\\text{KClO}_3$); Striking Surface: Powdered Glass + Red Phosphorus",
+      "Matchstick Head: Red phosphorus + Glass; Striking Surface: Antimony trisulphide + Potassium chlorate",
+      "Matchstick Head: Calcium carbide; Striking Surface: Ammonium nitrate"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 lists toxic white phosphorus, which was banned due to causing 'phossy jaw'. Option 1 is correct because a **Safety Match** separates the ignition components: the **Matchstick Head** contains an combustible fuel, **Antimony Trisulphide ($\\\\text{Sb}_2\\\\text{S}_3$)**, combined with an oxidizing agent, **Potassium Chlorate ($\\\\text{KClO}_3$)**, bound with glue; the **Striking Surface** on the matchbox contains **Powdered Glass** (abrasive) and non-toxic **Red Phosphorus**. Striking converts trace red phosphorus into reactive white phosphorus vapor via frictional heat, sparking the potassium chlorate oxidation. Option 2 reverses the head and striking surface coatings, and Option 3 lists non-match materials."
+  },
+  {
+    "p_id": "bpsc_chem_m11_04",
+    "qe": "Phosphorus exhibits multiple allotropic modifications with contrasting physical and chemical stability. Which form of black phosphorus is a good conductor of electricity and does not burn in air up to 673 K?",
+    "qh": "फास्फोरस विपरीत भौतिक और रासायनिक स्थिरता के साथ कई एलोट्रोपिक संशोधनों को प्रदर्शित करता है। काला फास्फोरस का कौन सा रूप विद्युत का सुचालक है और 673 K तक हवा में नहीं जलता है?",
+    "o": [
+      "$\\\\alpha$-Black Phosphorus",
+      "$\\\\beta$-Black Phosphorus",
+      "Scarlet Phosphorus",
+      "Violet (Hittorf's) Phosphorus"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 describes $\\\\alpha$-black phosphorus, which can sublime in air and does not exhibit high electrical conductivity. Option 1 is correct because **$\\\\beta$-Black Phosphorus** is prepared by heating white phosphorus at $200^\\\\circ\\\\text{C}$ under extremely high pressures. It possesses a layered, puckered honeycomb crystal lattice similar to graphite, rendering it a **Good Conductor of Electricity** and imparting high thermal stability such that it does not burn in air up to $673\\\\text{ K}$. It is black, lustrous, and insoluble in $\\\\text{CS}_2$. Option 2 and Option 3 describe non-conducting scarlet or violet allotropes."
+  },
+  {
+    "p_id": "bpsc_chem_m11_05",
+    "qe": "Violet phosphorus, also known as Hittorf's phosphorus, is a specialized crystalline allotrope discovered by Johann Wilhelm Hittorf. How is Hittorf's violet phosphorus synthesized in the laboratory?",
+    "qh": "बैंगनी फास्फोरस, जिसे हिटोर्फ के फास्फोरस के रूप में भी जाना जाता है, जोहान विल्हेम हिटोर्फ द्वारा खोजा गया एक विशेष क्रिस्टलीय एलोट्रोप है। प्रयोगशाला में हिटोर्फ के बैंगनी फास्फोरस का संश्लेषण कैसे किया जाता है?",
+    "o": [
+      "By heating white phosphorus with liquid mercury in vacuum.",
+      "By heating white phosphorus with metallic lead in a sealed tube at 803 K.",
+      "By dissolving red phosphorus in concentrated nitric acid.",
+      "By exposing phosphorus pentoxide to UV radiation."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 misidentifies mercury as the crystallization solvent. Option 1 is correct because **Violet Phosphorus (Hittorf's Phosphorus)** is prepared by heating **White Phosphorus with Metallic Lead** in an evacuated sealed tube at $803\\\\text{ K}$ for an extended duration. The phosphorus dissolves in molten lead and crystallizes out upon slow cooling as opaque, violet, monoclinic/rhomboidal crystals. It is non-inflammable, chemically resistant, and a poor conductor of electricity. Option 2 and Option 3 describe acid oxidation or oxide irradiation."
+  },
+  {
+    "p_id": "bpsc_chem_m11_06",
+    "qe": "Phosphine ($\\\\text{PH}_3$) is a highly toxic, volatile hydrometallic gas. What reaction conditions and reagents are required for the standard laboratory preparation of pure phosphine gas?",
+    "qh": "फॉस्फीन ($\\\\text{PH}_3$) एक अत्यधिक विषैली, वाष्पशील हाइड्रोमैटलिक गैस है। शुद्ध फॉस्फीन गैस की मानक प्रयोगशाला तैयारी के लिए कौन सी प्रतिक्रिया स्थितियों और अभिकर्मकों की आवश्यकता होती है?",
+    "o": [
+      "Heating red phosphorus with concentrated sulfuric acid in open air.",
+      "Heating White Phosphorus ($\\\\text{P}_4$) with concentrated Sodium Hydroxide ($\\\\text{NaOH}$) solution in an inert atmosphere of $\\\\text{CO}_2$.",
+      "Passing steam over calcium phosphate at $1000^\\\\circ\\\\text{C}$.",
+      "Electrolyzing an aqueous solution of orthophosphoric acid."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 describes acid oxidation yielding $\\\\text{H}_3\\\\text{PO}_4$ and $\\\\text{SO}_2$. Option 1 is correct because laboratory synthesis of **Phosphine ($\\\\text{PH}_3$)** involves disproportionation of **White Phosphorus ($\\\\text{P}_4$)** by heating with a concentrated **Sodium Hydroxide ($\\\\text{NaOH}$)** solution in an **Inert Carbon Dioxide ($\\\\text{CO}_2$) Atmosphere**: $\\\\text{P}_4 + 3\\\\text{NaOH} + 3\\\\text{H}_2\\\\text{O} \\\\xrightarrow{\\\\Delta} \\\\text{PH}_3\\\\uparrow + 3\\\\text{NaH}_2\\\\text{PO}_2$. An inert atmosphere is essential because phosphine gas contains trace impurity gases ($\\\\text{P}_2\\\\text{H}_4$) that spontaneously ignite in air. Option 2 and Option 3 list non-producing phosphide or acid electrolysis methods."
+  },
+  {
+    "p_id": "bpsc_chem_m11_07",
+    "qe": "Phosphorus Pentoxide ($\\\\text{P}_4\\\\text{O}_{10}$) acts as a powerful dehydrating agent in synthetic inorganic chemistry. What chemical product forms when $\\\\text{P}_4\\\\text{O}_{10}$ dehydrates concentrated Nitric Acid ($\\\\text{HNO}_3$)?",
+    "qh": "फास्फोरस पेंटाक्साइड ($\\\\text{P}_4\\\\text{O}_{10}$) सिंथेटिक अकार्बनिक रसायन विज्ञान में एक शक्तिशाली निर्जलीकरण एजेंट के रूप में कार्य करता है। जब $\\\\text{P}_4\\\\text{O}_{10}$ सांद्र नाइट्रिक अम्ल ($\\\\text{HNO}_3$) को निर्जलित करता है तो कौन सा रासायनिक उत्पाद बनता है?",
+    "o": [
+      "Nitrous oxide ($\\\\text{N}_2\\\\text{O}$)",
+      "Dinitrogen Pentoxide ($\\\\text{N}_2\\\\text{O}_5$)",
+      "Nitric oxide ($\\\\text{NO}$)",
+      "Nitrogen dioxide ($\\\\text{NO}_2$)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 lists nitrous oxide, which is formed by thermal decomposition of ammonium nitrate. Option 1 is correct because **Phosphorus Pentoxide ($\\\\text{P}_4\\\\text{O}_{10}$)** has an extraordinary thermodynamic affinity for water, acting as an acid anhydride scavenger. When reacted with concentrated **Nitric Acid ($\\\\text{HNO}_3$)**, it abstracts water molecules to convert the acid into its corresponding anhydride, **Dinitrogen Pentoxide ($\\\\text{N}_2\\\\text{O}_5$)**: $4\\\\text{HNO}_3 + \\\\text{P}_4\\\\text{O}_{10} \\\\rightarrow 2\\\\text{N}_2\\\\text{O}_5 + 4\\\\text{HPO}_3$. (Similarly, it dehydrates $\\\\text{H}_2\\\\text{SO}_4$ to $\\\\text{SO}_3$). Option 2 and Option 3 describe lower nitrogen oxides."
+  },
+  {
+    "p_id": "bpsc_chem_m11_08",
+    "qe": "The basicity of phosphorus oxoacids depends on the number of ionizable ionizable hydroxy ($-\\\\text{OH}$) groups bound directly to the central phosphorus atom. What are the basicities of Orthophosphoric Acid ($\\\\text{H}_3\\\\text{PO}_4$), Orthophosphorous Acid ($\\\\text{H}_3\\\\text{PO}_3$), and Hypophosphorous Acid ($\\\\text{H}_3\\\\text{PO}_2$) respectively?",
+    "qh": "फास्फोरस ऑक्सोअम्लों की क्षारीयता (basicity) केंद्रीय फास्फोरस परमाणु से सीधे बंधे आयनित होने योग्य हाइड्रॉक्सी ($-\\\\text{OH}$) समूहों की संख्या पर निर्भर करती है। ऑर्थोफॉस्फोरिक अम्ल ($\\\\text{H}_3\\\\text{PO}_4$), ऑर्थोफॉस्फोरस अम्ल ($\\\\text{H}_3\\\\text{PO}_3$), और हाइपोफॉस्फोरस अम्ल ($\\\\text{H}_3\\\\text{PO}_2$) की क्षारीयता क्रमशः क्या है?",
+    "o": [
+      "3, 3, and 3 respectively (tribasic for all three)",
+      "3, 2, and 1 respectively",
+      "1, 2, and 3 respectively",
+      "2, 2, and 1 respectively"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 incorrectly assumes that all hydrogen atoms in phosphorus oxoacids are ionizable. Option 1 is correct because **Basicity** [the number of replaceable hydrogen ions ($\\\\text{H}^+$) in an acid molecule] is determined solely by $-\\\\text{OH}$ groups bound directly to phosphorus; $\\\\text{P}-\\\\text{H}$ hydrogens are non-ionizable: (1) **Orthophosphoric Acid ($\\\\text{H}_3\\\\text{PO}_4$)** contains three $-\\\\text{OH}$ groups, making it **tribasic (basicity = 3)**; (2) **Orthophosphorous Acid ($\\\\text{H}_3\\\\text{PO}_3$)** contains two $-\\\\text{OH}$ groups and one $\\\\text{P}-\\\\text{H}$ bond, making it **dibasic (basicity = 2)**; (3) **Hypophosphorous Acid ($\\\\text{H}_3\\\\text{PO}_2$)** contains one $-\\\\text{OH}$ group and two $\\\\text{P}-\\\\text{H}$ bonds, making it **monobasic (basicity = 1)**. Option 2 reverses the order."
+  },
+  {
+    "p_id": "bpsc_chem_m11_09",
+    "qe": "Bone mineral density and skeletal structure depend on a complex inorganic calcium phosphate mineral matrix. What is the primary chemical name and crystal formula of the mineral comprising human bones and tooth enamel?",
+    "qh": "अस्थि खनिज घनत्व और कंकाल की संरचना एक जटिल अकार्बनिक कैल्शियम फॉस्फेट खनिज मैट्रिक्स पर निर्भर करती है। मानव हड्डियों और दांतों के इनेमल को बनाने वाले खनिज का प्राथमिक रासायनिक नाम और क्रिस्टल सूत्र क्या है?",
+    "o": [
+      "Calcium sulphate hemihydrate (Gypsum)",
+      "Hydroxyapatite [amorphous/crystalline Calcium Phosphate, $\\\\text{Ca}_{10}(\\\\text{PO}_4)_6(\\\\text{OH})_2$]",
+      "Calcium cyanamide (Nitrolim)",
+      "Calcium fluoride (Fluorspar)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 describes Plaster of Paris/Gypsum plaster. Option 1 is correct because the structural inorganic matrix of human bone tissue and dental enamel consists primarily of **Hydroxyapatite** [a bio-mineral form of calcium phosphate with the general chemical formula **$\\\\text{Ca}_{10}(\\\\text{PO}_4)_6(\\\\text{OH})_2$** or amorphous $\\\\text{Ca}_3(\\\\text{PO}_4)_2$]. It provides compressive strength to bones and teeth. Substitution of hydroxide by fluoride forms fluorapatite, which increases resistance to acid erosion. Option 2 is a synthetic fertilizer, and Option 3 is a fluxing mineral."
+  },
+  {
+    "p_id": "bpsc_chem_m11_10",
+    "qe": "Dioxygen ($\\\\text{O}_2$) is a paramagnetic diatomic gas comprising roughly 21% of the Earth's atmosphere. What laboratory method yields pure oxygen gas via thermal catalysis?",
+    "qh": "डाइऑक्सीजन ($\\\\text{O}_2$) एक अनुचुंबकीय (paramagnetic) द्विपरमाणुक गैस है जिसमें पृथ्वी के वायुमंडल का लगभग 21% हिस्सा शामिल है। कौन सी प्रयोगशाला विधि तापीय उत्प्रेरण (thermal catalysis) के माध्यम से शुद्ध ऑक्सीजन गैस का उत्पादन करती है?",
+    "o": [
+      "Heating sodium chloride with sulfuric acid.",
+      "Heating Potassium Chlorate ($\\\\text{KClO}_3$) in the presence of a Manganese Dioxide ($\\\\text{MnO}_2$) catalyst.",
+      "Passing steam over cold iron filings.",
+      "Decomposing ammonia over platinum wire."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 yields hydrogen chloride gas ($\\\\text{HCl}$). Option 1 is correct because laboratory preparation of **Oxygen ($\\\\text{O}_2$)** involves heating **Potassium Chlorate ($\\\\text{KClO}_3$)** to $\\\\sim 420\\\\text{ K}$ in the presence of **Manganese Dioxide ($\\\\text{MnO}_2$)** acting as a positive catalyst: $2\\\\text{KClO}_3 \\\\xrightarrow{\\\\text{MnO}_2, \\\\Delta} 2\\\\text{KCl} + 3\\\\text{O}_2\\\\uparrow$. $\\\\text{MnO}_2$ lowers the thermal decomposition temperature significantly. Option 2 yields hydrogen gas, and Option 3 dissociates ammonia into nitrogen and hydrogen."
+  },
+  {
+    "p_id": "bpsc_chem_m11_11",
+    "qe": "Ozone ($\\\\text{O}_3$) is a bent triatomic allotrope of oxygen located in the stratosphere. What specific chemical reaction demonstrates its powerful oxidizing nature when reacted with unsaturated organic hydrocarbons?",
+    "qh": "ओजोन ($\\\\text{O}_3$) समताप मंडल (stratosphere) में स्थित ऑक्सीजन का एक मुड़ा हुआ त्रि-परमाणुक एलोट्रोप है। कौन सी विशिष्ट रासायनिक प्रतिक्रिया असंतृप्त कार्बनिक हाइड्रोकार्बन के साथ प्रतिक्रिया करने पर इसकी शक्तिशाली ऑक्सीकरण प्रकृति को प्रदर्शित करती है?",
+    "o": [
+      "Reduction to methane gas.",
+      "Electrophilic addition across carbon-carbon double/triple bonds to form explosive Ozonides, followed by reductive cleavage into carbonyl compounds (Ozonolysis).",
+      "Polymerization into synthetic silicone greases.",
+      "Dehydration into dinitrogen pentoxide."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 misidentifies ozone as a reducing agent that yields methane. Option 1 is correct because **Ozone ($\\\\text{O}_3$)** acts as a potent **Oxidizing Agent** [a substance that accepts electrons and transfers oxygen atoms]. When ozone reacts with unsaturated organic molecules (alkenes or alkynes), it undergoes 1,3-dipolar cycloaddition across the double/triple bond to yield intermediate cyclic **Ozonides**. Subsequent reductive cleavage (using $\\\\text{Zn/H}_2\\\\text{O}$) splits the carbon chain into aldehydes or ketones (**Ozonolysis**), a reaction used to locate double bond positions. Option 2 and Option 3 describe silicone or nitrogen oxide pathways."
+  },
+  {
+    "p_id": "bpsc_chem_m11_12",
+    "qe": "Nitrous Acid ($\\\\text{HNO}_2$) is an unstable, weak oxoacid of nitrogen that must be generated *in situ*. What dual chemical behavior characterizes $\\\\text{HNO}_2$ in aqueous redox reactions?",
+    "qh": "नाइट्रस अम्ल ($\\\\text{HNO}_2$) नाइट्रोजन का एक अस्थिर, कमजोर ऑक्सोअम्ल है जिसे *इन सिटू* (in situ) उत्पन्न किया जाना चाहिए। जलीय रेडॉक्स प्रतिक्रियाओं में $\\\\text{HNO}_2$ का कौन सा दोहरा रासायनिक व्यवहार होता है?",
+    "o": [
+      "It acts exclusively as a strong base.",
+      "It acts as both an Oxidizing Agent and a Reducing Agent depending on the reaction partner.",
+      "It acts exclusively as a dehydrating agent.",
+      "It acts as an inert solvent that cannot transfer electrons."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 misidentifies $\\\\text{HNO}_2$ as a strong base. Option 1 is correct because in **Nitrous Acid ($\\\\text{HNO}_2$)**, nitrogen exists in an intermediate oxidation state of **$+3$** (between the minimum $-3$ in $\\\\text{NH}_3$ and the maximum $+5$ in $\\\\text{HNO}_3$). Consequently, it can accept electrons to be reduced to $\\\\text{NO}$ or $\\\\text{N}_2\\\\text{O}$ (acting as an **Oxidizing Agent**) or donate electrons to be oxidized to $\\\\text{HNO}_3$ (acting as a **Reducing Agent**). A mixture of $\\\\text{NaNO}_2$ and $\\\\text{NO}$ in aqueous $\\\\text{HNO}_2$ is used in flash photography. Option 2 and Option 3 list dehydrating or inert behaviors."
+  },
+  {
+    "p_id": "bpsc_chem_m11_13",
+    "qe": "In the Ostwald Process for the large-scale industrial manufacture of Nitric Acid ($\\\\text{HNO}_3$), what primary catalytic oxidation reaction occurs in the first stage?",
+    "qh": "नाइट्रिक अम्ल ($\\\\text{HNO}_3$) के बड़े पैमाने पर औद्योगिक निर्माण के लिए ओस्टवाल्ड प्रक्रिया (Ostwald Process) में, पहले चरण में कौन सी प्राथमिक उत्प्रेरक ऑक्सीकरण प्रतिक्रिया होती है?",
+    "o": [
+      "Direct oxidation of nitrogen dioxide by ozone gas.",
+      "Catalytic oxidation of Ammonia ($\\\\text{NH}_3$) by atmospheric oxygen over a Platinum-Rhodium gauge catalyst to form Nitric Oxide ($\\\\text{NO}$).",
+      "Dehydration of ammonium nitrate using phosphorus pentoxide.",
+      "Reduction of sodium nitrate with concentrated sulfuric acid."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 describes secondary oxidation steps. Option 1 is correct because the **Ostwald Process** converts ammonia into nitric acid in three key stages: Stage 1 involves the **Catalytic Oxidation of Ammonia ($\\\\text{NH}_3$)** by atmospheric oxygen over a **$\\\\text{Pt/Rh}$ Gauze Catalyst** at $500\\\\text{ K}$ and $9\\\\text{ bar}$ to produce Nitric Oxide ($\\\\text{NO}$): $4\\\\text{NH}_3 + 5\\\\text{O}_2 \\\\xrightarrow{\\\\text{Pt/Rh}} 4\\\\text{NO} + 6\\\\text{H}_2\\\\text{O}$. $\\\\text{NO}$ is then oxidized to $\\\\text{NO}_2$, which dissolves in water to form $\\\\text{HNO}_3$. Option 2 is a laboratory dehydration method, and Option 3 is the old Retort process."
+  },
+  {
+    "p_id": "bpsc_chem_m11_14",
+    "qe": "Phosphorus exhibits structural allotropy. Which allotrope of phosphorus possesses a polymeric structure composed of linked $\\\\text{P}_4$ tetrahedra, is non-poisonous, and has a high ignition temperature of 260°C?",
+    "qh": "फास्फोरस संरचनात्मक एलोट्रोपी प्रदर्शित करता है। फास्फोरस के किस एलोट्रोप में जुड़े हुए $\\\\text{P}_4$ टेट्राहेड्रा से बनी एक बहुलक (polymeric) संरचना होती है, यह गैर-विषैला होता है, और इसका उच्च प्रज्वलन तापमान 260°C होता है?",
+    "o": [
+      "White Phosphorus",
+      "Red Phosphorus",
+      "Black Phosphorus",
+      "Liquid Yellow Phosphorus"
+    ],
+    "a": 0,
+    "e": "<b>Explanation:</b> Option 0 describes white phosphorus, which is toxic, monomeric $\\\\text{P}_4$, highly reactive, and ignites spontaneously in air at $35^\\\\circ\\\\text{C}$. Option 1 is correct because **Red Phosphorus** is formed by heating white phosphorus at $573\\\\text{ K}$ in an inert atmosphere. It possesses a **Polymeric Structure** consisting of chains of $\\\\text{P}_4$ tetrahedra linked together via covalent bonds. This polymeric arrangement increases structural stability, making red phosphorus **non-poisonous**, insoluble in $\\\\text{CS}_2$, non-chemiluminescent, and stable in air up to its high **Ignition Temperature ($260^\\circ\\text{C}$)**. Option 2 lists black phosphorus, and Option 3 lists liquid forms."
+  },
+  {
+    "p_id": "bpsc_chem_m11_15",
+    "qe": "Scarlet phosphorus is a distinct red crystalline allotrope of phosphorus. How is scarlet phosphorus synthesized, and what is its reactivity compared to red phosphorus?",
+    "qh": "स्कार्लेट फास्फोरस (Scarlet phosphorus) फास्फोरस का एक विशिष्ट लाल क्रिस्टलीय एलोट्रोप है। स्कार्लेट फास्फोरस का संश्लेषण कैसे किया जाता है, और लाल फास्फोरस की तुलना में इसकी प्रतिक्रियाशीलता क्या है?",
+    "o": [
+      "By heating black phosphorus in liquid ammonia; less reactive than red phosphorus.",
+      "By heating a 10% solution of White Phosphorus in Phosphorus Tribromide ($\\\\text{PBr}_3$) for 10 hours; more reactive than red phosphorus but does not catch fire in air at ordinary temperatures.",
+      "By boiling red phosphorus in caustic soda; ignites spontaneously at $0^\\\\circ\\\\text{C}$.",
+      "By subliming Hittorf's phosphorus in pure nitrogen; completely inert."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 incorrectly pairs synthesis reagents and states lower reactivity. Option 1 is correct because **Scarlet Phosphorus** is synthesized by heating a **$10\\%$ solution of White Phosphorus in Phosphorus Tribromide ($\\\\text{PBr}_3$)** for approximately 10 hours. It precipitates as a fine red crystalline solid that is insoluble in $\\\\text{CS}_2$ and non-poisonous. Chemically, it is **more reactive than standard red phosphorus** due to a finer particle size and higher surface energy, yet it remains stable enough that it does not spontaneously catch fire in air at ambient temperatures. Option 2 and Option 3 describe invalid phosphine or inert pathways."
+  },
+  {
+    "p_id": "bpsc_chem_m11_16",
+    "qe": "Calcium phosphide ($\\\\text{Ca}_3\\\\text{P}_2$) reacts vigorously with water or dilute hydrochloric acid. What poisonous gas is liberated during this hydrolysis reaction?",
+    "qh": "कैल्शियम फॉस्फाइड ($\\\\text{Ca}_3\\\\text{P}_2$) पानी या तनु हाइड्रोक्लोरिक अम्ल के साथ तेजी से प्रतिक्रिया करता है। इस जलअपघटन प्रतिक्रिया के दौरान कौन सी विषैली गैस मुक्त होती है?",
+    "o": [
+      "Dinitrogen oxide ($\\\\text{N}_2\\\\text{O}$)",
+      "Phosphine ($\\\\text{PH}_3$)",
+      "Phosphorus pentoxide ($\\\\text{P}_4\\\\text{O}_{10}$)",
+      "Hydrogen sulfide ($\\\\text{H}_2\\\\text{S}$)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 lists nitrous oxide. Option 1 is correct because ionic metal phosphides undergo rapid **Hydrolysis** [a chemical breakdown reaction caused by water] when treated with aqueous solvents. Treating **Calcium Phosphide ($\\\\text{Ca}_3\\\\text{P}_2$)** with water or dilute $\\\\text{HCl}$ decomposes the salt to yield calcium hydroxide/chloride and liberates highly toxic **Phosphine Gas ($\\\\text{PH}_3$)**: $\\\\text{Ca}_3\\\\text{P}_2 + 6\\\\text{H}_2\\\\text{O} \\\\rightarrow 3\\\\text{Ca(OH)}_2 + 2\\\\text{PH}_3\\\\uparrow$. This reaction forms the basis of Holme's signals in marine navigation. Option 2 lists a solid oxide, and Option 3 lists hydrogen sulfide."
+  },
+  {
+    "p_id": "bpsc_chem_m11_17",
+    "qe": "Phosphorus Trioxide exists as a dimeric molecular oxide ($\\\\text{P}_4\\\\text{O}_6$). Under what oxidation conditions is phosphorus trioxide synthesized from elemental phosphorus?",
+    "qh": "फास्फोरस ट्राइऑक्साइड एक द्विअर्थी (dimeric) आणविक ऑक्साइड ($\\\\text{P}_4\\\\text{O}_6$) के रूप में मौजूद है। फास्फोरस ट्राइऑक्साइड को तात्विक फास्फोरस से किस ऑक्सीकरण स्थिति के तहत संश्लेषित किया जाता है?",
+    "o": [
+      "Burning white phosphorus in an excess stream of pure oxygen at $1000^\\\\circ\\\\text{C}$.",
+      "Combustion of White Phosphorus ($\\\\text{P}_4$) in a limited supply of air or oxygen.",
+      "Dehydrating orthophosphoric acid with concentrated sulfuric acid.",
+      "Heating red phosphorus with liquid nitrogen in a vacuum."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 describes conditions that produce phosphorus pentoxide ($\\\\text{P}_4\\\\text{O}_{10}$). Option 1 is correct because **Phosphorus Trioxide ($\\\\text{P}_4\\\\text{O}_6$)** is prepared by burning **White Phosphorus ($\\\\text{P}_4$) in a Limited Supply of Air** or oxygen. Restricted oxygen availability prevents complete oxidation to the $+5$ pentoxide state, arresting oxidation at the $+3$ state: $\\\\text{P}_4 + 3\\\\text{O}_2 \\\\rightarrow \\\\text{P}_4\\\\text{O}_6$. It is a soft, colorless, crystalline solid with a garlic-like odor that reacts with cold water to form phosphorous acid ($\\\\text{H}_3\\\\text{PO}_3$). Option 2 and Option 3 list invalid dehydrations or vacuum nitrogen heating."
+  },
+  {
+    "p_id": "bpsc_chem_m11_18",
+    "qe": "Pyrophosphoric Acid ($\\\\text{H}_4\\\\text{P}_2\\\\text{O}_7$) is a condensed oxoacid of phosphorus. What is the oxidation state of phosphorus in Pyrophosphoric Acid, and how is it prepared from orthophosphoric acid?",
+    "qh": "पायरोफॉस्फोरिक अम्ल ($\\\\text{H}_4\\\\text{P}_2\\\\text{O}_7$) फास्फोरस का एक सघन (condensed) ऑक्सोअम्ल है। पायरोफॉस्फोरिक अम्ल में फास्फोरस की ऑक्सीकरण अवस्था क्या है, और इसे ऑर्थोफॉस्फोरिक अम्ल से कैसे तैयार किया जाता है?",
+    "o": [
+      "Oxidation state: $+3$; prepared by reducing $\\\\text{H}_3\\\\text{PO}_4$ with hydrogen gas.",
+      "Oxidation state: $+5$; prepared by heating Orthophosphoric Acid ($\\\\text{H}_3\\\\text{PO}_4$) to $\\\\sim 250^\\\\circ\\\\text{C}$ to eliminate a water molecule between two acid molecules.",
+      "Oxidation state: $+1$; prepared by dissolving phosphorus in nitric acid.",
+      "Oxidation state: $0$; prepared by subliming white phosphorus."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 misidentifies the oxidation state as $+3$ (which belongs to phosphorous acid). Option 1 is correct because in **Pyrophosphoric Acid ($\\\\text{H}_4\\\\text{P}_2\\\\text{O}_7$)**, phosphorus exhibits an oxidation state of **$+5$** [$4(+1) + 2(x) + 7(-2) = 0 \\\\rightarrow 2x = 10 \\\\rightarrow x = +5$]. It is synthesized by the **Thermal Condensation** of two molecules of orthophosphoric acid ($\\\\text{H}_3\\\\text{PO}_4$) heated to $\\\\sim 250^\\\\circ\\\\text{C}$, driving off one molecule of water: $2\\\\text{H}_3\\\\text{PO}_4 \\\\xrightarrow{\\\\Delta} \\\\text{H}_4\\\\text{P}_2\\\\text{O}_7 + \\\\text{H}_2\\\\text{O}$. It contains four ionizable $-\\\\text{OH}$ groups (tetrabasic). Option 2 and Option 3 list incorrect $+1$ or zero oxidation states."
+  },
+  {
+    "p_id": "bpsc_chem_m11_19",
+    "qe": "Molecular oxygen ($\\\\text{O}_2$) exhibits physical magnetism despite possessing an even number of total electrons (16 electrons). What magnetic property defines $\\\\text{O}_2$, and why does it exhibit this behavior?",
+    "qh": "कुल इलेक्ट्रॉनों (16 इलेक्ट्रॉन) की सम संख्या होने के बावजूद आणविक ऑक्सीजन ($\\\\text{O}_2$) भौतिक चुंबकत्व प्रदर्शित करता है। कौन सा चुंबकीय गुण $\\\\text{O}_2$ को परिभाषित करता है, और यह इस व्यवहार को क्यों प्रदर्शित करता है?",
+    "o": [
+      "Diamagnetic; because all 16 electrons are paired in molecular bonding orbitals.",
+      "Paramagnetic; because its molecular orbital configuration contains two unpaired electrons in degenerate antibonding $\\\\pi^*$ orbitals ($\\\\pi^*_{2p_x}$ and $\\\\pi^*_{2p_y}$).",
+      "Ferromagnetic; because it forms permanent domain magnets at room temperature.",
+      "Antiferromagnetic; because it repels external magnetic fields completely."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 incorrectly predicts diamagnetism based on simple Lewis dot structures, a classic failure of valence bond theory. Option 1 is correct because according to **Molecular Orbital Theory (MOT)**, the 16 valence electrons of the $\\\\text{O}_2$ molecule fill orbitals up to the antibonding level, placing the last two electrons into degenerate **Antibonding $\\\\pi^*$ Orbitals ($\\\\pi^*_{2p_x}^1 = \\\\pi^*_{2p_y}^1$)** with parallel spins according to Hund's rule. The presence of these two **Unpaired Electrons** renders molecular oxygen **Paramagnetic** [attracted into an external magnetic field]. Liquid oxygen is noticeably attracted to the poles of a strong magnet. Option 2 and Option 3 list bulk solid magnetic states."
+  },
+  {
+    "p_id": "bpsc_chem_m11_20",
+    "qe": "The stratospheric ozone layer absorbs harmful solar ultraviolet (UV) radiation. What specific class of synthetic industrial compounds is primarily responsible for the catalytic depletion of stratospheric ozone?",
+    "qh": "समतापमंडलीय ओजोन परत हानिकारक सौर पराबैंगनी (UV) विकिरण को अवशोषित करती है। सिंथेटिक औद्योगिक यौगिकों की कौन सी विशिष्ट श्रेणी समतापमंडलीय ओजोन के उत्प्रेरक क्षरण (catalytic depletion) के लिए मुख्य रूप से जिम्मेदार है?",
+    "o": [
+      "Heavy metal amalgams like lead-mercury complexes.",
+      "Chlorofluorocarbons (CFCs, such as Freon-12) releasing reactive chlorine free radicals ($\\\\text{Cl}^\\\\bullet$) under photolytic solar UV degradation.",
+      "Potassium nitrate fertilizer runoff in rivers.",
+      "Silicone polymers used in cosmetics."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 describes heavy metal toxins that do not reach the stratosphere. Option 1 is correct because **Chlorofluorocarbons (CFCs)** (such as $\\\\text{CF}_2\\\\text{Cl}_2$, Freon-12) used as refrigerants and aerosol propellants diffuse into the stratosphere. There, intense solar UV radiation causes **Photolytic Homolysis**, releasing reactive **Chlorine Free Radicals ($\\\\text{Cl}^\\\\bullet$)**: $\\\\text{CF}_2\\\\text{Cl}_2 \\\\xrightarrow{h\\\\nu} \\\\text{CF}_2\\\\text{Cl}^\\\\bullet + \\\\text{Cl}^\\\\bullet$. These chlorine radicals initiate a catalytic chain reaction that breaks down ozone molecules into oxygen: $\\\\text{Cl}^\\\\bullet + \\\\text{O}_3 \\\\rightarrow \\\\text{ClO}^\\\\bullet + \\\\text{O}_2$, depleting the protective stratospheric ozone layer. Option 2 and Option 3 list aquatic eutrophication agents or inert polymers."
+  },
+  
+  {
+    "p_id": "bpsc_chem_m12_01",
+    "qe": "Evaluating the thermodynamic stability and phase transitions of elemental sulfur allotropes reveals a specific temperature threshold. What is the transition temperature at which yellow rhombic ($\\alpha$-sulfur) and monoclinic ($\\beta$-sulfur) exist in equilibrium, and what molecular species dominates in sulfur vapor at elevated temperatures?",
+    "qh": "सल्फर अपररूपों की ऊष्मागतिक स्थिरता और चरण परिवर्तनों का मूल्यांकन एक विशिष्ट तापमान सीमा को दर्शाता है। वह संक्रमण तापमान क्या है जिस पर पीला विषमलंबाक्ष ($\\alpha$-सल्फर) और एकनताक्ष ($\\beta$-सल्फर) साम्यावस्था में सह-अस्तित्व में रहते हैं, और उच्च तापमान पर सल्फर वाष्प में कौन सी आणविक प्रजाति हावी होती है?",
+    "o": [
+      "Transition Temperature: $273\\text{ K}$; Dominant Vapor Species: Ring $\\text{S}_8$ (diamagnetic)",
+      "Transition Temperature: $369\\text{ K}$; Dominant Vapor Species: Diatomic $\\text{S}_2$ (paramagnetic like $\\text{O}_2$)",
+      "Transition Temperature: $450\\text{ K}$; Dominant Vapor Species: Triatomic $\\text{S}_3$ (ferromagnetic)",
+      "Transition Temperature: $523\\text{ K}$; Dominant Vapor Species: Ionic $\\text{S}^{2-}$ (antiferromagnetic)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 incorrectly identifies the transition threshold as $273\\text{ K}$ and misidentifies $\\text{S}_8$ as the high-temperature vapor species. Option 1 is correct because **Rhombic Sulfur ($\\alpha$-sulfur)** (stable below $369\\text{ K}$) and **Monoclinic Sulfur ($\\beta$-sulfur)** (stable above $369\\text{ K}$) exist in thermodynamic equilibrium at **$369\\text{ K}$**, which is defined as their **Transition Temperature** [the precise temperature at which two crystalline allotropic forms of an element coexist in equilibrium at standard pressure]. Furthermore, at high temperatures ($\\\\sim 1000\\text{ K}$), sulfur vapor consists predominantly of **Diatomic $\\text{S}_2$ Molecules**, which contain two unpaired electrons in antibonding $\\pi^*$ molecular orbitals, rendering $\\text{S}_2$ **Paramagnetic** [attracted into an external magnetic field], behaving exactly like molecular oxygen ($\\text{O}_2$). Option 2 and Option 3 propose non-existent transition thresholds or magnetic states."
+  },
+  {
+    "p_id": "bpsc_chem_m12_02",
+    "qe": "Sulphur dioxide ($\\text{SO}_2$) and chlorine gas ($\\text{Cl}_2$) are both deployed as industrial bleaching agents for paper, cotton, and textiles. What fundamental chemical mechanism distinguishes the bleaching action of $\\text{SO}_2$ from that of $\\text{Cl}_2$?",
+    "qh": "सल्फर डाइऑक्साइड ($\\text{SO}_2$) और क्लोरीन गैस ($\\text{Cl}_2$) दोनों को कागज, कपास और वस्त्रों के लिए औद्योगिक विरंजन (bleaching) एजेंटों के रूप में तैनात किया जाता है। कौन सा मौलिक रासायनिक तंत्र $\\text{SO}_2$ की विरंजन क्रिया को $\\text{Cl}_2$ से अलग करता है?",
+    "o": [
+      "$\\text{SO}_2$ bleaches permanently via oxidation; $\\text{Cl}_2$ bleaches temporarily via reduction.",
+      "$\\text{SO}_2$ bleaches temporarily via reduction (removing oxygen from colored matter); $\\text{Cl}_2$ bleaches permanently in the presence of moisture via oxidation (generating nascent oxygen).",
+      "$\\text{SO}_2$ bleaches by subliming colored pigments into dry ice; $\\text{Cl}_2$ bleaches by precipitating sulfur.",
+      "Both $\\text{SO}_2$ and $\\text{Cl}_2$ bleach permanently via identical catalytic dehydration pathways."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 reverses the redox mechanics and permanence of $\\text{SO}_2$ and $\\text{Cl}_2$. Option 1 is correct because **Sulphur Dioxide ($\\text{SO}_2$)** acts as a **Reducing Bleaching Agent** [a chemical that removes oxygen or adds hydrogen to organic chromophores], converting colored matter into colorless reduced forms; exposure to atmospheric oxygen re-oxidizes the chromophores, making the bleaching action **temporary**. Conversely, **Chlorine ($\\text{Cl}_2$)** acts as an **Oxidizing Bleaching Agent** in the presence of moisture, reacting with water to release **Nascent Oxygen** [$\\text{Cl}_2 + \\text{H}_2\\text{O} \\rightarrow 2\\text{HCl} + [\\text{O}]$], which permanently destroys organic color pigments via irreversible oxidation. Option 2 and Option 3 describe non-existent sublimation or identical mechanisms."
+  },
+  {
+    "p_id": "bpsc_chem_m12_03",
+    "qe": "In the industrial manufacture of Sulphuric Acid ($\\text{H}_2\\text{SO}_4$), two distinct classical pathways are utilized. What catalytic systems differentiate the Contact Process from the Lead Chamber Process?",
+    "qh": "सल्फ्यूरिक अम्ल ($\\text{H}_2\\text{SO}_4$) के औद्योगिक निर्माण में, दो विशिष्ट शास्त्रीय मार्गों का उपयोग किया जाता है। संपर्क प्रक्रिया (Contact Process) को सीस कक्ष प्रक्रिया (Lead Chamber Process) से कौन सी उत्प्रेरक प्रणालियाँ अलग करती हैं?",
+    "o": [
+      "Contact Process: Catalyzed by oxides of nitrogen; Lead Chamber Process: Catalyzed by platinum or $\\text{V}_2\\text{O}_5$.",
+      "Contact Process: Catalyzed by Vanadium Pentoxide ($\\text{V}_2\\text{O}_5$) or Platinum ($\\text{Pt}$); Lead Chamber Process: Catalyzed by Oxides of Nitrogen (homogeneous catalysis).",
+      "Contact Process: Catalyzed by zeolites; Lead Chamber Process: Catalyzed by activated charcoal.",
+      "Both processes use liquid mercury as an essential homogeneous catalyst."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 reverses the catalyst assignments between the two industrial processes. Option 1 is correct because both processes oxidize $\\text{SO}_2$ to $\\text{SO}_3$ but rely on different **Catalytic Systems**: the **Contact Process** uses heterogeneous solid catalysts, primarily **Vanadium Pentoxide ($\\text{V}_2\\text{O}_5$)** (or platinized asbestos), to achieve high yield at $720\\text{ K}$; the historical **Lead Chamber Process** utilizes gas-phase **Oxides of Nitrogen** (NO / $\\text{NO}_2$) to drive **Homogeneous Catalysis** [a catalytic reaction where the catalyst and reactants exist in the same physical phase]. Option 2 and Option 3 list incorrect zeolite, charcoal, or liquid mercury catalysts."
+  },
+  {
+    "p_id": "bpsc_chem_m12_04",
+    "qe": "Oleum, also known as fuming sulphuric acid, is an essential industrial intermediate in chemical synthesis. What is the chemical formula of Oleum (Pyrosulphuric Acid), and how is it produced?",
+    "qh": "ओलियम (Oleum), जिसे सधूम सल्फ्यूरिक अम्ल (fuming sulphuric acid) भी कहा जाता है, रासायनिक संश्लेषण में एक आवश्यक औद्योगिक मध्यवर्ती है। ओलियम (पायरोसल्फ्यूरिक अम्ल) का रासायनिक सूत्र क्या है, और इसका उत्पादन कैसे किया जाता है?",
+    "o": [
+      "Formula: $\\text{H}_2\\text{S}_2\\text{O}_8$; produced by electrolyzing cold concentrated sulphuric acid.",
+      "Formula: $\\text{H}_2\\text{S}_2\\text{O}_7$; produced by dissolving Sulphur Trioxide ($\\text{SO}_3$) gas into concentrated Sulphuric Acid ($\\text{H}_2\\text{SO}_4$).",
+      "Formula: $\\text{H}_2\\text{SO}_3$; produced by passing hydrogen sulfide gas through water.",
+      "Formula: $\\text{H}_2\\text{S}_4\\text{O}_6$; produced by reacting sulfur powder with nitric acid."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 gives the formula for Peroxodisulphuric acid (Marshall's acid, $\\text{H}_2\\text{S}_2\\text{O}_8$). Option 1 is correct because **Oleum (Pyrosulphuric Acid)** has the chemical formula **$\\text{H}_2\\text{S}_2\\text{O}_7$**. It is produced during the final absorption stage of the Contact Process by absorbing gaseous **Sulphur Trioxide ($\\text{SO}_3$)** directly into 98% concentrated **Sulphuric Acid ($\\text{H}_2\\text{SO}_4$)**: $\\text{SO}_3 + \\text{H}_2\\text{SO}_4 \\rightarrow \\text{H}_2\\text{S}_2\\text{O}_7$. Direct dissolution of $\\text{SO}_3$ in water is avoided because it forms a dense, unmanageable acid mist. Diluting oleum with controlled amounts of water yields pure $\\text{H}_2\\text{SO}_4$. Option 2 lists sulphurous acid, and Option 3 lists tetrathionic acid."
+  },
+  {
+    "p_id": "bpsc_chem_m12_05",
+    "qe": "Peroxodisulphuric Acid ($\\text{H}_2\\text{S}_2\\text{O}_8$), commonly known as Marshall's acid, contains a specific structural oxygen link. What chemical transformation produces Marshall's acid at the anode during the electrolysis of sulphuric acid?",
+    "qh": "पेरॉक्सोडाइसल्फ्यूरिक अम्ल ($\\text{H}_2\\text{S}_2\\text{O}_8$), जिसे आमतौर पर मार्शल के अम्ल (Marshall's acid) के रूप में जाना जाता है, में एक विशिष्ट संरचनात्मक ऑक्सीजन लिंक होता है। सल्फ्यूरिक अम्ल के इलेक्ट्रोलाइटिस के दौरान एनोड पर कौन सा रासायनिक परिवर्तन मार्शल का अम्ल उत्पन्न करता है?",
+    "o": [
+      "Hydrolysis of sulfur dioxide at low voltage.",
+      "Anodic oxidation and coupling of bisulphate ions ($\\text{HSO}_4^-$) during the electrolysis of pure, cold concentrated sulphuric acid.",
+      "Direct reaction of hydrogen sulfide gas with ozone.",
+      "Thermal decomposition of oleum in an electric furnace."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 misidentifies sulfur dioxide hydrolysis as the electrolytic route. Option 1 is correct because **Marshall's Acid (Peroxodisulphuric Acid, $\\text{H}_2\\text{S}_2\\text{O}_8$)** contains a characteristic **Peroxide Linkage** ($-\\text{O}-\\text{O}-$). It is synthesized via **Anodic Oxidation** [an electrolytic process where an anion loses electrons at the positive electrode, undergoing oxidative coupling] by electrolyzing cold, concentrated ($\\\\sim 50\\%$) sulphuric acid or hydrogen sulphate solution at high current density: $2\\text{HSO}_4^- \\rightarrow \\text{H}_2\\text{S}_2\\text{O}_8 + 2e^-$. Option 2 and Option 3 list incorrect gas-phase oxidation or thermal decomposition paths."
+  },
+  {
+    "p_id": "bpsc_chem_m12_06",
+    "qe": "Evaluating Group-17 halogen reactivity reveals unique chemical exceptions. Which halogen is the most electronegative element in the Modern Periodic Table, and what specific nuclear utility does its compound Oxygen Difluoride (or $\\text{O}_2\\text{F}_2$) perform in processing spent nuclear fuel?",
+    "qh": "समूह-17 के हैलोजन प्रतिक्रियाशीलता का मूल्यांकन अद्वितीय रासायनिक अपवादों को प्रकट करता है। आधुनिक आवर्त सारणी में कौन सा हैलोजन सबसे अधिक विद्युतऋणात्मक तत्व है, और इसका यौगिक ऑक्सीजन डाइफ्लोराइड (या $\\text{O}_2\\text{F}_2$) प्रयुक्त परमाणु ईंधन (spent nuclear fuel) के प्रसंस्करण में क्या विशिष्ट परमाणु उपयोग करता है?",
+    "o": [
+      "Chlorine; oxidizes uranium to $\\text{UCl}_6$",
+      "Fluorine; $\\text{O}_2\\text{F}_2$ acts as a strong fluorinating agent that oxidizes Plutonium to volatile Plutonium Hexafluoride ($\\text{PuF}_6$), removing plutonium from spent fuel.",
+      "Bromine; converts radioactive cesium into stable lead",
+      "Iodine; precipitates thorium as insoluble iodide"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 incorrectly identifies chlorine as the most electronegative element (Fluorine has the highest Pauling electronegativity, 4.0). Option 1 is correct because **Fluorine ($\text{F}$)** is the most electronegative and reactive non-metal. Its oxide derivative, **Dioxygen Difluoride ($\text{O}_2\text{F}_2$)**, serves as a powerful **Fluorinating Agent** [a specialized reagent capable of transferring fluorine atoms to other chemical species]. In nuclear chemistry, $\text{O}_2\text{F}_2$ reacts with solid plutonium residues in spent nuclear fuel rods to form volatile **Plutonium Hexafluoride ($\text{PuF}_6$)**, allowing plutonium to be separated and recovered via fluorination. Option 2 and Option 3 propose impossible nuclear transmutations."
+  },
+  {
+    "p_id": "bpsc_chem_m12_07",
+    "qe": "Chlorine gas ($\\text{Cl}_2$) is manufactured on a massive industrial scale using specific electrochemical and catalytic processes. What choices correctly identify Deacon's Process and the electrolysis of brine in a Nelson Cell?",
+    "qh": "क्लोरीन गैस ($\\text{Cl}_2$) का निर्माण विशिष्ट इलेक्ट्रोकेमिकल और उत्प्रेरक प्रक्रियाओं का उपयोग करके बड़े पैमाने पर औद्योगिक पैमाने पर किया जाता है। Deacon की प्रक्रिया और Nelson Cell में ब्राइन के इलेक्ट्रोलाइटिस की सही पहचान कौन से विकल्प करते हैं?",
+    "o": [
+      "Deacon's Process: Oxidation of $\\text{HCl}$ gas by atmospheric oxygen over a $\\text{CuCl}_2$ catalyst; Nelson Cell: Electrolysis of aqueous $\\text{NaCl}$ (brine).",
+      "Deacon's Process: Electrolysis of molten calcium fluoride; Nelson Cell: Reduction of bleaching powder with ammonia.",
+      "Deacon's Process: Heating potassium chlorate with charcoal; Nelson Cell: Distillation of liquid air.",
+      "Both processes rely on the thermal decomposition of sodium nitrate."
+    ],
+    "a": 0,
+    "e": "<b>Explanation:</b> Option 1 misidentifies Deacon's process as fluoride electrolysis. Option 0 is correct because **Chlorine ($\\text{Cl}_2$)** is industrially manufactured via two classic methods: (1) **Deacon's Process**, which involves the catalytic gas-phase oxidation of hydrogen chloride gas ($\\text{HCl}$) by atmospheric oxygen at $723\\text{ K}$ using a **Cupric Chloride ($\\text{CuCl}_2$) Catalyst**: $4\\text{HCl} + \\text{O}_2 \\xrightarrow{\\text{CuCl}_2} 2\\text{Cl}_2 + 2\\text{H}_2\\text{O}$; and (2) **Nelson Cell / Castner-Kellner Process**, which electrolyzes concentrated aqueous sodium chloride solution (**Brine**): $2\\text{NaCl} + 2\\text{H}_2\\text{O} \\xrightarrow{\\text{electrolysis}} \\text{Cl}_2\\uparrow + \\text{H}_2\\uparrow + 2\\text{NaOH}$. Option 2 and Option 3 describe chlorate heating or fractional air distillation."
+  },
+  {
+    "p_id": "bpsc_chem_m12_08",
+    "qe": "Bromine ($\\text{Br}$, $Z=35$) is the only non-metallic element that exists as a liquid at room temperature. What is its principal natural source in India, and what specific potassium salt of bromine is prescribed medically as a central nervous system sedative and pain reliever?",
+    "qh": "ब्रोमीन ($\\text{Br}$, $Z=35$) एकमात्र गैर-धातु तत्व है जो कमरे के तापमान पर तरल रूप में मौजूद होता है। भारत में इसका मुख्य प्राकृतिक स्रोत क्या है, और ब्रोमीन के किस विशिष्ट पोटेशियम लवण को केंद्रीय तंत्रिका तंत्र शामक (sedative) और दर्द निवारक के रूप में चिकित्सीय रूप से निर्धारित किया जाता है?",
+    "o": [
+      "Natural Source: Himalayan rock salt; Prescribed Salt: Potassium Fluoride (KF)",
+      "Natural Source: Natural brine deposits at the Rann of Kutch; Prescribed Salt: Potassium Bromide (KBr).",
+      "Natural Source: Volcanic ash in Sicily; Prescribed Salt: Potassium Iodide (KI)",
+      "Natural Source: Bauxite mines in Bihar; Prescribed Salt: Potassium Carbonate"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 misidentifies Himalayan rock salt as a bromine source. Option 1 is correct because **Bromine ($\\text{Br}_2$)** is a dense, reddish-brown liquid. In India, elemental bromine is extracted commercially from the concentrated **Sub-surface Brine Reserves** located in the **Rann of Kutch (Gujarat)** and from carnallite marine residues. Chemically synthesized **Potassium Bromide (KBr)** depresses central nervous system excitability and was historically prescribed as a medical **Sedative** [a drug that induces calm or sleep by depressing central nervous system activity] and pain reliever. Option 2 and Option 3 list volcanic ash or bauxite sources."
+  },
+  {
+    "p_id": "bpsc_chem_m12_09",
+    "qe": "Iodine ($\\text{I}$, $Z=53$) is a dark violet, lustrous solid that sublimes upon gentle heating. How does iodine function in human physiology, and what pharmaceutical formulation constitutes 'Tincture of Iodine'?",
+    "qh": "आयोडीन ($\\text{I}$, $Z=53$) एक गहरा बैंगनी, चमकदार ठोस है जो हल्के गर्म होने पर ऊर्ध्वपातित (sublimes) हो जाता है। मानव शरीर क्रिया विज्ञान में आयोडीन कैसे कार्य करता है, और कौन सा फार्मास्युटिकल फॉर्मूलेशन 'टिंचर आयोडीन' (Tincture of Iodine) बनाता है?",
+    "o": [
+      "Physiological role: Hemoglobin synthesis; Tincture Iodine: Pure iodine dissolved in concentrated nitric acid.",
+      "Physiological role: Component of the thyroid hormone thyroxine; Tincture Iodine: 2-3% solution of Iodine in an Alcohol-Water mixture.",
+      "Physiological role: Structural constituent of bone hydroxyapatite; Tincture Iodine: Iodine powder suspended in liquid paraffin.",
+      "Physiological role: Drives gastric pepsin digestion; Tincture Iodine: Saturated solution of iodine in acetone."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 incorrectly assigns iron's role (hemoglobin) to iodine and mixes it with nitric acid. Option 1 is correct because iodine is an essential trace element required for synthesizing **Thyroxine** ($T_4$) and triiodothyronine ($T_3$), hormones secreted by the **Thyroid Gland** that regulate basal metabolic rate. Iodine deficiency leads to thyroid enlargement (**Goitre**). In pharmacology, **Tincture of Iodine** is an effective topical **Antiseptic** [a chemical agent applied to living tissue to inhibit or kill micro-organisms] composed of a **2-3% solution of Elemental Iodine ($\text{I}_2$) and Potassium Iodide ($\text{KI}$) dissolved in an Alcohol-Water solvent mixture**. Option 2 and Option 3 describe bone or gastric digestive functions."
+  },
+  {
+    "p_id": "bpsc_chem_m12_10",
+    "qe": "Over-the-counter pain relief ointments like 'Iodex' are commercially marketed for relieving bone and joint injuries. Despite its brown color and name, what is the active chemical component of Iodex, and does it contain elemental iodine?",
+    "qh": "'Iodex' जैसे ओवर-द-काउंटर दर्द निवारक मलहम व्यावसायिक रूप से हड्डी और जोड़ों की चोटों से राहत के लिए बेचे जाते हैं। इसके भूरे रंग और नाम के बावजूद, Iodex का सक्रिय रासायनिक घटक क्या है, और क्या इसमें तात्विक आयोडीन होता है?",
+    "o": [
+      "Contains $10\\%$ elemental iodine dissolved in liquid mercury amalgam.",
+      "Active component: Methyl salicylate / Chlorophenol derivatives (e.g., Dichlorophenol); Contains ZERO elemental iodine.",
+      "Active component: Pure potassium iodide crystals dissolved in sulfuric acid.",
+      "Active component: Sodium hypochlorite powder mixed with animal charcoal."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 succumbs to the brand misnomer and claims Iodex contains elemental iodine and mercury. Option 1 is correct because the commercial pain-relief ointment **Iodex** is a classic pharmaceutical misnomer. Modern formulations of Iodex contain **Methyl Salicylate** and **Dichlorophenol / Chlorophenol Derivatives** as active analgesic and counter-irritant agents. It contains **no elemental iodine ($\text{I}_2$)**. Its dark color and name were originally derived from early 20th-century formulations, but contemporary preparations rely on non-iodine organic analgesics to treat musculoskeletal inflammation. Option 2 and Option 3 list iodine in sulfuric acid or bleaching agents."
+  },
+  {
+    "p_id": "bpsc_chem_m12_11",
+    "qe": "Chlorine forms a series of oxoacids containing chlorine in different oxidation states ($+1, +3, +5, +7$). Which chlorine oxoacid is the thermodynamically strongest oxoacid, and what structural factor accounts for its extreme acidity?",
+    "qh": "क्लोरीन विभिन्न ऑक्सीकरण अवस्थाओं ($+1, +3, +5, +7$) में क्लोरीन युक्त ऑक्सोअम्लों की एक श्रृंखला बनाता है। कौन सा क्लोरीन ऑक्सोअम्ल ऊष्मागतिकी रूप से सबसे मजबूत ऑक्सोअम्ल है, और कौन सा संरचनात्मक कारक इसकी अत्यधिक अम्लता का कारण है?",
+    "o": [
+      "Hypochlorous acid ($\\text{HClO}$); stabilized by weak hydrogen bonding.",
+      "Perchloric Acid ($\\text{HClO}_4$); chlorine is in its maximum $+7$ oxidation state, and its conjugate base ($\\text{ClO}_4^-$) is stabilized by extensive resonance delocalization of negative charge across four equivalent oxygen atoms.",
+      "Chlorous acid ($\\text{HClO}_2$); stabilized by $sp^3d$ hybridization.",
+      "Chloric acid ($\\text{HClO}_3$); stabilized by forming a dimer in liquid state."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 misidentifies hypochlorous acid ($\\text{HClO}$), which is actually the weakest oxoacid in the series. Option 1 is correct because **Perchloric Acid ($\\text{HClO}_4$)** is the **Strongest Oxoacid of Chlorine** (and one of the strongest inorganic Brønsted acids). In $\\text{HClO}_4$, chlorine sits in its maximum oxidation state of **$+7$**. Upon losing a proton, the resulting **Perchlorate Anion ($\\text{ClO}_4^-$)** is exceptionally stable because its negative charge is spread equally over four electronegative oxygen atoms via **Resonance Delocalization** [the dispersal of electron density over multiple bonded atoms in a conjugated polyatomic ion, lowering its potential energy]. Acidity increases strictly with increasing oxygen atoms: $\\text{HClO} < \\text{HClO}_2 < \\text{HClO}_3 < \\text{HClO}_4$. Option 2 and Option 3 list weaker oxoacids."
+  },
+  {
+    "p_id": "bpsc_chem_m12_12",
+    "qe": "Gaseous chlorine dioxide ($\\text{ClO}_2$) is an important industrial bleach and water disinfectant. What term defines a chemical mixture of $\\text{ClO}_2$ and $\\text{Cl}_2$ gas, and what is its primary industrial application?",
+    "qh": "गैसीय क्लोरीन डाइऑक्साइड ($\\text{ClO}_2$) एक महत्वपूर्ण औद्योगिक ब्लीच और पानी कीटाणुनाशक है। कौन सा शब्द $\\text{ClO}_2$ और $\\text{Cl}_2$ गैस के रासायनिक मिश्रण को परिभाषित करता है, और इसका प्राथमिक औद्योगिक अनुप्रयोग क्या है?",
+    "o": [
+      "Term: Aqua Regia; used to dissolve pure gold bullion.",
+      "Term: Euchlorine; used as a powerful bleaching agent for paper pulp, textiles, and municipal water purification.",
+      "Term: Producer Gas; used as a blast furnace fuel.",
+      "Term: Fuming Oleum; used to synthesize rubber."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 describes aqua regia ($\\text{HCl} + \\text{HNO}_3$). Option 1 is correct because a gaseous mixture composed of **Chlorine Dioxide ($\\text{ClO}_2$) and Chlorine Gas ($\\text{Cl}_2$)** is commercially and historically termed **Euchlorine**. It is synthesized by reacting potassium chlorate ($\\text{KClO}_3$) with concentrated hydrochloric acid. Euchlorine acts as a potent oxidizing mixture used for **Bleaching Wood Pulp** in paper manufacturing, whitening textiles, and operating as a broad-spectrum disinfectant in municipal water treatment plants. Option 2 describes producer gas ($\\text{CO} + \\text{N}_2$), and Option 3 describes oleum."
+  },
+  {
+    "p_id": "bpsc_chem_m12_13",
+    "qe": "Analytical determination of carbon monoxide (CO) gas concentrations in environmental and industrial gas streams relies on a specific halogen oxide reagent. Which halogen oxide quantitatively oxidizes CO to $\\text{CO}_2$?",
+    "qh": "पर्यावरण और औद्योगिक गैस धाराओं में कार्बन मोनोऑक्साइड (CO) गैस सांद्रता का विश्लेषणात्मक निर्धारण एक विशिष्ट हैलोजन ऑक्साइड अभिकर्मक पर निर्भर करता है। कौन सा हैलोजन ऑक्साइड CO को $\\text{CO}_2$ में मात्रात्मक रूप से (quantitatively) ऑक्सीकृत करता है?",
+    "o": [
+      "Dichlorine monoxide ($\\text{Cl}_2\\text{O}$)",
+      "Iodine Pentoxide ($\\text{I}_2\\text{O}_5$)",
+      "Fluorine monoxide ($\\text{F}_2\\text{O}$)",
+      "Bromine dioxide ($\\text{BrO}_2$)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 misidentifies chlorine monoxide as the quantitative CO reagent. Option 1 is correct because **Iodine Pentoxide ($\\text{I}_2\\text{O}_5$)** is a white crystalline solid that acts as a reliable oxidizing agent. It reacts quantitatively with carbon monoxide gas at $170^\\circ\\text{C}$, converting CO into carbon dioxide gas while being reduced itself to elemental iodine: $\\text{I}_2\\text{O}_5 + 5\\text{CO} \\rightarrow \\text{I}_2 + 5\\text{CO}_2$. By titrating the liberated iodine ($\\text{I}_2$) with standard sodium thiosulphate solution (hypo), analytical chemists calculate the precise concentration of toxic CO present in air samples. Option 2 and Option 3 list oxides that do not react quantitatively with CO."
+  },
+  {
+    "p_id": "bpsc_chem_m12_14",
+    "qe": "Noble gases (Group-18) were long considered completely chemically inert. Which noble gas was the first to be synthesized into a true chemical compound by Neil Bartlett in 1962, and what was the chemical formula of that compound?",
+    "qh": "उत्कृष्ट गैसों (समूह-18) को लंबे समय से पूरी तरह से रासायनिक रूप से अक्रिय माना जाता था। 1962 में नील बार्टलेट द्वारा किस उत्कृष्ट गैस का पहले सच्चे रासायनिक यौगिक के रूप में संश्लेषण किया गया था, और उस यौगिक का रासायनिक सूत्र क्या था?",
+    "o": [
+      "Helium; formula: $\\text{HePtF}_6$",
+      "Xenon; formula: $\\text{Xe}^+[\\text{PtF}_6]^-$ (Xenon Hexafluoroplatinate)",
+      "Radon; formula: $\\text{RnCl}_2$",
+      "Argon; formula: $\\text{ArO}_3$"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 incorrectly selects helium (helium has the highest ionization enthalpy and forms no neutral molecular ground-state compounds). Option 1 is correct because in 1962, English chemist **Neil Bartlett** noticed that platinum hexafluoride ($\\text{PtF}_6$) oxidized molecular oxygen to form $\\text{O}_2^+[\\text{PtF}_6]^-$. Realizing that the first ionization enthalpy of **Xenon** ($1170\\text{ kJ/mol}$) is almost identical to that of oxygen ($1175\\text{ kJ/mol}$), Bartlett reacted xenon gas with $\\text{PtF}_6$ vapor to synthesize the world's first true noble gas compound: **Xenon Hexafluoroplatinate ($\\text{Xe}^+[\\text{PtF}_6]^-$, a red-orange crystalline solid)**. Option 2 and Option 3 list non-existent early discovery compounds."
+  },
+  {
+    "p_id": "bpsc_chem_m12_15",
+    "qe": "Radon ($Z=86$, $A=222$) is a radioactive noble gas located in Group-18. Unlike other noble gases (He, Ne, Ar, Kr, Xe) that are harvested directly from atmospheric air, how is Radon produced naturally in the environment?",
+    "qh": "रेडॉन ($Z=86$, $A=222$) समूह-18 में स्थित एक रेडियोधर्मी उत्कृष्ट गैस है। अन्य उत्कृष्ट गैसों (He, Ne, Ar, Kr, Xe) के विपरीत जिन्हें सीधे वायुमंडलीय हवा से काटा जाता है, पर्यावरण में प्राकृतिक रूप से रेडॉन का उत्पादन कैसे होता है?",
+    "o": [
+      "Harvested from fractional distillation of liquid water.",
+      "Formed as a natural radioactive alpha-decay daughter product of Radium-226 ($^{226}\\text{Ra}$).",
+      "Produced by cosmic ray bombardment of nitrogen in the upper atmosphere.",
+      "Synthesized by burning sulfur in electric arc furnaces."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 claims radon is obtained from water distillation. Option 1 is correct because all noble gases except Radon occur in trace amounts in atmospheric air and are harvested as byproducts during the liquefaction and fractional distillation of air. **Radon ($^{222}\\text{Rn}$)** is a short-lived radioactive gas (half-life $3.82\\text{ days}$) that exists in minute quantities in soil and rock because it is generated continuously as a **Radioactive Decay Product** via the alpha-decay of Radium-226 ($^{226}\\text{Ra} \\rightarrow {}^{222}\\text{Rn} + {}^4\\text{He}$). Option 2 describes radiocarbon production, and Option 3 describes sulfur oxidation."
+  },
+  {
+    "p_id": "bpsc_chem_m11_16",
+    "qe": "Noble gas atoms can be trapped inside host crystal structures without forming true chemical covalent or ionic bonds. What term defines these physical inclusion complexes, and which noble gases fail to form them due to small atomic size?",
+    "qh": "उत्कृष्ट गैस परमाणुओं को सच्चे रासायनिक सहसंयोजक या आयनिक बंध बनाए बिना होस्ट क्रिस्टल संरचनाओं के भीतर फंसाया जा सकता है। कौन सा शब्द इन भौतिक समावेशन परिसरों को परिभाषित करता है, और कौन सी उत्कृष्ट गैसें छोटे परमाणु आकार के कारण इन्हें बनाने में विफल रहती हैं?",
+    "o": [
+      "Term: Coordination polymers; Failed gases: Xenon and Radon",
+      "Term: Clathrate Compounds (Cage Compounds); Failed gases: Helium and Neon",
+      "Term: Amalgams; Failed gases: Argon and Krypton",
+      "Term: Organometallics; Failed gases: Radon and Helium"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 misidentifies the inclusion complexes as coordination polymers. Option 1 is correct because **Clathrate Compounds (Cage Compounds)** are supramolecular inclusion complexes where guest noble gas atoms are physically trapped inside cage-like cavities formed by the hydrogen-bonded crystal lattices of organic host molecules (such as quinol or ice). No formal chemical bonds exist between the host and guest. Larger noble gases (Ar, Kr, Xe) fit securely into these cavities. However, **Helium (He) and Neon (Ne)** have exceptionally **Small Atomic Radii**, allowing them to slip out of the host crystal cavities without being trapped, making He and Ne incapable of forming clathrates. Option 2 lists amalgams (mercury alloys), and Option 3 lists organometallics."
+  },
+  {
+    "p_id": "bpsc_chem_m12_17",
+    "qe": "Black powder, or gunpowder, is a historic chemical explosive used in pyrotechnics and military applications. What choice correctly identifies the three essential ingredients that constitute gunpowder?",
+    "qh": "काला पाउडर (ब्लैक पाउडर), या बारूद (gunpowder), पाइरोटेक्निक्स और सैन्य अनुप्रयोगों में इस्तेमाल किया जाने वाला एक ऐतिहासिक रासायनिक विस्फोटक है। कौन सा विकल्प उन तीन आवश्यक सामग्रियों की सही पहचान करता है जो बारूद बनाती हैं?",
+    "o": [
+      "Sulfur, Nitroglycerine, and Lead Acetate",
+      "Sulfur, Charcoal (carbon), and Potassium Nitrate (Indian Saltpetre, $\\text{KNO}_3$)",
+      "Sodium azide, White phosphorus, and Calcium carbide",
+      "Chlorine gas, Ammonia, and Mercury fulminate"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 includes nitroglycerine, which is a modern liquid explosive used in dynamite, not traditional black powder. Option 1 is correct because classic **Gunpowder (Black Powder)** is a solid pyrotechnic mixture composed of three key ingredients: **Potassium Nitrate ($\\text{KNO}_3$, $75\\%$)**, which acts as the oxidizing agent; **Charcoal (Carbon, $15\\%$)**, which acts as the primary fuel; and **Sulfur ($10\\%$)**, which lowers the ignition temperature and accelerates reaction kinetics. Upon ignition, the rapid oxidation of carbon and sulfur generates nitrogen and carbon dioxide gases under immense pressure. Option 2 and Option 3 list airbags, matchstick, or toxic war gas precursors."
+  },
+  {
+    "p_id": "bpsc_chem_m12_18",
+    "qe": "Hydrogen sulfide gas ($\\text{H}_2\\text{S}$) is released during volcanic eruptions and organic decomposition. What is its characteristic physical odor, and what chemical reagent acts as the functional anhydride of an aqueous hydrogen sulfide solution?",
+    "qh": "हाइड्रोजन सल्फाइड गैस ($\\text{H}_2\\text{S}$) ज्वालामुखी विस्फोट और कार्बनिक अपघटन के दौरान मुक्त होती है। इसकी विशिष्ट भौतिक गंध क्या है, और कौन सा रासायनिक अभिकर्मक जलीय हाइड्रोजन सल्फाइड घोल के कार्यात्मक एनहाइड्राइड के रूप में कार्य करता है?",
+    "o": [
+      "Odor: Fruity smell; Anhydride: Concentrated nitric acid",
+      "Odor: Pungent rotten egg smell; Anhydride: Aqueous chlorine solution",
+      "Odor: Sweet aromatic smell; Anhydride: Liquid ammonia",
+      "Odor: Odorless; Anhydride: Sodium hydroxide"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 misidentifies the odor as fruity. Option 1 is correct because **Hydrogen Sulfide ($\\text{H}_2\\text{S}$)** is a colorless, highly toxic gas possessing a powerful, characteristic **Rotten Egg Smell**. It is a weak diprotic acid in water. An **Aqueous Chlorine Solution** acts as its functional chemical precursor/anhydride because chlorine oxidizes hydrogen sulfide or reacts in aqueous systems to displace elemental sulfur: $\\text{H}_2\\text{S} + \\text{Cl}_2 \\rightarrow 2\\text{HCl} + \\text{S}\\downarrow$. Exposure to high concentrations of $\\text{H}_2\\text{S}$ paralyzes the olfactory nerve, making it extremely dangerous in industrial settings. Option 2 and Option 3 list sweet or odorless descriptors."
+  },
+  {
+    "p_id": "bpsc_chem_m12_19",
+    "qe": "Limestone ($\\text{CaCO}_3$) reacts with carbon dioxide to turn lime water clear, but sulphur dioxide ($\\text{SO}_2$) exhibits an identical visual precipitation phenomenon with lime water. What chemical compounds cause lime water to turn milky and then clear upon passing excess $\\text{SO}_2$ gas?",
+    "qh": "चूना पत्थर ($\\text{CaCO}_3$) चूने के पानी को स्पष्ट करने के लिए कार्बन डाइऑक्साइड के साथ प्रतिक्रिया करता है, लेकिन सल्फर डाइऑक्साइड ($\\text{SO}_2$) चूने के पानी के साथ एक समान दृश्य अवक्षेपण घटना प्रदर्शित करता है। अतिरिक्त $\\text{SO}_2$ गैस प्रवाहित करने पर कौन से रासायनिक यौगिक चूने के पानी को दूधिया और फिर स्पष्ट बनाते हैं?",
+    "o": [
+      "Milky precipitate: Calcium sulphate; Soluble clear compound: Calcium nitrate",
+      "Milky precipitate: Insoluble Calcium Sulphite ($\\text{CaSO}_3$); Soluble clear compound: Calcium Bisulphite [$\\text{Ca(HSO}_3)_2$]",
+      "Milky precipitate: Calcium chloride; Soluble clear compound: Calcium oxide",
+      "Milky precipitate: Calcium carbonate; Soluble clear compound: Calcium hydride"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 incorrectly identifies the milkiness as calcium sulphate. Option 1 is correct because when **Sulphur Dioxide ($\\text{SO}_2$)** is bubbled through clear lime water [$\\text{Ca(OH)}_2$], it forms an insoluble white precipitate of **Calcium Sulphite ($\\text{CaSO}_3$)**, turning the liquid milky: $\\text{Ca(OH)}_2 + \\text{SO}_2 \\rightarrow \\text{CaSO}_3\\downarrow + \\text{H}_2\\text{O}$. When **excess $\\text{SO}_2$** is passed into the suspension, the insoluble sulphite reacts to form water-soluble **Calcium Bisulphite / Calcium Hydrogen Sulphite [$\\text{Ca(HSO}_3)_2$]**, causing the white milkiness to completely disappear: $\\text{CaSO}_3 + \\text{H}_2\\text{O} + \\text{SO}_2 \\rightarrow \\text{Ca(HSO}_3)_2$. This mirrors the $\\text{CO}_2 / \\text{Ca(HCO}_3)_2$ reaction pathway. Option 2 and Option 3 list non-sulphite calcium salts."
+  },
+  {
+    "p_id": "bpsc_chem_m12_20",
+    "qe": "Sulphur forms several non-crystalline allotropic modifications under distinct thermal and cooling conditions. What non-crystalline form of sulphur is produced when boiling liquid sulphur is poured suddenly into cold water?",
+    "qh": "सल्फर अलग-अलग तापीय और शीतलन स्थितियों के तहत कई गैर-क्रिस्टलीय (अनाकार) अपररूपी परिवर्तनों का निर्माण करता है। जब उबलते हुए तरल सल्फर को अचानक ठंडे पानी में डाला जाता है तो सल्फर का कौन सा गैर-क्रिस्टलीय रूप बनता है?",
+    "o": [
+      "Rhombic sulphur ($\\alpha$-sulphur)",
+      "Plastic Sulphur (an amorphous, rubber-like supercooled liquid polymer)",
+      "Monoclinic sulphur ($\\beta$-sulphur)",
+      "Flower of sulphur"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 lists rhombic sulfur, which is a crystalline octahedral form obtained by evaporating a $\\text{CS}_2$ solution. Option 1 is correct because when liquid sulfur is boiled ($\\\\sim 444^\\circ\\text{C}$, breaking its $\\text{S}_8$ rings into long polymeric chains) and then **quenched rapidly by pouring into cold water**, the sudden cooling prevents the sulfur atoms from reorganizing into a crystalline lattice. This yields **Plastic Sulphur**, a non-crystalline, soft, rubber-like **Amorphous Allotrope** consisting of entangled helical polymeric sulfur chains. Upon standing, plastic sulfur slowly recrystallizes back into stable rhombic $\\alpha$-sulfur. Option 2 is crystalline monoclinic sulfur, and Option 3 is flower of sulfur (obtained by sublimation)."
+  },
+  
+  {
+    "p_id": "bpsc_chem_m13_01",
+    "qe": "Helox (a mixture of helium and oxygen) is used instead of compressed air by deep-sea divers during high-depth oceanic descents. What physiological and physical chemistry principle justifies replacing nitrogen with helium in breathing gas mixtures?",
+    "qh": "गहरे समुद्र में गोताखोरों द्वारा उच्च गहराई वाले समुद्री अवरोहण के दौरान संपीड़ित हवा के बजाय हेलॉक्स (हीलियम और ऑक्सीजन का मिश्रण) का उपयोग किया जाता है। श्वसन गैस मिश्रण में नाइट्रोजन को हीलियम से बदलने को कौन सा शारीरिक और भौतिक रसायन सिद्धांत सही ठहराता है?",
+    "o": [
+      "Helium oxidizes underwater nitrogen into solid salt crystals, preventing muscle cramps.",
+      "Helium exhibits extremely low solubility in blood even under high ambient pressures, preventing decompression sickness (the bends) and nitrogen narcosis.",
+      "Helium reacts with blood plasma to synthesize glucose, eliminating the need for diving rations.",
+      "Helium increases the weight of oxygen molecules, allowing divers to sink without lead weights."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 incorrectly states helium oxidizes nitrogen gas into salt crystals. Option 1 is correct because according to **Henry's Law** [the mass of a gas dissolved in a given volume of liquid is directly proportional to the partial pressure of that gas in equilibrium with the liquid], nitrogen gas in ordinary compressed air dissolves into the blood and fatty tissues under high hydrostatic pressures experienced deep underwater. Rapid ascent causes dissolved nitrogen to bubble violently out of solution, causing severe joint pain and vascular blockages known as **Decompression Sickness (The Bends)**, while also inducing **Nitrogen Narcosis** [a reversible intoxicating effect on the central nervous system caused by high partial pressures of dissolved nitrogen]. **Helium ($\\\\text{He}$)** is utilized because it has an exceptionally **Low Blood Solubility** even under extreme hyperbaric pressures, minimizing tissue gas absorption and preventing nitrogen narcosis. Option 2 and Option 3 describe impossible glucose synthesis or heavy mass effects."
+  },
+  {
+    "p_id": "bpsc_chem_m13_02",
+    "qe": "Navigational safety lighting at aviation aerodromes relies on specialized noble gas lamps that remain visible to pilots even through dense atmospheric fog. Which noble gas powers these fog-penetrating airport lamps?",
+    "qh": "उड्डयन एयरोड्रोम पर नेविगेशनल सुरक्षा लाइटिंग विशेष उत्कृष्ट गैस लैंपों पर निर्भर करती है जो घने वायुमंडलीय कोहरे के माध्यम से भी पायलटों को दिखाई देते हैं। कौन सी उत्कृष्ट गैस इन कोहरे को भेदने वाले हवाई अड्डे के लैंप को शक्ति प्रदान करती है?",
+    "o": [
+      "Helium",
+      "Neon",
+      "Argon",
+      "Radon"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 refers to helium, which is used in weather balloons and cryogenics. Option 1 is correct because **Neon ($\\\\text{Ne}$)**, when subjected to high-voltage discharge in gas tubes, emits an intense reddish-orange spectrum with minimal light scattering by suspended atmospheric water droplets (Rayleigh scattering). These **Neon Lamps** produce high-intensity, long-wavelength illumination capable of penetrating thick fog, dust, and cloud cover, providing vital symbolic guidance to aircraft pilots along airport runways and approach beacons. Option 2 describes Argon (used for inert atmospheres in welding), and Option 3 describes Radon (a radioactive element used in cancer radiotherapy)."
+  },
+  {
+    "p_id": "bpsc_chem_m13_03",
+    "qe": "Radioactive minerals like pitchblende, monazite, and cleveite contain trapped pockets of light noble gases. What nuclear physical process generates Helium ($\\\\text{He}$) inside these radioactive minerals over geological timescales?",
+    "qh": "पिचब्लेंड, मोनाज़ाइट और क्लीवियाइट जैसे रेडियोधर्मी खनिजों में हल्की उत्कृष्ट गैसों के फंसे हुए जेब होते हैं। कौन सी परमाणु भौतिक प्रक्रिया भूवैज्ञानिक समय-सीमा में इन रेडियोधर्मी खनिजों के अंदर हीलियम ($\\\\text{He}$) उत्पन्न करती है?",
+    "o": [
+      "Cosmic ray spallation of silica matrices.",
+      "Continuous accumulation of energetic Alpha Particles ($\\\\alpha$-particles, which are bare $^{4}_{2}\\\\text{He}^{2+}$ nuclei) emitted during the radioactive decay chains of heavy uranium and thorium isotopes.",
+      "Beta-decay of natural carbon-14 isotopes inside the crystal lattice.",
+      "Thermonuclear fusion of hydrogen gas inside earth's core."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 confuses cosmic ray spallation (used to produce element Boron) with underground radioactive decay. Option 1 is correct because heavy radioactive elements present in pitchblende (uranium) and monazite (thorium) undergo spontaneous **Alpha Decay** [a radioactive disintegration process where an unstable parent nucleus ejects an alpha particle comprising two protons and two neutrons]. An **Alpha Particle** is physically identical to a bare **Helium Nucleus ($^{4}_{2}\\\\text{He}^{2+}$)**. As these alpha particles slow down within the dense mineral matrix, they capture two ambient electrons to become neutral **Helium Atoms ($\\\\text{He}$)**, remaining trapped inside the tight crystal lattice over millions of years. Option 2 and Option 3 describe beta decay or stellar core fusion."
+  },
+  {
+    "p_id": "bpsc_chem_m13_04",
+    "qe": "Boron Carbide ($\\\\text{B}_4\\\\text{C}$) is a non-metallic covalent network ceramic utilized in military armor and industrial nozzles. What is its commercial trade name, and what mechanical property justifies its use in bulletproof vests?",
+    "qh": "बोरोन कार्बाइड ($\\\\text{B}_4\\\\text{C}$) एक गैर-धातु सहसंयोजक नेटवर्क सिरेमिक है जिसका उपयोग सैन्य कवच और औद्योगिक नोजल में किया जाता है। इसका व्यावसायिक व्यापार नाम क्या है, और कौन सा यांत्रिक गुण बुलेटप्रूफ जैकेट में इसके उपयोग को सही ठहराता है?",
+    "o": [
+      "Carborundum; flexible liquid matrix that absorbs shock.",
+      "Norbide; extreme diamond-like crystal hardness combined with low density.",
+      "Borazole; soft self-lubricating sheet structure.",
+      "Graphene; transparent magnetic foil."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 confuses Boron Carbide with Carborundum (Silicon Carbide, $\\\\text{SiC}$). Option 1 is correct because **Boron Carbide ($\\\\text{B}_4\\\\text{C}$)** is commercially known as **Norbide**. It is one of the hardest known artificial materials (ranking $\\\\sim 9.5+$ on the Mohs scale, just below diamond and cubic boron nitride). Its extreme **Crystal Hardness**, high compressive strength, and low density ($2.52\\\\text{ g/cm}^3$) allow it to shatter high-velocity armor-piercing projectiles upon impact, making it the premier ceramic material for lightweight military **Bulletproof Jackets** and body armor plates. Option 2 describes Borazole (inorganic benzene), and Option 3 describes graphene."
+  },
+  {
+    "p_id": "bpsc_chem_m13_05",
+    "qe": "Triborine Triammine ($\\\\text{B}_3\\\\text{N}_3\\\\text{H}_6$) displays structural, electronic, and physical similarities to the organic compound benzene ($\\\\text{C}_6\\\\text{H}_6$). What are its primary common chemical names?",
+    "qh": "ट्राइबोरिन ट्राइअमाइन ($\\\\text{B}_3\\\\text{N}_3\\\\text{H}_6$) कार्बनिक यौगिक बेंजीन ($\\\\text{C}_6\\\\text{H}_6$) के साथ संरचनात्मक, इलेक्ट्रॉनिक और भौतिक समानताएं प्रदर्शित करता है। इसके प्राथमिक सामान्य रासायनिक नाम क्या हैं?",
+    "o": [
+      "Carborundum or Norbide",
+      "Inorganic Benzene or Borazole (or Inorganic Graphite)",
+      "Boric Lotion or White Lead",
+      "Sorel Cement or Lithopone"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 lists silicon carbide or boron carbide trade names. Option 1 is correct because **Triborine Triammine ($\\\\text{B}_3\\\\text{N}_3\\\\text{H}_6$)** is commonly called **Inorganic Benzene** or **Borazole**. It features a cyclic six-membered ring structure consisting of alternating boron and nitrogen atoms with alternating single and double bonds, mimicking the planar $\\\\pi$-electron framework and physical constants of aromatic **Benzene ($\\\\text{C}_6\\\\text{H}_6$)** (it is isoelectronic and isosteric with benzene). Due to its structural arrangement, hexagonal boron nitride layers are also termed inorganic graphite. Option 2 lists eye washes or lead pigments, and Option 3 lists dental cements or paint pigments."
+  },
+  {
+    "p_id": "bpsc_chem_m13_06",
+    "qe": "Orthoboric Acid ($\\\\text{H}_3\\\\text{BO}_3$) is a weak, slippery inorganic acid of boron. What dual application does Orthoboric Acid serve in domestic recreational games and medical ophthalmology?",
+    "qh": "ऑर्थोबोरिक अम्ल ($\\\\text{H}_3\\\\text{BO}_3$) बोरोन का एक कमजोर, फिसलन भरा अकार्बनिक अम्ल है। डोमेस्टिक मनोरंजक खेलों और मेडिकल नेत्र विज्ञान में ऑर्थोबोरिक अम्ल कौन सा दोहरा अनुप्रयोग प्रदान करता है?",
+    "o": [
+      "Used as an explosive propellant in fireworks and as a dental tooth filling.",
+      "Used as a friction-reducing powder sprinkled on carrom boards and as a mild antiseptic eye wash under the name 'Boric Lotion'.",
+      "Used as a heavy metal solder flux and as a blood clotting agent.",
+      "Used as a high-temperature rocket fuel and as a skin dye."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 misidentifies boric acid as an explosive or dental cement. Option 1 is correct because **Orthoboric Acid ($\\\\text{H}_3\\\\text{BO}_3$)** possesses a layered hydrogen-bonded sheet structure that easily shears under pressure, imparting a greasy, low-friction texture. Consequently, finely ground boric acid powder is sprinkled on **Carrom Boards** to reduce friction and allow smooth sliding of striker pieces. In pharmaceutical medicine, its weak antibacterial and antifungal properties make dilute aqueous solutions of orthoboric acid a standard mild **Antiseptic Eye Wash** commercially sold as **Boric Lotion**. Option 2 and Option 3 list unrelated metallurgical, explosive, or dye uses."
+  },
+  {
+    "p_id": "bpsc_chem_m13_07",
+    "qe": "Nuclear reactor safety depends on controlling the rate of sustained uranium neutron fission chain reactions. What physical property enables Boron ($\\\\text{B}$) rods to function as effective control rods in nuclear reactors?",
+    "qh": "परमाणु रिएक्टर सुरक्षा निरंतर यूरेनियम न्यूट्रॉन विखंडन श्रृंखला प्रतिक्रियाओं की दर को नियंत्रित करने पर निर्भर करती है। कौन सा भौतिक गुण बोरोन ($\\\\text{B}$) छड़ों को परमाणु रिएक्टरों में प्रभावी नियंत्रण छड़ों (control rods) के रूप में कार्य करने में सक्षम बनाता है?",
+    "o": [
+      "Boron acts as an explosive fuel that accelerates neutron speed.",
+      "Boron possesses an exceptionally high Neutron Capture Cross-Section, allowing it to absorb excess thermal neutrons without undergoing nuclear fission itself.",
+      "Boron reflects alpha radiation back into the containment shield.",
+      "Boron liquefies water to freeze the reactor core."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 incorrectly states boron accelerates fission as a fuel. Option 1 is correct because the isotope Boron-10 ($^{10}\\\\text{B}$) has a remarkably high **Neutron Absorption Cross-Section** [a physical measure of the probability that an atomic nucleus will capture an incoming free neutron]. In a nuclear power plant, inserting **Boron Control Rods** (or boron steel/carbide alloys) into the reactor core allows operators to capture free thermal neutrons released by splitting $^{235}\\\\text{U}$ atoms: $^{10}_{5}\\\\text{B} + ^{1}_{0}\\\\text{n} \\\\rightarrow ^{7}_{3}\\\\text{Li} + ^{4}_{2}\\\\text{He}$. By absorbing surplus neutrons without decaying or fissioning itself, boron regulates or completely halts the nuclear chain reaction. Option 2 and Option 3 describe radiation reflection or core freezing."
+  },
+  {
+    "p_id": "bpsc_chem_m13_08",
+    "qe": "Modern microelectronics and high-speed semiconductor devices utilize Gallium Arsenide ($\\\\text{GaAs}$) computer chips. What performance advantage does Gallium Arsenide offer over traditional Silicon ($\\\\text{Si}$) in high-frequency electronic circuits?",
+    "qh": "आधुनिक माइक्रोइलेक्ट्रॉनिक और उच्च गति वाले अर्धचालक उपकरण गैलियम आर्सेनाइड ($\\\\text{GaAs}$) कंप्यूटर चिप्स का उपयोग करते हैं। उच्च आवृत्ति वाले इलेक्ट्रॉनिक सर्किट में पारंपरिक सिलिकॉन ($\\\\text{Si}$) की तुलना में गैलियम आर्सेनाइड क्या प्रदर्शन लाभ प्रदान करता है?",
+    "o": [
+      "GaAs is a liquid at room temperature that eliminates copper wiring.",
+      "GaAs possesses significantly higher Electron Mobility and a direct bandgap, enabling faster electron velocity, higher operating frequencies, and efficient optoelectronic emission.",
+      "GaAs dissolves in water to convert computer chips into biodegradable sugar.",
+      "GaAs acts as a superconductor at $500^\\\\circ\\\\text{C}$."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 mischaracterizes GaAs as a room-temperature liquid. Option 1 is correct because **Gallium Arsenide ($\\\\text{GaAs}$)** is a compound semiconductor formed from Group-13 (Ga) and Group-15 (As) elements. Compared to elemental Silicon ($\\\\text{Si}$), GaAs possesses a much higher **Electron Mobility** [the measure of how quickly an electron can move through a semiconductor material when pulled by an electric field] and a **Direct Energy Bandgap**. This allows electrons to travel up to 5 times faster than in silicon, making GaAs computer chips superior for high-frequency radio frequency (RF) communications, optoelectronic photodiodes, solar cells, and high-speed satellite processors. Option 2 and Option 3 present water-dissolution or room-temperature superconductivity claims."
+  },
+  {
+    "p_id": "bpsc_chem_m13_09",
+    "qe": "Metalloids exhibit chemical and physical traits intermediate between metals and non-metals. Which choice lists the complete, recognized set of 7 metalloids in the Modern Periodic Table?",
+    "qh": "उपधातु (Metalloids) धातुओं और गैर-धातुओं के बीच मध्यवर्ती रासायनिक और भौतिक लक्षणों को प्रदर्शित करते हैं। कौन सा विकल्प आधुनिक आवर्त सारणी में 7 उपधातुओं के पूर्ण, मान्यता प्राप्त समूह को सूचीबद्ध करता है?",
+    "o": [
+      "Lithium, Sodium, Potassium, Rubidium, Cesium, Francium, Hydrogen",
+      "Boron ($\\\\text{B}$), Silicon ($\\\\text{Si}$), Germanium ($\\\\text{Ge}$), Arsenic ($\\\\text{As}$), Antimony ($\\\\text{Sb}$), Tellurium ($\\\\text{Te}$), and Polonium ($\\\\text{Po}$)",
+      "Helium, Neon, Argon, Krypton, Xenon, Radon, Oganesson",
+      "Iron, Cobalt, Nickel, Copper, Zinc, Silver, Gold"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 lists s-block alkali metals and hydrogen. Option 1 is correct because **Metalloids (Semimetals)** are elements positioned along the diagonal p-block boundary separating metallic elements from non-metallic elements. The standard set of 7 recognized metalloids includes **Boron ($\\\\text{B}$), Silicon ($\\\\text{Si}$), Germanium ($\\\\text{Ge}$), Arsenic ($\\\\text{As}$), Antimony ($\\\\text{Sb}$), Tellurium ($\\\\text{Te}$), and Polonium ($\\\\text{Po}$)**. They display intermediate electrical conductivity (semiconductors), amphoteric or weakly acidic oxides, and mixed covalent/metallic bonding properties. Option 2 lists Group-18 noble gases, and Option 3 lists transition metals."
+  },
+  {
+    "p_id": "bpsc_chem_m13_10",
+    "qe": "Superconducting magnets used in high-field Nuclear Magnetic Resonance (NMR) spectrometers and medical Magnetic Resonance Imaging (MRI) scanners require cryogenic operating conditions. Which liquid noble gas is deployed to maintain these superconducting coils below their critical temperatures?",
+    "qh": "उच्च-क्षेत्र परमाणु चुंबकीय अनुनाद (NMR) स्पेक्ट्रोमीटर और चिकित्सा चुंबकीय अनुनाद इमेजिंग (MRI) स्कैनर में उपयोग किए जाने वाले अतिचालक मैग्नेट (Superconducting magnets) के लिए क्रायोजेनिक परिचालन स्थितियों की आवश्यकता होती है। इन अतिचालक कुंडलियों को उनके महत्वपूर्ण तापमान से नीचे बनाए रखने के लिए किस तरल उत्कृष्ट गैस को तैनात किया जाता है?",
+    "o": [
+      "Liquid Argon at $200\\\\text{ K}$",
+      "Liquid Helium (boiling point $4.2\\\\text{ K}$ or $-268.95^\\\\circ\\\\text{C}$)",
+      "Liquid Radon at room temperature",
+      "Liquid Neon at $100^\\\\circ\\\\text{C}$"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 lists liquid argon, which boils at $87.3\\\\text{ K}$, a temperature too warm to maintain niobium-titanium superconductivity. Option 1 is correct because superconducting electromagnets (such as NbTi coils) used in clinical **MRI Scanners** and laboratory **NMR Spectrometers** require temperatures near absolute zero to maintain zero electrical resistance. **Liquid Helium ($\\\\text{He}$)** has the lowest boiling point of any known element at standard pressure (**$4.22\\text{ K}$** or $-268.95^\\circ\\text{C}$). Bathing the magnetic coils in liquid helium maintains the cryogenic state necessary to sustain high magnetic fields ($1.5 - 7.0\\\\text{ Tesla}$) without resistive heat loss. Option 2 lists radioactive radon, and Option 3 misstates neon's physical state."
+  }
+]
