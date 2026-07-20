@@ -1,0 +1,394 @@
+[
+  {
+    "p_id": "bpsc_phys_m37_01",
+    "qe": "Evaluating the spatial distribution and geometric properties of magnetic field lines reveals crucial differences between magnetic fields and electrostatic fields. Which statement accurately describes the trajectory and boundary conditions of magnetic field lines?",
+    "qh": "चुंबकीय क्षेत्र रेखाओं के स्थानिक वितरण और ज्यामितीय गुणों का मूल्यांकन चुंबकीय क्षेत्रों और इलेक्ट्रोस्टैटिक क्षेत्रों के बीच महत्वपूर्ण अंतरों को उजागर करता है। कौन सा कथन चुंबकीय क्षेत्र रेखाओं के प्रक्षेपवक्र (trajectory) और सीमा शर्तों का सटीक वर्णन करता है?",
+    "o": [
+      "Magnetic field lines form continuous closed loops, emerging from the north pole and entering the south pole outside the magnet, while continuing from the south pole back to the north pole inside the magnet.",
+      "Magnetic field lines originate at the north pole and terminate at the south pole, ending abruptly inside the magnetic material.",
+      "Magnetic field lines intersect at right angles near the poles where the field strength is maximum.",
+      "The tangent drawn at any point on a magnetic field line indicates the scalar magnetic potential value."
+    ],
+    "a": 0,
+    "e": "<b>Explanation:</b> Option 0 is correct because <b>Magnetic Field Lines</b> form unbroken, continuous **closed loops** (reflecting the non-existence of isolated magnetic monopoles, $\\nabla \\cdot \\vec{B} = 0$). Externally, the lines travel from the **North pole to the South pole**; internally, to complete the continuous closed path, they travel from the **South pole to the North pole**. <br>Option 1 is incorrect because electrostatic lines terminate on charges, but magnetic field lines never terminate abruptly—they continue inside the magnet. Option 2 is incorrect because field lines can **never intersect**; an intersection would imply two different directions of the net magnetic force at a single point, which is physically impossible. Option 3 is incorrect because a tangent at any point on a field line gives the vector direction of the **magnetic field force ($\tvec{B}$)** at that point, not scalar potential."
+  },
+  {
+    "p_id": "bpsc_phys_m37_02",
+    "qe": "A solenoid consists of a long helical coil of insulated copper wire wound closely into a cylindrical form. What characterizes the nature and geometry of the magnetic field inside and outside a long current-carrying solenoid?",
+    "qh": "एक सोलेनोइड (solenoid) में एक बेलनाकार रूप में पास-पास लपेटी गई इंसुलेटेड तांबे के तार की एक लंबी सर्पिल कुंडली होती है। एक लंबे धारावाही सोलेनोइड के अंदर और बाहर चुंबकीय क्षेत्र की प्रकृति और ज्यामिति की क्या विशेषता है?",
+    "o": [
+      "Inside the solenoid, the magnetic field is non-uniform and divergent; outside, it is extremely strong and uniform.",
+      "Inside the solenoid, the magnetic field is uniform and strong, represented by parallel straight field lines; outside, the field is extremely weak and virtually zero.",
+      "The magnetic field inside a solenoid vanishes completely due to destructive interference of adjacent loops.",
+      "The magnetic field strength inside a solenoid is inversely proportional to the current flowing through it."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 completely swaps the field characteristics inside and outside the solenoid. Option 1 is correct because inside a long, tightly wound current-carrying solenoid, the magnetic fields produced by individual circular turns reinforce each other, creating a **uniform, strong magnetic field** represented by straight, parallel, equally spaced field lines (similar to the interior of a bar magnet). Outside the solenoid, the field vectors from opposite sides cancel out, rendering the exterior magnetic field **extremely weak and virtually zero**. Option 2 is false because adjacent loop fields add up constructively. Option 3 is false because field strength inside ($B = \\mu_0 n I$) is directly proportional to current ($I$) and turns per unit length ($n$)."
+  },
+  {
+    "p_id": "bpsc_phys_m37_03",
+    "qe": "A charged particle carrying charge $q$ enters a uniform magnetic field $B$ with a velocity $v$. Under what specific velocity orientation relative to the magnetic field lines does the charged particle experience strictly ZERO magnetic force?",
+    "qh": "आवेश $q$ वाला एक आवेशित कण वेग $v$ के साथ एक समान चुंबकीय क्षेत्र $B$ में प्रवेश करता है। चुंबकीय क्षेत्र रेखाओं के सापेक्ष किस विशिष्ट वेग ओरिएंटेशन के तहत आवेशित कण सख्ती से शून्य चुंबकीय बल का अनुभव करता है?",
+    "o": [
+      "When the particle moves strictly perpendicular to the magnetic field lines ($\\theta = 90^\\circ$).",
+      "When the particle moves parallel or anti-parallel to the magnetic field lines ($\\theta = 0^\\circ$ or $\\theta = 180^\\circ$).",
+      "When the particle moves at an angle of $\\theta = 45^\\circ$ to the magnetic field lines.",
+      "When the particle is at rest inside a zero-gravity vacuum chamber."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 describes the condition for **maximum Lorentz magnetic force** ($F_{\\text{max}} = qvB \\sin 90^\\circ = qvB$). Option 1 is correct because the magnetic force on a moving point charge is given by the Lorentz force formula: <b>$$F = q v B \\sin \\theta$$</b> where $\\theta$ is the angle between the velocity vector $\\vec{v}$ and the magnetic field vector $\\vec{B}$. When a charged particle moves **parallel ($\ttheta = 0^\\circ$) or anti-parallel ($\ttheta = 180^\\circ$)** to the magnetic field, $\\sin 0^\\circ = \\sin 180^\\circ = 0$, yielding **strictly ZERO magnetic force ($F = 0$)**. Consequently, the particle continues along a straight path unaffected. Option 2 yields $F = \\frac{qvB}{\\sqrt{2}}$, and Option 3 specifies a stationary particle where velocity itself is zero."
+  },
+  {
+    "p_id": "bpsc_phys_m37_04",
+    "qe": "Fleming's Left-Hand Rule and Fleming's Right-Hand Rule are fundamental directional tools in electromagnetism. Which physical parameters are indicated by the Thumb, Forefinger, and Middle Finger in Fleming's LEFT-HAND Rule?",
+    "qh": "फ्लेमिंग का बायां हाथ का नियम (Fleming's Left-Hand Rule) और दायां हाथ का नियम विद्युत चुंबकत्व में मौलिक दिशात्मक उपकरण हैं। फ्लेमिंग के बाएं हाथ के नियम में अंगूठा (Thumb), तर्जनी (Forefinger) और मध्यमा (Middle Finger) द्वारा कौन से भौतिक पैरामीटर दर्शाए जाते हैं?",
+    "o": [
+      "Forefinger: Motion/Force; Middle Finger: Magnetic Field; Thumb: Induced Current.",
+      "Forefinger: Magnetic Field; Middle Finger: Electric Current; Thumb: Mechanical Force (or Motion of the conductor).",
+      "Forefinger: Electric Field; Middle Finger: Mechanical Force; Thumb: Magnetic Flux.",
+      "Forefinger: Magnetic Field; Middle Finger: Induced Voltage; Thumb: Resistance."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 jumbles the finger assignments. Option 1 is correct because **Fleming's Left-Hand Rule** determines the direction of mechanical force acting on a current-carrying conductor in a magnetic field (used in electric motors): <br>1. **Forefinger:** Points in the direction of the **Magnetic Field ($\tvec{B}$)**. <br>2. **Middle Finger:** Points in the direction of the **Electric Current ($I$)**. <br>3. **Thumb:** Points in the direction of the resulting **Mechanical Force ($\tvec{F}$) / Motion**. <br>(Remember mnemonic: **F**ather [Force=Thumb], **M**other [Magnetic field=Forefinger], **C**hild [Current=Middle finger]). Options 2 and 3 state incorrect parameter mappings."
+  },
+  {
+    "p_id": "bpsc_phys_m37_05",
+    "qe": "Ampere's Swimming Rule (recalled by the SNOW rule) predicts the deflection of a magnetic compass needle beneath a current-carrying wire. According to the SNOW rule, how does a compass needle behave when current flows from South to North in a wire placed OVER the needle?",
+    "qh": "एम्पीयर का स्विमिंग नियम (SNOW नियम द्वारा याद किया गया) एक धारावाही तार के नीचे चुंबकीय कंपास सुई के विक्षेपण की भविष्यवाणी करता है। SNOW नियम के अनुसार, जब सुई के ऊपर (OVER) रखे तार में धारा दक्षिण (South) से उत्तर (North) की ओर बहती है तो कंपास सुई कैसा व्यवहार करती है?",
+    "o": [
+      "The North pole of the magnetic needle deflects toward the East.",
+      "The North pole of the magnetic needle deflects toward the West.",
+      "The South pole of the magnetic needle deflects toward the West while the North pole remains stationary.",
+      "The magnetic needle undergoes continuous $360^\\circ$ rotation."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 states the opposite direction (East). Option 1 is correct because the **SNOW Rule** is an explicit memory device for Ampere's Swimming Rule: when electric current flows from **S**outh to **N**orth in a conductor placed **O**ver a magnetic needle, the North-seeking pole of the needle is deflected toward the **W**est. (S-N-O-W $\\implies$ **S**outh to **N**orth, **O**ver, **W**est). Options 2 and 3 describe physically impossible asymmetrical needle motions."
+  },
+  {
+    "p_id": "bpsc_phys_m37_06",
+    "qe": "Advanced medical diagnostic imaging relies on naturally generated internal biological magnetic fields. Which two primary organs in the human body produce significant magnetic fields that form the physiological basis of Magnetic Resonance Imaging (MRI)?",
+    "qh": "उन्नत चिकित्सा नैदानिक इमेजिंग स्वाभाविक रूप से उत्पन्न आंतरिक जैविक चुंबकीय क्षेत्रों पर निर्भर करती है। मानव शरीर में कौन से दो प्राथमिक अंग महत्वपूर्ण चुंबकीय क्षेत्र उत्पन्न करते हैं जो चुंबकीय अनुनाद इमेजिंग (MRI) का शारीरिक आधार बनाते हैं?",
+    "o": [
+      "Lungs and Liver",
+      "Heart and Brain",
+      "Kidneys and Pancreas",
+      "Stomach and Spleen"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 lists metabolic and respiratory organs with negligible ionic currents. Option 1 is correct because weak electric currents continuously travel along nerve cells (neurons) in the human body via ionic transport ($\ttext{Na}^+, \ttext{K}^+$ flux). These physiological currents generate extremely weak internal magnetic fields (roughly $10^{-10}$ to $10^{-13} \\text{ Tesla}$). The **Heart** (via cardiac conduction) and the **Brain** (via central neural pathways) are the two primary organs that produce significant, measurable magnetic fields. Detecting these biomagnetic fields forms the foundation of **MRI (Magnetic Resonance Imaging)** for non-invasive organ diagnostics. Options 2 and 3 state organs lacking major macro-electrical conduction."
+  },
+  {
+    "p_id": "bpsc_phys_m37_07",
+    "qe": "Right-Hand Thumb Rule and Maxwell's Corkscrew Rule determine the directional geometry of magnetic field lines surrounding a straight current-carrying conductor. What is the spatial pattern of magnetic field lines around a long straight vertical wire?",
+    "qh": "दाहिने हाथ के अंगूठे का नियम और मैक्सवेल का कॉर्कस्क्रू नियम एक सीधे धारावाही चालक के आसपास की चुंबकीय क्षेत्र रेखाओं की दिशात्मक ज्यामिति निर्धारित करते हैं। एक लंबे सीधे ऊर्ध्वाधर तार के चारों ओर चुंबकीय क्षेत्र रेखाओं का स्थानिक पैटर्न क्या है?",
+    "o": [
+      "Parallel straight lines pointing vertically upwards.",
+      "Concentric circles centered on the wire lying in a horizontal plane perpendicular to the conductor.",
+      "Helical spirals radiating outwards into spherical space.",
+      "Elliptical loops parallel to the conductor wire axis."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 describes a uniform directional field (like inside a solenoid). Option 1 is correct because according to the **Right-Hand Thumb Rule**, if a current-carrying straight conductor is held with the right thumb pointing along the current vector ($I$), the curled fingers encircle the wire in the direction of the magnetic field vector ($\tvec{B}$). This forms a series of **concentric circles** centered on the wire, lying in planes **strictly perpendicular to the conductor**. Option 2 and Option 3 describe non-existent helical or parallel planar fields for straight wires."
+  },
+  {
+    "p_id": "bpsc_phys_m37_08",
+    "qe": "The SI unit of magnetic field intensity is Tesla ($\ttext{T}$), while its CGS unit is Gauss ($\ttext{G}$). What is the precise mathematical equivalence linking $1 \\text{ Tesla}$ to Gauss?",
+    "qh": "चुंबकीय क्षेत्र की तीव्रता की SI इकाई टेस्ला ($\ttext{T}$) है, जबकि इसकी CGS इकाई गॉस ($\ttext{G}$) है। $1 \\text{ टेस्ला}$ को गॉस से जोड़ने वाली सटीक गणितीय तुल्यता क्या है?",
+    "o": [
+      "$1 \\text{ Tesla} = 10^2 \\text{ Gauss}$",
+      "$1 \\text{ Tesla} = 10^4 \\text{ Gauss}$ ($1 \\text{ T} = 10^4 \\text{ G}$)",
+      "$1 \\text{ Tesla} = 10^{-4} \\text{ Gauss}$",
+      "$1 \\text{ Tesla} = 10^8 \\text{ Gauss}$"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 uses a factor of 100. Option 1 is correct because magnetic field strength ($\tvec{B}$) in SI units is measured in **Tesla ($\ttext{T}$)** (where $1 \\text{ T} = 1 \\text{ Weber/m}^2 = 1 \\text{ N A}^{-1}\\text{m}^{-1}$), named after Nikola Tesla. In the CGS unit system, magnetic field is measured in **Gauss ($\ttext{G}$)**. The exact conversion factor between these two systems is: <b>$$1 \\text{ Tesla} = 10^4 \\text{ Gauss} \\quad \\text{or} \\quad 1 \\text{ Gauss} = 10^{-4} \\text{ Tesla}$$</b> (For perspective, Earth's surface magnetic field is approximately $0.5 \\text{ Gauss}$ or $5 \\times 10^{-5} \\text{ Tesla}$). Options 2 and 3 state incorrect exponent orders."
+  },
+  {
+    "p_id": "bpsc_phys_m37_09",
+    "qe": "Fleming's Right-Hand Rule is specifically applied in electromagnetic devices to determine the direction of generated currents. In which electrical device is Fleming's RIGHT-HAND Rule primarily used?",
+    "qh": "फ्लेमिंग का दाहिना हाथ का नियम (Fleming's Right-Hand Rule) विशेष रूप से उत्पन्न धाराओं की दिशा निर्धारित करने के लिए विद्युत चुम्बकीय उपकरणों में लागू किया जाता है। मुख्य रूप से किस विद्युत उपकरण में फ्लेमिंग के दाहिने हाथ के नियम का उपयोग किया जाता है?",
+    "o": [
+      "Electric Motor",
+      "Electric Generator (Dynamo)",
+      "Electric Heating Toaster",
+      "Moving Coil Loudspeaker"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 uses Fleming's *Left-Hand* Rule (to determine mechanical force/motion from supplied current). Option 1 is correct because **Fleming's Right-Hand Rule** is designed for **Electromagnetic Induction** applications: when a conductor moves inside a magnetic field, it determines the direction of the **Induced Electric Current**. This rule governs the working of **Electric Generators (Dynamos)**. In contrast, Fleming's **Left-Hand Rule** applies to **Electric Motors** (where supplied current interacts with a magnetic field to produce motion). Option 2 relies purely on Joule heating ($I^2 R$), and Option 3 uses motor effect forces."
+  },
+  {
+    "p_id": "bpsc_phys_m37_10",
+    "qe": "Substances interact differently with external magnetic fields based on their atomic structure. Which choice correctly categorizes Magnetic Substances versus Non-magnetic Substances?",
+    "qh": "पदार्थ अपनी परमाणु संरचना के आधार पर बाहरी चुंबकीय क्षेत्रों के साथ अलग-अलग अंतःक्रिया करते हैं। कौन सा विकल्प चुंबकीय पदार्थों (Magnetic Substances) बनाम अचुंबकीय पदार्थों (Non-magnetic Substances) को सही ढंग से वर्गीकृत करता है?",
+    "o": [
+      "Magnetic: Iron, Nickel, Cobalt; Non-magnetic: Wood, Paper, Aluminium.",
+      "Magnetic: Wood, Aluminium, Copper; Non-magnetic: Iron, Nickel, Steel.",
+      "Magnetic: Paper, Glass, Rubber; Non-magnetic: Cobalt, Nickel, Iron.",
+      "Magnetic: Gold, Silver, Platinum; Non-magnetic: Iron, Nickel, Cobalt."
+    ],
+    "a": 0,
+    "e": "<b>Explanation:</b> Option 1 completely swaps ferromagnetic metals with non-magnetic materials. Option 0 is correct because: <br>1. **Magnetic Substances:** Materials that are strongly attracted by magnets and can be magnetized (e.g., **Iron, Nickel, Cobalt**, and ferromagnetic alloys like steel). <br>2. **Non-magnetic Substances:** Materials that experience zero noticeable attraction toward magnets under standard conditions (e.g., **Wood, Paper, Plastic, Glass, Aluminium**). Options 2 and 3 state jumbled or inverted material classifications."
+  },
+  
+  {
+    "p_id": "bpsc_phys_m38_01",
+    "qe": "Evaluating the structural properties of magnets reveals fundamental laws governing magnetic poles. What occurs when a bar magnet is broken cleanly in half across its middle?",
+    "qh": "चुंबक के संरचनात्मक गुणों का मूल्यांकन चुंबकीय ध्रुवों को नियंत्रित करने वाले मौलिक नियमों को उजागर करता है। क्या होता है जब एक बार चुंबक को उसके मध्य से साफ-साफ दो भागों में तोड़ दिया जाता है?",
+    "o": [
+      "The North pole and South pole separate into two isolated magnetic monopoles.",
+      "Two complete new magnets are formed, each possessing its own independent North and South pole pair.",
+      "The magnetic field vanishes completely, leaving behind non-magnetic iron pieces.",
+      "One piece retains pure North magnetism while the other piece becomes unmagnetized."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 is a classic conceptual trap that claims the existence of isolated monopoles. Option 1 is correct because <b>Magnetic Poles Always Exist in Pairs</b> ($\tnabla \\cdot \\vec{B} = 0$). Magnetic dipoles originate from microscopic atomic electron spin alignment inside domain structures. Breaking a bar magnet in half divides the domain array into two separate segments, creating new opposite magnetic poles at the fractured edges. Thus, **two complete smaller magnets are created, each having a North pole and a South pole**. Options 2 and 3 state physically impossible monopole or total demagnetization scenarios."
+  },
+  {
+    "p_id": "bpsc_phys_m38_02",
+    "qe": "Earth's geomagnetic field is defined by three fundamental orientation elements: Angle of Declination ($\ttheta$), Angle of Dip ($\tdelta$), and Horizontal Component ($B_H$). What is the value of the Angle of Dip ($\tdelta$) at Earth's magnetic poles and at Earth's magnetic equator?",
+    "qh": "पृथ्वी का भू-चुंबकीय क्षेत्र तीन मौलिक ओरिएंटेशन तत्वों द्वारा परिभाषित किया जाता है: दिपात कोण (Angle of Declination - $\ttheta$), नमन कोण (Angle of Dip - $\tdelta$), और क्षैतिज घटक ($B_H$)। पृथ्वी के चुंबकीय ध्रुवों और चुंबकीय भूमध्य रेखा (magnetic equator) पर नमन कोण ($\tdelta$) का मान क्या है?",
+    "o": [
+      "Dip is $0^\\circ$ at the magnetic poles and $90^\\circ$ at the magnetic equator.",
+      "Dip is $90^\\circ$ at the magnetic poles and $0^\\circ$ at the magnetic equator.",
+      "Dip is strictly $45^\\circ$ at both the magnetic poles and equator.",
+      "Dip is $180^\\circ$ at the poles and $90^\\circ$ at the equator."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 completely swaps the dip values between poles and equator. Option 1 is correct because the **Angle of Dip ($\\tdelta$)** is defined as the angle that Earth's total magnetic field vector ($\\vec{B}$) makes with the horizontal surface plane: <br>1. **At the Magnetic Poles:** Earth's magnetic field lines emerge or enter vertically ($\\vec{B} = B_V$), making the total field vector strictly perpendicular to the horizontal surface. Thus, **Angle of Dip $\\delta = 90^\\circ$ at the poles**. <br>2. **At the Magnetic Equator:** Earth's magnetic field lines run parallel to the horizontal ground ($B_V = 0 \\implies B = B_H$). Thus, **Angle of Dip $\\delta = 0^\\circ$ at the equator**. Options 2 and 3 state incorrect trigonometric angles."
+  },
+  {
+    "p_id": "bpsc_phys_m38_03",
+    "qe": "In magnetic field mapping, a Neutral Point is identified in space. What physical condition defines a Neutral Point near a bar magnet placed in Earth's field?",
+    "qh": "चुंबकीय क्षेत्र मैपिंग में, अंतरिक्ष में एक उदासीन बिंदु (Neutral Point) की पहचान की जाती है। पृथ्वी के क्षेत्र में रखे गए एक बार चुंबक के पास एक उदासीन बिंदु को कौन सी भौतिक स्थिति परिभाषित करती है?",
+    "o": [
+      "The point where the magnet's external field is infinitely magnified by solar wind.",
+      "The point where the external magnetic field of the magnet is completely canceled out by the horizontal component of Earth's magnetic field ($B_H$), resulting in a net magnetic field of ZERO.",
+      "The point where the vertical component of Earth's field equals $311 \\text{ V}$.",
+      "The point where a compass needle rotates continuously at supersonic speeds."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 describes field amplification instead of cancellation. Option 1 is correct because a **Neutral Point** is a spatial coordinate where the magnetic field produced by a bar magnet is **equal in magnitude and opposite in vector direction to the horizontal component of Earth's magnetic field ($B_H$)**. Vector summation yields a **net magnetic field of strictly ZERO ($\tvec{B}_{\ttext{net}} = \tvec{B}_{\ttext{magnet}} + \tvec{B}_H = 0$)**. A magnetic compass placed at a neutral point experiences no net aligning torque and can come to rest in any arbitrary direction. Option 2 confuses magnetic fields with AC voltage, and Option 3 states an impossible kinetic behavior."
+  },
+  {
+    "p_id": "bpsc_phys_m38_04",
+    "qe": "Magnetic materials respond differently when placed inside an external magnetic field. Which choice accurately contrasts Diamagnetic Substances against Ferromagnetic Substances based on magnetic susceptibility ($\tchi$), permeability ($\tmu_r$), and temperature response?",
+    "qh": "बाहरी चुंबकीय क्षेत्र में रखे जाने पर चुंबकीय पदार्थ अलग तरह से प्रतिक्रिया करते हैं। कौन सा विकल्प चुंबकीय सुग्राह्यता (susceptibility - $\tchi$), पारगम्यता (permeability - $\tmu_r$), और तापमान प्रतिक्रिया के आधार पर प्रतिचुंबकीय पदार्थों (Diamagnetic) की लौह-चुंबकीय पदार्थों (Ferromagnetic) से सटीक तुलना करता है?",
+    "o": [
+      "Diamagnetic: Susceptibility ($\tchi$) is large and positive, depends on temperature; Ferromagnetic: Susceptibility is negative, independent of temperature.",
+      "Diamagnetic: Susceptibility ($\tchi$) is small and negative, permeability $\tmu_r < 1$, independent of temperature; Ferromagnetic: Susceptibility is large and positive, permeability $\tmu_r \\gg 1$, magnetism decreases with temperature.",
+      "Diamagnetic: Strongly attracted to magnetic fields; Ferromagnetic: Feebly repelled by magnetic fields.",
+      "Both Diamagnetic and Ferromagnetic materials become superconducting at Curie temperature."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 completely swaps the magnetic properties of diamagnetic and ferromagnetic substances. Option 1 is correct because: <br>1. **Diamagnetic Substances (e.g., Gold, Copper, Water, Bismuth):** Possess **small and negative magnetic susceptibility ($\tchi < 0$)** and relative permeability slightly less than one ($\tmu_r < 1$). They are feebly repelled by magnets (move from stronger to weaker field), and their diamagnetism is **strictly independent of temperature**. <br>2. **Ferromagnetic Substances (e.g., Iron, Cobalt, Nickel):** Possess **large and positive susceptibility ($\tchi \\gg 0$)** and relative permeability vastly greater than one ($\tmu_r \\gg 1$). They are strongly attracted to magnets, and their magnetism **decreases with rising temperature**. Option 2 reverses attraction/repulsion rules, and Option 3 misattributes superconductivity to Curie transitions."
+  },
+  {
+    "p_id": "bpsc_phys_m38_05",
+    "qe": "A ferromagnetic substance undergoes a distinct phase transition when heated above a critical thermal threshold. What is this critical temperature called, and into what magnetic state does a ferromagnetic material transform when heated beyond it?",
+    "qh": "एक लौह-चुंबकीय पदार्थ एक विशिष्ट चरण संक्रमण (phase transition) से गुजरता है जब इसे एक महत्वपूर्ण थर्मल सीमा से ऊपर गर्म किया जाता है। इस महत्वपूर्ण तापमान को क्या कहा जाता है, और इसके पार गर्म करने पर एक लौह-चुंबकीय पदार्थ किस चुंबकीय स्थिति में बदल जाता है?",
+    "o": [
+      "Kelvin Temperature; transforms into a Diamagnetic substance.",
+      "Curie Temperature ($T_C$); transforms into a Paramagnetic substance.",
+      "Critical Transition Temperature; transforms into an Electromagnet.",
+      "Absolute Zero; transforms into a Permanent Magnet."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 misidentifies the phase transition product as diamagnetic. Option 1 is correct because ferromagnetic materials owe their strong alignment to microscopic domain coupling. Thermal agitation disrupts this domain alignment. At a specific critical temperature known as the **Curie Temperature ($T_C$)** (e.g., $\tapprox 770^\\circ\\text{C}$ for iron), domain coupling breaks down completely, and the **ferromagnetic substance transforms into a Paramagnetic substance**. Above $T_C$, its magnetic susceptibility follows Curie's Law (inversely proportional to absolute temperature, $\tchi \\propto \\frac{1}{T - T_C}$). Options 2 and 3 list incorrect thermodynamic terms."
+  },
+  {
+    "p_id": "bpsc_phys_m38_06",
+    "qe": "Electromagnets provide temporary, controllable magnetic fields used in industrial applications like Maglev trains and scrap cranes. What core material is used for making electromagnets, and why?",
+    "qh": "इलेक्ट्रोमैग्नेट (Electromagnets) अस्थायी, नियंत्रणीय चुंबकीय क्षेत्र प्रदान करते हैं जिनका उपयोग मैग्लेव ट्रेनों और स्क्रैप क्रेन जैसे औद्योगिक अनुप्रयोगों में किया जाता है। इलेक्ट्रोमैग्नेट बनाने के लिए किस कोर सामग्री का उपयोग किया जाता है, और क्यों?",
+    "o": [
+      "Hardened Steel, because it retains permanent magnetism even after current is switched off.",
+      "Soft Iron, because it possesses high magnetic permeability and low retentivity/coercivity, gaining strong magnetism when current flows and losing it immediately when current stops.",
+      "Copper metal, because it has zero electrical resistance.",
+      "Bismuth crystal, because it repels external solar wind magnetic fields."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 describes steel, which is used for *permanent* magnets due to high retentivity. Option 1 is correct because an **Electromagnet** requires a core that magnetizes strongly when electric current flows through its solenoid coil, but **loses its magnetism instantly when current is switched off**. **Soft Iron** is uniquely suited because it possesses: (1) **High Magnetic Permeability** (concentrating lines of force); and (2) **Low Retentivity and Low Coercivity** (minimal residual magnetism/hysteresis loss). Options 2 and 3 state false zero-resistance or solar claims."
+  },
+  {
+    "p_id": "bpsc_phys_m38_07",
+    "qe": "Permanent magnets must retain their ferromagnetic alignment for extended durations at room temperature without demagnetizing. What magnetic hysteresis properties and materials are required for fabricating strong Permanent Magnets?",
+    "qh": "स्थायी चुंबकों (Permanent magnets) को कमरे के तापमान पर लंबे समय तक विचुंबकीय (demagnetizing) हुए बिना अपने लौह-चुंबकीय संरेखण को बनाए रखना चाहिए। मजबूत स्थायी चुंबकों के निर्माण के लिए कौन से चुंबकीय हिस्टैरिसीस गुणों और सामग्रियों की आवश्यकता होती है?",
+    "o": [
+      "Low retentivity and low coercivity; fabricated from soft iron or pure copper.",
+      "High retentivity (strong residual magnetism) and High coercivity (resistance to demagnetization); fabricated from Steel, Alnico, Cobalt, or Ticonal.",
+      "Negative susceptibility and zero permeability; fabricated from bismuth and quartz.",
+      "Infinite electrical conductivity; fabricated from liquid mercury."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 describes soft iron requirements for *temporary* electromagnets. Option 1 is correct because a **Permanent Magnet** must resist demagnetization from stray external fields, mechanical shocks, or temperature fluctuations. Therefore, its material must possess: <br>1. **High Retentivity:** Ensures the magnet retains a **strong residual magnetic field** after the external field is removed. <br>2. **High Coercivity:** Ensures a **large reverse magnetic field is required to demagnetize it**, making it resistant to stray field decay. <br>Favorable materials include **Steel, Alnico** (Aluminum-Nickel-Cobalt alloy), **Cobalt, and Ticonal**. Options 2 and 3 cite diamagnetic or liquid non-ferromagnetic materials."
+  },
+  {
+    "p_id": "bpsc_phys_m38_08",
+    "qe": "Maglev (Magnetic Levitation) trains achieve higher speeds and smoother rides than conventional rail tracks. What physical principle enables Maglev trains to operate without track friction?",
+    "qh": "मैग्लेव (मैग्नेटिक लेविटेशन) ट्रेनें पारंपरिक रेल पटरियों की तुलना में अधिक गति और सुगम सवारी हासिल करती हैं। कौन सा भौतिक सिद्धांत मैग्लेव ट्रेनों को ट्रैक घर्षण के बिना संचालित करने में सक्षम बनाता है?",
+    "o": [
+      "Hydrodynamic buoyancy caused by liquid mercury beneath the train.",
+      "Electromagnetic levitation using powerful electromagnets to suspend the train above the track, completely eliminating physical track-wheel friction.",
+      "Electrostatic shielding that cancels Earth's gravitational acceleration.",
+      "Total internal reflection of light rays trapped inside optical tracks."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 misidentifies track support as liquid mercury. Option 1 is correct because **Maglev Trains** utilize powerful **Electromagnets (and superconducting coils)** installed along the train undercarriage and track guideway. Magnetic repulsion/attraction forces lift (levitate) the entire train a few centimeters **above the track surface**. Because there is no physical contact between the moving train and the track guide, **mechanical surface friction is completely eliminated**, allowing smooth, low-noise rides at speeds exceeding $500 \\text{ km/h}$. Option 2 falsely claims gravity cancellation, and Option 3 describes fiber optics."
+  },
+  {
+    "p_id": "bpsc_phys_m38_09",
+    "qe": "Magnetic Flux ($\tPhi$) quantifies the total number of magnetic lines of force crossing a given surface area $A$ in a magnetic field $B$. What is the mathematical formula for magnetic flux, and under what surface orientation is magnetic flux strictly ZERO?",
+    "qh": "चुंबकीय फ्लक्स ($\tPhi$) एक चुंबकीय क्षेत्र $B$ में दिए गए सतह क्षेत्र $A$ को पार करने वाली चुंबकीय बल रेखाओं की कुल संख्या को परिमाणित करता है। चुंबकीय फ्लक्स का गणितीय सूत्र क्या है, और किस सतह ओरिएंटेशन के तहत चुंबकीय फ्लक्स सख्ती से शून्य होता है?",
+    "o": [
+      "$\\Phi = B A \\sin \\theta$; flux is zero when surface plane is perpendicular to field lines.",
+      "$\\Phi = B A \\cos \\theta$; flux is strictly ZERO when the surface plane lies parallel to magnetic field lines (i.e., area vector normal is perpendicular to field lines, $\\theta = 90^\\circ$).",
+      "$\\Phi = \\frac{B}{A}$; flux is zero when magnetic field strength equals 1 Tesla.",
+      "$\\Phi = B A \\tan \\theta$; flux is zero when area vector is parallel to field lines."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 uses $\\sin \\theta$ with an inverted angular convention. Option 1 is correct because **Magnetic Flux ($\tPhi$)** passing through an area element $A$ in a uniform magnetic field $B$ is mathematically defined as the dot product of vector field $\\vec{B}$ and normal area vector $\\vec{A}$: <b>$$\\Phi = \\vec{B} \\cdot \\vec{A} = B A \\cos \\theta$$</b> where $\\theta$ is the angle between the magnetic field direction and the **normal to the surface area vector**. When the surface plane lies **parallel to the magnetic field lines**, field lines skim across the surface without penetrating it ($\ttheta = 90^\\circ$ relative to normal vector $\\vec{A}$). Since $\\cos 90^\\circ = 0$, **Magnetic Flux $\\Phi = 0$**. Options 2 and 3 state incorrect quotient or tangent formulas."
+  },
+  {
+    "p_id": "bpsc_phys_m38_10",
+    "qe": "Solar flares emit energetic streams of charged particles (solar wind) that interact with Earth's magnetosphere. What localized geophysical disturbance occurs when intense solar wind hits Earth's magnetic field?",
+    "qh": "सौर ज्वालाएँ (Solar flares) आवेशित कणों (सौर हवा) की ऊर्जावान धाराओं को उत्सर्जित करती हैं जो पृथ्वी के मैग्नेटोस्फीयर के साथ अंतःक्रिया करती हैं। जब तीव्र सौर हवा पृथ्वी के चुंबकीय क्षेत्र से टकराती है तो कौन सा स्थानीय भू-भौतिकीय व्यवधान होता है?",
+    "o": [
+      "Tectonic Earthquakes along subterranean fault lines.",
+      "Magnetic Storms, causing severe localized fluctuations in Earth's magnetic field that disrupt radio communications and electrical grids.",
+      "Total atmospheric refraction causing 24-hour continuous daylight.",
+      "Complete collapse of Earth's rotational speed to zero."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 misattributes tectonic earthquakes to solar wind. Option 1 is correct because when high-energy charged particle streams emitted during solar flares (**Solar Wind**) strike Earth's upper atmosphere, they induce sudden, violent temporal and spatial fluctuations in Earth's magnetic field lines. This geophysical phenomenon is known as a **Magnetic Storm**. Magnetic storms induce unwanted surge currents in long power transmission grids, disrupt satellite navigation (GPS), and interfere with high-frequency radio communications. Option 2 describes optical refraction, and Option 3 states an impossible orbital slowdown."
+  },
+  
+  {
+    "p_id": "bpsc_phys_m39_01",
+    "qe": "Evaluating the laws of Electromagnetic Induction reveals the exact relationship between magnetic flux changes and induced electromotive force (emf). According to Faraday's and Lenz's laws, what determines the magnitude and direction of the induced emf ($e$) in a closed circuit?",
+    "qh": "विद्युत चुंबकीय प्रेरण (Electromagnetic Induction) के नियमों का मूल्यांकन चुंबकीय फ्लक्स परिवर्तनों और प्रेरित विद्युत वाहक बल (emf) के बीच सटीक संबंध को उजागर करता है। फैराडे और लेंज के नियमों के अनुसार, बंद परिपथ में प्रेरित emf ($e$) के परिमाण और दिशा को क्या निर्धारित करता है?",
+    "o": [
+      "The magnitude is proportional to the total static magnetic flux; direction aids the flux growth.",
+      "The magnitude is equal to the rate of change of magnetic flux ($e = -\\frac{d\\Phi}{dt}$); the negative sign indicates that the induced emf opposes the change in flux that produces it.",
+      "The magnitude depends on wire resistance alone; direction is strictly parallel to the magnetic field vector.",
+      "The magnitude is constant regardless of time variation; direction is determined by Coulomb's law."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 incorrectly attributes induced emf to static flux (emf requires flux *change*, $\\frac{d\\Phi}{dt} \\neq 0$). Option 1 is correct because: <br>1. <b>Faraday's Law (First & Second Law):</b> States that an emf is induced whenever magnetic flux linked with a circuit changes, and the magnitude of induced emf equals the time rate of change of flux ($|e| = \\frac{d\\Phi}{dt}$). <br>2. <b>Lenz's Law:</b> Expressed mathematically by the negative sign in <b>$$e = -\\frac{d\\Phi}{dt}$$</b> It enforces the law of conservation of energy by dictating that the direction of the induced emf (and induced current) always opposes the initial flux change that generated it. Option 2 ignores flux rate variations, and Option 3 cites electrostatics."
+  },
+  {
+    "p_id": "bpsc_phys_m39_02",
+    "qe": "Self-inductance and mutual inductance describe distinct electromagnetic induction behaviors in coils. Why is Self-Inductance fundamentally termed the 'Inertia of Electricity' in electrical circuits?",
+    "qh": "स्व-प्रेरकत्व (Self-inductance) और अन्योन्य प्रेरकत्व (Mutual inductance) कुंडलियों में विशिष्ट विद्युत चुंबकीय प्रेरण व्यवहारों का वर्णन करते हैं। विद्युत परिपथों में स्व-प्रेरकत्व को मौलिक रूप से 'विद्युत का जड़त्व' (Inertia of Electricity) क्यों कहा जाता है?",
+    "o": [
+      "Because it converts direct current into alternating current automatically.",
+      "Because by virtue of inducing a back-emf in itself, the coil opposes both the growth of current when switched on and the decay of current when switched off.",
+      "Because it increases the mechanical mass of the copper wire during conduction.",
+      "Because it eliminates all internal electrical resistance inside the coil."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 confuses inductance with rectifiers/inverters. Option 1 is correct because in classical mechanics, mass/inertia opposes any change in state of motion. Similarly, <b>Self-Inductance</b> is the intrinsic property of a coil by which it opposes any change in the current flowing through itself by generating an opposing self-induced electromotive force (**back-emf**). When current is switched on, self-induction opposes current growth; when current is switched off, it opposes current decay. Thus, it acts as **electrical inertia**. Option 2 falsely claims physical mass increase, and Option 3 confuses inductance with superconductivity."
+  },
+  {
+    "p_id": "bpsc_phys_m39_03",
+    "qe": "Airport security metal detectors utilize electromagnetic induction to detect metallic objects carried by passengers. What physical mechanism triggers the alarm when a person carrying an iron object walks through a metal detector?",
+    "qh": "एयरपोर्ट सुरक्षा मेटल डिटेक्टर यात्रियों द्वारा ले जाई जाने वाली धातु की वस्तुओं का पता लगाने के लिए विद्युत चुंबकीय प्रेरण का उपयोग करते हैं। जब कोई लोहे की वस्तु ले जाने वाला व्यक्ति मेटल डिटेक्टर से होकर गुजरता है तो कौन सा भौतिक तंत्र अलार्म को ट्रिगर करता है?",
+    "o": [
+      "The metallic object blocks static radio signals, creating a vacuum gap.",
+      "The metallic object alters the magnetic flux linked with the detector's current-carrying wire coil, inducing a current change that sets off the alarm circuit.",
+      "The metallic object generates high-voltage X-rays that melt the detector wire.",
+      "The metallic object neutralizes the electrostatic charge on the passenger's skin."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 misidentifies the mechanism as signal blocking. Option 1 is correct because a metal detector consists of a coil of wire carrying a small, stable alternating current associated with a specific magnetic flux. When a passenger carrying a ferromagnetic or conducting metal (like iron) passes through the loop, the metal's high magnetic permeability alters the localized **magnetic flux linked with the coil**. According to Faraday's law, this flux change induces a secondary **change in the coil's current**, which electronic sensors detect to trigger an audible alarm. Option 2 falsely claims X-ray emission, and Option 3 describes static discharge."
+  },
+  {
+    "p_id": "bpsc_phys_m39_04",
+    "qe": "Eddy currents (Foucault currents) are closed circulating loops of induced current set up in bulk metallic conductors exposed to changing magnetic fields. What structural plane do eddy currents occupy relative to the magnetic field, and what primary effects do they display?",
+    "qh": "भंवर धाराएं (Eddy currents / Foucault currents) परिवर्तनशील चुंबकीय क्षेत्रों के संपर्क में आने वाले बल्क धात्विक चालकों में स्थापित प्रेरित धारा के बंद संचयी लूप हैं। चुंबकीय क्षेत्र के सापेक्ष भंवर धाराएं किस संरचनात्मक तल (plane) में स्थित होती हैं, और वे कौन से प्राथमिक प्रभाव प्रदर्शित करती हैं?",
+    "o": [
+      "Parallel to the magnetic field lines; display zero thermal loss.",
+      "Strictly perpendicular to the direction of the magnetic field; display both heating and magnetic damping effects.",
+      "At a $45^\\circ$ inclination to the magnetic field; display chemical electrolysis.",
+      "Along the outer surface only; convert AC into DC current."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 falsely places eddy currents parallel to field lines. Option 1 is correct because when a metallic mass experiences a changing magnetic flux, induced circulating currents (**Eddy Currents or Foucault Currents**) swirl inside the bulk material in **planes strictly perpendicular to the direction of the applied magnetic field**. These currents produce significant **Joule heating ($I^2 R$)** (utilized in industrial induction furnaces) and counter-magnetic forces (**electromagnetic damping**, used in magnetic braking for trains). Option 2 and Option 3 cite false chemical or rectification properties."
+  },
+  {
+    "p_id": "bpsc_phys_m39_05",
+    "qe": "A Commercial Electric Motor converts electrical energy into mechanical rotational work. Which structural enhancements distinguish a high-power Commercial Electric Motor from a basic permanent-magnet toy motor?",
+    "qh": "एक वाणिज्यिक इलेक्ट्रिक मोटर (Commercial Electric Motor) विद्युत ऊर्जा को यांत्रिक घूर्णन कार्य में परिवर्तित करती है। कौन से संरचनात्मक संवर्द्धन एक उच्च-शक्ति वाणिज्यिक इलेक्ट्रिक मोटर को एक बुनियादी स्थायी-चुंबक खिलौना मोटर से अलग करते हैं?",
+    "o": [
+      "Uses permanent bar magnets, a plastic core, and a single turn of copper wire.",
+      "Uses an electromagnet instead of permanent magnets, a large number of wire turns in the armature coil, and a soft iron core.",
+      "Uses direct battery current without an armature or commutator assembly.",
+      "Uses glass insulation cores that eliminate magnetic torque completely."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 describes a weak toy motor setup. Option 1 is correct because a **Commercial Electric Motor** requires high torque output. This is achieved by: <br>1. Replacing weak permanent magnets with powerful **Electromagnets**. <br>2. Winding a **large number of turns** of conducting wire into the current-carrying coil. <br>3. Winding the coil around a **Soft Iron Core**. The soft iron core plus coil assembly is called an **Armature**, which greatly concentrates magnetic flux lines, increasing the magnetic torque driving heavy appliances (pumps, washing machines, industrial fans). Options 2 and 3 list non-functional motor structures."
+  },
+  {
+    "p_id": "bpsc_phys_m39_06",
+    "qe": "Commutators maintain directional current flow in rotating generator armatures. What mechanical component distinguishes a Direct Current (DC) Dynamo/Generator from an Alternating Current (AC) Generator?",
+    "qh": "कम्यूटेटर (Commutators) घूर्णन आर्मेचर कुंडलियों में दिशात्मक धारा प्रवाह बनाए रखते हैं। कौन सा यांत्रिक घटक एक दिष्ट धारा (DC) डायनेमो/जनरेटर को एक प्रत्यावर्ती धारा (AC) जनरेटर से अलग करता है?",
+    "o": [
+      "AC generators use split-ring commutators; DC dynamos use continuous slip rings.",
+      "AC generators use continuous slip rings ($R_1, R_2$); DC dynamos use a split-ring type commutator.",
+      "DC dynamos require zero carbon brushes, whereas AC generators require three brushes.",
+      "AC generators replace soft iron armatures with permanent ceramic magnets."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 completely swaps slip rings and split rings between AC and DC generators. Option 1 is correct because: <br>1. **AC Generator:** Employs two continuous, full circular **Slip Rings ($R_1, R_2$)** that rotate with the coil while maintaining carbon brush contact, allowing output current to alternate direction symmetrically every half-rotation. <br>2. **DC Generator (Dynamo):** Replaces continuous slip rings with a **Split-Ring Commutator** (a single ring split into two halves). This split-ring mechanical flipping ensures that the carbon brush collecting current for the external circuit stays in contact with the coil arm moving *upward* in the field, yielding unidirectional **Direct Current (DC)**. Option 2 and Option 3 state false structural claims."
+  },
+  {
+    "p_id": "bpsc_phys_m39_07",
+    "qe": "Domestic electrical wiring schemes incorporate color-coded insulation covers and voltage potentials. What are the standardized insulation colors and potential values for Live, Neutral, and Earth wires in Indian domestic circuits?",
+    "qh": "घरेलू विद्युत वायरिंग योजनाओं में रंग-कोडित इन्सुलेशन कवर और वोल्टेज विभव शामिल होते हैं। भारतीय घरेलू परिपथों में लाइव, न्यूट्रल और अर्थ तारों के लिए मानकीकृत इन्सुलेशन रंग और विभव मान क्या हैं?",
+    "o": [
+      "Live: Black ($0 \\text{ V}$); Neutral: Red ($220 \\text{ V}$); Earth: Green ($110 \\text{ V}$)",
+      "Live: Red insulation ($220 \\text{ V}$ potential); Neutral: Black insulation ($0 \\text{ V}$ potential); Earth: Green insulation (ground safety at $0 \\text{ V}$ potential).",
+      "Live: Green ($220 \\text{ V}$); Neutral: White ($220 \\text{ V}$); Earth: Red ($0 \\text{ V}$)",
+      "Live: Yellow ($440 \\text{ V}$); Neutral: Blue ($110 \\text{ V}$); Earth: Black ($220 \\text{ V}$)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 swaps Live and Neutral colors and potential values. Option 1 is correct because Indian domestic distribution rules specify: <br>1. **Live Wire:** Sheathed in **Red insulation**, carrying an alternating potential of **$220 \\text{ V}$** at $50 \\text{ Hz}$. <br>2. **Neutral Wire:** Sheathed in **Black insulation**, maintained at zero reference potential (**$0 \\text{ V}$**). <br>3. **Earth Wire:** Sheathed in **Green insulation**, connected directly to a buried metallic grounding plate (**$0 \\text{ V}$**) to bleed leakage currents safely away from appliance metal bodies via the top pin of a 3-pin plug. Options 2 and 3 state incorrect color-potential mappings."
+  },
+  {
+    "p_id": "bpsc_phys_m39_08",
+    "qe": "Circuit faults like Short-Circuiting and Overloading can cause severe electrical fires. What physical condition defines Short-Circuiting, and how does it differ from Overloading?",
+    "qh": "शॉर्ट-सर्किटिंग (Short-Circuiting) और ओवरलोडिंग (Overloading) जैसे परिपथ दोष गंभीर विद्युत आग का कारण बन सकते हैं। कौन सी भौतिक स्थिति शॉर्ट-सर्किटिंग को परिभाषित करती है, और यह ओवरलोडिंग से कैसे भिन्न है?",
+    "o": [
+      "Short-circuiting occurs when neutral wire touches earth wire; Overloading occurs when voltage drops to zero.",
+      "Short-circuiting occurs when live and neutral wires touch directly, dropping circuit resistance to nearly zero and causing a massive current spike; Overloading occurs when too many high-power appliances are switched on simultaneously, drawing excessive current.",
+      "Short-circuiting is caused by low power factor; Overloading occurs only during lightning strikes.",
+      "Both short-circuiting and overloading increase circuit resistance to infinity."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 misidentifies wire contact pairs. Option 1 is correct because: <br>1. **Short-Circuiting:** Occurs when a live wire ($220 \\text{ V}$) comes into direct physical contact with a neutral wire ($0 \\text{ V}$) due to damaged insulation or fault. Circuit resistance drops to **almost zero ($R \\approx 0$)**, causing an instantaneous, dangerously high **current surge ($I \\to \\infty$)** that generates intense Joule heat ($I^2 R t$) and sparks. <br>2. **Overloading:** Occurs when the cumulative power demand of multiple high-rating appliances connected in parallel exceeds the safe current limit of the supply cable, drawing excessive total current ($I = \\sum I_k$). Options 2 and 3 list false causes or resistance claims."
+  },
+  {
+    "p_id": "bpsc_phys_m39_09",
+    "qe": "Electrical circuit protection devices include traditional wire Fuses and modern Miniature Circuit Breakers (MCBs). What operational advantage does an MCB offer over a standard lead-tin alloy fuse?",
+    "qh": "विद्युत परिपथ सुरक्षा उपकरणों में पारंपरिक तार फ्यूज और आधुनिक मिनिएचर सर्किट ब्रेकर (MCB) शामिल हैं। एक मानक सीसा-टिन मिश्र धातु फ्यूज की तुलना में MCB क्या परिचालन लाभ प्रदान करता है?",
+    "o": [
+      "MCBs generate free AC electricity during power outages.",
+      "When heavy fault current flows, an MCB trips its switch off automatically in a fraction of a second without melting, allowing quick manual reset without wire replacement.",
+      "MCBs withstand infinite current without interrupting power flow.",
+      "MCBs step up $220 \\text{ V}$ household current to $11,000 \\text{ V}$ automatically."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 falsely claims power generation during outages. Option 1 is correct because a traditional wire fuse relies on Joule heating to melt a thin $25\\%$ tin / $75\\%$ lead alloy wire ($200^\\circ\\text{C}$ melting point). Every time a fault occurs, the melted wire **must be manually replaced**. In contrast, a **Miniature Circuit Breaker (MCB)** uses electromagnetic/bimetallic trip mechanisms that automatically **flip the switch off in an extremely short time window** when overload or short-circuit current flows. Once the fault is cleared, the MCB is simply **reset manually by flipping the switch back on**, eliminating wire replacement. Option 2 invalidates protection, and Option 3 describes step-up transformers."
+  },
+  {
+    "p_id": "bpsc_phys_m39_10",
+    "qe": "Transformers alter AC voltage levels in distribution grids and industrial equipment. What fundamental operational rule governs transformer action, and why can a transformer NOT operate on Direct Current (DC)?",
+    "qh": "ट्रांसफॉर्मर वितरण ग्रिड और औद्योगिक उपकरणों में AC वोल्टेज स्तरों को बदलते हैं। कौन सा मौलिक परिचालन नियम ट्रांसफॉर्मर क्रिया को नियंत्रित करता है, और एक ट्रांसफॉर्मर दिष्ट धारा (DC) पर काम क्यों नहीं कर सकता है?",
+    "o": [
+      "Transformers operate via electrostatic induction; DC current causes soft iron core melting.",
+      "Transformers operate on Mutual Induction, which requires a continuously changing magnetic flux ($\tfrac{d\\Phi}{dt} \\neq 0$) provided strictly by AC; steady DC produces constant flux ($\tfrac{d\\Phi}{dt} = 0$), inducing zero secondary voltage.",
+      "Transformers amplify total electric power; DC voltage lacks electron mass.",
+      "Step-up transformers require high frequency radio waves not present in DC."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 misidentifies transformer physics as electrostatic. Option 1 is correct because: <br>1. **Mutual Induction Principle:** A transformer consists of primary and secondary coils wound on a laminated soft iron core. It operates strictly via **Mutual Induction** [inducing emf in a secondary coil due to rate of change of magnetic flux linked from primary coil]. <br>2. **DC Incompatibility:** Alternating Current (AC) constantly varies in magnitude and direction, providing the necessary changing magnetic flux ($\frac{dPhi}{dt} \neq 0$). Direct Current (DC) delivers a constant, steady current, creating a static magnetic field ($\frac{dPhi}{dt} = 0$). According to Faraday's law ($e = -N \frac{dPhi}{dt}$), **steady DC induces strictly ZERO voltage in the secondary coil**. Furthermore, transformers convert voltage/current while conserving power—they **do not amplify power**. Options 2 and 3 state false power amplification or radio wave claims."
+  }
+]
