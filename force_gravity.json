@@ -1,0 +1,523 @@
+ [
+   {
+    "p_id": "bpsc_phys_m25_01",
+    "qe": "Evaluating the four fundamental interactions in nature reveals vastly different coupling strengths and operational ranges. Which fundamental force possesses the maximum relative strength, and what is its operational range?",
+    "qh": "प्रकृति में चार मौलिक अंतःक्रियाओं (fundamental interactions) का मूल्यांकन अत्यधिक भिन्न युग्मन शक्तियों और परिचालन सीमाओं को उजागर करता है। किस मौलिक बल में अधिकतम सापेक्ष शक्ति होती है, और इसकी परिचालन सीमा क्या है?",
+    "o": [
+      "Electromagnetic Force (Relative Strength: $10^{36}$); Range: Infinite",
+      "Strong Nuclear Force (Relative Strength: $10^{38}$); Range: Very short (nuclear size $< 10^{-15}\\text{ m}$)",
+      "Gravitational Force (Relative Strength: $1$); Range: Infinite",
+      "Weak Nuclear Force (Relative Strength: $10^{25}$); Range: Sub-nuclear size ($< 10^{-16}\\text{ m}$)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 describes the electromagnetic force, which is the second strongest interaction. Option 1 is correct because the <b>Strong Nuclear Force</b> is the strongest interaction in nature with a relative strength of $10^{38}$ (compared to gravity = 1). However, its operation is strictly confined to a <b>very short range</b> corresponding to nuclear dimensions ($< 10^{-15}\\text{ m}$ or $\\sim 1-3\\text{ fm}$), binding protons and neutrons inside atomic nuclei. Option 2 describes the gravitational force, which has infinite range but is the weakest fundamental force. Option 3 describes the weak nuclear force involved in sub-atomic beta decay."
+  },
+  {
+    "p_id": "bpsc_phys_m25_02",
+    "qe": "Physical forces are classified into contact forces and field forces based on interaction mechanisms. Which choice correctly pairs a Field Force with its defining physical characteristic?",
+    "qh": "भौतिक बलों को अंतःक्रिया तंत्र के आधार पर संपर्क बल (contact forces) और क्षेत्र बल (field forces) में वर्गीकृत किया जाता है। कौन सा विकल्प किसी क्षेत्र बल को उसकी परिभाषित भौतिक विशेषता के साथ सही ढंग से जोड़ता है?",
+    "o": [
+      "Frictional Force: Acts without physical contact via space metric distortion.",
+      "Electrostatic Force: Acts between charged bodies at a distance without requiring physical contact, mediated through an electric field.",
+      "Viscous Drag Force: Operates across infinite spatial vacuum without molecular contact.",
+      "Tensional Force: Operates as an action-at-a-distance field force inside ropes."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 misidentifies friction (a contact force) as a field force. Option 1 is correct because <b>Field Forces (Non-contact Forces)</b> exert attraction or repulsion between physical bodies across space without requiring direct physical contact, operating via force fields. Examples include <b>Electrostatic Force</b> (mediated by electric fields between charges), Gravitational Force, and Magnetic Force. Option 2 and Option 3 misclassify mechanical contact forces (viscous drag and mechanical tension) as non-contact field forces."
+  },
+  {
+    "p_id": "bpsc_phys_m25_03",
+    "qe": "In 1687, Sir Isaac Newton published his landmark treatise 'Principia', establishing three laws of motion. What alternative designation is formally given to Newton's First Law of Motion, and what property does it define?",
+    "qh": "1687 में, सर आइजैक न्यूटन ने अपना ऐतिहासिक ग्रंथ 'प्रिंसिपिया' प्रकाशित किया, जिसमें गति के तीन नियमों की स्थापना की गई। न्यूटन के गति के प्रथम नियम को औपचारिक रूप से क्या वैकल्पिक नाम दिया गया है, और यह किस गुण को परिभाषित करता है?",
+    "o": [
+      "Law of Action-Reaction; defines momentum conservation",
+      "Law of Inertia; defines the inherent tendency of a body to resist changes in its state of rest or uniform motion along a straight line",
+      "Law of Impulsive Force; defines kinetic friction limits",
+      "Law of Universal Gravitation; defines orbital acceleration"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 refers to Newton's Third Law. Option 1 is correct because Newton's First Law of Motion states that every body retains its state of rest or uniform rectilinear motion unless compelled to change that state by an applied external force. This fundamental law is formally termed the <b>Law of Inertia</b>. It defines <b>Inertia</b> as the intrinsic property of matter to resist any modification to its state of rest, uniform speed, or direction of motion. Option 2 and Option 3 describe impulse or universal gravitation."
+  },
+  {
+    "p_id": "bpsc_phys_m25_04",
+    "qe": "Evaluating everyday inertial phenomena distinguishes between inertia of rest, motion, and direction. Why do fruits and leaves detach and fall when a fruit tree branch is vigorously shaken?",
+    "qh": "दैनिक जड़त्वीय परिघटनाओं का मूल्यांकन विश्राम (rest), गति (motion), और दिशा (direction) के जड़त्व के बीच अंतर करता me है। जब फलदार वृक्ष की शाखा को तेजी से हिलाया जाता है, तो फल और पत्तियां अलग होकर क्यों गिर जाते हैं?",
+    "o": [
+      "Branch motion creates a magnetic field that repels organic tissue.",
+      "The branch is brought into rapid motion by the applied force, while the attached fruits/leaves tend to remain at rest due to Inertia of Rest, causing them to detach.",
+      "Air friction heats the stem and melts the cell wall adhesive.",
+      "The force applied to the trunk is converted directly into gravitational weight."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 presents an impossible electromagnetic mechanism. Option 1 is correct because when a tree branch is shaken vigorously, the external force sets the branch into rapid back-and-forth motion. However, the force is not directly transmitted to the attached fruits and leaves. Due to <b>Inertia of Rest</b>, the fruits and leaves tend to maintain their original stationary state. The resulting mechanical strain at the stem junction breaks the weak attachment, causing them to fall under gravity. Option 2 and Option 3 list invalid thermal or gravitational claims."
+  },
+  {
+    "p_id": "bpsc_phys_m25_05",
+    "qe": "When a table cloth laden with heavy ceramic dishes is pulled suddenly and rapidly in a horizontal direction, the cloth slides out while the dishes remain stationary on the table. What physical principle governs this phenomenon?",
+    "qh": "जब भारी सिरेमिक बर्तनों से भरी मेजपोश (table cloth) को क्षैतिज दिशा में अचानक और तेजी से खींचा जाता है, तो मेजपोश बाहर निकल जाता है जबकि बर्तन मेज पर ही स्थिर रहते हैं। कौन सा भौतिक सिद्धांत इस परिघटना को नियंत्रित करता है?",
+    "o": [
+      "Inertia of Motion of the dishes overcoming gravity.",
+      "Inertia of Rest of the dishes, combined with the short duration of the applied force preventing significant momentum transfer via friction.",
+      "Complete absence of normal reaction force between dishes and cloth.",
+      "Conversion of static friction into nuclear strong force."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 misidentifies the state as inertia of motion. Option 1 is correct because the heavy dishes are initially at rest. When the tablecloth is pulled with high velocity, the contact force (frictional impulse) acts for an extremely short time interval ($t \\to 0$). Due to the <b>Inertia of Rest</b> of the dishes, they resist positional change, and the insufficient frictional impulse fails to impart momentum to the dishes. Thus, the cloth slips away while the dishes stay in place. Option 2 and Option 3 describe non-existent force disruptions."
+  },
+  {
+    "p_id": "bpsc_phys_m25_06",
+    "qe": "A heavy commercial truck and a light passenger car are moving at identical speeds along a highway. Why is a significantly greater braking force required to stop the truck compared to the car within the same stopping time?",
+    "qh": "एक भारी वाणिज्यिक ट्रक और एक हल्का यात्री कार राजमार्ग पर समान गति से चल रहे हैं। समान रोकने के समय के भीतर कार की तुलना में ट्रक को रोकने के लिए काफी अधिक ब्रेकिंग बल की आवश्यकता क्यों होती है?",
+    "o": [
+      "Because the car possesses higher kinetic friction than the truck.",
+      "Because the heavy truck possesses much higher linear momentum ($p = mv$) due to its large mass, requiring a greater force to produce the same rate of change of momentum.",
+      "Because the truck experiences zero gravitational inertia.",
+      "Because the speed of the car decreases exponentially due to air drag."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 incorrectly attributes stopping force to car friction. Option 1 is correct because linear momentum is defined as $p = mv$. Even if velocity $v$ is identical for both vehicles, the heavy truck has a vastly larger mass $m$, giving it a much **higher linear momentum**. According to Newton's Second Law ($F = \\frac{\\Delta p}{\\Delta t}$), stopping a vehicle in a fixed time interval $\\Delta t$ requires bringing $\\Delta p$ to zero. A larger initial momentum $\\Delta p$ demands a **proportionately greater stopping force $F$**. Option 2 and Option 3 state invalid physical claims."
+  },
+  {
+    "p_id": "bpsc_phys_m25_07",
+    "qe": "A high-velocity bullet fired from a rifle easily pierces a wooden plank, whereas a stone of identical mass thrown by hand bounces off the plank. What momentum relation explains this difference in penetration capability?",
+    "qh": "राइफल से दागी गई उच्च-वेग वाली गोली लकड़ी के तख्ते को आसानी से भेद देती है, जबकि हाथ से फेंका गया समान द्रव्यमान का पत्थर तख्ते से टकराकर वापस आ जाता है। कौन सा संवेग संबंध प्रवेश क्षमता में इस अंतर की व्याख्या करता है?",
+    "o": [
+      "The stone possesses higher inertia of direction than the bullet.",
+      "The high velocity of the bullet imparts a vastly greater linear momentum ($p = mv$), exerting a much higher impulsive impact force over a tiny area during collision.",
+      "The bullet loses mass upon contact to generate rocket thrust.",
+      "The stone undergoes elastic deformation that cancels its momentum."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 misapplies inertia of direction. Option 1 is correct because linear momentum $p = mv$ depends directly on velocity $v$. Although the bullet and hand-thrown stone have equal mass $m$, the bullet's firing velocity is several orders of magnitude higher ($v_{\\text{bullet}} \\gg v_{\\text{stone}}$), yielding a **vastly higher linear momentum**. Upon striking the wooden plank, this massive momentum is delivered over a tiny contact area in a fraction of a millisecond, creating an extreme contact force that easily pierces the wood. Option 2 and Option 3 describe incorrect physical mechanisms."
+  },
+  {
+    "p_id": "bpsc_phys_m25_08",
+    "qe": "The Law of Conservation of Linear Momentum governs isolated physical systems. What condition is strictly mandatory for the total linear momentum of a multi-body system to remain constant over time?",
+    "qh": "रेखीय संवेग संरक्षण का नियम (Law of Conservation of Linear Momentum) अलग-थलग भौतिक प्रणालियों को नियंत्रित करता है। बहु-पिंड प्रणाली का कुल रेखीय संवेग समय के साथ स्थिर रहने के लिए कौन सी स्थिति सख्ती से अनिवार्य है?",
+    "o": [
+      "The system must absorb heat energy continuously from surroundings.",
+      "Zero net external force must act upon the system ($\\sum \\vec{F}_{\\text{ext}} = 0$).",
+      "All internal forces between constituent bodies must vanish completely.",
+      "The bodies must move exclusively along circular paths at constant speed."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 incorrectly links momentum conservation to thermal heat absorption. Option 1 is correct because the **Law of Conservation of Linear Momentum** states that if the net external force acting on a system of interacting bodies is zero ($\\sum \\vec{F}_{\\text{ext}} = 0$), the total vector linear momentum of the system remains strictly constant over time (${\\vec{P}_{\\text{total}} = \\text{constant}}$). Internal forces between system components act in equal and opposite action-reaction pairs (Newton's Third Law) and cancel out globally. Option 2 is false because internal forces do not alter net system momentum. Option 3 restricts motion to circles unnecessarily."
+  },
+  {
+    "p_id": "bpsc_phys_m25_09",
+    "qe": "Rocket propulsion operates on the continuous ejection of high-temperature combustion gases from a rear nozzle. Which fundamental physical law governs the forward acceleration of a rocket in space?",
+    "qh": "रॉकेट प्रणोदन (Rocket propulsion) पिछले नोजल से उच्च तापमान दहन गैसों के निरंतर उत्सर्जन पर काम करता है। कौन सा मौलिक भौतिक नियम अंतरिक्ष में रॉकेट के आगे के त्वरण को नियंत्रित करता है?",
+    "o": [
+      "Kepler's Law of Equal Areas",
+      "Law of Conservation of Linear Momentum (and Newton's Third Law of Motion)",
+      "Pascal's Law of Fluid Pressure Transmission",
+      "Coulomb's Inverse Square Law"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 governs planetary orbits. Option 1 is correct because **Rocket Propulsion** is a classic application of the **Law of Conservation of Linear Momentum** and **Newton's Third Law of Motion**. The burning fuel ejects high-temperature exhaust gas at extreme velocity rearward, carrying huge backward momentum. To conserve total system momentum in the absence of external forces in space, an equal and opposite forward momentum is imparted to the rocket body, accelerating it forward: $m_{\\text{rocket}} \\Delta v_{\\text{rocket}} = - v_{\\text{gas}} \\Delta m_{\\text{gas}}$. Option 2 describes fluid statics, and Option 3 describes electrostatics."
+  },
+  {
+    "p_id": "bpsc_phys_m25_10",
+    "qe": "When a bullet is fired from a heavy rifle, the rifle kicks backward against the shooter's shoulder. What determines the recoil velocity ($v_{\\text{recoil}}$) of the rifle of mass $M$ firing a bullet of mass $m$ at velocity $v$?",
+    "qh": "जब किसी भारी राइफल से गोली दागी जाती है, तो राइफल निशानेबाज़ के कंधे पर पीछे की ओर झटका देती है। $v$ वेग से $m$ द्रव्यमान की गोली दागने वाली $M$ द्रव्यमान की राइफल का रीकॉइल वेग ($v_{\\text{recoil}}$) क्या निर्धारित करता है?",
+    "o": [
+      "$v_{\\text{recoil}} = + \\frac{M \\cdot v}{m}$",
+      "$v_{\\text{recoil}} = - \\frac{m \\cdot v}{M}$",
+      "$v_{\\text{recoil}} = \\sqrt{M \\cdot m \\cdot v}$",
+      "$v_{\\text{recoil}} = zero$"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 reverses mass terms and sign. Option 1 is correct because before firing, total initial system momentum is zero ($P_i = 0$). By the Law of Conservation of Linear Momentum, total final momentum must also be zero ($P_f = 0$): $M \\cdot v_{\\text{recoil}} + m \\cdot v = 0$. Solving for recoil velocity yields: <b>$$v_{\\text{recoil}} = - \\frac{m \\cdot v}{M}$$</b> The negative sign indicates that the rifle moves in the **opposite direction** (recoil) to the bullet's forward motion. Because rifle mass $M \\gg m$, $v_{\\text{recoil}}$ is much smaller than bullet speed $v$. Option 2 and Option 3 state incorrect mathematical expressions."
+  },
+  {
+    "p_id": "bpsc_phys_m25_11",
+    "qe": "Impulse represents the net effect of a large force acting over a brief time duration. What is the mathematical relationship between Impulse, force, impact duration, and linear momentum change?",
+    "qh": "आवेग (Impulse) संक्षिप्त समयांतराल पर कार्य करने वाले बड़े बल के शुद्ध प्रभाव का प्रतिनिधित्व करता है। आवेग, बल, प्रभाव अवधि और रेखीय संवेग परिवर्तन के बीच गणितीय संबंध क्या है?",
+    "o": [
+      "$\\text{Impulse} = \\frac{\\text{Force}}{\\text{Time}} = \\text{Total Kinetic Energy}$",
+      "$\\text{Impulse} = \\text{Force} \\times \\text{Time} = \\text{Change in Linear Momentum } (\\Delta p)$",
+      "$\\text{Impulse} = \\text{Mass} \\times \\text{Acceleration}^2$",
+      "$\\text{Impulse} = \\frac{\\text{Work Done}}{\\text{Velocity}}$"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 incorrectly divides force by time. Option 1 is correct because **Impulse** ($J$) is defined as the integral product of a large force acting over a short time interval $\\Delta t$: <b>$$\\text{Impulse} = \\vec{F} \\times \\Delta t = \\Delta \\vec{p} = m\\vec{v} - m\\vec{u}$$</b> By Newton's Second Law ($F = \\frac{\\Delta p}{\\Delta t}$), the total impulse imparted to a body equals its net **Change in Linear Momentum**. Its SI unit is $\\text{N}\\cdot\\text{s}$ or $\\text{kg}\\cdot\\text{m/s}$. Option 2 and Option 3 state incorrect physical formulas."
+  },
+  {
+    "p_id": "bpsc_phys_m25_12",
+    "qe": "Cricket fielders draw their hands backward while catching a fast-moving cricket ball. What physical mechanism reduces the impact force felt on the fielder's hands?",
+    "qh": "क्रिकेट के क्षेत्ररक्षक तेजी से आती हुई क्रिकेट गेंद को लपकते (कैच लेते) समय अपने हाथों को पीछे की ओर खींचते हैं। कौन सा भौतिक तंत्र क्षेत्ररक्षक के हाथों पर महसूस होने वाले प्रभाव बल को कम करता है?",
+    "o": [
+      "Drawing hands back decreases the mass of the ball.",
+      "Increasing the impact time duration ($\\\\Delta t$) during momentum change reduces the stopping force ($F = \\\\frac{\\\\Delta p}{\\\\Delta t}$) exerted on the hands.",
+      "Drawing hands back converts kinetic energy into gravity.",
+      "Increasing hand friction stops the ball instantly without force."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 incorrectly claims hand movement reduces ball mass. Option 1 is correct because stopping a moving ball requires reducing its linear momentum $p$ to zero ($\\\\Delta p = \\text{constant}$). According to the impulse-momentum theorem: $F = \\frac{\\\\Delta p}{\\\\Delta t}$. By drawing hands backward in the direction of ball motion, the fielder **increases the time duration $\\\\Delta t$** over which the momentum change occurs. A larger $\\\\Delta t$ significantly **lowers the average impact force $F$** felt by the hands, preventing pain or tissue injury. Option 2 and Option 3 present invalid physical mechanisms."
+  },
+  {
+    "p_id": "bpsc_phys_m25_13",
+    "qe": "Glassware, ceramics, and chinaware items are packed wrapped in soft materials like straw or bubble wrap during transportation. Why does soft packaging prevent breakage during jerks or collisions?",
+    "qh": "परिवहन के दौरान कांच के सामान, सिरेमिक और चीनी मिट्टी के बर्तनों को भूसे या बबल रैप जैसी नरम सामग्री में लपेटकर पैक किया जाता है। झटके या टकराव के दौरान नरम पैकेजिंग टूटने से कैसे बचाती है?",
+    "o": [
+      "Soft straw eliminates the mass of the glass objects.",
+      "Soft packaging materials deform under impact, increasing the collision time duration ($\\\\Delta t$) and thereby reducing the damaging impact force ($F = \\\\frac{\\\\Delta p}{\\\\Delta t}$).",
+      "Soft wrap creates a vacuum that repels physical forces.",
+      "Straw turns kinetic energy into permanent static electric charge."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 presents mass reduction as the cause. Option 1 is correct because when a transit vehicle experiences jerks or collisions, the soft wrapping material (paper, straw, bubble wrap) compresses gradually. This compression **increases the time of impact $\\\\Delta t$** required for momentum transfer during sudden velocity shifts. Since $F = \\frac{\\\\Delta p}{\\\\Delta t}$, extending $\\\\Delta t$ drastically **reduces the peak force $F$** delivered to fragile glassware, keeping it below the stress threshold that causes fracture. Option 2 and Option 3 describe impossible vacuum or electrical transformations."
+  },
+  {
+    "p_id": "bpsc_phys_m25_14",
+    "qe": "Evaluating the apparent weight ($R$) of a person of mass $M$ inside an elevator (lift) reveals dynamic variations depending on acceleration. What is the apparent weight experienced when the elevator accelerates vertically upward at acceleration $a$?",
+    "qh": "एक लिफ्ट के भीतर $M$ द्रव्यमान के व्यक्ति के आभासी भार ($R$) का मूल्यांकन त्वरण के आधार पर गतिक परिवर्तनों को उजागर करता है। जब लिफ्ट त्वरण $a$ के साथ लंबवत ऊपर की ओर त्वरित होती है तो व्यक्ति द्वारा अनुभव किया जाने वाला आभासी भार क्या होता है?",
+    "o": [
+      "$R = M(g - a)$",
+      "$R = M(g + a)$",
+      "$R = Mg$",
+      "$R = zero$"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 gives the apparent weight for downward acceleration. Option 1 is correct because when an elevator accelerates upward at rate $a$, the net upward force acting on a person standing on the floor scale is $\\sum F_y = R - Mg = Ma$. Solving for normal reaction (apparent weight) yields: <b>$$R = M(g + a)$$</b> Because $R > Mg$, the person feels **heavier** than their actual weight. Option 2 applies when the lift is at rest or moving at uniform velocity ($a = 0$), and Option 3 applies to free-fall ($a = g$)."
+  },
+  {
+    "p_id": "bpsc_phys_m25_15",
+    "qe": "An elevator cable snaps suddenly, causing the elevator car to plunge downward in free fall under gravity ($a = g$). What apparent weight does an occupant experience during this free-fall descent?",
+    "qh": "एक लिफ्ट की केबल अचानक टूट जाती है, जिससे लिफ्ट कार गुरुत्वाकर्षण के तहत मुफ़्त पतन (free fall, $a = g$) में नीचे की ओर गिरती है। इस मुफ़्त-पतन के दौरान एक यात्री को क्या आभासी भार महसूस होता है?",
+    "o": [
+      "Apparent weight doubles to $R = 2Mg$.",
+      "Apparent weight becomes strictly Zero ($R = M(g - g) = 0$), inducing a state of Weightlessness.",
+      "Apparent weight equals actual static weight $Mg$.",
+      "Apparent weight becomes negative, sticking the person to the floor with double force."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 claims weight doubles. Option 1 is correct because when an elevator falls freely under gravity, its downward acceleration equals $a = g$. Substituting $a = g$ into the downward acceleration equation $R = M(g - a)$ gives: <b>$$R = M(g - g) = 0$$</b> Because the floor drops at the same rate as the occupant, the normal contact reaction force between the floor scale and the occupant's feet drops to zero, creating a physical state of **Weightlessness** ($R = 0$). Option 2 applies to static or uniform motion, and Option 3 misinterprets normal forces."
+  },
+  {
+    "p_id": "bpsc_phys_m25_16",
+    "qe": "Frictional forces oppose relative sliding motion between contacting surfaces. What type of friction opposes motion before actual relative sliding begins, and what is its special dynamic characteristic?",
+    "qh": "घर्षण बल संपर्क करने वाली सतहों के बीच सापेक्ष फिसलने की गति का विरोध करते हैं। वास्तविक सापेक्ष फिसलने शुरू होने से पहले किस प्रकार का घर्षण गति का विरोध करता है, और इसकी विशेष गतिक विशेषता क्या है?",
+    "o": [
+      "Kinetic Friction; it remains strictly constant regardless of applied force.",
+      "Static Friction ($f_s$); it is a self-adjusting force that increases equal to applied external force up to limiting friction ($f_s \\le \\mu_s R$).",
+      "Rolling Friction; it exceeds kinetic friction by ten times.",
+      "Fluid Drag; it is independent of velocity."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 describes friction during ongoing motion. Option 1 is correct because **Static Friction ($f_s$)** is the opposing force that prevents relative motion between two contacting surfaces before actual sliding begins. It is a **self-adjusting force**: as external pushing force increases from zero, static friction increases identically in magnitude to cancel the force ($f_s = F_{\\\\text{applied}}$), keeping the body at rest until it reaches its maximum threshold value, termed **Limiting Friction** ($f_{\\\\text{max}} = \\mu_s R$). Option 2 incorrectly states rolling friction is larger than kinetic friction."
+  },
+  {
+    "p_id": "bpsc_phys_m25_17",
+    "qe": "Comparing different categories of frictional forces reveals distinct magnitude hierarchies. How do the coefficients of static friction ($\\mu_s$), kinetic friction ($\\mu_k$), and rolling friction rank relative to one another?",
+    "qh": "घर्षण बलों की विभिन्न श्रेणियों की तुलना करने पर विशिष्ट परिमाण पदानुक्रम (magnitude hierarchies) का पता चलता है। स्थैतिक घर्षण ($\\mu_s$), गतिक घर्षण ($\\mu_k$), और रोलिंग घर्षण के गुणांक एक दूसरे के सापेक्ष कैसे रैंक करते हैं?",
+    "o": [
+      "Rolling Friction $>$ Kinetic Friction $>$ Static Friction",
+      "Static Friction (Limiting) $>$ Kinetic (Sliding) Friction $\\gg$ Rolling Friction",
+      "Kinetic Friction $>$ Static Friction $>$ Rolling Friction",
+      "All three friction coefficients are identical for all materials"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 completely reverses friction magnitude hierarchies. Option 1 is correct because the peak static resistance (**Limiting Friction, $\\mu_s$**) required to initiate motion is always greater than the resistance encountered during steady sliding (**Kinetic Friction, $\\mu_k$**). Furthermore, **Rolling Friction** [friction occurring when a spherical or cylindrical body rolls over a surface, deforming contact area slightly] is vastly smaller than sliding kinetic friction because line/point contact minimizes surface shear. Thus: <b>$$\\mu_s > \\mu_k \\gg \\mu_{\\text{rolling}}$$</b> Option 2 and Option 3 present incorrect physical orderings."
+  },
+  {
+    "p_id": "bpsc_phys_m25_18",
+    "qe": "Friction is classically described as a 'necessary evil' in mechanical engineering and human everyday life. Which choice correctly pairs a major disadvantage (evil) with a mandatory advantage (necessary) of friction?",
+    "qh": "घर्षण को शास्त्रीय रूप से यांत्रिक इंजीनियरिंग और मानव दैनिक जीवन में एक 'आवश्यक बुराई' (necessary evil) के रूप में वर्णित किया गया है। कौन सा विकल्प घर्षण के एक प्रमुख नुकसान (बुराई) को एक अनिवार्य लाभ (आवश्यक) के साथ सही ढंग से जोड़ता है?",
+    "o": [
+      "Disadvantage: Stops walking completely; Advantage: Eliminates heat in engine cylinders.",
+      "Disadvantage: Causes wear and tear of machine components and energy loss as heat; Advantage: Enables walking, braking of vehicles, and writing on paper.",
+      "Disadvantage: Prevents vehicle tires from gripping roads; Advantage: Accelerates rocket exhaust.",
+      "Disadvantage: Decreases CGS force units; Advantage: Increases gravitational acceleration."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 incorrectly states friction stops walking. Option 1 is correct because friction is a **'Necessary Evil'**:\n1. **Why Evil (Disadvantages):** It causes continuous mechanical wear and tear of moving machine parts, reduces mechanical efficiency, and dissipates vast amounts of input energy uselessly as waste heat.\n2. **Why Necessary (Advantages):** Without contact friction, human walking would be impossible (feet would slip backward), automobile tires could not grip or brake safely, and writing with pens/chalk on paper or blackboards would fail.\nOption 2 and Option 3 present false physical claims."
+  },
+  {
+    "p_id": "bpsc_phys_m25_19",
+    "qe": "Converting force measurements between international standard (SI) and CGS metric unit systems requires specific conversion scaling factors. What is the exact relationship between 1 Newton (N) and Dynes?",
+    "qh": "अंतर्राष्ट्रीय मानक (SI) और CGS मीट्रिक इकाई प्रणालियों के बीच बल मापों को परिवर्तित करने के लिए विशिष्ट रूपांतरण स्केलिंग कारकों की आवश्यकता होती है। 1 न्यूटन (N) और डाइन (Dynes) के बीच सटीक संबंध क्या है?",
+    "o": [
+      "$1\\text{ N} = 10^3\\text{ dynes}$",
+      "$1\\text{ N} = 10^5\\text{ dynes}$",
+      "$1\\text{ N} = 10^{-5}\\text{ dynes}$",
+      "$1\\text{ N} = 10^7\\text{ dynes}$"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 uses $10^3$. Option 1 is correct because:\n$$1\\text{ Newton (N)} = 1\\text{ kg} \\cdot \\text{m/s}^2$$\nConverting units to CGS ($1\\text{ kg} = 10^3\\text{ g}$, $1\\text{ m} = 10^2\\text{ cm}$):\n$$1\\text{ N} = (10^3\\text{ g}) \\times (10^2\\text{ cm/s}^2) = 10^5\\text{ g}\\cdot\\text{cm/s}^2 = \\mathbf{10^5\\text{ dynes}}$$\nOption 2 gives the inverse conversion ($1\\text{ dyne} = 10^{-5}\\text{ N}$), and Option 3 is the conversion factor for Joules to Ergs ($1\\text{ J} = 10^7\\text{ ergs}$)."
+  },
+  {
+    "p_id": "bpsc_phys_m25_20",
+    "qe": "Evaluating an elevator accelerating vertically downward at acceleration $a$ ($a < g$) reveals a reduction in the occupant's apparent weight. What formula gives the apparent weight ($R$) in this downward accelerating frame?",
+    "qh": "त्वरण $a$ ($a < g$) से लंबवत नीचे की ओर त्वरित होने वाली लिफ्ट का मूल्यांकन यात्री के आभासी भार में कमी को उजागर करता है। इस नीचे की ओर त्वरित फ्रेम में आभासी भार ($R$) देने वाला सूत्र क्या है?",
+    "o": [
+      "$R = M(g + a)$",
+      "$R = M(g - a)$",
+      "$R = M(a - g)$",
+      "$R = Mg + Ma^2$"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 gives apparent weight for upward acceleration. Option 1 is correct because for an elevator accelerating downward at $a$, the net downward equation of motion for an occupant of mass $M$ is $\\sum F_y = Mg - R = Ma$. Solving for the apparent weight (normal reaction $R$) gives: <b>$$R = M(g - a)$$</b> Because $a > 0$, $R < Mg$, causing the occupant to feel **lighter** than their actual weight. Option 2 gives a negative sign convention inversion, and Option 3 lists non-dimensional force terms."
+  },
+   
+  {
+    "p_id": "bpsc_phys_m26_01",
+    "qe": "Engineering applications replace sliding friction with rolling friction to improve mechanical efficiency. What physical transformation occurs when ball bearings are installed between moving machinery components?",
+    "qh": "यांत्रिक दक्षता में सुधार के लिए इंजीनियरिंग अनुप्रयोगों में स्लाइडिंग घर्षण को रोलिंग घर्षण से बदल दिया जाता है। गतिमान मशीनरी घटकों के बीच बॉल बेयरिंग लगाने पर कौन सा भौतिक परिवर्तन होता है?",
+    "o": [
+      "It completely eliminates all normal reaction forces between contact surfaces.",
+      "It converts highly resistive sliding kinetic friction into much smaller rolling friction by substituting surface shear with free rolling motion.",
+      "It transforms fluid drag into static limiting friction.",
+      "It increases the coefficient of friction to prevent mechanical slippage."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 incorrectly claims normal reaction forces vanish. Option 1 is correct because <b>Ball Bearings</b> consist of free-rolling steel spheres placed between moving inner and outer races. Sliding friction involves continuous surface-to-surface shear across microscopic irregularities, whereas rolling friction involves minimal contact deformation during rolling. Installing ball bearings converts highly resistive <b>sliding kinetic friction into much smaller rolling friction</b> (since $\\mu_{\\text{rolling}} \\ll \\mu_{\\text{sliding}}$), drastically reducing energy loss as waste heat and minimizing mechanical wear and tear. Option 2 completely reverses the friction conversion process, and Option 3 misinterprets the goal of friction reduction."
+  },
+  {
+    "p_id": "bpsc_phys_m26_02",
+    "qe": "Evaluating rotational kinematics distinguishes real physical forces from non-inertial pseudo-forces. Which choice correctly contrasts Centripetal Force versus Centrifugal Force?",
+    "qh": "घूर्णी किनेमैटिक्स का मूल्यांकन गैर-जड़त्वीय छद्म-बलों (pseudo-forces) से वास्तविक भौतिक बलों को अलग करता है। कौन सा विकल्प अभिकेंद्री बल (Centripetal Force) बनाम अपकेंद्री बल (Centrifugal Force) की सटीक तुलना करता है?",
+    "o": [
+      "Centripetal force is an outward pseudo-force; Centrifugal force is a real inward central force.",
+      "Centripetal force is a real, inward force required to maintain circular motion ($F = \\frac{m v^2}{r}$); Centrifugal force is an apparent outward pseudo-force observed only from a rotating non-inertial reference frame.",
+      "Both forces exist simultaneously as a real Newton's third law action-reaction pair in an inertial frame.",
+      "Centrifugal force acts toward the center of curvature to prevent tangential velocity escape."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 completely swaps the real inward and pseudo-outward nature of these forces. Option 1 is correct because <b>Centripetal Force</b> is a real, inward-directed physical force ($F = \\frac{m v^2}{r} = m r \\omega^2$) pointing directly toward the center of curvature, necessary to continuously deflect a body's velocity vector along a curved path. Conversely, <b>Centrifugal Force</b> is a <b>pseudo-force (inertial force)</b> that appears to act radially outward away from the center of rotation solely when an observer analyzes motion from within a <b>rotating (non-inertial) frame of reference</b> due to the body's natural linear inertia. Option 2 is a classic conceptual trap: centripetal and centrifugal forces do <i>not</i> form an action-reaction pair because pseudo-forces do not originate from real physical interactions between two bodies. Option 3 reverses the directional orientation of centrifugal force."
+  },
+  {
+    "p_id": "bpsc_phys_m26_03",
+    "qe": "Separating liquid mixtures based on constituent particle densities utilizes high-speed rotational acceleration. How does a dairy cream separator isolate lighter cream from denser skimmed milk?",
+    "qh": "घटक कण घनत्वों के आधार पर तरल मिश्रणों को अलग करना उच्च गति घूर्णी त्वरण का उपयोग करता है। एक डेयरी क्रीम पृथक्कारी (cream separator) घने मलाई रहित दूध से हल्की क्रीम को कैसे अलग करता है?",
+    "o": [
+      "Lighter cream particles experience higher gravitational pull and settle at the bottom of the spinning vessel.",
+      "When spun rapidly, denser skimmed milk particles experience a greater outward inertial tendency and move toward the outer container walls, allowing lighter cream particles to collect near the central axis.",
+      "Centripetal force destroys the molecular bonds of milk proteins, evaporating water content.",
+      "Denser milk particles evaporate under friction, leaving solid cream behind."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 incorrectly assigns higher gravitational settling to lighter cream. Option 1 is correct because in a rotating container, the required inward centripetal force is $F = m r \\omega^2$. Denser particles (having higher mass $m$ per unit volume) require a larger centripetal force to remain in a given circular radius. Consequently, the <b>denser skimmed milk particles experience a greater outward inertial tendency</b> and migrate toward the outer walls of the spinning drum, while the <b>lighter cream particles</b> (lower density) are displaced inward and accumulate near the central axis of rotation, enabling continuous separation. Option 2 and Option 3 state invalid physical or thermal breakdown claims."
+  },
+  {
+    "p_id": "bpsc_phys_m26_04",
+    "qe": "The Universal Law of Gravitation mathematically defines the attractive force ($F$) operating between any two point masses in the universe. What are the precise numerical value and dimensional formula of the Universal Gravitational Constant ($G$)?",
+    "qh": "गुरुत्वाकर्षण का सार्वत्रिक नियम गणितीय रूप से ब्रह्मांड में किन्हीं दो बिंदु द्रव्यमानों के बीच कार्य करने वाले आकर्षक बल ($F$) को परिभाषित करता है। सार्वत्रिक गुरुत्वाकर्षण नियतांक ($G$) का सटीक संख्यात्मक मान और विमीय सूत्र क्या है?",
+    "o": [
+      "Value: $G = 9.8 \\text{ m/s}^2$; Dimensional Formula: $[\\text{M}^0 \\text{L}^1 \\text{T}^{-2}]$",
+      "Value: $G = 6.67 \\times 10^{-11} \\text{ N}\\cdot\\text{m}^2\\text{kg}^{-2}$; Dimensional Formula: $[\\text{M}^{-1} \\text{L}^3 \\text{T}^{-2}]$",
+      "Value: $G = 6.67 \\times 10^{11} \\text{ N}\\cdot\\text{m}\\text{kg}^{-1}$; Dimensional Formula: $[\\text{M}^1 \\text{L}^2 \\text{T}^{-1}]$",
+      "Value: $G = 1.66 \\times 10^{-24} \\text{ N}\\cdot\\text{m}^2\\text{kg}^{-2}$; Dimensional Formula: $[\\text{M}^{-2} \\text{L}^2 \\text{T}^{-2}]$"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 gives acceleration due to gravity ($g$) rather than universal constant $G$. Option 1 is correct because Newton's Universal Law of Gravitation states $F = G \\frac{m_1 m_2}{r^2} \\implies G = \\frac{F \\cdot r^2}{m_1 m_2}$. Substituting SI units yields $\\text{N}\\cdot\\text{m}^2\\text{kg}^{-2}$ with a measured standard value of <b>$G = 6.67 \\times 10^{-11} \\text{ N}\\cdot\\text{m}^2\\text{kg}^{-2}$</b>. Deriving its dimensions: <b>$$[G] = \\frac{[\\text{M}^1 \\text{L}^1 \\text{T}^{-2}][\\text{L}^2]}{[\\text{M}^2]} = [\\text{M}^{-1} \\text{L}^3 \\text{T}^{-2}]$$</b> Option 2 has an incorrect positive exponent and units, while Option 3 lists atomic mass unit constants."
+  },
+  {
+    "p_id": "bpsc_phys_m26_05",
+    "qe": "Evaluating fundamental physical interactions highlights vast disparities in coupling strengths. How does the magnitude of gravitational force compare to electrostatic and strong nuclear forces?",
+    "qh": "मौलिक भौतिक अंतःक्रियाओं का मूल्यांकन युग्मन शक्तियों में भारी असमानताओं को उजागर करता है। गुरुत्वाकर्षण बल के परिमाण की तुलना इलेक्ट्रोस्टैटिक और प्रबल नाभि‍कीय बलों (strong nuclear forces) से कैसे की जाती है?",
+    "o": [
+      "Gravitational force is the strongest force in nature, exceeding nuclear force by $10^{38}$ times.",
+      "Gravitational force is the weakest fundamental force in nature, being $10^{36}$ times smaller than electrostatic force and $10^{38}$ times smaller than strong nuclear force.",
+      "Gravitational force is identical in strength to electromagnetic force across atomic dimensions.",
+      "Gravitational force operates only over sub-nuclear distances $< 10^{-15}\\text{ m}$."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 incorrectly claims gravity is the strongest force. Option 1 is correct because **Gravitational Force** is the **weakest fundamental interaction** among the four basic forces of nature. For elementary particles (such as two protons), the relative force strength ratio is: $\\text{Gravity} : \\text{Weak Nuclear} : \\text{Electrostatic} : \\text{Strong Nuclear} = 1 : 10^{25} : 10^{36} : 10^{38}$. Thus, gravitational force is approximately **$10^{36}$ times smaller than electrostatic force** and **$10^{38}$ times smaller than strong nuclear force**. Option 2 and Option 3 state incorrect relative strengths or ranges."
+  },
+  {
+    "p_id": "bpsc_phys_m26_06",
+    "qe": "Oceanic tides on Earth are periodic oscillations of sea levels caused by celestial gravitational interactions. What celestial bodies drive oceanic tides, and how does distance influence their tidal effectiveness?",
+    "qh": "पृथ्वी पर महासागरीय ज्वार (Oceanic tides) आकाशीय गुरुत्वाकर्षण अंतःक्रियाओं के कारण समुद्र के जलस्तर का आवधिक दोलन है। कौन से आकाशीय पिंड महासागरीय ज्वार को संचालित करते हैं, और दूरी उनके ज्वारीय प्रभाव को कैसे प्रभावित करती है?",
+    "o": [
+      "Driven exclusively by Jupiter due to its massive volume.",
+      "Driven by the gravitational pulls of both the Moon and the Sun; despite the Sun's larger mass, the Moon exerts a stronger differential tidal pull because it is much closer to Earth.",
+      "Driven by Earth's internal magnetic core repelling ocean water.",
+      "Driven exclusively by the Sun during solar eclipses."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 misattributes tides to Jupiter. Option 1 is correct because **Oceanic Tides** are caused by the differential gravitational attraction exerted on Earth's oceans by **both the Moon and the Sun**. Tidal force depends on the inverse cube of distance ($\\\\text{Tidal Force} \\\\propto \\\\frac{M}{r^3}$). Because the Moon is vastly closer to Earth than the Sun ($r_{\\\\text{Moon}} \\\\ll r_{\\\\text{Sun}}$), the **Moon's tidal generating capability is approximately twice as strong as the Sun's**, despite the Sun possessing much greater overall mass. Option 2 and Option 3 describe non-existent magnetic or single-body mechanisms."
+  },
+  {
+    "p_id": "bpsc_phys_m26_07",
+    "qe": "Acceleration due to gravity ($g$) varies with vertical elevation above Earth's surface. What is the mathematical expression for acceleration due to gravity ($g'$) at a small height $h$ above Earth's surface (where $h \\ll R_e$)?",
+    "qh": "गुरुत्वीय त्वरण ($g$) का मान पृथ्वी की सतह से ऊपर जाने पर घटता है। पृथ्वी की सतह से छोटी ऊंचाई $h$ (जहां $h \\ll R_e$) पर गुरुत्वीय त्वरण ($g'$) का गणितीय व्यंजक क्या है?",
+    "o": [
+      "$g' = g \\left(1 + \\frac{2h}{R_e}\\right)$",
+      "$g' = g \\left(1 - \\frac{2h}{R_e}\\right)$",
+      "$g' = g \\left(1 - \\frac{h^2}{R_e^2}\\right)$",
+      "$g' = g \\cdot R_e \\cdot h$"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 incorrectly shows an increase in gravity with height. Option 1 is correct because at height $h$, $g' = \\frac{G M_e}{(R_e + h)^2} = g \\left(1 + \\frac{h}{R_e}\\right)^{-2}$. Expanding via the binomial theorem for small heights ($h \\ll R_e$) yields: <b>$$g' = g \\left(1 - \\frac{2h}{R_e}\\right)$$</b> This confirms that **acceleration due to gravity decreases linearly with altitude** near Earth's surface. Option 2 and Option 3 present invalid non-binomial algebraic approximations."
+  },
+  {
+    "p_id": "bpsc_phys_m26_08",
+    "qe": "Earth's non-spherical shape affects the local value of acceleration due to gravity ($g$) across geographical latitudes. How does $g$ vary between Earth's poles and the equator?",
+    "qh": "पृथ्वी का गैर-गोलाकार आकार भौगोलिक अक्षांशों पर गुरुत्वीय त्वरण ($g$) के स्थानीय मान को प्रभावित करता है। पृथ्वी के ध्रुवों (poles) और भूमध्य रेखा (equator) के बीच $g$ का मान कैसे भिन्न होता है?",
+    "o": [
+      "$g$ is maximum at the equator and minimum at the poles.",
+      "$g$ is maximum at the poles and minimum at the equator because Earth is flattened at the poles ($R_{\\text{polar}} < R_{\\text{equatorial}}$).",
+      "$g$ is strictly identical at all latitudes on Earth's surface.",
+      "$g$ becomes zero at the poles due to magnetic cancellation."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 reverses polar and equatorial values. Option 1 is correct because Earth is an oblate spheroid—flattened at the poles and bulging at the equator. Consequently, the **polar radius ($R_p$) is approximately $21\\text{ km}$ smaller than the equatorial radius ($R_e$)**. Since acceleration due to gravity is inversely proportional to the square of radius ($g = \\frac{G M}{R^2}$), **$g$ reaches its maximum value at the poles** (where distance to Earth's center is smallest) and **its minimum value at the equator** (where distance is greatest). Option 2 ignores Earth's shape, and Option 3 states a false magnetic claim."
+  },
+  {
+    "p_id": "bpsc_phys_m26_09",
+    "qe": "Descending into a deep mine shaft reduces the effective Earth mass attracting an object. What is the value of acceleration due to gravity ($g$) at the exact geometric center of the Earth?",
+    "qh": "एक गहरी खदान में नीचे जाने पर वस्तु को आकर्षित करने वाला प्रभावी पृथ्वी का द्रव्यमान कम हो जाता है। पृथ्वी के ठीक ज्यामितीय केंद्र पर गुरुत्वीय त्वरण ($g$) का मान क्या होता है?",
+    "o": [
+      "$g = 9.8 \\text{ m/s}^2$",
+      "$g = 0 \\text{ m/s}^2$",
+      "$g = \\infty \\text{ m/s}^2$",
+      "$g = 4.9 \\text{ m/s}^2$"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 assumes surface gravity persists at the center. Option 1 is correct because at depth $d$ inside Earth, acceleration due to gravity is given by $g' = g \\left(1 - \\frac{d}{R_e}\\right)$. At the exact geometric center of Earth, depth equals the Earth's radius ($d = R_e$). Substituting $d = R_e$ gives: <b>$$g' = g \\left(1 - \\frac{R_e}{R_e}\\right) = g(1 - 1) = \\mathbf{0 \\text{ m/s}^2}$$</b> At the center, gravitational attraction from surrounding spherical mass shells cancels out symmetrically in all directions, yielding **zero acceleration due to gravity**. Option 2 and Option 3 state incorrect finite or infinite values."
+  },
+  {
+    "p_id": "bpsc_phys_m26_10",
+    "qe": "Physics strictly distinguishes between Mass and Weight. Which choice correctly contrasts Mass versus Weight?",
+    "qh": "भौतिकी द्रव्यमान (Mass) और भार (Weight) के बीच सख्ती से अंतर करती है। कौन सा विकल्प द्रव्यमान बनाम भार की सटीक तुलना करता है?",
+    "o": [
+      "Mass is a vector quantity that changes with location; Weight is a scalar quantity that remains constant.",
+      "Mass measures an object's inertia (scalar, measured in $\\text{kg}$, constant everywhere); Weight is the downward gravitational force acting on an object ($W = mg$, vector, measured in Newtons, varies with local $g$).",
+      "Mass becomes zero at the center of the Earth; Weight can never be zero.",
+      "Mass is measured in Newtons; Weight is measured in kilograms."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 completely swaps scalar/vector classifications and constancy. Option 1 is correct because: (1) **Mass ($m$)** is a fundamental scalar quantity measuring matter content and inertia, expressed in **kilograms ($\\\\text{kg}$)**, which remains strictly invariant everywhere in the universe; (2) **Weight ($W = mg$)** is a derived vector force directed toward Earth's center, expressed in **Newtons ($\\\\text{N}$)**, which varies dynamically with local changes in $g$ (becoming zero at Earth's center or in free-fall). Option 2 reverses mass and weight zero-limit behaviors, and Option 3 swaps SI unit assignments."
+  },
+  {
+    "p_id": "bpsc_phys_m26_11",
+    "qe": "An astronaut travels from Earth to the Moon's surface. If an object weighs $600\\text{ N}$ on Earth, what is its approximate weight on the Moon, and how does its mass change?",
+    "qh": "एक अंतरिक्ष यात्री पृथ्वी से चंद्रमा की सतह की यात्रा करता है। यदि किसी वस्तु का भार पृथ्वी पर $600\\text{ N}$ है, तो चंद्रमा पर इसका अनुमानित भार क्या होगा, और इसका द्रव्यमान कैसे बदलेगा?",
+    "o": [
+      "Weight on Moon: $600\\text{ N}$; Mass increases by 6 times.",
+      "Weight on Moon: $100\\text{ N}$ ($1/6^{\\text{th}}$ of Earth weight); Mass remains strictly identical.",
+      "Weight on Moon: $3600\\text{ N}$; Mass decreases to zero.",
+      "Weight on Moon: $0\\text{ N}$; Mass decreases by 6 times."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 incorrectly states weight remains $600\\text{ N}$ and mass changes. Option 1 is correct because surface gravity on the Moon is approximately $1/6^{\\text{th}}$ that of Earth ($g_{\\text{Moon}} \\approx \\frac{1}{6} g_{\\text{Earth}}$). Therefore, an object's weight on the Moon is: <b>$$W_{\\text{Moon}} = m \\cdot g_{\\text{Moon}} = m \\cdot \\frac{g_{\\text{Earth}}}{6} = \\frac{600\\text{ N}}{6} = \\mathbf{100\\text{ N}}$$</b> However, **mass ($m$) is an intrinsic scalar property that remains strictly invariant** regardless of location. Option 2 multiplies weight by 6, and Option 3 claims mass decreases."
+  },
+  {
+    "p_id": "bpsc_phys_m26_12",
+    "qe": "Artificial satellites placed in Earth orbit serve vital global functions. What specific orbital altitude and time period define a Geostationary (Geosynchronous) Satellite?",
+    "qh": "पृथ्वी की कक्षा में स्थापित कृत्रिम उपग्रह महत्वपूर्ण वैश्विक कार्य करते हैं। कौन सी विशिष्ट कक्षीय ऊंचाई और आवर्तकाल एक भू-स्थिर (Geostationary) उपग्रह को परिभाषित करते हैं?",
+    "o": [
+      "Altitude: $500\\text{ km}$; Time Period: $90\\text{ minutes}$",
+      "Altitude: $\\sim 36,000\\text{ km}$ above the equator; Time Period: $24\\text{ hours}$ (matching Earth's rotation period).",
+      "Altitude: $1,000,000\\text{ km}$; Time Period: $365\\text{ days}$",
+      "Altitude: $100\\text{ km}$; Time Period: $12\\text{ hours}$"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 describes Low Earth Orbit (LEO) polar satellites. Option 1 is correct because a <b>Geostationary (Geosynchronous) Satellite</b> orbits in the equatorial plane at a fixed altitude of approximately <b>$35,786\\text{ km}$ ($\\\\sim 36,000\\text{ km}$)</b> above Earth's surface. Its orbital time period is exactly <b>$24\\text{ hours}$</b>, matching Earth's axial rotation period. Consequently, the satellite revolves in the same direction as Earth's rotation (west to east) and appears completely stationary relative to any fixed ground point on Earth. Option 2 and Option 3 list non-geostationary parameters."
+  },
+  {
+    "p_id": "bpsc_phys_m26_13",
+    "qe": "An artificial satellite orbiting Earth possesses mechanical energy due to its motion and spatial position in the gravitational field. What is the total mechanical energy ($E$) of a satellite of mass $m$ in a stable circular orbit of radius $r$ around Earth (mass $M$)?",
+    "qh": "पृथ्वी की परिक्रमा करने वाले एक कृत्रिम उपग्रह में अपनी गति और गुरुत्वाकर्षण क्षेत्र में स्थानिक स्थिति के कारण यांत्रिक ऊर्जा होती है। पृथ्वी (द्रव्यमान $M$) के चारों ओर त्रिज्या $r$ की एक स्थिर वृत्ताकार कक्षा में $m$ द्रव्यमान वाले उपग्रह की कुल यांत्रिक ऊर्जा ($E$) क्या है?",
+    "o": [
+      "$E = + \\frac{G M m}{r}$",
+      "$E = - \\frac{G M m}{2r}$",
+      "$E = - \\frac{G M m}{r^2}$",
+      "$E = zero$"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 gives positive potential energy. Option 1 is correct because an orbiting satellite possesses: <br>1. <b>Potential Energy ($U$):</b> $U = - \\frac{G M m}{r}$ <br>2. <b>Kinetic Energy ($K$):</b> $K = \\frac{1}{2} m v_o^2 = \\frac{1}{2} m \\left(\\frac{G M}{r}\\right) = + \\frac{G M m}{2r}$ <br>3. <b>Total Mechanical Energy ($E = K + U$):</b> <br>$$E = \\frac{G M m}{2r} - \\frac{G M m}{r} = - \\mathbf{\\frac{G M m}{2r}}$$ <br>The <b>negative sign</b> signifies that the satellite is bound to Earth's gravitational field. <b>Binding Energy</b> is defined as the energy required to free the satellite to infinity, which equals $-E = + \\frac{G M m}{2r}$. Option 2 lists force dependence, and Option 3 incorrectly asserts zero total energy."
+  },
+  {
+    "p_id": "bpsc_phys_m26_14",
+    "qe": "Johannes Kepler formulated three empirical laws governing planetary motion around the Sun. What is the mathematical statement of Kepler's Third Law (Law of Periods)?",
+    "qh": "जोहान्स केप्लर ने सूर्य के चारों ओर ग्रहों की गति को नियंत्रित करने वाले तीन अनुभवजन्य नियम प्रतिपादित किए। केप्लर के तीसरे नियम (आवर्तकाल का नियम) का गणितीय कथन क्या है?",
+    "o": [
+      "$T \\propto a$",
+      "$T^2 \\propto a^3$ (or $T^2 = K \\cdot a^3$)",
+      "$T^3 \\propto a^2$",
+      "$T \\propto \\frac{1}{a^2}$"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 asserts linear period-distance scaling. Option 1 is correct because **Kepler's Third Law (Law of Periods)** states that the square of the orbital time period ($T$) of a planet revolving around the Sun is directly proportional to the cube of the semi-major axis ($a$) of its elliptical orbit: <b>$$T^2 \\propto a^3 \\implies T^2 = K \\cdot a^3$$</b> This law confirms that planets farther from the Sun (larger semi-major axis $a$) take significantly longer times to complete one full revolution. Option 2 reverses exponents ($T^3 \\propto a^2$), and Option 3 asserts inverse square dependence."
+  },
+  {
+    "p_id": "bpsc_phys_m26_15",
+    "qe": "Kepler's Second Law (Law of Areas) states that a radius vector joining a planet to the Sun sweeps out equal areas in equal intervals of time. What fundamental conservation law underpins Kepler's Law of Areas?",
+    "qh": "केप्लर का दूसरा नियम (क्षेत्रफल का नियम) बताता है कि किसी ग्रह को सूर्य से जोड़ने वाली त्रिज्या रेखा समान समयांतराल में समान क्षेत्रफल तय करती है। केप्लर के क्षेत्रफल के नियम का आधार कौन सा मौलिक संरक्षण नियम है?",
+    "o": [
+      "Law of Conservation of Linear Momentum",
+      "Law of Conservation of Angular Momentum",
+      "Law of Conservation of Thermodynamic Enthalpy",
+      "Law of Conservation of Electric Charge"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 misidentifies linear momentum conservation. Option 1 is correct because the gravitational force exerted by the Sun on a planet acts strictly along the central radial line joining their centers ($\\\\vec{r}$). Because force is radial, net torque about the Sun is zero ($\\vec{\\tau} = \\vec{r} \\times \\vec{F} = 0$). Zero torque implies that the **Angular Momentum ($L = m r^2 \\omega = m r v_{\\perp}$)** of the planet remains strictly conserved. Aerial speed is related to angular momentum by $\\frac{dA}{dt} = \\frac{L}{2m} = \\text{constant}$, establishing **Kepler's Second Law as a direct consequence of Conservation of Angular Momentum**. This implies that a planet moves **faster when closer to the Sun (perihelion)** and **slower when farther away (aphelion)**. Option 2 and Option 3 state non-gravitational conservation laws."
+  },
+  {
+    "p_id": "bpsc_phys_m26_16",
+    "qe": "Orbital velocity ($v_o$) is the horizontal velocity required to insert a satellite into a stable circular orbit around Earth. What is the approximate value of $v_o$ for a satellite orbiting very close to Earth's surface ($h \\approx 0$)?",
+    "qh": "कक्षीय वेग ($v_o$) वह क्षैतिज वेग है जो किसी उपग्रह को पृथ्वी के चारों ओर एक स्थिर वृत्ताकार कक्षा में स्थापित करने के लिए आवश्यक है। पृथ्वी की सतह के बहुत करीब ($h \\approx 0$) परिक्रमा करने वाले उपग्रह के लिए $v_o$ का अनुमानित मान क्या है?",
+    "o": [
+      "$v_o = 11.2 \\text{ km/s}$",
+      "$v_o = \\sqrt{g R_e} \\approx 7.92 \\text{ km/s} \\approx 8.0 \\text{ km/s}$",
+      "$v_o = 3.0 \\times 10^5 \\text{ km/s}$",
+      "$v_o = 1.21 \\text{ km/s}$"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 gives escape velocity ($v_e$). Option 1 is correct because orbital velocity is given by $v_o = \\sqrt{\\frac{G M}{R_e + h}}$. For a satellite orbiting extremely close to Earth's surface ($h \\approx 0$), substituting $G M = g R_e^2$ yields: <b>$$v_o = \\sqrt{g R_e}$$</b> Substituting $g = 9.8 \\text{ m/s}^2$ and $R_e = 6.37 \\times 10^6 \\text{ m}$ gives: <b>$$v_o = \\sqrt{9.8 \\times 6.37 \\times 10^6} \\approx 7918 \\text{ m/s} \\approx 7.92 \\text{ km/s} \\approx 8.0 \\text{ km/s}$$</b> Option 2 is the speed of light, and Option 3 is an arbitrary value."
+  },
+  {
+    "p_id": "bpsc_phys_m26_17",
+    "qe": "Projection velocity dictates the trajectory shape of an object launched horizontally from orbital altitude. What trajectory does an object follow if its launch speed $v$ satisfies $v_o < v < v_e$?",
+    "qh": "प्रक्षेपण वेग कक्षीय ऊंचाई से क्षैतिज रूप से प्रक्षेपित वस्तु के प्रक्षेपवक्र के आकार को निर्धारित करता है। यदि किसी वस्तु की प्रक्षेपण चाल $v$, $v_o < v < v_e$ को संतुष्ट करती है, तो वह किस प्रक्षेपवक्र का अनुसरण करेगी?",
+    "o": [
+      "It falls directly back to Earth in a straight line.",
+      "It moves in a stable Elliptical Path around Earth.",
+      "It moves in a stable Circular Path.",
+      "It escapes Earth's gravity along a parabolic path never to return."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 occurs when projection speed is less than orbital velocity ($v < v_o$). Option 1 is correct because orbital trajectory regimes are determined by launch velocity $v$:\n1. $v < v_o$: Satellite falls back to Earth in a spiral/parabolic arc.\n2. $v = v_o$: Satellite moves in a **Stable Circular Path**.\n3. **$v_o < v < v_e$:** Satellite moves in a **Stable Elliptical Path** around Earth (with Earth at one focus).\n4. $v = v_e$: Satellite escapes Earth's gravity along a parabolic trajectory.\nOption 2 applies to $v = v_o$, and Option 3 applies to $v = v_e$.\n"
+  },
+  {
+    "p_id": "bpsc_phys_m26_18",
+    "qe": "Escape velocity ($v_e$) is the minimum projection speed required for a body to break free permanently from a planet's gravitational field. What is the value of escape velocity from Earth's surface, and what is its mathematical formula?",
+    "qh": "पलायन वेग ($v_e$) किसी पिंड को किसी ग्रह के गुरुत्वाकर्षण क्षेत्र से स्थायी रूप से मुक्त होने के लिए आवश्यक न्यूनतम प्रक्षेपण चाल है। पृथ्वी की सतह से पलायन वेग का मान क्या है, और इसका गणितीय सूत्र क्या है?",
+    "o": [
+      "$v_e = \\sqrt{g R_e} = 7.92 \\text{ km/s}$",
+      "$v_e = \\sqrt{2 g R_e} \\approx 11.2 \\text{ km/s}$",
+      "$v_e = 2 g R_e = 25.4 \\text{ km/s}$",
+      "$v_e = \\frac{g}{R_e} = 0.5 \\text{ km/s}$"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 describes orbital velocity. Option 1 is correct because escape velocity is derived by equating initial kinetic energy to gravitational binding energy: $\\frac{1}{2} m v_e^2 = \\frac{G M m}{R_e} \\implies v_e = \\sqrt{\\frac{2 G M}{R_e}}$. Since $G M = g R_e^2$, this simplifies to: <b>$$v_e = \\sqrt{2 g R_e}$$</b> Substituting $g = 9.8 \\text{ m/s}^2$ and $R_e = 6370 \\text{ km}$ yields **$v_e \\approx 11.2 \\text{ km/s}$**. A projectile launched at or above $11.2 \\text{ km/s}$ from Earth will escape gravity and never return. Option 2 and Option 3 present invalid mathematical derivations."
+  },
+  {
+    "p_id": "bpsc_phys_m26_19",
+    "qe": "Orbital velocity ($v_o$) and escape velocity ($v_e$) near Earth's surface are linked by a precise mathematical constant ratio. What is the relationship linking $v_e$ and $v_o$?",
+    "qh": "पृथ्वी की सतह के पास कक्षीय वेग ($v_o$) और पलायन वेग ($v_e$) एक सटीक गणितीय अचर अनुपात द्वारा जुड़े हुए हैं। $v_e$ और $v_o$ को जोड़ने वाला संबंध क्या है?",
+    "o": [
+      "$v_e = 2 \\cdot v_o$",
+      "$v_e = \\sqrt{2} \\cdot v_o \\approx 1.414 \\cdot v_o$",
+      "$v_e = \\frac{v_o}{\\sqrt{2}}$",
+      "$v_e = v_o^2$"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 incorrectly doubles orbital velocity. Option 1 is correct because comparing near-surface orbital velocity ($v_o = \\sqrt{g R_e}$) and escape velocity ($v_e = \\sqrt{2 g R_e}$) yields: <b>$$v_e = \\sqrt{2 g R_e} = \\sqrt{2} \\cdot \\sqrt{g R_e} = \\mathbf{\\sqrt{2} \\cdot v_o}$$</b> This proves that escape velocity near Earth's surface is exactly **$\\sqrt{2}$ times (about $1.414$ times or $41.4\\%$ greater than) orbital velocity**. If an orbiting satellite's speed is increased by $41.4\\%$, it escapes Earth's gravitational orbit entirely. Option 2 inverts the ratio, and Option 3 squares the speed."
+  },
+  {
+    "p_id": "bpsc_phys_m26_20",
+    "qe": "Weightlessness occurs when an object experiences zero apparent weight ($W_{\\text{apparent}} = 0$). Which physical scenario produces a state of weightlessness?",
+    "qh": "भारहीनता (Weightlessness) तब होती है जब कोई वस्तु शून्य आभासी भार ($W_{\\text{apparent}} = 0$) का अनुभव करती है। कौन सा भौतिक परिदृश्य भारहीनता की स्थिति उत्पन्न करता है?",
+    "o": [
+      "Standing firmly on Earth's polar surface.",
+      "Falling freely under gravity alone, orbiting inside a space satellite, or being present at Earth's geometric center.",
+      "Submerged deep inside ocean water at constant density.",
+      "Accelerating upward in a high-speed elevator."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 represents maximum weight ($W = m g_{\\text{max}}$). Option 1 is correct because **Weightlessness** is the physical condition where the normal contact reaction force ($R$) supporting a body drops to zero ($R = 0$). This occurs during:\n1. **Free Fall:** Falling under gravity alone ($a = g implies R = M(g - g) = 0$).\n2. **Orbiting Spacecraft:** Satellites and occupants are in continuous free fall toward Earth.\n3. **Center of Earth:** Where local gravity vanishes ($g = 0 implies W = 0$).\n4. **Elevator Cable Break:** Free-falling elevator car.\nOption 2 involves buoyant fluid upthrust (not zero gravity weightlessness), and Option 3 increases apparent weight ($R = M(g+a)$)."
+  }
+]
