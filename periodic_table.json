@@ -1,0 +1,654 @@
+[
+  {
+    "p_id": "bpsc_periodic_01",
+    "qe": "According to Döbereiner's Law of Triads, elements with similar chemical properties were arranged in groups of three by increasing atomic mass. Which condition defines the relationship among the atomic masses within a valid Döbereiner triad?",
+    "qh": "डोबेराइनर के त्रिक के नियम (Döbereiner's Law of Triads) के अनुसार, समान रासायनिक गुणों वाले तत्वों को बढ़ते परमाणु द्रव्यमान के क्रम में तीन-तीन के समूहों में व्यवस्थित किया गया था। एक वैध डोबेराइनर त्रिक के भीतर परमाणु द्रव्यमान के संबंध को कौन सी शर्त परिभाषित करती है?",
+    "o": [
+      "The atomic mass of the lightest element is the geometric mean of the other two elements.",
+      "The atomic mass of the middle element is roughly the arithmetic average of the atomic masses of the other two elements.",
+      "The sum of the atomic masses of the outer two elements equals the atomic mass of the middle element.",
+      "The middle element always possesses double the atomic mass of the first element."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 incorrectly proposes a geometric mean relationship, which was never part of Döbereiner's formulation. Option 1 is correct because Johann Wolfgang Döbereiner demonstrated in 1817 that when three chemically similar elements are arranged in increasing order of their atomic masses, the atomic mass of the middle element is approximately equal to the arithmetic mean [the sum of a collection of numbers divided by the count of numbers in the collection] of the atomic masses of the first and third elements (e.g., in the triad Lithium, Sodium, and Potassium, $\\text{Na} \\approx \\frac{\\text{Li} + \\text{K}}{2}$). Option 2 describes a direct summation rule, which is mathematically false for triads. Option 3 asserts a rigid doubling rule that does not hold true for natural elemental isotopes."
+  },
+  {
+    "p_id": "bpsc_periodic_02",
+    "qe": "Döbereiner identified three specific triads from the elements known during his era. Which choice correctly lists these three historical Döbereiner triads?",
+    "qh": "डोबेराइनर ने अपने समय में ज्ञात तत्वों में से तीन विशिष्ट त्रिकों (triads) की पहचान की थी। कौन सा विकल्प इन तीन ऐतिहासिक डोबेराइनर त्रिकों को सही ढंग से सूचीबद्ध करता है?",
+    "o": [
+      "(Li, Na, K), (Ca, Sr, Ba), and (Cl, Br, I)",
+      "(H, He, Li), (Be, Mg, Ca), and (F, Cl, Br)",
+      "(Na, Mg, Al), (K, Ca, Sc), and (Fe, Co, Ni)",
+      "(C, N, O), (P, S, Cl), and (Cu, Ag, Au)"
+    ],
+    "a": 0,
+    "e": "<b>Explanation:</b> Option 0 is correct because the three specific, historically recognized triads identified by Johann Wolfgang Döbereiner were: (1) Alkali metal group: Lithium (Li), Sodium (Na), Potassium (K); (2) Alkaline earth metal group: Calcium (Ca), Strontium (Sr), Barium (Ba); and (3) Halogen group: Chlorine (Cl), Bromine (Br), Iodine (I). Option 1 includes helium, which was undiscovered at the time, and incorrect grouping. Option 2 lists period 3 elements and transition metals that do not conform to Döbereiner's mathematical triads. Option 3 lists consecutive main-group period elements that have widely differing chemical behaviors."
+  },
+  {
+    "p_id": "bpsc_periodic_03",
+    "qe": "John Newlands formulated the 'Law of Octaves' in 1866. What was the exact range of elements he considered, starting from the lightest to the heaviest known element at that time?",
+    "qh": "जॉन न्यूलैंड्स ने 1866 में 'अष्टक नियम' (Law of Octaves) प्रतिपादित किया था। उस समय ज्ञात सबसे हल्के से लेकर सबसे भारी तत्व तक, उनके द्वारा विचार किए गए तत्वों की सटीक सीमा क्या थी?",
+    "o": [
+      "Started with Hydrogen (atomic number 1) and ended at Uranium (element 92).",
+      "Started with Hydrogen (lowest atomic mass) and ended at Thorium, which was the 56th element.",
+      "Started with Lithium (lightest metal) and ended at Gold (56th element).",
+      "Started with Helium (lightest gas) and ended at Lead (63rd element)."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 incorrectly introduces Uranium, which was not the 56th boundary element in Newlands' system. Option 1 is correct because John Newlands arranged the then-known elements in order of increasing atomic masses, beginning with Hydrogen [the chemical element with atomic mass $\\approx 1$, representing the lowest atomic mass] and ending at Thorium, which he placed as the 56th element. Option 2 incorrectly sets Lithium as the starting point instead of Hydrogen. Option 3 lists Helium, an noble gas that had not yet been discovered in 1866."
+  },
+  {
+    "p_id": "bpsc_periodic_04",
+    "qe": "What major fundamental flaw limited the applicability of Newlands' Law of Octaves when applied to elements beyond Calcium?",
+    "qh": "कैल्शियम से आगे के तत्वों पर लागू होने पर न्यूलैंड्स के अष्टक नियम (Newlands' Law of Octaves) की प्रयोज्यता को किस प्रमुख मौलिक त्रुटि ने सीमित कर दिया?",
+    "o": [
+      "Beyond calcium, every eighth element no longer possessed properties similar to that of the first.",
+      "Calcium spontaneously transformed into noble gases, disrupting the octave count.",
+      "Elements beyond calcium had identical atomic masses, making ordering impossible.",
+      "The Law of Octaves only applied to noble gases, which do not exist past calcium."
+    ],
+    "a": 0,
+    "e": "<b>Explanation:</b> Option 0 is correct because Newlands' Law of Octaves [the principle that every eighth element exhibits repeating chemical and physical properties when arranged by increasing atomic mass] worked well only for lighter elements up to Calcium. Beyond Calcium, higher transition elements possessed $d$-subshell electronic configurations that disrupted this periodic 8-step repetition. Option 1 proposes a false nuclear transmutation distractor. Option 2 claims identical atomic masses, which is scientifically false. Option 3 incorrectly claims the law applied to noble gases, which were completely unknown in 1866 and whose eventual discovery actually rendered the octave rule obsolete."
+  },
+  {
+    "p_id": "bpsc_periodic_05",
+    "qe": "In order to fit existing elements into his table, Newlands made several structural compromises. Which pair of elements did he adjust into the same single slot under the halogen column?",
+    "qh": "मौजूदा तत्वों को अपनी तालिका में फिट करने के लिए, न्यूलैंड्स ने कई संरचनात्मक समझौते किए। हैलोजन कॉलम के तहत उन्होंने किन दो तत्वों को एक ही स्लॉट में समायोजित किया?",
+    "o": [
+      "Cobalt and Nickel",
+      "Iron and Copper",
+      "Scandium and Gallium",
+      "Sodium and Potassium"
+    ],
+    "a": 0,
+    "e": "<b>Explanation:</b> Option 0 is correct because, in order to force elements into his 8-note musical grid, Newlands placed Cobalt (Co) and Nickel (Ni) together in the same single slot. Furthermore, he placed them in the same column as Fluorine, Chlorine, and Bromine, despite Cobalt and Nickel having radically different metallic properties compared to these highly reactive non-metallic Halogens [group 17 elements that form salts when combined with metals]. Option 1 refers to iron, which Newlands placed far away from Co and Ni despite their strong chemical similarities. Option 2 lists elements predicted much later by Mendeleev. Option 3 lists alkali metals that occupied separate correct slots."
+  },
+  {
+    "p_id": "bpsc_periodic_06",
+    "qe": "How did the subsequent discovery of noble gases (such as Helium, Neon, and Argon) impact Newlands' Law of Octaves?",
+    "qh": "उत्कृष्ट गैसों (जैसे हीलियम, नियॉन और ऑर्गन) की बाद में हुई खोज ने न्यूलैंड्स के अष्टक नियम को कैसे प्रभावित किया?",
+    "o": [
+      "It strengthened the Law of Octaves by adding a ninth musical note to the scale.",
+      "It rendered the Law of Octaves completely irrelevant, as noble gases turned the repeating periodicity from an 8th-element pattern into a 9th-element pattern.",
+      "It forced all transition metals to convert into halogens.",
+      "It had zero impact because noble gases were classified as non-elements."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 incorrectly suggests the musical analogy expanded seamlessly. Option 1 is correct because when inert Noble Gases [monatomic, unreactive gaseous elements with completely filled valence electron shells] were discovered, their inclusion between the halogens and alkali metals expanded the periodic repeat interval from 8 elements to 9 elements. This destroyed the core premise of the 'octave' (repeating every 8th element), rendering Newlands' Law obsolete. Option 2 is a nonsensical chemical transformation distractor. Option 3 is false because noble gases are distinct chemical elements whose discovery profoundly reshaped periodic classification."
+  },
+  {
+    "p_id": "bpsc_periodic_07",
+    "qe": "When Dmitri Mendeléev initiated his work on the Periodic Table, how many elements were known, and on which fundamental atomic property did he base his classification?",
+    "qh": "जब दमित्री मेंडलीव ने आवर्त सारणी पर अपना काम शुरू किया, तब कितने तत्व ज्ञात थे, और उन्होंने अपना वर्गीकरण किस मौलिक परमाणु गुण पर आधारित किया था?",
+    "o": [
+      "56 elements; based strictly on atomic number.",
+      "63 elements; based on atomic mass and similarity of chemical properties.",
+      "118 elements; based on electronic configurations.",
+      "94 elements; based on isotopic abundances."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 uses Newlands' count (56) and Moseley's criterion (atomic number). Option 1 is correct because when Dmitri Mendeléev started developing his periodic system in 1869, exactly 63 elements were known to science. He organized them by correlating their fundamental Atomic Mass [the total mass of protons and neutrons in an atomic nucleus] with their physical and chemical properties. Option 2 lists the present total count of known elements. Option 3 lists the number of naturally occurring elements today."
+  },
+  {
+    "p_id": "bpsc_periodic_08",
+    "qe": "In evaluating the chemical properties of elements for his classification, why did Mendeléev focus specifically on the compounds formed with Hydrogen and Oxygen?",
+    "qh": "अपने वर्गीकरण के लिए तत्वों के रासायनिक गुणों का मूल्यांकन करते समय, मेंडलीव ने विशेष रूप से हाइड्रोजन और ऑक्सीजन के साथ बनने वाले यौगिकों पर ही ध्यान क्यों केंद्रित किया?",
+    "o": [
+      "Because Hydrogen and Oxygen were the only elements with known atomic masses at that time.",
+      "Because Hydrogen and Oxygen are very reactive and form compounds (hydrides and oxides) with almost all known elements.",
+      "Because Hydrides and Oxides do not contain electrons, simplifying chemical analysis.",
+      "Because Hydrogen and Oxygen were the only non-metallic elements discovered by 1869."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 is false because atomic masses of many elements had been calculated by 1869. Option 1 is correct because Mendeléev selected Hydrogen and Oxygen as reference elements because of their extreme chemical reactivity, allowing them to form stable Hydrides [compounds formed by hydrogen with another element] and Oxides [compounds formed by oxygen with another element] with virtually every other element. The basic chemical formulae of these hydrides (e.g., $\\text{RH}_4$) and oxides (e.g., $\\text{RO}_2$) served as primary classification criteria. Option 2 is scientifically absurd as all chemical compounds contain electrons. Option 3 is false as halogens and carbon were well known prior to 1869."
+  },
+  {
+    "p_id": "bpsc_periodic_09",
+    "qe": "State Mendeléev's Periodic Law as originally formulated in his published work of 1869/1872.",
+    "qh": "1869/1872 में प्रकाशित अपने मूल कार्य में प्रतिपादित मेंडलीव के आवर्त नियम (Mendeléev's Periodic Law) का कथन क्या है?",
+    "o": [
+      "The properties of elements are a periodic function of their atomic numbers.",
+      "The properties of elements are the periodic function of their atomic masses.",
+      "The physical and chemical properties of elements repeat every eighth element sequentially.",
+      "The atomic mass of an element is the arithmetic mean of its adjacent group neighbors."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 states the Modern Periodic Law formulated later by Henry Moseley. Option 1 is correct because Mendeléev's original Periodic Law states that 'the physical and chemical properties of elements are the periodic function of their atomic masses'. This meant that when elements are arranged in increasing order of atomic mass, elements with similar properties recur at regular intervals. Option 2 states Newlands' Law of Octaves. Option 3 states Döbereiner's Triad rule."
+  },
+  {
+    "p_id": "bpsc_periodic_10",
+    "qe": "In Mendeléev's published Periodic Table, column headings utilized the general letter 'R' to represent group elements in chemical formulae. How were the hydride of carbon (methane) and the oxide of carbon (carbon dioxide) represented under this convention?",
+    "qh": "मेंडलीव की प्रकाशित आवर्त सारणी में, रासायनिक सूत्रों में समूह तत्वों का प्रतिनिधित्व करने के लिए कॉलम हेडिंग में सामान्य अक्षर 'R' का उपयोग किया गया था। इस परंपरा के तहत कार्बन के हाइड्राइड (मीथेन) और कार्बन के ऑक्साइड (कार्बन डाइऑक्साइड) को कैसे दर्शाया गया था?",
+    "o": [
+      "Hydride: $\\text{RH}_2$; Oxide: $\\text{RO}_4$",
+      "Hydride: $\\text{RH}_4$; Oxide: $\\text{RO}_2$",
+      "Hydride: $\\text{RH}$; Oxide: $\\text{RO}$",
+      "Hydride: $\\text{R}_4\\text{H}$; Oxide: $\\text{R}_2\\text{O}$"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 misstates the stoichiometry ratios. Option 1 is correct because Mendeléev designated group column headers with generalized chemical formulae using 'R' to denote any element in that group. For Group IV (which contains carbon), the general formula for the hydride was written as $\\text{RH}_4$ (e.g., $\\text{CH}_4$), and the oxide was written as $\\text{RO}_2$ (e.g., $\\text{CO}_2$). Option 2 represents a $1:1$ stoichiometry typical of group 1/2 oxides/hydrides. Option 3 reverses the subscript indices."
+  },
+  {
+    "p_id": "bpsc_periodic_11",
+    "qe": "Mendeléev occasionally inverted the strict sequence of increasing atomic masses to group chemically similar elements together. Which pair exemplifies this intentional anomaly in his table?",
+    "qh": "मेंडलीव ने रासायनिक रूप से समान तत्वों को एक साथ समूहित करने के लिए कभी-कभी बढ़ते परमाणु द्रव्यमान के सख्त क्रम को उलट दिया था। कौन सा जोड़ा उनकी तालिका में इस जानबूझकर की गई विसंगति का उदाहरण है?",
+    "o": [
+      "Cobalt (atomic mass 58.9) placed before Nickel (atomic mass 58.7)",
+      "Sodium (atomic mass 23.0) placed before Magnesium (atomic mass 24.3)",
+      "Lithium (atomic mass 6.9) placed before Beryllium (atomic mass 9.0)",
+      "Carbon (atomic mass 12.0) placed before Nitrogen (atomic mass 14.0)"
+    ],
+    "a": 0,
+    "e": "<b>Explanation:</b> Option 0 is correct because Mendeléev prioritized chemical similarity over strict numerical order of atomic mass. He placed Cobalt (atomic mass 58.9) before Nickel (atomic mass 58.7) so that Cobalt would line up with Rhodium and Iridium, and Nickel with Palladium and Platinum. Option 1, 2, and 3 list standard element pairs that follow strict increasing order of both atomic mass and atomic number."
+  },
+  {
+    "p_id": "bpsc_periodic_12",
+    "qe": "Mendeléev boldly predicted the existence and properties of undiscovered elements by prefixing the Sanskrit numeral 'Eka' to preceding elements in the same group. Which modern elements correctly correspond to Eka-boron, Eka-aluminium, and Eka-silicon, respectively?",
+    "qh": "मेंडलीव ने एक ही समूह के पिछले तत्वों के आगे संस्कृत संख्या 'एका' (Eka) लगाकर खोजे न गए तत्वों के अस्तित्व और गुणों की निडरतापूर्वक भविष्यवाणी की थी। कौन से आधुनिक तत्व क्रमशः एका-बोरॉन, एका-एल्युमीनियम और एका-सिलिकॉन के सही समानुरूपी हैं?",
+    "o": [
+      "Scandium, Gallium, and Germanium",
+      "Gallium, Scandium, and Germanium",
+      "Germanium, Gallium, and Scandium",
+      "Titanium, Vanadium, and Chromium"
+    ],
+    "a": 0,
+    "e": "<b>Explanation:</b> Option 0 is correct because Mendeléev designated undiscovered elements using the prefix 'Eka' [Sanskrit word for 'one', denoting the next vacant position below a known element in a group]. His famous predictions matched perfectly with later discoveries: Eka-boron became Scandium (Sc), Eka-aluminium became Gallium (Ga), and Eka-silicon became Germanium (Ge). Option 1 and Option 2 swap the historical order of these elements. Option 3 lists transition metals that did not correspond to these specific 'Eka' gaps."
+  },
+  {
+    "p_id": "bpsc_periodic_13",
+    "qe": "Why were noble gases like Helium (He), Neon (Ne), and Argon (Ar) discovered very late in history, and how did Mendeléev's table accommodate them upon discovery?",
+    "qh": "हीलियम (He), नियॉन (Ne) और ऑर्गन (Ar) जैसी उत्कृष्ट गैसों की खोज इतिहास में बहुत देर से क्यों हुई, और खोज के बाद मेंडलीव की तालिका ने उन्हें कैसे समायोजित किया?",
+    "o": [
+      "Because they were highly explosive; they could only be placed by removing alkali metals.",
+      "Because they are extremely inert and present in extremely low concentrations in our atmosphere; they were placed in a completely new group without disturbing the existing order.",
+      "Because they were radioactive solids; they were forced into the same slots as halogens.",
+      "Because they only existed on the moon; they required modifying Mendeléev's law to base it on atomic numbers."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 incorrectly characterizes noble gases as explosive. Option 1 is correct because Noble Gases are chemically inert [unreactive due to stable, fully filled valence electron octets] and exist in extremely minute fractional concentrations in air. When Sir William Ramsay and others isolated them in the late 19th century, they could be added as a separate, unreactive Zero Group without disrupting or altering the existing periodic arrangements of Mendeléev's table, demonstrating the structural soundness of his system. Option 2 incorrectly labels them as radioactive solids. Option 3 is a false terrestrial origin distractor."
+  },
+  {
+    "p_id": "bpsc_periodic_14",
+    "qe": "Hydrogen poses a unique positioning problem in periodic classification. Which dual chemical resemblance explains why no single fixed position could be assigned to Hydrogen in Mendeléev's table?",
+    "qh": "आवर्त वर्गीकरण में हाइड्रोजन एक अनूठी स्थिति संबंधी समस्या पैदा करता है। कौन सी दोहरी रासायनिक समानता यह स्पष्ट करती है कि मेंडलीव की तालिका में हाइड्रोजन को एक भी निश्चित स्थान क्यों नहीं दिया जा सका?",
+    "o": [
+      "Resembles alkali metals (forms hydrides/oxides like $\\text{NaCl}$/$\\text{Na}_2\\text{O}$) and halogens (exists as diatomic $\\text{H}_2$ and forms covalent compounds with metals/non-metals).",
+      "Resembles noble gases (completely unreactive) and transition metals (forms complex colored ions).",
+      "Resembles alkaline earth metals (divalent cation) and metalloids (forms conductive polymers).",
+      "Resembles oxygen (forms oxides) and carbon (forms 4 covalent bonds)."
+    ],
+    "a": 0,
+    "e": "<b>Explanation:</b> Option 0 is correct because Hydrogen exhibits a dual chemical nature: (1) Like Alkali Metals [Group 1 metals], its electronic configuration ($1s^1$) allows it to lose an electron to form $\\text{H}^+$ cations and combine with halogens, oxygen, and sulfur (e.g., $\\text{HCl}$, $\\text{H}_2\\text{O}$, $\\text{H}_2\\text{S}$). (2) Like Halogens [Group 17 non-metals], it needs one electron to complete a stable shell, exists naturally as a diatomic molecule ($\\text{H}_2$), and forms covalent compounds with non-metals as well as ionic hydrides with metals (e.g., $\\text{NaH}$). This dual behavior created a major limitation in Mendeléev's table. Option 1, 2, and 3 list inaccurate chemical properties and groups."
+  },
+  {
+    "p_id": "bpsc_periodic_15",
+    "qe": "The discovery of isotopes long after Mendeléev proposed his table posed a fundamental challenge to his system. What defines isotopes, and why did they create a conflict in Mendeléev's Periodic Table?",
+    "qh": "मेंडलीव द्वारा अपनी तालिका प्रस्तावित करने के काफी समय बाद समस्थानिकों (isotopes) की खोज ने उनकी प्रणाली के सामने एक मौलिक चुनौती खड़ी कर दी। समस्थानिकों को क्या परिभाषित करता है, और उन्होंने मेंडलीव की आवर्त सारणी में द्वंद्व क्यों पैदा किया?",
+    "o": [
+      "Isotopes have different chemical properties but identical atomic masses; they required different groups.",
+      "Isotopes of an element have similar chemical properties but different atomic masses; placing them by atomic mass would require assigning multiple slots to the same element, violating periodic grouping.",
+      "Isotopes are unstable subatomic particles that lack protons entirely.",
+      "Isotopes have identical atomic numbers and identical atomic masses, making them invisible to classification."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 reverses the definition of isotopes. Option 1 is correct because Isotopes [atoms of the same chemical element that possess the same atomic number/proton count but different neutron numbers, resulting in different atomic masses] share identical chemical properties. Under Mendeléev's Law (ordering strictly by atomic mass), isotopes of a single element (e.g., Cl-35 and Cl-37) would have to be placed in separate positions across the table, despite being chemically identical. This fundamental conflict undermined atomic mass as the primary organizing principle. Option 2 gives a scientifically false definition of isotopes. Option 3 describes isobaric/isoelectronic concepts incorrectly."
+  },
+  {
+    "p_id": "bpsc_periodic_16",
+    "qe": "In 1913, Henry Moseley transformed periodic classification by modifying Mendeléev's Periodic Law. What fundamental discovery did Moseley make, and how did it change the Periodic Law?",
+    "qh": "1913 में, हेनरी मोसले (Henry Moseley) ने मेंडलीव के आवर्त नियम में संशोधन करके आवर्त वर्गीकरण को नया रूप दिया। मोसले ने कौन सी मौलिक खोज की, और इसने आवर्त नियम को कैसे बदल दिया?",
+    "o": [
+      "He discovered neutron count and stated that properties are a periodic function of mass number.",
+      "He showed that Atomic Number (Z) is a more fundamental property than atomic mass, leading to the Modern Periodic Law: 'Properties of elements are a periodic function of their atomic number.'",
+      "He discovered noble gases and stated that all elements must have 8 valence electrons.",
+      "He synthesized artificial elements and proved that atomic mass decreases across a period."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 incorrectly identifies neutron count and mass number as Moseley's criterion. Option 1 is correct because English physicist Henry Moseley demonstrated via X-ray spectroscopic experiments in 1913 that the Atomic Number [symbol $Z$, representing the total number of protons in an atomic nucleus] is a more fundamental property of an element than its atomic mass. This led directly to the Modern Periodic Law, which states that 'Properties of elements are a periodic function of their atomic number'. Option 2 misattributes the discovery of noble gases to Moseley. Option 3 makes a scientifically false assertion about atomic mass trends."
+  },
+  {
+    "p_id": "bpsc_periodic_17",
+    "qe": "How does the Modern Periodic Table resolve the anomaly regarding the placement of isotopes that plagued Mendeléev's table?",
+    "qh": "आधुनिक आवर्त सारणी समस्थानिकों (isotopes) के स्थान के संबंध में उस विसंगति को कैसे हल करती है जिसने मेंडलीव की तालिका को परेशान किया था?",
+    "o": [
+      "By separating isotopes into different sub-periods based on their neutron count.",
+      "Since isotopes of an element have the same atomic number (number of protons), they automatically occupy the exact same position in the Modern Periodic Table.",
+      "By converting all isotopes into noble gases through radioactive decay.",
+      "By placing all isotopes in the zero group along with inert gases."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 describes an unnecessary sub-period system that does not exist. Option 1 is correct because all isotopes of a given element possess the exact same number of protons, meaning they share the same **Atomic Number ($Z$)**. Since the Modern Periodic Table arranges elements strictly by increasing atomic number, all isotopes of an element naturally fall into one single slot, eliminating the conflict present in Mendeléev's mass-based system. Option 2 describes nuclear decay, which is irrelevant to periodic organization. Option 3 incorrectly groups reactive isotopes with noble gases."
+  },
+  {
+    "p_id": "bpsc_periodic_18",
+    "qe": "Out of the 118 chemical elements known to science today, how many are naturally occurring in the Earth's crust/environment?",
+    "qh": "आज विज्ञान के लिए ज्ञात 118 रासायनिक तत्वों में से कितने पृथ्वी की पपड़ी/पर्यावरण में स्वाभाविक रूप से पाए जाते हैं?",
+    "o": [
+      "56 elements",
+      "63 elements",
+      "94 elements",
+      "108 elements"
+    ],
+    "a": 2,
+    "e": "<b>Explanation:</b> Option 0 represents the total number of elements known during Newlands' time (1866). Option 1 represents the total number of elements known when Mendeléev formulated his table (1869). Option 2 is correct because out of the 118 total confirmed elements in the Modern Periodic Table, exactly 94 elements are Naturally Occurring Elements [elements found in nature without synthetic nuclear laboratory synthesis]. The remaining 24 elements (from Americium to Oganesson) are synthetic/man-made elements. Option 3 is an arbitrary incorrect numerical distractor."
+  },
+  {
+    "p_id": "bpsc_periodic_19",
+    "qe": "Consider the following statements regarding early classification systems:\n1. Döbereiner's triads failed because he could only identify three valid triads from the elements known at his time.\n2. Newlands assumed that only 56 elements existed in nature and no more elements would ever be discovered.\nWhich of the above statements is/are correct?",
+    "qh": "प्रारंभिक वर्गीकरण प्रणालियों के संबंध में निम्नलिखित कथनों पर विचार करें:\n1. डोबेराइनर के त्रिक विफल हो गए क्योंकि वह अपने समय में ज्ञात तत्वों में से केवल तीन वैध त्रिकों की पहचान कर सके थे।\n2. न्यूलैंड्स ने माना था कि प्रकृति में केवल 56 तत्व मौजूद हैं और भविष्य में कोई और तत्व नहीं खोजा जाएगा।\nउपरोक्त कथनों में से कौन सा/से सही है/हैं?",
+    "o": [
+      "1 only",
+      "2 only",
+      "Both 1 and 2",
+      "Neither 1 nor 2"
+    ],
+    "a": 2,
+    "e": "<b>Explanation:</b> Statement 1 is correct because Johann Wolfgang Döbereiner was able to identify only three triads from the known elements of his era [(Li, Na, K), (Ca, Sr, Ba), and (Cl, Br, I)], making the system too limited to be broadly useful. Statement 2 is correct because John Newlands explicitly assumed in 1866 that only 56 elements existed in nature and that no new elements would be discovered in the future—an assumption that was disproved as newly discovered elements failed to fit his Law of Octaves. Thus, Option 2 (Both 1 and 2) is the correct choice."
+  },
+  {
+    "p_id": "bpsc_periodic_20",
+    "qe": "Why does the atomic number increase by integer units (1, 2, 3...) when moving sequentially from one element to the next in the Modern Periodic Table, whereas atomic masses do not increase regularly?",
+    "qh": "आधुनिक आवर्त सारणी में एक तत्व से अगले तत्व की ओर क्रमिक रूप से बढ़ते समय परमाणु संख्या पूर्णांक इकाइयों (1, 2, 3...) में क्यों बढ़ती है, जबकि परमाणु द्रव्यमान नियमित रूप से नहीं बढ़ते हैं?",
+    "o": [
+      "Because atomic number represents proton count (which increases by 1 for each element), while atomic mass includes variable numbers of neutrons and isotopic distributions.",
+      "Because protons undergo alpha decay in every alternate period of the table.",
+      "Because electrons have fractional charges that round off atomic numbers to whole numbers.",
+      "Because atomic mass is measured in liters, whereas atomic number is measured in grams."
+    ],
+    "a": 0,
+    "e": "<b>Explanation:</b> Option 0 is correct because **Atomic Number ($Z$)** represents the fundamental count of protons in an atom's nucleus. Since adding one proton creates a distinct new chemical element, atomic numbers increase strictly by whole integers ($1, 2, 3, \\dots$). In contrast, **Atomic Mass** depends on both protons and neutrons (whose counts vary due to isotopes and nuclear binding energy variations), causing atomic mass increments between adjacent elements to be irregular and non-integer. Option 1 describes radioactive decay which is irrelevant. Option 2 misrepresents electron charge physics. Option 3 uses false physical units for subatomic properties."
+  },
+  
+  {
+    "p_id": "bpsc_periodic_m_01",
+    "qe": "In the Modern Periodic Table, what structural feature defines elements placed within the exact same horizontal period, and how does the electronic arrangement change when moving from left to right across that period?",
+    "qh": "आधुनिक आवर्त सारणी में, एक ही क्षैतिज आवर्त (horizontal period) में रखे गए तत्वों को कौन सी संरचनात्मक विशेषता परिभाषित करती है, और उस आवर्त में बाएं से दाएं जाने पर इलेक्ट्रॉनिक व्यवस्था कैसे बदलती है?",
+    "o": [
+      "They possess the exact same number of valence electrons, while the number of occupied electron shells increases by one at each successive element.",
+      "They possess the exact same number of occupied electron shells, while the number of valence shell electrons increases by one unit with each step of increasing atomic number.",
+      "They maintain identical metallic radii and nuclear charge vectors across all 18 vertical columns.",
+      "They share identical $2n^2$ orbital caps while their principal quantum number drops sequentially to zero."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 describes the trend down a vertical group (where shell count increases) combined with a false claim about valence electrons. Option 1 is correct because elements in the same **Period** [a horizontal row in the periodic table] share the exact same principal number of **Occupied Electron Shells** [the spherical regions around an atomic nucleus where electrons reside, labeled K, L, M, N...]. For instance, Period 3 elements (Na, Mg, Al, Si, P, S, Cl, Ar) all have electrons distributed across three shells (K, L, and M). As atomic number increases by one unit from left to right, one proton is added to the nucleus and one electron is added to the outermost valence shell, progressively increasing valence electrons from 1 to 8 without changing the total shell count. Option 2 falsely claims metallic radii stay constant across columns, ignoring nuclear pull variations. Option 3 presents a nonsensical quantum mechanics statement."
+  },
+  {
+    "p_id": "bpsc_periodic_m_02",
+    "qe": "The maximum capacity of an electron shell is calculated using the formula $2n^2$, where $n$ represents the shell number from the nucleus. Based on this, why does the 3rd period of the Modern Periodic Table contain only 8 elements instead of 18?",
+    "qh": "इलेक्ट्रॉन कोश (electron shell) की अधिकतम क्षमता की गणना $2n^2$ सूत्र का उपयोग करके की जाती है, जहाँ $n$ नाभि से कोश संख्या को दर्शाता है। इसके आधार पर, आधुनिक आवर्त सारणी के तीसरे आवर्त में 18 के बजाय केवल 8 तत्व ही क्यों होते हैं?",
+    "o": [
+      "Because the M-shell ($n=3$) can physically accommodate only 8 electrons under relativistic atomic force laws.",
+      "Because the maximum capacity formula $2n^2$ gives 18, but the outermost valence shell of any atom cannot accommodate more than 8 electrons during period progression.",
+      "Because 10 elements of the 3rd period decay rapidly into noble gases due to low nuclear stability.",
+      "Because $n=3$ yields $2(3)^2 = 8$ when calculated using the Bohr-Bury quantum exclusion ratio."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 incorrectly states the physical limit of $n=3$, which mathematically holds $2(3)^2 = 18$ electrons. Option 1 is correct because while the formula $2n^2$ dictates the ultimate capacity of a shell ($K=2$, $L=8$, $M=18$), the **Octet Rule** / valence shell rule dictates that the outermost shell of an atom cannot hold more than 8 electrons while it is acting as the valence shell. For Period 3 (Na to Ar), filling the M-shell up to 8 electrons completes the period; further electron addition initiates Period 4 (N-shell) before $3d$ subshells are filled later. Option 2 describes nuclear decay, which is irrelevant to electronic periodicity. Option 3 makes a basic arithmetic error ($2 \\times 9 = 18$, not $8$). Advanced sub-term: Valence Electrons [the electrons located in the outermost occupied shell of an atom that participate in chemical bonding]."
+  },
+  {
+    "p_id": "bpsc_periodic_m_03",
+    "qe": "Atomic size is defined as the distance between the center of the nucleus and the outermost shell of an isolated atom. What trend does atomic radius exhibit when moving down a group, and what is the underlying physical cause?",
+    "qh": "परमाणु आकार (atomic size) को किसी पृथक परमाणु के नाभिक के केंद्र और सबसे बाहरी कोश के बीच की दूरी के रूप में परिभाषित किया जाता है। किसी समूह में नीचे जाने पर परमाणु त्रिज्या कौन सी प्रवृत्ति प्रदर्शित करती है, और इसका अंतर्निहित भौतिक कारण क्या है?",
+    "o": [
+      "Atomic size decreases down a group because the increasing nuclear charge pulls the outermost shell closer to the center.",
+      "Atomic size increases down a group because new electron shells are added sequentially, increasing the distance to the outermost electrons despite the increase in nuclear charge.",
+      "Atomic size remains unchanged down a group because nuclear charge and added shells cancel each other out completely.",
+      "Atomic size fluctuates unpredictably depending on whether the element is a metalloid or a noble gas."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 describes the atomic radius trend across a horizontal period (left to right), not down a vertical group. Option 1 is correct because as you move down a **Group** [a vertical column of elements in the periodic table sharing identical valence electron configurations], each successive element adds a completely new electron shell (e.g., Li has 2 shells, Na has 3, K has 4). This increase in principal quantum shell level expands the physical distance between the nucleus and the outermost valence electrons. This distance expansion outweighs the inward pull exerted by the increasing **Nuclear Charge** [the total positive electrostatic charge of all protons in an atomic nucleus], resulting in a net increase in atomic size down the group. Option 2 incorrectly assumes complete cancellation, and Option 3 wrongly claims total unpredictability."
+  },
+  {
+    "p_id": "bpsc_periodic_m_04",
+    "qe": "Moving from left to right across a period, atomic radius decreases systematically. Which factor drives this atomic contraction across a period?",
+    "qh": "किसी आवर्त में बाएं से दाएं जाने पर परमाणु त्रिज्या व्यवस्थित रूप से घटती है। कौन सा कारक आवर्त में इस परमाणु संकुचन (atomic contraction) को संचालित करता है?",
+    "o": [
+      "The loss of inner electron shells due to effective core ionization.",
+      "An increase in nuclear charge (proton count) pulling electrons closer to the nucleus while electrons are added to the same shell.",
+      "A decrease in nuclear charge combined with an expansion of valence orbitals.",
+      "The automatic transformation of non-metals into electropositive alkali metals."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 incorrectly claims inner shells are lost, which does not occur across a period. Option 1 is correct because as you move across a period from left to right, the atomic number (number of protons in the nucleus) increases by one unit at each step, increasing the positive **Effective Nuclear Charge** [the net positive charge experienced by an electron in a multi-electron atom]. Because these added electrons enter the same principal electron shell, the electrostatic attraction between the nucleus and the valence shell intensifies, pulling the electron cloud tighter and shrinking the atomic radius (e.g., in Period 2, Lithium is the largest atom and Fluorine is the smallest). Option 2 reverses the nuclear charge trend, and Option 3 claims an impossible chemical transmutation."
+  },
+  {
+    "p_id": "bpsc_periodic_m_05",
+    "qe": "How does metallic character vary across a period (left to right) and down a group (top to bottom) in the Modern Periodic Table?",
+    "qh": "आधुनिक आवर्त सारणी में metallic character (धात्विक लक्षण) किसी आवर्त में (बाएं से दाएं) और किसी समूह में (ऊपर से नीचे) कैसे परिवर्तित होता है?",
+    "o": [
+      "Increases across a period; decreases down a group.",
+      "Decreases across a period; increases down a group.",
+      "Remains constant across a period; increases down a group.",
+      "Decreases across a period; decreases down a group."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 reverses both periodic trends. Option 1 is correct because **Metallic Character** refers to the level of **Electropositivity** [the chemical tendency of an atom to lose valence electrons and form positive cations]. Moving across a period from left to right, the effective nuclear charge increases and atomic size shrinks, making it harder for atoms to lose electrons; thus, metallic character *decreases* (transitioning from metals on the left, through metalloids, to non-metals on the right). Conversely, moving down a group, new shells increase atomic size and shield the valence electrons, making them easier to lose; thus, electropositivity and metallic character *increase* down a group. Option 2 and Option 3 fail to represent the actual periodic vectors."
+  },
+  {
+    "p_id": "bpsc_periodic_m_06",
+    "qe": "Non-metals are described as electronegative elements. Where are non-metals predominantly located in the Modern Periodic Table, and what drives their high electronegativity?",
+    "qh": "अधातुओं को विद्युत ऋणात्मक (electronegative) तत्वों के रूप में वर्णित किया जाता है। आधुनिक आवर्त सारणी में अधातुएँ मुख्य रूप से कहाँ स्थित हैं, और उनकी उच्च विद्युत ऋणात्मकता का कारण क्या है?",
+    "o": [
+      "On the left-hand side towards the bottom; driven by large atomic radii and weak nuclear pull.",
+      "On the right-hand side towards the top; driven by small atomic radii and high effective nuclear charge that strongly attracts electrons.",
+      "Strictly along the central zig-zag line; driven by amphoteric octet expansion.",
+      "In the first group alongside alkali metals; driven by zero valence electron shells."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 describes the position and characteristics of the most reactive metallic elements (e.g., Caesium, Francium). Option 1 is correct because **Electronegativity** [the relative chemical property describing an atom's ability to attract shared or foreign electrons toward itself] reaches its maximum in small atoms with high effective nuclear charge. These small, high-charge atoms are located on the **right-hand side towards the top** of the periodic table (excluding noble gases). These non-metals readily accept or pull electrons to complete their valence octets. Option 2 describes the position of metalloids, and Option 3 places non-metals in Group 1, which is incorrect except for hydrogen's dual position."
+  },
+  {
+    "p_id": "bpsc_periodic_m_07",
+    "qe": "A zig-zag line in the Modern Periodic Table separates metals from non-metals. Which set of elements lies along this border and exhibits intermediate properties classified as semi-metals or metalloids?",
+    "qh": "आधुनिक आवर्त सारणी में एक टेढ़ी-मेढ़ी (zig-zag) रेखा धातुओं को अधातुओं से अलग करती है। तत्वों का कौन सा सेट इस सीमा पर स्थित है और मध्यवर्ती गुणों को प्रदर्शित करता है जिन्हें अर्ध-धातु या उपधातु (metalloids) के रूप में वर्गीकृत किया जाता है?",
+    "o": [
+      "Sodium, Potassium, Rubidium, Caesium, Francium",
+      "Boron, Silicon, Germanium, Arsenic, Antimony, Tellurium, Polonium",
+      "Fluorine, Chlorine, Bromine, Iodine, Astatine",
+      "Helium, Neon, Argon, Krypton, Xenon, Radon"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 lists Group 1 alkali metals. Option 1 is correct because the borderline elements separating metals (left) from non-metals (right) exhibit dual/intermediate chemical and physical properties (e.g., semiconductor behavior) and are termed **Metalloids or Semi-metals**. The specific elements explicitly designated along this zig-zag boundary are **Boron (B), Silicon (Si), Germanium (Ge), Arsenic (As), Antimony (Sb), Tellurium (Te), and Polonium (Po)**. Option 2 lists Group 17 halogens, and Option 3 lists Group 18 noble gases."
+  },
+  {
+    "p_id": "bpsc_periodic_m_08",
+    "qe": "General periodic trends allow us to predict the chemical nature of oxides formed across the periodic table. Which choice correctly describes the oxide nature of elements on the extreme left versus the extreme right of a period?",
+    "qh": "सामान्य आवर्त प्रवृत्तियाँ हमें आवर्त सारणी में बनने वाले ऑक्साइडों की रासायनिक प्रकृति का पूर्वानुमान लगाने की अनुमति देती हैं। कौन सा विकल्प किसी आवर्त के अति बाएँ (extreme left) बनाम अति दाएँ (extreme right) के तत्वों के ऑक्साइड प्रकृति का सही वर्णन करता है?",
+    "o": [
+      "Left-side elements form acidic oxides; right-side elements form basic oxides.",
+      "Left-side elements form basic oxides; right-side elements form acidic oxides.",
+      "Both left and right-side elements form strictly neutral oxides with zero pH shift.",
+      "Left-side elements form amphoteric hydrides; right-side elements form metallic slakes."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 reverses the chemical nature of metal and non-metal oxides. Option 1 is correct because elements on the extreme left of a period are highly electropositive metals (e.g., Na, Mg) whose oxides dissolve in or react with water to yield basic alkaline solutions (e.g., $\\text{Na}_2\\text{O} + \\text{H}_2\\text{O} \\rightarrow 2\\text{NaOH}$). Elements on the right of a period are electronegative non-metals (e.g., S, Cl) whose oxides dissolve in water to yield acidic solutions (e.g., $\\text{SO}_3 + \\text{H}_2\\text{O} \\rightarrow \\text{H}_2\\text{SO}_4$). Thus, oxides transition from **Basic on the left to Acidic on the right** across a period. Option 2 falsely claims all oxides are neutral. Option 3 introduces nonsensical chemical terms."
+  },
+  {
+    "p_id": "bpsc_periodic_m_09",
+    "qe": "Hydrogen presents an anomalous positioning challenge in the Modern Periodic Table. Why can Hydrogen be placed logically in either Group 1 or Group 17 of the first period?",
+    "qh": "आधुनिक आवर्त सारणी में हाइड्रोजन स्थिति की एक अस्वाभाविक/अपवादजनक चुनौती पेश करता है। हाइड्रोजन को तर्कसंगत रूप से पहले आवर्त के समूह 1 या समूह 17 में क्यों रखा जा सकता है?",
+    "o": [
+      "Because it contains 18 valence electrons like a noble gas, but forms liquid mercury amalgams.",
+      "Because like Group 1 alkali metals, it has 1 valence electron and forms ionic compounds with halogens; but like Group 17 halogens, it needs 1 electron to complete its shell, exists as a diatomic molecule ($\\text{H}_2$), and forms covalent bonds with non-metals.",
+      "Because it exhibits zero nuclear charge and decays into alpha particles under standard pressure.",
+      "Because it acts exclusively as a metalloid along the central zig-zag line."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 describes an impossible electron count and metal amalgam behavior. Option 1 is correct because Hydrogen exhibits a dual identity: (1) **Group 1 resemblance:** It has a single valence electron ($1s^1$) and forms cations ($\text{H}^+$) and compounds analogous to alkali metals ($\text{HCl}$ vs $\text{NaCl}$, $\text{H}_2\text{O}$ vs $\text{Na}_2\text{O}$). (2) **Group 17 resemblance:** It is a non-metal that requires just one electron to fill its valence shell (duplet limit of 2), forms diatomic gas molecules ($\text{H}_2$), and forms covalent bonds with other non-metals or ionic hydrides with active metals ($\text{NaH}$). Thus, its position remains a unique feature of periodic organization. Option 2 and Option 3 present nuclear decay or metalloid distractors."
+  },
+  {
+    "p_id": "bpsc_periodic_m_10",
+    "qe": "Valency is a fundamental periodic property. How does the valency of main-group elements vary when moving from left to right across the 3rd period (from Sodium to Argon)?",
+    "qh": "संयोजकता (Valency) एक मौलिक आवर्ती गुण है। तीसरी आवर्त (सोडियम से ऑर्गन तक) में बाएं से दाएं जाने पर मुख्य-समूह के तत्वों की संयोजकता कैसे परिवर्तित होती है?",
+    "o": [
+      "Increases continuously from 1 to 8 across all eight elements.",
+      "Increases progressively from 1 up to 4 (for Silicon), and then decreases step-by-step down to 0 (for Argon).",
+      "Decreases continuously from 7 down to 0 without any initial increase.",
+      "Remains constant at 2 for all elements due to the $2n^2$ formula."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 confuses valence electron count (which goes 1 to 8) with **Valency** [the combining capacity of an atom, determined by valence electrons: equal to the number of valence electrons for $1-4$, or $8 - \\text{valence electrons}$ for $5-8$]. Option 1 is correct because across Period 3: Sodium (1 valence $e^-$) has a valency of 1; Magnesium (2) = 2; Aluminium (3) = 3; Silicon (4) = 4. Beyond Silicon, phosphorus (5) has a valency of $8-5 = 3$; Sulfur (6) = $8-6 = 2$; Chlorine (7) = $8-7 = 1$; and Argon (8) has a closed octet with a valency of $0$. Thus, valency **first increases from 1 to 4, then decreases to 0**. Option 2 and Option 3 misrepresent the mathematical progression of chemical combining capacity."
+  },
+  
+  {
+    "p_id": "bpsc_prop_01",
+    "qe": "Ionisation Energy generally increases across a period from left to right due to an increase in effective nuclear charge. However, specific electronic exceptions occur across main groups. Which statement accurately details and explains the ionisation energy anomalies between Group-2 vs. Group-13 and Group-15 vs. Group-16?",
+    "qh": "आयनन ऊर्जा (Ionisation Energy) में प्रभावी नाभिकीय आवेश (effective nuclear charge) में वृद्धि के कारण सामान्यतः किसी आवर्त में बाएँ से दाएँ जाने पर वृद्धि होती है। हालाँकि, मुख्य समूहों में विशिष्ट इलेक्ट्रॉनिक अपवाद होते हैं। समूह-2 बनाम समूह-13 और समूह-15 बनाम समूह-16 के बीच आयनन ऊर्जा के अपवादों को कौन सा कथन सटीक रूप से वर्णित और स्पष्ट करता है?",
+    "o": [
+      "Group-13 elements have higher ionisation energy than Group-2 because $np^1$ electrons are held more tightly than $ns^2$; Group-16 is higher than Group-15 due to oxygen's small size.",
+      "Group-2 elements ($\text{Be}, \text{Mg}$) have higher ionisation energy than Group-13 ($\text{B}, \text{Al}$) due to their stable fully-filled $ns^2$ configuration; Group-15 ($\text{N}, \text{P}$) is higher than Group-16 ($\text{O}, \text{S}$) due to their stable half-filled $ns^2 np^3$ configuration.",
+      "Group-2 elements have lower ionisation energy than Group-13 due to shielding by $p$-orbitals; Group-15 elements have lower ionisation energy than Group-16 because of inter-electronic repulsion in half-filled shells.",
+      "Both Group-2 and Group-15 elements show zero or negative ionisation energy because they release energy upon electron loss."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 incorrectly states the periodic trend and ignores subshell stability rules. Option 1 is correct because **Ionisation Energy** [the minimum thermodynamic energy required to remove the most loosely bound electron from an isolated neutral gaseous atom in its ground state] does not strictly increase monotonically across a period. Group-2 elements ($\text{Be}, \text{Mg}, \text{Ca}, \text{Sr}$) possess a completely filled, highly stable subshell valence configuration ($ns^2$), making electron removal harder than in Group-13 elements ($\text{B}, \text{Al}, \text{Ga}, \text{In}$) which have a single readily removable electron in their outermost $np^1$ orbital. Similarly, Group-15 elements ($\text{N}, \text{P}, \text{As}$) possess a symmetrically stable half-filled subshell configuration ($ns^2 np^3$), granting them extra exchange energy stability. This makes removing an electron from Group-15 harder than removing a paired electron from the $ns^2 np^4$ valence configuration of Group-16 elements ($\text{O}, \text{S}, \text{Se}$). Option 2 falsely reverses these electronic interactions, and Option 3 misrepresents ionisation energy as an exothermic process."
+  },
+  {
+    "p_id": "bpsc_prop_02",
+    "qe": "While Electron Affinity generally increases across a period, specific groups exhibit an Electron Affinity ($\r\n\\text{EA}$) of zero or a positive Electron Gain Enthalpy ($\\Delta_{\r\n\\text{eg}}H$). Which set of groups shows this anomalous thermodynamic behavior?",
+    "qh": "यद्यपि इलेक्ट्रॉन बंधुता (Electron Affinity) सामान्यतः किसी आवर्त में बढ़ती है, विशिष्ट समूह शून्य इलेक्ट्रॉन बंधुता ($\\text{EA}$) या धनात्मक इलेक्ट्रॉन लब्धि एंथैल्पी ($\\Delta_{\\text{eg}}H$) प्रदर्शित करते हैं। समूहों का कौन सा समूह इस अस्वाभाविक ऊष्मागतिकी व्यवहार को दर्शाता है?",
+    "o": [
+      "Group-1 (Alkali metals) and Group-17 (Halogens)",
+      "Group-2 (Alkaline earth metals), Group-15 (Pnictogens), and Group-18/0 (Noble gases)",
+      "Group-13 (Boron group) and Group-16 (Chalcogens)",
+      "Group-3, Group-4, and Group-11 transition metals"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 features groups with high negative electron gain enthalpies (they release energy readily upon electron addition). Option 1 is correct because **Electron Gain Enthalpy** [$\\Delta_{\\text{eg}}H$, the thermodynamic enthalpy change associated with adding an extra electron to a neutral gaseous atom to form an anion] is endothermic (positive or zero Electron Affinity) for Group-2 ($ns^2$), Group-15 ($ns^2 np^3$), and Group-18 ($ns^2 np^6$). Group-2 has a fully filled $s$-subshell, requiring incoming electrons to enter a higher-energy $p$-subshell; Group-15 has a stable half-filled $p$-subshell that resists breaking its exchange symmetry; and Group-18 has a completely filled octet, forcing the incoming electron into a brand-new, higher principal energy level shell. Option 2 and Option 3 feature groups with standard exothermic electron addition profiles."
+  },
+  {
+    "p_id": "bpsc_prop_03",
+    "qe": "Electron Affinity ($\r\n\\text{EA}$) generally decreases down a group due to increasing atomic radius. However, Chlorine ($\r\n\\text{Cl}$) exhibits a higher electron affinity than Fluorine ($\\text{F}$). What physical phenomenon causes this halogen anomaly?",
+    "qh": "इलेक्ट्रॉन बंधुता ($\\text{EA}$) बढ़ती परमाणु त्रिज्या के कारण समूह में नीचे जाने पर सामान्यतः घटती है। हालाँकि, क्लोरीन ($\\text{Cl}$) फ्लोरीन ($\\text{F}$) की तुलना में उच्च इलेक्ट्रॉन बंधुता प्रदर्शित करता है। कौन सी भौतिक घटना इस हैलोजन अपवाद का कारण बनती है?",
+    "o": [
+      "Fluorine possesses empty $d$-orbitals that repel incoming valence electrons.",
+      "The incoming electron experiences intense inter-electronic repulsion due to the extremely small compact volume of Fluorine's $2p$ subshell compared to Chlorine's roomier $3p$ subshell.",
+      "Chlorine has a lower effective nuclear charge than Fluorine, allowing electrons to bind with zero hydration loss.",
+      "Fluorine is a liquid non-metal at ambient conditions, preventing gas-phase electron capture."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 incorrectly attributes $d$-orbitals to Period 2 elements (Fluorine has no $d$-subshell). Option 1 is correct because although Fluorine is more electronegative than Chlorine, its $2p$ valence subshell is extremely small and compact in volume. When an extra electron is added to a neutral Fluorine atom, it experiences severe inter-electronic repulsions from the seven electrons already packed tightly in the $n=2$ shell. In Chlorine, the incoming electron enters the larger, roomier $3p$ orbital where electron-electron repulsions are significantly weaker, resulting in a more exothermic electron addition and making **Chlorine the element with the highest Electron Affinity** in the entire Periodic Table. Option 2 reverses nuclear force dynamics, and Option 3 falsely labels Fluorine a liquid (Bromine is the only liquid non-metal)."
+  },
+  {
+    "p_id": "bpsc_prop_04",
+    "qe": "Evaluating the physical density trends across periods and down groups reveals specific structural anomalies. How does density vary, and which option correctly arranges Steel, Mercury, and Gold in order of increasing density?",
+    "qh": "आवर्तों और समूहों में भौतिक घनत्व (density) की प्रवृत्तियों का मूल्यांकन विशिष्ट संरचनात्मक अपवादों को उजागर करता है। घनत्व कैसे परिवर्तित होता है, और कौन सा विकल्प स्टील, मर्करी और गोल्ड को बढ़ते हुए घनत्व के क्रम में सही ढंग से व्यवस्थित करता है?",
+    "o": [
+      "Density decreases down a group; Order: $\\text{Gold} < \\text{Mercury} < \\text{Steel}$",
+      "Density increases down a group and generally across a period; Order: $\\text{Steel} < \\text{Mercury} < \\text{Gold}$",
+      "Density remains constant across periods; Order: $\\text{Mercury} < \\text{Steel} < \\text{Gold}$",
+      "Density decreases across a period; Order: $\\text{Steel} < \\text{Gold} < \\text{Mercury}$"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 misstates the group trend and completely reverses the density ranking. Option 1 is correct because **Density** [mass per unit volume, $\\rho = \\frac{m}{V}$] generally increases moving down a group because atomic mass increases at a much faster rate than atomic volume. Across a period, density also generally increases from left to right up to the middle transition elements. Despite Mercury (Hg) being a heavy liquid metal, Gold (Au, $\\rho \\approx 19.3 \\text{ g/cm}^3$) exhibits a higher density than Mercury ($\rho \\approx 13.6 \\text{ g/cm}^3$) due to lanthanide contraction tightening Gold's metallic crystal packing. The explicit ascending order of density is: **Steel < Mercury < Gold**. Option 2 and Option 3 contradict the fundamental mass-volume scaling trends of heavy metals."
+  },
+  {
+    "p_id": "bpsc_prop_05",
+    "qe": "Which of the following elemental pairs represents the correct extremes of Ionisation Potential across the entire Modern Periodic Table?",
+    "qh": "निम्नलिखित में से कौन सा तत्व युग्म संपूर्ण आधुनिक आवर्त सारणी में आयनन विभव (Ionisation Potential) के सही चरम सीमाओं (उच्चतम एवं निम्नतम) का प्रतिनिधित्व करता है?",
+    "o": [
+      "Highest: Fluorine; Lowest: Hydrogen",
+      "Highest: Helium; Lowest: Caesium",
+      "Highest: Chlorine; Lowest: Francium",
+      "Highest: Argon; Lowest: Lithium"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 confuses Electronegativity (highest in Fluorine) with Ionisation Potential. Option 1 is correct because **Ionisation Potential** [the electrical potential required to detach an electron from a gaseous atom] reaches its absolute maximum in **Helium ($\text{He}$)**. Helium has a stable $1s^2$ closed-shell duplet configuration coupled with the smallest atomic radius and high effective nuclear charge. Conversely, **Caesium ($\text{Cs}$)** has a very large atomic radius with a single $6s^1$ valence electron weakly held far from the nucleus, giving it the lowest ionisation potential among stable elements. Option 2 confuses electron affinity (Chlorine) with ionisation potential, and Option 3 selects incorrect period bounds."
+  },
+  {
+    "p_id": "bpsc_prop_06",
+    "qe": "Elements in the $d$-block are generally known as transition elements. However, three specific $d$-block metals are explicitly excluded from being classified as 'transition elements'. Which group of metals constitutes this exception, and why?",
+    "qh": "$d$-ब्लॉक के तत्वों को सामान्यतः संक्रमण तत्व (transition elements) के रूप में जाना जाता है। हालाँकि, तीन विशिष्ट $d$-ब्लॉक धातुओं को 'संक्रमण तत्वों' के रूप में वर्गीकृत करने से स्पष्ट रूप से बाहर रखा गया है। धातुओं का कौन सा समूह इस अपवाद का गठन करता है, और क्यों?",
+    "o": [
+      "$\text{Sc}, \text{Ti}, \text{V}$; because they lack $s$-block electrons.",
+      "$\text{Zn}, \text{Cd}, \text{Hg}$; because they have completely filled $(n-1)d^{10}$ subshells in both their ground state and common oxidation states.",
+      "$\text{Fe}, \text{Co}, \text{Ni}$; because they exhibit ferromagnetism at room temperature.",
+      "$\text{Cu}, \text{Ag}, \text{Au}$; because they are noble coinage metals with zero metallic bonding."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 lists early transition metals with partially filled $d$-subshells. Option 1 is correct because a **Transition Element** is strictly defined as an element possessing a partially filled $(n-1)d$ subshell either in its ground state or in any of its common oxidation states. The Group-12 elements **Zinc ($\text{Zn}$), Cadmium ($\text{Cd}$), and Mercury ($\text{Hg}$)** possess a fully filled $(n-1)d^{10} ns^2$ electronic configuration in their elemental ground states and retain a completely filled $(n-1)d^{10}$ configuration in their stable divalent cations ($\text{Zn}^{2+}, \text{Cd}^{2+}, \text{Hg}^{2+}$). Therefore, despite residing in the $d$-block, they are not true transition elements. Option 2 lists classic transition metals, and Option 3 lists coinage metals that form ions with partially filled $d$-shells (e.g., $\text{Cu}^{2+}$ is $d^9$)."
+  },
+  {
+    "p_id": "bpsc_prop_07",
+    "qe": "A neutral atom has the electronic configuration $1s^2 2s^2 2p^6 3s^2 3p^5$. Based on valence rules, what are its Period Number, Group Number, and Block classification in the Modern Periodic Table?",
+    "qh": "एक उदासीन परमाणु का इलेक्ट्रॉनिक विन्यास $1s^2 2s^2 2p^6 3s^2 3p^5$ है। संयोजकता नियमों के आधार पर, आधुनिक आवर्त सारणी में इसकी आवर्त संख्या, समूह संख्या और ब्लॉक वर्गीकरण क्या हैं?",
+    "o": [
+      "Period: 5, Group: 7, Block: $s$-block",
+      "Period: 3, Group: 17, Block: $p$-block",
+      "Period: 2, Group: 15, Block: $p$-block",
+      "Period: 3, Group: 7, Block: $d$-block"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 confuses the principal quantum shell with the total valence electron count. Option 1 is correct because: (1) **Period Number** is equal to the highest principal quantum number ($n$), which is $n=3$ ($K, L, M$ shells occupied), so it belongs to **Period 3**. (2) **Block** is determined by the subshell receiving the last valence electron, which enters the $p$-orbital, so it is in the **$p$-block**. (3) **Group Number** for a $p$-block element is calculated using the formula: $\text{Group Number} = 10 + \text{valence electrons in } ns \text{ and } np = 10 + (2 + 5) = 17$. Thus, the element (Chlorine) belongs to Period 3, Group 17, $p$-block. Option 2 misidentifies the period shell level, and Option 3 miscalculates group rules."
+  },
+  {
+    "p_id": "bpsc_prop_08",
+    "qe": "A synthesized neutral atom has a valence electronic configuration ending in $4s^2 3d^6$. What is the correct Group Number formula for this $d$-block element, and what is its group number?",
+    "qh": "एक संश्लेषित उदासीन परमाणु का संयोजी इलेक्ट्रॉनिक विन्यास $4s^2 3d^6$ पर समाप्त होता है। इस $d$-ब्लॉक तत्व के लिए सही समूह संख्या सूत्र क्या है, और इसकी समूह संख्या क्या है?",
+    "o": [
+      "Formula: $10 + \text{valence electrons}$; Group: 18",
+      "Formula: $\text{Electrons in } ns \text{ shell} + \text{Electrons in } (n-1)d \text{ shell}$; Group: 8",
+      "Formula: $\text{Electrons in } ns \text{ shell only}$; Group: 2",
+      "Formula: $\text{Electrons in } (n-1)d \text{ shell only}$; Group: 6"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 incorrectly applies the $p$-block group calculation formula. Option 1 is correct because for any $d$-block element, the **Group Number Calculation Formula** is: $\text{Group Number} = (\text{electrons in } ns \text{ shell}) + (\text{electrons in } (n-1)d \text{ shell})$. Given the valence configuration $4s^2 3d^6$, $n=4$, $ns$ electrons $= 2$, and $(n-1)d$ electrons $= 6$. Therefore, $\text{Group Number} = 2 + 6 = 8$ (Group 8, which contains Iron). Option 2 considers only $s$-electrons, ignoring the partially filled $d$-subshell, and Option 3 ignores the outermost $s$-orbital."
+  },
+  {
+    "p_id": "bpsc_prop_09",
+    "qe": "The valence behavior of elements varies systematically across a period. How does the valency of main-group elements vary across Period 3 with respect to Hydrogen versus with respect to Oxygen?",
+    "qh": "तत्वों का संयोजकता व्यवहार (valence behavior) किसी आवर्त में व्यवस्थित रूप से परिवर्तित होता है। हाइड्रोजन के सापेक्ष बनाम ऑक्सीजन के सापेक्ष तीसरी आवर्त (Period 3) में मुख्य-समूह के तत्वों की संयोजकता कैसे परिवर्तित होती है?",
+    "o": [
+      "With respect to Hydrogen, it increases from 1 to 7; with respect to Oxygen, it increases from 1 to 4 then drops to 0.",
+      "With respect to Hydrogen, it first increases from 1 to 4 then decreases to 0; with respect to Oxygen, it increases continuously from 1 to 7.",
+      "With respect to both Hydrogen and Oxygen, valency remains constant at 2 across the entire period.",
+      "With respect to Hydrogen, it stays at 0; with respect to Oxygen, it decreases from 8 to 1."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 reverses the reference trends between hydrogen and oxygen. Option 1 is correct because **Valency** [the chemical combining capacity of an atom] exhibits two distinct trends: (1) **With respect to Hydrogen**, valency corresponds to the number of hydrogen atoms combining with the element. Moving across a period (e.g., $\text{NaH}, \text{MgH}_2, \text{AlH}_3, \text{SiH}_4, \text{PH}_3, \text{H}_2\text{S}, \text{HCl}, \text{Ar}$), valency **first increases from 1 to 4, then decreases back down to 0** for noble gases. (2) **With respect to Oxygen** (which is divalent), valency corresponds to the formal oxidation state in highest oxides ($\text{Na}_2\text{O}, \text{MgO}, \text{Al}_2\text{O}_3, \text{SiO}_2, \text{P}_2\text{O}_5, \text{SO}_3, \text{Cl}_2\text{O}_7$), **increasing continuously from 1 to 7**. Option 2 and Option 3 present incorrect static or reversed trends."
+  },
+  {
+    "p_id": "bpsc_prop_10",
+    "qe": "Ununseptium (element with atomic number 117) was synthesized and placed in the Modern Periodic Table. Which group and family does Element-117 belong to, and what is its position relative to known elements?",
+    "qh": "अनअनसेप्टियम (परमाणु संख्या 117 वाला तत्व) को संश्लेषित किया गया और आधुनिक आवर्त सारणी में रखा गया। तत्व-117 किस समूह और परिवार से संबंधित है, और ज्ञात तत्वों के सापेक्ष इसकी स्थिति क्या है?",
+    "o": [
+      "Group-18; positioned directly below Radon as a noble gas.",
+      "Group-17; positioned directly below the five halogens (Fluorine, Chlorine, Bromine, Iodine, Astatine).",
+      "Group-1; positioned directly below Francium as an alkali metal.",
+      "Group-2; positioned directly below Radium as an alkaline earth metal."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 misidentifies element 117 as an inert noble gas (element 118, Oganesson, is the noble gas). Option 1 is correct because **Element-117 (Ununseptium / Tennessine, $Z=117$)** has a valence electronic configuration of $7s^2 7p^5$. It possesses 7 valence electrons ($ns^2 np^5$), placing it in **Group-17** directly below the five traditional **Halogens** [Group-17 non-metals/metalloids: Fluorine, Chlorine, Bromine, Iodine, and Astatine]. Option 2 and Option 3 misplace element 117 into $s$-block alkali or alkaline earth metal groups."
+  },
+  {
+    "p_id": "bpsc_prop_11",
+    "qe": "Regarding the metallic and non-metallic nature of chemical elements, which block of the Modern Periodic Table is unique because it contains metals, non-metals, and metalloids simultaneously?",
+    "qh": "रासायनिक तत्वों की धात्विक और अधात्विक प्रकृति के संबंध में, आधुनिक आवर्त सारणी का कौन सा ब्लॉक अद्वितीय है क्योंकि इसमें एक साथ धातुएँ, अधातुएँ और उपधातुएँ (metalloids) शामिल हैं?",
+    "o": [
+      "$s$-block",
+      "$p$-block",
+      "$d$-block",
+      "$f$-block"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 is incorrect because all $s$-block elements are electropositive metals, with the sole exception of hydrogen. Option 1 is correct because the **$p$-block** (Groups 13 to 18) is the **only block in the periodic table that contains all three states of elemental classification**: (1) **Metals** (e.g., Aluminium, Tin, Lead, Bismuth); (2) **Metalloids** (e.g., Boron, Silicon, Germanium, Arsenic, Antimony, Tellurium, Polonium); and (3) **Non-metals** (e.g., Carbon, Nitrogen, Oxygen, Fluorine, Phosphorus, Sulfur, Chlorine, and Noble Gases). Option 2 ($d$-block) and Option 3 ($f$-block) consist exclusively of metallic elements."
+  },
+  {
+    "p_id": "bpsc_prop_12",
+    "qe": "Evaluating the physical states and elemental classifications across the $s, p, d,$ and $f$ blocks reveals specific phase exceptions. Which option correctly identifies the only liquid metal and the only liquid non-metal at standard conditions?",
+    "qh": "$s, p, d,$ और $f$ ब्लॉकों में भौतिक अवस्थाओं और तत्व वर्गीकरण का मूल्यांकन विशिष्ट चरण अपवादों को प्रकट करता है। कौन सा विकल्प मानक परिस्थितियों में एकमात्र तरल धातु (liquid metal) और एकमात्र तरल अधातु (liquid non-metal) की सही पहचान करता है?",
+    "o": [
+      "Liquid metal: Gallium; Liquid non-metal: Chlorine",
+      "Liquid metal: Mercury ($\text{Hg}$); Liquid non-metal: Bromine ($\text{Br}$)",
+      "Liquid metal: Caesium; Liquid non-metal: Fluorine",
+      "Liquid metal: Lithium; Liquid non-metal: Iodine"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 lists Gallium (which melts near body temperature but is solid at standard 25°C baseline) and Chlorine (a gas). Option 1 is correct because at standard room temperature and pressure (STP, 25°C), there are only two elements in the entire periodic table that exist as liquids in their elemental state: **Mercury ($\text{Hg}$)** is the only **Liquid Metal** ($d$-block), and **Bromine ($\text{Br}$)** is the only **Liquid Non-metal** ($p$-block halogen). Option 2 lists Caesium (melts at 28.4°C) and Fluorine (a gas). Option 3 lists solid lithium and solid iodine."
+  },
+  {
+    "p_id": "bpsc_prop_13",
+    "qe": "Which of the following statements regarding the electrical conductivity of metallic and non-metallic allotropes correctly identifies the best metallic conductor, the second-best metallic conductor, and the best non-metallic conductor?",
+    "qh": "धात्विक और अधात्विक अपररूपों (allotropes) की विद्युत चालकता के संबंध में निम्नलिखित में से कौन सा कथन सर्वश्रेष्ठ धात्विक चालक, दूसरे सर्वश्रेष्ठ धात्विक चालक और सर्वश्रेष्ठ अधात्विक चालक की सही पहचान करता है?",
+    "o": [
+      "Best metallic: Gold; Second-best: Copper; Best non-metallic: Diamond",
+      "Best metallic: Silver ($\text{Ag}$); Second-best: Copper ($\text{Cu}$); Best non-metallic: Graphite (carbon allotrope)",
+      "Best metallic: Copper; Second-best: Aluminium; Best non-metallic: Fullerene",
+      "Best metallic: Platinum; Second-best: Silver; Best non-metallic: Iodine"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 misidentifies Gold as the top conductor and claims Diamond (an insulator) conducts electricity. Option 1 is correct because **Electrical Conductivity** depends on free electron mobility within a crystal matrix: (1) **Silver ($\text{Ag}$)** is the single **Best Metallic Conductor** of electricity due to its high free-electron density and low lattice scattering. (2) **Copper ($\text{Cu}$)** is the **Second-best Metallic Conductor**, widely used commercially due to lower cost. (3) **Graphite** (an allotrope of carbon) is the **Best Non-metallic Conductor** because its $sp^2$ hybridized planar structure leaves one delocalized $\pi$-electron per carbon atom free to move along its hexagonal sheets. Option 2 and Option 3 misorder the conductivity ranking."
+  },
+  {
+    "p_id": "bpsc_prop_14",
+    "qe": "Which elemental pair correctly matches the 'Most Reactive Metal' and the 'Most Reactive Non-metal' based on periodic ionization and electronegativity vectors?",
+    "qh": "आवर्त आयनन और विद्युत ऋणात्मकता के आधार पर कौन सा तत्व युग्म 'सबसे प्रतिक्रियाशील धातु' (Most Reactive Metal) और 'सबसे प्रतिक्रियाशील अधातु' (Most Reactive Non-metal) से सही ढंग से मेल खाता है?",
+    "o": [
+      "Most Reactive Metal: Sodium; Most Reactive Non-metal: Oxygen",
+      "Most Reactive Metal: Caesium ($\text{Cs}$); Most Reactive Non-metal: Fluorine ($\text{F}$)",
+      "Most Reactive Metal: Lithium; Most Reactive Non-metal: Chlorine",
+      "Most Reactive Metal: Potassium; Most Reactive Non-metal: Nitrogen"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 lists moderately reactive Period 3 elements rather than the absolute extremes. Option 1 is correct because: (1) **Reactivity of Metals** depends on their electropositive ability to lose valence electrons easily (low ionisation energy, large atomic radius). Moving down Group-1, **Caesium ($\text{Cs}$)** is the **Most Reactive Metal** (excluding highly radioactive Francium). (2) **Reactivity of Non-metals** depends on their electronegative ability to gain electrons easily (high electron affinity/electronegativity, small atomic radius). Moving across Period 2 to Group-17, **Fluorine ($\text{F}$)** is the **Most Reactive Non-metal** due to its supreme electronegativity (4.0 on Pauling scale) and high oxidizing power. Option 2 and Option 3 select non-extreme group members."
+  },
+  {
+    "p_id": "bpsc_prop_15",
+    "qe": "Transition metals generally feature high melting points due to strong inter-atomic metallic bonding involving unshared $d$-electrons. Which metal possesses the highest melting point among all metallic elements?",
+    "qh": "अयुग्मित $d$-इलेक्ट्रॉनों को शामिल करने वाले मजबूत अंतर-परमाणु धात्विक बंधन के कारण संक्रमण धातुओं में सामान्यतः उच्च गलनांक होते हैं। सभी धात्विक तत्वों में से किस धातु का गलनांक उच्चतम है?",
+    "o": [
+      "Platinum ($\text{Pt}$)",
+      "Tungsten ($\text{W}$)",
+      "Osmium ($\text{Os}$)",
+      "Titanium ($\text{Ti}$)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 selects Platinum, which melts at $1768^\circ\text{C}$—far below Tungsten. Option 1 is correct because **Tungsten ($\text{W}$, Wolfram)** possesses the **Highest Melting Point of any metal** ($\approx 3422^\circ\text{C}$ or $3695\text{ K}$). This extreme thermal stability is caused by its $5d^4 6s^2$ electronic configuration, which allows maximum localized $d$-$d$ orbital overlap and covalent-like inter-atomic metallic bonding in its solid crystal lattice. Option 2 selects Osmium, which is the densest naturally occurring element but has a lower melting point ($3033^\circ\text{C}$) than Tungsten. Option 3 lists Titanium ($1668^\circ\text{C}$)."
+  },
+  {
+    "p_id": "bpsc_prop_16",
+    "qe": "Redox capability varies predictably across periods and groups. Which option correctly identifies the Strongest Oxidant and the Strongest Reductant among chemical elements?",
+    "qh": "रेडॉक्स क्षमता (Redox capability) का आवर्तों और समूहों में अनुमानित रूप से परिवर्तन होता है। कौन सा विकल्प रासायनिक तत्वों में सबसे प्रबल ऑक्सीकारक (Strongest Oxidant) और सबसे प्रबल अपचायक (Strongest Reductant) की सही पहचान करता है?",
+    "o": [
+      "Strongest Oxidant: Chlorine; Strongest Reductant: Sodium",
+      "Strongest Oxidant: Fluorine ($\text{F}_2$); Strongest Reductant: Lithium ($\text{Li}$)",
+      "Strongest Oxidant: Oxygen; Strongest Reductant: Caesium",
+      "Strongest Oxidant: Helium; Strongest Reductant: Hydrogen"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 selects Chlorine and Sodium, which are strong but not the strongest in aqueous electrode potential metrics. Option 1 is correct because: (1) **Fluorine ($\text{F}_2$)** is the **Strongest Oxidant** (strongest oxidizing agent) due to its extremely high electronegativity, small atomic radius, low $\text{F}-\text{F}$ bond dissociation enthalpy, and high hydration energy of $\text{F}^-$ ions, giving it the highest standard reduction potential ($E^\circ = +2.87\text{ V}$). (2) **Lithium ($\text{Li}$)** is the **Strongest Reductant** (strongest reducing agent) in aqueous solution because of its exceedingly high hydration enthalpy ($\Delta H_{\text{hyd}}$), which compensates for its ionization energy and drives its standard reduction potential to the most negative value ($E^\circ = -3.04\text{ V}$). Option 2 and Option 3 select incorrect redox species."
+  },
+  {
+    "p_id": "bpsc_prop_17",
+    "qe": "Consider the chemical nature of oxides across a period versus down a group. Which choice accurately describes how the Acidic and Basic nature of elemental oxides shift along these periodic vectors?",
+    "qh": "आवर्त में बनाम समूह में नीचे की ओर ऑक्साइडों की रासायनिक प्रकृति पर विचार करें। कौन सा विकल्प सटीक रूप से वर्णन करता है कि तात्विक ऑक्साइडों की अम्लीय और क्षारीय प्रकृति इन आवर्ती वैक्टरों में कैसे परिवर्तित होती है?",
+    "o": [
+      "Across a period: Basic nature increases; Down a group: Acidic nature increases.",
+      "Across a period (left to right): Acidic nature increases and Basic nature decreases; Down a group: Basic nature increases and Acidic nature decreases.",
+      "Across a period: Oxides remain completely neutral; Down a group: Oxides become strongly amphoteric.",
+      "Across a period: Acidic nature decreases; Down a group: Basic nature decreases."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 reverses both horizontal and vertical oxide vectors. Option 1 is correct because: (1) **Across a Period (left to right)**, elements transition from electropositive metals to electronegative non-metals. Consequently, the **Basic nature of oxides decreases while the Acidic nature increases** (e.g., in Period 3: $\text{Na}_2\text{O}$ [strongly basic] $\rightarrow \text{MgO}$ [basic] $\rightarrow \text{Al}_2\text{O}_3$ [amphoteric] $\rightarrow \text{SiO}_2$ [weakly acidic] $\rightarrow \text{P}_4\text{O}_{10}$ [acidic] $\rightarrow \text{SO}_3$ [strongly acidic] $\rightarrow \text{Cl}_2\text{O}_7$ [peracidic]). (2) **Down a Group**, metallic character increases as ionization energy drops, causing the **Basic nature of oxides to increase and Acidic nature to decrease**. Option 2 and Option 3 state incorrect, inverted oxide vectors."
+  },
+  {
+    "p_id": "bpsc_prop_18",
+    "qe": "Consider the following statements regarding representative elements and periodic trends:\n1. Representative elements consist collectively of all $s$-block and $p$-block elements, excluding noble gases in some conventions.\n2. The mechanical ductility and malleability among all metals reaches its maximum in elemental Gold.\nWhich of the above statements is/are correct?",
+    "qh": "प्रतिनिधि तत्वों (representative elements) और आवर्ती प्रवृत्तियों के संबंध में निम्नलिखित कथनों पर विचार करें:\n1. प्रतिनिधि तत्वों में सामूहिक रूप से सभी $s$-ब्लॉक और $p$-ब्लॉक तत्व शामिल हैं, जिनमें कुछ परंपराओं में उत्कृष्ट गैसों को बाहर रखा गया है।\n2. सभी धातुओं में यांत्रिक तन्यता (ductility) और आघातवर्धनीयता (malleability) अपने उच्चतम स्तर पर मौलिक गोल्ड (Gold) में पहुँचती है।\nउपरोक्त कथनों में से कौन सा/से सही है/हैं?",
+    "o": [
+      "1 only",
+      "2 only",
+      "Both 1 and 2",
+      "Neither 1 nor 2"
+    ],
+    "a": 2,
+    "e": "<b>Explanation:</b> Statement 1 is correct because **Representative Elements** (or main-group elements) are explicitly defined as elements belonging to the $s$-block (Groups 1 & 2) and $p$-block (Groups 13 to 17/18), where inner subshells are completely filled and only the outermost shell is incomplete. Statement 2 is correct because **Gold ($\text{Au}$)** is the **Most Ductile and Malleable Metal** known to science (a single gram of gold can be drawn into a thin wire over 2 kilometers long, and beaten into semi-transparent gold leaf sheets only a few hundred atoms thick). Therefore, Option 2 (Both 1 and 2) is the correct choice."
+  },
+  {
+    "p_id": "bpsc_prop_19",
+    "qe": "Which elemental pair correctly matches the 'Lightest Element' and the 'Heaviest Element' in terms of atomic mass and physical density across the entire Modern Periodic Table?",
+    "qh": "संपूर्ण आधुनिक आवर्त सारणी में परमाणु द्रव्यमान और भौतिक घनत्व के संदर्भ में कौन सा तत्व युग्म 'सबसे हल्के तत्व' (Lightest Element) और 'सबसे भारी तत्व' (Heaviest Element) का सही मिलान करता है?",
+    "o": [
+      "Lightest: Helium; Heaviest: Lead",
+      "Lightest: Hydrogen ($\text{H}$); Heaviest: Osmium ($\text{Os}$)",
+      "Lightest: Lithium; Heaviest: Uranium",
+      "Lightest: Carbon; Heaviest: Plutonium"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 selects Helium (atomic mass 4) instead of Hydrogen (atomic mass 1.008) and Lead ($\rho = 11.34 \text{ g/cm}^3$). Option 1 is correct because: (1) **Hydrogen ($\text{H}$)** is the **Lightest Element** in the universe, having an atomic number of 1 and an atomic mass of $\approx 1.008 \text{ u}$. (2) **Osmium ($\text{Os}$)** is the **Heaviest Element** in terms of physical density ($\rho \approx 22.59 \text{ g/cm}^3$), closely followed by Iridium ($\rho \approx 22.56 \text{ g/cm}^3$). Note: Lithium is the lightest *metal* ($\rho = 0.534 \text{ g/cm}^3$). Option 2 and Option 3 confuse metal density metrics with general elemental mass metrics."
+  },
+  {
+    "p_id": "bpsc_prop_20",
+    "qe": "Evaluating the periodic behavior of metals versus non-metals in Group-1 (alkali metals) and Group-17 (halogens) reveals opposing reactivity trends down a group. Which statement correctly contrasts their reactivity vectors?",
+    "qh": "समूह-1 (क्षार धातुओं) और समूह-17 (हैलोजन) में धातुओं बनाम अधातुओं के आवर्ती व्यवहार का मूल्यांकन समूह में नीचे जाने पर विपरीत प्रतिक्रियाशीलता प्रवृत्तियों (reactivity trends) को उजागर करता है। कौन सा कथन उनके प्रतिक्रियाशीलता वैक्टरों का सही ढंग से विरोध करता है?",
+    "o": [
+      "Reactivity of metals decreases down Group-1, while reactivity of non-metals increases down Group-17.",
+      "Reactivity of metals increases down Group-1 due to lower ionisation energy, whereas reactivity of non-metals decreases down Group-17 due to lower electron affinity and electronegativity.",
+      "Reactivity of both metals and non-metals increases continuously down their respective groups.",
+      "Reactivity of both metals and non-metals decreases continuously down their respective groups due to nuclear shielding."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 states the exact reverse of both group reactivity vectors. Option 1 is correct because: (1) **Metals react by losing electrons** to form cations. Moving down Group-1 (Alkali Metals: $\text{Li} \rightarrow \text{Na} \rightarrow \text{K} \rightarrow \text{Rb} \rightarrow \text{Cs}$), atomic size increases and ionisation energy decreases, making electron loss easier; thus, **Reactivity of metals increases down the group**. (2) **Non-metals react by gaining electrons** to form anions. Moving down Group-17 (Halogens: $\text{F}_2 \rightarrow \text{Cl}_2 \rightarrow \text{Br}_2 \rightarrow \text{I}_2$), atomic size increases while electronegativity and electron affinity drop, making electron attraction harder; thus, **Reactivity of non-metals decreases down the group** ($\text{F}_2$ is the most reactive, $\text{I}_2$ is the least). Option 2 and Option 3 fail to distinguish the opposite electronic mechanics of metals versus non-metals."
+  }
+]
