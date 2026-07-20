@@ -1,0 +1,523 @@
+[
+  {
+    "p_id": "bpsc_chem_m21_01",
+    "qe": "Evaluating the thermodynamic dynamics during the formation of a stable chemical bond between two approaching gaseous atoms reveals specific energy changes. What energy transition characterizes chemical bond formation?",
+    "qh": "दो करीब आते गैसीय परमाणुओं के बीच एक स्थिर रासायनिक बंध के निर्माण के दौरान ऊष्मागतिकी गतिकी का मूल्यांकन विशिष्ट ऊर्जा परिवर्तनों को उजागर करता है। कौन सा ऊर्जा परिवर्तन रासायनिक बंध निर्माण की विशेषता बताता है?",
+    "o": [
+      "Energy is absorbed endothermically, causing an increase in the net potential energy of the atomic system.",
+      "Energy is released exothermically, accompanied by a decrease in the net potential energy of the system as stable electronic configurations are achieved.",
+      "Kinetic energy converts entirely into nuclear binding energy without changing potential energy.",
+      "Potential energy rises to infinity due to nuclear-nuclear electrostatic repulsion."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 misidentifies bond formation as endothermic with increasing potential energy. Option 1 is correct because chemical bond formation is inherently an <b>Exothermic Process</b> [a thermodynamic reaction that releases thermal energy to the surroundings]. As two constituent atoms approach each other, attractive electrostatic forces between nuclei and electrons overcome repulsive forces, causing a drop in the net <b>Potential Energy</b> [the stored energy of a system dependent on the relative spatial positions of its constituent charged particles]. Minimum potential energy corresponds to maximum system stability at the equilibrium bond distance. Option 2 confuses electron cloud interactions with nuclear binding forces, and Option 3 describes unstable unbound states."
+  },
+  {
+    "p_id": "bpsc_chem_m21_02",
+    "qe": "Valency determines the mutual combining capacity of elements based on valence electron population. According to the octet rule, how is the valency of elements possessing 5, 6, 7, or 8 valence electrons calculated?",
+    "qh": "संयोजकता संयोजी इलेक्ट्रॉन आबादी के आधार पर तत्वों की परस्पर संयोजन क्षमता को निर्धारित करती है। अष्टक नियम के अनुसार, 5, 6, 7, या 8 संयोजी वाले तत्वों की संयोजकता की गणना कैसे की जाती है?",
+    "o": [
+      "Valency = Number of valence electrons directly.",
+      "Valency = 8 - Number of valence electrons.",
+      "Valency = Number of inner core electrons.",
+      "Valency = Principal quantum number squared ($n^2$)."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 applies only to elements with 1, 2, 3, or 4 valence electrons (e.g., Sodium with 1 valence electron has valency = 1). Option 1 is correct because for non-metallic elements possessing 5, 6, 7, or 8 valence electrons, achieving a stable noble gas octet ($ns^2 np^6$) requires gaining or sharing electrons rather than losing them. Hence, their valency is calculated as <b>$$\\text{Valency} = 8 - \\text{Number of valence electrons}$$</b> (e.g., Nitrogen with 5 valence electrons has valency $8 - 5 = 3$; Oxygen with 6 valence electrons has valency $8 - 6 = 2$; Chlorine with 7 valence electrons has valency $8 - 7 = 1$; and Argon with 8 valence electrons has valency $8 - 8 = 0$). Option 2 and Option 3 present invalid valency formulas."
+  },
+  {
+    "p_id": "bpsc_chem_m21_03",
+    "qe": "Electropositive and electronegative elements form cations and anions respectively to achieve stable electronic octets. Which choice correctly identifies non-metallic polyatomic or elemental cations that exist as exceptions to the rule that metals form cations?",
+    "qh": "विद्युतधनात्मक और विद्युतऋणात्मक तत्व क्रमशः स्थिर इलेक्ट्रॉनिक अष्टक प्राप्त करने के लिए धनायन और ऋणायन बनाते हैं। कौन सा विकल्प उन गैर-धातु बहु-परमाणुक या तात्विक धनायनों की सही पहचान करता है जो धातुओं द्वारा धनायन बनाने के नियम के अपवाद के रूप में मौजूद हैं?",
+    "o": [
+      "$\\text{Na}^+$ and $\\text{Ca}^{2+}$",
+      "$\\text{H}^+$ and Ammonium ion ($\\text{NH}_4^+$)",
+      "$\\text{Cl}^-$ and Carbonate ion ($\\text{CO}_3^{2-}$)",
+      "$\\text{Al}^{3+}$ and $\\text{Mg}^{2+}$"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 lists standard metallic electropositive cations. Option 1 is correct because while metallic elements typically form positive ions (<b>cations</b>) by losing electrons ($\\text{Na}^+, \\text{Mg}^{2+}, \\text{Ca}^{2+}$), <b>Hydrogen ion ($\\text{H}^+$) and Ammonium ion ($\\text{NH}_4^+$)</b> represent crucial exceptions where positive cations are formed entirely from <b>non-metallic elements</b>. Hydrogen ($Z=1$) is a non-metal that loses its single electron to form $\\text{H}^+$, and ammonium is a polyatomic non-metallic cation formed by coordinate protonation of ammonia ($\\text{NH}_3 + \\text{H}^+ \\rightarrow \\text{NH}_4^+$). Option 2 lists non-metallic anions, and Option 3 lists metallic cations."
+  },
+  {
+    "p_id": "bpsc_chem_m21_04",
+    "qe": "Ionic compounds are formed via complete electron transfer between metals and non-metals, resulting in solid crystal lattices. What physical characteristics define typical ionic or electrovalent compounds?",
+    "qh": "आयनिक यौगिक धातुओं और गैर-धातुओं के बीच पूर्ण इलेक्ट्रॉन हस्तांतरण के माध्यम से बनते हैं, जिसके परिणामस्वरूप ठोस क्रिस्टल जालक बनते हैं। कौन सी भौतिक विशेषताएं विशिष्ट आयनिक या विद्युतसंयोजी यौगिकों को परिभाषित करती हैं?",
+    "o": [
+      "Volatile liquids with low melting points that dissolve exclusively in non-polar benzene.",
+      "Crystalline solids featuring high melting/boiling points, rigidity, brittleness, and long-range order bound by strong electrostatic forces.",
+      "Highly malleable metals that conduct electricity efficiently in the solid dry state.",
+      "Directional, flexible gaseous molecules with low lattice energies."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 describes non-polar covalent liquids. Option 1 is correct because <b>Ionic (Electrovalent) Compounds</b> consist of three-dimensional crystalline lattices held together by powerful non-directional <b>Coulombic Electrostatic Attraction</b> between cations and anions. These strong attractive forces impart high lattice energies, resulting in <b>crystalline solids</b> with <b>high melting and boiling points</b>, high density, rigidity, and <b>brittleness</b> [the physical tendency of a crystal lattice to fracture sharply along cleavage planes when mechanical stress forces like-charged ions into repulsive alignment]. Option 2 describes metallic bonding, and Option 3 describes covalent gases."
+  },
+  {
+    "p_id": "bpsc_chem_m21_05",
+    "qe": "Covalent bonding occurs through the sharing of electron pairs between atoms of similar or identical electronegativities. What differentiates a Polar Covalent Bond from a Non-Polar Covalent Bond?",
+    "qh": "सहसंयोजक बंधन (Covalent bonding) समान या समरूप विद्युतऋणात्मकता वाले परमाणुओं के बीच इलेक्ट्रॉन युग्मों के साझाकरण के माध्यम से होता है। एक ध्रुवीय सहसंयोजक बंध (Polar Covalent Bond) को एक अध्रुवीय सहसंयोजक बंध (Non-Polar Covalent Bond) से क्या अलग करता है?",
+    "o": [
+      "Non-polar bonds involve complete electron donation; polar bonds involve proton sharing.",
+      "In a Non-Polar Covalent Bond, shared electrons are distributed equally between identical nuclei (e.g., $\\text{H}_2, \\text{O}_2$); in a Polar Covalent Bond, shared electrons are displaced toward the more electronegative atom (e.g., $\\text{HCl}, \\text{HF}$).",
+      "Polar covalent bonds conduct electricity in solid state; non-polar bonds do not.",
+      "Non-polar covalent bonds form exclusively between metals and noble gases."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 incorrectly mixes ionic transfer and nuclear protons into covalent bonding. Option 1 is correct because: (1) A <b>Non-Polar Covalent Bond</b> forms between identical atoms with zero electronegativity difference ($\\Delta \\text{EN} = 0$), resulting in equal sharing of the electron cloud centered between the two nuclei (e.g., $\\text{H}_2, \\text{O}_2, \\text{N}_2, \\text{F}_2$); (2) A <b>Polar Covalent Bond</b> forms between different atoms possessing an electronegativity difference ($\\Delta \\text{EN} > 0$), causing the shared bonding electron pair to shift partially toward the more electronegative atom, generating fractional partial charges ($\\delta^+, \\delta^-$) and a dipole moment (e.g., $\\text{H}^{\\delta+}-\\text{Cl}^{\\delta-}, \\text{H}^{\\delta+}-\\text{F}^{\\delta-}$). Option 2 and Option 3 present invalid electrical or metallic assertions."
+  },
+  {
+    "p_id": "bpsc_chem_m21_06",
+    "qe": "Covalent compounds display specific physical behaviors owing to their molecular structure and directional bonding. What property characterizes typical covalent compounds?",
+    "qh": "सहसंयोजक यौगिक अपनी आणविक संरचना और दिशात्मक बंधन के कारण विशिष्ट भौतिक व्यवहार प्रदर्शित करते हैं। कौन सा गुण विशिष्ट सहसंयोजक यौगिकों की विशेषता बताता है?",
+    "o": [
+      "High electrical conductivity in the solid state due to free mobile ions.",
+      "Poor electrical conductivity in both solid and molten states (due to absence of free ions/electrons), solubility in non-polar organic solvents, and rigid directional bonds imparting specific molecular geometries.",
+      "Infinite solubility in polar water accompanied by instantaneous ionic reaction rates.",
+      "Extremely high melting points exceeding $3000^\\circ\\text{C}$ for all molecular liquids."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 describes ionic or metallic conductors. Option 1 is correct because <b>Covalent Compounds</b> consist of discrete neutral molecules held together by weak intermolecular forces. Because they lack mobile free electrons or un-solvated ions, they act as <b>poor conductors of electricity</b> in both solid and liquid/molten states (graphite being a structural network exception). They obey the <i>'like dissolves like'</i> rule, being generally <b>insoluble in polar solvents (water)</b> but <b>soluble in non-polar organic solvents</b> (benzene, $\\text{CCl}_4$). Furthermore, overlapping atomic orbitals make covalent bonds <b>directional</b>, giving molecules distinct 3D geometric shapes. Option 2 describes ionic compounds, and Option 3 misrepresents molecular liquids."
+  },
+  {
+    "p_id": "bpsc_chem_m21_07",
+    "qe": "A Coordinate (Dative) Bond is a specialized form of covalent bonding. What defines the formation mechanism of a coordinate bond between a donor and an acceptor atom?",
+    "qh": "एक उपसहसंयोजक (डैटिव) बंध [Coordinate (Dative) Bond] सहसंयोजक बंधन का एक विशेष रूप है। एक दाता (donor) और एक ग्राही (acceptor) परमाणु के बीच एक उपसहसंयोजक बंध के निर्माण तंत्र को क्या परिभाषित करता है?",
+    "o": [
+      "Both combining atoms contribute one electron each to form a shared pair.",
+      "The shared pair of bonding electrons is donated exclusively by a single atom (the donor), while the accepting atom provides an empty orbital to accommodate the pair.",
+      "Electrons are completely transferred to form electrostatic ions.",
+      "Nuclear protons are exchanged between adjacent atomic shells."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 describes a standard simple covalent bond where each atom supplies one electron. Option 1 is correct because a <b>Coordinate (Dative) Bond</b> is a covalent link wherein the two shared bonding electrons originate from only <b>one of the bonded atoms</b>. The species supplying the unshared electron pair is termed the <b>Donor</b> (Lewis base, possessing a lone pair), while the species receiving the pair into an empty valence orbital is termed the <b>Acceptor</b> (Lewis acid). Once formed, a coordinate bond ($\\text{A} \\rightarrow \\text{B}$) is chemically indistinguishable from a standard covalent bond. Option 2 describes ionic bonding, and Option 3 describes nuclear transmutations."
+  },
+  {
+    "p_id": "bpsc_chem_m21_08",
+    "qe": "Valence Shell Electron Pair Repulsion (VSEPR) theory predicts 3D molecular geometries based on electron pair arrangements. What are the geometric shape and bond angle of Carbon Dioxide ($\\text{CO}_2$) versus Methane ($\\text{CH}_4$)?",
+    "qh": "संयोजकता कोश इलेक्ट्रॉन युग्म प्रतिकर्षण (VSEPR) सिद्धांत इलेक्ट्रॉन युग्म व्यवस्थाओं के आधार पर 3D आणविक ज्यामिति का अनुमान लगाता है। मीथेन ($\\text{CH}_4$) की तुलना में कार्बन डाइऑक्साइड ($\\text{CO}_2$) का ज्यामितीय आकार और बांड कोण क्या है?",
+    "o": [
+      "$\\text{CO}_2$: Trigonal planar ($120^\\circ$); $\\text{CH}_4$: Octahedral ($90^\\circ$)",
+      "$\\text{CO}_2$: Linear ($180^\\circ$); $\\text{CH}_4$: Tetrahedral ($109.5^\\circ$ / $109^\\circ28'$)",
+      "$\\text{CO}_2$: V-shaped/Bent ($104.5^\\circ$); $\\text{CH}_4$: See-saw ($90^\\circ$)",
+      "$\\text{CO}_2$: Pyramidal ($107^\\circ$); $\\text{CH}_4$: Trigonal bipyramidal ($90^\\circ, 120^\\circ$)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 misidentifies $\\text{CO}_2$ as trigonal planar and $\\text{CH}_4$ as octahedral. Option 1 is correct because: (1) <b>Carbon Dioxide ($\\text{O}=\\text{C}=\\text{O}$)</b> has an $sp$-hybridized central carbon with two double-bond localized electron domains and zero lone pairs, establishing a <b>Linear Geometry</b> with a bond angle of <b>$180^\\circ$</b>; (2) <b>Methane ($\\text{CH}_4$)</b> has an $sp^3$-hybridized central carbon surrounded by four equivalent $\\sigma$-bonding electron pairs, establishing a symmetrical <b>Tetrahedral Geometry</b> with bond angles of <b>$109.5^\\circ$ ($109^\\circ28'$)</b>. Option 2 describes water ($\\text{H}_2\\text{O}$) and $\\text{SF}_4$. Option 3 describes ammonia ($\\text{NH}_3$) and $\\text{PCl}_5$."
+  },
+  {
+    "p_id": "bpsc_chem_m21_09",
+    "qe": "Evaluating the molecular shape of Ammonia ($\\text{NH}_3$) reveals a deviation from the ideal tetrahedral angle ($109.5^\\circ$). What is the molecular geometry of $\\text{NH}_3$, and why is its bond angle reduced to approximately $107^\\circ$?",
+    "qh": "अमोनिया ($\\text{NH}_3$) के आणविक आकार का मूल्यांकन आदर्श चतुष्फलकीय कोण ($109.5^\\circ$) से विचलन को उजागर करता है। $\\text{NH}_3$ की आणविक ज्यामिति क्या है, और इसका बांड कोण घटकर लगभग $107^\\circ$ क्यों हो जाता है?",
+    "o": [
+      "Geometry: Octahedral; reduced due to strong nuclear spin attraction.",
+      "Geometry: Trigonal Pyramidal; reduced because lone pair-bond pair repulsion is stronger than bond pair-bond pair repulsion.",
+      "Geometry: Linear; reduced due to triple bond formation.",
+      "Geometry: Square planar; reduced by metallic resonance."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 misidentifies ammonia as octahedral. Option 1 is correct because in <b>Ammonia ($\\text{NH}_3$)</b>, the central nitrogen atom is $sp^3$-hybridized, surrounded by four electron domains: three $\\text{N-H}$ single bonding pairs and <b>one unshared Lone Pair</b>. According to VSEPR theory, repulsive interactions follow the order: $\\text{Lone Pair - Lone Pair} > \\text{Lone Pair - Bond Pair} > \\text{Bond Pair - Bond Pair}$. The unshared lone pair exerts stronger repulsion on the three bonding pairs, pushing them closer together and reducing the ideal tetrahedral angle ($109.5^\\circ$) to <b>$\\sim 107^\\circ$</b>, producing a <b>Trigonal Pyramidal Geometry</b>. Option 2 and Option 3 describe linear or square planar molecules."
+  },
+  {
+    "p_id": "bpsc_chem_m21_10",
+    "qe": "Sulfur Hexafluoride ($\\text{SF}_6$) and Phosphorus Pentachloride ($\\text{PCl}_5$) represent expanded octet hypervalent molecules. What are their respective molecular shapes and bond angles?",
+    "qh": "सल्फर हेक्साफ्लोराइड ($\\text{SF}_6$) और फास्फोरस पेंटाक्लोराइड ($\\text{PCl}_5$) विस्तारित अष्टक अतिसंयोजी अणुओं (expanded octet hypervalent molecules) का प्रतिनिधित्व करते हैं। उनकी संबंधित आणविक आकृतियां और बांड कोण क्या हैं?",
+    "o": [
+      "$\\text{SF}_6$: Linear ($180^\\circ$); $\\text{PCl}_5$: V-shaped ($104.5^\\circ$)",
+      "$\\text{SF}_6$: Octahedral ($90^\\circ$); $\\text{PCl}_5$: Trigonal Bipyramidal ($90^\\circ$ axial and $120^\\circ$ equatorial)",
+      "$\\text{SF}_6$: Tetrahedral ($109.5^\\circ$); $\\text{PCl}_5$: Pyramidal ($107^\\circ$)",
+      "$\\text{SF}_6$: T-shaped ($90^\\circ$); $\\text{PCl}_5$: See-saw ($120^\\circ$)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 lists linear and bent geometries. Option 1 is correct because: (1) <b>Sulfur Hexafluoride ($\\text{SF}_6$)</b> features an $sp^3d^2$-hybridized central sulfur atom bonded to six fluorine atoms with zero lone pairs, yielding an <b>Octahedral Geometry</b> with bond angles of <b>$90^\\circ$</b>; (2) <b>Phosphorus Pentachloride ($\\text{PCl}_5$)</b> features an $sp^3d$-hybridized central phosphorus atom bonded to five chlorine atoms, forming a <b>Trigonal Bipyramidal Geometry</b> with two distinct bond angles: <b>$120^\\circ$ between equatorial bonds</b> and <b>$90^\\circ$ between axial and equatorial bonds</b>. Option 2 and Option 3 list lower-coordination geometries."
+  },
+  {
+    "p_id": "bpsc_chem_m21_11",
+    "qe": "Certain inorganic salts contain ionic, covalent, and coordinate bonds simultaneously within a single chemical structure. Which choice lists compounds containing all three bond types?",
+    "qh": "कुछ अकार्बनिक लवणों में एक ही रासायनिक संरचना के भीतर एक साथ आयनिक, सहसंयोजक और उपसहसंयोजक बंध होते हैं। कौन सा विकल्प उन यौगिकों को सूचीबद्ध करता है जिनमें तीनों प्रकार के बंध शामिल हैं?",
+    "o": [
+      "$\\text{NaCl}$ and $\\text{MgCl}_2$",
+      "$\\text{NaOH}$, $\\text{KOH}$, $\\text{H}_2\\text{SO}_4$, and $\\text{Na}_2\\text{CO}_3$",
+      "$\\text{CH}_4$ and $\\text{CCl}_4$",
+      "$\\text{H}_2$ and $\\text{O}_2$"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 lists purely ionic compounds ($\\text{NaCl}$). Option 1 is correct because compounds such as <b>Sodium Hydroxide ($\\text{NaOH}$), Potassium Hydroxide ($\\text{KOH}$), Sulfuric Acid ($\\text{H}_2\\text{SO}_4$), Sodium Carbonate ($\\text{Na}_2\\text{CO}_3$), and Ammonium Chloride ($\\text{NH}_4\\text{Cl}$)</b> incorporate <b>all three bonding types simultaneously</b>:<br>1. <b>Ionic Bond:</b> Between metallic cations ($\\text{Na}^+, \\text{K}^+$) and polyatomic anions ($\\text{OH}^-, \\text{CO}_3^{2-}$).<br>2. <b>Covalent Bond:</b> Between non-metal atoms within polyatomic anions (e.g., $\\text{C-O}$ bonds in $\\text{CO}_3^{2-}$).<br>3. <b>Coordinate Bond:</b> Between central atoms and oxygen/proton acceptors (e.g., in $\\text{H}_2\\text{SO}_4$ or $\\text{NH}_4^+$).<br>Option 2 lists simple covalent molecules, and Option 3 lists non-polar diatomic molecules."
+  },
+  {
+    "p_id": "bpsc_chem_m21_12",
+    "qe": "Hydrogen bonding is a specialized directional intermolecular dipole attraction. What structural conditions are mandatory for a molecule to form hydrogen bonds?",
+    "qh": "हाइड्रोजन बॉन्डिंग एक विशेष दिशात्मक अंतर-आणविक द्विध्रुव आकर्षण है। किसी अणु में हाइड्रोजन बंध बनाने के लिए कौन सी संरचनात्मक स्थितियां अनिवार्य हैं?",
+    "o": [
+      "A hydrogen atom bonded to any alkali metal in Group-1.",
+      "A hydrogen atom covalently linked to a small, highly electronegative atom possessing lone pairs, specifically Nitrogen ($\\text{N}$), Oxygen ($\\text{O}$), or Fluorine ($\\text{F}$).",
+      "A hydrogen atom bonded to heavy transition metals like Gold or Platinum.",
+      "A hydrogen atom present in a non-polar gas mixture under high vacuum."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 describes ionic metallic hydrides ($\\text{NaH}$). Option 1 is correct because a <b>Hydrogen Bond</b> [an attractive electrostatic force operating between a hydrogen atom covalently bound to a highly electronegative atom and another electronegative atom with unshared electron pairs] requires two conditions: (1) Hydrogen must be directly covalently bonded to a <b>small, strongly electronegative atom</b>, strictly limited to <b>Nitrogen ($\\text{N}$), Oxygen ($\\text{O}$), or Fluorine ($\\text{F}$)</b>; (2) The electronegative atom must pull bonding electron density strongly, leaving hydrogen as a bare unshielded proton nucleus ($\\delta^+$) that attracts lone pairs on adjacent $\\text{N, O, F}$ atoms. Option 2 and Option 3 describe non-hydrogen bonding regimes."
+  },
+  {
+    "p_id": "bpsc_chem_m21_13",
+    "qe": "Geckos possess a remarkable biomechanical ability to walk upside-down on smooth vertical glass surfaces without adhesives or suction cups. What physical force enables gecko foot setae to adhere to glass?",
+    "qh": "छिपकलियों (Geckos) में बिना किसी चिपकने वाले पदार्थ या सक्शन कप के चिकनी लंबवत कांच की सतहों पर उल्टा चलने की एक उल्लेखनीय बायोमेकेनिकल क्षमता होती है। कौन सा भौतिक बल छिपकली के पैर के सेटे (hairs) को कांच से चिपकने में सक्षम बनाता है?",
+    "o": [
+      "Nuclear strong interaction forces",
+      "van der Waals' forces acting between microscopic setae (hairs) on their feet and the glass surface",
+      "Covalent electron-sharing bonds formed with silicon atoms",
+      "Electrovalent ionic bonds created by sweat sodium ions"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 misapplies short-range sub-atomic nuclear forces. Option 1 is correct because the undersides of gecko toes are covered with millions of microscopic spatulate hairs called <b>Setae</b>. When these microscopic setae come into ultra-close physical contact with a smooth substrate (like glass), the cumulative sum of weak <b>van der Waals' Forces</b> [short-range intermolecular electrostatic attractions operating between temporary or permanent molecular dipoles] generates powerful net adhesive attraction ($\\sim 100\\text{ newtons}$ for a gecko), allowing them to cling effortlessly without liquid adhesives. Option 2 and Option 3 propose impossible chemical bond formation during locomotion."
+  },
+  {
+    "p_id": "bpsc_chem_m21_14",
+    "qe": "van der Waals' forces are weak intermolecular attractions divided into three distinct physical categories. Which choice correctly lists the three types of van der Waals' forces?",
+    "qh": "वांडर वाल्स बल (van der Waals' forces) कमजोर अंतर-आणविक आकर्षण हैं जिन्हें तीन विशिष्ट भौतिक श्रेणियों में विभाजित किया गया है। कौन सा विकल्प वांडर वाल्स बलों के तीन प्रकारों को सही ढंग से सूचीबद्ध करता है?",
+    "o": [
+      "Ionic, Covalent, and Coordinate forces",
+      "Dipole-Dipole forces, Dipole-Induced Dipole forces, and London Dispersion forces (between temporary dipoles)",
+      "Alpha, Beta, and Gamma forces",
+      "Gravitational, Electromagnetic, and Nuclear forces"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 lists primary chemical bonding types. Option 1 is correct because <b>van der Waals' Forces</b> comprise three distinct weak intermolecular attraction mechanisms:<br>1. <b>Dipole-Dipole Forces (Keesom forces):</b> Attractions between permanent polar dipoles (e.g., $\\text{HCl}-\\text{HCl}$).<br>2. <b>Dipole-Induced Dipole Forces (Debye forces):</b> A permanent polar dipole induces a temporary dipole in an adjacent non-polar molecule.<br>3. <b>London Dispersion Forces (Induced Dipole-Induced Dipole / Instantaneous Dipole forces):</b> Attractions between instantaneous temporary dipoles generated by random electron cloud fluctuations in non-polar molecules (e.g., noble gases, $\\text{N}_2$).<br>Option 2 lists nuclear decays, and Option 3 lists fundamental macroscopic physical forces."
+  },
+  {
+    "p_id": "bpsc_chem_m21_15",
+    "qe": "The Empirical Formula represents the simplest whole-number atomic ratio in a compound, whereas the Molecular Formula indicates exact atom counts. If the empirical formula of ethane is $\\text{CH}_3$ and its molar mass is $30\\text{ g/mol}$, what is its Molecular Formula?",
+    "qh": "मूलानुपाती सूत्र (Empirical Formula) एक यौगिक में सबसे सरल पूर्ण-संख्या परमाणु अनुपात का प्रतिनिधित्व करता है, जबकि आणविक सूत्र (Molecular Formula) सटीक परमाणु संख्या दर्शाता है। यदि एथेन का मूलानुपाती सूत्र $\\text{CH}_3$ है और इसका मोलर द्रव्यमान $30\\text{ g/mol}$ है, तो इसका आणविक सूत्र क्या है?",
+    "o": [
+      "$\\text{CH}_4$",
+      "$\\text{C}_2\\text{H}_6$",
+      "$\\text{C}_3\\text{H}_8$",
+      "$\\text{C}_4\\text{H}_{10}$"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 is methane. Option 1 is correct because the mathematical relationship linking molecular formula to empirical formula is:<br><b>$$\\text{Molecular Formula} = (\\text{Empirical Formula})_n$$</b><br><b>$$\\text{where } n = \\frac{\\text{Molar Mass}}{\\text{Empirical Formula Mass}}$$</b><br>1. <b>Empirical Formula Mass of $\\text{CH}_3$:</b> $12 (\\text{C}) + 3 \\times 1 (\\text{H}) = 15\\text{ g/mol}$.<br>2. <b>Calculate integer multiplier $n$:</b> $n = \\frac{30}{15} = \\mathbf{2}$.<br>3. <b>Derive Molecular Formula:</b> $(\\text{CH}_3)_2 = \\mathbf{\\text{C}_2\\text{H}_6}$ (Ethane).<br>Option 2 is propane, and Option 3 is butane."
+  },
+  {
+    "p_id": "bpsc_chem_m21_16",
+    "qe": "Calculating the mass percentage of individual constituent elements is essential for determining chemical empirical formulas. What is the approximate Mass Percentage of Carbon in Methane ($\\text{CH}_4$, molar mass = $16\\text{ g/mol}$)?",
+    "qh": "रासायनिक मूलानुपाती सूत्रों को निर्धारित करने के लिए व्यक्तिगत घटक तत्वों के द्रव्यमान प्रतिशत की गणना करना आवश्यक है। मीथेन ($\\text{CH}_4$, मोलर द्रव्यमान = $16\\text{ g/mol}$) में कार्बन का अनुमानित द्रव्यमान प्रतिशत क्या है?",
+    "o": [
+      "$25\\%$",
+      "$75\\%$",
+      "$50\\%$",
+      "$90\\%$"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 gives the mass percentage of hydrogen ($25\\%$) rather than carbon. Option 1 is correct because the <b>Mass Percentage of an Element</b> in a compound is calculated using the formula:<br><b>$$\\text{Mass } \\% = \\frac{\\text{Total Mass of Element in 1 mole}}{\\text{Molar Mass of Compound}} \\times 100$$</b><br>For Methane ($\\text{CH}_4$):<br>* Mass of Carbon in 1 mole of $\\text{CH}_4 = 1 \\times 12 = 12\\text{ g/mol}$.<br>* Molar mass of $\\text{CH}_4 = 12 + 4(1) = 16\\text{ g/mol}$.<br><b>$$\\text{Mass } \\% \\text{ of Carbon} = \\frac{12}{16} \\times 100 = \\mathbf{75\\%}$$</b><br>(Hydrogen constitutes the remaining $25\\%$ by mass). Option 2 and Option 3 present incorrect mass calculations."
+  },
+  {
+    "p_id": "bpsc_chem_m21_17",
+    "qe": "Kossel and Lewis (1916) introduced the electronic theory of chemical bonding based on noble gas stability. What is the fundamental postulate of the Octet Rule?",
+    "qh": "कोसेल और लुईस (1916) ने उत्कृष्ट गैस स्थिरता के आधार पर रासायनिक बंधन का इलेक्ट्रॉनिक सिद्धांत पेश किया। अष्टक नियम (Octet Rule) की मौलिक अवधारणा क्या है?",
+    "o": [
+      "Atoms combine exclusively by losing protons to achieve a nuclear count of 8.",
+      "Atoms combine either by complete transfer of valence electrons or by sharing valence electrons to achieve a stable octet (8 electrons) in their outermost valence shell, mimicking noble gases.",
+      "Atoms combine to double their principal quantum number in all energy levels.",
+      "Atoms must maintain an odd number of unpaired electrons in their d-orbitals."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 incorrectly involves nuclear proton loss. Option 1 is correct because the <b>Octet Rule</b> formulated by Walther Kossel and Gilbert N. Lewis states that <b>atoms tend to combine either by gaining, losing, or sharing valence electrons in order to achieve a stable outer valence shell configuration of 8 electrons (an octet, $ns^2 np^6$)</b>, identical to the inert electronic configuration of noble gases (except Helium, which achieves a stable duplet of 2 electrons, $1s^2$). Option 2 and Option 3 state invalid quantum or orbital rules."
+  },
+  {
+    "p_id": "bpsc_chem_m21_18",
+    "qe": "Water ($\\text{H}_2\\text{O}$) and Hydrogen Sulfide ($\\text{H}_2\\text{S}$) are Group-16 hydrides featuring two bonding pairs and two lone pairs on the central atom. What is their molecular shape and why is their bond angle less than $109.5^\\circ$?",
+    "qh": "जल ($\\text{H}_2\\text{O}$) और हाइड्रोजन सल्फाइड ($\\text{H}_2\\text{S}$) समूह-16 के हाइड्राइड हैं जिनमें केंद्रीय परमाणु पर दो बॉन्डिंग युग्म और दो एकाकी युग्म (lone pairs) होते हैं। उनका आणविक आकार क्या है और उनका बांड कोण $109.5^\\circ$ से कम क्यों है?",
+    "o": [
+      "Shape: Linear; reduced due to zero lone pair repulsion.",
+      "Shape: V-shaped / Bent; reduced because strong lone pair-lone pair repulsion compresses the bond angle below $109.5^\\circ$ ($104.5^\\circ$ for $\\text{H}_2\\text{O}$).",
+      "Shape: Trigonal planar; reduced by metallic resonance.",
+      "Shape: Octahedral; reduced by $d$-orbital participation."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 misidentifies water as linear. Option 1 is correct because in <b>Water ($\\text{H}_2\\text{O}$)</b> and <b>$\\text{H}_2\\text{S}$</b>, the central oxygen/sulfur atom is $sp^3$-hybridized with four electron domains: two $\\sigma$-bonding pairs and <b>two unshared Lone Pairs</b>. According to VSEPR theory, <b>Lone Pair - Lone Pair repulsions</b> are the strongest repulsive interactions ($\\text{lp-lp} > \\text{lp-bp} > \\text{bp-bp}$). These two unshared lone pairs strongly compress the two $\\text{O-H}$ bonding pairs, reducing the ideal tetrahedral angle ($109.5^\\circ$) to <b>$104.5^\\circ$ in $\\text{H}_2\\text{O}$</b>, resulting in a <b>V-shaped / Bent Molecular Geometry</b>. Option 2 and Option 3 list incorrect geometries."
+  },
+  {
+    "p_id": "bpsc_chem_m21_19",
+    "qe": "Chlorine Trifluoride ($\\text{ClF}_3$) is an interhalogen compound exhibiting an expanded valence shell. What is the molecular geometry of $\\text{ClF}_3$ according to VSEPR theory?",
+    "qh": "क्लोरीन ट्राइफ्लोराइड ($\\text{ClF}_3$) एक अंतर-हैलोजन यौगिक है जो एक विस्तारित संयोजकता कोश को प्रदर्शित करता है। VSEPR सिद्धांत के अनुसार $\\text{ClF}_3$ की आणविक ज्यामिति क्या है?",
+    "o": [
+      "Trigonal planar",
+      "T-shaped (with two equatorial lone pairs compressing axial-equatorial angles below $90^\\circ$)",
+      "Tetrahedral",
+      "Octahedral"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 ignores the central chlorine's two unshared lone pairs. Option 1 is correct because in <b>Chlorine Trifluoride ($\\text{ClF}_3$)</b>, the central chlorine atom possesses 7 valence electrons: 3 are shared with fluorine atoms and 4 remain as <b>two unshared Lone Pairs</b>, giving 5 total electron domains ($sp^3d$ hybridization). To minimize strong lone pair-lone pair repulsions, the two lone pairs occupy <b>equatorial positions</b> of a trigonal bipyramid, causing the three fluorine atoms to form a slightly distorted <b>T-shaped Molecular Geometry</b> with bond angles slightly less than <b>$90^\\circ$</b>. Option 2 and Option 3 describe 4-domain or 6-domain geometries."
+  },
+  {
+    "p_id": "bpsc_chem_m21_20",
+    "qe": "The electrovalency of an ion represents the net electrical charge units acquired during electron transfer. What is the electrovalency of sodium ($\\text{Na}$) and chlorine ($\\text{Cl}$) during the formation of sodium chloride ($\\text{NaCl}$)?",
+    "qh": "किसी आयन की विद्युतसंयोजकता (electrovalency) इलेक्ट्रॉन हस्तांतरण के दौरान अर्जित शुद्ध विद्युत आवेश इकाइयों का प्रतिनिधित्व करती है। सोडियम क्लोराइड ($\\text{NaCl}$) के निर्माण के दौरान सोडियम ($\\text{Na}$) और क्लोरीन ($\\text{Cl}$) की विद्युतसंयोजकता क्या है?",
+    "o": [
+      "Sodium = 2; Chlorine = 2",
+      "Sodium = 1 (loses $1 e^-$ to form $\\text{Na}^+$); Chlorine = 1 (gains $1 e^-$ to form $\\text{Cl}^-$)",
+      "Sodium = 8; Chlorine = 7",
+      "Sodium = 0; Chlorine = 0"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 incorrectly states electrovalency is 2. Option 1 is correct because <b>Electrovalency</b> is defined as the exact number of unit electric charges present on an ion, which corresponds to the number of electrons lost or gained by an atom during ionic bond formation. In $\\text{NaCl}$:<br>* <b>Sodium ($\\text{Na}$, $2,8,1$):</b> Loses $1$ valence electron to achieve an octet ($2,8$), forming $\\text{Na}^+$. Its <b>electrovalency is 1</b>.<br>* <b>Chlorine ($\\text{Cl}$, $2,8,7$):</b> Gains $1$ valence electron to achieve an octet ($2,8,8$), forming $\\text{Cl}^-$. Its <b>electrovalency is 1</b>.<br>Option 2 lists valence shell electron populations, and Option 3 describes neutral unbonded atoms."
+  },
+  
+  {
+    "p_id": "bpsc_chem_m22_01",
+    "qe": "Slaked lime is routinely used for whitewashing walls in households. What is the chemical sequence and final compound responsible for the thin, shiny layer that develops on walls after two to three days?",
+    "qh": "घरों में दीवारों की सफेदी (whitewashing) के लिए नियमित रूप से बुझे हुए चूने का उपयोग किया जाता है। दो से तीन दिनों के बाद दीवारों पर बनने वाली पतली, चमकदार परत के लिए जिम्मेदार रासायनिक अनुक्रम और अंतिम यौगिक क्या है?",
+    "o": [
+      "$\\text{CaO}$ reacts with atmospheric $\\text{O}_2$ to form a shiny layer of $\\text{CaO}_2$.",
+      "$\\text{Ca(OH)}_2$ reacts slowly with atmospheric $\\text{CO}_2$ to form a hard, shiny layer of Calcium Carbonate ($\\text{CaCO}_3$).",
+      "$\\text{CaCO}_3$ reacts with water vapor to produce soluble $\\text{Ca(HCO}_3)_2$.",
+      "$\\text{Ca(OH)}_2$ reacts with nitrogen gas to form insoluble Calcium Nitride $\\text{Ca}_3\\text{N}_2$."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 misidentifies quicklime reacting with oxygen. Option 1 is correct because when slaked lime [<b>Calcium Hydroxide, $\\text{Ca(OH)}_2$</b>] is applied to walls during whitewashing, it undergoes a slow chemical reaction with atmospheric carbon dioxide: <b>$$\\text{Ca(OH)}_2\\text{(aq)} + \\text{CO}_2\\text{(g)} \\rightarrow \\text{CaCO}_3\\text{(s)} + \\text{H}_2\\text{O(l)}$$</b> Over 2 to 3 days, as water evaporates, a thin, uniform, reflective surface layer of insoluble <b>Calcium Carbonate ($\\text{CaCO}_3$)</b> crystallizes, providing a shiny finish and protective coating to the wall structure. Option 2 describes bicarbonate dissolution, and Option 3 presents an impossible nitrogen reaction."
+  },
+  {
+    "p_id": "bpsc_chem_m22_02",
+    "qe": "In a single displacement reaction, an iron nail is immersed in an aqueous blue copper sulfate solution. What visual physical changes occur, and what relative metal reactivity governs this outcome?",
+    "qh": "एक एकल विस्थापन अभिक्रिया में, एक लोहे की कील को तांबे के सल्फेट के जलीय नीले घोल में डुबोया जाता है। कौन से दृश्य भौतिक परिवर्तन होते हैं, और कौन सा सापेक्ष धातु प्रतिक्रियाशीलता इस परिणाम को नियंत्रित करता है?",
+    "o": [
+      "The blue color darkens to deep purple because copper displaces iron from solution.",
+      "The blue color of $\\text{CuSO}_4$ fades to light green ($\\text{FeSO}_4$) while reddish-brown copper metal deposits on the iron nail, confirming Iron is more reactive than Copper.",
+      "The solution turns bright yellow without any metal deposition on the nail.",
+      "Gas evolves violently while iron dissolves without altering the blue color."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 completely reverses the reactivity series. Option 1 is correct because in the single displacement reaction: <b>$$\\text{Fe(s)} + \\text{CuSO}_4\\text{(aq)} \\rightarrow \\text{FeSO}_4\\text{(aq)} + \\text{Cu(s)}$$</b> Iron ($\\\\text{Fe}$) sits higher than Copper ($\\\\text{Cu}$) in the electrochemical activity series. Iron oxidizes and dissolves as ferrous ions ($\\text{Fe}^{2+}$), causing the characteristic blue color of $\\text{Cu}^{2+}$ ions to fade into a light green **Ferrous Sulfate ($\\text{FeSO}_4$)** solution. Concurrently, displaced elemental copper precipitates out as a **reddish-brown coating** on the surface of the iron nail. Option 2 and Option 3 describe incorrect physical phenomena."
+  },
+  {
+    "p_id": "bpsc_chem_m22_03",
+    "qe": "Mixing aqueous solutions of sodium sulfate and barium chloride yields an immediate chemical change. What is the fundamental reaction mechanism and precipitate formed in this process?",
+    "qh": "सोडियम सल्फेट और बेरियम क्लोराइड के जलीय घोल को मिलाने पर तत्काल रासायनिक परिवर्तन होता है। इस प्रक्रिया में बनने वाला मौलिक अभिक्रिया तंत्र और अवक्षेप (precipitate) क्या है?",
+    "o": [
+      "Single displacement forming a green soluble precipitate of $\\text{NaCl}$.",
+      "Double Displacement Reaction resulting in ion exchange that forms an insoluble white precipitate of Barium Sulfate ($\\text{BaSO}_4$).",
+      "Neutralization reaction yielding gaseous sulfur dioxide and sodium hydride.",
+      "Thermal decomposition forming metallic barium and chlorine gas."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 misidentifies sodium chloride as an insoluble green precipitate. Option 1 is correct because combining aqueous **Sodium Sulfate ($\\text{Na}_2\\text{SO}_4$)** and **Barium Chloride ($\\text{BaCl}_2$)** undergoes a **Double Displacement Reaction** [a reaction type wherein two ionic compounds exchange constituent cations and anions in aqueous solution]: <b>$$\\text{Na}_2\\text{SO}_4\\text{(aq)} + \\text{BaCl}_2\\text{(aq)} \\rightarrow \\text{BaSO}_4\\text{(s)}\\downarrow + 2\\text{NaCl(aq)}$$</b> The electrostatic binding energy of insoluble **Barium Sulfate ($\\text{BaSO}_4$)** causes it to instantly precipitate out of the liquid phase as a distinct **white insoluble solid precipitate**. Option 2 and Option 3 describe unrelated reaction types."
+  },
+  {
+    "p_id": "bpsc_chem_m22_04",
+    "qe": "Classical and modern electronic definitions define Oxidation and Reduction in terms of elemental movement and electron transfer. Which statement accurately contrasts an Oxidizing Agent versus a Reducing Agent?",
+    "qh": "शास्त्रीय और आधुनिक इलेक्ट्रॉनिक परिभाषाएं तत्वों की गति और इलेक्ट्रॉन हस्तांतरण के संदर्भ में ऑक्सीकरण और अपचयन को परिभाषित करती हैं। कौन सा कथन ऑक्सीकारक (Oxidizing Agent) बनाम अपचायक (Reducing Agent) की सटीक तुलना करता है?",
+    "o": [
+      "An Oxidizing Agent donates electrons and increases its oxidation number; a Reducing Agent accepts electrons.",
+      "An Oxidizing Agent accepts electrons (gets reduced) and causes the gain of oxygen or loss of electrons in another species; a Reducing Agent donates electrons (gets oxidized).",
+      "An Oxidizing Agent loses oxygen atoms; a Reducing Agent loses hydrogen atoms.",
+      "Both oxidizing and reducing agents donate protons simultaneously."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 reverses electron donor and acceptor roles. Option 1 is correct because according to modern electronic theory, **Oxidation** is the loss of electrons (increase in oxidation state), while **Reduction** is the gain of electrons (decrease in oxidation state). An **Oxidizing Agent** facilitates the oxidation of another reactant by **accepting electrons** (and thus itself undergoing reduction, e.g., $\\\\text{O}_2, \\\\text{KMnO}_4, \\\\text{H}_2\\\\text{O}_2$). Conversely, a **Reducing Agent** facilitates reduction by **donating electrons** (and thus itself undergoing oxidation, e.g., $\\\\text{H}_2, \\\\text{CO}, \\\\text{H}_2\\\\text{S}$). Option 2 states reversed oxygen/hydrogen definitions, and Option 3 confuses redox with acid-base proton transfer."
+  },
+  {
+    "p_id": "bpsc_chem_m22_05",
+    "qe": "Certain chemical species exhibit dual redox character depending on the reaction environment. Which choice lists substances capable of acting as both Oxidizing Agents and Reducing Agents?",
+    "qh": "कुछ रासायनिक प्रजातियां अभिक्रिया वातावरण के आधार पर दोहरी रेडॉक्स प्रकृति प्रदर्शित करती हैं। कौन सा विकल्प उन पदार्थों को सूचीबद्ध करता है जो ऑक्सीकारक और अपचायक दोनों के रूप में कार्य करने में सक्षम हैं?",
+    "o": [
+      "$\\text{O}_2, \\text{O}_3,$ and $\\text{KMnO}_4$",
+      "Nitrous Acid ($\\text{HNO}_2$), Sulfur Dioxide ($\\text{SO}_2$), and Hydrogen Peroxide ($\\text{H}_2\\text{O}_2$)",
+      "$\\text{H}_2, \\text{C},$ and $\\text{CO}$",
+      "$\\text{NaCl}, \\text{BaSO}_4,$ and $\\text{CaCO}_3$"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 lists exclusively strong oxidizing agents. Option 1 is correct because chemical species containing an element in an **intermediate oxidation state** can either accept electrons (acting as oxidizing agents) or donate electrons (acting as reducing agents). In **Nitrous Acid ($\\text{HNO}_2$)**, nitrogen is in the $+3$ state (between $+5$ and $-3$); in **Sulfur Dioxide ($\\text{SO}_2$)**, sulfur is in the $+4$ state (between $+6$ and $-2$); and in **Hydrogen Peroxide ($\\text{H}_2\\text{O}_2$)**, oxygen is in the $-1$ state (between $0$ and $-2$). Consequently, all three species exhibit **dual redox behavior**. Option 2 lists standard reducing agents, and Option 3 lists non-redox spectator salts."
+  },
+  {
+    "p_id": "bpsc_chem_m22_06",
+    "qe": "Metallic corrosion causes extensive structural damage to infrastructure. What is the precise chemical composition of rust formed during the atmospheric corrosion of iron, and what electrochemical process forms it?",
+    "qh": "धातु का क्षरण (corrosion) बुनियादी ढांचे को व्यापक संरचनात्मक क्षति पहुंचाता है। लोहे के वायुमंडलीय क्षरण के दौरान बनने वाले जंग (rust) का सटीक रासायनिक संयोजन क्या है, और कौन सी विद्युत-रासायनिक प्रक्रिया इसे बनाती है?",
+    "o": [
+      "Anhydrous Iron Carbonate ($\\text{FeCO}_3$) formed by simple precipitation.",
+      "Hydrated Ferric Oxide ($\\text{Fe}_2\\text{O}_3 \\cdot x\\text{H}_2\\text{O}$) formed via an electrochemical process involving simultaneous oxygen oxidation and moisture contact.",
+      "Pure Ferrous Chloride ($\\text{FeCl}_2$) formed by sulfur gas absorption.",
+      "Basic Copper Carbonate ($\\text{Cu(OH)}_2 \\cdot \\text{CuCO}_3$) formed by acid rain."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 misidentifies rust as iron carbonate. Option 1 is correct because atmospheric corrosion of iron is fundamentally an **Electrochemical Process** [a redox phenomenon where microscopic anodic and cathodic sites form on a metal surface in the presence of an electrolyte like water]. Iron at anodic sites oxidizes to $\\text{Fe}^{2+}$, which further reacts with dissolved oxygen and water to deposit **Hydrated Ferric Oxide ($\\text{Fe}_2\\text{O}_3 \\cdot x\\text{H}_2\\text{O}$)**, commonly known as **Rust**. Option 2 lists ferrous chloride, and Option 3 describes the green patina formed on copper/bronze rather than iron rust."
+  },
+  {
+    "p_id": "bpsc_chem_m22_07",
+    "qe": "Copper and bronze artifacts exposed to humid air over long periods gradually develop a characteristic green surface coating (patina). What is the chemical identity of this protective green film?",
+    "qh": "लंबी अवधि में आर्द्र हवा के संपर्क में आने वाले तांबे और कांस्य की कलाकृतियों पर धीरे-धीरे एक विशिष्ट हरी सतह कोटिंग (patina) विकसित हो जाती है। इस सुरक्षात्मक हरी फिल्म की रासायनिक पहचान क्या है?",
+    "o": [
+      "$\\text{CuS}$ (Copper Sulfide)",
+      "Basic Copper Carbonate [$\\text{Cu(OH)}_2 \\cdot \\text{CuCO}_3$]",
+      "Anhydrous Copper Nitrate [$\\text{Cu(NO}_3)_2$]",
+      "Cuprous Oxide [$\\text{Cu}_2\\text{O}$]"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 describes the black tarnishing film of silver ($\\\\text{Ag}_2\\\\text{S}$). Option 1 is correct because when copper or bronze is exposed to moist atmospheric air containing oxygen, carbon dioxide, and water vapor over time, it undergoes atmospheric corrosion. This slow electrochemical reaction forms a distinctive green coating composed of **Basic Copper Carbonate [$\\text{Cu(OH)}_2 \\cdot \\text{CuCO}_3$]**: <b>$$2\\text{Cu} + \\text{H}_2\\text{O} + \\text{CO}_2 + \\text{O}_2 \\rightarrow \\text{Cu(OH)}_2 \\cdot \\text{CuCO}_3$$</b> Option 2 and Option 3 list non-patina copper salts."
+  },
+  {
+    "p_id": "bpsc_chem_m22_08",
+    "qe": "Metals are protected from atmospheric corrosion using various barrier and metallurgical methods. Why are commercial food cans coated with Tin (Sn) rather than Zinc (Zn)?",
+    "qh": "विभिन्न बैरियर और धातुकर्म विधियों का उपयोग करके धातुओं को वायुमंडलीय क्षरण से बचाया जाता है। व्यावसायिक खाद्य डिब्बों (food cans) पर जस्ता (Zn) के बजाय टिन (Sn) की परत क्यों चढ़ाई जाती है?",
+    "o": [
+      "Zinc is much softer than iron and melts inside food.",
+      "Zinc is chemically more reactive than iron and would react with acidic food stuff to produce toxic compounds, whereas Tin is less reactive and safe.",
+      "Tin forms a radioactive oxide layer that sterilizes bacterial spores.",
+      "Zinc reacts with nitrogen gas to create explosive gas pockets."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 incorrectly attributes protection to melting points. Option 1 is correct because in the electrochemical activity series, **Zinc (Zn) is more reactive than Iron (Fe)**, whereas **Tin (Sn) is less reactive than Iron**. If food cans (made of sheet iron/steel) were coated with zinc, acidic organic compounds present in stored food (like citric, lactic, or malic acids) would react with the reactive zinc layer, forming soluble, potentially toxic zinc salts that contaminate the food. Tin, being unreactive with organic acids, acts as a safe, non-toxic inert barrier. Option 2 and Option 3 list invalid physical mechanisms."
+  },
+  {
+    "p_id": "bpsc_chem_m22_09",
+    "qe": "Anodizing is a surface engineering process applied to aluminum to enhance its corrosion resistance. What chemical film is artificially thickened during anodizing, and how does it protect the underlying metal?",
+    "qh": "ऐनोडीकरण (Anodizing) एल्यूमीनियम की संक्षारण प्रतिरोधकता बढ़ाने के लिए लागू की जाने वाली एक सतह इंजीनियरिंग प्रक्रिया है। ऐनोडीकरण के दौरान कौन सी रासायनिक फिल्म कृत्रिम रूप से मोटी हो जाती है, और यह अंतर्निहित धातु की सुरक्षा कैसे करती है?",
+    "o": [
+      "A layer of elemental sulfur that repels moisture.",
+      "A thick, coherent protective passive layer of Aluminum Oxide ($\\text{Al}_2\\text{O}_3$) that seals the surface against further environmental attack.",
+      "A soft hydrated carbonate gel that absorbs acidic rainwater.",
+      "A metallic zinc alloy layer deposited by electroplating."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 describes sulfur deposition. Option 1 is correct because **Anodizing** is an electrolytic passivation process where aluminum serves as the anode in an acid bath. Passing electric current thickens the naturally occurring, non-reactive passive film of **Aluminum Oxide ($\\text{Al}_2\\text{O}_3$)** on the metal surface. This dense, coherent oxide layer renders the aluminum **passive** [a state of chemical unreactivity where a corrosion-resistant oxide skin prevents oxygen and moisture from accessing bulk metal underneath]. Option 2 describes non-protective gels, and Option 3 describes galvanization."
+  },
+  {
+    "p_id": "bpsc_chem_m22_10",
+    "qe": "In 1857, Louis Pasteur demonstrated that fermentation is driven by biological catalysts in living microorganisms. What are the energetic nature, evolved gas, and biological catalyst responsible for converting glucose into ethyl alcohol?",
+    "qh": "1857 में, लुई पाश्चर ने प्रदर्शित किया कि किण्वन (fermentation) जीवित सूक्ष्मजीवों में जैविक उत्प्रेरकों द्वारा संचालित होता है। ग्लूकोज को एथिल अल्कोहल में परिवर्तित करने के लिए जिम्मेदार ऊर्जात्मक प्रकृति, उत्सर्जित गैस और जैविक उत्प्रेरक क्या हैं?",
+    "o": [
+      "Endothermic process evolving oxygen gas driven by algae.",
+      "Exothermic process evolving Carbon Dioxide ($\\text{CO}_2$) gas, catalyzed by zymase enzymes in Yeast (or bacteria).",
+      "Isothermal process evolving nitrogen gas driven by viruses.",
+      "Combustion process evolving hydrogen gas driven by fungi."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 incorrectly states fermentation is endothermic and evolves oxygen. Option 1 is correct because **Fermentation** is an **Exothermic Process** [releasing heat] in which complex organic molecules (like glucose) are anaerobically broken down into simpler compounds by microorganisms like **Yeast** (via enzymes such as invertase and *zymase*) or *Lactobacilli* bacteria: <b>$$\\text{C}_6\\text{H}_{12}\\text{O}_6 \\xrightarrow{\\text{Zymase}} 2\\text{C}_2\\text{H}_5\\text{OH} + 2\\text{CO}_2\\uparrow + \\text{Heat}$$</b> Copious evolution of **Carbon Dioxide ($\\text{CO}_2$)** creates bubbling/effervescence that resembles boiling. Option 2 and Option 3 list incorrect gases or micro-organisms."
+  },
+  {
+    "p_id": "bpsc_chem_m22_11",
+    "qe": "Foods containing oils and fats develop an unpleasant odor and taste when left exposed to ambient air over time. What chemical reaction causes rancidity, and which synthetic antioxidant is added to preserve fatty foods?",
+    "qh": "तेल और वसा वाले खाद्य पदार्थों को समय के साथ खुली हवा में छोड़ देने पर उनमें अप्रिय गंध और स्वाद विकसित हो जाता है। कौन सी रासायनिक अभिक्रिया विकृतगंधिता (rancidity) का कारण बनती है, और वसायुक्त खाद्य पदार्थों को संरक्षित करने के लिए कौन सा सिंथेटिक एंटीऑक्सीडेंट मिलाया जाता है?",
+    "o": [
+      "Hydrolysis caused by carbon dioxide; preserved by adding calcium chloride.",
+      "Atmospheric Oxidation of unsaturated fats and oils; preserved by adding Butylated Hydroxytoluene (BHT) or flushing with Dinitrogen ($\\text{N}_2$).",
+      "Thermal reduction caused by light; preserved by adding sodium hydroxide.",
+      "Fermentation by lactobacilli; preserved by adding ethanol."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 misidentifies rancidity as carbon dioxide hydrolysis. Option 1 is correct because **Rancidity** is the aerial **Oxidation** of unsaturated fatty acids and oils present in food items. Free-radical oxidative cleavage produces volatile aldehydes and carboxylic acids with foul smells and stale tastes. Rancidity is prevented by adding synthetic **Antioxidants** [free-radical scavengers] such as **BHT (Butylated Hydroxytoluene)** or BHA, or by packaging foods in sealed containers flushed with inert **Dinitrogen ($\\text{N}_2$) gas** to displace atmospheric oxygen. Option 2 and Option 3 state incorrect chemical mechanisms."
+  },
+  {
+    "p_id": "bpsc_chem_m22_12",
+    "qe": "A freshly sliced apple turns brown if left exposed to ambient air for a short time. What chemical phenomenon accounts for this rapid color transformation?",
+    "qh": "ताजा कटा हुआ सेब थोड़े समय के लिए खुली हवा में छोड़ देने पर भूरा हो जाता है। कौन सी रासायनिक परिघटना इस तीव्र रंग परिवर्तन के लिए जिम्मेदार है?",
+    "o": [
+      "Sublimation of apple sugar into caramel vapor.",
+      "Atmospheric Oxidation of polyphenol compounds catalyzed by enzymes and iron present inside the apple tissue.",
+      "Reduction of pectin into insoluble carbon black.",
+      "Evaporation of water leaving dry iron filings."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 presents sugar caramelization via sublimation. Option 1 is correct because slicing an apple ruptures plant cell walls, exposing internal iron-containing enzymes (like polyphenol oxidase) and phenolic compounds to atmospheric oxygen. Enzymatic **Oxidation** converts colorless phenols into quinones, which polymerize into dark brown pigments (melanins). This rapid surface browning is a direct consequence of biological **Oxidation**. Option 2 and Option 3 describe non-existent chemical mechanisms."
+  },
+  {
+    "p_id": "bpsc_chem_m22_13",
+    "qe": "Catalysts alter the kinetics of chemical reactions without being consumed in the net process. How does a catalyst accelerate a chemical reaction according to transition state theory?",
+    "qh": "उत्प्रेरक शुद्ध प्रक्रिया में उपभोग किए बिना रासायनिक अभिक्रियाओं की गतिकी (kinetics) को बदल देते हैं। संक्रमण अवस्था सिद्धांत (transition state theory) के अनुसार एक उत्प्रेरक रासायनिक अभिक्रिया को कैसे तेज करता है?",
+    "o": [
+      "By increasing the net enthalpy change ($\\Delta H$) of the reaction.",
+      "By providing an alternative reaction pathway featuring a Lower Activation Energy ($E_a$).",
+      "By selectively shifting the position of chemical equilibrium toward products.",
+      "By increasing the thermal kinetic energy of reactant molecules."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 claims catalysts alter reaction enthalpy ($\\\\Delta H$), which is false because thermodynamics ($\\\\Delta H, \\\\Delta G, K_{\\\\text{eq}}$) is catalyst-independent. Option 1 is correct because a **Catalyst** speeds up a chemical reaction by participating in intermediate complex formation, **providing an alternative reaction pathway with a lower Activation Energy ($E_a$)** [the minimum threshold energy reactant molecules must absorb to form the activated transition state complex]. Lowering $E_a$ enables a significantly higher fraction of molecular collisions to be energetically successful per unit time. Option 2 is false because catalysts speed up forward and reverse reactions equally without altering the final equilibrium constant ($K_{\\\\text{eq}}$). Option 3 describes thermal heating, not catalysis."
+  },
+  {
+    "p_id": "bpsc_chem_m22_14",
+    "qe": "Industrial ammonia synthesis via Haber's Process requires specialized solid-state catalytic components. Which combination serves as the primary Catalyst and Promoter in Haber's Process?",
+    "qh": "हैबर विधि (Haber's Process) द्वारा औद्योगिक अमोनिया संश्लेषण के लिए विशेष ठोस-अवस्था उत्प्रेरक घटकों की आवश्यकता होती है। हैबर विधि में प्राथमिक उत्प्रेरक और वर्धक (Promoter) के रूप में कौन सा संयोजन कार्य करता है?",
+    "o": [
+      "Catalyst: Vanadium Pentoxide ($\\text{V}_2\\text{O}_5$); Promoter: Platinum",
+      "Catalyst: Finely divided Iron ($\\text{Fe}$); Promoter: Molybdenum ($\\text{Mo}$)",
+      "Catalyst: Cupric Chloride ($\\text{CuCl}_2$); Promoter: Nickel",
+      "Catalyst: Platinized Asbestos; Promoter: Arsenic"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 lists Contact Process components for $\\text{H}_2\\text{SO}_4$. Option 1 is correct because in **Haber's Process** for synthesizing ammonia: <b>$$\\text{N}_2\\text{(g)} + 3\\text{H}_2\\text{(g)} \\rightleftharpoons 2\\text{NH}_3\\text{(g)}$$</b> The primary catalyst is **Finely divided Iron ($\\text{Fe}$)** (or iron oxide with $\\text{Al}_2\\text{O}_3/\\text{K}_2\\text{O}$), while **Molybdenum ($\\text{Mo}$)** acts as a **Promoter** [a substance that enhances catalytic activity by improving surface lattice electronic properties or surface area]. Option 2 lists Deacon's process components, and Option 3 lists Ostwald's process components."
+  },
+  {
+    "p_id": "bpsc_chem_m22_15",
+    "qe": "Contact Process is used for the large-scale industrial manufacture of sulfuric acid ($\\text{H}_2\\text{SO}_4$). What heterogeneous catalyst accelerates the key oxidation step of sulfur dioxide to sulfur trioxide?",
+    "qh": "संपर्क विधि (Contact Process) का उपयोग सल्फ्यूरिक अम्ल ($\\text{H}_2\\text{SO}_4$) के बड़े पैमाने पर औद्योगिक निर्माण के लिए किया जाता है। कौन सा विषमांगी उत्प्रेरक (heterogeneous catalyst) सल्फर डाइऑक्साइड से सल्फर ट्राइऑक्साइड के मुख्य ऑक्सीकरण चरण को तेज करता है?",
+    "o": [
+      "Finely divided Nickel ($\\text{Ni}$)",
+      "Vanadium Pentoxide ($\\text{V}_2\\text{O}_5$)",
+      "Cupric Chloride ($\\text{CuCl}_2$)",
+      "Molybdenum ($\\text{Mo}$)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 is used for oil hydrogenation. Option 1 is correct because in the **Contact Process** for manufacturing $\\text{H}_2\\text{SO}_4$, the crucial reversible rate-determining step involves oxidizing gaseous $\\text{SO}_2$ to $\\text{SO}_3$: <b>$$2\\text{SO}_2\\text{(g)} + \\text{O}_2\\text{(g)} \\rightleftharpoons 2\\text{SO}_3\\text{(g)}$$</b> This reaction is catalyzed heterogeneously by solid **Vanadium Pentoxide ($\\text{V}_2\\text{O}_5$)** (which replaced expensive platinized asbestos). Option 2 is used in Deacon's process for chlorine, and Option 3 is a promoter in ammonia synthesis."
+  },
+  {
+    "p_id": "bpsc_chem_m22_16",
+    "qe": "The Sabatier-Senderens reaction involves the catalytic hydrogenation of unsaturated vegetable oils into solid vanaspati ghee. What finely divided metal acts as the catalyst in this industrial process?",
+    "qh": "सबातिए-सेन्डेरेंस (Sabatier-Senderens) अभिक्रिया में असंतृप्त वनस्पति तेलों का ठोस वनस्पति घी में उत्प्रेरकीय हाइड्रोजनीकरण शामिल है। इस औद्योगिक प्रक्रिया में कौन सी बारीक कटी हुई धातु उत्प्रेरक का कार्य करती है?",
+    "o": [
+      "Platinized Asbestos",
+      "Finely divided Nickel ($\\text{Ni}$)",
+      "Anhydrous Aluminum Chloride ($\\text{AlCl}_3$)",
+      "Iron Oxide ($\\text{Fe}_2\\text{O}_3$)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 is used in nitric acid synthesis. Option 1 is correct because the **Sabatier-Senderens Process** converts liquid unsaturated vegetable oils (containing alkene double bonds, $-\\\\text{CH}=\\\\text{CH}-$) into saturated solid fats (vanaspati ghee) by passing hydrogen gas at $150-200^\\circ\\text{C}$ over a **Finely divided Nickel ($\\text{Ni}$) Catalyst**: <b>$$\\text{Vegetable Oil (Unsaturated)} + \\text{H}_2 \\xrightarrow{\\text{Ni catalyst}} \\text{Vegetable Ghee (Saturated)}$$</b> Option 2 is a Lewis acid alkylation catalyst, and Option 3 is a passive iron oxide."
+  },
+  {
+    "p_id": "bpsc_chem_m22_17",
+    "qe": "Deacon's Process is a historical industrial route for manufacturing chlorine gas by the oxidation of hydrogen chloride gas. What catalytic compound accelerates Deacon's process?",
+    "qh": "डीकन विधि (Deacon's Process) हाइड्रोजन क्लोराइड गैस के ऑक्सीकरण द्वारा क्लोरीन गैस के निर्माण का एक ऐतिहासिक औद्योगिक मार्ग है। कौन सा उत्प्रेरक यौगिक डीकन विधि को तेज करता है?",
+    "o": [
+      "Vanadium Pentoxide ($\\text{V}_2\\text{O}_5$)",
+      "Cupric Chloride ($\\text{CuCl}_2$)",
+      "Zinc Carbonate ($\\text{ZnCO}_3$)",
+      "Platinized Wire Gauze"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 is used in Contact Process. Option 1 is correct because **Deacon's Process** synthesizes elemental chlorine gas by reacting hydrogen chloride gas with atmospheric oxygen at $450^\\circ\\text{C}$ in the presence of a **Cupric Chloride ($\\text{CuCl}_2$) Catalyst**: <b>$$4\\text{HCl} + \\text{O}_2 \\xrightarrow{\\text{CuCl}_2} 2\\text{Cl}_2 + 2\\text{H}_2\\text{O}$$</b> Option 2 is a non-catalytic zinc salt, and Option 3 is used in Ostwald's process."
+  },
+  {
+    "p_id": "bpsc_chem_m22_18",
+    "qe": "Ostwald's Process produces nitric acid ($\\text{HNO}_3$) via the catalytic oxidation of ammonia. What catalyst is deployed in the high-temperature oxidation chamber during this process?",
+    "qh": "ओस्टवाल्ड विधि (Ostwald's Process) अमोनिया के उत्प्रेरकीय ऑक्सीकरण के माध्यम से नाइट्रिक अम्ल ($\\text{HNO}_3$) का उत्पादन करती है। इस प्रक्रिया के दौरान उच्च तापमान ऑक्सीकरण कक्ष में कौन सा उत्प्रेरक तैनात किया जाता है?",
+    "o": [
+      "Finely divided Iron",
+      "Platinized Asbestos / Platinized Wire Gauze",
+      "Cupric Chloride",
+      "Nickel oxide"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 is used in Haber's process. Option 1 is correct because in **Ostwald's Process** for manufacturing Nitric Acid ($\\text{HNO}_3$), ammonia gas mixed with excess air is oxidized at $500^\\circ\\text{C}$ over a **Platinized Asbestos or Platinum-Rhodium Wire Gauze Catalyst** to yield nitric oxide ($\\\\text{NO}$), which is subsequently oxidized to $\\\\text{NO}_2$ and absorbed in water: <b>$$4\\text{NH}_3\\text{(g)} + 5\\text{O}_2\\text{(g)} \\xrightarrow{\\text{Pt gauze}} 4\\text{NO(g)} + 6\\text{H}_2\\text{O(g)}$$</b> Option 2 describes Deacon's process, and Option 3 describes nickel catalysts."
+  },
+  {
+    "p_id": "bpsc_chem_m22_19",
+    "qe": "Certain chemical substances destroy or severely reduce the efficiency of a catalyst when present even in trace quantities. What term designates such catalyst-deactivating substances, and what is a classic example?",
+    "qh": "कुछ रासायनिक पदार्थ ट्रेस मात्रा में मौजूद होने पर भी उत्प्रेरक की दक्षता को नष्ट या गंभीर रूप से कम कर देते हैं। ऐसे उत्प्रेरक-अक्रिय करने वाले (deactivating) पदार्थों को क्या नाम दिया जाता है, और इसका एक उत्कृष्ट उदाहरण क्या है?",
+    "o": [
+      "Promoters (e.g., Molybdenum)",
+      "Poisons or Anti-catalysts (e.g., Arsenic Oxide $As_2O_3$ or Carbon Monoxide $CO$)",
+      "Inhibitors (e.g., Sodium chloride)",
+      "Enzymes (e.g., Zymase)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 lists promoters, which *increase* catalytic activity. Option 1 is correct because **Catalyst Poisons (Anti-catalysts)** are substances that decrease or completely destroy the activity of a catalyst. They function by preferentially adsorbing onto active catalytic surface sites, blocking reactant molecules from binding. Classic examples include **Arsenic Oxide ($As_2O_3$)** and **Carbon Monoxide ($CO$)** (which poisons iron catalysts in Haber's process). Option 2 lists non-poison spectator salts, and Option 3 lists biological catalysts."
+  },
+  {
+    "p_id": "bpsc_chem_m22_20",
+    "qe": "Reaction kinetics differentiates between the Order of a Reaction and its Molecularity. Which choice correctly contrasts these two fundamental kinetic parameters?",
+    "qh": "अभिक्रिया गतिकी (Reaction kinetics) किसी अभिक्रिया की कोटि (Order of a Reaction) और उसकी आणविकता (Molecularity) के बीच अंतर करती है। कौन सा विकल्प इन दो मौलिक गतिकीय मापदंडों की सही तुलना करता है?",
+    "o": [
+      "Order must always be a positive non-zero integer; Molecularity can be zero or fractional.",
+      "Order is an experimentally determined value (sum of concentration exponents in rate law) that can be zero, fractional, or integer; Molecularity is a theoretical count of reacting species in an elementary step and must be a positive integer.",
+      "Order applies only to nuclear reactions; Molecularity applies only to biological enzyme processes.",
+      "Both Order and Molecularity are always identical values for complex multi-step reactions."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 completely swaps the mathematical properties of order and molecularity. Option 1 is correct because: (1) **Order of a Reaction** is an **experimentally derived quantity** representing the sum of power exponents of reactant concentrations in the rate law equation ($r = k[A]^x[B]^y$, $\\text{Order} = x+y$). It can be zero, fractional, negative, or an integer; (2) **Molecularity** is a **theoretical parameter** defined as the total number of reacting species (atoms, ions, or molecules) colliding simultaneously in an elementary (single-step) reaction, and **must strictly be a positive non-zero integer** ($1, 2, 3$). Option 2 and Option 3 state invalid kinetic claims."
+  }
+]
