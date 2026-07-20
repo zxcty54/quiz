@@ -1302,5 +1302,136 @@
     ],
     "a": 1,
     "e": "<b>Explanation:</b> Option 0 incorrectly identifies lead as a liquid at room temperature. Option 1 is correct because **Mercury ($\\\\text{Hg}$)** is a liquid transition metal with an unusually low electrical conductivity (high electrical resistance) compared to other metals like copper or silver. Because it forms amalgams with most metals but fails to react with or amalgamate iron, elemental mercury is stored and transported industrially in **Iron Containers**. Option 2 incorrectly calls uranium a ductile gas, and Option 3 incorrectly describes thorium as a room-temperature superconductor."
+  },
+  
+  {
+    "p_id": "bpsc_chem_m8_01",
+    "qe": "During metallurgical smelting operations, slag floats on top of the molten metal layer. What combination of physical and chemical properties enables slag to be separated so cleanly from the extracted liquid metal?",
+    "qh": "धातुकर्म प्रगलन (smelting) संचालन के दौरान, स्लैग पिघली हुई धातु की परत के ऊपर तैरता है। भौतिक और रासायनिक गुणों का कौन सा संयोजन स्लैग को निष्कर्षण की गई तरल धातु से इतनी सफाई से अलग करने में सक्षम बनाता है?",
+    "o": [
+      "Slag has a higher density and lower melting point than the molten metal, causing it to sink to the furnace floor.",
+      "Slag is immiscible with the liquid metal, fusible at smelting temperatures, and has a lower density than the molten metal.",
+      "Slag undergoes violent sublime evaporation, leaving behind solid pure metal crystals.",
+      "Slag reacts with the furnace graphite lining to form an insoluble solid metal amalgam."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 incorrectly states that slag has a higher density and sinks to the furnace floor. Option 1 is correct because **Slag** (such as Calcium Silicate, $\\\\text{CaSiO}_3$) is a fused byproduct formed by the reaction between flux ($\\\\text{CaO}$) and non-fusible earthy impurities ($\\\\text{SiO}_2$). For efficient metallurgical separation, slag must be **Fusible** [possessing a lower melting point than the operating temperature of the furnace so it remains completely liquid] and exhibit a significantly **Lower Density** than the underlying molten metal (e.g., molten iron). Because it is chemically **Immiscible** [incapable of mixing or dissolving into the liquid metal matrix], it floats on the surface as a distinct liquid layer, protecting the underlying refined metal from atmospheric re-oxidation and allowing easy tapping via an upper slag hole. Option 2 introduces sublimation, and Option 3 proposes an impossible amalgam reaction with graphite."
+  },
+  {
+    "p_id": "bpsc_chem_m8_02",
+    "qe": "Metal reduction processes are tailored to a metal's position in the Electrochemical Reactivity Series. Which metal reduction technique is correctly matched with its underlying thermodynamic mechanism and target metal?",
+    "qh": "धातु अपचयन प्रक्रियाएं इलेक्ट्रोकेमिकल प्रतिक्रियाशीलता श्रेणी में धातु की स्थिति के अनुसार तैयार की जाती हैं। कौन सी धातु अपचयन तकनीक अपने अंतर्निहित ऊष्मागतिकी तंत्र और लक्ष्य धातु के साथ सही ढंग से मेल खाती है?",
+    "o": [
+      "Aluminothermic Process: Uses aluminium as a powerful reducing agent to reduce refractory oxides like $\\\\text{Cr}_2\\\\text{O}_3$ and $\\\\text{Mn}_3\\\\text{O}_4$.",
+      "Auto Reduction: Uses high-voltage direct current electricity to reduce active s-block alkali metals.",
+      "Electrolytic Reduction: Uses carbon monoxide gas at low temperatures to reduce gold and platinum ores.",
+      "Smelting with Coke: Used exclusively for unreactive noble metals at the bottom of the reactivity series."
+    ],
+    "a": 0,
+    "e": "<b>Explanation:</b> Option 1 confuses auto reduction (which uses heat alone for low-reactivity metals) with electrolysis. Option 0 is correct because the **Aluminothermic Process (Gold-schmidt Process)** relies on the high affinity of aluminium for oxygen, making it a strong **Reducing Agent** [a chemical species that donates electrons to another species, reducing it while itself being oxidized]. Highly stable transition metal oxides like Chromium Oxide ($\\\\text{Cr}_2\\\\text{O}_3$) and Manganese Oxide ($\\\\text{Mn}_3\\\\text{O}_4$) cannot be reduced efficiently by carbon; reacting them with aluminium powder triggers a highly exothermic displacement reaction: $\\\\text{Cr}_2\\\\text{O}_3 + 2\\\\text{Al} \\\\rightarrow \\\\text{Al}_2\\\\text{O}_3 + 2\\\\text{Cr} + \\\\text{Heat}$. Option 2 misdefines electrolytic reduction as carbon monoxide gas reduction, and Option 3 claims coke smelting is used for noble metals (which occur in native form and require no reduction)."
+  },
+  {
+    "p_id": "bpsc_chem_m8_03",
+    "qe": "Metals low in the Activity Series (such as copper, mercury, and lead) can be extracted from their roasted sulphide ores without using external carbon or aluminium reducing agents. What process governs this extraction?",
+    "qh": "प्रतिक्रियाशीलता श्रेणी में नीचे मौजूद धातुओं (जैसे तांबा, पारा और सीसा) को बाहरी कार्बन या एल्यूमीनियम अपचायक एजेंटों का उपयोग किए बिना उनके भुने हुए सल्फाइड अयस्कों से निकाला जा सकता है। कौन सी प्रक्रिया इस निष्कर्षण को नियंत्रित करती है?",
+    "o": [
+      "Electrolytic Refining",
+      "Auto Reduction (Self-Reduction)",
+      "Zone Refining",
+      "Mond's Process"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 refers to post-extraction electrolytic purification, not primary reduction. Option 1 is correct because metals sitting low in the **Electrochemical Reactivity Series** [an arrangement of metallic elements in decreasing order of their standard reduction potentials] have weakly basic, easily reducible oxides and sulphides. During **Auto Reduction (Self-Reduction)**, a portion of the metal sulphide ore is first roasted in air to form the metal oxide or sulphate. Heating is then continued in the absence of air, causing the unreacted metal sulphide to act as its own reducing agent against the newly formed metal oxide: $2\\\\text{HgS} + 3\\\\text{O}_2 \\\\rightarrow 2\\\\text{HgO} + 2\\\\text{SO}_2$, followed by $2\\\\text{HgO} + \\\\text{HgS} \\\\rightarrow 3\\\\text{Hg} + \\\\text{SO}_2\\\\uparrow$. No external chemical reducing agent is required. Option 2 is a semiconductor purification method, and Option 3 is a vapor-phase refining process for nickel."
+  },
+  {
+    "p_id": "bpsc_chem_m8_04",
+    "qe": "Refining methods exploit physical differences between metals and their impurities. Which choice correctly coordinates low-boiling metals and low-melting metals with their corresponding physical refining operations?",
+    "qh": "शोधन विधियां (Refining methods) धातुओं और उनकी अशुद्धियों के बीच भौतिक अंतर का उपयोग करती हैं। कौन सा विकल्प कम क्वथनांक वाली धातुओं और कम गलनांक वाली धातुओं को उनके संबंधित भौतिक शोधन संचालन के साथ सही ढंग से समन्वित करता है?",
+    "o": [
+      "Low-boiling metals ($\\\\text{Zn}, \\\\text{Cd}, \\\\text{Hg}$): Distillation; Low-melting metals ($\\\\text{Sn}, \\\\text{Pb}, \\\\text{Hg}$): Liquation.",
+      "Low-boiling metals ($\\\\text{Zn}, \\\\text{Cd}, \\\\text{Hg}$): Liquation; Low-melting metals ($\\\\text{Sn}, \\\\text{Pb}$): Zone Refining.",
+      "Low-boiling metals ($\\\\text{Ge}, \\\\text{Si}$): Distillation; Low-melting metals ($\\\\text{Ni}, \\\\text{Ti}$): Electrolytic Refining.",
+      "Low-boiling metals ($\\\\text{Cu}, \\\\text{Ag}$): Chromatographic method; Low-melting metals ($\\\\text{Al}$): Van Arkel Process."
+    ],
+    "a": 0,
+    "e": "<b>Explanation:</b> Option 1 swaps the physical refining methods between low-boiling and low-melting metals. Option 0 is correct because physical refining depends on phase transition thresholds: (1) **Distillation** is applied to **Volatile / Low-Boiling Metals** like Zinc ($\\\\text{Zn}$), Cadmium ($\\\\text{Cd}$), and Mercury ($\\\\text{Hg}$); the crude metal is boiled into vapor and condensed separately, leaving non-volatile impurities behind; (2) **Liquation** is applied to **Low-Melting Metals** like Tin ($\\\\text{Sn}$), Lead ($\\\\text{Pb}$), and Mercury ($\\\\text{Hg}$) containing higher-melting impurities; the crude metal is placed on a sloping furnace hearth and gently heated so the metal melts and flows down the slope, leaving solid infusible gangue behind. Option 2 and Option 3 list semiconductors and transition metals that require zone refining or vapor-phase methods."
+  },
+  {
+    "p_id": "bpsc_chem_m8_05",
+    "qe": "Industrial purification of copper, silver, gold, and lead relies on Electrolytic Refining. How are the crude metal, purified metal, and electrolyte arranged within an electrolytic refining cell?",
+    "qh": "तांबा, चांदी, सोना और सीसा का औद्योगिक शोधन इलेक्ट्रोलाइटिक शोधन (Electrolytic Refining) पर निर्भर करता है। एक इलेक्ट्रोलाइटिक शोधन सेल के भीतर कच्ची धातु, शुद्ध धातु और इलेक्ट्रोलाइट को कैसे व्यवस्थित किया जाता है?",
+    "o": [
+      "Anode: Pure metal strip; Cathode: Block of crude metal; Electrolyte: Distilled water.",
+      "Anode: Thick block of crude/impure metal; Cathode: Thin sheet of pure metal; Electrolyte: Aqueous acidulated salt solution of the same metal.",
+      "Anode: Graphite rod; Cathode: Molten silica flux; Electrolyte: Liquid nitrogen.",
+      "Anode: Thin sheet of pure metal; Cathode: Thick block of crude metal; Electrolyte: Organic ether solvent."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 reverses the electrical polarity assignment for crude and pure metal electrodes. Option 1 is correct because in **Electrolytic Refining**, an external direct current drives non-spontaneous redox reactions: the **Anode** (positive electrode) consists of a slab of **Crude/Impure Metal**, which oxidizes and dissolves as metal cations ($M \\\\rightarrow M^{n+} + n e^-$); the **Cathode** (negative electrode) consists of a thin sheet of **Pure Metal**, where dissolved cations undergo reduction and deposit as pure metal ($M^{n+} + n e^- \\\\rightarrow M$); the **Electrolyte** is a soluble, acidulated metal salt solution (e.g., acidified $\\\\text{CuSO}_4$ for copper refining). Less electropositive impurities settle below the anode as valuable **Anode Mud**. Option 2 and Option 3 list incorrect graphite, flux, or reversed electrode arrangements."
+  },
+  {
+    "p_id": "bpsc_chem_m8_06",
+    "qe": "Ultra-pure semiconductor-grade elements such as Germanium ($\\\\text{Ge}$), Silicon ($\\\\text{Si}$), Boron ($\\\\text{B}$), Gallium ($\\\\text{Ga}$), and Indium ($\\\\text{In}$) are purified via Zone Refining. What thermodynamic principle governs Zone Refining?",
+    "qh": "जर्मेनियम ($\\\\text{Ge}$), सिलिकॉन ($\\\\text{Si}$), बोरोन ($\\\\text{B}$), गैलियम ($\\\\text{Ga}$), और इंडियम ($\\\\text{In}$) जैसे अल्ट्रा-शुद्ध सेमीकंडक्टर-ग्रेड तत्वों को ज़ोन रिफाइनिंग द्वारा परिष्कृत किया जाता है। कौन सा ऊष्मागतिकी सिद्धांत ज़ोन रिफाइनिंग को नियंत्रित करता है?",
+    "o": [
+      "Impurities undergo rapid thermal decomposition into volatile gases when exposed to induction coils.",
+      "Impurities are significantly more soluble in the molten (liquid) state of the metal than in its solid state.",
+      "Impurities possess a higher magnetic susceptibility than the base semiconductor matrix.",
+      "Impurities form a protective oxide passivation layer that floats on the surface."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 misidentifies zone refining as a vapor-phase thermal decomposition process. Option 1 is correct because **Zone Refining (Fractional Crystallization)** operates on the principle of **Fractional Solute Partitioning**: impurities have a higher solubility in the molten/liquid phase than in the solid phase of a metal. A circular mobile heater moves slowly along an impure semiconductor rod, melting a narrow zone. As the heater moves forward, pure metal crystallizes out of the melt at the trailing edge, while impurities remain concentrated in the molten zone and are pushed toward one end of the rod, which is later discarded. Option 2 describes magnetic separation, and Option 3 describes chemical passivation."
+  },
+  {
+    "p_id": "bpsc_chem_m8_07",
+    "qe": "Vapour Phase Refining converts crude metal into a volatile intermediate compound before thermal decomposition. Which choice correctly distinguishes Mond's Process from the van Arkel Process?",
+    "qh": "वाष्प चरण शोधन (Vapour Phase Refining) तापीय अपघटन से पहले कच्ची धातु को एक वाष्पशील मध्यवर्ती यौगिक में परिवर्तित करता है। कौन सा विकल्प मॉण्ड की प्रक्रिया (Mond's Process) को वैन अर्केल प्रक्रिया (van Arkel Process) से सही ढंग से अलग करता है?",
+    "o": [
+      "Mond's Process purifies Titanium using iodine; van Arkel Process purifies Nickel using carbon monoxide.",
+      "Mond's Process reacts impure Nickel ($\\\\text{Ni}$) with $\\\\text{CO}$ to form volatile $\\\\text{Ni(CO)}_4$; van Arkel Process reacts impure Titanium ($\\\\text{Ti}$) or Zirconium ($\\\\text{Zr}$) with $\\\\text{I}_2$ to form volatile tetraiodides ($\\\\text{TiI}_4$).",
+      "Mond's Process purifies s-block alkali metals using steam; van Arkel Process purifies iron using limestone.",
+      "Both Mond's Process and van Arkel Process rely on liquid-liquid chromatographic column separation."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 swaps the specific chemical reagents and target metals between Mond's and van Arkel processes. Option 1 is correct because both are **Vapour Phase Refining** techniques that require a metal to form a volatile, easily decomposable compound: (1) **Mond's Process** purifies **Nickel ($\\\\text{Ni}$)** by heating impure nickel with Carbon Monoxide ($\\\\text{CO}$) at $330-350\\\\text{ K}$ to form volatile Nickel Tetracarbonyl [$\\\\text{Ni(CO)}_4$], which is then thermally decomposed at $450-470\\\\text{ K}$ to yield pure nickel metal; (2) **van Arkel Process** purifies **Titanium ($\\\\text{Ti}$) and Zirconium ($\\\\text{Zr}$)** by heating the crude metal in an evacuated vessel with Iodine ($\\\\text{I}_2$) to form volatile Tetraiodides ($\\\\text{TiI}_4$ or $\\\\text{ZrI}_4$), which decompose on a red-hot tungsten filament at $\\\\sim 1600^\\\\circ\\\\text{C}$ to deposit pure metal. Option 2 and Option 3 present invalid alkali steam or chromatographic claims."
+  },
+  {
+    "p_id": "bpsc_chem_m8_08",
+    "qe": "In the pyrometallurgical refining and cupellation of silver, specific fluxing agents are added to absorb base metal impurities. Which chemical compounds serve as fluxes during silver refining?",
+    "qh": "चांदी के पाइरोधातुशोधन (pyrometallurgical refining) और क्युपेलेशन में, आधार धातु अशुद्धियों को अवशोषित करने के लिए विशिष्ट फ्लक्सिंग एजेंट जोड़े जाते हैं। कौन से रासायनिक यौगिक चांदी के शोधन के दौरान फ्लक्स के रूप में कार्य करते हैं?",
+    "o": [
+      "Concentrated sulfuric acid and liquid ammonia",
+      "Borax ($\\\\text{Na}_2\\\\text{B}_4\\\\text{O}_7 \\\\cdot 10\\\\text{H}_2\\\\text{O}$) or Potassium Nitrate ($\\\\text{KNO}_3$)",
+      "Sodium hydroxide and activated charcoal",
+      "Calcium chloride and fluorspar"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 lists mineral acids and ammonia, which do not act as high-temperature fluxes. Option 1 is correct because during the high-temperature refining and melting of crude silver, **Borax (Hydrated Sodium Tetraborate, $\\\\text{Na}_2\\\\text{B}_4\\\\text{O}_7 \\\\cdot 10\\\\text{H}_2\\\\text{O}$)** or **Potassium Nitrate ($\\\\text{KNO}_3$)** is added as a flux. Borax melts to form a glassy boric oxide melt ($\\\\text{B}_2\\\\text{O}_3$) that reacts with and dissolves metallic oxide impurities (like copper oxide or lead oxide) as fusible borate glasses, while $\\\\text{KNO}_3$ acts as an oxidizing flux that converts base trace metals into dross that floats on top of the refined silver. Option 2 and Option 3 list non-borate fluxing combinations."
+  },
+  {
+    "p_id": "bpsc_chem_m8_09",
+    "qe": "Thermite welding is used in railway engineering to join broken steel tracks on-site. What is the chemical composition of a Thermite Mixture, and what reaction drives the welding process?",
+    "qh": "थर्माइट वेल्डिंग (Thermite welding) का उपयोग रेलवे इंजीनियरिंग में टूटी हुई स्टील की पटरियों को मौके पर ही जोड़ने के लिए किया जाता है। थर्माइट मिश्रण की रासायनिक संरचना क्या है, और कौन सी प्रतिक्रिया वेल्डिंग प्रक्रिया को संचालित करती है?",
+    "o": [
+      "Mixture of $\\\\text{Fe}_2\\\\text{O}_3$ and $\\\\text{Al}$ in a 1:3 ratio; endothermic reaction that freezes cracks.",
+      "Mixture of Ferric Oxide ($\\\\text{Fe}_2\\\\text{O}_3$) and Aluminium powder ($\\\\text{Al}$) in a 3:1 mass ratio; intensely exothermic reduction reaction yielding liquid molten iron.",
+      "Mixture of $\\\\text{CaO}$ and $\\\\text{SiO}_2$ in a 1:1 ratio; forms calcium silicate slag.",
+      "Mixture of $\\\\text{CuSO}_4$ and $\\\\text{Zn}$ in a 2:1 ratio; forms solid bronze."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 inverts the mass ratio to 1:3 and misidentifies the reaction as endothermic. Option 1 is correct because **Thermite Mixture** consists of **Ferric Oxide ($\\\\text{Fe}_2\\\\text{O}_3$) and finely powdered Aluminium ($\\\\text{Al}$) mixed in a 3:1 mass ratio**. When ignited using a magnesium ribbon fuse, aluminium reduces ferric oxide in a highly exothermic redox reaction: $\\\\text{Fe}_2\\\\text{O}_3 + 2\\\\text{Al} \\\\rightarrow \\\\text{Al}_2\\\\text{O}_3 + 2\\\\text{Fe} + \\\\text{Heat}$. The extreme heat generated ($\\\\sim 2500^\\\\circ\\\\text{C}$) melts the liberated iron metal, which flows directly into the gap between broken railway tracks or heavy machinery parts, solidifying to form a seamless weld. Option 2 describes slag formation, and Option 3 describes copper displacement."
+  },
+  {
+    "p_id": "bpsc_chem_m8_10",
+    "qe": "Commercial iron exists in various structural forms depending on carbon content and manufacturing pathways. Which option correctly identifies the purest form of commercial iron and the raw iron used to manufacture steel?",
+    "qh": "कार्बन सामग्री और निर्माण पथ के आधार पर व्यावसायिक लोहा विभिन्न संरचनात्मक रूपों में मौजूद होता है। कौन सा विकल्प व्यावसायिक लोहे के सबसे शुद्ध रूप और स्टील का निर्माण करने के लिए उपयोग किए जाने वाले कच्चे लोहे की सही पहचान करता है?",
+    "o": [
+      "Purest form: Pig Iron; Used for steel manufacture: Wrought Iron.",
+      "Purest form: Wrought (Malleable) Iron ($0.12\\text{--}0.25\\%$ Carbon); Used for steel manufacture: Cast Iron / Pig Iron.",
+      "Purest form: Cast Iron ($3\\%$ Carbon); Used for steel manufacture: Pure Haematite ore directly.",
+      "Purest form: Stainless Steel ($18\\%$ Chromium); Used for steel manufacture: Sorel Cement."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Option 0 claims Pig Iron (which is the most impure crude form, $\\\\sim 4\\\\%$ Carbon) is the purest form. Option 1 is correct because **Wrought Iron** (or malleable iron) is the **Purest Commercial Form of Iron**, containing only **$0.12\\text{--}0.25\\%$ Carbon** along with trace slag fibers, conferring high toughness, malleability, and ductility. Conversely, **Cast Iron** (and crude Pig Iron tapped from the blast furnace, containing $3-4\\\\%$ Carbon) is the primary raw material oxidized in converters (such as Bessemer, Open Hearth, or LD oxygen converters) to reduce carbon levels down to $0.25-1.5\\\\%$ for the commercial manufacture of **Steel**. Option 2 and Option 3 misidentify cast iron as the purest form or substitute dental cement."
   }
 ]
