@@ -101,7 +101,7 @@
       "The bodies must move exclusively along circular paths at constant speed."
     ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 incorrectly links momentum conservation to thermal heat absorption. Option 1 is correct because the <b>Law of Conservation of Linear Momentum</b> states that if the net external force acting on a system of interacting bodies is zero ($\\sum \\vec{F}_{\\text{ext}} = 0$), the total vector linear momentum of the system remains strictly constant over time ($\t\\vec{P}_{\\text{total}} = \\text{constant}$). Internal forces between system components act in equal and opposite action-reaction pairs (Newton's Third Law) and cancel out globally. Option 2 is false because internal forces do not alter net system momentum. Option 3 restricts motion to circles unnecessarily."
+    "e": "<b>Explanation:</b> Option 0 incorrectly links momentum conservation to thermal heat absorption. Option 1 is correct because the <b>Law of Conservation of Linear Momentum</b> states that if the net external force acting on a system of interacting bodies is zero ($\\sum \\vec{F}_{\\text{ext}} = 0$), the total vector linear momentum of the system remains strictly constant over time ($\\vec{P}_{\\text{total}} = \\text{constant}$). Internal forces between system components act in equal and opposite action-reaction pairs (Newton's Third Law) and cancel out globally. Option 2 is false because internal forces do not alter net system momentum. Option 3 restricts motion to circles unnecessarily."
   },
   {
     "p_id": "bpsc_phys_m25_09",
@@ -124,7 +124,7 @@
       "$v_{\\text{recoil}} = + \\frac{M \\cdot v}{m}$",
       "$v_{\\text{recoil}} = - \\frac{m \\cdot v}{M}$",
       "$v_{\\text{recoil}} = \\sqrt{M \\cdot m \\cdot v}$",
-      "$v_{\\text{recoil}} = \\text{zero}$"
+      "$v_{\\text{recoil}} = 0$"
     ],
     "a": 1,
     "e": "<b>Explanation:</b> Option 0 reverses mass terms and sign. Option 1 is correct because before firing, total initial system momentum is zero ($P_i = 0$). By the Law of Conservation of Linear Momentum, total final momentum must also be zero ($P_f = 0$): $M \\cdot v_{\\text{recoil}} + m \\cdot v = 0$. Solving for recoil velocity yields: $$v_{\\text{recoil}} = - \\frac{m \\cdot v}{M}$$ The negative sign indicates that the rifle moves in the <b>opposite direction</b> (recoil) to the bullet's forward motion. Because rifle mass $M \\gg m$, $v_{\\text{recoil}}$ is much smaller than bullet speed $v$. Option 2 and Option 3 state incorrect mathematical expressions."
@@ -176,7 +176,7 @@
       "$R = M(g - a)$",
       "$R = M(g + a)$",
       "$R = Mg$",
-      "$R = \\text{zero}$"
+      "$R = 0$"
     ],
     "a": 1,
     "e": "<b>Explanation:</b> Option 0 gives the apparent weight for downward acceleration. Option 1 is correct because when an elevator accelerates upward at rate $a$, the net upward force acting on a person standing on the floor scale is $\\sum F_y = R - Mg = Ma$. Solving for normal reaction (apparent weight) yields: $$R = M(g + a)$$ Because $R > Mg$, the person feels <b>heavier</b> than their actual weight. Option 2 applies when the lift is at rest or moving at uniform velocity ($a = 0$), and Option 3 applies to free-fall ($a = g$)."
@@ -423,7 +423,7 @@
       "$E = + \\frac{G M m}{r}$",
       "$E = - \\frac{G M m}{2r}$",
       "$E = - \\frac{G M m}{r^2}$",
-      "$E = \\text{zero}$"
+      "$E = 0$"
     ],
     "a": 1,
     "e": "<b>Explanation:</b> Option 0 gives positive potential energy. Option 1 is correct because an orbiting satellite possesses: <br>1. <b>Potential Energy ($U$):</b> $U = - \\frac{G M m}{r}$ <br>2. <b>Kinetic Energy ($K$):</b> $K = \\frac{1}{2} m v_o^2 = \\frac{1}{2} m \\left(\\frac{G M}{r}\\right) = + \\frac{G M m}{2r}$ <br>3. <b>Total Mechanical Energy ($E = K + U$):</b> <br>$$E = \\frac{G M m}{2r} - \\frac{G M m}{r} = - \\frac{G M m}{2r}$$ <br>The <b>negative sign</b> signifies that the satellite is bound to Earth's gravitational field. <b>Binding Energy</b> is defined as the energy required to free the satellite to infinity, which equals $-E = + \\frac{G M m}{2r}$. Option 2 lists force dependence, and Option 3 incorrectly asserts zero total energy."
