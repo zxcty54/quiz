@@ -23,7 +23,7 @@
       "Air inside the car undergoes breakdown polarization, absorbing electrical discharges completely."
     ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 is a common misconception; wet rubber tires undergo dielectric breakdown at millions of volts and do not act as the primary safety mechanism. Option 1 is correct because under electrostatic equilibrium, charges transferred to a metallic conductor reside entirely on its outer surface. This makes the <b>Electric Field Inside a Hollow Conductor Strictly Zero ($E_{inside} = 0$)</b>, a phenomenon known as **Electrostatic Shielding** [the complete protection of an interior cavity from external electric fields using a hollow conducting enclosure or Faraday cage]. Option 2 incorrectly asserts that internal potential increases to cancel lines (potential is constant, not zero or canceling). Option 3 describes air breakdown which causes sparks rather than shielding."
+    "e": "<b>Explanation:</b> Option 0 is a common misconception; wet rubber tires undergo dielectric breakdown at millions of volts and do not act as the primary safety mechanism. Option 1 is correct because under electrostatic equilibrium, charges transferred to a metallic conductor reside entirely on its outer surface. This makes the <b>Electric Field Inside a Hollow Conductor Strictly Zero ($E_{inside} = 0$)</b>, a phenomenon known as <b>Electrostatic Shielding</b> [the complete protection of an interior cavity from external electric fields using a hollow conducting enclosure or Faraday cage]. Option 2 incorrectly asserts that internal potential increases to cancel lines (potential is constant, not zero or canceling). Option 3 describes air breakdown which causes sparks rather than shielding."
   },
   {
     "p_id": "bpsc_phys_m34_03",
@@ -62,7 +62,7 @@
       "$E = \\frac{1}{4\\pi\\varepsilon_0} \\frac{q}{R}$ and $V = \\frac{1}{4\\pi\\varepsilon_0} \\frac{q}{r}$"
     ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 incorrectly sets potential to zero inside. Option 1 is correct because: <br>1. **Electric Field ($E$):** According to Gauss's Law, no charge is enclosed within any internal Gaussian surface ($q_{enclosed} = 0$ for $r < R$), so <b>$E_{inside} = 0$</b>. <br>2. **Electric Potential ($V$):** The relationship between field and potential gradient is $E = -\\frac{dV}{dr}$. Since $E = 0$ everywhere inside the shell, $\\frac{dV}{dr} = 0$, which proves that <b>Electric Potential ($V$) is strictly constant throughout the interior volume and equal to its value at the outer surface</b>: <b>$$V_{inside} = V_{surface} = \\frac{1}{4\\pi\\varepsilon_0} \\frac{q}{R}$$</b> Options 2 and 3 state false internal field or potential variations."
+    "e": "<b>Explanation:</b> Option 0 incorrectly sets potential to zero inside. Option 1 is correct because: <br>1. <b>Electric Field ($E$):</b> According to Gauss's Law, no charge is enclosed within any internal Gaussian surface ($q_{enclosed} = 0$ for $r < R$), so <b>$E_{inside} = 0$</b>. <br>2. <b>Electric Potential ($V$):</b> The relationship between field and potential gradient is $E = -\\frac{dV}{dr}$. Since $E = 0$ everywhere inside the shell, $\\frac{dV}{dr} = 0$, which proves that <b>Electric Potential ($V$) is strictly constant throughout the interior volume and equal to its value at the outer surface</b>: <b>$$V_{inside} = V_{surface} = \\frac{1}{4\\pi\\varepsilon_0} \\frac{q}{R}$$</b> Options 2 and 3 state false internal field or potential variations."
   },
   {
     "p_id": "bpsc_phys_m34_06",
@@ -75,7 +75,7 @@
       "Work done depends on path length; electric field lines form closed circles on the surface."
     ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 incorrectly identifies non-zero work and parallel orientation. Option 1 is correct because: <br>1. **Zero Work ($W = 0$):** By definition, potential difference between any two points $A$ and $B$ on an equipotential surface is zero ($V_A - V_B = 0$). Since $W_{AB} = q_0 (V_A - V_B)$, **no net work is done in moving a charge along an equipotential surface**. <br>2. **Perpendicular Orientation ($\\perp$):** Work done is also $W = \\vec{F} \\cdot \\vec{d r} = q_0 (\\vec{E} \\cdot \\vec{d r}) = q_0 E dr \\cos \\theta$. For $W = 0$ with non-zero $E$ and $dr$, $\\cos \\theta = 0 \\implies \\theta = 90°$. Thus, **electric field lines are strictly perpendicular to equipotential surfaces at every point**. Options 2 and 3 state false geometrical or path-dependent relations."
+    "e": "<b>Explanation:</b> Option 0 incorrectly identifies non-zero work and parallel orientation. Option 1 is correct because: <br>1. <b>Zero Work ($W = 0$):</b> By definition, potential difference between any two points $A$ and $B$ on an equipotential surface is zero ($V_A - V_B = 0$). Since $W_{AB} = q_0 (V_A - V_B)$, <b>no net work is done in moving a charge along an equipotential surface</b>. <br>2. <b>Perpendicular Orientation ($\\perp$):</b> Work done is also $W = \\vec{F} \\cdot \\vec{d r} = q_0 (\\vec{E} \\cdot \\vec{d r}) = q_0 E dr \\cos \\theta$. For $W = 0$ with non-zero $E$ and $dr$, $\\cos \\theta = 0 \\implies \\theta = 90°$. Thus, <b>electric field lines are strictly perpendicular to equipotential surfaces at every point</b>. Options 2 and 3 state false geometrical or path-dependent relations."
   },
   {
     "p_id": "bpsc_phys_m34_07",
@@ -88,7 +88,7 @@
       "The charges are moving at relativistic speeds, converting mass into energy."
     ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 describes a like-charge system where $q_1 q_2 > 0$, making potential energy positive ($+U$). Option 1 is correct because the electrostatic potential energy formula is: <b>$$U = \\frac{1}{4\\pi\\varepsilon_0} \\frac{q_1 q_2}{r}$$</b> When charges have opposite signs ($q_1 q_2 < 0$), $U$ becomes **negative**. This negative sign signifies an **attractive bound system**: the electrostatic force did positive work in pulling the unlike charges together from infinity, lowering the system's potential energy. Consequently, positive external work must be supplied to pull the charges apart to infinity. Option 2 misattributes zero potential energy, and Option 3 introduces irrelevant mass-energy concepts."
+    "e": "<b>Explanation:</b> Option 0 describes a like-charge system where $q_1 q_2 > 0$, making potential energy positive ($+U$). Option 1 is correct because the electrostatic potential energy formula is: <b>$$U = \\frac{1}{4\\pi\\varepsilon_0} \\frac{q_1 q_2}{r}$$</b> When charges have opposite signs ($q_1 q_2 < 0$), $U$ becomes <b>negative</b>. This negative sign signifies an <b>attractive bound system</b>: the electrostatic force did positive work in pulling the unlike charges together from infinity, lowering the system's potential energy. Consequently, positive external work must be supplied to pull the charges apart to infinity. Option 2 misattributes zero potential energy, and Option 3 introduces irrelevant mass-energy concepts."
   },
   {
     "p_id": "bpsc_phys_m34_08",
@@ -101,20 +101,20 @@
       "$K = E_0 \\times E$"
     ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 inverts the ratio, yielding a value less than 1. Option 1 is correct because when a dielectric is placed in an external electric field $E_0$, dielectric polarization creates an internal induced electric field $E_p$ in the opposite direction. The net reduced field inside the dielectric becomes $E = E_0 - E_p$. The **Dielectric Constant ($K$)** (or relative permittivity $\\varepsilon_r$) is defined as the ratio of the applied external electric field to the net reduced electric field inside the material: <b>$$K = \\frac{E_0}{E}$$</b> Since $E < E_0$ due to polarization, **$K > 1$ for all physical materials** ($K = 1$ strictly for vacuum). Options 2 and 3 list subtraction or multiplication formulas."
+    "e": "<b>Explanation:</b> Option 0 inverts the ratio, yielding a value less than 1. Option 1 is correct because when a dielectric is placed in an external electric field $E_0$, dielectric polarization creates an internal induced electric field $E_p$ in the opposite direction. The net reduced field inside the dielectric becomes $E = E_0 - E_p$. The <b>Dielectric Constant ($K$)</b> (or relative permittivity $\\varepsilon_r$) is defined as the ratio of the applied external electric field to the net reduced electric field inside the material: <b>$$K = \\frac{E_0}{E}$$</b> Since $E < E_0$ due to polarization, <b>$K > 1$ for all physical materials</b> ($K = 1$ strictly for vacuum). Options 2 and 3 list subtraction or multiplication formulas."
   },
   {
     "p_id": "bpsc_phys_m34_09",
     "qe": "Dielectrics are classified into polar and non-polar types based on molecular charge symmetry. Which choice correctly categorizes dielectric materials and their permanent dipole moments?",
     "qh": "परावैद्युत (Dielectrics) को आणविक आवेश समरूपता के आधार पर ध्रुवीय और अध्रुवीय प्रकारों में वर्गीकृत किया जाता है। कौन सा विकल्प परावैद्युत सामग्रियों और उनके स्थायी द्विध्रुव आघूर्णों (permanent dipole moments) का सही वर्गीकरण करता है?",
     "o": [
-      "Non-polar dielectrics (H$_2$O, NH$_3$) possess permanent dipole moments; Polar dielectrics (N$_2$, O$_2$) have zero dipole moment.",
-      "Polar dielectrics (H$_2$O, NH$_3$, CO$_2$) have non-coinciding charge centers giving permanent molecular dipole moments; Non-polar dielectrics (N$_2$, O$_2$, H$_2$, CH$_4$) have coinciding charge centers with zero permanent dipole moment.",
+      "Non-polar dielectrics (H₂O, NH₃) possess permanent dipole moments; Polar dielectrics (N₂, O₂) have zero dipole moment.",
+      "Polar dielectrics (H₂O, NH₃, CO₂) have non-coinciding charge centers giving permanent molecular dipole moments; Non-polar dielectrics (N₂, O₂, H₂, CH₄) have coinciding charge centers with zero permanent dipole moment.",
       "Both polar and non-polar dielectrics possess identical permanent dipole moments in the absence of an electric field.",
       "Non-polar dielectrics conduct electric current easily, whereas polar dielectrics behave as super-conductors."
     ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 completely swaps polar and non-polar molecular examples. Option 1 is correct because: <br>1. **Polar Dielectrics:** Molecules like $H_2O$, $NH_3$, and $CO_2$ have asymmetric structures where the centers of positive and negative charges do not coincide naturally, giving each molecule a **permanent electric dipole moment**. <br>2. **Non-polar Dielectrics:** Symmetric molecules like $N_2$, $O_2$, $H_2$, and $CH_4$ have coinciding centers of positive and negative charges, resulting in **zero permanent electric dipole moment** under normal zero-field conditions. Option 2 ignores molecular symmetry, and Option 3 falsely claims electrical conduction."
+    "e": "<b>Explanation:</b> Option 0 completely swaps polar and non-polar molecular examples. Option 1 is correct because: <br>1. <b>Polar Dielectrics:</b> Molecules like H₂O, NH₃, and CO₂ have asymmetric structures where the centers of positive and negative charges do not coincide naturally, giving each molecule a <b>permanent electric dipole moment</b>. <br>2. <b>Non-polar Dielectrics:</b> Symmetric molecules like N₂, O₂, H₂, and CH₄ have coinciding centers of positive and negative charges, resulting in <b>zero permanent electric dipole moment</b> under normal zero-field conditions. Option 2 ignores molecular symmetry, and Option 3 falsely claims electrical conduction."
   },
   {
     "p_id": "bpsc_phys_m34_10",
@@ -127,20 +127,20 @@
       "Carrier beads conduct high AC current to melt paper fibers electrostatically."
     ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 reverses charge polarities between toner and drum. Option 1 is correct because xerography (electrostatic copying) operates via electrostatic attraction: <br>1. Black toner powder particles acquire a **negative charge** and adhere to small carrier beads via electrostatic forces. <br>2. An optical system projects light from the original document onto a photosensitive rotating drum, creating a **positively charged latent image** corresponding to text/dark areas. <br>3. As the drum rotates, its positive image regions exert stronger electrostatic attraction, pulling the **negatively charged toner particles away from the carrier beads** onto the drum surface, which is then heat-fused onto paper. Options 2 and 3 describe false thermal fission or AC melting mechanisms."
+    "e": "<b>Explanation:</b> Option 0 reverses charge polarities between toner and drum. Option 1 is correct because xerography (electrostatic copying) operates via electrostatic attraction: <br>1. Black toner powder particles acquire a <b>negative charge</b> and adhere to small carrier beads via electrostatic forces. <br>2. An optical system projects light from the original document onto a photosensitive rotating drum, creating a <b>positively charged latent image</b> corresponding to text/dark areas. <br>3. As the drum rotates, its positive image regions exert stronger electrostatic attraction, pulling the <b>negatively charged toner particles away from the carrier beads</b> onto the drum surface, which is then heat-fused onto paper. Options 2 and 3 describe false thermal fission or AC melting mechanisms."
   },
   {
     "p_id": "bpsc_phys_m34_11",
     "qe": "Dielectric strength defines the operational limits of insulating materials subjected to strong electric fields. What is the approximate dielectric strength threshold of air, and what happens when an electric field exceeds this limit?",
     "qh": "परावैद्युत सामर्थ्य (Dielectric strength) मजबूत विद्युत क्षेत्रों के अधीन इन्सुलेट सामग्री की परिचालन सीमाओं को परिभाषित करती है। हवा की अनुमानित परावैद्युत सामर्थ्य सीमा क्या है, और जब एक विद्युत क्षेत्र इस सीमा से अधिक हो जाता है तो क्या होता है?",
     "o": [
-      "Dielectric strength of air is $3 \\times 10^6$ V/m; exceeding it causes ionization breakdown, turning air into a conductor (causing electric sparks).",
-      "Dielectric strength of air is $100$ V/m; exceeding it converts air into pure ozone gas without sparking.",
+      "Dielectric strength of air is $3 \\times 10^6\\text{ V/m}$; exceeding it causes ionization breakdown, turning air into a conductor (causing electric sparks).",
+      "Dielectric strength of air is $100\\text{ V/m}$; exceeding it converts air into pure ozone gas without sparking.",
       "Dielectric strength of air is infinite; air never undergoes electrical breakdown.",
-      "Dielectric strength of air is $3 \\times 10^8$ V/m; exceeding it converts sound waves into light waves."
+      "Dielectric strength of air is $3 \\times 10^8\\text{ V/m}$; exceeding it converts sound waves into light waves."
     ],
     "a": 0,
-    "e": "<b>Explanation:</b> Option 1 uses an absurdly low breakdown voltage ($100$ V/m). Option 0 is correct because **Dielectric Strength** is the maximum electric field intensity an insulating medium can withstand without losing its insulating properties. For dry air at atmospheric pressure, the threshold is approximately **$3 \\times 10^6$ V/m (or $3$ kV/mm)**. If the localized electric field exceeds $3 \\times 10^6$ V/m, intense electrostatic force strips outer electrons from air molecules (**ionization breakdown**), converting insulating air into a conducting plasma channel that manifests as blue electric sparks or lightning bolts. Option 2 claims infinite strength, and Option 3 uses the speed of light value."
+    "e": "<b>Explanation:</b> Option 1 uses an absurdly low breakdown voltage ($100\\text{ V/m}$). Option 0 is correct because <b>Dielectric Strength</b> is the maximum electric field intensity an insulating medium can withstand without losing its insulating properties. For dry air at atmospheric pressure, the threshold is approximately <b>$3 \\times 10^6\\text{ V/m}$ (or $3\\text{ kV/mm}$)</b>. If the localized electric field exceeds $3 \\times 10^6\\text{ V/m}$, intense electrostatic force strips outer electrons from air molecules (<b>ionization breakdown</b>), converting insulating air into a conducting plasma channel that manifests as blue electric sparks or lightning bolts. Option 2 claims infinite strength, and Option 3 uses the speed of light value."
   },
   {
     "p_id": "bpsc_phys_m34_12",
@@ -153,7 +153,7 @@
       "$\\Phi_E = \\frac{q^2}{\\varepsilon_0}$"
     ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 incorrectly adds charge magnitudes ignoring algebraic signs. Option 1 is correct because according to Gauss's Theorem, the total electric flux linked with any closed surface is proportional to the **net algebraic sum of enclosed charges**: <b>$$\\Phi_E = \\frac{\\sum q}{\\varepsilon_0}$$</b> For an electric dipole enclosed inside a surface, the total enclosed charge is $\\sum q = (+q) + (-q) = 0$. Therefore, the **total net electric flux passing through the closed Gaussian surface is strictly ZERO ($\\Phi_E = 0$)**. (Electric field lines entering the surface from $-q$ equal lines leaving from $+q$). Options 2 and 3 list incorrect electrostatic field or force formulas."
+    "e": "<b>Explanation:</b> Option 0 incorrectly adds charge magnitudes ignoring algebraic signs. Option 1 is correct because according to Gauss's Theorem, the total electric flux linked with any closed surface is proportional to the <b>net algebraic sum of enclosed charges</b>: <b>$$\\Phi_E = \\frac{\\sum q}{\\varepsilon_0}$$</b> For an electric dipole enclosed inside a surface, the total enclosed charge is $\\sum q = (+q) + (-q) = 0$. Therefore, the <b>total net electric flux passing through the closed Gaussian surface is strictly ZERO ($\\Phi_E = 0$)</b>. (Electric field lines entering the surface from $-q$ equal lines leaving from $+q$). Options 2 and 3 list incorrect electrostatic field or force formulas."
   },
   {
     "p_id": "bpsc_phys_m34_13",
@@ -166,7 +166,7 @@
       "Induction destroys the original charge on the primary source body completely."
     ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 incorrectly attributes direct contact and like charge to induction (which describes conduction). Option 1 is correct because: <br>1. **Charging by Induction:** A charged body is brought *near* a neutral body **without physical contact**. The electric field induces charge separation, and grounding the far side imparts a net **opposite charge** to the target body. The primary charging body loses zero charge. <br>2. **Charging by Conduction:** Requires **direct physical contact**, allowing free electrons to flow until potentials equalize, imparting a **like charge** while sharing the original charge. Option 2 violates charge conservation, and Option 3 claims destruction of source charge."
+    "e": "<b>Explanation:</b> Option 0 incorrectly attributes direct contact and like charge to induction (which describes conduction). Option 1 is correct because: <br>1. <b>Charging by Induction:</b> A charged body is brought <i>near</i> a neutral body <b>without physical contact</b>. The electric field induces charge separation, and grounding the far side imparts a net <b>opposite charge</b> to the target body. The primary charging body loses zero charge. <br>2. <b>Charging by Conduction:</b> Requires <b>direct physical contact</b>, allowing free electrons to flow until potentials equalize, imparting a <b>like charge</b> while sharing the original charge. Option 2 violates charge conservation, and Option 3 claims destruction of source charge."
   },
   {
     "p_id": "bpsc_phys_m34_14",
@@ -179,7 +179,7 @@
       "Work done is infinite due to continuous radial acceleration."
     ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 incorrectly states path dependence based on circumference. Option 1 is correct because the electrostatic force is a **conservative force**. A defining property of conservative force fields is that the line integral of the electric field around any closed path is zero ($\\oint \\vec{E} \\cdot d\\vec{r} = 0$). Consequently, the **total work done in moving a charge over any complete closed path in a static electric field is strictly ZERO ($W = 0$)**, proving that electrostatic potential depends solely on initial and final positions (state function). Options 2 and 3 list non-zero or infinite work claims."
+    "e": "<b>Explanation:</b> Option 0 incorrectly states path dependence based on circumference. Option 1 is correct because the electrostatic force is a <b>conservative force</b>. A defining property of conservative force fields is that the line integral of the electric field around any closed path is zero ($\\oint \\vec{E} \\cdot d\\vec{r} = 0$). Consequently, the <b>total work done in moving a charge over any complete closed path in a static electric field is strictly ZERO ($W = 0$)</b>, proving that electrostatic potential depends solely on initial and final positions (state function). Options 2 and 3 list non-zero or infinite work claims."
   },
   {
     "p_id": "bpsc_phys_m34_15",
@@ -192,7 +192,7 @@
       "The electrostatic force decreases by a factor of 16 ($F' = \\frac{F}{16}$)."
     ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 assumes direct linear distance dependence. Option 1 is correct because Coulomb's Law follows an **inverse-square relationship** with distance: <b>$$F = \\frac{1}{4\\pi\\varepsilon_0} \\frac{q_1 q_2}{r^2}$$</b> Substituting the new distance $r' = \\frac{r}{2}$ gives: <b>$$F' = \\frac{1}{4\\pi\\varepsilon_0} \\frac{q_1 q_2}{(r/2)^2} = \\frac{1}{4\\pi\\varepsilon_0} \\frac{q_1 q_2}{r^2 / 4} = 4 F$$</b> Thus, halving the separation distance **quadruples (increases 4-fold) the electrostatic force**. Options 2 and 3 state incorrect algebraic scaling factors."
+    "e": "<b>Explanation:</b> Option 0 assumes direct linear distance dependence. Option 1 is correct because Coulomb's Law follows an <b>inverse-square relationship</b> with distance: <b>$$F = \\frac{1}{4\\pi\\varepsilon_0} \\frac{q_1 q_2}{r^2}$$</b> Substituting the new distance $r' = \\frac{r}{2}$ gives: <b>$$F' = \\frac{1}{4\\pi\\varepsilon_0} \\frac{q_1 q_2}{(r/2)^2} = \\frac{1}{4\\pi\\varepsilon_0} \\frac{q_1 q_2}{r^2 / 4} = 4 F$$</b> Thus, halving the separation distance <b>quadruples (increases 4-fold) the electrostatic force</b>. Options 2 and 3 state incorrect algebraic scaling factors."
   },
   {
     "p_id": "bpsc_phys_m34_16",
@@ -205,7 +205,7 @@
       "Watt per meter (W/m) or Ampere per Volt"
     ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 lists units of electric potential ($V = \\frac{W}{q}$). Option 1 is correct because: <br>1. From force definition $E = \\frac{F}{q_0}$, unit is **Newton per Coulomb (N/C)**. <br>2. From potential gradient relation $E = -\\frac{dV}{dr}$, unit is **Volt per meter (V/m)**. <br>Both N/C and V/m are dimensionally identical ($[M^1 L^1 T^{-3} A^{-1}]$) and serve as standard SI units for electric field intensity. Option 2 lists permittivity or surface charge density units, and Option 3 lists power gradient units."
+    "e": "<b>Explanation:</b> Option 0 lists units of electric potential ($V = \\frac{W}{q}$). Option 1 is correct because: <br>1. From force definition $E = \\frac{F}{q_0}$, unit is <b>Newton per Coulomb (N/C)</b>. <br>2. From potential gradient relation $E = -\\frac{dV}{dr}$, unit is <b>Volt per meter (V/m)</b>. <br>Both N/C and V/m are dimensionally identical ($[M^1 L^1 T^{-3} A^{-1}]$) and serve as standard SI units for electric field intensity. Option 2 lists permittivity or surface charge density units, and Option 3 lists power gradient units."
   },
   {
     "p_id": "bpsc_phys_m34_17",
@@ -218,7 +218,7 @@
       "Excess charge leaks continuously into vacuum regardless of shape."
     ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 falsely claims volume charge distribution in conductors. Option 1 is correct because in a conductor under static conditions, free electrons repel each other until mutual repulsive forces are minimized, forcing all excess charge to **reside entirely on the outer surface**. Furthermore, surface charge density $\\sigma$ is inversely proportional to the local radius of curvature ($R$): <b>$$\\sigma \\propto \\frac{1}{R}$$</b> Thus, **sharper edges or pointed tips (small $R$) accumulate significantly higher surface charge densities**, which can lead to localized corona discharge. Options 2 and 3 state false internal charge concentration claims."
+    "e": "<b>Explanation:</b> Option 0 falsely claims volume charge distribution in conductors. Option 1 is correct because in a conductor under static conditions, free electrons repel each other until mutual repulsive forces are minimized, forcing all excess charge to <b>reside entirely on the outer surface</b>. Furthermore, surface charge density $\\sigma$ is inversely proportional to the local radius of curvature ($R$): <b>$$\\sigma \\propto \\frac{1}{R}$$</b> Thus, <b>sharper edges or pointed tips (small $R$) accumulate significantly higher surface charge densities</b>, which can lead to localized corona discharge. Options 2 and 3 state false internal charge concentration claims."
   },
   {
     "p_id": "bpsc_phys_m34_18",
@@ -231,7 +231,7 @@
       "Parabolic surfaces opening outwards."
     ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 describes equipotential surfaces for a uniform electric field along the X-axis. Option 1 is correct because the electric potential due to a point charge $+Q$ at distance $r$ is $V = \\frac{1}{4\\pi\\varepsilon_0} \\frac{Q}{r}$. For $V$ to remain constant, $r$ must be constant. The locus of all points at a constant radial distance $r$ from a central point charge in 3D space forms a **Concentric Sphere**. Thus, equipotential surfaces for an isolated point charge are **concentric spheres** centered on the charge. Option 2 describes equipotential surfaces for a line charge."
+    "e": "<b>Explanation:</b> Option 0 describes equipotential surfaces for a uniform electric field along the X-axis. Option 1 is correct because the electric potential due to a point charge $+Q$ at distance $r$ is $V = \\frac{1}{4\\pi\\varepsilon_0} \\frac{Q}{r}$. For $V$ to remain constant, $r$ must be constant. The locus of all points at a constant radial distance $r$ from a central point charge in 3D space forms a <b>Concentric Sphere</b>. Thus, equipotential surfaces for an isolated point charge are <b>concentric spheres</b> centered on the charge. Option 2 describes equipotential surfaces for a line charge."
   },
   {
     "p_id": "bpsc_phys_m34_19",
@@ -244,7 +244,7 @@
       "$\\theta = 45°$ (area vector is inclined at half a right angle)"
     ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 yields maximum positive flux ($\\Delta \\Phi_E = E \\Delta s$). Option 1 is correct because electric flux is defined as $\\Delta \\Phi_E = \\vec{E} \\cdot \\Delta \\vec{s} = E \\Delta s \\cos \\theta$, where $\\theta$ is the angle between the electric field vector $\\vec{E}$ and the normal **area vector $\\Delta \\vec{s}$**. When **$\\theta = 90°$**, $\\cos 90° = 0$, making **$\\Delta \\Phi_E = 0$**. Geometrically, $\\theta = 90°$ means the electric field lines skim parallel across the surface without passing *through* it. Option 2 yields maximum negative flux ($\\cos 180° = -1$), and Option 3 yields $\\frac{E \\Delta s}{\\sqrt{2}}$."
+    "e": "<b>Explanation:</b> Option 0 yields maximum positive flux ($\\Delta \\Phi_E = E \\Delta s$). Option 1 is correct because electric flux is defined as $\\Delta \\Phi_E = \\vec{E} \\cdot \\Delta \\vec{s} = E \\Delta s \\cos \\theta$, where $\\theta$ is the angle between the electric field vector $\\vec{E}$ and the normal <b>area vector $\\Delta \\vec{s}$</b>. When <b>$\\theta = 90°$</b>, $\\cos 90° = 0$, making <b>$\\Delta \\Phi_E = 0$</b>. Geometrically, $\\theta = 90°$ means the electric field lines skim parallel across the surface without passing <i>through</i> it. Option 2 yields maximum negative flux ($\\cos 180° = -1$), and Option 3 yields $\\frac{E \\Delta s}{\\sqrt{2}}$."
   },
   {
     "p_id": "bpsc_phys_m34_20",
@@ -257,7 +257,7 @@
       "Electrons flow from smaller body to larger body until volumes match."
     ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 incorrectly asserts that electrons flow from higher to lower potential and stop when charges (rather than potentials) match. Option 1 is correct because: <br>1. Electric potential determines the direction of charge flow. Conventional positive charge flows from higher potential ($V_A$) to lower potential ($V_B$). <br>2. Since free electrons carry negative charge ($-e$), **electrons move in the opposite direction—from lower potential $B$ to higher potential $A$**. <br>3. Charge transfer continues until the **electric potentials of both bodies become equal ($V_A' = V_B'$)**, establishing electrostatic equilibrium (equal potentials, not necessarily equal charges). Options 2 and 3 cite false physical mechanisms."
+    "e": "<b>Explanation:</b> Option 0 incorrectly asserts that electrons flow from higher to lower potential and stop when charges (rather than potentials) match. Option 1 is correct because: <br>1. Electric potential determines the direction of charge flow. Conventional positive charge flows from higher potential ($V_A$) to lower potential ($V_B$). <br>2. Since free electrons carry negative charge ($-e$), <b>electrons move in the opposite direction—from lower potential $B$ to higher potential $A$</b>. <br>3. Charge transfer continues until the <b>electric potentials of both bodies become equal ($V_A' = V_B'$)</b>, establishing electrostatic equilibrium (equal potentials, not necessarily equal charges). Options 2 and 3 cite false physical mechanisms."
   },
   {
     "p_id": "bpsc_phys_m35_01",
@@ -283,7 +283,7 @@
       "The battery electrolyte freezes instantly due to sudden chemical depletion."
     ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 incorrectly attributes dimming to reverse electron flow. Option 1 is correct because a car battery possesses a non-zero **internal resistance ($r$)** [the inherent resistance offered by the electrolyte and electrodes inside a cell to current flow]. When the starter motor is switched on, it draws an extremely large current ($I$) to overcome mechanical inertia. According to the terminal voltage formula $V = E - I r$, this high current draw creates a **large internal potential drop ($I r$)** across the battery's internal resistance, significantly lowering the net terminal potential difference ($V$) available across the circuit. As a result, the headlights experience a momentary drop in voltage and power, causing them to dim. Options 2 and 3 cite false chemical or physical claims."
+    "e": "<b>Explanation:</b> Option 0 incorrectly attributes dimming to reverse electron flow. Option 1 is correct because a car battery possesses a non-zero <b>internal resistance ($r$)</b> [the inherent resistance offered by the electrolyte and electrodes inside a cell to current flow]. When the starter motor is switched on, it draws an extremely large current ($I$) to overcome mechanical inertia. According to the terminal voltage formula $V = E - I r$, this high current draw creates a <b>large internal potential drop ($I r$)</b> across the battery's internal resistance, significantly lowering the net terminal potential difference ($V$) available across the circuit. As a result, the headlights experience a momentary drop in voltage and power, causing them to dim. Options 2 and 3 cite false chemical or physical claims."
   },
   {
     "p_id": "bpsc_phys_m35_03",
@@ -296,7 +296,7 @@
       "Resistance is halved ($\\frac{R}{2}$); Resistivity decreases by a factor of 4."
     ],
     "a": 0,
-    "e": "<b>Explanation:</b> Option 1 assumes area remains constant when stretched (violating mass/volume conservation). Option 0 is correct because: <br>1. **Resistivity ($\\rho$):** Resistivity is an **intrinsic material property** that depends solely on the material's nature and temperature; it is completely independent of wire shape, length, or cross-sectional area. Thus, **$\\rho$ remains unchanged**. <br>2. **Resistance ($R$):** The volume of the wire remains constant ($V = A \\cdot l = constant$). When length is stretched to $l' = 2l$, cross-sectional area must halve to $A' = \\frac{A}{2}$. Substituting into $R' = \\rho \\frac{l'}{A'}$ gives: <b>$$R' = \\rho \\frac{2l}{A/2} = 4 \\left(\\rho \\frac{l}{A}\\right) = 4R$$</b> Stretching a wire to $n$ times its length increases its resistance by $n^2$ times ($2^2 = 4$). Options 2 and 3 state incorrect algebraic or material scaling behaviors."
+    "e": "<b>Explanation:</b> Option 1 assumes area remains constant when stretched (violating mass/volume conservation). Option 0 is correct because: <br>1. <b>Resistivity ($\\rho$):</b> Resistivity is an <b>intrinsic material property</b> that depends solely on the material's nature and temperature; it is completely independent of wire shape, length, or cross-sectional area. Thus, <b>$\\rho$ remains unchanged</b>. <br>2. <b>Resistance ($R$):</b> The volume of the wire remains constant ($V = A \\cdot l = constant$). When length is stretched to $l' = 2l$, cross-sectional area must halve to $A' = \\frac{A}{2}$. Substituting into $R' = \\rho \\frac{l'}{A'}$ gives: <b>$$R' = \\rho \\frac{2l}{A/2} = 4 \\left(\\rho \\frac{l}{A}\\right) = 4R$$</b> Stretching a wire to $n$ times its length increases its resistance by $n^2$ times ($2^2 = 4$). Options 2 and 3 state incorrect algebraic or material scaling behaviors."
   },
   {
     "p_id": "bpsc_phys_m35_04",
@@ -309,7 +309,7 @@
       "For alloys, resistance drops to zero at $100°C$."
     ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 completely swaps metal and semiconductor temperature responses. Option 1 is correct because: <br>1. **Pure Metals:** Possess a positive temperature coefficient of resistance. As temperature rises, thermal agitation increases lattice ion vibrations, increasing electron collision frequency and **raising resistance**. <br>2. **Alloys (e.g., Nichrome, Manganin, Constantan):** Possess very weak positive temperature coefficients; resistance increases by an **extremely small amount** with temperature, making them ideal for standard resistor coils. <br>3. **Semiconductors (e.g., Silicon, Germanium):** Possess a **negative temperature coefficient**. Rising temperature breaks covalent bonds, liberating bound electrons into the conduction band, which **decreases resistance (increases conductivity)**. Options 2 and 3 state false physical claims."
+    "e": "<b>Explanation:</b> Option 0 completely swaps metal and semiconductor temperature responses. Option 1 is correct because: <br>1. <b>Pure Metals:</b> Possess a positive temperature coefficient of resistance. As temperature rises, thermal agitation increases lattice ion vibrations, increasing electron collision frequency and <b>raising resistance</b>. <br>2. <b>Alloys (e.g., Nichrome, Manganin, Constantan):</b> Possess very weak positive temperature coefficients; resistance increases by an <b>extremely small amount</b> with temperature, making them ideal for standard resistor coils. <br>3. <b>Semiconductors (e.g., Silicon, Germanium):</b> Possess a <b>negative temperature coefficient</b>. Rising temperature breaks covalent bonds, liberating bound electrons into the conduction band, which <b>decreases resistance (increases conductivity)</b>. Options 2 and 3 state false physical claims."
   },
   {
     "p_id": "bpsc_phys_m35_05",
@@ -322,7 +322,7 @@
       "Current through each branch is directly proportional to its resistance."
     ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 describes a Series Combination. Option 1 is correct because in a **Parallel Combination**: <br>1. **Voltage:** The potential difference across every parallel branch is strictly **identical** ($V$). <br>2. **Current:** Total current divides inversely according to branch resistance ($I_k = \\frac{V}{R_k}$), making total current $I = I_1 + I_2 + I_3$. <br>3. **Equivalent Resistance:** Governed by <b>$$\\frac{1}{R_p} = \\frac{1}{R_1} + \\frac{1}{R_2} + \\frac{1}{R_3}$$</b> The resulting net equivalent resistance ($R_p$) is **always strictly less than the smallest individual resistor** in the parallel network. Option 2 describes non-existent geometric scaling, and Option 3 incorrectly asserts direct current-resistance proportionality."
+    "e": "<b>Explanation:</b> Option 0 describes a Series Combination. Option 1 is correct because in a <b>Parallel Combination</b>: <br>1. <b>Voltage:</b> The potential difference across every parallel branch is strictly <b>identical</b> ($V$). <br>2. <b>Current:</b> Total current divides inversely according to branch resistance ($I_k = \\frac{V}{R_k}$), making total current $I = I_1 + I_2 + I_3$. <br>3. <b>Equivalent Resistance:</b> Governed by <b>$$\\frac{1}{R_p} = \\frac{1}{R_1} + \\frac{1}{R_2} + \\frac{1}{R_3}$$</b> The resulting net equivalent resistance ($R_p$) is <b>always strictly less than the smallest individual resistor</b> in the parallel network. Option 2 describes non-existent geometric scaling, and Option 3 incorrectly asserts direct current-resistance proportionality."
   },
   {
     "p_id": "bpsc_phys_m35_06",
@@ -330,12 +330,12 @@
     "qh": "चालकता (Conductance) और विशिष्ट चालकता (Conductivity) विद्युत आवेश को संचालित करने की किसी सामग्री की क्षमता को मापते हैं। क्रमशः चालकता और विशिष्ट चालकता के लिए सही SI इकाइयाँ क्या हैं?",
     "o": [
       "Conductance: $\\Omega \\cdot m$; Conductivity: $\\Omega$",
-      "Conductance: Siemens (S) or $\\Omega^{-1}$ (mho); Conductivity: $Siemens\\cdotm^{-1}$ or $\\Omega^{-1}m^{-1}$ (mho$\\cdotm^{-1}$)",
+      "Conductance: Siemens (S) or $\\Omega^{-1}$ (mho); Conductivity: $\\text{Siemens} \\cdot \\text{m}^{-1}$ or $\\Omega^{-1}\\text{m}^{-1}$ (mho $\\cdot \\text{m}^{-1}$)",
       "Conductance: Volt per Ampere; Conductivity: Ampere per Volt",
       "Conductance: Watt; Conductivity: Joule per second"
     ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 swaps resistance and resistivity units. Option 1 is correct because: <br>1. **Conductance ($G$):** Defined as the reciprocal of resistance ($G = \\frac{1}{R}$). Its SI unit is **$\\Omega^{-1}$ (ohm$^{-1}$), mho, or Siemens (S)**. <br>2. **Conductivity ($\\sigma$):** Defined as the reciprocal of resistivity ($\\sigma = \\frac{1}{\\rho}$). Its SI unit is **$\\Omega^{-1}m^{-1}$, mho$\\cdotm^{-1}$, or $Siemens\\cdotm^{-1}$ (S/m)**. Option 2 states inverse voltage-current ratios, and Option 3 lists power and energy rate units."
+    "e": "<b>Explanation:</b> Option 0 swaps resistance and resistivity units. Option 1 is correct because: <br>1. <b>Conductance ($G$):</b> Defined as the reciprocal of resistance ($G = \\frac{1}{R}$). Its SI unit is <b>$\\Omega^{-1}$ (ohm$^{-1}$), mho, or Siemens (S)</b>. <br>2. <b>Conductivity ($\\sigma$):</b> Defined as the reciprocal of resistivity ($\\sigma = \\frac{1}{\\rho}$). Its SI unit is <b>$\\Omega^{-1}\\text{m}^{-1}$, mho $\\cdot \\text{m}^{-1}$, or $\\text{Siemens} \\cdot \\text{m}^{-1}$ (S/m)</b>. Option 2 states inverse voltage-current ratios, and Option 3 lists power and energy rate units."
   },
   {
     "p_id": "bpsc_phys_m35_07",
@@ -348,7 +348,7 @@
       "The material begins emitting intense X-ray radiation continuously."
     ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 describes an insulator transition. Option 1 is correct because **Superconductivity** is a phenomenon wherein certain metals, alloys, or ceramics undergo a phase transition when cooled below a specific **Critical Temperature ($T_c$)**, causing their **electrical resistance to drop abruptly to exactly ZERO ($R = 0$)**. In this state, an electric current induced in a closed superconducting loop can persist indefinitely without any thermal energy loss ($I^2 R t = 0$). Options 2 and 3 state false potential or radiation claims."
+    "e": "<b>Explanation:</b> Option 0 describes an insulator transition. Option 1 is correct because <b>Superconductivity</b> is a phenomenon wherein certain metals, alloys, or ceramics undergo a phase transition when cooled below a specific <b>Critical Temperature ($T_c$)</b>, causing their <b>electrical resistance to drop abruptly to exactly ZERO ($R = 0$)</b>. In this state, an electric current induced in a closed superconducting loop can persist indefinitely without any thermal energy loss ($I^2 R t = 0$). Options 2 and 3 state false potential or radiation claims."
   },
   {
     "p_id": "bpsc_phys_m35_08",
@@ -361,7 +361,7 @@
       "Generating magnetic levitation forces inside vacuum tubes."
     ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 is incorrect because thermistors possess high resistance temperature variations, making them unsuitable for power transmission line conductors. Option 1 is correct because a **Thermistor** is a heat-sensitive semiconductor resistor with a high negative (or positive) temperature coefficient. Small variations in temperature induce large, measurable changes in its resistance, making it invaluable for: (1) **Detecting minute temperature fluctuations**; (2) **Measuring cryogenic/low temperatures**; (3) **Safeguarding television picture tube filaments**; and (4) **Providing thermal protection for transformer, generator, and motor windings**. Options 2 and 3 cite false energetic or levitation claims."
+    "e": "<b>Explanation:</b> Option 0 is incorrect because thermistors possess high resistance temperature variations, making them unsuitable for power transmission line conductors. Option 1 is correct because a <b>Thermistor</b> is a heat-sensitive semiconductor resistor with a high negative (or positive) temperature coefficient. Small variations in temperature induce large, measurable changes in its resistance, making it invaluable for: (1) <b>Detecting minute temperature fluctuations</b>; (2) <b>Measuring cryogenic/low temperatures</b>; (3) <b>Safeguarding television picture tube filaments</b>; and (4) <b>Providing thermal protection for transformer, generator, and motor windings</b>. Options 2 and 3 cite false energetic or levitation claims."
   },
   {
     "p_id": "bpsc_phys_m35_09",
@@ -374,7 +374,7 @@
       "When the internal resistance of the cell increases to infinity during current draw."
     ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 describes short-circuit conditions where terminal voltage drops to zero ($V = 0$). Option 1 is correct because **Electromotive Force (EMF, $E$)** is defined as the maximum potential difference between the two electrodes of a cell when **no current is drawn from it (open circuit, $I = 0$)**. According to the cell equation $V = E - I r$, when $I = 0$, the internal voltage drop $I r = 0$, making **$V = E$**. When current is drawn ($I > 0$), $V = E - I r < E$. During charging, $V = E + I r > E$. Option 3 states an impossible physical condition."
+    "e": "<b>Explanation:</b> Option 0 describes short-circuit conditions where terminal voltage drops to zero ($V = 0$). Option 1 is correct because <b>Electromotive Force (EMF, $E$)</b> is defined as the maximum potential difference between the two electrodes of a cell when <b>no current is drawn from it (open circuit, $I = 0$)</b>. According to the cell equation $V = E - I r$, when $I = 0$, the internal voltage drop $I r = 0$, making <b>$V = E$</b>. When current is drawn ($I > 0$), $V = E - I r < E$. During charging, $V = E + I r > E$. Option 3 states an impossible physical condition."
   },
   {
     "p_id": "bpsc_phys_m35_10",
@@ -387,7 +387,7 @@
       "The bulb's internal resistance drops to zero, converting AC current into DC voltage."
     ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 misidentifies switch action as an explosive shockwave. Option 1 is correct because the tungsten filament of an incandescent bulb possesses a positive temperature coefficient of resistance ($R \\propto T$). When the bulb is switched off, the **cold filament has a very low initial resistance**. At the exact instant of switching on, applying full mains voltage ($V$) across this low cold resistance ($R_{cold}$) draws a **sudden, massive initial current surge ($I_{surge} = \\frac{V}{R_{cold}}$)**. This intense surge produces rapid, localized Joule heating ($I^2 R t$), creating extreme thermal stress that frequently snaps an aged or thinned filament wire right at switch-on. Options 2 and 3 cite false chemical or conversion mechanisms."
+    "e": "<b>Explanation:</b> Option 0 misidentifies switch action as an explosive shockwave. Option 1 is correct because the tungsten filament of an incandescent bulb possesses a positive temperature coefficient of resistance ($R \\propto T$). When the bulb is switched off, the <b>cold filament has a very low initial resistance</b>. At the exact instant of switching on, applying full mains voltage ($V$) across this low cold resistance ($R_{cold}$) draws a <b>sudden, massive initial current surge ($I_{surge} = \\frac{V}{R_{cold}}$)</b>. This intense surge produces rapid, localized Joule heating ($I^2 R t$), creating extreme thermal stress that frequently snaps an aged or thinned filament wire right at switch-on. Options 2 and 3 cite false chemical or conversion mechanisms."
   },
   {
     "p_id": "bpsc_phys_m35_11",
@@ -400,7 +400,7 @@
       "Electrons leak through the glass wall, leaving behind uncharged black ions."
     ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 falsely claims inert argon gas turns into soot. Option 1 is correct because during extended operation at temperatures near $\\sim 2500\\text{--}3000°C$, the **tungsten filament slowly undergoes thermal evaporation**. The evaporated tungsten vapor condenses on the cooler inner surface of the glass bulb, forming a **thin, dark metallic coating** that absorbs light. Simultaneously, evaporation thins the filament wire, decreasing its cross-sectional area ($A$). Because $R = \\rho \\frac{l}{A}$, a thinner filament possesses a **higher electrical resistance ($R$)**, which reduces the operating current ($I$) and total power output ($P = V I = \\frac{V^2}{R}$), causing the bulb to dim over time. Options 2 and 3 list scientifically invalid chemical or electronic claims."
+    "e": "<b>Explanation:</b> Option 0 falsely claims inert argon gas turns into soot. Option 1 is correct because during extended operation at temperatures near $\\sim 2500\\text{--}3000°C$, the <b>tungsten filament slowly undergoes thermal evaporation</b>. The evaporated tungsten vapor condenses on the cooler inner surface of the glass bulb, forming a <b>thin, dark metallic coating</b> that absorbs light. Simultaneously, evaporation thins the filament wire, decreasing its cross-sectional area ($A$). Because $R = \\rho \\frac{l}{A}$, a thinner filament possesses a <b>higher electrical resistance ($R$)</b>, which reduces the operating current ($I$) and total power output ($P = V I = \\frac{V^2}{R}$), causing the bulb to dim over time. Options 2 and 3 list scientifically invalid chemical or electronic claims."
   },
   {
     "p_id": "bpsc_phys_m35_12",
@@ -413,7 +413,7 @@
       "Zero thermal expansion and magnetic repulsion"
     ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 incorrectly states a low melting point (which would cause instant melting). Option 1 is correct because an incandescent filament must operate at extreme temperatures ($\\approx 2700°C$) to glow white-hot and emit visible light efficiently without melting or disintegrating. Tungsten is uniquely suited because it possesses an extraordinarily **high melting point ($3380°C$)** and **high electrical resistivity** (allowing significant Joule heating $I^2 R t$ in a compact filament wire). Furthermore, bulbs are filled with inactive gases (nitrogen or argon) to prevent filament oxidation at these extreme operating temperatures. Options 2 and 3 state impossible physical attributes."
+    "e": "<b>Explanation:</b> Option 0 incorrectly states a low melting point (which would cause instant melting). Option 1 is correct because an incandescent filament must operate at extreme temperatures ($\\approx 2700°C$) to glow white-hot and emit visible light efficiently without melting or disintegrating. Tungsten is uniquely suited because it possesses an extraordinarily <b>high melting point ($3380°C$)</b> and <b>high electrical resistivity</b> (allowing significant Joule heating $I^2 R t$ in a compact filament wire). Furthermore, bulbs are filled with inactive gases (nitrogen or argon) to prevent filament oxidation at these extreme operating temperatures. Options 2 and 3 state impossible physical attributes."
   },
   {
     "p_id": "bpsc_phys_m35_13",
@@ -426,7 +426,7 @@
       "Alloys eliminate all internal potential differences in heating circuits."
     ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 falsely claims alloys have lower resistivity and low melting points. Option 1 is correct because heating elements rely on high Joule heat generation ($H = I^2 R t$) at high temperatures. Alloys like **Nichrome** (Nickel, Chromium, Manganese, Iron) are chosen over pure metals because: (1) They possess **significantly higher electrical resistivity ($\\rho$)** than pure copper or aluminum, producing higher heat for a given current; and (2) They **do not readily oxidize (burn or break down) at high operating temperatures** (even when glowing red-hot at $1000°C$). Options 2 and 3 cite false physical mechanisms."
+    "e": "<b>Explanation:</b> Option 0 falsely claims alloys have lower resistivity and low melting points. Option 1 is correct because heating elements rely on high Joule heat generation ($H = I^2 R t$) at high temperatures. Alloys like <b>Nichrome</b> (Nickel, Chromium, Manganese, Iron) are chosen over pure metals because: (1) They possess <b>significantly higher electrical resistivity ($\\rho$)</b> than pure copper or aluminum, producing higher heat for a given current; and (2) They <b>do not readily oxidize (burn or break down) at high operating temperatures</b> (even when glowing red-hot at $1000°C$). Options 2 and 3 cite false physical mechanisms."
   },
   {
     "p_id": "bpsc_phys_m35_14",
@@ -439,7 +439,7 @@
       "To measure the absolute electric flux passing through a wire."
     ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 incorrectly states it alters the voltage source itself. Option 1 is correct because a **Rheostat (Variable Resistor)** is an adjustable resistor component used in circuits to **regulate or continuously alter the magnitude of electric current** ($I = \\frac{V}{R}$) by sliding a contact to change the effective length of resistance wire in the circuit, **without changing the fixed voltage source ($V$)**. Option 2 describes an inverter, and Option 3 describes a flux meter."
+    "e": "<b>Explanation:</b> Option 0 incorrectly states it alters the voltage source itself. Option 1 is correct because a <b>Rheostat (Variable Resistor)</b> is an adjustable resistor component used in circuits to <b>regulate or continuously alter the magnitude of electric current</b> ($I = \\frac{V}{R}$) by sliding a contact to change the effective length of resistance wire in the circuit, <b>without changing the fixed voltage source ($V$)</b>. Option 2 describes an inverter, and Option 3 describes a flux meter."
   },
   {
     "p_id": "bpsc_phys_m35_15",
@@ -452,7 +452,7 @@
       "Provided the conductor is made strictly of non-metallic semiconductor silicon."
     ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 states an extreme cryogenic vacuum condition. Option 1 is correct because **Ohm's Law ($V = I R$)** holds true only if the resistance ($R$) of the conductor remains constant. Since resistance depends directly on temperature ($R_T = R_0[1 + \\alpha \\Delta T]$) and mechanical strain, Ohm's law is strictly valid **only when physical conditions (temperature, length, strain, and material state) remain constant**. If current causes significant self-heating, resistance increases, causing the $V\\text{-}I$ graph to curve (non-ohmic behavior). Option 2 and Option 3 list irrelevant speed or semiconductor claims (semiconductors are inherently non-ohmic)."
+    "e": "<b>Explanation:</b> Option 0 states an extreme cryogenic vacuum condition. Option 1 is correct because <b>Ohm's Law ($V = I R$)</b> holds true only if the resistance ($R$) of the conductor remains constant. Since resistance depends directly on temperature ($R_T = R_0[1 + \\alpha \\Delta T]$) and mechanical strain, Ohm's law is strictly valid <b>only when physical conditions (temperature, length, strain, and material state) remain constant</b>. If current causes significant self-heating, resistance increases, causing the $V\\text{-}I$ graph to curve (non-ohmic behavior). Option 2 and Option 3 list irrelevant speed or semiconductor claims (semiconductors are inherently non-ohmic)."
   },
   {
     "p_id": "bpsc_phys_m35_16",
@@ -465,7 +465,7 @@
       "Electrons move in circular orbits perpendicular to the wire axis."
     ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 completely reverses electron drift direction. Option 1 is correct because negative charge carriers (**free electrons**) experience an electrostatic force $\\vec{F} = -e \\vec{E}$ directed opposite to the electric field vector $\\vec{E}$. Thus, electrons **drift from lower potential (negative terminal) toward higher potential (positive terminal)**. By historical convention, **conventional electric current** is defined as the flow of equivalent positive charge, directed from **higher potential (positive terminal) to lower potential (negative terminal)**. Options 2 and 3 state false motion patterns."
+    "e": "<b>Explanation:</b> Option 0 completely reverses electron drift direction. Option 1 is correct because negative charge carriers (<b>free electrons</b>) experience an electrostatic force $\\vec{F} = -e \\vec{E}$ directed opposite to the electric field vector $\\vec{E}$. Thus, electrons <b>drift from lower potential (negative terminal) toward higher potential (positive terminal)</b>. By historical convention, <b>conventional electric current</b> is defined as the flow of equivalent positive charge, directed from <b>higher potential (positive terminal) to lower potential (negative terminal)</b>. Options 2 and 3 state false motion patterns."
   },
   {
     "p_id": "bpsc_phys_m35_17",
@@ -478,7 +478,7 @@
       "Connected in parallel; ideal internal resistance is zero."
     ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 describes an ammeter connection. Option 1 is correct because: <br>1. **Parallel Connection:** A **Voltmeter** measures the potential difference ($V$) between two distinct points; hence it must be connected in **parallel** across the component. <br>2. **Infinite Resistance:** To ensure it does not draw significant current from the main circuit (which would alter the voltage drop being measured), an ideal voltmeter must possess **infinitely high internal resistance ($R_v = \\infty$)**. (Conversely, an Ammeter is connected in series and has zero ideal internal resistance). Options 2 and 3 state mismatched connection and resistance rules."
+    "e": "<b>Explanation:</b> Option 0 describes an ammeter connection. Option 1 is correct because: <br>1. <b>Parallel Connection:</b> A <b>Voltmeter</b> measures the potential difference ($V$) between two distinct points; hence it must be connected in <b>parallel</b> across the component. <br>2. <b>Infinite Resistance:</b> To ensure it does not draw significant current from the main circuit (which would alter the voltage drop being measured), an ideal voltmeter must possess <b>infinitely high internal resistance ($R_v = \\infty$)</b>. (Conversely, an Ammeter is connected in series and has zero ideal internal resistance). Options 2 and 3 state mismatched connection and resistance rules."
   },
   {
     "p_id": "bpsc_phys_m35_18",
@@ -491,7 +491,7 @@
       "Power dissipation across each resistor is identical regardless of resistance value."
     ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 describes parallel circuit characteristics. Option 1 is correct because in a **Series Combination**: <br>1. **Current:** Since there is only a single continuous pathway for charge flow, the **electric current ($I$) passing through every resistor is strictly identical**. <br>2. **Voltage:** Total applied potential difference divides across the individual resistors ($V = V_1 + V_2 + V_3$). <br>3. **Equivalent Resistance:** The net combined resistance is maximum and equals the direct sum: <b>$$R_s = R_1 + R_2 + R_3$$</b> Option 2 describes parallel branch behavior, and Option 3 falsely claims equal power dissipation."
+    "e": "<b>Explanation:</b> Option 0 describes parallel circuit characteristics. Option 1 is correct because in a <b>Series Combination</b>: <br>1. <b>Current:</b> Since there is only a single continuous pathway for charge flow, the <b>electric current ($I$) passing through every resistor is strictly identical</b>. <br>2. <b>Voltage:</b> Total applied potential difference divides across the individual resistors ($V = V_1 + V_2 + V_3$). <br>3. <b>Equivalent Resistance:</b> The net combined resistance is maximum and equals the direct sum: <b>$$R_s = R_1 + R_2 + R_3$$</b> Option 2 describes parallel branch behavior, and Option 3 falsely claims equal power dissipation."
   },
   {
     "p_id": "bpsc_phys_m35_19",
@@ -504,7 +504,7 @@
       "Gravitational attraction pulling electrons toward the Earth's core."
     ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 incorrectly assumes positive protons drift inside solids (protons are fixed in lattice nuclei). Option 1 is correct because when an electric field is applied across a conductor, free electrons accelerate toward the positive terminal. During their movement, these **drifting electrons undergo continuous, frequent collisions with the vibrating fixed metal atoms/ions** of the crystal lattice. These micro-collisions impede the forward drift of electrons, converting electrical kinetic energy into thermal lattice energy (Joule heat). This opposition to electron flow manifests macroscopically as **Electrical Resistance ($R$)**. Options 2 and 3 list false atmospheric or gravitational mechanisms."
+    "e": "<b>Explanation:</b> Option 0 incorrectly assumes positive protons drift inside solids (protons are fixed in lattice nuclei). Option 1 is correct because when an electric field is applied across a conductor, free electrons accelerate toward the positive terminal. During their movement, these <b>drifting electrons undergo continuous, frequent collisions with the vibrating fixed metal atoms/ions</b> of the crystal lattice. These micro-collisions impede the forward drift of electrons, converting electrical kinetic energy into thermal lattice energy (Joule heat). This opposition to electron flow manifests macroscopically as <b>Electrical Resistance ($R$)</b>. Options 2 and 3 list false atmospheric or gravitational mechanisms."
   },
   {
     "p_id": "bpsc_phys_m35_20",
@@ -517,7 +517,7 @@
       "Ohmic: Incandescent bulb filament; Non-Ohmic: Pure gold wire."
     ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 completely swaps ohmic and non-ohmic examples. Option 1 is correct because: <br>1. **Ohmic Conductors:** Materials that strictly obey $V = I R$ (yielding a linear, straight-line $V\\text{-}I$ graph passing through the origin at constant temperature), such as **copper, silver, or aluminum wires**. <br>2. **Non-Ohmic Devices:** Devices where the $V\\text{-}I$ relationship is non-linear or directional-dependent, such as **semiconductors (diodes, transistors, LEDs), thermistors, vacuum tubes, and electrolyte solutions**. Options 2 and 3 state incorrect conductor classifications."
+    "e": "<b>Explanation:</b> Option 0 completely swaps ohmic and non-ohmic examples. Option 1 is correct because: <br>1. <b>Ohmic Conductors:</b> Materials that strictly obey $V = I R$ (yielding a linear, straight-line $V\\text{-}I$ graph passing through the origin at constant temperature), such as <b>copper, silver, or aluminum wires</b>. <br>2. <b>Non-Ohmic Devices:</b> Devices where the $V\\text{-}I$ relationship is non-linear or directional-dependent, such as <b>semiconductors (diodes, transistors, LEDs), thermistors, vacuum tubes, and electrolyte solutions</b>. Options 2 and 3 state incorrect conductor classifications."
   },
   {
     "p_id": "bpsc_phys_m36_01",
@@ -530,7 +530,7 @@
       "Connected in parallel across individual electrical appliances; made of an infinite-resistance plastic polymer."
     ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 misidentifies the connection as parallel and falsely claims tungsten (high melting point) is used. Option 1 is correct because: <br>1. <b>Series Connection:</b> An <b>Electric Fuse</b> must be connected strictly in **series** with the live supply wire so that the entire circuit current passes through it. <br>2. <b>Low Melting Point Material:</b> The fuse element is fabricated from a material with high electrical resistivity and a **low melting point** (typically a eutectic alloy of **lead and tin**). When an electrical overload or short circuit forces the current to exceed the rated threshold ($2\\text{ A}, 5\\text{ A}, 15\\text{ A}$), Joule heating ($H = I^2 R t$) rapidly melts the fuse wire, breaking the circuit and isolating downstream appliances from heavy current damage. <br>Option 2 incorrectly specifies neutral wire placement and high-melting copper alloys. Option 3 describes parallel placement and polymer insulators."
+    "e": "<b>Explanation:</b> Option 0 misidentifies the connection as parallel and falsely claims tungsten (high melting point) is used. Option 1 is correct because: <br>1. <b>Series Connection:</b> An <b>Electric Fuse</b> must be connected strictly in <b>series</b> with the live supply wire so that the entire circuit current passes through it. <br>2. <b>Low Melting Point Material:</b> The fuse element is fabricated from a material with high electrical resistivity and a <b>low melting point</b> (typically a eutectic alloy of <b>lead and tin</b>). When an electrical overload or short circuit forces the current to exceed the rated threshold ($2\\text{ A}, 5\\text{ A}, 15\\text{ A}$), Joule heating ($H = I^2 R t$) rapidly melts the fuse wire, breaking the circuit and isolating downstream appliances from heavy current damage. <br>Option 2 incorrectly specifies neutral wire placement and high-melting copper alloys. Option 3 describes parallel placement and polymer insulators."
   },
   {
     "p_id": "bpsc_phys_m36_02",
@@ -556,7 +556,7 @@
       "Peak voltage is $155\\text{ V}$; Average full-cycle voltage is $311\\text{ V}$."
     ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 confuses rms voltage with peak voltage. Option 1 is correct because: <br>1. **Peak Voltage ($V_{peak}$):** The quoted household voltage of $220\\text{ V}$ is the **root-mean-square (rms) voltage**. The true sinusoidal peak potential reached during each half-cycle is given by: <br>$$V_{peak} = V_{rms} \\times \\sqrt{2} = 220 \\times 1.414 \\approx \\mathbf{311\\text{ Volts}}$$ <br>2. **Average Full-Cycle Voltage:** Since an AC wave alternates symmetrically between positive ($+311\\text{ V}$) and negative ($-311\\text{ V}$) half-cycles, the **net average voltage evaluated over a complete $360°$ cycle is strictly ZERO ($0\\text{ V}$)**. Options 2 and 3 list incorrect mathematical scaling factors."
+    "e": "<b>Explanation:</b> Option 0 confuses rms voltage with peak voltage. Option 1 is correct because: <br>1. <b>Peak Voltage ($V_{peak}$):</b> The quoted household voltage of $220\\text{ V}$ is the <b>root-mean-square (rms) voltage</b>. The true sinusoidal peak potential reached during each half-cycle is given by: <br>$$V_{peak} = V_{rms} \\times \\sqrt{2} = 220 \\times 1.414 \\approx \\mathbf{311\\text{ Volts}}$$ <br>2. <b>Average Full-Cycle Voltage:</b> Since an AC wave alternates symmetrically between positive ($+311\\text{ V}$) and negative ($-311\\text{ V}$) half-cycles, the <b>net average voltage evaluated over a complete $360°$ cycle is strictly ZERO ($0\\text{ V}$)</b>. Options 2 and 3 list incorrect mathematical scaling factors."
   },
   {
     "p_id": "bpsc_phys_m36_04",
@@ -569,7 +569,7 @@
       "Stepping up voltage converts AC directly into high-frequency DC without transformers."
     ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 misidentifies magnetic field cancellation as the primary efficiency driver. Option 1 is correct because transmission loss along long conducting cables depends on **Joule heating power dissipation ($P_{loss} = I^2 R$)**. For a fixed electrical power grid transmission ($P = V I$), stepping up the transmission voltage ($V$) by a factor of $k$ reduces the current ($I$) by the exact same factor $k$. Because power loss depends on the **square of the current ($I^2$)**, stepping up voltage to high levels (e.g., $132\\text{ kV}$) reduces current drastically, **minimizing thermal energy losses** over hundreds of kilometers. Option 2 states a contradictory zero resistance claim, and Option 3 confuses AC transformers with DC rectifiers."
+    "e": "<b>Explanation:</b> Option 0 misidentifies magnetic field cancellation as the primary efficiency driver. Option 1 is correct because transmission loss along long conducting cables depends on <b>Joule heating power dissipation ($P_{loss} = I^2 R$)</b>. For a fixed electrical power grid transmission ($P = V I$), stepping up the transmission voltage ($V$) by a factor of $k$ reduces the current ($I$) by the exact same factor $k$. Because power loss depends on the <b>square of the current ($I^2$)</b>, stepping up voltage to high levels (e.g., $132\\text{ kV}$) reduces current drastically, <b>minimizing thermal energy losses</b> over hundreds of kilometers. Option 2 states a contradictory zero resistance claim, and Option 3 confuses AC transformers with DC rectifiers."
   },
   {
     "p_id": "bpsc_phys_m36_05",
@@ -582,7 +582,7 @@
       "AC shocks only affect external hair follicles without penetrating skin."
     ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 falsely claims AC carries zero current. Option 1 is correct because: <br>1. **Muscle Tetany:** The $50\\text{ Hz}$ frequency of domestic AC rapidly stimulates nerve endings, inducing severe, continuous involuntary muscle spasms (**muscle tetany**). This causes a victim's hand muscles to contract tightly around the energized wire (**'locking/attractive shock'**), preventing them from pulling away. <br>2. **Higher Peak Voltage:** A $220\\text{ V}$ AC line reaches a peak potential of **$311\\text{ V}$**, making it peak-for-peak more destructive than a steady $220\\text{ V}$ DC line (which tends to throw a victim back via a single violent muscle contraction). Option 2 misattributes directional alternation to DC, and Option 3 ignores deep tissue conduction."
+    "e": "<b>Explanation:</b> Option 0 falsely claims AC carries zero current. Option 1 is correct because: <br>1. <b>Muscle Tetany:</b> The $50\\text{ Hz}$ frequency of domestic AC rapidly stimulates nerve endings, inducing severe, continuous involuntary muscle spasms (<b>muscle tetany</b>). This causes a victim's hand muscles to contract tightly around the energized wire (<b>'locking/attractive shock'</b>), preventing them from pulling away. <br>2. <b>Higher Peak Voltage:</b> A $220\\text{ V}$ AC line reaches a peak potential of <b>$311\\text{ V}$</b>, making it peak-for-peak more destructive than a steady $220\\text{ V}$ DC line (which tends to throw a victim back via a single violent muscle contraction). Option 2 misattributes directional alternation to DC, and Option 3 ignores deep tissue conduction."
   },
   {
     "p_id": "bpsc_phys_m36_06",
@@ -595,7 +595,7 @@
       "Visible white light is produced directly by glowing solid carbon filaments without internal coatings."
     ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 misidentifies the internal mechanism as infrared heating. Option 1 is correct because a **Fluorescent Tube / CFL** contains **low-pressure mercury vapor** mixed with inert gas. When electric current passes through the tube, electron collisions excite mercury atoms, causing them to emit **invisible Ultraviolet (UV) radiation**. The interior wall of the tube is coated with a **fluorescent phosphor powder**, which absorbs high-frequency UV photons and re-emits lower-frequency **visible light**. Because this luminescent process generates very little heat compared to incandescent filaments, CFLs are 4 to 6 times more energy-efficient. Option 2 falsely claims gamma radio-decay, and Option 3 describes incandescent arc bulbs."
+    "e": "<b>Explanation:</b> Option 0 misidentifies the internal mechanism as infrared heating. Option 1 is correct because a <b>Fluorescent Tube / CFL</b> contains <b>low-pressure mercury vapor</b> mixed with inert gas. When electric current passes through the tube, electron collisions excite mercury atoms, causing them to emit <b>invisible Ultraviolet (UV) radiation</b>. The interior wall of the tube is coated with a <b>fluorescent phosphor powder</b>, which absorbs high-frequency UV photons and re-emits lower-frequency <b>visible light</b>. Because this luminescent process generates very little heat compared to incandescent filaments, CFLs are 4 to 6 times more energy-efficient. Option 2 falsely claims gamma radio-decay, and Option 3 describes incandescent arc bulbs."
   },
   {
     "p_id": "bpsc_phys_m36_07",
@@ -608,7 +608,7 @@
       "Gaseous Chlorine polymer"
     ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 misidentifies CFL contents as radioactive uranium. Option 1 is correct because every CFL unit contains a small amount of **toxic Mercury (metal/vapor)** (typically $3\\text{--}5\\text{ mg}$). When broken or disposed of improperly in domestic landfills, mercury leaks into soil and water systems, bioaccumulating in food chains as neurotoxic methylmercury. This hazardous chemical presence necessitates specialized e-waste handling for spent CFLs. Options 2 and 3 cite false lead-acid or chlorine contents."
+    "e": "<b>Explanation:</b> Option 0 misidentifies CFL contents as radioactive uranium. Option 1 is correct because every CFL unit contains a small amount of <b>toxic Mercury (metal/vapor)</b> (typically $3\\text{--}5\\text{ mg}$). When broken or disposed of improperly in domestic landfills, mercury leaks into soil and water systems, bioaccumulating in food chains as neurotoxic methylmercury. This hazardous chemical presence necessitates specialized e-waste handling for spent CFLs. Options 2 and 3 cite false lead-acid or chlorine contents."
   },
   {
     "p_id": "bpsc_phys_m36_08",
@@ -621,7 +621,7 @@
       "Electric Cell: Double parallel thick lines; Rheostat: Triangle icon; Voltmeter: Curved arc."
     ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 misidentifies cell and voltmeter symbols. Option 1 is correct because standard circuit schematic rules dictate: <br>1. **Electric Cell:** Represented by a parallel line pair—a **long thin line for the positive ($+$) terminal** and a **short, thicker line for the negative ($-$) terminal**. <br>2. **Rheostat (Variable Resistor):** Represented by a standard **zigzag resistance line with a diagonal arrow or adjustable sliding contact arrow**. <br>3. **Voltmeter:** Represented by a **circle labeled 'V'**, always connected in **parallel** across components to measure potential difference. Option 2 confuses voltmeters with ammeters (labeled 'A'), and Option 3 uses non-standard geometric shapes."
+    "e": "<b>Explanation:</b> Option 0 misidentifies cell and voltmeter symbols. Option 1 is correct because standard circuit schematic rules dictate: <br>1. <b>Electric Cell:</b> Represented by a parallel line pair—a <b>long thin line for the positive ($+$) terminal</b> and a <b>short, thicker line for the negative ($-$) terminal</b>. <br>2. <b>Rheostat (Variable Resistor):</b> Represented by a standard <b>zigzag resistance line with a diagonal arrow or adjustable sliding contact arrow</b>. <br>3. <b>Voltmeter:</b> Represented by a <b>circle labeled 'V'</b>, always connected in <b>parallel</b> across components to measure potential difference. Option 2 confuses voltmeters with ammeters (labeled 'A'), and Option 3 uses non-standard geometric shapes."
   },
   {
     "p_id": "bpsc_phys_m36_09",
@@ -634,7 +634,7 @@
       "Because AC voltage cannot enter liquid solutions due to surface tension."
     ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 states a superluminal speed claim. Option 1 is correct because **Electroplating** relies on unidirectional electrochemical migration (electrolysis), where metallic cations in an electrolyte bath move continuously toward a fixed cathode to deposit a uniform metal layer. If an **Alternating Current (AC)** source is used, the electrode polarities reverse 50 times per second ($50\\text{ Hz}$). Metal ions deposited on an electrode during a positive half-cycle are **dissolved back into solution during the alternating negative half-cycle**, resulting in zero net electroplating deposition. Thus, electroplating strictly requires **Direct Current (DC)** (or rectified AC). Options 2 and 3 list false physical mechanisms."
+    "e": "<b>Explanation:</b> Option 0 states a superluminal speed claim. Option 1 is correct because <b>Electroplating</b> relies on unidirectional electrochemical migration (electrolysis), where metallic cations in an electrolyte bath move continuously toward a fixed cathode to deposit a uniform metal layer. If an <b>Alternating Current (AC)</b> source is used, the electrode polarities reverse 50 times per second ($50\\text{ Hz}$). Metal ions deposited on an electrode during a positive half-cycle are <b>dissolved back into solution during the alternating negative half-cycle</b>, resulting in zero net electroplating deposition. Thus, electroplating strictly requires <b>Direct Current (DC)</b> (or rectified AC). Options 2 and 3 list false physical mechanisms."
   },
   {
     "p_id": "bpsc_phys_m36_10",
@@ -647,6 +647,6 @@
       "15000 units"
     ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 forgets to divide by 1000. Option 1 is correct because the standard commercial unit consumption formula is: <b>$$\\text{Number of Units (kWh)} = \\frac{\\text{Power (Watts)} \\times \\text{Hours per day} \\times Days}{1000}$$</b> Substituting the given values: <b>$$Units = \\frac{1000\\text{ W} \\times 5\\text{ hours/day} \\times 30\\text{ days}}{1000} = \\mathbf{150\\text{ units (kWh)}}$$</b> Options 2 and 3 result from incorrect decimal/conversion scaling factors."
+    "e": "<b>Explanation:</b> Option 0 forgets to divide by 1000. Option 1 is correct because the standard commercial unit consumption formula is: <b>$$\\text{Number of Units (kWh)} = \\frac{\\text{Power (Watts)} \\times \\text{Hours per day} \\times \\text{Days}}{1000}$$</b> Substituting the given values: <b>$$\\text{Units} = \\frac{1000\\text{ W} \\times 5\\text{ hours/day} \\times 30\\text{ days}}{1000} = \\mathbf{150\\text{ units (kWh)}}$$</b> Options 2 and 3 result from incorrect decimal/conversion scaling factors."
   }
 ]
