@@ -103,19 +103,7 @@
     "a": 1,
     "e": "<b>Explanation:</b> Option 0 inverts the ratio, yielding a value less than 1. Option 1 is correct because when a dielectric is placed in an external electric field $E_0$, dielectric polarization creates an internal induced electric field $E_p$ in the opposite direction. The net reduced field inside the dielectric becomes $E = E_0 - E_p$. The <b>Dielectric Constant ($K$)</b> (or relative permittivity $\\varepsilon_r$) is defined as the ratio of the applied external electric field to the net reduced electric field inside the material: <b>$$K = \\frac{E_0}{E}$$</b> Since $E < E_0$ due to polarization, <b>$K > 1$ for all physical materials</b> ($K = 1$ strictly for vacuum). Options 2 and 3 list subtraction or multiplication formulas."
   },
-  {
-    "p_id": "bpsc_phys_m34_09",
-    "qe": "Dielectrics are classified into polar and non-polar types based on molecular charge symmetry. Which choice correctly categorizes dielectric materials and their permanent dipole moments?",
-    "qh": "परावैद्युत (Dielectrics) को आणविक आवेश समरूपता के आधार पर ध्रुवीय और अध्रुवीय प्रकारों में वर्गीकृत किया जाता है। कौन सा विकल्प परावैद्युत सामग्रियों और उनके स्थायी द्विध्रुव आघूर्णों (permanent dipole moments) का सही वर्गीकरण करता है?",
-    "o": [
-      "Non-polar dielectrics (H₂O, NH₃) possess permanent dipole moments; Polar dielectrics (N₂, O₂) have zero dipole moment.",
-      "Polar dielectrics (H₂O, NH₃, CO₂) have non-coinciding charge centers giving permanent molecular dipole moments; Non-polar dielectrics (N₂, O₂, H₂, CH₄) have coinciding charge centers with zero permanent dipole moment.",
-      "Both polar and non-polar dielectrics possess identical permanent dipole moments in the absence of an electric field.",
-      "Non-polar dielectrics conduct electric current easily, whereas polar dielectrics behave as super-conductors."
-    ],
-    "a": 1,
-    "e": "<b>Explanation:</b> Option 0 completely swaps polar and non-polar molecular examples. Option 1 is correct because: <br>1. <b>Polar Dielectrics:</b> Molecules like H₂O, NH₃, and CO₂ have asymmetric structures where the centers of positive and negative charges do not coincide naturally, giving each molecule a <b>permanent electric dipole moment</b>. <br>2. <b>Non-polar Dielectrics:</b> Symmetric molecules like N₂, O₂, H₂, and CH₄ have coinciding centers of positive and negative charges, resulting in <b>zero permanent electric dipole moment</b> under normal zero-field conditions. Option 2 ignores molecular symmetry, and Option 3 falsely claims electrical conduction."
-  },
+
   {
     "p_id": "bpsc_phys_m34_10",
     "qe": "Xerox photocopying machines rely on electrostatic forces to transfer print images onto paper. What is the operational role of the toner powder and carrier beads in this process?",
