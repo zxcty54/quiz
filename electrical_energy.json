@@ -130,18 +130,18 @@
     "e": "<b>Explanation:</b> Option 0 reverses charge polarities between toner and drum. Option 1 is correct because xerography (electrostatic copying) operates via electrostatic attraction: <br>1. Black toner powder particles acquire a **negative charge** and adhere to small carrier beads via electrostatic forces. <br>2. An optical system projects light from the original document onto a photosensitive rotating drum, creating a **positively charged latent image** corresponding to text/dark areas. <br>3. As the drum rotates, its positive image regions exert stronger electrostatic attraction, pulling the **negatively charged toner particles away from the carrier beads** onto the drum surface, which is then heat-fused onto paper. Options 2 and 3 describe false thermal fission or AC melting mechanisms."
   },
   {
-    "p_id": "bpsc_phys_m34_11",
-    "qe": "Dielectric strength defines the operational limits of insulating materials subjected to strong electric fields. What is the approximate dielectric strength threshold of air, and what happens when an electric field exceeds this limit?",
-    "qh": "परावैद्युत सामर्थ्य (Dielectric strength) मजबूत विद्युत क्षेत्रों के अधीन इन्सुलेट सामग्री की परिचालन सीमाओं को परिभाषित करती है। हवा की अनुमानित परावैद्युत सामर्थ्य सीमा क्या है, और जब एक विद्युत क्षेत्र इस सीमा से अधिक हो जाता है तो क्या होता है?",
-    "o": [
-      "Dielectric strength of air is $3 \\times 10^6\\text{ V/m}$; exceeding it causes ionization breakdown, turning air into a conductor (causing electric sparks).",
-      "Dielectric strength of air is $100\\text{ V/m}$; exceeding it converts air into pure ozone gas without sparking.",
-      "Dielectric strength of air is infinite; air never undergoes electrical breakdown.",
-      "Dielectric strength of air is $3 \\times 10^8\\text{ V/m}$; exceeding it converts sound waves into light waves."
-    ],
-    "a": 0,
-    "e": "<b>Explanation:</b> Option 1 uses an absurdly low breakdown voltage ($100\\text{ V/m}$). Option 0 is correct because **Dielectric Strength** is the maximum electric field intensity an insulating medium can withstand without losing its insulating properties. For dry air at atmospheric pressure, the threshold is approximately **$3 \\times 10^6\\text{ V/m}$ (or $3\\text{ kV/mm}$)**. If the localized electric field exceeds $3 \\times 10^6\\text{ V/m}$, intense electrostatic force strips outer electrons from air molecules (**ionization breakdown**), converting insulating air into a conducting plasma channel that manifests as blue electric sparks or lightning bolts. Option 2 claims infinite strength, and Option 3 uses the speed of light value."
-  },
+  "p_id": "bpsc_phys_m34_11",
+  "qe": "Dielectric strength defines the operational limits of insulating materials subjected to strong electric fields. What is the approximate dielectric strength threshold of air, and what happens when an electric field exceeds this limit?",
+  "qh": "परावैद्युत सामर्थ्य (Dielectric strength) मजबूत विद्युत क्षेत्रों के अधीन इन्सुलेट सामग्री की परिचालन सीमाओं को परिभाषित करती है। हवा की अनुमानित परावैद्युत सामर्थ्य सीमा क्या है, और जब एक विद्युत क्षेत्र इस सीमा से अधिक हो जाता है तो क्या होता है?",
+  "o": [
+    "Dielectric strength of air is $3 \\times 10^6$ V/m; exceeding it causes ionization breakdown, turning air into a conductor (causing electric sparks).",
+    "Dielectric strength of air is $100$ V/m; exceeding it converts air into pure ozone gas without sparking.",
+    "Dielectric strength of air is infinite; air never undergoes electrical breakdown.",
+    "Dielectric strength of air is $3 \\times 10^8$ V/m; exceeding it converts sound waves into light waves."
+  ],
+  "a": 0,
+  "e": "<b>Explanation:</b> Option 1 uses an absurdly low breakdown voltage ($100$ V/m). Option 0 is correct because **Dielectric Strength** is the maximum electric field intensity an insulating medium can withstand without losing its insulating properties. For dry air at atmospheric pressure, the threshold is approximately **$3 \\times 10^6$ V/m (or $3$ kV/mm)**. If the localized electric field exceeds $3 \\times 10^6$ V/m, intense electrostatic force strips outer electrons from air molecules (**ionization breakdown**), converting insulating air into a conducting plasma channel that manifests as blue electric sparks or lightning bolts. Option 2 claims infinite strength, and Option 3 uses the speed of light value."
+},
   {
     "p_id": "bpsc_phys_m34_12",
     "qe": "An electric dipole consists of two equal and opposite point charges ($-q$ and $+q$) separated by a small distance $2a$. What is the electric flux passing through a closed Gaussian surface that completely encloses this electric dipole?",
