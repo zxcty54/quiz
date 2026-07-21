@@ -10,7 +10,7 @@
       "The tangent drawn at any point on a magnetic field line indicates the scalar magnetic potential value."
     ],
     "a": 0,
-    "e": "<b>Explanation:</b> Option 0 is correct because <b>Magnetic Field Lines</b> form unbroken, continuous **closed loops** (reflecting the non-existence of isolated magnetic monopoles, $\\nabla \\cdot \\vec{B} = 0$). Externally, the lines travel from the **North pole to the South pole**; internally, to complete the continuous closed path, they travel from the **South pole to the North pole**. <br>Option 1 is incorrect because electrostatic lines terminate on charges, but magnetic field lines never terminate abruptly—they continue inside the magnet. Option 2 is incorrect because field lines can **never intersect**; an intersection would imply two different directions of the net magnetic force at a single point, which is physically impossible. Option 3 is incorrect because a tangent at any point on a field line gives the vector direction of the **magnetic field force ($\tvec{B}$)** at that point, not scalar potential."
+    "e": "<b>Explanation:</b> Option 0 is correct because <b>Magnetic Field Lines</b> form unbroken, continuous **closed loops** (reflecting the non-existence of isolated magnetic monopoles, $\\nabla \\cdot \\vec{B} = 0$). Externally, the lines travel from the **North pole to the South pole**; internally, to complete the continuous closed path, they travel from the **South pole to the North pole**. <br>Option 1 is incorrect because electrostatic lines terminate on charges, but magnetic field lines never terminate abruptly—they continue inside the magnet. Option 2 is incorrect because field lines can **never intersect**; an intersection would imply two different directions of the net magnetic force at a single point, which is physically impossible. Option 3 is incorrect because a tangent at any point on a field line gives the vector direction of the **magnetic field force ($\\vec{B}$)** at that point, not scalar potential."
   },
   {
     "p_id": "bpsc_phys_m37_02",
@@ -36,7 +36,7 @@
       "When the particle is at rest inside a zero-gravity vacuum chamber."
     ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 describes the condition for **maximum Lorentz magnetic force** ($F_{\\text{max}} = qvB \\sin 90^\\circ = qvB$). Option 1 is correct because the magnetic force on a moving point charge is given by the Lorentz force formula: <b>$$F = q v B \\sin \\theta$$</b> where $\\theta$ is the angle between the velocity vector $\\vec{v}$ and the magnetic field vector $\\vec{B}$. When a charged particle moves **parallel ($\ttheta = 0^\\circ$) or anti-parallel ($\ttheta = 180^\\circ$)** to the magnetic field, $\\sin 0^\\circ = \\sin 180^\\circ = 0$, yielding **strictly ZERO magnetic force ($F = 0$)**. Consequently, the particle continues along a straight path unaffected. Option 2 yields $F = \\frac{qvB}{\\sqrt{2}}$, and Option 3 specifies a stationary particle where velocity itself is zero."
+    "e": "<b>Explanation:</b> Option 0 describes the condition for **maximum Lorentz magnetic force** ($F_{\\text{max}} = qvB \\sin 90^\\circ = qvB$). Option 1 is correct because the magnetic force on a moving point charge is given by the Lorentz force formula: <b>$$F = q v B \\sin \\theta$$</b> where $\\theta$ is the angle between the velocity vector $\\vec{v}$ and the magnetic field vector $\\vec{B}$. When a charged particle moves **parallel ($\t\theta = 0^\\circ$) or anti-parallel ($\t\theta = 180^\\circ$)** to the magnetic field, $\\sin 0^\\circ = \\sin 180^\\circ = 0$, yielding **strictly ZERO magnetic force ($F = 0$)**. Consequently, the particle continues along a straight path unaffected. Option 2 yields $F = \\frac{qvB}{\\sqrt{2}}$, and Option 3 specifies a stationary particle where velocity itself is zero."
   },
   {
     "p_id": "bpsc_phys_m37_04",
@@ -49,7 +49,7 @@
       "Forefinger: Magnetic Field; Middle Finger: Induced Voltage; Thumb: Resistance."
     ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 jumbles the finger assignments. Option 1 is correct because **Fleming's Left-Hand Rule** determines the direction of mechanical force acting on a current-carrying conductor in a magnetic field (used in electric motors): <br>1. **Forefinger:** Points in the direction of the **Magnetic Field ($\tvec{B}$)**. <br>2. **Middle Finger:** Points in the direction of the **Electric Current ($I$)**. <br>3. **Thumb:** Points in the direction of the resulting **Mechanical Force ($\tvec{F}$) / Motion**. <br>(Remember mnemonic: **F**ather [Force=Thumb], **M**other [Magnetic field=Forefinger], **C**hild [Current=Middle finger]). Options 2 and 3 state incorrect parameter mappings."
+    "e": "<b>Explanation:</b> Option 0 jumbles the finger assignments. Option 1 is correct because **Fleming's Left-Hand Rule** determines the direction of mechanical force acting on a current-carrying conductor in a magnetic field (used in electric motors): <br>1. **Forefinger:** Points in the direction of the **Magnetic Field ($\\vec{B}$)**. <br>2. **Middle Finger:** Points in the direction of the **Electric Current ($I$)**. <br>3. **Thumb:** Points in the direction of the resulting **Mechanical Force ($\\vec{F}$) / Motion**. <br>(Remember mnemonic: **F**ather [Force=Thumb], **M**other [Magnetic field=Forefinger], **C**hild [Current=Middle finger]). Options 2 and 3 state incorrect parameter mappings."
   },
   {
     "p_id": "bpsc_phys_m37_05",
@@ -75,7 +75,7 @@
       "Stomach and Spleen"
     ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 lists metabolic and respiratory organs with negligible ionic currents. Option 1 is correct because weak electric currents continuously travel along nerve cells (neurons) in the human body via ionic transport ($\ttext{Na}^+, \ttext{K}^+$ flux). These physiological currents generate extremely weak internal magnetic fields (roughly $10^{-10}$ to $10^{-13} \\text{ Tesla}$). The **Heart** (via cardiac conduction) and the **Brain** (via central neural pathways) are the two primary organs that produce significant, measurable magnetic fields. Detecting these biomagnetic fields forms the foundation of **MRI (Magnetic Resonance Imaging)** for non-invasive organ diagnostics. Options 2 and 3 state organs lacking major macro-electrical conduction."
+    "e": "<b>Explanation:</b> Option 0 lists metabolic and respiratory organs with negligible ionic currents. Option 1 is correct because weak electric currents continuously travel along nerve cells (neurons) in the human body via ionic transport ($\\text{Na}^+, \\text{K}^+$ flux). These physiological currents generate extremely weak internal magnetic fields (roughly $10^{-10}$ to $10^{-13} \\text{ Tesla}$). The **Heart** (via cardiac conduction) and the **Brain** (via central neural pathways) are the two primary organs that produce significant, measurable magnetic fields. Detecting these biomagnetic fields forms the foundation of **MRI (Magnetic Resonance Imaging)** for non-invasive organ diagnostics. Options 2 and 3 state organs lacking major macro-electrical conduction."
   },
   {
     "p_id": "bpsc_phys_m37_07",
@@ -88,12 +88,12 @@
       "Elliptical loops parallel to the conductor wire axis."
     ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 describes a uniform directional field (like inside a solenoid). Option 1 is correct because according to the **Right-Hand Thumb Rule**, if a current-carrying straight conductor is held with the right thumb pointing along the current vector ($I$), the curled fingers encircle the wire in the direction of the magnetic field vector ($\tvec{B}$). This forms a series of **concentric circles** centered on the wire, lying in planes **strictly perpendicular to the conductor**. Option 2 and Option 3 describe non-existent helical or parallel planar fields for straight wires."
+    "e": "<b>Explanation:</b> Option 0 describes a uniform directional field (like inside a solenoid). Option 1 is correct because according to the **Right-Hand Thumb Rule**, if a current-carrying straight conductor is held with the right thumb pointing along the current vector ($I$), the curled fingers encircle the wire in the direction of the magnetic field vector ($\\vec{B}$). This forms a series of **concentric circles** centered on the wire, lying in planes **strictly perpendicular to the conductor**. Option 2 and Option 3 describe non-existent helical or parallel planar fields for straight wires."
   },
   {
     "p_id": "bpsc_phys_m37_08",
-    "qe": "The SI unit of magnetic field intensity is Tesla ($\ttext{T}$), while its CGS unit is Gauss ($\ttext{G}$). What is the precise mathematical equivalence linking $1 \\text{ Tesla}$ to Gauss?",
-    "qh": "चुंबकीय क्षेत्र की तीव्रता की SI इकाई टेस्ला ($\ttext{T}$) है, जबकि इसकी CGS इकाई गॉस ($\ttext{G}$) है। $1 \\text{ टेस्ला}$ को गॉस से जोड़ने वाली सटीक गणितीय तुल्यता क्या है?",
+    "qe": "The SI unit of magnetic field intensity is Tesla ($\\text{T}$), while its CGS unit is Gauss ($\\text{G}$). What is the precise mathematical equivalence linking $1 \\text{ Tesla}$ to Gauss?",
+    "qh": "चुंबकीय क्षेत्र की तीव्रता की SI इकाई टेस्ला ($\\text{T}$) है, जबकि इसकी CGS इकाई गॉस ($\\text{G}$) है। $1 \\text{ टेस्ला}$ को गॉस से जोड़ने वाली सटीक गणितीय तुल्यता क्या है?",
     "o": [
       "$1 \\text{ Tesla} = 10^2 \\text{ Gauss}$",
       "$1 \\text{ Tesla} = 10^4 \\text{ Gauss}$ ($1 \\text{ T} = 10^4 \\text{ G}$)",
@@ -101,7 +101,7 @@
       "$1 \\text{ Tesla} = 10^8 \\text{ Gauss}$"
     ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 uses a factor of 100. Option 1 is correct because magnetic field strength ($\tvec{B}$) in SI units is measured in **Tesla ($\ttext{T}$)** (where $1 \\text{ T} = 1 \\text{ Weber/m}^2 = 1 \\text{ N A}^{-1}\\text{m}^{-1}$), named after Nikola Tesla. In the CGS unit system, magnetic field is measured in **Gauss ($\ttext{G}$)**. The exact conversion factor between these two systems is: <b>$$1 \\text{ Tesla} = 10^4 \\text{ Gauss} \\quad \\text{or} \\quad 1 \\text{ Gauss} = 10^{-4} \\text{ Tesla}$$</b> (For perspective, Earth's surface magnetic field is approximately $0.5 \\text{ Gauss}$ or $5 \\times 10^{-5} \\text{ Tesla}$). Options 2 and 3 state incorrect exponent orders."
+    "e": "<b>Explanation:</b> Option 0 uses a factor of 100. Option 1 is correct because magnetic field strength ($\\vec{B}$) in SI units is measured in **Tesla ($\\text{T}$)** (where $1 \\text{ T} = 1 \\text{ Weber/m}^2 = 1 \\text{ N A}^{-1}\\text{m}^{-1}$), named after Nikola Tesla. In the CGS unit system, magnetic field is measured in **Gauss ($\\text{G}$)**. The exact conversion factor between these two systems is: <b>$$1 \\text{ Tesla} = 10^4 \\text{ Gauss} \\quad \\text{or} \\quad 1 \\text{ Gauss} = 10^{-4} \\text{ Tesla}$$</b> (For perspective, Earth's surface magnetic field is approximately $0.5 \\text{ Gauss}$ or $5 \\times 10^{-5} \\text{ Tesla}$). Options 2 and 3 state incorrect exponent orders."
   },
   {
     "p_id": "bpsc_phys_m37_09",
@@ -129,7 +129,6 @@
     "a": 0,
     "e": "<b>Explanation:</b> Option 1 completely swaps ferromagnetic metals with non-magnetic materials. Option 0 is correct because: <br>1. **Magnetic Substances:** Materials that are strongly attracted by magnets and can be magnetized (e.g., **Iron, Nickel, Cobalt**, and ferromagnetic alloys like steel). <br>2. **Non-magnetic Substances:** Materials that experience zero noticeable attraction toward magnets under standard conditions (e.g., **Wood, Paper, Plastic, Glass, Aluminium**). Options 2 and 3 state jumbled or inverted material classifications."
   },
-  
   {
     "p_id": "bpsc_phys_m38_01",
     "qe": "Evaluating the structural properties of magnets reveals fundamental laws governing magnetic poles. What occurs when a bar magnet is broken cleanly in half across its middle?",
@@ -141,12 +140,12 @@
       "One piece retains pure North magnetism while the other piece becomes unmagnetized."
     ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 is a classic conceptual trap that claims the existence of isolated monopoles. Option 1 is correct because <b>Magnetic Poles Always Exist in Pairs</b> ($\tnabla \\cdot \\vec{B} = 0$). Magnetic dipoles originate from microscopic atomic electron spin alignment inside domain structures. Breaking a bar magnet in half divides the domain array into two separate segments, creating new opposite magnetic poles at the fractured edges. Thus, **two complete smaller magnets are created, each having a North pole and a South pole**. Options 2 and 3 state physically impossible monopole or total demagnetization scenarios."
+    "e": "<b>Explanation:</b> Option 0 is a classic conceptual trap that claims the existence of isolated monopoles. Option 1 is correct because <b>Magnetic Poles Always Exist in Pairs</b> ($\\nabla \\cdot \\vec{B} = 0$). Magnetic dipoles originate from microscopic atomic electron spin alignment inside domain structures. Breaking a bar magnet in half divides the domain array into two separate segments, creating new opposite magnetic poles at the fractured edges. Thus, **two complete smaller magnets are created, each having a North pole and a South pole**. Options 2 and 3 state physically impossible monopole or total demagnetization scenarios."
   },
   {
     "p_id": "bpsc_phys_m38_02",
-    "qe": "Earth's geomagnetic field is defined by three fundamental orientation elements: Angle of Declination ($\ttheta$), Angle of Dip ($\tdelta$), and Horizontal Component ($B_H$). What is the value of the Angle of Dip ($\tdelta$) at Earth's magnetic poles and at Earth's magnetic equator?",
-    "qh": "पृथ्वी का भू-चुंबकीय क्षेत्र तीन मौलिक ओरिएंटेशन तत्वों द्वारा परिभाषित किया जाता है: दिपात कोण (Angle of Declination - $\ttheta$), नमन कोण (Angle of Dip - $\tdelta$), और क्षैतिज घटक ($B_H$)। पृथ्वी के चुंबकीय ध्रुवों और चुंबकीय भूमध्य रेखा (magnetic equator) पर नमन कोण ($\tdelta$) का मान क्या है?",
+    "qe": "Earth's geomagnetic field is defined by three fundamental orientation elements: Angle of Declination ($\\theta$), Angle of Dip ($\\delta$), and Horizontal Component ($B_H$). What is the value of the Angle of Dip ($\\delta$) at Earth's magnetic poles and at Earth's magnetic equator?",
+    "qh": "पृथ्वी का भू-चुंबकीय क्षेत्र तीन मौलिक ओरिएंटेशन तत्वों द्वारा परिभाषित किया जाता है: दिपात कोण (Angle of Declination - $\\theta$), नमन कोण (Angle of Dip - $\\delta$), और क्षैतिज घटक ($B_H$)। पृथ्वी के चुंबकीय ध्रुवों और चुंबकीय भूमध्य रेखा (magnetic equator) पर नमन कोण ($\\delta$) का मान क्या है?",
     "o": [
       "Dip is $0^\\circ$ at the magnetic poles and $90^\\circ$ at the magnetic equator.",
       "Dip is $90^\\circ$ at the magnetic poles and $0^\\circ$ at the magnetic equator.",
@@ -154,7 +153,7 @@
       "Dip is $180^\\circ$ at the poles and $90^\\circ$ at the equator."
     ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 completely swaps the dip values between poles and equator. Option 1 is correct because the **Angle of Dip ($\\tdelta$)** is defined as the angle that Earth's total magnetic field vector ($\\vec{B}$) makes with the horizontal surface plane: <br>1. **At the Magnetic Poles:** Earth's magnetic field lines emerge or enter vertically ($\\vec{B} = B_V$), making the total field vector strictly perpendicular to the horizontal surface. Thus, **Angle of Dip $\\delta = 90^\\circ$ at the poles**. <br>2. **At the Magnetic Equator:** Earth's magnetic field lines run parallel to the horizontal ground ($B_V = 0 \\implies B = B_H$). Thus, **Angle of Dip $\\delta = 0^\\circ$ at the equator**. Options 2 and 3 state incorrect trigonometric angles."
+    "e": "<b>Explanation:</b> Option 0 completely swaps the dip values between poles and equator. Option 1 is correct because the **Angle of Dip ($\\delta$)** is defined as the angle that Earth's total magnetic field vector ($\\vec{B}$) makes with the horizontal surface plane: <br>1. **At the Magnetic Poles:** Earth's magnetic field lines emerge or enter vertically ($\\vec{B} = B_V$), making the total field vector strictly perpendicular to the horizontal surface. Thus, **Angle of Dip $\\delta = 90^\\circ$ at the poles**. <br>2. **At the Magnetic Equator:** Earth's magnetic field lines run parallel to the horizontal ground ($B_V = 0 \\implies B = B_H$). Thus, **Angle of Dip $\\delta = 0^\\circ$ at the equator**. Options 2 and 3 state incorrect trigonometric angles."
   },
   {
     "p_id": "bpsc_phys_m38_03",
@@ -167,20 +166,20 @@
       "The point where a compass needle rotates continuously at supersonic speeds."
     ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 describes field amplification instead of cancellation. Option 1 is correct because a **Neutral Point** is a spatial coordinate where the magnetic field produced by a bar magnet is **equal in magnitude and opposite in vector direction to the horizontal component of Earth's magnetic field ($B_H$)**. Vector summation yields a **net magnetic field of strictly ZERO ($\tvec{B}_{\ttext{net}} = \tvec{B}_{\ttext{magnet}} + \tvec{B}_H = 0$)**. A magnetic compass placed at a neutral point experiences no net aligning torque and can come to rest in any arbitrary direction. Option 2 confuses magnetic fields with AC voltage, and Option 3 states an impossible kinetic behavior."
+    "e": "<b>Explanation:</b> Option 0 describes field amplification instead of cancellation. Option 1 is correct because a **Neutral Point** is a spatial coordinate where the magnetic field produced by a bar magnet is **equal in magnitude and opposite in vector direction to the horizontal component of Earth's magnetic field ($B_H$)**. Vector summation yields a **net magnetic field of strictly ZERO ($\\vec{B}_{\\text{net}} = \\vec{B}_{\\text{magnet}} + \\vec{B}_H = 0$)**. A magnetic compass placed at a neutral point experiences no net aligning torque and can come to rest in any arbitrary direction. Option 2 confuses magnetic fields with AC voltage, and Option 3 states an impossible kinetic behavior."
   },
   {
     "p_id": "bpsc_phys_m38_04",
-    "qe": "Magnetic materials respond differently when placed inside an external magnetic field. Which choice accurately contrasts Diamagnetic Substances against Ferromagnetic Substances based on magnetic susceptibility ($\tchi$), permeability ($\tmu_r$), and temperature response?",
-    "qh": "बाहरी चुंबकीय क्षेत्र में रखे जाने पर चुंबकीय पदार्थ अलग तरह से प्रतिक्रिया करते हैं। कौन सा विकल्प चुंबकीय सुग्राह्यता (susceptibility - $\tchi$), पारगम्यता (permeability - $\tmu_r$), और तापमान प्रतिक्रिया के आधार पर प्रतिचुंबकीय पदार्थों (Diamagnetic) की लौह-चुंबकीय पदार्थों (Ferromagnetic) से सटीक तुलना करता है?",
+    "qe": "Magnetic materials respond differently when placed inside an external magnetic field. Which choice accurately contrasts Diamagnetic Substances against Ferromagnetic Substances based on magnetic susceptibility ($\\chi$), permeability ($\\mu_r$), and temperature response?",
+    "qh": "बाहरी चुंबकीय क्षेत्र में रखे जाने पर चुंबकीय पदार्थ अलग तरह से प्रतिक्रिया करते हैं। कौन सा विकल्प चुंबकीय सुग्राह्यता (susceptibility - $\\chi$), पारगम्यता (permeability - $\\mu_r$), और तापमान प्रतिक्रिया के आधार पर प्रतिचुंबकीय पदार्थों (Diamagnetic) की लौह-चुंबकीय पदार्थों (Ferromagnetic) से सटीक तुलना करता है?",
     "o": [
-      "Diamagnetic: Susceptibility ($\tchi$) is large and positive, depends on temperature; Ferromagnetic: Susceptibility is negative, independent of temperature.",
-      "Diamagnetic: Susceptibility ($\tchi$) is small and negative, permeability $\tmu_r < 1$, independent of temperature; Ferromagnetic: Susceptibility is large and positive, permeability $\tmu_r \\gg 1$, magnetism decreases with temperature.",
+      "Diamagnetic: Susceptibility ($\\chi$) is large and positive, depends on temperature; Ferromagnetic: Susceptibility is negative, independent of temperature.",
+      "Diamagnetic: Susceptibility ($\\chi$) is small and negative, permeability $\\mu_r < 1$, independent of temperature; Ferromagnetic: Susceptibility is large and positive, permeability $\\mu_r \\gg 1$, magnetism decreases with temperature.",
       "Diamagnetic: Strongly attracted to magnetic fields; Ferromagnetic: Feebly repelled by magnetic fields.",
       "Both Diamagnetic and Ferromagnetic materials become superconducting at Curie temperature."
     ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 completely swaps the magnetic properties of diamagnetic and ferromagnetic substances. Option 1 is correct because: <br>1. **Diamagnetic Substances (e.g., Gold, Copper, Water, Bismuth):** Possess **small and negative magnetic susceptibility ($\tchi < 0$)** and relative permeability slightly less than one ($\tmu_r < 1$). They are feebly repelled by magnets (move from stronger to weaker field), and their diamagnetism is **strictly independent of temperature**. <br>2. **Ferromagnetic Substances (e.g., Iron, Cobalt, Nickel):** Possess **large and positive susceptibility ($\tchi \\gg 0$)** and relative permeability vastly greater than one ($\tmu_r \\gg 1$). They are strongly attracted to magnets, and their magnetism **decreases with rising temperature**. Option 2 reverses attraction/repulsion rules, and Option 3 misattributes superconductivity to Curie transitions."
+    "e": "<b>Explanation:</b> Option 0 completely swaps the magnetic properties of diamagnetic and ferromagnetic substances. Option 1 is correct because: <br>1. **Diamagnetic Substances (e.g., Gold, Copper, Water, Bismuth):** Possess **small and negative magnetic susceptibility ($\\chi < 0$)** and relative permeability slightly less than one ($\\mu_r < 1$). They are feebly repelled by magnets (move from stronger to weaker field), and their diamagnetism is **strictly independent of temperature**. <br>2. **Ferromagnetic Substances (e.g., Iron, Cobalt, Nickel):** Possess **large and positive susceptibility ($\\chi \\gg 0$)** and relative permeability vastly greater than one ($\\mu_r \\gg 1$). They are strongly attracted to magnets, and their magnetism **decreases with rising temperature**. Option 2 reverses attraction/repulsion rules, and Option 3 misattributes superconductivity to Curie transitions."
   },
   {
     "p_id": "bpsc_phys_m38_05",
@@ -193,7 +192,7 @@
       "Absolute Zero; transforms into a Permanent Magnet."
     ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 misidentifies the phase transition product as diamagnetic. Option 1 is correct because ferromagnetic materials owe their strong alignment to microscopic domain coupling. Thermal agitation disrupts this domain alignment. At a specific critical temperature known as the **Curie Temperature ($T_C$)** (e.g., $\tapprox 770^\\circ\\text{C}$ for iron), domain coupling breaks down completely, and the **ferromagnetic substance transforms into a Paramagnetic substance**. Above $T_C$, its magnetic susceptibility follows Curie's Law (inversely proportional to absolute temperature, $\tchi \\propto \\frac{1}{T - T_C}$). Options 2 and 3 list incorrect thermodynamic terms."
+    "e": "<b>Explanation:</b> Option 0 misidentifies the phase transition product as diamagnetic. Option 1 is correct because ferromagnetic materials owe their strong alignment to microscopic domain coupling. Thermal agitation disrupts this domain alignment. At a specific critical temperature known as the **Curie Temperature ($T_C$)** (e.g., $\\approx 770^\\circ\\text{C}$ for iron), domain coupling breaks down completely, and the **ferromagnetic substance transforms into a Paramagnetic substance**. Above $T_C$, its magnetic susceptibility follows Curie's Law (inversely proportional to absolute temperature, $\\chi \\propto \\frac{1}{T - T_C}$). Options 2 and 3 list incorrect thermodynamic terms."
   },
   {
     "p_id": "bpsc_phys_m38_06",
@@ -236,16 +235,16 @@
   },
   {
     "p_id": "bpsc_phys_m38_09",
-    "qe": "Magnetic Flux ($\tPhi$) quantifies the total number of magnetic lines of force crossing a given surface area $A$ in a magnetic field $B$. What is the mathematical formula for magnetic flux, and under what surface orientation is magnetic flux strictly ZERO?",
-    "qh": "चुंबकीय फ्लक्स ($\tPhi$) एक चुंबकीय क्षेत्र $B$ में दिए गए सतह क्षेत्र $A$ को पार करने वाली चुंबकीय बल रेखाओं की कुल संख्या को परिमाणित करता है। चुंबकीय फ्लक्स का गणितीय सूत्र क्या है, और किस सतह ओरिएंटेशन के तहत चुंबकीय फ्लक्स सख्ती से शून्य होता है?",
+    "qe": "Magnetic Flux ($\\Phi$) quantifies the total number of magnetic lines of force crossing a given surface area $A$ in a magnetic field $B$. What is the mathematical formula for magnetic flux, and under what surface orientation is magnetic flux strictly ZERO?",
+    "qh": "चुंबकीय फ्लक्स ($\\Phi$) एक चुंबकीय क्षेत्र $B$ में दिए गए सतह क्षेत्र $A$ को पार करने वाली चुंबकीय बल रेखाओं की कुल संख्या को परिमाणित करता है। चुंबकीय फ्लक्स का गणितीय सूत्र क्या है, और किस सतह ओरिएंटेशन के तहत चुंबकीय फ्लक्स सख्ती से शून्य होता है?",
     "o": [
       "$\\Phi = B A \\sin \\theta$; flux is zero when surface plane is perpendicular to field lines.",
-      "$\\Phi = B A \\cos \\theta$; flux is strictly ZERO when the surface plane lies parallel to magnetic field lines (i.e., area vector normal is perpendicular to field lines, $\\theta = 90^\\circ$).",
+      "$\\Phi = B A \\cos \\theta$; flux is strictly ZERO when the surface plane lies parallel to magnetic field lines (i.e., area vector normal is perpendicular to field lines, \\theta = 90^\\circ).",
       "$\\Phi = \\frac{B}{A}$; flux is zero when magnetic field strength equals 1 Tesla.",
       "$\\Phi = B A \\tan \\theta$; flux is zero when area vector is parallel to field lines."
     ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 uses $\\sin \\theta$ with an inverted angular convention. Option 1 is correct because **Magnetic Flux ($\tPhi$)** passing through an area element $A$ in a uniform magnetic field $B$ is mathematically defined as the dot product of vector field $\\vec{B}$ and normal area vector $\\vec{A}$: <b>$$\\Phi = \\vec{B} \\cdot \\vec{A} = B A \\cos \\theta$$</b> where $\\theta$ is the angle between the magnetic field direction and the **normal to the surface area vector**. When the surface plane lies **parallel to the magnetic field lines**, field lines skim across the surface without penetrating it ($\ttheta = 90^\\circ$ relative to normal vector $\\vec{A}$). Since $\\cos 90^\\circ = 0$, **Magnetic Flux $\\Phi = 0$**. Options 2 and 3 state incorrect quotient or tangent formulas."
+    "e": "<b>Explanation:</b> Option 0 uses $\\sin \\theta$ with an inverted angular convention. Option 1 is correct because **Magnetic Flux ($\\Phi$)** passing through an area element $A$ in a uniform magnetic field $B$ is mathematically defined as the dot product of vector field $\\vec{B}$ and normal area vector $\\vec{A}$: <b>$$\\Phi = \\vec{B} \\cdot \\vec{A} = B A \\cos \\theta$$</b> where $\\theta$ is the angle between the magnetic field direction and the **normal to the surface area vector**. When the surface plane lies **parallel to the magnetic field lines**, field lines skim across the surface without penetrating it ($\\theta = 90^\\circ$ relative to normal vector $\\vec{A}$). Since $\\cos 90^\\circ = 0$, **Magnetic Flux $\\Phi = 0$**. Options 2 and 3 state incorrect quotient or tangent formulas."
   },
   {
     "p_id": "bpsc_phys_m38_10",
@@ -260,7 +259,6 @@
     "a": 1,
     "e": "<b>Explanation:</b> Option 0 misattributes tectonic earthquakes to solar wind. Option 1 is correct because when high-energy charged particle streams emitted during solar flares (**Solar Wind**) strike Earth's upper atmosphere, they induce sudden, violent temporal and spatial fluctuations in Earth's magnetic field lines. This geophysical phenomenon is known as a **Magnetic Storm**. Magnetic storms induce unwanted surge currents in long power transmission grids, disrupt satellite navigation (GPS), and interfere with high-frequency radio communications. Option 2 describes optical refraction, and Option 3 states an impossible orbital slowdown."
   },
-  
   {
     "p_id": "bpsc_phys_m39_01",
     "qe": "Evaluating the laws of Electromagnetic Induction reveals the exact relationship between magnetic flux changes and induced electromotive force (emf). According to Faraday's and Lenz's laws, what determines the magnitude and direction of the induced emf ($e$) in a closed circuit?",
@@ -384,11 +382,11 @@
     "qh": "ट्रांसफॉर्मर वितरण ग्रिड और औद्योगिक उपकरणों में AC वोल्टेज स्तरों को बदलते हैं। कौन सा मौलिक परिचालन नियम ट्रांसफॉर्मर क्रिया को नियंत्रित करता है, और एक ट्रांसफॉर्मर दिष्ट धारा (DC) पर काम क्यों नहीं कर सकता है?",
     "o": [
       "Transformers operate via electrostatic induction; DC current causes soft iron core melting.",
-      "Transformers operate on Mutual Induction, which requires a continuously changing magnetic flux ($\tfrac{d\\Phi}{dt} \\neq 0$) provided strictly by AC; steady DC produces constant flux ($\tfrac{d\\Phi}{dt} = 0$), inducing zero secondary voltage.",
+      "Transformers operate on Mutual Induction, which requires a continuously changing magnetic flux ($\\frac{d\\Phi}{dt} \\neq 0$) provided strictly by AC; steady DC produces constant flux ($\\frac{d\\Phi}{dt} = 0$), inducing zero secondary voltage.",
       "Transformers amplify total electric power; DC voltage lacks electron mass.",
       "Step-up transformers require high frequency radio waves not present in DC."
     ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 misidentifies transformer physics as electrostatic. Option 1 is correct because: <br>1. **Mutual Induction Principle:** A transformer consists of primary and secondary coils wound on a laminated soft iron core. It operates strictly via **Mutual Induction** [inducing emf in a secondary coil due to rate of change of magnetic flux linked from primary coil]. <br>2. **DC Incompatibility:** Alternating Current (AC) constantly varies in magnitude and direction, providing the necessary changing magnetic flux ($\frac{dPhi}{dt} \neq 0$). Direct Current (DC) delivers a constant, steady current, creating a static magnetic field ($\frac{dPhi}{dt} = 0$). According to Faraday's law ($e = -N \frac{dPhi}{dt}$), **steady DC induces strictly ZERO voltage in the secondary coil**. Furthermore, transformers convert voltage/current while conserving power—they **do not amplify power**. Options 2 and 3 state false power amplification or radio wave claims."
+    "e": "<b>Explanation:</b> Option 0 misidentifies transformer physics as electrostatic. Option 1 is correct because: <br>1. **Mutual Induction Principle:** A transformer consists of primary and secondary coils wound on a laminated soft iron core. It operates strictly via **Mutual Induction** [inducing emf in a secondary coil due to rate of change of magnetic flux linked from primary coil]. <br>2. **DC Incompatibility:** Alternating Current (AC) constantly varies in magnitude and direction, providing the necessary changing magnetic flux ($\\frac{d\\Phi}{dt} \\neq 0$). Direct Current (DC) delivers a constant, steady current, creating a static magnetic field ($\\frac{d\\Phi}{dt} = 0$). According to Faraday's law ($e = -N \\frac{d\\Phi}{dt}$), **steady DC induces strictly ZERO voltage in the secondary coil**. Furthermore, transformers convert voltage/current while conserving power—they **do not amplify power**. Options 2 and 3 state false power amplification or radio wave claims."
   }
 ]
