@@ -10,7 +10,7 @@
       "In a closed system, charge conservation permits the net creation of a single isolated positive charge during electron transfer."
     ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 incorrectly applies relativistic mass dilation to charge magnitude. Option 1 is correct because <b>Electric Charge Invariance</b> is a fundamental law: unlike mass ($m = \\frac{m_0}{\\sqrt{1 - v^2/c^2}}$), the magnitude of an electric charge ($q$) is strictly independent of its velocity or reference frame ($q_{\\text{rest}} = q_{\\text{motion}}$). Option 2 violates charge quantization ($q = \\pm ne$, where $n$ must be an integer $1, 2, 3\\dots$). Option 3 violates the law of conservation of charge, which dictates that net charge cannot be created or destroyed in isolation, only transferred via electrons."
+    "e": "<b>Explanation:</b> Option 0 incorrectly applies relativistic mass dilation to charge magnitude. Option 1 is correct because <b>Electric Charge Invariance</b> is a fundamental law: unlike mass ($m = \\frac{m_0}{\\sqrt{1 - v^2/c^2}}$), the magnitude of an electric charge ($q$) is strictly independent of its velocity or reference frame ($q_{rest} = q_{motion}$). Option 2 violates charge quantization ($q = \\pm ne$, where $n$ must be an integer $1, 2, 3\\dots$). Option 3 violates the law of conservation of charge, which dictates that net charge cannot be created or destroyed in isolation, only transferred via electrons."
   },
   {
     "p_id": "bpsc_phys_m34_02",
@@ -23,7 +23,7 @@
       "Air inside the car undergoes breakdown polarization, absorbing electrical discharges completely."
     ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 is a common misconception; wet rubber tires undergo dielectric breakdown at millions of volts and do not act as the primary safety mechanism. Option 1 is correct because under electrostatic equilibrium, charges transferred to a metallic conductor reside entirely on its outer surface. This makes the <b>Electric Field Inside a Hollow Conductor Strictly Zero ($E_{\\text{inside}} = 0$)</b>, a phenomenon known as **Electrostatic Shielding** [the complete protection of an interior cavity from external electric fields using a hollow conducting enclosure or Faraday cage]. Option 2 incorrectly asserts that internal potential increases to cancel lines (potential is constant, not zero or canceling). Option 3 describes air breakdown which causes sparks rather than shielding."
+    "e": "<b>Explanation:</b> Option 0 is a common misconception; wet rubber tires undergo dielectric breakdown at millions of volts and do not act as the primary safety mechanism. Option 1 is correct because under electrostatic equilibrium, charges transferred to a metallic conductor reside entirely on its outer surface. This makes the <b>Electric Field Inside a Hollow Conductor Strictly Zero ($E_{inside} = 0$)</b>, a phenomenon known as **Electrostatic Shielding** [the complete protection of an interior cavity from external electric fields using a hollow conducting enclosure or Faraday cage]. Option 2 incorrectly asserts that internal potential increases to cancel lines (potential is constant, not zero or canceling). Option 3 describes air breakdown which causes sparks rather than shielding."
   },
   {
     "p_id": "bpsc_phys_m34_03",
@@ -49,7 +49,7 @@
       "$\\Phi_E = 0$"
     ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 gives the total flux passing through the entire six-faced closed cubic surface ($\\Phi_{\\text{total}} = \\frac{q}{\\varepsilon_0}$). Option 1 is correct because Gauss's Law states that the total electric flux linked with a closed surface enclosing net charge $q$ is $\\Phi_E = \\frac{q}{\\varepsilon_0}$. By spatial symmetry, a cube possesses 6 identical square faces surrounding its geometric center equally. Therefore, the total flux divides equally across all 6 faces, making the flux through one single face: <b>$$\\Phi_{\\text{face}} = \\frac{q}{6\\varepsilon_0}$$</b> Option 2 gives the flux through two faces, and Option 3 applies only if the enclosed net charge is zero."
+    "e": "<b>Explanation:</b> Option 0 gives the total flux passing through the entire six-faced closed cubic surface ($\\Phi_{total} = \\frac{q}{\\varepsilon_0}$). Option 1 is correct because Gauss's Law states that the total electric flux linked with a closed surface enclosing net charge $q$ is $\\Phi_E = \\frac{q}{\\varepsilon_0}$. By spatial symmetry, a cube possesses 6 identical square faces surrounding its geometric center equally. Therefore, the total flux divides equally across all 6 faces, making the flux through one single face: <b>$$\\Phi_{face} = \\frac{q}{6\\varepsilon_0}$$</b> Option 2 gives the flux through two faces, and Option 3 applies only if the enclosed net charge is zero."
   },
   {
     "p_id": "bpsc_phys_m34_05",
@@ -62,7 +62,7 @@
       "$E = \\frac{1}{4\\pi\\varepsilon_0} \\frac{q}{R}$ and $V = \\frac{1}{4\\pi\\varepsilon_0} \\frac{q}{r}$"
     ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 incorrectly sets potential to zero inside. Option 1 is correct because: <br>1. **Electric Field ($E$):** According to Gauss's Law, no charge is enclosed within any internal Gaussian surface ($q_{\\text{enclosed}} = 0$ for $r < R$), so <b>$E_{\\text{inside}} = 0$</b>. <br>2. **Electric Potential ($V$):** The relationship between field and potential gradient is $E = -\\frac{dV}{dr}$. Since $E = 0$ everywhere inside the shell, $\\frac{dV}{dr} = 0$, which proves that <b>Electric Potential ($V$) is strictly constant throughout the interior volume and equal to its value at the outer surface</b>: <b>$$V_{\\text{inside}} = V_{\\text{surface}} = \\frac{1}{4\\pi\\varepsilon_0} \\frac{q}{R}$$</b> Options 2 and 3 state false internal field or potential variations."
+    "e": "<b>Explanation:</b> Option 0 incorrectly sets potential to zero inside. Option 1 is correct because: <br>1. **Electric Field ($E$):** According to Gauss's Law, no charge is enclosed within any internal Gaussian surface ($q_{enclosed} = 0$ for $r < R$), so <b>$E_{inside} = 0$</b>. <br>2. **Electric Potential ($V$):** The relationship between field and potential gradient is $E = -\\frac{dV}{dr}$. Since $E = 0$ everywhere inside the shell, $\\frac{dV}{dr} = 0$, which proves that <b>Electric Potential ($V$) is strictly constant throughout the interior volume and equal to its value at the outer surface</b>: <b>$$V_{inside} = V_{surface} = \\frac{1}{4\\pi\\varepsilon_0} \\frac{q}{R}$$</b> Options 2 and 3 state false internal field or potential variations."
   },
   {
     "p_id": "bpsc_phys_m34_06",
@@ -114,7 +114,7 @@
       "Non-polar dielectrics conduct electric current easily, whereas polar dielectrics behave as super-conductors."
     ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 completely swaps polar and non-polar molecular examples. Option 1 is correct because: <br>1. **Polar Dielectrics:** Molecules like $\\text{H}_2\\text{O}$, $\\text{NH}_3$, and $\\text{CO}_2$ have asymmetric structures where the centers of positive and negative charges do not coincide naturally, giving each molecule a **permanent electric dipole moment**. <br>2. **Non-polar Dielectrics:** Symmetric molecules like $\\text{N}_2$, $\\text{O}_2$, $\\text{H}_2$, and $\\text{CH}_4$ have coinciding centers of positive and negative charges, resulting in **zero permanent electric dipole moment** under normal zero-field conditions. Option 2 ignores molecular symmetry, and Option 3 falsely claims electrical conduction."
+    "e": "<b>Explanation:</b> Option 0 completely swaps polar and non-polar molecular examples. Option 1 is correct because: <br>1. **Polar Dielectrics:** Molecules like $H_2O$, $NH_3$, and $CO_2$ have asymmetric structures where the centers of positive and negative charges do not coincide naturally, giving each molecule a **permanent electric dipole moment**. <br>2. **Non-polar Dielectrics:** Symmetric molecules like $N_2$, $O_2$, $H_2$, and $CH_4$ have coinciding centers of positive and negative charges, resulting in **zero permanent electric dipole moment** under normal zero-field conditions. Option 2 ignores molecular symmetry, and Option 3 falsely claims electrical conduction."
   },
   {
     "p_id": "bpsc_phys_m34_10",
@@ -130,18 +130,18 @@
     "e": "<b>Explanation:</b> Option 0 reverses charge polarities between toner and drum. Option 1 is correct because xerography (electrostatic copying) operates via electrostatic attraction: <br>1. Black toner powder particles acquire a **negative charge** and adhere to small carrier beads via electrostatic forces. <br>2. An optical system projects light from the original document onto a photosensitive rotating drum, creating a **positively charged latent image** corresponding to text/dark areas. <br>3. As the drum rotates, its positive image regions exert stronger electrostatic attraction, pulling the **negatively charged toner particles away from the carrier beads** onto the drum surface, which is then heat-fused onto paper. Options 2 and 3 describe false thermal fission or AC melting mechanisms."
   },
   {
-  "p_id": "bpsc_phys_m34_11",
-  "qe": "Dielectric strength defines the operational limits of insulating materials subjected to strong electric fields. What is the approximate dielectric strength threshold of air, and what happens when an electric field exceeds this limit?",
-  "qh": "परावैद्युत सामर्थ्य (Dielectric strength) मजबूत विद्युत क्षेत्रों के अधीन इन्सुलेट सामग्री की परिचालन सीमाओं को परिभाषित करती है। हवा की अनुमानित परावैद्युत सामर्थ्य सीमा क्या है, और जब एक विद्युत क्षेत्र इस सीमा से अधिक हो जाता है तो क्या होता है?",
-  "o": [
-    "Dielectric strength of air is $3 \\times 10^6$ V/m; exceeding it causes ionization breakdown, turning air into a conductor (causing electric sparks).",
-    "Dielectric strength of air is $100$ V/m; exceeding it converts air into pure ozone gas without sparking.",
-    "Dielectric strength of air is infinite; air never undergoes electrical breakdown.",
-    "Dielectric strength of air is $3 \\times 10^8$ V/m; exceeding it converts sound waves into light waves."
-  ],
-  "a": 0,
-  "e": "<b>Explanation:</b> Option 1 uses an absurdly low breakdown voltage ($100$ V/m). Option 0 is correct because **Dielectric Strength** is the maximum electric field intensity an insulating medium can withstand without losing its insulating properties. For dry air at atmospheric pressure, the threshold is approximately **$3 \\times 10^6$ V/m (or $3$ kV/mm)**. If the localized electric field exceeds $3 \\times 10^6$ V/m, intense electrostatic force strips outer electrons from air molecules (**ionization breakdown**), converting insulating air into a conducting plasma channel that manifests as blue electric sparks or lightning bolts. Option 2 claims infinite strength, and Option 3 uses the speed of light value."
-},
+    "p_id": "bpsc_phys_m34_11",
+    "qe": "Dielectric strength defines the operational limits of insulating materials subjected to strong electric fields. What is the approximate dielectric strength threshold of air, and what happens when an electric field exceeds this limit?",
+    "qh": "परावैद्युत सामर्थ्य (Dielectric strength) मजबूत विद्युत क्षेत्रों के अधीन इन्सुलेट सामग्री की परिचालन सीमाओं को परिभाषित करती है। हवा की अनुमानित परावैद्युत सामर्थ्य सीमा क्या है, और जब एक विद्युत क्षेत्र इस सीमा से अधिक हो जाता है तो क्या होता है?",
+    "o": [
+      "Dielectric strength of air is $3 \\times 10^6$ V/m; exceeding it causes ionization breakdown, turning air into a conductor (causing electric sparks).",
+      "Dielectric strength of air is $100$ V/m; exceeding it converts air into pure ozone gas without sparking.",
+      "Dielectric strength of air is infinite; air never undergoes electrical breakdown.",
+      "Dielectric strength of air is $3 \\times 10^8$ V/m; exceeding it converts sound waves into light waves."
+    ],
+    "a": 0,
+    "e": "<b>Explanation:</b> Option 1 uses an absurdly low breakdown voltage ($100$ V/m). Option 0 is correct because **Dielectric Strength** is the maximum electric field intensity an insulating medium can withstand without losing its insulating properties. For dry air at atmospheric pressure, the threshold is approximately **$3 \\times 10^6$ V/m (or $3$ kV/mm)**. If the localized electric field exceeds $3 \\times 10^6$ V/m, intense electrostatic force strips outer electrons from air molecules (**ionization breakdown**), converting insulating air into a conducting plasma channel that manifests as blue electric sparks or lightning bolts. Option 2 claims infinite strength, and Option 3 uses the speed of light value."
+  },
   {
     "p_id": "bpsc_phys_m34_12",
     "qe": "An electric dipole consists of two equal and opposite point charges ($-q$ and $+q$) separated by a small distance $2a$. What is the electric flux passing through a closed Gaussian surface that completely encloses this electric dipole?",
@@ -296,7 +296,7 @@
       "Resistance is halved ($\\frac{R}{2}$); Resistivity decreases by a factor of 4."
     ],
     "a": 0,
-    "e": "<b>Explanation:</b> Option 1 assumes area remains constant when stretched (violating mass/volume conservation). Option 0 is correct because: <br>1. **Resistivity ($\\rho$):** Resistivity is an **intrinsic material property** that depends solely on the material's nature and temperature; it is completely independent of wire shape, length, or cross-sectional area. Thus, **$\\rho$ remains unchanged**. <br>2. **Resistance ($R$):** The volume of the wire remains constant ($V = A \\cdot l = \\text{constant}$). When length is stretched to $l' = 2l$, cross-sectional area must halve to $A' = \\frac{A}{2}$. Substituting into $R' = \\rho \\frac{l'}{A'}$ gives: <b>$$R' = \\rho \\frac{2l}{A/2} = 4 \\left(\\rho \\frac{l}{A}\\right) = 4R$$</b> Stretching a wire to $n$ times its length increases its resistance by $n^2$ times ($2^2 = 4$). Options 2 and 3 state incorrect algebraic or material scaling behaviors."
+    "e": "<b>Explanation:</b> Option 1 assumes area remains constant when stretched (violating mass/volume conservation). Option 0 is correct because: <br>1. **Resistivity ($\\rho$):** Resistivity is an **intrinsic material property** that depends solely on the material's nature and temperature; it is completely independent of wire shape, length, or cross-sectional area. Thus, **$\\rho$ remains unchanged**. <br>2. **Resistance ($R$):** The volume of the wire remains constant ($V = A \\cdot l = constant$). When length is stretched to $l' = 2l$, cross-sectional area must halve to $A' = \\frac{A}{2}$. Substituting into $R' = \\rho \\frac{l'}{A'}$ gives: <b>$$R' = \\rho \\frac{2l}{A/2} = 4 \\left(\\rho \\frac{l}{A}\\right) = 4R$$</b> Stretching a wire to $n$ times its length increases its resistance by $n^2$ times ($2^2 = 4$). Options 2 and 3 state incorrect algebraic or material scaling behaviors."
   },
   {
     "p_id": "bpsc_phys_m35_04",
@@ -306,7 +306,7 @@
       "For semiconductors, resistance increases with temperature; for pure metals, resistance decreases with temperature.",
       "For pure metals, resistance increases with temperature; for alloys, the increase is very small; for semiconductors, resistance decreases (conductivity increases) as temperature rises.",
       "Temperature changes have zero effect on the resistivity of pure metals and semiconductors.",
-      "For alloys, resistance drops to zero at $100°\\text{C}$."
+      "For alloys, resistance drops to zero at $100°C$."
     ],
     "a": 1,
     "e": "<b>Explanation:</b> Option 0 completely swaps metal and semiconductor temperature responses. Option 1 is correct because: <br>1. **Pure Metals:** Possess a positive temperature coefficient of resistance. As temperature rises, thermal agitation increases lattice ion vibrations, increasing electron collision frequency and **raising resistance**. <br>2. **Alloys (e.g., Nichrome, Manganin, Constantan):** Possess very weak positive temperature coefficients; resistance increases by an **extremely small amount** with temperature, making them ideal for standard resistor coils. <br>3. **Semiconductors (e.g., Silicon, Germanium):** Possess a **negative temperature coefficient**. Rising temperature breaks covalent bonds, liberating bound electrons into the conduction band, which **decreases resistance (increases conductivity)**. Options 2 and 3 state false physical claims."
@@ -329,13 +329,13 @@
     "qe": "Conductance and Conductivity measure a material's capacity to conduct electric charge. What are the correct SI units for Conductance and Conductivity, respectively?",
     "qh": "चालकता (Conductance) और विशिष्ट चालकता (Conductivity) विद्युत आवेश को संचालित करने की किसी सामग्री की क्षमता को मापते हैं। क्रमशः चालकता और विशिष्ट चालकता के लिए सही SI इकाइयाँ क्या हैं?",
     "o": [
-      "Conductance: $\\Omega \\cdot \\text{m}$; Conductivity: $\\Omega$",
-      "Conductance: Siemens (S) or $\\Omega^{-1}$ (mho); Conductivity: $\\text{Siemens}\\cdot\\text{m}^{-1}$ or $\\Omega^{-1}\\text{m}^{-1}$ (mho$\\cdot\\text{m}^{-1}$)",
+      "Conductance: $\\Omega \\cdot m$; Conductivity: $\\Omega$",
+      "Conductance: Siemens (S) or $\\Omega^{-1}$ (mho); Conductivity: $Siemens\\cdotm^{-1}$ or $\\Omega^{-1}m^{-1}$ (mho$\\cdotm^{-1}$)",
       "Conductance: Volt per Ampere; Conductivity: Ampere per Volt",
       "Conductance: Watt; Conductivity: Joule per second"
     ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 swaps resistance and resistivity units. Option 1 is correct because: <br>1. **Conductance ($G$):** Defined as the reciprocal of resistance ($G = \\frac{1}{R}$). Its SI unit is **$\\Omega^{-1}$ (ohm$^{-1}$), mho, or Siemens (S)**. <br>2. **Conductivity ($\\sigma$):** Defined as the reciprocal of resistivity ($\\sigma = \\frac{1}{\\rho}$). Its SI unit is **$\\Omega^{-1}\\text{m}^{-1}$, mho$\\cdot\\text{m}^{-1}$, or $\\text{Siemens}\\cdot\\text{m}^{-1}$ (S/m)**. Option 2 states inverse voltage-current ratios, and Option 3 lists power and energy rate units."
+    "e": "<b>Explanation:</b> Option 0 swaps resistance and resistivity units. Option 1 is correct because: <br>1. **Conductance ($G$):** Defined as the reciprocal of resistance ($G = \\frac{1}{R}$). Its SI unit is **$\\Omega^{-1}$ (ohm$^{-1}$), mho, or Siemens (S)**. <br>2. **Conductivity ($\\sigma$):** Defined as the reciprocal of resistivity ($\\sigma = \\frac{1}{\\rho}$). Its SI unit is **$\\Omega^{-1}m^{-1}$, mho$\\cdotm^{-1}$, or $Siemens\\cdotm^{-1}$ (S/m)**. Option 2 states inverse voltage-current ratios, and Option 3 lists power and energy rate units."
   },
   {
     "p_id": "bpsc_phys_m35_07",
@@ -387,7 +387,7 @@
       "The bulb's internal resistance drops to zero, converting AC current into DC voltage."
     ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 misidentifies switch action as an explosive shockwave. Option 1 is correct because the tungsten filament of an incandescent bulb possesses a positive temperature coefficient of resistance ($R \\propto T$). When the bulb is switched off, the **cold filament has a very low initial resistance**. At the exact instant of switching on, applying full mains voltage ($V$) across this low cold resistance ($R_{\\text{cold}}$) draws a **sudden, massive initial current surge ($I_{\\text{surge}} = \\frac{V}{R_{\\text{cold}}}$)**. This intense surge produces rapid, localized Joule heating ($I^2 R t$), creating extreme thermal stress that frequently snaps an aged or thinned filament wire right at switch-on. Options 2 and 3 cite false chemical or conversion mechanisms."
+    "e": "<b>Explanation:</b> Option 0 misidentifies switch action as an explosive shockwave. Option 1 is correct because the tungsten filament of an incandescent bulb possesses a positive temperature coefficient of resistance ($R \\propto T$). When the bulb is switched off, the **cold filament has a very low initial resistance**. At the exact instant of switching on, applying full mains voltage ($V$) across this low cold resistance ($R_{cold}$) draws a **sudden, massive initial current surge ($I_{surge} = \\frac{V}{R_{cold}}$)**. This intense surge produces rapid, localized Joule heating ($I^2 R t$), creating extreme thermal stress that frequently snaps an aged or thinned filament wire right at switch-on. Options 2 and 3 cite false chemical or conversion mechanisms."
   },
   {
     "p_id": "bpsc_phys_m35_11",
@@ -400,7 +400,7 @@
       "Electrons leak through the glass wall, leaving behind uncharged black ions."
     ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 falsely claims inert argon gas turns into soot. Option 1 is correct because during extended operation at temperatures near $\\sim 2500\\text{--}3000°\\text{C}$, the **tungsten filament slowly undergoes thermal evaporation**. The evaporated tungsten vapor condenses on the cooler inner surface of the glass bulb, forming a **thin, dark metallic coating** that absorbs light. Simultaneously, evaporation thins the filament wire, decreasing its cross-sectional area ($A$). Because $R = \\rho \\frac{l}{A}$, a thinner filament possesses a **higher electrical resistance ($R$)**, which reduces the operating current ($I$) and total power output ($P = V I = \\frac{V^2}{R}$), causing the bulb to dim over time. Options 2 and 3 list scientifically invalid chemical or electronic claims."
+    "e": "<b>Explanation:</b> Option 0 falsely claims inert argon gas turns into soot. Option 1 is correct because during extended operation at temperatures near $\\sim 2500\\text{--}3000°C$, the **tungsten filament slowly undergoes thermal evaporation**. The evaporated tungsten vapor condenses on the cooler inner surface of the glass bulb, forming a **thin, dark metallic coating** that absorbs light. Simultaneously, evaporation thins the filament wire, decreasing its cross-sectional area ($A$). Because $R = \\rho \\frac{l}{A}$, a thinner filament possesses a **higher electrical resistance ($R$)**, which reduces the operating current ($I$) and total power output ($P = V I = \\frac{V^2}{R}$), causing the bulb to dim over time. Options 2 and 3 list scientifically invalid chemical or electronic claims."
   },
   {
     "p_id": "bpsc_phys_m35_12",
@@ -408,12 +408,12 @@
     "qh": "तापदीप्त बिजली के बल्बों में फिलामेंट सामग्री के रूप में टंगस्टन का सार्वभौमिक रूप से उपयोग किया जाता है। कौन से दो भौतिक गुण टंगस्टन को उच्च तापमान वाले प्रकाश के लिए विशिष्ट रूप से उपयुक्त बनाते हैं?",
     "o": [
       "Low melting point and low electrical resistivity",
-      "High melting point ($3380°\\text{C}$) and high electrical resistivity",
+      "High melting point ($3380°C$) and high electrical resistivity",
       "Infinite electrical conductivity and transparent optical clarity",
       "Zero thermal expansion and magnetic repulsion"
     ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 incorrectly states a low melting point (which would cause instant melting). Option 1 is correct because an incandescent filament must operate at extreme temperatures ($\\approx 2700°\\text{C}$) to glow white-hot and emit visible light efficiently without melting or disintegrating. Tungsten is uniquely suited because it possesses an extraordinarily **high melting point ($3380°\\text{C}$)** and **high electrical resistivity** (allowing significant Joule heating $I^2 R t$ in a compact filament wire). Furthermore, bulbs are filled with inactive gases (nitrogen or argon) to prevent filament oxidation at these extreme operating temperatures. Options 2 and 3 state impossible physical attributes."
+    "e": "<b>Explanation:</b> Option 0 incorrectly states a low melting point (which would cause instant melting). Option 1 is correct because an incandescent filament must operate at extreme temperatures ($\\approx 2700°C$) to glow white-hot and emit visible light efficiently without melting or disintegrating. Tungsten is uniquely suited because it possesses an extraordinarily **high melting point ($3380°C$)** and **high electrical resistivity** (allowing significant Joule heating $I^2 R t$ in a compact filament wire). Furthermore, bulbs are filled with inactive gases (nitrogen or argon) to prevent filament oxidation at these extreme operating temperatures. Options 2 and 3 state impossible physical attributes."
   },
   {
     "p_id": "bpsc_phys_m35_13",
@@ -426,7 +426,7 @@
       "Alloys eliminate all internal potential differences in heating circuits."
     ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 falsely claims alloys have lower resistivity and low melting points. Option 1 is correct because heating elements rely on high Joule heat generation ($H = I^2 R t$) at high temperatures. Alloys like **Nichrome** (Nickel, Chromium, Manganese, Iron) are chosen over pure metals because: (1) They possess **significantly higher electrical resistivity ($\\rho$)** than pure copper or aluminum, producing higher heat for a given current; and (2) They **do not readily oxidize (burn or break down) at high operating temperatures** (even when glowing red-hot at $1000°\\text{C}$). Options 2 and 3 cite false physical mechanisms."
+    "e": "<b>Explanation:</b> Option 0 falsely claims alloys have lower resistivity and low melting points. Option 1 is correct because heating elements rely on high Joule heat generation ($H = I^2 R t$) at high temperatures. Alloys like **Nichrome** (Nickel, Chromium, Manganese, Iron) are chosen over pure metals because: (1) They possess **significantly higher electrical resistivity ($\\rho$)** than pure copper or aluminum, producing higher heat for a given current; and (2) They **do not readily oxidize (burn or break down) at high operating temperatures** (even when glowing red-hot at $1000°C$). Options 2 and 3 cite false physical mechanisms."
   },
   {
     "p_id": "bpsc_phys_m35_14",
@@ -547,16 +547,16 @@
   },
   {
     "p_id": "bpsc_phys_m36_03",
-    "qe": "Standard Indian domestic electricity supply operates on Alternating Current (AC) at $220\\text{ V}$ rms and $50\\text{ Hz}$. What is the peak voltage value ($V_{\\text{peak}}$) reached during an AC cycle, and what is the average AC voltage over one full cycle?",
-    "qh": "मानक भारतीय घरेलू बिजली आपूर्ति $220\\text{ V}$ rms और $50\\text{ Hz}$ पर प्रत्यावर्ती धारा (AC) पर काम करती है। एक AC चक्र के दौरान reached शिखर वोल्टेज मान ($V_{\\text{peak}}$) क्या है, और एक पूरे चक्र में औसत AC वोल्टेज क्या है?",
+    "qe": "Standard Indian domestic electricity supply operates on Alternating Current (AC) at $220\\text{ V}$ rms and $50\\text{ Hz}$. What is the peak voltage value ($V_{peak}$) reached during an AC cycle, and what is the average AC voltage over one full cycle?",
+    "qh": "मानक भारतीय घरेलू बिजली आपूर्ति $220\\text{ V}$ rms और $50\\text{ Hz}$ पर प्रत्यावर्ती धारा (AC) पर काम करती है। एक AC चक्र के दौरान reached शिखर वोल्टेज मान ($V_{peak}$) क्या है, और एक पूरे चक्र में औसत AC वोल्टेज क्या है?",
     "o": [
       "Peak voltage is $220\\text{ V}$; Average full-cycle voltage is $220\\text{ V}$.",
-      "Peak voltage is approximately $311\\text{ V}$ ($V_{\\text{peak}} = V_{\\text{rms}} \\times \\sqrt{2}$); Average full-cycle voltage is strictly ZERO ($0\\text{ V}$).",
+      "Peak voltage is approximately $311\\text{ V}$ ($V_{peak} = V_{rms} \\times \\sqrt{2}$); Average full-cycle voltage is strictly ZERO ($0\\text{ V}$).",
       "Peak voltage is $440\\text{ V}$; Average full-cycle voltage is $110\\text{ V}$.",
       "Peak voltage is $155\\text{ V}$; Average full-cycle voltage is $311\\text{ V}$."
     ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 confuses rms voltage with peak voltage. Option 1 is correct because: <br>1. **Peak Voltage ($V_{\\text{peak}}$):** The quoted household voltage of $220\\text{ V}$ is the **root-mean-square (rms) voltage**. The true sinusoidal peak potential reached during each half-cycle is given by: <br>$$V_{\\text{peak}} = V_{\\text{rms}} \\times \\sqrt{2} = 220 \\times 1.414 \\approx \\mathbf{311\\text{ Volts}}$$ <br>2. **Average Full-Cycle Voltage:** Since an AC wave alternates symmetrically between positive ($+311\\text{ V}$) and negative ($-311\\text{ V}$) half-cycles, the **net average voltage evaluated over a complete $360°$ cycle is strictly ZERO ($0\\text{ V}$)**. Options 2 and 3 list incorrect mathematical scaling factors."
+    "e": "<b>Explanation:</b> Option 0 confuses rms voltage with peak voltage. Option 1 is correct because: <br>1. **Peak Voltage ($V_{peak}$):** The quoted household voltage of $220\\text{ V}$ is the **root-mean-square (rms) voltage**. The true sinusoidal peak potential reached during each half-cycle is given by: <br>$$V_{peak} = V_{rms} \\times \\sqrt{2} = 220 \\times 1.414 \\approx \\mathbf{311\\text{ Volts}}$$ <br>2. **Average Full-Cycle Voltage:** Since an AC wave alternates symmetrically between positive ($+311\\text{ V}$) and negative ($-311\\text{ V}$) half-cycles, the **net average voltage evaluated over a complete $360°$ cycle is strictly ZERO ($0\\text{ V}$)**. Options 2 and 3 list incorrect mathematical scaling factors."
   },
   {
     "p_id": "bpsc_phys_m36_04",
@@ -569,7 +569,7 @@
       "Stepping up voltage converts AC directly into high-frequency DC without transformers."
     ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 misidentifies magnetic field cancellation as the primary efficiency driver. Option 1 is correct because transmission loss along long conducting cables depends on **Joule heating power dissipation ($P_{\\text{loss}} = I^2 R$)**. For a fixed electrical power grid transmission ($P = V I$), stepping up the transmission voltage ($V$) by a factor of $k$ reduces the current ($I$) by the exact same factor $k$. Because power loss depends on the **square of the current ($I^2$)**, stepping up voltage to high levels (e.g., $132\\text{ kV}$) reduces current drastically, **minimizing thermal energy losses** over hundreds of kilometers. Option 2 states a contradictory zero resistance claim, and Option 3 confuses AC transformers with DC rectifiers."
+    "e": "<b>Explanation:</b> Option 0 misidentifies magnetic field cancellation as the primary efficiency driver. Option 1 is correct because transmission loss along long conducting cables depends on **Joule heating power dissipation ($P_{loss} = I^2 R$)**. For a fixed electrical power grid transmission ($P = V I$), stepping up the transmission voltage ($V$) by a factor of $k$ reduces the current ($I$) by the exact same factor $k$. Because power loss depends on the **square of the current ($I^2$)**, stepping up voltage to high levels (e.g., $132\\text{ kV}$) reduces current drastically, **minimizing thermal energy losses** over hundreds of kilometers. Option 2 states a contradictory zero resistance claim, and Option 3 confuses AC transformers with DC rectifiers."
   },
   {
     "p_id": "bpsc_phys_m36_05",
@@ -647,6 +647,6 @@
       "15000 units"
     ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 forgets to divide by 1000. Option 1 is correct because the standard commercial unit consumption formula is: <b>$$\\text{Number of Units (kWh)} = \\frac{\\text{Power (Watts)} \\times \\text{Hours per day} \\times \\text{Days}}{1000}$$</b> Substituting the given values: <b>$$\\text{Units} = \\frac{1000\\text{ W} \\times 5\\text{ hours/day} \\times 30\\text{ days}}{1000} = \\mathbf{150\\text{ units (kWh)}}$$</b> Options 2 and 3 result from incorrect decimal/conversion scaling factors."
+    "e": "<b>Explanation:</b> Option 0 forgets to divide by 1000. Option 1 is correct because the standard commercial unit consumption formula is: <b>$$\\text{Number of Units (kWh)} = \\frac{\\text{Power (Watts)} \\times \\text{Hours per day} \\times Days}{1000}$$</b> Substituting the given values: <b>$$Units = \\frac{1000\\text{ W} \\times 5\\text{ hours/day} \\times 30\\text{ days}}{1000} = \\mathbf{150\\text{ units (kWh)}}$$</b> Options 2 and 3 result from incorrect decimal/conversion scaling factors."
   }
 ]
