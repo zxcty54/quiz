@@ -1,5 +1,5 @@
- [
-   {
+[
+  {
     "p_id": "bpsc_phys_m25_01",
     "qe": "Evaluating the four fundamental interactions in nature reveals vastly different coupling strengths and operational ranges. Which fundamental force possesses the maximum relative strength, and what is its operational range?",
     "qh": "प्रकृति में चार मौलिक अंतःक्रियाओं (fundamental interactions) का मूल्यांकन अत्यधिक भिन्न युग्मन शक्तियों और परिचालन सीमाओं को उजागर करता है। किस मौलिक बल में अधिकतम सापेक्ष शक्ति होती है, और इसकी परिचालन सीमा क्या है?",
@@ -41,7 +41,7 @@
   {
     "p_id": "bpsc_phys_m25_04",
     "qe": "Evaluating everyday inertial phenomena distinguishes between inertia of rest, motion, and direction. Why do fruits and leaves detach and fall when a fruit tree branch is vigorously shaken?",
-    "qh": "दैनिक जड़त्वीय परिघटनाओं का मूल्यांकन विश्राम (rest), गति (motion), और दिशा (direction) के जड़त्व के बीच अंतर करता me है। जब फलदार वृक्ष की शाखा को तेजी से हिलाया जाता है, तो फल और पत्तियां अलग होकर क्यों गिर जाते हैं?",
+    "qh": "दैनिक जड़त्वीय परिघटनाओं का मूल्यांकन विश्राम (rest), गति (motion), और दिशा (direction) के जड़त्व के बीच अंतर करता है। जब फलदार वृक्ष की शाखा को तेजी से हिलाया जाता है, तो फल और पत्तियां अलग होकर क्यों गिर जाते हैं?",
     "o": [
       "Branch motion creates a magnetic field that repels organic tissue.",
       "The branch is brought into rapid motion by the applied force, while the attached fruits/leaves tend to remain at rest due to Inertia of Rest, causing them to detach.",
@@ -75,7 +75,7 @@
       "Because the speed of the car decreases exponentially due to air drag."
     ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 incorrectly attributes stopping force to car friction. Option 1 is correct because linear momentum is defined as $p = mv$. Even if velocity $v$ is identical for both vehicles, the heavy truck has a vastly larger mass $m$, giving it a much **higher linear momentum**. According to Newton's Second Law ($F = \\frac{\\Delta p}{\\Delta t}$), stopping a vehicle in a fixed time interval $\\Delta t$ requires bringing $\\Delta p$ to zero. A larger initial momentum $\\Delta p$ demands a **proportionately greater stopping force $F$**. Option 2 and Option 3 state invalid physical claims."
+    "e": "<b>Explanation:</b> Option 0 incorrectly attributes stopping force to car friction. Option 1 is correct because linear momentum is defined as $p = mv$. Even if velocity $v$ is identical for both vehicles, the heavy truck has a vastly larger mass $m$, giving it a much <b>higher linear momentum</b>. According to Newton's Second Law ($F = \\frac{\\Delta p}{\\Delta t}$), stopping a vehicle in a fixed time interval $\\Delta t$ requires bringing $\\Delta p$ to zero. A larger initial momentum $\\Delta p$ demands a <b>proportionately greater stopping force $F$</b>. Option 2 and Option 3 state invalid physical claims."
   },
   {
     "p_id": "bpsc_phys_m25_07",
@@ -88,7 +88,7 @@
       "The stone undergoes elastic deformation that cancels its momentum."
     ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 misapplies inertia of direction. Option 1 is correct because linear momentum $p = mv$ depends directly on velocity $v$. Although the bullet and hand-thrown stone have equal mass $m$, the bullet's firing velocity is several orders of magnitude higher ($v_{\\text{bullet}} \\gg v_{\\text{stone}}$), yielding a **vastly higher linear momentum**. Upon striking the wooden plank, this massive momentum is delivered over a tiny contact area in a fraction of a millisecond, creating an extreme contact force that easily pierces the wood. Option 2 and Option 3 describe incorrect physical mechanisms."
+    "e": "<b>Explanation:</b> Option 0 misapplies inertia of direction. Option 1 is correct because linear momentum $p = mv$ depends directly on velocity $v$. Although the bullet and hand-thrown stone have equal mass $m$, the bullet's firing velocity is several orders of magnitude higher ($v_{\\text{bullet}} \\gg v_{\\text{stone}}$), yielding a <b>vastly higher linear momentum</b>. Upon striking the wooden plank, this massive momentum is delivered over a tiny contact area in a fraction of a millisecond, creating an extreme contact force that easily pierces the wood. Option 2 and Option 3 describe incorrect physical mechanisms."
   },
   {
     "p_id": "bpsc_phys_m25_08",
@@ -101,7 +101,7 @@
       "The bodies must move exclusively along circular paths at constant speed."
     ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 incorrectly links momentum conservation to thermal heat absorption. Option 1 is correct because the **Law of Conservation of Linear Momentum** states that if the net external force acting on a system of interacting bodies is zero ($\\sum \\vec{F}_{\\text{ext}} = 0$), the total vector linear momentum of the system remains strictly constant over time (${\\vec{P}_{\\text{total}} = \\text{constant}}$). Internal forces between system components act in equal and opposite action-reaction pairs (Newton's Third Law) and cancel out globally. Option 2 is false because internal forces do not alter net system momentum. Option 3 restricts motion to circles unnecessarily."
+    "e": "<b>Explanation:</b> Option 0 incorrectly links momentum conservation to thermal heat absorption. Option 1 is correct because the <b>Law of Conservation of Linear Momentum</b> states that if the net external force acting on a system of interacting bodies is zero ($\\sum \\vec{F}_{\\text{ext}} = 0$), the total vector linear momentum of the system remains strictly constant over time ($\t\\vec{P}_{\\text{total}} = \\text{constant}$). Internal forces between system components act in equal and opposite action-reaction pairs (Newton's Third Law) and cancel out globally. Option 2 is false because internal forces do not alter net system momentum. Option 3 restricts motion to circles unnecessarily."
   },
   {
     "p_id": "bpsc_phys_m25_09",
@@ -114,7 +114,7 @@
       "Coulomb's Inverse Square Law"
     ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 governs planetary orbits. Option 1 is correct because **Rocket Propulsion** is a classic application of the **Law of Conservation of Linear Momentum** and **Newton's Third Law of Motion**. The burning fuel ejects high-temperature exhaust gas at extreme velocity rearward, carrying huge backward momentum. To conserve total system momentum in the absence of external forces in space, an equal and opposite forward momentum is imparted to the rocket body, accelerating it forward: $m_{\\text{rocket}} \\Delta v_{\\text{rocket}} = - v_{\\text{gas}} \\Delta m_{\\text{gas}}$. Option 2 describes fluid statics, and Option 3 describes electrostatics."
+    "e": "<b>Explanation:</b> Option 0 governs planetary orbits. Option 1 is correct because <b>Rocket Propulsion</b> is a classic application of the <b>Law of Conservation of Linear Momentum</b> and <b>Newton's Third Law of Motion</b>. The burning fuel ejects high-temperature exhaust gas at extreme velocity rearward, carrying huge backward momentum. To conserve total system momentum in the absence of external forces in space, an equal and opposite forward momentum is imparted to the rocket body, accelerating it forward: $m_{\\text{rocket}} \\Delta v_{\\text{rocket}} = - v_{\\text{gas}} \\Delta m_{\\text{gas}}$. Option 2 describes fluid statics, and Option 3 describes electrostatics."
   },
   {
     "p_id": "bpsc_phys_m25_10",
@@ -124,23 +124,23 @@
       "$v_{\\text{recoil}} = + \\frac{M \\cdot v}{m}$",
       "$v_{\\text{recoil}} = - \\frac{m \\cdot v}{M}$",
       "$v_{\\text{recoil}} = \\sqrt{M \\cdot m \\cdot v}$",
-      "$v_{\\text{recoil}} = zero$"
+      "$v_{\\text{recoil}} = \\text{zero}$"
     ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 reverses mass terms and sign. Option 1 is correct because before firing, total initial system momentum is zero ($P_i = 0$). By the Law of Conservation of Linear Momentum, total final momentum must also be zero ($P_f = 0$): $M \\cdot v_{\\text{recoil}} + m \\cdot v = 0$. Solving for recoil velocity yields: <b>$$v_{\\text{recoil}} = - \\frac{m \\cdot v}{M}$$</b> The negative sign indicates that the rifle moves in the **opposite direction** (recoil) to the bullet's forward motion. Because rifle mass $M \\gg m$, $v_{\\text{recoil}}$ is much smaller than bullet speed $v$. Option 2 and Option 3 state incorrect mathematical expressions."
+    "e": "<b>Explanation:</b> Option 0 reverses mass terms and sign. Option 1 is correct because before firing, total initial system momentum is zero ($P_i = 0$). By the Law of Conservation of Linear Momentum, total final momentum must also be zero ($P_f = 0$): $M \\cdot v_{\\text{recoil}} + m \\cdot v = 0$. Solving for recoil velocity yields: $$v_{\\text{recoil}} = - \\frac{m \\cdot v}{M}$$ The negative sign indicates that the rifle moves in the <b>opposite direction</b> (recoil) to the bullet's forward motion. Because rifle mass $M \\gg m$, $v_{\\text{recoil}}$ is much smaller than bullet speed $v$. Option 2 and Option 3 state incorrect mathematical expressions."
   },
   {
     "p_id": "bpsc_phys_m25_11",
     "qe": "Impulse represents the net effect of a large force acting over a brief time duration. What is the mathematical relationship between Impulse, force, impact duration, and linear momentum change?",
     "qh": "आवेग (Impulse) संक्षिप्त समयांतराल पर कार्य करने वाले बड़े बल के शुद्ध प्रभाव का प्रतिनिधित्व करता है। आवेग, बल, प्रभाव अवधि और रेखीय संवेग परिवर्तन के बीच गणितीय संबंध क्या है?",
     "o": [
-      "$\\text{Impulse} = \\frac{\\text{Force}}{\\text{Time}} = \\text{Total Kinetic Energy}$",
-      "$\\text{Impulse} = \\text{Force} \\times \\text{Time} = \\text{Change in Linear Momentum } (\\Delta p)$",
-      "$\\text{Impulse} = \\text{Mass} \\times \\text{Acceleration}^2$",
-      "$\\text{Impulse} = \\frac{\\text{Work Done}}{\\text{Velocity}}$"
+      "Impulse = Force / Time = Total Kinetic Energy",
+      "Impulse = Force × Time = Change in Linear Momentum ($\\Delta p$)",
+      "Impulse = Mass × Acceleration$^2$",
+      "Impulse = Work Done / Velocity"
     ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 incorrectly divides force by time. Option 1 is correct because **Impulse** ($J$) is defined as the integral product of a large force acting over a short time interval $\\Delta t$: <b>$$\\text{Impulse} = \\vec{F} \\times \\Delta t = \\Delta \\vec{p} = m\\vec{v} - m\\vec{u}$$</b> By Newton's Second Law ($F = \\frac{\\Delta p}{\\Delta t}$), the total impulse imparted to a body equals its net **Change in Linear Momentum**. Its SI unit is $\\text{N}\\cdot\\text{s}$ or $\\text{kg}\\cdot\\text{m/s}$. Option 2 and Option 3 state incorrect physical formulas."
+    "e": "<b>Explanation:</b> Option 0 incorrectly divides force by time. Option 1 is correct because <b>Impulse</b> ($J$) is defined as the integral product of a large force acting over a short time interval $\\Delta t$: $$\\text{Impulse} = \\vec{F} \\times \\Delta t = \\Delta \\vec{p} = m\\vec{v} - m\\vec{u}$$ By Newton's Second Law ($F = \\frac{\\Delta p}{\\Delta t}$), the total impulse imparted to a body equals its net <b>Change in Linear Momentum</b>. Its SI unit is $\\text{N}\\cdot\\text{s}$ or $\\text{kg}\\cdot\\text{m/s}$. Option 2 and Option 3 state incorrect physical formulas."
   },
   {
     "p_id": "bpsc_phys_m25_12",
@@ -148,12 +148,12 @@
     "qh": "क्रिकेट के क्षेत्ररक्षक तेजी से आती हुई क्रिकेट गेंद को लपकते (कैच लेते) समय अपने हाथों को पीछे की ओर खींचते हैं। कौन सा भौतिक तंत्र क्षेत्ररक्षक के हाथों पर महसूस होने वाले प्रभाव बल को कम करता है?",
     "o": [
       "Drawing hands back decreases the mass of the ball.",
-      "Increasing the impact time duration ($\\\\Delta t$) during momentum change reduces the stopping force ($F = \\\\frac{\\\\Delta p}{\\\\Delta t}$) exerted on the hands.",
+      "Increasing the impact time duration ($\\Delta t$) during momentum change reduces the stopping force ($F = \\frac{\\Delta p}{\\Delta t}$) exerted on the hands.",
       "Drawing hands back converts kinetic energy into gravity.",
       "Increasing hand friction stops the ball instantly without force."
     ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 incorrectly claims hand movement reduces ball mass. Option 1 is correct because stopping a moving ball requires reducing its linear momentum $p$ to zero ($\\\\Delta p = \\text{constant}$). According to the impulse-momentum theorem: $F = \\frac{\\\\Delta p}{\\\\Delta t}$. By drawing hands backward in the direction of ball motion, the fielder **increases the time duration $\\\\Delta t$** over which the momentum change occurs. A larger $\\\\Delta t$ significantly **lowers the average impact force $F$** felt by the hands, preventing pain or tissue injury. Option 2 and Option 3 present invalid physical mechanisms."
+    "e": "<b>Explanation:</b> Option 0 incorrectly claims hand movement reduces ball mass. Option 1 is correct because stopping a moving ball requires reducing its linear momentum $p$ to zero ($\\Delta p = \\text{constant}$). According to the impulse-momentum theorem: $F = \\frac{\\Delta p}{\\Delta t}$. By drawing hands backward in the direction of ball motion, the fielder <b>increases the time duration $\\Delta t$</b> over which the momentum change occurs. A larger $\\Delta t$ significantly <b>lowers the average impact force $F$</b> felt by the hands, preventing pain or tissue injury. Option 2 and Option 3 present invalid physical mechanisms."
   },
   {
     "p_id": "bpsc_phys_m25_13",
@@ -161,12 +161,12 @@
     "qh": "परिवहन के दौरान कांच के सामान, सिरेमिक और चीनी मिट्टी के बर्तनों को भूसे या बबल रैप जैसी नरम सामग्री में लपेटकर पैक किया जाता है। झटके या टकराव के दौरान नरम पैकेजिंग टूटने से कैसे बचाती है?",
     "o": [
       "Soft straw eliminates the mass of the glass objects.",
-      "Soft packaging materials deform under impact, increasing the collision time duration ($\\\\Delta t$) and thereby reducing the damaging impact force ($F = \\\\frac{\\\\Delta p}{\\\\Delta t}$).",
+      "Soft packaging materials deform under impact, increasing the collision time duration ($\\Delta t$) and thereby reducing the damaging impact force ($F = \\frac{\\Delta p}{\\Delta t}$).",
       "Soft wrap creates a vacuum that repels physical forces.",
       "Straw turns kinetic energy into permanent static electric charge."
     ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 presents mass reduction as the cause. Option 1 is correct because when a transit vehicle experiences jerks or collisions, the soft wrapping material (paper, straw, bubble wrap) compresses gradually. This compression **increases the time of impact $\\\\Delta t$** required for momentum transfer during sudden velocity shifts. Since $F = \\frac{\\\\Delta p}{\\\\Delta t}$, extending $\\\\Delta t$ drastically **reduces the peak force $F$** delivered to fragile glassware, keeping it below the stress threshold that causes fracture. Option 2 and Option 3 describe impossible vacuum or electrical transformations."
+    "e": "<b>Explanation:</b> Option 0 presents mass reduction as the cause. Option 1 is correct because when a transit vehicle experiences jerks or collisions, the soft wrapping material (paper, straw, bubble wrap) compresses gradually. This compression <b>increases the time of impact $\\Delta t$</b> required for momentum transfer during sudden velocity shifts. Since $F = \\frac{\\Delta p}{\\Delta t}$, extending $\\Delta t$ drastically <b>reduces the peak force $F$</b> delivered to fragile glassware, keeping it below the stress threshold that causes fracture. Option 2 and Option 3 describe impossible vacuum or electrical transformations."
   },
   {
     "p_id": "bpsc_phys_m25_14",
@@ -176,10 +176,10 @@
       "$R = M(g - a)$",
       "$R = M(g + a)$",
       "$R = Mg$",
-      "$R = zero$"
+      "$R = \\text{zero}$"
     ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 gives the apparent weight for downward acceleration. Option 1 is correct because when an elevator accelerates upward at rate $a$, the net upward force acting on a person standing on the floor scale is $\\sum F_y = R - Mg = Ma$. Solving for normal reaction (apparent weight) yields: <b>$$R = M(g + a)$$</b> Because $R > Mg$, the person feels **heavier** than their actual weight. Option 2 applies when the lift is at rest or moving at uniform velocity ($a = 0$), and Option 3 applies to free-fall ($a = g$)."
+    "e": "<b>Explanation:</b> Option 0 gives the apparent weight for downward acceleration. Option 1 is correct because when an elevator accelerates upward at rate $a$, the net upward force acting on a person standing on the floor scale is $\\sum F_y = R - Mg = Ma$. Solving for normal reaction (apparent weight) yields: $$R = M(g + a)$$ Because $R > Mg$, the person feels <b>heavier</b> than their actual weight. Option 2 applies when the lift is at rest or moving at uniform velocity ($a = 0$), and Option 3 applies to free-fall ($a = g$)."
   },
   {
     "p_id": "bpsc_phys_m25_15",
@@ -192,7 +192,7 @@
       "Apparent weight becomes negative, sticking the person to the floor with double force."
     ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 claims weight doubles. Option 1 is correct because when an elevator falls freely under gravity, its downward acceleration equals $a = g$. Substituting $a = g$ into the downward acceleration equation $R = M(g - a)$ gives: <b>$$R = M(g - g) = 0$$</b> Because the floor drops at the same rate as the occupant, the normal contact reaction force between the floor scale and the occupant's feet drops to zero, creating a physical state of **Weightlessness** ($R = 0$). Option 2 applies to static or uniform motion, and Option 3 misinterprets normal forces."
+    "e": "<b>Explanation:</b> Option 0 claims weight doubles. Option 1 is correct because when an elevator falls freely under gravity, its downward acceleration equals $a = g$. Substituting $a = g$ into the downward acceleration equation $R = M(g - a)$ gives: $$R = M(g - g) = 0$$ Because the floor drops at the same rate as the occupant, the normal contact reaction force between the floor scale and the occupant's feet drops to zero, creating a physical state of <b>Weightlessness</b> ($R = 0$). Option 2 applies to static or uniform motion, and Option 3 misinterprets normal forces."
   },
   {
     "p_id": "bpsc_phys_m25_16",
@@ -205,20 +205,20 @@
       "Fluid Drag; it is independent of velocity."
     ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 describes friction during ongoing motion. Option 1 is correct because **Static Friction ($f_s$)** is the opposing force that prevents relative motion between two contacting surfaces before actual sliding begins. It is a **self-adjusting force**: as external pushing force increases from zero, static friction increases identically in magnitude to cancel the force ($f_s = F_{\\\\text{applied}}$), keeping the body at rest until it reaches its maximum threshold value, termed **Limiting Friction** ($f_{\\\\text{max}} = \\mu_s R$). Option 2 incorrectly states rolling friction is larger than kinetic friction."
+    "e": "<b>Explanation:</b> Option 0 describes friction during ongoing motion. Option 1 is correct because <b>Static Friction ($f_s$)</b> is the opposing force that prevents relative motion between two contacting surfaces before actual sliding begins. It is a <b>self-adjusting force</b>: as external pushing force increases from zero, static friction increases identically in magnitude to cancel the force ($f_s = F_{\\text{applied}}$), keeping the body at rest until it reaches its maximum threshold value, termed <b>Limiting Friction</b> ($f_{\\text{max}} = \\mu_s R$). Option 2 incorrectly states rolling friction is larger than kinetic friction."
   },
   {
     "p_id": "bpsc_phys_m25_17",
     "qe": "Comparing different categories of frictional forces reveals distinct magnitude hierarchies. How do the coefficients of static friction ($\\mu_s$), kinetic friction ($\\mu_k$), and rolling friction rank relative to one another?",
     "qh": "घर्षण बलों की विभिन्न श्रेणियों की तुलना करने पर विशिष्ट परिमाण पदानुक्रम (magnitude hierarchies) का पता चलता है। स्थैतिक घर्षण ($\\mu_s$), गतिक घर्षण ($\\mu_k$), और रोलिंग घर्षण के गुणांक एक दूसरे के सापेक्ष कैसे रैंक करते हैं?",
     "o": [
-      "Rolling Friction $>$ Kinetic Friction $>$ Static Friction",
-      "Static Friction (Limiting) $>$ Kinetic (Sliding) Friction $\\gg$ Rolling Friction",
-      "Kinetic Friction $>$ Static Friction $>$ Rolling Friction",
+      "Rolling Friction > Kinetic Friction > Static Friction",
+      "Static Friction (Limiting) > Kinetic (Sliding) Friction >> Rolling Friction",
+      "Kinetic Friction > Static Friction > Rolling Friction",
       "All three friction coefficients are identical for all materials"
     ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 completely reverses friction magnitude hierarchies. Option 1 is correct because the peak static resistance (**Limiting Friction, $\\mu_s$**) required to initiate motion is always greater than the resistance encountered during steady sliding (**Kinetic Friction, $\\mu_k$**). Furthermore, **Rolling Friction** [friction occurring when a spherical or cylindrical body rolls over a surface, deforming contact area slightly] is vastly smaller than sliding kinetic friction because line/point contact minimizes surface shear. Thus: <b>$$\\mu_s > \\mu_k \\gg \\mu_{\\text{rolling}}$$</b> Option 2 and Option 3 present incorrect physical orderings."
+    "e": "<b>Explanation:</b> Option 0 completely reverses friction magnitude hierarchies. Option 1 is correct because the peak static resistance (<b>Limiting Friction, $\\mu_s$</b>) required to initiate motion is always greater than the resistance encountered during steady sliding (<b>Kinetic Friction, $\\mu_k$</b>). Furthermore, <b>Rolling Friction</b> [friction occurring when a spherical or cylindrical body rolls over a surface, deforming contact area slightly] is vastly smaller than sliding kinetic friction because line/point contact minimizes surface shear. Thus: $$\\mu_s > \\mu_k \\gg \\mu_{\\text{rolling}}$$ Option 2 and Option 3 present incorrect physical orderings."
   },
   {
     "p_id": "bpsc_phys_m25_18",
@@ -231,7 +231,7 @@
       "Disadvantage: Decreases CGS force units; Advantage: Increases gravitational acceleration."
     ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 incorrectly states friction stops walking. Option 1 is correct because friction is a **'Necessary Evil'**:\n1. **Why Evil (Disadvantages):** It causes continuous mechanical wear and tear of moving machine parts, reduces mechanical efficiency, and dissipates vast amounts of input energy uselessly as waste heat.\n2. **Why Necessary (Advantages):** Without contact friction, human walking would be impossible (feet would slip backward), automobile tires could not grip or brake safely, and writing with pens/chalk on paper or blackboards would fail.\nOption 2 and Option 3 present false physical claims."
+    "e": "<b>Explanation:</b> Option 0 incorrectly states friction stops walking. Option 1 is correct because friction is a <b>'Necessary Evil'</b>:<br>1. <b>Why Evil (Disadvantages):</b> It causes continuous mechanical wear and tear of moving machine parts, reduces mechanical efficiency, and dissipates vast amounts of input energy uselessly as waste heat.<br>2. <b>Why Necessary (Advantages):</b> Without contact friction, human walking would be impossible (feet would slip backward), automobile tires could not grip or brake safely, and writing with pens/chalk on paper or blackboards would fail.<br>Option 2 and Option 3 present false physical claims."
   },
   {
     "p_id": "bpsc_phys_m25_19",
@@ -244,7 +244,7 @@
       "$1\\text{ N} = 10^7\\text{ dynes}$"
     ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 uses $10^3$. Option 1 is correct because:\n$$1\\text{ Newton (N)} = 1\\text{ kg} \\cdot \\text{m/s}^2$$\nConverting units to CGS ($1\\text{ kg} = 10^3\\text{ g}$, $1\\text{ m} = 10^2\\text{ cm}$):\n$$1\\text{ N} = (10^3\\text{ g}) \\times (10^2\\text{ cm/s}^2) = 10^5\\text{ g}\\cdot\\text{cm/s}^2 = \\mathbf{10^5\\text{ dynes}}$$\nOption 2 gives the inverse conversion ($1\\text{ dyne} = 10^{-5}\\text{ N}$), and Option 3 is the conversion factor for Joules to Ergs ($1\\text{ J} = 10^7\\text{ ergs}$)."
+    "e": "<b>Explanation:</b> Option 0 uses $10^3$. Option 1 is correct because:<br>$$1\\text{ Newton (N)} = 1\\text{ kg} \\cdot \\text{m/s}^2$$<br>Converting units to CGS ($1\\text{ kg} = 10^3\\text{ g}$, $1\\text{ m} = 10^2\\text{ cm}$):<br>$$1\\text{ N} = (10^3\\text{ g}) \\times (10^2\\text{ cm/s}^2) = 10^5\\text{ g}\\cdot\\text{cm/s}^2 = 10^5\\text{ dynes}$$<br>Option 2 gives the inverse conversion ($1\\text{ dyne} = 10^{-5}\\text{ N}$), and Option 3 is the conversion factor for Joules to Ergs ($1\\text{ J} = 10^7\\text{ ergs}$)."
   },
   {
     "p_id": "bpsc_phys_m25_20",
@@ -257,9 +257,8 @@
       "$R = Mg + Ma^2$"
     ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 gives apparent weight for upward acceleration. Option 1 is correct because for an elevator accelerating downward at $a$, the net downward equation of motion for an occupant of mass $M$ is $\\sum F_y = Mg - R = Ma$. Solving for the apparent weight (normal reaction $R$) gives: <b>$$R = M(g - a)$$</b> Because $a > 0$, $R < Mg$, causing the occupant to feel **lighter** than their actual weight. Option 2 gives a negative sign convention inversion, and Option 3 lists non-dimensional force terms."
+    "e": "<b>Explanation:</b> Option 0 gives apparent weight for upward acceleration. Option 1 is correct because for an elevator accelerating downward at $a$, the net downward equation of motion for an occupant of mass $M$ is $\\sum F_y = Mg - R = Ma$. Solving for the apparent weight (normal reaction $R$) gives: $$R = M(g - a)$$ Because $a > 0$, $R < Mg$, causing the occupant to feel <b>lighter</b> than their actual weight. Option 2 gives a negative sign convention inversion, and Option 3 lists non-dimensional force terms."
   },
-   
   {
     "p_id": "bpsc_phys_m26_01",
     "qe": "Engineering applications replace sliding friction with rolling friction to improve mechanical efficiency. What physical transformation occurs when ball bearings are installed between moving machinery components?",
@@ -310,7 +309,7 @@
       "Value: $G = 1.66 \\times 10^{-24} \\text{ N}\\cdot\\text{m}^2\\text{kg}^{-2}$; Dimensional Formula: $[\\text{M}^{-2} \\text{L}^2 \\text{T}^{-2}]$"
     ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 gives acceleration due to gravity ($g$) rather than universal constant $G$. Option 1 is correct because Newton's Universal Law of Gravitation states $F = G \\frac{m_1 m_2}{r^2} \\implies G = \\frac{F \\cdot r^2}{m_1 m_2}$. Substituting SI units yields $\\text{N}\\cdot\\text{m}^2\\text{kg}^{-2}$ with a measured standard value of <b>$G = 6.67 \\times 10^{-11} \\text{ N}\\cdot\\text{m}^2\\text{kg}^{-2}$</b>. Deriving its dimensions: <b>$$[G] = \\frac{[\\text{M}^1 \\text{L}^1 \\text{T}^{-2}][\\text{L}^2]}{[\\text{M}^2]} = [\\text{M}^{-1} \\text{L}^3 \\text{T}^{-2}]$$</b> Option 2 has an incorrect positive exponent and units, while Option 3 lists atomic mass unit constants."
+    "e": "<b>Explanation:</b> Option 0 gives acceleration due to gravity ($g$) rather than universal constant $G$. Option 1 is correct because Newton's Universal Law of Gravitation states $F = G \\frac{m_1 m_2}{r^2} \\implies G = \\frac{F \\cdot r^2}{m_1 m_2}$. Substituting SI units yields $\\text{N}\\cdot\\text{m}^2\\text{kg}^{-2}$ with a measured standard value of <b>$G = 6.67 \\times 10^{-11} \\text{ N}\\cdot\\text{m}^2\\text{kg}^{-2}$</b>. Deriving its dimensions: $$[G] = \\frac{[\\text{M}^1 \\text{L}^1 \\text{T}^{-2}][\\text{L}^2]}{[\\text{M}^2]} = [\\text{M}^{-1} \\text{L}^3 \\text{T}^{-2}]$$ Option 2 has an incorrect positive exponent and units, while Option 3 lists atomic mass unit constants."
   },
   {
     "p_id": "bpsc_phys_m26_05",
@@ -323,7 +322,7 @@
       "Gravitational force operates only over sub-nuclear distances $< 10^{-15}\\text{ m}$."
     ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 incorrectly claims gravity is the strongest force. Option 1 is correct because **Gravitational Force** is the **weakest fundamental interaction** among the four basic forces of nature. For elementary particles (such as two protons), the relative force strength ratio is: $\\text{Gravity} : \\text{Weak Nuclear} : \\text{Electrostatic} : \\text{Strong Nuclear} = 1 : 10^{25} : 10^{36} : 10^{38}$. Thus, gravitational force is approximately **$10^{36}$ times smaller than electrostatic force** and **$10^{38}$ times smaller than strong nuclear force**. Option 2 and Option 3 state incorrect relative strengths or ranges."
+    "e": "<b>Explanation:</b> Option 0 incorrectly claims gravity is the strongest force. Option 1 is correct because <b>Gravitational Force</b> is the <b>weakest fundamental interaction</b> among the four basic forces of nature. For elementary particles (such as two protons), the relative force strength ratio is: $\\text{Gravity} : \\text{Weak Nuclear} : \\text{Electrostatic} : \\text{Strong Nuclear} = 1 : 10^{25} : 10^{36} : 10^{38}$. Thus, gravitational force is approximately <b>$10^{36}$ times smaller than electrostatic force</b> and <b>$10^{38}$ times smaller than strong nuclear force</b>. Option 2 and Option 3 state incorrect relative strengths or ranges."
   },
   {
     "p_id": "bpsc_phys_m26_06",
@@ -336,7 +335,7 @@
       "Driven exclusively by the Sun during solar eclipses."
     ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 misattributes tides to Jupiter. Option 1 is correct because **Oceanic Tides** are caused by the differential gravitational attraction exerted on Earth's oceans by **both the Moon and the Sun**. Tidal force depends on the inverse cube of distance ($\\\\text{Tidal Force} \\\\propto \\\\frac{M}{r^3}$). Because the Moon is vastly closer to Earth than the Sun ($r_{\\\\text{Moon}} \\\\ll r_{\\\\text{Sun}}$), the **Moon's tidal generating capability is approximately twice as strong as the Sun's**, despite the Sun possessing much greater overall mass. Option 2 and Option 3 describe non-existent magnetic or single-body mechanisms."
+    "e": "<b>Explanation:</b> Option 0 misattributes tides to Jupiter. Option 1 is correct because <b>Oceanic Tides</b> are caused by the differential gravitational attraction exerted on Earth's oceans by <b>both the Moon and the Sun</b>. Tidal force depends on the inverse cube of distance ($\\text{Tidal Force} \\propto \\frac{M}{r^3}$). Because the Moon is vastly closer to Earth than the Sun ($r_{\\text{Moon}} \\ll r_{\\text{Sun}}$), the <b>Moon's tidal generating capability is approximately twice as strong as the Sun's</b>, despite the Sun possessing much greater overall mass. Option 2 and Option 3 describe non-existent magnetic or single-body mechanisms."
   },
   {
     "p_id": "bpsc_phys_m26_07",
@@ -349,7 +348,7 @@
       "$g' = g \\cdot R_e \\cdot h$"
     ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 incorrectly shows an increase in gravity with height. Option 1 is correct because at height $h$, $g' = \\frac{G M_e}{(R_e + h)^2} = g \\left(1 + \\frac{h}{R_e}\\right)^{-2}$. Expanding via the binomial theorem for small heights ($h \\ll R_e$) yields: <b>$$g' = g \\left(1 - \\frac{2h}{R_e}\\right)$$</b> This confirms that **acceleration due to gravity decreases linearly with altitude** near Earth's surface. Option 2 and Option 3 present invalid non-binomial algebraic approximations."
+    "e": "<b>Explanation:</b> Option 0 incorrectly shows an increase in gravity with height. Option 1 is correct because at height $h$, $g' = \\frac{G M_e}{(R_e + h)^2} = g \\left(1 + \\frac{h}{R_e}\\right)^{-2}$. Expanding via the binomial theorem for small heights ($h \\ll R_e$) yields: $$g' = g \\left(1 - \\frac{2h}{R_e}\\right)$$ This confirms that <b>acceleration due to gravity decreases linearly with altitude</b> near Earth's surface. Option 2 and Option 3 present invalid non-binomial algebraic approximations."
   },
   {
     "p_id": "bpsc_phys_m26_08",
@@ -362,7 +361,7 @@
       "$g$ becomes zero at the poles due to magnetic cancellation."
     ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 reverses polar and equatorial values. Option 1 is correct because Earth is an oblate spheroid—flattened at the poles and bulging at the equator. Consequently, the **polar radius ($R_p$) is approximately $21\\text{ km}$ smaller than the equatorial radius ($R_e$)**. Since acceleration due to gravity is inversely proportional to the square of radius ($g = \\frac{G M}{R^2}$), **$g$ reaches its maximum value at the poles** (where distance to Earth's center is smallest) and **its minimum value at the equator** (where distance is greatest). Option 2 ignores Earth's shape, and Option 3 states a false magnetic claim."
+    "e": "<b>Explanation:</b> Option 0 reverses polar and equatorial values. Option 1 is correct because Earth is an oblate spheroid—flattened at the poles and bulging at the equator. Consequently, the <b>polar radius ($R_p$) is approximately $21\\text{ km}$ smaller than the equatorial radius ($R_e$)</b>. Since acceleration due to gravity is inversely proportional to the square of radius ($g = \\frac{G M}{R^2}$), <b>$g$ reaches its maximum value at the poles</b> (where distance to Earth's center is smallest) and <b>its minimum value at the equator</b> (where distance is greatest). Option 2 ignores Earth's shape, and Option 3 states a false magnetic claim."
   },
   {
     "p_id": "bpsc_phys_m26_09",
@@ -375,7 +374,7 @@
       "$g = 4.9 \\text{ m/s}^2$"
     ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 assumes surface gravity persists at the center. Option 1 is correct because at depth $d$ inside Earth, acceleration due to gravity is given by $g' = g \\left(1 - \\frac{d}{R_e}\\right)$. At the exact geometric center of Earth, depth equals the Earth's radius ($d = R_e$). Substituting $d = R_e$ gives: <b>$$g' = g \\left(1 - \\frac{R_e}{R_e}\\right) = g(1 - 1) = \\mathbf{0 \\text{ m/s}^2}$$</b> At the center, gravitational attraction from surrounding spherical mass shells cancels out symmetrically in all directions, yielding **zero acceleration due to gravity**. Option 2 and Option 3 state incorrect finite or infinite values."
+    "e": "<b>Explanation:</b> Option 0 assumes surface gravity persists at the center. Option 1 is correct because at depth $d$ inside Earth, acceleration due to gravity is given by $g' = g \\left(1 - \\frac{d}{R_e}\\right)$. At the exact geometric center of Earth, depth equals the Earth's radius ($d = R_e$). Substituting $d = R_e$ gives: $$g' = g \\left(1 - \\frac{R_e}{R_e}\\right) = g(1 - 1) = 0\\text{ m/s}^2$$ At the center, gravitational attraction from surrounding spherical mass shells cancels out symmetrically in all directions, yielding <b>zero acceleration due to gravity</b>. Option 2 and Option 3 state incorrect finite or infinite values."
   },
   {
     "p_id": "bpsc_phys_m26_10",
@@ -388,7 +387,7 @@
       "Mass is measured in Newtons; Weight is measured in kilograms."
     ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 completely swaps scalar/vector classifications and constancy. Option 1 is correct because: (1) **Mass ($m$)** is a fundamental scalar quantity measuring matter content and inertia, expressed in **kilograms ($\\\\text{kg}$)**, which remains strictly invariant everywhere in the universe; (2) **Weight ($W = mg$)** is a derived vector force directed toward Earth's center, expressed in **Newtons ($\\\\text{N}$)**, which varies dynamically with local changes in $g$ (becoming zero at Earth's center or in free-fall). Option 2 reverses mass and weight zero-limit behaviors, and Option 3 swaps SI unit assignments."
+    "e": "<b>Explanation:</b> Option 0 completely swaps scalar/vector classifications and constancy. Option 1 is correct because: (1) <b>Mass ($m$)</b> is a fundamental scalar quantity measuring matter content and inertia, expressed in <b>kilograms ($\\text{kg}$)</b>, which remains strictly invariant everywhere in the universe; (2) <b>Weight ($W = mg$)</b> is a derived vector force directed toward Earth's center, expressed in <b>Newtons ($\\text{N}$)</b>, which varies dynamically with local changes in $g$ (becoming zero at Earth's center or in free-fall). Option 2 reverses mass and weight zero-limit behaviors, and Option 3 swaps SI unit assignments."
   },
   {
     "p_id": "bpsc_phys_m26_11",
@@ -401,7 +400,7 @@
       "Weight on Moon: $0\\text{ N}$; Mass decreases by 6 times."
     ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 incorrectly states weight remains $600\\text{ N}$ and mass changes. Option 1 is correct because surface gravity on the Moon is approximately $1/6^{\\text{th}}$ that of Earth ($g_{\\text{Moon}} \\approx \\frac{1}{6} g_{\\text{Earth}}$). Therefore, an object's weight on the Moon is: <b>$$W_{\\text{Moon}} = m \\cdot g_{\\text{Moon}} = m \\cdot \\frac{g_{\\text{Earth}}}{6} = \\frac{600\\text{ N}}{6} = \\mathbf{100\\text{ N}}$$</b> However, **mass ($m$) is an intrinsic scalar property that remains strictly invariant** regardless of location. Option 2 multiplies weight by 6, and Option 3 claims mass decreases."
+    "e": "<b>Explanation:</b> Option 0 incorrectly states weight remains $600\\text{ N}$ and mass changes. Option 1 is correct because surface gravity on the Moon is approximately $1/6^{\\text{th}}$ that of Earth ($g_{\\text{Moon}} \\approx \\frac{1}{6} g_{\\text{Earth}}$). Therefore, an object's weight on the Moon is: $$W_{\\text{Moon}} = m \\cdot g_{\\text{Moon}} = m \\cdot \\frac{g_{\\text{Earth}}}{6} = \\frac{600\\text{ N}}{6} = 100\\text{ N}$$ However, <b>mass ($m$) is an intrinsic scalar property that remains strictly invariant</b> regardless of location. Option 2 multiplies weight by 6, and Option 3 claims mass decreases."
   },
   {
     "p_id": "bpsc_phys_m26_12",
@@ -414,7 +413,7 @@
       "Altitude: $100\\text{ km}$; Time Period: $12\\text{ hours}$"
     ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 describes Low Earth Orbit (LEO) polar satellites. Option 1 is correct because a <b>Geostationary (Geosynchronous) Satellite</b> orbits in the equatorial plane at a fixed altitude of approximately <b>$35,786\\text{ km}$ ($\\\\sim 36,000\\text{ km}$)</b> above Earth's surface. Its orbital time period is exactly <b>$24\\text{ hours}$</b>, matching Earth's axial rotation period. Consequently, the satellite revolves in the same direction as Earth's rotation (west to east) and appears completely stationary relative to any fixed ground point on Earth. Option 2 and Option 3 list non-geostationary parameters."
+    "e": "<b>Explanation:</b> Option 0 describes Low Earth Orbit (LEO) polar satellites. Option 1 is correct because a <b>Geostationary (Geosynchronous) Satellite</b> orbits in the equatorial plane at a fixed altitude of approximately <b>$35,786\\text{ km}$ ($\\sim 36,000\\text{ km}$)</b> above Earth's surface. Its orbital time period is exactly <b>$24\\text{ hours}$</b>, matching Earth's axial rotation period. Consequently, the satellite revolves in the same direction as Earth's rotation (west to east) and appears completely stationary relative to any fixed ground point on Earth. Option 2 and Option 3 list non-geostationary parameters."
   },
   {
     "p_id": "bpsc_phys_m26_13",
@@ -424,10 +423,10 @@
       "$E = + \\frac{G M m}{r}$",
       "$E = - \\frac{G M m}{2r}$",
       "$E = - \\frac{G M m}{r^2}$",
-      "$E = zero$"
+      "$E = \\text{zero}$"
     ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 gives positive potential energy. Option 1 is correct because an orbiting satellite possesses: <br>1. <b>Potential Energy ($U$):</b> $U = - \\frac{G M m}{r}$ <br>2. <b>Kinetic Energy ($K$):</b> $K = \\frac{1}{2} m v_o^2 = \\frac{1}{2} m \\left(\\frac{G M}{r}\\right) = + \\frac{G M m}{2r}$ <br>3. <b>Total Mechanical Energy ($E = K + U$):</b> <br>$$E = \\frac{G M m}{2r} - \\frac{G M m}{r} = - \\mathbf{\\frac{G M m}{2r}}$$ <br>The <b>negative sign</b> signifies that the satellite is bound to Earth's gravitational field. <b>Binding Energy</b> is defined as the energy required to free the satellite to infinity, which equals $-E = + \\frac{G M m}{2r}$. Option 2 lists force dependence, and Option 3 incorrectly asserts zero total energy."
+    "e": "<b>Explanation:</b> Option 0 gives positive potential energy. Option 1 is correct because an orbiting satellite possesses: <br>1. <b>Potential Energy ($U$):</b> $U = - \\frac{G M m}{r}$ <br>2. <b>Kinetic Energy ($K$):</b> $K = \\frac{1}{2} m v_o^2 = \\frac{1}{2} m \\left(\\frac{G M}{r}\\right) = + \\frac{G M m}{2r}$ <br>3. <b>Total Mechanical Energy ($E = K + U$):</b> <br>$$E = \\frac{G M m}{2r} - \\frac{G M m}{r} = - \\frac{G M m}{2r}$$ <br>The <b>negative sign</b> signifies that the satellite is bound to Earth's gravitational field. <b>Binding Energy</b> is defined as the energy required to free the satellite to infinity, which equals $-E = + \\frac{G M m}{2r}$. Option 2 lists force dependence, and Option 3 incorrectly asserts zero total energy."
   },
   {
     "p_id": "bpsc_phys_m26_14",
@@ -440,7 +439,7 @@
       "$T \\propto \\frac{1}{a^2}$"
     ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 asserts linear period-distance scaling. Option 1 is correct because **Kepler's Third Law (Law of Periods)** states that the square of the orbital time period ($T$) of a planet revolving around the Sun is directly proportional to the cube of the semi-major axis ($a$) of its elliptical orbit: <b>$$T^2 \\propto a^3 \\implies T^2 = K \\cdot a^3$$</b> This law confirms that planets farther from the Sun (larger semi-major axis $a$) take significantly longer times to complete one full revolution. Option 2 reverses exponents ($T^3 \\propto a^2$), and Option 3 asserts inverse square dependence."
+    "e": "<b>Explanation:</b> Option 0 asserts linear period-distance scaling. Option 1 is correct because <b>Kepler's Third Law (Law of Periods)</b> states that the square of the orbital time period ($T$) of a planet revolving around the Sun is directly proportional to the cube of the semi-major axis ($a$) of its elliptical orbit: $$T^2 \\propto a^3 \\implies T^2 = K \\cdot a^3$$ This law confirms that planets farther from the Sun (larger semi-major axis $a$) take significantly longer times to complete one full revolution. Option 2 reverses exponents ($T^3 \\propto a^2$), and Option 3 asserts inverse square dependence."
   },
   {
     "p_id": "bpsc_phys_m26_15",
@@ -453,7 +452,7 @@
       "Law of Conservation of Electric Charge"
     ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 misidentifies linear momentum conservation. Option 1 is correct because the gravitational force exerted by the Sun on a planet acts strictly along the central radial line joining their centers ($\\\\vec{r}$). Because force is radial, net torque about the Sun is zero ($\\vec{\\tau} = \\vec{r} \\times \\vec{F} = 0$). Zero torque implies that the **Angular Momentum ($L = m r^2 \\omega = m r v_{\\perp}$)** of the planet remains strictly conserved. Aerial speed is related to angular momentum by $\\frac{dA}{dt} = \\frac{L}{2m} = \\text{constant}$, establishing **Kepler's Second Law as a direct consequence of Conservation of Angular Momentum**. This implies that a planet moves **faster when closer to the Sun (perihelion)** and **slower when farther away (aphelion)**. Option 2 and Option 3 state non-gravitational conservation laws."
+    "e": "<b>Explanation:</b> Option 0 misidentifies linear momentum conservation. Option 1 is correct because the gravitational force exerted by the Sun on a planet acts strictly along the central radial line joining their centers ($\\vec{r}$). Because force is radial, net torque about the Sun is zero ($\\vec{\\tau} = \\vec{r} \\times \\vec{F} = 0$). Zero torque implies that the <b>Angular Momentum ($L = m r^2 \\omega = m r v_{\\perp}$)</b> of the planet remains strictly conserved. Aerial speed is related to angular momentum by $\\frac{dA}{dt} = \\frac{L}{2m} = \\text{constant}$, establishing <b>Kepler's Second Law as a direct consequence of Conservation of Angular Momentum</b>. This implies that a planet moves <b>faster when closer to the Sun (perihelion)</b> and <b>slower when farther away (aphelion)</b>. Option 2 and Option 3 state non-gravitational conservation laws."
   },
   {
     "p_id": "bpsc_phys_m26_16",
@@ -466,7 +465,7 @@
       "$v_o = 1.21 \\text{ km/s}$"
     ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 gives escape velocity ($v_e$). Option 1 is correct because orbital velocity is given by $v_o = \\sqrt{\\frac{G M}{R_e + h}}$. For a satellite orbiting extremely close to Earth's surface ($h \\approx 0$), substituting $G M = g R_e^2$ yields: <b>$$v_o = \\sqrt{g R_e}$$</b> Substituting $g = 9.8 \\text{ m/s}^2$ and $R_e = 6.37 \\times 10^6 \\text{ m}$ gives: <b>$$v_o = \\sqrt{9.8 \\times 6.37 \\times 10^6} \\approx 7918 \\text{ m/s} \\approx 7.92 \\text{ km/s} \\approx 8.0 \\text{ km/s}$$</b> Option 2 is the speed of light, and Option 3 is an arbitrary value."
+    "e": "<b>Explanation:</b> Option 0 gives escape velocity ($v_e$). Option 1 is correct because orbital velocity is given by $v_o = \\sqrt{\\frac{G M}{R_e + h}}$. For a satellite orbiting extremely close to Earth's surface ($h \\approx 0$), substituting $G M = g R_e^2$ yields: $$v_o = \\sqrt{g R_e}$$ Substituting $g = 9.8 \\text{ m/s}^2$ and $R_e = 6.37 \\times 10^6 \\text{ m}$ gives: $$v_o = \\sqrt{9.8 \\times 6.37 \\times 10^6} \\approx 7918 \\text{ m/s} \\approx 7.92 \\text{ km/s} \\approx 8.0 \\text{ km/s}$$ Option 2 is the speed of light, and Option 3 is an arbitrary value."
   },
   {
     "p_id": "bpsc_phys_m26_17",
@@ -479,7 +478,7 @@
       "It escapes Earth's gravity along a parabolic path never to return."
     ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 occurs when projection speed is less than orbital velocity ($v < v_o$). Option 1 is correct because orbital trajectory regimes are determined by launch velocity $v$:\n1. $v < v_o$: Satellite falls back to Earth in a spiral/parabolic arc.\n2. $v = v_o$: Satellite moves in a **Stable Circular Path**.\n3. **$v_o < v < v_e$:** Satellite moves in a **Stable Elliptical Path** around Earth (with Earth at one focus).\n4. $v = v_e$: Satellite escapes Earth's gravity along a parabolic trajectory.\nOption 2 applies to $v = v_o$, and Option 3 applies to $v = v_e$.\n"
+    "e": "<b>Explanation:</b> Option 0 occurs when projection speed is less than orbital velocity ($v < v_o$). Option 1 is correct because orbital trajectory regimes are determined by launch velocity $v$:<br>1. $v < v_o$: Satellite falls back to Earth in a spiral/parabolic arc.<br>2. $v = v_o$: Satellite moves in a <b>Stable Circular Path</b>.<br>3. <b>$v_o < v < v_e$:</b> Satellite moves in a <b>Stable Elliptical Path</b> around Earth (with Earth at one focus).<br>4. $v = v_e$: Satellite escapes Earth's gravity along a parabolic trajectory.<br>Option 2 applies to $v = v_o$, and Option 3 applies to $v = v_e$."
   },
   {
     "p_id": "bpsc_phys_m26_18",
@@ -492,7 +491,7 @@
       "$v_e = \\frac{g}{R_e} = 0.5 \\text{ km/s}$"
     ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 describes orbital velocity. Option 1 is correct because escape velocity is derived by equating initial kinetic energy to gravitational binding energy: $\\frac{1}{2} m v_e^2 = \\frac{G M m}{R_e} \\implies v_e = \\sqrt{\\frac{2 G M}{R_e}}$. Since $G M = g R_e^2$, this simplifies to: <b>$$v_e = \\sqrt{2 g R_e}$$</b> Substituting $g = 9.8 \\text{ m/s}^2$ and $R_e = 6370 \\text{ km}$ yields **$v_e \\approx 11.2 \\text{ km/s}$**. A projectile launched at or above $11.2 \\text{ km/s}$ from Earth will escape gravity and never return. Option 2 and Option 3 present invalid mathematical derivations."
+    "e": "<b>Explanation:</b> Option 0 describes orbital velocity. Option 1 is correct because escape velocity is derived by equating initial kinetic energy to gravitational binding energy: $\\frac{1}{2} m v_e^2 = \\frac{G M m}{R_e} \\implies v_e = \\sqrt{\\frac{2 G M}{R_e}}$. Since $G M = g R_e^2$, this simplifies to: $$v_e = \\sqrt{2 g R_e}$$ Substituting $g = 9.8 \\text{ m/s}^2$ and $R_e = 6370 \\text{ km}$ yields <b>$v_e \\approx 11.2 \\text{ km/s}$</b>. A projectile launched at or above $11.2 \\text{ km/s}$ from Earth will escape gravity and never return. Option 2 and Option 3 present invalid mathematical derivations."
   },
   {
     "p_id": "bpsc_phys_m26_19",
@@ -505,7 +504,7 @@
       "$v_e = v_o^2$"
     ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 incorrectly doubles orbital velocity. Option 1 is correct because comparing near-surface orbital velocity ($v_o = \\sqrt{g R_e}$) and escape velocity ($v_e = \\sqrt{2 g R_e}$) yields: <b>$$v_e = \\sqrt{2 g R_e} = \\sqrt{2} \\cdot \\sqrt{g R_e} = \\mathbf{\\sqrt{2} \\cdot v_o}$$</b> This proves that escape velocity near Earth's surface is exactly **$\\sqrt{2}$ times (about $1.414$ times or $41.4\\%$ greater than) orbital velocity**. If an orbiting satellite's speed is increased by $41.4\\%$, it escapes Earth's gravitational orbit entirely. Option 2 inverts the ratio, and Option 3 squares the speed."
+    "e": "<b>Explanation:</b> Option 0 incorrectly doubles orbital velocity. Option 1 is correct because comparing near-surface orbital velocity ($v_o = \\sqrt{g R_e}$) and escape velocity ($v_e = \\sqrt{2 g R_e}$) yields: $$v_e = \\sqrt{2 g R_e} = \\sqrt{2} \\cdot \\sqrt{g R_e} = \\mathbf{\\sqrt{2} \\cdot v_o}$$ This proves that escape velocity near Earth's surface is exactly <b>$\\sqrt{2}$ times (about $1.414$ times or $41.4\\%$ greater than) orbital velocity</b>. If an orbiting satellite's speed is increased by $41.4\\%$, it escapes Earth's gravitational orbit entirely. Option 2 inverts the ratio, and Option 3 squares the speed."
   },
   {
     "p_id": "bpsc_phys_m26_20",
@@ -518,6 +517,6 @@
       "Accelerating upward in a high-speed elevator."
     ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 represents maximum weight ($W = m g_{\\text{max}}$). Option 1 is correct because **Weightlessness** is the physical condition where the normal contact reaction force ($R$) supporting a body drops to zero ($R = 0$). This occurs during:\n1. **Free Fall:** Falling under gravity alone ($a = g implies R = M(g - g) = 0$).\n2. **Orbiting Spacecraft:** Satellites and occupants are in continuous free fall toward Earth.\n3. **Center of Earth:** Where local gravity vanishes ($g = 0 implies W = 0$).\n4. **Elevator Cable Break:** Free-falling elevator car.\nOption 2 involves buoyant fluid upthrust (not zero gravity weightlessness), and Option 3 increases apparent weight ($R = M(g+a)$)."
+    "e": "<b>Explanation:</b> Option 0 represents maximum weight ($W = m g_{\\text{max}}$). Option 1 is correct because <b>Weightlessness</b> is the physical condition where the normal contact reaction force ($R$) supporting a body drops to zero ($R = 0$). This occurs during:<br>1. <b>Free Fall:</b> Falling under gravity alone ($a = g \\implies R = M(g - g) = 0$).<br>2. <b>Orbiting Spacecraft:</b> Satellites and occupants are in continuous free fall toward Earth.<br>3. <b>Center of Earth:</b> Where local gravity vanishes ($g = 0 \\implies W = 0$).<br>4. <b>Elevator Cable Break:</b> Free-falling elevator car.<br>Option 2 involves buoyant fluid upthrust (not zero gravity weightlessness), and Option 3 increases apparent weight ($R = M(g+a)$)."
   }
 ]
