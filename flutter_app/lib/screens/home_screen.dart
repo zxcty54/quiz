@@ -244,7 +244,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 Container(
                   padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
                   decoration: BoxDecoration(color: const Color(0xFF2563EB), borderRadius: BorderRadius.circular(20)),
-                  child: const Text('ONLINE TOOL', style: TextStyle(fontSize: 9, fontWeight: FontWeight.extrabold, color: Colors.white)),
+                  child: const Text('ONLINE TOOL', style: TextStyle(fontSize: 9, fontWeight: FontWeight.bold, color: Colors.white)),
                 ),
               ],
             ),
@@ -323,9 +323,22 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 
- 
+  // 🩺 BTSC BANNER WIDGET
+  Widget _buildBtscBanner(BuildContext context) {
+    return Card(
+      color: const Color(0xFFF0FDF4),
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12), side: const BorderSide(color: Color(0xFFBBF7D0))),
+      child: ListTile(
+        leading: const CircleAvatar(backgroundColor: Color(0xFFDCFCE7), child: Icon(Icons.medical_services_rounded, color: Color(0xFF16A34A))),
+        title: const Text('🩺 BTSC ANM/GNM & PMM Mocks', style: TextStyle(fontWeight: FontWeight.bold, color: Color(0xFF166534), fontSize: 14)),
+        subtitle: const Text('11th-12th NCERT Biology & Technical Mocks', style: TextStyle(fontSize: 11)),
+        trailing: const Icon(Icons.arrow_forward_ios_rounded, size: 16, color: Color(0xFF16A34A)),
+        onTap: () => setState(() => _currentBottomIndex = 1),
+      ),
+    );
+  }
 
-  // 2️⃣ TAB 2: REVISION HUB (FETCHING ALL MAPPINGS FROM HOME_CONFIG.JSON)
+  // 2️⃣ TAB 2: REVISION HUB
   Widget _buildRevisionTab(BuildContext context) {
     return ListView(
       padding: const EdgeInsets.all(16),
