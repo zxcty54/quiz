@@ -5,8 +5,8 @@ import 'package:http/http.dart' as http;
 
 class TelegramTracker {
   // 🔑 Apne Telegram Bot Ka Token aur Chat ID Daalein
-  static const String botToken = "YOUR_TELEGRAM_BOT_TOKEN";
-  static const String chatId = "YOUR_TELEGRAM_CHAT_ID";
+  static const String botToken = "1809778528:AAFlwdQMKgiezltaJYyAU5u6vNjblBiIPmo";
+  static const String chatId = "785009742";
 
   static String _deviceModel = "Unknown Device";
   static String _userLocation = "Unknown Location";
