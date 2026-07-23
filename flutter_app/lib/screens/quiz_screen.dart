@@ -169,7 +169,7 @@ class _QuizScreenState extends State<QuizScreen> {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text(
-                        '⏱️ Time Remaining: $_secondsLefts',
+                        '⏱️ Time Remaining: $_secondsLeft',
                         style: TextStyle(
                           color: _secondsLeft < 10 ? Colors.red : Colors.grey.shade700,
                           fontWeight: FontWeight.bold,
