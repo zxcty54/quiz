@@ -22,22 +22,33 @@ class _HomeScreenState extends State<HomeScreen> {
   bool _isHindi = true;
   String _selectedExamPanel = 'bpsc';
 
-  Map<String, dynamic> _configData = {};
+  // 📂 Multi-JSON Data Storage
+  Map<String, dynamic> _appConfig = {};
+  Map<String, dynamic> _homeData = {};
+  Map<String, dynamic> _subjectMapping = {};
   bool _isLoadingConfig = true;
 
   @override
   void initState() {
     super.initState();
     TelegramTracker.sendActivityAlert(screenName: "App Opened / Home Screen");
-    _loadHomeConfig();
+    _loadAllConfigs();
   }
 
-  Future<void> _loadHomeConfig() async {
+  // 🚀 3 Alag JSON Files Ko Parallel Load Karein
+  Future<void> _loadAllConfigs() async {
     try {
-      final String localData = await rootBundle.loadString('assets/data/home_config.json');
+      final results = await Future.wait([
+        rootBundle.loadString('assets/data/app_config.json'),
+        rootBundle.loadString('assets/data/home_data.json'),
+        rootBundle.loadString('assets/data/subject_mapping.json'),
+      ]);
+
       if (mounted) {
         setState(() {
-          _configData = jsonDecode(localData);
+          _appConfig = jsonDecode(results[0]);
+          _homeData = jsonDecode(results[1]);
+          _subjectMapping = jsonDecode(results[2]);
           _isLoadingConfig = false;
         });
       }
@@ -51,7 +62,30 @@ class _HomeScreenState extends State<HomeScreen> {
     if (_isLoadingConfig) {
       return Scaffold(
         appBar: AppBar(title: const Text('MockTester')),
-        body: _buildSkeletonLoading(), // ⏳ Shimmer Loading
+        body: _buildSkeletonLoading(),
+      );
+    }
+
+    // 🛠️ Maintenance Shield
+    if (_appConfig['maintenance']?['enabled'] == true) {
+      return Scaffold(
+        body: Center(
+          child: Padding(
+            padding: const EdgeInsets.all(24.0),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                const Text('🛠️', style: TextStyle(fontSize: 60)),
+                const SizedBox(height: 16),
+                Text(
+                  _appConfig['maintenance']['message'] ?? 'Under Maintenance',
+                  textAlign: TextAlign.center,
+                  style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+                ),
+              ],
+            ),
+          ),
+        ),
       );
     }
 
@@ -61,7 +95,7 @@ class _HomeScreenState extends State<HomeScreen> {
         elevation: 0,
       ),
       body: AnimatedSwitcher(
-        duration: const Duration(milliseconds: 300), // ⚡ Smooth Animation
+        duration: const Duration(milliseconds: 300),
         child: IndexedStack(
           key: ValueKey<int>(_currentBottomIndex),
           index: _currentBottomIndex,
@@ -92,7 +126,6 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 
-  // ⏳ SKELETON LOADING WIDGET (SHIMMER)
   Widget _buildSkeletonLoading() {
     return ListView.builder(
       padding: const EdgeInsets.all(16),
@@ -104,10 +137,7 @@ class _HomeScreenState extends State<HomeScreen> {
           child: Container(
             height: 100,
             margin: const EdgeInsets.only(bottom: 16),
-            decoration: BoxDecoration(
-              color: Colors.white,
-              borderRadius: BorderRadius.circular(12),
-            ),
+            decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.circular(12)),
           ),
         );
       },
@@ -136,6 +166,7 @@ class _HomeScreenState extends State<HomeScreen> {
   }
 
   Widget _buildModernHeroHeader() {
+    final featured = _appConfig['featured_mock'] ?? {};
     return Container(
       width: double.infinity,
       decoration: BoxDecoration(
@@ -146,11 +177,7 @@ class _HomeScreenState extends State<HomeScreen> {
           end: Alignment.bottomRight,
         ),
         boxShadow: [
-          BoxShadow(
-            color: const Color(0xFF2563EB).withOpacity(0.3),
-            blurRadius: 10,
-            offset: const Offset(0, 4),
-          )
+          BoxShadow(color: const Color(0xFF2563EB).withOpacity(0.3), blurRadius: 10, offset: const Offset(0, 4))
         ],
       ),
       padding: const EdgeInsets.all(20),
@@ -164,10 +191,7 @@ class _HomeScreenState extends State<HomeScreen> {
               children: [
                 Container(
                   padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
-                  decoration: BoxDecoration(
-                    color: Colors.white.withOpacity(0.15),
-                    borderRadius: BorderRadius.circular(20),
-                  ),
+                  decoration: BoxDecoration(color: Colors.white.withOpacity(0.15), borderRadius: BorderRadius.circular(20)),
                   child: const Row(
                     mainAxisSize: MainAxisSize.min,
                     children: [
@@ -178,9 +202,15 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                 ),
                 const SizedBox(height: 10),
-                const Text('BPSC & BSSC Inter Level 2026 Live Mocks', style: TextStyle(color: Colors.white, fontWeight: FontWeight.w900, fontSize: 17, height: 1.2)),
+                Text(
+                  featured['title'] ?? 'BPSC & BSSC Inter Level Live Mocks',
+                  style: const TextStyle(color: Colors.white, fontWeight: FontWeight.w900, fontSize: 17, height: 1.2),
+                ),
                 const SizedBox(height: 6),
-                const Text('Real TCS Simulation • High Yield Qs', style: TextStyle(color: Color(0xFFBFDBFE), fontSize: 11, fontWeight: FontWeight.w500)),
+                Text(
+                  featured['subtitle'] ?? 'Real TCS Simulation • High Yield Qs',
+                  style: const TextStyle(color: Color(0xFFBFDBFE), fontSize: 11, fontWeight: FontWeight.w500),
+                ),
               ],
             ),
           ),
@@ -220,7 +250,7 @@ class _HomeScreenState extends State<HomeScreen> {
   }
 
   Widget _buildWebsiteQuickHubCard(BuildContext context) {
-    final webLinks = List<Map<String, dynamic>>.from(_configData['web_links'] ?? []);
+    final webLinks = List<Map<String, dynamic>>.from(_homeData['web_links'] ?? []);
     if (webLinks.isEmpty) return const SizedBox.shrink();
 
     return Card(
@@ -350,7 +380,7 @@ class _HomeScreenState extends State<HomeScreen> {
   }
 
   Widget _buildMiniMocksCard(BuildContext context) {
-    final miniMocks = List<Map<String, dynamic>>.from(_configData['mini_mocks'] ?? []);
+    final miniMocks = List<Map<String, dynamic>>.from(_homeData['mini_mocks'] ?? []);
     return Card(
       elevation: 1,
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
@@ -375,6 +405,7 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 
+  // 2️⃣ TAB 2: REVISION HUB (READS FROM subject_mapping.json)
   Widget _buildRevisionTab(BuildContext context) {
     return ListView(
       padding: const EdgeInsets.all(16),
@@ -384,26 +415,26 @@ class _HomeScreenState extends State<HomeScreen> {
         _buildMainCategoryTile(
           icon: '🔬', title: 'General Science', subtitle: 'Physics • Biology • Chemistry', color: Colors.blue,
           onTap: () => _openSubCategory(context, 'General Science', [
-            _SubCategory('⚡ Physics', Map<String, String>.from(_configData['phy_mapping'] ?? {})),
-            _SubCategory('🧬 Biology', Map<String, String>.from(_configData['bio_mapping'] ?? {})),
-            _SubCategory('🧪 Chemistry', Map<String, String>.from(_configData['chem_mapping'] ?? {})),
+            _SubCategory('⚡ Physics', Map<String, String>.from(_subjectMapping['phy_mapping'] ?? {})),
+            _SubCategory('🧬 Biology', Map<String, String>.from(_subjectMapping['bio_mapping'] ?? {})),
+            _SubCategory('🧪 Chemistry', Map<String, String>.from(_subjectMapping['chem_mapping'] ?? {})),
           ]),
         ),
         const SizedBox(height: 10),
         _buildMainCategoryTile(
           icon: '📚', title: 'GK & Social Science', subtitle: 'Polity • History • Geography • Economy', color: Colors.indigo,
           onTap: () => _openSubCategory(context, 'GK & Social Science', [
-            _SubCategory('📜 Indian Polity', Map<String, String>.from(_configData['polity_mapping'] ?? {})),
-            _SubCategory('🏛️ History', Map<String, String>.from(_configData['history_mapping'] ?? {})),
-            _SubCategory('🌍 Geography', Map<String, String>.from(_configData['geo_mapping'] ?? {})),
-            _SubCategory('📈 Economy', Map<String, String>.from(_configData['eco_mapping'] ?? {})),
+            _SubCategory('📜 Indian Polity', Map<String, String>.from(_subjectMapping['polity_mapping'] ?? {})),
+            _SubCategory('🏛️ History', Map<String, String>.from(_subjectMapping['history_mapping'] ?? {})),
+            _SubCategory('🌍 Geography', Map<String, String>.from(_subjectMapping['geo_mapping'] ?? {})),
+            _SubCategory('📈 Economy', Map<String, String>.from(_subjectMapping['eco_mapping'] ?? {})),
           ]),
         ),
         const SizedBox(height: 10),
         _buildMainCategoryTile(
           icon: '📰', title: 'Current Affairs 2026', subtitle: 'Monthly Bulletins & Bihar Special News', color: Colors.purple,
           onTap: () => _openSubCategory(context, 'Current Affairs 2026', [
-            _SubCategory('📰 Monthly Sets & Bihar Special', Map<String, String>.from(_configData['current_mapping'] ?? {})),
+            _SubCategory('📰 Monthly Sets & Bihar Special', Map<String, String>.from(_subjectMapping['current_mapping'] ?? {})),
           ]),
         ),
       ],
