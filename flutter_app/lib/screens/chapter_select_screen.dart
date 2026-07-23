@@ -1,11 +1,11 @@
-import 'dart:async';
 import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
-import 'quiz_screen.dart';
 import '../models/question_model.dart';
+import '../services/telegram_tracker.dart';
+import 'sectional_cbt_screen.dart';
 
-class ChapterSelectScreen extends StatefulWidget {
+class ChapterSelectScreen extends StatelessWidget {
   final String categoryTitle;
   final Map<String, String> chapterMapping;
 
@@ -15,172 +15,92 @@ class ChapterSelectScreen extends StatefulWidget {
     required this.chapterMapping,
   });
 
-  @override
-  State<ChapterSelectScreen> createState() => _ChapterSelectScreenState();
-}
+  void _launchChapterTest(BuildContext context, String chapterName, String jsonFile) async {
+    // 📲 Telegram Alert
+    TelegramTracker.sendActivityAlert(
+      screenName: "Started Chapter Test",
+      extraDetails: "$categoryTitle - $chapterName",
+    );
 
-class _ChapterSelectScreenState extends State<ChapterSelectScreen> {
-  bool _isLoading = false;
-
-  Future<void> _loadAndStartQuiz(String chapterName, String jsonFileName) async {
-    setState(() => _isLoading = true);
-
-    // 🌐 Dual Endpoint URLs for 100% Reliability
-    final String rawUrl = Uri.encodeFull("https://raw.githubusercontent.com/zxcty54/quiz/main/$jsonFileName");
-    final String cdnUrl = Uri.encodeFull("https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/$jsonFileName");
-
-    http.Response? response;
+    showDialog(
+      context: context,
+      barrierDismissible: false,
+      builder: (ctx) => const Center(child: CircularProgressIndicator()),
+    );
 
     try {
-      // 1️⃣ Attempt 1: Fetch from GitHub Raw (5 Second Timeout)
-      try {
-        response = await http.get(Uri.parse(rawUrl)).timeout(const Duration(seconds: 5));
-      } catch (_) {
-        // If GitHub Raw fails or times out, silently try CDN
-        response = null;
-      }
+      final res = await http.get(
+        Uri.parse("https://raw.githubusercontent.com/zxcty54/quiz/main/$jsonFile"),
+      );
+      
+      if (context.mounted) Navigator.pop(context);
 
-      // 2️⃣ Attempt 2: Fallback to jsDelivr CDN if Primary failed
-      if (response == null || response.statusCode != 200) {
-        response = await http.get(Uri.parse(cdnUrl)).timeout(
-          const Duration(seconds: 7),
-          onTimeout: () {
-            throw TimeoutException("Connection timed out. Check your Internet/Wi-Fi.");
-          },
-        );
-      }
+      if (res.statusCode == 200) {
+        List body = jsonDecode(res.body);
+        List<Question> qList = body.map((i) => Question.fromJson(i)).toList();
 
-      // 3️⃣ Parse JSON Questions
-      if (response.statusCode == 200) {
-        List<dynamic> body = jsonDecode(response.body);
-        List<Question> questions = body.map((dynamic item) => Question.fromJson(item)).toList();
-
-        if (!mounted) return;
-
-        if (questions.isNotEmpty) {
+        if (context.mounted && qList.isNotEmpty) {
           Navigator.push(
             context,
             MaterialPageRoute(
-              builder: (context) => QuizScreen(
-                chapterName: chapterName,
-                questions: questions,
-                fileName: jsonFileName,
+              builder: (ctx) => SectionalCbtScreen(
+                testTitle: chapterName,
+                questions: qList,
+                subFolder: jsonFile,
               ),
             ),
           );
-        } else {
-          _showErrorDialog("No questions found in this chapter.");
         }
-      } else {
-        throw Exception("Server Error (Code: ${response.statusCode})");
       }
     } catch (e) {
-      if (!mounted) return;
-      _showErrorDialog("Internet Connection Issue:\n\n$e");
-    } finally {
-      // 🔒 CRITICAL: Guaranteed Loader Reset
-      if (mounted) {
-        setState(() => _isLoading = false);
+      if (context.mounted) {
+        Navigator.pop(context);
+        ScaffoldMessenger.of(context).showSnackBar(
+          const SnackBar(content: Text('⚠️ Questions load nahi ho paye. Connection check karein!')),
+        );
       }
     }
   }
 
-  void _showErrorDialog(String message) {
-    showDialog(
-      context: context,
-      builder: (ctx) => AlertDialog(
-        title: const Text("⚠️ Connection Alert"),
-        content: Text(message),
-        actions: [
-          TextButton(
-            onPressed: () => Navigator.pop(ctx),
-            child: const Text("OK"),
-          )
-        ],
-      ),
-    );
-  }
-
   @override
   Widget build(BuildContext context) {
-    final chapterEntries = widget.chapterMapping.entries.toList();
+    final entries = chapterMapping.entries.toList();
 
     return Scaffold(
-      appBar: AppBar(title: Text(widget.categoryTitle)),
-      body: Stack(
-        children: [
-          ListView.builder(
-            padding: const EdgeInsets.all(16),
-            itemCount: chapterEntries.length,
-            itemBuilder: (context, index) {
-              final chapter = chapterEntries[index];
-              return Card(
-                margin: const EdgeInsets.symmetric(vertical: 6),
-                child: ListTile(
-                  leading: CircleAvatar(
-                    child: Text("${index + 1}"),
-                  ),
-                  title: Text(chapter.key, style: const TextStyle(fontWeight: FontWeight.bold)),
-                  subtitle: Text("File: ${chapter.value}", style: const TextStyle(fontSize: 12)),
-                  trailing: const Icon(Icons.arrow_forward_ios_rounded, size: 16),
-                  onTap: () => _showInstructionModal(chapter.key, chapter.value),
-                ),
-              );
-            },
-          ),
-          if (_isLoading)
-            Container(
-              color: Colors.black54,
-              child: const Center(
-                child: Card(
-                  child: Padding(
-                    padding: EdgeInsets.all(24),
-                    child: Column(
-                      mainAxisSize: MainAxisSize.min,
-                      children: [
-                        CircularProgressIndicator(),
-                        SizedBox(height: 16),
-                        Text("Loading Questions...", style: TextStyle(fontWeight: FontWeight.bold)),
-                        SizedBox(height: 4),
-                        Text("Connecting to Fast Server", style: TextStyle(fontSize: 12, color: Colors.grey)),
-                      ],
-                    ),
-                  ),
-                ),
-              ),
-            ),
-        ],
+      appBar: AppBar(
+        title: Text(categoryTitle, style: const TextStyle(fontWeight: FontWeight.bold)),
+        elevation: 0,
       ),
-    );
-  }
+      body: ListView.builder(
+        padding: const EdgeInsets.all(12),
+        itemCount: entries.length,
+        itemBuilder: (context, index) {
+          final chapterName = entries[index].key;
+          final jsonFile = entries[index].value;
 
-  void _showInstructionModal(String chapterName, String jsonFileName) {
-    showDialog(
-      context: context,
-      builder: (ctx) => AlertDialog(
-        title: Text(chapterName),
-        content: const Column(
-          mainAxisSize: MainAxisSize.min,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text("⏱️ Time Limit: 30 Seconds / Question"),
-            Text("🎯 Format: Latest Exam MCQ Pattern"),
-            Text("💡 Tip: Read detailed explanations"),
-          ],
-        ),
-        actions: [
-          TextButton(
-            onPressed: () => Navigator.pop(ctx),
-            child: const Text("Cancel"),
-          ),
-          ElevatedButton(
-            onPressed: () {
-              Navigator.pop(ctx);
-              _loadAndStartQuiz(chapterName, jsonFileName);
-            },
-            child: const Text("Start Test 🚀"),
-          ),
-        ],
+          return Card(
+            elevation: 1,
+            margin: const EdgeInsets.symmetric(vertical: 5),
+            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+            child: ListTile(
+              leading: const CircleAvatar(
+                backgroundColor: Color(0xFFEFF6FF),
+                child: Text('📝', style: TextStyle(fontSize: 18)),
+              ),
+              title: Text(
+                chapterName,
+                style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 14),
+              ),
+              // 🚀 FIX: .json file name HATA DIYA GAYA HAI! Ab Clean Subtitle Dikhega
+              subtitle: const Text(
+                'Practice Set • CBT Mode',
+                style: TextStyle(fontSize: 11, color: Colors.blueAccent, fontWeight: FontWeight.w500),
+              ),
+              trailing: const Icon(Icons.play_arrow_rounded, color: Color(0xFF2563EB)),
+              onTap: () => _launchChapterTest(context, chapterName, jsonFile),
+            ),
+          );
+        },
       ),
     );
   }
