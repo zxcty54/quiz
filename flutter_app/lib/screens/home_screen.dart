@@ -1,4 +1,7 @@
+import 'dart:math';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:url_launcher/url_launcher.dart';
 import 'chapter_select_screen.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -13,9 +16,9 @@ class _HomeScreenState extends State<HomeScreen> {
   bool _isDarkMode = false;
   bool _isHindi = true;
   double _fontSize = 14.0;
-  String _selectedExamPanel = 'bpsc'; // Default selected exam zone
+  String _selectedExamPanel = 'bpsc';
 
-  // JSON Mappings for Revision Hub (Tab 2)
+  // JSON Mappings
   static const Map<String, String> polityMapping = {
     'Historical Background': 'historicalbackgroud.json',
     'Making of Constitution': 'makingofconstitution.json',
@@ -141,45 +144,23 @@ class _HomeScreenState extends State<HomeScreen> {
         index: _currentBottomIndex,
         children: [
           _buildTab1Home(context),            // 🏠 Tab 1: Home Dashboard
-          _buildTab2Revision(context),        // 📚 Tab 2: Revision Hub (Chapterwise)
-          _buildTab3SectionalMock(context),   // 📝 Tab 3: Sectional Mock (Examwise Sets)
+          _buildTab2Revision(context),        // 📚 Tab 2: Revision Hub
+          _buildTab3SectionalMock(context),   // 📝 Tab 3: Sectional Mock
           _buildTab4SavedHub(context),         // ⭐ Tab 4: Saved & Downloads
           _buildTab5Profile(context),         // ⚙️ Tab 5: Profile & Settings
         ],
       ),
-
-      // 📱 5-TAB BOTTOM NAVIGATION BAR
       bottomNavigationBar: NavigationBar(
         selectedIndex: _currentBottomIndex,
         onDestinationSelected: (int index) {
           setState(() => _currentBottomIndex = index);
         },
         destinations: const [
-          NavigationDestination(
-            icon: Icon(Icons.home_outlined),
-            selectedIcon: Icon(Icons.home_rounded),
-            label: 'Home',
-          ),
-          NavigationDestination(
-            icon: Icon(Icons.menu_book_outlined),
-            selectedIcon: Icon(Icons.menu_book_rounded),
-            label: 'Revision',
-          ),
-          NavigationDestination(
-            icon: Icon(Icons.assignment_outlined),
-            selectedIcon: Icon(Icons.assignment_rounded),
-            label: 'Sectional',
-          ),
-          NavigationDestination(
-            icon: Icon(Icons.star_outline_rounded),
-            selectedIcon: Icon(Icons.star_rounded),
-            label: 'Saved',
-          ),
-          NavigationDestination(
-            icon: Icon(Icons.person_outline_rounded),
-            selectedIcon: Icon(Icons.person_rounded),
-            label: 'Profile',
-          ),
+          NavigationDestination(icon: Icon(Icons.home_outlined), selectedIcon: Icon(Icons.home_rounded), label: 'Home'),
+          NavigationDestination(icon: Icon(Icons.menu_book_outlined), selectedIcon: Icon(Icons.menu_book_rounded), label: 'Revision'),
+          NavigationDestination(icon: Icon(Icons.assignment_outlined), selectedIcon: Icon(Icons.assignment_rounded), label: 'Sectional'),
+          NavigationDestination(icon: Icon(Icons.star_outline_rounded), selectedIcon: Icon(Icons.star_rounded), label: 'Saved'),
+          NavigationDestination(icon: Icon(Icons.person_outline_rounded), selectedIcon: Icon(Icons.person_rounded), label: 'Profile'),
         ],
       ),
     );
@@ -195,9 +176,9 @@ class _HomeScreenState extends State<HomeScreen> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            // Banner Carousel
+            // 1. Top Poster Carousel
             SizedBox(
-              height: 150,
+              height: 140,
               child: PageView(
                 children: [
                   _buildPosterCard('🔴 2026 Live Mocks', 'BPSC & BSSC Sectional Mocks', '9500+ Exam Qs • 53+ Sets', const Color(0xFF2563EB)),
@@ -205,14 +186,14 @@ class _HomeScreenState extends State<HomeScreen> {
                 ],
               ),
             ),
-            const SizedBox(height: 16),
+            const SizedBox(height: 14),
 
-            // Quick Stats Bar
+            // 2. Quick Stats Grid
             Card(
               elevation: 1,
               shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
               child: Padding(
-                padding: const EdgeInsets.all(16.0),
+                padding: const EdgeInsets.all(14.0),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
@@ -223,27 +204,25 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
               ),
             ),
-            const SizedBox(height: 16),
+            const SizedBox(height: 14),
 
-            // Daily Challenge Button
-            Card(
-              color: Colors.blue.shade50,
-              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
-              child: ListTile(
-                leading: const CircleAvatar(backgroundColor: Color(0xFF2563EB), child: Icon(Icons.bolt, color: Colors.white)),
-                title: const Text('🚀 Explore Sectional Test Mocks', style: TextStyle(fontWeight: FontWeight.bold)),
-                subtitle: const Text('BPSC, BSSC CGL, SSC & Railway Sets'),
-                trailing: const Icon(Icons.arrow_forward_ios_rounded, size: 16),
-                onTap: () => setState(() => _currentBottomIndex = 2), // Switch to Sectional Mock Tab
-              ),
-            ),
+            // 3. ⚡ Topic-Wise Mini Mocks Widget
+            _buildMiniMocksGrid(context),
+            const SizedBox(height: 14),
+
+            // 4. 🩺 BTSC ANM/GNM Special Banner
+            _buildBtscBanner(context),
+            const SizedBox(height: 14),
+
+            // 5. 📸 Bano MockTester Ke Creator (Telegram Photo Form)
+            const TelegramCreatorWidget(),
           ],
         ),
       ),
     );
   }
 
-  // 📚 TAB 2: REVISION HUB (CHAPTERWISE JSONs)
+  // 📚 TAB 2: REVISION HUB
   Widget _buildTab2Revision(BuildContext context) {
     return RefreshIndicator(
       onRefresh: _handleRefresh,
@@ -303,24 +282,26 @@ class _HomeScreenState extends State<HomeScreen> {
               ],
             ),
           ),
+          const SizedBox(height: 16),
+
+          // Paramedical Detailed Matrix Table Widget
+          _buildParamedicalMatrixCard(),
         ],
       ),
     );
   }
 
-  // 📝 TAB 3: SECTIONAL MOCK PORTAL (EXAMWISE SETS FROM WEBSITE CODE)
+  // 📝 TAB 3: SECTIONAL MOCK PORTAL
   Widget _buildTab3SectionalMock(BuildContext context) {
     return SingleChildScrollView(
       padding: const EdgeInsets.all(16.0),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          // Sectional Header
           const Text('🎯 Target Exam Sectional Mocks', style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
           const Text('अपनी परीक्षा चुनें और रियल एग्जाम पैटर्न पर प्रैक्टिस शुरू करें', style: TextStyle(color: Colors.grey, fontSize: 12)),
           const SizedBox(height: 16),
 
-          // 4 Main Target Exam Grid Buttons
           GridView.count(
             shrinkWrap: true,
             physics: const NeverScrollableScrollPhysics(),
@@ -337,134 +318,12 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
           const SizedBox(height: 20),
 
-          // Dynamic Sets Container based on selected Exam
           if (_selectedExamPanel == 'bpsc') _buildBpscSetsPanel(context),
           if (_selectedExamPanel == 'ssc') _buildSscSetsPanel(context),
           if (_selectedExamPanel == 'bssc_cgl') _buildBsscCglSetsPanel(context),
           if (_selectedExamPanel == 'bssc_inter') _buildBsscInterSetsPanel(context),
         ],
       ),
-    );
-  }
-
-  // 🎯 PANEL 1: BPSC Modern History Sets (28 Sets)
-  Widget _buildBpscSetsPanel(BuildContext context) {
-    return Card(
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
-      child: Padding(
-        padding: const EdgeInsets.all(16),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            const Text('🏛️ BPSC Civil Services Prelims Core Zone', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16, color: Color(0xFF9D174D))),
-            const SizedBox(height: 8),
-            const Text('Modern History Mini Mocks (Set 01 - Set 28)', style: TextStyle(fontSize: 13, color: Colors.grey)),
-            const SizedBox(height: 12),
-            Wrap(
-              spacing: 8,
-              runSpacing: 8,
-              children: List.generate(28, (index) {
-                final setNum = index + 1;
-                final setName = 'set$setNum';
-                return ActionChip(
-                  label: Text('Set ${setNum < 10 ? '0$setNum' : setNum}'),
-                  backgroundColor: Colors.pink.shade50,
-                  labelStyle: const TextStyle(fontWeight: FontWeight.bold, color: Color(0xFF9D174D)),
-                  onPressed: () {
-                    // Open Modern History JSON file dynamically
-                    _launchSectionalQuiz(context, 'BPSC Modern History Set $setNum', 'bpsc/science/Modern History/$setName.json');
-                  },
-                );
-              }),
-            )
-          ],
-        ),
-      ),
-    );
-  }
-
-  // 🎯 PANEL 2: SSC CGL / RRB NTPC Sets
-  Widget _buildSscSetsPanel(BuildContext context) {
-    return Card(
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
-      child: Padding(
-        padding: const EdgeInsets.all(16),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            const Text('⚡ SSC CGL & RRB NTPC Sets (TCS Pattern)', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16, color: Color(0xFF166534))),
-            const SizedBox(height: 12),
-            _buildSubjectSetRow(context, 'General Reasoning', 'reasoning', 5),
-            const Divider(),
-            _buildSubjectSetRow(context, 'Quantitative Aptitude', 'aptitude', 5),
-            const Divider(),
-            _buildSubjectSetRow(context, 'English Language', 'english', 5),
-          ],
-        ),
-      ),
-    );
-  }
-
-  // 🎯 PANEL 3: BSSC CGL Sets
-  Widget _buildBsscCglSetsPanel(BuildContext context) {
-    return Card(
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
-      child: Padding(
-        padding: const EdgeInsets.all(16),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            const Text('📚 BSSC Graduate Level Special Sets', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16, color: Color(0xFF6B21A8))),
-            const SizedBox(height: 12),
-            _buildSubjectSetRow(context, 'BSSC CGL Reasoning', 'bssc_cgl_reasoning', 5),
-            const Divider(),
-            _buildSubjectSetRow(context, 'BSSC CGL Mathematics', 'bssc_cgl_aptitude', 5),
-          ],
-        ),
-      ),
-    );
-  }
-
-  // 🎯 PANEL 4: BSSC 10+2 Inter Level Sets
-  Widget _buildBsscInterSetsPanel(BuildContext context) {
-    return Card(
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
-      child: Padding(
-        padding: const EdgeInsets.all(16),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            const Text('🎓 BSSC 10+2 Inter Level Active Mocks', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16, color: Color(0xFF075985))),
-            const SizedBox(height: 12),
-            _buildSubjectSetRow(context, 'Mental Ability & Reasoning', 'bssc_inter_reasoning', 5),
-            const Divider(),
-            _buildSubjectSetRow(context, 'General Mathematics / Arithmetic', 'bssc_inter_aptitude', 5),
-          ],
-        ),
-      ),
-    );
-  }
-
-  // HELPER FOR SUBJECT SETS
-  Widget _buildSubjectSetRow(BuildContext context, String title, String subFolder, int totalSets) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Text(title, style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 14)),
-        const SizedBox(height: 6),
-        Wrap(
-          spacing: 8,
-          children: List.generate(totalSets, (index) {
-            final setNum = index + 1;
-            return ActionChip(
-              label: Text('Set 0$setNum'),
-              onPressed: () {
-                _launchSectionalQuiz(context, '$title Set $setNum', '$subFolder/set$setNum.json');
-              },
-            );
-          }),
-        ),
-      ],
     );
   }
 
@@ -495,7 +354,7 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 
-  // ⚙️ TAB 5: PROFILE & APP SETTINGS
+  // ⚙️ TAB 5: PROFILE & SETTINGS
   Widget _buildTab5Profile(BuildContext context) {
     return ListView(
       padding: const EdgeInsets.all(16),
@@ -503,19 +362,16 @@ class _HomeScreenState extends State<HomeScreen> {
         const Center(
           child: Column(
             children: [
-              SizedBox(height: 10),
-              CircleAvatar(radius: 36, backgroundColor: Color(0xFF2563EB), child: Icon(Icons.person_rounded, size: 40, color: Colors.white)),
-              SizedBox(height: 8),
-              Text('Aspirant User', style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
-              Text('Target: BPSC / BSSC 2026', style: TextStyle(color: Colors.grey, fontSize: 13)),
+              CircleAvatar(radius: 32, backgroundColor: Color(0xFF2563EB), child: Icon(Icons.person_rounded, size: 36, color: Colors.white)),
+              SizedBox(height: 6),
+              Text('Aspirant User', style: TextStyle(fontSize: 17, fontWeight: FontWeight.bold)),
+              Text('Target: BPSC / BSSC 2026', style: TextStyle(color: Colors.grey, fontSize: 12)),
             ],
           ),
         ),
-        const SizedBox(height: 20),
+        const SizedBox(height: 16),
 
-        const Text('Preferences & Settings', style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold, color: Colors.grey)),
-        const SizedBox(height: 8),
-
+        // Settings Cards
         Card(
           child: SwitchListTile(
             title: const Text('Bilingual Language'),
@@ -525,7 +381,6 @@ class _HomeScreenState extends State<HomeScreen> {
             onChanged: (val) => setState(() => _isHindi = val),
           ),
         ),
-
         Card(
           child: SwitchListTile(
             title: const Text('Dark Mode'),
@@ -535,134 +390,285 @@ class _HomeScreenState extends State<HomeScreen> {
             onChanged: (val) => setState(() => _isDarkMode = val),
           ),
         ),
+        const SizedBox(height: 16),
 
-        Card(
-          child: ListTile(
-            leading: const Icon(Icons.format_size_rounded),
-            title: const Text('Font Size'),
-            subtitle: Text('Current Size: ${_fontSize.toInt()}pt'),
-            trailing: Row(
-              mainAxisSize: MainAxisSize.min,
-              children: [
-                IconButton(icon: const Icon(Icons.remove_circle_outline), onPressed: () => setState(() => _fontSize = (_fontSize - 1).clamp(12.0, 20.0))),
-                IconButton(icon: const Icon(Icons.add_circle_outline), onPressed: () => setState(() => _fontSize = (_fontSize + 1).clamp(12.0, 20.0))),
-              ],
-            ),
-          ),
-        ),
+        // 📅 Launch Roadmap Card
+        _buildLaunchRoadmapCard(),
+        const SizedBox(height: 12),
 
-        Card(
-          child: ListTile(
-            leading: const Icon(Icons.info_outline_rounded),
-            title: const Text('App Version & About'),
-            subtitle: const Text('MockTester v1.0.0 (2026 Build)'),
-            onTap: () {},
+        // 🎯 Why Trust MockTester Card
+        _buildTrustCard(),
+        const SizedBox(height: 12),
+
+        // ❤️ Student Initiative Donation Card
+        _buildStudentSupportCard(context),
+      ],
+    );
+  }
+
+  // WIDGET HELPER BUILDERS
+
+  Widget _buildMiniMocksGrid(BuildContext context) {
+    final miniTopics = [
+      {'title': 'Electricity (विद्युत धारा)', 'category': 'General Science', 'jsonFile': 'electrical_energy.json', 'badge': 'SCIENCE', 'color': 0xFF2575FC},
+      {'title': 'Digestive System (पाचन)', 'category': 'Biology', 'jsonFile': 'digestive_system.json', 'badge': 'BIOLOGY', 'color': 0xFF2575FC},
+      {'title': 'Vitamins (विटामिन)', 'category': 'Biology', 'jsonFile': 'health.json', 'badge': 'HEALTH', 'color': 0xFF2575FC},
+      {'title': 'Indian Rivers (नदियाँ)', 'category': 'Geography', 'jsonFile': 'drainage_climate_disaster.json', 'badge': 'GEOGRAPHY', 'color': 0xFF00D2D3},
+      {'title': 'Parliament (संसद)', 'category': 'Indian Polity', 'jsonFile': 'parliament.json', 'badge': 'POLITY', 'color': 0xFF00D2D3},
+      {'title': '1857 Revolt (1857 क्रांति)', 'category': 'Indian History', 'jsonFile': '1857_revolt.json', 'badge': 'HISTORY', 'color': 0xFFFF9F43},
+    ];
+
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        const Text('⚡ Topic-Wise Free Mini Mocks', style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
+        const Text('10 Qs • ⏱️ 15s Per Question', style: TextStyle(fontSize: 11, color: Colors.grey)),
+        const SizedBox(height: 10),
+        GridView.builder(
+          shrinkWrap: true,
+          physics: const NeverScrollableScrollPhysics(),
+          itemCount: miniTopics.length,
+          gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+            crossAxisCount: 2,
+            crossAxisSpacing: 8,
+            mainAxisSpacing: 8,
+            childAspectRatio: 1.1,
           ),
+          itemBuilder: (context, index) {
+            final t = miniTopics[index];
+            final Color col = Color(t['color'] as int);
+            return Card(
+              elevation: 1,
+              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+              child: Padding(
+                padding: const EdgeInsets.all(10),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Container(padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2), decoration: BoxDecoration(color: col.withOpacity(0.15), borderRadius: BorderRadius.circular(4)), child: Text(t['badge'] as String, style: TextStyle(fontSize: 9, fontWeight: FontWeight.bold, color: col))),
+                    Text(t['title'] as String, style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 12), maxLines: 2, overflow: TextOverflow.ellipsis),
+                    SizedBox(
+                      width: double.infinity,
+                      height: 28,
+                      child: ElevatedButton(
+                        style: ElevatedButton.styleFrom(backgroundColor: col, foregroundColor: Colors.white, padding: EdgeInsets.zero, shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(6))),
+                        onPressed: () => _launchSectionalQuiz(context, t['title'] as String, t['jsonFile'] as String),
+                        child: const Text('Start 🚀', style: TextStyle(fontSize: 11, fontWeight: FontWeight.bold)),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            );
+          },
         ),
       ],
     );
   }
 
-  // WIDGET HELPERS
-  Widget _buildExamSelectorCard(String title, String badge, String qs, String sets, Color color, String panelKey) {
-    final bool isSelected = _selectedExamPanel == panelKey;
-    return GestureDetector(
-      onTap: () => setState(() => _selectedExamPanel = panelKey),
-      child: Card(
-        color: isSelected ? color.withOpacity(0.1) : Colors.white,
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(12),
-          side: BorderSide(color: isSelected ? color : Colors.grey.shade300, width: isSelected ? 2 : 1),
+  Widget _buildBtscBanner(BuildContext context) {
+    return Card(
+      color: const Color(0xFFF0FDF4),
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12), side: const BorderSide(color: Color(0xFFBBF7D0))),
+      child: ListTile(
+        leading: const CircleAvatar(backgroundColor: Color(0xFFDCFCE7), child: Icon(Icons.medical_services_rounded, color: Color(0xFF16A34A))),
+        title: const Text('🩺 BTSC ANM/GNM & PMM Mocks', style: TextStyle(fontWeight: FontWeight.bold, color: Color(0xFF166534), fontSize: 14)),
+        subtitle: const Text('11th-12th NCERT Biology & Technical Mocks', style: TextStyle(fontSize: 11)),
+        trailing: const Icon(Icons.arrow_forward_ios_rounded, size: 16, color: Color(0xFF16A34A)),
+        onTap: () => setState(() => _currentBottomIndex = 1),
+      ),
+    );
+  }
+
+  Widget _buildLaunchRoadmapCard() {
+    return Card(
+      child: Padding(
+        padding: const EdgeInsets.all(14),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: const [
+            Text('📅 Launch Roadmap & Live Updates', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 14)),
+            SizedBox(height: 8),
+            Text('🔥 Coming Tomorrow: BSSC Inter Level Top 100 Qs', style: TextStyle(fontSize: 12, color: Color(0xFFFF4757), fontWeight: FontWeight.w600)),
+            SizedBox(height: 4),
+            Text('⏳ Next Week: General Science Genetics Framework', style: TextStyle(fontSize: 12, color: Colors.grey)),
+            SizedBox(height: 4),
+            Text('✅ Just Added: Current Affairs July 2026 Bulletin', style: TextStyle(fontSize: 12, color: Color(0xFF059669))),
+          ],
         ),
-        child: Padding(
-          padding: const EdgeInsets.all(12),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Container(
-                padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
-                decoration: BoxDecoration(color: color.withOpacity(0.15), borderRadius: BorderRadius.circular(4)),
-                child: Text(badge, style: TextStyle(fontSize: 10, fontWeight: FontWeight.bold, color: color)),
+      ),
+    );
+  }
+
+  Widget _buildTrustCard() {
+    return Card(
+      color: const Color(0xFFF8FAFC),
+      child: Padding(
+        padding: const EdgeInsets.all(14),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: const [
+            Text('🎯 THE MOCKTESTER ADVANTAGE', style: TextStyle(fontSize: 10, fontWeight: FontWeight.bold, color: Color(0xFF2575FC))),
+            SizedBox(height: 4),
+            Text('Why Bihar Aspirants Trust MockTester?', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 14)),
+            SizedBox(height: 6),
+            Text('• 2K+ Active Aspirants • 80%+ Syllabus Match Rate\n• 100% Free Democratic Learning & Instant Analytics', style: TextStyle(fontSize: 12, color: Colors.grey, height: 1.4)),
+          ],
+        ),
+      ),
+    );
+  }
+
+  Widget _buildStudentSupportCard(BuildContext context) {
+    return Card(
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12), side: const BorderSide(color: Color(0xFFFF4757), width: 1.5)),
+      child: Padding(
+        padding: const EdgeInsets.all(14),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            const Text('🤝 Student Initiative (100% Free)', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 14, color: Color(0xFFFF4757))),
+            const SizedBox(height: 4),
+            const Text('We don\'t charge ₹499/pass. Keep us free for rural students by contributing ₹10.', style: TextStyle(fontSize: 12, color: Colors.grey)),
+            const SizedBox(height: 10),
+            SizedBox(
+              width: double.infinity,
+              child: ElevatedButton.icon(
+                style: ElevatedButton.styleFrom(backgroundColor: const Color(0xFF0F172A), foregroundColor: Colors.white),
+                onPressed: () {
+                  Clipboard.setData(const ClipboardData(text: 'niftyfifty@upi'));
+                  ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('✅ UPI ID (niftyfifty@upi) copied!')));
+                },
+                icon: const Text('❤️'),
+                label: const Text('Support Us (₹10 Contribute)', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 12)),
               ),
-              Text(title, style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 15)),
-              Text(sets, style: const TextStyle(fontSize: 11, color: Colors.grey)),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
     );
   }
 
-  void _launchSectionalQuiz(BuildContext context, String chapterName, String jsonPath) {
-    // Navigates directly using ChapterSelectScreen instruction dialog logic
-    Map<String, String> singleMapping = {chapterName: jsonPath};
-    Navigator.push(
-      context,
-      MaterialPageRoute(
-        builder: (context) => ChapterSelectScreen(
-          categoryTitle: 'Sectional Mock',
-          chapterMapping: singleMapping,
+  Widget _buildParamedicalMatrixCard() {
+    return Card(
+      child: Padding(
+        padding: const EdgeInsets.all(14),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: const [
+            Text('📋 MockTester Paramedical Test Matrix', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 14, color: Color(0xFF0D9488))),
+            SizedBox(height: 6),
+            Text('• Quick Mini Mocks (10 Qs): Anatomy & Daily Capsule\n• Sectional Mocks (30 Qs): Technical Syllabus & Speed\n• Subject Mocks: Community Health & Primary Care', style: TextStyle(fontSize: 12, color: Colors.grey, height: 1.5)),
+          ],
         ),
       ),
     );
   }
 
-  void _openSubCategoryScreen(BuildContext context, String title, List<_SubCategory> subCategories) {
-    Navigator.push(
-      context,
-      MaterialPageRoute(
-        builder: (context) => Scaffold(
-          appBar: AppBar(title: Text(title)),
-          body: ListView.builder(
-            padding: const EdgeInsets.all(16),
-            itemCount: subCategories.length,
-            itemBuilder: (context, index) {
-              final sub = subCategories[index];
-              return Card(
-                margin: const EdgeInsets.symmetric(vertical: 8),
-                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
-                child: ListTile(
-                  title: Text(sub.title, style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),
-                  subtitle: Text(sub.subtitle, style: const TextStyle(fontSize: 13, color: Colors.grey)),
-                  trailing: const Icon(Icons.arrow_forward_ios_rounded, size: 16, color: Color(0xFF2563EB)),
-                  onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => ChapterSelectScreen(
-                          categoryTitle: sub.title,
-                          chapterMapping: sub.mapping,
-                        ),
-                      ),
-                    );
-                  },
-                ),
-              );
-            },
-          ),
+  // EXISTING MOCK PANELS & HELPERS
+  Widget _buildBpscSetsPanel(BuildContext context) {
+    return Card(
+      child: Padding(
+        padding: const EdgeInsets.all(14),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            const Text('🏛️ BPSC Civil Services Prelims Core Zone', style: TextStyle(fontWeight: FontWeight.bold, color: Color(0xFF9D174D))),
+            const SizedBox(height: 8),
+            Wrap(
+              spacing: 6, runSpacing: 6,
+              children: List.generate(28, (index) {
+                final setNum = index + 1;
+                return ActionChip(
+                  label: Text('Set ${setNum < 10 ? '0$setNum' : setNum}'),
+                  onPressed: () => _launchSectionalQuiz(context, 'BPSC Modern History Set $setNum', 'bpsc/science/Modern History/set$setNum.json'),
+                );
+              }),
+            )
+          ],
         ),
       ),
+    );
+  }
+
+  Widget _buildSscSetsPanel(BuildContext context) {
+    return Card(
+      child: Padding(
+        padding: const EdgeInsets.all(14),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            const Text('⚡ SSC CGL & RRB NTPC Sets', style: TextStyle(fontWeight: FontWeight.bold, color: Color(0xFF166534))),
+            const SizedBox(height: 8),
+            _buildSubjectSetRow(context, 'General Reasoning', 'reasoning', 5),
+            const Divider(),
+            _buildSubjectSetRow(context, 'Quantitative Aptitude', 'aptitude', 5),
+          ],
+        ),
+      ),
+    );
+  }
+
+  Widget _buildBsscCglSetsPanel(BuildContext context) {
+    return Card(
+      child: Padding(
+        padding: const EdgeInsets.all(14),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            const Text('📚 BSSC Graduate Level Sets', style: TextStyle(fontWeight: FontWeight.bold, color: Color(0xFF6B21A8))),
+            const SizedBox(height: 8),
+            _buildSubjectSetRow(context, 'BSSC CGL Reasoning', 'bssc_cgl_reasoning', 5),
+          ],
+        ),
+      ),
+    );
+  }
+
+  Widget _buildBsscInterSetsPanel(BuildContext context) {
+    return Card(
+      child: Padding(
+        padding: const EdgeInsets.all(14),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            const Text('🎓 BSSC 10+2 Inter Level Sets', style: TextStyle(fontWeight: FontWeight.bold, color: Color(0xFF075985))),
+            const SizedBox(height: 8),
+            _buildSubjectSetRow(context, 'Mental Ability & Reasoning', 'bssc_inter_reasoning', 5),
+          ],
+        ),
+      ),
+    );
+  }
+
+  Widget _buildSubjectSetRow(BuildContext context, String title, String subFolder, int totalSets) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text(title, style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 13)),
+        const SizedBox(height: 4),
+        Wrap(
+          spacing: 6,
+          children: List.generate(totalSets, (i) => ActionChip(label: Text('Set 0${i + 1}'), onPressed: () => _launchSectionalQuiz(context, '$title Set ${i + 1}', '$subFolder/set${i + 1}.json'))),
+        ),
+      ],
     );
   }
 
   Widget _buildPosterCard(String badge, String title, String subtitle, Color color) {
     return Container(
       margin: const EdgeInsets.only(right: 8),
-      padding: const EdgeInsets.all(16),
-      decoration: BoxDecoration(color: color, borderRadius: BorderRadius.circular(16)),
+      padding: const EdgeInsets.all(14),
+      decoration: BoxDecoration(color: color, borderRadius: BorderRadius.circular(14)),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Container(
-            padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
-            decoration: BoxDecoration(color: Colors.white24, borderRadius: BorderRadius.circular(12)),
-            child: Text(badge, style: const TextStyle(color: Colors.white, fontSize: 11, fontWeight: FontWeight.bold)),
-          ),
-          const SizedBox(height: 8),
-          Text(title, style: const TextStyle(color: Colors.white, fontSize: 18, fontWeight: FontWeight.bold)),
-          Text(subtitle, style: const TextStyle(color: Colors.white70, fontSize: 12)),
+          Container(padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 2), decoration: BoxDecoration(color: Colors.white24, borderRadius: BorderRadius.circular(10)), child: Text(badge, style: const TextStyle(color: Colors.white, fontSize: 10, fontWeight: FontWeight.bold))),
+          const SizedBox(height: 6),
+          Text(title, style: const TextStyle(color: Colors.white, fontSize: 16, fontWeight: FontWeight.bold)),
+          Text(subtitle, style: const TextStyle(color: Colors.white70, fontSize: 11)),
         ],
       ),
     );
@@ -671,41 +677,119 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget _buildStatItem(String val, String lbl) {
     return Column(
       children: [
-        Text(val, style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold, color: Color(0xFF2563EB))),
-        Text(lbl, style: const TextStyle(fontSize: 12, color: Colors.grey)),
+        Text(val, style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: Color(0xFF2563EB))),
+        Text(lbl, style: const TextStyle(fontSize: 11, color: Colors.grey)),
       ],
     );
   }
 
-  Widget _buildMainCategoryCard(
-    BuildContext context, {
-    required String icon,
-    required String title,
-    required String tags,
-    required String subtitle,
-    required Color color,
-    required VoidCallback onTap,
-  }) {
-    return Card(
-      margin: const EdgeInsets.symmetric(vertical: 8),
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(14)),
-      child: ListTile(
-        contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
-        leading: CircleAvatar(
-          radius: 24,
-          backgroundColor: color.withOpacity(0.12),
-          child: Text(icon, style: const TextStyle(fontSize: 22)),
+  Widget _buildExamSelectorCard(String title, String badge, String qs, String sets, Color color, String panelKey) {
+    final bool isSelected = _selectedExamPanel == panelKey;
+    return GestureDetector(
+      onTap: () => setState(() => _selectedExamPanel = panelKey),
+      child: Card(
+        color: isSelected ? color.withOpacity(0.1) : Colors.white,
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10), side: BorderSide(color: isSelected ? color : Colors.grey.shade300, width: isSelected ? 2 : 1)),
+        child: Padding(
+          padding: const EdgeInsets.all(10),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Container(padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2), decoration: BoxDecoration(color: color.withOpacity(0.15), borderRadius: BorderRadius.circular(4)), child: Text(badge, style: TextStyle(fontSize: 9, fontWeight: FontWeight.bold, color: color))),
+              Text(title, style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 14)),
+              Text(sets, style: const TextStyle(fontSize: 10, color: Colors.grey)),
+            ],
+          ),
         ),
-        title: Text(title, style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),
-        subtitle: Column(
+      ),
+    );
+  }
+
+  Widget _buildMainCategoryCard(BuildContext context, {required String icon, required String title, required String tags, required String subtitle, required Color color, required VoidCallback onTap}) {
+    return Card(
+      margin: const EdgeInsets.symmetric(vertical: 6),
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+      child: ListTile(
+        leading: CircleAvatar(radius: 20, backgroundColor: color.withOpacity(0.12), child: Text(icon, style: const TextStyle(fontSize: 18))),
+        title: Text(title, style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 15)),
+        subtitle: Text(tags, style: TextStyle(fontSize: 11, color: color, fontWeight: FontWeight.w600)),
+        trailing: const Icon(Icons.arrow_forward_ios_rounded, size: 16),
+        onTap: onTap,
+      ),
+    );
+  }
+
+  void _launchSectionalQuiz(BuildContext context, String chapterName, String jsonPath) {
+    Navigator.push(context, MaterialPageRoute(builder: (context) => ChapterSelectScreen(categoryTitle: 'Sectional Mock', chapterMapping: {chapterName: jsonPath})));
+  }
+
+  void _openSubCategoryScreen(BuildContext context, String title, List<_SubCategory> subCategories) {
+    Navigator.push(context, MaterialPageRoute(builder: (context) => Scaffold(appBar: AppBar(title: Text(title)), body: ListView.builder(padding: const EdgeInsets.all(16), itemCount: subCategories.length, itemBuilder: (context, index) { final sub = subCategories[index]; return Card(margin: const EdgeInsets.symmetric(vertical: 6), child: ListTile(title: Text(sub.title, style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 15)), subtitle: Text(sub.subtitle, style: const TextStyle(fontSize: 12, color: Colors.grey)), trailing: const Icon(Icons.arrow_forward_ios_rounded, size: 16, color: Color(0xFF2563EB)), onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => ChapterSelectScreen(categoryTitle: sub.title, chapterMapping: sub.mapping))))); }))));
+  }
+}
+
+// Stateful Widget for Telegram Photo Form
+class TelegramCreatorWidget extends StatefulWidget {
+  const TelegramCreatorWidget({super.key});
+
+  @override
+  State<TelegramCreatorWidget> createState() => _TelegramCreatorWidgetState();
+}
+
+class _TelegramCreatorWidgetState extends State<TelegramCreatorWidget> {
+  bool _isExpanded = false;
+  final _nameController = TextEditingController();
+  final _subjectController = TextEditingController();
+
+  @override
+  Widget build(BuildContext context) {
+    return Card(
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12), side: const BorderSide(color: Color(0xFF10B981), width: 1.5)),
+      child: Padding(
+        padding: const EdgeInsets.all(14),
+        child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(tags, style: TextStyle(fontSize: 12, color: color, fontWeight: FontWeight.w600)),
-            Text(subtitle, style: const TextStyle(fontSize: 12, color: Colors.grey)),
+            const Text('🤝 Bano MockTester Ke Creator!', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 14)),
+            const SizedBox(height: 4),
+            const Text('Apna Naam aur Subject daal kar direct Telegram par question ki photo attach karke bhejein!', style: TextStyle(fontSize: 11, color: Colors.grey)),
+            const SizedBox(height: 10),
+            SizedBox(
+              width: double.infinity,
+              child: ElevatedButton.icon(
+                style: ElevatedButton.styleFrom(backgroundColor: const Color(0xFF10B981), foregroundColor: Colors.white),
+                onPressed: () => setState(() => _isExpanded = !_isExpanded),
+                icon: Text(_isExpanded ? '✕' : '📸', style: const TextStyle(fontSize: 12)),
+                label: Text(_isExpanded ? 'Close Form' : 'Bhejein Apna Question (Open Portal)', style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 12)),
+              ),
+            ),
+            if (_isExpanded) ...[
+              const SizedBox(height: 10),
+              TextField(controller: _nameController, decoration: const InputDecoration(labelText: 'Aapka Naam', isDense: true)),
+              const SizedBox(height: 8),
+              TextField(controller: _subjectController, decoration: const InputDecoration(labelText: 'Exam / Subject', isDense: true)),
+              const SizedBox(height: 10),
+              SizedBox(
+                width: double.infinity,
+                child: ElevatedButton.icon(
+                  style: ElevatedButton.styleFrom(backgroundColor: const Color(0xFF24A1DE), foregroundColor: Colors.white),
+                  onPressed: () async {
+                    if (_nameController.text.trim().isEmpty) {
+                      ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('⚠️ Naam bharna zaroori hai!')));
+                      return;
+                    }
+                    final msg = "Bhai, main apna question photo ke roop mein attach kar rha hu.\n\n👤 Name: ${_nameController.text}\n📚 Subject: ${_subjectController.text}";
+                    final uri = Uri.parse("https://t.me/MT_Masterhub_bot?text=${Uri.encodeComponent(msg)}");
+                    if (await canLaunchUrl(uri)) await launchUrl(uri, mode: LaunchMode.externalApplication);
+                  },
+                  icon: const Text('🚀'),
+                  label: const Text('Open Telegram & Send Photo', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 12)),
+                ),
+              )
+            ]
           ],
         ),
-        trailing: const Icon(Icons.arrow_forward_ios_rounded, size: 18),
-        onTap: onTap,
       ),
     );
   }
