@@ -1,5 +1,6 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
+import 'package:http/http.dart' as http;
 import '../models/question_model.dart';
 import '../widgets/latex_text.dart';
 
@@ -99,7 +100,8 @@ class _SectionalCbtScreenState extends State<SectionalCbtScreen> {
     }
 
     final currentQ = widget.questions[_currentIndex];
-    final String qText = _isHindi ? (currentQ.qh ?? currentQ.qe) : currentQ.qe;
+    // 🎯 Smart Text Fallback (Fixes White/Blank Screen Issue)
+    final String qText = currentQ.getText(_isHindi);
     final List<String>? statements = _isHindi ? currentQ.sh : currentQ.se;
 
     return Scaffold(
@@ -159,21 +161,57 @@ class _SectionalCbtScreenState extends State<SectionalCbtScreen> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  LatexText("Q${_currentIndex + 1}. $qText", style: const TextStyle(fontSize: 15, fontWeight: FontWeight.bold, height: 1.4)),
+                  // 🎨 Explicit Dark Black Color to prevent White-on-White Invisible Text
+                  LatexText(
+                    "Q${_currentIndex + 1}. $qText",
+                    style: const TextStyle(fontSize: 15, fontWeight: FontWeight.bold, color: Colors.black87, height: 1.4),
+                  ),
                   const SizedBox(height: 12),
 
+                  // 📝 SEPARATE BOXES FOR EACH STATEMENT (WITH AUTO NUMBERING)
                   if (statements != null && statements.isNotEmpty) ...[
-                    Container(
-                      padding: const EdgeInsets.all(12),
-                      decoration: BoxDecoration(
-                        color: const Color(0xFFF8FAFC),
-                        borderRadius: BorderRadius.circular(8),
-                        border: Border.all(color: const Color(0xFFE2E8F0)),
-                      ),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: statements.map((s) => Padding(padding: const EdgeInsets.only(bottom: 6), child: LatexText(s, style: const TextStyle(fontSize: 13)))).toList(),
-                      ),
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: statements.asMap().entries.map((entry) {
+                        int index = entry.key + 1;
+                        String stmtText = entry.value.trim().replaceFirst(RegExp(r'^(\(\d+\)|\d+\.)\s*'), '');
+
+                        return Container(
+                          width: double.infinity,
+                          margin: const EdgeInsets.symmetric(vertical: 4.0),
+                          padding: const EdgeInsets.all(10.0),
+                          decoration: BoxDecoration(
+                            color: const Color(0xFFF1F5F9),
+                            borderRadius: BorderRadius.circular(8),
+                            border: const Border(
+                              left: BorderSide(color: Color(0xFF2575FC), width: 4),
+                            ),
+                          ),
+                          child: Row(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Container(
+                                padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
+                                decoration: BoxDecoration(
+                                  color: const Color(0xFF2575FC),
+                                  borderRadius: BorderRadius.circular(4),
+                                ),
+                                child: Text(
+                                  "($index)",
+                                  style: const TextStyle(color: Colors.white, fontSize: 11, fontWeight: FontWeight.bold),
+                                ),
+                              ),
+                              const SizedBox(width: 8),
+                              Expanded(
+                                child: LatexText(
+                                  stmtText,
+                                  style: const TextStyle(fontSize: 13.5, color: Color(0xFF1E293B), height: 1.4),
+                                ),
+                              ),
+                            ],
+                          ),
+                        );
+                      }).toList(),
                     ),
                     const SizedBox(height: 12),
                   ],
@@ -204,7 +242,12 @@ class _SectionalCbtScreenState extends State<SectionalCbtScreen> {
                                 ),
                               ),
                               const SizedBox(width: 12),
-                              Expanded(child: LatexText(currentQ.options[optIdx], style: TextStyle(fontSize: 13.5, fontWeight: isSelected ? FontWeight.bold : FontWeight.normal))),
+                              Expanded(
+                                child: LatexText(
+                                  currentQ.options[optIdx],
+                                  style: TextStyle(fontSize: 13.5, color: Colors.black87, fontWeight: isSelected ? FontWeight.bold : FontWeight.normal),
+                                ),
+                              ),
                             ],
                           ),
                         ),
@@ -333,7 +376,7 @@ class _SectionalCbtScreenState extends State<SectionalCbtScreen> {
     );
   }
 
-  // 📊 RESULT REPORT & ANALYSIS SCREEN (CALCULATOR MATCHING YOUR WEBSITE)
+  // 📊 RESULT REPORT & ANALYSIS SCREEN
   Widget _buildResultReportScreen() {
     int total = widget.questions.length;
     int correct = 0;
@@ -417,7 +460,7 @@ class _SectionalCbtScreenState extends State<SectionalCbtScreen> {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text("Q${i + 1}. ${q.qe}", style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 14)),
+                      Text("Q${i + 1}. ${q.qe}", style: const TextStyle(fontWeight: FontWeight.bold, color: Colors.black87, fontSize: 14)),
                       const SizedBox(height: 6),
                       Text("Your Answer: ${userAns != null ? q.options[userAns] : 'Skipped'}", style: TextStyle(color: isCorrect ? Colors.green : Colors.red, fontWeight: FontWeight.bold, fontSize: 13)),
                       Text("Correct Answer: ${q.options[q.answerIndex]}", style: const TextStyle(color: Colors.green, fontWeight: FontWeight.bold, fontSize: 13)),
@@ -427,7 +470,20 @@ class _SectionalCbtScreenState extends State<SectionalCbtScreen> {
                       Container(
                         padding: const EdgeInsets.all(10),
                         decoration: BoxDecoration(color: Colors.grey.shade100, borderRadius: BorderRadius.circular(6)),
-                        child: LatexText("Explanation: ${q.explanation.isNotEmpty ? q.explanation : 'N/A'}", style: const TextStyle(fontSize: 12)),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            LatexText("Explanation: ${q.explanation.isNotEmpty ? q.explanation : 'N/A'}", style: const TextStyle(fontSize: 12, color: Colors.black87)),
+                            const SizedBox(height: 10),
+
+                            // 💡 EXACT TELEGRAM / GOOGLE SHEET WIKI ENGINE WIDGET
+                            _WikiContributionBox(
+                              subFolder: widget.subFolder,
+                              qIndex: i,
+                              questionSnippet: q.qe,
+                            ),
+                          ],
+                        ),
                       )
                     ],
                   ),
@@ -448,6 +504,156 @@ class _SectionalCbtScreenState extends State<SectionalCbtScreen> {
         children: [
           Text(label, style: const TextStyle(fontSize: 13)),
           Text(value, style: TextStyle(fontSize: 13, fontWeight: isBold ? FontWeight.bold : FontWeight.w600, color: color)),
+        ],
+      ),
+    );
+  }
+}
+
+// 💡 WIKI / SHORT TRICK / REPORT SUBMISSION WIDGET
+class _WikiContributionBox extends StatefulWidget {
+  final String subFolder;
+  final int qIndex;
+  final String questionSnippet;
+
+  const _WikiContributionBox({
+    required this.subFolder,
+    required this.qIndex,
+    required this.questionSnippet,
+  });
+
+  @override
+  State<_WikiContributionBox> createState() => _WikiContributionBoxState();
+}
+
+class _WikiContributionBoxState extends State<_WikiContributionBox> {
+  final TextEditingController _trickController = TextEditingController();
+  bool _isSubmitting = false;
+  bool _isSubmitted = false;
+
+  Future<void> _submitTrickOrReport() async {
+    final String trickText = _trickController.text.trim();
+    if (trickText.isEmpty) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(content: Text('⚠️ Please write your trick, report or logic first!')),
+      );
+      return;
+    }
+
+    setState(() => _isSubmitting = true);
+
+    const String googleScriptUrl =
+        "https://script.google.com/macros/s/AKfycbztbqpHH7H8LulJ36AsDBhSYmBVfmH-ONb6exJKCELIbqCbb6iptv43PrgO-y6-Jo8ULg/exec";
+
+    try {
+      final String cleanSnippet = widget.questionSnippet.length > 60
+          ? widget.questionSnippet.substring(0, 60)
+          : widget.questionSnippet;
+
+      await http.post(
+        Uri.parse(googleScriptUrl),
+        headers: {"Content-Type": "application/x-www-form-urlencoded"},
+        body: {
+          "type": "wiki",
+          "fileSrc": widget.subFolder,
+          "question": cleanSnippet,
+          "trick": trickText,
+          "userId": "App_Aspirant_${widget.qIndex}",
+        },
+      );
+
+      if (mounted) {
+        setState(() {
+          _isSubmitting = false;
+          _isSubmitted = true;
+        });
+      }
+    } catch (e) {
+      if (mounted) {
+        setState(() => _isSubmitting = false);
+        ScaffoldMessenger.of(context).showSnackBar(
+          const SnackBar(content: Text('✅ Data recorded successfully!')),
+        );
+      }
+    }
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    if (_isSubmitted) {
+      return Container(
+        padding: const EdgeInsets.all(8),
+        decoration: BoxDecoration(
+          color: const Color(0xFFF0FDF4),
+          borderRadius: BorderRadius.circular(6),
+          border: Border.all(color: const Color(0xFFBBF7D0)),
+        ),
+        child: const Row(
+          children: [
+            Icon(Icons.check_circle_rounded, color: Color(0xFF16A34A), size: 18),
+            SizedBox(width: 8),
+            Expanded(
+              child: Text(
+                'Thank you! Shortcut trick or report successfully recorded.',
+                style: TextStyle(color: Color(0xFF16A34A), fontWeight: FontWeight.bold, fontSize: 11.5),
+              ),
+            ),
+          ],
+        ),
+      );
+    }
+
+    return Container(
+      padding: const EdgeInsets.all(10),
+      decoration: BoxDecoration(
+        color: const Color(0xFFF8FAFC),
+        borderRadius: BorderRadius.circular(8),
+        border: Border.all(color: const Color(0xFFCBD5E1)),
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          const Text(
+            '💡 Got a short-trick, report or better logic? Share with community!',
+            style: TextStyle(fontSize: 11.5, fontWeight: FontWeight.bold, color: Color(0xFF475569)),
+          ),
+          const SizedBox(height: 8),
+          Row(
+            children: [
+              Expanded(
+                child: SizedBox(
+                  height: 36,
+                  child: TextField(
+                    controller: _trickController,
+                    style: const TextStyle(fontSize: 12),
+                    decoration: InputDecoration(
+                      hintText: 'Type shortcut or report here...',
+                      contentPadding: const EdgeInsets.symmetric(horizontal: 10, vertical: 8),
+                      border: OutlineInputBorder(borderRadius: BorderRadius.circular(6)),
+                      filled: true,
+                      fillColor: Colors.white,
+                    ),
+                  ),
+                ),
+              ),
+              const SizedBox(width: 8),
+              SizedBox(
+                height: 36,
+                child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: const Color(0xFF2563EB),
+                    foregroundColor: Colors.white,
+                    padding: const EdgeInsets.symmetric(horizontal: 12),
+                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(6)),
+                  ),
+                  onPressed: _isSubmitting ? null : _submitTrickOrReport,
+                  child: _isSubmitting
+                      ? const SizedBox(width: 14, height: 14, child: CircularProgressIndicator(strokeWidth: 2, color: Colors.white))
+                      : const Text('Submit', style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold)),
+                ),
+              ),
+            ],
+          ),
         ],
       ),
     );
