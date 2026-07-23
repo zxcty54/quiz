@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
+import 'package:fl_chart/fl_chart.dart'; // 📊 Pie Chart Package
 import '../models/question_model.dart';
 import '../widgets/latex_text.dart';
 
@@ -100,7 +101,6 @@ class _SectionalCbtScreenState extends State<SectionalCbtScreen> {
     }
 
     final currentQ = widget.questions[_currentIndex];
-    // 🎯 Smart Text Fallback (Fixes White/Blank Screen Issue)
     final String qText = currentQ.getText(_isHindi);
     final List<String>? statements = _isHindi ? currentQ.sh : currentQ.se;
 
@@ -111,7 +111,6 @@ class _SectionalCbtScreenState extends State<SectionalCbtScreen> {
         foregroundColor: Colors.white,
         title: Text(widget.testTitle, style: const TextStyle(fontSize: 14, fontWeight: FontWeight.bold)),
         actions: [
-          // ⏱️ CBT TIMER
           Container(
             padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
             margin: const EdgeInsets.symmetric(vertical: 10),
@@ -134,7 +133,6 @@ class _SectionalCbtScreenState extends State<SectionalCbtScreen> {
       ),
       body: Column(
         children: [
-          // TOP TAG STRIP
           Container(
             padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
             color: const Color(0xFFF8FAFC),
@@ -154,21 +152,18 @@ class _SectionalCbtScreenState extends State<SectionalCbtScreen> {
           ),
           const Divider(height: 1),
 
-          // QUESTION CONTENT AREA
           Expanded(
             child: SingleChildScrollView(
               padding: const EdgeInsets.all(16),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  // 🎨 Explicit Dark Black Color to prevent White-on-White Invisible Text
                   LatexText(
                     "Q${_currentIndex + 1}. $qText",
                     style: const TextStyle(fontSize: 15, fontWeight: FontWeight.bold, color: Colors.black87, height: 1.4),
                   ),
                   const SizedBox(height: 12),
 
-                  // 📝 SEPARATE BOXES FOR EACH STATEMENT (WITH AUTO NUMBERING)
                   if (statements != null && statements.isNotEmpty) ...[
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -216,7 +211,6 @@ class _SectionalCbtScreenState extends State<SectionalCbtScreen> {
                     const SizedBox(height: 12),
                   ],
 
-                  // OPTIONS LIST
                   ...List.generate(currentQ.options.length, (optIdx) {
                     final isSelected = _userAnswers[_currentIndex] == optIdx;
                     return Container(
@@ -259,7 +253,6 @@ class _SectionalCbtScreenState extends State<SectionalCbtScreen> {
             ),
           ),
 
-          // BOTTOM CONTROL BAR
           Container(
             padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
             decoration: const BoxDecoration(color: Colors.white, border: Border(top: BorderSide(color: Color(0xFFE2E8F0)))),
@@ -312,7 +305,6 @@ class _SectionalCbtScreenState extends State<SectionalCbtScreen> {
     );
   }
 
-  // 📱 PALETTE DRAWER (TCS 1 to N GRID)
   void _openPaletteDrawer() {
     showModalBottomSheet(
       context: context,
@@ -376,7 +368,7 @@ class _SectionalCbtScreenState extends State<SectionalCbtScreen> {
     );
   }
 
-  // 📊 RESULT REPORT & ANALYSIS SCREEN
+  // 📊 RESULT REPORT & ANALYSIS SCREEN (WITH FL_CHART PIE CHART)
   Widget _buildResultReportScreen() {
     int total = widget.questions.length;
     int correct = 0;
@@ -420,7 +412,43 @@ class _SectionalCbtScreenState extends State<SectionalCbtScreen> {
           children: [
             const Text('🏆', style: TextStyle(fontSize: 48)),
             const SizedBox(height: 8),
-            Text(isCleared ? "CUTOFF CLEARED!" : "FAILED TO CLEAR CUTOFF", style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold, color: isCleared ? Colors.green : Colors.red)),
+            Text(
+              isCleared ? "CUTOFF CLEARED!" : "FAILED TO CLEAR CUTOFF",
+              style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold, color: isCleared ? Colors.green : Colors.red),
+            ),
+            const SizedBox(height: 16),
+
+            // 📊 VISUAL PIE CHART GRAPH
+            Card(
+              elevation: 2,
+              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+              child: Padding(
+                padding: const EdgeInsets.all(16.0),
+                child: Column(
+                  children: [
+                    const Text('Performance Breakdown', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 14)),
+                    const SizedBox(height: 16),
+                    SizedBox(
+                      height: 180,
+                      child: PieChart(
+                        PieChartData(
+                          sectionsSpace: 3,
+                          centerSpaceRadius: 35,
+                          sections: [
+                            if (correct > 0)
+                              PieChartSectionData(color: Colors.green, value: correct.toDouble(), title: 'Sahi ($correct)', radius: 45, titleStyle: const TextStyle(fontSize: 10, fontWeight: FontWeight.bold, color: Colors.white)),
+                            if (wrong > 0)
+                              PieChartSectionData(color: Colors.red, value: wrong.toDouble(), title: 'Galat ($wrong)', radius: 45, titleStyle: const TextStyle(fontSize: 10, fontWeight: FontWeight.bold, color: Colors.white)),
+                            if (skipped > 0)
+                              PieChartSectionData(color: Colors.grey, value: skipped.toDouble(), title: 'Skipped ($skipped)', radius: 40, titleStyle: const TextStyle(fontSize: 9, fontWeight: FontWeight.bold, color: Colors.white)),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
             const SizedBox(height: 16),
 
             // SCORE CARD
@@ -443,7 +471,6 @@ class _SectionalCbtScreenState extends State<SectionalCbtScreen> {
             ),
             const SizedBox(height: 20),
 
-            // DETAILED REVIEW SOLUTIONS
             const Align(alignment: Alignment.centerLeft, child: Text("Detailed Review & Explanations", style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold))),
             const SizedBox(height: 10),
 
@@ -475,8 +502,6 @@ class _SectionalCbtScreenState extends State<SectionalCbtScreen> {
                           children: [
                             LatexText("Explanation: ${q.explanation.isNotEmpty ? q.explanation : 'N/A'}", style: const TextStyle(fontSize: 12, color: Colors.black87)),
                             const SizedBox(height: 10),
-
-                            // 💡 EXACT TELEGRAM / GOOGLE SHEET WIKI ENGINE WIDGET
                             _WikiContributionBox(
                               subFolder: widget.subFolder,
                               qIndex: i,
@@ -510,7 +535,6 @@ class _SectionalCbtScreenState extends State<SectionalCbtScreen> {
   }
 }
 
-// 💡 WIKI / SHORT TRICK / REPORT SUBMISSION WIDGET
 class _WikiContributionBox extends StatefulWidget {
   final String subFolder;
   final int qIndex;
