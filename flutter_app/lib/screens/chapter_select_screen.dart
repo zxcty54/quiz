@@ -78,7 +78,7 @@ class _ChapterSelectScreenState extends State<ChapterSelectScreen> {
       if (!mounted) return;
       _showErrorDialog("Internet Connection Issue:\n\n$e");
     } finally {
-      // 🔒 CRITICAL: Guaranteed Loader Reset (Spinner will NEVER freeze now)
+      // 🔒 CRITICAL: Guaranteed Loader Reset
       if (mounted) {
         setState(() => _isLoading = false);
       }
@@ -133,16 +133,18 @@ class _ChapterSelectScreenState extends State<ChapterSelectScreen> {
               color: Colors.black54,
               child: const Center(
                 child: Card(
-                  padding: EdgeInsets.all(24),
-                  child: Column(
-                    mainAxisSize: MainAxisSize.min,
-                    children: [
-                      CircularProgressIndicator(),
-                      SizedBox(height: 16),
-                      Text("Loading Questions...", style: TextStyle(fontWeight: FontWeight.bold)),
-                      SizedBox(height: 4),
-                      Text("Connecting to Fast Server", style: TextStyle(fontSize: 12, color: Colors.grey)),
-                    ],
+                  child: Padding(
+                    padding: EdgeInsets.all(24),
+                    child: Column(
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        CircularProgressIndicator(),
+                        SizedBox(height: 16),
+                        Text("Loading Questions...", style: TextStyle(fontWeight: FontWeight.bold)),
+                        SizedBox(height: 4),
+                        Text("Connecting to Fast Server", style: TextStyle(fontSize: 12, color: Colors.grey)),
+                      ],
+                    ),
                   ),
                 ),
               ),
