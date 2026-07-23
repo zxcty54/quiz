@@ -3,7 +3,9 @@ import 'package:http/http.dart' as http;
 import '../models/question_model.dart';
 
 class ApiService {
-  static const String baseUrl = "https://raw.githubusercontent.com/zxcty54/quiz/main/";
+  // 🚀 FIXED: GitHub raw ki jagah jsDelivr CDN Base URL use kiya hai
+  // Isse Mobile Data par 'Failed host lookup' ya 'SocketException' error kabhi nahi aayega!
+  static const String baseUrl = "https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/";
 
   static Future<List<Question>> fetchQuestions(String jsonFileName) async {
     // 🔗 Handles spaces/special chars in filenames like "Modern History/set1.json"
