@@ -27,7 +27,7 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   void initState() {
     super.initState();
-    // 📲 Telegram Alert
+    // 📲 Telegram Activity Alert
     TelegramTracker.sendActivityAlert(screenName: "App Opened / Home Screen");
     _loadHomeConfig();
   }
@@ -93,29 +93,15 @@ class _HomeScreenState extends State<HomeScreen> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          // Banner
-          Container(
-            height: 100,
-            width: double.infinity,
-            decoration: BoxDecoration(color: const Color(0xFF2563EB), borderRadius: BorderRadius.circular(12)),
-            padding: const EdgeInsets.all(16),
-            child: const Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text('🔴 2026 Live Sectional Mocks', style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 16)),
-                SizedBox(height: 4),
-                Text('Real TCS CBT Exam Simulation • 9500+ Qs', style: TextStyle(color: Colors.white70, fontSize: 12)),
-              ],
-            ),
-          ),
+          // 🚀 Modern Gradient Hero Header
+          _buildModernHeroHeader(),
           const SizedBox(height: 16),
 
           // 🌐 Website Quick Access Portal
           _buildWebsiteQuickHubCard(context),
           const SizedBox(height: 16),
 
-          // 🎯 SPOTLIGHT JOB ELIGIBILITY CHECKER BANNER
+          // 🎯 Spotlight Eligibility Checker Banner
           _buildEligibilityCheckerBanner(context),
           const SizedBox(height: 16),
 
@@ -123,12 +109,129 @@ class _HomeScreenState extends State<HomeScreen> {
           _buildMiniMocksCard(context),
           const SizedBox(height: 16),
 
-          // 🩺 BTSC Banner
-          _buildBtscBanner(context),
-          const SizedBox(height: 16),
-
           // 📸 Telegram Question Photo Form Widget
           const TelegramCreatorWidget(),
+        ],
+      ),
+    );
+  }
+
+  // 🚀 MODERN HERO HEADER
+  Widget _buildModernHeroHeader() {
+    return Container(
+      width: double.infinity,
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(16),
+        gradient: const LinearGradient(
+          colors: [Color(0xFF2563EB), Color(0xFF4F46E5)],
+          begin: Alignment.topLeft,
+          end: Alignment.bottomRight,
+        ),
+        boxShadow: [
+          BoxShadow(
+            color: const Color(0xFF2563EB).withOpacity(0.3),
+            blurRadius: 10,
+            offset: const Offset(0, 4),
+          )
+        ],
+      ),
+      padding: const EdgeInsets.all(20),
+      child: Row(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          Expanded(
+            flex: 6,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Container(
+                  padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
+                  decoration: BoxDecoration(
+                    color: Colors.white.withOpacity(0.15),
+                    borderRadius: BorderRadius.circular(20),
+                  ),
+                  child: const Row(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      Text('🔥', style: TextStyle(fontSize: 12)),
+                      SizedBox(width: 4),
+                      Text(
+                        'MASTER CBT PATTERN MOCKS',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 10,
+                          fontWeight: FontWeight.w700,
+                          letterSpacing: 0.8,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                const SizedBox(height: 10),
+                const Text(
+                  'BPSC & BSSC Inter Level 2026 Live Mocks',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontWeight: FontWeight.w900,
+                    fontSize: 17,
+                    height: 1.2,
+                  ),
+                ),
+                const SizedBox(height: 6),
+                const Text(
+                  'Real TCS Simulation • High Yield Qs • Detailed Solution',
+                  style: TextStyle(
+                    color: Color(0xFFBFDBFE),
+                    fontSize: 11,
+                    fontWeight: FontWeight.w500,
+                  ),
+                ),
+              ],
+            ),
+          ),
+          Expanded(
+            flex: 4,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                _buildHeaderValueBadge('🎯', 'REAL CBT\nINTERFACE'),
+                const SizedBox(height: 10),
+                _buildHeaderValueBadge('📋', 'TOP PYQ\nCOLLECTION'),
+              ],
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget _buildHeaderValueBadge(String emoji, String text) {
+    return Container(
+      width: double.infinity,
+      padding: const EdgeInsets.all(8),
+      decoration: BoxDecoration(
+        color: Colors.white.withOpacity(0.1),
+        borderRadius: BorderRadius.circular(10),
+        border: Border.all(color: Colors.white.withOpacity(0.1)),
+      ),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Text(emoji, style: const TextStyle(fontSize: 16)),
+          const SizedBox(width: 6),
+          Expanded(
+            child: Text(
+              text,
+              textAlign: TextAlign.center,
+              style: const TextStyle(
+                color: Colors.white,
+                fontWeight: FontWeight.w800,
+                fontSize: 9,
+                height: 1.2,
+              ),
+            ),
+          ),
         ],
       ),
     );
@@ -244,7 +347,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 Container(
                   padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
                   decoration: BoxDecoration(color: const Color(0xFF2563EB), borderRadius: BorderRadius.circular(20)),
-                  child: const Text('ONLINE TOOL', style: TextStyle(fontSize: 9, fontWeight: FontWeight.bold, color: Colors.white)),
+                  child: const Text('ONLINE TOOL', style: TextStyle(fontSize: 9, fontWeight: FontWeight.w800, color: Colors.white)),
                 ),
               ],
             ),
@@ -319,21 +422,6 @@ class _HomeScreenState extends State<HomeScreen> {
             )
           ],
         ),
-      ),
-    );
-  }
-
-  // 🩺 BTSC BANNER WIDGET
-  Widget _buildBtscBanner(BuildContext context) {
-    return Card(
-      color: const Color(0xFFF0FDF4),
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12), side: const BorderSide(color: Color(0xFFBBF7D0))),
-      child: ListTile(
-        leading: const CircleAvatar(backgroundColor: Color(0xFFDCFCE7), child: Icon(Icons.medical_services_rounded, color: Color(0xFF16A34A))),
-        title: const Text('🩺 BTSC ANM/GNM & PMM Mocks', style: TextStyle(fontWeight: FontWeight.bold, color: Color(0xFF166534), fontSize: 14)),
-        subtitle: const Text('11th-12th NCERT Biology & Technical Mocks', style: TextStyle(fontSize: 11)),
-        trailing: const Icon(Icons.arrow_forward_ios_rounded, size: 16, color: Color(0xFF16A34A)),
-        onTap: () => setState(() => _currentBottomIndex = 1),
       ),
     );
   }
