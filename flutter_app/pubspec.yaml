@@ -28,5 +28,7 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+ # 📂 FIX: Pura folder directory add kar diya hai taaki sare JSON files automatic include ho jayein
   assets:
-    - assets/data/home_config.json
+    - assets/
+    - assets/data/
