@@ -27,7 +27,7 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   void initState() {
     super.initState();
-    // 📲 Telegram Activity Alert
+    // 📲 Telegram Realtime Tracking
     TelegramTracker.sendActivityAlert(screenName: "App Opened / Home Screen");
     _loadHomeConfig();
   }
@@ -93,11 +93,11 @@ class _HomeScreenState extends State<HomeScreen> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          // 🚀 Modern Gradient Hero Header
+          // 🚀 Dynamic Hero Header
           _buildModernHeroHeader(),
           const SizedBox(height: 16),
 
-          // 🌐 Website Quick Access Portal
+          // 🌐 Website Quick Access Portal (Reads Articles/PDF Titles from JSON)
           _buildWebsiteQuickHubCard(context),
           const SizedBox(height: 16),
 
@@ -116,7 +116,7 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 
-  // 🚀 MODERN HERO HEADER
+  // 🚀 MODERN HERO HEADER WIDGET
   Widget _buildModernHeroHeader() {
     return Container(
       width: double.infinity,
@@ -237,9 +237,11 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 
-  // 🌐 WEBSITE QUICK ACCESS PORTAL WIDGET
+  // 🌐 DYNAMIC WEBSITE ARTICLE/PDF HUB (DYNAMICALLY DISPLAYS TITLES FROM JSON)
   Widget _buildWebsiteQuickHubCard(BuildContext context) {
     final webLinks = List<Map<String, dynamic>>.from(_configData['web_links'] ?? []);
+
+    if (webLinks.isEmpty) return const SizedBox.shrink();
 
     return Card(
       elevation: 1,
@@ -252,7 +254,7 @@ class _HomeScreenState extends State<HomeScreen> {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                const Text('🌐 MockTester Web Hub', style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold, color: Color(0xFF0F172A))),
+                const Text('📚 Free Study Notes & Web Articles', style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold, color: Color(0xFF0F172A))),
                 Container(
                   padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
                   decoration: BoxDecoration(color: const Color(0xFFEFF6FF), borderRadius: BorderRadius.circular(4)),
@@ -261,46 +263,52 @@ class _HomeScreenState extends State<HomeScreen> {
               ],
             ),
             const SizedBox(height: 10),
-            GridView.builder(
+            ListView.separated(
               shrinkWrap: true,
               physics: const NeverScrollableScrollPhysics(),
               itemCount: webLinks.length,
-              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                crossAxisCount: 2,
-                crossAxisSpacing: 8,
-                mainAxisSpacing: 8,
-                childAspectRatio: 2.1,
-              ),
+              separatorBuilder: (ctx, i) => const Divider(height: 12),
               itemBuilder: (context, index) {
                 final item = webLinks[index];
                 final Color themeColor = Color(int.parse(item['color'] ?? '0xFF2563EB'));
 
                 return InkWell(
                   onTap: () => _openWebsiteUrl(context, item['title']!, item['url']!),
-                  borderRadius: BorderRadius.circular(10),
-                  child: Container(
-                    padding: const EdgeInsets.all(8),
-                    decoration: BoxDecoration(
-                      color: themeColor.withOpacity(0.08),
-                      border: Border.all(color: themeColor.withOpacity(0.2)),
-                      borderRadius: BorderRadius.circular(10),
-                    ),
-                    child: Row(
-                      children: [
-                        Text(item['icon'] ?? '🌐', style: const TextStyle(fontSize: 20)),
-                        const SizedBox(width: 6),
-                        Expanded(
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Text(item['title'] ?? '', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 11.5, color: themeColor), overflow: TextOverflow.ellipsis),
-                              Text(item['desc'] ?? '', style: const TextStyle(fontSize: 9, color: Colors.grey), overflow: TextOverflow.ellipsis),
-                            ],
-                          ),
+                  borderRadius: BorderRadius.circular(8),
+                  child: Row(
+                    children: [
+                      Container(
+                        padding: const EdgeInsets.all(10),
+                        decoration: BoxDecoration(
+                          color: themeColor.withOpacity(0.1),
+                          borderRadius: BorderRadius.circular(8),
                         ),
-                      ],
-                    ),
+                        child: Text(item['icon'] ?? '📝', style: const TextStyle(fontSize: 20)),
+                      ),
+                      const SizedBox(width: 12),
+                      Expanded(
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              item['title'] ?? '',
+                              style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 13, color: Color(0xFF1E293B)),
+                              maxLines: 1,
+                              overflow: TextOverflow.ellipsis,
+                            ),
+                            const SizedBox(height: 2),
+                            Text(
+                              item['desc'] ?? '',
+                              style: const TextStyle(fontSize: 11, color: Colors.grey),
+                              maxLines: 1,
+                              overflow: TextOverflow.ellipsis,
+                            ),
+                          ],
+                        ),
+                      ),
+                      const SizedBox(width: 8),
+                      Icon(Icons.arrow_forward_ios_rounded, size: 14, color: themeColor),
+                    ],
                   ),
                 );
               },
@@ -426,7 +434,7 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 
-  // 2️⃣ TAB 2: REVISION HUB
+  // 2️⃣ TAB 2: REVISION HUB (PARAMEDICAL CARD REMOVED PERFECTLY)
   Widget _buildRevisionTab(BuildContext context) {
     return ListView(
       padding: const EdgeInsets.all(16),
@@ -470,9 +478,6 @@ class _HomeScreenState extends State<HomeScreen> {
             _SubCategory('📰 Monthly Sets & Bihar Special', Map<String, String>.from(_configData['current_mapping'] ?? {})),
           ]),
         ),
-
-        const SizedBox(height: 16),
-        _buildParamedicalMatrixCard(),
       ],
     );
   }
@@ -701,22 +706,6 @@ class _HomeScreenState extends State<HomeScreen> {
       subtitle: Text(subtitle, style: TextStyle(fontSize: 12, color: color, fontWeight: FontWeight.w600)),
       trailing: const Icon(Icons.arrow_forward_ios_rounded, size: 16),
       onTap: onTap,
-    );
-  }
-
-  Widget _buildParamedicalMatrixCard() {
-    return Card(
-      child: Padding(
-        padding: const EdgeInsets.all(14),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: const [
-            Text('📋 MockTester Paramedical Test Matrix', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 14, color: Color(0xFF0D9488))),
-            SizedBox(height: 6),
-            Text('• Quick Mini Mocks (10 Qs): Anatomy & Daily Capsule\n• Sectional Mocks (30 Qs): Technical Syllabus & Speed', style: TextStyle(fontSize: 12, color: Colors.grey, height: 1.5)),
-          ],
-        ),
-      ),
     );
   }
 
