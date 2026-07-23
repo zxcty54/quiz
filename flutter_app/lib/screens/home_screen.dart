@@ -2,6 +2,7 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:http/http.dart' as http;
+import 'package:shimmer/shimmer.dart';
 import 'package:url_launcher/url_launcher.dart';
 import '../models/question_model.dart';
 import '../services/telegram_tracker.dart';
@@ -27,12 +28,10 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   void initState() {
     super.initState();
-    // 📲 Telegram Realtime Tracking
     TelegramTracker.sendActivityAlert(screenName: "App Opened / Home Screen");
     _loadHomeConfig();
   }
 
-  // 📂 Assets Se home_config.json Read Karein
   Future<void> _loadHomeConfig() async {
     try {
       final String localData = await rootBundle.loadString('assets/data/home_config.json');
@@ -50,7 +49,10 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     if (_isLoadingConfig) {
-      return const Scaffold(body: Center(child: CircularProgressIndicator()));
+      return Scaffold(
+        appBar: AppBar(title: const Text('MockTester')),
+        body: _buildSkeletonLoading(), // ⏳ Shimmer Loading
+      );
     }
 
     return Scaffold(
@@ -58,15 +60,19 @@ class _HomeScreenState extends State<HomeScreen> {
         title: const Text('MockTester', style: TextStyle(fontWeight: FontWeight.bold)),
         elevation: 0,
       ),
-      body: IndexedStack(
-        index: _currentBottomIndex,
-        children: [
-          _buildHomeTab(context),       // 🏠 Tab 1: Home
-          _buildRevisionTab(context),   // 📚 Tab 2: Revision Hub
-          _buildSectionalTab(context),  // 📝 Tab 3: Sectional CBT Panel
-          _buildSavedTab(),            // ⭐ Tab 4: Saved Area
-          _buildProfileTab(context),    // ⚙️ Tab 5: Profile & Support
-        ],
+      body: AnimatedSwitcher(
+        duration: const Duration(milliseconds: 300), // ⚡ Smooth Animation
+        child: IndexedStack(
+          key: ValueKey<int>(_currentBottomIndex),
+          index: _currentBottomIndex,
+          children: [
+            _buildHomeTab(context),
+            _buildRevisionTab(context),
+            _buildSectionalTab(context),
+            _buildSavedTab(),
+            _buildProfileTab(context),
+          ],
+        ),
       ),
       bottomNavigationBar: NavigationBar(
         selectedIndex: _currentBottomIndex,
@@ -86,6 +92,28 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 
+  // ⏳ SKELETON LOADING WIDGET (SHIMMER)
+  Widget _buildSkeletonLoading() {
+    return ListView.builder(
+      padding: const EdgeInsets.all(16),
+      itemCount: 4,
+      itemBuilder: (context, index) {
+        return Shimmer.fromColors(
+          baseColor: Colors.grey[300]!,
+          highlightColor: Colors.grey[100]!,
+          child: Container(
+            height: 100,
+            margin: const EdgeInsets.only(bottom: 16),
+            decoration: BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.circular(12),
+            ),
+          ),
+        );
+      },
+    );
+  }
+
   // 1️⃣ TAB 1: HOME DASHBOARD
   Widget _buildHomeTab(BuildContext context) {
     return SingleChildScrollView(
@@ -93,30 +121,20 @@ class _HomeScreenState extends State<HomeScreen> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          // 🚀 Dynamic Hero Header
           _buildModernHeroHeader(),
           const SizedBox(height: 16),
-
-          // 🌐 Website Quick Access Portal (Reads Articles/PDF Titles from JSON)
           _buildWebsiteQuickHubCard(context),
           const SizedBox(height: 16),
-
-          // 🎯 Spotlight Eligibility Checker Banner
           _buildEligibilityCheckerBanner(context),
           const SizedBox(height: 16),
-
-          // ⚡ Quick Mini Mocks Card
           _buildMiniMocksCard(context),
           const SizedBox(height: 16),
-
-          // 📸 Telegram Question Photo Form Widget
           const TelegramCreatorWidget(),
         ],
       ),
     );
   }
 
-  // 🚀 MODERN HERO HEADER WIDGET
   Widget _buildModernHeroHeader() {
     return Container(
       width: double.infinity,
@@ -143,7 +161,6 @@ class _HomeScreenState extends State<HomeScreen> {
             flex: 6,
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
-              mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Container(
                   padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
@@ -156,44 +173,20 @@ class _HomeScreenState extends State<HomeScreen> {
                     children: [
                       Text('🔥', style: TextStyle(fontSize: 12)),
                       SizedBox(width: 4),
-                      Text(
-                        'MASTER CBT PATTERN MOCKS',
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 10,
-                          fontWeight: FontWeight.w700,
-                          letterSpacing: 0.8,
-                        ),
-                      ),
+                      Text('MASTER CBT PATTERN MOCKS', style: TextStyle(color: Colors.white, fontSize: 10, fontWeight: FontWeight.w700)),
                     ],
                   ),
                 ),
                 const SizedBox(height: 10),
-                const Text(
-                  'BPSC & BSSC Inter Level 2026 Live Mocks',
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontWeight: FontWeight.w900,
-                    fontSize: 17,
-                    height: 1.2,
-                  ),
-                ),
+                const Text('BPSC & BSSC Inter Level 2026 Live Mocks', style: TextStyle(color: Colors.white, fontWeight: FontWeight.w900, fontSize: 17, height: 1.2)),
                 const SizedBox(height: 6),
-                const Text(
-                  'Real TCS Simulation • High Yield Qs • Detailed Solution',
-                  style: TextStyle(
-                    color: Color(0xFFBFDBFE),
-                    fontSize: 11,
-                    fontWeight: FontWeight.w500,
-                  ),
-                ),
+                const Text('Real TCS Simulation • High Yield Qs', style: TextStyle(color: Color(0xFFBFDBFE), fontSize: 11, fontWeight: FontWeight.w500)),
               ],
             ),
           ),
           Expanded(
             flex: 4,
             child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 _buildHeaderValueBadge('🎯', 'REAL CBT\nINTERFACE'),
                 const SizedBox(height: 10),
@@ -220,27 +213,14 @@ class _HomeScreenState extends State<HomeScreen> {
         children: [
           Text(emoji, style: const TextStyle(fontSize: 16)),
           const SizedBox(width: 6),
-          Expanded(
-            child: Text(
-              text,
-              textAlign: TextAlign.center,
-              style: const TextStyle(
-                color: Colors.white,
-                fontWeight: FontWeight.w800,
-                fontSize: 9,
-                height: 1.2,
-              ),
-            ),
-          ),
+          Expanded(child: Text(text, textAlign: TextAlign.center, style: const TextStyle(color: Colors.white, fontWeight: FontWeight.w800, fontSize: 9, height: 1.2))),
         ],
       ),
     );
   }
 
-  // 🌐 DYNAMIC WEBSITE ARTICLE/PDF HUB (DYNAMICALLY DISPLAYS TITLES FROM JSON)
   Widget _buildWebsiteQuickHubCard(BuildContext context) {
     final webLinks = List<Map<String, dynamic>>.from(_configData['web_links'] ?? []);
-
     if (webLinks.isEmpty) return const SizedBox.shrink();
 
     return Card(
@@ -271,18 +251,13 @@ class _HomeScreenState extends State<HomeScreen> {
               itemBuilder: (context, index) {
                 final item = webLinks[index];
                 final Color themeColor = Color(int.parse(item['color'] ?? '0xFF2563EB'));
-
                 return InkWell(
                   onTap: () => _openWebsiteUrl(context, item['title']!, item['url']!),
-                  borderRadius: BorderRadius.circular(8),
                   child: Row(
                     children: [
                       Container(
                         padding: const EdgeInsets.all(10),
-                        decoration: BoxDecoration(
-                          color: themeColor.withOpacity(0.1),
-                          borderRadius: BorderRadius.circular(8),
-                        ),
+                        decoration: BoxDecoration(color: themeColor.withOpacity(0.1), borderRadius: BorderRadius.circular(8)),
                         child: Text(item['icon'] ?? '📝', style: const TextStyle(fontSize: 20)),
                       ),
                       const SizedBox(width: 12),
@@ -290,23 +265,12 @@ class _HomeScreenState extends State<HomeScreen> {
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Text(
-                              item['title'] ?? '',
-                              style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 13, color: Color(0xFF1E293B)),
-                              maxLines: 1,
-                              overflow: TextOverflow.ellipsis,
-                            ),
+                            Text(item['title'] ?? '', style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 13, color: Color(0xFF1E293B)), maxLines: 1, overflow: TextOverflow.ellipsis),
                             const SizedBox(height: 2),
-                            Text(
-                              item['desc'] ?? '',
-                              style: const TextStyle(fontSize: 11, color: Colors.grey),
-                              maxLines: 1,
-                              overflow: TextOverflow.ellipsis,
-                            ),
+                            Text(item['desc'] ?? '', style: const TextStyle(fontSize: 11, color: Colors.grey), maxLines: 1, overflow: TextOverflow.ellipsis),
                           ],
                         ),
                       ),
-                      const SizedBox(width: 8),
                       Icon(Icons.arrow_forward_ios_rounded, size: 14, color: themeColor),
                     ],
                   ),
@@ -319,24 +283,15 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 
-  // 🎯 SPOTLIGHT JOB ELIGIBILITY CHECKER BANNER
   Widget _buildEligibilityCheckerBanner(BuildContext context) {
     const String eligibilityToolUrl = "https://www.mocktester.online/p/bihar-job-eligibility-checker.html";
-
     return Card(
       elevation: 2,
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(14),
-        side: const BorderSide(color: Color(0xFF3B82F6), width: 1.5),
-      ),
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(14), side: const BorderSide(color: Color(0xFF3B82F6), width: 1.5)),
       child: Container(
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(14),
-          gradient: const LinearGradient(
-            colors: [Color(0xFFEFF6FF), Colors.white],
-            begin: Alignment.topLeft,
-            end: Alignment.bottomRight,
-          ),
+          gradient: const LinearGradient(colors: [Color(0xFFEFF6FF), Colors.white], begin: Alignment.topLeft, end: Alignment.bottomRight),
         ),
         padding: const EdgeInsets.all(14.0),
         child: Column(
@@ -360,10 +315,7 @@ class _HomeScreenState extends State<HomeScreen> {
               ],
             ),
             const SizedBox(height: 8),
-            const Text(
-              'Apni DOB, Stream aur Height daal kar check karein aap Bihar ki kis-kis Sarkari Naukri ke liye eligible hain!',
-              style: TextStyle(fontSize: 11.5, color: Color(0xFF475569), height: 1.3),
-            ),
+            const Text('Apni DOB, Stream aur Height daal kar check karein aap Bihar ki kis-kis Sarkari Naukri ke liye eligible hain!', style: TextStyle(fontSize: 11.5, color: Color(0xFF475569), height: 1.3)),
             const SizedBox(height: 10),
             Wrap(
               spacing: 6, runSpacing: 6,
@@ -377,17 +329,8 @@ class _HomeScreenState extends State<HomeScreen> {
             SizedBox(
               width: double.infinity,
               child: ElevatedButton.icon(
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: const Color(0xFF2563EB),
-                  foregroundColor: Colors.white,
-                  padding: const EdgeInsets.symmetric(vertical: 10),
-                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
-                ),
-                onPressed: () => _openWebsiteUrl(
-                  context,
-                  "Job Eligibility Checker",
-                  eligibilityToolUrl,
-                ),
+                style: ElevatedButton.styleFrom(backgroundColor: const Color(0xFF2563EB), foregroundColor: Colors.white, padding: const EdgeInsets.symmetric(vertical: 10)),
+                onPressed: () => _openWebsiteUrl(context, "Job Eligibility Checker", eligibilityToolUrl),
                 icon: const Text('🚀', style: TextStyle(fontSize: 12)),
                 label: const Text('Check My Eligibility On Website', style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold)),
               ),
@@ -406,10 +349,8 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 
-  // ⚡ QUICK MINI MOCKS CARD
   Widget _buildMiniMocksCard(BuildContext context) {
     final miniMocks = List<Map<String, dynamic>>.from(_configData['mini_mocks'] ?? []);
-
     return Card(
       elevation: 1,
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
@@ -434,19 +375,14 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 
-  // 2️⃣ TAB 2: REVISION HUB (PARAMEDICAL CARD REMOVED PERFECTLY)
   Widget _buildRevisionTab(BuildContext context) {
     return ListView(
       padding: const EdgeInsets.all(16),
       children: [
         const Text('📚 Chapterwise Revision Hub', style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
         const SizedBox(height: 12),
-
         _buildMainCategoryTile(
-          icon: '🔬',
-          title: 'General Science',
-          subtitle: 'Physics • Biology • Chemistry',
-          color: Colors.blue,
+          icon: '🔬', title: 'General Science', subtitle: 'Physics • Biology • Chemistry', color: Colors.blue,
           onTap: () => _openSubCategory(context, 'General Science', [
             _SubCategory('⚡ Physics', Map<String, String>.from(_configData['phy_mapping'] ?? {})),
             _SubCategory('🧬 Biology', Map<String, String>.from(_configData['bio_mapping'] ?? {})),
@@ -454,12 +390,8 @@ class _HomeScreenState extends State<HomeScreen> {
           ]),
         ),
         const SizedBox(height: 10),
-
         _buildMainCategoryTile(
-          icon: '📚',
-          title: 'GK & Social Science',
-          subtitle: 'Polity • History • Geography • Economy',
-          color: Colors.indigo,
+          icon: '📚', title: 'GK & Social Science', subtitle: 'Polity • History • Geography • Economy', color: Colors.indigo,
           onTap: () => _openSubCategory(context, 'GK & Social Science', [
             _SubCategory('📜 Indian Polity', Map<String, String>.from(_configData['polity_mapping'] ?? {})),
             _SubCategory('🏛️ History', Map<String, String>.from(_configData['history_mapping'] ?? {})),
@@ -468,12 +400,8 @@ class _HomeScreenState extends State<HomeScreen> {
           ]),
         ),
         const SizedBox(height: 10),
-
         _buildMainCategoryTile(
-          icon: '📰',
-          title: 'Current Affairs 2026',
-          subtitle: 'Monthly Bulletins & Bihar Special News',
-          color: Colors.purple,
+          icon: '📰', title: 'Current Affairs 2026', subtitle: 'Monthly Bulletins & Bihar Special News', color: Colors.purple,
           onTap: () => _openSubCategory(context, 'Current Affairs 2026', [
             _SubCategory('📰 Monthly Sets & Bihar Special', Map<String, String>.from(_configData['current_mapping'] ?? {})),
           ]),
@@ -482,7 +410,6 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 
-  // 3️⃣ TAB 3: SECTIONAL MOCK PORTAL
   Widget _buildSectionalTab(BuildContext context) {
     return SingleChildScrollView(
       padding: const EdgeInsets.all(16),
@@ -492,7 +419,6 @@ class _HomeScreenState extends State<HomeScreen> {
           const Text('🎯 Target Exam Sectional Mocks', style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
           const Text('अपनी परीक्षा चुनें और रियल TCS CBT पैटर्न पर प्रैक्टिस शुरू करें', style: TextStyle(color: Colors.grey, fontSize: 12)),
           const SizedBox(height: 14),
-
           GridView.count(
             shrinkWrap: true,
             physics: const NeverScrollableScrollPhysics(),
@@ -508,7 +434,6 @@ class _HomeScreenState extends State<HomeScreen> {
             ],
           ),
           const SizedBox(height: 20),
-
           if (_selectedExamPanel == 'bpsc') _buildBpscSetsPanel(context),
           if (_selectedExamPanel == 'ssc') _buildSscSetsPanel(context),
           if (_selectedExamPanel == 'bssc_cgl') _buildBsscCglSetsPanel(context),
@@ -520,26 +445,15 @@ class _HomeScreenState extends State<HomeScreen> {
 
   Widget _buildSavedTab() => const Center(child: Text('⭐ Bookmarked Questions Area'));
 
-  // 5️⃣ TAB 5: PROFILE
   Widget _buildProfileTab(BuildContext context) {
     return ListView(
       padding: const EdgeInsets.all(16),
       children: [
         const Center(child: CircleAvatar(radius: 30, child: Icon(Icons.person))),
         const SizedBox(height: 12),
-        SwitchListTile(
-          title: const Text('Bilingual (Hindi / Eng)'),
-          value: _isHindi,
-          onChanged: (v) => setState(() => _isHindi = v),
-        ),
-        SwitchListTile(
-          title: const Text('Dark Mode'),
-          value: _isDarkMode,
-          onChanged: (v) => setState(() => _isDarkMode = v),
-        ),
+        SwitchListTile(title: const Text('Bilingual (Hindi / Eng)'), value: _isHindi, onChanged: (v) => setState(() => _isHindi = v)),
+        SwitchListTile(title: const Text('Dark Mode'), value: _isDarkMode, onChanged: (v) => setState(() => _isDarkMode = v)),
         const Divider(),
-        _buildLaunchRoadmapCard(),
-        const SizedBox(height: 12),
         _buildTrustCard(),
         const SizedBox(height: 12),
         _buildStudentSupportCard(context),
@@ -547,17 +461,13 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 
-  // 🛠️ HELPER FUNCTIONS
-
   Future<void> _openWebsiteUrl(BuildContext context, String linkTitle, String url) async {
     TelegramTracker.sendActivityAlert(screenName: "Opened Website Tool", extraDetails: "$linkTitle ($url)");
     final Uri uri = Uri.parse(url);
     try {
       await launchUrl(uri, mode: LaunchMode.externalApplication);
     } catch (e) {
-      if (context.mounted) {
-        ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('Could not launch website: $e')));
-      }
+      if (context.mounted) ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('Could not launch website: $e')));
     }
   }
 
@@ -677,10 +587,7 @@ class _HomeScreenState extends State<HomeScreen> {
       onTap: () => setState(() => _selectedExamPanel = panelKey),
       child: Card(
         color: isSelected ? color.withOpacity(0.12) : Colors.white,
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(10),
-          side: BorderSide(color: isSelected ? color : Colors.grey.shade300, width: isSelected ? 2 : 1),
-        ),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10), side: BorderSide(color: isSelected ? color : Colors.grey.shade300, width: isSelected ? 2 : 1)),
         child: Padding(
           padding: const EdgeInsets.all(10),
           child: Column(
@@ -706,24 +613,6 @@ class _HomeScreenState extends State<HomeScreen> {
       subtitle: Text(subtitle, style: TextStyle(fontSize: 12, color: color, fontWeight: FontWeight.w600)),
       trailing: const Icon(Icons.arrow_forward_ios_rounded, size: 16),
       onTap: onTap,
-    );
-  }
-
-  Widget _buildLaunchRoadmapCard() {
-    return Card(
-      child: Padding(
-        padding: const EdgeInsets.all(14),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: const [
-            Text('📅 Launch Roadmap & Live Updates', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 14)),
-            SizedBox(height: 8),
-            Text('🔥 Coming Tomorrow: BSSC Inter Level Top 100 Qs', style: TextStyle(fontSize: 12, color: Color(0xFFFF4757), fontWeight: FontWeight.w600)),
-            SizedBox(height: 4),
-            Text('✅ Just Added: Current Affairs July 2026 Bulletin', style: TextStyle(fontSize: 12, color: Color(0xFF059669))),
-          ],
-        ),
-      ),
     );
   }
 
@@ -794,7 +683,6 @@ class _HomeScreenState extends State<HomeScreen> {
   }
 }
 
-// 📸 TELEGRAM CREATOR FORM WIDGET
 class TelegramCreatorWidget extends StatefulWidget {
   const TelegramCreatorWidget({super.key});
 
