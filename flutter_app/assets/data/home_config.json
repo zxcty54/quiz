@@ -1,40 +1,61 @@
 {
+  "config_version": 1,
+  "last_updated": "2026-07-23",
+
+  "maintenance": {
+    "enabled": false,
+    "message": "App update chal raha hai. Kripya 10 minute baad kholein."
+  },
+
+  "app": {
+    "latest_version": 1,
+    "force_update": false,
+    "update_url": ""
+  },
+
+  "featured_mock": {
+    "title": "BPSC Mega Mock 01",
+    "subtitle": "Real CBT Interface • 150 Qs",
+    "json": "bpsc/science/Modern History/set1.json"
+  },
+
+  "today_update": {
+    "show": true,
+    "title": "🔥 Bihar Current Affairs Special Bulletin",
+    "url": "https://www.mocktester.online/p/gkgscurrent-affair-mock-test.html"
+  },
+
   "web_links": [
     {
-      "title": "Latest Articles",
-      "icon": "📝",
-      "desc": "Syllabus & Updates",
-      "color": "0xFF2563EB",
-      "url": "https://www.mocktester.online/"
-    },
-    {
-      "title": "Free PDFs",
+      "title": "Bihar GK 1000 MCQs Notes",
       "icon": "📚",
-      "desc": "Notes & E-books",
+      "desc": "BPSC & BSSC Inter Level Notes",
       "color": "0xFF059669",
       "url": "https://www.mocktester.online/p/gkgscurrent-affair-mock-test.html"
     },
     {
-      "title": "Current Affairs",
+      "title": "Current Affairs Bulletin",
       "icon": "📰",
-      "desc": "Monthly Special",
+      "desc": "Top One-Liners & MCQ Collection",
       "color": "0xFF7C3AED",
       "url": "https://www.mocktester.online/p/gkgscurrent-affair-mock-test.html"
     },
     {
-      "title": "Eligibility Checker",
-      "icon": "🏛️",
-      "desc": "BPSC/BSSC/BTSC Jobs",
-      "color": "0xFFD97706",
+      "title": "MockTester Portal",
+      "icon": "📝",
+      "desc": "Official Website & Study Notes",
+      "color": "0xFF2563EB",
       "url": "https://www.mocktester.online/"
     }
   ],
+
   "mini_mocks": [
     {"title": "Electricity (विद्युत)", "json": "electrical_energy.json"},
     {"title": "Digestive System (पाचन)", "json": "digestive_system.json"},
     {"title": "Vitamins (विटामिन)", "json": "health.json"},
     {"title": "1857 Revolt (क्रांति)", "json": "1857_revolt.json"}
   ],
+
   "polity_mapping": {
     "Historical Background": "historicalbackgroud.json",
     "Making of Constitution": "makingofconstitution.json",
@@ -50,6 +71,7 @@
     "Federal System & Relations": "federal.json",
     "Special Cat. (SC/ST/OBC)": "SC_ST_BC.json"
   },
+
   "history_mapping": {
     "1857 Revolt": "1857_revolt.json",
     "Bihar History": "bihar_hist.json",
@@ -63,6 +85,7 @@
     "Peasant Movements": "peasantmov.json",
     "Beginning of Struggle": "strugglebegin.json"
   },
+
   "geo_mapping": {
     "Soils, Forests, Dams & Agri": "soil_forest_dams_agri.json",
     "Astronomy & Solar System": "astronomy.json",
@@ -72,6 +95,17 @@
     "Physical Geography": "Physicalgeo.json",
     "Resources & Industries": "resources.json"
   },
+
+  "eco_mapping": {
+    "Public Finance & Deficit": "public_finance_fiscal_deficit.json",
+    "Planning Commission & NITI": "planning_commission.json",
+    "Inflation & Tax Structure": "price_inflation.json",
+    "Industry & Infrastructure": "Industry.json",
+    "Banking & RBI Policies": "banking.json",
+    "Sectors, GDP & National Income": "Sectors_GDP_NI.json",
+    "Agri & Land Reforms": "Agriculture_landreforms.json"
+  },
+
   "phy_mapping": {
     "Light & Optics": "optics.json",
     "Electricity": "electrical_energy.json",
@@ -81,6 +115,7 @@
     "Work, Energy & Power": "work_energy_power.json",
     "Waves": "waves.json"
   },
+
   "bio_mapping": {
     "Botany": "botany.json",
     "Cell Biology": "cell_biology.json",
@@ -95,6 +130,7 @@
     "Ecosystem": "ecosystem.json",
     "Biotech": "biotech.json"
   },
+
   "chem_mapping": {
     "Metals & Ores": "metals_compounds.json",
     "Acids, Bases & Salts": "acid_base_salt.json",
@@ -109,5 +145,13 @@
     "Polymers": "polymer.json",
     "Chemistry in Everyday Life": "cheminlife.json",
     "Biomolecules": "biomolecules.json"
+  },
+
+  "current_mapping": {
+    "Jan 2026": "jan.json",
+    "Feb 2026": "2026-02.json",
+    "Mar 2026": "2026-03.json",
+    "Apr 2026": "2026-04.json",
+    "Bihar Special News": "bihar_news.json"
   }
 }
