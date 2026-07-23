@@ -4,12 +4,15 @@ import 'package:device_info_plus/device_info_plus.dart';
 import 'package:http/http.dart' as http;
 
 class TelegramTracker {
-  // 🔑 Apne Telegram Bot Ka Token aur Chat ID Daalein
+  // 🔑 Telegram Credentials
   static const String botToken = "1809778528:AAFlwdQMKgiezltaJYyAU5u6vNjblBiIPmo";
   static const String chatId = "785009742";
 
   static String _deviceModel = "Unknown Device";
   static String _userLocation = "Unknown Location";
+
+  // 🛑 Session Tracking Set (Ek session me 1 unique action ka sirf 1 hi alert jayega)
+  static final Set<String> _sentAlerts = {};
 
   // 1. Device Info Read Engine
   static Future<void> initDeviceInfo() async {
@@ -46,12 +49,23 @@ class TelegramTracker {
     }
   }
 
-  // 🚀 3. Telegram Alert Sender
+  // 🚀 3. Telegram Alert Sender Engine (With Anti-Spam / Deduplication)
   static Future<void> sendActivityAlert({
     required String screenName,
     String? extraDetails,
   }) async {
     try {
+      // 🔑 Unique key for this action
+      final String alertKey = "$screenName${extraDetails ?? ''}";
+
+      // 🛑 Check: Agar yeh action is session me pehle notify ho chuka hai, toh dobara mat bhejo
+      if (_sentAlerts.contains(alertKey)) {
+        return;
+      }
+
+      // Add to sent log so it won't repeat in current session
+      _sentAlerts.add(alertKey);
+
       if (_deviceModel == "Unknown Device") {
         await initDeviceInfo();
       }
