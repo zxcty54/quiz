@@ -1,40 +1,47 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'screens/splash_screen.dart';
+import 'screens/home_screen.dart';
 
 void main() {
-  runApp(const MockTesterApp());
+  WidgetsFlutterBinding.ensureInitialized();
+  runApp(const MyApp());
 }
 
-class MockTesterApp extends StatelessWidget {
-  const MockTesterApp({super.key});
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'MockTester',
       debugShowCheckedModeBanner: false,
-      themeMode: ThemeMode.system,
-      
+
+      // 🎨 Light Theme (Material 3 Enabled)
       theme: ThemeData(
         useMaterial3: true,
-        colorScheme: ColorScheme.fromSeed(
-          seedColor: const Color(0xFF1E88E5),
-          brightness: Brightness.light,
+        colorSchemeSeed: const Color(0xFF2563EB),
+        brightness: Brightness.light,
+        scaffoldBackgroundColor: const Color(0xFFF8FAFC),
+        appBarTheme: const AppBarTheme(
+          centerTitle: true,
+          elevation: 0,
         ),
-        textTheme: GoogleFonts.poppinsTextTheme(ThemeData.light().textTheme),
       ),
 
+      // 🌙 Dark Theme (Material 3 Dark Enabled)
       darkTheme: ThemeData(
         useMaterial3: true,
-        colorScheme: ColorScheme.fromSeed(
-          seedColor: const Color(0xFF90CAF9),
-          brightness: Brightness.dark,
+        colorSchemeSeed: const Color(0xFF2563EB),
+        brightness: Brightness.dark,
+        appBarTheme: const AppBarTheme(
+          centerTitle: true,
+          elevation: 0,
         ),
-        textTheme: GoogleFonts.poppinsTextTheme(ThemeData.dark().textTheme),
       ),
 
-      home: const SplashScreen(),
+      // ⚙️ Theme Mode (Auto switch according to phone settings)
+      themeMode: ThemeMode.system,
+
+      home: const HomeScreen(),
     );
   }
 }
