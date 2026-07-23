@@ -27,17 +27,15 @@ jobs:
           cache: true
 
       - name: 📦 Get Dependencies
-        run: |
-          cd quiz/flutter_app
-          flutter pub get
+        working-directory: flutter_app
+        run: flutter pub get
 
       - name: 🛠️ Build Android Release APK
-        run: |
-          cd quiz/flutter_app
-          flutter build apk --release
+        working-directory: flutter_app
+        run: flutter build apk --release
 
       - name: 📤 Upload Build Artifact (APK Download)
         uses: actions/upload-artifact@v4
         with:
           name: MockTester-Release-APK
-          path: quiz/flutter_app/build/app/outputs/flutter-apk/app-release.apk
+          path: flutter_app/build/app/outputs/flutter-apk/app-release.apk
