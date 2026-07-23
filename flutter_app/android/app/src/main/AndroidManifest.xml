@@ -18,7 +18,7 @@
             android:windowSoftInputMode="adjustResize">
             <meta-data
               android:name="io.flutter.embedding.android.NormalTheme"
-              android:value="@style/ValueTheme"
+              android:value="@style/NormalTheme"
               />
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
