@@ -108,7 +108,7 @@ class HeroHeaderWidget extends StatelessWidget {
                 ),
                 const SizedBox(height: 10),
                 Text(
-                  featuredData['title'] ?? 'BPSC & BSSC Inter Level 2026 Live Mocks',
+                  featuredData['title'] ?? 'BPSC & BSSC Inter Level Live Mocks',
                   style: const TextStyle(color: Colors.white, fontWeight: FontWeight.w900, fontSize: 17, height: 1.2),
                 ),
                 const SizedBox(height: 6),
@@ -162,7 +162,7 @@ class HeroHeaderWidget extends StatelessWidget {
   }
 }
 
-// 3️⃣ 🎯 NEW STRUCTURED WEB HUB CARD WIDGET (EXACT MATCH TO YOUR FORMAT)
+// 3️⃣ 🎯 STRUCTURED 3-BOX WEB HUB CARD WIDGET
 class WebHubCardWidget extends StatelessWidget {
   final List<Map<String, dynamic>> webHubSections;
   final Function(String title, String url) onTapUrl;
@@ -217,7 +217,7 @@ class WebHubCardWidget extends StatelessWidget {
 
                 const SizedBox(height: 12),
 
-                // Bottom Action Button
+                // Bottom Action Button (Right Aligned)
                 Align(
                   alignment: Alignment.centerRight,
                   child: InkWell(
@@ -225,18 +225,13 @@ class WebHubCardWidget extends StatelessWidget {
                     borderRadius: BorderRadius.circular(6),
                     child: Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
-                      child: Row(
-                        mainAxisSize: MainAxisSize.min,
-                        children: [
-                          Text(
-                            buttonText,
-                            style: TextStyle(
-                              fontSize: 13,
-                              fontWeight: FontWeight.bold,
-                              color: themeColor,
-                            ),
-                          ),
-                        ],
+                      child: Text(
+                        buttonText,
+                        style: TextStyle(
+                          fontSize: 13,
+                          fontWeight: FontWeight.bold,
+                          color: themeColor,
+                        ),
                       ),
                     ),
                   ),
