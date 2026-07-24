@@ -1,5 +1,5 @@
 name: mocktester
-description: "MockTester - Bilingual Quiz & Revision Hub App"
+description: "MockTester - Premier CBT Mock Test App"
 publish_to: 'none'
 version: 1.0.0+1
 
@@ -9,18 +9,12 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  google_fonts: ^6.1.0
-  cupertino_icons: ^1.0.6
-  http: ^1.2.0
-  flutter_math_fork: ^0.7.2
-  url_launcher: ^6.2.5
-  device_info_plus: ^10.1.0 
-  # 📊 Beautiful Charts ke liye
-  fl_chart: ^0.68.0
-
-  # ⏳ Skeleton Shimmer Loading Effect ke liye
+  http: ^1.1.0
   shimmer: ^3.0.0
-shared_preferences: ^2.2.2 # 🚀 Real-time Local Tracker Package
+  url_launcher: ^6.1.12
+  fl_chart: ^0.68.0
+  device_info_plus: ^10.1.0
+  shared_preferences: ^2.2.2
 
 dev_dependencies:
   flutter_test:
@@ -29,7 +23,8 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
- # 📂 FIX: Pura folder directory add kar diya hai taaki sare JSON files automatic include ho jayein
   assets:
-    - assets/
-    - assets/data/
+    - assets/data/app_config.json
+    - assets/data/home_data.json
+    - assets/data/subject_mapping.json
+    - assets/data/sectional_data.json
