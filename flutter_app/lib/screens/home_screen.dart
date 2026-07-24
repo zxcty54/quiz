@@ -25,7 +25,6 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
   bool _isHindi = true;
   String _selectedExamPanel = 'bpsc';
 
-  // 📂 Multi-JSON Data Maps
   Map<String, dynamic> _appConfig = {};
   Map<String, dynamic> _homeData = {};
   Map<String, dynamic> _subjectMapping = {};
@@ -187,7 +186,7 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
           HeroHeaderWidget(featuredData: _appConfig['featured_mock'] ?? {}),
           const SizedBox(height: 16),
           WebHubCardWidget(
-            webHubSections: List<Map<String, dynamic>>.from(_homeData['web_hub'] ?? []),
+            webHubSections: (_homeData['web_hub'] as List?) ?? [],
             onTapUrl: _openWebsiteUrl,
           ),
           EligibilityCheckerWidget(isDarkMode: _isDarkMode, onTapUrl: _openWebsiteUrl),
@@ -226,7 +225,7 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
     );
   }
 
-  // 2️⃣ TAB 2: REVISION HUB (SMART ACCORDION)
+  // 2️⃣ TAB 2: REVISION HUB
   Widget _buildRevisionTab(BuildContext context) {
     return ListView(
       padding: const EdgeInsets.all(16),
@@ -340,7 +339,7 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
     );
   }
 
-  // 3️⃣ TAB 3: SECTIONAL MOCK TAB (BULLETPROOF LOADER)
+  // 3️⃣ TAB 3: SECTIONAL MOCK
   Widget _buildSectionalTab(BuildContext context) {
     return SingleChildScrollView(
       padding: const EdgeInsets.all(16),
@@ -367,14 +366,12 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
           ),
           const SizedBox(height: 20),
 
-          // Dynamic Panel Renderer
           _buildDynamicSectionalSetsPanel(context),
         ],
       ),
     );
   }
 
-  // 🛠️ SMART DYNAMIC SETS RENDERER
   Widget _buildDynamicSectionalSetsPanel(BuildContext context) {
     final dynamic panelData = _sectionalData[_selectedExamPanel];
 
@@ -387,7 +384,6 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
       );
     }
 
-    // MAP FORMAT (BPSC Pattern)
     if (panelData is Map) {
       int count = panelData['total_sets'] ?? 10;
       String prefix = panelData['path_prefix'] ?? 'bpsc/science/Modern History/set';
@@ -419,7 +415,6 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
       );
     }
 
-    // LIST FORMAT (SSC / BSSC Pattern)
     if (panelData is List) {
       return Column(
         children: panelData.map((item) {
@@ -634,7 +629,7 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
     );
   }
 
-  // 🛠️ HELPER FUNCTIONS
+  // HELPER FUNCTIONS
   Future<void> _openWebsiteUrl(String linkTitle, String url) async {
     TelegramTracker.logActivity("Opened Web Tool: $linkTitle");
     final Uri uri = Uri.parse(url);
