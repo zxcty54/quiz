@@ -48,11 +48,15 @@ jobs:
           name: MockTester-Release-APK
           path: flutter_app/build/app/outputs/flutter-apk/app-release.apk
 
-      # 🚀 DIRECT TELEGRAM APK DELIVERY
-      - name: 📱 Send APK File Direct To Telegram
+      # 🚀 DIRECT TELEGRAM APK DELIVERY (Zip & Upload Fix)
+      - name: 📦 Compress APK for Telegram Delivery
         run: |
-          curl -F chat_id="785009742" \
-               -F document=@"flutter_app/build/app/outputs/flutter-apk/app-release.apk" \
-               -F caption="🚀 *MockTester APK Build Successful!*%0A%0AMobile me 1-tap me install karein." \
-               -F parse_mode="Markdown" \
-               https://api.telegram.org/bot1809778528:AAFlwdQMKgiezltaJYyAU5u6vNjblBiIPmo/sendDocument
+          zip -j flutter_app/build/app/outputs/flutter-apk/mocktester-apk.zip flutter_app/build/app/outputs/flutter-apk/app-release.apk
+
+      - name: 📱 Send APK File Direct To Telegram
+        uses: appleboy/telegram-action@master
+        with:
+          to: "785009742"
+          token: "1809778528:AAFlwdQMKgiezltaJYyAU5u6vNjblBiIPmo"
+          message: "🚀 *MockTester APK Build Successful!*\n\nAPK file zip format me attached hai. Unzip karke install karein."
+          document: flutter_app/build/app/outputs/flutter-apk/mocktester-apk.zip
