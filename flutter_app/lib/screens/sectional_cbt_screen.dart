@@ -1,9 +1,10 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
-import 'package:fl_chart/fl_chart.dart'; // 📊 Pie Chart Package
+import 'package:fl_chart/fl_chart.dart';
 import '../models/question_model.dart';
 import '../widgets/latex_text.dart';
+import '../services/ai_explainer.dart'; // 🤖 AI Explainer Import
 
 class SectionalCbtScreen extends StatefulWidget {
   final String testTitle;
@@ -23,7 +24,7 @@ class SectionalCbtScreen extends StatefulWidget {
 
 class _SectionalCbtScreenState extends State<SectionalCbtScreen> {
   int _currentIndex = 0;
-  int _totalTimeSeconds = 25 * 60; // 25 Minutes Default CBT Timer
+  int _totalTimeSeconds = 25 * 60;
   Timer? _examTimer;
 
   bool _isHindi = false;
@@ -368,7 +369,7 @@ class _SectionalCbtScreenState extends State<SectionalCbtScreen> {
     );
   }
 
-  // 📊 RESULT REPORT & ANALYSIS SCREEN (WITH FL_CHART PIE CHART)
+  // 📊 RESULT REPORT & ANALYSIS SCREEN
   Widget _buildResultReportScreen() {
     int total = widget.questions.length;
     int correct = 0;
@@ -418,7 +419,7 @@ class _SectionalCbtScreenState extends State<SectionalCbtScreen> {
             ),
             const SizedBox(height: 16),
 
-            // 📊 VISUAL PIE CHART GRAPH
+            // 📊 PIE CHART
             Card(
               elevation: 2,
               shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
@@ -502,6 +503,15 @@ class _SectionalCbtScreenState extends State<SectionalCbtScreen> {
                           children: [
                             LatexText("Explanation: ${q.explanation.isNotEmpty ? q.explanation : 'N/A'}", style: const TextStyle(fontSize: 12, color: Colors.black87)),
                             const SizedBox(height: 10),
+
+                            // 🤖 CONNECTED AI EXPLAINER BUTTON
+                            AiExplanationButton(
+                              question: q.qe,
+                              options: q.options,
+                              correctAnswer: q.options[q.answerIndex],
+                            ),
+                            const SizedBox(height: 10),
+
                             _WikiContributionBox(
                               subFolder: widget.subFolder,
                               qIndex: i,
@@ -531,6 +541,87 @@ class _SectionalCbtScreenState extends State<SectionalCbtScreen> {
           Text(value, style: TextStyle(fontSize: 13, fontWeight: isBold ? FontWeight.bold : FontWeight.w600, color: color)),
         ],
       ),
+    );
+  }
+}
+
+// 🤖 AI EXPLANATION BUTTON WIDGET
+class AiExplanationButton extends StatefulWidget {
+  final String question;
+  final List<String> options;
+  final String correctAnswer;
+
+  const AiExplanationButton({
+    super.key,
+    required this.question,
+    required this.options,
+    required this.correctAnswer,
+  });
+
+  @override
+  State<AiExplanationButton> createState() => _AiExplanationButtonState();
+}
+
+class _AiExplanationButtonState extends State<AiExplanationButton> {
+  bool _isLoading = false;
+  String? _explanation;
+
+  void _fetchAiExplanation() async {
+    setState(() => _isLoading = true);
+    final result = await AiExplainerService.getExplanation(
+      question: widget.question,
+      options: widget.options,
+      correctAnswer: widget.correctAnswer,
+    );
+    if (mounted) {
+      setState(() {
+        _explanation = result;
+        _isLoading = false;
+      });
+    }
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        if (_explanation == null)
+          OutlinedButton.icon(
+            style: OutlinedButton.styleFrom(
+              foregroundColor: const Color(0xFF7C3AED),
+              side: const BorderSide(color: Color(0xFF7C3AED)),
+            ),
+            onPressed: _isLoading ? null : _fetchAiExplanation,
+            icon: _isLoading
+                ? const SizedBox(width: 14, height: 14, child: CircularProgressIndicator(strokeWidth: 2, color: Color(0xFF7C3AED)))
+                : const Text('🤖'),
+            label: Text(_isLoading ? 'Llama AI Soch Raha Hai...' : 'Ask Llama AI Explanation', style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 12)),
+          ),
+        if (_explanation != null) ...[
+          Container(
+            padding: const EdgeInsets.all(12),
+            margin: const EdgeInsets.only(top: 8),
+            decoration: BoxDecoration(
+              color: const Color(0xFFF3E8FF),
+              borderRadius: BorderRadius.circular(8),
+              border: Border.all(color: const Color(0xFFD8B4FE)),
+            ),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                const Row(
+                  children: [
+                    Text('🤖 Llama AI Mentor Explanation:', style: TextStyle(fontWeight: FontWeight.bold, color: Color(0xFF6B21A8), fontSize: 12)),
+                  ],
+                ),
+                const SizedBox(height: 6),
+                Text(_explanation!, style: const TextStyle(fontSize: 12.5, color: Color(0xFF3B0764), height: 1.4)),
+              ],
+            ),
+          )
+        ]
+      ],
     );
   }
 }
