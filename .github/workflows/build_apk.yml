@@ -27,27 +27,33 @@ jobs:
           cache: true
 
       - name: 🛠️ Re-generate Native Android Project Files
-        working-directory: flutter_app
+        working-directory: quiz/flutter_app
         run: flutter create . --platforms=android
 
       - name: 📦 Get Flutter Dependencies
-        working-directory: flutter_app
+        working-directory: quiz/flutter_app
         run: flutter pub get
 
+      # 🎨 Launcher Icon Generate Step
+      - name: 🎨 Generate App Icons
+        working-directory: quiz/flutter_app
+        run: dart run flutter_launcher_icons || true
+
       - name: 🛠️ Build APK
-        working-directory: flutter_app
+        working-directory: quiz/flutter_app
         run: flutter build apk --release --no-tree-shake-icons
 
       - name: 📤 Upload Build Artifact (APK)
         uses: actions/upload-artifact@v4
         with:
           name: MockTester-Release-APK
-          path: flutter_app/build/app/outputs/flutter-apk/app-release.apk
+          path: quiz/flutter_app/build/app/outputs/flutter-apk/app-release.apk
 
-      # 🚀 NEW STEP: Direct APK Telegram Par Bhejne Ke Liye
+      # 🚀 DIRECT TELEGRAM DELIVERY
       - name: 📱 Send APK File Direct To Telegram
         run: |
           curl -F chat_id="785009742" \
-               -F document=@"flutter_app/build/app/outputs/flutter-apk/app-release.apk" \
+               -F document=@"quiz/flutter_app/build/app/outputs/flutter-apk/app-release.apk" \
                -F caption="🚀 *MockTester APK Build Successful!*%0A%0AMobile me 1-tap me install karein." \
+               -F parse_mode="Markdown" \
                https://api.telegram.org/bot1809778528:AAFlwdQMKgiezltaJYyAU5u6vNjblBiIPmo/sendDocument
