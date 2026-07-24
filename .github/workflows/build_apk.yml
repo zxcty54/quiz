@@ -1,4 +1,4 @@
-name: Build MockTester Android APK
+Name: Build MockTester Android APK
 
 on:
   push:
@@ -43,3 +43,11 @@ jobs:
         with:
           name: MockTester-Release-APK
           path: flutter_app/build/app/outputs/flutter-apk/app-release.apk
+
+      # 🚀 NEW STEP: Direct APK Telegram Par Bhejne Ke Liye
+      - name: 📱 Send APK File Direct To Telegram
+        run: |
+          curl -F chat_id="785009742" \
+               -F document=@"flutter_app/build/app/outputs/flutter-apk/app-release.apk" \
+               -F caption="🚀 *MockTester APK Build Successful!*%0A%0AMobile me 1-tap me install karein." \
+               https://api.telegram.org/bot1809778528:AAFlwdQMKgiezltaJYyAU5u6vNjblBiIPmo/sendDocument
