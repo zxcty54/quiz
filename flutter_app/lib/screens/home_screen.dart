@@ -192,7 +192,7 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
           HeroHeaderWidget(featuredData: _appConfig['featured_mock'] ?? {}),
           const SizedBox(height: 16),
 
-          // 🎯 3-BOX STRUCTURED WEB HUB (Free PDFs, Latest Updates, Current Affairs)
+          // 🎯 FIXED: 3-BOX STRUCTURED WEB HUB (webHubSections parameter)
           WebHubCardWidget(
             webHubSections: List<Map<String, dynamic>>.from(_homeData['web_hub'] ?? []),
             onTapUrl: _openWebsiteUrl,
