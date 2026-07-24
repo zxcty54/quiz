@@ -162,7 +162,7 @@ class HeroHeaderWidget extends StatelessWidget {
   }
 }
 
-// 3️⃣ 🎯 FLEXIBLE & BULLETPROOF 3-BOX WEB HUB CARD WIDGET
+// 3️⃣ 🎯 ALAG-ALAG DISTINCT 3-BOX WEB HUB CARD WIDGET
 class WebHubCardWidget extends StatelessWidget {
   final List<dynamic> webHubSections;
   final Function(String title, String url) onTapUrl;
@@ -175,6 +175,7 @@ class WebHubCardWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // Notice if web_hub is empty or missing
     if (webHubSections.isEmpty) {
       return Card(
         color: const Color(0xFFFEF2F2),
@@ -191,7 +192,7 @@ class WebHubCardWidget extends StatelessWidget {
               SizedBox(width: 10),
               Expanded(
                 child: Text(
-                  "Notice: 'web_hub' key in assets/data/home_data.json is empty or missing.",
+                  "Notice: 'web_hub' data missing or empty in assets/data/home_data.json",
                   style: TextStyle(
                     color: Color(0xFF991B1B),
                     fontWeight: FontWeight.bold,
@@ -222,47 +223,86 @@ class WebHubCardWidget extends StatelessWidget {
 
         final List<dynamic> items = section['items'] ?? [];
 
-        return Card(
-          elevation: 1.5,
+        // Individual Bordered Container Card
+        return Container(
+          width: double.infinity,
           margin: const EdgeInsets.only(bottom: 14),
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(12),
-            side: BorderSide(color: themeColor.withOpacity(0.3), width: 1.2),
+          decoration: BoxDecoration(
+            color: Theme.of(context).cardColor,
+            borderRadius: BorderRadius.circular(14),
+            border: Border.all(color: themeColor.withOpacity(0.35), width: 1.3),
+            boxShadow: [
+              BoxShadow(
+                color: themeColor.withOpacity(0.05),
+                blurRadius: 8,
+                offset: const Offset(0, 3),
+              ),
+            ],
           ),
           child: Padding(
             padding: const EdgeInsets.all(14.0),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(
-                  title,
-                  style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: themeColor),
+                // Box Header Title
+                Row(
+                  children: [
+                    Expanded(
+                      child: Text(
+                        title,
+                        style: TextStyle(
+                          fontSize: 15,
+                          fontWeight: FontWeight.bold,
+                          color: themeColor,
+                        ),
+                      ),
+                    ),
+                  ],
                 ),
                 const SizedBox(height: 8),
                 Divider(color: themeColor.withOpacity(0.2), height: 1),
                 const SizedBox(height: 10),
 
+                // JSON List Details Render
                 ...items.map((item) => Padding(
-                  padding: const EdgeInsets.symmetric(vertical: 4.0),
-                  child: Text(
-                    item.toString(),
-                    style: const TextStyle(fontSize: 13, fontWeight: FontWeight.w500, height: 1.3),
+                  padding: const EdgeInsets.symmetric(vertical: 3.5),
+                  child: Row(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Expanded(
+                        child: Text(
+                          item.toString(),
+                          style: TextStyle(
+                            fontSize: 12.5,
+                            fontWeight: FontWeight.w500,
+                            color: Theme.of(context).textTheme.bodyMedium?.color,
+                            height: 1.3,
+                          ),
+                        ),
+                      ),
+                    ],
                   ),
                 )),
 
                 const SizedBox(height: 12),
 
+                // Right Aligned Redirect Button
                 Align(
                   alignment: Alignment.centerRight,
                   child: InkWell(
                     onTap: () => onTapUrl(title, buttonUrl),
                     borderRadius: BorderRadius.circular(6),
-                    child: Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
+                    child: Container(
+                      padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
+                      decoration: BoxDecoration(
+                        color: themeColor.withOpacity(0.08),
+                        borderRadius: BorderRadius.circular(6),
+                        border: Border.all(color: themeColor.withOpacity(0.3)),
+                      ),
                       child: Text(
                         buttonText,
                         style: TextStyle(
-                          fontSize: 13,
+                          fontSize: 11.5,
                           fontWeight: FontWeight.bold,
                           color: themeColor,
                         ),
