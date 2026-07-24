@@ -1,31 +1,47 @@
 {
-  "web_links": [
+  "web_hub": [
     {
-      "title": "Bihar GK 1000 MCQs Notes",
-      "icon": "📚",
-      "desc": "BPSC & BSSC Inter Level Notes",
-      "color": "0xFF059669",
-      "url": "https://www.mocktester.online/p/gkgscurrent-affair-mock-test.html"
-    },
-    {
-      "title": "Current Affairs Bulletin",
-      "icon": "📰",
-      "desc": "Top One-Liners & MCQ Collection",
-      "color": "0xFF7C3AED",
-      "url": "https://www.mocktester.online/p/gkgscurrent-affair-mock-test.html"
-    },
-    {
-      "title": "MockTester Portal",
-      "icon": "📝",
-      "desc": "Official Website & Study Notes",
+      "title": "📚 Free PDFs",
       "color": "0xFF2563EB",
-      "url": "https://www.mocktester.online/"
+      "button_text": "View All →",
+      "button_url": "https://www.mocktester.online/p/free-notes.html",
+      "items": [
+        "✓ Laxmikant Polity Notes",
+        "✓ Bihar GK 1000 MCQs",
+        "✓ Lucent Science Notes",
+        "✓ NCERT Economy Notes",
+        "✓ Geography Maps PDF"
+      ]
+    },
+    {
+      "title": "📰 Latest Updates",
+      "color": "0xFFDC2626",
+      "button_text": "Read More →",
+      "button_url": "https://www.mocktester.online/search/label/Update",
+      "items": [
+        "🔥 BPSC 71 Notification",
+        "📌 Bihar Current Affairs July",
+        "📝 BTSC New Vacancy",
+        "📢 SSC CGL Syllabus Update",
+        "🎯 BSSC Exam Date"
+      ]
+    },
+    {
+      "title": "📰 Current Affairs",
+      "color": "0xFF7C3AED",
+      "button_text": "Practice →",
+      "button_url": "https://www.mocktester.online/search/label/CurrentAffairs",
+      "items": [
+        "• July 2026 Monthly PDF",
+        "• June One Liner",
+        "• Bihar Special CA",
+        "• International Events",
+        "• Economy Highlights"
+      ]
     }
   ],
   "mini_mocks": [
-    {"title": "Electricity (विद्युत)", "json": "electrical_energy.json"},
-    {"title": "Digestive System (पाचन)", "json": "digestive_system.json"},
-    {"title": "Vitamins (विटामिन)", "json": "health.json"},
-    {"title": "1857 Revolt (क्रांति)", "json": "1857_revolt.json"}
+    {"title": "BPSC History 15s", "json": "bpsc/science/Modern History/set1.json"},
+    {"title": "BSSC Science 15s", "json": "bssc/science/set1.json"}
   ]
 }
