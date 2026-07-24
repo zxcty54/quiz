@@ -16,12 +16,8 @@ class ChapterSelectScreen extends StatelessWidget {
   });
 
   void _launchChapterTest(BuildContext context, String chapterName, String jsonFile) async {
-    // 📲 Telegram Alert
-    TelegramTracker.sendActivityAlert(
-      screenName: "Started Chapter Test",
-      extraDetails: "$categoryTitle - $chapterName",
-    );
-
+   // Fixed:
+TelegramTracker.logActivity("Opened Chapter: $chapterTitle");
     showDialog(
       context: context,
       barrierDismissible: false,
