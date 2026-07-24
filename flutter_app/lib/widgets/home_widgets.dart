@@ -162,9 +162,9 @@ class HeroHeaderWidget extends StatelessWidget {
   }
 }
 
-// 3️⃣ 🎯 STRUCTURED 3-BOX WEB HUB CARD WIDGET
+// 3️⃣ 🎯 FLEXIBLE & BULLETPROOF 3-BOX WEB HUB CARD WIDGET
 class WebHubCardWidget extends StatelessWidget {
-  final List<Map<String, dynamic>> webHubSections;
+  final List<dynamic> webHubSections;
   final Function(String title, String url) onTapUrl;
 
   const WebHubCardWidget({
@@ -175,14 +175,52 @@ class WebHubCardWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    if (webHubSections.isEmpty) return const SizedBox.shrink();
+    // ⚠️ AGAR DATA EMPTY HA TOH BLANK SIZEDBOX KI JAGAH ERROR BOX DIKHEGA
+    if (webHubSections.isEmpty) {
+      return Card(
+        color: const Color(0xFFFEF2F2),
+        margin: const EdgeInsets.only(bottom: 14),
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(12),
+          side: const BorderSide(color: Color(0xFFEF4444), width: 1.2),
+        ),
+        child: const Padding(
+          padding: EdgeInsets.all(16.0),
+          child: Row(
+            children: [
+              Text('⚠️', style: TextStyle(fontSize: 20)),
+              SizedBox(width: 10),
+              Expanded(
+                child: Text(
+                  "Notice: 'web_hub' key in assets/data/home_data.json is empty or missing.",
+                  style: TextStyle(
+                    color: Color(0xFF991B1B),
+                    fontWeight: FontWeight.bold,
+                    fontSize: 12,
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ),
+      );
+    }
 
     return Column(
-      children: webHubSections.map((section) {
+      children: webHubSections.map((rawSection) {
+        final Map<String, dynamic> section = Map<String, dynamic>.from(rawSection as Map);
+
         final String title = section['title'] ?? '📚 Category';
         final String buttonText = section['button_text'] ?? 'View All →';
         final String buttonUrl = section['button_url'] ?? 'https://www.mocktester.online';
-        final Color themeColor = Color(int.parse(section['color'] ?? '0xFF2563EB'));
+        
+        Color themeColor = const Color(0xFF2563EB);
+        try {
+          if (section['color'] != null) {
+            themeColor = Color(int.parse(section['color'].toString()));
+          }
+        } catch (_) {}
+
         final List<dynamic> items = section['items'] ?? [];
 
         return Card(
