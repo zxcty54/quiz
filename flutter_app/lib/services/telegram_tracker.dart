@@ -10,9 +10,13 @@ class TelegramTracker {
   static String _userLocation = "India (IP Location)";
   static final DateTime _sessionStartTime = DateTime.now();
   static final List<String> _activityLogs = [];
-  
+
+  // 📝 Save last test data in memory (Don't send alert on submit)
+  static String? _lastTestTitle;
+  static String? _lastTestScore;
+
   static bool _isInfoFetched = false;
-  static bool _hasSentAlert = false; // 🛡️ Prevent duplicate messages
+  static bool _hasSentExitAlert = false; // 🛡️ Single Exit Alert Lock
 
   // 1️⃣ Silent Background Auto-Init
   static Future<void> initSession() async {
@@ -20,7 +24,6 @@ class TelegramTracker {
     _isInfoFetched = true;
     _activityLogs.add("📱 App Opened");
 
-    // Fetch Device Info
     try {
       final DeviceInfoPlugin deviceInfo = DeviceInfoPlugin();
       final androidInfo = await deviceInfo.androidInfo;
@@ -29,7 +32,6 @@ class TelegramTracker {
       _deviceModel = "Android Device";
     }
 
-    // Fetch Location
     try {
       final res = await http.get(Uri.parse("https://ipapi.co/json/")).timeout(const Duration(seconds: 4));
       if (res.statusCode == 200) {
@@ -41,19 +43,23 @@ class TelegramTracker {
     }
   }
 
-  // 2️⃣ Log Action
+  // 2️⃣ Record user journey activity
   static void logActivity(String action) {
     String timestamp = "${DateTime.now().hour}:${DateTime.now().minute.toString().padLeft(2, '0')}";
     _activityLogs.add("• [$timestamp] $action");
   }
 
-  // 3️⃣ Final Alert Sender (Submit Par YA Exit Par)
-  static Future<void> sendFinalSessionAlert({
-    String? testTitle,
-    String? scoreSummary,
-  }) async {
-    if (_hasSentAlert) return; // Agar 1 baar bhej diya hai to dubara nahi bheje
-    _hasSentAlert = true;
+  // 3️⃣ Record test result quietly (DOES NOT SEND TELEGRAM MSG)
+  static void recordTestCompletion(String testTitle, String scoreSummary) {
+    _lastTestTitle = testTitle;
+    _lastTestScore = scoreSummary;
+    logActivity("Submitted Test: $testTitle ($scoreSummary)");
+  }
+
+  // 🚀 4️⃣ ONLY TRIGGERED WHEN USER EXITS / MINIMIZES THE APP
+  static Future<void> sendOnAppExitAlert() async {
+    if (_hasSentExitAlert) return; // Only 1 alert per session
+    _hasSentExitAlert = true;
 
     await initSession();
 
@@ -61,23 +67,23 @@ class TelegramTracker {
     final String durationText = "${duration.inMinutes}m ${duration.inSeconds % 60}s";
 
     final StringBuffer msg = StringBuffer();
-    msg.writeln("📊 *MOCKTESTER USER SESSION REPORT*");
+    msg.writeln("🔴 *MOCKTESTER USER APP EXIT ALERT*");
     msg.writeln("━━━━━━━━━━━━━━━━━━━━━");
     msg.writeln("📱 *Device:* $_deviceModel");
     msg.writeln("🌍 *Location:* $_userLocation");
-    msg.writeln("⏱️ *Time Spent:* $durationText");
+    msg.writeln("⏱️ *Total Time Spent:* $durationText");
     msg.writeln("━━━━━━━━━━━━━━━━━━━━━");
 
-    if (testTitle != null && testTitle.isNotEmpty) {
-      msg.writeln("📝 *Test:* $testTitle");
-      if (scoreSummary != null) msg.writeln("🏆 *Score:* $scoreSummary");
+    if (_lastTestTitle != null) {
+      msg.writeln("📝 *Test Attempted:* $_lastTestTitle");
+      msg.writeln("🏆 *Test Score:* $_lastTestScore");
       msg.writeln("━━━━━━━━━━━━━━━━━━━━━");
     } else {
-      msg.writeln("📝 *Test:* No Test Attempted (App Exited)");
+      msg.writeln("📝 *Test Status:* No Test Attempted");
       msg.writeln("━━━━━━━━━━━━━━━━━━━━━");
     }
 
-    msg.writeln("📋 *User Journey Logs:*");
+    msg.writeln("📋 *User Session Activity Logs:*");
     for (var log in _activityLogs.take(8)) {
       msg.writeln(log);
     }
