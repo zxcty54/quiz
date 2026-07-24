@@ -80,10 +80,10 @@ class _SectionalCbtScreenState extends State<SectionalCbtScreen> {
   _qTimer?.cancel();
   setState(() => _isExamSubmitted = true);
 
-  // 🚀 SIRF 1 FINAL TELEGRAM ALERT (Device, Location, Score ke sath)
-  TelegramTracker.sendFinalSessionAlert(
-    testTitle: widget.testTitle,
-    scoreSummary: "$_correctCount Correct, $_wrongCount Wrong / Total: ${widget.questions.length}",
+  // 🤫 Test score local tracker me save hoga (Telegram par NO MESSAGE right now)
+  TelegramTracker.recordTestCompletion(
+    widget.testTitle,
+    "Sahi: $correct, Galat: $wrong / Total: ${widget.questions.length}",
   );
 }
 
