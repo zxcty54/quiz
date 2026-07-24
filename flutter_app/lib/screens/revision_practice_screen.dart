@@ -21,7 +21,6 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
   int? _selectedOptionIndex;
   bool _isAnswered = false;
   
-  // Timer per question (15 Seconds)
   Timer? _timer;
   int _timeLeft = 15;
 
@@ -49,7 +48,6 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
       if (_timeLeft > 0) {
         setState(() => _timeLeft--);
       } else {
-        // ⏱️ TIMEOUT OCCURRED: Auto reveal answer
         _timer?.cancel();
         setState(() {
           _isAnswered = true;
@@ -59,7 +57,7 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
   }
 
   void _onOptionTap(int index) {
-    if (_isAnswered) return; // Disable tapping after option is chosen or timeout
+    if (_isAnswered) return;
     _timer?.cancel();
     setState(() {
       _selectedOptionIndex = index;
@@ -122,7 +120,6 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
         title: Text(widget.testTitle, style: const TextStyle(fontSize: 15, fontWeight: FontWeight.bold)),
         elevation: 0,
         actions: [
-          // Single Clean Timer Badge (No Grid Icon)
           Container(
             margin: const EdgeInsets.only(right: 16),
             padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
@@ -153,7 +150,6 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            // Top Counter & Progress Indicator
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
@@ -180,7 +176,6 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
             ),
             const SizedBox(height: 18),
 
-            // Question Card
             Card(
               elevation: 1,
               shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
@@ -194,7 +189,6 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
             ),
             const SizedBox(height: 16),
 
-            // Options List (Instant Highlight: Green for Correct, Red for Wrong)
             ...List.generate(currentQ.options.length, (index) {
               final optionText = currentQ.options[index];
               final isCorrect = index == currentQ.correctOptionIndex;
@@ -242,7 +236,7 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
                                 : (_isAnswered && isSelected ? Colors.red : Colors.grey.shade100),
                           ),
                           child: Text(
-                            String.fromCharCode(65 + index), // A, B, C, D
+                            String.fromCharCode(65 + index),
                             style: TextStyle(
                               fontWeight: FontWeight.bold,
                               fontSize: 12,
@@ -265,7 +259,6 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
               );
             }),
 
-            // 💡 EXPLANATION BOX (Reveals automatically when option is tapped OR timer expires)
             if (_isAnswered) ...[
               const SizedBox(height: 14),
               Container(
@@ -300,7 +293,6 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
         ),
       ),
 
-      // Clean Bottom Navigation (No Submit Button, No Grid View)
       bottomSheet: Container(
         padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
         decoration: BoxDecoration(
