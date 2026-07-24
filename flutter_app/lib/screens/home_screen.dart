@@ -7,7 +7,7 @@ import 'package:url_launcher/url_launcher.dart';
 
 import '../models/question_model.dart';
 import '../services/telegram_tracker.dart';
-import '../widgets/home_widgets.dart'; // 🚀 Modular Custom Widgets
+import '../widgets/home_widgets.dart'; // 🚀 Import Reusable Widgets
 import 'chapter_select_screen.dart';
 import 'sectional_cbt_screen.dart';
 
@@ -24,7 +24,7 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
   bool _isHindi = true;
   String _selectedExamPanel = 'bpsc';
 
-  // 📂 Multi-JSON Data Maps
+  // 📂 Multi-JSON Data
   Map<String, dynamic> _appConfig = {};
   Map<String, dynamic> _homeData = {};
   Map<String, dynamic> _subjectMapping = {};
@@ -34,10 +34,8 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
   @override
   void initState() {
     super.initState();
-    // 👁️ App Exit / Close Lifecycle Listener Active
+    // 👁️ Add App Exit Listener
     WidgetsBinding.instance.addObserver(this);
-    
-    // 🚀 Silent Session Initialization
     TelegramTracker.initSession();
     _loadAllConfigs();
   }
@@ -48,7 +46,7 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
     super.dispose();
   }
 
-  // 🚪 APP EXIT DETECTOR TRIGGER (SIRF APP BAND HONE PAR TELEGRAM ALERT JAYEGA)
+  // 🚪 SIRF APP CLOSE / MINIMIZE HONE PAR HI TELEGRAM ALERT JAYEGA
   @override
   void didChangeAppLifecycleState(AppLifecycleState state) {
     if (state == AppLifecycleState.paused || state == AppLifecycleState.detached) {
@@ -56,7 +54,7 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
     }
   }
 
-  // 🚀 Parallel Load All 4 JSON Files
+  // 🚀 Load Configs in Parallel
   Future<void> _loadAllConfigs() async {
     try {
       final results = await Future.wait([
@@ -89,7 +87,6 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
       );
     }
 
-    // 🛠️ Maintenance Shield System
     if (_appConfig['maintenance']?['enabled'] == true) {
       return Scaffold(
         body: Center(
@@ -112,7 +109,6 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
       );
     }
 
-    // 🌙 Dynamic Theme Palette
     final bgColor = _isDarkMode ? const Color(0xFF0F172A) : const Color(0xFFF8FAFC);
     final cardColor = _isDarkMode ? const Color(0xFF1E293B) : Colors.white;
     final textColor = _isDarkMode ? Colors.white : const Color(0xFF0F172A);
@@ -186,32 +182,31 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          // 📰 Daily Today Update Ticker
+          // 📰 Daily Update Ticker
           if (_appConfig['today_update']?['show'] == true) ...[
             TodayUpdateTickerWidget(updateData: _appConfig['today_update'], onTapUrl: _openWebsiteUrl),
             const SizedBox(height: 16),
           ],
 
-          // 🚀 Modern Premium Hero Header
+          // 🚀 Hero Banner
           HeroHeaderWidget(featuredData: _appConfig['featured_mock'] ?? {}),
           const SizedBox(height: 16),
 
-          // 🌐 Web Articles & Free Study Notes Card
+          // 🎯 3-BOX STRUCTURED WEB HUB (Free PDFs, Latest Updates, Current Affairs)
           WebHubCardWidget(
-            webLinks: List<Map<String, dynamic>>.from(_homeData['web_links'] ?? []),
+            webHubSections: List<Map<String, dynamic>>.from(_homeData['web_hub'] ?? []),
             onTapUrl: _openWebsiteUrl,
           ),
-          const SizedBox(height: 16),
 
           // 🎯 Job Eligibility Checker Banner
           EligibilityCheckerWidget(isDarkMode: _isDarkMode, onTapUrl: _openWebsiteUrl),
           const SizedBox(height: 16),
 
-          // ⚡ Quick Mini Mocks Card
+          // ⚡ Mini Mocks
           _buildMiniMocksCard(context),
           const SizedBox(height: 16),
 
-          // 📸 Telegram Question Creator Form
+          // 📸 Telegram Creator Widget
           const TelegramCreatorWidget(),
         ],
       ),
