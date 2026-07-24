@@ -1,42 +1,39 @@
 {
   "web_hub": [
     {
-      "title": "📚 Free PDFs",
+      "id": "free_pdfs",
+      "title": "📚 Free Study PDFs & Notes",
       "color": "0xFF2563EB",
-      "button_text": "View All →",
+      "button_text": "Explore Notes →",
       "button_url": "https://www.mocktester.online/p/free-notes.html",
       "items": [
-        "✓ Laxmikant Polity Notes",
-        "✓ Bihar GK 1000 MCQs",
-        "✓ Lucent Science Notes",
-        "✓ NCERT Economy Notes",
-        "✓ Geography Maps PDF"
+        "✓ Laxmikant Polity Short Notes",
+        "✓ Bihar Special 1000 One-Liners",
+        "✓ Lucent General Science Summary"
       ]
     },
     {
-      "title": "📰 Latest Updates",
+      "id": "latest_updates",
+      "title": "📰 Latest Exam Updates",
       "color": "0xFFDC2626",
-      "button_text": "Read More →",
+      "button_text": "Read Bulletin →",
       "button_url": "https://www.mocktester.online/search/label/Update",
       "items": [
-        "🔥 BPSC 71 Notification",
-        "📌 Bihar Current Affairs July",
-        "📝 BTSC New Vacancy",
-        "📢 SSC CGL Syllabus Update",
-        "🎯 BSSC Exam Date"
+        "🔥 BPSC 71th Notification Out",
+        "📌 BSSC Inter Level Exam Date Sheet",
+        "📝 Bihar Police SI Cutoff Analysis"
       ]
     },
     {
-      "title": "📰 Current Affairs",
+      "id": "current_affairs",
+      "title": "📰 Monthly Current Affairs",
       "color": "0xFF7C3AED",
-      "button_text": "Practice →",
+      "button_text": "Practice Now →",
       "button_url": "https://www.mocktester.online/search/label/CurrentAffairs",
       "items": [
-        "• July 2026 Monthly PDF",
-        "• June One Liner",
-        "• Bihar Special CA",
-        "• International Events",
-        "• Economy Highlights"
+        "• July 2026 Bihar CA Capsule",
+        "• National & International News",
+        "• Budget & Economic Survey Qs"
       ]
     }
   ],
