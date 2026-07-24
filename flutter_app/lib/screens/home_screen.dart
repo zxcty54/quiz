@@ -25,10 +25,94 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
   bool _isHindi = true;
   String _selectedExamPanel = 'bpsc';
 
+  // 🛡️ DEFAULT IN-MEMORY FALLBACK MAPPING (Har halat me show hone ki guarantee)
   Map<String, dynamic> _appConfig = {};
   Map<String, dynamic> _homeData = {};
-  Map<String, dynamic> _subjectMapping = {};
-  Map<String, dynamic> _sectionalData = {};
+  
+  Map<String, dynamic> _subjectMapping = {
+    "polity_mapping": {
+      "Historical Background": "historicalbackgroud.json",
+      "Making of Constitution": "makingofconstitution.json",
+      "FR, FD, DPSP & Amendments": "FR-FD-DPSP-Amend.json",
+      "President, VP & PM": "President_VP_PM.json",
+      "Governor, CM & COM": "Gover_CM_COM.json",
+      "The Parliament": "parliament.json",
+      "SC, HC & Sub. Courts": "SC_HC_Gram.json",
+      "Panchayati Raj & Municipalities": "Panchayati_Raj_Muncipal.json"
+    },
+    "history_mapping": {
+      "1857 Revolt": "1857_revolt.json",
+      "Bihar History": "bihar_hist.json",
+      "Medieval India": "medieval.json",
+      "Struggle 1939-1947": "towardfreedom.json",
+      "Development of Indian Press": "histpress.json"
+    },
+    "geo_mapping": {
+      "Soils, Forests, Dams & Agri": "soil_forest_dams_agri.json",
+      "Astronomy & Solar System": "astronomy.json",
+      "Introduction & Indian Geo": "Indian_Geo.json"
+    },
+    "eco_mapping": {
+      "Public Finance & Deficit": "public_finance_fiscal_deficit.json",
+      "Planning Commission & NITI": "planning_commission.json",
+      "Banking & RBI Policies": "banking.json"
+    },
+    "phy_mapping": {
+      "Light & Optics": "optics.json",
+      "Electricity": "electrical_energy.json",
+      "Magnetism": "magnetic_energy.json",
+      "Force & Gravity": "force_gravity.json",
+      "Motion": "motions.json"
+    },
+    "bio_mapping": {
+      "Botany": "botany.json",
+      "Cell Biology": "cell_biology.json",
+      "Circulatory System": "circulatory_system.json",
+      "Digestive System": "digestive_system.json"
+    },
+    "chem_mapping": {
+      "Metals & Ores": "metals_compounds.json",
+      "Acids, Bases & Salts": "acid_base_salt.json",
+      "Atomic Structure": "atomic_structure.json",
+      "Periodic Table": "periodictable.json"
+    },
+    "current_mapping": {
+      "Jan 2026": "jan.json",
+      "Feb 2026": "2026-02.json",
+      "Mar 2026": "2026-03.json",
+      "Bihar Special News": "bihar_news.json"
+    }
+  };
+
+  Map<String, dynamic> _sectionalData = {
+    "bpsc": {
+      "title": "🏛️ BPSC PCS Core Zone",
+      "total_sets": 28,
+      "path_prefix": "bpsc/science/Modern History/set"
+    },
+    "ssc": [
+      {
+        "title": "⚡ SSC CGL / NTPC Science Mocks",
+        "sets": 10,
+        "folder": "bssc/science"
+      }
+    ],
+    "bssc_cgl": [
+      {
+        "title": "🎯 BSSC Graduate Level Special Mocks",
+        "sets": 12,
+        "folder": "bssc/science"
+      }
+    ],
+    "bssc_inter": [
+      {
+        "title": "🔥 BSSC Inter Level Top 100 MCQs",
+        "sets": 15,
+        "folder": "bssc/science"
+      }
+    ]
+  };
+
   bool _isLoadingConfig = true;
 
   @override
@@ -52,26 +136,34 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
     }
   }
 
+  // 🛡️ SAFE ASSET LOADER (Fallbacks active rehte hain agar file load fail ho)
   Future<void> _loadAllConfigs() async {
     try {
-      final results = await Future.wait([
-        rootBundle.loadString('assets/data/app_config.json'),
-        rootBundle.loadString('assets/data/home_data.json'),
-        rootBundle.loadString('assets/data/subject_mapping.json'),
-        rootBundle.loadString('assets/data/sectional_data.json'),
-      ]);
+      final strConfig = await rootBundle.loadString('assets/data/app_config.json');
+      _appConfig = jsonDecode(strConfig);
+    } catch (_) {}
 
-      if (mounted) {
-        setState(() {
-          _appConfig = jsonDecode(results[0]);
-          _homeData = jsonDecode(results[1]);
-          _subjectMapping = jsonDecode(results[2]);
-          _sectionalData = jsonDecode(results[3]);
-          _isLoadingConfig = false;
-        });
-      }
-    } catch (e) {
-      if (mounted) setState(() => _isLoadingConfig = false);
+    try {
+      final strHome = await rootBundle.loadString('assets/data/home_data.json');
+      _homeData = jsonDecode(strHome);
+    } catch (_) {}
+
+    try {
+      final strSub = await rootBundle.loadString('assets/data/subject_mapping.json');
+      final Map<String, dynamic> loadedSub = jsonDecode(strSub);
+      if (loadedSub.isNotEmpty) _subjectMapping = loadedSub;
+    } catch (_) {}
+
+    try {
+      final strSec = await rootBundle.loadString('assets/data/sectional_data.json');
+      final Map<String, dynamic> loadedSec = jsonDecode(strSec);
+      if (loadedSec.isNotEmpty) _sectionalData = loadedSec;
+    } catch (_) {}
+
+    if (mounted) {
+      setState(() {
+        _isLoadingConfig = false;
+      });
     }
   }
 
@@ -225,7 +317,7 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
     );
   }
 
-  // 2️⃣ TAB 2: REVISION HUB (DIRECT DYNAMIC BUTTONS FROM SUBJECT_MAPPING.JSON)
+  // 2️⃣ TAB 2: REVISION HUB (GUARANTEED CHAPTER DISPLAY)
   Widget _buildRevisionTab(BuildContext context) {
     return ListView(
       padding: const EdgeInsets.all(16),
@@ -235,7 +327,6 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
         const Text('Subject par click karein aur direct chapter button dabakar revision shuru karein', style: TextStyle(color: Colors.grey, fontSize: 12)),
         const SizedBox(height: 14),
 
-        // GENERAL SCIENCE
         _buildExpansionSubjectCategory(
           title: 'General Science',
           icon: '🔬',
@@ -248,7 +339,6 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
         ),
         const SizedBox(height: 12),
 
-        // GK & SOCIAL SCIENCE
         _buildExpansionSubjectCategory(
           title: 'GK & Social Science',
           icon: '📚',
@@ -262,7 +352,6 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
         ),
         const SizedBox(height: 12),
 
-        // CURRENT AFFAIRS
         _buildExpansionSubjectCategory(
           title: 'Current Affairs 2026',
           icon: '📰',
@@ -645,7 +734,6 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
     TelegramTracker.logActivity("Started Mock Test: $title");
     showDialog(context: context, barrierDismissible: false, builder: (ctx) => const Center(child: CircularProgressIndicator()));
     
-    // Auto-formatting url path for GitHub raw content
     String finalPath = path.startsWith("http") ? path : "https://raw.githubusercontent.com/zxcty54/quiz/main/$path";
     
     try {
