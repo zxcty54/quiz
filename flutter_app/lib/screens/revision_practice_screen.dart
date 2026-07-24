@@ -2,6 +2,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import '../models/question_model.dart';
 import '../services/user_stats_service.dart';
+import '../widgets/math_text.dart';
 
 class RevisionPracticeScreen extends StatefulWidget {
   final String testTitle;
@@ -21,8 +22,8 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
   int _currentIndex = 0;
   int? _selectedOptionIndex;
   bool _isAnswered = false;
-  bool _isHindi = false; // Language toggle state
-  
+  bool _isHindi = false;
+
   Timer? _timer;
   int _timeLeft = 15;
 
@@ -125,7 +126,6 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
         title: Text(widget.testTitle, style: const TextStyle(fontSize: 15, fontWeight: FontWeight.bold)),
         elevation: 0,
         actions: [
-          // 🌐 Language Switcher (HI / EN)
           IconButton(
             icon: Container(
               padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
@@ -140,7 +140,6 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
             ),
             onPressed: () => setState(() => _isHindi = !_isHindi),
           ),
-          // ⏱️ Timer Badge
           Container(
             margin: const EdgeInsets.only(right: 12),
             padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
@@ -197,7 +196,7 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
             ),
             const SizedBox(height: 18),
 
-            // Question Card (with Statements Support)
+            // Question Card with Math LaTeX Support
             Card(
               elevation: 1,
               shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
@@ -206,16 +205,18 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text(
-                      currentQ.getText(_isHindi),
-                      style: const TextStyle(fontSize: 15.5, fontWeight: FontWeight.w600, height: 1.4),
+                    MathFormattedText(
+                      text: currentQ.getText(_isHindi),
+                      textStyle: const TextStyle(fontSize: 15.5, fontWeight: FontWeight.w600, height: 1.4, color: Colors.black87),
                     ),
                     if (statements != null && statements.isNotEmpty) ...[
                       const SizedBox(height: 10),
                       ...statements.map((stmt) => Padding(
                         padding: const EdgeInsets.only(bottom: 4),
-                        style: TextStyle(fontSize: 13.5, color: Colors.grey.shade800, height: 1.3),
-                        child: Text("• $stmt"),
+                        child: MathFormattedText(
+                          text: "• $stmt",
+                          textStyle: TextStyle(fontSize: 13.5, color: Colors.grey.shade800, height: 1.3),
+                        ),
                       )),
                     ],
                   ],
@@ -224,7 +225,7 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
             ),
             const SizedBox(height: 16),
 
-            // Options List
+            // Options List with Math LaTeX Support
             ...List.generate(currentQ.options.length, (index) {
               final optionText = currentQ.options[index];
               final isCorrect = index == currentQ.answerIndex;
@@ -282,9 +283,9 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
                         ),
                         const SizedBox(width: 12),
                         Expanded(
-                          child: Text(
-                            optionText,
-                            style: const TextStyle(fontSize: 13.5, fontWeight: FontWeight.w500),
+                          child: MathFormattedText(
+                            text: optionText,
+                            textStyle: const TextStyle(fontSize: 13.5, fontWeight: FontWeight.w500, color: Colors.black87),
                           ),
                         ),
                         icon,
@@ -295,7 +296,7 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
               );
             }),
 
-            // Solution Box
+            // Explanation Box with Math LaTeX Support
             if (_isAnswered) ...[
               const SizedBox(height: 14),
               Container(
@@ -317,9 +318,9 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
                       ],
                     ),
                     const SizedBox(height: 6),
-                    Text(
-                      currentQ.explanation,
-                      style: const TextStyle(fontSize: 12.5, color: Color(0xFF14532D), height: 1.4),
+                    MathFormattedText(
+                      text: currentQ.explanation,
+                      textStyle: const TextStyle(fontSize: 12.5, color: Color(0xFF14532D), height: 1.4),
                     ),
                   ],
                 ),
