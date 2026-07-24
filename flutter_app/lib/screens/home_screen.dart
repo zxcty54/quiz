@@ -4,9 +4,10 @@ import 'package:flutter/services.dart';
 import 'package:http/http.dart' as http;
 import 'package:shimmer/shimmer.dart';
 import 'package:url_launcher/url_launcher.dart';
+
 import '../models/question_model.dart';
 import '../services/telegram_tracker.dart';
-import '../widgets/home_widgets.dart'; // 🚀 IMPORT CUSTOM WIDGETS
+import '../widgets/home_widgets.dart'; // 🚀 Modular Custom Widgets
 import 'chapter_select_screen.dart';
 import 'sectional_cbt_screen.dart';
 
@@ -17,12 +18,13 @@ class HomeScreen extends StatefulWidget {
   State<HomeScreen> createState() => _HomeScreenState();
 }
 
-class _HomeScreenState extends State<HomeScreen> {
+class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
   int _currentBottomIndex = 0;
   bool _isDarkMode = false;
   bool _isHindi = true;
   String _selectedExamPanel = 'bpsc';
 
+  // 📂 Multi-JSON Data Maps
   Map<String, dynamic> _appConfig = {};
   Map<String, dynamic> _homeData = {};
   Map<String, dynamic> _subjectMapping = {};
@@ -30,12 +32,31 @@ class _HomeScreenState extends State<HomeScreen> {
   bool _isLoadingConfig = true;
 
   @override
-void initState() {
-  super.initState();
-  TelegramTracker.initSession(); // Device Model + IP Location auto fetch karega
-  _loadAllConfigs();
-}
+  void initState() {
+    super.initState();
+    // 👁️ App Exit / Close Lifecycle Listener Active
+    WidgetsBinding.instance.addObserver(this);
+    
+    // 🚀 Silent Session Initialization
+    TelegramTracker.initSession();
+    _loadAllConfigs();
+  }
 
+  @override
+  void dispose() {
+    WidgetsBinding.instance.removeObserver(this);
+    super.dispose();
+  }
+
+  // 🚪 APP EXIT DETECTOR TRIGGER (SIRF APP BAND HONE PAR TELEGRAM ALERT JAYEGA)
+  @override
+  void didChangeAppLifecycleState(AppLifecycleState state) {
+    if (state == AppLifecycleState.paused || state == AppLifecycleState.detached) {
+      TelegramTracker.sendOnAppExitAlert();
+    }
+  }
+
+  // 🚀 Parallel Load All 4 JSON Files
   Future<void> _loadAllConfigs() async {
     try {
       final results = await Future.wait([
@@ -62,20 +83,36 @@ void initState() {
   @override
   Widget build(BuildContext context) {
     if (_isLoadingConfig) {
-      return Scaffold(appBar: AppBar(title: const Text('MockTester')), body: _buildSkeletonLoading());
+      return Scaffold(
+        appBar: AppBar(title: const Text('MockTester')),
+        body: _buildSkeletonLoading(),
+      );
     }
 
+    // 🛠️ Maintenance Shield System
     if (_appConfig['maintenance']?['enabled'] == true) {
       return Scaffold(
         body: Center(
           child: Padding(
             padding: const EdgeInsets.all(24.0),
-            child: Text(_appConfig['maintenance']['message'] ?? 'Under Maintenance', textAlign: TextAlign.center, style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                const Text('🛠️', style: TextStyle(fontSize: 60)),
+                const SizedBox(height: 16),
+                Text(
+                  _appConfig['maintenance']['message'] ?? 'Under Maintenance',
+                  textAlign: TextAlign.center,
+                  style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+                ),
+              ],
+            ),
           ),
         ),
       );
     }
 
+    // 🌙 Dynamic Theme Palette
     final bgColor = _isDarkMode ? const Color(0xFF0F172A) : const Color(0xFFF8FAFC);
     final cardColor = _isDarkMode ? const Color(0xFF1E293B) : Colors.white;
     final textColor = _isDarkMode ? Colors.white : const Color(0xFF0F172A);
@@ -88,7 +125,11 @@ void initState() {
         useMaterial3: true,
       ),
       child: Scaffold(
-        appBar: AppBar(title: Text('MockTester', style: TextStyle(fontWeight: FontWeight.bold, color: textColor)), backgroundColor: cardColor, elevation: 0),
+        appBar: AppBar(
+          title: Text('MockTester', style: TextStyle(fontWeight: FontWeight.bold, color: textColor)),
+          backgroundColor: cardColor,
+          elevation: 0,
+        ),
         body: AnimatedSwitcher(
           duration: const Duration(milliseconds: 300),
           child: IndexedStack(
@@ -108,7 +149,7 @@ void initState() {
           onDestinationSelected: (idx) {
             setState(() => _currentBottomIndex = idx);
             List<String> tabs = ['Home Tab', 'Revision Hub', 'Sectional CBT', 'Saved Area', 'Profile Tab'];
-            TelegramTracker.sendActivityAlert(screenName: "Switched to ${tabs[idx]}");
+            TelegramTracker.logActivity("Switched to ${tabs[idx]}");
           },
           destinations: const [
             NavigationDestination(icon: Icon(Icons.home_outlined), selectedIcon: Icon(Icons.home_rounded), label: 'Home'),
@@ -127,37 +168,42 @@ void initState() {
       padding: const EdgeInsets.all(16),
       itemCount: 4,
       itemBuilder: (context, index) => Shimmer.fromColors(
-        baseColor: Colors.grey[300]!, highlightColor: Colors.grey[100]!,
-        child: Container(height: 100, margin: const EdgeInsets.only(bottom: 16), decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.circular(12))),
+        baseColor: Colors.grey[300]!,
+        highlightColor: Colors.grey[100]!,
+        child: Container(
+          height: 100,
+          margin: const EdgeInsets.only(bottom: 16),
+          decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.circular(12)),
+        ),
       ),
     );
   }
 
-  // 1️⃣ TAB 1: HOME DASHBOARD (1-LINE CLEAN CALLS)
+  // 1️⃣ TAB 1: HOME DASHBOARD
   Widget _buildHomeTab(BuildContext context) {
     return SingleChildScrollView(
       padding: const EdgeInsets.all(16),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          // 📰 1 Line Today Update Ticker
+          // 📰 Daily Today Update Ticker
           if (_appConfig['today_update']?['show'] == true) ...[
             TodayUpdateTickerWidget(updateData: _appConfig['today_update'], onTapUrl: _openWebsiteUrl),
             const SizedBox(height: 16),
           ],
 
-          // 🚀 1 Line Hero Banner
+          // 🚀 Modern Premium Hero Header
           HeroHeaderWidget(featuredData: _appConfig['featured_mock'] ?? {}),
           const SizedBox(height: 16),
 
-          // 🌐 1 Line Free Study Notes Web Hub
+          // 🌐 Web Articles & Free Study Notes Card
           WebHubCardWidget(
             webLinks: List<Map<String, dynamic>>.from(_homeData['web_links'] ?? []),
             onTapUrl: _openWebsiteUrl,
           ),
           const SizedBox(height: 16),
 
-          // 🎯 1 Line Job Eligibility Checker
+          // 🎯 Job Eligibility Checker Banner
           EligibilityCheckerWidget(isDarkMode: _isDarkMode, onTapUrl: _openWebsiteUrl),
           const SizedBox(height: 16),
 
@@ -165,7 +211,7 @@ void initState() {
           _buildMiniMocksCard(context),
           const SizedBox(height: 16),
 
-          // 📸 1 Line Telegram Creator Form Widget
+          // 📸 Telegram Question Creator Form
           const TelegramCreatorWidget(),
         ],
       ),
@@ -246,8 +292,12 @@ void initState() {
           const SizedBox(height: 14),
 
           GridView.count(
-            shrinkWrap: true, physics: const NeverScrollableScrollPhysics(),
-            crossAxisCount: 2, crossAxisSpacing: 8, mainAxisSpacing: 8, childAspectRatio: 1.4,
+            shrinkWrap: true,
+            physics: const NeverScrollableScrollPhysics(),
+            crossAxisCount: 2,
+            crossAxisSpacing: 8,
+            mainAxisSpacing: 8,
+            childAspectRatio: 1.4,
             children: [
               _examSelectorCard('BPSC PCS', 'STATE PCS', const Color(0xFF9D174D), 'bpsc'),
               _examSelectorCard('SSC / NTPC', 'TCS PATTERN', const Color(0xFF166534), 'ssc'),
@@ -326,8 +376,16 @@ void initState() {
       children: [
         const Center(child: CircleAvatar(radius: 35, child: Icon(Icons.person, size: 40))),
         const SizedBox(height: 12),
-        SwitchListTile(title: const Text('Bilingual (Hindi / Eng)'), value: _isHindi, onChanged: (v) => setState(() => _isHindi = v)),
-        SwitchListTile(title: const Text('Dark Mode (Night Theme)'), value: _isDarkMode, onChanged: (v) => setState(() => _isDarkMode = v)),
+        SwitchListTile(
+          title: const Text('Bilingual (Hindi / Eng)'),
+          value: _isHindi,
+          onChanged: (v) => setState(() => _isHindi = v),
+        ),
+        SwitchListTile(
+          title: const Text('Dark Mode (Night Theme)'),
+          value: _isDarkMode,
+          onChanged: (v) => setState(() => _isDarkMode = v),
+        ),
         const Divider(),
         const SizedBox(height: 8),
 
@@ -408,7 +466,7 @@ void initState() {
 
   // 🛠️ HELPER FUNCTIONS
   Future<void> _openWebsiteUrl(String linkTitle, String url) async {
-    TelegramTracker.sendActivityAlert(screenName: "Opened Website Tool", extraDetails: "$linkTitle ($url)");
+    TelegramTracker.logActivity("Opened Web Tool: $linkTitle");
     final Uri uri = Uri.parse(url);
     try {
       await launchUrl(uri, mode: LaunchMode.externalApplication);
@@ -418,7 +476,7 @@ void initState() {
   }
 
   void _launchCbtMock(BuildContext context, String title, String path) async {
-    TelegramTracker.sendActivityAlert(screenName: "Started Mock Test", extraDetails: "$title ($path)");
+    TelegramTracker.logActivity("Started Mock Test: $title");
     showDialog(context: context, barrierDismissible: false, builder: (ctx) => const Center(child: CircularProgressIndicator()));
     try {
       final res = await http.get(Uri.parse("https://raw.githubusercontent.com/zxcty54/quiz/main/$path"));
@@ -471,7 +529,7 @@ void initState() {
   }
 
   void _openSubCategory(BuildContext context, String title, List<_SubCategory> subs) {
-    TelegramTracker.sendActivityAlert(screenName: "Opened Category", extraDetails: title);
+    TelegramTracker.logActivity("Opened Category: $title");
     Navigator.push(context, MaterialPageRoute(builder: (ctx) => Scaffold(
       appBar: AppBar(title: Text(title)),
       body: ListView(
