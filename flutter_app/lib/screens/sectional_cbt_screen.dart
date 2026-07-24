@@ -2,10 +2,9 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import '../models/question_model.dart';
 import '../widgets/latex_text.dart';
-import '../widgets/cbt_widgets.dart'; // 🚀 REUSABLE WIDGETS IMPORT
+import '../widgets/cbt_widgets.dart';
 import '../services/telegram_tracker.dart';
 import '../services/user_stats_service.dart';
-
 
 class SectionalCbtScreen extends StatefulWidget {
   final String testTitle;
@@ -83,7 +82,6 @@ class _SectionalCbtScreenState extends State<SectionalCbtScreen> {
     _qTimer?.cancel();
     setState(() => _isExamSubmitted = true);
 
-    // Calculate score count for exit log
     int correctCount = 0;
     int wrongCount = 0;
     _userAnswers.forEach((qIdx, userAns) {
@@ -93,15 +91,9 @@ class _SectionalCbtScreenState extends State<SectionalCbtScreen> {
         wrongCount++;
       }
     });
- // ⚡ REALTIME USER STATS LOCAL TRACKING UPDATE
-    UserStatsService.recordMockTest(questionsAttempted: _userAnswers.length);
 
-    // 🤫 Telegram Exit Summary Save
-    TelegramTracker.recordTestCompletion(
-      widget.testTitle,
-      "Sahi: $correctCount, Galat: $wrongCount / Total: ${widget.questions.length}",
-    );
-  }
+    // ⚡ Local Cache Tracker Update
+    UserStatsService.recordMockTest(questionsAttempted: _userAnswers.length);
 
     // 🤫 Save local summary for exit alert
     TelegramTracker.recordTestCompletion(
@@ -109,6 +101,7 @@ class _SectionalCbtScreenState extends State<SectionalCbtScreen> {
       "Sahi: $correctCount, Galat: $wrongCount / Total: ${widget.questions.length}",
     );
   }
+
   String _formatTime(int totalSec) {
     int m = totalSec ~/ 60;
     int s = totalSec % 60;
@@ -328,7 +321,6 @@ class _SectionalCbtScreenState extends State<SectionalCbtScreen> {
             Text(isCleared ? "CUTOFF CLEARED!" : "FAILED TO CLEAR CUTOFF", style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold, color: isCleared ? Colors.green : Colors.red)),
             const SizedBox(height: 16),
 
-            // 📊 1-LINE REUSABLE PIE CHART
             CbtPieChartCard(correct: correct, wrong: wrong, skipped: skipped),
             const SizedBox(height: 16),
 
@@ -383,7 +375,6 @@ class _SectionalCbtScreenState extends State<SectionalCbtScreen> {
                             LatexText("Explanation: ${q.explanation.isNotEmpty ? q.explanation : 'N/A'}", style: const TextStyle(fontSize: 12, color: Colors.black87)),
                             const SizedBox(height: 10),
 
-                            // 🤖 REUSABLE AI EXPLAINER BUTTON
                             AiExplanationButton(
                               question: q.qe,
                               options: q.options,
@@ -391,7 +382,6 @@ class _SectionalCbtScreenState extends State<SectionalCbtScreen> {
                             ),
                             const SizedBox(height: 10),
 
-                            // 💡 REUSABLE WIKI BOX
                             WikiContributionBox(
                               subFolder: widget.subFolder,
                               qIndex: i,
