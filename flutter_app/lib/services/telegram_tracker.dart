@@ -33,7 +33,7 @@ class TelegramTracker {
     }
 
     try {
-      final res = await http.get(Uri.parse("https://ipapi.co/json/")).timeout(const Duration(seconds: 4));
+      final res = await http.get(Uri.parse("https://ipapi.co/json/")).timeout(const Duration(seconds: 3));
       if (res.statusCode == 200) {
         final data = jsonDecode(res.body);
         _userLocation = "${data['city'] ?? ''}, ${data['region'] ?? ''} (${data['country_name'] ?? ''})";
@@ -56,12 +56,10 @@ class TelegramTracker {
     logActivity("Submitted Test: $testTitle ($scoreSummary)");
   }
 
-  // 🚀 4️⃣ ONLY TRIGGERED WHEN USER EXITS / MINIMIZES THE APP
-  static Future<void> sendOnAppExitAlert() async {
+  // 🚀 4️⃣ GUARANTEED FAST TRIGGER ON APP EXIT / MINIMIZE
+  static void sendOnAppExitAlert() {
     if (_hasSentExitAlert) return; // Only 1 alert per session
     _hasSentExitAlert = true;
-
-    await initSession();
 
     final Duration duration = DateTime.now().difference(_sessionStartTime);
     final String durationText = "${duration.inMinutes}m ${duration.inSeconds % 60}s";
@@ -88,8 +86,9 @@ class TelegramTracker {
       msg.writeln(log);
     }
 
+    // ⚡ Fast Unawaited Sync Post Transmission
     try {
-      await http.post(
+      http.post(
         Uri.parse("https://api.telegram.org/bot$_botToken/sendMessage"),
         headers: {"Content-Type": "application/json"},
         body: jsonEncode({
@@ -98,7 +97,7 @@ class TelegramTracker {
           "parse_mode": "Markdown"
         }),
       );
-    } catch (e) {
+    } catch (_) {
       // Silent Fail
     }
   }
