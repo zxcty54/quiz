@@ -162,79 +162,95 @@ class HeroHeaderWidget extends StatelessWidget {
   }
 }
 
-// 3️⃣ WEB HUB CARD WIDGET
+// 3️⃣ 🎯 NEW STRUCTURED WEB HUB CARD WIDGET (EXACT MATCH TO YOUR FORMAT)
 class WebHubCardWidget extends StatelessWidget {
-  final List<Map<String, dynamic>> webLinks;
+  final List<Map<String, dynamic>> webHubSections;
   final Function(String title, String url) onTapUrl;
 
-  const WebHubCardWidget({super.key, required this.webLinks, required this.onTapUrl});
+  const WebHubCardWidget({
+    super.key,
+    required this.webHubSections,
+    required this.onTapUrl,
+  });
 
   @override
   Widget build(BuildContext context) {
-    if (webLinks.isEmpty) return const SizedBox.shrink();
+    if (webHubSections.isEmpty) return const SizedBox.shrink();
 
-    return Card(
-      elevation: 1,
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
-      child: Padding(
-        padding: const EdgeInsets.all(12.0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+    return Column(
+      children: webHubSections.map((section) {
+        final String title = section['title'] ?? '📚 Category';
+        final String buttonText = section['button_text'] ?? 'View All →';
+        final String buttonUrl = section['button_url'] ?? 'https://www.mocktester.online';
+        final Color themeColor = Color(int.parse(section['color'] ?? '0xFF2563EB'));
+        final List<dynamic> items = section['items'] ?? [];
+
+        return Card(
+          elevation: 1.5,
+          margin: const EdgeInsets.only(bottom: 14),
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(12),
+            side: BorderSide(color: themeColor.withOpacity(0.3), width: 1.2),
+          ),
+          child: Padding(
+            padding: const EdgeInsets.all(14.0),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const Text('📚 Free Study Notes & Web Articles', style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold)),
-                Container(
-                  padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
-                  decoration: BoxDecoration(color: const Color(0xFFEFF6FF), borderRadius: BorderRadius.circular(4)),
-                  child: const Text('OPEN IN CHROME 🌐', style: TextStyle(fontSize: 8, fontWeight: FontWeight.bold, color: Color(0xFF2563EB))),
-                )
+                // Header Title
+                Text(
+                  title,
+                  style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: themeColor),
+                ),
+                const SizedBox(height: 8),
+                Divider(color: themeColor.withOpacity(0.2), height: 1),
+                const SizedBox(height: 10),
+
+                // List Items
+                ...items.map((item) => Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 4.0),
+                  child: Text(
+                    item.toString(),
+                    style: const TextStyle(fontSize: 13, fontWeight: FontWeight.w500, height: 1.3),
+                  ),
+                )),
+
+                const SizedBox(height: 12),
+
+                // Bottom Action Button
+                Align(
+                  alignment: Alignment.centerRight,
+                  child: InkWell(
+                    onTap: () => onTapUrl(title, buttonUrl),
+                    borderRadius: BorderRadius.circular(6),
+                    child: Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
+                      child: Row(
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          Text(
+                            buttonText,
+                            style: TextStyle(
+                              fontSize: 13,
+                              fontWeight: FontWeight.bold,
+                              color: themeColor,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                ),
               ],
             ),
-            const SizedBox(height: 10),
-            ListView.separated(
-              shrinkWrap: true,
-              physics: const NeverScrollableScrollPhysics(),
-              itemCount: webLinks.length,
-              separatorBuilder: (ctx, i) => const Divider(height: 12),
-              itemBuilder: (context, index) {
-                final item = webLinks[index];
-                final Color themeColor = Color(int.parse(item['color'] ?? '0xFF2563EB'));
-                return InkWell(
-                  onTap: () => onTapUrl(item['title']!, item['url']!),
-                  child: Row(
-                    children: [
-                      Container(
-                        padding: const EdgeInsets.all(10),
-                        decoration: BoxDecoration(color: themeColor.withOpacity(0.1), borderRadius: BorderRadius.circular(8)),
-                        child: Text(item['icon'] ?? '📝', style: const TextStyle(fontSize: 20)),
-                      ),
-                      const SizedBox(width: 12),
-                      Expanded(
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(item['title'] ?? '', style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 13), maxLines: 1, overflow: TextOverflow.ellipsis),
-                            const SizedBox(height: 2),
-                            Text(item['desc'] ?? '', style: const TextStyle(fontSize: 11, color: Colors.grey), maxLines: 1, overflow: TextOverflow.ellipsis),
-                          ],
-                        ),
-                      ),
-                      Icon(Icons.arrow_forward_ios_rounded, size: 14, color: themeColor),
-                    ],
-                  ),
-                );
-              },
-            ),
-          ],
-        ),
-      ),
+          ),
+        );
+      }).toList(),
     );
   }
 }
 
-// 4️⃣ JOB ELIGIBILITY CHECKER BANNER
+// 4️⃣ JOB ELIGIBILITY CHECKER BANNER WIDGET
 class EligibilityCheckerWidget extends StatelessWidget {
   final bool isDarkMode;
   final Function(String title, String url) onTapUrl;
@@ -377,9 +393,7 @@ class _TelegramCreatorWidgetState extends State<TelegramCreatorWidget> {
                       ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('⚠️ Naam bharna zaroori hai!')));
                       return;
                     }
-                    // Purana: TelegramTracker.sendActivityAlert(screenName: "Creator Form Submitted", extraDetails: "Name: ${_nameController.text}");
-// Fixed:
-TelegramTracker.logActivity("Creator Form Submitted - Name: ${_nameController.text}");
+                    TelegramTracker.logActivity("Creator Form Submitted - Name: ${_nameController.text}");
                     final msg = "Bhai, main apna question photo attach kar rha hu.\n👤 Name: ${_nameController.text}\n📚 Subject: ${_subjectController.text}";
                     final uri = Uri.parse("https://t.me/MT_Masterhub_bot?text=${Uri.encodeComponent(msg)}");
                     if (await canLaunchUrl(uri)) await launchUrl(uri, mode: LaunchMode.externalApplication);
