@@ -196,7 +196,7 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
             ),
             const SizedBox(height: 18),
 
-            // Question Card with Math LaTeX Support
+            // Question Box (With KaTeX Formula Support)
             Card(
               elevation: 1,
               shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
@@ -225,7 +225,7 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
             ),
             const SizedBox(height: 16),
 
-            // Options List with Math LaTeX Support
+            // Options (With KaTeX Formula Support)
             ...List.generate(currentQ.options.length, (index) {
               final optionText = currentQ.options[index];
               final isCorrect = index == currentQ.answerIndex;
@@ -296,7 +296,7 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
               );
             }),
 
-            // Explanation Box with Math LaTeX Support
+            // Detailed Solution (With KaTeX Formula Support)
             if (_isAnswered) ...[
               const SizedBox(height: 14),
               Container(
