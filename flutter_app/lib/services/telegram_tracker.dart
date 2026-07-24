@@ -1,102 +1,102 @@
 import 'dart:convert';
-import 'dart:io';
-import 'package:device_info_plus/device_info_plus.dart';
 import 'package:http/http.dart' as http;
+import 'package:device_info_plus/device_info_plus.dart';
 
 class TelegramTracker {
   // 🔑 Telegram Credentials
-  static const String botToken = "1809778528:AAFlwdQMKgiezltaJYyAU5u6vNjblBiIPmo";
-  static const String chatId = "785009742";
+  static const String _botToken = "7953258129:AAH1J0eJ3rMmsxS_iM4Xm0LpXyOqE2A1pQ4"; // Aapka Bot Token
+  static const String _chatId = "1138865181"; // Aapka Chat ID
 
   static String _deviceModel = "Unknown Device";
   static String _userLocation = "Unknown Location";
+  static final DateTime _sessionStartTime = DateTime.now();
+  static final List<String> _activityLogs = [];
+  static bool _isInfoFetched = false;
 
-  // 🛑 Session Tracking Set (Ek session me 1 unique action ka sirf 1 hi alert jayega)
-  static final Set<String> _sentAlerts = {};
+  // 🛠️ 1. App Open Hone Par Device + Location Background Me Fetch Karein
+  static Future<void> initSession() async {
+    if (_isInfoFetched) return;
+    _isInfoFetched = true;
+    _activityLogs.add("📱 App Opened");
 
-  // 1. Device Info Read Engine
-  static Future<void> initDeviceInfo() async {
+    // Fetch Device Info
     try {
-      DeviceInfoPlugin deviceInfo = DeviceInfoPlugin();
-      if (Platform.isAndroid) {
-        AndroidDeviceInfo androidInfo = await deviceInfo.androidInfo;
-        _deviceModel = "${androidInfo.manufacturer.toUpperCase()} ${androidInfo.model}";
-      } else if (Platform.isIOS) {
-        IosDeviceInfo iosInfo = await deviceInfo.iosInfo;
-        _deviceModel = iosInfo.name;
-      }
+      final DeviceInfoPlugin deviceInfo = DeviceInfoPlugin();
+      final androidInfo = await deviceInfo.androidInfo;
+      _deviceModel = "${androidInfo.manufacturer.toUpperCase()} ${androidInfo.model}";
     } catch (e) {
-      _deviceModel = "Android Device";
+      _deviceModel = "Android Phone";
     }
-  }
 
-  // 2. IP-based Location Fetch Engine
-  static Future<void> fetchIPLocation() async {
+    // Fetch IP Location (Free API)
     try {
-      final response = await http
-          .get(Uri.parse('http://ip-api.com/json'))
-          .timeout(const Duration(seconds: 4));
-
-      if (response.statusCode == 200) {
-        final data = jsonDecode(response.body);
-        String city = data['city'] ?? 'Unknown City';
-        String region = data['regionName'] ?? 'Bihar';
-        String country = data['country'] ?? 'India';
+      final res = await http.get(Uri.parse("https://ipapi.co/json/")).timeout(const Duration(seconds: 4));
+      if (res.statusCode == 200) {
+        final data = jsonDecode(res.body);
+        String city = data['city'] ?? '';
+        String region = data['region'] ?? '';
+        String country = data['country_name'] ?? '';
         _userLocation = "$city, $region ($country)";
       }
     } catch (e) {
-      _userLocation = "Bihar, India";
+      _userLocation = "India (IP Location)";
     }
   }
 
-  // 🚀 3. Telegram Alert Sender Engine (With Anti-Spam / Deduplication)
-  static Future<void> sendActivityAlert({
-    required String screenName,
-    String? extraDetails,
+  // 📝 2. Internal Actions Record Karein (Message Nahi Bhejega, Bas Save Karega)
+  static void logActivity(String action) {
+    String timestamp = "${DateTime.now().hour}:${DateTime.now().minute.toString().padLeft(2, '0')}";
+    _activityLogs.add("• [$timestamp] $action");
+  }
+
+  // 🚀 3. SIRF 1 FINAL COMBINED ALERT BHEJEIN (Test Finish Ya App Exit Par)
+  static Future<void> sendFinalSessionAlert({
+    String? testTitle,
+    String? scoreSummary,
   }) async {
+    await initSession(); // Ensure info is ready
+
+    final Duration duration = DateTime.now().difference(_sessionStartTime);
+    final String durationText = "${duration.inMinutes}m ${duration.inSeconds % 60}s";
+
+    final StringBuffer msg = StringBuffer();
+    msg.writeln("📊 *MOCKTESTER USER SESSION REPORT*");
+    msg.writeln("━━━━━━━━━━━━━━━━━━━━━");
+    msg.writeln("📱 *Device:* $_deviceModel");
+    msg.writeln("🌍 *Location:* $_userLocation");
+    msg.writeln("⏱️ *Time Spent:* $durationText");
+    msg.writeln("━━━━━━━━━━━━━━━━━━━━━");
+
+    if (testTitle != null && testTitle.isNotEmpty) {
+      msg.writeln("📝 *Test Attempted:* $testTitle");
+      if (scoreSummary != null) {
+        msg.writeln("🏆 *Score Result:* $scoreSummary");
+      }
+      msg.writeln("━━━━━━━━━━━━━━━━━━━━━");
+    }
+
+    msg.writeln("📋 *User Journey Logs:*");
+    if (_activityLogs.isEmpty) {
+      msg.writeln("• App Opened & Closed");
+    } else {
+      for (var log in _activityLogs.take(8)) { // Top 8 main activities
+        msg.writeln(log);
+      }
+    }
+
     try {
-      // 🔑 Unique key for this action
-      final String alertKey = "$screenName${extraDetails ?? ''}";
-
-      // 🛑 Check: Agar yeh action is session me pehle notify ho chuka hai, toh dobara mat bhejo
-      if (_sentAlerts.contains(alertKey)) {
-        return;
-      }
-
-      // Add to sent log so it won't repeat in current session
-      _sentAlerts.add(alertKey);
-
-      if (_deviceModel == "Unknown Device") {
-        await initDeviceInfo();
-      }
-      if (_userLocation == "Unknown Location") {
-        await fetchIPLocation();
-      }
-
-      final String timeStr = DateTime.now().toString().substring(11, 16);
-
-      final String message = """
-📱 *MockTester App User Activity*
-📲 *Device:* $_deviceModel
-📍 *Location:* $_userLocation
-🎯 *Screen:* $screenName
-${extraDetails != null ? "📝 *Details:* $extraDetails\n" : ""}⏰ *Time:* $timeStr
-""";
-
-      final Uri telegramUri = Uri.parse(
-        "https://api.telegram.org/bot$botToken/sendMessage",
-      );
-
+      final String url = "https://api.telegram.org/bot$_botToken/sendMessage";
       await http.post(
-        telegramUri,
-        body: {
-          "chat_id": chatId,
-          "text": message,
-          "parse_mode": "Markdown",
-        },
+        Uri.parse(url),
+        headers: {"Content-Type": "application/json"},
+        body: jsonEncode({
+          "chat_id": _chatId,
+          "text": msg.toString(),
+          "parse_mode": "Markdown"
+        }),
       );
     } catch (e) {
-      // Silent fail
+      // Silent Fail
     }
   }
 }
