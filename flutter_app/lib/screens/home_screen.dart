@@ -10,6 +10,7 @@ import '../services/telegram_tracker.dart';
 import '../widgets/home_widgets.dart';
 import 'profile_screen.dart';
 import 'revision_practice_screen.dart';
+import 'saved_questions_screen.dart';
 import 'sectional_cbt_screen.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -148,9 +149,11 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
               _buildHomeTab(context),
               _buildRevisionTab(context),
               _buildSectionalTab(context),
-              Center(child: Text('⭐ Bookmarked Questions Area', style: TextStyle(color: textColor))),
               
-              // 👤 TAB 5: Clean External Profile Screen Call
+              // ⭐ TAB 4: REAL-TIME SAVED / BOOKMARKED QUESTIONS SCREEN
+              const SavedQuestionsScreen(),
+
+              // 👤 TAB 5: CLEAN EXTERNAL PROFILE SCREEN
               ProfileScreen(
                 isHindi: _isHindi,
                 isDarkMode: _isDarkMode,
@@ -502,7 +505,7 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
     }
   }
 
-  // 1️⃣ REVISION HUB PRACTICE LAUNCHER (Instant Answer Mode)
+  // 1️⃣ REVISION HUB PRACTICE LAUNCHER
   void _launchRevisionPractice(BuildContext context, String title, String path) async {
     TelegramTracker.logActivity("Started Revision Practice: $title");
     showDialog(context: context, barrierDismissible: false, builder: (ctx) => const Center(child: CircularProgressIndicator()));
@@ -529,7 +532,7 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
     }
   }
 
-  // 2️⃣ SECTIONAL CBT MOCK LAUNCHER (Full TCS Pattern With Submit & Marking)
+  // 2️⃣ SECTIONAL CBT MOCK LAUNCHER
   void _launchCbtMock(BuildContext context, String title, String path) async {
     TelegramTracker.logActivity("Started Sectional CBT Mock: $title");
     showDialog(context: context, barrierDismissible: false, builder: (ctx) => const Center(child: CircularProgressIndicator()));
