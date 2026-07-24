@@ -30,11 +30,11 @@ class _HomeScreenState extends State<HomeScreen> {
   bool _isLoadingConfig = true;
 
   @override
-  void initState() {
-    super.initState();
-    TelegramTracker.sendActivityAlert(screenName: "App Opened / Home Screen");
-    _loadAllConfigs();
-  }
+void initState() {
+  super.initState();
+  TelegramTracker.initSession(); // Device Model + IP Location auto fetch karega
+  _loadAllConfigs();
+}
 
   Future<void> _loadAllConfigs() async {
     try {
