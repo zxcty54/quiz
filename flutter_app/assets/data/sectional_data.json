@@ -1,33 +1,33 @@
 {
   "bpsc": {
-    "title": "🏛️ BPSC Civil Services Prelims Core Zone",
+    "title": "🏛️ BPSC PCS Core Sets",
     "total_sets": 28,
     "path_prefix": "bpsc/science/Modern History/set"
   },
   "ssc": [
     {
-      "title": "General Reasoning",
-      "folder": "reasoning",
-      "sets": 5
+      "title": "⚡ SSC CGL / NTPC Science Mocks",
+      "sets": 10,
+      "folder": "bssc/science"
     },
     {
-      "title": "Quantitative Aptitude",
-      "folder": "aptitude",
-      "sets": 5
+      "title": "📜 SSC Static GK Practice",
+      "sets": 5,
+      "folder": "bpsc/science/Polity"
     }
   ],
   "bssc_cgl": [
     {
-      "title": "BSSC CGL Reasoning",
-      "folder": "bssc_cgl_reasoning",
-      "sets": 5
+      "title": "🎯 BSSC Graduate Level Special",
+      "sets": 12,
+      "folder": "bssc/science"
     }
   ],
   "bssc_inter": [
     {
-      "title": "Mental Ability & Reasoning",
-      "folder": "bssc_inter_reasoning",
-      "sets": 5
+      "title": "🔥 BSSC Inter Level Top 100 Qs",
+      "sets": 15,
+      "folder": "bssc/science"
     }
   ]
 }
