@@ -175,7 +175,6 @@ class WebHubCardWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // ⚠️ AGAR DATA EMPTY HA TOH BLANK SIZEDBOX KI JAGAH ERROR BOX DIKHEGA
     if (webHubSections.isEmpty) {
       return Card(
         color: const Color(0xFFFEF2F2),
@@ -235,7 +234,6 @@ class WebHubCardWidget extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                // Header Title
                 Text(
                   title,
                   style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: themeColor),
@@ -244,7 +242,6 @@ class WebHubCardWidget extends StatelessWidget {
                 Divider(color: themeColor.withOpacity(0.2), height: 1),
                 const SizedBox(height: 10),
 
-                // List Items
                 ...items.map((item) => Padding(
                   padding: const EdgeInsets.symmetric(vertical: 4.0),
                   child: Text(
@@ -255,7 +252,6 @@ class WebHubCardWidget extends StatelessWidget {
 
                 const SizedBox(height: 12),
 
-                // Bottom Action Button (Right Aligned)
                 Align(
                   alignment: Alignment.centerRight,
                   child: InkWell(
