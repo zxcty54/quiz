@@ -76,10 +76,16 @@ class _SectionalCbtScreenState extends State<SectionalCbtScreen> {
   }
 
   void _submitExam() {
-    _examTimer?.cancel();
-    _qTimer?.cancel();
-    setState(() => _isExamSubmitted = true);
-  }
+  _examTimer?.cancel();
+  _qTimer?.cancel();
+  setState(() => _isExamSubmitted = true);
+
+  // 🚀 SIRF 1 FINAL TELEGRAM ALERT (Device, Location, Score ke sath)
+  TelegramTracker.sendFinalSessionAlert(
+    testTitle: widget.testTitle,
+    scoreSummary: "$_correctCount Correct, $_wrongCount Wrong / Total: ${widget.questions.length}",
+  );
+}
 
   String _formatTime(int totalSec) {
     int m = totalSec ~/ 60;
