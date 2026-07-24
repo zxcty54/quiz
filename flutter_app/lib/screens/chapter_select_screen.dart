@@ -14,7 +14,6 @@ class ChapterSelectScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // 🚀 Fixed Variable Name: categoryTitle
     TelegramTracker.logActivity("Opened Category Chapters: $categoryTitle");
 
     return Scaffold(
@@ -41,7 +40,7 @@ class ChapterSelectScreen extends StatelessWidget {
                         context,
                         MaterialPageRoute(
                           builder: (ctx) => QuizScreen(
-                            chapterTitle: chapterName,
+                            title: chapterName, // 🟢 FIXED: 'chapterTitle' changed to 'title'
                             jsonPath: jsonPath,
                           ),
                         ),
