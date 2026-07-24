@@ -9,7 +9,7 @@ import '../models/question_model.dart';
 import '../services/telegram_tracker.dart';
 import '../services/user_stats_service.dart';
 import '../widgets/home_widgets.dart';
-import 'chapter_select_screen.dart';
+import 'revision_practice_screen.dart';
 import 'sectional_cbt_screen.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -25,93 +25,11 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
   bool _isHindi = true;
   String _selectedExamPanel = 'bpsc';
 
-  // 🛡️ DEFAULT IN-MEMORY FALLBACK MAPPING (Har halat me show hone ki guarantee)
+  // 📂 Direct Dynamic JSON Data Storage
   Map<String, dynamic> _appConfig = {};
   Map<String, dynamic> _homeData = {};
-  
-  Map<String, dynamic> _subjectMapping = {
-    "polity_mapping": {
-      "Historical Background": "historicalbackgroud.json",
-      "Making of Constitution": "makingofconstitution.json",
-      "FR, FD, DPSP & Amendments": "FR-FD-DPSP-Amend.json",
-      "President, VP & PM": "President_VP_PM.json",
-      "Governor, CM & COM": "Gover_CM_COM.json",
-      "The Parliament": "parliament.json",
-      "SC, HC & Sub. Courts": "SC_HC_Gram.json",
-      "Panchayati Raj & Municipalities": "Panchayati_Raj_Muncipal.json"
-    },
-    "history_mapping": {
-      "1857 Revolt": "1857_revolt.json",
-      "Bihar History": "bihar_hist.json",
-      "Medieval India": "medieval.json",
-      "Struggle 1939-1947": "towardfreedom.json",
-      "Development of Indian Press": "histpress.json"
-    },
-    "geo_mapping": {
-      "Soils, Forests, Dams & Agri": "soil_forest_dams_agri.json",
-      "Astronomy & Solar System": "astronomy.json",
-      "Introduction & Indian Geo": "Indian_Geo.json"
-    },
-    "eco_mapping": {
-      "Public Finance & Deficit": "public_finance_fiscal_deficit.json",
-      "Planning Commission & NITI": "planning_commission.json",
-      "Banking & RBI Policies": "banking.json"
-    },
-    "phy_mapping": {
-      "Light & Optics": "optics.json",
-      "Electricity": "electrical_energy.json",
-      "Magnetism": "magnetic_energy.json",
-      "Force & Gravity": "force_gravity.json",
-      "Motion": "motions.json"
-    },
-    "bio_mapping": {
-      "Botany": "botany.json",
-      "Cell Biology": "cell_biology.json",
-      "Circulatory System": "circulatory_system.json",
-      "Digestive System": "digestive_system.json"
-    },
-    "chem_mapping": {
-      "Metals & Ores": "metals_compounds.json",
-      "Acids, Bases & Salts": "acid_base_salt.json",
-      "Atomic Structure": "atomic_structure.json",
-      "Periodic Table": "periodictable.json"
-    },
-    "current_mapping": {
-      "Jan 2026": "jan.json",
-      "Feb 2026": "2026-02.json",
-      "Mar 2026": "2026-03.json",
-      "Bihar Special News": "bihar_news.json"
-    }
-  };
-
-  Map<String, dynamic> _sectionalData = {
-    "bpsc": {
-      "title": "🏛️ BPSC PCS Core Zone",
-      "total_sets": 28,
-      "path_prefix": "bpsc/science/Modern History/set"
-    },
-    "ssc": [
-      {
-        "title": "⚡ SSC CGL / NTPC Science Mocks",
-        "sets": 10,
-        "folder": "bssc/science"
-      }
-    ],
-    "bssc_cgl": [
-      {
-        "title": "🎯 BSSC Graduate Level Special Mocks",
-        "sets": 12,
-        "folder": "bssc/science"
-      }
-    ],
-    "bssc_inter": [
-      {
-        "title": "🔥 BSSC Inter Level Top 100 MCQs",
-        "sets": 15,
-        "folder": "bssc/science"
-      }
-    ]
-  };
+  Map<String, dynamic> _subjectMapping = {};
+  Map<String, dynamic> _sectionalData = {};
 
   bool _isLoadingConfig = true;
 
@@ -136,29 +54,35 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
     }
   }
 
-  // 🛡️ SAFE ASSET LOADER (Fallbacks active rehte hain agar file load fail ho)
+  // 📖 Pure External JSON Asset Loader
   Future<void> _loadAllConfigs() async {
     try {
-      final strConfig = await rootBundle.loadString('assets/data/app_config.json');
-      _appConfig = jsonDecode(strConfig);
-    } catch (_) {}
+      final String configStr = await rootBundle.loadString('assets/data/app_config.json');
+      _appConfig = jsonDecode(configStr);
+    } catch (e) {
+      debugPrint("Error loading app_config.json: $e");
+    }
 
     try {
-      final strHome = await rootBundle.loadString('assets/data/home_data.json');
-      _homeData = jsonDecode(strHome);
-    } catch (_) {}
+      final String homeStr = await rootBundle.loadString('assets/data/home_data.json');
+      _homeData = jsonDecode(homeStr);
+    } catch (e) {
+      debugPrint("Error loading home_data.json: $e");
+    }
 
     try {
-      final strSub = await rootBundle.loadString('assets/data/subject_mapping.json');
-      final Map<String, dynamic> loadedSub = jsonDecode(strSub);
-      if (loadedSub.isNotEmpty) _subjectMapping = loadedSub;
-    } catch (_) {}
+      final String subjectStr = await rootBundle.loadString('assets/data/subject_mapping.json');
+      _subjectMapping = jsonDecode(subjectStr);
+    } catch (e) {
+      debugPrint("Error loading subject_mapping.json: $e");
+    }
 
     try {
-      final strSec = await rootBundle.loadString('assets/data/sectional_data.json');
-      final Map<String, dynamic> loadedSec = jsonDecode(strSec);
-      if (loadedSec.isNotEmpty) _sectionalData = loadedSec;
-    } catch (_) {}
+      final String sectionalStr = await rootBundle.loadString('assets/data/sectional_data.json');
+      _sectionalData = jsonDecode(sectionalStr);
+    } catch (e) {
+      debugPrint("Error loading sectional_data.json: $e");
+    }
 
     if (mounted) {
       setState(() {
@@ -264,7 +188,7 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
     );
   }
 
-  // 1️⃣ TAB 1: HOME
+  // 1️⃣ TAB 1: HOME TAB
   Widget _buildHomeTab(BuildContext context) {
     return SingleChildScrollView(
       padding: const EdgeInsets.all(16),
@@ -283,7 +207,8 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
           ),
           EligibilityCheckerWidget(isDarkMode: _isDarkMode, onTapUrl: _openWebsiteUrl),
           const SizedBox(height: 16),
-          _buildMiniMocksCard(context),
+          // 📅 LAUNCH ROADMAP
+          _buildLaunchRoadmapCard(),
           const SizedBox(height: 16),
           const TelegramCreatorWidget(),
         ],
@@ -291,33 +216,35 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
     );
   }
 
-  Widget _buildMiniMocksCard(BuildContext context) {
-    final miniMocks = List<Map<String, dynamic>>.from(_homeData['mini_mocks'] ?? []);
+  Widget _buildLaunchRoadmapCard() {
+    final List roadmapList = _appConfig['launch_roadmap'] ?? [
+      {"text": "🔥 Coming Tomorrow: BSSC Inter Level Top 100 Qs", "color": "0xFFFF4757"},
+      {"text": "✅ Just Added: Current Affairs Bulletin", "color": "0xFF059669"}
+    ];
+
     return Card(
-      elevation: 1,
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
       child: Padding(
         padding: const EdgeInsets.all(14),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const Text('⚡ Quick Mini Mocks (15s Timer)', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15)),
+            const Text('📅 Launch Roadmap & Live Updates', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 14)),
             const SizedBox(height: 10),
-            Wrap(
-              spacing: 8, runSpacing: 8,
-              children: miniMocks.map((t) => ElevatedButton(
-                style: ElevatedButton.styleFrom(backgroundColor: const Color(0xFF2575FC), foregroundColor: Colors.white),
-                onPressed: () => _launchCbtMock(context, t['title']!, t['json']!),
-                child: Text(t['title']!, style: const TextStyle(fontSize: 11)),
-              )).toList(),
-            )
+            ...roadmapList.map((item) {
+              final String text = item['text'] ?? '';
+              final Color color = Color(int.parse(item['color'] ?? '0xFF2563EB'));
+              return Padding(
+                padding: const EdgeInsets.symmetric(vertical: 3.0),
+                child: Text(text, style: TextStyle(fontSize: 12, color: color, fontWeight: FontWeight.w600)),
+              );
+            }),
           ],
         ),
       ),
     );
   }
 
-  // 2️⃣ TAB 2: REVISION HUB (GUARANTEED CHAPTER DISPLAY)
+  // 2️⃣ TAB 2: REVISION HUB
   Widget _buildRevisionTab(BuildContext context) {
     return ListView(
       padding: const EdgeInsets.all(16),
@@ -416,7 +343,7 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
                               style: TextStyle(fontSize: 12, fontWeight: FontWeight.w600, color: color),
                             ),
                             onPressed: () {
-                              _launchCbtMock(context, entry.key, path);
+                              _launchRevisionPractice(context, entry.key, path);
                             },
                           );
                         }).toList(),
@@ -570,8 +497,6 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
         const Divider(),
         const SizedBox(height: 8),
 
-        _buildLaunchRoadmapCard(),
-        const SizedBox(height: 12),
         _buildTrustCard(),
         const SizedBox(height: 12),
         _buildStudentSupportCard(context),
@@ -643,34 +568,6 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
     );
   }
 
-  Widget _buildLaunchRoadmapCard() {
-    final List roadmapList = _appConfig['launch_roadmap'] ?? [
-      {"text": "🔥 Coming Tomorrow: BSSC Inter Level Top 100 Qs", "color": "0xFFFF4757"},
-      {"text": "✅ Just Added: Current Affairs Bulletin", "color": "0xFF059669"}
-    ];
-
-    return Card(
-      child: Padding(
-        padding: const EdgeInsets.all(14),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            const Text('📅 Launch Roadmap & Live Updates', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 14)),
-            const SizedBox(height: 10),
-            ...roadmapList.map((item) {
-              final String text = item['text'] ?? '';
-              final Color color = Color(int.parse(item['color'] ?? '0xFF2563EB'));
-              return Padding(
-                padding: const EdgeInsets.symmetric(vertical: 3.0),
-                child: Text(text, style: TextStyle(fontSize: 12, color: color, fontWeight: FontWeight.w600)),
-              );
-            }),
-          ],
-        ),
-      ),
-    );
-  }
-
   Widget _buildTrustCard() {
     return Card(
       child: Padding(
@@ -719,7 +616,7 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
     );
   }
 
-  // HELPER FUNCTIONS
+  // HELPER LAUNCHER FUNCTIONS
   Future<void> _openWebsiteUrl(String linkTitle, String url) async {
     TelegramTracker.logActivity("Opened Web Tool: $linkTitle");
     final Uri uri = Uri.parse(url);
@@ -730,8 +627,9 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
     }
   }
 
-  void _launchCbtMock(BuildContext context, String title, String path) async {
-    TelegramTracker.logActivity("Started Mock Test: $title");
+  // 1️⃣ REVISION HUB PRACTICE LAUNCHER (Instant Answer Mode)
+  void _launchRevisionPractice(BuildContext context, String title, String path) async {
+    TelegramTracker.logActivity("Started Revision Practice: $title");
     showDialog(context: context, barrierDismissible: false, builder: (ctx) => const Center(child: CircularProgressIndicator()));
     
     String finalPath = path.startsWith("http") ? path : "https://raw.githubusercontent.com/zxcty54/quiz/main/$path";
@@ -743,7 +641,39 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
         List body = jsonDecode(res.body);
         List<Question> qList = body.map((i) => Question.fromJson(i)).toList();
         if (context.mounted && qList.isNotEmpty) {
-          Navigator.push(context, MaterialPageRoute(builder: (ctx) => SectionalCbtScreen(testTitle: title, questions: qList, subFolder: path)));
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (ctx) => RevisionPracticeScreen(testTitle: title, questions: qList),
+            ),
+          );
+        }
+      }
+    } catch (e) {
+      if (context.mounted) Navigator.pop(context);
+    }
+  }
+
+  // 2️⃣ SECTIONAL CBT MOCK LAUNCHER (Full TCS Pattern With Submit & Marking)
+  void _launchCbtMock(BuildContext context, String title, String path) async {
+    TelegramTracker.logActivity("Started Sectional CBT Mock: $title");
+    showDialog(context: context, barrierDismissible: false, builder: (ctx) => const Center(child: CircularProgressIndicator()));
+    
+    String finalPath = path.startsWith("http") ? path : "https://raw.githubusercontent.com/zxcty54/quiz/main/$path";
+    
+    try {
+      final res = await http.get(Uri.parse(finalPath));
+      if (context.mounted) Navigator.pop(context);
+      if (res.statusCode == 200) {
+        List body = jsonDecode(res.body);
+        List<Question> qList = body.map((i) => Question.fromJson(i)).toList();
+        if (context.mounted && qList.isNotEmpty) {
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (ctx) => SectionalCbtScreen(testTitle: title, questions: qList, subFolder: path),
+            ),
+          );
         }
       }
     } catch (e) {
