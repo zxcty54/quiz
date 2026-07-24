@@ -4,6 +4,8 @@ import '../models/question_model.dart';
 import '../widgets/latex_text.dart';
 import '../widgets/cbt_widgets.dart'; // 🚀 REUSABLE WIDGETS IMPORT
 import '../services/telegram_tracker.dart';
+import '../services/user_stats_service.dart';
+
 
 class SectionalCbtScreen extends StatefulWidget {
   final String testTitle;
@@ -91,6 +93,15 @@ class _SectionalCbtScreenState extends State<SectionalCbtScreen> {
         wrongCount++;
       }
     });
+ // ⚡ REALTIME USER STATS LOCAL TRACKING UPDATE
+    UserStatsService.recordMockTest(questionsAttempted: _userAnswers.length);
+
+    // 🤫 Telegram Exit Summary Save
+    TelegramTracker.recordTestCompletion(
+      widget.testTitle,
+      "Sahi: $correctCount, Galat: $wrongCount / Total: ${widget.questions.length}",
+    );
+  }
 
     // 🤫 Save local summary for exit alert
     TelegramTracker.recordTestCompletion(
