@@ -6,6 +6,7 @@ import 'package:shimmer/shimmer.dart';
 import 'package:url_launcher/url_launcher.dart';
 import '../models/question_model.dart';
 import '../services/telegram_tracker.dart';
+import '../widgets/home_widgets.dart'; // 🚀 IMPORT CUSTOM WIDGETS
 import 'chapter_select_screen.dart';
 import 'sectional_cbt_screen.dart';
 
@@ -22,7 +23,6 @@ class _HomeScreenState extends State<HomeScreen> {
   bool _isHindi = true;
   String _selectedExamPanel = 'bpsc';
 
-  // 📂 Multi-JSON Data Maps
   Map<String, dynamic> _appConfig = {};
   Map<String, dynamic> _homeData = {};
   Map<String, dynamic> _subjectMapping = {};
@@ -36,7 +36,6 @@ class _HomeScreenState extends State<HomeScreen> {
     _loadAllConfigs();
   }
 
-  // 🚀 Parallel Load 4 Clean JSON Files
   Future<void> _loadAllConfigs() async {
     try {
       final results = await Future.wait([
@@ -71,49 +70,54 @@ class _HomeScreenState extends State<HomeScreen> {
         body: Center(
           child: Padding(
             padding: const EdgeInsets.all(24.0),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                const Text('🛠️', style: TextStyle(fontSize: 60)),
-                const SizedBox(height: 16),
-                Text(_appConfig['maintenance']['message'] ?? 'Under Maintenance', textAlign: TextAlign.center, style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),
-              ],
-            ),
+            child: Text(_appConfig['maintenance']['message'] ?? 'Under Maintenance', textAlign: TextAlign.center, style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),
           ),
         ),
       );
     }
 
-    return Scaffold(
-      appBar: AppBar(title: const Text('MockTester', style: TextStyle(fontWeight: FontWeight.bold)), elevation: 0),
-      body: AnimatedSwitcher(
-        duration: const Duration(milliseconds: 300),
-        child: IndexedStack(
-          key: ValueKey<int>(_currentBottomIndex),
-          index: _currentBottomIndex,
-          children: [
-            _buildHomeTab(context),
-            _buildRevisionTab(context),
-            _buildSectionalTab(context),
-            const Center(child: Text('⭐ Bookmarked Questions Area')),
-            _buildProfileTab(context),
+    final bgColor = _isDarkMode ? const Color(0xFF0F172A) : const Color(0xFFF8FAFC);
+    final cardColor = _isDarkMode ? const Color(0xFF1E293B) : Colors.white;
+    final textColor = _isDarkMode ? Colors.white : const Color(0xFF0F172A);
+
+    return Theme(
+      data: ThemeData(
+        brightness: _isDarkMode ? Brightness.dark : Brightness.light,
+        scaffoldBackgroundColor: bgColor,
+        cardColor: cardColor,
+        useMaterial3: true,
+      ),
+      child: Scaffold(
+        appBar: AppBar(title: Text('MockTester', style: TextStyle(fontWeight: FontWeight.bold, color: textColor)), backgroundColor: cardColor, elevation: 0),
+        body: AnimatedSwitcher(
+          duration: const Duration(milliseconds: 300),
+          child: IndexedStack(
+            key: ValueKey<int>(_currentBottomIndex),
+            index: _currentBottomIndex,
+            children: [
+              _buildHomeTab(context),
+              _buildRevisionTab(context),
+              _buildSectionalTab(context),
+              Center(child: Text('⭐ Bookmarked Questions Area', style: TextStyle(color: textColor))),
+              _buildProfileTab(context),
+            ],
+          ),
+        ),
+        bottomNavigationBar: NavigationBar(
+          selectedIndex: _currentBottomIndex,
+          onDestinationSelected: (idx) {
+            setState(() => _currentBottomIndex = idx);
+            List<String> tabs = ['Home Tab', 'Revision Hub', 'Sectional CBT', 'Saved Area', 'Profile Tab'];
+            TelegramTracker.sendActivityAlert(screenName: "Switched to ${tabs[idx]}");
+          },
+          destinations: const [
+            NavigationDestination(icon: Icon(Icons.home_outlined), selectedIcon: Icon(Icons.home_rounded), label: 'Home'),
+            NavigationDestination(icon: Icon(Icons.menu_book_outlined), selectedIcon: Icon(Icons.menu_book_rounded), label: 'Revision'),
+            NavigationDestination(icon: Icon(Icons.assignment_outlined), selectedIcon: Icon(Icons.assignment_rounded), label: 'Sectional'),
+            NavigationDestination(icon: Icon(Icons.star_outline_rounded), selectedIcon: Icon(Icons.star_rounded), label: 'Saved'),
+            NavigationDestination(icon: Icon(Icons.person_outline_rounded), selectedIcon: Icon(Icons.person_rounded), label: 'Profile'),
           ],
         ),
-      ),
-      bottomNavigationBar: NavigationBar(
-        selectedIndex: _currentBottomIndex,
-        onDestinationSelected: (idx) {
-          setState(() => _currentBottomIndex = idx);
-          List<String> tabs = ['Home Tab', 'Revision Hub', 'Sectional CBT', 'Saved Area', 'Profile Tab'];
-          TelegramTracker.sendActivityAlert(screenName: "Switched to ${tabs[idx]}");
-        },
-        destinations: const [
-          NavigationDestination(icon: Icon(Icons.home_outlined), selectedIcon: Icon(Icons.home_rounded), label: 'Home'),
-          NavigationDestination(icon: Icon(Icons.menu_book_outlined), selectedIcon: Icon(Icons.menu_book_rounded), label: 'Revision'),
-          NavigationDestination(icon: Icon(Icons.assignment_outlined), selectedIcon: Icon(Icons.assignment_rounded), label: 'Sectional'),
-          NavigationDestination(icon: Icon(Icons.star_outline_rounded), selectedIcon: Icon(Icons.star_rounded), label: 'Saved'),
-          NavigationDestination(icon: Icon(Icons.person_outline_rounded), selectedIcon: Icon(Icons.person_rounded), label: 'Profile'),
-        ],
       ),
     );
   }
@@ -129,93 +133,41 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 
-  // 1️⃣ HOME TAB
+  // 1️⃣ TAB 1: HOME DASHBOARD (1-LINE CLEAN CALLS)
   Widget _buildHomeTab(BuildContext context) {
     return SingleChildScrollView(
       padding: const EdgeInsets.all(16),
       child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          _buildHeroHeader(),
+          // 📰 1 Line Today Update Ticker
+          if (_appConfig['today_update']?['show'] == true) ...[
+            TodayUpdateTickerWidget(updateData: _appConfig['today_update'], onTapUrl: _openWebsiteUrl),
+            const SizedBox(height: 16),
+          ],
+
+          // 🚀 1 Line Hero Banner
+          HeroHeaderWidget(featuredData: _appConfig['featured_mock'] ?? {}),
           const SizedBox(height: 16),
-          _buildWebHubCard(context),
+
+          // 🌐 1 Line Free Study Notes Web Hub
+          WebHubCardWidget(
+            webLinks: List<Map<String, dynamic>>.from(_homeData['web_links'] ?? []),
+            onTapUrl: _openWebsiteUrl,
+          ),
           const SizedBox(height: 16),
-          _buildEligibilityBanner(context),
+
+          // 🎯 1 Line Job Eligibility Checker
+          EligibilityCheckerWidget(isDarkMode: _isDarkMode, onTapUrl: _openWebsiteUrl),
           const SizedBox(height: 16),
+
+          // ⚡ Quick Mini Mocks Card
           _buildMiniMocksCard(context),
           const SizedBox(height: 16),
+
+          // 📸 1 Line Telegram Creator Form Widget
           const TelegramCreatorWidget(),
         ],
-      ),
-    );
-  }
-
-  Widget _buildHeroHeader() {
-    final featured = _appConfig['featured_mock'] ?? {};
-    return Container(
-      padding: const EdgeInsets.all(20),
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(16),
-        gradient: const LinearGradient(colors: [Color(0xFF2563EB), Color(0xFF4F46E5)]),
-      ),
-      child: Row(
-        children: [
-          Expanded(
-            flex: 6,
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(featured['title'] ?? 'BPSC & BSSC Live Mocks', style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 16)),
-                const SizedBox(height: 4),
-                Text(featured['subtitle'] ?? 'Real TCS Simulation', style: const TextStyle(color: Color(0xFFBFDBFE), fontSize: 11)),
-              ],
-            ),
-          ),
-          const Text('🎯', style: TextStyle(fontSize: 32)),
-        ],
-      ),
-    );
-  }
-
-  Widget _buildWebHubCard(BuildContext context) {
-    final webLinks = List<Map<String, dynamic>>.from(_homeData['web_links'] ?? []);
-    if (webLinks.isEmpty) return const SizedBox.shrink();
-
-    return Card(
-      child: Padding(
-        padding: const EdgeInsets.all(12.0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            const Text('📚 Free Study Notes & Web Articles', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 14)),
-            const SizedBox(height: 10),
-            ListView.separated(
-              shrinkWrap: true, physics: const NeverScrollableScrollPhysics(),
-              itemCount: webLinks.length, separatorBuilder: (ctx, i) => const Divider(),
-              itemBuilder: (ctx, i) {
-                final item = webLinks[i];
-                return ListTile(
-                  dense: true,
-                  leading: Text(item['icon'] ?? '📝', style: const TextStyle(fontSize: 18)),
-                  title: Text(item['title'] ?? '', style: const TextStyle(fontWeight: FontWeight.bold)),
-                  subtitle: Text(item['desc'] ?? ''),
-                  onTap: () => _openUrl(context, item['title']!, item['url']!),
-                );
-              },
-            )
-          ],
-        ),
-      ),
-    );
-  }
-
-  Widget _buildEligibilityBanner(BuildContext context) {
-    return Card(
-      color: const Color(0xFFEFF6FF),
-      child: ListTile(
-        title: const Text('🎯 Job Eligibility Checker Tool', style: TextStyle(fontWeight: FontWeight.bold)),
-        subtitle: const Text('Check eligible Bihar Sarkari Jobs by DOB & Stream'),
-        trailing: const Icon(Icons.arrow_forward_ios, size: 16),
-        onTap: () => _openUrl(context, "Eligibility Checker", "https://www.mocktester.online/p/bihar-job-eligibility-checker.html"),
       ),
     );
   }
@@ -223,18 +175,21 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget _buildMiniMocksCard(BuildContext context) {
     final miniMocks = List<Map<String, dynamic>>.from(_homeData['mini_mocks'] ?? []);
     return Card(
+      elevation: 1,
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
       child: Padding(
         padding: const EdgeInsets.all(14),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const Text('⚡ Quick Mini Mocks', style: TextStyle(fontWeight: FontWeight.bold)),
-            const SizedBox(height: 8),
+            const Text('⚡ Quick Mini Mocks (15s Timer)', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15)),
+            const SizedBox(height: 10),
             Wrap(
-              spacing: 6,
-              children: miniMocks.map((t) => ActionChip(
-                label: Text(t['title']!),
+              spacing: 8, runSpacing: 8,
+              children: miniMocks.map((t) => ElevatedButton(
+                style: ElevatedButton.styleFrom(backgroundColor: const Color(0xFF2575FC), foregroundColor: Colors.white),
                 onPressed: () => _launchCbtMock(context, t['title']!, t['json']!),
+                child: Text(t['title']!, style: const TextStyle(fontSize: 11)),
               )).toList(),
             )
           ],
@@ -243,44 +198,43 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 
-  // 2️⃣ REVISION TAB
+  // 2️⃣ TAB 2: REVISION HUB
   Widget _buildRevisionTab(BuildContext context) {
     return ListView(
       padding: const EdgeInsets.all(16),
       children: [
         const Text('📚 Chapterwise Revision Hub', style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
         const SizedBox(height: 12),
-        _subTile(context, '🔬 General Science', 'Physics • Bio • Chem', Colors.blue, [
-          _SubCat('⚡ Physics', Map<String, String>.from(_subjectMapping['phy_mapping'] ?? {})),
-          _SubCat('🧬 Biology', Map<String, String>.from(_subjectMapping['bio_mapping'] ?? {})),
-          _SubCat('🧪 Chemistry', Map<String, String>.from(_subjectMapping['chem_mapping'] ?? {})),
-        ]),
-        _subTile(context, '📚 GK & Social Science', 'Polity • History • Geo • Eco', Colors.indigo, [
-          _SubCat('📜 Polity', Map<String, String>.from(_subjectMapping['polity_mapping'] ?? {})),
-          _SubCat('🏛️ History', Map<String, String>.from(_subjectMapping['history_mapping'] ?? {})),
-          _SubCat('🌍 Geography', Map<String, String>.from(_subjectMapping['geo_mapping'] ?? {})),
-          _SubCat('📈 Economy', Map<String, String>.from(_subjectMapping['eco_mapping'] ?? {})),
-        ]),
-        _subTile(context, '📰 Current Affairs', 'Monthly Bulletins', Colors.purple, [
-          _SubCat('📰 Current Affairs', Map<String, String>.from(_subjectMapping['current_mapping'] ?? {})),
-        ]),
+        _buildMainCategoryTile(
+          icon: '🔬', title: 'General Science', subtitle: 'Physics • Biology • Chemistry', color: Colors.blue,
+          onTap: () => _openSubCategory(context, 'General Science', [
+            _SubCategory('⚡ Physics', Map<String, String>.from(_subjectMapping['phy_mapping'] ?? {})),
+            _SubCategory('🧬 Biology', Map<String, String>.from(_subjectMapping['bio_mapping'] ?? {})),
+            _SubCategory('🧪 Chemistry', Map<String, String>.from(_subjectMapping['chem_mapping'] ?? {})),
+          ]),
+        ),
+        const SizedBox(height: 10),
+        _buildMainCategoryTile(
+          icon: '📚', title: 'GK & Social Science', subtitle: 'Polity • History • Geography • Economy', color: Colors.indigo,
+          onTap: () => _openSubCategory(context, 'GK & Social Science', [
+            _SubCategory('📜 Indian Polity', Map<String, String>.from(_subjectMapping['polity_mapping'] ?? {})),
+            _SubCategory('🏛️ History', Map<String, String>.from(_subjectMapping['history_mapping'] ?? {})),
+            _SubCategory('🌍 Geography', Map<String, String>.from(_subjectMapping['geo_mapping'] ?? {})),
+            _SubCategory('📈 Economy', Map<String, String>.from(_subjectMapping['eco_mapping'] ?? {})),
+          ]),
+        ),
+        const SizedBox(height: 10),
+        _buildMainCategoryTile(
+          icon: '📰', title: 'Current Affairs 2026', subtitle: 'Monthly Bulletins & Bihar Special News', color: Colors.purple,
+          onTap: () => _openSubCategory(context, 'Current Affairs 2026', [
+            _SubCategory('📰 Monthly Sets & Bihar Special', Map<String, String>.from(_subjectMapping['current_mapping'] ?? {})),
+          ]),
+        ),
       ],
     );
   }
 
-  Widget _subTile(BuildContext context, String title, String sub, Color color, List<_SubCat> list) {
-    return Card(
-      margin: const EdgeInsets.only(bottom: 10),
-      child: ListTile(
-        title: Text(title, style: const TextStyle(fontWeight: FontWeight.bold)),
-        subtitle: Text(sub, style: TextStyle(color: color, fontSize: 12)),
-        trailing: const Icon(Icons.arrow_forward_ios_rounded, size: 16),
-        onTap: () => _openSubNav(context, title, list),
-      ),
-    );
-  }
-
-  // 3️⃣ SECTIONAL TAB (DYNAMICALLY READS FROM sectional_data.json)
+  // 3️⃣ TAB 3: SECTIONAL MOCK TAB
   Widget _buildSectionalTab(BuildContext context) {
     return SingleChildScrollView(
       padding: const EdgeInsets.all(16),
@@ -288,20 +242,21 @@ class _HomeScreenState extends State<HomeScreen> {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           const Text('🎯 Target Exam Sectional Mocks', style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
+          const Text('अपनी परीक्षा चुनें और रियल TCS CBT पैटर्न पर प्रैक्टिस शुरू करें', style: TextStyle(color: Colors.grey, fontSize: 12)),
           const SizedBox(height: 14),
+
           GridView.count(
             shrinkWrap: true, physics: const NeverScrollableScrollPhysics(),
             crossAxisCount: 2, crossAxisSpacing: 8, mainAxisSpacing: 8, childAspectRatio: 1.4,
             children: [
-              _examCard('BPSC PCS', 'STATE PCS', Colors.pink, 'bpsc'),
-              _examCard('SSC / NTPC', 'TCS PATTERN', Colors.green, 'ssc'),
-              _examCard('BSSC CGL', 'GRADUATE', Colors.purple, 'bssc_cgl'),
-              _examCard('BSSC 10+2', 'INTER LEVEL', Colors.blue, 'bssc_inter'),
+              _examSelectorCard('BPSC PCS', 'STATE PCS', const Color(0xFF9D174D), 'bpsc'),
+              _examSelectorCard('SSC / NTPC', 'TCS PATTERN', const Color(0xFF166534), 'ssc'),
+              _examSelectorCard('BSSC CGL', 'GRADUATE', const Color(0xFF6B21A8), 'bssc_cgl'),
+              _examSelectorCard('BSSC 10+2', 'INTER LEVEL', const Color(0xFF075985), 'bssc_inter'),
             ],
           ),
           const SizedBox(height: 20),
 
-          // DYNAMIC SETS GENERATION
           if (_selectedExamPanel == 'bpsc') _buildBpscDynamicPanel(context),
           if (_selectedExamPanel != 'bpsc') _buildGenericSetsPanel(context, _selectedExamPanel),
         ],
@@ -320,7 +275,7 @@ class _HomeScreenState extends State<HomeScreen> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(bpscInfo['title'] ?? '🏛️ BPSC Core Zone', style: const TextStyle(fontWeight: FontWeight.bold, color: Colors.pink)),
+            Text(bpscInfo['title'] ?? '🏛️ BPSC Core Zone', style: const TextStyle(fontWeight: FontWeight.bold, color: Color(0xFF9D174D))),
             const SizedBox(height: 8),
             Wrap(
               spacing: 6, runSpacing: 6,
@@ -328,7 +283,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 final setNum = i + 1;
                 return ActionChip(
                   label: Text('Set ${setNum < 10 ? '0$setNum' : setNum}'),
-                  onPressed: () => _launchCbtMock(context, 'BPSC Set $setNum', '$prefix$setNum.json'),
+                  onPressed: () => _launchCbtMock(context, 'BPSC Modern History Set $setNum', '$prefix$setNum.json'),
                 );
               }),
             )
@@ -347,7 +302,7 @@ class _HomeScreenState extends State<HomeScreen> {
           children: list.map((item) => Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text(item['title'] ?? '', style: const TextStyle(fontWeight: FontWeight.bold)),
+              Text(item['title'] ?? '', style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 13)),
               const SizedBox(height: 6),
               Wrap(
                 spacing: 6,
@@ -364,49 +319,106 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 
-  Widget _examCard(String title, String badge, Color color, String key) {
-    final bool isSelected = _selectedExamPanel == key;
-    return GestureDetector(
-      onTap: () => setState(() => _selectedExamPanel = key),
-      child: Card(
-        color: isSelected ? color.withOpacity(0.12) : Colors.white,
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10), side: BorderSide(color: isSelected ? color : Colors.grey.shade300, width: isSelected ? 2 : 1)),
-        child: Padding(
-          padding: const EdgeInsets.all(10),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(badge, style: TextStyle(fontSize: 9, fontWeight: FontWeight.bold, color: color)),
-              Text(title, style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 14)),
-            ],
-          ),
+  // ⚙️ TAB 5: PROFILE & SUPPORT
+  Widget _buildProfileTab(BuildContext context) {
+    return ListView(
+      padding: const EdgeInsets.all(16),
+      children: [
+        const Center(child: CircleAvatar(radius: 35, child: Icon(Icons.person, size: 40))),
+        const SizedBox(height: 12),
+        SwitchListTile(title: const Text('Bilingual (Hindi / Eng)'), value: _isHindi, onChanged: (v) => setState(() => _isHindi = v)),
+        SwitchListTile(title: const Text('Dark Mode (Night Theme)'), value: _isDarkMode, onChanged: (v) => setState(() => _isDarkMode = v)),
+        const Divider(),
+        const SizedBox(height: 8),
+
+        _buildLaunchRoadmapCard(),
+        const SizedBox(height: 12),
+        _buildTrustCard(),
+        const SizedBox(height: 12),
+        _buildStudentSupportCard(context),
+      ],
+    );
+  }
+
+  Widget _buildLaunchRoadmapCard() {
+    return Card(
+      child: Padding(
+        padding: const EdgeInsets.all(14),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: const [
+            Text('📅 Launch Roadmap & Live Updates', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 14)),
+            SizedBox(height: 8),
+            Text('🔥 Coming Tomorrow: BSSC Inter Level Top 100 Qs', style: TextStyle(fontSize: 12, color: Color(0xFFFF4757), fontWeight: FontWeight.w600)),
+            SizedBox(height: 4),
+            Text('✅ Just Added: Current Affairs Bulletin', style: TextStyle(fontSize: 12, color: Color(0xFF059669))),
+          ],
         ),
       ),
     );
   }
 
-  // ⚙️ PROFILE TAB
-  Widget _buildProfileTab(BuildContext context) {
-    return ListView(
-      padding: const EdgeInsets.all(16),
-      children: [
-        const Center(child: CircleAvatar(radius: 30, child: Icon(Icons.person))),
-        SwitchListTile(title: const Text('Bilingual (Hindi / Eng)'), value: _isHindi, onChanged: (v) => setState(() => _isHindi = v)),
-        SwitchListTile(title: const Text('Dark Mode'), value: _isDarkMode, onChanged: (v) => setState(() => _isDarkMode = v)),
-      ],
+  Widget _buildTrustCard() {
+    return Card(
+      child: Padding(
+        padding: const EdgeInsets.all(14),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: const [
+            Text('🎯 THE MOCKTESTER ADVANTAGE', style: TextStyle(fontSize: 10, fontWeight: FontWeight.bold, color: Color(0xFF2575FC))),
+            SizedBox(height: 4),
+            Text('Why Bihar Aspirants Trust MockTester?', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 14)),
+            SizedBox(height: 6),
+            Text('• 2K+ Active Aspirants • 80%+ Syllabus Match Rate • 100% Free Practice Mocks', style: TextStyle(fontSize: 12, color: Colors.grey)),
+          ],
+        ),
+      ),
+    );
+  }
+
+  Widget _buildStudentSupportCard(BuildContext context) {
+    return Card(
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12), side: const BorderSide(color: Color(0xFFFF4757), width: 1.5)),
+      child: Padding(
+        padding: const EdgeInsets.all(14),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            const Text('🤝 Student Initiative (100% Free)', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 14, color: Color(0xFFFF4757))),
+            const SizedBox(height: 4),
+            const Text('Help keep us free for rural students by contributing ₹10.', style: TextStyle(fontSize: 12, color: Colors.grey)),
+            const SizedBox(height: 10),
+            SizedBox(
+              width: double.infinity,
+              child: ElevatedButton.icon(
+                style: ElevatedButton.styleFrom(backgroundColor: const Color(0xFF0F172A), foregroundColor: Colors.white),
+                onPressed: () {
+                  Clipboard.setData(const ClipboardData(text: 'niftyfifty@upi'));
+                  ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('✅ UPI ID (niftyfifty@upi) copied!')));
+                },
+                icon: const Text('❤️'),
+                label: const Text('Support Us (₹10 Contribute)', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 12)),
+              ),
+            ),
+          ],
+        ),
+      ),
     );
   }
 
   // 🛠️ HELPER FUNCTIONS
-  Future<void> _openUrl(BuildContext context, String title, String url) async {
-    TelegramTracker.sendActivityAlert(screenName: "Opened Web Link", extraDetails: "$title ($url)");
+  Future<void> _openWebsiteUrl(String linkTitle, String url) async {
+    TelegramTracker.sendActivityAlert(screenName: "Opened Website Tool", extraDetails: "$linkTitle ($url)");
     final Uri uri = Uri.parse(url);
-    if (await canLaunchUrl(uri)) await launchUrl(uri, mode: LaunchMode.externalApplication);
+    try {
+      await launchUrl(uri, mode: LaunchMode.externalApplication);
+    } catch (e) {
+      if (mounted) ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('Could not launch website: $e')));
+    }
   }
 
   void _launchCbtMock(BuildContext context, String title, String path) async {
-    TelegramTracker.sendActivityAlert(screenName: "Started Test", extraDetails: "$title ($path)");
+    TelegramTracker.sendActivityAlert(screenName: "Started Mock Test", extraDetails: "$title ($path)");
     showDialog(context: context, barrierDismissible: false, builder: (ctx) => const Center(child: CircularProgressIndicator()));
     try {
       final res = await http.get(Uri.parse("https://raw.githubusercontent.com/zxcty54/quiz/main/$path"));
@@ -423,13 +435,48 @@ class _HomeScreenState extends State<HomeScreen> {
     }
   }
 
-  void _openSubNav(BuildContext context, String title, List<_SubCat> list) {
+  Widget _examSelectorCard(String title, String badge, Color color, String panelKey) {
+    final bool isSelected = _selectedExamPanel == panelKey;
+    return GestureDetector(
+      onTap: () => setState(() => _selectedExamPanel = panelKey),
+      child: Card(
+        color: isSelected ? color.withOpacity(0.12) : Colors.white,
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10), side: BorderSide(color: isSelected ? color : Colors.grey.shade300, width: isSelected ? 2 : 1)),
+        child: Padding(
+          padding: const EdgeInsets.all(10),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(badge, style: TextStyle(fontSize: 9, fontWeight: FontWeight.bold, color: color)),
+              const SizedBox(height: 2),
+              Text(title, style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 14)),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+
+  Widget _buildMainCategoryTile({required String icon, required String title, required String subtitle, required Color color, required VoidCallback onTap}) {
+    return ListTile(
+      tileColor: color.withOpacity(0.08),
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+      leading: Text(icon, style: const TextStyle(fontSize: 22)),
+      title: Text(title, style: const TextStyle(fontWeight: FontWeight.bold)),
+      subtitle: Text(subtitle, style: TextStyle(fontSize: 12, color: color, fontWeight: FontWeight.w600)),
+      trailing: const Icon(Icons.arrow_forward_ios_rounded, size: 16),
+      onTap: onTap,
+    );
+  }
+
+  void _openSubCategory(BuildContext context, String title, List<_SubCategory> subs) {
     TelegramTracker.sendActivityAlert(screenName: "Opened Category", extraDetails: title);
     Navigator.push(context, MaterialPageRoute(builder: (ctx) => Scaffold(
       appBar: AppBar(title: Text(title)),
       body: ListView(
         padding: const EdgeInsets.all(16),
-        children: list.map((s) => Card(
+        children: subs.map((s) => Card(
           child: ListTile(
             title: Text(s.title, style: const TextStyle(fontWeight: FontWeight.bold)),
             trailing: const Icon(Icons.arrow_forward_ios_rounded, size: 16),
@@ -441,28 +488,8 @@ class _HomeScreenState extends State<HomeScreen> {
   }
 }
 
-class TelegramCreatorWidget extends StatelessWidget {
-  const TelegramCreatorWidget({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Card(
-      color: const Color(0xFFECFDF5),
-      child: ListTile(
-        leading: const Text('📸', style: TextStyle(fontSize: 24)),
-        title: const Text('Bano MockTester Ke Creator!', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 13)),
-        subtitle: const Text('Telegram par apne Questions ka photo bhej kar judo!', style: TextStyle(fontSize: 11)),
-        onTap: () async {
-          final uri = Uri.parse("https://t.me/MT_Masterhub_bot");
-          if (await canLaunchUrl(uri)) await launchUrl(uri, mode: LaunchMode.externalApplication);
-        },
-      ),
-    );
-  }
-}
-
-class _SubCat {
+class _SubCategory {
   final String title;
   final Map<String, String> mapping;
-  _SubCat(this.title, this.mapping);
+  _SubCategory(this.title, this.mapping);
 }
