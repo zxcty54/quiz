@@ -7,8 +7,8 @@ import 'package:url_launcher/url_launcher.dart';
 
 import '../models/question_model.dart';
 import '../services/telegram_tracker.dart';
-import '../services/user_stats_service.dart'; // 🚀 Real-time Local Tracker Import
-import '../widgets/home_widgets.dart'; // 🚀 Custom Reusable Widgets
+import '../services/user_stats_service.dart';
+import '../widgets/home_widgets.dart';
 import 'chapter_select_screen.dart';
 import 'sectional_cbt_screen.dart';
 
@@ -35,7 +35,6 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
   @override
   void initState() {
     super.initState();
-    // 👁️ App Close / Exit Observer Add
     WidgetsBinding.instance.addObserver(this);
     TelegramTracker.initSession();
     _loadAllConfigs();
@@ -47,7 +46,6 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
     super.dispose();
   }
 
-  // 🚪 APP EXIT DETECTOR TRIGGER (SIRF APP BAND/MINIMIZE HONE PAR HI TELEGRAM ALERT JAYEGA)
   @override
   void didChangeAppLifecycleState(AppLifecycleState state) {
     if (state == AppLifecycleState.paused || state == AppLifecycleState.detached) {
@@ -55,7 +53,6 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
     }
   }
 
-  // 🚀 Load All 4 Config Files in Parallel
   Future<void> _loadAllConfigs() async {
     try {
       final results = await Future.wait([
@@ -88,7 +85,6 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
       );
     }
 
-    // 🛠️ Maintenance Shield
     if (_appConfig['maintenance']?['enabled'] == true) {
       return Scaffold(
         body: Center(
@@ -111,7 +107,6 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
       );
     }
 
-    // 🌙 Theme Palette
     final bgColor = _isDarkMode ? const Color(0xFF0F172A) : const Color(0xFFF8FAFC);
     final cardColor = _isDarkMode ? const Color(0xFF1E293B) : Colors.white;
     final textColor = _isDarkMode ? Colors.white : const Color(0xFF0F172A);
@@ -178,38 +173,27 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
     );
   }
 
-  // 1️⃣ TAB 1: HOME DASHBOARD
+  // 1️⃣ TAB 1: HOME
   Widget _buildHomeTab(BuildContext context) {
     return SingleChildScrollView(
       padding: const EdgeInsets.all(16),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          // 📰 Daily Today Update Ticker
           if (_appConfig['today_update']?['show'] == true) ...[
             TodayUpdateTickerWidget(updateData: _appConfig['today_update'], onTapUrl: _openWebsiteUrl),
             const SizedBox(height: 16),
           ],
-
-          // 🚀 Modern Premium Hero Header
           HeroHeaderWidget(featuredData: _appConfig['featured_mock'] ?? {}),
           const SizedBox(height: 16),
-
-          // 🎯 3-BOX STRUCTURED WEB HUB (Free PDFs, Latest Updates, Current Affairs)
           WebHubCardWidget(
             webHubSections: List<Map<String, dynamic>>.from(_homeData['web_hub'] ?? []),
             onTapUrl: _openWebsiteUrl,
           ),
-
-          // 🎯 Job Eligibility Checker Banner
           EligibilityCheckerWidget(isDarkMode: _isDarkMode, onTapUrl: _openWebsiteUrl),
           const SizedBox(height: 16),
-
-          // ⚡ Mini Mocks
           _buildMiniMocksCard(context),
           const SizedBox(height: 16),
-
-          // 📸 Telegram Question Creator Widget
           const TelegramCreatorWidget(),
         ],
       ),
@@ -242,43 +226,121 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
     );
   }
 
-  // 2️⃣ TAB 2: REVISION HUB
+  // 2️⃣ TAB 2: REVISION HUB (SMART ACCORDION)
   Widget _buildRevisionTab(BuildContext context) {
     return ListView(
       padding: const EdgeInsets.all(16),
       children: [
         const Text('📚 Chapterwise Revision Hub', style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
+        const SizedBox(height: 4),
+        const Text('Subject par click karein aur direct chapter button dabakar revision shuru karein', style: TextStyle(color: Colors.grey, fontSize: 12)),
+        const SizedBox(height: 14),
+
+        _buildExpansionSubjectCategory(
+          title: 'General Science',
+          icon: '🔬',
+          color: const Color(0xFF2563EB),
+          subSections: [
+            {'title': '⚡ Physics', 'keys': ['phy_mapping', 'physics_mapping', 'physics', 'phy']},
+            {'title': '🧬 Biology', 'keys': ['bio_mapping', 'biology_mapping', 'biology', 'bio']},
+            {'title': '🧪 Chemistry', 'keys': ['chem_mapping', 'chemistry_mapping', 'chemistry', 'chem']},
+          ],
+        ),
         const SizedBox(height: 12),
-        _buildMainCategoryTile(
-          icon: '🔬', title: 'General Science', subtitle: 'Physics • Biology • Chemistry', color: Colors.blue,
-          onTap: () => _openSubCategory(context, 'General Science', [
-            _SubCategory('⚡ Physics', Map<String, String>.from(_subjectMapping['phy_mapping'] ?? {})),
-            _SubCategory('🧬 Biology', Map<String, String>.from(_subjectMapping['bio_mapping'] ?? {})),
-            _SubCategory('🧪 Chemistry', Map<String, String>.from(_subjectMapping['chem_mapping'] ?? {})),
-          ]),
+
+        _buildExpansionSubjectCategory(
+          title: 'GK & Social Science',
+          icon: '📚',
+          color: const Color(0xFF4F46E5),
+          subSections: [
+            {'title': '📜 Indian Polity', 'keys': ['polity_mapping', 'polity', 'pol']},
+            {'title': '🏛️ History', 'keys': ['history_mapping', 'history', 'his', 'modern_history']},
+            {'title': '🌍 Geography', 'keys': ['geo_mapping', 'geography_mapping', 'geography', 'geo']},
+            {'title': '📈 Economy', 'keys': ['eco_mapping', 'economy_mapping', 'economy', 'eco']},
+          ],
         ),
-        const SizedBox(height: 10),
-        _buildMainCategoryTile(
-          icon: '📚', title: 'GK & Social Science', subtitle: 'Polity • History • Geography • Economy', color: Colors.indigo,
-          onTap: () => _openSubCategory(context, 'GK & Social Science', [
-            _SubCategory('📜 Indian Polity', Map<String, String>.from(_subjectMapping['polity_mapping'] ?? {})),
-            _SubCategory('🏛️ History', Map<String, String>.from(_subjectMapping['history_mapping'] ?? {})),
-            _SubCategory('🌍 Geography', Map<String, String>.from(_subjectMapping['geo_mapping'] ?? {})),
-            _SubCategory('📈 Economy', Map<String, String>.from(_subjectMapping['eco_mapping'] ?? {})),
-          ]),
-        ),
-        const SizedBox(height: 10),
-        _buildMainCategoryTile(
-          icon: '📰', title: 'Current Affairs 2026', subtitle: 'Monthly Bulletins & Bihar Special News', color: Colors.purple,
-          onTap: () => _openSubCategory(context, 'Current Affairs 2026', [
-            _SubCategory('📰 Monthly Sets & Bihar Special', Map<String, String>.from(_subjectMapping['current_mapping'] ?? {})),
-          ]),
+        const SizedBox(height: 12),
+
+        _buildExpansionSubjectCategory(
+          title: 'Current Affairs 2026',
+          icon: '📰',
+          color: const Color(0xFF7C3AED),
+          subSections: [
+            {'title': '📰 Monthly Sets & Bihar Special', 'keys': ['current_mapping', 'current_affairs', 'current', 'ca']},
+          ],
         ),
       ],
     );
   }
 
-  // 3️⃣ TAB 3: SECTIONAL MOCK TAB
+  Widget _buildExpansionSubjectCategory({
+    required String title,
+    required String icon,
+    required Color color,
+    required List<Map<String, dynamic>> subSections,
+  }) {
+    return Card(
+      elevation: 1.5,
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(12),
+        side: BorderSide(color: color.withOpacity(0.3), width: 1.2),
+      ),
+      child: Theme(
+        data: Theme.of(context).copyWith(dividerColor: Colors.transparent),
+        child: ExpansionTile(
+          leading: Text(icon, style: const TextStyle(fontSize: 22)),
+          title: Text(title, style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15, color: color)),
+          childrenPadding: const EdgeInsets.fromLTRB(14, 0, 14, 14),
+          expandedCrossAxisAlignment: CrossAxisAlignment.start,
+          children: subSections.map((section) {
+            final String subTitle = section['title'];
+            final List<String> possibleKeys = List<String>.from(section['keys'] ?? []);
+
+            Map<String, String> chapters = {};
+            for (String k in possibleKeys) {
+              if (_subjectMapping.containsKey(k) && _subjectMapping[k] is Map) {
+                chapters = Map<String, String>.from(_subjectMapping[k]);
+                break;
+              }
+            }
+
+            return Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                const Divider(),
+                Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 6.0),
+                  child: Text(subTitle, style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 13)),
+                ),
+                chapters.isEmpty
+                    ? const Text("No chapters mapped yet.", style: TextStyle(fontSize: 11, color: Colors.grey))
+                    : Wrap(
+                        spacing: 8,
+                        runSpacing: 8,
+                        children: chapters.entries.map((entry) {
+                          return ActionChip(
+                            elevation: 1,
+                            backgroundColor: color.withOpacity(0.08),
+                            side: BorderSide(color: color.withOpacity(0.3)),
+                            label: Text(
+                              "📖 ${entry.key}",
+                              style: TextStyle(fontSize: 12, fontWeight: FontWeight.w600, color: color),
+                            ),
+                            onPressed: () {
+                              _launchCbtMock(context, entry.key, entry.value);
+                            },
+                          );
+                        }).toList(),
+                      ),
+              ],
+            );
+          }).toList(),
+        ),
+      ),
+    );
+  }
+
+  // 3️⃣ TAB 3: SECTIONAL MOCK TAB (BULLETPROOF LOADER)
   Widget _buildSectionalTab(BuildContext context) {
     return SingleChildScrollView(
       padding: const EdgeInsets.all(16),
@@ -305,69 +367,99 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
           ),
           const SizedBox(height: 20),
 
-          if (_selectedExamPanel == 'bpsc') _buildBpscDynamicPanel(context),
-          if (_selectedExamPanel != 'bpsc') _buildGenericSetsPanel(context, _selectedExamPanel),
+          // Dynamic Panel Renderer
+          _buildDynamicSectionalSetsPanel(context),
         ],
       ),
     );
   }
 
-  Widget _buildBpscDynamicPanel(BuildContext context) {
-    final bpscInfo = _sectionalData['bpsc'] ?? {};
-    int count = bpscInfo['total_sets'] ?? 28;
-    String prefix = bpscInfo['path_prefix'] ?? 'bpsc/science/Modern History/set';
+  // 🛠️ SMART DYNAMIC SETS RENDERER
+  Widget _buildDynamicSectionalSetsPanel(BuildContext context) {
+    final dynamic panelData = _sectionalData[_selectedExamPanel];
 
-    return Card(
-      child: Padding(
-        padding: const EdgeInsets.all(14),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(bpscInfo['title'] ?? '🏛️ BPSC Core Zone', style: const TextStyle(fontWeight: FontWeight.bold, color: Color(0xFF9D174D))),
-            const SizedBox(height: 8),
-            Wrap(
-              spacing: 6, runSpacing: 6,
-              children: List.generate(count, (i) {
-                final setNum = i + 1;
-                return ActionChip(
-                  label: Text('Set ${setNum < 10 ? '0$setNum' : setNum}'),
-                  onPressed: () => _launchCbtMock(context, 'BPSC Modern History Set $setNum', '$prefix$setNum.json'),
-                );
-              }),
-            )
-          ],
+    if (panelData == null) {
+      return const Card(
+        child: Padding(
+          padding: EdgeInsets.all(20),
+          child: Center(child: Text("⚠️ Sets loading... Please check connection.", style: TextStyle(fontSize: 12, color: Colors.grey))),
         ),
-      ),
-    );
-  }
+      );
+    }
 
-  Widget _buildGenericSetsPanel(BuildContext context, String panelKey) {
-    final List list = _sectionalData[panelKey] ?? [];
-    return Card(
-      child: Padding(
-        padding: const EdgeInsets.all(14),
-        child: Column(
-          children: list.map((item) => Column(
+    // MAP FORMAT (BPSC Pattern)
+    if (panelData is Map) {
+      int count = panelData['total_sets'] ?? 10;
+      String prefix = panelData['path_prefix'] ?? 'bpsc/science/Modern History/set';
+      String title = panelData['title'] ?? '🏛️ Exam Special Zone';
+
+      return Card(
+        child: Padding(
+          padding: const EdgeInsets.all(14),
+          child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text(item['title'] ?? '', style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 13)),
-              const SizedBox(height: 6),
+              Text(title, style: const TextStyle(fontWeight: FontWeight.bold, color: Color(0xFF9D174D))),
+              const SizedBox(height: 10),
               Wrap(
-                spacing: 6,
-                children: List.generate(item['sets'] ?? 5, (i) => ActionChip(
-                  label: Text('Set 0${i + 1}'),
-                  onPressed: () => _launchCbtMock(context, "${item['title']} Set ${i + 1}", "${item['folder']}/set${i + 1}.json"),
-                )),
-              ),
-              const Divider(),
+                spacing: 8, runSpacing: 8,
+                children: List.generate(count, (i) {
+                  final setNum = i + 1;
+                  return ActionChip(
+                    backgroundColor: const Color(0xFF9D174D).withOpacity(0.08),
+                    side: const BorderSide(color: Color(0xFF9D174D)),
+                    label: Text('Set ${setNum < 10 ? '0$setNum' : setNum}', style: const TextStyle(fontWeight: FontWeight.bold, color: Color(0xFF9D174D))),
+                    onPressed: () => _launchCbtMock(context, '$title Set $setNum', '$prefix$setNum.json'),
+                  );
+                }),
+              )
             ],
-          )).toList(),
+          ),
         ),
-      ),
-    );
+      );
+    }
+
+    // LIST FORMAT (SSC / BSSC Pattern)
+    if (panelData is List) {
+      return Column(
+        children: panelData.map((item) {
+          String itemTitle = item['title'] ?? 'Sectional Mock';
+          int totalSets = item['sets'] ?? 5;
+          String folder = item['folder'] ?? 'bssc/science';
+
+          return Card(
+            margin: const EdgeInsets.only(bottom: 12),
+            child: Padding(
+              padding: const EdgeInsets.all(14),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(itemTitle, style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 14)),
+                  const SizedBox(height: 10),
+                  Wrap(
+                    spacing: 8, runSpacing: 8,
+                    children: List.generate(totalSets, (i) {
+                      final setNum = i + 1;
+                      return ActionChip(
+                        backgroundColor: const Color(0xFF2563EB).withOpacity(0.08),
+                        side: const BorderSide(color: Color(0xFF2563EB)),
+                        label: Text('Set 0$setNum', style: const TextStyle(fontWeight: FontWeight.bold, color: Color(0xFF2563EB))),
+                        onPressed: () => _launchCbtMock(context, "$itemTitle Set $setNum", "$folder/set$setNum.json"),
+                      );
+                    }),
+                  ),
+                ],
+              ),
+            ),
+          );
+        }).toList(),
+      );
+    }
+
+    return const SizedBox.shrink();
   }
 
-  // ⚙️ TAB 5: PROFILE, REALTIME STATS & LAUNCH ROADMAP
+  // ⚙️ TAB 5: PROFILE
   Widget _buildProfileTab(BuildContext context) {
     return ListView(
       padding: const EdgeInsets.all(16),
@@ -377,7 +469,6 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
         const Center(child: Text('Aspirant Aspirant', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16))),
         const SizedBox(height: 16),
 
-        // 🏅 REALTIME USER JOURNEY CARD (CACHE STORED)
         _buildUserJourneyCard(),
         const SizedBox(height: 14),
 
@@ -394,7 +485,6 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
         const Divider(),
         const SizedBox(height: 8),
 
-        // 📅 DYNAMIC LAUNCH ROADMAP CARD
         _buildLaunchRoadmapCard(),
         const SizedBox(height: 12),
         _buildTrustCard(),
@@ -404,7 +494,6 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
     );
   }
 
-  // 🏅 REALTIME USER JOURNEY STATS CARD WIDGET
   Widget _buildUserJourneyCard() {
     return FutureBuilder<Map<String, int>>(
       future: UserStatsService.getStats(),
@@ -469,7 +558,6 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
     );
   }
 
-  // 📅 DYNAMIC LAUNCH ROADMAP (READS UNLIMITED ITEMS FROM JSON)
   Widget _buildLaunchRoadmapCard() {
     final List roadmapList = _appConfig['launch_roadmap'] ?? [
       {"text": "🔥 Coming Tomorrow: BSSC Inter Level Top 100 Qs", "color": "0xFFFF4757"},
@@ -597,39 +685,4 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
       ),
     );
   }
-
-  Widget _buildMainCategoryTile({required String icon, required String title, required String subtitle, required Color color, required VoidCallback onTap}) {
-    return ListTile(
-      tileColor: color.withOpacity(0.08),
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
-      leading: Text(icon, style: const TextStyle(fontSize: 22)),
-      title: Text(title, style: const TextStyle(fontWeight: FontWeight.bold)),
-      subtitle: Text(subtitle, style: TextStyle(fontSize: 12, color: color, fontWeight: FontWeight.w600)),
-      trailing: const Icon(Icons.arrow_forward_ios_rounded, size: 16),
-      onTap: onTap,
-    );
-  }
-
-  void _openSubCategory(BuildContext context, String title, List<_SubCategory> subs) {
-    TelegramTracker.logActivity("Opened Category: $title");
-    Navigator.push(context, MaterialPageRoute(builder: (ctx) => Scaffold(
-      appBar: AppBar(title: Text(title)),
-      body: ListView(
-        padding: const EdgeInsets.all(16),
-        children: subs.map((s) => Card(
-          child: ListTile(
-            title: Text(s.title, style: const TextStyle(fontWeight: FontWeight.bold)),
-            trailing: const Icon(Icons.arrow_forward_ios_rounded, size: 16),
-            onTap: () => Navigator.push(context, MaterialPageRoute(builder: (ctx) => ChapterSelectScreen(categoryTitle: s.title, chapterMapping: s.mapping))),
-          ),
-        )).toList(),
-      ),
-    )));
-  }
-}
-
-class _SubCategory {
-  final String title;
-  final Map<String, String> mapping;
-  _SubCategory(this.title, this.mapping);
 }
