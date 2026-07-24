@@ -13,14 +13,12 @@ class MathFormattedText extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // Check if string contains LaTeX indicators
     if (!text.contains(r'\') && !text.contains(r'$')) {
       return Text(text, style: textStyle);
     }
 
-    // Split text by inline math patterns like $...$ or raw \frac
     final List<InlineSpan> spans = [];
-    final RegExp mathRegExp = RegExp(r'\$(.*?)\$|(\\frac\{.*?\}=\{.*?\}|\\frac\{.*?\}\{.*?\}|\\sqrt\{.*?\})');
+    final RegExp mathRegExp = RegExp(r'\$(.*?)\$|(\\frac\{.*?\}=\{.*?\}|\\frac\{.*?\}\{.*?\}|\\sqrt\{.*?\}|\\text\{.*?\})');
     
     int lastMatchEnd = 0;
 
