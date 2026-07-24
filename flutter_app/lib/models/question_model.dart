@@ -29,6 +29,12 @@ class Question {
     return "Question text not available.";
   }
 
+  // 🛡️ COMPATIBILITY GETTERS (Isse revision_practice_screen aur CBT screen dono bina error ke chalenge)
+  String get question => qe.isNotEmpty ? qe : (qh ?? '');
+  String get questionText => getText(false);
+  int get answer => answerIndex;
+  int get correctOptionIndex => answerIndex;
+
   factory Question.fromJson(Map<String, dynamic> json) {
     // 1. Question Text Parsing
     String mainQe = json['qe'] ?? json['q'] ?? json['question'] ?? '';
