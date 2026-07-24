@@ -225,7 +225,7 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
     );
   }
 
-  // 2️⃣ TAB 2: REVISION HUB
+  // 2️⃣ TAB 2: REVISION HUB (DIRECT DYNAMIC BUTTONS FROM SUBJECT_MAPPING.JSON)
   Widget _buildRevisionTab(BuildContext context) {
     return ListView(
       padding: const EdgeInsets.all(16),
@@ -235,37 +235,40 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
         const Text('Subject par click karein aur direct chapter button dabakar revision shuru karein', style: TextStyle(color: Colors.grey, fontSize: 12)),
         const SizedBox(height: 14),
 
+        // GENERAL SCIENCE
         _buildExpansionSubjectCategory(
           title: 'General Science',
           icon: '🔬',
           color: const Color(0xFF2563EB),
           subSections: [
-            {'title': '⚡ Physics', 'keys': ['phy_mapping', 'physics_mapping', 'physics', 'phy']},
-            {'title': '🧬 Biology', 'keys': ['bio_mapping', 'biology_mapping', 'biology', 'bio']},
-            {'title': '🧪 Chemistry', 'keys': ['chem_mapping', 'chemistry_mapping', 'chemistry', 'chem']},
+            {'title': '⚡ Physics', 'key': 'phy_mapping'},
+            {'title': '🧬 Biology', 'key': 'bio_mapping'},
+            {'title': '🧪 Chemistry', 'key': 'chem_mapping'},
           ],
         ),
         const SizedBox(height: 12),
 
+        // GK & SOCIAL SCIENCE
         _buildExpansionSubjectCategory(
           title: 'GK & Social Science',
           icon: '📚',
           color: const Color(0xFF4F46E5),
           subSections: [
-            {'title': '📜 Indian Polity', 'keys': ['polity_mapping', 'polity', 'pol']},
-            {'title': '🏛️ History', 'keys': ['history_mapping', 'history', 'his', 'modern_history']},
-            {'title': '🌍 Geography', 'keys': ['geo_mapping', 'geography_mapping', 'geography', 'geo']},
-            {'title': '📈 Economy', 'keys': ['eco_mapping', 'economy_mapping', 'economy', 'eco']},
+            {'title': '📜 Indian Polity', 'key': 'polity_mapping'},
+            {'title': '🏛️ History', 'key': 'history_mapping'},
+            {'title': '🌍 Geography', 'key': 'geo_mapping'},
+            {'title': '📈 Economy', 'key': 'eco_mapping'},
           ],
         ),
         const SizedBox(height: 12),
 
+        // CURRENT AFFAIRS
         _buildExpansionSubjectCategory(
           title: 'Current Affairs 2026',
           icon: '📰',
           color: const Color(0xFF7C3AED),
           subSections: [
-            {'title': '📰 Monthly Sets & Bihar Special', 'keys': ['current_mapping', 'current_affairs', 'current', 'ca']},
+            {'title': '📰 Monthly Sets & Bihar Special', 'key': 'current_mapping'},
           ],
         ),
       ],
@@ -293,14 +296,11 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
           expandedCrossAxisAlignment: CrossAxisAlignment.start,
           children: subSections.map((section) {
             final String subTitle = section['title'];
-            final List<String> possibleKeys = List<String>.from(section['keys'] ?? []);
+            final String mapKey = section['key'];
 
-            Map<String, String> chapters = {};
-            for (String k in possibleKeys) {
-              if (_subjectMapping.containsKey(k) && _subjectMapping[k] is Map) {
-                chapters = Map<String, String>.from(_subjectMapping[k]);
-                break;
-              }
+            Map<String, dynamic> rawChapters = {};
+            if (_subjectMapping.containsKey(mapKey) && _subjectMapping[mapKey] is Map) {
+              rawChapters = Map<String, dynamic>.from(_subjectMapping[mapKey]);
             }
 
             return Column(
@@ -311,12 +311,13 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
                   padding: const EdgeInsets.symmetric(vertical: 6.0),
                   child: Text(subTitle, style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 13)),
                 ),
-                chapters.isEmpty
+                rawChapters.isEmpty
                     ? const Text("No chapters mapped yet.", style: TextStyle(fontSize: 11, color: Colors.grey))
                     : Wrap(
                         spacing: 8,
                         runSpacing: 8,
-                        children: chapters.entries.map((entry) {
+                        children: rawChapters.entries.map((entry) {
+                          String path = entry.value.toString();
                           return ActionChip(
                             elevation: 1,
                             backgroundColor: color.withOpacity(0.08),
@@ -326,7 +327,7 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
                               style: TextStyle(fontSize: 12, fontWeight: FontWeight.w600, color: color),
                             ),
                             onPressed: () {
-                              _launchCbtMock(context, entry.key, entry.value);
+                              _launchCbtMock(context, entry.key, path);
                             },
                           );
                         }).toList(),
@@ -643,8 +644,12 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
   void _launchCbtMock(BuildContext context, String title, String path) async {
     TelegramTracker.logActivity("Started Mock Test: $title");
     showDialog(context: context, barrierDismissible: false, builder: (ctx) => const Center(child: CircularProgressIndicator()));
+    
+    // Auto-formatting url path for GitHub raw content
+    String finalPath = path.startsWith("http") ? path : "https://raw.githubusercontent.com/zxcty54/quiz/main/$path";
+    
     try {
-      final res = await http.get(Uri.parse("https://raw.githubusercontent.com/zxcty54/quiz/main/$path"));
+      final res = await http.get(Uri.parse(finalPath));
       if (context.mounted) Navigator.pop(context);
       if (res.statusCode == 200) {
         List body = jsonDecode(res.body);
