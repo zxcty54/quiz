@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../models/question_model.dart';
 import '../widgets/latex_text.dart';
 import '../widgets/cbt_widgets.dart'; // 🚀 REUSABLE WIDGETS IMPORT
+import '../services/telegram_tracker.dart';
 
 class SectionalCbtScreen extends StatefulWidget {
   final String testTitle;
@@ -76,17 +77,27 @@ class _SectionalCbtScreenState extends State<SectionalCbtScreen> {
   }
 
   void _submitExam() {
-  _examTimer?.cancel();
-  _qTimer?.cancel();
-  setState(() => _isExamSubmitted = true);
+    _examTimer?.cancel();
+    _qTimer?.cancel();
+    setState(() => _isExamSubmitted = true);
 
-  // 🤫 Test score local tracker me save hoga (Telegram par NO MESSAGE right now)
-  TelegramTracker.recordTestCompletion(
-    widget.testTitle,
-    "Sahi: $correct, Galat: $wrong / Total: ${widget.questions.length}",
-  );
-}
+    // Calculate score count for exit log
+    int correctCount = 0;
+    int wrongCount = 0;
+    _userAnswers.forEach((qIdx, userAns) {
+      if (userAns == widget.questions[qIdx].answerIndex) {
+        correctCount++;
+      } else {
+        wrongCount++;
+      }
+    });
 
+    // 🤫 Save local summary for exit alert
+    TelegramTracker.recordTestCompletion(
+      widget.testTitle,
+      "Sahi: $correctCount, Galat: $wrongCount / Total: ${widget.questions.length}",
+    );
+  }
   String _formatTime(int totalSec) {
     int m = totalSec ~/ 60;
     int s = totalSec % 60;
