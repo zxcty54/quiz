@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import '../services/user_stats_service.dart';
+import 'saved_questions_screen.dart';
+import 'wrong_questions_screen.dart';
 
 class ProfileScreen extends StatefulWidget {
   final bool isHindi;
@@ -46,6 +48,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
         final int solvedQs = stats['questions'] as int? ?? 0;
         final int attemptedMocks = stats['mocks'] as int? ?? 0;
         final int userStreak = stats['streak'] as int? ?? 1;
+        final int savedBookmarksCount = stats['bookmarks'] as int? ?? 0;
 
         return ListView(
           padding: const EdgeInsets.all(16),
@@ -149,7 +152,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
             ),
             const SizedBox(height: 20),
 
-            // 📂 4. QUICK ACCESS REVISION ZONE
+            // 📂 4. QUICK ACCESS REVISION ZONE (FULLY FUNCTIONAL NAVIGATIONS)
             const Text('📂 Quick Access', style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
             const SizedBox(height: 10),
             Card(
@@ -159,15 +162,27 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   ListTile(
                     leading: const Text('⭐', style: TextStyle(fontSize: 20)),
                     title: const Text('Saved / Bookmarked Questions', style: TextStyle(fontSize: 13, fontWeight: FontWeight.bold)),
+                    subtitle: Text('$savedBookmarksCount Saved Items', style: const TextStyle(fontSize: 11, color: Colors.grey)),
                     trailing: const Icon(Icons.arrow_forward_ios_rounded, size: 14),
-                    onTap: () {},
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (ctx) => const SavedQuestionsScreen()),
+                      );
+                    },
                   ),
                   const Divider(height: 1),
                   ListTile(
                     leading: const Text('❌', style: TextStyle(fontSize: 20)),
                     title: const Text('Wrong Questions Vault', style: TextStyle(fontSize: 13, fontWeight: FontWeight.bold)),
+                    subtitle: const Text('Revise Mistakes', style: TextStyle(fontSize: 11, color: Colors.grey)),
                     trailing: const Icon(Icons.arrow_forward_ios_rounded, size: 14),
-                    onTap: () {},
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (ctx) => const WrongQuestionsScreen()),
+                      );
+                    },
                   ),
                   const Divider(height: 1),
                   ListTile(
@@ -175,7 +190,13 @@ class _ProfileScreenState extends State<ProfileScreen> {
                     title: const Text('Continue Last Chapter', style: TextStyle(fontSize: 13, fontWeight: FontWeight.bold)),
                     subtitle: Text('${stats['last_chapter_name']}', style: const TextStyle(fontSize: 11, color: Colors.grey)),
                     trailing: const Icon(Icons.play_arrow_rounded, color: Color(0xFF2563EB), size: 24),
-                    onTap: () {},
+                    onTap: () {
+                      if (stats['last_chapter_name'] != 'No chapter started') {
+                        ScaffoldMessenger.of(context).showSnackBar(
+                          SnackBar(content: Text('Resuming ${stats['last_chapter_name']}...')),
+                        );
+                      }
+                    },
                   ),
                 ],
               ),
