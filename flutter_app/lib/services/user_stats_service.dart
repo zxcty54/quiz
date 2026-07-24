@@ -31,13 +31,20 @@ class UserStatsService {
     await prefs.setInt(_keyQuestions, currentQuestions + questionsAttempted);
   }
 
-  // 3️⃣ Update Bookmarks Count
+  // 3️⃣ Increment Single/Multiple Questions (Fixes Member Not Found Error)
+  static Future<void> incrementQuestions(int count) async {
+    final prefs = await SharedPreferences.getInstance();
+    int currentQuestions = prefs.getInt(_keyQuestions) ?? 0;
+    await prefs.setInt(_keyQuestions, currentQuestions + count);
+  }
+
+  // 4️⃣ Update Bookmarks Count
   static Future<void> updateBookmarkCount(int count) async {
     final prefs = await SharedPreferences.getInstance();
     await prefs.setInt(_keyBookmarks, count);
   }
 
-  // 4️⃣ Smart Daily Study Streak Calculator
+  // 5️⃣ Smart Daily Study Streak Calculator
   static Future<void> updateStreak() async {
     final prefs = await SharedPreferences.getInstance();
     final String today = DateTime.now().toIso8601String().substring(0, 10);
