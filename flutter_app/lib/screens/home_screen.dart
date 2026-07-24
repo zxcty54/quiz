@@ -7,7 +7,8 @@ import 'package:url_launcher/url_launcher.dart';
 
 import '../models/question_model.dart';
 import '../services/telegram_tracker.dart';
-import '../widgets/home_widgets.dart'; // 🚀 Import Reusable Widgets
+import '../services/user_stats_service.dart'; // 🚀 Real-time Local Tracker Import
+import '../widgets/home_widgets.dart'; // 🚀 Custom Reusable Widgets
 import 'chapter_select_screen.dart';
 import 'sectional_cbt_screen.dart';
 
@@ -24,7 +25,7 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
   bool _isHindi = true;
   String _selectedExamPanel = 'bpsc';
 
-  // 📂 Multi-JSON Data
+  // 📂 Multi-JSON Data Maps
   Map<String, dynamic> _appConfig = {};
   Map<String, dynamic> _homeData = {};
   Map<String, dynamic> _subjectMapping = {};
@@ -34,7 +35,7 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
   @override
   void initState() {
     super.initState();
-    // 👁️ Add App Exit Listener
+    // 👁️ App Close / Exit Observer Add
     WidgetsBinding.instance.addObserver(this);
     TelegramTracker.initSession();
     _loadAllConfigs();
@@ -46,7 +47,7 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
     super.dispose();
   }
 
-  // 🚪 SIRF APP CLOSE / MINIMIZE HONE PAR HI TELEGRAM ALERT JAYEGA
+  // 🚪 APP EXIT DETECTOR TRIGGER (SIRF APP BAND/MINIMIZE HONE PAR HI TELEGRAM ALERT JAYEGA)
   @override
   void didChangeAppLifecycleState(AppLifecycleState state) {
     if (state == AppLifecycleState.paused || state == AppLifecycleState.detached) {
@@ -54,7 +55,7 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
     }
   }
 
-  // 🚀 Load Configs in Parallel
+  // 🚀 Load All 4 Config Files in Parallel
   Future<void> _loadAllConfigs() async {
     try {
       final results = await Future.wait([
@@ -87,6 +88,7 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
       );
     }
 
+    // 🛠️ Maintenance Shield
     if (_appConfig['maintenance']?['enabled'] == true) {
       return Scaffold(
         body: Center(
@@ -109,6 +111,7 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
       );
     }
 
+    // 🌙 Theme Palette
     final bgColor = _isDarkMode ? const Color(0xFF0F172A) : const Color(0xFFF8FAFC);
     final cardColor = _isDarkMode ? const Color(0xFF1E293B) : Colors.white;
     final textColor = _isDarkMode ? Colors.white : const Color(0xFF0F172A);
@@ -182,17 +185,17 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          // 📰 Daily Update Ticker
+          // 📰 Daily Today Update Ticker
           if (_appConfig['today_update']?['show'] == true) ...[
             TodayUpdateTickerWidget(updateData: _appConfig['today_update'], onTapUrl: _openWebsiteUrl),
             const SizedBox(height: 16),
           ],
 
-          // 🚀 Hero Banner
+          // 🚀 Modern Premium Hero Header
           HeroHeaderWidget(featuredData: _appConfig['featured_mock'] ?? {}),
           const SizedBox(height: 16),
 
-          // 🎯 FIXED: 3-BOX STRUCTURED WEB HUB (webHubSections parameter)
+          // 🎯 3-BOX STRUCTURED WEB HUB (Free PDFs, Latest Updates, Current Affairs)
           WebHubCardWidget(
             webHubSections: List<Map<String, dynamic>>.from(_homeData['web_hub'] ?? []),
             onTapUrl: _openWebsiteUrl,
@@ -206,7 +209,7 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
           _buildMiniMocksCard(context),
           const SizedBox(height: 16),
 
-          // 📸 Telegram Creator Widget
+          // 📸 Telegram Question Creator Widget
           const TelegramCreatorWidget(),
         ],
       ),
@@ -364,13 +367,20 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
     );
   }
 
-  // ⚙️ TAB 5: PROFILE & SUPPORT
+  // ⚙️ TAB 5: PROFILE, REALTIME STATS & LAUNCH ROADMAP
   Widget _buildProfileTab(BuildContext context) {
     return ListView(
       padding: const EdgeInsets.all(16),
       children: [
         const Center(child: CircleAvatar(radius: 35, child: Icon(Icons.person, size: 40))),
-        const SizedBox(height: 12),
+        const SizedBox(height: 8),
+        const Center(child: Text('Aspirant Aspirant', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16))),
+        const SizedBox(height: 16),
+
+        // 🏅 REALTIME USER JOURNEY CARD (CACHE STORED)
+        _buildUserJourneyCard(),
+        const SizedBox(height: 14),
+
         SwitchListTile(
           title: const Text('Bilingual (Hindi / Eng)'),
           value: _isHindi,
@@ -384,6 +394,7 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
         const Divider(),
         const SizedBox(height: 8),
 
+        // 📅 DYNAMIC LAUNCH ROADMAP CARD
         _buildLaunchRoadmapCard(),
         const SizedBox(height: 12),
         _buildTrustCard(),
@@ -393,18 +404,94 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
     );
   }
 
+  // 🏅 REALTIME USER JOURNEY STATS CARD WIDGET
+  Widget _buildUserJourneyCard() {
+    return FutureBuilder<Map<String, int>>(
+      future: UserStatsService.getStats(),
+      builder: (context, snapshot) {
+        final stats = snapshot.data ?? {'questions': 0, 'mocks': 0, 'bookmarks': 0, 'streak': 1};
+
+        return Card(
+          elevation: 2,
+          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(14)),
+          child: Padding(
+            padding: const EdgeInsets.all(16),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                const Row(
+                  children: [
+                    Text('🏅', style: TextStyle(fontSize: 18)),
+                    SizedBox(width: 8),
+                    Text('Your Journey', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),
+                  ],
+                ),
+                const SizedBox(height: 14),
+                GridView.count(
+                  shrinkWrap: true,
+                  physics: const NeverScrollableScrollPhysics(),
+                  crossAxisCount: 2,
+                  childAspectRatio: 2.2,
+                  crossAxisSpacing: 10,
+                  mainAxisSpacing: 10,
+                  children: [
+                    _buildStatItem("Questions Solved", "${stats['questions']}", const Color(0xFF2563EB)),
+                    _buildStatItem("Mocks Attempted", "${stats['mocks']}", const Color(0xFFD97706)),
+                    _buildStatItem("Bookmarks", "${stats['bookmarks']}", const Color(0xFF7C3AED)),
+                    _buildStatItem("Study Streak", "${stats['streak']} Days", const Color(0xFF16A34A)),
+                  ],
+                ),
+              ],
+            ),
+          ),
+        );
+      },
+    );
+  }
+
+  Widget _buildStatItem(String label, String value, Color color) {
+    return Container(
+      padding: const EdgeInsets.all(10),
+      decoration: BoxDecoration(
+        color: color.withOpacity(0.08),
+        borderRadius: BorderRadius.circular(10),
+        border: Border.all(color: color.withOpacity(0.2)),
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Text(label, style: const TextStyle(fontSize: 11, color: Colors.grey, fontWeight: FontWeight.w600)),
+          const SizedBox(height: 2),
+          Text(value, style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: color)),
+        ],
+      ),
+    );
+  }
+
+  // 📅 DYNAMIC LAUNCH ROADMAP (READS UNLIMITED ITEMS FROM JSON)
   Widget _buildLaunchRoadmapCard() {
+    final List roadmapList = _appConfig['launch_roadmap'] ?? [
+      {"text": "🔥 Coming Tomorrow: BSSC Inter Level Top 100 Qs", "color": "0xFFFF4757"},
+      {"text": "✅ Just Added: Current Affairs Bulletin", "color": "0xFF059669"}
+    ];
+
     return Card(
       child: Padding(
         padding: const EdgeInsets.all(14),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
-          children: const [
-            Text('📅 Launch Roadmap & Live Updates', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 14)),
-            SizedBox(height: 8),
-            Text('🔥 Coming Tomorrow: BSSC Inter Level Top 100 Qs', style: TextStyle(fontSize: 12, color: Color(0xFFFF4757), fontWeight: FontWeight.w600)),
-            SizedBox(height: 4),
-            Text('✅ Just Added: Current Affairs Bulletin', style: TextStyle(fontSize: 12, color: Color(0xFF059669))),
+          children: [
+            const Text('📅 Launch Roadmap & Live Updates', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 14)),
+            const SizedBox(height: 10),
+            ...roadmapList.map((item) {
+              final String text = item['text'] ?? '';
+              final Color color = Color(int.parse(item['color'] ?? '0xFF2563EB'));
+              return Padding(
+                padding: const EdgeInsets.symmetric(vertical: 3.0),
+                child: Text(text, style: TextStyle(fontSize: 12, color: color, fontWeight: FontWeight.w600)),
+              );
+            }),
           ],
         ),
       ),
