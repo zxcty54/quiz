@@ -55,7 +55,23 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
         setState(() {
           _isAnswered = true;
         });
-        UserStatsService.incrementQuestions(1);
+
+        // ⏱️ Timeout counts as incorrect/unattempted
+        final currentQ = widget.questions[_currentIndex];
+        UserStatsService.recordQuestionAttempt(
+          isCorrect: false,
+          chapterName: widget.testTitle,
+          chapterPath: '',
+          wrongQuestionJson: {
+            'qe': currentQ.qe,
+            'qh': currentQ.qh,
+            'se': currentQ.se,
+            'sh': currentQ.sh,
+            'options': currentQ.options,
+            'answerIndex': currentQ.answerIndex,
+            'explanation': currentQ.explanation,
+          },
+        );
       }
     });
   }
@@ -63,11 +79,32 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
   void _onOptionTap(int index) {
     if (_isAnswered) return;
     _timer?.cancel();
+
+    final currentQ = widget.questions[_currentIndex];
+    final bool isCorrect = index == currentQ.answerIndex;
+
     setState(() {
       _selectedOptionIndex = index;
       _isAnswered = true;
     });
-    UserStatsService.incrementQuestions(1);
+
+    // 📊 Record detailed question attempt for Profile Stats
+    UserStatsService.recordQuestionAttempt(
+      isCorrect: isCorrect,
+      chapterName: widget.testTitle,
+      chapterPath: '',
+      wrongQuestionJson: isCorrect
+          ? null
+          : {
+              'qe': currentQ.qe,
+              'qh': currentQ.qh,
+              'se': currentQ.se,
+              'sh': currentQ.sh,
+              'options': currentQ.options,
+              'answerIndex': currentQ.answerIndex,
+              'explanation': currentQ.explanation,
+            },
+    );
   }
 
   void _goToNextQuestion() {
