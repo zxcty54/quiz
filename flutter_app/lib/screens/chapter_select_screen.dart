@@ -40,7 +40,7 @@ class ChapterSelectScreen extends StatelessWidget {
                         context,
                         MaterialPageRoute(
                           builder: (ctx) => QuizScreen(
-                            title: chapterName, // 🟢 FIXED: 'chapterTitle' changed to 'title'
+                            title: chapterName, // 🟢 MATCHED: title parameter
                             jsonPath: jsonPath,
                           ),
                         ),
