@@ -21,17 +21,31 @@ class ProfileScreen extends StatefulWidget {
 }
 
 class _ProfileScreenState extends State<ProfileScreen> {
+  final List<String> _weekDays = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
+
   @override
   Widget build(BuildContext context) {
-    return FutureBuilder<Map<String, int>>(
+    return FutureBuilder<Map<String, dynamic>>(
       future: UserStatsService.getStats(),
       builder: (context, snapshot) {
         final stats = snapshot.data ?? {
-          'questions': 2450,
-          'mocks': 34,
-          'bookmarks': 12,
-          'streak': 7
+          'questions': 0,
+          'mocks': 0,
+          'bookmarks': 0,
+          'streak': 1,
+          'accuracy': 100,
+          'last_chapter_name': 'No chapter started',
+          'last_chapter_path': '',
+          'weekly_progress': [0, 0, 0, 0, 0, 0, 0]
         };
+
+        final List<int> weeklyCounts = List<int>.from(stats['weekly_progress'] ?? [0, 0, 0, 0, 0, 0, 0]);
+        int maxCount = weeklyCounts.reduce((a, b) => a > b ? a : b);
+        if (maxCount == 0) maxCount = 1; // Prevent division by zero
+
+        final int solvedQs = stats['questions'] as int? ?? 0;
+        final int attemptedMocks = stats['mocks'] as int? ?? 0;
+        final int userStreak = stats['streak'] as int? ?? 1;
 
         return ListView(
           padding: const EdgeInsets.all(16),
@@ -70,12 +84,15 @@ class _ProfileScreenState extends State<ProfileScreen> {
                               Container(
                                 padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 2),
                                 decoration: BoxDecoration(color: const Color(0xFFFEF3C7), borderRadius: BorderRadius.circular(12)),
-                                child: Text('🔥 ${stats['streak']} Day Streak', style: const TextStyle(fontSize: 10, fontWeight: FontWeight.bold, color: Color(0xFFD97706))),
+                                child: Text('🔥 $userStreak Day Streak', style: const TextStyle(fontSize: 10, fontWeight: FontWeight.bold, color: Color(0xFFD97706))),
                               ),
                               Container(
                                 padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 2),
                                 decoration: BoxDecoration(color: const Color(0xFFE0E7FF), borderRadius: BorderRadius.circular(12)),
-                                child: const Text('🏅 Level 4 (Explorer)', style: TextStyle(fontSize: 10, fontWeight: FontWeight.bold, color: Color(0xFF4F46E5))),
+                                child: Text(
+                                  '🏅 Level ${_calculateLevel(solvedQs)}',
+                                  style: const TextStyle(fontSize: 10, fontWeight: FontWeight.bold, color: Color(0xFF4F46E5)),
+                                ),
                               ),
                             ],
                           )
@@ -88,7 +105,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
             ),
             const SizedBox(height: 18),
 
-            // 📊 2. LEARNING DASHBOARD
+            // 📊 2. LEARNING DASHBOARD (LIVE STATS)
             const Text('📊 Learning Dashboard', style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
             const SizedBox(height: 10),
             GridView.count(
@@ -99,15 +116,15 @@ class _ProfileScreenState extends State<ProfileScreen> {
               crossAxisSpacing: 10,
               mainAxisSpacing: 10,
               children: [
-                _buildProfileStatTile('Questions Solved', '${stats['questions']}', '📝', const Color(0xFF2563EB)),
-                _buildProfileStatTile('Mocks Attempted', '${stats['mocks']}', '🎯', const Color(0xFFD97706)),
-                _buildProfileStatTile('Overall Accuracy', '78%', '⚡', const Color(0xFF16A34A)),
-                _buildProfileStatTile('Study Time', '42 Hrs', '⏱️', const Color(0xFF7C3AED)),
+                _buildProfileStatTile('Questions Solved', '$solvedQs', '📝', const Color(0xFF2563EB)),
+                _buildProfileStatTile('Mocks Attempted', '$attemptedMocks', '🎯', const Color(0xFFD97706)),
+                _buildProfileStatTile('Overall Accuracy', '${stats['accuracy']}%', '⚡', const Color(0xFF16A34A)),
+                _buildProfileStatTile('Study Time', 'Daily Active', '⏱️', const Color(0xFF7C3AED)),
               ],
             ),
             const SizedBox(height: 20),
 
-            // 📈 3. RECENT PROGRESS (WEEKLY BAR GRAPH)
+            // 📈 3. RECENT PROGRESS (LIVE DYNAMIC BAR CHART)
             const Text('📈 Recent Progress (Last 7 Days)', style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
             const SizedBox(height: 10),
             Card(
@@ -118,15 +135,15 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   crossAxisAlignment: CrossAxisAlignment.end,
-                  children: [
-                    _buildBar('Mon', 0.5, const Color(0xFF2563EB)),
-                    _buildBar('Tue', 0.8, const Color(0xFF2563EB)),
-                    _buildBar('Wed', 0.3, const Color(0xFF2563EB)),
-                    _buildBar('Thu', 0.9, const Color(0xFF2563EB)),
-                    _buildBar('Fri', 0.6, const Color(0xFF2563EB)),
-                    _buildBar('Sat', 0.7, const Color(0xFF10B981)),
-                    _buildBar('Sun', 0.4, Colors.grey.shade400),
-                  ],
+                  children: List.generate(7, (index) {
+                    double heightFactor = weeklyCounts[index] / maxCount;
+                    if (heightFactor < 0.1 && weeklyCounts[index] > 0) heightFactor = 0.15;
+                    
+                    DateTime dayDate = DateTime.now().subtract(Duration(days: 6 - index));
+                    String dayLabel = _weekDays[dayDate.weekday - 1];
+
+                    return _buildBar(dayLabel, heightFactor, weeklyCounts[index] > 0 ? const Color(0xFF2563EB) : Colors.grey.shade300);
+                  }),
                 ),
               ),
             ),
@@ -156,7 +173,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   ListTile(
                     leading: const Text('📖', style: TextStyle(fontSize: 20)),
                     title: const Text('Continue Last Chapter', style: TextStyle(fontSize: 13, fontWeight: FontWeight.bold)),
-                    subtitle: const Text('Cell Biology (Set 01)', style: TextStyle(fontSize: 11, color: Colors.grey)),
+                    subtitle: Text('${stats['last_chapter_name']}', style: const TextStyle(fontSize: 11, color: Colors.grey)),
                     trailing: const Icon(Icons.play_arrow_rounded, color: Color(0xFF2563EB), size: 24),
                     onTap: () {},
                   ),
@@ -165,18 +182,38 @@ class _ProfileScreenState extends State<ProfileScreen> {
             ),
             const SizedBox(height: 20),
 
-            // 🏆 5. ACHIEVEMENTS BADGES
+            // 🏆 5. DYNAMIC ACHIEVEMENTS BADGES
             const Text('🏆 Achievements', style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
             const SizedBox(height: 10),
             SizedBox(
-              height: 85,
+              height: 90,
               child: ListView(
                 scrollDirection: Axis.horizontal,
                 children: [
-                  _buildBadgeItem('🔥', '7 Day Streak', Colors.amber),
-                  _buildBadgeItem('🏅', '100 Qs Club', Colors.blue),
-                  _buildBadgeItem('📚', 'Bio Explorer', Colors.green),
-                  _buildBadgeItem('⚡', 'First Mock Done', Colors.purple),
+                  _buildDynamicBadge(
+                    emoji: '🔥',
+                    title: '$userStreak Day Streak',
+                    isUnlocked: userStreak >= 3,
+                    activeColor: Colors.amber,
+                  ),
+                  _buildDynamicBadge(
+                    emoji: '🏅',
+                    title: '100 Qs Club',
+                    isUnlocked: solvedQs >= 100,
+                    activeColor: Colors.blue,
+                  ),
+                  _buildDynamicBadge(
+                    emoji: '⚡',
+                    title: 'First Mock',
+                    isUnlocked: attemptedMocks >= 1,
+                    activeColor: Colors.purple,
+                  ),
+                  _buildDynamicBadge(
+                    emoji: '📚',
+                    title: 'Master Scholar',
+                    isUnlocked: solvedQs >= 500,
+                    activeColor: Colors.green,
+                  ),
                 ],
               ),
             ),
@@ -213,6 +250,15 @@ class _ProfileScreenState extends State<ProfileScreen> {
     );
   }
 
+  // 💡 HELPER LOGIC FOR USER LEVEL
+  String _calculateLevel(int totalQs) {
+    if (totalQs < 50) return '1 (Beginner)';
+    if (totalQs < 200) return '2 (Learner)';
+    if (totalQs < 500) return '3 (Explorer)';
+    if (totalQs < 1000) return '4 (Scholar)';
+    return '5 (Master)';
+  }
+
   // WIDGET HELPERS
   Widget _buildProfileStatTile(String label, String value, String emoji, Color color) {
     return Container(
@@ -246,7 +292,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
       mainAxisAlignment: MainAxisAlignment.end,
       children: [
         Container(
-          height: 60 * heightFactor,
+          height: 60 * (heightFactor == 0 ? 0.05 : heightFactor),
           width: 14,
           decoration: BoxDecoration(
             color: color,
@@ -259,22 +305,56 @@ class _ProfileScreenState extends State<ProfileScreen> {
     );
   }
 
-  Widget _buildBadgeItem(String emoji, String title, Color color) {
+  Widget _buildDynamicBadge({
+    required String emoji,
+    required String title,
+    required bool isUnlocked,
+    required Color activeColor,
+  }) {
+    final Color bgColor = isUnlocked ? activeColor.withOpacity(0.12) : Colors.grey.shade100;
+    final Color borderColor = isUnlocked ? activeColor : Colors.grey.shade300;
+    final Color textColor = isUnlocked ? activeColor : Colors.grey.shade500;
+
     return Container(
       width: 95,
       margin: const EdgeInsets.only(right: 10),
       padding: const EdgeInsets.all(10),
       decoration: BoxDecoration(
-        color: color.withOpacity(0.1),
-        borderRadius: BorderRadius.circular(12),
-        border: Border.all(color: color.withOpacity(0.3)),
+        color: bgColor,
+        borderRadius: BorderRadius.circular(14),
+        border: Border.all(color: borderColor, width: isUnlocked ? 1.5 : 1),
       ),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Text(emoji, style: const TextStyle(fontSize: 22)),
-          const SizedBox(height: 4),
-          Text(title, textAlign: TextAlign.center, style: TextStyle(fontSize: 9.5, fontWeight: FontWeight.bold, color: color)),
+          Stack(
+            alignment: Alignment.center,
+            children: [
+              Text(
+                emoji,
+                style: TextStyle(
+                  fontSize: 22,
+                  color: isUnlocked ? null : Colors.grey.shade400,
+                ),
+              ),
+              if (!isUnlocked)
+                const Positioned(
+                  right: 0,
+                  bottom: 0,
+                  child: Text('🔒', style: TextStyle(fontSize: 10)),
+                ),
+            ],
+          ),
+          const SizedBox(height: 6),
+          Text(
+            title,
+            textAlign: TextAlign.center,
+            style: TextStyle(
+              fontSize: 9.5,
+              fontWeight: FontWeight.bold,
+              color: textColor,
+            ),
+          ),
         ],
       ),
     );
