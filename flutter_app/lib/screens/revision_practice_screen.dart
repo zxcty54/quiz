@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 import '../models/question_model.dart';
+import '../services/user_stats_service.dart';
 
 class RevisionPracticeScreen extends StatefulWidget {
   final String testTitle;
@@ -20,6 +21,7 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
   int _currentIndex = 0;
   int? _selectedOptionIndex;
   bool _isAnswered = false;
+  bool _isHindi = false; // Language toggle state
   
   Timer? _timer;
   int _timeLeft = 15;
@@ -52,6 +54,7 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
         setState(() {
           _isAnswered = true;
         });
+        UserStatsService.incrementQuestions(1);
       }
     });
   }
@@ -63,6 +66,7 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
       _selectedOptionIndex = index;
       _isAnswered = true;
     });
+    UserStatsService.incrementQuestions(1);
   }
 
   void _goToNextQuestion() {
@@ -114,14 +118,31 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
   @override
   Widget build(BuildContext context) {
     final currentQ = widget.questions[_currentIndex];
+    final List<String>? statements = _isHindi ? currentQ.sh : currentQ.se;
 
     return Scaffold(
       appBar: AppBar(
         title: Text(widget.testTitle, style: const TextStyle(fontSize: 15, fontWeight: FontWeight.bold)),
         elevation: 0,
         actions: [
+          // 🌐 Language Switcher (HI / EN)
+          IconButton(
+            icon: Container(
+              padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
+              decoration: BoxDecoration(
+                border: Border.all(color: const Color(0xFF2563EB)),
+                borderRadius: BorderRadius.circular(6),
+              ),
+              child: Text(
+                _isHindi ? 'हिंदी' : 'ENG',
+                style: const TextStyle(fontSize: 11, fontWeight: FontWeight.bold, color: Color(0xFF2563EB)),
+              ),
+            ),
+            onPressed: () => setState(() => _isHindi = !_isHindi),
+          ),
+          // ⏱️ Timer Badge
           Container(
-            margin: const EdgeInsets.only(right: 16),
+            margin: const EdgeInsets.only(right: 12),
             padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
             decoration: BoxDecoration(
               color: _timeLeft <= 5 ? Colors.red.shade100 : const Color(0xFFEFF6FF),
@@ -176,22 +197,37 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
             ),
             const SizedBox(height: 18),
 
+            // Question Card (with Statements Support)
             Card(
               elevation: 1,
               shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
               child: Padding(
                 padding: const EdgeInsets.all(16.0),
-                child: Text(
-                  currentQ.questionText,
-                  style: const TextStyle(fontSize: 15.5, fontWeight: FontWeight.w600, height: 1.4),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      currentQ.getText(_isHindi),
+                      style: const TextStyle(fontSize: 15.5, fontWeight: FontWeight.w600, height: 1.4),
+                    ),
+                    if (statements != null && statements.isNotEmpty) ...[
+                      const SizedBox(height: 10),
+                      ...statements.map((stmt) => Padding(
+                        padding: const EdgeInsets.only(bottom: 4),
+                        style: TextStyle(fontSize: 13.5, color: Colors.grey.shade800, height: 1.3),
+                        child: Text("• $stmt"),
+                      )),
+                    ],
+                  ],
                 ),
               ),
             ),
             const SizedBox(height: 16),
 
+            // Options List
             ...List.generate(currentQ.options.length, (index) {
               final optionText = currentQ.options[index];
-              final isCorrect = index == currentQ.correctOptionIndex;
+              final isCorrect = index == currentQ.answerIndex;
               final isSelected = index == _selectedOptionIndex;
 
               Color borderColor = Colors.grey.shade300;
@@ -259,6 +295,7 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
               );
             }),
 
+            // Solution Box
             if (_isAnswered) ...[
               const SizedBox(height: 14),
               Container(
