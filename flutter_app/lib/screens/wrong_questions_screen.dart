@@ -57,6 +57,26 @@ class _WrongQuestionsScreenState extends State<WrongQuestionsScreen> {
     }
   }
 
+  // 🎯 SMART DETECTION FOR SECTIONAL MOCK ("Set 1", "Set 2", "Set-1", etc.)
+  bool _isMockQuestion(Map<String, dynamic> qJson) {
+    String chapter = (qJson['chapterName'] ?? qJson['chapter'] ?? '').toString().toLowerCase().trim();
+    String source = (qJson['sourceType'] ?? qJson['source'] ?? '').toString().toLowerCase().trim();
+    bool isMockFlag = qJson['isMock'] == true || qJson['isSectional'] == true;
+
+    // Detect patterns like "Set 1", "Set 2", "Set-01", etc.
+    bool isSetPattern = RegExp(r'\bset[\s\-_]*\d+').hasMatch(chapter);
+
+    return isMockFlag ||
+        isSetPattern ||
+        chapter.contains('set') ||
+        chapter.contains('mock') ||
+        chapter.contains('sectional') ||
+        chapter.contains('cbt') ||
+        source.contains('mock') ||
+        source.contains('sectional') ||
+        chapter.isEmpty;
+  }
+
   // ⚡ ONE-CLICK RE-QUIZ ENGINE DIALOG (Resume Fix Mode)
   void _startReQuiz(List<Map<String, dynamic>> wrongList) {
     if (wrongList.isEmpty) return;
@@ -444,12 +464,13 @@ class _WrongQuestionsScreenState extends State<WrongQuestionsScreen> {
             );
           }
 
+          // Dynamic Smart Filter Logic (Supports "Set 1", "Set 2", "Set-01", etc.)
           final filteredList = rawList.where((item) {
-            String chapter = (item['chapterName'] ?? item['chapter'] ?? '').toString();
+            bool isMock = _isMockQuestion(item);
             if (_selectedFilter == 'REVISION') {
-              return chapter.isNotEmpty && !chapter.toLowerCase().contains('mock');
+              return !isMock;
             } else if (_selectedFilter == 'MOCK') {
-              return chapter.toLowerCase().contains('mock') || chapter.isEmpty;
+              return isMock;
             }
             return true;
           }).toList();
@@ -561,7 +582,7 @@ class _WrongQuestionsScreenState extends State<WrongQuestionsScreen> {
                 final List<String>? statements = _isHindi ? q.sh : q.se;
 
                 String sourceName = qJson['chapterName'] ?? qJson['chapter'] ?? 'Sectional Mock';
-                bool isMock = sourceName.toLowerCase().contains('mock') || sourceName.isEmpty;
+                bool isMock = _isMockQuestion(qJson);
                 String dateStr = qJson['dateAdded'] ?? 'Recently';
                 int masteryStreak = qJson['masteryStreak'] ?? 0;
                 String savedTag = qJson['errorTag'] ?? '';
@@ -581,45 +602,53 @@ class _WrongQuestionsScreenState extends State<WrongQuestionsScreen> {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
+                        // 🟢 OVERFLOW-PROOF HEADER
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                            Row(
-                              children: [
-                                Container(
-                                  padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
-                                  decoration: BoxDecoration(
-                                    color: isMock ? const Color(0xFFFEF3C7) : const Color(0xFFE0E7FF),
-                                    borderRadius: BorderRadius.circular(6),
-                                  ),
-                                  child: Text(
-                                    isMock ? '🎯 Sectional Mock' : '⚡ $sourceName',
-                                    style: TextStyle(
-                                      fontSize: 10.5,
-                                      fontWeight: FontWeight.bold,
-                                      color: isMock ? const Color(0xFF92400E) : const Color(0xFF3730A3),
+                            Expanded(
+                              child: Row(
+                                children: [
+                                  Flexible(
+                                    child: Container(
+                                      padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
+                                      decoration: BoxDecoration(
+                                        color: isMock ? const Color(0xFFFEF3C7) : const Color(0xFFE0E7FF),
+                                        borderRadius: BorderRadius.circular(6),
+                                      ),
+                                      child: Text(
+                                        isMock ? (sourceName.toLowerCase().contains('set') ? '🎯 Sectional $sourceName' : '🎯 Sectional Mock') : '⚡ $sourceName',
+                                        maxLines: 1,
+                                        overflow: TextOverflow.ellipsis,
+                                        style: TextStyle(
+                                          fontSize: 10,
+                                          fontWeight: FontWeight.bold,
+                                          color: isMock ? const Color(0xFF92400E) : const Color(0xFF3730A3),
+                                        ),
+                                      ),
                                     ),
                                   ),
-                                ),
-                                const SizedBox(width: 6),
-                                Container(
-                                  padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 3),
-                                  decoration: BoxDecoration(
-                                    color: masteryStreak > 0 ? const Color(0xFFDCFCE7) : Colors.grey.shade100,
-                                    borderRadius: BorderRadius.circular(6),
-                                    border: Border.all(color: masteryStreak > 0 ? Colors.green : Colors.grey.shade300),
+                                  const SizedBox(width: 4),
+                                  Container(
+                                    padding: const EdgeInsets.symmetric(horizontal: 5, vertical: 3),
+                                    decoration: BoxDecoration(
+                                      color: masteryStreak > 0 ? const Color(0xFFDCFCE7) : Colors.grey.shade100,
+                                      borderRadius: BorderRadius.circular(6),
+                                      border: Border.all(color: masteryStreak > 0 ? Colors.green : Colors.grey.shade300),
+                                    ),
+                                    child: Text(
+                                      "🎯 Streak: $masteryStreak/2",
+                                      style: TextStyle(fontSize: 9, fontWeight: FontWeight.bold, color: masteryStreak > 0 ? Colors.green.shade800 : Colors.grey),
+                                    ),
                                   ),
-                                  child: Text(
-                                    "🎯 Streak: $masteryStreak/2",
-                                    style: TextStyle(fontSize: 9.5, fontWeight: FontWeight.bold, color: masteryStreak > 0 ? Colors.green.shade800 : Colors.grey),
-                                  ),
-                                ),
-                              ],
+                                ],
+                              ),
                             ),
+                            const SizedBox(width: 6),
                             Row(
                               children: [
-                                Text('📅 $dateStr', style: const TextStyle(fontSize: 10, color: Colors.grey)),
-                                const SizedBox(width: 8),
+                                Text('📅 $dateStr', style: const TextStyle(fontSize: 9.5, color: Colors.grey)),
+                                const SizedBox(width: 6),
                                 InkWell(
                                   onTap: () => _openVaultAiDoubtDialog(q, index),
                                   child: Container(
@@ -634,7 +663,7 @@ class _WrongQuestionsScreenState extends State<WrongQuestionsScreen> {
                                         const SizedBox(width: 2),
                                         Text(
                                           hasAsked ? 'AI Ans' : 'Ask AI',
-                                          style: const TextStyle(color: Colors.white, fontSize: 10, fontWeight: FontWeight.bold),
+                                          style: const TextStyle(color: Colors.white, fontSize: 9.5, fontWeight: FontWeight.bold),
                                         ),
                                       ],
                                     ),
@@ -690,7 +719,7 @@ class _WrongQuestionsScreenState extends State<WrongQuestionsScreen> {
                           );
                         }),
 
-                        // 🎯 PERSONALIZED "❌ WHY WRONG?" BOX
+                        // 🎯 DYNAMIC PERSONALIZED "❌ WHY WRONG?" BOX
                         const SizedBox(height: 8),
                         Container(
                           width: double.infinity,
@@ -706,14 +735,23 @@ class _WrongQuestionsScreenState extends State<WrongQuestionsScreen> {
                               Row(
                                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                 children: [
-                                  Row(
-                                    children: [
-                                      const Text('❌ Why Wrong?', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 11.5, color: Color(0xFFBE123C))),
-                                      if (userSelectedOpt != null && userSelectedOpt.isNotEmpty) ...[
-                                        const SizedBox(width: 4),
-                                        Text('(Tumne "$userSelectedOpt" choose kiya)', style: const TextStyle(fontSize: 10, fontStyle: FontStyle.italic, color: Colors.black54)),
-                                      ]
-                                    ],
+                                  Expanded(
+                                    child: Row(
+                                      children: [
+                                        const Text('❌ Why Wrong?', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 11.5, color: Color(0xFFBE123C))),
+                                        if (userSelectedOpt != null && userSelectedOpt.isNotEmpty) ...[
+                                          const SizedBox(width: 4),
+                                          Expanded(
+                                            child: Text(
+                                              '(Tumne "$userSelectedOpt" choose kiya)',
+                                              maxLines: 1,
+                                              overflow: TextOverflow.ellipsis,
+                                              style: const TextStyle(fontSize: 10, fontStyle: FontStyle.italic, color: Colors.black54),
+                                            ),
+                                          ),
+                                        ]
+                                      ],
+                                    ),
                                   ),
                                   if (userSelectedOpt != null && userSelectedOpt.isNotEmpty && whyWrongAiText == null)
                                     InkWell(
@@ -737,10 +775,16 @@ class _WrongQuestionsScreenState extends State<WrongQuestionsScreen> {
                                   text: whyWrongAiText,
                                   textStyle: const TextStyle(fontSize: 11.5, color: Color(0xFF881337), height: 1.35),
                                 ),
+                              ] else if (q.explanation.isNotEmpty && (userSelectedOpt == null || userSelectedOpt.isEmpty)) ...[
+                                const SizedBox(height: 4),
+                                MathFormattedText(
+                                  text: q.explanation,
+                                  textStyle: TextStyle(fontSize: 11, color: Colors.red.shade900, height: 1.3),
+                                ),
                               ] else if (userSelectedOpt == null || userSelectedOpt.isEmpty) ...[
                                 const SizedBox(height: 4),
                                 Text(
-                                  "Medium change hone par speed & wavelength badalti hain, lekin Frequency constant rehti hai.",
+                                  "Correct option: ${q.options[q.answerIndex]}",
                                   style: TextStyle(fontSize: 11, color: Colors.red.shade900, height: 1.3),
                                 ),
                               ]
