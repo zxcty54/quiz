@@ -13,6 +13,7 @@ class WrongQuestionsScreen extends StatefulWidget {
 
 class _WrongQuestionsScreenState extends State<WrongQuestionsScreen> {
   late Future<List<Map<String, dynamic>>> _wrongQuestionsFuture;
+  List<Map<String, dynamic>> _wrongListMemory = [];
   bool _isHindi = true;
 
   bool _isAnalyzing = false;
@@ -33,7 +34,10 @@ class _WrongQuestionsScreenState extends State<WrongQuestionsScreen> {
 
   void _loadData() {
     setState(() {
-      _wrongQuestionsFuture = UserStatsService.getWrongQuestions();
+      _wrongQuestionsFuture = UserStatsService.getWrongQuestions().then((list) {
+        _wrongListMemory = List.from(list);
+        return list;
+      });
       _aiAnalysisReport = null;
     });
   }
@@ -49,7 +53,7 @@ class _WrongQuestionsScreenState extends State<WrongQuestionsScreen> {
     }
   }
 
-  // ⚡ ONE-CLICK RE-QUIZ ENGINE DIALOG (Active Recall Test Mode)
+  // ⚡ ONE-CLICK RE-QUIZ ENGINE DIALOG (Fixed White Text & Added Math Support)
   void _startReQuiz(List<Map<String, dynamic>> wrongList) {
     if (wrongList.isEmpty) return;
 
@@ -68,13 +72,14 @@ class _WrongQuestionsScreenState extends State<WrongQuestionsScreen> {
             final q = Question.fromJson(currentJson);
 
             return AlertDialog(
+              backgroundColor: Colors.white, // Explicit dialog background
               shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
               title: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Text("⚡ Re-Quiz (${qIndex + 1}/${wrongList.length})", style: const TextStyle(fontSize: 14, fontWeight: FontWeight.bold)),
+                  Text("⚡ Re-Quiz (${qIndex + 1}/${wrongList.length})", style: const TextStyle(fontSize: 14, fontWeight: FontWeight.bold, color: Colors.black87)),
                   IconButton(
-                    icon: const Icon(Icons.close, size: 20),
+                    icon: const Icon(Icons.close, size: 20, color: Colors.black87),
                     onPressed: () {
                       Navigator.pop(ctx);
                       _loadData();
@@ -87,11 +92,14 @@ class _WrongQuestionsScreenState extends State<WrongQuestionsScreen> {
                   mainAxisSize: MainAxisSize.min,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
+                    // Question Title with explicit dark color
                     MathFormattedText(
                       text: q.getText(_isHindi),
-                      textStyle: const TextStyle(fontWeight: FontWeight.bold, fontSize: 13.5, color: Colors.black87),
+                      textStyle: const TextStyle(fontWeight: FontWeight.bold, fontSize: 13.5, color: Colors.black87, height: 1.3),
                     ),
                     const SizedBox(height: 12),
+
+                    // Options List with explicit dark color
                     ...List.generate(q.options.length, (optIdx) {
                       bool isCorrect = optIdx == q.answerIndex;
                       bool isSelected = selectedOption == optIdx;
@@ -137,22 +145,43 @@ class _WrongQuestionsScreenState extends State<WrongQuestionsScreen> {
                             border: Border.all(color: border),
                           ),
                           child: Row(
+                            crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Text("${String.fromCharCode(65 + optIdx)}. ", style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 12)),
-                              Expanded(child: MathFormattedText(text: q.options[optIdx], textStyle: const TextStyle(fontSize: 12))),
+                              Text(
+                                "${String.fromCharCode(65 + optIdx)}. ",
+                                style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 12,
+                                  color: isAnswered && isCorrect
+                                      ? Colors.green.shade900
+                                      : (isAnswered && isSelected ? Colors.red.shade900 : Colors.black87),
+                                ),
+                              ),
+                              Expanded(
+                                child: MathFormattedText(
+                                  text: q.options[optIdx],
+                                  textStyle: TextStyle(
+                                    fontSize: 12,
+                                    color: isAnswered && isCorrect
+                                        ? Colors.green.shade900
+                                        : (isAnswered && isSelected ? Colors.red.shade900 : Colors.black87),
+                                  ),
+                                ),
+                              ),
                             ],
                           ),
                         ),
                       );
                     }),
+
                     if (isAnswered && q.explanation.isNotEmpty) ...[
                       const SizedBox(height: 10),
                       Container(
                         padding: const EdgeInsets.all(8),
                         decoration: BoxDecoration(color: const Color(0xFFEFF6FF), borderRadius: BorderRadius.circular(6)),
                         child: MathFormattedText(
-                          text: "💡 ${q.explanation}",
-                          textStyle: const TextStyle(fontSize: 11.5, color: Color(0xFF1E3A8A)),
+                          text: "💡 Solution: ${q.explanation}",
+                          textStyle: const TextStyle(fontSize: 11.5, color: Color(0xFF1E3A8A), height: 1.3),
                         ),
                       )
                     ]
@@ -188,7 +217,7 @@ class _WrongQuestionsScreenState extends State<WrongQuestionsScreen> {
     );
   }
 
-  // 💬 BOTTOM SHEET FOR VAULT QUESTION CUSTOM DOUBT (Max 1 Ask)
+  // 💬 BOTTOM SHEET FOR VAULT QUESTION CUSTOM DOUBT
   void _openVaultAiDoubtDialog(Question currentQ, int qIndex) {
     bool hasAsked = _vaultAskedStatus[qIndex] ?? false;
     TextEditingController doubtController = TextEditingController();
@@ -273,6 +302,7 @@ class _WrongQuestionsScreenState extends State<WrongQuestionsScreen> {
                         controller: doubtController,
                         maxLines: 2,
                         minLines: 1,
+                        style: const TextStyle(color: Colors.black87),
                         decoration: const InputDecoration(
                           hintText: 'Type your exact doubt (e.g. Yeh formula yahan kyu apply hua?)',
                           hintStyle: TextStyle(fontSize: 12, color: Colors.grey),
@@ -379,11 +409,11 @@ class _WrongQuestionsScreenState extends State<WrongQuestionsScreen> {
       body: FutureBuilder<List<Map<String, dynamic>>>(
         future: _wrongQuestionsFuture,
         builder: (context, snapshot) {
-          if (snapshot.connectionState == ConnectionState.waiting) {
+          if (snapshot.connectionState == ConnectionState.waiting && _wrongListMemory.isEmpty) {
             return const Center(child: CircularProgressIndicator());
           }
 
-          final rawList = snapshot.data ?? [];
+          final rawList = snapshot.data ?? _wrongListMemory;
           if (rawList.isEmpty) {
             return Center(
               child: Column(
@@ -538,7 +568,6 @@ class _WrongQuestionsScreenState extends State<WrongQuestionsScreen> {
                                   ),
                                 ),
                                 const SizedBox(width: 6),
-                                // 🎯 SMART LADDER BADGE
                                 Container(
                                   padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 3),
                                   decoration: BoxDecoration(
@@ -615,6 +644,7 @@ class _WrongQuestionsScreenState extends State<WrongQuestionsScreen> {
                               border: Border.all(color: isCorrect ? const Color(0xFF86EFAC) : Colors.grey.shade300),
                             ),
                             child: Row(
+                              crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Text("${String.fromCharCode(65 + optIdx)}. ", style: TextStyle(fontWeight: FontWeight.bold, color: isCorrect ? Colors.green.shade800 : Colors.black87, fontSize: 12)),
                                 Expanded(
@@ -631,20 +661,22 @@ class _WrongQuestionsScreenState extends State<WrongQuestionsScreen> {
 
                         const SizedBox(height: 8),
 
-                        // 🏷️ PERSISTENT SILLY VS CONCEPT TAGGING BAR
+                        // 🏷️ NO-JUMP REAL STUDENT TAGGING BAR
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             Row(
                               children: [
                                 _tagChip(
-                                  label: '🟡 Silly',
-                                  isSelected: savedTag == 'silly',
-                                  color: Colors.amber.shade700,
+                                  label: '🟡 50-50 Trap',
+                                  isSelected: savedTag == '50-50',
+                                  color: Colors.amber.shade800,
                                   onTap: () async {
-                                    String newTag = savedTag == 'silly' ? '' : 'silly';
+                                    String newTag = savedTag == '50-50' ? '' : '50-50';
+                                    setState(() {
+                                      qJson['errorTag'] = newTag;
+                                    });
                                     await UserStatsService.updateWrongQuestionTag(index, newTag);
-                                    _loadData();
                                   },
                                 ),
                                 const SizedBox(width: 6),
@@ -654,8 +686,10 @@ class _WrongQuestionsScreenState extends State<WrongQuestionsScreen> {
                                   color: Colors.red.shade700,
                                   onTap: () async {
                                     String newTag = savedTag == 'concept' ? '' : 'concept';
+                                    setState(() {
+                                      qJson['errorTag'] = newTag;
+                                    });
                                     await UserStatsService.updateWrongQuestionTag(index, newTag);
-                                    _loadData();
                                   },
                                 ),
                               ],
@@ -737,7 +771,7 @@ class _WrongQuestionsScreenState extends State<WrongQuestionsScreen> {
     return InkWell(
       onTap: onTap,
       child: Container(
-        padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
+        padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
         decoration: BoxDecoration(
           color: isSelected ? color.withOpacity(0.15) : Colors.grey.shade100,
           borderRadius: BorderRadius.circular(12),
@@ -746,8 +780,8 @@ class _WrongQuestionsScreenState extends State<WrongQuestionsScreen> {
         child: Text(
           label,
           style: TextStyle(
-            fontSize: 10,
-            fontWeight: isSelected ? FontWeight.bold : FontWeight.normal,
+            fontSize: 10.5,
+            fontWeight: isSelected ? FontWeight.bold : FontWeight.w500,
             color: isSelected ? color : Colors.grey.shade700,
           ),
         ),
