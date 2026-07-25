@@ -53,7 +53,7 @@ class _WrongQuestionsScreenState extends State<WrongQuestionsScreen> {
     }
   }
 
-  // ⚡ ONE-CLICK RE-QUIZ ENGINE DIALOG (Fixed White Text & Added Math Support)
+  // ⚡ ONE-CLICK RE-QUIZ ENGINE DIALOG (Resume Fix Mode)
   void _startReQuiz(List<Map<String, dynamic>> wrongList) {
     if (wrongList.isEmpty) return;
 
@@ -72,12 +72,12 @@ class _WrongQuestionsScreenState extends State<WrongQuestionsScreen> {
             final q = Question.fromJson(currentJson);
 
             return AlertDialog(
-              backgroundColor: Colors.white, // Explicit dialog background
+              backgroundColor: Colors.white,
               shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
               title: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Text("⚡ Re-Quiz (${qIndex + 1}/${wrongList.length})", style: const TextStyle(fontSize: 14, fontWeight: FontWeight.bold, color: Colors.black87)),
+                  Text("🛠️ Fix Error (${qIndex + 1}/${wrongList.length})", style: const TextStyle(fontSize: 14, fontWeight: FontWeight.bold, color: Colors.black87)),
                   IconButton(
                     icon: const Icon(Icons.close, size: 20, color: Colors.black87),
                     onPressed: () {
@@ -92,14 +92,12 @@ class _WrongQuestionsScreenState extends State<WrongQuestionsScreen> {
                   mainAxisSize: MainAxisSize.min,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    // Question Title with explicit dark color
                     MathFormattedText(
                       text: q.getText(_isHindi),
                       textStyle: const TextStyle(fontWeight: FontWeight.bold, fontSize: 13.5, color: Colors.black87, height: 1.3),
                     ),
                     const SizedBox(height: 12),
 
-                    // Options List with explicit dark color
                     ...List.generate(q.options.length, (optIdx) {
                       bool isCorrect = optIdx == q.answerIndex;
                       bool isSelected = selectedOption == optIdx;
@@ -131,7 +129,7 @@ class _WrongQuestionsScreenState extends State<WrongQuestionsScreen> {
                                   bool graduated = await UserStatsService.incrementQuestionMastery(qIndex);
                                   if (graduated && mounted) {
                                     ScaffoldMessenger.of(context).showSnackBar(
-                                      const SnackBar(content: Text("🎉 Question Mastered & Cleared from Vault!"), duration: Duration(seconds: 1)),
+                                      const SnackBar(content: Text("🎉 Question Cleared from Vault!"), duration: Duration(seconds: 1)),
                                     );
                                   }
                                 }
@@ -152,9 +150,7 @@ class _WrongQuestionsScreenState extends State<WrongQuestionsScreen> {
                                 style: TextStyle(
                                   fontWeight: FontWeight.bold,
                                   fontSize: 12,
-                                  color: isAnswered && isCorrect
-                                      ? Colors.green.shade900
-                                      : (isAnswered && isSelected ? Colors.red.shade900 : Colors.black87),
+                                  color: isAnswered && isCorrect ? Colors.green.shade900 : (isAnswered && isSelected ? Colors.red.shade900 : Colors.black87),
                                 ),
                               ),
                               Expanded(
@@ -162,9 +158,7 @@ class _WrongQuestionsScreenState extends State<WrongQuestionsScreen> {
                                   text: q.options[optIdx],
                                   textStyle: TextStyle(
                                     fontSize: 12,
-                                    color: isAnswered && isCorrect
-                                        ? Colors.green.shade900
-                                        : (isAnswered && isSelected ? Colors.red.shade900 : Colors.black87),
+                                    color: isAnswered && isCorrect ? Colors.green.shade900 : (isAnswered && isSelected ? Colors.red.shade900 : Colors.black87),
                                   ),
                                 ),
                               ),
@@ -421,15 +415,14 @@ class _WrongQuestionsScreenState extends State<WrongQuestionsScreen> {
                 children: const [
                   Text('🎉', style: TextStyle(fontSize: 50)),
                   SizedBox(height: 10),
-                  Text('Vault is Empty! (Vault Zero)', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16, color: Colors.black87)),
+                  Text('Vault Zero Cleared!', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16, color: Colors.black87)),
                   SizedBox(height: 4),
-                  Text('Aapka koi bhi galat question saved nahi hai.', style: TextStyle(color: Colors.grey, fontSize: 12)),
+                  Text('Aapka koi bhi wrong question pending nahi hai.', style: TextStyle(color: Colors.grey, fontSize: 12)),
                 ],
               ),
             );
           }
 
-          // Filter logic
           final filteredList = rawList.where((item) {
             String chapter = (item['chapterName'] ?? item['chapter'] ?? '').toString();
             if (_selectedFilter == 'REVISION') {
@@ -443,7 +436,7 @@ class _WrongQuestionsScreenState extends State<WrongQuestionsScreen> {
           return ListView(
             padding: const EdgeInsets.all(16),
             children: [
-              // 🤖 1. AI MENTOR AUDIT & RE-QUIZ HEADER
+              // 🩺 1. AI CONCEPT HEALTH REPORT (STUDY DOCTOR CARD)
               Card(
                 color: const Color(0xFFEFF6FF),
                 shape: RoundedRectangleBorder(
@@ -460,9 +453,9 @@ class _WrongQuestionsScreenState extends State<WrongQuestionsScreen> {
                         children: [
                           const Row(
                             children: [
-                              Text('🤖', style: TextStyle(fontSize: 22)),
+                              Text('🩺', style: TextStyle(fontSize: 22)),
                               SizedBox(width: 8),
-                              Text('AI Mentor Audit', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 14, color: Color(0xFF1E40AF))),
+                              Text('AI Concept Health Report', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 14, color: Color(0xFF1E40AF))),
                             ],
                           ),
                           if (_isAnalyzing)
@@ -475,28 +468,11 @@ class _WrongQuestionsScreenState extends State<WrongQuestionsScreen> {
                                 padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
                               ),
                               onPressed: () => _runAiAnalysis(rawList),
-                              child: const Text('Analyze ⚡', style: TextStyle(fontSize: 11)),
+                              child: const Text('Get Prescription 💊', style: TextStyle(fontSize: 11)),
                             ),
                         ],
                       ),
-                      const SizedBox(height: 10),
-
-                      // ⚡ 1-CLICK RE-QUIZ BUTTON
-                      SizedBox(
-                        width: double.infinity,
-                        child: ElevatedButton.icon(
-                          style: ElevatedButton.styleFrom(
-                            backgroundColor: const Color(0xFF10B981),
-                            foregroundColor: Colors.white,
-                            padding: const EdgeInsets.symmetric(vertical: 8),
-                            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
-                          ),
-                          onPressed: () => _startReQuiz(filteredList),
-                          icon: const Icon(Icons.play_circle_fill_rounded, size: 18),
-                          label: Text("Start Vault Re-Quiz (${filteredList.length} Questions)", style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 12)),
-                        ),
-                      ),
-
+                      
                       if (_aiAnalysisReport != null) ...[
                         const Divider(height: 20),
                         MathFormattedText(
@@ -510,7 +486,42 @@ class _WrongQuestionsScreenState extends State<WrongQuestionsScreen> {
               ),
               const SizedBox(height: 12),
 
-              // 🏷️ 2. FILTER TABS
+              // 🛠️ 2. RESUME FIX CARD (QUESTIONS WAITING)
+              Card(
+                color: const Color(0xFFECFDF5),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(14),
+                  side: const BorderSide(color: Color(0xFF10B981), width: 1.2),
+                ),
+                child: Padding(
+                  padding: const EdgeInsets.all(14.0),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Text("⏳ ${filteredList.length} Questions Waiting", style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 13.5, color: Color(0xFF065F46))),
+                          ElevatedButton.icon(
+                            style: ElevatedButton.styleFrom(
+                              backgroundColor: const Color(0xFF059669),
+                              foregroundColor: Colors.white,
+                              padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
+                              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
+                            ),
+                            onPressed: () => _startReQuiz(filteredList),
+                            icon: const Icon(Icons.build_circle_rounded, size: 16),
+                            label: const Text("Resume Fix 🛠️", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 12)),
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+              const SizedBox(height: 12),
+
+              // 🏷️ 3. FILTER TABS
               Row(
                 children: [
                   _filterChip('ALL', 'All (${rawList.length})'),
@@ -522,7 +533,7 @@ class _WrongQuestionsScreenState extends State<WrongQuestionsScreen> {
               ),
               const SizedBox(height: 14),
 
-              // 📋 3. COMPACT WRONG QUESTION CARDS
+              // 📋 4. COMPACT WRONG QUESTION CARDS
               ...List.generate(filteredList.length, (index) {
                 final qJson = filteredList[index];
                 final q = Question.fromJson(qJson);
@@ -546,7 +557,6 @@ class _WrongQuestionsScreenState extends State<WrongQuestionsScreen> {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        // HEADER: Source Badge + Date + Mastery Streak + Ask AI
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
@@ -612,13 +622,11 @@ class _WrongQuestionsScreenState extends State<WrongQuestionsScreen> {
                         ),
                         const SizedBox(height: 8),
 
-                        // QUESTION TITLE
                         MathFormattedText(
                           text: q.getText(_isHindi),
                           textStyle: const TextStyle(fontWeight: FontWeight.bold, fontSize: 13.5, color: Colors.black87, height: 1.3),
                         ),
 
-                        // STATEMENTS
                         if (statements != null && statements.isNotEmpty) ...[
                           const SizedBox(height: 6),
                           ...statements.map((stmt) => Padding(
@@ -632,7 +640,6 @@ class _WrongQuestionsScreenState extends State<WrongQuestionsScreen> {
 
                         const SizedBox(height: 10),
 
-                        // OPTIONS LIST
                         ...List.generate(q.options.length, (optIdx) {
                           bool isCorrect = optIdx == q.answerIndex;
                           return Container(
@@ -661,7 +668,6 @@ class _WrongQuestionsScreenState extends State<WrongQuestionsScreen> {
 
                         const SizedBox(height: 8),
 
-                        // 🏷️ NO-JUMP REAL STUDENT TAGGING BAR
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
@@ -695,7 +701,6 @@ class _WrongQuestionsScreenState extends State<WrongQuestionsScreen> {
                               ],
                             ),
 
-                            // COMPACT SOLUTION TOGGLE BUTTON
                             if (q.explanation.isNotEmpty)
                               InkWell(
                                 onTap: () => setState(() => _isExplanationExpanded[index] = !isExpanded),
@@ -710,7 +715,6 @@ class _WrongQuestionsScreenState extends State<WrongQuestionsScreen> {
                           ],
                         ),
 
-                        // COLLAPSIBLE EXPLANATION BOX
                         if (isExpanded && q.explanation.isNotEmpty) ...[
                           const SizedBox(height: 8),
                           Container(
