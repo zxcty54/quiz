@@ -35,12 +35,14 @@ class _SectionalCbtScreenState extends State<SectionalCbtScreen> {
   Timer? _qTimer;
 
   bool _isExamSubmitted = false;
+  bool _isBookmarked = false;
 
   @override
   void initState() {
     super.initState();
     _isHindi = widget.subFolder.contains('bssc') || widget.subFolder.contains('bpsc');
     _startTimers();
+    _checkBookmarkStatus();
   }
 
   void _startTimers() {
@@ -77,23 +79,91 @@ class _SectionalCbtScreenState extends State<SectionalCbtScreen> {
     });
   }
 
-  void _submitExam() {
+  // 📌 Check if Current Question is already Bookmarked
+  void _checkBookmarkStatus() async {
+    final savedList = await UserStatsService.getSavedQuestions();
+    final currentQ = widget.questions[_currentIndex];
+    String currentText = currentQ.getText(_isHindi);
+
+    bool exists = savedList.any((item) {
+      String qText = item['qe'] ?? item['qh'] ?? '';
+      return qText == currentText || qText == currentQ.qe;
+    });
+
+    if (mounted) {
+      setState(() => _isBookmarked = exists);
+    }
+  }
+
+  // 📌 Toggle Bookmark Action
+  void _toggleBookmarkQuestion() async {
+    final currentQ = widget.questions[_currentIndex];
+    Map<String, dynamic> qJson = {
+      'qe': currentQ.qe,
+      'qh': currentQ.qh,
+      'se': currentQ.se,
+      'sh': currentQ.sh,
+      'options': currentQ.options,
+      'answerIndex': currentQ.answerIndex,
+      'explanation': currentQ.explanation,
+    };
+
+    bool saved = await UserStatsService.toggleBookmark(qJson);
+
+    if (mounted) {
+      setState(() => _isBookmarked = saved);
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(
+          content: Text(saved ? '📌 Question Bookmarked!' : '🗑️ Bookmark Removed'),
+          duration: const Duration(seconds: 1),
+        ),
+      );
+    }
+  }
+
+  void _submitExam() async {
     _examTimer?.cancel();
     _qTimer?.cancel();
     setState(() => _isExamSubmitted = true);
 
     int correctCount = 0;
     int wrongCount = 0;
-    _userAnswers.forEach((qIdx, userAns) {
-      if (userAns == widget.questions[qIdx].answerIndex) {
+
+    // ⚡ Record stats and send ALL wrong/unattempted questions to Wrong Vault
+    for (int i = 0; i < widget.questions.length; i++) {
+      final q = widget.questions[i];
+      final userAns = _userAnswers[i];
+
+      bool isAttempted = userAns != null;
+      bool isCorrect = isAttempted && (userAns == q.answerIndex);
+
+      if (isCorrect) {
         correctCount++;
-      } else {
+      } else if (isAttempted) {
         wrongCount++;
       }
-    });
+
+      // Record to Stats & Save Wrong Questions to Vault
+      await UserStatsService.recordQuestionAttempt(
+        isCorrect: isCorrect,
+        chapterName: widget.testTitle,
+        chapterPath: widget.subFolder,
+        wrongQuestionJson: isCorrect
+            ? null
+            : {
+                'qe': q.qe,
+                'qh': q.qh,
+                'se': q.se,
+                'sh': q.sh,
+                'options': q.options,
+                'answerIndex': q.answerIndex,
+                'explanation': q.explanation,
+              },
+      );
+    }
 
     // ⚡ Local Cache Tracker Update
-    UserStatsService.recordMockTest(questionsAttempted: _userAnswers.length);
+    await UserStatsService.recordMockTest(questionsAttempted: _userAnswers.length);
 
     // 🤫 Save local summary for exit alert
     TelegramTracker.recordTestCompletion(
@@ -144,7 +214,10 @@ class _SectionalCbtScreenState extends State<SectionalCbtScreen> {
                 currentIndex: _currentIndex,
                 userAnswers: _userAnswers,
                 markedForReview: _markedForReview,
-                onSelectQuestion: (idx) => setState(() => _currentIndex = idx),
+                onSelectQuestion: (idx) {
+                  setState(() => _currentIndex = idx);
+                  _checkBookmarkStatus();
+                },
               ),
             ),
           )
@@ -159,9 +232,22 @@ class _SectionalCbtScreenState extends State<SectionalCbtScreen> {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text("QUESTION ${_currentIndex + 1} OF ${widget.questions.length}", style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 12, color: Colors.grey)),
-                IconButton(
-                  icon: Icon(_markedForReview.contains(_currentIndex) ? Icons.bookmark : Icons.bookmark_border, color: _markedForReview.contains(_currentIndex) ? const Color(0xFF8E44AD) : Colors.grey),
-                  onPressed: _toggleReview,
+                Row(
+                  children: [
+                    IconButton(
+                      icon: Icon(
+                        _isBookmarked ? Icons.bookmark : Icons.bookmark_outline,
+                        color: _isBookmarked ? const Color(0xFF2563EB) : Colors.grey,
+                      ),
+                      onPressed: _toggleBookmarkQuestion,
+                      tooltip: "Bookmark Question",
+                    ),
+                    IconButton(
+                      icon: Icon(_markedForReview.contains(_currentIndex) ? Icons.rate_review : Icons.rate_review_outlined, color: _markedForReview.contains(_currentIndex) ? const Color(0xFF8E44AD) : Colors.grey),
+                      onPressed: _toggleReview,
+                      tooltip: "Mark for Review",
+                    ),
+                  ],
                 )
               ],
             ),
@@ -243,7 +329,15 @@ class _SectionalCbtScreenState extends State<SectionalCbtScreen> {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                ElevatedButton(onPressed: _currentIndex > 0 ? () => setState(() => _currentIndex--) : null, child: const Text("← PREV")),
+                ElevatedButton(
+                  onPressed: _currentIndex > 0
+                      ? () {
+                          setState(() => _currentIndex--);
+                          _checkBookmarkStatus();
+                        }
+                      : null,
+                  child: const Text("← PREV"),
+                ),
                 ElevatedButton(
                   style: ElevatedButton.styleFrom(backgroundColor: const Color(0xFF2ED573), foregroundColor: Colors.white),
                   onPressed: () => showDialog(
@@ -264,6 +358,7 @@ class _SectionalCbtScreenState extends State<SectionalCbtScreen> {
                   onPressed: () {
                     if (_currentIndex < widget.questions.length - 1) {
                       setState(() => _currentIndex++);
+                      _checkBookmarkStatus();
                     } else {
                       _submitExam();
                     }
@@ -379,6 +474,7 @@ class _SectionalCbtScreenState extends State<SectionalCbtScreen> {
                               question: q.qe,
                               options: q.options,
                               correctAnswer: q.options[q.answerIndex],
+                              existingExplanation: q.explanation,
                             ),
                             const SizedBox(height: 10),
 
