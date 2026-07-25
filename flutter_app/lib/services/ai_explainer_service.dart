@@ -24,7 +24,7 @@ class AiExplainerService {
 
     try {
       final String prompt = """
-You are a respectful, highly experienced, and friendly BPSC/BSSC Exam Professor from Patna explaining concepts in conversational Hinglish (Roman Hindi written in English alphabets).
+You are a respectful, highly experienced, and friendly BPSC/BSSC Exam Professor from Patna explaining concepts in simple, everyday conversational Hinglish (the way students talk in daily life or chat).
 
 CONTEXT:
 Question: $question
@@ -34,12 +34,13 @@ Correct Answer: $correctAnswer
 STUDENT'S EXACT DOUBT: "$userDoubt"
 
 STRICT RULES:
-1. Speak DIRECTLY to the student in respectful, clear Hinglish.
-2. STRICTLY BANNED WORDS: Do NOT use casual slangs like "Aare", "Dost", "Arey", "Bhai", "Bhaiya". Use professional terms like "Dekhiye", "Is question me...", "Aapne yahan...".
-3. DO NOT use robotic template headers like 'Direct Answer:', 'Core Concept:', 'Section 1:'.
-4. ALWAYS use a practical, relatable daily-life comparison or analogy.
-5. Explain clearly why the student's doubt point is wrong or right and why the correct answer is accurate.
-6. Strictly NO Devanagari script (pure Hindi text banned). Use Roman Hinglish only.
+1. Speak DIRECTLY to the student in simple, clear, daily-life Hinglish.
+2. DO NOT use complex Sanskritized Shuddh Hindi words written in Roman script. Use normal English words wherever natural (e.g. use 'difficult', 'concept', 'reason', 'mistake', 'option', 'process' instead of tough Hindi vocabulary).
+3. STRICTLY BANNED WORDS: Do NOT use casual slangs like "Aare", "Dost", "Arey", "Bhai", "Bhaiya". Use professional, respectful words like "Dekhiye", "Is question me...", "Aapne yahan...".
+4. DO NOT use robotic template headers like 'Direct Answer:', 'Core Concept:', 'Section 1:'.
+5. ALWAYS use a practical, relatable daily-life comparison or analogy.
+6. Explain clearly why the student's doubt point is wrong or right and why the correct answer is accurate.
+7. Strictly NO Devanagari script. Use simple Roman Hinglish only.
 """;
 
       final response = await http.post(
@@ -53,7 +54,7 @@ STRICT RULES:
           "messages": [
             {"role": "user", "content": prompt}
           ],
-          "max_tokens": 800,
+          "max_tokens": 600,
           "temperature": 0.7,
         }),
       ).timeout(const Duration(seconds: 15));
@@ -99,7 +100,7 @@ Tagged Metrics:
 Questions Context:
 ${qSummaries.join('\n')}
 
-STRICT RESPONSE FORMAT (Roman Hinglish only, NO Devanagari Hindi text, BANNED: 'Aare', 'Dost'):
+STRICT RESPONSE FORMAT (Simple Roman Hinglish only, NO Devanagari Hindi text, BANNED: 'Aare', 'Dost'):
 
 🩺 CONCEPT HEALTH DIAGNOSIS
 - History: 🟥 Critical Weak (or 🟨 Average / 🟩 Healthy based on errors)
@@ -127,7 +128,7 @@ STRICT RESPONSE FORMAT (Roman Hinglish only, NO Devanagari Hindi text, BANNED: '
           "messages": [
             {"role": "user", "content": prompt}
           ],
-          "max_tokens": 800,
+          "max_tokens": 600,
           "temperature": 0.3,
         }),
       ).timeout(const Duration(seconds: 15));
@@ -142,7 +143,7 @@ STRICT RESPONSE FORMAT (Roman Hinglish only, NO Devanagari Hindi text, BANNED: '
     }
   }
 
-  // 3️⃣ LIVE DYNAMIC "WHY WRONG?" EXPLAINER (SINGLE COMPREHENSIVE 200-500 WORDS RESPONSE)
+  // 3️⃣ LIVE DYNAMIC "WHY WRONG?" EXPLAINER (SIMPLE HINGLISH, 180-280 WORDS MAX)
   static Future<String> explainWhyWrong({
     required String question,
     required List<String> options,
@@ -170,7 +171,7 @@ STUDENT TAG: '🔴 DIDN'T KNOW / CONCEPT GAP'
       }
 
       final String prompt = """
-You are a senior, highly experienced BPSC/BSSC Exam Professor. Provide a comprehensive, non-bookish breakdown for a student who got this question wrong.
+You are a senior, highly experienced BPSC/BSSC Exam Professor. Provide a concise, clear, and non-bookish breakdown for a student who got this question wrong.
 
 QUESTION: $question
 ALL OPTIONS: ${options.join(', ')}
@@ -180,26 +181,23 @@ CORRECT ANSWER: "$correctAnswer"
 $tagInstruction
 
 STRICT RULES:
-1. Speak directly to the student in clean, respectful Roman Hinglish. STRICTLY BANNED WORDS: 'Aare', 'Dost', 'Arey', 'Bhai', 'Bhaiya'. Use polite terms like "Dekhiye", "Is option me...", "Aapne yahan...".
-2. ABSOLUTELY NO NCERT or bookish copy-paste language. Explain in practical, human teaching style.
-3. NO filler text or repetitive introductions. Every single line must be 100% exam-relevant.
-4. MUST include a relatable real-life analogy or daily object comparison to make the core logic crystal clear.
-5. PROACTIVELY resolve common sub-doubts and confusions that students usually face in this specific topic so they never need to ask again.
-6. TARGET WORD COUNT: Provide a detailed, deep-dive explanation strictly between 200 to 450 words.
+1. LANGUAGE: Use simple, everyday natural Hinglish (how students normally talk in daily life). Strictly DO NOT write tough or Sanskritized Shuddh Hindi words in Roman text. Use common English terms (like 'mistake', 'reason', 'difference', 'trap', 'concept') where natural.
+2. STRICTLY BANNED WORDS: 'Aare', 'Dost', 'Arey', 'Bhai', 'Bhaiya'. Use polite terms like "Dekhiye", "Is option me...", "Aapne yahan...".
+3. ABSOLUTELY NO NCERT or bookish copy-paste language.
+4. MUST include a relatable real-life analogy or daily object comparison.
+5. PROACTIVELY resolve common sub-doubts related to this topic so students don't need to ask again.
+6. TARGET LENGTH: Keep the complete response short, crisp, and to the point (Strictly between 180 to 280 words maximum).
 
 FORMAT YOUR RESPONSE IN THIS EXACT STRUCTURE:
 
 🎯 AAPKI GALTI AUR EXAMINER KA TRAP:
-(Analyze clearly why Option "$userChoice" was chosen by the student and the exact subtle word/rule trap in it)
+(Explain clearly why Option "$userChoice" was chosen by the student and the exact subtle word/logic trap in it)
 
 ⚡ SAHI ANSWER KA CONCEPT & REAL-LIFE ANALOGY:
 (Explain why "$correctAnswer" is accurate using a simple, practical daily life example)
 
 🔍 IS TOPIC KE COMMON DOUBTS & CONFUSIONS:
-(Proactively address and clear sub-doubts/confusions related to this topic)
-
-📌 EXAM HALL PRO-TIP:
-(One punchy rule/trick to avoid making this mistake again in BPSC/BSSC)
+(Proactively clear 1-2 common sub-doubts related to this topic)
 """;
 
       final response = await http.post(
@@ -213,10 +211,10 @@ FORMAT YOUR RESPONSE IN THIS EXACT STRUCTURE:
           "messages": [
             {"role": "user", "content": prompt}
           ],
-          "max_tokens": 1200,
+          "max_tokens": 700,
           "temperature": 0.5,
         }),
-      ).timeout(const Duration(seconds: 20));
+      ).timeout(const Duration(seconds: 18));
 
       if (response.statusCode == 200) {
         final data = jsonDecode(utf8.decode(response.bodyBytes));
