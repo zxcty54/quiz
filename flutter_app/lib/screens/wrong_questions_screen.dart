@@ -14,7 +14,7 @@ class WrongQuestionsScreen extends StatefulWidget {
 class _WrongQuestionsScreenState extends State<WrongQuestionsScreen> {
   late Future<List<Map<String, dynamic>>> _wrongQuestionsFuture;
   bool _isHindi = true;
-  
+
   bool _isAnalyzing = false;
   String? _aiAnalysisReport;
 
@@ -45,6 +45,7 @@ class _WrongQuestionsScreenState extends State<WrongQuestionsScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: const Color(0xFFF8FAFC),
       appBar: AppBar(
         title: const Text('❌ Wrong Questions Vault', style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
         actions: [
@@ -62,7 +63,10 @@ class _WrongQuestionsScreenState extends State<WrongQuestionsScreen> {
                 border: Border.all(color: const Color(0xFF2563EB)),
                 borderRadius: BorderRadius.circular(6),
               ),
-              child: Text(_isHindi ? 'हिंदी' : 'ENG', style: const TextStyle(fontSize: 11, fontWeight: FontWeight.bold, color: Color(0xFF2563EB))),
+              child: Text(
+                _isHindi ? 'हिंदी' : 'ENG',
+                style: const TextStyle(fontSize: 11, fontWeight: FontWeight.bold, color: Color(0xFF2563EB)),
+              ),
             ),
             onPressed: () => setState(() => _isHindi = !_isHindi),
           ),
@@ -83,7 +87,7 @@ class _WrongQuestionsScreenState extends State<WrongQuestionsScreen> {
                 children: const [
                   Text('🎉', style: TextStyle(fontSize: 50)),
                   SizedBox(height: 10),
-                  Text('Vault is Empty!', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),
+                  Text('Vault is Empty!', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16, color: Colors.black87)),
                   SizedBox(height: 4),
                   Text('Aapka koi bhi galat question saved nahi hai.', style: TextStyle(color: Colors.grey, fontSize: 12)),
                 ],
@@ -94,7 +98,7 @@ class _WrongQuestionsScreenState extends State<WrongQuestionsScreen> {
           return ListView(
             padding: const EdgeInsets.all(16),
             children: [
-              // 🤖 1. AI MENTOR AUDIT BUTTON & REPORT CARD
+              // 🤖 1. AI MENTOR PERFORMANCE AUDIT
               Card(
                 color: const Color(0xFFEFF6FF),
                 shape: RoundedRectangleBorder(
@@ -153,44 +157,90 @@ class _WrongQuestionsScreenState extends State<WrongQuestionsScreen> {
               ...List.generate(list.length, (index) {
                 final qJson = list[index];
                 final q = Question.fromJson(qJson);
+                final List<String>? statements = _isHindi ? q.sh : q.se;
 
                 return Card(
-                  margin: const EdgeInsets.only(bottom: 12),
+                  margin: const EdgeInsets.only(bottom: 14),
                   shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+                  elevation: 1,
                   child: Padding(
                     padding: const EdgeInsets.all(14.0),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text('Wrong Question ${index + 1}', style: const TextStyle(fontWeight: FontWeight.bold, color: Colors.red, fontSize: 12)),
-                        const SizedBox(height: 4),
+                        const SizedBox(height: 6),
+
+                        // Question Title with Math / KaTeX Support
                         MathFormattedText(
                           text: q.getText(_isHindi),
-                          textStyle: const TextStyle(fontWeight: FontWeight.bold, fontSize: 14),
+                          textStyle: const TextStyle(fontWeight: FontWeight.bold, fontSize: 14, color: Colors.black87, height: 1.35),
                         ),
-                        const SizedBox(height: 10),
+
+                        // Statements List if Available
+                        if (statements != null && statements.isNotEmpty) ...[
+                          const SizedBox(height: 8),
+                          ...statements.map((stmt) => Padding(
+                                padding: const EdgeInsets.only(bottom: 3),
+                                child: MathFormattedText(
+                                  text: "• $stmt",
+                                  textStyle: TextStyle(fontSize: 12.5, color: Colors.grey.shade800, height: 1.3),
+                                ),
+                              )),
+                        ],
+
+                        const SizedBox(height: 12),
+
+                        // Options with Math / KaTeX Support
                         ...List.generate(q.options.length, (optIdx) {
                           bool isCorrect = optIdx == q.answerIndex;
                           return Container(
-                            margin: const EdgeInsets.only(bottom: 4),
-                            padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
+                            margin: const EdgeInsets.only(bottom: 6),
+                            padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 8),
                             decoration: BoxDecoration(
-                              color: isCorrect ? Colors.green.shade50 : Colors.grey.shade50,
-                              borderRadius: BorderRadius.circular(6),
-                              border: Border.all(color: isCorrect ? Colors.green : Colors.grey.shade300),
+                              color: isCorrect ? const Color(0xFFF0FDF4) : Colors.grey.shade50,
+                              borderRadius: BorderRadius.circular(8),
+                              border: Border.all(color: isCorrect ? const Color(0xFF86EFAC) : Colors.grey.shade300),
                             ),
                             child: Row(
+                              crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                Text("${String.fromCharCode(65 + optIdx)}. ", style: const TextStyle(fontWeight: FontWeight.bold)),
-                                Expanded(child: MathFormattedText(text: q.options[optIdx], textStyle: const TextStyle(fontSize: 12.5))),
-                                if (isCorrect) const Icon(Icons.check_circle, size: 16, color: Colors.green),
+                                Text("${String.fromCharCode(65 + optIdx)}. ", style: TextStyle(fontWeight: FontWeight.bold, color: isCorrect ? Colors.green.shade800 : Colors.black87, fontSize: 12.5)),
+                                Expanded(
+                                  child: MathFormattedText(
+                                    text: q.options[optIdx],
+                                    textStyle: TextStyle(fontSize: 12.5, color: isCorrect ? Colors.green.shade900 : Colors.black87, fontWeight: isCorrect ? FontWeight.w600 : FontWeight.normal),
+                                  ),
+                                ),
+                                if (isCorrect) const Icon(Icons.check_circle_rounded, size: 16, color: Colors.green),
                               ],
                             ),
                           );
                         }),
+
+                        // Detailed Solution with Math / KaTeX Support
                         if (q.explanation.isNotEmpty) ...[
-                          const SizedBox(height: 8),
-                          Text('💡 Correct Solution: ${q.explanation}', style: const TextStyle(fontSize: 11.5, color: Colors.green)),
+                          const SizedBox(height: 10),
+                          Container(
+                            width: double.infinity,
+                            padding: const EdgeInsets.all(10),
+                            decoration: BoxDecoration(
+                              color: const Color(0xFFEFF6FF),
+                              borderRadius: BorderRadius.circular(8),
+                              border: Border.all(color: const Color(0xFFBFDBFE)),
+                            ),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                const Text('💡 Solution:', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 11.5, color: Color(0xFF1E40AF))),
+                                const SizedBox(height: 4),
+                                MathFormattedText(
+                                  text: q.explanation,
+                                  textStyle: const TextStyle(fontSize: 12, color: Color(0xFF1E3A8A), height: 1.35),
+                                ),
+                              ],
+                            ),
+                          ),
                         ]
                       ],
                     ),
