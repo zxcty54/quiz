@@ -147,35 +147,57 @@ STRICT RESPONSE FORMAT (Roman Hinglish only, NO Devanagari Hindi text):
     }
   }
 
-  // 3️⃣ PERSONALIZED "WHY WRONG?" EXPLAINER (Targets User Choice)
+  // 3️⃣ LIVE DYNAMIC "WHY WRONG?" EXPLAINER (TAG-AWARE PROFESSOR TRAP & CONCEPT BUILDER)
   static Future<String> explainWhyWrong({
     required String question,
     required String userChoice,
     required String correctAnswer,
     required String explanation,
+    required String userTag, // '50-50' or 'concept'
   }) async {
     final apiKey = _activeApiKey;
-    if (apiKey.isEmpty) return "Tumne '$userChoice' choose kiya jabki correct '$correctAnswer' hai.";
+    if (apiKey.isEmpty) return "AI Service current moment par active nahi hai.";
 
     try {
+      String tagInstruction = "";
+      if (userTag == '50-50') {
+        tagInstruction = """
+THE STUDENT MARKED THIS AS '50-50 TRAP':
+- They were confused between the last 2 options and fell into an examiner trap.
+- Explain SPECIFICALLY how the Professor/Bureaucrat set a subtle distractor trap in option "$userChoice".
+- Compare option "$userChoice" vs "$correctAnswer" side by side. Show the exact word or rule that makes "$userChoice" wrong.
+""";
+      } else {
+        tagInstruction = """
+THE STUDENT MARKED THIS AS 'DIDN'T KNOW / CONCEPT GAP':
+- They lack fundamental theory or knowledge of this topic.
+- Ignore complex jargon! Teach the core concept behind this question from ZERO using a simple daily-life analogy.
+- Explain clearly why "$correctAnswer" is the absolute scientific/historical truth.
+""";
+      }
+
       final String prompt = """
-You are a warm, sharp exam mentor.
-A student got this question WRONG.
+You are a top BPSC/BSSC Professor & Personal Mentor from Patna.
+A student got this question wrong during their test.
 
-Question: $question
-Student's Wrong Choice: "$userChoice"
-Correct Answer: "$correctAnswer"
-Standard Logic: $explanation
+QUESTION: $question
+STUDENT'S WRONG CHOICE: "$userChoice"
+CORRECT ANSWER: "$correctAnswer"
+STANDARD SOLUTION CONTEXT: $explanation
 
-Task: Directly address the student in 3-4 bullet points in crisp Hinglish (Roman Hindi).
-Explain EXACTLY why their specific choice "$userChoice" was incorrect/trap, and why "$correctAnswer" is correct.
+$tagInstruction
 
-Format strictly like this:
-Tumne "$userChoice" choose kiya.
-Lekin:
-• [Point 1 about their choice]
-• [Point 2 key concept difference]
-• [Final core rule/fact]
+STRICT INSTRUCTIONS:
+1. Speak DIRECTLY to the student in engaging, detailed Roman Hinglish (English alphabets me Hindi).
+2. Strictly NO Devanagari Hindi text.
+3. Be conversational, sharp, and highly educational.
+
+FORMAT YOUR RESPONSE IN CLEAR BULLET POINTS LIKE THIS:
+
+🧐 TRAP & CONCEPT BREAKDOWN:
+• [Point 1: Address their choice "$userChoice" directly]
+• [Point 2: Core rule/trap difference between "$userChoice" and "$correctAnswer"]
+• [Point 3: Memory tip or exam trap takeaway]
 """;
 
       final response = await http.post(
@@ -189,18 +211,18 @@ Lekin:
           "messages": [
             {"role": "user", "content": prompt}
           ],
-          "max_tokens": 300,
-          "temperature": 0.3,
+          "max_tokens": 400,
+          "temperature": 0.4,
         }),
-      ).timeout(const Duration(seconds: 10));
+      ).timeout(const Duration(seconds: 12));
 
       if (response.statusCode == 200) {
         final data = jsonDecode(utf8.decode(response.bodyBytes));
-        return data['choices'][0]['message']['content'] ?? "";
+        return data['choices'][0]['message']['content'] ?? "Reasoning generate nahi ho paaya.";
       }
-      return "Tumne '$userChoice' choose kiya tha jo incorrect tha.";
+      return "Service busy hai. Dubara 'Analyze Trap ⚡' par tap karein.";
     } catch (e) {
-      return "Tumne '$userChoice' select kiya tha.";
+      return "Network connection slow hai. Dubara try karein.";
     }
   }
 
