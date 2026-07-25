@@ -72,63 +72,53 @@ STRICT TEACHING RULES:
     }
   }
 
-  // 2️⃣ TAG-AWARE DATA ANALYTICS PROMPT (Reads User Tags + Question Context)
+  // 2️⃣ DOCTOR DIAGNOSIS & PRESCRIPTION HEALTH AUDIT
   static Future<String> analyzeWrongQuestions(List<Map<String, dynamic>> wrongQuestions) async {
     final apiKey = _activeApiKey;
-    if (apiKey.isEmpty) return "⚠️ AI Mentor unavailable.";
-    if (wrongQuestions.isEmpty) return "Sabaash! Vault Zero achieved, koi wrong question nahi hai.";
+    if (apiKey.isEmpty) return "⚠️ AI Doctor unavailable.";
+    if (wrongQuestions.isEmpty) return "🎉 100% Healthy! Vault Zero achieved, koi wrong question nahi hai.";
 
     try {
-      int sillyCount = 0;
-      int conceptCount = 0;
+      int trap5050Count = 0;
+      int conceptGapCount = 0;
 
       List<String> qSummaries = wrongQuestions.take(15).map((q) {
         String qText = q['qe'] ?? q['qh'] ?? q['question'] ?? 'Question';
         String exp = q['explanation'] ?? q['e'] ?? '';
         String tag = q['errorTag'] ?? 'unmarked';
-        if (tag == 'silly') sillyCount++;
-        if (tag == 'concept') conceptCount++;
+        if (tag == '50-50') trap5050Count++;
+        if (tag == 'concept') conceptGapCount++;
 
         String chapter = q['chapterName'] ?? q['chapter'] ?? 'Sectional Mock';
-        return "- [Chapter: $chapter | User Tag: $tag] Question: $qText | Exp: $exp";
+        return "- [Chapter: $chapter | User Tag: $tag] Q: $qText | Exp: $exp";
       }).toList();
 
       final String prompt = """
-You are an expert AI Exam Analyst for BPSC, BSSC & State Exams.
-Analyze the following list of wrong questions saved in the student's vault:
+You are an expert AI Study Doctor for BPSC, BSSC & State Exam Aspirants.
+Analyze the student's wrong questions vault like a medical diagnostic health checkup.
 
-User Tagged Metrics:
-- Total Silly Mistakes: $sillyCount
-- Total Knowledge/Concept Gaps: $conceptCount
+Tagged Metrics:
+- 🟡 50-50 Option Confusion Traps: $trap5050Count
+- 🔴 Direct Knowledge/Concept Gaps: $conceptGapCount
 
-Questions:
+Questions Context:
 ${qSummaries.join('\n')}
 
-ANALYTICAL INSTRUCTIONS:
-1. Include the user's Silly ($sillyCount) vs Concept ($conceptCount) tag ratio in MISTAKE REASON section to tell them if they are rushing or lacking revision.
-2. For Revision Hub questions, group errors by Chapter and extract exact Sub-Topics.
-3. For Sectional Mocks, auto-detect Subject & Sub-topic from text.
-4. Output MUST BE strictly structured, concise Roman Hinglish. Strictly NO Devanagari Hindi text.
+STRICT RESPONSE FORMAT (Roman Hinglish only, NO Devanagari Hindi text):
 
-STRICT OUTPUT FORMAT:
+🩺 CONCEPT HEALTH DIAGNOSIS
+- History: 🟥 Critical Weak (or 🟨 Average / 🟩 Healthy based on errors)
+- Science: 🟨 Average / Stable
+- Polity: 🟩 Healthy
 
-📊 PATTERN FOUND
-- (Pinpoint exact error trend)
+🤔 DIAGNOSIS SUMMARY
+- (1-2 short lines on option confusion vs knowledge gap ratio)
 
-🤔 MISTAKE REASON
-- (Analyze root cause including Silly vs Concept tag feedback)
+💊 TODAY'S PRESCRIPTION (Rx)
+1. 15 Mins: [Specific Weak Sub-topic 1 extracted from questions]
+2. 10 Mins: [Specific Weak Sub-topic 2 extracted from questions]
 
-⚡ CONFIDENCE ESTIMATE
-Biology:  ████████ 80%
-History:  ███ 35%
-
-📌 PRIORITY REVISION TOPICS
-1. [Sub-topic 1]
-2. [Sub-topic 2]
-3. [Sub-topic 3]
-
-🎯 NEXT ACTION
-- (1 short practical line)
+⏱️ TOTAL REHAB TIME: Done in 25 Minutes
 """;
 
       final response = await http.post(
@@ -143,17 +133,17 @@ History:  ███ 35%
             {"role": "user", "content": prompt}
           ],
           "max_tokens": 800,
-          "temperature": 0.4,
+          "temperature": 0.3,
         }),
       ).timeout(const Duration(seconds: 15));
 
       if (response.statusCode == 200) {
         final data = jsonDecode(utf8.decode(response.bodyBytes));
-        return data['choices'][0]['message']['content'] ?? "Analysis generate nahi ho paya.";
+        return data['choices'][0]['message']['content'] ?? "Health report generate nahi ho paya.";
       }
       return "⚠️ Service busy hai. Dubara try karein.";
     } catch (e) {
-      return "⚠️ Error analyzing vault: $e";
+      return "⚠️ Error analyzing health: $e";
     }
   }
 
