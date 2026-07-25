@@ -57,13 +57,12 @@ class _WrongQuestionsScreenState extends State<WrongQuestionsScreen> {
     }
   }
 
-  // 🎯 SMART DETECTION FOR SECTIONAL MOCK ("Set 1", "Set 2", "Set-1", etc.)
+  // 🎯 SMART DETECTION FOR SECTIONAL MOCK ("Set 1", "Set 2", "Set-01", etc.)
   bool _isMockQuestion(Map<String, dynamic> qJson) {
     String chapter = (qJson['chapterName'] ?? qJson['chapter'] ?? '').toString().toLowerCase().trim();
     String source = (qJson['sourceType'] ?? qJson['source'] ?? '').toString().toLowerCase().trim();
     bool isMockFlag = qJson['isMock'] == true || qJson['isSectional'] == true;
 
-    // Detect patterns like "Set 1", "Set 2", "Set-01", etc.
     bool isSetPattern = RegExp(r'\bset[\s\-_]*\d+').hasMatch(chapter);
 
     return isMockFlag ||
@@ -235,7 +234,7 @@ class _WrongQuestionsScreenState extends State<WrongQuestionsScreen> {
     );
   }
 
-  // 💬 BOTTOM SHEET FOR VAULT QUESTION CUSTOM DOUBT
+  // 💬 BOTTOM SHEET FOR VAULT QUESTION CUSTOM DOUBT (1 ASK & 100 CHARS LIMIT)
   void _openVaultAiDoubtDialog(Question currentQ, int qIndex) {
     bool hasAsked = _vaultAskedStatus[qIndex] ?? false;
     TextEditingController doubtController = TextEditingController();
@@ -318,11 +317,12 @@ class _WrongQuestionsScreenState extends State<WrongQuestionsScreen> {
                     if (!hasAsked) ...[
                       TextField(
                         controller: doubtController,
+                        maxLength: 100, // 🛑 STRICT 100 CHARACTERS LIMIT
                         maxLines: 2,
                         minLines: 1,
                         style: const TextStyle(color: Colors.black87),
                         decoration: const InputDecoration(
-                          hintText: 'Type your exact doubt (e.g. Yeh formula yahan kyu apply hua?)',
+                          hintText: 'Type your exact doubt (Max 100 chars)...',
                           hintStyle: TextStyle(fontSize: 12, color: Colors.grey),
                           border: OutlineInputBorder(),
                           contentPadding: EdgeInsets.all(10),
@@ -345,11 +345,11 @@ class _WrongQuestionsScreenState extends State<WrongQuestionsScreen> {
 
                                   String userQuery = doubtController.text.trim();
 
+                                  // 🛑 REMOVED 'explanation:' PARAMETER
                                   String aiResp = await AiExplainerService.askCustomDoubt(
                                     question: currentQ.getText(_isHindi),
                                     options: currentQ.options,
                                     correctAnswer: currentQ.options[currentQ.answerIndex],
-                                    explanation: currentQ.explanation,
                                     userDoubt: userQuery,
                                   );
 
@@ -397,11 +397,11 @@ class _WrongQuestionsScreenState extends State<WrongQuestionsScreen> {
   // 🎯 PURE LIVE AI TRIGGER FOR "WHY WRONG" WITH TAG CONTEXT
   void _fetchWhyWrongAi(Question q, String userChoice, String userTag, int index) async {
     setState(() => _whyWrongLoading[index] = true);
+    // 🛑 REMOVED 'explanation:' PARAMETER
     String result = await AiExplainerService.explainWhyWrong(
       question: q.getText(_isHindi),
       userChoice: userChoice.isNotEmpty ? userChoice : "No Option Selected",
       correctAnswer: q.options[q.answerIndex],
-      explanation: q.explanation,
       userTag: userTag,
     );
     if (mounted) {
@@ -465,7 +465,6 @@ class _WrongQuestionsScreenState extends State<WrongQuestionsScreen> {
             );
           }
 
-          // Dynamic Smart Filter Logic (Supports "Set 1", "Set 2", "Set-01", etc.)
           final filteredList = rawList.where((item) {
             bool isMock = _isMockQuestion(item);
             if (_selectedFilter == 'REVISION') {
@@ -603,7 +602,6 @@ class _WrongQuestionsScreenState extends State<WrongQuestionsScreen> {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        // OVERFLOW-PROOF HEADER
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
@@ -720,7 +718,7 @@ class _WrongQuestionsScreenState extends State<WrongQuestionsScreen> {
                           );
                         }),
 
-                        // 🎯 LIVE AI "❌ WHY WRONG?" BOX (NO STATIC JSON)
+                        // 🎯 LIVE AI "❌ WHY WRONG?" BOX
                         const SizedBox(height: 8),
                         Container(
                           width: double.infinity,
@@ -798,7 +796,7 @@ class _WrongQuestionsScreenState extends State<WrongQuestionsScreen> {
 
                         const SizedBox(height: 8),
 
-                        // 🏷️ NO-JUMP REAL STUDENT TAGGING BAR
+                        // 🏷️ TAGGING BAR
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
