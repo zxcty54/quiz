@@ -46,7 +46,7 @@ class UserStatsService {
     };
   }
 
-  // 2️⃣ Record Question Attempt & Wrong Vault Auto-Save
+  // 2️⃣ Record Question Attempt & Wrong Vault Auto-Save (With Date & Metadata)
   static Future<void> recordQuestionAttempt({
     required bool isCorrect,
     required String chapterName,
@@ -63,8 +63,28 @@ class UserStatsService {
       await prefs.setInt(_keyCorrect, correct + 1);
     } else if (wrongQuestionJson != null) {
       List<String> wrongList = prefs.getStringList(_keyWrongQuestions) ?? [];
+      
+      // Auto-add Date & Default Vault Metadata
+      DateTime now = DateTime.now();
+      wrongQuestionJson['dateAdded'] = "${now.day}/${now.month}/${now.year}";
+      wrongQuestionJson['chapterName'] = chapterName;
+      wrongQuestionJson['masteryStreak'] = wrongQuestionJson['masteryStreak'] ?? 0;
+      wrongQuestionJson['errorTag'] = wrongQuestionJson['errorTag'] ?? '';
+
       String encoded = jsonEncode(wrongQuestionJson);
-      if (!wrongList.contains(encoded)) {
+      
+      // Prevent duplicates by checking Question text
+      String qText = wrongQuestionJson['qe'] ?? wrongQuestionJson['qh'] ?? '';
+      bool alreadyExists = wrongList.any((item) {
+        try {
+          var m = jsonDecode(item);
+          return (m['qe'] ?? m['qh'] ?? '') == qText;
+        } catch (_) {
+          return false;
+        }
+      });
+
+      if (!alreadyExists) {
         wrongList.add(encoded);
         await prefs.setStringList(_keyWrongQuestions, wrongList);
       }
@@ -81,7 +101,47 @@ class UserStatsService {
     await prefs.setInt(dateKey, todayCount + 1);
   }
 
-  // 3️⃣ Toggle Save/Bookmark Question
+  // 3️⃣ Update Error Tag Persistent (Silly vs Concept Gap)
+  static Future<void> updateWrongQuestionTag(int index, String tag) async {
+    final prefs = await SharedPreferences.getInstance();
+    List<String> rawList = prefs.getStringList(_keyWrongQuestions) ?? [];
+    if (index < 0 || index >= rawList.length) return;
+
+    try {
+      Map<String, dynamic> qMap = jsonDecode(rawList[index]);
+      qMap['errorTag'] = tag;
+      rawList[index] = jsonEncode(qMap);
+      await prefs.setStringList(_keyWrongQuestions, rawList);
+    } catch (_) {}
+  }
+
+  // 4️⃣ Smart Revision Ladder: Increment Mastery Streak & Auto-Graduate on 2/2
+  static Future<bool> incrementQuestionMastery(int index) async {
+    final prefs = await SharedPreferences.getInstance();
+    List<String> rawList = prefs.getStringList(_keyWrongQuestions) ?? [];
+    if (index < 0 || index >= rawList.length) return false;
+
+    try {
+      Map<String, dynamic> qMap = jsonDecode(rawList[index]);
+      int currentStreak = (qMap['masteryStreak'] ?? 0) + 1;
+
+      if (currentStreak >= 2) {
+        // 🎯 Auto-Graduate / Delete from Vault on 2/2
+        rawList.removeAt(index);
+        await prefs.setStringList(_keyWrongQuestions, rawList);
+        return true; // Indicates graduated!
+      } else {
+        qMap['masteryStreak'] = currentStreak;
+        rawList[index] = jsonEncode(qMap);
+        await prefs.setStringList(_keyWrongQuestions, rawList);
+        return false;
+      }
+    } catch (_) {
+      return false;
+    }
+  }
+
+  // 5️⃣ Toggle Save/Bookmark Question
   static Future<bool> toggleBookmark(Map<String, dynamic> questionJson) async {
     final prefs = await SharedPreferences.getInstance();
     List<String> savedList = prefs.getStringList(_keySavedQuestions) ?? [];
@@ -99,21 +159,21 @@ class UserStatsService {
     return isSaved;
   }
 
-  // 4️⃣ Get Bookmarked Questions
+  // 6️⃣ Get Bookmarked Questions
   static Future<List<Map<String, dynamic>>> getSavedQuestions() async {
     final prefs = await SharedPreferences.getInstance();
     List<String> rawList = prefs.getStringList(_keySavedQuestions) ?? [];
     return rawList.map((item) => jsonDecode(item) as Map<String, dynamic>).toList();
   }
 
-  // 5️⃣ Get Wrong Questions
+  // 7️⃣ Get Wrong Questions
   static Future<List<Map<String, dynamic>>> getWrongQuestions() async {
     final prefs = await SharedPreferences.getInstance();
     List<String> rawList = prefs.getStringList(_keyWrongQuestions) ?? [];
     return rawList.map((item) => jsonDecode(item) as Map<String, dynamic>).toList();
   }
 
-  // 6️⃣ Clear Wrong Vault Questions
+  // 8️⃣ Clear Wrong Vault Questions
   static Future<void> clearWrongQuestions() async {
     final prefs = await SharedPreferences.getInstance();
     await prefs.remove(_keyWrongQuestions);
