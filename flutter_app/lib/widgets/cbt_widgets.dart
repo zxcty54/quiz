@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:fl_chart/fl_chart.dart';
 import 'package:http/http.dart' as http;
-import '../services/ai_explainer.dart';
+import '../services/ai_explainer_service.dart';
 
 // 1️⃣ TCS QUESTION PALETTE DRAWER
 class CbtPaletteDrawer extends StatelessWidget {
