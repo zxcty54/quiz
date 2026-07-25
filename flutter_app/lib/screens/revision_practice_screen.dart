@@ -24,18 +24,20 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
   int? _selectedOptionIndex;
   bool _isAnswered = false;
   bool _isHindi = false;
+  bool _isBookmarked = false;
 
   Timer? _timer;
-  int _timeLeft = 15;
+  int _timeLeft = 30; // ⏱️ Set to 30 Seconds
 
   // 💬 AI Custom Doubt State Tracking
-  final Map<int, int> _asksRemainingPerQuestion = {}; // Track remaining asks per question index
-  final Map<int, List<Map<String, String>>> _aiChatHistory = {}; // Q-Index -> [{doubt, response}]
+  final Map<int, int> _asksRemainingPerQuestion = {}; 
+  final Map<int, List<Map<String, String>>> _aiChatHistory = {}; 
 
   @override
   void initState() {
     super.initState();
     _startTimer();
+    _checkBookmarkStatus();
   }
 
   @override
@@ -44,10 +46,52 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
     super.dispose();
   }
 
+  // 📌 Check if current question is saved in Bookmarks
+  void _checkBookmarkStatus() async {
+    final savedList = await UserStatsService.getSavedQuestions();
+    final currentQ = widget.questions[_currentIndex];
+    String currentText = currentQ.getText(_isHindi);
+
+    bool exists = savedList.any((item) {
+      String qText = item['qe'] ?? item['qh'] ?? '';
+      return qText == currentText || qText == currentQ.qe;
+    });
+
+    if (mounted) {
+      setState(() => _isBookmarked = exists);
+    }
+  }
+
+  // 📌 Toggle Bookmark Action
+  void _toggleBookmarkQuestion() async {
+    final currentQ = widget.questions[_currentIndex];
+    Map<String, dynamic> qJson = {
+      'qe': currentQ.qe,
+      'qh': currentQ.qh,
+      'se': currentQ.se,
+      'sh': currentQ.sh,
+      'options': currentQ.options,
+      'answerIndex': currentQ.answerIndex,
+      'explanation': currentQ.explanation,
+    };
+
+    bool saved = await UserStatsService.toggleBookmark(qJson);
+
+    if (mounted) {
+      setState(() => _isBookmarked = saved);
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(
+          content: Text(saved ? '📌 Question Saved to Bookmarks!' : '🗑️ Removed from Bookmarks'),
+          duration: const Duration(seconds: 1),
+        ),
+      );
+    }
+  }
+
   void _startTimer() {
     _timer?.cancel();
     setState(() {
-      _timeLeft = 15;
+      _timeLeft = 30; // ⏱️ Reset to 30 Seconds
       _isAnswered = false;
       _selectedOptionIndex = null;
     });
@@ -61,7 +105,7 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
           _isAnswered = true;
         });
 
-        // ⏱️ Timeout counts as incorrect/unattempted
+        // ⏱️ Timeout counts as incorrect -> Save to Wrong Vault
         final currentQ = widget.questions[_currentIndex];
         UserStatsService.recordQuestionAttempt(
           isCorrect: false,
@@ -277,6 +321,7 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
         _currentIndex++;
       });
       _startTimer();
+      _checkBookmarkStatus();
     } else {
       _timer?.cancel();
       _showCompletionDialog();
@@ -289,6 +334,7 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
         _currentIndex--;
       });
       _startTimer();
+      _checkBookmarkStatus();
     }
   }
 
@@ -327,6 +373,15 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
         title: Text(widget.testTitle, style: const TextStyle(fontSize: 15, fontWeight: FontWeight.bold)),
         elevation: 0,
         actions: [
+          // 🔖 BOOKMARK TOGGLE BUTTON
+          IconButton(
+            icon: Icon(
+              _isBookmarked ? Icons.bookmark : Icons.bookmark_outline,
+              color: _isBookmarked ? const Color(0xFF2563EB) : Colors.grey,
+            ),
+            onPressed: _toggleBookmarkQuestion,
+            tooltip: "Bookmark Question",
+          ),
           IconButton(
             icon: Container(
               padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
@@ -542,43 +597,4 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
                     const SizedBox(height: 8),
                     MathFormattedText(
                       text: currentQ.explanation,
-                      textStyle: const TextStyle(fontSize: 12.5, color: Color(0xFF14532D), height: 1.4),
-                    ),
-                  ],
-                ),
-              ),
-            ],
-            const SizedBox(height: 70),
-          ],
-        ),
-      ),
-
-      bottomSheet: Container(
-        padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
-        decoration: BoxDecoration(
-          color: Theme.of(context).cardColor,
-          boxShadow: [BoxShadow(color: Colors.black.withOpacity(0.05), blurRadius: 5)],
-        ),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            ElevatedButton.icon(
-              onPressed: _currentIndex > 0 ? _goToPreviousQuestion : null,
-              icon: const Icon(Icons.arrow_back_ios_rounded, size: 14),
-              label: const Text('Previous'),
-            ),
-            ElevatedButton.icon(
-              style: ElevatedButton.styleFrom(
-                backgroundColor: const Color(0xFF2563EB),
-                foregroundColor: Colors.white,
-              ),
-              onPressed: _goToNextQuestion,
-              label: Text(_currentIndex == widget.questions.length - 1 ? 'Finish 🏁' : 'Next ➔'),
-              icon: const Icon(Icons.arrow_forward_ios_rounded, size: 14),
-            ),
-          ],
-        ),
-      ),
-    );
-  }
-}
+                      textStyle: const TextStyle(fontSize: 12.
