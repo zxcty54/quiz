@@ -142,9 +142,10 @@ STRICT RESPONSE FORMAT (Roman Hinglish only, NO Devanagari Hindi text, BANNED: '
     }
   }
 
-  // 3️⃣ LIVE DYNAMIC "WHY WRONG?" EXPLAINER (TAG-AWARE PROFESSOR TRAP & CONCEPT BUILDER)
+  // 3️⃣ LIVE DYNAMIC "WHY WRONG?" EXPLAINER (SINGLE COMPREHENSIVE 200-500 WORDS RESPONSE)
   static Future<String> explainWhyWrong({
     required String question,
+    required List<String> options,
     required String userChoice,
     required String correctAnswer,
     required String userTag, // '50-50' or 'concept'
@@ -156,42 +157,49 @@ STRICT RESPONSE FORMAT (Roman Hinglish only, NO Devanagari Hindi text, BANNED: '
       String tagInstruction = "";
       if (userTag == '50-50') {
         tagInstruction = """
-STUDENT TAG: '50-50 TRAP'
-- Student double options ke beech confuse hokar examiner/bureaucrat ke trap me aagaye.
-- Explain clearly how option "$userChoice" was set up as a subtle distractor trap.
-- Compare option "$userChoice" vs "$correctAnswer" side by side and show the exact word or rule difference.
+STUDENT TAG: '🟡 50-50 TRAP'
+- Student ne do options ke beech confuse hokar Option "$userChoice" choose kiya.
+- Detail me samjhayein ki Examiner ne Option "$userChoice" ko kaise 'distractor trap' ki tarah design kiya tha.
 """;
       } else {
         tagInstruction = """
-STUDENT TAG: 'DIDN'T KNOW / CONCEPT GAP'
-- Student lacks basic theory or knowledge on this concept.
-- Teach the core principle behind this question from zero using a simple daily life example.
-- Explain clearly why "$correctAnswer" is the accurate fact.
+STUDENT TAG: '🔴 DIDN'T KNOW / CONCEPT GAP'
+- Student ko is question ka core concept nahi pata tha.
+- Concept ko zero-level se samjhayein simple daily-life example ke sath.
 """;
       }
 
       final String prompt = """
-You are a senior BPSC/BSSC Exam Professor.
-Analyze why this specific option was wrong for the student.
+You are a senior, highly experienced BPSC/BSSC Exam Professor. Provide a comprehensive, non-bookish breakdown for a student who got this question wrong.
 
 QUESTION: $question
-STUDENT'S CHOICE: "${userChoice.isNotEmpty ? userChoice : 'Incorrect Option'}"
+ALL OPTIONS: ${options.join(', ')}
+STUDENT CHOSE: "$userChoice"
 CORRECT ANSWER: "$correctAnswer"
 
 $tagInstruction
 
 STRICT RULES:
-1. Speak in clean, respectful Roman Hinglish.
-2. STRICTLY BANNED WORDS: Do NOT use "Aare", "Dost", "Arey", "Bhai", "Bhaiya". Use polite words like "Dekhiye", "Is option me...".
-3. Strictly NO Devanagari text.
-4. Keep explanation precise, educational and punchy.
+1. Speak directly to the student in clean, respectful Roman Hinglish. STRICTLY BANNED WORDS: 'Aare', 'Dost', 'Arey', 'Bhai', 'Bhaiya'. Use polite terms like "Dekhiye", "Is option me...", "Aapne yahan...".
+2. ABSOLUTELY NO NCERT or bookish copy-paste language. Explain in practical, human teaching style.
+3. NO filler text or repetitive introductions. Every single line must be 100% exam-relevant.
+4. MUST include a relatable real-life analogy or daily object comparison to make the core logic crystal clear.
+5. PROACTIVELY resolve common sub-doubts and confusions that students usually face in this specific topic so they never need to ask again.
+6. TARGET WORD COUNT: Provide a detailed, deep-dive explanation strictly between 200 to 450 words.
 
-FORMAT YOUR RESPONSE IN BULLET POINTS:
+FORMAT YOUR RESPONSE IN THIS EXACT STRUCTURE:
 
-🧐 TRAP & CONCEPT BREAKDOWN:
-• [Point 1: Direct analysis of option "$userChoice"]
-• [Point 2: Core technical difference vs "$correctAnswer"]
-• [Point 3: Key exam tip to avoid this trap in future]
+🎯 AAPKI GALTI AUR EXAMINER KA TRAP:
+(Analyze clearly why Option "$userChoice" was chosen by the student and the exact subtle word/rule trap in it)
+
+⚡ SAHI ANSWER KA CONCEPT & REAL-LIFE ANALOGY:
+(Explain why "$correctAnswer" is accurate using a simple, practical daily life example)
+
+🔍 IS TOPIC KE COMMON DOUBTS & CONFUSIONS:
+(Proactively address and clear sub-doubts/confusions related to this topic)
+
+📌 EXAM HALL PRO-TIP:
+(One punchy rule/trick to avoid making this mistake again in BPSC/BSSC)
 """;
 
       final response = await http.post(
@@ -205,16 +213,16 @@ FORMAT YOUR RESPONSE IN BULLET POINTS:
           "messages": [
             {"role": "user", "content": prompt}
           ],
-          "max_tokens": 400,
-          "temperature": 0.3,
+          "max_tokens": 1200,
+          "temperature": 0.5,
         }),
-      ).timeout(const Duration(seconds: 12));
+      ).timeout(const Duration(seconds: 20));
 
       if (response.statusCode == 200) {
         final data = jsonDecode(utf8.decode(response.bodyBytes));
-        return data['choices'][0]['message']['content'] ?? "Reasoning generate nahi ho paaya.";
+        return data['choices'][0]['message']['content'] ?? "Analysis generate nahi ho paaya.";
       }
-      return "Service busy hai. Dubara 'Analyze Trap ⚡' par tap karein.";
+      return "Service busy hai. Dubara try karein.";
     } catch (e) {
       return "Network connection slow hai. Dubara try karein.";
     }
