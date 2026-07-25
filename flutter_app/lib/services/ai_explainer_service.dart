@@ -1,29 +1,105 @@
 import 'dart:convert';
+import 'package:flutter/foundation.dart';
 import 'package:http/http.dart' as http;
 
 class AiExplainerService {
-  // 🛡️ API Key Assembly (Groq Key)
-  static String _getKey1() {
-    const String p1 = "gsk_LoIYC9hBn";
-    const String p2 = "66OK3T1NFjUWGdyb3F";
-    const String p3 = "YoSIE1A9ngox2B6TYJgrIhZgU";
-    return "$p1$p2$p3";
+  // 🔐 Environment Variables Se Keys Fetch Ho Rahi Hain (GitHub Secrets Safe)
+  static const String _googleApiKey = String.fromEnvironment('GOOGLE_API_KEY');
+  static const String _groqApiKey = String.fromEnvironment('GROQ_API_KEY');
+
+  // 🎯 Google AI Studio Priority List
+  static const List<String> _googleEndpoints = [
+    "https://generativelanguage.googleapis.com/v1beta/models/gemma-4-26b-a4b-it:generateContent", // 1️⃣ Primary: Gemma 4 26B
+    "https://generativelanguage.googleapis.com/v1beta/models/gemma-4-31b-it:generateContent",     // 2️⃣ Fallback 1: Gemma 4 31B
+    "https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent", // 3️⃣ Fallback 2: Gemini Flash Lite
+  ];
+
+  // 🔄 HYBRID ROUTING ENGINE (Google AI Studio -> Groq API Backup)
+  static Future<String> _generateWithHybridRouting(
+    String prompt, {
+    int maxTokens = 600,
+    double temperature = 0.5,
+  }) async {
+    // Step 1: Try Google AI Studio Models (Sequence: Gemma 26B -> Gemma 31B -> Gemini Flash Lite)
+    if (_googleApiKey.isNotEmpty) {
+      for (String url in _googleEndpoints) {
+        try {
+          final response = await http.post(
+            Uri.parse("$url?key=$_googleApiKey"),
+            headers: {"Content-Type": "application/json; charset=utf-8"},
+            body: jsonEncode({
+              "contents": [
+                {
+                  "parts": [
+                    {"text": prompt}
+                  ]
+                }
+              ],
+              "generationConfig": {
+                "temperature": temperature,
+                "maxOutputTokens": maxTokens,
+              }
+            }),
+          ).timeout(const Duration(seconds: 10));
+
+          if (response.statusCode == 200) {
+            final Map<String, dynamic> data = jsonDecode(utf8.decode(response.bodyBytes));
+            final candidates = data['candidates'] as List?;
+            if (candidates != null && candidates.isNotEmpty) {
+              final parts = candidates[0]['content']['parts'] as List?;
+              if (parts != null && parts.isNotEmpty) {
+                return parts[0]['text'].toString().trim();
+              }
+            }
+          } else {
+            debugPrint("Google AI Studio Status ${response.statusCode} on $url, trying next endpoint...");
+          }
+        } catch (e) {
+          debugPrint("Google AI Connection Error on $url: $e");
+        }
+      }
+    }
+
+    // Step 2: Fallback to Groq API (Llama 3.3 70B) if all Google models fail
+    if (_groqApiKey.isNotEmpty) {
+      try {
+        debugPrint("Routing to Groq API Backup (Llama 3.3 70B)...");
+        final response = await http.post(
+          Uri.parse("https://api.groq.com/openai/v1/chat/completions"),
+          headers: {
+            "Authorization": "Bearer $_groqApiKey",
+            "Content-Type": "application/json; charset=utf-8",
+          },
+          body: jsonEncode({
+            "model": "llama-3.3-70b-versatile",
+            "messages": [
+              {"role": "user", "content": prompt}
+            ],
+            "max_tokens": maxTokens,
+            "temperature": temperature,
+          }),
+        ).timeout(const Duration(seconds: 12));
+
+        if (response.statusCode == 200) {
+          final data = jsonDecode(utf8.decode(response.bodyBytes));
+          return data['choices'][0]['message']['content']?.toString().trim() ?? "Doubt resolve nahi ho paya.";
+        }
+      } catch (e) {
+        debugPrint("Groq API Connection Error: $e");
+      }
+    }
+
+    return "⚠️ AI Service busy hai. Kripya thodi der baad dobara try karein.";
   }
 
-  static String get _activeApiKey => _getKey1();
-
-  // 1️⃣ CUSTOM DOUBT SOLVER (For Revision Hub, Sectional Mocks, and Vault Questions)
+  // 1️⃣ CUSTOM DOUBT SOLVER
   static Future<String> askCustomDoubt({
     required String question,
     required List<String> options,
     required String correctAnswer,
     required String userDoubt,
   }) async {
-    final apiKey = _activeApiKey;
-    if (apiKey.isEmpty) return "⚠️ AI Service active nahi hai.";
-
-    try {
-      final String prompt = """
+    final String prompt = """
 You are a respectful, highly experienced, and friendly BPSC/BSSC Exam Professor from Patna explaining concepts in simple, everyday conversational Hinglish (the way students talk in daily life or chat).
 
 CONTEXT:
@@ -43,53 +119,27 @@ STRICT RULES:
 7. Strictly NO Devanagari script. Use simple Roman Hinglish only.
 """;
 
-      final response = await http.post(
-        Uri.parse("https://api.groq.com/openai/v1/chat/completions"),
-        headers: {
-          "Authorization": "Bearer $apiKey",
-          "Content-Type": "application/json; charset=utf-8",
-        },
-        body: jsonEncode({
-          "model": "llama-3.3-70b-versatile",
-          "messages": [
-            {"role": "user", "content": prompt}
-          ],
-          "max_tokens": 600,
-          "temperature": 0.7,
-        }),
-      ).timeout(const Duration(seconds: 15));
-
-      if (response.statusCode == 200) {
-        final data = jsonDecode(utf8.decode(response.bodyBytes));
-        return data['choices'][0]['message']['content'] ?? "Doubt resolve nahi ho paya.";
-      }
-      return "⚠️ Service busy hai. Dubara try karein.";
-    } catch (e) {
-      return "⚠️ Connection Error: $e";
-    }
+    return await _generateWithHybridRouting(prompt, maxTokens: 600, temperature: 0.7);
   }
 
   // 2️⃣ DOCTOR DIAGNOSIS & PRESCRIPTION HEALTH AUDIT
   static Future<String> analyzeWrongQuestions(List<Map<String, dynamic>> wrongQuestions) async {
-    final apiKey = _activeApiKey;
-    if (apiKey.isEmpty) return "⚠️ AI Doctor unavailable.";
     if (wrongQuestions.isEmpty) return "🎉 100% Healthy! Vault Zero achieved, koi wrong question nahi hai.";
 
-    try {
-      int trap5050Count = 0;
-      int conceptGapCount = 0;
+    int trap5050Count = 0;
+    int conceptGapCount = 0;
 
-      List<String> qSummaries = wrongQuestions.take(15).map((q) {
-        String qText = q['qe'] ?? q['qh'] ?? q['question'] ?? 'Question';
-        String tag = q['errorTag'] ?? 'unmarked';
-        if (tag == '50-50') trap5050Count++;
-        if (tag == 'concept') conceptGapCount++;
+    List<String> qSummaries = wrongQuestions.take(15).map((q) {
+      String qText = q['qe'] ?? q['qh'] ?? q['question'] ?? 'Question';
+      String tag = q['errorTag'] ?? 'unmarked';
+      if (tag == '50-50') trap5050Count++;
+      if (tag == 'concept') conceptGapCount++;
 
-        String chapter = q['chapterName'] ?? q['chapter'] ?? 'Sectional Mock';
-        return "- [Chapter: $chapter | User Tag: $tag] Q: $qText";
-      }).toList();
+      String chapter = q['chapterName'] ?? q['chapter'] ?? 'Sectional Mock';
+      return "- [Chapter: $chapter | User Tag: $tag] Q: $qText";
+    }).toList();
 
-      final String prompt = """
+    final String prompt = """
 You are an expert AI Study Doctor for BPSC & BSSC Exam Aspirants.
 Analyze the student's wrong questions vault like a medical diagnostic checkup.
 
@@ -117,30 +167,7 @@ STRICT RESPONSE FORMAT (Simple Roman Hinglish only, NO Devanagari Hindi text, BA
 ⏱️ TOTAL REHAB TIME: Done in 25 Minutes
 """;
 
-      final response = await http.post(
-        Uri.parse("https://api.groq.com/openai/v1/chat/completions"),
-        headers: {
-          "Authorization": "Bearer $apiKey",
-          "Content-Type": "application/json; charset=utf-8",
-        },
-        body: jsonEncode({
-          "model": "llama-3.3-70b-versatile",
-          "messages": [
-            {"role": "user", "content": prompt}
-          ],
-          "max_tokens": 600,
-          "temperature": 0.3,
-        }),
-      ).timeout(const Duration(seconds: 15));
-
-      if (response.statusCode == 200) {
-        final data = jsonDecode(utf8.decode(response.bodyBytes));
-        return data['choices'][0]['message']['content'] ?? "Health report generate nahi ho paya.";
-      }
-      return "⚠️ Service busy hai. Dubara try karein.";
-    } catch (e) {
-      return "⚠️ Error analyzing health: $e";
-    }
+    return await _generateWithHybridRouting(prompt, maxTokens: 600, temperature: 0.3);
   }
 
   // 3️⃣ LIVE DYNAMIC "WHY WRONG?" EXPLAINER (SIMPLE HINGLISH, 180-280 WORDS MAX)
@@ -151,26 +178,22 @@ STRICT RESPONSE FORMAT (Simple Roman Hinglish only, NO Devanagari Hindi text, BA
     required String correctAnswer,
     required String userTag, // '50-50' or 'concept'
   }) async {
-    final apiKey = _activeApiKey;
-    if (apiKey.isEmpty) return "AI Service current moment par active nahi hai.";
-
-    try {
-      String tagInstruction = "";
-      if (userTag == '50-50') {
-        tagInstruction = """
+    String tagInstruction = "";
+    if (userTag == '50-50') {
+      tagInstruction = """
 STUDENT TAG: '🟡 50-50 TRAP'
 - Student ne do options ke beech confuse hokar Option "$userChoice" choose kiya.
 - Detail me samjhayein ki Examiner ne Option "$userChoice" ko kaise 'distractor trap' ki tarah design kiya tha.
 """;
-      } else {
-        tagInstruction = """
+    } else {
+      tagInstruction = """
 STUDENT TAG: '🔴 DIDN'T KNOW / CONCEPT GAP'
 - Student ko is question ka core concept nahi pata tha.
 - Concept ko zero-level se samjhayein simple daily-life example ke sath.
 """;
-      }
+    }
 
-      final String prompt = """
+    final String prompt = """
 You are a senior, highly experienced BPSC/BSSC Exam Professor. Provide a concise, clear, and non-bookish breakdown for a student who got this question wrong.
 
 QUESTION: $question
@@ -200,30 +223,7 @@ FORMAT YOUR RESPONSE IN THIS EXACT STRUCTURE:
 (Proactively clear 1-2 common sub-doubts related to this topic)
 """;
 
-      final response = await http.post(
-        Uri.parse("https://api.groq.com/openai/v1/chat/completions"),
-        headers: {
-          "Authorization": "Bearer $apiKey",
-          "Content-Type": "application/json; charset=utf-8",
-        },
-        body: jsonEncode({
-          "model": "llama-3.3-70b-versatile",
-          "messages": [
-            {"role": "user", "content": prompt}
-          ],
-          "max_tokens": 700,
-          "temperature": 0.5,
-        }),
-      ).timeout(const Duration(seconds: 18));
-
-      if (response.statusCode == 200) {
-        final data = jsonDecode(utf8.decode(response.bodyBytes));
-        return data['choices'][0]['message']['content'] ?? "Analysis generate nahi ho paaya.";
-      }
-      return "Service busy hai. Dubara try karein.";
-    } catch (e) {
-      return "Network connection slow hai. Dubara try karein.";
-    }
+    return await _generateWithHybridRouting(prompt, maxTokens: 700, temperature: 0.5);
   }
 
   // 4️⃣ COMPATIBILITY METHOD FOR OLD WIDGETS
