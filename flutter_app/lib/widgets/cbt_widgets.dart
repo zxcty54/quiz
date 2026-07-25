@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:fl_chart/fl_chart.dart';
 import 'package:http/http.dart' as http;
 import '../services/ai_explainer_service.dart';
+import 'math_text.dart';
 
 // 1️⃣ TCS QUESTION PALETTE DRAWER
 class CbtPaletteDrawer extends StatelessWidget {
@@ -129,17 +130,19 @@ class CbtPieChartCard extends StatelessWidget {
   }
 }
 
-// 3️⃣ AI EXPLANATION BUTTON WIDGET
+// 3️⃣ AI EXPLANATION BUTTON (WITH CUSTOM INPUT BOX & 2-ASK LIMIT)
 class AiExplanationButton extends StatefulWidget {
   final String question;
   final List<String> options;
   final String correctAnswer;
+  final String existingExplanation;
 
   const AiExplanationButton({
     super.key,
     required this.question,
     required this.options,
     required this.correctAnswer,
+    this.existingExplanation = '',
   });
 
   @override
@@ -147,22 +150,163 @@ class AiExplanationButton extends StatefulWidget {
 }
 
 class _AiExplanationButtonState extends State<AiExplanationButton> {
-  bool _isLoading = false;
-  String? _explanation;
+  int _asksLeft = 2;
+  final List<Map<String, String>> _chatHistory = [];
 
-  void _fetchAiExplanation() async {
-    setState(() => _isLoading = true);
-    final result = await AiExplainerService.getExplanation(
-      question: widget.question,
-      options: widget.options,
-      correctAnswer: widget.correctAnswer,
+  void _openCustomDoubtSheet() {
+    TextEditingController doubtController = TextEditingController();
+    bool isAsking = false;
+
+    showModalBottomSheet(
+      context: context,
+      isScrollControlled: true,
+      shape: const RoundedRectangleBorder(
+        borderRadius: BorderRadius.vertical(top: Radius.circular(20)),
+      ),
+      builder: (ctx) {
+        return StatefulBuilder(
+          builder: (context, setModalState) {
+            return Padding(
+              padding: EdgeInsets.only(
+                bottom: MediaQuery.of(context).viewInsets.bottom,
+                left: 16,
+                right: 16,
+                top: 16,
+              ),
+              child: SingleChildScrollView(
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        const Row(
+                          children: [
+                            Text('🤖', style: TextStyle(fontSize: 20)),
+                            SizedBox(width: 6),
+                            Text('Ask AI Custom Doubt', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15)),
+                          ],
+                        ),
+                        Container(
+                          padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 2),
+                          decoration: BoxDecoration(
+                            color: _asksLeft > 0 ? const Color(0xFFDCFCE7) : const Color(0xFFFEE2E2),
+                            borderRadius: BorderRadius.circular(10),
+                          ),
+                          child: Text(
+                            _asksLeft > 0 ? '$_asksLeft Asks Left' : '🔒 Limit Reached',
+                            style: TextStyle(
+                              fontSize: 10,
+                              fontWeight: FontWeight.bold,
+                              color: _asksLeft > 0 ? Colors.green.shade800 : Colors.red.shade800,
+                            ),
+                          ),
+                        )
+                      ],
+                    ),
+                    const SizedBox(height: 12),
+
+                    // Chat History for this question
+                    ..._chatHistory.map((chat) => Container(
+                          margin: const EdgeInsets.only(bottom: 10),
+                          padding: const EdgeInsets.all(12),
+                          decoration: BoxDecoration(
+                            color: Colors.grey.shade100,
+                            borderRadius: BorderRadius.circular(10),
+                            border: Border.all(color: Colors.grey.shade300),
+                          ),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                "❓ Your Doubt: ${chat['doubt']}",
+                                style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 12.5, color: Color(0xFF2563EB)),
+                              ),
+                              const Divider(height: 12),
+                              MathFormattedText(
+                                text: chat['response']!,
+                                textStyle: const TextStyle(fontSize: 12.5, height: 1.4, color: Colors.black87),
+                              ),
+                            ],
+                          ),
+                        )),
+
+                    if (_asksLeft > 0) ...[
+                      TextField(
+                        controller: doubtController,
+                        maxLines: 2,
+                        minLines: 1,
+                        decoration: const InputDecoration(
+                          hintText: 'Type your exact doubt (e.g. Methane kyu nahi hua answer?)',
+                          hintStyle: TextStyle(fontSize: 12, color: Colors.grey),
+                          border: OutlineInputBorder(),
+                          contentPadding: EdgeInsets.all(10),
+                        ),
+                      ),
+                      const SizedBox(height: 10),
+                      SizedBox(
+                        width: double.infinity,
+                        child: ElevatedButton.icon(
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor: const Color(0xFF2563EB),
+                            foregroundColor: Colors.white,
+                            padding: const EdgeInsets.symmetric(vertical: 10),
+                          ),
+                          onPressed: isAsking
+                              ? null
+                              : () async {
+                                  if (doubtController.text.trim().isEmpty) return;
+                                  setModalState(() => isAsking = true);
+
+                                  String userQuery = doubtController.text.trim();
+
+                                  String aiResp = await AiExplainerService.askCustomDoubt(
+                                    question: widget.question,
+                                    options: widget.options,
+                                    correctAnswer: widget.correctAnswer,
+                                    explanation: widget.existingExplanation,
+                                    userDoubt: userQuery,
+                                  );
+
+                                  setState(() {
+                                    _asksLeft--;
+                                    _chatHistory.add({
+                                      'doubt': userQuery,
+                                      'response': aiResp,
+                                    });
+                                  });
+
+                                  setModalState(() {
+                                    isAsking = false;
+                                    doubtController.clear();
+                                  });
+                                },
+                          icon: isAsking
+                              ? const SizedBox(width: 16, height: 16, child: CircularProgressIndicator(color: Colors.white, strokeWidth: 2))
+                              : const Icon(Icons.send_rounded, size: 16),
+                          label: Text(isAsking ? 'Analyzing Deep Logic...' : 'Get AI Explanation 🚀'),
+                        ),
+                      )
+                    ] else ...[
+                      Container(
+                        padding: const EdgeInsets.all(10),
+                        alignment: Alignment.center,
+                        child: const Text(
+                          '🔒 Question-wise 2 doubts limit complete ho chuki hai.',
+                          style: TextStyle(fontSize: 11.5, color: Colors.grey, fontWeight: FontWeight.w600),
+                        ),
+                      )
+                    ],
+                    const SizedBox(height: 16),
+                  ],
+                ),
+              ),
+            );
+          },
+        );
+      },
     );
-    if (mounted) {
-      setState(() {
-        _explanation = result;
-        _isLoading = false;
-      });
-    }
   }
 
   @override
@@ -170,41 +314,19 @@ class _AiExplanationButtonState extends State<AiExplanationButton> {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        if (_explanation == null)
-          OutlinedButton.icon(
-            style: OutlinedButton.styleFrom(
-              foregroundColor: const Color(0xFF7C3AED),
-              side: const BorderSide(color: Color(0xFF7C3AED)),
-            ),
-            onPressed: _isLoading ? null : _fetchAiExplanation,
-            icon: _isLoading
-                ? const SizedBox(width: 14, height: 14, child: CircularProgressIndicator(strokeWidth: 2, color: Color(0xFF7C3AED)))
-                : const Text('🤖'),
-            label: Text(_isLoading ? 'Llama AI Soch Raha Hai...' : 'Ask Llama AI Explanation', style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 12)),
+        OutlinedButton.icon(
+          style: OutlinedButton.styleFrom(
+            foregroundColor: const Color(0xFF2563EB),
+            side: const BorderSide(color: Color(0xFF2563EB)),
+            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
           ),
-        if (_explanation != null) ...[
-          Container(
-            padding: const EdgeInsets.all(12),
-            margin: const EdgeInsets.only(top: 8),
-            decoration: BoxDecoration(
-              color: const Color(0xFFF3E8FF),
-              borderRadius: BorderRadius.circular(8),
-              border: Border.all(color: const Color(0xFFD8B4FE)),
-            ),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                const Row(
-                  children: [
-                    Text('🤖 Llama AI Mentor Explanation:', style: TextStyle(fontWeight: FontWeight.bold, color: Color(0xFF6B21A8), fontSize: 12)),
-                  ],
-                ),
-                const SizedBox(height: 6),
-                Text(_explanation!, style: const TextStyle(fontSize: 12.5, color: Color(0xFF3B0764), height: 1.4)),
-              ],
-            ),
-          )
-        ]
+          onPressed: _openCustomDoubtSheet,
+          icon: const Text('🤖', style: TextStyle(fontSize: 16)),
+          label: Text(
+            _chatHistory.isEmpty ? 'Ask AI Custom Doubt' : 'View AI Discussion (${_chatHistory.length})',
+            style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 12),
+          ),
+        ),
       ],
     );
   }
