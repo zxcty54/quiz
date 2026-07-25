@@ -134,7 +134,6 @@ class _SectionalCbtScreenState extends State<SectionalCbtScreen> {
       final q = widget.questions[i];
       final userAns = _userAnswers[i]; // null if skipped / unattempted
 
-      // 🛑 CRITICAL FIX: Only process questions that were ATTEMPTED
       if (userAns != null) {
         bool isCorrect = (userAns == q.answerIndex);
 
@@ -161,17 +160,14 @@ class _SectionalCbtScreenState extends State<SectionalCbtScreen> {
               'answerIndex': q.answerIndex,
               'explanation': q.explanation,
             },
-            userSelectedOption: q.options[userAns], // 👈 Saves user's exact chosen option
+            userSelectedOption: q.options[userAns],
           );
         }
       }
-      // Skipped/Unattempted questions are completely ignored!
     }
 
-    // ⚡ Local Cache Tracker Update
     await UserStatsService.recordMockTest(questionsAttempted: _userAnswers.length);
 
-    // 🤫 Save local summary for exit alert
     TelegramTracker.recordTestCompletion(
       widget.testTitle,
       "Sahi: $correctCount, Galat: $wrongCount / Total: ${widget.questions.length}",
@@ -379,7 +375,7 @@ class _SectionalCbtScreenState extends State<SectionalCbtScreen> {
     );
   }
 
-  // 📊 RESULT REPORT SCREEN
+  // 📊 RESULT REPORT SCREEN (TOKEN-FREE & CLEAN)
   Widget _buildResultReportScreen() {
     int total = widget.questions.length;
     int correct = 0;
@@ -476,13 +472,30 @@ class _SectionalCbtScreenState extends State<SectionalCbtScreen> {
                             LatexText("Explanation: ${q.explanation.isNotEmpty ? q.explanation : 'N/A'}", style: const TextStyle(fontSize: 12, color: Colors.black87)),
                             const SizedBox(height: 10),
 
-                            AiExplanationButton(
-                              question: q.qe,
-                              options: q.options,
-                              correctAnswer: q.options[q.answerIndex],
-                              existingExplanation: q.explanation,
-                            ),
-                            const SizedBox(height: 10),
+                            // 💡 Smart Direction Message for Wrong Questions only
+                            if (!isCorrect && userAns != null) ...[
+                              Container(
+                                padding: const EdgeInsets.all(8),
+                                decoration: BoxDecoration(
+                                  color: const Color(0xFFEFF6FF),
+                                  borderRadius: BorderRadius.circular(6),
+                                  border: Border.all(color: const Color(0xFFBFDBFE)),
+                                ),
+                                child: const Row(
+                                  children: [
+                                    Text("💡", style: TextStyle(fontSize: 14)),
+                                    SizedBox(width: 8),
+                                    Expanded(
+                                      child: Text(
+                                        "AI Analysis ke liye apne Profile ke 'Wrong Question Vault' par jayein.",
+                                        style: TextStyle(fontSize: 11.5, color: Color(0xFF1E40AF), fontWeight: FontWeight.bold),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                              const SizedBox(height: 10),
+                            ],
 
                             WikiContributionBox(
                               subFolder: widget.subFolder,
