@@ -221,7 +221,6 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
             ),
             EligibilityCheckerWidget(isDarkMode: _isDarkMode, onTapUrl: _openWebsiteUrl),
             const SizedBox(height: 16),
-            // 📅 LAUNCH ROADMAP
             _buildLaunchRoadmapCard(),
             const SizedBox(height: 16),
             const TelegramCreatorWidget(),
@@ -505,15 +504,17 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
     }
   }
 
-  // 1️⃣ REVISION HUB PRACTICE LAUNCHER
+  // 1️⃣ REVISION HUB PRACTICE LAUNCHER (FIXED WITH JSDELIVR CDN & ENCODING)
   void _launchRevisionPractice(BuildContext context, String title, String path) async {
     TelegramTracker.logActivity("Started Revision Practice: $title");
     showDialog(context: context, barrierDismissible: false, builder: (ctx) => const Center(child: CircularProgressIndicator()));
     
-    String finalPath = path.startsWith("http") ? path : "https://raw.githubusercontent.com/zxcty54/quiz/main/$path";
+    String finalUrl = path.startsWith("http") 
+        ? path 
+        : Uri.encodeFull("https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/$path");
     
     try {
-      final res = await http.get(Uri.parse(finalPath));
+      final res = await http.get(Uri.parse(finalUrl));
       if (context.mounted) Navigator.pop(context);
       if (res.statusCode == 200) {
         List body = jsonDecode(res.body);
@@ -525,22 +526,31 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
               builder: (ctx) => RevisionPracticeScreen(testTitle: title, questions: qList),
             ),
           );
+        } else if (context.mounted) {
+          ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('⚠️ No questions found in this set.')));
         }
+      } else if (context.mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('⚠️ Failed to load set (Error ${res.statusCode}). Please check GitHub path.')));
       }
     } catch (e) {
-      if (context.mounted) Navigator.pop(context);
+      if (context.mounted) {
+        Navigator.pop(context);
+        ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('⚠️ Network error: $e')));
+      }
     }
   }
 
-  // 2️⃣ SECTIONAL CBT MOCK LAUNCHER
+  // 2️⃣ SECTIONAL CBT MOCK LAUNCHER (FIXED WITH JSDELIVR CDN & ENCODING)
   void _launchCbtMock(BuildContext context, String title, String path) async {
     TelegramTracker.logActivity("Started Sectional CBT Mock: $title");
     showDialog(context: context, barrierDismissible: false, builder: (ctx) => const Center(child: CircularProgressIndicator()));
     
-    String finalPath = path.startsWith("http") ? path : "https://raw.githubusercontent.com/zxcty54/quiz/main/$path";
+    String finalUrl = path.startsWith("http") 
+        ? path 
+        : Uri.encodeFull("https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/$path");
     
     try {
-      final res = await http.get(Uri.parse(finalPath));
+      final res = await http.get(Uri.parse(finalUrl));
       if (context.mounted) Navigator.pop(context);
       if (res.statusCode == 200) {
         List body = jsonDecode(res.body);
@@ -552,10 +562,17 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
               builder: (ctx) => SectionalCbtScreen(testTitle: title, questions: qList, subFolder: path),
             ),
           );
+        } else if (context.mounted) {
+          ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('⚠️ No questions found in this set.')));
         }
+      } else if (context.mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('⚠️ Failed to load set (Error ${res.statusCode}). Please check GitHub path.')));
       }
     } catch (e) {
-      if (context.mounted) Navigator.pop(context);
+      if (context.mounted) {
+        Navigator.pop(context);
+        ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('⚠️ Network error: $e')));
+      }
     }
   }
 
