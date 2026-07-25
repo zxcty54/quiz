@@ -147,7 +147,64 @@ STRICT RESPONSE FORMAT (Roman Hinglish only, NO Devanagari Hindi text):
     }
   }
 
-  // 3️⃣ COMPATIBILITY METHOD FOR OLD WIDGETS
+  // 3️⃣ PERSONALIZED "WHY WRONG?" EXPLAINER (Targets User Choice)
+  static Future<String> explainWhyWrong({
+    required String question,
+    required String userChoice,
+    required String correctAnswer,
+    required String explanation,
+  }) async {
+    final apiKey = _activeApiKey;
+    if (apiKey.isEmpty) return "Tumne '$userChoice' choose kiya jabki correct '$correctAnswer' hai.";
+
+    try {
+      final String prompt = """
+You are a warm, sharp exam mentor.
+A student got this question WRONG.
+
+Question: $question
+Student's Wrong Choice: "$userChoice"
+Correct Answer: "$correctAnswer"
+Standard Logic: $explanation
+
+Task: Directly address the student in 3-4 bullet points in crisp Hinglish (Roman Hindi).
+Explain EXACTLY why their specific choice "$userChoice" was incorrect/trap, and why "$correctAnswer" is correct.
+
+Format strictly like this:
+Tumne "$userChoice" choose kiya.
+Lekin:
+• [Point 1 about their choice]
+• [Point 2 key concept difference]
+• [Final core rule/fact]
+""";
+
+      final response = await http.post(
+        Uri.parse("https://api.groq.com/openai/v1/chat/completions"),
+        headers: {
+          "Authorization": "Bearer $apiKey",
+          "Content-Type": "application/json; charset=utf-8",
+        },
+        body: jsonEncode({
+          "model": "llama-3.3-70b-versatile",
+          "messages": [
+            {"role": "user", "content": prompt}
+          ],
+          "max_tokens": 300,
+          "temperature": 0.3,
+        }),
+      ).timeout(const Duration(seconds: 10));
+
+      if (response.statusCode == 200) {
+        final data = jsonDecode(utf8.decode(response.bodyBytes));
+        return data['choices'][0]['message']['content'] ?? "";
+      }
+      return "Tumne '$userChoice' choose kiya tha jo incorrect tha.";
+    } catch (e) {
+      return "Tumne '$userChoice' select kiya tha.";
+    }
+  }
+
+  // 4️⃣ COMPATIBILITY METHOD FOR OLD WIDGETS
   static Future<String> getExplanation({
     required String question,
     required List<String> options,
