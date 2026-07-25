@@ -46,12 +46,13 @@ class UserStatsService {
     };
   }
 
-  // 2️⃣ Record Question Attempt & Wrong Vault Auto-Save (With Date & Metadata)
+  // 2️⃣ Record Question Attempt & Wrong Vault Auto-Save (Saves User's Selected Option)
   static Future<void> recordQuestionAttempt({
     required bool isCorrect,
     required String chapterName,
     required String chapterPath,
     Map<String, dynamic>? wrongQuestionJson,
+    String? userSelectedOption, // 👈 Saves user's personal choice
   }) async {
     final prefs = await SharedPreferences.getInstance();
 
@@ -70,6 +71,11 @@ class UserStatsService {
       wrongQuestionJson['chapterName'] = chapterName;
       wrongQuestionJson['masteryStreak'] = wrongQuestionJson['masteryStreak'] ?? 0;
       wrongQuestionJson['errorTag'] = wrongQuestionJson['errorTag'] ?? '';
+      
+      // 🎯 SAVE USER'S PERSONAL WRONG CHOICE
+      if (userSelectedOption != null && userSelectedOption.isNotEmpty) {
+        wrongQuestionJson['userSelectedOption'] = userSelectedOption;
+      }
 
       String encoded = jsonEncode(wrongQuestionJson);
       
@@ -101,7 +107,7 @@ class UserStatsService {
     await prefs.setInt(dateKey, todayCount + 1);
   }
 
-  // 3️⃣ Update Error Tag Persistent (Silly vs Concept Gap)
+  // 3️⃣ Update Error Tag Persistent (50-50 Trap vs Concept Gap)
   static Future<void> updateWrongQuestionTag(int index, String tag) async {
     final prefs = await SharedPreferences.getInstance();
     List<String> rawList = prefs.getStringList(_keyWrongQuestions) ?? [];
