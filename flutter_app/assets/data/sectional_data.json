@@ -1,6 +1,6 @@
 {
   "bpsc": {
-    "title": "🏛️ BPSC PCS Core Zone",
+    "title": "🏛️ BPSC PCS Special Zone",
     "total_sets": 28,
     "path_prefix": "bpsc/science/Modern History/set"
   },
@@ -18,16 +18,26 @@
   ],
   "bssc_cgl": [
     {
-      "title": "🎯 BSSC Graduate Level Special Mocks",
-      "sets": 12,
-      "folder": "bssc/science"
+      "title": "📐 BSSC CGL Aptitude Mocks",
+      "sets": 5,
+      "folder": "bssc_cgl_aptitude"
+    },
+    {
+      "title": "🧠 BSSC CGL Reasoning Mocks",
+      "sets": 5,
+      "folder": "bssc_cgl_reasoning"
     }
   ],
   "bssc_inter": [
     {
-      "title": "🔥 BSSC Inter Level Top 100 MCQs",
-      "sets": 15,
-      "folder": "bssc/science"
+      "title": "📐 BSSC 10+2 Inter Level Aptitude Mocks",
+      "sets": 5,
+      "folder": "bssc_inter_aptitude"
+    },
+    {
+      "title": "🧠 BSSC 10+2 Inter Level Reasoning Mocks",
+      "sets": 5,
+      "folder": "bssc_inter_reasoning"
     }
   ]
 }
