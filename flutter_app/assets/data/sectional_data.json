@@ -6,38 +6,43 @@
   },
   "ssc": [
     {
-      "title": "⚡ SSC CGL / NTPC Science Mocks",
-      "sets": 10,
-      "folder": "bssc/science"
+      "title": "⚡ General Reasoning Sets",
+      "sets": 5,
+      "folder": "reasoning"
     },
     {
-      "title": "📜 SSC Static GK Practice Sets",
+      "title": "📐 Quantitative Aptitude Sets",
       "sets": 5,
-      "folder": "bpsc/science/Polity"
+      "folder": "aptitude"
+    },
+    {
+      "title": "📖 English Language Sets",
+      "sets": 5,
+      "folder": "english"
     }
   ],
   "bssc_cgl": [
     {
-      "title": "📐 BSSC CGL Aptitude Mocks",
-      "sets": 5,
-      "folder": "bssc_cgl_aptitude"
-    },
-    {
-      "title": "🧠 BSSC CGL Reasoning Mocks",
+      "title": "🧠 BSSC CGL Reasoning Sets",
       "sets": 5,
       "folder": "bssc_cgl_reasoning"
+    },
+    {
+      "title": "📐 BSSC CGL Mathematics / Aptitude Sets",
+      "sets": 5,
+      "folder": "bssc_cgl_aptitude"
     }
   ],
   "bssc_inter": [
     {
-      "title": "📐 BSSC 10+2 Inter Level Aptitude Mocks",
-      "sets": 5,
-      "folder": "bssc_inter_aptitude"
-    },
-    {
-      "title": "🧠 BSSC 10+2 Inter Level Reasoning Mocks",
+      "title": "🧠 Mental Ability & Reasoning Sets",
       "sets": 5,
       "folder": "bssc_inter_reasoning"
+    },
+    {
+      "title": "📐 General Mathematics Sets",
+      "sets": 5,
+      "folder": "bssc_inter_aptitude"
     }
   ]
 }
