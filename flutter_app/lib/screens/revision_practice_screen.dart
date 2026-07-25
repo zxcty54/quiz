@@ -27,7 +27,7 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
   bool _isBookmarked = false;
 
   Timer? _timer;
-  int _timeLeft = 30; // ⏱️ Set to 30 Seconds
+  int _timeLeft = 30; // ⏱️ 30 Seconds Timer
 
   // 💬 AI Custom Doubt State Tracking
   final Map<int, int> _asksRemainingPerQuestion = {}; 
@@ -452,7 +452,7 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
             ),
             const SizedBox(height: 18),
 
-            // Question Box (With KaTeX Formula Support)
+            // Question Box
             Card(
               elevation: 1,
               shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
@@ -481,7 +481,7 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
             ),
             const SizedBox(height: 16),
 
-            // Options (With KaTeX Formula Support)
+            // Options List
             ...List.generate(currentQ.options.length, (index) {
               final optionText = currentQ.options[index];
               final isCorrect = index == currentQ.answerIndex;
@@ -597,4 +597,43 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
                     const SizedBox(height: 8),
                     MathFormattedText(
                       text: currentQ.explanation,
-                      textStyle: const TextStyle(fontSize: 12.
+                      textStyle: const TextStyle(fontSize: 12.5, color: Color(0xFF14532D), height: 1.4),
+                    ),
+                  ],
+                ),
+              ),
+            ],
+            const SizedBox(height: 70),
+          ],
+        ),
+      ),
+
+      bottomSheet: Container(
+        padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
+        decoration: BoxDecoration(
+          color: Theme.of(context).cardColor,
+          boxShadow: [BoxShadow(color: Colors.black.withOpacity(0.05), blurRadius: 5)],
+        ),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            ElevatedButton.icon(
+              onPressed: _currentIndex > 0 ? _goToPreviousQuestion : null,
+              icon: const Icon(Icons.arrow_back_ios_rounded, size: 14),
+              label: const Text('Previous'),
+            ),
+            ElevatedButton.icon(
+              style: ElevatedButton.styleFrom(
+                backgroundColor: const Color(0xFF2563EB),
+                foregroundColor: Colors.white,
+              ),
+              onPressed: _goToNextQuestion,
+              label: Text(_currentIndex == widget.questions.length - 1 ? 'Finish 🏁' : 'Next ➔'),
+              icon: const Icon(Icons.arrow_forward_ios_rounded, size: 14),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
