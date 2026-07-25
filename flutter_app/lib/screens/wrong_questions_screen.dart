@@ -26,6 +26,10 @@ class _WrongQuestionsScreenState extends State<WrongQuestionsScreen> {
   final Map<int, List<Map<String, String>>> _vaultAiChatHistory = {};
   final Map<int, bool> _vaultAskedStatus = {};
 
+  // Store "Why Wrong" fast AI responses (Index -> Text)
+  final Map<int, String> _whyWrongAiResponses = {};
+  final Map<int, bool> _whyWrongLoading = {};
+
   @override
   void initState() {
     super.initState();
@@ -370,6 +374,23 @@ class _WrongQuestionsScreenState extends State<WrongQuestionsScreen> {
     );
   }
 
+  // 🎯 FETCH PERSONALIZED "WHY WRONG" AI EXPLANATION
+  void _fetchWhyWrongAi(Question q, String userChoice, int index) async {
+    setState(() => _whyWrongLoading[index] = true);
+    String result = await AiExplainerService.explainWhyWrong(
+      question: q.getText(_isHindi),
+      userChoice: userChoice,
+      correctAnswer: q.options[q.answerIndex],
+      explanation: q.explanation,
+    );
+    if (mounted) {
+      setState(() {
+        _whyWrongAiResponses[index] = result;
+        _whyWrongLoading[index] = false;
+      });
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -436,7 +457,7 @@ class _WrongQuestionsScreenState extends State<WrongQuestionsScreen> {
           return ListView(
             padding: const EdgeInsets.all(16),
             children: [
-              // 🩺 1. AI CONCEPT HEALTH REPORT (STUDY DOCTOR CARD)
+              // 🩺 1. AI CONCEPT HEALTH REPORT CARD
               Card(
                 color: const Color(0xFFEFF6FF),
                 shape: RoundedRectangleBorder(
@@ -486,7 +507,7 @@ class _WrongQuestionsScreenState extends State<WrongQuestionsScreen> {
               ),
               const SizedBox(height: 12),
 
-              // 🛠️ 2. RESUME FIX CARD (QUESTIONS WAITING)
+              // 🛠️ 2. RESUME FIX CARD
               Card(
                 color: const Color(0xFFECFDF5),
                 shape: RoundedRectangleBorder(
@@ -544,9 +565,12 @@ class _WrongQuestionsScreenState extends State<WrongQuestionsScreen> {
                 String dateStr = qJson['dateAdded'] ?? 'Recently';
                 int masteryStreak = qJson['masteryStreak'] ?? 0;
                 String savedTag = qJson['errorTag'] ?? '';
+                String? userSelectedOpt = qJson['userSelectedOption'];
 
                 bool isExpanded = _isExplanationExpanded[index] ?? false;
                 bool hasAsked = _vaultAskedStatus[index] ?? false;
+                bool isWhyWrongLoading = _whyWrongLoading[index] ?? false;
+                String? whyWrongAiText = _whyWrongAiResponses[index];
 
                 return Card(
                   margin: const EdgeInsets.only(bottom: 12),
@@ -666,6 +690,64 @@ class _WrongQuestionsScreenState extends State<WrongQuestionsScreen> {
                           );
                         }),
 
+                        // 🎯 PERSONALIZED "❌ WHY WRONG?" BOX
+                        const SizedBox(height: 8),
+                        Container(
+                          width: double.infinity,
+                          padding: const EdgeInsets.all(10),
+                          decoration: BoxDecoration(
+                            color: const Color(0xFFFFF1F2),
+                            borderRadius: BorderRadius.circular(8),
+                            border: Border.all(color: const Color(0xFFFECDD3)),
+                          ),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                children: [
+                                  Row(
+                                    children: [
+                                      const Text('❌ Why Wrong?', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 11.5, color: Color(0xFFBE123C))),
+                                      if (userSelectedOpt != null && userSelectedOpt.isNotEmpty) ...[
+                                        const SizedBox(width: 4),
+                                        Text('(Tumne "$userSelectedOpt" choose kiya)', style: const TextStyle(fontSize: 10, fontStyle: FontStyle.italic, color: Colors.black54)),
+                                      ]
+                                    ],
+                                  ),
+                                  if (userSelectedOpt != null && userSelectedOpt.isNotEmpty && whyWrongAiText == null)
+                                    InkWell(
+                                      onTap: isWhyWrongLoading ? null : () => _fetchWhyWrongAi(q, userSelectedOpt, index),
+                                      child: Container(
+                                        padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
+                                        decoration: BoxDecoration(
+                                          color: const Color(0xFFBE123C),
+                                          borderRadius: BorderRadius.circular(4),
+                                        ),
+                                        child: isWhyWrongLoading
+                                            ? const SizedBox(width: 10, height: 10, child: CircularProgressIndicator(strokeWidth: 1.5, color: Colors.white))
+                                            : const Text('Explain Choice ⚡', style: TextStyle(fontSize: 9.5, color: Colors.white, fontWeight: FontWeight.bold)),
+                                      ),
+                                    )
+                                ],
+                              ),
+                              if (whyWrongAiText != null) ...[
+                                const SizedBox(height: 6),
+                                MathFormattedText(
+                                  text: whyWrongAiText,
+                                  textStyle: const TextStyle(fontSize: 11.5, color: Color(0xFF881337), height: 1.35),
+                                ),
+                              ] else if (userSelectedOpt == null || userSelectedOpt.isEmpty) ...[
+                                const SizedBox(height: 4),
+                                Text(
+                                  "Medium change hone par speed & wavelength badalti hain, lekin Frequency constant rehti hai.",
+                                  style: TextStyle(fontSize: 11, color: Colors.red.shade900, height: 1.3),
+                                ),
+                              ]
+                            ],
+                          ),
+                        ),
+
                         const SizedBox(height: 8),
 
                         Row(
@@ -776,20 +858,3 @@ class _WrongQuestionsScreenState extends State<WrongQuestionsScreen> {
       onTap: onTap,
       child: Container(
         padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
-        decoration: BoxDecoration(
-          color: isSelected ? color.withOpacity(0.15) : Colors.grey.shade100,
-          borderRadius: BorderRadius.circular(12),
-          border: Border.all(color: isSelected ? color : Colors.grey.shade300, width: isSelected ? 1.5 : 1),
-        ),
-        child: Text(
-          label,
-          style: TextStyle(
-            fontSize: 10.5,
-            fontWeight: isSelected ? FontWeight.bold : FontWeight.w500,
-            color: isSelected ? color : Colors.grey.shade700,
-          ),
-        ),
-      ),
-    );
-  }
-}
