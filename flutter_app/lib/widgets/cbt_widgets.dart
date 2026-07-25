@@ -130,19 +130,17 @@ class CbtPieChartCard extends StatelessWidget {
   }
 }
 
-// 3️⃣ AI EXPLANATION BUTTON (WITH CUSTOM INPUT BOX & 2-ASK LIMIT)
+// 3️⃣ AI EXPLANATION BUTTON (WITH CUSTOM INPUT BOX, 100 CHARS & 1-ASK LIMIT)
 class AiExplanationButton extends StatefulWidget {
   final String question;
   final List<String> options;
   final String correctAnswer;
-  final String existingExplanation;
 
   const AiExplanationButton({
     super.key,
     required this.question,
     required this.options,
     required this.correctAnswer,
-    this.existingExplanation = '',
   });
 
   @override
@@ -150,7 +148,7 @@ class AiExplanationButton extends StatefulWidget {
 }
 
 class _AiExplanationButtonState extends State<AiExplanationButton> {
-  int _asksLeft = 2;
+  int _asksLeft = 1; // 🛑 1 SINGLE ASK PER QUESTION
   final List<Map<String, String>> _chatHistory = [];
 
   void _openCustomDoubtSheet() {
@@ -195,7 +193,7 @@ class _AiExplanationButtonState extends State<AiExplanationButton> {
                             borderRadius: BorderRadius.circular(10),
                           ),
                           child: Text(
-                            _asksLeft > 0 ? '$_asksLeft Asks Left' : '🔒 Limit Reached',
+                            _asksLeft > 0 ? '$_asksLeft Ask Left' : '🔒 Limit Reached',
                             style: TextStyle(
                               fontSize: 10,
                               fontWeight: FontWeight.bold,
@@ -235,10 +233,11 @@ class _AiExplanationButtonState extends State<AiExplanationButton> {
                     if (_asksLeft > 0) ...[
                       TextField(
                         controller: doubtController,
+                        maxLength: 100, // 🛑 STRICT 100 CHARACTERS LIMIT
                         maxLines: 2,
                         minLines: 1,
                         decoration: const InputDecoration(
-                          hintText: 'Type your exact doubt (e.g. Methane kyu nahi hua answer?)',
+                          hintText: 'Type your exact doubt (Max 100 chars)...',
                           hintStyle: TextStyle(fontSize: 12, color: Colors.grey),
                           border: OutlineInputBorder(),
                           contentPadding: EdgeInsets.all(10),
@@ -261,11 +260,11 @@ class _AiExplanationButtonState extends State<AiExplanationButton> {
 
                                   String userQuery = doubtController.text.trim();
 
+                                  // 🛑 REMOVED 'explanation:' PARAMETER
                                   String aiResp = await AiExplainerService.askCustomDoubt(
                                     question: widget.question,
                                     options: widget.options,
                                     correctAnswer: widget.correctAnswer,
-                                    explanation: widget.existingExplanation,
                                     userDoubt: userQuery,
                                   );
 
@@ -293,7 +292,7 @@ class _AiExplanationButtonState extends State<AiExplanationButton> {
                         padding: const EdgeInsets.all(10),
                         alignment: Alignment.center,
                         child: const Text(
-                          '🔒 Question-wise 2 doubts limit complete ho chuki hai.',
+                          '🔒 Question-wise 1 doubt limit complete ho chuki hai.',
                           style: TextStyle(fontSize: 11.5, color: Colors.grey, fontWeight: FontWeight.w600),
                         ),
                       )
