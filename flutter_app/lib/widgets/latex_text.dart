@@ -7,10 +7,30 @@ class LatexText extends StatelessWidget {
 
   const LatexText(this.text, {super.key, this.style});
 
-  // 🎯 EXACT WEBSITE CLEAN & FIX LATEX LOGIC IN DART
+  // 🎯 1. HTML FORMATTING CLEANER (Fixes <b>, </b>, <br/> raw tags)
+  static String cleanHtmlFormatting(String str) {
+    if (str.isEmpty) return "";
+    String cleaned = str;
+
+    // A. <br>, <br/> ko clean line break (\n) me badlein
+    cleaned = cleaned.replaceAll(RegExp(r'<br\s*/?>', caseSensitive: false), '\n');
+
+    // B. Sirf specific HTML tags (<b>, </b>, <i>, </i>, <span>, <div>, <p>) ko hatayein
+    // Note: Isse Physics/Maths ke '<' aur '>' (jaise x < 5) comparison signs SAFE rahenge!
+    cleaned = cleaned.replaceAll(
+      RegExp(r'</?(b|i|u|strong|em|p|div|span|font)[^>]*>', caseSensitive: false), 
+      ''
+    );
+
+    return cleaned;
+  }
+
+  // 🎯 2. EXACT WEBSITE CLEAN & FIX LATEX LOGIC IN DART
   static String cleanAndFixLaTeX(String rawStr) {
     if (rawStr.isEmpty) return "";
-    String cleanText = rawStr;
+    
+    // Pehle HTML Tags Safai Karein
+    String cleanText = cleanHtmlFormatting(rawStr);
 
     // 1. Fix double backslashes from JSON escaping (\\\\ -> \)
     cleanText = cleanText.replaceAll(r'\\', r'\');
