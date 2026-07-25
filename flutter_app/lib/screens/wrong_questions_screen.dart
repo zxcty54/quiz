@@ -394,14 +394,15 @@ class _WrongQuestionsScreenState extends State<WrongQuestionsScreen> {
     );
   }
 
-  // 🎯 FETCH PERSONALIZED "WHY WRONG" AI EXPLANATION
-  void _fetchWhyWrongAi(Question q, String userChoice, int index) async {
+  // 🎯 PURE LIVE AI TRIGGER FOR "WHY WRONG" WITH TAG CONTEXT
+  void _fetchWhyWrongAi(Question q, String userChoice, String userTag, int index) async {
     setState(() => _whyWrongLoading[index] = true);
     String result = await AiExplainerService.explainWhyWrong(
       question: q.getText(_isHindi),
-      userChoice: userChoice,
+      userChoice: userChoice.isNotEmpty ? userChoice : "No Option Selected",
       correctAnswer: q.options[q.answerIndex],
       explanation: q.explanation,
+      userTag: userTag,
     );
     if (mounted) {
       setState(() {
@@ -586,7 +587,7 @@ class _WrongQuestionsScreenState extends State<WrongQuestionsScreen> {
                 String dateStr = qJson['dateAdded'] ?? 'Recently';
                 int masteryStreak = qJson['masteryStreak'] ?? 0;
                 String savedTag = qJson['errorTag'] ?? '';
-                String? userSelectedOpt = qJson['userSelectedOption'];
+                String userSelectedOpt = (qJson['userSelectedOption'] ?? '').toString();
 
                 bool isExpanded = _isExplanationExpanded[index] ?? false;
                 bool hasAsked = _vaultAskedStatus[index] ?? false;
@@ -602,7 +603,7 @@ class _WrongQuestionsScreenState extends State<WrongQuestionsScreen> {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        // 🟢 OVERFLOW-PROOF HEADER
+                        // OVERFLOW-PROOF HEADER
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
@@ -719,7 +720,7 @@ class _WrongQuestionsScreenState extends State<WrongQuestionsScreen> {
                           );
                         }),
 
-                        // 🎯 DYNAMIC PERSONALIZED "❌ WHY WRONG?" BOX
+                        // 🎯 LIVE AI "❌ WHY WRONG?" BOX (NO STATIC JSON)
                         const SizedBox(height: 8),
                         Container(
                           width: double.infinity,
@@ -739,11 +740,11 @@ class _WrongQuestionsScreenState extends State<WrongQuestionsScreen> {
                                     child: Row(
                                       children: [
                                         const Text('❌ Why Wrong?', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 11.5, color: Color(0xFFBE123C))),
-                                        if (userSelectedOpt != null && userSelectedOpt.isNotEmpty) ...[
+                                        if (userSelectedOpt.isNotEmpty) ...[
                                           const SizedBox(width: 4),
                                           Expanded(
                                             child: Text(
-                                              '(Tumne "$userSelectedOpt" choose kiya)',
+                                              '(Selected: "$userSelectedOpt")',
                                               maxLines: 1,
                                               overflow: TextOverflow.ellipsis,
                                               style: const TextStyle(fontSize: 10, fontStyle: FontStyle.italic, color: Colors.black54),
@@ -753,39 +754,42 @@ class _WrongQuestionsScreenState extends State<WrongQuestionsScreen> {
                                       ],
                                     ),
                                   ),
-                                  if (userSelectedOpt != null && userSelectedOpt.isNotEmpty && whyWrongAiText == null)
-                                    InkWell(
-                                      onTap: isWhyWrongLoading ? null : () => _fetchWhyWrongAi(q, userSelectedOpt, index),
-                                      child: Container(
-                                        padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
-                                        decoration: BoxDecoration(
-                                          color: const Color(0xFFBE123C),
-                                          borderRadius: BorderRadius.circular(4),
-                                        ),
-                                        child: isWhyWrongLoading
-                                            ? const SizedBox(width: 10, height: 10, child: CircularProgressIndicator(strokeWidth: 1.5, color: Colors.white))
-                                            : const Text('Explain Choice ⚡', style: TextStyle(fontSize: 9.5, color: Colors.white, fontWeight: FontWeight.bold)),
+                                  InkWell(
+                                    onTap: isWhyWrongLoading ? null : () => _fetchWhyWrongAi(q, userSelectedOpt, savedTag, index),
+                                    child: Container(
+                                      padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
+                                      decoration: BoxDecoration(
+                                        color: const Color(0xFFBE123C),
+                                        borderRadius: BorderRadius.circular(6),
                                       ),
-                                    )
+                                      child: isWhyWrongLoading
+                                          ? const SizedBox(width: 12, height: 12, child: CircularProgressIndicator(strokeWidth: 1.5, color: Colors.white))
+                                          : Text(
+                                              whyWrongAiText == null ? 'Analyze Trap ⚡' : 'Re-Analyze ⚡',
+                                              style: const TextStyle(fontSize: 9.5, color: Colors.white, fontWeight: FontWeight.bold),
+                                            ),
+                                    ),
+                                  )
                                 ],
                               ),
+
                               if (whyWrongAiText != null) ...[
+                                const SizedBox(height: 8),
+                                const Divider(height: 1, color: Color(0xFFFECDD3)),
                                 const SizedBox(height: 6),
                                 MathFormattedText(
                                   text: whyWrongAiText,
                                   textStyle: const TextStyle(fontSize: 11.5, color: Color(0xFF881337), height: 1.35),
                                 ),
-                              ] else if (q.explanation.isNotEmpty && (userSelectedOpt == null || userSelectedOpt.isEmpty)) ...[
-                                const SizedBox(height: 4),
-                                MathFormattedText(
-                                  text: q.explanation,
-                                  textStyle: TextStyle(fontSize: 11, color: Colors.red.shade900, height: 1.3),
-                                ),
-                              ] else if (userSelectedOpt == null || userSelectedOpt.isEmpty) ...[
-                                const SizedBox(height: 4),
+                              ] else ...[
+                                const SizedBox(height: 6),
                                 Text(
-                                  "Correct option: ${q.options[q.answerIndex]}",
-                                  style: TextStyle(fontSize: 11, color: Colors.red.shade900, height: 1.3),
+                                  savedTag == '50-50'
+                                      ? '🟡 Tag selected: "50-50 Trap". Tap "Analyze Trap ⚡" to reveal the Professor\'s distractor trap.'
+                                      : savedTag == 'concept'
+                                          ? '🔴 Tag selected: "Didn\'t Know". Tap "Analyze Trap ⚡" for a zero-level concept explanation.'
+                                          : '👆 Pehle niche se tag select karein (🟡 50-50 Trap ya 🔴 Didn\'t Know), phir "Analyze Trap ⚡" dabaayein!',
+                                  style: const TextStyle(fontSize: 10.5, color: Color(0xFF9F1239), fontStyle: FontStyle.italic),
                                 ),
                               ]
                             ],
@@ -794,6 +798,7 @@ class _WrongQuestionsScreenState extends State<WrongQuestionsScreen> {
 
                         const SizedBox(height: 8),
 
+                        // 🏷️ NO-JUMP REAL STUDENT TAGGING BAR
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
@@ -897,25 +902,4 @@ class _WrongQuestionsScreenState extends State<WrongQuestionsScreen> {
     required bool isSelected,
     required Color color,
     required VoidCallback onTap,
-  }) {
-    return InkWell(
-      onTap: onTap,
-      child: Container(
-        padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
-        decoration: BoxDecoration(
-          color: isSelected ? color.withOpacity(0.15) : Colors.grey.shade100,
-          borderRadius: BorderRadius.circular(12),
-          border: Border.all(color: isSelected ? color : Colors.grey.shade300, width: isSelected ? 1.5 : 1),
-        ),
-        child: Text(
-          label,
-          style: TextStyle(
-            fontSize: 10.5,
-            fontWeight: isSelected ? FontWeight.bold : FontWeight.w500,
-            color: isSelected ? color : Colors.grey.shade700,
-          ),
-        ),
-      ),
-    );
-  }
-}
+  })
