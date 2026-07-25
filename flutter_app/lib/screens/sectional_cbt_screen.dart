@@ -121,6 +121,7 @@ class _SectionalCbtScreenState extends State<SectionalCbtScreen> {
     }
   }
 
+  // 🎯 FIXED EXAM SUBMISSION LOGIC (SAVES ONLY ATTEMPTED WRONG QUESTIONS)
   void _submitExam() async {
     _examTimer?.cancel();
     _qTimer?.cancel();
@@ -129,37 +130,42 @@ class _SectionalCbtScreenState extends State<SectionalCbtScreen> {
     int correctCount = 0;
     int wrongCount = 0;
 
-    // ⚡ Record stats and send ALL wrong/unattempted questions to Wrong Vault
     for (int i = 0; i < widget.questions.length; i++) {
       final q = widget.questions[i];
-      final userAns = _userAnswers[i];
+      final userAns = _userAnswers[i]; // null if skipped / unattempted
 
-      bool isAttempted = userAns != null;
-      bool isCorrect = isAttempted && (userAns == q.answerIndex);
+      // 🛑 CRITICAL FIX: Only process questions that were ATTEMPTED
+      if (userAns != null) {
+        bool isCorrect = (userAns == q.answerIndex);
 
-      if (isCorrect) {
-        correctCount++;
-      } else if (isAttempted) {
-        wrongCount++;
+        if (isCorrect) {
+          correctCount++;
+          await UserStatsService.recordQuestionAttempt(
+            isCorrect: true,
+            chapterName: widget.testTitle,
+            chapterPath: widget.subFolder,
+          );
+        } else {
+          wrongCount++;
+          // ❌ ONLY ATTEMPTED BUT WRONG QUESTIONS GO TO VAULT!
+          await UserStatsService.recordQuestionAttempt(
+            isCorrect: false,
+            chapterName: widget.testTitle,
+            chapterPath: widget.subFolder,
+            wrongQuestionJson: {
+              'qe': q.qe,
+              'qh': q.qh,
+              'se': q.se,
+              'sh': q.sh,
+              'options': q.options,
+              'answerIndex': q.answerIndex,
+              'explanation': q.explanation,
+            },
+            userSelectedOption: q.options[userAns], // 👈 Saves user's exact chosen option
+          );
+        }
       }
-
-      // Record to Stats & Save Wrong Questions to Vault
-      await UserStatsService.recordQuestionAttempt(
-        isCorrect: isCorrect,
-        chapterName: widget.testTitle,
-        chapterPath: widget.subFolder,
-        wrongQuestionJson: isCorrect
-            ? null
-            : {
-                'qe': q.qe,
-                'qh': q.qh,
-                'se': q.se,
-                'sh': q.sh,
-                'options': q.options,
-                'answerIndex': q.answerIndex,
-                'explanation': q.explanation,
-              },
-      );
+      // Skipped/Unattempted questions are completely ignored!
     }
 
     // ⚡ Local Cache Tracker Update
