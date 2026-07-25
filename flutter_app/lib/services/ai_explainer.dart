@@ -135,4 +135,19 @@ Format:
       return "⚠️ Error analyzing vault: $e";
     }
   }
+
+  // 3️⃣ COMPATIBILITY METHOD FOR OLD CBT WIDGETS
+  static Future<String> getExplanation({
+    required String question,
+    required List<String> options,
+    required String correctAnswer,
+  }) async {
+    return askCustomDoubt(
+      question: question,
+      options: options,
+      correctAnswer: correctAnswer,
+      explanation: '',
+      userDoubt: "Mujhe is question ka conceptual logic samjhayein.",
+    );
+  }
 }
