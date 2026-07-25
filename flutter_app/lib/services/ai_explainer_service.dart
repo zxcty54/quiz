@@ -72,53 +72,63 @@ STRICT TEACHING RULES:
     }
   }
 
-  // 2️⃣ FIXED VAULT PERFORMANCE AUDIT ENGINE (Data-Driven Interpretation)
+  // 2️⃣ TAG-AWARE DATA ANALYTICS PROMPT (Reads User Tags + Question Context)
   static Future<String> analyzeWrongQuestions(List<Map<String, dynamic>> wrongQuestions) async {
     final apiKey = _activeApiKey;
     if (apiKey.isEmpty) return "⚠️ AI Mentor unavailable.";
-    if (wrongQuestions.isEmpty) return "Sabaash! Aapka Vault khali hai, koi wrong question nahi hai.";
+    if (wrongQuestions.isEmpty) return "Sabaash! Vault Zero achieved, koi wrong question nahi hai.";
 
     try {
-      // Build detailed context of wrong questions
+      int sillyCount = 0;
+      int conceptCount = 0;
+
       List<String> qSummaries = wrongQuestions.take(15).map((q) {
         String qText = q['qe'] ?? q['qh'] ?? q['question'] ?? 'Question';
         String exp = q['explanation'] ?? q['e'] ?? '';
-        String chapter = q['chapterName'] ?? q['chapter'] ?? 'Sectional Mock Test';
-        return "- [Source/Chapter: $chapter] Question: $qText | Solution Info: $exp";
+        String tag = q['errorTag'] ?? 'unmarked';
+        if (tag == 'silly') sillyCount++;
+        if (tag == 'concept') conceptCount++;
+
+        String chapter = q['chapterName'] ?? q['chapter'] ?? 'Sectional Mock';
+        return "- [Chapter: $chapter | User Tag: $tag] Question: $qText | Exp: $exp";
       }).toList();
 
       final String prompt = """
 You are an expert AI Exam Analyst for BPSC, BSSC & State Exams.
 Analyze the following list of wrong questions saved in the student's vault:
 
+User Tagged Metrics:
+- Total Silly Mistakes: $sillyCount
+- Total Knowledge/Concept Gaps: $conceptCount
+
+Questions:
 ${qSummaries.join('\n')}
 
 ANALYTICAL INSTRUCTIONS:
-1. For Revision Hub questions (where chapter metadata exists), group errors by Chapter and extract exact Sub-Topics causing failure.
-2. For Sectional Mock questions (set-wise), read the question content & solution to AUTO-DETECT Subject, Main Chapter, and Sub-Topic.
-3. DO NOT write long essays, paragraphs, or bookish explanations.
-4. Output MUST BE strictly structured, data-driven, concise, and in Roman Hinglish (English alphabets me Hindi). Strictly NO Devanagari script.
+1. Include the user's Silly ($sillyCount) vs Concept ($conceptCount) tag ratio in MISTAKE REASON section to tell them if they are rushing or lacking revision.
+2. For Revision Hub questions, group errors by Chapter and extract exact Sub-Topics.
+3. For Sectional Mocks, auto-detect Subject & Sub-topic from text.
+4. Output MUST BE strictly structured, concise Roman Hinglish. Strictly NO Devanagari Hindi text.
 
 STRICT OUTPUT FORMAT:
 
 📊 PATTERN FOUND
-- (Pinpoint exact error trend, e.g., "Revision Hub: Cell Biology me 4 galtiyan hain. Sectional Mock: Statement-based questions me confusion ho raha hai.")
+- (Pinpoint exact error trend)
 
 🤔 MISTAKE REASON
-- (Analyze root cause, e.g., "Overthinking & elimination error between last two options.")
+- (Analyze root cause including Silly vs Concept tag feedback)
 
 ⚡ CONFIDENCE ESTIMATE
-(Subject/Topic level strength bar using ASCII progress bars)
 Biology:  ████████ 80%
 History:  ███ 35%
 
 📌 PRIORITY REVISION TOPICS
-1. [Exact Sub-topic 1 extracted from questions]
-2. [Exact Sub-topic 2 extracted from questions]
-3. [Exact Sub-topic 3 extracted from questions]
+1. [Sub-topic 1]
+2. [Sub-topic 2]
+3. [Sub-topic 3]
 
 🎯 NEXT ACTION
-- (1 short practical line on what to revise before next mock)
+- (1 short practical line)
 """;
 
       final response = await http.post(
