@@ -17,7 +17,6 @@ class AiExplainerService {
     required String question,
     required List<String> options,
     required String correctAnswer,
-    required String explanation,
     required String userDoubt,
   }) async {
     final apiKey = _activeApiKey;
@@ -31,7 +30,6 @@ CONTEXT:
 Question: $question
 Options: ${options.join(', ')}
 Correct Answer: $correctAnswer
-Standard Solution: $explanation
 
 STUDENT'S EXACT DOUBT: "$userDoubt"
 
@@ -40,7 +38,7 @@ STRICT RULES:
 2. STRICTLY BANNED WORDS: Do NOT use casual slangs like "Aare", "Dost", "Arey", "Bhai", "Bhaiya". Use professional terms like "Dekhiye", "Is question me...", "Aapne yahan...".
 3. DO NOT use robotic template headers like 'Direct Answer:', 'Core Concept:', 'Section 1:'.
 4. ALWAYS use a practical, relatable daily-life comparison or analogy.
-5. Explain clearly why the student's doubt point is wrong or right.
+5. Explain clearly why the student's doubt point is wrong or right and why the correct answer is accurate.
 6. Strictly NO Devanagari script (pure Hindi text banned). Use Roman Hinglish only.
 """;
 
@@ -82,13 +80,12 @@ STRICT RULES:
 
       List<String> qSummaries = wrongQuestions.take(15).map((q) {
         String qText = q['qe'] ?? q['qh'] ?? q['question'] ?? 'Question';
-        String exp = q['explanation'] ?? q['e'] ?? '';
         String tag = q['errorTag'] ?? 'unmarked';
         if (tag == '50-50') trap5050Count++;
         if (tag == 'concept') conceptGapCount++;
 
         String chapter = q['chapterName'] ?? q['chapter'] ?? 'Sectional Mock';
-        return "- [Chapter: $chapter | User Tag: $tag] Q: $qText | Exp: $exp";
+        return "- [Chapter: $chapter | User Tag: $tag] Q: $qText";
       }).toList();
 
       final String prompt = """
@@ -150,7 +147,6 @@ STRICT RESPONSE FORMAT (Roman Hinglish only, NO Devanagari Hindi text, BANNED: '
     required String question,
     required String userChoice,
     required String correctAnswer,
-    required String explanation,
     required String userTag, // '50-50' or 'concept'
   }) async {
     final apiKey = _activeApiKey;
@@ -181,7 +177,6 @@ Analyze why this specific option was wrong for the student.
 QUESTION: $question
 STUDENT'S CHOICE: "${userChoice.isNotEmpty ? userChoice : 'Incorrect Option'}"
 CORRECT ANSWER: "$correctAnswer"
-SOLUTION CONTEXT: $explanation
 
 $tagInstruction
 
@@ -235,7 +230,6 @@ FORMAT YOUR RESPONSE IN BULLET POINTS:
       question: question,
       options: options,
       correctAnswer: correctAnswer,
-      explanation: '',
       userDoubt: "Mujhe is question ka conceptual logic aasan daily life example ke sath samjhayein.",
     );
   }
