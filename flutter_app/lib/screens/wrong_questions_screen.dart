@@ -345,7 +345,6 @@ class _WrongQuestionsScreenState extends State<WrongQuestionsScreen> {
 
                                   String userQuery = doubtController.text.trim();
 
-                                  // 🛑 REMOVED 'explanation:' PARAMETER
                                   String aiResp = await AiExplainerService.askCustomDoubt(
                                     question: currentQ.getText(_isHindi),
                                     options: currentQ.options,
@@ -394,16 +393,23 @@ class _WrongQuestionsScreenState extends State<WrongQuestionsScreen> {
     );
   }
 
-  // 🎯 PURE LIVE AI TRIGGER FOR "WHY WRONG" WITH TAG CONTEXT
+  // 🎯 PURE LIVE AI TRIGGER FOR "WHY WRONG" WITH FREEZE PROTECTION & REAL OPTION PASSING
   void _fetchWhyWrongAi(Question q, String userChoice, String userTag, int index) async {
+    // 🛑 Block execution if already analyzed or currently loading
+    if (_whyWrongLoading[index] == true || _whyWrongAiResponses[index] != null) return;
+
     setState(() => _whyWrongLoading[index] = true);
-    // 🛑 REMOVED 'explanation:' PARAMETER
+
+    String selectedOpt = userChoice.trim().isNotEmpty ? userChoice : "Attempted Option";
+
     String result = await AiExplainerService.explainWhyWrong(
       question: q.getText(_isHindi),
-      userChoice: userChoice.isNotEmpty ? userChoice : "No Option Selected",
+      options: q.options,
+      userChoice: selectedOpt,
       correctAnswer: q.options[q.answerIndex],
       userTag: userTag,
     );
+
     if (mounted) {
       setState(() {
         _whyWrongAiResponses[index] = result;
@@ -752,18 +758,23 @@ class _WrongQuestionsScreenState extends State<WrongQuestionsScreen> {
                                       ],
                                     ),
                                   ),
+                                  // 🔒 FROZEN / DISABLED BUTTON WHEN ALREADY ANALYZED
                                   InkWell(
-                                    onTap: isWhyWrongLoading ? null : () => _fetchWhyWrongAi(q, userSelectedOpt, savedTag, index),
+                                    onTap: (isWhyWrongLoading || whyWrongAiText != null) 
+                                        ? null 
+                                        : () => _fetchWhyWrongAi(q, userSelectedOpt, savedTag, index),
                                     child: Container(
-                                      padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
+                                      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
                                       decoration: BoxDecoration(
-                                        color: const Color(0xFFBE123C),
+                                        color: whyWrongAiText != null 
+                                            ? Colors.grey.shade400 
+                                            : const Color(0xFFBE123C),
                                         borderRadius: BorderRadius.circular(6),
                                       ),
                                       child: isWhyWrongLoading
                                           ? const SizedBox(width: 12, height: 12, child: CircularProgressIndicator(strokeWidth: 1.5, color: Colors.white))
                                           : Text(
-                                              whyWrongAiText == null ? 'Analyze Trap ⚡' : 'Re-Analyze ⚡',
+                                              whyWrongAiText != null ? 'Analyzed ✓' : 'Analyze Trap ⚡',
                                               style: const TextStyle(fontSize: 9.5, color: Colors.white, fontWeight: FontWeight.bold),
                                             ),
                                     ),
