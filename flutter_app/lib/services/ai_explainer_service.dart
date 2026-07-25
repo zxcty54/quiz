@@ -12,7 +12,7 @@ class AiExplainerService {
 
   static String get _activeApiKey => _getKey1();
 
-  // 1️⃣ CUSTOM DOUBT SOLVER (Pure Human Teacher Conversational Tone)
+  // 1️⃣ CUSTOM DOUBT SOLVER (For Revision Hub, Sectional Mocks, and Vault Questions)
   static Future<String> askCustomDoubt({
     required String question,
     required List<String> options,
@@ -53,12 +53,12 @@ STRICT TEACHING RULES:
           "Content-Type": "application/json; charset=utf-8",
         },
         body: jsonEncode({
-          "model": "llama-3.3-70b-versatile", // ⚡ Upgraded High-End 70B Model
+          "model": "llama-3.3-70b-versatile",
           "messages": [
             {"role": "user", "content": prompt}
           ],
           "max_tokens": 800,
-          "temperature": 0.7, // Natural and warm conversational tone
+          "temperature": 0.7,
         }),
       ).timeout(const Duration(seconds: 15));
 
@@ -72,36 +72,53 @@ STRICT TEACHING RULES:
     }
   }
 
-  // 2️⃣ AI WRONG VAULT ANALYZER (Weak Area & Smart Advice Generator)
+  // 2️⃣ FIXED VAULT PERFORMANCE AUDIT ENGINE (Data-Driven Interpretation)
   static Future<String> analyzeWrongQuestions(List<Map<String, dynamic>> wrongQuestions) async {
     final apiKey = _activeApiKey;
     if (apiKey.isEmpty) return "⚠️ AI Mentor unavailable.";
     if (wrongQuestions.isEmpty) return "Sabaash! Aapka Vault khali hai, koi wrong question nahi hai.";
 
     try {
+      // Build detailed context of wrong questions
       List<String> qSummaries = wrongQuestions.take(15).map((q) {
         String qText = q['qe'] ?? q['qh'] ?? q['question'] ?? 'Question';
         String exp = q['explanation'] ?? q['e'] ?? '';
-        return "- $qText (Topic/Exp: $exp)";
+        String chapter = q['chapterName'] ?? q['chapter'] ?? 'Sectional Mock Test';
+        return "- [Source/Chapter: $chapter] Question: $qText | Solution Info: $exp";
       }).toList();
 
       final String prompt = """
-You are a master AI Study Mentor for BPSC, BSSC, and Railway exams.
-Below is the list of recent wrong questions attempted by the student:
+You are an expert AI Exam Analyst for BPSC, BSSC & State Exams.
+Analyze the following list of wrong questions saved in the student's vault:
 
 ${qSummaries.join('\n')}
 
-Analyze these mistakes and provide a warm, encouraging Performance Audit Report in simple Hinglish (English alphabets me Hindi).
+ANALYTICAL INSTRUCTIONS:
+1. For Revision Hub questions (where chapter metadata exists), group errors by Chapter and extract exact Sub-Topics causing failure.
+2. For Sectional Mock questions (set-wise), read the question content & solution to AUTO-DETECT Subject, Main Chapter, and Sub-Topic.
+3. DO NOT write long essays, paragraphs, or bookish explanations.
+4. Output MUST BE strictly structured, data-driven, concise, and in Roman Hinglish (English alphabets me Hindi). Strictly NO Devanagari script.
 
-Format:
-📊 WEAK SPOTS IDENTIFIED:
-(Pinpoint exact sub-topics or subjects where the student is making maximum errors)
+STRICT OUTPUT FORMAT:
 
-⚠️ COMMON ERROR PATTERN:
-(Explain WHY they are failing - e.g. Formula confusion, Overthinking, Statement-based traps)
+📊 PATTERN FOUND
+- (Pinpoint exact error trend, e.g., "Revision Hub: Cell Biology me 4 galtiyan hain. Sectional Mock: Statement-based questions me confusion ho raha hai.")
 
-🎯 ACTIONABLE STUDY ADVICE:
-(3 step-by-step practical suggestions to fix these mistakes in 7 days)
+🤔 MISTAKE REASON
+- (Analyze root cause, e.g., "Overthinking & elimination error between last two options.")
+
+⚡ CONFIDENCE ESTIMATE
+(Subject/Topic level strength bar using ASCII progress bars)
+Biology:  ████████ 80%
+History:  ███ 35%
+
+📌 PRIORITY REVISION TOPICS
+1. [Exact Sub-topic 1 extracted from questions]
+2. [Exact Sub-topic 2 extracted from questions]
+3. [Exact Sub-topic 3 extracted from questions]
+
+🎯 NEXT ACTION
+- (1 short practical line on what to revise before next mock)
 """;
 
       final response = await http.post(
@@ -116,7 +133,7 @@ Format:
             {"role": "user", "content": prompt}
           ],
           "max_tokens": 800,
-          "temperature": 0.5,
+          "temperature": 0.4,
         }),
       ).timeout(const Duration(seconds: 15));
 
@@ -124,13 +141,13 @@ Format:
         final data = jsonDecode(utf8.decode(response.bodyBytes));
         return data['choices'][0]['message']['content'] ?? "Analysis generate nahi ho paya.";
       }
-      return "⚠️ Analysis load nahi ho saka.";
+      return "⚠️ Service busy hai. Dubara try karein.";
     } catch (e) {
       return "⚠️ Error analyzing vault: $e";
     }
   }
 
-  // 3️⃣ COMPATIBILITY METHOD FOR OLD CBT WIDGETS
+  // 3️⃣ COMPATIBILITY METHOD FOR OLD WIDGETS
   static Future<String> getExplanation({
     required String question,
     required List<String> options,
