@@ -431,7 +431,38 @@ class _SectionalCbtScreenState extends State<SectionalCbtScreen> {
                     _scoreRow("Correct Answers", "$correct", color: Colors.green),
                     _scoreRow("Wrong Answers", "$wrong", color: Colors.red),
                     _scoreRow("Skipped", "$skipped"),
-                    const Divider(),
+
+                    // 🎯 SMART AUTO-VAULT NOTIFICATION BANNER FOR WRONG QUESTIONS
+                    if (wrong > 0) ...[
+                      const SizedBox(height: 10),
+                      Container(
+                        padding: const EdgeInsets.all(10),
+                        decoration: BoxDecoration(
+                          color: const Color(0xFFEFF6FF),
+                          borderRadius: BorderRadius.circular(8),
+                          border: Border.all(color: const Color(0xFFBFDBFE)),
+                        ),
+                        child: const Row(
+                          children: [
+                            Text("🎯", style: TextStyle(fontSize: 16)),
+                            SizedBox(width: 8),
+                            Expanded(
+                              child: Text(
+                                "Galat questions Vault me save ho gaye hain! Deep AI Trap Analysis ke liye Profile ➔ Wrong Question Vault dekhein.",
+                                style: TextStyle(
+                                  fontSize: 11.5,
+                                  color: Color(0xFF1E40AF),
+                                  fontWeight: FontWeight.bold,
+                                  height: 1.35,
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+
+                    const Divider(height: 20),
                     _scoreRow("Exam Cutoff", "$cutoffTarget Marks ($examName)"),
                     _scoreRow("Your Final Score", score.toStringAsFixed(2), color: const Color(0xFF2575FC), isBold: true),
                   ],
