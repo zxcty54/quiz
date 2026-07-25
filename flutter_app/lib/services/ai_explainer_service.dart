@@ -12,7 +12,7 @@ class AiExplainerService {
 
   static String get _activeApiKey => _getKey1();
 
-  // 1️⃣ CUSTOM DOUBT SOLVER (User Input + Deep Conceptual Clarity)
+  // 1️⃣ CUSTOM DOUBT SOLVER (Pure Human Teacher Conversational Tone)
   static Future<String> askCustomDoubt({
     required String question,
     required List<String> options,
@@ -25,31 +25,25 @@ class AiExplainerService {
 
     try {
       final String prompt = """
-Aap BPSC/BSSC exams ke senior expert mentor hain.
-Student ko is question me specific doubt aaya hai. Aapko student ka doubt thoroughly clear karna hai.
+You are a warm, highly experienced, and friendly BPSC/BSSC Exam Teacher from Patna who explains concepts in natural conversational Hinglish (Roman Hindi written in English alphabets), just like a real human tutor.
 
-Context:
-❓ Question: $question
-📌 Options: ${options.join(', ')}
-✅ Correct Answer: $correctAnswer
-📖 Solution: $explanation
+A student came to you with a specific doubt on a question.
 
-💬 Student Ka Specific Doubt: "$userDoubt"
+CONTEXT:
+Question: $question
+Options: ${options.join(', ')}
+Correct Answer: $correctAnswer
+Standard Solution: $explanation
 
-🚨 STRICT RULES:
-1. Do NOT limit to short sentences. Provide a deep, clear, and comprehensive explanation.
-2. Do NOT repeat the question text or basic definition.
-3. Strictly use simple Hinglish (English alphabets me Hindi). No Devanagari script.
+STUDENT'S EXACT DOUBT: "$userDoubt"
 
-Provide response in these sections:
-🎯 DIRECT DOUBT RESOLUTION:
-(Clear user's exact confusion with practical examples)
-
-🔍 CORE & BACKGROUND CONCEPT:
-(Explain the underlying theory/laws/history in detail)
-
-💡 RELATED EXAM CONCEPTS:
-(Share 2-3 connected facts/PYQ traps for upcoming exams)
+STRICT TEACHING RULES:
+1. Speak DIRECTLY to the student in friendly Hinglish (e.g., "Dekho...", "Bilkul simple example se samjho...", "Aisa isliye hota hai kyunki...").
+2. DO NOT use ANY robotic template headers like 'Direct Answer:', 'Core Concept:', 'Section 1:', etc.
+3. ALWAYS use a practical, relatable daily-life comparison or analogy (e.g., water pipe, heater, traffic, daily objects) to clear the doubt.
+4. Explain clearly why the student's doubt point is wrong or right.
+5. End naturally with 1 short line mentioning a related PYQ fact or exam trap.
+6. Strictly NO Devanagari script (pure Hindi text banned). Use natural Hinglish only.
 """;
 
       final response = await http.post(
@@ -59,14 +53,14 @@ Provide response in these sections:
           "Content-Type": "application/json; charset=utf-8",
         },
         body: jsonEncode({
-          "model": "llama-3.1-8b-instant",
+          "model": "llama-3.3-70b-versatile", // ⚡ Upgraded High-End 70B Model
           "messages": [
             {"role": "user", "content": prompt}
           ],
-          "max_tokens": 700,
-          "temperature": 0.6,
+          "max_tokens": 800,
+          "temperature": 0.7, // Natural and warm conversational tone
         }),
-      ).timeout(const Duration(seconds: 12));
+      ).timeout(const Duration(seconds: 15));
 
       if (response.statusCode == 200) {
         final data = jsonDecode(utf8.decode(response.bodyBytes));
@@ -92,12 +86,12 @@ Provide response in these sections:
       }).toList();
 
       final String prompt = """
-Aap BPSC, BSSC, aur Railway exams ke master AI Study Mentor hain.
-Niche student ke haal me galat huye questions ki list di gayi hai:
+You are a master AI Study Mentor for BPSC, BSSC, and Railway exams.
+Below is the list of recent wrong questions attempted by the student:
 
 ${qSummaries.join('\n')}
 
-Analyze these mistakes and provide a personalized Performance Audit Report in Hinglish (English alphabets me Hindi).
+Analyze these mistakes and provide a warm, encouraging Performance Audit Report in simple Hinglish (English alphabets me Hindi).
 
 Format:
 📊 WEAK SPOTS IDENTIFIED:
@@ -117,7 +111,7 @@ Format:
           "Content-Type": "application/json; charset=utf-8",
         },
         body: jsonEncode({
-          "model": "llama-3.1-8b-instant",
+          "model": "llama-3.3-70b-versatile",
           "messages": [
             {"role": "user", "content": prompt}
           ],
@@ -147,7 +141,7 @@ Format:
       options: options,
       correctAnswer: correctAnswer,
       explanation: '',
-      userDoubt: "Mujhe is question ka conceptual logic samjhayein.",
+      userDoubt: "Mujhe is question ka conceptual logic aasan daily life example ke sath samjhayein.",
     );
   }
 }
