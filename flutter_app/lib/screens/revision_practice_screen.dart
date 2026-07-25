@@ -137,7 +137,6 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
       _isAnswered = true;
     });
 
-    // 📊 Record detailed question attempt for Profile Stats & Wrong Vault
     UserStatsService.recordQuestionAttempt(
       isCorrect: isCorrect,
       chapterName: widget.testTitle,
@@ -156,9 +155,9 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
     );
   }
 
-  // 💬 BOTTOM SHEET DIALOG FOR AI DOUBT SOLVER
+  // 💬 BOTTOM SHEET DIALOG FOR AI DOUBT SOLVER (1 ASK & 100 CHARS)
   void _openAiDoubtDialog(Question currentQ) {
-    int asksLeft = _asksRemainingPerQuestion[_currentIndex] ?? 2;
+    int asksLeft = _asksRemainingPerQuestion[_currentIndex] ?? 1; // 🛑 STRICT 1 ASK LIMIT
     TextEditingController doubtController = TextEditingController();
     bool isAsking = false;
 
@@ -200,7 +199,7 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
                             borderRadius: BorderRadius.circular(10),
                           ),
                           child: Text(
-                            asksLeft > 0 ? '$asksLeft Asks Left' : '🔒 Limit Reached',
+                            asksLeft > 0 ? '$asksLeft Ask Left' : '🔒 Limit Reached',
                             style: TextStyle(
                               fontSize: 10,
                               fontWeight: FontWeight.bold,
@@ -240,10 +239,11 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
                     if (asksLeft > 0) ...[
                       TextField(
                         controller: doubtController,
+                        maxLength: 100, // 🛑 STRICT 100 CHARACTERS LIMIT
                         maxLines: 2,
                         minLines: 1,
                         decoration: const InputDecoration(
-                          hintText: 'Type your exact doubt (e.g. Methane kyu nahi hua answer?)',
+                          hintText: 'Type your exact doubt (Max 100 chars)...',
                           hintStyle: TextStyle(fontSize: 12, color: Colors.grey),
                           border: OutlineInputBorder(),
                           contentPadding: EdgeInsets.all(10),
@@ -266,11 +266,11 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
 
                                   String userQuery = doubtController.text.trim();
 
+                                  // 🛑 REMOVED 'explanation:' PARAMETER TO PREVENT BUILD ERRORS
                                   String aiResp = await AiExplainerService.askCustomDoubt(
                                     question: currentQ.getText(_isHindi),
                                     options: currentQ.options,
                                     correctAnswer: currentQ.options[currentQ.answerIndex],
-                                    explanation: currentQ.explanation,
                                     userDoubt: userQuery,
                                   );
 
@@ -299,7 +299,7 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
                         padding: const EdgeInsets.all(10),
                         alignment: Alignment.center,
                         child: const Text(
-                          '🔒 Question-wise 2 doubts limit complete ho chuki hai.',
+                          '🔒 Question-wise 1 doubt limit complete ho chuki hai.',
                           style: TextStyle(fontSize: 11.5, color: Colors.grey, fontWeight: FontWeight.w600),
                         ),
                       )
@@ -373,7 +373,6 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
         title: Text(widget.testTitle, style: const TextStyle(fontSize: 15, fontWeight: FontWeight.bold)),
         elevation: 0,
         actions: [
-          // 🔖 BOOKMARK TOGGLE BUTTON
           IconButton(
             icon: Icon(
               _isBookmarked ? Icons.bookmark : Icons.bookmark_outline,
@@ -452,7 +451,6 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
             ),
             const SizedBox(height: 18),
 
-            // Question Box
             Card(
               elevation: 1,
               shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
@@ -481,7 +479,6 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
             ),
             const SizedBox(height: 16),
 
-            // Options List
             ...List.generate(currentQ.options.length, (index) {
               final optionText = currentQ.options[index];
               final isCorrect = index == currentQ.answerIndex;
@@ -552,7 +549,6 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
               );
             }),
 
-            // Detailed Solution Card + 🤖 Ask AI Button
             if (_isAnswered) ...[
               const SizedBox(height: 14),
               Container(
@@ -576,7 +572,6 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
                             Text('Detailed Solution', style: TextStyle(fontWeight: FontWeight.bold, color: Color(0xFF166534), fontSize: 13)),
                           ],
                         ),
-                        // 🤖 ASK AI BUTTON
                         InkWell(
                           onTap: () => _openAiDoubtDialog(currentQ),
                           child: Container(
