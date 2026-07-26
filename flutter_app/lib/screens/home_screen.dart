@@ -8,9 +8,9 @@ import 'package:url_launcher/url_launcher.dart';
 import '../models/question_model.dart';
 import '../services/telegram_tracker.dart';
 import '../widgets/home_widgets.dart';
+import 'learn_hub_screen.dart'; // 👈 Learn Hub Import Kiya Gaya Hai
 import 'profile_screen.dart';
 import 'revision_practice_screen.dart';
-import 'saved_questions_screen.dart';
 import 'sectional_cbt_screen.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -55,7 +55,7 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
     }
   }
 
-  // 📖 Pure External JSON Asset Loader with Pull-to-Refresh return
+  // 📖 Pure External JSON Asset Loader
   Future<void> _loadAllConfigs() async {
     try {
       final String configStr = await rootBundle.loadString('assets/data/app_config.json');
@@ -139,6 +139,19 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
           title: Text('MockTester', style: TextStyle(fontWeight: FontWeight.bold, color: textColor)),
           backgroundColor: cardColor,
           elevation: 0,
+          actions: [
+            // 🎓 Top AppBar Learn Hub Quick Access Button
+            IconButton(
+              icon: const Icon(Icons.school_rounded, color: Color(0xFF075E54)),
+              tooltip: "MockTester Learn 🎓",
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const LearnHubScreen()),
+                );
+              },
+            ),
+          ],
         ),
         body: AnimatedSwitcher(
           duration: const Duration(milliseconds: 300),
@@ -150,10 +163,10 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
               _buildRevisionTab(context),
               _buildSectionalTab(context),
               
-              // ⭐ TAB 4: REAL-TIME SAVED / BOOKMARKED QUESTIONS SCREEN
-              const SavedQuestionsScreen(),
+              // ⭐ TAB 4: MOCKTESTER LEARN HUB (Saved Questions ki jagah ab Learn Hub hai)
+              const LearnHubScreen(),
 
-              // 👤 TAB 5: CLEAN EXTERNAL PROFILE SCREEN
+              // 👤 TAB 5: PROFILE SCREEN
               ProfileScreen(
                 isHindi: _isHindi,
                 isDarkMode: _isDarkMode,
@@ -167,14 +180,15 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
           selectedIndex: _currentBottomIndex,
           onDestinationSelected: (idx) {
             setState(() => _currentBottomIndex = idx);
-            List<String> tabs = ['Home Tab', 'Revision Hub', 'Sectional CBT', 'Saved Area', 'Profile Tab'];
+            List<String> tabs = ['Home Tab', 'Revision Hub', 'Sectional CBT', 'Learn Hub', 'Profile Tab'];
             TelegramTracker.logActivity("Switched to ${tabs[idx]}");
           },
           destinations: const [
             NavigationDestination(icon: Icon(Icons.home_outlined), selectedIcon: Icon(Icons.home_rounded), label: 'Home'),
             NavigationDestination(icon: Icon(Icons.menu_book_outlined), selectedIcon: Icon(Icons.menu_book_rounded), label: 'Revision'),
             NavigationDestination(icon: Icon(Icons.assignment_outlined), selectedIcon: Icon(Icons.assignment_rounded), label: 'Sectional'),
-            NavigationDestination(icon: Icon(Icons.star_outline_rounded), selectedIcon: Icon(Icons.star_rounded), label: 'Saved'),
+            // 🎓 SAVED KO HATA KAR "LEARN" SET KAR DIYA GAYA HAI
+            NavigationDestination(icon: Icon(Icons.school_outlined), selectedIcon: Icon(Icons.school_rounded), label: 'Learn'),
             NavigationDestination(icon: Icon(Icons.person_outline_rounded), selectedIcon: Icon(Icons.person_rounded), label: 'Profile'),
           ],
         ),
@@ -198,7 +212,7 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
     );
   }
 
-  // 1️⃣ TAB 1: HOME TAB (WITH PULL-TO-REFRESH)
+  // 1️⃣ TAB 1: HOME TAB
   Widget _buildHomeTab(BuildContext context) {
     return RefreshIndicator(
       onRefresh: _loadAllConfigs,
@@ -504,7 +518,6 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
     }
   }
 
-  // 1️⃣ REVISION HUB PRACTICE LAUNCHER (FIXED WITH JSDELIVR CDN & ENCODING)
   void _launchRevisionPractice(BuildContext context, String title, String path) async {
     TelegramTracker.logActivity("Started Revision Practice: $title");
     showDialog(context: context, barrierDismissible: false, builder: (ctx) => const Center(child: CircularProgressIndicator()));
@@ -540,7 +553,6 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
     }
   }
 
-  // 2️⃣ SECTIONAL CBT MOCK LAUNCHER (FIXED WITH JSDELIVR CDN & ENCODING)
   void _launchCbtMock(BuildContext context, String title, String path) async {
     TelegramTracker.logActivity("Started Sectional CBT Mock: $title");
     showDialog(context: context, barrierDismissible: false, builder: (ctx) => const Center(child: CircularProgressIndicator()));
