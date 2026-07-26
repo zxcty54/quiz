@@ -40,11 +40,21 @@ class _LearnChatScreenState extends State<LearnChatScreen> {
   }
 
   Future<void> _fetchChapterJson() async {
-    final url = widget.jsonUrl ??
-        'https://raw.githubusercontent.com/zxcty54/quiz/refs/heads/main/learn/biology/cell.json';
+    // 🚀 jsDelivr CDN URL: Fast, reliable, and never blocked by Jio/Airtel
+    String targetUrl = widget.jsonUrl ?? '';
+    
+    if (targetUrl.isEmpty) {
+      targetUrl = 'https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/learn/biology/cell.json';
+    } else if (targetUrl.contains('raw.githubusercontent.com')) {
+      // Automatic GitHub Raw to jsDelivr CDN URL Convertor
+      targetUrl = targetUrl
+          .replaceAll('https://raw.githubusercontent.com/', 'https://cdn.jsdelivr.net/gh/')
+          .replaceAll('/refs/heads/main/', '@main/')
+          .replaceAll('/main/', '@main/');
+    }
 
     try {
-      final response = await http.get(Uri.parse(url)).timeout(const Duration(seconds: 15));
+      final response = await http.get(Uri.parse(targetUrl)).timeout(const Duration(seconds: 15));
 
       if (response.statusCode == 200) {
         Map<String, dynamic> parsedJson = json.decode(utf8.decode(response.bodyBytes));
@@ -65,7 +75,7 @@ class _LearnChatScreenState extends State<LearnChatScreen> {
       } else {
         if (mounted) {
           setState(() {
-            errorMessage = "Error ${response.statusCode}: Data load nahi ho paya.";
+            errorMessage = "Error ${response.statusCode}: Data load nahi ho saka.";
             isLoading = false;
           });
         }
@@ -73,7 +83,8 @@ class _LearnChatScreenState extends State<LearnChatScreen> {
     } catch (e) {
       if (mounted) {
         setState(() {
-          errorMessage = "Network Error: Internet connection check karein.";
+          // Exact error details print hongi for debugging
+          errorMessage = "Data Fetch Error: $e\n\nURL: $targetUrl";
           isLoading = false;
         });
       }
@@ -191,7 +202,7 @@ class _LearnChatScreenState extends State<LearnChatScreen> {
               children: [
                 const Text("⚠️", style: TextStyle(fontSize: 40)),
                 const SizedBox(height: 10),
-                Text(errorMessage ?? "Could not load chapter data", textAlign: TextAlign.center),
+                Text(errorMessage ?? "Could not load chapter data", textAlign: TextAlign.center, style: const TextStyle(fontSize: 13, color: Colors.black87)),
                 const SizedBox(height: 16),
                 ElevatedButton(
                   style: ElevatedButton.styleFrom(backgroundColor: const Color(0xFF4F46E5)),
