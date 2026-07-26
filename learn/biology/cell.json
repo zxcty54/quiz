@@ -1,14 +1,8 @@
+```json
 {
   "topic_id": "cell_biology_complete",
   "topic_title": "Cell Biology - The Unit of Life",
-  "target_exams": [
-    "BPSC",
-    "BSSC",
-    "Railway RRB NTPC",
-    "SSC CGL",
-    "NEET",
-    "UPSC Prelims"
-  ],
+  "target_exams": ["BPSC", "BSSC", "Railway RRB NTPC", "SSC CGL", "NEET", "UPSC Prelims"],
   "total_cards": 58,
   "characters": {
     "aman": {
@@ -98,6 +92,1818 @@
       "navigation": {
         "next": "cell_03_definition_guess"
       }
+    },
+    {
+      "card_id": "cell_03_definition_guess",
+      "type": "guess",
+      "card_slug": "cell_definition_guess",
+      "progress": {
+        "current": 3,
+        "total": 58
+      },
+      "guess_payload": {
+        "question": "Tumhare hisaab se CELL kya hoga?",
+        "options": [
+          "Body ka sabse chhota living part",
+          "Ek type ka protein",
+          "Blood mein floating particle",
+          "DNA ka dusra naam"
+        ],
+        "correct_option_id": "0",
+        "explanation": "Bilkul sahi! CELL = Sabse chhoti LIVING unit jo independently kaam kar sakti hai. Ye khud se breathe karti hai, food digest karti hai, waste nikalti hai!"
+      },
+      "navigation": {
+        "next": "cell_04_discovery_story"
+      }
+    },
+    {
+      "card_id": "cell_04_discovery_story",
+      "type": "chat",
+      "card_slug": "cell_discovery_cork",
+      "progress": {
+        "current": 4,
+        "total": 58
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "1665 ki baat hai... England mein ek scientist tha Robert Hooke."
+        },
+        {
+          "speaker": "raju",
+          "text": "Unhone cell discover kiya?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! Usne bottle ki cork (dhakkan wala material) ko magnifying lens se dekha..."
+        },
+        {
+          "speaker": "raju",
+          "text": "To kya dikha?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Chhote chhote boxes! Madhumakhi ke chatte jaisa pattern! 🐝 Usne socha ye chhoti kothriyaan hain... isliye naam diya CELL (matlab room)."
+        },
+        {
+          "speaker": "raju",
+          "text": "Ohh! To cell ka matlab hi chhoti kothri!"
+        }
+      ],
+      "navigation": {
+        "next": "cell_05_hooke_trap"
+      }
+    },
+    {
+      "card_id": "cell_05_hooke_trap",
+      "type": "chat",
+      "card_slug": "hooke_dead_cell_trap",
+      "progress": {
+        "current": 5,
+        "total": 58
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "⚠️ Lekin yahan BPSC ka favorite trap hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Kya trap sir?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Hooke ne jo cork dekha tha... wo DEAD cells the! Cork matlab sukha hua plant tissue."
+        },
+        {
+          "speaker": "raju",
+          "text": "Hain?? To living cell kisne dekha pehli baar?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Uska naam tha Leeuwenhoek (लीवेनहुक). 1674 mein usne pond water dekha... usme living organisms the - bacteria aur protozoa!"
+        },
+        {
+          "speaker": "raju",
+          "text": "To living cell ka credit isko jana chahiye?"
+        }
+      ],
+      "navigation": {
+        "next": "cell_06_quiz_hooke"
+      }
+    },
+    {
+      "card_id": "cell_06_quiz_hooke",
+      "type": "quiz",
+      "card_slug": "quiz_hooke_cork",
+      "progress": {
+        "current": 6,
+        "total": 58
+      },
+      "quiz_payload": {
+        "question": "Robert Hooke (1665) ne cell discover karne ke liye kaunsa material use kiya?",
+        "options": [
+          "Pond water",
+          "Cork (bottle dhakkan)",
+          "Onion peel",
+          "Human blood"
+        ],
+        "correct_option_id": "1",
+        "explanation": "Cork! Hooke ne bottle ke cork mein dead cell walls dekhe. Yaad rakho: Hooke = Cork, 1665, Dead cells. Living cells = Leeuwenhoek (1674)."
+      },
+      "navigation": {
+        "next": "cell_07_brown_nucleus"
+      }
+    },
+    {
+      "card_id": "cell_07_brown_nucleus",
+      "type": "chat",
+      "card_slug": "brown_nucleus_discovery",
+      "progress": {
+        "current": 7,
+        "total": 58
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ek aur scientist tha - Robert Brown (1831). Orchid plant ki cells dekh raha tha..."
+        },
+        {
+          "speaker": "raju",
+          "text": "Usne kya dekha?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Har cell ke beech mein ek dense, round structure - jaise aam ki guthli! 🥭"
+        },
+        {
+          "speaker": "raju",
+          "text": "Wo kya tha?"
+        },
+        {
+          "speaker": "aman",
+          "text": "NUCLEUS! Cell ka brain! Par Brown ko nahi pata tha ye kaam kya karta hai... usne bas dekha tha."
+        },
+        {
+          "speaker": "raju",
+          "text": "Ye scientists ne bas dekhne ka kaam kiya... par cell ka theory kisne banaya?"
+        }
+      ],
+      "navigation": {
+        "next": "cell_08_cell_theory_intro"
+      }
+    },
+    {
+      "card_id": "cell_08_cell_theory_intro",
+      "type": "chat",
+      "card_slug": "cell_theory_introduction",
+      "progress": {
+        "current": 8,
+        "total": 58
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "1838-39... do German scientists - Schleiden (plants) aur Schwann (animals) ne ek revolutionary baat kahi!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Kya kaha?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Saari living cheezein CELLS se bani hain! Ye hi hai CELL THEORY ka pehla rule!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Aur kitne rules hain?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Teen golden rules! Pehle tum guess karo... nayi cell kaise banti hogi?"
+        },
+        {
+          "speaker": "raju",
+          "text": "Kya pata... khud se ban jati hogi?"
+        }
+      ],
+      "navigation": {
+        "next": "cell_09_virchow_reveal"
+      }
+    },
+    {
+      "card_id": "cell_09_virchow_reveal",
+      "type": "chat",
+      "card_slug": "virchow_cell_division",
+      "progress": {
+        "current": 9,
+        "total": 58
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Galat! Rudolf Virchow (1855) ne prove kiya - nayi cell HAMESHA purani cell se hi banti hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab divide hoke?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Exactly! 'Omnis cellula-e-cellula' - har cell ek existing cell se. Jaise ek company ki do branches!"
+        },
+        {
+          "speaker": "raju",
+          "text": "To teen rules kya hue?"
+        },
+        {
+          "speaker": "aman",
+          "text": "1️⃣ All living organisms are made of cells (Schleiden+Schwann)\n2️⃣ Cell is basic unit of life\n3️⃣ New cells arise from pre-existing cells (Virchow)"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sab living organisms matlab... virus bhi?"
+        }
+      ],
+      "navigation": {
+        "next": "cell_10_virus_exception"
+      }
+    },
+    {
+      "card_id": "cell_10_virus_exception",
+      "type": "chat",
+      "card_slug": "virus_exception_trap",
+      "progress": {
+        "current": 10,
+        "total": 58
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "⚠️ Ye BPSC ka sabse bada trap hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Kya sir?"
+        },
+        {
+          "speaker": "aman",
+          "text": "VIRUS mein cell nahi hota! Wo sirf protein coat + DNA/RNA hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "To virus living hai ya non-living?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Dono! Outside host = Non-living (crystal jaisa 💎). Inside host = Living (reproduce karta hai 🔄)."
+        },
+        {
+          "speaker": "raju",
+          "text": "Confusing hai ye to!"
+        }
+      ],
+      "navigation": {
+        "next": "cell_11_quiz_cell_theory"
+      }
+    },
+    {
+      "card_id": "cell_11_quiz_cell_theory",
+      "type": "quiz",
+      "card_slug": "quiz_cell_theory_virchow",
+      "progress": {
+        "current": 11,
+        "total": 58
+      },
+      "quiz_payload": {
+        "question": "Cell Theory mein 'Omnis cellula-e-cellula' ka contribution kisne diya?",
+        "options": [
+          "Schleiden",
+          "Schwann",
+          "Virchow",
+          "Robert Brown"
+        ],
+        "correct_option_id": "2",
+        "explanation": "Rudolf Virchow (1855) ne. Iska matlab: All cells arise from pre-existing cells. Yaad rakho - Virchow = Cell division concept."
+      },
+      "navigation": {
+        "next": "cell_12_quiz_scientist_match"
+      }
+    },
+    {
+      "card_id": "cell_12_quiz_scientist_match",
+      "type": "quiz",
+      "card_slug": "quiz_scientist_discovery",
+      "progress": {
+        "current": 12,
+        "total": 58
+      },
+      "quiz_payload": {
+        "question": "Living cells ko sabse pehle kisne observe kiya?",
+        "options": [
+          "Robert Hooke (1665)",
+          "Leeuwenhoek (1674)",
+          "Robert Brown (1831)",
+          "Schleiden (1838)"
+        ],
+        "correct_option_id": "1",
+        "explanation": "Leeuwenhoek (1674) - Pond water mein bacteria aur protozoa dekhe. Hooke ne sirf dead cells dekhe the cork mein."
+      },
+      "navigation": {
+        "next": "cell_13_milestone_history"
+      }
+    },
+    {
+      "card_id": "cell_13_milestone_history",
+      "type": "milestone",
+      "card_slug": "milestone_cell_history_complete",
+      "progress": {
+        "current": 13,
+        "total": 58
+      },
+      "milestone_payload": {
+        "title": "🎉 Cell History Complete!",
+        "badge_emoji": "🔬",
+        "completed_topic": "Cell Discovery & Cell Theory",
+        "xp_earned": 50,
+        "milestone_progress": "Hooke (Cork, 1665) ✓\nLeeuwenhoek (Living cells, 1674) ✓\nBrown (Nucleus, 1831) ✓\nCell Theory (Schleiden, Schwann, Virchow) ✓",
+        "motivational_quote": "BPSC mein scientist ke naam aur year se 40% questions bante hain! Tum ready ho! 💪"
+      },
+      "navigation": {
+        "next": "cell_14_prokaryote_intro"
+      }
+    },
+    {
+      "card_id": "cell_14_prokaryote_intro",
+      "type": "chat",
+      "card_slug": "prokaryote_eukaryote_village",
+      "progress": {
+        "current": 14,
+        "total": 58
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, gaon mein kitne type ke ghar hote hain?"
+        },
+        {
+          "speaker": "raju",
+          "text": "Do type - chhote kacche ghar aur bade pakke ghar."
+        },
+        {
+          "speaker": "aman",
+          "text": "Perfect! Cells bhi do type ki hoti hain:\n1️⃣ PROKARYOTIC (kaccha ghar - simple)\n2️⃣ EUKARYOTIC (pakka ghar - advanced)"
+        },
+        {
+          "speaker": "raju",
+          "text": "Farak kya hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Sabse bada - NUCLEUS! Prokaryotic mein proper nucleus nahi, Eukaryotic mein proper nucleus hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab PRO = No nucleus?"
+        }
+      ],
+      "navigation": {
+        "next": "cell_15_prokaryote_meaning"
+      }
+    },
+    {
+      "card_id": "cell_15_prokaryote_meaning",
+      "type": "chat",
+      "card_slug": "prokaryote_word_meaning",
+      "progress": {
+        "current": 15,
+        "total": 58
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "PRO = Before (पहले), KARYON = Nucleus. Matlab nucleus banne se PEHLE wale primitive cells!"
+        },
+        {
+          "speaker": "raju",
+          "text": "To nucleus hota nahi hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Nuclear MEMBRANE nahi hota! DNA freely floating hota hai - nucleoid region mein."
+        },
+        {
+          "speaker": "raju",
+          "text": "Aur kya nahi hota?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Koi bhi membrane-bound organelle nahi - mitochondria nahi, ER nahi, Golgi nahi! Sirf RIBOSOMES hote hain (70S type)."
+        },
+        {
+          "speaker": "raju",
+          "text": "Examples?"
+        }
+      ],
+      "navigation": {
+        "next": "cell_16_prokaryote_examples"
+      }
+    },
+    {
+      "card_id": "cell_16_prokaryote_examples",
+      "type": "chat",
+      "card_slug": "prokaryote_examples",
+      "progress": {
+        "current": 16,
+        "total": 58
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "BACTERIA aur BLUE-GREEN ALGAE (Cyanobacteria)! Bas itne hi!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab sirf do organism?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! Baaki duniya ke SAARE organisms eukaryotic - tum, main, plants, animals, fungi!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Eukaryotic kya hota hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "EU = True/Good, KARYON = Nucleus. Matlab TRUE nucleus wale cells!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Ismein sab organelles honge?"
+        }
+      ],
+      "navigation": {
+        "next": "cell_17_eukaryote_features"
+      }
+    },
+    {
+      "card_id": "cell_17_eukaryote_features",
+      "type": "chat",
+      "card_slug": "eukaryote_features",
+      "progress": {
+        "current": 17,
+        "total": 58
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Haan! Well-defined nucleus, mitochondria, ER, Golgi, lysosomes - sab kuch!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Size mein bhi bade honge?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul! Prokaryotic = 0.1-5 μm, Eukaryotic = 10-100 μm."
+        },
+        {
+          "speaker": "raju",
+          "text": "Ribosomes?"
+        },
+        {
+          "speaker": "aman",
+          "text": "80S type ke (prokaryotes se bade)! ⚠️ Ye number exam mein bahut puchha jata hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "70S aur 80S yaad kaise rakhen?"
+        }
+      ],
+      "navigation": {
+        "next": "cell_18_quiz_ribosome"
+      }
+    },
+    {
+      "card_id": "cell_18_quiz_ribosome",
+      "type": "quiz",
+      "card_slug": "quiz_ribosome_type",
+      "progress": {
+        "current": 18,
+        "total": 58
+      },
+      "quiz_payload": {
+        "question": "Prokaryotic cells mein konsa ribosome hota hai?",
+        "options": [
+          "60S",
+          "70S",
+          "80S",
+          "90S"
+        ],
+        "correct_option_id": "1",
+        "explanation": "70S ribosomes! Eukaryotic mein 80S hote hain. Yaad rakho: PRO = 70 (smaller), EU = 80 (bigger)."
+      },
+      "navigation": {
+        "next": "cell_19_quiz_prokaryote_example"
+      }
+    },
+    {
+      "card_id": "cell_19_quiz_prokaryote_example",
+      "type": "quiz",
+      "card_slug": "quiz_prokaryote_identification",
+      "progress": {
+        "current": 19,
+        "total": 58
+      },
+      "quiz_payload": {
+        "question": "Konsa organism prokaryotic NAHI hai?",
+        "options": [
+          "E. coli (Bacteria)",
+          "Nostoc (Blue-green algae)",
+          "Amoeba",
+          "Mycoplasma"
+        ],
+        "correct_option_id": "2",
+        "explanation": "Amoeba! Ye eukaryotic hai. Sirf bacteria aur cyanobacteria prokaryotic hote hain. Amoeba mein nucleus hai."
+      },
+      "navigation": {
+        "next": "cell_20_milestone_cell_types"
+      }
+    },
+    {
+      "card_id": "cell_20_milestone_cell_types",
+      "type": "milestone",
+      "card_slug": "milestone_cell_classification",
+      "progress": {
+        "current": 20,
+        "total": 58
+      },
+      "milestone_payload": {
+        "title": "🎉 Cell Types Mastered!",
+        "badge_emoji": "🦠",
+        "completed_topic": "Prokaryotic vs Eukaryotic Classification",
+        "xp_earned": 50,
+        "milestone_progress": "Prokaryotic features ✓\nEukaryotic features ✓\nRibosome types (70S vs 80S) ✓\nExamples clear ✓",
+        "motivational_quote": "SSC aur Railway mein ye differentiation bahut puchha jata hai! Tum ab expert ho! 🎯"
+      },
+      "navigation": {
+        "next": "cell_21_size_intro"
+      }
+    },
+    {
+      "card_id": "cell_21_size_intro",
+      "type": "chat",
+      "card_slug": "cell_size_unit_intro",
+      "progress": {
+        "current": 21,
+        "total": 58
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, cells ko measure kaise karte hain? Cm mein? Mm mein?"
+        },
+        {
+          "speaker": "raju",
+          "text": "Pata nahi sir... bahut chhote hote hain na?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! Isliye special unit hai - MICROMETRE (μm) ya MICRON."
+        },
+        {
+          "speaker": "raju",
+          "text": "Kitna chhota?"
+        },
+        {
+          "speaker": "aman",
+          "text": "1 mm ko 1000 parts mein baanto... ek part = 1 micron! 1 μm = 0.001 mm."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sabse bada cell kaunsa hai?"
+        }
+      ],
+      "navigation": {
+        "next": "cell_22_largest_cell"
+      }
+    },
+    {
+      "card_id": "cell_22_largest_cell",
+      "type": "guess",
+      "card_slug": "guess_largest_cell",
+      "progress": {
+        "current": 22,
+        "total": 58
+      },
+      "guess_payload": {
+        "question": "Duniya ka sabse BADA cell kaunsa hoga?",
+        "options": [
+          "Human brain cell",
+          "Ostrich egg 🥚",
+          "Blue whale cell",
+          "Banyan tree cell"
+        ],
+        "correct_option_id": "1",
+        "explanation": "Ostrich egg! 170mm (17cm) tak! Egg = single cell hota hai. Ye naked eye se visible hai!"
+      },
+      "navigation": {
+        "next": "cell_23_smallest_cell"
+      }
+    },
+    {
+      "card_id": "cell_23_smallest_cell",
+      "type": "chat",
+      "card_slug": "smallest_cell_mycoplasma",
+      "progress": {
+        "current": 23,
+        "total": 58
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ab sabse CHHOTA living cell - MYCOPLASMA!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Kitna chhota?"
+        },
+        {
+          "speaker": "aman",
+          "text": "0.1 to 0.3 μm! Ek bacteria hai ye... ismein cell wall bhi nahi hota!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Bina cell wall ke kaise survive karta hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Flexible plasma membrane! Lekin human body mein sabse bada aur chhota cell pata hai?"
+        },
+        {
+          "speaker": "raju",
+          "text": "Nahi sir..."
+        }
+      ],
+      "navigation": {
+        "next": "cell_24_human_cells"
+      }
+    },
+    {
+      "card_id": "cell_24_human_cells",
+      "type": "chat",
+      "card_slug": "human_cell_extremes",
+      "progress": {
+        "current": 24,
+        "total": 58
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Human body:\n🏆 Largest = OVUM (female egg) - 100-120 μm\n🔬 Smallest = SPERM (head 5 μm)\n📏 Longest = NERVE CELL - 1 metre tak!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Ek cell 1 metre ka??"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! Spinal cord se paon ki ungli tak - ek hi nerve cell! ⚠️ Ye NEET/BPSC favorite hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Ye sab yaad kaise rakhen?"
+        },
+        {
+          "speaker": "aman",
+          "text": "OWM NSR: Ostrich-World largest, Ovum-human largest, Mycoplasma-Smallest, Nerve-longest, Sperm-smallest human!"
+        }
+      ],
+      "navigation": {
+        "next": "cell_25_quiz_size"
+      }
+    },
+    {
+      "card_id": "cell_25_quiz_size",
+      "type": "quiz",
+      "card_slug": "quiz_human_longest_cell",
+      "progress": {
+        "current": 25,
+        "total": 58
+      },
+      "quiz_payload": {
+        "question": "Human body ka sabse lamba cell kaunsa hai?",
+        "options": [
+          "Muscle cell",
+          "Nerve cell",
+          "Ovum",
+          "Sperm cell"
+        ],
+        "correct_option_id": "1",
+        "explanation": "Nerve cell (Neuron)! Ye 1 metre tak lamba ho sakta hai. Spinal cord se foot fingers tak ek hi cell hoti hai!"
+      },
+      "navigation": {
+        "next": "cell_26_cell_membrane_intro"
+      }
+    },
+    {
+      "card_id": "cell_26_cell_membrane_intro",
+      "type": "chat",
+      "card_slug": "cell_membrane_boundary",
+      "progress": {
+        "current": 26,
+        "total": 58
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Tumhare ghar ki boundary wall kya kaam karti hai?"
+        },
+        {
+          "speaker": "raju",
+          "text": "Protection... aur kon andar aaye wo control karta hai."
+        },
+        {
+          "speaker": "aman",
+          "text": "Perfect! Cell ki boundary = CELL MEMBRANE (Plasma Membrane)!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Ye kya karta hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "1️⃣ Cell ko shape deta hai\n2️⃣ Protection\n3️⃣ SELECT karke materials ko andar-bahar karta hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Select karke matlab?"
+        }
+      ],
+      "navigation": {
+        "next": "cell_27_selectively_permeable"
+      }
+    },
+    {
+      "card_id": "cell_27_selectively_permeable",
+      "type": "chat",
+      "card_slug": "selectively_permeable_concept",
+      "progress": {
+        "current": 27,
+        "total": 58
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "SELECTIVELY PERMEABLE! Jaise VIP gate - sirf kuch logo ko entry! 🚪"
+        },
+        {
+          "speaker": "raju",
+          "text": "Oxygen andar jayega?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! Glucose, water, oxygen - allowed! CO₂ waste - bahar!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Ye membrane bana kisse hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "LIPID (fat) + PROTEIN! Do layers mein - LIPID BILAYER."
+        },
+        {
+          "speaker": "raju",
+          "text": "Kisi scientist ne model banaya tha?"
+        }
+      ],
+      "navigation": {
+        "next": "cell_28_fluid_mosaic"
+      }
+    },
+    {
+      "card_id": "cell_28_fluid_mosaic",
+      "type": "chat",
+      "card_slug": "fluid_mosaic_model",
+      "progress": {
+        "current": 28,
+        "total": 58
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "SINGER & NICOLSON (1972) - FLUID MOSAIC MODEL! 🧩"
+        },
+        {
+          "speaker": "raju",
+          "text": "Fluid mosaic matlab?"
+        },
+        {
+          "speaker": "aman",
+          "text": "FLUID = Lipids aur proteins hil sakte hain (fixed nahi)\nMOSAIC = Tile pattern jaisa - lipid + protein mixed!"
+        },
+        {
+          "speaker": "raju",
+          "text": "⚠️ Ye BPSC/SSC mein bahut aata hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! Model ka naam, scientist ka naam, aur year - teeno puchhe jaate hain!"
+        }
+      ],
+      "navigation": {
+        "next": "cell_29_quiz_membrane"
+      }
+    },
+    {
+      "card_id": "cell_29_quiz_membrane",
+      "type": "quiz",
+      "card_slug": "quiz_fluid_mosaic",
+      "progress": {
+        "current": 29,
+        "total": 58
+      },
+      "quiz_payload": {
+        "question": "Fluid Mosaic Model kisne propose kiya?",
+        "options": [
+          "Watson & Crick",
+          "Singer & Nicolson",
+          "Schleiden & Schwann",
+          "Hooke & Brown"
+        ],
+        "correct_option_id": "1",
+        "explanation": "Singer & Nicolson (1972)! Ye cell membrane ki structure explain karta hai - lipid bilayer mein proteins embedded."
+      },
+      "navigation": {
+        "next": "cell_30_cell_wall_intro"
+      }
+    },
+    {
+      "card_id": "cell_30_cell_wall_intro",
+      "type": "chat",
+      "card_slug": "cell_wall_plant_only",
+      "progress": {
+        "current": 30,
+        "total": 58
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, plant cells aur animal cells mein ek MAJOR difference hai..."
+        },
+        {
+          "speaker": "raju",
+          "text": "Kya sir?"
+        },
+        {
+          "speaker": "aman",
+          "text": "CELL WALL! Ye SIRF plants mein hota hai! Animals mein nahi! 🌱❌🐕"
+        },
+        {
+          "speaker": "raju",
+          "text": "Kyun nahi hota animals mein?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Kyunki animals ko movement chahiye! Rigid wall hoga to move kaise karenge?"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sahi baat! Cell wall bana kisse hai?"
+        }
+      ],
+      "navigation": {
+        "next": "cell_31_cell_wall_cellulose"
+      }
+    },
+    {
+      "card_id": "cell_31_cell_wall_cellulose",
+      "type": "chat",
+      "card_slug": "cell_wall_composition",
+      "progress": {
+        "current": 31,
+        "total": 58
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "CELLULOSE se! Ek complex carbohydrate - bahut strong!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Paper bhi cellulose se banta hai na?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul! Paper, cotton, wood - sab mein cellulose! ⚠️ Cell wall = Membrane ke BAHAR extra layer!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Do layers hain matlab?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! Pehle membrane (sabmein), uske bahar wall (sirf plants mein)."
+        },
+        {
+          "speaker": "raju",
+          "text": "Dono mein kya farak hai?"
+        }
+      ],
+      "navigation": {
+        "next": "cell_32_quiz_membrane_wall"
+      }
+    },
+    {
+      "card_id": "cell_32_quiz_membrane_wall",
+      "type": "quiz",
+      "card_slug": "quiz_membrane_vs_wall",
+      "progress": {
+        "current": 32,
+        "total": 58
+      },
+      "quiz_payload": {
+        "question": "Cell membrane aur cell wall mein kya difference hai?",
+        "options": [
+          "Membrane sabmein, Wall sirf plants mein",
+          "Membrane plants mein, Wall animals mein",
+          "Dono same hain",
+          "Membrane bacteria mein nahi hota"
+        ],
+        "correct_option_id": "0",
+        "explanation": "Membrane = ALL cells mein (living, lipid+protein). Wall = ONLY plant cells (non-living, cellulose, rigid)."
+      },
+      "navigation": {
+        "next": "cell_33_milestone_boundaries"
+      }
+    },
+    {
+      "card_id": "cell_33_milestone_boundaries",
+      "type": "milestone",
+      "card_slug": "milestone_cell_boundaries",
+      "progress": {
+        "current": 33,
+        "total": 58
+      },
+      "milestone_payload": {
+        "title": "🎉 Cell Boundaries Clear!",
+        "badge_emoji": "🧱",
+        "completed_topic": "Cell Membrane & Cell Wall",
+        "xp_earned": 50,
+        "milestone_progress": "Selectively permeable ✓\nFluid Mosaic Model ✓\nMembrane vs Wall ✓\nCellulose composition ✓",
+        "motivational_quote": "BPSC mein boundary structures se 3-4 questions pakke hain! Tumne master kar liya! 🔥"
+      },
+      "navigation": {
+        "next": "cell_34_nucleus_intro"
+      }
+    },
+    {
+      "card_id": "cell_34_nucleus_intro",
+      "type": "chat",
+      "card_slug": "nucleus_boss_intro",
+      "progress": {
+        "current": 34,
+        "total": 58
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ab cell ka sabse important part - NUCLEUS! 👑"
+        },
+        {
+          "speaker": "raju",
+          "text": "Ye itna important kyun hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Company mein boss kaun hota hai? MD?"
+        },
+        {
+          "speaker": "raju",
+          "text": "Haan, sabse bada!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Nucleus = Cell ka MD! Saare orders yahan se! BRAIN OF THE CELL! 🧠"
+        },
+        {
+          "speaker": "raju",
+          "text": "Kya orders deta hai?"
+        }
+      ],
+      "navigation": {
+        "next": "cell_35_nucleus_dna"
+      }
+    },
+    {
+      "card_id": "cell_35_nucleus_dna",
+      "type": "chat",
+      "card_slug": "nucleus_genetic_control",
+      "progress": {
+        "current": 35,
+        "total": 58
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "DNA (genetic material) nucleus mein stored hai! Wo sab instructions deta hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Konse instructions?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Kaunsa protein banao, cell kab divide ho, kya kaam karo - sab kuch!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Nucleus ke kitne parts hain?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Chaar main parts:\n1️⃣ Nuclear membrane\n2️⃣ Nucleoplasm\n3️⃣ Nucleolus\n4️⃣ Chromatin"
+        },
+        {
+          "speaker": "raju",
+          "text": "Ek ek karke samjhaiye na!"
+        }
+      ],
+      "navigation": {
+        "next": "cell_36_nuclear_membrane"
+      }
+    },
+    {
+      "card_id": "cell_36_nuclear_membrane",
+      "type": "chat",
+      "card_slug": "nuclear_membrane_pores",
+      "progress": {
+        "current": 36,
+        "total": 58
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "NUCLEAR MEMBRANE - nucleus ki boundary! ⚠️ DOUBLE layered (cell membrane single layered tha!)"
+        },
+        {
+          "speaker": "raju",
+          "text": "Do layer kyun?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Extra protection! Ismein NUCLEAR PORES hain - chhote chhote darwaze!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Pores ka kaam?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Materials andar-bahar jaate hain! mRNA bahar (protein banane), proteins andar aate hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Nucleoplasm kya hai?"
+        }
+      ],
+      "navigation": {
+        "next": "cell_37_nucleoplasm_nucleolus"
+      }
+    },
+    {
+      "card_id": "cell_37_nucleoplasm_nucleolus",
+      "type": "chat",
+      "card_slug": "nucleoplasm_nucleolus_detail",
+      "progress": {
+        "current": 37,
+        "total": 58
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "NUCLEOPLASM = Nucleus ke andar ka jelly jaisa fluid! DNA, RNA, proteins isme tairte hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Aur nucleolus?"
+        },
+        {
+          "speaker": "aman",
+          "text": "NUCLEOLUS = Nucleus ke andar ek aur chhoti gend jaisi! ⚠️ Ye RIBOSOME FACTORY hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab yahan ribosome bante hain?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Exactly! rRNA (ribosomal RNA) banta hai yahan! ⚠️ EXAM MUST KNOW!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Chromatin kya hota hai?"
+        }
+      ],
+      "navigation": {
+        "next": "cell_38_chromatin_chromosome"
+      }
+    },
+    {
+      "card_id": "cell_38_chromatin_chromosome",
+      "type": "chat",
+      "card_slug": "chromatin_chromosome_difference",
+      "progress": {
+        "current": 38,
+        "total": 58
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "CHROMATIN = DNA + Protein ka thread jaisa structure! Normal time mein dikhta hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "Chromosome kya hai phir?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Jab cell divide hone lagti hai, chromatin TIGHTLY COIL hoke thick rod ban jata hai = CHROMOSOME! 🧬"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab same cheez, different form?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Perfect! Normal time = Chromatin (thread), Division time = Chromosome (rod)! ⚠️ Dono ek saath NAHI dikhte!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Humans mein kitne chromosomes?"
+        }
+      ],
+      "navigation": {
+        "next": "cell_39_chromosome_number"
+      }
+    },
+    {
+      "card_id": "cell_39_chromosome_number",
+      "type": "chat",
+      "card_slug": "human_chromosome_count",
+      "progress": {
+        "current": 39,
+        "total": 58
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "46 CHROMOSOMES! 23 pairs - 23 mother se, 23 father se!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Har organism ka alag number?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! Dog = 78, Housefly = 12, Potato = 48, Rice = 24!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Zyada chromosome = zyada intelligent?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Nahi! Dog mein 78, human mein 46! Intelligence chromosome count se nahi, complexity se aati hai!"
+        }
+      ],
+      "navigation": {
+        "next": "cell_40_quiz_nucleus"
+      }
+    },
+    {
+      "card_id": "cell_40_quiz_nucleus",
+      "type": "quiz",
+      "card_slug": "quiz_nucleolus_function",
+      "progress": {
+        "current": 40,
+        "total": 58
+      },
+      "quiz_payload": {
+        "question": "Nucleolus ka main function kya hai?",
+        "options": [
+          "DNA replication",
+          "Ribosome synthesis",
+          "Protein synthesis",
+          "Energy production"
+        ],
+        "correct_option_id": "1",
+        "explanation": "Ribosome synthesis! Nucleolus mein rRNA banta hai aur ribosome assembly hoti hai. Ye nucleus ke andar 'ribosome factory' hai!"
+      },
+      "navigation": {
+        "next": "cell_41_quiz_chromatin"
+      }
+    },
+    {
+      "card_id": "cell_41_quiz_chromatin",
+      "type": "quiz",
+      "card_slug": "quiz_chromatin_visibility",
+      "progress": {
+        "current": 41,
+        "total": 58
+      },
+      "quiz_payload": {
+        "question": "Statement: Chromatin aur Chromosome dono hamesha nucleus mein visible hote hain. True/False?",
+        "options": [
+          "True",
+          "False"
+        ],
+        "correct_option_id": "1",
+        "explanation": "FALSE! Normal time = Chromatin visible. Cell division = Chromosome visible. Dono ek saath nahi dikhte! Chromatin hi condense hoke chromosome banta hai."
+      },
+      "navigation": {
+        "next": "cell_42_milestone_nucleus"
+      }
+    },
+    {
+      "card_id": "cell_42_milestone_nucleus",
+      "type": "milestone",
+      "card_slug": "milestone_nucleus_complete",
+      "progress": {
+        "current": 42,
+        "total": 58
+      },
+      "milestone_payload": {
+        "title": "🎉 Nucleus Conquered!",
+        "badge_emoji": "🧠",
+        "completed_topic": "Nucleus - Control Center",
+        "xp_earned": 60,
+        "milestone_progress": "Nuclear membrane (double layer) ✓\nNucleolus (ribosome factory) ✓\nChromatin vs Chromosome ✓\nHuman chromosomes (46) ✓",
+        "motivational_quote": "NEET mein nucleus se 5-6 questions! BPSC mein scientist names + chromatin/chromosome trap! Tum ready ho! 🚀"
+      },
+      "navigation": {
+        "next": "cell_43_mitochondria_intro"
+      }
+    },
+    {
+      "card_id": "cell_43_mitochondria_intro",
+      "type": "chat",
+      "card_slug": "mitochondria_powerhouse",
+      "progress": {
+        "current": 43,
+        "total": 58
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Tumhara phone battery ke bina chalega?"
+        },
+        {
+          "speaker": "raju",
+          "text": "Nahi sir!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Cell bhi bina MITOCHONDRIA ke nahi chal sakti! Ye POWERHOUSE OF THE CELL hai! ⚡🔋"
+        },
+        {
+          "speaker": "raju",
+          "text": "Powerhouse matlab energy banata hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Exactly! Glucose ko todke ATP (energy currency) banata hai! ⚠️ Ye nickname SABSE famous hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Shape kaisa hai?"
+        }
+      ],
+      "navigation": {
+        "next": "cell_44_mitochondria_structure"
+      }
+    },
+    {
+      "card_id": "cell_44_mitochondria_structure",
+      "type": "chat",
+      "card_slug": "mitochondria_double_membrane",
+      "progress": {
+        "current": 44,
+        "total": 58
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Rod/Oval shape! ⚠️ DOUBLE MEMBRANE:\n1️⃣ Outer - smooth\n2️⃣ Inner - folded (CRISTAE)"
+        },
+        {
+          "speaker": "raju",
+          "text": "Cristae kyun folded?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Surface area badhane ke liye! Zyada surface = zyada ATP production! Cristae par ATP banti hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Andar kya hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "MATRIX - fluid + enzymes for respiration! ⚠️ Ab ek shocking fact..."
+        }
+      ],
+      "navigation": {
+        "next": "cell_45_mitochondria_dna"
+      }
+    },
+    {
+      "card_id": "cell_45_mitochondria_dna",
+      "type": "chat",
+      "card_slug": "mitochondria_own_dna",
+      "progress": {
+        "current": 45,
+        "total": 58
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Mitochondria mein KHUD KA DNA hota hai! 🧬"
+        },
+        {
+          "speaker": "raju",
+          "text": "Hain?? DNA to nucleus mein hota hai na?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Nucleus mein bhi hai, mitochondria mein bhi! Ye khud reproduce kar sakta hai - binary fission se!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Ye to bacteria jaisa hai!"
+        },
+        {
+          "speaker": "aman",
+          "text": "⚠️ UPSC LEVEL: Scientists believe mitochondria pehle free bacteria tha, baad mein cell ke andar symbiosis! = ENDOSYMBIOTIC THEORY!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Wow!"
+        }
+      ],
+      "navigation": {
+        "next": "cell_46_ribosome_intro"
+      }
+    },
+    {
+      "card_id": "cell_46_ribosome_intro",
+      "type": "chat",
+      "card_slug": "ribosome_protein_factory",
+      "progress": {
+        "current": 46,
+        "total": 58
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ab RIBOSOMES - ye protein factory hain! 🏭"
+        },
+        {
+          "speaker": "raju",
+          "text": "Chhote hote hain?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bahut chhote! Non-membrane bound! RNA + Protein se bane! Nickname = PROTEIN FACTORY!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Kahan milte hain?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Cytoplasm mein free floating, ya ER ke surface par attached!"
+        },
+        {
+          "speaker": "raju",
+          "text": "70S aur 80S wala concept yahan?"
+        }
+      ],
+      "navigation": {
+        "next": "cell_47_er_intro"
+      }
+    },
+    {
+      "card_id": "cell_47_er_intro",
+      "type": "chat",
+      "card_slug": "er_transport_system",
+      "progress": {
+        "current": 47,
+        "total": 58
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "ENDOPLASMIC RETICULUM (ER) - cell ka transport system! Jaise railway network! 🚆"
+        },
+        {
+          "speaker": "raju",
+          "text": "Ye kya transport karta hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Proteins, lipids ko ek jagah se dusri jagah! Do types:\n1️⃣ ROUGH ER (ribosomes attached)\n2️⃣ SMOOTH ER (no ribosomes)"
+        },
+        {
+          "speaker": "raju",
+          "text": "Rough ER kya karta hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Protein synthesis + transport! Smooth ER = Lipid synthesis!"
+        }
+      ],
+      "navigation": {
+        "next": "cell_48_golgi_intro"
+      }
+    },
+    {
+      "card_id": "cell_48_golgi_intro",
+      "type": "chat",
+      "card_slug": "golgi_packaging_dept",
+      "progress": {
+        "current": 48,
+        "total": 58
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "GOLGI APPARATUS - packaging department! 📦 Jaise Amazon warehouse!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Kya package karta hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "ER se aaye proteins ko modify, pack, label karke bhejta hai! Nickname = POST OFFICE OF CELL!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Kahan bhejta hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Cell membrane (secretion) ya cell ke andar kisi organelle ko! Shape = Stack of pancakes! 🥞"
+        }
+      ],
+      "navigation": {
+        "next": "cell_49_lysosome_intro"
+      }
+    },
+    {
+      "card_id": "cell_49_lysosome_intro",
+      "type": "chat",
+      "card_slug": "lysosome_suicide_bag",
+      "progress": {
+        "current": 49,
+        "total": 58
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "LYSOSOMES - cell ka dustbin + cleaning crew! 🗑️"
+        },
+        {
+          "speaker": "raju",
+          "text": "Ye kya karta hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Digestive enzymes se waste ko digest karta hai! Nickname = SUICIDE BAGS!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Suicide bag kyun?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Agar cell damage ho jaye, lysosome phatt ke enzymes release - pura cell digest ho jata hai! Apni maut khud!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Scary!"
+        }
+      ],
+      "navigation": {
+        "next": "cell_50_vacuole_intro"
+      }
+    },
+    {
+      "card_id": "cell_50_vacuole_intro",
+      "type": "chat",
+      "card_slug": "vacuole_storage_tank",
+      "progress": {
+        "current": 50,
+        "total": 58
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "VACUOLES - storage tanks! 🛢️ Plant cells mein BAHUT BADA (90% space!), animal mein chhota!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Kya store karta hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Water, minerals, waste, food! Plant cell mein central vacuole cell ko turgor pressure deta hai (tight rakhe)!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Chloroplast kya hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Wo SIRF plant cells mein! ⚠️ Important hai..."
+        }
+      ],
+      "navigation": {
+        "next": "cell_51_chloroplast_intro"
+      }
+    },
+    {
+      "card_id": "cell_51_chloroplast_intro",
+      "type": "chat",
+      "card_slug": "chloroplast_photosynthesis",
+      "progress": {
+        "current": 51,
+        "total": 58
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "CHLOROPLAST - food factory! 🌱 Yahan PHOTOSYNTHESIS hota hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Hara color iska?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! CHLOROPHYLL pigment hai isme - green color! Ye sunlight capture karta hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Ismein bhi DNA hota hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! Double membrane, own DNA - mitochondria jaisa! ⚠️ Endosymbiotic theory yahan bhi apply!"
+        }
+      ],
+      "navigation": {
+        "next": "cell_52_quiz_organelles"
+      }
+    },
+    {
+      "card_id": "cell_52_quiz_organelles",
+      "type": "quiz",
+      "card_slug": "quiz_powerhouse",
+      "progress": {
+        "current": 52,
+        "total": 58
+      },
+      "quiz_payload": {
+        "question": "Cell ka 'Powerhouse' kise kehte hain?",
+        "options": [
+          "Nucleus",
+          "Mitochondria",
+          "Ribosome",
+          "Chloroplast"
+        ],
+        "correct_option_id": "1",
+        "explanation": "Mitochondria! Ye ATP (energy) produce karta hai. ⚠️ Sabse famous nickname - har exam mein aata hai!"
+      },
+      "navigation": {
+        "next": "cell_53_quiz_suicide_bag"
+      }
+    },
+    {
+      "card_id": "cell_53_quiz_suicide_bag",
+      "type": "quiz",
+      "card_slug": "quiz_suicide_bag",
+      "progress": {
+        "current": 53,
+        "total": 58
+      },
+      "quiz_payload": {
+        "question": "'Suicide bags of cell' kise kehte hain?",
+        "options": [
+          "Mitochondria",
+          "Lysosomes",
+          "Vacuoles",
+          "Golgi bodies"
+        ],
+        "correct_option_id": "1",
+        "explanation": "Lysosomes! Digestive enzymes se cell ko digest kar sakte hain damage hone par. Railway/SSC favorite question!"
+      },
+      "navigation": {
+        "next": "cell_54_milestone_organelles"
+      }
+    },
+    {
+      "card_id": "cell_54_milestone_organelles",
+      "type": "milestone",
+      "card_slug": "milestone_all_organelles",
+      "progress": {
+        "current": 54,
+        "total": 58
+      },
+      "milestone_payload": {
+        "title": "🎉 Cell Organelles Master!",
+        "badge_emoji": "🏭",
+        "completed_topic": "All Cell Organelles",
+        "xp_earned": 80,
+        "milestone_progress": "Mitochondria (Powerhouse) ✓\nRibosomes (Protein factory) ✓\nER (Transport) ✓\nGolgi (Packaging) ✓\nLysosomes (Suicide bags) ✓\nVacuoles (Storage) ✓\nChloroplast (Photosynthesis) ✓",
+        "motivational_quote": "Organelles + nicknames = 50% of BPSC/SSC/Railway cell questions! Tum ab expert ho! 🔥💪"
+      },
+      "navigation": {
+        "next": "cell_55_summary"
+      }
+    },
+    {
+      "card_id": "cell_55_summary",
+      "type": "summary",
+      "card_slug": "officer_revision_card",
+      "progress": {
+        "current": 55,
+        "total": 58
+      },
+      "summary_payload": {
+        "title": "⚡ Officer Level Revision - Cell Biology",
+        "revision_points": [
+          {
+            "id": "r1",
+            "topic": "Discovery",
+            "point": "Hooke (Cork, 1665 - Dead), Leeuwenhoek (Living, 1674), Brown (Nucleus, 1831)"
+          },
+          {
+            "id": "r2",
+            "topic": "Cell Theory",
+            "point": "Schleiden+Schwann (cells basic unit), Virchow (new from old). Exception = Virus"
+          },
+          {
+            "id": "r3",
+            "topic": "Cell Types",
+            "point": "Prokaryotic (No nucleus, 70S, Bacteria only) vs Eukaryotic (Nucleus, 80S, All others)"
+          },
+          {
+            "id": "r4",
+            "topic": "Size",
+            "point": "Largest = Ostrich egg, Smallest = Mycoplasma. Human: Ovum (big), Sperm (small), Nerve (long)"
+          },
+          {
+            "id": "r5",
+            "topic": "Boundaries",
+            "point": "Membrane (All cells, lipid+protein, Fluid Mosaic). Wall (Plants only, cellulose)"
+          },
+          {
+            "id": "r6",
+            "topic": "Nucleus",
+            "point": "Double membrane, Nucleolus (ribosome factory), Chromatin→Chromosome, Human = 46"
+          },
+          {
+            "id": "r7",
+            "topic": "Organelles",
+            "point": "Mitochondria (Powerhouse), Ribosome (Protein), ER (Transport), Golgi (Post office), Lysosome (Suicide bag)"
+          }
+        ]
+      },
+      "navigation": {
+        "next": "cell_56_final_quiz"
+      }
+    },
+    {
+      "card_id": "cell_56_final_quiz",
+      "type": "final_quiz",
+      "card_slug": "bpsc_level_final_quiz",
+      "progress": {
+        "current": 56,
+        "total": 58
+      },
+      "final_quiz_payload": {
+        "title": "🎯 BPSC/NEET Master Challenge",
+        "difficulty": "Officer Level",
+        "questions": [
+          {
+            "id": "fq1",
+            "question": "Statement 1: Mitochondria has its own DNA.\nStatement 2: Mitochondria can reproduce independently.\n\nWhich is correct?",
+            "options": [
+              "Both true, S2 explains S1",
+              "Both true, S2 does NOT explain S1",
+              "S1 true, S2 false",
+              "Both false"
+            ],
+            "correct_option_id": "0",
+            "explanation": "Both true! Mitochondria ka own DNA hone ki wajah se wo independently reproduce kar sakta hai (binary fission). Endosymbiotic theory!"
+          },
+          {
+            "id": "fq2",
+            "question": "Which scientist gave the THIRD postulate of Cell Theory?",
+            "options": [
+              "Schleiden",
+              "Schwann",
+              "Virchow",
+              "Robert Brown"
+            ],
+            "correct_option_id": "2",
+            "explanation": "Virchow (1855) - 'Omnis cellula-e-cellula' - all cells from pre-existing cells. BPSC favorite!"
+          },
+          {
+            "id": "fq3",
+            "question": "Arrange in increasing size: (A) Mycoplasma (B) Human RBC (C) Ostrich egg",
+            "options": [
+              "A < B < C",
+              "B < A < C",
+              "A < C < B",
+              "C < B < A"
+            ],
+            "correct_option_id": "0",
+            "explanation": "Mycoplasma (0.1-0.3 μm) < RBC (7 μm) < Ostrich egg (170 mm). Size sequence NEET/BPSC mein aata hai!"
+          }
+        ]
+      },
+      "navigation": {
+        "next": "cell_57_completion"
+      }
+    },
+    {
+      "card_id": "cell_57_completion",
+      "type": "final_quiz",
+      "card_slug": "chapter_completion_trophy",
+      "progress": {
+        "current": 57,
+        "total": 58
+      },
+      "final_quiz_payload": {
+        "title": "🏆 CELL BIOLOGY COMPLETE!",
+        "completion_message": "Raju, tumne Cell Biology ko crack kar liya! 🎉",
+        "achievement_stats": {
+          "total_concepts": "35+",
+          "scientists_covered": "8",
+          "organelles_mastered": "10",
+          "exam_traps_learned": "15+",
+          "ready_for_exams": "BPSC, SSC, Railway, NEET, UPSC Prelims"
+        },
+        "final_motivation": "BPSC mein Cell se 8-10 questions aate hain. SSC/Railway mein 5-6. NEET mein 10-12. Tum ab sabka answer de sakte ho! Officer banne ka sapna ab aur paas aa gaya! Keep learning! 💪🔥",
+        "next_chapter_hint": "Next → Biomolecules (Carbohydrates, Proteins, DNA structure)... taiyar ho?"
+      },
+      "navigation": {
+        "next": null
+      }
+    },
+    {
+      "card_id": "cell_58_end_buffer",
+      "type": "chat",
+      "card_slug": "journey_end_message",
+      "progress": {
+        "current": 58,
+        "total": 58
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, yaad hai jab tumne pehli baar 'cell' word suna tha?"
+        },
+        {
+          "speaker": "raju",
+          "text": "Haan sir... confusing lagta tha. Ab sab crystal clear!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Ye journey tha zero se officer level tak! Hooke se lekar Endosymbiotic theory tak!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Thank you sir! Ab confidence aa gaya exam ke liye!"
+        },
+        {
+          "speaker": "aman",
+          "text": "All the best Raju! Remember - har cell tumhare andar ek chote zinda organism jaisa hai. Science amazing hai! 🧬🔬"
+        },
+        {
+          "speaker": "raju",
+          "text": "Bilkul sir! Next chapter kab? 😊"
+        }
+      ],
+      "navigation": {
+        "next": null
+      }
     }
   ]
 }
+```
