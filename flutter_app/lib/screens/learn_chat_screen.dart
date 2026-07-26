@@ -91,6 +91,7 @@ class _LearnChatScreenState extends State<LearnChatScreen> {
     
     LearnEffects.playTap();
 
+    // 1. Chat cards ke liye progressive message reveal
     if (currentCard.type == 'chat') {
       int totalMsgs = currentCard.messages?.length ?? 0;
       if (visibleMessageCount < totalMsgs) {
@@ -114,6 +115,7 @@ class _LearnChatScreenState extends State<LearnChatScreen> {
       }
     }
 
+    // 2. Next Card Target Navigation
     int targetIndex = -1;
     final String? nextTarget = currentCard.nextSlug;
 
@@ -225,8 +227,12 @@ class _LearnChatScreenState extends State<LearnChatScreen> {
     int totalMsgs = currentCard.messages?.length ?? 0;
     bool isAllMessagesRevealed = (visibleMessageCount >= totalMsgs && !isTyping) || currentCard.type != 'chat';
 
+    // 🌟 SMART BUTTON LABEL LOGIC FOR INTRO VS CHAT CARDS
     String buttonLabel = 'Tap to Read Next 💬';
-    if (isTyping) {
+
+    if (currentCard.type == 'intro') {
+      buttonLabel = currentCard.buttonText ?? 'Start Chapter 🚀';
+    } else if (isTyping) {
       buttonLabel = 'Aman Sir is typing...';
     } else if (isAllMessagesRevealed) {
       buttonLabel = currentCard.buttonText ?? 'Next Card ➔';
@@ -321,7 +327,9 @@ class _LearnChatScreenState extends State<LearnChatScreen> {
               child: SafeArea(
                 child: ElevatedButton(
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: isAllMessagesRevealed ? const Color(0xFF4F46E5) : const Color(0xFF2563EB),
+                    backgroundColor: (currentCard.type == 'intro' || isAllMessagesRevealed) 
+                        ? const Color(0xFF4F46E5) 
+                        : const Color(0xFF2563EB),
                     minimumSize: const Size.fromHeight(52),
                     elevation: 2,
                     shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
@@ -340,7 +348,9 @@ class _LearnChatScreenState extends State<LearnChatScreen> {
                       ),
                       const SizedBox(width: 8),
                       Icon(
-                        isAllMessagesRevealed ? Icons.arrow_forward_rounded : Icons.touch_app_rounded,
+                        (currentCard.type == 'intro' || isAllMessagesRevealed) 
+                            ? Icons.arrow_forward_rounded 
+                            : Icons.touch_app_rounded,
                         color: Colors.white,
                         size: 18,
                       )
