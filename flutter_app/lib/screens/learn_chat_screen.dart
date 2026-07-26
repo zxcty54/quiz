@@ -197,7 +197,6 @@ class _LearnChatScreenState extends State<LearnChatScreen> {
         Map<String, dynamic> parsedJson = json.decode(utf8.decode(response.bodyBytes));
         LearnChapterData data = LearnChapterData.fromJson(parsedJson);
 
-        // 💾 Auto-Restore Saved Progress
         final prefs = await SharedPreferences.getInstance();
         String savedSlug = prefs.getString('progress_${data.id}') ?? data.firstCardSlug;
         if (!data.cardsMap.containsKey(savedSlug)) savedSlug = data.firstCardSlug;
@@ -347,7 +346,6 @@ class _LearnChatScreenState extends State<LearnChatScreen> {
 
     LearnCardModel currentCard = chapterData!.cardsMap[currentCardSlug]!;
 
-    // 🏆 Milestone Celebration Screen Handler
     if (currentCard.type == 'milestone') {
       return Scaffold(
         body: SafeArea(
@@ -362,7 +360,6 @@ class _LearnChatScreenState extends State<LearnChatScreen> {
     int totalMsgs = currentCard.messages?.length ?? 0;
     bool isAllMessagesRevealed = (visibleMessageCount >= totalMsgs && !isTyping) || currentCard.type != 'chat';
 
-    // 💬 Dynamic Student Button Text
     String buttonLabel = 'Tap to Read Next 💬';
     if (isTyping) {
       buttonLabel = 'Aman Sir is typing...';
@@ -418,7 +415,6 @@ class _LearnChatScreenState extends State<LearnChatScreen> {
         behavior: HitTestBehavior.opaque,
         child: Column(
           children: [
-            // ✨ AnimatedSwitcher for Card Transitions
             Expanded(
               child: AnimatedSwitcher(
                 duration: const Duration(milliseconds: 350),
@@ -449,7 +445,6 @@ class _LearnChatScreenState extends State<LearnChatScreen> {
               ),
             ),
 
-            // Bottom Action Bar
             Container(
               padding: const EdgeInsets.all(16),
               decoration: BoxDecoration(
@@ -474,7 +469,7 @@ class _LearnChatScreenState extends State<LearnChatScreen> {
                         child: Text(
                           buttonLabel,
                           maxLines: 1,
-                          overflow: TextSpanOverflow.ellipsis,
+                          overflow: TextOverflow.ellipsis, // Fixed syntax error
                           style: const TextStyle(fontSize: 14.5, fontWeight: FontWeight.bold, color: Colors.white),
                         ),
                       ),
