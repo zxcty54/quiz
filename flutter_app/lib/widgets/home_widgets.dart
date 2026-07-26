@@ -1,5 +1,7 @@
+import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'package:file_picker/file_picker.dart'; // 👈 Added for attaching File/Image
 import '../services/telegram_tracker.dart';
 
 // 1️⃣ TODAY UPDATE TICKER WIDGET
@@ -162,7 +164,7 @@ class HeroHeaderWidget extends StatelessWidget {
   }
 }
 
-// 3️⃣ 🎯 ALAG-ALAG DISTINCT 3-BOX WEB HUB CARD WIDGET
+// 3️⃣ ALAG-ALAG DISTINCT 3-BOX WEB HUB CARD WIDGET
 class WebHubCardWidget extends StatelessWidget {
   final List<dynamic> webHubSections;
   final Function(String title, String url) onTapUrl;
@@ -175,7 +177,6 @@ class WebHubCardWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // Notice if web_hub is empty or missing
     if (webHubSections.isEmpty) {
       return Card(
         color: const Color(0xFFFEF2F2),
@@ -223,7 +224,6 @@ class WebHubCardWidget extends StatelessWidget {
 
         final List<dynamic> items = section['items'] ?? [];
 
-        // Individual Bordered Container Card
         return Container(
           width: double.infinity,
           margin: const EdgeInsets.only(bottom: 14),
@@ -244,7 +244,6 @@ class WebHubCardWidget extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                // Box Header Title
                 Row(
                   children: [
                     Expanded(
@@ -263,7 +262,6 @@ class WebHubCardWidget extends StatelessWidget {
                 Divider(color: themeColor.withOpacity(0.2), height: 1),
                 const SizedBox(height: 10),
 
-                // JSON List Details Render
                 ...items.map((item) => Padding(
                   padding: const EdgeInsets.symmetric(vertical: 3.5),
                   child: Row(
@@ -286,7 +284,6 @@ class WebHubCardWidget extends StatelessWidget {
 
                 const SizedBox(height: 12),
 
-                // Right Aligned Redirect Button
                 Align(
                   alignment: Alignment.centerRight,
                   child: InkWell(
@@ -412,7 +409,7 @@ class EligibilityCheckerWidget extends StatelessWidget {
   }
 }
 
-// 5️⃣ TELEGRAM CREATOR FORM WIDGET
+// 5️⃣ TELEGRAM CREATOR FORM WIDGET (WITH DIRECT FILE PICKER ATTACH)
 class TelegramCreatorWidget extends StatefulWidget {
   const TelegramCreatorWidget({super.key});
 
@@ -424,6 +421,29 @@ class _TelegramCreatorWidgetState extends State<TelegramCreatorWidget> {
   bool _isExpanded = false;
   final _nameController = TextEditingController();
   final _subjectController = TextEditingController();
+  File? _attachedFile;
+
+  // 📂 Direct File Attachment Picker
+  Future<void> _pickFile() async {
+    try {
+      FilePickerResult? result = await FilePicker.platform.pickFiles(
+        type: FileType.custom,
+        allowedExtensions: ['jpg', 'jpeg', 'png', 'pdf'],
+      );
+
+      if (result != null && result.files.single.path != null) {
+        setState(() {
+          _attachedFile = File(result.files.single.path!);
+        });
+      }
+    } catch (e) {
+      if (mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(content: Text('⚠️ File select error: $e')),
+        );
+      }
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -436,7 +456,7 @@ class _TelegramCreatorWidgetState extends State<TelegramCreatorWidget> {
           children: [
             const Text('🤝 Bano MockTester Ke Creator!', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 14)),
             const SizedBox(height: 4),
-            const Text('Apna Name/Subject daal kar Telegram par Question Photo bhejein!', style: TextStyle(fontSize: 11, color: Colors.grey)),
+            const Text('Apna Name/Subject daal kar Question Photo attach karein!', style: TextStyle(fontSize: 11, color: Colors.grey)),
             const SizedBox(height: 10),
             SizedBox(
               width: double.infinity,
@@ -453,6 +473,45 @@ class _TelegramCreatorWidgetState extends State<TelegramCreatorWidget> {
               const SizedBox(height: 8),
               TextField(controller: _subjectController, decoration: const InputDecoration(labelText: 'Exam / Subject', isDense: true)),
               const SizedBox(height: 10),
+
+              // 📎 Attach File Option Inside Form
+              Row(
+                children: [
+                  OutlinedButton.icon(
+                    onPressed: _pickFile,
+                    icon: const Icon(Icons.attach_file_rounded, size: 16, color: Color(0xFF10B981)),
+                    label: const Text('Attach Photo/PDF', style: TextStyle(fontSize: 11, color: Color(0xFF10B981))),
+                    style: OutlinedButton.styleFrom(
+                      side: const BorderSide(color: Color(0xFF10B981)),
+                      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
+                    ),
+                  ),
+                  const SizedBox(width: 8),
+                  if (_attachedFile != null)
+                    Expanded(
+                      child: Row(
+                        children: [
+                          const Icon(Icons.check_circle, color: Colors.green, size: 16),
+                          const SizedBox(width: 4),
+                          Expanded(
+                            child: Text(
+                              _attachedFile!.path.split('/').last,
+                              maxLines: 1,
+                              overflow: TextOverflow.ellipsis,
+                              style: const TextStyle(fontSize: 11, fontWeight: FontWeight.bold),
+                            ),
+                          ),
+                          InkWell(
+                            onTap: () => setState(() => _attachedFile = null),
+                            child: const Icon(Icons.close, size: 16, color: Colors.red),
+                          )
+                        ],
+                      ),
+                    ),
+                ],
+              ),
+              const SizedBox(height: 12),
+
               SizedBox(
                 width: double.infinity,
                 child: ElevatedButton.icon(
@@ -463,12 +522,15 @@ class _TelegramCreatorWidgetState extends State<TelegramCreatorWidget> {
                       return;
                     }
                     TelegramTracker.logActivity("Creator Form Submitted - Name: ${_nameController.text}");
-                    final msg = "Bhai, main apna question photo attach kar rha hu.\n👤 Name: ${_nameController.text}\n📚 Subject: ${_subjectController.text}";
+
+                    String fileNameText = _attachedFile != null ? "\n📎 Attached: ${_attachedFile!.path.split('/').last}" : "";
+                    final msg = "Bhai, main apna question submit kar raha hu.\n👤 Name: ${_nameController.text}\n📚 Subject: ${_subjectController.text}$fileNameText";
                     final uri = Uri.parse("https://t.me/MT_Masterhub_bot?text=${Uri.encodeComponent(msg)}");
+                    
                     if (await canLaunchUrl(uri)) await launchUrl(uri, mode: LaunchMode.externalApplication);
                   },
                   icon: const Text('🚀'),
-                  label: const Text('Open Telegram & Send Photo', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 12)),
+                  label: const Text('Open Telegram & Send', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 12)),
                 ),
               )
             ]
