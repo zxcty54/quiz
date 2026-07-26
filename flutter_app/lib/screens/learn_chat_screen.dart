@@ -137,7 +137,7 @@ class LearnChapterData {
 }
 
 // ==========================================
-// 2. MAIN SCREEN (PREMIUM MODERN THEME)
+// 2. MAIN SCREEN
 // ==========================================
 
 class LearnChatScreen extends StatefulWidget {
@@ -293,9 +293,9 @@ class _LearnChatScreenState extends State<LearnChatScreen> {
     bool isAllMessagesRevealed = visibleMessageCount >= totalMsgs || currentCard.type != 'chat';
 
     return Scaffold(
-      backgroundColor: const Color(0xFFF8FAFC), // Modern Clean Off-White Background
+      backgroundColor: const Color(0xFFF8FAFC),
       appBar: AppBar(
-        backgroundColor: const Color(0xFF4F46E5), // Indigo Modern Accent Color
+        backgroundColor: const Color(0xFF4F46E5),
         elevation: 2,
         iconTheme: const IconThemeData(color: Colors.white),
         title: Column(
@@ -342,7 +342,6 @@ class _LearnChatScreenState extends State<LearnChatScreen> {
                 scrollController: _scrollController,
               ),
             ),
-            // Floating Modern Action Bar
             Container(
               padding: const EdgeInsets.all(16),
               decoration: BoxDecoration(
@@ -420,7 +419,7 @@ class _LearnCardRenderer extends StatelessWidget {
   }
 }
 
-// MODERN CHAT CARD WIDGET
+// MODERN CHAT CARD
 class _ModernChatCard extends StatelessWidget {
   final LearnCardModel card;
   final Map<String, LearnCharacter> characters;
@@ -458,19 +457,16 @@ class _ModernChatCard extends StatelessWidget {
               mainAxisAlignment: isTeacher ? MainAxisAlignment.end : MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                // STUDENT AVATAR
                 if (!isTeacher) ...[
                   _buildAvatarBadge(char, isTeacher: false),
                   const SizedBox(width: 8),
                 ],
-
-                // CHAT BUBBLE
                 Flexible(
                   child: Container(
                     constraints: BoxConstraints(maxWidth: MediaQuery.of(context).size.width * 0.78),
                     padding: const EdgeInsets.all(12),
                     decoration: BoxDecoration(
-                      color: isTeacher ? const Color(0xFFEEF2FF) : Colors.white, // Soft Light Indigo vs Clean White
+                      color: isTeacher ? const Color(0xFFEEF2FF) : Colors.white,
                       borderRadius: BorderRadius.only(
                         topLeft: const Radius.circular(16),
                         topRight: const Radius.circular(16),
@@ -514,8 +510,6 @@ class _ModernChatCard extends StatelessWidget {
                     ),
                   ),
                 ),
-
-                // TEACHER AVATAR
                 if (isTeacher) ...[
                   const SizedBox(width: 8),
                   _buildAvatarBadge(char, isTeacher: true),
@@ -637,53 +631,4 @@ class _QuizCardState extends State<_QuizCard> {
                 Container(
                   padding: const EdgeInsets.all(12),
                   width: double.infinity,
-                  decoration: BoxDecoration(color: const Color(0xFFF0F9FF), borderRadius: BorderRadius.circular(10), border: Border.all(color: const Color(0xFFBAE6FD))),
-                  child: LatexText(
-                    '💡 Explanation: ${payload['explanation']}',
-                    style: const TextStyle(fontSize: 13, color: Color(0xFF0369A1)),
-                  ),
-                )
-              ]
-            ],
-          ),
-        ),
-      ),
-    );
-  }
-}
-
-// SUMMARY CARD
-class _SummaryCard extends StatelessWidget {
-  final LearnCardModel card;
-  const _SummaryCard({required this.card});
-
-  @override
-  Widget build(BuildContext context) {
-    final payload = card.summaryPayload!;
-    final List points = payload['revision_points'] ?? [];
-
-    return Padding(
-      padding: const EdgeInsets.all(16.0),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Text(
-            payload['title'] ?? 'Summary',
-            style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold, color: Color(0xFF4F46E5)),
-          ),
-          const SizedBox(height: 12),
-          Expanded(
-            child: ListView.builder(
-              itemCount: points.length,
-              itemBuilder: (context, idx) {
-                final pt = points[idx];
-                return Card(
-                  elevation: 1,
-                  margin: const EdgeInsets.only(bottom: 10),
-                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
-                  child: Padding(
-                    padding: const EdgeInsets.all(14),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(pt['topic'] ?? '', style: const TextStyle(fontWeight: FontWeight
+                  decoration: BoxDecoration(color: const Color(0xFFF0F9FF), borderRadius: BorderRadius.circular(10), border: Border.all(color: const Color(0xFFBAE6
