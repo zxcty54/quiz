@@ -38,13 +38,18 @@ jobs:
         working-directory: flutter_app
         run: dart run flutter_launcher_icons || true
 
-      # 🛠️ Auto-Patch Kotlin (.kts) & Groovy (.gradle) compileSdk to 36
-      - name: 🔧 Auto-Patch Android compileSdk to 36
-        working-directory: flutter_app
+      # 🛠️ Universal Auto-Patch compileSdk to 36 for App AND pub-cache Plugins (file_picker fix)
+      - name: 🔧 Auto-Patch All Plugins & App compileSdk to 36
         run: |
-          find android/ -name "build.gradle.kts" -exec sed -i 's/compileSdk.*/compileSdk = 36/g' {} +
-          find android/ -name "build.gradle" -exec sed -i 's/compileSdkVersion.*/compileSdkVersion 36/g' {} +
-          find android/ -name "build.gradle" -exec sed -i 's/compileSdk .*/compileSdk 36/g' {} +
+          # 1. Patch flutter_app android files (Kotlin & Groovy)
+          find flutter_app/android/ -type f \( -name "build.gradle" -o -name "build.gradle.kts" \) -exec sed -i 's/compileSdk = .*/compileSdk = 36/g' {} +
+          find flutter_app/android/ -type f \( -name "build.gradle" -o -name "build.gradle.kts" \) -exec sed -i 's/compileSdkVersion.*/compileSdkVersion 36/g' {} +
+          find flutter_app/android/ -type f \( -name "build.gradle" -o -name "build.gradle.kts" \) -exec sed -i 's/compileSdk .*/compileSdk 36/g' {} +
+
+          # 2. Patch downloaded plugins in pub-cache (Fixes :file_picker error)
+          find ~/.pub-cache/ -type f \( -name "build.gradle" -o -name "build.gradle.kts" \) -exec sed -i 's/compileSdkVersion.*/compileSdkVersion 36/g' {} +
+          find ~/.pub-cache/ -type f \( -name "build.gradle" -o -name "build.gradle.kts" \) -exec sed -i 's/compileSdk = .*/compileSdk = 36/g' {} +
+          find ~/.pub-cache/ -type f \( -name "build.gradle" -o -name "build.gradle.kts" \) -exec sed -i 's/compileSdk .*/compileSdk 36/g' {} +
 
       - name: 🛠️ Build APK (With Secrets Injected)
         working-directory: flutter_app
