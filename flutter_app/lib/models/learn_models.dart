@@ -44,12 +44,13 @@ class LearnQuizOption {
 class LearnCardModel {
   final String cardId;
   final String cardSlug;
-  final String type;
+  final String type; // 'intro', 'chat', 'guess', 'quiz', 'summary', 'milestone'
   final String conceptId;
   final int level;
   final int currentProgress;
   final int totalProgress;
   final List<LearnChatMessage>? messages;
+  final Map<String, dynamic>? introPayload; // 👈 Added Intro Payload
   final Map<String, dynamic>? quizPayload;
   final Map<String, dynamic>? summaryPayload;
   final Map<String, dynamic>? milestonePayload;
@@ -65,6 +66,7 @@ class LearnCardModel {
     required this.currentProgress,
     required this.totalProgress,
     this.messages,
+    this.introPayload, // 👈 Added
     this.quizPayload,
     this.summaryPayload,
     this.milestonePayload,
@@ -89,6 +91,7 @@ class LearnCardModel {
       currentProgress: json['progress']?['current'] ?? 1,
       totalProgress: json['progress']?['total'] ?? 1,
       messages: msgs,
+      introPayload: json['intro_payload'], // 👈 Added parsing for intro_payload
       quizPayload: json['quiz_payload'] ?? json['final_quiz_payload'] ?? json['guess_payload'],
       summaryPayload: json['summary_payload'],
       milestonePayload: json['milestone_payload'],
