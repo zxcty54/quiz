@@ -3,10 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import '../widgets/latex_text.dart';
 
-// ==========================================
-// 1. DATA MODELS
-// ==========================================
-
 class LearnCharacter {
   final String name;
   final String role;
@@ -135,10 +131,6 @@ class LearnChapterData {
     );
   }
 }
-
-// ==========================================
-// 2. MAIN SCREEN (FETCHES LIVE GITHUB JSON)
-// ==========================================
 
 class LearnChatScreen extends StatefulWidget {
   final String? jsonUrl;
@@ -318,7 +310,6 @@ class _LearnChatScreenState extends State<LearnChatScreen> {
   }
 }
 
-// POLYMORPHIC CARD RENDERER
 class _LearnCardRenderer extends StatelessWidget {
   final LearnCardModel card;
   final Map<String, LearnCharacter> characters;
@@ -341,7 +332,6 @@ class _LearnCardRenderer extends StatelessWidget {
   }
 }
 
-// WHATSAPP CHAT CARD
 class _WhatsAppChatCard extends StatelessWidget {
   final LearnCardModel card;
   final Map<String, LearnCharacter> characters;
@@ -414,7 +404,6 @@ class _WhatsAppChatCard extends StatelessWidget {
   }
 }
 
-// QUIZ CARD
 class _QuizCard extends StatefulWidget {
   final LearnCardModel card;
   const _QuizCard({required this.card});
@@ -499,7 +488,6 @@ class _QuizCardState extends State<_QuizCard> {
   }
 }
 
-// SUMMARY CARD
 class _SummaryCard extends StatelessWidget {
   final LearnCardModel card;
   const _SummaryCard({required this.card});
