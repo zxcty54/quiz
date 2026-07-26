@@ -1,8 +1,14 @@
-```json
 {
   "topic_id": "cell_biology_complete",
   "topic_title": "Cell Biology - The Unit of Life",
-  "target_exams": ["BPSC", "BSSC", "RRB NTPC", "SSC CGL", "NEET", "UPSC Prelims"],
+  "target_exams": [
+    "BPSC",
+    "BSSC",
+    "RRB NTPC",
+    "SSC CGL",
+    "NEET",
+    "UPSC Prelims"
+  ],
   "total_cards": 60,
   "characters": {
     "aman": {
@@ -31,7 +37,14 @@
         "chapter_title": "Cell Biology",
         "chapter_subtitle": "The Unit of Life",
         "chapter_icon": "🧬",
-        "target_exams": ["BPSC", "BSSC", "RRB NTPC", "SSC CGL", "NEET", "UPSC Prelims"],
+        "target_exams": [
+          "BPSC",
+          "BSSC",
+          "RRB NTPC",
+          "SSC CGL",
+          "NEET",
+          "UPSC Prelims"
+        ],
         "learning_outcomes": [
           "Cell Discovery & Scientists (Hooke, Leeuwenhoek, Brown)",
           "Cell Theory & Exceptions (Schleiden, Schwann, Virchow)",
@@ -229,10 +242,22 @@
       "quiz_payload": {
         "question": "Robert Hooke (1665) ne cell discover karne ke liye kaunsa material use kiya?",
         "options": [
-          { "id": "A", "text": "Pond water (talab ka paani)" },
-          { "id": "B", "text": "Cork (bottle ki dhakkan)" },
-          { "id": "C", "text": "Onion peel (pyaaz ki jhilli)" },
-          { "id": "D", "text": "Human blood (khoon)" }
+          {
+            "id": "A",
+            "text": "Pond water (talab ka paani)"
+          },
+          {
+            "id": "B",
+            "text": "Cork (bottle ki dhakkan)"
+          },
+          {
+            "id": "C",
+            "text": "Onion peel (pyaaz ki jhilli)"
+          },
+          {
+            "id": "D",
+            "text": "Human blood (khoon)"
+          }
         ],
         "correct_option_id": "B",
         "explanation": "Cork! Hooke ne bottle ke cork mein DEAD cell walls dekhe. Yaad rakho: Hooke = Cork = 1665 = Dead cells. Living cells = Leeuwenhoek (1674). SSC/Railway direct question!"
@@ -255,10 +280,22 @@
       "quiz_payload": {
         "question": "Living cells ko sabse pehle kisne observe kiya?",
         "options": [
-          { "id": "A", "text": "Robert Hooke (1665)" },
-          { "id": "B", "text": "Leeuwenhoek (1674)" },
-          { "id": "C", "text": "Robert Brown (1831)" },
-          { "id": "D", "text": "Schleiden (1838)" }
+          {
+            "id": "A",
+            "text": "Robert Hooke (1665)"
+          },
+          {
+            "id": "B",
+            "text": "Leeuwenhoek (1674)"
+          },
+          {
+            "id": "C",
+            "text": "Robert Brown (1831)"
+          },
+          {
+            "id": "D",
+            "text": "Schleiden (1838)"
+          }
         ],
         "correct_option_id": "B",
         "explanation": "Leeuwenhoek (1674)! Pond water mein bacteria aur protozoa dekhe. 'Father of Microbiology' bhi kehte hain isko. Hooke ne sirf dead cells dekhe the."
@@ -281,10 +318,22 @@
       "quiz_payload": {
         "question": "NUCLEUS ki discovery kisne ki?",
         "options": [
-          { "id": "A", "text": "Robert Hooke" },
-          { "id": "B", "text": "Leeuwenhoek" },
-          { "id": "C", "text": "Robert Brown" },
-          { "id": "D", "text": "Virchow" }
+          {
+            "id": "A",
+            "text": "Robert Hooke"
+          },
+          {
+            "id": "B",
+            "text": "Leeuwenhoek"
+          },
+          {
+            "id": "C",
+            "text": "Robert Brown"
+          },
+          {
+            "id": "D",
+            "text": "Virchow"
+          }
         ],
         "correct_option_id": "C",
         "explanation": "Robert Brown (1831)! Orchid plant ki cells mein har cell ke beech mein ek dense, round structure dekha - NUCLEUS! Guthli jaisa dikhta hai. BPSC favorite!"
@@ -455,10 +504,22 @@
       "quiz_payload": {
         "question": "Cell Theory mein 'Omnis cellula-e-cellula' ka contribution kisne diya?",
         "options": [
-          { "id": "A", "text": "Schleiden" },
-          { "id": "B", "text": "Schwann" },
-          { "id": "C", "text": "Virchow" },
-          { "id": "D", "text": "Robert Brown" }
+          {
+            "id": "A",
+            "text": "Schleiden"
+          },
+          {
+            "id": "B",
+            "text": "Schwann"
+          },
+          {
+            "id": "C",
+            "text": "Virchow"
+          },
+          {
+            "id": "D",
+            "text": "Robert Brown"
+          }
         ],
         "correct_option_id": "C",
         "explanation": "Rudolf Virchow (1855)! 'Omnis cellula-e-cellula' = All cells from pre-existing cells. Yaad rakho: Schleiden (plants), Schwann (animals), Virchow (cell division). NEET/BPSC direct!"
@@ -481,10 +542,22 @@
       "quiz_payload": {
         "question": "Cell Theory ka exception kaunsa organism hai?",
         "options": [
-          { "id": "A", "text": "Bacteria" },
-          { "id": "B", "text": "Virus" },
-          { "id": "C", "text": "Amoeba" },
-          { "id": "D", "text": "Yeast" }
+          {
+            "id": "A",
+            "text": "Bacteria"
+          },
+          {
+            "id": "B",
+            "text": "Virus"
+          },
+          {
+            "id": "C",
+            "text": "Amoeba"
+          },
+          {
+            "id": "D",
+            "text": "Yeast"
+          }
         ],
         "correct_option_id": "B",
         "explanation": "VIRUS! Virus mein cell structure nahi - sirf protein coat + genetic material. Ye living aur non-living ke beech mein hai. BPSC ka mega trap!"
@@ -507,10 +580,22 @@
       "quiz_payload": {
         "question": "Cell Theory ke according, cell kis cheez ka basic unit hai?",
         "options": [
-          { "id": "A", "text": "Sirf structure (body banane) ka" },
-          { "id": "B", "text": "Sirf function (kaam karne) ka" },
-          { "id": "C", "text": "Structure aur function dono ka" },
-          { "id": "D", "text": "Sirf reproduction ka" }
+          {
+            "id": "A",
+            "text": "Sirf structure (body banane) ka"
+          },
+          {
+            "id": "B",
+            "text": "Sirf function (kaam karne) ka"
+          },
+          {
+            "id": "C",
+            "text": "Structure aur function dono ka"
+          },
+          {
+            "id": "D",
+            "text": "Sirf reproduction ka"
+          }
         ],
         "correct_option_id": "C",
         "explanation": "Structure AND Function dono ka! Cell = Structural aur Functional unit of life. Body banane mein bhi basic unit, kaam karne mein bhi!"
@@ -724,10 +809,22 @@
       "quiz_payload": {
         "question": "Prokaryotic cells mein konsa ribosome hota hai?",
         "options": [
-          { "id": "A", "text": "60S" },
-          { "id": "B", "text": "70S" },
-          { "id": "C", "text": "80S" },
-          { "id": "D", "text": "90S" }
+          {
+            "id": "A",
+            "text": "60S"
+          },
+          {
+            "id": "B",
+            "text": "70S"
+          },
+          {
+            "id": "C",
+            "text": "80S"
+          },
+          {
+            "id": "D",
+            "text": "90S"
+          }
         ],
         "correct_option_id": "B",
         "explanation": "70S ribosomes! Prokaryotic = 70S, Eukaryotic = 80S. Yaad: PRO-70 (smaller), EU-80 (bigger). NEET/BPSC direct question!"
@@ -750,10 +847,22 @@
       "quiz_payload": {
         "question": "Konsa organism prokaryotic NAHI hai?",
         "options": [
-          { "id": "A", "text": "E. coli bacteria" },
-          { "id": "B", "text": "Nostoc (Blue-green algae)" },
-          { "id": "C", "text": "Amoeba" },
-          { "id": "D", "text": "Mycoplasma" }
+          {
+            "id": "A",
+            "text": "E. coli bacteria"
+          },
+          {
+            "id": "B",
+            "text": "Nostoc (Blue-green algae)"
+          },
+          {
+            "id": "C",
+            "text": "Amoeba"
+          },
+          {
+            "id": "D",
+            "text": "Mycoplasma"
+          }
         ],
         "correct_option_id": "C",
         "explanation": "Amoeba! Ye eukaryotic hai - nucleus present. Sirf bacteria aur cyanobacteria prokaryotic. Railway trap!"
@@ -776,10 +885,22 @@
       "quiz_payload": {
         "question": "Prokaryotic cells mein kya ABSENT hai?",
         "options": [
-          { "id": "A", "text": "Ribosomes" },
-          { "id": "B", "text": "DNA" },
-          { "id": "C", "text": "Nuclear membrane" },
-          { "id": "D", "text": "Cell membrane" }
+          {
+            "id": "A",
+            "text": "Ribosomes"
+          },
+          {
+            "id": "B",
+            "text": "DNA"
+          },
+          {
+            "id": "C",
+            "text": "Nuclear membrane"
+          },
+          {
+            "id": "D",
+            "text": "Cell membrane"
+          }
         ],
         "correct_option_id": "C",
         "explanation": "Nuclear membrane! DNA hai par nuclear membrane nahi. DNA nucleoid mein freely floating. Ribosomes (70S) present!"
@@ -947,10 +1068,22 @@
       "quiz_payload": {
         "question": "Duniya ka sabse BADA cell?",
         "options": [
-          { "id": "A", "text": "Blue whale cell" },
-          { "id": "B", "text": "Ostrich egg" },
-          { "id": "C", "text": "Human ovum" },
-          { "id": "D", "text": "Banyan cell" }
+          {
+            "id": "A",
+            "text": "Blue whale cell"
+          },
+          {
+            "id": "B",
+            "text": "Ostrich egg"
+          },
+          {
+            "id": "C",
+            "text": "Human ovum"
+          },
+          {
+            "id": "D",
+            "text": "Banyan cell"
+          }
         ],
         "correct_option_id": "B",
         "explanation": "Ostrich egg! 170mm. Egg = single cell. Naked eye visible. BPSC/SSC/Railway - sabmein!"
@@ -973,10 +1106,22 @@
       "quiz_payload": {
         "question": "Human body ka LAMBA cell?",
         "options": [
-          { "id": "A", "text": "Muscle cell" },
-          { "id": "B", "text": "Nerve cell (Neuron)" },
-          { "id": "C", "text": "Ovum" },
-          { "id": "D", "text": "Bone cell" }
+          {
+            "id": "A",
+            "text": "Muscle cell"
+          },
+          {
+            "id": "B",
+            "text": "Nerve cell (Neuron)"
+          },
+          {
+            "id": "C",
+            "text": "Ovum"
+          },
+          {
+            "id": "D",
+            "text": "Bone cell"
+          }
         ],
         "correct_option_id": "B",
         "explanation": "Nerve cell! 1 metre lamba. Spinal cord se foot. NEET favorite!"
@@ -999,10 +1144,22 @@
       "quiz_payload": {
         "question": "Sabse chhota living cell?",
         "options": [
-          { "id": "A", "text": "Virus" },
-          { "id": "B", "text": "Mycoplasma" },
-          { "id": "C", "text": "Bacteria" },
-          { "id": "D", "text": "RBC" }
+          {
+            "id": "A",
+            "text": "Virus"
+          },
+          {
+            "id": "B",
+            "text": "Mycoplasma"
+          },
+          {
+            "id": "C",
+            "text": "Bacteria"
+          },
+          {
+            "id": "D",
+            "text": "RBC"
+          }
         ],
         "correct_option_id": "B",
         "explanation": "Mycoplasma! 0.1-0.3 μm. Smallest LIVING (virus living nahi). Cell wall absent! Railway/SSC!"
@@ -1215,10 +1372,22 @@
       "quiz_payload": {
         "question": "Fluid Mosaic Model kisne?",
         "options": [
-          { "id": "A", "text": "Watson & Crick" },
-          { "id": "B", "text": "Singer & Nicolson" },
-          { "id": "C", "text": "Schleiden & Schwann" },
-          { "id": "D", "text": "Hooke & Brown" }
+          {
+            "id": "A",
+            "text": "Watson & Crick"
+          },
+          {
+            "id": "B",
+            "text": "Singer & Nicolson"
+          },
+          {
+            "id": "C",
+            "text": "Schleiden & Schwann"
+          },
+          {
+            "id": "D",
+            "text": "Hooke & Brown"
+          }
         ],
         "correct_option_id": "B",
         "explanation": "Singer & Nicolson (1972)! Membrane - lipid bilayer + proteins. BPSC/NEET!"
@@ -1241,10 +1410,22 @@
       "quiz_payload": {
         "question": "Cell wall bana?",
         "options": [
-          { "id": "A", "text": "Protein" },
-          { "id": "B", "text": "Lipid" },
-          { "id": "C", "text": "Cellulose" },
-          { "id": "D", "text": "DNA" }
+          {
+            "id": "A",
+            "text": "Protein"
+          },
+          {
+            "id": "B",
+            "text": "Lipid"
+          },
+          {
+            "id": "C",
+            "text": "Cellulose"
+          },
+          {
+            "id": "D",
+            "text": "DNA"
+          }
         ],
         "correct_option_id": "C",
         "explanation": "Cellulose! Carbohydrate - plants. Paper, cotton. Rigid. SSC/Railway!"
@@ -1267,10 +1448,22 @@
       "quiz_payload": {
         "question": "Membrane property?",
         "options": [
-          { "id": "A", "text": "Fully permeable" },
-          { "id": "B", "text": "Selectively permeable" },
-          { "id": "C", "text": "Impermeable" },
-          { "id": "D", "text": "Semi-solid" }
+          {
+            "id": "A",
+            "text": "Fully permeable"
+          },
+          {
+            "id": "B",
+            "text": "Selectively permeable"
+          },
+          {
+            "id": "C",
+            "text": "Impermeable"
+          },
+          {
+            "id": "D",
+            "text": "Semi-solid"
+          }
         ],
         "correct_option_id": "B",
         "explanation": "Selectively permeable! Choose karke allow. O2/glucose in, waste out. BPSC term!"
@@ -1443,10 +1636,22 @@
       "quiz_payload": {
         "question": "Nucleolus function?",
         "options": [
-          { "id": "A", "text": "DNA replication" },
-          { "id": "B", "text": "Ribosome synthesis" },
-          { "id": "C", "text": "Protein synthesis" },
-          { "id": "D", "text": "Energy" }
+          {
+            "id": "A",
+            "text": "DNA replication"
+          },
+          {
+            "id": "B",
+            "text": "Ribosome synthesis"
+          },
+          {
+            "id": "C",
+            "text": "Protein synthesis"
+          },
+          {
+            "id": "D",
+            "text": "Energy"
+          }
         ],
         "correct_option_id": "B",
         "explanation": "Ribosome synthesis! rRNA banta. Ribosome factory. NEET/BPSC!"
@@ -1469,8 +1674,14 @@
       "quiz_payload": {
         "question": "Chromatin + Chromosome dono visible?",
         "options": [
-          { "id": "A", "text": "True" },
-          { "id": "B", "text": "False" }
+          {
+            "id": "A",
+            "text": "True"
+          },
+          {
+            "id": "B",
+            "text": "False"
+          }
         ],
         "correct_option_id": "B",
         "explanation": "FALSE! Normal = Chromatin. Division = Chromosome. Ek saath nahi! BPSC trap!"
@@ -1493,10 +1704,22 @@
       "quiz_payload": {
         "question": "Human chromosomes?",
         "options": [
-          { "id": "A", "text": "23" },
-          { "id": "B", "text": "46" },
-          { "id": "C", "text": "48" },
-          { "id": "D", "text": "92" }
+          {
+            "id": "A",
+            "text": "23"
+          },
+          {
+            "id": "B",
+            "text": "46"
+          },
+          {
+            "id": "C",
+            "text": "48"
+          },
+          {
+            "id": "D",
+            "text": "92"
+          }
         ],
         "correct_option_id": "B",
         "explanation": "46 (23 pairs)! 23 mother, 23 father. SSC/Railway!"
@@ -1669,10 +1892,22 @@
       "quiz_payload": {
         "question": "'Powerhouse'?",
         "options": [
-          { "id": "A", "text": "Nucleus" },
-          { "id": "B", "text": "Mitochondria" },
-          { "id": "C", "text": "Ribosome" },
-          { "id": "D", "text": "Chloroplast" }
+          {
+            "id": "A",
+            "text": "Nucleus"
+          },
+          {
+            "id": "B",
+            "text": "Mitochondria"
+          },
+          {
+            "id": "C",
+            "text": "Ribosome"
+          },
+          {
+            "id": "D",
+            "text": "Chloroplast"
+          }
         ],
         "correct_option_id": "B",
         "explanation": "Mitochondria! ATP. Famous nickname!"
@@ -1695,10 +1930,22 @@
       "quiz_payload": {
         "question": "'Suicide bags'?",
         "options": [
-          { "id": "A", "text": "Mitochondria" },
-          { "id": "B", "text": "Lysosomes" },
-          { "id": "C", "text": "Vacuoles" },
-          { "id": "D", "text": "Golgi" }
+          {
+            "id": "A",
+            "text": "Mitochondria"
+          },
+          {
+            "id": "B",
+            "text": "Lysosomes"
+          },
+          {
+            "id": "C",
+            "text": "Vacuoles"
+          },
+          {
+            "id": "D",
+            "text": "Golgi"
+          }
         ],
         "correct_option_id": "B",
         "explanation": "Lysosomes! Digestive enzymes. Railway favorite!"
@@ -1721,10 +1968,22 @@
       "quiz_payload": {
         "question": "Chloroplast kahan?",
         "options": [
-          { "id": "A", "text": "Animals" },
-          { "id": "B", "text": "Plants" },
-          { "id": "C", "text": "Bacteria" },
-          { "id": "D", "text": "All" }
+          {
+            "id": "A",
+            "text": "Animals"
+          },
+          {
+            "id": "B",
+            "text": "Plants"
+          },
+          {
+            "id": "C",
+            "text": "Bacteria"
+          },
+          {
+            "id": "D",
+            "text": "All"
+          }
         ],
         "correct_option_id": "B",
         "explanation": "ONLY plants! Photosynthesis. SSC!"
@@ -1795,10 +2054,22 @@
       "quiz_payload": {
         "question": "S1: Mitochondria has DNA.\nS2: Mitochondria reproduces independently.\n\nCorrect?",
         "options": [
-          { "id": "A", "text": "Both true, S2 explains S1" },
-          { "id": "B", "text": "Both true, S2 NOT explain S1" },
-          { "id": "C", "text": "S1 true, S2 false" },
-          { "id": "D", "text": "Both false" }
+          {
+            "id": "A",
+            "text": "Both true, S2 explains S1"
+          },
+          {
+            "id": "B",
+            "text": "Both true, S2 NOT explain S1"
+          },
+          {
+            "id": "C",
+            "text": "S1 true, S2 false"
+          },
+          {
+            "id": "D",
+            "text": "Both false"
+          }
         ],
         "correct_option_id": "A",
         "explanation": "Both true! Own DNA → reproduce. Endosymbiotic! NEET Assertion!"
@@ -1821,10 +2092,22 @@
       "quiz_payload": {
         "question": "Cell Theory THIRD postulate (1855)?",
         "options": [
-          { "id": "A", "text": "Schleiden" },
-          { "id": "B", "text": "Schwann" },
-          { "id": "C", "text": "Virchow" },
-          { "id": "D", "text": "Brown" }
+          {
+            "id": "A",
+            "text": "Schleiden"
+          },
+          {
+            "id": "B",
+            "text": "Schwann"
+          },
+          {
+            "id": "C",
+            "text": "Virchow"
+          },
+          {
+            "id": "D",
+            "text": "Brown"
+          }
         ],
         "correct_option_id": "C",
         "explanation": "Virchow! 'Omnis cellula-e-cellula'. BPSC!"
@@ -1847,10 +2130,22 @@
       "quiz_payload": {
         "question": "Arrange size: (A) Mycoplasma (B) RBC (C) Ostrich",
         "options": [
-          { "id": "A", "text": "A < B < C" },
-          { "id": "B", "text": "B < A < C" },
-          { "id": "C", "text": "A < C < B" },
-          { "id": "D", "text": "C < B < A" }
+          {
+            "id": "A",
+            "text": "A < B < C"
+          },
+          {
+            "id": "B",
+            "text": "B < A < C"
+          },
+          {
+            "id": "C",
+            "text": "A < C < B"
+          },
+          {
+            "id": "D",
+            "text": "C < B < A"
+          }
         ],
         "correct_option_id": "A",
         "explanation": "A < B < C! Mycoplasma (0.1μm) < RBC (7μm) < Ostrich (170mm). NEET!"
@@ -1873,10 +2168,22 @@
       "quiz_payload": {
         "question": "Fluid Mosaic (1972)?",
         "options": [
-          { "id": "A", "text": "Watson & Crick" },
-          { "id": "B", "text": "Singer & Nicolson" },
-          { "id": "C", "text": "Schleiden" },
-          { "id": "D", "text": "Mendel" }
+          {
+            "id": "A",
+            "text": "Watson & Crick"
+          },
+          {
+            "id": "B",
+            "text": "Singer & Nicolson"
+          },
+          {
+            "id": "C",
+            "text": "Schleiden"
+          },
+          {
+            "id": "D",
+            "text": "Mendel"
+          }
         ],
         "correct_option_id": "B",
         "explanation": "Singer & Nicolson! Membrane model. BPSC!"
@@ -1899,10 +2206,22 @@
       "quiz_payload": {
         "question": "Nucleolus PRIMARY?",
         "options": [
-          { "id": "A", "text": "DNA replication" },
-          { "id": "B", "text": "Protein" },
-          { "id": "C", "text": "Ribosome synthesis (rRNA)" },
-          { "id": "D", "text": "Energy" }
+          {
+            "id": "A",
+            "text": "DNA replication"
+          },
+          {
+            "id": "B",
+            "text": "Protein"
+          },
+          {
+            "id": "C",
+            "text": "Ribosome synthesis (rRNA)"
+          },
+          {
+            "id": "D",
+            "text": "Energy"
+          }
         ],
         "correct_option_id": "C",
         "explanation": "Ribosome synthesis! rRNA. Factory. NEET!"
@@ -1925,8 +2244,14 @@
       "quiz_payload": {
         "question": "Cell wall in ALL living?",
         "options": [
-          { "id": "A", "text": "True" },
-          { "id": "B", "text": "False" }
+          {
+            "id": "A",
+            "text": "True"
+          },
+          {
+            "id": "B",
+            "text": "False"
+          }
         ],
         "correct_option_id": "B",
         "explanation": "FALSE! SIRF plants/fungi/bacteria. Animals NO (movement). BPSC trap!"
@@ -1961,4 +2286,3 @@
     }
   ]
 }
-```
