@@ -11,18 +11,18 @@
       "UPSC_Prelims"
     ],
     "estimated_time": "15 min",
-    "total_cards": 28
+    "total_cards": 29
   },
   "characters": {
     "aman": {
       "name": "Aman Sir",
       "role": "teacher",
-      "avatar": "ðŸ‘¨â€ðŸ«"
+      "avatar": "👨‍🏫"
     },
     "raju": {
       "name": "Raju",
       "role": "student",
-      "avatar": "ðŸ‘¦"
+      "avatar": "👦"
     }
   },
   "cards": [
@@ -34,7 +34,7 @@
       "level": 1,
       "progress": {
         "current": 1,
-        "total": 28
+        "total": 29
       },
       "messages": [
         {
@@ -73,10 +73,10 @@
       "level": 1,
       "progress": {
         "current": 2,
-        "total": 28
+        "total": 29
       },
       "guess_payload": {
-        "question": "ðŸ¤” POLL / GUESS:\nAgar body ka ek worker (micro-part) pagal hokar bina ruke continuously divide (tootna) shuru kar de, toh kaun si bimari banti hai?",
+        "question": "🤔 POLL / GUESS:\nAgar body ka ek worker (micro-part) pagal hokar bina ruke continuously divide (tootna) shuru kar de, toh kaun si bimari banti hai?",
         "options": [
           {
             "id": "A",
@@ -106,7 +106,7 @@
       "level": 1,
       "progress": {
         "current": 3,
-        "total": 28
+        "total": 29
       },
       "messages": [
         {
@@ -145,10 +145,10 @@
       "level": 2,
       "progress": {
         "current": 4,
-        "total": 28
+        "total": 29
       },
       "guess_payload": {
-        "question": "âš¡ MYTH vs FACT:\nMYTH: 'Robert Hooke (1665) ne sabse pehle ZINDA Cell dekha tha.'\nKya ye statement Sahi hai ya Galat?",
+        "question": "⚡ MYTH vs FACT:\nMYTH: 'Robert Hooke (1665) ne sabse pehle ZINDA Cell dekha tha.'\nKya ye statement Sahi hai ya Galat?",
         "options": [
           {
             "id": "A",
@@ -174,7 +174,7 @@
       "level": 2,
       "progress": {
         "current": 5,
-        "total": 28
+        "total": 29
       },
       "messages": [
         {
@@ -213,10 +213,10 @@
       "level": 2,
       "progress": {
         "current": 6,
-        "total": 28
+        "total": 29
       },
       "quiz_payload": {
-        "question": "ðŸŽ¯ Milestone Check 1: Pehli baar ZINDA (Living) koshika ki khoj talab ke paani me kisne ki thi?",
+        "question": "🎯 Milestone Check 1: Pehli baar ZINDA (Living) koshika ki khoj talab ke paani me kisne ki thi?",
         "options": [
           {
             "id": "A",
@@ -239,7 +239,29 @@
         "explanation": "Hooke = Dead Wood (Cork), Leeuwenhoek = Living Water (Pond Water)!"
       },
       "navigation": {
-        "next": "MINI_CASE_INJURY"
+        "next": "MILESTONE_1_CELEBRATION"
+      }
+    },
+    {
+      "card_slug": "MILESTONE_1_CELEBRATION",
+      "type": "milestone",
+      "concept_id": "CELL_DISCOVERY",
+      "level": 2,
+      "progress": {
+        "current": 7,
+        "total": 29
+      },
+      "milestone_payload": {
+        "title": "🎉 CONGRATULATIONS!",
+        "badge_emoji": "🎯",
+        "completed_topic": "Cell Discovery & Dead vs Living Trap",
+        "xp_earned": 50,
+        "milestone_progress": "Sub-Topic 1 Completed",
+        "motivational_quote": "Awesome! Aapne Robert Hooke aur Leeuwenhoek ka BPSC Trap 100% master kar liya!"
+      },
+      "navigation": {
+        "next": "MINI_CASE_INJURY",
+        "button_text": "Continue to Next Sub-Topic ➔"
       }
     },
     {
@@ -249,8 +271,8 @@
       "concept_id": "CELL_THEORY",
       "level": 2,
       "progress": {
-        "current": 7,
-        "total": 28
+        "current": 8,
+        "total": 29
       },
       "messages": [
         {
@@ -289,8 +311,8 @@
       "concept_id": "CELL_TYPES",
       "level": 2,
       "progress": {
-        "current": 8,
-        "total": 28
+        "current": 9,
+        "total": 29
       },
       "messages": [
         {
@@ -329,8 +351,8 @@
       "concept_id": "PLANT_VS_ANIMAL",
       "level": 2,
       "progress": {
-        "current": 9,
-        "total": 28
+        "current": 10,
+        "total": 29
       },
       "messages": [
         {
@@ -369,8 +391,8 @@
       "concept_id": "PLANT_VS_ANIMAL",
       "level": 2,
       "progress": {
-        "current": 10,
-        "total": 28
+        "current": 11,
+        "total": 29
       },
       "messages": [
         {
@@ -408,11 +430,11 @@
       "concept_id": "PLANT_ANIMAL_CHECK",
       "level": 2,
       "progress": {
-        "current": 11,
-        "total": 28
+        "current": 12,
+        "total": 29
       },
       "quiz_payload": {
-        "question": "ðŸŽ¯ Milestone Check 2: Statement I: Cell Wall Cellulose ki bani hoti hai aur sirf Plant cells me hoti hai.\nStatement II: Animal cells me Cell Wall aur Chloroplast dono paaye jaate hain.",
+        "question": "🎯 Milestone Check 2: Statement I: Cell Wall Cellulose ki bani hoti hai aur sirf Plant cells me hoti hai.\nStatement II: Animal cells me Cell Wall aur Chloroplast dono paaye jaate hain.",
         "options": [
           {
             "id": "A",
@@ -445,8 +467,8 @@
       "concept_id": "CELL_MEMBRANE",
       "level": 2,
       "progress": {
-        "current": 12,
-        "total": 28
+        "current": 13,
+        "total": 29
       },
       "messages": [
         {
@@ -485,8 +507,8 @@
       "concept_id": "NUCLEUS",
       "level": 2,
       "progress": {
-        "current": 13,
-        "total": 28
+        "current": 14,
+        "total": 29
       },
       "messages": [
         {
@@ -524,11 +546,11 @@
       "concept_id": "DNA_GENE",
       "level": 3,
       "progress": {
-        "current": 14,
-        "total": 28
+        "current": 15,
+        "total": 29
       },
       "guess_payload": {
-        "question": "ðŸ¤” POLL / MEMORY CHALLENGE:\nChromosome ek poori Book hai, DNA uske Pages hain. Toh us book ke 1 Specific Sentence ko kya bolenge jo decide karta hai ki aapki eye color black hogi ya brown?",
+        "question": "🤔 POLL / MEMORY CHALLENGE:\nChromosome ek poori Book hai, DNA uske Pages hain. Toh us book ke 1 Specific Sentence ko kya bolenge jo decide karta hai ki aapki eye color black hogi ya brown?",
         "options": [
           {
             "id": "A",
@@ -557,8 +579,8 @@
       "concept_id": "DNA_GENE",
       "level": 3,
       "progress": {
-        "current": 15,
-        "total": 28
+        "current": 16,
+        "total": 29
       },
       "messages": [
         {
@@ -592,11 +614,11 @@
       "concept_id": "NUCLEUS_CHECK",
       "level": 3,
       "progress": {
-        "current": 16,
-        "total": 28
+        "current": 17,
+        "total": 29
       },
       "quiz_payload": {
-        "question": "ðŸŽ¯ Milestone Check 3: Cell ke Nucleus (Kendraka) ki khoj 1831 me kis scientist ne ki thi?",
+        "question": "🎯 Milestone Check 3: Cell ke Nucleus (Kendraka) ki khoj 1831 me kis scientist ne ki thi?",
         "options": [
           {
             "id": "A",
@@ -629,8 +651,8 @@
       "concept_id": "MITOCHONDRIA",
       "level": 3,
       "progress": {
-        "current": 17,
-        "total": 28
+        "current": 18,
+        "total": 29
       },
       "messages": [
         {
@@ -668,11 +690,11 @@
       "concept_id": "MITOCHONDRIA",
       "level": 3,
       "progress": {
-        "current": 18,
-        "total": 28
+        "current": 19,
+        "total": 29
       },
       "guess_payload": {
-        "question": "ðŸ”¥ POLL / GUESS:\nKoshika me Nucleus ke ilawa kaun sa aisa organelle hai jiske paas apna KHUD ka DNA aur Ribosome hota hai (Semi-Autonomous)?",
+        "question": "🔥 POLL / GUESS:\nKoshika me Nucleus ke ilawa kaun sa aisa organelle hai jiske paas apna KHUD ka DNA aur Ribosome hota hai (Semi-Autonomous)?",
         "options": [
           {
             "id": "A",
@@ -701,8 +723,8 @@
       "concept_id": "RIBOSOME_ER",
       "level": 3,
       "progress": {
-        "current": 19,
-        "total": 28
+        "current": 20,
+        "total": 29
       },
       "messages": [
         {
@@ -723,7 +745,7 @@
         },
         {
           "speaker": "aman",
-          "text": "Liver ke cells me baitha **Smooth ER (SER)**! Ye poison aur drugs ko detoxify karta hai."
+          "text": "Liver ke cells me baitha Smooth ER (SER)! Ye poison aur drugs ko detoxify karta hai."
         },
         {
           "speaker": "raju",
@@ -740,11 +762,11 @@
       "concept_id": "GOLGI_LYSOSOME",
       "level": 3,
       "progress": {
-        "current": 20,
-        "total": 28
+        "current": 21,
+        "total": 29
       },
       "guess_payload": {
-        "question": "ðŸ¤” POLL / GUESS:\nCell damage hone par kaun sa organelle phat kar apne hi cell ko digest kar leta hai (Suicide Bag / Aatmaghati Thela)?",
+        "question": "🤔 POLL / GUESS:\nCell damage hone par kaun sa organelle phat kar apne hi cell ko digest kar leta hai (Suicide Bag / Aatmaghati Thela)?",
         "options": [
           {
             "id": "A",
@@ -773,8 +795,8 @@
       "concept_id": "GOLGI_LYSOSOME",
       "level": 3,
       "progress": {
-        "current": 21,
-        "total": 28
+        "current": 22,
+        "total": 29
       },
       "messages": [
         {
@@ -812,11 +834,11 @@
       "concept_id": "ORGANELLES_CHECK",
       "level": 3,
       "progress": {
-        "current": 22,
-        "total": 28
+        "current": 23,
+        "total": 29
       },
       "quiz_payload": {
-        "question": "ðŸŽ¯ Milestone Check 4: Vertebrates ke Liver cells me poisons aur drugs ko detoxify karne ka kaam kaun sa organelle karta hai?",
+        "question": "🎯 Milestone Check 4: Vertebrates ke Liver cells me poisons aur drugs ko detoxify karne ka kaam kaun sa organelle karta hai?",
         "options": [
           {
             "id": "A",
@@ -849,8 +871,8 @@
       "concept_id": "MITOSIS",
       "level": 4,
       "progress": {
-        "current": 23,
-        "total": 28
+        "current": 24,
+        "total": 29
       },
       "messages": [
         {
@@ -888,11 +910,11 @@
       "concept_id": "MEIOSIS",
       "level": 4,
       "progress": {
-        "current": 24,
-        "total": 28
+        "current": 25,
+        "total": 29
       },
       "guess_payload": {
-        "question": "ðŸ”¥ POLL / GUESS:\nSperm aur Egg (Gametes) banne ke liye jo Meiosis division hota hai, usme Chromosome count kitna rehta hai?",
+        "question": "🔥 POLL / GUESS:\nSperm aur Egg (Gametes) banne ke liye jo Meiosis division hota hai, usme Chromosome count kitna rehta hai?",
         "options": [
           {
             "id": "A",
@@ -921,8 +943,8 @@
       "concept_id": "MEIOSIS",
       "level": 4,
       "progress": {
-        "current": 25,
-        "total": 28
+        "current": 26,
+        "total": 29
       },
       "messages": [
         {
@@ -943,7 +965,7 @@
         },
         {
           "speaker": "aman",
-          "text": "Toh baby me 92 chromosomes ho jayengeâ€”jo biological blunder ho jayega!"
+          "text": "Toh baby me 92 chromosomes ho jayenge—jo biological blunder ho jayega!"
         },
         {
           "speaker": "raju",
@@ -960,35 +982,35 @@
       "concept_id": "CHAPTER_REVISION",
       "level": 4,
       "progress": {
-        "current": 26,
-        "total": 28
+        "current": 27,
+        "total": 29
       },
       "summary_payload": {
-        "title": "âš¡ OFFICER REVISION (5 Lightning Bullets)",
+        "title": "⚡ OFFICER REVISION (5 Lightning Bullets)",
         "revision_points": [
           {
             "id": "r1",
-            "topic": "ðŸ” Discovery Trap",
+            "topic": "🔍 Discovery Trap",
             "point": "Robert Hooke (1665) = Dead Cork Cell | Leeuwenhoek (1674) = Living Water Cell."
           },
           {
             "id": "r2",
-            "topic": "ðŸ›¡ï¸ Cell Wall vs Membrane",
+            "topic": "🛡️ Cell Wall vs Membrane",
             "point": "Cell Wall = Plants ONLY (Cellulose). Animal cells have ONLY Cell Membrane."
           },
           {
             "id": "r3",
-            "topic": "ðŸ§¬ Semi-Autonomous",
+            "topic": "🧬 Semi-Autonomous",
             "point": "Mitochondria & Chloroplast contain their OWN DNA and Ribosomes."
           },
           {
             "id": "r4",
-            "topic": "ðŸ­ Key Organelles",
+            "topic": "🏭 Key Organelles",
             "point": "Ribosome = Protein (80S Human, 70S Bacteria) | SER = Liver Drug Detox | Lysosome = Suicide Bag."
           },
           {
             "id": "r5",
-            "topic": "âœ‚ï¸ Cell Division",
+            "topic": "✂️ Cell Division",
             "point": "Mitosis = Growth/Repair (2n -> 2n) | Meiosis = Gametes/Reproduction (2n -> n, Half)."
           }
         ]
@@ -1003,11 +1025,11 @@
       "concept_id": "MASTER_TEST",
       "level": 4,
       "progress": {
-        "current": 27,
-        "total": 28
+        "current": 28,
+        "total": 29
       },
       "final_quiz_payload": {
-        "question": "ðŸ† Master Challenge: Which of the following statements is/are CORRECT?\n1. Smooth Endoplasmic Reticulum (SER) helps in detoxifying poisons in liver cells.\n2. Mitochondria and Chloroplasts contain their own DNA.\n3. Lysosomes are formed by the joint action of RER and Golgi body.",
+        "question": "🏆 Master Challenge: Which of the following statements is/are CORRECT?\n1. Smooth Endoplasmic Reticulum (SER) helps in detoxifying poisons in liver cells.\n2. Mitochondria and Chloroplasts contain their own DNA.\n3. Lysosomes are formed by the joint action of RER and Golgi body.",
         "options": [
           {
             "id": "A",
@@ -1039,11 +1061,11 @@
       "concept_id": "COMPLETION",
       "level": 4,
       "progress": {
-        "current": 28,
-        "total": 28
+        "current": 29,
+        "total": 29
       },
       "final_quiz_payload": {
-        "question": "ðŸŽ‰ Chapter Completed! You have 100% Mastered Cell Biology.",
+        "question": "🎉 Chapter Completed! You have 100% Mastered Cell Biology.",
         "options": [
           {
             "id": "A",
@@ -1058,8 +1080,8 @@
         "explanation": "Great job! You have conquered zero-to-NEET/BPSC Officer level depth in Cell Biology."
       },
       "navigation": {
-        "action": "finish_chapter",
-        "button_text": "Finish ðŸŽ‰"
+        "next": "FINISH",
+        "button_text": "Finish 🎉"
       }
     }
   ]
