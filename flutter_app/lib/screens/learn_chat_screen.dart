@@ -1,5 +1,6 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:http/http.dart' as http;
 import '../widgets/latex_text.dart';
 
@@ -26,13 +27,15 @@ class LearnCharacter {
 class LearnChatMessage {
   final String speaker;
   final String text;
+  final String? emotion; // 💡 Emotion reaction support (e.g. 😳)
 
-  LearnChatMessage({required this.speaker, required this.text});
+  LearnChatMessage({required this.speaker, required this.text, this.emotion});
 
   factory LearnChatMessage.fromJson(Map<String, dynamic> json) {
     return LearnChatMessage(
       speaker: json['speaker'] ?? '',
       text: json['text'] ?? '',
+      emotion: json['emotion'],
     );
   }
 }
@@ -50,7 +53,7 @@ class LearnQuizOption {
 
 class LearnCardModel {
   final String cardSlug;
-  final String type;
+  final String type; // 'chat', 'guess', 'quiz', 'summary', 'final_quiz'
   final String conceptId;
   final int level;
   final int currentProgress;
@@ -89,7 +92,8 @@ class LearnCardModel {
       currentProgress: json['progress']?['current'] ?? 1,
       totalProgress: json['progress']?['total'] ?? 1,
       messages: msgs,
-      quizPayload: json['quiz_payload'] ?? json['final_quiz_payload'],
+      // 💡 Added support for guess_payload
+      quizPayload: json['quiz_payload'] ?? json['final_quiz_payload'] ?? json['guess_payload'],
       summaryPayload: json['summary_payload'],
       nextSlug: json['navigation']?['next'],
     );
@@ -154,6 +158,7 @@ class _LearnChatScreenState extends State<LearnChatScreen> {
   LearnChapterData? chapterData;
   String currentCardSlug = '';
   int visibleMessageCount = 1;
+  bool isTyping = false;
   bool isLoading = true;
   String? errorMessage;
 
@@ -188,7 +193,7 @@ class _LearnChatScreenState extends State<LearnChatScreen> {
         });
       } else {
         setState(() {
-          errorMessage = "Error ${response.statusCode}: Chapter data load nahi ho paya.";
+          errorMessage = "Error ${response.statusCode}: Data load nahi ho paya.";
           isLoading = false;
         });
       }
@@ -201,37 +206,57 @@ class _LearnChatScreenState extends State<LearnChatScreen> {
   }
 
   void _handleNextTap(LearnCardModel currentCard) {
+    if (isTyping) return;
+    HapticFeedback.lightImpact();
+
     if (currentCard.type == 'chat') {
       int totalMsgs = currentCard.messages?.length ?? 0;
       if (visibleMessageCount < totalMsgs) {
         setState(() {
-          visibleMessageCount++;
+          isTyping = true;
         });
 
-        Future.delayed(const Duration(milliseconds: 100), () {
-          if (_scrollController.hasClients) {
-            _scrollController.animateTo(
-              _scrollController.position.maxScrollExtent,
-              duration: const Duration(milliseconds: 300),
-              curve: Curves.easeOut,
-            );
+        _scrollToBottom();
+
+        Future.delayed(const Duration(milliseconds: 650), () {
+          if (mounted) {
+            setState(() {
+              isTyping = false;
+              visibleMessageCount++;
+            });
+            _scrollToBottom();
           }
         });
         return;
       }
     }
 
-    if (currentCard.nextSlug != null && chapterData!.cardsMap.containsKey(currentCard.nextSlug)) {
+    if (currentCard.nextSlug != null &&
+        currentCard.nextSlug != "FINISH" &&
+        chapterData!.cardsMap.containsKey(currentCard.nextSlug)) {
       setState(() {
         currentCardSlug = currentCard.nextSlug!;
         visibleMessageCount = 1;
+        isTyping = false;
       });
     } else {
       ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(content: Text('🎉 Chapter Completed!')),
+        const SnackBar(content: Text('🎉 Chapter Completed! Excellent Job!')),
       );
       Navigator.pop(context);
     }
+  }
+
+  void _scrollToBottom() {
+    Future.delayed(const Duration(milliseconds: 100), () {
+      if (_scrollController.hasClients) {
+        _scrollController.animateTo(
+          _scrollController.position.maxScrollExtent,
+          duration: const Duration(milliseconds: 300),
+          curve: Curves.easeOut,
+        );
+      }
+    });
   }
 
   @override
@@ -290,7 +315,7 @@ class _LearnChatScreenState extends State<LearnChatScreen> {
 
     LearnCardModel currentCard = chapterData!.cardsMap[currentCardSlug]!;
     int totalMsgs = currentCard.messages?.length ?? 0;
-    bool isAllMessagesRevealed = visibleMessageCount >= totalMsgs || currentCard.type != 'chat';
+    bool isAllMessagesRevealed = (visibleMessageCount >= totalMsgs && !isTyping) || currentCard.type != 'chat';
 
     return Scaffold(
       backgroundColor: const Color(0xFFF8FAFC),
@@ -339,6 +364,7 @@ class _LearnChatScreenState extends State<LearnChatScreen> {
                 card: currentCard,
                 characters: chapterData!.characters,
                 visibleCount: visibleMessageCount,
+                isTyping: isTyping,
                 scrollController: _scrollController,
               ),
             ),
@@ -363,7 +389,9 @@ class _LearnChatScreenState extends State<LearnChatScreen> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Text(
-                        isAllMessagesRevealed ? 'Next Card ➔' : 'Tap to Read Next 💬',
+                        isTyping
+                            ? 'Aman Sir is typing...'
+                            : (isAllMessagesRevealed ? 'Next Card ➔' : 'Tap to Read Next 💬'),
                         style: const TextStyle(fontSize: 15, fontWeight: FontWeight.bold, color: Colors.white),
                       ),
                       const SizedBox(width: 8),
@@ -389,12 +417,14 @@ class _LearnCardRenderer extends StatelessWidget {
   final LearnCardModel card;
   final Map<String, LearnCharacter> characters;
   final int visibleCount;
+  final bool isTyping;
   final ScrollController scrollController;
 
   const _LearnCardRenderer({
     required this.card,
     required this.characters,
     required this.visibleCount,
+    required this.isTyping,
     required this.scrollController,
   });
 
@@ -406,8 +436,10 @@ class _LearnCardRenderer extends StatelessWidget {
           card: card,
           characters: characters,
           visibleCount: visibleCount,
+          isTyping: isTyping,
           scrollController: scrollController,
         );
+      case 'guess': // 💡 Handled 'guess' card type
       case 'quiz':
       case 'final_quiz':
         return _QuizCard(card: card);
@@ -424,12 +456,14 @@ class _ModernChatCard extends StatelessWidget {
   final LearnCardModel card;
   final Map<String, LearnCharacter> characters;
   final int visibleCount;
+  final bool isTyping;
   final ScrollController scrollController;
 
   const _ModernChatCard({
     required this.card,
     required this.characters,
     required this.visibleCount,
+    required this.isTyping,
     required this.scrollController,
   });
 
@@ -442,8 +476,12 @@ class _ModernChatCard extends StatelessWidget {
       controller: scrollController,
       padding: const EdgeInsets.all(16),
       physics: const BouncingScrollPhysics(),
-      itemCount: countToShow,
+      itemCount: countToShow + (isTyping ? 1 : 0),
       itemBuilder: (context, index) {
+        if (index == countToShow && isTyping) {
+          return _buildTypingDotsBubble(context);
+        }
+
         final msg = msgs[index];
         final char = characters[msg.speaker] ?? LearnCharacter(name: msg.speaker, role: 'student', avatar: '👤');
         final isTeacher = char.role == 'teacher';
@@ -495,6 +533,10 @@ class _ModernChatCard extends StatelessWidget {
                                 color: isTeacher ? const Color(0xFF3730A3) : const Color(0xFFEA580C),
                               ),
                             ),
+                            if (msg.emotion != null) ...[
+                              const SizedBox(width: 4),
+                              Text(msg.emotion!, style: const TextStyle(fontSize: 12)),
+                            ],
                             if (isTeacher) ...[
                               const SizedBox(width: 4),
                               const Icon(Icons.verified_rounded, size: 12, color: Color(0xFF4F46E5)),
@@ -522,29 +564,80 @@ class _ModernChatCard extends StatelessWidget {
     );
   }
 
+  Widget _buildTypingDotsBubble(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 6),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.end,
+        children: [
+          Container(
+            padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
+            decoration: BoxDecoration(
+              color: const Color(0xFFEEF2FF),
+              borderRadius: BorderRadius.circular(16),
+              border: Border.all(color: const Color(0xFFC7D2FE)),
+            ),
+            child: const Row(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                SizedBox(
+                  width: 12,
+                  height: 12,
+                  child: CircularProgressIndicator(strokeWidth: 2, color: Color(0xFF4F46E5)),
+                ),
+                SizedBox(width: 8),
+                Text("Aman Sir is typing...", style: TextStyle(fontSize: 12, color: Color(0xFF4F46E5), fontWeight: FontWeight.w600)),
+              ],
+            ),
+          ),
+          const SizedBox(width: 8),
+          _buildAvatarBadge(LearnCharacter(name: "Aman Sir", role: "teacher", avatar: "👨‍🏫"), isTeacher: true),
+        ],
+      ),
+    );
+  }
+
   Widget _buildAvatarBadge(LearnCharacter char, {required bool isTeacher}) {
-    return Container(
-      width: 36,
-      height: 36,
-      decoration: BoxDecoration(
-        shape: BoxShape.circle,
-        color: isTeacher ? const Color(0xFF4F46E5) : const Color(0xFFFFEDD5),
-        border: Border.all(
-          color: isTeacher ? const Color(0xFF818CF8) : const Color(0xFFFDBA74),
-          width: 1.5,
+    return Stack(
+      children: [
+        Container(
+          width: 38,
+          height: 38,
+          decoration: BoxDecoration(
+            shape: BoxShape.circle,
+            color: isTeacher ? const Color(0xFF4F46E5) : const Color(0xFFFFEDD5),
+            border: Border.all(
+              color: isTeacher ? const Color(0xFF818CF8) : const Color(0xFFFDBA74),
+              width: 1.5,
+            ),
+          ),
+          child: Center(
+            child: Text(
+              char.avatar,
+              style: const TextStyle(fontSize: 18),
+            ),
+          ),
         ),
-      ),
-      child: Center(
-        child: Text(
-          char.avatar,
-          style: const TextStyle(fontSize: 18),
-        ),
-      ),
+        if (isTeacher)
+          Positioned(
+            right: 0,
+            bottom: 0,
+            child: Container(
+              width: 10,
+              height: 10,
+              decoration: BoxDecoration(
+                color: const Color(0xFF22C55E),
+                shape: BoxShape.circle,
+                border: Border.all(color: Colors.white, width: 1.5),
+              ),
+            ),
+          ),
+      ],
     );
   }
 }
 
-// QUIZ CARD
+// QUIZ & GUESS CARD
 class _QuizCard extends StatefulWidget {
   final LearnCardModel card;
   const _QuizCard({required this.card});
@@ -564,6 +657,7 @@ class _QuizCardState extends State<_QuizCard> {
         .map((o) => LearnQuizOption.fromJson(o))
         .toList();
     final String correctId = payload['correct_option_id'] ?? '';
+    final bool isGuessType = widget.card.type == 'guess';
 
     return SingleChildScrollView(
       padding: const EdgeInsets.all(16.0),
@@ -577,8 +671,18 @@ class _QuizCardState extends State<_QuizCard> {
             children: [
               Container(
                 padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
-                decoration: BoxDecoration(color: const Color(0xFFFEF3C7), borderRadius: BorderRadius.circular(6)),
-                child: const Text('🧠 Quick Check', style: TextStyle(color: Color(0xFFD97706), fontWeight: FontWeight.bold, fontSize: 12)),
+                decoration: BoxDecoration(
+                  color: isGuessType ? const Color(0xFFE0E7FF) : const Color(0xFFFEF3C7),
+                  borderRadius: BorderRadius.circular(6),
+                ),
+                child: Text(
+                  isGuessType ? '🤔 Quick Guess' : '🧠 Quick Check',
+                  style: TextStyle(
+                    color: isGuessType ? const Color(0xFF3730A3) : const Color(0xFFD97706),
+                    fontWeight: FontWeight.bold,
+                    fontSize: 12,
+                  ),
+                ),
               ),
               const SizedBox(height: 12),
               LatexText(
@@ -617,6 +721,7 @@ class _QuizCardState extends State<_QuizCard> {
                       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
                     ),
                     onPressed: () {
+                      HapticFeedback.mediumImpact();
                       setState(() {
                         selectedOptionId = opt.id;
                         isSubmitted = true;
