@@ -1,7 +1,9 @@
 import 'dart:convert';
+import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:http/http.dart' as http;
+import 'package:shared_preferences/shared_preferences.dart';
 import '../widgets/latex_text.dart';
 
 // ==========================================
@@ -27,7 +29,7 @@ class LearnCharacter {
 class LearnChatMessage {
   final String speaker;
   final String text;
-  final String? emotion; // 💡 Emotion reaction support (e.g. 😳)
+  final String? emotion;
 
   LearnChatMessage({required this.speaker, required this.text, this.emotion});
 
@@ -53,7 +55,7 @@ class LearnQuizOption {
 
 class LearnCardModel {
   final String cardSlug;
-  final String type; // 'chat', 'guess', 'quiz', 'summary', 'final_quiz'
+  final String type; // 'chat', 'guess', 'quiz', 'summary', 'final_quiz', 'milestone'
   final String conceptId;
   final int level;
   final int currentProgress;
@@ -61,7 +63,9 @@ class LearnCardModel {
   final List<LearnChatMessage>? messages;
   final Map<String, dynamic>? quizPayload;
   final Map<String, dynamic>? summaryPayload;
+  final Map<String, dynamic>? milestonePayload;
   final String? nextSlug;
+  final String? buttonText;
 
   LearnCardModel({
     required this.cardSlug,
@@ -73,7 +77,9 @@ class LearnCardModel {
     this.messages,
     this.quizPayload,
     this.summaryPayload,
+    this.milestonePayload,
     this.nextSlug,
+    this.buttonText,
   });
 
   factory LearnCardModel.fromJson(Map<String, dynamic> json) {
@@ -92,15 +98,17 @@ class LearnCardModel {
       currentProgress: json['progress']?['current'] ?? 1,
       totalProgress: json['progress']?['total'] ?? 1,
       messages: msgs,
-      // 💡 Added support for guess_payload
       quizPayload: json['quiz_payload'] ?? json['final_quiz_payload'] ?? json['guess_payload'],
       summaryPayload: json['summary_payload'],
+      milestonePayload: json['milestone_payload'],
       nextSlug: json['navigation']?['next'],
+      buttonText: json['navigation']?['button_text'],
     );
   }
 }
 
 class LearnChapterData {
+  final String id;
   final String title;
   final int totalCards;
   final Map<String, LearnCharacter> characters;
@@ -108,6 +116,7 @@ class LearnChapterData {
   final String firstCardSlug;
 
   LearnChapterData({
+    required this.id,
     required this.title,
     required this.totalCards,
     required this.characters,
@@ -131,6 +140,7 @@ class LearnChapterData {
     }
 
     return LearnChapterData(
+      id: json['chapter']?['id'] ?? 'bio_cell',
       title: json['chapter']?['title'] ?? 'Chapter',
       totalCards: json['chapter']?['total_cards'] ?? cardList.length,
       characters: chars,
@@ -185,24 +195,43 @@ class _LearnChatScreenState extends State<LearnChatScreen> {
 
       if (response.statusCode == 200) {
         Map<String, dynamic> parsedJson = json.decode(utf8.decode(response.bodyBytes));
-        setState(() {
-          chapterData = LearnChapterData.fromJson(parsedJson);
-          currentCardSlug = chapterData!.firstCardSlug;
-          visibleMessageCount = 1;
-          isLoading = false;
-        });
+        LearnChapterData data = LearnChapterData.fromJson(parsedJson);
+
+        // 💾 Auto-Restore Saved Progress
+        final prefs = await SharedPreferences.getInstance();
+        String savedSlug = prefs.getString('progress_${data.id}') ?? data.firstCardSlug;
+        if (!data.cardsMap.containsKey(savedSlug)) savedSlug = data.firstCardSlug;
+
+        if (mounted) {
+          setState(() {
+            chapterData = data;
+            currentCardSlug = savedSlug;
+            visibleMessageCount = 1;
+            isLoading = false;
+          });
+        }
       } else {
+        if (mounted) {
+          setState(() {
+            errorMessage = "Error ${response.statusCode}: Data load nahi ho paya.";
+            isLoading = false;
+          });
+        }
+      }
+    } catch (e) {
+      if (mounted) {
         setState(() {
-          errorMessage = "Error ${response.statusCode}: Data load nahi ho paya.";
+          errorMessage = "Network Error: Internet connection check karein.";
           isLoading = false;
         });
       }
-    } catch (e) {
-      setState(() {
-        errorMessage = "Network Error: Internet connection check karein.";
-        isLoading = false;
-      });
     }
+  }
+
+  Future<void> _saveProgress(String slug) async {
+    if (chapterData == null) return;
+    final prefs = await SharedPreferences.getInstance();
+    await prefs.setString('progress_${chapterData!.id}', slug);
   }
 
   void _handleNextTap(LearnCardModel currentCard) {
@@ -218,7 +247,7 @@ class _LearnChatScreenState extends State<LearnChatScreen> {
 
         _scrollToBottom();
 
-        Future.delayed(const Duration(milliseconds: 650), () {
+        Future.delayed(const Duration(milliseconds: 500), () {
           if (mounted) {
             setState(() {
               isTyping = false;
@@ -234,12 +263,15 @@ class _LearnChatScreenState extends State<LearnChatScreen> {
     if (currentCard.nextSlug != null &&
         currentCard.nextSlug != "FINISH" &&
         chapterData!.cardsMap.containsKey(currentCard.nextSlug)) {
+      String next = currentCard.nextSlug!;
+      _saveProgress(next);
       setState(() {
-        currentCardSlug = currentCard.nextSlug!;
+        currentCardSlug = next;
         visibleMessageCount = 1;
         isTyping = false;
       });
     } else {
+      _saveProgress(chapterData!.firstCardSlug);
       ScaffoldMessenger.of(context).showSnackBar(
         const SnackBar(content: Text('🎉 Chapter Completed! Excellent Job!')),
       );
@@ -314,8 +346,35 @@ class _LearnChatScreenState extends State<LearnChatScreen> {
     }
 
     LearnCardModel currentCard = chapterData!.cardsMap[currentCardSlug]!;
+
+    // 🏆 Milestone Celebration Screen Handler
+    if (currentCard.type == 'milestone') {
+      return Scaffold(
+        body: SafeArea(
+          child: MilestoneCardWidget(
+            payload: currentCard.milestonePayload ?? {},
+            onContinue: () => _handleNextTap(currentCard),
+          ),
+        ),
+      );
+    }
+
     int totalMsgs = currentCard.messages?.length ?? 0;
     bool isAllMessagesRevealed = (visibleMessageCount >= totalMsgs && !isTyping) || currentCard.type != 'chat';
+
+    // 💬 Dynamic Student Button Text
+    String buttonLabel = 'Tap to Read Next 💬';
+    if (isTyping) {
+      buttonLabel = 'Aman Sir is typing...';
+    } else if (isAllMessagesRevealed) {
+      buttonLabel = currentCard.buttonText ?? 'Next Card ➔';
+    } else if (currentCard.messages != null && visibleMessageCount < totalMsgs) {
+      final nextMsg = currentCard.messages![visibleMessageCount];
+      final char = chapterData!.characters[nextMsg.speaker];
+      if (char != null && char.role == 'student') {
+        buttonLabel = '💬 "${nextMsg.text}"';
+      }
+    }
 
     return Scaffold(
       backgroundColor: const Color(0xFFF8FAFC),
@@ -348,7 +407,7 @@ class _LearnChatScreenState extends State<LearnChatScreen> {
               borderRadius: BorderRadius.circular(12),
             ),
             child: Text(
-              'Card ${currentCard.currentProgress}/${currentCard.totalProgress}',
+              '${currentCard.currentProgress}/${currentCard.totalProgress}',
               style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 12, color: Colors.white),
             ),
           )
@@ -359,15 +418,38 @@ class _LearnChatScreenState extends State<LearnChatScreen> {
         behavior: HitTestBehavior.opaque,
         child: Column(
           children: [
+            // ✨ AnimatedSwitcher for Card Transitions
             Expanded(
-              child: _LearnCardRenderer(
-                card: currentCard,
-                characters: chapterData!.characters,
-                visibleCount: visibleMessageCount,
-                isTyping: isTyping,
-                scrollController: _scrollController,
+              child: AnimatedSwitcher(
+                duration: const Duration(milliseconds: 350),
+                switchInCurve: Curves.easeOutCubic,
+                switchOutCurve: Curves.easeInCubic,
+                transitionBuilder: (Widget child, Animation<double> animation) {
+                  return FadeTransition(
+                    opacity: animation,
+                    child: SlideTransition(
+                      position: Tween<Offset>(
+                        begin: const Offset(0.05, 0),
+                        end: Offset.zero,
+                      ).animate(animation),
+                      child: child,
+                    ),
+                  );
+                },
+                child: KeyedSubtree(
+                  key: ValueKey<String>(currentCardSlug),
+                  child: _LearnCardRenderer(
+                    card: currentCard,
+                    characters: chapterData!.characters,
+                    visibleCount: visibleMessageCount,
+                    isTyping: isTyping,
+                    scrollController: _scrollController,
+                  ),
+                ),
               ),
             ),
+
+            // Bottom Action Bar
             Container(
               padding: const EdgeInsets.all(16),
               decoration: BoxDecoration(
@@ -388,17 +470,19 @@ class _LearnChatScreenState extends State<LearnChatScreen> {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Text(
-                        isTyping
-                            ? 'Aman Sir is typing...'
-                            : (isAllMessagesRevealed ? 'Next Card ➔' : 'Tap to Read Next 💬'),
-                        style: const TextStyle(fontSize: 15, fontWeight: FontWeight.bold, color: Colors.white),
+                      Flexible(
+                        child: Text(
+                          buttonLabel,
+                          maxLines: 1,
+                          overflow: TextSpanOverflow.ellipsis,
+                          style: const TextStyle(fontSize: 14.5, fontWeight: FontWeight.bold, color: Colors.white),
+                        ),
                       ),
                       const SizedBox(width: 8),
                       Icon(
                         isAllMessagesRevealed ? Icons.arrow_forward_rounded : Icons.touch_app_rounded,
                         color: Colors.white,
-                        size: 20,
+                        size: 18,
                       )
                     ],
                   ),
@@ -439,7 +523,7 @@ class _LearnCardRenderer extends StatelessWidget {
           isTyping: isTyping,
           scrollController: scrollController,
         );
-      case 'guess': // 💡 Handled 'guess' card type
+      case 'guess':
       case 'quiz':
       case 'final_quiz':
         return _QuizCard(card: card);
@@ -451,7 +535,7 @@ class _LearnCardRenderer extends StatelessWidget {
   }
 }
 
-// MODERN CHAT CARD
+// MODERN CHAT CARD WITH 3-DOTS BOUNCING ANIMATION
 class _ModernChatCard extends StatelessWidget {
   final LearnCardModel card;
   final Map<String, LearnCharacter> characters;
@@ -571,7 +655,7 @@ class _ModernChatCard extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.end,
         children: [
           Container(
-            padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
+            padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 10),
             decoration: BoxDecoration(
               color: const Color(0xFFEEF2FF),
               borderRadius: BorderRadius.circular(16),
@@ -580,11 +664,7 @@ class _ModernChatCard extends StatelessWidget {
             child: const Row(
               mainAxisSize: MainAxisSize.min,
               children: [
-                SizedBox(
-                  width: 12,
-                  height: 12,
-                  child: CircularProgressIndicator(strokeWidth: 2, color: Color(0xFF4F46E5)),
-                ),
+                _BouncingTypingDots(),
                 SizedBox(width: 8),
                 Text("Aman Sir is typing...", style: TextStyle(fontSize: 12, color: Color(0xFF4F46E5), fontWeight: FontWeight.w600)),
               ],
@@ -637,7 +717,58 @@ class _ModernChatCard extends StatelessWidget {
   }
 }
 
-// QUIZ & GUESS CARD
+// 💬 3-DOTS BOUNCING ANIMATION WIDGET
+class _BouncingTypingDots extends StatefulWidget {
+  const _BouncingTypingDots();
+
+  @override
+  State<_BouncingTypingDots> createState() => _BouncingTypingDotsState();
+}
+
+class _BouncingTypingDotsState extends State<_BouncingTypingDots> with SingleTickerProviderStateMixin {
+  late AnimationController _controller;
+
+  @override
+  void initState() {
+    super.initState();
+    _controller = AnimationController(
+      vsync: this,
+      duration: const Duration(milliseconds: 1000),
+    )..repeat();
+  }
+
+  @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return AnimatedBuilder(
+      animation: _controller,
+      builder: (context, child) {
+        return Row(
+          mainAxisSize: MainAxisSize.min,
+          children: List.generate(3, (index) {
+            double value = sin((_controller.value * 2 * pi) - (index * 0.6));
+            return Container(
+              margin: const EdgeInsets.symmetric(horizontal: 1.5),
+              width: 5,
+              height: 5 + (value.abs() * 4),
+              decoration: const BoxDecoration(
+                color: Color(0xFF4F46E5),
+                shape: BoxShape.circle,
+              ),
+            );
+          }),
+        );
+      },
+    );
+  }
+}
+
+// QUIZ & GUESS CARD WITH SHAKE ANIMATION
 class _QuizCard extends StatefulWidget {
   final LearnCardModel card;
   const _QuizCard({required this.card});
@@ -646,9 +777,25 @@ class _QuizCard extends StatefulWidget {
   State<_QuizCard> createState() => _QuizCardState();
 }
 
-class _QuizCardState extends State<_QuizCard> {
+class _QuizCardState extends State<_QuizCard> with SingleTickerProviderStateMixin {
   String? selectedOptionId;
   bool isSubmitted = false;
+  late AnimationController _shakeController;
+
+  @override
+  void initState() {
+    super.initState();
+    _shakeController = AnimationController(
+      vsync: this,
+      duration: const Duration(milliseconds: 400),
+    );
+  }
+
+  @override
+  void dispose() {
+    _shakeController.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -661,93 +808,107 @@ class _QuizCardState extends State<_QuizCard> {
 
     return SingleChildScrollView(
       padding: const EdgeInsets.all(16.0),
-      child: Card(
-        elevation: 2,
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
-        child: Padding(
-          padding: const EdgeInsets.all(16.0),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Container(
-                padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
-                decoration: BoxDecoration(
-                  color: isGuessType ? const Color(0xFFE0E7FF) : const Color(0xFFFEF3C7),
-                  borderRadius: BorderRadius.circular(6),
-                ),
-                child: Text(
-                  isGuessType ? '🤔 Quick Guess' : '🧠 Quick Check',
-                  style: TextStyle(
-                    color: isGuessType ? const Color(0xFF3730A3) : const Color(0xFFD97706),
-                    fontWeight: FontWeight.bold,
-                    fontSize: 12,
-                  ),
-                ),
-              ),
-              const SizedBox(height: 12),
-              LatexText(
-                payload['question'] ?? '',
-                style: const TextStyle(fontSize: 15, fontWeight: FontWeight.bold, color: Color(0xFF0F172A)),
-              ),
-              const SizedBox(height: 16),
-              ...options.map((opt) {
-                bool isCorrect = opt.id == correctId;
-                bool isSelected = opt.id == selectedOptionId;
-                Color btnColor = Colors.white;
-                Color borderColor = const Color(0xFFE2E8F0);
-
-                if (isSubmitted) {
-                  if (isCorrect) {
-                    btnColor = const Color(0xFFDCFCE7);
-                    borderColor = const Color(0xFF22C55E);
-                  }
-                  if (isSelected && !isCorrect) {
-                    btnColor = const Color(0xFFFEE2E2);
-                    borderColor = const Color(0xFFEF4444);
-                  }
-                } else if (isSelected) {
-                  borderColor = const Color(0xFF4F46E5);
-                }
-
-                return Container(
-                  margin: const EdgeInsets.only(bottom: 8),
-                  width: double.infinity,
-                  child: OutlinedButton(
-                    style: OutlinedButton.styleFrom(
-                      backgroundColor: btnColor,
-                      padding: const EdgeInsets.all(14),
-                      alignment: Alignment.centerLeft,
-                      side: BorderSide(color: borderColor, width: isSelected ? 1.5 : 1),
-                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
-                    ),
-                    onPressed: () {
-                      HapticFeedback.mediumImpact();
-                      setState(() {
-                        selectedOptionId = opt.id;
-                        isSubmitted = true;
-                      });
-                    },
-                    child: LatexText('${opt.id}) ${opt.text}', style: const TextStyle(fontSize: 13.5, color: Color(0xFF1E293B))),
-                  ),
-                );
-              }),
-              if (isSubmitted) ...[
-                const SizedBox(height: 12),
+      child: AnimatedBuilder(
+        animation: _shakeController,
+        builder: (context, child) {
+          final double offset = sin(_shakeController.value * pi * 4) * 8;
+          return Transform.translate(
+            offset: Offset(offset, 0),
+            child: child,
+          );
+        },
+        child: Card(
+          elevation: 2,
+          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+          child: Padding(
+            padding: const EdgeInsets.all(16.0),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
                 Container(
-                  padding: const EdgeInsets.all(12),
-                  width: double.infinity,
+                  padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
                   decoration: BoxDecoration(
-                    color: const Color(0xFFF0F9FF),
-                    borderRadius: BorderRadius.circular(10),
-                    border: Border.all(color: const Color(0xFFBAE6FD)),
+                    color: isGuessType ? const Color(0xFFE0E7FF) : const Color(0xFFFEF3C7),
+                    borderRadius: BorderRadius.circular(6),
                   ),
-                  child: LatexText(
-                    '💡 Explanation: ${payload['explanation']}',
-                    style: const TextStyle(fontSize: 13, color: Color(0xFF0369A1)),
+                  child: Text(
+                    isGuessType ? '🤔 Quick Guess' : '🧠 Quick Check',
+                    style: TextStyle(
+                      color: isGuessType ? const Color(0xFF3730A3) : const Color(0xFFD97706),
+                      fontWeight: FontWeight.bold,
+                      fontSize: 12,
+                    ),
                   ),
                 ),
+                const SizedBox(height: 12),
+                LatexText(
+                  payload['question'] ?? '',
+                  style: const TextStyle(fontSize: 15, fontWeight: FontWeight.bold, color: Color(0xFF0F172A)),
+                ),
+                const SizedBox(height: 16),
+                ...options.map((opt) {
+                  bool isCorrect = opt.id == correctId;
+                  bool isSelected = opt.id == selectedOptionId;
+                  Color btnColor = Colors.white;
+                  Color borderColor = const Color(0xFFE2E8F0);
+
+                  if (isSubmitted) {
+                    if (isCorrect) {
+                      btnColor = const Color(0xFFDCFCE7);
+                      borderColor = const Color(0xFF22C55E);
+                    }
+                    if (isSelected && !isCorrect) {
+                      btnColor = const Color(0xFFFEE2E2);
+                      borderColor = const Color(0xFFEF4444);
+                    }
+                  } else if (isSelected) {
+                    borderColor = const Color(0xFF4F46E5);
+                  }
+
+                  return Container(
+                    margin: const EdgeInsets.only(bottom: 8),
+                    width: double.infinity,
+                    child: OutlinedButton(
+                      style: OutlinedButton.styleFrom(
+                        backgroundColor: btnColor,
+                        padding: const EdgeInsets.all(14),
+                        alignment: Alignment.centerLeft,
+                        side: BorderSide(color: borderColor, width: isSelected ? 1.5 : 1),
+                        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+                      ),
+                      onPressed: () {
+                        HapticFeedback.mediumImpact();
+                        setState(() {
+                          selectedOptionId = opt.id;
+                          isSubmitted = true;
+                        });
+
+                        if (opt.id != correctId) {
+                          _shakeController.forward(from: 0.0);
+                        }
+                      },
+                      child: LatexText('${opt.id}) ${opt.text}', style: const TextStyle(fontSize: 13.5, color: Color(0xFF1E293B))),
+                    ),
+                  );
+                }),
+                if (isSubmitted) ...[
+                  const SizedBox(height: 12),
+                  Container(
+                    padding: const EdgeInsets.all(12),
+                    width: double.infinity,
+                    decoration: BoxDecoration(
+                      color: const Color(0xFFF0F9FF),
+                      borderRadius: BorderRadius.circular(10),
+                      border: Border.all(color: const Color(0xFFBAE6FD)),
+                    ),
+                    child: LatexText(
+                      '💡 Explanation: ${payload['explanation']}',
+                      style: const TextStyle(fontSize: 13, color: Color(0xFF0369A1)),
+                    ),
+                  ),
+                ],
               ],
-            ],
+            ),
           ),
         ),
       ),
@@ -802,6 +963,68 @@ class _SummaryCard extends StatelessWidget {
               },
             ),
           ),
+        ],
+      ),
+    );
+  }
+}
+
+// 🏆 MILESTONE CELEBRATION CARD WIDGET
+class MilestoneCardWidget extends StatelessWidget {
+  final Map<String, dynamic> payload;
+  final VoidCallback onContinue;
+
+  const MilestoneCardWidget({Key? key, required this.payload, required this.onContinue}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      color: const Color(0xFF4F46E5),
+      padding: const EdgeInsets.all(24),
+      width: double.infinity,
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Text(payload['badge_emoji'] ?? '🎉', style: const TextStyle(fontSize: 72)),
+          const SizedBox(height: 16),
+          Text(
+            payload['title'] ?? 'GREAT JOB!',
+            style: const TextStyle(fontSize: 26, fontWeight: FontWeight.bold, color: Colors.yellowAccent),
+          ),
+          const SizedBox(height: 8),
+          Text(
+            payload['completed_topic'] ?? '',
+            textAlign: TextAlign.center,
+            style: const TextStyle(fontSize: 18, color: Colors.white, fontWeight: FontWeight.w600),
+          ),
+          const SizedBox(height: 20),
+          Container(
+            padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+            decoration: BoxDecoration(color: Colors.white24, borderRadius: BorderRadius.circular(20)),
+            child: Text(
+              '⚡ +${payload['xp_earned'] ?? 50} XP  |  ${payload['milestone_progress'] ?? ''}',
+              style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+            ),
+          ),
+          const SizedBox(height: 16),
+          Text(
+            payload['motivational_quote'] ?? '',
+            textAlign: TextAlign.center,
+            style: const TextStyle(fontSize: 14, color: Colors.white70, fontStyle: FontStyle.italic),
+          ),
+          const SizedBox(height: 40),
+          ElevatedButton(
+            style: ElevatedButton.styleFrom(
+              backgroundColor: const Color(0xFF22C55E),
+              minimumSize: const Size.fromHeight(52),
+              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+            ),
+            onPressed: onContinue,
+            child: const Text(
+              'Continue to Next Sub-Topic ➔',
+              style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: Colors.white),
+            ),
+          )
         ],
       ),
     );
