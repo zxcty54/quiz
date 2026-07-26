@@ -3,6 +3,10 @@ import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import '../widgets/latex_text.dart';
 
+// ==========================================
+// 1. DATA MODELS
+// ==========================================
+
 class LearnCharacter {
   final String name;
   final String role;
@@ -132,6 +136,10 @@ class LearnChapterData {
   }
 }
 
+// ==========================================
+// 2. MAIN SCREEN (PREMIUM MODERN THEME)
+// ==========================================
+
 class LearnChatScreen extends StatefulWidget {
   final String? jsonUrl;
   final String? chapterTitle;
@@ -145,8 +153,11 @@ class LearnChatScreen extends StatefulWidget {
 class _LearnChatScreenState extends State<LearnChatScreen> {
   LearnChapterData? chapterData;
   String currentCardSlug = '';
+  int visibleMessageCount = 1;
   bool isLoading = true;
   String? errorMessage;
+
+  final ScrollController _scrollController = ScrollController();
 
   @override
   void initState() {
@@ -154,8 +165,15 @@ class _LearnChatScreenState extends State<LearnChatScreen> {
     _fetchChapterJson();
   }
 
+  @override
+  void dispose() {
+    _scrollController.dispose();
+    super.dispose();
+  }
+
   Future<void> _fetchChapterJson() async {
-    final url = widget.jsonUrl ?? 'https://raw.githubusercontent.com/zxcty54/quiz/refs/heads/main/learn/biology/cell.json';
+    final url = widget.jsonUrl ??
+        'https://raw.githubusercontent.com/zxcty54/quiz/refs/heads/main/learn/biology/cell.json';
 
     try {
       final response = await http.get(Uri.parse(url)).timeout(const Duration(seconds: 15));
@@ -165,6 +183,7 @@ class _LearnChatScreenState extends State<LearnChatScreen> {
         setState(() {
           chapterData = LearnChapterData.fromJson(parsedJson);
           currentCardSlug = chapterData!.firstCardSlug;
+          visibleMessageCount = 1;
           isLoading = false;
         });
       } else {
@@ -175,16 +194,37 @@ class _LearnChatScreenState extends State<LearnChatScreen> {
       }
     } catch (e) {
       setState(() {
-        errorMessage = "Network Error: Please check your internet connection.";
+        errorMessage = "Network Error: Internet connection check karein.";
         isLoading = false;
       });
     }
   }
 
-  void _goToNextCard(String? nextSlug) {
-    if (nextSlug != null && chapterData!.cardsMap.containsKey(nextSlug)) {
+  void _handleNextTap(LearnCardModel currentCard) {
+    if (currentCard.type == 'chat') {
+      int totalMsgs = currentCard.messages?.length ?? 0;
+      if (visibleMessageCount < totalMsgs) {
+        setState(() {
+          visibleMessageCount++;
+        });
+
+        Future.delayed(const Duration(milliseconds: 100), () {
+          if (_scrollController.hasClients) {
+            _scrollController.animateTo(
+              _scrollController.position.maxScrollExtent,
+              duration: const Duration(milliseconds: 300),
+              curve: Curves.easeOut,
+            );
+          }
+        });
+        return;
+      }
+    }
+
+    if (currentCard.nextSlug != null && chapterData!.cardsMap.containsKey(currentCard.nextSlug)) {
       setState(() {
-        currentCardSlug = nextSlug;
+        currentCardSlug = currentCard.nextSlug!;
+        visibleMessageCount = 1;
       });
     } else {
       ScaffoldMessenger.of(context).showSnackBar(
@@ -198,17 +238,19 @@ class _LearnChatScreenState extends State<LearnChatScreen> {
   Widget build(BuildContext context) {
     if (isLoading) {
       return Scaffold(
+        backgroundColor: const Color(0xFFF8FAFC),
         appBar: AppBar(
-          title: Text(widget.chapterTitle ?? 'Loading Chapter...', style: const TextStyle(fontSize: 16)),
-          backgroundColor: const Color(0xFF075E54),
+          title: Text(widget.chapterTitle ?? 'Loading Chapter...', style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: Colors.white)),
+          backgroundColor: const Color(0xFF4F46E5),
+          elevation: 0,
         ),
         body: const Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              CircularProgressIndicator(color: Color(0xFF075E54)),
-              SizedBox(height: 12),
-              Text("Loading Cell Chapter JSON...", style: TextStyle(color: Colors.grey)),
+              CircularProgressIndicator(color: Color(0xFF4F46E5)),
+              SizedBox(height: 14),
+              Text("Preparing Interactive Session...", style: TextStyle(color: Color(0xFF64748B), fontWeight: FontWeight.w500)),
             ],
           ),
         ),
@@ -217,7 +259,7 @@ class _LearnChatScreenState extends State<LearnChatScreen> {
 
     if (errorMessage != null || chapterData == null) {
       return Scaffold(
-        appBar: AppBar(title: const Text('Error')),
+        appBar: AppBar(title: const Text('Error'), backgroundColor: const Color(0xFF4F46E5)),
         body: Center(
           child: Padding(
             padding: const EdgeInsets.all(20.0),
@@ -229,6 +271,7 @@ class _LearnChatScreenState extends State<LearnChatScreen> {
                 Text(errorMessage ?? "Could not load data", textAlign: TextAlign.center),
                 const SizedBox(height: 16),
                 ElevatedButton(
+                  style: ElevatedButton.styleFrom(backgroundColor: const Color(0xFF4F46E5)),
                   onPressed: () {
                     setState(() {
                       isLoading = true;
@@ -236,7 +279,7 @@ class _LearnChatScreenState extends State<LearnChatScreen> {
                     });
                     _fetchChapterJson();
                   },
-                  child: const Text("Retry"),
+                  child: const Text("Retry", style: TextStyle(color: Colors.white)),
                 )
               ],
             ),
@@ -246,81 +289,126 @@ class _LearnChatScreenState extends State<LearnChatScreen> {
     }
 
     LearnCardModel currentCard = chapterData!.cardsMap[currentCardSlug]!;
+    int totalMsgs = currentCard.messages?.length ?? 0;
+    bool isAllMessagesRevealed = visibleMessageCount >= totalMsgs || currentCard.type != 'chat';
 
     return Scaffold(
-      backgroundColor: const Color(0xFFECE5DD),
+      backgroundColor: const Color(0xFFF8FAFC), // Modern Clean Off-White Background
       appBar: AppBar(
-        backgroundColor: const Color(0xFF075E54),
-        elevation: 1,
+        backgroundColor: const Color(0xFF4F46E5), // Indigo Modern Accent Color
+        elevation: 2,
+        iconTheme: const IconThemeData(color: Colors.white),
         title: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(chapterData!.title, style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: Colors.white)),
-            const SizedBox(height: 4),
+            const SizedBox(height: 6),
             ClipRRect(
-              borderRadius: BorderRadius.circular(4),
+              borderRadius: BorderRadius.circular(6),
               child: LinearProgressIndicator(
                 value: currentCard.currentProgress / currentCard.totalProgress,
                 backgroundColor: Colors.white24,
-                valueColor: const AlwaysStoppedAnimation<Color>(Color(0xFF25D366)),
-                minHeight: 4,
+                valueColor: const AlwaysStoppedAnimation<Color>(Color(0xFF22C55E)),
+                minHeight: 5,
               ),
             ),
           ],
         ),
         actions: [
-          Center(
-            child: Padding(
-              padding: const EdgeInsets.only(right: 16.0),
-              child: Text(
-                '${currentCard.currentProgress}/${currentCard.totalProgress}',
-                style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 13, color: Colors.white),
-              ),
+          Container(
+            margin: const EdgeInsets.only(right: 14),
+            padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
+            decoration: BoxDecoration(
+              color: Colors.white.withOpacity(0.15),
+              borderRadius: BorderRadius.circular(12),
+            ),
+            child: Text(
+              'Card ${currentCard.currentProgress}/${currentCard.totalProgress}',
+              style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 12, color: Colors.white),
             ),
           )
         ],
       ),
-      body: Column(
-        children: [
-          Expanded(
-            child: _LearnCardRenderer(
-              card: currentCard,
-              characters: chapterData!.characters,
-            ),
-          ),
-          Container(
-            padding: const EdgeInsets.all(12),
-            color: Colors.white,
-            child: ElevatedButton(
-              style: ElevatedButton.styleFrom(
-                backgroundColor: const Color(0xFF075E54),
-                minimumSize: const Size.fromHeight(48),
-                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
-              ),
-              onPressed: () => _goToNextCard(currentCard.nextSlug),
-              child: Text(
-                currentCard.nextSlug == "CHAPTER_COMPLETED" ? 'Finish Chapter 🎉' : 'Next Card ➔',
-                style: const TextStyle(fontSize: 15, fontWeight: FontWeight.bold, color: Colors.white),
+      body: GestureDetector(
+        onTap: () => _handleNextTap(currentCard),
+        behavior: HitTestBehavior.opaque,
+        child: Column(
+          children: [
+            Expanded(
+              child: _LearnCardRenderer(
+                card: currentCard,
+                characters: chapterData!.characters,
+                visibleCount: visibleMessageCount,
+                scrollController: _scrollController,
               ),
             ),
-          ),
-        ],
+            // Floating Modern Action Bar
+            Container(
+              padding: const EdgeInsets.all(16),
+              decoration: BoxDecoration(
+                color: Colors.white,
+                boxShadow: [
+                  BoxShadow(color: Colors.black.withOpacity(0.06), blurRadius: 10, offset: const Offset(0, -4))
+                ],
+              ),
+              child: SafeArea(
+                child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: isAllMessagesRevealed ? const Color(0xFF4F46E5) : const Color(0xFF2563EB),
+                    minimumSize: const Size.fromHeight(52),
+                    elevation: 2,
+                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+                  ),
+                  onPressed: () => _handleNextTap(currentCard),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text(
+                        isAllMessagesRevealed ? 'Next Card ➔' : 'Tap to Read Next 💬',
+                        style: const TextStyle(fontSize: 15, fontWeight: FontWeight.bold, color: Colors.white),
+                      ),
+                      const SizedBox(width: 8),
+                      Icon(
+                        isAllMessagesRevealed ? Icons.arrow_forward_rounded : Icons.touch_app_rounded,
+                        color: Colors.white,
+                        size: 20,
+                      )
+                    ],
+                  ),
+                ),
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
 }
 
+// POLYMORPHIC CARD RENDERER
 class _LearnCardRenderer extends StatelessWidget {
   final LearnCardModel card;
   final Map<String, LearnCharacter> characters;
+  final int visibleCount;
+  final ScrollController scrollController;
 
-  const _LearnCardRenderer({required this.card, required this.characters});
+  const _LearnCardRenderer({
+    required this.card,
+    required this.characters,
+    required this.visibleCount,
+    required this.scrollController,
+  });
 
   @override
   Widget build(BuildContext context) {
     switch (card.type) {
       case 'chat':
-        return _WhatsAppChatCard(card: card, characters: characters);
+        return _ModernChatCard(
+          card: card,
+          characters: characters,
+          visibleCount: visibleCount,
+          scrollController: scrollController,
+        );
       case 'quiz':
       case 'final_quiz':
         return _QuizCard(card: card);
@@ -332,69 +420,106 @@ class _LearnCardRenderer extends StatelessWidget {
   }
 }
 
-class _WhatsAppChatCard extends StatelessWidget {
+// MODERN CHAT CARD WIDGET
+class _ModernChatCard extends StatelessWidget {
   final LearnCardModel card;
   final Map<String, LearnCharacter> characters;
+  final int visibleCount;
+  final ScrollController scrollController;
 
-  const _WhatsAppChatCard({required this.card, required this.characters});
+  const _ModernChatCard({
+    required this.card,
+    required this.characters,
+    required this.visibleCount,
+    required this.scrollController,
+  });
 
   @override
   Widget build(BuildContext context) {
+    List<LearnChatMessage> msgs = card.messages ?? [];
+    int countToShow = visibleCount.clamp(0, msgs.length);
+
     return ListView.builder(
-      padding: const EdgeInsets.all(12),
+      controller: scrollController,
+      padding: const EdgeInsets.all(16),
       physics: const BouncingScrollPhysics(),
-      itemCount: card.messages?.length ?? 0,
+      itemCount: countToShow,
       itemBuilder: (context, index) {
-        final msg = card.messages![index];
+        final msg = msgs[index];
         final char = characters[msg.speaker] ?? LearnCharacter(name: msg.speaker, role: 'student', avatar: '👤');
         final isTeacher = char.role == 'teacher';
 
-        return Align(
-          alignment: isTeacher ? Alignment.centerRight : Alignment.centerLeft,
-          child: Container(
-            margin: const EdgeInsets.symmetric(vertical: 4),
-            constraints: BoxConstraints(maxWidth: MediaQuery.of(context).size.width * 0.82),
-            padding: const EdgeInsets.all(10),
-            decoration: BoxDecoration(
-              color: isTeacher ? const Color(0xFFE7FFDB) : Colors.white,
-              borderRadius: BorderRadius.only(
-                topLeft: const Radius.circular(12),
-                topRight: const Radius.circular(12),
-                bottomLeft: Radius.circular(isTeacher ? 12 : 0),
-                bottomRight: Radius.circular(isTeacher ? 0 : 12),
-              ),
-              boxShadow: [
-                BoxShadow(color: Colors.black.withOpacity(0.04), blurRadius: 2, offset: const Offset(0, 1))
-              ],
-            ),
+        return AnimatedOpacity(
+          duration: const Duration(milliseconds: 300),
+          opacity: 1.0,
+          child: Padding(
+            padding: const EdgeInsets.symmetric(vertical: 6),
             child: Row(
-              mainAxisSize: MainAxisSize.min,
+              mainAxisAlignment: isTeacher ? MainAxisAlignment.end : MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                if (!isTeacher) Text(char.avatar, style: const TextStyle(fontSize: 16)),
-                if (!isTeacher) const SizedBox(width: 6),
+                // STUDENT AVATAR
+                if (!isTeacher) ...[
+                  _buildAvatarBadge(char, isTeacher: false),
+                  const SizedBox(width: 8),
+                ],
+
+                // CHAT BUBBLE
                 Flexible(
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        char.name,
-                        style: TextStyle(
-                          fontSize: 11,
-                          fontWeight: FontWeight.bold,
-                          color: isTeacher ? const Color(0xFF075E54) : Colors.deepOrange,
+                  child: Container(
+                    constraints: BoxConstraints(maxWidth: MediaQuery.of(context).size.width * 0.78),
+                    padding: const EdgeInsets.all(12),
+                    decoration: BoxDecoration(
+                      color: isTeacher ? const Color(0xFFEEF2FF) : Colors.white, // Soft Light Indigo vs Clean White
+                      borderRadius: BorderRadius.only(
+                        topLeft: const Radius.circular(16),
+                        topRight: const Radius.circular(16),
+                        bottomLeft: Radius.circular(isTeacher ? 16 : 4),
+                        bottomRight: Radius.circular(isTeacher ? 4 : 16),
+                      ),
+                      border: Border.all(
+                        color: isTeacher ? const Color(0xFFC7D2FE) : const Color(0xFFE2E8F0),
+                        width: 1,
+                      ),
+                      boxShadow: [
+                        BoxShadow(color: Colors.black.withOpacity(0.03), blurRadius: 4, offset: const Offset(0, 2))
+                      ],
+                    ),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Row(
+                          mainAxisSize: MainAxisSize.min,
+                          children: [
+                            Text(
+                              char.name,
+                              style: TextStyle(
+                                fontSize: 11,
+                                fontWeight: FontWeight.bold,
+                                color: isTeacher ? const Color(0xFF3730A3) : const Color(0xFFEA580C),
+                              ),
+                            ),
+                            if (isTeacher) ...[
+                              const SizedBox(width: 4),
+                              const Icon(Icons.verified_rounded, size: 12, color: Color(0xFF4F46E5)),
+                            ]
+                          ],
                         ),
-                      ),
-                      const SizedBox(height: 2),
-                      LatexText(
-                        msg.text,
-                        style: const TextStyle(fontSize: 13.5, color: Colors.black87, height: 1.35),
-                      ),
-                    ],
+                        const SizedBox(height: 4),
+                        LatexText(
+                          msg.text,
+                          style: const TextStyle(fontSize: 14, color: Color(0xFF1E293B), height: 1.4),
+                        ),
+                      ],
+                    ),
                   ),
                 ),
-                if (isTeacher) const SizedBox(width: 6),
-                if (isTeacher) Text(char.avatar, style: const TextStyle(fontSize: 16)),
+
+                // TEACHER AVATAR
+                if (isTeacher) ...[
+                  const SizedBox(width: 8),
+                  _buildAvatarBadge(char, isTeacher: true),
+                ],
               ],
             ),
           ),
@@ -402,8 +527,30 @@ class _WhatsAppChatCard extends StatelessWidget {
       },
     );
   }
+
+  Widget _buildAvatarBadge(LearnCharacter char, {required bool isTeacher}) {
+    return Container(
+      width: 36,
+      height: 36,
+      decoration: BoxDecoration(
+        shape: BoxShape.circle,
+        color: isTeacher ? const Color(0xFF4F46E5) : const Color(0xFFFFEDD5),
+        border: Border.all(
+          color: isTeacher ? const Color(0xFF818CF8) : const Color(0xFFFDBA74),
+          width: 1.5,
+        ),
+      ),
+      child: Center(
+        child: Text(
+          char.avatar,
+          style: const TextStyle(fontSize: 18),
+        ),
+      ),
+    );
+  }
 }
 
+// QUIZ CARD
 class _QuizCard extends StatefulWidget {
   final LearnCardModel card;
   const _QuizCard({required this.card});
@@ -426,68 +573,86 @@ class _QuizCardState extends State<_QuizCard> {
 
     return SingleChildScrollView(
       padding: const EdgeInsets.all(16.0),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Container(
-            padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
-            decoration: BoxDecoration(color: Colors.orange.shade100, borderRadius: BorderRadius.circular(4)),
-            child: const Text('🧠 Quick Check', style: TextStyle(color: Colors.deepOrange, fontWeight: FontWeight.bold, fontSize: 12)),
-          ),
-          const SizedBox(height: 12),
-          LatexText(
-            payload['question'] ?? '',
-            style: const TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
-          ),
-          const SizedBox(height: 16),
-          ...options.map((opt) {
-            bool isCorrect = opt.id == correctId;
-            bool isSelected = opt.id == selectedOptionId;
-            Color btnColor = Colors.white;
+      child: Card(
+        elevation: 2,
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+        child: Padding(
+          padding: const EdgeInsets.all(16.0),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Container(
+                padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
+                decoration: BoxDecoration(color: const Color(0xFFFEF3C7), borderRadius: BorderRadius.circular(6)),
+                child: const Text('🧠 Quick Check', style: TextStyle(color: Color(0xFFD97706), fontWeight: FontWeight.bold, fontSize: 12)),
+              ),
+              const SizedBox(height: 12),
+              LatexText(
+                payload['question'] ?? '',
+                style: const TextStyle(fontSize: 15, fontWeight: FontWeight.bold, color: Color(0xFF0F172A)),
+              ),
+              const SizedBox(height: 16),
+              ...options.map((opt) {
+                bool isCorrect = opt.id == correctId;
+                bool isSelected = opt.id == selectedOptionId;
+                Color btnColor = Colors.white;
+                Color borderColor = const Color(0xFFE2E8F0);
 
-            if (isSubmitted) {
-              if (isCorrect) btnColor = Colors.green.shade100;
-              if (isSelected && !isCorrect) btnColor = Colors.red.shade100;
-            }
+                if (isSubmitted) {
+                  if (isCorrect) {
+                    btnColor = const Color(0xFFDCFCE7);
+                    borderColor = const Color(0xFF22C55E);
+                  }
+                  if (isSelected && !isCorrect) {
+                    btnColor = const Color(0xFFFEE2E2);
+                    borderColor = const Color(0xFFEF4444);
+                  }
+                } else if (isSelected) {
+                  borderColor = const Color(0xFF4F46E5);
+                }
 
-            return Container(
-              margin: const EdgeInsets.only(bottom: 8),
-              width: double.infinity,
-              child: OutlinedButton(
-                style: OutlinedButton.styleFrom(
-                  backgroundColor: btnColor,
+                return Container(
+                  margin: const EdgeInsets.only(bottom: 8),
+                  width: double.infinity,
+                  child: OutlinedButton(
+                    style: OutlinedButton.styleFrom(
+                      backgroundColor: btnColor,
+                      padding: const EdgeInsets.all(14),
+                      alignment: Alignment.centerLeft,
+                      side: BorderSide(color: borderColor, width: isSelected ? 1.5 : 1),
+                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+                    ),
+                    onPressed: () {
+                      setState(() {
+                        selectedOptionId = opt.id;
+                        isSubmitted = true;
+                      });
+                    },
+                    child: LatexText('${opt.id}) ${opt.text}', style: const TextStyle(fontSize: 13.5, color: Color(0xFF1E293B))),
+                  ),
+                );
+              }),
+              if (isSubmitted) ...[
+                const SizedBox(height: 12),
+                Container(
                   padding: const EdgeInsets.all(12),
-                  alignment: Alignment.centerLeft,
-                  side: BorderSide(color: isSelected ? Colors.teal : Colors.grey.shade300),
-                ),
-                onPressed: () {
-                  setState(() {
-                    selectedOptionId = opt.id;
-                    isSubmitted = true;
-                  });
-                },
-                child: LatexText('${opt.id}) ${opt.text}', style: const TextStyle(fontSize: 13.5, color: Colors.black87)),
-              ),
-            );
-          }),
-          if (isSubmitted) ...[
-            const SizedBox(height: 12),
-            Container(
-              padding: const EdgeInsets.all(12),
-              width: double.infinity,
-              decoration: BoxDecoration(color: Colors.blue.shade50, borderRadius: BorderRadius.circular(8)),
-              child: LatexText(
-                '💡 Explanation: ${payload['explanation']}',
-                style: const TextStyle(fontSize: 12.5, color: Colors.black87),
-              ),
-            )
-          ]
-        ],
+                  width: double.infinity,
+                  decoration: BoxDecoration(color: const Color(0xFFF0F9FF), borderRadius: BorderRadius.circular(10), border: Border.all(color: const Color(0xFFBAE6FD))),
+                  child: LatexText(
+                    '💡 Explanation: ${payload['explanation']}',
+                    style: const TextStyle(fontSize: 13, color: Color(0xFF0369A1)),
+                  ),
+                )
+              ]
+            ],
+          ),
+        ),
       ),
     );
   }
 }
 
+// SUMMARY CARD
 class _SummaryCard extends StatelessWidget {
   final LearnCardModel card;
   const _SummaryCard({required this.card});
@@ -504,7 +669,7 @@ class _SummaryCard extends StatelessWidget {
         children: [
           Text(
             payload['title'] ?? 'Summary',
-            style: const TextStyle(fontSize: 17, fontWeight: FontWeight.bold, color: Color(0xFF075E54)),
+            style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold, color: Color(0xFF4F46E5)),
           ),
           const SizedBox(height: 12),
           Expanded(
@@ -512,24 +677,13 @@ class _SummaryCard extends StatelessWidget {
               itemCount: points.length,
               itemBuilder: (context, idx) {
                 final pt = points[idx];
-                return Container(
-                  margin: const EdgeInsets.only(bottom: 8),
-                  padding: const EdgeInsets.all(12),
-                  decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.circular(8)),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(pt['topic'] ?? '', style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 13, color: Colors.teal)),
-                      const SizedBox(height: 4),
-                      LatexText(pt['point'] ?? '', style: const TextStyle(fontSize: 13.5)),
-                    ],
-                  ),
-                );
-              },
-            ),
-          )
-        ],
-      ),
-    );
-  }
-}
+                return Card(
+                  elevation: 1,
+                  margin: const EdgeInsets.only(bottom: 10),
+                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+                  child: Padding(
+                    padding: const EdgeInsets.all(14),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(pt['topic'] ?? '', style: const TextStyle(fontWeight: FontWeight
