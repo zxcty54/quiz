@@ -631,4 +631,74 @@ class _QuizCardState extends State<_QuizCard> {
                 Container(
                   padding: const EdgeInsets.all(12),
                   width: double.infinity,
-                  decoration: BoxDecoration(color: const Color(0xFFF0F9FF), borderRadius: BorderRadius.circular(10), border: Border.all(color: const Color(0xFFBAE6
+                  decoration: BoxDecoration(
+                    color: const Color(0xFFF0F9FF),
+                    borderRadius: BorderRadius.circular(10),
+                    border: Border.all(color: const Color(0xFFBAE6FD)),
+                  ),
+                  child: LatexText(
+                    '💡 Explanation: ${payload['explanation']}',
+                    style: const TextStyle(fontSize: 13, color: Color(0xFF0369A1)),
+                  ),
+                ),
+              ],
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+// SUMMARY CARD
+class _SummaryCard extends StatelessWidget {
+  final LearnCardModel card;
+  const _SummaryCard({required this.card});
+
+  @override
+  Widget build(BuildContext context) {
+    final payload = card.summaryPayload!;
+    final List points = payload['revision_points'] ?? [];
+
+    return Padding(
+      padding: const EdgeInsets.all(16.0),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(
+            payload['title'] ?? 'Summary',
+            style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold, color: Color(0xFF4F46E5)),
+          ),
+          const SizedBox(height: 12),
+          Expanded(
+            child: ListView.builder(
+              itemCount: points.length,
+              itemBuilder: (context, idx) {
+                final pt = points[idx];
+                return Card(
+                  elevation: 1,
+                  margin: const EdgeInsets.only(bottom: 10),
+                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+                  child: Padding(
+                    padding: const EdgeInsets.all(14),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          pt['topic'] ?? '',
+                          style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 13, color: Color(0xFF4F46E5)),
+                        ),
+                        const SizedBox(height: 6),
+                        LatexText(pt['point'] ?? '', style: const TextStyle(fontSize: 13.5, color: Color(0xFF334155))),
+                      ],
+                    ),
+                  ),
+                );
+              },
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
