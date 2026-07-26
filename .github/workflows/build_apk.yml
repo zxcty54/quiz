@@ -38,6 +38,13 @@ jobs:
         working-directory: flutter_app
         run: dart run flutter_launcher_icons || true
 
+      # 🛠️ Auto-Enforce compileSdk 36 (Fixes file_picker build error)
+      - name: 🔧 Auto-Patch Android compileSdk to 36
+        working-directory: flutter_app
+        run: |
+          find android/ -name "build.gradle*" -exec sed -i 's/compileSdkVersion.*/compileSdkVersion 36/g' {} +
+          find android/ -name "build.gradle*" -exec sed -i 's/compileSdk .*/compileSdk 36/g' {} +
+
       - name: 🛠️ Build APK (With Secrets Injected)
         working-directory: flutter_app
         run: |
@@ -53,8 +60,9 @@ jobs:
 
       # 🚀 DIRECT TELEGRAM APK DELIVERY (Zip & Upload Fix)
       - name: 📦 Compress APK for Telegram Delivery
+        working-directory: flutter_app
         run: |
-          zip -j flutter_app/build/app/outputs/flutter-apk/mocktester-apk.zip flutter_app/build/app/outputs/flutter-apk/app-release.apk
+          zip -j build/app/outputs/flutter-apk/mocktester-apk.zip build/app/outputs/flutter-apk/app-release.apk
 
       - name: 📱 Send APK File Direct To Telegram
         uses: appleboy/telegram-action@master
