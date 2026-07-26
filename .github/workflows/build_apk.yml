@@ -41,10 +41,7 @@ jobs:
       # 🛠️ Exact Patching for Kotlin DSL (.kts) and Groovy (.gradle)
       - name: 🔧 Auto-Patch compileSdk to 36 for App & pub-cache
         run: |
-          # 1. Fix Kotlin DSL files (.kts) -> Requires '=' sign
           find flutter_app/android/ ~/.pub-cache/ -type f -name "*.kts" -exec sed -i 's/compileSdk.*/compileSdk = 36/g' {} +
-
-          # 2. Fix Groovy files (.gradle) -> Standard Groovy syntax
           find flutter_app/android/ ~/.pub-cache/ -type f -name "build.gradle" -exec sed -i 's/compileSdkVersion.*/compileSdkVersion 36/g' {} +
           find flutter_app/android/ ~/.pub-cache/ -type f -name "build.gradle" -exec sed -i 's/compileSdk .*/compileSdk 36/g' {} +
 
@@ -61,7 +58,7 @@ jobs:
           name: MockTester-Release-APK
           path: flutter_app/build/app/outputs/flutter-apk/app-release.apk
 
-      # 🚀 DIRECT TELEGRAM APK DELIVERY (Zip & Upload)
+      # 🚀 DIRECT TELEGRAM APK DELIVERY (Secure Secrets Version)
       - name: 📦 Compress APK for Telegram Delivery
         working-directory: flutter_app
         run: |
@@ -70,7 +67,7 @@ jobs:
       - name: 📱 Send APK File Direct To Telegram
         uses: appleboy/telegram-action@master
         with:
-          to: "785009742"
-          token: "1809778528:AAFlwdQMKgiezltaJYyAU5u6vNjblBiIPmo"
+          to: ${{ secrets.TELEGRAM_TO }}
+          token: ${{ secrets.TELEGRAM_TOKEN }}
           message: "🚀 *MockTester APK Build Successful!*\n\nAPK file zip format me attached hai. Unzip karke install karein."
           document: flutter_app/build/app/outputs/flutter-apk/mocktester-apk.zip
