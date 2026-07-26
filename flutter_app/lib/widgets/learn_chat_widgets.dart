@@ -24,6 +24,8 @@ class LearnCardRenderer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     switch (card.type) {
+      case 'intro': // 👈 Handled Intro Cover Card
+        return IntroCardWidget(card: card);
       case 'chat':
         return ModernChatCard(
           card: card,
@@ -41,6 +43,134 @@ class LearnCardRenderer extends StatelessWidget {
       default:
         return Center(child: Text('Unknown Card Type: ${card.type}'));
     }
+  }
+}
+
+// 🌟 CHAPTER INTRO / COVER CARD WIDGET (PURE BANNER LOOK - NO CHAT / NO BUBBLES)
+class IntroCardWidget extends StatelessWidget {
+  final LearnCardModel card;
+
+  const IntroCardWidget({super.key, required this.card});
+
+  @override
+  Widget build(BuildContext context) {
+    final payload = card.introPayload ?? {};
+    final String title = payload['title'] ?? 'Welcome to Chapter';
+    final String subtitle = payload['subtitle'] ?? 'Interactive Learning Module';
+    final List outcomes = payload['outcomes'] ?? [];
+    final List targetExams = payload['target_exams'] ?? [];
+
+    return Container(
+      width: double.infinity,
+      color: const Color(0xFF4F46E5), // Premium Indigo Theme
+      child: SingleChildScrollView(
+        padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 36),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            // 1. Big Feature Icon Container
+            Container(
+              padding: const EdgeInsets.all(20),
+              decoration: BoxDecoration(
+                color: Colors.white.withOpacity(0.12),
+                shape: BoxShape.circle,
+              ),
+              child: Text(
+                payload['icon_emoji'] ?? '🧬',
+                style: const TextStyle(fontSize: 56),
+              ),
+            ),
+            const SizedBox(height: 20),
+
+            // 2. Chapter Title
+            Text(
+              title,
+              textAlign: TextAlign.center,
+              style: const TextStyle(
+                fontSize: 22,
+                fontWeight: FontWeight.bold,
+                color: Colors.white,
+                letterSpacing: 0.3,
+              ),
+            ),
+            const SizedBox(height: 8),
+
+            // 3. Subtitle / Tagline
+            Text(
+              subtitle,
+              textAlign: TextAlign.center,
+              style: const TextStyle(fontSize: 13.5, color: Color(0xFFC7D2FE)),
+            ),
+            const SizedBox(height: 20),
+
+            // 4. Target Exam Badges Row
+            if (targetExams.isNotEmpty)
+              Wrap(
+                spacing: 6,
+                runSpacing: 6,
+                alignment: WrapAlignment.center,
+                children: targetExams.map((exam) => Container(
+                  padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
+                  decoration: BoxDecoration(
+                    color: Colors.white.withOpacity(0.2),
+                    borderRadius: BorderRadius.circular(12),
+                    border: Border.all(color: Colors.white24),
+                  ),
+                  child: Text(
+                    exam.toString(),
+                    style: const TextStyle(color: Colors.white, fontSize: 11, fontWeight: FontWeight.bold),
+                  ),
+                )).toList(),
+              ),
+
+            const SizedBox(height: 28),
+
+            // 5. "Aaj Hum Kya Padhne Waale Hain" Checklist Box
+            if (outcomes.isNotEmpty)
+              Container(
+                width: double.infinity,
+                padding: const EdgeInsets.all(18),
+                decoration: BoxDecoration(
+                  color: Colors.white.withOpacity(0.08),
+                  borderRadius: BorderRadius.circular(16),
+                  border: Border.all(color: Colors.white12),
+                ),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    const Row(
+                      children: [
+                        Icon(Icons.stars_rounded, color: Colors.yellowAccent, size: 18),
+                        SizedBox(width: 8),
+                        Text(
+                          "Aaj Hum Kya Padhne Waale Hain?",
+                          style: TextStyle(color: Colors.yellowAccent, fontWeight: FontWeight.bold, fontSize: 13.5),
+                        ),
+                      ],
+                    ),
+                    const SizedBox(height: 12),
+                    ...outcomes.map((item) => Padding(
+                      padding: const EdgeInsets.symmetric(vertical: 4),
+                      child: Row(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          const Text("✔  ", style: TextStyle(color: Color(0xFF4ADE80), fontWeight: FontWeight.bold, fontSize: 13)),
+                          Expanded(
+                            child: Text(
+                              item.toString(),
+                              style: const TextStyle(color: Colors.white, fontSize: 13, height: 1.35),
+                            ),
+                          ),
+                        ],
+                      ),
+                    )),
+                  ],
+                ),
+              ),
+          ],
+        ),
+      ),
+    );
   }
 }
 
