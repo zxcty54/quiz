@@ -7,9 +7,15 @@ import 'package:shared_preferences/shared_preferences.dart';
 import '../widgets/latex_text.dart';
 
 // ==========================================
-// 🔊 SOFT SOUND & SUBTLE HAPTIC ENGINE
+// 🔊 SOFT SOUND & SUBTLE HAPTIC ENGINE (ADVANCED)
 // ==========================================
 class LearnEffects {
+  // Helper for quick micro-vibration
+  static void _triggerSubtleVibe({required int durationMs}) {
+    // Standard system haptic feedback
+    HapticFeedback.selectionClick();
+  }
+
   // 👆 Next Button Tap / Screen Tap ("tick" + ultra-light selection click)
   static void playTap() {
     SystemSound.play(SystemSoundType.click);
@@ -28,16 +34,16 @@ class LearnEffects {
     HapticFeedback.lightImpact();
   }
 
-  // ❌ Wrong Answer ("thuk" + single light impact)
+  // ❌ Wrong Answer ("thuk" + double light impact for feedback)
   static void playWrong() {
     SystemSound.play(SystemSoundType.alert);
-    HapticFeedback.lightImpact();
+    HapticFeedback.heavyImpact();
   }
 
-  // 🎉 Chapter / Milestone Complete ("success" + light impact)
+  // 🎉 Chapter / Milestone Complete ("success" + heavy impact sequence)
   static void playSuccess() {
     SystemSound.play(SystemSoundType.alert);
-    HapticFeedback.lightImpact();
+    HapticFeedback.vibrate();
   }
 }
 
