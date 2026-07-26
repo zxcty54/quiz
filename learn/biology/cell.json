@@ -10,8 +10,8 @@
       "NEET",
       "UPSC_Prelims"
     ],
-    "estimated_time": "18 min",
-    "total_cards": 33
+    "estimated_time": "15 min",
+    "total_cards": 30
   },
   "characters": {
     "aman": {
@@ -27,1228 +27,220 @@
   },
   "cards": [
     {
-      "card_slug": "LIVING_NONLIVING_1",
+      "card_slug": "CELL_HOOK_1",
       "type": "chat",
       "chat_style": "whatsapp",
-      "concept_id": "LIVING_VS_NONLIVING",
+      "concept_id": "CELL_INTRO",
       "level": 1,
-      "is_implicit_doubt": false,
+      "messages": [
+        {
+          "speaker": "raju",
+          "text": "Sir, agar mere body ke saare cells achanak mar jayein toh?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Toh tum 2 minute bhi zinda nahi reh sakte."
+        },
+        {
+          "speaker": "raju",
+          "emotion": "😳",
+          "text": "2 minute? Itna fast?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Is waqt tumhare andar 37 TRILLION micro-workers bina ruke kaam kar rahe hain."
+        },
+        {
+          "speaker": "raju",
+          "text": "37 trillion?? Mere akele ke andar??"
+        },
+        {
+          "speaker": "aman",
+          "text": "Ruko... Tumne kabhi socha hai agar inme se ek worker strike kar de ya pagal ho jaye toh kya hoga?"
+        }
+      ],
+      "navigation": {
+        "next": "GUESS_CANCER"
+      },
       "progress": {
         "current": 1,
-        "total": 33
-      },
-      "messages": [
-        {
-          "speaker": "raju",
-          "text": "Sir, kal gully ke kutte ne mere dost ke plastic waale Khilona-Ghar ko laat maar kar tod diya... Par kutte ko chhot tak nahi aayi!"
-        },
-        {
-          "speaker": "aman",
-          "text": "Sahi observation Raju! Agar us plastic khilone ko 10 din wahan chhod dein, toh kya wo khud theek ho jayega?"
-        },
-        {
-          "speaker": "raju",
-          "text": "Kahan se hoga Sir! Khilona toh bejaan (Non-living) hai, wo waise hi tuta rahega."
-        },
-        {
-          "speaker": "aman",
-          "text": "Sahi! Par kutte ki chhot 10 din me apne aap bhar jaati hai. Living bodies ke paas self-repairing mechanism hota hai."
-        },
-        {
-          "speaker": "raju",
-          "text": "Matlab non-living me maintenance system zero hota hai aur living me hamesha active?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Exactly! Living body continuously energy use karke apna repair aur maintenance karti hai."
-        }
-      ],
-      "navigation": {
-        "next": "LIVING_NONLIVING_2"
+        "total": 30
       }
     },
     {
-      "card_slug": "LIVING_NONLIVING_2",
-      "type": "chat",
-      "chat_style": "whatsapp",
-      "concept_id": "LIVING_VS_NONLIVING",
+      "card_slug": "GUESS_CANCER",
+      "type": "guess",
+      "concept_id": "CELL_INTRO",
       "level": 1,
-      "is_implicit_doubt": true,
+      "guess_payload": {
+        "question": "🤔 Pehle tum guess karo:\nAgar body ka ek cell out-of-control hokar bina ruke continuously divide (tootna) shuru kar de, toh kaun si bimari banti hai?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Bukhar"
+          },
+          {
+            "id": "B",
+            "text": "Cancer"
+          },
+          {
+            "id": "C",
+            "text": "Heart Attack"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Out-of-control cell division hi Cancer tumor banta hai! Aayein dekhte hain Aman Sir aur Raju ki chat me."
+      },
+      "navigation": {
+        "next": "REVEAL_CANCER"
+      },
       "progress": {
         "current": 2,
-        "total": 33
-      },
-      "messages": [
-        {
-          "speaker": "raju",
-          "text": "Par Sir, is self-repair engine ko chalne ke liye chahiye kya-kya hota hai?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Teen cheezein: Khana (Energy), Hawa (Breathing), aur Repairing Workers."
-        },
-        {
-          "speaker": "raju",
-          "text": "Matlab hum jo daal-chawal khate hain, wo repair engine ko fuel deta hai?"
-        },
-        {
-          "speaker": "aman",
-          "text": "100% Sahi! Fuel micro-workers tak pahunchta hai jo continuously maintenance karte hain."
-        },
-        {
-          "speaker": "raju",
-          "text": "Wo micro-workers sharir me akele hote hain ya team me?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Inhi micro-workers ko Biology me CELL (Koshika) kehte hain, jo trillions ki team me kaam karte hain!"
-        }
-      ],
-      "navigation": {
-        "next": "CELL_INTRO_1"
+        "total": 30
       }
     },
     {
-      "card_slug": "CELL_INTRO_1",
+      "card_slug": "REVEAL_CANCER",
       "type": "chat",
       "chat_style": "whatsapp",
       "concept_id": "CELL_INTRO",
       "level": 1,
-      "is_implicit_doubt": false,
-      "progress": {
-        "current": 3,
-        "total": 33
-      },
       "messages": [
         {
-          "speaker": "raju",
-          "text": "Sir, kal Rakesh ji ka purana makan toot raha tha... Deewar tooti toh andar se sirf choti red eentein nikal rahi thi!"
-        },
-        {
           "speaker": "aman",
-          "text": "Sahi dhyan gaya! Agar wo eentein hi na hoti, toh kya wo double-storey makan khada ho pata?"
+          "text": "Wo Cancer ban jata hai. Cell normal chale toh life, out-of-control ho toh bimari."
         },
         {
           "speaker": "raju",
-          "text": "Kahan se hota Sir! Bina eent ke toh cement ka dher bhi niche gir jayega."
+          "text": "Matlab ye mere poore sharir ka basic maintenance engine hain..."
         },
         {
           "speaker": "aman",
-          "text": "Bas yahi secret body ka hai! Insaan, Hathi ya Neem ka ped—sab choti 'living eenton' se bane hain."
+          "text": "Sahi samjhe! Isiliye Cell ko Life ki Structural aur Functional Unit kehte hain."
         },
-        {
-          "speaker": "raju",
-          "text": "Chhi Sir! Matlab mere cheeks aur haath me eentein bhari hain? Mujhe toh feel nahi hoti!"
-        },
-        {
-          "speaker": "aman",
-          "text": "Makan ki eent patthar ki hoti hai—sukhi aur hard. Par body waali 'eent' jelly jaisi soft aur ZINDA hoti hai!"
-        }
-      ],
-      "navigation": {
-        "next": "CELL_INTRO_2"
-      }
-    },
-    {
-      "card_slug": "CELL_INTRO_2",
-      "type": "chat",
-      "chat_style": "whatsapp",
-      "concept_id": "CELL_INTRO",
-      "level": 1,
-      "is_implicit_doubt": true,
-      "progress": {
-        "current": 4,
-        "total": 33
-      },
-      "messages": [
-        {
-          "speaker": "raju",
-          "text": "Sir, Cell ko Structural aur Functional Unit dono kyun bolte hain?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Structural kyunki ye body ka base structure (dhancha) banati hai, jaise makan me eentein."
-        },
-        {
-          "speaker": "raju",
-          "text": "Aur Functional Unit kyun Sir?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Kyunki body ka har kaam (digestion, breathing, energy production) actual me cell ke andar hota hai!"
-        },
-        {
-          "speaker": "raju",
-          "text": "Achha! Matlab pure sharir ka kaam asal me ye micro-workers hi kar rahe hain?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Bingo! Isiliye Cell = Structural and Functional Unit of Life!"
-        }
-      ],
-      "navigation": {
-        "next": "DISCOVERY_1_CORK"
-      }
-    },
-    {
-      "card_slug": "DISCOVERY_1_CORK",
-      "type": "chat",
-      "chat_style": "whatsapp",
-      "concept_id": "CELL_DISCOVERY",
-      "level": 1,
-      "is_implicit_doubt": false,
-      "progress": {
-        "current": 5,
-        "total": 33
-      },
-      "messages": [
         {
           "speaker": "raju",
           "text": "Sir, jab skin ekbarabar smooth lagti hai, toh pehle scientist ko kaise pata chala ki andar cell hai?"
         },
         {
           "speaker": "aman",
-          "text": "350 saal pehle jab pehli baar Microscope (Magnifying lenses) bana, tab ye hidden duniya samne aayi!"
-        },
-        {
-          "speaker": "raju",
-          "text": "Sabse pehle kiske haath wo magnifying glass laga aur usne kya dekha?"
+          "text": "1665 me Robert Hooke ne ped ki sookhi chhaal (Cork) ko apne microscope me dekha."
         },
         {
           "speaker": "aman",
-          "text": "1665 me Robert Hooke ne ped ki sookhi chhaal (Cork) ki patli slice apne microscope me dekhi."
-        },
-        {
-          "speaker": "raju",
-          "text": "Cork kya hota hai Sir? Aur unhe kya dikha?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Cork ped ki sookhi outer bark hoti hai! Unhe madhumakhi ke chhatte jaise chote khali kamre dikhe."
+          "text": "Lekin yahin sabse bada twist hai..."
         }
       ],
       "navigation": {
-        "next": "DISCOVERY_2_CELLA"
+        "next": "GUESS_DEAD_CELL"
+      },
+      "progress": {
+        "current": 3,
+        "total": 30
       }
     },
     {
-      "card_slug": "DISCOVERY_2_CELLA",
+      "card_slug": "GUESS_DEAD_CELL",
+      "type": "guess",
+      "concept_id": "CELL_DISCOVERY",
+      "level": 2,
+      "guess_payload": {
+        "question": "🔥 Pehle tum guess karo:\nRobert Hooke ne ped ki sookhi chhaal (Cork) me jo pehla Cell dekha, kya wo ZINDA cell tha?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Haan, Zinda Cell tha"
+          },
+          {
+            "id": "B",
+            "text": "Nahi, Dead Cell (Maut) tha"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Sookhi chhaal me jaan nahi hoti, isliye Hooke ne DEAD cell wall dekhi thi!"
+      },
+      "navigation": {
+        "next": "REVEAL_HOOK_TRAP"
+      },
+      "progress": {
+        "current": 4,
+        "total": 30
+      }
+    },
+    {
+      "card_slug": "REVEAL_HOOK_TRAP",
       "type": "chat",
       "chat_style": "whatsapp",
       "concept_id": "CELL_DISCOVERY",
       "level": 2,
-      "is_implicit_doubt": true,
-      "progress": {
-        "current": 6,
-        "total": 33
-      },
       "messages": [
         {
-          "speaker": "raju",
-          "text": "Un khali kamron ko dekhkar unhone 'Cell' naam kyun rakha?"
-        },
-        {
           "speaker": "aman",
-          "text": "Latin bhasha me chote khali kamre ko 'Cella' kehte hain, wahi se word bana CELL!"
+          "text": "Hooke ne Dead cell dekha tha. Sookhi chhaal me jaan kahan se aayegi!"
         },
         {
           "speaker": "raju",
-          "text": "Par sookhi chhaal me jaan nahi hoti Sir! Hooke ko zinda cell kaise dikha?"
+          "text": "Toh pehla Zinda cell kisne dekha phir?"
         },
         {
           "speaker": "aman",
-          "text": "Wahi toh twist hai! Hooke ko zinda cell nahi dikha, unhone sirf DEAD Cell Wall dekha!"
+          "text": "Anton van Leeuwenhoek ne, 1674 me talab ke paani me."
         },
         {
           "speaker": "raju",
-          "text": "Arre! Toh pehla ZINDA (Living) cell kisne aur kahan dekha?"
+          "text": "Sir ye do-do naam main exam me yaad kaise rakhunga? Mix ho jayega!"
         },
         {
           "speaker": "aman",
-          "text": "1674 me Anton van Leeuwenhoek ne talab ke paani me pehla ZINDA Cell dekha! ⚠️ BPSC Trap!"
+          "text": "Ek simple trick suno."
+        },
+        {
+          "speaker": "aman",
+          "text": "Hooke = Dead Wood (Sookhi lakdi) | Leeuwenhoek = Living Water (Talab ka paani)."
         }
       ],
       "navigation": {
-        "next": "CELL_THEORY_1_SCHLEIDEN_SCHWANN"
-      }
-    },
-    {
-      "card_slug": "CELL_THEORY_1_SCHLEIDEN_SCHWANN",
-      "type": "chat",
-      "chat_style": "whatsapp",
-      "concept_id": "CELL_THEORY",
-      "level": 2,
-      "is_implicit_doubt": false,
-      "progress": {
-        "current": 7,
-        "total": 33
+        "next": "MILESTONE_QUIZ_1"
       },
-      "messages": [
-        {
-          "speaker": "raju",
-          "text": "Sir, kya Cell ka koi official Rule ya Theory bhi bana tha?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Haan! 1838-1839 me Schleiden (Botanist) aur Schwann (Zoologist) ne Cell Theory di."
-        },
-        {
-          "speaker": "raju",
-          "text": "Unhone kya rules likhe is theory me?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Unhone bola: Sabhi plants & animals cells se bane hain aur Cell hi basic unit hai."
-        },
-        {
-          "speaker": "raju",
-          "text": "Par Sir, naye cells aate kahan se hain? Unhone bataya kya?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Nahi! Wahan theory fail ho gayi. Phir 1855 me Rudolf Virchow ne bola: 'Omnis cellula-e cellula'!"
-        }
-      ],
-      "navigation": {
-        "next": "CELL_THEORY_2_VIRCHOW"
-      }
-    },
-    {
-      "card_slug": "CELL_THEORY_2_VIRCHOW",
-      "type": "chat",
-      "chat_style": "whatsapp",
-      "concept_id": "CELL_THEORY",
-      "level": 2,
-      "is_implicit_doubt": true,
       "progress": {
-        "current": 8,
-        "total": 33
-      },
-      "messages": [
-        {
-          "speaker": "raju",
-          "text": "'Omnis cellula-e cellula' ka simple matlab kya hai Sir?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Iska matlab hai: Naye cells hamesha Purane cells ke divide (vibhajit) hone se bante hain!"
-        },
-        {
-          "speaker": "raju",
-          "text": "Matlab cycle se girne par kohni chhilne par naye cells hawa/mitti se nahi aaye?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Bilkul nahi! Purane surrounding cells ne divide hokar naya layer banaya. No magic!"
-        },
-        {
-          "speaker": "raju",
-          "text": "Kya single cell wale jeev bhi hote hain duniya me?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Haan! Unicellular (Amoeba, Bacteria) akele ek cell me apni puri zindagi bita dete hain!"
-        }
-      ],
-      "navigation": {
-        "next": "PROKARYOTE_EUKARYOTE_1"
+        "current": 5,
+        "total": 30
       }
     },
     {
-      "card_slug": "PROKARYOTE_EUKARYOTE_1",
-      "type": "chat",
-      "chat_style": "whatsapp",
-      "concept_id": "PROKARYOTE_VS_EUKARYOTE",
-      "level": 2,
-      "is_implicit_doubt": false,
-      "progress": {
-        "current": 9,
-        "total": 33
-      },
-      "messages": [
-        {
-          "speaker": "raju",
-          "text": "Sir, kya bacteria ka cell aur mere haath ka cell ek jaisa hi hota hai?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Nahi! Bacteria Prokaryotic hota hai (Pro = Primitive/Purana, Karyon = Nucleus)."
-        },
-        {
-          "speaker": "raju",
-          "text": "Primitive Nucleus matlab?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Iska Nucleus bina kisi protective membrane ke liquid me khula pada rehta hai."
-        },
-        {
-          "speaker": "raju",
-          "text": "Aur humare human cells kaise hote hain Sir?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Hum Eukaryotic hain (Eu = True/Advanced). Humare cell ka Nucleus double-membrane me safe rehta hai!"
-        }
-      ],
-      "navigation": {
-        "next": "PROKARYOTE_EUKARYOTE_2"
-      }
-    },
-    {
-      "card_slug": "PROKARYOTE_EUKARYOTE_2",
-      "type": "chat",
-      "chat_style": "whatsapp",
-      "concept_id": "PROKARYOTE_VS_EUKARYOTE",
-      "level": 3,
-      "is_implicit_doubt": true,
-      "progress": {
-        "current": 10,
-        "total": 33
-      },
-      "messages": [
-        {
-          "speaker": "raju",
-          "text": "Sir, Nucleus ke ilawa exam wala main difference kya hai dono me?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Prokaryotes (Bacteria) me Ribosome 70S hota hai aur membrane-bound organelle nahi hote."
-        },
-        {
-          "speaker": "raju",
-          "text": "70S aur 80S kya hai Sir?"
-        },
-        {
-          "speaker": "aman",
-          "text": "70S chota aur purana Ribosome hai, jabki Eukaryotes (Humans/Plants) me bada 80S Ribosome hota hai."
-        },
-        {
-          "speaker": "raju",
-          "text": "Kya Bacteria ke paas Mitochondria hota hai?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Nahi! Prokaryotes me Mitochondria, ER, Golgi jaise membrane waale organelles missing hote hain!"
-        }
-      ],
-      "navigation": {
-        "next": "PLANT_ANIMAL_1"
-      }
-    },
-    {
-      "card_slug": "PLANT_ANIMAL_1",
-      "type": "chat",
-      "chat_style": "whatsapp",
-      "concept_id": "PLANT_VS_ANIMAL",
-      "level": 2,
-      "is_implicit_doubt": false,
-      "progress": {
-        "current": 11,
-        "total": 33
-      },
-      "messages": [
-        {
-          "speaker": "raju",
-          "text": "Sir, dhoop-baarish me ped khade rehte hain, hum ghar me bhag jaate hain. Unki outer boundary alag hai?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Haan! Plant cells ke paas outermost layer rigid Cell Wall hoti hai jo Cellulose ki bani hoti hai."
-        },
-        {
-          "speaker": "raju",
-          "text": "Kya human cells me bhi Cell Wall hoti hai?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Nahi! Animal/Human cells me Cell Wall NAHI hoti, sirf soft flexible Cell Membrane hoti hai."
-        },
-        {
-          "speaker": "raju",
-          "text": "Ped apna khana khud kaise banate hain?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Plants ke paas Plastids (Chloroplast) hote hain jo Sunlight capture karke Photosynthesis karte hain!"
-        }
-      ],
-      "navigation": {
-        "next": "PLANT_ANIMAL_2"
-      }
-    },
-    {
-      "card_slug": "PLANT_ANIMAL_2",
-      "type": "chat",
-      "chat_style": "whatsapp",
-      "concept_id": "PLANT_VS_ANIMAL",
-      "level": 3,
-      "is_implicit_doubt": true,
-      "progress": {
-        "current": 12,
-        "total": 33
-      },
-      "messages": [
-        {
-          "speaker": "raju",
-          "text": "Sir, storage me Plant aur Animal cell me kya difference hai?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Plant cell me ek Bada Central Vacuole (90% space) hota hai, jabki Animal cell me chote Vacuoles hote hain."
-        },
-        {
-          "speaker": "raju",
-          "text": "Aur Centrosome ka kya role hai?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Centrosome Animal cells me Cell Division me help karta hai. Higher plants me ye absent hota hai!"
-        },
-        {
-          "speaker": "raju",
-          "text": "Exam me Trap kya aata hai ispe?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Trap: 'Cell Wall animals me hoti hai'—Galat! Cell Wall strictly sirf Plants, Fungi aur Bacteria me hoti hai."
-        }
-      ],
-      "navigation": {
-        "next": "CELL_MEMBRANE_1"
-      }
-    },
-    {
-      "card_slug": "CELL_MEMBRANE_1",
-      "type": "chat",
-      "chat_style": "whatsapp",
-      "concept_id": "CELL_MEMBRANE",
-      "level": 2,
-      "is_implicit_doubt": false,
-      "progress": {
-        "current": 13,
-        "total": 33
-      },
-      "messages": [
-        {
-          "speaker": "raju",
-          "text": "Sir, jaise society gate par watchman hota hai... cell ka security guard kaun hai?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Cell ka guard hai Cell Membrane (Plasma Membrane)! Ye Lipids aur Proteins ki flexible layer hai."
-        },
-        {
-          "speaker": "raju",
-          "text": "Ye sabko andar aane deti hai kya?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Nahi! Ye Selectively Permeable hoti hai—sirf kaam ki cheezon ko andar aur waste ko bahar jane deti hai."
-        },
-        {
-          "speaker": "raju",
-          "text": "Agar kachra andar reh gaya toh?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Toh cell poison ho jayega! Isliye membrane balance banaye rakhti hai."
-        }
-      ],
-      "navigation": {
-        "next": "CELL_MEMBRANE_2"
-      }
-    },
-    {
-      "card_slug": "CELL_MEMBRANE_2",
-      "type": "chat",
-      "chat_style": "whatsapp",
-      "concept_id": "CELL_MEMBRANE",
-      "level": 3,
-      "is_implicit_doubt": true,
-      "progress": {
-        "current": 14,
-        "total": 33
-      },
-      "messages": [
-        {
-          "speaker": "raju",
-          "text": "Sir, Oxygen aur Paani is membrane ke aar-paar kaise jaate hain?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Gases (O2/CO2) Diffusion se aati-jaati hain (High to Low concentration)."
-        },
-        {
-          "speaker": "raju",
-          "text": "Aur Paani kaise enter karta hai?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Paani ka selectively permeable membrane se pass hona Osmosis kehlata hai!"
-        },
-        {
-          "speaker": "raju",
-          "text": "Kismis (raisin) paani me phoolti hai, wo Osmosis hi hai?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Spot on Raju! Kismis ke andar paani ghusna Osmosis ka best real-world example hai."
-        }
-      ],
-      "navigation": {
-        "next": "CELL_WALL"
-      }
-    },
-    {
-      "card_slug": "CELL_WALL",
-      "type": "chat",
-      "chat_style": "whatsapp",
-      "concept_id": "CELL_WALL",
-      "level": 2,
-      "is_implicit_doubt": false,
-      "progress": {
-        "current": 15,
-        "total": 33
-      },
-      "messages": [
-        {
-          "speaker": "raju",
-          "text": "Sir, ped ki lakdi ya paper itna hard aur stiff kyun lagta hai?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Kyunki wo dead Cell Wall ki waja se hai jo Cellulose naam ke complex carbohydrate ki bani hoti hai."
-        },
-        {
-          "speaker": "raju",
-          "text": "Kya hum insaan Cellulose digest kar sakte hain?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Nahi! Humans cellulose digest nahi kar sakte, par Gaay/Bhens (Herbivores) kar sakti hain!"
-        },
-        {
-          "speaker": "raju",
-          "text": "Fungi (faphund) ki Cell Wall kiski bani hoti hai?"
-        },
-        {
-          "speaker": "aman",
-          "text": "BPSC High-Yield Point: Fungi ki Cell Wall **Chitin** ki bani hoti hai, Cellulose ki nahi!"
-        }
-      ],
-      "navigation": {
-        "next": "CYTOPLASM"
-      }
-    },
-    {
-      "card_slug": "CYTOPLASM",
-      "type": "chat",
-      "chat_style": "whatsapp",
-      "concept_id": "CYTOPLASM",
-      "level": 2,
-      "is_implicit_doubt": false,
-      "progress": {
-        "current": 16,
-        "total": 33
-      },
-      "messages": [
-        {
-          "speaker": "raju",
-          "text": "Sir, cell ke andar ki saari machines kahan tairti rehti hain?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Cell Membrane ke andar ek jelly jaisa fluid hota hai—Cytoplasm (Koshikadravya)!"
-        },
-        {
-          "speaker": "raju",
-          "text": "Cytoplasm aur Protoplasm me kya farq hai?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Protoplasm = Cytoplasm + Nucleus (Cell ka pura living material)."
-        },
-        {
-          "speaker": "raju",
-          "text": "Is jelly liquid ke bina cell jee sakta hai?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Bilkul nahi! Saari chemical reactions aur organelle movement isi fluid me hoti hai."
-        }
-      ],
-      "navigation": {
-        "next": "NUCLEUS_1"
-      }
-    },
-    {
-      "card_slug": "NUCLEUS_1",
-      "type": "chat",
-      "chat_style": "whatsapp",
-      "concept_id": "NUCLEUS",
-      "level": 2,
-      "is_implicit_doubt": false,
-      "progress": {
-        "current": 17,
-        "total": 33
-      },
-      "messages": [
-        {
-          "speaker": "raju",
-          "text": "Sir, ghar me sab kaam karte hain par papa control rakhte hain. Cell ka Head Master kaun hai?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Cell ka CEO/Control Room hai Nucleus (Kendraka)! Iski khoj 1831 me Robert Brown ne ki thi."
-        },
-        {
-          "speaker": "raju",
-          "text": "Iska main function kya hai Sir?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Ye cell ki saari activities ko direct karta hai aur genetic information store karta hai."
-        },
-        {
-          "speaker": "raju",
-          "text": "Kya sabhi cells ke paas Nucleus hota hai?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Matured Human RBC (Red Blood Cells) me Nucleus NAHI hota! High-yield exam trap!"
-        }
-      ],
-      "navigation": {
-        "next": "NUCLEUS_2"
-      }
-    },
-    {
-      "card_slug": "NUCLEUS_2",
-      "type": "chat",
-      "chat_style": "whatsapp",
-      "concept_id": "NUCLEUS",
-      "level": 3,
-      "is_implicit_doubt": true,
-      "progress": {
-        "current": 18,
-        "total": 33
-      },
-      "messages": [
-        {
-          "speaker": "raju",
-          "text": "Sir, Nucleus ke andar aisa kya bhara hai jo sab iski baat maante hain?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Iske andar hoti hain Chromatin threads, jo cell division ke time Chromosomes ban jaate hain!"
-        },
-        {
-          "speaker": "raju",
-          "text": "Human body cells me kitne Chromosomes hote hain?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Total 46 Chromosomes (yani 23 Pairs) hote hain!"
-        },
-        {
-          "speaker": "raju",
-          "text": "Agar 46 se ek kam ya zyada ho jaye toh?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Toh genetic disorders (jaise Down Syndrome) ho jaate hain!"
-        }
-      ],
-      "navigation": {
-        "next": "DNA_GENE_CHROMOSOME"
-      }
-    },
-    {
-      "card_slug": "DNA_GENE_CHROMOSOME",
-      "type": "chat",
-      "chat_style": "whatsapp",
-      "concept_id": "DNA_GENE_CHROMOSOME",
-      "level": 3,
-      "is_implicit_doubt": true,
-      "progress": {
-        "current": 19,
-        "total": 33
-      },
-      "messages": [
-        {
-          "speaker": "raju",
-          "text": "Sir, Chromosome, DNA aur Gene me kya connection hai? Sab same lagte hain!"
-        },
-        {
-          "speaker": "aman",
-          "text": "Chromosome ek book hai, DNA uske pages hain, aur Gene us book ka 1 Specific Sentence hai!"
-        },
-        {
-          "speaker": "raju",
-          "text": "Acha! Matlab Gene hi basic unit of heredity hai?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Exactly! Gene decide karta hai ki aapki eye color brown hogi ya black."
-        },
-        {
-          "speaker": "raju",
-          "text": "DNA ka full form kya hai Sir?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Deoxyribonucleic Acid (DNA)—jo cell ka Master Instruction Manual hai!"
-        }
-      ],
-      "navigation": {
-        "next": "MITOCHONDRIA_1"
-      }
-    },
-    {
-      "card_slug": "MITOCHONDRIA_1",
-      "type": "chat",
-      "chat_style": "whatsapp",
-      "concept_id": "MITOCHONDRIA",
-      "level": 3,
-      "is_implicit_doubt": false,
-      "progress": {
-        "current": 20,
-        "total": 33
-      },
-      "messages": [
-        {
-          "speaker": "raju",
-          "text": "Sir, mummy jab rasoi me khana banati hain toh energy milti hai. Cell ka Powerhouse kaun hai?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Cell ka Power Plant hai Mitochondria! Yahan Glucose aur O2 milkar ATP energy banate hain."
-        },
-        {
-          "speaker": "raju",
-          "text": "ATP kya hai Sir?"
-        },
-        {
-          "speaker": "aman",
-          "text": "ATP (Adenosine Triphosphate) = Energy Currency of the Cell!"
-        },
-        {
-          "speaker": "raju",
-          "text": "Saans lene par jo CO2 bahar nikalte hain, wo kahan se aati hai?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Wo Mitochondria me Glucose burn hone ka hi smoke/waste hai!"
-        }
-      ],
-      "navigation": {
-        "next": "MITOCHONDRIA_2"
-      }
-    },
-    {
-      "card_slug": "MITOCHONDRIA_2",
-      "type": "chat",
-      "chat_style": "whatsapp",
-      "concept_id": "MITOCHONDRIA",
-      "level": 3,
-      "is_implicit_doubt": true,
-      "progress": {
-        "current": 21,
-        "total": 33
-      },
-      "messages": [
-        {
-          "speaker": "raju",
-          "text": "Sir, Mitochondria ke paas koi special power hai kya jo baaki organelles me nahi hai?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Haan! Mitochondria ke paas apna KHUD ka DNA aur Ribosome hota hai!"
-        },
-        {
-          "speaker": "raju",
-          "text": "Isse kya hota hai Sir?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Isliye ise Semi-Autonomous Organelle kehte hain—ye apne proteins khud bana sakta hai!"
-        },
-        {
-          "speaker": "raju",
-          "text": "Kya ye parent se baby me blend hokar aata hai?"
-        },
-        {
-          "speaker": "aman",
-          "text": "NEET Expert Point: Mitochondrial DNA hamesha sirf MOTHER (Maternal) se inherit hota hai!"
-        }
-      ],
-      "navigation": {
-        "next": "RIBOSOME_ER_1"
-      }
-    },
-    {
-      "card_slug": "RIBOSOME_ER_1",
-      "type": "chat",
-      "chat_style": "whatsapp",
-      "concept_id": "RIBOSOME_AND_ER",
-      "level": 3,
-      "is_implicit_doubt": false,
-      "progress": {
-        "current": 22,
-        "total": 33
-      },
-      "messages": [
-        {
-          "speaker": "raju",
-          "text": "Sir, chhot lagne par doctor bolte hain 'Protein khao, repair jaldi hoga'. Cell me protein kahan banta hai?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Cell ki Protein Factory hai Ribosome! Ye cell ka sabse chota organelle hai."
-        },
-        {
-          "speaker": "raju",
-          "text": "Ribosome ki khoj kisne ki thi?"
-        },
-        {
-          "speaker": "aman",
-          "text": "George Palade ne (1953 me), isliye inhein Palade Particles bhi kehte hain."
-        },
-        {
-          "speaker": "raju",
-          "text": "Ye kahan baithe hote hain?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Kuch Rough Endoplasmic Reticulum (RER) ke ooper chipke hote hain jo transport me help karta hai."
-        }
-      ],
-      "navigation": {
-        "next": "RIBOSOME_ER_2"
-      }
-    },
-    {
-      "card_slug": "RIBOSOME_ER_2",
-      "type": "chat",
-      "chat_style": "whatsapp",
-      "concept_id": "RIBOSOME_AND_ER",
-      "level": 3,
-      "is_implicit_doubt": true,
-      "progress": {
-        "current": 23,
-        "total": 33
-      },
-      "messages": [
-        {
-          "speaker": "raju",
-          "text": "Sir, Smooth ER (SER) kya karta hai? Uspe toh Ribosome nahi hote!"
-        },
-        {
-          "speaker": "aman",
-          "text": "Smooth ER Lipids/Fats banata hai aur Liver cells me poisons/drugs ko Detoxify karta hai!"
-        },
-        {
-          "speaker": "raju",
-          "text": "Detoxify matlab zahar be-asar karna?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Exactly! Jab koi galti se poison ya dawa le leta hai, toh Liver ka SER usko neutralize karta hai."
-        },
-        {
-          "speaker": "raju",
-          "text": "BPSC me isse kya question aata hai?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Direct Question: 'Vertebrates ke liver cells me detox kaun karta hai?' Answer: Smooth ER!"
-        }
-      ],
-      "navigation": {
-        "next": "GOLGI_LYSOSOME_1"
-      }
-    },
-    {
-      "card_slug": "GOLGI_LYSOSOME_1",
-      "type": "chat",
-      "chat_style": "whatsapp",
-      "concept_id": "GOLGI_AND_LYSOSOME",
-      "level": 3,
-      "is_implicit_doubt": false,
-      "progress": {
-        "current": 24,
-        "total": 33
-      },
-      "messages": [
-        {
-          "speaker": "raju",
-          "text": "Sir, Ribosome ne protein bana diya, ab uski packing aur delivery kaun karta hai?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Golgi Apparatus (Golgi Body)! Ye cell ka Courier Service / Post Office hai."
-        },
-        {
-          "speaker": "raju",
-          "text": "Iski khoj kisne ki thi?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Camillo Golgi ne 1898 me."
-        },
-        {
-          "speaker": "raju",
-          "text": "Plants me Golgi Body ko kya kehte hain?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Plants me ise **Dictyosome** kehte hain (NEET Exam Trap Point)!"
-        }
-      ],
-      "navigation": {
-        "next": "GOLGI_LYSOSOME_2"
-      }
-    },
-    {
-      "card_slug": "GOLGI_LYSOSOME_2",
-      "type": "chat",
-      "chat_style": "whatsapp",
-      "concept_id": "GOLGI_AND_LYSOSOME",
-      "level": 3,
-      "is_implicit_doubt": true,
-      "progress": {
-        "current": 25,
-        "total": 33
-      },
-      "messages": [
-        {
-          "speaker": "raju",
-          "text": "Sir, agar cell ke andar kachra jama ho jaye ya cell kharab ho jaye toh safai kaise hoti hai?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Lysosome se! Iske andar powerful Digestive Enzymes hote hain."
-        },
-        {
-          "speaker": "raju",
-          "text": "Ise Suicide Bag (Aatmaghati Thela) kyun kehte hain?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Kyunki cell damage hone par Lysosome phat jata hai aur apne hi cell ko digest kar daalta hai!"
-        },
-        {
-          "speaker": "raju",
-          "text": "Lysosome banata kaun hai?"
-        },
-        {
-          "speaker": "aman",
-          "text": "RER enzymes banata hai, aur Golgi Body unko pack karke Lysosome banata hai!"
-        }
-      ],
-      "navigation": {
-        "next": "PLASTIDS_CHLOROPLAST"
-      }
-    },
-    {
-      "card_slug": "PLASTIDS_CHLOROPLAST",
-      "type": "chat",
-      "chat_style": "whatsapp",
-      "concept_id": "PLASTIDS",
-      "level": 3,
-      "is_implicit_doubt": false,
-      "progress": {
-        "current": 26,
-        "total": 33
-      },
-      "messages": [
-        {
-          "speaker": "raju",
-          "text": "Sir, patti hari, tamatar laal aur aalu safed kyun hota hai?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Plants me 3 Plastids hote hain: Chloroplast (Green), Chromoplast (Colored) aur Leucoplast (Colorless)."
-        },
-        {
-          "speaker": "raju",
-          "text": "Tamatar ka red color kis wajah se hota hai?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Chromoplast me **Lycopene** pigment ki wajah se! Patti me Chlorophyll hota hai."
-        },
-        {
-          "speaker": "raju",
-          "text": "Chloroplast me koi khas baat?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Mitochondria ki tarah Chloroplast ke paas bhi apna OWN DNA aur Ribosomes hota hai!"
-        }
-      ],
-      "navigation": {
-        "next": "VACUOLE_CENTROSOME"
-      }
-    },
-    {
-      "card_slug": "VACUOLE_CENTROSOME",
-      "type": "chat",
-      "chat_style": "whatsapp",
-      "concept_id": "VACUOLE_AND_CENTROSOME",
-      "level": 3,
-      "is_implicit_doubt": false,
-      "progress": {
-        "current": 27,
-        "total": 33
-      },
-      "messages": [
-        {
-          "speaker": "raju",
-          "text": "Sir, cell ke andar extra paani aur waste store kahan hota hai?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Vacuoles (Rasdhani) me! Plant cell me ye bohot bada central tank hota hai."
-        },
-        {
-          "speaker": "raju",
-          "text": "Is tank ki outer boundary layer ka naam kya hai?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Vacuole ki membrane ko **Tonoplast** kehte hain! High-yield NEET/BPSC point."
-        },
-        {
-          "speaker": "raju",
-          "text": "Centrosome kahan hota hai?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Centrosome Animal cells me Nucleus ke paas hota hai jo cell division me help karta hai."
-        }
-      ],
-      "navigation": {
-        "next": "CELL_DIVISION_MITOSIS"
-      }
-    },
-    {
-      "card_slug": "CELL_DIVISION_MITOSIS",
-      "type": "chat",
-      "chat_style": "whatsapp",
-      "concept_id": "CELL_DIVISION",
-      "level": 4,
-      "is_implicit_doubt": false,
-      "progress": {
-        "current": 28,
-        "total": 33
-      },
-      "messages": [
-        {
-          "speaker": "raju",
-          "text": "Sir, cell divide kyun hote hain? Ek hi cell bada kyun nahi ho jata?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Agar cell zyada bada ho gaya toh Nucleus uspar control nahi rakh payega!"
-        },
-        {
-          "speaker": "raju",
-          "text": "Mitosis (Samasootri) me kya hota hai Sir?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Mitosis = Exact Xerox Copy! 1 Parent Cell -> 2 Identical Daughter Cells."
-        },
-        {
-          "speaker": "raju",
-          "text": "Chromosomes ka number same rehta hai?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Haan! 46 -> 46 (2n -> 2n). Ye Body Growth aur Injury Repair ke liye hota hai."
-        }
-      ],
-      "navigation": {
-        "next": "CELL_DIVISION_MEIOSIS"
-      }
-    },
-    {
-      "card_slug": "CELL_DIVISION_MEIOSIS",
-      "type": "chat",
-      "chat_style": "whatsapp",
-      "concept_id": "CELL_DIVISION",
-      "level": 4,
-      "is_implicit_doubt": true,
-      "progress": {
-        "current": 29,
-        "total": 33
-      },
-      "messages": [
-        {
-          "speaker": "raju",
-          "text": "Sir, Meiosis (Ardhasootri) kahan hota hai aur isme chromosomes aadhe kyun hote hain?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Meiosis Sperm/Egg (Gametes) banane me hota hai. Yahan 1 cell se 4 cells bante hain (2n -> n)."
-        },
-        {
-          "speaker": "raju",
-          "text": "Aadha kyun zero nahi?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Kyunki Father se 23 (n) aur Mother se 23 (n) milkar baby me 46 (2n) poore karenge!"
-        },
-        {
-          "speaker": "raju",
-          "text": "Agar aadha na ho toh?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Toh baby me 92 chromosomes ho jayenge—jo biological blunder ho jayega!"
-        }
-      ],
-      "navigation": {
-        "next": "QUICK_CHECK_ORGANELLES"
-      }
-    },
-    {
-      "card_slug": "QUICK_CHECK_ORGANELLES",
+      "card_slug": "MILESTONE_QUIZ_1",
       "type": "quiz",
-      "concept_id": "ORGANELLES_CHECK",
-      "level": 3,
-      "progress": {
-        "current": 30,
-        "total": 33
-      },
+      "concept_id": "DISCOVERY_CHECK",
+      "level": 2,
       "quiz_payload": {
-        "question": "Vertebrates ke Liver cells me poisons aur drugs ko detoxify karne ka kaam kaun sa organelle karta hai?",
+        "question": "🎯 Milestone Check 1: Pehli baar ZINDA (Living) koshika ki khoj talab ke paani me kisne ki thi?",
         "options": [
           {
             "id": "A",
-            "text": "Golgi Apparatus"
+            "text": "Robert Hooke"
           },
           {
             "id": "B",
-            "text": "Lysosome"
+            "text": "Anton van Leeuwenhoek"
           },
           {
             "id": "C",
-            "text": "Smooth Endoplasmic Reticulum (SER)"
+            "text": "Rudolf Virchow"
           },
           {
             "id": "D",
-            "text": "Mitochondria"
+            "text": "Robert Brown"
           }
         ],
-        "correct_option_id": "C",
-        "explanation": "SER (Smooth Endoplasmic Reticulum) liver cells me drugs aur poisons ko detoxify karta hai!"
+        "correct_option_id": "B",
+        "explanation": "Hooke = Dead Wood (Cork), Leeuwenhoek = Living Water (Talab ka paani)!"
       },
       "navigation": {
-        "next": "REVISION_SUMMARY_CARD"
+        "next": "CELL_THEORY_1"
+      },
+      "progress": {
+        "current": 6,
+        "total": 30
       }
     },
     {
@@ -1256,10 +248,6 @@
       "type": "summary",
       "concept_id": "CHAPTER_REVISION",
       "level": 4,
-      "progress": {
-        "current": 31,
-        "total": 33
-      },
       "summary_payload": {
         "title": "📋 Cell Chapter Master Revision",
         "revision_points": [
@@ -1292,6 +280,10 @@
       },
       "navigation": {
         "next": "MASTER_QUIZ_FINAL"
+      },
+      "progress": {
+        "current": 28,
+        "total": 30
       }
     },
     {
@@ -1299,12 +291,8 @@
       "type": "final_quiz",
       "concept_id": "MASTER_TEST",
       "level": 4,
-      "progress": {
-        "current": 32,
-        "total": 33
-      },
       "final_quiz_payload": {
-        "question": "Which of the following statements is/are CORRECT?\n1. Smooth Endoplasmic Reticulum (SER) helps in detoxifying poisons in liver cells.\n2. Mitochondria and Chloroplasts contain their own DNA.\n3. Lysosomes are formed by the joint action of RER and Golgi body.",
+        "question": "🏆 Master Challenge: Which of the following statements is/are CORRECT?\n1. Smooth Endoplasmic Reticulum (SER) helps in detoxifying poisons in liver cells.\n2. Mitochondria and Chloroplasts contain their own DNA.\n3. Lysosomes are formed by the joint action of RER and Golgi body.",
         "options": [
           {
             "id": "A",
@@ -1328,6 +316,10 @@
       },
       "navigation": {
         "next": "CHAPTER_COMPLETED"
+      },
+      "progress": {
+        "current": 29,
+        "total": 30
       }
     },
     {
@@ -1335,12 +327,8 @@
       "type": "final_quiz",
       "concept_id": "COMPLETION",
       "level": 4,
-      "progress": {
-        "current": 33,
-        "total": 33
-      },
       "final_quiz_payload": {
-        "question": "🎉 Chapter Completed! Chapter 1 (Cell) is 100% Mastered.",
+        "question": "🎉 Chapter Completed! You have 100% Mastered Cell Biology.",
         "options": [
           {
             "id": "A",
@@ -1355,8 +343,11 @@
         "explanation": "Great job! You have conquered zero-to-NEET/BPSC Officer level depth in Cell Biology."
       },
       "navigation": {
-        "action": "finish_chapter",
-        "button_text": "Finish 🎉"
+        "next": "FINISH"
+      },
+      "progress": {
+        "current": 30,
+        "total": 30
       }
     }
   ]
