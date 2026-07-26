@@ -1,10 +1,45 @@
 import 'dart:convert';
 import 'dart:math';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
+import 'package:flutter/services.dart'; // 📳 Ultra-Light Haptic & System Sound Engine
 import 'package:http/http.dart' as http;
 import 'package:shared_preferences/shared_preferences.dart';
 import '../widgets/latex_text.dart';
+
+// ==========================================
+// 🔊 SOFT SOUND & SUBTLE HAPTIC ENGINE
+// ==========================================
+class LearnEffects {
+  // 👆 Next Button Tap / Screen Tap ("tick" + ultra-light selection click)
+  static void playTap() {
+    SystemSound.play(SystemSoundType.click);
+    HapticFeedback.selectionClick();
+  }
+
+  // 📨 Chat Bubble Reveal ("pop" + subtle click)
+  static void playMessagePop() {
+    SystemSound.play(SystemSoundType.click);
+    HapticFeedback.selectionClick();
+  }
+
+  // ✅ Correct Answer ("ding" + light impact)
+  static void playCorrect() {
+    SystemSound.play(SystemSoundType.click);
+    HapticFeedback.lightImpact();
+  }
+
+  // ❌ Wrong Answer ("thuk" + single light impact)
+  static void playWrong() {
+    SystemSound.play(SystemSoundType.alert);
+    HapticFeedback.lightImpact();
+  }
+
+  // 🎉 Chapter / Milestone Complete ("success" + light impact)
+  static void playSuccess() {
+    SystemSound.play(SystemSoundType.alert);
+    HapticFeedback.lightImpact();
+  }
+}
 
 // ==========================================
 // 1. DATA MODELS
@@ -235,7 +270,9 @@ class _LearnChatScreenState extends State<LearnChatScreen> {
 
   void _handleNextTap(LearnCardModel currentCard) {
     if (isTyping) return;
-    HapticFeedback.lightImpact();
+    
+    // 👆 Soft Tap Effect
+    LearnEffects.playTap();
 
     if (currentCard.type == 'chat') {
       int totalMsgs = currentCard.messages?.length ?? 0;
@@ -246,12 +283,14 @@ class _LearnChatScreenState extends State<LearnChatScreen> {
 
         _scrollToBottom();
 
-        Future.delayed(const Duration(milliseconds: 500), () {
+        Future.delayed(const Duration(milliseconds: 450), () {
           if (mounted) {
             setState(() {
               isTyping = false;
               visibleMessageCount++;
             });
+            // 📨 Subtle Message Pop Effect
+            LearnEffects.playMessagePop();
             _scrollToBottom();
           }
         });
@@ -271,6 +310,8 @@ class _LearnChatScreenState extends State<LearnChatScreen> {
       });
     } else {
       _saveProgress(chapterData!.firstCardSlug);
+      // 🎉 Soft Chapter Completion Effect
+      LearnEffects.playSuccess();
       ScaffoldMessenger.of(context).showSnackBar(
         const SnackBar(content: Text('🎉 Chapter Completed! Excellent Job!')),
       );
@@ -469,7 +510,7 @@ class _LearnChatScreenState extends State<LearnChatScreen> {
                         child: Text(
                           buttonLabel,
                           maxLines: 1,
-                          overflow: TextOverflow.ellipsis, // Fixed syntax error
+                          overflow: TextOverflow.ellipsis,
                           style: const TextStyle(fontSize: 14.5, fontWeight: FontWeight.bold, color: Colors.white),
                         ),
                       ),
@@ -530,7 +571,7 @@ class _LearnCardRenderer extends StatelessWidget {
   }
 }
 
-// MODERN CHAT CARD WITH 3-DOTS BOUNCING ANIMATION
+// MODERN CHAT CARD
 class _ModernChatCard extends StatelessWidget {
   final LearnCardModel card;
   final Map<String, LearnCharacter> characters;
@@ -712,7 +753,7 @@ class _ModernChatCard extends StatelessWidget {
   }
 }
 
-// 💬 3-DOTS BOUNCING ANIMATION WIDGET
+// 💬 3-DOTS BOUNCING ANIMATION
 class _BouncingTypingDots extends StatefulWidget {
   const _BouncingTypingDots();
 
@@ -763,7 +804,7 @@ class _BouncingTypingDotsState extends State<_BouncingTypingDots> with SingleTic
   }
 }
 
-// QUIZ & GUESS CARD WITH SHAKE ANIMATION
+// QUIZ & GUESS CARD WITH SOFT HAPTICS & SOUND
 class _QuizCard extends StatefulWidget {
   final LearnCardModel card;
   const _QuizCard({required this.card});
@@ -872,13 +913,18 @@ class _QuizCardState extends State<_QuizCard> with SingleTickerProviderStateMixi
                         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
                       ),
                       onPressed: () {
-                        HapticFeedback.mediumImpact();
+                        if (isSubmitted) return;
+
                         setState(() {
                           selectedOptionId = opt.id;
                           isSubmitted = true;
                         });
 
-                        if (opt.id != correctId) {
+                        // 🎯 Trigger Soft Sounds & Light Haptics
+                        if (opt.id == correctId) {
+                          LearnEffects.playCorrect(); // ✅ Soft Click + Light Haptic
+                        } else {
+                          LearnEffects.playWrong(); // ❌ Soft Alert + Light Haptic
                           _shakeController.forward(from: 0.0);
                         }
                       },
@@ -973,6 +1019,10 @@ class MilestoneCardWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      LearnEffects.playSuccess();
+    });
+
     return Container(
       color: const Color(0xFF4F46E5),
       padding: const EdgeInsets.all(24),
@@ -1014,7 +1064,10 @@ class MilestoneCardWidget extends StatelessWidget {
               minimumSize: const Size.fromHeight(52),
               shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
             ),
-            onPressed: onContinue,
+            onPressed: () {
+              LearnEffects.playTap();
+              onContinue();
+            },
             child: const Text(
               'Continue to Next Sub-Topic ➔',
               style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: Colors.white),
