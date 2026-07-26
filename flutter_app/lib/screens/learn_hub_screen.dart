@@ -9,7 +9,6 @@ class LearnHubScreen extends StatefulWidget {
 }
 
 class _LearnHubScreenState extends State<LearnHubScreen> {
-  // 📚 SUBJECTS & CHAPTERS DATA HIERARCHY
   final List<Map<String, dynamic>> _subjects = [
     {
       'title': 'Biology',
@@ -20,17 +19,12 @@ class _LearnHubScreenState extends State<LearnHubScreen> {
           'id': 'bio_cell',
           'title': 'Cell (Koshika)',
           'subtitle': '33 Micro-Learning Cards',
-          'isAvailable': true, // 👈 Aapka Cell JSON active hai
+          'isAvailable': true,
+          'jsonUrl': 'https://raw.githubusercontent.com/zxcty54/quiz/refs/heads/main/learn/biology/cell.json',
         },
         {
           'id': 'bio_tissue',
           'title': 'Tissues (Ootak)',
-          'subtitle': 'Coming Soon',
-          'isAvailable': false,
-        },
-        {
-          'id': 'bio_genetics',
-          'title': 'Genetics & Evolution',
           'subtitle': 'Coming Soon',
           'isAvailable': false,
         },
@@ -47,12 +41,6 @@ class _LearnHubScreenState extends State<LearnHubScreen> {
           'subtitle': 'Coming Soon',
           'isAvailable': false,
         },
-        {
-          'id': 'phy_motion',
-          'title': 'Motion & Force',
-          'subtitle': 'Coming Soon',
-          'isAvailable': false,
-        },
       ]
     },
     {
@@ -66,48 +54,16 @@ class _LearnHubScreenState extends State<LearnHubScreen> {
           'subtitle': 'Coming Soon',
           'isAvailable': false,
         },
-        {
-          'id': 'chem_periodic',
-          'title': 'Periodic Table',
-          'subtitle': 'Coming Soon',
-          'isAvailable': false,
-        },
       ]
     },
     {
-      'title': 'Indian Polity',
+      'title': 'Polity',
       'icon': '📜',
       'color': const Color(0xFFD97706),
       'chapters': [
         {
           'id': 'pol_preamble',
           'title': 'Preamble & Constitution',
-          'subtitle': 'Coming Soon',
-          'isAvailable': false,
-        },
-      ]
-    },
-    {
-      'title': 'Geography',
-      'icon': '🌍',
-      'color': const Color(0xFF0284C7),
-      'chapters': [
-        {
-          'id': 'geo_rivers',
-          'title': 'Rivers of India',
-          'subtitle': 'Coming Soon',
-          'isAvailable': false,
-        },
-      ]
-    },
-    {
-      'title': 'Economy',
-      'icon': '📊',
-      'color': const Color(0xFFDC2626),
-      'chapters': [
-        {
-          'id': 'eco_planning',
-          'title': 'Five Year Plans & NITI Aayog',
           'subtitle': 'Coming Soon',
           'isAvailable': false,
         },
@@ -129,7 +85,6 @@ class _LearnHubScreenState extends State<LearnHubScreen> {
       ),
       body: Column(
         children: [
-          // 1️⃣ SUBJECT SELECTOR HORIZONTAL SCROLL BAR
           Container(
             height: 60,
             color: Theme.of(context).cardColor,
@@ -172,10 +127,7 @@ class _LearnHubScreenState extends State<LearnHubScreen> {
               },
             ),
           ),
-
           const Divider(height: 1),
-
-          // 2️⃣ CHAPTERS LISTING
           Expanded(
             child: ListView.builder(
               padding: const EdgeInsets.all(16),
@@ -217,11 +169,13 @@ class _LearnHubScreenState extends State<LearnHubScreen> {
                               shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
                             ),
                             onPressed: () {
-                              // 🚀 Launch Cell Chat Screen
                               Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                  builder: (context) => const LearnChatScreen(),
+                                  builder: (context) => LearnChatScreen(
+                                    jsonUrl: chap['jsonUrl'],
+                                    chapterTitle: chap['title'],
+                                  ),
                                 ),
                               );
                             },
