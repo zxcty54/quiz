@@ -1,0 +1,1965 @@
+{
+  "topic_id": "classification_biology",
+  "topic_title": "Biological Classification",
+  "target_exams": [
+    "BPSC",
+    "BSSC",
+    "RRB NTPC",
+    "SSC CGL",
+    "NEET",
+    "UPSC Prelims"
+  ],
+  "total_cards": 78,
+  "characters": {
+    "aman": {
+      "name": "Aman Sir",
+      "role": "teacher",
+      "avatar": "👨‍🏫"
+    },
+    "raju": {
+      "name": "Raju",
+      "role": "student",
+      "avatar": "👦"
+    }
+  },
+  "cards": [
+    {
+      "card_id": "card_01_intro",
+      "card_slug": "card_01_intro",
+      "type": "intro",
+      "concept_id": "classification_introduction",
+      "level": 1,
+      "progress": {
+        "current": 1,
+        "total": 78
+      },
+      "intro_payload": {
+        "title": "Biological Classification",
+        "icon": "🧬",
+        "target_exams": [
+          "BPSC",
+          "BSSC",
+          "RRB NTPC",
+          "SSC CGL",
+          "NEET",
+          "UPSC Prelims"
+        ],
+        "learning_outcomes": [
+          "Master the Five Kingdom Classification system",
+          "Understand Taxonomy and Hierarchical Categories",
+          "Learn Linnaeus Two Kingdom to Whittaker Five Kingdom evolution",
+          "Explore Kingdom Monera, Protista, Fungi, Plantae, Animalia in detail",
+          "Grasp Virus classification and characteristics",
+          "Cover all NEET/BPSC/SSC Previous Year Questions on classification"
+        ]
+      },
+      "navigation": {
+        "next": "card_02_daily_observation",
+        "button_text": "Start Learning 🚀"
+      }
+    },
+    {
+      "card_id": "card_02_daily_observation",
+      "card_slug": "card_02_daily_observation",
+      "type": "chat",
+      "concept_id": "classification_need",
+      "level": 1,
+      "progress": {
+        "current": 2,
+        "total": 78
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, tum apne ghar me kitabon ko kaise rakhte ho? Sab jagah randomly phenk dete ho ya kisi system se arrange karte ho?"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir, hum to subject wise rakhte hain - Science ki alag, Maths ki alag. Warna dhundne me bahut time lagta hai!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul sahi! Exactly yahi concept hai Classification ka. Jab scientists ne duniya me lakhs organisms dekhe - kuch bade, kuch chhote, kuch plants, kuch animals - to unhe bhi organize karna pada. Warna research kaise hoti?"
+        },
+        {
+          "speaker": "raju",
+          "text": "Achha! Matlab classification se cheezein dhundhna easy ho jata hai? Par sir, kitne groups me divide kiya hai?"
+        }
+      ],
+      "navigation": {
+        "next": "card_03_taxonomy_intro",
+        "button_text": "Next ➔"
+      }
+    },
+    {
+      "card_id": "card_03_taxonomy_intro",
+      "card_slug": "card_03_taxonomy_intro",
+      "type": "chat",
+      "concept_id": "taxonomy_basics",
+      "level": 1,
+      "progress": {
+        "current": 3,
+        "total": 78
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Isko samajhne ke pehle ek term yaad rakho - Taxonomy. Ye wo science hai jo organisms ko identify, name aur classify karti hai. Father of Taxonomy kaun hain pata hai?"
+        },
+        {
+          "speaker": "raju",
+          "text": "Nahi sir, kaun hain?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Carolus Linnaeus - 1758 me inhone systematic classification diya. BPSC me ye naam aur year dono puchte hain! Ruko, ek baat aur - classification sirf organize karna nahi, evolution aur relationships bhi samajhna hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir ye Linnaeus ne kitne groups banaye the? Aur aaj bhi wohi use hote hain?"
+        }
+      ],
+      "navigation": {
+        "next": "card_04_historical_classification",
+        "button_text": "Next ➔"
+      }
+    },
+    {
+      "card_id": "card_04_historical_classification",
+      "card_slug": "card_04_historical_classification",
+      "type": "chat",
+      "concept_id": "two_kingdom_system",
+      "level": 1,
+      "progress": {
+        "current": 4,
+        "total": 78
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Linnaeus ne shuru me sirf DO kingdoms banaye the - Plantae (plants) aur Animalia (animals). Simple tha na? Dekho Raju, tumhare saamne ek cheez hai - wo ya to plant hai ya animal. But kya bacteria plant hai ya animal?"
+        },
+        {
+          "speaker": "raju",
+          "text": "Hain?? Bacteria to... hmm... na plant jaisa hai na animal jaisa! To ye Two Kingdom system me kahan fit hoga?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Perfect doubt! Yahin problem aayi! Fungi ko bhi pehle plants me rakha tha, par wo apna khana nahi banate. Isliye naye systems aaye - Three Kingdom, Four Kingdom, aur finally 1969 me R.H. Whittaker ne Five Kingdom Classification diya jo aaj sabse zyada use hota hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir ye Five Kingdom kaun kaun se hain? NEET me to pakka aayega!"
+        }
+      ],
+      "navigation": {
+        "next": "card_05_quiz_1",
+        "button_text": "Let's Test 🎯"
+      }
+    },
+    {
+      "card_id": "card_05_quiz_1",
+      "card_slug": "card_05_quiz_1",
+      "type": "quiz",
+      "concept_id": "taxonomy_father",
+      "level": 1,
+      "progress": {
+        "current": 5,
+        "total": 78
+      },
+      "quiz_payload": {
+        "question": "Who is known as the 'Father of Taxonomy' and in which year did he publish his major work?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Charles Darwin, 1859"
+          },
+          {
+            "id": "B",
+            "text": "Carolus Linnaeus, 1758"
+          },
+          {
+            "id": "C",
+            "text": "R.H. Whittaker, 1969"
+          },
+          {
+            "id": "D",
+            "text": "Ernst Haeckel, 1866"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Carolus Linnaeus is the Father of Taxonomy. He published 'Systema Naturae' (10th edition) in 1758, establishing binomial nomenclature. BPSC/SSC frequently ask this scientist-year combination. Darwin gave evolution theory (1859), Whittaker proposed Five Kingdom (1969), Haeckel coined 'Ecology' term."
+      },
+      "navigation": {
+        "next": "card_06_quiz_2",
+        "button_text": "Next Question (2/3) ➔"
+      }
+    },
+    {
+      "card_id": "card_06_quiz_2",
+      "card_slug": "card_06_quiz_2",
+      "type": "quiz",
+      "concept_id": "two_kingdom_limitation",
+      "level": 1,
+      "progress": {
+        "current": 6,
+        "total": 78
+      },
+      "quiz_payload": {
+        "question": "What was the major limitation of Linnaeus's Two Kingdom Classification?",
+        "options": [
+          {
+            "id": "A",
+            "text": "It did not include animals"
+          },
+          {
+            "id": "B",
+            "text": "It could not accommodate bacteria, fungi, and other organisms that are neither typical plants nor animals"
+          },
+          {
+            "id": "C",
+            "text": "It was based on evolution"
+          },
+          {
+            "id": "D",
+            "text": "It included too many kingdoms"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Two Kingdom Classification (Plantae and Animalia) failed because bacteria, fungi, euglenoids (can photosynthesize but move), and other organisms couldn't be properly placed. Fungi lack chlorophyll, bacteria have no nucleus - such organisms needed separate kingdoms. Railway/SSC love this concept-based question."
+      },
+      "navigation": {
+        "next": "card_07_quiz_3",
+        "button_text": "Next Question (3/3) ➔"
+      }
+    },
+    {
+      "card_id": "card_07_quiz_3",
+      "card_slug": "card_07_quiz_3",
+      "type": "quiz",
+      "concept_id": "five_kingdom_proposer",
+      "level": 1,
+      "progress": {
+        "current": 7,
+        "total": 78
+      },
+      "quiz_payload": {
+        "question": "The Five Kingdom Classification system was proposed by:",
+        "options": [
+          {
+            "id": "A",
+            "text": "Carolus Linnaeus in 1758"
+          },
+          {
+            "id": "B",
+            "text": "Ernst Haeckel in 1866"
+          },
+          {
+            "id": "C",
+            "text": "Herbert Copeland in 1956"
+          },
+          {
+            "id": "D",
+            "text": "R.H. Whittaker in 1969"
+          }
+        ],
+        "correct_option_id": "D",
+        "explanation": "R.H. Whittaker proposed Five Kingdom Classification in 1969 - Monera, Protista, Fungi, Plantae, Animalia. Based on cell structure (prokaryotic/eukaryotic), body organization, mode of nutrition, reproduction, and phylogenetic relationships. NEET heavily tests this! Haeckel gave Three Kingdom, Copeland gave Four Kingdom."
+      },
+      "navigation": {
+        "next": "card_08_milestone_1",
+        "button_text": "Check Progress 🎉"
+      }
+    },
+    {
+      "card_id": "card_08_milestone_1",
+      "card_slug": "card_08_milestone_1",
+      "type": "milestone",
+      "concept_id": "intro_complete",
+      "level": 1,
+      "progress": {
+        "current": 8,
+        "total": 78
+      },
+      "milestone_payload": {
+        "title": "Foundation Built! 🎯",
+        "badge_emoji": "📚",
+        "completed_topic": "Introduction to Classification",
+        "xp_earned": 50,
+        "milestone_progress": "Module 1/7 Clear",
+        "motivational_quote": "Great start! You've mastered why we classify and who pioneered it. Ready for the Five Kingdoms deep dive?"
+      },
+      "navigation": {
+        "next": "card_09_five_kingdom_criteria",
+        "button_text": "Start Five Kingdom System ➔"
+      }
+    },
+    {
+      "card_id": "card_09_five_kingdom_criteria",
+      "card_slug": "card_09_five_kingdom_criteria",
+      "type": "chat",
+      "concept_id": "classification_criteria",
+      "level": 1,
+      "progress": {
+        "current": 9,
+        "total": 78
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ab dekhte hain Whittaker ne kis basis pe Five Kingdoms banaye. Pehla criteria - Cell Structure. Kuch organisms me nucleus NAHI hota (Prokaryotic), kuch me hota hai (Eukaryotic). Bacteria prokaryotic hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir matlab nucleus hai ya nahi - ye pehla difference hai? Aur kya criteria hain?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Doosra - Body Organization (unicellular ya multicellular). Teesra - Mode of Nutrition (autotrophic - khud khana banate, ya heterotrophic - doosron se lete). Chautha - Cell Wall ki presence. Paanchwa - Reproduction type. Ye paanch cheezen dekh kar organisms ko kingdoms me dala!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir to ab Five Kingdoms ke naam batao na! Aur kaun sa sabse simple hai?"
+        }
+      ],
+      "navigation": {
+        "next": "card_10_five_kingdoms_list",
+        "button_text": "Next ➔"
+      }
+    },
+    {
+      "card_id": "card_10_five_kingdoms_list",
+      "card_slug": "card_10_five_kingdoms_list",
+      "type": "chat",
+      "concept_id": "five_kingdoms_overview",
+      "level": 1,
+      "progress": {
+        "current": 10,
+        "total": 78
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ek simple se complex ki taraf chalte hain: 1) Monera (bacteria - sabse simple, no nucleus), 2) Protista (single-celled eukaryotes), 3) Fungi (mushrooms, yeast), 4) Plantae (all plants), 5) Animalia (all animals including humans). Yaad rakhne ka trick: 'M-P-F-P-A' - My Professor Forgot Proper Answers!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Wow sir! Ye trick to mast hai! Par sir, ek confusion hai - bacteria itna chhota hota hai, kya wo dekhne me bhi aata hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Nahi! Bacteria microscopic hai - electron microscope chahiye. Yahin twist hai BPSC me - prokaryotic ALWAYS microscopic, par eukaryotic chhote (Amoeba) bhi ho sakte hain aur bade (elephant) bhi. Size se classification nahi, cell structure se hoti hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Samajh gaya sir! Ab detail me har kingdom ke baare me batao!"
+        }
+      ],
+      "navigation": {
+        "next": "card_11_monera_intro",
+        "button_text": "Start Kingdom Monera ➔"
+      }
+    },
+    {
+      "card_id": "card_11_monera_intro",
+      "card_slug": "card_11_monera_intro",
+      "type": "chat",
+      "concept_id": "kingdom_monera_basics",
+      "level": 1,
+      "progress": {
+        "current": 11,
+        "total": 78
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Kingdom Monera - sabse purane aur simple organisms! Ye PROKARYOTIC hain matlab no true nucleus, no membrane-bound organelles (mitochondria, ER nahi hai). Sab bacteria aur blue-green algae (Cyanobacteria) yahaan aate hain. Cell wall present hai par cellulose nahi, peptidoglycan se bani hoti hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir bacteria to disease failate hain na? Sab bacteria harmful hain kya?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Nahi nahi! Ye BPSC ka favorite trap hai! Kuch bacteria harmful (pathogenic - TB, Cholera), par bahut saare helpful bhi hain - curd banane wala Lactobacillus, nitrogen fixing bacteria (Rhizobium in roots), antibiotic banane wale (Streptomyces se Streptomycin). SSC me beneficial bacteria zaroor puchte hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Achha! Sir bacteria reproduce kaise karte hain? Eggs dete hain kya?"
+        }
+      ],
+      "navigation": {
+        "next": "card_12_monera_reproduction",
+        "button_text": "Next ➔"
+      }
+    },
+    {
+      "card_id": "card_12_monera_reproduction",
+      "card_slug": "card_12_monera_reproduction",
+      "type": "chat",
+      "concept_id": "monera_reproduction_nutrition",
+      "level": 1,
+      "progress": {
+        "current": 12,
+        "total": 78
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Bacteria mainly asexual reproduction karte hain - Binary Fission (ek cell do me divide). Bahut fast process hai - favourable conditions me har 20 minutes me double! Kuch me sexual reproduction bhi - conjugation (DNA transfer), transformation, transduction. NEET me ye terms aate hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "20 minutes me double?? Itni fast! Sir nutrition kaise lete hain?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Kuch autotrophic (khud glucose banate - Cyanobacteria photosynthesize karte hain), kuch heterotrophic (dead matter se - saprophytic, ya living organisms se - parasitic). Archaebacteria ek special group hai jo extreme conditions me rehte hain - hot springs, salty lakes. Methanogens methane gas banate hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir ye Cyanobacteria matlab blue-green algae? Wo to algae hona chahiye na plant me?"
+        }
+      ],
+      "navigation": {
+        "next": "card_13_cyanobacteria",
+        "button_text": "Next ➔"
+      }
+    },
+    {
+      "card_id": "card_13_cyanobacteria",
+      "card_slug": "card_13_cyanobacteria",
+      "type": "chat",
+      "concept_id": "cyanobacteria_concept",
+      "level": 1,
+      "progress": {
+        "current": 13,
+        "total": 78
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ye bahut important point hai! Pehle inhe 'blue-green algae' bolte the aur plants me rakhte the kyunki ye photosynthesize karte hain. Par jab dekha ki ye PROKARYOTIC hain (no nucleus), to Monera me shift kar diya. Naam algae hai par bacteria hain - classic BPSC trap!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Oooh! Naam se dhoka mat khao! Sir kuch examples de do Monera ke?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Zaroor! E. coli (intestine me), Lactobacillus (dahi), Rhizobium (nitrogen fixation), Clostridium (tetanus), Streptococcus (throat infection), Nostoc aur Anabaena (cyanobacteria). Railway me scientific names with diseases puchte hain - TB = Mycobacterium tuberculosis!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir itne saare names! Ek baar quiz karke check kar lete hain!"
+        }
+      ],
+      "navigation": {
+        "next": "card_14_quiz_monera_1",
+        "button_text": "Test Time 🎯"
+      }
+    },
+    {
+      "card_id": "card_14_quiz_monera_1",
+      "card_slug": "card_14_quiz_monera_1",
+      "type": "quiz",
+      "concept_id": "monera_characteristics",
+      "level": 1,
+      "progress": {
+        "current": 14,
+        "total": 78
+      },
+      "quiz_payload": {
+        "question": "Which of the following is a characteristic feature of Kingdom Monera?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Eukaryotic cell structure with well-defined nucleus"
+          },
+          {
+            "id": "B",
+            "text": "Prokaryotic cell structure without membrane-bound organelles"
+          },
+          {
+            "id": "C",
+            "text": "Multicellular body organization"
+          },
+          {
+            "id": "D",
+            "text": "Presence of cellulose cell wall"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Monera are PROKARYOTIC - lacking true nucleus and membrane-bound organelles (no mitochondria, ER, Golgi). They are mostly unicellular. Cell wall present but made of peptidoglycan, NOT cellulose (cellulose is in plants). This prokaryotic vs eukaryotic distinction is crucial for NEET/BPSC."
+      },
+      "navigation": {
+        "next": "card_15_quiz_monera_2",
+        "button_text": "Next Question (2/3) ➔"
+      }
+    },
+    {
+      "card_id": "card_15_quiz_monera_2",
+      "card_slug": "card_15_quiz_monera_2",
+      "type": "quiz",
+      "concept_id": "cyanobacteria_classification",
+      "level": 1,
+      "progress": {
+        "current": 15,
+        "total": 78
+      },
+      "quiz_payload": {
+        "question": "Blue-green algae (Cyanobacteria) are placed in Kingdom Monera because:",
+        "options": [
+          {
+            "id": "A",
+            "text": "They are aquatic organisms"
+          },
+          {
+            "id": "B",
+            "text": "They can photosynthesize"
+          },
+          {
+            "id": "C",
+            "text": "They are prokaryotic lacking membrane-bound nucleus"
+          },
+          {
+            "id": "D",
+            "text": "They are green in colour"
+          }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Despite being called 'algae' and capable of photosynthesis (which are plant-like features), Cyanobacteria are in Monera because they are PROKARYOTIC. Classification is based on cell structure, not function or habitat. BPSC loves this misconception trap! Examples: Nostoc, Anabaena, Oscillatoria."
+      },
+      "navigation": {
+        "next": "card_16_quiz_monera_3",
+        "button_text": "Next Question (3/3) ➔"
+      }
+    },
+    {
+      "card_id": "card_16_quiz_monera_3",
+      "card_slug": "card_16_quiz_monera_3",
+      "type": "quiz",
+      "concept_id": "bacteria_examples",
+      "level": 1,
+      "progress": {
+        "current": 16,
+        "total": 78
+      },
+      "quiz_payload": {
+        "question": "Which bacterium is responsible for nitrogen fixation in leguminous plant roots?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Lactobacillus"
+          },
+          {
+            "id": "B",
+            "text": "Rhizobium"
+          },
+          {
+            "id": "C",
+            "text": "E. coli"
+          },
+          {
+            "id": "D",
+            "text": "Streptococcus"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Rhizobium forms symbiotic relationship with legume roots (peas, beans), fixing atmospheric nitrogen into nitrates. This is beneficial for agriculture. Lactobacillus makes curd, E. coli in intestine, Streptococcus causes infections. SSC/Railway frequently ask bacteria-function matching questions."
+      },
+      "navigation": {
+        "next": "card_17_milestone_monera",
+        "button_text": "Check Progress 🎉"
+      }
+    },
+    {
+      "card_id": "card_17_milestone_monera",
+      "card_slug": "card_17_milestone_monera",
+      "type": "milestone",
+      "concept_id": "monera_complete",
+      "level": 1,
+      "progress": {
+        "current": 17,
+        "total": 78
+      },
+      "milestone_payload": {
+        "title": "Monera Mastered! 🦠",
+        "badge_emoji": "🔬",
+        "completed_topic": "Kingdom Monera",
+        "xp_earned": 50,
+        "milestone_progress": "Module 2/7 Clear",
+        "motivational_quote": "Excellent! Prokaryotic world conquered. From bacteria to cyanobacteria - you've got it all. Next: Protista awaits!"
+      },
+      "navigation": {
+        "next": "card_18_protista_intro",
+        "button_text": "Start Kingdom Protista ➔"
+      }
+    },
+    {
+      "card_id": "card_18_protista_intro",
+      "card_slug": "card_18_protista_intro",
+      "type": "chat",
+      "concept_id": "kingdom_protista_basics",
+      "level": 1,
+      "progress": {
+        "current": 18,
+        "total": 78
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ab aate hain Kingdom Protista pe! Ye pehla EUKARYOTIC kingdom hai - matlab proper nucleus hai, membrane-bound organelles hain. Par inka body organization simple hai - mostly unicellular (kuch colonial). Ye link hain prokaryotes aur complex eukaryotes ke beech!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir matlab Protista Monera se advanced hai kyunki nucleus hai? Par phir bhi single cell hi hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul! Dekho evolution ki staircase - pehle prokaryotes aaye (Monera), phir eukaryotic single cells (Protista), phir multicellular (Fungi, Plants, Animals). Protista me teen types aate hain - Chrysophytes (diatoms), Dinoflagellates, Euglenoids, Slime moulds, aur Protozoans. Sabki alag features!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir itne types! Kya sab plant-like hain ya animal-like?"
+        }
+      ],
+      "navigation": {
+        "next": "card_19_protista_diversity",
+        "button_text": "Next ➔"
+      }
+    },
+    {
+      "card_id": "card_19_protista_diversity",
+      "card_slug": "card_19_protista_diversity",
+      "type": "chat",
+      "concept_id": "protista_types",
+      "level": 1,
+      "progress": {
+        "current": 19,
+        "total": 78
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ye Protista ka maza hai - kuch plant-like (photosynthesize karte hain - Euglenoids, Diatoms), kuch animal-like (move karte hain, organic food khate hain - Amoeba, Paramecium), kuch dono! Euglenoids me chloroplast bhi hai (plant-like) aur flagella se movement bhi (animal-like)!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Wow! Ye to confusing hai! Sir NEET me ye kaise puchenge?"
+        },
+        {
+          "speaker": "aman",
+          "text": "NEET me exact classification puchte hain - Amoeba kaun sa kingdom? Protista! Diatoms ki cell wall kis cheez ki bani? Silica! Golden algae kaun? Diatoms (golden-brown pigments). Dinoflagellates me red tide kaise banta - population explosion se. SSC me direct facts!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir Protozoans ke baare me detail me batao - Amoeba, Paramecium wagera?"
+        }
+      ],
+      "navigation": {
+        "next": "card_20_protozoans",
+        "button_text": "Next ➔"
+      }
+    },
+    {
+      "card_id": "card_20_protozoans",
+      "card_slug": "card_20_protozoans",
+      "type": "chat",
+      "concept_id": "protozoans_details",
+      "level": 1,
+      "progress": {
+        "current": 20,
+        "total": 78
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Protozoans heterotrophic protists hain - predators ya parasites. Movement ke basis pe 4 types: 1) Amoeboid (pseudopodia - false feet - Amoeba, Entamoeba causes dysentery), 2) Flagellated (flagella - Trypanosoma causes sleeping sickness), 3) Ciliated (cilia - Paramecium), 4) Sporozoans (no locomotory organs - Plasmodium causes malaria)!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir Plasmodium to bahut dangerous hai! Malaria toh india me common hai!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! Plasmodium vivax aur P. falciparum sabse common. Female Anopheles mosquito se spread hota hai. BPSC me disease-causing protozoans zaroor puchte hain: Malaria - Plasmodium, Dysentery - Entamoeba histolytica, Sleeping sickness - Trypanosoma, Kala-azar - Leishmania!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir ab quiz karke yaad karte hain!"
+        }
+      ],
+      "navigation": {
+        "next": "card_21_quiz_protista_1",
+        "button_text": "Test Time 🎯"
+      }
+    },
+    {
+      "card_id": "card_21_quiz_protista_1",
+      "card_slug": "card_21_quiz_protista_1",
+      "type": "quiz",
+      "concept_id": "protista_cell_structure",
+      "level": 1,
+      "progress": {
+        "current": 21,
+        "total": 78
+      },
+      "quiz_payload": {
+        "question": "Kingdom Protista members are primarily:",
+        "options": [
+          {
+            "id": "A",
+            "text": "Prokaryotic and multicellular"
+          },
+          {
+            "id": "B",
+            "text": "Eukaryotic and mostly unicellular"
+          },
+          {
+            "id": "C",
+            "text": "Prokaryotic and unicellular"
+          },
+          {
+            "id": "D",
+            "text": "Eukaryotic and always multicellular"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Protista are EUKARYOTIC (with true nucleus and organelles) but mostly UNICELLULAR organisms. Some form colonies but body organization is simple. They are the evolutionary link between prokaryotes (Monera) and complex multicellular organisms. NEET loves this eukaryotic + unicellular combination."
+      },
+      "navigation": {
+        "next": "card_22_quiz_protista_2",
+        "button_text": "Next Question (2/3) ➔"
+      }
+    },
+    {
+      "card_id": "card_22_quiz_protista_2",
+      "card_slug": "card_22_quiz_protista_2",
+      "type": "quiz",
+      "concept_id": "diatoms_characteristics",
+      "level": 1,
+      "progress": {
+        "current": 22,
+        "total": 78
+      },
+      "quiz_payload": {
+        "question": "Diatoms (Golden Algae) have cell walls made of:",
+        "options": [
+          {
+            "id": "A",
+            "text": "Cellulose"
+          },
+          {
+            "id": "B",
+            "text": "Chitin"
+          },
+          {
+            "id": "C",
+            "text": "Silica embedded in cell wall"
+          },
+          {
+            "id": "D",
+            "text": "Peptidoglycan"
+          }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Diatoms have unique cell walls impregnated with SILICA (glass-like), making them indestructible. They form two overlapping shells like a soap box. Dead diatom deposits form 'diatomaceous earth' used in polishing, filtration. SSC/Railway ask this unique feature. Cellulose = plants, Chitin = fungi, Peptidoglycan = bacteria."
+      },
+      "navigation": {
+        "next": "card_23_quiz_protista_3",
+        "button_text": "Next Question (3/3) ➔"
+      }
+    },
+    {
+      "card_id": "card_23_quiz_protista_3",
+      "card_slug": "card_23_quiz_protista_3",
+      "type": "quiz",
+      "concept_id": "disease_protozoans",
+      "level": 1,
+      "progress": {
+        "current": 23,
+        "total": 78
+      },
+      "quiz_payload": {
+        "question": "Which protozoan causes malaria in humans?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Entamoeba histolytica"
+          },
+          {
+            "id": "B",
+            "text": "Trypanosoma"
+          },
+          {
+            "id": "C",
+            "text": "Plasmodium"
+          },
+          {
+            "id": "D",
+            "text": "Leishmania"
+          }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Plasmodium (a Sporozoan) causes Malaria, transmitted by female Anopheles mosquito. Entamoeba causes Amoebic Dysentery, Trypanosoma causes African Sleeping Sickness, Leishmania causes Kala-azar. BPSC/SSC heavily test disease-pathogen matching. Remember: P for Plasmodium and Malaria."
+      },
+      "navigation": {
+        "next": "card_24_milestone_protista",
+        "button_text": "Check Progress 🎉"
+      }
+    },
+    {
+      "card_id": "card_24_milestone_protista",
+      "card_slug": "card_24_milestone_protista",
+      "type": "milestone",
+      "concept_id": "protista_complete",
+      "level": 1,
+      "progress": {
+        "current": 24,
+        "total": 78
+      },
+      "milestone_payload": {
+        "title": "Protista Perfected! 🦠",
+        "badge_emoji": "🔬",
+        "completed_topic": "Kingdom Protista",
+        "xp_earned": 50,
+        "milestone_progress": "Module 3/7 Clear",
+        "motivational_quote": "Amazing! From diatoms to deadly Plasmodium - eukaryotic single-celled world is now yours. Fungi kingdom next!"
+      },
+      "navigation": {
+        "next": "card_25_fungi_intro",
+        "button_text": "Start Kingdom Fungi ➔"
+      }
+    },
+    {
+      "card_id": "card_25_fungi_intro",
+      "card_slug": "card_25_fungi_intro",
+      "type": "chat",
+      "concept_id": "kingdom_fungi_basics",
+      "level": 1,
+      "progress": {
+        "current": 25,
+        "total": 78
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Kingdom Fungi - ye wo organisms hain jo pehle plants me the par ab alag kingdom hain! Kyun? Kyunki ye HETEROTROPHIC hain - khud food nahi banate. Mushrooms, yeast, moulds sab fungi hain. Cell wall hai par CELLULOSE nahi, CHITIN se bani (jo insects ke exoskeleton me hoti hai)!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Achha! To cell wall hai isliye pehle plants me the? Par khana nahi banate to kaise jeete hain?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Perfect question! Fungi mainly saprophytic hain - dead organic matter se nutrition lete hain (decomposers - ecosystem cleaners!). Kuch parasitic (living organisms pe - ringworm, athlete's foot diseases). Kuch symbiotic - Lichens (fungi + algae together), Mycorrhiza (fungi + plant roots)!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir ye Lichens maine suna hai! Wo ek organism hai ya do?"
+        }
+      ],
+      "navigation": {
+        "next": "card_26_lichens_mycorrhiza",
+        "button_text": "Next ➔"
+      }
+    },
+    {
+      "card_id": "card_26_lichens_mycorrhiza",
+      "card_slug": "card_26_lichens_mycorrhiza",
+      "type": "chat",
+      "concept_id": "symbiotic_associations",
+      "level": 1,
+      "progress": {
+        "current": 26,
+        "total": 78
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Lichens do organisms ka symbiotic association hai - fungus (provides shelter, water) + algae/cyanobacteria (provides food by photosynthesis). Dono ko fayda! Ye pollution indicators hain - polluted areas me nahi ugte. Mycorrhiza = fungus + plant roots - fungus ko glucose milta, plant ko minerals (phosphorus)!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Wow! Teamwork! Sir fungi reproduce kaise karte hain? Aur structure kya hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Fungi ki body MYCELIUM (network of thread-like structures called HYPHAE) se bani hoti hai. Reproduction: Asexual - spores, budding (yeast). Sexual - fusion of hyphae, then spore formation. NEET me fungal reproduction ka life cycle aata hai - Ascomycetes, Basidiomycetes, Phycomycetes classes!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir kuch important fungi examples bata do jo exams me aate hain!"
+        }
+      ],
+      "navigation": {
+        "next": "card_27_fungi_examples",
+        "button_text": "Next ➔"
+      }
+    },
+    {
+      "card_id": "card_27_fungi_examples",
+      "card_slug": "card_27_fungi_examples",
+      "type": "chat",
+      "concept_id": "fungi_examples_importance",
+      "level": 1,
+      "progress": {
+        "current": 27,
+        "total": 78
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Zaroor! Beneficial: Yeast (Saccharomyces - bread, beer, wine), Penicillium (antibiotic penicillin - discovered by Alexander Fleming 1929), Mushrooms (Agaricus - edible). Harmful: Aspergillus (food spoilage), Candida (oral thrush), Trichophyton (ringworm). SSC me Fleming ka naam aur year pakka puchte hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir penicillin to life-saving medicine hai! BPSC me ye zaroor aayega!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul! 1929 me Alexander Fleming ne Penicillium notatum fungus se Penicillin discover kiya - pehli antibiotic! Nobel Prize 1945 me mila. Yaad rakho: Fleming-Fungi-Penicillin! Aur haan, Fungi ek aur kaam karte hain - fermentation (alcohol production, cheese making)!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir ab quiz karke pakka kar lete hain!"
+        }
+      ],
+      "navigation": {
+        "next": "card_28_quiz_fungi_1",
+        "button_text": "Test Time 🎯"
+      }
+    },
+    {
+      "card_id": "card_28_quiz_fungi_1",
+      "card_slug": "card_28_quiz_fungi_1",
+      "type": "quiz",
+      "concept_id": "fungi_cell_wall",
+      "level": 1,
+      "progress": {
+        "current": 28,
+        "total": 78
+      },
+      "quiz_payload": {
+        "question": "The cell wall of fungi is primarily composed of:",
+        "options": [
+          {
+            "id": "A",
+            "text": "Cellulose"
+          },
+          {
+            "id": "B",
+            "text": "Chitin"
+          },
+          {
+            "id": "C",
+            "text": "Peptidoglycan"
+          },
+          {
+            "id": "D",
+            "text": "Silica"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Fungal cell walls are made of CHITIN (a nitrogen-containing polysaccharide), same as insect exoskeletons. NOT cellulose (plants) or peptidoglycan (bacteria). This is why fungi were removed from Plantae to separate kingdom. NEET/SSC frequently test this unique feature. Silica = diatoms."
+      },
+      "navigation": {
+        "next": "card_29_quiz_fungi_2",
+        "button_text": "Next Question (2/3) ➔"
+      }
+    },
+    {
+      "card_id": "card_29_quiz_fungi_2",
+      "card_slug": "card_29_quiz_fungi_2",
+      "type": "quiz",
+      "concept_id": "lichens_association",
+      "level": 1,
+      "progress": {
+        "current": 29,
+        "total": 78
+      },
+      "quiz_payload": {
+        "question": "Lichens are symbiotic associations between:",
+        "options": [
+          {
+            "id": "A",
+            "text": "Algae and Bacteria"
+          },
+          {
+            "id": "B",
+            "text": "Fungi and Algae/Cyanobacteria"
+          },
+          {
+            "id": "C",
+            "text": "Fungi and Plant roots"
+          },
+          {
+            "id": "D",
+            "text": "Bacteria and Plant roots"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Lichens = symbiotic association between FUNGI (provides shelter, moisture) and ALGAE or CYANOBACTERIA (provides food via photosynthesis). They are pollution indicators. Fungi+Roots = Mycorrhiza, Bacteria+Roots = Rhizobium. BPSC loves symbiosis questions. Both partners benefit = mutualism."
+      },
+      "navigation": {
+        "next": "card_30_quiz_fungi_3",
+        "button_text": "Next Question (3/3) ➔"
+      }
+    },
+    {
+      "card_id": "card_30_quiz_fungi_3",
+      "card_slug": "card_30_quiz_fungi_3",
+      "type": "quiz",
+      "concept_id": "penicillin_discovery",
+      "level": 1,
+      "progress": {
+        "current": 30,
+        "total": 78
+      },
+      "quiz_payload": {
+        "question": "Penicillin, the first antibiotic, was discovered by Alexander Fleming in which year from which fungus?",
+        "options": [
+          {
+            "id": "A",
+            "text": "1928, Aspergillus"
+          },
+          {
+            "id": "B",
+            "text": "1929, Penicillium notatum"
+          },
+          {
+            "id": "C",
+            "text": "1945, Saccharomyces"
+          },
+          {
+            "id": "D",
+            "text": "1935, Agaricus"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Alexander Fleming discovered Penicillin in 1929 from Penicillium notatum fungus (won Nobel Prize 1945). This revolutionized medicine. SSC/Railway/BPSC heavily test this scientist-year-discovery combination. Aspergillus causes diseases, Saccharomyces is yeast, Agaricus is mushroom."
+      },
+      "navigation": {
+        "next": "card_31_milestone_fungi",
+        "button_text": "Check Progress 🎉"
+      }
+    },
+    {
+      "card_id": "card_31_milestone_fungi",
+      "card_slug": "card_31_milestone_fungi",
+      "type": "milestone",
+      "concept_id": "fungi_complete",
+      "level": 1,
+      "progress": {
+        "current": 31,
+        "total": 78
+      },
+      "milestone_payload": {
+        "title": "Fungi Finalized! 🍄",
+        "badge_emoji": "🔬",
+        "completed_topic": "Kingdom Fungi",
+        "xp_earned": 50,
+        "milestone_progress": "Module 4/7 Clear",
+        "motivational_quote": "Brilliant! Chitin walls, lichens, Penicillin - you've mastered the decomposer kingdom. Plants await!"
+      },
+      "navigation": {
+        "next": "card_32_plantae_intro",
+        "button_text": "Start Kingdom Plantae ➔"
+      }
+    },
+    {
+      "card_id": "card_32_plantae_intro",
+      "card_slug": "card_32_plantae_intro",
+      "type": "chat",
+      "concept_id": "kingdom_plantae_basics",
+      "level": 1,
+      "progress": {
+        "current": 32,
+        "total": 78
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ab aate hain sabse familiar kingdom pe - Plantae! Ye EUKARYOTIC, MULTICELLULAR, AUTOTROPHIC organisms hain. Cellulose cell wall, chloroplasts present (photosynthesis karte hain - producers of ecosystem). Life cycle me alternation of generations hota hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir plants to simple lagta hai samajhne me! Sab green hote hain chlorophyll ki wajah se. Par sir, kuch plants to bahut chhote hote hain aur kuch bahut bade - oak tree!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Sahi baat! Plants ko body organization ke basis pe divide kiya: Thallophyta (no differentiation - algae), Bryophyta (tissue level - mosses, no vascular tissue - amphibians of plant kingdom), Pteridophyta (vascular tissue but no seeds - ferns), Gymnosperms (naked seeds - pine), Angiosperms (seeds in fruits - flowering plants)!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir itne divisions! NEET me to detail me aayega! Ek-ek karke samjhao na!"
+        }
+      ],
+      "navigation": {
+        "next": "card_33_plant_groups",
+        "button_text": "Next ➔"
+      }
+    },
+    {
+      "card_id": "card_33_plant_groups",
+      "card_slug": "card_33_plant_groups",
+      "type": "chat",
+      "concept_id": "plant_classification_groups",
+      "level": 1,
+      "progress": {
+        "current": 33,
+        "total": 78
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Cryptogams (hidden reproduction - no flowers/seeds - includes Algae, Bryophytes, Pteridophytes) vs Phanerogams (visible seeds - Gymnosperms, Angiosperms). Railway/SSC me ye terms puchte hain! Bryophytes ko 'amphibians of plant kingdom' kehte hain kyunki water chahiye reproduction ke liye!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Amphibians matlab jo land aur water dono me rahen? Plants me bhi?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! Bryophytes land pe ugte hain par gametes (sex cells) ko water chahiye fertilization ke liye - jaise frog! Pteridophytes pehle vascular plants hain (xylem-phloem for transport). Selaginella, Ferns examples hain. NEET me vascular vs non-vascular comparison zaroor aata hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir Gymnosperms aur Angiosperms me kya farak hai? Dono me seeds hain na!"
+        }
+      ],
+      "navigation": {
+        "next": "card_34_gymno_angio",
+        "button_text": "Next ➔"
+      }
+    },
+    {
+      "card_id": "card_34_gymno_angio",
+      "card_slug": "card_34_gymno_angio",
+      "type": "chat",
+      "concept_id": "gymnosperms_angiosperms",
+      "level": 1,
+      "progress": {
+        "current": 34,
+        "total": 78
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Gymnosperms - 'Gymno' = naked, 'sperms' = seeds. Seeds EXPOSED hote hain, fruits nahi bante. Cones me seeds (Pine, Deodar, Cycas). Angiosperms - 'Angio' = covered. Seeds fruits ke andar protected (Mango, Rose, Wheat). Ye sabse advanced aur diverse group hai - 2.5 lakh species!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Wow! To jo bhi fruit khate hain wo Angiosperms hain! Sir Angiosperms me aur divisions hain kya?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! Dicots (two cotyledons in seed - Pea, Sunflower, reticulate venation) vs Monocots (one cotyledon - Wheat, Rice, Maize, parallel venation). BPSC me cotyledon number, root system (tap vs fibrous), venation pattern - teen basis pe puchte hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir ab quiz karke plant kingdom pakka karte hain!"
+        }
+      ],
+      "navigation": {
+        "next": "card_35_quiz_plantae_1",
+        "button_text": "Test Time 🎯"
+      }
+    },
+    {
+      "card_id": "card_35_quiz_plantae_1",
+      "card_slug": "card_35_quiz_plantae_1",
+      "type": "quiz",
+      "concept_id": "bryophytes_amphibians",
+      "level": 1,
+      "progress": {
+        "current": 35,
+        "total": 78
+      },
+      "quiz_payload": {
+        "question": "Bryophytes are called 'Amphibians of Plant Kingdom' because:",
+        "options": [
+          {
+            "id": "A",
+            "text": "They live only in water"
+          },
+          {
+            "id": "B",
+            "text": "They can live on land but need water for reproduction (fertilization)"
+          },
+          {
+            "id": "C",
+            "text": "They have both roots and shoots"
+          },
+          {
+            "id": "D",
+            "text": "They are green in color"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Bryophytes (mosses, liverworts) live on land but depend on water for fertilization - male gametes swim through water to reach female gametes. Like amphibians (frogs) that live on land but breed in water. They lack vascular tissue (xylem, phloem). NEET frequently tests this analogy and reason."
+      },
+      "navigation": {
+        "next": "card_36_quiz_plantae_2",
+        "button_text": "Next Question (2/3) ➔"
+      }
+    },
+    {
+      "card_id": "card_36_quiz_plantae_2",
+      "card_slug": "card_36_quiz_plantae_2",
+      "type": "quiz",
+      "concept_id": "gymnosperms_characteristics",
+      "level": 1,
+      "progress": {
+        "current": 36,
+        "total": 78
+      },
+      "quiz_payload": {
+        "question": "What is the characteristic feature of Gymnosperms?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Seeds enclosed in fruits"
+          },
+          {
+            "id": "B",
+            "text": "Naked seeds borne in cones, no fruits"
+          },
+          {
+            "id": "C",
+            "text": "No seeds, reproduction by spores"
+          },
+          {
+            "id": "D",
+            "text": "Presence of flowers"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Gymnosperms have NAKED seeds (not enclosed in fruits), typically borne in cones. 'Gymno' = naked, 'sperms' = seeds. Examples: Pine, Cycas, Deodar. No flowers or fruits. Angiosperms have seeds in fruits. SSC/Railway test this naked vs covered seed distinction."
+      },
+      "navigation": {
+        "next": "card_37_quiz_plantae_3",
+        "button_text": "Next Question (3/3) ➔"
+      }
+    },
+    {
+      "card_id": "card_37_quiz_plantae_3",
+      "card_slug": "card_37_quiz_plantae_3",
+      "type": "quiz",
+      "concept_id": "monocot_dicot",
+      "level": 1,
+      "progress": {
+        "current": 37,
+        "total": 78
+      },
+      "quiz_payload": {
+        "question": "Which of the following is a characteristic of Monocot plants?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Two cotyledons, reticulate venation, tap root"
+          },
+          {
+            "id": "B",
+            "text": "One cotyledon, parallel venation, fibrous root"
+          },
+          {
+            "id": "C",
+            "text": "Two cotyledons, parallel venation, fibrous root"
+          },
+          {
+            "id": "D",
+            "text": "One cotyledon, reticulate venation, tap root"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Monocots have ONE cotyledon, PARALLEL leaf venation, FIBROUS root system. Examples: Wheat, Rice, Maize, Grass. Dicots: TWO cotyledons, RETICULATE venation, TAP root. Examples: Pea, Sunflower, Mango. BPSC loves this comparison table - know all three differences together!"
+      },
+      "navigation": {
+        "next": "card_38_milestone_plantae",
+        "button_text": "Check Progress 🎉"
+      }
+    },
+    {
+      "card_id": "card_38_milestone_plantae",
+      "card_slug": "card_38_milestone_plantae",
+      "type": "milestone",
+      "concept_id": "plantae_complete",
+      "level": 1,
+      "progress": {
+        "current": 38,
+        "total": 78
+      },
+      "milestone_payload": {
+        "title": "Plantae Perfected! 🌱",
+        "badge_emoji": "🌳",
+        "completed_topic": "Kingdom Plantae",
+        "xp_earned": 50,
+        "milestone_progress": "Module 5/7 Clear",
+        "motivational_quote": "Superb! From mosses to flowering plants - the green world is conquered. Animal kingdom next!"
+      },
+      "navigation": {
+        "next": "card_39_animalia_intro",
+        "button_text": "Start Kingdom Animalia ➔"
+      }
+    },
+    {
+      "card_id": "card_39_animalia_intro",
+      "card_slug": "card_39_animalia_intro",
+      "type": "chat",
+      "concept_id": "kingdom_animalia_basics",
+      "level": 1,
+      "progress": {
+        "current": 39,
+        "total": 78
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Kingdom Animalia - sabse complex organisms! EUKARYOTIC, MULTICELLULAR, HETEROTROPHIC (cannot make their own food). No cell wall (major difference from plants). Stored food = glycogen. Locomotion present (mostly). Humans bhi isi kingdom me hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir animals to bahut types ke hain - kuch simple jaise sponges, kuch complex jaise humans! Classification kaise karte hain?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Basis hain: 1) Body symmetry (Asymmetrical-Sponges, Radial-Jellyfish, Bilateral-Most animals), 2) Germ layers (Diploblastic-2 layers, Triploblastic-3 layers), 3) Coelom (body cavity), 4) Segmentation, 5) Notochord presence. In basis pe 9-10 major phyla hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir ye Phyla kya hai? Aur kitne important hain NEET ke liye?"
+        }
+      ],
+      "navigation": {
+        "next": "card_40_animal_phyla",
+        "button_text": "Next ➔"
+      }
+    },
+    {
+      "card_id": "card_40_animal_phyla",
+      "card_slug": "card_40_animal_phyla",
+      "type": "chat",
+      "concept_id": "animal_phyla_overview",
+      "level": 1,
+      "progress": {
+        "current": 40,
+        "total": 78
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Phyla matlab major divisions. NEET ke liye important: Porifera (sponges), Coelenterata/Cnidaria (Hydra, Jellyfish), Platyhelminthes (flatworms), Nematoda (roundworms), Annelida (earthworm), Arthropoda (insects, largest phylum), Mollusca (snails), Echinodermata (starfish), Chordata (fish to humans)!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir Arthropoda largest phylum hai? Kya special hai isme?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! 70% animal species Arthropoda me - insects, spiders, crabs. Features: Jointed legs (Arthro=joint, poda=feet), Chitinous exoskeleton, Segmented body. BPSC me puchte hain: Largest phylum? Arthropoda. Largest class? Insecta (in Arthropoda). Examples: Housefly, Mosquito, Cockroach!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir Chordata me humans hain? Aur kya features hain?"
+        }
+      ],
+      "navigation": {
+        "next": "card_41_chordata",
+        "button_text": "Next ➔"
+      }
+    },
+    {
+      "card_id": "card_41_chordata",
+      "card_slug": "card_41_chordata",
+      "type": "chat",
+      "concept_id": "phylum_chordata",
+      "level": 1,
+      "progress": {
+        "current": 41,
+        "total": 78
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Chordata sabse advanced phylum! Four key features (at least embryonic stage me): 1) Notochord (supporting rod), 2) Dorsal hollow nerve cord, 3) Pharyngeal gill slits, 4) Post-anal tail. Divided into: Urochordata, Cephalochordata (primitive), aur Vertebrata (backbone present - fish, frog, birds, mammals)!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir Vertebrata me sab classes batao - fish se lekar humans tak!"
+        },
+        {
+          "speaker": "aman",
+          "text": "5 classes: 1) Pisces (fish - gills, fins, cold-blooded), 2) Amphibia (frog - dual life, moist skin), 3) Reptilia (snake, lizard - scales, cold-blooded), 4) Aves (birds - feathers, warm-blooded, hollow bones), 5) Mammalia (humans - mammary glands, warm-blooded, hair). SSC me class examples zaroor puchte hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir mammals me kya khas hai? Sirf milk production?"
+        }
+      ],
+      "navigation": {
+        "next": "card_42_mammals",
+        "button_text": "Next ➔"
+      }
+    },
+    {
+      "card_id": "card_42_mammals",
+      "card_slug": "card_42_mammals",
+      "type": "chat",
+      "concept_id": "class_mammalia",
+      "level": 1,
+      "progress": {
+        "current": 42,
+        "total": 78
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Mammals ki unique features: Mammary glands (milk production - hence name), Hair/fur on body, Four-chambered heart, Warm-blooded (maintain constant body temperature), Viviparity (give birth to young ones - except Platypus, Echidna jo eggs dete hain!). Largest animal Blue Whale bhi mammal hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Platypus eggs deta hai par mammal hai?? Ye to exception hai!"
+        },
+        {
+          "speaker": "aman",
+          "text": "NEET ka favorite exception! Platypus aur Echidna egg-laying mammals hain (Monotremes) par mammary glands hain. Marsupials (Kangaroo) pouch me babies develop karte hain. Placental mammals (humans, dogs) me placenta se bachche develop hote hain - sabse advanced!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir ab quiz karke Animal kingdom complete karte hain!"
+        }
+      ],
+      "navigation": {
+        "next": "card_43_quiz_animalia_1",
+        "button_text": "Test Time 🎯"
+      }
+    },
+    {
+      "card_id": "card_43_quiz_animalia_1",
+      "card_slug": "card_43_quiz_animalia_1",
+      "type": "quiz",
+      "concept_id": "largest_phylum",
+      "level": 1,
+      "progress": {
+        "current": 43,
+        "total": 78
+      },
+      "quiz_payload": {
+        "question": "Which is the largest phylum in Kingdom Animalia in terms of number of species?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Chordata"
+          },
+          {
+            "id": "B",
+            "text": "Mollusca"
+          },
+          {
+            "id": "C",
+            "text": "Arthropoda"
+          },
+          {
+            "id": "D",
+            "text": "Annelida"
+          }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Arthropoda is the LARGEST phylum with about 70% of all animal species. Includes insects, spiders, crustaceans. Key features: Jointed appendages, chitinous exoskeleton, segmented body. Class Insecta (within Arthropoda) is the largest class. BPSC/SSC/Railway repeatedly ask this fact."
+      },
+      "navigation": {
+        "next": "card_44_quiz_animalia_2",
+        "button_text": "Next Question (2/3) ➔"
+      }
+    },
+    {
+      "card_id": "card_44_quiz_animalia_2",
+      "card_slug": "card_44_quiz_animalia_2",
+      "type": "quiz",
+      "concept_id": "chordata_features",
+      "level": 1,
+      "progress": {
+        "current": 44,
+        "total": 78
+      },
+      "quiz_payload": {
+        "question": "Which of the following is NOT a characteristic feature of Phylum Chordata?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Notochord (at least in embryonic stage)"
+          },
+          {
+            "id": "B",
+            "text": "Dorsal hollow nerve cord"
+          },
+          {
+            "id": "C",
+            "text": "Ventral solid nerve cord"
+          },
+          {
+            "id": "D",
+            "text": "Pharyngeal gill slits"
+          }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Chordates have DORSAL HOLLOW nerve cord, NOT ventral solid (ventral solid is in non-chordates like Arthropoda). Four chordate features: Notochord, Dorsal hollow nerve cord, Pharyngeal gill slits, Post-anal tail (all at least in embryonic stage). NEET loves testing these four characteristics."
+      },
+      "navigation": {
+        "next": "card_45_quiz_animalia_3",
+        "button_text": "Next Question (3/3) ➔"
+      }
+    },
+    {
+      "card_id": "card_45_quiz_animalia_3",
+      "card_slug": "card_45_quiz_animalia_3",
+      "type": "quiz",
+      "concept_id": "egg_laying_mammals",
+      "level": 1,
+      "progress": {
+        "current": 45,
+        "total": 78
+      },
+      "quiz_payload": {
+        "question": "Which of the following mammals lay eggs (oviparous)?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Kangaroo and Opossum"
+          },
+          {
+            "id": "B",
+            "text": "Platypus and Echidna"
+          },
+          {
+            "id": "C",
+            "text": "Whale and Dolphin"
+          },
+          {
+            "id": "D",
+            "text": "Bat and Flying Fox"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Platypus and Echidna are egg-laying mammals (Monotremes) - the only exception in Mammalia. Despite laying eggs, they have mammary glands (milk production). Kangaroo is Marsupial (pouch). Others are Placental mammals. NEET frequently tests this exception - classic trap question!"
+      },
+      "navigation": {
+        "next": "card_46_milestone_animalia",
+        "button_text": "Check Progress 🎉"
+      }
+    },
+    {
+      "card_id": "card_46_milestone_animalia",
+      "card_slug": "card_46_milestone_animalia",
+      "type": "milestone",
+      "concept_id": "animalia_complete",
+      "level": 1,
+      "progress": {
+        "current": 46,
+        "total": 78
+      },
+      "milestone_payload": {
+        "title": "Animalia Aced! 🦁",
+        "badge_emoji": "🔬",
+        "completed_topic": "Kingdom Animalia",
+        "xp_earned": 50,
+        "milestone_progress": "Module 6/7 Clear",
+        "motivational_quote": "Fantastic! From sponges to mammals - the animal diversity is now in your command. One more crucial topic!"
+      },
+      "navigation": {
+        "next": "card_47_virus_intro",
+        "button_text": "Start Viruses & Special Topics ➔"
+      }
+    },
+    {
+      "card_id": "card_47_virus_intro",
+      "card_slug": "card_47_virus_intro",
+      "type": "chat",
+      "concept_id": "viruses_basics",
+      "level": 1,
+      "progress": {
+        "current": 47,
+        "total": 78
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ab ek special case - Viruses! Ye kisi bhi kingdom me nahi aate kyunki ye living aur non-living ke beech hain. Bahar inert crystals jaise (non-living), par host cell ke andar active ho kar reproduce karte hain (living property)!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir matlab virus ek puzzle hai? Na completely living na completely non-living?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Exactly! Structure: Protein coat (Capsid) + Genetic material (DNA ya RNA - kabhi dono nahi!). No cell structure, no cytoplasm, no organelles. Obligate parasites hain - sirf living cells me reproduce kar sakte hain. TMV (Tobacco Mosaic Virus) pehla discover hua - Ivanovsky 1892!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir viruses diseases cause karte hain na? COVID bhi virus se tha!"
+        }
+      ],
+      "navigation": {
+        "next": "card_48_virus_diseases",
+        "button_text": "Next ➔"
+      }
+    },
+    {
+      "card_id": "card_48_virus_diseases",
+      "card_slug": "card_48_virus_diseases",
+      "type": "chat",
+      "concept_id": "viral_diseases",
+      "level": 1,
+      "progress": {
+        "current": 48,
+        "total": 78
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Haan! Common viral diseases: Common cold, Influenza (flu), Polio, Measles, Mumps, Chickenpox, AIDS (HIV virus), Dengue, COVID-19 (Coronavirus). Plant diseases bhi: TMV (tobacco), Potato mosaic. Bacteriophages bacteria ko infect karte hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir antibiotics se virus marte hain kya?"
+        },
+        {
+          "speaker": "aman",
+          "text": "BPSC trap question! Nahi! Antibiotics sirf BACTERIA ko marte hain, viruses ko nahi kyunki viruses me apna metabolism nahi hota. Antiviral drugs alag hain. Vaccination best prevention hai - Polio vaccine (Salk, Sabin), Measles vaccine, COVID vaccine!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Samajh gaya sir! Ab last topics ka quiz kar lete hain!"
+        }
+      ],
+      "navigation": {
+        "next": "card_49_quiz_virus_1",
+        "button_text": "Test Time 🎯"
+      }
+    },
+    {
+      "card_id": "card_49_quiz_virus_1",
+      "card_slug": "card_49_quiz_virus_1",
+      "type": "quiz",
+      "concept_id": "virus_characteristics",
+      "level": 1,
+      "progress": {
+        "current": 49,
+        "total": 78
+      },
+      "quiz_payload": {
+        "question": "Viruses are considered on the borderline between living and non-living because:",
+        "options": [
+          {
+            "id": "A",
+            "text": "They are very small"
+          },
+          {
+            "id": "B",
+            "text": "They can crystallize (non-living) but reproduce inside host cells (living)"
+          },
+          {
+            "id": "C",
+            "text": "They have DNA"
+          },
+          {
+            "id": "D",
+            "text": "They cause diseases"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Viruses show non-living characteristics (can be crystallized, no metabolism outside host) and living characteristics (reproduce inside host cells, have genetic material). They are obligate intracellular parasites. Cannot be placed in any of the five kingdoms. NEET/BPSC frequently test this unique nature."
+      },
+      "navigation": {
+        "next": "card_50_quiz_virus_2",
+        "button_text": "Next Question (2/3) ➔"
+      }
+    },
+    {
+      "card_id": "card_50_quiz_virus_2",
+      "card_slug": "card_50_quiz_virus_2",
+      "type": "quiz",
+      "concept_id": "virus_genetic_material",
+      "level": 1,
+      "progress": {
+        "current": 50,
+        "total": 78
+      },
+      "quiz_payload": {
+        "question": "The genetic material in viruses can be:",
+        "options": [
+          {
+            "id": "A",
+            "text": "Only DNA"
+          },
+          {
+            "id": "B",
+            "text": "Only RNA"
+          },
+          {
+            "id": "C",
+            "text": "Either DNA or RNA, but never both together"
+          },
+          {
+            "id": "D",
+            "text": "Both DNA and RNA together"
+          }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Viruses contain EITHER DNA OR RNA as genetic material, NEVER both together. DNA viruses: Bacteriophages, Smallpox. RNA viruses: TMV, Influenza, HIV, Polio, COVID-19 (Coronavirus). This is a classic NEET trap - students often think both can be present. Protein coat = Capsid."
+      },
+      "navigation": {
+        "next": "card_51_quiz_virus_3",
+        "button_text": "Next Question (3/3) ➔"
+      }
+    },
+    {
+      "card_id": "card_51_quiz_virus_3",
+      "card_slug": "card_51_quiz_virus_3",
+      "type": "quiz",
+      "concept_id": "antibiotics_viruses",
+      "level": 1,
+      "progress": {
+        "current": 51,
+        "total": 78
+      },
+      "quiz_payload": {
+        "question": "Why are antibiotics ineffective against viral infections?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Viruses are too small"
+          },
+          {
+            "id": "B",
+            "text": "Viruses lack metabolic machinery; antibiotics target bacterial metabolism"
+          },
+          {
+            "id": "C",
+            "text": "Viruses are resistant to all drugs"
+          },
+          {
+            "id": "D",
+            "text": "Antibiotics cannot enter cells"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Antibiotics target bacterial cell wall synthesis or metabolism. Viruses have no cell wall, no ribosomes, no independent metabolism - they use host cell machinery. Hence antibiotics are ineffective against viruses. Antiviral drugs work differently. BPSC/SSC heavily test this concept to prevent antibiotic misuse awareness."
+      },
+      "navigation": {
+        "next": "card_52_milestone_virus",
+        "button_text": "Check Progress 🎉"
+      }
+    },
+    {
+      "card_id": "card_52_milestone_virus",
+      "card_slug": "card_52_milestone_virus",
+      "type": "milestone",
+      "concept_id": "virus_complete",
+      "level": 1,
+      "progress": {
+        "current": 52,
+        "total": 78
+      },
+      "milestone_payload": {
+        "title": "Viruses Vanquished! 🦠",
+        "badge_emoji": "💉",
+        "completed_topic": "Viruses & Special Cases",
+        "xp_earned": 50,
+        "milestone_progress": "Module 7/7 Clear",
+        "motivational_quote": "Amazing! All kingdoms plus viruses - complete classification mastered. Time for final revision!"
+      },
+      "navigation": {
+        "next": "card_53_officer_revision",
+        "button_text": "Officer Revision ⚡"
+      }
+    },
+    {
+      "card_id": "card_53_officer_revision",
+      "card_slug": "card_53_officer_revision",
+      "type": "summary",
+      "concept_id": "classification_revision",
+      "level": 1,
+      "progress": {
+        "current": 53,
+        "total": 78
+      },
+      "summary_payload": {
+        "title": "⚡ Quick Officer Revision",
+        "revision_points": [
+          {
+            "topic": "Taxonomy Father",
+            "point": "Carolus Linnaeus (1758) - Father of Taxonomy, gave binomial nomenclature system. R.H. Whittaker proposed Five Kingdom Classification in 1969 based on cell structure, body organization, nutrition mode, reproduction, and phylogenetic relationships."
+          },
+          {
+            "topic": "Kingdom Monera",
+            "point": "PROKARYOTIC (no nucleus), mostly unicellular, peptidoglycan cell wall. Includes bacteria and cyanobacteria (blue-green algae). Binary fission reproduction. Examples: E. coli, Rhizobium (nitrogen fixation), Lactobacillus (curd). Archaebacteria live in extreme conditions."
+          },
+          {
+            "topic": "Kingdom Protista",
+            "point": "EUKARYOTIC, mostly unicellular. Includes Chrysophytes (Diatoms - silica walls, golden algae), Dinoflagellates (red tide), Euglenoids (dual nature), Protozoans (Amoeba, Paramecium, Plasmodium causes Malaria). Link between prokaryotes and complex eukaryotes."
+          },
+          {
+            "topic": "Kingdom Fungi",
+            "point": "EUKARYOTIC, multicellular (except yeast), HETEROTROPHIC, CHITIN cell wall. Saprophytic decomposers. Lichens = Fungi + Algae symbiosis (pollution indicators). Mycorrhiza = Fungi + Roots. Penicillin from Penicillium notatum (Alexander Fleming, 1929). Reproduce by spores."
+          },
+          {
+            "topic": "Kingdom Plantae",
+            "point": "EUKARYOTIC, multicellular, AUTOTROPHIC, cellulose cell wall. Bryophytes (mosses, amphibians of plant kingdom, no vascular tissue). Pteridophytes (ferns, first vascular plants). Gymnosperms (naked seeds in cones). Angiosperms (seeds in fruits) - Monocots (one cotyledon, parallel venation) vs Dicots (two cotyledons, reticulate venation)."
+          },
+          {
+            "topic": "Kingdom Animalia",
+            "point": "EUKARYOTIC, multicellular, HETEROTROPHIC, no cell wall, glycogen storage. Largest phylum = Arthropoda (70% species, jointed legs, chitin exoskeleton). Chordata: Notochord, dorsal nerve cord, gill slits, post-anal tail. Vertebrate classes: Pisces, Amphibia, Reptilia, Aves, Mammalia. Platypus/Echidna = egg-laying mammals (exception)."
+          },
+          {
+            "topic": "Viruses",
+            "point": "NOT in any kingdom - on borderline of living/non-living. Protein coat (Capsid) + genetic material (DNA OR RNA, never both). Obligate intracellular parasites. No metabolism outside host. TMV discovered by Ivanovsky (1892). Antibiotics DON'T work on viruses (no metabolism). Examples: HIV, Influenza, COVID-19, Polio."
+          }
+        ]
+      },
+      "navigation": {
+        "next": "card_54_final_quiz_1",
+        "button_text": "Final Master Quiz 🏆"
+      }
+    },
+    {
+      "card_id": "card_54_final_quiz_1",
+      "card_slug": "card_54_final_quiz_1",
+      "type": "final_quiz",
+      "concept_id": "classification_final_1",
+      "level": 1,
+      "progress": {
+        "current": 54,
+        "total": 78
+      },
+      "quiz_payload": {
+        "question": "Assertion (A): Blue-green algae (Cyanobacteria) are placed in Kingdom Monera despite being photosynthetic. Reason (R): They are prokaryotic organisms lacking membrane-bound nucleus.",
+        "options": [
+          {
+            "id": "A",
+            "text": "Both A and R are true, and R is the correct explanation of A"
+          },
+          {
+            "id": "B",
+            "text": "Both A and R are true, but R is not the correct explanation of A"
+          },
+          {
+            "id": "C",
+            "text": "A is true but R is false"
+          },
+          {
+            "id": "D",
+            "text": "A is false but R is true"
+          }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Both assertion and reason are TRUE, and R correctly explains A. Despite photosynthetic ability (plant-like feature), Cyanobacteria are in Monera because classification is based on CELL STRUCTURE (prokaryotic vs eukaryotic), not on nutrition mode. Being prokaryotic (no true nucleus) is the deciding factor. BPSC loves Assertion-Reason format testing conceptual clarity."
+      },
+      "navigation": {
+        "next": "card_55_final_quiz_2",
+        "button_text": "Next Challenge ➔"
+      }
+    },
+    {
+      "card_id": "card_55_final_quiz_2",
+      "card_slug": "card_55_final_quiz_2",
+      "type": "final_quiz",
+      "concept_id": "classification_final_2",
+      "level": 1,
+      "progress": {
+        "current": 55,
+        "total": 78
+      },
+      "quiz_payload": {
+        "question": "Match the following: (P) Chitin cell wall - (1) Bacteria, (Q) Silica cell wall - (2) Fungi, (R) Cellulose cell wall - (3) Diatoms, (S) Peptidoglycan cell wall - (4) Plants",
+        "options": [
+          {
+            "id": "A",
+            "text": "P-2, Q-3, R-4, S-1"
+          },
+          {
+            "id": "B",
+            "text": "P-1, Q-2, R-3, S-4"
+          },
+          {
+            "id": "C",
+            "text": "P-4, Q-1, R-2, S-3"
+          },
+          {
+            "id": "D",
+            "text": "P-3, Q-4, R-1, S-2"
+          }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Correct matching: Chitin = Fungi (P-2), Silica = Diatoms in Protista (Q-3), Cellulose = Plants (R-4), Peptidoglycan = Bacteria in Monera (S-1). Cell wall composition is a KEY classification criterion. NEET frequently tests this in matching/statement format. Remember: No cell wall in animals."
+      },
+      "navigation": {
+        "next": "card_56_final_quiz_3",
+        "button_text": "Next Challenge ➔"
+      }
+    },
+    {
+      "card_id": "card_56_final_quiz_3",
+      "card_slug": "card_56_final_quiz_3",
+      "type": "final_quiz",
+      "concept_id": "classification_final_3",
+      "level": 1,
+      "progress": {
+        "current": 56,
+        "total": 78
+      },
+      "quiz_payload": {
+        "question": "Consider the statements: (I) Lichens are symbiotic associations, (II) Mycorrhiza helps plants in phosphorus absorption, (III) Rhizobium fixes nitrogen in non-leguminous plants, (IV) Fungi have chitin cell walls. How many statements are CORRECT?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Only one"
+          },
+          {
+            "id": "B",
+            "text": "Only two"
+          },
+          {
+            "id": "C",
+            "text": "Only three"
+          },
+          {
+            "id": "D",
+            "text": "All four"
+          }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Three statements are correct (I, II, IV). Statement I: CORRECT - Lichens = Fungi + Algae symbiosis. Statement II: CORRECT - Mycorrhiza (Fungi+Roots) helps in phosphorus/mineral absorption. Statement III: INCORRECT - Rhizobium fixes nitrogen in LEGUMINOUS plants (peas, beans), NOT non-leguminous. Statement IV: CORRECT - Fungi have chitin walls. BPSC loves multi-statement questions testing detailed knowledge."
+      },
+      "navigation": {
+        "next": "card_57_chapter_complete",
+        "button_text": "Complete Chapter 🎊"
+      }
+    },
+    {
+      "card_id": "card_57_chapter_complete",
+      "card_slug": "card_57_chapter_complete",
+      "type": "milestone",
+      "concept_id": "classification_mastery",
+      "level": 1,
+      "progress": {
+        "current": 57,
+        "total": 78
+      },
+      "milestone_payload": {
+        "title": "🏆 Classification Champion!",
+        "badge_emoji": "🎓",
+        "completed_topic": "Biological Classification - Complete Mastery",
+        "xp_earned": 500,
+        "milestone_progress": "Chapter Complete - 100%",
+        "motivational_quote": "Phenomenal achievement! From Linnaeus to Whittaker, Monera to Animalia, Prokaryotes to Eukaryotes - you've conquered the entire classification system. BPSC/NEET/SSC ready! 🌟"
+      },
+      "navigation": {
+        "next": null,
+        "button_text": "Back to Topics 🏠"
+      }
+    }
+  ]
+}
