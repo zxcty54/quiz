@@ -1,0 +1,2768 @@
+{
+  "topic_id": "inheritance_biology_001",
+  "topic_title": "Inheritance & Variation — Principles of Heredity",
+  "target_exams": [
+    "BPSC",
+    "BSSC",
+    "RRB NTPC",
+    "SSC CGL",
+    "NEET",
+    "UPSC Prelims"
+  ],
+  "total_cards": 80,
+  "characters": {
+    "aman": {
+      "name": "Aman Sir",
+      "role": "teacher",
+      "avatar": "👨‍🏫"
+    },
+    "raju": {
+      "name": "Raju",
+      "role": "student",
+      "avatar": "👦"
+    }
+  },
+  "cards": [
+    {
+      "card_id": "card_01_intro",
+      "card_slug": "card_01_intro",
+      "type": "intro",
+      "concept_id": "chapter_introduction",
+      "level": 1,
+      "progress": {
+        "current": 1,
+        "total": 80
+      },
+      "intro_payload": {
+        "chapter_icon": "🧬",
+        "chapter_title": "Inheritance & Variation",
+        "subtitle": "Principles of Heredity — From Mendel to DNA",
+        "target_exams": [
+          "BPSC",
+          "BSSC",
+          "RRB NTPC",
+          "SSC CGL",
+          "NEET",
+          "UPSC Prelims"
+        ],
+        "learning_outcomes": [
+          "Understand Mendel's Laws of Inheritance with full exam traps",
+          "Master Monohybrid & Dihybrid crosses with ratios",
+          "Learn Incomplete Dominance, Codominance & Multiple Alleles",
+          "Understand Linkage, Crossing Over & Chromosome Theory",
+          "Master Sex Determination & Sex-Linked Inheritance",
+          "Learn Mutations, Genetic Disorders & Pedigree Analysis",
+          "Crack BPSC multi-statement & NEET equation-level questions"
+        ],
+        "modules": [
+          "Module 1: What is Inheritance? (Daily Life Hook)",
+          "Module 2: Mendel & His Pea Plant Experiments",
+          "Module 3: Laws of Inheritance — Law of Dominance & Segregation",
+          "Module 4: Monohybrid Cross & 3:1 Ratio",
+          "Module 5: Law of Independent Assortment & Dihybrid Cross",
+          "Module 6: Incomplete Dominance & Codominance",
+          "Module 7: Multiple Alleles & ABO Blood Groups",
+          "Module 8: Linkage & Crossing Over",
+          "Module 9: Sex Determination",
+          "Module 10: Sex-Linked Inheritance & Colour Blindness",
+          "Module 11: Mutations & Chromosomal Disorders",
+          "Module 12: Final Officer Revision & Master Quiz"
+        ]
+      },
+      "navigation": {
+        "next": "card_02_daily_life_hook",
+        "button_text": "Start Learning 🚀"
+      }
+    },
+    {
+      "card_id": "card_02_daily_life_hook",
+      "card_slug": "card_02_daily_life_hook",
+      "type": "chat",
+      "concept_id": "inheritance_introduction",
+      "level": 1,
+      "progress": {
+        "current": 2,
+        "total": 80
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, ek kaam karo — apni mummy ki aankh ka rang dekho, phir apne papa ki. Ab apni khud ki dekho. Kuch notice hua?"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir, meri mummy ki aankh kaali hai, papa ki bhi kaali... aur meri bhi kaali hi hai. Ye toh normal hai na?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul! Ab socho — kisi ke ghar mein bacha ekdum baap jaisa dikhta hai, kisi ke ghar mein maa jaisi naak hoti hai, kisi ke baal ghungraale hote hain jaise dada ke the. Ye sab ek hi kaam ki wajah se hota hai jise hum 'Inheritance' kehte hain — matlab wirasat mein milna. Jaisa zameen-makan virasat mein milti hai, usi tarah body ke features bhi milte hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Arey wah Sir! Matlab body ke features bhi virasat mein milte hain? Lekin ye kaise hota hai exactly?"
+        }
+      ],
+      "navigation": {
+        "next": "card_03_heredity_definition",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_03_heredity_definition",
+      "card_slug": "card_03_heredity_definition",
+      "type": "chat",
+      "concept_id": "heredity_variation_definition",
+      "level": 1,
+      "progress": {
+        "current": 3,
+        "total": 80
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Dekho, is poori cheez ka ek scientific naam hai — 'Heredity'. Heredity matlab: parents ke traits (features) ka children mein transfer hona. Aur jo branch of biology is poori cheez ko padhti hai usse 'Genetics' kehte hain. Genetics ka baap maana jaata hai — Gregor Johann Mendel. Ye ek Austrian monk the jo 1856 se 1863 tak matar ke daane (pea plants) par experiments karte rahe!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Hain?? Ek padri ne matar ke daane se itni badi discovery ki? Ye toh funny lag raha hai Sir!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan Raju! Aur yahin sabse bada exam trap hai — log Mendel ko scientist samajhte hain, lekin woh ek monk (padri) the aur Brunn ke ek monastery garden mein experiments karte the. Unki original research 1866 mein publish hui, lekin duniya ne unhe 1900 mein recognize kiya — unke marne ke 16 saal baad! Ye fact BPSC aur SSC dono mein aaya hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Ohh! 1866 mein publish, lekin recognize 1900 mein. Sir ye yaad rakhna padega!"
+        }
+      ],
+      "navigation": {
+        "next": "card_04_why_pea_plant",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_04_why_pea_plant",
+      "card_slug": "card_04_why_pea_plant",
+      "type": "chat",
+      "concept_id": "mendel_pea_plant_advantages",
+      "level": 1,
+      "progress": {
+        "current": 4,
+        "total": 80
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ruko, ek important sawal — Mendel ne matar ka paudha hi kyun choose kiya? Koi bhi paudha kyun nahi? Iske 5 reasons hain jo exam mein seedha poochhe jaate hain: (1) Short life cycle — jaldi result milta hai. (2) Bisexual flowers — self-pollination aasaan. (3) Easily controlled cross-pollination. (4) 7 clearly contrasting traits — confusion nahi. (5) Large number of offspring — results reliable hote hain. Mendel ne in 7 traits par kaam kiya!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir, 7 traits matlab 7 alag-alag cheezein? Kaunsi kaunsi?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Ekdum sahi sawal! Mendel ke 7 traits yaad karo ek trick se — 'Seed Shape, Seed Color, Pod Shape, Pod Color, Flower Color, Flower Position, Plant Height'. Matlab: bija ka aakaar (round/wrinkled), bija ka rang (yellow/green), phali ka aakaar (inflated/constricted), phali ka rang (green/yellow), phool ka rang (violet/white), phool ki jagah (axial/terminal), paudhe ki uchai (tall/dwarf). Ye saat traits Mendel ka heart hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Ye toh bahut saari cheezein hain Sir! Mix ho jayegi! Yaad kaise rakhun?"
+        }
+      ],
+      "navigation": {
+        "next": "card_05_guess_trait",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_05_guess_trait",
+      "card_slug": "card_05_guess_trait",
+      "type": "guess",
+      "concept_id": "mendel_seven_traits",
+      "level": 1,
+      "progress": {
+        "current": 5,
+        "total": 80
+      },
+      "guess_payload": {
+        "question": "Mendel ne matar ke kaun se trait mein tall vs dwarf study kiya tha? Aur tall ka result kya aaya jab dono ko cross karaya?",
+        "hint": "Socho — agar ek baap lamba hai aur ek maa choti hai, toh baccha kaisa hoga?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Baccha dono ke beech mein — medium height"
+          },
+          {
+            "id": "B",
+            "text": "Baccha hamesha tall hi aaya — dwarf gayab ho gaya"
+          },
+          {
+            "id": "C",
+            "text": "Kuch bacche tall, kuch dwarf — half half"
+          },
+          {
+            "id": "D",
+            "text": "Baccha hamesha dwarf aaya"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Yahin twist hai! Jab tall aur dwarf ko cross karaya, toh pehli generation mein SAARE bacche tall the — dwarf bilkul gayab! Isko Mendel ne 'Dominance' ka concept bataya. Tall 'dominant' trait hai, dwarf 'recessive'. Ye pehla law ka foundation hai!"
+      },
+      "navigation": {
+        "next": "card_06_quiz1_module1",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_06_quiz1_module1",
+      "card_slug": "card_06_quiz1_module1",
+      "type": "quiz",
+      "concept_id": "mendel_basics",
+      "level": 1,
+      "progress": {
+        "current": 6,
+        "total": 80
+      },
+      "quiz_payload": {
+        "question": "Gregor Mendel ki research paper officially publish hui thi kis saal?",
+        "options": [
+          {
+            "id": "A",
+            "text": "1856"
+          },
+          {
+            "id": "B",
+            "text": "1900"
+          },
+          {
+            "id": "C",
+            "text": "1866"
+          },
+          {
+            "id": "D",
+            "text": "1863"
+          }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Mendel ka kaam 1856-1863 ke beech hua. Research paper 1866 mein publish hui — 'Experiments on Plant Hybridization' naam se. Lekin world ne use 1900 mein recognize kiya jab De Vries, Correns aur Tschermak ne independently Mendel ka kaam rediscover kiya. 1866 vs 1900 — ye exam ka favorite trap hai!"
+      },
+      "navigation": {
+        "next": "card_07_quiz2_module1",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_07_quiz2_module1",
+      "card_slug": "card_07_quiz2_module1",
+      "type": "quiz",
+      "concept_id": "mendel_pea_advantages",
+      "level": 1,
+      "progress": {
+        "current": 7,
+        "total": 80
+      },
+      "quiz_payload": {
+        "question": "Mendel ne Pisum sativum (matar) par kitne contrasting traits study kiye?",
+        "options": [
+          {
+            "id": "A",
+            "text": "5"
+          },
+          {
+            "id": "B",
+            "text": "6"
+          },
+          {
+            "id": "C",
+            "text": "8"
+          },
+          {
+            "id": "D",
+            "text": "7"
+          }
+        ],
+        "correct_option_id": "D",
+        "explanation": "Mendel ne exactly 7 contrasting traits study kiye: Seed shape (round/wrinkled), Seed color (yellow/green), Pod shape (inflated/constricted), Pod color (green/yellow), Flower color (violet/white), Flower position (axial/terminal), Stem height (tall/dwarf). '7' — ye number BPSC, SSC, NEET teeno mein poochha gaya hai!"
+      },
+      "navigation": {
+        "next": "card_08_quiz3_module1",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_08_quiz3_module1",
+      "card_slug": "card_08_quiz3_module1",
+      "type": "quiz",
+      "concept_id": "genetics_father",
+      "level": 1,
+      "progress": {
+        "current": 8,
+        "total": 80
+      },
+      "quiz_payload": {
+        "question": "Niche diye gaye statements mein se kaunsa/kaunse sahi hai/hain?\n(I) Mendel ek Austrian monk the.\n(II) Mendel ne apna kaam ek monastery garden mein kiya.\n(III) Mendel ko unke jeevan mein hi 'Father of Genetics' ghoshit kiya gaya.\n(IV) Mendel ki paper 1866 mein publish hui thi.",
+        "options": [
+          {
+            "id": "A",
+            "text": "Sirf I aur II"
+          },
+          {
+            "id": "B",
+            "text": "I, II aur IV"
+          },
+          {
+            "id": "C",
+            "text": "Sirf IV"
+          },
+          {
+            "id": "D",
+            "text": "Saare char sahi hain"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Statement III galat hai — Mendel ko unke jeevan mein recognize NAHI kiya gaya. Unka kaam 1900 mein rediscover hua, jabki Mendel ka 1884 mein nidhan ho chuka tha. I (Austrian monk — SAHI), II (Monastery garden — SAHI), IV (1866 publish — SAHI). Ye BPSC-style multi-statement trap hai!"
+      },
+      "navigation": {
+        "next": "card_09_milestone_module1",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_09_milestone_module1",
+      "card_slug": "card_09_milestone_module1",
+      "type": "milestone",
+      "concept_id": "module1_complete",
+      "level": 1,
+      "progress": {
+        "current": 9,
+        "total": 80
+      },
+      "milestone_payload": {
+        "title": "MODULE 1 COMPLETE! 🎉",
+        "badge_emoji": "🌱",
+        "completed_topic": "Mendel & Introduction to Genetics",
+        "xp_earned": 50,
+        "milestone_progress": "Module 1/12 Clear",
+        "motivational_quote": "Mendel 16 saal baad recognize hua — tum ek session mein! Aage badho!"
+      },
+      "navigation": {
+        "next": "card_10_law_dominance_intro",
+        "button_text": "Start Module 2 ➔"
+      }
+    },
+    {
+      "card_id": "card_10_law_dominance_intro",
+      "card_slug": "card_10_law_dominance_intro",
+      "type": "chat",
+      "concept_id": "law_of_dominance",
+      "level": 2,
+      "progress": {
+        "current": 10,
+        "total": 80
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, ab sochte hain — Mendel ne jo observe kiya, usme ek pattern tha. Jab usne tall aur dwarf plants ko cross karaya, toh pehli generation ke SAARE bacche tall the. Dwarf wali property bilkul chhup gayi! Iska matlab kya hua? Iska matlab hua ki kuch traits bade hote hain, kuch chhote — bade wale 'show' hote hain, chhote wale 'chhup' jaate hain. Isi concept ko Mendel ka Pehla Kanoon kehte hain — 'Law of Dominance'!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab jo zyada powerful hai woh dikhta hai, aur jo kamzor hai woh chhup jaata hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul! Scientific bhasha mein — jo trait dikhta hai woh 'Dominant', jo chhupata hai woh 'Recessive'. Capital letter se dominant likhte hain — jaise 'T' for Tall, aur small letter se recessive — 't' for dwarf. Ek aur term yaad karo: 'Alleles' — ek hi gene ke do alag-alag forms ko alleles kehte hain. Tall aur Dwarf ek hi gene ke do alleles hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Ohhh! Toh T aur t ek dusre ke alleles hue? Ye toh samajh aa gaya Sir!"
+        }
+      ],
+      "navigation": {
+        "next": "card_11_genotype_phenotype",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_11_genotype_phenotype",
+      "card_slug": "card_11_genotype_phenotype",
+      "type": "chat",
+      "concept_id": "genotype_phenotype",
+      "level": 2,
+      "progress": {
+        "current": 11,
+        "total": 80
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ab do aur words jaan lo jo exam mein zaroor aate hain — 'Genotype' aur 'Phenotype'. Genotype matlab jo genes andar hain — andar ki asli pehchaan, jaise TT ya Tt ya tt. Phenotype matlab jo bahar dikhta hai — jaise 'tall' ya 'dwarf'. Ek important baat: TT wala bhi tall dikhega aur Tt wala bhi tall dikhega — kyunki T dominant hai. Lekin unka genotype alag hai! Yehin exam trap hota hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Hain?? TT aur Tt dono tall dikhenge? Toh inhe kaise pehchanen ki kaunsa TT hai aur kaunsa Tt?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bahut sahi sawal! Iske liye hoti hai 'Test Cross' — jis individual ka genotype nahi pata, use homozygous recessive (tt) se cross karwao. Agar saari offspring tall aayi — matlab original TT tha. Agar half tall aur half dwarf aayi — matlab original Tt tha. Test cross ka concept NEET mein almost har saal aata hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Waah! Ye toh detective work jaisa hai! Andar se kya hai ye jaanne ke liye test karo!"
+        }
+      ],
+      "navigation": {
+        "next": "card_12_homozygous_heterozygous",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_12_homozygous_heterozygous",
+      "card_slug": "card_12_homozygous_heterozygous",
+      "type": "chat",
+      "concept_id": "homozygous_heterozygous",
+      "level": 2,
+      "progress": {
+        "current": 12,
+        "total": 80
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Do aur terms hain jо life mein aate rehte hain exams mein — 'Homozygous' aur 'Heterozygous'. Homozygous matlab dono alleles same — jaise TT (homozygous dominant) ya tt (homozygous recessive). Heterozygous matlab dono alleles alag — jaise Tt. Heterozygous ko 'Hybrid' bhi kehte hain. Jab Mendel ne tall (TT) aur dwarf (tt) cross karaya — dono pure/true breeding the — matlab homozygous!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir, 'true breeding' matlab kya hota hai exactly?"
+        },
+        {
+          "speaker": "aman",
+          "text": "True breeding matlab jab ek plant apne aap se (self-pollination) cross karaye aur generation dar generation same trait de — matlab uska genotype pure hai, koi hidden recessive nahi. Mendel pehle sirf true breeding plants se kaam karta tha taaki results clear rahein. Yahin uski brilliance thi — usne experiment design carefully kiya! Ab aage ek aur badi law aati hai — Law of Segregation. Ready?"
+        },
+        {
+          "speaker": "raju",
+          "text": "Haan Sir, bilkul ready! Ye segregation wala kya hota hai?"
+        }
+      ],
+      "navigation": {
+        "next": "card_13_law_segregation",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_13_law_segregation",
+      "card_slug": "card_13_law_segregation",
+      "type": "chat",
+      "concept_id": "law_of_segregation",
+      "level": 2,
+      "progress": {
+        "current": 13,
+        "total": 80
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Law of Segregation — ye Mendel ka Second Law hai aur sabse important hai. Iska matlab: ek individual mein ek trait ke liye do alleles hote hain (jaise Tt), lekin jab reproductive cells (gametes) bante hain toh ye dono alleles alag ho jaate hain — ek gamete mein sirf ek allele jaata hai. Matlab Tt wala plant T wala gamete bhi deta hai aur t wala bhi — alag-alag! Isi ko 'Segregation' kehte hain — alag hona!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab maa-baap ke genes gamete mein split ho jaate hain? Jaise apni property dono bachon mein barabar baant do?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Exactly! Bilkul sahi analogy! Isi wajah se is law ka doosra naam hai — 'Law of Purity of Gametes'. Matlab: har gamete 'pure' hota hai — sirf ek allele carry karta hai, dono mix nahi hote gamete mein. Ye concept Meiosis cell division se link hai — jab cell divide hota hai reproduction ke liye, toh chromosomes alag ho jaate hain aur ek set ek gamete mein jaata hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Ohh! 'Law of Purity of Gametes' — ye naam exams mein poochhte hain Sir?"
+        }
+      ],
+      "navigation": {
+        "next": "card_14_quiz1_module2",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_14_quiz1_module2",
+      "card_slug": "card_14_quiz1_module2",
+      "type": "quiz",
+      "concept_id": "law_of_dominance_segregation",
+      "level": 2,
+      "progress": {
+        "current": 14,
+        "total": 80
+      },
+      "quiz_payload": {
+        "question": "Mendel ka 'Law of Segregation' ka doosra naam kya hai?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Law of Independent Assortment"
+          },
+          {
+            "id": "B",
+            "text": "Law of Dominance"
+          },
+          {
+            "id": "C",
+            "text": "Law of Purity of Gametes"
+          },
+          {
+            "id": "D",
+            "text": "Law of Blending Inheritance"
+          }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Law of Segregation ko 'Law of Purity of Gametes' bhi kehte hain kyunki gametes (reproductive cells) mein sirf ek allele hota hai — dono alleles kabhi ek saath gamete mein nahi jaate. Option D (Blending Inheritance) actually Mendel ki theory se ULTA hai — Mendel ne prove kiya ki genes blend nahi hote, discrete rehte hain!"
+      },
+      "navigation": {
+        "next": "card_15_quiz2_module2",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_15_quiz2_module2",
+      "card_slug": "card_15_quiz2_module2",
+      "type": "quiz",
+      "concept_id": "genotype_phenotype_quiz",
+      "level": 2,
+      "progress": {
+        "current": 15,
+        "total": 80
+      },
+      "quiz_payload": {
+        "question": "Ek pea plant ka genotype 'Tt' hai. Uska phenotype kya hoga jab T = Tall dominant aur t = dwarf recessive?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Dwarf — kyunki ek t present hai"
+          },
+          {
+            "id": "B",
+            "text": "Tall — kyunki T dominant hai"
+          },
+          {
+            "id": "C",
+            "text": "Medium height — dono ka average"
+          },
+          {
+            "id": "D",
+            "text": "Kuch nahi keh sakte"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Jab ek dominant allele (T) aur ek recessive allele (t) saath mein ho (heterozygous = Tt), toh phenotype hamesha dominant trait dikhata hai — matlab TALL. Recessive trait sirf tab dikhta hai jab dono alleles recessive hon (tt). Option C — blending — galat concept hai jo Mendel ne reject kiya!"
+      },
+      "navigation": {
+        "next": "card_16_quiz3_module2",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_16_quiz3_module2",
+      "card_slug": "card_16_quiz3_module2",
+      "type": "quiz",
+      "concept_id": "test_cross",
+      "level": 2,
+      "progress": {
+        "current": 16,
+        "total": 80
+      },
+      "quiz_payload": {
+        "question": "Test Cross mein unknown genotype wale individual ko kis se cross karaya jaata hai?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Homozygous dominant individual se"
+          },
+          {
+            "id": "B",
+            "text": "Heterozygous individual se"
+          },
+          {
+            "id": "C",
+            "text": "Homozygous recessive individual se"
+          },
+          {
+            "id": "D",
+            "text": "Kisi bhi random individual se"
+          }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Test cross mein hamesha homozygous recessive (tt) individual se cross karaya jaata hai. Agar offspring mein SAARE dominant phenotype hain — original TT tha. Agar 1:1 ratio (half dominant, half recessive) aaya — original Tt tha. Homozygous recessive isliye kyunki ye sirf recessive gamete (t) deta hai, jo masking nahi karta."
+      },
+      "navigation": {
+        "next": "card_17_milestone_module2",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_17_milestone_module2",
+      "card_slug": "card_17_milestone_module2",
+      "type": "milestone",
+      "concept_id": "module2_complete",
+      "level": 2,
+      "progress": {
+        "current": 17,
+        "total": 80
+      },
+      "milestone_payload": {
+        "title": "MODULE 2 DONE! 🏆",
+        "badge_emoji": "🧪",
+        "completed_topic": "Laws of Dominance & Segregation",
+        "xp_earned": 60,
+        "milestone_progress": "Module 2/12 Clear",
+        "motivational_quote": "Dominant ho jao — recessive mat raho! Aage badho Officer!"
+      },
+      "navigation": {
+        "next": "card_18_monohybrid_intro",
+        "button_text": "Start Module 3 ➔"
+      }
+    },
+    {
+      "card_id": "card_18_monohybrid_intro",
+      "card_slug": "card_18_monohybrid_intro",
+      "type": "chat",
+      "concept_id": "monohybrid_cross",
+      "level": 2,
+      "progress": {
+        "current": 18,
+        "total": 80
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ab actual cross dekhte hain! 'Monohybrid Cross' — mono matlab ek, hybrid matlab alag. Ek trait ke liye cross. Mendel ne liya tall (TT) aur dwarf (tt). Jab dono mein cross hua, pehli generation — F1 — mein saare Tt aaye, matlab saare tall. Ab Mendel ne F1 ke plants ko self-pollinate karaya — matlab Tt × Tt — aur jo F2 generation aayi usmein jawab tha!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Kya aaya F2 mein, Sir?"
+        },
+        {
+          "speaker": "aman",
+          "text": "F2 mein Mendel ne count kiya: 3 Tall : 1 Dwarf. Matlab 75% tall aur 25% dwarf! Aur genotype mein dekha toh: 1 TT : 2 Tt : 1 tt. Ye hain famous ratios — Phenotypic ratio 3:1 aur Genotypic ratio 1:2:1! Ye ratios NEET, BPSC, SSC teeno mein poochhe jaate hain. Yaad karo: F2 phenotype = 3:1, F2 genotype = 1:2:1!"
+        },
+        {
+          "speaker": "raju",
+          "text": "3:1 aur 1:2:1 — Sir ye dono alag-alag hain na? Ye confuse karenge!"
+        }
+      ],
+      "navigation": {
+        "next": "card_19_punnett_square",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_19_punnett_square",
+      "card_slug": "card_19_punnett_square",
+      "type": "chat",
+      "concept_id": "punnett_square",
+      "level": 2,
+      "progress": {
+        "current": 19,
+        "total": 80
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Confuse mat ho! Ek tool hai jo sab clear kar deta hai — 'Punnett Square'. Ye R.C. Punnett ne invent kiya tha — ek British geneticist. Ye ek grid hoti hai jisme ek parent ke gametes top mein likhte hain, doosre ke side mein, aur boxes mein combination fill karte hain. Tt × Tt ka Punnett Square banao toh: TT, Tt, Tt, tt — 4 combinations. Mein yahan clearly describe karta hoon: Row1: T×T=TT, T×t=Tt; Row2: t×T=Tt, t×t=tt."
+        },
+        {
+          "speaker": "raju",
+          "text": "Ohh! Toh 4 combinations mein 1 TT, 2 Tt, 1 tt — that's 1:2:1 genotype ratio! Aur dikhne mein TT aur Tt dono tall = 3 tall, 1 tt dwarf = 3:1 phenotype ratio! Sir samajh gaya!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Shandaar! Bilkul perfect pakda! Ab ek exam trap bata dun — Mendel ne actually kaafi zyada plants count kiye the F2 mein. Usne approximately 7324 seeds count kiye aur 5474 round aur 1850 wrinkled mile — jo 2.96:1 tha, practically 3:1! Itni badi counting ki wajah se hi law reliable mana gaya. Ye statistical approach bhi exams mein poochha jaata hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "7324 seeds! Haan yaar, ek monk ne itni mehnat ki — respect hai Sir!"
+        }
+      ],
+      "navigation": {
+        "next": "card_20_f1_f2_generations",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_20_f1_f2_generations",
+      "card_slug": "card_20_f1_f2_generations",
+      "type": "chat",
+      "concept_id": "f1_f2_generation_recap",
+      "level": 2,
+      "progress": {
+        "current": 20,
+        "total": 80
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ek important vocabulary clear karte hain — P generation (Parents — original pure breeds), F1 generation (First Filial — pehle bacche, saare hybrid), F2 generation (Second Filial — F1 ko self-pollinate karne ke baad ke bacche). Mendel ka genius ye tha ki usne F2 tak gaya — agar woh sirf F1 tak rokta, toh Law of Dominance ke aage kuch nahi samajh pata. F2 mein recessive wapas aaya — woh 'lost' nahi hua tha!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Haan! Matlab recessive F1 mein chhup gaya tha, F2 mein wapas aa gaya — genes destroy nahi hote, sirf chhup jaate hain!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Exactly! Ye Mendel ki most revolutionary insight thi — genes particulate hain, blend nahi hote! Isse pehle log 'Blending Theory' mein believe karte the — ki dono parents ke characters mix ho jaate hain permanently. Mendel ne galat sabit kiya. Aur isi wajah se recessive trait generations baad wapas aa sakta hai. Socho — kisi ghar mein dono parents normal hain lekin bacha genetic disease lekar aata hai — kyunki dono mein hidden recessive tha!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Ohh! Isliye kabhi kabhi disease kahan se aayi ye samajh nahi aata! Chhupa hua recessive tha!"
+        }
+      ],
+      "navigation": {
+        "next": "card_21_quiz1_module3",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_21_quiz1_module3",
+      "card_slug": "card_21_quiz1_module3",
+      "type": "quiz",
+      "concept_id": "monohybrid_ratio",
+      "level": 2,
+      "progress": {
+        "current": 21,
+        "total": 80
+      },
+      "quiz_payload": {
+        "question": "Monohybrid cross mein F2 generation ka phenotypic ratio kya hota hai?",
+        "options": [
+          {
+            "id": "A",
+            "text": "1:2:1"
+          },
+          {
+            "id": "B",
+            "text": "9:3:3:1"
+          },
+          {
+            "id": "C",
+            "text": "3:1"
+          },
+          {
+            "id": "D",
+            "text": "1:1"
+          }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Monohybrid F2 mein phenotypic ratio = 3:1 (3 dominant : 1 recessive). Genotypic ratio = 1:2:1 (1 homozygous dominant : 2 heterozygous : 1 homozygous recessive). 9:3:3:1 dihybrid cross ka F2 phenotypic ratio hai — ye mix mat karo! 1:1 test cross aur back cross mein aata hai."
+      },
+      "navigation": {
+        "next": "card_22_quiz2_module3",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_22_quiz2_module3",
+      "card_slug": "card_22_quiz2_module3",
+      "type": "quiz",
+      "concept_id": "punnett_square_quiz",
+      "level": 2,
+      "progress": {
+        "current": 22,
+        "total": 80
+      },
+      "quiz_payload": {
+        "question": "Punnett Square kis scientist ne develop kiya tha?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Gregor Mendel"
+          },
+          {
+            "id": "B",
+            "text": "Thomas Morgan"
+          },
+          {
+            "id": "C",
+            "text": "R.C. Punnett"
+          },
+          {
+            "id": "D",
+            "text": "Hugo De Vries"
+          }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Punnett Square Reginald Crundall Punnett ne develop kiya tha — ek British geneticist. Mendel ke time mein ye tool nahi tha — Mendel ne manually count kiya tha. Punnett ne baad mein ye visual grid tool develop ki. Thomas Morgan linkage ke liye famous hain, Hugo De Vries mutation theory ke liye."
+      },
+      "navigation": {
+        "next": "card_23_quiz3_module3",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_23_quiz3_module3",
+      "card_slug": "card_23_quiz3_module3",
+      "type": "quiz",
+      "concept_id": "f2_generation_trap",
+      "level": 2,
+      "progress": {
+        "current": 23,
+        "total": 80
+      },
+      "quiz_payload": {
+        "question": "Mendel ne matar ke round (RR) aur wrinkled (rr) seeds ko cross karaya. F2 generation mein approximately kitne seeds round the aur kitne wrinkled, agar total 7324 seeds the?",
+        "options": [
+          {
+            "id": "A",
+            "text": "3662 Round : 3662 Wrinkled"
+          },
+          {
+            "id": "B",
+            "text": "5474 Round : 1850 Wrinkled"
+          },
+          {
+            "id": "C",
+            "text": "6000 Round : 1324 Wrinkled"
+          },
+          {
+            "id": "D",
+            "text": "4000 Round : 3324 Wrinkled"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Mendel ka actual experimental data: 7324 seeds mein 5474 Round aur 1850 Wrinkled — approximately 2.96:1 jo practically 3:1 hai. Ye Mendel ka actual published data hai — BPSC aur NEET mein exact numbers poochhe gaye hain. 3:1 ratio ke liye 75% : 25% bhi yaad karo!"
+      },
+      "navigation": {
+        "next": "card_24_milestone_module3",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_24_milestone_module3",
+      "card_slug": "card_24_milestone_module3",
+      "type": "milestone",
+      "concept_id": "module3_complete",
+      "level": 2,
+      "progress": {
+        "current": 24,
+        "total": 80
+      },
+      "milestone_payload": {
+        "title": "MODULE 3 CLEARED! 🌟",
+        "badge_emoji": "🔬",
+        "completed_topic": "Monohybrid Cross & 3:1 Ratio",
+        "xp_earned": 70,
+        "milestone_progress": "Module 3/12 Clear",
+        "motivational_quote": "3:1 ratio ab dimag mein set ho gaya — aage dihybrid mein 9:3:3:1 master karte hain!"
+      },
+      "navigation": {
+        "next": "card_25_dihybrid_intro",
+        "button_text": "Start Module 4 ➔"
+      }
+    },
+    {
+      "card_id": "card_25_dihybrid_intro",
+      "card_slug": "card_25_dihybrid_intro",
+      "type": "chat",
+      "concept_id": "law_independent_assortment",
+      "level": 3,
+      "progress": {
+        "current": 25,
+        "total": 80
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ab Mendel ka Third Law — 'Law of Independent Assortment'. Ye tab aata hai jab do traits ek saath study karo — isko 'Dihybrid Cross' kehte hain. Mendel ne round-yellow seeds (RRYY) aur wrinkled-green seeds (rryy) cross karaye. F1 mein saare RrYy — round-yellow (dono dominant). Ab F1 × F1 karaya — matlab RrYy × RrYy."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir, ab F2 mein kya aayega? Mujhe lagta hai sirf round-yellow aur wrinkled-green aayenge!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Yahin toh twist hai Raju! F2 mein 4 types aaye: Round-Yellow, Round-Green, Wrinkled-Yellow, Wrinkled-Green — matlab nayi combinations bhi! Ratio tha 9:3:3:1 — 9 Round-Yellow, 3 Round-Green, 3 Wrinkled-Yellow, 1 Wrinkled-Green. Nayi combinations (Round-Green aur Wrinkled-Yellow) isliye aayi kyunki dono genes ek doosre se independently sort hote hain — alag alag fate!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab seed shape aur seed color ek doosre ko affect nahi karte? Ye independent hain? Ekdum amazing!"
+        }
+      ],
+      "navigation": {
+        "next": "card_26_9331_ratio_explained",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_26_9331_ratio_explained",
+      "card_slug": "card_26_9331_ratio_explained",
+      "type": "chat",
+      "concept_id": "dihybrid_9331_ratio",
+      "level": 3,
+      "progress": {
+        "current": 26,
+        "total": 80
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "9:3:3:1 ratio ko samjho: 9 (R_Y_) = Round-Yellow, 3 (R_yy) = Round-Green, 3 (rrY_) = Wrinkled-Yellow, 1 (rryy) = Wrinkled-Green. Total 16 combinations. Underscore '_' matlab koi bhi allele — dominant ya recessive — phenotype same rahega. Aur ye tabhi valid hai jab dono genes DIFFERENT chromosomes par hon — matlab unlinked. Agar same chromosome par hote toh Independent Assortment ka law break ho jaata!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Ohh! Matlab ye law sirf tab kaam karta hai jab genes alag chromosomes par hon? Same chromosome par hote toh problem?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul! Agar genes same chromosome par hain — unhe 'Linked genes' kehte hain — aur tab 9:3:3:1 nahi aata. Ye Mendel ki limitation thi — pea plant mein jo 7 genes usne choose kiye, sanyog se woh alag chromosomes par the! Agar linked genes choose karta toh results galat lagte. Ye ek reason hai kuch log kehte hain Mendel 'lucky' bhi tha! Linkage baad mein Morgan ne explain kiya."
+        },
+        {
+          "speaker": "raju",
+          "text": "Hahaha! Mendel lucky bhi tha aur brilliant bhi! Interesting Sir!"
+        }
+      ],
+      "navigation": {
+        "next": "card_27_quiz1_module4",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_27_quiz1_module4",
+      "card_slug": "card_27_quiz1_module4",
+      "type": "quiz",
+      "concept_id": "dihybrid_cross_ratio",
+      "level": 3,
+      "progress": {
+        "current": 27,
+        "total": 80
+      },
+      "quiz_payload": {
+        "question": "Dihybrid cross (RrYy × RrYy) ke F2 generation mein phenotypic ratio kya hota hai?",
+        "options": [
+          {
+            "id": "A",
+            "text": "3:1"
+          },
+          {
+            "id": "B",
+            "text": "1:2:1"
+          },
+          {
+            "id": "C",
+            "text": "9:3:3:1"
+          },
+          {
+            "id": "D",
+            "text": "1:1:1:1"
+          }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Dihybrid F2 phenotypic ratio = 9:3:3:1. Ye tab valid hai jab dono genes independent (alag chromosomes par) hon. 3:1 monohybrid ka ratio hai. 1:1:1:1 dihybrid test cross (RrYy × rryy) mein aata hai. 1:2:1 monohybrid genotypic ratio hai. Exam mein in ratios ko swap karके trap banate hain!"
+      },
+      "navigation": {
+        "next": "card_28_quiz2_module4",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_28_quiz2_module4",
+      "card_slug": "card_28_quiz2_module4",
+      "type": "quiz",
+      "concept_id": "independent_assortment_condition",
+      "level": 3,
+      "progress": {
+        "current": 28,
+        "total": 80
+      },
+      "quiz_payload": {
+        "question": "Law of Independent Assortment kab apply hota hai?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Jab dono genes same chromosome par hon"
+          },
+          {
+            "id": "B",
+            "text": "Jab dono genes alag (non-homologous) chromosomes par hon"
+          },
+          {
+            "id": "C",
+            "text": "Sirf sex chromosomes ke liye"
+          },
+          {
+            "id": "D",
+            "text": "Jab genes linked hon"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Law of Independent Assortment tab apply hota hai jab dono gene pairs alag (non-homologous) chromosomes par hon. Same chromosome par hone par genes 'linked' hote hain aur Independent Assortment fail ho jaata hai — tab Morgan ka Linkage theory apply hota hai. Mendel ke 7 pea genes sanyog se 7 alag chromosomes par the (pea plant mein 7 chromosome pairs hain)!"
+      },
+      "navigation": {
+        "next": "card_29_quiz3_module4",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_29_quiz3_module4",
+      "card_slug": "card_29_quiz3_module4",
+      "type": "quiz",
+      "concept_id": "dihybrid_newcombinations",
+      "level": 3,
+      "progress": {
+        "current": 29,
+        "total": 80
+      },
+      "quiz_payload": {
+        "question": "Dihybrid cross RRYY × rryy mein F1 generation ka genotype kya hoga?",
+        "options": [
+          {
+            "id": "A",
+            "text": "RRYY"
+          },
+          {
+            "id": "B",
+            "text": "RrYy"
+          },
+          {
+            "id": "C",
+            "text": "rryy"
+          },
+          {
+            "id": "D",
+            "text": "RRyy"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "RRYY (parent 1) ke gametes: RY only. rryy (parent 2) ke gametes: ry only. In dono ka combination: RY + ry = RrYy. Isliye F1 mein saare plants RrYy honge — heterozygous for both traits — aur phenotype: Round-Yellow (dono dominant dikhenge). Ye NEET mein direct poochha gaya hai!"
+      },
+      "navigation": {
+        "next": "card_30_milestone_module4",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_30_milestone_module4",
+      "card_slug": "card_30_milestone_module4",
+      "type": "milestone",
+      "concept_id": "module4_complete",
+      "level": 3,
+      "progress": {
+        "current": 30,
+        "total": 80
+      },
+      "milestone_payload": {
+        "title": "MODULE 4 SMASHED! 💥",
+        "badge_emoji": "🌿",
+        "completed_topic": "Dihybrid Cross & Independent Assortment",
+        "xp_earned": 80,
+        "milestone_progress": "Module 4/12 Clear",
+        "motivational_quote": "9:3:3:1 ab dil mein baith gaya! Aage incomplete dominance ka magic dekhenge!"
+      },
+      "navigation": {
+        "next": "card_31_incomplete_dominance",
+        "button_text": "Start Module 5 ➔"
+      }
+    },
+    {
+      "card_id": "card_31_incomplete_dominance",
+      "card_slug": "card_31_incomplete_dominance",
+      "type": "chat",
+      "concept_id": "incomplete_dominance",
+      "level": 3,
+      "progress": {
+        "current": 31,
+        "total": 80
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ab ek bahut confusing topic hai — 'Incomplete Dominance'. Raju, ek baar socho — agar red flower (RR) aur white flower (rr) cross karo aur F1 mein PINK flower aaye — toh Mendel ka dominance law toh fail ho gaya? Kyunki dominant trait toh poora dikhna chahiye tha!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Haan Sir! Agar Mendel sahi hai toh red hi aana chahiye tha na? Pink kyun aaya? Blending ho gayi?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Dekhte dikhta hai blending, lekin hai nahi! Ye hai 'Incomplete Dominance' — jab dominant allele itna powerful nahi ki recessive ko poora dabaa sake. Toh beech mein kuch dikhta hai. Classic example: Antirrhinum (snapdragon, dog flower) — RR = Red, rr = White, Rr = Pink. Ab agar Rr × Rr karo — F2 mein kya ratio aayega? 1 Red : 2 Pink : 1 White — matlab phenotypic ratio bhi 1:2:1 ho jaata hai, same as genotypic ratio!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Woh toh Mendel wala 3:1 phenotypic ratio change ho gaya! 1:2:1 ho gaya phenotype mein bhi! Ye toh exam mein pakka confuse karega!"
+        }
+      ],
+      "navigation": {
+        "next": "card_32_codominance",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_32_codominance",
+      "card_slug": "card_32_codominance",
+      "type": "chat",
+      "concept_id": "codominance",
+      "level": 3,
+      "progress": {
+        "current": 32,
+        "total": 80
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Aur ek step aage — 'Codominance'. Ye incomplete dominance se alag hai. Codominance mein dono alleles ek saath APNA-APNA phenotype dikhate hain — koi mix nahi, koi dabana nahi. Classic example: AB blood group mein I^A aur I^B dono saath dono antigens banate hain — A bhi aur B bhi. Ya socho — roan cattle mein red aur white dono saath hote hain — mix nahi, separately dikhte hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab incomplete dominance mein mix ho jaata hai — pink, aur codominance mein dono saath apna dikhate hain — AB jaise? Ye toh bilkul alag hai!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul! Ye exam ka most favorite confusion point hai: Incomplete Dominance = mixing like pink (middle), Codominance = both express separately like AB. Ek aur important difference: Incomplete dominance mein ek allele nahi daba sakta, codominance mein koi dabata hi nahi — dono equal power ke hain. NEET 2019 mein exactly yahi difference poochhha gaya tha!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir, incomplete dominance = blend, codominance = dono saath — ye yaad rakhna padega!"
+        }
+      ],
+      "navigation": {
+        "next": "card_33_quiz1_module5",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_33_quiz1_module5",
+      "card_slug": "card_33_quiz1_module5",
+      "type": "quiz",
+      "concept_id": "incomplete_dominance_quiz",
+      "level": 3,
+      "progress": {
+        "current": 33,
+        "total": 80
+      },
+      "quiz_payload": {
+        "question": "Snapdragon (Antirrhinum) mein red (RR) × white (rr) cross se F1 mein pink flowers aate hain. F1 × F1 cross se F2 mein phenotypic ratio kya hoga?",
+        "options": [
+          {
+            "id": "A",
+            "text": "3 Red : 1 White"
+          },
+          {
+            "id": "B",
+            "text": "1 Red : 2 Pink : 1 White"
+          },
+          {
+            "id": "C",
+            "text": "All Pink"
+          },
+          {
+            "id": "D",
+            "text": "2 Red : 1 Pink : 1 White"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Incomplete Dominance mein F2 phenotypic ratio = 1:2:1 (1 Red : 2 Pink : 1 White) — genotypic ratio ke same! Ye Mendel ke 3:1 se alag hai kyunki Rr ka phenotype alag (pink) hai. Option A (3:1) Mendelian dominance mein hota hai, option C sirf F1 mein tha. Ye NEET ka evergreen question hai!"
+      },
+      "navigation": {
+        "next": "card_34_quiz2_module5",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_34_quiz2_module5",
+      "card_slug": "card_34_quiz2_module5",
+      "type": "quiz",
+      "concept_id": "codominance_vs_incomplete",
+      "level": 3,
+      "progress": {
+        "current": 34,
+        "total": 80
+      },
+      "quiz_payload": {
+        "question": "Codominance ka sabse best example kaunsa hai?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Snapdragon mein pink flowers"
+          },
+          {
+            "id": "B",
+            "text": "Matar mein tall × dwarf = tall F1"
+          },
+          {
+            "id": "C",
+            "text": "Manushya mein AB blood group"
+          },
+          {
+            "id": "D",
+            "text": "Dwarf trait ka F1 mein chhupaana"
+          }
+        ],
+        "correct_option_id": "C",
+        "explanation": "AB blood group codominance ka perfect example hai — I^A aur I^B dono alleles ek saath apna-apna product (A antigen aur B antigen) banate hain. Snapdragon pink flowers = incomplete dominance (mixing). Tall × dwarf = tall = complete dominance (Mendel). Dwarf ka chhupaana bhi complete dominance ka example hai."
+      },
+      "navigation": {
+        "next": "card_35_quiz3_module5",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_35_quiz3_module5",
+      "card_slug": "card_35_quiz3_module5",
+      "type": "quiz",
+      "concept_id": "dominance_types_trap",
+      "level": 3,
+      "progress": {
+        "current": 35,
+        "total": 80
+      },
+      "quiz_payload": {
+        "question": "BPSC Trap: Niche mein se kaunsa statement GALAT hai?\n(I) Incomplete dominance mein F2 phenotypic ratio 1:2:1 hota hai.\n(II) Codominance mein ek allele doosre ko dabata hai.\n(III) AB blood group codominance ka example hai.\n(IV) Snapdragon mein pink F1 incomplete dominance dikhata hai.",
+        "options": [
+          {
+            "id": "A",
+            "text": "Sirf II"
+          },
+          {
+            "id": "B",
+            "text": "Sirf I"
+          },
+          {
+            "id": "C",
+            "text": "I aur III"
+          },
+          {
+            "id": "D",
+            "text": "II aur IV"
+          }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Statement II GALAT hai — Codominance mein koi bhi allele doosre ko nahi dabata, dono independently express hote hain. Statement I SAHI — incomplete dominance F2 mein 1:2:1. Statement III SAHI — AB blood group codominance. Statement IV SAHI — Snapdragon pink = incomplete dominance. Isliye sirf II galat hai — Answer A!"
+      },
+      "navigation": {
+        "next": "card_36_milestone_module5",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_36_milestone_module5",
+      "card_slug": "card_36_milestone_module5",
+      "type": "milestone",
+      "concept_id": "module5_complete",
+      "level": 3,
+      "progress": {
+        "current": 36,
+        "total": 80
+      },
+      "milestone_payload": {
+        "title": "MODULE 5 CONQUERED! 🎯",
+        "badge_emoji": "🌸",
+        "completed_topic": "Incomplete Dominance & Codominance",
+        "xp_earned": 80,
+        "milestone_progress": "Module 5/12 Clear",
+        "motivational_quote": "Dominance ke teen types clear! Ab blood groups ka master ban te hain!"
+      },
+      "navigation": {
+        "next": "card_37_multiple_alleles_abo",
+        "button_text": "Start Module 6 ➔"
+      }
+    },
+    {
+      "card_id": "card_37_multiple_alleles_abo",
+      "card_slug": "card_37_multiple_alleles_abo",
+      "type": "chat",
+      "concept_id": "multiple_alleles_abo",
+      "level": 3,
+      "progress": {
+        "current": 37,
+        "total": 80
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, blood group ke baare mein suna hai? A, B, AB, O — ye sab alag-alag hain. Ab socho — ek gene par sirf 2 alleles hote hain, lekin blood group mein 4 types hain. Ye kaise? Kyunki ABO blood group mein 3 alleles hain ek gene par — I^A, I^B, aur i. Isko 'Multiple Alleles' kehte hain — ek gene ke teen ya zyada alleles. Lekin ek individual mein sirf 2 hi ho sakte hain (ek maa se, ek baap se)!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Teen alleles hain lekin apne andar sirf 2? Matlab ye teeno sabke andar divided hain?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! Population mein 3 alleles hain (I^A, I^B, i), lekin kisi ek individual mein sirf do: jaise I^A I^B = AB group, I^A i = A group, I^B i = B group, ii = O group. Ab twist: I^A aur I^B dono dominant hain 'i' ke upar — ye complete dominance. Lekin I^A aur I^B ek doosre ke liye codominant hain — isliye AB group mein dono antigens! Land mark discovery tha ye!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Ohh! Toh O group wala sirf 'ii' hai — koi antigen nahi? Aur AB mein dono — A bhi B bhi? Amazing Sir!"
+        }
+      ],
+      "navigation": {
+        "next": "card_38_blood_group_genetics",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_38_blood_group_genetics",
+      "card_slug": "card_38_blood_group_genetics",
+      "type": "chat",
+      "concept_id": "abo_blood_group_genetics",
+      "level": 3,
+      "progress": {
+        "current": 38,
+        "total": 80
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ab kuch important blood group facts jo exam mein seedha poochhe jaate hain: O group — Universal Donor kyunki koi antigen nahi surface par, toh recipient reject nahi karega. AB group — Universal Recipient kyunki dono antibodies nahi hain blood mein, isliye kisi bhi group ka blood le sakta hai. Lekin ye 'universal' concept sirf red blood cells ke liye hai — plasma mein antibodies hoti hain alag!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir, O group universal donor aur AB universal recipient — ye toh bahut important hai! Lekin antibodies kya hoti hain?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Antibodies woh proteins hain jo blood mein hote hain aur foreign antigens ko attack karte hain. A group waale ke blood mein anti-B antibody hoti hai. B group mein anti-A hoti hai. O group mein dono — anti-A aur anti-B — isliye sab se zyada restricted donor bhi hai actually! AB group mein koi bhi antibody nahi hoti — isliye kisi bhi antigen se dara nahi. Ye ABO system Karl Landsteiner ne 1901 mein discover kiya tha!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Karl Landsteiner! 1901! Ye toh Nobel Prize wali discovery hogi Sir?"
+        }
+      ],
+      "navigation": {
+        "next": "card_39_quiz1_module6",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_39_quiz1_module6",
+      "card_slug": "card_39_quiz1_module6",
+      "type": "quiz",
+      "concept_id": "abo_blood_group_quiz",
+      "level": 3,
+      "progress": {
+        "current": 39,
+        "total": 80
+      },
+      "quiz_payload": {
+        "question": "ABO Blood Group system discover kiya tha:",
+        "options": [
+          {
+            "id": "A",
+            "text": "Gregor Mendel ne — 1866 mein"
+          },
+          {
+            "id": "B",
+            "text": "Karl Landsteiner ne — 1901 mein"
+          },
+          {
+            "id": "C",
+            "text": "Thomas Morgan ne — 1910 mein"
+          },
+          {
+            "id": "D",
+            "text": "Hugo De Vries ne — 1900 mein"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "ABO Blood Group system Karl Landsteiner ne 1901 mein discover kiya. Unhe is discovery ke liye 1930 mein Nobel Prize in Physiology or Medicine mila. Ye SSC CGL, RRB NTPC aur BPSC teeno mein poochha gaya hai. Thomas Morgan ne linkage theory di (1910), Hugo De Vries ne mutation theory di (1900)."
+      },
+      "navigation": {
+        "next": "card_40_quiz2_module6",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_40_quiz2_module6",
+      "card_slug": "card_40_quiz2_module6",
+      "type": "quiz",
+      "concept_id": "blood_group_genotype",
+      "level": 3,
+      "progress": {
+        "current": 40,
+        "total": 80
+      },
+      "quiz_payload": {
+        "question": "Ek vyakti ka blood group 'O' hai. Uska possible genotype kya hoga?",
+        "options": [
+          {
+            "id": "A",
+            "text": "I^A I^B"
+          },
+          {
+            "id": "B",
+            "text": "I^A i"
+          },
+          {
+            "id": "C",
+            "text": "ii"
+          },
+          {
+            "id": "D",
+            "text": "I^B i"
+          }
+        ],
+        "correct_option_id": "C",
+        "explanation": "O blood group ka genotype sirf 'ii' hota hai — dono alleles recessive 'i'. I^A I^B = AB group, I^A i = A group (I^A dominant over i), I^B i = B group (I^B dominant over i). O group recessive hai isliye sirf homozygous recessive (ii) hi O phenotype deta hai. Ye NEET aur BPSC ka direct question hai!"
+      },
+      "navigation": {
+        "next": "card_41_quiz3_module6",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_41_quiz3_module6",
+      "card_slug": "card_41_quiz3_module6",
+      "type": "quiz",
+      "concept_id": "universal_donor_recipient",
+      "level": 3,
+      "progress": {
+        "current": 41,
+        "total": 80
+      },
+      "quiz_payload": {
+        "question": "Multi-statement: ABO blood groups ke baare mein:\n(I) O group universal donor hai kyunki surface par koi antigen nahi.\n(II) AB group universal recipient hai kyunki plasma mein koi antibody nahi.\n(III) A group ke blood mein anti-B antibody hoti hai.\n(IV) B group ke blood mein anti-A aur anti-B dono antibodies hoti hain.",
+        "options": [
+          {
+            "id": "A",
+            "text": "Sirf I aur II"
+          },
+          {
+            "id": "B",
+            "text": "I, II aur III"
+          },
+          {
+            "id": "C",
+            "text": "Sirf IV"
+          },
+          {
+            "id": "D",
+            "text": "Saare char"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Statement IV GALAT hai — B group mein sirf anti-A antibody hoti hai, dono nahi. O group mein anti-A aur anti-B dono hoti hain. Statement I (O = no antigen, universal donor — SAHI), II (AB = no antibody, universal recipient — SAHI), III (A group = anti-B antibody — SAHI). Isliye I, II, III sahi — Answer B!"
+      },
+      "navigation": {
+        "next": "card_42_milestone_module6",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_42_milestone_module6",
+      "card_slug": "card_42_milestone_module6",
+      "type": "milestone",
+      "concept_id": "module6_complete",
+      "level": 3,
+      "progress": {
+        "current": 42,
+        "total": 80
+      },
+      "milestone_payload": {
+        "title": "MODULE 6 DONE! 🩸",
+        "badge_emoji": "🩸",
+        "completed_topic": "Multiple Alleles & ABO Blood Groups",
+        "xp_earned": 80,
+        "milestone_progress": "Module 6/12 Clear",
+        "motivational_quote": "Blood group genetics ab clear hai — aage Linkage aur Crossing Over ka twist aata hai!"
+      },
+      "navigation": {
+        "next": "card_43_linkage_intro",
+        "button_text": "Start Module 7 ➔"
+      }
+    },
+    {
+      "card_id": "card_43_linkage_intro",
+      "card_slug": "card_43_linkage_intro",
+      "type": "chat",
+      "concept_id": "linkage_morgan",
+      "level": 4,
+      "progress": {
+        "current": 43,
+        "total": 80
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ab ek American scientist aate hain — Thomas Hunt Morgan. Unhone 1910 ke aas-paas Drosophila melanogaster (fruit fly — chhoti machli jaise makkhi) par kaam kiya. Morgan ne kuch aise crosses kiye jahan expected 9:3:3:1 ratio nahi aaya — genes saath-saath aate the, alag nahi hote the! Morgan ne samjha — ye genes same chromosome par hain! Ise 'Linkage' kaha."
+        },
+        {
+          "speaker": "raju",
+          "text": "Drosophila ko kyun choose kiya Morgan ne? Matar ki tarah koi khaas wajah thi?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bahut sahi sawal! Drosophila ke advantages: (1) Short life cycle — 2 weeks mein ek generation. (2) Bahut zyada offspring — thousands eggs. (3) Sirf 4 pairs chromosomes — simple! (4) Clear visible traits. (5) Cheap to maintain! Morgan ko Drosophila work ke liye 1933 mein Nobel Prize mila — genetics mein pehla Nobel! Drosophila ko 'The Model Organism of Genetics' bhi kehte hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "1933 mein Nobel! Sir Drosophila toh bahut powerful machli nikli!"
+        }
+      ],
+      "navigation": {
+        "next": "card_44_crossing_over",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_44_crossing_over",
+      "card_slug": "card_44_crossing_over",
+      "type": "chat",
+      "concept_id": "crossing_over_recombination",
+      "level": 4,
+      "progress": {
+        "current": 44,
+        "total": 80
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Linkage ke saath aata hai 'Crossing Over'. Jab meiosis hota hai — reproductive cells bante time — homologous chromosomes ek doosre se physically cross karte hain aur apne segments exchange karte hain. Is exchange ko 'Crossing Over' kehte hain. Jahan exchange hota hai use 'Chiasma' kehte hain. Result: nayi gene combinations banti hain jise 'Recombinants' kehte hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab chromosomes literally apne pieces exchange karte hain? Like two jigsaw puzzles ke pieces swap karo?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Exactly! Aur ye natural variation ka ek major source hai — har baar naye combinations! Crossing over ki frequency se hum judge karte hain ki do genes kitne door hain chromosome par — zyada door = zyada crossing over = zyada recombinants. Is se 'Chromosomal Maps' ya 'Genetic Maps' banate hain. Morgan ne pehle genetic map banaya — Drosophila ka! Unit of genetic distance = 'centiMorgan' (cM) — Morgan ke naam par!"
+        },
+        {
+          "speaker": "raju",
+          "text": "centiMorgan! Morgan ke naam par unit! Ye toh bahut badi baat hai Sir!"
+        }
+      ],
+      "navigation": {
+        "next": "card_45_quiz1_module7",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_45_quiz1_module7",
+      "card_slug": "card_45_quiz1_module7",
+      "type": "quiz",
+      "concept_id": "linkage_crossing_over_quiz",
+      "level": 4,
+      "progress": {
+        "current": 45,
+        "total": 80
+      },
+      "quiz_payload": {
+        "question": "Thomas Hunt Morgan ne kis organism par kaam karke Linkage discover kiya?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Pisum sativum (Matar)"
+          },
+          {
+            "id": "B",
+            "text": "Drosophila melanogaster (Fruit Fly)"
+          },
+          {
+            "id": "C",
+            "text": "Mus musculus (Mouse)"
+          },
+          {
+            "id": "D",
+            "text": "Neurospora crassa (Bread Mould)"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Morgan ne Drosophila melanogaster (fruit fly) par kaam kiya aur linkage discover kiya. Mendel ne Pisum sativum (matar) par kaam kiya. Neurospora crassa par Beadle aur Tatum ne one gene-one enzyme hypothesis prove ki. Morgan ko Drosophila genetics ke liye 1933 mein Nobel Prize mila — genetics ka pehla Nobel Prize!"
+      },
+      "navigation": {
+        "next": "card_46_quiz2_module7",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_46_quiz2_module7",
+      "card_slug": "card_46_quiz2_module7",
+      "type": "quiz",
+      "concept_id": "crossing_over_chiasma",
+      "level": 4,
+      "progress": {
+        "current": 46,
+        "total": 80
+      },
+      "quiz_payload": {
+        "question": "Crossing Over kab hota hai?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Mitosis ki Prophase mein"
+          },
+          {
+            "id": "B",
+            "text": "Meiosis I ki Prophase I mein"
+          },
+          {
+            "id": "C",
+            "text": "Meiosis II ki Anaphase mein"
+          },
+          {
+            "id": "D",
+            "text": "Interphase mein"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Crossing Over Meiosis I ki Prophase I mein hota hai — specifically Pachytene stage mein. Is stage mein homologous chromosomes (bivalents) ek doosre ke upar cross karte hain aur Chiasma banata hai. Crossing over NEVER mitosis mein hota — ye reproductive cells (gametes) bante time ka phenomenon hai. NEET mein Prophase I stages (Leptotene, Zygotene, Pachytene, Diplotene, Diakinesis) bhi poochhe jaate hain!"
+      },
+      "navigation": {
+        "next": "card_47_quiz3_module7",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_47_quiz3_module7",
+      "card_slug": "card_47_quiz3_module7",
+      "type": "quiz",
+      "concept_id": "genetic_distance_unit",
+      "level": 4,
+      "progress": {
+        "current": 47,
+        "total": 80
+      },
+      "quiz_payload": {
+        "question": "Genetic distance ki unit kya hai jo Morgan ke naam par rakhi gayi hai?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Dalton"
+          },
+          {
+            "id": "B",
+            "text": "Angstrom"
+          },
+          {
+            "id": "C",
+            "text": "centiMorgan (cM)"
+          },
+          {
+            "id": "D",
+            "text": "Mendel Unit"
+          }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Genetic distance ka unit 'centiMorgan' (cM) hai — Thomas Hunt Morgan ke naam par. 1 cM = 1% recombination frequency = chromosomal map unit. Dalton = atomic mass unit (proteins ke liye). Angstrom = wavelength ya molecular size ke liye. 'Mendel Unit' koi unit nahi hai — exam trap!"
+      },
+      "navigation": {
+        "next": "card_48_milestone_module7",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_48_milestone_module7",
+      "card_slug": "card_48_milestone_module7",
+      "type": "milestone",
+      "concept_id": "module7_complete",
+      "level": 4,
+      "progress": {
+        "current": 48,
+        "total": 80
+      },
+      "milestone_payload": {
+        "title": "MODULE 7 CLEAR! 🦟",
+        "badge_emoji": "🦠",
+        "completed_topic": "Linkage & Crossing Over",
+        "xp_earned": 90,
+        "milestone_progress": "Module 7/12 Clear",
+        "motivational_quote": "Morgan ka Nobel level clear kiya! Ab sex determination ka mystery kholte hain!"
+      },
+      "navigation": {
+        "next": "card_49_sex_determination",
+        "button_text": "Start Module 8 ➔"
+      }
+    },
+    {
+      "card_id": "card_49_sex_determination",
+      "card_slug": "card_49_sex_determination",
+      "type": "chat",
+      "concept_id": "sex_determination_xx_xy",
+      "level": 4,
+      "progress": {
+        "current": 49,
+        "total": 80
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, ek very important topic — kaise decide hota hai ki koi male hoga ya female? Insaan mein 46 chromosomes hote hain — 44 autosomes (body chromosomes) aur 2 sex chromosomes. Female mein: XX sex chromosomes. Male mein: XY sex chromosomes. Jab reproduction hota hai — egg sirf X de sakta hai (female XX se sirf X), lekin sperm ya X de sakta hai ya Y!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab baby ka sex toh baap ke sperm se decide hota hai — maa se nahi? Hain?? Toh jo log maa ko blame karte hain ladki paida hone par woh bilkul galat hain!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul sahi pakda Raju! Ye scientifically proven hai — sex determination father ke sperm se hota hai. X-bearing sperm fertilize kare toh XX = girl, Y-bearing sperm fertilize kare toh XY = boy. Ye XX-XY system insaan mein hai — isko 'XY Type' of sex determination kehte hain. Grasshopper mein alag system hai — XO type — males mein sirf ek X hota hai, koi Y nahi! Females mein XX."
+        },
+        {
+          "speaker": "raju",
+          "text": "XO type grasshopper mein! Ek X aur koi Y nahi male mein? Interesting Sir!"
+        }
+      ],
+      "navigation": {
+        "next": "card_50_sex_determination_types",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_50_sex_determination_types",
+      "card_slug": "card_50_sex_determination_types",
+      "type": "chat",
+      "concept_id": "sex_determination_types",
+      "level": 4,
+      "progress": {
+        "current": 50,
+        "total": 80
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Alag-alag organisms mein alag sex determination systems hain — ye exam mein bahut poochhe jaate hain: XY type (Humans, Drosophila) — Male XY, Female XX. XO type (Grasshoppers) — Male XO, Female XX. ZW type (Birds, some reptiles) — Male ZZ, Female ZW — yahin reverse ho jaata hai! Female mein alag sex chromosomes. Honeybee: Males haploid (n=16), Females diploid (2n=32) — parthenogenesis se!"
+        },
+        {
+          "speaker": "raju",
+          "text": "ZW type mein female mein alag chromosomes? Matlab birds mein female 'heterogametic' hoti hai? Ulta insaan se!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Exactly! 'Heterogametic' matlab jo alag-alag gametes de — XY male heterogametic (X wala sperm aur Y wala sperm dono deta hai), XX female homogametic (sirf X wala egg). Birds mein ULTA — ZW female heterogametic, ZZ male homogametic. Honeybee mein sex determination chromosomes se nahi — ploidy se! Ye BPSC ka favorite multi-choice trap hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir ye mix ho jayega! XY, XO, ZW, honeybee — itne types! Kaise yaad rakhe?"
+        }
+      ],
+      "navigation": {
+        "next": "card_51_quiz1_module8",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_51_quiz1_module8",
+      "card_slug": "card_51_quiz1_module8",
+      "type": "quiz",
+      "concept_id": "sex_determination_quiz",
+      "level": 4,
+      "progress": {
+        "current": 51,
+        "total": 80
+      },
+      "quiz_payload": {
+        "question": "Pakshiyon (Birds) mein sex determination kis type se hota hai?",
+        "options": [
+          {
+            "id": "A",
+            "text": "XY type — Male XY, Female XX"
+          },
+          {
+            "id": "B",
+            "text": "XO type — Male XO, Female XX"
+          },
+          {
+            "id": "C",
+            "text": "ZW type — Male ZZ, Female ZW"
+          },
+          {
+            "id": "D",
+            "text": "Haplodiploidy — Males haploid"
+          }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Birds mein ZW type sex determination hota hai — Male ZZ (homogametic) aur Female ZW (heterogametic). Ye insaan ke bilkul ulta hai jahan male XY (heterogametic) aur female XX (homogametic) hoti hai. Haplodiploidy (option D) honeybees mein hota hai. XO type grasshoppers mein. Ye BPSC aur SSC ka direct question hai!"
+      },
+      "navigation": {
+        "next": "card_52_quiz2_module8",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_52_quiz2_module8",
+      "card_slug": "card_52_quiz2_module8",
+      "type": "quiz",
+      "concept_id": "sex_chromosomes_human",
+      "level": 4,
+      "progress": {
+        "current": 52,
+        "total": 80
+      },
+      "quiz_payload": {
+        "question": "Manushya mein ek larki paida hogi jab:\n(I) X-bearing sperm X-egg fertilize kare\n(II) Y-bearing sperm X-egg fertilize kare\n(III) Fertilized egg XX ho\n(IV) Fertilized egg XY ho",
+        "options": [
+          {
+            "id": "A",
+            "text": "Sirf I aur III"
+          },
+          {
+            "id": "B",
+            "text": "Sirf II aur IV"
+          },
+          {
+            "id": "C",
+            "text": "I, III aur IV"
+          },
+          {
+            "id": "D",
+            "text": "Sirf III"
+          }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Larki (Female) = XX genotype. Ye tab hoga jab X-bearing sperm (I) + X egg = XX (III). Y-bearing sperm + X egg = XY = Ladka. Isliye I aur III dono sahi — Answer A. Statement II aur IV ladka (XY) ke liye sahi hoga. Maa sirf X-bearing eggs deti hai — sex sirf baap ke sperm type par depend karta hai!"
+      },
+      "navigation": {
+        "next": "card_53_quiz3_module8",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_53_quiz3_module8",
+      "card_slug": "card_53_quiz3_module8",
+      "type": "quiz",
+      "concept_id": "heterogametic_homogametic",
+      "level": 4,
+      "progress": {
+        "current": 53,
+        "total": 80
+      },
+      "quiz_payload": {
+        "question": "Insects mein se kaun 'XO type' sex determination follow karta hai jahan male mein sirf ek X chromosome hota hai?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Honeybee"
+          },
+          {
+            "id": "B",
+            "text": "Drosophila"
+          },
+          {
+            "id": "C",
+            "text": "Grasshopper"
+          },
+          {
+            "id": "D",
+            "text": "Butterfly"
+          }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Grasshopper (Tidda) XO type follow karta hai — Male XO (sirf ek X, koi Y nahi), Female XX. Honeybee haplodiploidy follow karta hai (males haploid, females diploid). Drosophila XY type follow karta hai (human jaisa). Butterfly ZW type follow karta hai (birds jaisa). Ye sabke sabke different types yaad karna padega — BPSC mein ek baar aya tha directly!"
+      },
+      "navigation": {
+        "next": "card_54_milestone_module8",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_54_milestone_module8",
+      "card_slug": "card_54_milestone_module8",
+      "type": "milestone",
+      "concept_id": "module8_complete",
+      "level": 4,
+      "progress": {
+        "current": 54,
+        "total": 80
+      },
+      "milestone_payload": {
+        "title": "MODULE 8 CLEARED! ⚧",
+        "badge_emoji": "🧬",
+        "completed_topic": "Sex Determination Systems",
+        "xp_earned": 90,
+        "milestone_progress": "Module 8/12 Clear",
+        "motivational_quote": "Sex determination ke saare systems ab clear hain! Ab sex-linked traits ka secret janenge!"
+      },
+      "navigation": {
+        "next": "card_55_sex_linked_inheritance",
+        "button_text": "Start Module 9 ➔"
+      }
+    },
+    {
+      "card_id": "card_55_sex_linked_inheritance",
+      "card_slug": "card_55_sex_linked_inheritance",
+      "type": "chat",
+      "concept_id": "sex_linked_inheritance",
+      "level": 4,
+      "progress": {
+        "current": 55,
+        "total": 80
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, kuch traits aisa hoti hain jo sex chromosomes par hoti hain — inhe 'Sex-linked traits' kehte hain. Sabse important example: 'Colour Blindness' — X-linked recessive trait. Matlab jo gene colour blindness ke liye responsible hai woh X chromosome par hai, Y par nahi. Isi wajah se colour blindness males mein zyada hoti hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Males mein zyada kyun? Females mein kyun kam?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Dekho — Female mein XX hai. Agar ek X par colour blindness gene hai, toh doosra X use normal rakhta hai — female 'carrier' ban jaati hai, khud normal dikhti hai. Lekin Male mein XY hai — agar X par colour blindness gene hai, toh Y par koi 'normal' copy nahi jo cover kare! Toh male colour blind ho jaata hai. Ye X-linked recessive ka rule hai: males sirf ek X se suffer karte hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Ohh! Males ke paas backup nahi hota! Female ke paas doosra X backup hai! Smart concept Sir!"
+        }
+      ],
+      "navigation": {
+        "next": "card_56_haemophilia",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_56_haemophilia",
+      "card_slug": "card_56_haemophilia",
+      "type": "chat",
+      "concept_id": "haemophilia_sex_linked",
+      "level": 4,
+      "progress": {
+        "current": 56,
+        "total": 80
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ek aur bahut famous sex-linked disease hai — 'Haemophilia' — blood clotting nahi hoti jab chot lage. Ye bhi X-linked recessive hai. History mein itna famous hua kyunki Queen Victoria of England ek carrier thi aur unke pote-poteron mein haemophilia spread hua — Russian, Spanish, German royal families mein! Isi wajah se ise 'Royal Disease' bhi kehte hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Hain?? Queen Victoria carrier thi aur disease puri Europe ki royal families mein phail gayi? Ye toh real life thriller hai Sir!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! Aur exam point ye hai: Haemophilia X-linked recessive hai. Haemophilia A — Factor VIII ki kami (sabse common). Haemophilia B — Factor IX ki kami ('Christmas Disease' bhi kehte hain). Female haemophiliac (X^h X^h) bahut rare hoti hai kyunki uske liye father haemophiliac aur mother carrier honi chahiye. Males (X^h Y) zyada affect hote hain. Ye BPSC aur NEET dono mein poochha gaya hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Factor VIII aur Factor IX — Haemophilia A aur B alag hain! Ye confuse kar sakta tha Sir!"
+        }
+      ],
+      "navigation": {
+        "next": "card_57_quiz1_module9",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_57_quiz1_module9",
+      "card_slug": "card_57_quiz1_module9",
+      "type": "quiz",
+      "concept_id": "colour_blindness_quiz",
+      "level": 4,
+      "progress": {
+        "current": 57,
+        "total": 80
+      },
+      "quiz_payload": {
+        "question": "Colour Blindness males mein females se zyada kyun hoti hai?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Kyunki males mein Y chromosome mein colour gene hota hai"
+          },
+          {
+            "id": "B",
+            "text": "Kyunki males mein ek hi X chromosome hota hai, koi backup nahi"
+          },
+          {
+            "id": "C",
+            "text": "Kyunki females mein immunity zyada hoti hai"
+          },
+          {
+            "id": "D",
+            "text": "Kyunki colour blindness autosomal trait hai"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Colour blindness X-linked recessive trait hai. Male mein sirf ek X chromosome hota hai (XY) — agar uss X par colour blindness allele hai, koi doosra X nahi hai compensate karne ke liye. Female mein do X hote hain (XX) — agar ek X par disease allele hai, doosra X normal rakh sakta hai — female carrier ban jaati hai, colour blind nahi. Isliye males mein zyada prevalence. Option A galat — Y chromosome mein colour genes nahi hote!"
+      },
+      "navigation": {
+        "next": "card_58_quiz2_module9",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_58_quiz2_module9",
+      "card_slug": "card_58_quiz2_module9",
+      "type": "quiz",
+      "concept_id": "haemophilia_quiz",
+      "level": 4,
+      "progress": {
+        "current": 58,
+        "total": 80
+      },
+      "quiz_payload": {
+        "question": "Haemophilia B kis clotting factor ki kami se hota hai?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Factor VII"
+          },
+          {
+            "id": "B",
+            "text": "Factor VIII"
+          },
+          {
+            "id": "C",
+            "text": "Factor IX"
+          },
+          {
+            "id": "D",
+            "text": "Factor X"
+          }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Haemophilia B (Christmas Disease) = Factor IX ki kami. Haemophilia A (sabse common) = Factor VIII ki kami. Dono X-linked recessive hain. 'Christmas Disease' name isliye pada kyunki 1952 mein ek patient Stephen Christmas ka first case report tha. Factor VII ki kami alag condition hai. Ye NEET ka direct question hai — A aur B ko confuse karna exam trap hai!"
+      },
+      "navigation": {
+        "next": "card_59_quiz3_module9",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_59_quiz3_module9",
+      "card_slug": "card_59_quiz3_module9",
+      "type": "quiz",
+      "concept_id": "royal_disease_carrier",
+      "level": 4,
+      "progress": {
+        "current": 59,
+        "total": 80
+      },
+      "quiz_payload": {
+        "question": "Haemophilia ko 'Royal Disease' kyun kaha jaata hai?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Kyunki ye sirf royal families mein hoti hai"
+          },
+          {
+            "id": "B",
+            "text": "Kyunki Queen Victoria of England ek carrier thi aur European royal families mein ye disease phail gayi"
+          },
+          {
+            "id": "C",
+            "text": "Kyunki is disease ka ilaj bahut mahenga (royal) hai"
+          },
+          {
+            "id": "D",
+            "text": "Kyunki iska naam ek raja ke naam par rakha gaya"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Queen Victoria of England Haemophilia B ki carrier thi. Unki santan puri Europe ki royal families mein phail gayi — Russian Tsarevich Alexei, Spanish infantes, aur German royals mein ye disease aayi. Isliye itihas mein ise 'Royal Disease' kaha gaya. Ye sirf royal families ki bimari nahi hai — ye ek popular historical anecdote hai jo genetics ko illustrate karta hai!"
+      },
+      "navigation": {
+        "next": "card_60_milestone_module9",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_60_milestone_module9",
+      "card_slug": "card_60_milestone_module9",
+      "type": "milestone",
+      "concept_id": "module9_complete",
+      "level": 4,
+      "progress": {
+        "current": 60,
+        "total": 80
+      },
+      "milestone_payload": {
+        "title": "MODULE 9 DONE! 👑",
+        "badge_emoji": "👑",
+        "completed_topic": "Sex-Linked Inheritance & Colour Blindness",
+        "xp_earned": 90,
+        "milestone_progress": "Module 9/12 Clear",
+        "motivational_quote": "Royal level genetics clear! Ab mutations aur disorders ka powerful module aata hai!"
+      },
+      "navigation": {
+        "next": "card_61_mutations_intro",
+        "button_text": "Start Module 10 ➔"
+      }
+    },
+    {
+      "card_id": "card_61_mutations_intro",
+      "card_slug": "card_61_mutations_intro",
+      "type": "chat",
+      "concept_id": "mutations_introduction",
+      "level": 5,
+      "progress": {
+        "current": 61,
+        "total": 80
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, kabhi socha hai — naye traits kahan se aate hain? Evolution mein naye features kaise bante hain? Answer hai — 'Mutation'! Mutation matlab: DNA sequence mein sudden aur heritable change. Ye natural ho sakta hai ya radiation/chemical se. Hugo De Vries ne 1900 mein 'Mutation Theory' di — evening primrose (Oenothera lamarckiana) par kaam karke. De Vries ne kaha — evolution mutations se hoti hai, slow gradual changes se nahi!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Hugo De Vries ne mutation theory di? Ye wahi De Vries hain jo Mendel ka kaam rediscover karne wale teen logon mein se ek the?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Exactly! Bahut sharp observation Raju! Haan, Hugo De Vries (Holland), Carl Correns (Germany), aur Erich von Tschermak (Austria) — teeno ne 1900 mein independently Mendel ka kaam rediscover kiya. Aur De Vries ne Mutation Theory bhi di. Mutation ke types: Point Mutation (ek nucleotide change), Chromosomal Mutation (chromosome structure ya number mein change). Point mutation ka example: Sickle Cell Anaemia!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sickle Cell Anaemia mutation se hoti hai? Ye toh khoon ki bimari hai Sir!"
+        }
+      ],
+      "navigation": {
+        "next": "card_62_chromosomal_disorders",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_62_chromosomal_disorders",
+      "card_slug": "card_62_chromosomal_disorders",
+      "type": "chat",
+      "concept_id": "chromosomal_disorders",
+      "level": 5,
+      "progress": {
+        "current": 62,
+        "total": 80
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ab Chromosomal Disorders — jab chromosome number ya structure mein galti ho. Sabse important: Down Syndrome — chromosome 21 ki ek extra copy (Trisomy 21 = 2n+1 = 47 chromosomes). John Langdon Down ne 1866 mein describe kiya. Features: intellectual disability, flat face, slanted eyes. Risk age ke saath badhta hai mother ki. Ye BPSC aur SSC ka most repeated disorder hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "47 chromosomes! Extra chromosome 21! Ye number yaad rakhna hai Sir. Aur kaunse disorders hain?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Aur bhi hain: Turner Syndrome — Female mein ek X missing (45, XO) — infertile, short stature. Klinefelter Syndrome — Male mein extra X (47, XXY) — infertile, gynecomastia. Edward Syndrome — Trisomy 18 — bahut severe. Patau Syndrome — Trisomy 13. Ek rule yaad karo: Trisomy 21 (Down), 18 (Edward), 13 (Patau) — teen mein teen disorders! Aur sex chromosome disorders mein Turner (45,X) aur Klinefelter (47,XXY)!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Trisomy 21, 18, 13 — Down, Edward, Patau — aur sex chromosomes mein Turner aur Klinefelter! Sir ye toh poori list hai!"
+        }
+      ],
+      "navigation": {
+        "next": "card_63_mendelian_disorders",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_63_mendelian_disorders",
+      "card_slug": "card_63_mendelian_disorders",
+      "type": "chat",
+      "concept_id": "mendelian_genetic_disorders",
+      "level": 5,
+      "progress": {
+        "current": 63,
+        "total": 80
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ab 'Mendelian Disorders' — jo single gene mutations se hote hain. Important ones: (1) Sickle Cell Anaemia — Autosomal recessive — HbA ki jagah HbS hemoglobin — RBC sickle shape ban jaati hai — beta-globin gene mein point mutation — glutamic acid ki jagah valine aa jaata hai. (2) Phenylketonuria (PKU) — Autosomal recessive — phenylalanine accumulate hoti hai — intellectual disability. (3) Thalassaemia — Autosomal recessive — hemoglobin synthesis mein problem."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sickle Cell Anaemia mein ek amino acid change — glutamic acid ki jagah valine! Itni chhoti si galti se poori bimaari!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! Ye Point Mutation ka power hai — ek nucleotide base change poori protein badal deta hai! Aur Sickle Cell Anaemia mein ek interesting baat — heterozygous carrier (HbA HbS) ko malaria se thodi protection milti hai! Isliye Africa mein, jahan malaria prevalent hai, sickle cell allele survive karta raha evolution mein. Ye concept BPSC aur NEET dono mein poochha gaya hai — 'balanced polymorphism' kehte hain ise!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Wah! Ek disease jo malaria se bachati bhi hai! Nature ka kya jugaad hai yaar!"
+        }
+      ],
+      "navigation": {
+        "next": "card_64_quiz1_module10",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_64_quiz1_module10",
+      "card_slug": "card_64_quiz1_module10",
+      "type": "quiz",
+      "concept_id": "down_syndrome_quiz",
+      "level": 5,
+      "progress": {
+        "current": 64,
+        "total": 80
+      },
+      "quiz_payload": {
+        "question": "Down Syndrome mein chromosome ki kaunsi abnormality hoti hai?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Chromosome 21 missing (Monosomy 21)"
+          },
+          {
+            "id": "B",
+            "text": "Chromosome 21 ki extra copy (Trisomy 21 — 47 chromosomes)"
+          },
+          {
+            "id": "C",
+            "text": "Chromosome 18 ki extra copy (Trisomy 18)"
+          },
+          {
+            "id": "D",
+            "text": "Sex chromosome ka missing hona"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Down Syndrome = Trisomy 21 — chromosome 21 ki teen copies hoti hain. Total chromosomes = 47 (normal 46 ki jagah). John Langdon Down ne 1866 mein describe kiya. Trisomy 18 = Edward Syndrome, Trisomy 13 = Patau Syndrome. Sex chromosome monosomy = Turner Syndrome (45,X). Trisomy 21 sabse common chromosomal disorder hai jo live birth mein survive karta hai — BPSC, SSC, NEET sabne poochha hai!"
+      },
+      "navigation": {
+        "next": "card_65_quiz2_module10",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_65_quiz2_module10",
+      "card_slug": "card_65_quiz2_module10",
+      "type": "quiz",
+      "concept_id": "sickle_cell_mutation",
+      "level": 5,
+      "progress": {
+        "current": 65,
+        "total": 80
+      },
+      "quiz_payload": {
+        "question": "Sickle Cell Anaemia mein beta-globin gene mein kaunsa amino acid substitution hota hai?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Valine ki jagah Glutamic Acid"
+          },
+          {
+            "id": "B",
+            "text": "Glutamic Acid ki jagah Valine"
+          },
+          {
+            "id": "C",
+            "text": "Alanine ki jagah Glycine"
+          },
+          {
+            "id": "D",
+            "text": "Lysine ki jagah Arginine"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Sickle Cell Anaemia mein beta-globin chain ke 6th position par Glutamic Acid (hydrophilic) ki jagah Valine (hydrophobic) aa jaata hai — ye ek point mutation ka result hai. Is ek amino acid change se HbS (sickle haemoglobin) banta hai jo low oxygen mein sickle shape leta hai. Option A ulta hai — common exam trap!"
+      },
+      "navigation": {
+        "next": "card_66_quiz3_module10",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_66_quiz3_module10",
+      "card_slug": "card_66_quiz3_module10",
+      "type": "quiz",
+      "concept_id": "genetic_disorders_trap",
+      "level": 5,
+      "progress": {
+        "current": 66,
+        "total": 80
+      },
+      "quiz_payload": {
+        "question": "BPSC Multi-Statement: Niche diye statements mein kaunsa/kaunse SAHI hain?\n(I) Turner Syndrome mein female ka karyotype 45,XO hota hai.\n(II) Klinefelter Syndrome mein male ka karyotype 47,XXY hota hai.\n(III) Sickle Cell Anaemia autosomal dominant disorder hai.\n(IV) Down Syndrome ka doosra naam Trisomy 21 hai.",
+        "options": [
+          {
+            "id": "A",
+            "text": "Sirf I, II aur IV"
+          },
+          {
+            "id": "B",
+            "text": "Saare char"
+          },
+          {
+            "id": "C",
+            "text": "Sirf III aur IV"
+          },
+          {
+            "id": "D",
+            "text": "Sirf I aur II"
+          }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Statement III GALAT hai — Sickle Cell Anaemia AUTOSOMAL RECESSIVE hai, dominant nahi. Isliye carrier (HbA HbS) normal dikhta hai — sirf homozygous recessive (HbS HbS) mein disease hoti hai. Statement I (Turner 45,XO — SAHI), II (Klinefelter 47,XXY — SAHI), IV (Down = Trisomy 21 — SAHI). Answer A!"
+      },
+      "navigation": {
+        "next": "card_67_milestone_module10",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_67_milestone_module10",
+      "card_slug": "card_67_milestone_module10",
+      "type": "milestone",
+      "concept_id": "module10_complete",
+      "level": 5,
+      "progress": {
+        "current": 67,
+        "total": 80
+      },
+      "milestone_payload": {
+        "title": "MODULE 10 CLEARED! 🧬",
+        "badge_emoji": "💪",
+        "completed_topic": "Mutations & Chromosomal Disorders",
+        "xp_earned": 100,
+        "milestone_progress": "Module 10/12 Clear",
+        "motivational_quote": "Disorders ke saare facts pakad liye! Ab final revision aur Master Quiz ke liye ready ho jao!"
+      },
+      "navigation": {
+        "next": "card_68_pedigree_analysis",
+        "button_text": "Start Module 11 ➔"
+      }
+    },
+    {
+      "card_id": "card_68_pedigree_analysis",
+      "card_slug": "card_68_pedigree_analysis",
+      "type": "chat",
+      "concept_id": "pedigree_analysis",
+      "level": 5,
+      "progress": {
+        "current": 68,
+        "total": 80
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ek last important concept — 'Pedigree Analysis'. Ye family ke generations mein kisi trait ya disease ko track karna hai diagrammatically. Circle = female, Square = male, Filled = affected, Horizontal line = marriage, Vertical line = children. Pedigree se hum judge karte hain: autosomal ya sex-linked? Dominant ya recessive? NEET mein pedigree diagram deke poochha jaata hai — pattern dekhke answer dena hota hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir pedigree mein kaise pata chalega ki autosomal hai ya sex-linked?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Rules yaad karo: (1) Agar disease sirf males mein hai — probably X-linked recessive. (2) Agar har generation mein disease hai — probably dominant. (3) Agar generation skip karti hai — recessive. (4) Agar affected father ki saari betiyan affected hain — X-linked dominant. (5) Agar normal parents ka affected child hai — autosomal recessive (dono parents carriers the). Ye 5 rules pedigree ke liye enough hain NEET aur BPSC ke liye!"
+        },
+        {
+          "speaker": "raju",
+          "text": "5 rules pedigree ke liye! Sir, generation skip = recessive, har generation = dominant — ye key points hain!"
+        }
+      ],
+      "navigation": {
+        "next": "card_69_chromosome_theory",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_69_chromosome_theory",
+      "card_slug": "card_69_chromosome_theory",
+      "type": "chat",
+      "concept_id": "chromosome_theory_of_heredity",
+      "level": 5,
+      "progress": {
+        "current": 69,
+        "total": 80
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ek connecting concept — 'Chromosomal Theory of Inheritance'. Walter Sutton aur Theodor Boveri ne independently 1902-1903 mein propose kiya ki Mendel ke 'factors' (genes) chromosomes par located hain. Isi wajah se Mendel ke laws chromosomes ke behavior se match karte hain. Sutton ne grasshopper par kaam kiya, Boveri ne sea urchin par. Isse 'Sutton-Boveri Theory' bhi kehte hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sutton aur Boveri! 1902-1903! Toh Mendel ke 1866 ke baad 36-37 saal mein chromosomes se link hua?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Exactly! Timeline yaad karo: Mendel 1866 (genes = factors), Rediscovery 1900, Sutton-Boveri 1902-03 (genes on chromosomes), Morgan 1910 (linkage in Drosophila), Watson-Crick 1953 (DNA double helix). Genetics ki timeline ek story hai! Aur ek last important name — Barbara McClintock — unhone 1950s mein 'Transposons' discover kiye — 'jumping genes' — genes jo chromosome mein jagah change kar sakte hain! Unhe 1983 mein Nobel Prize mila!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Jumping genes?! Barbara McClintock! 1983 Nobel! Ye toh bilkul naya concept tha Sir — koi batata nahi!"
+        }
+      ],
+      "navigation": {
+        "next": "card_70_quiz1_module11",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_70_quiz1_module11",
+      "card_slug": "card_70_quiz1_module11",
+      "type": "quiz",
+      "concept_id": "chromosome_theory_quiz",
+      "level": 5,
+      "progress": {
+        "current": 70,
+        "total": 80
+      },
+      "quiz_payload": {
+        "question": "'Chromosomal Theory of Inheritance' kis/kinhe ne propose kiya?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Watson aur Crick"
+          },
+          {
+            "id": "B",
+            "text": "Sutton aur Boveri"
+          },
+          {
+            "id": "C",
+            "text": "Morgan aur Mendel"
+          },
+          {
+            "id": "D",
+            "text": "De Vries aur Correns"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Chromosomal Theory of Inheritance Walter Sutton (grasshopper par kaam, 1902) aur Theodor Boveri (sea urchin par kaam, 1902-03) ne independently propose ki. Watson aur Crick ne 1953 mein DNA double helix structure discover kiya. Morgan aur Mendel dono genetics mein kaam kiye lekin Chromosome Theory Sutton-Boveri ki hai. De Vries aur Correns Mendel's work rediscoverers hain."
+      },
+      "navigation": {
+        "next": "card_71_quiz2_module11",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_71_quiz2_module11",
+      "card_slug": "card_71_quiz2_module11",
+      "type": "quiz",
+      "concept_id": "pedigree_rules_quiz",
+      "level": 5,
+      "progress": {
+        "current": 71,
+        "total": 80
+      },
+      "quiz_payload": {
+        "question": "Pedigree analysis mein — agar disease generations skip karti hai (aati hai, phir ek generation nahi aati, phir aati hai) — toh trait probably kaunsa hai?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Autosomal Dominant"
+          },
+          {
+            "id": "B",
+            "text": "X-linked Dominant"
+          },
+          {
+            "id": "C",
+            "text": "Autosomal Recessive"
+          },
+          {
+            "id": "D",
+            "text": "Y-linked"
+          }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Generation skip karna recessive traits ki pehchaan hai — kyunki carriers dono alleles mein se sirf ek recessive carry karte hain aur normal dikhte hain. Sirf jab do carriers ki santaan ho aur bacche ko dono recessive alleles milein tab disease dikhti hai. Autosomal Dominant mein har generation mein disease hoti hai (skip nahi hoti). Y-linked sirf males mein aur har generation mein hogi. X-linked recessive sirf males mein zyada hoti hai."
+      },
+      "navigation": {
+        "next": "card_72_quiz3_module11",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_72_quiz3_module11",
+      "card_slug": "card_72_quiz3_module11",
+      "type": "quiz",
+      "concept_id": "transposons_mcclintock",
+      "level": 5,
+      "progress": {
+        "current": 72,
+        "total": 80
+      },
+      "quiz_payload": {
+        "question": "'Jumping Genes' (Transposons) kine ne discover kiya aur unhe Nobel Prize kis saal mila?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Thomas Morgan — 1933"
+          },
+          {
+            "id": "B",
+            "text": "Barbara McClintock — 1983"
+          },
+          {
+            "id": "C",
+            "text": "Hugo De Vries — 1900"
+          },
+          {
+            "id": "D",
+            "text": "Walter Sutton — 1902"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Barbara McClintock ne 1940s-50s mein maize (corn) par kaam karte hue Transposons (Jumping Genes) discover kiye — genes jo chromosome mein ek jagah se doosri jagah move kar sakte hain. Unhe 1983 mein Nobel Prize in Physiology or Medicine mila — ek akele (solo) Nobel Prize, jo bahut rare hai. Thomas Morgan ko 1933 mein Drosophila genetics ke liye Nobel mila. Ye BPSC ka recent trap question hai!"
+      },
+      "navigation": {
+        "next": "card_73_milestone_module11",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_73_milestone_module11",
+      "card_slug": "card_73_milestone_module11",
+      "type": "milestone",
+      "concept_id": "module11_complete",
+      "level": 5,
+      "progress": {
+        "current": 73,
+        "total": 80
+      },
+      "milestone_payload": {
+        "title": "MODULE 11 DONE! 🎖️",
+        "badge_emoji": "🧪",
+        "completed_topic": "Pedigree Analysis & Chromosome Theory",
+        "xp_earned": 100,
+        "milestone_progress": "Module 11/12 Clear",
+        "motivational_quote": "Almost officer ban gaye! Sirf final revision aur Master Quiz baaki hai!"
+      },
+      "navigation": {
+        "next": "card_74_final_summary",
+        "button_text": "Start Final Module ➔"
+      }
+    },
+    {
+      "card_id": "card_74_final_summary",
+      "card_slug": "card_74_final_summary",
+      "type": "summary",
+      "concept_id": "full_chapter_revision",
+      "level": 5,
+      "progress": {
+        "current": 74,
+        "total": 80
+      },
+      "summary_payload": {
+        "title": "⚡ Officer Rapid Revision — Inheritance Biology",
+        "revision_points": [
+          {
+            "topic": "Mendel ka Timeline",
+            "point": "Mendel Austrian monk the. Kaam 1856-1863. Paper 1866 publish. Rediscovery 1900 (De Vries, Correns, Tschermak). Matar mein 7 contrasting traits. Mendel 1884 mein guzre — pehchaan poste-humous! BPSC trap: 1866 aur 1900 ko confuse mat karo."
+          },
+          {
+            "topic": "Mendel ke 3 Laws aur Ratios",
+            "point": "Law of Dominance (T over t), Law of Segregation (= Law of Purity of Gametes — gametes mein sirf ek allele), Law of Independent Assortment (alag chromosomes par genes independently sort hote hain). Monohybrid F2 phenotype 3:1 | genotype 1:2:1. Dihybrid F2 phenotype 9:3:3:1 | test cross 1:1:1:1. Incomplete dominance F2 phenotype 1:2:1."
+          },
+          {
+            "topic": "Blood Groups & Multiple Alleles",
+            "point": "ABO blood group Karl Landsteiner ne 1901 mein discover kiya — 1930 Nobel Prize. Alleles: I^A, I^B, i (multiple alleles). I^A aur I^B codominant. O group = ii (Universal Donor, no antigen). AB group = I^A I^B (Universal Recipient, no antibody). A group = I^A I^A ya I^A i. B group = I^B I^B ya I^B i."
+          },
+          {
+            "topic": "Sex Determination & Sex-linked Disorders",
+            "point": "Human: XY male (heterogametic), XX female (homogametic). Birds: ZW female (heterogametic), ZZ male. Grasshopper: XO male. Honeybee: haplodiploidy. Colour Blindness aur Haemophilia = X-linked recessive — males zyada affected. Haemophilia A = Factor VIII kami, Haemophilia B = Factor IX kami (Christmas Disease). Queen Victoria = Haemophilia B carrier."
+          },
+          {
+            "topic": "Chromosomal Disorders & Mutations",
+            "point": "Down Syndrome = Trisomy 21 (47 chromosomes). Turner = 45,XO (female, infertile). Klinefelter = 47,XXY (male, infertile). Trisomy 18 = Edward, Trisomy 13 = Patau. Sickle Cell Anaemia = autosomal recessive, point mutation in beta-globin — Glutamic Acid → Valine substitution. Morgan 1933 Nobel (Drosophila, linkage). McClintock 1983 Nobel (Transposons/Jumping Genes)."
+          }
+        ]
+      },
+      "navigation": {
+        "next": "card_75_final_quiz_1",
+        "button_text": "Attempt Master Quiz ➔"
+      }
+    },
+    {
+      "card_id": "card_75_final_quiz_1",
+      "card_slug": "card_75_final_quiz_1",
+      "type": "final_quiz",
+      "concept_id": "master_quiz_1",
+      "level": 5,
+      "progress": {
+        "current": 75,
+        "total": 80
+      },
+      "quiz_payload": {
+        "question": "BPSC Officer Level — Multi-Statement:\nNiche diye statements mein se kaunse SAHI hain?\n(I) Mendel ka Law of Segregation 'Law of Purity of Gametes' ke naam se bhi jaana jaata hai.\n(II) Dihybrid cross mein F2 ka phenotypic ratio 9:3:3:1 tab hota hai jab dono genes unlinked hon.\n(III) Incomplete dominance mein F2 phenotypic ratio 3:1 hota hai jab F1 × F1 cross karaya jaata hai.\n(IV) Codominance mein ek allele doosre allele ke phenotype ko suppress karta hai.\n(V) ABO blood group ek Multiple Allele system hai jisme I^A aur I^B codominant hain.",
+        "options": [
+          {
+            "id": "A",
+            "text": "Sirf I, II aur V"
+          },
+          {
+            "id": "B",
+            "text": "Sirf I aur II"
+          },
+          {
+            "id": "C",
+            "text": "I, II, IV aur V"
+          },
+          {
+            "id": "D",
+            "text": "Saare paanch"
+          }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Statement III GALAT — Incomplete dominance mein F2 phenotypic ratio 1:2:1 hota hai (3:1 nahi). Statement IV GALAT — Codominance mein koi suppress nahi hota — dono express hote hain. Isliye I (Law of Purity of Gametes — SAHI), II (9:3:3:1 unlinked genes ke liye — SAHI), V (I^A aur I^B codominant, multiple alleles — SAHI). Answer A!"
+      },
+      "navigation": {
+        "next": "card_76_final_quiz_2",
+        "button_text": "Next Master Question ➔"
+      }
+    },
+    {
+      "card_id": "card_76_final_quiz_2",
+      "card_slug": "card_76_final_quiz_2",
+      "type": "final_quiz",
+      "concept_id": "master_quiz_2",
+      "level": 5,
+      "progress": {
+        "current": 76,
+        "total": 80
+      },
+      "quiz_payload": {
+        "question": "NEET Level — Assertion-Reason:\nAssertion (A): Sickle Cell Anaemia ke heterozygous carriers (HbA HbS) malaria se relatively protected hote hain.\nReason (R): HbS (sickle haemoglobin) ki presence malaria parasite Plasmodium ke liye RBC ko hostile environment banati hai.\n\nNiche diye options mein se sahi answer chuniye:",
+        "options": [
+          {
+            "id": "A",
+            "text": "A aur R dono sahi hain aur R, A ka sahi explanation hai"
+          },
+          {
+            "id": "B",
+            "text": "A aur R dono sahi hain lekin R, A ka sahi explanation nahi hai"
+          },
+          {
+            "id": "C",
+            "text": "A sahi hai lekin R galat hai"
+          },
+          {
+            "id": "D",
+            "text": "A galat hai lekin R sahi hai"
+          }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Assertion sahi hai — HbA HbS carriers mein malaria se relative protection hoti hai — ye 'balanced polymorphism' ka concept hai jisse Africa mein sickle cell allele survive karta raha. Reason bhi sahi hai aur correct explanation hai — sickle haemoglobin ki presence infected RBCs ko sickling prone banati hai jisse Plasmodium thrive nahi kar pata. Dono sahi aur logically connected — Answer A. Ye NEET 2018 level ka question hai!"
+      },
+      "navigation": {
+        "next": "card_77_final_quiz_3",
+        "button_text": "Next Master Question ➔"
+      }
+    },
+    {
+      "card_id": "card_77_final_quiz_3",
+      "card_slug": "card_77_final_quiz_3",
+      "type": "final_quiz",
+      "concept_id": "master_quiz_3",
+      "level": 5,
+      "progress": {
+        "current": 77,
+        "total": 80
+      },
+      "quiz_payload": {
+        "question": "BPSC/UPSC Level — Scientists aur Discoveries Match:\n(I) Mendel — (a) Jumping Genes\n(II) Morgan — (b) ABO Blood Groups\n(III) Landsteiner — (c) Linkage in Drosophila\n(IV) McClintock — (d) Laws of Inheritance\n\nSahi match karo:",
+        "options": [
+          {
+            "id": "A",
+            "text": "I-d, II-c, III-b, IV-a"
+          },
+          {
+            "id": "B",
+            "text": "I-a, II-b, III-c, IV-d"
+          },
+          {
+            "id": "C",
+            "text": "I-d, II-a, III-c, IV-b"
+          },
+          {
+            "id": "D",
+            "text": "I-c, II-d, III-a, IV-b"
+          }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Mendel — Laws of Inheritance (d). Morgan — Linkage in Drosophila (c). Landsteiner — ABO Blood Groups (b) — 1901 discovery, 1930 Nobel. McClintock — Jumping Genes/Transposons (a) — 1983 Nobel. Ye UPSC aur BPSC ka classic matching question format hai — sahi pairs: I-d, II-c, III-b, IV-a = Answer A!"
+      },
+      "navigation": {
+        "next": "card_78_final_quiz_4",
+        "button_text": "Next Master Question ➔"
+      }
+    },
+    {
+      "card_id": "card_78_final_quiz_4",
+      "card_slug": "card_78_final_quiz_4",
+      "type": "final_quiz",
+      "concept_id": "master_quiz_4",
+      "level": 5,
+      "progress": {
+        "current": 78,
+        "total": 80
+      },
+      "quiz_payload": {
+        "question": "SSC CGL/RRB NTPC Speed Fact — Multi-Statement:\n(I) Turner Syndrome mein karyotype 45,XO hota hai aur patient female hoti hai.\n(II) Klinefelter Syndrome mein karyotype 47,XXY hota hai aur patient male hota hai.\n(III) Down Syndrome mein chromosome 18 ki extra copy hoti hai.\n(IV) Haemophilia A mein clotting Factor IX ki kami hoti hai.\n(V) Pea plant (Pisum sativum) mein 7 pairs chromosomes hote hain.",
+        "options": [
+          {
+            "id": "A",
+            "text": "Sirf III aur IV galat hain — I, II aur V sahi hain"
+          },
+          {
+            "id": "B",
+            "text": "Sirf IV galat hai"
+          },
+          {
+            "id": "C",
+            "text": "III, IV aur V sahi hain"
+          },
+          {
+            "id": "D",
+            "text": "Saare paanch sahi hain"
+          }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Statement III GALAT — Down Syndrome = Trisomy 21 (chromosome 21, chromosome 18 nahi). Statement IV GALAT — Haemophilia A = Factor VIII ki kami (Factor IX Haemophilia B mein). Statement I SAHI (Turner 45,XO, female), II SAHI (Klinefelter 47,XXY, male), V SAHI (Pea plant mein 7 chromosome pairs — Mendel ke 7 genes ke corresponding!). Isliye III aur IV galat — Answer A!"
+      },
+      "navigation": {
+        "next": "card_79_final_quiz_5",
+        "button_text": "Last Master Question ➔"
+      }
+    },
+    {
+      "card_id": "card_79_final_quiz_5",
+      "card_slug": "card_79_final_quiz_5",
+      "type": "final_quiz",
+      "concept_id": "master_quiz_5",
+      "level": 5,
+      "progress": {
+        "current": 79,
+        "total": 80
+      },
+      "quiz_payload": {
+        "question": "NEET Level Genetics Integration:\nEk couple mein pati ka blood group A (genotype I^A i) aur patni ka blood group B (genotype I^B i) hai. Unki santaan mein kaunse-kaunse blood groups possible hain?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Sirf A aur B"
+          },
+          {
+            "id": "B",
+            "text": "A, B, AB aur O — Charo possible hain"
+          },
+          {
+            "id": "C",
+            "text": "Sirf AB aur O"
+          },
+          {
+            "id": "D",
+            "text": "Sirf A, B aur AB"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "I^A i × I^B i cross karo — Punnett Square: I^A I^B = AB (25%), I^A i = A (25%), I^B i = B (25%), ii = O (25%). Toh saare charo blood groups — A, B, AB, O — possible hain! Ye 1:1:1:1 ratio hai. Ye NEET ka most popular blood group genetics question hai — aur BPSC mein bhi aaya hai. Ye isliye important hai kyunki popular misconception hai ki AB aur O possible nahi — lekin hain!"
+      },
+      "navigation": {
+        "next": "card_80_chapter_trophy",
+        "button_text": "See Final Score ➔"
+      }
+    },
+    {
+      "card_id": "card_80_chapter_trophy",
+      "card_slug": "card_80_chapter_trophy",
+      "type": "milestone",
+      "concept_id": "chapter_complete",
+      "level": 5,
+      "progress": {
+        "current": 80,
+        "total": 80
+      },
+      "milestone_payload": {
+        "title": "🏆 CHAPTER COMPLETE! OFFICER LEVEL ACHIEVED!",
+        "badge_emoji": "🧬",
+        "completed_topic": "Inheritance & Variation — Full Chapter",
+        "xp_earned": 500,
+        "milestone_progress": "All 12 Modules Cleared! 80/80 Cards Done!",
+        "motivational_quote": "Mendel se Morgan tak, Dominance se DNA tak — tune poori genetics ki journey complete kar li! Ab BPSC, NEET, SSC koi bhi exam nahi rok sakta tujhe. Genetics ka Officer ban gaya tu! 🚀"
+      },
+      "navigation": {
+        "next": null,
+        "button_text": "Chapter Complete! 🎉"
+      }
+    }
+  ]
+}
