@@ -1,8 +1,14 @@
-
 {
   "topic_id": "cell_biology_master",
   "topic_title": "Cell Biology: The Complete Chapter",
-  "target_exams": ["BPSC", "BSSC", "RRB NTPC", "SSC CGL", "NEET", "UPSC Prelims"],
+  "target_exams": [
+    "BPSC",
+    "BSSC",
+    "RRB NTPC",
+    "SSC CGL",
+    "NEET",
+    "UPSC Prelims"
+  ],
   "total_cards": 60,
   "characters": {
     "aman": {
@@ -31,7 +37,14 @@
         "chapter_icon": "🔬",
         "chapter_title": "Cell Biology",
         "subtitle": "The Smallest Unit That Makes You — YOU!",
-        "target_exams": ["BPSC", "BSSC", "RRB NTPC", "SSC CGL", "NEET", "UPSC Prelims"],
+        "target_exams": [
+          "BPSC",
+          "BSSC",
+          "RRB NTPC",
+          "SSC CGL",
+          "NEET",
+          "UPSC Prelims"
+        ],
         "learning_outcomes": [
           "Understand what a cell is and why Robert Hooke discovered it",
           "Distinguish between Prokaryotic and Eukaryotic cells",
@@ -166,10 +179,22 @@
       "quiz_payload": {
         "question": "Q1/3: Robert Hooke ne 1665 mein cell kisme observe kiya tha?",
         "options": [
-          { "id": "A", "text": "Pond water mein zinda organisms mein" },
-          { "id": "B", "text": "Cork (bottle tree bark) ki dead cell walls mein" },
-          { "id": "C", "text": "Human blood mein" },
-          { "id": "D", "text": "Onion ki epidermis mein" }
+          {
+            "id": "A",
+            "text": "Pond water mein zinda organisms mein"
+          },
+          {
+            "id": "B",
+            "text": "Cork (bottle tree bark) ki dead cell walls mein"
+          },
+          {
+            "id": "C",
+            "text": "Human blood mein"
+          },
+          {
+            "id": "D",
+            "text": "Onion ki epidermis mein"
+          }
         ],
         "correct_option_id": "B",
         "explanation": "Robert Hooke ne 1665 mein cork ki얇i slice ko apne microscope se dekha aur dead cell walls observe kiin, jinhe unhone 'cellulae' (chhote kamre) kaha. Zinda cells pehli baar Anton van Leeuwenhoek ne 1674 mein pond water mein dekhin. Yeh BPSC aur SSC ka classic trap question hai!"
@@ -192,10 +217,22 @@
       "quiz_payload": {
         "question": "Q2/3: 'Omnis cellula e cellula' — yeh famous statement kisne diya tha?",
         "options": [
-          { "id": "A", "text": "Matthias Schleiden" },
-          { "id": "B", "text": "Theodor Schwann" },
-          { "id": "C", "text": "Rudolf Virchow" },
-          { "id": "D", "text": "Robert Hooke" }
+          {
+            "id": "A",
+            "text": "Matthias Schleiden"
+          },
+          {
+            "id": "B",
+            "text": "Theodor Schwann"
+          },
+          {
+            "id": "C",
+            "text": "Rudolf Virchow"
+          },
+          {
+            "id": "D",
+            "text": "Robert Hooke"
+          }
         ],
         "correct_option_id": "C",
         "explanation": "'Omnis cellula e cellula' ka matlab hai 'Har cell ek purani cell se aati hai.' Yeh Rudolf Virchow ne 1855 mein kaha tha. Schleiden (1838) ne plants ke liye aur Schwann (1839) ne animals ke liye cell theory di thi. Virchow ka addition cell theory ka third aur most important point hai jo NEET mein directly poochha jaata hai."
@@ -218,10 +255,22 @@
       "quiz_payload": {
         "question": "Q3/3: Cell Theory ke anusar, inme se kaun sa statement GALAT hai?",
         "options": [
-          { "id": "A", "text": "Sab living organisms cells se bane hain" },
-          { "id": "B", "text": "Cell life ki structural aur functional unit hai" },
-          { "id": "C", "text": "Virus bhi Cell Theory ke under aate hain" },
-          { "id": "D", "text": "Nayi cells purani cells se banti hain" }
+          {
+            "id": "A",
+            "text": "Sab living organisms cells se bane hain"
+          },
+          {
+            "id": "B",
+            "text": "Cell life ki structural aur functional unit hai"
+          },
+          {
+            "id": "C",
+            "text": "Virus bhi Cell Theory ke under aate hain"
+          },
+          {
+            "id": "D",
+            "text": "Nayi cells purani cells se banti hain"
+          }
         ],
         "correct_option_id": "C",
         "explanation": "Yeh BPSC ka favorite trap hai! Virus Cell Theory ka EXCEPTION hai — kyunki virus apne aap reproduce nahi kar sakta, ise host cell chahiye. Isliye virus ko 'living' aur 'non-living' ke beech ki cheez maana jaata hai. Cell Theory strictly cellular organisms par apply hoti hai, virus par nahi. UPSC Prelims mein bhi yeh trap use ho chuka hai!"
@@ -372,10 +421,22 @@
       "quiz_payload": {
         "question": "Q1/3: Prokaryotic cells mein ribosomes ka size kya hota hai?",
         "options": [
-          { "id": "A", "text": "80S" },
-          { "id": "B", "text": "70S" },
-          { "id": "C", "text": "60S" },
-          { "id": "D", "text": "40S" }
+          {
+            "id": "A",
+            "text": "80S"
+          },
+          {
+            "id": "B",
+            "text": "70S"
+          },
+          {
+            "id": "C",
+            "text": "60S"
+          },
+          {
+            "id": "D",
+            "text": "40S"
+          }
         ],
         "correct_option_id": "B",
         "explanation": "Prokaryotic cells (jaise bacteria) mein 70S ribosomes hote hain. Eukaryotic cells mein 80S ribosomes hote hain. 'S' Svedberg unit hai jo sedimentation rate measure karta hai. Antibiotics (jaise Streptomycin, Erythromycin) 70S ribosomes ko target karte hain isliye woh human cells (80S) ko affect nahi karte. Yeh NEET aur BPSC dono ka top-frequency concept hai!"
@@ -398,10 +459,22 @@
       "quiz_payload": {
         "question": "Q2/3: Inme se kaun si cheez sirf Plant Cell mein hoti hai, Animal Cell mein NAHI?",
         "options": [
-          { "id": "A", "text": "Ribosome" },
-          { "id": "B", "text": "Mitochondria" },
-          { "id": "C", "text": "Chloroplast" },
-          { "id": "D", "text": "Cell membrane" }
+          {
+            "id": "A",
+            "text": "Ribosome"
+          },
+          {
+            "id": "B",
+            "text": "Mitochondria"
+          },
+          {
+            "id": "C",
+            "text": "Chloroplast"
+          },
+          {
+            "id": "D",
+            "text": "Cell membrane"
+          }
         ],
         "correct_option_id": "C",
         "explanation": "Chloroplast sirf plant cells (aur algae) mein hota hai — photosynthesis ke liye. Animal cells mein chloroplast nahi hota. Ribosome, Mitochondria, aur Cell membrane dono (plant + animal) cells mein hote hain. Yeh SSC CGL aur RRB NTPC mein seedha poochha gaya hai. Dhyan raho — Centriole animal cells mein hota hai, plant cells mein nahi!"
@@ -424,10 +497,22 @@
       "quiz_payload": {
         "question": "Q3/3: BPSC Trap — Inme se kaun sa PROKARYOTIC organism hai?",
         "options": [
-          { "id": "A", "text": "Amoeba" },
-          { "id": "B", "text": "Paramecium" },
-          { "id": "C", "text": "Mycoplasma" },
-          { "id": "D", "text": "Euglena" }
+          {
+            "id": "A",
+            "text": "Amoeba"
+          },
+          {
+            "id": "B",
+            "text": "Paramecium"
+          },
+          {
+            "id": "C",
+            "text": "Mycoplasma"
+          },
+          {
+            "id": "D",
+            "text": "Euglena"
+          }
         ],
         "correct_option_id": "C",
         "explanation": "Mycoplasma ek prokaryotic organism hai — yeh bacteria ka ek type hai aur sabse chhota known living organism bhi maana jaata hai. Amoeba, Paramecium, aur Euglena — ye teeno eukaryotic protists hain. Mycoplasma ke paas cell wall bhi nahi hoti — yeh ek aur unique feature hai. BPSC mein Mycoplasma ka naam dekhte hi dhyan se padhna — yeh Prokaryote hai!"
@@ -578,10 +663,22 @@
       "quiz_payload": {
         "question": "Q1/3: Cell membrane ka 'Fluid Mosaic Model' kisne diya tha?",
         "options": [
-          { "id": "A", "text": "Watson aur Crick, 1953" },
-          { "id": "B", "text": "Singer aur Nicolson, 1972" },
-          { "id": "C", "text": "Schleiden aur Schwann, 1838" },
-          { "id": "D", "text": "Davson aur Danielli, 1935" }
+          {
+            "id": "A",
+            "text": "Watson aur Crick, 1953"
+          },
+          {
+            "id": "B",
+            "text": "Singer aur Nicolson, 1972"
+          },
+          {
+            "id": "C",
+            "text": "Schleiden aur Schwann, 1838"
+          },
+          {
+            "id": "D",
+            "text": "Davson aur Danielli, 1935"
+          }
         ],
         "correct_option_id": "B",
         "explanation": "Fluid Mosaic Model Singer aur Nicolson ne 1972 mein diya tha. Isme membrane ek fluid phospholipid bilayer hai jisme proteins mosaic pattern mein embedded hain. Davson aur Danielli ne 1935 mein 'Sandwich Model' diya tha jo baad mein replace ho gaya. Watson aur Crick ne 1953 mein DNA ka double helix model diya. Yeh NEET aur BPSC dono ka direct question hai!"
@@ -604,10 +701,22 @@
       "quiz_payload": {
         "question": "Q2/3: Osmosis mein kya move hota hai?",
         "options": [
-          { "id": "A", "text": "Solute molecules, kam concentration se zyada concentration ki taraf" },
-          { "id": "B", "text": "Water molecules, kam solute concentration (zyada paani) se zyada solute concentration (kam paani) ki taraf" },
-          { "id": "C", "text": "Water molecules, zyada concentration se kam concentration ki taraf" },
-          { "id": "D", "text": "ATP molecules, membrane ke aaar-paar" }
+          {
+            "id": "A",
+            "text": "Solute molecules, kam concentration se zyada concentration ki taraf"
+          },
+          {
+            "id": "B",
+            "text": "Water molecules, kam solute concentration (zyada paani) se zyada solute concentration (kam paani) ki taraf"
+          },
+          {
+            "id": "C",
+            "text": "Water molecules, zyada concentration se kam concentration ki taraf"
+          },
+          {
+            "id": "D",
+            "text": "ATP molecules, membrane ke aaar-paar"
+          }
         ],
         "correct_option_id": "B",
         "explanation": "Osmosis mein water molecules semi-permeable membrane ke through move karti hain — zyada water concentration (hypotonic solution = kam solute) se kam water concentration (hypertonic solution = zyada solute) ki taraf. Yeh passive process hai — koi energy nahi lagti. Aam ke achaar mein, namak (high solute) ki wajah se aam ke andar ka paani bahar aata hai — yeh osmosis ka perfect example hai!"
@@ -630,10 +739,22 @@
       "quiz_payload": {
         "question": "Q3/3: NEET Trap — Cell membrane mein Cholesterol ka kya kaam hai?",
         "options": [
-          { "id": "A", "text": "Energy provide karna ATP ke roop mein" },
-          { "id": "B", "text": "Membrane ki fluidity regulate karna — zyada temperature par fluidity ghataata hai" },
-          { "id": "C", "text": "Proteins ko membrane se bahar nikalna" },
-          { "id": "D", "text": "DNA ko protect karna nucleus mein" }
+          {
+            "id": "A",
+            "text": "Energy provide karna ATP ke roop mein"
+          },
+          {
+            "id": "B",
+            "text": "Membrane ki fluidity regulate karna — zyada temperature par fluidity ghataata hai"
+          },
+          {
+            "id": "C",
+            "text": "Proteins ko membrane se bahar nikalna"
+          },
+          {
+            "id": "D",
+            "text": "DNA ko protect karna nucleus mein"
+          }
         ],
         "correct_option_id": "B",
         "explanation": "Cholesterol cell membrane ka important component hai jo membrane ki fluidity regulate karta hai. Jab temperature badhti hai toh cholesterol molecules lipids ko zyada hilne se rokta hai (fluidity ghataata hai). Jab temperature girta hai toh cholesterol lipids ko freeze hone se rokta hai (fluidity badhata hai). Yeh 'Fluidity Buffer' ki tarah kaam karta hai. Prokaryotic bacteria mein cholesterol NAHI hota — yeh NEET ka trap hai!"
@@ -854,10 +975,22 @@
       "quiz_payload": {
         "question": "Q1/3: 'Suicide Bag of the Cell' kise kaha jaata hai?",
         "options": [
-          { "id": "A", "text": "Mitochondria" },
-          { "id": "B", "text": "Golgi Body" },
-          { "id": "C", "text": "Lysosome" },
-          { "id": "D", "text": "Peroxisome" }
+          {
+            "id": "A",
+            "text": "Mitochondria"
+          },
+          {
+            "id": "B",
+            "text": "Golgi Body"
+          },
+          {
+            "id": "C",
+            "text": "Lysosome"
+          },
+          {
+            "id": "D",
+            "text": "Peroxisome"
+          }
         ],
         "correct_option_id": "C",
         "explanation": "Lysosome ko 'Suicide Bag of the Cell' kaha jaata hai — kyunki isme hydrolytic enzymes hote hain jo agar bahar aa jayein toh khud ki cell ko digest kar dete hain. Yeh naam Christian de Duve ne diya tha. Mitochondria = Powerhouse, Golgi = Post Office/Traffic Police, Ribosome = Protein Factory. Yeh nicknames SSC CGL aur RRB NTPC mein directly pooche jaate hain!"
@@ -880,10 +1013,22 @@
       "quiz_payload": {
         "question": "Q2/3: Mitochondria ko 'semi-autonomous organelle' kyun kaha jaata hai?",
         "options": [
-          { "id": "A", "text": "Kyunki yeh cell ke bahar bhi kaam kar sakta hai" },
-          { "id": "B", "text": "Kyunki iske paas apna DNA aur 70S ribosomes hain, lekin kuch proteins ke liye nuclear DNA pe depend karta hai" },
-          { "id": "C", "text": "Kyunki yeh khud ko replicate kar sakta hai bina cell ke" },
-          { "id": "D", "text": "Kyunki isme sirf ek membrane hoti hai" }
+          {
+            "id": "A",
+            "text": "Kyunki yeh cell ke bahar bhi kaam kar sakta hai"
+          },
+          {
+            "id": "B",
+            "text": "Kyunki iske paas apna DNA aur 70S ribosomes hain, lekin kuch proteins ke liye nuclear DNA pe depend karta hai"
+          },
+          {
+            "id": "C",
+            "text": "Kyunki yeh khud ko replicate kar sakta hai bina cell ke"
+          },
+          {
+            "id": "D",
+            "text": "Kyunki isme sirf ek membrane hoti hai"
+          }
         ],
         "correct_option_id": "B",
         "explanation": "Mitochondria 'semi-autonomous' hai kyunki iske paas apna circular DNA aur 70S ribosomes hain (bacteria jaisa) — toh kuch proteins khud banata hai. Lekin iske kaafi proteins nuclear DNA se code hote hain. Isliye yeh poori tarah autonomous nahi hai. Chloroplast bhi semi-autonomous hai usi wajah se. Yeh Endosymbiotic Theory ka core concept hai — Lynn Margulis, 1967. NEET mein yeh multi-statement question ke roop mein aaya hai!"
@@ -906,10 +1051,22 @@
       "quiz_payload": {
         "question": "Q3/3: BPSC Multi-Statement Trap — Inme se kaun sa statement SAHI hai? (1) Rough ER mein ribosomes hote hain. (2) Smooth ER lipid synthesis karta hai. (3) Golgi Body proteins ko modify karta hai. (4) Lysosome mein photosynthesis hoti hai.",
         "options": [
-          { "id": "A", "text": "Sirf 1 aur 4" },
-          { "id": "B", "text": "1, 2 aur 3" },
-          { "id": "C", "text": "Sirf 2 aur 3" },
-          { "id": "D", "text": "Sabhi 1, 2, 3, 4" }
+          {
+            "id": "A",
+            "text": "Sirf 1 aur 4"
+          },
+          {
+            "id": "B",
+            "text": "1, 2 aur 3"
+          },
+          {
+            "id": "C",
+            "text": "Sirf 2 aur 3"
+          },
+          {
+            "id": "D",
+            "text": "Sabhi 1, 2, 3, 4"
+          }
         ],
         "correct_option_id": "B",
         "explanation": "Statements 1, 2, aur 3 bilkul sahi hain. Statement 4 GALAT hai — Lysosome mein photosynthesis nahi hoti, yeh toh Chloroplast ka kaam hai! Lysosome mein hydrolytic enzymes hote hain jo digestion karte hain, photosynthesis nahi. Yeh classic BPSC style multi-statement trap hai jahan ek clearly galat statement baki sahi statements ke saath mix ki jaati hai!"
@@ -1095,10 +1252,22 @@
       "quiz_payload": {
         "question": "Q1/3: Mitosis mein chromosomes kis phase mein sabse clearly dekhe ja sakte hain?",
         "options": [
-          { "id": "A", "text": "Prophase" },
-          { "id": "B", "text": "Metaphase" },
-          { "id": "C", "text": "Anaphase" },
-          { "id": "D", "text": "Telophase" }
+          {
+            "id": "A",
+            "text": "Prophase"
+          },
+          {
+            "id": "B",
+            "text": "Metaphase"
+          },
+          {
+            "id": "C",
+            "text": "Anaphase"
+          },
+          {
+            "id": "D",
+            "text": "Telophase"
+          }
         ],
         "correct_option_id": "B",
         "explanation": "Metaphase mein chromosomes equatorial plate pe align hote hain — yeh phase chromosomes study karne ke liye best hai kyunki chromosomes apni maximum condensation mein hote hain aur clearly visible hote hain. Doctors karyotyping (chromosome analysis for genetic diseases) ke liye Metaphase cells use karte hain. Prophase mein chromosomes condensed hone lagte hain lekin puri tarah nahi. Yeh NEET aur BPSC dono ka direct question hai!"
@@ -1121,10 +1290,22 @@
       "quiz_payload": {
         "question": "Q2/3: Meiosis I ko 'Reductional Division' kyun kaha jaata hai?",
         "options": [
-          { "id": "A", "text": "Kyunki isme chromosome number dobla ho jaata hai" },
-          { "id": "B", "text": "Kyunki isme homologous chromosomes alag hote hain aur chromosome number aadha (2n se n) ho jaata hai" },
-          { "id": "C", "text": "Kyunki isme sister chromatids alag hoti hain" },
-          { "id": "D", "text": "Kyunki isme sirf cytoplasm divide hoti hai" }
+          {
+            "id": "A",
+            "text": "Kyunki isme chromosome number dobla ho jaata hai"
+          },
+          {
+            "id": "B",
+            "text": "Kyunki isme homologous chromosomes alag hote hain aur chromosome number aadha (2n se n) ho jaata hai"
+          },
+          {
+            "id": "C",
+            "text": "Kyunki isme sister chromatids alag hoti hain"
+          },
+          {
+            "id": "D",
+            "text": "Kyunki isme sirf cytoplasm divide hoti hai"
+          }
         ],
         "correct_option_id": "B",
         "explanation": "Meiosis I mein homologous chromosomes (bhai-behen chromosomes) alag hote hain, jisse ek diploid cell (2n) se do haploid cells (n) banti hain — chromosome number aadha ho jaata hai. Isliye ise 'Reductional Division' kehte hain. Meiosis II mein sister chromatids alag hoti hain — yeh 'Equational Division' hai (Mitosis jaisi). Crossing over bhi Meiosis I ke Prophase I mein hoti hai — genetic variation ka source!"
@@ -1147,10 +1328,22 @@
       "quiz_payload": {
         "question": "Q3/3: SSC CGL Direct — Inme se kaun si process asexual reproduction mein bacterial division ke liye sahi hai?",
         "options": [
-          { "id": "A", "text": "Mitosis" },
-          { "id": "B", "text": "Meiosis" },
-          { "id": "C", "text": "Binary Fission" },
-          { "id": "D", "text": "Budding" }
+          {
+            "id": "A",
+            "text": "Mitosis"
+          },
+          {
+            "id": "B",
+            "text": "Meiosis"
+          },
+          {
+            "id": "C",
+            "text": "Binary Fission"
+          },
+          {
+            "id": "D",
+            "text": "Budding"
+          }
         ],
         "correct_option_id": "C",
         "explanation": "Bacteria prokaryotic organisms hain — unme Mitosis ya Meiosis nahi hoti. Bacteria Binary Fission se reproduce karte hain — ek cell 2 equal cells mein divide ho jaati hai bina spindle formation ke. Budding Yeast (fungi) aur Hydra mein hoti hai. Mitosis eukaryotic somatic cells mein hoti hai, Meiosis gamete formation ke liye. Yeh RRB NTPC aur SSC CGL mein bahut baar aaya hai!"
@@ -1336,10 +1529,22 @@
       "quiz_payload": {
         "question": "Q1/3: Chargaff's Rule ke anusar, DNA mein Adenine aur Thymine ke beech kitne hydrogen bonds hote hain?",
         "options": [
-          { "id": "A", "text": "1 hydrogen bond" },
-          { "id": "B", "text": "2 hydrogen bonds" },
-          { "id": "C", "text": "3 hydrogen bonds" },
-          { "id": "D", "text": "4 hydrogen bonds" }
+          {
+            "id": "A",
+            "text": "1 hydrogen bond"
+          },
+          {
+            "id": "B",
+            "text": "2 hydrogen bonds"
+          },
+          {
+            "id": "C",
+            "text": "3 hydrogen bonds"
+          },
+          {
+            "id": "D",
+            "text": "4 hydrogen bonds"
+          }
         ],
         "correct_option_id": "B",
         "explanation": "Adenine (A) aur Thymine (T) ke beech 2 hydrogen bonds hote hain. Guanine (G) aur Cytosine (C) ke beech 3 hydrogen bonds hote hain. Isliye G-C pair zyada stable hota hai. Yeh Chargaff's Rule hai — A=T (2 bonds), G≡C (3 bonds). RNA mein Thymine ki jagah Uracil hota hai, aur RNA single-stranded hota hai. Yeh NEET mein numerical questions mein bhi use hota hai — agar A ki percentage pata ho toh T ki percentage same hogi!"
@@ -1362,10 +1567,22 @@
       "quiz_payload": {
         "question": "Q2/3: 'Central Dogma of Molecular Biology' kya hai?",
         "options": [
-          { "id": "A", "text": "Protein → RNA → DNA" },
-          { "id": "B", "text": "DNA → Protein → RNA" },
-          { "id": "C", "text": "DNA → RNA → Protein" },
-          { "id": "D", "text": "RNA → DNA → Protein" }
+          {
+            "id": "A",
+            "text": "Protein → RNA → DNA"
+          },
+          {
+            "id": "B",
+            "text": "DNA → Protein → RNA"
+          },
+          {
+            "id": "C",
+            "text": "DNA → RNA → Protein"
+          },
+          {
+            "id": "D",
+            "text": "RNA → DNA → Protein"
+          }
         ],
         "correct_option_id": "C",
         "explanation": "Central Dogma of Molecular Biology hai: DNA → RNA → Protein. Pehle Transcription hoti hai jisme DNA se mRNA banta hai, phir Translation hoti hai jisme mRNA se Protein banta hai. Yeh Francis Crick ne 1958 mein propose kiya. Exception: Retroviruses (jaise HIV) mein RNA se DNA banta hai — ise 'Reverse Transcription' kehte hain, aur enzyme hai 'Reverse Transcriptase.' Yeh NEET aur BPSC dono ka top question hai!"
@@ -1388,10 +1605,22 @@
       "quiz_payload": {
         "question": "Q3/3: BPSC Trap — DNA ke double helix model ke liye Nobel Prize kab aur kisne jeeta?",
         "options": [
-          { "id": "A", "text": "Watson, Crick aur Rosalind Franklin — 1953 mein" },
-          { "id": "B", "text": "Watson aur Crick — 1953 mein" },
-          { "id": "C", "text": "Watson, Crick aur Wilkins — 1962 mein Physiology/Medicine mein" },
-          { "id": "D", "text": "Rosalind Franklin — 1962 mein Chemistry mein" }
+          {
+            "id": "A",
+            "text": "Watson, Crick aur Rosalind Franklin — 1953 mein"
+          },
+          {
+            "id": "B",
+            "text": "Watson aur Crick — 1953 mein"
+          },
+          {
+            "id": "C",
+            "text": "Watson, Crick aur Wilkins — 1962 mein Physiology/Medicine mein"
+          },
+          {
+            "id": "D",
+            "text": "Rosalind Franklin — 1962 mein Chemistry mein"
+          }
         ],
         "correct_option_id": "C",
         "explanation": "Nobel Prize in Physiology or Medicine 1962 mein James Watson, Francis Crick, aur Maurice Wilkins ko mila — DNA double helix model ke liye. Rosalind Franklin ko Nobel Prize nahi mila kyunki Nobel Prize sirf zinda logon ko milta hai aur Franklin 1958 mein cancer se chali gain. Unhone X-ray diffraction se 'Photo 51' li thi jiska model banane mein crucial role tha. 1953 sirf model propose ka saal hai, Nobel 1962 mein mila!"
@@ -1473,10 +1702,22 @@
         "question": "🤔 Guess karo — Ek cell organelle jo sirf plant cells mein hota hai, apna DNA rakhta hai, 70S ribosomes use karta hai, aur photosynthesis karta hai. Iska naam kya hai?",
         "hint": "💡 Hint: Iski wajah se hi plants green dikhte hain!",
         "options": [
-          { "id": "A", "text": "Mitochondria" },
-          { "id": "B", "text": "Chloroplast" },
-          { "id": "C", "text": "Vacuole" },
-          { "id": "D", "text": "Centrosome" }
+          {
+            "id": "A",
+            "text": "Mitochondria"
+          },
+          {
+            "id": "B",
+            "text": "Chloroplast"
+          },
+          {
+            "id": "C",
+            "text": "Vacuole"
+          },
+          {
+            "id": "D",
+            "text": "Centrosome"
+          }
         ],
         "correct_option_id": "B",
         "explanation": "Chloroplast! Yeh sirf plant cells (aur algae) mein hota hai. Iske paas apna circular DNA aur 70S ribosomes hote hain — Endosymbiotic Theory ke anusar yeh pehle Cyanobacteria tha. Andar Thylakoid membranes hoti hain jo stacked Grana banati hain — yahan light reactions hoti hain. Matrix jaise 'Stroma' mein dark reactions (Calvin Cycle) hoti hain. Chlorophyll pigment sunlight absorb karta hai — isliye plants green dikhte hain!"
@@ -1613,10 +1854,22 @@
       "quiz_payload": {
         "question": "🏆 MASTER QUIZ Q1/5 — BPSC Multi-Statement Trap: Inme se kaun se statements Mitochondria ke baare mein SAHI hain?\n(1) Mitochondria mein 70S ribosomes hote hain\n(2) Mitochondria ka DNA circular hota hai\n(3) Mitochondria plant cells mein nahi hota\n(4) Mitochondria ki inner membrane ko Cristae kehte hain\n(5) Mitochondria sirf Eukaryotic cells mein hota hai",
         "options": [
-          { "id": "A", "text": "Sirf 1, 2 aur 4" },
-          { "id": "B", "text": "1, 2, 4 aur 5" },
-          { "id": "C", "text": "Sirf 3 aur 5" },
-          { "id": "D", "text": "1, 2, 3 aur 4" }
+          {
+            "id": "A",
+            "text": "Sirf 1, 2 aur 4"
+          },
+          {
+            "id": "B",
+            "text": "1, 2, 4 aur 5"
+          },
+          {
+            "id": "C",
+            "text": "Sirf 3 aur 5"
+          },
+          {
+            "id": "D",
+            "text": "1, 2, 3 aur 4"
+          }
         ],
         "correct_option_id": "B",
         "explanation": "Statements 1, 2, 4 aur 5 SAHI hain. Statement 3 GALAT hai — Mitochondria plant cells mein BHI hota hai! Plants ko bhi cellular respiration ke liye ATP chahiye — sirf chloroplast nahi kafi. Mitochondria ka DNA circular hai (bacteria jaisa), 70S ribosomes hain, inner membrane Cristae form karta hai, aur yeh sirf Eukaryotic cells mein hota hai (Prokaryotes mein nahi). Yeh exact pattern BPSC 2019 aur NEET 2020 mein aaya tha!"
@@ -1639,10 +1892,22 @@
       "quiz_payload": {
         "question": "🏆 MASTER QUIZ Q2/5 — NEET Assertion-Reason: Assertion (A): Mature mammalian Red Blood Cells mein nucleus nahi hota. Reason (R): Nucleus ki absence ki wajah se RBC mein zyada haemoglobin fit ho sakta hai oxygen transport ke liye.",
         "options": [
-          { "id": "A", "text": "A sahi hai, R galat hai" },
-          { "id": "B", "text": "A galat hai, R sahi hai" },
-          { "id": "C", "text": "A aur R dono sahi hain, aur R, A ka sahi explanation hai" },
-          { "id": "D", "text": "A aur R dono sahi hain, lekin R, A ka sahi explanation nahi hai" }
+          {
+            "id": "A",
+            "text": "A sahi hai, R galat hai"
+          },
+          {
+            "id": "B",
+            "text": "A galat hai, R sahi hai"
+          },
+          {
+            "id": "C",
+            "text": "A aur R dono sahi hain, aur R, A ka sahi explanation hai"
+          },
+          {
+            "id": "D",
+            "text": "A aur R dono sahi hain, lekin R, A ka sahi explanation nahi hai"
+          }
         ],
         "correct_option_id": "C",
         "explanation": "Dono statements sahi hain aur R, A ka correct explanation bhi hai! Mature mammalian RBC anucleate (nucleus-free) hoti hain — yeh differentiation ke time nucleus bahar nikal jaata hai. Iske fayde: (1) Zyada haemoglobin fit ho sakta hai, (2) Cell zyada flexible ho jaati hai capillaries mein se guzarne ke liye, (3) Energy waste nahi hoti nucleus maintain karne mein — sirf oxygen transport pe focus. Frog/Fish ki RBC nucleated hoti hai — yeh non-mammalian vertebrates hain!"
@@ -1665,10 +1930,22 @@
       "quiz_payload": {
         "question": "🏆 MASTER QUIZ Q3/5 — UPSC Level: Ek DNA molecule mein Adenine ki percentage 30% hai. Toh Cytosine ki percentage kya hogi?",
         "options": [
-          { "id": "A", "text": "30%" },
-          { "id": "B", "text": "20%" },
-          { "id": "C", "text": "40%" },
-          { "id": "D", "text": "25%" }
+          {
+            "id": "A",
+            "text": "30%"
+          },
+          {
+            "id": "B",
+            "text": "20%"
+          },
+          {
+            "id": "C",
+            "text": "40%"
+          },
+          {
+            "id": "D",
+            "text": "25%"
+          }
         ],
         "correct_option_id": "B",
         "explanation": "Chargaff's Rule: A = T, G = C. Agar A = 30%, toh T = 30%. Toh A + T = 60%. Baaki 40% G aur C mein equal divide hoga: G = C = 20% each. Isliye Cytosine = 20%. Yeh ek numerical application question hai jo NEET mein directly aaya hai. Formula yaad rakho: Agar A ki % pata hai, toh C = (100 - 2A) ÷ 2. Yahan: (100 - 60) ÷ 2 = 40 ÷ 2 = 20%."
@@ -1691,10 +1968,22 @@
       "quiz_payload": {
         "question": "🏆 MASTER QUIZ Q4/5 — BPSC Officer Trap: Cell Wall ka composition inme se kaunsa combination SAHI hai?\n(A) Plant = Chitin, Bacteria = Cellulose, Fungi = Peptidoglycan\n(B) Plant = Cellulose, Bacteria = Peptidoglycan, Fungi = Chitin\n(C) Plant = Peptidoglycan, Bacteria = Chitin, Fungi = Cellulose\n(D) Plant = Cellulose, Bacteria = Chitin, Fungi = Peptidoglycan",
         "options": [
-          { "id": "A", "text": "Option A" },
-          { "id": "B", "text": "Option B" },
-          { "id": "C", "text": "Option C" },
-          { "id": "D", "text": "Option D" }
+          {
+            "id": "A",
+            "text": "Option A"
+          },
+          {
+            "id": "B",
+            "text": "Option B"
+          },
+          {
+            "id": "C",
+            "text": "Option C"
+          },
+          {
+            "id": "D",
+            "text": "Option D"
+          }
         ],
         "correct_option_id": "B",
         "explanation": "Sahi answer B hai: Plant cell wall = Cellulose (polysaccharide), Bacteria cell wall = Peptidoglycan/Murein, Fungi cell wall = Chitin. Penicillin bacterial cell wall synthesis (Peptidoglycan) ko block karta hai. Animal cells mein cell wall hoti hi nahi — sirf cell membrane. Yeh BPSC, SSC CGL, RRB NTPC — teeno mein baar-baar aaya hai. Ek mnemonic: 'Plant C karta hai, Bacteria P laata hai, Fungi C hi chahiye (Chitin).'"
@@ -1717,10 +2006,22 @@
       "quiz_payload": {
         "question": "🏆 MASTER QUIZ Q5/5 — NEET Level Supreme: Inme se kaun sa statement GALAT hai?\n(1) Meiosis mein 4 haploid cells banti hain\n(2) Crossing over Prophase II mein hoti hai\n(3) Mitosis mein chromosome number same rehta hai\n(4) Binary Fission Bacteria mein hoti hai\n(5) tRNA ka shape Clover Leaf hota hai",
         "options": [
-          { "id": "A", "text": "Sirf Statement 2" },
-          { "id": "B", "text": "Statements 2 aur 4" },
-          { "id": "C", "text": "Statements 1 aur 3" },
-          { "id": "D", "text": "Statements 3, 4 aur 5" }
+          {
+            "id": "A",
+            "text": "Sirf Statement 2"
+          },
+          {
+            "id": "B",
+            "text": "Statements 2 aur 4"
+          },
+          {
+            "id": "C",
+            "text": "Statements 1 aur 3"
+          },
+          {
+            "id": "D",
+            "text": "Statements 3, 4 aur 5"
+          }
         ],
         "correct_option_id": "A",
         "explanation": "Sirf Statement 2 GALAT hai! Crossing Over Prophase I mein hoti hai — Meiosis I ke pehle phase mein, Prophase II mein nahi! Baki sab sahi hain: (1) Meiosis mein 4 haploid cells ✓, (3) Mitosis mein chromosome number same (2n→2n) ✓, (4) Binary Fission bacteria mein ✓, (5) tRNA clover leaf shape ✓. Crossing Over ka correct phase Prophase I yaad rakhna — yeh NEET mein 3 baar galat form mein poochha ja chuka hai. Congratulations — tum Cell Biology ke Master ban gaye!"
@@ -1744,10 +2045,22 @@
         "question": "🎯 Final Boss Guess — Ek aisa scientist jisne cell ka naam diya, ek aisa scientist jisne zinda cell dekhi, ek scientist jisne cell theory ka 3rd rule diya — inke CORRECT kram ko identify karo!",
         "hint": "💡 Hint: 1665 → 1674 → 1855 — sirf saal yaad raho, baaki sab ho jaayega!",
         "options": [
-          { "id": "A", "text": "Leeuwenhoek → Hooke → Virchow" },
-          { "id": "B", "text": "Hooke (1665) → Leeuwenhoek (1674) → Virchow (1855)" },
-          { "id": "C", "text": "Virchow → Hooke → Leeuwenhoek" },
-          { "id": "D", "text": "Schleiden → Schwann → Virchow" }
+          {
+            "id": "A",
+            "text": "Leeuwenhoek → Hooke → Virchow"
+          },
+          {
+            "id": "B",
+            "text": "Hooke (1665) → Leeuwenhoek (1674) → Virchow (1855)"
+          },
+          {
+            "id": "C",
+            "text": "Virchow → Hooke → Leeuwenhoek"
+          },
+          {
+            "id": "D",
+            "text": "Schleiden → Schwann → Virchow"
+          }
         ],
         "correct_option_id": "B",
         "explanation": "Perfect chronological order: Robert Hooke (1665) ne cork mein dead cells dekhi aur 'cell' naam diya. Anton van Leeuwenhoek (1674) ne pond water mein pehli baar zinda cells dekhi. Rudolf Virchow (1855) ne 'Omnis cellula e cellula' — har cell purani cell se — ka rule diya. Option D bhi partially sahi hai (Schleiden 1838, Schwann 1839, Virchow 1855) lekin sawaal pehle teen scientists ke baare mein tha. Yeh poora chapter ek hi jagah seal ho gaya!"
@@ -1817,4 +2130,3 @@
     }
   ]
 }
-```
