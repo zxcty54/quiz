@@ -50,7 +50,7 @@ class LearnCardModel {
   final int currentProgress;
   final int totalProgress;
   final List<LearnChatMessage>? messages;
-  final Map<String, dynamic>? introPayload; // 👈 Added Intro Payload
+  final Map<String, dynamic>? introPayload;
   final Map<String, dynamic>? quizPayload;
   final Map<String, dynamic>? summaryPayload;
   final Map<String, dynamic>? milestonePayload;
@@ -66,7 +66,7 @@ class LearnCardModel {
     required this.currentProgress,
     required this.totalProgress,
     this.messages,
-    this.introPayload, // 👈 Added
+    this.introPayload,
     this.quizPayload,
     this.summaryPayload,
     this.milestonePayload,
@@ -91,7 +91,7 @@ class LearnCardModel {
       currentProgress: json['progress']?['current'] ?? 1,
       totalProgress: json['progress']?['total'] ?? 1,
       messages: msgs,
-      introPayload: json['intro_payload'], // 👈 Added parsing for intro_payload
+      introPayload: json['intro_payload'],
       quizPayload: json['quiz_payload'] ?? json['final_quiz_payload'] ?? json['guess_payload'],
       summaryPayload: json['summary_payload'],
       milestonePayload: json['milestone_payload'],
@@ -141,7 +141,8 @@ class LearnChapterData {
     return LearnChapterData(
       id: json['topic_id'] ?? json['chapter']?['id'] ?? 'bio_cell',
       title: json['topic_title'] ?? json['chapter']?['title'] ?? 'Chapter',
-      totalCards: json['total_cards'] ?? json['chapter']?['total_cards'] ?? cardList.length,
+      // 🔑 DYNAMIC FIX: Actual loaded cards ki length hi real count mani jayegi
+      totalCards: cardList.length,
       characters: chars,
       cardsList: cardList,
       cardsMap: map,
