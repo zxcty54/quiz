@@ -1,0 +1,2116 @@
+{
+  "topic_id": "circulatory_system_biology",
+  "topic_title": "Circulatory System: Blood, Heart & Transport",
+  "target_exams": [
+    "BPSC",
+    "BSSC",
+    "RRB NTPC",
+    "SSC CGL",
+    "NEET",
+    "UPSC Prelims"
+  ],
+  "total_cards": 60,
+  "characters": {
+    "aman": {
+      "name": "Aman Sir",
+      "role": "teacher",
+      "avatar": "👨‍🏫"
+    },
+    "raju": {
+      "name": "Raju",
+      "role": "student",
+      "avatar": "👦"
+    }
+  },
+  "cards": [
+    {
+      "card_id": "card_01_intro",
+      "card_slug": "card_01_intro",
+      "type": "intro",
+      "concept_id": "chapter_intro",
+      "level": 1,
+      "progress": {
+        "current": 1,
+        "total": 60
+      },
+      "intro_payload": {
+        "chapter_icon": "❤️",
+        "chapter_title": "Circulatory System",
+        "subtitle": "The Highway Inside Your Body — Blood, Heart & Beyond!",
+        "target_exams": [
+          "BPSC",
+          "BSSC",
+          "RRB NTPC",
+          "SSC CGL",
+          "NEET",
+          "UPSC Prelims"
+        ],
+        "learning_outcomes": [
+          "Understand what blood is, its components and exact functions",
+          "Master Blood Groups (ABO & Rh) — every exam trap decoded",
+          "Learn Heart structure: 4 chambers, valves, and blood flow direction",
+          "Understand types of circulation: pulmonary vs systemic",
+          "Know Blood Vessels: Arteries, Veins, Capillaries — differences",
+          "Crack BPSC multi-statement & NEET assertion-reason on heart & blood"
+        ],
+        "total_modules": 6,
+        "estimated_time": "50 mins"
+      },
+      "navigation": {
+        "next": "card_02_blood_intro",
+        "button_text": "Start Learning 🚀"
+      }
+    },
+    {
+      "card_id": "card_02_blood_intro",
+      "card_slug": "card_02_blood_intro",
+      "type": "chat",
+      "concept_id": "blood_introduction",
+      "level": 1,
+      "progress": {
+        "current": 2,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, kabhi cycle chalate waqt gir gaye ho? Haath chhil gaya ho? Woh laal liquid jo bahar aata hai — woh sirf 'laal paani' nahi hai, yeh ek bahut khaas cheez hai jo tumhare poore sharir mein ek highway ki tarah ghoomti rehti hai, oxygen aur khaana deliver karti hai, aur waste bhi uthati hai!",
+          "emotion": "🩸"
+        },
+        {
+          "speaker": "raju",
+          "text": "Haan sir, gira tha main! Toh woh laal cheez itni important hai? Maine socha tha bas dard hota hai aur band ho jaata hai!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul! Aur yahi to exam ka pehla trap hai — log sirf laal rang dekhte hain aur sochte hain blood ek simple liquid hai. Asli mein blood ek 'Connective Tissue' hai — yeh BPSC aur SSC ka direct question hai! Blood tissue ka hi ek type hai, liquid form mein. Iske 4 main components hain — Plasma, RBC, WBC, aur Platelets. Inme se har ek ka alag kaam hai!",
+          "emotion": "💡"
+        },
+        {
+          "speaker": "raju",
+          "text": "Blood ek tissue hai?? Ye to Maine socha hi nahi tha! Matlab hamare andar ek liquid tissue beh raha hai?"
+        }
+      ],
+      "navigation": {
+        "next": "card_03_plasma_rbc",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_03_plasma_rbc",
+      "card_slug": "card_03_plasma_rbc",
+      "type": "chat",
+      "concept_id": "plasma_and_rbc",
+      "level": 1,
+      "progress": {
+        "current": 3,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Blood ka sabse bada hissa hai 'Plasma' — lagbhag 55% blood plasma hai. Yeh ek pale yellow liquid hai jisme paani (90%), proteins, salts, glucose, hormones sab hote hain. Plasma hi cheezein ek jagah se doosri jagah carry karta hai — nutrients, hormones, waste products. Baaki 45% mein cells hote hain — RBC, WBC, Platelets!",
+          "emotion": "🔬"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir toh plasma yellow hota hai? Lekin blood toh laal dikhta hai!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Exactly wahi confusion jahan log phans jaate hain! Blood laal isliye dikhta hai kyunki RBC — Red Blood Cells — mein 'Haemoglobin' hota hai jo laal hota hai, aur RBC itni zyada hoti hain ki poora blood laal dikhta hai. Ek cubic millimeter blood mein lagbhag 50 lakh RBC hoti hain! RBC ka kaam hai oxygen lungs se body ke tissues tak pohonchana. Aur ek bada exam bomb — mature mammalian RBC mein nucleus NAHI hota!",
+          "emotion": "🩸"
+        },
+        {
+          "speaker": "raju",
+          "text": "50 lakh RBC ek choti si jagah mein?? Aur nucleus nahi hota — ye to pehle bhi suna tha par ab samajh aa raha hai kyun important hai!"
+        }
+      ],
+      "navigation": {
+        "next": "card_04_wbc_platelets",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_04_wbc_platelets",
+      "card_slug": "card_04_wbc_platelets",
+      "type": "chat",
+      "concept_id": "wbc_and_platelets",
+      "level": 1,
+      "progress": {
+        "current": 4,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ab WBC ki baat karte hain — White Blood Cells ya 'Leukocytes.' Yeh body ke soldiers hain — bahar se aane wale bacteria, virus sab ko yeh kha jaate hain ya destroy karte hain. WBC mein nucleus hota hai — yeh RBC se alag hai! RBC lagbhag 120 din jeeti hai, WBC sirf 10-15 din. Normal WBC count hai 5000-10000 per cubic mm blood. Agar count bahut badh jaaye toh condition hai 'Leukaemia' — blood cancer!",
+          "emotion": "🛡️"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir Platelets kya hoti hain? Maine suna hai dengue mein platelets girte hain!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bahut badiya connection! Platelets — ya 'Thrombocytes' — woh tiny fragments hain jo blood clotting karte hain jab chot lagti hai. Socho — cycle se gire, haath kata — kuch der baad blood band ho gaya na? Woh platelets ka kaam tha! Normal platelet count: 1.5 lakh se 4.5 lakh per cubic mm. Dengue mein platelet count bahut gir jaata hai, isliye khatra hota hai. Platelets bhi nucleus-free hoti hain — yeh NEET ka direct point hai!",
+          "emotion": "🩹"
+        },
+        {
+          "speaker": "raju",
+          "text": "Toh Platelets = blood bandh karna, WBC = soldiers, RBC = oxygen delivery! Yeh teen kaam alag-alag hain — bahut clear ho gaya sir!"
+        }
+      ],
+      "navigation": {
+        "next": "card_05_quiz1",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_05_quiz1",
+      "card_slug": "card_05_quiz1",
+      "type": "quiz",
+      "concept_id": "blood_components_quiz1",
+      "level": 1,
+      "progress": {
+        "current": 5,
+        "total": 60
+      },
+      "quiz_payload": {
+        "question": "Q1/3: Blood ka sabse zyada hissa (percentage mein) kya hota hai?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Red Blood Cells (RBC)"
+          },
+          {
+            "id": "B",
+            "text": "White Blood Cells (WBC)"
+          },
+          {
+            "id": "C",
+            "text": "Plasma"
+          },
+          {
+            "id": "D",
+            "text": "Platelets"
+          }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Blood ka lagbhag 55% hissa Plasma hota hai — yeh ek pale yellow liquid hai jisme 90% paani, proteins (Albumin, Globulin, Fibrinogen), glucose, hormones aur waste products hote hain. Baaki 45% mein cells hote hain — jisme RBC sabse zyada (44-45%), WBC aur Platelets bahut kam. Yeh SSC CGL aur RRB NTPC mein seedha poochha gaya hai. Plasma ko 'Serum' kehte hain jab Fibrinogen nikal jaata hai — yeh BPSC ka trap hai!"
+      },
+      "navigation": {
+        "next": "card_06_quiz2",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_06_quiz2",
+      "card_slug": "card_06_quiz2",
+      "type": "quiz",
+      "concept_id": "blood_components_quiz2",
+      "level": 1,
+      "progress": {
+        "current": 6,
+        "total": 60
+      },
+      "quiz_payload": {
+        "question": "Q2/3: RBC (Red Blood Cells) ki average lifespan kitni hoti hai?",
+        "options": [
+          {
+            "id": "A",
+            "text": "10-15 din"
+          },
+          {
+            "id": "B",
+            "text": "7 din"
+          },
+          {
+            "id": "C",
+            "text": "120 din"
+          },
+          {
+            "id": "D",
+            "text": "1 saal"
+          }
+        ],
+        "correct_option_id": "C",
+        "explanation": "RBC (Red Blood Cells / Erythrocytes) ki average lifespan lagbhag 120 din (4 months) hoti hai. WBC ki lifespan 10-15 din hoti hai. Platelets ki lifespan 7-10 din hoti hai. Purani RBC ko Spleen destroy karti hai — isliye Spleen ko 'Graveyard of RBC' ya 'Red Blood Cell ka qabristan' kaha jaata hai! Yeh SSC aur BPSC dono ka favorite question hai. RBC Bone Marrow mein banti hain — ek aur important fact!"
+      },
+      "navigation": {
+        "next": "card_07_quiz3",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_07_quiz3",
+      "card_slug": "card_07_quiz3",
+      "type": "quiz",
+      "concept_id": "blood_components_quiz3",
+      "level": 1,
+      "progress": {
+        "current": 7,
+        "total": 60
+      },
+      "quiz_payload": {
+        "question": "Q3/3: BPSC Trap — 'Leukaemia' kya hai?",
+        "options": [
+          {
+            "id": "A",
+            "text": "RBC count bahut badhna — Red Blood Cell Cancer"
+          },
+          {
+            "id": "B",
+            "text": "WBC count abnormally badhna — Blood Cancer"
+          },
+          {
+            "id": "C",
+            "text": "Platelet count bahut gir jaana"
+          },
+          {
+            "id": "D",
+            "text": "Haemoglobin ki kami — Anaemia"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Leukaemia ek prakar ka Blood Cancer hai jisme WBC (White Blood Cells) ki count abnormally bahut zyada badh jaati hai. Normal WBC count 5000-10000 per cubic mm hota hai — Leukaemia mein yeh lakhs tak pahunch sakta hai! Anaemia mein RBC ya Haemoglobin ki kami hoti hai. Dengue mein Platelet count girta hai (Thrombocytopenia). Yeh teen conditions — Leukaemia, Anaemia, Thrombocytopenia — BPSC aur SSC mein confuse karne ke liye ek saath diye jaate hain!"
+      },
+      "navigation": {
+        "next": "card_08_milestone1",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_08_milestone1",
+      "card_slug": "card_08_milestone1",
+      "type": "milestone",
+      "concept_id": "module1_complete",
+      "level": 1,
+      "progress": {
+        "current": 8,
+        "total": 60
+      },
+      "milestone_payload": {
+        "title": "MODULE 1 COMPLETE! 🎉",
+        "badge_emoji": "🩸",
+        "completed_topic": "Blood — Components & Functions",
+        "xp_earned": 50,
+        "milestone_progress": "Module 1/6 Clear",
+        "motivational_quote": "Plasma se Platelets tak — tumne blood ka poora breakdown samajh liya! Ab ek aur layer — Blood Groups ka code unlock karne ka time hai. Yeh topic exam mein GUARANTEE se aata hai!"
+      },
+      "navigation": {
+        "next": "card_09_blood_groups_intro",
+        "button_text": "Start Module 2 ➔"
+      }
+    },
+    {
+      "card_id": "card_09_blood_groups_intro",
+      "card_slug": "card_09_blood_groups_intro",
+      "type": "chat",
+      "concept_id": "blood_groups_abo_intro",
+      "level": 2,
+      "progress": {
+        "current": 9,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, socho — agar kisi ko accident mein bahut zyada blood loss ho jaaye, toh doctor kisi bhi insaan ka blood nahi de sakta na? Kyun? Kyunki har insaan ka blood same nahi hota — blood 'Groups' mein hota hai. Agar galat group ka blood mile, toh body reject kar deti hai aur insaan mar bhi sakta hai! Yeh system discover kiya tha Karl Landsteiner ne — 1901 mein. Unhe 1930 mein Nobel Prize mila!",
+          "emotion": "🏥"
+        },
+        {
+          "speaker": "raju",
+          "text": "Karl Landsteiner 1901 — achha sir! Toh blood groups kaise decide hote hain?"
+        },
+        {
+          "speaker": "aman",
+          "text": "RBC ki surface pe kuch special proteins hote hain jinhein 'Antigens' kehte hain. Agar A antigen hai toh Blood Group A, B antigen hai toh B, dono hain toh AB, dono nahi hain toh O! Aur plasma mein hote hain 'Antibodies' — jo bahar ke antigens se fight karte hain. Group A mein anti-B antibody hogi, Group B mein anti-A, Group O mein dono antibodies (anti-A aur anti-B), Group AB mein koi antibody nahi!",
+          "emotion": "🔬"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab AB mein koi antibody nahi aur O mein dono antibodies hain — ye ulta lagta hai sir, confuse ho raha hun!"
+        }
+      ],
+      "navigation": {
+        "next": "card_10_universal_donor_receptor",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_10_universal_donor_receptor",
+      "card_slug": "card_10_universal_donor_receptor",
+      "type": "chat",
+      "concept_id": "universal_donor_recipient",
+      "level": 2,
+      "progress": {
+        "current": 10,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ruko — ek simple logic se yaad karo! Group AB ka insaan sabko receive kar sakta hai — kyunki uske paas koi antibody nahi hai react karne ke liye. Isliye AB ko 'Universal Recipient' kehte hain. Group O ka insaan sabko de sakta hai — kyunki O ke RBC pe koi antigen nahi hai jisko body reject kare. Isliye O ko 'Universal Donor' kehte hain. Yeh BPSC aur SSC ka MOST repeated question hai!",
+          "emotion": "💡"
+        },
+        {
+          "speaker": "raju",
+          "text": "AB = Universal Recipient, O = Universal Donor — ab yaad ho gaya! Lekin sir maine suna hai O negative kuch aur hota hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul sahi pakda! Yahan aata hai Rh Factor — yeh ek aur antigen hai RBC pe. Rhesus (Rh) naam diya gaya Rhesus monkey ke naam pe. Agar Rh antigen hai toh Rh+ (Positive), nahi hai toh Rh- (Negative). Toh poora group hoga: A+, A-, B+, B-, AB+, AB-, O+, O-. O negative (O-) wala insaan sabse safe universal donor hai — kisi ko bhi de sakte hain! Isliye emergency mein doctor O- blood use karte hain!",
+          "emotion": "🩸"
+        },
+        {
+          "speaker": "raju",
+          "text": "Achhaaa! O negative sabka donor — isliye hospital mein O negative blood bahut important hota hai! Ye to practical baat hai!"
+        }
+      ],
+      "navigation": {
+        "next": "card_11_rh_erythroblastosis",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_11_rh_erythroblastosis",
+      "card_slug": "card_11_rh_erythroblastosis",
+      "type": "chat",
+      "concept_id": "rh_incompatibility",
+      "level": 2,
+      "progress": {
+        "current": 11,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Rh factor ek aur bahut important jagah use hota hai — pregnancy mein! Agar maa Rh negative hai aur bacha Rh positive (baap se inherit kiya), toh maa ki body baache ke Rh+ blood ko foreign samajhke attack kar sakti hai. Isse hoti hai 'Erythroblastosis Foetalis' — naye bachche ki RBCs destroy ho jaati hain. Pehle bacha usually safe rahta hai, lekin doosre ya teesre pregnancy mein risk bahut badh jaata hai!",
+          "emotion": "⚠️"
+        },
+        {
+          "speaker": "raju",
+          "text": "Yeh to bahut dangerous hai sir! Koi treatment hai iske liye?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! Delivery ke baad maa ko 'Anti-D injection' (RhoGAM) diya jaata hai jo unki body mein Rh antibodies banने se rokta hai — toh agle pregnancy mein attack nahi hoga. BPSC mein yeh Assertion-Reason format mein aaya hai: 'Assertion: Rh-negative maa ko delivery ke baad injection diya jaata hai. Reason: Kyunki pehli delivery ke baad maa Rh antibodies develop karti hai.' Dono statements sahi hain aur Reason, Assertion ka correct explanation hai!",
+          "emotion": "💉"
+        },
+        {
+          "speaker": "raju",
+          "text": "Erythroblastosis Foetalis — bada naam hai par ab samajh aa gaya! Maa Rh-, bacha Rh+ = problem. Anti-D injection = solution!"
+        }
+      ],
+      "navigation": {
+        "next": "card_12_quiz4",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_12_quiz4",
+      "card_slug": "card_12_quiz4",
+      "type": "quiz",
+      "concept_id": "blood_groups_quiz1",
+      "level": 2,
+      "progress": {
+        "current": 12,
+        "total": 60
+      },
+      "quiz_payload": {
+        "question": "Q1/3: ABO Blood Group system kisne discover kiya aur kab?",
+        "options": [
+          {
+            "id": "A",
+            "text": "William Harvey, 1628"
+          },
+          {
+            "id": "B",
+            "text": "Karl Landsteiner, 1901"
+          },
+          {
+            "id": "C",
+            "text": "Louis Pasteur, 1880"
+          },
+          {
+            "id": "D",
+            "text": "Alexander Fleming, 1928"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "ABO Blood Group system Karl Landsteiner ne 1901 mein discover kiya. Unhe isi discovery ke liye 1930 mein Nobel Prize in Physiology or Medicine mila. William Harvey ne 1628 mein blood circulation discover kiya. Louis Pasteur ne germ theory di. Alexander Fleming ne Penicillin discover kiya. Landsteiner ne baad mein 1940 mein Alexander Wiener ke saath Rh factor bhi discover kiya. Yeh SSC CGL aur RRB NTPC mein multiple times aaya hai!"
+      },
+      "navigation": {
+        "next": "card_13_quiz5",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_13_quiz5",
+      "card_slug": "card_13_quiz5",
+      "type": "quiz",
+      "concept_id": "blood_groups_quiz2",
+      "level": 2,
+      "progress": {
+        "current": 13,
+        "total": 60
+      },
+      "quiz_payload": {
+        "question": "Q2/3: Blood Group AB wale insaan ko 'Universal Recipient' kyun kaha jaata hai?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Kyunki AB ke paas dono A aur B antigens hote hain RBC pe"
+          },
+          {
+            "id": "B",
+            "text": "Kyunki AB ke plasma mein koi antibody (anti-A ya anti-B) nahi hoti, isliye kisi bhi group ka blood reject nahi hota"
+          },
+          {
+            "id": "C",
+            "text": "Kyunki AB sabse common blood group hai"
+          },
+          {
+            "id": "D",
+            "text": "Kyunki AB ke RBC pe koi antigen nahi hota"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Blood Group AB ke plasma mein koi bhi antibody (anti-A ya anti-B) nahi hoti — isliye kisi bhi blood group ka blood dene par body mein koi rejection reaction nahi hota. Isliye AB ko 'Universal Recipient' kehte hain. Blood Group O ke RBC pe koi antigen nahi hota — isliye O 'Universal Donor' hai. AB ke RBC pe dono A aur B antigens hote hain — yeh sahi hai lekin yeh 'Universal Recipient' hone ka REASON nahi hai — plasma mein antibody na hona reason hai!"
+      },
+      "navigation": {
+        "next": "card_14_quiz6",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_14_quiz6",
+      "card_slug": "card_14_quiz6",
+      "type": "quiz",
+      "concept_id": "blood_groups_quiz3",
+      "level": 2,
+      "progress": {
+        "current": 14,
+        "total": 60
+      },
+      "quiz_payload": {
+        "question": "Q3/3: NEET Level — Ek Rh-negative maa ka pehla bacha Rh-positive hai. Doosri pregnancy mein Rh-positive bacha hai. Kya hoga?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Dono pregnancies bilkul safe hain, koi khatra nahi"
+          },
+          {
+            "id": "B",
+            "text": "Pehla bacha safe rahega, lekin doosre baache ko Erythroblastosis Foetalis ka risk zyada hoga"
+          },
+          {
+            "id": "C",
+            "text": "Pehle baache ko khatra hoga, doosra safe rahega"
+          },
+          {
+            "id": "D",
+            "text": "Dono baachon ko equal khatra hoga"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Pehli pregnancy mein maa ka Rh-negative immune system Rh-positive bache ke blood se pehli baar expose hota hai — antibodies slowly develop hoti hain, isliye pehla bacha generally safe rehta hai. Lekin delivery ke baad maa ke blood mein Rh antibodies ban jaati hain. Doosri pregnancy mein yeh antibodies placenta cross karke Rh+ baache ke RBCs ko attack karti hain — isse Erythroblastosis Foetalis hoti hai. Anti-D injection pehli delivery ke baad diya jaata hai in antibodies ko banने se rokne ke liye. NEET 2018 mein exactly yeh scenario aaya tha!"
+      },
+      "navigation": {
+        "next": "card_15_milestone2",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_15_milestone2",
+      "card_slug": "card_15_milestone2",
+      "type": "milestone",
+      "concept_id": "module2_complete",
+      "level": 2,
+      "progress": {
+        "current": 15,
+        "total": 60
+      },
+      "milestone_payload": {
+        "title": "BLOOD GROUP CHAMPION! 🏆",
+        "badge_emoji": "🩸",
+        "completed_topic": "Blood Groups — ABO & Rh Factor",
+        "xp_earned": 75,
+        "milestone_progress": "Module 2/6 Clear",
+        "motivational_quote": "Karl Landsteiner, Universal Donor, Universal Recipient — yeh sab ab tumhari fingers pe hain! Ab body ka asli engine dekhne ka waqt hai — THE HEART! Kya tum jaante ho dil mein exactly 4 rooms hote hain?"
+      },
+      "navigation": {
+        "next": "card_16_heart_intro",
+        "button_text": "Start Module 3 ➔"
+      }
+    },
+    {
+      "card_id": "card_16_heart_intro",
+      "card_slug": "card_16_heart_intro",
+      "type": "chat",
+      "concept_id": "heart_introduction",
+      "level": 2,
+      "progress": {
+        "current": 16,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, apna haath apni chhaati pe rakhte ho kabhi? Kya feel hota hai? Dhak-dhak, dhak-dhak! Yeh hai tumhara heart — ek muscular pump jo din raat bina rukke kaam karta hai. Ek insaan ki zindagi mein dil lagbhag 2.5 arab baar dhadakta hai! Yeh approximately 70 times per minute pump karta hai rest mein. Heart mainly 'Cardiac Muscle' — ya Myocardium — se bana hota hai jo kabhi thakti nahi!",
+          "emotion": "❤️"
+        },
+        {
+          "speaker": "raju",
+          "text": "2.5 arab baar!! Toh heart kabhi thakta kyun nahi sir? Haath ki muscle toh thak jaati hai!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bahut badhiya sawaal — iska jawab hai Cardiac Muscle ki special property! Yeh 'Involuntary' muscle hai — matlab yeh apne aap kaam karti hai, tumhe sochna nahi padta. Aur yeh muscles 'rhythmically contract and relax' karti hain bina rukaawat ke. Cardiac muscle cells ke beech special connections hote hain — 'Intercalated Discs' — jo signals instantly share karte hain, isliye poora heart ek saath pump karta hai. Skeletal muscle mein yeh nahi hota!",
+          "emotion": "💪"
+        },
+        {
+          "speaker": "raju",
+          "text": "Intercalated Discs — ye to naya word hai! Matlab heart ke cells ek team ki tarah kaam karte hain? Cool hai!"
+        }
+      ],
+      "navigation": {
+        "next": "card_17_heart_chambers",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_17_heart_chambers",
+      "card_slug": "card_17_heart_chambers",
+      "type": "chat",
+      "concept_id": "heart_four_chambers",
+      "level": 2,
+      "progress": {
+        "current": 17,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ab heart ki actual structure samjho — socho ek ghar hai jisme 4 rooms hain. Human heart mein exactly 4 chambers hote hain: Upper 2 kamre — Left Atrium aur Right Atrium (Atria — plural). Lower 2 kamre — Left Ventricle aur Right Ventricle. Atrium = blood receive karta hai, Ventricle = blood pump karta hai bahar. Left Ventricle sabse thick-walled hota hai kyunki usे poore body mein blood pump karna hota hai — yeh BPSC ka direct question hai!",
+          "emotion": "🏠"
+        },
+        {
+          "speaker": "raju",
+          "text": "4 chambers! Toh blood kahan se aata hai aur kahan jaata hai sir? Yeh chakkar mujhe samajh nahi aata!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Dekho ek simple story — Oxygen-poor blood poore body se aata hai Right Atrium mein, phir jaata hai Right Ventricle mein, wahan se lungs ko bhejna jaata hai oxygen lene. Lungs se oxygen-rich blood aata hai Left Atrium mein, phir Left Ventricle mein, aur wahan se poore body mein pump hota hai! Ek complete round! Yahin sabse bada trap hai — Right side = deoxygenated blood, Left side = oxygenated blood!",
+          "emotion": "🔄"
+        },
+        {
+          "speaker": "raju",
+          "text": "Right = dirty blood, Left = clean blood — achhaaaa! Toh dono sides mix nahi hote? Kaise?"
+        }
+      ],
+      "navigation": {
+        "next": "card_18_heart_valves",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_18_heart_valves",
+      "card_slug": "card_18_heart_valves",
+      "type": "chat",
+      "concept_id": "heart_valves",
+      "level": 2,
+      "progress": {
+        "current": 18,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Mix isliye nahi hote kyunki heart mein beech mein ek wall hai — 'Septum' — jo Left aur Right sides ko alag karti hai. Aur blood flow ek hi direction mein rehne ke liye 'Valves' hote hain — yeh ek-taraf khulne wale gates hain! Right Atrium aur Right Ventricle ke beech: Tricuspid Valve (3 flaps). Left Atrium aur Left Ventricle ke beech: Bicuspid Valve ya Mitral Valve (2 flaps)!",
+          "emotion": "🚪"
+        },
+        {
+          "speaker": "raju",
+          "text": "Tri = 3 flaps, Bi = 2 flaps — thik hai! Sir aur bhi valves hote hain kya?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! Ventricles se bahar nikalne ke jagah bhi valves hain: Right Ventricle se Pulmonary artery: Pulmonary Valve (Semilunar). Left Ventricle se Aorta: Aortic Valve (Semilunar). Dhadakne ki awaz 'LUB-DUP' inheen valves ke band hone se aati hai — LUB = Tricuspid aur Bicuspid valves band hote hain, DUP = Semilunar valves band hote hain. Doctors stethoscope se yahi awaz sunte hain! BPSC aur NEET dono mein valve names ka match poochha gaya hai!",
+          "emotion": "🩺"
+        },
+        {
+          "speaker": "raju",
+          "text": "LUB-DUP ki awaz valves se aati hai — yeh to maine kabhi socha hi nahi tha sir! Bilkul natural explanation hai!"
+        }
+      ],
+      "navigation": {
+        "next": "card_19_quiz7",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_19_quiz7",
+      "card_slug": "card_19_quiz7",
+      "type": "quiz",
+      "concept_id": "heart_structure_quiz1",
+      "level": 2,
+      "progress": {
+        "current": 19,
+        "total": 60
+      },
+      "quiz_payload": {
+        "question": "Q1/3: Human heart ka Left Ventricle sabse thick-walled kyun hota hai?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Kyunki yeh lungs se blood receive karta hai"
+          },
+          {
+            "id": "B",
+            "text": "Kyunki ise poore body mein blood pump karna hota hai, jiसके liye sabse zyada pressure chahiye"
+          },
+          {
+            "id": "C",
+            "text": "Kyunki Left side mein deoxygenated blood hota hai"
+          },
+          {
+            "id": "D",
+            "text": "Kyunki Left Ventricle mein sabse zyada valves hote hain"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Left Ventricle ko systemic circulation ke liye poore body mein oxygenated blood pump karna hota hai — yeh sabse lamba aur high-pressure path hai, isliye Left Ventricle ki wall sabse thick (muscular) hoti hai. Right Ventricle sirf lungs tak (short distance — pulmonary circulation) blood pump karta hai, isliye uski wall thinner hoti hai. Left Ventricle ki wall thickness lagbhag 9-11 mm hoti hai jabki Right Ventricle ki 3-4 mm. Yeh BPSC 2018 aur NEET mein directly aaya hai!"
+      },
+      "navigation": {
+        "next": "card_20_quiz8",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_20_quiz8",
+      "card_slug": "card_20_quiz8",
+      "type": "quiz",
+      "concept_id": "heart_structure_quiz2",
+      "level": 2,
+      "progress": {
+        "current": 20,
+        "total": 60
+      },
+      "quiz_payload": {
+        "question": "Q2/3: Dhadakne ki awaz 'LUB' kab aati hai?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Jab Aortic aur Pulmonary (Semilunar) valves band hote hain"
+          },
+          {
+            "id": "B",
+            "text": "Jab Tricuspid aur Bicuspid (Mitral) valves band hote hain"
+          },
+          {
+            "id": "C",
+            "text": "Jab Atria contract karte hain"
+          },
+          {
+            "id": "D",
+            "text": "Jab blood Aorta mein enter karta hai"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Heart ki pehli awaz 'LUB' tab aati hai jab Tricuspid valve (Right side) aur Bicuspid/Mitral valve (Left side) band hote hain — yeh tab hota hai jab Ventricles contract karna shuru karte hain (Systole). Doosri awaz 'DUP' tab aati hai jab Semilunar valves (Aortic aur Pulmonary) band hote hain — jab Ventricles relax karte hain (Diastole). Doctors stethoscope se in dono awaazon ko sunke heart ki health check karte hain. Abnormal awaz = 'Heart Murmur' = valve problem!"
+      },
+      "navigation": {
+        "next": "card_21_quiz9",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_21_quiz9",
+      "card_slug": "card_21_quiz9",
+      "type": "quiz",
+      "concept_id": "heart_structure_quiz3",
+      "level": 2,
+      "progress": {
+        "current": 21,
+        "total": 60
+      },
+      "quiz_payload": {
+        "question": "Q3/3: SSC CGL Trap — Human heart mein Tricuspid Valve kahan hota hai?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Left Atrium aur Left Ventricle ke beech"
+          },
+          {
+            "id": "B",
+            "text": "Right Ventricle aur Pulmonary Artery ke beech"
+          },
+          {
+            "id": "C",
+            "text": "Right Atrium aur Right Ventricle ke beech"
+          },
+          {
+            "id": "D",
+            "text": "Left Ventricle aur Aorta ke beech"
+          }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Tricuspid Valve (3 flaps wala) Right Atrium aur Right Ventricle ke beech hota hai. Bicuspid/Mitral Valve (2 flaps) Left Atrium aur Left Ventricle ke beech. Pulmonary Valve Right Ventricle aur Pulmonary Artery ke beech. Aortic Valve Left Ventricle aur Aorta ke beech. Yaad karne ka trick: 'Right pe Teen (Tri = 3), Left pe Do (Bi = 2).' Tricuspid aur Bicuspid ka naam confuse karna SSC ka classic trick hai — Tri=3 flaps, Bi=2 flaps yaad rakho!"
+      },
+      "navigation": {
+        "next": "card_22_milestone3",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_22_milestone3",
+      "card_slug": "card_22_milestone3",
+      "type": "milestone",
+      "concept_id": "module3_complete",
+      "level": 2,
+      "progress": {
+        "current": 22,
+        "total": 60
+      },
+      "milestone_payload": {
+        "title": "HEART HERO! ❤️",
+        "badge_emoji": "🫀",
+        "completed_topic": "Heart — Structure, Chambers & Valves",
+        "xp_earned": 75,
+        "milestone_progress": "Module 3/6 Clear",
+        "motivational_quote": "LUB-DUP ka raaz, 4 chambers ka map — sab tumhare dimag mein perfectly fit ho gaya! Ab dekhte hain blood kaise travel karta hai poore body mein — Circulation ka MEGA map!"
+      },
+      "navigation": {
+        "next": "card_23_circulation_types",
+        "button_text": "Start Module 4 ➔"
+      }
+    },
+    {
+      "card_id": "card_23_circulation_types",
+      "card_slug": "card_23_circulation_types",
+      "type": "chat",
+      "concept_id": "types_of_circulation",
+      "level": 3,
+      "progress": {
+        "current": 23,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, blood ka safar do routes mein hota hai. Pehla route: Heart se lungs tak aur wapas — ise 'Pulmonary Circulation' kehte hain. 'Pulmonary' matlab lungs se related. Isme Right Ventricle → Pulmonary Artery → Lungs → Pulmonary Vein → Left Atrium. Yahin sabse bada exam trap hai — Pulmonary Artery mein deoxygenated blood hota hai aur Pulmonary Vein mein oxygenated! Aam taur pe artery mein oxygenated hota hai — par yahan ulta hai!",
+          "emotion": "🫁"
+        },
+        {
+          "speaker": "raju",
+          "text": "Hain?? Pulmonary Artery mein dirty blood aur Pulmonary Vein mein clean blood?? Yeh to pakka confuse karega!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Yahi to BPSC aur NEET ka number one trap hai! Artery aur Vein ka definition yaad karo correctly: Artery = Heart SE bahar jaane wala vessel, Vein = Heart KI TARAF aane wala vessel. Oxygen se koi lena-dena nahi definition mein! Pulmonary Artery heart se (right ventricle se) bahar jaata hai lungs ki taraf — isliye artery. Isme deoxygenated blood hai. Pulmonary Vein lungs se heart ki taraf (left atrium mein) aata hai — isliye vein. Isme oxygenated blood hai!",
+          "emotion": "⚠️"
+        },
+        {
+          "speaker": "raju",
+          "text": "Artery = heart SE bahar, Vein = heart KI TARAF andar — yeh definition seedha yaad kar lunga sir! Oxygen se nahi judna definition ko!"
+        }
+      ],
+      "navigation": {
+        "next": "card_24_systemic_circulation",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_24_systemic_circulation",
+      "card_slug": "card_24_systemic_circulation",
+      "type": "chat",
+      "concept_id": "systemic_circulation",
+      "level": 3,
+      "progress": {
+        "current": 24,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Doosra route hai 'Systemic Circulation' — heart se poore body mein. Left Ventricle → Aorta (sabse badi artery) → Body ke sabhi organs → Superior/Inferior Vena Cava → Right Atrium. Aorta body ki sabse badi artery hai — iska diameter lagbhag 25mm hota hai. Vena Cava body ki sabse badi vein hai — Superior Vena Cava upper body se, Inferior Vena Cava lower body se blood laati hai Right Atrium mein!",
+          "emotion": "🔄"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir toh blood ka safar ek circle hai — heart → body → heart → lungs → heart? Yeh to khatam hi nahi hota!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Exactly! Isliye ise 'Double Circulation' kehte hain — Blood ek round mein heart se do baar guzarta hai. Yeh system sirf mammals aur birds mein hota hai — inhe 'Warm-blooded animals' bhi kehte hain! Fish mein 'Single Circulation' hoti hai — blood sirf ek baar heart se guzarta hai per round. Frog mein 'Incomplete Double Circulation' hoti hai — kyunki frog ka heart 3-chambered hai (2 Atria + 1 Ventricle) aur oxygenated-deoxygenated blood thoda mix hota hai!",
+          "emotion": "🐸"
+        },
+        {
+          "speaker": "raju",
+          "text": "Mammals = Double Circulation, Fish = Single, Frog = Incomplete Double — teen alag animals teen alag systems! Ye exam mein pakka aayega!"
+        }
+      ],
+      "navigation": {
+        "next": "card_25_cardiac_cycle",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_25_cardiac_cycle",
+      "card_slug": "card_25_cardiac_cycle",
+      "type": "chat",
+      "concept_id": "cardiac_cycle_heartbeat",
+      "level": 3,
+      "progress": {
+        "current": 25,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ab baat karte hain heart ke rhythm ki — 'Cardiac Cycle.' Ek complete heartbeat mein 2 phases hain: Systole (Contraction) aur Diastole (Relaxation). Normal heart rate adult mein 72 beats per minute hota hai. Agar rate 100 se zyada ho — 'Tachycardia.' Agar 60 se kam ho — 'Bradycardia.' Athletes ke heart rate slower hote hain (50-60) kyunki unka heart zyada efficient hai — ek beat mein zyada blood pump karta hai!",
+          "emotion": "💓"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir heart ko signal kaun deta hai dhadakne ka? Koi brain se signal aata hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Yehi to dil ka jaadu hai! Heart ka apna internal pacemaker hota hai — 'SA Node' (Sinoatrial Node) — yeh Right Atrium mein hota hai aur automatically electrical signal generate karta hai, brain ka wait nahi karta! Ise 'Natural Pacemaker of Heart' kehte hain. Signal SA Node → AV Node → Bundle of His → Purkinje Fibres tak jaata hai — poora heart coordinate karta hai. Agar SA Node kaam na kare, toh artificial pacemaker lagaate hain — BPSC aur SSC ka direct fact!",
+          "emotion": "⚡"
+        },
+        {
+          "speaker": "raju",
+          "text": "SA Node = natural pacemaker, Right Atrium mein hota hai! Isliye heart brain ke bina bhi dhadakta rehta hai — ab samajh aaya!"
+        }
+      ],
+      "navigation": {
+        "next": "card_26_quiz10",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_26_quiz10",
+      "card_slug": "card_26_quiz10",
+      "type": "quiz",
+      "concept_id": "circulation_quiz1",
+      "level": 3,
+      "progress": {
+        "current": 26,
+        "total": 60
+      },
+      "quiz_payload": {
+        "question": "Q1/3: BPSC Trap — Pulmonary Vein mein kaisa blood hota hai?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Deoxygenated blood — kyunki veins mein hamesha dirty blood hota hai"
+          },
+          {
+            "id": "B",
+            "text": "Oxygenated blood — kyunki yeh lungs se heart ki taraf aati hai"
+          },
+          {
+            "id": "C",
+            "text": "Mixed blood — oxygenated aur deoxygenated dono"
+          },
+          {
+            "id": "D",
+            "text": "Blood nahi hota — sirf lymph hota hai"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Pulmonary Vein mein Oxygenated blood hota hai! Yeh sabse bada exam trap hai. Veins ka definition hai: Heart KI TARAF jaane wali blood vessels — oxygen se koi matlab nahi. Pulmonary Vein lungs se (jahan oxygen mila) Left Atrium mein oxygenated blood laati hai. Isi tarah Pulmonary Artery mein Deoxygenated blood hota hai — kyunki Right Ventricle se lungs KI TARAF jaata hai. Artery = heart SE, Vein = heart KI TARAF — yeh definition pakka karo! BPSC 2019 aur SSC CGL 2020 mein yahi trap tha!"
+      },
+      "navigation": {
+        "next": "card_27_quiz11",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_27_quiz11",
+      "card_slug": "card_27_quiz11",
+      "type": "quiz",
+      "concept_id": "circulation_quiz2",
+      "level": 3,
+      "progress": {
+        "current": 27,
+        "total": 60
+      },
+      "quiz_payload": {
+        "question": "Q2/3: Heart ka 'Natural Pacemaker' kise kaha jaata hai?",
+        "options": [
+          {
+            "id": "A",
+            "text": "AV Node (Atrioventricular Node)"
+          },
+          {
+            "id": "B",
+            "text": "Bundle of His"
+          },
+          {
+            "id": "C",
+            "text": "SA Node (Sinoatrial Node)"
+          },
+          {
+            "id": "D",
+            "text": "Purkinje Fibres"
+          }
+        ],
+        "correct_option_id": "C",
+        "explanation": "SA Node (Sinoatrial Node) ko Heart ka 'Natural Pacemaker' kaha jaata hai. Yeh Right Atrium ki wall mein hota hai aur automatically electrical impulse generate karta hai jo heartbeat start karta hai. Signal ka path hai: SA Node → AV Node → Bundle of His → Bundle Branches → Purkinje Fibres. Agar SA Node fail ho jaaye toh AV Node backup pacemaker ban jaata hai (lekin slower rate pe). Artificial electronic pacemaker tab lagaya jaata hai jab natural pacemaker theek se kaam na kare. SSC CGL aur RRB NTPC mein yeh fact direct aaya hai!"
+      },
+      "navigation": {
+        "next": "card_28_quiz12",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_28_quiz12",
+      "card_slug": "card_28_quiz12",
+      "type": "quiz",
+      "concept_id": "circulation_quiz3",
+      "level": 3,
+      "progress": {
+        "current": 28,
+        "total": 60
+      },
+      "quiz_payload": {
+        "question": "Q3/3: 'Double Circulation' system kisme hota hai?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Sirf Fish mein"
+          },
+          {
+            "id": "B",
+            "text": "Frog aur Fish dono mein"
+          },
+          {
+            "id": "C",
+            "text": "Mammals aur Birds mein"
+          },
+          {
+            "id": "D",
+            "text": "Sabhi vertebrates mein"
+          }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Double Circulation — jisme blood ek round mein heart se do baar guzarta hai (pulmonary + systemic) — sirf Mammals aur Birds mein hoti hai. Inke heart 4-chambered hote hain aur oxygenated-deoxygenated blood poori tarah alag rehta hai. Fish mein Single Circulation hoti hai (2-chambered heart). Frog mein Incomplete Double Circulation hoti hai (3-chambered heart — 2 atria + 1 ventricle — blood thoda mix hota hai). Reptiles (except Crocodile) mein bhi 3-chambered heart hai. Crocodile mein 4-chambered heart hai — non-avian reptile mein exception! BPSC ka trap!"
+      },
+      "navigation": {
+        "next": "card_29_milestone4",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_29_milestone4",
+      "card_slug": "card_29_milestone4",
+      "type": "milestone",
+      "concept_id": "module4_complete",
+      "level": 3,
+      "progress": {
+        "current": 29,
+        "total": 60
+      },
+      "milestone_payload": {
+        "title": "CIRCULATION CRACKED! 🔄",
+        "badge_emoji": "🫀",
+        "completed_topic": "Blood Circulation — Pulmonary, Systemic & Cardiac Cycle",
+        "xp_earned": 100,
+        "milestone_progress": "Module 4/6 Clear",
+        "motivational_quote": "Double Circulation, SA Node, Pulmonary Vein ka oxygen trap — tumne woh concepts clear kiye jo toppers bhi confuse karte hain! Ab blood ke highways — Blood Vessels — ka poora network samajhte hain!"
+      },
+      "navigation": {
+        "next": "card_30_blood_vessels_intro",
+        "button_text": "Start Module 5 ➔"
+      }
+    },
+    {
+      "card_id": "card_30_blood_vessels_intro",
+      "card_slug": "card_30_blood_vessels_intro",
+      "type": "chat",
+      "concept_id": "blood_vessels_intro",
+      "level": 3,
+      "progress": {
+        "current": 30,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, shahr mein roads ki tarah — chaudi highways, chhoti streets, aur galiyan hoti hain na? Hamare body mein bhi blood travel karne ke liye 3 types ke 'Blood Vessels' hain: Arteries (highways — heart se bahar), Veins (return roads — heart ki taraf), aur Capillaries (galiyan — cells ke paas exchange hota hai). Agar poore body ke blood vessels ko seedha nikala jaaye, toh yeh lagbhag 96,000 km lamba hoga — woh do baar earth ke round kar sakte hain!",
+          "emotion": "🛣️"
+        },
+        {
+          "speaker": "raju",
+          "text": "96,000 km?? Yeh to space jaane se bhi lamba hai! Sir arteries aur veins mein kya fark hai exactly?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Dekho 3 main differences: Arteries ki walls thick aur elastic hoti hain — kyunki heart se blood high pressure pe aata hai. Veins ki walls thin hoti hain aur andar 'Valves' hote hain — jo blood ko wapas jaane se rokते hain (sirf ek direction — heart ki taraf). Capillaries ki walls sirf ek cell ki moti hoti hain — isi얇i wall se oxygen, nutrients cells mein jaate hain aur CO2, waste wapas blood mein! Arteries mein pulse feel ki ja sakti hai — Veins mein nahi!",
+          "emotion": "🔍"
+        },
+        {
+          "speaker": "raju",
+          "text": "Arteries thick, Veins thin with valves, Capillaries ek cell moti — teen alag designs teen alag kaam ke liye! Samajh aa gaya sir!"
+        }
+      ],
+      "navigation": {
+        "next": "card_31_arteries_detail",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_31_arteries_detail",
+      "card_slug": "card_31_arteries_detail",
+      "type": "chat",
+      "concept_id": "arteries_aorta_detail",
+      "level": 3,
+      "progress": {
+        "current": 31,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Arteries mein sabse important hai 'Aorta' — body ki sabse badi artery, jo Left Ventricle se shuru hoti hai. Aorta se branches nikalta hai jate hain sab organs ko. Ek aur important artery hai 'Coronary Artery' — yeh heart ki apni muscle (Myocardium) ko blood supply karti hai. Agar Coronary Artery block ho jaaye — 'Heart Attack' ya 'Myocardial Infarction' hota hai. Yeh SSC aur BPSC dono mein poochha gaya hai — Heart Attack ka scientific naam kya hai?",
+          "emotion": "🫀"
+        },
+        {
+          "speaker": "raju",
+          "text": "Heart Attack = Myocardial Infarction! Sir coronary artery block kyun hoti hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Arteries ki inner wall pe fat aur cholesterol jama hone lagti hai — ise 'Atherosclerosis' kehte hain. Jab yeh jama hua material 'Plaque' ban jaata hai aur artery ko narrow kar deta hai, toh blood flow kam ho jaata hai — ise 'Arteriosclerosis' kehte hain. Agar coronary artery mein yeh hue, toh heart muscle ko oxygen nahi milti — Heart Attack! Aur agar brain ko supply karne wali artery block ho — 'Stroke' ya 'Cerebrovascular Accident'! UPSC Prelims mein yeh terms directly aaye hain!",
+          "emotion": "⚠️"
+        },
+        {
+          "speaker": "raju",
+          "text": "Atherosclerosis = fat jama hona arteries mein, Heart Attack = Coronary artery block, Stroke = Brain artery block — yeh chain samajh aa gayi sir!"
+        }
+      ],
+      "navigation": {
+        "next": "card_32_veins_portal",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_32_veins_portal",
+      "card_slug": "card_32_veins_portal",
+      "type": "chat",
+      "concept_id": "veins_portal_system",
+      "level": 3,
+      "progress": {
+        "current": 32,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Veins ki baat karo — sabse badi veins hain Superior Vena Cava (upper body se) aur Inferior Vena Cava (lower body se) — dono Right Atrium mein blood laati hain. Ek special system hai — 'Hepatic Portal System!' Intestines se blood seedha heart mein nahi jaata — pehle Liver mein jaata hai 'Hepatic Portal Vein' ke zariye! Kyun? Kyunki intestines se absorbed nutrients (glucose, amino acids) pehle liver process karta hai — store karta hai, detoxify karta hai!",
+          "emotion": "🫀"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab khaana khane ke baad blood pehle liver mein jaata hai?? Isliye liver itna important hai!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Exactly! Hepatic Portal System — intestine → liver → heart — yeh sequence BPSC mein baar baar aaya hai. Aur ek aur tricky fact — 'Renal Portal System' sirf lower vertebrates (fish, amphibians, reptiles) mein hota hai — mammals mein nahi! Matlab hamare (mammals) mein sirf Hepatic Portal System hota hai, Renal Portal System nahi! Yeh BPSC ka famous 'nahi hota' trap hai — agar koi pooche 'Humans mein Renal Portal System hota hai?' — answer hai NO!",
+          "emotion": "🚫"
+        },
+        {
+          "speaker": "raju",
+          "text": "Humans mein Renal Portal System NAHI hota — sirf Hepatic Portal System hota hai! Ye note kar liya sir — pakka trap hai!"
+        }
+      ],
+      "navigation": {
+        "next": "card_33_quiz13",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_33_quiz13",
+      "card_slug": "card_33_quiz13",
+      "type": "quiz",
+      "concept_id": "blood_vessels_quiz1",
+      "level": 3,
+      "progress": {
+        "current": 33,
+        "total": 60
+      },
+      "quiz_payload": {
+        "question": "Q1/3: Capillaries (Kesha Nalikayein) ki wall itni얇i kyun hoti hai?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Kyunki inme blood pressure bahut high hota hai"
+          },
+          {
+            "id": "B",
+            "text": "Kyunki ek cell ki얇i wall se hi oxygen, CO2 aur nutrients cells ke beech exchange ho sake"
+          },
+          {
+            "id": "C",
+            "text": "Kyunki inme sirf deoxygenated blood hota hai"
+          },
+          {
+            "id": "D",
+            "text": "Kyunki inme valves hote hain"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Capillaries ki wall sirf ek endothelial cell ki moti hoti hai — yeh thinness hi unka kaam karne ka secret hai! Oxygen, nutrients, hormones is얇i wall se tissue fluid mein aur phir cells mein jaate hain, aur CO2, waste products wapas capillaries mein aate hain — ise 'Exchange' kehte hain. Capillaries mein blood pressure bahut low hota hai. Arteries mein high pressure hota hai. Veins mein valves hote hain. Capillaries ka network itna dense hai ki body ki koi bhi cell capillary se 0.1mm se zyada door nahi hoti!"
+      },
+      "navigation": {
+        "next": "card_34_quiz14",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_34_quiz14",
+      "card_slug": "card_34_quiz14",
+      "type": "quiz",
+      "concept_id": "blood_vessels_quiz2",
+      "level": 3,
+      "progress": {
+        "current": 34,
+        "total": 60
+      },
+      "quiz_payload": {
+        "question": "Q2/3: 'Myocardial Infarction' kab hota hai?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Jab Pulmonary Artery block ho jaaye"
+          },
+          {
+            "id": "B",
+            "text": "Jab Coronary Artery block ho jaaye aur heart muscle ko oxygen na mile"
+          },
+          {
+            "id": "C",
+            "text": "Jab brain ki artery block ho jaaye"
+          },
+          {
+            "id": "D",
+            "text": "Jab Aorta rupture ho jaaye"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Myocardial Infarction = Heart Attack. Yeh tab hota hai jab Coronary Artery (jo heart ki apni muscle — Myocardium — ko blood supply karti hai) block ho jaati hai — Atherosclerotic Plaque se ya clot se. Oxygen na milne par heart muscle cells marne lagte hain — isliye 'Infarction.' Agar brain ki artery block ho — 'Stroke' ya 'Cerebrovascular Accident.' Agar Pulmonary Artery mein clot ho — 'Pulmonary Embolism.' Aorta rupture — 'Aortic Aneurysm.' Yeh sab alag conditions hain — BPSC mein ek saath confuse karne ke liye diye jaate hain!"
+      },
+      "navigation": {
+        "next": "card_35_quiz15",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_35_quiz15",
+      "card_slug": "card_35_quiz15",
+      "type": "quiz",
+      "concept_id": "blood_vessels_quiz3",
+      "level": 3,
+      "progress": {
+        "current": 35,
+        "total": 60
+      },
+      "quiz_payload": {
+        "question": "Q3/3: BPSC Direct — Hepatic Portal System kya carry karta hai?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Oxygen-rich blood directly lungs se heart mein"
+          },
+          {
+            "id": "B",
+            "text": "Nutrient-rich blood intestines se liver mein processing ke liye"
+          },
+          {
+            "id": "C",
+            "text": "Urine kidney se bladder mein"
+          },
+          {
+            "id": "D",
+            "text": "Hormones adrenal gland se directly brain mein"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Hepatic Portal System mein Hepatic Portal Vein intestines (small intestine se) se absorbed nutrient-rich blood (glucose, amino acids, fatty acids, vitamins) ko seedha Liver mein le jaati hai. Liver in nutrients ko process karta hai — zyada glucose ko glycogen mein store karta hai, amino acids process karta hai, toxins neutralize karta hai. Phir processed blood Hepatic Vein se Inferior Vena Cava mein jaata hai. Humans mein Renal Portal System NAHI hota — yeh sirf fish, amphibians mein hota hai. SSC aur BPSC dono mein baar aaya hai!"
+      },
+      "navigation": {
+        "next": "card_36_milestone5",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_36_milestone5",
+      "card_slug": "card_36_milestone5",
+      "type": "milestone",
+      "concept_id": "module5_complete",
+      "level": 3,
+      "progress": {
+        "current": 36,
+        "total": 60
+      },
+      "milestone_payload": {
+        "title": "VESSEL MASTER! 🛣️",
+        "badge_emoji": "🩺",
+        "completed_topic": "Blood Vessels — Arteries, Veins & Capillaries",
+        "xp_earned": 100,
+        "milestone_progress": "Module 5/6 Clear",
+        "motivational_quote": "Hepatic Portal System, Coronary Artery, Atherosclerosis — ye sab ab tumhari knowledge mein hai! Ek aur power module bacha hai — Blood Pressure, Lymph aur Special Topics jo UPSC Prelims tak poochhe jaate hain!"
+      },
+      "navigation": {
+        "next": "card_37_blood_pressure",
+        "button_text": "Start Module 6 ➔"
+      }
+    },
+    {
+      "card_id": "card_37_blood_pressure",
+      "card_slug": "card_37_blood_pressure",
+      "type": "chat",
+      "concept_id": "blood_pressure",
+      "level": 4,
+      "progress": {
+        "current": 37,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, kya tumhare ghar mein koi BP check karata hai? BP matlab 'Blood Pressure' — yeh woh force hai jo blood vessel ki walls pe dalta hai jab heart pump karta hai. Doctor bolte hain '120/80' — iska matlab hai: 120 = Systolic pressure (jab heart contract karta hai / pump karta hai), 80 = Diastolic pressure (jab heart relax karta hai). Normal BP hai 120/80 mmHg. 'mmHg' matlab millimeters of Mercury — pressure ki unit!",
+          "emotion": "🩺"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir BP zyada ho jaaye toh kya hota hai? Aur kam ho jaaye toh?"
+        },
+        {
+          "speaker": "aman",
+          "text": "BP zyada = 'Hypertension' (high blood pressure) — 140/90 se upar. Ise 'Silent Killer' bhi kehte hain kyunki symptoms nazar nahi aate lekin heart aur kidneys damage hote hain. BP kam = 'Hypotension' — 90/60 se neeche. Chakkar aate hain, fainting hoti hai. Blood pressure measure karne wala yantra 'Sphygmomanometer' kehlaata hai — yeh SSC ka direct spelling/name question hai! Arteries mein BP zyada hota hai, Veins mein kam, Capillaries mein sabse kam!",
+          "emotion": "📊"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sphygmomanometer — yeh word toh bahut mushkil hai sir! Hypertension = silent killer, 140/90 se upar — okay yaad kar lunga!"
+        }
+      ],
+      "navigation": {
+        "next": "card_38_lymphatic_system",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_38_lymphatic_system",
+      "card_slug": "card_38_lymphatic_system",
+      "type": "chat",
+      "concept_id": "lymphatic_system",
+      "level": 4,
+      "progress": {
+        "current": 38,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ek aur system hai blood circulation ke saath kaam karta hua — 'Lymphatic System!' Capillaries se kuch fluid tissue mein leak ho jaata hai — ise 'Tissue Fluid' ya 'Interstitial Fluid' kehte hain. Yeh fluid 'Lymph Capillaries' mein collect hota hai aur 'Lymph' ban jaata hai. Lymph ek pale white liquid hai. Yeh Lymph Vessels ke zariye travel karke 'Thoracic Duct' ya 'Right Lymphatic Duct' ke through wapas blood circulation mein milta hai!",
+          "emotion": "💧"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir lymph ka kya kaam hai? Yeh sirf leak hua fluid hai na?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Nahi nahi — Lymph ka bahut important kaam hai! Lymph mein 'Lymphocytes' hote hain — white blood cells ka ek type jo immunity banate hain. Lymph Nodes — jaisi body mein jagah jagah chhoti ganthein hoti hain (neck, armpit, groin mein) — yeh filters hain jo bacteria aur foreign particles ko pakadti hain. BPSC trap: Lymph mein RBC nahi hote! Sirf WBC (Lymphocytes) hote hain — isliye lymph ka rang pale/colorless hota hai, laal nahi!",
+          "emotion": "🛡️"
+        },
+        {
+          "speaker": "raju",
+          "text": "Lymph mein RBC nahi, sirf WBC! Isliye laal nahi, pale white hota hai — yeh to direct exam point hai sir!"
+        }
+      ],
+      "navigation": {
+        "next": "card_39_haemoglobin_anaemia",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_39_haemoglobin_anaemia",
+      "card_slug": "card_39_haemoglobin_anaemia",
+      "type": "chat",
+      "concept_id": "haemoglobin_anaemia",
+      "level": 4,
+      "progress": {
+        "current": 39,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ab baat karte hain Haemoglobin ki — yeh RBC ka main protein hai jo oxygen carry karta hai. Isme 'Haem' group hota hai jisme 'Iron' hota hai — isliye iron ki kami se haemoglobin nahi banta aur 'Anaemia' hota hai. Normal haemoglobin: Men mein 13.5-17.5 g/dL, Women mein 12-15.5 g/dL. Haemoglobin oxygen ke saath milke 'Oxyhaemoglobin' (laal rang) aur CO2 ke saath 'Carbaminohaemoglobin' banata hai!",
+          "emotion": "🩺"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir CO ke baare mein kuch suna tha — woh bahut dangerous hota hai haemoglobin ke liye?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Excellent connection! Carbon Monoxide (CO) — jo unki vehicles ya incomplete combustion se nikalta hai — haemoglobin se oxygen se 200+ times zyada affinity se milta hai! CO + Haemoglobin = 'Carboxyhaemoglobin' — yeh oxygen nahi le ja sakta. Isliye CO poisoning mein insaan suffocate ho jaata hai — oxygen available hai environment mein, lekin haemoglobin usse nahi le ja sakta! BPSC aur UPSC Prelims mein CO poisoning ka mechanism directly poochha gaya hai!",
+          "emotion": "☠️"
+        },
+        {
+          "speaker": "raju",
+          "text": "CO haemoglobin se chipak jaata hai aur oxygen ka jagah le leta hai — isliye CO itna deadly hai! Yeh to serious general knowledge hai sir!"
+        }
+      ],
+      "navigation": {
+        "next": "card_40_blood_clotting",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_40_blood_clotting",
+      "card_slug": "card_40_blood_clotting",
+      "type": "chat",
+      "concept_id": "blood_clotting_mechanism",
+      "level": 4,
+      "progress": {
+        "current": 40,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Blood clotting ka mechanism samjho — jab chot lagti hai toh Platelets injured jagah pe ikathha hote hain aur 'Thromboplastin' release karte hain. Thromboplastin → Prothrombin → Thrombin (Calcium ki madad se) → Fibrinogen → Fibrin. Fibrin ek jaal (net) banata hai jisme RBC phas jaate hain — yeh 'Clot' hai! Agar yeh process kaam na kare — 'Haemophilia' — blood band nahi hota! Haemophilia ek genetic disease hai — X-linked recessive — zyada tar males mein hoti hai!",
+          "emotion": "🩹"
+        },
+        {
+          "speaker": "raju",
+          "text": "Haemophilia mein blood band nahi hota? Toh chhoti si chot bhi dangerous ho sakti hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul! Aur yeh BPSC aur NEET dono ka important point hai — Haemophilia 'Royal Disease' bhi kahi jaati thi kyunki Queen Victoria of England isse carrier thi aur unke through yeh European royal families mein gayi. Vitamin K blood clotting ke liye zaruri hai — Vitamin K ki kami se clotting problems hoti hain. 'Warfarin' ek drug hai jo Vitamin K ko block karta hai aur clotting rokta hai — ise anticoagulant kehte hain. Heart patients mein clots rokne ke liye diya jaata hai!",
+          "emotion": "👑"
+        },
+        {
+          "speaker": "raju",
+          "text": "Haemophilia = Royal Disease, Vitamin K = clotting ke liye zaruri, Warfarin = clotting rokne wali dawai — yeh chain samajh aa gayi sir!"
+        }
+      ],
+      "navigation": {
+        "next": "card_41_quiz16",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_41_quiz16",
+      "card_slug": "card_41_quiz16",
+      "type": "quiz",
+      "concept_id": "bp_lymph_hb_quiz1",
+      "level": 4,
+      "progress": {
+        "current": 41,
+        "total": 60
+      },
+      "quiz_payload": {
+        "question": "Q1/3: Normal Blood Pressure kya hota hai aur ise kisse measure karte hain?",
+        "options": [
+          {
+            "id": "A",
+            "text": "120/80 mmHg, Stethoscope se"
+          },
+          {
+            "id": "B",
+            "text": "80/120 mmHg, Thermometer se"
+          },
+          {
+            "id": "C",
+            "text": "120/80 mmHg, Sphygmomanometer se"
+          },
+          {
+            "id": "D",
+            "text": "140/90 mmHg, Sphygmomanometer se"
+          }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Normal Blood Pressure 120/80 mmHg hota hai — 120 Systolic (heart contraction pe) / 80 Diastolic (heart relaxation pe). Ise 'Sphygmomanometer' se measure karte hain — yeh BP measure karne wala yantra hai. Stethoscope se dil ki aawaz (LUB-DUP) suni jaati hai. 140/90 se upar Hypertension (high BP) hai. 90/60 se neeche Hypotension (low BP) hai. SSC CGL mein 'Sphygmomanometer' ka naam seedha poochha gaya hai — yeh spelling yaad rakho!"
+      },
+      "navigation": {
+        "next": "card_42_quiz17",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_42_quiz17",
+      "card_slug": "card_42_quiz17",
+      "type": "quiz",
+      "concept_id": "bp_lymph_hb_quiz2",
+      "level": 4,
+      "progress": {
+        "current": 42,
+        "total": 60
+      },
+      "quiz_payload": {
+        "question": "Q2/3: Carbon Monoxide (CO) poisoning mein death kyun hoti hai?",
+        "options": [
+          {
+            "id": "A",
+            "text": "CO seedha lungs ko damage karta hai aur breathing band kar deta hai"
+          },
+          {
+            "id": "B",
+            "text": "CO haemoglobin se oxygen se 200+ times zyada affinity se milta hai, Carboxyhaemoglobin banata hai jo oxygen carry nahi kar sakta"
+          },
+          {
+            "id": "C",
+            "text": "CO RBC ko destroy kar deta hai"
+          },
+          {
+            "id": "D",
+            "text": "CO heart muscle ko paralyze karta hai"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "CO (Carbon Monoxide) haemoglobin se oxygen ki jagah le leta hai kyunki CO ki haemoglobin ke liye affinity oxygen se 200-250 times zyada hoti hai! CO + Haemoglobin = Carboxyhaemoglobin — yeh stable compound oxygen carry nahi kar sakta. Isliye cells oxygen-starved ho jaate hain aur death hoti hai — even though blood mein haemoglobin hai aur oxygen available hai environment mein! Isliye CO ko 'Silent Killer Gas' bhi kehte hain — yeh colorless aur odorless hai. BPSC aur UPSC Prelims mein yeh mechanism directly aaya hai!"
+      },
+      "navigation": {
+        "next": "card_43_quiz18",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_43_quiz18",
+      "card_slug": "card_43_quiz18",
+      "type": "quiz",
+      "concept_id": "bp_lymph_hb_quiz3",
+      "level": 4,
+      "progress": {
+        "current": 43,
+        "total": 60
+      },
+      "quiz_payload": {
+        "question": "Q3/3: NEET Level — Blood Clotting mein 'Fibrin' kaise banta hai?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Platelets directly Fibrin release karti hain"
+          },
+          {
+            "id": "B",
+            "text": "Thrombin enzyme Fibrinogen (plasma protein) ko Fibrin mein convert karta hai"
+          },
+          {
+            "id": "C",
+            "text": "WBC injury pe Fibrin secrete karte hain"
+          },
+          {
+            "id": "D",
+            "text": "RBC breakdown se Fibrin banta hai"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Blood Clotting cascade: Platelets → Thromboplastin release → Prothrombin (inactive) ko Thrombin (active enzyme) mein convert (Calcium ki zarurat) → Thrombin, Fibrinogen (plasma mein soluble protein) ko Fibrin (insoluble threads) mein convert karta hai → Fibrin threads ek jaal banate hain jisme RBC phas jaate hain → Clot! Haemophilia mein clotting factors ki kami hoti hai (Factor VIII ya IX) — Fibrin nahi banta — blood band nahi hota. Vitamin K clotting factors ke synthesis ke liye zaroori hai. NEET 2019 mein exact mechanism poochha gaya tha!"
+      },
+      "navigation": {
+        "next": "card_44_milestone6",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_44_milestone6",
+      "card_slug": "card_44_milestone6",
+      "type": "milestone",
+      "concept_id": "module6_complete",
+      "level": 4,
+      "progress": {
+        "current": 44,
+        "total": 60
+      },
+      "milestone_payload": {
+        "title": "ALL MODULES CONQUERED! 🎯",
+        "badge_emoji": "🏅",
+        "completed_topic": "BP, Lymph, Haemoglobin & Blood Clotting",
+        "xp_earned": 125,
+        "milestone_progress": "Module 6/6 Clear — ALL DONE!",
+        "motivational_quote": "CO poisoning, Haemophilia, Sphygmomanometer — sab concepts tumhare control mein hain! Ab final revision aur Master Quiz — yahan marks confirm hote hain!"
+      },
+      "navigation": {
+        "next": "card_45_special_facts",
+        "button_text": "Bonus Round ➔"
+      }
+    },
+    {
+      "card_id": "card_45_special_facts",
+      "card_slug": "card_45_special_facts",
+      "type": "chat",
+      "concept_id": "special_circulatory_facts",
+      "level": 4,
+      "progress": {
+        "current": 45,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, kuch speed facts jo SSC aur RRB NTPC mein seedhe aate hain — sun lo! Heart ka weight: lagbhag 300 grams. Heart ka size: ek band mutthi ke barabar. Blood volume adult mein: 5-6 liters. Ek heartbeat mein pump hone wala blood: 70-80 mL (Stroke Volume). Ek minute mein total output: 5-6 liters (Cardiac Output = Heart Rate × Stroke Volume). Spleen ko 'Graveyard of RBC' kehte hain kyunki yahan purani RBC destroy hoti hain!",
+          "emotion": "⚡"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir William Harvey ka naam suna tha Maine — unhone circulation discover kiya tha na?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul! William Harvey ne 1628 mein blood circulation ka theory publish kiya — 'Exercitatio Anatomica de Motu Cordis et Sanguinis in Animalibus.' Yeh modern physiology ki neev thi! Isse pehle Galen ka galat theory tha ki blood liver mein banta rehta hai aur consume ho jaata hai. Harvey ne prove kiya ki blood ek closed system mein circulate karta hai. Aur Marcello Malpighi ne 1661 mein microscope se Capillaries discover ki — Harvey ke theory ka last missing piece!",
+          "emotion": "📚"
+        },
+        {
+          "speaker": "raju",
+          "text": "Harvey 1628 circulation, Malpighi 1661 capillaries — dono important names exam ke liye! Sir aur koi twist hai?"
+        }
+      ],
+      "navigation": {
+        "next": "card_46_heart_animals",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_46_heart_animals",
+      "card_slug": "card_46_heart_animals",
+      "type": "chat",
+      "concept_id": "heart_chambers_in_animals",
+      "level": 4,
+      "progress": {
+        "current": 46,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Bahut bada twist hai! Alag-alag animals mein heart chambers alag hote hain — yeh BPSC ka mega favorite topic hai! Fish: 2-chambered heart (1 Atrium + 1 Ventricle) — Single Circulation. Frog/Amphibians: 3-chambered heart (2 Atria + 1 Ventricle) — Incomplete Double Circulation. Reptiles (except Crocodile): 3-chambered heart (2 Atria + 1 partially divided Ventricle). Crocodile: 4-chambered heart! Mammals aur Birds: 4-chambered heart — Complete Double Circulation!",
+          "emotion": "🐊"
+        },
+        {
+          "speaker": "raju",
+          "text": "Magar sir crocodile reptile hai, phir bhi 4-chambered?? Yeh to trap hai!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Yehi toh asli exam bomb hai! Crocodile ek NON-AVIAN reptile hai phir bhi 4-chambered heart hai — yeh sabse bada exception hai. BPSC mein question aaya tha: 'Kaunse reptile mein 4-chambered heart hota hai?' Answer: Crocodile only. Ek aur fact — Earth ka sabse bada animal Blue Whale ka heart ek gaay ke size ka hota hai aur iska heartbeat sirf 2-8 times per minute hota hai. Smallest animal heart: Shrew ka — 1200 beats per minute! Yeh RRB NTPC mein direct aaya hai!",
+          "emotion": "🐋"
+        },
+        {
+          "speaker": "raju",
+          "text": "Crocodile = 4 chambers! Blue Whale heart = gaay ke size ka, 2-8 beats! Shrew = 1200 beats! Ye fun facts exam mein seedha marks dilayenge!"
+        }
+      ],
+      "navigation": {
+        "next": "card_47_guess_card",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_47_guess_card",
+      "card_slug": "card_47_guess_card",
+      "type": "guess",
+      "concept_id": "guess_blood_vessel",
+      "level": 4,
+      "progress": {
+        "current": 47,
+        "total": 60
+      },
+      "guess_payload": {
+        "question": "🤔 Guess karo — Ek blood vessel jo heart se bahar jaata hai, iska wall bahut thick aur elastic hai, pulse feel ki ja sakti hai isme, lekin isme hamesha oxygenated blood nahi hota! Yeh kaunsa vessel hai?",
+        "hint": "💡 Hint: Iska ek example hai jisme deoxygenated blood hota hai — Pulmonary ___",
+        "options": [
+          {
+            "id": "A",
+            "text": "Vein"
+          },
+          {
+            "id": "B",
+            "text": "Artery"
+          },
+          {
+            "id": "C",
+            "text": "Capillary"
+          },
+          {
+            "id": "D",
+            "text": "Lymphatic Vessel"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Artery! Arteries wo vessels hain jo heart SE bahar jaati hain — oxygen se koi matlab nahi! Arteries ki walls thick aur elastic hoti hain kyunki high pressure blood handle karna hota hai. Pulse (nadi) arteries mein feel hoti hai veins mein nahi. Pulmonary Artery mein deoxygenated blood hota hai (Right Ventricle se lungs ki taraf) jabki baaki sabhi arteries mein oxygenated blood hota hai. Artery = Heart SE, Vein = Heart KI TARAF — definition mein oxygen nahi!"
+      },
+      "navigation": {
+        "next": "card_48_ecg_disorders",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_48_ecg_disorders",
+      "card_slug": "card_48_ecg_disorders",
+      "type": "chat",
+      "concept_id": "ecg_heart_disorders",
+      "level": 4,
+      "progress": {
+        "current": 48,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, hospital mein kabhi dekha hai woh machine jisme waves dikhti hain — beep beep karte hue? Woh hai 'ECG' — Electrocardiogram! Yeh heart ki electrical activity record karta hai. Normal ECG mein waves hoti hain — P wave (atrial depolarization / contraction), QRS complex (ventricular depolarization), T wave (ventricular repolarization). Abnormal ECG se doctors Heart Attack, Arrhythmia (irregular heartbeat) pakad lete hain!",
+          "emotion": "📈"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir Angina kya hota hai? Maine TV mein suna tha par samajh nahi aaya!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Angina Pectoris — yeh chest pain hai jo tab hota hai jab heart muscle ko temporarily oxygen kam milti hai — usually exercise ya stress mein jab heart ko zyada blood chahiye. Yeh Heart Attack nahi hai — cells abhi mare nahi hain, sirf oxygen ki kami hai. Agar thoda rest lo toh theek ho jaata hai. Lekin yeh Heart Attack ka warning sign hai! Treatment: 'Nitroglycerin' — blood vessels dilate karta hai. Iska naam SSC aur BPSC mein direct aaya hai — 'Angina ki dawai kya hai?'",
+          "emotion": "💊"
+        },
+        {
+          "speaker": "raju",
+          "text": "Angina = chest pain but cells nahi mare, Heart Attack = cells mare — yeh difference important hai! Nitroglycerin = Angina ki dawai, yaad kar lunga!"
+        }
+      ],
+      "navigation": {
+        "next": "card_49_immunity_blood",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_49_immunity_blood",
+      "card_slug": "card_49_immunity_blood",
+      "type": "chat",
+      "concept_id": "immunity_wbc_types",
+      "level": 4,
+      "progress": {
+        "current": 49,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "WBC — body ke soldiers — kuch types hote hain, yeh NEET aur BPSC dono mein important hai. Main types: Neutrophils (sabse zyada — 60-70%, first responders), Lymphocytes (20-25%, antibodies banate hain — B cells aur T cells), Monocytes (bacteria ko kha jaate hain — phagocytosis), Eosinophils (allergy aur parasite ke against), Basophils (sabse kam — histamine release karte hain allergy mein). Sab milke body ki immunity banate hain!",
+          "emotion": "🛡️"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir B cells aur T cells — dono antibodies banate hain?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Excellent! B cells aur T cells dono Lymphocytes hain — lekin kaam alag: B cells — 'Humoral Immunity' — antibodies secrete karte hain. T cells — 'Cell-mediated Immunity' — directly infected cells ko kill karte hain. HIV virus T cells (specifically CD4+ T cells / Helper T cells) ko attack karta hai — isliye AIDS mein immunity khatam ho jaati hai! NEET mein HIV ka mechanism seedha poochha gaya hai — 'HIV kaunsi cells attack karta hai?' — CD4+ T Lymphocytes!",
+          "emotion": "⚠️"
+        },
+        {
+          "speaker": "raju",
+          "text": "HIV → CD4+ T cells destroy → immunity khatam → AIDS! Aur B cells = antibodies, T cells = direct killing — bilkul samajh aaya sir!"
+        }
+      ],
+      "navigation": {
+        "next": "card_50_officer_summary",
+        "button_text": "Final Revision ➔"
+      }
+    },
+    {
+      "card_id": "card_50_officer_summary",
+      "card_slug": "card_50_officer_summary",
+      "type": "summary",
+      "concept_id": "full_chapter_summary",
+      "level": 5,
+      "progress": {
+        "current": 50,
+        "total": 60
+      },
+      "summary_payload": {
+        "title": "⚡ Officer Rapid Revision — Circulatory System",
+        "revision_points": [
+          {
+            "topic": "🩸 Blood Components",
+            "point": "Blood = Connective Tissue. Plasma = 55% (pale yellow, 90% water). RBC (Erythrocytes) = 120 days lifespan, biconcave, no nucleus in mature mammals, haemoglobin (Fe). WBC (Leukocytes) = 10-15 days, have nucleus, 5000-10000/mm³, soldiers. Platelets (Thrombocytes) = 7-10 days, no nucleus, clotting. Spleen = Graveyard of RBC. Leukaemia = WBC cancer. Anaemia = RBC/Hb kami."
+          },
+          {
+            "topic": "🩸 Blood Groups",
+            "point": "Karl Landsteiner (1901) — Nobel 1930. ABO system: A antigen→Group A, B antigen→Group B, Both→AB, None→Group O. AB = Universal Recipient (no antibodies in plasma). O = Universal Donor (no antigens on RBC). O negative = safest universal donor. Rh factor — Rh+ ya Rh-. Erythroblastosis Foetalis — Rh- maa, Rh+ bacha (2nd pregnancy risk). Anti-D injection = prevention."
+          },
+          {
+            "topic": "❤️ Heart & Valves",
+            "point": "4-chambered heart (mammals & birds). Right side = deoxygenated, Left side = oxygenated. Tricuspid valve = Right Atrium/Ventricle (3 flaps). Bicuspid/Mitral = Left Atrium/Ventricle (2 flaps). Semilunar valves = exit valves. LUB = Tricuspid+Bicuspid close. DUP = Semilunar close. SA Node = Natural Pacemaker (Right Atrium). Left Ventricle = thickest wall. Heart Attack = Myocardial Infarction (Coronary Artery block)."
+          },
+          {
+            "topic": "🔄 Circulation Types",
+            "point": "Pulmonary Circulation: Right Ventricle→Pulmonary Artery→Lungs→Pulmonary Vein→Left Atrium. TRAP: Pulmonary Artery = deoxygenated, Pulmonary Vein = oxygenated! Systemic: Left Ventricle→Aorta→Body→Vena Cava→Right Atrium. Double Circulation = Mammals & Birds. Single = Fish. Incomplete Double = Frog (3-chambered). Crocodile exception = 4-chambered reptile! William Harvey 1628 = circulation discovery. Malpighi 1661 = capillaries."
+          },
+          {
+            "topic": "🩺 Key Medical Facts",
+            "point": "Normal BP = 120/80 mmHg. Hypertension >140/90 = Silent Killer. Instrument = Sphygmomanometer. CO poisoning = Carboxyhaemoglobin (200x affinity vs O2). Haemophilia = X-linked, blood clotting fails, Royal Disease. Clotting: Platelets→Thromboplastin→Thrombin→Fibrinogen→Fibrin. Vitamin K = clotting ke liye. Hepatic Portal System = intestine→liver (only in mammals, NO Renal Portal). HIV = CD4+ T Lymphocytes attack. Lymph = no RBC, pale, immunity."
+          }
+        ]
+      },
+      "navigation": {
+        "next": "card_51_final_quiz1",
+        "button_text": "Start Master Quiz 🎯"
+      }
+    },
+    {
+      "card_id": "card_51_final_quiz1",
+      "card_slug": "card_51_final_quiz1",
+      "type": "final_quiz",
+      "concept_id": "master_quiz_1",
+      "level": 5,
+      "progress": {
+        "current": 51,
+        "total": 60
+      },
+      "quiz_payload": {
+        "question": "🏆 MASTER QUIZ Q1/5 — BPSC Multi-Statement Trap: Inme se kaun se statements Human Circulatory System ke baare mein SAHI hain?\n(1) Pulmonary Vein mein oxygenated blood hota hai\n(2) SA Node Left Atrium mein hota hai\n(3) Left Ventricle sabse thick-walled chamber hai\n(4) Tricuspid Valve Left side mein hota hai\n(5) Normal heart rate 72 beats per minute hota hai",
+        "options": [
+          {
+            "id": "A",
+            "text": "1, 3 aur 5"
+          },
+          {
+            "id": "B",
+            "text": "Sirf 1 aur 4"
+          },
+          {
+            "id": "C",
+            "text": "1, 2, 3 aur 5"
+          },
+          {
+            "id": "D",
+            "text": "Sabhi 1, 2, 3, 4, 5"
+          }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Statements 1, 3 aur 5 SAHI hain. Statement 2 GALAT — SA Node RIGHT Atrium mein hota hai, Left mein nahi! Statement 4 GALAT — Tricuspid Valve RIGHT side (Right Atrium aur Right Ventricle ke beech) mein hota hai. Bicuspid/Mitral Valve Left side mein hota hai. Yeh do statements classic BPSC-style traps hain jahan Left/Right swap kiya jaata hai. Statement 1 (Pulmonary Vein = oxygenated) aur Statement 3 (Left Ventricle thickest) aur Statement 5 (72 bpm) — teeno correct hain!"
+      },
+      "navigation": {
+        "next": "card_52_final_quiz2",
+        "button_text": "Next Question ➔"
+      }
+    },
+    {
+      "card_id": "card_52_final_quiz2",
+      "card_slug": "card_52_final_quiz2",
+      "type": "final_quiz",
+      "concept_id": "master_quiz_2",
+      "level": 5,
+      "progress": {
+        "current": 52,
+        "total": 60
+      },
+      "quiz_payload": {
+        "question": "🏆 MASTER QUIZ Q2/5 — NEET Assertion-Reason: Assertion (A): Fish mein Single Circulation hoti hai. Reason (R): Kyunki fish ka heart 2-chambered (1 Atrium + 1 Ventricle) hota hai aur blood heart se sirf ek baar guzarta hai ek cycle mein.",
+        "options": [
+          {
+            "id": "A",
+            "text": "A sahi hai, R galat hai"
+          },
+          {
+            "id": "B",
+            "text": "A galat hai, R sahi hai"
+          },
+          {
+            "id": "C",
+            "text": "A aur R dono sahi hain, aur R, A ka sahi explanation hai"
+          },
+          {
+            "id": "D",
+            "text": "A aur R dono sahi hain, lekin R, A ka sahi explanation nahi hai"
+          }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Dono statements sahi hain aur R, A ka correct explanation bhi hai! Fish ka 2-chambered heart (1 Atrium + 1 Ventricle) Single Circulation karta hai — blood ek cycle mein sirf ek baar heart se guzarta hai: Heart → Gills (oxygen) → Body → Heart. Frog mein Incomplete Double Circulation (3-chambered). Mammals/Birds mein Complete Double Circulation (4-chambered). Crocodile exception — 4-chambered reptile. NEET 2017 mein is exact pattern ka question aaya tha!"
+      },
+      "navigation": {
+        "next": "card_53_final_quiz3",
+        "button_text": "Next Question ➔"
+      }
+    },
+    {
+      "card_id": "card_53_final_quiz3",
+      "card_slug": "card_53_final_quiz3",
+      "type": "final_quiz",
+      "concept_id": "master_quiz_3",
+      "level": 5,
+      "progress": {
+        "current": 53,
+        "total": 60
+      },
+      "quiz_payload": {
+        "question": "🏆 MASTER QUIZ Q3/5 — UPSC Level: Ek person ka Blood Group 'AB Positive' hai. Inme se kaun sa statement SAHI hai?\n(1) Woh sirf AB+ patients ko blood de sakta hai\n(2) Woh O, A, B, AB — sabhi groups se blood receive kar sakta hai\n(3) Uske plasma mein anti-A aur anti-B dono antibodies hain\n(4) Uske RBC pe A aur B dono antigens hain",
+        "options": [
+          {
+            "id": "A",
+            "text": "Sirf 1 aur 3"
+          },
+          {
+            "id": "B",
+            "text": "2 aur 4"
+          },
+          {
+            "id": "C",
+            "text": "1, 2 aur 4"
+          },
+          {
+            "id": "D",
+            "text": "Sabhi 1, 2, 3, 4"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Statements 2 aur 4 SAHI hain. AB group ke RBC pe dono A aur B antigens hote hain (Statement 4 ✓). AB group ke plasma mein KOI antibody nahi hoti — isliye woh universal recipient hai — O, A, B, AB sabse receive kar sakta hai (Statement 2 ✓). Statement 1 GALAT — AB+ wala sirf AB+ ko hi nahi, sirf A, B, O compatible groups ko deta hai — actually AB donors sirf AB patients ko dena preferred hai. Statement 3 GALAT — AB mein koi antibody nahi hoti, dono antibodies GROUP O mein hoti hain! Yeh trap BPSC 2021 mein exact is form mein aaya tha!"
+      },
+      "navigation": {
+        "next": "card_54_final_quiz4",
+        "button_text": "Next Question ➔"
+      }
+    },
+    {
+      "card_id": "card_54_final_quiz4",
+      "card_slug": "card_54_final_quiz4",
+      "type": "final_quiz",
+      "concept_id": "master_quiz_4",
+      "level": 5,
+      "progress": {
+        "current": 54,
+        "total": 60
+      },
+      "quiz_payload": {
+        "question": "🏆 MASTER QUIZ Q4/5 — SSC/Railway Speed Round: Inme se kaun sa match SAHI nahi hai?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Spleen — Graveyard of RBC"
+          },
+          {
+            "id": "B",
+            "text": "SA Node — Natural Pacemaker, Right Atrium"
+          },
+          {
+            "id": "C",
+            "text": "Haemophilia — Excess blood clotting disease"
+          },
+          {
+            "id": "D",
+            "text": "Sphygmomanometer — Blood Pressure measurement"
+          }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Option C GALAT hai — Haemophilia mein blood NAHI banta / clotting FAIL hoti hai — yeh 'Excess clotting' nahi hai, balki 'Failure to clot' hai! Haemophilia ek X-linked recessive genetic disorder hai jisme clotting factors (Factor VIII ya IX) ki kami hoti hai, isliye chhoti chot bhi bahut der tak bleeding karti hai. Baki teeno matches bilkul sahi hain: Spleen = RBC graveyard, SA Node = Natural Pacemaker (Right Atrium), Sphygmomanometer = BP instrument. Haemophilia ko 'excess clotting' se confuse karna classic SSC trap hai!"
+      },
+      "navigation": {
+        "next": "card_55_final_quiz5",
+        "button_text": "Next Question ➔"
+      }
+    },
+    {
+      "card_id": "card_55_final_quiz5",
+      "card_slug": "card_55_final_quiz5",
+      "type": "final_quiz",
+      "concept_id": "master_quiz_5",
+      "level": 5,
+      "progress": {
+        "current": 55,
+        "total": 60
+      },
+      "quiz_payload": {
+        "question": "🏆 MASTER QUIZ Q5/5 — BPSC Officer Supreme: Sahi blood flow sequence identify karo jab oxygen-poor blood heart se lungs jaata hai aur wapas aata hai:",
+        "options": [
+          {
+            "id": "A",
+            "text": "Left Ventricle → Pulmonary Artery → Lungs → Pulmonary Vein → Right Atrium"
+          },
+          {
+            "id": "B",
+            "text": "Right Atrium → Right Ventricle → Pulmonary Artery → Lungs → Pulmonary Vein → Left Atrium"
+          },
+          {
+            "id": "C",
+            "text": "Right Ventricle → Aorta → Lungs → Vena Cava → Left Atrium"
+          },
+          {
+            "id": "D",
+            "text": "Left Atrium → Left Ventricle → Pulmonary Vein → Lungs → Pulmonary Artery → Right Ventricle"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Correct Pulmonary Circulation sequence: Deoxygenated blood → Right Atrium (Vena Cava se aaya) → Tricuspid Valve → Right Ventricle → Pulmonary Valve → Pulmonary Artery (deoxygenated!) → Lungs (gas exchange — CO2 out, O2 in) → Pulmonary Vein (oxygenated!) → Left Atrium → Bicuspid/Mitral Valve → Left Ventricle → Aortic Valve → Aorta → Body (Systemic). Option A galat — Left Ventricle nahi, Right Ventricle se Pulmonary Artery. Yeh complete flow sequence BPSC 2020 aur NEET 2019 mein arrange-the-sequence question ke roop mein aaya tha!"
+      },
+      "navigation": {
+        "next": "card_56_bonus_william_harvey",
+        "button_text": "One More Fact ➔"
+      }
+    },
+    {
+      "card_id": "card_56_bonus_william_harvey",
+      "card_slug": "card_56_bonus_william_harvey",
+      "type": "chat",
+      "concept_id": "circulation_history_hook",
+      "level": 5,
+      "progress": {
+        "current": 56,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, ek last fascinating fact — Blood transfusion ka first successful attempt 1665 mein Richard Lower ne kiya tha — dog se dog mein! Pehla successful human-to-human blood transfusion 1818 mein James Blundell ne kiya tha. Lekin baar baar patients mar rahe the — kyunki Blood Groups ka pata nahi tha! 1901 mein Landsteiner ne Blood Groups discover kiye aur tab se blood transfusion safe ho gayi. Yeh ek poori detective story hai — science mein koi bhi discovery akeli nahi aati!",
+          "emotion": "📖"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab bina blood groups jaane log blindly transfusion karte the?? Bahut log mare honge! Landsteiner ne really bahut logon ki jaan bachai!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul! Aur yeh understanding Circulatory System Biology ka sabse bada lesson hai — body ek perfectly engineered system hai. Heart se blood vessels tak, haemoglobin se clotting tak, blood groups se immunity tak — har cheez connected hai. Aur tumne aaj yeh poora system samajh liya! Ab ek aur chapter wait kar raha hai — Respiratory System — jahan tum dekhoge ki blood mein oxygen actually kaise aata hai — alveoli ka miracle aur breathing mechanics!",
+          "emotion": "🌟"
+        },
+        {
+          "speaker": "raju",
+          "text": "Alveoli?? Respiratory System?? Sir iska bhi poora diagram aur mechanism dekhna hai — kab start karein?"
+        }
+      ],
+      "navigation": {
+        "next": "card_57_guess_final",
+        "button_text": "Next ➔"
+      }
+    },
+    {
+      "card_id": "card_57_guess_final",
+      "card_slug": "card_57_guess_final",
+      "type": "guess",
+      "concept_id": "final_bonus_guess",
+      "level": 5,
+      "progress": {
+        "current": 57,
+        "total": 60
+      },
+      "guess_payload": {
+        "question": "🎯 Final Boss Guess — Ek disease jisme ek specific type ka WBC (T cells) destroy hota hai, patient ki immunity completely khatam ho jaati hai, aur yeh disease STI (Sexually Transmitted Infection) hai. Yeh kaunsi disease hai aur iska virus kaunsa cell attack karta hai?",
+        "hint": "💡 Hint: 1980s mein pehli baar identify hua. Iski dawai 'Antiretroviral Therapy' hai.",
+        "options": [
+          {
+            "id": "A",
+            "text": "Leukaemia — RBC attack"
+          },
+          {
+            "id": "B",
+            "text": "AIDS (HIV) — CD4+ T Lymphocytes (Helper T cells) attack"
+          },
+          {
+            "id": "C",
+            "text": "Dengue — Platelets attack"
+          },
+          {
+            "id": "D",
+            "text": "Malaria — RBC mein parasites"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "AIDS (Acquired Immunodeficiency Syndrome) HIV (Human Immunodeficiency Virus) se hota hai. HIV specifically CD4+ T Lymphocytes (Helper T cells) ko attack aur destroy karta hai — yeh cells jo poori immune response coordinate karti hain. Jab CD4+ cells ki count bahut gir jaaye (<200/mm³), tab AIDS hota hai — body koi bhi infection defend nahi kar paati. Dengue mein Platelets gir jaate hain. Malaria mein Plasmodium parasite RBC mein rehta hai. Leukaemia mein WBC abnormally badhte hain. HIV = CD4+ T cells — yeh NEET ka guaranteed point hai!"
+      },
+      "navigation": {
+        "next": "card_58_chapter_complete",
+        "button_text": "Claim Trophy 🏆"
+      }
+    },
+    {
+      "card_id": "card_58_chapter_complete",
+      "card_slug": "card_58_chapter_complete",
+      "type": "milestone",
+      "concept_id": "chapter_completion",
+      "level": 5,
+      "progress": {
+        "current": 58,
+        "total": 60
+      },
+      "milestone_payload": {
+        "title": "🏆 CHAPTER COMPLETE — CIRCULATORY SYSTEM MASTER!",
+        "badge_emoji": "🎓",
+        "completed_topic": "Circulatory System — Complete Chapter (NCERT + PYQ Level)",
+        "xp_earned": 600,
+        "milestone_progress": "All 6 Modules + Master Quiz Clear!",
+        "motivational_quote": "Karl Landsteiner se William Harvey tak, Pulmonary Vein ka oxygenated blood trap se SA Node ke Natural Pacemaker tak — tumne Circulatory System ka poora officer-level knowledge achieve kar liya! BPSC, SSC, Railway, NEET — koi bhi question roke nahi sakta tumhe ab!"
+      },
+      "navigation": {
+        "next": "card_59_next_chapter_teaser",
+        "button_text": "See What's Next 🚀"
+      }
+    },
+    {
+      "card_id": "card_59_next_chapter_teaser",
+      "card_slug": "card_59_next_chapter_teaser",
+      "type": "chat",
+      "concept_id": "next_chapter_hook",
+      "level": 5,
+      "progress": {
+        "current": 59,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, tumne dekha ki haemoglobin oxygen carry karta hai — lekin kya tumhe pata hai yeh oxygen haemoglobin tak aati kaise hai? Lungs mein 300 million se zyada chhote chhote 'Alveoli' hote hain — inki combined surface area lagbhag 70 square meters hai — ek tennis court ke barabar! Isi jagah pe blood aur air ke beech gas exchange hota hai. Respiratory System mein yeh sabse fascinating discovery hai!",
+          "emotion": "🫁"
+        },
+        {
+          "speaker": "raju",
+          "text": "70 square meter lungs ka area?? Ek tennis court?? Lekin lungs to itne chhote dikhte hain chest mein sir!!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Yehi nature ka engineering marvel hai! Aur Respiratory System mein aur bhi bombshells hain — Tidal Volume, Vital Capacity, Bohr Effect (jo explain karta hai ki haemoglobin tissue mein oxygen kaise chhod deta hai) — aur ek surprising fact ki 70% CO2 blood mein bicarbonate ke form mein travel karti hai, haemoglobin se nahi! Yeh concepts NEET aur BPSC mein directly aate hain. Taiyar ho?",
+          "emotion": "🎯"
+        },
+        {
+          "speaker": "raju",
+          "text": "70% CO2 bicarbonate ke form mein?? Sir ab toh Respiratory System bhi dekhna hi padega — next chapter start karte hain!"
+        }
+      ],
+      "navigation": {
+        "next": "card_60_farewell",
+        "button_text": "Final Card ➔"
+      }
+    },
+    {
+      "card_id": "card_60_farewell",
+      "card_slug": "card_60_farewell",
+      "type": "milestone",
+      "concept_id": "chapter_farewell",
+      "level": 5,
+      "progress": {
+        "current": 60,
+        "total": 60
+      },
+      "milestone_payload": {
+        "title": "BIOLOGY OFFICER IN THE MAKING! 🌟",
+        "badge_emoji": "🩺",
+        "completed_topic": "Circulatory System — 100% Complete",
+        "xp_earned": 50,
+        "milestone_progress": "Chapter 100% Done — Ready for Next!",
+        "motivational_quote": "Blood se lekar heart tak, valves se lekar blood groups tak — ek aam student se ek officer-level thinker ban gaye tum! Respiratory System tumhara intezaar kar raha hai — wahan bhi aisa hi adventure hai. Keep going — har chapter ek nayi duniya hai!"
+      },
+      "navigation": {
+        "next": null,
+        "button_text": "Chapter Complete! 🎓"
+      }
+    }
+  ]
+}
