@@ -1,0 +1,2065 @@
+{
+  "topic_id": "biotechnology_advanced_biology",
+  "topic_title": "Biotechnology: Principles and Processes",
+  "target_exams": [
+    "BPSC",
+    "BSSC",
+    "RRB NTPC",
+    "SSC CGL",
+    "NEET",
+    "UPSC Prelims"
+  ],
+  "total_cards": 60,
+  "characters": {
+    "aman": {
+      "name": "Aman Sir",
+      "role": "teacher",
+      "avatar": "👨‍🏫"
+    },
+    "raju": {
+      "name": "Raju",
+      "role": "student",
+      "avatar": "👦"
+    }
+  },
+  "cards": [
+    {
+      "card_id": "card_01_intro",
+      "card_slug": "card_01_intro",
+      "type": "intro",
+      "concept_id": "biotechnology_introduction",
+      "level": 1,
+      "progress": {
+        "current": 1,
+        "total": 60
+      },
+      "intro_payload": {
+        "title": "🧬 Biotechnology: Principles & Processes",
+        "icon": "🔬",
+        "target_exams": [
+          "BPSC",
+          "BSSC",
+          "RRB NTPC",
+          "SSC CGL",
+          "NEET",
+          "UPSC Prelims"
+        ],
+        "learning_outcomes": [
+          "Understand recombinant DNA technology and genetic engineering principles",
+          "Master the tools of biotechnology: restriction enzymes, vectors, and cloning",
+          "Learn PCR, gel electrophoresis, and DNA sequencing techniques",
+          "Explore applications in medicine, agriculture, and industry",
+          "Analyze ethical concerns and biosafety regulations",
+          "Connect NCERT concepts with NEET/BPSC previous year questions"
+        ],
+        "estimated_time": "45 minutes",
+        "total_xp": 600
+      },
+      "navigation": {
+        "next": "card_02_daily_life_intro",
+        "button_text": "Start Learning 🚀"
+      }
+    },
+    {
+      "card_id": "card_02_daily_life_intro",
+      "card_slug": "card_02_daily_life_intro",
+      "type": "chat",
+      "concept_id": "biotech_daily_observation",
+      "level": 1,
+      "progress": {
+        "current": 2,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, tumne kabhi notice kiya ki agar ek apple ko kaato aur uska ek chota sa piece doosre ped me laga do, to same sweet apples milte hain? Ya phir insulin jo diabetic patients use karte hain, wo ab bacteria se banti hai... ye kaise possible hai?"
+        },
+        {
+          "speaker": "raju",
+          "text": "Haan sir! Mummy kehti thi ki gulab ki cutting laga do to wahi rang ka phool aayega... par bacteria se insulin? Ye to bahut ajeeb lag raha hai!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Ye sab Biotechnology ka kamaal hai! Basically, hum living organisms ya unke parts ko use karke useful products banate hain. Par modern biotechnology me ek twist hai - hum DNA ko hi cut-paste karte hain jaise tum computer me file cut-paste karte ho!"
+        },
+        {
+          "speaker": "raju",
+          "text": "DNA ko cut-paste?? Matlab hum genes ko ek jagah se hatake doosri jagah laga sakte hain? Ye to science fiction jaisa lag raha hai sir!"
+        }
+      ],
+      "navigation": {
+        "next": "card_03_biotech_definition",
+        "button_text": "Haan! Ye hi hai asli magic ➔"
+      }
+    },
+    {
+      "card_id": "card_03_biotech_definition",
+      "card_slug": "card_03_biotech_definition",
+      "type": "chat",
+      "concept_id": "biotechnology_core_definition",
+      "level": 1,
+      "progress": {
+        "current": 3,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "European Federation of Biotechnology (EFB) ne define kiya hai: Biotechnology is the integration of natural sciences and organisms, cells, parts thereof, and molecular analogues for products and services. Simple words me - living things ko use karke kaam ki cheezein banana!"
+        },
+        {
+          "speaker": "raju",
+          "text": "To sir traditional biotechnology me bread, curd, alcohol banana bhi aata hai na? Mummy ghar pe dahi jamati hai wo bhi biotechnology?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul sahi! Par modern biotechnology me hum directly DNA level pe kaam karte hain. Isko Genetic Engineering kehte hain - jahan hum genes ko modify, cut, paste, copy karte hain jaise software engineering! NEET me ye distinction zaroor puchte hain."
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab modern biotechnology ka focus DNA manipulation pe hai? Par sir DNA itna chhota hota hai, use kaise dekh paate hain ya cut kar paate hain?"
+        }
+      ],
+      "navigation": {
+        "next": "card_04_recombinant_dna_intro",
+        "button_text": "Yahin se shuru hota hai asli game ➔"
+      }
+    },
+    {
+      "card_id": "card_04_recombinant_dna_intro",
+      "card_slug": "card_04_recombinant_dna_intro",
+      "type": "chat",
+      "concept_id": "recombinant_dna_concept",
+      "level": 1,
+      "progress": {
+        "current": 4,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Dekho Raju, jab hum ek organism ka DNA leke doosre organism me daalte hain, to jo naya DNA banta hai use Recombinant DNA (rDNA) kehte hain. Jaise human insulin gene ko bacteria me daal diya - ab wo bacteria human insulin banayega!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Wow! To bacteria ko bol diya ki bhai tu insulin bana de? Par bacteria maanega kaise? Wo to apna kaam karta hoga na?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Genius doubt! Actually DNA ki language universal hai - sab organisms ka DNA same 4 letters (A, T, G, C) se bana hai. To agar tum human insulin gene ko properly bacteria me insert kar do with right signals, wo automatically padhke insulin protein banayega! Ye 1973 me Stanley Cohen aur Herbert Boyer ne pehli baar kiya tha."
+        },
+        {
+          "speaker": "raju",
+          "text": "1973! BPSC me year zaroor puchenge... par sir DNA ko cut kaise karte hain? Koi chhoti scissors thodi hai!"
+        }
+      ],
+      "navigation": {
+        "next": "card_05_restriction_enzymes_intro",
+        "button_text": "Molecular scissors hain! ➔"
+      }
+    },
+    {
+      "card_id": "card_05_restriction_enzymes_intro",
+      "card_slug": "card_05_restriction_enzymes_intro",
+      "type": "chat",
+      "concept_id": "restriction_enzymes_basic",
+      "level": 1,
+      "progress": {
+        "current": 5,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "DNA ko cut karne ke liye Restriction Enzymes hote hain - ye molecular scissors hain! Naturally ye bacteria me hote hain apne DNA ko viruses se bachane ke liye. Bacteria apne DNA ko protect karte hain aur foreign DNA ko cut kar dete hain. Scientists ne inka use DNA manipulation me shuru kiya!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Achha! To originally bacteria ne ye enzymes defence ke liye banaye the, par hum use genetic engineering me use kar rahe hain? Smart!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Exactly! Sabse famous enzyme hai EcoRI - ye E. coli bacteria se aata hai. Iska naam samjho: E (E.coli), co (species name colon), R (strain R), I (first enzyme discovered from this strain). SSC me nomenclature puchte hain! Ye specific DNA sequences ko recognize karke cut karta hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "Specific sequence matlab? Randomly thodi kaatega? Koi pattern hoga?"
+        }
+      ],
+      "navigation": {
+        "next": "card_06_recognition_sites",
+        "button_text": "Haan! Palindrome pattern ➔"
+      }
+    },
+    {
+      "card_id": "card_06_recognition_sites",
+      "card_slug": "card_06_recognition_sites",
+      "type": "chat",
+      "concept_id": "palindrome_recognition_sequences",
+      "level": 1,
+      "progress": {
+        "current": 6,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Restriction enzymes palindromic sequences ko recognize karte hain - matlab jo sequence aage se padhne pe bhi same ho aur DNA ki complementary strand pe ulta padhne pe bhi same! Jaise GAATTC aage se aur complementary strand pe CTTAAG ulta padhne pe GAATTC hi hai. Dimag ghoom gaya?"
+        },
+        {
+          "speaker": "raju",
+          "text": "Hain?? Ye to confusing hai sir! Ek example se samjhaiye please..."
+        },
+        {
+          "speaker": "aman",
+          "text": "Dekho, EcoRI ye sequence cut karta hai: 5'-GAATTC-3' (ek strand). Iske opposite strand pe hoga 3'-CTTAAG-5'. Ab agar tum doosri strand ko bhi 5' se 3' direction me padho to phir se GAATTC milega! Ye symmetry hi palindrome hai. NEET me diagram de kar puchte hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Achha! Matlab dono strands pe same pattern hai! To ye cut kahan karta hai exactly?"
+        }
+      ],
+      "navigation": {
+        "next": "card_07_sticky_blunt_ends",
+        "button_text": "Sticky aur Blunt ends ka concept ➔"
+      }
+    },
+    {
+      "card_id": "card_07_sticky_blunt_ends",
+      "card_slug": "card_07_sticky_ends_concept",
+      "type": "chat",
+      "concept_id": "sticky_blunt_ends_cutting",
+      "level": 1,
+      "progress": {
+        "current": 7,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Kuch enzymes staggered cut lagate hain - matlab dono strands ko alag-alag jagah kaatते hain, to single-stranded overhangs ban jaate hain. Isko Sticky Ends kehte hain kyunki ye complementary sticky ends ke saath easily stick kar sakte hain! Jaise EcoRI cuts between G and A, making 5'-AATT-3' overhangs on both fragments."
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab kuch bahar nikla rahega dono taraf se jo aapas me chipak sakta hai? Clever design sir! Aur kuch enzymes straight cut karte honge?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! Kuch enzymes sidhe center se cut karte hain - Blunt Ends bana dete hain jahan koi overhang nahi hota. Par sticky ends zyada useful hain kyunki ye specific complementary base pairing se jud sakte hain. SSC/Railway me sticky vs blunt ka difference zaroor aata hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir ab DNA cut ho gaya... to isko wapas jodenge kaise? Fevicol thodi use karenge!"
+        }
+      ],
+      "navigation": {
+        "next": "card_08_quiz_restriction_enzyme_1",
+        "button_text": "Pehle quick quiz! ➔"
+      }
+    },
+    {
+      "card_id": "card_08_quiz_restriction_enzyme_1",
+      "card_slug": "card_08_quiz_restriction_enzyme_1",
+      "type": "quiz",
+      "concept_id": "restriction_enzyme_quiz_1",
+      "level": 1,
+      "progress": {
+        "current": 8,
+        "total": 60
+      },
+      "quiz_payload": {
+        "question": "Restriction endonucleases are used in genetic engineering because they: (NEET 2019 Pattern)",
+        "options": [
+          {
+            "id": "A",
+            "text": "Can join DNA fragments"
+          },
+          {
+            "id": "B",
+            "text": "Can cut DNA at specific base sequences"
+          },
+          {
+            "id": "C",
+            "text": "Can synthesize DNA from RNA"
+          },
+          {
+            "id": "D",
+            "text": "Can replicate DNA rapidly"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Restriction endonucleases (restriction enzymes) cut DNA at specific palindromic recognition sequences. They act like molecular scissors with high specificity. Each enzyme recognizes a particular sequence (usually 4-8 base pairs long) and cuts at or near that site. This specificity is crucial for genetic engineering as it allows precise cutting and manipulation of DNA. Enzymes like EcoRI, BamHI, and HindIII are commonly used. Joining DNA fragments is done by DNA ligase, not restriction enzymes."
+      },
+      "navigation": {
+        "next": "card_09_quiz_restriction_enzyme_2",
+        "button_text": "Next Question (Q2/3) ➔"
+      }
+    },
+    {
+      "card_id": "card_09_quiz_restriction_enzyme_2",
+      "card_slug": "card_09_quiz_restriction_enzyme_2",
+      "type": "quiz",
+      "concept_id": "restriction_enzyme_quiz_2",
+      "level": 1,
+      "progress": {
+        "current": 9,
+        "total": 60
+      },
+      "quiz_payload": {
+        "question": "The naming of restriction enzyme EcoRI follows which pattern? (SSC CGL 2020 Pattern)",
+        "options": [
+          {
+            "id": "A",
+            "text": "E (genus), co (species), R (strain), I (order of discovery)"
+          },
+          {
+            "id": "B",
+            "text": "Eco (ecosystem), R (RNA), I (inhibitor)"
+          },
+          {
+            "id": "C",
+            "text": "E (enzyme), co (cut), RI (recombinant I)"
+          },
+          {
+            "id": "D",
+            "text": "Random scientific naming with no pattern"
+          }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Restriction enzymes follow a standardized naming convention: First letter represents genus (E for Escherichia), next two letters represent species (co for coli), next letter represents strain (R for strain R), and Roman numeral represents the order of discovery from that strain (I means first enzyme). So EcoRI = Escherichia coli strain R, first enzyme. Similarly, BamHI comes from Bacillus amyloliquefaciens strain H, first enzyme. This nomenclature is frequently tested in SSC and Railway exams."
+      },
+      "navigation": {
+        "next": "card_10_quiz_restriction_enzyme_3",
+        "button_text": "Next Question (Q3/3) ➔"
+      }
+    },
+    {
+      "card_id": "card_10_quiz_restriction_enzyme_3",
+      "card_slug": "card_10_quiz_restriction_enzyme_3",
+      "type": "quiz",
+      "concept_id": "restriction_enzyme_quiz_3",
+      "level": 1,
+      "progress": {
+        "current": 10,
+        "total": 60
+      },
+      "quiz_payload": {
+        "question": "Sticky ends produced by restriction enzymes are useful in genetic engineering because they: (BPSC 2018 Pattern)",
+        "options": [
+          {
+            "id": "A",
+            "text": "Are resistant to nuclease degradation"
+          },
+          {
+            "id": "B",
+            "text": "Have single-stranded complementary overhangs that can base-pair with other compatible sticky ends"
+          },
+          {
+            "id": "C",
+            "text": "Are more stable than blunt ends"
+          },
+          {
+            "id": "D",
+            "text": "Can directly replicate without any enzyme"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Sticky ends (cohesive ends) have single-stranded overhangs that are complementary to each other. When two DNA fragments are cut by the same restriction enzyme, their sticky ends can base-pair with each other through hydrogen bonding (A with T, G with C). This makes it much easier to join DNA fragments from different sources - the complementary overhangs naturally align, and then DNA ligase seals the backbone. This is why sticky ends are preferred over blunt ends in cloning. The same restriction enzyme produces compatible sticky ends regardless of the DNA source."
+      },
+      "navigation": {
+        "next": "card_11_milestone_restriction_enzymes",
+        "button_text": "Check Answer ➔"
+      }
+    },
+    {
+      "card_id": "card_11_milestone_restriction_enzymes",
+      "card_slug": "card_11_milestone_restriction_enzymes",
+      "type": "milestone",
+      "concept_id": "restriction_enzymes_complete",
+      "level": 1,
+      "progress": {
+        "current": 11,
+        "total": 60
+      },
+      "milestone_payload": {
+        "title": "🎯 MODULE 1 COMPLETED!",
+        "badge_emoji": "✂️",
+        "completed_topic": "Restriction Enzymes - Molecular Scissors",
+        "xp_earned": 100,
+        "milestone_progress": "Module 1/7 Clear",
+        "motivational_quote": "You've mastered the scissors that cut DNA! EcoRI, palindromes, and sticky ends are now in your toolkit. Ready for the glue? 🧬"
+      },
+      "navigation": {
+        "next": "card_12_dna_ligase_intro",
+        "button_text": "Start Next Module: DNA Ligase ➔"
+      }
+    },
+    {
+      "card_id": "card_12_dna_ligase_intro",
+      "card_slug": "card_12_dna_ligase_intro",
+      "type": "chat",
+      "concept_id": "dna_ligase_molecular_glue",
+      "level": 1,
+      "progress": {
+        "current": 12,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, DNA cut karne ke baad use jodna bhi zaruri hai na? Iske liye DNA Ligase enzyme use hota hai - ye molecular glue ka kaam karta hai! Ye phosphodiester bond banaata hai between the 3'-OH group of one nucleotide and the 5'-phosphate group of another, joining DNA fragments permanently."
+        },
+        {
+          "speaker": "raju",
+          "text": "To ye basically fevicol jaisa kaam karta hai DNA ke liye? Par sir, koi bhi DNA piece kisi bhi se jod dega kya?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Nahi! Ligase tabhi efficiently kaam karta hai jab sticky ends already base-paired ho chuke hon ya blunt ends properly aligned hon. Sticky ends ke case me base pairing pehle se alignment de deti hai, phir ligase backbone seal kar deta hai. Energy ke liye ye ATP use karta hai (eukaryotic ligase) ya NAD+ (bacterial ligase like E.coli ligase). NEET me cofactor puchte hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab cut karne ke liye restriction enzyme, jodne ke liye ligase... ye to complete toolkit ban gayi! Ab isse kuch bana sakte hain?"
+        }
+      ],
+      "navigation": {
+        "next": "card_13_vectors_introduction",
+        "button_text": "Haan! Vectors chahiye delivery ke liye ➔"
+      }
+    },
+    {
+      "card_id": "card_13_vectors_introduction",
+      "card_slug": "card_13_vectors_introduction",
+      "type": "chat",
+      "concept_id": "vectors_cloning_vehicles",
+      "level": 1,
+      "progress": {
+        "current": 13,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ab socho Raju - human insulin gene ko bacteria me dalna hai. Par sirf gene daal doge to wo survive nahi karega, replicate nahi hoga. Isliye hum Gene of Interest ko ek Cloning Vector me insert karte hain - ye vector automatically host cell me replicate hoga aur gene ko bhi multiply karega! Vector ek vehicle hai jo gene ko carry karke cells me le jaata hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "Achha! To vector ek carrier hai jo gene ko safe rakhta hai aur host cell me replicate bhi hota hai? Vector kaise cheezein hoti hain sir?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Sabse common vectors hain Plasmids - ye chhote circular DNA molecules hain jo bacteria me naturally paaye jaate hain, chromosomal DNA se alag. Plasmids khud se replicate kar sakte hain, isliye perfect vectors hain! Phir Bacteriophages (viruses), BAC (Bacterial Artificial Chromosomes), YAC (Yeast Artificial Chromosomes) bhi vectors hain. BPSC me vector types zaroor puchte hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir plasmid me gene kaise insert karte hain? Wo bhi restriction enzyme se cut karke?"
+        }
+      ],
+      "navigation": {
+        "next": "card_14_plasmid_features",
+        "button_text": "Bilkul sahi! Plasmid features dekhte hain ➔"
+      }
+    },
+    {
+      "card_id": "card_14_plasmid_features",
+      "card_slug": "card_14_plasmid_features",
+      "type": "chat",
+      "concept_id": "plasmid_essential_features",
+      "level": 1,
+      "progress": {
+        "current": 14,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ek ideal plasmid vector me ye features hone chahiye: (1) Origin of Replication (ori) - jahan se replication shuru hota hai, (2) Selectable Marker - usually antibiotic resistance gene (jaise ampicillin resistance) jo transformed cells ko identify karne me help kare, (3) Multiple Cloning Site (MCS) - jahaan multiple restriction sites hon taaki foreign DNA insert kar sako, (4) Chhota size (under 10 kb) - easy transformation ke liye."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir selectable marker ka kya kaam hai exactly? Antibiotic resistance kyun chahiye?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Genius question! Jab tum bacteria me plasmid dalte ho, sab bacteria plasmid nahi lete. Sirf kuch bacteria successfully transform hote hain. Ab transformed aur non-transformed bacteria ko separate kaise karoge? Simple - agar plasmid me ampicillin resistance gene hai, to tum culture ko ampicillin antibiotic se treat karo. Sirf wo bacteria survive karenge jinme plasmid hai! Non-transformed bacteria mar jayenge. Ye selection process hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "Wow! Smart technique hai sir! To agar gene successfully insert ho gaya plasmid me to kaise pata chalega?"
+        }
+      ],
+      "navigation": {
+        "next": "card_15_insertional_inactivation",
+        "button_text": "Insertional Inactivation technique ➔"
+      }
+    },
+    {
+      "card_id": "card_15_insertional_inactivation",
+      "card_slug": "card_15_insertional_inactivation",
+      "type": "chat",
+      "concept_id": "insertional_inactivation_screening",
+      "level": 1,
+      "progress": {
+        "current": 15,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Insertional Inactivation me do antibiotic resistance genes hote hain plasmid me - suppose ampR (ampicillin resistance) aur tetR (tetracycline resistance). MCS tetR gene ke andar hota hai. Jab tum foreign DNA insert karte ho, to tetR gene disrupt ho jata hai - ab wo functional nahi rahega! To recombinant bacteria ampicillin me to grow karega par tetracycline me nahi."
+        },
+        {
+          "speaker": "raju",
+          "text": "Achha! To jo bacteria dono antibiotics me grow kare wo non-recombinant hai (sirf plasmid liya, gene insert nahi hua), aur jo sirf ampicillin me grow kare wo recombinant hai (gene insert hone se tetR kharab ho gaya)! Brilliant screening sir!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Exactly Raju! Par modern technique hai Blue-White Screening using lacZ gene (codes for β-galactosidase enzyme). MCS lacZ gene me hota hai. Agar gene insert hua to lacZ inactive ho jayega - bacteria white colonies banayenge. Agar gene insert nahi hua to lacZ active rahega aur blue colonies banegi (X-gal substrate use karke). NEET me ye mechanism detail me puchte hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Blue-white screening zyada easy lagta hai visually dekhne ke liye! Sir ab vectors ready hain, to bacteria me kaise daalte hain?"
+        }
+      ],
+      "navigation": {
+        "next": "card_16_quiz_vectors_1",
+        "button_text": "Pehle quiz! ➔"
+      }
+    },
+    {
+      "card_id": "card_16_quiz_vectors_1",
+      "card_slug": "card_16_quiz_vectors_1",
+      "type": "quiz",
+      "concept_id": "vectors_quiz_1",
+      "level": 1,
+      "progress": {
+        "current": 16,
+        "total": 60
+      },
+      "quiz_payload": {
+        "question": "Which of the following is NOT an essential feature of a cloning vector? (NEET 2020)",
+        "options": [
+          {
+            "id": "A",
+            "text": "Origin of replication (ori)"
+          },
+          {
+            "id": "B",
+            "text": "Selectable marker (e.g., antibiotic resistance gene)"
+          },
+          {
+            "id": "C",
+            "text": "Multiple cloning sites (MCS)"
+          },
+          {
+            "id": "D",
+            "text": "Telomere sequences"
+          }
+        ],
+        "correct_option_id": "D",
+        "explanation": "Telomere sequences are NOT essential for bacterial plasmid vectors. Telomeres are present at the ends of linear eukaryotic chromosomes to prevent degradation. Plasmids are circular, so they don't need telomeres. Essential features of cloning vectors are: (1) ori (origin of replication) - for autonomous replication, (2) Selectable marker - usually antibiotic resistance genes to identify transformed cells, (3) MCS (Multiple Cloning Sites) or polylinker - having multiple unique restriction sites for inserting foreign DNA, (4) Small size for easy manipulation. YACs (Yeast Artificial Chromosomes) do have telomeres because they're linear, but plasmids don't need them."
+      },
+      "navigation": {
+        "next": "card_17_quiz_vectors_2",
+        "button_text": "Next Question (Q2/3) ➔"
+      }
+    },
+    {
+      "card_id": "card_17_quiz_vectors_2",
+      "card_slug": "card_17_quiz_vectors_2",
+      "type": "quiz",
+      "concept_id": "vectors_quiz_2",
+      "level": 1,
+      "progress": {
+        "current": 17,
+        "total": 60
+      },
+      "quiz_payload": {
+        "question": "In the blue-white screening method, recombinant colonies appear white because: (BPSC 2019)",
+        "options": [
+          {
+            "id": "A",
+            "text": "The lacZ gene is active and produces β-galactosidase"
+          },
+          {
+            "id": "B",
+            "text": "The lacZ gene is disrupted by inserted DNA, making it non-functional"
+          },
+          {
+            "id": "C",
+            "text": "Bacteria cannot take up the X-gal substrate"
+          },
+          {
+            "id": "D",
+            "text": "Antibiotic resistance genes are activated"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "In blue-white screening, the multiple cloning site (MCS) is located within the lacZ gene, which encodes the enzyme β-galactosidase. When foreign DNA is successfully inserted into the MCS, it disrupts the lacZ gene, making it non-functional. Without functional β-galactosidase, bacteria cannot cleave the chromogenic substrate X-gal, so colonies appear WHITE. Non-recombinant colonies (with intact lacZ) produce active β-galactosidase that cleaves X-gal to produce a blue product, making colonies BLUE. This visual differentiation makes screening quick and efficient. This is a very common BPSC and NEET question pattern."
+      },
+      "navigation": {
+        "next": "card_18_quiz_vectors_3",
+        "button_text": "Next Question (Q3/3) ➔"
+      }
+    },
+    {
+      "card_id": "card_18_quiz_vectors_3",
+      "card_slug": "card_18_quiz_vectors_3",
+      "type": "quiz",
+      "concept_id": "vectors_quiz_3",
+      "level": 1,
+      "progress": {
+        "current": 18,
+        "total": 60
+      },
+      "quiz_payload": {
+        "question": "The role of a selectable marker in a cloning vector is to: (SSC CGL 2021)",
+        "options": [
+          {
+            "id": "A",
+            "text": "Help in replication of the vector"
+          },
+          {
+            "id": "B",
+            "text": "Identify and select cells that have taken up the vector"
+          },
+          {
+            "id": "C",
+            "text": "Cut the DNA at specific sites"
+          },
+          {
+            "id": "D",
+            "text": "Join DNA fragments together"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Selectable markers (usually antibiotic resistance genes like ampicillin resistance or tetracycline resistance) help identify and select transformed cells from non-transformed cells. When bacteria are treated with a vector, not all cells take up the plasmid. By growing cells on a medium containing the antibiotic (e.g., ampicillin), only transformed cells with the resistance gene survive and grow, while non-transformed cells die. This selection process is crucial for isolating successfully transformed cells. Common selectable markers include ampR, tetR, kanR (kanamycin resistance). This concept is frequently tested in SSC and Railway exams."
+      },
+      "navigation": {
+        "next": "card_19_milestone_vectors",
+        "button_text": "Check Answer ➔"
+      }
+    },
+    {
+      "card_id": "card_19_milestone_vectors",
+      "card_slug": "card_19_milestone_vectors",
+      "type": "milestone",
+      "concept_id": "vectors_complete",
+      "level": 1,
+      "progress": {
+        "current": 19,
+        "total": 60
+      },
+      "milestone_payload": {
+        "title": "🎯 MODULE 2 COMPLETED!",
+        "badge_emoji": "🧬",
+        "completed_topic": "Cloning Vectors and Screening Methods",
+        "xp_earned": 100,
+        "milestone_progress": "Module 2/7 Clear",
+        "motivational_quote": "Plasmids, ori, selectable markers, blue-white screening - you're now a vector expert! The delivery vehicle is ready! 🚀"
+      },
+      "navigation": {
+        "next": "card_20_transformation_intro",
+        "button_text": "Start Next Module: Transformation ➔"
+      }
+    },
+    {
+      "card_id": "card_20_transformation_intro",
+      "card_slug": "card_20_transformation_intro",
+      "type": "chat",
+      "concept_id": "transformation_competent_cells",
+      "level": 1,
+      "progress": {
+        "current": 20,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, ab recombinant DNA ready hai, vector ready hai - par bacteria naturally foreign DNA nahi lete! Bacterial cell wall aur membrane ek barrier hai. Hume bacteria ko competent banana padta hai - matlab unhe DNA lene ke liye tayar karna padta hai. Isko Transformation kehte hain jab bacteria successfully recombinant DNA le le."
+        },
+        {
+          "speaker": "raju",
+          "text": "Competent matlab ready? Bacteria ko kaise tayar karte hain sir DNA lene ke liye? Koi chemical treatment hota hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul! Two main methods hain: (1) Heat Shock Method - bacteria ko ice-cold CaCl₂ (calcium chloride) solution me treat karte hain, phir 42°C pe heat shock dete hain for 90 seconds, phir turant ice pe rakhte hain. Temperature change se cell membrane me temporary pores ban jaate hain jahan se DNA enter kar sakta hai! (2) Electroporation - electric pulse use karke cell membrane me pores banate hain."
+        },
+        {
+          "speaker": "raju",
+          "text": "Wow! Heat shock aur electric shock dono techniques hain! Calcium chloride ka kya role hai sir?"
+        }
+      ],
+      "navigation": {
+        "next": "card_21_competent_cells_mechanism",
+        "button_text": "Ca²⁺ ions ka magic ➔"
+      }
+    },
+    {
+      "card_id": "card_21_competent_cells_mechanism",
+      "card_slug": "card_21_competent_cells_mechanism",
+      "type": "chat",
+      "concept_id": "calcium_chloride_role",
+      "level": 1,
+      "progress": {
+        "current": 21,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ca²⁺ ions DNA ko cell surface se bind karne me help karte hain. DNA negatively charged hai aur cell membrane bhi negatively charged - normally ye repel karenge. Par Ca²⁺ (positive ions) dono ke beech bridge bana dete hain, DNA ko membrane ke paas laate hain. Phir heat shock se membrane fluid ho jata hai aur DNA andar slip kar jaata hai! NEET me mechanism puchte hain."
+        },
+        {
+          "speaker": "raju",
+          "text": "Achha! Calcium ions bridge ka kaam karte hain... smart chemistry sir! Electroporation zyada effective hota hai kya?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan, electroporation generally zyada efficient hai par expensive equipment chahiye. Heat shock method simple aur cheap hai isliye common labs me use hota hai. High voltage electric pulse (1-2 kV) lagane se transient pores ban jaate hain. Par bacteria ko optimal electrical conditions chahiye - too much current can kill them! Yeast aur plant cells ke liye bhi electroporation use hota hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir bacteria me to ho gaya, par animals ya plants ke cells me DNA kaise daalte hain? Wo to complex hote hain!"
+        }
+      ],
+      "navigation": {
+        "next": "card_22_gene_gun_microinjection",
+        "button_text": "Advanced delivery methods ➔"
+      }
+    },
+    {
+      "card_id": "card_22_gene_gun_microinjection",
+      "card_slug": "card_22_gene_gun_microinjection",
+      "type": "chat",
+      "concept_id": "gene_delivery_methods_eukaryotes",
+      "level": 1,
+      "progress": {
+        "current": 22,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Plant cells ke liye Gene Gun (biolistic method) use hota hai - isme gold ya tungsten particles pe DNA coat karte hain, phir high pressure helium gas se fire karte hain directly plant cells me! Literally DNA ko shoot karte hain cells me. Animals ke liye Microinjection use hota hai - bahut fine needle se directly nucleus me DNA inject karte hain, especially fertilized eggs me."
+        },
+        {
+          "speaker": "raju",
+          "text": "Gene gun!! Ye to filmi lagta hai sir! Gold particles pe DNA chipka kar shoot karna... par itna rough treatment se cells damage nahi hote?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Kuch cells damage ho jaate hain, par kaafi cells survive bhi karte hain aur DNA successfully integrate kar lete hain. Plant cells ki cell wall tough hoti hai isliye ye method effective hai. SSC/BPSC me biolistic method ka discoverer puchte hain - John Sanford ne 1987 me develop kiya. Animals me Agrobacterium-mediated transformation bhi use hota hai jo naturally plants me DNA transfer karta hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir ab DNA cells me chala gaya, to next step kya hai? Use multiply kaise karenge?"
+        }
+      ],
+      "navigation": {
+        "next": "card_23_pcr_introduction",
+        "button_text": "PCR - DNA ki xerox machine! ➔"
+      }
+    },
+    {
+      "card_id": "card_23_pcr_introduction",
+      "card_slug": "card_23_pcr_introduction",
+      "type": "chat",
+      "concept_id": "pcr_polymerase_chain_reaction",
+      "level": 1,
+      "progress": {
+        "current": 23,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, agar tumhe ek specific DNA fragment ke millions of copies chahiye ho in vitro (test tube me, living cells ke bina), to PCR (Polymerase Chain Reaction) use karte hain! Ye Kary Mullis ne 1983 me invent kiya tha - unhe 1993 me Nobel Prize mila! PCR basically DNA ki xerox machine hai - exponential multiplication hoti hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "Xerox machine! Ek se do, do se chaar... exponential matlab bahut tezi se badhega! Par kaise hota hai ye sir? Cells ke bina DNA replicate kaise hoga?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Hum laboratory me manually wo conditions create karte hain jo cells me hoti hain! Zarurat hai: (1) Template DNA (jiska copy banana hai), (2) Two Primers (chhote DNA sequences jo target region ko flank karte hain), (3) DNA Polymerase enzyme (specially Taq polymerase jo high temperature pe kaam karta hai), (4) dNTPs (deoxynucleotide triphosphates - building blocks), (5) Buffer solution with Mg²⁺ ions."
+        },
+        {
+          "speaker": "raju",
+          "text": "Taq polymerase? Ye normal DNA polymerase se alag hai kya?"
+        }
+      ],
+      "navigation": {
+        "next": "card_24_taq_polymerase_pcr_steps",
+        "button_text": "Taq ka special power! ➔"
+      }
+    },
+    {
+      "card_id": "card_24_taq_polymerase_pcr_steps",
+      "card_slug": "card_24_taq_polymerase_pcr_steps",
+      "type": "chat",
+      "concept_id": "taq_polymerase_pcr_cycles",
+      "level": 1,
+      "progress": {
+        "current": 24,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Taq polymerase Thermus aquaticus bacteria se aata hai jo hot springs me rehta hai - isliye ye 95°C high temperature pe bhi denature nahi hota, active rahta hai! Normal DNA polymerase high temperature pe inactive ho jayega. PCR me three steps repeat hote hain: (1) Denaturation at 94-96°C - double helix separate hota hai into single strands, (2) Annealing at 50-65°C - primers bind hote hain template strands se, (3) Extension at 72°C - Taq polymerase primers se start karke new DNA strand synthesize karta hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "To ye teen steps ek cycle hain? Kitni baar repeat karte hain sir?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Typically 25-35 cycles! Har cycle me DNA amount double hota hai. After n cycles, DNA copies = 2ⁿ (approximately). So after 30 cycles, theoretically 2³⁰ = about 1 billion copies mil sakte hain! NEET me calculation based questions aate hain. Poora process ek automated machine me hota hai called Thermal Cycler jo temperature automatically change karta hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "1 billion copies in few hours!! Ye to incredible hai sir! PCR ka use kahan hota hai practical me?"
+        }
+      ],
+      "navigation": {
+        "next": "card_25_quiz_transformation_pcr_1",
+        "button_text": "Pehle quiz! ➔"
+      }
+    },
+    {
+      "card_id": "card_25_quiz_transformation_pcr_1",
+      "card_slug": "card_25_quiz_transformation_pcr_1",
+      "type": "quiz",
+      "concept_id": "transformation_pcr_quiz_1",
+      "level": 1,
+      "progress": {
+        "current": 25,
+        "total": 60
+      },
+      "quiz_payload": {
+        "question": "In the heat shock method of bacterial transformation, CaCl₂ treatment is used because: (NEET 2018)",
+        "options": [
+          {
+            "id": "A",
+            "text": "Ca²⁺ ions provide energy for DNA uptake"
+          },
+          {
+            "id": "B",
+            "text": "Ca²⁺ ions neutralize negative charges on DNA and cell membrane, facilitating DNA binding to cells"
+          },
+          {
+            "id": "C",
+            "text": "Ca²⁺ ions directly cut the cell wall"
+          },
+          {
+            "id": "D",
+            "text": "Ca²⁺ ions activate restriction enzymes"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Calcium chloride (CaCl₂) treatment makes bacterial cells competent for DNA uptake. Both DNA (due to phosphate groups in backbone) and bacterial cell membrane (due to phospholipids) are negatively charged. They would normally repel each other. Ca²⁺ ions act as a bridge, neutralizing negative charges and helping DNA molecules bind to the cell surface. Subsequently, heat shock (42°C for 90 seconds) creates transient pores in the membrane, allowing DNA to enter. The cells are then placed on ice to stabilize. This is the most common method for bacterial transformation in research labs."
+      },
+      "navigation": {
+        "next": "card_26_quiz_transformation_pcr_2",
+        "button_text": "Next Question (Q2/3) ➔"
+      }
+    },
+    {
+      "card_id": "card_26_quiz_transformation_pcr_2",
+      "card_slug": "card_26_quiz_transformation_pcr_2",
+      "type": "quiz",
+      "concept_id": "transformation_pcr_quiz_2",
+      "level": 1,
+      "progress": {
+        "current": 26,
+        "total": 60
+      },
+      "quiz_payload": {
+        "question": "Taq polymerase used in PCR is obtained from which organism, and why is it preferred? (BPSC 2020)",
+        "options": [
+          {
+            "id": "A",
+            "text": "E. coli - because it is easy to isolate"
+          },
+          {
+            "id": "B",
+            "text": "Thermus aquaticus - because it is thermostable and remains active at high temperatures"
+          },
+          {
+            "id": "C",
+            "text": "Bacillus subtilis - because it produces restriction enzymes"
+          },
+          {
+            "id": "D",
+            "text": "Agrobacterium - because it naturally transfers DNA"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Taq polymerase is isolated from Thermus aquaticus, a thermophilic bacterium that lives in hot springs at temperatures around 70-75°C. This enzyme is thermostable - it can withstand the high temperatures (94-96°C) used in the denaturation step of PCR without getting denatured. Regular DNA polymerases would denature at these temperatures and would need to be added fresh after each cycle. Taq polymerase's heat stability allows it to remain active throughout multiple PCR cycles, making the process automated and efficient. Kary Mullis won the 1993 Nobel Prize for inventing PCR."
+      },
+      "navigation": {
+        "next": "card_27_quiz_transformation_pcr_3",
+        "button_text": "Next Question (Q3/3) ➔"
+      }
+    },
+    {
+      "card_id": "card_27_quiz_transformation_pcr_3",
+      "card_slug": "card_27_quiz_transformation_pcr_3",
+      "type": "quiz",
+      "concept_id": "transformation_pcr_quiz_3",
+      "level": 1,
+      "progress": {
+        "current": 27,
+        "total": 60
+      },
+      "quiz_payload": {
+        "question": "If a PCR process starts with one DNA molecule and undergoes 20 cycles, approximately how many DNA molecules will be produced? (SSC CGL Pattern)",
+        "options": [
+          {
+            "id": "A",
+            "text": "20"
+          },
+          {
+            "id": "B",
+            "text": "400"
+          },
+          {
+            "id": "C",
+            "text": "About 1 million (2²⁰ = 1,048,576)"
+          },
+          {
+            "id": "D",
+            "text": "About 1 billion"
+          }
+        ],
+        "correct_option_id": "C",
+        "explanation": "In PCR, each cycle theoretically doubles the amount of target DNA. So after n cycles, the number of copies = 2ⁿ (approximately, assuming 100% efficiency). After 20 cycles: 2²⁰ = 1,048,576 ≈ about 1 million copies. After 30 cycles: 2³⁰ ≈ 1 billion copies. This exponential amplification is what makes PCR so powerful - even a tiny amount of starting DNA can be amplified to detectable quantities within a few hours. PCR is used in disease diagnosis, forensics (DNA fingerprinting), paternity testing, evolutionary studies, and molecular cloning."
+      },
+      "navigation": {
+        "next": "card_28_milestone_transformation_pcr",
+        "button_text": "Check Answer ➔"
+      }
+    },
+    {
+      "card_id": "card_28_milestone_transformation_pcr",
+      "card_slug": "card_28_milestone_transformation_pcr",
+      "type": "milestone",
+      "concept_id": "transformation_pcr_complete",
+      "level": 1,
+      "progress": {
+        "current": 28,
+        "total": 60
+      },
+      "milestone_payload": {
+        "title": "🎯 MODULE 3 COMPLETED!",
+        "badge_emoji": "🔥",
+        "completed_topic": "Transformation and PCR Amplification",
+        "xp_earned": 100,
+        "milestone_progress": "Module 3/7 Clear",
+        "motivational_quote": "Heat shock, electroporation, Taq polymerase, 2ⁿ copies - you've mastered DNA delivery and amplification! 🚀"
+      },
+      "navigation": {
+        "next": "card_29_gel_electrophoresis_intro",
+        "button_text": "Start Next Module: Gel Electrophoresis ➔"
+      }
+    },
+    {
+      "card_id": "card_29_gel_electrophoresis_intro",
+      "card_slug": "card_29_gel_electrophoresis_intro",
+      "type": "chat",
+      "concept_id": "gel_electrophoresis_principle",
+      "level": 1,
+      "progress": {
+        "current": 29,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, socho tumne PCR kiya ya restriction enzyme se DNA cut kiya - ab tumhe confirm karna hai ki sahi size ka DNA fragment mila hai ya nahi. Iske liye Gel Electrophoresis technique use hoti hai jo DNA fragments ko unke size ke basis pe separate karti hai! Ye DNA ka sorting process hai based on molecular weight."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sorting based on size? Kaise hota hai sir? DNA to dikhta bhi nahi, use sort kaise karenge?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Electrophoresis ka matlab hai 'charged particles ka electric field me movement'. DNA negatively charged hota hai (phosphate groups ki wajah se), to agar electric field apply karo to DNA positive electrode (anode) ki taraf move karega! Hum DNA ko agar agarose gel (jelly jaisa) me daalke electric current lagayen, to DNA gel ke through move karega - chhote fragments tez move karenge, bade fragments slow!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Achha! Chhote light hone ki wajah se easily gel ke pores se nikal jaayenge, bade stuck rahenge! Smart sir! Par DNA to colorless hai, kaise dekhenge?"
+        }
+      ],
+      "navigation": {
+        "next": "card_30_gel_electrophoresis_procedure",
+        "button_text": "Ethidium Bromide staining ➔"
+      }
+    },
+    {
+      "card_id": "card_30_gel_electrophoresis_procedure",
+      "card_slug": "card_30_gel_electrophoresis_procedure",
+      "type": "chat",
+      "concept_id": "gel_electrophoresis_visualization",
+      "level": 1,
+      "progress": {
+        "current": 30,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "DNA ko visualize karne ke liye Ethidium Bromide (EtBr) dye use karte hain jo DNA ke saath intercalate (fit) ho jata hai base pairs ke beech me. Phir UV light me ye orange-red color me fluorescence karta hai - DNA bands clearly dikhte hain! Gel me wells (chhote holes) me samples load karte hain, phir current lagaate hain. DNA negative se positive ki taraf migrate karta hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "UV light me DNA glow karega! Cool technique sir! Par size kaise measure karenge exactly?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Isliye DNA Ladder (Molecular Weight Marker) use karte hain - ye known sizes ke DNA fragments ka mixture hota hai. Isko bhi gel me ek well me load karte hain reference ke liye. Phir apne unknown samples ke bands ki position ko ladder se compare karke approximate size pata lagaate hain! NEET me gel diagram de kar analysis puchte hain. Agarose concentration change karke different size ranges separate kar sakte hain."
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab ladder ek scale ki tarah kaam karta hai! Sir ye DNA fragments ko cut-paste karne ke baad next kya hota hai? Final product kaise milta hai?"
+        }
+      ],
+      "navigation": {
+        "next": "card_31_elution_cloning_overview",
+        "button_text": "Elution aur complete cloning cycle ➔"
+      }
+    },
+    {
+      "card_id": "card_31_elution_cloning_overview",
+      "card_slug": "card_31_elution_cloning_overview",
+      "type": "chat",
+      "concept_id": "dna_elution_cloning_steps",
+      "level": 1,
+      "progress": {
+        "current": 31,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Gel electrophoresis ke baad desired band ko gel se cut kar lete hain, phir DNA ko gel se extract karte hain - isko Elution kehte hain. Ab pure DNA fragment mil gaya! Complete recombinant DNA technology ka cycle ye hai: (1) Gene of Interest ko identify karo, (2) Restriction enzyme se cut karo, (3) Vector me insert karo using ligase, (4) Transform karo competent cells me, (5) Selection and screening, (6) Culture and expression!"
+        },
+        {
+          "speaker": "raju",
+          "text": "To pehle identify, phir cut, insert, transfer, select, aur finally expression! Poora pipeline ban gaya sir! Expression matlab protein ban jayega?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Exactly! Gene insert hone ke baad bacteria/yeast/plant/animal cells me grow hota hai, multiply hota hai, aur gene se protein express hota hai. Jaise human insulin gene E. coli me insert kiya to bacteria insulin protein banane lagta hai jo diabetic patients use karte hain! Ye 1982 me first recombinant drug thi - Humulin. BPSC me commercial applications zaroor puchte hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "1982! Yaad rakhna padega year! Sir aur kya applications hain biotechnology ke?"
+        }
+      ],
+      "navigation": {
+        "next": "card_32_quiz_gel_electrophoresis_1",
+        "button_text": "Pehle quiz! ➔"
+      }
+    },
+    {
+      "card_id": "card_32_quiz_gel_electrophoresis_1",
+      "card_slug": "card_32_quiz_gel_electrophoresis_1",
+      "type": "quiz",
+      "concept_id": "gel_electrophoresis_quiz_1",
+      "level": 1,
+      "progress": {
+        "current": 32,
+        "total": 60
+      },
+      "quiz_payload": {
+        "question": "In agarose gel electrophoresis, DNA fragments migrate towards the anode (positive electrode) because: (NEET 2019)",
+        "options": [
+          {
+            "id": "A",
+            "text": "DNA is positively charged due to amino groups"
+          },
+          {
+            "id": "B",
+            "text": "DNA is negatively charged due to phosphate groups in the sugar-phosphate backbone"
+          },
+          {
+            "id": "C",
+            "text": "DNA is neutral but moves due to thermal gradient"
+          },
+          {
+            "id": "D",
+            "text": "DNA moves randomly in all directions"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "DNA molecules are negatively charged because of the phosphate groups (PO₄³⁻) in their sugar-phosphate backbone. Each nucleotide contributes a negative charge. When an electric field is applied in gel electrophoresis, DNA molecules migrate towards the positive electrode (anode), away from the negative electrode (cathode). The rate of migration depends on the size of DNA fragments - smaller fragments move faster through the gel pores, while larger fragments move slower. This size-based separation is the basis of gel electrophoresis. The gel acts as a molecular sieve."
+      },
+      "navigation": {
+        "next": "card_33_quiz_gel_electrophoresis_2",
+        "button_text": "Next Question (Q2/3) ➔"
+      }
+    },
+    {
+      "card_id": "card_33_quiz_gel_electrophoresis_2",
+      "card_slug": "card_33_quiz_gel_electrophoresis_2",
+      "type": "quiz",
+      "concept_id": "gel_electrophoresis_quiz_2",
+      "level": 1,
+      "progress": {
+        "current": 33,
+        "total": 60
+      },
+      "quiz_payload": {
+        "question": "Ethidium Bromide (EtBr) is used in gel electrophoresis to: (BPSC 2019)",
+        "options": [
+          {
+            "id": "A",
+            "text": "Cut DNA into fragments"
+          },
+          {
+            "id": "B",
+            "text": "Stain and visualize DNA under UV light by intercalating between base pairs"
+          },
+          {
+            "id": "C",
+            "text": "Provide negative charge to DNA"
+          },
+          {
+            "id": "D",
+            "text": "Separate DNA fragments by size"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Ethidium Bromide (EtBr) is a fluorescent dye that intercalates (inserts) between the stacked base pairs of DNA double helix. When DNA-EtBr complex is exposed to UV light (around 260-360 nm wavelength), it fluoresces orange-red, making DNA bands visible. Without staining, DNA would be invisible as it is colorless. EtBr can be added to the gel before pouring or used as a post-staining solution. However, EtBr is a mutagen and carcinogen, so safer alternatives like SYBR Green are now also used. The intensity of fluorescence is proportional to the amount of DNA."
+      },
+      "navigation": {
+        "next": "card_34_quiz_gel_electrophoresis_3",
+        "button_text": "Next Question (Q3/3) ➔"
+      }
+    },
+    {
+      "card_id": "card_34_quiz_gel_electrophoresis_3",
+      "card_slug": "card_34_quiz_gel_electrophoresis_3",
+      "type": "quiz",
+      "concept_id": "gel_electrophoresis_quiz_3",
+      "level": 1,
+      "progress": {
+        "current": 34,
+        "total": 60
+      },
+      "quiz_payload": {
+        "question": "Which DNA fragments will move farthest from the well in agarose gel electrophoresis? (SSC CGL 2020)",
+        "options": [
+          {
+            "id": "A",
+            "text": "Largest fragments (e.g., 10 kb)"
+          },
+          {
+            "id": "B",
+            "text": "Smallest fragments (e.g., 500 bp)"
+          },
+          {
+            "id": "C",
+            "text": "All fragments move equal distance"
+          },
+          {
+            "id": "D",
+            "text": "Circular DNA moves farthest"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Smallest DNA fragments move farthest from the well (loading site) towards the positive electrode. The agarose gel acts as a molecular sieve with tiny pores. Smaller DNA fragments can navigate through these pores more easily and quickly, while larger fragments get retarded as they have difficulty passing through the gel matrix. Thus, after electrophoresis, smallest fragments are found farthest from the well (near the positive electrode), and largest fragments are found closest to the well. The distance migrated is inversely proportional to the log of molecular weight."
+      },
+      "navigation": {
+        "next": "card_35_milestone_gel_electrophoresis",
+        "button_text": "Check Answer ➔"
+      }
+    },
+    {
+      "card_id": "card_35_milestone_gel_electrophoresis",
+      "card_slug": "card_35_milestone_gel_electrophoresis",
+      "type": "milestone",
+      "concept_id": "gel_electrophoresis_complete",
+      "level": 1,
+      "progress": {
+        "current": 35,
+        "total": 60
+      },
+      "milestone_payload": {
+        "title": "🎯 MODULE 4 COMPLETED!",
+        "badge_emoji": "⚡",
+        "completed_topic": "Gel Electrophoresis and DNA Analysis",
+        "xp_earned": 100,
+        "milestone_progress": "Module 4/7 Clear",
+        "motivational_quote": "Agarose gels, EtBr fluorescence, DNA ladders - you can now visualize the invisible! The molecular detective toolkit is yours! 🔬"
+      },
+      "navigation": {
+        "next": "card_36_applications_intro",
+        "button_text": "Start Next Module: Biotechnology Applications ➔"
+      }
+    },
+    {
+      "card_id": "card_36_applications_intro",
+      "card_slug": "card_36_applications_intro",
+      "type": "chat",
+      "concept_id": "biotech_applications_overview",
+      "level": 1,
+      "progress": {
+        "current": 36,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ab tak humne tools seekhe Raju - restriction enzymes, vectors, PCR, gel electrophoresis. Ab dekhte hain ye practical life me kaise use ho rahe hain! Biotechnology ke three main application areas hain: (1) Medical/Healthcare - medicines, vaccines, gene therapy, (2) Agriculture - GM crops, better yield, pest resistance, (3) Industrial - enzymes, biofuels, waste treatment. UPSC me applications pe bahut focus hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir medical me insulin to bata diya aapne... aur kya medicines bacteria se banti hain?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bahut saari! Human Growth Hormone (for dwarfism), Interferon (antiviral protein for hepatitis, cancer), Factor VIII & IX (blood clotting factors for hemophilia patients), Tissue Plasminogen Activator (for heart attack - dissolves clots), Erythropoietin (for anemia), Vaccines (Hepatitis B vaccine is recombinant)! Sab recombinant DNA technology se bante hain."
+        },
+        {
+          "speaker": "raju",
+          "text": "Wow! Itne life-saving medicines! Sir GM crops ka matlab kya hai? Genetically Modified?"
+        }
+      ],
+      "navigation": {
+        "next": "card_37_gm_crops_bt_cotton",
+        "button_text": "Bt Cotton aur Golden Rice ➔"
+      }
+    },
+    {
+      "card_id": "card_37_gm_crops_bt_cotton",
+      "card_slug": "card_37_gm_crops_bt_cotton",
+      "type": "chat",
+      "concept_id": "gm_crops_examples",
+      "level": 1,
+      "progress": {
+        "current": 37,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Haan! Genetically Modified Organisms (GMO) jinme foreign genes insert kiye hain. Bt Cotton India ka famous example hai - ismein Bacillus thuringiensis bacteria se Cry gene insert kiya gaya hai jo toxic protein banata hai insects ke liye (especially bollworms). Cotton plant khud ko protect kar sakta hai pests se, chemical pesticides kam lagte hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Achha! To plant khud insect-killer protein bana leta hai? Clever! Par ye toxic protein humans ke liye safe hai na?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul safe! Cry protein sirf insects ke alkaline gut me activate hota hai, humans ka digestive system acidic hai to ye protein wahan inactive rahta hai. Golden Rice ek aur example hai jisme beta-carotene (Vitamin A precursor) genes insert kiye hain - ye rice Vitamin A deficiency door kar sakta hai jo blindness cause karta hai poor countries me. NEET me mechanism puchte hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "To crops ko nutritious bhi bana sakte hain aur pest-resistant bhi! Sir gene therapy kya hai?"
+        }
+      ],
+      "navigation": {
+        "next": "card_38_gene_therapy_ethical",
+        "button_text": "Gene therapy - genetic diseases ka ilaaj ➔"
+      }
+    },
+    {
+      "card_id": "card_38_gene_therapy_ethical",
+      "card_slug": "card_38_gene_therapy_ethical",
+      "type": "chat",
+      "concept_id": "gene_therapy_ethics",
+      "level": 1,
+      "progress": {
+        "current": 38,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Gene Therapy me genetic disorders ko correct karte hain by inserting normal/functional genes into patient's cells. Example: Severe Combined Immunodeficiency (SCID) due to Adenosine Deaminase (ADA) deficiency - patient ke lymphocytes ko nikaal kar functional ADA gene insert karte hain using retroviral vectors, phir wapas body me daal dete hain. First gene therapy 1990 me ADA deficiency ke liye hi hui thi by William French Anderson!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab defective gene ko replace kar diya healthy gene se! Ye to permanent cure hai sir! Sab diseases ka ilaaj ho jayega?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Abhi limited success mili hai - monogenic diseases (single gene defects) me zyada scope hai. Par ethical concerns bhi hain - germline gene therapy (gametes/embryo me changes jo next generation me pass honge) controversial hai. Somatic gene therapy (body cells me) zyada acceptable hai. BPSC ethics questions me ye zaroor aata hai - designer babies, genetic privacy, playing God debate!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir ye ethical issues important hain... regulation kaun karta hai India me?"
+        }
+      ],
+      "navigation": {
+        "next": "card_39_biosafety_regulations",
+        "button_text": "Biosafety committees aur laws ➔"
+      }
+    },
+    {
+      "card_id": "card_39_biosafety_regulations",
+      "card_slug": "card_39_biosafety_regulations",
+      "type": "chat",
+      "concept_id": "biosafety_regulatory_bodies",
+      "level": 1,
+      "progress": {
+        "current": 39,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "India me several regulatory bodies hain: (1) GEAC (Genetic Engineering Appraisal Committee) under Ministry of Environment - GM organisms ke field trials aur commercial release ko approve karti hai, (2) RCGM (Review Committee on Genetic Manipulation) under DBT - research projects ko monitor karti hai, (3) IBSC (Institutional Biosafety Committee) - har institute me honi chahiye, (4) State Biotechnology Coordination Committee. BPSC/UPSC me abbreviations zaroor puchte hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "GEAC sabse important lagta hai commercial approval ke liye! Sir koi international protocols hain?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! Cartagena Protocol on Biosafety (2000) - ye international agreement hai GM organisms ke transboundary movement, handling aur use ko regulate karne ke liye under Convention on Biological Diversity. India is a party to this protocol. Biodiversity protection, risk assessment, precautionary principle - ye sab cover karta hai. SSC me current affairs ke saath link hota hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir DNA fingerprinting ke baare me suna hai - wo bhi biotechnology hai na?"
+        }
+      ],
+      "navigation": {
+        "next": "card_40_dna_fingerprinting_rflp",
+        "button_text": "Forensic biotechnology! ➔"
+      }
+    },
+    {
+      "card_id": "card_40_dna_fingerprinting_rflp",
+      "card_slug": "card_40_dna_fingerprinting_rflp",
+      "type": "chat",
+      "concept_id": "dna_fingerprinting_technique",
+      "level": 1,
+      "progress": {
+        "current": 40,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "DNA Fingerprinting (DNA Profiling) har individual ka unique DNA pattern identify karta hai - jaise fingerprints unique hote hain waise DNA! Ye VNTRs (Variable Number Tandem Repeats) pe based hai - repetitive DNA sequences jo har person me different number of times repeat hote hain. Alec Jeffreys ne 1984 me develop kiya tha. Uses: Paternity testing, forensic investigations (crime scene DNA), identification of disaster victims!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab criminal ko pakadne me DNA samples match karte hain! Cool technique sir! Kaise karte hain exactly?"
+        },
+        {
+          "speaker": "aman",
+          "text": "RFLP (Restriction Fragment Length Polymorphism) technique use hoti thi initially - DNA ko restriction enzymes se cut karo, fragments ko gel electrophoresis se separate karo, Southern Blotting karke radioactive probes se detect karo. Ab PCR-based STR (Short Tandem Repeats) analysis zyada common hai - faster aur less DNA chahiye! NEET me principle aur steps dono puchte hain."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir ab sab samajh aa gaya tools aur applications! Kuch aur advanced techniques hain jo NEET me aati hain?"
+        }
+      ],
+      "navigation": {
+        "next": "card_41_quiz_applications_1",
+        "button_text": "Pehle quiz! ➔"
+      }
+    },
+    {
+      "card_id": "card_41_quiz_applications_1",
+      "card_slug": "card_41_quiz_applications_1",
+      "type": "quiz",
+      "concept_id": "applications_quiz_1",
+      "level": 1,
+      "progress": {
+        "current": 41,
+        "total": 60
+      },
+      "quiz_payload": {
+        "question": "Bt cotton is resistant to insect pests because it contains a gene from: (NEET 2018)",
+        "options": [
+          {
+            "id": "A",
+            "text": "Agrobacterium tumefaciens"
+          },
+          {
+            "id": "B",
+            "text": "Bacillus thuringiensis that produces Cry protein toxic to insects"
+          },
+          {
+            "id": "C",
+            "text": "Bacillus subtilis"
+          },
+          {
+            "id": "D",
+            "text": "E. coli with insulin gene"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Bt cotton contains the Cry gene from Bacillus thuringiensis (Bt), a soil bacterium. This gene encodes Cry proteins (crystalline proteins) that are toxic to specific insects, particularly lepidopteran pests like bollworms. The toxin is inactive as a protoxin; it gets activated in the alkaline gut of insects, where it binds to specific receptors, creates pores in gut cells, leading to insect death. Humans and other mammals are safe because the protein remains inactive in acidic digestive systems. Bt cotton reduces the need for chemical pesticides, making it economically and environmentally beneficial."
+      },
+      "navigation": {
+        "next": "card_42_quiz_applications_2",
+        "button_text": "Next Question (Q2/3) ➔"
+      }
+    },
+    {
+      "card_id": "card_42_quiz_applications_2",
+      "card_slug": "card_42_quiz_applications_2",
+      "type": "quiz",
+      "concept_id": "applications_quiz_2",
+      "level": 1,
+      "progress": {
+        "current": 42,
+        "total": 60
+      },
+      "quiz_payload": {
+        "question": "The first human hormone produced by recombinant DNA technology and used commercially was: (BPSC 2017)",
+        "options": [
+          {
+            "id": "A",
+            "text": "Thyroxine"
+          },
+          {
+            "id": "B",
+            "text": "Insulin (Humulin, approved in 1982)"
+          },
+          {
+            "id": "C",
+            "text": "Growth hormone"
+          },
+          {
+            "id": "D",
+            "text": "Testosterone"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Insulin was the first human hormone produced using recombinant DNA technology and approved for commercial use. In 1982, Eli Lilly marketed recombinant human insulin under the brand name 'Humulin'. The human insulin gene was inserted into E. coli bacteria, which then produced the hormone. Before this, diabetic patients used animal insulin (from pigs and cattle) which sometimes caused allergic reactions. Recombinant insulin is identical to human insulin, cheaper, and can be produced in large quantities. This was a landmark achievement in biotechnology."
+      },
+      "navigation": {
+        "next": "card_43_quiz_applications_3",
+        "button_text": "Next Question (Q3/3) ➔"
+      }
+    },
+    {
+      "card_id": "card_43_quiz_applications_3",
+      "card_slug": "card_43_quiz_applications_3",
+      "type": "quiz",
+      "concept_id": "applications_quiz_3",
+      "level": 1,
+      "progress": {
+        "current": 43,
+        "total": 60
+      },
+      "quiz_payload": {
+        "question": "GEAC (Genetic Engineering Appraisal Committee) in India is responsible for: (UPSC/BPSC Pattern)",
+        "options": [
+          {
+            "id": "A",
+            "text": "Training biotechnology researchers"
+          },
+          {
+            "id": "B",
+            "text": "Approving GM organisms for research and commercial release"
+          },
+          {
+            "id": "C",
+            "text": "Manufacturing vaccines"
+          },
+          {
+            "id": "D",
+            "text": "Conducting PCR tests"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "GEAC (Genetic Engineering Appraisal Committee) functions under the Ministry of Environment, Forest and Climate Change, Government of India. It is the apex body responsible for: (1) Appraising activities involving large-scale use of hazardous microorganisms and recombinants in research and industrial production, (2) Approving proposals for release of genetically engineered organisms and products into the environment including experimental field trials, (3) Granting approval for commercial release of GM crops. For example, Bt cotton was approved by GEAC for commercial cultivation. This is a very important current affairs topic for UPSC and state PSC exams."
+      },
+      "navigation": {
+        "next": "card_44_milestone_applications",
+        "button_text": "Check Answer ➔"
+      }
+    },
+    {
+      "card_id": "card_44_milestone_applications",
+      "card_slug": "card_44_milestone_applications",
+      "type": "milestone",
+      "concept_id": "applications_complete",
+      "level": 1,
+      "progress": {
+        "current": 44,
+        "total": 60
+      },
+      "milestone_payload": {
+        "title": "🎯 MODULE 5 COMPLETED!",
+        "badge_emoji": "🌾",
+        "completed_topic": "Biotechnology Applications and Biosafety",
+        "xp_earned": 100,
+        "milestone_progress": "Module 5/7 Clear",
+        "motivational_quote": "Insulin, Bt cotton, gene therapy, DNA fingerprinting, GEAC - you're now fluent in biotech applications! Real-world impact! 🚀"
+      },
+      "navigation": {
+        "next": "card_45_advanced_tools_intro",
+        "button_text": "Start Next Module: Advanced Techniques ➔"
+      }
+    },
+    {
+      "card_id": "card_45_advanced_tools_intro",
+      "card_slug": "card_45_advanced_tools_intro",
+      "type": "chat",
+      "concept_id": "advanced_techniques_overview",
+      "level": 1,
+      "progress": {
+        "current": 45,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, ab kuch advanced techniques dekhte hain jo Class 12 aur competitive exams me important hain: (1) Southern Blotting - DNA detection, (2) Northern Blotting - RNA detection, (3) Western Blotting - Protein detection, (4) ELISA - antibody/antigen detection, (5) DNA Sequencing - complete genetic code padhna! Edward Southern ne 1975 me Southern Blot develop kiya, baaki techniques ko joke me Northern/Western names diye gaye!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Wow! Teen blotting techniques - DNA, RNA, Protein! Sir blotting matlab kya hai exactly?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Blotting means transferring molecules (DNA/RNA/proteins) from a gel to a membrane (nitrocellulose or nylon) where they can be detected using specific probes or antibodies. Southern Blot ka process: Gel electrophoresis → Transfer to membrane → Hybridization with labeled probe → Detection! Ye specific gene sequences ko identify karne me use hota hai. NEET me blotting ka order aur purpose zaroor puchte hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir DNA sequencing kaise hoti hai? Poora genetic code padhna to bahut complex hoga!"
+        }
+      ],
+      "navigation": {
+        "next": "card_46_dna_sequencing_sanger",
+        "button_text": "Sanger Sequencing method ➔"
+      }
+    },
+    {
+      "card_id": "card_46_dna_sequencing_sanger",
+      "card_slug": "card_46_dna_sequencing_sanger",
+      "type": "chat",
+      "concept_id": "sanger_sequencing_method",
+      "level": 1,
+      "progress": {
+        "current": 46,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Frederick Sanger ne chain-termination method develop kiya (1977) jiske liye unhe second Nobel Prize mila! Is method me dideoxyribonucleotides (ddNTPs) use hote hain jo normal dNTPs jaise hote hain par 3'-OH group nahi hota - jab ye DNA strand me incorporate hote hain to chain terminate ho jaati hai! Four reaction tubes me alag-alag ddNTPs (ddATP, ddTTP, ddGTP, ddCTP) use karte hain with radioactive labels."
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab chain specific positions pe randomly break hogi? Phir kaise sequence pata chalega sir?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Sabhi fragments gel electrophoresis se separate karte hain - autoradiography se bands detect karte hain. Chhote se bade fragment sequence de deta hai! Ab automated sequencers fluorescent dyes use karte hain har base ke liye alag color - computer automatically sequence read kar leta hai. Human Genome Project isme heavily relied karta tha. Next Generation Sequencing (NGS) ab zyada fast hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Human Genome Project! Ye to famous hai sir... kya tha ye exactly?"
+        }
+      ],
+      "navigation": {
+        "next": "card_47_human_genome_project",
+        "button_text": "13 years ka mega project! ➔"
+      }
+    },
+    {
+      "card_id": "card_47_human_genome_project",
+      "card_slug": "card_47_human_genome_project",
+      "type": "chat",
+      "concept_id": "human_genome_project_details",
+      "level": 1,
+      "progress": {
+        "current": 47,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Human Genome Project (HGP) - 1990 me shuru hua, 2003 me complete hua (13 years!) - ek international mega project tha complete human DNA sequence determine karne ke liye! Goals: Identify all ~20,000-25,000 genes, determine 3 billion base pairs ka sequence, store data in databases, address ethical/legal/social issues. USA (NIH), UK, France, Germany, Japan, China ne participate kiya!"
+        },
+        {
+          "speaker": "raju",
+          "text": "20,000-25,000 genes hi?? Maine socha tha humans me lakhs genes honge being so complex!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Ye sabko surprise hua tha! Genes sirf 2% genome occupy karte hain - baaki 98% non-coding DNA hai (introns, regulatory sequences, repetitive DNA). BPSC me HGP ke findings zaroor puchte hain: Average gene size 3000 bases, largest gene Dystrophin (2.4 million bases!), chromosome 1 has most genes (~2968), Y chromosome has least (~231). ELSI (Ethical, Legal, Social Implications) program bhi HGP ka part tha!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir ab complete genome sequence mil gaya to personalized medicine possible hai?"
+        }
+      ],
+      "navigation": {
+        "next": "card_48_genomics_proteomics",
+        "button_text": "Genomics aur Proteomics era! ➔"
+      }
+    },
+    {
+      "card_id": "card_48_genomics_proteomics",
+      "card_slug": "card_48_genomics_proteomics",
+      "type": "chat",
+      "concept_id": "omics_technologies",
+      "level": 1,
+      "progress": {
+        "current": 48,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Haan Raju! HGP ne Genomics era shuru kiya - study of complete genomes. Ab hum microarray technology se thousands of genes simultaneously study kar sakte hain! Proteomics complete set of proteins (proteome) ko study karta hai - kyunki ultimately proteins hi kaam karte hain. Transcriptomics (mRNA study), Metabolomics (metabolites study) - ye sab '-omics' fields hain jo systems biology approach use karte hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab gene se RNA banta hai, RNA se protein, protein se metabolism... sab levels pe study ho raha hai! Comprehensive approach sir!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Exactly! Bioinformatics ek crucial tool hai - computational biology jo massive biological data analyze karti hai. Databases jaise GenBank, EMBL, PDB (Protein Data Bank) globally share genetic information. BLAST (Basic Local Alignment Search Tool) se sequences compare kar sakte hain. NEET me application-based questions aate hain - disease prediction, drug design, evolutionary studies sab genomics se revolutionize ho rahe hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir itna saara knowledge! Ab confidence aa gaya hai biotechnology pe!"
+        }
+      ],
+      "navigation": {
+        "next": "card_49_quiz_advanced_1",
+        "button_text": "Final module quiz! ➔"
+      }
+    },
+    {
+      "card_id": "card_49_quiz_advanced_1",
+      "card_slug": "card_49_quiz_advanced_1",
+      "type": "quiz",
+      "concept_id": "advanced_quiz_1",
+      "level": 1,
+      "progress": {
+        "current": 49,
+        "total": 60
+      },
+      "quiz_payload": {
+        "question": "Southern blotting technique is used for the detection of: (NEET 2020)",
+        "options": [
+          {
+            "id": "A",
+            "text": "Specific RNA sequences"
+          },
+          {
+            "id": "B",
+            "text": "Specific DNA sequences using labeled DNA probes"
+          },
+          {
+            "id": "C",
+            "text": "Specific proteins using antibodies"
+          },
+          {
+            "id": "D",
+            "text": "Specific metabolites"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Southern blotting (developed by Edward Southern in 1975) is used for detecting specific DNA sequences. The procedure involves: (1) DNA digestion with restriction enzymes, (2) Gel electrophoresis to separate fragments, (3) Transfer (blotting) of DNA from gel to nitrocellulose/nylon membrane, (4) Hybridization with labeled (radioactive or fluorescent) DNA probe complementary to target sequence, (5) Detection and visualization. Northern blotting detects RNA, Western blotting detects proteins. This nomenclature pattern (Southern → Northern → Western) helps remember the applications."
+      },
+      "navigation": {
+        "next": "card_50_quiz_advanced_2",
+        "button_text": "Next Question (Q2/3) ➔"
+      }
+    },
+    {
+      "card_id": "card_50_quiz_advanced_2",
+      "card_slug": "card_50_quiz_advanced_2",
+      "type": "quiz",
+      "concept_id": "advanced_quiz_2",
+      "level": 1,
+      "progress": {
+        "current": 50,
+        "total": 60
+      },
+      "quiz_payload": {
+        "question": "The Human Genome Project was completed in 2003 after 13 years. Which finding was surprising? (BPSC 2020)",
+        "options": [
+          {
+            "id": "A",
+            "text": "Humans have over 100,000 genes"
+          },
+          {
+            "id": "B",
+            "text": "Humans have only about 20,000-25,000 genes, not millions as expected"
+          },
+          {
+            "id": "C",
+            "text": "All human DNA codes for proteins"
+          },
+          {
+            "id": "D",
+            "text": "Y chromosome has the most genes"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "One of the most surprising findings of the Human Genome Project was that humans have only about 20,000-25,000 protein-coding genes - far fewer than the initial predictions of 100,000+ genes. Despite our complexity, we have roughly the same number of genes as simpler organisms like roundworms! Only about 2% of the human genome codes for proteins; the remaining 98% includes introns, regulatory sequences, and repetitive elements (previously called 'junk DNA' but now known to have regulatory functions). The complexity arises from alternative splicing and post-translational modifications, not just gene number."
+      },
+      "navigation": {
+        "next": "card_51_quiz_advanced_3",
+        "button_text": "Next Question (Q3/3) ➔"
+      }
+    },
+    {
+      "card_id": "card_51_quiz_advanced_3",
+      "card_slug": "card_51_quiz_advanced_3",
+      "type": "quiz",
+      "concept_id": "advanced_quiz_3",
+      "level": 1,
+      "progress": {
+        "current": 51,
+        "total": 60
+      },
+      "quiz_payload": {
+        "question": "In Sanger's dideoxy method of DNA sequencing, chain termination occurs when: (NEET 2019)",
+        "options": [
+          {
+            "id": "A",
+            "text": "Normal dNTP is incorporated"
+          },
+          {
+            "id": "B",
+            "text": "Dideoxynucleotide (ddNTP) lacking 3'-OH group is incorporated"
+          },
+          {
+            "id": "C",
+            "text": "DNA polymerase runs out of energy"
+          },
+          {
+            "id": "D",
+            "text": "Temperature increases above 95°C"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "In Sanger sequencing (chain-termination method), dideoxynucleotides (ddNTPs) are used which lack the 3'-OH group necessary for forming phosphodiester bonds with the next nucleotide. Normal dNTPs have both 2'-H and 3'-OH, but ddNTPs have 2'-H and 3'-H (no hydroxyl group at 3' position). When a ddNTP is incorporated into the growing DNA strand, no further nucleotides can be added, causing chain termination at that specific position. By using all four ddNTPs (ddATP, ddTTP, ddGTP, ddCTP) in separate reactions with fluorescent labels, the complete sequence can be determined. Frederick Sanger won his second Nobel Prize for this method in 1980."
+      },
+      "navigation": {
+        "next": "card_52_milestone_advanced",
+        "button_text": "Check Answer ➔"
+      }
+    },
+    {
+      "card_id": "card_52_milestone_advanced",
+      "card_slug": "card_52_milestone_advanced",
+      "type": "milestone",
+      "concept_id": "advanced_techniques_complete",
+      "level": 1,
+      "progress": {
+        "current": 52,
+        "total": 60
+      },
+      "milestone_payload": {
+        "title": "🎯 MODULE 6 COMPLETED!",
+        "badge_emoji": "🧬",
+        "completed_topic": "Advanced Biotechnology Techniques",
+        "xp_earned": 100,
+        "milestone_progress": "Module 6/7 Clear",
+        "motivational_quote": "Blotting, sequencing, HGP, genomics, proteomics - you've conquered the frontiers of molecular biology! Nobel Prize level knowledge! 🏆"
+      },
+      "navigation": {
+        "next": "card_53_summary_officer_revision",
+        "button_text": "Start Final Revision ⚡"
+      }
+    },
+    {
+      "card_id": "card_53_summary_officer_revision",
+      "card_slug": "card_53_summary_officer_revision",
+      "type": "summary",
+      "concept_id": "biotechnology_complete_revision",
+      "level": 1,
+      "progress": {
+        "current": 53,
+        "total": 60
+      },
+      "summary_payload": {
+        "title": "⚡ Quick Officer Revision - Biotechnology",
+        "revision_points": [
+          {
+            "topic": "Core Principles",
+            "point": "Biotechnology uses living organisms/parts to create products. Modern biotech = Genetic Engineering (DNA manipulation). Recombinant DNA tech involves cutting (restriction enzymes), pasting (DNA ligase), delivering (vectors), and amplifying (PCR) genes. Stanley Cohen & Herbert Boyer pioneered rDNA in 1973."
+          },
+          {
+            "topic": "Restriction Enzymes",
+            "point": "Molecular scissors that cut DNA at specific palindromic sequences. Naming: E (genus) + co (species) + R (strain) + I (order). EcoRI from E. coli strain R. Cut types: Sticky ends (staggered cuts with overhangs) preferred over blunt ends (straight cuts). Used for gene cloning."
+          },
+          {
+            "topic": "Vectors & Screening",
+            "point": "Cloning vectors carry foreign DNA into host cells. Plasmids most common. Essential features: ori (origin of replication), selectable marker (antibiotic resistance like ampR), MCS (multiple cloning sites). Screening: Insertional inactivation or Blue-White screening (lacZ gene + X-gal substrate)."
+          },
+          {
+            "topic": "Transformation & PCR",
+            "point": "Competent cells prepared using CaCl₂ + heat shock (42°C) or electroporation. Gene gun for plants, microinjection for animals. PCR (Kary Mullis, 1983, Nobel 1993) = in vitro DNA amplification using Taq polymerase (from Thermus aquaticus). 3 steps: Denaturation (94°C), Annealing (50-65°C), Extension (72°C). After n cycles: 2ⁿ copies."
+          },
+          {
+            "topic": "Analysis Techniques",
+            "point": "Gel Electrophoresis: DNA separation by size using agarose gel + electric field. DNA (negatively charged) moves to anode. Smaller fragments travel farther. Visualized with Ethidium Bromide under UV light. DNA ladder for size reference. Elution extracts purified DNA from gel."
+          },
+          {
+            "topic": "Applications",
+            "point": "Medical: Recombinant insulin (Humulin, 1982 - first rDNA drug), growth hormone, interferons, clotting factors. Agriculture: Bt cotton (Cry gene from Bacillus thuringiensis), Golden Rice (Vitamin A). Gene Therapy: ADA-SCID treatment (1990). DNA Fingerprinting: VNTRs/STRs for forensics, paternity (Alec Jeffreys, 1984)."
+          },
+          {
+            "topic": "Biosafety & Regulations",
+            "point": "India: GEAC (Genetic Engineering Appraisal Committee - approves GM release), RCGM (research monitoring), IBSC (institutional level). International: Cartagena Protocol on Biosafety (2000). Ethics: Germline vs somatic gene therapy, biopiracy, GMO labeling concerns."
+          },
+          {
+            "topic": "Advanced Tools",
+            "point": "Blotting: Southern (DNA), Northern (RNA), Western (Protein). Sanger Sequencing: ddNTPs (lack 3'-OH) cause chain termination. Human Genome Project (1990-2003): ~20,000-25,000 genes, 3 billion bp. Only 2% codes for proteins. Bioinformatics: BLAST, GenBank. Proteomics, Transcriptomics, Metabolomics."
+          }
+        ]
+      },
+      "navigation": {
+        "next": "card_54_final_quiz_1",
+        "button_text": "Take Master Officer Quiz 🏆"
+      }
+    },
+    {
+      "card_id": "card_54_final_quiz_1",
+      "card_slug": "card_54_final_quiz_1",
+      "type": "final_quiz",
+      "concept_id": "biotechnology_final_assessment_1",
+      "level": 1,
+      "progress": {
+        "current": 54,
+        "total": 60
+      },
+      "quiz_payload": {
+        "question": "Assertion (A): Taq polymerase is preferred over E. coli DNA polymerase in PCR. Reason (R): Taq polymerase is thermostable and remains active at high temperatures used in denaturation step. (BPSC/NEET Pattern)",
+        "options": [
+          {
+            "id": "A",
+            "text": "Both A and R are true, and R is the correct explanation of A"
+          },
+          {
+            "id": "B",
+            "text": "Both A and R are true, but R is NOT the correct explanation of A"
+          },
+          {
+            "id": "C",
+            "text": "A is true but R is false"
+          },
+          {
+            "id": "D",
+            "text": "A is false but R is true"
+          }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Both Assertion and Reason are TRUE, and Reason correctly explains the Assertion. Taq polymerase isolated from Thermus aquaticus (a thermophilic bacterium from hot springs) is thermostable and can withstand temperatures up to 95°C used in the denaturation step of PCR. E. coli DNA polymerase would denature at these high temperatures and become inactive, requiring fresh enzyme addition after each cycle. Taq polymerase's heat stability allows automated PCR with multiple cycles without enzyme replacement, making the process efficient and practical. This is why Kary Mullis's PCR invention became revolutionary when combined with Taq polymerase."
+      },
+      "navigation": {
+        "next": "card_55_final_quiz_2",
+        "button_text": "Next Challenge ➔"
+      }
+    },
+    {
+      "card_id": "card_55_final_quiz_2",
+      "card_slug": "card_55_final_quiz_2",
+      "type": "final_quiz",
+      "concept_id": "biotechnology_final_assessment_2",
+      "level": 1,
+      "progress": {
+        "current": 55,
+        "total": 60
+      },
+      "quiz_payload": {
+        "question": "Consider the following statements about vectors in genetic engineering: (1) ori (origin of replication) is essential for autonomous replication. (2) Selectable markers help identify non-transformed cells. (3) In blue-white screening, recombinant colonies appear blue. (4) Sticky ends produced by restriction enzymes facilitate joining of DNA fragments. How many statements are CORRECT? (NEET Multi-Statement Pattern)",
+        "options": [
+          {
+            "id": "A",
+            "text": "Only one"
+          },
+          {
+            "id": "B",
+            "text": "Only two"
+          },
+          {
+            "id": "C",
+            "text": "Only three"
+          },
+          {
+            "id": "D",
+            "text": "All four"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Only TWO statements are correct (1 and 4). Statement 1: TRUE - ori (origin of replication) is essential for the vector to replicate autonomously in the host cell. Statement 2: FALSE - Selectable markers help identify TRANSFORMED cells (that have taken up the vector), not non-transformed cells. For example, antibiotic resistance genes allow only transformed cells to grow in antibiotic-containing medium. Statement 3: FALSE - In blue-white screening, RECOMBINANT colonies appear WHITE (lacZ gene disrupted), while NON-RECOMBINANT colonies appear BLUE (intact lacZ produces β-galactosidase that cleaves X-gal). Statement 4: TRUE - Sticky ends (cohesive ends) have complementary single-stranded overhangs that can base-pair, facilitating DNA ligation."
+      },
+      "navigation": {
+        "next": "card_56_final_quiz_3",
+        "button_text": "Final Challenge ➔"
+      }
+    },
+    {
+      "card_id": "card_56_final_quiz_3",
+      "card_slug": "card_56_final_quiz_3",
+      "type": "final_quiz",
+      "concept_id": "biotechnology_final_assessment_3",
+      "level": 1,
+      "progress": {
+        "current": 56,
+        "total": 60
+      },
+      "quiz_payload": {
+        "question": "Match the following biotechnology techniques with their applications: (BPSC Pattern) A. Southern Blotting - (i) Protein detection B. Northern Blotting - (ii) DNA detection C. Western Blotting - (iii) RNA detection D. ELISA - (iv) Antibody/Antigen detection",
+        "options": [
+          {
+            "id": "A",
+            "text": "A-ii, B-iii, C-i, D-iv"
+          },
+          {
+            "id": "B",
+            "text": "A-i, B-ii, C-iii, D-iv"
+          },
+          {
+            "id": "C",
+            "text": "A-iii, B-ii, C-iv, D-i"
+          },
+          {
+            "id": "D",
+            "text": "A-iv, B-i, C-ii, D-iii"
+          }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Correct matching: A-ii, B-iii, C-i, D-iv. (A) Southern Blotting (named after Edward Southern, 1975) detects specific DNA sequences using labeled DNA probes. (B) Northern Blotting detects specific RNA molecules (named as a play on 'Southern' - directional nomenclature). (C) Western Blotting (continuing the directional theme) detects specific proteins using antibodies. (D) ELISA (Enzyme-Linked Immunosorbent Assay) detects and quantifies antibodies or antigens using enzyme-labeled antibodies and color change reactions. This nomenclature pattern and application differentiation is a classic BPSC/SSC exam favorite."
+      },
+      "navigation": {
+        "next": "card_57_final_quiz_4",
+        "button_text": "One More! ➔"
+      }
+    },
+    {
+      "card_id": "card_57_final_quiz_4",
+      "card_slug": "card_57_final_quiz_4",
+      "type": "final_quiz",
+      "concept_id": "biotechnology_final_assessment_4",
+      "level": 1,
+      "progress": {
+        "current": 57,
+        "total": 60
+      },
+      "quiz_payload": {
+        "question": "If a bacterial culture is treated with ampicillin antibiotic after transformation with a plasmid carrying ampR gene, and recombinant DNA was inserted into the tetR gene: (NEET Application-Based)",
+        "options": [
+          {
+            "id": "A",
+            "text": "Only non-transformed bacteria will survive"
+          },
+          {
+            "id": "B",
+            "text": "Both recombinant and non-recombinant transformed bacteria will survive in ampicillin"
+          },
+          {
+            "id": "C",
+            "text": "Only recombinant bacteria will survive in both ampicillin and tetracycline"
+          },
+          {
+            "id": "D",
+            "text": "No bacteria will survive"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Both recombinant and non-recombinant TRANSFORMED bacteria will survive in ampicillin medium because both types have the intact ampR (ampicillin resistance) gene in the plasmid. Non-transformed bacteria (without plasmid) will die. To differentiate between recombinant and non-recombinant colonies, you need to replica plate them on tetracycline medium. Recombinant bacteria (where foreign DNA disrupted tetR gene) will NOT grow on tetracycline, while non-recombinant bacteria (with intact tetR gene) will grow on tetracycline. This is the principle of insertional inactivation. Thus, selection on ampicillin identifies transformed cells, while screening on tetracycline distinguishes recombinants from non-recombinants."
+      },
+      "navigation": {
+        "next": "card_58_final_quiz_5",
+        "button_text": "Last Challenge! ➔"
+      }
+    },
+    {
+      "card_id": "card_58_final_quiz_5",
+      "card_slug": "card_58_final_quiz_5",
+      "type": "final_quiz",
+      "concept_id": "biotechnology_final_assessment_5",
+      "level": 1,
+      "progress": {
+        "current": 58,
+        "total": 60
+      },
+      "quiz_payload": {
+        "question": "The first clinical gene therapy was performed in 1990 for which genetic disorder? (BPSC/UPSC Pattern)",
+        "options": [
+          {
+            "id": "A",
+            "text": "Sickle cell anemia"
+          },
+          {
+            "id": "B",
+            "text": "Hemophilia"
+          },
+          {
+            "id": "C",
+            "text": "Adenosine Deaminase (ADA) deficiency causing SCID"
+          },
+          {
+            "id": "D",
+            "text": "Cystic fibrosis"
+          }
+        ],
+        "correct_option_id": "C",
+        "explanation": "The first approved clinical gene therapy in humans was performed by Dr. William French Anderson and his team in 1990 for treating Adenosine Deaminase (ADA) deficiency. ADA deficiency causes Severe Combined Immunodeficiency (SCID) - a condition where the patient has almost no functional immune system. The treatment involved: (1) Extracting lymphocytes from the patient, (2) Inserting functional ADA gene using retroviral vectors, (3) Growing modified cells in culture, (4) Re-infusing them back into the patient. A 4-year-old girl named Ashanti DeSilva was the first patient. This landmark event opened the era of gene therapy, though challenges remain for widespread application."
+      },
+      "navigation": {
+        "next": "card_59_milestone_final",
+        "button_text": "Complete Assessment ➔"
+      }
+    },
+    {
+      "card_id": "card_59_milestone_final",
+      "card_slug": "card_59_milestone_final",
+      "type": "milestone",
+      "concept_id": "biotechnology_chapter_complete",
+      "level": 1,
+      "progress": {
+        "current": 59,
+        "total": 60
+      },
+      "milestone_payload": {
+        "title": "🏆 BIOTECHNOLOGY MASTERED!",
+        "badge_emoji": "🧬",
+        "completed_topic": "Complete Biotechnology: Principles & Processes",
+        "xp_earned": 600,
+        "milestone_progress": "Chapter 100% Complete ✅",
+        "motivational_quote": "From restriction enzymes to recombinant DNA, from PCR to gene therapy, from Bt cotton to Human Genome Project - you've conquered the molecular revolution! Stanley Cohen, Kary Mullis, Alec Jeffreys would be proud! You're NEET/BPSC/UPSC ready! 🔬🚀"
+      },
+      "navigation": {
+        "next": "card_60_end_screen",
+        "button_text": "View Achievement Summary 🎊"
+      }
+    },
+    {
+      "card_id": "card_60_end_screen",
+      "card_slug": "card_60_end_screen",
+      "type": "milestone",
+      "concept_id": "biotechnology_journey_end",
+      "level": 1,
+      "progress": {
+        "current": 60,
+        "total": 60
+      },
+      "milestone_payload": {
+        "title": "🎓 BIOTECHNOLOGY JOURNEY COMPLETE!",
+        "badge_emoji": "🌟",
+        "completed_topic": "Advanced Biotechnology Mastery",
+        "xp_earned": 600,
+        "milestone_progress": "Expert Level Unlocked 🔓",
+        "motivational_quote": "You've mastered: ✂️ Restriction enzymes (EcoRI, BamHI) | 🧬 Vectors (plasmids, ori, markers) | 🔥 PCR (Taq, 2ⁿ amplification) | ⚡ Gel electrophoresis (EtBr, DNA ladders) | 💊 Applications (Insulin, Bt cotton, gene therapy) | 🛡️ Biosafety (GEAC, Cartagena) | 📊 Advanced tools (Blotting, Sequencing, HGP) | Ready to revolutionize medicine, agriculture & forensics! Every exam from NEET to UPSC covered! 🏆"
+      },
+      "navigation": {
+        "next": null,
+        "button_text": "Back to Dashboard 🏠"
+      }
+    }
+  ]
+}
