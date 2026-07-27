@@ -40,21 +40,25 @@ class _LearnChatScreenState extends State<LearnChatScreen> {
   }
 
   Future<void> _fetchChapterJson() async {
-    // 🚀 jsDelivr CDN URL: Fast, reliable, and never blocked by Jio/Airtel
     String targetUrl = widget.jsonUrl ?? '';
     
     if (targetUrl.isEmpty) {
       targetUrl = 'https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/learn/biology/cell.json';
     } else if (targetUrl.contains('raw.githubusercontent.com')) {
-      // Automatic GitHub Raw to jsDelivr CDN URL Convertor
+      // Automatic Raw GitHub to Fast CDN Converter
       targetUrl = targetUrl
           .replaceAll('https://raw.githubusercontent.com/', 'https://cdn.jsdelivr.net/gh/')
           .replaceAll('/refs/heads/main/', '@main/')
           .replaceAll('/main/', '@main/');
     }
 
+    // ⚡ CACHE BUSTER FIX: Dynamic timestamp lagane se CDN cache issue khatam ho jayega aur hamesha LATEST JSON milega
+    final String cacheBusterUrl = targetUrl.contains('?')
+        ? '$targetUrl&v=${DateTime.now().millisecondsSinceEpoch}'
+        : '$targetUrl?v=${DateTime.now().millisecondsSinceEpoch}';
+
     try {
-      final response = await http.get(Uri.parse(targetUrl)).timeout(const Duration(seconds: 15));
+      final response = await http.get(Uri.parse(cacheBusterUrl)).timeout(const Duration(seconds: 15));
 
       if (response.statusCode == 200) {
         Map<String, dynamic> parsedJson = json.decode(utf8.decode(response.bodyBytes));
@@ -83,8 +87,7 @@ class _LearnChatScreenState extends State<LearnChatScreen> {
     } catch (e) {
       if (mounted) {
         setState(() {
-          // Exact error details print hongi for debugging
-          errorMessage = "Data Fetch Error: $e\n\nURL: $targetUrl";
+          errorMessage = "Data Fetch Error: $e\n\nURL: $cacheBusterUrl";
           isLoading = false;
         });
       }
