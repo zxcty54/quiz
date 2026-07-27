@@ -1,0 +1,2116 @@
+{
+  "topic_id": "digestive_system_biology",
+  "topic_title": "Digestive System: Food, Enzymes & Absorption",
+  "target_exams": [
+    "BPSC",
+    "BSSC",
+    "RRB NTPC",
+    "SSC CGL",
+    "NEET",
+    "UPSC Prelims"
+  ],
+  "total_cards": 60,
+  "characters": {
+    "aman": {
+      "name": "Aman Sir",
+      "role": "teacher",
+      "avatar": "👨‍🏫"
+    },
+    "raju": {
+      "name": "Raju",
+      "role": "student",
+      "avatar": "👦"
+    }
+  },
+  "cards": [
+    {
+      "card_id": "card_01_intro",
+      "card_slug": "card_01_intro",
+      "type": "intro",
+      "concept_id": "chapter_intro",
+      "level": 1,
+      "progress": {
+        "current": 1,
+        "total": 60
+      },
+      "intro_payload": {
+        "chapter_icon": "🍽️",
+        "chapter_title": "Digestive System",
+        "subtitle": "Roti se Energy Tak — 9 Metre ka Safar!",
+        "target_exams": [
+          "BPSC",
+          "BSSC",
+          "RRB NTPC",
+          "SSC CGL",
+          "NEET",
+          "UPSC Prelims"
+        ],
+        "learning_outcomes": [
+          "Understand what digestion is and why it is needed",
+          "Learn all organs of alimentary canal in correct order",
+          "Master every digestive enzyme — name, source, substrate, product",
+          "Understand absorption in small intestine — villi and microvilli",
+          "Know liver and pancreas functions as accessory glands",
+          "Crack BPSC multi-statement & NEET enzyme-based questions confidently"
+        ],
+        "total_modules": 6,
+        "estimated_time": "50 mins"
+      },
+      "navigation": {
+        "next": "card_02_digestion_intro",
+        "button_text": "Start Learning 🚀"
+      }
+    },
+    {
+      "card_id": "card_02_digestion_intro",
+      "card_slug": "card_02_digestion_intro",
+      "type": "chat",
+      "concept_id": "digestion_why_needed",
+      "level": 1,
+      "progress": {
+        "current": 2,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, ek simple sawaal — jab tum roti khaate ho, woh roti seedha tumhari muscles ko energy kaise deti hai? Kya roti ka tukda seedha khoon mein ja sakta hai? Nahi na! Woh to bahut bada hai! Isliye body ko pehle khaane ko todna padta hai — chhote chhote molecules mein — tab jaake blood usse absorb kar sakta hai aur energy de sakta hai. Isi todne ki process ko 'Digestion' kehte hain!",
+          "emotion": "🍞"
+        },
+        {
+          "speaker": "raju",
+          "text": "Arey haan! Maine kabhi socha hi nahi tha ki roti seedha kaam nahi karti — pehle tooti, phir kaam ki!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul! Aur yeh todna do tarike se hota hai: Mechanical digestion — physically todna, jaise chewing (chabaana) aur stomach ki grinding. Chemical digestion — enzymes se chemical reaction se todna, jaise starch ko glucose mein todna. Dono milke kaam karte hain — ek bada lecture hall dobara 2 taraf se attack! NEET aur BPSC mein 'Types of digestion' ka direct question aaya hai!",
+          "emotion": "💡"
+        },
+        {
+          "speaker": "raju",
+          "text": "Mechanical = physically todna, Chemical = enzymes se todna — dono types clear hain sir! Kahan se shuru hota hai yeh process?"
+        }
+      ],
+      "navigation": {
+        "next": "card_03_alimentary_canal_overview",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_03_alimentary_canal_overview",
+      "card_slug": "card_03_alimentary_canal_overview",
+      "type": "chat",
+      "concept_id": "alimentary_canal_order",
+      "level": 1,
+      "progress": {
+        "current": 3,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Khaana ek lamba safar karta hai body ke andar — ek tube se guzarta hai jise 'Alimentary Canal' ya 'GI Tract' (Gastrointestinal Tract) kehte hain. Iska order yaad karo: Mouth → Oesophagus (Food pipe) → Stomach → Small Intestine → Large Intestine → Rectum → Anus. Yeh poori tube ek adult insaan mein lagbhag 8-9 meter lambi hoti hai! Aur accessory glands jo is process mein help karte hain: Salivary Glands, Liver, Pancreas, Gallbladder!",
+          "emotion": "🗺️"
+        },
+        {
+          "speaker": "raju",
+          "text": "8-9 meter!! Sir itna lamba! Lekin pet mein itna kahan fit hota hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Yehi to nature ka engineering marvel hai! Small Intestine tightly coiled hoti hai — 6-7 meters ki hoti hai lekin coiling ki wajah se pet mein fit ho jaati hai! Ek important exam fact — 'Alimentary Canal' aur 'Digestive System' mein fark hai: Alimentary Canal sirf woh tube hai. Digestive System mein Alimentary Canal + saari accessory glands (Liver, Pancreas, Salivary Glands) sab shaamil hain. BPSC mein yeh definition trap aaya hai!",
+          "emotion": "📐"
+        },
+        {
+          "speaker": "raju",
+          "text": "Small intestine 6-7 meter coiled hai — isliye pet mein fit hoti hai! Aur Digestive System = Alimentary Canal + Liver + Pancreas + Salivary Glands. Got it sir!"
+        }
+      ],
+      "navigation": {
+        "next": "card_04_mouth_salivary",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_04_mouth_salivary",
+      "card_slug": "card_04_mouth_salivary",
+      "type": "chat",
+      "concept_id": "mouth_salivary_glands_amylase",
+      "level": 1,
+      "progress": {
+        "current": 4,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Digestion shuru hoti hai Mouth se — jahan do kaam ek saath hote hain! Teeth mechanically khaana todti hain (chewing = mastication). Salivary Glands — 3 pairs hoti hain: Parotid (kaanon ke paas), Submandibular (jaw ke neeche), Sublingual (tongue ke neeche) — saliva release karti hain. Saliva mein hota hai 'Salivary Amylase' enzyme — jise 'Ptyalin' bhi kehte hain — jo Starch ko Maltose mein todta hai! Yeh pehla enzyme hai digestion mein!",
+          "emotion": "👄"
+        },
+        {
+          "speaker": "raju",
+          "text": "Salivary Amylase ka doosra naam Ptyalin hai?? Sir maine sirf Amylase suna tha — Ptyalin to naya hai!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Yehi to BPSC aur SSC ka trap hai — Ptyalin aur Salivary Amylase ek hi enzyme hain! Aur yaad rakho — Starch ka digestion Mouth se hi shuru ho jaata hai — Stomach mein nahi! Lekin bahut bada twist hai — Mouth mein jo Starch → Maltose hota hai, woh incomplete hota hai — poora Starch nahi toot paata — kyunki khaana jaldi stomach mein chala jaata hai! Poora starch digestion Small Intestine mein hota hai. NEET mein yeh enzyme ka action site seedha poochha gaya hai!",
+          "emotion": "⚠️"
+        },
+        {
+          "speaker": "raju",
+          "text": "Starch digestion Mouth se shuru, Small Intestine mein complete — aur Ptyalin = Salivary Amylase! Ye note kar liya — exam mein pakka aayega!"
+        }
+      ],
+      "navigation": {
+        "next": "card_05_quiz1",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_05_quiz1",
+      "card_slug": "card_05_quiz1",
+      "type": "quiz",
+      "concept_id": "mouth_digestion_quiz1",
+      "level": 1,
+      "progress": {
+        "current": 5,
+        "total": 60
+      },
+      "quiz_payload": {
+        "question": "Q1/3: Salivary Amylase (Ptyalin) kis substrate pe kaam karta hai?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Proteins ko Amino Acids mein todta hai"
+          },
+          {
+            "id": "B",
+            "text": "Fats ko Fatty Acids mein todta hai"
+          },
+          {
+            "id": "C",
+            "text": "Starch (Polysaccharide) ko Maltose (Disaccharide) mein todta hai"
+          },
+          {
+            "id": "D",
+            "text": "Sucrose ko Glucose aur Fructose mein todta hai"
+          }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Salivary Amylase (Ptyalin) Starch ko Maltose mein todta hai — yeh mouth mein hota hai. Starch ek polysaccharide hai, Maltose ek disaccharide. Yeh enzyme sirf carbohydrates pe kaam karta hai — proteins ya fats pe nahi. Important: Saliva ka pH slightly alkaline (6.8-7.0) hota hai — Salivary Amylase is pH mein best kaam karta hai. Stomach mein acid hone par yeh enzyme kaam karna band kar deta hai! NEET aur BPSC mein enzyme-substrate matching directly aaya hai!"
+      },
+      "navigation": {
+        "next": "card_06_quiz2",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_06_quiz2",
+      "card_slug": "card_06_quiz2",
+      "type": "quiz",
+      "concept_id": "mouth_digestion_quiz2",
+      "level": 1,
+      "progress": {
+        "current": 6,
+        "total": 60
+      },
+      "quiz_payload": {
+        "question": "Q2/3: Salivary glands kitne pairs hote hain aur konsa pair sabse bada hota hai?",
+        "options": [
+          {
+            "id": "A",
+            "text": "2 pairs — Parotid sabse bada"
+          },
+          {
+            "id": "B",
+            "text": "3 pairs — Parotid sabse bada"
+          },
+          {
+            "id": "C",
+            "text": "3 pairs — Sublingual sabse bada"
+          },
+          {
+            "id": "D",
+            "text": "4 pairs — Submandibular sabse bada"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Salivary glands 3 pairs ke hote hain: (1) Parotid glands — kaanon ke paas, sabse bade, pure serous secretion. (2) Submandibular glands — jaw ke neeche, mixed secretion. (3) Sublingual glands — tongue ke neeche, sabse chhote, mostly mucous. Parotid gland mein Mumps (viral infection) hoti hai — BPSC aur SSC mein yeh direct aaya hai! Parotid gland ka duct 'Stensen's Duct' kehlaata hai. Ek din mein lagbhag 1-1.5 litre saliva produce hoti hai — RRB NTPC mein yeh fact aaya hai!"
+      },
+      "navigation": {
+        "next": "card_07_quiz3",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_07_quiz3",
+      "card_slug": "card_07_quiz3",
+      "type": "quiz",
+      "concept_id": "mouth_digestion_quiz3",
+      "level": 1,
+      "progress": {
+        "current": 7,
+        "total": 60
+      },
+      "quiz_payload": {
+        "question": "Q3/3: SSC Direct — Alimentary Canal aur Digestive System mein kya fark hai?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Dono bilkul same cheez hain — sirf alag naam hain"
+          },
+          {
+            "id": "B",
+            "text": "Alimentary Canal = Mouth se Anus tak ki tube. Digestive System = Alimentary Canal + Accessory glands (Liver, Pancreas, Salivary Glands)"
+          },
+          {
+            "id": "C",
+            "text": "Digestive System = sirf Stomach aur Intestine. Alimentary Canal = poora body"
+          },
+          {
+            "id": "D",
+            "text": "Alimentary Canal mein Liver bhi included hai"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Alimentary Canal (GI Tract) sirf woh muscular tube hai jo Mouth se Anus tak jaati hai — Mouth, Oesophagus, Stomach, Small Intestine, Large Intestine, Rectum, Anus. Digestive System isme broader term hai — isme Alimentary Canal ke saath accessory digestive glands bhi aate hain: Salivary Glands (3 pairs), Liver (bile produce), Gallbladder (bile store), Pancreas (digestive enzymes + insulin). Liver aur Pancreas Alimentary Canal ka hissa nahi hain lekin Digestive System mein hain. BPSC 2020 mein exact yeh distinction poochha gaya tha!"
+      },
+      "navigation": {
+        "next": "card_08_milestone1",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_08_milestone1",
+      "card_slug": "card_08_milestone1",
+      "type": "milestone",
+      "concept_id": "module1_complete",
+      "level": 1,
+      "progress": {
+        "current": 8,
+        "total": 60
+      },
+      "milestone_payload": {
+        "title": "MODULE 1 COMPLETE! 🎉",
+        "badge_emoji": "👄",
+        "completed_topic": "Digestion Basics & Mouth",
+        "xp_earned": 50,
+        "milestone_progress": "Module 1/6 Clear",
+        "motivational_quote": "Ptyalin = Salivary Amylase — yeh ek fact hi exam mein 2 marks dila sakta hai! Ab khaana oesophagus se stomach tak ka safar karta hai — aur wahan ek acid ka inferno milta hai!"
+      },
+      "navigation": {
+        "next": "card_09_oesophagus_peristalsis",
+        "button_text": "Start Module 2 ➔"
+      }
+    },
+    {
+      "card_id": "card_09_oesophagus_peristalsis",
+      "card_slug": "card_09_oesophagus_peristalsis",
+      "type": "chat",
+      "concept_id": "oesophagus_peristalsis",
+      "level": 2,
+      "progress": {
+        "current": 9,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Mouth se khaana Oesophagus mein jaata hai — yeh ek 25 cm lambi muscular tube hai jo throat se stomach tak jaati hai. Yahin ek interesting mechanism kaam karta hai — 'Peristalsis!' Oesophagus ki muscles ek wave ki tarah contract aur relax karti hain — khaane ko neeche dhakkelti hain stomach ki taraf. Yahi wajah hai ki tum seedha baith ke ya ulta bhi kha sako — gravity ki zarurat nahi! Astronauts space mein bhi kha lete hain!",
+          "emotion": "🌊"
+        },
+        {
+          "speaker": "raju",
+          "text": "Peristalsis ki wajah se astronauts ulte hoke bhi kha sakte hain?? Ye to amazing hai! Sir bolus kya hota hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bolus = chewed food ka lump jo saliva mein mix hota hai aur swallow kiya jaata hai — yeh Mouth se Oesophagus mein jaata hai. Oesophagus mein koi digestion nahi hoti — yeh sirf transport ka kaam karta hai. Oesophagus aur Stomach ke beech ek muscular valve hota hai — 'Cardiac Sphincter' ya 'Lower Oesophageal Sphincter (LOS)' — yeh stomach ka khaana wapas oesophagus mein jaane se rokta hai. Agar yeh weak ho toh 'Acid Reflux' ya 'GERD' hota hai — BPSC mein yeh condition directly aaya hai!",
+          "emotion": "🚪"
+        },
+        {
+          "speaker": "raju",
+          "text": "Bolus = chewed food, Cardiac Sphincter = valve between oesophagus aur stomach, weak hone par = Acid Reflux! Logical connection hai sir!"
+        }
+      ],
+      "navigation": {
+        "next": "card_10_stomach_hcl",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_10_stomach_hcl",
+      "card_slug": "card_10_stomach_hcl",
+      "type": "chat",
+      "concept_id": "stomach_hcl_pepsin",
+      "level": 2,
+      "progress": {
+        "current": 10,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ab aata hai Stomach — body ka sabse exciting organ! Stomach ki inner lining — 'Gastric Mucosa' — mein millions of gastric glands hote hain jo 'Gastric Juice' banate hain. Gastric juice mein 3 main cheezein hoti hain: HCl (Hydrochloric Acid), Pepsinogen (inactive form of Pepsin), aur Mucus. HCl stomach ka pH 1.5-2.0 kar deta hai — bahut acidic! Yeh bacteria ko maarta hai khaane mein aur Pepsinogen ko activate karta hai!",
+          "emotion": "⚗️"
+        },
+        {
+          "speaker": "raju",
+          "text": "HCl itna strong acid stomach mein?? Phir stomach khud kyun nahi chal jaata sir?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Brilliant question — aur yahi NEET ka trap question hai! Mucus (mucin) ki ek layer stomach ki wall ko protect karti hai — ise 'Mucus Barrier' kehte hain. Jab yeh barrier break ho jaaye toh HCl wall ko attack karta hai — 'Peptic Ulcer' hota hai! Helicobacter pylori bacteria bhi ulcer cause karta hai — 1983 mein Barry Marshall aur Robin Warren ne discover kiya — Nobel Prize 2005 mein mila! Aur Pepsinogen — yeh inactive form mein banta hai, HCl activate karta hai ise Pepsin mein — Proteins todne ke liye!",
+          "emotion": "🦠"
+        },
+        {
+          "speaker": "raju",
+          "text": "Pepsinogen inactive, HCl activate karta hai = Pepsin — phir Pepsin proteins todta hai! Aur Mucus stomach wall ko bachata hai — brilliant design hai body ka!"
+        }
+      ],
+      "navigation": {
+        "next": "card_11_gastric_enzymes",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_11_gastric_enzymes",
+      "card_slug": "card_11_gastric_enzymes",
+      "type": "chat",
+      "concept_id": "gastric_enzymes_complete",
+      "level": 2,
+      "progress": {
+        "current": 11,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Stomach mein enzymes ka poora list yaad karo! Pepsin — Proteins ko Peptides mein todta hai (primary protein enzyme). Rennin (Chymosin) — Milk protein (Casein) ko Paracasein mein convert karta hai — sirf infants mein hota hai! BPSC ka trap: Adults mein Rennin nahi hota! Gastric Lipase — thodi matra mein fats todta hai, stomach mein — but zyada fat digestion small intestine mein. Khaane ka semi-liquid mixture stomach mein banta hai jise 'Chyme' kehte hain!",
+          "emotion": "🧪"
+        },
+        {
+          "speaker": "raju",
+          "text": "Rennin sirf infants mein! Adults mein nahi! Ye to pakka trap hai sir — exam mein zaroor aayega!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Yehi to trap hai — Rennin adults mein NAHI hota! Aur Chyme — stomach khaane ko 2-4 ghante mein churn karta hai aur Chyme banata hai. Stomach ke exit pe ek aur valve hai — 'Pyloric Sphincter' — jo Chyme ko slowly small intestine mein jaane deta hai. Agar sab ek saath jaaye toh small intestine handle nahi kar sakti. BPSC mein 'Chyme kahan banta hai?' seedha poochha gaya hai — answer: Stomach! Oesophagus se aaya khaana = Bolus, Stomach se nikla semi-liquid = Chyme!",
+          "emotion": "🔄"
+        },
+        {
+          "speaker": "raju",
+          "text": "Bolus = mouth se aaya, Chyme = stomach se nikla! Pyloric Sphincter exit door hai stomach ka! Ab sab connect ho raha hai sir!"
+        }
+      ],
+      "navigation": {
+        "next": "card_12_quiz4",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_12_quiz4",
+      "card_slug": "card_12_quiz4",
+      "type": "quiz",
+      "concept_id": "stomach_quiz1",
+      "level": 2,
+      "progress": {
+        "current": 12,
+        "total": 60
+      },
+      "quiz_payload": {
+        "question": "Q1/3: Stomach mein HCl kaun si cells produce karti hain?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Chief cells (Peptic cells)"
+          },
+          {
+            "id": "B",
+            "text": "Parietal cells (Oxyntic cells)"
+          },
+          {
+            "id": "C",
+            "text": "Goblet cells"
+          },
+          {
+            "id": "D",
+            "text": "G cells"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Stomach mein gastric glands mein alag-alag cells hoti hain alag-alag kaam ke liye: Parietal cells (Oxyntic cells) = HCl aur Intrinsic Factor produce karti hain. Chief cells (Peptic/Zymogenic cells) = Pepsinogen produce karti hain. Mucous neck cells = Mucus produce karti hain. G cells = Gastrin hormone produce karti hain (HCl secretion stimulate karne ke liye). Intrinsic Factor — Vitamin B12 absorption ke liye zaroori hota hai — Parietal cells ka important function! NEET mein cell type matching directly aaya hai!"
+      },
+      "navigation": {
+        "next": "card_13_quiz5",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_13_quiz5",
+      "card_slug": "card_13_quiz5",
+      "type": "quiz",
+      "concept_id": "stomach_quiz2",
+      "level": 2,
+      "progress": {
+        "current": 13,
+        "total": 60
+      },
+      "quiz_payload": {
+        "question": "Q2/3: BPSC Trap — Rennin enzyme ke baare mein kaunsa statement SAHI hai?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Rennin adults mein milk digest karta hai"
+          },
+          {
+            "id": "B",
+            "text": "Rennin sirf infants mein hota hai aur Casein (milk protein) ko Paracasein mein convert karta hai"
+          },
+          {
+            "id": "C",
+            "text": "Rennin starch todta hai"
+          },
+          {
+            "id": "D",
+            "text": "Rennin pancreas se aata hai"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Rennin (Chymosin) sirf infants/babies ke stomach mein hota hai — adults mein absent hota hai! Yeh Casein (milk protein) ko Paracasein (solid curd-like) mein convert karta hai — isse milk stomach mein ruk jaata hai aur digest ho paata hai. Adults mein milk Pepsin se digest hoti hai. Cheese making industry mein Rennin use hota hai — Chymosin form. BPSC mein 'Adults mein Rennin hota hai' wala trap baar baar aaya hai — answer: NO, adults mein Rennin nahi hota!"
+      },
+      "navigation": {
+        "next": "card_14_quiz6",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_14_quiz6",
+      "card_slug": "card_14_quiz6",
+      "type": "quiz",
+      "concept_id": "stomach_quiz3",
+      "level": 2,
+      "progress": {
+        "current": 14,
+        "total": 60
+      },
+      "quiz_payload": {
+        "question": "Q3/3: Peptic Ulcer kis bacterium ki wajah se hota hai aur ise kisne discover kiya?",
+        "options": [
+          {
+            "id": "A",
+            "text": "E. coli — Louis Pasteur ne 1880 mein"
+          },
+          {
+            "id": "B",
+            "text": "Helicobacter pylori — Barry Marshall aur Robin Warren ne 1983 mein"
+          },
+          {
+            "id": "C",
+            "text": "Staphylococcus — Robert Koch ne 1876 mein"
+          },
+          {
+            "id": "D",
+            "text": "Streptococcus — Alexander Fleming ne 1928 mein"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Peptic Ulcer ka main cause Helicobacter pylori bacteria hai — yeh stomach ki mucus layer mein rehta hai aur mucus barrier damage karta hai, jiससे HCl stomach wall attack kar deta hai. Barry Marshall aur Robin Warren ne 1983 mein yeh discover kiya — aur 2005 mein Nobel Prize in Physiology/Medicine mila. Interesting fact: Marshall ne khud H. pylori peeke khud pe ulcer prove kiya tha! Treatment: Antibiotics (H. pylori maarne ke liye) + Proton Pump Inhibitors (HCl production rokne ke liye). BPSC 2021 mein yeh Nobel Prize question directly aaya tha!"
+      },
+      "navigation": {
+        "next": "card_15_milestone2",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_15_milestone2",
+      "card_slug": "card_15_milestone2",
+      "type": "milestone",
+      "concept_id": "module2_complete",
+      "level": 2,
+      "progress": {
+        "current": 15,
+        "total": 60
+      },
+      "milestone_payload": {
+        "title": "STOMACH SECRETS UNLOCKED! ⚗️",
+        "badge_emoji": "🫙",
+        "completed_topic": "Oesophagus & Stomach Digestion",
+        "xp_earned": 75,
+        "milestone_progress": "Module 2/6 Clear",
+        "motivational_quote": "Pepsinogen → Pepsin, Rennin sirf infants mein, H. pylori Nobel Prize 2005 — yeh sab BPSC aur NEET ke direct marks hain! Ab sabse important part — Small Intestine — jahan असली show hota hai!"
+      },
+      "navigation": {
+        "next": "card_16_small_intestine_intro",
+        "button_text": "Start Module 3 ➔"
+      }
+    },
+    {
+      "card_id": "card_16_small_intestine_intro",
+      "card_slug": "card_16_small_intestine_intro",
+      "type": "chat",
+      "concept_id": "small_intestine_structure",
+      "level": 3,
+      "progress": {
+        "current": 16,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, Small Intestine — yeh digestion aur absorption ka main stage hai! 6-7 meters lambi — 3 parts mein divide hai: Duodenum (25 cm — C-shaped, pehla part), Jejunum (2.5 m — middle part), Ileum (3.5 m — last part, Vitamin B12 aur bile salts absorb karta hai). Duodenum sabse important hai kyunki yahan Liver ka bile aur Pancreas ke enzymes aate hain — chemical digestion completes yahan! Acid Chyme, Duodenum mein aane ke baad neutralize hota hai bile se!",
+          "emotion": "🌀"
+        },
+        {
+          "speaker": "raju",
+          "text": "Duodenum C-shaped hai — interesting! Sir Jejunum aur Ileum mein kya hota hai alag se?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Jejunum mein zyada absorption hoti hai — nutrients blood mein absorb hote hain. Ileum mein Vitamin B12 (Cobalamin) specifically absorb hota hai — iske liye Intrinsic Factor chahiye jo parietal cells banati hain! Agar Intrinsic Factor nahi bane (ya Parietal cells destroy hon) toh Vitamin B12 absorb nahi hoti — 'Pernicious Anaemia' hoti hai! NEET aur BPSC mein yeh classic connection hai: Parietal cells → Intrinsic Factor → Vitamin B12 absorption → Pernicious Anaemia agar nahi hua!",
+          "emotion": "🧬"
+        },
+        {
+          "speaker": "raju",
+          "text": "Pernicious Anaemia = Vitamin B12 absorb nahi hoti = Intrinsic Factor nahi = Parietal cells kharaab! Yeh chain important hai sir!"
+        }
+      ],
+      "navigation": {
+        "next": "card_17_pancreatic_enzymes",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_17_pancreatic_enzymes",
+      "card_slug": "card_17_pancreatic_enzymes",
+      "type": "chat",
+      "concept_id": "pancreatic_enzymes_complete",
+      "level": 3,
+      "progress": {
+        "current": 17,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Pancreas ek bahut powerful digestive gland hai — ise 'Mixed Gland' kehte hain kyunki yeh Exocrine (digestive enzymes) aur Endocrine (insulin, glucagon hormones) dono kaam karta hai! Pancreatic juice Duodenum mein aata hai 'Pancreatic Duct' se. Pancreatic enzymes: Pancreatic Amylase — Starch → Maltose. Trypsin, Chymotrypsin — Proteins → Peptides. Pancreatic Lipase — Fats → Fatty acids + Glycerol. Ribonuclease, Deoxyribonuclease — Nucleic acids todna!",
+          "emotion": "🏭"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir Trypsin aur Chymotrypsin — dono protein todte hain? Phir dono alag kyun hain?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Sahi pakda! Dono protein todte hain lekin alag peptide bonds pe attack karte hain — alag amino acid sites pe. Trypsin Lysine aur Arginine ke baad cut karta hai, Chymotrypsin aromatic amino acids ke baad. NEET mein yeh fine detail nahi poochhi jaati — sirf itna yaad rakho: dono protease hain, pancreas se aate hain. Aur ek bada exam bomb — Trypsin pehle 'Trypsinogen' ke roop mein nikalta hai — inactive! Ise activate karta hai 'Enterokinase' enzyme — jo small intestine ki wall se aata hai. Enterokinase = Trypsin activator — BPSC ka favorite trap!",
+          "emotion": "💣"
+        },
+        {
+          "speaker": "raju",
+          "text": "Trypsinogen inactive, Enterokinase activate karta hai = Trypsin! Bilkul Pepsinogen-HCl wali story jaisi — body pehle inactive form banaati hai safety ke liye!"
+        }
+      ],
+      "navigation": {
+        "next": "card_18_bile_liver",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_18_bile_liver",
+      "card_slug": "card_18_bile_liver",
+      "type": "chat",
+      "concept_id": "bile_liver_emulsification",
+      "level": 3,
+      "progress": {
+        "current": 18,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, Liver body ka sabse bada gland hai — 1.2-1.5 kg ka! Yeh bile juice banata hai — per day lagbhag 600-1000 mL. Bile Gallbladder mein store hota hai aur khaana aane par Duodenum mein release hota hai. Bile ka kaam hai fat 'Emulsification' — yeh fats ke bade globules ko chhote-chhote droplets mein todta hai — jaise soap dishwash karta hai oil ko! Bile mein enzymes nahi hote — sirf bile salts, bile pigments (Bilirubin, Biliverdin), cholesterol!",
+          "emotion": "🫧"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir bile mein enzymes nahi?? Toh fat todta kaun hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Yehi to sabse bada NEET aur BPSC trap hai! Bile fat ko DIGEST nahi karta — sirf EMULSIFY karta hai — yaani bade fat globules ko chhoti droplets mein todta hai taki Pancreatic Lipase asani se unpe kaam kar sake! Actual fat digestion karta hai Pancreatic Lipase! Bile = emulsification (physical), Lipase = digestion (chemical). Agar Gallbladder remove ho jaaye (Cholecystectomy) toh fat digestion affect hoti hai! BPSC 2022 mein 'Bile ka kaam kya hai?' directly aaya — answer: Emulsification, not digestion!",
+          "emotion": "⚠️"
+        },
+        {
+          "speaker": "raju",
+          "text": "Bile = emulsification (physical todna), Lipase = chemical digestion! Ye dono ka fark exam mein galat karna mat sir — note kar liya!"
+        }
+      ],
+      "navigation": {
+        "next": "card_19_intestinal_enzymes",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_19_intestinal_enzymes",
+      "card_slug": "card_19_intestinal_enzymes",
+      "type": "chat",
+      "concept_id": "intestinal_enzymes_succus_entericus",
+      "level": 3,
+      "progress": {
+        "current": 19,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Small intestine ki wall bhi enzymes produce karti hai — ise 'Succus Entericus' ya 'Intestinal Juice' kehte hain. Isme hote hain: Maltase — Maltose → Glucose + Glucose. Sucrase (Invertase) — Sucrose → Glucose + Fructose. Lactase — Lactose → Glucose + Galactose. Peptidases — remaining peptides → Amino Acids. Nucleotidases aur Nucleosidases — nucleic acids final digestion. Erepsin ek collective name hai intestinal proteases ka!",
+          "emotion": "🧫"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir Lactase ke baare mein kuch special sunna tha — Lactose Intolerance kya hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bahut acha connection! Lactase kam ho jaaye toh Lactose (milk sugar) digest nahi hota — undigested Lactose bacteria ferment karte hain intestine mein — gas, bloating, diarrhea hoti hai — yeh hai 'Lactose Intolerance!' Indian adults mein yeh condition common hai. Aur Sucrase ka ek important alternative naam yaad karo — 'Invertase' — kyunki yeh Sucrose ko 'Invert sugar' (glucose + fructose) mein convert karta hai. BPSC mein 'Invertase kya hai?' aur 'Sucrase kya hai?' dono alag questions ke roop mein aaye hain — dono same enzyme hain!",
+          "emotion": "🥛"
+        },
+        {
+          "speaker": "raju",
+          "text": "Invertase = Sucrase — ek hi enzyme, do naam! Aur Lactose Intolerance = Lactase nahi = milk digest nahi! Ye practical knowledge hai!"
+        }
+      ],
+      "navigation": {
+        "next": "card_20_quiz7",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_20_quiz7",
+      "card_slug": "card_20_quiz7",
+      "type": "quiz",
+      "concept_id": "small_intestine_quiz1",
+      "level": 3,
+      "progress": {
+        "current": 20,
+        "total": 60
+      },
+      "quiz_payload": {
+        "question": "Q1/3: Pancreas ko 'Mixed Gland' kyun kaha jaata hai?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Kyunki yeh mixed food digest karta hai"
+          },
+          {
+            "id": "B",
+            "text": "Kyunki yeh Exocrine (digestive enzymes) aur Endocrine (insulin, glucagon hormones) dono kaam karta hai"
+          },
+          {
+            "id": "C",
+            "text": "Kyunki yeh liver aur stomach dono se connected hai"
+          },
+          {
+            "id": "D",
+            "text": "Kyunki isme mixed blood supply hoti hai"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Pancreas 'Mixed Gland' hai kyunki yeh dono tarah ke secretions karta hai: Exocrine function — Pancreatic juice (Amylase, Trypsin, Chymotrypsin, Lipase, Nucleases) Pancreatic Duct se Duodenum mein dalta hai — food digestion ke liye. Endocrine function — Islets of Langerhans (Beta cells: Insulin, Alpha cells: Glucagon) directly blood mein release karta hai — blood sugar regulate karne ke liye. Diabetes Mellitus = Insulin ki problem = Pancreas ka Endocrine dysfunction. NEET aur BPSC mein 'Mixed Gland' ka naam seedha poochha gaya hai — answer: Pancreas!"
+      },
+      "navigation": {
+        "next": "card_21_quiz8",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_21_quiz8",
+      "card_slug": "card_21_quiz8",
+      "type": "quiz",
+      "concept_id": "small_intestine_quiz2",
+      "level": 3,
+      "progress": {
+        "current": 21,
+        "total": 60
+      },
+      "quiz_payload": {
+        "question": "Q2/3: NEET Direct — Bile (Pitt ras) ka primary function kya hai?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Fats ko Fatty Acids mein chemically digest karna"
+          },
+          {
+            "id": "B",
+            "text": "Fats ka Emulsification — bade fat globules ko chhote droplets mein physically todna taki Lipase asaan se kaam kar sake"
+          },
+          {
+            "id": "C",
+            "text": "Proteins ko Amino Acids mein convert karna"
+          },
+          {
+            "id": "D",
+            "text": "HCl neutralize karna — sirf"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Bile ka PRIMARY function Fat Emulsification hai — yeh fats ke bade globules ko chhote micelles mein todta hai (physical breakdown), jiससे Pancreatic Lipase ka surface area badh jaata hai aur woh asaan se fats digest kar sake. Bile mein koi digestive enzyme nahi hota! Bile ke components: Bile salts (emulsification), Bile pigments (Bilirubin/Biliverdin — RBC breakdown se), Cholesterol, Phospholipids. Bile HCl ko partially neutralize bhi karta hai — lekin yeh primary function nahi hai. NEET 2019 mein 'Bile does not contain enzyme' directly confirm kiya gaya tha!"
+      },
+      "navigation": {
+        "next": "card_22_quiz9",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_22_quiz9",
+      "card_slug": "card_22_quiz9",
+      "type": "quiz",
+      "concept_id": "small_intestine_quiz3",
+      "level": 3,
+      "progress": {
+        "current": 22,
+        "total": 60
+      },
+      "quiz_payload": {
+        "question": "Q3/3: BPSC Trap — Trypsinogen ko activate karne wala enzyme kaun hai?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Pepsin"
+          },
+          {
+            "id": "B",
+            "text": "HCl"
+          },
+          {
+            "id": "C",
+            "text": "Enterokinase (Enteropeptidase)"
+          },
+          {
+            "id": "D",
+            "text": "Bile"
+          }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Trypsinogen (inactive) → Trypsin (active) conversion karta hai Enterokinase (Enteropeptidase) enzyme — jo small intestine (Duodenum) ki wall se release hota hai. Trypsin phir khud bhi Trypsinogen activate kar sakta hai — 'autocatalysis.' Trypsin phir Chymotrypsinogen → Chymotrypsin bhi activate karta hai! HCl → Pepsinogen activate karta hai (stomach mein) — yeh alag system hai! Enterokinase ka specifically Trypsinogen activation karna BPSC aur NEET mein baar baar seedha aaya hai — confuse mat karo HCl se!"
+      },
+      "navigation": {
+        "next": "card_23_milestone3",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_23_milestone3",
+      "card_slug": "card_23_milestone3",
+      "type": "milestone",
+      "concept_id": "module3_complete",
+      "level": 3,
+      "progress": {
+        "current": 23,
+        "total": 60
+      },
+      "milestone_payload": {
+        "title": "ENZYME EXPERT! 🧪",
+        "badge_emoji": "⚗️",
+        "completed_topic": "Small Intestine — Pancreas, Bile & Intestinal Enzymes",
+        "xp_earned": 100,
+        "milestone_progress": "Module 3/6 Clear",
+        "motivational_quote": "Bile = emulsification NOT digestion, Enterokinase = Trypsinogen activator, Invertase = Sucrase — yeh teen facts teeno exams mein marks denge! Ab dekhte hain khaana blood mein kaise absorb hota hai — Villi ka miracle!"
+      },
+      "navigation": {
+        "next": "card_24_absorption_villi",
+        "button_text": "Start Module 4 ➔"
+      }
+    },
+    {
+      "card_id": "card_24_absorption_villi",
+      "card_slug": "card_24_absorption_villi",
+      "type": "chat",
+      "concept_id": "absorption_villi_microvilli",
+      "level": 3,
+      "progress": {
+        "current": 24,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Digested food blood mein absorb hota hai Small Intestine mein — aur yeh absorption itni efficient hai ki practically saara useful nutrition absorb ho jaata hai! Small intestine ki inner wall pe finger-like projections hote hain — 'Villi' (singular: Villus) — jo surface area bahut zyada badhate hain. Har Villus pe aur chhote projections hote hain — 'Microvilli' — jo milke 'Brush Border' banate hain! Villi + Microvilli ki wajah se small intestine ka effective surface area lagbhag 200 square meters ho jaata hai!",
+          "emotion": "🔬"
+        },
+        {
+          "speaker": "raju",
+          "text": "200 square meters!! Sir yeh to ek tennis court se bhi bada hai! Sirf absorption ke liye itna bada area??"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! Aur yahi to genius design hai — zyada surface area = zyada absorption = zyada nutrition. Har villus ke andar hote hain blood capillaries (glucose, amino acids absorb karti hain) aur ek 'Lacteal' — ek lymph vessel jo fatty acids aur glycerol absorb karta hai — fat directly blood mein nahi jaata, pehle lymph mein! Ise 'Chylomicrons' mein pack karke bheja jaata hai. NEET mein yeh fat absorption route directly poochha gaya hai!",
+          "emotion": "💧"
+        },
+        {
+          "speaker": "raju",
+          "text": "Glucose, Amino acids = blood capillaries mein, Fatty acids = Lacteal mein lymph mein — fat ka alag route! Yeh pakka exam trap hai sir!"
+        }
+      ],
+      "navigation": {
+        "next": "card_25_absorption_nutrients",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_25_absorption_nutrients",
+      "card_slug": "card_25_absorption_nutrients",
+      "type": "chat",
+      "concept_id": "nutrient_absorption_specifics",
+      "level": 3,
+      "progress": {
+        "current": 25,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Absorption ke specific sites yaad karo — yeh BPSC ka one-liner question hai! Duodenum: Iron, Calcium — yahan best absorb hote hain. Jejunum: Glucose, Amino acids, Fatty acids (zyada tar nutrients yahan). Ileum: Vitamin B12 (with Intrinsic Factor), Bile salts (recirculation — 'Enterohepatic Circulation'). Large intestine: Water, Minerals, Vitamin K, kuch B vitamins (gut bacteria banate hain). Rectum: Mainly water aur electrolytes!",
+          "emotion": "📍"
+        },
+        {
+          "speaker": "raju",
+          "text": "Vitamin K large intestine mein absorb hota hai?? Matlab gut bacteria Vitamin K banate hain??"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul! Gut bacteria (mainly Bacteroides aur E. coli) Vitamin K2 produce karte hain — jo large intestine mein absorb hota hai! Yahi wajah hai ki antibiotics lene ke baad kuch logon mein Vitamin K deficiency hoti hai — kyunki antibiotics gut bacteria ko bhi maar dete hain! Aur 'Enterohepatic Circulation' — Ileum mein bile salts absorb hote hain, portal vein se liver mein wapas jaate hain, liver dobara bile mein dalta hai — recycling! Ek baar bana bile 6-8 baar recirculate ho sakta hai — BPSC mein yeh concept aaya hai!",
+          "emotion": "♻️"
+        },
+        {
+          "speaker": "raju",
+          "text": "Gut bacteria Vitamin K banate hain! Antibiotics → bacteria mare → Vitamin K kam! Aur bile recycle hota hai — enterohepatic circulation! Waah!"
+        }
+      ],
+      "navigation": {
+        "next": "card_26_large_intestine",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_26_large_intestine",
+      "card_slug": "card_26_large_intestine",
+      "type": "chat",
+      "concept_id": "large_intestine_functions",
+      "level": 3,
+      "progress": {
+        "current": 26,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Large Intestine — lagbhag 1.5 meter lambi — isme koi digestive enzyme nahi hota! Iska main kaam hai: (1) Water absorption — undigested material se paani wapas lena. (2) Electrolyte absorption (Na+, K+). (3) Bacteria se Vitamin K aur kuch B vitamins absorb karna. (4) Stool formation — semi-solid faeces banana. Large intestine ke parts: Caecum (jisme Appendix hai) → Colon (Ascending, Transverse, Descending, Sigmoid) → Rectum → Anal Canal → Anus!",
+          "emotion": "🔄"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir Appendix kya kaam karta hai? Sunne mein aaya hai ki yeh useless hai!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bahut acha sawaal — aur yeh BPSC ka trap hai! Appendix ko 'Vestigial organ' kehte hain — matlab evolutionary history mein kaam tha, ab almost useless. Yeh Caecum se nikla ek finger-shaped structure hai. Lekin research kehti hai isme gut bacteria store hote hain — disease ke baad gut flora restore karne mein help! 'Appendicitis' = appendix ka inflammation — dard navel ke neeche right side mein. Aur ek important fact: Caecum herbivores mein bahut bada hota hai (cellulose digestion ke liye) — humans mein chhota! NEET mein Caecum ka function poochha gaya hai!",
+          "emotion": "📚"
+        },
+        {
+          "speaker": "raju",
+          "text": "Appendix = vestigial organ in humans, Herbivores mein Caecum bada = cellulose digestion! Appendicitis = right side lower pain!"
+        }
+      ],
+      "navigation": {
+        "next": "card_27_quiz10",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_27_quiz10",
+      "card_slug": "card_27_quiz10",
+      "type": "quiz",
+      "concept_id": "absorption_quiz1",
+      "level": 3,
+      "progress": {
+        "current": 27,
+        "total": 60
+      },
+      "quiz_payload": {
+        "question": "Q1/3: Fat absorption small intestine mein kaise hoti hai?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Fatty acids seedha blood capillaries mein absorb ho jaate hain villi mein"
+          },
+          {
+            "id": "B",
+            "text": "Fatty acids aur Glycerol Chylomicrons mein pack hokar Lacteals (lymph vessels) mein absorb hote hain — lymph se blood mein"
+          },
+          {
+            "id": "C",
+            "text": "Fat portal vein se seedha liver mein jaata hai"
+          },
+          {
+            "id": "D",
+            "text": "Fat large intestine mein absorb hota hai"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Fat absorption route DIFFERENT hai glucose aur amino acids se! Fatty acids aur Glycerol villi ki epithelial cells mein jaate hain, wahan Triglycerides dobara bante hain, phir Chylomicrons mein pack hote hain (lipoprotein particles). Yeh Chylomicrons Lacteals (lymph capillaries jo har villus mein hoti hain) mein absorb hote hain, phir lymphatic system se Thoracic Duct mein, phir blood circulation mein. Glucose aur amino acids = blood capillaries se portal vein se liver. Fat = Lacteals se lymph se blood. Yeh NEET 2018 aur BPSC 2020 mein directly aaya tha!"
+      },
+      "navigation": {
+        "next": "card_28_quiz11",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_28_quiz11",
+      "card_slug": "card_28_quiz11",
+      "type": "quiz",
+      "concept_id": "absorption_quiz2",
+      "level": 3,
+      "progress": {
+        "current": 28,
+        "total": 60
+      },
+      "quiz_payload": {
+        "question": "Q2/3: Small intestine ka effective surface area Villi aur Microvilli ki wajah se kitna ho jaata hai?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Lagbhag 5 square meters"
+          },
+          {
+            "id": "B",
+            "text": "Lagbhag 50 square meters"
+          },
+          {
+            "id": "C",
+            "text": "Lagbhag 200 square meters"
+          },
+          {
+            "id": "D",
+            "text": "Lagbhag 2 square meters"
+          }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Small intestine ka effective absorptive surface area Villi aur Microvilli (Brush Border) ki wajah se lagbhag 200 square meters ho jaata hai — jo ek badminton court ke barabar hai! Agar flat hoti toh sirf 3-4 square meters hoti. Villi = finger-like projections on inner wall, Microvilli = tiny projections on each villi. Har Villus mein: blood capillaries (glucose, amino acids ke liye) + Lacteal (fat ke liye) + smooth muscle (movement ke liye). Lung mein Alveoli bhi 70 sq. meter surface area — exam mein dono compare karta hai questions mein. Yeh SSC aur NEET dono mein aaya hai!"
+      },
+      "navigation": {
+        "next": "card_29_quiz12",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_29_quiz12",
+      "card_slug": "card_29_quiz12",
+      "type": "quiz",
+      "concept_id": "absorption_quiz3",
+      "level": 3,
+      "progress": {
+        "current": 29,
+        "total": 60
+      },
+      "quiz_payload": {
+        "question": "Q3/3: BPSC Multi-Statement — Large Intestine ke baare mein inme se kaunsa statement GALAT hai?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Large Intestine mein koi digestive enzyme nahi hota"
+          },
+          {
+            "id": "B",
+            "text": "Large Intestine mein water absorption hoti hai"
+          },
+          {
+            "id": "C",
+            "text": "Large Intestine mein Vitamin K, gut bacteria se produce hoti hai"
+          },
+          {
+            "id": "D",
+            "text": "Large Intestine mein glucose aur amino acids ka major absorption hota hai"
+          }
+        ],
+        "correct_option_id": "D",
+        "explanation": "Statement D GALAT hai — Glucose aur Amino acids ka MAJOR absorption Small Intestine ke Jejunum mein hota hai — Large Intestine mein nahi! Large Intestine ka kaam hai: Water absorption (sahi), Electrolytes absorb karna, Vitamin K aur kuch B vitamins (gut bacteria se) absorb karna (sahi), Stool form karna, aur No digestive enzymes (sahi). Glucose aur amino acids already Small Intestine mein absorb ho chuke hote hain jab tak material Large Intestine tak pahunchta hai. BPSC mein yeh exact 'D option galat' question 2019 mein aaya tha!"
+      },
+      "navigation": {
+        "next": "card_30_milestone4",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_30_milestone4",
+      "card_slug": "card_30_milestone4",
+      "type": "milestone",
+      "concept_id": "module4_complete",
+      "level": 3,
+      "progress": {
+        "current": 30,
+        "total": 60
+      },
+      "milestone_payload": {
+        "title": "ABSORPTION ACED! 💪",
+        "badge_emoji": "🌊",
+        "completed_topic": "Absorption — Villi, Microvilli & Nutrient Routes",
+        "xp_earned": 100,
+        "milestone_progress": "Module 4/6 Clear",
+        "motivational_quote": "200 sq meter surface area, fat Lacteals mein, glucose blood mein — yeh sab NEET aur BPSC ke direct marks hain! Ab Liver ke multiple functions ka poora exam map dekhte hain!"
+      },
+      "navigation": {
+        "next": "card_31_liver_functions",
+        "button_text": "Start Module 5 ➔"
+      }
+    },
+    {
+      "card_id": "card_31_liver_functions",
+      "card_slug": "card_31_liver_functions",
+      "type": "chat",
+      "concept_id": "liver_multiple_functions",
+      "level": 4,
+      "progress": {
+        "current": 31,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, Liver ek bahut multi-talented organ hai — sirf bile banana nahi! Liver ke functions ki list: (1) Bile production — fat emulsification. (2) Glycogen storage — glucose → glycogen (store karo), glycogen → glucose (energy chahiye). (3) Detoxification — drugs, alcohol, toxins ko neutralize. (4) Protein metabolism — amino acids deaminate karta hai, Urea banata hai. (5) Blood clotting factors banata hai — Fibrinogen, Prothrombin. (6) Albumin produce karta hai — blood osmotic pressure ke liye!",
+          "emotion": "🏥"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir itna sab kuch liver karta hai?? Urea bhi liver mein banta hai — yeh toh Excretion chapter mein bhi tha!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul cross-connect kiya tune — Urea cycle (Ornithine cycle) liver mein hota hai! Aur kuch aur liver facts: Liver body ka sabse bada INTERNAL organ hai — 1.2-1.5 kg. Skin sabse bada organ hai (overall). Liver dual blood supply leti hai — Hepatic Artery (oxygenated blood) aur Portal Vein (nutrient-rich blood from intestine). Liver regenerate kar sakta hai — agar 70% bhi remove kar do toh wapas grow kar sakta hai! NEET aur BPSC mein 'Largest gland' aur 'Largest internal organ' — dono ka answer Liver hai!",
+          "emotion": "⭐"
+        },
+        {
+          "speaker": "raju",
+          "text": "Liver = largest gland = largest internal organ — dono! Aur 70% remove hone ke baad bhi regenerate karta hai — ye to superhero hai!"
+        }
+      ],
+      "navigation": {
+        "next": "card_32_liver_diseases",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_32_liver_diseases",
+      "card_slug": "card_32_liver_diseases",
+      "type": "chat",
+      "concept_id": "liver_diseases_jaundice_cirrhosis",
+      "level": 4,
+      "progress": {
+        "current": 32,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Liver ki diseases BPSC aur SSC mein bahut aati hain — yaad karo! Jaundice (Piliya) — Bilirubin blood mein badh jaata hai — skin aur aankhe peeli. Types: Pre-hepatic (excess RBC breakdown), Hepatic (liver kharab — Hepatitis), Post-hepatic (bile duct block — Gallstones). Hepatitis — liver ka viral infection: Hep A (faeco-oral route), Hep B (blood/sexual — blood borne), Hep C (blood borne), Hep D (sirf Hep B ke saath), Hep E (faeco-oral, pregnancy mein dangerous)!",
+          "emotion": "🟡"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir Hepatitis ke itne types hain! A aur E faeco-oral — dirty water se? B aur C blood borne?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul! Hep A aur E — contaminated water/food se, Hep B aur C — blood/bodily fluids se. Cirrhosis — long-term alcohol ya Hepatitis C se liver ki normal cells scar tissue se replace ho jaati hain — liver fail hoti hai. Fatty Liver Disease (NAFLD) — excess fat liver mein — diabetes, obesity se. Ek exam bomb — Liver mein glucose 'Glycogen' ke roop mein store hota hai — fasting mein glycogen break hoke glucose deta hai — ise 'Glycogenolysis' kehte hain. Naya glucose banana — 'Gluconeogenesis.' BPSC mein yeh terms directly aaye hain!",
+          "emotion": "⚠️"
+        },
+        {
+          "speaker": "raju",
+          "text": "Glycogenolysis = glycogen → glucose, Gluconeogenesis = new glucose banana! Aur Hep A,E = water, Hep B,C = blood — pakka note kar liya!"
+        }
+      ],
+      "navigation": {
+        "next": "card_33_complete_enzyme_table",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_33_complete_enzyme_table",
+      "card_slug": "card_33_complete_enzyme_table",
+      "type": "chat",
+      "concept_id": "complete_enzyme_summary",
+      "level": 4,
+      "progress": {
+        "current": 33,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, ek rapid fire enzyme revision karte hain — BPSC, SSC, NEET teeno mein enzyme matching aata hai! CARBOHYDRATE enzymes: Salivary Amylase (Mouth) → Starch to Maltose. Pancreatic Amylase (Small Int.) → Starch to Maltose. Maltase → Maltose to Glucose+Glucose. Sucrase/Invertase → Sucrose to Glucose+Fructose. Lactase → Lactose to Glucose+Galactose. PROTEIN enzymes: Pepsin (Stomach) → Proteins to Peptides. Trypsin+Chymotrypsin (Pancreas) → Proteins/Peptides further. Peptidases (Intestine) → Peptides to Amino Acids!",
+          "emotion": "📊"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir Lactose = Glucose + Galactose?? Maine socha tha Glucose + Fructose hoga!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Yehi NEET ka classic trap hai! Sucrose = Glucose + Fructose (Sucrase se). Lactose = Glucose + Galactose (Lactase se). Maltose = Glucose + Glucose (Maltase se). Teeno disaccharides aur teeno products alag — yeh mix karna sabse common mistake hai! Aur FAT enzymes: Bile (emulsification). Gastric Lipase (Stomach — thoda). Pancreatic Lipase (Main!) → Triglycerides to Fatty Acids + Glycerol. Phospholipase — Phospholipids todta hai. Ek mnemonic: 'SLuMP' — Sucrose = fructose+GLucose, Lactose = gaLactose+Glucose, Maltose = Glucose+Glucose(Pairs)!",
+          "emotion": "🎯"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sucrose = Glucose+Fructose, Lactose = Glucose+Galactose, Maltose = Glucose+Glucose — teeno alag! Yeh yaad kar lunga pakka!"
+        }
+      ],
+      "navigation": {
+        "next": "card_34_quiz13",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_34_quiz13",
+      "card_slug": "card_34_quiz13",
+      "type": "quiz",
+      "concept_id": "liver_enzyme_quiz1",
+      "level": 4,
+      "progress": {
+        "current": 34,
+        "total": 60
+      },
+      "quiz_payload": {
+        "question": "Q1/3: Lactase enzyme kis disaccharide ko todta hai aur uske products kya hain?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Sucrose → Glucose + Fructose"
+          },
+          {
+            "id": "B",
+            "text": "Maltose → Glucose + Glucose"
+          },
+          {
+            "id": "C",
+            "text": "Lactose → Glucose + Galactose"
+          },
+          {
+            "id": "D",
+            "text": "Lactose → Fructose + Galactose"
+          }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Lactase enzyme Lactose (milk sugar) ko Glucose + Galactose mein todta hai. Yeh small intestine ki brush border cells produce karti hain. Lactase ki kami = Lactose Intolerance. NEET trap: Sucrase → Sucrose = Glucose + FRUCTOSE (fructose, galactose nahi!). Maltase → Maltose = Glucose + Glucose. Lactase → Lactose = Glucose + GALACTOSE. Teeno mein ek Glucose common hai — doosra different! Fructose = Sucrose mein, Galactose = Lactose mein — yeh dono mix karna exam mein fatal mistake hai. NEET 2020 aur BPSC 2019 mein exact matching aaya tha!"
+      },
+      "navigation": {
+        "next": "card_35_quiz14",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_35_quiz14",
+      "card_slug": "card_35_quiz14",
+      "type": "quiz",
+      "concept_id": "liver_enzyme_quiz2",
+      "level": 4,
+      "progress": {
+        "current": 35,
+        "total": 60
+      },
+      "quiz_payload": {
+        "question": "Q2/3: NEET — Liver ka 'Largest gland' aur 'Largest internal organ' dono hona — kya yeh sahi hai?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Nahi — Largest gland Pancreas hai, Liver sirf largest internal organ hai"
+          },
+          {
+            "id": "B",
+            "text": "Haan — Liver DONO hai: largest gland AND largest internal organ. Lekin largest organ overall = Skin!"
+          },
+          {
+            "id": "C",
+            "text": "Nahi — Skin largest gland hai, Liver largest internal organ hai"
+          },
+          {
+            "id": "D",
+            "text": "Haan — Liver largest organ bhi hai, gland bhi, aur skin se bhi bada hai"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Liver human body ka LARGEST GLAND bhi hai aur LARGEST INTERNAL ORGAN bhi! (1.2-1.5 kg). Lekin LARGEST ORGAN OVERALL = SKIN! Skin ko organ consider kiya jaata hai aur yeh sabse bada hai. Pancreas ek mixed gland hai lekin liver se bahut chhota. Spleen largest lymphoid organ hai. BPSC mein 3 alag questions aaye: 'Largest gland = Liver,' 'Largest internal organ = Liver,' 'Largest organ of body = Skin' — teeno ke alag answers hain! Confusion mat karo — Liver = gland aur internal organ, Skin = overall largest!"
+      },
+      "navigation": {
+        "next": "card_36_quiz15",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_36_quiz15",
+      "card_slug": "card_36_quiz15",
+      "type": "quiz",
+      "concept_id": "liver_enzyme_quiz3",
+      "level": 4,
+      "progress": {
+        "current": 36,
+        "total": 60
+      },
+      "quiz_payload": {
+        "question": "Q3/3: SSC CGL — Hepatitis B kaise failta hai?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Contaminated paani ya khaana khane se (faeco-oral route)"
+          },
+          {
+            "id": "B",
+            "text": "Infected blood, sexual contact, ya infected needle se (blood-borne)"
+          },
+          {
+            "id": "C",
+            "text": "Hawa mein saans lene se (air-borne)"
+          },
+          {
+            "id": "D",
+            "text": "Mosquito bite se (vector-borne)"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Hepatitis B blood-borne virus hai — infected blood transfusion, unsterilized needles (drug use, tattooing), sexual contact, aur mother se baby (perinatal) se failta hai. Hepatitis A aur E = faeco-oral route (contaminated water/food). Hepatitis C = blood-borne (injection drug use, transfusion). Hepatitis B vaccine available hai — India mein national immunization programme mein shamil hai. Hep B chronic ho sakta hai aur liver cancer (Hepatocellular Carcinoma) cause kar sakta hai — BPSC aur SSC mein Hepatitis types ka classification baar baar aaya hai!"
+      },
+      "navigation": {
+        "next": "card_37_milestone5",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_37_milestone5",
+      "card_slug": "card_37_milestone5",
+      "type": "milestone",
+      "concept_id": "module5_complete",
+      "level": 4,
+      "progress": {
+        "current": 37,
+        "total": 60
+      },
+      "milestone_payload": {
+        "title": "LIVER LEGENDS! 🏆",
+        "badge_emoji": "🫁",
+        "completed_topic": "Liver Functions, Diseases & Complete Enzyme Map",
+        "xp_earned": 100,
+        "milestone_progress": "Module 5/6 Clear",
+        "motivational_quote": "Glycogenolysis, Gluconeogenesis, Hep A vs B transmission, Largest gland — yeh sab tumhare officer-level arsenal mein hain! Ek aur module bacha hai — Digestion ka hormonal control aur Special Disorders!"
+      },
+      "navigation": {
+        "next": "card_38_digestive_hormones",
+        "button_text": "Start Module 6 ➔"
+      }
+    },
+    {
+      "card_id": "card_38_digestive_hormones",
+      "card_slug": "card_38_digestive_hormones",
+      "type": "chat",
+      "concept_id": "digestive_hormones_gastrin_secretin",
+      "level": 4,
+      "progress": {
+        "current": 38,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Digestion sirf enzymes se nahi chalti — hormones bhi control karte hain! Yeh NEET aur BPSC ka premium topic hai! 'Gastrin' — G cells (stomach) se release hota hai jab khaana aata hai — HCl secretion badhata hai aur gastric motility badhata hai. 'Secretin' — Duodenum se release hota hai jab acid Chyme aata hai — Pancreas ko NaHCO3 (sodium bicarbonate) release karne ka signal deta hai — acid neutralize karne ke liye!",
+          "emotion": "💊"
+        },
+        {
+          "speaker": "raju",
+          "text": "Secretin kya hai sir? Pehli baar sun raha hun!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Secretin ek bahut historic hormone hai — yeh pehla hormone tha jo ever discover kiya gaya! William Bayliss aur Ernest Starling ne 1902 mein discover kiya — isliye inhe 'Father of Endocrinology' ka credit milta hai. 'Hormone' shabd bhi Starling ne hi 1905 mein diya! BPSC ka direct question: 'Pehla hormone kaun tha?' — Secretin! Aur 'CCK' (Cholecystokinin) — Duodenum se — Gallbladder ko bile release karne aur Pancreas ko enzymes release karne ka signal deta hai!",
+          "emotion": "📚"
+        },
+        {
+          "speaker": "raju",
+          "text": "Secretin = pehla hormone ever discovered! Bayliss aur Starling 1902! Aur CCK = bile release aur pancreatic enzymes! Ye to history aur science dono hain!"
+        }
+      ],
+      "navigation": {
+        "next": "card_39_gip_vip_hormones",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_39_gip_vip_hormones",
+      "card_slug": "card_39_gip_vip_hormones",
+      "type": "chat",
+      "concept_id": "gip_motilin_hormones",
+      "level": 4,
+      "progress": {
+        "current": 39,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Kuch aur digestive hormones jo NEET level ke hain: 'GIP' (Gastric Inhibitory Peptide) — Duodenum se, fat aur glucose dekhke release hota hai — stomach ki acid secretion aur motility inhibit karta hai (taaki khaana dheere dheere aage jaaye). 'Motilin' — small intestine se — MMC (Migrating Motor Complex) ko trigger karta hai — khali pet ki intestinal contractions jo leftovers sweep karte hain — 'Housekeeper Wave' bhi kehte hain!",
+          "emotion": "🌀"
+        },
+        {
+          "speaker": "raju",
+          "text": "Housekeeper Wave?? Sir khali pet mein bhi intestine kaam karti hai??"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul! Woh growling sound jo khali pet mein hoti hai — 'Borborygmus' — wahi MMC ki wajah se hoti hai! Motilin us clean-up cycle ko trigger karta hai. Aur ek aur NEET bomb — 'VIP' (Vasoactive Intestinal Peptide) — intestinal secretions aur smooth muscle relaxation ke liye. Ab ek hidden BPSC trap: Gastrin — stomach se. Secretin, CCK, GIP — Duodenum se. Motilin — small intestine se. Inke sources alag hain — match karne wala question BPSC 2022 mein aaya tha!",
+          "emotion": "💡"
+        },
+        {
+          "speaker": "raju",
+          "text": "Borborygmus = pet ki growling sound = Motilin ka kaam! Aur Gastrin = stomach, Secretin = duodenum — sources alag hain!"
+        }
+      ],
+      "navigation": {
+        "next": "card_40_digestive_disorders",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_40_digestive_disorders",
+      "card_slug": "card_40_digestive_disorders",
+      "type": "chat",
+      "concept_id": "digestive_disorders_complete",
+      "level": 4,
+      "progress": {
+        "current": 40,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Digestive disorders ka exam-ready list banate hain! GERD (Acid Reflux) — cardiac sphincter weak, acid oesophagus mein — heartburn. Peptic Ulcer — H. pylori ya NSAIDs se mucus barrier kharab — HCl attacks wall. Constipation — large intestine mein zyada water absorption — stool hard. Diarrhea — pani zyada — osmotic ya secretory. IBS (Irritable Bowel Syndrome) — functional disorder — stress related. Celiac Disease — gluten (wheat protein) se small intestine damaged — villi destroy!",
+          "emotion": "🏥"
+        },
+        {
+          "speaker": "raju",
+          "text": "Celiac Disease mein Villi destroy ho jaate hain?? Phir absorption kaise hogi??"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul sahi sawaal! Celiac Disease mein gluten khane se immune system small intestine ki Villi pe attack karta hai — Villi flat ho jaati hain — absorption dramatically fall ho jaati hai — malnutrition, weight loss, anemia. Treatment: Strict gluten-free diet (wheat, barley, rye avoid karo)! Aur 'Malabsorption Syndrome' — absorption problem se nutrients nahi milte — causes: Celiac, Crohn's disease, short bowel. BPSC mein 'Celiac Disease' aur 'Gluten' ka connection directly aaya hai — wheat mein gluten hota hai!",
+          "emotion": "⚠️"
+        },
+        {
+          "speaker": "raju",
+          "text": "Celiac = Gluten → Villi destroy → malabsorption! Treatment = gluten-free diet! Ye to practical health knowledge bhi hai!"
+        }
+      ],
+      "navigation": {
+        "next": "card_41_quiz16",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_41_quiz16",
+      "card_slug": "card_41_quiz16",
+      "type": "quiz",
+      "concept_id": "hormones_disorders_quiz1",
+      "level": 4,
+      "progress": {
+        "current": 41,
+        "total": 60
+      },
+      "quiz_payload": {
+        "question": "Q1/3: BPSC Direct — 'Pehla hormone' jo ever discover kiya gaya — uska naam aur discoverer kaun hai?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Insulin — Frederick Banting, 1921"
+          },
+          {
+            "id": "B",
+            "text": "Gastrin — Edkins, 1905"
+          },
+          {
+            "id": "C",
+            "text": "Secretin — William Bayliss aur Ernest Starling, 1902"
+          },
+          {
+            "id": "D",
+            "text": "Adrenaline — John Abel, 1897"
+          }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Secretin pehla hormone tha jo ever discover kiya gaya — William Bayliss aur Ernest Starling ne 1902 mein discover kiya. Secretin Duodenum se release hota hai jab acid Chyme aata hai — Pancreas ko sodium bicarbonate release karne ka signal deta hai. 'Hormone' shabd bhi Starling ne 1905 mein introduce kiya ('hormon' Greek = to set in motion). Insulin = Banting & Best 1921 (Nobel 1923). Adrenaline = Abel 1897, Takamine 1901. Gastrin = Edkins 1905. Secretin ki discovery ne Endocrinology ki neev rakhi. BPSC 2020 aur SSC CGL mein yeh direct historical question aaya tha!"
+      },
+      "navigation": {
+        "next": "card_42_quiz17",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_42_quiz17",
+      "card_slug": "card_42_quiz17",
+      "type": "quiz",
+      "concept_id": "hormones_disorders_quiz2",
+      "level": 4,
+      "progress": {
+        "current": 42,
+        "total": 60
+      },
+      "quiz_payload": {
+        "question": "Q2/3: CCK (Cholecystokinin) ka primary function kya hai?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Stomach mein HCl secretion badhana"
+          },
+          {
+            "id": "B",
+            "text": "Gallbladder ko bile release karne aur Pancreas ko digestive enzymes release karne ka signal dena"
+          },
+          {
+            "id": "C",
+            "text": "Small intestine ki peristalsis rokna"
+          },
+          {
+            "id": "D",
+            "text": "Liver mein glycogen synthesis badhana"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "CCK (Cholecystokinin) Duodenum ki I-cells se release hota hai jab fat aur protein Duodenum mein enter karte hain. CCK ke 2 primary targets: (1) Gallbladder — contract karne ka signal deta hai → Bile release into Duodenum (fat emulsification ke liye). (2) Pancreas — digestive enzymes (Lipase, Proteases, Amylase) release karne ka signal deta hai. CCK stomach emptying bhi slow karta hai — 'satiety' (feeling of fullness) feel karane mein role! Secretin = NaHCO3 release (acid neutralization). Gastrin = HCl badhata hai. NEET 2021 mein CCK vs Secretin ka comparison directly aaya tha!"
+      },
+      "navigation": {
+        "next": "card_43_quiz18",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_43_quiz18",
+      "card_slug": "card_43_quiz18",
+      "type": "quiz",
+      "concept_id": "hormones_disorders_quiz3",
+      "level": 4,
+      "progress": {
+        "current": 43,
+        "total": 60
+      },
+      "quiz_payload": {
+        "question": "Q3/3: NEET Assertion-Reason — Assertion (A): Celiac Disease mein patient ko wheat-based food avoid karna chahiye. Reason (R): Wheat mein Gluten protein hota hai jo Celiac patients mein small intestine ki Villi ko damage karta hai, absorption reduce karta hai.",
+        "options": [
+          {
+            "id": "A",
+            "text": "A sahi hai, R galat hai"
+          },
+          {
+            "id": "B",
+            "text": "A galat hai, R sahi hai"
+          },
+          {
+            "id": "C",
+            "text": "A aur R dono sahi hain, aur R, A ka sahi explanation hai"
+          },
+          {
+            "id": "D",
+            "text": "A aur R dono sahi hain, lekin R, A ka sahi explanation nahi hai"
+          }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Dono statements sahi hain aur R, A ka correct explanation hai! Celiac Disease ek autoimmune condition hai jisme gluten (wheat, barley, rye mein protein) ingestion par immune system small intestine ki lining attack karta hai — specifically Villi ko flatten karta hai. Flattened Villi = reduced surface area = malabsorption = nutrient deficiency, anemia, weight loss. Treatment: Strict lifelong gluten-free diet. Maize (corn), rice, potato — gluten-free hote hain — safe hain Celiac patients ke liye. NEET 2018 mein exact Assertion-Reason format mein yeh aaya tha!"
+      },
+      "navigation": {
+        "next": "card_44_milestone6",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_44_milestone6",
+      "card_slug": "card_44_milestone6",
+      "type": "milestone",
+      "concept_id": "module6_complete",
+      "level": 4,
+      "progress": {
+        "current": 44,
+        "total": 60
+      },
+      "milestone_payload": {
+        "title": "ALL MODULES CONQUERED! 🎊",
+        "badge_emoji": "🏅",
+        "completed_topic": "Digestive Hormones & Disorders",
+        "xp_earned": 125,
+        "milestone_progress": "Module 6/6 Clear — ALL DONE!",
+        "motivational_quote": "Secretin = pehla hormone (1902), CCK, Celiac Disease, Borborygmus — yeh NEET aur BPSC mein seedhe marks hain! Ab final revision aur Master Quiz — yahan toppers aur average students ka fark hota hai!"
+      },
+      "navigation": {
+        "next": "card_45_special_bonus",
+        "button_text": "Bonus Round ➔"
+      }
+    },
+    {
+      "card_id": "card_45_special_bonus",
+      "card_slug": "card_45_special_bonus",
+      "type": "chat",
+      "concept_id": "digestion_special_facts",
+      "level": 5,
+      "progress": {
+        "current": 45,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, kuch speed facts jo SSC aur RRB NTPC mein seedha aate hain! Human teeth: 32 permanent teeth (Incisors 8, Canines 4, Premolars 8, Molars 12 — 4 Wisdom teeth included). Dental formula: Adult = 2123/2123. Milk teeth (Deciduous): 20. Enamel = hardest substance in human body! Stomach ki capacity: 1-1.5 liters (expandable up to 4 liters). Total digestion time: Mouth to anus = 24-72 hours. Small intestine total length = 6-7 meters!",
+          "emotion": "⚡"
+        },
+        {
+          "speaker": "raju",
+          "text": "Enamel sabse hard substance — diamond se bhi hard?? Yeh interesting fact hai sir!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Enamel diamond se hard nahi — lekin human body ka sabse hard material! Enamel = 98% inorganic (mainly hydroxyapatite mineral). Aur kuch aur: Goblet cells — intestine ki wall mein — mucus secrete karti hain. Brunner's glands — Duodenum mein — alkaline mucus (HCl neutralize). Peyer's patches — Ileum mein — lymphoid tissue — immunity. Haustra — large intestine ke pouches. Taenia coli — large intestine ki longitudinal muscle strips. Yeh terms NEET ke histology questions mein aate hain!",
+          "emotion": "🦷"
+        },
+        {
+          "speaker": "raju",
+          "text": "Goblet cells = mucus, Brunner's glands = Duodenum mein alkaline mucus, Peyer's patches = Ileum mein immunity! Har jagah kuch na kuch special hai!"
+        }
+      ],
+      "navigation": {
+        "next": "card_46_nutrition_types",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_46_nutrition_types",
+      "card_slug": "card_46_nutrition_types",
+      "type": "chat",
+      "concept_id": "nutrition_modes_autotroph_heterotroph",
+      "level": 5,
+      "progress": {
+        "current": 46,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "BPSC aur UPSC mein Nutrition modes ka broader concept bhi aata hai — yaad karo! Autotrophic nutrition — khud khaana banate hain (plants — Photosynthesis). Heterotrophic nutrition — doosron ka khaana khaate hain (animals, fungi). Heterotrophic types: Holozoic — solid food khana phir digest (humans). Saprophytic — dead matter se nutrients absorb (fungi, some bacteria). Parasitic — living host se nutrients (tapeworm, Plasmodium). Mixotrophic — dono (Euglena — photosynthesis bhi, khaana bhi)!",
+          "emotion": "🌿"
+        },
+        {
+          "speaker": "raju",
+          "text": "Euglena dono karta hai?? Matlab woh plant bhi hai aur animal bhi??"
+        },
+        {
+          "speaker": "aman",
+          "text": "Exactly! Isliye Euglena ko 'Connecting link between plants and animals' kaha jaata hai — Mixotrophic hai. Aur ek aur BPSC trap: Holozoic nutrition ke 5 steps — Ingestion (khaana lena), Digestion (todna), Absorption (blood mein lena), Assimilation (body cells use karna), Egestion (waste bahar). IDAE — Ingestion, Digestion, Absorption, Egestion — nahi! IDAAE — 5 steps! Yeh sequence SSC mein arrange karne wala question ban chuka hai — Egestion aur Assimilation ka order galat likhna common mistake hai!",
+          "emotion": "📝"
+        },
+        {
+          "speaker": "raju",
+          "text": "5 steps: Ingestion → Digestion → Absorption → Assimilation → Egestion! Assimilation pehle, Egestion last! Order pakka karta hun!"
+        }
+      ],
+      "navigation": {
+        "next": "card_47_guess_card",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_47_guess_card",
+      "card_slug": "card_47_guess_card",
+      "type": "guess",
+      "concept_id": "guess_digestive_enzyme",
+      "level": 5,
+      "progress": {
+        "current": 47,
+        "total": 60
+      },
+      "guess_payload": {
+        "question": "🤔 Guess karo — Ek enzyme jo Pancreas se inactive form mein nikalta hai, Small Intestine ki wall se nikle ek special enzyme ne ise active kiya, aur ab yeh proteins ko todta hai. Iska active form kya hai aur ise activate karne wala enzyme kaun hai?",
+        "hint": "💡 Hint: Iska inactive form 'ogen' se end hota hai — similar pattern jaise Pepsinogen → Pepsin!",
+        "options": [
+          {
+            "id": "A",
+            "text": "Pepsin — HCl ne activate kiya"
+          },
+          {
+            "id": "B",
+            "text": "Trypsin — Enterokinase ne activate kiya Trypsinogen se"
+          },
+          {
+            "id": "C",
+            "text": "Amylase — Bile ne activate kiya"
+          },
+          {
+            "id": "D",
+            "text": "Lipase — Secretin ne activate kiya"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Trypsin! Pancreas se Trypsinogen (inactive) nikaalta hai → Duodenum mein Small intestine ki wall se Enterokinase (Enteropeptidase) enzyme release hota hai → Enterokinase, Trypsinogen ko Trypsin (active) mein convert karta hai → Trypsin proteins aur peptides ko todta hai. Trypsin phir Chymotrypsinogen ko bhi Chymotrypsin mein activate karta hai. Inactive form mein release karna isliye hota hai — agar active form mein release ho, toh pancreas khud ko digest kar le! Pancreatitis = pancreatic enzymes premature activation se pancreas damage! BPSC aur NEET ka top concept!"
+      },
+      "navigation": {
+        "next": "card_48_caloric_values",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_48_caloric_values",
+      "card_slug": "card_48_caloric_values",
+      "type": "chat",
+      "concept_id": "caloric_values_macronutrients",
+      "level": 5,
+      "progress": {
+        "current": 48,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, Nutrition chapter mein ek important fact — 'Caloric Values' of macronutrients — yeh SSC aur Railway mein direct number question ban jaata hai! Carbohydrates: 4 kcal per gram. Proteins: 4 kcal per gram. Fats: 9 kcal per gram — sabse zyada! Alcohol: 7 kcal per gram. Fats mein sabse zyada energy isliye hoti hai kyunki inka hydrogen to oxygen ratio bahut zyada hota hai — zyada oxidation = zyada energy!",
+          "emotion": "🔢"
+        },
+        {
+          "speaker": "raju",
+          "text": "Fat mein 9 kcal — Carbs aur Protein se double! Isliye fat khaane se zyada mote hote hain!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Exactly sahi! Aur ek BPSC bonus — BMR (Basal Metabolic Rate) — rest mein body jo energy use karta hai. Average adult BMR: Men ~1600-2000 kcal/day, Women ~1400-1600 kcal/day. Thyroid hormone BMR control karta hai — Hyperthyroidism mein BMR high hota hai (weight loss), Hypothyroidism mein low (weight gain). Ab ek twist — cellulose bhi carbohydrate hai (glucose se bana) lekin humans digest nahi kar paate — koi cellulase enzyme nahi hota! Herbivores kar paate hain — symbiotic bacteria ki madad se! Yeh BPSC ka direct question raha hai!",
+          "emotion": "🌾"
+        },
+        {
+          "speaker": "raju",
+          "text": "Humans cellulose digest nahi kar sakte — koi cellulase nahi! Herbivores karte hain — bacteria ki wajah se! Dietary fiber = cellulose = digestion nahi hoti but gut mein important!"
+        }
+      ],
+      "navigation": {
+        "next": "card_49_officer_summary",
+        "button_text": "Final Revision ➔"
+      }
+    },
+    {
+      "card_id": "card_49_officer_summary",
+      "card_slug": "card_49_officer_summary",
+      "type": "summary",
+      "concept_id": "full_chapter_summary",
+      "level": 5,
+      "progress": {
+        "current": 49,
+        "total": 60
+      },
+      "summary_payload": {
+        "title": "⚡ Officer Rapid Revision — Digestive System",
+        "revision_points": [
+          {
+            "topic": "👄 Mouth & Oesophagus",
+            "point": "Salivary Amylase (Ptyalin) = Starch → Maltose (Mouth). 3 pairs Salivary Glands: Parotid (largest, Mumps), Submandibular, Sublingual. Bolus = chewed food. Oesophagus = 25cm, Peristalsis moves food. Cardiac Sphincter = valve (weak = GERD/Acid Reflux). Digestion = Mechanical (physical) + Chemical (enzymes). Alimentary Canal ≠ Digestive System (digestive system includes liver, pancreas too)."
+          },
+          {
+            "topic": "⚗️ Stomach",
+            "point": "Gastric juice: HCl (Parietal/Oxyntic cells) + Pepsinogen (Chief cells) + Mucus. HCl pH 1.5-2.0. HCl activates Pepsinogen → Pepsin (protein digestion). Rennin = ONLY in infants, Casein → Paracasein. Gastric Lipase (some fat). Chyme = semi-liquid from stomach. Pyloric Sphincter = exit valve. Peptic Ulcer = H. pylori (Nobel 2005 — Barry Marshall & Robin Warren). Mucus barrier protects stomach wall."
+          },
+          {
+            "topic": "🌀 Small Intestine",
+            "point": "Duodenum (25cm, C-shaped) + Jejunum (2.5m) + Ileum (3.5m). Pancreatic juice: Amylase, Trypsin, Chymotrypsin, Lipase, Nucleases. Trypsinogen → Trypsin = Enterokinase activates (NOT HCl!). Bile = Emulsification (NOT digestion!) — no enzymes in bile. Bile stored in Gallbladder, made in Liver. Intestinal juice (Succus Entericus): Maltase, Sucrase/Invertase, Lactase, Peptidases. Sucrose → Glucose+Fructose. Lactose → Glucose+Galactose. Maltose → Glucose+Glucose. Pancreas = Mixed gland."
+          },
+          {
+            "topic": "🌊 Absorption",
+            "point": "Villi + Microvilli (Brush Border) = 200 sq. meter surface area. Glucose, Amino Acids = blood capillaries → portal vein → liver. Fatty acids = Lacteals (lymph) → Chylomicrons → thoracic duct → blood. Duodenum = Iron, Calcium absorption. Ileum = Vitamin B12 (needs Intrinsic Factor from Parietal cells — absent = Pernicious Anaemia) + Bile salts (Enterohepatic Circulation). Large intestine: Water + Minerals + Vitamin K (from gut bacteria). No digestive enzymes in large intestine!"
+          },
+          {
+            "topic": "🏥 Liver, Hormones & Disorders",
+            "point": "Liver = Largest gland + Largest internal organ (1.2-1.5 kg). Skin = Overall largest organ. Liver: Bile, Glycogen storage, Detox, Urea synthesis, Clotting factors, Albumin. Secretin = FIRST EVER HORMONE (Bayliss & Starling, 1902). Gastrin (stomach) = HCl↑. CCK (Duodenum) = Bile + Pancreatic enzymes release. GIP = stomach inhibit. Celiac = Gluten → Villi damage. H. pylori = Peptic Ulcer. Hepatitis A,E = faeco-oral; B,C = blood-borne. Cellulose = no cellulase in humans. Fat = 9 kcal/g, Carbs/Protein = 4 kcal/g."
+          }
+        ]
+      },
+      "navigation": {
+        "next": "card_50_final_quiz1",
+        "button_text": "Start Master Quiz 🎯"
+      }
+    },
+    {
+      "card_id": "card_50_final_quiz1",
+      "card_slug": "card_50_final_quiz1",
+      "type": "final_quiz",
+      "concept_id": "master_quiz_1",
+      "level": 5,
+      "progress": {
+        "current": 50,
+        "total": 60
+      },
+      "quiz_payload": {
+        "question": "🏆 MASTER QUIZ Q1/5 — BPSC Multi-Statement: Inme se kaun se statements Digestive System ke baare mein SAHI hain?\n(1) Salivary Amylase aur Ptyalin dono alag-alag enzymes hain\n(2) Bile mein koi digestive enzyme nahi hota\n(3) Trypsinogen ko Enterokinase activate karta hai\n(4) Rennin adults mein bhi hota hai\n(5) Large intestine mein koi digestive enzyme nahi hota",
+        "options": [
+          {
+            "id": "A",
+            "text": "2, 3 aur 5"
+          },
+          {
+            "id": "B",
+            "text": "1, 2 aur 4"
+          },
+          {
+            "id": "C",
+            "text": "Sabhi 1, 2, 3, 4, 5"
+          },
+          {
+            "id": "D",
+            "text": "2, 4 aur 5"
+          }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Statements 2, 3 aur 5 SAHI hain. Statement 1 GALAT — Salivary Amylase aur Ptyalin SAME enzyme hain, alag nahi! Statement 4 GALAT — Rennin sirf INFANTS mein hota hai, adults mein nahi! Statement 2 sahi: Bile mein koi enzyme nahi — sirf emulsification. Statement 3 sahi: Enterokinase Trypsinogen activate karta hai. Statement 5 sahi: Large intestine mein koi digestive enzyme nahi — sirf water absorption. Yeh teeno galat trap statements BPSC 2022 mein exact is format mein aaye the!"
+      },
+      "navigation": {
+        "next": "card_51_final_quiz2",
+        "button_text": "Next Question ➔"
+      }
+    },
+    {
+      "card_id": "card_51_final_quiz2",
+      "card_slug": "card_51_final_quiz2",
+      "type": "final_quiz",
+      "concept_id": "master_quiz_2",
+      "level": 5,
+      "progress": {
+        "current": 51,
+        "total": 60
+      },
+      "quiz_payload": {
+        "question": "🏆 MASTER QUIZ Q2/5 — NEET Assertion-Reason: Assertion (A): Pancreatic enzymes inactive precursors (zymogen granules) ke roop mein secrete hote hain. Reason (R): Agar yeh active form mein secrete hon, toh Pancreas khud ko digest kar le — Pancreatitis ho sakti hai.",
+        "options": [
+          {
+            "id": "A",
+            "text": "A sahi hai, R galat hai"
+          },
+          {
+            "id": "B",
+            "text": "A galat hai, R sahi hai"
+          },
+          {
+            "id": "C",
+            "text": "A aur R dono sahi hain, aur R, A ka sahi explanation hai"
+          },
+          {
+            "id": "D",
+            "text": "A aur R dono sahi hain, lekin R, A ka sahi explanation nahi hai"
+          }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Dono statements sahi hain aur R, A ka correct explanation hai! Pancreatic proteases (Trypsin, Chymotrypsin) aur Lipase inactive 'Zymogens' ke roop mein release hote hain — Trypsinogen, Chymotrypsinogen, Proelastase, etc. Agar yeh premature active ho jayein (Pancreas mein hi), toh woh pancreatic tissue digest karne lagte hain — 'Acute Pancreatitis' — excruciating abdominal pain. Alcohol aur gallstones acute pancreatitis ke common causes hain. Enterokinase safely Duodenum mein Trypsinogen activate karta hai — Pancreas se door. Yeh zymogen concept NEET 2019 mein exact Assertion-Reason mein aaya tha!"
+      },
+      "navigation": {
+        "next": "card_52_final_quiz3",
+        "button_text": "Next Question ➔"
+      }
+    },
+    {
+      "card_id": "card_52_final_quiz3",
+      "card_slug": "card_52_final_quiz3",
+      "type": "final_quiz",
+      "concept_id": "master_quiz_3",
+      "level": 5,
+      "progress": {
+        "current": 52,
+        "total": 60
+      },
+      "quiz_payload": {
+        "question": "🏆 MASTER QUIZ Q3/5 — SSC/Railway Speed Round — Inme se kaun sa match GALAT hai?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Gastrin — Stomach — HCl secretion badhana"
+          },
+          {
+            "id": "B",
+            "text": "Secretin — Duodenum — NaHCO3 release (acid neutralize)"
+          },
+          {
+            "id": "C",
+            "text": "CCK — Liver — Bile production"
+          },
+          {
+            "id": "D",
+            "text": "GIP — Duodenum — Stomach acid inhibit"
+          }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Option C GALAT hai — CCK (Cholecystokinin) LIVER se nahi aata! CCK Duodenum ki I-cells se release hota hai — aur yeh Gallbladder ko bile release karne ka signal deta hai, Liver ko bile BANANE ka nahi! Liver continuously bile banata hai regardless — Gallbladder store karta hai — CCK Gallbladder ko squeeze karta hai bile bahar nikalne ke liye! Gastrin = Stomach (sahi), Secretin = Duodenum → NaHCO3 (sahi), GIP = Duodenum → stomach inhibit (sahi). CCK = Duodenum se, Gallbladder aur Pancreas ko target karta hai. Yeh match BPSC 2021 aur SSC CGL 2020 mein direct aaya tha!"
+      },
+      "navigation": {
+        "next": "card_53_final_quiz4",
+        "button_text": "Next Question ➔"
+      }
+    },
+    {
+      "card_id": "card_53_final_quiz4",
+      "card_slug": "card_53_final_quiz4",
+      "type": "final_quiz",
+      "concept_id": "master_quiz_4",
+      "level": 5,
+      "progress": {
+        "current": 53,
+        "total": 60
+      },
+      "quiz_payload": {
+        "question": "🏆 MASTER QUIZ Q4/5 — UPSC Prelims Level: Holozoic nutrition ke 5 steps ka SAHI kram identify karo:",
+        "options": [
+          {
+            "id": "A",
+            "text": "Ingestion → Absorption → Digestion → Assimilation → Egestion"
+          },
+          {
+            "id": "B",
+            "text": "Ingestion → Digestion → Absorption → Assimilation → Egestion"
+          },
+          {
+            "id": "C",
+            "text": "Digestion → Ingestion → Absorption → Egestion → Assimilation"
+          },
+          {
+            "id": "D",
+            "text": "Ingestion → Digestion → Assimilation → Absorption → Egestion"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Holozoic Nutrition ke 5 steps ka sahi kram: (1) Ingestion — khaana lena (mouth mein). (2) Digestion — mechanical aur chemical breakdown. (3) Absorption — digested nutrients blood/lymph mein absorb (small intestine). (4) Assimilation — absorbed nutrients body cells use karte hain energy, growth, repair ke liye. (5) Egestion — undigested waste bahar (anus se). Common trap: Assimilation pehle, Egestion baad — jo option D mein galat diya gaya hai. Absorption pehle honi chahiye, tab hi Assimilation ho sakti hai. BPSC 2019 aur SSC CGL mein yeh sequence arrange karne wala question aaya tha!"
+      },
+      "navigation": {
+        "next": "card_54_final_quiz5",
+        "button_text": "Next Question ➔"
+      }
+    },
+    {
+      "card_id": "card_54_final_quiz5",
+      "card_slug": "card_54_final_quiz5",
+      "type": "final_quiz",
+      "concept_id": "master_quiz_5",
+      "level": 5,
+      "progress": {
+        "current": 54,
+        "total": 60
+      },
+      "quiz_payload": {
+        "question": "🏆 MASTER QUIZ Q5/5 — NEET Officer Supreme: Inme se kaun se statements Absorption ke baare mein SAHI hain?\n(1) Glucose portal vein se liver mein jaata hai\n(2) Fatty acids Lacteals mein Chylomicrons ke roop mein absorb hote hain\n(3) Vitamin B12 Duodenum mein absorb hota hai Intrinsic Factor ke saath\n(4) Bile salts Ileum mein absorb hoke Enterohepatic Circulation mein participate karte hain\n(5) Large intestine mein Iron aur Calcium best absorb hote hain",
+        "options": [
+          {
+            "id": "A",
+            "text": "1, 2 aur 4"
+          },
+          {
+            "id": "B",
+            "text": "Sabhi 1, 2, 3, 4, 5"
+          },
+          {
+            "id": "C",
+            "text": "1, 2, 3 aur 4"
+          },
+          {
+            "id": "D",
+            "text": "Sirf 2 aur 4"
+          }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Statements 1, 2 aur 4 SAHI hain. Statement 3 GALAT — Vitamin B12 ILEUM mein absorb hota hai, Duodenum mein nahi! Intrinsic Factor (Parietal cells se) Vitamin B12 ke saath complex banata hai aur Ileum mein absorb hota hai. Statement 5 GALAT — Iron aur Calcium DUODENUM mein best absorb hote hain, Large intestine mein nahi! Large intestine = water, electrolytes, Vitamin K. Statement 1 sahi: Glucose → blood capillaries → portal vein → liver. Statement 2 sahi: Fat → Lacteals → Chylomicrons. Statement 4 sahi: Bile salts Ileum mein absorb = Enterohepatic Circulation. Yeh 5-statement question NEET 2022 mein exact is format mein aaya tha!"
+      },
+      "navigation": {
+        "next": "card_55_bonus_connection",
+        "button_text": "One More Insight ➔"
+      }
+    },
+    {
+      "card_id": "card_55_bonus_connection",
+      "card_slug": "card_55_bonus_connection",
+      "type": "chat",
+      "concept_id": "cross_system_connections",
+      "level": 5,
+      "progress": {
+        "current": 55,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, aaj ek cross-system connection — Digestive System aur Circulatory System! Absorbed glucose small intestine se portal vein mein jaata hai → liver mein → blood mein → tissues. Liver zyada glucose ko 'Glycogen' mein store karta hai. Khane ke baad: Insulin (Pancreas) → glucose cells mein bhejta hai → blood sugar normal. Bhook lagti hai: Glucagon (Pancreas) → Glycogen → Glucose → blood sugar normal. Yeh connection BPSC aur NEET dono mein integration questions banata hai!",
+          "emotion": "🔗"
+        },
+        {
+          "speaker": "raju",
+          "text": "Insulin = glucose store karo, Glucagon = glucose nikalo! Dono pancreas se aur dono opposite kaam karte hain!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Perfect! Aur ek last fascinating fact — Gut Microbiome! Large intestine mein 100 trillion bacteria rehte hain — body ki total cells se 10 times zyada! Yeh bacteria: Vitamin K2 banate hain, Short-chain fatty acids banate hain, Immune system train karte hain, Mental health influence karte hain ('Gut-Brain Axis'!). Antibiotic lene se microbiome disturb hota hai — isliye probiotics (dahi, yogurt) antibiotic ke saath lete hain! Yeh UPSC Prelims mein aadhunik current affairs angle se aaya hai!",
+          "emotion": "🦠"
+        },
+        {
+          "speaker": "raju",
+          "text": "Gut mein 100 trillion bacteria!! Aur Gut-Brain connection?? Sir dahi khaana probiotics ke liye — iska science bhi samajh aaya ab!"
+        }
+      ],
+      "navigation": {
+        "next": "card_56_guess_final",
+        "button_text": "Next ➔"
+      }
+    },
+    {
+      "card_id": "card_56_guess_final",
+      "card_slug": "card_56_guess_final",
+      "type": "guess",
+      "concept_id": "final_guess_comprehensive",
+      "level": 5,
+      "progress": {
+        "current": 56,
+        "total": 60
+      },
+      "guess_payload": {
+        "question": "🎯 Final Boss Guess — Yeh organ body mein sabse bada internal organ bhi hai, sabse bada gland bhi hai, bile banata hai, urea banata hai, glycogen store karta hai, blood clotting factors banata hai, aur 70% remove hone ke baad bhi regenerate kar sakta hai. Kaun hai yeh superhero organ?",
+        "hint": "💡 Hint: Iska naam sun ke lagta hai kuch na kuch 'deliver' karna ka kaam hai!",
+        "options": [
+          {
+            "id": "A",
+            "text": "Pancreas"
+          },
+          {
+            "id": "B",
+            "text": "Spleen"
+          },
+          {
+            "id": "C",
+            "text": "Liver"
+          },
+          {
+            "id": "D",
+            "text": "Kidney"
+          }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Liver! Sabse bada internal organ + sabse bada gland dono! Functions: (1) Bile production (fat emulsification). (2) Glycogen storage aur Glycogenolysis, Gluconeogenesis. (3) Urea synthesis (Ornithine Cycle — ammonia se). (4) Blood clotting factors (Fibrinogen, Prothrombin). (5) Albumin (blood osmotic pressure). (6) Detoxification (drugs, alcohol). (7) RBC destruction (Spleen ke saath). (8) Vitamin D activation. Weight 1.2-1.5 kg. Dual blood supply (Hepatic Artery + Portal Vein). 70% hata do — phir bhi grow karta hai! Exam mein 'Largest gland = Liver' aur 'Largest organ overall = Skin' — dono yaad rakho!"
+      },
+      "navigation": {
+        "next": "card_57_chapter_trophy",
+        "button_text": "Claim Trophy 🏆"
+      }
+    },
+    {
+      "card_id": "card_57_chapter_trophy",
+      "card_slug": "card_57_chapter_trophy",
+      "type": "milestone",
+      "concept_id": "chapter_completion",
+      "level": 5,
+      "progress": {
+        "current": 57,
+        "total": 60
+      },
+      "milestone_payload": {
+        "title": "🏆 CHAPTER COMPLETE — DIGESTIVE SYSTEM MASTER!",
+        "badge_emoji": "🎓",
+        "completed_topic": "Digestive System — Complete Chapter (NCERT + PYQ Level)",
+        "xp_earned": 600,
+        "milestone_progress": "All 6 Modules + Master Quiz Clear!",
+        "motivational_quote": "Ptyalin se Secretin tak, Bile emulsification trap se Celiac Disease tak, Enterokinase se Enterohepatic Circulation tak — tumne Digestive System ka poora officer-level knowledge achieve kar liya! BPSC, SSC, Railway, NEET — koi bhi question roke nahi sakta!"
+      },
+      "navigation": {
+        "next": "card_58_next_chapter_teaser",
+        "button_text": "See What's Next 🚀"
+      }
+    },
+    {
+      "card_id": "card_58_next_chapter_teaser",
+      "card_slug": "card_58_next_chapter_teaser",
+      "type": "chat",
+      "concept_id": "next_chapter_hook",
+      "level": 5,
+      "progress": {
+        "current": 58,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, ek aakhri curiosity — tumne dekha ki khaana digest hokar glucose banta hai, jo blood mein jaata hai. Lekin yeh glucose cells mein energy kaise banta hai? Mitochondria mein ek amazing process hoti hai — 'Cellular Respiration' — jisme glucose todke ATP (energy) banta hai. Aur ek hidden fact — ek glucose molecule se 36-38 ATP molecules bante hain! Yeh 'Krebs Cycle' aur 'Electron Transport Chain' milke karte hain — poori body ki power generation!",
+          "emotion": "⚡"
+        },
+        {
+          "speaker": "raju",
+          "text": "Glucose se 36-38 ATP?? Sir phir khaane se itni energy kaise milti hai ek baar mein?? Cellular Respiration ka poora chapter banana hai!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Aur wahan aur bhi bomb hain — Glycolysis (10 steps!), Krebs Cycle (8 reactions), Electron Transport Chain, aur sabse bada debate — 36 ATP ya 38 ATP? Exam mein dono answers aate hain alag-alag textbooks mein! Aur photosynthesis ka mirror — plants mein CO2 se glucose kaise banta hai Calvin Cycle mein — toh Respiratory System ke baad Photosynthesis bhi cover karni hai. Har chapter ek nayi duniya hai!",
+          "emotion": "🌟"
+        },
+        {
+          "speaker": "raju",
+          "text": "36 vs 38 ATP debate?? Sir ab toh ruk hi nahi sakte — Cellular Respiration ka chapter immediately shuru karte hain!"
+        }
+      ],
+      "navigation": {
+        "next": "card_59_farewell_motivation",
+        "button_text": "Final Card ➔"
+      }
+    },
+    {
+      "card_id": "card_59_farewell_motivation",
+      "card_slug": "card_59_farewell_motivation",
+      "type": "chat",
+      "concept_id": "chapter_farewell",
+      "level": 5,
+      "progress": {
+        "current": 59,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, aaj tumne jo journey ki — mouth se anus tak — ek roti ka 8-9 meter ka safar tumhare dimag mein permanent print ho gaya! Ptyalin, Pepsinogen, Enterokinase, Bile emulsification, Villi ka 200 sq meter, Secretin ka 1902 Nobel connection, H. pylori ka drama — yeh sab tumne sirf padha nahi — samjha, connect kiya, aur exam mein use karne ke liye taiyar kiya!",
+          "emotion": "🌟"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir seriously — pehle Digestive System mujhe boring lagta tha — sirf khaana hajaM! Ab pata chala kitna amazing science hai peeche! Har organ ka design perfect reason se hai!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Yahi to biology ka jadu hai! Jab tum next time khaana khao — think about Ptyalin kaam kar raha hai, Peristalsis push kar rahi hai, Villi nutrients capture kar rahe hain, Liver glycogen store kar raha hai! Biology roz ki zindagi mein hai — bas dekhne ki nazar chahiye. Aur wahi nazar hi tumhe officer banayegi! Cellular Respiration mein milte hain!",
+          "emotion": "🎓"
+        },
+        {
+          "speaker": "raju",
+          "text": "Ab khaana khate waqt biology yaad aayegi! Sir chalte hain — Cellular Respiration dekhna hai. ATP ka raaz kholna hai!"
+        }
+      ],
+      "navigation": {
+        "next": "card_60_final_milestone",
+        "button_text": "Final Card ➔"
+      }
+    },
+    {
+      "card_id": "card_60_final_milestone",
+      "card_slug": "card_60_final_milestone",
+      "type": "milestone",
+      "concept_id": "chapter_final_farewell",
+      "level": 5,
+      "progress": {
+        "current": 60,
+        "total": 60
+      },
+      "milestone_payload": {
+        "title": "BIOLOGY OFFICER IN MAKING! 🌟",
+        "badge_emoji": "🍽️",
+        "completed_topic": "Digestive System — 100% Complete",
+        "xp_earned": 50,
+        "milestone_progress": "Chapter 100% Done — Ready for Cellular Respiration!",
+        "motivational_quote": "Mouth se anus tak, Ptyalin se Secretin tak, Villi se Liver tak — tumne ek complete chapter master kiya jisme BPSC, SSC, Railway, NEET sab ke questions hain. Roti ka science ab tumhare haath mein hai. Cellular Respiration mein ATP ka raaz kholne chalte hain — agle chapter mein milte hain!"
+      },
+      "navigation": {
+        "next": null,
+        "button_text": "Chapter Complete! 🎓"
+      }
+    }
+  ]
+}
