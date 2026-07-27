@@ -1,14 +1,8 @@
+
 {
-  "topic_id": "cell_biology_complete",
-  "topic_title": "Cell Biology - The Unit of Life",
-  "target_exams": [
-    "BPSC",
-    "BSSC",
-    "RRB NTPC",
-    "SSC CGL",
-    "NEET",
-    "UPSC Prelims"
-  ],
+  "topic_id": "cell_biology_master",
+  "topic_title": "Cell Biology: The Complete Chapter",
+  "target_exams": ["BPSC", "BSSC", "RRB NTPC", "SSC CGL", "NEET", "UPSC Prelims"],
   "total_cards": 60,
   "characters": {
     "aman": {
@@ -27,45 +21,36 @@
       "card_id": "card_01_intro",
       "card_slug": "card_01_intro",
       "type": "intro",
-      "concept_id": "chapter_introduction",
+      "concept_id": "chapter_intro",
       "level": 1,
       "progress": {
         "current": 1,
         "total": 60
       },
       "intro_payload": {
+        "chapter_icon": "🔬",
         "chapter_title": "Cell Biology",
-        "chapter_subtitle": "The Unit of Life",
-        "chapter_icon": "🧬",
-        "target_exams": [
-          "BPSC",
-          "BSSC",
-          "RRB NTPC",
-          "SSC CGL",
-          "NEET",
-          "UPSC Prelims"
-        ],
+        "subtitle": "The Smallest Unit That Makes You — YOU!",
+        "target_exams": ["BPSC", "BSSC", "RRB NTPC", "SSC CGL", "NEET", "UPSC Prelims"],
         "learning_outcomes": [
-          "Cell Discovery & Scientists (Hooke, Leeuwenhoek, Brown)",
-          "Cell Theory & Exceptions (Schleiden, Schwann, Virchow)",
-          "Prokaryotic vs Eukaryotic Cells",
-          "Cell Size, Shape & Measurement Units",
-          "Cell Membrane & Cell Wall Structures",
-          "Nucleus - Brain of the Cell",
-          "Cell Organelles & Their Nicknames",
-          "BPSC/NEET Level Traps & PYQs"
+          "Understand what a cell is and why Robert Hooke discovered it",
+          "Distinguish between Prokaryotic and Eukaryotic cells",
+          "Master all cell organelles, their functions & exam nicknames",
+          "Understand Cell Membrane structure (Fluid Mosaic Model)",
+          "Know Cell Division: Mitosis vs Meiosis — every exam trap",
+          "Crack BPSC multi-statement & NEET assertion-reason questions on cells"
         ],
-        "estimated_time": "45 minutes",
-        "total_modules": 6
+        "total_modules": 6,
+        "estimated_time": "45 mins"
       },
       "navigation": {
-        "next": "card_02_start",
+        "next": "card_02_what_is_cell",
         "button_text": "Start Learning 🚀"
       }
     },
     {
-      "card_id": "card_02_start",
-      "card_slug": "card_02_start",
+      "card_id": "card_02_what_is_cell",
+      "card_slug": "card_02_what_is_cell",
       "type": "chat",
       "concept_id": "cell_discovery_intro",
       "level": 1,
@@ -76,39 +61,33 @@
       "messages": [
         {
           "speaker": "aman",
-          "text": "Raju, tumhara mobile charge khatam hone par chalta hai?"
+          "text": "Raju, ek kaam karo — apne haath ki skin ko dhyan se dekho. Kya tumhe lagta hai yeh skin ek hi cheez se bani hai, ya bahut saari choti-choti building blocks se?",
+          "emotion": "🤔"
         },
         {
           "speaker": "raju",
-          "text": "Nahi sir... battery low ho jaye to off ho jata hai."
+          "text": "Sir... lagta hai ek hi cheez hai, jaise mitti ki deewar hoti hai!"
         },
         {
           "speaker": "aman",
-          "text": "Sahi! Mobile ka sabse chhota working part kya hai jo usko 'alive' rakhta hai?"
+          "text": "Bilkul wahi galti jo 99% log karte hain! Dekho — har deewar bhi asal mein alag-alag eentein jodhkar banti hai, right? Usi tarah tumhara poora sharir — skin, dil, dimag — sab kuch chhoti-chhoti units se bana hai jinhein hum 'Cell' kehte hain. Yeh itni choti hoti hain ki aankhon se nahi dikhti!",
+          "emotion": "😮"
         },
         {
           "speaker": "raju",
-          "text": "Chip? Ya processor?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Bilkul! Chip = smallest working unit. Par wo 'alive' nahi hai. Tumhare body mein ek aisi smallest unit hai jo LIVING hai! 🧬"
-        },
-        {
-          "speaker": "raju",
-          "text": "Kya hai wo sir?"
+          "text": "Hain?? Matlab mera poora sharir anginat chhoti-chhoti cheezein hain? Koi inhein pehle kaise dekha phir?"
         }
       ],
       "navigation": {
-        "next": "card_03_cell_reveal",
-        "button_text": "Batao! ➔"
+        "next": "card_03_hooke_discovery",
+        "button_text": "Next Card ➔"
       }
     },
     {
-      "card_id": "card_03_cell_reveal",
-      "card_slug": "card_03_cell_reveal",
+      "card_id": "card_03_hooke_discovery",
+      "card_slug": "card_03_hooke_discovery",
       "type": "chat",
-      "concept_id": "cell_definition",
+      "concept_id": "robert_hooke_discovery",
       "level": 1,
       "progress": {
         "current": 3,
@@ -117,40 +96,33 @@
       "messages": [
         {
           "speaker": "aman",
-          "text": "CELL! Jaise mobile chips se bana hai, waise hi tum CELLS se bane ho! 🔬"
+          "text": "Bahut badhiya sawaal! 1665 mein ek scientist the — Robert Hooke. Unhone ek bottle cork ka얇a tukda liya aur khud ke banaye microscope se dekha. Unhone usme choti-choti kothri jaisi structures dekhin — bilkul jaise kisi monastery ke chhote-chhote kamre hote hain. Isliye unhone in kamron ko 'Cellula' naam diya — jo Latin mein 'chhote kamre' ko kehte hain. Yahan se 'Cell' word aaya!",
+          "emotion": "📖"
         },
         {
           "speaker": "raju",
-          "text": "Matlab main cells se bana hoon? Kitni hongi mere mein?"
+          "text": "Toh unhone zinda cell nahi dekha tha? Sirf cork ke kamre dekhe the?"
         },
         {
           "speaker": "aman",
-          "text": "Lagbhag 37 TRILLION! Aur har cell ek chhota living organism jaisa kaam karta hai!"
+          "text": "Exactly! Yahin sabse bada exam trap hai — Hooke ne dead cell walls dekhi thi, zinda cells nahi! Zinda cells pehli baar Anton van Leeuwenhoek ne 1674 mein pond water mein dekhin. BPSC aur SSC dono baar-baar Hooke vs Leeuwenhoek ka comparison poochh chuke hain. Dono ke naam aur saal pakke yaad rakhna!",
+          "emotion": "⚠️"
         },
         {
           "speaker": "raju",
-          "text": "Hain?? Itni zyada? 😲"
-        },
-        {
-          "speaker": "aman",
-          "text": "Haan! Par sabse pehle cell ko DISCOVER kisne kiya - ye BPSC/SSC ka favorite hai...",
-          "emotion": "⚡"
-        },
-        {
-          "speaker": "raju",
-          "text": "Kaun tha wo?"
+          "text": "Sir ye to pakka confuse karega exam mein — Hooke 1665, Leeuwenhoek 1674... okay okay, yaad karta hun!"
         }
       ],
       "navigation": {
-        "next": "card_04_hooke_story",
-        "button_text": "Jaanna hai! ➔"
+        "next": "card_04_cell_theory",
+        "button_text": "Next Card ➔"
       }
     },
     {
-      "card_id": "card_04_hooke_story",
-      "card_slug": "card_04_hooke_story",
+      "card_id": "card_04_cell_theory",
+      "card_slug": "card_04_cell_theory",
       "type": "chat",
-      "concept_id": "robert_hooke_discovery",
+      "concept_id": "cell_theory",
       "level": 1,
       "progress": {
         "current": 4,
@@ -159,218 +131,169 @@
       "messages": [
         {
           "speaker": "aman",
-          "text": "1665 ki baat hai... England mein ek scientist tha - ROBERT HOOKE."
+          "text": "Ab ek aur badi baat — sirf cell dekhna kaafi nahi tha. Do scientists ne milke 1838-1839 mein ek poori theory di. Matthias Schleiden ne kaha — 'Sab plants cells se bane hain,' aur Theodor Schwann ne kaha — 'Sab animals bhi cells se bane hain.' Phir Rudolf Virchow ne 1855 mein sabse bada add-on diya: 'Omnis cellula e cellula' — yani har nayi cell purani cell se hi banti hai!",
+          "emotion": "🧪"
         },
         {
           "speaker": "raju",
-          "text": "Unhone cell dekha?"
+          "text": "Matlab cell khud hi cell banati hai? Toh pehli cell kahan se aayi, sir?"
         },
         {
           "speaker": "aman",
-          "text": "Haan! Usne bottle ki CORK (dhakkan wala material) ko microscope se dekha... chhote chhote boxes dikhe!"
+          "text": "Ruko — yeh sawaal philosophy mein jaata hai, biology mein nahi! Exam ke liye itna yaad rakho: Cell Theory ke 3 points — (1) Sab living things cells se bane hain, (2) Cell life ki basic unit hai, (3) Har cell ek purani cell se aati hai. Virchow ka ek addition hai jo NEET mein directly poochha gaya hai — 'Cell arises from pre-existing cells.' Pakka yaad karo!",
+          "emotion": "📌"
         },
         {
           "speaker": "raju",
-          "text": "Boxes?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Haan! Madhumakhi ke chatte jaisa pattern! 🐝 Usne socha ye chhoti kothriyan hain... naam diya CELL (matlab room)."
-        },
-        {
-          "speaker": "raju",
-          "text": "Ohh! To cell matlab chhoti kothri!"
+          "text": "Achhaaaa... toh Schleiden + Schwann = Cell Theory, aur Virchow ne ek extra rule add kiya. Got it!"
         }
       ],
       "navigation": {
-        "next": "card_05_hooke_trap",
-        "button_text": "Aage sunao ➔"
+        "next": "card_05_quiz1",
+        "button_text": "Next Card ➔"
       }
     },
     {
-      "card_id": "card_05_hooke_trap",
-      "card_slug": "card_05_hooke_trap",
-      "type": "chat",
-      "concept_id": "hooke_dead_cells_trap",
-      "level": 2,
+      "card_id": "card_05_quiz1",
+      "card_slug": "card_05_quiz1",
+      "type": "quiz",
+      "concept_id": "cell_theory_quiz",
+      "level": 1,
       "progress": {
         "current": 5,
         "total": 60
       },
-      "messages": [
-        {
-          "speaker": "aman",
-          "text": "⚠️ BPSC TRAP ALERT! Hooke ne jo dekha wo DEAD cells the!",
-          "emotion": "⚡"
-        },
-        {
-          "speaker": "raju",
-          "text": "Dead cells? Matlab zinda nahi the?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Bilkul! Cork = sukha hua plant tissue. Sirf cell ki deewarein dekhi thi!"
-        },
-        {
-          "speaker": "raju",
-          "text": "To living cell kisne dekha pehli baar?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Uska naam tha LEEUWENHOEK (लीवेनहुक)! 1674 mein pond water dekha... bacteria aur protozoa - LIVING cells! 🦠"
-        },
-        {
-          "speaker": "raju",
-          "text": "Achhaaaa... to living cell ka credit isko!"
-        }
-      ],
+      "quiz_payload": {
+        "question": "Q1/3: Robert Hooke ne 1665 mein cell kisme observe kiya tha?",
+        "options": [
+          { "id": "A", "text": "Pond water mein zinda organisms mein" },
+          { "id": "B", "text": "Cork (bottle tree bark) ki dead cell walls mein" },
+          { "id": "C", "text": "Human blood mein" },
+          { "id": "D", "text": "Onion ki epidermis mein" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Robert Hooke ne 1665 mein cork ki얇i slice ko apne microscope se dekha aur dead cell walls observe kiin, jinhe unhone 'cellulae' (chhote kamre) kaha. Zinda cells pehli baar Anton van Leeuwenhoek ne 1674 mein pond water mein dekhin. Yeh BPSC aur SSC ka classic trap question hai!"
+      },
       "navigation": {
-        "next": "card_06_quiz_hooke",
-        "button_text": "Quiz time! ➔"
+        "next": "card_06_quiz2",
+        "button_text": "Check Answer & Continue ➔"
       }
     },
     {
-      "card_id": "card_06_quiz_hooke",
-      "card_slug": "card_06_quiz_hooke",
+      "card_id": "card_06_quiz2",
+      "card_slug": "card_06_quiz2",
       "type": "quiz",
-      "concept_id": "hooke_discovery_test",
-      "level": 2,
+      "concept_id": "cell_theory_quiz2",
+      "level": 1,
       "progress": {
         "current": 6,
         "total": 60
       },
       "quiz_payload": {
-        "question": "Robert Hooke (1665) ne cell discover karne ke liye kaunsa material use kiya?",
+        "question": "Q2/3: 'Omnis cellula e cellula' — yeh famous statement kisne diya tha?",
         "options": [
-          {
-            "id": "A",
-            "text": "Pond water (talab ka paani)"
-          },
-          {
-            "id": "B",
-            "text": "Cork (bottle ki dhakkan)"
-          },
-          {
-            "id": "C",
-            "text": "Onion peel (pyaaz ki jhilli)"
-          },
-          {
-            "id": "D",
-            "text": "Human blood (khoon)"
-          }
+          { "id": "A", "text": "Matthias Schleiden" },
+          { "id": "B", "text": "Theodor Schwann" },
+          { "id": "C", "text": "Rudolf Virchow" },
+          { "id": "D", "text": "Robert Hooke" }
         ],
-        "correct_option_id": "B",
-        "explanation": "Cork! Hooke ne bottle ke cork mein DEAD cell walls dekhe. Yaad rakho: Hooke = Cork = 1665 = Dead cells. Living cells = Leeuwenhoek (1674). SSC/Railway direct question!"
+        "correct_option_id": "C",
+        "explanation": "'Omnis cellula e cellula' ka matlab hai 'Har cell ek purani cell se aati hai.' Yeh Rudolf Virchow ne 1855 mein kaha tha. Schleiden (1838) ne plants ke liye aur Schwann (1839) ne animals ke liye cell theory di thi. Virchow ka addition cell theory ka third aur most important point hai jo NEET mein directly poochha jaata hai."
       },
       "navigation": {
-        "next": "card_07_quiz_living",
-        "button_text": "Question 2/3 ➔"
+        "next": "card_07_quiz3",
+        "button_text": "Check Answer & Continue ➔"
       }
     },
     {
-      "card_id": "card_07_quiz_living",
-      "card_slug": "card_07_quiz_living",
+      "card_id": "card_07_quiz3",
+      "card_slug": "card_07_quiz3",
       "type": "quiz",
-      "concept_id": "leeuwenhoek_test",
-      "level": 2,
+      "concept_id": "cell_theory_quiz3",
+      "level": 1,
       "progress": {
         "current": 7,
         "total": 60
       },
       "quiz_payload": {
-        "question": "Living cells ko sabse pehle kisne observe kiya?",
+        "question": "Q3/3: Cell Theory ke anusar, inme se kaun sa statement GALAT hai?",
         "options": [
-          {
-            "id": "A",
-            "text": "Robert Hooke (1665)"
-          },
-          {
-            "id": "B",
-            "text": "Leeuwenhoek (1674)"
-          },
-          {
-            "id": "C",
-            "text": "Robert Brown (1831)"
-          },
-          {
-            "id": "D",
-            "text": "Schleiden (1838)"
-          }
+          { "id": "A", "text": "Sab living organisms cells se bane hain" },
+          { "id": "B", "text": "Cell life ki structural aur functional unit hai" },
+          { "id": "C", "text": "Virus bhi Cell Theory ke under aate hain" },
+          { "id": "D", "text": "Nayi cells purani cells se banti hain" }
         ],
-        "correct_option_id": "B",
-        "explanation": "Leeuwenhoek (1674)! Pond water mein bacteria aur protozoa dekhe. 'Father of Microbiology' bhi kehte hain isko. Hooke ne sirf dead cells dekhe the."
+        "correct_option_id": "C",
+        "explanation": "Yeh BPSC ka favorite trap hai! Virus Cell Theory ka EXCEPTION hai — kyunki virus apne aap reproduce nahi kar sakta, ise host cell chahiye. Isliye virus ko 'living' aur 'non-living' ke beech ki cheez maana jaata hai. Cell Theory strictly cellular organisms par apply hoti hai, virus par nahi. UPSC Prelims mein bhi yeh trap use ho chuka hai!"
       },
       "navigation": {
-        "next": "card_08_quiz_nucleus",
-        "button_text": "Question 3/3 ➔"
+        "next": "card_08_milestone1",
+        "button_text": "Check Answer & Continue ➔"
       }
     },
     {
-      "card_id": "card_08_quiz_nucleus",
-      "card_slug": "card_08_quiz_nucleus",
-      "type": "quiz",
-      "concept_id": "brown_nucleus_test",
-      "level": 2,
+      "card_id": "card_08_milestone1",
+      "card_slug": "card_08_milestone1",
+      "type": "milestone",
+      "concept_id": "module1_complete",
+      "level": 1,
       "progress": {
         "current": 8,
         "total": 60
       },
-      "quiz_payload": {
-        "question": "NUCLEUS ki discovery kisne ki?",
-        "options": [
-          {
-            "id": "A",
-            "text": "Robert Hooke"
-          },
-          {
-            "id": "B",
-            "text": "Leeuwenhoek"
-          },
-          {
-            "id": "C",
-            "text": "Robert Brown"
-          },
-          {
-            "id": "D",
-            "text": "Virchow"
-          }
-        ],
-        "correct_option_id": "C",
-        "explanation": "Robert Brown (1831)! Orchid plant ki cells mein har cell ke beech mein ek dense, round structure dekha - NUCLEUS! Guthli jaisa dikhta hai. BPSC favorite!"
+      "milestone_payload": {
+        "title": "MODULE 1 COMPLETE! 🎉",
+        "badge_emoji": "🔬",
+        "completed_topic": "Cell Discovery & Cell Theory",
+        "xp_earned": 50,
+        "milestone_progress": "Module 1/6 Clear",
+        "motivational_quote": "Hooke se Virchow tak — tum pehle hi step mein officer ban rahe ho! Ab asli game shuru hota hai — Prokaryote vs Eukaryote ka MEGA battle!"
       },
       "navigation": {
-        "next": "card_09_milestone_discovery",
-        "button_text": "Module Complete! ➔"
+        "next": "card_09_prokaryote_intro",
+        "button_text": "Start Module 2 ➔"
       }
     },
     {
-      "card_id": "card_09_milestone_discovery",
-      "card_slug": "card_09_milestone_discovery",
-      "type": "milestone",
-      "concept_id": "discovery_milestone",
+      "card_id": "card_09_prokaryote_intro",
+      "card_slug": "card_09_prokaryote_intro",
+      "type": "chat",
+      "concept_id": "prokaryote_eukaryote_intro",
       "level": 2,
       "progress": {
         "current": 9,
         "total": 60
       },
-      "milestone_payload": {
-        "title": "🎉 MODULE 1 COMPLETE!",
-        "badge_emoji": "🔬",
-        "completed_topic": "Cell Discovery & Scientists",
-        "xp_earned": 50,
-        "milestone_progress": "Module 1/6 Clear ✓",
-        "motivational_quote": "Hooke (Cork, 1665), Leeuwenhoek (Living, 1674), Brown (Nucleus, 1831) - Teen scientists yaad! BPSC/SSC mein scientist names se 30% questions aate hain!"
-      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, socho — ek gaon mein ek kaccha ghar hai jisme koi boundary wall nahi, sab kuch khule mein pada hai. Aur ek pukka ghar hai jisme proper rooms hain, locked almirahs hain. Dono ghar hain, lekin structure mein kitna fark hai! Bilkul aise hi cells ke 2 types hain — ek type mein nucleus hota hi nahi, aur doosre mein proper nucleus hota hai.",
+          "emotion": "🏠"
+        },
+        {
+          "speaker": "raju",
+          "text": "Nucleus matlab? Sir woh round cheez jo biology ki diagram mein dikhate hain?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! Nucleus cell ka control room hai — jaisa ki office mein manager ka cabin. Jo cells bina is cabin ke kaam chalati hain, unhe 'Prokaryotic cells' kehte hain. 'Pro' matlab 'pehle' aur 'karyon' matlab 'nucleus' — toh prokaryote = nucleus ke bina. Bacteria aur Archaea is group mein aate hain. Aur jinke paas proper nucleus hai, woh 'Eukaryotic cells' hain — poore tumhare body ki cells, plants, fungi — sab!",
+          "emotion": "💡"
+        },
+        {
+          "speaker": "raju",
+          "text": "Achhaaaa toh bacteria ka koi nucleus nahi hota?? Phir woh kaise control karte hain apni activities?"
+        }
+      ],
       "navigation": {
-        "next": "card_10_theory_intro",
-        "button_text": "Start Cell Theory Module ➔"
+        "next": "card_10_prokaryote_features",
+        "button_text": "Next Card ➔"
       }
     },
     {
-      "card_id": "card_10_theory_intro",
-      "card_slug": "card_10_theory_intro",
+      "card_id": "card_10_prokaryote_features",
+      "card_slug": "card_10_prokaryote_features",
       "type": "chat",
-      "concept_id": "cell_theory_intro",
+      "concept_id": "prokaryote_features",
       "level": 2,
       "progress": {
         "current": 10,
@@ -379,39 +302,33 @@
       "messages": [
         {
           "speaker": "aman",
-          "text": "Ab tak scientists ne cells DEKHE... par ek bada question baaki tha!"
+          "text": "Bahut intelligent sawaal! Prokaryotic cells ka DNA koi cover nahi hota — woh seedha cytoplasm mein khula pada rehta hai, jaise koi important file bina cover ke rakh di ho! Ise 'Nucleoid region' kehte hain. Koi membrane-bound nucleus nahi. Aur ek aur cheez — prokaryotic cells mein koi bhi membrane-bound organelles nahi hote. Matlab na mitochondria, na chloroplast, na Golgi body — kuch bhi nahi!",
+          "emotion": "🧬"
         },
         {
           "speaker": "raju",
-          "text": "Kya question sir?"
+          "text": "Matlab bacteria bilkul simple hai andar se? Toh phir woh itne dangerous kaise hote hain?"
         },
         {
           "speaker": "aman",
-          "text": "Kya SAARI living cheezein cells se bani hain? Ye prove kaise kare?"
+          "text": "Yehi to biology ka magic hai! Simplicity mein hi power hai. Prokaryotes ke paas 70S ribosomes hote hain — aur BPSC ka trap suno — Eukaryotes ke paas 80S ribosomes hote hain. 'S' matlab Svedberg unit hai — sedimentation rate. Antibiotics jaise Streptomycin 70S ribosomes ko target karke bacteria ko maarte hain, isliye woh hamari 80S wali cells ko nahi maarte! NEET mein yeh concept seedha poochha gaya hai!",
+          "emotion": "⚠️"
         },
         {
           "speaker": "raju",
-          "text": "Hmm... sahi baat hai!"
-        },
-        {
-          "speaker": "aman",
-          "text": "1838-39 mein do German scientists - SCHLEIDEN (plants) aur SCHWANN (animals) ne ek theory di!"
-        },
-        {
-          "speaker": "raju",
-          "text": "Kaunsi theory?"
+          "text": "Oh wow! Toh 70S vs 80S ka fark hi antibiotic ka secret hai?? Ye to zabardast connection hai sir!"
         }
       ],
       "navigation": {
-        "next": "card_11_theory_postulates",
-        "button_text": "Batao theory! ➔"
+        "next": "card_11_eukaryote_features",
+        "button_text": "Next Card ➔"
       }
     },
     {
-      "card_id": "card_11_theory_postulates",
-      "card_slug": "card_11_theory_postulates",
+      "card_id": "card_11_eukaryote_features",
+      "card_slug": "card_11_eukaryote_features",
       "type": "chat",
-      "concept_id": "cell_theory_rules",
+      "concept_id": "eukaryote_features",
       "level": 2,
       "progress": {
         "current": 11,
@@ -420,220 +337,170 @@
       "messages": [
         {
           "speaker": "aman",
-          "text": "CELL THEORY - Teen Golden Rules:\n1️⃣ All living organisms are made of cells\n2️⃣ Cell is basic unit of life"
+          "text": "Ab Eukaryotic cells ki baat karte hain — ye cells zyada developed hain. Inke paas membrane-bound nucleus hota hai, matlab DNA ek cover mein safely rakha hota hai. Iske saath inme mitochondria, chloroplast (plants mein), Golgi body, ER — yeh sab complex organelles hote hain. Size bhi prokaryotes se kaafi bada hota hai — prokaryote 1-10 micrometer, eukaryote 10-100 micrometer!",
+          "emotion": "📐"
         },
         {
           "speaker": "raju",
-          "text": "Teesra rule kya hai?"
+          "text": "Sir ek baat confuse kar rahi hai — plants aur animals dono eukaryote hain, toh unme koi fark nahi kya?"
         },
         {
           "speaker": "aman",
-          "text": "Wo aaya 1855 mein! VIRCHOW ne kaha - 3️⃣ All cells arise from PRE-EXISTING cells!"
+          "text": "Dekho yahan ek hidden trap hai — Plant cell aur Animal cell dono eukaryotic hain, lekin plant cell mein 3 extra cheezein hain jo animal cell mein nahi hoti: (1) Cell wall — outer rigid cover, (2) Chloroplast — photosynthesis ke liye, (3) Large central vacuole — paani store karne ke liye. Aur animal cells mein ek cheez hai jo plants mein nahi — Centrioles! Yeh cell division mein kaam aate hain. Yeh 4 differences BPSC aur SSC mein baar baar poochhe gaye hain!",
+          "emotion": "🌿"
         },
         {
           "speaker": "raju",
-          "text": "Matlab nayi cell purani cell se banti hai?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Exactly! 'Omnis cellula-e-cellula' - Latin mein! Cell divide hoke nayi banati hai. ⚠️ Ye BPSC mein bahut puchha jata hai!",
-          "emotion": "⚡"
-        },
-        {
-          "speaker": "raju",
-          "text": "Teeno scientists yaad rakhne hain?"
+          "text": "Sir mix ho jayega! Centriole animal mein, chloroplast plant mein — okay okay, yaad kar raha hun!"
         }
       ],
       "navigation": {
-        "next": "card_12_virus_exception",
-        "button_text": "Haan, lekin pehle twist! ➔"
+        "next": "card_12_quiz4",
+        "button_text": "Next Card ➔"
       }
     },
     {
-      "card_id": "card_12_virus_exception",
-      "card_slug": "card_12_virus_exception",
-      "type": "chat",
-      "concept_id": "virus_cell_theory_exception",
-      "level": 3,
+      "card_id": "card_12_quiz4",
+      "card_slug": "card_12_quiz4",
+      "type": "quiz",
+      "concept_id": "prokaryote_eukaryote_quiz1",
+      "level": 2,
       "progress": {
         "current": 12,
         "total": 60
       },
-      "messages": [
-        {
-          "speaker": "aman",
-          "text": "⚠️ SABSE BADA TRAP! Cell Theory sabpe apply hota hai?",
-          "emotion": "⚡"
-        },
-        {
-          "speaker": "raju",
-          "text": "Haan na... sabhi living organisms cells se bane hain!"
-        },
-        {
-          "speaker": "aman",
-          "text": "VIRUS! Ismein cell nahi hota! Sirf protein coat + DNA/RNA!"
-        },
-        {
-          "speaker": "raju",
-          "text": "To virus living hai ya non-living?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Dono! 😱 Outside host = Non-living (crystal). Inside host = Living (reproduce karta hai)!"
-        },
-        {
-          "speaker": "raju",
-          "text": "Ye to confusing hai!"
-        }
-      ],
+      "quiz_payload": {
+        "question": "Q1/3: Prokaryotic cells mein ribosomes ka size kya hota hai?",
+        "options": [
+          { "id": "A", "text": "80S" },
+          { "id": "B", "text": "70S" },
+          { "id": "C", "text": "60S" },
+          { "id": "D", "text": "40S" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Prokaryotic cells (jaise bacteria) mein 70S ribosomes hote hain. Eukaryotic cells mein 80S ribosomes hote hain. 'S' Svedberg unit hai jo sedimentation rate measure karta hai. Antibiotics (jaise Streptomycin, Erythromycin) 70S ribosomes ko target karte hain isliye woh human cells (80S) ko affect nahi karte. Yeh NEET aur BPSC dono ka top-frequency concept hai!"
+      },
       "navigation": {
-        "next": "card_13_quiz_theory_1",
-        "button_text": "Quiz mein clear! ➔"
+        "next": "card_13_quiz5",
+        "button_text": "Check Answer & Continue ➔"
       }
     },
     {
-      "card_id": "card_13_quiz_theory_1",
-      "card_slug": "card_13_quiz_theory_1",
+      "card_id": "card_13_quiz5",
+      "card_slug": "card_13_quiz5",
       "type": "quiz",
-      "concept_id": "cell_theory_test_1",
-      "level": 3,
+      "concept_id": "prokaryote_eukaryote_quiz2",
+      "level": 2,
       "progress": {
         "current": 13,
         "total": 60
       },
       "quiz_payload": {
-        "question": "Cell Theory mein 'Omnis cellula-e-cellula' ka contribution kisne diya?",
+        "question": "Q2/3: Inme se kaun si cheez sirf Plant Cell mein hoti hai, Animal Cell mein NAHI?",
         "options": [
-          {
-            "id": "A",
-            "text": "Schleiden"
-          },
-          {
-            "id": "B",
-            "text": "Schwann"
-          },
-          {
-            "id": "C",
-            "text": "Virchow"
-          },
-          {
-            "id": "D",
-            "text": "Robert Brown"
-          }
+          { "id": "A", "text": "Ribosome" },
+          { "id": "B", "text": "Mitochondria" },
+          { "id": "C", "text": "Chloroplast" },
+          { "id": "D", "text": "Cell membrane" }
         ],
         "correct_option_id": "C",
-        "explanation": "Rudolf Virchow (1855)! 'Omnis cellula-e-cellula' = All cells from pre-existing cells. Yaad rakho: Schleiden (plants), Schwann (animals), Virchow (cell division). NEET/BPSC direct!"
+        "explanation": "Chloroplast sirf plant cells (aur algae) mein hota hai — photosynthesis ke liye. Animal cells mein chloroplast nahi hota. Ribosome, Mitochondria, aur Cell membrane dono (plant + animal) cells mein hote hain. Yeh SSC CGL aur RRB NTPC mein seedha poochha gaya hai. Dhyan raho — Centriole animal cells mein hota hai, plant cells mein nahi!"
       },
       "navigation": {
-        "next": "card_14_quiz_theory_2",
-        "button_text": "Question 2/3 ➔"
+        "next": "card_14_quiz6",
+        "button_text": "Check Answer & Continue ➔"
       }
     },
     {
-      "card_id": "card_14_quiz_theory_2",
-      "card_slug": "card_14_quiz_theory_2",
+      "card_id": "card_14_quiz6",
+      "card_slug": "card_14_quiz6",
       "type": "quiz",
-      "concept_id": "cell_theory_test_2",
-      "level": 3,
+      "concept_id": "prokaryote_eukaryote_quiz3",
+      "level": 2,
       "progress": {
         "current": 14,
         "total": 60
       },
       "quiz_payload": {
-        "question": "Cell Theory ka exception kaunsa organism hai?",
+        "question": "Q3/3: BPSC Trap — Inme se kaun sa PROKARYOTIC organism hai?",
         "options": [
-          {
-            "id": "A",
-            "text": "Bacteria"
-          },
-          {
-            "id": "B",
-            "text": "Virus"
-          },
-          {
-            "id": "C",
-            "text": "Amoeba"
-          },
-          {
-            "id": "D",
-            "text": "Yeast"
-          }
+          { "id": "A", "text": "Amoeba" },
+          { "id": "B", "text": "Paramecium" },
+          { "id": "C", "text": "Mycoplasma" },
+          { "id": "D", "text": "Euglena" }
         ],
-        "correct_option_id": "B",
-        "explanation": "VIRUS! Virus mein cell structure nahi - sirf protein coat + genetic material. Ye living aur non-living ke beech mein hai. BPSC ka mega trap!"
+        "correct_option_id": "C",
+        "explanation": "Mycoplasma ek prokaryotic organism hai — yeh bacteria ka ek type hai aur sabse chhota known living organism bhi maana jaata hai. Amoeba, Paramecium, aur Euglena — ye teeno eukaryotic protists hain. Mycoplasma ke paas cell wall bhi nahi hoti — yeh ek aur unique feature hai. BPSC mein Mycoplasma ka naam dekhte hi dhyan se padhna — yeh Prokaryote hai!"
       },
       "navigation": {
-        "next": "card_15_quiz_theory_3",
-        "button_text": "Question 3/3 ➔"
+        "next": "card_15_milestone2",
+        "button_text": "Check Answer & Continue ➔"
       }
     },
     {
-      "card_id": "card_15_quiz_theory_3",
-      "card_slug": "card_15_quiz_theory_3",
-      "type": "quiz",
-      "concept_id": "cell_theory_test_3",
-      "level": 3,
+      "card_id": "card_15_milestone2",
+      "card_slug": "card_15_milestone2",
+      "type": "milestone",
+      "concept_id": "module2_complete",
+      "level": 2,
       "progress": {
         "current": 15,
         "total": 60
       },
-      "quiz_payload": {
-        "question": "Cell Theory ke according, cell kis cheez ka basic unit hai?",
-        "options": [
-          {
-            "id": "A",
-            "text": "Sirf structure (body banane) ka"
-          },
-          {
-            "id": "B",
-            "text": "Sirf function (kaam karne) ka"
-          },
-          {
-            "id": "C",
-            "text": "Structure aur function dono ka"
-          },
-          {
-            "id": "D",
-            "text": "Sirf reproduction ka"
-          }
-        ],
-        "correct_option_id": "C",
-        "explanation": "Structure AND Function dono ka! Cell = Structural aur Functional unit of life. Body banane mein bhi basic unit, kaam karne mein bhi!"
+      "milestone_payload": {
+        "title": "MODULE 2 COMPLETE! 🏆",
+        "badge_emoji": "🦠",
+        "completed_topic": "Prokaryotic vs Eukaryotic Cells",
+        "xp_earned": 75,
+        "milestone_progress": "Module 2/6 Clear",
+        "motivational_quote": "70S vs 80S — yeh ek number ka fark hi tumhara SSC CGL mein marks ka fark karega! Ab andar jaate hain cell ke — organelles ka duniya dekhte hain!"
       },
       "navigation": {
-        "next": "card_16_milestone_theory",
-        "button_text": "Module Complete! ➔"
+        "next": "card_16_cell_membrane_intro",
+        "button_text": "Start Module 3 ➔"
       }
     },
     {
-      "card_id": "card_16_milestone_theory",
-      "card_slug": "card_16_milestone_theory",
-      "type": "milestone",
-      "concept_id": "cell_theory_milestone",
+      "card_id": "card_16_cell_membrane_intro",
+      "card_slug": "card_16_cell_membrane_intro",
+      "type": "chat",
+      "concept_id": "cell_membrane_intro",
       "level": 3,
       "progress": {
         "current": 16,
         "total": 60
       },
-      "milestone_payload": {
-        "title": "🎉 MODULE 2 COMPLETE!",
-        "badge_emoji": "📜",
-        "completed_topic": "Cell Theory & Exceptions",
-        "xp_earned": 60,
-        "milestone_progress": "Module 2/6 Clear ✓",
-        "motivational_quote": "Schleiden+Schwann (1838-39) + Virchow (1855) = Cell Theory! Exception = Virus! NEET/BPSC mein pakka 2-3 questions aate hain!"
-      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, ghar ke bahar ek darwaaza hota hai na — jo decide karta hai ki kaun andar aayega aur kaun nahi? Cell ka bhi ek aisa hi darwaaza hota hai — ise 'Cell Membrane' ya 'Plasma Membrane' kehte hain. Yeh har cell ke bahar hoti hai — animal, plant, bacteria — sab mein. Yeh itni clever hai ki kuch cheezein andar jaane deti hai, kuch bahar — ise 'Selectively Permeable' kehte hain!",
+          "emotion": "🚪"
+        },
+        {
+          "speaker": "raju",
+          "text": "Toh cell membrane rubber ki tarah hogi? Ya koi solid cheez?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Na rubber, na solid — yeh asal mein ek fluid hai! 1972 mein Singer aur Nicolson ne iska model diya — 'Fluid Mosaic Model.' Socho — tum floating hai ek swimming pool mein, aur us pool mein jagah-jagah proteins bhi tair rahi hain. Pool ka paani = lipid bilayer, aur proteins = mosaic pattern mein embedded. Isliye naam hai Fluid Mosaic Model! Yeh NEET ka guaranteed question hai!",
+          "emotion": "💧"
+        },
+        {
+          "speaker": "raju",
+          "text": "Achhaaaa... toh membrane fluid hoti hai! Matlab hil-dul sakti hai? Ye to interesting hai!"
+        }
+      ],
       "navigation": {
-        "next": "card_17_types_intro",
-        "button_text": "Start Cell Types ➔"
+        "next": "card_17_phospholipid_bilayer",
+        "button_text": "Next Card ➔"
       }
     },
     {
-      "card_id": "card_17_types_intro",
-      "card_slug": "card_17_types_intro",
+      "card_id": "card_17_phospholipid_bilayer",
+      "card_slug": "card_17_phospholipid_bilayer",
       "type": "chat",
-      "concept_id": "cell_classification_intro",
-      "level": 2,
+      "concept_id": "phospholipid_bilayer",
+      "level": 3,
       "progress": {
         "current": 17,
         "total": 60
@@ -641,41 +508,34 @@
       "messages": [
         {
           "speaker": "aman",
-          "text": "Raju, gaon mein kitne type ke ghar hote hain?"
+          "text": "Cell membrane ka main structure 'Phospholipid Bilayer' se bana hota hai. Ek phospholipid molecule do hisson mein hota hai — ek hydrophilic 'head' (paani se pyaar karne waala) aur do hydrophobic 'tails' (paani se nafrat karne waale). Bilayer mein dono layers ki tails andar ki taraf hoti hain, aur heads bahar ki taraf — ek sandwich jaisi structure! Paani andar bhi hai, bahar bhi, toh tails beech mein chhup jaati hain.",
+          "emotion": "🥪"
         },
         {
           "speaker": "raju",
-          "text": "Do type sir... chhote kacche ghar aur bade pakke ghar!"
+          "text": "Sir proteins kahan hoti hain is sandwich mein?"
         },
         {
           "speaker": "aman",
-          "text": "Perfect! Cells bhi do types:\n1️⃣ PROKARYOTIC (kaccha - simple)\n2️⃣ EUKARYOTIC (pakka - advanced)"
+          "text": "Shukriya itna barhiya sawaal ke liye! Proteins 2 type ki hoti hain is membrane mein — (1) Integral proteins: jo pure membrane ke aaar-paar ghusi hoti hain, inhe 'Transmembrane proteins' bhi kehte hain — yeh channels banati hain molecules ke aane-jaane ke liye. (2) Peripheral proteins: jo sirf bahar surface pe baithi hoti hain. Aur ek important molecule aur hai — Cholesterol — jo membrane ko fluidity regulate karne mein help karta hai. Temperature badhne par cholesterol fluidity ko ghataata hai!",
+          "emotion": "🔬"
         },
         {
           "speaker": "raju",
-          "text": "Difference kya hai?"
-        },
-        {
-          "speaker": "aman",
-          "text": "NUCLEUS! Prokaryotic mein proper nucleus NAHI, Eukaryotic mein nucleus HAI! ⚠️ BPSC favorite!",
-          "emotion": "⚡"
-        },
-        {
-          "speaker": "raju",
-          "text": "PRO matlab kya?"
+          "text": "Ye mix ho jayega sir — integral andar tak, peripheral bahar... okay, note kar raha hun!"
         }
       ],
       "navigation": {
-        "next": "card_18_prokaryote_detail",
-        "button_text": "Detail batao! ➔"
+        "next": "card_18_osmosis_diffusion",
+        "button_text": "Next Card ➔"
       }
     },
     {
-      "card_id": "card_18_prokaryote_detail",
-      "card_slug": "card_18_prokaryote_detail",
+      "card_id": "card_18_osmosis_diffusion",
+      "card_slug": "card_18_osmosis_diffusion",
       "type": "chat",
-      "concept_id": "prokaryotic_features",
-      "level": 2,
+      "concept_id": "osmosis_diffusion",
+      "level": 3,
       "progress": {
         "current": 18,
         "total": 60
@@ -683,262 +543,205 @@
       "messages": [
         {
           "speaker": "aman",
-          "text": "PRO = Before (पहले), KARYON = Nucleus. Matlab primitive cells!"
+          "text": "Ab membrane ka asli kaam samjhate hain — material transport. Socho tumhari mummy ne aam ka achaar banaya. Kaacche aam mein namak daala — kya hua? Aam ka paani bahar aa gaya! Yeh 'Osmosis' hai — paani ka movement zyada concentration waali jagah (namak) ki taraf hota hai, semi-permeable membrane ke through. Aur jab koi bhi molecule apne aap zyada se kam concentration ki taraf move kare — woh 'Diffusion' hai.",
+          "emotion": "🥭"
         },
         {
           "speaker": "raju",
-          "text": "To nucleus hota hi nahi?"
+          "text": "Hain?? Toh achaar mein jo paani aata hai woh osmosis hai?? Maine kabhi socha nahi tha!"
         },
         {
           "speaker": "aman",
-          "text": "Nuclear MEMBRANE nahi! DNA freely floating - nucleoid region mein."
-        },
-        {
-          "speaker": "raju",
-          "text": "Mitochondria, ER ye sab?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Nahi! Sirf RIBOSOMES - wo bhi 70S type! ⚠️ Ye number yaad rakhna!",
+          "text": "Yehi to hai biology ki khoobsurti! Ab ek aur important term — 'Active Transport.' Diffusion aur Osmosis mein energy nahi lagti — yeh 'Passive Transport' hai. Lekin kuch baar cell ko energy (ATP) laga ke molecules ko concentration ke against move karna padta hai — yeh 'Active Transport' hai. Example — Na+/K+ pump — jo nerve cells mein hota hai. NEET mein Active vs Passive transport ka difference seedha poochha jaata hai!",
           "emotion": "⚡"
         },
         {
           "speaker": "raju",
-          "text": "Example?"
+          "text": "Osmosis = paani ka movement, Diffusion = kisi bhi molecule ka movement, Active = energy lagti hai... ye to ek hi card mein bahut kuch seekh liya sir!"
         }
       ],
       "navigation": {
-        "next": "card_19_eukaryote_detail",
-        "button_text": "Pehle eukaryote! ➔"
+        "next": "card_19_quiz7",
+        "button_text": "Next Card ➔"
       }
     },
     {
-      "card_id": "card_19_eukaryote_detail",
-      "card_slug": "card_19_eukaryote_detail",
-      "type": "chat",
-      "concept_id": "eukaryotic_features",
-      "level": 2,
+      "card_id": "card_19_quiz7",
+      "card_slug": "card_19_quiz7",
+      "type": "quiz",
+      "concept_id": "cell_membrane_quiz1",
+      "level": 3,
       "progress": {
         "current": 19,
         "total": 60
       },
-      "messages": [
-        {
-          "speaker": "aman",
-          "text": "EUKARYOTIC: EU = True, KARYON = Nucleus. TRUE nucleus wale!"
-        },
-        {
-          "speaker": "raju",
-          "text": "Ismein sab hai?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Haan! Nucleus, mitochondria, ER, Golgi - sab! Ribosomes = 80S!"
-        },
-        {
-          "speaker": "raju",
-          "text": "70S aur 80S yaad kaise?"
-        },
-        {
-          "speaker": "aman",
-          "text": "PRO = 70 (smaller), EU = 80 (bigger)! ⚠️ NEET/BPSC direct!",
-          "emotion": "⚡"
-        },
-        {
-          "speaker": "raju",
-          "text": "Examples de dijiye!"
-        }
-      ],
+      "quiz_payload": {
+        "question": "Q1/3: Cell membrane ka 'Fluid Mosaic Model' kisne diya tha?",
+        "options": [
+          { "id": "A", "text": "Watson aur Crick, 1953" },
+          { "id": "B", "text": "Singer aur Nicolson, 1972" },
+          { "id": "C", "text": "Schleiden aur Schwann, 1838" },
+          { "id": "D", "text": "Davson aur Danielli, 1935" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Fluid Mosaic Model Singer aur Nicolson ne 1972 mein diya tha. Isme membrane ek fluid phospholipid bilayer hai jisme proteins mosaic pattern mein embedded hain. Davson aur Danielli ne 1935 mein 'Sandwich Model' diya tha jo baad mein replace ho gaya. Watson aur Crick ne 1953 mein DNA ka double helix model diya. Yeh NEET aur BPSC dono ka direct question hai!"
+      },
       "navigation": {
-        "next": "card_20_types_examples",
-        "button_text": "Examples! ➔"
+        "next": "card_20_quiz8",
+        "button_text": "Check Answer & Continue ➔"
       }
     },
     {
-      "card_id": "card_20_types_examples",
-      "card_slug": "card_20_types_examples",
-      "type": "chat",
-      "concept_id": "cell_types_examples",
-      "level": 2,
+      "card_id": "card_20_quiz8",
+      "card_slug": "card_20_quiz8",
+      "type": "quiz",
+      "concept_id": "cell_membrane_quiz2",
+      "level": 3,
       "progress": {
         "current": 20,
         "total": 60
       },
-      "messages": [
-        {
-          "speaker": "aman",
-          "text": "🦠 PROKARYOTIC = BACTERIA + BLUE-GREEN ALGAE (Cyanobacteria)! Bas!"
-        },
-        {
-          "speaker": "raju",
-          "text": "Sirf do?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Haan! Baaki SABHI eukaryotic - tum, plants, animals, fungi!"
-        },
-        {
-          "speaker": "raju",
-          "text": "Matlab humans eukaryotic?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Bilkul! Sirf bacteria + cyanobacteria prokaryotic! ⚠️ SSC/Railway classification!",
-          "emotion": "⚡"
-        },
-        {
-          "speaker": "raju",
-          "text": "Quiz mein test karo!"
-        }
-      ],
+      "quiz_payload": {
+        "question": "Q2/3: Osmosis mein kya move hota hai?",
+        "options": [
+          { "id": "A", "text": "Solute molecules, kam concentration se zyada concentration ki taraf" },
+          { "id": "B", "text": "Water molecules, kam solute concentration (zyada paani) se zyada solute concentration (kam paani) ki taraf" },
+          { "id": "C", "text": "Water molecules, zyada concentration se kam concentration ki taraf" },
+          { "id": "D", "text": "ATP molecules, membrane ke aaar-paar" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Osmosis mein water molecules semi-permeable membrane ke through move karti hain — zyada water concentration (hypotonic solution = kam solute) se kam water concentration (hypertonic solution = zyada solute) ki taraf. Yeh passive process hai — koi energy nahi lagti. Aam ke achaar mein, namak (high solute) ki wajah se aam ke andar ka paani bahar aata hai — yeh osmosis ka perfect example hai!"
+      },
       "navigation": {
-        "next": "card_21_quiz_types_1",
-        "button_text": "Quiz! ➔"
+        "next": "card_21_quiz9",
+        "button_text": "Check Answer & Continue ➔"
       }
     },
     {
-      "card_id": "card_21_quiz_types_1",
-      "card_slug": "card_21_quiz_types_1",
+      "card_id": "card_21_quiz9",
+      "card_slug": "card_21_quiz9",
       "type": "quiz",
-      "concept_id": "cell_types_test_1",
+      "concept_id": "cell_membrane_quiz3",
       "level": 3,
       "progress": {
         "current": 21,
         "total": 60
       },
       "quiz_payload": {
-        "question": "Prokaryotic cells mein konsa ribosome hota hai?",
+        "question": "Q3/3: NEET Trap — Cell membrane mein Cholesterol ka kya kaam hai?",
         "options": [
-          {
-            "id": "A",
-            "text": "60S"
-          },
-          {
-            "id": "B",
-            "text": "70S"
-          },
-          {
-            "id": "C",
-            "text": "80S"
-          },
-          {
-            "id": "D",
-            "text": "90S"
-          }
+          { "id": "A", "text": "Energy provide karna ATP ke roop mein" },
+          { "id": "B", "text": "Membrane ki fluidity regulate karna — zyada temperature par fluidity ghataata hai" },
+          { "id": "C", "text": "Proteins ko membrane se bahar nikalna" },
+          { "id": "D", "text": "DNA ko protect karna nucleus mein" }
         ],
         "correct_option_id": "B",
-        "explanation": "70S ribosomes! Prokaryotic = 70S, Eukaryotic = 80S. Yaad: PRO-70 (smaller), EU-80 (bigger). NEET/BPSC direct question!"
+        "explanation": "Cholesterol cell membrane ka important component hai jo membrane ki fluidity regulate karta hai. Jab temperature badhti hai toh cholesterol molecules lipids ko zyada hilne se rokta hai (fluidity ghataata hai). Jab temperature girta hai toh cholesterol lipids ko freeze hone se rokta hai (fluidity badhata hai). Yeh 'Fluidity Buffer' ki tarah kaam karta hai. Prokaryotic bacteria mein cholesterol NAHI hota — yeh NEET ka trap hai!"
       },
       "navigation": {
-        "next": "card_22_quiz_types_2",
-        "button_text": "Q 2/3 ➔"
+        "next": "card_22_milestone3",
+        "button_text": "Check Answer & Continue ➔"
       }
     },
     {
-      "card_id": "card_22_quiz_types_2",
-      "card_slug": "card_22_quiz_types_2",
-      "type": "quiz",
-      "concept_id": "cell_types_test_2",
+      "card_id": "card_22_milestone3",
+      "card_slug": "card_22_milestone3",
+      "type": "milestone",
+      "concept_id": "module3_complete",
       "level": 3,
       "progress": {
         "current": 22,
         "total": 60
       },
-      "quiz_payload": {
-        "question": "Konsa organism prokaryotic NAHI hai?",
-        "options": [
-          {
-            "id": "A",
-            "text": "E. coli bacteria"
-          },
-          {
-            "id": "B",
-            "text": "Nostoc (Blue-green algae)"
-          },
-          {
-            "id": "C",
-            "text": "Amoeba"
-          },
-          {
-            "id": "D",
-            "text": "Mycoplasma"
-          }
-        ],
-        "correct_option_id": "C",
-        "explanation": "Amoeba! Ye eukaryotic hai - nucleus present. Sirf bacteria aur cyanobacteria prokaryotic. Railway trap!"
+      "milestone_payload": {
+        "title": "MODULE 3 BLAST! 🔥",
+        "badge_emoji": "🫧",
+        "completed_topic": "Cell Membrane & Transport",
+        "xp_earned": 75,
+        "milestone_progress": "Module 3/6 Clear",
+        "motivational_quote": "Fluid Mosaic Model — tumne woh cheez seekhi jo 90% students skip kar dete hain! Ab andar jaate hain — Cell Organelles ka poora jungle tumhara intezaar kar raha hai!"
       },
       "navigation": {
-        "next": "card_23_quiz_types_3",
-        "button_text": "Q 3/3 ➔"
+        "next": "card_23_nucleus_intro",
+        "button_text": "Start Module 4 ➔"
       }
     },
     {
-      "card_id": "card_23_quiz_types_3",
-      "card_slug": "card_23_quiz_types_3",
-      "type": "quiz",
-      "concept_id": "cell_types_test_3",
+      "card_id": "card_23_nucleus_intro",
+      "card_slug": "card_23_nucleus_intro",
+      "type": "chat",
+      "concept_id": "nucleus_organelles_intro",
       "level": 3,
       "progress": {
         "current": 23,
         "total": 60
       },
-      "quiz_payload": {
-        "question": "Prokaryotic cells mein kya ABSENT hai?",
-        "options": [
-          {
-            "id": "A",
-            "text": "Ribosomes"
-          },
-          {
-            "id": "B",
-            "text": "DNA"
-          },
-          {
-            "id": "C",
-            "text": "Nuclear membrane"
-          },
-          {
-            "id": "D",
-            "text": "Cell membrane"
-          }
-        ],
-        "correct_option_id": "C",
-        "explanation": "Nuclear membrane! DNA hai par nuclear membrane nahi. DNA nucleoid mein freely floating. Ribosomes (70S) present!"
-      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, ab cell ke andar jaate hain — yahan bahut saare organelles hain, har ek ka alag kaam hai. Pehle baat karte hain 'Nucleus' ki — yeh cell ka 'Boss' hai. Iske andar DNA hota hai — jisme poori genetic information hoti hai, jaise ki ek company ka poora master plan safe rakhna. Nucleus ke bahar ek double membrane hoti hai jise 'Nuclear Envelope' kehte hain, aur isme holes hote hain — 'Nuclear Pores' — jo molecules ko andar-bahar jaane dete hain.",
+          "emotion": "👑"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir nucleus ke andar kya hota hai — seedha DNA hai ya kuch aur bhi?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Excellent curiosity! Nucleus ke andar ek aur chhoti jagah hoti hai jise 'Nucleolus' kehte hain — yeh ribosomal RNA (rRNA) banata hai, jo ribosomes banane mein kaam aata hai. Aur DNA yahan chromosomes ke roop mein hota hai — jab cell divide nahi hoti tab DNA 'Chromatin' form mein hota hai, jab divide hoti hai tab 'Chromosome' form lete hain. BPSC favorite trap: Nucleolus ka koi apna membrane nahi hota — woh nucleus ke andar hai lekin alag envelope nahi!",
+          "emotion": "🧬"
+        },
+        {
+          "speaker": "raju",
+          "text": "Nucleolus ke andar koi membrane nahi! Ye pakka exam mein aayega... note kar liya sir!"
+        }
+      ],
       "navigation": {
-        "next": "card_24_milestone_types",
-        "button_text": "Module Done! ➔"
+        "next": "card_24_mitochondria",
+        "button_text": "Next Card ➔"
       }
     },
     {
-      "card_id": "card_24_milestone_types",
-      "card_slug": "card_24_milestone_types",
-      "type": "milestone",
-      "concept_id": "cell_types_milestone",
+      "card_id": "card_24_mitochondria",
+      "card_slug": "card_24_mitochondria",
+      "type": "chat",
+      "concept_id": "mitochondria",
       "level": 3,
       "progress": {
         "current": 24,
         "total": 60
       },
-      "milestone_payload": {
-        "title": "🎉 MODULE 3 COMPLETE!",
-        "badge_emoji": "🦠",
-        "completed_topic": "Prokaryotic vs Eukaryotic",
-        "xp_earned": 60,
-        "milestone_progress": "Module 3/6 Clear ✓",
-        "motivational_quote": "PRO (No nucleus, 70S, Bacteria) vs EU (Nucleus, 80S, Others)! SSC/Railway mein 100% aata hai!"
-      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ab cell ka powerhouse — 'Mitochondria!' Iska nickname hai 'Powerhouse of the Cell' — SSC aur Railway mein yeh seedha poocha jaata hai. Yeh ATP (Adenosine Triphosphate) banata hai — energy currency of the body. Socho yeh ek power plant hai jo electricity (ATP) supply karta hai poore shahar (cell) ko! Iska ek unique feature hai — iske andar ek inner membrane hoti hai jo fold hoti hai — in folds ko 'Cristae' kehte hain. Cristae pe hi ATP synthesis hota hai!",
+          "emotion": "⚡"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir mitochondria mein kitni membranes hoti hain?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Double membrane! Outer membrane smooth hoti hai, inner membrane fold hoti hai — woh folds hain Cristae. Dono ke beech ki jagah ko 'Intermembrane Space' kehte hain, aur inner membrane ke andar ki jagah ko 'Matrix' kehte hain. Aur sabse bada NEET exam bomb — Mitochondria ka apna DNA aur ribosomes hote hain — 70S wale! Isliye Endosymbiotic Theory kehti hai ki mitochondria pehle ek alag bacteria tha jo kisi cell ne andar le liya. Lynn Margulis ne yeh theory 1967 mein propose ki!",
+          "emotion": "💣"
+        },
+        {
+          "speaker": "raju",
+          "text": "Seriously?? Mitochondria ka apna DNA hai?? Matlab yeh ek ancient bacteria tha?? Ye to mind-blowing hai!"
+        }
+      ],
       "navigation": {
-        "next": "card_25_size_intro",
-        "button_text": "Start Cell Size ➔"
+        "next": "card_25_chloroplast_er",
+        "button_text": "Next Card ➔"
       }
     },
     {
-      "card_id": "card_25_size_intro",
-      "card_slug": "card_25_size_intro",
+      "card_id": "card_25_chloroplast_er",
+      "card_slug": "card_25_chloroplast_er",
       "type": "chat",
-      "concept_id": "cell_size_intro",
-      "level": 2,
+      "concept_id": "chloroplast_er",
+      "level": 3,
       "progress": {
         "current": 25,
         "total": 60
@@ -946,40 +749,33 @@
       "messages": [
         {
           "speaker": "aman",
-          "text": "Cells ko measure kaise karte hain?"
+          "text": "Raju, mitochondria ka bhai hai plants mein — 'Chloroplast!' Yeh photosynthesis karta hai — sunlight + CO2 + paani se glucose banata hai. Iska nickname SSC mein seedha poocha jaata hai — 'Kitchen of the Cell.' Chloroplast mein bhi double membrane hoti hai aur andar 'Thylakoids' hote hain — jo stacked hote hain jaise sikke ki stack — ek stack ko 'Granum' kehte hain, plural: Grana! Chloroplast ka bhi apna DNA aur 70S ribosomes hote hain — Endosymbiotic Theory!",
+          "emotion": "🌿"
         },
         {
           "speaker": "raju",
-          "text": "MM mein? Ya CM?"
+          "text": "Sir toh chloroplast bhi pehle alag bacteria tha?? Aur uska kya naam tha?"
         },
         {
           "speaker": "aman",
-          "text": "Nahi! MICROMETRE (μm) ya MICRON!"
+          "text": "Bilkul! Chloroplast pehle 'Cyanobacteria' jaisa organism tha. Ab ER ki baat karo — 'Endoplasmic Reticulum' ya ER — yeh cell mein ek highway system hai, interconnected membranes ka network. Do types hote hain: (1) Rough ER (RER) — iske surface pe ribosomes hote hain, protein synthesis karta hai. (2) Smooth ER (SER) — koi ribosome nahi, lipid synthesis aur detoxification karta hai. Liver cells mein SER bahut zyada hota hai — isliye liver drugs ko detoxify karta hai!",
+          "emotion": "🛣️"
         },
         {
           "speaker": "raju",
-          "text": "Kitna chhota?"
-        },
-        {
-          "speaker": "aman",
-          "text": "1 mm ko 1000 parts mein... ek part = 1 micron! 1 μm = 0.001 mm! ⚠️ Unit yaad!",
-          "emotion": "⚡"
-        },
-        {
-          "speaker": "raju",
-          "text": "Sabse bada cell?"
+          "text": "Rough = ribosomes hain uske upar, Smooth = nahi hain... aur Smooth ER liver mein zyada — interesting!"
         }
       ],
       "navigation": {
-        "next": "card_26_largest_cell",
-        "button_text": "Batao! ➔"
+        "next": "card_26_golgi_lysosome",
+        "button_text": "Next Card ➔"
       }
     },
     {
-      "card_id": "card_26_largest_cell",
-      "card_slug": "card_26_largest_cell",
+      "card_id": "card_26_golgi_lysosome",
+      "card_slug": "card_26_golgi_lysosome",
       "type": "chat",
-      "concept_id": "largest_cell",
+      "concept_id": "golgi_lysosome_vacuole",
       "level": 3,
       "progress": {
         "current": 26,
@@ -988,40 +784,33 @@
       "messages": [
         {
           "speaker": "aman",
-          "text": "🏆 Duniya ka BADA = OSTRICH EGG (शुतुरमुर्ग अंडा)!"
+          "text": "Ab cell ka 'Post Office' — Golgi Body! Camillo Golgi ne 1898 mein discover kiya. Yeh RER se proteins receive karta hai, unhe modify karta hai (sugar add karna, fold karna), aur phir sahi jagah bhejna — cell ke bahar ya lysosomes mein. BPSC trap: Golgi Body ka doosra naam 'Golgi Complex' ya 'Golgi Apparatus' hai. Iska nickname hai 'Traffic Police of the Cell' kyunki yeh decide karta hai kaun si protein kahan jayegi!",
+          "emotion": "📮"
         },
         {
           "speaker": "raju",
-          "text": "Anda ek cell?? 😲"
+          "text": "Sir aur Lysosome kya hota hai? Usme kya hota hai?"
         },
         {
           "speaker": "aman",
-          "text": "Haan! Egg = Single cell! Ostrich = 170mm (17cm)! Naked eye visible!"
+          "text": "Lysosome cell ka 'Dustbin aur Security Guard' dono hai! Isme hydrolytic enzymes hote hain jo purani, damaged cheezein digest karte hain. Iska nickname hai 'Suicide Bag of the Cell' — kyunki agar lysosome phoot jaaye, toh woh apni hi cell ko digest kar leta hai! Yeh naam Christian de Duve ne diya tha. Vacuole ki baat karo — plant cells mein ek bada central vacuole hota hai, jo cell ka 75-90% volume cover karta hai, turgor pressure maintain karta hai — isliye plants khade rehte hain!",
+          "emotion": "🗑️"
         },
         {
           "speaker": "raju",
-          "text": "Sabse chhota?"
-        },
-        {
-          "speaker": "aman",
-          "text": "🔬 MYCOPLASMA - bacteria! 0.1-0.3 μm! Smallest living! ⚠️ Cell wall bhi nahi!",
-          "emotion": "⚡"
-        },
-        {
-          "speaker": "raju",
-          "text": "Human body mein?"
+          "text": "Lysosome = Suicide Bag — ye name to bhoolega hi nahi! Aur plant mein vacuole itna bada??"
         }
       ],
       "navigation": {
-        "next": "card_27_human_cells",
-        "button_text": "Human cells! ➔"
+        "next": "card_27_ribosome_centrosome",
+        "button_text": "Next Card ➔"
       }
     },
     {
-      "card_id": "card_27_human_cells",
-      "card_slug": "card_27_human_cells",
+      "card_id": "card_27_ribosome_centrosome",
+      "card_slug": "card_27_ribosome_centrosome",
       "type": "chat",
-      "concept_id": "human_cell_sizes",
+      "concept_id": "ribosome_centrosome_peroxisome",
       "level": 3,
       "progress": {
         "current": 27,
@@ -1030,174 +819,135 @@
       "messages": [
         {
           "speaker": "aman",
-          "text": "Human:\n🏆 LARGEST = OVUM (100-120 μm)\n🔬 SMALLEST = SPERM (head 5 μm)\n📏 LONGEST = NERVE - 1 METRE!"
+          "text": "Do aur important organelles — Ribosome aur Centrosome. Ribosome protein banata hai — ise 'Protein Factory of the Cell' kehte hain. Yeh membrane-bound NAHI hota — koi cover nahi. Ise George Palade ne discover kiya 1955 mein, aur inhe Nobel Prize mila 1974 mein. Ribosome mein 2 subunits hote hain — bada (60S) aur chhota (40S) eukaryotes mein, aur bada (50S) aur chhota (30S) prokaryotes mein. Combined size: 80S (eukaryote) aur 70S (prokaryote)!",
+          "emotion": "🏭"
         },
         {
           "speaker": "raju",
-          "text": "Ek cell 1 metre???"
+          "text": "Sir 60S + 40S = 100S kyun nahi hota? 80S kaise hota hai?"
         },
         {
           "speaker": "aman",
-          "text": "Haan! Spinal cord se paon - ek nerve cell! ⚠️ NEET favorite!",
-          "emotion": "⚡"
+          "text": "Bahut barhiya trap pakda tumne! 'S' Svedberg unit hai — yeh directly add nahi hota, kyunki yeh sedimentation rate hai jo particle ke shape aur density pe depend karta hai. Isliye 60S + 40S = 80S hota hai, 100S nahi! BPSC mein yeh calculation trap hai! Ab Centrosome — yeh sirf animal cells mein hota hai aur cell division mein spindle fibers banata hai. Andar 2 'Centrioles' hote hain. Plant cells mein centriole nahi hota — phir bhi plants divide karte hain — alag mechanism se!",
+          "emotion": "🌀"
         },
         {
           "speaker": "raju",
-          "text": "Yaad kaise?"
-        },
-        {
-          "speaker": "aman",
-          "text": "OWM NSR: Ostrich-World, Ovum-human, Mycoplasma-Small, Nerve-long, Sperm-small!"
+          "text": "60+40=80S nahi 100S — ye number trick to exam mein pakka trap karegi doosron ko!"
         }
       ],
       "navigation": {
-        "next": "card_28_quiz_size_1",
-        "button_text": "Quiz! ➔"
+        "next": "card_28_quiz10",
+        "button_text": "Next Card ➔"
       }
     },
     {
-      "card_id": "card_28_quiz_size_1",
-      "card_slug": "card_28_quiz_size_1",
+      "card_id": "card_28_quiz10",
+      "card_slug": "card_28_quiz10",
       "type": "quiz",
-      "concept_id": "cell_size_test_1",
+      "concept_id": "organelles_quiz1",
       "level": 3,
       "progress": {
         "current": 28,
         "total": 60
       },
       "quiz_payload": {
-        "question": "Duniya ka sabse BADA cell?",
+        "question": "Q1/3: 'Suicide Bag of the Cell' kise kaha jaata hai?",
         "options": [
-          {
-            "id": "A",
-            "text": "Blue whale cell"
-          },
-          {
-            "id": "B",
-            "text": "Ostrich egg"
-          },
-          {
-            "id": "C",
-            "text": "Human ovum"
-          },
-          {
-            "id": "D",
-            "text": "Banyan cell"
-          }
+          { "id": "A", "text": "Mitochondria" },
+          { "id": "B", "text": "Golgi Body" },
+          { "id": "C", "text": "Lysosome" },
+          { "id": "D", "text": "Peroxisome" }
         ],
-        "correct_option_id": "B",
-        "explanation": "Ostrich egg! 170mm. Egg = single cell. Naked eye visible. BPSC/SSC/Railway - sabmein!"
+        "correct_option_id": "C",
+        "explanation": "Lysosome ko 'Suicide Bag of the Cell' kaha jaata hai — kyunki isme hydrolytic enzymes hote hain jo agar bahar aa jayein toh khud ki cell ko digest kar dete hain. Yeh naam Christian de Duve ne diya tha. Mitochondria = Powerhouse, Golgi = Post Office/Traffic Police, Ribosome = Protein Factory. Yeh nicknames SSC CGL aur RRB NTPC mein directly pooche jaate hain!"
       },
       "navigation": {
-        "next": "card_29_quiz_size_2",
-        "button_text": "Q 2/3 ➔"
+        "next": "card_29_quiz11",
+        "button_text": "Check Answer & Continue ➔"
       }
     },
     {
-      "card_id": "card_29_quiz_size_2",
-      "card_slug": "card_29_quiz_size_2",
+      "card_id": "card_29_quiz11",
+      "card_slug": "card_29_quiz11",
       "type": "quiz",
-      "concept_id": "cell_size_test_2",
+      "concept_id": "organelles_quiz2",
       "level": 3,
       "progress": {
         "current": 29,
         "total": 60
       },
       "quiz_payload": {
-        "question": "Human body ka LAMBA cell?",
+        "question": "Q2/3: Mitochondria ko 'semi-autonomous organelle' kyun kaha jaata hai?",
         "options": [
-          {
-            "id": "A",
-            "text": "Muscle cell"
-          },
-          {
-            "id": "B",
-            "text": "Nerve cell (Neuron)"
-          },
-          {
-            "id": "C",
-            "text": "Ovum"
-          },
-          {
-            "id": "D",
-            "text": "Bone cell"
-          }
+          { "id": "A", "text": "Kyunki yeh cell ke bahar bhi kaam kar sakta hai" },
+          { "id": "B", "text": "Kyunki iske paas apna DNA aur 70S ribosomes hain, lekin kuch proteins ke liye nuclear DNA pe depend karta hai" },
+          { "id": "C", "text": "Kyunki yeh khud ko replicate kar sakta hai bina cell ke" },
+          { "id": "D", "text": "Kyunki isme sirf ek membrane hoti hai" }
         ],
         "correct_option_id": "B",
-        "explanation": "Nerve cell! 1 metre lamba. Spinal cord se foot. NEET favorite!"
+        "explanation": "Mitochondria 'semi-autonomous' hai kyunki iske paas apna circular DNA aur 70S ribosomes hain (bacteria jaisa) — toh kuch proteins khud banata hai. Lekin iske kaafi proteins nuclear DNA se code hote hain. Isliye yeh poori tarah autonomous nahi hai. Chloroplast bhi semi-autonomous hai usi wajah se. Yeh Endosymbiotic Theory ka core concept hai — Lynn Margulis, 1967. NEET mein yeh multi-statement question ke roop mein aaya hai!"
       },
       "navigation": {
-        "next": "card_30_quiz_size_3",
-        "button_text": "Q 3/3 ➔"
+        "next": "card_30_quiz12",
+        "button_text": "Check Answer & Continue ➔"
       }
     },
     {
-      "card_id": "card_30_quiz_size_3",
-      "card_slug": "card_30_quiz_size_3",
+      "card_id": "card_30_quiz12",
+      "card_slug": "card_30_quiz12",
       "type": "quiz",
-      "concept_id": "cell_size_test_3",
+      "concept_id": "organelles_quiz3",
       "level": 3,
       "progress": {
         "current": 30,
         "total": 60
       },
       "quiz_payload": {
-        "question": "Sabse chhota living cell?",
+        "question": "Q3/3: BPSC Multi-Statement Trap — Inme se kaun sa statement SAHI hai? (1) Rough ER mein ribosomes hote hain. (2) Smooth ER lipid synthesis karta hai. (3) Golgi Body proteins ko modify karta hai. (4) Lysosome mein photosynthesis hoti hai.",
         "options": [
-          {
-            "id": "A",
-            "text": "Virus"
-          },
-          {
-            "id": "B",
-            "text": "Mycoplasma"
-          },
-          {
-            "id": "C",
-            "text": "Bacteria"
-          },
-          {
-            "id": "D",
-            "text": "RBC"
-          }
+          { "id": "A", "text": "Sirf 1 aur 4" },
+          { "id": "B", "text": "1, 2 aur 3" },
+          { "id": "C", "text": "Sirf 2 aur 3" },
+          { "id": "D", "text": "Sabhi 1, 2, 3, 4" }
         ],
         "correct_option_id": "B",
-        "explanation": "Mycoplasma! 0.1-0.3 μm. Smallest LIVING (virus living nahi). Cell wall absent! Railway/SSC!"
+        "explanation": "Statements 1, 2, aur 3 bilkul sahi hain. Statement 4 GALAT hai — Lysosome mein photosynthesis nahi hoti, yeh toh Chloroplast ka kaam hai! Lysosome mein hydrolytic enzymes hote hain jo digestion karte hain, photosynthesis nahi. Yeh classic BPSC style multi-statement trap hai jahan ek clearly galat statement baki sahi statements ke saath mix ki jaati hai!"
       },
       "navigation": {
-        "next": "card_31_milestone_size",
-        "button_text": "Module Done! ➔"
+        "next": "card_31_milestone4",
+        "button_text": "Check Answer & Continue ➔"
       }
     },
     {
-      "card_id": "card_31_milestone_size",
-      "card_slug": "card_31_milestone_size",
+      "card_id": "card_31_milestone4",
+      "card_slug": "card_31_milestone4",
       "type": "milestone",
-      "concept_id": "cell_size_milestone",
+      "concept_id": "module4_complete",
       "level": 3,
       "progress": {
         "current": 31,
         "total": 60
       },
       "milestone_payload": {
-        "title": "🎉 MODULE 4 COMPLETE!",
-        "badge_emoji": "📏",
-        "completed_topic": "Cell Size Extremes",
-        "xp_earned": 60,
-        "milestone_progress": "Module 4/6 Clear ✓",
-        "motivational_quote": "Ostrich (largest), Mycoplasma (smallest), Ovum (human), Nerve (longest)! SSC pakka 1 Q!"
+        "title": "ORGANELLE MASTER! 🏆",
+        "badge_emoji": "🔋",
+        "completed_topic": "Cell Organelles — Nucleus to Lysosome",
+        "xp_earned": 100,
+        "milestone_progress": "Module 4/6 Clear",
+        "motivational_quote": "Mitochondria ka DNA, Lysosome ka suicide — tumne woh concepts clear kiye jo NEET toppers bhi confuse karte hain! Ab cell ka sabse action-packed scene dekhne ka time hai — Cell Division!"
       },
       "navigation": {
-        "next": "card_32_membrane_intro",
-        "button_text": "Start Structure ➔"
+        "next": "card_32_cell_cycle_intro",
+        "button_text": "Start Module 5 ➔"
       }
     },
     {
-      "card_id": "card_32_membrane_intro",
-      "card_slug": "card_32_membrane_intro",
+      "card_id": "card_32_cell_cycle_intro",
+      "card_slug": "card_32_cell_cycle_intro",
       "type": "chat",
-      "concept_id": "cell_membrane_intro",
-      "level": 2,
+      "concept_id": "cell_cycle_intro",
+      "level": 4,
       "progress": {
         "current": 32,
         "total": 60
@@ -1205,40 +955,34 @@
       "messages": [
         {
           "speaker": "aman",
-          "text": "Ghar ki boundary kya kaam?"
+          "text": "Raju, tumne kabhi ghar mein dekha hoga ki jab koi cheez tooti — jaise cycle ka tyre puncture hua ya haath mein chot lagi — toh woh kuch din mein theek ho jaata hai? Yeh magic cells karta hain — woh divide hokar nayi cells banate hain. Yahan se shuru hoti hai 'Cell Division' ki duniya! Cell Division basically 2 types ki hoti hai — Mitosis (body cells ke liye) aur Meiosis (sex cells ke liye). Yeh fundamental difference BPSC, NEET, SSC — sab mein poochha jaata hai!",
+          "emotion": "🔄"
         },
         {
           "speaker": "raju",
-          "text": "Protection... aur kon andar!"
+          "text": "Sir cell divide hone se pehle kya kuch preparation hoti hai?"
         },
         {
           "speaker": "aman",
-          "text": "Cell ki boundary = CELL MEMBRANE!"
+          "text": "Wah! Bilkul sahi socha — Cell Division se pehle ek lambi preparation hoti hai jise 'Cell Cycle' kehte hain. Cell Cycle ke 2 main phases hain: (1) Interphase — preparation phase, jisme cell grow karti hai aur DNA copy karta hai. (2) M Phase (Mitotic Phase) — actual division hoti hai. Interphase mein teen sub-phases hain: G1 (cell grow karti hai), S Phase (DNA synthesis — DNA copy hota hai), G2 (division ki final taiyari). BPSC ka trap: DNA replication S phase mein hoti hai, M phase mein nahi!",
+          "emotion": "📅"
         },
         {
           "speaker": "raju",
-          "text": "Kya karta?"
-        },
-        {
-          "speaker": "aman",
-          "text": "SELECT karke andar-bahar! VIP gate - sirf kuch ko entry! 🚪"
-        },
-        {
-          "speaker": "raju",
-          "text": "Isko kya kehte?"
+          "text": "DNA copy S phase mein hota hai, M phase mein nahi — pakka note kar liya sir!"
         }
       ],
       "navigation": {
-        "next": "card_33_selectively",
-        "button_text": "Batao! ➔"
+        "next": "card_33_mitosis",
+        "button_text": "Next Card ➔"
       }
     },
     {
-      "card_id": "card_33_selectively",
-      "card_slug": "card_33_selectively",
+      "card_id": "card_33_mitosis",
+      "card_slug": "card_33_mitosis",
       "type": "chat",
-      "concept_id": "selectively_permeable",
-      "level": 2,
+      "concept_id": "mitosis_phases",
+      "level": 4,
       "progress": {
         "current": 33,
         "total": 60
@@ -1246,41 +990,34 @@
       "messages": [
         {
           "speaker": "aman",
-          "text": "SELECTIVELY PERMEABLE! Select + permit! ⚠️ BPSC term!",
-          "emotion": "⚡"
+          "text": "Mitosis — 'Equational Division' bhi kehte hain kyunki ek cell se 2 identical cells banti hain — same chromosome number! Ek parent cell (2n = diploid) se 2 daughter cells (2n = diploid). Yeh body cells mein hoti hai — jaise skin, liver. Mitosis ke 4 phases yaad karo ek sentence se: PMAT — Prophase, Metaphase, Anaphase, Telophase. Prophase mein chromosomes visible hote hain (chromatin condense hoti hai). Metaphase mein chromosomes equatorial plate pe align hote hain — isi phase mein chromosomes best dekhe jaate hain!",
+          "emotion": "🔬"
         },
         {
           "speaker": "raju",
-          "text": "Membrane decide karta?"
+          "text": "PMAT — Prophase, Metaphase, Anaphase, Telophase — okay! Sir anaphase aur telophase mein kya hota hai?"
         },
         {
           "speaker": "aman",
-          "text": "Yes! Oxygen, glucose ✅ Waste ❌"
+          "text": "Anaphase mein sister chromatids alag hoti hain — opposite poles ki taraf jaati hain, jaise tug-of-war! Telophase mein nuclear envelope dobara banta hai — do alag nuclei ban jaate hain. Phir hoti hai 'Cytokinesis' — cytoplasm ka batwara. Animal cells mein yeh cleavage furrow se hota hai (andar se kata jaata hai). Plant cells mein cell plate banti hai beech mein. NEET ka trap: Mitosis ki last phase Telophase hai, lekin complete cell division Cytokinesis ke baad hoti hai!",
+          "emotion": "✂️"
         },
         {
           "speaker": "raju",
-          "text": "Bana kisse?"
-        },
-        {
-          "speaker": "aman",
-          "text": "LIPID (fat) + PROTEIN! Do layers - LIPID BILAYER!"
-        },
-        {
-          "speaker": "raju",
-          "text": "Model?"
+          "text": "Metaphase mein chromosomes best dikhte hain — isliye doctors cancer diagnose karne ke liye is phase ko use karte hain na?"
         }
       ],
       "navigation": {
-        "next": "card_34_fluid_mosaic",
-        "button_text": "Haan! ➔"
+        "next": "card_34_meiosis",
+        "button_text": "Next Card ➔"
       }
     },
     {
-      "card_id": "card_34_fluid_mosaic",
-      "card_slug": "card_34_fluid_mosaic",
+      "card_id": "card_34_meiosis",
+      "card_slug": "card_34_meiosis",
       "type": "chat",
-      "concept_id": "fluid_mosaic_model",
-      "level": 3,
+      "concept_id": "meiosis_intro",
+      "level": 4,
       "progress": {
         "current": 34,
         "total": 60
@@ -1288,41 +1025,34 @@
       "messages": [
         {
           "speaker": "aman",
-          "text": "⚠️ EXAM! SINGER & NICOLSON (1972) - FLUID MOSAIC!",
-          "emotion": "⚡"
+          "text": "Absolutely Raju! Metaphase is the best stage to study chromosomes — doctors isi phase ko karyotyping ke liye use karte hain. Ab Meiosis — yeh 'Reductive Division' hai. Ek diploid cell (2n) se 4 haploid cells (n) banti hain. Yeh sex cells — sperm aur egg — banane ke liye hoti hai. Agar Meiosis na ho, toh har generation mein chromosome number double hota jaata — pata nahi kitna DNA hota humara! Meiosis mein 2 rounds of division hote hain — Meiosis I aur Meiosis II!",
+          "emotion": "🧬"
         },
         {
           "speaker": "raju",
-          "text": "Matlab?"
+          "text": "Sir Meiosis I aur II mein kya fark hai? Dono zaroori hain?"
         },
         {
           "speaker": "aman",
-          "text": "FLUID = hil sakte\nMOSAIC = tile mixed!"
+          "text": "Bahut important sawaal! Meiosis I ko 'Reductional Division' kehte hain — isme homologous chromosomes alag hote hain, aur chromosome number aadha ho jaata hai (2n se n). Meiosis II ko 'Equational Division' kehte hain — yeh Mitosis jaisi hi hai — sister chromatids alag hoti hain. Sabse khas cheez Meiosis I mein hoti hai — 'Crossing Over' — Prophase I mein homologous chromosomes DNA exchange karte hain! Yahi genetic variation ka source hai — BPSC ka direct question: 'Genetic variation ka karan kya hai?'",
+          "emotion": "🔀"
         },
         {
           "speaker": "raju",
-          "text": "Naam yaad?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Haan! Model, scientist, year! BPSC/NEET direct!"
-        },
-        {
-          "speaker": "raju",
-          "text": "Cell wall?"
+          "text": "Crossing over se genetic variation aati hai... sir matlab har bhai-behen ka DNA thoda alag hota hai isi ki wajah se??"
         }
       ],
       "navigation": {
-        "next": "card_35_cell_wall",
-        "button_text": "Alag hai! ➔"
+        "next": "card_35_mitosis_vs_meiosis",
+        "button_text": "Next Card ➔"
       }
     },
     {
-      "card_id": "card_35_cell_wall",
-      "card_slug": "card_35_cell_wall",
+      "card_id": "card_35_mitosis_vs_meiosis",
+      "card_slug": "card_35_mitosis_vs_meiosis",
       "type": "chat",
-      "concept_id": "cell_wall_intro",
-      "level": 2,
+      "concept_id": "mitosis_vs_meiosis_comparison",
+      "level": 4,
       "progress": {
         "current": 35,
         "total": 60
@@ -1330,178 +1060,135 @@
       "messages": [
         {
           "speaker": "aman",
-          "text": "⚠️ BIG! WALL = SIRF PLANTS! Animals nahi! 🌱❌🐕",
-          "emotion": "⚡"
+          "text": "Bilkul! Crossing over hi wajah hai ki tum apni behen se alag dikhte ho — same parents, alag DNA combination! Ab ek quick comparison table yaad karo: Mitosis — 2 daughter cells, same chromosome number (2n→2n), body cells, no crossing over, growth aur repair ke liye. Meiosis — 4 daughter cells, half chromosome number (2n→n), sex cells (gametes), crossing over hota hai, genetic variation ke liye. BPSC ka multi-statement trap: 'Mitosis mein 4 cells banti hain' — GALAT! Mitosis mein 2 cells!",
+          "emotion": "📊"
         },
         {
           "speaker": "raju",
-          "text": "Kyun nahi?"
+          "text": "Sir ek cheez bolo — Meiosis sirf gonads (testis, ovary) mein hoti hai, ya aur kahan bhi?"
         },
         {
           "speaker": "aman",
-          "text": "Animals ko movement! Rigid wall = move nahi!"
+          "text": "Excellent question — yeh NEET mein direct aaya hai! Humans mein Meiosis testis aur ovary mein hoti hai. Lekin plants mein Meiosis anther (pollen banane ke liye) aur ovule mein hoti hai. Aur ek bada BPSC trap — Amoeba aur Bacteria mein Meiosis nahi hoti — kyunki yeh asexually reproduce karte hain! Bacteria Binary Fission se reproduce karta hai — yeh Mitosis jaisa hai lekin technically Mitosis nahi — kyunki bacteria prokaryote hai! Yeh difference bahut important hai!",
+          "emotion": "⚠️"
         },
         {
           "speaker": "raju",
-          "text": "Bana kisse?"
-        },
-        {
-          "speaker": "aman",
-          "text": "CELLULOSE! Carbohydrate - strong! Paper, cotton!"
-        },
-        {
-          "speaker": "raju",
-          "text": "Dono hain plants mein?"
+          "text": "Bacteria Binary Fission se — Mitosis nahi! Aur plants mein Meiosis anther mein... ye sab confuse to karega lekin ab samajh aa gaya!"
         }
       ],
       "navigation": {
-        "next": "card_36_quiz_structure_1",
-        "button_text": "Quiz! ➔"
+        "next": "card_36_quiz13",
+        "button_text": "Next Card ➔"
       }
     },
     {
-      "card_id": "card_36_quiz_structure_1",
-      "card_slug": "card_36_quiz_structure_1",
+      "card_id": "card_36_quiz13",
+      "card_slug": "card_36_quiz13",
       "type": "quiz",
-      "concept_id": "cell_structure_test_1",
-      "level": 3,
+      "concept_id": "cell_division_quiz1",
+      "level": 4,
       "progress": {
         "current": 36,
         "total": 60
       },
       "quiz_payload": {
-        "question": "Fluid Mosaic Model kisne?",
+        "question": "Q1/3: Mitosis mein chromosomes kis phase mein sabse clearly dekhe ja sakte hain?",
         "options": [
-          {
-            "id": "A",
-            "text": "Watson & Crick"
-          },
-          {
-            "id": "B",
-            "text": "Singer & Nicolson"
-          },
-          {
-            "id": "C",
-            "text": "Schleiden & Schwann"
-          },
-          {
-            "id": "D",
-            "text": "Hooke & Brown"
-          }
+          { "id": "A", "text": "Prophase" },
+          { "id": "B", "text": "Metaphase" },
+          { "id": "C", "text": "Anaphase" },
+          { "id": "D", "text": "Telophase" }
         ],
         "correct_option_id": "B",
-        "explanation": "Singer & Nicolson (1972)! Membrane - lipid bilayer + proteins. BPSC/NEET!"
+        "explanation": "Metaphase mein chromosomes equatorial plate pe align hote hain — yeh phase chromosomes study karne ke liye best hai kyunki chromosomes apni maximum condensation mein hote hain aur clearly visible hote hain. Doctors karyotyping (chromosome analysis for genetic diseases) ke liye Metaphase cells use karte hain. Prophase mein chromosomes condensed hone lagte hain lekin puri tarah nahi. Yeh NEET aur BPSC dono ka direct question hai!"
       },
       "navigation": {
-        "next": "card_37_quiz_structure_2",
-        "button_text": "Q 2/3 ➔"
+        "next": "card_37_quiz14",
+        "button_text": "Check Answer & Continue ➔"
       }
     },
     {
-      "card_id": "card_37_quiz_structure_2",
-      "card_slug": "card_37_quiz_structure_2",
+      "card_id": "card_37_quiz14",
+      "card_slug": "card_37_quiz14",
       "type": "quiz",
-      "concept_id": "cell_structure_test_2",
-      "level": 3,
+      "concept_id": "cell_division_quiz2",
+      "level": 4,
       "progress": {
         "current": 37,
         "total": 60
       },
       "quiz_payload": {
-        "question": "Cell wall bana?",
+        "question": "Q2/3: Meiosis I ko 'Reductional Division' kyun kaha jaata hai?",
         "options": [
-          {
-            "id": "A",
-            "text": "Protein"
-          },
-          {
-            "id": "B",
-            "text": "Lipid"
-          },
-          {
-            "id": "C",
-            "text": "Cellulose"
-          },
-          {
-            "id": "D",
-            "text": "DNA"
-          }
+          { "id": "A", "text": "Kyunki isme chromosome number dobla ho jaata hai" },
+          { "id": "B", "text": "Kyunki isme homologous chromosomes alag hote hain aur chromosome number aadha (2n se n) ho jaata hai" },
+          { "id": "C", "text": "Kyunki isme sister chromatids alag hoti hain" },
+          { "id": "D", "text": "Kyunki isme sirf cytoplasm divide hoti hai" }
         ],
-        "correct_option_id": "C",
-        "explanation": "Cellulose! Carbohydrate - plants. Paper, cotton. Rigid. SSC/Railway!"
+        "correct_option_id": "B",
+        "explanation": "Meiosis I mein homologous chromosomes (bhai-behen chromosomes) alag hote hain, jisse ek diploid cell (2n) se do haploid cells (n) banti hain — chromosome number aadha ho jaata hai. Isliye ise 'Reductional Division' kehte hain. Meiosis II mein sister chromatids alag hoti hain — yeh 'Equational Division' hai (Mitosis jaisi). Crossing over bhi Meiosis I ke Prophase I mein hoti hai — genetic variation ka source!"
       },
       "navigation": {
-        "next": "card_38_quiz_structure_3",
-        "button_text": "Q 3/3 ➔"
+        "next": "card_38_quiz15",
+        "button_text": "Check Answer & Continue ➔"
       }
     },
     {
-      "card_id": "card_38_quiz_structure_3",
-      "card_slug": "card_38_quiz_structure_3",
+      "card_id": "card_38_quiz15",
+      "card_slug": "card_38_quiz15",
       "type": "quiz",
-      "concept_id": "cell_structure_test_3",
-      "level": 3,
+      "concept_id": "cell_division_quiz3",
+      "level": 4,
       "progress": {
         "current": 38,
         "total": 60
       },
       "quiz_payload": {
-        "question": "Membrane property?",
+        "question": "Q3/3: SSC CGL Direct — Inme se kaun si process asexual reproduction mein bacterial division ke liye sahi hai?",
         "options": [
-          {
-            "id": "A",
-            "text": "Fully permeable"
-          },
-          {
-            "id": "B",
-            "text": "Selectively permeable"
-          },
-          {
-            "id": "C",
-            "text": "Impermeable"
-          },
-          {
-            "id": "D",
-            "text": "Semi-solid"
-          }
+          { "id": "A", "text": "Mitosis" },
+          { "id": "B", "text": "Meiosis" },
+          { "id": "C", "text": "Binary Fission" },
+          { "id": "D", "text": "Budding" }
         ],
-        "correct_option_id": "B",
-        "explanation": "Selectively permeable! Choose karke allow. O2/glucose in, waste out. BPSC term!"
+        "correct_option_id": "C",
+        "explanation": "Bacteria prokaryotic organisms hain — unme Mitosis ya Meiosis nahi hoti. Bacteria Binary Fission se reproduce karte hain — ek cell 2 equal cells mein divide ho jaati hai bina spindle formation ke. Budding Yeast (fungi) aur Hydra mein hoti hai. Mitosis eukaryotic somatic cells mein hoti hai, Meiosis gamete formation ke liye. Yeh RRB NTPC aur SSC CGL mein bahut baar aaya hai!"
       },
       "navigation": {
-        "next": "card_39_milestone_structure",
-        "button_text": "Module Done! ➔"
+        "next": "card_39_milestone5",
+        "button_text": "Check Answer & Continue ➔"
       }
     },
     {
-      "card_id": "card_39_milestone_structure",
-      "card_slug": "card_39_milestone_structure",
+      "card_id": "card_39_milestone5",
+      "card_slug": "card_39_milestone5",
       "type": "milestone",
-      "concept_id": "cell_structure_milestone",
-      "level": 3,
+      "concept_id": "module5_complete",
+      "level": 4,
       "progress": {
         "current": 39,
         "total": 60
       },
       "milestone_payload": {
-        "title": "🎉 MODULE 5 COMPLETE!",
-        "badge_emoji": "🧱",
-        "completed_topic": "Membrane & Wall",
-        "xp_earned": 70,
-        "milestone_progress": "Module 5/6 Clear ✓",
-        "motivational_quote": "Membrane (All, lipid+protein, Fluid Mosaic) vs Wall (Plants, cellulose)! NEET/BPSC 100%!"
+        "title": "DIVISION DESTROYER! 💥",
+        "badge_emoji": "🔀",
+        "completed_topic": "Cell Cycle & Division — Mitosis & Meiosis",
+        "xp_earned": 100,
+        "milestone_progress": "Module 5/6 Clear",
+        "motivational_quote": "PMAT yaad hai? Crossing over ka secret pata hai? Ab ek aur crucial topic bacha hai — DNA, Chromosome aur Genetics ka direct connection! Last boss fight!"
       },
       "navigation": {
-        "next": "card_40_nucleus_intro",
-        "button_text": "Start Nucleus ➔"
+        "next": "card_40_dna_chromatin_intro",
+        "button_text": "Start Final Module ➔"
       }
     },
     {
-      "card_id": "card_40_nucleus_intro",
-      "card_slug": "card_40_nucleus_intro",
+      "card_id": "card_40_dna_chromatin_intro",
+      "card_slug": "card_40_dna_chromatin_intro",
       "type": "chat",
-      "concept_id": "nucleus_intro",
-      "level": 2,
+      "concept_id": "dna_chromosome_chromatin",
+      "level": 5,
       "progress": {
         "current": 40,
         "total": 60
@@ -1509,40 +1196,34 @@
       "messages": [
         {
           "speaker": "aman",
-          "text": "BOSS - NUCLEUS! 👑 Company MD?"
+          "text": "Raju, ab sabse exciting part — cell ke andar DNA! Socho ek bahut lamba dhaga hai jo ek choti si dabba mein fold karke rakha hai. Agar ek human cell ka DNA seedha nikala jaaye, toh woh lagbhag 2 meters lamba hoga — lekin nucleus sirf 6 micrometers ka hai! Yeh magic 'Histone Proteins' karte hain — DNA inke around lipat jaata hai, jaise wire ek reel pe lapeti ho. Yeh DNA + Histone complex ko 'Nucleosome' kehte hain — ek beaded necklace ki tarah!",
+          "emotion": "🧵"
         },
         {
           "speaker": "raju",
-          "text": "Sabse bada!"
+          "text": "2 meter ka DNA 6 micrometer nucleus mein?? Ye possible kaise hai sir??"
         },
         {
           "speaker": "aman",
-          "text": "Nucleus = Cell MD! BRAIN! 🧠"
+          "text": "Packing technology ka kamaal! Nucleosome wo beads hain, aur jo dhaga hai wo chromatin hai. Jab cell divide nahi ho rahi, DNA dhila-dhila hai — ise 'Euchromatin' kehte hain (active, genes express hote hain). Jab DNA tight packed hai — 'Heterochromatin' (inactive, genes express nahi hote). Cell division ke time DNA aur compact hota hai chromosomes banta hai. Human cells mein 23 pairs = 46 chromosomes hote hain. Yeh number BPSC, SSC, RRB — har jagah seedha poochha jaata hai!",
+          "emotion": "📦"
         },
         {
           "speaker": "raju",
-          "text": "Kya orders?"
-        },
-        {
-          "speaker": "aman",
-          "text": "DNA nucleus mein! Instructions - protein banao, divide ho!"
-        },
-        {
-          "speaker": "raju",
-          "text": "Parts?"
+          "text": "46 chromosomes, 23 pairs — humans mein. Sir sex chromosomes kaise hote hain?"
         }
       ],
       "navigation": {
-        "next": "card_41_nucleus_parts",
-        "button_text": "Batao! ➔"
+        "next": "card_41_chromosomes_types",
+        "button_text": "Next Card ➔"
       }
     },
     {
-      "card_id": "card_41_nucleus_parts",
-      "card_slug": "card_41_nucleus_parts",
+      "card_id": "card_41_chromosomes_types",
+      "card_slug": "card_41_chromosomes_types",
       "type": "chat",
-      "concept_id": "nucleus_components",
-      "level": 3,
+      "concept_id": "chromosome_types_sex_chr",
+      "level": 5,
       "progress": {
         "current": 41,
         "total": 60
@@ -1550,42 +1231,34 @@
       "messages": [
         {
           "speaker": "aman",
-          "text": "4 parts:\n1️⃣ Nuclear membrane (DOUBLE! ⚠️)\n2️⃣ Nucleoplasm (fluid)\n3️⃣ Nucleolus (ribosome factory!)\n4️⃣ Chromatin (DNA+protein)",
-          "emotion": "⚡"
+          "text": "Excellent sawaal! 46 chromosomes mein se 44 'autosomes' hain — yeh body features control karte hain. Baaki 2 'sex chromosomes' hain — XX in females, XY in males. Toh ek bachche ka sex kiska DNA decide karta hai? Father ka! Kyunki mother sirf X de sakti hai (XX), lekin father X ya Y de sakta hai (XY). Agar Y chromosome mila — beta, X chromosome mila — beti! BPSC ka social angle: Beta-beti discrimination ka biology mein koi basis nahi — yeh father's chromosome decide karta hai!",
+          "emotion": "🧬"
         },
         {
           "speaker": "raju",
-          "text": "Double?"
+          "text": "Waah sir! Toh beta ke liye father responsible hai, mother nahi?? Ye to society ko bataana chahiye!"
         },
         {
           "speaker": "aman",
-          "text": "Cell = single, Nuclear = DOUBLE! Nuclear pores!"
+          "text": "Bilkul sahi! Ab chromosomes ke structure ki baat karo — centromere ki position ke basis pe chromosomes 4 types ke hote hain: (1) Metacentric — centromere beech mein, arms equal, X shape. (2) Submetacentric — centromere thoda side mein, arms unequal, L shape. (3) Acrocentric — centromere ek end ke paas, J shape. (4) Telocentric — centromere bilkul end pe, rod shape. Human mein telocentric chromosomes nahi hote — yeh BPSC ka direct trap question hai! Ab ek aur bomb...!",
+          "emotion": "💣"
         },
         {
           "speaker": "raju",
-          "text": "Nucleolus?"
-        },
-        {
-          "speaker": "aman",
-          "text": "⚠️ EXAM! RIBOSOME FACTORY! rRNA!",
-          "emotion": "⚡"
-        },
-        {
-          "speaker": "raju",
-          "text": "Chromatin = chromosome?"
+          "text": "Humans mein telocentric chromosome nahi hote — yeh pakka trap lagta hai! Ab woh bomb kya hai sir?"
         }
       ],
       "navigation": {
-        "next": "card_42_chromatin",
-        "button_text": "Nahi! ➔"
+        "next": "card_42_dna_structure",
+        "button_text": "Next Card ➔"
       }
     },
     {
-      "card_id": "card_42_chromatin",
-      "card_slug": "card_42_chromatin",
+      "card_id": "card_42_dna_structure",
+      "card_slug": "card_42_dna_structure",
       "type": "chat",
-      "concept_id": "chromatin_chromosome_diff",
-      "level": 3,
+      "concept_id": "dna_double_helix",
+      "level": 5,
       "progress": {
         "current": 42,
         "total": 60
@@ -1593,213 +1266,170 @@
       "messages": [
         {
           "speaker": "aman",
-          "text": "⚠️ BPSC MEGA!\nCHROMATIN = Thread (normal)\nCHROMOSOME = Rod (division)",
-          "emotion": "⚡"
+          "text": "Woh bomb hai — DNA ka structure! 1953 mein James Watson aur Francis Crick ne DNA ka 'Double Helix Model' diya — aur Nobel Prize mila 1962 mein. Lekin suno — Rosalind Franklin ne X-ray crystallography se DNA ki photo li thi (Photo 51) — iske bina Watson-Crick model nahi hota, lekin Nobel Prize unhe nahi mila kyunki woh 1958 mein cancer se chali gain. Yeh biology history ka sabse controversial award hai — BPSC aur UPSC dono isse pooch chuke hain!",
+          "emotion": "📸"
         },
         {
           "speaker": "raju",
-          "text": "Same material?"
+          "text": "Yeh to bahut bura hua Rosalind Franklin ke saath! Sir DNA mein kya hota hai andar?"
         },
         {
           "speaker": "aman",
-          "text": "Haan! Chromatin COIL = chromosome! Dono ek saath NAHI!"
+          "text": "DNA ek double-stranded helix hai. Har strand mein nucleotides hote hain — ek nucleotide = Deoxyribose sugar + Phosphate group + Nitrogenous base. Bases 4 types ke hote hain: Adenine (A), Thymine (T), Guanine (G), Cytosine (C). Chargaff's Rule: A = T (double bond), G = C (triple bond) — yahi reason hai ki DNA stable hai. RNA mein Thymine ki jagah Uracil (U) hota hai — yeh NEET aur BPSC dono ka top-frequency trap hai! RNA mein T nahi, U hota hai!",
+          "emotion": "🔬"
         },
         {
           "speaker": "raju",
-          "text": "Humans?"
-        },
-        {
-          "speaker": "aman",
-          "text": "46 CHROMOSOMES! 23 pairs! ⚠️ BPSC/NEET!",
-          "emotion": "⚡"
-        },
-        {
-          "speaker": "raju",
-          "text": "Quiz!"
+          "text": "A=T, G=C — Chargaff's Rule! Aur RNA mein Uracil hai Thymine ki jagah — ye bakwaas confusing hai par yaad kar lunga!"
         }
       ],
       "navigation": {
-        "next": "card_43_quiz_nucleus_1",
-        "button_text": "Quiz! ➔"
+        "next": "card_43_rna_types",
+        "button_text": "Next Card ➔"
       }
     },
     {
-      "card_id": "card_43_quiz_nucleus_1",
-      "card_slug": "card_43_quiz_nucleus_1",
-      "type": "quiz",
-      "concept_id": "nucleus_test_1",
-      "level": 3,
+      "card_id": "card_43_rna_types",
+      "card_slug": "card_43_rna_types",
+      "type": "chat",
+      "concept_id": "rna_types",
+      "level": 5,
       "progress": {
         "current": 43,
-        "total": 60
-      },
-      "quiz_payload": {
-        "question": "Nucleolus function?",
-        "options": [
-          {
-            "id": "A",
-            "text": "DNA replication"
-          },
-          {
-            "id": "B",
-            "text": "Ribosome synthesis"
-          },
-          {
-            "id": "C",
-            "text": "Protein synthesis"
-          },
-          {
-            "id": "D",
-            "text": "Energy"
-          }
-        ],
-        "correct_option_id": "B",
-        "explanation": "Ribosome synthesis! rRNA banta. Ribosome factory. NEET/BPSC!"
-      },
-      "navigation": {
-        "next": "card_44_quiz_nucleus_2",
-        "button_text": "Q 2/3 ➔"
-      }
-    },
-    {
-      "card_id": "card_44_quiz_nucleus_2",
-      "card_slug": "card_44_quiz_nucleus_2",
-      "type": "quiz",
-      "concept_id": "nucleus_test_2",
-      "level": 3,
-      "progress": {
-        "current": 44,
-        "total": 60
-      },
-      "quiz_payload": {
-        "question": "Chromatin + Chromosome dono visible?",
-        "options": [
-          {
-            "id": "A",
-            "text": "True"
-          },
-          {
-            "id": "B",
-            "text": "False"
-          }
-        ],
-        "correct_option_id": "B",
-        "explanation": "FALSE! Normal = Chromatin. Division = Chromosome. Ek saath nahi! BPSC trap!"
-      },
-      "navigation": {
-        "next": "card_45_quiz_nucleus_3",
-        "button_text": "Q 3/3 ➔"
-      }
-    },
-    {
-      "card_id": "card_45_quiz_nucleus_3",
-      "card_slug": "card_45_quiz_nucleus_3",
-      "type": "quiz",
-      "concept_id": "nucleus_test_3",
-      "level": 3,
-      "progress": {
-        "current": 45,
-        "total": 60
-      },
-      "quiz_payload": {
-        "question": "Human chromosomes?",
-        "options": [
-          {
-            "id": "A",
-            "text": "23"
-          },
-          {
-            "id": "B",
-            "text": "46"
-          },
-          {
-            "id": "C",
-            "text": "48"
-          },
-          {
-            "id": "D",
-            "text": "92"
-          }
-        ],
-        "correct_option_id": "B",
-        "explanation": "46 (23 pairs)! 23 mother, 23 father. SSC/Railway!"
-      },
-      "navigation": {
-        "next": "card_46_milestone_nucleus",
-        "button_text": "Module Done! ➔"
-      }
-    },
-    {
-      "card_id": "card_46_milestone_nucleus",
-      "card_slug": "card_46_milestone_nucleus",
-      "type": "milestone",
-      "concept_id": "nucleus_milestone",
-      "level": 3,
-      "progress": {
-        "current": 46,
-        "total": 60
-      },
-      "milestone_payload": {
-        "title": "🎉 MODULE 6 COMPLETE!",
-        "badge_emoji": "🧠",
-        "completed_topic": "Nucleus - Brain",
-        "xp_earned": 80,
-        "milestone_progress": "Module 6/6 Clear ✓",
-        "motivational_quote": "Nuclear (double), Nucleolus (factory), Chromatin→Chromosome, 46! NEET 5+ Q!"
-      },
-      "navigation": {
-        "next": "card_47_organelles",
-        "button_text": "Bonus Organelles! ➔"
-      }
-    },
-    {
-      "card_id": "card_47_organelles",
-      "card_slug": "card_47_organelles",
-      "type": "chat",
-      "concept_id": "organelles_overview",
-      "level": 2,
-      "progress": {
-        "current": 47,
         "total": 60
       },
       "messages": [
         {
           "speaker": "aman",
-          "text": "Chhote organs = ORGANELLES! Factory!"
+          "text": "Ab RNA ki baat karte hain — ye protein banaane mein kaam karta hai. RNA 3 types ka hota hai: (1) mRNA (messenger RNA) — DNA se message copy karta hai aur ribosome pe jaata hai. (2) tRNA (transfer RNA) — amino acids ko ribosome tak laata hai. Iska shape 'Clover leaf' ya 'Inverted L' hota hai — NEET ka direct question! (3) rRNA (ribosomal RNA) — ribosome ka part hai, ribosome banaata hai. Sabse zyada RNA cell mein: rRNA (80%). Sabse chhota: tRNA!",
+          "emotion": "📨"
         },
         {
           "speaker": "raju",
-          "text": "Main konse?"
+          "text": "Sir protein banane mein teeno kaam karte hain ya alag alag?"
         },
         {
           "speaker": "aman",
-          "text": "⚡ MITOCHONDRIA (Powerhouse)\n⚡ RIBOSOMES (Protein)\n⚡ LYSOSOMES (Suicide)"
+          "text": "Teeno milke kaam karte hain — ek assembly line ki tarah! DNA se mRNA banta hai (Transcription), phir mRNA ribosome pe jaata hai, tRNA amino acids laata hai, rRNA reaction facilitate karta hai — sab milke protein banate hain (Translation). Poora process: DNA → mRNA → Protein — ise 'Central Dogma of Molecular Biology' kehte hain — Francis Crick ne 1958 mein propose kiya! Yeh NEET aur UPSC ka guaranteed question hai! Ab socho — kya DNA se directly RNA banta hai ya kuch aur steps hain...?",
+          "emotion": "🎯"
         },
         {
           "speaker": "raju",
-          "text": "Nicknames?"
-        },
-        {
-          "speaker": "aman",
-          "text": "⚠️ Nicknames = 50% SSC/Railway!",
-          "emotion": "⚡"
-        },
-        {
-          "speaker": "raju",
-          "text": "Detail!"
+          "text": "Central Dogma — DNA se RNA se Protein! Sir aage kya twist hai??"
         }
       ],
       "navigation": {
-        "next": "card_48_mitochondria",
-        "button_text": "Mitochondria! ➔"
+        "next": "card_44_quiz16",
+        "button_text": "Next Card ➔"
       }
     },
     {
-      "card_id": "card_48_mitochondria",
-      "card_slug": "card_48_mitochondria",
+      "card_id": "card_44_quiz16",
+      "card_slug": "card_44_quiz16",
+      "type": "quiz",
+      "concept_id": "dna_rna_quiz1",
+      "level": 5,
+      "progress": {
+        "current": 44,
+        "total": 60
+      },
+      "quiz_payload": {
+        "question": "Q1/3: Chargaff's Rule ke anusar, DNA mein Adenine aur Thymine ke beech kitne hydrogen bonds hote hain?",
+        "options": [
+          { "id": "A", "text": "1 hydrogen bond" },
+          { "id": "B", "text": "2 hydrogen bonds" },
+          { "id": "C", "text": "3 hydrogen bonds" },
+          { "id": "D", "text": "4 hydrogen bonds" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Adenine (A) aur Thymine (T) ke beech 2 hydrogen bonds hote hain. Guanine (G) aur Cytosine (C) ke beech 3 hydrogen bonds hote hain. Isliye G-C pair zyada stable hota hai. Yeh Chargaff's Rule hai — A=T (2 bonds), G≡C (3 bonds). RNA mein Thymine ki jagah Uracil hota hai, aur RNA single-stranded hota hai. Yeh NEET mein numerical questions mein bhi use hota hai — agar A ki percentage pata ho toh T ki percentage same hogi!"
+      },
+      "navigation": {
+        "next": "card_45_quiz17",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_45_quiz17",
+      "card_slug": "card_45_quiz17",
+      "type": "quiz",
+      "concept_id": "dna_rna_quiz2",
+      "level": 5,
+      "progress": {
+        "current": 45,
+        "total": 60
+      },
+      "quiz_payload": {
+        "question": "Q2/3: 'Central Dogma of Molecular Biology' kya hai?",
+        "options": [
+          { "id": "A", "text": "Protein → RNA → DNA" },
+          { "id": "B", "text": "DNA → Protein → RNA" },
+          { "id": "C", "text": "DNA → RNA → Protein" },
+          { "id": "D", "text": "RNA → DNA → Protein" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Central Dogma of Molecular Biology hai: DNA → RNA → Protein. Pehle Transcription hoti hai jisme DNA se mRNA banta hai, phir Translation hoti hai jisme mRNA se Protein banta hai. Yeh Francis Crick ne 1958 mein propose kiya. Exception: Retroviruses (jaise HIV) mein RNA se DNA banta hai — ise 'Reverse Transcription' kehte hain, aur enzyme hai 'Reverse Transcriptase.' Yeh NEET aur BPSC dono ka top question hai!"
+      },
+      "navigation": {
+        "next": "card_46_quiz18",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_46_quiz18",
+      "card_slug": "card_46_quiz18",
+      "type": "quiz",
+      "concept_id": "dna_rna_quiz3",
+      "level": 5,
+      "progress": {
+        "current": 46,
+        "total": 60
+      },
+      "quiz_payload": {
+        "question": "Q3/3: BPSC Trap — DNA ke double helix model ke liye Nobel Prize kab aur kisne jeeta?",
+        "options": [
+          { "id": "A", "text": "Watson, Crick aur Rosalind Franklin — 1953 mein" },
+          { "id": "B", "text": "Watson aur Crick — 1953 mein" },
+          { "id": "C", "text": "Watson, Crick aur Wilkins — 1962 mein Physiology/Medicine mein" },
+          { "id": "D", "text": "Rosalind Franklin — 1962 mein Chemistry mein" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Nobel Prize in Physiology or Medicine 1962 mein James Watson, Francis Crick, aur Maurice Wilkins ko mila — DNA double helix model ke liye. Rosalind Franklin ko Nobel Prize nahi mila kyunki Nobel Prize sirf zinda logon ko milta hai aur Franklin 1958 mein cancer se chali gain. Unhone X-ray diffraction se 'Photo 51' li thi jiska model banane mein crucial role tha. 1953 sirf model propose ka saal hai, Nobel 1962 mein mila!"
+      },
+      "navigation": {
+        "next": "card_47_milestone6",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_47_milestone6",
+      "card_slug": "card_47_milestone6",
+      "type": "milestone",
+      "concept_id": "module6_complete",
+      "level": 5,
+      "progress": {
+        "current": 47,
+        "total": 60
+      },
+      "milestone_payload": {
+        "title": "DNA DECODED! 🧬",
+        "badge_emoji": "🏅",
+        "completed_topic": "DNA, Chromosomes & RNA",
+        "xp_earned": 125,
+        "milestone_progress": "Module 6/6 Clear — ALL MODULES DONE!",
+        "motivational_quote": "Chargaff's Rule, Central Dogma, Rosalind Franklin — tum ab officer-level biology samajh chuke ho! Ab final revision aur Master Quiz ke liye taiyar ho jao — yahi woh moment hai jab marks confirm hote hain!"
+      },
+      "navigation": {
+        "next": "card_48_special_cells",
+        "button_text": "Bonus Round ➔"
+      }
+    },
+    {
+      "card_id": "card_48_special_cells",
+      "card_slug": "card_48_special_cells",
       "type": "chat",
-      "concept_id": "mitochondria_detail",
-      "level": 3,
+      "concept_id": "special_cells_facts",
+      "level": 5,
       "progress": {
         "current": 48,
         "total": 60
@@ -1807,482 +1437,384 @@
       "messages": [
         {
           "speaker": "aman",
-          "text": "⚡ POWERHOUSE! ATP! Double membrane! Cristae!",
-          "emotion": "⚡"
+          "text": "Raju, ek bonus round hai — SSC aur BPSC mein 'Special Cell Facts' bahut aate hain. Suno dhyan se: Sabse bada cell kaunsa hai human body mein? Ovum (egg cell) — naked eye se bhi dikh sakta hai! Sabse lamba cell? Neuron (nerve cell) — ek meter tak lamba ho sakta hai! Sabse chhhota cell? Mycoplasma — yeh ek bacteria hai. Sabse zyada cells kahan hain? Red Blood Cells (RBC) — 5 million per cubic mm blood mein!",
+          "emotion": "🏆"
         },
         {
           "speaker": "raju",
-          "text": "DNA?"
+          "text": "Sir RBC ke baare mein aur bataao — unka kuch alag structure hota hai na?"
         },
         {
           "speaker": "aman",
-          "text": "⚠️ NEET! OWN DNA + ribosomes! Binary fission!",
-          "emotion": "⚡"
+          "text": "Bilkul! RBC ka sabse bada EXAM TRAP hai — mature mammalian RBC mein koi nucleus nahi hota! Yeh biconcave disc shape ki hoti hain — zyada surface area ke liye oxygen carry karne ke liye. Camel ki RBC elliptical hoti hai. Frog ka RBC nucleated hota hai — yeh non-mammalian vertebrate hai. BPSC ka question: 'Kaunse mammal ki RBC mein nucleus hota hai?' — Camel? NO! Unt ki bhi nahi! Sabhi mature mammalian RBC enucleated hoti hain — Camel ki sirf elliptical shape hoti hai!",
+          "emotion": "🐫"
         },
         {
           "speaker": "raju",
-          "text": "Bacteria jaisa!"
-        },
-        {
-          "speaker": "aman",
-          "text": "⚠️ UPSC! ENDOSYMBIOTIC THEORY - pehle bacteria!",
-          "emotion": "⚡"
-        },
-        {
-          "speaker": "raju",
-          "text": "Baaki?"
+          "text": "Frog ki RBC mein nucleus hai, human ki nahi — ye to classic biology ka trap hai! Sir koi aur fun fact?"
         }
       ],
       "navigation": {
-        "next": "card_49_other",
-        "button_text": "Others! ➔"
+        "next": "card_49_guess_card",
+        "button_text": "Next Card ➔"
       }
     },
     {
-      "card_id": "card_49_other",
-      "card_slug": "card_49_other",
-      "type": "chat",
-      "concept_id": "other_organelles_quick",
-      "level": 3,
+      "card_id": "card_49_guess_card",
+      "card_slug": "card_49_guess_card",
+      "type": "guess",
+      "concept_id": "guess_organelle_function",
+      "level": 5,
       "progress": {
         "current": 49,
+        "total": 60
+      },
+      "guess_payload": {
+        "question": "🤔 Guess karo — Ek cell organelle jo sirf plant cells mein hota hai, apna DNA rakhta hai, 70S ribosomes use karta hai, aur photosynthesis karta hai. Iska naam kya hai?",
+        "hint": "💡 Hint: Iski wajah se hi plants green dikhte hain!",
+        "options": [
+          { "id": "A", "text": "Mitochondria" },
+          { "id": "B", "text": "Chloroplast" },
+          { "id": "C", "text": "Vacuole" },
+          { "id": "D", "text": "Centrosome" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Chloroplast! Yeh sirf plant cells (aur algae) mein hota hai. Iske paas apna circular DNA aur 70S ribosomes hote hain — Endosymbiotic Theory ke anusar yeh pehle Cyanobacteria tha. Andar Thylakoid membranes hoti hain jo stacked Grana banati hain — yahan light reactions hoti hain. Matrix jaise 'Stroma' mein dark reactions (Calvin Cycle) hoti hain. Chlorophyll pigment sunlight absorb karta hai — isliye plants green dikhte hain!"
+      },
+      "navigation": {
+        "next": "card_50_cell_wall_turgor",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_50_cell_wall_turgor",
+      "card_slug": "card_50_cell_wall_turgor",
+      "type": "chat",
+      "concept_id": "cell_wall_composition",
+      "level": 5,
+      "progress": {
+        "current": 50,
         "total": 60
       },
       "messages": [
         {
           "speaker": "aman",
-          "text": "⚡ RIBOSOMES = Protein (70S/80S)\n⚡ GOLGI = Post office\n⚡ LYSOSOMES = Suicide bags"
+          "text": "Raju, plant cells ki ek aur special cheez — 'Cell Wall!' Yeh cell membrane ke bahar ek rigid protective layer hoti hai. Plant cell wall ka main component hai 'Cellulose' — a polysaccharide. Bacteria ki cell wall 'Peptidoglycan' (Murein) se bani hoti hai — isliye antibiotics (Penicillin) jo bacterial cell wall ko target karte hain, woh human cells pe kaam nahi karte — human cells mein cell wall hi nahi! Fungi ki cell wall 'Chitin' se bani hoti hai. BPSC ka material comparison question — yeh 3 names pakke!",
+          "emotion": "🧱"
         },
         {
           "speaker": "raju",
-          "text": "Chloroplast?"
+          "text": "Plant = Cellulose, Bacteria = Peptidoglycan, Fungi = Chitin — teen alag cheezein! Sir Penicillin ka bacteria pe kaise kaam karta hai?"
         },
         {
           "speaker": "aman",
-          "text": "PLANTS! Photosynthesis! Chlorophyll! Own DNA!"
+          "text": "Penicillin bacterial cell wall synthesis ko block karta hai — bacteria cell wall bana nahi pata, toh cell phoot jaati hai! Alexander Fleming ne 1928 mein Penicillin discover kiya — accident se! Unke Petri dish mein Penicillium mold aa gaya aur bacteria ke aaspaas bacteria mare gaye. Isliye ise 'Magic Bullet' kaha gaya tha pehli baar. Nobel Prize 1945 mein Fleming, Florey aur Chain ko mila. Yeh SSC ka guaranteed question hai — Fleming 1928, Nobel 1945!",
+          "emotion": "💊"
         },
         {
           "speaker": "raju",
-          "text": "Vacuole?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Storage! Plants BADA (90%), animals chhota!"
-        },
-        {
-          "speaker": "raju",
-          "text": "Quiz!"
+          "text": "Fleming 1928 accident se discovered Penicillin, Nobel 1945 — aur 3 logon ko mila! Ye to puri story yaad ho gayi!"
         }
       ],
       "navigation": {
-        "next": "card_50_quiz_org_1",
-        "button_text": "Quiz! ➔"
+        "next": "card_51_endosymbiotic_final",
+        "button_text": "Next Card ➔"
       }
     },
     {
-      "card_id": "card_50_quiz_org_1",
-      "card_slug": "card_50_quiz_org_1",
-      "type": "quiz",
-      "concept_id": "organelles_test_1",
-      "level": 3,
-      "progress": {
-        "current": 50,
-        "total": 60
-      },
-      "quiz_payload": {
-        "question": "'Powerhouse'?",
-        "options": [
-          {
-            "id": "A",
-            "text": "Nucleus"
-          },
-          {
-            "id": "B",
-            "text": "Mitochondria"
-          },
-          {
-            "id": "C",
-            "text": "Ribosome"
-          },
-          {
-            "id": "D",
-            "text": "Chloroplast"
-          }
-        ],
-        "correct_option_id": "B",
-        "explanation": "Mitochondria! ATP. Famous nickname!"
-      },
-      "navigation": {
-        "next": "card_51_quiz_org_2",
-        "button_text": "Q 2/3 ➔"
-      }
-    },
-    {
-      "card_id": "card_51_quiz_org_2",
-      "card_slug": "card_51_quiz_org_2",
-      "type": "quiz",
-      "concept_id": "organelles_test_2",
-      "level": 3,
+      "card_id": "card_51_endosymbiotic_final",
+      "card_slug": "card_51_endosymbiotic_final",
+      "type": "chat",
+      "concept_id": "endosymbiotic_theory_complete",
+      "level": 5,
       "progress": {
         "current": 51,
         "total": 60
       },
-      "quiz_payload": {
-        "question": "'Suicide bags'?",
-        "options": [
-          {
-            "id": "A",
-            "text": "Mitochondria"
-          },
-          {
-            "id": "B",
-            "text": "Lysosomes"
-          },
-          {
-            "id": "C",
-            "text": "Vacuoles"
-          },
-          {
-            "id": "D",
-            "text": "Golgi"
-          }
-        ],
-        "correct_option_id": "B",
-        "explanation": "Lysosomes! Digestive enzymes. Railway favorite!"
-      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ek final important concept — Endosymbiotic Theory ka poora picture. Lynn Margulis ne 1967 mein propose kiya ki Mitochondria aur Chloroplast pehle free-living bacteria the. Kisi bade eukaryotic cell ke ancestor ne inhein andar le liya — aur yeh relationship mutually beneficial ho gayi. Evidence: (1) Dono ka apna circular DNA hai. (2) Dono mein 70S ribosomes hain. (3) Dono binary fission se divide hote hain cell cycle se independent. (4) Dono ki apni double membrane hai — inner membrane original bacteria ki membrane thi!",
+          "emotion": "🌍"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab mitochondria bilkul bacteria jaisa hai andar se?? Ye to philosophy wali baat hai biology mein!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Exactly! Aur NEET ka ek final trap — Mitochondria cell cycle se independent replicate karta hai — matlab cell divide na ho, tab bhi mitochondria divide ho sakta hai! Chloroplast bhi aisa hi karta hai. Isliye inhe 'Semi-Autonomous Organelles' kehte hain. Ab ek badi baat — Virus mein koi bhi organelle nahi hota — koi mitochondria nahi, koi ribosome nahi — woh sirf DNA ya RNA + protein coat se bane hain. Isliye virus 'living aur non-living ke beech' hain — aur Cell Theory ka exception bhi!",
+          "emotion": "🦠"
+        },
+        {
+          "speaker": "raju",
+          "text": "Virus = koi organelle nahi, sirf DNA/RNA + protein coat — aur Cell Theory ka exception! Perfect revision ho gayi sir!"
+        }
+      ],
       "navigation": {
-        "next": "card_52_quiz_org_3",
-        "button_text": "Q 3/3 ➔"
+        "next": "card_52_officer_summary",
+        "button_text": "Final Revision ➔"
       }
     },
     {
-      "card_id": "card_52_quiz_org_3",
-      "card_slug": "card_52_quiz_org_3",
-      "type": "quiz",
-      "concept_id": "organelles_test_3",
-      "level": 3,
+      "card_id": "card_52_officer_summary",
+      "card_slug": "card_52_officer_summary",
+      "type": "summary",
+      "concept_id": "full_chapter_summary",
+      "level": 5,
       "progress": {
         "current": 52,
         "total": 60
       },
-      "quiz_payload": {
-        "question": "Chloroplast kahan?",
-        "options": [
-          {
-            "id": "A",
-            "text": "Animals"
-          },
-          {
-            "id": "B",
-            "text": "Plants"
-          },
-          {
-            "id": "C",
-            "text": "Bacteria"
-          },
-          {
-            "id": "D",
-            "text": "All"
-          }
-        ],
-        "correct_option_id": "B",
-        "explanation": "ONLY plants! Photosynthesis. SSC!"
-      },
-      "navigation": {
-        "next": "card_53_summary",
-        "button_text": "Revision! ➔"
-      }
-    },
-    {
-      "card_id": "card_53_summary",
-      "card_slug": "card_53_summary",
-      "type": "summary",
-      "concept_id": "cell_biology_summary",
-      "level": 3,
-      "progress": {
-        "current": 53,
-        "total": 60
-      },
       "summary_payload": {
-        "title": "⚡ Officer Revision - Cell",
+        "title": "⚡ Officer Rapid Revision — Cell Biology",
         "revision_points": [
           {
-            "topic": "Discovery",
-            "point": "Hooke (Cork-1665), Leeuwenhoek (Living-1674), Brown (Nucleus-1831)"
+            "topic": "🔬 Cell Discovery",
+            "point": "Robert Hooke (1665) — dead cork cells dekhe, 'cellulae' name diya. Anton van Leeuwenhoek (1674) — pehli baar zinda cells dekhi pond water mein. Cell Theory: Schleiden (plants, 1838) + Schwann (animals, 1839) + Virchow 'Omnis cellula e cellula' (1855). Exception: Virus Cell Theory mein nahi aata!"
           },
           {
-            "topic": "Theory",
-            "point": "Schleiden+Schwann+Virchow. Exception=Virus"
+            "topic": "🦠 Prokaryote vs Eukaryote",
+            "point": "Prokaryote: No membrane-bound nucleus, 70S ribosomes, no membrane-bound organelles — Bacteria, Archaea, Mycoplasma. Eukaryote: Membrane-bound nucleus, 80S ribosomes — Plants, Animals, Fungi, Protists. Plant cell mein extra: Cell wall (Cellulose), Chloroplast, Large vacuole. Animal cell mein extra: Centriole. S = Svedberg unit (add nahi hota directly)."
           },
           {
-            "topic": "Types",
-            "point": "PRO (No nucleus, 70S) vs EU (Nucleus, 80S)"
+            "topic": "🫧 Cell Membrane",
+            "point": "Fluid Mosaic Model — Singer & Nicolson, 1972. Phospholipid bilayer: hydrophilic heads bahar, hydrophobic tails andar. Integral proteins = transmembrane, Peripheral = surface pe. Cholesterol = fluidity regulator. Osmosis = water movement (semi-permeable membrane through). Active Transport = energy (ATP) required, concentration ke against."
           },
           {
-            "topic": "Size",
-            "point": "Ostrich (big), Mycoplasma (small), Ovum, Nerve (1m)"
+            "topic": "🔋 Organelle Nicknames (Exam Speed Facts)",
+            "point": "Mitochondria = Powerhouse (ATP factory, own DNA, 70S ribosome, Cristae, Matrix). Chloroplast = Kitchen (Grana + Stroma, own DNA, only in plants). Ribosome = Protein Factory (George Palade, 1955, no membrane). Lysosome = Suicide Bag (hydrolytic enzymes, Christian de Duve). Golgi = Post Office/Traffic Police (Camillo Golgi, 1898). Nucleolus = rRNA factory (no own membrane)."
           },
           {
-            "topic": "Structure",
-            "point": "Membrane (Fluid Mosaic-Singer&Nicolson), Wall (cellulose-plants)"
+            "topic": "🔀 Cell Division",
+            "point": "Mitosis (Equational): 1 cell → 2 cells, same chromosome number (2n→2n), body cells, PMAT phases, best seen in Metaphase. Meiosis (Reductional): 1 cell → 4 cells, half chromosome number (2n→n), sex cells, Crossing Over in Prophase I (genetic variation ka source). Bacteria: Binary Fission (not Mitosis). Cell Cycle: G1 → S phase (DNA replication) → G2 → M phase."
           },
           {
-            "topic": "Nucleus",
-            "point": "Double membrane, Nucleolus (ribosome), Chromatin→Chromosome, 46"
-          },
-          {
-            "topic": "Organelles",
-            "point": "Mitochondria (Powerhouse), Lysosome (Suicide), Chloroplast (plants)"
+            "topic": "🧬 DNA & RNA",
+            "point": "Watson & Crick double helix — 1953 model, Nobel 1962 (Watson, Crick, Wilkins). Rosalind Franklin — Photo 51 (X-ray), no Nobel (died 1958). Chargaff Rule: A=T (2 H-bonds), G≡C (3 H-bonds). RNA mein Thymine ki jagah Uracil. Central Dogma: DNA→RNA→Protein (Francis Crick, 1958). mRNA = messenger, tRNA = clover leaf shape, rRNA = most abundant. Human = 46 chromosomes (23 pairs). Humans mein telocentric chromosomes NAHI hote."
           }
         ]
       },
       "navigation": {
-        "next": "card_54_final_1",
-        "button_text": "Final Boss! ➔"
+        "next": "card_53_final_quiz1",
+        "button_text": "Start Master Quiz 🎯"
       }
     },
     {
-      "card_id": "card_54_final_1",
-      "card_slug": "card_54_final_1",
+      "card_id": "card_53_final_quiz1",
+      "card_slug": "card_53_final_quiz1",
       "type": "final_quiz",
-      "concept_id": "cell_final_1",
-      "level": 4,
+      "concept_id": "master_quiz_1",
+      "level": 5,
+      "progress": {
+        "current": 53,
+        "total": 60
+      },
+      "quiz_payload": {
+        "question": "🏆 MASTER QUIZ Q1/5 — BPSC Multi-Statement Trap: Inme se kaun se statements Mitochondria ke baare mein SAHI hain?\n(1) Mitochondria mein 70S ribosomes hote hain\n(2) Mitochondria ka DNA circular hota hai\n(3) Mitochondria plant cells mein nahi hota\n(4) Mitochondria ki inner membrane ko Cristae kehte hain\n(5) Mitochondria sirf Eukaryotic cells mein hota hai",
+        "options": [
+          { "id": "A", "text": "Sirf 1, 2 aur 4" },
+          { "id": "B", "text": "1, 2, 4 aur 5" },
+          { "id": "C", "text": "Sirf 3 aur 5" },
+          { "id": "D", "text": "1, 2, 3 aur 4" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Statements 1, 2, 4 aur 5 SAHI hain. Statement 3 GALAT hai — Mitochondria plant cells mein BHI hota hai! Plants ko bhi cellular respiration ke liye ATP chahiye — sirf chloroplast nahi kafi. Mitochondria ka DNA circular hai (bacteria jaisa), 70S ribosomes hain, inner membrane Cristae form karta hai, aur yeh sirf Eukaryotic cells mein hota hai (Prokaryotes mein nahi). Yeh exact pattern BPSC 2019 aur NEET 2020 mein aaya tha!"
+      },
+      "navigation": {
+        "next": "card_54_final_quiz2",
+        "button_text": "Next Question ➔"
+      }
+    },
+    {
+      "card_id": "card_54_final_quiz2",
+      "card_slug": "card_54_final_quiz2",
+      "type": "final_quiz",
+      "concept_id": "master_quiz_2",
+      "level": 5,
       "progress": {
         "current": 54,
         "total": 60
       },
       "quiz_payload": {
-        "question": "S1: Mitochondria has DNA.\nS2: Mitochondria reproduces independently.\n\nCorrect?",
+        "question": "🏆 MASTER QUIZ Q2/5 — NEET Assertion-Reason: Assertion (A): Mature mammalian Red Blood Cells mein nucleus nahi hota. Reason (R): Nucleus ki absence ki wajah se RBC mein zyada haemoglobin fit ho sakta hai oxygen transport ke liye.",
         "options": [
-          {
-            "id": "A",
-            "text": "Both true, S2 explains S1"
-          },
-          {
-            "id": "B",
-            "text": "Both true, S2 NOT explain S1"
-          },
-          {
-            "id": "C",
-            "text": "S1 true, S2 false"
-          },
-          {
-            "id": "D",
-            "text": "Both false"
-          }
+          { "id": "A", "text": "A sahi hai, R galat hai" },
+          { "id": "B", "text": "A galat hai, R sahi hai" },
+          { "id": "C", "text": "A aur R dono sahi hain, aur R, A ka sahi explanation hai" },
+          { "id": "D", "text": "A aur R dono sahi hain, lekin R, A ka sahi explanation nahi hai" }
         ],
-        "correct_option_id": "A",
-        "explanation": "Both true! Own DNA → reproduce. Endosymbiotic! NEET Assertion!"
+        "correct_option_id": "C",
+        "explanation": "Dono statements sahi hain aur R, A ka correct explanation bhi hai! Mature mammalian RBC anucleate (nucleus-free) hoti hain — yeh differentiation ke time nucleus bahar nikal jaata hai. Iske fayde: (1) Zyada haemoglobin fit ho sakta hai, (2) Cell zyada flexible ho jaati hai capillaries mein se guzarne ke liye, (3) Energy waste nahi hoti nucleus maintain karne mein — sirf oxygen transport pe focus. Frog/Fish ki RBC nucleated hoti hai — yeh non-mammalian vertebrates hain!"
       },
       "navigation": {
-        "next": "card_55_final_2",
-        "button_text": "Q 2/6 ➔"
+        "next": "card_55_final_quiz3",
+        "button_text": "Next Question ➔"
       }
     },
     {
-      "card_id": "card_55_final_2",
-      "card_slug": "card_55_final_2",
+      "card_id": "card_55_final_quiz3",
+      "card_slug": "card_55_final_quiz3",
       "type": "final_quiz",
-      "concept_id": "cell_final_2",
-      "level": 4,
+      "concept_id": "master_quiz_3",
+      "level": 5,
       "progress": {
         "current": 55,
         "total": 60
       },
       "quiz_payload": {
-        "question": "Cell Theory THIRD postulate (1855)?",
+        "question": "🏆 MASTER QUIZ Q3/5 — UPSC Level: Ek DNA molecule mein Adenine ki percentage 30% hai. Toh Cytosine ki percentage kya hogi?",
         "options": [
-          {
-            "id": "A",
-            "text": "Schleiden"
-          },
-          {
-            "id": "B",
-            "text": "Schwann"
-          },
-          {
-            "id": "C",
-            "text": "Virchow"
-          },
-          {
-            "id": "D",
-            "text": "Brown"
-          }
+          { "id": "A", "text": "30%" },
+          { "id": "B", "text": "20%" },
+          { "id": "C", "text": "40%" },
+          { "id": "D", "text": "25%" }
         ],
-        "correct_option_id": "C",
-        "explanation": "Virchow! 'Omnis cellula-e-cellula'. BPSC!"
+        "correct_option_id": "B",
+        "explanation": "Chargaff's Rule: A = T, G = C. Agar A = 30%, toh T = 30%. Toh A + T = 60%. Baaki 40% G aur C mein equal divide hoga: G = C = 20% each. Isliye Cytosine = 20%. Yeh ek numerical application question hai jo NEET mein directly aaya hai. Formula yaad rakho: Agar A ki % pata hai, toh C = (100 - 2A) ÷ 2. Yahan: (100 - 60) ÷ 2 = 40 ÷ 2 = 20%."
       },
       "navigation": {
-        "next": "card_56_final_3",
-        "button_text": "Q 3/6 ➔"
+        "next": "card_56_final_quiz4",
+        "button_text": "Next Question ➔"
       }
     },
     {
-      "card_id": "card_56_final_3",
-      "card_slug": "card_56_final_3",
+      "card_id": "card_56_final_quiz4",
+      "card_slug": "card_56_final_quiz4",
       "type": "final_quiz",
-      "concept_id": "cell_final_3",
-      "level": 4,
+      "concept_id": "master_quiz_4",
+      "level": 5,
       "progress": {
         "current": 56,
         "total": 60
       },
       "quiz_payload": {
-        "question": "Arrange size: (A) Mycoplasma (B) RBC (C) Ostrich",
+        "question": "🏆 MASTER QUIZ Q4/5 — BPSC Officer Trap: Cell Wall ka composition inme se kaunsa combination SAHI hai?\n(A) Plant = Chitin, Bacteria = Cellulose, Fungi = Peptidoglycan\n(B) Plant = Cellulose, Bacteria = Peptidoglycan, Fungi = Chitin\n(C) Plant = Peptidoglycan, Bacteria = Chitin, Fungi = Cellulose\n(D) Plant = Cellulose, Bacteria = Chitin, Fungi = Peptidoglycan",
         "options": [
-          {
-            "id": "A",
-            "text": "A < B < C"
-          },
-          {
-            "id": "B",
-            "text": "B < A < C"
-          },
-          {
-            "id": "C",
-            "text": "A < C < B"
-          },
-          {
-            "id": "D",
-            "text": "C < B < A"
-          }
+          { "id": "A", "text": "Option A" },
+          { "id": "B", "text": "Option B" },
+          { "id": "C", "text": "Option C" },
+          { "id": "D", "text": "Option D" }
         ],
-        "correct_option_id": "A",
-        "explanation": "A < B < C! Mycoplasma (0.1μm) < RBC (7μm) < Ostrich (170mm). NEET!"
+        "correct_option_id": "B",
+        "explanation": "Sahi answer B hai: Plant cell wall = Cellulose (polysaccharide), Bacteria cell wall = Peptidoglycan/Murein, Fungi cell wall = Chitin. Penicillin bacterial cell wall synthesis (Peptidoglycan) ko block karta hai. Animal cells mein cell wall hoti hi nahi — sirf cell membrane. Yeh BPSC, SSC CGL, RRB NTPC — teeno mein baar-baar aaya hai. Ek mnemonic: 'Plant C karta hai, Bacteria P laata hai, Fungi C hi chahiye (Chitin).'"
       },
       "navigation": {
-        "next": "card_57_final_4",
-        "button_text": "Q 4/6 ➔"
+        "next": "card_57_final_quiz5",
+        "button_text": "Next Question ➔"
       }
     },
     {
-      "card_id": "card_57_final_4",
-      "card_slug": "card_57_final_4",
+      "card_id": "card_57_final_quiz5",
+      "card_slug": "card_57_final_quiz5",
       "type": "final_quiz",
-      "concept_id": "cell_final_4",
-      "level": 4,
+      "concept_id": "master_quiz_5",
+      "level": 5,
       "progress": {
         "current": 57,
         "total": 60
       },
       "quiz_payload": {
-        "question": "Fluid Mosaic (1972)?",
+        "question": "🏆 MASTER QUIZ Q5/5 — NEET Level Supreme: Inme se kaun sa statement GALAT hai?\n(1) Meiosis mein 4 haploid cells banti hain\n(2) Crossing over Prophase II mein hoti hai\n(3) Mitosis mein chromosome number same rehta hai\n(4) Binary Fission Bacteria mein hoti hai\n(5) tRNA ka shape Clover Leaf hota hai",
         "options": [
-          {
-            "id": "A",
-            "text": "Watson & Crick"
-          },
-          {
-            "id": "B",
-            "text": "Singer & Nicolson"
-          },
-          {
-            "id": "C",
-            "text": "Schleiden"
-          },
-          {
-            "id": "D",
-            "text": "Mendel"
-          }
+          { "id": "A", "text": "Sirf Statement 2" },
+          { "id": "B", "text": "Statements 2 aur 4" },
+          { "id": "C", "text": "Statements 1 aur 3" },
+          { "id": "D", "text": "Statements 3, 4 aur 5" }
         ],
-        "correct_option_id": "B",
-        "explanation": "Singer & Nicolson! Membrane model. BPSC!"
+        "correct_option_id": "A",
+        "explanation": "Sirf Statement 2 GALAT hai! Crossing Over Prophase I mein hoti hai — Meiosis I ke pehle phase mein, Prophase II mein nahi! Baki sab sahi hain: (1) Meiosis mein 4 haploid cells ✓, (3) Mitosis mein chromosome number same (2n→2n) ✓, (4) Binary Fission bacteria mein ✓, (5) tRNA clover leaf shape ✓. Crossing Over ka correct phase Prophase I yaad rakhna — yeh NEET mein 3 baar galat form mein poochha ja chuka hai. Congratulations — tum Cell Biology ke Master ban gaye!"
       },
       "navigation": {
-        "next": "card_58_final_5",
-        "button_text": "Q 5/6 ➔"
+        "next": "card_58_bonus_guess",
+        "button_text": "Last Challenge ➔"
       }
     },
     {
-      "card_id": "card_58_final_5",
-      "card_slug": "card_58_final_5",
-      "type": "final_quiz",
-      "concept_id": "cell_final_5",
-      "level": 4,
+      "card_id": "card_58_bonus_guess",
+      "card_slug": "card_58_bonus_guess",
+      "type": "guess",
+      "concept_id": "bonus_guess_final",
+      "level": 5,
       "progress": {
         "current": 58,
         "total": 60
       },
-      "quiz_payload": {
-        "question": "Nucleolus PRIMARY?",
+      "guess_payload": {
+        "question": "🎯 Final Boss Guess — Ek aisa scientist jisne cell ka naam diya, ek aisa scientist jisne zinda cell dekhi, ek scientist jisne cell theory ka 3rd rule diya — inke CORRECT kram ko identify karo!",
+        "hint": "💡 Hint: 1665 → 1674 → 1855 — sirf saal yaad raho, baaki sab ho jaayega!",
         "options": [
-          {
-            "id": "A",
-            "text": "DNA replication"
-          },
-          {
-            "id": "B",
-            "text": "Protein"
-          },
-          {
-            "id": "C",
-            "text": "Ribosome synthesis (rRNA)"
-          },
-          {
-            "id": "D",
-            "text": "Energy"
-          }
+          { "id": "A", "text": "Leeuwenhoek → Hooke → Virchow" },
+          { "id": "B", "text": "Hooke (1665) → Leeuwenhoek (1674) → Virchow (1855)" },
+          { "id": "C", "text": "Virchow → Hooke → Leeuwenhoek" },
+          { "id": "D", "text": "Schleiden → Schwann → Virchow" }
         ],
-        "correct_option_id": "C",
-        "explanation": "Ribosome synthesis! rRNA. Factory. NEET!"
+        "correct_option_id": "B",
+        "explanation": "Perfect chronological order: Robert Hooke (1665) ne cork mein dead cells dekhi aur 'cell' naam diya. Anton van Leeuwenhoek (1674) ne pond water mein pehli baar zinda cells dekhi. Rudolf Virchow (1855) ne 'Omnis cellula e cellula' — har cell purani cell se — ka rule diya. Option D bhi partially sahi hai (Schleiden 1838, Schwann 1839, Virchow 1855) lekin sawaal pehle teen scientists ke baare mein tha. Yeh poora chapter ek hi jagah seal ho gaya!"
       },
       "navigation": {
-        "next": "card_59_final_6",
-        "button_text": "Last Q 6/6 ➔"
+        "next": "card_59_chapter_trophy",
+        "button_text": "Claim Your Trophy! 🏆"
       }
     },
     {
-      "card_id": "card_59_final_6",
-      "card_slug": "card_59_final_6",
-      "type": "final_quiz",
-      "concept_id": "cell_final_6",
-      "level": 4,
+      "card_id": "card_59_chapter_trophy",
+      "card_slug": "card_59_chapter_trophy",
+      "type": "milestone",
+      "concept_id": "chapter_completion",
+      "level": 5,
       "progress": {
         "current": 59,
         "total": 60
       },
-      "quiz_payload": {
-        "question": "Cell wall in ALL living?",
-        "options": [
-          {
-            "id": "A",
-            "text": "True"
-          },
-          {
-            "id": "B",
-            "text": "False"
-          }
-        ],
-        "correct_option_id": "B",
-        "explanation": "FALSE! SIRF plants/fungi/bacteria. Animals NO (movement). BPSC trap!"
+      "milestone_payload": {
+        "title": "🏆 CHAPTER COMPLETE — CELL BIOLOGY MASTER!",
+        "badge_emoji": "🎓",
+        "completed_topic": "Cell Biology — Complete Chapter (NCERT + PYQ Level)",
+        "xp_earned": 500,
+        "milestone_progress": "All 6 Modules + Master Quiz Clear!",
+        "motivational_quote": "Hooke se Watson-Crick tak, Mitosis se Meiosis tak, Lysosome se Endosymbiotic Theory tak — tumne woh sab sikha jo BPSC, SSC, NEET, Railway aur UPSC ke topper jaante hain. Ab yeh knowledge sirf tumhara nahi — yeh ek officer ki tarah sochne ki ability hai!"
       },
       "navigation": {
-        "next": "card_60_completion",
-        "button_text": "Final Score! ➔"
+        "next": "card_60_next_chapter_teaser",
+        "button_text": "See What's Next 🚀"
       }
     },
     {
-      "card_id": "card_60_completion",
-      "card_slug": "card_60_completion",
-      "type": "milestone",
-      "concept_id": "cell_biology_complete",
-      "level": 4,
+      "card_id": "card_60_next_chapter_teaser",
+      "card_slug": "card_60_next_chapter_teaser",
+      "type": "chat",
+      "concept_id": "next_chapter_hook",
+      "level": 5,
       "progress": {
         "current": 60,
         "total": 60
       },
-      "milestone_payload": {
-        "title": "🏆 CELL BIOLOGY COMPLETE!",
-        "badge_emoji": "🧬",
-        "completed_topic": "Complete Cell Biology",
-        "xp_earned": 500,
-        "milestone_progress": "100% Chapter ✓✓✓",
-        "motivational_quote": "Discovery→Theory→Types→Size→Structure→Nucleus→Organelles! BPSC 8-10Q, SSC 5-6Q, NEET 10-12Q. Tum ab EXPERT! Officer ban kar rahoge! 💪🔥🎯"
-      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, ek final twist — tumne mitochondria mein 70S ribosomes dekha, chloroplast mein dekha... lekin kya tumhe pata hai ki kuch ribosomes cell mein free float karte hain aur kuch ER se attached hote hain? Aur in dono se alag-alag types ke proteins bante hain! Yeh concept directly 'Photosynthesis aur Cellular Respiration' chapter se connect hota hai — jahan mitochondria ATP banata hai aur chloroplast glucose. Woh chapter poori energy ki kahani hai — bilkul ek superhero ki origin story ki tarah!",
+          "emotion": "🌟"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir matlab energy ka poora cycle — photosynthesis se cellular respiration tak — ek connected story hai?? Ab toh next chapter padhna hi padega!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Exactly! Aur us chapter mein tumhe milenge Krebs Cycle, Electron Transport Chain, Calvin Cycle — aur sabse bada NEET bomb: ATP ka exact production (38 vs 36 debate)! Lekin pehle — aaj ke liye apni achievement celebrate karo. Tumne ek poora chapter crack kiya jisme BPSC, SSC, NEET, Railway — sab ke sab covered hain. Kal fresh mind se agli chapter explore karna — biology tumhe officer banayegi!",
+          "emotion": "🎉"
+        },
+        {
+          "speaker": "raju",
+          "text": "38 vs 36 ATP debate?? Sir ab toh rukna impossible hai! Kal zaroor aaunga next chapter ke liye!"
+        }
+      ],
       "navigation": {
         "next": null,
-        "button_text": "Chapter Complete! 🎉"
+        "button_text": "Chapter Complete! 🎓"
       }
     }
   ]
 }
+```
