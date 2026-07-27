@@ -1,0 +1,2120 @@
+{
+  "topic_id": "nervous_system_biology",
+  "topic_title": "Nervous System",
+  "target_exams": ["BPSC", "BSSC", "RRB NTPC", "SSC CGL", "NEET", "UPSC Prelims"],
+  "total_cards": 60,
+  "characters": {
+    "aman": {
+      "name": "Aman Sir",
+      "role": "teacher",
+      "avatar": "👨‍🏫"
+    },
+    "raju": {
+      "name": "Raju",
+      "role": "student",
+      "avatar": "👦"
+    }
+  },
+  "cards": [
+    {
+      "card_id": "card_01_intro",
+      "card_slug": "card_01_intro",
+      "type": "intro",
+      "concept_id": "nervous_system_intro",
+      "level": 1,
+      "progress": {
+        "current": 1,
+        "total": 60
+      },
+      "intro_payload": {
+        "title": "🧠 Nervous System",
+        "icon": "🧬",
+        "target_exams": ["BPSC", "BSSC", "RRB NTPC", "SSC CGL", "NEET", "UPSC Prelims"],
+        "learning_outcomes": [
+          "Structure and types of neurons",
+          "Nerve impulse transmission mechanism",
+          "Synapse and neurotransmitters",
+          "Central and Peripheral Nervous System",
+          "Human brain anatomy and functions",
+          "Reflex action pathway",
+          "Autonomic nervous system divisions",
+          "Common neurological disorders"
+        ],
+        "estimated_time": "25 minutes",
+        "total_xp": 500
+      },
+      "navigation": {
+        "next": "card_02_daily_life_intro",
+        "button_text": "Start Learning 🚀"
+      }
+    },
+    {
+      "card_id": "card_02_daily_life_intro",
+      "card_slug": "card_02_daily_life_intro",
+      "type": "chat",
+      "concept_id": "nervous_system_daily_observation",
+      "level": 1,
+      "progress": {
+        "current": 2,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, tumne kabhi garam kadahi ko galti se touch kar liya ho? Phir kya hota hai?",
+          "emotion": "🤔"
+        },
+        {
+          "speaker": "raju",
+          "text": "Haan sir! Turant hath hata lete hain... ekdum jhatke se! Sochne ka time hi nahi milta."
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul sahi! Tumne socha bhi nahi, phir bhi tumhara hath khud-ba-khud hat gaya. Ye kis chij ne kiya?",
+          "emotion": "😊"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab... body ke andar koi system hai jo automatically kaam karta hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Exactly! Ye tumhare sharir ka sabse tez kaam karne wala network hai - Nervous System. Ye ek second me lakho signals bhejta hai!",
+          "emotion": "✨"
+        },
+        {
+          "speaker": "raju",
+          "text": "Woww! To ye exam me bhi bahut aata hoga sir?"
+        }
+      ],
+      "navigation": {
+        "next": "card_03_nervous_system_definition",
+        "button_text": "Haan, bilkul! ➔"
+      }
+    },
+    {
+      "card_id": "card_03_nervous_system_definition",
+      "card_slug": "card_03_nervous_system_definition",
+      "type": "chat",
+      "concept_id": "nervous_system_basic_definition",
+      "level": 1,
+      "progress": {
+        "current": 3,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Dekho Raju, Nervous System sharir ka 'Communication Network' hai - jaise mobile tower signals bhejte hain, waise ye body me messages bhejta hai.",
+          "emotion": "📡"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab brain se sabhi organs ko order jaate hain?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan, par sirf ek taraf se nahi! Ye two-way traffic hai - Sensors se brain ko, aur brain se muscles ko. Dono taraf messages chalte hain!",
+          "emotion": "🔄"
+        },
+        {
+          "speaker": "raju",
+          "text": "Ohhh... to jab hum kuch dekhte hain, to aankhon se brain ko signal jata hai, phir brain samajh kar reaction bhejta hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Perfect understanding! BPSC me ye coordination ka concept pakka puchte hain. Ab iske teen main parts yaad rakho: Brain, Spinal Cord, aur Nerves.",
+          "emotion": "💯"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir ye nerves kya hoti hain exactly?"
+        }
+      ],
+      "navigation": {
+        "next": "card_04_neuron_intro",
+        "button_text": "Chalte hain uski duniya me ➔"
+      }
+    },
+    {
+      "card_id": "card_04_neuron_intro",
+      "card_slug": "card_04_neuron_intro",
+      "type": "chat",
+      "concept_id": "neuron_basic_structure",
+      "level": 1,
+      "progress": {
+        "current": 4,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, electric wire me current kaise flow hota hai? Uske andar kya hota hai?",
+          "emotion": "💡"
+        },
+        {
+          "speaker": "raju",
+          "text": "Andar metal hota hai sir... taar! Wo current lekar jata hai."
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul! Waise hi Nervous System me 'taar' hote hain jinhe NEURON kehte hain. Ye special cells hain jo electrical signals carry karti hain.",
+          "emotion": "🧵"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab ye normal cells jaise nahi hote? Kuch alag hote hain?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! Ye sabse lambi cells hain body me - ek neuron 1 meter tak lamba ho sakta hai! Aur inki shakal bhi unique hai - ek tadpole jaise, with tail and branches!",
+          "emotion": "🦎"
+        },
+        {
+          "speaker": "raju",
+          "text": "1 meter!! Hain?? Ek cell itni badi?? Sir ye to exam me trap ban sakta hai!"
+        }
+      ],
+      "navigation": {
+        "next": "card_05_neuron_parts",
+        "button_text": "Haan! Ab parts dekhte hain ➔"
+      }
+    },
+    {
+      "card_id": "card_05_neuron_parts",
+      "card_slug": "card_05_neuron_parts",
+      "type": "chat",
+      "concept_id": "neuron_structure_parts",
+      "level": 1,
+      "progress": {
+        "current": 5,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Neuron ke teen main parts hain - Cell Body (Cyton), Dendrites (shaakhayen), aur Axon (lambi tail). Sabka alag kaam hai!",
+          "emotion": "🌳"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir shaakhayein to tree me hoti hain... neuron me kyu?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Kyunki Dendrites bilkul tree branches jaise dikhti hain! Inki shaakhon par signals receive hote hain - jaise TV antenna signals pakadta hai.",
+          "emotion": "📡"
+        },
+        {
+          "speaker": "raju",
+          "text": "Acha! To dendrites input lete hain... phir cell body kya karti hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Cell Body (Cyton) me Nucleus hota hai - ye decision-making center hai. Signals ko process karta hai. NEET me yaad rakho - Cyton me Nissl's Granules hote hain jo protein banate hain!",
+          "emotion": "🧠"
+        },
+        {
+          "speaker": "raju",
+          "text": "Aur ye Axon jo tail jaisa hai, wo output bhejta hoga?"
+        }
+      ],
+      "navigation": {
+        "next": "card_06_axon_detail",
+        "button_text": "Bilkul sahi! ➔"
+      }
+    },
+    {
+      "card_id": "card_06_axon_detail",
+      "card_slug": "card_06_axon_detail",
+      "type": "chat",
+      "concept_id": "axon_myelin_sheath",
+      "level": 1,
+      "progress": {
+        "current": 6,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Haan Raju! Axon ek lambi cable hai jo signal aage bhejti hai. Isme ek special coating hoti hai - Myelin Sheath - jaise wire pe plastic cover!",
+          "emotion": "🔌"
+        },
+        {
+          "speaker": "raju",
+          "text": "Ye coating kyu hoti hai sir? Sirf protection ke liye?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Nahi! Protection ke saath-saath ye signal ko tez karne ka kaam karti hai - jaise express train stations skip karti hai. Myelin covered neurons me signal 100 times faster jaata hai!",
+          "emotion": "🚄"
+        },
+        {
+          "speaker": "raju",
+          "text": "Wow!! Par sir ye myelin banata kaun hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bahut important NEET question! Schwann Cells banati hain myelin sheath. Aur ye sheath pure axon pe continuous nahi hoti - beech me gaps hote hain jinhe Nodes of Ranvier kehte hain!",
+          "emotion": "🎯"
+        },
+        {
+          "speaker": "raju",
+          "text": "Nodes of Ranvier... ye naam yaad rakhna padega! Sir ye gaps kyu hote hain?"
+        }
+      ],
+      "navigation": {
+        "next": "card_07_saltatory_conduction",
+        "button_text": "Jabardast question! ➔"
+      }
+    },
+    {
+      "card_id": "card_07_saltatory_conduction",
+      "card_slug": "card_07_saltatory_conduction",
+      "type": "chat",
+      "concept_id": "saltatory_conduction_mechanism",
+      "level": 1,
+      "progress": {
+        "current": 7,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Kyunki signal in nodes pe jumping karta hai - ek node se doosre node pe! Isse Saltatory Conduction kehte hain. 'Saltare' matlab 'to jump' in Latin!",
+          "emotion": "🦘"
+        },
+        {
+          "speaker": "raju",
+          "text": "Achhaaa!! Jump karke speed badh jati hai signal ki?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Exactly! Bina myelin wale neurons me signal crawl karta hai pure length me. Myelin wale me jumping se bahut fast travel hota hai - 120 m/s tak!",
+          "emotion": "⚡"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir ab samajh aaya ki hum garam cheez se itni jaldi hath kyu hata lete hain!"
+        }
+      ],
+      "navigation": {
+        "next": "card_08_quiz_neuron_parts",
+        "button_text": "Perfect! Ab quiz time ➔"
+      }
+    },
+    {
+      "card_id": "card_08_quiz_neuron_parts",
+      "card_slug": "card_08_quiz_neuron_parts",
+      "type": "quiz",
+      "concept_id": "neuron_structure_quiz",
+      "level": 1,
+      "progress": {
+        "current": 8,
+        "total": 60
+      },
+      "quiz_payload": {
+        "question": "Which part of the neuron receives incoming signals from other neurons? (SSC CGL 2019 type)",
+        "options": [
+          { "id": "A", "text": "Axon" },
+          { "id": "B", "text": "Dendrites" },
+          { "id": "C", "text": "Cell Body (Cyton)" },
+          { "id": "D", "text": "Myelin Sheath" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Dendrites are the tree-like branches that receive incoming signals from other neurons and sensory receptors. They act as the input zone of the neuron. The axon transmits signals away from the cell body (output), while the cell body processes the information."
+      },
+      "navigation": {
+        "next": "card_09_quiz_myelin_function",
+        "button_text": "Q2/3 ➔"
+      }
+    },
+    {
+      "card_id": "card_09_quiz_myelin_function",
+      "card_slug": "card_09_quiz_myelin_function",
+      "type": "quiz",
+      "concept_id": "myelin_sheath_quiz",
+      "level": 1,
+      "progress": {
+        "current": 9,
+        "total": 60
+      },
+      "quiz_payload": {
+        "question": "Myelin sheath is produced by which type of cells in the Peripheral Nervous System? (NEET 2020 type)",
+        "options": [
+          { "id": "A", "text": "Nissl bodies" },
+          { "id": "B", "text": "Schwann cells" },
+          { "id": "C", "text": "Neurons" },
+          { "id": "D", "text": "Dendrites" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Schwann cells produce myelin sheath in the Peripheral Nervous System (PNS). In the Central Nervous System (CNS), oligodendrocytes perform this function. Myelin sheath insulates the axon and increases the speed of nerve impulse transmission through saltatory conduction. This is a very common NEET and SSC question trap!"
+      },
+      "navigation": {
+        "next": "card_10_quiz_saltatory",
+        "button_text": "Q3/3 ➔"
+      }
+    },
+    {
+      "card_id": "card_10_quiz_saltatory",
+      "card_slug": "card_10_quiz_saltatory",
+      "type": "quiz",
+      "concept_id": "saltatory_conduction_quiz",
+      "level": 1,
+      "progress": {
+        "current": 10,
+        "total": 60
+      },
+      "quiz_payload": {
+        "question": "The gaps in the myelin sheath are called _______ and the jumping of nerve impulse between these gaps is called _______. (BPSC 2018 type)",
+        "options": [
+          { "id": "A", "text": "Nodes of Ranvier; Continuous conduction" },
+          { "id": "B", "text": "Schwann nodes; Rapid conduction" },
+          { "id": "C", "text": "Nodes of Ranvier; Saltatory conduction" },
+          { "id": "D", "text": "Myelin nodes; Axonal conduction" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "The gaps in the myelin sheath are called Nodes of Ranvier, named after French scientist Louis-Antoine Ranvier. The nerve impulse jumps from one node to another, which is called Saltatory Conduction (from Latin 'saltare' meaning 'to jump'). This mechanism increases the speed of nerve impulse transmission up to 100 times faster than unmyelinated neurons!"
+      },
+      "navigation": {
+        "next": "card_11_milestone_neuron_structure",
+        "button_text": "Check Answer ➔"
+      }
+    },
+    {
+      "card_id": "card_11_milestone_neuron_structure",
+      "card_slug": "card_11_milestone_neuron_structure",
+      "type": "milestone",
+      "concept_id": "neuron_structure_complete",
+      "level": 1,
+      "progress": {
+        "current": 11,
+        "total": 60
+      },
+      "milestone_payload": {
+        "title": "🎯 MODULE 1 COMPLETED!",
+        "badge_emoji": "🧬",
+        "completed_topic": "Neuron Structure & Parts",
+        "xp_earned": 50,
+        "milestone_progress": "Module 1/8 Clear",
+        "motivational_quote": "You've mastered the blueprint of the body's fastest network! BPSC officers know this cold! 🔥"
+      },
+      "navigation": {
+        "next": "card_12_types_of_neurons",
+        "button_text": "Start Module 2: Types of Neurons ➔"
+      }
+    },
+    {
+      "card_id": "card_12_types_of_neurons",
+      "card_slug": "card_12_types_of_neurons",
+      "type": "chat",
+      "concept_id": "neuron_types_introduction",
+      "level": 1,
+      "progress": {
+        "current": 12,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, ghar me teen tarah ke log hote hain - kuch bahar se khabar laate hain, kuch ghar me rehkar decision lete hain, aur kuch orders lekar kaam karte hain. Neurons bhi waise hi teen types ke hote hain!",
+          "emotion": "🏠"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir matlab kuch neurons information laate hain, kuch sochte hain, aur kuch action lete hain?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Perfect analogy! Pehle type: Sensory Neurons - ye bahar se signals laate hain jaise aankhon, kaan, skin se. Inhe Afferent Neurons bhi kehte hain!",
+          "emotion": "👁️"
+        },
+        {
+          "speaker": "raju",
+          "text": "Afferent matlab?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Latin se aaya hai - 'Af' matlab 'towards'. Ye signals ko brain/spinal cord KI TARAF le jaate hain. BPSC trap: Afferent = Towards center!",
+          "emotion": "📍"
+        },
+        {
+          "speaker": "raju",
+          "text": "Achha! To doosre type organs ko orders bhejte honge?"
+        }
+      ],
+      "navigation": {
+        "next": "card_13_motor_neurons",
+        "button_text": "Exactly! ➔"
+      }
+    },
+    {
+      "card_id": "card_13_motor_neurons",
+      "card_slug": "card_13_motor_neurons",
+      "type": "chat",
+      "concept_id": "motor_neurons_efferent",
+      "level": 1,
+      "progress": {
+        "current": 13,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Haan! Doosre hain Motor Neurons ya Efferent Neurons - ye brain/spinal cord SE signals ko muscles aur glands tak bhejte hain. 'Ef' matlab 'away from'!",
+          "emotion": "💪"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab Sensory andar laate hain, Motor bahar bhejte hain... aur teesre type?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Teesre hain Association Neurons ya Interneurons - ye beech me hote hain, sirf brain aur spinal cord me. Ye sensory aur motor neurons ko connect karte hain aur decision-making me help karte hain!",
+          "emotion": "🔗"
+        },
+        {
+          "speaker": "raju",
+          "text": "Ohhh! To jaise relay race me middle runner signal pass karta hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Superb example! NEET me yaad rakho - Interneurons CNS me hi hote hain, kabhi bahar nahi nikalte. Aur inki sankhya sabse zyada hai - 99% neurons ye hi hain!",
+          "emotion": "🧠"
+        },
+        {
+          "speaker": "raju",
+          "text": "99%!! Bachpan se socha tha brain me sochne wale alag hote hain... ye to sab connected system hai sir!"
+        }
+      ],
+      "navigation": {
+        "next": "card_14_neuron_types_structural",
+        "button_text": "Aur bhi classification hai! ➔"
+      }
+    },
+    {
+      "card_id": "card_14_neuron_types_structural",
+      "card_slug": "card_14_neuron_types_structural",
+      "type": "chat",
+      "concept_id": "neuron_structural_classification",
+      "level": 1,
+      "progress": {
+        "current": 14,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, ab structure ke basis pe classification - kitne processes (extensions) nikal rahi hain cell body se, usse naam milta hai!",
+          "emotion": "🌿"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab dendrites aur axon kitne hain usse?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Exactly! Unipolar neurons me sirf ek hi process hoti hai cell body se. Bipolar me do - ek dendrite aur ek axon. Multipolar me bahut saari dendrites aur ek axon!",
+          "emotion": "🔢"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir sabse common kaun sa hota hai humans me?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Multipolar sabse zyada common hai - brain aur spinal cord ke zyaadatar neurons aise hi hote hain. Bipolar bahut rare hai - sirf retina, nose lining me milte hain. SSC me direct puchte hain!",
+          "emotion": "⭐"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir ye to confuse ho jayega exam me... functional aur structural dono classification!"
+        }
+      ],
+      "navigation": {
+        "next": "card_15_quiz_neuron_types",
+        "button_text": "Quiz se clear ho jayega! ➔"
+      }
+    },
+    {
+      "card_id": "card_15_quiz_neuron_types",
+      "card_slug": "card_15_quiz_neuron_types",
+      "type": "quiz",
+      "concept_id": "neuron_types_functional_quiz",
+      "level": 1,
+      "progress": {
+        "current": 15,
+        "total": 60
+      },
+      "quiz_payload": {
+        "question": "Neurons that carry impulses FROM sense organs TO the Central Nervous System are called: (Railway RRB NTPC 2021)",
+        "options": [
+          { "id": "A", "text": "Motor neurons / Efferent neurons" },
+          { "id": "B", "text": "Sensory neurons / Afferent neurons" },
+          { "id": "C", "text": "Association neurons / Interneurons" },
+          { "id": "D", "text": "Unipolar neurons" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Sensory neurons (also called Afferent neurons) carry signals FROM sensory receptors (eyes, ears, skin, etc.) TO the brain or spinal cord. 'Afferent' comes from Latin 'af' meaning 'towards' - they bring information towards the central nervous system. Motor neurons work in the opposite direction (efferent = away from CNS)."
+      },
+      "navigation": {
+        "next": "card_16_quiz_interneurons",
+        "button_text": "Q2/3 ➔"
+      }
+    },
+    {
+      "card_id": "card_16_quiz_interneurons",
+      "card_slug": "card_16_quiz_interneurons",
+      "type": "quiz",
+      "concept_id": "interneurons_location_quiz",
+      "level": 1,
+      "progress": {
+        "current": 16,
+        "total": 60
+      },
+      "quiz_payload": {
+        "question": "Association neurons (Interneurons) are found in: (NEET 2019 type)",
+        "options": [
+          { "id": "A", "text": "Only in muscles and glands" },
+          { "id": "B", "text": "Only in sensory organs" },
+          { "id": "C", "text": "Only in Brain and Spinal Cord (CNS)" },
+          { "id": "D", "text": "Throughout the entire body" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Interneurons (Association neurons) are found ONLY in the Central Nervous System (Brain and Spinal Cord). They connect sensory and motor neurons and play a crucial role in decision-making and reflex actions. They constitute about 99% of all neurons in the human body! They never extend outside the CNS - this is a very common NEET trap question."
+      },
+      "navigation": {
+        "next": "card_17_quiz_multipolar",
+        "button_text": "Q3/3 ➔"
+      }
+    },
+    {
+      "card_id": "card_17_quiz_multipolar",
+      "card_slug": "card_17_quiz_multipolar",
+      "type": "quiz",
+      "concept_id": "multipolar_neurons_quiz",
+      "level": 1,
+      "progress": {
+        "current": 17,
+        "total": 60
+      },
+      "quiz_payload": {
+        "question": "Which structural type of neuron is MOST abundant in the human brain and spinal cord? (BPSC 2017)",
+        "options": [
+          { "id": "A", "text": "Unipolar neurons" },
+          { "id": "B", "text": "Bipolar neurons" },
+          { "id": "C", "text": "Multipolar neurons" },
+          { "id": "D", "text": "Pseudounipolar neurons" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Multipolar neurons are the MOST abundant structural type in the brain and spinal cord. They have one axon and multiple dendrites extending from the cell body, which allows them to receive signals from many sources. Bipolar neurons (one dendrite, one axon) are rare and found only in special sense organs like the retina and olfactory epithelium."
+      },
+      "navigation": {
+        "next": "card_18_milestone_neuron_types",
+        "button_text": "Check Answer ➔"
+      }
+    },
+    {
+      "card_id": "card_18_milestone_neuron_types",
+      "card_slug": "card_18_milestone_neuron_types",
+      "type": "milestone",
+      "concept_id": "neuron_types_complete",
+      "level": 1,
+      "progress": {
+        "current": 18,
+        "total": 60
+      },
+      "milestone_payload": {
+        "title": "🏆 MODULE 2 COMPLETED!",
+        "badge_emoji": "🔬",
+        "completed_topic": "Types of Neurons",
+        "xp_earned": 50,
+        "milestone_progress": "Module 2/8 Clear",
+        "motivational_quote": "Afferent vs Efferent - You'll never confuse these in SSC now! 💪"
+      },
+      "navigation": {
+        "next": "card_19_nerve_impulse_intro",
+        "button_text": "Start Module 3: Nerve Impulse ⚡"
+      }
+    },
+    {
+      "card_id": "card_19_nerve_impulse_intro",
+      "card_slug": "card_19_nerve_impulse_intro",
+      "type": "chat",
+      "concept_id": "nerve_impulse_basic",
+      "level": 1,
+      "progress": {
+        "current": 19,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, WhatsApp message kaise travel karta hai tumhare phone se dost ke phone tak? Kya jaadu hai?",
+          "emotion": "📱"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir, internet signals hote hain... electrical ya kuch digital signals!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul! Waise hi neurons me bhi electrical signals travel karte hain - unhe Nerve Impulse kehte hain. Par ye permanent nahi hai - ek wave ki tarah aata hai aur chala jata hai!",
+          "emotion": "🌊"
+        },
+        {
+          "speaker": "raju",
+          "text": "Wave?? Matlab continuously on nahi rehta?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Nahi! Ek jagah se shuru hota hai, travel karta hai, aur khatam ho jata hai. Isko Action Potential bhi kehte hain. NEET ka favorite topic hai ye!",
+          "emotion": "⚡"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir ye electrical signal neuron me kaise banta hai? Battery to nahi hai!"
+        }
+      ],
+      "navigation": {
+        "next": "card_20_resting_potential",
+        "button_text": "Genius question! ➔"
+      }
+    },
+    {
+      "card_id": "card_20_resting_potential",
+      "card_slug": "card_20_resting_potential",
+      "type": "chat",
+      "concept_id": "resting_membrane_potential",
+      "level": 1,
+      "progress": {
+        "current": 20,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Battery nahi, par neuron ek 'chemical battery' banata hai! Jab neuron rest me hota hai, tab uske andar aur bahar alag-alag ions hote hain - isse voltage difference ban jata hai!",
+          "emotion": "🔋"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab andar positive aur bahar negative?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Ulta! Andar NEGATIVE (-70 mV) aur bahar POSITIVE. Is resting state ko Resting Membrane Potential kehte hain. Andar zyada K+ (Potassium) ions hote hain, bahar zyada Na+ (Sodium) ions!",
+          "emotion": "➖➕"
+        },
+        {
+          "speaker": "raju",
+          "text": "Ye -70 mV exact number exam me yaad rakhna padega sir?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! NEET aur BPSC dono me puchte hain - Normal resting potential kitna hota hai? Answer: -70 millivolts (mV). Ye negative sign bahut important hai!",
+          "emotion": "🎯"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir phir signal kab banta hai? Kuch hota to hoga jo ise disturb kare?"
+        }
+      ],
+      "navigation": {
+        "next": "card_21_action_potential",
+        "button_text": "Yahin twist hai! ➔"
+      }
+    },
+    {
+      "card_id": "card_21_action_potential",
+      "card_slug": "card_21_action_potential",
+      "type": "chat",
+      "concept_id": "action_potential_depolarization",
+      "level": 1,
+      "progress": {
+        "current": 21,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Jab stimulus milta hai - jaise garam kadhai touch ki - to neuron ke gates khul jaate hain aur Na+ ions andar rush karte hain! Achanak andar positive ho jata hai (+30 mV tak)!",
+          "emotion": "🚪"
+        },
+        {
+          "speaker": "raju",
+          "text": "Hain?? -70 se +30? Itna bada jump??"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! Ise Depolarization kehte hain. Negative se positive hona = Depolarization. Ye hi actual nerve impulse hai - electric current ki tarah!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Achhaaa! Matlab pehle -70 mV tha, stimulus laga to Na+ andar aaye aur +30 mV ho gaya... par phir ye wapas normal kaise hoga?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Ekdum sahi soch rahe ho! Phir K+ ions bahar nikalte hain aur membrane phir se negative ho jata hai - ise Repolarization kehte hain. Ye automatic process hai!",
+          "emotion": "🔄"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir ye gates aur channels ka mechanism to complex lagta hai!"
+        }
+      ],
+      "navigation": {
+        "next": "card_22_sodium_potassium_pump",
+        "button_text": "NEET level detail ab! ➔"
+      }
+    },
+    {
+      "card_id": "card_22_sodium_potassium_pump",
+      "card_slug": "card_22_sodium_potassium_pump",
+      "type": "chat",
+      "concept_id": "sodium_potassium_pump_mechanism",
+      "level": 1,
+      "progress": {
+        "current": 22,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Dekho Raju, do tarah ke gates hote hain: Voltage-gated channels (automatically khulte/band hote hain voltage change se) aur Sodium-Potassium Pump (actively ions ko transport karta hai)!",
+          "emotion": "⚙️"
+        },
+        {
+          "speaker": "raju",
+          "text": "Pump?? Matlab mechanical pump jaise?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! Na-K Pump energy use karke 3 Na+ ions ko bahar phenk deta hai aur 2 K+ ions ko andar le aata hai - resting potential maintain karne ke liye. Isme ATP (energy) lagti hai!",
+          "emotion": "💪"
+        },
+        {
+          "speaker": "raju",
+          "text": "Ohhh! To battery ko recharge karne jaisa... energy use karke original state me wapas lana!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Perfect analogy! NEET me ratio yaad rakho: 3:2 ratio (3 Na+ out, 2 K+ in). Aur ye electrogenic pump hai kyunki isse membrane me charge difference banta hai!",
+          "emotion": "📊"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir ye sab process kitni tezi se hota hai?"
+        }
+      ],
+      "navigation": {
+        "next": "card_23_impulse_speed",
+        "button_text": "Mind-blowing fact ahead! ➔"
+      }
+    },
+    {
+      "card_id": "card_23_impulse_speed",
+      "card_slug": "card_23_impulse_speed",
+      "type": "chat",
+      "concept_id": "nerve_impulse_transmission_speed",
+      "level": 1,
+      "progress": {
+        "current": 23,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ek nerve impulse 0.1 second se bhi kam me pura signal bhej deta hai! Myelinated neurons me speed 120 meters per second tak ja sakti hai!",
+          "emotion": "🚀"
+        },
+        {
+          "speaker": "raju",
+          "text": "120 m/s!! Ye to bahut fast hai sir!! Isi liye hum turant react kar lete hain!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Exactly! Par unmyelinated neurons bahut slow hote hain - sirf 0.5 to 2 m/s. SSC me puchte hain: Which neurons have fastest conduction? Answer: Myelinated motor neurons!",
+          "emotion": "⚡"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir ye impulse ek baar fire ho gaya to wapas turant dusra impulse nahi ban sakta?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul sahi! Ek chhoti si waiting period hoti hai jise Refractory Period kehte hain - jab neuron rest kar raha hota hai aur naya impulse nahi bana sakta. Ye 1-2 milliseconds hoti hai!",
+          "emotion": "⏱️"
+        }
+      ],
+      "navigation": {
+        "next": "card_24_quiz_resting_potential",
+        "button_text": "Quiz time! ➔"
+      }
+    },
+    {
+      "card_id": "card_24_quiz_resting_potential",
+      "card_slug": "card_24_quiz_resting_potential",
+      "type": "quiz",
+      "concept_id": "resting_potential_quiz",
+      "level": 1,
+      "progress": {
+        "current": 24,
+        "total": 60
+      },
+      "quiz_payload": {
+        "question": "What is the typical value of Resting Membrane Potential in a neuron? (NEET 2018)",
+        "options": [
+          { "id": "A", "text": "+70 millivolts" },
+          { "id": "B", "text": "-70 millivolts" },
+          { "id": "C", "text": "+30 millivolts" },
+          { "id": "D", "text": "0 millivolts" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "The typical Resting Membrane Potential is -70 millivolts (mV). The negative sign indicates that the inside of the neuron is negatively charged relative to the outside. This is maintained by the unequal distribution of ions - more K+ inside and more Na+ outside - and actively maintained by the Sodium-Potassium Pump."
+      },
+      "navigation": {
+        "next": "card_25_quiz_depolarization",
+        "button_text": "Q2/3 ➔"
+      }
+    },
+    {
+      "card_id": "card_25_quiz_depolarization",
+      "card_slug": "card_25_quiz_depolarization",
+      "type": "quiz",
+      "concept_id": "depolarization_mechanism_quiz",
+      "level": 1,
+      "progress": {
+        "current": 25,
+        "total": 60
+      },
+      "quiz_payload": {
+        "question": "During depolarization of a nerve impulse, which of the following occurs? (SSC CGL 2020)",
+        "options": [
+          { "id": "A", "text": "K+ ions rush into the neuron" },
+          { "id": "B", "text": "Na+ ions rush into the neuron" },
+          { "id": "C", "text": "Both Na+ and K+ ions leave the neuron" },
+          { "id": "D", "text": "Cl- ions enter the neuron" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "During Depolarization, voltage-gated Sodium (Na+) channels open and Na+ ions rush INTO the neuron, making the inside temporarily positive (from -70 mV to about +30 mV). This is the rising phase of the action potential. During Repolarization (the next phase), K+ ions move OUT to restore the negative charge inside."
+      },
+      "navigation": {
+        "next": "card_26_quiz_sodium_potassium_pump",
+        "button_text": "Q3/3 ➔"
+      }
+    },
+    {
+      "card_id": "card_26_quiz_sodium_potassium_pump",
+      "card_slug": "card_26_quiz_sodium_potassium_pump",
+      "type": "quiz",
+      "concept_id": "sodium_potassium_pump_quiz",
+      "level": 1,
+      "progress": {
+        "current": 26,
+        "total": 60
+      },
+      "quiz_payload": {
+        "question": "The Sodium-Potassium Pump transports ions in which ratio and requires which energy molecule? (NEET 2021)",
+        "options": [
+          { "id": "A", "text": "2 Na+ out : 3 K+ in; using GTP" },
+          { "id": "B", "text": "3 Na+ out : 2 K+ in; using ATP" },
+          { "id": "C", "text": "3 K+ out : 2 Na+ in; using ATP" },
+          { "id": "D", "text": "2 Na+ in : 3 K+ out; using ADP" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "The Sodium-Potassium Pump (Na-K ATPase) actively transports 3 Na+ ions OUT of the cell and 2 K+ ions INTO the cell for each ATP molecule hydrolyzed. This maintains the resting membrane potential and is called an electrogenic pump because it creates a net negative charge inside. This 3:2 ratio is a very common NEET trap question!"
+      },
+      "navigation": {
+        "next": "card_27_milestone_nerve_impulse",
+        "button_text": "Check Answer ➔"
+      }
+    },
+    {
+      "card_id": "card_27_milestone_nerve_impulse",
+      "card_slug": "card_27_milestone_nerve_impulse",
+      "type": "milestone",
+      "concept_id": "nerve_impulse_complete",
+      "level": 1,
+      "progress": {
+        "current": 27,
+        "total": 60
+      },
+      "milestone_payload": {
+        "title": "⚡ MODULE 3 COMPLETED!",
+        "badge_emoji": "🔋",
+        "completed_topic": "Nerve Impulse Generation",
+        "xp_earned": 60,
+        "milestone_progress": "Module 3/8 Clear",
+        "motivational_quote": "Depolarization, Repolarization, Na-K Pump - You've decoded the electrical language of neurons! 🧠⚡"
+      },
+      "navigation": {
+        "next": "card_28_synapse_intro",
+        "button_text": "Start Module 4: Synapse & Communication 🔗"
+      }
+    },
+    {
+      "card_id": "card_28_synapse_intro",
+      "card_slug": "card_28_synapse_intro",
+      "type": "chat",
+      "concept_id": "synapse_basic_concept",
+      "level": 1,
+      "progress": {
+        "current": 28,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, relay race me ek runner doosre runner ko baton kaise deta hai? Directly haath me thama deta hai na?",
+          "emotion": "🏃"
+        },
+        {
+          "speaker": "raju",
+          "text": "Haan sir, pass-on zone me ek doosre ke paas aake baton transfer karte hain!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Par neurons me ek twist hai - do neurons kabhi physically touch NAHI karte! Unke beech me ek gap hota hai jise Synapse kehte hain. Phir bhi signal transfer ho jata hai!",
+          "emotion": "🤯"
+        },
+        {
+          "speaker": "raju",
+          "text": "Gap hai phir bhi signal cross kar jata hai?? Kaise sir??"
+        },
+        {
+          "speaker": "aman",
+          "text": "Chemical messenger use karke! Ek neuron chemical release karta hai gap me, wo chemical doosre neuron tak pahunchta hai aur signal forward hota hai. Isko Synaptic Transmission kehte hain!",
+          "emotion": "💊"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab electrical signal ko chemical signal me convert kar dete hain?"
+        }
+      ],
+      "navigation": {
+        "next": "card_29_synapse_structure",
+        "button_text": "Perfect! Ab structure dekhte hain ➔"
+      }
+    },
+    {
+      "card_id": "card_29_synapse_structure",
+      "card_slug": "card_29_synapse_structure",
+      "type": "chat",
+      "concept_id": "synapse_structural_parts",
+      "level": 1,
+      "progress": {
+        "current": 29,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Synapse ke teen parts hain: Presynaptic Terminal (pehle neuron ka ending), Synaptic Cleft (gap), aur Postsynaptic Membrane (doosre neuron ka starting)!",
+          "emotion": "🔬"
+        },
+        {
+          "speaker": "raju",
+          "text": "Presynaptic matlab jo signal bhej raha hai, Postsynaptic jo receive kar raha hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Exactly! Presynaptic terminal me chhote chhote bubbles hote hain - Synaptic Vesicles - jisme chemical messengers bhare hote hain. Inhe Neurotransmitters kehte hain!",
+          "emotion": "🫧"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir ye gap kitna bada hota hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bahut chhota! Synaptic Cleft sirf 20-40 nanometers wide hota hai. NEET me number yaad rakho - approximately 20 nm! Ek baal ki width se hazaron guna chhota!",
+          "emotion": "🔍"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir neurotransmitters ke naam bhi yaad karne padenge?"
+        }
+      ],
+      "navigation": {
+        "next": "card_30_neurotransmitters",
+        "button_text": "Important ones zaroor! ➔"
+      }
+    },
+    {
+      "card_id": "card_30_neurotransmitters",
+      "card_slug": "card_30_neurotransmitters",
+      "type": "chat",
+      "concept_id": "neurotransmitters_types",
+      "level": 1,
+      "progress": {
+        "current": 30,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Haan! Main neurotransmitters: Acetylcholine (muscles control karta hai), Dopamine (reward aur pleasure), Serotonin (mood regulate karta hai), Norepinephrine (alertness), aur GABA (calming effect)!",
+          "emotion": "🧪"
+        },
+        {
+          "speaker": "raju",
+          "text": "Dopamine naam suna hai sir... khushi wala chemical?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! Jab tum game jeet te ho ya ice cream khate ho, dopamine release hota hai. BPSC me puchte hain - 'Feel-good hormone' kaun sa hai? Many say dopamine (though technically it's a neurotransmitter, not hormone)!",
+          "emotion": "😊"
+        },
+        {
+          "speaker": "raju",
+          "text": "Aur Acetylcholine?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Ye sabse pehle discover hua neurotransmitter hai (1921 me Otto Loewi ne)! Muscles ko contract karne me help karta hai. Polio aur nerve gas isi ko block kar dete hain - paralysis ho jata hai!",
+          "emotion": "⚠️"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir ye signal transfer ka pura process batayiye step-by-step!"
+        }
+      ],
+      "navigation": {
+        "next": "card_31_synaptic_transmission",
+        "button_text": "Chalo detail me samajhte hain! ➔"
+      }
+    },
+    {
+      "card_id": "card_31_synaptic_transmission",
+      "card_slug": "card_31_synaptic_transmission",
+      "type": "chat",
+      "concept_id": "synaptic_transmission_mechanism",
+      "level": 1,
+      "progress": {
+        "current": 31,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Step 1: Nerve impulse presynaptic terminal tak aata hai. Step 2: Voltage-gated Calcium channels khulte hain, Ca2+ ions andar aate hain!",
+          "emotion": "📝"
+        },
+        {
+          "speaker": "raju",
+          "text": "Calcium?? Abhi tak to Na aur K ions the!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! Synapse me Ca2+ hero hai. Step 3: Calcium ki wajah se synaptic vesicles membrane se fuse ho jate hain aur neurotransmitters release ho jate hain synaptic cleft me!",
+          "emotion": "💥"
+        },
+        {
+          "speaker": "raju",
+          "text": "Phir wo chemicals gap cross karke doosri taraf jate hain?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! Step 4: Neurotransmitters diffuse hoke postsynaptic membrane tak pahunchte hain. Step 5: Wahan receptors se bind hote hain - jaise key aur lock! Phir channels khulte hain aur naya signal generate hota hai!",
+          "emotion": "🔑"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir signal ke baad ye neurotransmitters ka kya hota hai? Waise hi gap me ghoomte rahenge?"
+        }
+      ],
+      "navigation": {
+        "next": "card_32_neurotransmitter_removal",
+        "button_text": "NEET ka important point! ➔"
+      }
+    },
+    {
+      "card_id": "card_32_neurotransmitter_removal",
+      "card_slug": "card_32_neurotransmitter_removal",
+      "type": "chat",
+      "concept_id": "neurotransmitter_removal_mechanism",
+      "level": 1,
+      "progress": {
+        "current": 32,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Nahi! Teen tarike se remove hote hain: (1) Enzymes tod dete hain - jaise Acetylcholinesterase enzyme Acetylcholine ko tod deta hai. (2) Reuptake - wapas presynaptic neuron me absorb ho jate hain!",
+          "emotion": "♻️"
+        },
+        {
+          "speaker": "raju",
+          "text": "Teesra tarika sir?"
+        },
+        {
+          "speaker": "aman",
+          "text": "(3) Diffusion - gap se bahar chale jate hain. Removal zaruri hai warna signal continuously fire hota rahega - ye dangerous hai! Nerve gas isi mechanism ko disturb karta hai!",
+          "emotion": "⚠️"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir ek aur doubt - kya synapse sirf neuron-to-neuron me hota hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Nahi! Neuromuscular Junction bhi ek synapse hai - neuron aur muscle ke beech. SSC me puchte hain - motor end plate kya hai? Answer: Neuromuscular synapse ka postsynaptic part!",
+          "emotion": "💪"
+        }
+      ],
+      "navigation": {
+        "next": "card_33_quiz_synapse_gap",
+        "button_text": "Quiz solve karte hain! ➔"
+      }
+    },
+    {
+      "card_id": "card_33_quiz_synapse_gap",
+      "card_slug": "card_33_quiz_synapse_gap",
+      "type": "quiz",
+      "concept_id": "synaptic_cleft_quiz",
+      "level": 1,
+      "progress": {
+        "current": 33,
+        "total": 60
+      },
+      "quiz_payload": {
+        "question": "The gap between two neurons at a synapse is called _______ and measures approximately _______. (NEET 2017)",
+        "options": [
+          { "id": "A", "text": "Node of Ranvier; 1-2 mm" },
+          { "id": "B", "text": "Synaptic Cleft; 20-40 nm" },
+          { "id": "C", "text": "Neuromuscular Junction; 100 micrometers" },
+          { "id": "D", "text": "Axon Terminal; 1 micrometer" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "The gap between two neurons at a synapse is called the Synaptic Cleft and it measures approximately 20-40 nanometers (nm) in width. Despite being extremely narrow, neurons never physically touch each other. Chemical neurotransmitters cross this gap to transmit signals from the presynaptic neuron to the postsynaptic neuron."
+      },
+      "navigation": {
+        "next": "card_34_quiz_acetylcholine",
+        "button_text": "Q2/3 ➔"
+      }
+    },
+    {
+      "card_id": "card_34_quiz_acetylcholine",
+      "card_slug": "card_34_quiz_acetylcholine",
+      "type": "quiz",
+      "concept_id": "acetylcholine_enzyme_quiz",
+      "level": 1,
+      "progress": {
+        "current": 34,
+        "total": 60
+      },
+      "quiz_payload": {
+        "question": "Which enzyme breaks down Acetylcholine in the synaptic cleft? (Railway RRB 2019)",
+        "options": [
+          { "id": "A", "text": "Pepsin" },
+          { "id": "B", "text": "Acetylcholinesterase" },
+          { "id": "C", "text": "Lipase" },
+          { "id": "D", "text": "Amylase" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Acetylcholinesterase is the enzyme that breaks down the neurotransmitter Acetylcholine in the synaptic cleft. This breakdown is essential to stop the signal and prevent continuous stimulation. Nerve gases and some insecticides work by blocking this enzyme, causing paralysis due to overstimulation of muscles."
+      },
+      "navigation": {
+        "next": "card_35_quiz_neurotransmitter_calcium",
+        "button_text": "Q3/3 ➔"
+      }
+    },
+    {
+      "card_id": "card_35_quiz_neurotransmitter_calcium",
+      "card_slug": "card_35_quiz_neurotransmitter_calcium",
+      "type": "quiz",
+      "concept_id": "calcium_role_synapse_quiz",
+      "level": 1,
+      "progress": {
+        "current": 35,
+        "total": 60
+      },
+      "quiz_payload": {
+        "question": "Which ion is essential for the release of neurotransmitters from synaptic vesicles? (BPSC 2019)",
+        "options": [
+          { "id": "A", "text": "Sodium (Na+)" },
+          { "id": "B", "text": "Potassium (K+)" },
+          { "id": "C", "text": "Calcium (Ca2+)" },
+          { "id": "D", "text": "Chloride (Cl-)" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Calcium ions (Ca2+) are essential for neurotransmitter release. When a nerve impulse reaches the presynaptic terminal, voltage-gated calcium channels open. The influx of Ca2+ ions triggers the fusion of synaptic vesicles with the presynaptic membrane, causing neurotransmitters to be released into the synaptic cleft. Without calcium, synaptic transmission cannot occur!"
+      },
+      "navigation": {
+        "next": "card_36_milestone_synapse",
+        "button_text": "Check Answer ➔"
+      }
+    },
+    {
+      "card_id": "card_36_milestone_synapse",
+      "card_slug": "card_36_milestone_synapse",
+      "type": "milestone",
+      "concept_id": "synapse_complete",
+      "level": 1,
+      "progress": {
+        "current": 36,
+        "total": 60
+      },
+      "milestone_payload": {
+        "title": "🎊 MODULE 4 COMPLETED!",
+        "badge_emoji": "🔗",
+        "completed_topic": "Synapse & Neurotransmission",
+        "xp_earned": 60,
+        "milestone_progress": "Module 4/8 Clear",
+        "motivational_quote": "Acetylcholine, Dopamine, Ca2+ ions - You're now fluent in the chemical language of the brain! 🧠💊"
+      },
+      "navigation": {
+        "next": "card_37_cns_intro",
+        "button_text": "Start Module 5: Central Nervous System 🧠"
+      }
+    },
+    {
+      "card_id": "card_37_cns_intro",
+      "card_slug": "card_37_cns_intro",
+      "type": "chat",
+      "concept_id": "cns_basic_introduction",
+      "level": 1,
+      "progress": {
+        "current": 37,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, desh me sabse important building kaun si hoti hai? Jahan se sare decisions aate hain?",
+          "emotion": "🏛️"
+        },
+        {
+          "speaker": "raju",
+          "text": "Parliament aur Rashtrapati Bhawan sir! Wahan se government chalti hai!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Sahi! Waise hi body me Central Nervous System (CNS) - Brain aur Spinal Cord - ye command center hai. Sabse important decisions yahin hote hain!",
+          "emotion": "🧠"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab brain to sabko pata hai... par spinal cord bhi CNS me aata hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! CNS ke sirf do parts hain: Brain (control center) aur Spinal Cord (communication highway). Baki sab nerves jo body me hain wo Peripheral Nervous System (PNS) me aate hain!",
+          "emotion": "📡"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir brain kitne parts me divided hai? Seedha aage se peeche tak to nahi hai?"
+        }
+      ],
+      "navigation": {
+        "next": "card_38_brain_divisions",
+        "button_text": "Teen main parts hain! ➔"
+      }
+    },
+    {
+      "card_id": "card_38_brain_divisions",
+      "card_slug": "card_38_brain_divisions",
+      "type": "chat",
+      "concept_id": "brain_three_main_divisions",
+      "level": 1,
+      "progress": {
+        "current": 38,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Brain ke teen main parts hain: Forebrain (sabse bada, aage wala), Midbrain (beech ka chhota part), aur Hindbrain (peeche wala, spinal cord se connected)!",
+          "emotion": "🧩"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir Forebrain me kya kya aata hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Forebrain me Cerebrum (thinking part - sabse bada!), Thalamus (relay station), aur Hypothalamus (body functions controller) aate hain. BPSC favorite: Cerebrum ki surface area badhaane ke liye folds hote hain - Gyri (ridges) aur Sulci (grooves)!",
+          "emotion": "🌀"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab jaise cloth ko fold karke zyada jagah me fit kar dete hain?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Perfect analogy! Gyri aur Sulci se surface area bahut badh jata hai bina skull ka size badhaye. Human brain ka surface area agar flat karo to ek newspaper jitna bada hoga!",
+          "emotion": "📰"
+        },
+        {
+          "speaker": "raju",
+          "text": "Wow sir! Aur ye Cerebrum kya kaam karta hai exactly?"
+        }
+      ],
+      "navigation": {
+        "next": "card_39_cerebrum_functions",
+        "button_text": "Sabse complex part hai! ➔"
+      }
+    },
+    {
+      "card_id": "card_39_cerebrum_functions",
+      "card_slug": "card_39_cerebrum_functions",
+      "type": "chat",
+      "concept_id": "cerebrum_structure_function",
+      "level": 1,
+      "progress": {
+        "current": 39,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Cerebrum do hemispheres me divided hai - Left aur Right. Dono ke beech Corpus Callosum (nerve fibers ka bundle) connection banata hai. Left brain logical thinking karta hai, Right brain creative!",
+          "emotion": "🎨"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir ye left brain right brain ka concept exams me aata hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! Par ek twist: Left hemisphere RIGHT side of body ko control karta hai aur Right hemisphere LEFT side ko! Ye crossing over Medulla me hota hai - SSC trap question!",
+          "emotion": "🔄"
+        },
+        {
+          "speaker": "raju",
+          "text": "Hain?? Ulta control?? Par kyu sir?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Evolutionary reason hai - nerve fibers decussation (crossing) karte hain brain stem me. NEET me yaad rakho: Cerebrum par grey matter bahar (cortex) aur white matter andar hota hai!",
+          "emotion": "⚪⚫"
+        },
+        {
+          "speaker": "raju",
+          "text": "Grey aur white matter me farak kya hai sir?"
+        }
+      ],
+      "navigation": {
+        "next": "card_40_grey_white_matter",
+        "button_text": "Important concept! ➔"
+      }
+    },
+    {
+      "card_id": "card_40_grey_white_matter",
+      "card_slug": "card_40_grey_white_matter",
+      "type": "chat",
+      "concept_id": "grey_white_matter_difference",
+      "level": 1,
+      "progress": {
+        "current": 40,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Grey Matter me neuron cell bodies hoti hain (decision-making zone). White Matter me myelinated axons hote hain (communication cables). Myelin white color deta hai!",
+          "emotion": "🧠"
+        },
+        {
+          "speaker": "raju",
+          "text": "Achha! To grey matter sochta hai aur white matter signals carry karta hai!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul sahi! BPSC trap: Brain me grey matter OUTSIDE (cortex) aur white matter INSIDE hota hai. Par Spinal Cord me ulta - grey matter INSIDE aur white matter OUTSIDE!",
+          "emotion": "🎯"
+        },
+        {
+          "speaker": "raju",
+          "text": "Ye to confusing hai sir! Brain me bahar grey, spinal cord me andar grey?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! Ye cross-question BPSC me pakka aata hai. Yaad rakhne ka trick: Brain = Boss, bahar dikhata hai (grey cortex visible). Spinal Cord = Subordinate, andar chhupata hai (grey inside)!",
+          "emotion": "💡"
+        }
+      ],
+      "navigation": {
+        "next": "card_41_cerebral_lobes",
+        "button_text": "Ab lobes samajhte hain! ➔"
+      }
+    },
+    {
+      "card_id": "card_41_cerebral_lobes",
+      "card_slug": "card_41_cerebral_lobes",
+      "type": "chat",
+      "concept_id": "cerebral_lobes_functions",
+      "level": 1,
+      "progress": {
+        "current": 41,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Cerebrum ke har hemisphere me chaar lobes hote hain: Frontal (thinking, decision), Parietal (touch, temperature), Temporal (hearing, memory), aur Occipital (vision)!",
+          "emotion": "🗺️"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir ye naam kahan se aaye?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Skull ki bones ke naam par! Frontal lobe forehead ke peeche, Occipital lobe back of head me. NEET direct puchta hai: Vision center kahan hai? Answer: Occipital lobe!",
+          "emotion": "👁️"
+        },
+        {
+          "speaker": "raju",
+          "text": "Aur agar kisi ko accident me occipital lobe damage ho jaye to..."
+        },
+        {
+          "speaker": "aman",
+          "text": "Vision loss ho sakta hai! Frontal lobe damage se personality change, decision-making problems. Temporal lobe damage se memory aur hearing issues. SSC me clinical cases bhi aate hain!",
+          "emotion": "⚠️"
+        }
+      ],
+      "navigation": {
+        "next": "card_42_thalamus_hypothalamus",
+        "button_text": "Ab Thalamus aur Hypothalamus ➔"
+      }
+    },
+    {
+      "card_id": "card_42_thalamus_hypothalamus",
+      "card_slug": "card_42_thalamus_hypothalamus",
+      "type": "chat",
+      "concept_id": "thalamus_hypothalamus_functions",
+      "level": 1,
+      "progress": {
+        "current": 42,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Thalamus ek relay station hai - sabhi sensory signals (except smell) pehle yahan aate hain, phir cerebrum ko jaate hain. Jaise railway junction!",
+          "emotion": "🚉"
+        },
+        {
+          "speaker": "raju",
+          "text": "Except smell? Smell signals kahan jate hain?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Directly cerebrum ke olfactory area me! Isi liye smell aur memory ka connection bahut strong hai - thalamus bypass ho jata hai! BPSC trap question: All sensory signals relay through thalamus (TRUE/FALSE)? FALSE - smell doesn't!",
+          "emotion": "👃"
+        },
+        {
+          "speaker": "raju",
+          "text": "Aur Hypothalamus sir?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Hypothalamus chhota hai par bahut powerful! Body temperature, hunger, thirst, sleep-wake cycle, emotions - sab control karta hai. Aur ye Pituitary Gland (master gland) ko bhi control karta hai!",
+          "emotion": "🌡️"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir ye midbrain aur hindbrain ke baare me bhi batayiye!"
+        }
+      ],
+      "navigation": {
+        "next": "card_43_midbrain_hindbrain",
+        "button_text": "Chalo unki taraf! ➔"
+      }
+    },
+    {
+      "card_id": "card_43_midbrain_hindbrain",
+      "card_slug": "card_43_midbrain_hindbrain",
+      "type": "chat",
+      "concept_id": "midbrain_hindbrain_structure",
+      "level": 1,
+      "progress": {
+        "current": 43,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Midbrain bahut chhota hai - eye movements aur pupil reflex control karta hai. Hindbrain me teen parts: Cerebellum (balance), Pons (breathing regulation), aur Medulla Oblongata (vital functions)!",
+          "emotion": "⚖️"
+        },
+        {
+          "speaker": "raju",
+          "text": "Cerebellum to naam suna hai... balance ka kaam karta hai na?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! Cerebellum muscles ko coordinate karta hai - cycling, dancing, walking - sabme balance. Agar damage ho jaye to stumbling, shaky movements. Railway RRB question: 'Little brain' kise kehte hain? Answer: Cerebellum!",
+          "emotion": "🚴"
+        },
+        {
+          "speaker": "raju",
+          "text": "Aur Medulla sir? Ye dangerous area to nahi hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bahut critical! Medulla heart beat, breathing, blood pressure - sabse important involuntary functions control karta hai. Medulla damage = instant death possible. NEET me puchte hain: Respiratory center kahan hai? Medulla Oblongata!",
+          "emotion": "💓"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir spinal cord ke baare me bhi detail me batayiye!"
+        }
+      ],
+      "navigation": {
+        "next": "card_44_spinal_cord",
+        "button_text": "Important part hai! ➔"
+      }
+    },
+    {
+      "card_id": "card_44_spinal_cord",
+      "card_slug": "card_44_spinal_cord",
+      "type": "chat",
+      "concept_id": "spinal_cord_structure_function",
+      "level": 1,
+      "progress": {
+        "current": 44,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Spinal Cord medulla se shuru hota hai aur vertebral column (backbone) ke andar 45 cm lamba chalta hai. Ye cylindrical structure hai jisme 31 pairs of spinal nerves nikalti hain!",
+          "emotion": "🦴"
+        },
+        {
+          "speaker": "raju",
+          "text": "31 pairs matlab 62 nerves?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! Har pair me ek Left aur ek Right nerve. BPSC trap: Spinal cord L1-L2 vertebra tak hi jaati hai, puri backbone tak nahi! Uske neeche sirf nerves hoti hain - Cauda Equina (horse's tail jaise)!",
+          "emotion": "🐴"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir cross-section me spinal cord kaise dikhti hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Grey matter INSIDE (butterfly ya H-shape me) aur white matter OUTSIDE! Grey matter me dorsal horn (sensory) aur ventral horn (motor neurons) hote hain. NEET ka favorite diagram question!",
+          "emotion": "🦋"
+        },
+        {
+          "speaker": "raju",
+          "text": "To spinal cord sirf signal carry karta hai ya kuch process bhi karta hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Dono! Signal transmission bhi aur Reflex Actions bhi control karta hai - bina brain ko involve kiye! Isliye reflexes itni fast hoti hain!",
+          "emotion": "⚡"
+        }
+      ],
+      "navigation": {
+        "next": "card_45_quiz_brain_parts",
+        "button_text": "Quiz time! ➔"
+      }
+    },
+    {
+      "card_id": "card_45_quiz_brain_parts",
+      "card_slug": "card_45_quiz_brain_parts",
+      "type": "quiz",
+      "concept_id": "brain_lobes_quiz",
+      "level": 1,
+      "progress": {
+        "current": 45,
+        "total": 60
+      },
+      "quiz_payload": {
+        "question": "The visual processing center of the brain is located in which lobe? (SSC CGL 2021)",
+        "options": [
+          { "id": "A", "text": "Frontal lobe" },
+          { "id": "B", "text": "Parietal lobe" },
+          { "id": "C", "text": "Temporal lobe" },
+          { "id": "D", "text": "Occipital lobe" }
+        ],
+        "correct_option_id": "D",
+        "explanation": "The Occipital Lobe, located at the back of the brain, contains the primary visual cortex and is responsible for processing visual information received from the eyes. Damage to this lobe can result in vision problems or blindness, even if the eyes are functioning normally. This is one of the most frequently asked questions in SSC and Railway exams."
+      },
+      "navigation": {
+        "next": "card_46_quiz_medulla",
+        "button_text": "Q2/3 ➔"
+      }
+    },
+    {
+      "card_id": "card_46_quiz_medulla",
+      "card_slug": "card_46_quiz_medulla",
+      "type": "quiz",
+      "concept_id": "medulla_functions_quiz",
+      "level": 1,
+      "progress": {
+        "current": 46,
+        "total": 60
+      },
+      "quiz_payload": {
+        "question": "Which part of the brain controls vital involuntary functions like heartbeat, breathing, and blood pressure? (NEET 2020)",
+        "options": [
+          { "id": "A", "text": "Cerebellum" },
+          { "id": "B", "text": "Cerebrum" },
+          { "id": "C", "text": "Medulla Oblongata" },
+          { "id": "D", "text": "Hypothalamus" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Medulla Oblongata is the part of the hindbrain that controls vital involuntary functions including heartbeat, breathing rate, blood pressure, coughing, sneezing, and vomiting. It contains the respiratory center and cardiovascular center. Damage to the medulla can be fatal as it controls life-sustaining functions. It is located at the base of the brainstem, connecting the brain to the spinal cord."
+      },
+      "navigation": {
+        "next": "card_47_quiz_grey_white_matter",
+        "button_text": "Q3/3 ➔"
+      }
+    },
+    {
+      "card_id": "card_47_quiz_grey_white_matter",
+      "card_slug": "card_47_quiz_grey_white_matter",
+      "type": "quiz",
+      "concept_id": "grey_white_matter_position_quiz",
+      "level": 1,
+      "progress": {
+        "current": 47,
+        "total": 60
+      },
+      "quiz_payload": {
+        "question": "In the spinal cord, the arrangement of grey and white matter is: (BPSC 2020)",
+        "options": [
+          { "id": "A", "text": "Grey matter outside, white matter inside" },
+          { "id": "B", "text": "Grey matter inside, white matter outside" },
+          { "id": "C", "text": "Only grey matter present" },
+          { "id": "D", "text": "Random distribution of both" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "In the spinal cord, grey matter is located INSIDE (forming an H or butterfly shape) and white matter is OUTSIDE. This is OPPOSITE to the brain, where grey matter (cortex) is outside and white matter is inside. Grey matter contains neuron cell bodies (decision-making), while white matter contains myelinated axons (signal transmission). This contrast between brain and spinal cord is a very common BPSC trap question!"
+      },
+      "navigation": {
+        "next": "card_48_milestone_cns",
+        "button_text": "Check Answer ➔"
+      }
+    },
+    {
+      "card_id": "card_48_milestone_cns",
+      "card_slug": "card_48_milestone_cns",
+      "type": "milestone",
+      "concept_id": "cns_complete",
+      "level": 1,
+      "progress": {
+        "current": 48,
+        "total": 60
+      },
+      "milestone_payload": {
+        "title": "🧠 MODULE 5 COMPLETED!",
+        "badge_emoji": "🏆",
+        "completed_topic": "Central Nervous System",
+        "xp_earned": 70,
+        "milestone_progress": "Module 5/8 Clear",
+        "motivational_quote": "Cerebrum, Cerebellum, Medulla - You've mapped the command center! NEET-ready! 🎯"
+      },
+      "navigation": {
+        "next": "card_49_reflex_action_intro",
+        "button_text": "Start Module 6: Reflex Action ⚡"
+      }
+    },
+    {
+      "card_id": "card_49_reflex_action_intro",
+      "card_slug": "card_49_reflex_action_intro",
+      "type": "chat",
+      "concept_id": "reflex_action_basic_concept",
+      "level": 1,
+      "progress": {
+        "current": 49,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, wapas us garam kadhai wale example pe chalte hain. Tumne socha ki hath hatana hai? Ya automatically hat gaya?",
+          "emotion": "🔥"
+        },
+        {
+          "speaker": "raju",
+          "text": "Automatically sir! Bilkul bhi nahi socha... brain ne to kuch kiya hi nahi!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Perfect observation! Brain ko involve kiye bina jo automatic actions hoti hain unhe Reflex Actions kehte hain. Ye sabse fast responses hote hain - 0.15 second me complete!",
+          "emotion": "⚡"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab brain ko pata bhi nahi chalta?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Pata to baad me chal jata hai, par decision brain nahi leta - Spinal Cord leti hai! Isi liye reflexes unconscious aur involuntary hoti hain. BPSC trap: All reflexes are involuntary, but all involuntary actions are not reflexes!",
+          "emotion": "🎯"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir aur examples kya hain reflex actions ke?"
+        }
+      ],
+      "navigation": {
+        "next": "card_50_reflex_examples",
+        "button_text": "Bahut saare hain! ➔"
+      }
+    },
+    {
+      "card_id": "card_50_reflex_examples",
+      "card_slug": "card_50_reflex_examples",
+      "type": "chat",
+      "concept_id": "reflex_action_examples",
+      "level": 1,
+      "progress": {
+        "current": 50,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Knee-jerk reflex (doctor hammer se knee tap karta hai to leg uthti hai), Pupillary reflex (bright light me pupil shrink), Sneezing, Coughing, Blinking - ye sab reflexes hain!",
+          "emotion": "👁️"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sneezing bhi?? Par kabhi-kabhi rok bhi to sakte hain!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan, kyunki kuch reflexes pe partial control ho sakta hai. Par pure natural reflexes jaise pupillary reflex pe control impossible hai - tum bright light me pupil ko dilate nahi rakh sakte!",
+          "emotion": "💡"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir ye reflex action ka pathway kaise kaam karta hai? Step by step?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Isko Reflex Arc kehte hain - 5 components hote hain: Receptor → Sensory Neuron → Spinal Cord (Integration Center) → Motor Neuron → Effector (muscle/gland)!",
+          "emotion": "🔄"
+        }
+      ],
+      "navigation": {
+        "next": "card_51_reflex_arc_pathway",
+        "button_text": "Detail me samajhte hain! ➔"
+      }
+    },
+    {
+      "card_id": "card_51_reflex_arc_pathway",
+      "card_slug": "card_51_reflex_arc_pathway",
+      "type": "chat",
+      "concept_id": "reflex_arc_pathway_detailed",
+      "level": 1,
+      "progress": {
+        "current": 51,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Step 1: Receptor (jaise skin me pain receptors) stimulus detect karta hai. Step 2: Sensory neuron signal ko spinal cord tak le jata hai (afferent pathway)!",
+          "emotion": "📡"
+        },
+        {
+          "speaker": "raju",
+          "text": "Phir spinal cord me kya hota hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Step 3: Spinal cord me interneuron (association neuron) sensory signal ko process karke turant motor neuron ko activate kar deta hai - brain ko signal nahi bhejta!",
+          "emotion": "🧠"
+        },
+        {
+          "speaker": "raju",
+          "text": "Achha! Isliye itni fast hoti hai... brain waiting time nahi!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Exactly! Step 4: Motor neuron signal ko muscle tak le jata hai (efferent pathway). Step 5: Effector organ (muscle) contract hota hai - hath hat jata hai! NEET diagram question: Label reflex arc components!",
+          "emotion": "💪"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir conditioned reflex bhi hoti hai kya? Pavlov's dog experiment me..."
+        }
+      ],
+      "navigation": {
+        "next": "card_52_conditioned_unconditioned",
+        "button_text": "Bahut important question! ➔"
+      }
+    },
+    {
+      "card_id": "card_52_conditioned_unconditioned",
+      "card_slug": "card_52_conditioned_unconditioned",
+      "type": "chat",
+      "concept_id": "conditioned_vs_unconditioned_reflex",
+      "level": 1,
+      "progress": {
+        "current": 52,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Haan! Do types hote hain: Unconditioned Reflexes (inborn, natural - jaise hot surface se hath hatana) aur Conditioned Reflexes (learned - jaise Pavlov's dog bell sunkar salivate karna)!",
+          "emotion": "🔔"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab unconditioned birth se hoti hai, conditioned practice se?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Perfect! Ivan Pavlov ne 1904 me ye discover kiya (Nobel Prize mila). SSC me puchte hain: Conditioned reflex discovered by? Answer: Ivan Pavlov! Aur ye brain-dependent hoti hai, spinal reflex nahi!",
+          "emotion": "🏅"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir typing bhi to reflex ban jati hai practice se... wo bhi conditioned?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! Driving, cycling - ye sab initially conscious efforts hoti hain, phir conditioned reflexes ban jati hain. Brain me neural pathways strong ho jate hain - muscle memory kehte hain!",
+          "emotion": "🚗"
+        }
+      ],
+      "navigation": {
+        "next": "card_53_quiz_reflex_arc",
+        "button_text": "Quiz solve karte hain! ➔"
+      }
+    },
+    {
+      "card_id": "card_53_quiz_reflex_arc",
+      "card_slug": "card_53_quiz_reflex_arc",
+      "type": "quiz",
+      "concept_id": "reflex_arc_components_quiz",
+      "level": 1,
+      "progress": {
+        "current": 53,
+        "total": 60
+      },
+      "quiz_payload": {
+        "question": "Arrange the components of a reflex arc in correct sequence: (Railway RRB 2020)",
+        "options": [
+          { "id": "A", "text": "Receptor → Motor neuron → Spinal cord → Sensory neuron → Effector" },
+          { "id": "B", "text": "Receptor → Sensory neuron → Spinal cord → Motor neuron → Effector" },
+          { "id": "C", "text": "Effector → Motor neuron → Spinal cord → Sensory neuron → Receptor" },
+          { "id": "D", "text": "Spinal cord → Receptor → Sensory neuron → Motor neuron → Effector" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "The correct sequence of a reflex arc is: Receptor (detects stimulus) → Sensory neuron/Afferent neuron (carries signal TO spinal cord) → Spinal cord/Integration center (processes via interneuron) → Motor neuron/Efferent neuron (carries signal FROM spinal cord) → Effector (muscle or gland responds). This pathway bypasses the brain, making reflex actions extremely fast!"
+      },
+      "navigation": {
+        "next": "card_54_quiz_pavlov",
+        "button_text": "Q2/3 ➔"
+      }
+    },
+    {
+      "card_id": "card_54_quiz_pavlov",
+      "card_slug": "card_54_quiz_pavlov",
+      "type": "quiz",
+      "concept_id": "conditioned_reflex_pavlov_quiz",
+      "level": 1,
+      "progress": {
+        "current": 54,
+        "total": 60
+      },
+      "quiz_payload": {
+        "question": "Who discovered Conditioned Reflex through experiments on dogs? (SSC CHSL 2019)",
+        "options": [
+          { "id": "A", "text": "Charles Darwin" },
+          { "id": "B", "text": "Ivan Pavlov" },
+          { "id": "C", "text": "Gregor Mendel" },
+          { "id": "D", "text": "Louis Pasteur" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Ivan Pavlov, a Russian physiologist, discovered Conditioned Reflex through his famous experiments on dogs in 1904, for which he won the Nobel Prize in Physiology. He demonstrated that dogs could be trained to salivate at the sound of a bell (neutral stimulus) when it was repeatedly paired with food. This showed that reflexes can be learned through association, unlike natural unconditioned reflexes which are inborn."
+      },
+      "navigation": {
+        "next": "card_55_quiz_reflex_characteristics",
+        "button_text": "Q3/3 ➔"
+      }
+    },
+    {
+      "card_id": "card_55_quiz_reflex_characteristics",
+      "card_slug": "card_55_quiz_reflex_characteristics",
+      "type": "quiz",
+      "concept_id": "reflex_action_characteristics_quiz",
+      "level": 1,
+      "progress": {
+        "current": 55,
+        "total": 60
+      },
+      "quiz_payload": {
+        "question": "Which of the following is TRUE about reflex actions? (BPSC 2021)",
+        "options": [
+          { "id": "A", "text": "They always require conscious thought" },
+          { "id": "B", "text": "They are voluntary and can be controlled" },
+          { "id": "C", "text": "They are involuntary and do not require brain involvement for execution" },
+          { "id": "D", "text": "They are slower than normal responses" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Reflex actions are involuntary (not under conscious control) and do not require brain involvement for their execution - they are controlled by the spinal cord. This makes them extremely fast (0.15 seconds or less). The brain receives information about the reflex AFTER it has occurred. Examples include withdrawal reflex from hot objects, knee-jerk reflex, and pupillary reflex. This bypass of the brain is what makes reflexes protective and lightning-fast!"
+      },
+      "navigation": {
+        "next": "card_56_milestone_reflex",
+        "button_text": "Check Answer ➔"
+      }
+    },
+    {
+      "card_id": "card_56_milestone_reflex",
+      "card_slug": "card_56_milestone_reflex",
+      "type": "milestone",
+      "concept_id": "reflex_action_complete",
+      "level": 1,
+      "progress": {
+        "current": 56,
+        "total": 60
+      },
+      "milestone_payload": {
+        "title": "⚡ MODULE 6 COMPLETED!",
+        "badge_emoji": "🎯",
+        "completed_topic": "Reflex Action & Reflex Arc",
+        "xp_earned": 60,
+        "milestone_progress": "Module 6/8 Clear",
+        "motivational_quote": "Receptor to Effector - You've mastered the body's emergency response system! 🚨"
+      },
+      "navigation": {
+        "next": "card_57_summary_officer_revision",
+        "button_text": "Final Revision Card ⚡"
+      }
+    },
+    {
+      "card_id": "card_57_summary_officer_revision",
+      "card_slug": "card_57_summary_officer_revision",
+      "type": "summary",
+      "concept_id": "nervous_system_complete_revision",
+      "level": 1,
+      "progress": {
+        "current": 57,
+        "total": 60
+      },
+      "summary_payload": {
+        "title": "⚡ Quick Officer Revision - Nervous System",
+        "revision_points": [
+          {
+            "topic": "Neuron Structure",
+            "point": "Longest cell (up to 1m). Parts: Dendrites (input), Cell Body/Cyton (Nucleus + Nissl granules), Axon (output). Myelin sheath by Schwann cells. Nodes of Ranvier enable Saltatory Conduction (120 m/s speed)."
+          },
+          {
+            "topic": "Neuron Types",
+            "point": "Functional: Sensory/Afferent (towards CNS), Motor/Efferent (away from CNS), Interneurons (only in CNS, 99% of all neurons). Structural: Unipolar, Bipolar (rare - retina), Multipolar (most common in brain)."
+          },
+          {
+            "topic": "Nerve Impulse",
+            "point": "Resting potential: -70 mV (more K+ inside, more Na+ outside). Depolarization: Na+ rushes in, reaches +30 mV. Repolarization: K+ moves out. Na-K Pump: 3 Na+ out, 2 K+ in using ATP. Refractory period: 1-2 ms."
+          },
+          {
+            "topic": "Synapse & Neurotransmitters",
+            "point": "Gap: Synaptic Cleft (20-40 nm). Ca2+ triggers neurotransmitter release from vesicles. Key neurotransmitters: Acetylcholine (muscle control, broken by Acetylcholinesterase), Dopamine (reward), Serotonin (mood), GABA (inhibitory)."
+          },
+          {
+            "topic": "Brain Divisions",
+            "point": "Forebrain: Cerebrum (thinking, 2 hemispheres, 4 lobes - Frontal, Parietal, Temporal, Occipital), Thalamus (relay except smell), Hypothalamus (homeostasis, controls Pituitary). Midbrain: Eye reflexes. Hindbrain: Cerebellum (balance), Pons (breathing), Medulla (vital functions - heart, BP)."
+          },
+          {
+            "topic": "Grey vs White Matter",
+            "point": "Grey matter = Cell bodies (decision). White matter = Myelinated axons (transmission). Brain: Grey OUTSIDE (cortex), White INSIDE. Spinal Cord: Grey INSIDE (H-shape), White OUTSIDE. Spinal cord has 31 pairs of spinal nerves, extends till L1-L2 vertebra."
+          },
+          {
+            "topic": "Reflex Action",
+            "point": "Involuntary, unconscious, ultra-fast (0.15 sec). Reflex Arc: Receptor → Sensory neuron → Spinal cord (interneuron) → Motor neuron → Effector. Types: Unconditioned (inborn), Conditioned (learned - Pavlov 1904, Nobel Prize). Brain informed AFTER reflex occurs."
+          },
+          {
+            "topic": "BPSC/NEET Traps",
+            "point": "Left hemisphere controls RIGHT body (decussation in medulla). Thalamus relays all except SMELL. Bipolar neurons only in retina & nose. Cerebellum = Little brain. Corpus Callosum connects hemispheres. Cauda Equina below L2. Vision center: Occipital lobe."
+          }
+        ]
+      },
+      "navigation": {
+        "next": "card_58_final_quiz",
+        "button_text": "Take Final Master Quiz 🏆"
+      }
+    },
+    {
+      "card_id": "card_58_final_quiz",
+      "card_slug": "card_58_final_quiz",
+      "type": "final_quiz",
+      "concept_id": "nervous_system_final_assessment",
+      "level": 1,
+      "progress": {
+        "current": 58,
+        "total": 60
+      },
+      "quiz_payload": {
+        "question": "Assertion (A): The left hemisphere of the cerebrum controls the right side of the body. Reason (R): Nerve fibers undergo decussation (crossing over) in the medulla oblongata. (BPSC Pattern 2022)",
+        "options": [
+          { "id": "A", "text": "Both A and R are true, and R is the correct explanation of A" },
+          { "id": "B", "text": "Both A and R are true, but R is NOT the correct explanation of A" },
+          { "id": "C", "text": "A is true, but R is false" },
+          { "id": "D", "text": "A is false, but R is true" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Both Assertion and Reason are TRUE, and Reason correctly explains the Assertion. The left hemisphere controls the right side of the body and vice versa BECAUSE nerve fibers (motor and sensory pathways) cross over (decussation) in the medulla oblongata of the brainstem. This crossing is called pyramidal decussation for motor fibers. This is why stroke or injury on one side of the brain causes paralysis on the opposite side of the body - a classic BPSC assertion-reason trap question!"
+      },
+      "navigation": {
+        "next": "card_59_final_quiz_2",
+        "button_text": "Next Challenge ➔"
+      }
+    },
+    {
+      "card_id": "card_59_final_quiz_2",
+      "card_slug": "card_59_final_quiz_2",
+      "type": "final_quiz",
+      "concept_id": "nervous_system_final_assessment_2",
+      "level": 1,
+      "progress": {
+        "current": 59,
+        "total": 60
+      },
+      "quiz_payload": {
+        "question": "Consider the following statements: (1) All sensory signals pass through the thalamus before reaching the cerebral cortex. (2) Interneurons constitute about 99% of all neurons in the human nervous system. (3) Grey matter is located on the outside in both brain and spinal cord. Which statement(s) is/are CORRECT? (NEET/BPSC Multi-statement)",
+        "options": [
+          { "id": "A", "text": "Only 1 and 2" },
+          { "id": "B", "text": "Only 2 and 3" },
+          { "id": "C", "text": "Only 2" },
+          { "id": "D", "text": "All three are correct" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Only Statement 2 is CORRECT. Let's analyze: (1) FALSE - SMELL signals do NOT pass through the thalamus; they go directly to the olfactory cortex, bypassing the thalamus. All other sensory signals (vision, hearing, touch, etc.) do relay through thalamus. (2) TRUE - Interneurons (association neurons) constitute approximately 99% of all neurons and are found exclusively in the CNS. (3) FALSE - Grey matter is on the OUTSIDE in the brain (cortex) but INSIDE in the spinal cord (forming H-shape). This opposite arrangement is a major BPSC trap!"
+      },
+      "navigation": {
+        "next": "card_60_chapter_complete",
+        "button_text": "Complete Chapter 🎊"
+      }
+    },
+    {
+      "card_id": "card_60_chapter_complete",
+      "card_slug": "card_60_chapter_complete",
+      "type": "milestone",
+      "concept_id": "nervous_system_chapter_complete",
+      "level": 1,
+      "progress": {
+        "current": 60,
+        "total": 60
+      },
+      "milestone_payload": {
+        "title": "🏆 CHAPTER MASTERED!",
+        "badge_emoji": "🧠",
+        "completed_topic": "Nervous System (Complete)",
+        "xp_earned": 500,
+        "milestone_progress": "100% Chapter Complete ✅",
+        "motivational_quote": "From neurons to reflexes, from synapses to brain lobes - you've conquered the most complex system in biology! BPSC, NEET, SSC - bring it on! You're Officer-level ready! 🎯🔥"
+      },
+      "navigation": {
+        "next": null,
+        "button_text": "Back to Dashboard 🏠"
+      }
+    }
+  ]
+}
