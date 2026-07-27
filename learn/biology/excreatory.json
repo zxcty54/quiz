@@ -1,0 +1,2116 @@
+{
+  "topic_id": "excretory_system_biology",
+  "topic_title": "Excretory System: Kidneys, Urine & Waste Removal",
+  "target_exams": [
+    "BPSC",
+    "BSSC",
+    "RRB NTPC",
+    "SSC CGL",
+    "NEET",
+    "UPSC Prelims"
+  ],
+  "total_cards": 60,
+  "characters": {
+    "aman": {
+      "name": "Aman Sir",
+      "role": "teacher",
+      "avatar": "👨‍🏫"
+    },
+    "raju": {
+      "name": "Raju",
+      "role": "student",
+      "avatar": "👦"
+    }
+  },
+  "cards": [
+    {
+      "card_id": "card_01_intro",
+      "card_slug": "card_01_intro",
+      "type": "intro",
+      "concept_id": "chapter_intro",
+      "level": 1,
+      "progress": {
+        "current": 1,
+        "total": 60
+      },
+      "intro_payload": {
+        "chapter_icon": "🫘",
+        "chapter_title": "Excretory System",
+        "subtitle": "The Sewage Plant Inside Your Body — Kidneys, Urine & Beyond!",
+        "target_exams": [
+          "BPSC",
+          "BSSC",
+          "RRB NTPC",
+          "SSC CGL",
+          "NEET",
+          "UPSC Prelims"
+        ],
+        "learning_outcomes": [
+          "Understand what excretion is and why it is different from egestion",
+          "Learn the structure of Kidney — Nephron by Nephron",
+          "Master urine formation: Filtration, Reabsorption & Secretion",
+          "Understand hormonal control of kidney — ADH, Aldosterone",
+          "Know excretory organs beyond kidney — Skin, Lungs, Liver",
+          "Crack BPSC multi-statement & NEET assertion-reason on excretion"
+        ],
+        "total_modules": 6,
+        "estimated_time": "50 mins"
+      },
+      "navigation": {
+        "next": "card_02_excretion_intro",
+        "button_text": "Start Learning 🚀"
+      }
+    },
+    {
+      "card_id": "card_02_excretion_intro",
+      "card_slug": "card_02_excretion_intro",
+      "type": "chat",
+      "concept_id": "excretion_vs_egestion",
+      "level": 1,
+      "progress": {
+        "current": 2,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, ek interesting sawaal — jab tum toilet jaate ho, woh excretion hai ya kuch aur? Zyada tar log sochte hain ki haan, toilet jaana hi excretion hai — lekin biology mein yeh ek badi galti hai! Toilet mein jo waste jaata hai woh mostly khaane ka undigested hissa hai — woh 'Egestion' hai, excretion nahi!",
+          "emotion": "🤔"
+        },
+        {
+          "speaker": "raju",
+          "text": "Hain?? Matlab toilet jaana excretion nahi hai?? Phir excretion kya hota hai sir?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Excretion woh process hai jisme body ke metabolic reactions se bane harmful waste products — jaise Urea, CO2, excess salts — bahar nikale jaate hain. Yeh body ke andar bane waste hain, bahar se aaye nahi! Egestion mein undigested food bahar jaata hai jo kabhi blood mein gaya hi nahi tha. BPSC aur SSC mein yeh definition trap seedha aaya hai — 'Excretion aur Egestion mein fark kya hai?'",
+          "emotion": "💡"
+        },
+        {
+          "speaker": "raju",
+          "text": "Excretion = body ke andar bana waste bahar, Egestion = khaana jo digest nahi hua woh bahar — ab samajh aaya! Yeh to bilkul alag hai!"
+        }
+      ],
+      "navigation": {
+        "next": "card_03_nitrogenous_waste",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_03_nitrogenous_waste",
+      "card_slug": "card_03_nitrogenous_waste",
+      "type": "chat",
+      "concept_id": "nitrogenous_waste_types",
+      "level": 1,
+      "progress": {
+        "current": 3,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Body ka sabse important waste hai 'Nitrogenous Waste' — yeh tab banta hai jab proteins aur amino acids break hote hain. Alag-alag organisms alag-alag form mein yeh waste nikaalte hain! Humans aur mammals: 'Urea' — isliye 'Ureotelic' kehte hain. Fish aur aquatic animals: 'Ammonia' — 'Ammonotelic.' Birds, reptiles, insects: 'Uric Acid' — 'Uricotelic.' Yeh teen types BPSC ka mega-favorite classification question hai!",
+          "emotion": "🧪"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir lekin kyun alag-alag animals alag cheez nikalte hain? Koi reason hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Brilliant question! Ammonia sabse toxic hai lekin dissolve karne ke liye bahut paani chahiye — aquatic animals ke paas unlimited paani hota hai toh unhe problem nahi. Urea thoda kam toxic hai aur kam paani mein bhi nikal sakta hai — land animals ke liye perfect! Uric Acid sabse kam toxic hai aur solid form mein bahar nikalta hai — bilkul paani waste nahi hota — isliye desert animals, birds aur insects use karte hain! Water conservation ka biology!",
+          "emotion": "🌊"
+        },
+        {
+          "speaker": "raju",
+          "text": "Achhaaa! Ammonia = paani zyada chahiye = fish, Urea = thoda paani = humans, Uric Acid = paani nahi = birds aur desert animals! Nature ne kitna smart design kiya hai!"
+        }
+      ],
+      "navigation": {
+        "next": "card_04_excretory_organs",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_04_excretory_organs",
+      "card_slug": "card_04_excretory_organs",
+      "type": "chat",
+      "concept_id": "human_excretory_organs",
+      "level": 1,
+      "progress": {
+        "current": 4,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, human body mein excretion sirf kidneys nahi karte — yeh ek bada exam trap hai! Body ke kaafi organs waste nikaalte hain: Kidneys — Urea, excess salts, water (urine). Lungs — CO2 aur water vapour. Skin — sweat mein urea, lactic acid, excess salts. Liver — bile pigments (bilirubin, biliverdin) nikaalta hai — jo purani RBC se bante hain! Intestine — excess bile pigments stool mein. Har organ ka alag waste hai!",
+          "emotion": "🏥"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir skin bhi excretion karta hai?? Maine socha tha sweat sirf cooling ke liye hoti hai!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Yehi to dono kaam hote hain sweat ke — temperature control bhi aur excretion bhi! Sweat glands ko 'Accessory Excretory Organs' kehte hain. Liver ka kaam bahut important hai — woh Ammonia ko Urea mein convert karta hai — ise 'Ornithine Cycle' ya 'Urea Cycle' kehte hain. Kidney sirf urea bahar nikaalti hai — banana Liver ka kaam hai! BPSC trap: 'Urea kahan banta hai?' — Liver mein! 'Urea kahan se bahar jaata hai?' — Kidney se!",
+          "emotion": "⚠️"
+        },
+        {
+          "speaker": "raju",
+          "text": "Urea banta hai Liver mein, bahar jaata hai Kidney se — dono alag-alag organs ka kaam! Ye mix hona hi nahi chahiye exam mein!"
+        }
+      ],
+      "navigation": {
+        "next": "card_05_quiz1",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_05_quiz1",
+      "card_slug": "card_05_quiz1",
+      "type": "quiz",
+      "concept_id": "excretion_basics_quiz1",
+      "level": 1,
+      "progress": {
+        "current": 5,
+        "total": 60
+      },
+      "quiz_payload": {
+        "question": "Q1/3: Humans ko 'Ureotelic' kyun kaha jaata hai?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Kyunki woh Uric Acid ke roop mein nitrogenous waste nikalte hain"
+          },
+          {
+            "id": "B",
+            "text": "Kyunki woh Ammonia ke roop mein nitrogenous waste nikalte hain"
+          },
+          {
+            "id": "C",
+            "text": "Kyunki woh Urea ke roop mein nitrogenous waste nikalte hain"
+          },
+          {
+            "id": "D",
+            "text": "Kyunki woh CO2 ke roop mein waste nikalte hain"
+          }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Humans aur zyatar mammals Urea ke roop mein nitrogenous waste nikalte hain, isliye unhe 'Ureotelic' kaha jaata hai. Urea liver mein Ornithine Cycle (Urea Cycle) ke zariye banta hai aur kidneys usse blood se filter karke urine mein nikaalti hain. Ammonotelic = Fish (Ammonia). Uricotelic = Birds, Reptiles, Insects (Uric Acid). Uric Acid sabse kam toxic aur solid hota hai — isliye birds mein white paste jaisi droppings hoti hain. Yeh BPSC aur SSC ka direct classification question hai!"
+      },
+      "navigation": {
+        "next": "card_06_quiz2",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_06_quiz2",
+      "card_slug": "card_06_quiz2",
+      "type": "quiz",
+      "concept_id": "excretion_basics_quiz2",
+      "level": 1,
+      "progress": {
+        "current": 6,
+        "total": 60
+      },
+      "quiz_payload": {
+        "question": "Q2/3: BPSC Trap — Urea body mein kahan BANTA hai?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Kidney mein"
+          },
+          {
+            "id": "B",
+            "text": "Liver mein — Ornithine Cycle (Urea Cycle) ke zariye"
+          },
+          {
+            "id": "C",
+            "text": "Lungs mein"
+          },
+          {
+            "id": "D",
+            "text": "Spleen mein"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Urea liver mein banta hai — Ornithine Cycle (jise Urea Cycle bhi kehte hain) ke zariye. Amino acids ke breakdown se Ammonia banta hai, jo bahut toxic hai. Liver Ammonia ko kam toxic Urea mein convert karta hai. Yeh Urea blood mein jaata hai aur kidneys isse filter karke urine mein nikaalti hain. Kidney sirf filter aur excrete karti hai — BANATA Liver hai! Yeh BPSC 2019 mein directly poochha gaya tha — 'Urea ka synthesis kahan hota hai?' Galti karna yahan matlab marks kho dena!"
+      },
+      "navigation": {
+        "next": "card_07_quiz3",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_07_quiz3",
+      "card_slug": "card_07_quiz3",
+      "type": "quiz",
+      "concept_id": "excretion_basics_quiz3",
+      "level": 1,
+      "progress": {
+        "current": 7,
+        "total": 60
+      },
+      "quiz_payload": {
+        "question": "Q3/3: SSC CGL — Liver dwara excreted bile pigments kahan se aate hain?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Undigested food se"
+          },
+          {
+            "id": "B",
+            "text": "Purani aur damaged Red Blood Cells (RBC) ke breakdown se"
+          },
+          {
+            "id": "C",
+            "text": "Excess glucose ke breakdown se"
+          },
+          {
+            "id": "D",
+            "text": "Protein synthesis ke byproduct ke roop mein"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Liver bile pigments — Bilirubin (yellow) aur Biliverdin (green) — produce karta hai purani aur damaged Red Blood Cells ke breakdown se. RBC mein haemoglobin hota hai — jab RBC toot ti hai, haemoglobin → globin (protein, reused) + haem. Haem → Biliverdin → Bilirubin. Yeh bile pigments liver se bile juice mein aate hain aur intestine mein jaake stool ka brown colour dete hain. Agar bile duct block ho jaaye — 'Jaundice' (Piliya) hota hai jisme skin aur aankhen peeli ho jaati hain. SSC CGL aur BPSC mein yeh direct question hai!"
+      },
+      "navigation": {
+        "next": "card_08_milestone1",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_08_milestone1",
+      "card_slug": "card_08_milestone1",
+      "type": "milestone",
+      "concept_id": "module1_complete",
+      "level": 1,
+      "progress": {
+        "current": 8,
+        "total": 60
+      },
+      "milestone_payload": {
+        "title": "MODULE 1 COMPLETE! 🎉",
+        "badge_emoji": "🧪",
+        "completed_topic": "Excretion — Basics, Waste Types & Organs",
+        "xp_earned": 50,
+        "milestone_progress": "Module 1/6 Clear",
+        "motivational_quote": "Ureotelic, Ammonotelic, Uricotelic — yeh teen words ab tumhari sword hain BPSC mein! Ab body ka real sewage plant dekhte hain — Kidney ka full internal tour shuru!"
+      },
+      "navigation": {
+        "next": "card_09_kidney_intro",
+        "button_text": "Start Module 2 ➔"
+      }
+    },
+    {
+      "card_id": "card_09_kidney_intro",
+      "card_slug": "card_09_kidney_intro",
+      "type": "chat",
+      "concept_id": "kidney_structure_intro",
+      "level": 2,
+      "progress": {
+        "current": 9,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, hamare do kidneys hoti hain — peethe ki taraf, diaphragm ke neeche. Dono mein se daayeen kidney (right kidney) thodi neeche hoti hai — kyunki uske upar liver hota hai! Yeh ek common exam trap hai. Kidney ka shape bean jaisi hoti hai — isliye kidney beans (rajma) wala naam! Ek adult kidney lagbhag 10-12 cm lambi, 5-7 cm chaudi, aur 3-4 cm moti hoti hai. Weight lagbhag 150 grams.",
+          "emotion": "🫘"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir daayeen kidney neeche hoti hai — yeh kisi ne nahi bataya tha mujhe! Achhaaaa!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Yahin to BPSC trap karta hai! Right kidney is lower because the liver occupies space above it. Ab kidney ki outer layer ko 'Cortex' kehte hain — yahan filtration hoti hai. Inner layer ko 'Medulla' kehte hain — yahan concentration hoti hai. Bilkul andar hollow part hota hai 'Pelvis' — jahan urine collect hoti hai aur 'Ureter' se bladder ki taraf jaati hai. Cortex-Medulla-Pelvis — yeh teen layers yaad karo!",
+          "emotion": "📐"
+        },
+        {
+          "speaker": "raju",
+          "text": "Cortex = bahar, Medulla = andar, Pelvis = hollow part jahan urine collect hoti hai — clear hai sir!"
+        }
+      ],
+      "navigation": {
+        "next": "card_10_nephron_intro",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_10_nephron_intro",
+      "card_slug": "card_10_nephron_intro",
+      "type": "chat",
+      "concept_id": "nephron_structural_unit",
+      "level": 2,
+      "progress": {
+        "current": 10,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ab kidney ke andar jaate hain — ek kidney mein lagbhag 10 lakh se 12 lakh microscopic units hote hain jinhein 'Nephron' kehte hain. Nephron kidney ki structural aur functional unit hai — bilkul cell biology wala concept — 'basic unit!' Ek Nephron ek mini-filtration factory hai. Agar ek insaan ke dono kidneys ke sabhi nephrons ko seedha nikala jaaye toh woh lagbhag 80 km lamba hoga! Yeh NEET aur SSC ka direct fact question hai.",
+          "emotion": "🔬"
+        },
+        {
+          "speaker": "raju",
+          "text": "80 km!! Sir ek kidney mein itna kuch hota hai?? Yeh to amazing hai! Nephron ka structure kya hota hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Nephron ke 5 main parts hain — yaad karo ek factory assembly line ki tarah: (1) Bowman's Capsule — cup shaped, blood filter karta hai. (2) Glomerulus — blood vessels ka ball, ussi Bowman's Capsule ke andar. (3) Proximal Convoluted Tubule (PCT). (4) Loop of Henle — U-shaped tube. (5) Distal Convoluted Tubule (DCT) — collecting duct mein jaata hai! Har part ka alag kaam hai — abhi detail mein dekhenge!",
+          "emotion": "🏭"
+        },
+        {
+          "speaker": "raju",
+          "text": "5 parts — Bowman's Capsule, Glomerulus, PCT, Loop of Henle, DCT — sir ye mix ho jayenge! Thoda thoda explain karo!"
+        }
+      ],
+      "navigation": {
+        "next": "card_11_glomerulus_bowman",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_11_glomerulus_bowman",
+      "card_slug": "card_11_glomerulus_bowman",
+      "type": "chat",
+      "concept_id": "glomerulus_bowman_capsule",
+      "level": 2,
+      "progress": {
+        "current": 11,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Bilkul! Chalo ek-ek karte hain. Pehle part — 'Malpighian Body' ya 'Renal Corpuscle' — isme hota hai Glomerulus aur Bowman's Capsule dono milke. Glomerulus ek knot jaisi blood capillaries ki gend hai — jisme blood bahut high pressure pe aata hai. Bowman's Capsule ek cup hai jo glomerulus ko wrap kiye hoti hai. Pressure ki wajah se blood se chhota molecules — water, glucose, urea, salts — filter hokar Bowman's Capsule mein aate hain. Ise 'Ultrafiltration' kehte hain!",
+          "emotion": "🫙"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir toh glucose bhi filter ho jaata hai?? Matlab useful cheez bhi nikal jaati hai? Phir woh waste to nahi jayegi na?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Wah! Ekdum sahi pakda! Yahi to kidney ki genius hai — pehle sab filter kar lo, phir useful cheezein wapas le lo! Jo fluid Bowman's Capsule mein aata hai use 'Glomerular Filtrate' ya 'Ultrafiltrate' kehte hain — isme glucose, amino acids, water, salts, urea sab hote hain. Ek din mein lagbhag 180 litres filtrate banta hai! Lekin urine sirf 1.5 litre banti hai — matlab 178.5 litres wapas le liya jaata hai — 'Reabsorption!' Yeh NEET ka direct numerical question hai!",
+          "emotion": "💡"
+        },
+        {
+          "speaker": "raju",
+          "text": "180 litres filter, sirf 1.5 litre urine — matlab 99% wapas le liya jaata hai! Kidney kitni smart hai sir!"
+        }
+      ],
+      "navigation": {
+        "next": "card_12_pct_loop_dct",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_12_pct_loop_dct",
+      "card_slug": "card_12_pct_loop_dct",
+      "type": "chat",
+      "concept_id": "pct_loop_of_henle_dct",
+      "level": 2,
+      "progress": {
+        "current": 12,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ab assembly line ka agla hissa — 'Proximal Convoluted Tubule (PCT).' Yahan sabse zyada reabsorption hoti hai — glucose, amino acids, Na+ ions, water — sab wapas blood mein jaate hain! 70-80% reabsorption PCT mein hoti hai. Phir aata hai 'Loop of Henle' — U-shaped tube jo Medulla mein jaata hai. Yeh urine ko concentrate karne mein help karta hai — salt aur water ke exchange se. Isliye desert animals jaise kangaroo rat mein Loop of Henle bahut lamba hota hai!",
+          "emotion": "🔄"
+        },
+        {
+          "speaker": "raju",
+          "text": "Loop of Henle lamba toh concentration zyada? Isliye desert animals paani bachate hain??"
+        },
+        {
+          "speaker": "aman",
+          "text": "Exactly! Aur yeh NEET ka direct concept hai — 'Longer Loop of Henle = more concentrated urine = less water loss.' Ab 'Distal Convoluted Tubule (DCT)' — yahan 'Secretion' hoti hai — blood se extra waste jaise excess H+ ions, K+ ions, kuch drugs seedha tubule mein daal diye jaate hain. DCT hormonal control mein hota hai — ADH aur Aldosterone yahan kaam karte hain. Phir sab fluid 'Collecting Duct' mein milta hai — final urine!",
+          "emotion": "📊"
+        },
+        {
+          "speaker": "raju",
+          "text": "PCT = reabsorption, Loop of Henle = concentration, DCT = secretion aur hormonal control — teen alag kaam teen alag jagah! Samajh aa gaya!"
+        }
+      ],
+      "navigation": {
+        "next": "card_13_quiz4",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_13_quiz4",
+      "card_slug": "card_13_quiz4",
+      "type": "quiz",
+      "concept_id": "nephron_quiz1",
+      "level": 2,
+      "progress": {
+        "current": 13,
+        "total": 60
+      },
+      "quiz_payload": {
+        "question": "Q1/3: Nephron ki 'Structural aur Functional unit' kis organ ki hai?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Liver"
+          },
+          {
+            "id": "B",
+            "text": "Heart"
+          },
+          {
+            "id": "C",
+            "text": "Kidney"
+          },
+          {
+            "id": "D",
+            "text": "Lung"
+          }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Nephron Kidney ki structural aur functional unit hai — bilkul jaise Cell poore organism ki basic unit hai. Ek kidney mein lagbhag 10-12 lakh (1 million) nephrons hote hain. Nephron ke parts: Bowman's Capsule + Glomerulus (Malpighian Body), PCT, Loop of Henle, DCT, Collecting Duct. Ek kidney fail hone par doosri kidney extra kaam sambhaal leti hai kyunki nephrons ki itni zyada capacity hoti hai. NEET mein 'Nephron is structural and functional unit of' directly aaya hai — answer: Kidney!"
+      },
+      "navigation": {
+        "next": "card_14_quiz5",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_14_quiz5",
+      "card_slug": "card_14_quiz5",
+      "type": "quiz",
+      "concept_id": "nephron_quiz2",
+      "level": 2,
+      "progress": {
+        "current": 14,
+        "total": 60
+      },
+      "quiz_payload": {
+        "question": "Q2/3: Ek din mein Glomerular Filtrate kitna banta hai aur actual urine kitni?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Filtrate 10 litres, Urine 5 litres"
+          },
+          {
+            "id": "B",
+            "text": "Filtrate 180 litres, Urine 1.5 litres"
+          },
+          {
+            "id": "C",
+            "text": "Filtrate 50 litres, Urine 2 litres"
+          },
+          {
+            "id": "D",
+            "text": "Filtrate 180 litres, Urine 18 litres"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Ek din mein dono kidneys mein lagbhag 180 litres Glomerular Filtrate banta hai — lekin 99% se zyada reabsorb ho jaata hai tubules mein! Final urine sirf lagbhag 1.5 litres (1500 mL) banti hai per day. Iska matlab hai 178.5 litres fluid wapas blood mein absorb hota hai — glucose, amino acids, water, salts sab! Agar kidneys yeh kaam na karein aur sara filtrate urine ban jaaye toh insaan dehydrate hokar mar jaaye. Yeh numerical NEET 2016 aur BPSC 2020 mein directly aaya hai!"
+      },
+      "navigation": {
+        "next": "card_15_quiz6",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_15_quiz6",
+      "card_slug": "card_15_quiz6",
+      "type": "quiz",
+      "concept_id": "nephron_quiz3",
+      "level": 2,
+      "progress": {
+        "current": 15,
+        "total": 60
+      },
+      "quiz_payload": {
+        "question": "Q3/3: NEET Level — Desert animals mein Loop of Henle lamba kyun hota hai?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Zyada urea produce karne ke liye"
+          },
+          {
+            "id": "B",
+            "text": "Zyada concentrated urine banane ke liye aur water conservation ke liye"
+          },
+          {
+            "id": "C",
+            "text": "Zyada blood filter karne ke liye"
+          },
+          {
+            "id": "D",
+            "text": "Glucose ka zyada reabsorption karne ke liye"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Loop of Henle jitna lamba hoga, urine utni zyada concentrated hogi aur utna kam paani waste hoga. Desert animals jaise Kangaroo rat, oonth — inke Loop of Henle bahut lamba hota hai kyunki desert mein paani bahut kam milta hai — body maximum paani bachana chahti hai. Inki urine human urine se kaafi zyada concentrated hoti hai. Aquatic animals mein Loop of Henle bahut chhota ya absent hota hai kyunki paani bachana zaruri nahi! Yeh evolutionary adaptation hai — NEET ka top concept!"
+      },
+      "navigation": {
+        "next": "card_16_milestone2",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_16_milestone2",
+      "card_slug": "card_16_milestone2",
+      "type": "milestone",
+      "concept_id": "module2_complete",
+      "level": 2,
+      "progress": {
+        "current": 16,
+        "total": 60
+      },
+      "milestone_payload": {
+        "title": "NEPHRON NINJA! 🎯",
+        "badge_emoji": "🫘",
+        "completed_topic": "Kidney Structure & Nephron",
+        "xp_earned": 75,
+        "milestone_progress": "Module 2/6 Clear",
+        "motivational_quote": "180 litres filtrate, sirf 1.5 litre urine — yeh ratio tumhare exam mein guaranteed marks hai! Ab kidneys ka actual kaam samjhte hain — Urine Formation ka poora 3-step process!"
+      },
+      "navigation": {
+        "next": "card_17_urine_formation_intro",
+        "button_text": "Start Module 3 ➔"
+      }
+    },
+    {
+      "card_id": "card_17_urine_formation_intro",
+      "card_slug": "card_17_urine_formation_intro",
+      "type": "chat",
+      "concept_id": "urine_formation_three_steps",
+      "level": 3,
+      "progress": {
+        "current": 17,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, urine formation ek 3-step process hai — yeh NEET aur BPSC dono ka compulsory topic hai. Step 1: 'Glomerular Filtration' (Ultrafiltration) — Blood high pressure se Glomerulus mein aata hai, chhote molecules Bowman's Capsule mein filter hote hain. Kya filter hota hai: Water, glucose, urea, amino acids, uric acid, creatinine, salts. Kya filter NAHI hota: RBC, WBC, Platelets, large proteins (jaise albumin)!",
+          "emotion": "🔬"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir blood cells aur proteins filter nahi hote? Matlab woh blood mein hi rehte hain?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul! RBC, proteins — yeh Glomerulus ki wall se nahi guzar paate — woh too big hain. Agar urine mein RBC ya proteins milein — yeh disease ka sign hai! 'Haematuria' = urine mein RBC — kidney damage. 'Proteinuria' = urine mein proteins — kidney disease ya diabetes ka sign! NEET mein yeh diagnosis concepts seedhe aaye hain. Normal urine mein glucose NAHI hota — lekin diabetes mein glucose filter hone ke baad reabsorb nahi ho paata toh urine mein aa jaata hai — 'Glucosuria!'",
+          "emotion": "⚠️"
+        },
+        {
+          "speaker": "raju",
+          "text": "Haematuria = RBC in urine = kidney damage, Glucosuria = glucose in urine = diabetes — yeh disease names exam mein seedhe aate hain!"
+        }
+      ],
+      "navigation": {
+        "next": "card_18_reabsorption",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_18_reabsorption",
+      "card_slug": "card_18_reabsorption",
+      "type": "chat",
+      "concept_id": "tubular_reabsorption",
+      "level": 3,
+      "progress": {
+        "current": 18,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Step 2: 'Tubular Reabsorption' — filtrate jo Bowman's Capsule se PCT mein aata hai, wahan se useful cheezein wapas blood mein absorb hoti hain. PCT mein: Glucose (100% reabsorbed agar normal hai), Amino acids (100%), Na+ ions, Water — Active Transport se! Matlab energy (ATP) lagti hai — glucose ke liye! Isse 'Selective Reabsorption' bhi kehte hain — sirf useful cheezein wapas, waste (urea, creatinine) wahan rehta hai!",
+          "emotion": "♻️"
+        },
+        {
+          "speaker": "raju",
+          "text": "Glucose 100% wapas aata hai — toh normal urine mein glucose nahi hona chahiye! Diabetes mein kyun aata hai phir?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bahut acha sawaal! Diabetes mein blood mein glucose bahut zyada hota hai — renal threshold cross ho jaati hai (180 mg/dL). Reabsorption system itna zyada glucose handle nahi kar sakta — kuch glucose urine mein nikal jaata hai — Glucosuria! Ek aur important concept — 'Renal Threshold' ka matlab hai woh maximum concentration jiske upar kidney kisi substance ko completely reabsorb nahi kar sakti. Glucose ki renal threshold 180 mg/dL hoti hai — yeh NEET mein numerical ke roop mein aaya hai!",
+          "emotion": "📊"
+        },
+        {
+          "speaker": "raju",
+          "text": "Renal Threshold 180 mg/dL — usse upar glucose urine mein! Ab samajh aaya kyun diabetic patients ka urine check karte hain glucose ke liye!"
+        }
+      ],
+      "navigation": {
+        "next": "card_19_tubular_secretion",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_19_tubular_secretion",
+      "card_slug": "card_19_tubular_secretion",
+      "type": "chat",
+      "concept_id": "tubular_secretion",
+      "level": 3,
+      "progress": {
+        "current": 19,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Step 3: 'Tubular Secretion' — yeh reabsorption ka ulta hai! DCT aur Collecting Duct mein blood se extra harmful substances seedhe tubule mein daale jaate hain — bina filtration ke! Kya secrete hota hai: Excess H+ ions (pH balance ke liye), K+ ions, NH3 (ammonia), kuch drugs aur antibiotics, creatinine. Yeh process ensure karta hai ki jo waste filtration se reh gaya woh bhi bahar nikale! Secretion bhi Active Transport se hoti hai — energy lagti hai!",
+          "emotion": "💉"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir toh urine banne ka kram hai — pehle filter, phir useful wapas lo, phir extra waste daalo?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul perfect summary! Teen steps: (1) Filtration = Bowman's Capsule mein sab filter. (2) Reabsorption = Useful cheezein wapas — PCT mein zyada. (3) Secretion = Extra waste add — DCT mein. Final urine mein hota hai: Urea (2%), Water (96%), Salts (2%), Creatinine, Uric Acid. Normal urine ka pH 6 hota hai — slightly acidic! Aur ek exam bomb — 'Creatinine' kidney function test mein use hota hai — blood mein creatinine badhe toh kidney kharaab!",
+          "emotion": "🎯"
+        },
+        {
+          "speaker": "raju",
+          "text": "Urine = 96% water, 2% urea, 2% salts, pH 6! Creatinine blood mein badhe = kidney problem! Yeh numbers yaad kar leta hun!"
+        }
+      ],
+      "navigation": {
+        "next": "card_20_quiz7",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_20_quiz7",
+      "card_slug": "card_20_quiz7",
+      "type": "quiz",
+      "concept_id": "urine_formation_quiz1",
+      "level": 3,
+      "progress": {
+        "current": 20,
+        "total": 60
+      },
+      "quiz_payload": {
+        "question": "Q1/3: Urine formation ke 3 steps ka sahi kram kaunsa hai?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Secretion → Filtration → Reabsorption"
+          },
+          {
+            "id": "B",
+            "text": "Reabsorption → Secretion → Filtration"
+          },
+          {
+            "id": "C",
+            "text": "Filtration → Reabsorption → Secretion"
+          },
+          {
+            "id": "D",
+            "text": "Filtration → Secretion → Reabsorption"
+          }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Urine formation ka sahi kram hai: (1) Glomerular Filtration — Bowman's Capsule mein blood ka high-pressure filtration, sab chhote molecules aate hain. (2) Tubular Reabsorption — PCT mein useful substances (glucose, amino acids, water, salts) wapas blood mein. (3) Tubular Secretion — DCT mein extra waste (H+ ions, K+, drugs) blood se tubule mein daale jaate hain. Yeh sequence NEET, BPSC, SSC CGL — teeno mein arrange-the-sequence format mein aaya hai. Galat kram = galat marks!"
+      },
+      "navigation": {
+        "next": "card_21_quiz8",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_21_quiz8",
+      "card_slug": "card_21_quiz8",
+      "type": "quiz",
+      "concept_id": "urine_formation_quiz2",
+      "level": 3,
+      "progress": {
+        "current": 21,
+        "total": 60
+      },
+      "quiz_payload": {
+        "question": "Q2/3: NEET Direct — Normal urine mein inme se kaunsi cheez NAHI hoti?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Urea"
+          },
+          {
+            "id": "B",
+            "text": "Creatinine"
+          },
+          {
+            "id": "C",
+            "text": "Glucose"
+          },
+          {
+            "id": "D",
+            "text": "Uric Acid"
+          }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Normal urine mein Glucose NAHI hota — kyunki PCT mein glucose 100% reabsorb ho jaata hai (blood glucose normal level pe). Urea, Creatinine, Uric Acid — yeh sab normal urine ke components hain. Glucose urine mein tab aata hai jab blood glucose renal threshold (180 mg/dL) cross kar le — ise 'Glucosuria' kehte hain aur yeh Diabetes Mellitus ka diagnostic sign hai. Isi tarah proteins aur RBC bhi normal urine mein nahi hote — unka presence kidney disease indicate karta hai. NEET 2018 mein yeh exact question aaya tha!"
+      },
+      "navigation": {
+        "next": "card_22_quiz9",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_22_quiz9",
+      "card_slug": "card_22_quiz9",
+      "type": "quiz",
+      "concept_id": "urine_formation_quiz3",
+      "level": 3,
+      "progress": {
+        "current": 22,
+        "total": 60
+      },
+      "quiz_payload": {
+        "question": "Q3/3: BPSC Trap — 'Haematuria' kya indicate karta hai?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Urine mein glucose — diabetes"
+          },
+          {
+            "id": "B",
+            "text": "Urine mein proteins — kidney disease"
+          },
+          {
+            "id": "C",
+            "text": "Urine mein Red Blood Cells — kidney damage ya infection"
+          },
+          {
+            "id": "D",
+            "text": "Urine mein excess urea — liver disease"
+          }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Haematuria = Urine mein Red Blood Cells (RBC) ka aana — yeh kidney damage, kidney stones, UTI (Urinary Tract Infection) ya kidney cancer indicate kar sakta hai. Normal urine mein RBC nahi hote kyunki RBC Glomerular Filtration mein paar nahi ho sakti (too large). Proteinuria = urine mein proteins — kidney disease. Glucosuria = urine mein glucose — Diabetes. Ketonuria = urine mein ketone bodies — uncontrolled diabetes ya starvation. BPSC mein ek saath yeh sab terms diye gaye the match karne ke liye!"
+      },
+      "navigation": {
+        "next": "card_23_milestone3",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_23_milestone3",
+      "card_slug": "card_23_milestone3",
+      "type": "milestone",
+      "concept_id": "module3_complete",
+      "level": 3,
+      "progress": {
+        "current": 23,
+        "total": 60
+      },
+      "milestone_payload": {
+        "title": "URINE FORMATION UNLOCKED! 💧",
+        "badge_emoji": "🔬",
+        "completed_topic": "Urine Formation — 3-Step Process",
+        "xp_earned": 100,
+        "milestone_progress": "Module 3/6 Clear",
+        "motivational_quote": "Filtration se Secretion tak — teen steps ka poora kram ab tumhare dimag mein print ho gaya! Ab dekhte hain body kidneys ko kaise control karti hai — Hormones ka secret game!"
+      },
+      "navigation": {
+        "next": "card_24_adh_hormone",
+        "button_text": "Start Module 4 ➔"
+      }
+    },
+    {
+      "card_id": "card_24_adh_hormone",
+      "card_slug": "card_24_adh_hormone",
+      "type": "chat",
+      "concept_id": "adh_hormone_control",
+      "level": 3,
+      "progress": {
+        "current": 24,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, ek observation karo — jab bahut garmi mein paani kam piya ho, toh urine ka colour yellow ya dark hota hai. Jab bahut paani piyo, toh urine almost clear hoti hai! Kyun? Kyunki ek hormone hai jo kidney ko control karta hai — 'ADH' — Antidiuretic Hormone! Jab body mein paani kam ho, ADH zyada nikalta hai aur kidney zyada paani reabsorb karti hai — urine concentrated aur dark yellow hoti hai!",
+          "emotion": "💧"
+        },
+        {
+          "speaker": "raju",
+          "text": "Achhaaa! Toh dark yellow urine matlab body mein paani kam hai — ADH zyada kaam kar raha hai!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Perfect logic! ADH — jiसे 'Vasopressin' bhi kehte hain — hypothalamus mein banta hai aur pituitary gland se secrete hota hai. Yeh Collecting Duct aur DCT ko zyada water absorb karne ka signal deta hai. Agar ADH nahi bane — 'Diabetes Insipidus' — bahut zyada paani wali urine banti hai (5-20 litres per day)! Diabetes Insipidus aur Diabetes Mellitus ke naam confuse karne wale hain — BPSC ka favorite trap! Mellitus = glucose related, Insipidus = ADH related!",
+          "emotion": "⚠️"
+        },
+        {
+          "speaker": "raju",
+          "text": "Diabetes Insipidus = ADH problem = zyada urine, Diabetes Mellitus = insulin/glucose problem — dono alag hain! Ye mix karna nahi hai!"
+        }
+      ],
+      "navigation": {
+        "next": "card_25_aldosterone_raas",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_25_aldosterone_raas",
+      "card_slug": "card_25_aldosterone_raas",
+      "type": "chat",
+      "concept_id": "aldosterone_raas",
+      "level": 3,
+      "progress": {
+        "current": 25,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ek aur important hormonal system hai — 'RAAS' — Renin-Angiotensin-Aldosterone System! Jab blood pressure ya blood volume girta hai, kidneys 'Renin' enzyme release karti hain. Renin → Angiotensin I → Angiotensin II → Adrenal Cortex se 'Aldosterone' release. Aldosterone DCT aur Collecting Duct mein Na+ (sodium) aur water ka reabsorption badhata hai — blood pressure aur volume badh jaata hai! BPSC aur NEET dono mein RAAS ka sequence poochha gaya hai!",
+          "emotion": "🔗"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir itna lamba chain hai! Renin se Aldosterone tak — kahan se yaad karoon?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Simple yaad karo — 'RAAS' — R: Renin (Kidney se), A: Angiotensin I aur II (blood mein), A: Aldosterone (Adrenal Cortex se), S: Sodium + water retention (result). Blood pressure gira → Kidney ne Renin chhoda → chain chali → Na+ aur water wapas → BP normal hua! Yeh blood pressure regulation ka master system hai. Hypertension (high BP) ki dawaiyan aksar RAAS ko block karke kaam karti hain — 'ACE Inhibitors' — Angiotensin Converting Enzyme ko block karte hain!",
+          "emotion": "💊"
+        },
+        {
+          "speaker": "raju",
+          "text": "RAAS = Renin-Angiotensin-Aldosterone System, BP gira toh Renin nikla, chain chali, Na+ wapas, BP theek! ACE Inhibitors is chain ko tod dete hain!"
+        }
+      ],
+      "navigation": {
+        "next": "card_26_atrial_natriuretic",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_26_atrial_natriuretic",
+      "card_slug": "card_26_atrial_natriuretic",
+      "type": "chat",
+      "concept_id": "anf_erythropoietin",
+      "level": 3,
+      "progress": {
+        "current": 26,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ab ek aur important hormonal concept — 'ANF' — Atrial Natriuretic Factor! Jab blood pressure zyada badh jaaye, heart ka Left Atrium ANF release karta hai. ANF kidney ko signal deta hai zyada Na+ aur water excrete karo — BP kam karo! ANF aur Aldosterone opposite kaam karte hain — Aldosterone: Na+ retain karo (BP badho), ANF: Na+ nikalo (BP ghato). NEET mein inka comparison directly poochha jaata hai!",
+          "emotion": "🔄"
+        },
+        {
+          "speaker": "raju",
+          "text": "Toh Aldosterone BP badhata hai aur ANF ghatata hai — dono balance karte hain!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Perfect! Aur ek aur kidney-related hormone — 'Erythropoietin (EPO)' — yeh kidney release karta hai jab oxygen kam ho jaaye. EPO bone marrow ko signal deta hai zyada RBC banao! Isliye kidney failure patients mein Anaemia hoti hai — kyunki EPO nahi banta aur bone marrow RBC nahi banata! Yahin ek aur BPSC/NEET trap hai — 'RBC production ko kaun control karta hai?' — Erythropoietin, jo kidney se aata hai! Athletes kabhi kabhi EPO illegally use karte hain performance badhane ke liye — blood doping!",
+          "emotion": "🩸"
+        },
+        {
+          "speaker": "raju",
+          "text": "Kidney se Erythropoietin — RBC banane ka signal! Kidney fail hogi toh RBC kam banenga — anaemia! Ye to circulatory system se bhi connected hai!"
+        }
+      ],
+      "navigation": {
+        "next": "card_27_quiz10",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_27_quiz10",
+      "card_slug": "card_27_quiz10",
+      "type": "quiz",
+      "concept_id": "hormonal_control_quiz1",
+      "level": 3,
+      "progress": {
+        "current": 27,
+        "total": 60
+      },
+      "quiz_payload": {
+        "question": "Q1/3: ADH (Antidiuretic Hormone) / Vasopressin ka kya kaam hai?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Blood mein glucose level regulate karna"
+          },
+          {
+            "id": "B",
+            "text": "Collecting Duct aur DCT mein water reabsorption badhana — urine concentrate karna"
+          },
+          {
+            "id": "C",
+            "text": "Na+ ions excretion badhana"
+          },
+          {
+            "id": "D",
+            "text": "Renin release stimulate karna"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "ADH (Antidiuretic Hormone), jise Vasopressin bhi kehte hain, Collecting Duct aur DCT mein water permeability badhata hai — zyada water reabsorb hoti hai, urine concentrated aur kam volume mein banti hai. ADH hypothalamus mein banta hai, posterior pituitary se release hota hai. Jab ADH nahi banta/kaam nahi karta — Diabetes Insipidus — bahut dilute aur zyada volume mein urine (5-20 L/day). 'Anti-diuretic' ka matlab hi hai 'urine kam karna.' Yeh BPSC aur NEET ka direct hormonal control question hai!"
+      },
+      "navigation": {
+        "next": "card_28_quiz11",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_28_quiz11",
+      "card_slug": "card_28_quiz11",
+      "type": "quiz",
+      "concept_id": "hormonal_control_quiz2",
+      "level": 3,
+      "progress": {
+        "current": 28,
+        "total": 60
+      },
+      "quiz_payload": {
+        "question": "Q2/3: RAAS mein Renin kahan se secrete hota hai?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Adrenal Cortex se"
+          },
+          {
+            "id": "B",
+            "text": "Pituitary Gland se"
+          },
+          {
+            "id": "C",
+            "text": "Kidney (Juxtaglomerular cells) se"
+          },
+          {
+            "id": "D",
+            "text": "Hypothalamus se"
+          }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Renin kidney ki Juxtaglomerular (JG) cells se secrete hota hai — jab blood pressure ya blood volume gir jaata hai. Renin → Angiotensinogen (liver protein) → Angiotensin I → ACE enzyme → Angiotensin II → Aldosterone (Adrenal Cortex se). Aldosterone → Na+ aur water retention → BP badha. ADH hypothalamus mein banta hai, pituitary se release. Erythropoietin kidney se (oxygen kam hone par). RAAS ka sequence — Renin = Kidney, Aldosterone = Adrenal Cortex — yeh dono parts BPSC mein alag-alag pooche gaye hain!"
+      },
+      "navigation": {
+        "next": "card_29_quiz12",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_29_quiz12",
+      "card_slug": "card_29_quiz12",
+      "type": "quiz",
+      "concept_id": "hormonal_control_quiz3",
+      "level": 3,
+      "progress": {
+        "current": 29,
+        "total": 60
+      },
+      "quiz_payload": {
+        "question": "Q3/3: NEET Assertion-Reason — Assertion (A): Kidney failure mein Anaemia ho sakti hai. Reason (R): Kyunki kidneys Erythropoietin hormone produce karti hain jo RBC production stimulate karta hai.",
+        "options": [
+          {
+            "id": "A",
+            "text": "A sahi hai, R galat hai"
+          },
+          {
+            "id": "B",
+            "text": "A galat hai, R sahi hai"
+          },
+          {
+            "id": "C",
+            "text": "A aur R dono sahi hain, aur R, A ka sahi explanation hai"
+          },
+          {
+            "id": "D",
+            "text": "A aur R dono sahi hain, lekin R, A ka sahi explanation nahi hai"
+          }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Dono statements sahi hain aur R, A ka correct explanation hai! Kidneys Erythropoietin (EPO) hormone produce karti hain — jo bone marrow ko signal deta hai RBC (Red Blood Cells) banane ka. Jab kidneys fail ho jaati hain, EPO production band ho jaati hai — bone marrow RBC nahi banata — 'Renal Anaemia' hoti hai. Treatment mein synthetic EPO inject kiya jaata hai. Yahi wajah hai ki chronic kidney disease patients mein anaemia ek common complication hai. NEET 2021 mein yeh exact Assertion-Reason format mein aaya tha!"
+      },
+      "navigation": {
+        "next": "card_30_milestone4",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_30_milestone4",
+      "card_slug": "card_30_milestone4",
+      "type": "milestone",
+      "concept_id": "module4_complete",
+      "level": 3,
+      "progress": {
+        "current": 30,
+        "total": 60
+      },
+      "milestone_payload": {
+        "title": "HORMONAL CONTROL CRACKED! 🧬",
+        "badge_emoji": "⚗️",
+        "completed_topic": "Hormonal Control — ADH, RAAS, ANF & Erythropoietin",
+        "xp_earned": 100,
+        "milestone_progress": "Module 4/6 Clear",
+        "motivational_quote": "RAAS ka chain, ADH ka magic, Erythropoietin ka anaemia connection — yeh sab NEET aur BPSC mein direct marks hain! Ab kidney diseases aur disorders ka full diagnosis chapter shuru!"
+      },
+      "navigation": {
+        "next": "card_31_kidney_diseases",
+        "button_text": "Start Module 5 ➔"
+      }
+    },
+    {
+      "card_id": "card_31_kidney_diseases",
+      "card_slug": "card_31_kidney_diseases",
+      "type": "chat",
+      "concept_id": "kidney_disorders_renal_failure",
+      "level": 4,
+      "progress": {
+        "current": 31,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, ab baat karte hain kidney ki problems ki — yeh BPSC aur SSC mein current affairs ke roop mein bhi aata hai! 'Renal Failure' — kidney kaam karna band kar de. Do types: Acute Renal Failure — suddenly, treatable (infection, dehydration, medication se). Chronic Renal Failure — dheere dheere, permanent damage. Causes: Diabetes, High BP, infections. Symptoms: Urine band, body mein waste accumulate — azotaemia (blood mein urea badh jaata hai)!",
+          "emotion": "🏥"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir kidney fail ho jaaye toh kya karte hain? Koi treatment hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Do options hain! Pehla: 'Dialysis' — yeh artificial kidney ka kaam karta hai! Blood ko body se bahar nikaalte hain, artificial membrane se filter karte hain — waste nikaala, clean blood wapas. 'Haemodialysis' mein directly blood filter hota hai. 'Peritoneal Dialysis' mein peritoneal membrane (pet ki lining) ko natural filter ki tarah use karte hain. Dialysis baar baar karna padta hai — har 2-3 din mein. Permanent solution hai 'Kidney Transplant!' SSC aur BPSC mein dialysis ka type directly aaya hai!",
+          "emotion": "💉"
+        },
+        {
+          "speaker": "raju",
+          "text": "Haemodialysis = blood direct filter, Peritoneal = pet ki lining se filter — dono alag techniques! Aur permanent solution = transplant!"
+        }
+      ],
+      "navigation": {
+        "next": "card_32_kidney_stones",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_32_kidney_stones",
+      "card_slug": "card_32_kidney_stones",
+      "type": "chat",
+      "concept_id": "kidney_stones_renal_calculi",
+      "level": 4,
+      "progress": {
+        "current": 32,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Kidney mein pathri — 'Renal Calculi' ya Kidney Stones! Yeh tab bante hain jab urine mein dissolved substances — jaise Calcium Oxalate, Calcium Phosphate, Uric Acid — zyada concentrate hoke crystallize ho jaate hain. Sabse common kidney stone: Calcium Oxalate (75-80% cases)! BPSC mein yeh seedha poochha gaya hai. Stones ureter mein phase toh excruciating pain hoti hai — 'Renal Colic.' Treatment: Lithotripsy — shock waves se stone todte hain, surgery nahi!",
+          "emotion": "💎"
+        },
+        {
+          "speaker": "raju",
+          "text": "Calcium Oxalate sabse common stone — aur Lithotripsy se todte hain — yeh to useful fact hai sir!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Aur ek condition — 'Gout' — yeh tab hota hai jab blood mein Uric Acid bahut badh jaata hai aur joints mein crystals jam jaate hain — usually big toe mein badi pain hoti hai! Gout aur kidney stones dono mein Uric Acid ki problem hai — lekin alag jagah! Gout ka treatment: Allopurinol drug — Uric Acid synthesis rokti hai. Gout ka link purani diet se hai — red meat, alcohol, seafood zyada khane se Uric Acid badhta hai. UPSC Prelims mein Gout ka mechanism aaya hai!",
+          "emotion": "⚠️"
+        },
+        {
+          "speaker": "raju",
+          "text": "Gout = Uric Acid joints mein, Kidney Stone = Uric Acid ya Calcium kidney mein — same substance, alag jagah, alag problem!"
+        }
+      ],
+      "navigation": {
+        "next": "card_33_uti_nephritis",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_33_uti_nephritis",
+      "card_slug": "card_33_uti_nephritis",
+      "type": "chat",
+      "concept_id": "uti_nephritis_glomerulonephritis",
+      "level": 4,
+      "progress": {
+        "current": 33,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Kuch aur important kidney-related conditions: 'UTI' — Urinary Tract Infection — bacteria (most commonly E. coli) urinary tract mein infection karta hai — symptoms: burning sensation during urination, frequent urination. Females mein zyada common — kyunki unka urethra chhota hota hai! 'Nephritis' — kidney inflammation — protein urine mein aane lagta hai (Proteinuria). 'Glomerulonephritis' — Glomerulus ki inflammation — usually strep throat ke baad autoimmune reaction se!",
+          "emotion": "🦠"
+        },
+        {
+          "speaker": "raju",
+          "text": "E. coli UTI karta hai?? Yeh toh intestine wala bacteria hai na sir!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Exactly! E. coli jo intestine mein normal rehta hai — agar contamination ho jaaye aur urinary tract mein pahunch jaaye toh infection karta hai. Isliye hygiene bahut important hai. Ab 'Nephrotic Syndrome' — kidneys itni zyada proteins lose karti hain (massive proteinuria) ki blood mein protein level gir jaata hai — 'Hypoalbuminaemia.' Isse body mein fluid accumulate ho jaata hai — 'Oedema' — face aur paon sunn jaate hain. NEET mein Nephrotic vs Nephritic syndrome comparison directly aaya hai!",
+          "emotion": "📚"
+        },
+        {
+          "speaker": "raju",
+          "text": "Nephrotic Syndrome = massive proteinuria = low blood protein = oedema! Aur E. coli UTI ka commonest cause — yeh facts note kar liye sir!"
+        }
+      ],
+      "navigation": {
+        "next": "card_34_quiz13",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_34_quiz13",
+      "card_slug": "card_34_quiz13",
+      "type": "quiz",
+      "concept_id": "kidney_disorders_quiz1",
+      "level": 4,
+      "progress": {
+        "current": 34,
+        "total": 60
+      },
+      "quiz_payload": {
+        "question": "Q1/3: 'Haemodialysis' aur 'Peritoneal Dialysis' mein kya fark hai?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Haemodialysis permanent treatment hai, Peritoneal temporary"
+          },
+          {
+            "id": "B",
+            "text": "Haemodialysis mein blood seedha machine mein filter hota hai; Peritoneal mein peritoneal membrane ko natural filter ki tarah use karte hain"
+          },
+          {
+            "id": "C",
+            "text": "Haemodialysis sirf Acute Renal Failure mein, Peritoneal sirf Chronic mein"
+          },
+          {
+            "id": "D",
+            "text": "Dono bilkul same process hain — sirf naam alag hai"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Haemodialysis mein patient ka blood body se bahar nikaaala jaata hai, ek artificial kidney machine mein semi-permeable membrane se filter hota hai — waste nikaala, clean blood wapas. Peritoneal Dialysis mein dialysate solution pet (abdominal cavity) mein daala jaata hai — peritoneum (pet ki natural lining) semi-permeable membrane ka kaam karti hai, waste dialysate mein aata hai, phir drain kiya jaata hai. Dono ka kaam same (artificial kidney function) lekin mechanism alag. BPSC aur SSC CGL mein yeh direct comparison question raha hai!"
+      },
+      "navigation": {
+        "next": "card_35_quiz14",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_35_quiz14",
+      "card_slug": "card_35_quiz14",
+      "type": "quiz",
+      "concept_id": "kidney_disorders_quiz2",
+      "level": 4,
+      "progress": {
+        "current": 35,
+        "total": 60
+      },
+      "quiz_payload": {
+        "question": "Q2/3: Sabse common Kidney Stone (Renal Calculi) kis substance se banta hai?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Uric Acid"
+          },
+          {
+            "id": "B",
+            "text": "Magnesium Phosphate"
+          },
+          {
+            "id": "C",
+            "text": "Calcium Oxalate"
+          },
+          {
+            "id": "D",
+            "text": "Sodium Chloride"
+          }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Sabse common kidney stone Calcium Oxalate se banta hai — lagbhag 75-80% kidney stones Calcium Oxalate ke hote hain. Baaki types: Calcium Phosphate, Uric Acid (gout wale patients mein), Struvite (Magnesium Ammonium Phosphate — infection se), Cystine (rare genetic condition). Treatment: Chhote stones: Paani zyada piyo, pain killers. Bade stones: Lithotripsy (shock waves) ya surgery. Spinach, nuts, chocolate mein oxalate zyada hota hai — kidney stone history wale patients inhe avoid karte hain. BPSC 2018 mein yeh direct aaya tha!"
+      },
+      "navigation": {
+        "next": "card_36_quiz15",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_36_quiz15",
+      "card_slug": "card_36_quiz15",
+      "type": "quiz",
+      "concept_id": "kidney_disorders_quiz3",
+      "level": 4,
+      "progress": {
+        "current": 36,
+        "total": 60
+      },
+      "quiz_payload": {
+        "question": "Q3/3: BPSC Multi-Statement — UTI (Urinary Tract Infection) ke baare mein inme se kaun sa statement GALAT hai?",
+        "options": [
+          {
+            "id": "A",
+            "text": "E. coli sabse common causative organism hai UTI mein"
+          },
+          {
+            "id": "B",
+            "text": "Females mein UTI zyada common hai — chhote urethra ki wajah se"
+          },
+          {
+            "id": "C",
+            "text": "UTI sirf kidney mein hoti hai, urethra mein nahi"
+          },
+          {
+            "id": "D",
+            "text": "Symptoms mein burning sensation aur frequent urination shamil hain"
+          }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Statement C GALAT hai — UTI poore Urinary Tract ko affect kar sakti hai — urethra (Urethritis), bladder (Cystitis), ureter (Ureteritis), kidney (Pyelonephritis). Sirf kidney mein nahi! E. coli sabse common cause hai (80% cases) — yeh sahi hai. Females mein zyada common hai kyunki unka urethra (3-4 cm) males (15-20 cm) se bahut chhota hai aur anus ke paas hai — contamination aasaan — yeh sahi hai. Symptoms burning + frequent urination — sahi hai. BPSC mein 'UTI sirf ek organ mein' wala trap aaya tha — yeh galat hai!"
+      },
+      "navigation": {
+        "next": "card_37_milestone5",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_37_milestone5",
+      "card_slug": "card_37_milestone5",
+      "type": "milestone",
+      "concept_id": "module5_complete",
+      "level": 4,
+      "progress": {
+        "current": 37,
+        "total": 60
+      },
+      "milestone_payload": {
+        "title": "KIDNEY DISEASE EXPERT! 🏥",
+        "badge_emoji": "💊",
+        "completed_topic": "Kidney Disorders — Dialysis, Stones & Infections",
+        "xp_earned": 100,
+        "milestone_progress": "Module 5/6 Clear",
+        "motivational_quote": "Calcium Oxalate stones, Haemodialysis, UTI — yeh sab ab tumhari biology dictionary mein hain! Ek aur module bacha hai — Excretory Systems in Animals aur Bonus Special Topics!"
+      },
+      "navigation": {
+        "next": "card_38_excretion_in_animals",
+        "button_text": "Start Module 6 ➔"
+      }
+    },
+    {
+      "card_id": "card_38_excretion_in_animals",
+      "card_slug": "card_38_excretion_in_animals",
+      "type": "chat",
+      "concept_id": "excretion_in_different_animals",
+      "level": 4,
+      "progress": {
+        "current": 38,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, alag-alag animals mein excretion ke organs bhi alag hote hain — yeh BPSC ka one-liner mega topic hai! Amoeba: Contractile Vacuole — water regulation. Earthworm (Kenchue): Nephridia — kidney jaisa organ. Cockroach/Insects: Malpighian Tubules — uric acid nikaalte hain. Crustaceans (Prawn, Crab): Green Glands (Antennal Glands). Fish: Gills — ammonia directly water mein! Har animal ka excretory organ alag — yeh matching question format mein aata hai!",
+          "emotion": "🐛"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir Malpighian Tubules insects mein hote hain — lekin 'Malpighian Body' kidney mein bhi hota hai na? Yeh confuse ho jaayega!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Excellent observation! Yeh BPSC ka sabse popular trap hai! Malpighian Tubules = insects ka excretory organ (uric acid). Malpighian Body (Renal Corpuscle) = kidney mein Glomerulus + Bowman's Capsule — dono ka naam Marcello Malpighi ke naam pe hai! Alag kaise yaad rakho: Tubules = insects ka 'tube' shaped organ — 'T' for Tubules, 'T' for insects' Tiny body! Body = kidney mein ek 'body' (renal corpuscle)! Dono mein Malpighi common — lekin alag organs!",
+          "emotion": "⚠️"
+        },
+        {
+          "speaker": "raju",
+          "text": "Malpighian Tubules = insects, Malpighian Body = kidney mein — same naam, bilkul alag jagah! Ye to perfect BPSC trap hai sir!"
+        }
+      ],
+      "navigation": {
+        "next": "card_39_skin_lung_excretion",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_39_skin_lung_excretion",
+      "card_slug": "card_39_skin_lung_excretion",
+      "type": "chat",
+      "concept_id": "skin_lung_liver_excretion",
+      "level": 4,
+      "progress": {
+        "current": 39,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ab human body ke other excretory organs detail mein samjho. Lungs: CO2 aur water vapour nikaalte hain — 200 mL CO2 per minute. Skin (Sweat Glands): Sweat mein — water, NaCl, urea, lactic acid. Ek interesting fact — sweat glands 2 types ke hote hain: Eccrine glands (poore body mein, thermoregulation ke liye) aur Apocrine glands (armpit, groin — body odour inka kaam hai). Eccrine glands zyada important hain excretion ke liye!",
+          "emotion": "🌡️"
+        },
+        {
+          "speaker": "raju",
+          "text": "Paseene mein urea bhi hota hai?? Matlab paseena bhi ek tarah ka urine jaisa hi hai??"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haha! Composition mein thoda similar haan — both contain urea! Lekin sweat mein concentration bahut kam hoti hai. Liver ka excretory role bhi yaad rakho — Liver bile pigments (Bilirubin aur Biliverdin) excrete karta hai bile juice mein. Agar bile duct block ho — Jaundice (Piliya). Bile mein cholesterol bhi hoti hai — 'Gallstones' cholesterol ya bile salts se ban sakti hain gallbladder mein — kidney stones se alag hain! SSC mein Gallstones vs Kidney Stones confusion diya jaata hai!",
+          "emotion": "🟡"
+        },
+        {
+          "speaker": "raju",
+          "text": "Gallstones = gallbladder mein cholesterol, Kidney stones = kidney mein Calcium Oxalate — bilkul alag! Aur Liver Bilirubin nikaalke Jaundice prevent karta hai normally!"
+        }
+      ],
+      "navigation": {
+        "next": "card_40_osmoregulation",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_40_osmoregulation",
+      "card_slug": "card_40_osmoregulation",
+      "type": "chat",
+      "concept_id": "osmoregulation_concept",
+      "level": 4,
+      "progress": {
+        "current": 40,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ek aur important concept — 'Osmoregulation' — body mein water aur salt balance maintain karna. Kidneys yeh kaam karte hain — agar body mein paani zyada ho, kidney dilute urine banati hai (ADH kam). Agar paani kam ho, kidney concentrated urine banati hai (ADH zyada). 'Osmoregulators' woh organisms hain jo apne internal osmotic pressure ko control karte hain — humans! 'Osmoconformers' apna internal pressure bahar ke paani ke hisaab se change kar lete hain — zyatar marine invertebrates!",
+          "emotion": "⚖️"
+        },
+        {
+          "speaker": "raju",
+          "text": "Osmoregulators = khud control karte hain, Osmoconformers = bahar ke hisaab se change ho jaate hain — interesting sir!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Aur ek final special concept — 'Counter-current Mechanism' in Loop of Henle! Loop of Henle mein descending limb (utar wala hissa) aur ascending limb (chadh wala hissa) opposite directions mein fluid flow karte hain — isse solute concentration gradient banta hai Medulla mein jo urine concentration ke liye essential hai. Yeh mechanism renal medulla ko very high osmolarity pe rakhta hai — 1200 mOsm/kg tak! NEET mein yeh counter-current mechanism ka direct question aaya hai!",
+          "emotion": "🔄"
+        },
+        {
+          "speaker": "raju",
+          "text": "Counter-current mechanism = opposite direction mein flow = urine concentrate hoti hai — yeh to advanced concept hai sir lekin samajh aa gaya!"
+        }
+      ],
+      "navigation": {
+        "next": "card_41_quiz16",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_41_quiz16",
+      "card_slug": "card_41_quiz16",
+      "type": "quiz",
+      "concept_id": "animal_excretion_quiz1",
+      "level": 4,
+      "progress": {
+        "current": 41,
+        "total": 60
+      },
+      "quiz_payload": {
+        "question": "Q1/3: Insects (Cockroach) mein excretion kis organ se hoti hai?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Nephridia se"
+          },
+          {
+            "id": "B",
+            "text": "Green Glands se"
+          },
+          {
+            "id": "C",
+            "text": "Malpighian Tubules se"
+          },
+          {
+            "id": "D",
+            "text": "Contractile Vacuole se"
+          }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Insects (cockroach, grasshopper) mein excretion Malpighian Tubules se hoti hai — yeh Uric Acid nikaalte hain (isliye insects Uricotelic hain). Nephridia = Earthworm (Kenchue) ka excretory organ. Green Glands (Antennal Glands) = Prawn, Crab (Crustaceans). Contractile Vacuole = Amoeba, Paramecium (single-celled organisms). Kidney (Nephron) = Vertebrates. Yeh matching question BPSC, SSC CGL aur RRB NTPC mein bahut baar aaya hai — har animal ka organ yaad karo!"
+      },
+      "navigation": {
+        "next": "card_42_quiz17",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_42_quiz17",
+      "card_slug": "card_42_quiz17",
+      "type": "quiz",
+      "concept_id": "animal_excretion_quiz2",
+      "level": 4,
+      "progress": {
+        "current": 42,
+        "total": 60
+      },
+      "quiz_payload": {
+        "question": "Q2/3: SSC Direct — Jaundice (Piliya) mein skin aur aankhen peeli kyun ho jaati hain?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Kyunki blood mein urea bahut badh jaata hai"
+          },
+          {
+            "id": "B",
+            "text": "Kyunki bile duct block hone se Bilirubin blood mein accumulate ho jaata hai"
+          },
+          {
+            "id": "C",
+            "text": "Kyunki kidney excess yellow pigment release karta hai"
+          },
+          {
+            "id": "D",
+            "text": "Kyunki RBC count bahut badh jaata hai"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Jaundice mein skin aur aankhen peeli isliye hoti hain kyunki Bilirubin (yellow bile pigment) blood mein accumulate ho jaata hai. Normal mein Liver Bilirubin ko bile mein convert karke intestine mein bhejta hai — stool brown hoti hai. Agar bile duct block ho (gallstones, tumor), ya liver kharaab ho (hepatitis), ya zyada RBC toot rahi ho (haemolytic jaundice) — Bilirubin blood mein badh jaata hai aur tissues mein deposit ho jaata hai — yellowing (icterus). Urine bhi dark yellow ho jaati hai. SSC CGL aur BPSC mein yeh direct mechanism poochha gaya hai!"
+      },
+      "navigation": {
+        "next": "card_43_quiz18",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_43_quiz18",
+      "card_slug": "card_43_quiz18",
+      "type": "quiz",
+      "concept_id": "animal_excretion_quiz3",
+      "level": 4,
+      "progress": {
+        "current": 43,
+        "total": 60
+      },
+      "quiz_payload": {
+        "question": "Q3/3: BPSC Multi-Statement Trap — Inme se kaun sa statement GALAT hai?\n(1) Earthworm mein Nephridia excretory organ hai\n(2) Malpighian Body kidney mein hota hai\n(3) Malpighian Tubules kidney mein hote hain\n(4) Fish Ammonotelic hai\n(5) Birds Uricotelic hain",
+        "options": [
+          {
+            "id": "A",
+            "text": "Sirf Statement 3"
+          },
+          {
+            "id": "B",
+            "text": "Statements 2 aur 3"
+          },
+          {
+            "id": "C",
+            "text": "Statements 1 aur 4"
+          },
+          {
+            "id": "D",
+            "text": "Sirf Statement 5"
+          }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Sirf Statement 3 GALAT hai! Malpighian Tubules insects (cockroach) mein hote hain — kidney mein NAHI! Malpighian BODY (Renal Corpuscle = Glomerulus + Bowman's Capsule) kidney mein hota hai — Statement 2 sahi hai. Dono ka naam ek hi scientist Marcello Malpighi ke naam pe hai lekin yeh ALAG organs hain — yeh sabse bada trap hai! Statement 1 (Earthworm = Nephridia) ✓, Statement 4 (Fish = Ammonotelic) ✓, Statement 5 (Birds = Uricotelic) ✓. Sirf Statement 3 galat hai — BPSC 2021 mein yeh exact trap aaya tha!"
+      },
+      "navigation": {
+        "next": "card_44_milestone6",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_44_milestone6",
+      "card_slug": "card_44_milestone6",
+      "type": "milestone",
+      "concept_id": "module6_complete",
+      "level": 4,
+      "progress": {
+        "current": 44,
+        "total": 60
+      },
+      "milestone_payload": {
+        "title": "ALL MODULES DONE! 🎊",
+        "badge_emoji": "🏅",
+        "completed_topic": "Animal Excretion, Osmoregulation & Special Topics",
+        "xp_earned": 125,
+        "milestone_progress": "Module 6/6 Clear — ALL DONE!",
+        "motivational_quote": "Malpighian Tubules vs Malpighian Body — sabse dangerous trap tumne crack kar liya! Ab final revision aur Master Quiz — yahan BPSC aur NEET level ke marks confirm hote hain!"
+      },
+      "navigation": {
+        "next": "card_45_special_facts_bonus",
+        "button_text": "Bonus Round ➔"
+      }
+    },
+    {
+      "card_id": "card_45_special_facts_bonus",
+      "card_slug": "card_45_special_facts_bonus",
+      "type": "chat",
+      "concept_id": "excretion_speed_facts",
+      "level": 5,
+      "progress": {
+        "current": 45,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, kuch speed facts jo SSC aur RRB NTPC mein seedha aate hain — sun lo! Ureter ki length: 25-30 cm. Urethra — male: 15-20 cm, female: 3-4 cm (isliye female mein UTI zyada). Normal urine pH: 6 (slightly acidic). Urine specific gravity: 1.003-1.030. Normal daily urine output: 1-2 litres (1500 mL average). Oliguria: urine bahut kam (< 400 mL/day). Anuria: urine bilkul nahi (< 100 mL/day) — acute renal failure!",
+          "emotion": "⚡"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir Oliguria aur Anuria — yeh clinic mein bhi use hote hain na? Kidney wale patients mein?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul! Doctors inheen terms se kidney function assess karte hain. Aur kuch aur important tests: Serum Creatinine — kidney function ka best marker (badhe = kidney problem). Blood Urea Nitrogen (BUN) — bhi kidney status batata hai. GFR (Glomerular Filtration Rate) — normal 90-120 mL/min — kidney health measure. CKD (Chronic Kidney Disease) stages GFR pe based hain. Dialysis tab shuru karte hain jab GFR < 15 mL/min! NEET aur UPSC Prelims mein GFR concept directly aaya hai!",
+          "emotion": "🩺"
+        },
+        {
+          "speaker": "raju",
+          "text": "GFR < 15 mein dialysis — toh doctors GFR se decide karte hain kidney kitni kharaab hai! Ye to practical-clinical knowledge hai!"
+        }
+      ],
+      "navigation": {
+        "next": "card_46_urine_colour_facts",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_46_urine_colour_facts",
+      "card_slug": "card_46_urine_colour_facts",
+      "type": "chat",
+      "concept_id": "urine_composition_colour",
+      "level": 5,
+      "progress": {
+        "current": 46,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Urine ke colour ke baare mein baat karte hain — yeh SSC aur RRB ka fun-fact question hai! Urine ka yellow colour 'Urochrome' pigment se aata hai — jo haemoglobin ke breakdown se banta hai. Clear urine = zyada paani piya, dilute. Dark yellow = dehydration, ADH zyada. Pink/Red urine (Haematuria) = RBC in urine. Brown/Cola coloured = haemoglobinuria ya liver disease. Foamy urine = excess proteins (Proteinuria). Yeh diagnostic clues hain!",
+          "emotion": "🟡"
+        },
+        {
+          "speaker": "raju",
+          "text": "Urine ka colour se body ki condition samajh aati hai! Urochrome se yellow — naya word seekha!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Ab ek bada BPSC/NEET concept — 'Artificial Kidney' ya Dialyser mein kaunsa membrane use hota hai? 'Cellophane membrane' (Cuprophan membrane) — jo semi-permeable hoti hai. Yeh membrane small molecules (urea, salts) ko pass karne deti hai lekin large molecules (proteins, blood cells) ko nahi. Exactly wahi principle hai jo Glomerulus mein hota hai! Dialysis solution ko 'Dialysate' kehte hain — iska composition normal plasma jaisa hota hai taaki sirf waste nikaale!",
+          "emotion": "🏥"
+        },
+        {
+          "speaker": "raju",
+          "text": "Dialyser mein Cellophane membrane — Glomerulus jaisa kaam karta hai artificially! Dialysate = normal plasma jaisa solution — bahut logical hai sir!"
+        }
+      ],
+      "navigation": {
+        "next": "card_47_guess_card",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_47_guess_card",
+      "card_slug": "card_47_guess_card",
+      "type": "guess",
+      "concept_id": "guess_excretory_organ",
+      "level": 5,
+      "progress": {
+        "current": 47,
+        "total": 60
+      },
+      "guess_payload": {
+        "question": "🤔 Guess karo — Ek organism jo sirf ek single cell ka bana hai, iske paas koi kidney nahi, koi nephron nahi — phir bhi yeh waste nikaalti hai ek special organelle se jo water regulation bhi karta hai. Yeh kaunsa organelle hai?",
+        "hint": "💡 Hint: Iska kaam pump karna hai — 'Contract' aur 'Expand' karna!",
+        "options": [
+          {
+            "id": "A",
+            "text": "Malpighian Tubule"
+          },
+          {
+            "id": "B",
+            "text": "Nephridium"
+          },
+          {
+            "id": "C",
+            "text": "Contractile Vacuole"
+          },
+          {
+            "id": "D",
+            "text": "Green Gland"
+          }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Contractile Vacuole! Yeh single-celled organisms jaise Amoeba aur Paramecium mein hota hai. Yeh organelle paani aur waste collect karke rhythmically contract karta hai — waste bahar nikaalta hai. Yahi osmoregulation bhi karta hai — fresh water mein rehne wale Amoeba ko continuously paani andar aata rehta hai (osmosis se), Contractile Vacuole isse pump karke bahar nikaalti hai! Malpighian Tubule = Insects. Nephridium = Earthworm. Green Gland = Crustaceans (Crab, Prawn). Yeh one-liner match BPSC mein guaranteed hai!"
+      },
+      "navigation": {
+        "next": "card_48_juxtaglomerular_apparatus",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_48_juxtaglomerular_apparatus",
+      "card_slug": "card_48_juxtaglomerular_apparatus",
+      "type": "chat",
+      "concept_id": "jga_tubuloglomerular_feedback",
+      "level": 5,
+      "progress": {
+        "current": 48,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ek NEET-level advanced concept — 'Juxtaglomerular Apparatus (JGA)!' Yeh ek special structure hai Nephron mein jahan DCT Afferent Arteriole (Glomerulus mein blood laane wali vessel) ke paas aata hai. JGA mein hote hain: Juxtaglomerular (JG) cells — Renin release karte hain jab blood pressure gire. Macula Densa cells — DCT mein NaCl concentration sense karte hain — agar NaCl kam ho toh GFR badhao. Yeh ek feedback mechanism hai — kidney apna filtration rate khud regulate karti hai!",
+          "emotion": "🔬"
+        },
+        {
+          "speaker": "raju",
+          "text": "Kidney apna kaam khud control karti hai?? JGA ek self-regulation system hai?? Ye to amazing hai sir!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul! Ise 'Tubuloglomerular Feedback' kehte hain. Aur ek aur advanced fact — Nephrons 2 types ke hote hain: Cortical Nephrons (85%) — Loop of Henle chhota, sirf Cortex mein. Juxtamedullary Nephrons (15%) — Loop of Henle bahut lamba, Medulla tak jaata hai — concentrated urine ke liye responsible! Desert animals mein Juxtamedullary nephrons proportion zyada hota hai! NEET mein yeh nephron types directly poochhe gaye hain — Cortical vs Juxtamedullary!",
+          "emotion": "📊"
+        },
+        {
+          "speaker": "raju",
+          "text": "Cortical = chhota loop = dilute urine, Juxtamedullary = lamba loop = concentrated urine = desert animals mein zyada! Ab poora picture clear hai sir!"
+        }
+      ],
+      "navigation": {
+        "next": "card_49_officer_summary",
+        "button_text": "Final Revision ➔"
+      }
+    },
+    {
+      "card_id": "card_49_officer_summary",
+      "card_slug": "card_49_officer_summary",
+      "type": "summary",
+      "concept_id": "full_chapter_summary",
+      "level": 5,
+      "progress": {
+        "current": 49,
+        "total": 60
+      },
+      "summary_payload": {
+        "title": "⚡ Officer Rapid Revision — Excretory System",
+        "revision_points": [
+          {
+            "topic": "🧪 Excretion Basics",
+            "point": "Excretion ≠ Egestion. Excretion = metabolic waste (body ke andar bana) bahar nikalna. Egestion = undigested food bahar. Ureotelic = humans (Urea, liver mein banta hai). Ammonotelic = Fish (Ammonia, zyada paani). Uricotelic = Birds, Reptiles, Insects (Uric Acid, paani nahi). Excretory organs: Kidney (Urea), Lungs (CO2), Skin (NaCl, urea, lactic acid), Liver (bile pigments). Urea BANTA hai Liver mein — NIKALTA hai Kidney se!"
+          },
+          {
+            "topic": "🫘 Kidney & Nephron",
+            "point": "Right kidney is lower than left (liver above). Kidney: Cortex (bahar) → Medulla → Pelvis (hollow). Nephron = Kidney ki functional unit — 10-12 lakh per kidney. Parts: Bowman's Capsule + Glomerulus (Malpighian Body) → PCT → Loop of Henle → DCT → Collecting Duct. 180 litres filtrate per day, sirf 1.5 litre urine! Juxtamedullary nephrons = lamba Loop = concentrated urine = desert animals."
+          },
+          {
+            "topic": "💧 Urine Formation",
+            "point": "Step 1: Glomerular Filtration (Ultrafiltration) — Bowman's Capsule mein. Kya nahi filter hota: RBC, WBC, large proteins. Step 2: Reabsorption — PCT mein zyada (glucose 100%, amino acids, Na+, water). Renal Threshold glucose = 180 mg/dL. Step 3: Secretion — DCT mein H+, K+, drugs. Normal urine: 96% water, 2% urea, 2% salts, pH 6. Urine yellow colour = Urochrome."
+          },
+          {
+            "topic": "⚗️ Hormonal Control",
+            "point": "ADH (Vasopressin) = hypothalamus mein banta, pituitary se release — Collecting Duct mein water reabsorption badhata hai — concentrated urine. ADH nahi = Diabetes Insipidus (zyada urine). RAAS: Renin (Kidney JG cells) → Angiotensin I → II → Aldosterone (Adrenal Cortex) → Na+ aur water retain → BP badha. ANF = heart se, BP zyada hone pe — Na+ excretion badhata hai (RAAS ka opposite). Erythropoietin = kidney se → RBC production stimulate."
+          },
+          {
+            "topic": "🏥 Diseases & Animal Excretion",
+            "point": "Kidney stones: Calcium Oxalate (most common 75-80%), treatment: Lithotripsy. UTI: E. coli most common, females mein zyada. Renal Failure: Dialysis (Haemodialysis vs Peritoneal), transplant. Jaundice: Bilirubin accumulate — bile duct block. Gout: Uric Acid joints mein. Animal excretion: Amoeba = Contractile Vacuole, Earthworm = Nephridia, Insects = Malpighian Tubules (NOT Malpighian Body!), Crustaceans = Green Glands, Fish = Gills."
+          }
+        ]
+      },
+      "navigation": {
+        "next": "card_50_final_quiz1",
+        "button_text": "Start Master Quiz 🎯"
+      }
+    },
+    {
+      "card_id": "card_50_final_quiz1",
+      "card_slug": "card_50_final_quiz1",
+      "type": "final_quiz",
+      "concept_id": "master_quiz_1",
+      "level": 5,
+      "progress": {
+        "current": 50,
+        "total": 60
+      },
+      "quiz_payload": {
+        "question": "🏆 MASTER QUIZ Q1/5 — BPSC Multi-Statement: Inme se kaun se statements Human Excretory System ke baare mein SAHI hain?\n(1) Urea liver mein Ornithine Cycle se banta hai\n(2) Right kidney left kidney se thodi upar hoti hai\n(3) Nephron kidney ki structural aur functional unit hai\n(4) Normal urine mein glucose hota hai\n(5) Malpighian Tubules kidney mein hote hain",
+        "options": [
+          {
+            "id": "A",
+            "text": "1 aur 3"
+          },
+          {
+            "id": "B",
+            "text": "1, 3 aur 5"
+          },
+          {
+            "id": "C",
+            "text": "2, 4 aur 5"
+          },
+          {
+            "id": "D",
+            "text": "Sabhi 1, 2, 3, 4, 5"
+          }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Sirf Statements 1 aur 3 SAHI hain. Statement 2 GALAT — Right kidney LEFT se thodi NEECHE hoti hai (liver ki wajah se). Statement 4 GALAT — Normal urine mein glucose NAHI hota — glucose 100% reabsorb hota hai (Glucosuria diabetes mein hoti hai). Statement 5 GALAT — Malpighian Tubules insects mein hote hain, kidney mein Malpighian BODY hota hai (Glomerulus + Bowman's Capsule). Teeno galat statements classic BPSC multi-trap hain — Right/Left kidney swap, glucose in urine, aur Malpighian Tubules vs Body confusion!"
+      },
+      "navigation": {
+        "next": "card_51_final_quiz2",
+        "button_text": "Next Question ➔"
+      }
+    },
+    {
+      "card_id": "card_51_final_quiz2",
+      "card_slug": "card_51_final_quiz2",
+      "type": "final_quiz",
+      "concept_id": "master_quiz_2",
+      "level": 5,
+      "progress": {
+        "current": 51,
+        "total": 60
+      },
+      "quiz_payload": {
+        "question": "🏆 MASTER QUIZ Q2/5 — NEET Assertion-Reason: Assertion (A): Desert animals mein Loop of Henle bahut lamba hota hai. Reason (R): Lamba Loop of Henle zyada concentrated urine banata hai aur body mein paani save karta hai — desert survival ke liye essential.",
+        "options": [
+          {
+            "id": "A",
+            "text": "A sahi hai, R galat hai"
+          },
+          {
+            "id": "B",
+            "text": "A galat hai, R sahi hai"
+          },
+          {
+            "id": "C",
+            "text": "A aur R dono sahi hain, aur R, A ka sahi explanation hai"
+          },
+          {
+            "id": "D",
+            "text": "A aur R dono sahi hain, lekin R, A ka sahi explanation nahi hai"
+          }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Dono statements sahi hain aur R, A ka correct explanation bhi hai! Desert animals jaise Kangaroo rat (Dipodomys) aur oonth mein Loop of Henle bahut lamba hota hai. Counter-current mechanism ise zyada effective banata hai — renal medulla mein high osmolarity gradient banta hai — pani ka zyada reabsorption hota hai — zyada concentrated urine banti hai. Kangaroo rat kabhi bhi paani nahi peeta — sirf metabolic water se kaam chalata hai! Yeh evolutionary adaptation hai. NEET 2019 mein yeh exact Assertion-Reason format mein aaya tha!"
+      },
+      "navigation": {
+        "next": "card_52_final_quiz3",
+        "button_text": "Next Question ➔"
+      }
+    },
+    {
+      "card_id": "card_52_final_quiz3",
+      "card_slug": "card_52_final_quiz3",
+      "type": "final_quiz",
+      "concept_id": "master_quiz_3",
+      "level": 5,
+      "progress": {
+        "current": 52,
+        "total": 60
+      },
+      "quiz_payload": {
+        "question": "🏆 MASTER QUIZ Q3/5 — UPSC Level: RAAS (Renin-Angiotensin-Aldosterone System) ka correct sequence identify karo jab blood pressure gir jaata hai:",
+        "options": [
+          {
+            "id": "A",
+            "text": "Aldosterone → Renin → Angiotensin I → Angiotensin II → Na+ retention"
+          },
+          {
+            "id": "B",
+            "text": "Renin (Kidney) → Angiotensin I → Angiotensin II (ACE enzyme se) → Aldosterone (Adrenal Cortex) → Na+ aur water retain → BP badha"
+          },
+          {
+            "id": "C",
+            "text": "ADH → Renin → Angiotensin → Aldosterone → K+ retention → BP normal"
+          },
+          {
+            "id": "D",
+            "text": "Renin (Liver) → Angiotensin II → Aldosterone (Kidney) → Na+ excretion → BP normal"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "RAAS ka correct sequence: Blood Pressure gira → Kidney ki JG cells Renin release karti hain → Renin liver mein Angiotensinogen ko Angiotensin I mein convert karti hai → Lungs mein ACE (Angiotensin Converting Enzyme) Angiotensin I ko Angiotensin II mein convert karta hai → Angiotensin II Adrenal Cortex ko signal deta hai → Aldosterone release → DCT aur Collecting Duct mein Na+ aur water reabsorption badhti hai → Blood volume aur BP badha! ACE Inhibitors (heart ke liye dawai) is chain ko block karte hain. BPSC 2020 aur UPSC Prelims 2019 mein yeh sequence directly aaya tha!"
+      },
+      "navigation": {
+        "next": "card_53_final_quiz4",
+        "button_text": "Next Question ➔"
+      }
+    },
+    {
+      "card_id": "card_53_final_quiz4",
+      "card_slug": "card_53_final_quiz4",
+      "type": "final_quiz",
+      "concept_id": "master_quiz_4",
+      "level": 5,
+      "progress": {
+        "current": 53,
+        "total": 60
+      },
+      "quiz_payload": {
+        "question": "🏆 MASTER QUIZ Q4/5 — SSC/Railway Speed Match: Inme se kaun sa match GALAT hai?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Earthworm — Nephridia"
+          },
+          {
+            "id": "B",
+            "text": "Prawn/Crab — Green Glands (Antennal Glands)"
+          },
+          {
+            "id": "C",
+            "text": "Cockroach — Malpighian Tubules"
+          },
+          {
+            "id": "D",
+            "text": "Amoeba — Nephridia"
+          }
+        ],
+        "correct_option_id": "D",
+        "explanation": "Option D GALAT hai — Amoeba mein excretion Nephridia se nahi hoti! Amoeba ek single-celled organism hai jisme 'Contractile Vacuole' se water regulation aur waste excretion hoti hai. Nephridia = Earthworm (Annelida). Malpighian Tubules = Insects (Cockroach, Grasshopper, etc.). Green Glands (Antennal Glands) = Crustaceans (Prawn, Crab). Contractile Vacuole = Single-celled organisms (Amoeba, Paramecium). Kidney/Nephron = Vertebrates. Yeh matching table BPSC, SSC CGL, RRB NTPC — teeno mein alag-alag format mein aaya hai!"
+      },
+      "navigation": {
+        "next": "card_54_final_quiz5",
+        "button_text": "Next Question ➔"
+      }
+    },
+    {
+      "card_id": "card_54_final_quiz5",
+      "card_slug": "card_54_final_quiz5",
+      "type": "final_quiz",
+      "concept_id": "master_quiz_5",
+      "level": 5,
+      "progress": {
+        "current": 54,
+        "total": 60
+      },
+      "quiz_payload": {
+        "question": "🏆 MASTER QUIZ Q5/5 — BPSC Officer Supreme Multi-Statement: Urine formation ke baare mein inme se kaun se statements SAHI hain?\n(1) Glomerular filtration mein RBC filter nahi hoti\n(2) PCT mein glucose 100% reabsorb hota hai agar blood glucose normal ho\n(3) Loop of Henle ka kaam urine concentrate karna hai\n(4) Tubular secretion mein substances blood se tubule mein aate hain\n(5) ADH ki wajah se dilute urine banti hai",
+        "options": [
+          {
+            "id": "A",
+            "text": "1, 2, 3 aur 4"
+          },
+          {
+            "id": "B",
+            "text": "Sirf 1 aur 5"
+          },
+          {
+            "id": "C",
+            "text": "Sabhi 1, 2, 3, 4, 5"
+          },
+          {
+            "id": "D",
+            "text": "1, 3 aur 5"
+          }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Statements 1, 2, 3 aur 4 SAHI hain. Statement 5 GALAT hai — ADH ki wajah se CONCENTRATED urine banti hai, dilute nahi! ADH = Anti-DIURETIC Hormone — yeh urine GHATA deta hai (concentrated karta hai), zyada nahi karta. Jab ADH hota hai = zyada water reabsorb = kam aur concentrated urine. Jab ADH nahi hota (Diabetes Insipidus) = dilute aur zyada urine. Statement 1 sahi (RBC too large to filter), Statement 2 sahi (glucose 100% reabsorb — normal condition), Statement 3 sahi (Loop = concentration), Statement 4 sahi (secretion = blood to tubule). NEET 2020 mein yeh exact 5-statement question aaya tha!"
+      },
+      "navigation": {
+        "next": "card_55_bonus_clinical",
+        "button_text": "One More Insight ➔"
+      }
+    },
+    {
+      "card_id": "card_55_bonus_clinical",
+      "card_slug": "card_55_bonus_clinical",
+      "type": "chat",
+      "concept_id": "clinical_connections_bonus",
+      "level": 5,
+      "progress": {
+        "current": 55,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, ek final clinical connection — Excretory System aur Diabetes Mellitus ka link. Uncontrolled Diabetes mein 3 major renal problems: (1) Glucosuria — glucose renal threshold cross karta hai. (2) Polyuria — zyada urine (glucose urine mein osmotic pressure badhata hai, paani bhi kheenchta hai). (3) Diabetic Nephropathy — years baad kidney damage — GFR gir jaata hai! Aur Hypertension bhi kidney damage karta hai — RAAS over-activation se.",
+          "emotion": "🏥"
+        },
+        {
+          "speaker": "raju",
+          "text": "Diabetes se kidney kharab hoti hai — isliye diabetic patients ko nephrologist bhi jaana padta hai! Yeh sab connected hai!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul! Aur ek last fascinating fact — Astronauts space mein kidney stones ka zyada risk face karte hain! Weightlessness mein calcium bones se bahar aata hai, blood mein calcium badh jaata hai, kidney zyada calcium excrete karti hai — calcium oxalate stones ka risk! Isliye NASA astronauts ko special diet deta hai. Yeh UPSC Prelims mein current affairs angle se aa chuka hai! Ab poora Excretory System — Amoeba se Astronaut tak — tumne cover kar liya! Respiratory System mein bhi aisa hi adventure wait kar raha hai!",
+          "emotion": "🚀"
+        },
+        {
+          "speaker": "raju",
+          "text": "Astronauts ko kidney stones?? Space mein calcium badhta hai?? Sir ye to amazing trivia hai! Respiratory System bhi jaldi cover karte hain!"
+        }
+      ],
+      "navigation": {
+        "next": "card_56_guess_final",
+        "button_text": "Next ➔"
+      }
+    },
+    {
+      "card_id": "card_56_guess_final",
+      "card_slug": "card_56_guess_final",
+      "type": "guess",
+      "concept_id": "final_guess_comprehensive",
+      "level": 5,
+      "progress": {
+        "current": 56,
+        "total": 60
+      },
+      "guess_payload": {
+        "question": "🎯 Final Boss Guess — Ek hormone jo kidney se niklta hai, oxygen kam hone par release hota hai, bone marrow ko activate karta hai, aur agar yeh nahi bane toh ek anemia type hoti hai. Iska naam kya hai aur yeh kahan kaam karta hai?",
+        "hint": "💡 Hint: Athletes ise illegally use karte hain performance badhane ke liye — 'Blood Doping' mein!",
+        "options": [
+          {
+            "id": "A",
+            "text": "ADH — Collecting Duct mein paani absorb karta hai"
+          },
+          {
+            "id": "B",
+            "text": "Erythropoietin (EPO) — Bone Marrow ko RBC banane ka signal deta hai"
+          },
+          {
+            "id": "C",
+            "text": "Aldosterone — Na+ retain karta hai"
+          },
+          {
+            "id": "D",
+            "text": "Renin — Angiotensin system activate karta hai"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Erythropoietin (EPO)! Yeh kidney (peritubular cells) se release hota hai jab body mein oxygen ka level gir jaata hai (hypoxia). EPO bone marrow ko signal deta hai zyada RBC banao — oxygen-carrying capacity badhti hai. Kidney failure mein EPO nahi banta → bone marrow RBC nahi banata → 'Renal Anaemia.' Synthetic EPO (Darbepoetin) injection se treat kiya jaata hai. Athletes ise illegally inject karte hain endurance badhane ke liye (blood doping) — WADA (World Anti-Doping Agency) isse ban karta hai. NEET aur UPSC Prelims dono mein EPO ka mechanism aaya hai!"
+      },
+      "navigation": {
+        "next": "card_57_chapter_trophy",
+        "button_text": "Claim Trophy 🏆"
+      }
+    },
+    {
+      "card_id": "card_57_chapter_trophy",
+      "card_slug": "card_57_chapter_trophy",
+      "type": "milestone",
+      "concept_id": "chapter_completion",
+      "level": 5,
+      "progress": {
+        "current": 57,
+        "total": 60
+      },
+      "milestone_payload": {
+        "title": "🏆 CHAPTER COMPLETE — EXCRETORY SYSTEM MASTER!",
+        "badge_emoji": "🎓",
+        "completed_topic": "Excretory System — Complete Chapter (NCERT + PYQ Level)",
+        "xp_earned": 600,
+        "milestone_progress": "All 6 Modules + Master Quiz Clear!",
+        "motivational_quote": "Amoeba ke Contractile Vacuole se Astronaut ke kidney stones tak, Malpighian Tubules vs Malpighian Body ke trap se RAAS chain tak — tumne Excretory System ka poora officer-level knowledge achieve kar liya! BPSC, SSC, Railway, NEET — koi bhi question roke nahi sakta!"
+      },
+      "navigation": {
+        "next": "card_58_next_chapter_teaser",
+        "button_text": "See What's Next 🚀"
+      }
+    },
+    {
+      "card_id": "card_58_next_chapter_teaser",
+      "card_slug": "card_58_next_chapter_teaser",
+      "type": "chat",
+      "concept_id": "next_chapter_hook",
+      "level": 5,
+      "progress": {
+        "current": 58,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, ek final curiosity — tumne dekha ki kidneys CO2 nahi nikaalti — woh Lungs ka kaam hai. Lekin sochte ho CO2 sirf gas hai toh seedha bahar nikal jaata hoga? Galat! 70% CO2 blood mein 'Bicarbonate ions' ke form mein travel karta hai — gas nahi! Aur yeh conversion lungs mein wapas CO2 mein hoti hai aur tab exhale hoti hai. Respiratory System ka poora mechanism — Tidal Volume, Vital Capacity, Bohr Effect — sab alag chapter mein hai!",
+          "emotion": "🫁"
+        },
+        {
+          "speaker": "raju",
+          "text": "70% CO2 bicarbonate ke form mein?? Matlab sirf 30% seedha gas hai?? Sir yeh to mujhe kabhi pata nahi tha!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Yahi to hai Respiratory System ka bomb! Aur ek aur — 'Bohr Effect' — jab tissue mein CO2 zyada hota hai, haemoglobin oxygen chhod deta hai — oxygen delivery mechanism ka secret! Phir 'Haldane Effect' — jab oxygen zyada hoti hai, haemoglobin CO2 chhod deta hai — lungs mein. Yeh dono concepts NEET mein direct poochhe gaye hain. Respiratory System mein Alveoli ka 70 square meter surface area, breathing mechanics, lung volumes — sab fascinating hai. Taiyar ho next chapter ke liye?",
+          "emotion": "🎯"
+        },
+        {
+          "speaker": "raju",
+          "text": "Bohr Effect aur Haldane Effect?? Dono alag hain?? Sir ab rukna hi nahi hai — Respiratory System immediately shuru karte hain!"
+        }
+      ],
+      "navigation": {
+        "next": "card_59_farewell_motivation",
+        "button_text": "Final Card ➔"
+      }
+    },
+    {
+      "card_id": "card_59_farewell_motivation",
+      "card_slug": "card_59_farewell_motivation",
+      "type": "chat",
+      "concept_id": "chapter_farewell_motivation",
+      "level": 5,
+      "progress": {
+        "current": 59,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, aaj tumne ek poora chapter ki zindagi jiya! Amoeba ki Contractile Vacuole se shuru karke RAAS system, Loop of Henle ka desert magic, Malpighian Tubules vs Malpighian Body trap, dialysis ka mechanism — yeh sab sirf textbook facts nahi hain — yeh real body ka engineering marvel hai. Aur tumne ise ek ek karke samjha, bina thake!",
+          "emotion": "🌟"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir seriously ye chapter mujhe bahut achha laga! Pehle lagta tha excretion sirf toilet jaana hai — ab pata hai kitna complex aur beautiful system hai andar!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Yahi biology ki khoobsurti hai — jo cheez hum roz karte hain uske peeche itna complex science hota hai! Har baar jab tum paani pio ya urine karo, ab tumhare dimag mein nephron, ADH, RAAS sab yaad aayega! Yeh curiosity hi tumhe BPSC officer ya NEET doctor banayegi. Chalo — Respiratory System ka adventure tumhara wait kar raha hai!",
+          "emotion": "🎓"
+        },
+        {
+          "speaker": "raju",
+          "text": "Chalte hain sir — Respiratory System mein Bohr Effect aur Haldane Effect dekhna hai! Ab biology se darna band — sirf samajhna hai!"
+        }
+      ],
+      "navigation": {
+        "next": "card_60_final_milestone",
+        "button_text": "Final Card ➔"
+      }
+    },
+    {
+      "card_id": "card_60_final_milestone",
+      "card_slug": "card_60_final_milestone",
+      "type": "milestone",
+      "concept_id": "chapter_final_farewell",
+      "level": 5,
+      "progress": {
+        "current": 60,
+        "total": 60
+      },
+      "milestone_payload": {
+        "title": "BIOLOGY OFFICER IN MAKING! 🌟",
+        "badge_emoji": "🫘",
+        "completed_topic": "Excretory System — 100% Complete",
+        "xp_earned": 50,
+        "milestone_progress": "Chapter 100% Done — Ready for Respiratory System!",
+        "motivational_quote": "Nephron se Dialyser tak, Urea cycle se RAAS chain tak — tumne ek aisa topic master kiya jisme BPSC, SSC, Railway, NEET sab ke questions hain. Har chapter ek nayi duniya hai — aur tum is duniya ke explorer ban rahe ho. Respiratory System mein milte hain!"
+      },
+      "navigation": {
+        "next": null,
+        "button_text": "Chapter Complete! 🎓"
+      }
+    }
+  ]
+}
