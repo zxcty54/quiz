@@ -1,6 +1,6 @@
 {
   "topic_id": "respiratory_system_biology",
-  "topic_title": "Respiratory System",
+  "topic_title": "Respiratory System (श्वसन तंत्र)",
   "target_exams": [
     "BPSC",
     "BSSC",
@@ -9,7 +9,7 @@
     "NEET",
     "UPSC Prelims"
   ],
-  "total_cards": 60,
+  "total_cards": 80,
   "characters": {
     "aman": {
       "name": "Aman Sir",
@@ -27,2303 +27,2706 @@
       "card_id": "card_01_intro",
       "card_slug": "card_01_intro",
       "type": "intro",
-      "concept_id": "respiratory_system_introduction",
+      "concept_id": "respiratory_intro",
       "level": 1,
       "progress": {
         "current": 1,
-        "total": 60
+        "total": 80
       },
       "intro_payload": {
-        "title": "🫁 Respiratory System",
-        "icon": "💨",
+        "title": "🫁 Respiratory System (श्वसन तंत्र)",
+        "icon": "🫁",
         "target_exams": [
           "BPSC",
           "BSSC",
           "RRB NTPC",
           "SSC CGL",
           "NEET",
-          "UPSC Prelims"
+          "UPSC"
         ],
         "learning_outcomes": [
-          "Structure and pathway of human respiratory system",
-          "Mechanism of breathing and gas exchange",
-          "Role of diaphragm and intercostal muscles",
-          "Oxygen and carbon dioxide transport in blood",
-          "Respiratory volumes and capacities",
-          "Control and regulation of respiration",
-          "Common respiratory disorders and diseases",
-          "Comparative respiratory mechanisms in organisms"
-        ],
-        "estimated_time": "28 minutes",
-        "total_xp": 600
+          "Breathing vs Respiration का फर्क समझोगे",
+          "Nose से Alveoli तक पूरा respiratory tract जानोगे",
+          "Gas Exchange कैसे होता है – Diffusion & Partial Pressure",
+          "Oxygen & CO₂ का Transport mechanism",
+          "Respiratory Volumes & Capacities (Spirometry)",
+          "Respiratory Disorders – Asthma, Emphysema, Occupational diseases",
+          "Regulation of Breathing – Neural & Chemical control",
+          "PYQ Traps – BPSC, SSC, NEET level mastery"
+        ]
       },
       "navigation": {
-        "next": "card_02_daily_life_breathing",
-        "button_text": "Start Learning 🚀"
+        "next": "card_02_breathing_daily",
+        "button_text": "Let's Begin ➔"
       }
     },
     {
-      "card_id": "card_02_daily_life_breathing",
-      "card_slug": "card_02_daily_life_breathing",
+      "card_id": "card_02_breathing_daily",
+      "card_slug": "card_02_breathing_daily",
       "type": "chat",
-      "concept_id": "breathing_daily_observation",
+      "concept_id": "breathing_observation",
       "level": 1,
       "progress": {
         "current": 2,
-        "total": 60
+        "total": 80
       },
       "messages": [
         {
           "speaker": "aman",
-          "text": "Raju, tum morning me running karte ho na? Jab tez bhaago to kya hota hai?",
-          "emotion": "🏃"
+          "text": "Raju, ek kaam karo – apna naak band karo aur muh bhi band karo. Batao kitni der ruk sakte ho?"
         },
         {
           "speaker": "raju",
-          "text": "Haan sir! Saaans phoolne lagti hai... bahut tez-tez saaans lena padta hai!"
+          "text": "Sir 30 second bhi nahi ruk paya! Bahut taklif hoti hai, chest me pressure sa feel hota hai!"
         },
         {
           "speaker": "aman",
-          "text": "Ekdum sahi! Par kabhi socha ki ye saaans lena itna important kyun hai? Ek minute bhi saaans rok ke dekho - body turant signal dene lagti hai!",
-          "emotion": "💭"
+          "text": "Bilkul! Ye jo cheez tum roz bina soche karte ho – andar hawa lena, bahar nikalna – isi ko hum 'Breathing' bolte hain. Par kya tumhe pata hai breathing aur respiration me bahut bada fark hai?"
         },
         {
           "speaker": "raju",
-          "text": "Haan sir, bilkul uncomfortable ho jata hai... matlab body ko saaans ki bahut zarurat hai?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Absolutely! Khana ke bina tum kuch din reh sakte ho, pani ke bina kuch ghante, par saaans ke bina sirf kuch minute! Ye sharir ka sabse critical function hai - isko Respiration kehte hain!",
-          "emotion": "🎯"
-        },
-        {
-          "speaker": "raju",
-          "text": "Sir par hum saaans me kya lete hain aur kya chhodte hain? Oxygen to suna hai..."
+          "text": "Hain?? Dono ek hi cheez nahi hai kya? Mujhe to laga saans lena matlab respiration!"
         }
       ],
       "navigation": {
-        "next": "card_03_oxygen_need",
-        "button_text": "Perfect question! ➔"
+        "next": "card_03_breathing_vs_respiration",
+        "button_text": "Next Card ➔"
       }
     },
     {
-      "card_id": "card_03_oxygen_need",
-      "card_slug": "card_03_oxygen_need",
+      "card_id": "card_03_breathing_vs_respiration",
+      "card_slug": "card_03_breathing_vs_respiration",
       "type": "chat",
-      "concept_id": "oxygen_carbon_dioxide_exchange",
+      "concept_id": "breathing_vs_respiration",
       "level": 1,
       "progress": {
         "current": 3,
-        "total": 60
+        "total": 80
       },
       "messages": [
         {
           "speaker": "aman",
-          "text": "Dekho Raju, hum oxygen andar lete hain aur carbon dioxide bahar nikalte hain - jaise ek exchange system hai! Oxygen zaroori hai energy banane ke liye, aur carbon dioxide ek waste product hai jo nikaalna zaroori hai!",
-          "emotion": "♻️"
+          "text": "Yahin sabse bada trap hai! Breathing matlab sirf hawa ka andar-bahar aana – ye ek physical process hai. Lekin Respiration matlab cells ke andar glucose ka todna aur energy (ATP) banana – ye ek chemical/biochemical process hai!"
         },
         {
           "speaker": "raju",
-          "text": "Matlab oxygen se energy banti hai body me? Kaise sir?"
+          "text": "Achhaaaa... matlab breathing sirf courier boy hai jo oxygen deliver karta hai, aur asli kaam to cell ke andar hota hai?"
         },
         {
           "speaker": "aman",
-          "text": "Bilkul! Tumhare cells me khana (glucose) aur oxygen milkar energy (ATP) banate hain - isko Cellular Respiration kehte hain. NEET me yaad rakho: C6H12O6 + 6O2 → 6CO2 + 6H2O + Energy (ATP)!",
-          "emotion": "⚡"
+          "text": "Ekdum perfect example! Breathing = Ventilation (physical), Respiration = Cellular process (chemical). SSC aur BPSC me ye confuse karne ke liye hi question aata hai – 'Respiration is a physical process' – ye GALAT statement hai!"
         },
         {
           "speaker": "raju",
-          "text": "Wow! To glucose aur oxygen se carbon dioxide, paani aur energy milti hai... par ye oxygen body me kahan se aata hai?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Wahi to! Ye oxygen hawa se lungs me jata hai, phir blood me, phir har cell tak - isi puri journey ko samajhne ke liye Respiratory System padhna zaroori hai! SSC aur BPSC ka favourite topic!",
-          "emotion": "🫁"
-        },
-        {
-          "speaker": "raju",
-          "text": "Sir to respiratory system sirf nose aur lungs hai ya aur bhi kuch hai?"
+          "text": "Sir par breathing me koi enzyme wagairah lagta hai kya?"
         }
       ],
       "navigation": {
-        "next": "card_04_respiratory_pathway_intro",
-        "button_text": "Poora system dikhata hoon! ➔"
+        "next": "card_04_no_enzyme_breathing",
+        "button_text": "Next Card ➔"
       }
     },
     {
-      "card_id": "card_04_respiratory_pathway_intro",
-      "card_slug": "card_04_respiratory_pathway_intro",
+      "card_id": "card_04_no_enzyme_breathing",
+      "card_slug": "card_04_no_enzyme_breathing",
       "type": "chat",
-      "concept_id": "respiratory_tract_overview",
+      "concept_id": "breathing_no_enzyme",
       "level": 1,
       "progress": {
         "current": 4,
-        "total": 60
+        "total": 80
       },
       "messages": [
         {
           "speaker": "aman",
-          "text": "Respiratory system ek complete pipeline hai Raju! Hawa nose se shuru hoti hai aur lungs tak pahunchti hai - beech me kai important stations hain: Nose → Pharynx → Larynx → Trachea → Bronchi → Bronchioles → Alveoli!",
-          "emotion": "🛤️"
+          "text": "Nahi! Breathing me koi enzyme nahi lagta – sirf muscles ka contraction-relaxation hota hai. Lekin Cellular Respiration me bahut saare enzymes lagte hain – jaise cytochrome oxidase, dehydrogenase etc. Ye NEET ka favorite difference hai!"
         },
         {
           "speaker": "raju",
-          "text": "Itne saare naam! Sir ye Pharynx, Larynx confusing lag raha hai... kaise yaad rakhu?"
+          "text": "Matlab breathing = no enzyme, respiration = enzyme wala process. Got it Sir!"
         },
         {
           "speaker": "aman",
-          "text": "Ek baar sequence samajh gaye to automatic yaad ho jayega! Pehle Upper Respiratory Tract (Nose to Larynx) aur phir Lower Respiratory Tract (Trachea to Lungs). BPSC trap: Larynx ko voice box kehte hain, Pharynx ko throat!",
-          "emotion": "🎤"
+          "text": "Aur ek aur cheez yaad rakho – Breathing sirf multicellular organisms me hoti hai jahan special organs hain, par Cellular Respiration to bacteria se lekar human tak SARI living cells me hoti hai!"
         },
         {
           "speaker": "raju",
-          "text": "Achha! To Larynx wahan hai jahan se awaaz nikalti hai?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Bilkul sahi! Larynx me Vocal Cords hote hain - hawa inse takrati hai to vibration hota hai aur awaaz banti hai! Railway exam me puchte hain: Sound produced by? Answer: Larynx (Voice Box)!",
-          "emotion": "🔊"
-        },
-        {
-          "speaker": "raju",
-          "text": "Sir pehle nose se start karte hain... nose sirf smell ke liye nahi hai na?"
+          "text": "Ye to important point hai... ab aage bataiye Sir, hawa andar jaati kahan se hai?"
         }
       ],
       "navigation": {
-        "next": "card_05_nasal_cavity_functions",
-        "button_text": "Nose ka secret! ➔"
+        "next": "card_05_quiz_breathing_respiration_1",
+        "button_text": "Next Card ➔"
       }
     },
     {
-      "card_id": "card_05_nasal_cavity_functions",
-      "card_slug": "card_05_nasal_cavity_functions",
-      "type": "chat",
-      "concept_id": "nasal_cavity_structure_function",
+      "card_id": "card_05_quiz_breathing_respiration_1",
+      "card_slug": "card_05_quiz_breathing_respiration_1",
+      "type": "quiz",
+      "concept_id": "breathing_vs_respiration_quiz",
       "level": 1,
       "progress": {
         "current": 5,
-        "total": 60
+        "total": 80
       },
-      "messages": [
-        {
-          "speaker": "aman",
-          "text": "Nose ka sabse bada kaam air conditioning hai! Hawa ko filter karna (dust-germs nikalna), warm karna (body temperature tak), aur moisturize karna (humid banana) - ye teeno kaam nose me hote hain!",
-          "emotion": "🌡️"
-        },
-        {
-          "speaker": "raju",
-          "text": "Matlab AC jaisa kaam karta hai nose? Filter, heater aur humidifier sab ek saath?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Perfect comparison! Nasal cavity me chhote-chhote hair (cilia) aur sticky mucus hoti hai jo dust aur germs ko trap karti hai. SSC fact: Nose ek din me 1 litre mucus banata hai!",
-          "emotion": "🤧"
-        },
-        {
-          "speaker": "raju",
-          "text": "1 litre!! Hain?? Itna mucus to dikhta nahi!"
-        },
-        {
-          "speaker": "aman",
-          "text": "Kyunki zyaadatar wapas body me chala jata hai ya nigal lete hain hum! Bas jab infection hota hai to bahar aane lagta hai - runny nose! NEET me yaad rakho: Nasal cavity has rich blood supply for warming air!",
-          "emotion": "🩸"
-        },
-        {
-          "speaker": "raju",
-          "text": "Sir agar muh se saaans len to kya problem hai? Sab log nose se hi kyun lete hain?"
-        }
-      ],
+      "quiz_payload": {
+        "question": "निम्नलिखित में से कौन सा कथन सही है? (Q1/3)",
+        "options": [
+          {
+            "id": "A",
+            "text": "Breathing एक biochemical process है"
+          },
+          {
+            "id": "B",
+            "text": "Breathing में enzymes की आवश्यकता होती है"
+          },
+          {
+            "id": "C",
+            "text": "Cellular Respiration एक biochemical process है जिसमें ATP बनता है"
+          },
+          {
+            "id": "D",
+            "text": "Breathing केवल unicellular organisms में होती है"
+          }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Cellular Respiration एक biochemical process है जिसमें glucose टूटकर ATP (energy) बनाता है। Breathing एक physical/mechanical process है जिसमें कोई enzyme नहीं लगता। Breathing multicellular organisms में होती है, unicellular में नहीं।"
+      },
       "navigation": {
-        "next": "card_06_nose_vs_mouth_breathing",
-        "button_text": "Bahut important doubt! ➔"
+        "next": "card_06_quiz_breathing_respiration_2",
+        "button_text": "Check Answer & Continue ➔"
       }
     },
     {
-      "card_id": "card_06_nose_vs_mouth_breathing",
-      "card_slug": "card_06_nose_vs_mouth_breathing",
-      "type": "chat",
-      "concept_id": "nose_mouth_breathing_comparison",
+      "card_id": "card_06_quiz_breathing_respiration_2",
+      "card_slug": "card_06_quiz_breathing_respiration_2",
+      "type": "quiz",
+      "concept_id": "breathing_vs_respiration_quiz",
       "level": 1,
       "progress": {
         "current": 6,
-        "total": 60
+        "total": 80
       },
-      "messages": [
-        {
-          "speaker": "aman",
-          "text": "Jabardast question! Mouth se saaans lene me wo teeno benefits nahi milte - no filtering, no warming, no humidification! Direct unfiltered air lungs me jati hai, infections ka risk zyada hota hai!",
-          "emotion": "⚠️"
-        },
-        {
-          "speaker": "raju",
-          "text": "Achha! To exercise me mouth se saaans isliye lete hain kyunki zyada hawa chahiye hoti hai jaldi?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Exactly! Emergency me mouth se le sakte hain - bigger opening, faster air intake! Par normal breathing hamesha nose se better hai. BPSC application question me ye aata hai!",
-          "emotion": "💡"
-        },
-        {
-          "speaker": "raju",
-          "text": "Sir ab aage kya aata hai? Pharynx?"
-        }
-      ],
+      "quiz_payload": {
+        "question": "Assertion (A): Breathing और Respiration एक ही process है। Reason (R): दोनों में oxygen का उपयोग होता है। (Q2/3)",
+        "options": [
+          {
+            "id": "A",
+            "text": "A और R दोनों सही हैं और R, A की सही व्याख्या है"
+          },
+          {
+            "id": "B",
+            "text": "A और R दोनों सही हैं लेकिन R, A की सही व्याख्या नहीं है"
+          },
+          {
+            "id": "C",
+            "text": "A सही है लेकिन R गलत है"
+          },
+          {
+            "id": "D",
+            "text": "A गलत है लेकिन R सही है"
+          }
+        ],
+        "correct_option_id": "D",
+        "explanation": "Assertion गलत है – Breathing (physical) और Respiration (biochemical) अलग-अलग processes हैं। Reason सही है – दोनों में ultimately oxygen involve होता है। BPSC Assertion-Reason trap!"
+      },
       "navigation": {
-        "next": "card_07_quiz_nasal_functions",
-        "button_text": "Pehle quiz! ➔"
+        "next": "card_07_quiz_breathing_respiration_3",
+        "button_text": "Check Answer & Continue ➔"
       }
     },
     {
-      "card_id": "card_07_quiz_nasal_functions",
-      "card_slug": "card_07_quiz_nasal_functions",
+      "card_id": "card_07_quiz_breathing_respiration_3",
+      "card_slug": "card_07_quiz_breathing_respiration_3",
       "type": "quiz",
-      "concept_id": "nasal_cavity_quiz",
+      "concept_id": "breathing_vs_respiration_quiz",
       "level": 1,
       "progress": {
         "current": 7,
-        "total": 60
+        "total": 80
       },
       "quiz_payload": {
-        "question": "Which of the following is NOT a function of the nasal cavity during breathing?",
+        "question": "Cellular Respiration किसमें होता है? (Q3/3)",
         "options": [
           {
             "id": "A",
-            "text": "Filtering dust and microorganisms from inhaled air"
+            "text": "केवल Animals में"
           },
           {
             "id": "B",
-            "text": "Warming the air to body temperature"
+            "text": "केवल Plants में"
           },
           {
             "id": "C",
-            "text": "Producing oxygen for cellular respiration"
+            "text": "सभी जीवित कोशिकाओं (living cells) में"
           },
           {
             "id": "D",
-            "text": "Moistening the inhaled air"
+            "text": "केवल Multicellular organisms में"
           }
         ],
         "correct_option_id": "C",
-        "explanation": "The nasal cavity does NOT produce oxygen - it only filters, warms, and moistens the inhaled air before it reaches the lungs. Oxygen is present in atmospheric air (about 21%) and is simply taken in through breathing. The nasal cavity's rich blood supply helps warm the air, mucus moistens it, and tiny hairs (cilia) plus mucus trap dust and germs."
+        "explanation": "Cellular Respiration SARI living cells में होता है – चाहे bacteria हो, plant हो या animal। यह universal process है। SSC और Railway में यह direct fact पूछा जाता है।"
       },
       "navigation": {
-        "next": "card_08_quiz_voice_box",
-        "button_text": "Next Question (Q2/3) ➔"
+        "next": "card_08_milestone_mod1",
+        "button_text": "Check Answer & Continue ➔"
       }
     },
     {
-      "card_id": "card_08_quiz_voice_box",
-      "card_slug": "card_08_quiz_voice_box",
-      "type": "quiz",
-      "concept_id": "larynx_voice_box_quiz",
+      "card_id": "card_08_milestone_mod1",
+      "card_slug": "card_08_milestone_mod1",
+      "type": "milestone",
+      "concept_id": "mod1_complete",
       "level": 1,
       "progress": {
         "current": 8,
-        "total": 60
+        "total": 80
       },
-      "quiz_payload": {
-        "question": "The 'Voice Box' in the human respiratory system is scientifically called: (Railway RRB NTPC 2019)",
-        "options": [
-          {
-            "id": "A",
-            "text": "Pharynx"
-          },
-          {
-            "id": "B",
-            "text": "Larynx"
-          },
-          {
-            "id": "C",
-            "text": "Trachea"
-          },
-          {
-            "id": "D",
-            "text": "Bronchus"
-          }
-        ],
-        "correct_option_id": "B",
-        "explanation": "Larynx is called the Voice Box because it contains the vocal cords that vibrate to produce sound. When air from the lungs passes through the larynx, it causes the vocal cords to vibrate, producing voice. The Pharynx is the throat (common passage for food and air), Trachea is the windpipe, and Bronchi are the branches that enter the lungs. This is a very common SSC and Railway exam question!"
+      "milestone_payload": {
+        "title": "MODULE 1 COMPLETED! 🎉",
+        "badge_emoji": "🌬️",
+        "completed_topic": "Breathing vs Respiration",
+        "xp_earned": 50,
+        "milestone_progress": "Module 1/9 Clear",
+        "motivational_quote": "Pehla step clear! Ab tumhe pata hai ki saans lena aur respiration alag cheez hai – 90% students ye galti karte hain exam me!"
       },
       "navigation": {
-        "next": "card_09_quiz_breathing_route",
-        "button_text": "Next Question (Q3/3) ➔"
+        "next": "card_09_respiratory_organs_intro",
+        "button_text": "Start Next Module ➔"
       }
     },
     {
-      "card_id": "card_09_quiz_breathing_route",
-      "card_slug": "card_09_quiz_breathing_route",
-      "type": "quiz",
-      "concept_id": "nose_mouth_breathing_quiz",
+      "card_id": "card_09_respiratory_organs_intro",
+      "card_slug": "card_09_respiratory_organs_intro",
+      "type": "chat",
+      "concept_id": "respiratory_tract_start",
       "level": 1,
       "progress": {
         "current": 9,
-        "total": 60
+        "total": 80
       },
-      "quiz_payload": {
-        "question": "Breathing through the nose is healthier than breathing through the mouth because: (BPSC 2018)",
-        "options": [
-          {
-            "id": "A",
-            "text": "Nose adds oxygen to the air"
-          },
-          {
-            "id": "B",
-            "text": "Nose filters, warms and moistens the air"
-          },
-          {
-            "id": "C",
-            "text": "Nose removes carbon dioxide from air"
-          },
-          {
-            "id": "D",
-            "text": "Nose increases air pressure"
-          }
-        ],
-        "correct_option_id": "B",
-        "explanation": "Nasal breathing is healthier because the nose performs three crucial functions: (1) Filters out dust, germs and particles using mucus and cilia, (2) Warms the air to body temperature using its rich blood supply, and (3) Moistens/humidifies the air. Mouth breathing bypasses these protective mechanisms, allowing unfiltered, cold, dry air directly into the lungs, increasing infection risk. The nose does not add oxygen or remove CO2 - these are gas exchange functions of the lungs."
-      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ab socho Raju – jab tum saans lete ho, hawa sabse pehle kahan se andar jaati hai?"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir wo to obviously naak se! Muh se bhi le sakte hain par mummy bolti hain naak se saans lo."
+        },
+        {
+          "speaker": "aman",
+          "text": "Mummy bilkul sahi bolti hain! Naak (Nose) me baal (vibrissae) hote hain jo bade dust particles rok lete hain. Fir andar mucus lining hoti hai jo chhote particles aur bacteria ko chipka leti hai. Aur naak hawa ko garam aur humid bhi karti hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab naak ek filter + heater + humidifier – teeno kaam ek saath!"
+        }
+      ],
       "navigation": {
-        "next": "card_10_milestone_upper_respiratory",
-        "button_text": "Check Answer ➔"
+        "next": "card_10_nasal_cavity_detail",
+        "button_text": "Next Card ➔"
       }
     },
     {
-      "card_id": "card_10_milestone_upper_respiratory",
-      "card_slug": "card_10_milestone_upper_respiratory",
-      "type": "milestone",
-      "concept_id": "upper_respiratory_tract_complete",
+      "card_id": "card_10_nasal_cavity_detail",
+      "card_slug": "card_10_nasal_cavity_detail",
+      "type": "chat",
+      "concept_id": "nasal_cavity_structure",
       "level": 1,
       "progress": {
         "current": 10,
-        "total": 60
+        "total": 80
       },
-      "milestone_payload": {
-        "title": "🎯 MODULE 1 COMPLETED!",
-        "badge_emoji": "👃",
-        "completed_topic": "Upper Respiratory Tract & Air Conditioning",
-        "xp_earned": 50,
-        "milestone_progress": "Module 1/8 Clear",
-        "motivational_quote": "You've mastered the air's entry gates! From nose to larynx - crystal clear! 🌟"
-      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Naak ke andar Nasal Cavity hoti hai jahan Ciliated Epithelium hoti hai – isme chhote-chhote baal jaise cilia hote hain jo mucus me fase particles ko bahar ki taraf push karte rehte hain. NEET me ye tissue type poocha jaata hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Achhaaaa... to ye cilia conveyor belt jaisa kaam karte hain jo dust ko wapas bahar fekta hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Exactly! Ab nasal cavity se hawa jaati hai Pharynx me. Pharynx ek common passage hai jahan naak ka rasta aur muh ka rasta dono milte hain. Yahin pe food pipe (Oesophagus) aur wind pipe (Trachea) ka raasta alag hota hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir par kabhi khana khaate waqt khaansi aa jaati hai – wo kyu?"
+        }
+      ],
       "navigation": {
-        "next": "card_11_trachea_windpipe",
-        "button_text": "Start Module 2: Lower Respiratory Tract ➔"
+        "next": "card_11_epiglottis",
+        "button_text": "Next Card ➔"
       }
     },
     {
-      "card_id": "card_11_trachea_windpipe",
-      "card_slug": "card_11_trachea_windpipe",
+      "card_id": "card_11_epiglottis",
+      "card_slug": "card_11_epiglottis",
       "type": "chat",
-      "concept_id": "trachea_structure_function",
+      "concept_id": "epiglottis_function",
       "level": 1,
       "progress": {
         "current": 11,
-        "total": 60
+        "total": 80
       },
       "messages": [
         {
           "speaker": "aman",
-          "text": "Ab Lower Respiratory Tract shuru hota hai Raju! Larynx ke baad aati hai Trachea - isko Windpipe kehte hain, ye ek lambi tube hai jo hawa ko lungs tak le jaati hai, lagbhag 12 cm lambi hoti hai!",
-          "emotion": "📏"
+          "text": "Bahut important sawaal! Pharynx me ek flap hota hai jiska naam hai Epiglottis – ye cartilage ka bana hota hai. Jab tum khana nigalte ho, epiglottis wind pipe (trachea) ko dhak deta hai taaki khana food pipe me jaaye, lungs me nahi!"
         },
         {
           "speaker": "raju",
-          "text": "Sir ye tube collapse kyun nahi hoti? Jab gale pe pressure pade to band to nahi ho jaati?"
+          "text": "Matlab jab bolte-bolte kha lete hain to ye epiglottis confuse ho jaata hai aur khana galat pipe me chala jaata hai?"
         },
         {
           "speaker": "aman",
-          "text": "Genius question! Trachea me C-shaped cartilage rings hote hain - jaise vacuum cleaner pipe me spring hota hai waise hi! Ye rings trachea ko hamesha khula rakhte hain, collapse nahi hone dete!",
-          "emotion": "⭕"
+          "text": "Haan! Tabhi khaansi aati hai – body ka defense mechanism hai. SSC me direct poochha jaata hai – 'Epiglottis ka kya kaam hai?' Yaad rakho: Epiglottis = Trachea ka guard jo khana andar nahi jaane deta!"
         },
         {
           "speaker": "raju",
-          "text": "C-shaped? Poora round kyun nahi sir?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Kyunki peeche ki taraf esophagus (food pipe) hai! C-shape isliye hai taaki khana nigalte waqt esophagus expand ho sake - agar complete ring hota to khana atakta! NEET trap: Why C-shaped not O-shaped cartilage in trachea!",
-          "emotion": "🍽️"
-        },
-        {
-          "speaker": "raju",
-          "text": "Woww! Design kitna smart hai sir! To trachea aage ja kar kya banti hai?"
+          "text": "Sir ab trachea ke baare me bataiye – wo kaise dikhti hai?"
         }
       ],
       "navigation": {
-        "next": "card_12_bronchi_bronchioles",
-        "button_text": "Ab branching shuru! ➔"
+        "next": "card_12_larynx_voice_box",
+        "button_text": "Next Card ➔"
       }
     },
     {
-      "card_id": "card_12_bronchi_bronchioles",
-      "card_slug": "card_12_bronchi_bronchioles",
+      "card_id": "card_12_larynx_voice_box",
+      "card_slug": "card_12_larynx_voice_box",
       "type": "chat",
-      "concept_id": "bronchi_bronchioles_structure",
+      "concept_id": "larynx_structure",
       "level": 1,
       "progress": {
         "current": 12,
-        "total": 60
+        "total": 80
       },
       "messages": [
         {
           "speaker": "aman",
-          "text": "Trachea do branches me divide hoti hai - Left Bronchus aur Right Bronchus - jo respective lungs me jaati hain! Right bronchus thodi wider aur shorter hoti hai, isliye foreign objects zyaadatar right lung me jaate hain!",
-          "emotion": "↗️"
+          "text": "Ruko! Pharynx se pehle Trachea me jaane se pehle ek aur organ aata hai – Larynx! Ise Voice Box bhi bolte hain. Iske andar Vocal Cords hote hain jinke vibration se awaaz nikalti hai. Males me ye bada hota hai – isliye gale me Adam's Apple ubhri hoti hai!"
         },
         {
           "speaker": "raju",
-          "text": "Matlab agar galti se kuch nigal liya to right lung me jaane ki chance zyada?"
+          "text": "Achhaaaa! Isliye ladkon ki awaaz moti hoti hai? Kyunki unka larynx bada hai?"
         },
         {
           "speaker": "aman",
-          "text": "Bilkul! SSC me direct puchte hain: Foreign body aspiration is more common in which lung? Answer: Right lung! Phir ye bronchi aur chhoti hoti jaati hain - Bronchioles - jaise ped ki shaakhayen!",
-          "emotion": "🌳"
+          "text": "Bilkul sahi! Puberty me testosterone hormone ki wajah se larynx bada ho jaata hai, vocal cords lambi ho jaati hain, aur awaaz bhari ho jaati hai. Ye Biology + Endocrine System ka crossover question BPSC me aa chuka hai!"
         },
         {
           "speaker": "raju",
-          "text": "Kitni chhoti hoti jaati hain sir ye branches?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Terminal bronchioles tak - bahut patli tubes! Phir unke end pe aate hain Alveoli - jahan actual gas exchange hota hai! Trachea se alveoli tak 16-23 divisions hote hain - ek complete branching tree!",
-          "emotion": "🫁"
-        },
-        {
-          "speaker": "raju",
-          "text": "Sir alveoli kya hai exactly? Ye naam to bahut suna hai!"
+          "text": "Ye to interesting hai Sir! Larynx ke baad kya aata hai?"
         }
       ],
       "navigation": {
-        "next": "card_13_alveoli_structure",
-        "button_text": "Most important part! ➔"
+        "next": "card_13_trachea",
+        "button_text": "Next Card ➔"
       }
     },
     {
-      "card_id": "card_13_alveoli_structure",
-      "card_slug": "card_13_alveoli_structure",
+      "card_id": "card_13_trachea",
+      "card_slug": "card_13_trachea",
       "type": "chat",
-      "concept_id": "alveoli_structure_importance",
+      "concept_id": "trachea_structure",
       "level": 1,
       "progress": {
         "current": 13,
-        "total": 60
+        "total": 80
       },
       "messages": [
         {
           "speaker": "aman",
-          "text": "Alveoli chhote-chhote balloon jaise structures hain - ek single alveolus grapes ke dane jitna chhota hai! Dono lungs me lagbhag 300-500 million alveoli hote hain - imagine karo kitna surface area!",
-          "emotion": "🫧"
+          "text": "Larynx ke baad aata hai Trachea – yaani Wind Pipe! Ye lagbhag 12 cm lambi tube hai jo C-shaped cartilage rings se bani hoti hai. Ye rings trachea ko collapse hone se bachati hain – jaise vacuum cleaner ki pipe me spring hota hai!"
         },
         {
           "speaker": "raju",
-          "text": "300 million!! Itne saare kyun chahiye sir?"
+          "text": "C-shaped kyu Sir? Pura gol ring kyu nahi?"
         },
         {
           "speaker": "aman",
-          "text": "Kyunki oxygen exchange ke liye maximum surface area chahiye! Agar sab alveoli flat kar do to area lagbhag 70-80 square meters hoga - ek badminton court jitna! NEET favourite number hai ye!",
-          "emotion": "🏸"
+          "text": "Excellent question! C-shaped isliye kyunki trachea ke peeche oesophagus (food pipe) hoti hai. Agar pura ring hota to khana nigalte waqt food pipe expand nahi kar paati! C ka open side peeche hota hai jahan smooth muscle hoti hai. Ye NEET ka classic question hai!"
         },
         {
           "speaker": "raju",
-          "text": "Wow!! Itna bada area itni chhoti jagah me? Par sir gas exchange kaise hota hai exactly?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Alveoli ki wall bahut thin hoti hai - sirf ek cell thick! Aur iske bilkul bahar blood capillaries hoti hain - sirf 0.5 micrometer ki distance! Oxygen easily cross kar jati hai alveoli se blood me, aur CO2 blood se alveoli me!",
-          "emotion": "↔️"
-        },
-        {
-          "speaker": "raju",
-          "text": "Sir ye itni thin wall to phati nahi jaati? Kuch coating to hogi protection ke liye?"
+          "text": "Wow Sir! Design me bhi logic hai! Ab trachea ke baad?"
         }
       ],
       "navigation": {
-        "next": "card_14_surfactant_importance",
-        "button_text": "NEET level secret! ➔"
+        "next": "card_14_bronchi_bronchioles",
+        "button_text": "Next Card ➔"
       }
     },
     {
-      "card_id": "card_14_surfactant_importance",
-      "card_slug": "card_14_surfactant_importance",
+      "card_id": "card_14_bronchi_bronchioles",
+      "card_slug": "card_14_bronchi_bronchioles",
       "type": "chat",
-      "concept_id": "pulmonary_surfactant_function",
+      "concept_id": "bronchi_bronchioles",
       "level": 1,
       "progress": {
         "current": 14,
-        "total": 60
+        "total": 80
       },
       "messages": [
         {
           "speaker": "aman",
-          "text": "Bilkul sahi soch rahe ho! Alveoli ke andar ek special substance hota hai - Pulmonary Surfactant - ye surface tension kam karta hai aur alveoli ko collapse hone se bachata hai! Bina surfactant ke alveoli chipak jaengi!",
-          "emotion": "🧴"
+          "text": "Trachea neeche jaake do branches me bat jaati hai – Right Primary Bronchus aur Left Primary Bronchus. Right bronchus thoda mota aur chhota hota hai aur Left se zyada seedha (vertical) hota hai – isliye koi cheez galti se lungs me jaaye to aksar Right lung me jaati hai!"
         },
         {
           "speaker": "raju",
-          "text": "Surfactant matlab kuch oily cheez hai jo lubrication deti hai?"
+          "text": "Seriously?? Matlab agar koi coin nigal le to wo right lung me jayegi?"
         },
         {
           "speaker": "aman",
-          "text": "Haan, ye mainly phospholipids se bana hota hai! NEET clinical trap: Premature babies me surfactant kam hota hai, unhe breathing problem hoti hai - Respiratory Distress Syndrome kehte hain! Surfactant therapy di jaati hai!",
-          "emotion": "👶"
+          "text": "Haan! Foreign body aspiration me right bronchus me jaane ka chance zyada hota hai – ye medical PYQ hai! Ab bronchi aur chhoti-chhoti branches me batti hain – bronchioles. Bronchioles me cartilage nahi hota, sirf smooth muscle hoti hai!"
         },
         {
           "speaker": "raju",
-          "text": "Sir ab oxygen blood me aa gayi... phir wo puri body me kaise jaati hai?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Wo Transport ka topic hai - pehle breathing mechanism samajh lete hain! Hawa lungs me kaise jaati hai andar-bahar? Automatic to nahi hai, koi pump to hai?",
-          "emotion": "🤔"
+          "text": "Matlab jaise ped ki branch chhoti hoti jaati hai, waise hi ye tubes patli hoti jaati hain?"
         }
       ],
       "navigation": {
-        "next": "card_15_quiz_trachea_cartilage",
-        "button_text": "Pehle quiz! ➔"
+        "next": "card_15_alveoli_intro",
+        "button_text": "Next Card ➔"
       }
     },
     {
-      "card_id": "card_15_quiz_trachea_cartilage",
-      "card_slug": "card_15_quiz_trachea_cartilage",
-      "type": "quiz",
-      "concept_id": "trachea_structure_quiz",
-      "level": 1,
+      "card_id": "card_15_alveoli_intro",
+      "card_slug": "card_15_alveoli_intro",
+      "type": "chat",
+      "concept_id": "alveoli_structure",
+      "level": 2,
       "progress": {
         "current": 15,
-        "total": 60
+        "total": 80
       },
-      "quiz_payload": {
-        "question": "The cartilaginous rings in the trachea are C-shaped (incomplete posteriorly) because: (NEET 2019)",
-        "options": [
-          {
-            "id": "A",
-            "text": "It provides flexibility to the neck"
-          },
-          {
-            "id": "B",
-            "text": "It allows the esophagus to expand when swallowing food"
-          },
-          {
-            "id": "C",
-            "text": "It saves material in body construction"
-          },
-          {
-            "id": "D",
-            "text": "It allows vocal cord vibration"
-          }
-        ],
-        "correct_option_id": "B",
-        "explanation": "The C-shaped (incomplete) cartilage rings in the trachea allow the esophagus (food pipe), which lies directly behind the trachea, to expand when swallowing food, especially large boluses. If the cartilage were complete O-shaped rings, the esophagus would be restricted and food passage would be difficult. The open posterior part is filled with smooth muscle and connective tissue. This is a classic NEET anatomy-function correlation question!"
-      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Bilkul! Aur sabse last me bronchioles ke end pe hoti hain chhoti-chhoti balloon jaisi structures – Alveoli! Ek lung me lagbhag 300 million (30 crore) alveoli hote hain. Inhi me gas exchange hota hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "30 crore?! Itne saare kyu chahiye Sir?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Kyunki itne saare hone se surface area bahut zyada ho jaata hai – lagbhag 100 square metres! Ye tumhare ghar ke floor area se bhi zyada hai! Jitna zyada surface area, utna zyada oxygen blood me jayega. Alveoli ki wall sirf ek cell thick hoti hai – Squamous Epithelium – taaki gas easily diffuse ho sake!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Ek cell thick!! Matlab paper se bhi patli?"
+        }
+      ],
       "navigation": {
-        "next": "card_16_quiz_alveoli_number",
-        "button_text": "Next Question (Q2/3) ➔"
+        "next": "card_16_alveoli_surfactant",
+        "button_text": "Next Card ➔"
       }
     },
     {
-      "card_id": "card_16_quiz_alveoli_number",
-      "card_slug": "card_16_quiz_alveoli_number",
-      "type": "quiz",
-      "concept_id": "alveoli_surface_area_quiz",
-      "level": 1,
+      "card_id": "card_16_alveoli_surfactant",
+      "card_slug": "card_16_alveoli_surfactant",
+      "type": "chat",
+      "concept_id": "surfactant",
+      "level": 2,
       "progress": {
         "current": 16,
-        "total": 60
+        "total": 80
       },
-      "quiz_payload": {
-        "question": "Approximately how many alveoli are present in both human lungs combined? (SSC CGL 2020)",
-        "options": [
-          {
-            "id": "A",
-            "text": "30-50 thousand"
-          },
-          {
-            "id": "B",
-            "text": "3-5 million"
-          },
-          {
-            "id": "C",
-            "text": "30-50 million"
-          },
-          {
-            "id": "D",
-            "text": "300-500 million"
-          }
-        ],
-        "correct_option_id": "D",
-        "explanation": "Human lungs contain approximately 300-500 million alveoli (around 300 million in adult lungs). This enormous number provides a massive surface area of about 70-80 square meters for gas exchange - roughly the size of a badminton court! Each alveolus is tiny (like a grape), but together they create this huge surface area essential for efficient oxygen and carbon dioxide exchange. This is a frequently asked SSC and Railway exam fact."
-      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Haan! Aur ek crucial cheez – Alveoli ke andar ek liquid layer hoti hai jisme Surfactant hota hai. Ye Type II Alveolar Cells banati hain. Surfactant surface tension ko kam karta hai taaki alveoli collapse na ho!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Surface tension matlab wo jo paani ki boond ko gol rakhta hai? Wo yahan kya problem karega?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bahut accha connect kiya! Agar surfactant na ho to alveoli ki wet walls aapas me chipak jayengi aur wo collapse ho jayenge. Premature babies me surfactant kam hota hai isliye unhe saans lene me dikkat hoti hai – ise Respiratory Distress Syndrome (RDS) bolte hain. NEET me directly poochha jaata hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Oh! To isliye premature babies ko special care me rakhte hain!"
+        }
+      ],
       "navigation": {
-        "next": "card_17_quiz_surfactant",
-        "button_text": "Next Question (Q3/3) ➔"
+        "next": "card_17_guess_respiratory_tract",
+        "button_text": "Next Card ➔"
       }
     },
     {
-      "card_id": "card_17_quiz_surfactant",
-      "card_slug": "card_17_quiz_surfactant",
-      "type": "quiz",
-      "concept_id": "surfactant_function_quiz",
-      "level": 1,
+      "card_id": "card_17_guess_respiratory_tract",
+      "card_slug": "card_17_guess_respiratory_tract",
+      "type": "guess",
+      "concept_id": "respiratory_tract_order",
+      "level": 2,
       "progress": {
         "current": 17,
-        "total": 60
+        "total": 80
       },
       "quiz_payload": {
-        "question": "Pulmonary surfactant in the alveoli primarily functions to: (NEET 2021)",
+        "question": "🤔 Guess karo! Hawa ka sahi rasta kya hai nose se alveoli tak?",
         "options": [
           {
             "id": "A",
-            "text": "Increase surface tension and strengthen alveolar walls"
+            "text": "Nose → Pharynx → Trachea → Larynx → Bronchi → Alveoli"
           },
           {
             "id": "B",
-            "text": "Reduce surface tension and prevent alveolar collapse"
+            "text": "Nose → Pharynx → Larynx → Trachea → Bronchi → Bronchioles → Alveoli"
           },
           {
             "id": "C",
-            "text": "Filter dust particles from air"
+            "text": "Nose → Larynx → Pharynx → Bronchi → Trachea → Alveoli"
           },
           {
             "id": "D",
-            "text": "Transport oxygen across the membrane"
+            "text": "Nose → Trachea → Pharynx → Larynx → Bronchioles → Alveoli"
           }
         ],
         "correct_option_id": "B",
-        "explanation": "Pulmonary surfactant is a phospholipid mixture that REDUCES surface tension in the alveoli, preventing them from collapsing during expiration. Without surfactant, the thin film of moisture lining the alveoli would create high surface tension, causing alveoli to stick together and collapse. Premature babies often lack sufficient surfactant, leading to Respiratory Distress Syndrome (RDS). Surfactant is produced by Type II pneumocytes in the alveolar walls."
+        "explanation": "Sahi pathway: Nose → Nasal Cavity → Pharynx → Larynx (Voice Box) → Trachea (Wind Pipe) → Primary Bronchi → Secondary Bronchi → Tertiary Bronchi → Bronchioles → Terminal Bronchioles → Alveolar Ducts → Alveoli. Sabse common trap: Larynx aur Pharynx ka order ulta karna!"
       },
       "navigation": {
-        "next": "card_18_milestone_lower_respiratory",
-        "button_text": "Check Answer ➔"
+        "next": "card_18_quiz_tract_1",
+        "button_text": "Check Answer & Continue ➔"
       }
     },
     {
-      "card_id": "card_18_milestone_lower_respiratory",
-      "card_slug": "card_18_milestone_lower_respiratory",
-      "type": "milestone",
-      "concept_id": "lower_respiratory_tract_complete",
-      "level": 1,
+      "card_id": "card_18_quiz_tract_1",
+      "card_slug": "card_18_quiz_tract_1",
+      "type": "quiz",
+      "concept_id": "respiratory_tract_quiz",
+      "level": 2,
       "progress": {
         "current": 18,
-        "total": 60
+        "total": 80
       },
-      "milestone_payload": {
-        "title": "🫁 MODULE 2 COMPLETED!",
-        "badge_emoji": "🌳",
-        "completed_topic": "Lower Respiratory Tract & Alveoli",
-        "xp_earned": 60,
-        "milestone_progress": "Module 2/8 Clear",
-        "motivational_quote": "From trachea's C-rings to 300 million alveoli - you've explored the branching tree of life! 🌟"
+      "quiz_payload": {
+        "question": "Trachea में C-shaped cartilage rings क्यों होते हैं? (Q1/3)",
+        "options": [
+          {
+            "id": "A",
+            "text": "आवाज निकालने के लिए"
+          },
+          {
+            "id": "B",
+            "text": "Trachea को collapse होने से बचाने और पीछे oesophagus को expand होने देने के लिए"
+          },
+          {
+            "id": "C",
+            "text": "Oxygen filter करने के लिए"
+          },
+          {
+            "id": "D",
+            "text": "Blood supply के लिए"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "C-shaped cartilage rings trachea को open रखते हैं (collapse prevention) और C का open side posterior में होता है जहाँ oesophagus है, ताकि खाना निगलते समय food pipe expand हो सके।"
       },
       "navigation": {
-        "next": "card_19_breathing_mechanism_intro",
-        "button_text": "Start Module 3: Breathing Mechanism ➔"
+        "next": "card_19_quiz_tract_2",
+        "button_text": "Check Answer & Continue ➔"
       }
     },
     {
-      "card_id": "card_19_breathing_mechanism_intro",
-      "card_slug": "card_19_breathing_mechanism_intro",
-      "type": "chat",
-      "concept_id": "breathing_mechanism_basic",
-      "level": 1,
+      "card_id": "card_19_quiz_tract_2",
+      "card_slug": "card_19_quiz_tract_2",
+      "type": "quiz",
+      "concept_id": "respiratory_tract_quiz",
+      "level": 2,
       "progress": {
         "current": 19,
-        "total": 60
+        "total": 80
       },
-      "messages": [
-        {
-          "speaker": "aman",
-          "text": "Ab samajhte hain ki hawa lungs me andar-bahar kaise hoti hai! Raju, jab tum balloon me hawa bharthe ho to kya karte ho?",
-          "emotion": "🎈"
-        },
-        {
-          "speaker": "raju",
-          "text": "Muh se hawa phoonkte hain sir... pressure se balloon expand ho jata hai!"
-        },
-        {
-          "speaker": "aman",
-          "text": "Sahi hai! Par lungs me koi bahar se phoonk nahi raha - to hawa andar kaise aati hai? Yahin sabse interesting mechanism hai - Pressure Difference principle! Jahan pressure kam hoga, hawa wahan jayegi!",
-          "emotion": "💨"
-        },
-        {
-          "speaker": "raju",
-          "text": "Matlab lungs ke andar pressure kam karna padta hai to hawa andar aayegi automatically?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Exactly! Aur pressure kam karne ke liye chest cavity ka volume badhana padta hai - jab volume badhta hai, pressure ghat ta hai (Boyle's Law)! Ye kaam diaphragm aur intercostal muscles karte hain!",
-          "emotion": "📊"
-        },
-        {
-          "speaker": "raju",
-          "text": "Diaphragm kya hai sir? Aur intercostal muscles?"
-        }
-      ],
+      "quiz_payload": {
+        "question": "Surfactant किसके द्वारा स्रावित होता है? (Q2/3)",
+        "options": [
+          {
+            "id": "A",
+            "text": "Type I Alveolar Cells"
+          },
+          {
+            "id": "B",
+            "text": "Type II Alveolar Cells (Pneumocytes)"
+          },
+          {
+            "id": "C",
+            "text": "Goblet Cells"
+          },
+          {
+            "id": "D",
+            "text": "Clara Cells"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Surfactant को Type II Alveolar Cells (Type II Pneumocytes) बनाती हैं। यह Phospholipid (Dipalmitoyl Phosphatidylcholine) है जो surface tension कम करता है। Type I cells gas exchange में help करती हैं। NEET repeated PYQ!"
+      },
       "navigation": {
-        "next": "card_20_diaphragm_structure",
-        "button_text": "Most important muscles! ➔"
+        "next": "card_20_quiz_tract_3",
+        "button_text": "Check Answer & Continue ➔"
       }
     },
     {
-      "card_id": "card_20_diaphragm_structure",
-      "card_slug": "card_20_diaphragm_structure",
-      "type": "chat",
-      "concept_id": "diaphragm_intercostal_muscles",
-      "level": 1,
+      "card_id": "card_20_quiz_tract_3",
+      "card_slug": "card_20_quiz_tract_3",
+      "type": "quiz",
+      "concept_id": "respiratory_tract_quiz",
+      "level": 2,
       "progress": {
         "current": 20,
-        "total": 60
+        "total": 80
       },
-      "messages": [
-        {
-          "speaker": "aman",
-          "text": "Diaphragm ek dome-shaped muscular sheet hai jo chest aur abdomen ko separate karti hai - ye breathing ki primary muscle hai! Intercostal muscles ribs ke beech wali muscles hain jo ribs ko upar-neeche move karti hain!",
-          "emotion": "🫀"
-        },
-        {
-          "speaker": "raju",
-          "text": "Sir dome-shaped matlab upar ki taraf raised hai?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Haan, jab relaxed hota hai tab! Par jab diaphragm contract hota hai to flat ho jata hai - neeche ki taraf move karta hai! Is movement se chest cavity ka volume badhta hai! NEET trap: During inspiration, diaphragm contracts and moves DOWN!",
-          "emotion": "⬇️"
-        },
-        {
-          "speaker": "raju",
-          "text": "Achha! Contract karne se neeche jata hai to volume badh jata hai chest cavity ka!"
-        },
-        {
-          "speaker": "aman",
-          "text": "Perfect! Aur simultaneously intercostal muscles bhi contract hoti hain - ribs upar aur bahar ki taraf move hoti hain - ye bhi volume badhata hai! Dono together milkar chest cavity expand karti hain!",
-          "emotion": "↗️"
-        },
-        {
-          "speaker": "raju",
-          "text": "Sir ab step-by-step batayiye - saaans andar lene ka pura process!"
-        }
-      ],
+      "quiz_payload": {
+        "question": "Foreign body aspiration में object सामान्यतः किस bronchus में जाता है? (Q3/3)",
+        "options": [
+          {
+            "id": "A",
+            "text": "Left Primary Bronchus"
+          },
+          {
+            "id": "B",
+            "text": "Right Primary Bronchus"
+          },
+          {
+            "id": "C",
+            "text": "दोनों में बराबर"
+          },
+          {
+            "id": "D",
+            "text": "Trachea में ही रुक जाता है"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Right Primary Bronchus wider, shorter और more vertical है Left bronchus की तुलना में, इसलिए foreign bodies Right lung में जाने की अधिक संभावना होती है। Medical entrance और NEET का classic question!"
+      },
       "navigation": {
-        "next": "card_21_inspiration_process",
-        "button_text": "Inspiration mechanism! ➔"
+        "next": "card_21_milestone_mod2",
+        "button_text": "Check Answer & Continue ➔"
       }
     },
     {
-      "card_id": "card_21_inspiration_process",
-      "card_slug": "card_21_inspiration_process",
-      "type": "chat",
-      "concept_id": "inspiration_inhalation_mechanism",
-      "level": 1,
+      "card_id": "card_21_milestone_mod2",
+      "card_slug": "card_21_milestone_mod2",
+      "type": "milestone",
+      "concept_id": "mod2_complete",
+      "level": 2,
       "progress": {
         "current": 21,
-        "total": 60
+        "total": 80
       },
-      "messages": [
-        {
-          "speaker": "aman",
-          "text": "Inspiration (saaans andar lena) ka process: Step 1 - Diaphragm contracts aur neeche move karta hai. Step 2 - External intercostal muscles contract, ribs upar-bahar move hoti hain. Step 3 - Chest cavity ka volume increase hota hai!",
-          "emotion": "1️⃣"
-        },
-        {
-          "speaker": "raju",
-          "text": "Phir pressure ghat jata hai?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Bilkul! Step 4 - Volume increase se intra-pulmonary pressure (lungs ke andar ka pressure) atmospheric pressure se kam ho jata hai - lagbhag 1-2 mm Hg kam! Step 5 - Hawa automatically bahar se andar aa jati hai pressure difference ki wajah se!",
-          "emotion": "💨"
-        },
-        {
-          "speaker": "raju",
-          "text": "Woww! To ye active process hai - muscles ko kaam karna padta hai andar lene me!"
-        },
-        {
-          "speaker": "aman",
-          "text": "Exactly! Inspiration is an active process - energy lagti hai! BPSC question: Which muscles are primarily involved in normal inspiration? Answer: Diaphragm and External intercostal muscles! Ab expiration dekhte hain!",
-          "emotion": "⚡"
-        }
-      ],
+      "milestone_payload": {
+        "title": "MODULE 2 COMPLETED! 🎉",
+        "badge_emoji": "🫁",
+        "completed_topic": "Respiratory Organs & Tract",
+        "xp_earned": 75,
+        "milestone_progress": "Module 2/9 Clear",
+        "motivational_quote": "Ab tumhe Nose se Alveoli tak ka pura map yaad hai! Ye knowledge BPSC, SSC aur NEET teeno me kaam aayegi!"
+      },
       "navigation": {
-        "next": "card_22_expiration_process",
-        "button_text": "Saaans bahar nikalna! ➔"
+        "next": "card_22_lungs_structure",
+        "button_text": "Start Next Module ➔"
       }
     },
     {
-      "card_id": "card_22_expiration_process",
-      "card_slug": "card_22_expiration_process",
+      "card_id": "card_22_lungs_structure",
+      "card_slug": "card_22_lungs_structure",
       "type": "chat",
-      "concept_id": "expiration_exhalation_mechanism",
-      "level": 1,
+      "concept_id": "lungs_anatomy",
+      "level": 2,
       "progress": {
         "current": 22,
-        "total": 60
+        "total": 80
       },
       "messages": [
         {
           "speaker": "aman",
-          "text": "Normal expiration (saaans bahar nikalna) mostly passive process hai Raju! Step 1 - Diaphragm aur intercostal muscles relax ho jate hain. Step 2 - Diaphragm wapas dome shape me aa jata hai, ribs neeche-andar move hoti hain!",
-          "emotion": "😌"
+          "text": "Ab baat karte hain Lungs ki! Hamare paas 2 lungs hain – Right lung me 3 lobes hain aur Left lung me sirf 2 lobes hain. Kyu? Kyunki left side me heart ka space chahiye – cardiac notch!"
         },
         {
           "speaker": "raju",
-          "text": "Matlab muscles ko relax karne se hi ho jata hai? Koi active effort nahi?"
+          "text": "Achhaaaa! Isliye left lung chhota hota hai! Matlab right = 3 lobes, left = 2 lobes. Ye to yaad rakhna easy hai!"
         },
         {
           "speaker": "aman",
-          "text": "Normal breathing me nahi! Step 3 - Chest cavity ka volume decrease hota hai. Step 4 - Lungs elastic hote hain - jaise rubber balloon deflate hota hai waise lungs bhi recoil karte hain aur hawa bahar dhakel dete hain!",
-          "emotion": "🎈"
+          "text": "Haan! Lungs ke charon taraf ek double membrane hoti hai – Pleura. Isme do layers hain – Visceral Pleura (jo lung se chipki hai) aur Parietal Pleura (jo chest wall se chipki hai). Dono ke beech Pleural Fluid hota hai jo friction reduce karta hai!"
         },
         {
           "speaker": "raju",
-          "text": "Achha! To lungs khud hi wapas original shape me aa jate hain elasticity ki wajah se?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Haan! Lungs me elastic fibers hote hain jo stretch ke baad recoil karte hain! Par NEET twist: Forceful expiration (jaise exercise me) active hai - Internal intercostal muscles aur abdominal muscles contract karte hain!",
-          "emotion": "🏃"
-        },
-        {
-          "speaker": "raju",
-          "text": "Sir normal breathing me kitna air exchange hota hai ek saaans me?"
+          "text": "Jaise machine me lubricant daalte hain? Waise hi pleural fluid kaam karta hai?"
         }
       ],
       "navigation": {
-        "next": "card_23_tidal_volume",
-        "button_text": "Respiratory volumes! ➔"
+        "next": "card_23_lungs_conducting_respiratory",
+        "button_text": "Next Card ➔"
       }
     },
     {
-      "card_id": "card_23_tidal_volume",
-      "card_slug": "card_23_tidal_volume",
+      "card_id": "card_23_lungs_conducting_respiratory",
+      "card_slug": "card_23_lungs_conducting_respiratory",
       "type": "chat",
-      "concept_id": "tidal_volume_definition",
-      "level": 1,
+      "concept_id": "conducting_vs_respiratory",
+      "level": 2,
       "progress": {
         "current": 23,
-        "total": 60
+        "total": 80
       },
       "messages": [
         {
           "speaker": "aman",
-          "text": "Normal quiet breathing me jo air ek saaans me andar-bahar hoti hai use Tidal Volume kehte hain - ye lagbhag 500 mL hoti hai ek healthy adult me! Samajh lo tide (leher) jaisi - rhythmic aana-jaana!",
-          "emotion": "🌊"
+          "text": "Bilkul! Ab ek NEET-level concept – Respiratory tract ko 2 parts me divide karte hain: Conducting Part (Nose se Terminal Bronchioles tak) – ye sirf hawa le jaata hai, koi gas exchange nahi. Aur Respiratory Part (Respiratory Bronchioles, Alveolar Ducts, Alveoli) – yahaan actual gas exchange hota hai!"
         },
         {
           "speaker": "raju",
-          "text": "500 mL matlab aadha litre har saaans me! Par sir agar zyada gehra saaans len to?"
+          "text": "Matlab conducting part sirf pipe hai aur respiratory part wo jagah hai jahan asli kaam hota hai?"
         },
         {
           "speaker": "aman",
-          "text": "Tab zyada air le sakte ho - maximum extra air jo tum gehra saaans lekar le sakte ho after normal inspiration, use Inspiratory Reserve Volume (IRV) kehte hain - ye 2500-3000 mL hota hai!",
-          "emotion": "📈"
+          "text": "Ekdum sahi! Aur conducting part ka jo air volume hota hai jisme koi gas exchange nahi hota, use Dead Space bolte hain – lagbhag 150 mL. Ye NEET me baar-baar poochha jaata hai!"
         },
         {
           "speaker": "raju",
-          "text": "Aur agar normal expiration ke baad force karke aur hawa nikalen?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Wo hai Expiratory Reserve Volume (ERV) - ye 1000-1100 mL hota hai! SSC numerical me ye values direct puchte hain - Tidal Volume: 500 mL, IRV: 2500-3000 mL, ERV: 1000-1100 mL!",
-          "emotion": "📊"
-        },
-        {
-          "speaker": "raju",
-          "text": "Sir sab nikalne ke baad bhi kuch hawa lungs me reh jaati hai kya?"
+          "text": "Dead Space! Matlab 150 mL hawa to waste jaati hai har saans me?"
         }
       ],
       "navigation": {
-        "next": "card_24_residual_volume",
-        "button_text": "Bahut important concept! ➔"
+        "next": "card_24_mechanism_breathing_intro",
+        "button_text": "Next Card ➔"
       }
     },
     {
-      "card_id": "card_24_residual_volume",
-      "card_slug": "card_24_residual_volume",
+      "card_id": "card_24_mechanism_breathing_intro",
+      "card_slug": "card_24_mechanism_breathing_intro",
       "type": "chat",
-      "concept_id": "residual_volume_importance",
-      "level": 1,
+      "concept_id": "mechanism_of_breathing",
+      "level": 2,
       "progress": {
         "current": 24,
-        "total": 60
+        "total": 80
       },
       "messages": [
         {
           "speaker": "aman",
-          "text": "Haan Raju! Maximum forceful expiration ke baad bhi lungs me 1100-1200 mL hawa reh jaati hai - isko Residual Volume kehte hain! Ye kabhi bahar nahi nikal sakti - lungs hamesha thodi inflated rehti hain!",
-          "emotion": "🫁"
+          "text": "Ab sabse important topic – saans kaise aati-jaati hai? Tumne kabhi balloon foola hai? Jab tum balloon me hawa bhar-te ho to kya hota hai?"
         },
         {
           "speaker": "raju",
-          "text": "Kyun sir? Completely empty kyun nahi ho sakti lungs?"
+          "text": "Sir balloon foolta hai aur andar pressure kam hota hai to bahar ki hawa andar jaati hai... ya nahi? Main confuse ho gaya!"
         },
         {
           "speaker": "aman",
-          "text": "Kyunki agar lungs completely collapse ho jayen to wapas inflate karna bahut mushkil hoga - alveoli chipak jayengi! Residual volume lungs ko functional rakhta hai! NEET clinical: Death ke baad lungs sink nahi hote pani me kyunki residual air hoti hai!",
-          "emotion": "💡"
+          "text": "Dekho, jab chest cavity ka volume BADHTA hai, to andar ka pressure GHATATA hai (Boyle's Law – Volume badhe to Pressure ghate). Jab pressure bahar se kam ho jaata hai, hawa bahar se andar aati hai. Ise INSPIRATION (saans andar lena) bolte hain!"
         },
         {
           "speaker": "raju",
-          "text": "Wow! Matlab lungs never truly empty! Sir ye sab volumes ka total kitna hota hai?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Wo hai Vital Capacity aur Total Lung Capacity! Vital Capacity = TV + IRV + ERV = 500 + 2500 + 1000 = 4000 mL (max air jo tum forcefully exhale kar sakte ho). Total Lung Capacity = VC + RV = 4000 + 1200 = 5200-6000 mL!",
-          "emotion": "🎯"
+          "text": "Achhaaaa! To ye Boyle's Law pe based hai! Physics ka concept biology me!"
         }
       ],
       "navigation": {
-        "next": "card_25_quiz_diaphragm",
-        "button_text": "Quiz time! ➔"
+        "next": "card_25_inspiration_muscles",
+        "button_text": "Next Card ➔"
       }
     },
     {
-      "card_id": "card_25_quiz_diaphragm",
-      "card_slug": "card_25_quiz_diaphragm",
-      "type": "quiz",
-      "concept_id": "diaphragm_movement_quiz",
-      "level": 1,
+      "card_id": "card_25_inspiration_muscles",
+      "card_slug": "card_25_inspiration_muscles",
+      "type": "chat",
+      "concept_id": "inspiration_diaphragm",
+      "level": 2,
       "progress": {
         "current": 25,
-        "total": 60
+        "total": 80
       },
-      "quiz_payload": {
-        "question": "During inspiration (inhalation), the diaphragm: (NEET 2018)",
-        "options": [
-          {
-            "id": "A",
-            "text": "Relaxes and moves upward (becomes more dome-shaped)"
-          },
-          {
-            "id": "B",
-            "text": "Contracts and moves downward (becomes flatter)"
-          },
-          {
-            "id": "C",
-            "text": "Remains stationary while ribs move"
-          },
-          {
-            "id": "D",
-            "text": "Moves upward and ribs move inward"
-          }
-        ],
-        "correct_option_id": "B",
-        "explanation": "During inspiration, the diaphragm CONTRACTS and moves DOWNWARD, becoming flatter (less dome-shaped). This increases the vertical dimension of the thoracic cavity, reducing pressure inside the lungs and allowing air to rush in. During expiration, the diaphragm relaxes and returns to its dome shape, moving upward. This is a very common NEET trap - students often confuse that contraction means moving up, but diaphragm contraction actually pulls it down!"
-      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Inspiration me 2 main muscles kaam karti hain: 1) Diaphragm – ye dome-shaped muscle hai jo pet aur chest ke beech hoti hai. Saans lete waqt ye CONTRACT hoti hai aur FLAT ho jaati hai, jisse chest cavity neeche ki taraf badh jaati hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab diaphragm contract hota hai to neeche jaata hai? Mujhe laga tha contract hone se upar aayega!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Yahin trap hai! Diaphragm dome shape me hai – contract hone pe flat hota hai – to neeche jaata hai, volume BADHTA hai! 2) External Intercostal Muscles – ye ribs ke beech hoti hain, contract hone pe ribs ko upar-bahar le jaati hain. Dono milke chest cavity ka volume badha dete hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "To Inspiration = Diaphragm flat + Ribs upar-bahar = Volume badha = Pressure gira = Hawa andar aayi!"
+        }
+      ],
       "navigation": {
-        "next": "card_26_quiz_tidal_volume",
-        "button_text": "Next Question (Q2/3) ➔"
+        "next": "card_26_expiration",
+        "button_text": "Next Card ➔"
       }
     },
     {
-      "card_id": "card_26_quiz_tidal_volume",
-      "card_slug": "card_26_quiz_tidal_volume",
-      "type": "quiz",
-      "concept_id": "tidal_volume_value_quiz",
-      "level": 1,
+      "card_id": "card_26_expiration",
+      "card_slug": "card_26_expiration",
+      "type": "chat",
+      "concept_id": "expiration_mechanism",
+      "level": 2,
       "progress": {
         "current": 26,
-        "total": 60
+        "total": 80
       },
-      "quiz_payload": {
-        "question": "The volume of air inspired or expired during normal quiet breathing is called: (Railway RRB 2019)",
-        "options": [
-          {
-            "id": "A",
-            "text": "Vital Capacity (about 4000 mL)"
-          },
-          {
-            "id": "B",
-            "text": "Tidal Volume (about 500 mL)"
-          },
-          {
-            "id": "C",
-            "text": "Residual Volume (about 1200 mL)"
-          },
-          {
-            "id": "D",
-            "text": "Inspiratory Reserve Volume (about 2500 mL)"
-          }
-        ],
-        "correct_option_id": "B",
-        "explanation": "Tidal Volume (TV) is the volume of air inspired or expired during normal quiet breathing, approximately 500 mL in a healthy adult. The term 'tidal' refers to the rhythmic in-and-out movement like ocean tides. Vital Capacity is the maximum air that can be forcefully exhaled (TV+IRV+ERV = ~4000 mL), Residual Volume is air remaining in lungs even after forceful expiration (~1200 mL), and IRV is extra air that can be inspired beyond tidal volume (~2500 mL)."
-      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ab Expiration (saans bahar nikalna) – ye normally ek PASSIVE process hai! Diaphragm aur external intercostal muscles RELAX hoti hain, diaphragm wapas dome shape me aa jaata hai, ribs neeche-andar aati hain, volume GHATATA hai, pressure BADHTA hai, aur hawa bahar nikal jaati hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab saans andar lena active hai par bahar nikalna passive?? Koi force nahi lagana padta?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Normal quiet breathing me Expiration passive hai – haan! Lekin jab tum exercise karte ho ya zor se phoonkte ho, tab FORCED EXPIRATION hoti hai jisme Internal Intercostal Muscles aur Abdominal Muscles actively contract hoti hain. Ye NEET ka direct question hai – 'Normal expiration is passive or active?'"
+        },
+        {
+          "speaker": "raju",
+          "text": "Internal intercostal!! Matlab external wale saans andar lene me aur internal wale zor se bahar nikalne me?"
+        }
+      ],
       "navigation": {
-        "next": "card_27_quiz_residual_volume",
-        "button_text": "Next Question (Q3/3) ➔"
+        "next": "card_27_quiz_mechanism_1",
+        "button_text": "Next Card ➔"
       }
     },
     {
-      "card_id": "card_27_quiz_residual_volume",
-      "card_slug": "card_27_quiz_residual_volume",
+      "card_id": "card_27_quiz_mechanism_1",
+      "card_slug": "card_27_quiz_mechanism_1",
       "type": "quiz",
-      "concept_id": "residual_volume_quiz",
-      "level": 1,
+      "concept_id": "breathing_mechanism_quiz",
+      "level": 2,
       "progress": {
         "current": 27,
-        "total": 60
+        "total": 80
       },
       "quiz_payload": {
-        "question": "Residual Volume is important because: (BPSC 2020)",
+        "question": "Inspiration के दौरान Diaphragm क्या करता है? (Q1/3)",
         "options": [
           {
             "id": "A",
-            "text": "It provides oxygen reserve during sleep"
+            "text": "Relax होकर dome shape में आ जाता है"
           },
           {
             "id": "B",
-            "text": "It prevents the lungs from collapsing completely"
+            "text": "Contract होकर flat हो जाता है, chest cavity का volume बढ़ता है"
           },
           {
             "id": "C",
-            "text": "It filters the incoming air"
+            "text": "Contract होकर ऊपर उठ जाता है"
           },
           {
             "id": "D",
-            "text": "It increases lung capacity during exercise"
+            "text": "Diaphragm breathing में कोई role नहीं निभाता"
           }
         ],
         "correct_option_id": "B",
-        "explanation": "Residual Volume (~1100-1200 mL) is the air that remains in the lungs even after maximum forceful expiration. It is crucial because it prevents the lungs from collapsing completely - if alveoli collapsed entirely, they would stick together and require enormous effort to re-inflate. This residual air keeps the alveoli partially inflated at all times, ensuring the lungs remain functional. It also allows continuous gas exchange between breaths and explains why lungs of deceased persons do not sink in water (forensic significance)."
+        "explanation": "Inspiration में Diaphragm CONTRACT होकर FLAT हो जाता है (नीचे आता है), जिससे thoracic cavity का volume बढ़ता है, pressure कम होता है, और बाहर की हवा अंदर आती है। Exam trap: students सोचते हैं contract = ऊपर, but dome shape flat होता है तो नीचे जाता है!"
       },
       "navigation": {
-        "next": "card_28_milestone_breathing_mechanism",
-        "button_text": "Check Answer ➔"
+        "next": "card_28_quiz_mechanism_2",
+        "button_text": "Check Answer & Continue ➔"
       }
     },
     {
-      "card_id": "card_28_milestone_breathing_mechanism",
-      "card_slug": "card_28_milestone_breathing_mechanism",
-      "type": "milestone",
-      "concept_id": "breathing_mechanism_complete",
-      "level": 1,
+      "card_id": "card_28_quiz_mechanism_2",
+      "card_slug": "card_28_quiz_mechanism_2",
+      "type": "quiz",
+      "concept_id": "breathing_mechanism_quiz",
+      "level": 2,
       "progress": {
         "current": 28,
-        "total": 60
+        "total": 80
       },
-      "milestone_payload": {
-        "title": "💨 MODULE 3 COMPLETED!",
-        "badge_emoji": "🫁",
-        "completed_topic": "Breathing Mechanism & Lung Volumes",
-        "xp_earned": 70,
-        "milestone_progress": "Module 3/8 Clear",
-        "motivational_quote": "Diaphragm down, ribs up - you've mastered the breathing mechanics! Pressure gradients are your friends now! 🌟"
+      "quiz_payload": {
+        "question": "Normal quiet breathing में Expiration कैसी process है? (Q2/3)",
+        "options": [
+          {
+            "id": "A",
+            "text": "Active process – Internal intercostal muscles contract होती हैं"
+          },
+          {
+            "id": "B",
+            "text": "Passive process – muscles relax होती हैं और elastic recoil होता है"
+          },
+          {
+            "id": "C",
+            "text": "Active process – Diaphragm और abdominal muscles contract होती हैं"
+          },
+          {
+            "id": "D",
+            "text": "Passive aur Active दोनों simultaneously"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Normal quiet expiration एक PASSIVE process है। Muscles relax होती हैं, lungs का elastic recoil होता है, volume घटता है, pressure बढ़ता है और हवा बाहर निकलती है। Forced expiration में Internal Intercostal और Abdominal muscles ACTIVELY contract होती हैं।"
       },
       "navigation": {
-        "next": "card_29_gas_exchange_intro",
-        "button_text": "Start Module 4: Gas Exchange ➔"
+        "next": "card_29_quiz_mechanism_3",
+        "button_text": "Check Answer & Continue ➔"
       }
     },
     {
-      "card_id": "card_29_gas_exchange_intro",
-      "card_slug": "card_29_gas_exchange_intro",
-      "type": "chat",
-      "concept_id": "gas_exchange_basic_concept",
-      "level": 1,
+      "card_id": "card_29_quiz_mechanism_3",
+      "card_slug": "card_29_quiz_mechanism_3",
+      "type": "quiz",
+      "concept_id": "breathing_mechanism_quiz",
+      "level": 2,
       "progress": {
         "current": 29,
-        "total": 60
+        "total": 80
       },
-      "messages": [
-        {
-          "speaker": "aman",
-          "text": "Ab dekhte hain ki oxygen aur carbon dioxide ka actual exchange kaise hota hai! Raju, agar ek glass me perfume kholo to poore kamre me smell kaise failti hai?",
-          "emotion": "🌸"
-        },
-        {
-          "speaker": "raju",
-          "text": "Wo apne aap fail jaati hai sir... jahan zyada concentration hoti hai wahan se kam concentration wale area me jaati hai!"
-        },
-        {
-          "speaker": "aman",
-          "text": "Perfect! Isko Diffusion kehte hain - molecules automatically move from high concentration to low concentration! Exactly yahi principle gas exchange me kaam karta hai lungs me aur tissues me!",
-          "emotion": "↔️"
-        },
-        {
-          "speaker": "raju",
-          "text": "Matlab oxygen jahan zyada hai wahan se kam wale area me jaati hai?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Exactly! Lungs me oxygen concentration zyada hai (atmospheric air me 21%), blood me kam - to oxygen blood me aa jati hai! Blood me CO2 zyada hai, alveoli me kam - to CO2 alveoli me chali jaati hai!",
-          "emotion": "🔄"
-        },
-        {
-          "speaker": "raju",
-          "text": "Sir ye concentration ko measure kaise karte hain gases ka?"
-        }
-      ],
+      "quiz_payload": {
+        "question": "Breathing mechanism किस physical law पर आधारित है? (Q3/3)",
+        "options": [
+          {
+            "id": "A",
+            "text": "Newton's Law"
+          },
+          {
+            "id": "B",
+            "text": "Boyle's Law (Volume ↑ = Pressure ↓)"
+          },
+          {
+            "id": "C",
+            "text": "Ohm's Law"
+          },
+          {
+            "id": "D",
+            "text": "Henry's Law"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Breathing Boyle's Law पर based है – 'At constant temperature, volume and pressure are inversely proportional.' Chest cavity का volume बढ़ने पर intrapulmonary pressure कम होता है और हवा अंदर आती है। Henry's Law gas solubility से related है जो gas transport में use होता है।"
+      },
       "navigation": {
-        "next": "card_30_partial_pressure",
-        "button_text": "Important NEET concept! ➔"
+        "next": "card_30_milestone_mod3",
+        "button_text": "Check Answer & Continue ➔"
       }
     },
     {
-      "card_id": "card_30_partial_pressure",
-      "card_slug": "card_30_partial_pressure",
-      "type": "chat",
-      "concept_id": "partial_pressure_concept",
-      "level": 1,
+      "card_id": "card_30_milestone_mod3",
+      "card_slug": "card_30_milestone_mod3",
+      "type": "milestone",
+      "concept_id": "mod3_complete",
+      "level": 2,
       "progress": {
         "current": 30,
-        "total": 60
+        "total": 80
       },
-      "messages": [
-        {
-          "speaker": "aman",
-          "text": "Gases ka concentration Partial Pressure se measure karte hain - unit hai mm Hg (millimeters of Mercury)! Atmospheric air me oxygen ka partial pressure pO2 = 159 mm Hg hai, alveoli me pO2 = 104 mm Hg!",
-          "emotion": "📊"
-        },
-        {
-          "speaker": "raju",
-          "text": "Partial pressure matlab kya sir exactly?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Agar gas mixture hai to har gas apna pressure contribute karti hai - wo uska partial pressure hai! Air me 21% oxygen hai to total atmospheric pressure (760 mm Hg) ka 21% oxygen ka partial pressure hai!",
-          "emotion": "💡"
-        },
-        {
-          "speaker": "raju",
-          "text": "Achha! To alveoli me oxygen ka pressure 104 mm Hg, aur blood me?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Deoxygenated blood (pulmonary artery me) me pO2 = 40 mm Hg! Dekho difference: Alveoli = 104, Blood = 40 - oxygen automatically 104 se 40 ki taraf move karegi diffusion se! NEET me ye gradient values puchte hain!",
-          "emotion": "🎯"
-        },
-        {
-          "speaker": "raju",
-          "text": "Aur carbon dioxide sir? Uska bhi gradient hoga opposite?"
-        }
-      ],
+      "milestone_payload": {
+        "title": "MODULE 3 COMPLETED! 🎉",
+        "badge_emoji": "💨",
+        "completed_topic": "Lungs Structure & Mechanism of Breathing",
+        "xp_earned": 75,
+        "milestone_progress": "Module 3/9 Clear",
+        "motivational_quote": "Diaphragm, Intercostal muscles, Boyle's Law – sab clear! Ab tum breathing mechanism kisi ko bhi samjha sakte ho!"
+      },
       "navigation": {
-        "next": "card_31_co2_gradient",
-        "button_text": "Bilkul opposite! ➔"
+        "next": "card_31_respiratory_volumes_intro",
+        "button_text": "Start Next Module ➔"
       }
     },
     {
-      "card_id": "card_31_co2_gradient",
-      "card_slug": "card_31_co2_gradient",
+      "card_id": "card_31_respiratory_volumes_intro",
+      "card_slug": "card_31_respiratory_volumes_intro",
       "type": "chat",
-      "concept_id": "carbon_dioxide_gradient",
-      "level": 1,
+      "concept_id": "respiratory_volumes",
+      "level": 3,
       "progress": {
         "current": 31,
-        "total": 60
+        "total": 80
       },
       "messages": [
         {
           "speaker": "aman",
-          "text": "Haan! Deoxygenated blood me pCO2 = 45 mm Hg, alveoli me pCO2 = 40 mm Hg - to CO2 blood se alveoli me move karti hai! Atmospheric air me pCO2 bahut kam hai - sirf 0.3 mm Hg!",
-          "emotion": "↗️"
+          "text": "Ab ek BPSC aur NEET ka most scoring topic – Respiratory Volumes aur Capacities! Socho, tum normally saans lete ho to kitni hawa andar-bahar hoti hai?"
         },
         {
           "speaker": "raju",
-          "text": "Sir ye to lungs me hua exchange... par tissues me kaise hota hai jahan cells hain?"
+          "text": "Sir shayad thodi si hawa? Pata nahi kitni... 1 litre?"
         },
         {
           "speaker": "aman",
-          "text": "Tissues me reverse hota hai! Oxygenated blood me pO2 = 95 mm Hg, tissue cells me pO2 = 40 mm Hg (kam kyunki oxygen use ho rahi hai) - to oxygen blood se tissues me jaati hai!",
-          "emotion": "🔄"
+          "text": "Normal quiet breathing me ek baar me lagbhag 500 mL hawa andar-bahar hoti hai. Ise Tidal Volume (TV) bolte hain. Yaad rakho – 'Tide' matlab samundar ki lahar – jo roz aati-jaati rehti hai – waise hi normal saans me hawa!"
         },
         {
           "speaker": "raju",
-          "text": "Aur CO2 tissues se blood me aayegi?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Perfect! Tissue cells me pCO2 = 45 mm Hg (kyunki metabolism me CO2 ban rahi hai), blood me pCO2 = 40 mm Hg - to CO2 tissues se blood me aa jati hai! SSC me do jagah gas exchange yaad rakho: Lungs aur Tissues!",
-          "emotion": "💯"
-        },
-        {
-          "speaker": "raju",
-          "text": "Sir ab ye oxygen blood me aakar kaise travel karti hai? Wo to gas hai, pani me to dissolve nahi hogi properly!"
+          "text": "500 mL = Tidal Volume! Tide = samundar ki lahar = roz ka saans. Accha trick hai Sir!"
         }
       ],
       "navigation": {
-        "next": "card_32_hemoglobin_intro",
-        "button_text": "Genius doubt! ➔"
+        "next": "card_32_irv_erv",
+        "button_text": "Next Card ➔"
       }
     },
     {
-      "card_id": "card_32_hemoglobin_intro",
-      "card_slug": "card_32_hemoglobin_intro",
+      "card_id": "card_32_irv_erv",
+      "card_slug": "card_32_irv_erv",
       "type": "chat",
-      "concept_id": "hemoglobin_oxygen_transport",
-      "level": 1,
+      "concept_id": "irv_erv_volumes",
+      "level": 3,
       "progress": {
         "current": 32,
-        "total": 60
+        "total": 80
       },
       "messages": [
         {
           "speaker": "aman",
-          "text": "Ekdum sahi! Oxygen ka sirf 3% dissolve hota hai blood plasma me - baaki 97% Hemoglobin ke saath bind hokar jaata hai! Hemoglobin ek special protein hai red blood cells (RBCs) me jo oxygen carry karta hai!",
-          "emotion": "🔴"
+          "text": "Ab agar tum normal saans ke baad aur EXTRA hawa andar kheencho – jaise deep breath – to wo extra amount Inspiratory Reserve Volume (IRV) hai – lagbhag 2500-3000 mL! Aur agar normal saans bahar nikalne ke baad aur EXTRA zor se bahar nikalo to wo Expiratory Reserve Volume (ERV) hai – lagbhag 1000-1100 mL!"
         },
         {
           "speaker": "raju",
-          "text": "Hemoglobin wo red colour wala protein hai na jo blood ko red banata hai?"
+          "text": "Matlab IRV = extra andar kheenchna, ERV = extra bahar nikalna. Par sir sab hawa nikal jaati hai kya lungs se?"
         },
         {
           "speaker": "aman",
-          "text": "Bilkul! Hemoglobin me Iron (Fe) hota hai jo oxygen se reversibly bind karta hai! Ek hemoglobin molecule 4 oxygen molecules bind kar sakta hai - jab bind hota hai to Oxyhemoglobin banta hai (bright red colour)!",
-          "emotion": "⚗️"
+          "text": "Nahi! Aur yahin sabse bada concept hai – kitna bhi zor se hawa nikalo, kuch hawa HAMESHA lungs me reh jaati hai. Ise Residual Volume (RV) bolte hain – lagbhag 1100-1200 mL. Ye hawa kabhi bahar nahi aati! Agar aaye to lungs collapse ho jayenge!"
         },
         {
           "speaker": "raju",
-          "text": "Reversibly matlab chodh bhi sakta hai?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Haan! Lungs me high pO2 hai to hemoglobin oxygen pakad leta hai, tissues me low pO2 hai to oxygen release kar deta hai! NEET equation: Hb + 4O2 ⇌ Hb(O2)4 (Oxyhemoglobin)! Ye reversible binding hi transport possible banati hai!",
-          "emotion": "🔄"
-        },
-        {
-          "speaker": "raju",
-          "text": "Wow! Aur carbon dioxide kaise transport hoti hai sir?"
+          "text": "Hain?? Matlab hum kabhi lungs puri tarah khali nahi kar sakte? Ye to surprising hai!"
         }
       ],
       "navigation": {
-        "next": "card_33_co2_transport",
-        "button_text": "CO2 transport interesting hai! ➔"
+        "next": "card_33_capacities",
+        "button_text": "Next Card ➔"
       }
     },
     {
-      "card_id": "card_33_co2_transport",
-      "card_slug": "card_33_co2_transport",
+      "card_id": "card_33_capacities",
+      "card_slug": "card_33_capacities",
       "type": "chat",
-      "concept_id": "carbon_dioxide_transport_mechanism",
-      "level": 1,
+      "concept_id": "respiratory_capacities",
+      "level": 3,
       "progress": {
         "current": 33,
-        "total": 60
+        "total": 80
       },
       "messages": [
         {
           "speaker": "aman",
-          "text": "CO2 transport teen tarike se hota hai Raju! (1) 7% dissolved form me plasma me, (2) 23% hemoglobin se bind hokar (Carbaminohemoglobin), aur (3) 70% bicarbonate ions (HCO3-) ke form me!",
-          "emotion": "3️⃣"
+          "text": "Ab Capacities = 2 ya zyada Volumes ka combination! 1) Vital Capacity (VC) = TV + IRV + ERV = lagbhag 3500-4800 mL. Ye maximum hawa hai jo ek insaan ek baar me andar-bahar kar sakta hai. 2) Total Lung Capacity (TLC) = VC + RV = lagbhag 5000-6000 mL!"
         },
         {
           "speaker": "raju",
-          "text": "Bicarbonate?? CO2 ko convert kar dete hain kisi aur form me?"
+          "text": "Sir ye sab numbers yaad kaise rahenge? TV, IRV, ERV, RV, VC, TLC..."
         },
         {
           "speaker": "aman",
-          "text": "Haan! RBCs me ek enzyme hai Carbonic Anhydrase - ye CO2 ko paani se react karakar carbonic acid banata hai, jo phir bicarbonate ions me convert ho jata hai: CO2 + H2O ⇌ H2CO3 ⇌ H+ + HCO3-!",
-          "emotion": "⚗️"
+          "text": "Ek trick lo: TV=500, IRV=3000, ERV=1100, RV=1200 yaad rakho. Aur do aur Capacities hain – Inspiratory Capacity (IC) = TV + IRV. Functional Residual Capacity (FRC) = ERV + RV. FRC wo hawa hai jo normal saans bahar nikalne ke baad lungs me bachti hai!"
         },
         {
           "speaker": "raju",
-          "text": "Sir ye enzyme ka naam - Carbonic Anhydrase - ye NEET me aayega?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Pakka! NEET favourite enzyme hai! Yaad rakho: Carbonic Anhydrase catalyzes CO2 + H2O reaction, present in RBCs! Lungs me reverse reaction hota hai - HCO3- wapas CO2 banta hai aur exhale ho jata hai!",
-          "emotion": "🎯"
+          "text": "FRC matlab ERV + RV... aur IC = TV + IRV. Sir ye Spirometer se measure hota hai na?"
         }
       ],
       "navigation": {
-        "next": "card_34_quiz_partial_pressure",
-        "button_text": "Quiz time! ➔"
+        "next": "card_34_spirometer_dead_space",
+        "button_text": "Next Card ➔"
       }
     },
     {
-      "card_id": "card_34_quiz_partial_pressure",
-      "card_slug": "card_34_quiz_partial_pressure",
-      "type": "quiz",
-      "concept_id": "partial_pressure_gradient_quiz",
-      "level": 1,
+      "card_id": "card_34_spirometer_dead_space",
+      "card_slug": "card_34_spirometer_dead_space",
+      "type": "chat",
+      "concept_id": "spirometer_residual",
+      "level": 3,
       "progress": {
         "current": 34,
-        "total": 60
+        "total": 80
       },
-      "quiz_payload": {
-        "question": "Oxygen diffuses from alveoli into blood because: (NEET 2020)",
-        "options": [
-          {
-            "id": "A",
-            "text": "pO2 in alveoli (104 mm Hg) is higher than in deoxygenated blood (40 mm Hg)"
-          },
-          {
-            "id": "B",
-            "text": "pO2 in blood is higher than in alveoli"
-          },
-          {
-            "id": "C",
-            "text": "CO2 pushes oxygen into blood"
-          },
-          {
-            "id": "D",
-            "text": "Active transport pumps oxygen into blood"
-          }
-        ],
-        "correct_option_id": "A",
-        "explanation": "Oxygen diffuses from alveoli into blood because the partial pressure of oxygen (pO2) in alveoli is 104 mm Hg, which is HIGHER than the pO2 in deoxygenated blood coming from tissues (40 mm Hg). Diffusion occurs from high to low concentration/pressure gradient. This is a passive process requiring no energy. The pressure gradient of 104 - 40 = 64 mm Hg drives oxygen into the blood. This fundamental concept is frequently tested in NEET!"
-      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Haan! Spirometer se TV, IRV, ERV aur Vital Capacity measure hoti hai. Par yahin NEET ka TRAP hai – Residual Volume (RV) Spirometer se measure NAHI hota! Kyunki RV kabhi bahar aata hi nahi! Isliye TLC aur FRC bhi directly spirometer se nahi milte!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Oh!! To RV measure karne ke liye koi aur method use hoga?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan – Helium dilution method ya Body Plethysmography se RV measure hota hai. Aur Dead Space volume (150 mL) yaad hai? Jo conducting part me hawa rehti hai jahan gas exchange nahi hota. Alveolar Ventilation = Respiratory Rate × (TV - Dead Space) = 12 × (500-150) = 4200 mL/min!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Ye formula important lagta hai Sir! Alveolar Ventilation = RR × (TV - Dead Space)!"
+        }
+      ],
       "navigation": {
-        "next": "card_35_quiz_hemoglobin",
-        "button_text": "Next Question (Q2/3) ➔"
+        "next": "card_35_quiz_volumes_1",
+        "button_text": "Next Card ➔"
       }
     },
     {
-      "card_id": "card_35_quiz_hemoglobin",
-      "card_slug": "card_35_quiz_hemoglobin",
+      "card_id": "card_35_quiz_volumes_1",
+      "card_slug": "card_35_quiz_volumes_1",
       "type": "quiz",
-      "concept_id": "hemoglobin_oxygen_binding_quiz",
-      "level": 1,
+      "concept_id": "volumes_capacities_quiz",
+      "level": 3,
       "progress": {
         "current": 35,
-        "total": 60
+        "total": 80
       },
       "quiz_payload": {
-        "question": "Approximately what percentage of oxygen is transported by hemoglobin in red blood cells? (SSC CGL 2021)",
+        "question": "निम्नलिखित में से कौन Spirometer से measure नहीं होता? (Q1/3)",
         "options": [
           {
             "id": "A",
-            "text": "About 20%"
+            "text": "Tidal Volume"
           },
           {
             "id": "B",
-            "text": "About 50%"
+            "text": "Vital Capacity"
           },
           {
             "id": "C",
-            "text": "About 75%"
+            "text": "Residual Volume"
           },
           {
             "id": "D",
-            "text": "About 97%"
+            "text": "Expiratory Reserve Volume"
           }
         ],
-        "correct_option_id": "D",
-        "explanation": "Approximately 97% of oxygen is transported bound to hemoglobin in red blood cells as oxyhemoglobin (Hb·O2). Only about 3% of oxygen is dissolved directly in blood plasma. Hemoglobin's iron-containing heme groups reversibly bind oxygen - picking it up in the lungs (high pO2) and releasing it in tissues (low pO2). One hemoglobin molecule can carry 4 oxygen molecules. This high percentage transport via hemoglobin is essential for meeting body's oxygen demands."
+        "correct_option_id": "C",
+        "explanation": "Residual Volume (RV) वह हवा है जो maximum expiration के बाद भी lungs में रहती है – यह बाहर नहीं आती, इसलिए Spirometer से measure नहीं होती। इसी कारण TLC और FRC भी directly spirometer से measure नहीं होते। NEET repeated question!"
       },
       "navigation": {
-        "next": "card_36_quiz_co2_transport",
-        "button_text": "Next Question (Q3/3) ➔"
+        "next": "card_36_quiz_volumes_2",
+        "button_text": "Check Answer & Continue ➔"
       }
     },
     {
-      "card_id": "card_36_quiz_co2_transport",
-      "card_slug": "card_36_quiz_co2_transport",
+      "card_id": "card_36_quiz_volumes_2",
+      "card_slug": "card_36_quiz_volumes_2",
       "type": "quiz",
-      "concept_id": "co2_transport_bicarbonate_quiz",
-      "level": 1,
+      "concept_id": "volumes_capacities_quiz",
+      "level": 3,
       "progress": {
         "current": 36,
-        "total": 60
+        "total": 80
       },
       "quiz_payload": {
-        "question": "The enzyme Carbonic Anhydrase, found in RBCs, catalyzes which reaction during CO2 transport? (NEET 2019)",
+        "question": "Vital Capacity (VC) किसके बराबर है? (Q2/3)",
         "options": [
           {
             "id": "A",
-            "text": "O2 + Hb → HbO2"
+            "text": "TV + IRV"
           },
           {
             "id": "B",
-            "text": "CO2 + H2O ⇌ H2CO3"
+            "text": "TV + IRV + ERV"
           },
           {
             "id": "C",
-            "text": "Glucose + O2 → CO2 + H2O"
+            "text": "TV + IRV + ERV + RV"
           },
           {
             "id": "D",
-            "text": "CO2 → CO + O"
+            "text": "ERV + RV"
           }
         ],
         "correct_option_id": "B",
-        "explanation": "Carbonic Anhydrase catalyzes the reversible reaction: CO2 + H2O ⇌ H2CO3 (carbonic acid), which then dissociates into H+ and HCO3- (bicarbonate ions). This enzyme in RBCs enables about 70% of CO2 to be transported as bicarbonate ions in blood plasma. In tissues, it converts CO2 to bicarbonate for transport; in lungs, it reverses the reaction to release CO2 for exhalation. This is one of the fastest enzymes known and a NEET favorite topic!"
+        "explanation": "Vital Capacity = TV + IRV + ERV (500 + 3000 + 1100 = 4600 mL approx). यह maximum हवा है जो एक व्यक्ति forceful inspiration के बाद forceful expiration से बाहर निकाल सकता है। Option C = Total Lung Capacity (TLC), Option D = Functional Residual Capacity (FRC)।"
       },
       "navigation": {
-        "next": "card_37_milestone_gas_exchange",
-        "button_text": "Check Answer ➔"
+        "next": "card_37_quiz_volumes_3",
+        "button_text": "Check Answer & Continue ➔"
       }
     },
     {
-      "card_id": "card_37_milestone_gas_exchange",
-      "card_slug": "card_37_milestone_gas_exchange",
-      "type": "milestone",
-      "concept_id": "gas_exchange_transport_complete",
-      "level": 1,
+      "card_id": "card_37_quiz_volumes_3",
+      "card_slug": "card_37_quiz_volumes_3",
+      "type": "quiz",
+      "concept_id": "volumes_capacities_quiz",
+      "level": 3,
       "progress": {
         "current": 37,
-        "total": 60
+        "total": 80
       },
-      "milestone_payload": {
-        "title": "🔄 MODULE 4 COMPLETED!",
-        "badge_emoji": "⚗️",
-        "completed_topic": "Gas Exchange & Transport",
-        "xp_earned": 70,
-        "milestone_progress": "Module 4/8 Clear",
-        "motivational_quote": "Partial pressures, hemoglobin binding, carbonic anhydrase - you're now fluent in the language of gas transport! 🎯"
+      "quiz_payload": {
+        "question": "Anatomical Dead Space का approximate volume कितना होता है? (Q3/3)",
+        "options": [
+          {
+            "id": "A",
+            "text": "500 mL"
+          },
+          {
+            "id": "B",
+            "text": "1200 mL"
+          },
+          {
+            "id": "C",
+            "text": "150 mL"
+          },
+          {
+            "id": "D",
+            "text": "2500 mL"
+          }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Anatomical Dead Space = approximately 150 mL। यह conducting zone (nose to terminal bronchioles) का volume है जहाँ gas exchange नहीं होता। Alveolar Ventilation = RR × (TV - Dead Space) = 12 × (500-150) = 4200 mL/min।"
       },
       "navigation": {
-        "next": "card_38_respiratory_control_intro",
-        "button_text": "Start Module 5: Control of Respiration ➔"
+        "next": "card_38_milestone_mod4",
+        "button_text": "Check Answer & Continue ➔"
       }
     },
     {
-      "card_id": "card_38_respiratory_control_intro",
-      "card_slug": "card_38_respiratory_control_intro",
-      "type": "chat",
-      "concept_id": "respiratory_control_basic",
-      "level": 1,
+      "card_id": "card_38_milestone_mod4",
+      "card_slug": "card_38_milestone_mod4",
+      "type": "milestone",
+      "concept_id": "mod4_complete",
+      "level": 3,
       "progress": {
         "current": 38,
-        "total": 60
+        "total": 80
       },
-      "messages": [
-        {
-          "speaker": "aman",
-          "text": "Raju, tumne kabhi socha ki saaans automatic kaise chalta hai? Sote waqt, padhai karte waqt - hamesha automatic! Koi saanso ko control kar raha hai ya khud se hota hai?",
-          "emotion": "🤔"
-        },
-        {
-          "speaker": "raju",
-          "text": "Haan sir! Main to saanso ke baare me sochta bhi nahi, phir bhi chalti rehti hain... koi automatic system hoga?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Bilkul! Brain me ek special Respiratory Center hai jo automatic breathing control karta hai - ye Medulla Oblongata aur Pons me hota hai! Yaad hai medulla? Hindbrain ka part tha jo vital functions control karta hai!",
-          "emotion": "🧠"
-        },
-        {
-          "speaker": "raju",
-          "text": "Haan sir! Medulla heart beat bhi control karta hai! To ye breathing bhi automatic control kar deta hai?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Exactly! Medulla me Dorsal Respiratory Group (DRG) aur Ventral Respiratory Group (VRG) hote hain - ye muscles ko signals bhejte hain breathe karne ke liye! NEET me puchte hain: Primary respiratory center located in? Medulla Oblongata!",
-          "emotion": "🎯"
-        },
-        {
-          "speaker": "raju",
-          "text": "Sir par kaise pata chalta hai ki ab saaans leni hai ya nahi? Koi signal to hoga?"
-        }
-      ],
+      "milestone_payload": {
+        "title": "MODULE 4 COMPLETED! 🎉",
+        "badge_emoji": "📊",
+        "completed_topic": "Respiratory Volumes & Capacities",
+        "xp_earned": 100,
+        "milestone_progress": "Module 4/9 Clear",
+        "motivational_quote": "TV, IRV, ERV, RV, VC, TLC, IC, FRC – sab clear! Spirometry ke saare values ab tumhare dimag me hain!"
+      },
       "navigation": {
-        "next": "card_39_chemoreceptors",
-        "button_text": "Sensors hain body me! ➔"
+        "next": "card_39_gas_exchange_intro",
+        "button_text": "Start Next Module ➔"
       }
     },
     {
-      "card_id": "card_39_chemoreceptors",
-      "card_slug": "card_39_chemoreceptors",
+      "card_id": "card_39_gas_exchange_intro",
+      "card_slug": "card_39_gas_exchange_intro",
       "type": "chat",
-      "concept_id": "chemoreceptors_function",
-      "level": 1,
+      "concept_id": "gas_exchange_concept",
+      "level": 3,
       "progress": {
         "current": 39,
-        "total": 60
+        "total": 80
       },
       "messages": [
         {
           "speaker": "aman",
-          "text": "Body me Chemoreceptors hote hain jo blood me gases ka level monitor karte hain! Do types: Central chemoreceptors (medulla me) aur Peripheral chemoreceptors (carotid bodies aur aortic bodies me - major blood vessels me)!",
-          "emotion": "📡"
+          "text": "Ab sabse crucial part – Gas Exchange! Socho, oxygen alveoli me pahunchi, par blood me kaise jayegi? Iska jawab hai – Diffusion! Gas hamesha HIGH pressure se LOW pressure ki taraf jaati hai. Isko partial pressure bolte hain!"
         },
         {
           "speaker": "raju",
-          "text": "Ye kya detect karte hain sir exactly?"
+          "text": "Partial pressure kya hota hai Sir? Ye to Physics jaisa lag raha hai!"
         },
         {
           "speaker": "aman",
-          "text": "Mainly CO2 level aur H+ ions (pH)! Jab blood me CO2 badhta hai (jaise exercise me), to H+ ions badhte hain, pH kam hota hai (acidic) - chemoreceptors ye detect karte hain aur respiratory center ko signal bhejte hain!",
-          "emotion": "⚗️"
+          "text": "Simple hai – hawa me bahut saari gases hain (N₂, O₂, CO₂ etc.). Har gas ka apna 'share' of total pressure hota hai – usi ko partial pressure bolte hain. Jaise atmospheric pressure 760 mmHg hai, to O₂ ka partial pressure (pO₂) = 760 × 21% = approx 159 mmHg!"
         },
         {
           "speaker": "raju",
-          "text": "Phir respiratory center kya karta hai?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Breathing rate badhata hai! Jaise running karte waqt zyada CO2 banta hai, to tez-tez saanso aati hain CO2 nikalne ke liye! BPSC trap: Primary stimulus for breathing is CO2 increase, NOT oxygen decrease!",
-          "emotion": "🏃"
-        },
-        {
-          "speaker": "raju",
-          "text": "Hain?? Oxygen kam hone se nahi, CO2 badhne se breathing fast hoti hai?"
+          "text": "Achhaaaa! Matlab har gas ka apna alag pressure contribution hai!"
         }
       ],
       "navigation": {
-        "next": "card_40_co2_primary_stimulus",
-        "button_text": "Counter-intuitive hai! ➔"
+        "next": "card_40_partial_pressures_table",
+        "button_text": "Next Card ➔"
       }
     },
     {
-      "card_id": "card_40_co2_primary_stimulus",
-      "card_slug": "card_40_co2_primary_stimulus",
+      "card_id": "card_40_partial_pressures_table",
+      "card_slug": "card_40_partial_pressures_table",
       "type": "chat",
-      "concept_id": "co2_primary_respiratory_stimulus",
-      "level": 1,
+      "concept_id": "partial_pressure_values",
+      "level": 3,
       "progress": {
         "current": 40,
-        "total": 60
+        "total": 80
       },
       "messages": [
         {
           "speaker": "aman",
-          "text": "Haan! CO2 ka increase sabse powerful stimulus hai breathing ke liye! Kyunki CO2 paani se milkar carbonic acid banata hai jo pH kam karta hai - chemoreceptors pH change ko bahut sensitively detect karte hain!",
-          "emotion": "🧪"
+          "text": "Ab key values yaad karo – Alveoli me: pO₂ = 104 mmHg, pCO₂ = 40 mmHg. Deoxygenated blood me (pulmonary artery se aaya): pO₂ = 40 mmHg, pCO₂ = 45 mmHg. Ab batao, O₂ kidhar se kidhar jayegi?"
         },
         {
           "speaker": "raju",
-          "text": "To oxygen ka level matter nahi karta?"
+          "text": "High se low ki taraf... to O₂ alveoli (104) se blood (40) me jayegi! Aur CO₂ blood (45) se alveoli (40) me jayegi!"
         },
         {
           "speaker": "aman",
-          "text": "Matter karta hai par secondary stimulus hai! Jab oxygen level bahut zyada kam ho jaye (hypoxia - below 60 mm Hg pO2), tab peripheral chemoreceptors activate hote hain! Normal conditions me CO2 hi main controller hai!",
-          "emotion": "💡"
+          "text": "Ekdum perfect! Ye diffusion gradient ke basis pe hota hai. O₂ ka gradient zyada hai (104-40 = 64 mmHg) aur CO₂ ka gradient kam hai (45-40 = 5 mmHg). Par fir bhi CO₂ efficiently diffuse hoti hai kyunki CO₂ ki solubility O₂ se 20-25 times zyada hai!"
         },
         {
           "speaker": "raju",
-          "text": "Sir agar main force karke bahut zyada deep breathing karun to kya hoga?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Hyperventilation ho jayegi - blood me CO2 level bahut kam ho jayega, dizziness aa sakti hai! Kyunki CO2 kam hone se blood alkaline ho jata hai (respiratory alkalosis)! SSC me ask karte hain: Excessive breathing causes? Respiratory alkalosis!",
-          "emotion": "😵"
+          "text": "Wow! CO₂ ki solubility zyada hai isliye kam gradient me bhi kaam ho jaata hai! Ye to exam me confuse karega!"
         }
       ],
       "navigation": {
-        "next": "card_41_breathing_rate_factors",
-        "button_text": "Aur factors bhi hain! ➔"
+        "next": "card_41_diffusion_membrane",
+        "button_text": "Next Card ➔"
       }
     },
     {
-      "card_id": "card_41_breathing_rate_factors",
-      "card_slug": "card_41_breathing_rate_factors",
+      "card_id": "card_41_diffusion_membrane",
+      "card_slug": "card_41_diffusion_membrane",
       "type": "chat",
-      "concept_id": "factors_affecting_breathing_rate",
-      "level": 1,
+      "concept_id": "diffusion_membrane",
+      "level": 3,
       "progress": {
         "current": 41,
-        "total": 60
+        "total": 80
       },
       "messages": [
         {
           "speaker": "aman",
-          "text": "Breathing rate kai factors se affect hoti hai - Exercise (increase), Emotion (fear/excitement increase karta hai), Body temperature (fever me increase), Age (children ki faster hoti hai), aur Altitude (high altitude pe faster)!",
-          "emotion": "⛰️"
+          "text": "Gas exchange jo hota hai wo ek thin membrane ke through hota hai jise Respiratory Membrane ya Diffusion Membrane bolte hain. Ye 3 layers se bani hoti hai: 1) Alveolar epithelium (Squamous), 2) Shared basement membrane, 3) Capillary endothelium. Total thickness sirf 0.2 μm!"
         },
         {
           "speaker": "raju",
-          "text": "High altitude pe kyun sir? Oxygen kam hoti hai wahan?"
+          "text": "0.2 micrometer!! Ye to bahut hi patli hai! Itni patli kyu chahiye?"
         },
         {
           "speaker": "aman",
-          "text": "Exactly! High altitude (jaise Ladakh, Himalayas) pe atmospheric pressure kam hota hai, isliye available oxygen bhi kam - chemoreceptors activate hote hain aur breathing fast ho jati hai compensate karne ke liye!",
-          "emotion": "🏔️"
+          "text": "Kyunki diffusion rate thickness ke inversely proportional hai – jitni patli membrane, utna fast gas exchange! Aur diffusion rate surface area ke directly proportional hai – isliye 300 million alveoli hai (100 m² surface area). NEET me Fick's Law of Diffusion se related question aata hai!"
         },
         {
           "speaker": "raju",
-          "text": "Sir normal breathing rate kitni hoti hai adult me?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Normal adult resting breathing rate: 12-16 breaths per minute! Newborn babies: 30-40 breaths/min! Railway aur SSC me direct number puchte hain - Normal respiratory rate in adult? 12-16/min!",
-          "emotion": "📊"
+          "text": "Fick's Law matlab – Rate of diffusion ∝ Surface Area × Pressure Difference / Thickness?"
         }
       ],
       "navigation": {
-        "next": "card_42_quiz_respiratory_center",
-        "button_text": "Quiz time! ➔"
+        "next": "card_42_quiz_gasex_1",
+        "button_text": "Next Card ➔"
       }
     },
     {
-      "card_id": "card_42_quiz_respiratory_center",
-      "card_slug": "card_42_quiz_respiratory_center",
+      "card_id": "card_42_quiz_gasex_1",
+      "card_slug": "card_42_quiz_gasex_1",
       "type": "quiz",
-      "concept_id": "respiratory_center_location_quiz",
-      "level": 1,
+      "concept_id": "gas_exchange_quiz",
+      "level": 3,
       "progress": {
         "current": 42,
-        "total": 60
+        "total": 80
       },
       "quiz_payload": {
-        "question": "The primary respiratory center that controls automatic breathing is located in: (NEET 2018)",
+        "question": "CO₂ का diffusion gradient O₂ से कम होने के बावजूद CO₂ efficiently diffuse क्यों हो जाती है? (Q1/3)",
         "options": [
           {
             "id": "A",
-            "text": "Cerebrum"
+            "text": "CO₂ का molecular weight कम है"
           },
           {
             "id": "B",
-            "text": "Cerebellum"
+            "text": "CO₂ की solubility O₂ से 20-25 गुना अधिक है"
           },
           {
             "id": "C",
-            "text": "Medulla Oblongata"
+            "text": "CO₂ active transport से जाती है"
           },
           {
             "id": "D",
-            "text": "Hypothalamus"
+            "text": "Alveolar membrane CO₂ के लिए अधिक permeable नहीं है"
           }
         ],
-        "correct_option_id": "C",
-        "explanation": "The primary respiratory center is located in the Medulla Oblongata of the hindbrain. It contains the Dorsal Respiratory Group (DRG) and Ventral Respiratory Group (VRG) that generate the basic rhythm of breathing and send signals to respiratory muscles. The Pons has additional regulatory centers (Pneumotaxic and Apneustic centers) that modify the rhythm. The Medulla also houses chemoreceptors sensitive to CO2 and H+ levels in cerebrospinal fluid."
+        "correct_option_id": "B",
+        "explanation": "CO₂ की solubility (in plasma/water) O₂ से 20-25 times अधिक है। इसलिए कम pressure gradient (5 mmHg) होने के बावजूद CO₂ rapidly diffuse हो जाती है। Gas exchange purely diffusion-based है, कोई active transport नहीं। NEET & BPSC repeated concept!"
       },
       "navigation": {
-        "next": "card_43_quiz_primary_stimulus",
-        "button_text": "Next Question (Q2/3) ➔"
+        "next": "card_43_quiz_gasex_2",
+        "button_text": "Check Answer & Continue ➔"
       }
     },
     {
-      "card_id": "card_43_quiz_primary_stimulus",
-      "card_slug": "card_43_quiz_primary_stimulus",
+      "card_id": "card_43_quiz_gasex_2",
+      "card_slug": "card_43_quiz_gasex_2",
       "type": "quiz",
-      "concept_id": "breathing_stimulus_quiz",
-      "level": 1,
+      "concept_id": "gas_exchange_quiz",
+      "level": 3,
       "progress": {
         "current": 43,
-        "total": 60
+        "total": 80
       },
       "quiz_payload": {
-        "question": "What is the primary chemical stimulus for controlling the rate of breathing in humans? (BPSC 2019)",
+        "question": "Respiratory Membrane (Diffusion Membrane) की approximately thickness कितनी होती है? (Q2/3)",
         "options": [
           {
             "id": "A",
-            "text": "Increase in blood oxygen level"
+            "text": "2 mm"
           },
           {
             "id": "B",
-            "text": "Decrease in blood oxygen level"
+            "text": "0.2 mm"
           },
           {
             "id": "C",
-            "text": "Increase in blood CO2 level and H+ concentration"
+            "text": "0.2 μm (micrometer)"
           },
           {
             "id": "D",
-            "text": "Decrease in blood CO2 level"
+            "text": "2 μm"
           }
         ],
         "correct_option_id": "C",
-        "explanation": "The PRIMARY chemical stimulus for controlling breathing rate is the INCREASE in blood CO2 level and H+ concentration (decreased pH). When CO2 increases, it forms carbonic acid (H2CO3), which dissociates to H+ and HCO3-, making blood more acidic. Central and peripheral chemoreceptors detect this pH change and stimulate the respiratory center to increase breathing rate to expel excess CO2. Oxygen decrease is a secondary, weaker stimulus that becomes significant only during severe hypoxia (pO2 < 60 mm Hg). This is a classic BPSC trap question!"
+        "explanation": "Respiratory Membrane की thickness approximately 0.2 μm (micrometer) है। यह 3 layers से बनी है: Thin squamous alveolar epithelium + Common basement membrane + Thin capillary endothelium। जितनी पतली membrane, उतना तेज़ diffusion (Fick's Law)।"
       },
       "navigation": {
-        "next": "card_44_quiz_breathing_rate",
-        "button_text": "Next Question (Q3/3) ➔"
+        "next": "card_44_quiz_gasex_3",
+        "button_text": "Check Answer & Continue ➔"
       }
     },
     {
-      "card_id": "card_44_quiz_breathing_rate",
-      "card_slug": "card_44_quiz_breathing_rate",
+      "card_id": "card_44_quiz_gasex_3",
+      "card_slug": "card_44_quiz_gasex_3",
       "type": "quiz",
-      "concept_id": "normal_breathing_rate_quiz",
-      "level": 1,
+      "concept_id": "gas_exchange_quiz",
+      "level": 3,
       "progress": {
         "current": 44,
-        "total": 60
+        "total": 80
       },
       "quiz_payload": {
-        "question": "The normal respiratory rate (breaths per minute) in a healthy adult at rest is approximately: (Railway RRB 2020)",
+        "question": "Alveoli में O₂ का partial pressure (pO₂) कितना होता है? (Q3/3)",
         "options": [
           {
             "id": "A",
-            "text": "5-8 breaths/min"
+            "text": "40 mmHg"
           },
           {
             "id": "B",
-            "text": "12-16 breaths/min"
+            "text": "159 mmHg"
           },
           {
             "id": "C",
-            "text": "25-30 breaths/min"
+            "text": "104 mmHg"
           },
           {
             "id": "D",
-            "text": "40-50 breaths/min"
-          }
-        ],
-        "correct_option_id": "B",
-        "explanation": "The normal respiratory rate in a healthy adult at rest is approximately 12-16 breaths per minute. This rate increases with exercise, fever, emotion, and other factors. Newborn babies have a much faster rate (30-40 breaths/min), which gradually decreases with age. Breathing rate below 12 is called bradypnea, and above 20 is called tachypnea. This is a direct factual question commonly asked in SSC and Railway exams."
-      },
-      "navigation": {
-        "next": "card_45_milestone_respiratory_control",
-        "button_text": "Check Answer ➔"
-      }
-    },
-    {
-      "card_id": "card_45_milestone_respiratory_control",
-      "card_slug": "card_45_milestone_respiratory_control",
-      "type": "milestone",
-      "concept_id": "respiratory_control_complete",
-      "level": 1,
-      "progress": {
-        "current": 45,
-        "total": 60
-      },
-      "milestone_payload": {
-        "title": "🧠 MODULE 5 COMPLETED!",
-        "badge_emoji": "🎛️",
-        "completed_topic": "Control & Regulation of Respiration",
-        "xp_earned": 60,
-        "milestone_progress": "Module 5/8 Clear",
-        "motivational_quote": "Medulla's rhythm, chemoreceptors' vigilance, CO2's command - you've decoded the breathing autopilot! 🌟"
-      },
-      "navigation": {
-        "next": "card_46_respiratory_disorders_intro",
-        "button_text": "Start Module 6: Respiratory Disorders ➔"
-      }
-    },
-    {
-      "card_id": "card_46_respiratory_disorders_intro",
-      "card_slug": "card_46_respiratory_disorders_intro",
-      "type": "chat",
-      "concept_id": "respiratory_disorders_overview",
-      "level": 1,
-      "progress": {
-        "current": 46,
-        "total": 60
-      },
-      "messages": [
-        {
-          "speaker": "aman",
-          "text": "Ab kuch common respiratory diseases dekhte hain Raju! Asthma, Pneumonia, Tuberculosis, Emphysema - ye sab respiratory system ko affect karte hain! SSC aur BPSC me clinical questions aate hain!",
-          "emotion": "🏥"
-        },
-        {
-          "speaker": "raju",
-          "text": "Sir Asthma to bahut log ko hota hai... ye kya hai exactly?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Asthma me bronchi aur bronchioles inflamed ho jati hain aur constrict (tight) ho jati hain - breathing difficult ho jati hai! Wheezing sound aati hai, coughing hoti hai! Allergens (dust, pollen), cold air ya exercise trigger kar sakte hain!",
-          "emotion": "😮"
-        },
-        {
-          "speaker": "raju",
-          "text": "To airways patli ho jati hain, isliye saaans lena mushkil?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Exactly! Inhaler use karte hain asthma patients - usme bronchodilator hota hai jo airways ko relax karke widen karta hai! Railway exam: Asthma affects which part? Bronchi and Bronchioles!",
-          "emotion": "💊"
-        },
-        {
-          "speaker": "raju",
-          "text": "Sir Pneumonia kya hota hai? Ye to bahut serious lagta hai!"
-        }
-      ],
-      "navigation": {
-        "next": "card_47_pneumonia_tb",
-        "button_text": "Lung infection! ➔"
-      }
-    },
-    {
-      "card_id": "card_47_pneumonia_tb",
-      "card_slug": "card_47_pneumonia_tb",
-      "type": "chat",
-      "concept_id": "pneumonia_tuberculosis_diseases",
-      "level": 1,
-      "progress": {
-        "current": 47,
-        "total": 60
-      },
-      "messages": [
-        {
-          "speaker": "aman",
-          "text": "Pneumonia ek lung infection hai jisme alveoli me pus aur fluid bhar jata hai - gas exchange disturbed ho jata hai! Bacteria (Streptococcus pneumoniae), virus ya fungi cause kar sakte hain! Symptoms: fever, cough, chest pain, difficulty breathing!",
-          "emotion": "🦠"
-        },
-        {
-          "speaker": "raju",
-          "text": "Alveoli block ho jaati hain to oxygen exchange nahi ho pata properly... dangerous hai ye to!"
-        },
-        {
-          "speaker": "aman",
-          "text": "Haan! Treatment: antibiotics (bacterial ke liye), rest, fluids! Ab Tuberculosis (TB) - ye bhi bacterial infection hai caused by Mycobacterium tuberculosis! Lungs me granulomas (nodules) ban jate hain, tissue damage hota hai!",
-          "emotion": "⚠️"
-        },
-        {
-          "speaker": "raju",
-          "text": "TB to bahut famous disease hai sir... ye contagious hai na?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Haan! Airborne disease hai - infected person ke cough/sneeze se spread hota hai! BPSC important: BCG vaccine TB ke against diya jata hai! Symptoms: persistent cough (>3 weeks), blood in sputum, weight loss, night sweats, fever!",
-          "emotion": "🩺"
-        },
-        {
-          "speaker": "raju",
-          "text": "Sir aur koi serious lung disease?"
-        }
-      ],
-      "navigation": {
-        "next": "card_48_emphysema_copd",
-        "button_text": "Smoking ka effect! ➔"
-      }
-    },
-    {
-      "card_id": "card_48_emphysema_copd",
-      "card_slug": "card_48_emphysema_copd",
-      "type": "chat",
-      "concept_id": "emphysema_copd_smoking",
-      "level": 1,
-      "progress": {
-        "current": 48,
-        "total": 60
-      },
-      "messages": [
-        {
-          "speaker": "aman",
-          "text": "Emphysema ek chronic disease hai mainly caused by smoking! Isme alveoli ki walls damage ho jati hain aur merge ho jati hain - surface area kam ho jata hai gas exchange ka! Patient ko breathlessness hoti hai!",
-          "emotion": "🚬"
-        },
-        {
-          "speaker": "raju",
-          "text": "Matlab alveoli ki walls toot jati hain to chhote-chhote alveoli ki jagah bade chambers ban jate hain?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Perfect understanding! Aur bade chambers me surface area bahut kam hai compared to millions of tiny alveoli! Emphysema, Chronic Bronchitis inhe collectively COPD kehte hain - Chronic Obstructive Pulmonary Disease!",
-          "emotion": "🫁"
-        },
-        {
-          "speaker": "raju",
-          "text": "Sir smoking kitna harmful hai respiratory system ke liye!"
-        },
-        {
-          "speaker": "aman",
-          "text": "Bahut! Cigarette smoke me 7000+ chemicals hote hain, many carcinogenic! Lung cancer ka main cause smoking hai! NEET/BPSC awareness: Smoking damages cilia in respiratory tract, increases mucus, causes inflammation, destroys alveoli!",
-          "emotion": "⚠️"
-        }
-      ],
-      "navigation": {
-        "next": "card_49_quiz_asthma",
-        "button_text": "Quiz time! ➔"
-      }
-    },
-    {
-      "card_id": "card_49_quiz_asthma",
-      "card_slug": "card_49_quiz_asthma",
-      "type": "quiz",
-      "concept_id": "asthma_disorder_quiz",
-      "level": 1,
-      "progress": {
-        "current": 49,
-        "total": 60
-      },
-      "quiz_payload": {
-        "question": "Asthma is characterized by: (SSC CHSL 2019)",
-        "options": [
-          {
-            "id": "A",
-            "text": "Inflammation and constriction of bronchi and bronchioles"
-          },
-          {
-            "id": "B",
-            "text": "Fluid accumulation in alveoli"
-          },
-          {
-            "id": "C",
-            "text": "Destruction of alveolar walls"
-          },
-          {
-            "id": "D",
-            "text": "Infection by Mycobacterium"
-          }
-        ],
-        "correct_option_id": "A",
-        "explanation": "Asthma is characterized by inflammation and constriction (narrowing) of the bronchi and bronchioles, making breathing difficult. Common triggers include allergens (pollen, dust mites), cold air, exercise, and respiratory infections. Symptoms include wheezing, shortness of breath, chest tightness, and coughing. Treatment involves bronchodilator inhalers that relax and widen the airways. Option B describes pneumonia, Option C describes emphysema, and Option D describes tuberculosis."
-      },
-      "navigation": {
-        "next": "card_50_quiz_tuberculosis",
-        "button_text": "Next Question (Q2/3) ➔"
-      }
-    },
-    {
-      "card_id": "card_50_quiz_tuberculosis",
-      "card_slug": "card_50_quiz_tuberculosis",
-      "type": "quiz",
-      "concept_id": "tuberculosis_causative_agent_quiz",
-      "level": 1,
-      "progress": {
-        "current": 50,
-        "total": 60
-      },
-      "quiz_payload": {
-        "question": "Tuberculosis (TB) is caused by which pathogen? (BPSC 2020)",
-        "options": [
-          {
-            "id": "A",
-            "text": "Streptococcus pneumoniae (bacterium)"
-          },
-          {
-            "id": "B",
-            "text": "Mycobacterium tuberculosis (bacterium)"
-          },
-          {
-            "id": "C",
-            "text": "Influenza virus"
-          },
-          {
-            "id": "D",
-            "text": "Plasmodium (protozoa)"
-          }
-        ],
-        "correct_option_id": "B",
-        "explanation": "Tuberculosis (TB) is caused by the bacterium Mycobacterium tuberculosis. It primarily affects the lungs but can also affect other organs. TB is an airborne disease spread through droplets when an infected person coughs or sneezes. The BCG (Bacillus Calmette-Guérin) vaccine provides protection against severe forms of TB. Symptoms include persistent cough lasting more than 3 weeks, blood in sputum, fever, night sweats, and weight loss. This is a very common BPSC and SSC question!"
-      },
-      "navigation": {
-        "next": "card_51_quiz_emphysema",
-        "button_text": "Next Question (Q3/3) ➔"
-      }
-    },
-    {
-      "card_id": "card_51_quiz_emphysema",
-      "card_slug": "card_51_quiz_emphysema",
-      "type": "quiz",
-      "concept_id": "emphysema_cause_quiz",
-      "level": 1,
-      "progress": {
-        "current": 51,
-        "total": 60
-      },
-      "quiz_payload": {
-        "question": "Emphysema, a chronic lung disease, is primarily caused by: (NEET 2021)",
-        "options": [
-          {
-            "id": "A",
-            "text": "Bacterial infection"
-          },
-          {
-            "id": "B",
-            "text": "Allergic reactions"
-          },
-          {
-            "id": "C",
-            "text": "Cigarette smoking"
-          },
-          {
-            "id": "D",
-            "text": "Genetic mutation only"
+            "text": "95 mmHg"
           }
         ],
         "correct_option_id": "C",
-        "explanation": "Emphysema is primarily caused by cigarette smoking (90% of cases). It is characterized by the destruction of alveolar walls, leading to larger air spaces with reduced surface area for gas exchange. This results in chronic breathlessness and reduced oxygen supply. The elastic recoil of lungs is also impaired. Emphysema is part of COPD (Chronic Obstructive Pulmonary Disease). While genetic factors (like alpha-1 antitrypsin deficiency) can contribute, smoking is the main preventable cause."
+        "explanation": "Alveolar pO₂ = 104 mmHg। Atmospheric pO₂ = 159 mmHg (कम हो जाता है humidification और mixing से)। Deoxygenated blood pO₂ = 40 mmHg। Oxygenated blood pO₂ = 95 mmHg (100% equilibrium नहीं होता anatomical shunting की वजह से)।"
       },
       "navigation": {
-        "next": "card_52_milestone_disorders",
-        "button_text": "Check Answer ➔"
+        "next": "card_45_milestone_mod5",
+        "button_text": "Check Answer & Continue ➔"
       }
     },
     {
-      "card_id": "card_52_milestone_disorders",
-      "card_slug": "card_52_milestone_disorders",
+      "card_id": "card_45_milestone_mod5",
+      "card_slug": "card_45_milestone_mod5",
       "type": "milestone",
-      "concept_id": "respiratory_disorders_complete",
-      "level": 1,
+      "concept_id": "mod5_complete",
+      "level": 3,
       "progress": {
-        "current": 52,
-        "total": 60
+        "current": 45,
+        "total": 80
       },
       "milestone_payload": {
-        "title": "🏥 MODULE 6 COMPLETED!",
-        "badge_emoji": "🩺",
-        "completed_topic": "Respiratory Disorders & Diseases",
-        "xp_earned": 60,
-        "milestone_progress": "Module 6/8 Clear",
-        "motivational_quote": "From Asthma's wheeze to TB's cough - you're now clinically aware! Health is wealth! 🌟"
+        "title": "MODULE 5 COMPLETED! 🎉",
+        "badge_emoji": "🔬",
+        "completed_topic": "Gas Exchange & Diffusion",
+        "xp_earned": 100,
+        "milestone_progress": "Module 5/9 Clear",
+        "motivational_quote": "Partial Pressure, Diffusion, Fick's Law – ye NEET aur BPSC ka backbone hai aur tumne clear kar liya!"
       },
       "navigation": {
-        "next": "card_53_comparative_respiration",
-        "button_text": "Start Module 7: Comparative Respiration ➔"
+        "next": "card_46_o2_transport_intro",
+        "button_text": "Start Next Module ➔"
       }
     },
     {
-      "card_id": "card_53_comparative_respiration",
-      "card_slug": "card_53_comparative_respiration",
+      "card_id": "card_46_o2_transport_intro",
+      "card_slug": "card_46_o2_transport_intro",
       "type": "chat",
-      "concept_id": "comparative_respiratory_mechanisms",
-      "level": 1,
+      "concept_id": "oxygen_transport",
+      "level": 3,
+      "progress": {
+        "current": 46,
+        "total": 80
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ab O₂ blood me aa gayi – par ye tissues tak kaise pahunchegi? 97% O₂ Haemoglobin (Hb) se bind hokar jaati hai – ise Oxyhaemoglobin (HbO₂) bolte hain. Sirf 3% O₂ plasma me dissolved form me jaati hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "97% Haemoglobin se! Matlab agar kisi ko anaemia hai (Hb kam) to usse saans lene me problem hogi?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul sahi connect kiya! Haemoglobin me 4 heme groups hote hain, har ek me 1 iron atom hai. Ek Hb molecule 4 O₂ molecules bind kar sakta hai. Ise binding equation se likhte hain: Hb + 4O₂ ⇌ Hb(O₂)₄. Ye reversible reaction hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab lungs me O₂ bind hogi aur tissues me release hogi – kyunki reaction reversible hai?"
+        }
+      ],
+      "navigation": {
+        "next": "card_47_oxy_dissociation_curve",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_47_oxy_dissociation_curve",
+      "card_slug": "card_47_oxy_dissociation_curve",
+      "type": "chat",
+      "concept_id": "oxygen_dissociation_curve",
+      "level": 4,
+      "progress": {
+        "current": 47,
+        "total": 80
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ab NEET ka most important graph – Oxygen-Haemoglobin Dissociation Curve! Ye S-shaped (Sigmoid) curve hai. Iska matlab hai ki pehla O₂ bind hone ke baad baaki teeno aasaani se bind hoti hain (Cooperative Binding). Aur jab ek O₂ release hoti hai to baaki bhi jaldi release hoti hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sigmoid curve... S shape... matlab pehle slow, fir fast, fir plateau?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! Aur is curve ko RIGHT shift karne wale factors yaad karo – jab O₂ release zyada chahiye (tissues me): High pCO₂, Low pH (acidic/H⁺ ions), High Temperature, High 2,3-BPG (DPG). Ise Bohr Effect bolte hain – CO₂ aur H⁺ ions ki wajah se Hb ka O₂ se affinity KAM hoti hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Bohr Effect! Matlab exercise karte waqt body garam hoti hai, CO₂ zyada banti hai, pH kam hota hai – to Hb zyada O₂ release karega! Body ne kitna smart system banaya hai!"
+        }
+      ],
+      "navigation": {
+        "next": "card_48_co2_transport_intro",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_48_co2_transport_intro",
+      "card_slug": "card_48_co2_transport_intro",
+      "type": "chat",
+      "concept_id": "co2_transport",
+      "level": 4,
+      "progress": {
+        "current": 48,
+        "total": 80
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ab CO₂ transport – ye 3 tarikon se hota hai! 1) As Bicarbonate Ions (HCO₃⁻) – 70%! Ye sabse major form hai. CO₂ + H₂O → H₂CO₃ → H⁺ + HCO₃⁻. Ye reaction RBC me Carbonic Anhydrase enzyme catalyze karta hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "70% bicarbonate ke roop me! Matlab CO₂ seedha gas form me nahi jaati blood me?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Nahi mostly! 2) Carbamino-haemoglobin (HbCO₂) ke roop me – 23%. CO₂ Hb ke amino group se bind hoti hai (NOT heme group – ye trap hai!). 3) Dissolved in plasma – sirf 7%!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir ye bahut important trap hai – CO₂ Hb ke heme se nahi, amino group se bind hoti hai! Aur O₂ heme ke iron se bind hoti hai!"
+        }
+      ],
+      "navigation": {
+        "next": "card_49_chloride_shift",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_49_chloride_shift",
+      "card_slug": "card_49_chloride_shift",
+      "type": "chat",
+      "concept_id": "chloride_shift_haldane",
+      "level": 4,
+      "progress": {
+        "current": 49,
+        "total": 80
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ab Chloride Shift (Hamburger Phenomenon) – jab RBC me HCO₃⁻ banta hai, to wo RBC se bahar plasma me chala jaata hai. Charge balance maintain karne ke liye Cl⁻ ions plasma se RBC me andar aate hain. Ise Chloride Shift bolte hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab ek exchange hota hai – HCO₃⁻ bahar, Cl⁻ andar!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! Aur ek aur effect – Haldane Effect – ye Bohr Effect ka opposite hai. Jab O₂ Hb se release hoti hai (tissues me), to Hb ki CO₂ binding capacity BADH jaati hai. Matlab deoxygenated Hb CO₂ zyada uthata hai! NEET me Bohr Effect aur Haldane Effect ka difference poochha jaata hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Bohr = CO₂ ki wajah se O₂ release zyada. Haldane = O₂ release hone se CO₂ binding zyada. Dono ek doosre ke complement hain!"
+        }
+      ],
+      "navigation": {
+        "next": "card_50_quiz_transport_1",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_50_quiz_transport_1",
+      "card_slug": "card_50_quiz_transport_1",
+      "type": "quiz",
+      "concept_id": "transport_quiz",
+      "level": 4,
+      "progress": {
+        "current": 50,
+        "total": 80
+      },
+      "quiz_payload": {
+        "question": "CO₂ blood में सबसे अधिक किस form में transport होती है? (Q1/3)",
+        "options": [
+          {
+            "id": "A",
+            "text": "Dissolved in plasma (7%)"
+          },
+          {
+            "id": "B",
+            "text": "Carbamino-haemoglobin (23%)"
+          },
+          {
+            "id": "C",
+            "text": "Bicarbonate ions HCO₃⁻ (70%)"
+          },
+          {
+            "id": "D",
+            "text": "As Carbonic Acid"
+          }
+        ],
+        "correct_option_id": "C",
+        "explanation": "CO₂ का 70% transport Bicarbonate ions (HCO₃⁻) के रूप में होता है। RBC में Carbonic Anhydrase enzyme CO₂ + H₂O → H₂CO₃ → H⁺ + HCO₃⁻ reaction catalyze करता है। 23% Carbamino-Hb और 7% dissolved form में transport होती है।"
+      },
+      "navigation": {
+        "next": "card_51_quiz_transport_2",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_51_quiz_transport_2",
+      "card_slug": "card_51_quiz_transport_2",
+      "type": "quiz",
+      "concept_id": "transport_quiz",
+      "level": 4,
+      "progress": {
+        "current": 51,
+        "total": 80
+      },
+      "quiz_payload": {
+        "question": "Bohr Effect क्या है? (Q2/3)",
+        "options": [
+          {
+            "id": "A",
+            "text": "O₂ की उपस्थिति में CO₂ binding बढ़ना"
+          },
+          {
+            "id": "B",
+            "text": "High pCO₂ और Low pH से Hb की O₂ affinity कम होना (Right shift)"
+          },
+          {
+            "id": "C",
+            "text": "Temperature कम होने से O₂ release बढ़ना"
+          },
+          {
+            "id": "D",
+            "text": "Hb का CO₂ के heme group से binding"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Bohr Effect: High CO₂, High H⁺ (Low pH), और High Temperature → Hb की O₂ से affinity KAM होती है → O₂ dissociation curve RIGHT shift → tissues को अधिक O₂ मिलती है। Option A Haldane Effect है। CO₂ Hb के amino group से bind होती है, heme से नहीं।"
+      },
+      "navigation": {
+        "next": "card_52_quiz_transport_3",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_52_quiz_transport_3",
+      "card_slug": "card_52_quiz_transport_3",
+      "type": "quiz",
+      "concept_id": "transport_quiz",
+      "level": 4,
+      "progress": {
+        "current": 52,
+        "total": 80
+      },
+      "quiz_payload": {
+        "question": "Oxygen-Haemoglobin Dissociation Curve का आकार कैसा होता है? (Q3/3)",
+        "options": [
+          {
+            "id": "A",
+            "text": "Linear (सीधी रेखा)"
+          },
+          {
+            "id": "B",
+            "text": "Hyperbolic"
+          },
+          {
+            "id": "C",
+            "text": "Sigmoid (S-shaped)"
+          },
+          {
+            "id": "D",
+            "text": "Exponential"
+          }
+        ],
+        "correct_option_id": "C",
+        "explanation": "O₂-Hb Dissociation Curve SIGMOID (S-shaped) होता है। यह Cooperative Binding के कारण है – पहली O₂ bind होने के बाद बाकी O₂ molecules आसानी से bind होते हैं। Myoglobin का curve Hyperbolic होता है (Option B) – यह NEET trap है!"
+      },
+      "navigation": {
+        "next": "card_53_milestone_mod6",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_53_milestone_mod6",
+      "card_slug": "card_53_milestone_mod6",
+      "type": "milestone",
+      "concept_id": "mod6_complete",
+      "level": 4,
       "progress": {
         "current": 53,
-        "total": 60
+        "total": 80
       },
-      "messages": [
-        {
-          "speaker": "aman",
-          "text": "Raju, sirf humans hi respiration nahi karte - sab organisms ko oxygen chahiye! Par sabke mechanisms alag hain! Fish pani me kaise breathe karti hai? Unke to lungs nahi hote!",
-          "emotion": "🐟"
-        },
-        {
-          "speaker": "raju",
-          "text": "Haan sir! Fish me gills hote hain na? Pani se oxygen lete hain!"
-        },
-        {
-          "speaker": "aman",
-          "text": "Perfect! Gills me bahut saari blood vessels hoti hain - pani se dissolved oxygen diffuse karke blood me aa jati hai! SSC question: Aquatic animals breathe through? Gills! Earthworms apni moist skin se breathe karti hain - Cutaneous Respiration!",
-          "emotion": "🪱"
-        },
-        {
-          "speaker": "raju",
-          "text": "Skin se breathing?? Wow! Aur insects sir?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Insects me Tracheal System hota hai - body me chhote-chhote tubes (tracheae) jo directly cells tak oxygen pahunchate hain, blood involved nahi hota! Spiracles (opening) se air enter karta hai!",
-          "emotion": "🦗"
-        },
-        {
-          "speaker": "raju",
-          "text": "Matlab insects ko lungs ya blood ki zarurat nahi oxygen transport ke liye? Efficient system hai!"
-        }
-      ],
+      "milestone_payload": {
+        "title": "MODULE 6 COMPLETED! 🎉",
+        "badge_emoji": "🩸",
+        "completed_topic": "O₂ & CO₂ Transport in Blood",
+        "xp_earned": 125,
+        "milestone_progress": "Module 6/9 Clear",
+        "motivational_quote": "Oxyhaemoglobin, Bohr Effect, Haldane Effect, Chloride Shift – ye NEET ke most scoring concepts hain aur tum ab expert ho!"
+      },
       "navigation": {
-        "next": "card_54_plants_respiration",
-        "button_text": "Plants bhi breathe karte hain! ➔"
+        "next": "card_54_regulation_intro",
+        "button_text": "Start Next Module ➔"
       }
     },
     {
-      "card_id": "card_54_plants_respiration",
-      "card_slug": "card_54_plants_respiration",
+      "card_id": "card_54_regulation_intro",
+      "card_slug": "card_54_regulation_intro",
       "type": "chat",
-      "concept_id": "plant_respiration_stomata",
-      "level": 1,
+      "concept_id": "regulation_breathing",
+      "level": 4,
       "progress": {
         "current": 54,
-        "total": 60
+        "total": 80
       },
       "messages": [
         {
           "speaker": "aman",
-          "text": "Plants bhi breathe karte hain Raju! Leaves me chhote-chhote pores hote hain - Stomata - jinse gas exchange hota hai! Din me photosynthesis me oxygen release karte hain, par 24 hours respiration chalta hai - oxygen consume, CO2 release!",
-          "emotion": "🌿"
+          "text": "Raju, tum sote waqt bhi saans lete ho – koi control karta hai kya? Haan! Brain me Respiratory Centre hota hai jo automatically breathing control karta hai. Ye Medulla Oblongata me hota hai – jise Rhythmicity Centre bolte hain!"
         },
         {
           "speaker": "raju",
-          "text": "Achha! To raat me plants bhi oxygen lete hain aur CO2 chhodte hain jaise humans?"
+          "text": "Medulla! Wo to brainstem ka part hai na Sir? Matlab saans lena involuntary hai?"
         },
         {
           "speaker": "aman",
-          "text": "Exactly! BPSC trap: Plants respire 24x7, but net oxygen release happens only during day when photosynthesis > respiration! Roots me Lenticels hote hain (woody stems me bhi) - ye pores oxygen exchange karte hain soil se!",
-          "emotion": "🌳"
+          "text": "Haan! Medulla me Dorsal Respiratory Group (DRG) – inspiration control karti hai. Ventral Respiratory Group (VRG) – forced breathing (inspiration + expiration dono) me active hoti hai. Aur Pons me Pneumotaxic Centre hai jo inspiration ki duration ko limit karta hai – matlab saans ki rate set karta hai!"
         },
         {
           "speaker": "raju",
-          "text": "Sir ab itna kuch seekh liya, final revision kar lete hain!"
+          "text": "Pneumotaxic Centre inspiration ko rokta hai? Matlab agar ye na ho to saans bahut der tak andar hi rahegi?"
         }
       ],
       "navigation": {
-        "next": "card_55_summary_revision",
-        "button_text": "Officer Revision! ➔"
+        "next": "card_55_chemical_regulation",
+        "button_text": "Next Card ➔"
       }
     },
     {
-      "card_id": "card_55_summary_revision",
-      "card_slug": "card_55_summary_revision",
-      "type": "summary",
-      "concept_id": "respiratory_system_complete_revision",
-      "level": 1,
+      "card_id": "card_55_chemical_regulation",
+      "card_slug": "card_55_chemical_regulation",
+      "type": "chat",
+      "concept_id": "chemical_regulation",
+      "level": 4,
       "progress": {
         "current": 55,
-        "total": 60
+        "total": 80
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Bilkul! Ab chemical regulation – body me Chemoreceptors hote hain jo CO₂, O₂ aur H⁺ level monitor karte hain. Central Chemoreceptors Medulla ke paas hote hain – ye CO₂ aur H⁺ ions ke increase ke prati sensitive hain. CO₂ badhne pe breathing rate BADH jaati hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab CO₂ hi primary stimulus hai breathing ke liye? O₂ nahi?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Yahin BPSC ka biggest trap hai! Haan – CO₂ (aur H⁺) PRIMARY stimulus hai! O₂ level normally breathing ko stimulate nahi karta. Peripheral Chemoreceptors (Carotid Body aur Aortic Body me) O₂ level monitor karte hain – par ye tab active hote hain jab O₂ bahut zyada gir jaaye!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Carotid Body aur Aortic Body! Ye to cardiovascular system me bhi aate hain na? Cross-topic link!"
+        }
+      ],
+      "navigation": {
+        "next": "card_56_voluntary_control",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_56_voluntary_control",
+      "card_slug": "card_56_voluntary_control",
+      "type": "chat",
+      "concept_id": "voluntary_breathing",
+      "level": 4,
+      "progress": {
+        "current": 56,
+        "total": 80
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ek aur cheez – tum kuch had tak saans ko voluntarily control bhi kar sakte ho – jaise gaane waqt, baat karte waqt, paani me doobte waqt. Ye control Cerebral Cortex se aata hai jo respiratory centre ko override kar sakta hai. Par ye permanent nahi hai – CO₃ level bahut badh jaaye to brain phir se breathing force karega!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab isliye hum jyada der saans nahi rok sakte – brain override kar deta hai!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! Aur ek reflex hai – Hering-Breuer Reflex. Lungs me stretch receptors hote hain – jab lungs bahut zyada inflate hote hain, ye receptors signal bhejte hain ki 'bass karo inspiration!' Isse over-inflation prevent hota hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "Hering-Breuer Reflex! Body me kitne safety mechanisms hain Sir!"
+        }
+      ],
+      "navigation": {
+        "next": "card_57_quiz_regulation_1",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_57_quiz_regulation_1",
+      "card_slug": "card_57_quiz_regulation_1",
+      "type": "quiz",
+      "concept_id": "regulation_quiz",
+      "level": 4,
+      "progress": {
+        "current": 57,
+        "total": 80
+      },
+      "quiz_payload": {
+        "question": "Breathing का primary chemical stimulus क्या है? (Q1/3)",
+        "options": [
+          {
+            "id": "A",
+            "text": "O₂ level में कमी"
+          },
+          {
+            "id": "B",
+            "text": "CO₂ और H⁺ ions का बढ़ना"
+          },
+          {
+            "id": "C",
+            "text": "N₂ level में बदलाव"
+          },
+          {
+            "id": "D",
+            "text": "Blood pressure में बदलाव"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Breathing का primary stimulus CO₂ और H⁺ ions का बढ़ना है (Central Chemoreceptors sense करते हैं)। O₂ level में कमी secondary stimulus है जो Peripheral Chemoreceptors (Carotid & Aortic Bodies) sense करते हैं – वह भी तभी जब O₂ बहुत ज्यादा गिर जाये। BPSC & NEET trap!"
+      },
+      "navigation": {
+        "next": "card_58_quiz_regulation_2",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_58_quiz_regulation_2",
+      "card_slug": "card_58_quiz_regulation_2",
+      "type": "quiz",
+      "concept_id": "regulation_quiz",
+      "level": 4,
+      "progress": {
+        "current": 58,
+        "total": 80
+      },
+      "quiz_payload": {
+        "question": "Pneumotaxic Centre कहाँ स्थित है और इसका क्या कार्य है? (Q2/3)",
+        "options": [
+          {
+            "id": "A",
+            "text": "Medulla में – Inspiration शुरू करता है"
+          },
+          {
+            "id": "B",
+            "text": "Pons में – Inspiration की duration को limit करता है"
+          },
+          {
+            "id": "C",
+            "text": "Cerebral Cortex में – Voluntary breathing control करता है"
+          },
+          {
+            "id": "D",
+            "text": "Cerebellum में – Breathing rhythm maintain करता है"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Pneumotaxic Centre PONS में स्थित है। यह Inspiration की duration को limit करता है, जिससे Respiratory Rate adjust होती है। Medulla में Rhythmicity Centre (DRG & VRG) है जो basic breathing rhythm generate करता है। Cerebral Cortex voluntary control देता है।"
+      },
+      "navigation": {
+        "next": "card_59_quiz_regulation_3",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_59_quiz_regulation_3",
+      "card_slug": "card_59_quiz_regulation_3",
+      "type": "quiz",
+      "concept_id": "regulation_quiz",
+      "level": 4,
+      "progress": {
+        "current": 59,
+        "total": 80
+      },
+      "quiz_payload": {
+        "question": "Hering-Breuer Reflex किससे संबंधित है? (Q3/3)",
+        "options": [
+          {
+            "id": "A",
+            "text": "Blood pressure regulation"
+          },
+          {
+            "id": "B",
+            "text": "Lungs की over-inflation prevention"
+          },
+          {
+            "id": "C",
+            "text": "Heart rate control"
+          },
+          {
+            "id": "D",
+            "text": "Digestion regulation"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Hering-Breuer Reflex lungs में stretch receptors द्वारा mediated है। जब lungs अत्यधिक inflate होते हैं, stretch receptors Vagus Nerve (CN X) के माध्यम से signal भेजते हैं जो inspiration को रोक देता है। यह over-inflation को prevent करता है।"
+      },
+      "navigation": {
+        "next": "card_60_milestone_mod7",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_60_milestone_mod7",
+      "card_slug": "card_60_milestone_mod7",
+      "type": "milestone",
+      "concept_id": "mod7_complete",
+      "level": 4,
+      "progress": {
+        "current": 60,
+        "total": 80
+      },
+      "milestone_payload": {
+        "title": "MODULE 7 COMPLETED! 🎉",
+        "badge_emoji": "🧠",
+        "completed_topic": "Regulation of Breathing",
+        "xp_earned": 100,
+        "milestone_progress": "Module 7/9 Clear",
+        "motivational_quote": "Medulla, Pons, Chemoreceptors, Hering-Breuer – breathing regulation ka pura control system tumhare haath me hai!"
+      },
+      "navigation": {
+        "next": "card_61_disorders_intro",
+        "button_text": "Start Next Module ➔"
+      }
+    },
+    {
+      "card_id": "card_61_disorders_intro",
+      "card_slug": "card_61_disorders_intro",
+      "type": "chat",
+      "concept_id": "respiratory_disorders",
+      "level": 4,
+      "progress": {
+        "current": 61,
+        "total": 80
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ab last module – Respiratory Disorders! BPSC aur SSC me bahut poochha jaata hai. Pehle Asthma – isme bronchioles me inflammation aur swelling hoti hai, mucus zyada banta hai, aur airway narrow ho jaati hai. Patient ko saans lene me takleef hoti hai, specially saans BAHAR nikalne me!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir mere padosi ko asthma hai – wo inhaler use karta hai. Wo kya karta hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Inhaler me Bronchodilators hote hain jo bronchioles ki smooth muscles ko relax karke airway ko wapas kholte hain. Asthma allergic ya non-allergic ho sakta hai. Allergic asthma me IgE antibodies involved hain. Ye NEET me immunology se cross-question aata hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "IgE! Wo allergy wali antibody! Matlab asthma ek hypersensitivity reaction bhi ho sakta hai?"
+        }
+      ],
+      "navigation": {
+        "next": "card_62_emphysema",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_62_emphysema",
+      "card_slug": "card_62_emphysema",
+      "type": "chat",
+      "concept_id": "emphysema_disease",
+      "level": 4,
+      "progress": {
+        "current": 62,
+        "total": 80
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ab Emphysema – ye mainly SMOKING se hota hai! Isme alveolar walls damage ho jaati hain, alveoli aapas me merge ho jaati hain (bade bade sacs ban jaate hain). Isse surface area BAHUT kam ho jaata hai aur gas exchange poor hota hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab smoking se alveoli tod-deti hai? Aur fir O₂ properly blood me nahi ja paati?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! Emphysema irreversible hai – damaged alveoli wapas nahi banti! Patient ko barrel-shaped chest ho jaata hai aur constant breathlessness rehti hai. BPSC me 'Which disease is caused by smoking and involves alveolar damage?' – ye direct question aata hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Ye to scary hai Sir! Aur koi disorders hain?"
+        }
+      ],
+      "navigation": {
+        "next": "card_63_occupational_diseases",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_63_occupational_diseases",
+      "card_slug": "card_63_occupational_diseases",
+      "type": "chat",
+      "concept_id": "occupational_lung_diseases",
+      "level": 4,
+      "progress": {
+        "current": 63,
+        "total": 80
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Occupational Lung Diseases – ye workers ko hoti hain jo dust, chemicals me kaam karte hain. Silicosis – silica dust (stone crushing, mining) se. Asbestosis – asbestos fibre se. Sab me lungs me fibrosis (scarring) hoti hai. Inhe collectively Pneumoconiosis bolte hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Pneumoconiosis! Matlab dust ke particles lungs me jam jaate hain aur lungs stiff ho jaate hain?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul! Aur SSC me ek aur disease poochhi jaati hai – Bronchitis. Isme bronchi me chronic inflammation hoti hai, mucus bahut zyada banta hai, aur chronic cough aati hai. Smoking se hota hai. Emphysema + Chronic Bronchitis = COPD (Chronic Obstructive Pulmonary Disease)!"
+        },
+        {
+          "speaker": "raju",
+          "text": "COPD! Ye to bahut suna hai Sir. Matlab ye dono diseases combined hain!"
+        }
+      ],
+      "navigation": {
+        "next": "card_64_other_disorders",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_64_other_disorders",
+      "card_slug": "card_64_other_disorders",
+      "type": "chat",
+      "concept_id": "pneumonia_tb_cancer",
+      "level": 4,
+      "progress": {
+        "current": 64,
+        "total": 80
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Aur kuch important diseases: Pneumonia – bacteria (Streptococcus pneumoniae) ya virus se alveoli me infection aur fluid bhar jaata hai. Tuberculosis (TB) – Mycobacterium tuberculosis bacteria se hoti hai. Lung Cancer – smoking ka sabse khatarnak result – uncontrolled cell growth lungs me!"
+        },
+        {
+          "speaker": "raju",
+          "text": "TB wala bacteria – Mycobacterium tuberculosis – ye to SSC me bahut poochha jaata hai! Robert Koch ne discover kiya tha na?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! Robert Koch ne 1882 me TB ka bacteria discover kiya – isliye 24 March ko World TB Day manate hain. Aur Koch's Postulates bhi yaad rakhna – wo disease-causing organisms identify karne ka method diya tha. Ye BPSC me History of Science section me bhi aata hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Robert Koch, 1882, Mycobacterium tuberculosis, 24 March World TB Day – noted Sir!"
+        }
+      ],
+      "navigation": {
+        "next": "card_65_respiratory_in_other_organisms",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_65_respiratory_in_other_organisms",
+      "card_slug": "card_65_respiratory_in_other_organisms",
+      "type": "chat",
+      "concept_id": "respiration_in_organisms",
+      "level": 4,
+      "progress": {
+        "current": 65,
+        "total": 80
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ab ek SSC/Railway level fact – alag organisms me respiratory organs alag hote hain! Earthworm – moist skin se (Cutaneous respiration). Insects – Tracheal system (spiracles se hawa andar). Fish – Gills (Branchial respiration). Frog – Skin + Lungs + Buccal cavity teeno se!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Frog teeno se!! Ye to interesting hai – matlab frog paani me bhi saans le sakta hai skin se!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! Aur cockroach me spiracles hote hain body ke side me – 10 pairs. Blood (haemolymph) O₂ transport nahi karta cockroach me – directly tracheal tubes cells tak O₂ pahunchati hain. Isliye cockroach ka blood white/colourless hota hai – Hb nahi hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Cockroach me Haemoglobin nahi!! Matlab blood me O₂ carry hi nahi hota? Sab direct tubes se? Wow!"
+        }
+      ],
+      "navigation": {
+        "next": "card_66_quiz_disorders_1",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_66_quiz_disorders_1",
+      "card_slug": "card_66_quiz_disorders_1",
+      "type": "quiz",
+      "concept_id": "disorders_quiz",
+      "level": 4,
+      "progress": {
+        "current": 66,
+        "total": 80
+      },
+      "quiz_payload": {
+        "question": "Emphysema में क्या होता है? (Q1/3)",
+        "options": [
+          {
+            "id": "A",
+            "text": "Bronchioles में swelling"
+          },
+          {
+            "id": "B",
+            "text": "Alveolar walls damage होकर surface area कम होता है"
+          },
+          {
+            "id": "C",
+            "text": "Pleural cavity में fluid भर जाता है"
+          },
+          {
+            "id": "D",
+            "text": "Trachea में cartilage टूट जाता है"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Emphysema में alveolar walls damage/destroy हो जाती हैं, alveoli merge होकर बड़े sacs बनाते हैं, surface area drastically कम होता है, gas exchange poor होता है। मुख्य कारण: Smoking। यह irreversible है और COPD का part है।"
+      },
+      "navigation": {
+        "next": "card_67_quiz_disorders_2",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_67_quiz_disorders_2",
+      "card_slug": "card_67_quiz_disorders_2",
+      "type": "quiz",
+      "concept_id": "disorders_quiz",
+      "level": 4,
+      "progress": {
+        "current": 67,
+        "total": 80
+      },
+      "quiz_payload": {
+        "question": "Tuberculosis (TB) किस organism से होती है? (Q2/3)",
+        "options": [
+          {
+            "id": "A",
+            "text": "Streptococcus pneumoniae"
+          },
+          {
+            "id": "B",
+            "text": "Mycobacterium tuberculosis"
+          },
+          {
+            "id": "C",
+            "text": "Haemophilus influenzae"
+          },
+          {
+            "id": "D",
+            "text": "Plasmodium vivax"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "TB Mycobacterium tuberculosis bacteria से होती है। Robert Koch ने 1882 में इसे discover किया – 24 March World TB Day। Streptococcus pneumoniae → Pneumonia का कारण है। SSC, Railway और BPSC में directly पूछा जाता है।"
+      },
+      "navigation": {
+        "next": "card_68_quiz_disorders_3",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_68_quiz_disorders_3",
+      "card_slug": "card_68_quiz_disorders_3",
+      "type": "quiz",
+      "concept_id": "disorders_quiz",
+      "level": 4,
+      "progress": {
+        "current": 68,
+        "total": 80
+      },
+      "quiz_payload": {
+        "question": "Cockroach में श्वसन (respiration) किसके द्वारा होता है? (Q3/3)",
+        "options": [
+          {
+            "id": "A",
+            "text": "Lungs"
+          },
+          {
+            "id": "B",
+            "text": "Gills"
+          },
+          {
+            "id": "C",
+            "text": "Tracheal System (Spiracles)"
+          },
+          {
+            "id": "D",
+            "text": "Moist Skin"
+          }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Cockroach में Tracheal System होता है। Body के side में 10 pairs of Spiracles होते हैं जिनसे हवा अंदर जाती है। Tracheal tubes directly cells तक O₂ पहुँचाती हैं – Blood O₂ transport नहीं करता। Earthworm = Moist Skin, Fish = Gills, Frog = Skin + Lungs + Buccal cavity।"
+      },
+      "navigation": {
+        "next": "card_69_milestone_mod8",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_69_milestone_mod8",
+      "card_slug": "card_69_milestone_mod8",
+      "type": "milestone",
+      "concept_id": "mod8_complete",
+      "level": 4,
+      "progress": {
+        "current": 69,
+        "total": 80
+      },
+      "milestone_payload": {
+        "title": "MODULE 8 COMPLETED! 🎉",
+        "badge_emoji": "🏥",
+        "completed_topic": "Respiratory Disorders & Respiration in Other Organisms",
+        "xp_earned": 100,
+        "milestone_progress": "Module 8/9 Clear",
+        "motivational_quote": "Asthma, Emphysema, COPD, TB, Pneumonia, Occupational diseases – sab covered! Exam me koi confuse nahi kar payega!"
+      },
+      "navigation": {
+        "next": "card_70_high_altitude_co_poison",
+        "button_text": "Start Next Module ➔"
+      }
+    },
+    {
+      "card_id": "card_70_high_altitude_co_poison",
+      "card_slug": "card_70_high_altitude_co_poison",
+      "type": "chat",
+      "concept_id": "high_altitude_co_poisoning",
+      "level": 5,
+      "progress": {
+        "current": 70,
+        "total": 80
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ab kuch BPSC/UPSC level concepts! High Altitude pe atmospheric pressure kam hoti hai, to O₂ ka partial pressure bhi kam hota hai. Isliye logon ko altitude sickness hota hai – headache, nausea, breathlessness. Body adapt karti hai RBC aur Hb production badhakar (Erythropoietin hormone kidney se)!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Isliye mountaineers ko acclimatize karna padta hai! Aur BPF jawaan Siachen me training lete hain!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul! Aur Carbon Monoxide (CO) Poisoning – CO ki Hb se affinity O₂ se 200-250 times ZYADA hai! CO bind hoke Carboxyhaemoglobin (HbCO) banata hai jo O₂ carry nahi kar sakta. Isliye closed room me angeethi jalane se log mar jaate hain – ye Bihar me winter me hota hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "200 times zyada affinity!! Tab to thodi si CO bhi khatarnak hogi! Aur HbCO banane ke baad O₂ ki jagah nahi bachti?"
+        }
+      ],
+      "navigation": {
+        "next": "card_71_cyanosis_hypoxia",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_71_cyanosis_hypoxia",
+      "card_slug": "card_71_cyanosis_hypoxia",
+      "type": "chat",
+      "concept_id": "cyanosis_hypoxia_types",
+      "level": 5,
+      "progress": {
+        "current": 71,
+        "total": 80
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Bilkul! CO poisoning me skin cherry-red ho jaati hai. Aur jab O₂ bahut kam ho jaaye blood me to Cyanosis hota hai – skin aur nails BLUE ho jaate hain (kyunki deoxygenated Hb dark bluish hota hai). Hypoxia matlab tissues ko O₂ ki kami!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Blue skin = Cyanosis! Ye to emergency sign hai na Sir?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! Hypoxia ke types yaad rakho – 1) Hypoxic Hypoxia (low pO₂ – high altitude), 2) Anaemic Hypoxia (Hb kam – anaemia), 3) Stagnant/Ischemic Hypoxia (blood flow kam – heart failure), 4) Histotoxic Hypoxia (cells O₂ use nahi kar paati – cyanide poisoning!). NEET me types poochhe jaate hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Cyanide poisoning me cells O₂ use nahi kar paati? Matlab O₂ hai blood me par cells le nahi paati! Kitna dangerous!"
+        }
+      ],
+      "navigation": {
+        "next": "card_72_quiz_advanced_1",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_72_quiz_advanced_1",
+      "card_slug": "card_72_quiz_advanced_1",
+      "type": "quiz",
+      "concept_id": "advanced_concepts_quiz",
+      "level": 5,
+      "progress": {
+        "current": 72,
+        "total": 80
+      },
+      "quiz_payload": {
+        "question": "Carbon Monoxide (CO) की Haemoglobin से affinity O₂ की तुलना में कितनी अधिक है? (Q1/3)",
+        "options": [
+          {
+            "id": "A",
+            "text": "10 times"
+          },
+          {
+            "id": "B",
+            "text": "50 times"
+          },
+          {
+            "id": "C",
+            "text": "200-250 times"
+          },
+          {
+            "id": "D",
+            "text": "1000 times"
+          }
+        ],
+        "correct_option_id": "C",
+        "explanation": "CO की Hb से affinity O₂ से 200-250 गुना अधिक है। CO bind करके Carboxyhaemoglobin (HbCO) बनाता है जो O₂ transport नहीं कर सकता। बंद कमरे में कोयला/अंगीठी जलाने से CO poisoning होती है – यह BPSC GK और NEET दोनों में पूछा जाता है।"
+      },
+      "navigation": {
+        "next": "card_73_quiz_advanced_2",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_73_quiz_advanced_2",
+      "card_slug": "card_73_quiz_advanced_2",
+      "type": "quiz",
+      "concept_id": "advanced_concepts_quiz",
+      "level": 5,
+      "progress": {
+        "current": 73,
+        "total": 80
+      },
+      "quiz_payload": {
+        "question": "High Altitude पर शरीर किस हार्मोन की सहायता से adapt करता है? (Q2/3)",
+        "options": [
+          {
+            "id": "A",
+            "text": "Insulin"
+          },
+          {
+            "id": "B",
+            "text": "Thyroxine"
+          },
+          {
+            "id": "C",
+            "text": "Erythropoietin (EPO)"
+          },
+          {
+            "id": "D",
+            "text": "Aldosterone"
+          }
+        ],
+        "correct_option_id": "C",
+        "explanation": "High altitude पर O₂ की कमी होने पर Kidney से Erythropoietin (EPO) hormone release होता है जो bone marrow को अधिक RBC बनाने का signal देता है। अधिक RBC = अधिक Hb = अधिक O₂ carrying capacity। EPO doping में athletes illegal use करते हैं – UPSC current affairs link!"
+      },
+      "navigation": {
+        "next": "card_74_quiz_advanced_3",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_74_quiz_advanced_3",
+      "card_slug": "card_74_quiz_advanced_3",
+      "type": "quiz",
+      "concept_id": "advanced_concepts_quiz",
+      "level": 5,
+      "progress": {
+        "current": 74,
+        "total": 80
+      },
+      "quiz_payload": {
+        "question": "Histotoxic Hypoxia किसके कारण होती है? (Q3/3)",
+        "options": [
+          {
+            "id": "A",
+            "text": "Blood में Hb की कमी"
+          },
+          {
+            "id": "B",
+            "text": "Atmospheric O₂ की कमी"
+          },
+          {
+            "id": "C",
+            "text": "Cells का O₂ utilize न कर पाना (जैसे Cyanide poisoning)"
+          },
+          {
+            "id": "D",
+            "text": "Blood circulation में रुकावट"
+          }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Histotoxic Hypoxia में O₂ blood में present है लेकिन cells उसे utilize नहीं कर पातीं। Cyanide poisoning में cyanide Cytochrome Oxidase enzyme को block कर देता है जिससे Electron Transport Chain रुक जाती है। Option A = Anaemic Hypoxia, B = Hypoxic Hypoxia, D = Stagnant Hypoxia।"
+      },
+      "navigation": {
+        "next": "card_75_milestone_mod9",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_75_milestone_mod9",
+      "card_slug": "card_75_milestone_mod9",
+      "type": "milestone",
+      "concept_id": "mod9_complete",
+      "level": 5,
+      "progress": {
+        "current": 75,
+        "total": 80
+      },
+      "milestone_payload": {
+        "title": "MODULE 9 COMPLETED! 🎉",
+        "badge_emoji": "🏔️",
+        "completed_topic": "High Altitude, CO Poisoning, Hypoxia & Cyanosis",
+        "xp_earned": 100,
+        "milestone_progress": "Module 9/9 Clear – ALL MODULES DONE!",
+        "motivational_quote": "Saare 9 modules complete! Ab Final Officer Revision aur Master Quiz baaki hai – let's go!"
+      },
+      "navigation": {
+        "next": "card_76_officer_revision",
+        "button_text": "Go to Officer Revision ➔"
+      }
+    },
+    {
+      "card_id": "card_76_officer_revision",
+      "card_slug": "card_76_officer_revision",
+      "type": "summary",
+      "concept_id": "chapter_revision",
+      "level": 5,
+      "progress": {
+        "current": 76,
+        "total": 80
       },
       "summary_payload": {
-        "title": "⚡ Quick Officer Revision - Respiratory System",
+        "title": "⚡ Quick Officer Revision – Respiratory System",
         "revision_points": [
           {
-            "topic": "Respiratory Pathway",
-            "point": "Nose (filters, warms, moistens air - 1L mucus/day) → Pharynx (throat) → Larynx (voice box with vocal cords) → Trachea (windpipe with C-shaped cartilage, 12 cm) → Bronchi (Right: wider/shorter, Left: narrower) → Bronchioles → Alveoli (300-500 million, 70-80 m² surface area)"
+            "topic": "Breathing vs Respiration",
+            "point": "Breathing = Physical (no enzyme, ventilation), Respiration = Biochemical (enzyme, ATP production in all living cells)। Normal Expiration passive है, Forced Expiration active (Internal Intercostal + Abdominal muscles)।"
           },
           {
-            "topic": "Alveolar Structure",
-            "point": "Single cell thick wall (0.5 μm from blood capillaries). Pulmonary surfactant (phospholipid) reduces surface tension, prevents collapse. Produced by Type II pneumocytes. Deficiency in premature babies causes Respiratory Distress Syndrome (RDS). Gas exchange by diffusion across alveolar-capillary membrane."
-          },
-          {
-            "topic": "Breathing Mechanism",
-            "point": "Inspiration (active): Diaphragm contracts & moves DOWN, External intercostal muscles contract, ribs move UP & OUT → Volume ↑, Pressure ↓ (1-2 mm Hg below atmospheric) → Air rushes in. Expiration (passive): Muscles relax, lung elastic recoil → Volume ↓, Pressure ↑ → Air expelled. Forceful expiration uses internal intercostals & abdominal muscles."
-          },
-          {
-            "topic": "Lung Volumes (mL)",
-            "point": "Tidal Volume (TV): 500 mL (normal breathing). Inspiratory Reserve Volume (IRV): 2500-3000 mL. Expiratory Reserve Volume (ERV): 1000-1100 mL. Residual Volume (RV): 1100-1200 mL (never expelled, prevents alveolar collapse). Vital Capacity (VC) = TV+IRV+ERV = 4000 mL. Total Lung Capacity = VC+RV = 5200-6000 mL."
+            "topic": "Respiratory Tract & Alveoli",
+            "point": "Path: Nose→Pharynx→Larynx→Trachea (C-shaped cartilage)→Bronchi (Right wider)→Bronchioles→Alveoli (300 million, 100m² area, 0.2μm membrane)। Surfactant: Type II Pneumocytes। Dead Space: 150mL।"
           },
           {
             "topic": "Gas Exchange & Transport",
-            "point": "Alveoli: pO2=104 mm Hg, pCO2=40 mm Hg. Deoxygenated blood: pO2=40, pCO2=45. Gradient drives diffusion. O2 transport: 97% bound to Hemoglobin (Hb + 4O2 ⇌ HbO2), 3% dissolved. CO2 transport: 70% as HCO3⁻ (via Carbonic Anhydrase: CO2+H2O⇌H2CO3⇌H⁺+HCO3⁻), 23% as Carbaminohemoglobin, 7% dissolved."
+            "point": "O₂: 97% as HbO₂ (Heme group), 3% dissolved। CO₂: 70% HCO₃⁻ (Carbonic Anhydrase), 23% HbCO₂ (amino group – NOT heme!), 7% dissolved। Bohr Effect: ↑CO₂/↑H⁺ → ↓O₂ affinity। Haldane Effect: ↓O₂ → ↑CO₂ binding। Sigmoid curve = Hb, Hyperbolic = Myoglobin।"
           },
           {
-            "topic": "Respiratory Control",
-            "point": "Primary center: Medulla Oblongata (Dorsal & Ventral Respiratory Groups). Chemoreceptors monitor CO2 (primary stimulus), H⁺ (pH), O2 (secondary). CO2 increase → H⁺ increase → pH decrease → Breathing rate ↑. Central chemoreceptors in medulla, Peripheral in carotid & aortic bodies. Normal adult rate: 12-16 breaths/min. Hyperventilation → Respiratory alkalosis."
+            "topic": "Regulation & Volumes",
+            "point": "Medulla = Rhythmicity Centre (DRG, VRG)। Pons = Pneumotaxic Centre (limits inspiration)। Primary stimulus: CO₂ & H⁺। TV=500mL, IRV=3000, ERV=1100, RV=1200mL। VC=TV+IRV+ERV। RV not measurable by Spirometer।"
           },
           {
-            "topic": "Respiratory Disorders",
-            "point": "Asthma: Bronchi/bronchiole inflammation & constriction, wheezing, treated with bronchodilators. Pneumonia: Alveolar infection (bacteria/virus), fluid/pus accumulation. TB: Mycobacterium tuberculosis, airborne, granulomas, BCG vaccine. Emphysema: Smoking-induced alveolar wall destruction, reduced surface area, part of COPD. Lung cancer: Smoking (7000+ chemicals, many carcinogenic)."
-          },
-          {
-            "topic": "Comparative Respiration",
-            "point": "Fish: Gills (extract dissolved O2 from water). Earthworms: Cutaneous (through moist skin). Insects: Tracheal system (spiracles → tracheae → direct to cells, no blood transport). Plants: Stomata (leaves), Lenticels (roots/woody stems). All organisms respire 24x7; plants photosynthesize only in light (net O2 release in day only)."
+            "topic": "Disorders & Special Concepts",
+            "point": "Asthma (bronchiole narrowing, IgE), Emphysema (alveolar damage, irreversible), COPD=Emphysema+Chronic Bronchitis, TB (Mycobacterium, Koch 1882, 24 March)। CO affinity 200-250× > O₂। Cyanosis = Blue skin (↓O₂)। Frog=Skin+Lungs+Buccal, Cockroach=Tracheal (no Hb)।"
           }
         ]
       },
       "navigation": {
-        "next": "card_56_final_quiz_assertion",
-        "button_text": "Final Master Quiz 🏆"
+        "next": "card_77_final_quiz_1",
+        "button_text": "Start Final Master Quiz ➔"
       }
     },
     {
-      "card_id": "card_56_final_quiz_assertion",
-      "card_slug": "card_56_final_quiz_assertion",
+      "card_id": "card_77_final_quiz_1",
+      "card_slug": "card_77_final_quiz_1",
       "type": "final_quiz",
-      "concept_id": "respiratory_final_assessment_1",
-      "level": 1,
+      "concept_id": "final_master_quiz",
+      "level": 5,
       "progress": {
-        "current": 56,
-        "total": 60
+        "current": 77,
+        "total": 80
       },
       "quiz_payload": {
-        "question": "Assertion (A): The cartilaginous rings in the trachea are incomplete (C-shaped) posteriorly. Reason (R): The incomplete rings allow the esophagus to expand during swallowing of food. (BPSC 2021 Pattern)",
+        "question": "निम्नलिखित कथनों पर विचार करें:\n1. Normal Expiration एक active process है\n2. Residual Volume spirometer से measure होता है\n3. CO₂ का सबसे अधिक transport Bicarbonate ions (HCO₃⁻) के रूप में होता है\n4. Pneumotaxic Centre Medulla Oblongata में स्थित है\n\nउपर्युक्त में से कौन सा/से कथन सही है/हैं?",
         "options": [
           {
             "id": "A",
-            "text": "Both A and R are true, and R is the correct explanation of A"
+            "text": "केवल 1 और 2"
           },
           {
             "id": "B",
-            "text": "Both A and R are true, but R is NOT the correct explanation of A"
+            "text": "केवल 3"
           },
           {
             "id": "C",
-            "text": "A is true, but R is false"
+            "text": "केवल 3 और 4"
           },
           {
             "id": "D",
-            "text": "A is false, but R is true"
+            "text": "1, 2, 3 और 4 सभी"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "कथन 1 गलत – Normal expiration PASSIVE है। कथन 2 गलत – RV spirometer से measure नहीं होता (हवा बाहर नहीं आती)। कथन 3 सही – CO₂ का 70% transport HCO₃⁻ के रूप में। कथन 4 गलत – Pneumotaxic Centre PONS में है, Medulla में नहीं। BPSC multi-statement trap format!"
+      },
+      "navigation": {
+        "next": "card_78_final_quiz_2",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_78_final_quiz_2",
+      "card_slug": "card_78_final_quiz_2",
+      "type": "final_quiz",
+      "concept_id": "final_master_quiz",
+      "level": 5,
+      "progress": {
+        "current": 78,
+        "total": 80
+      },
+      "quiz_payload": {
+        "question": "Assertion (A): Emphysema एक irreversible lung disease है।\nReason (R): Emphysema में alveolar walls permanently damage हो जाती हैं जिससे gas exchange surface area कम होता है।\n\nसही विकल्प चुनिए:",
+        "options": [
+          {
+            "id": "A",
+            "text": "A और R दोनों सही हैं और R, A की सही व्याख्या है"
+          },
+          {
+            "id": "B",
+            "text": "A और R दोनों सही हैं लेकिन R, A की सही व्याख्या नहीं है"
+          },
+          {
+            "id": "C",
+            "text": "A सही है लेकिन R गलत है"
+          },
+          {
+            "id": "D",
+            "text": "A गलत है लेकिन R सही है"
           }
         ],
         "correct_option_id": "A",
-        "explanation": "Both Assertion and Reason are TRUE, and Reason correctly explains the Assertion. The trachea has C-shaped (incomplete) cartilaginous rings, with the opening facing posteriorly (backward). This structural design is specifically to allow the esophagus, which lies directly behind the trachea, to expand when swallowing food boluses. If the cartilage were complete O-shaped rings, it would restrict esophageal expansion and interfere with swallowing. The incomplete posterior portion contains smooth muscle and connective tissue, maintaining structural support while allowing flexibility."
+        "explanation": "Assertion सही है – Emphysema irreversible है, damaged alveoli regenerate नहीं होती। Reason भी सही है – alveolar walls permanently destroy होकर merge हो जाती हैं, surface area drastically कम होता है। Reason correctly explains Assertion। मुख्य कारण: Smoking। BPSC Assertion-Reason format!"
       },
       "navigation": {
-        "next": "card_57_final_quiz_multistatement",
-        "button_text": "Next Master Question ➔"
+        "next": "card_79_final_quiz_3",
+        "button_text": "Check Answer & Continue ➔"
       }
     },
     {
-      "card_id": "card_57_final_quiz_multistatement",
-      "card_slug": "card_57_final_quiz_multistatement",
+      "card_id": "card_79_final_quiz_3",
+      "card_slug": "card_79_final_quiz_3",
       "type": "final_quiz",
-      "concept_id": "respiratory_final_assessment_2",
-      "level": 1,
+      "concept_id": "final_master_quiz",
+      "level": 5,
       "progress": {
-        "current": 57,
-        "total": 60
+        "current": 79,
+        "total": 80
       },
       "quiz_payload": {
-        "question": "Consider the following statements about human respiration: (1) The primary stimulus for breathing is an increase in CO2 concentration in blood. (2) During normal inspiration, the diaphragm contracts and moves downward. (3) Approximately 97% of oxygen is transported bound to hemoglobin. (4) Vital Capacity includes Residual Volume. How many statements are CORRECT? (NEET/BPSC Multi-statement)",
+        "question": "निम्नलिखित युग्मों पर विचार करें:\n1. Earthworm – Gills\n2. Fish – Moist Skin\n3. Cockroach – Tracheal System\n4. Frog – Lungs, Skin & Buccal Cavity\n\nउपर्युक्त में से कौन सा/से युग्म सही सुमेलित है/हैं?",
         "options": [
           {
             "id": "A",
-            "text": "Only one statement"
+            "text": "केवल 1 और 2"
           },
           {
             "id": "B",
-            "text": "Only two statements"
+            "text": "केवल 3 और 4"
           },
           {
             "id": "C",
-            "text": "Only three statements"
+            "text": "केवल 2, 3 और 4"
           },
           {
             "id": "D",
-            "text": "All four statements"
+            "text": "1, 2, 3 और 4 सभी"
           }
         ],
-        "correct_option_id": "C",
-        "explanation": "THREE statements are CORRECT (1, 2, 3). Statement (1) TRUE - CO2 increase (and resulting H+ increase/pH decrease) is the PRIMARY chemical stimulus, not O2 decrease (which is secondary). Statement (2) TRUE - During inspiration, diaphragm contracts and moves downward (becomes flatter), increasing thoracic cavity volume. Statement (3) TRUE - About 97% of O2 is transported bound to hemoglobin as oxyhemoglobin; only 3% dissolves in plasma. Statement (4) FALSE - Vital Capacity = TV + IRV + ERV (does NOT include Residual Volume). Total Lung Capacity = Vital Capacity + Residual Volume. This is a classic BPSC/NEET trap!"
+        "correct_option_id": "B",
+        "explanation": "1 गलत – Earthworm = Moist Skin (Cutaneous, Gills नहीं!)। 2 गलत – Fish = Gills (Branchial, Moist Skin नहीं!)। 3 सही – Cockroach = Tracheal System (Spiracles)। 4 सही – Frog तीनों से: Skin (Cutaneous) + Lungs (Pulmonary) + Buccal Cavity (Buccopharyngeal)। BPSC matching trap!"
       },
       "navigation": {
-        "next": "card_58_final_quiz_clinical",
-        "button_text": "Final Challenge ➔"
+        "next": "card_80_trophy",
+        "button_text": "Check Answer & Continue ➔"
       }
     },
     {
-      "card_id": "card_58_final_quiz_clinical",
-      "card_slug": "card_58_final_quiz_clinical",
-      "type": "final_quiz",
-      "concept_id": "respiratory_final_assessment_3",
-      "level": 1,
-      "progress": {
-        "current": 58,
-        "total": 60
-      },
-      "quiz_payload": {
-        "question": "A patient presents with persistent cough for over 3 weeks, blood in sputum, night sweats, and unexplained weight loss. Which respiratory disease is most likely, and what is its causative agent? (BPSC Clinical Application)",
-        "options": [
-          {
-            "id": "A",
-            "text": "Asthma caused by allergic bronchospasm"
-          },
-          {
-            "id": "B",
-            "text": "Pneumonia caused by Streptococcus pneumoniae"
-          },
-          {
-            "id": "C",
-            "text": "Tuberculosis caused by Mycobacterium tuberculosis"
-          },
-          {
-            "id": "D",
-            "text": "Emphysema caused by cigarette smoking"
-          }
-        ],
-        "correct_option_id": "C",
-        "explanation": "The clinical presentation strongly suggests TUBERCULOSIS (TB) caused by Mycobacterium tuberculosis. The classic symptoms are: (1) Persistent cough lasting more than 3 weeks, (2) Hemoptysis (blood in sputum), (3) Constitutional symptoms like night sweats, fever, and unexplained weight loss. TB is an airborne infectious disease primarily affecting the lungs, forming granulomas. BCG vaccine provides protection. Asthma presents with wheezing and reversible airway obstruction. Pneumonia has acute fever and chest pain with alveolar fluid. Emphysema causes chronic breathlessness due to alveolar destruction. This type of clinical correlation is common in BPSC and UPSC medical awareness questions."
-      },
-      "navigation": {
-        "next": "card_59_milestone_comparative",
-        "button_text": "Complete Module ➔"
-      }
-    },
-    {
-      "card_id": "card_59_milestone_comparative",
-      "card_slug": "card_59_milestone_comparative",
+      "card_id": "card_80_trophy",
+      "card_slug": "card_80_trophy",
       "type": "milestone",
-      "concept_id": "comparative_respiration_complete",
-      "level": 1,
+      "concept_id": "chapter_complete",
+      "level": 5,
       "progress": {
-        "current": 59,
-        "total": 60
+        "current": 80,
+        "total": 80
       },
       "milestone_payload": {
-        "title": "🌍 MODULE 7 COMPLETED!",
-        "badge_emoji": "🐟",
-        "completed_topic": "Comparative Respiration & Final Mastery",
-        "xp_earned": 60,
-        "milestone_progress": "Module 7/8 Clear",
-        "motivational_quote": "From fish gills to insect tracheae - you've explored respiration across the tree of life! 🌟"
-      },
-      "navigation": {
-        "next": "card_60_chapter_complete",
-        "button_text": "Complete Chapter 🎊"
-      }
-    },
-    {
-      "card_id": "card_60_chapter_complete",
-      "card_slug": "card_60_chapter_complete",
-      "type": "milestone",
-      "concept_id": "respiratory_system_chapter_complete",
-      "level": 1,
-      "progress": {
-        "current": 60,
-        "total": 60
-      },
-      "milestone_payload": {
-        "title": "🏆 RESPIRATORY SYSTEM MASTERED!",
-        "badge_emoji": "🫁",
-        "completed_topic": "Complete Respiratory System (All Modules)",
-        "xp_earned": 600,
-        "milestone_progress": "100% Chapter Complete ✅",
-        "motivational_quote": "From nasal hairs to alveolar surfactant, from diaphragm contractions to carbonic anhydrase, from TB's cough to emphysema's wheeze - you've breathed life into every concept! BPSC, NEET, SSC, Railway - you're OFFICER-LEVEL READY! Every breath is now a testament to your knowledge! 🎯🔥🫁"
+        "title": "🏆 CHAPTER COMPLETED – RESPIRATORY SYSTEM! 🏆",
+        "badge_emoji": "🏆🫁",
+        "completed_topic": "Complete Respiratory System (श्वसन तंत्र)",
+        "xp_earned": 500,
+        "milestone_progress": "Chapter 100% Complete!",
+        "motivational_quote": "Tum ab Respiratory System ke EXPERT ho! Nose se Alveoli tak, Bohr Effect se Haldane Effect tak, Emphysema se CO Poisoning tak – sab yaad hai! BPSC, SSC, Railway, NEET – koi bhi exam ho, tumse koi sawaal nahi chhootega! 🎯🔥"
       },
       "navigation": {
         "next": null,
-        "button_text": "Back to Dashboard 🏠"
+        "button_text": "Continue to Next Chapter ➔"
       }
     }
   ]
