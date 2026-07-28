@@ -1,0 +1,2770 @@
+{
+  "topic_id": "acid_base_salt_chemistry",
+  "topic_title": "Acids, Bases & Salts (अम्ल, क्षार और लवण)",
+  "target_exams": [
+    "BPSC",
+    "BSSC",
+    "RRB NTPC",
+    "SSC CGL",
+    "NEET",
+    "UPSC Prelims"
+  ],
+  "total_cards": 80,
+  "characters": {
+    "aman": {
+      "name": "Aman Sir",
+      "role": "teacher",
+      "avatar": "👨‍🏫"
+    },
+    "raju": {
+      "name": "Raju",
+      "role": "student",
+      "avatar": "👦"
+    }
+  },
+  "cards": [
+    {
+      "card_id": "card_01_intro",
+      "card_slug": "card_01_intro",
+      "type": "intro",
+      "concept_id": "acids_bases_salts_intro",
+      "level": 1,
+      "progress": {
+        "current": 1,
+        "total": 80
+      },
+      "intro_payload": {
+        "title": "⚗️ Acids, Bases & Salts (अम्ल, क्षार और लवण)",
+        "icon": "🧪",
+        "target_exams": [
+          "BPSC",
+          "BSSC",
+          "RRB NTPC",
+          "SSC CGL",
+          "NEET",
+          "UPSC Prelims"
+        ],
+        "learning_outcomes": [
+          "Acid aur Base ki pehchaan – daily life se",
+          "Arrhenius, Bronsted-Lowry aur Lewis Theory – teeno theories",
+          "pH scale – kya hota hai aur kaise use karte hain",
+          "Strong vs Weak Acids & Bases – difference aur examples",
+          "Neutralization Reaction – Salt kaise banta hai",
+          "Important Salts – NaCl, Na₂CO₃, NaHCO₃, Bleaching Powder",
+          "Buffer Solutions aur their importance",
+          "PYQ Traps – BPSC, SSC, NEET level mastery"
+        ]
+      },
+      "navigation": {
+        "next": "card_02_daily_acid_observation",
+        "button_text": "Let's Begin ➔"
+      }
+    },
+    {
+      "card_id": "card_02_daily_acid_observation",
+      "card_slug": "card_02_daily_acid_observation",
+      "type": "chat",
+      "concept_id": "acid_daily_life",
+      "level": 1,
+      "progress": {
+        "current": 2,
+        "total": 80
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, kal tumne nimbu ka achar khaya? Ya imli ki chutney? Kya feel hota hai muh mein – ek khattas sa taste?"
+        },
+        {
+          "speaker": "raju",
+          "text": "Haan Sir! Bilkul – muh mein paani aa jaata hai aur tongue pe ek khattas, cheenka wala feel hota hai!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Wahi khattas taste actually ek chemical property hai jise hum 'Acid' kehte hain. Nimbu mein Citric Acid hai, imli mein Tartaric Acid, aur dahi mein Lactic Acid! Ye sab natural acids hain jo tumhari rasoi mein milte hain. Iska matlab acids sirf lab mein nahi – ye roz ke khaane mein bhi hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Wow! Dahi mein acid hai?? Mujhe laga dahi to healthy cheez hai – acid kaise hogi?"
+        }
+      ],
+      "navigation": {
+        "next": "card_03_acid_properties",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_03_acid_properties",
+      "card_slug": "card_03_acid_properties",
+      "type": "chat",
+      "concept_id": "acid_properties",
+      "level": 1,
+      "progress": {
+        "current": 3,
+        "total": 80
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Healthy bhi hai aur acid bhi – dono sach hain! Acids ki kuch common properties yaad karo: 1) Taste – sour (khatta), 2) Litmus paper ko red karte hain, 3) Metals ke saath react karke Hydrogen gas nikalte hain, 4) Bases ko neutralize karte hain. Ye properties BPSC aur SSC mein directly poochhi jaati hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Litmus paper! Wo to humne class mein dekha tha – laal ho jaata hai acid se. Aur base se neela hota hai na Sir?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul sahi! Aur ab base ki baat karte hain. Socho sabun se haath dhote waqt ek slippery, chikna feel aata hai – wo base ki property hai! Bases ka taste bitter (kadwa) hota hai. Lakshmi Mishtan Bhandar ki mithai nahi – pure base ka taste kadwa hota hai. NaOH (soap mein hota hai), Ca(OH)₂ – ye sab bases hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sabun base hai! Isliye haath mein chiknahat aati hai! Ab samajh aaya! Toh acid = khatta, base = kadwa aur chikna?"
+        }
+      ],
+      "navigation": {
+        "next": "card_04_natural_acids_list",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_04_natural_acids_list",
+      "card_slug": "card_04_natural_acids_list",
+      "type": "chat",
+      "concept_id": "natural_acids_sources",
+      "level": 1,
+      "progress": {
+        "current": 4,
+        "total": 80
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ab ek speed-round jो SSC aur Railway mein seedha poochha jaata hai – natural acids aur unke sources! Citric Acid – Nimbu, Santra. Tartaric Acid – Imli, Angoor. Lactic Acid – Dahi, Milk products. Acetic Acid – Sirka (Vinegar). Oxalic Acid – Tomato, Spinach. Formic Acid – Chinti ke daank mein! Malic Acid – Seb (Apple)!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Chinti ke daank mein Formic Acid?! Isliye daank lagne pe jalan hoti hai? Aur apple mein Malic Acid – Malic toh apple ka Latin naam jaisa lagta hai!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Excellent connection! 'Malus' Latin mein apple ko kehte hain – isliye Malic Acid! Aur Formic Acid – 'Formica' Latin mein ant ko kehte hain! Ye names yaad rakhne ke liye source se connect karo. Ab ek aur important – Uric Acid human body mein banta hai aur excess mein Gout disease hoti hai! BPSC mein ye medical-chemistry crossover poochha jaata hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Uric Acid se Gout! Matlab body ke andar bhi acid banta hai jo problem karta hai? Ab aage kya hai Sir?"
+        }
+      ],
+      "navigation": {
+        "next": "card_05_quiz_acids_1",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_05_quiz_acids_1",
+      "card_slug": "card_05_quiz_acids_1",
+      "type": "quiz",
+      "concept_id": "natural_acids_quiz",
+      "level": 1,
+      "progress": {
+        "current": 5,
+        "total": 80
+      },
+      "quiz_payload": {
+        "question": "सिरका (Vinegar) में कौन सा अम्ल पाया जाता है? (Q1/3)",
+        "options": [
+          {
+            "id": "A",
+            "text": "Citric Acid"
+          },
+          {
+            "id": "B",
+            "text": "Lactic Acid"
+          },
+          {
+            "id": "C",
+            "text": "Acetic Acid"
+          },
+          {
+            "id": "D",
+            "text": "Tartaric Acid"
+          }
+        ],
+        "correct_option_id": "C",
+        "explanation": "सिरका (Vinegar) में Acetic Acid (CH₃COOH) होता है। इसकी concentration लगभग 5-8% होती है। Citric Acid = Nimbu/Orange, Lactic Acid = Dahi, Tartaric Acid = Imli/Angoor। SSC और Railway में यह most asked question है!"
+      },
+      "navigation": {
+        "next": "card_06_quiz_acids_2",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_06_quiz_acids_2",
+      "card_slug": "card_06_quiz_acids_2",
+      "type": "quiz",
+      "concept_id": "natural_acids_quiz",
+      "level": 1,
+      "progress": {
+        "current": 6,
+        "total": 80
+      },
+      "quiz_payload": {
+        "question": "चींटी के डंक में कौन सा अम्ल होता है जिससे जलन होती है? (Q2/3)",
+        "options": [
+          {
+            "id": "A",
+            "text": "Acetic Acid"
+          },
+          {
+            "id": "B",
+            "text": "Formic Acid"
+          },
+          {
+            "id": "C",
+            "text": "Oxalic Acid"
+          },
+          {
+            "id": "D",
+            "text": "Uric Acid"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Formic Acid (HCOOH) चींटी (Ant) के डंक में होता है – 'Formica' Latin में Ant को कहते हैं। यही कारण है कि चींटी काटने पर जलन होती है। मधुमक्खी के डंक में Formic Acid + Melittin protein होता है। Uric Acid = excess से Gout disease। SSC, Railway और BPSC में direct fact!"
+      },
+      "navigation": {
+        "next": "card_07_quiz_acids_3",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_07_quiz_acids_3",
+      "card_slug": "card_07_quiz_acids_3",
+      "type": "quiz",
+      "concept_id": "natural_acids_quiz",
+      "level": 1,
+      "progress": {
+        "current": 7,
+        "total": 80
+      },
+      "quiz_payload": {
+        "question": "Acid की कौन सी property गलत है? (Q3/3)",
+        "options": [
+          {
+            "id": "A",
+            "text": "Acid का taste खट्टा (sour) होता है"
+          },
+          {
+            "id": "B",
+            "text": "Acid, Blue litmus को Red करता है"
+          },
+          {
+            "id": "C",
+            "text": "Acid, Red litmus को Blue करता है"
+          },
+          {
+            "id": "D",
+            "text": "Acid, metals के साथ react करके H₂ gas देता है"
+          }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Option C गलत है – Acid, Blue litmus को Red करता है, Red litmus को Blue नहीं। Red litmus को Blue करना BASE की property है। Acid: Sour taste, Blue→Red litmus, reacts with metals to give H₂, neutralizes bases। Base: Bitter taste, Red→Blue litmus, slippery feel। यह exam में सबसे common confusion trap है!"
+      },
+      "navigation": {
+        "next": "card_08_milestone_mod1",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_08_milestone_mod1",
+      "card_slug": "card_08_milestone_mod1",
+      "type": "milestone",
+      "concept_id": "mod1_complete",
+      "level": 1,
+      "progress": {
+        "current": 8,
+        "total": 80
+      },
+      "milestone_payload": {
+        "title": "MODULE 1 COMPLETED! 🎉",
+        "badge_emoji": "🍋",
+        "completed_topic": "Acids – Properties & Natural Sources",
+        "xp_earned": 50,
+        "milestone_progress": "Module 1/8 Clear",
+        "motivational_quote": "Nimbu se chinti tak – acids ki duniya clear! Natural acids ke sources ab tumhare haath mein hain. Ab theories ki taraf chalte hain!"
+      },
+      "navigation": {
+        "next": "card_09_arrhenius_theory",
+        "button_text": "Start Next Module ➔"
+      }
+    },
+    {
+      "card_id": "card_09_arrhenius_theory",
+      "card_slug": "card_09_arrhenius_theory",
+      "type": "chat",
+      "concept_id": "arrhenius_theory",
+      "level": 2,
+      "progress": {
+        "current": 9,
+        "total": 80
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ab scientific theories ki baat karte hain jo batati hain – Acid aur Base exactly hote kya hain! Pehli theory di Svante Arrhenius ne 1884 mein. Unke according – Acid wo substance hai jo paani mein dissolve hone pe H⁺ ions deta hai. Base wo substance hai jo paani mein dissolve hone pe OH⁻ ions deta hai. Simple!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Achhaaaa! To HCl paani mein daalo to H⁺ aur Cl⁻ banta hai – toh HCl acid hai!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul sahi! HCl → H⁺ + Cl⁻. Aur NaOH → Na⁺ + OH⁻ – toh NaOH base hai. Ye theory simple hai lekin iska ek bada limitation hai – ye sirf aqueous (water-based) solutions pe kaam karti hai! Agar koi reaction paani ke bina ho to Arrhenius theory fail ho jaati hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sirf paani mein?! Matlab agar acid-base reaction paani ke bina ho to ye theory kuch nahi bata sakti?"
+        }
+      ],
+      "navigation": {
+        "next": "card_10_bronsted_lowry",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_10_bronsted_lowry",
+      "card_slug": "card_10_bronsted_lowry",
+      "type": "chat",
+      "concept_id": "bronsted_lowry_theory",
+      "level": 2,
+      "progress": {
+        "current": 10,
+        "total": 80
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Isliye 1923 mein Johannes Brønsted aur Thomas Lowry ne ek broader theory di! Unke according – Acid wo substance hai jo proton (H⁺) DONATE karta hai. Base wo substance hai jo proton (H⁺) ACCEPT karta hai. Isme paani ka hona zaroori nahi! Isliye ise Proton Transfer Theory bhi kehte hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Proton donate = Acid, Proton accept = Base! Ye to Arrhenius se zyada logical lagta hai Sir!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Aur yahin ek beautiful concept aata hai – Conjugate Acid-Base Pairs! Jab HCl proton donate karta hai H₂O ko, to HCl = acid aur H₂O = base. Lekin us reaction mein Cl⁻ banta hai jo ek potential base hai – ise HCl ka Conjugate Base kehte hain! Aur H₃O⁺ banta hai jo H₂O ka Conjugate Acid hai. NEET mein ye concept bahut important hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "HCl ka conjugate base = Cl⁻, H₂O ka conjugate acid = H₃O⁺! Matlab har acid ke paas ek conjugate base hoti hai!"
+        }
+      ],
+      "navigation": {
+        "next": "card_11_lewis_theory",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_11_lewis_theory",
+      "card_slug": "card_11_lewis_theory",
+      "type": "chat",
+      "concept_id": "lewis_theory",
+      "level": 2,
+      "progress": {
+        "current": 11,
+        "total": 80
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ab teesri aur sabse broad theory – Gilbert N. Lewis ne di (1923 mein, Bronsted-Lowry ke same year!). Lewis theory ke according – Acid wo substance hai jo electron pair ACCEPT karta hai. Base wo substance hai jo electron pair DONATE karta hai. Yahan proton ka koi role nahi! BF₃ ek Lewis acid hai jo electron pair accept karta hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "BF₃ ek acid hai?! Par usme to koi H⁺ nahi diya! Toh Arrhenius aur Bronsted ke hisab se ye acid nahi hoga na?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Exactly! BPSC ka favorite trap yahi hai! BF₃ Arrhenius acid NAHI hai, Bronsted-Lowry acid NAHI hai, lekin Lewis acid ZAROOR hai kyunki iske B (Boron) atom mein empty orbital hai jo electron pair accept kar sakta hai! Lewis theory sabse broad hai – isme wo sab kuch acid/base ho sakta hai jo Arrhenius aur Bronsted mein nahi hote!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Teen theories – Arrhenius sabse narrow, Lewis sabse broad! Aur 1923 mein do alag scientists ne alag-alag theory di – same year mein!"
+        }
+      ],
+      "navigation": {
+        "next": "card_12_guess_theory",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_12_guess_theory",
+      "card_slug": "card_12_guess_theory",
+      "type": "guess",
+      "concept_id": "theory_comparison_guess",
+      "level": 2,
+      "progress": {
+        "current": 12,
+        "total": 80
+      },
+      "quiz_payload": {
+        "question": "🤔 Guess karo! NH₃ (Ammonia) Bronsted-Lowry theory ke hisab se kya hai?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Acid – kyunki NH₃ ek gas hai"
+          },
+          {
+            "id": "B",
+            "text": "Base – kyunki NH₃ ek proton (H⁺) accept kar sakta hai"
+          },
+          {
+            "id": "C",
+            "text": "Neutral – kyunki NH₃ mein OH⁻ nahi hai"
+          },
+          {
+            "id": "D",
+            "text": "Arrhenius base – kyunki OH⁻ deta hai paani mein"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "NH₃ ek Bronsted-Lowry Base hai kyunki yeh proton (H⁺) ACCEPT karta hai: NH₃ + H⁺ → NH₄⁺। NH₃ Arrhenius base NAHI है क्योंकि यह OH⁻ ions नहीं देता। लेकिन Bronsted-Lowry base है (proton acceptor)। NH₃ Lewis base भी है (lone pair donor)। यह NEET और BPSC का classic theory-application trap है!"
+      },
+      "navigation": {
+        "next": "card_13_quiz_theories_1",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_13_quiz_theories_1",
+      "card_slug": "card_13_quiz_theories_1",
+      "type": "quiz",
+      "concept_id": "acid_base_theories_quiz",
+      "level": 2,
+      "progress": {
+        "current": 13,
+        "total": 80
+      },
+      "quiz_payload": {
+        "question": "Arrhenius Theory की मुख्य सीमा (Limitation) क्या है? (Q1/3)",
+        "options": [
+          {
+            "id": "A",
+            "text": "यह केवल strong acids पर apply होती है"
+          },
+          {
+            "id": "B",
+            "text": "यह केवल aqueous (water) solutions में काम करती है, non-aqueous में नहीं"
+          },
+          {
+            "id": "C",
+            "text": "यह Lewis acids को define नहीं करती"
+          },
+          {
+            "id": "D",
+            "text": "यह proton transfer को ignore करती है"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Arrhenius Theory की limitation: यह केवल aqueous (water) solutions में काम करती है। जो acids/bases बिना पानी के react करें उन्हें यह theory explain नहीं कर सकती। Bronsted-Lowry ने यह limitation दूर की (non-aqueous solutions में भी काम करती है)। Lewis theory सबसे broad है। BPSC और NEET में theory limitations अक्सर पूछी जाती हैं!"
+      },
+      "navigation": {
+        "next": "card_14_quiz_theories_2",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_14_quiz_theories_2",
+      "card_slug": "card_14_quiz_theories_2",
+      "type": "quiz",
+      "concept_id": "acid_base_theories_quiz",
+      "level": 2,
+      "progress": {
+        "current": 14,
+        "total": 80
+      },
+      "quiz_payload": {
+        "question": "BF₃ किस theory के अनुसार Acid है? (Q2/3)",
+        "options": [
+          {
+            "id": "A",
+            "text": "Arrhenius Theory"
+          },
+          {
+            "id": "B",
+            "text": "Bronsted-Lowry Theory"
+          },
+          {
+            "id": "C",
+            "text": "Lewis Theory"
+          },
+          {
+            "id": "D",
+            "text": "BF₃ एक base है"
+          }
+        ],
+        "correct_option_id": "C",
+        "explanation": "BF₃ केवल Lewis Acid है क्योंकि Boron के पास empty orbital है जो electron pair ACCEPT करता है। BF₃ Arrhenius acid नहीं (H⁺ नहीं देता), Bronsted-Lowry acid नहीं (proton donate नहीं करता)। Lewis Theory: Acid = electron pair acceptor, Base = electron pair donor। यह NEET का PYQ concept है!"
+      },
+      "navigation": {
+        "next": "card_15_quiz_theories_3",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_15_quiz_theories_3",
+      "card_slug": "card_15_quiz_theories_3",
+      "type": "quiz",
+      "concept_id": "acid_base_theories_quiz",
+      "level": 2,
+      "progress": {
+        "current": 15,
+        "total": 80
+      },
+      "quiz_payload": {
+        "question": "HCl + H₂O → H₃O⁺ + Cl⁻ इस reaction में H₂O की Bronsted-Lowry role क्या है? (Q3/3)",
+        "options": [
+          {
+            "id": "A",
+            "text": "Acid – क्योंकि proton donate करता है"
+          },
+          {
+            "id": "B",
+            "text": "Base – क्योंकि proton accept करता है"
+          },
+          {
+            "id": "C",
+            "text": "Neutral – कोई role नहीं"
+          },
+          {
+            "id": "D",
+            "text": "Conjugate Acid of Cl⁻"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "H₂O यहाँ Bronsted-Lowry Base है क्योंकि यह HCl से proton (H⁺) ACCEPT करके H₃O⁺ (hydronium ion) बनाता है। HCl = acid (proton donor), H₂O = base (proton acceptor)। Conjugate pairs: HCl/Cl⁻ और H₂O/H₃O⁺। H₂O amphoteric है – कभी acid, कभी base बन सकता है। NEET में conjugate pairs बहुत पूछे जाते हैं!"
+      },
+      "navigation": {
+        "next": "card_16_milestone_mod2",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_16_milestone_mod2",
+      "card_slug": "card_16_milestone_mod2",
+      "type": "milestone",
+      "concept_id": "mod2_complete",
+      "level": 2,
+      "progress": {
+        "current": 16,
+        "total": 80
+      },
+      "milestone_payload": {
+        "title": "MODULE 2 COMPLETED! 🎉",
+        "badge_emoji": "⚗️",
+        "completed_topic": "Acid-Base Theories – Arrhenius, Bronsted-Lowry, Lewis",
+        "xp_earned": 75,
+        "milestone_progress": "Module 2/8 Clear",
+        "motivational_quote": "Teen theories clear! Arrhenius 1884, Bronsted-Lowry aur Lewis dono 1923. Ab pH scale ki duniya mein ghuste hain – yahan numbers hi sab kuch batate hain!"
+      },
+      "navigation": {
+        "next": "card_17_ph_intro",
+        "button_text": "Start Next Module ➔"
+      }
+    },
+    {
+      "card_id": "card_17_ph_intro",
+      "card_slug": "card_17_ph_intro",
+      "type": "chat",
+      "concept_id": "ph_scale_intro",
+      "level": 2,
+      "progress": {
+        "current": 17,
+        "total": 80
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ab ek concept jo roz life mein kaam aata hai – pH! Tumne swimming pool ya aquarium mein 'pH test' ka naam suna hoga? Ya doctor ne blood ka pH check kiya ho? pH ek number hai jo batata hai ki koi solution kitna acidic ya basic hai. pH scale 0 se 14 tak hota hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "0 se 14 – matlab 7 beech mein hai! Toh 7 pe kya hoga Sir?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Excellent! pH 7 = NEUTRAL (jaise pure water). pH 7 se kam = Acidic (0 sabse zyada acidic). pH 7 se zyada = Basic/Alkaline (14 sabse zyada basic). Aur pH ka full form hai 'Potential of Hydrogen' – iska formula hai: pH = -log[H⁺]. Soeren Sorensen ne 1909 mein pH scale diya. SSC mein ye direct poochha jaata hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "pH 0 se 7 = acid, 7 = neutral, 7 se 14 = base! Aur Sorensen 1909! Ye to simple hai Sir!"
+        }
+      ],
+      "navigation": {
+        "next": "card_18_ph_values",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_18_ph_values",
+      "card_slug": "card_18_ph_values",
+      "type": "chat",
+      "concept_id": "ph_values_daily_life",
+      "level": 2,
+      "progress": {
+        "current": 18,
+        "total": 80
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ab kuch important pH values jo exam mein direct poochhi jaati hain: Human Blood = 7.35 to 7.45 (slightly alkaline). Human Stomach (HCl) = 1-2 (highly acidic). Milk = 6.5-6.8. Lemon Juice = 2-3. Pure Water = 7. Seawater = 8.1. Baking Soda = 8-9. Soap = 9-10. Bleach = 12-13!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Blood ka pH 7.35-7.45 – slightly alkaline! Agar blood bahut acidic ya basic ho jaaye to kya hoga Sir?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Very important! Blood pH 7.35 se kam ho jaaye to Acidosis hoti hai – bahut dangerous! 7.45 se zyada ho jaaye to Alkalosis – equally dangerous! Normal range se zyada 0.3-0.4 pH change bhi fatal ho sakta hai! Isliye body ek Buffer System use karti hai pH maintain karne ke liye – ye concept aage padhenge! Aur yaad rakho – pH decrease = acidity INCREASE hoti hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "pH decrease = acidity increase! Ye to ulta lagta hai – number ghata toh acidity badhi! Ye confusing hai Sir!"
+        }
+      ],
+      "navigation": {
+        "next": "card_19_ph_log_concept",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_19_ph_log_concept",
+      "card_slug": "card_19_ph_log_concept",
+      "type": "chat",
+      "concept_id": "ph_logarithmic_scale",
+      "level": 2,
+      "progress": {
+        "current": 19,
+        "total": 80
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ye confusion isliye hoti hai kyunki pH = -log[H⁺] hai – negative log! Iska matlab jab H⁺ concentration BADHTI hai (zyada acid), toh -log ki wajah se pH NUMBER GHATEGA! Jaise HCl ki concentration 0.1 M hai: pH = -log(0.1) = 1. Agar concentration 0.01 M ho: pH = -log(0.01) = 2. Zyada concentration = kam pH = zyada acidic!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Ohhhh! Negative log ki wajah se ulta hai! Zyada acid = kam pH number. Got it Sir! Aur pH ek unit waala number hai ya unit less?"
+        },
+        {
+          "speaker": "aman",
+          "text": "pH UNITLESS hota hai – dimensionless quantity! Aur ek important BPSC trap: pH scale logarithmic hai, linear nahi! Matlab pH 4 wala solution pH 5 wale se 10 times zyada acidic hai – 1 unit difference = 10 times difference in H⁺ concentration! Ye detail exam mein bahut kaam aata hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "1 pH unit = 10 times difference! Matlab pH 4 aur pH 6 mein 100 times ka fark hai! Ye to logarithm wali baat hai!"
+        }
+      ],
+      "navigation": {
+        "next": "card_20_quiz_ph_1",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_20_quiz_ph_1",
+      "card_slug": "card_20_quiz_ph_1",
+      "type": "quiz",
+      "concept_id": "ph_scale_quiz",
+      "level": 2,
+      "progress": {
+        "current": 20,
+        "total": 80
+      },
+      "quiz_payload": {
+        "question": "Human Blood का normal pH range क्या है? (Q1/3)",
+        "options": [
+          {
+            "id": "A",
+            "text": "6.8 – 7.0 (slightly acidic)"
+          },
+          {
+            "id": "B",
+            "text": "7.0 – 7.2 (neutral to slightly acidic)"
+          },
+          {
+            "id": "C",
+            "text": "7.35 – 7.45 (slightly alkaline)"
+          },
+          {
+            "id": "D",
+            "text": "7.5 – 8.0 (moderately alkaline)"
+          }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Human Blood का normal pH = 7.35 – 7.45 (slightly alkaline/basic)। pH < 7.35 = Acidosis (dangerous), pH > 7.45 = Alkalosis (equally dangerous)। Stomach (HCl) = 1-2, Urine = 4.5-8, Saliva = 6.5-7.5। Blood pH body में buffer systems (carbonic acid-bicarbonate buffer) द्वारा maintain होता है। BPSC और NEET में यह direct question है!"
+      },
+      "navigation": {
+        "next": "card_21_quiz_ph_2",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_21_quiz_ph_2",
+      "card_slug": "card_21_quiz_ph_2",
+      "type": "quiz",
+      "concept_id": "ph_scale_quiz",
+      "level": 2,
+      "progress": {
+        "current": 21,
+        "total": 80
+      },
+      "quiz_payload": {
+        "question": "pH scale किसने और कब दिया? (Q2/3)",
+        "options": [
+          {
+            "id": "A",
+            "text": "Arrhenius – 1884"
+          },
+          {
+            "id": "B",
+            "text": "Soeren Sorensen – 1909"
+          },
+          {
+            "id": "C",
+            "text": "Lewis – 1923"
+          },
+          {
+            "id": "D",
+            "text": "Bronsted – 1923"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "pH scale Soeren Peter Lauritz Sorensen ने 1909 में दिया। pH का full form = 'Potential of Hydrogen'। Formula: pH = -log[H⁺]। pH scale 0-14 तक होता है (unitless/dimensionless)। Arrhenius 1884 = Acid-Base Theory, Bronsted-Lowry और Lewis दोनों 1923 = Theory। SSC, Railway, BPSC में scientist-year trap!"
+      },
+      "navigation": {
+        "next": "card_22_quiz_ph_3",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_22_quiz_ph_3",
+      "card_slug": "card_22_quiz_ph_3",
+      "type": "quiz",
+      "concept_id": "ph_scale_quiz",
+      "level": 2,
+      "progress": {
+        "current": 22,
+        "total": 80
+      },
+      "quiz_payload": {
+        "question": "यदि किसी solution का pH = 3 है और दूसरे का pH = 5 है, तो pH=3 वाला solution pH=5 वाले से कितना अधिक acidic है? (Q3/3)",
+        "options": [
+          {
+            "id": "A",
+            "text": "2 times"
+          },
+          {
+            "id": "B",
+            "text": "10 times"
+          },
+          {
+            "id": "C",
+            "text": "100 times"
+          },
+          {
+            "id": "D",
+            "text": "1000 times"
+          }
+        ],
+        "correct_option_id": "C",
+        "explanation": "pH scale logarithmic है – 1 pH unit का अंतर = 10 गुना अंतर [H⁺] concentration में। pH=3 और pH=5 का अंतर = 2 units → 10² = 100 times अधिक acidic। pH=3 में pH=6 से 3 units अंतर → 10³ = 1000 times अधिक acidic। यह BPSC और NEET का calculation-based trap question है!"
+      },
+      "navigation": {
+        "next": "card_23_milestone_mod3",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_23_milestone_mod3",
+      "card_slug": "card_23_milestone_mod3",
+      "type": "milestone",
+      "concept_id": "mod3_complete",
+      "level": 2,
+      "progress": {
+        "current": 23,
+        "total": 80
+      },
+      "milestone_payload": {
+        "title": "MODULE 3 COMPLETED! 🎉",
+        "badge_emoji": "📊",
+        "completed_topic": "pH Scale & Values",
+        "xp_earned": 75,
+        "milestone_progress": "Module 3/8 Clear",
+        "motivational_quote": "pH scale master ho gaye! Sorensen 1909, blood pH 7.35-7.45, logarithmic scale – sab clear! Ab strong vs weak acids ka twist dekhte hain!"
+      },
+      "navigation": {
+        "next": "card_24_strong_weak_acids",
+        "button_text": "Start Next Module ➔"
+      }
+    },
+    {
+      "card_id": "card_24_strong_weak_acids",
+      "card_slug": "card_24_strong_weak_acids",
+      "type": "chat",
+      "concept_id": "strong_weak_acids",
+      "level": 2,
+      "progress": {
+        "current": 24,
+        "total": 80
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ab ek important distinction – Strong Acid vs Weak Acid! Socho electric bulb ki brightness – agar kisi solution mein bulb jyada chamke to matlab zyada ions hain – matlab acid/base completely ionize ho gaya. Strong Acid paani mein COMPLETELY ionize hota hai – 100% H⁺ deta hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "100% ionize matlab ek bhi molecule bacha nahi! Sir kaunse acids strong hain?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Strong acids yaad karo – HCl (Hydrochloric Acid), H₂SO₄ (Sulphuric Acid), HNO₃ (Nitric Acid), HBr, HI, HClO₄ (Perchloric Acid). Ye six strong acids hain! Weak Acids partially ionize karte hain – jaise CH₃COOH (Acetic Acid), H₂CO₃ (Carbonic Acid), H₃PO₄, HF! Interesting – HF weak acid hai, baaki hydrogen halides strong acids hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "HF weak acid hai?! HCl, HBr, HI strong hain par HF weak?? Ye to confusing trap hai Sir!"
+        }
+      ],
+      "navigation": {
+        "next": "card_25_hf_exception",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_25_hf_exception",
+      "card_slug": "card_25_hf_exception",
+      "type": "chat",
+      "concept_id": "hf_exception_strong_bases",
+      "level": 2,
+      "progress": {
+        "current": 25,
+        "total": 80
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "HF weak acid isliye hai kyunki F (Fluorine) sabse electronegative element hai – H-F bond bahut strong hota hai aur easily nahi toot ta! Isliye HF water mein kam ionize hota hai. Ye NEET ka favorite exception question hai! Ab Strong Bases: NaOH, KOH, Ca(OH)₂, Ba(OH)₂, LiOH – ye sab strong bases hain jo completely ionize hote hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "F ki electronegativity ki wajah se HF weak acid! Ab weak bases kaunse hain Sir?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Weak Bases: NH₃ (Ammonia), NH₄OH (Ammonium Hydroxide), Cu(OH)₂, Fe(OH)₃ – ye partially ionize karte hain. Aur yaad karo – weak acid ya weak base ka matlab 'dangerous nahi' nahi hai! HF weak acid hai lekin extremely corrosive aur dangerous hai – glass tak tod sakta hai! Strength aur danger alag-alag concepts hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "HF glass tod sakta hai?? Weak acid hua lekin glass khaa gaya! Ye to seriously unexpected hai Sir!"
+        }
+      ],
+      "navigation": {
+        "next": "card_26_dilute_conc_acids",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_26_dilute_conc_acids",
+      "card_slug": "card_26_dilute_conc_acids",
+      "type": "chat",
+      "concept_id": "dilute_conc_strong_weak_difference",
+      "level": 2,
+      "progress": {
+        "current": 26,
+        "total": 80
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Aur ek aur important distinction jo students confuse karte hain – Strong/Weak vs Concentrated/Dilute! Strong/Weak = ionization ke baare mein hai. Concentrated/Dilute = quantity/amount ke baare mein hai. Dilute H₂SO₄ (strong acid, kam quantity) aur Concentrated Acetic Acid (weak acid, zyada quantity) – dono alag hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Ohh! Concentrated matlab sirf concentrated, weak matlab kam ionized! Ye to mix ho jaata tha mujhe – ab clear hai!"
+        },
+        {
+          "speaker": "aman",
+          "text": "BPSC ka favorite: 'Dilute H₂SO₄ ko zinc ke saath milaate hain' – yahan H₂SO₄ strong acid hai aur dilute form mein hai. Ye H₂ gas deta hai. Lekin Concentrated H₂SO₄ zinc ke saath react karke SO₂ gas deta hai – H₂ nahi! Ye ek exam-critical difference hai jो paper mein confuse karne ke liye aata hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Dilute H₂SO₄ → H₂ gas, Concentrated H₂SO₄ → SO₂ gas! Ye to important difference hai – same acid, alag products!"
+        }
+      ],
+      "navigation": {
+        "next": "card_27_quiz_strongweak_1",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_27_quiz_strongweak_1",
+      "card_slug": "card_27_quiz_strongweak_1",
+      "type": "quiz",
+      "concept_id": "strong_weak_quiz",
+      "level": 2,
+      "progress": {
+        "current": 27,
+        "total": 80
+      },
+      "quiz_payload": {
+        "question": "निम्नलिखित में से कौन सा एक Weak Acid है? (Q1/3)",
+        "options": [
+          {
+            "id": "A",
+            "text": "HCl (Hydrochloric Acid)"
+          },
+          {
+            "id": "B",
+            "text": "HNO₃ (Nitric Acid)"
+          },
+          {
+            "id": "C",
+            "text": "H₂SO₄ (Sulphuric Acid)"
+          },
+          {
+            "id": "D",
+            "text": "HF (Hydrofluoric Acid)"
+          }
+        ],
+        "correct_option_id": "D",
+        "explanation": "HF (Hydrofluoric Acid) एक weak acid है क्योंकि F की अत्यधिक electronegativity के कारण H-F bond बहुत strong है और पानी में कम ionize होता है। HCl, HNO₃, H₂SO₄ सभी strong acids हैं (completely ionize)। विशेष: HF weak होने के बावजूद glass को dissolve कर सकता है! NEET और BPSC का classic exception trap!"
+      },
+      "navigation": {
+        "next": "card_28_quiz_strongweak_2",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_28_quiz_strongweak_2",
+      "card_slug": "card_28_quiz_strongweak_2",
+      "type": "quiz",
+      "concept_id": "strong_weak_quiz",
+      "level": 2,
+      "progress": {
+        "current": 28,
+        "total": 80
+      },
+      "quiz_payload": {
+        "question": "Assertion (A): HCl एक strong acid है।\nReason (R): HCl पानी में पूरी तरह (100%) ionize होकर H⁺ और Cl⁻ ions देता है। (Q2/3)",
+        "options": [
+          {
+            "id": "A",
+            "text": "A और R दोनों सही हैं और R, A की सही व्याख्या है"
+          },
+          {
+            "id": "B",
+            "text": "A और R दोनों सही हैं लेकिन R, A की सही व्याख्या नहीं है"
+          },
+          {
+            "id": "C",
+            "text": "A सही है लेकिन R गलत है"
+          },
+          {
+            "id": "D",
+            "text": "A गलत है लेकिन R सही है"
+          }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Assertion सही है – HCl एक strong acid है। Reason भी सही और सटीक explanation है – Strong acid की definition ही complete ionization है: HCl → H⁺ + Cl⁻ (100% in water)। Weak acids partially ionize होते हैं (reversible equilibrium)। R correctly A को explain करता है। BPSC Assertion-Reason format!"
+      },
+      "navigation": {
+        "next": "card_29_quiz_strongweak_3",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_29_quiz_strongweak_3",
+      "card_slug": "card_29_quiz_strongweak_3",
+      "type": "quiz",
+      "concept_id": "strong_weak_quiz",
+      "level": 2,
+      "progress": {
+        "current": 29,
+        "total": 80
+      },
+      "quiz_payload": {
+        "question": "Zinc के साथ Dilute H₂SO₄ की reaction से क्या gas बनती है? (Q3/3)",
+        "options": [
+          {
+            "id": "A",
+            "text": "SO₂ gas"
+          },
+          {
+            "id": "B",
+            "text": "O₂ gas"
+          },
+          {
+            "id": "C",
+            "text": "H₂ gas"
+          },
+          {
+            "id": "D",
+            "text": "H₂S gas"
+          }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Zn + H₂SO₄ (dilute) → ZnSO₄ + H₂↑। Dilute H₂SO₄ के साथ Zinc का reaction होने पर Hydrogen gas (H₂) बनती है। लेकिन Concentrated H₂SO₄ + Zn → SO₂ gas (H₂ नहीं)। यह difference BPSC और SSC में trap question के रूप में आता है। Metals + Dilute Acids → Salt + H₂ – यह general rule है!"
+      },
+      "navigation": {
+        "next": "card_30_milestone_mod4",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_30_milestone_mod4",
+      "card_slug": "card_30_milestone_mod4",
+      "type": "milestone",
+      "concept_id": "mod4_complete",
+      "level": 2,
+      "progress": {
+        "current": 30,
+        "total": 80
+      },
+      "milestone_payload": {
+        "title": "MODULE 4 COMPLETED! 🎉",
+        "badge_emoji": "💪",
+        "completed_topic": "Strong vs Weak Acids & Bases",
+        "xp_earned": 75,
+        "milestone_progress": "Module 4/8 Clear",
+        "motivational_quote": "Strong aur Weak ka fark clear! HF exception, concentrated vs dilute difference – sab yaad hai. Ab neutralization aur salts ki duniya mein chalte hain!"
+      },
+      "navigation": {
+        "next": "card_31_neutralization_intro",
+        "button_text": "Start Next Module ➔"
+      }
+    },
+    {
+      "card_id": "card_31_neutralization_intro",
+      "card_slug": "card_31_neutralization_intro",
+      "type": "chat",
+      "concept_id": "neutralization_reaction",
+      "level": 3,
+      "progress": {
+        "current": 31,
+        "total": 80
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, kabhi pet mein jalan (acidity) hoti hai? Ghar mein kya dete hain – eno salt ya antacid tablet? Ye antacid kaam kaise karta hai? Wo ek BASE (Mg(OH)₂ ya NaHCO₃) hota hai jo stomach ke ACID (HCl) ko neutralize karta hai! Yahi Neutralization Reaction hai – Acid + Base → Salt + Water!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Antacid base hai?! Aur wo stomach acid ko neutralize karta hai! Matlab acid aur base aapas mein kat jaate hain – ek dono ko khatam kar deta hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Exactly! Neutralization reaction: Acid + Base → Salt + Water. Ye always exothermic reaction hai – matlab heat release hoti hai! Example: HCl + NaOH → NaCl + H₂O. Yahan HCl acid hai, NaOH base hai, NaCl salt bana aur H₂O bana. NaCl – wo khane wala namak hai jo ghar mein hota hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "NaCl khane ka namak!! Acid aur base se khane ka namak bana! Ye to amazing hai Sir!"
+        }
+      ],
+      "navigation": {
+        "next": "card_32_salt_types",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_32_salt_types",
+      "card_slug": "card_32_salt_types",
+      "type": "chat",
+      "concept_id": "types_of_salts",
+      "level": 3,
+      "progress": {
+        "current": 32,
+        "total": 80
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ab Salts ke types! Salt ki nature depend karti hai usse banane wale acid aur base ki strength pe: 1) Strong Acid + Strong Base → Neutral Salt (pH=7), jaise NaCl. 2) Strong Acid + Weak Base → Acidic Salt (pH<7), jaise NH₄Cl. 3) Weak Acid + Strong Base → Basic Salt (pH>7), jaise Na₂CO₃. 4) Weak Acid + Weak Base → Depends on Ka and Kb!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Arre! Matlab NH₄Cl (ammonium chloride) acidic salt hai? Ye to dahi mein use hota hai! Aur Na₂CO₃ basic salt hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! NH₄Cl acidic salt hai – ye weak base NH₃ + strong acid HCl se bana. Aur Na₂CO₃ (Washing Soda) basic salt hai – weak acid H₂CO₃ + strong base NaOH se bana. Ye property 'Salt Hydrolysis' ki wajah se hoti hai – salt paani mein dissolve hoke acid ya base bana sakta hai! NEET aur BPSC mein ye salt nature trap bahut aata hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Salt bhi acid ya base ho sakta hai?! Ye to seriously unexpected tha Sir! Salt neutral nahi hota hamesha?"
+        }
+      ],
+      "navigation": {
+        "next": "card_33_important_salts_nacl",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_33_important_salts_nacl",
+      "card_slug": "card_33_important_salts_nacl",
+      "type": "chat",
+      "concept_id": "nacl_common_salt",
+      "level": 3,
+      "progress": {
+        "current": 33,
+        "total": 80
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ab important salts ek-ek karke! NaCl – Sodium Chloride – Common Salt! Ye Strong Acid (HCl) + Strong Base (NaOH) se banta hai → Neutral salt (pH=7). Uses: Khana pakana, food preservation, electrochemical industry mein Cl₂ aur NaOH banana (Chlor-Alkali process). Ocean water mein ~3.5% NaCl hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "NaCl se Cl₂ aur NaOH banana – Chlor-Alkali process! Ye factory mein hota hoga na Sir? Electrolysis se?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! 2NaCl + 2H₂O → Cl₂ + H₂ + 2NaOH – ye Chlor-Alkali process hai electrolysis se. Isse Chlorine gas (bleaching mein use), Hydrogen gas (fuel cell mein), aur NaOH (caustic soda – soap, paper industry mein) banta hai. SSC mein 'brine ka electrolysis kya deta hai' – ye direct question hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Brine matlab namkeen paani – NaCl solution! Aur usse teen cheezein milti hain – Cl₂, H₂, NaOH! Ek kaam se teen faayde!"
+        }
+      ],
+      "navigation": {
+        "next": "card_34_washing_baking_soda",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_34_washing_baking_soda",
+      "card_slug": "card_34_washing_baking_soda",
+      "type": "chat",
+      "concept_id": "washing_baking_soda",
+      "level": 3,
+      "progress": {
+        "current": 34,
+        "total": 80
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ab do bahut important salts jo SSC mein almost har year poochhe jaate hain! Na₂CO₃ = Sodium Carbonate = Washing Soda. Formula: Na₂CO₃·10H₂O (10 water molecules ke saath – decahydrate form). Uses: Glass making, paper, textile industry, water softening (hard water treat karna), laundry. Ye basic salt hai (pH>7)!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Washing Soda = Na₂CO₃·10H₂O! 10 paani ke molecules ke saath! Aur Baking Soda alag hota hai Sir?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul alag! NaHCO₃ = Sodium Bicarbonate = Baking Soda! Ye monohydrate nahi – anhydrous form mein hota hai. Uses: Baking mein (CO₂ gas deta hai jisse bread/cake phoolti hai), Antacid ke roop mein (stomach acid neutralize karta hai), Fire extinguisher mein! Formula: NaHCO₃ – ek Na, ek H, ek C, teen O!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Baking Soda = NaHCO₃! Aur ye fire extinguisher mein bhi hota hai? Matlab ek hi cheez baking aur fire dono mein kaam aati hai!"
+        }
+      ],
+      "navigation": {
+        "next": "card_35_bleaching_plaster",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_35_bleaching_plaster",
+      "card_slug": "card_35_bleaching_plaster",
+      "type": "chat",
+      "concept_id": "bleaching_powder_plaster_paris",
+      "level": 3,
+      "progress": {
+        "current": 35,
+        "total": 80
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ab Bleaching Powder – CaOCl₂ ya Ca(OCl)Cl – Calcium Hypochlorite! Ye banta hai Slaked Lime (Ca(OH)₂) mein Cl₂ gas provaah karne se: Ca(OH)₂ + Cl₂ → CaOCl₂ + H₂O. Uses: Kapde bleach karna, paani saaf karna (water purification), disinfectant! Exam trap: Bleaching Powder ka chemical name Calcium Oxychloride hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Bleaching Powder paani saaf karta hai! Isliye swimming pool mein aur nali ke paani mein daalte hain! Aur Plaster of Paris kya hai Sir?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Plaster of Paris = CaSO₄·½H₂O = Calcium Sulphate Hemihydrate! Ye Gypsum (CaSO₄·2H₂O) ko 120°C pe garam karne se banta hai. Jab paani milaao to ye set ho jaata hai (hard ho jaata hai) kyunki wapas Gypsum banta hai. Exam trap: Plaster of Paris se Gypsum banta hai jab set hota hai – ye ENDOTHERMIC reaction hai! Use: Fracture mein cast, moulds, toys, chalk!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Fracture mein jo plaster lagate hain wo Plaster of Paris hai! Ab samajh aaya kyu set ho jaata hai – paani milaane se gypsum ban jaata hai!"
+        }
+      ],
+      "navigation": {
+        "next": "card_36_quiz_salts_1",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_36_quiz_salts_1",
+      "card_slug": "card_36_quiz_salts_1",
+      "type": "quiz",
+      "concept_id": "important_salts_quiz",
+      "level": 3,
+      "progress": {
+        "current": 36,
+        "total": 80
+      },
+      "quiz_payload": {
+        "question": "Baking Soda (NaHCO₃) के बारे में कौन सा कथन सही है? (Q1/3)",
+        "options": [
+          {
+            "id": "A",
+            "text": "यह Na₂CO₃·10H₂O है और Washing Soda के नाम से जाना जाता है"
+          },
+          {
+            "id": "B",
+            "text": "यह NaHCO₃ है, baking में CO₂ gas देता है और antacid का काम करता है"
+          },
+          {
+            "id": "C",
+            "text": "यह CaOCl₂ है और water purification में use होता है"
+          },
+          {
+            "id": "D",
+            "text": "यह CaSO₄·½H₂O है और fracture में cast के लिए उपयोग होता है"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Baking Soda = NaHCO₃ (Sodium Bicarbonate)। Baking में heat पर: 2NaHCO₃ → Na₂CO₃ + H₂O + CO₂↑ (CO₂ से bread/cake फूलती है)। Antacid: पेट के HCl को neutralize करता है। Fire extinguisher में भी use। Option A = Washing Soda, Option C = Bleaching Powder, Option D = Plaster of Paris। SSC में यह direct identification question है!"
+      },
+      "navigation": {
+        "next": "card_37_quiz_salts_2",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_37_quiz_salts_2",
+      "card_slug": "card_37_quiz_salts_2",
+      "type": "quiz",
+      "concept_id": "important_salts_quiz",
+      "level": 3,
+      "progress": {
+        "current": 37,
+        "total": 80
+      },
+      "quiz_payload": {
+        "question": "Bleaching Powder किसे Cl₂ gas प्रवाहित करके बनाया जाता है? (Q2/3)",
+        "options": [
+          {
+            "id": "A",
+            "text": "NaCl (Common Salt)"
+          },
+          {
+            "id": "B",
+            "text": "CaCO₃ (Limestone)"
+          },
+          {
+            "id": "C",
+            "text": "Ca(OH)₂ (Slaked Lime)"
+          },
+          {
+            "id": "D",
+            "text": "CaO (Quick Lime)"
+          }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Bleaching Powder बनाने की reaction: Ca(OH)₂ + Cl₂ → CaOCl₂ + H₂O। Ca(OH)₂ = Slaked Lime (बुझा हुआ चूना)। Bleaching Powder का chemical name = Calcium Oxychloride। CaO (Quick Lime) + H₂O → Ca(OH)₂ (Slaked Lime) – यह पहले का step है। SSC और BPSC में Bleaching Powder preparation trap!"
+      },
+      "navigation": {
+        "next": "card_38_quiz_salts_3",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_38_quiz_salts_3",
+      "card_slug": "card_38_quiz_salts_3",
+      "type": "quiz",
+      "concept_id": "important_salts_quiz",
+      "level": 3,
+      "progress": {
+        "current": 38,
+        "total": 80
+      },
+      "quiz_payload": {
+        "question": "Plaster of Paris (CaSO₄·½H₂O) कब 'set' होता है? (Q3/3)",
+        "options": [
+          {
+            "id": "A",
+            "text": "जब इसे 120°C पर गर्म करते हैं"
+          },
+          {
+            "id": "B",
+            "text": "जब इसमें पानी मिलाते हैं – Gypsum (CaSO₄·2H₂O) बनता है"
+          },
+          {
+            "id": "C",
+            "text": "जब इसमें CO₂ गैस मिलाते हैं"
+          },
+          {
+            "id": "D",
+            "text": "जब इसे ठंडा करते हैं बिना पानी मिलाए"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Plaster of Paris + Water → Gypsum: CaSO₄·½H₂O + 1½H₂O → CaSO₄·2H₂O (Gypsum)। यह setting reaction endothermic है और plaster hard हो जाता है। Gypsum को 120°C पर गर्म करने से Plaster of Paris बनता है (यह reverse process है)। Medical casts, moulds, toys में use। BPSC और NEET में endothermic/exothermic classification पूछी जाती है!"
+      },
+      "navigation": {
+        "next": "card_39_milestone_mod5",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_39_milestone_mod5",
+      "card_slug": "card_39_milestone_mod5",
+      "type": "milestone",
+      "concept_id": "mod5_complete",
+      "level": 3,
+      "progress": {
+        "current": 39,
+        "total": 80
+      },
+      "milestone_payload": {
+        "title": "MODULE 5 COMPLETED! 🎉",
+        "badge_emoji": "🧂",
+        "completed_topic": "Neutralization & Important Salts",
+        "xp_earned": 100,
+        "milestone_progress": "Module 5/8 Clear",
+        "motivational_quote": "NaCl, Na₂CO₃, NaHCO₃, Bleaching Powder, Plaster of Paris – sab salts clear! Ab indicators aur indicators ke types dekhte hain!"
+      },
+      "navigation": {
+        "next": "card_40_indicators_intro",
+        "button_text": "Start Next Module ➔"
+      }
+    },
+    {
+      "card_id": "card_40_indicators_intro",
+      "card_slug": "card_40_indicators_intro",
+      "type": "chat",
+      "concept_id": "indicators",
+      "level": 3,
+      "progress": {
+        "current": 40,
+        "total": 80
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ab Indicators! Ye wo substances hain jo acid ya base ki presence mein apna RANG badal lete hain. Sabse famous indicator hai Litmus – ye natural indicator hai jo Lichen (Rocella tinctoria) se milta hai. Acid mein: Blue → Red. Base mein: Red → Blue. BPSC trap: Litmus neutral solution mein purple color dikhata hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Litmus purple hota hai neutral mein?! Mujhe laga ya red ya blue hoga! Purple toh dono ka mix hai!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Exactly! Aur kuch aur important indicators: Phenolphthalein – Acid mein colorless (no color), Base mein Pink/Magenta. Methyl Orange – Acid mein Red/Orange, Base mein Yellow, Neutral mein Orange. Turmeric (Haldi) – Acid mein Yellow (same), Base mein Red-brown! Haldi ek natural indicator hai – ghar mein hi available!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Haldi natural indicator hai?? Matlab kapde pe haldi lag jaaye aur sabun se dhoya to rang badal gaya – woh base ki wajah se hua! Isliye haldi ke daag saaf nahi hote!"
+        }
+      ],
+      "navigation": {
+        "next": "card_41_universal_indicator",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_41_universal_indicator",
+      "card_slug": "card_41_universal_indicator",
+      "type": "chat",
+      "concept_id": "universal_indicator_olfactory",
+      "level": 3,
+      "progress": {
+        "current": 41,
+        "total": 80
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Bahut accha observation! Ab Universal Indicator – ye several indicators ka mixture hai jो range of pH ke liye alag-alag color deta hai. pH 1-3 = Red, pH 4-6 = Orange/Yellow, pH 7 = Green, pH 8-10 = Blue, pH 11-14 = Violet/Purple. Ye pH paper ke roop mein milta hai jo test strips ki tarah kaam karta hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "pH 7 pe green! Matlab neutral = green color! Ye to pH paper se seedha dekh sakte hain bina calculation ke?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! Aur ek interesting category hai – Olfactory Indicators! Ye wo substances hain jinki SMELL acid ya base ke saath badal jaati hai. Onion ka rasa (juice) – Base mein smell chali jaati hai (odorless ho jaata hai)! Vanilla essence – Base mein smell chali jaati hai! Clove oil – Base mein smell chali jaati hai! Ye NEET ka unusual question hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Pyaaz ek indicator hai?! Hain?? Matlab pyaaz ko base mein rakhne se smell gaayab ho jaati hai? Ye to seriously weird science hai!"
+        }
+      ],
+      "navigation": {
+        "next": "card_42_quiz_indicators_1",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_42_quiz_indicators_1",
+      "card_slug": "card_42_quiz_indicators_1",
+      "type": "quiz",
+      "concept_id": "indicators_quiz",
+      "level": 3,
+      "progress": {
+        "current": 42,
+        "total": 80
+      },
+      "quiz_payload": {
+        "question": "Phenolphthalein indicator Acidic solution में कौन सा रंग दिखाता है? (Q1/3)",
+        "options": [
+          {
+            "id": "A",
+            "text": "Red"
+          },
+          {
+            "id": "B",
+            "text": "Pink"
+          },
+          {
+            "id": "C",
+            "text": "Colorless (No Color)"
+          },
+          {
+            "id": "D",
+            "text": "Yellow"
+          }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Phenolphthalein: Acidic solution में = Colorless (रंगहीन), Basic solution में = Pink/Magenta (गुलाबी)। Neutral में = Colorless। यह Base के साथ titration में endpoint indicator के रूप में use होता है। Methyl Orange: Acid = Red/Orange, Base = Yellow। Litmus: Acid = Red, Base = Blue, Neutral = Purple। SSC और NEET में indicator colors बार-बार पूछे जाते हैं!"
+      },
+      "navigation": {
+        "next": "card_43_quiz_indicators_2",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_43_quiz_indicators_2",
+      "card_slug": "card_43_quiz_indicators_2",
+      "type": "quiz",
+      "concept_id": "indicators_quiz",
+      "level": 3,
+      "progress": {
+        "current": 43,
+        "total": 80
+      },
+      "quiz_payload": {
+        "question": "Litmus indicator प्राकृतिक रूप से किससे प्राप्त होता है? (Q2/3)",
+        "options": [
+          {
+            "id": "A",
+            "text": "Turmeric (Haldi) से"
+          },
+          {
+            "id": "B",
+            "text": "China Rose (Gudhal) से"
+          },
+          {
+            "id": "C",
+            "text": "Lichen (Rocella tinctoria) से"
+          },
+          {
+            "id": "D",
+            "text": "Rose petals से"
+          }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Litmus एक natural indicator है जो Lichen (Rocella tinctoria) से extract होता है। Acid में: Blue → Red, Base में: Red → Blue, Neutral में: Purple। China Rose (Gudhal/Hibiscus) भी एक natural indicator है – Acid में Dark Pink/Red, Base में Green। Turmeric भी natural indicator है। BPSC और SSC में Litmus source पूछा जाता है!"
+      },
+      "navigation": {
+        "next": "card_44_quiz_indicators_3",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_44_quiz_indicators_3",
+      "card_slug": "card_44_quiz_indicators_3",
+      "type": "quiz",
+      "concept_id": "indicators_quiz",
+      "level": 3,
+      "progress": {
+        "current": 44,
+        "total": 80
+      },
+      "quiz_payload": {
+        "question": "Universal Indicator पर pH = 7 (Neutral) solution का रंग कौन सा होगा? (Q3/3)",
+        "options": [
+          {
+            "id": "A",
+            "text": "Red"
+          },
+          {
+            "id": "B",
+            "text": "Yellow"
+          },
+          {
+            "id": "C",
+            "text": "Green"
+          },
+          {
+            "id": "D",
+            "text": "Blue"
+          }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Universal Indicator पर: pH 1-3 = Red, pH 4-6 = Orange/Yellow, pH 7 (Neutral) = Green, pH 8-10 = Blue, pH 11-14 = Violet/Purple। Green = Neutral याद रखने के लिए – 'Go Green = Neutral'। pH paper इसी principle पर काम करता है। NEET और SSC में Universal Indicator color range direct question!"
+      },
+      "navigation": {
+        "next": "card_45_milestone_mod6",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_45_milestone_mod6",
+      "card_slug": "card_45_milestone_mod6",
+      "type": "milestone",
+      "concept_id": "mod6_complete",
+      "level": 3,
+      "progress": {
+        "current": 45,
+        "total": 80
+      },
+      "milestone_payload": {
+        "title": "MODULE 6 COMPLETED! 🎉",
+        "badge_emoji": "🌈",
+        "completed_topic": "Indicators & pH Colors",
+        "xp_earned": 75,
+        "milestone_progress": "Module 6/8 Clear",
+        "motivational_quote": "Litmus, Phenolphthalein, Methyl Orange, Universal Indicator – sab clear! Haldi aur pyaaz bhi indicators hain – ye fact exam mein score dilayega!"
+      },
+      "navigation": {
+        "next": "card_46_important_acids_industrial",
+        "button_text": "Start Next Module ➔"
+      }
+    },
+    {
+      "card_id": "card_46_important_acids_industrial",
+      "card_slug": "card_46_important_acids_industrial",
+      "type": "chat",
+      "concept_id": "industrial_acids",
+      "level": 3,
+      "progress": {
+        "current": 46,
+        "total": 80
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ab kuch industrial acids ke baare mein – jo SSC aur BPSC mein bahut poochhe jaate hain! H₂SO₄ (Sulphuric Acid) – ise 'King of Chemicals' ya 'Oil of Vitriol' kehte hain! Ye most important industrial chemical hai – fertilizers (ammonium sulphate), dyes, drugs, explosives, battery acid (lead-acid battery mein)! India mein sabse zyada produce hone wala chemical!"
+        },
+        {
+          "speaker": "raju",
+          "text": "H₂SO₄ = King of Chemicals! Aur car ki battery mein bhi hota hai! Isliye battery se corrosive acid leak hota hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul! Aur HNO₃ (Nitric Acid) = 'Aqua Fortis' (strong water) kehte hain. Gold aur Platinum ko sirf Aqua Regia (HNO₃ + HCl, 1:3 ratio) dissolve kar sakta hai – single acid se nahi! HCl = 'Muriatic Acid' – ye industries mein metal cleaning mein use hota hai! BPSC mein 'Aqua Regia kya hai' – ye direct question hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Aqua Regia se Gold dissolve hota hai! Toh ye ek special mixture hai – HNO₃ aur HCl, 1:3 ratio mein? Ye to interesting hai Sir!"
+        }
+      ],
+      "navigation": {
+        "next": "card_47_acid_rain",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_47_acid_rain",
+      "card_slug": "card_47_acid_rain",
+      "type": "chat",
+      "concept_id": "acid_rain",
+      "level": 3,
+      "progress": {
+        "current": 47,
+        "total": 80
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ab ek environment + chemistry crossover – Acid Rain! Normal rain ka pH = 5.6 (thoda acidic hota hai CO₂ ki wajah se – H₂CO₃ banta hai). Acid Rain ka pH = 5.6 se kam – mainly SO₂ aur NOₓ gases factories aur vehicles se nikalti hain, atmosphere mein react karke H₂SO₄ aur HNO₃ banati hain, jo rain mein aa jaati hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Acid Rain! Isliye old buildings aur statues katne lagte hain – acid se marble dissolve ho jaata hai? Taj Mahal ke baare mein bhi bola gaya tha na Sir?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul sahi! CaCO₃ (Marble) + H₂SO₄ → CaSO₄ + H₂O + CO₂ – ise 'Marble Cancer' bhi kehte hain. Taj Mahal ke aas-paas Mathura Refinery aur industries ki wajah se acid rain ka khatra tha – Supreme Court ne kuch industries band karwai. UPSC environment mein ye concept bahut poochha jaata hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Marble Cancer! Chemistry aur environmental science ek saath! Aur Supreme Court ka order bhi isse connected hai!"
+        }
+      ],
+      "navigation": {
+        "next": "card_48_buffer_solutions",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_48_buffer_solutions",
+      "card_slug": "card_48_buffer_solutions",
+      "type": "chat",
+      "concept_id": "buffer_solutions",
+      "level": 4,
+      "progress": {
+        "current": 48,
+        "total": 80
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ab ek important concept jo NEET aur BPSC mein aata hai – Buffer Solutions! Buffer wo solution hai jo thoda sa acid ya base mila dene pe bhi apna pH zyada change nahi hone deta. Jaise shock absorber car mein – road pe bump aaye to car zyada hile nahi!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Buffer = pH shock absorber! Par Sir blood mein bhi pH maintain hota hai – kya wahan bhi buffer kaam karta hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Exactly! Blood mein H₂CO₃/HCO₃⁻ buffer system hai (Carbonic Acid-Bicarbonate buffer)! Ye blood ka pH 7.35-7.45 mein maintain karta hai. Buffer typically ek weak acid + uska conjugate base ka mixture hota hai, ya weak base + uska conjugate acid. Example: CH₃COOH + CH₃COONa = Acidic Buffer! H₃PO₄/H₂PO₄⁻ buffer bhi body mein important hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "CH₃COOH + CH₃COONa = buffer! Acetic acid aur sodium acetate! Aur blood mein carbonic acid-bicarbonate system – ye NEET mein zaroor aayega!"
+        }
+      ],
+      "navigation": {
+        "next": "card_49_quiz_industrial_1",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_49_quiz_industrial_1",
+      "card_slug": "card_49_quiz_industrial_1",
+      "type": "quiz",
+      "concept_id": "industrial_acids_quiz",
+      "level": 3,
+      "progress": {
+        "current": 49,
+        "total": 80
+      },
+      "quiz_payload": {
+        "question": "Aqua Regia किसका mixture है और यह क्यों special है? (Q1/3)",
+        "options": [
+          {
+            "id": "A",
+            "text": "H₂SO₄ + HCl (1:3) – यह लोहे को dissolve करता है"
+          },
+          {
+            "id": "B",
+            "text": "HNO₃ + HCl (1:3) – यह Gold और Platinum जैसे noble metals को dissolve करता है"
+          },
+          {
+            "id": "C",
+            "text": "HNO₃ + H₂SO₄ (1:1) – यह explosives बनाने में use होता है"
+          },
+          {
+            "id": "D",
+            "text": "HCl + H₂O (3:1) – यह industrial cleaning में use होता है"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Aqua Regia = HNO₃ : HCl = 1:3 (concentrated) का mixture। यह Gold (Au) और Platinum (Pt) जैसे noble metals को dissolve कर सकता है जो अलग-अलग acids से dissolve नहीं होते। 'Aqua Regia' = Royal Water (Latin)। HNO₃ का दूसरा नाम Aqua Fortis। BPSC, SSC और NEET में Aqua Regia composition trap!"
+      },
+      "navigation": {
+        "next": "card_50_quiz_industrial_2",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_50_quiz_industrial_2",
+      "card_slug": "card_50_quiz_industrial_2",
+      "type": "quiz",
+      "concept_id": "industrial_acids_quiz",
+      "level": 3,
+      "progress": {
+        "current": 50,
+        "total": 80
+      },
+      "quiz_payload": {
+        "question": "H₂SO₄ को 'King of Chemicals' क्यों कहते हैं? (Q2/3)",
+        "options": [
+          {
+            "id": "A",
+            "text": "क्योंकि यह सबसे महंगा chemical है"
+          },
+          {
+            "id": "B",
+            "text": "क्योंकि यह सबसे अधिक industrially produced और उपयोगी chemical है – fertilizers, batteries, dyes, drugs में"
+          },
+          {
+            "id": "C",
+            "text": "क्योंकि यह सबसे strong acid है"
+          },
+          {
+            "id": "D",
+            "text": "क्योंकि यह Gold को dissolve कर सकता है"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "H₂SO₄ को 'King of Chemicals' या 'Oil of Vitriol' इसलिए कहते हैं क्योंकि यह industrially सबसे अधिक produce और use होता है – fertilizers (NH₄SO₄), car batteries (lead-acid), dyes, drugs, explosives, petroleum refining आदि में। यह HClO₄ से कमजोर है (HClO₄ strongest acid है), इसलिए strength से नहीं बल्कि utility से King है। SSC direct fact!"
+      },
+      "navigation": {
+        "next": "card_51_quiz_industrial_3",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_51_quiz_industrial_3",
+      "card_slug": "card_51_quiz_industrial_3",
+      "type": "quiz",
+      "concept_id": "industrial_acids_quiz",
+      "level": 3,
+      "progress": {
+        "current": 51,
+        "total": 80
+      },
+      "quiz_payload": {
+        "question": "Acid Rain का मुख्य कारण वायुमंडल में कौन सी gases हैं? (Q3/3)",
+        "options": [
+          {
+            "id": "A",
+            "text": "CO₂ और O₃"
+          },
+          {
+            "id": "B",
+            "text": "SO₂ और NOₓ (जो H₂SO₄ और HNO₃ बनाती हैं)"
+          },
+          {
+            "id": "C",
+            "text": "CH₄ और N₂O"
+          },
+          {
+            "id": "D",
+            "text": "HCl और HF"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Acid Rain के लिए SO₂ और NOₓ gases जिम्मेदार हैं। SO₂ + H₂O → H₂SO₄, NOₓ + H₂O → HNO₃ – ये rain water में मिलकर pH < 5.6 कर देती हैं। Normal rain = pH 5.6 (CO₂ की वजह से)। Marble Cancer (Taj Mahal damage), forest damage इसके effects हैं। CO₂ = Global Warming/Greenhouse, CH₄ = Biogas/Greenhouse। UPSC Environment question!"
+      },
+      "navigation": {
+        "next": "card_52_milestone_mod7",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_52_milestone_mod7",
+      "card_slug": "card_52_milestone_mod7",
+      "type": "milestone",
+      "concept_id": "mod7_complete",
+      "level": 3,
+      "progress": {
+        "current": 52,
+        "total": 80
+      },
+      "milestone_payload": {
+        "title": "MODULE 7 COMPLETED! 🎉",
+        "badge_emoji": "🌧️",
+        "completed_topic": "Industrial Acids, Acid Rain & Buffer Solutions",
+        "xp_earned": 100,
+        "milestone_progress": "Module 7/8 Clear",
+        "motivational_quote": "Aqua Regia, King of Chemicals, Acid Rain, Buffer Solutions – sab master! Ab final module mein important reactions aur special concepts dekhte hain!"
+      },
+      "navigation": {
+        "next": "card_53_hydrolysis_special",
+        "button_text": "Start Next Module ➔"
+      }
+    },
+    {
+      "card_id": "card_53_hydrolysis_special",
+      "card_slug": "card_53_hydrolysis_special",
+      "type": "chat",
+      "concept_id": "special_reactions_concepts",
+      "level": 4,
+      "progress": {
+        "current": 53,
+        "total": 80
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ab kuch special concepts jo exam mein aate hain! Pehla – Amphoteric Substances! Ye wo substances hain jo acid bhi ban sakte hain aur base bhi – depend karta hai kiske saath react kar rahe hain. H₂O sabse famous amphoteric substance hai! Al₂O₃, ZnO, PbO, Cr₂O₃ – ye sab amphoteric oxides hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Paani amphoteric hai?! Matlab kabhi acid kabhi base! ZnO bhi amphoteric – isliye zinc ki reaction acid mein bhi hoti hai aur base mein bhi?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Exactly! ZnO + HCl → ZnCl₂ + H₂O (base ki tarah behave kiya). ZnO + NaOH → Na₂ZnO₂ + H₂O (acid ki tarah behave kiya). Ye BPSC ka classic question hai – 'ZnO kis prakar ka oxide hai?' Answer – Amphoteric oxide! Aur Amino Acids (proteins ke building blocks) bhi amphoteric hote hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Amino Acids bhi amphoteric! Isliye pH ke hisaab se charge badal jaata hai proteins mein! NEET mein ye concept important hoga!"
+        }
+      ],
+      "navigation": {
+        "next": "card_54_reactions_special",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_54_reactions_special",
+      "card_slug": "card_54_reactions_special",
+      "type": "chat",
+      "concept_id": "special_acid_reactions",
+      "level": 4,
+      "progress": {
+        "current": 54,
+        "total": 80
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ab kuch important reactions jo exam mein directly poochhe jaate hain! Na₂CO₃ + H₂O → 2NaOH + CO₂ – Washing Soda solution basic hoti hai. NaHCO₃ heating pe: 2NaHCO₃ → Na₂CO₃ + H₂O + CO₂ – isliye baking mein use hota hai! CaCO₃ + HCl → CaCl₂ + H₂O + CO₂ – limestone acid mein dissolve hota hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "NaHCO₃ heat pe CO₂ deta hai – isliye cake phoolti hai! Aur limestone HCl mein dissolve – isliye caves banate hain underground water acidic hoke?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Exactly! Rainwater mein CO₂ milke H₂CO₃ banta hai (carbonic acid), ye limestone caves dissolve karti hai – isi se Stalactites aur Stalagmites banate hain! Aur ek important reaction: Na₂O₂ + H₂O → NaOH + H₂O₂ – ye submarine mein oxygen source ke liye use hota hai! UPSC aur BPSC mein ye fact aata hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Submarine mein Na₂O₂ se oxygen nikalte hain! Chemistry ki application kitni jagah hoti hai Sir!"
+        }
+      ],
+      "navigation": {
+        "next": "card_55_hardness_water",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_55_hardness_water",
+      "card_slug": "card_55_hardness_water",
+      "type": "chat",
+      "concept_id": "hard_soft_water",
+      "level": 4,
+      "progress": {
+        "current": 55,
+        "total": 80
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ab Hard Water vs Soft Water – ye BPSC aur SSC mein bahut poochha jaata hai! Hard water mein Ca²⁺ aur Mg²⁺ salts dissolved hote hain. Temporary Hardness – CaHCO₃ aur MgHCO₃ ki wajah se – boiling se remove hoti hai! Permanent Hardness – CaSO₄ aur MgSO₄ ki wajah se – boiling se remove NAHI hoti!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Temporary hardness boiling se hat jaati hai! Isliye gaon mein paani ubaal ke peete hain! Par permanent hardness nahi hategi boiling se?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! Permanent hardness remove karne ke liye: 1) Washing Soda (Na₂CO₃) add karo – Ca²⁺ aur Mg²⁺ insoluble carbonates bana ke precipitate kar deta hai. 2) Ion Exchange method. 3) Permutit process. Aur Temporary hardness bhi Clark's method se remove hoti hai – thodi si Slaked Lime [Ca(OH)₂] milaane se! Hard water mein sabun jhag nahi deta kyunki soap scum banta hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sabun hard water mein jhag nahi deta! Isliye kuch jagah kapde saaf nahi hote achhe se! Aur Washing Soda permanent hardness remove karta hai!"
+        }
+      ],
+      "navigation": {
+        "next": "card_56_quiz_special_1",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_56_quiz_special_1",
+      "card_slug": "card_56_quiz_special_1",
+      "type": "quiz",
+      "concept_id": "special_concepts_quiz",
+      "level": 4,
+      "progress": {
+        "current": 56,
+        "total": 80
+      },
+      "quiz_payload": {
+        "question": "ZnO किस प्रकार का oxide है? (Q1/3)",
+        "options": [
+          {
+            "id": "A",
+            "text": "Acidic Oxide"
+          },
+          {
+            "id": "B",
+            "text": "Basic Oxide"
+          },
+          {
+            "id": "C",
+            "text": "Neutral Oxide"
+          },
+          {
+            "id": "D",
+            "text": "Amphoteric Oxide"
+          }
+        ],
+        "correct_option_id": "D",
+        "explanation": "ZnO एक Amphoteric Oxide है – यह acid के साथ base की तरह और base के साथ acid की तरह behave करता है। ZnO + HCl → ZnCl₂ + H₂O (base रूप में)। ZnO + NaOH → Na₂ZnO₂ + H₂O (acid रूप में)। अन्य Amphoteric Oxides: Al₂O₃, PbO, Cr₂O₃, SnO₂। H₂O भी amphoteric है। BPSC में direct question!"
+      },
+      "navigation": {
+        "next": "card_57_quiz_special_2",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_57_quiz_special_2",
+      "card_slug": "card_57_quiz_special_2",
+      "type": "quiz",
+      "concept_id": "special_concepts_quiz",
+      "level": 4,
+      "progress": {
+        "current": 57,
+        "total": 80
+      },
+      "quiz_payload": {
+        "question": "Temporary Hardness of Water कैसे remove होती है? (Q2/3)",
+        "options": [
+          {
+            "id": "A",
+            "text": "Washing Soda (Na₂CO₃) मिलाने से"
+          },
+          {
+            "id": "B",
+            "text": "Ion Exchange resin से"
+          },
+          {
+            "id": "C",
+            "text": "Boiling से या Slaked Lime [Ca(OH)₂] मिलाने से (Clark's Method)"
+          },
+          {
+            "id": "D",
+            "text": "CaSO₄ मिलाने से"
+          }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Temporary Hardness (CaHCO₃, MgHCO₃ की वजह से) दो तरह से remove होती है: 1) Boiling: CaHCO₃ → CaCO₃↓ + H₂O + CO₂, 2) Clark's Method: Slaked Lime Ca(OH)₂ मिलाना। Permanent Hardness (CaSO₄, MgSO₄) boiling से नहीं हटती – इसके लिए Na₂CO₃ (Washing Soda) या Ion Exchange method use करते हैं। BPSC और SSC में temporary vs permanent hardness removal trap!"
+      },
+      "navigation": {
+        "next": "card_58_quiz_special_3",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_58_quiz_special_3",
+      "card_slug": "card_58_quiz_special_3",
+      "type": "quiz",
+      "concept_id": "special_concepts_quiz",
+      "level": 4,
+      "progress": {
+        "current": 58,
+        "total": 80
+      },
+      "quiz_payload": {
+        "question": "Buffer Solution के बारे में कौन सा कथन सही है? (Q3/3)",
+        "options": [
+          {
+            "id": "A",
+            "text": "Buffer solution को कोई भी acid या base add करने से pH drastically बदल जाता है"
+          },
+          {
+            "id": "B",
+            "text": "Buffer solution thodi matra में acid या base add करने पर भी pH लगभग constant रहता है"
+          },
+          {
+            "id": "C",
+            "text": "Buffer केवल strong acid और strong base से बनता है"
+          },
+          {
+            "id": "D",
+            "text": "Blood में कोई buffer system नहीं होता"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Buffer solution की property है कि thodi matra में acid या base add करने पर pH लगभग constant रहता है। Buffer = Weak Acid + Conjugate Base (या Weak Base + Conjugate Acid)। Blood में Carbonic Acid-Bicarbonate buffer (H₂CO₃/HCO₃⁻) pH 7.35-7.45 maintain करता है। CH₃COOH + CH₃COONa = Acidic Buffer। NEET और BPSC में buffer concept!"
+      },
+      "navigation": {
+        "next": "card_59_milestone_mod8",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_59_milestone_mod8",
+      "card_slug": "card_59_milestone_mod8",
+      "type": "milestone",
+      "concept_id": "mod8_complete",
+      "level": 4,
+      "progress": {
+        "current": 59,
+        "total": 80
+      },
+      "milestone_payload": {
+        "title": "MODULE 8 COMPLETED! 🎉",
+        "badge_emoji": "🏆",
+        "completed_topic": "Special Concepts – Amphoteric, Buffer, Hard Water",
+        "xp_earned": 125,
+        "milestone_progress": "Module 8/8 Clear – ALL MODULES DONE!",
+        "motivational_quote": "Amphoteric substances, Buffer solutions, Hard water – sab clear! Ab Officer Revision aur Final Master Quiz ke liye taiyar ho jao!"
+      },
+      "navigation": {
+        "next": "card_60_more_important_facts",
+        "button_text": "Go to Final Round ➔"
+      }
+    },
+    {
+      "card_id": "card_60_more_important_facts",
+      "card_slug": "card_60_more_important_facts",
+      "type": "chat",
+      "concept_id": "bonus_exam_facts",
+      "level": 4,
+      "progress": {
+        "current": 60,
+        "total": 80
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Kuch bonus facts jo exam mein aksar poochhe jaate hain! Oleum = H₂SO₄ + SO₃ – ise 'Fuming Sulphuric Acid' bhi kehte hain. HClO₄ (Perchloric Acid) = sabse strong acid among common acids. Superacids (jaise Magic Acid) HClO₄ se bhi strong hote hain. Boric Acid H₃BO₃ = Lewis acid (H⁺ donate nahi karta, electron pair accept karta hai)!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Boric Acid Lewis acid hai Bronsted nahi! Interesting! Aur HClO₄ strongest common acid! Ye to important facts hain Sir!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Aur kuch more – Na₂SO₄·10H₂O = Glauber's Salt (Washing Soda se alag!). CuSO₄·5H₂O = Blue Vitriol (Nila Thotha). FeSO₄·7H₂O = Green Vitriol (Hira Kasees). ZnSO₄·7H₂O = White Vitriol. CaCl₂ = Drying agent (hygroscopic). MgSO₄·7H₂O = Epsom Salt (laxative mein use). Ye sab SSC mein direct poochhe jaate hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Blue Vitriol, Green Vitriol, White Vitriol – teeno vitriol yaad rakhne hain! CuSO₄ = Blue, FeSO₄ = Green, ZnSO₄ = White!"
+        }
+      ],
+      "navigation": {
+        "next": "card_61_concentration_normality",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_61_concentration_normality",
+      "card_slug": "card_61_concentration_normality",
+      "type": "chat",
+      "concept_id": "concentration_terms",
+      "level": 4,
+      "progress": {
+        "current": 61,
+        "total": 80
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ab concentration terms – NEET aur BPSC mein aate hain! Molarity (M) = Moles of solute per liter of solution. Molality (m) = Moles of solute per kg of solvent. Normality (N) = Gram equivalents of solute per liter of solution. Mole Fraction = Moles of component / Total moles."
+        },
+        {
+          "speaker": "raju",
+          "text": "Molarity aur Molality mein fark! Molarity = per liter solution, Molality = per kg solvent! Ye mix ho jaayenge Sir!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Yaad karne ka trick: Molarity = M = solution (S = 's'olution, M ke baad aata hai ek concept). Molality = per kg SOLVENT. Temperature change hone pe Molarity change hoti hai (volume changes), lekin Molality nahi (mass change nahi hoti)! Isliye temperature-sensitive experiments mein Molality prefer karte hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Temperature se Molarity change hoti hai, Molality nahi! Ye to important distinction hai NEET ke liye!"
+        }
+      ],
+      "navigation": {
+        "next": "card_62_acid_base_in_life",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_62_acid_base_in_life",
+      "card_slug": "card_62_acid_base_in_life",
+      "type": "chat",
+      "concept_id": "acid_base_applications",
+      "level": 4,
+      "progress": {
+        "current": 62,
+        "total": 80
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ab daily life applications jo BPSC mein poochhe jaate hain! Toothpaste = Basic (pH ~8) – ye teeth pe acid attack neutralize karta hai jo bacteria sugar se banate hain. Shampoo = slightly acidic (~5.5) kyunki hair ka pH 4.5-5.5 hai. Antacids: Milk of Magnesia [Mg(OH)₂], Sodium Bicarbonate (NaHCO₃), Aluminium Hydroxide Al(OH)₃ – ye sab stomach acid neutralize karte hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Toothpaste basic hai toh wo teeth ki acidity neutralize karta hai! Matlab brushing actually chemistry hai!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haha! Bilkul! Aur soil ke baare mein – acidic soil (pH<7) mein farming achi nahi hoti. Farmers Slaked Lime [Ca(OH)₂] daalte hain soil ka pH badhaane ke liye. Aur alkaline soil (pH>7) mein Gypsum (CaSO₄·2H₂O) daalte hain pH kam karne ke liye. Ye BPSC agriculture-chemistry crossover question hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Khet mein lime daalna ek chemistry experiment hai! Acidic soil = lime daalo, alkaline soil = gypsum daalo! Farmers bhi chemist hain in a way!"
+        }
+      ],
+      "navigation": {
+        "next": "card_63_guess_salt_nature",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_63_guess_salt_nature",
+      "card_slug": "card_63_guess_salt_nature",
+      "type": "guess",
+      "concept_id": "salt_nature_prediction",
+      "level": 4,
+      "progress": {
+        "current": 63,
+        "total": 80
+      },
+      "quiz_payload": {
+        "question": "🤔 Guess karo! NH₄Cl (Ammonium Chloride) solution ka pH kya hoga?",
+        "options": [
+          {
+            "id": "A",
+            "text": "pH = 7 (Neutral) – kyunki ye ek salt hai"
+          },
+          {
+            "id": "B",
+            "text": "pH > 7 (Basic) – kyunki NH₄ alkaline hai"
+          },
+          {
+            "id": "C",
+            "text": "pH < 7 (Acidic) – Weak Base + Strong Acid se bana salt"
+          },
+          {
+            "id": "D",
+            "text": "pH = 14 (Strongly basic)"
+          }
+        ],
+        "correct_option_id": "C",
+        "explanation": "NH₄Cl = NH₃ (Weak Base) + HCl (Strong Acid) से बना salt है। Weak Base + Strong Acid → Acidic Salt (pH < 7)। NH₄Cl पानी में: NH₄⁺ + H₂O ⇌ NH₄OH + H⁺ (hydrolysis से H⁺ बनता है)। इसीलिए solution acidic होता है। Na₂CO₃ = Weak Acid (H₂CO₃) + Strong Base (NaOH) → Basic Salt (pH > 7)। BPSC salt hydrolysis trap!"
+      },
+      "navigation": {
+        "next": "card_64_guess_reaction",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_64_guess_reaction",
+      "card_slug": "card_64_guess_reaction",
+      "type": "guess",
+      "concept_id": "reaction_prediction",
+      "level": 4,
+      "progress": {
+        "current": 64,
+        "total": 80
+      },
+      "quiz_payload": {
+        "question": "🤔 Ek marble statue pe H₂SO₄ (acid rain) girta hai – kya banta hai?",
+        "options": [
+          {
+            "id": "A",
+            "text": "CaCl₂ + H₂O + CO₂ (marble dissolves)"
+          },
+          {
+            "id": "B",
+            "text": "CaSO₄ + H₂O + CO₂ (gypsum banta hai)"
+          },
+          {
+            "id": "C",
+            "text": "Kuch nahi hota – marble acid resistant hai"
+          },
+          {
+            "id": "D",
+            "text": "CaO + SO₃ + H₂O banta hai"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "CaCO₃ (Marble) + H₂SO₄ → CaSO₄ (Gypsum) + H₂O + CO₂। यह 'Marble Cancer' है जो Taj Mahal जैसी historical buildings को नुकसान पहुँचाता है। CaSO₄ (Gypsum) marble surface पर जमकर surface को erode करता है। Acid Rain का pH < 5.6, मुख्यतः H₂SO₄ और HNO₃ से। UPSC और BPSC Environment-Chemistry crossover!"
+      },
+      "navigation": {
+        "next": "card_65_extra_facts",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_65_extra_facts",
+      "card_slug": "card_65_extra_facts",
+      "type": "chat",
+      "concept_id": "extra_exam_facts",
+      "level": 4,
+      "progress": {
+        "current": 65,
+        "total": 80
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Kuch last-minute exam facts! Concentrated H₂SO₄ dehydrating agent hai – isliye skin se paani kheench leta hai aur chemical burns karta hai. Ye organic compounds ko bhi dehydrate karta hai. Sugar (C₁₂H₂₂O₁₁) pe conc. H₂SO₄ daalo to sirf Carbon bacha rehta hai – ye famous science experiment hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sugar pe H₂SO₄ se sirf carbon bachta hai?! Matlab sugar ka saara H aur O nikal jaata hai! Ye to dramatic experiment hoga!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! Aur HNO₃ ek oxidizing agent bhi hai – isliye skin pe laga to yellow ho jaati hai (Xanthoproteic reaction – proteins ke saath react karta hai). Aur aqueous HF glass etching mein use hota hai. NaOH ki preparation Chlor-Alkali process mein hoti hai (brine electrolysis). NaOH = 'Caustic Soda', KOH = 'Caustic Potash' – ye nicknames yaad rakhna!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Caustic Soda = NaOH, Caustic Potash = KOH! Aur HNO₃ skin yellow karta hai – isliye chemistry lab mein gloves pehnate hain!"
+        }
+      ],
+      "navigation": {
+        "next": "card_66_quiz_misc_1",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_66_quiz_misc_1",
+      "card_slug": "card_66_quiz_misc_1",
+      "type": "quiz",
+      "concept_id": "miscellaneous_quiz",
+      "level": 4,
+      "progress": {
+        "current": 66,
+        "total": 80
+      },
+      "quiz_payload": {
+        "question": "Blue Vitriol (नीला थोथा) का रासायनिक नाम क्या है? (Q1/2)",
+        "options": [
+          {
+            "id": "A",
+            "text": "FeSO₄·7H₂O (Ferrous Sulphate)"
+          },
+          {
+            "id": "B",
+            "text": "ZnSO₄·7H₂O (Zinc Sulphate)"
+          },
+          {
+            "id": "C",
+            "text": "CuSO₄·5H₂O (Copper Sulphate)"
+          },
+          {
+            "id": "D",
+            "text": "MgSO₄·7H₂O (Magnesium Sulphate)"
+          }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Blue Vitriol (नीला थोथा) = CuSO₄·5H₂O (Copper Sulphate Pentahydrate)। यह नीले रंग का होता है। Green Vitriol (हरा कसीस) = FeSO₄·7H₂O। White Vitriol = ZnSO₄·7H₂O। Epsom Salt = MgSO₄·7H₂O (purgative/laxative)। Glauber's Salt = Na₂SO₄·10H₂O। SSC और Railway में Vitriol identification सीधे पूछी जाती है!"
+      },
+      "navigation": {
+        "next": "card_67_quiz_misc_2",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_67_quiz_misc_2",
+      "card_slug": "card_67_quiz_misc_2",
+      "type": "quiz",
+      "concept_id": "miscellaneous_quiz",
+      "level": 4,
+      "progress": {
+        "current": 67,
+        "total": 80
+      },
+      "quiz_payload": {
+        "question": "Soil की Acidity दूर करने के लिए किसान क्या मिलाते हैं? (Q2/2)",
+        "options": [
+          {
+            "id": "A",
+            "text": "Gypsum (CaSO₄·2H₂O)"
+          },
+          {
+            "id": "B",
+            "text": "Common Salt (NaCl)"
+          },
+          {
+            "id": "C",
+            "text": "Slaked Lime (Ca(OH)₂)"
+          },
+          {
+            "id": "D",
+            "text": "Baking Soda (NaHCO₃)"
+          }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Acidic soil (pH < 7) को neutralize करने के लिए किसान Slaked Lime (Ca(OH)₂ = बुझा हुआ चूना) मिलाते हैं – यह basic होने से soil का pH बढ़ाता है। Alkaline soil (pH > 7) को neutralize करने के लिए Gypsum (CaSO₄·2H₂O) मिलाते हैं। BPSC Agriculture-Chemistry crossover direct question!"
+      },
+      "navigation": {
+        "next": "card_68_officer_revision",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_68_officer_revision",
+      "card_slug": "card_68_officer_revision",
+      "type": "summary",
+      "concept_id": "officer_revision_summary",
+      "level": 5,
+      "progress": {
+        "current": 68,
+        "total": 80
+      },
+      "summary_payload": {
+        "title": "⚡ Quick Officer Revision – Acids, Bases & Salts",
+        "revision_points": [
+          {
+            "topic": "Theories & Scientists",
+            "point": "Arrhenius (1884): Acid = H⁺ deta hai, Base = OH⁻ deta hai (sirf aqueous, limitation)। Bronsted-Lowry (1923): Acid = Proton donor, Base = Proton acceptor (non-aqueous bhi)। Lewis (1923): Acid = electron pair acceptor (BF₃, Al³⁺), Base = electron pair donor (NH₃, H₂O)। pH Scale = Sorensen (1909), pH = -log[H⁺], range 0-14, unitless, logarithmic।"
+          },
+          {
+            "topic": "Natural Acids & Important pH Values",
+            "point": "Citric = Nimbu, Lactic = Dahi, Acetic = Sirka, Tartaric = Imli, Formic = Chinti, Malic = Seb, Oxalic = Tomato/Palak, Uric Acid = Gout। Blood pH = 7.35-7.45 (slightly alkaline), Stomach = 1-2, Normal Rain = 5.6, Acid Rain < 5.6। Acid = Blue litmus → Red, Sour taste। Base = Red litmus → Blue, Bitter + Slippery।"
+          },
+          {
+            "topic": "Important Salts – Formulas & Uses",
+            "point": "NaCl = Common Salt (Strong acid + Strong base → Neutral). Na₂CO₃·10H₂O = Washing Soda (basic salt, glass, water softening). NaHCO₃ = Baking Soda (baking, antacid, fire extinguisher). CaOCl₂ = Bleaching Powder (Ca(OH)₂ + Cl₂, water purification). CaSO₄·½H₂O = Plaster of Paris (Gypsum heated at 120°C, fracture cast). Na₂SO₄·10H₂O = Glauber's Salt।"
+          },
+          {
+            "topic": "Industrial Acids & Special Concepts",
+            "point": "H₂SO₄ = King of Chemicals / Oil of Vitriol। HNO₃ = Aqua Fortis। HCl = Muriatic Acid। Aqua Regia = HNO₃:HCl (1:3) – dissolves Gold & Platinum। HF = Weak acid (exception!) – glass tod sakta hai। Blue Vitriol = CuSO₄·5H₂O, Green Vitriol = FeSO₄·7H₂O। Caustic Soda = NaOH, Caustic Potash = KOH।"
+          },
+          {
+            "topic": "Amphoteric, Buffer & Hard Water",
+            "point": "Amphoteric substances = both acid and base (H₂O, ZnO, Al₂O₃, Amino Acids)। Buffer = Weak Acid + Conjugate Base – resists pH change। Blood Buffer = H₂CO₃/HCO₃⁻। Temporary Hardness (CaHCO₃) = Boiling se remove। Permanent Hardness (CaSO₄) = Na₂CO₃ ya Ion Exchange se remove। Acidic soil = Slaked Lime daalo, Alkaline soil = Gypsum daalo।"
+          }
+        ]
+      },
+      "navigation": {
+        "next": "card_69_final_quiz_1",
+        "button_text": "Start Final Master Quiz ➔"
+      }
+    },
+    {
+      "card_id": "card_69_final_quiz_1",
+      "card_slug": "card_69_final_quiz_1",
+      "type": "final_quiz",
+      "concept_id": "final_master_quiz_1",
+      "level": 5,
+      "progress": {
+        "current": 69,
+        "total": 80
+      },
+      "quiz_payload": {
+        "question": "निम्नलिखित कथनों पर विचार करें:\n1. HF (Hydrofluoric Acid) एक strong acid है\n2. Baking Soda का formula Na₂CO₃·10H₂O है\n3. Arrhenius Theory केवल aqueous solutions में valid है\n4. Litmus, neutral solution में Purple color दिखाता है\n\nकौन से कथन सही हैं?",
+        "options": [
+          {
+            "id": "A",
+            "text": "केवल 1 और 2"
+          },
+          {
+            "id": "B",
+            "text": "केवल 3 और 4"
+          },
+          {
+            "id": "C",
+            "text": "केवल 1, 3 और 4"
+          },
+          {
+            "id": "D",
+            "text": "1, 2, 3 और 4 सभी"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "कथन 1 गलत – HF weak acid है (F की high electronegativity से H-F bond बहुत strong)। कथन 2 गलत – Baking Soda = NaHCO₃ (Na₂CO₃·10H₂O = Washing Soda है)। कथन 3 सही – Arrhenius Theory limitation: केवल aqueous solutions में valid। कथन 4 सही – Litmus neutral में Purple color। BPSC multi-statement classic trap format!"
+      },
+      "navigation": {
+        "next": "card_70_final_quiz_2",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_70_final_quiz_2",
+      "card_slug": "card_70_final_quiz_2",
+      "type": "final_quiz",
+      "concept_id": "final_master_quiz_2",
+      "level": 5,
+      "progress": {
+        "current": 70,
+        "total": 80
+      },
+      "quiz_payload": {
+        "question": "Assertion (A): Na₂CO₃ (Washing Soda) का solution basic होता है।\nReason (R): Na₂CO₃ एक Weak Acid (H₂CO₃) और Strong Base (NaOH) से बना salt है, इसलिए hydrolysis से OH⁻ ions मिलते हैं।\n\nसही विकल्प चुनिए:",
+        "options": [
+          {
+            "id": "A",
+            "text": "A और R दोनों सही हैं और R, A की सही व्याख्या है"
+          },
+          {
+            "id": "B",
+            "text": "A और R दोनों सही हैं लेकिन R, A की सही व्याख्या नहीं है"
+          },
+          {
+            "id": "C",
+            "text": "A सही है लेकिन R गलत है"
+          },
+          {
+            "id": "D",
+            "text": "A गलत है लेकिन R सही है"
+          }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Assertion सही है – Na₂CO₃ solution basic होता है (pH > 7)। Reason भी सही और correct explanation है – Weak Acid (H₂CO₃) + Strong Base (NaOH) = Basic Salt। Hydrolysis: CO₃²⁻ + H₂O ⇌ HCO₃⁻ + OH⁻ (OH⁻ ions release → basic)। R correctly A को explain करता है। BPSC Assertion-Reason format!"
+      },
+      "navigation": {
+        "next": "card_71_final_quiz_3",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_71_final_quiz_3",
+      "card_slug": "card_71_final_quiz_3",
+      "type": "final_quiz",
+      "concept_id": "final_master_quiz_3",
+      "level": 5,
+      "progress": {
+        "current": 71,
+        "total": 80
+      },
+      "quiz_payload": {
+        "question": "निम्नलिखित युग्मों (Salt – Chemical Formula) में से कौन से सही हैं?\n1. Plaster of Paris – CaSO₄·2H₂O\n2. Bleaching Powder – CaOCl₂\n3. Glauber's Salt – Na₂SO₄·10H₂O\n4. Blue Vitriol – FeSO₄·7H₂O\n\nसही कूट:",
+        "options": [
+          {
+            "id": "A",
+            "text": "केवल 1 और 4"
+          },
+          {
+            "id": "B",
+            "text": "केवल 2 और 3"
+          },
+          {
+            "id": "C",
+            "text": "केवल 1, 2 और 3"
+          },
+          {
+            "id": "D",
+            "text": "2, 3 और 4"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "1 गलत – Plaster of Paris = CaSO₄·½H₂O (hemihydrate), CaSO₄·2H₂O = Gypsum। 2 सही – Bleaching Powder = CaOCl₂ (Calcium Oxychloride)। 3 सही – Glauber's Salt = Na₂SO₄·10H₂O (Sodium Sulphate Decahydrate)। 4 गलत – Blue Vitriol = CuSO₄·5H₂O (Copper Sulphate), FeSO₄·7H₂O = Green Vitriol। BPSC और SSC matching trap – sabse zyada confusing question!"
+      },
+      "navigation": {
+        "next": "card_72_final_quiz_4",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_72_final_quiz_4",
+      "card_slug": "card_72_final_quiz_4",
+      "type": "final_quiz",
+      "concept_id": "final_master_quiz_4",
+      "level": 5,
+      "progress": {
+        "current": 72,
+        "total": 80
+      },
+      "quiz_payload": {
+        "question": "निम्नलिखित कथनों पर विचार करें:\n1. Temporary Hardness of Water, boiling से remove की जा सकती है\n2. Permanent Hardness, Na₂CO₃ मिलाने से remove होती है\n3. Hard water में साबुन अधिक झाग देता है\n4. Temporary Hardness, Ca(HCO₃)₂ और Mg(HCO₃)₂ की वजह से होती है\n\nकौन से कथन सही हैं?",
+        "options": [
+          {
+            "id": "A",
+            "text": "केवल 1 और 3"
+          },
+          {
+            "id": "B",
+            "text": "केवल 2 और 4"
+          },
+          {
+            "id": "C",
+            "text": "1, 2 और 4"
+          },
+          {
+            "id": "D",
+            "text": "1, 2, 3 और 4"
+          }
+        ],
+        "correct_option_id": "C",
+        "explanation": "कथन 1 सही – Temporary hardness boiling से remove होती है। कथन 2 सही – Permanent hardness Na₂CO₃ से remove होती है। कथन 3 गलत – Hard water में साबुन कम झाग देता है (soap scum बनता है Ca²⁺/Mg²⁺ के साथ)। कथन 4 सही – Ca(HCO₃)₂ और Mg(HCO₃)₂ = Temporary Hardness। CaSO₄/MgSO₄ = Permanent Hardness। BPSC multi-statement water hardness trap!"
+      },
+      "navigation": {
+        "next": "card_73_final_quiz_5",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_73_final_quiz_5",
+      "card_slug": "card_73_final_quiz_5",
+      "type": "final_quiz",
+      "concept_id": "final_master_quiz_5",
+      "level": 5,
+      "progress": {
+        "current": 73,
+        "total": 80
+      },
+      "quiz_payload": {
+        "question": "Assertion (A): BF₃ एक Lewis Acid है लेकिन Arrhenius Acid नहीं है।\nReason (R): BF₃ में Boron के पास empty orbital है जो electron pair accept कर सकता है, लेकिन यह H⁺ ions release नहीं करता।\n\nसही विकल्प:",
+        "options": [
+          {
+            "id": "A",
+            "text": "A और R दोनों सही हैं और R, A की सही व्याख्या है"
+          },
+          {
+            "id": "B",
+            "text": "A और R दोनों सही हैं लेकिन R, A की सही व्याख्या नहीं है"
+          },
+          {
+            "id": "C",
+            "text": "A सही है लेकिन R गलत है"
+          },
+          {
+            "id": "D",
+            "text": "A गलत है – BF₃ Arrhenius Acid भी है"
+          }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Assertion सही है – BF₃ Lewis Acid है (electron pair acceptor) लेकिन Arrhenius Acid नहीं (H⁺ release नहीं करता)। Reason भी सही और correct explanation है – Boron में empty orbital की वजह से Lewis Acid, H⁺ न देने से Arrhenius Acid नहीं। Lewis Theory सबसे broad है – Arrhenius और Bronsted से अधिक substances को acid/base define करती है। BPSC Assertion-Reason premium trap!"
+      },
+      "navigation": {
+        "next": "card_74_final_quiz_6",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_74_final_quiz_6",
+      "card_slug": "card_74_final_quiz_6",
+      "type": "final_quiz",
+      "concept_id": "final_master_quiz_6",
+      "level": 5,
+      "progress": {
+        "current": 74,
+        "total": 80
+      },
+      "quiz_payload": {
+        "question": "निम्नलिखित में से कौन सा कथन गलत है?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Chlor-Alkali Process में Brine (NaCl solution) का electrolysis होता है"
+          },
+          {
+            "id": "B",
+            "text": "Aqua Regia = HNO₃ : HCl = 1 : 3 है और Gold को dissolve करता है"
+          },
+          {
+            "id": "C",
+            "text": "pH scale पर 1 unit का अंतर = 2 गुना अंतर H⁺ concentration में"
+          },
+          {
+            "id": "D",
+            "text": "Normal rain water का pH लगभग 5.6 होता है (CO₂ की वजह से)"
+          }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Option C गलत है – pH scale LOGARITHMIC है, इसलिए 1 unit का अंतर = 10 गुना (not 2 गुना) अंतर H⁺ concentration में। pH 1 और pH 2 में 10 गुना अंतर है। Option A सही (Chlor-Alkali Process)। Option B सही (Aqua Regia = 1:3)। Option D सही (Normal rain pH = 5.6, CO₂ + H₂O → H₂CO₃)। BPSC 'एक गलत कथन ढूंढो' format!"
+      },
+      "navigation": {
+        "next": "card_75_final_quiz_7",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_75_final_quiz_7",
+      "card_slug": "card_75_final_quiz_7",
+      "type": "final_quiz",
+      "concept_id": "final_master_quiz_7",
+      "level": 5,
+      "progress": {
+        "current": 75,
+        "total": 80
+      },
+      "quiz_payload": {
+        "question": "निम्नलिखित कथनों पर विचार करें:\n1. H₂O एक Amphoteric substance है\n2. Phenolphthalein, Acidic solution में Pink color देता है\n3. Methyl Orange, Basic solution में Yellow color देता है\n4. Universal Indicator पर pH=7 पर Green color दिखता है\n\nकौन से कथन सही हैं?",
+        "options": [
+          {
+            "id": "A",
+            "text": "केवल 1 और 2"
+          },
+          {
+            "id": "B",
+            "text": "केवल 2 और 4"
+          },
+          {
+            "id": "C",
+            "text": "1, 3 और 4"
+          },
+          {
+            "id": "D",
+            "text": "1, 2, 3 और 4"
+          }
+        ],
+        "correct_option_id": "C",
+        "explanation": "कथन 1 सही – H₂O Amphoteric है (acid और base दोनों बन सकता है)। कथन 2 गलत – Phenolphthalein Acidic में COLORLESS होता है, Pink नहीं (Pink = Basic में)। कथन 3 सही – Methyl Orange Basic में Yellow, Acidic में Red/Orange। कथन 4 सही – Universal Indicator pH=7 पर Green। Phenolphthalein acid/base colors सबसे common trap है! BPSC indicators multi-statement question!"
+      },
+      "navigation": {
+        "next": "card_76_final_quiz_8",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_76_final_quiz_8",
+      "card_slug": "card_76_final_quiz_8",
+      "type": "final_quiz",
+      "concept_id": "final_master_quiz_8",
+      "level": 5,
+      "progress": {
+        "current": 76,
+        "total": 80
+      },
+      "quiz_payload": {
+        "question": "निम्नलिखित में से कौन सा (Acid – Source) युग्म गलत है?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Citric Acid – Nimbu (Lemon)"
+          },
+          {
+            "id": "B",
+            "text": "Lactic Acid – Dahi (Curd)"
+          },
+          {
+            "id": "C",
+            "text": "Tartaric Acid – Seb (Apple)"
+          },
+          {
+            "id": "D",
+            "text": "Formic Acid – Chinti (Ant)"
+          }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Option C गलत है – Tartaric Acid का source Imli (Tamarind) और Angoor (Grapes) है, न कि Seb (Apple)। Apple का acid = Malic Acid। Citric Acid = Nimbu/Santra (सही)। Lactic Acid = Dahi (सही)। Formic Acid = Chinti का डंक (सही)। Tartaric Acid vs Malic Acid source confusion – SSC और Railway में सबसे ज्यादा गलती यहाँ होती है!"
+      },
+      "navigation": {
+        "next": "card_77_trophy",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_77_trophy",
+      "card_slug": "card_77_trophy",
+      "type": "milestone",
+      "concept_id": "chapter_complete",
+      "level": 5,
+      "progress": {
+        "current": 77,
+        "total": 80
+      },
+      "milestone_payload": {
+        "title": "🏆 CHAPTER COMPLETED – ACIDS, BASES & SALTS! 🏆",
+        "badge_emoji": "🏆⚗️",
+        "completed_topic": "Complete Acids, Bases & Salts (अम्ल, क्षार और लवण)",
+        "xp_earned": 700,
+        "milestone_progress": "Chapter 100% Complete!",
+        "motivational_quote": "Tum ab Acids, Bases & Salts ke MASTER ho! Arrhenius se Lewis theory tak, HF exception se Aqua Regia tak, pH scale se Marble Cancer tak – sab clear hai! BPSC, SSC, Railway, NEET – kisi bhi exam mein chemistry ka koi bhi sawaal ab tumse nahi chhootega! 🎯🔥"
+      },
+      "navigation": {
+        "next": "card_78_bonus_speed_round",
+        "button_text": "See Bonus Speed Round ➔"
+      }
+    },
+    {
+      "card_id": "card_78_bonus_speed_round",
+      "card_slug": "card_78_bonus_speed_round",
+      "type": "summary",
+      "concept_id": "bonus_speed_facts",
+      "level": 5,
+      "progress": {
+        "current": 78,
+        "total": 80
+      },
+      "summary_payload": {
+        "title": "⚡ BONUS: Last-Minute Exam Speed Facts",
+        "revision_points": [
+          {
+            "topic": "Acid-Base Theory Comparison",
+            "point": "Arrhenius (1884): Only aqueous, H⁺/OH⁻। Bronsted-Lowry (1923): Proton donor/acceptor, non-aqueous bhi। Lewis (1923): Electron pair acceptor/donor, broadest। NH₃ = Bronsted-Lowry base (proton acceptor) + Lewis base (lone pair donor) but NOT Arrhenius base (no OH⁻)। BF₃ = Lewis acid ONLY। H₂O = Amphoteric in all theories।"
+          },
+          {
+            "topic": "Critical Formula Pairs to NOT Confuse",
+            "point": "Washing Soda = Na₂CO₃·10H₂O vs Baking Soda = NaHCO₃। Plaster of Paris = CaSO₄·½H₂O vs Gypsum = CaSO₄·2H₂O। Blue Vitriol = CuSO₄·5H₂O vs Green Vitriol = FeSO₄·7H₂O। Quick Lime = CaO vs Slaked Lime = Ca(OH)₂। Oleum = H₂SO₄ + SO₃। Glauber's Salt = Na₂SO₄·10H₂O।"
+          },
+          {
+            "topic": "Acid Nicknames (SSC Favorite)",
+            "point": "H₂SO₄ = King of Chemicals / Oil of Vitriol। HNO₃ = Aqua Fortis। HCl = Muriatic Acid / Spirit of Salt। HF = Fluorspar spirit (glass etching)। Aqua Regia = HNO₃:HCl (1:3) – Gold/Platinum dissolves। HClO₄ = Perchloric Acid (strongest common acid)। NaOH = Caustic Soda। KOH = Caustic Potash।"
+          },
+          {
+            "topic": "Indicator Color Chart",
+            "point": "Litmus: Acid = Red, Base = Blue, Neutral = Purple (important!)। Phenolphthalein: Acid = Colorless, Base = Pink (most confused!)। Methyl Orange: Acid = Red/Orange, Base = Yellow। Universal: pH 7 = Green, <7 = Red/Orange/Yellow, >7 = Blue/Violet। Turmeric = Natural indicator (acid = yellow, base = red-brown)।"
+          },
+          {
+            "topic": "Medical & Environmental Applications",
+            "point": "Blood pH 7.35-7.45 (buffer = H₂CO₃/HCO₃⁻)। pH < 7.35 = Acidosis, pH > 7.45 = Alkalosis। Antacids: Mg(OH)₂, NaHCO₃, Al(OH)₃। Acid Rain pH < 5.6 (SO₂ + NOₓ)। Marble Cancer = CaCO₃ + H₂SO₄ → CaSO₄ + H₂O + CO₂। Acidic soil = Slaked Lime, Alkaline soil = Gypsum। Temporary hardness = Boiling, Permanent = Na₂CO₃।"
+          }
+        ]
+      },
+      "navigation": {
+        "next": "card_79_final_revision_chat",
+        "button_text": "Final Motivation ➔"
+      }
+    },
+    {
+      "card_id": "card_79_final_revision_chat",
+      "card_slug": "card_79_final_revision_chat",
+      "type": "chat",
+      "concept_id": "final_motivation",
+      "level": 5,
+      "progress": {
+        "current": 79,
+        "total": 80
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, dekho tumne aaj ek dum zero se start kiya – nimbu ke khattepaн se – aur ab tum Arrhenius Theory, Lewis Theory, pH scale, Buffer Solutions, Aqua Regia, Plaster of Paris, Bleaching Powder – sab discuss kar sakte ho! Ye journey amazing rahi!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir sach mein! Pehle socha tha ye bahut boring chemistry hai, par ab har cheez mein chemistry dikh rahi hai – dahi mein, antacid mein, haldi mein, chinti ke daank mein sab mein!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Yahi real learning hai – jab chemistry sirf book mein nahi, life mein dikhne lagti hai! Ab exam mein jao – Acids, Bases aur Salts ka koi bhi question – multi-statement, assertion-reason, direct fact – sab clear hai tumhare liye. BPSC, SSC, Railway, NEET – sab mein iska koi na koi question hoga, aur tumhara answer sahi hoga!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Thank you Sir! Ab confidence aa gaya! Pehle HF ko strong acid samajhta tha, Washing Soda aur Baking Soda mix ho jaata tha – ab sab clear hai!"
+        }
+      ],
+      "navigation": {
+        "next": "card_80_final_end",
+        "button_text": "Complete Chapter ➔"
+      }
+    },
+    {
+      "card_id": "card_80_final_end",
+      "card_slug": "card_80_final_end",
+      "type": "milestone",
+      "concept_id": "final_celebration",
+      "level": 5,
+      "progress": {
+        "current": 80,
+        "total": 80
+      },
+      "milestone_payload": {
+        "title": "🌟 OFFICER-LEVEL CHEMISTRY ACHIEVED! 🌟",
+        "badge_emoji": "🎖️⚗️🧪",
+        "completed_topic": "Acids, Bases & Salts – 100% Mastered",
+        "xp_earned": 150,
+        "milestone_progress": "All 80 Cards Complete!",
+        "motivational_quote": "Ek baar jo samajh aa gayi chemistry, toh yeh kabhi nahi bhoolegi! Tum ne aaj 80 cards ki journey mein ek complete officer-level mastery achieve ki hai. BPSC mein officers bante hain woh log jo aise hi detail mein concepts samajhte hain. Agli manzil tumhara wait kar rahi hai – ab next chapter bhi aise hi conquer karo! 🚀🏆"
+      },
+      "navigation": {
+        "next": null,
+        "button_text": "Continue to Next Chapter ➔"
+      }
+    }
+  ]
+}
