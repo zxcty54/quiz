@@ -1,0 +1,2760 @@
+{
+  "topic_id": "ecosystem_biology",
+  "topic_title": "Ecosystem (पारिस्थितिकी तंत्र)",
+  "target_exams": [
+    "BPSC",
+    "BSSC",
+    "RRB NTPC",
+    "SSC CGL",
+    "NEET",
+    "UPSC Prelims"
+  ],
+  "total_cards": 80,
+  "characters": {
+    "aman": {
+      "name": "Aman Sir",
+      "role": "teacher",
+      "avatar": "👨‍🏫"
+    },
+    "raju": {
+      "name": "Raju",
+      "role": "student",
+      "avatar": "👦"
+    }
+  },
+  "cards": [
+    {
+      "card_id": "card_01_intro",
+      "card_slug": "card_01_intro",
+      "type": "intro",
+      "concept_id": "ecosystem_intro",
+      "level": 1,
+      "progress": {
+        "current": 1,
+        "total": 80
+      },
+      "intro_payload": {
+        "title": "🌿 Ecosystem (पारिस्थितिकी तंत्र)",
+        "icon": "🌍",
+        "target_exams": [
+          "BPSC",
+          "BSSC",
+          "RRB NTPC",
+          "SSC CGL",
+          "NEET",
+          "UPSC Prelims"
+        ],
+        "learning_outcomes": [
+          "Ecosystem kya hai – pond se samjhenge",
+          "Biotic aur Abiotic components ka fark",
+          "Food Chain aur Food Web – energy flow",
+          "Ecological Pyramids – Number, Biomass, Energy",
+          "Nutrient Cycles – Carbon, Nitrogen, Phosphorus",
+          "Ecological Succession – Primary aur Secondary",
+          "Productivity – GPP, NPP, Secondary Productivity",
+          "PYQ Traps – BPSC, SSC, NEET, UPSC level mastery"
+        ]
+      },
+      "navigation": {
+        "next": "card_02_ecosystem_daily",
+        "button_text": "Let's Begin ➔"
+      }
+    },
+    {
+      "card_id": "card_02_ecosystem_daily",
+      "card_slug": "card_02_ecosystem_daily",
+      "type": "chat",
+      "concept_id": "ecosystem_definition",
+      "level": 1,
+      "progress": {
+        "current": 2,
+        "total": 80
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, socho tumhare gaon ke paas ek talab hai – usme machli hain, kauwle hain, paani ke paudhe hain, keede hain, aur saath mein dhoop, paani, mitti bhi hai. Ye sab cheezein milke kya banati hain?"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir, ek... ek complete system jaisa? Jaise sab ek doosre pe depend karte hain?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul! Isi ko Ecosystem bolte hain – yaani ek area mein saare living organisms (plants, animals, bacteria) aur unka physical environment (paani, mitti, hawa, dhoop) milke ek functional unit banate hain. Ye concept A.G. Tansley ne 1935 mein diya tha! BPSC mein Tansley ka naam aur year directly poochha jaata hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "A.G. Tansley, 1935 – note kar liya Sir! Aur ye 'functional unit' matlab kya hota hai exactly?"
+        }
+      ],
+      "navigation": {
+        "next": "card_03_biotic_abiotic",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_03_biotic_abiotic",
+      "card_slug": "card_03_biotic_abiotic",
+      "type": "chat",
+      "concept_id": "biotic_abiotic_components",
+      "level": 1,
+      "progress": {
+        "current": 3,
+        "total": 80
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Functional unit matlab ye – ek talab mein saare organisms ek doosre ko khaate hain, oxygen dete hain, waste decompose karte hain – sab functions connected hain. Ab Ecosystem ke components: Biotic (living) aur Abiotic (non-living)! Biotic = plants, animals, bacteria, fungi. Abiotic = light, temperature, water, soil, minerals, wind!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Biotic = zinda cheezein, Abiotic = nirdheev cheezein! Matlab paani aur mitti abiotic hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! Aur abiotic factors mein ek important distinction hai – Climatic factors (temperature, light, rainfall, wind) aur Edaphic factors (soil – uski texture, pH, minerals). Edaphic factors bahut important hain plants ke distribution ke liye! UPSC mein edaphic factors ka seedha question aaya hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Edaphic matlab soil related! Naya word hai Sir – edaphic yaad rakhna hoga!"
+        }
+      ],
+      "navigation": {
+        "next": "card_04_ecosystem_types",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_04_ecosystem_types",
+      "card_slug": "card_04_ecosystem_types",
+      "type": "chat",
+      "concept_id": "ecosystem_types",
+      "level": 1,
+      "progress": {
+        "current": 4,
+        "total": 80
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ab Ecosystem ke types yaad karo! Natural Ecosystems: Terrestrial (forest, grassland, desert) aur Aquatic (freshwater – pond, lake, river; marine – ocean, estuary, coral reef). Artificial/Man-made Ecosystems: Crop field (agriculture), aquarium, garden. BPSC trap: Crop field ek artificial ecosystem hai – natural nahi!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Crop field artificial hai! Mujhe laga khet ek natural cheez hai – par wo toh insaan ne banaya hai!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Exactly! Aur sabse bada ecosystem kaun sa hai? Earth ka biosphere – jisme saare ecosystems shamil hain! Aur sabse productive natural ecosystem hai Tropical Rainforest (zamin pe) aur Coral Reef (paani mein). Sabse kam productive hai Desert aur Open Ocean (deep sea). Ye UPSC aur BPSC mein comparison question ke roop mein aata hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sabse productive = Tropical Rainforest aur Coral Reef! Sabse kam productive = Desert aur Open Ocean! Ye important comparison hai Sir!"
+        }
+      ],
+      "navigation": {
+        "next": "card_05_quiz_ecosystem_1",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_05_quiz_ecosystem_1",
+      "card_slug": "card_05_quiz_ecosystem_1",
+      "type": "quiz",
+      "concept_id": "ecosystem_basics_quiz",
+      "level": 1,
+      "progress": {
+        "current": 5,
+        "total": 80
+      },
+      "quiz_payload": {
+        "question": "'Ecosystem' शब्द किसने और कब दिया? (Q1/3)",
+        "options": [
+          {
+            "id": "A",
+            "text": "Charles Darwin – 1859"
+          },
+          {
+            "id": "B",
+            "text": "A.G. Tansley – 1935"
+          },
+          {
+            "id": "C",
+            "text": "Ernst Haeckel – 1866"
+          },
+          {
+            "id": "D",
+            "text": "Eugene Odum – 1953"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Ecosystem शब्द A.G. Tansley (Arthur George Tansley) ने 1935 में दिया। Ernst Haeckel ने 1866 में 'Ecology' शब्द दिया। Eugene Odum ने Ecosystem ecology को popularize किया (Fundamentals of Ecology, 1953)। Darwin ने Natural Selection दिया (1859)। BPSC और SSC में Tansley-1935 सीधे पूछा जाता है!"
+      },
+      "navigation": {
+        "next": "card_06_quiz_ecosystem_2",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_06_quiz_ecosystem_2",
+      "card_slug": "card_06_quiz_ecosystem_2",
+      "type": "quiz",
+      "concept_id": "ecosystem_basics_quiz",
+      "level": 1,
+      "progress": {
+        "current": 6,
+        "total": 80
+      },
+      "quiz_payload": {
+        "question": "Edaphic factors किससे संबंधित हैं? (Q2/3)",
+        "options": [
+          {
+            "id": "A",
+            "text": "Climate और temperature से"
+          },
+          {
+            "id": "B",
+            "text": "Soil – उसकी texture, pH और minerals से"
+          },
+          {
+            "id": "C",
+            "text": "Water availability से"
+          },
+          {
+            "id": "D",
+            "text": "Light intensity से"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Edaphic factors soil से संबंधित abiotic factors हैं – soil texture, pH, mineral content, organic matter आदि। Climatic factors में temperature, light, rainfall, wind शामिल हैं। Edaphic factors plants के distribution और growth को directly प्रभावित करते हैं। UPSC और BPSC में edaphic vs climatic factors का distinction पूछा जाता है!"
+      },
+      "navigation": {
+        "next": "card_07_quiz_ecosystem_3",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_07_quiz_ecosystem_3",
+      "card_slug": "card_07_quiz_ecosystem_3",
+      "type": "quiz",
+      "concept_id": "ecosystem_basics_quiz",
+      "level": 1,
+      "progress": {
+        "current": 7,
+        "total": 80
+      },
+      "quiz_payload": {
+        "question": "निम्नलिखित में से कौन सा एक Artificial Ecosystem है? (Q3/3)",
+        "options": [
+          {
+            "id": "A",
+            "text": "Coral Reef"
+          },
+          {
+            "id": "B",
+            "text": "Tropical Rainforest"
+          },
+          {
+            "id": "C",
+            "text": "Crop Field (Agricultural Field)"
+          },
+          {
+            "id": "D",
+            "text": "Mangrove Forest"
+          }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Crop Field (Agricultural Field / Agro-ecosystem) एक Artificial/Man-made ecosystem है क्योंकि इसे मनुष्य द्वारा बनाया और maintain किया जाता है। Aquarium और Garden भी artificial ecosystems हैं। Coral Reef, Tropical Rainforest और Mangrove Forest सभी Natural ecosystems हैं। BPSC में यह trap question बार-बार आता है!"
+      },
+      "navigation": {
+        "next": "card_08_milestone_mod1",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_08_milestone_mod1",
+      "card_slug": "card_08_milestone_mod1",
+      "type": "milestone",
+      "concept_id": "mod1_complete",
+      "level": 1,
+      "progress": {
+        "current": 8,
+        "total": 80
+      },
+      "milestone_payload": {
+        "title": "MODULE 1 COMPLETED! 🎉",
+        "badge_emoji": "🌍",
+        "completed_topic": "Ecosystem – Definition, Types & Components",
+        "xp_earned": 50,
+        "milestone_progress": "Module 1/8 Clear",
+        "motivational_quote": "Tansley 1935, Biotic-Abiotic, Edaphic factors – sab lock! Ab food chain aur energy flow ki duniya mein chalte hain!"
+      },
+      "navigation": {
+        "next": "card_09_producers_intro",
+        "button_text": "Start Next Module ➔"
+      }
+    },
+    {
+      "card_id": "card_09_producers_intro",
+      "card_slug": "card_09_producers_intro",
+      "type": "chat",
+      "concept_id": "trophic_levels_producers",
+      "level": 1,
+      "progress": {
+        "current": 9,
+        "total": 80
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, socho talab mein kaun khana banata hai? Paani ke andar chhoti green plants aur algae hoti hain jo dhoop se khana banati hain – inhe Producers kehte hain! Ye ecosystem ka base hain. Inhe Autotrophs bhi kehte hain. Land pe grass, trees – sab producers hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Producers matlab jo khana banate hain – plants aur algae! Aur jo producers ka khana khaate hain?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Woh hote hain Consumers! Consumers ke bhi levels hain – Primary Consumers (Herbivores) – sirf plants khaate hain, jaise grasshopper, deer, rabbit. Secondary Consumers – primary consumers ko khaate hain, jaise frog, snake, fox. Tertiary Consumers – secondary ko khaate hain. Aur Decomposers – dead organic matter decompose karte hain jaise bacteria aur fungi!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Decomposers! Matlab jo marey hue cheez ko todke mitti mein milate hain? Ye bhi ecosystem ka part hai?"
+        }
+      ],
+      "navigation": {
+        "next": "card_10_food_chain_basics",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_10_food_chain_basics",
+      "card_slug": "card_10_food_chain_basics",
+      "type": "chat",
+      "concept_id": "food_chain",
+      "level": 1,
+      "progress": {
+        "current": 10,
+        "total": 80
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Haan! Decomposers ecosystem ka bahut important part hain – inke bina nutrients cycle nahi hoti! Ab Food Chain – ye organisms ka ek linear sequence hai jisme energy aur nutrients ek se doosre mein transfer hoti hai. Classic example: Grass → Grasshopper → Frog → Snake → Eagle. Ye ek Grazing Food Chain hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Grass se shuru hoti hai aur eagle pe khatam! Matlab grass sabse neeche hai energy chain mein?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! Aur ek aur type hai – Detritus Food Chain! Ye dead organic matter (detritus) se shuru hoti hai. Dead leaves → Earthworm → Robin (Bird) → Hawk. Ye cycle nutrients ko mitti mein wapas laati hai. NEET ka trap: Detritus food chain mein decomposers kaam karte hain – ye Grazing food chain se zyada efficient hoti hai nutrient recycling ke liye!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Do types of food chain! Grazing food chain – plants se shuru, Detritus food chain – dead matter se shuru! Ye dono alag hain!"
+        }
+      ],
+      "navigation": {
+        "next": "card_11_food_web",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_11_food_web",
+      "card_slug": "card_11_food_web",
+      "type": "chat",
+      "concept_id": "food_web",
+      "level": 1,
+      "progress": {
+        "current": 11,
+        "total": 80
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Real nature mein ek animal sirf ek hi cheez nahi khaata! Frog grasshopper bhi khaata hai aur other insects bhi. Isliye real ecosystem mein Food Web hota hai – jo bahut saari interconnected food chains ka network hai! Food Web zyada realistic aur stable hoti hai food chain se – kyunki agar ek species khatam ho bhi jaaye to energy aur nutrients ka flow ruka nahi rehta!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Food web zyada stable hai food chain se! Ek species khatam ho jaaye to doosra rasta hai energy flow ka!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul! Aur yaad rakho – Food Chain mein arrows energy flow ki direction dikhate hain – hamesha prey se predator ki taraf! Grass → Deer → Tiger. Arrow ka matlab hai 'is khaaya jaata hai' nahi, 'energy transfer hoti hai'. BPSC mein arrow direction ka trap bahut aata hai – 'arrow kaun khaata hai' wali confusion!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Arrow matlab energy flow – prey se predator ki taraf! Matlab arrow tiger ki taraf jaayega, tiger se nahi!"
+        }
+      ],
+      "navigation": {
+        "next": "card_12_ten_percent_law",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_12_ten_percent_law",
+      "card_slug": "card_12_ten_percent_law",
+      "type": "chat",
+      "concept_id": "ten_percent_law",
+      "level": 2,
+      "progress": {
+        "current": 12,
+        "total": 80
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ab energy flow ka sabse important rule – 10% Law! Raymond Lindeman ne 1942 mein ye diya. Jab energy ek trophic level se doosre mein transfer hoti hai, sirf 10% hi transfer hoti hai – baaki 90% heat ke roop mein release ho jaati hai ya organisms apne metabolism mein use kar lete hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sirf 10%!! Matlab 1000 gm grass hai to grasshopper ko sirf 100 gm ka fayda hoga?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Exactly! 1000 J grass → 100 J grasshopper → 10 J frog → 1 J snake → 0.1 J eagle. Isliye food chain zyada lambi nahi hoti – 4-5 levels ke baad energy itni kam ho jaati hai ki support nahi kar sakti! Aur isliye vegetarian rehna zyada energy efficient hai – tum directly producers se energy lete ho! Lindeman 1942 – SSC mein year yaad rakhna!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Isliye vegetarian banna zyada energy efficient hai! Ek level skip karna = 10 guna zyada food! Ye to ecological logic hai Sir!"
+        }
+      ],
+      "navigation": {
+        "next": "card_13_quiz_foodchain_1",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_13_quiz_foodchain_1",
+      "card_slug": "card_13_quiz_foodchain_1",
+      "type": "quiz",
+      "concept_id": "food_chain_quiz",
+      "level": 2,
+      "progress": {
+        "current": 13,
+        "total": 80
+      },
+      "quiz_payload": {
+        "question": "10% Law (Lindeman's Law) किसने और कब दिया? (Q1/3)",
+        "options": [
+          {
+            "id": "A",
+            "text": "A.G. Tansley – 1935"
+          },
+          {
+            "id": "B",
+            "text": "Eugene Odum – 1953"
+          },
+          {
+            "id": "C",
+            "text": "Raymond Lindeman – 1942"
+          },
+          {
+            "id": "D",
+            "text": "Charles Elton – 1927"
+          }
+        ],
+        "correct_option_id": "C",
+        "explanation": "10% Law (Lindeman's Efficiency Law) Raymond Lindeman ने 1942 में दिया। इसके अनुसार energy का केवल 10% एक trophic level से अगले में transfer होता है, बाकी 90% heat के रूप में dissipate हो जाता है। Charles Elton ने 1927 में Ecological Pyramid concept दिया। Tansley = 1935 Ecosystem, Odum = 1953 Fundamentals of Ecology।"
+      },
+      "navigation": {
+        "next": "card_14_quiz_foodchain_2",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_14_quiz_foodchain_2",
+      "card_slug": "card_14_quiz_foodchain_2",
+      "type": "quiz",
+      "concept_id": "food_chain_quiz",
+      "level": 2,
+      "progress": {
+        "current": 14,
+        "total": 80
+      },
+      "quiz_payload": {
+        "question": "Food Chain: Grass → Grasshopper → Frog → Snake → Eagle में यदि Grass में 10,000 J ऊर्जा है, तो Eagle को कितनी ऊर्जा मिलेगी? (Q2/3)",
+        "options": [
+          {
+            "id": "A",
+            "text": "1000 J"
+          },
+          {
+            "id": "B",
+            "text": "100 J"
+          },
+          {
+            "id": "C",
+            "text": "10 J"
+          },
+          {
+            "id": "D",
+            "text": "1 J"
+          }
+        ],
+        "correct_option_id": "C",
+        "explanation": "10% Law के अनुसार: Grass = 10,000 J → Grasshopper = 1,000 J (10%) → Frog = 100 J (10%) → Snake = 10 J (10%) → Eagle = 1 J (10%)। Eagle 4th trophic level पर है। Eagle को 10,000 × (10/100)⁴ = 10,000 × 0.0001 = 1 J। Wait – Eagle 5th level: 10,000 × (10%)⁴ = 1 J। यह NEET और BPSC में calculation trap है!"
+      },
+      "navigation": {
+        "next": "card_15_quiz_foodchain_3",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_15_quiz_foodchain_3",
+      "card_slug": "card_15_quiz_foodchain_3",
+      "type": "quiz",
+      "concept_id": "food_chain_quiz",
+      "level": 2,
+      "progress": {
+        "current": 15,
+        "total": 80
+      },
+      "quiz_payload": {
+        "question": "Detritus Food Chain और Grazing Food Chain में क्या मुख्य अंतर है? (Q3/3)",
+        "options": [
+          {
+            "id": "A",
+            "text": "Detritus food chain plants से शुरू होती है, Grazing dead matter से"
+          },
+          {
+            "id": "B",
+            "text": "Grazing food chain living plants से शुरू होती है, Detritus dead organic matter (detritus) से"
+          },
+          {
+            "id": "C",
+            "text": "दोनों एक ही हैं, बस नाम अलग है"
+          },
+          {
+            "id": "D",
+            "text": "Detritus food chain में energy flow नहीं होता"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Grazing Food Chain: Living Plants (Producers) → Herbivores → Carnivores। Detritus Food Chain: Dead Organic Matter (Detritus) → Detritivores (Earthworm, mites) → Predators। Detritus food chain nutrient recycling में अधिक महत्वपूर्ण है और ecosystems में energy का बड़ा हिस्सा इसी से flow होता है। NEET में यह distinction पूछी जाती है!"
+      },
+      "navigation": {
+        "next": "card_16_milestone_mod2",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_16_milestone_mod2",
+      "card_slug": "card_16_milestone_mod2",
+      "type": "milestone",
+      "concept_id": "mod2_complete",
+      "level": 2,
+      "progress": {
+        "current": 16,
+        "total": 80
+      },
+      "milestone_payload": {
+        "title": "MODULE 2 COMPLETED! 🎉",
+        "badge_emoji": "⛓️",
+        "completed_topic": "Food Chain, Food Web & 10% Law",
+        "xp_earned": 75,
+        "milestone_progress": "Module 2/8 Clear",
+        "motivational_quote": "Food chain, food web, Lindeman 1942, 10% law – sab clear! Ab ecological pyramids ka exciting topic aata hai!"
+      },
+      "navigation": {
+        "next": "card_17_pyramid_intro",
+        "button_text": "Start Next Module ➔"
+      }
+    },
+    {
+      "card_id": "card_17_pyramid_intro",
+      "card_slug": "card_17_pyramid_intro",
+      "type": "chat",
+      "concept_id": "ecological_pyramids_intro",
+      "level": 2,
+      "progress": {
+        "current": 17,
+        "total": 80
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, socho – ek jungle mein kitne ped hain aur kitne tigers? Bahut zyada ped honge, thodi deer hongi, aur bahut kam tigers! Ye ghata-badhta pattern Ecological Pyramid jaisa dikhta hai! Charles Elton ne 1927 mein Ecological Pyramids ka concept diya – inhe Eltonian Pyramids bhi kehte hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Charles Elton, 1927! Aur pyramid isliye kyunki base pe zyada hain aur upar kam hain?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Exactly! Teen types ke Ecological Pyramids hain: 1) Pyramid of Numbers – organisms ki sankhya. 2) Pyramid of Biomass – organisms ka total mass. 3) Pyramid of Energy – organisms mein energy. Teeno mein se sirf Pyramid of Energy hamesha UPRIGHT (seedha) hota hai – ye kabhi bhi inverted nahi hota!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sirf Energy pyramid hamesha seedha! Numbers aur Biomass ulta bhi ho sakta hai? Ye to surprising hai Sir!"
+        }
+      ],
+      "navigation": {
+        "next": "card_18_pyramid_numbers",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_18_pyramid_numbers",
+      "card_slug": "card_18_pyramid_numbers",
+      "type": "chat",
+      "concept_id": "pyramid_of_numbers",
+      "level": 2,
+      "progress": {
+        "current": 18,
+        "total": 80
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Pyramid of Numbers – yaad karo ye INVERTED (ulta) kab hota hai? Jab ek bada ped (1 tree) pe bahut saare insects rehte hain, aur insects pe kuch birds rehte hain! Tree (1) → Insects (100s) → Birds (10s). Yahan tree = producer but sirf 1 hai, insects = primary consumer but bahut zyada! Toh pyramid inverted ho jaata hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Ek ped pe hazaron keedon ka basta! Toh numbers mein producers se zyada primary consumers hue – isliye pyramid ulta ho gaya!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! Parasitic food chain mein bhi Pyramid of Numbers inverted hoti hai! Ek host pe bahut saare parasites hote hain – fir us parasite pe aur zyada hyperparasites. Host (1) → Parasites (1000s) → Hyperparasites (millions)! Ye NEET ka repeated concept hai – Parasitic food chain mein pyramid of numbers hamesha inverted!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Parasitic food chain mein bhi ulta pyramid! Ek host pe hazaaron parasites – bilkul ulta pattern!"
+        }
+      ],
+      "navigation": {
+        "next": "card_19_pyramid_biomass",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_19_pyramid_biomass",
+      "card_slug": "card_19_pyramid_biomass",
+      "type": "chat",
+      "concept_id": "pyramid_of_biomass",
+      "level": 2,
+      "progress": {
+        "current": 19,
+        "total": 80
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Pyramid of Biomass – Aquatic ecosystem mein INVERTED hoti hai! Ocean mein phytoplankton (producers) ka biomass zooplankton (primary consumers) se KAM hota hai! Phytoplankton ki reproduction rate itni fast hai ki thode phytoplankton bahut saare zooplankton support karte hain. Phytoplankton = small biomass → Zooplankton = large biomass!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Hain?? Phytoplankton ka biomass kam hai par wo zyada zooplankton ko support karta hai? Ye kaise possible hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Kyunki phytoplankton reproduce bahut fast karta hai – turnover rate high hai! Ek snapshot mein phytoplankton kam dikhega, par overall production zyada hai! Ise Standing State (biomass at one point) vs Production Rate ka fark kehte hain. NEET ka trap: Aquatic ecosystem mein Pyramid of Biomass inverted hoti hai – phytoplankton ki wajah se!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Phytoplankton thodi quantity mein hoti hai lekin itni fast reproduce karti hai ki bahut saare zooplankton ko support karte hain! Standing crop vs production rate!"
+        }
+      ],
+      "navigation": {
+        "next": "card_20_pyramid_energy",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_20_pyramid_energy",
+      "card_slug": "card_20_pyramid_energy",
+      "type": "chat",
+      "concept_id": "pyramid_of_energy",
+      "level": 2,
+      "progress": {
+        "current": 20,
+        "total": 80
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ab Pyramid of Energy – ye HAMESHA UPRIGHT (seedha) hota hai – kabhi bhi inverted nahi hota! Kyunki energy hamesha ek direction mein flow karti hai aur 10% Law ke according har level pe energy GHATATI hai. Energy producers mein sabse zyada, carnivores mein sabse kam! Ye universal law hai – iska koi exception nahi hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Energy pyramid ka koi exception nahi! Hamesha seedha – ye most reliable pyramid hai! Aur ye 10% law ki wajah se hai!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul! Aur yaad karo – Pyramid of Energy sabse realistic aur zyada informative bhi hai kyunki ye time factor bhi consider karta hai (energy per unit area per unit time). BPSC mein multi-statement question: 'Pyramid of Energy always upright – True. Pyramid of Biomass always inverted – False (sirf aquatic mein). Pyramid of Numbers can be inverted – True.' Ye teeno ek saath poochhe jaate hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Energy = hamesha upright, Biomass = aquatic mein inverted, Numbers = tree ya parasitic mein inverted! Ye teen facts exam mein ek saath trap karte hain!"
+        }
+      ],
+      "navigation": {
+        "next": "card_21_quiz_pyramid_1",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_21_quiz_pyramid_1",
+      "card_slug": "card_21_quiz_pyramid_1",
+      "type": "quiz",
+      "concept_id": "ecological_pyramids_quiz",
+      "level": 2,
+      "progress": {
+        "current": 21,
+        "total": 80
+      },
+      "quiz_payload": {
+        "question": "निम्नलिखित में से कौन सा Pyramid कभी भी Inverted नहीं होता? (Q1/3)",
+        "options": [
+          {
+            "id": "A",
+            "text": "Pyramid of Numbers"
+          },
+          {
+            "id": "B",
+            "text": "Pyramid of Biomass"
+          },
+          {
+            "id": "C",
+            "text": "Pyramid of Energy"
+          },
+          {
+            "id": "D",
+            "text": "Pyramid of Numbers और Pyramid of Biomass दोनों"
+          }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Pyramid of Energy हमेशा UPRIGHT (सीधा) होता है – कभी inverted नहीं होता। यह 10% Law के कारण है – energy हर trophic level पर घटती है। Pyramid of Numbers: Tree ecosystem और Parasitic food chain में Inverted। Pyramid of Biomass: Aquatic ecosystem (phytoplankton) में Inverted। Charles Elton ने 1927 में Ecological Pyramids concept दिया। NEET repeated PYQ!"
+      },
+      "navigation": {
+        "next": "card_22_quiz_pyramid_2",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_22_quiz_pyramid_2",
+      "card_slug": "card_22_quiz_pyramid_2",
+      "type": "quiz",
+      "concept_id": "ecological_pyramids_quiz",
+      "level": 2,
+      "progress": {
+        "current": 22,
+        "total": 80
+      },
+      "quiz_payload": {
+        "question": "Aquatic Ecosystem में Pyramid of Biomass Inverted क्यों होता है? (Q2/3)",
+        "options": [
+          {
+            "id": "A",
+            "text": "क्योंकि पानी में energy कम होती है"
+          },
+          {
+            "id": "B",
+            "text": "क्योंकि Phytoplankton की biomass Zooplankton से कम होती है, लेकिन reproduction rate बहुत high है"
+          },
+          {
+            "id": "C",
+            "text": "क्योंकि aquatic animals बड़े होते हैं"
+          },
+          {
+            "id": "D",
+            "text": "क्योंकि पानी में sunlight नहीं पहुँचती"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Aquatic ecosystem में Phytoplankton (producers) का standing biomass Zooplankton (primary consumers) से कम होता है क्योंकि phytoplankton की reproduction/turnover rate बहुत high है। किसी भी एक moment पर phytoplankton की quantity कम दिखती है पर वे continuously rapid reproduction करते हैं। यह NEET का repeated concept है!"
+      },
+      "navigation": {
+        "next": "card_23_quiz_pyramid_3",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_23_quiz_pyramid_3",
+      "card_slug": "card_23_quiz_pyramid_3",
+      "type": "quiz",
+      "concept_id": "ecological_pyramids_quiz",
+      "level": 2,
+      "progress": {
+        "current": 23,
+        "total": 80
+      },
+      "quiz_payload": {
+        "question": "Parasitic Food Chain में Pyramid of Numbers कैसी होती है? (Q3/3)",
+        "options": [
+          {
+            "id": "A",
+            "text": "Upright (सीधी) – Host > Parasites"
+          },
+          {
+            "id": "B",
+            "text": "Inverted (उलटी) – Host (कम) < Parasites (बहुत अधिक)"
+          },
+          {
+            "id": "C",
+            "text": "Spindle-shaped"
+          },
+          {
+            "id": "D",
+            "text": "Parasitic food chain में pyramid नहीं बनती"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Parasitic Food Chain में Pyramid of Numbers हमेशा INVERTED होती है। एक Host पर हजारों Parasites होते हैं, उन Parasites पर लाखों Hyperparasites। Host (1) → Parasites (1000s) → Hyperparasites (millions)। यह Numbers में base level (Host) सबसे कम, top level (hyperparasites) सबसे ज्यादा बनाता है – inverted pyramid! NEET classic trap!"
+      },
+      "navigation": {
+        "next": "card_24_milestone_mod3",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_24_milestone_mod3",
+      "card_slug": "card_24_milestone_mod3",
+      "type": "milestone",
+      "concept_id": "mod3_complete",
+      "level": 2,
+      "progress": {
+        "current": 24,
+        "total": 80
+      },
+      "milestone_payload": {
+        "title": "MODULE 3 COMPLETED! 🎉",
+        "badge_emoji": "🔺",
+        "completed_topic": "Ecological Pyramids – Numbers, Biomass, Energy",
+        "xp_earned": 100,
+        "milestone_progress": "Module 3/8 Clear",
+        "motivational_quote": "Ecological Pyramids master ho gaye! Energy pyramid hamesha upright – ye fact exam mein guaranteed score dilaayega! Ab Productivity concept dekhte hain!"
+      },
+      "navigation": {
+        "next": "card_25_productivity_intro",
+        "button_text": "Start Next Module ➔"
+      }
+    },
+    {
+      "card_id": "card_25_productivity_intro",
+      "card_slug": "card_25_productivity_intro",
+      "type": "chat",
+      "concept_id": "primary_productivity",
+      "level": 2,
+      "progress": {
+        "current": 25,
+        "total": 80
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ab Productivity – ye measure karta hai kitna organic matter (biomass) produce ho raha hai ecosystem mein per unit time per unit area. Primary Productivity = Producers ke dwara produce ki gayi energy. Isko do parts mein divide karte hain: GPP aur NPP!"
+        },
+        {
+          "speaker": "raju",
+          "text": "GPP aur NPP! Ye kya hote hain Sir – naye abbreviations hain!"
+        },
+        {
+          "speaker": "aman",
+          "text": "GPP = Gross Primary Productivity – plants dwara photosynthesis se banaya gaya TOTAL organic matter (koi bhi respiration minus nahi ki). NPP = Net Primary Productivity – wo organic matter jo actually available hai heterotrophs ke liye. Formula: NPP = GPP – Respiration (R). Ye important formula NEET aur BPSC mein directly poochha jaata hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "NPP = GPP - Respiration! Matlab respiration mein jo energy consume hoti hai wo minus ho jaati hai GPP mein se!"
+        }
+      ],
+      "navigation": {
+        "next": "card_26_secondary_productivity",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_26_secondary_productivity",
+      "card_slug": "card_26_secondary_productivity",
+      "type": "chat",
+      "concept_id": "secondary_productivity",
+      "level": 2,
+      "progress": {
+        "current": 26,
+        "total": 80
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ab Secondary Productivity – ye consumers dwara produce ki jaati hai! Yani consumers jo food khaate hain, usse jo biomass banate hain apne body mein – wo secondary productivity hai. Exam point: Secondary Productivity ko further subdivide NAHI karte – NPP ki tarah! Sirf GPP ya NPP primary productivity mein use hote hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Secondary productivity sirf consumers ka production hai – isme NPP-GPP wali subdivision nahi hoti! Ye trap hai NEET ka!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! Aur productivity ki units hain – g m⁻² yr⁻¹ (gram per square metre per year) ya kcal m⁻² yr⁻¹. Sabse zyada NPP wala ecosystem hai Tropical Rainforest aur Estuary (8000 g m⁻² yr⁻¹ tak)! Sabse kam – Open Ocean aur Desert (mere 200 g m⁻² yr⁻¹). Ye comparison UPSC mein bahut poochha jaata hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Highest NPP = Tropical Rainforest aur Estuary, Lowest = Open Ocean aur Desert! Units = g m⁻² yr⁻¹! Ye yaad rakhna hai!"
+        }
+      ],
+      "navigation": {
+        "next": "card_27_decomposition",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_27_decomposition",
+      "card_slug": "card_27_decomposition",
+      "type": "chat",
+      "concept_id": "decomposition_process",
+      "level": 2,
+      "progress": {
+        "current": 27,
+        "total": 80
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ab Decomposition – ye ecosystem ka bahut crucial process hai! Dead organic matter → simpler inorganic materials. Ye 5 steps mein hota hai: 1) Fragmentation (detritivores pieces karte hain), 2) Leaching (water-soluble nutrients soil mein jaate hain), 3) Catabolism (bacteria/fungi enzymatic breakdown karte hain), 4) Humification (humus banata hai), 5) Mineralisation (inorganic release)!"
+        },
+        {
+          "speaker": "raju",
+          "text": "5 steps! Fragmentation, Leaching, Catabolism, Humification, Mineralisation! Ye order important hai Sir?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! NEET mein ye steps aur unka sequence poochha jaata hai. Humus bahut important hai – ye dark-colored, stable compound hai jo soil fertility badhata hai. Humus ka decomposition bahut slow hota hai! Aur decomposition ki rate depend karti hai – Chemical composition of detritus (lignin aur cellulose se bana detritus slow decompose hota hai) aur Climate (warm, moist climate mein fast decomposition)!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Humus dark colored stable compound hai! Aur lignin wala detritus slow decompose hota hai – ye bhi NEET trap hai na Sir?"
+        }
+      ],
+      "navigation": {
+        "next": "card_28_quiz_productivity_1",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_28_quiz_productivity_1",
+      "card_slug": "card_28_quiz_productivity_1",
+      "type": "quiz",
+      "concept_id": "productivity_quiz",
+      "level": 2,
+      "progress": {
+        "current": 28,
+        "total": 80
+      },
+      "quiz_payload": {
+        "question": "NPP (Net Primary Productivity) का सही formula क्या है? (Q1/3)",
+        "options": [
+          {
+            "id": "A",
+            "text": "NPP = GPP + Respiration"
+          },
+          {
+            "id": "B",
+            "text": "NPP = GPP – Respiration"
+          },
+          {
+            "id": "C",
+            "text": "NPP = GPP × 10%"
+          },
+          {
+            "id": "D",
+            "text": "NPP = Secondary Productivity – Respiration"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "NPP = GPP – Respiration (R)। GPP = Gross Primary Productivity (photosynthesis द्वारा कुल organic matter बनाना)। NPP = Net Primary Productivity (heterotrophs के लिए उपलब्ध organic matter)। Plant का Respiration GPP का लगभग 20-40% होता है। NEET और BPSC में यह formula trap के रूप में आता है – NPP = GPP + R नहीं!"
+      },
+      "navigation": {
+        "next": "card_29_quiz_productivity_2",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_29_quiz_productivity_2",
+      "card_slug": "card_29_quiz_productivity_2",
+      "type": "quiz",
+      "concept_id": "productivity_quiz",
+      "level": 2,
+      "progress": {
+        "current": 29,
+        "total": 80
+      },
+      "quiz_payload": {
+        "question": "Decomposition के steps का सही क्रम क्या है? (Q2/3)",
+        "options": [
+          {
+            "id": "A",
+            "text": "Humification → Fragmentation → Leaching → Catabolism → Mineralisation"
+          },
+          {
+            "id": "B",
+            "text": "Fragmentation → Leaching → Catabolism → Humification → Mineralisation"
+          },
+          {
+            "id": "C",
+            "text": "Catabolism → Fragmentation → Humification → Leaching → Mineralisation"
+          },
+          {
+            "id": "D",
+            "text": "Mineralisation → Humification → Catabolism → Leaching → Fragmentation"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Decomposition के 5 steps का सही क्रम: 1) Fragmentation (detritivores द्वारा pieces बनाना), 2) Leaching (water-soluble nutrients soil में जाना), 3) Catabolism (bacteria/fungi का enzymatic breakdown), 4) Humification (humus formation – dark, stable compound), 5) Mineralisation (inorganic nutrients release)। यह NEET में repeated sequence question है!"
+      },
+      "navigation": {
+        "next": "card_30_quiz_productivity_3",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_30_quiz_productivity_3",
+      "card_slug": "card_30_quiz_productivity_3",
+      "type": "quiz",
+      "concept_id": "productivity_quiz",
+      "level": 2,
+      "progress": {
+        "current": 30,
+        "total": 80
+      },
+      "quiz_payload": {
+        "question": "किस Ecosystem की Net Primary Productivity (NPP) सबसे अधिक होती है? (Q3/3)",
+        "options": [
+          {
+            "id": "A",
+            "text": "Open Ocean"
+          },
+          {
+            "id": "B",
+            "text": "Desert"
+          },
+          {
+            "id": "C",
+            "text": "Tropical Rainforest और Estuary"
+          },
+          {
+            "id": "D",
+            "text": "Temperate Grassland"
+          }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Tropical Rainforest और Estuary की NPP सबसे अधिक होती है (लगभग 2000-8000 g m⁻² yr⁻¹)। सबसे कम NPP: Open Ocean और Desert (200 g m⁻² yr⁻¹ से कम)। Coral Reef और Mangroves की productivity भी high होती है। Open Ocean का total contribution बड़ा है (area बड़ा है) लेकिन per unit area productivity कम है। UPSC और BPSC में comparison question!"
+      },
+      "navigation": {
+        "next": "card_31_milestone_mod4",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_31_milestone_mod4",
+      "card_slug": "card_31_milestone_mod4",
+      "type": "milestone",
+      "concept_id": "mod4_complete",
+      "level": 2,
+      "progress": {
+        "current": 31,
+        "total": 80
+      },
+      "milestone_payload": {
+        "title": "MODULE 4 COMPLETED! 🎉",
+        "badge_emoji": "🌱",
+        "completed_topic": "Productivity & Decomposition",
+        "xp_earned": 100,
+        "milestone_progress": "Module 4/8 Clear",
+        "motivational_quote": "GPP, NPP, Decomposition steps – sab clear! Ab nutrient cycles ki duniya mein ghuste hain – Carbon aur Nitrogen cycle!"
+      },
+      "navigation": {
+        "next": "card_32_carbon_cycle",
+        "button_text": "Start Next Module ➔"
+      }
+    },
+    {
+      "card_id": "card_32_carbon_cycle",
+      "card_slug": "card_32_carbon_cycle",
+      "type": "chat",
+      "concept_id": "carbon_cycle",
+      "level": 3,
+      "progress": {
+        "current": 32,
+        "total": 80
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ab Nutrient Cycles – isko Biogeochemical Cycles bhi kehte hain! Carbon Cycle se shuru karte hain. Carbon atmosphere mein CO₂ ke roop mein hai. Plants photosynthesis mein CO₂ absorb karte hain aur organic compounds banate hain. Animals plants khaate hain – carbon unke body mein. Respiration se CO₂ wapas atmosphere mein!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Carbon ghoomta rehta hai – atmosphere se plants, plants se animals, animals se wapas atmosphere! Circular journey hai carbon ki!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul! Aur carbon ka ek important 'sink' hai – fossil fuels (coal, petroleum)! Jab hum fossil fuels jalate hain, carbon jo lakhon saalon se zameen mein banda tha, ek dam se atmosphere mein aa jaata hai – isi ki wajah se CO₂ badh rahi hai aur Global Warming ho rahi hai! Ye UPSC mein environment connection se poochha jaata hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Fossil fuels carbon ka 'locked up' store hai! Jalane pe sara carbon ek saath release hota hai – isliye climate change!"
+        }
+      ],
+      "navigation": {
+        "next": "card_33_carbon_cycle_detail",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_33_carbon_cycle_detail",
+      "card_slug": "card_33_carbon_cycle_detail",
+      "type": "chat",
+      "concept_id": "carbon_cycle_reservoirs",
+      "level": 3,
+      "progress": {
+        "current": 33,
+        "total": 80
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Carbon ke major reservoirs yaad karo: 1) Atmosphere – CO₂ ke roop mein (smallest reservoir in terms of carbon). 2) Ocean – largest carbon sink (CO₂ dissolve hoti hai). 3) Land Biota – plants aur animals. 4) Fossil Fuels. 5) Sedimentary rocks – CaCO₃ (limestone) – sabse largest long-term reservoir!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Limestone sabse bada carbon reservoir! Aur Ocean bhi carbon sink hai – matlab paani mein CO₂ dissolve hoti hai!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! Aur deforestation se double problem hoti hai – ek toh trees cut hone se CO₂ absorption band, doosra trees jalane ya saDne se CO₂ release! Ocean mein CO₂ increase se ocean acidification hoti hai – marine organisms ke liye problem. UPSC prelims mein Carbon cycle + Climate change ka combined question bahut important hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Deforestation se double problem – CO₂ absorb nahi, aur CO₂ release bhi! Ocean acidification bhi isi se linked hai!"
+        }
+      ],
+      "navigation": {
+        "next": "card_34_nitrogen_cycle",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_34_nitrogen_cycle",
+      "card_slug": "card_34_nitrogen_cycle",
+      "type": "chat",
+      "concept_id": "nitrogen_cycle",
+      "level": 3,
+      "progress": {
+        "current": 34,
+        "total": 80
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ab Nitrogen Cycle – ye bahut important hai! Atmosphere mein 78% Nitrogen (N₂) hai lekin plants seedha N₂ use nahi kar sakti! N₂ ko pehle usable form mein convert karna padta hai – ise Nitrogen Fixation kehte hain. Ye do tarike se hota hai: Biological N₂ Fixation (bacteria dwara) aur Industrial (Haber Process – NH₃ banana)!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Itna Nitrogen hai atmosphere mein – 78%! Par plants seedha use nahi kar sakti? Ye to surprising hai!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! N₂ bahut stable molecule hai – triple bond (N≡N) hoti hai – todna mushkil hai! Biological N₂ fixation karte hain – Rhizobium bacteria (legume roots mein – mutualistic), Azotobacter aur Clostridium (free-living soil bacteria), Anabaena aur Nostoc (Cyanobacteria – paddy fields mein bahut important!). Ye BPSC aur SSC mein directly poochhe jaate hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Rhizobium legume mein, Azotobacter free-living, Anabaena/Nostoc paddy mein! Teen alag types ke N₂ fixing bacteria – ye yaad rakhne hain!"
+        }
+      ],
+      "navigation": {
+        "next": "card_35_nitrogen_steps",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_35_nitrogen_steps",
+      "card_slug": "card_35_nitrogen_steps",
+      "type": "chat",
+      "concept_id": "nitrogen_cycle_steps",
+      "level": 3,
+      "progress": {
+        "current": 35,
+        "total": 80
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Nitrogen Cycle ke steps: 1) N₂ Fixation → NH₃ (ammonia). 2) Nitrification – Nitrosomonas bacteria: NH₃ → NO₂⁻ (Nitrite), Nitrobacter bacteria: NO₂⁻ → NO₃⁻ (Nitrate). 3) Assimilation – plants nitrate absorb karte hain. 4) Ammonification – dead organisms se NH₃ release. 5) Denitrification – Pseudomonas: NO₃⁻ → N₂ (wapas atmosphere mein)!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Nitrosomonas aur Nitrobacter dono nitrification mein! Aur Pseudomonas denitrification mein! Ye bacteria ke naam yaad rakhne hain!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! BPSC aur NEET mein bacteria ke naam ke saath steps poocha jaata hai. Yaad karo: Nitrosomonas = NH₃ → NO₂⁻ (first step of nitrification). Nitrobacter = NO₂⁻ → NO₃⁻ (second step). Pseudomonas = denitrification. Rhizobium = N₂ fixation (symbiotic). Azotobacter = N₂ fixation (free-living aerobic). Clostridium = N₂ fixation (free-living anaerobic)!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Clostridium anaerobic hai aur Azotobacter aerobic hai – dono free-living N₂ fixers! Ye bhi trap hai Sir!"
+        }
+      ],
+      "navigation": {
+        "next": "card_36_quiz_nutrient_1",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_36_quiz_nutrient_1",
+      "card_slug": "card_36_quiz_nutrient_1",
+      "type": "quiz",
+      "concept_id": "nutrient_cycles_quiz",
+      "level": 3,
+      "progress": {
+        "current": 36,
+        "total": 80
+      },
+      "quiz_payload": {
+        "question": "Nitrification में NH₃ को NO₂⁻ में convert करने वाला bacteria कौन सा है? (Q1/3)",
+        "options": [
+          {
+            "id": "A",
+            "text": "Nitrobacter"
+          },
+          {
+            "id": "B",
+            "text": "Pseudomonas"
+          },
+          {
+            "id": "C",
+            "text": "Nitrosomonas"
+          },
+          {
+            "id": "D",
+            "text": "Rhizobium"
+          }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Nitrification दो steps में होता है: Step 1: Nitrosomonas bacteria → NH₃ (Ammonia) को NO₂⁻ (Nitrite) में convert करता है। Step 2: Nitrobacter bacteria → NO₂⁻ (Nitrite) को NO₃⁻ (Nitrate) में convert करता है। Pseudomonas = Denitrification (NO₃⁻ → N₂)। Rhizobium = N₂ Fixation (legume roots में symbiotic)। BPSC और NEET में bacteria-process matching trap!"
+      },
+      "navigation": {
+        "next": "card_37_quiz_nutrient_2",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_37_quiz_nutrient_2",
+      "card_slug": "card_37_quiz_nutrient_2",
+      "type": "quiz",
+      "concept_id": "nutrient_cycles_quiz",
+      "level": 3,
+      "progress": {
+        "current": 37,
+        "total": 80
+      },
+      "quiz_payload": {
+        "question": "Paddy Fields में Biological Nitrogen Fixation मुख्यतः कौन करता है? (Q2/3)",
+        "options": [
+          {
+            "id": "A",
+            "text": "Rhizobium"
+          },
+          {
+            "id": "B",
+            "text": "Azotobacter"
+          },
+          {
+            "id": "C",
+            "text": "Anabaena और Nostoc (Cyanobacteria)"
+          },
+          {
+            "id": "D",
+            "text": "Clostridium"
+          }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Paddy (Rice) fields में Anabaena और Nostoc (Cyanobacteria/Blue-Green Algae) Biological N₂ Fixation करते हैं। ये free-living होते हैं और flooded rice fields में पाए जाते हैं – natural fertilizer का काम करते हैं। Rhizobium = Legume plants में symbiotic। Azotobacter = Free-living aerobic soil bacteria। Clostridium = Free-living anaerobic। SSC और BPSC में direct fact!"
+      },
+      "navigation": {
+        "next": "card_38_quiz_nutrient_3",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_38_quiz_nutrient_3",
+      "card_slug": "card_38_quiz_nutrient_3",
+      "type": "quiz",
+      "concept_id": "nutrient_cycles_quiz",
+      "level": 3,
+      "progress": {
+        "current": 38,
+        "total": 80
+      },
+      "quiz_payload": {
+        "question": "Denitrification में NO₃⁻ को N₂ में convert करने वाला bacteria कौन सा है? (Q3/3)",
+        "options": [
+          {
+            "id": "A",
+            "text": "Nitrosomonas"
+          },
+          {
+            "id": "B",
+            "text": "Rhizobium"
+          },
+          {
+            "id": "C",
+            "text": "Nitrobacter"
+          },
+          {
+            "id": "D",
+            "text": "Pseudomonas"
+          }
+        ],
+        "correct_option_id": "D",
+        "explanation": "Denitrification में Pseudomonas bacteria NO₃⁻ (Nitrate) को वापस N₂ gas में convert करता है, जो atmosphere में चला जाता है। यह anaerobic conditions में होता है। Nitrogen cycle के steps: N₂ → NH₃ (Fixation) → NO₂⁻ (Nitrosomonas) → NO₃⁻ (Nitrobacter) → Plant absorption → Ammonification → Denitrification (Pseudomonas) → N₂। NEET और BPSC में repeated question!"
+      },
+      "navigation": {
+        "next": "card_39_milestone_mod5",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_39_milestone_mod5",
+      "card_slug": "card_39_milestone_mod5",
+      "type": "milestone",
+      "concept_id": "mod5_complete",
+      "level": 3,
+      "progress": {
+        "current": 39,
+        "total": 80
+      },
+      "milestone_payload": {
+        "title": "MODULE 5 COMPLETED! 🎉",
+        "badge_emoji": "♻️",
+        "completed_topic": "Nutrient Cycles – Carbon & Nitrogen",
+        "xp_earned": 100,
+        "milestone_progress": "Module 5/8 Clear",
+        "motivational_quote": "Nitrogen cycle ke saare bacteria – Rhizobium, Azotobacter, Nitrosomonas, Nitrobacter, Pseudomonas – sab yaad hain! Ab Ecological Succession ka twist dekhte hain!"
+      },
+      "navigation": {
+        "next": "card_40_succession_intro",
+        "button_text": "Start Next Module ➔"
+      }
+    },
+    {
+      "card_id": "card_40_succession_intro",
+      "card_slug": "card_40_succession_intro",
+      "type": "chat",
+      "concept_id": "ecological_succession",
+      "level": 3,
+      "progress": {
+        "current": 40,
+        "total": 80
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, socho ek khali pahari zameen par – koi plant nahi. Kuch saalon mein kya hoga? Pehle chhote plants aayenge, phir ghans, phir jhadiyan, phir ped! Ye gradual change jo ek community se doosri community mein hota hai, use Ecological Succession kehte hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Succession matlab dhire-dhire badlav! Jaise khali zameen forest ban jaati hai? Aur ye process kitne time mein hota hai Sir?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bahut samay lagta hai – hundreds to thousands of years! Succession mein pehle jo species aati hain unhe Pioneer Species kehte hain – jaise lichen (bare rock pe). Succession eventually ek stable, mature community banati hai jise Climax Community kehte hain – ye sabse stable stage hai aur zyada nahi badlati!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Pioneer species pehle aati hain, Climax community last mein – stable state! Aur lichen rock pe pehle – isliye pioneer?"
+        }
+      ],
+      "navigation": {
+        "next": "card_41_primary_secondary_succession",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_41_primary_secondary_succession",
+      "card_slug": "card_41_primary_secondary_succession",
+      "type": "chat",
+      "concept_id": "primary_secondary_succession",
+      "level": 3,
+      "progress": {
+        "current": 41,
+        "total": 80
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Do types ki Succession hoti hai: Primary Succession – wo jagah se shuru jahan pehle kabhi koi life nahi thi – jaise bare rock, volcanic island, glacier retreat area. Ye bahut slow process hai (1000+ years). Secondary Succession – disturbed areas mein jahan kuch soil aur seeds already hain – jaise forest fire ke baad, abandoned farmland! Ye Primary se zyada fast hota hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Primary = life kabhi nahi thi wahan, Secondary = life thi lekin disturb ho gayi! Secondary faster hai kyunki soil aur seeds already hain!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul! Aur BPSC aur NEET ka trap: Agar question mein 'newly formed volcanic island' aaye to Primary Succession. 'Burned forest' aaye to Secondary Succession. 'Retreating glacier area' aaye to Primary Succession. 'Abandoned farmland' aaye to Secondary Succession. Ye distinction paper mein confuse karne ke liye di jaati hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Volcanic island aur glacier = Primary, Burned forest aur abandoned farm = Secondary! Ye examples yaad rakhne hain!"
+        }
+      ],
+      "navigation": {
+        "next": "card_42_sere_stages",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_42_sere_stages",
+      "card_slug": "card_42_sere_stages",
+      "type": "chat",
+      "concept_id": "sere_hydrosere_xerosere",
+      "level": 3,
+      "progress": {
+        "current": 42,
+        "total": 80
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Succession ke stages ko collectively 'Sere' kehte hain. Jab succession bare rock (dry/land) pe hoti hai to usse Xerosere kehte hain. Jab succession paani mein shuru hoti hai (pond) to Hydrosere. Hydrosere mein stages hain: Phytoplankton → Rooted submerged plants → Reed swamp → Marsh meadow → Woodland → Climax forest!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Hydrosere pond mein! Pehle phytoplankton, end mein forest! Matlab ek talab dhire-dhire forest ban sakta hai?!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! Bahut time mein, talab mein sediment bharta rehta hai, pani kam hota jaata hai, aur successional stages mein result is forest! Aur Xerosere (bare rock) mein stages: Lichen (pioneer) → Mosses → Herbs → Shrubs → Trees (Climax)! NEET mein Hydrosere aur Xerosere ke stages ka sequence directly poochha jaata hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Xerosere = Lichen se Forest tak! Hydrosere = Phytoplankton se Forest tak! Dono ka end point same – Climax Forest!"
+        }
+      ],
+      "navigation": {
+        "next": "card_43_quiz_succession_1",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_43_quiz_succession_1",
+      "card_slug": "card_43_quiz_succession_1",
+      "type": "quiz",
+      "concept_id": "succession_quiz",
+      "level": 3,
+      "progress": {
+        "current": 43,
+        "total": 80
+      },
+      "quiz_payload": {
+        "question": "एक नई volcanic island पर होने वाली succession किस प्रकार की होगी? (Q1/3)",
+        "options": [
+          {
+            "id": "A",
+            "text": "Secondary Succession – क्योंकि soil मौजूद है"
+          },
+          {
+            "id": "B",
+            "text": "Primary Succession – क्योंकि वहाँ पहले कोई जीव नहीं था"
+          },
+          {
+            "id": "C",
+            "text": "Hydrosere – क्योंकि island पानी में है"
+          },
+          {
+            "id": "D",
+            "text": "Climax Community – तुरंत बन जाएगी"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Newly formed volcanic island पर Primary Succession होती है क्योंकि वहाँ पहले कभी कोई जीवन नहीं था – न soil, न organisms। Primary Succession के pioneer organisms = Lichen। Secondary Succession में पहले की life disrupted होती है (soil और seeds मौजूद होते हैं) – जैसे forest fire के बाद। BPSC और NEET में यह identification trap है!"
+      },
+      "navigation": {
+        "next": "card_44_quiz_succession_2",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_44_quiz_succession_2",
+      "card_slug": "card_44_quiz_succession_2",
+      "type": "quiz",
+      "concept_id": "succession_quiz",
+      "level": 3,
+      "progress": {
+        "current": 44,
+        "total": 80
+      },
+      "quiz_payload": {
+        "question": "Hydrosere में सही उत्तराधिकार (Succession) क्रम कौन सा है? (Q2/3)",
+        "options": [
+          {
+            "id": "A",
+            "text": "Lichen → Mosses → Herbs → Shrubs → Trees"
+          },
+          {
+            "id": "B",
+            "text": "Phytoplankton → Rooted submerged plants → Reed swamp → Marsh meadow → Woodland → Climax Forest"
+          },
+          {
+            "id": "C",
+            "text": "Trees → Shrubs → Herbs → Mosses → Lichen"
+          },
+          {
+            "id": "D",
+            "text": "Rooted plants → Phytoplankton → Reed swamp → Forest"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Hydrosere (Aquatic Succession) का सही क्रम: Phytoplankton (pioneer) → Rooted submerged plants → Free-floating plants → Reed swamp → Marsh meadow → Woodland → Climax Forest। Option A = Xerosere (Dry succession on bare rock) का क्रम है। दोनों का climax = Forest। NEET में Hydrosere vs Xerosere sequence पूछी जाती है!"
+      },
+      "navigation": {
+        "next": "card_45_quiz_succession_3",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_45_quiz_succession_3",
+      "card_slug": "card_45_quiz_succession_3",
+      "type": "quiz",
+      "concept_id": "succession_quiz",
+      "level": 3,
+      "progress": {
+        "current": 45,
+        "total": 80
+      },
+      "quiz_payload": {
+        "question": "Climax Community के बारे में कौन सा कथन सही है? (Q3/3)",
+        "options": [
+          {
+            "id": "A",
+            "text": "यह succession का पहला stage है"
+          },
+          {
+            "id": "B",
+            "text": "यह Pioneer Species का दूसरा नाम है"
+          },
+          {
+            "id": "C",
+            "text": "यह succession का अंतिम, स्थिर stage है जो आगे नहीं बदलती"
+          },
+          {
+            "id": "D",
+            "text": "यह केवल aquatic ecosystems में होती है"
+          }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Climax Community succession का final और stable stage है। यह climate और local conditions के अनुसार determined होती है – इसीलिए इसे 'Climatic Climax' भी कहते हैं। इसमें species diversity maximum होती है और यह stable equilibrium में होती है। Pioneer Species succession का पहला stage है। Climax community terrestrial और aquatic दोनों ecosystems में होती है।"
+      },
+      "navigation": {
+        "next": "card_46_milestone_mod6",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_46_milestone_mod6",
+      "card_slug": "card_46_milestone_mod6",
+      "type": "milestone",
+      "concept_id": "mod6_complete",
+      "level": 3,
+      "progress": {
+        "current": 46,
+        "total": 80
+      },
+      "milestone_payload": {
+        "title": "MODULE 6 COMPLETED! 🎉",
+        "badge_emoji": "🌲",
+        "completed_topic": "Ecological Succession",
+        "xp_earned": 100,
+        "milestone_progress": "Module 6/8 Clear",
+        "motivational_quote": "Primary vs Secondary, Hydrosere vs Xerosere, Pioneer vs Climax – sab crystal clear! Ab Phosphorus cycle aur special concepts dekhte hain!"
+      },
+      "navigation": {
+        "next": "card_47_phosphorus_cycle",
+        "button_text": "Start Next Module ➔"
+      }
+    },
+    {
+      "card_id": "card_47_phosphorus_cycle",
+      "card_slug": "card_47_phosphorus_cycle",
+      "type": "chat",
+      "concept_id": "phosphorus_cycle",
+      "level": 3,
+      "progress": {
+        "current": 47,
+        "total": 80
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ab Phosphorus Cycle – ye Carbon aur Nitrogen cycle se bahut alag hai! Phosphorus cycle mein koi atmospheric phase NAHI hoti! Carbon CO₂ ke roop mein atmosphere mein hai, Nitrogen N₂ ke roop mein, lekin Phosphorus sirf soil aur rock mein hota hai – atmosphere mein nahi! Isliye ye ek Sedimentary Cycle hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Phosphorus atmospheric phase nahi hota?! Ye to Carbon aur Nitrogen se bahut different hai! Sedimentary cycle matlab?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Sedimentary cycle matlab phosphorus rocks mein bound hai. Weathering se phosphate ions (PO₄³⁻) soil mein aate hain. Plants soil se phosphate absorb karte hain. Animals plants khaate hain. Dead organisms decompose hone pe phosphate wapas soil mein! BPSC trap: Phosphorus cycle = Sedimentary cycle, no atmospheric phase – ye Carbon aur Nitrogen se fundamental difference hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Phosphorus = Sedimentary cycle, no atmosphere! Carbon aur Nitrogen = Gaseous cycle hai! Ye comparison important hai!"
+        }
+      ],
+      "navigation": {
+        "next": "card_48_water_cycle",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_48_water_cycle",
+      "card_slug": "card_48_water_cycle",
+      "type": "chat",
+      "concept_id": "water_cycle_hydrological",
+      "level": 3,
+      "progress": {
+        "current": 48,
+        "total": 80
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ab Water Cycle (Hydrological Cycle) – ye sabse simple cycle hai! Evaporation (oceans, lakes se) → Condensation (clouds banate hain) → Precipitation (rain, snow) → Runoff (rivers, lakes mein) → Groundwater → wapas evaporation! Plants bhi Transpiration se atmosphere mein water vapour release karte hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Transpiration! Plants paton se paani release karte hain atmosphere mein – ye bhi water cycle ka part hai!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! Aur Forests bahut important role play karte hain water cycle mein – isliye deforestation se local rainfall patterns disturb hoti hain. Amazon Rainforest ko 'Lungs of the Earth' kehte hain – CO₂ absorb karta hai aur water cycle maintain karta hai. UPSC mein Amazon + Deforestation + Climate change ek combined important topic hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Amazon = Lungs of the Earth! Deforestation se water cycle bhi bigad jaati hai! Itne connections hain environment mein!"
+        }
+      ],
+      "navigation": {
+        "next": "card_49_quiz_cycles_1",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_49_quiz_cycles_1",
+      "card_slug": "card_49_quiz_cycles_1",
+      "type": "quiz",
+      "concept_id": "cycles_quiz",
+      "level": 3,
+      "progress": {
+        "current": 49,
+        "total": 80
+      },
+      "quiz_payload": {
+        "question": "Phosphorus Cycle को Sedimentary Cycle क्यों कहते हैं? (Q1/3)",
+        "options": [
+          {
+            "id": "A",
+            "text": "क्योंकि Phosphorus atmosphere में gas के रूप में होता है"
+          },
+          {
+            "id": "B",
+            "text": "क्योंकि Phosphorus का कोई atmospheric phase नहीं होता – यह केवल soil और rocks में होता है"
+          },
+          {
+            "id": "C",
+            "text": "क्योंकि Phosphorus बहुत fast cycle होता है"
+          },
+          {
+            "id": "D",
+            "text": "क्योंकि Phosphorus केवल aquatic ecosystems में होता है"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Phosphorus Cycle को Sedimentary Cycle कहते हैं क्योंकि इसमें कोई atmospheric phase नहीं होती। Phosphorus rocks और sediments में PO₄³⁻ के रूप में होता है। Weathering → Soil → Plants → Animals → Decomposers → Soil। Carbon और Nitrogen में atmospheric phase होती है (CO₂ और N₂), इसलिए वे Gaseous Cycles हैं। BPSC और UPSC में यह comparison पूछा जाता है!"
+      },
+      "navigation": {
+        "next": "card_50_quiz_cycles_2",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_50_quiz_cycles_2",
+      "card_slug": "card_50_quiz_cycles_2",
+      "type": "quiz",
+      "concept_id": "cycles_quiz",
+      "level": 3,
+      "progress": {
+        "current": 50,
+        "total": 80
+      },
+      "quiz_payload": {
+        "question": "Assertion (A): Carbon Cycle और Nitrogen Cycle को Gaseous Cycles कहते हैं।\nReason (R): इन दोनों में atmosphere में एक reservoir होता है – CO₂ और N₂। (Q2/3)",
+        "options": [
+          {
+            "id": "A",
+            "text": "A और R दोनों सही हैं और R, A की सही व्याख्या है"
+          },
+          {
+            "id": "B",
+            "text": "A और R दोनों सही हैं लेकिन R, A की सही व्याख्या नहीं है"
+          },
+          {
+            "id": "C",
+            "text": "A सही है लेकिन R गलत है"
+          },
+          {
+            "id": "D",
+            "text": "A गलत है लेकिन R सही है"
+          }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Assertion सही है – Carbon और Nitrogen cycles को Gaseous cycles कहते हैं। Reason भी सही और correct explanation है – Carbon का atmospheric reservoir CO₂ (0.03-0.04%) और Nitrogen का N₂ (78%) है। Phosphorus cycle = Sedimentary cycle (no atmosphere)। R correctly A को explain करता है। BPSC Assertion-Reason format!"
+      },
+      "navigation": {
+        "next": "card_51_quiz_cycles_3",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_51_quiz_cycles_3",
+      "card_slug": "card_51_quiz_cycles_3",
+      "type": "quiz",
+      "concept_id": "cycles_quiz",
+      "level": 3,
+      "progress": {
+        "current": 51,
+        "total": 80
+      },
+      "quiz_payload": {
+        "question": "Leguminous plants (दलहनी फसलें) में Nitrogen Fixation करने वाला Symbiotic bacteria कौन सा है? (Q3/3)",
+        "options": [
+          {
+            "id": "A",
+            "text": "Azotobacter"
+          },
+          {
+            "id": "B",
+            "text": "Clostridium"
+          },
+          {
+            "id": "C",
+            "text": "Rhizobium"
+          },
+          {
+            "id": "D",
+            "text": "Pseudomonas"
+          }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Rhizobium leguminous plants (Gram, Pea, Soybean, Groundnut) की roots में symbiotic relationship में N₂ fixation करता है। Root nodules में रहता है। Azotobacter = Free-living aerobic N₂ fixer। Clostridium = Free-living anaerobic N₂ fixer। Pseudomonas = Denitrification करता है। SSC, Railway और BPSC में Rhizobium-Legume association सबसे direct fact question है!"
+      },
+      "navigation": {
+        "next": "card_52_milestone_mod7",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_52_milestone_mod7",
+      "card_slug": "card_52_milestone_mod7",
+      "type": "milestone",
+      "concept_id": "mod7_complete",
+      "level": 3,
+      "progress": {
+        "current": 52,
+        "total": 80
+      },
+      "milestone_payload": {
+        "title": "MODULE 7 COMPLETED! 🎉",
+        "badge_emoji": "🔄",
+        "completed_topic": "Phosphorus Cycle, Water Cycle & Nutrient Cycle Comparison",
+        "xp_earned": 100,
+        "milestone_progress": "Module 7/8 Clear",
+        "motivational_quote": "Gaseous vs Sedimentary cycles – clear! Phosphorus = no atmosphere! Ab last aur most scoring module – Special Ecosystem Concepts!"
+      },
+      "navigation": {
+        "next": "card_53_biomagnification",
+        "button_text": "Start Next Module ➔"
+      }
+    },
+    {
+      "card_id": "card_53_biomagnification",
+      "card_slug": "card_53_biomagnification",
+      "type": "chat",
+      "concept_id": "biomagnification",
+      "level": 4,
+      "progress": {
+        "current": 53,
+        "total": 80
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ab ek bahut important environmental concept – Biomagnification! Socho DDT pesticide ek pond mein daal diya. Phytoplankton thoda absorb karta hai. Zooplankton bahut saare phytoplankton khaata hai – DDT unka hota jaata hai. Small fish bahut saare zooplankton khaati hai – DDT aur badhta hai. Bada fish, fir bird – DDT level aur badhta jaata hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "DDT food chain mein concentrate hoti jaati hai! Matlab jo animal top pe hai uske paas sabse zyada DDT hogi?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Exactly! Isi ko Biomagnification ya Biological Magnification kehte hain – toxic substances ka concentration har trophic level pe BADHTA jaata hai. DDT ke karan eagles aur hawks mein eggshell thinning ho gayi – reproduction fail! Famous example: DDT → Bald Eagle decline (USA). UPSC mein DDT + Biomagnification + Birds ka combined question bahut important hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "DDT se birds ke eggs ki shell patli ho gayi! Isliye reproduction fail! Ye biodiversity ka bada loss tha!"
+        }
+      ],
+      "navigation": {
+        "next": "card_54_eutrophication",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_54_eutrophication",
+      "card_slug": "card_54_eutrophication",
+      "type": "chat",
+      "concept_id": "eutrophication",
+      "level": 4,
+      "progress": {
+        "current": 54,
+        "total": 80
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ab Eutrophication – ek aur important concept! Jab khet ka fertilizer (nitrates, phosphates) rain se nadiyaan ya lakes mein aa jaata hai to kya hota hai? Algae bahut fast grow karti hai – ise Algal Bloom kehte hain! Ye paani ki surface pe green carpet bana deta hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Algal Bloom! Maine news mein suna tha – kuch lakes green ho jaati hain! Ye fertilizer se hota hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! Algal bloom ke baad – algae mar jaati hai, bacteria unhe decompose karte hain, bahut zyada oxygen consume karte hain, oxygen level lake mein gir jaata hai – Hypoxia ya Anoxia ho jaata hai – machhiyan mar jaati hain! Ise 'Dead Zone' kehte hain. Cultural Eutrophication = manmade pollution se hua eutrophication. BPSC aur UPSC mein Eutrophication process poochhi jaati hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Algal Bloom → Algae death → Decomposition → Oxygen depletion → Fish death → Dead Zone! Ek chain reaction hai pollution ki!"
+        }
+      ],
+      "navigation": {
+        "next": "card_55_ozone_depletion",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_55_ozone_depletion",
+      "card_slug": "card_55_ozone_depletion",
+      "type": "chat",
+      "concept_id": "ozone_depletion_ecosystem",
+      "level": 4,
+      "progress": {
+        "current": 55,
+        "total": 80
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ecosystem pe ek aur bada threat – Ozone Depletion! Ozone layer stratosphere mein hai (15-35 km height) – UV radiation se bachati hai. CFCs (Chlorofluorocarbons) – AC, refrigerator, aerosol cans se – stratosphere mein jaake ozone tod dete hain. O₃ + Cl (from CFC) → O₂ + ClO (chain reaction)!"
+        },
+        {
+          "speaker": "raju",
+          "text": "AC se ozone khatam ho rahi hai?! CFCs AC ke andar hote hain – ye ozone todte hain!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! Ozone hole mainly Antarctica pe 'ozone hole' form hua hai. Montreal Protocol (1987) – sabse successful international treaty – CFCs ka production band karne ke liye. UV radiation badhne se: skin cancer, cataracts, phytoplankton damage (marine productivity gir jaati hai), ecosystem pe effect. UPSC mein Montreal Protocol + Ozone direct question hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Montreal Protocol 1987 – ye naam yaad rakhna hai! Aur UV radiation se phytoplankton bhi damage hota hai – marine food chain pe effect!"
+        }
+      ],
+      "navigation": {
+        "next": "card_56_keystone_species",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_56_keystone_species",
+      "card_slug": "card_56_keystone_species",
+      "type": "chat",
+      "concept_id": "keystone_species",
+      "level": 4,
+      "progress": {
+        "current": 56,
+        "total": 80
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ab ek interesting concept – Keystone Species! Ye wo species hai jo ecosystem mein apni abundance se zyada important role play karti hai. Agar ye hata di jaaye, to pura ecosystem collapse ho sakta hai! Sea otter – Pacific coast pe – sea urchins khaata hai. Agar otter na ho – sea urchins bahut badh jaate hain aur kelp forests kha jaate hain – ecosystem collapse!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Ek chhota sea otter pure ecosystem ko bachata hai?! Isi ko Keystone Species kehte hain – kam hain lekin bahut important!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul! Aur India ke context mein – Tiger ek keystone species hai! Agar tiger na ho, deer ki population bahut badh jaayegi, sab vegetation kha jaayenge, ecosystem bigar jaayega! Isliye Project Tiger itna important hai. UPSC mein Keystone Species ka concept aur Tiger ke examples bahut poochhe jaate hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Tiger keystone species hai India mein! Isliye tiger conservation = entire ecosystem conservation! Project Tiger ka scientific reason clear hua!"
+        }
+      ],
+      "navigation": {
+        "next": "card_57_quiz_special_1",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_57_quiz_special_1",
+      "card_slug": "card_57_quiz_special_1",
+      "type": "quiz",
+      "concept_id": "special_concepts_quiz",
+      "level": 4,
+      "progress": {
+        "current": 57,
+        "total": 80
+      },
+      "quiz_payload": {
+        "question": "Biomagnification के बारे में कौन सा कथन सही है? (Q1/3)",
+        "options": [
+          {
+            "id": "A",
+            "text": "Toxic substances की concentration हर trophic level पर घटती है"
+          },
+          {
+            "id": "B",
+            "text": "Toxic substances की concentration हर trophic level पर बढ़ती है – producers में सबसे कम, top consumers में सबसे अधिक"
+          },
+          {
+            "id": "C",
+            "text": "Biomagnification केवल terrestrial ecosystems में होता है"
+          },
+          {
+            "id": "D",
+            "text": "DDT से producers सबसे अधिक प्रभावित होते हैं"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Biomagnification में toxic substances (DDT, Mercury, PCBs) की concentration हर trophic level पर बढ़ती है। Producers में सबसे कम, top predators में सबसे अधिक। DDT से Bald Eagle में eggshell thinning हुई। Aquatic ecosystems में mercury biomagnification famous है। UPSC, BPSC और NEET में Biomagnification repeatedly पूछा जाता है!"
+      },
+      "navigation": {
+        "next": "card_58_quiz_special_2",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_58_quiz_special_2",
+      "card_slug": "card_58_quiz_special_2",
+      "type": "quiz",
+      "concept_id": "special_concepts_quiz",
+      "level": 4,
+      "progress": {
+        "current": 58,
+        "total": 80
+      },
+      "quiz_payload": {
+        "question": "Eutrophication में 'Dead Zone' कैसे बनता है? (Q2/3)",
+        "options": [
+          {
+            "id": "A",
+            "text": "अधिक sunlight से पानी गर्म होकर सभी जीव मर जाते हैं"
+          },
+          {
+            "id": "B",
+            "text": "Algal bloom → algae death → bacterial decomposition → oxygen depletion (hypoxia) → fish death"
+          },
+          {
+            "id": "C",
+            "text": "Acidic rain से lake का pH कम हो जाता है"
+          },
+          {
+            "id": "D",
+            "text": "Invasive species सभी native fish खा जाती है"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Eutrophication में Dead Zone formation: Excess nutrients (N, P) → Algal Bloom → Algae die → Bacteria decompose algae → Bacteria consume O₂ → Hypoxia/Anoxia (oxygen depletion) → Fish और aquatic animals मर जाते हैं → Dead Zone। Cultural Eutrophication = agricultural runoff और sewage से। Gulf of Mexico Dead Zone सबसे famous example है। BPSC और UPSC में यह chain reaction पूछी जाती है!"
+      },
+      "navigation": {
+        "next": "card_59_quiz_special_3",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_59_quiz_special_3",
+      "card_slug": "card_59_quiz_special_3",
+      "type": "quiz",
+      "concept_id": "special_concepts_quiz",
+      "level": 4,
+      "progress": {
+        "current": 59,
+        "total": 80
+      },
+      "quiz_payload": {
+        "question": "Montreal Protocol (1987) किससे संबंधित है? (Q3/3)",
+        "options": [
+          {
+            "id": "A",
+            "text": "Greenhouse gases और Climate Change"
+          },
+          {
+            "id": "B",
+            "text": "CFCs के उत्पादन को बंद करना जो Ozone layer को नुकसान पहुँचाते हैं"
+          },
+          {
+            "id": "C",
+            "text": "Biodiversity Conservation"
+          },
+          {
+            "id": "D",
+            "text": "Plastic Pollution"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Montreal Protocol (1987) CFCs (Chlorofluorocarbons) और other ozone-depleting substances के production और use को phase out करने के लिए था – यह अब तक की सबसे successful international environmental treaty मानी जाती है। Ozone hole (Antarctica) की खोज 1985 में हुई। Kyoto Protocol = Greenhouse gases (1997)। CBD (Rio) = Biodiversity (1992)। UPSC Prelims में यह direct question है!"
+      },
+      "navigation": {
+        "next": "card_60_milestone_mod8",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_60_milestone_mod8",
+      "card_slug": "card_60_milestone_mod8",
+      "type": "milestone",
+      "concept_id": "mod8_complete",
+      "level": 4,
+      "progress": {
+        "current": 60,
+        "total": 80
+      },
+      "milestone_payload": {
+        "title": "MODULE 8 COMPLETED! 🎉",
+        "badge_emoji": "🌏",
+        "completed_topic": "Biomagnification, Eutrophication, Ozone & Keystone Species",
+        "xp_earned": 125,
+        "milestone_progress": "Module 8/8 Clear – ALL MODULES DONE!",
+        "motivational_quote": "Sab modules complete! DDT Biomagnification, Eutrophication Dead Zone, Montreal Protocol 1987, Keystone Species – sab yaad hai! Ab Final Officer Revision aur Master Quiz!"
+      },
+      "navigation": {
+        "next": "card_61_extra_concepts",
+        "button_text": "Go to Final Round ➔"
+      }
+    },
+    {
+      "card_id": "card_61_extra_concepts",
+      "card_slug": "card_61_extra_concepts",
+      "type": "chat",
+      "concept_id": "extra_ecosystem_concepts",
+      "level": 4,
+      "progress": {
+        "current": 61,
+        "total": 80
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Kuch extra BPSC/UPSC level concepts! Ecological Niche – kisi organism ka ecosystem mein role aur position! Habitat = jagah jahan organism rehta hai. Niche = wo sab kuch jo wo karta hai (kya khaata hai, kab active hai, weather conditions etc.). 'No two species can occupy the same niche' – ye Competitive Exclusion Principle hai (Gause's Law)!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Habitat = address, Niche = profession! Ek ghar mein do log rah sakte hain lekin ek hi profession ka sirf ek! Ye Gause's Law hai!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Perfect analogy! Aur Homeostasis – ecosystem ki tendency apni stability maintain karne ki! Ecosystem ko thoda disturb karo – wo wapas normal ho jaata hai (within limits). Ise Ecosystem Resilience kehte hain. Diverse ecosystem = more resilient! Isliye species diversity banana zaroori hai conservation mein – UPSC mein diversity-resilience link poochhi jaati hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Zyada diverse ecosystem = zyada resilient! Isliye monoculture crops zyada vulnerable hoti hain – ek disease se sab khatam!"
+        }
+      ],
+      "navigation": {
+        "next": "card_62_energy_flow_models",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_62_energy_flow_models",
+      "card_slug": "card_62_energy_flow_models",
+      "type": "chat",
+      "concept_id": "energy_flow_unidirectional",
+      "level": 4,
+      "progress": {
+        "current": 62,
+        "total": 80
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ab ek critical point – Energy flow is UNIDIRECTIONAL (ek taraf)! Energy producers se consumers mein jaati hai aur heat ke roop mein release hoti hai – ye wapas producers mein nahi aati! Nutrients ki cycle hoti hai (carbon, nitrogen wapas aate hain), lekin energy ki cycle NAHI hoti! BPSC ka favorite multi-statement trap hai ye!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Energy unidirectional – ek taraf! Nutrients cyclic – ghoomte rehte hain! Ye dono different hain – energy wapas nahi aati!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! Aur BPSC mein poochha jaata hai: 'Matter cycles but energy flows' – ye statement CORRECT hai! Nutrients (carbon, nitrogen, phosphorus) recycle hote hain – wapas environment mein aate hain. Lekin energy ultimately heat ke roop mein dissipate ho jaati hai – ye thermodynamics ka second law hai! Ye ecosystem ka fundamental principle hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matter cycles, Energy flows – ye to beautiful summary hai poore ecosystem ki! Dono mein fundamental difference!"
+        }
+      ],
+      "navigation": {
+        "next": "card_63_biomes_intro",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_63_biomes_intro",
+      "card_slug": "card_63_biomes_intro",
+      "type": "chat",
+      "concept_id": "biomes",
+      "level": 4,
+      "progress": {
+        "current": 63,
+        "total": 80
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Kuch important Biomes – UPSC mein frequently poochhe jaate hain! Tropical Rainforest – highest biodiversity, closed canopy, dark forest floor. Savanna – tropical grassland with scattered trees – Africa mein (Lion, Elephant). Taiga/Boreal Forest – coniferous forest, northernmost forest biome. Tundra – treeless, permafrost, extreme cold (Arctic aur Alpine)!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Tundra mein trees nahi hoti – Permafrost ki wajah se! Aur Taiga northernmost forest hai – isse neeche koi forest nahi!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! Aur Temperate Deciduous Forest – 4 seasons, leaves girte hain (deciduous), India mein bhi hai! Mediterranean biome – hot dry summer, mild wet winter (olive, oak trees). Chaparral bhi kehte hain ise! Aur Desert – hot (Sahara) ya cold (Atacama, Patagonia) ho sakta hai – minimum rainfall! UPSC mein biome characteristics table se question aata hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Mediterranean = hot dry summer, cold wet winter! Chaparral! Tundra = permafrost, no trees! Ye biomes yaad rakhne hain!"
+        }
+      ],
+      "navigation": {
+        "next": "card_64_guess_concept",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_64_guess_concept",
+      "card_slug": "card_64_guess_concept",
+      "type": "guess",
+      "concept_id": "ecosystem_guess",
+      "level": 4,
+      "progress": {
+        "current": 64,
+        "total": 80
+      },
+      "quiz_payload": {
+        "question": "🤔 Guess karo! 'Matter cycles, Energy flows' – is statement mein Energy ke baare mein kya sahi hai?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Energy bhi matter ki tarah cycle hoti hai – producers mein wapas aati hai"
+          },
+          {
+            "id": "B",
+            "text": "Energy unidirectional flow karta hai – ultimately heat ke roop mein dissipate ho jaati hai, wapas nahi aati"
+          },
+          {
+            "id": "C",
+            "text": "Energy sirf aquatic ecosystems mein cycle hoti hai"
+          },
+          {
+            "id": "D",
+            "text": "Energy aur matter dono cycle hote hain ecosystem mein"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Energy flow UNIDIRECTIONAL है – producers से consumers तक एक ही दिशा में, और ultimately heat के रूप में dissipate होती है (Thermodynamics 2nd Law)। Energy वापस producers में नहीं आती। Nutrients (Carbon, Nitrogen, Phosphorus) CYCLIC हैं – वे environment में वापस आते हैं। यह BPSC का most repeated multi-statement trap concept है!"
+      },
+      "navigation": {
+        "next": "card_65_guess_pyramid",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_65_guess_pyramid",
+      "card_slug": "card_65_guess_pyramid",
+      "type": "guess",
+      "concept_id": "pyramid_guess",
+      "level": 4,
+      "progress": {
+        "current": 65,
+        "total": 80
+      },
+      "quiz_payload": {
+        "question": "🤔 Ek talab mein Phytoplankton (producers) ki biomass, Zooplankton (primary consumers) se LESS hai – toh Pyramid of Biomass kaisi hogi?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Upright – producers hamesha zyada hote hain"
+          },
+          {
+            "id": "B",
+            "text": "Inverted – producers ki biomass consumers se kam hai"
+          },
+          {
+            "id": "C",
+            "text": "Spindle shaped"
+          },
+          {
+            "id": "D",
+            "text": "Biomass pyramid aquatic mein banti hi nahi"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Aquatic ecosystem में Pyramid of Biomass INVERTED होती है क्योंकि Phytoplankton (producers) की standing biomass Zooplankton से कम होती है। Phytoplankton की reproduction rate बहुत high है – वे कम quantity में होकर भी बड़े consumers को support करते हैं। यह NEET और BPSC का confirmed repeat question है!"
+      },
+      "navigation": {
+        "next": "card_66_important_organisms",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_66_important_organisms",
+      "card_slug": "card_66_important_organisms",
+      "type": "chat",
+      "concept_id": "important_ecosystem_organisms",
+      "level": 4,
+      "progress": {
+        "current": 66,
+        "total": 80
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Speed round – important organisms aur unka ecosystem role! Earthworm – 'Farmer's friend' kehte hain – decomposer, soil tilling. Bee – pollinator – ecosystem service. Elephant – 'Ecosystem engineer' – jungle mein raasta banata hai, trees giraata hai jo naye plants ko jagah deta hai! Mangroves – coastal ecosystem, nursery for fish!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Elephant ecosystem engineer hai! Aur bee pollinator hai – agar bee khatam ho jaaye to food production crisis aa jaayegi na Sir?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul! Einstein ne reportedly kaha tha – 'If bees disappear, humans will have only 4 years left' (actually attributed to him, though debated). Bees ke bina 75% crops pollinate nahi hongi! Aur Vulture (Gidh) – nature ka 'Sanitary cleaner' – dead animals khaake disease spread rokta hai. India mein Vulture decline se Anthrax disease badhi! UPSC mein ye ecosystem services important topic hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Vulture khatam hua toh disease badhi! Ecosystem mein har species ka role hai – koi bhi worthless nahi!"
+        }
+      ],
+      "navigation": {
+        "next": "card_67_quiz_final_prep_1",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_67_quiz_final_prep_1",
+      "card_slug": "card_67_quiz_final_prep_1",
+      "type": "quiz",
+      "concept_id": "comprehensive_quiz_1",
+      "level": 4,
+      "progress": {
+        "current": 67,
+        "total": 80
+      },
+      "quiz_payload": {
+        "question": "निम्नलिखित कथनों पर विचार करें:\n1. Ecological Niche एक organism का habitat है\n2. Gause's Law के अनुसार दो species एक ही niche occupy नहीं कर सकती\n3. Diverse ecosystem अधिक resilient होता है\n4. Monoculture farming ecosystem resilience बढ़ाती है\n\nकौन से कथन सही हैं?",
+        "options": [
+          {
+            "id": "A",
+            "text": "केवल 1 और 4"
+          },
+          {
+            "id": "B",
+            "text": "केवल 2 और 3"
+          },
+          {
+            "id": "C",
+            "text": "केवल 1, 2 और 3"
+          },
+          {
+            "id": "D",
+            "text": "1, 2, 3 और 4 सभी"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "कथन 1 गलत – Niche ≠ Habitat। Habitat = जहाँ organism रहता है (address)। Niche = organism का ecological role (profession – क्या खाता है, कब active है etc.)। कथन 2 सही – Gause's Competitive Exclusion Principle: no two species can occupy the same niche। कथन 3 सही – Diversity → Resilience। कथन 4 गलत – Monoculture से diversity कम होती है → resilience कम होती है। BPSC multi-statement trap!"
+      },
+      "navigation": {
+        "next": "card_68_officer_revision",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_68_officer_revision",
+      "card_slug": "card_68_officer_revision",
+      "type": "summary",
+      "concept_id": "officer_revision_summary",
+      "level": 5,
+      "progress": {
+        "current": 68,
+        "total": 80
+      },
+      "summary_payload": {
+        "title": "⚡ Quick Officer Revision – Ecosystem",
+        "revision_points": [
+          {
+            "topic": "Ecosystem Basics & Scientists",
+            "point": "Ecosystem = A.G. Tansley (1935)। Ecology = Ernst Haeckel (1866)। Ecological Pyramid = Charles Elton (1927)। 10% Law = Raymond Lindeman (1942)। Biotic = living organisms, Abiotic = non-living (Climatic + Edaphic factors)। Largest ecosystem = Biosphere। Highest NPP = Tropical Rainforest & Estuary, Lowest = Desert & Open Ocean।"
+          },
+          {
+            "topic": "Food Chain, Pyramids & Energy",
+            "point": "Grazing food chain = Plants se, Detritus food chain = Dead matter se। 10% Law: energy har trophic level pe 10% transfer। Energy flow = UNIDIRECTIONAL (wapas nahi aati)। Pyramid of Energy = hamesha Upright (no exception)। Pyramid of Numbers = Inverted in Tree ecosystem aur Parasitic food chain। Pyramid of Biomass = Inverted in Aquatic ecosystem (Phytoplankton)। 'Matter cycles, Energy flows' = correct statement।"
+          },
+          {
+            "topic": "Nutrient Cycles – Bacteria Chart",
+            "point": "N₂ Fixation: Rhizobium (legume-symbiotic), Azotobacter (free-living aerobic), Clostridium (free-living anaerobic), Anabaena/Nostoc (Cyanobacteria, paddy fields)। Nitrification: Nitrosomonas (NH₃→NO₂⁻) + Nitrobacter (NO₂⁻→NO₃⁻)। Denitrification: Pseudomonas (NO₃⁻→N₂)। Phosphorus cycle = Sedimentary (no atmosphere)। Carbon & Nitrogen = Gaseous cycles।"
+          },
+          {
+            "topic": "Ecological Succession",
+            "point": "Primary Succession = never had life before (volcanic island, glacier retreat) – very slow। Secondary Succession = life was disturbed (forest fire, abandoned farmland) – faster। Xerosere (bare rock): Lichen → Mosses → Herbs → Shrubs → Trees (Climax)। Hydrosere (pond): Phytoplankton → Rooted plants → Reed swamp → Marsh → Woodland → Forest (Climax)। Pioneer species = first colonizers, Climax community = final stable stage।"
+          },
+          {
+            "topic": "Environmental Concepts",
+            "point": "Biomagnification = toxic substances (DDT) concentration increases with each trophic level (producers lowest, top predators highest)। Eutrophication = excess nutrients → Algal bloom → O₂ depletion → Dead Zone। Montreal Protocol (1987) = CFCs phase-out for ozone protection। Keystone species = species disproportionately important (Tiger in India, Sea otter)। NPP = GPP – Respiration। Decomposition steps: Fragmentation → Leaching → Catabolism → Humification → Mineralisation।"
+          }
+        ]
+      },
+      "navigation": {
+        "next": "card_69_final_quiz_1",
+        "button_text": "Start Final Master Quiz ➔"
+      }
+    },
+    {
+      "card_id": "card_69_final_quiz_1",
+      "card_slug": "card_69_final_quiz_1",
+      "type": "final_quiz",
+      "concept_id": "final_master_quiz_1",
+      "level": 5,
+      "progress": {
+        "current": 69,
+        "total": 80
+      },
+      "quiz_payload": {
+        "question": "निम्नलिखित कथनों पर विचार करें:\n1. Pyramid of Energy कभी inverted नहीं होती\n2. Pyramid of Biomass aquatic ecosystem में inverted होती है\n3. Pyramid of Numbers parasitic food chain में inverted होती है\n4. Pyramid of Numbers हमेशा upright होती है\n\nकौन से कथन सही हैं?",
+        "options": [
+          {
+            "id": "A",
+            "text": "केवल 1 और 4"
+          },
+          {
+            "id": "B",
+            "text": "केवल 1, 2 और 3"
+          },
+          {
+            "id": "C",
+            "text": "केवल 2 और 4"
+          },
+          {
+            "id": "D",
+            "text": "1, 2, 3 और 4 सभी"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "कथन 1 सही – Pyramid of Energy हमेशा Upright (10% Law)। कथन 2 सही – Aquatic में Biomass pyramid Inverted (Phytoplankton < Zooplankton)। कथन 3 सही – Parasitic food chain में Numbers pyramid Inverted (Host < Parasites < Hyperparasites)। कथन 4 गलत – Pyramid of Numbers tree ecosystem (1 tree → many insects) और parasitic food chain में Inverted होती है। BPSC multi-statement pyramid trap!"
+      },
+      "navigation": {
+        "next": "card_70_final_quiz_2",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_70_final_quiz_2",
+      "card_slug": "card_70_final_quiz_2",
+      "type": "final_quiz",
+      "concept_id": "final_master_quiz_2",
+      "level": 5,
+      "progress": {
+        "current": 70,
+        "total": 80
+      },
+      "quiz_payload": {
+        "question": "Assertion (A): Secondary Succession, Primary Succession से तेज होती है।\nReason (R): Secondary Succession में पहले से soil और seed bank मौजूद होती है जो colonization को तेज बनाती है।\n\nसही विकल्प चुनिए:",
+        "options": [
+          {
+            "id": "A",
+            "text": "A और R दोनों सही हैं और R, A की सही व्याख्या है"
+          },
+          {
+            "id": "B",
+            "text": "A और R दोनों सही हैं लेकिन R, A की सही व्याख्या नहीं है"
+          },
+          {
+            "id": "C",
+            "text": "A सही है लेकिन R गलत है"
+          },
+          {
+            "id": "D",
+            "text": "A गलत है – Primary Succession तेज होती है"
+          }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Assertion सही है – Secondary Succession Primary से faster होती है। Reason भी सही और correct explanation है – Secondary Succession में पहले से developed soil, organic matter, और seed bank होती है जो colonization और growth को fast बनाती है। Primary Succession में bare rock से शुरुआत होती है, कोई soil नहीं – इसीलिए बहुत slow (1000+ years)। R correctly A को explain करता है। BPSC Assertion-Reason!"
+      },
+      "navigation": {
+        "next": "card_71_final_quiz_3",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_71_final_quiz_3",
+      "card_slug": "card_71_final_quiz_3",
+      "type": "final_quiz",
+      "concept_id": "final_master_quiz_3",
+      "level": 5,
+      "progress": {
+        "current": 71,
+        "total": 80
+      },
+      "quiz_payload": {
+        "question": "निम्नलिखित bacteria-process pairs में से कौन से सही हैं?\n1. Nitrosomonas – NH₃ को NO₂⁻ में convert करता है\n2. Nitrobacter – N₂ को NH₃ में convert करता है\n3. Pseudomonas – NO₃⁻ को N₂ में convert करता है (Denitrification)\n4. Rhizobium – legume roots में symbiotic N₂ fixation\n\nसही कूट:",
+        "options": [
+          {
+            "id": "A",
+            "text": "केवल 1 और 2"
+          },
+          {
+            "id": "B",
+            "text": "केवल 1, 3 और 4"
+          },
+          {
+            "id": "C",
+            "text": "केवल 2 और 4"
+          },
+          {
+            "id": "D",
+            "text": "1, 2, 3 और 4 सभी"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "कथन 1 सही – Nitrosomonas: NH₃→NO₂⁻ (Nitrification step 1)। कथन 2 गलत – Nitrobacter: NO₂⁻→NO₃⁻ (Nitrification step 2), N₂→NH₃ नहीं (यह N₂ fixation है जो Rhizobium/Azotobacter करते हैं)। कथन 3 सही – Pseudomonas Denitrification करता है। कथन 4 सही – Rhizobium symbiotic N₂ fixation (legumes)। BPSC nitrogen cycle bacteria matching trap – सबसे common confusing question!"
+      },
+      "navigation": {
+        "next": "card_72_final_quiz_4",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_72_final_quiz_4",
+      "card_slug": "card_72_final_quiz_4",
+      "type": "final_quiz",
+      "concept_id": "final_master_quiz_4",
+      "level": 5,
+      "progress": {
+        "current": 72,
+        "total": 80
+      },
+      "quiz_payload": {
+        "question": "निम्नलिखित कथनों पर विचार करें:\n1. Carbon Cycle में atmosphere एक major reservoir है\n2. Phosphorus Cycle में कोई atmospheric phase नहीं होती\n3. Nitrogen atmosphere में 78% है लेकिन plants directly use नहीं कर सकते\n4. Water Cycle में Transpiration का कोई role नहीं है\n\nकौन से कथन सही हैं?",
+        "options": [
+          {
+            "id": "A",
+            "text": "केवल 1 और 4"
+          },
+          {
+            "id": "B",
+            "text": "केवल 2 और 3"
+          },
+          {
+            "id": "C",
+            "text": "1, 2 और 3"
+          },
+          {
+            "id": "D",
+            "text": "1, 2, 3 और 4"
+          }
+        ],
+        "correct_option_id": "C",
+        "explanation": "कथन 1 सही – Carbon का atmospheric reservoir CO₂ (0.03%) है। कथन 2 सही – Phosphorus cycle sedimentary है, कोई atmospheric phase नहीं। कथन 3 सही – N₂ (78%) का triple bond बहुत stable है, plants directly use नहीं कर सकते – N₂ fixation जरूरी है। कथन 4 गलत – Transpiration Water cycle का important part है – plants पत्तों से water vapour atmosphere में release करते हैं। BPSC nutrient cycle multi-statement!"
+      },
+      "navigation": {
+        "next": "card_73_final_quiz_5",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_73_final_quiz_5",
+      "card_slug": "card_73_final_quiz_5",
+      "type": "final_quiz",
+      "concept_id": "final_master_quiz_5",
+      "level": 5,
+      "progress": {
+        "current": 73,
+        "total": 80
+      },
+      "quiz_payload": {
+        "question": "Assertion (A): Energy flow in an ecosystem is unidirectional.\nReason (R): As per the Second Law of Thermodynamics, energy is lost as heat at each trophic level and cannot be recycled.\n\nसही विकल्प:",
+        "options": [
+          {
+            "id": "A",
+            "text": "A और R दोनों सही हैं और R, A की सही व्याख्या है"
+          },
+          {
+            "id": "B",
+            "text": "A और R दोनों सही हैं लेकिन R, A की सही व्याख्या नहीं है"
+          },
+          {
+            "id": "C",
+            "text": "A सही है लेकिन R गलत है"
+          },
+          {
+            "id": "D",
+            "text": "A गलत है – Energy दोनों दिशाओं में flow करती है"
+          }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Assertion सही है – Energy flow एकदिशीय (unidirectional) है: Producers → Primary consumers → Secondary consumers → Tertiary consumers → Heat। Reason भी सही और correct explanation है – Thermodynamics के Second Law के अनुसार every energy transformation में कुछ energy heat के रूप में lose होती है और यह वापस usable form में नहीं आती। इसीलिए nutrients cycle होते हैं लेकिन energy नहीं। BPSC premium Assertion-Reason!"
+      },
+      "navigation": {
+        "next": "card_74_final_quiz_6",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_74_final_quiz_6",
+      "card_slug": "card_74_final_quiz_6",
+      "type": "final_quiz",
+      "concept_id": "final_master_quiz_6",
+      "level": 5,
+      "progress": {
+        "current": 74,
+        "total": 80
+      },
+      "quiz_payload": {
+        "question": "निम्नलिखित में से कौन सा कथन GALAT है?",
+        "options": [
+          {
+            "id": "A",
+            "text": "NPP = GPP – Respiration"
+          },
+          {
+            "id": "B",
+            "text": "10% Law Raymond Lindeman ने 1942 में दिया"
+          },
+          {
+            "id": "C",
+            "text": "Eutrophication से water body में oxygen बढ़ती है"
+          },
+          {
+            "id": "D",
+            "text": "Biomagnification में top predators में toxic concentration सबसे अधिक होती है"
+          }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Option C गलत है – Eutrophication में oxygen घटती है (बढ़ती नहीं)। Algal bloom → algae death → bacterial decomposition → oxygen depletion → Dead Zone। Option A सही (NPP = GPP – R)। Option B सही (Lindeman 1942)। Option D सही (Biomagnification – top predators highest concentration)। BPSC में 'एक गलत कथन ढूंढो' format!"
+      },
+      "navigation": {
+        "next": "card_75_final_quiz_7",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_75_final_quiz_7",
+      "card_slug": "card_75_final_quiz_7",
+      "type": "final_quiz",
+      "concept_id": "final_master_quiz_7",
+      "level": 5,
+      "progress": {
+        "current": 75,
+        "total": 80
+      },
+      "quiz_payload": {
+        "question": "निम्नलिखित कथनों पर विचार करें:\n1. Tropical Rainforest की NPP सबसे अधिक होती है\n2. Open Ocean की NPP per unit area सबसे कम होती है\n3. A.G. Tansley ने 1935 में Ecosystem शब्द दिया\n4. Charles Elton ने 1942 में Ecological Pyramids concept दिया\n\nकौन से कथन सही हैं?",
+        "options": [
+          {
+            "id": "A",
+            "text": "केवल 1 और 4"
+          },
+          {
+            "id": "B",
+            "text": "केवल 1, 2 और 3"
+          },
+          {
+            "id": "C",
+            "text": "केवल 2 और 4"
+          },
+          {
+            "id": "D",
+            "text": "1, 2, 3 और 4 सभी"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "कथन 1 सही – Tropical Rainforest और Estuary की NPP highest (2000-8000 g m⁻² yr⁻¹)। कथन 2 सही – Open Ocean की NPP per unit area सबसे कम है (area बड़ा है पर productivity/area कम)। कथन 3 सही – A.G. Tansley 1935 = Ecosystem। कथन 4 गलत – Charles Elton ने 1927 में Ecological Pyramids concept दिया (1942 नहीं – 1942 = Lindeman's 10% Law)। BPSC year trap!"
+      },
+      "navigation": {
+        "next": "card_76_final_quiz_8",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_76_final_quiz_8",
+      "card_slug": "card_76_final_quiz_8",
+      "type": "final_quiz",
+      "concept_id": "final_master_quiz_8",
+      "level": 5,
+      "progress": {
+        "current": 76,
+        "total": 80
+      },
+      "quiz_payload": {
+        "question": "Decomposition के बारे में कौन सा कथन सही है?\n1. Humification में dark-colored, stable Humus बनता है\n2. Warm और moist conditions में decomposition तेज होती है\n3. Lignin-rich detritus quickly decompose होता है\n4. Mineralization में inorganic nutrients release होते हैं\n\nकौन से कथन सही हैं?",
+        "options": [
+          {
+            "id": "A",
+            "text": "केवल 1 और 3"
+          },
+          {
+            "id": "B",
+            "text": "केवल 1, 2 और 4"
+          },
+          {
+            "id": "C",
+            "text": "केवल 2 और 3"
+          },
+          {
+            "id": "D",
+            "text": "1, 2, 3 और 4"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "कथन 1 सही – Humification: dark, stable Humus बनता है जो soil fertility बढ़ाता है। कथन 2 सही – Warm, moist climate में decomposition rate fast होती है (enzymes active, moisture available)। कथन 3 गलत – Lignin-rich detritus SLOWLY decompose होता है (lignin recalcitrant compound है, bacteria/fungi आसानी से नहीं तोड़ते)। कथन 4 सही – Mineralisation में inorganic nutrients (N, P, K) soil में release होते हैं। NEET decomposition trap!"
+      },
+      "navigation": {
+        "next": "card_77_trophy",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_77_trophy",
+      "card_slug": "card_77_trophy",
+      "type": "milestone",
+      "concept_id": "chapter_complete",
+      "level": 5,
+      "progress": {
+        "current": 77,
+        "total": 80
+      },
+      "milestone_payload": {
+        "title": "🏆 CHAPTER COMPLETED – ECOSYSTEM! 🏆",
+        "badge_emoji": "🏆🌍",
+        "completed_topic": "Complete Ecosystem (पारिस्थितिकी तंत्र)",
+        "xp_earned": 800,
+        "milestone_progress": "Chapter 100% Complete!",
+        "motivational_quote": "Tum ab Ecosystem ke MASTER ho! Tansley 1935 se Lindeman 1942 tak, Food Chain se Biomagnification tak, Nitrogen Cycle se Succession tak – sab clear! BPSC, SSC, Railway, NEET, UPSC – kisi bhi exam mein Ecosystem ka koi bhi sawaal ab tumse nahi chhootega! 🎯🔥"
+      },
+      "navigation": {
+        "next": "card_78_bonus_revision",
+        "button_text": "See Bonus Speed Revision ➔"
+      }
+    },
+    {
+      "card_id": "card_78_bonus_revision",
+      "card_slug": "card_78_bonus_revision",
+      "type": "summary",
+      "concept_id": "bonus_speed_facts",
+      "level": 5,
+      "progress": {
+        "current": 78,
+        "total": 80
+      },
+      "summary_payload": {
+        "title": "⚡ BONUS: Last-Minute Exam Speed Facts",
+        "revision_points": [
+          {
+            "topic": "Scientists & Years – Speed Recall",
+            "point": "Ecology = Ernst Haeckel (1866)। Ecosystem = A.G. Tansley (1935)। Ecological Pyramids = Charles Elton (1927) – Eltonian Pyramids। 10% Law = Raymond Lindeman (1942)। Fundamentals of Ecology = Eugene Odum (1953)। Competitive Exclusion Principle = Gause's Law। Montreal Protocol = 1987 (CFCs + Ozone)। Rio Convention on Biodiversity = 1992। Kyoto Protocol = 1997 (Greenhouse gases)।"
+          },
+          {
+            "topic": "Pyramid Exceptions – Most Confused",
+            "point": "Pyramid of Energy = ALWAYS UPRIGHT, NO EXCEPTION। Pyramid of Numbers INVERTED in: 1) Tree ecosystem (1 tree→many insects), 2) Parasitic food chain (Host→Parasites→Hyperparasites)। Pyramid of Biomass INVERTED in: Aquatic ecosystem (Phytoplankton biomass < Zooplankton, due to high turnover rate)। Terrestrial Pyramid of Biomass = Upright।"
+          },
+          {
+            "topic": "Nitrogen Cycle Bacteria – Complete Table",
+            "point": "N₂ Fixation Symbiotic: Rhizobium (legumes)। N₂ Fixation Free-living Aerobic: Azotobacter। N₂ Fixation Free-living Anaerobic: Clostridium। N₂ Fixation Cyanobacteria: Anabaena, Nostoc (paddy fields, Azolla association)। Nitrification Step 1: Nitrosomonas (NH₃→NO₂⁻)। Nitrification Step 2: Nitrobacter (NO₂⁻→NO₃⁻)। Denitrification: Pseudomonas (NO₃⁻→N₂)। Ammonification: Bacteria and Fungi from dead organisms।"
+          },
+          {
+            "topic": "Succession Quick Identification",
+            "point": "Primary Succession (never had life): Volcanic island, Glacier retreat area, Newly formed sand dune, Bare rock। Secondary Succession (life was disrupted): Forest fire area, Abandoned agricultural land, Flooded area, Clear-cut forest। Pioneer species Xerosere = Lichen। Pioneer species Hydrosere = Phytoplankton। Both end at Climax Forest। Secondary faster than Primary।"
+          },
+          {
+            "topic": "Environmental Concepts Speed Round",
+            "point": "Biomagnification = concentration increases up food chain (DDT, Mercury, PCBs)। Eutrophication sequence = Nutrients→Algal bloom→O₂ depletion→Dead Zone। Keystone species = Tiger (India), Sea Otter (Pacific)। Ecological Niche ≠ Habitat (Niche = role/function, Habitat = location)। Largest carbon sink = Ocean। Limestone (CaCO₃) = largest long-term carbon reservoir। Amazon = Lungs of Earth। NPP = GPP - Respiration। Highest NPP = Tropical Rainforest + Estuary।"
+          }
+        ]
+      },
+      "navigation": {
+        "next": "card_79_final_chat",
+        "button_text": "Final Message ➔"
+      }
+    },
+    {
+      "card_id": "card_79_final_chat",
+      "card_slug": "card_79_final_chat",
+      "type": "chat",
+      "concept_id": "final_motivation_chat",
+      "level": 5,
+      "progress": {
+        "current": 79,
+        "total": 80
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, dekho tum kitni door aa gaye ho! Talab ke observation se shuru kiya – aur ab tum Ecological Pyramids, Nitrogen Cycle ke bacteria, Succession ke stages, Biomagnification, Montreal Protocol – sab confidently bol sakte ho!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir sach mein! Pehle ecosystem sunke boring lagta tha – par ab har cheez mein connection dikh raha hai. Talab mein food chain, atmosphere mein nitrogen, forests mein carbon – sab ek connected system hai!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Yahi samajhna important tha! Ecosystem sirf ek chapter nahi hai – ye ek mindset hai ki sab kuch connected hai. Ye understanding BPSC mein essay, SSC mein GK, NEET mein biology, UPSC mein environment – sab mein kaam aayegi. Ab exam mein jao aur dhoom machao!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Thank you Sir! Ab koi bhi ecosystem question confuse nahi karega! Pyramid exceptions, nitrogen bacteria, succession types – sab ekdum clear hain!"
+        }
+      ],
+      "navigation": {
+        "next": "card_80_final_end",
+        "button_text": "Complete Chapter ➔"
+      }
+    },
+    {
+      "card_id": "card_80_final_end",
+      "card_slug": "card_80_final_end",
+      "type": "milestone",
+      "concept_id": "final_celebration",
+      "level": 5,
+      "progress": {
+        "current": 80,
+        "total": 80
+      },
+      "milestone_payload": {
+        "title": "🌟 ECOSYSTEM OFFICER ACHIEVED! 🌟",
+        "badge_emoji": "🎖️🌍🌿",
+        "completed_topic": "Ecosystem – 100% Mastered",
+        "xp_earned": 200,
+        "milestone_progress": "All 80 Cards Complete!",
+        "motivational_quote": "80 cards ki ye journey tumne poori ki – ye chhhoti baat nahi! Har ecosystem question jo BPSC, SSC, Railway, NEET, UPSC mein aayega – tum ready ho. Agle chapter mein bhi isi dedication ke saath jao. Teri mehnat kabhi barbaad nahi hogi – ek din zaroor officer banoge! 🚀🏆"
+      },
+      "navigation": {
+        "next": null,
+        "button_text": "Continue to Next Chapter ➔"
+      }
+    }
+  ]
+}
