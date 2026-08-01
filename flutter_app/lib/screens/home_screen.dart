@@ -8,7 +8,7 @@ import 'package:url_launcher/url_launcher.dart';
 import '../models/question_model.dart';
 import '../services/telegram_tracker.dart';
 import '../widgets/home_widgets.dart';
-import 'learn_hub_screen.dart'; // Learn Hub Import
+import 'learn_hub_screen.dart'; // 👈 Learn Hub Import
 import 'profile_screen.dart';
 import 'revision_practice_screen.dart';
 import 'sectional_cbt_screen.dart';
@@ -57,7 +57,7 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
     }
   }
 
-  // 📖 JSON Asset Loader
+  // 📖 Pure External JSON Asset Loader
   Future<void> _loadAllConfigs() async {
     try {
       final String configStr = await rootBundle.loadString('assets/data/app_config.json');
@@ -208,7 +208,7 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
     );
   }
 
-  // 1️⃣ TAB 1: HOME TAB (UPDATED DESIGN)
+  // 1️⃣ TAB 1: HOME TAB (REDESIGNED CARDS INTEGRATED)
   Widget _buildHomeTab(BuildContext context) {
     return RefreshIndicator(
       onRefresh: _loadAllConfigs,
@@ -226,15 +226,15 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
             HeroHeaderWidget(featuredData: _appConfig['featured_mock'] ?? {}),
             const SizedBox(height: 16),
 
-            // 📌 NEW UI 1: FREE STUDY PDFs & NOTES
+            // 📕 REDESIGNED FREE STUDY PDFs & NOTES
             _buildPdfSection(context),
             const SizedBox(height: 16),
 
-            // 📌 NEW UI 2: LATEST EXAM UPDATES (NEWS FEED STYLE)
+            // 📢 REDESIGNED LATEST EXAM UPDATES
             _buildExamUpdatesSection(),
             const SizedBox(height: 16),
 
-            // 📌 NEW UI 3: MONTHLY CURRENT AFFAIRS (HORIZONTAL CAROUSEL)
+            // 🗞️ REDESIGNED MONTHLY CURRENT AFFAIRS CAROUSEL
             _buildCurrentAffairsSection(),
             const SizedBox(height: 16),
 
@@ -254,14 +254,14 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
     );
   }
 
-  // 🎨 PDF SECTION WIDGET
+  // 🎨 1. FREE STUDY PDFs & NOTES SECTION
   Widget _buildPdfSection(BuildContext context) {
     return Container(
       padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
         color: _isDarkMode ? const Color(0xFF1E293B) : Colors.white,
         borderRadius: BorderRadius.circular(16),
-        border: Border.all(color: _isDarkMode ? Colors.slate.shade700 : const Color(0xFFE2E8F0)),
+        border: Border.all(color: _isDarkMode ? Colors.blueGrey.shade700 : const Color(0xFFE2E8F0)),
         boxShadow: [
           BoxShadow(
             color: Colors.black.withOpacity(0.03),
@@ -308,7 +308,7 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
           SizedBox(
             width: double.infinity,
             child: OutlinedButton(
-              onPressed: () => _openWebsiteUrl('PDF Hub', 'https://example.com/pdf-notes'),
+              onPressed: () => _openWebsiteUrl('PDF Hub', 'https://mocktester.in/pdf-notes'),
               style: OutlinedButton.styleFrom(
                 side: const BorderSide(color: Color(0xFF2563EB)),
                 shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
@@ -329,7 +329,7 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
           Container(
             padding: const EdgeInsets.all(6),
             decoration: BoxDecoration(
-              color: _isDarkMode ? Colors.slate.shade800 : const Color(0xFFF1F5F9),
+              color: _isDarkMode ? const Color(0xFF0F172A) : const Color(0xFFF1F5F9),
               borderRadius: BorderRadius.circular(8),
             ),
             child: const Icon(Icons.description_outlined, size: 18, color: Color(0xFF475569)),
@@ -357,7 +357,7 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
     );
   }
 
-  // 🎨 LATEST EXAM UPDATES SECTION
+  // 🎨 2. LATEST EXAM UPDATES SECTION
   Widget _buildExamUpdatesSection() {
     return Container(
       padding: const EdgeInsets.all(16),
@@ -397,7 +397,7 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
       margin: const EdgeInsets.symmetric(vertical: 4),
       padding: const EdgeInsets.all(10),
       decoration: BoxDecoration(
-        color: _isDarkMode ? Colors.slate.shade800 : const Color(0xFFF8FAFC),
+        color: _isDarkMode ? const Color(0xFF0F172A) : const Color(0xFFF8FAFC),
         borderRadius: BorderRadius.circular(10),
       ),
       child: Row(
@@ -432,7 +432,7 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
     );
   }
 
-  // 🎨 MONTHLY CURRENT AFFAIRS CAROUSEL
+  // 🎨 3. MONTHLY CURRENT AFFAIRS CAROUSEL
   Widget _buildCurrentAffairsSection() {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
