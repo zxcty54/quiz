@@ -8,7 +8,7 @@ import 'package:url_launcher/url_launcher.dart';
 import '../models/question_model.dart';
 import '../services/telegram_tracker.dart';
 import '../widgets/home_widgets.dart';
-import 'learn_hub_screen.dart'; // 👈 Learn Hub Import Kiya Gaya Hai
+import 'learn_hub_screen.dart'; // Learn Hub Import
 import 'profile_screen.dart';
 import 'revision_practice_screen.dart';
 import 'sectional_cbt_screen.dart';
@@ -26,7 +26,7 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
   bool _isHindi = true;
   String _selectedExamPanel = 'bpsc';
 
-  // 📂 Direct Dynamic JSON Data Storage
+  // 📂 Dynamic JSON Data Storage
   Map<String, dynamic> _appConfig = {};
   Map<String, dynamic> _homeData = {};
   Map<String, dynamic> _subjectMapping = {};
@@ -50,12 +50,14 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
 
   @override
   void didChangeAppLifecycleState(AppLifecycleState state) {
-    if (state == AppLifecycleState.paused || state == AppLifecycleState.detached || state == AppLifecycleState.inactive) {
+    if (state == AppLifecycleState.paused ||
+        state == AppLifecycleState.detached ||
+        state == AppLifecycleState.inactive) {
       TelegramTracker.sendOnAppExitAlert();
     }
   }
 
-  // 📖 Pure External JSON Asset Loader
+  // 📖 JSON Asset Loader
   Future<void> _loadAllConfigs() async {
     try {
       final String configStr = await rootBundle.loadString('assets/data/app_config.json');
@@ -140,7 +142,6 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
           backgroundColor: cardColor,
           elevation: 0,
           actions: [
-            // 🎓 Top AppBar Learn Hub Quick Access Button
             IconButton(
               icon: const Icon(Icons.school_rounded, color: Color(0xFF075E54)),
               tooltip: "MockTester Learn 🎓",
@@ -162,11 +163,7 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
               _buildHomeTab(context),
               _buildRevisionTab(context),
               _buildSectionalTab(context),
-              
-              // ⭐ TAB 4: MOCKTESTER LEARN HUB (Saved Questions ki jagah ab Learn Hub hai)
               const LearnHubScreen(),
-
-              // 👤 TAB 5: PROFILE SCREEN
               ProfileScreen(
                 isHindi: _isHindi,
                 isDarkMode: _isDarkMode,
@@ -187,7 +184,6 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
             NavigationDestination(icon: Icon(Icons.home_outlined), selectedIcon: Icon(Icons.home_rounded), label: 'Home'),
             NavigationDestination(icon: Icon(Icons.menu_book_outlined), selectedIcon: Icon(Icons.menu_book_rounded), label: 'Revision'),
             NavigationDestination(icon: Icon(Icons.assignment_outlined), selectedIcon: Icon(Icons.assignment_rounded), label: 'Sectional'),
-            // 🎓 SAVED KO HATA KAR "LEARN" SET KAR DIYA GAYA HAI
             NavigationDestination(icon: Icon(Icons.school_outlined), selectedIcon: Icon(Icons.school_rounded), label: 'Learn'),
             NavigationDestination(icon: Icon(Icons.person_outline_rounded), selectedIcon: Icon(Icons.person_rounded), label: 'Profile'),
           ],
@@ -212,7 +208,7 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
     );
   }
 
-  // 1️⃣ TAB 1: HOME TAB
+  // 1️⃣ TAB 1: HOME TAB (UPDATED DESIGN)
   Widget _buildHomeTab(BuildContext context) {
     return RefreshIndicator(
       onRefresh: _loadAllConfigs,
@@ -229,10 +225,24 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
             ],
             HeroHeaderWidget(featuredData: _appConfig['featured_mock'] ?? {}),
             const SizedBox(height: 16),
+
+            // 📌 NEW UI 1: FREE STUDY PDFs & NOTES
+            _buildPdfSection(context),
+            const SizedBox(height: 16),
+
+            // 📌 NEW UI 2: LATEST EXAM UPDATES (NEWS FEED STYLE)
+            _buildExamUpdatesSection(),
+            const SizedBox(height: 16),
+
+            // 📌 NEW UI 3: MONTHLY CURRENT AFFAIRS (HORIZONTAL CAROUSEL)
+            _buildCurrentAffairsSection(),
+            const SizedBox(height: 16),
+
             WebHubCardWidget(
               webHubSections: (_homeData['web_hub'] as List?) ?? [],
               onTapUrl: _openWebsiteUrl,
             ),
+            const SizedBox(height: 16),
             EligibilityCheckerWidget(isDarkMode: _isDarkMode, onTapUrl: _openWebsiteUrl),
             const SizedBox(height: 16),
             _buildLaunchRoadmapCard(),
@@ -240,6 +250,246 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
             const TelegramCreatorWidget(),
           ],
         ),
+      ),
+    );
+  }
+
+  // 🎨 PDF SECTION WIDGET
+  Widget _buildPdfSection(BuildContext context) {
+    return Container(
+      padding: const EdgeInsets.all(16),
+      decoration: BoxDecoration(
+        color: _isDarkMode ? const Color(0xFF1E293B) : Colors.white,
+        borderRadius: BorderRadius.circular(16),
+        border: Border.all(color: _isDarkMode ? Colors.slate.shade700 : const Color(0xFFE2E8F0)),
+        boxShadow: [
+          BoxShadow(
+            color: Colors.black.withOpacity(0.03),
+            blurRadius: 8,
+            offset: const Offset(0, 2),
+          ),
+        ],
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Row(
+                children: [
+                  const Icon(Icons.picture_as_pdf_rounded, color: Color(0xFFDC2626)),
+                  const SizedBox(width: 8),
+                  Text(
+                    'Free Study PDFs & Notes',
+                    style: TextStyle(
+                      fontSize: 16,
+                      fontWeight: FontWeight.bold,
+                      color: _isDarkMode ? Colors.white : const Color(0xFF0F172A),
+                    ),
+                  ),
+                ],
+              ),
+              Container(
+                padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
+                decoration: BoxDecoration(
+                  color: const Color(0xFFFEF2F2),
+                  borderRadius: BorderRadius.circular(12),
+                ),
+                child: const Text('FREE', style: TextStyle(color: Color(0xFFDC2626), fontSize: 10, fontWeight: FontWeight.bold)),
+              ),
+            ],
+          ),
+          const SizedBox(height: 14),
+          _buildPdfItem('Laxmikant Polity Short Notes', '12 MB • PDF'),
+          _buildPdfItem('Bihar Special 1000 One-Liners', '8 MB • PDF'),
+          _buildPdfItem('Lucent General Science Summary', '15 MB • PDF'),
+          const SizedBox(height: 12),
+          SizedBox(
+            width: double.infinity,
+            child: OutlinedButton(
+              onPressed: () => _openWebsiteUrl('PDF Hub', 'https://example.com/pdf-notes'),
+              style: OutlinedButton.styleFrom(
+                side: const BorderSide(color: Color(0xFF2563EB)),
+                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+              ),
+              child: const Text('Explore All Notes →', style: TextStyle(color: Color(0xFF2563EB), fontWeight: FontWeight.bold)),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget _buildPdfItem(String title, String size) {
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 6.0),
+      child: Row(
+        children: [
+          Container(
+            padding: const EdgeInsets.all(6),
+            decoration: BoxDecoration(
+              color: _isDarkMode ? Colors.slate.shade800 : const Color(0xFFF1F5F9),
+              borderRadius: BorderRadius.circular(8),
+            ),
+            child: const Icon(Icons.description_outlined, size: 18, color: Color(0xFF475569)),
+          ),
+          const SizedBox(width: 10),
+          Expanded(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  title,
+                  style: TextStyle(
+                    fontSize: 13,
+                    fontWeight: FontWeight.w600,
+                    color: _isDarkMode ? Colors.white : const Color(0xFF1E293B),
+                  ),
+                ),
+                Text(size, style: const TextStyle(fontSize: 11, color: Color(0xFF94A3B8))),
+              ],
+            ),
+          ),
+          const Icon(Icons.download_for_offline_outlined, color: Color(0xFF2563EB), size: 20),
+        ],
+      ),
+    );
+  }
+
+  // 🎨 LATEST EXAM UPDATES SECTION
+  Widget _buildExamUpdatesSection() {
+    return Container(
+      padding: const EdgeInsets.all(16),
+      decoration: BoxDecoration(
+        color: _isDarkMode ? const Color(0xFF1E293B) : Colors.white,
+        borderRadius: BorderRadius.circular(16),
+        border: Border.all(color: const Color(0xFFFECDD3)),
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Row(
+            children: [
+              const Icon(Icons.campaign_rounded, color: Color(0xFFE11D48)),
+              const SizedBox(width: 8),
+              Text(
+                'Latest Exam Updates',
+                style: TextStyle(
+                  fontSize: 16,
+                  fontWeight: FontWeight.bold,
+                  color: _isDarkMode ? Colors.white : const Color(0xFF0F172A),
+                ),
+              ),
+            ],
+          ),
+          const SizedBox(height: 12),
+          _buildUpdateBadgeItem('BPSC 71th Notification Out', 'HOT', Colors.red),
+          _buildUpdateBadgeItem('BSSC Inter Level Exam Date Sheet', 'NEW', Colors.orange),
+          _buildUpdateBadgeItem('Bihar Police SI Cutoff Analysis', 'INFO', Colors.blue),
+        ],
+      ),
+    );
+  }
+
+  Widget _buildUpdateBadgeItem(String title, String badgeText, Color badgeColor) {
+    return Container(
+      margin: const EdgeInsets.symmetric(vertical: 4),
+      padding: const EdgeInsets.all(10),
+      decoration: BoxDecoration(
+        color: _isDarkMode ? Colors.slate.shade800 : const Color(0xFFF8FAFC),
+        borderRadius: BorderRadius.circular(10),
+      ),
+      child: Row(
+        children: [
+          Container(
+            padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
+            decoration: BoxDecoration(
+              color: badgeColor.withOpacity(0.15),
+              borderRadius: BorderRadius.circular(6),
+            ),
+            child: Text(
+              badgeText,
+              style: TextStyle(color: badgeColor, fontSize: 10, fontWeight: FontWeight.bold),
+            ),
+          ),
+          const SizedBox(width: 10),
+          Expanded(
+            child: Text(
+              title,
+              style: TextStyle(
+                fontSize: 13,
+                fontWeight: FontWeight.w500,
+                color: _isDarkMode ? Colors.white70 : const Color(0xFF334155),
+              ),
+              maxLines: 1,
+              overflow: TextOverflow.ellipsis,
+            ),
+          ),
+          const Icon(Icons.arrow_forward_ios_rounded, size: 12, color: Color(0xFF94A3B8)),
+        ],
+      ),
+    );
+  }
+
+  // 🎨 MONTHLY CURRENT AFFAIRS CAROUSEL
+  Widget _buildCurrentAffairsSection() {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text(
+          'Monthly Current Affairs',
+          style: TextStyle(
+            fontSize: 16,
+            fontWeight: FontWeight.bold,
+            color: _isDarkMode ? Colors.white : const Color(0xFF0F172A),
+          ),
+        ),
+        const SizedBox(height: 10),
+        SingleChildScrollView(
+          scrollDirection: Axis.horizontal,
+          physics: const BouncingScrollPhysics(),
+          child: Row(
+            children: [
+              _buildAffairsCard('July 2026 Bihar CA Capsule', '120+ High Yield MCQs', Icons.menu_book_rounded, Colors.purple),
+              const SizedBox(width: 12),
+              _buildAffairsCard('National & International News', 'Quick One-Liners', Icons.public_rounded, Colors.indigo),
+            ],
+          ),
+        ),
+      ],
+    );
+  }
+
+  Widget _buildAffairsCard(String title, String subtitle, IconData icon, Color themeColor) {
+    return Container(
+      width: 220,
+      padding: const EdgeInsets.all(14),
+      decoration: BoxDecoration(
+        color: themeColor.withOpacity(0.08),
+        borderRadius: BorderRadius.circular(14),
+        border: Border.all(color: themeColor.withOpacity(0.2)),
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          CircleAvatar(
+            backgroundColor: themeColor,
+            radius: 16,
+            child: Icon(icon, color: Colors.white, size: 18),
+          ),
+          const SizedBox(height: 10),
+          Text(
+            title,
+            style: TextStyle(
+              fontWeight: FontWeight.bold,
+              fontSize: 13,
+              color: _isDarkMode ? Colors.white : const Color(0xFF1E293B),
+            ),
+          ),
+          const SizedBox(height: 2),
+          Text(subtitle, style: TextStyle(fontSize: 11, color: themeColor.withOpacity(0.9))),
+        ],
       ),
     );
   }
@@ -521,11 +771,11 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
   void _launchRevisionPractice(BuildContext context, String title, String path) async {
     TelegramTracker.logActivity("Started Revision Practice: $title");
     showDialog(context: context, barrierDismissible: false, builder: (ctx) => const Center(child: CircularProgressIndicator()));
-    
-    String finalUrl = path.startsWith("http") 
-        ? path 
+
+    String finalUrl = path.startsWith("http")
+        ? path
         : Uri.encodeFull("https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/$path");
-    
+
     try {
       final res = await http.get(Uri.parse(finalUrl));
       if (context.mounted) Navigator.pop(context);
@@ -556,11 +806,11 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
   void _launchCbtMock(BuildContext context, String title, String path) async {
     TelegramTracker.logActivity("Started Sectional CBT Mock: $title");
     showDialog(context: context, barrierDismissible: false, builder: (ctx) => const Center(child: CircularProgressIndicator()));
-    
-    String finalUrl = path.startsWith("http") 
-        ? path 
+
+    String finalUrl = path.startsWith("http")
+        ? path
         : Uri.encodeFull("https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/$path");
-    
+
     try {
       final res = await http.get(Uri.parse(finalUrl));
       if (context.mounted) Navigator.pop(context);
@@ -593,8 +843,10 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
     return GestureDetector(
       onTap: () => setState(() => _selectedExamPanel = panelKey),
       child: Card(
-        color: isSelected ? color.withOpacity(0.12) : Colors.white,
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10), side: BorderSide(color: isSelected ? color : Colors.grey.shade300, width: isSelected ? 2 : 1)),
+        color: isSelected ? color.withOpacity(0.12) : (_isDarkMode ? const Color(0xFF1E293B) : Colors.white),
+        shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(10),
+            side: BorderSide(color: isSelected ? color : Colors.grey.shade300, width: isSelected ? 2 : 1)),
         child: Padding(
           padding: const EdgeInsets.all(10),
           child: Column(
