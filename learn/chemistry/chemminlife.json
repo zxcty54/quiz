@@ -1,0 +1,2775 @@
+{
+  "topic_id": "chemistry_everyday_life_complete",
+  "topic_title": "Chemistry in Everyday Life",
+  "target_exams": [
+    "BPSC",
+    "BSSC",
+    "RRB NTPC",
+    "SSC CGL",
+    "NEET",
+    "UPSC Prelims"
+  ],
+  "total_cards": 80,
+  "characters": {
+    "aman": {
+      "name": "Aman Sir",
+      "role": "teacher",
+      "avatar": "👨‍🏫"
+    },
+    "raju": {
+      "name": "Raju",
+      "role": "student",
+      "avatar": "👦"
+    }
+  },
+  "cards": [
+    {
+      "card_id": "card_01_intro",
+      "card_slug": "card_01_intro",
+      "type": "intro",
+      "concept_id": "chapter_intro",
+      "level": 1,
+      "progress": {
+        "current": 1,
+        "total": 80
+      },
+      "intro_payload": {
+        "title": "Chemistry in Everyday Life",
+        "icon": "💊",
+        "description": "Discover how chemistry helps us stay healthy, cook food, and live better!",
+        "target_exams": [
+          "BPSC",
+          "BSSC",
+          "RRB NTPC",
+          "SSC CGL",
+          "NEET",
+          "UPSC Prelims"
+        ],
+        "learning_outcomes": [
+          "Understand drugs and their classifications",
+          "Learn about analgesics, antibiotics, and antiseptics",
+          "Master tranquilizers and antimicrobials",
+          "Explore antacids, antihistamines, and antifertility drugs",
+          "Discover food chemistry - preservatives, sweeteners, antioxidants",
+          "Study soaps, detergents, and cleansing action"
+        ],
+        "estimated_time": "25 minutes",
+        "total_concepts": 12
+      },
+      "navigation": {
+        "next": "card_02_medicine_start",
+        "button_text": "Start Learning 🚀"
+      }
+    },
+    {
+      "card_id": "card_02_medicine_start",
+      "card_slug": "card_02_medicine_start",
+      "type": "chat",
+      "concept_id": "medicines_intro",
+      "level": 1,
+      "progress": {
+        "current": 2,
+        "total": 80
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, kal tumhare Papa ki tabiyat kharab thi na? Unhone kya liya tha?"
+        },
+        {
+          "speaker": "raju",
+          "text": "Haan Sir, unhe sir dard tha to Mummy ne ek tablet di thi. Aur Papa ne kaha tha 'ye dawai hai'."
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul sahi! Par aaj hum chemistry mein isko 'Drug' kahenge. Drug matlab koi bhi chemical substance jo body mein jaake disease ko treat kare ya symptoms ko kam kare. Ye chemistry aur biology ka sabse important connection hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Achhaa! To dawai bhi ek chemical hai?"
+        }
+      ],
+      "navigation": {
+        "next": "card_03_drug_classification",
+        "button_text": "Haan, bilkul! Aage samjho ➔"
+      }
+    },
+    {
+      "card_id": "card_03_drug_classification",
+      "card_slug": "card_03_drug_classification",
+      "type": "chat",
+      "concept_id": "drug_classification_basis",
+      "level": 1,
+      "progress": {
+        "current": 3,
+        "total": 80
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Drugs ko classify karne ke 2 tarike hain. Pehla - Pharmacological Effect ke basis par, matlab body par kya effect karta hai. Jaise fever kam karna, infection rokna. Dusra - Chemical Structure ke basis par, matlab molecule ki shakal kya hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir exam mein kaun sa zyada important hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "BPSC aur SSC mein Pharmacological Effect zyada pucha jata hai kyunki ye practical hai. NEET mein dono aate hain. Hum pehle Pharmacological Effect se shuru karte hain - matlab kis kaam ke liye drug use ho raha hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab jaise sir dard ki dawai, bukhar ki dawai - aise?"
+        }
+      ],
+      "navigation": {
+        "next": "card_04_analgesics_intro",
+        "button_text": "Bilkul! Pehla category seekho ➔"
+      }
+    },
+    {
+      "card_id": "card_04_analgesics_intro",
+      "card_slug": "card_04_analgesics_intro",
+      "type": "chat",
+      "concept_id": "analgesics_definition",
+      "level": 1,
+      "progress": {
+        "current": 4,
+        "total": 80
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Tumhare Papa ne jo tablet li thi sir dard ke liye, uska scientific naam hai ANALGESICS. 'Algia' matlab pain, 'An' matlab without. To Analgesics = Painkillers. Ye drugs pain ko kam karte hain lekin disease ko cure nahi karte."
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab sir dard gaya par agar koi infection tha to wo rahega?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Exactly! Analgesics sirf signal block karte hain jo brain ko pain ki information deta hai. Ab ye 2 types ke hote hain - Non-Narcotic (normal painkillers) aur Narcotic (bahut strong painkillers). Non-Narcotic ko hum kharid sakte hain, Narcotic ke liye strict doctor prescription chahiye."
+        },
+        {
+          "speaker": "raju",
+          "text": "Narcotic matlab nasha wali category?"
+        }
+      ],
+      "navigation": {
+        "next": "card_05_non_narcotic_examples",
+        "button_text": "Haan! Pehle safe wali dekho ➔"
+      }
+    },
+    {
+      "card_id": "card_05_non_narcotic_examples",
+      "card_slug": "card_05_non_narcotic_examples",
+      "type": "chat",
+      "concept_id": "non_narcotic_analgesics",
+      "level": 1,
+      "progress": {
+        "current": 5,
+        "total": 80
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Non-Narcotic Analgesics ke examples hain - Aspirin, Paracetamol (Crocin), Ibuprofen (Brufen), Naproxen. Ye sab common hain. Aspirin ka chemical naam hai Acetylsalicylic Acid. Ye pain bhi rokta hai, fever bhi kam karta hai, aur inflammation bhi reduce karta hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "To Sir, Aspirin teen kaam karti hai ek saath?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul! Isliye isko NSAID bhi kehte hain - Non-Steroidal Anti-Inflammatory Drug. Iska matlab ye steroid nahi hai par inflammation rokta hai. Paracetamol pain aur fever rokta hai par inflammation nahi. SSC aur Railway mein ye difference zaroor puchte hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab Aspirin zyada powerful hai?"
+        }
+      ],
+      "navigation": {
+        "next": "card_06_narcotic_analgesics",
+        "button_text": "Haan, par side effects bhi zyada ➔"
+      }
+    },
+    {
+      "card_id": "card_06_narcotic_analgesics",
+      "card_slug": "card_06_narcotic_analgesics",
+      "type": "chat",
+      "concept_id": "narcotic_analgesics",
+      "level": 1,
+      "progress": {
+        "current": 6,
+        "total": 80
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ab agar bahut zyada pain ho jaise cancer mein ya major surgery ke baad, tab doctor Narcotic Analgesics dete hain. Examples - Morphine, Codeine, Heroin (medical mein illegal hai India mein). Ye opium plant se bante hain isliye inhe Opiates bhi kehte hain."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir ye to nasha karne wale bhi use karte hain na?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan Raju, isiliye ye bahut dangerous hain. Ye Central Nervous System ko depress kar dete hain matlab brain ki activity slow kar dete hain. Zyada use se addiction ho jata hai aur overdose se death bhi ho sakti hai. Morphine sabse common medical narcotic hai, lekin strictly monitored."
+        },
+        {
+          "speaker": "raju",
+          "text": "To Non-Narcotic safe hain aur Narcotic dangerous but powerful?"
+        }
+      ],
+      "navigation": {
+        "next": "card_07_analgesics_quiz_1",
+        "button_text": "Perfect summary! Quiz karo ➔"
+      }
+    },
+    {
+      "card_id": "card_07_analgesics_quiz_1",
+      "card_slug": "card_07_analgesics_quiz_1",
+      "type": "quiz",
+      "concept_id": "analgesics_classification",
+      "level": 1,
+      "progress": {
+        "current": 7,
+        "total": 80
+      },
+      "quiz_payload": {
+        "question": "Which of the following is a Non-Narcotic Analgesic that also reduces inflammation? (SSC CGL 2019 Pattern)",
+        "options": [
+          {
+            "id": "A",
+            "text": "Morphine"
+          },
+          {
+            "id": "B",
+            "text": "Aspirin"
+          },
+          {
+            "id": "C",
+            "text": "Paracetamol"
+          },
+          {
+            "id": "D",
+            "text": "Codeine"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Aspirin (Acetylsalicylic Acid) is a Non-Narcotic Analgesic and NSAID (Non-Steroidal Anti-Inflammatory Drug) that reduces pain, fever, AND inflammation. Paracetamol only reduces pain and fever, not inflammation. Morphine and Codeine are Narcotic Analgesics."
+      },
+      "navigation": {
+        "next": "card_08_analgesics_quiz_2",
+        "button_text": "Next Question (2/3) ➔"
+      }
+    },
+    {
+      "card_id": "card_08_analgesics_quiz_2",
+      "card_slug": "card_08_analgesics_quiz_2",
+      "type": "quiz",
+      "concept_id": "narcotic_source",
+      "level": 1,
+      "progress": {
+        "current": 8,
+        "total": 80
+      },
+      "quiz_payload": {
+        "question": "Narcotic Analgesics like Morphine are derived from which plant? (Railway NTPC 2021 Pattern)",
+        "options": [
+          {
+            "id": "A",
+            "text": "Cannabis plant"
+          },
+          {
+            "id": "B",
+            "text": "Opium poppy plant"
+          },
+          {
+            "id": "C",
+            "text": "Coca plant"
+          },
+          {
+            "id": "D",
+            "text": "Cinchona plant"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Narcotic Analgesics like Morphine and Codeine are derived from the Opium Poppy plant (Papaver somniferum), hence called Opiates. Cannabis gives Marijuana, Coca gives Cocaine, Cinchona gives Quinine (antimalarial)."
+      },
+      "navigation": {
+        "next": "card_09_analgesics_quiz_3",
+        "button_text": "Next Question (3/3) ➔"
+      }
+    },
+    {
+      "card_id": "card_09_analgesics_quiz_3",
+      "card_slug": "card_09_analgesics_quiz_3",
+      "type": "quiz",
+      "concept_id": "analgesics_function",
+      "level": 1,
+      "progress": {
+        "current": 9,
+        "total": 80
+      },
+      "quiz_payload": {
+        "question": "Statement I: Analgesics cure the disease causing pain. Statement II: Analgesics only reduce or block the pain signals. (BPSC 2020 Assertion-Reason Pattern)",
+        "options": [
+          {
+            "id": "A",
+            "text": "Both statements are true"
+          },
+          {
+            "id": "B",
+            "text": "Statement I is true, II is false"
+          },
+          {
+            "id": "C",
+            "text": "Statement I is false, II is true"
+          },
+          {
+            "id": "D",
+            "text": "Both statements are false"
+          }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Statement I is FALSE - Analgesics do NOT cure disease, they only provide symptomatic relief. Statement II is TRUE - They work by blocking pain signals to the brain. This is a classic BPSC trap question to test conceptual clarity."
+      },
+      "navigation": {
+        "next": "card_10_milestone_analgesics",
+        "button_text": "Check Progress ➔"
+      }
+    },
+    {
+      "card_id": "card_10_milestone_analgesics",
+      "card_slug": "card_10_milestone_analgesics",
+      "type": "milestone",
+      "concept_id": "analgesics_complete",
+      "level": 1,
+      "progress": {
+        "current": 10,
+        "total": 80
+      },
+      "milestone_payload": {
+        "title": "🎯 ANALGESICS MODULE CLEARED!",
+        "badge_emoji": "💊",
+        "completed_topic": "Painkillers & Classification",
+        "xp_earned": 50,
+        "milestone_progress": "Module 1/6 Complete",
+        "motivational_quote": "You just mastered the most asked drug category in SSC & Railway exams! Officer ban rahe ho! 🔥"
+      },
+      "navigation": {
+        "next": "card_11_antimicrobials_intro",
+        "button_text": "Start Next: Infection Fighters ➔"
+      }
+    },
+    {
+      "card_id": "card_11_antimicrobials_intro",
+      "card_slug": "card_11_antimicrobials_intro",
+      "type": "chat",
+      "concept_id": "antimicrobials_definition",
+      "level": 1,
+      "progress": {
+        "current": 11,
+        "total": 80
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, agar tumhe khasi-bukhar ho aur doctor kehte hain 'ye infection hai, antibiotics lena padega' - tab samjho ab hum Antimicrobials ki category mein aa gaye!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Anti-microbials matlab microbes ke against?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Perfect! Antimicrobials wo drugs hain jo microorganisms (bacteria, fungi, virus, protozoa) ko maar dete hain ya unki growth rok dete hain. Ye do tarah se kaam karte hain - Bactericidal (microbe ko kill karna) ya Bacteriostatic (microbe ko grow nahi hone dena)."
+        },
+        {
+          "speaker": "raju",
+          "text": "To Sir antibiotics bhi isi mein aati hain?"
+        }
+      ],
+      "navigation": {
+        "next": "card_12_antibiotics_detail",
+        "button_text": "Haan! Antibiotics special hain ➔"
+      }
+    },
+    {
+      "card_id": "card_12_antibiotics_detail",
+      "card_slug": "card_12_antibiotics_detail",
+      "type": "chat",
+      "concept_id": "antibiotics_definition",
+      "level": 1,
+      "progress": {
+        "current": 12,
+        "total": 80
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Antibiotics ka matlab hai - chemicals jo microorganisms (mainly bacteria) ko maar dete hain. Sabse important baat - ye khud bhi microorganisms se hi bante hain! Jaise Penicillin ek fungi se banta hai. Isliye 'Anti-bio' matlab one life against another life."
+        },
+        {
+          "speaker": "raju",
+          "text": "Hain?? Bacteria ko marne ke liye fungi use karte hain?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul! Nature mein competition hota hai. Alexander Fleming ne 1929 mein accidentally discover kiya tha ki Penicillium notatum fungus bacteria ko maar deta hai. Unhone isko Penicillin naam diya - ye duniya ki pehli antibiotic thi! Unhe 1945 mein Nobel Prize mila. SSC mein ye scientist naam zaroor yaad rakho!"
+        },
+        {
+          "speaker": "raju",
+          "text": "To Penicillin sabse pehli antibiotic hai aur Fleming ne discover ki!"
+        }
+      ],
+      "navigation": {
+        "next": "card_13_antibiotic_types",
+        "button_text": "Perfect! Aur types dekho ➔"
+      }
+    },
+    {
+      "card_id": "card_13_antibiotic_types",
+      "card_slug": "card_13_antibiotic_types",
+      "type": "chat",
+      "concept_id": "antibiotic_spectrum",
+      "level": 1,
+      "progress": {
+        "current": 13,
+        "total": 80
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Antibiotics ko unke spectrum ke basis par classify karte hain. Narrow Spectrum Antibiotics sirf kuch specific bacteria ko target karti hain, jaise Penicillin G. Broad Spectrum Antibiotics bahut saare different bacteria ko maar sakti hain, jaise Chloramphenicol, Tetracycline, Ampicillin."
+        },
+        {
+          "speaker": "raju",
+          "text": "To broad spectrum zyada achhi hai na? Zyada bacteria maregi?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Ye BPSC ka favorite trap hai Raju! Broad spectrum zyada bacteria maarti hai par ye body ke good bacteria bhi maar deti hai jo digestion mein help karte hain. Isliye unnecessarily broad spectrum nahi lete. Narrow spectrum targeted therapy hai, agar pata ho exact bacteria kaun sa hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "Achhaa! Matlab doctor pehle test karke dekhte hain konsa bacteria hai?"
+        }
+      ],
+      "navigation": {
+        "next": "card_14_antiseptics_intro",
+        "button_text": "Haan! Ab alag category ➔"
+      }
+    },
+    {
+      "card_id": "card_14_antiseptics_intro",
+      "card_slug": "card_14_antiseptics_intro",
+      "type": "chat",
+      "concept_id": "antiseptics_disinfectants",
+      "level": 1,
+      "progress": {
+        "current": 14,
+        "total": 80
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, cycle se gir gaye aur ghutne mein chot lag gayi. Mummy ne kya lagaya?"
+        },
+        {
+          "speaker": "raju",
+          "text": "Dettol ya wo lal wali dawai... kya naam hai... Betadine!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Perfect! Ye sab ANTISEPTICS hain. Antiseptics wo chemicals hain jo living tissues par lagate hain taaki microbes ko kill kar sakein ya unki growth rok sakein. Ye infection hone se rokti hain wounds par. Ab Dettol agar floor par lagao to use DISINFECTANT kehte hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Kya?! Same chemical ka naam badal jata hai?"
+        }
+      ],
+      "navigation": {
+        "next": "card_15_antiseptic_vs_disinfectant",
+        "button_text": "Haan! Ye trick samjho ➔"
+      }
+    },
+    {
+      "card_id": "card_15_antiseptic_vs_disinfectant",
+      "card_slug": "card_15_antiseptic_vs_disinfectant",
+      "type": "chat",
+      "concept_id": "antiseptic_disinfectant_difference",
+      "level": 1,
+      "progress": {
+        "current": 15,
+        "total": 80
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Dekho difference clearly - ANTISEPTICS use hote hain living tissues par (skin, wounds) aur kam concentrated hote hain taaki body ko harm na ho. DISINFECTANTS use hote hain non-living surfaces par (floor, toilet, instruments) aur ye zyada concentrated hote hain. Same chemical dono kaam kar sakta hai concentration change karke!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab Dettol thoda dilute karke wound par aur zyada concentrate karke floor par?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Exactly! Dettol (Chloroxylenol), Savlon (Cetrimide + Chlorhexidine), aur Bithionol (sabun mein milaya jata hai) antiseptics hain. Tincture of Iodine (2-3% alcohol solution of iodine) bhi antiseptic hai. Phenol (carbolic acid) pure form mein disinfectant hai, dilute mein antiseptic."
+        },
+        {
+          "speaker": "raju",
+          "text": "Ye exam mein statement true-false mein confuse kar denge!"
+        }
+      ],
+      "navigation": {
+        "next": "card_16_antibiotic_antiseptic_difference",
+        "button_text": "Bilkul! Ek aur twist ➔"
+      }
+    },
+    {
+      "card_id": "card_16_antibiotic_antiseptic_difference",
+      "card_slug": "card_16_antibiotic_antiseptic_difference",
+      "type": "chat",
+      "concept_id": "antibiotic_vs_antiseptic",
+      "level": 1,
+      "progress": {
+        "current": 16,
+        "total": 80
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ab sabse bada confusion aata hai - Antibiotics aur Antiseptics mein kya farak hai? Dono infection se ladte hain na? Dekho - ANTIBIOTICS body ke ANDAR kaam karti hain, orally ya injection se li jati hain. ANTISEPTICS body ke BAHAR use hote hain, topically lagate hain."
+        },
+        {
+          "speaker": "raju",
+          "text": "Ohh! Matlab tablet andar, cream/lotion bahar?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Perfect understanding! Aur ek important point - Antibiotics highly specific hoti hain particular bacteria ke liye. Antiseptics general action karte hain, sabko maar dete hain. Isliye Antibiotics mein resistance develop ho sakta hai par Antiseptics mein nahi. Ye NEET aur BPSC dono mein pucha jata hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Antibiotic resistance matlab bacteria immune ho jate hain?"
+        }
+      ],
+      "navigation": {
+        "next": "card_17_antimicrobial_quiz_1",
+        "button_text": "Haan dangerous cheez! Pehle quiz ➔"
+      }
+    },
+    {
+      "card_id": "card_17_antimicrobial_quiz_1",
+      "card_slug": "card_17_antimicrobial_quiz_1",
+      "type": "quiz",
+      "concept_id": "penicillin_discovery",
+      "level": 1,
+      "progress": {
+        "current": 17,
+        "total": 80
+      },
+      "quiz_payload": {
+        "question": "Who discovered the first antibiotic Penicillin, and from which organism? (SSC CGL 2018)",
+        "options": [
+          {
+            "id": "A",
+            "text": "Louis Pasteur from Bacteria"
+          },
+          {
+            "id": "B",
+            "text": "Alexander Fleming from Fungus Penicillium"
+          },
+          {
+            "id": "C",
+            "text": "Robert Koch from Yeast"
+          },
+          {
+            "id": "D",
+            "text": "Edward Jenner from Algae"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Alexander Fleming discovered Penicillin in 1929 from the fungus Penicillium notatum. He received Nobel Prize in 1945 along with Florey and Chain. This is one of the most asked questions in SSC, Railway, and BPSC exams."
+      },
+      "navigation": {
+        "next": "card_18_antimicrobial_quiz_2",
+        "button_text": "Next Question (2/3) ➔"
+      }
+    },
+    {
+      "card_id": "card_18_antimicrobial_quiz_2",
+      "card_slug": "card_18_antimicrobial_quiz_2",
+      "type": "quiz",
+      "concept_id": "antiseptic_vs_disinfectant",
+      "level": 1,
+      "progress": {
+        "current": 18,
+        "total": 80
+      },
+      "quiz_payload": {
+        "question": "Which of the following statements is CORRECT? (BPSC 2022 Pattern)",
+        "options": [
+          {
+            "id": "A",
+            "text": "Antiseptics are used on non-living surfaces"
+          },
+          {
+            "id": "B",
+            "text": "Disinfectants are used on living tissues"
+          },
+          {
+            "id": "C",
+            "text": "Same substance can act as antiseptic or disinfectant depending on concentration"
+          },
+          {
+            "id": "D",
+            "text": "Antibiotics and Antiseptics are the same"
+          }
+        ],
+        "correct_option_id": "C",
+        "explanation": "The same chemical can function as an antiseptic (when dilute, used on living tissues) or disinfectant (when concentrated, used on non-living surfaces). Example: Phenol, Dettol. Option A and B are reversed. Option D is wrong - antibiotics work inside body, antiseptics outside."
+      },
+      "navigation": {
+        "next": "card_19_antimicrobial_quiz_3",
+        "button_text": "Last Question (3/3) ➔"
+      }
+    },
+    {
+      "card_id": "card_19_antimicrobial_quiz_3",
+      "card_slug": "card_19_antimicrobial_quiz_3",
+      "type": "quiz",
+      "concept_id": "broad_spectrum",
+      "level": 1,
+      "progress": {
+        "current": 19,
+        "total": 80
+      },
+      "quiz_payload": {
+        "question": "Which of the following is a Broad Spectrum Antibiotic? (Railway NTPC 2020)",
+        "options": [
+          {
+            "id": "A",
+            "text": "Penicillin G"
+          },
+          {
+            "id": "B",
+            "text": "Chloramphenicol"
+          },
+          {
+            "id": "C",
+            "text": "Isoniazid"
+          },
+          {
+            "id": "D",
+            "text": "Streptomycin (for TB only)"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Chloramphenicol is a Broad Spectrum Antibiotic effective against many types of bacteria. Penicillin G is Narrow Spectrum. Isoniazid and Streptomycin are specific for tuberculosis treatment. Other broad spectrum: Tetracycline, Ampicillin, Amoxicillin."
+      },
+      "navigation": {
+        "next": "card_20_milestone_antimicrobials",
+        "button_text": "Check Score ➔"
+      }
+    },
+    {
+      "card_id": "card_20_milestone_antimicrobials",
+      "card_slug": "card_20_milestone_antimicrobials",
+      "type": "milestone",
+      "concept_id": "antimicrobials_complete",
+      "level": 1,
+      "progress": {
+        "current": 20,
+        "total": 80
+      },
+      "milestone_payload": {
+        "title": "⚡ INFECTION FIGHTERS CLEARED!",
+        "badge_emoji": "💉",
+        "completed_topic": "Antibiotics & Antiseptics",
+        "xp_earned": 50,
+        "milestone_progress": "Module 2/6 Complete",
+        "motivational_quote": "Fleming would be proud! You know antibiotics better than 90% aspirants! 🚀"
+      },
+      "navigation": {
+        "next": "card_21_tranquilizers_intro",
+        "button_text": "Next: Mental Health Drugs ➔"
+      }
+    },
+    {
+      "card_id": "card_21_tranquilizers_intro",
+      "card_slug": "card_21_tranquilizers_intro",
+      "type": "chat",
+      "concept_id": "tranquilizers_definition",
+      "level": 1,
+      "progress": {
+        "current": 21,
+        "total": 80
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, kabhi notice kiya agar koi bahut tension ya anxiety mein ho to doctor 'neend ki goli' ya 'relaxation medicine' dete hain?"
+        },
+        {
+          "speaker": "raju",
+          "text": "Haan Sir, mere chacha ko bahut stress tha to doctor ne kuch medicine di thi. Wo kehte the 'mann shaant ho jata hai'."
+        },
+        {
+          "speaker": "aman",
+          "text": "Wo TRANQUILIZERS the! Ye drugs mentally disturbed ya anxious patients ko calm karte hain. 'Tranquil' matlab peaceful. Ye Central Nervous System par kaam karte hain aur stress, anxiety, tension, depression kam karte hain. Analgesics pain rokti hain, Tranquilizers mind ko relax karti hain."
+        },
+        {
+          "speaker": "raju",
+          "text": "To ye bhi brain ko affect karti hain jaise Narcotic Analgesics?"
+        }
+      ],
+      "navigation": {
+        "next": "card_22_tranquilizers_types",
+        "button_text": "Haan par differently! Dekho ➔"
+      }
+    },
+    {
+      "card_id": "card_22_tranquilizers_types",
+      "card_slug": "card_22_tranquilizers_types",
+      "type": "chat",
+      "concept_id": "tranquilizers_examples",
+      "level": 1,
+      "progress": {
+        "current": 22,
+        "total": 80
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Tranquilizers mainly message transmission ko brain mein affect karti hain. Common examples hain - Equanil, Valium (Diazepam), Serotonin derivatives. Equanil ka chemical naam hai Meprobamate. Valium anxiety aur insomnia (neend na aana) dono mein use hota hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir ye bhi addictive hain kya jaise Morphine?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bahut important question! Haan, agar ye regularly zyada dose mein li jaayein to addiction ho sakta hai aur brain dependency develop kar leta hai. Isliye strictly doctor ke prescription ke saath hi leni chahiye. Aur inka sudden withdrawal nahi karna chahiye, slowly reduce karna hota hai dosage."
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab ye bhi controlled drugs hain?"
+        }
+      ],
+      "navigation": {
+        "next": "card_23_antacids_intro",
+        "button_text": "Bilkul! Ab digestion wali drugs ➔"
+      }
+    },
+    {
+      "card_id": "card_23_antacids_intro",
+      "card_slug": "card_23_antacids_intro",
+      "type": "chat",
+      "concept_id": "antacids_definition",
+      "level": 1,
+      "progress": {
+        "current": 23,
+        "total": 80
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju tumhe kabhi acidity hui hai? Pet mein jalan hoti hai, khatta-khatta feel hota hai?"
+        },
+        {
+          "speaker": "raju",
+          "text": "Haan Sir! Mummy kehti hain 'zyada mirchi khaya hoga' aur Eno ya Digene deti hain."
+        },
+        {
+          "speaker": "aman",
+          "text": "Perfect example! Ye ANTACIDS hain. Hamara stomach Hydrochloric Acid (HCl) banata hai jo food digest karne mein help karta hai. Par kabhi-kabhi zyada acid ban jata hai to acidity, heartburn hota hai. Antacids basic substances hain jo excess acid ko neutralize kar dete hain."
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab ye acid-base neutralization hai jo chemistry mein pada tha?"
+        }
+      ],
+      "navigation": {
+        "next": "card_24_antacids_examples",
+        "button_text": "Exactly! Practical chemistry ➔"
+      }
+    },
+    {
+      "card_id": "card_24_antacids_examples",
+      "card_slug": "card_24_antacids_examples",
+      "type": "chat",
+      "concept_id": "antacids_chemicals",
+      "level": 1,
+      "progress": {
+        "current": 24,
+        "total": 80
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Common antacids mein ye chemicals hote hain - Sodium bicarbonate (NaHCO₃) jisko baking soda kehte hain, Magnesium hydroxide [Mg(OH)₂] jisko 'Milk of Magnesia' kehte hain, Aluminium hydroxide [Al(OH)₃], aur Magnesium carbonate. Ye sab weak bases hain."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir ghar mein acidity mein Mummy kabhi baking soda deti hain paani mein!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! Par regularly nahi lena chahiye kyunki sodium bicarbonate se CO₂ gas banti hai jo bloating cause karti hai. Modern antacids mein aluminium aur magnesium dono milate hain kyunki aluminium constipation karti hai aur magnesium loose motion - dono milne se balance ho jata hai. Ye exam mein pucha jata hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Wah! Side effects ko ek dusre se cancel kar dete hain!"
+        }
+      ],
+      "navigation": {
+        "next": "card_25_antihistamines_intro",
+        "button_text": "Smart chemistry! Aage dekho ➔"
+      }
+    },
+    {
+      "card_id": "card_25_antihistamines_intro",
+      "card_slug": "card_25_antihistamines_intro",
+      "type": "chat",
+      "concept_id": "antihistamines_definition",
+      "level": 1,
+      "progress": {
+        "current": 25,
+        "total": 80
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Kabhi kisi ko allergy hui hai? Skin par laal daane, itching, sneezing continuously, aankhen laal? Ye sab allergy ke symptoms hain. Body mein ek chemical release hota hai jiska naam hai HISTAMINE jo ye sab reactions cause karta hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "To Sir antihistamines matlab jo histamine ke against kaam karein?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul sahi! Antihistamines wo drugs hain jo histamine ke action ko block kar deti hain. Examples - Brompheniramine, Terfenadine, Cetirizine (Zyrtec), Loratadine. Ye allergy symptoms ko control karti hain jaise hay fever, rashes, insect bites."
+        },
+        {
+          "speaker": "raju",
+          "text": "Ye bhi koi side effect hota hai?"
+        }
+      ],
+      "navigation": {
+        "next": "card_26_antihistamines_side_effects",
+        "button_text": "Haan, common side effect ➔"
+      }
+    },
+    {
+      "card_id": "card_26_antihistamines_side_effects",
+      "card_slug": "card_26_antihistamines_side_effects",
+      "type": "chat",
+      "concept_id": "antihistamines_drowsiness",
+      "level": 1,
+      "progress": {
+        "current": 26,
+        "total": 80
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Antihistamines ka sabse common side effect hai - DROWSINESS matlab neend aana. Old generation antihistamines jaise Brompheniramine bahut zyada drowsiness cause karti thi. Isliye doctors kehte the ki medicine lene ke baad driving mat karo."
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab allergy to theek ho jayegi par neend aa jayegi!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! Par ab newer generation antihistamines aayi hain jaise Cetirizine, Loratadine jo kam drowsiness cause karti hain. Ek interesting baat - drowsiness property ko deliberately use karte hain kuch sleeping pills mein! Diphenhydramine (Benadryl) allergy medicine bhi hai aur sleeping aid bhi."
+        },
+        {
+          "speaker": "raju",
+          "text": "Wow! Side effect ko feature bana diya!"
+        }
+      ],
+      "navigation": {
+        "next": "card_27_drugs_quiz_1",
+        "button_text": "Exactly! Ab quiz time ➔"
+      }
+    },
+    {
+      "card_id": "card_27_drugs_quiz_1",
+      "card_slug": "card_27_drugs_quiz_1",
+      "type": "quiz",
+      "concept_id": "tranquilizers_function",
+      "level": 1,
+      "progress": {
+        "current": 27,
+        "total": 80
+      },
+      "quiz_payload": {
+        "question": "Tranquilizers are primarily used for treating: (Railway Group D 2022)",
+        "options": [
+          {
+            "id": "A",
+            "text": "Bacterial infections"
+          },
+          {
+            "id": "B",
+            "text": "Mental stress and anxiety"
+          },
+          {
+            "id": "C",
+            "text": "Acidity and heartburn"
+          },
+          {
+            "id": "D",
+            "text": "Allergic reactions"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Tranquilizers are neurologically active drugs used to treat mental stress, anxiety, tension, and depression. They act on the Central Nervous System. Examples: Equanil (Meprobamate), Valium (Diazepam). They are NOT antibiotics, antacids, or antihistamines."
+      },
+      "navigation": {
+        "next": "card_28_drugs_quiz_2",
+        "button_text": "Next Question (2/3) ➔"
+      }
+    },
+    {
+      "card_id": "card_28_drugs_quiz_2",
+      "card_slug": "card_28_drugs_quiz_2",
+      "type": "quiz",
+      "concept_id": "antacids_neutralization",
+      "level": 1,
+      "progress": {
+        "current": 28,
+        "total": 80
+      },
+      "quiz_payload": {
+        "question": "Which chemical is the main component of 'Milk of Magnesia' used as an antacid? (SSC CHSL 2021)",
+        "options": [
+          {
+            "id": "A",
+            "text": "Sodium bicarbonate"
+          },
+          {
+            "id": "B",
+            "text": "Calcium carbonate"
+          },
+          {
+            "id": "C",
+            "text": "Magnesium hydroxide"
+          },
+          {
+            "id": "D",
+            "text": "Aluminium hydroxide"
+          }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Milk of Magnesia is Magnesium hydroxide [Mg(OH)₂]. It is a weak base used to neutralize excess stomach acid. Sodium bicarbonate is baking soda (also antacid but causes gas). Both Al(OH)₃ and Mg(OH)₂ are mixed in modern antacids to balance side effects."
+      },
+      "navigation": {
+        "next": "card_29_drugs_quiz_3",
+        "button_text": "Next Question (3/3) ➔"
+      }
+    },
+    {
+      "card_id": "card_29_drugs_quiz_3",
+      "card_slug": "card_29_drugs_quiz_3",
+      "type": "quiz",
+      "concept_id": "antihistamines_side_effect",
+      "level": 1,
+      "progress": {
+        "current": 29,
+        "total": 80
+      },
+      "quiz_payload": {
+        "question": "The most common side effect of older antihistamines is: (BPSC 2019)",
+        "options": [
+          {
+            "id": "A",
+            "text": "Increased blood pressure"
+          },
+          {
+            "id": "B",
+            "text": "Drowsiness and sleepiness"
+          },
+          {
+            "id": "C",
+            "text": "Skin rashes"
+          },
+          {
+            "id": "D",
+            "text": "Acidity"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Older generation antihistamines (like Brompheniramine, Diphenhydramine) cause significant drowsiness/sleepiness as a side effect. This is why patients are advised not to drive after taking them. Newer antihistamines (Cetirizine, Loratadine) have reduced this effect."
+      },
+      "navigation": {
+        "next": "card_30_milestone_drugs_mental_digestion",
+        "button_text": "Check Progress ➔"
+      }
+    },
+    {
+      "card_id": "card_30_milestone_drugs_mental_digestion",
+      "card_slug": "card_30_milestone_drugs_mental_digestion",
+      "type": "milestone",
+      "concept_id": "drugs_module_3_complete",
+      "level": 1,
+      "progress": {
+        "current": 30,
+        "total": 80
+      },
+      "milestone_payload": {
+        "title": "🧠 MENTAL & DIGESTIVE DRUGS MASTERED!",
+        "badge_emoji": "💊",
+        "completed_topic": "Tranquilizers, Antacids, Antihistamines",
+        "xp_earned": 50,
+        "milestone_progress": "Module 3/6 Complete",
+        "motivational_quote": "Half medicines done! SSC & Railway questions ab tumhare left hand ka kaam! 💪"
+      },
+      "navigation": {
+        "next": "card_31_antifertility_intro",
+        "button_text": "Next: Birth Control Drugs ➔"
+      }
+    },
+    {
+      "card_id": "card_31_antifertility_intro",
+      "card_slug": "card_31_antifertility_intro",
+      "type": "chat",
+      "concept_id": "antifertility_definition",
+      "level": 1,
+      "progress": {
+        "current": 31,
+        "total": 80
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ab ek important medical category hai - Antifertility Drugs ya Birth Control Pills. Ye drugs pregnancy ko prevent karne ke liye use hoti hain through hormonal regulation. Ye modern family planning ka scientific method hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir ye exam mein aata hai? Thoda sensitive topic lag raha hai."
+        },
+        {
+          "speaker": "aman",
+          "text": "NEET mein definitely aata hai kyunki ye reproductive system aur hormones ka part hai. SSC aur BPSC mein bhi general awareness mein aa sakta hai. Ye purely scientific understanding hai - koi hesitation nahi! Samajhte hain clearly. Ye mainly synthetic hormones hote hain."
+        },
+        {
+          "speaker": "raju",
+          "text": "Hormones matlab jo body naturally banati hai?"
+        }
+      ],
+      "navigation": {
+        "next": "card_32_antifertility_mechanism",
+        "button_text": "Haan! Mechanism samjho ➔"
+      }
+    },
+    {
+      "card_id": "card_32_antifertility_mechanism",
+      "card_slug": "card_32_antifertility_mechanism",
+      "type": "chat",
+      "concept_id": "antifertility_hormones",
+      "level": 1,
+      "progress": {
+        "current": 32,
+        "total": 80
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Birth control pills mainly 2 hormones ka synthetic version hote hain - Estrogen aur Progesterone (ya Progestin jo synthetic progesterone hai). Ye female reproductive hormones hain. Pills generally estrogen aur progestin ka combination hoti hain, jaise Novestrol (mixture of Estradiol and Progesterone derivatives)."
+        },
+        {
+          "speaker": "raju",
+          "text": "Ye kaam kaise karti hain Sir?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Ye ovulation ko suppress kar deti hain matlab egg release nahi hota ovary se. Bina egg ke fertilization possible nahi. Ye cervical mucus ko bhi thick bana deti hain jo sperm movement ko block karta hai. Aur uterine lining ko bhi alter kar deti hain. Triple protection mechanism!"
+        },
+        {
+          "speaker": "raju",
+          "text": "To ye bahut effective hai?"
+        }
+      ],
+      "navigation": {
+        "next": "card_33_food_chemistry_intro",
+        "button_text": "Haan 99%! Ab food chemistry ➔"
+      }
+    },
+    {
+      "card_id": "card_33_food_chemistry_intro",
+      "card_slug": "card_33_food_chemistry_intro",
+      "type": "chat",
+      "concept_id": "food_additives_intro",
+      "level": 1,
+      "progress": {
+        "current": 33,
+        "total": 80
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ab medicines se alag topic - FOOD CHEMISTRY! Raju, tumne kabhi packaged food par ingredients list padhi hai? Usme bahut saare chemical names dikhte hain - wo sab food additives hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Haan Sir! Chips ke packet par, biscuit par... E-numbers bhi hote hain. Ye safe hain?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Good question! Food additives wo substances hain jo food mein deliberately add kiye jate hain for various purposes - preservation, color, flavor, sweetness, texture improvement. Jab tak approved quantities mein ho, tab tak safe hain. FSSAI India mein regulate karta hai. Food additives 4 main categories mein aate hain."
+        },
+        {
+          "speaker": "raju",
+          "text": "Kaun kaun se categories hain?"
+        }
+      ],
+      "navigation": {
+        "next": "card_34_artificial_sweeteners",
+        "button_text": "Pehla - Sugar substitute ➔"
+      }
+    },
+    {
+      "card_id": "card_34_artificial_sweeteners",
+      "card_slug": "card_34_artificial_sweeteners",
+      "type": "chat",
+      "concept_id": "artificial_sweeteners_definition",
+      "level": 1,
+      "progress": {
+        "current": 34,
+        "total": 80
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Pehli category - ARTIFICIAL SWEETENERS. Ye chemical substances hain jo sugar ki jagah use hote hain sweet taste dene ke liye. Par inka advantage kya hai? Ye sugar se kai guna zyada sweet hote hain to bahut kam quantity use hoti hai, aur ye calories nahi dete! Diabetic patients ke liye perfect."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir Sugar Free tablets mein yahi hota hai na?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Exactly! Common artificial sweeteners hain - Aspartame (sugar se 100 times sweeter), Saccharin (pehla artificial sweetener, sugar se 300 times sweeter), Sucralose (600 times sweeter), Alitame (2000 times sweeter!). Aspartame unstable at cooking temperature, to beverages mein use hota hai. Saccharin stable hai cooking mein."
+        },
+        {
+          "speaker": "raju",
+          "text": "2000 guna zyada sweet?! Matlab ek chutki kaafi hai poore bartan ke liye!"
+        }
+      ],
+      "navigation": {
+        "next": "card_35_food_preservatives",
+        "button_text": "Haan! Ab preservation wale ➔"
+      }
+    },
+    {
+      "card_id": "card_35_food_preservatives",
+      "card_slug": "card_35_food_preservatives",
+      "type": "chat",
+      "concept_id": "food_preservatives_definition",
+      "level": 1,
+      "progress": {
+        "current": 35,
+        "total": 80
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Dusri category - FOOD PRESERVATIVES. Ye chemicals food ko spoilage se bachate hain. Microorganisms (bacteria, fungi) ki growth ko rokते hain taaki food long time tak fresh rahe. Bina preservatives ke packaged food kharab ho jayega jaldi!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Ghar mein achaar banate time namak aur sirka daalte hain - wo bhi preservation hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Perfect example! Salt aur vinegar natural preservatives hain. Ab modern preservatives dekho - Sodium benzoate (sabse common, soft drinks aur sauces mein), Potassium metabisulphite (wine aur dried fruits mein), Sodium salts of Sorbic acid aur Propanoic acid (cheese aur bakery products mein). Table salt (NaCl) bhi preservative hai, sugar bhi!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab zyada namak ya sugar wala food jaldi kharab nahi hota?"
+        }
+      ],
+      "navigation": {
+        "next": "card_36_antioxidants",
+        "button_text": "Haan! Ab oxidation rokne wale ➔"
+      }
+    },
+    {
+      "card_id": "card_36_antioxidants",
+      "card_slug": "card_36_antioxidants",
+      "type": "chat",
+      "concept_id": "antioxidants_food",
+      "level": 1,
+      "progress": {
+        "current": 36,
+        "total": 80
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Tisri category - ANTIOXIDANTS. Ye oxidation ko prevent karte hain. Fats aur oils ki rancidity ko rokते hain. Rancidity matlab jab fats oxidize hoke kharab smell aur taste dete hain. Butter ya chips ka packet khula chhod do to kharab smell aati hai - wo rancidity hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "Haan Sir! Mummy kehti hain kholne ke baad jaldi khatam karo. Ab samajh aaya kyun!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Common antioxidants hain - BHA (Butylated Hydroxy Anisole) aur BHT (Butylated Hydroxy Toluene) - ye synthetic hain aur bahut effective. Vitamin C (Ascorbic acid) aur Vitamin E (Tocopherol) natural antioxidants hain. Chips, butter, oils, processed meat mein antioxidants add kiye jate hain."
+        },
+        {
+          "speaker": "raju",
+          "text": "BHA aur BHT yaad rakhna mushkil hai!"
+        }
+      ],
+      "navigation": {
+        "next": "card_37_food_colors_flavors",
+        "button_text": "Abbreviations yaad rakho! Aage ➔"
+      }
+    },
+    {
+      "card_id": "card_37_food_colors_flavors",
+      "card_slug": "card_37_food_colors_flavors",
+      "type": "chat",
+      "concept_id": "food_colors_flavors",
+      "level": 1,
+      "progress": {
+        "current": 37,
+        "total": 80
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Chauthi category - FOOD COLORS aur FLAVORING AGENTS. Ye food ko attractive aur tasty banane ke liye use hote hain. Natural colors better hain jaise Turmeric (haldi - yellow), Beetroot (red), Saffron (kesar - orange). Synthetic colors jaise Tartrazine (yellow) bhi permitted limits mein safe hain."
+        },
+        {
+          "speaker": "raju",
+          "text": "Ice cream aur candies mein bahut colors hote hain!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! Flavoring agents taste enhance karte hain - monosodium glutamate (MSG) sabse common hai Chinese food mein. Vanilla essence, fruit flavors sab synthetic bhi hote hain aur natural bhi. FSSAI approval zaruri hai for any food additive use in India. Exam mein ye regulatory body ka naam zaroor yaad rakho!"
+        },
+        {
+          "speaker": "raju",
+          "text": "FSSAI matlab Food Safety and Standards Authority of India?"
+        }
+      ],
+      "navigation": {
+        "next": "card_38_food_quiz_1",
+        "button_text": "Perfect! Quiz time ➔"
+      }
+    },
+    {
+      "card_id": "card_38_food_quiz_1",
+      "card_slug": "card_38_food_quiz_1",
+      "type": "quiz",
+      "concept_id": "artificial_sweeteners_comparison",
+      "level": 1,
+      "progress": {
+        "current": 38,
+        "total": 80
+      },
+      "quiz_payload": {
+        "question": "Which artificial sweetener is approximately 2000 times sweeter than cane sugar? (SSC CGL 2020)",
+        "options": [
+          {
+            "id": "A",
+            "text": "Saccharin"
+          },
+          {
+            "id": "B",
+            "text": "Aspartame"
+          },
+          {
+            "id": "C",
+            "text": "Alitame"
+          },
+          {
+            "id": "D",
+            "text": "Sucralose"
+          }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Alitame is about 2000 times sweeter than sugar. Aspartame is ~100 times sweeter, Saccharin ~300 times, Sucralose ~600 times sweeter. This relative sweetness comparison is frequently asked in SSC and Railway exams."
+      },
+      "navigation": {
+        "next": "card_39_food_quiz_2",
+        "button_text": "Next Question (2/3) ➔"
+      }
+    },
+    {
+      "card_id": "card_39_food_quiz_2",
+      "card_slug": "card_39_food_quiz_2",
+      "type": "quiz",
+      "concept_id": "food_preservatives_example",
+      "level": 1,
+      "progress": {
+        "current": 39,
+        "total": 80
+      },
+      "quiz_payload": {
+        "question": "Sodium benzoate is commonly used as a preservative in: (Railway NTPC 2021)",
+        "options": [
+          {
+            "id": "A",
+            "text": "Milk and dairy products"
+          },
+          {
+            "id": "B",
+            "text": "Soft drinks and sauces"
+          },
+          {
+            "id": "C",
+            "text": "Fresh fruits"
+          },
+          {
+            "id": "D",
+            "text": "Raw meat"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Sodium benzoate is widely used as a preservative in soft drinks, fruit juices, pickles, and sauces to prevent microbial growth. It is effective in acidic conditions. Other preservatives: Sorbic acid (cheese), Propanoic acid (bread)."
+      },
+      "navigation": {
+        "next": "card_40_food_quiz_3",
+        "button_text": "Next Question (3/3) ➔"
+      }
+    },
+    {
+      "card_id": "card_40_food_quiz_3",
+      "card_slug": "card_40_food_quiz_3",
+      "type": "quiz",
+      "concept_id": "antioxidants_function",
+      "level": 1,
+      "progress": {
+        "current": 40,
+        "total": 80
+      },
+      "quiz_payload": {
+        "question": "BHA and BHT are added to food products primarily to: (BPSC 2021)",
+        "options": [
+          {
+            "id": "A",
+            "text": "Enhance sweetness"
+          },
+          {
+            "id": "B",
+            "text": "Prevent oxidation and rancidity"
+          },
+          {
+            "id": "C",
+            "text": "Improve color"
+          },
+          {
+            "id": "D",
+            "text": "Kill bacteria"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "BHA (Butylated Hydroxy Anisole) and BHT (Butylated Hydroxy Toluene) are antioxidants that prevent oxidation of fats and oils, thus preventing rancidity (bad smell/taste). They are commonly added to chips, butter, and processed foods."
+      },
+      "navigation": {
+        "next": "card_41_milestone_food_chemistry",
+        "button_text": "Check Score ➔"
+      }
+    },
+    {
+      "card_id": "card_41_milestone_food_chemistry",
+      "card_slug": "card_41_milestone_food_chemistry",
+      "type": "milestone",
+      "concept_id": "food_chemistry_complete",
+      "level": 1,
+      "progress": {
+        "current": 41,
+        "total": 80
+      },
+      "milestone_payload": {
+        "title": "🍕 FOOD CHEMISTRY CHAMPION!",
+        "badge_emoji": "🧪",
+        "completed_topic": "Food Additives Mastered",
+        "xp_earned": 50,
+        "milestone_progress": "Module 4/6 Complete",
+        "motivational_quote": "Now you can read any food label like a scientist! SSC loves this topic! 🎯"
+      },
+      "navigation": {
+        "next": "card_42_soaps_intro",
+        "button_text": "Final Topic: Cleansing Agents ➔"
+      }
+    },
+    {
+      "card_id": "card_42_soaps_intro",
+      "card_slug": "card_42_soaps_intro",
+      "type": "chat",
+      "concept_id": "soaps_definition",
+      "level": 1,
+      "progress": {
+        "current": 42,
+        "total": 80
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ab last major topic - SOAPS aur DETERGENTS! Har din use karte ho but chemistry kabhi sochi? Raju, sabun se haath dhote time kya hota hai?"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir dirt nikal jati hai aur haath saaf ho jate hain. Foam bhi banta hai!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Perfect observation! SOAP chemically kya hai? Ye fatty acids ke sodium ya potassium salts hote hain. Jaise Sodium Stearate (C₁₇H₃₅COO⁻Na⁺) - ye ek typical soap molecule hai. Soap banane ki process ko SAPONIFICATION kehte hain - isme fat/oil ko sodium hydroxide (NaOH) ke saath heat karte hain."
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab soap factory mein oil aur NaOH milate hain?"
+        }
+      ],
+      "navigation": {
+        "next": "card_43_soap_structure",
+        "button_text": "Haan! Structure dekho ➔"
+      }
+    },
+    {
+      "card_id": "card_43_soap_structure",
+      "card_slug": "card_43_soap_structure",
+      "type": "chat",
+      "concept_id": "soap_molecule_structure",
+      "level": 1,
+      "progress": {
+        "current": 43,
+        "total": 80
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Soap molecule bahut interesting structure hoti hai - iska ek end HYDROPHILIC hota hai (water-loving, COO⁻ part) jo polar hai, aur dusra end HYDROPHOBIC hota hai (water-fearing, long carbon chain C₁₇H₃₅ part) jo non-polar hai. Isko DUAL NATURE kehte hain."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir ek molecule ke do opposite nature?!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! Aur yahi cheez soap ko cleaning agent banati hai. Hydrophobic tail oil/grease ke saath attach ho jati hai (kyunki dono non-polar), aur hydrophilic head paani ke saath. Jab tum haath ragadte ho to dirt ko soap molecules ghera lete hain making small clusters called MICELLES. Phir paani se wash karne par ye micelles beh jate hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Wah! To soap oil aur paani ko connect kar deti hai!"
+        }
+      ],
+      "navigation": {
+        "next": "card_44_micelle_formation",
+        "button_text": "Exactly! Micelle detail mein ➔"
+      }
+    },
+    {
+      "card_id": "card_44_micelle_formation",
+      "card_slug": "card_44_micelle_formation",
+      "type": "chat",
+      "concept_id": "micelle_structure",
+      "level": 1,
+      "progress": {
+        "current": 44,
+        "total": 80
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "MICELLE ek spherical (gol) structure hai jisme soap molecules aise arrange hote hain ki saare hydrophobic tails ANDAR ki taraf point karte hain (jahan oil/dirt trap hota hai), aur saare hydrophilic heads BAHAR ki taraf paani ke saath interact karte hain. Isse dirt suspend ho jata hai paani mein aur wash out ho jata hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab ek cage ban jata hai jo dirt ko pakad leta hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Perfect analogy! NEET aur BPSC mein micelle ka diagram zaroor banana aata hai. Yaad rakho - tails inside (hydrophobic + oil), heads outside (hydrophilic + water). Ye structure tab banta hai jab soap concentration ek particular level se zyada ho - isko Critical Micelle Concentration (CMC) kehte hain."
+        },
+        {
+          "speaker": "raju",
+          "text": "CMC ka matlab kam sabun se kaam nahi chalega?"
+        }
+      ],
+      "navigation": {
+        "next": "card_45_hard_water_problem",
+        "button_text": "Bilkul! Ab soap ki problem ➔"
+      }
+    },
+    {
+      "card_id": "card_45_hard_water_problem",
+      "card_slug": "card_45_hard_water_problem",
+      "type": "chat",
+      "concept_id": "soap_hard_water",
+      "level": 1,
+      "progress": {
+        "current": 45,
+        "total": 80
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Sabun ki ek badi problem hai - HARD WATER mein ye achhe se kaam nahi karti. Hard water matlab jisme Calcium (Ca²⁺) aur Magnesium (Mg²⁺) ions zyada hote hain. Jab soap hard water mein jati hai to ye insoluble salts bana leti hai jaise Calcium Stearate - jo scum (jhag jaisa solid) ban jata hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir scum matlab wo safed waali cheez jo bucket mein jum jati hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Exactly! Reaction ye hoti hai: 2C₁₇H₃₅COO⁻Na⁺ + Ca²⁺ → (C₁₇H₃₅COO)₂Ca (insoluble precipitate) + 2Na⁺. Isse soap waste bhi hoti hai aur kapde par safed daag bhi pad jate hain. Isliye hard water areas mein zyada soap lagta hai aur achha nahi jhagta. Ye SSC mein bahut puchte hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "To hard water mein soap bekaar ho jati hai?"
+        }
+      ],
+      "navigation": {
+        "next": "card_46_detergents_intro",
+        "button_text": "Haan! Isiliye detergent aaya ➔"
+      }
+    },
+    {
+      "card_id": "card_46_detergents_intro",
+      "card_slug": "card_46_detergents_intro",
+      "type": "chat",
+      "concept_id": "detergents_definition",
+      "level": 1,
+      "progress": {
+        "current": 46,
+        "total": 80
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "DETERGENTS wo synthetic cleansing agents hain jo soap ki tarah kaam karte hain PAR hard water mein bhi effective hain! Detergents mainly long chain hydrocarbons ke sulphate ya sulphonate salts hote hain. Example: Sodium alkyl benzene sulphonate. Structure similar hai soap jaisi - hydrophobic tail aur hydrophilic head."
+        },
+        {
+          "speaker": "raju",
+          "text": "To Sir, detergent bhi micelle banati hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul! Cleaning mechanism same hai. PAR advantage ye hai ki jab detergent calcium/magnesium ions se react karti hai to wo SOLUBLE salts banati hain jo paani mein ghul jate hain, scum nahi banate! Isliye hard water mein detergent jhaag deti hai aur achhe se saaf karti hai. Surf, Ariel, Tide sab detergents hain."
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab detergent upgrade version hai soap ka!"
+        }
+      ],
+      "navigation": {
+        "next": "card_47_detergent_types",
+        "button_text": "Haan modern version! Types ➔"
+      }
+    },
+    {
+      "card_id": "card_47_detergent_types",
+      "card_slug": "card_47_detergent_types",
+      "type": "chat",
+      "concept_id": "detergent_classification",
+      "level": 1,
+      "progress": {
+        "current": 47,
+        "total": 80
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Detergents teen types ke hote hain charge ke basis par. ANIONIC Detergents - inka hydrophilic part negatively charged hota hai (jaise alkyl sulphate). Ye sabse common hain washing powders mein. CATIONIC Detergents - positive charge (jaise Cetyltrimethyl ammonium bromide). Ye germicidal hote hain, antiseptics mein use hote hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Antiseptic detergent?! Savlon?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Exactly! Cationic detergents antiseptic action karte hain. Tisra type - NON-IONIC Detergents jisme koi charge nahi hota, jaise liquid dishwashing soaps. Ye gentle hote hain. Anionic sabse zyada use hota hai general cleaning mein, cationic antiseptic action ke liye, non-ionic delicate cleaning ke liye."
+        },
+        {
+          "speaker": "raju",
+          "text": "Teen alag jobs ke liye teen types!"
+        }
+      ],
+      "navigation": {
+        "next": "card_48_biodegradability",
+        "button_text": "Smart classification! Environment angle ➔"
+      }
+    },
+    {
+      "card_id": "card_48_biodegradability",
+      "card_slug": "card_48_biodegradability",
+      "type": "chat",
+      "concept_id": "biodegradable_detergents",
+      "level": 1,
+      "progress": {
+        "current": 48,
+        "total": 80
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ek bahut important environmental concern hai - BIODEGRADABILITY. Purani detergents highly branched chain structure ki thi jo bacteria decompose nahi kar paate the. Result? Sewage water mein foam banta rehta tha aur rivers pollute ho rahi thi. Isko foam pollution kehte hain."
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab detergent waste river mein jhaag ban raha tha?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! Ab modern detergents BIODEGRADABLE banayi jati hain with straight chain (linear) hydrocarbons. Bacteria easily decompose kar lete hain straight chain ko. Branched chain slowly degrade hoti hai. Exam mein ye zaroor aata hai - Linear alkyl sulphonates (LAS) biodegradable hain, branched chain non-biodegradable."
+        },
+        {
+          "speaker": "raju",
+          "text": "To ab detergents environment-friendly hain?"
+        }
+      ],
+      "navigation": {
+        "next": "card_49_soap_detergent_quiz_1",
+        "button_text": "Modern ones haan! Quiz karo ➔"
+      }
+    },
+    {
+      "card_id": "card_49_soap_detergent_quiz_1",
+      "card_slug": "card_49_soap_detergent_quiz_1",
+      "type": "quiz",
+      "concept_id": "soap_chemical_nature",
+      "level": 1,
+      "progress": {
+        "current": 49,
+        "total": 80
+      },
+      "quiz_payload": {
+        "question": "Chemically, soaps are: (Railway Group D 2019)",
+        "options": [
+          {
+            "id": "A",
+            "text": "Esters of fatty acids"
+          },
+          {
+            "id": "B",
+            "text": "Sodium or Potassium salts of fatty acids"
+          },
+          {
+            "id": "C",
+            "text": "Carbohydrates"
+          },
+          {
+            "id": "D",
+            "text": "Hydrocarbons"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Soaps are Sodium or Potassium salts of long chain fatty acids (like Sodium Stearate: C₁₇H₃₅COONa). They are prepared by saponification of fats/oils with NaOH or KOH. Not esters (those are fats), not carbohydrates or hydrocarbons."
+      },
+      "navigation": {
+        "next": "card_50_soap_detergent_quiz_2",
+        "button_text": "Next Question (2/3) ➔"
+      }
+    },
+    {
+      "card_id": "card_50_soap_detergent_quiz_2",
+      "card_slug": "card_50_soap_detergent_quiz_2",
+      "type": "quiz",
+      "concept_id": "soap_hard_water",
+      "level": 1,
+      "progress": {
+        "current": 50,
+        "total": 80
+      },
+      "quiz_payload": {
+        "question": "Soaps do not work well in hard water because: (SSC CGL 2019)",
+        "options": [
+          {
+            "id": "A",
+            "text": "They react with dissolved oxygen"
+          },
+          {
+            "id": "B",
+            "text": "They form insoluble salts with Ca²⁺ and Mg²⁺ ions"
+          },
+          {
+            "id": "C",
+            "text": "Hard water is too acidic"
+          },
+          {
+            "id": "D",
+            "text": "They dissolve too quickly"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "In hard water, soaps react with Calcium (Ca²⁺) and Magnesium (Mg²⁺) ions to form insoluble salts (scum) like Calcium Stearate. This wastes soap and reduces cleaning efficiency. Detergents solve this problem by forming soluble salts with these ions."
+      },
+      "navigation": {
+        "next": "card_51_soap_detergent_quiz_3",
+        "button_text": "Next Question (3/3) ➔"
+      }
+    },
+    {
+      "card_id": "card_51_soap_detergent_quiz_3",
+      "card_slug": "card_51_soap_detergent_quiz_3",
+      "type": "quiz",
+      "concept_id": "biodegradable_detergents",
+      "level": 1,
+      "progress": {
+        "current": 51,
+        "total": 80
+      },
+      "quiz_payload": {
+        "question": "Which type of detergent structure is biodegradable? (BPSC 2020)",
+        "options": [
+          {
+            "id": "A",
+            "text": "Highly branched hydrocarbon chain"
+          },
+          {
+            "id": "B",
+            "text": "Straight/Linear hydrocarbon chain"
+          },
+          {
+            "id": "C",
+            "text": "Cyclic hydrocarbon chain"
+          },
+          {
+            "id": "D",
+            "text": "Aromatic hydrocarbon chain"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Detergents with straight/linear hydrocarbon chains are biodegradable as bacteria can easily decompose them. Highly branched chain detergents are non-biodegradable and cause foam pollution in water bodies. Modern detergents use Linear Alkyl Sulphonates (LAS) for environmental safety."
+      },
+      "navigation": {
+        "next": "card_52_milestone_cleansing",
+        "button_text": "Check Score ➔"
+      }
+    },
+    {
+      "card_id": "card_52_milestone_cleansing",
+      "card_slug": "card_52_milestone_cleansing",
+      "type": "milestone",
+      "concept_id": "cleansing_agents_complete",
+      "level": 1,
+      "progress": {
+        "current": 52,
+        "total": 80
+      },
+      "milestone_payload": {
+        "title": "🧼 CLEANSING CHEMISTRY MASTERED!",
+        "badge_emoji": "🫧",
+        "completed_topic": "Soaps & Detergents Complete",
+        "xp_earned": 50,
+        "milestone_progress": "Module 5/6 Complete",
+        "motivational_quote": "From medicines to soaps - you've covered everyday chemistry like a PRO! One final push! 💪"
+      },
+      "navigation": {
+        "next": "card_53_advanced_concepts",
+        "button_text": "Officer Level Concepts ➔"
+      }
+    },
+    {
+      "card_id": "card_53_advanced_concepts",
+      "card_slug": "card_53_advanced_concepts",
+      "type": "chat",
+      "concept_id": "advanced_drug_concepts",
+      "level": 2,
+      "progress": {
+        "current": 53,
+        "total": 80
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ab kuch advanced officer-level concepts jo BPSC aur UPSC prelims mein directly puchte hain. CHEMOTHERAPY - ye specifically cancer treatment ke liye drugs hain. Ye rapidly dividing cells ko target karti hain. Sulphanilamide ek important antibacterial drug hai jo bacteria mein folic acid synthesis ko block karti hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir chemotherapy matlab sirf cancer ki dawai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Medical context mein mainly haan. Ek aur important concept - ANTACIDS ka detailed mechanism. Ye basically acid-base neutralization karte hain: HCl (stomach acid) + NaHCO₃ → NaCl + H₂O + CO₂. Isliye antacid lene ke baad burping hoti hai - wo CO₂ gas hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Ohh! Chemistry ka practical application!"
+        }
+      ],
+      "navigation": {
+        "next": "card_54_drug_receptor_interaction",
+        "button_text": "Aur bhi hai! Receptor concept ➔"
+      }
+    },
+    {
+      "card_id": "card_54_drug_receptor_interaction",
+      "card_slug": "card_54_drug_receptor_interaction",
+      "type": "chat",
+      "concept_id": "drug_target_interaction",
+      "level": 2,
+      "progress": {
+        "current": 54,
+        "total": 80
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "NEET ke liye important - Drug-Receptor Interaction. Body mein specific sites hote hain jahan drug bind hoti hai, jise RECEPTORS kehte hain. Ye mainly proteins hote hain. Drug ka shape aur size receptor se match karna chahiye - jaise key aur lock. Isse DRUG SPECIFICITY milti hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab galat drug sahi receptor se fit nahi hogi?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Exactly! AGONISTS wo drugs hain jo receptor se bind karke normal response produce karti hain. ANTAGONISTS wo hain jo bind to karte hain par response block kar dete hain. Example - Antihistamines antagonists hain histamine receptors ke. Wo receptor par seat le lete hain taaki histamine bind na kar sake!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Wah! Musical chair jaisa game!"
+        }
+      ],
+      "navigation": {
+        "next": "card_55_side_effects_allergies",
+        "button_text": "Perfect analogy! Side effects ➔"
+      }
+    },
+    {
+      "card_id": "card_55_side_effects_allergies",
+      "card_slug": "card_55_side_effects_allergies",
+      "type": "chat",
+      "concept_id": "drug_side_effects",
+      "level": 2,
+      "progress": {
+        "current": 55,
+        "total": 80
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Har drug ke SIDE EFFECTS hote hain. Main therapeutic effect ke saath unwanted effects bhi aate hain. Example - Aspirin blood clotting rokti hai (isiliye heart attack prevention mein use hoti hai) par ye stomach ulcers bhi cause kar sakti hai agar regularly li jaye. Paracetamol safe hai par overdose se liver damage ho sakta hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "To koi bhi dawai 100% safe nahi hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul sahi samjhe! Isiliye self-medication dangerous hai. DRUG ALLERGY alag cheez hai - kuch logo ko specific drug se allergic reaction hota hai jaise skin rashes, breathing difficulty. Penicillin se bahut logo ko allergy hoti hai. Doctor ko pehle batana chahiye ki kaunsi drug se allergy hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Ab samajh aaya doctor prescription kyun zaruri hai!"
+        }
+      ],
+      "navigation": {
+        "next": "card_56_vaccines_concept",
+        "button_text": "Responsibility hai! Vaccines ➔"
+      }
+    },
+    {
+      "card_id": "card_56_vaccines_concept",
+      "card_slug": "card_56_vaccines_concept",
+      "type": "chat",
+      "concept_id": "vaccines_immunity",
+      "level": 2,
+      "progress": {
+        "current": 56,
+        "total": 80
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ek confusion clear karte hain - VACCINES drugs nahi hain! Ye biological preparations hain jo immunity develop karte hain. Vaccines mein dead/weakened pathogen ya uske parts hote hain jo body ko antibodies banana sikhate hain BINA disease diye. Antibiotics existing infection ko treat karti hain, Vaccines future infection se prevent karti hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Ohh! To polio ki dawai nahi, vaccine hai!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Perfect! Edward Jenner ne 1796 mein pehli vaccine di thi - Smallpox vaccine. Louis Pasteur ne Rabies vaccine develop ki. Vaccines mein kuch chemicals preservatives ke liye use hote hain jaise Thimerosal (mercury compound) par bahut kam quantity mein. SSC mein scientist names zaroor puchte hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Jenner - Smallpox, Pasteur - Rabies. Got it!"
+        }
+      ],
+      "navigation": {
+        "next": "card_57_rapid_fire_summary",
+        "button_text": "Perfect! Officer Revision ➔"
+      }
+    },
+    {
+      "card_id": "card_57_rapid_fire_summary",
+      "card_slug": "card_57_rapid_fire_summary",
+      "type": "summary",
+      "concept_id": "chapter_quick_revision",
+      "level": 2,
+      "progress": {
+        "current": 57,
+        "total": 80
+      },
+      "summary_payload": {
+        "title": "⚡ OFFICER LEVEL LIGHTNING REVISION",
+        "revision_points": [
+          {
+            "topic": "Analgesics Classification",
+            "point": "Non-Narcotic (Aspirin-NSAID, Paracetamol) safe; Narcotic (Morphine, Codeine) from opium, addictive, CNS depressants."
+          },
+          {
+            "topic": "Antibiotics vs Antiseptics",
+            "point": "Antibiotics: Internal use, specific, resistance develops (Penicillin-Fleming 1929). Antiseptics: External, topical, general action (Dettol, Tincture of Iodine)."
+          },
+          {
+            "topic": "Spectrum & Hard Water",
+            "point": "Broad Spectrum: Chloramphenicol, Tetracycline. Soaps fail in hard water (Ca²⁺/Mg²⁺ form scum). Detergents work (soluble salts)."
+          },
+          {
+            "topic": "Food Additives",
+            "point": "Sweeteners: Aspartame (100x), Saccharin (300x), Alitame (2000x). Preservatives: Sodium benzoate. Antioxidants: BHA, BHT (prevent rancidity)."
+          },
+          {
+            "topic": "Soap vs Detergent Structure",
+            "point": "Both: Hydrophobic tail + Hydrophilic head → Micelle (dirt trapped inside). Biodegradable: Linear chain (LAS). Non-biodegradable: Branched chain."
+          },
+          {
+            "topic": "Tranquilizers & Antacids",
+            "point": "Tranquilizers: Equanil, Valium (CNS, anxiety, addictive). Antacids: Mg(OH)₂, NaHCO₃, Al(OH)₃ (neutralize HCl, produce CO₂)."
+          },
+          {
+            "topic": "BPSC Traps",
+            "point": "Statement I: Aspirin reduces inflammation. (TRUE-NSAID). Statement II: Paracetamol reduces inflammation. (FALSE-only pain & fever). Vaccines ≠ Drugs (immunity, not treatment)."
+          },
+          {
+            "topic": "Scientists to Remember",
+            "point": "Alexander Fleming (Penicillin-1929, Nobel-1945), Edward Jenner (Smallpox vaccine-1796), Louis Pasteur (Rabies vaccine). FSSAI regulates food additives in India."
+          }
+        ]
+      },
+      "navigation": {
+        "next": "card_58_final_bpsc_quiz_1",
+        "button_text": "Final Officer Quiz ➔"
+      }
+    },
+    {
+      "card_id": "card_58_final_bpsc_quiz_1",
+      "card_slug": "card_58_final_bpsc_quiz_1",
+      "type": "final_quiz",
+      "concept_id": "final_assessment_1",
+      "level": 2,
+      "progress": {
+        "current": 58,
+        "total": 80
+      },
+      "quiz_payload": {
+        "question": "Consider the following statements:\n\nI. Aspirin is a Non-Steroidal Anti-Inflammatory Drug (NSAID) that reduces pain, fever, and inflammation.\n\nII. Paracetamol is more effective than Aspirin in reducing inflammation.\n\nIII. Morphine is derived from the opium poppy plant and is a narcotic analgesic.\n\nWhich of the above statements is/are CORRECT? (BPSC Pattern)",
+        "options": [
+          {
+            "id": "A",
+            "text": "I and III only"
+          },
+          {
+            "id": "B",
+            "text": "II and III only"
+          },
+          {
+            "id": "C",
+            "text": "I, II and III"
+          },
+          {
+            "id": "D",
+            "text": "I only"
+          }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Statement I is CORRECT - Aspirin (Acetylsalicylic Acid) is an NSAID effective against pain, fever, AND inflammation. Statement II is INCORRECT - Paracetamol does NOT reduce inflammation, only pain and fever. Statement III is CORRECT - Morphine is derived from Papaver somniferum (opium poppy) and is a narcotic analgesic. This is a classic BPSC multi-statement trap question!"
+      },
+      "navigation": {
+        "next": "card_59_final_bpsc_quiz_2",
+        "button_text": "Next Master Quiz (2/5) ➔"
+      }
+    },
+    {
+      "card_id": "card_59_final_bpsc_quiz_2",
+      "card_slug": "card_59_final_bpsc_quiz_2",
+      "type": "final_quiz",
+      "concept_id": "final_assessment_2",
+      "level": 2,
+      "progress": {
+        "current": 59,
+        "total": 80
+      },
+      "quiz_payload": {
+        "question": "Match the following:\n\nList-I (Drug Type) | List-II (Example)\nA. Antibiotic | 1. Valium\nB. Tranquilizer | 2. Penicillin\nC. Antiseptic | 3. Aspartame\nD. Artificial Sweetener | 4. Dettol\n\nCorrect matching is: (UPSC Prelims Pattern)",
+        "options": [
+          {
+            "id": "A",
+            "text": "A-2, B-1, C-4, D-3"
+          },
+          {
+            "id": "B",
+            "text": "A-1, B-2, C-3, D-4"
+          },
+          {
+            "id": "C",
+            "text": "A-2, B-4, C-1, D-3"
+          },
+          {
+            "id": "D",
+            "text": "A-4, B-1, C-2, D-3"
+          }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Correct matching: A. Antibiotic - Penicillin (first antibiotic, Fleming 1929). B. Tranquilizer - Valium/Diazepam (treats anxiety). C. Antiseptic - Dettol (Chloroxylenol, used on living tissues). D. Artificial Sweetener - Aspartame (100 times sweeter than sugar). This tests your category classification skills!"
+      },
+      "navigation": {
+        "next": "card_60_final_bpsc_quiz_3",
+        "button_text": "Next Master Quiz (3/5) ➔"
+      }
+    },
+    {
+      "card_id": "card_60_final_bpsc_quiz_3",
+      "card_slug": "card_60_final_bpsc_quiz_3",
+      "type": "final_quiz",
+      "concept_id": "final_assessment_3",
+      "level": 2,
+      "progress": {
+        "current": 60,
+        "total": 80
+      },
+      "quiz_payload": {
+        "question": "Assertion (A): Detergents are more effective than soaps in hard water.\n\nReason (R): Detergents form soluble salts with Ca²⁺ and Mg²⁺ ions present in hard water.\n\n(BPSC Assertion-Reason Pattern)",
+        "options": [
+          {
+            "id": "A",
+            "text": "Both A and R are true, and R is the correct explanation of A"
+          },
+          {
+            "id": "B",
+            "text": "Both A and R are true, but R is NOT the correct explanation of A"
+          },
+          {
+            "id": "C",
+            "text": "A is true but R is false"
+          },
+          {
+            "id": "D",
+            "text": "A is false but R is true"
+          }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Both Assertion and Reason are TRUE, and R correctly explains A. Detergents ARE more effective in hard water BECAUSE they form soluble calcium/magnesium salts (unlike soaps which form insoluble scum). This is the fundamental advantage of synthetic detergents over traditional soaps in areas with hard water supply."
+      },
+      "navigation": {
+        "next": "card_61_final_bpsc_quiz_4",
+        "button_text": "Next Master Quiz (4/5) ➔"
+      }
+    },
+    {
+      "card_id": "card_61_final_bpsc_quiz_4",
+      "card_slug": "card_61_final_bpsc_quiz_4",
+      "type": "final_quiz",
+      "concept_id": "final_assessment_4",
+      "level": 2,
+      "progress": {
+        "current": 61,
+        "total": 80
+      },
+      "quiz_payload": {
+        "question": "Which of the following food additives is/are correctly matched with their function?\n\n1. Sodium benzoate - Preservative\n2. BHA and BHT - Antioxidants\n3. Aspartame - Food coloring agent\n4. Sodium bicarbonate - Antacid\n\nSelect the correct answer: (SSC CGL Pattern)",
+        "options": [
+          {
+            "id": "A",
+            "text": "1, 2 and 4 only"
+          },
+          {
+            "id": "B",
+            "text": "1 and 2 only"
+          },
+          {
+            "id": "C",
+            "text": "2, 3 and 4 only"
+          },
+          {
+            "id": "D",
+            "text": "All of the above"
+          }
+        ],
+        "correct_option_id": "A",
+        "explanation": "1. CORRECT - Sodium benzoate is a preservative used in soft drinks and sauces. 2. CORRECT - BHA (Butylated Hydroxy Anisole) and BHT prevent oxidation/rancidity. 3. INCORRECT - Aspartame is an artificial sweetener, NOT a coloring agent. 4. CORRECT - Sodium bicarbonate (baking soda) is an antacid. Therefore, 1, 2, and 4 are correct."
+      },
+      "navigation": {
+        "next": "card_62_final_bpsc_quiz_5",
+        "button_text": "Last Master Quiz (5/5) ➔"
+      }
+    },
+    {
+      "card_id": "card_62_final_bpsc_quiz_5",
+      "card_slug": "card_62_final_bpsc_quiz_5",
+      "type": "final_quiz",
+      "concept_id": "final_assessment_5",
+      "level": 2,
+      "progress": {
+        "current": 62,
+        "total": 80
+      },
+      "quiz_payload": {
+        "question": "Consider the following about Antibiotics:\n\nI. Alexander Fleming discovered Penicillin from Penicillium notatum fungus in 1929.\n\nII. Broad spectrum antibiotics like Chloramphenicol are always better than narrow spectrum antibiotics.\n\nIII. Antibiotics can develop resistance in bacteria due to their specific targeting mechanism.\n\nWhich statement(s) is/are CORRECT? (BPSC/NEET Pattern)",
+        "options": [
+          {
+            "id": "A",
+            "text": "I and III only"
+          },
+          {
+            "id": "B",
+            "text": "II and III only"
+          },
+          {
+            "id": "C",
+            "text": "I only"
+          },
+          {
+            "id": "D",
+            "text": "All of the above"
+          }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Statement I is CORRECT - Fleming discovered Penicillin in 1929 from Penicillium fungus, received Nobel Prize in 1945. Statement II is INCORRECT - Broad spectrum antibiotics are NOT always better; they kill good bacteria too and should only be used when necessary. Narrow spectrum is preferred when specific pathogen is identified. Statement III is CORRECT - Antibiotic resistance develops because of specific targeting. Classic BPSC trap testing deep understanding!"
+      },
+      "navigation": {
+        "next": "card_63_advanced_pyq_1",
+        "button_text": "Bonus PYQ Round ➔"
+      }
+    },
+    {
+      "card_id": "card_63_advanced_pyq_1",
+      "card_slug": "card_63_advanced_pyq_1",
+      "type": "quiz",
+      "concept_id": "pyq_advanced_1",
+      "level": 2,
+      "progress": {
+        "current": 63,
+        "total": 80
+      },
+      "quiz_payload": {
+        "question": "Which of the following is used as both an antiseptic and a disinfectant depending upon concentration? (Railway NTPC 2020 PYQ)",
+        "options": [
+          {
+            "id": "A",
+            "text": "Phenol"
+          },
+          {
+            "id": "B",
+            "text": "Penicillin"
+          },
+          {
+            "id": "C",
+            "text": "Chloramphenicol"
+          },
+          {
+            "id": "D",
+            "text": "Paracetamol"
+          }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Phenol (Carbolic acid) can function as BOTH antiseptic (in dilute form, 0.2% on living tissues) and disinfectant (in concentrated form, 1% on non-living surfaces). This dual role based on concentration is a classic concept. Penicillin is antibiotic, Chloramphenicol is antibiotic, Paracetamol is analgesic."
+      },
+      "navigation": {
+        "next": "card_64_advanced_pyq_2",
+        "button_text": "Next PYQ (2/5) ➔"
+      }
+    },
+    {
+      "card_id": "card_64_advanced_pyq_2",
+      "card_slug": "card_64_advanced_pyq_2",
+      "type": "quiz",
+      "concept_id": "pyq_advanced_2",
+      "level": 2,
+      "progress": {
+        "current": 64,
+        "total": 80
+      },
+      "quiz_payload": {
+        "question": "The process of preparing soap from oil and caustic soda is called: (SSC CGL 2019 PYQ)",
+        "options": [
+          {
+            "id": "A",
+            "text": "Esterification"
+          },
+          {
+            "id": "B",
+            "text": "Saponification"
+          },
+          {
+            "id": "C",
+            "text": "Hydrogenation"
+          },
+          {
+            "id": "D",
+            "text": "Polymerization"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "SAPONIFICATION is the process of making soap by treating fats/oils (esters) with caustic soda (NaOH) or caustic potash (KOH). The reaction breaks ester bonds producing soap (fatty acid salt) and glycerol. Esterification is opposite (making ester). Hydrogenation adds H₂. Polymerization makes polymers."
+      },
+      "navigation": {
+        "next": "card_65_advanced_pyq_3",
+        "button_text": "Next PYQ (3/5) ➔"
+      }
+    },
+    {
+      "card_id": "card_65_advanced_pyq_3",
+      "card_slug": "card_65_advanced_pyq_3",
+      "type": "quiz",
+      "concept_id": "pyq_advanced_3",
+      "level": 2,
+      "progress": {
+        "current": 65,
+        "total": 80
+      },
+      "quiz_payload": {
+        "question": "Tincture of Iodine, used as an antiseptic, is: (BPSC 2018 PYQ)",
+        "options": [
+          {
+            "id": "A",
+            "text": "Aqueous solution of Iodine"
+          },
+          {
+            "id": "B",
+            "text": "Alcoholic solution of Iodine (2-3%)"
+          },
+          {
+            "id": "C",
+            "text": "Pure Iodine crystals"
+          },
+          {
+            "id": "D",
+            "text": "Iodine dissolved in chloroform"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Tincture of Iodine is a 2-3% solution of Iodine in ALCOHOL (ethanol), used as an antiseptic for wounds. The word 'tincture' medically refers to alcoholic solutions. Aqueous Iodine solution is called Iodine water. Pure Iodine is solid, not used directly. This terminology is frequently tested in BPSC."
+      },
+      "navigation": {
+        "next": "card_66_advanced_pyq_4",
+        "button_text": "Next PYQ (4/5) ➔"
+      }
+    },
+    {
+      "card_id": "card_66_advanced_pyq_4",
+      "card_slug": "card_66_advanced_pyq_4",
+      "type": "quiz",
+      "concept_id": "pyq_advanced_4",
+      "level": 2,
+      "progress": {
+        "current": 66,
+        "total": 80
+      },
+      "quiz_payload": {
+        "question": "Which artificial sweetener contains a dipeptide and is unstable at cooking temperature? (NEET 2020 Pattern)",
+        "options": [
+          {
+            "id": "A",
+            "text": "Saccharin"
+          },
+          {
+            "id": "B",
+            "text": "Aspartame"
+          },
+          {
+            "id": "C",
+            "text": "Sucralose"
+          },
+          {
+            "id": "D",
+            "text": "Alitame"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "ASPARTAME is made of two amino acids (aspartic acid + phenylalanine), hence it's a dipeptide. It is about 100 times sweeter than sugar but is unstable at cooking/high temperatures, so it's used mainly in cold beverages and tabletop sweeteners. Saccharin is stable at cooking temp. This chemical nature question is NEET favorite!"
+      },
+      "navigation": {
+        "next": "card_67_advanced_pyq_5",
+        "button_text": "Last PYQ (5/5) ➔"
+      }
+    },
+    {
+      "card_id": "card_67_advanced_pyq_5",
+      "card_slug": "card_67_advanced_pyq_5",
+      "type": "quiz",
+      "concept_id": "pyq_advanced_5",
+      "level": 2,
+      "progress": {
+        "current": 67,
+        "total": 80
+      },
+      "quiz_payload": {
+        "question": "In the structure of a soap micelle formed in water, the: (SSC CHSL 2021 PYQ)",
+        "options": [
+          {
+            "id": "A",
+            "text": "Hydrophobic tails point outward and hydrophilic heads inward"
+          },
+          {
+            "id": "B",
+            "text": "Hydrophilic heads point outward and hydrophobic tails inward"
+          },
+          {
+            "id": "C",
+            "text": "Both heads and tails are randomly arranged"
+          },
+          {
+            "id": "D",
+            "text": "Soap molecules do not form micelles in water"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "In a micelle formed in WATER, the HYDROPHILIC HEADS point OUTWARD (toward water) and HYDROPHOBIC TAILS point INWARD (away from water, trapping oil/dirt in center). This arrangement allows the micelle to suspend dirt in water. This orientation question is very common in SSC and tests conceptual clarity!"
+      },
+      "navigation": {
+        "next": "card_68_concept_chat_1",
+        "button_text": "Bonus Concepts ➔"
+      }
+    },
+    {
+      "card_id": "card_68_concept_chat_1",
+      "card_slug": "card_68_concept_chat_1",
+      "type": "chat",
+      "concept_id": "enzyme_inhibition_drugs",
+      "level": 2,
+      "progress": {
+        "current": 68,
+        "total": 80
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ek NEET level concept - Enzyme Inhibitors as drugs. Bahut saari drugs actually body ke enzymes ko inhibit karti hain. Example - Aspirin enzyme Cyclooxygenase (COX) ko inhibit karti hai jo inflammation cause karta hai. Isliye inflammation kam ho jata hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab Aspirin enzyme ko block kar deti hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Exactly! Similarly, Sulpha drugs (Sulphanilamide) bacteria ke enzyme ko inhibit karte hain jo folic acid banata hai. Bina folic acid ke bacteria multiply nahi kar sakta aur mar jata hai. Ye COMPETITIVE INHIBITION hai kyunki drug enzyme ki active site par compete karta hai normal substrate se."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir ye to biology aur chemistry ka combination hai!"
+        }
+      ],
+      "navigation": {
+        "next": "card_69_concept_chat_2",
+        "button_text": "Haan biochemistry! Aage ➔"
+      }
+    },
+    {
+      "card_id": "card_69_concept_chat_2",
+      "card_slug": "card_69_concept_chat_2",
+      "type": "chat",
+      "concept_id": "antiviral_drugs",
+      "level": 2,
+      "progress": {
+        "current": 69,
+        "total": 80
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Important distinction - Antibiotics bacteria ko maarte hain, par VIRUSES par kaam nahi karte! Viruses ke liye alag ANTIVIRAL drugs chahiye. Examples - Acyclovir (herpes ke liye), Oseltamivir/Tamiflu (influenza ke liye), Remdesivir (COVID-19 mein use hua tha). Antiviral drugs virus ki replication ko block karte hain."
+        },
+        {
+          "speaker": "raju",
+          "text": "Isliye normal flu mein antibiotics nahi dete doctor?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul sahi! Common cold aur flu viruses se hota hai, antibiotics bekaar hain. Par agar secondary bacterial infection ho jaye to antibiotics dete hain. Ye bahut common misconception hai jo SSC mein statement form mein puchte hain - 'Antibiotics are effective against viral infections' - ye FALSE hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Ye to exam trap hai pakka!"
+        }
+      ],
+      "navigation": {
+        "next": "card_70_concept_chat_3",
+        "button_text": "Bilkul! Antimalarial ➔"
+      }
+    },
+    {
+      "card_id": "card_70_concept_chat_3",
+      "card_slug": "card_70_concept_chat_3",
+      "type": "chat",
+      "concept_id": "antimalarial_drugs",
+      "level": 2,
+      "progress": {
+        "current": 70,
+        "total": 80
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "ANTIMALARIAL DRUGS - Malaria protozoan parasite Plasmodium se hota hai. Chloroquine sabse famous antimalarial thi, par ab resistance develop ho gaya hai bahut jagah. Modern drugs - Artemisinin (Chinese herb se), Mefloquine. QUININE original antimalarial tha jo Cinchona tree ki bark se milta hai - ye historical fact SSC mein aata hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Cinchona bark se Quinine - ye to geography mein bhi pada tha!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! Multidisciplinary connection hai. Interesting fact - Tonic water mein thoda quinine hota hai, isiliye uska bitter taste hai. Antimalarial drugs Plasmodium ki life cycle ko blood mein disrupt karte hain. Artemisinin-based Combination Therapy (ACT) ab WHO recommend karta hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "To har disease ke liye alag drug category hai?"
+        }
+      ],
+      "navigation": {
+        "next": "card_71_concept_chat_4",
+        "button_text": "Haan! Antifungal bhi ➔"
+      }
+    },
+    {
+      "card_id": "card_71_concept_chat_4",
+      "card_slug": "card_71_concept_chat_4",
+      "type": "chat",
+      "concept_id": "antifungal_drugs",
+      "level": 2,
+      "progress": {
+        "current": 71,
+        "total": 80
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "ANTIFUNGAL DRUGS - Fungal infections ke liye. Common examples - Clotrimazole, Fluconazole, Griseofulvin. Ye mainly skin infections (ringworm, athlete's foot) aur systemic fungal infections mein use hote hain. Ye fungal cell membrane ko disrupt karte hain by inhibiting ergosterol synthesis."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir fungus bhi infection cause karta hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! Dandruff bhi ek fungal infection hai (Malassezia fungus). Anti-dandruff shampoos mein ketoconazole ya zinc pyrithione hota hai jo antifungal hai. Candida fungus oral thrush aur vaginal infections cause karta hai. Ye NEET mein medical mycology ke under aata hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "To bacteria, virus, fungus, protozoa - sabke alag drugs!"
+        }
+      ],
+      "navigation": {
+        "next": "card_72_drug_administration",
+        "button_text": "Perfect categorization! Route ➔"
+      }
+    },
+    {
+      "card_id": "card_72_drug_administration",
+      "card_slug": "card_72_drug_administration",
+      "type": "chat",
+      "concept_id": "routes_of_drug_administration",
+      "level": 2,
+      "progress": {
+        "current": 72,
+        "total": 80
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Drugs body mein different routes se jaati hain. ORAL route (muh se tablet/syrup) sabse common, convenient par slow absorption. INTRAVENOUS (IV, seede vein mein injection) fastest effect, emergency mein use hoti hai. INTRAMUSCULAR (IM, muscle mein injection) moderate speed. SUBCUTANEOUS (skin ke niche, insulin injection jaisi) slow release."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir emergency mein IV kyun use karte hain?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Kyunki IV direct bloodstream mein jaata hai, 100% bioavailability milti hai aur instant effect hota hai. Oral drugs ko pehle stomach, phir liver cross karna padta hai (First Pass Metabolism), to bahut drug waste ho jati hai. TOPICAL route (skin par cream/ointment) local action ke liye. INHALATION (saans dwara) asthma inhalers mein."
+        },
+        {
+          "speaker": "raju",
+          "text": "Different situations ke liye different routes!"
+        }
+      ],
+      "navigation": {
+        "next": "card_73_drug_interactions",
+        "button_text": "Smart delivery! Interactions ➔"
+      }
+    },
+    {
+      "card_id": "card_73_drug_interactions",
+      "card_slug": "card_73_drug_interactions",
+      "type": "chat",
+      "concept_id": "drug_drug_interactions",
+      "level": 2,
+      "progress": {
+        "current": 73,
+        "total": 80
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Bahut important concept - DRUG INTERACTIONS. Jab do ya zyada drugs saath lete ho to ek drug dusre ko affect kar sakti hai. SYNERGISTIC effect - dono milke zyada powerful ho jati hain. Example - Aspirin + Paracetamol saath lene se pain relief zyada hota hai. Par ye dangerous bhi ho sakta hai if not prescribed!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab do drugs ek saath lena risky hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan agar doctor ne prescribe nahi kiya to. ANTAGONISTIC effect - ek drug dusre ke effect ko cancel kar deti hai. Drug-Food interaction bhi hota hai - example: kuch antibiotics milk ke saath nahi leni chahiye kyunki calcium absorption block kar deta hai. Alcohol ke saath bahut drugs dangerous combination banati hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Isliye doctor poori list poochte hain ki kya drugs le rahe ho!"
+        }
+      ],
+      "navigation": {
+        "next": "card_74_generic_vs_branded",
+        "button_text": "Exactly! Generic drugs ➔"
+      }
+    },
+    {
+      "card_id": "card_74_generic_vs_branded",
+      "card_slug": "card_74_generic_vs_branded",
+      "type": "chat",
+      "concept_id": "generic_branded_drugs",
+      "level": 2,
+      "progress": {
+        "current": 74,
+        "total": 80
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "GENERIC vs BRANDED drugs - Raju, ek hi chemical ki different company ki medicines dekhi hain? Example - Crocin aur Calpol dono mein Paracetamol hai. Crocin aur Calpol BRAND NAMES hain, Paracetamol GENERIC NAME hai. Generic drugs same chemical composition hoti hain, par branded se sasti hoti hain kyunki marketing cost kam hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "To generic lena zyada sense banata hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! Government Jan Aushadhi Kendras mein generic medicines milti hain bahut sasti. Par quality assurance check karo ki manufacturing achhi company ki ho. DRUG CONTROLLER GENERAL OF INDIA (DCGI) regulate karta hai drug approvals aur quality. Ye government initiatives mein SSC aur UPSC prelims mein current affairs ke saath aata hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Jan Aushadhi scheme! Ye to news mein bhi suna hai!"
+        }
+      ],
+      "navigation": {
+        "next": "card_75_food_fortification",
+        "button_text": "Haan current GK! Fortification ➔"
+      }
+    },
+    {
+      "card_id": "card_75_food_fortification",
+      "card_slug": "card_75_food_fortification",
+      "type": "chat",
+      "concept_id": "food_fortification_concept",
+      "level": 2,
+      "progress": {
+        "current": 75,
+        "total": 80
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "FOOD FORTIFICATION - Ye food mein deliberately essential nutrients add karna hai taaki deficiency diseases na hon. Example - IODIZED SALT mein iodine add kiya jata hai goiter (thyroid problem) rokne ke liye. Milk mein Vitamin D fortification hota hai. Wheat flour mein Iron fortification government scheme hai India mein!"
+        },
+        {
+          "speaker": "raju",
+          "text": "To namak mein iodine isliye hoti hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul! India mein mandatory hai iodized salt. Golden Rice mein Vitamin A (beta-carotene) genetically add kiya gaya hai to prevent blindness in children. Double Fortified Salt (DFS) mein iodine + iron dono hote hain. Ye public health initiatives UPSC prelims aur BPSC current affairs mein aati hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Chemistry health improvement mein kitna kaam aata hai!"
+        }
+      ],
+      "navigation": {
+        "next": "card_76_harmful_additives",
+        "button_text": "Haan society development! Dark side ➔"
+      }
+    },
+    {
+      "card_id": "card_76_harmful_additives",
+      "card_slug": "card_76_harmful_additives",
+      "type": "chat",
+      "concept_id": "harmful_food_practices",
+      "level": 2,
+      "progress": {
+        "current": 76,
+        "total": 80
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ab dark side - HARMFUL ADDITIVES jo illegally use hote hain. Formalin (formaldehyde) fish aur paneer mein preservation ke liye - ye highly toxic hai aur cancer cause kar sakta hai. Rhodamine B (textile dye) sweets ko red color dene ke liye - ye banned hai par kuch unethical sellers use karte hain. Metanil Yellow (another textile dye) turmeric powder mein milaya jata hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Hain?! Ye to bahut dangerous hai Sir!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan Raju! Isliye FSSAI certified products hi lena chahiye. Plastic rice, artificial eggs jaise fake food products bhi market mein aate hain. LEAD CHROMATE (yellow pigment) haldi mein milane se lead poisoning hota hai. Ye adulteration exam mein current affairs aur ethics questions mein aata hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "To awareness bahut zaroori hai!"
+        }
+      ],
+      "navigation": {
+        "next": "card_77_chemistry_career",
+        "button_text": "Bilkul! Career options ➔"
+      }
+    },
+    {
+      "card_id": "card_77_chemistry_career",
+      "card_slug": "card_77_chemistry_career",
+      "type": "chat",
+      "concept_id": "chemistry_careers",
+      "level": 2,
+      "progress": {
+        "current": 77,
+        "total": 80
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, Chemistry in Everyday Life sirf exam topic nahi hai - ye career options bhi hai! PHARMACEUTICAL INDUSTRY mein drug development, quality control. FOOD TECHNOLOGY mein food preservation, product development. COSMETIC CHEMISTRY mein skin care, hair care products. FORENSIC CHEMISTRY mein crime investigation!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir chemistry itne saare fields mein use hoti hai!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! CLINICAL BIOCHEMISTRY hospitals mein diagnostic tests. ENVIRONMENTAL CHEMISTRY pollution control, water treatment. AGRICULTURAL CHEMISTRY pesticides, fertilizers. Tumne dekha kitna vast hai chemistry ka application! Ye samajhne se exam mein confidence aata hai aur real-life connection bhi ban jata hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "Ab chemistry boring nahi lagti Sir, practical lagti hai!"
+        }
+      ],
+      "navigation": {
+        "next": "card_78_final_motivation",
+        "button_text": "Perfect mindset! Final words ➔"
+      }
+    },
+    {
+      "card_id": "card_78_final_motivation",
+      "card_slug": "card_78_final_motivation",
+      "type": "chat",
+      "concept_id": "final_chapter_motivation",
+      "level": 2,
+      "progress": {
+        "current": 78,
+        "total": 80
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, aaj tumne seekha - Analgesics se lekar Antimicrobials, Tranquilizers se lekar Antacids, Food additives se lekar Soaps aur Detergents. Ye sab tumhare ghar mein hain, daily life mein use hote hain. Ab jab bhi koi medicine lo ya food packet dekho, tum chemistry samajh paoge!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir ab lagta hai chemistry hamari zindagi mein har jagah hai!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul! Exam mein ye topic SSC, Railway, BPSC, NEET sabme aata hai. Multi-statement questions, Assertion-Reason, Matching, Scientists, Chemical names, Functions - sab kuch cover kiya humne. Tumhara confidence ab officer level hai! Yaad rakho - Chemistry is not just a subject, it's the science of life itself!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Thank you Sir! Ab Chemistry in Everyday Life mera strong topic hai! 💪"
+        }
+      ],
+      "navigation": {
+        "next": "card_79_ultimate_summary",
+        "button_text": "Final Revision Card ➔"
+      }
+    },
+    {
+      "card_id": "card_79_ultimate_summary",
+      "card_slug": "card_79_ultimate_summary",
+      "type": "summary",
+      "concept_id": "ultimate_chapter_summary",
+      "level": 2,
+      "progress": {
+        "current": 79,
+        "total": 80
+      },
+      "summary_payload": {
+        "title": "🏆 ULTIMATE OFFICER REVISION - CHEMISTRY IN EVERYDAY LIFE",
+        "revision_points": [
+          {
+            "topic": "Drug Classifications (MUST KNOW)",
+            "point": "Analgesics: Non-Narcotic (Aspirin-NSAID, Paracetamol) vs Narcotic (Morphine from opium). Antibiotics: Penicillin (Fleming-1929), Broad (Chloramphenicol) vs Narrow. Antiseptics: Dettol, Tincture Iodine (living tissue). Disinfectants: Phenol (non-living). Tranquilizers: Equanil, Valium (CNS, anxiety)."
+          },
+          {
+            "topic": "Food Additives Master List",
+            "point": "Sweeteners: Aspartame (100x, unstable heat), Saccharin (300x), Alitame (2000x). Preservatives: Sodium benzoate (soft drinks), K-metabisulphite (wine). Antioxidants: BHA, BHT (prevent rancidity). FSSAI regulates India."
+          },
+          {
+            "topic": "Soap vs Detergent (CRITICAL)",
+            "point": "Soap: Fatty acid salts (C₁₇H₃₅COONa), Saponification (oil+NaOH). Fails in hard water (Ca²⁺/Mg²⁺ → scum). Detergent: Alkyl sulphates, works in hard water (soluble salts). Both form micelles (hydrophobic tail inside, hydrophilic head outside)."
+          },
+          {
+            "topic": "Biodegradability & Environment",
+            "point": "Biodegradable: Linear chain detergents (LAS). Non-biodegradable: Branched chain (foam pollution). Harmful additives: Formalin, Rhodamine B, Metanil Yellow (banned but used illegally)."
+          },
+          {
+            "topic": "Scientist Timeline (SSC Favorites)",
+            "point": "Alexander Fleming: Penicillin (1929), Nobel (1945). Edward Jenner: Smallpox vaccine (1796). Louis Pasteur: Rabies vaccine. DCGI: Drug regulation India. Jan Aushadhi: Generic medicines scheme."
+          },
+          {
+            "topic": "Advanced Concepts (BPSC/NEET)",
+            "point": "Drug-Receptor: Agonists (activate) vs Antagonists (block). Enzyme Inhibition: Aspirin (COX inhibitor), Sulpha drugs (folic acid synthesis). Routes: IV (fastest), Oral (slowest), IM (moderate). Antivirals ≠ Antibiotics. Antimalarials: Quinine (Cinchona bark), Chloroquine, Artemisinin."
+          },
+          {
+            "topic": "BPSC Trap Questions",
+            "point": "Statement: 'Paracetamol reduces inflammation' (FALSE - only pain/fever). 'Broad spectrum always better' (FALSE - kills good bacteria). 'Antibiotics cure viral infections' (FALSE). 'Vaccines are drugs' (FALSE - biological preparations). 'Same substance can't be antiseptic & disinfectant' (FALSE - Phenol can be both)."
+          },
+          {
+            "topic": "Current Affairs Integration",
+            "point": "Fortification: Iodized salt (goiter prevention), DFS (iodine+iron), Golden Rice (Vitamin A). COVID relevance: Remdesivir (antiviral), Vaccines (immunity not treatment). Food safety: FSSAI certification, Adulteration awareness."
+          }
+        ]
+      },
+      "navigation": {
+        "next": "card_80_trophy",
+        "button_text": "Claim Your Trophy! 🏆"
+      }
+    },
+    {
+      "card_id": "card_80_trophy",
+      "card_slug": "card_80_trophy",
+      "type": "milestone",
+      "concept_id": "chapter_completion",
+      "level": 2,
+      "progress": {
+        "current": 80,
+        "total": 80
+      },
+      "milestone_payload": {
+        "title": "🎉 CHAPTER COMPLETED! 🎉",
+        "badge_emoji": "🏆",
+        "completed_topic": "CHEMISTRY IN EVERYDAY LIFE - FULL MASTERY",
+        "xp_earned": 500,
+        "milestone_progress": "100% Complete - Officer Level Achieved!",
+        "motivational_quote": "From painkillers to soaps, from sweeteners to detergents - you've mastered the chemistry of life! SSC, Railway, BPSC, NEET - sabke questions ab tumhare control mein! You're not just a student anymore, you're a CHEMISTRY WARRIOR! 🔥💊🧪 Keep this momentum - Officer banne wale ho! 🚀"
+      },
+      "navigation": {
+        "next": null,
+        "button_text": "Back to Dashboard 🏠"
+      }
+    }
+  ]
+}
