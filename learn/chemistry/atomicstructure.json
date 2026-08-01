@@ -1,0 +1,2760 @@
+{
+  "topic_id": "atomic_structure_chemistry_complete",
+  "topic_title": "Atomic Structure",
+  "target_exams": [
+    "BPSC",
+    "BSSC",
+    "RRB NTPC",
+    "SSC CGL",
+    "NEET",
+    "UPSC Prelims"
+  ],
+  "total_cards": 80,
+  "characters": {
+    "aman": {
+      "name": "Aman Sir",
+      "role": "teacher",
+      "avatar": "👨‍🏫"
+    },
+    "raju": {
+      "name": "Raju",
+      "role": "student",
+      "avatar": "👦"
+    }
+  },
+  "cards": [
+    {
+      "card_id": "card_01_intro",
+      "card_slug": "card_01_intro",
+      "type": "intro",
+      "concept_id": "chapter_introduction",
+      "level": 1,
+      "progress": {
+        "current": 1,
+        "total": 80
+      },
+      "intro_payload": {
+        "title": "Atomic Structure",
+        "icon": "⚛️",
+        "description": "Journey from the tiniest particle to the building blocks of the universe!",
+        "target_exams": [
+          "BPSC",
+          "BSSC",
+          "RRB NTPC",
+          "SSC CGL",
+          "NEET",
+          "UPSC Prelims"
+        ],
+        "learning_outcomes": [
+          "Understand Discovery of Subatomic Particles",
+          "Master Thomson, Rutherford & Bohr's Atomic Models",
+          "Learn Quantum Numbers & Electronic Configuration",
+          "Decode Aufbau, Pauli & Hund's Rules",
+          "Solve PYQs from SSC, Railway, BPSC & NEET"
+        ],
+        "estimated_time": "45 minutes",
+        "total_concepts": 14
+      },
+      "navigation": {
+        "next": "card_02_daily_life_intro",
+        "button_text": "Start Learning 🚀"
+      }
+    },
+    {
+      "card_id": "card_02_daily_life_intro",
+      "card_slug": "card_02_daily_life_intro",
+      "type": "chat",
+      "concept_id": "atom_introduction_daily_life",
+      "level": 1,
+      "progress": {
+        "current": 2,
+        "total": 80
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, tumne kabhi socha hai ki ye mobile, table, hawa, paani, tumhara body - sabkuch kis cheez se bana hai?"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir, science mein pada tha matter se bana hai sab kuch... matlab solid, liquid, gas..."
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul sahi! Par agar main puchun ki iss matter ki sabse chhoti unit kya hai? Matlab agar tum paani ko todne lago, todne lago, todne lago... akhir mein kya bachega?"
+        },
+        {
+          "speaker": "raju",
+          "text": "Hmmm... sabse chhoti cheez? Koi bahut chhota particle?"
+        }
+      ],
+      "navigation": {
+        "next": "card_03_atom_definition",
+        "button_text": "Haan! Wahi seekhte hain ➔"
+      }
+    },
+    {
+      "card_id": "card_03_atom_definition",
+      "card_slug": "card_03_atom_definition",
+      "type": "chat",
+      "concept_id": "atom_basic_definition",
+      "level": 1,
+      "progress": {
+        "current": 3,
+        "total": 80
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Us sabse chhoti unit ko ATOM kehte hain! Greek word 'atomos' se aaya hai jiska matlab hai 'indivisible' - jo divide na ho sake. Ancient Greek philosopher Democritus ne 400 BC mein ye idea diya tha."
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab atom ko tod nahi sakte? Par Sir aapne bola todne lago... to atom ke baad kya?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Dekho, pehle scientists ko lagta tha atom indivisible hai. Par baad mein pata chala ki atom khud bhi particles se bana hai! Democritus sahi the concept mein par technically atom bhi divide ho sakta hai. Modern definition kehti hai - Atom is the smallest particle of an element that retains all chemical properties of that element."
+        },
+        {
+          "speaker": "raju",
+          "text": "Achhaa... to atom ke andar bhi kuch hota hai?"
+        }
+      ],
+      "navigation": {
+        "next": "card_04_subatomic_intro",
+        "button_text": "Bilkul! Discovery journey shuru ➔"
+      }
+    },
+    {
+      "card_id": "card_04_subatomic_intro",
+      "card_slug": "card_04_subatomic_intro",
+      "type": "chat",
+      "concept_id": "subatomic_particles_introduction",
+      "level": 1,
+      "progress": {
+        "current": 4,
+        "total": 80
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Haan Raju! Atom ke andar teen main particles hote hain - Electron, Proton aur Neutron. Inhe SUBATOMIC PARTICLES kehte hain. In teeno ki discovery alag-alag scientists ne ki thi alag-alag time par. Ye discovery journey bahut interesting hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir ye teen particles ka kya kaam hai? Aur sabse pehle kaun discover hua tha?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Sabse pehle ELECTRON discover hua tha 1897 mein. Scientist J.J. Thomson ne discovery ki thi. Iske baad Proton aur phir Neutron. Har particle ki apni special property hai - charge, mass, position. Ek-ek karke samajhte hain chronologically!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Okay Sir! Pehle electron ke baare mein batao."
+        }
+      ],
+      "navigation": {
+        "next": "card_05_electron_discovery",
+        "button_text": "Electron ki kahani ➔"
+      }
+    },
+    {
+      "card_id": "card_05_electron_discovery",
+      "card_slug": "card_05_electron_discovery",
+      "type": "chat",
+      "concept_id": "electron_discovery_thomson",
+      "level": 1,
+      "progress": {
+        "current": 5,
+        "total": 80
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "1897 mein British scientist J.J. Thomson ne CATHODE RAY TUBE experiment kiya. Usne ek glass tube mein vacuum banaya, uske dono ends par metal plates lagaye aur high voltage apply ki. Usne dekha ki cathode (negative plate) se kuch rays nikli jo anode (positive plate) ki taraf gayi."
+        },
+        {
+          "speaker": "raju",
+          "text": "To wo rays kya thi Sir?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Pehle unhe Cathode Rays kaha. Par Thomson ne prove kiya ki ye actually negatively charged particles hain! Usne inhe ELECTRONS naam diya. Electron ka charge = -1.6 × 10⁻¹⁹ Coulombs hai aur mass = 9.1 × 10⁻³¹ kg. Bahut chhota! Iske liye Thomson ko 1906 mein Nobel Prize mila."
+        },
+        {
+          "speaker": "raju",
+          "text": "Wow! To electron negative charge wala particle hai jo bahut halka hai!"
+        }
+      ],
+      "navigation": {
+        "next": "card_06_electron_properties",
+        "button_text": "Aur properties dekho ➔"
+      }
+    },
+    {
+      "card_id": "card_06_electron_properties",
+      "card_slug": "card_06_electron_properties",
+      "type": "chat",
+      "concept_id": "electron_properties_details",
+      "level": 1,
+      "progress": {
+        "current": 6,
+        "total": 80
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Electron ki key properties yaad rakho exam ke liye - (1) Charge = -1 (relative charge) ya -1.6 × 10⁻¹⁹ C (actual charge), (2) Mass = 1/1836 times of proton (almost negligible), (3) Denoted by symbol 'e⁻' or '₋₁e⁰', (4) Present outside the nucleus in shells/orbitals."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir ye 1/1836 kya hai? Matlab electron proton se 1836 times halka hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul sahi samjhe! Electron itna halka hai ki agar proton ka mass 1 assume karo to electron ka mass sirf 0.000545 hoga, matlab almost 1/1836. Isliye atom ka mass calculate karte time electron ko ignore kar dete hain usually. Ye ratio SSC aur Railway mein zaroor puchte hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Accha! To electron bahut light hai. Ab proton ka discovery kab hua?"
+        }
+      ],
+      "navigation": {
+        "next": "card_07_proton_discovery",
+        "button_text": "Proton discovery ➔"
+      }
+    },
+    {
+      "card_id": "card_07_proton_discovery",
+      "card_slug": "card_07_proton_discovery",
+      "type": "chat",
+      "concept_id": "proton_discovery_goldstein",
+      "level": 1,
+      "progress": {
+        "current": 7,
+        "total": 80
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Proton ki discovery Goldstein ne 1886 mein ki thi jab usne ANODE RAYS (or CANAL RAYS) discover kiye. Par proton ka naam aur proper characterization Ernest Rutherford ne 1919 mein kiya. Rutherford ne prove kiya ki proton positively charged particle hai jo nucleus mein rehta hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "To proton positive charge wala hai? Aur ye nucleus kya hai Sir?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! Proton ka charge = +1 (relative) ya +1.6 × 10⁻¹⁹ C (actual). Mass = 1.67 × 10⁻²⁷ kg jo electron se lagbhag 1836 times heavy hai. Nucleus atom ka center hota hai jahan proton aur neutron rehte hain. Bahut dense aur heavy hota hai. Baaki jagah electrons ghumte rehte hain."
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab atom ke beech mein nucleus hai jisme proton hai, aur bahar electrons!"
+        }
+      ],
+      "navigation": {
+        "next": "card_08_neutron_discovery",
+        "button_text": "Perfect! Ab neutron ➔"
+      }
+    },
+    {
+      "card_id": "card_08_neutron_discovery",
+      "card_slug": "card_08_neutron_discovery",
+      "type": "chat",
+      "concept_id": "neutron_discovery_chadwick",
+      "level": 1,
+      "progress": {
+        "current": 8,
+        "total": 80
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Sabse last mein NEUTRON discover hua. British scientist James Chadwick ne 1932 mein neutron ki discovery ki jab unhone beryllium par alpha particles bombard kiye. Neutron electrically neutral particle hai - na positive, na negative. Iska charge zero hai! Iske liye Chadwick ko 1935 mein Nobel Prize mila."
+        },
+        {
+          "speaker": "raju",
+          "text": "Neutral matlab koi charge nahi? To iska kya kaam hai atom mein?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bahut important kaam hai! Neutron bhi nucleus mein proton ke saath rehta hai. Mass lagbhag proton ke barabar hai (1.675 × 10⁻²⁷ kg). Neutron nucleus ko stable rakhta hai kyunki proton-proton mein repulsion hota hai (dono positive). Neutron beech mein bind karta hai through STRONG NUCLEAR FORCE. Iske bina nucleus tut jayega!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Ohh! To neutron ek binding agent hai nucleus ko stable rakhne ke liye!"
+        }
+      ],
+      "navigation": {
+        "next": "card_09_subatomic_quiz_1",
+        "button_text": "Bilkul! Ab test karo ➔"
+      }
+    },
+    {
+      "card_id": "card_09_subatomic_quiz_1",
+      "card_slug": "card_09_subatomic_quiz_1",
+      "type": "quiz",
+      "concept_id": "electron_discovery_quiz",
+      "level": 1,
+      "progress": {
+        "current": 9,
+        "total": 80
+      },
+      "quiz_payload": {
+        "question": "Who discovered the ELECTRON and in which year? (SSC CGL 2019 PYQ Pattern)",
+        "options": [
+          {
+            "id": "A",
+            "text": "Ernest Rutherford, 1911"
+          },
+          {
+            "id": "B",
+            "text": "J.J. Thomson, 1897"
+          },
+          {
+            "id": "C",
+            "text": "James Chadwick, 1932"
+          },
+          {
+            "id": "D",
+            "text": "Goldstein, 1886"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "J.J. Thomson discovered the ELECTRON in 1897 through his famous Cathode Ray Tube experiment. He received the Nobel Prize in Physics in 1906 for this discovery. Goldstein discovered anode rays (1886), Rutherford discovered proton (1919), and Chadwick discovered neutron (1932)."
+      },
+      "navigation": {
+        "next": "card_10_subatomic_quiz_2",
+        "button_text": "Next Question (2/3) ➔"
+      }
+    },
+    {
+      "card_id": "card_10_subatomic_quiz_2",
+      "card_slug": "card_10_subatomic_quiz_2",
+      "type": "quiz",
+      "concept_id": "neutron_discovery_quiz",
+      "level": 1,
+      "progress": {
+        "current": 10,
+        "total": 80
+      },
+      "quiz_payload": {
+        "question": "Which subatomic particle is electrically NEUTRAL and was discovered by James Chadwick? (Railway NTPC 2020 Pattern)",
+        "options": [
+          {
+            "id": "A",
+            "text": "Electron"
+          },
+          {
+            "id": "B",
+            "text": "Proton"
+          },
+          {
+            "id": "C",
+            "text": "Neutron"
+          },
+          {
+            "id": "D",
+            "text": "Positron"
+          }
+        ],
+        "correct_option_id": "C",
+        "explanation": "NEUTRON is the electrically neutral particle (zero charge) discovered by James Chadwick in 1932. It is present in the nucleus along with protons. Electron has -1 charge, Proton has +1 charge. Chadwick received the Nobel Prize in 1935 for this discovery."
+      },
+      "navigation": {
+        "next": "card_11_subatomic_quiz_3",
+        "button_text": "Next Question (3/3) ➔"
+      }
+    },
+    {
+      "card_id": "card_11_subatomic_quiz_3",
+      "card_slug": "card_11_subatomic_quiz_3",
+      "type": "quiz",
+      "concept_id": "mass_ratio_quiz",
+      "level": 1,
+      "progress": {
+        "current": 11,
+        "total": 80
+      },
+      "quiz_payload": {
+        "question": "The mass of an electron is approximately how many times LIGHTER than a proton? (BPSC 2018 Pattern)",
+        "options": [
+          {
+            "id": "A",
+            "text": "100 times"
+          },
+          {
+            "id": "B",
+            "text": "1000 times"
+          },
+          {
+            "id": "C",
+            "text": "1836 times"
+          },
+          {
+            "id": "D",
+            "text": "10000 times"
+          }
+        ],
+        "correct_option_id": "C",
+        "explanation": "An electron is approximately 1836 times LIGHTER than a proton. Electron mass = 9.1 × 10⁻³¹ kg, Proton mass = 1.67 × 10⁻²⁷ kg. Therefore, mass of proton/mass of electron ≈ 1836. This is a very frequently asked numerical ratio in SSC, Railway, and BPSC exams."
+      },
+      "navigation": {
+        "next": "card_12_milestone_subatomic",
+        "button_text": "Check Score ➔"
+      }
+    },
+    {
+      "card_id": "card_12_milestone_subatomic",
+      "card_slug": "card_12_milestone_subatomic",
+      "type": "milestone",
+      "concept_id": "subatomic_particles_complete",
+      "level": 1,
+      "progress": {
+        "current": 12,
+        "total": 80
+      },
+      "milestone_payload": {
+        "title": "🎉 SUBATOMIC PARTICLES MASTERED!",
+        "badge_emoji": "⚡",
+        "completed_topic": "Electron, Proton, Neutron Discovery",
+        "xp_earned": 50,
+        "milestone_progress": "Module 1/7 Complete",
+        "motivational_quote": "Amazing! You've unlocked the secrets of atom's building blocks! Thomson, Rutherford, Chadwick would be proud! 🚀"
+      },
+      "navigation": {
+        "next": "card_13_thomson_model_intro",
+        "button_text": "Next: Atomic Models ➔"
+      }
+    },
+    {
+      "card_id": "card_13_thomson_model_intro",
+      "card_slug": "card_13_thomson_model_intro",
+      "type": "chat",
+      "concept_id": "thomson_model_introduction",
+      "level": 1,
+      "progress": {
+        "current": 13,
+        "total": 80
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ab jab scientists ko pata chal gaya ki atom mein electron, proton hain, to next question tha - ye atom dikhta kaisa hai? Kaise arranged hain ye particles? Sabse pehla atomic model J.J. Thomson ne 1904 mein propose kiya."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir wahi scientist jinhone electron discover kiya tha?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul! Thomson ne socha ki atom ek positively charged sphere hai jaise watermelon. Aur electrons us sphere mein randomly embedded hain jaise watermelon mein seeds. Isko PLUM PUDDING MODEL bhi kehte hain - jaise plum pudding cake mein dry fruits phanse hote hain. Exam mein dono names aate hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Accha! To pura atom positive hai aur usme electrons ghuse hain?"
+        }
+      ],
+      "navigation": {
+        "next": "card_14_thomson_limitations",
+        "button_text": "Haan, par problem thi ➔"
+      }
+    },
+    {
+      "card_id": "card_14_thomson_limitations",
+      "card_slug": "card_14_thomson_limitations",
+      "type": "chat",
+      "concept_id": "thomson_model_limitations",
+      "level": 1,
+      "progress": {
+        "current": 14,
+        "total": 80
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Thomson ka model initially achha laga. Par ye model kuch cheezein explain nahi kar paya - (1) Atom ka mass center mein concentrated kyun hai, (2) Electrons ki specific arrangement kya hai, (3) Rutherford ke Alpha Scattering Experiment ke results ko explain nahi kar paya. Isliye ye model fail ho gaya."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir ye Alpha Scattering Experiment kya hai? Kisne kiya?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bahut important experiment hai! Ernest Rutherford aur uske students Hans Geiger aur Ernest Marsden ne 1909 mein ye experiment kiya. Isi experiment ne Thomson ke model ko reject kar diya aur atom ki asli structure reveal ki. Isko detail mein samajhte hain kyunki ye NEET aur BPSC mein bahut puchte hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Haan Sir please! Ye experiment batao."
+        }
+      ],
+      "navigation": {
+        "next": "card_15_rutherford_experiment",
+        "button_text": "Game-changing experiment ➔"
+      }
+    },
+    {
+      "card_id": "card_15_rutherford_experiment",
+      "card_slug": "card_15_rutherford_experiment",
+      "type": "chat",
+      "concept_id": "alpha_scattering_experiment",
+      "level": 1,
+      "progress": {
+        "current": 15,
+        "total": 80
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Rutherford ne bahut thin GOLD FOIL liya (thickness sirf 100 atoms ki) aur uspar high-speed ALPHA PARTICLES (positively charged helium nuclei) ki beam maari. Usne socha agar Thomson ka model sahi hai to sab alpha particles seedhe pass ho jayenge kyunki positive charge uniformly distributed hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "To kya hua experiment mein Sir?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Surprising results mile! (1) Most alpha particles (99%) passed straight without deflection, (2) Kuch particles (around 1%) slightly deflect hue, (3) Bahut kam particles (1 in 20,000) completely bounce back ho gaye 180° angle par! Ye totally unexpected tha. Rutherford ne kaha 'It was as if you fired a bullet at tissue paper and it bounced back!'"
+        },
+        {
+          "speaker": "raju",
+          "text": "Wow! To iska matlab kya tha?"
+        }
+      ],
+      "navigation": {
+        "next": "card_16_rutherford_conclusions",
+        "button_text": "Shocking conclusion ➔"
+      }
+    },
+    {
+      "card_id": "card_16_rutherford_conclusions",
+      "card_slug": "card_16_rutherford_conclusions",
+      "type": "chat",
+      "concept_id": "rutherford_nuclear_model",
+      "level": 1,
+      "progress": {
+        "current": 16,
+        "total": 80
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Rutherford ne conclude kiya - (1) Atom ka most part EMPTY SPACE hai isliye most particles pass ho gaye, (2) Atom ka sara positive charge aur mass ek bahut CHHOTI jagah concentrated hai jo usne NUCLEUS naam diya, (3) Electrons nucleus ke around revolve karte hain jaise planets Sun ke around. Isko RUTHERFORD'S NUCLEAR MODEL kaha."
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab atom jyada tar khali hai aur beech mein ek chota sa nucleus hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Exactly! Agar atom ka size football stadium jaisa ho to nucleus beech mein rakha ek marble jaisa hoga! Baki sab jagah empty aur electrons boundaries par ghumte rahenge. Nucleus ka diameter = 10⁻¹⁵ m, atom ka diameter = 10⁻¹⁰ m. Matlab nucleus atom se 100,000 times chhota hai! Par usme 99.9% mass hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Bahut chhota par bahut heavy! Par Sir kya isme bhi koi problem thi?"
+        }
+      ],
+      "navigation": {
+        "next": "card_17_rutherford_limitations",
+        "button_text": "Haan, badi problem thi ➔"
+      }
+    },
+    {
+      "card_id": "card_17_rutherford_limitations",
+      "card_slug": "card_17_rutherford_limitations",
+      "type": "chat",
+      "concept_id": "rutherford_model_limitations",
+      "level": 1,
+      "progress": {
+        "current": 17,
+        "total": 80
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Rutherford ka model structure to sahi bataya par ek fundamental problem tha! According to classical electromagnetic theory (Maxwell's theory), jab koi charged particle accelerated motion kare (jaise circular path mein electron) to wo energy radiate karta hai continuously. Matlab electron energy lose karega!"
+        },
+        {
+          "speaker": "raju",
+          "text": "To agar energy lose karega to kya hoga?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Electron spiral path follow karte hue nucleus mein gir jayega! Matlab atom collapse ho jayega within 10⁻⁸ seconds! Par hum jaante hain atoms stable hain. Dusri problem - Rutherford ka model atom ki LINE SPECTRUM (discrete spectral lines) ko explain nahi kar paya. Iske solutions ke liye BOHR MODEL aaya 1913 mein!"
+        },
+        {
+          "speaker": "raju",
+          "text": "To Rutherford sahi tha structure mein par stability explain nahi kar paya?"
+        }
+      ],
+      "navigation": {
+        "next": "card_18_atomic_models_quiz_1",
+        "button_text": "Exactly! Pehle quiz ➔"
+      }
+    },
+    {
+      "card_id": "card_18_atomic_models_quiz_1",
+      "card_slug": "card_18_atomic_models_quiz_1",
+      "type": "quiz",
+      "concept_id": "thomson_model_quiz",
+      "level": 1,
+      "progress": {
+        "current": 18,
+        "total": 80
+      },
+      "quiz_payload": {
+        "question": "Thomson's Plum Pudding Model of atom suggests that: (SSC CHSL 2021 Pattern)",
+        "options": [
+          {
+            "id": "A",
+            "text": "Electrons revolve around the nucleus in fixed orbits"
+          },
+          {
+            "id": "B",
+            "text": "Positive charge is concentrated in the center called nucleus"
+          },
+          {
+            "id": "C",
+            "text": "Atom is a positively charged sphere with electrons embedded in it"
+          },
+          {
+            "id": "D",
+            "text": "Most of the atom is empty space"
+          }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Thomson's Plum Pudding Model (1904) proposed that the atom is a positively charged sphere (like pudding) with negatively charged electrons embedded randomly in it (like plums/raisins). Options A, B, and D are features of Rutherford's model, not Thomson's. This is a common confusion trap in exams!"
+      },
+      "navigation": {
+        "next": "card_19_atomic_models_quiz_2",
+        "button_text": "Next Question (2/3) ➔"
+      }
+    },
+    {
+      "card_id": "card_19_atomic_models_quiz_2",
+      "card_slug": "card_19_atomic_models_quiz_2",
+      "type": "quiz",
+      "concept_id": "rutherford_experiment_quiz",
+      "level": 1,
+      "progress": {
+        "current": 19,
+        "total": 80
+      },
+      "quiz_payload": {
+        "question": "In Rutherford's Alpha Scattering Experiment, which metal foil was used? (Railway Group D 2022 Pattern)",
+        "options": [
+          {
+            "id": "A",
+            "text": "Silver foil"
+          },
+          {
+            "id": "B",
+            "text": "Aluminum foil"
+          },
+          {
+            "id": "C",
+            "text": "Gold foil"
+          },
+          {
+            "id": "D",
+            "text": "Copper foil"
+          }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Rutherford used a very thin GOLD FOIL in his famous Alpha Scattering Experiment (1909). Gold was chosen because it is highly malleable and can be made into extremely thin sheets (only 100 atoms thick). This experiment led to the discovery of the atomic nucleus. This specific detail is frequently asked in Railway and SSC exams."
+      },
+      "navigation": {
+        "next": "card_20_atomic_models_quiz_3",
+        "button_text": "Next Question (3/3) ➔"
+      }
+    },
+    {
+      "card_id": "card_20_atomic_models_quiz_3",
+      "card_slug": "card_20_atomic_models_quiz_3",
+      "type": "quiz",
+      "concept_id": "rutherford_conclusion_quiz",
+      "level": 1,
+      "progress": {
+        "current": 20,
+        "total": 80
+      },
+      "quiz_payload": {
+        "question": "The fact that most alpha particles passed straight through the gold foil in Rutherford's experiment suggests that: (BPSC 2019 Pattern)",
+        "options": [
+          {
+            "id": "A",
+            "text": "Atoms are mostly empty space"
+          },
+          {
+            "id": "B",
+            "text": "Positive charge is spread throughout the atom"
+          },
+          {
+            "id": "C",
+            "text": "Electrons are embedded in positive sphere"
+          },
+          {
+            "id": "D",
+            "text": "Atoms are solid spheres"
+          }
+        ],
+        "correct_option_id": "A",
+        "explanation": "The observation that most alpha particles (99%) passed straight through the gold foil without deflection proved that ATOMS ARE MOSTLY EMPTY SPACE. Only a tiny central region (nucleus) contains concentrated positive charge and mass, which caused deflection of a few particles. This directly contradicted Thomson's model and established Rutherford's nuclear model."
+      },
+      "navigation": {
+        "next": "card_21_milestone_early_models",
+        "button_text": "Check Progress ➔"
+      }
+    },
+    {
+      "card_id": "card_21_milestone_early_models",
+      "card_slug": "card_21_milestone_early_models",
+      "type": "milestone",
+      "concept_id": "early_models_complete",
+      "level": 1,
+      "progress": {
+        "current": 21,
+        "total": 80
+      },
+      "milestone_payload": {
+        "title": "🎯 EARLY ATOMIC MODELS CONQUERED!",
+        "badge_emoji": "🔬",
+        "completed_topic": "Thomson & Rutherford Models",
+        "xp_earned": 50,
+        "milestone_progress": "Module 2/7 Complete",
+        "motivational_quote": "From plum pudding to nuclear model - you're thinking like a scientist now! Next: Bohr's revolutionary theory awaits! 💡"
+      },
+      "navigation": {
+        "next": "card_22_bohr_model_intro",
+        "button_text": "Enter Bohr's World ➔"
+      }
+    },
+    {
+      "card_id": "card_22_bohr_model_intro",
+      "card_slug": "card_22_bohr_model_intro",
+      "type": "chat",
+      "concept_id": "bohr_model_introduction",
+      "level": 1,
+      "progress": {
+        "current": 22,
+        "total": 80
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "1913 mein Danish scientist Niels Bohr ne ek revolutionary model propose kiya jo Rutherford ke limitations ko solve karta tha. Bohr ne HYDROGEN ATOM (sabse simple atom, sirf 1 electron) ke liye apna model diya. Ye model QUANTUM THEORY par based tha jo Max Planck ne diya tha."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir quantum theory matlab kya? Ye naya concept hai!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan bilkul naya tha! Planck ne kaha ki energy continuously nahi balki PACKETS (quantum/photon) mein release hoti hai. Bohr ne ye concept atomic structure par apply kiya. Bohr ne teen main POSTULATES (assumptions) diye. Pehle ye samajhte hain kyunki exam mein direct puchte hain these postulates!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Okay Sir, batao Bohr ke postulates!"
+        }
+      ],
+      "navigation": {
+        "next": "card_23_bohr_postulate_1",
+        "button_text": "First Postulate ➔"
+      }
+    },
+    {
+      "card_id": "card_23_bohr_postulate_1",
+      "card_slug": "card_23_bohr_postulate_1",
+      "type": "chat",
+      "concept_id": "bohr_postulate_stationary_orbits",
+      "level": 1,
+      "progress": {
+        "current": 23,
+        "total": 80
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "POSTULATE 1 - Electrons nucleus ke around STATIONARY ORBITS (fixed circular paths) mein revolve karte hain. In orbits mein rehte hue electron ENERGY RADIATE NAHI KARTA! Matlab energy constant rehti hai. Isliye atom stable hai! In orbits ko SHELLS bhi kehte hain - K, L, M, N (ya 1, 2, 3, 4...)."
+        },
+        {
+          "speaker": "raju",
+          "text": "Accha! To Bohr ne bola electron fixed orbit mein ghumta hai aur energy lose nahi karta? Ye to Rutherford ki problem solve ho gayi!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul! Ye first limitation solve hua. Ab second postulate - Ye stationary orbits wahi hoti hain jahan electron ka ANGULAR MOMENTUM (mvr) kisi integer ka multiple ho nh/2π ke. Matlab mvr = nh/2π, jahan n = 1,2,3... (integer), h = Planck's constant. Ye quantum condition hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Ye formula yaad rakhna padega! n kya hai ismein?"
+        }
+      ],
+      "navigation": {
+        "next": "card_24_bohr_postulate_2_3",
+        "button_text": "n = Principal Quantum Number ➔"
+      }
+    },
+    {
+      "card_id": "card_24_bohr_postulate_2_3",
+      "card_slug": "card_24_bohr_postulate_2_3",
+      "type": "chat",
+      "concept_id": "bohr_postulates_energy_transition",
+      "level": 1,
+      "progress": {
+        "current": 24,
+        "total": 80
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "n ko PRINCIPAL QUANTUM NUMBER kehte hain. n = 1 means first orbit (K shell), n = 2 means second orbit (L shell), etc. Har orbit ki fixed energy hoti hai. POSTULATE 3 - Jab electron ek orbit se dusre orbit mein JUMP karta hai tabhi energy absorb ya emit hoti hai! Energy change = ΔE = E₂ - E₁ = hν (photon energy)."
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab normal orbit mein rehne par koi energy change nahi, par jump karne par energy change hoti hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Perfect understanding! Jab electron lower orbit se higher orbit mein jata hai (excitation) to energy ABSORB hoti hai. Jab higher se lower mein aata hai (de-excitation) to energy EMIT hoti hai as light/photon. Isi se atom ki LINE SPECTRUM explain hoti hai! Particular wavelengths ki light emit hoti hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "Wah! To Bohr ne spectrum bhi explain kar diya!"
+        }
+      ],
+      "navigation": {
+        "next": "card_25_bohr_energy_formula",
+        "button_text": "Haan! Ab formula dekho ➔"
+      }
+    },
+    {
+      "card_id": "card_25_bohr_energy_formula",
+      "card_slug": "card_25_bohr_energy_formula",
+      "type": "chat",
+      "concept_id": "bohr_energy_formula_hydrogen",
+      "level": 1,
+      "progress": {
+        "current": 25,
+        "total": 80
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Bohr ne HYDROGEN atom ke liye nth orbit ki energy ka formula derive kiya - E_n = -13.6/n² eV (electron volt). Jaise n=1 (ground state) ke liye E₁ = -13.6 eV, n=2 ke liye E₂ = -13.6/4 = -3.4 eV. Negative sign ka matlab hai electron nucleus se bound hai. Energy badhne par (less negative hone par) electron nucleus se door jata hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir ye 13.6 eV value kya hai? Exam mein yaad rakhni padegi?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan zaroor! 13.6 eV = IONIZATION ENERGY of hydrogen atom in ground state (n=1). Matlab ground state se electron ko completely remove karne ke liye 13.6 eV energy chahiye. Ye value NEET, BPSC, SSC sabhi mein numerical questions mein use hoti hai! Orbit radius ka formula bhi hai - r_n = 0.529 × n² Å (Angstrom)."
+        },
+        {
+          "speaker": "raju",
+          "text": "To formulas yaad rakhne padenge! Par Bohr model mein bhi koi limitation thi kya?"
+        }
+      ],
+      "navigation": {
+        "next": "card_26_bohr_limitations",
+        "button_text": "Haan, kuch limitations hain ➔"
+      }
+    },
+    {
+      "card_id": "card_26_bohr_limitations",
+      "card_slug": "card_26_bohr_limitations",
+      "type": "chat",
+      "concept_id": "bohr_model_limitations",
+      "level": 1,
+      "progress": {
+        "current": 26,
+        "total": 80
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Bohr ka model hydrogen atom ke liye perfect tha par limitations bhi thi - (1) Sirf HYDROGEN aur HYDROGEN-LIKE ions (He⁺, Li²⁺) ke liye kaam karta hai, multi-electron atoms ke liye fail, (2) Spectral lines ki FINE STRUCTURE (splitting under magnetic field) explain nahi kar paya, (3) HEISENBERG UNCERTAINTY PRINCIPLE ko violate karta hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir ye Uncertainty Principle kya hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Heisenberg ne 1927 mein kaha ki kisi bhi electron ki exact POSITION aur exact MOMENTUM dono saath-saath accurately nahi jaan sakte. Mathematically: Δx × Δp ≥ h/4π. Par Bohr ne to exact circular orbit (fixed position) assume kiya tha! Isliye modern QUANTUM MECHANICAL MODEL aaya jo Schrödinger ne develop kiya."
+        },
+        {
+          "speaker": "raju",
+          "text": "To ab quantum mechanical model use hota hai?"
+        }
+      ],
+      "navigation": {
+        "next": "card_27_bohr_quiz_1",
+        "button_text": "Haan! Pehle Bohr quiz ➔"
+      }
+    },
+    {
+      "card_id": "card_27_bohr_quiz_1",
+      "card_slug": "card_27_bohr_quiz_1",
+      "type": "quiz",
+      "concept_id": "bohr_postulate_quiz",
+      "level": 1,
+      "progress": {
+        "current": 27,
+        "total": 80
+      },
+      "quiz_payload": {
+        "question": "According to Bohr's model, electron does NOT radiate energy when it is in: (NEET 2020 Pattern)",
+        "options": [
+          {
+            "id": "A",
+            "text": "Any orbit around the nucleus"
+          },
+          {
+            "id": "B",
+            "text": "Stationary orbits only"
+          },
+          {
+            "id": "C",
+            "text": "Jumping from one orbit to another"
+          },
+          {
+            "id": "D",
+            "text": "The nucleus itself"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "According to Bohr's First Postulate, electron does NOT radiate energy when it is revolving in STATIONARY ORBITS (fixed energy levels). Energy is only absorbed or emitted when the electron JUMPS between orbits. This resolved Rutherford's stability problem. This conceptual distinction is crucial for NEET and other exams."
+      },
+      "navigation": {
+        "next": "card_28_bohr_quiz_2",
+        "button_text": "Next Question (2/3) ➔"
+      }
+    },
+    {
+      "card_id": "card_28_bohr_quiz_2",
+      "card_slug": "card_28_bohr_quiz_2",
+      "type": "quiz",
+      "concept_id": "bohr_energy_quiz",
+      "level": 1,
+      "progress": {
+        "current": 28,
+        "total": 80
+      },
+      "quiz_payload": {
+        "question": "The energy of an electron in the ground state (n=1) of hydrogen atom is: (SSC CGL 2020 Pattern)",
+        "options": [
+          {
+            "id": "A",
+            "text": "-3.4 eV"
+          },
+          {
+            "id": "B",
+            "text": "-13.6 eV"
+          },
+          {
+            "id": "C",
+            "text": "+13.6 eV"
+          },
+          {
+            "id": "D",
+            "text": "-1.51 eV"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "The energy of electron in ground state (n=1) of hydrogen atom is -13.6 eV. This is calculated using Bohr's formula: E_n = -13.6/n² eV. For n=1, E₁ = -13.6/1² = -13.6 eV. This value represents the ionization energy of hydrogen and is one of the most important constants asked in SSC, Railway, and NEET exams."
+      },
+      "navigation": {
+        "next": "card_29_bohr_quiz_3",
+        "button_text": "Next Question (3/3) ➔"
+      }
+    },
+    {
+      "card_id": "card_29_bohr_quiz_3",
+      "card_slug": "card_29_bohr_quiz_3",
+      "type": "quiz",
+      "concept_id": "bohr_limitation_quiz",
+      "level": 1,
+      "progress": {
+        "current": 29,
+        "total": 80
+      },
+      "quiz_payload": {
+        "question": "Bohr's atomic model successfully explains the spectrum of: (BPSC 2021 Pattern)",
+        "options": [
+          {
+            "id": "A",
+            "text": "All atoms and ions"
+          },
+          {
+            "id": "B",
+            "text": "Only hydrogen atom and hydrogen-like ions"
+          },
+          {
+            "id": "C",
+            "text": "Multi-electron atoms only"
+          },
+          {
+            "id": "D",
+            "text": "Noble gases only"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Bohr's model successfully explains the spectrum of ONLY HYDROGEN ATOM and HYDROGEN-LIKE IONS (ions with single electron like He⁺, Li²⁺, Be³⁺). It fails for multi-electron atoms due to electron-electron interactions. This limitation is a favorite trap in BPSC and other competitive exams to test conceptual clarity."
+      },
+      "navigation": {
+        "next": "card_30_milestone_bohr",
+        "button_text": "Check Score ➔"
+      }
+    },
+    {
+      "card_id": "card_30_milestone_bohr",
+      "card_slug": "card_30_milestone_bohr",
+      "type": "milestone",
+      "concept_id": "bohr_model_complete",
+      "level": 1,
+      "progress": {
+        "current": 30,
+        "total": 80
+      },
+      "milestone_payload": {
+        "title": "🌟 BOHR'S MODEL MASTERED!",
+        "badge_emoji": "⚛️",
+        "completed_topic": "Bohr's Atomic Theory & Energy Levels",
+        "xp_earned": 50,
+        "milestone_progress": "Module 3/7 Complete",
+        "motivational_quote": "You've conquered quantum jumps and energy levels! Niels Bohr would give you a standing ovation! Ready for quantum mechanics? 🎯"
+      },
+      "navigation": {
+        "next": "card_31_quantum_mechanics_intro",
+        "button_text": "Enter Quantum World ➔"
+      }
+    },
+    {
+      "card_id": "card_31_quantum_mechanics_intro",
+      "card_slug": "card_31_quantum_mechanics_intro",
+      "type": "chat",
+      "concept_id": "quantum_mechanical_model_intro",
+      "level": 2,
+      "progress": {
+        "current": 31,
+        "total": 80
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ab modern atomic theory - QUANTUM MECHANICAL MODEL! Louis de Broglie ne 1924 mein bola ki agar light wave bhi hai aur particle bhi (photon), to electron bhi WAVE NATURE show kar sakta hai! Usne formula diya - λ = h/mv (wavelength = Planck constant / momentum). Isko WAVE-PARTICLE DUALITY kehte hain."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir electron wave kaise ho sakta hai? Wo to particle hai na?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Ye quantum mechanics ki beauty hai Raju! Electron DUAL nature rakhta hai - kabhi particle jaisa behave karta hai, kabhi wave jaisa. 1927 mein Davisson-Germer Experiment ne electron diffraction dikha kar de Broglie ko experimentally prove kiya. Iske baad Erwin Schrödinger ne 1926 mein WAVE EQUATION likhi electron ke liye!"
+        },
+        {
+          "speaker": "raju",
+          "text": "To Schrödinger ne kya kiya?"
+        }
+      ],
+      "navigation": {
+        "next": "card_32_schrodinger_equation",
+        "button_text": "Wave equation dekho ➔"
+      }
+    },
+    {
+      "card_id": "card_32_schrodinger_equation",
+      "card_slug": "card_32_schrodinger_equation",
+      "type": "chat",
+      "concept_id": "schrodinger_wave_equation",
+      "level": 2,
+      "progress": {
+        "current": 32,
+        "total": 80
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Schrödinger ne ek mathematical equation likhi jo electron ki wave nature ko describe karti hai - Hψ = Eψ (operator form). Ismein ψ (psi) ko WAVE FUNCTION kehte hain. Ye equation solve karne par hume ATOMIC ORBITALS milte hain - jahan electron milne ki probability highest hoti hai. Orbit nahi, ORBITAL!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir orbit aur orbital mein kya farak hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bahut important difference! ORBIT (Bohr model) = exact path jahan electron ghumta hai. ORBITAL (Quantum model) = 3D region jahan electron milne ki 90-95% probability hai. Hum exact position nahi bol sakte (Heisenberg), sirf probability! Orbital ki shape s, p, d, f types ki hoti hai. Ye shapes quantum numbers se decide hoti hain."
+        },
+        {
+          "speaker": "raju",
+          "text": "Quantum numbers matlab?"
+        }
+      ],
+      "navigation": {
+        "next": "card_33_quantum_numbers_intro",
+        "button_text": "Sabse important concept ➔"
+      }
+    },
+    {
+      "card_id": "card_33_quantum_numbers_intro",
+      "card_slug": "card_33_quantum_numbers_intro",
+      "type": "chat",
+      "concept_id": "quantum_numbers_introduction",
+      "level": 2,
+      "progress": {
+        "current": 33,
+        "total": 80
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Har electron atom mein chaar QUANTUM NUMBERS se describe hota hai - jaise tumhara address! (1) Principal Quantum Number (n), (2) Azimuthal Quantum Number (l), (3) Magnetic Quantum Number (m), (4) Spin Quantum Number (s). Ye char numbers milkar electron ki complete identity batate hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir ye BPSC aur NEET mein bahut aata hai na? Detail mein samjhao please!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul! Ye topic bahut important hai. Main har quantum number ko ek-ek karke detail mein samjhata hoon with examples aur exam tricks. Pehla hai Principal Quantum Number (n) - ye shell number ko represent karta hai. n = 1, 2, 3, 4... (K, L, M, N shells). Ye electron ki main energy aur nucleus se distance decide karta hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "Accha, to n se shell pata chalta hai. Baaki teen?"
+        }
+      ],
+      "navigation": {
+        "next": "card_34_azimuthal_quantum_number",
+        "button_text": "Azimuthal (l) quantum number ➔"
+      }
+    },
+    {
+      "card_id": "card_34_azimuthal_quantum_number",
+      "card_slug": "card_34_azimuthal_quantum_number",
+      "type": "chat",
+      "concept_id": "azimuthal_quantum_number",
+      "level": 2,
+      "progress": {
+        "current": 34,
+        "total": 80
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Dusra - AZIMUTHAL (or Angular Momentum) QUANTUM NUMBER 'l'. Ye subshell aur orbital ki SHAPE decide karta hai. Values hoti hain 0 to (n-1) tak. l = 0 means 's' orbital (spherical), l = 1 means 'p' orbital (dumbbell), l = 2 means 'd' orbital (double dumbbell), l = 3 means 'f' orbital (complex shape)."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir agar n = 3 hai to l ki values kya hongi?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Perfect question! Agar n = 3 (M shell) to l = 0, 1, 2 (kyunki 0 to n-1). Matlab 3s (l=0), 3p (l=1), 3d (l=2) subshells possible hain. Ek trick yaad rakho - s=0, p=1, d=2, f=3. Mnemonic: 'Sober Physicists Don't Find Quarks Easily' for s, p, d, f, g, h... Exam mein ye zaroor puchte hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Nice trick! Aage batao Sir."
+        }
+      ],
+      "navigation": {
+        "next": "card_35_magnetic_quantum_number",
+        "button_text": "Magnetic (m) quantum number ➔"
+      }
+    },
+    {
+      "card_id": "card_35_magnetic_quantum_number",
+      "card_slug": "card_35_magnetic_quantum_number",
+      "type": "chat",
+      "concept_id": "magnetic_quantum_number",
+      "level": 2,
+      "progress": {
+        "current": 35,
+        "total": 80
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Teesra - MAGNETIC QUANTUM NUMBER 'm' (ya m_l). Ye orbital ka ORIENTATION (space mein direction) batata hai. Values: -l se +l tak, including 0. Matlab total (2l + 1) values. Example: p orbital ke liye (l=1), m = -1, 0, +1 (3 orientations: px, py, pz). d orbital ke liye (l=2), m = -2, -1, 0, +1, +2 (5 orientations)."
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab p ke 3 orbitals aur d ke 5 orbitals hote hain different directions mein?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Exactly! s orbital (l=0) ke liye m = 0 (sirf 1 orientation, spherical hai). f orbital (l=3) ke liye m = -3, -2, -1, 0, +1, +2, +3 (7 orientations). Formula yaad rakho: Number of orbitals in subshell = 2l + 1. Ye numerical mein bahut use hota hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Got it! Ab last wala spin quantum number?"
+        }
+      ],
+      "navigation": {
+        "next": "card_36_spin_quantum_number",
+        "button_text": "Spin (s) quantum number ➔"
+      }
+    },
+    {
+      "card_id": "card_36_spin_quantum_number",
+      "card_slug": "card_36_spin_quantum_number",
+      "type": "chat",
+      "concept_id": "spin_quantum_number",
+      "level": 2,
+      "progress": {
+        "current": 36,
+        "total": 80
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Chautha aur last - SPIN QUANTUM NUMBER 's' (ya m_s). Electron apne axis par spin karta hai jaise Earth! Do directions mein spin ho sakta hai - CLOCKWISE (↓) ya ANTICLOCKWISE (↑). Values sirf do hain: +1/2 (spin up, ↑) ya -1/2 (spin down, ↓). Har orbital mein MAXIMUM 2 electrons with opposite spins!"
+        },
+        {
+          "speaker": "raju",
+          "text": "To ek orbital mein 2 electron ho sakte hain par opposite spin ke?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Perfect! Ye PAULI EXCLUSION PRINCIPLE hai - No two electrons can have same set of all four quantum numbers. Agar n, l, m same hain to s different hona chahiye! Isiliye ek orbital = maximum 2 electrons. Summary: s subshell = 1 orbital = 2e⁻, p = 3 orbitals = 6e⁻, d = 5 orbitals = 10e⁻, f = 7 orbitals = 14e⁻."
+        },
+        {
+          "speaker": "raju",
+          "text": "Wow! Ab clear ho gaya! Par Sir quantum numbers kaise assign karte hain?"
+        }
+      ],
+      "navigation": {
+        "next": "card_37_quantum_numbers_quiz_1",
+        "button_text": "Pehle practice karo ➔"
+      }
+    },
+    {
+      "card_id": "card_37_quantum_numbers_quiz_1",
+      "card_slug": "card_37_quantum_numbers_quiz_1",
+      "type": "quiz",
+      "concept_id": "azimuthal_value_quiz",
+      "level": 2,
+      "progress": {
+        "current": 37,
+        "total": 80
+      },
+      "quiz_payload": {
+        "question": "For a 3d orbital, the values of principal (n) and azimuthal (l) quantum numbers are: (NEET 2019 PYQ)",
+        "options": [
+          {
+            "id": "A",
+            "text": "n = 3, l = 0"
+          },
+          {
+            "id": "B",
+            "text": "n = 3, l = 1"
+          },
+          {
+            "id": "C",
+            "text": "n = 3, l = 2"
+          },
+          {
+            "id": "D",
+            "text": "n = 3, l = 3"
+          }
+        ],
+        "correct_option_id": "C",
+        "explanation": "For a 3d orbital: n = 3 (the coefficient before d), l = 2 (because d subshell always has l = 2). Remember: s=0, p=1, d=2, f=3. So 3d means third shell, d subshell → n=3, l=2. This is one of the most frequently asked questions in NEET and other medical/engineering entrance exams."
+      },
+      "navigation": {
+        "next": "card_38_quantum_numbers_quiz_2",
+        "button_text": "Next Question (2/3) ➔"
+      }
+    },
+    {
+      "card_id": "card_38_quantum_numbers_quiz_2",
+      "card_slug": "card_38_quantum_numbers_quiz_2",
+      "type": "quiz",
+      "concept_id": "magnetic_quantum_values",
+      "level": 2,
+      "progress": {
+        "current": 38,
+        "total": 80
+      },
+      "quiz_payload": {
+        "question": "How many orbitals are present in a d subshell? (SSC CGL 2021 Pattern)",
+        "options": [
+          {
+            "id": "A",
+            "text": "1"
+          },
+          {
+            "id": "B",
+            "text": "3"
+          },
+          {
+            "id": "C",
+            "text": "5"
+          },
+          {
+            "id": "D",
+            "text": "7"
+          }
+        ],
+        "correct_option_id": "C",
+        "explanation": "A d subshell has 5 orbitals. This is calculated using formula: Number of orbitals = 2l + 1. For d subshell, l = 2, so orbitals = 2(2) + 1 = 5. These correspond to magnetic quantum number values: m = -2, -1, 0, +1, +2. Similarly, s has 1, p has 3, f has 7 orbitals."
+      },
+      "navigation": {
+        "next": "card_39_quantum_numbers_quiz_3",
+        "button_text": "Next Question (3/3) ➔"
+      }
+    },
+    {
+      "card_id": "card_39_quantum_numbers_quiz_3",
+      "card_slug": "card_39_quantum_numbers_quiz_3",
+      "type": "quiz",
+      "concept_id": "spin_quantum_number_quiz",
+      "level": 2,
+      "progress": {
+        "current": 39,
+        "total": 80
+      },
+      "quiz_payload": {
+        "question": "The spin quantum number of an electron can have values: (Railway Group D 2022 Pattern)",
+        "options": [
+          {
+            "id": "A",
+            "text": "+1 or -1"
+          },
+          {
+            "id": "B",
+            "text": "+1/2 or -1/2"
+          },
+          {
+            "id": "C",
+            "text": "0, +1, -1"
+          },
+          {
+            "id": "D",
+            "text": "Any integer value"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "The spin quantum number (s or m_s) can have ONLY TWO values: +1/2 (spin up, ↑) or -1/2 (spin down, ↓). This represents the two possible orientations of electron spin. Each orbital can accommodate maximum 2 electrons with opposite spins as per Pauli Exclusion Principle."
+      },
+      "navigation": {
+        "next": "card_40_milestone_quantum_numbers",
+        "button_text": "Check Progress ➔"
+      }
+    },
+    {
+      "card_id": "card_40_milestone_quantum_numbers",
+      "card_slug": "card_40_milestone_quantum_numbers",
+      "type": "milestone",
+      "concept_id": "quantum_numbers_complete",
+      "level": 2,
+      "progress": {
+        "current": 40,
+        "total": 80
+      },
+      "milestone_payload": {
+        "title": "🎊 QUANTUM NUMBERS DECODED!",
+        "badge_emoji": "🔢",
+        "completed_topic": "All Four Quantum Numbers Mastered",
+        "xp_earned": 50,
+        "milestone_progress": "Module 4/7 Complete",
+        "motivational_quote": "You've mastered n, l, m, and s! Schrödinger and Pauli are smiling from quantum heaven! Now conquer electron filling! 💪"
+      },
+      "navigation": {
+        "next": "card_41_electron_config_intro",
+        "button_text": "Electronic Configuration ➔"
+      }
+    },
+    {
+      "card_id": "card_41_electron_config_intro",
+      "card_slug": "card_41_electron_config_intro",
+      "type": "chat",
+      "concept_id": "electronic_configuration_introduction",
+      "level": 2,
+      "progress": {
+        "current": 41,
+        "total": 80
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ab atom mein electrons kaise arrange hote hain ye seekhte hain! ELECTRONIC CONFIGURATION matlab electrons ka distribution in different orbitals. Jaise tumhare ghar mein log different rooms mein rehte hain, waise electrons different orbitals mein. Par kuch RULES follow karne padte hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Kaun se rules Sir? Quantum numbers wale?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Quantum numbers to base hain. Par electrons fill karte time teen main principles follow karte hain - (1) AUFBAU PRINCIPLE - electrons lowest energy orbital mein pehle jaate hain, (2) PAULI EXCLUSION PRINCIPLE - ek orbital mein max 2 electrons opposite spin ke, (3) HUND'S RULE - degenerate orbitals mein pehle singly occupy karo. Ye teen rules exam ka heart hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir ek-ek karke detail mein samjhao please!"
+        }
+      ],
+      "navigation": {
+        "next": "card_42_aufbau_principle",
+        "button_text": "Aufbau Principle detail ➔"
+      }
+    },
+    {
+      "card_id": "card_42_aufbau_principle",
+      "card_slug": "card_42_aufbau_principle",
+      "type": "chat",
+      "concept_id": "aufbau_principle_detailed",
+      "level": 2,
+      "progress": {
+        "current": 42,
+        "total": 80
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "AUFBAU PRINCIPLE (German word 'Aufbau' = building up) kehta hai electrons lowest available energy orbital mein pehle fill hote hain, then higher energy orbitals mein. Energy order yaad rakho: 1s < 2s < 2p < 3s < 3p < 4s < 3d < 4p < 5s < 4d < 5p < 6s < 4f < 5d < 6p... Ye (n+l) rule se decide hota hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir ye (n+l) rule kya hai? Aur 4s, 3d ka order ulta kyun hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bahut important! (n+l) RULE: Jis orbital ka (n+l) value kam ho, wo pehle fill hoga. Agar (n+l) same ho to jiska n kam hai wo pehle fill hoga. Example: 3d ka (n+l)=3+2=5, 4s ka (n+l)=4+0=4. Isliye 4s pehle fill hoga! Trick: Diagonal rule diagram yaad rakho ya sequence ratify - 1s 2s 2p 3s 3p 4s 3d 4p 5s 4d 5p 6s 4f..."
+        },
+        {
+          "speaker": "raju",
+          "text": "Accha! To energy order rote-rote yaad rakhna padega?"
+        }
+      ],
+      "navigation": {
+        "next": "card_43_pauli_principle",
+        "button_text": "Trick batata hoon! Pehle Pauli ➔"
+      }
+    },
+    {
+      "card_id": "card_43_pauli_principle",
+      "card_slug": "card_43_pauli_principle",
+      "type": "chat",
+      "concept_id": "pauli_exclusion_principle",
+      "level": 2,
+      "progress": {
+        "current": 43,
+        "total": 80
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "PAULI EXCLUSION PRINCIPLE (Wolfgang Pauli, 1925): Kisi bhi atom mein koi bhi do electrons ka same set of all four quantum numbers nahi ho sakta! Matlab agar n, l, m same hain to spin (s) different hona chahiye. Isiliye ek orbital mein max 2 electrons, wo bhi opposite spins (↑↓) ke saath. Ye principle fundamental hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab har electron unique identity rakhta hai quantum numbers se?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul perfect understanding! Jaise har insaan ka unique Aadhaar number, waise har electron ka unique quantum number set. Example: 1s orbital mein 2 electrons - pehla (n=1, l=0, m=0, s=+½), dusra (n=1, l=0, m=0, s=-½). Teen quantum numbers same par spin different! Ye concept NEET mein assertion-reason format mein puchte hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Clear! Ab Hund's rule?"
+        }
+      ],
+      "navigation": {
+        "next": "card_44_hund_rule",
+        "button_text": "Hund's Rule of Maximum Multiplicity ➔"
+      }
+    },
+    {
+      "card_id": "card_44_hund_rule",
+      "card_slug": "card_44_hund_rule",
+      "type": "chat",
+      "concept_id": "hund_rule_maximum_multiplicity",
+      "level": 2,
+      "progress": {
+        "current": 44,
+        "total": 80
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "HUND'S RULE OF MAXIMUM MULTIPLICITY (Friedrich Hund): Jab degenerate orbitals (same energy wale jaise px, py, pz) mein electrons fill ho rahe hain, to pehle har orbital mein EK-EK electron (unpaired, same spin) jayega. Jab sab orbitals singly occupied ho jayein tabhi pairing shuru hogi. Jaise bus mein pehle sabko seat do, phir sharing!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Accha! Example se samjhao Sir - jaise nitrogen ka."
+        },
+        {
+          "speaker": "aman",
+          "text": "Perfect example! Nitrogen (N) = 7 electrons. Config: 1s² 2s² 2p³. Ab 2p mein 3 orbitals hain (px, py, pz). Teen electrons ek-ek orbital mein jayenge with same spin (↑↑↑), NOT pairing (↑↓ aur ↑). Maximum unpaired electrons = maximum stability. Isiliye nitrogen stable hai! Exam mein diagram draw karne ko kehte hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Got it! To teen rules combined use karte hain configuration likhne mein?"
+        }
+      ],
+      "navigation": {
+        "next": "card_45_electronic_config_examples",
+        "button_text": "Haan! Examples dekho ➔"
+      }
+    },
+    {
+      "card_id": "card_45_electronic_config_examples",
+      "card_slug": "card_45_electronic_config_examples",
+      "type": "chat",
+      "concept_id": "electronic_configuration_examples",
+      "level": 2,
+      "progress": {
+        "current": 45,
+        "total": 80
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Kuch examples dekhte hain! Hydrogen (H, Z=1): 1s¹. Helium (He, Z=2): 1s². Carbon (C, Z=6): 1s² 2s² 2p². Oxygen (O, Z=8): 1s² 2s² 2p⁴. Sodium (Na, Z=11): 1s² 2s² 2p⁶ 3s¹. Chlorine (Cl, Z=17): 1s² 2s² 2p⁶ 3s² 3p⁵. Argon (Ar, Z=18): 1s² 2s² 2p⁶ 3s² 3p⁶ (Noble gas, fully filled!)"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir shorthand notation bhi hai kya? Har baar 1s² 2s² likhna lamba hai!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! Noble gas notation use karte hain. Example: Calcium (Ca, Z=20) ko seedha likhoge to 1s² 2s² 2p⁶ 3s² 3p⁶ 4s². Par shorthand mein [Ar] 4s² (kyunki Argon tak ka config same hai). Exam mein dono tarike se pooch sakte hain! Scandium (Sc, Z=21) = [Ar] 3d¹ 4s² (dekho 4s pehle fill hua!)"
+        },
+        {
+          "speaker": "raju",
+          "text": "Ye to easy ho gaya! Par Sir kuch exceptions bhi hain kya?"
+        }
+      ],
+      "navigation": {
+        "next": "card_46_electronic_config_exceptions",
+        "button_text": "Haan! Important exceptions ➔"
+      }
+    },
+    {
+      "card_id": "card_46_electronic_config_exceptions",
+      "card_slug": "card_46_electronic_config_exceptions",
+      "type": "chat",
+      "concept_id": "electronic_configuration_exceptions",
+      "level": 2,
+      "progress": {
+        "current": 46,
+        "total": 80
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Bahut important exceptions hain jo BPSC aur NEET mein trap banate hain! CHROMIUM (Cr, Z=24): Expected = [Ar] 3d⁴ 4s², BUT actual = [Ar] 3d⁵ 4s¹ (half-filled d orbital extra stable!). COPPER (Cu, Z=29): Expected = [Ar] 3d⁹ 4s², BUT actual = [Ar] 3d¹⁰ 4s¹ (fully-filled d orbital extra stable!)"
+        },
+        {
+          "speaker": "raju",
+          "text": "Kya?! Rules follow nahi kiye? Kyun Sir?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Kyunki HALF-FILLED (d⁵, f⁷) aur FULLY-FILLED (d¹⁰, f¹⁴) configurations EXTRA STABLE hote hain due to symmetrical distribution of electrons aur exchange energy. Isliye ek electron 4s se 3d mein shift ho jata hai. Similarly, Molybdenum (Mo, Z=42) = [Kr] 4d⁵ 5s¹, Silver (Ag, Z=47) = [Kr] 4d¹⁰ 5s¹. Ye char elements yaad rakho - Cr, Cu, Mo, Ag!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Ye to exam mein pakka puchenge! Yaad rakhna padega!"
+        }
+      ],
+      "navigation": {
+        "next": "card_47_electronic_config_quiz_1",
+        "button_text": "Ab test karo memory ➔"
+      }
+    },
+    {
+      "card_id": "card_47_electronic_config_quiz_1",
+      "card_slug": "card_47_electronic_config_quiz_1",
+      "type": "quiz",
+      "concept_id": "aufbau_order_quiz",
+      "level": 2,
+      "progress": {
+        "current": 47,
+        "total": 80
+      },
+      "quiz_payload": {
+        "question": "According to Aufbau principle, which orbital is filled BEFORE 3d? (SSC CGL 2020 Pattern)",
+        "options": [
+          {
+            "id": "A",
+            "text": "3p"
+          },
+          {
+            "id": "B",
+            "text": "3s"
+          },
+          {
+            "id": "C",
+            "text": "4s"
+          },
+          {
+            "id": "D",
+            "text": "4p"
+          }
+        ],
+        "correct_option_id": "C",
+        "explanation": "According to Aufbau principle and (n+l) rule, 4s orbital is filled BEFORE 3d orbital. For 4s: (n+l) = 4+0 = 4. For 3d: (n+l) = 3+2 = 5. Lower (n+l) value fills first. Correct order: ...3p < 4s < 3d < 4p. This counterintuitive order is a favorite exam trap!"
+      },
+      "navigation": {
+        "next": "card_48_electronic_config_quiz_2",
+        "button_text": "Next Question (2/3) ➔"
+      }
+    },
+    {
+      "card_id": "card_48_electronic_config_quiz_2",
+      "card_slug": "card_48_electronic_config_quiz_2",
+      "type": "quiz",
+      "concept_id": "chromium_exception_quiz",
+      "level": 2,
+      "progress": {
+        "current": 48,
+        "total": 80
+      },
+      "quiz_payload": {
+        "question": "The electronic configuration of Chromium (Z=24) is: (NEET 2021 Pattern)",
+        "options": [
+          {
+            "id": "A",
+            "text": "[Ar] 3d⁴ 4s²"
+          },
+          {
+            "id": "B",
+            "text": "[Ar] 3d⁵ 4s¹"
+          },
+          {
+            "id": "C",
+            "text": "[Ar] 3d⁶ 4s⁰"
+          },
+          {
+            "id": "D",
+            "text": "[Ar] 3d³ 4s³"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Chromium (Cr, Z=24) has exceptional configuration [Ar] 3d⁵ 4s¹ instead of expected [Ar] 3d⁴ 4s². This is because HALF-FILLED d orbital (d⁵) provides extra stability due to symmetrical distribution and exchange energy. One electron from 4s shifts to 3d to achieve this stable configuration. This is one of the most asked exceptions in NEET!"
+      },
+      "navigation": {
+        "next": "card_49_electronic_config_quiz_3",
+        "button_text": "Next Question (3/3) ➔"
+      }
+    },
+    {
+      "card_id": "card_49_electronic_config_quiz_3",
+      "card_slug": "card_49_electronic_config_quiz_3",
+      "type": "quiz",
+      "concept_id": "hund_rule_quiz",
+      "level": 2,
+      "progress": {
+        "current": 49,
+        "total": 80
+      },
+      "quiz_payload": {
+        "question": "According to Hund's rule, the correct filling of electrons in 2p orbitals for nitrogen (7 electrons) is: (BPSC 2020 Pattern)",
+        "options": [
+          {
+            "id": "A",
+            "text": "2px: ↑↓, 2py: ↑, 2pz: (empty)"
+          },
+          {
+            "id": "B",
+            "text": "2px: ↑, 2py: ↑, 2pz: ↑"
+          },
+          {
+            "id": "C",
+            "text": "2px: ↑↓, 2py: ↑↓, 2pz: (empty)"
+          },
+          {
+            "id": "D",
+            "text": "2px: ↑, 2py: ↓, 2pz: ↑"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "For nitrogen (N = 1s² 2s² 2p³), according to Hund's Rule of Maximum Multiplicity, the three 2p electrons will singly occupy all three 2p orbitals (px, py, pz) with SAME spin before pairing occurs. So: 2px: ↑, 2py: ↑, 2pz: ↑. This gives maximum unpaired electrons and maximum stability."
+      },
+      "navigation": {
+        "next": "card_50_milestone_electronic_config",
+        "button_text": "Check Score ➔"
+      }
+    },
+    {
+      "card_id": "card_50_milestone_electronic_config",
+      "card_slug": "card_50_milestone_electronic_config",
+      "type": "milestone",
+      "concept_id": "electronic_configuration_complete",
+      "level": 2,
+      "progress": {
+        "current": 50,
+        "total": 80
+      },
+      "milestone_payload": {
+        "title": "🏆 ELECTRON FILLING CHAMPION!",
+        "badge_emoji": "⚡",
+        "completed_topic": "Aufbau, Pauli, Hund's Rules Mastered",
+        "xp_earned": 50,
+        "milestone_progress": "Module 5/7 Complete",
+        "motivational_quote": "You've conquered the toughest rules! Cr & Cu exceptions can't trap you now! Valency & isotopes next! 🎯"
+      },
+      "navigation": {
+        "next": "card_51_valency_intro",
+        "button_text": "Next: Valency Concept ➔"
+      }
+    },
+    {
+      "card_id": "card_51_valency_intro",
+      "card_slug": "card_51_valency_intro",
+      "type": "chat",
+      "concept_id": "valency_introduction",
+      "level": 2,
+      "progress": {
+        "current": 51,
+        "total": 80
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ab electronic configuration ka practical use dekhte hain - VALENCY aur VALENCE ELECTRONS! Valence electrons wo electrons hain jo atom ke outermost shell mein hote hain. Ye electrons hi chemical bonding mein participate karte hain. VALENCY = atom ki combining capacity, matlab kitne atoms se bond bana sakta hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir valence electrons kaise find karte hain? Last shell ke electrons?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! Example: Sodium (Na) = 1s² 2s² 2p⁶ 3s¹, outermost shell (3rd) mein 1 electron, so valence electron = 1. Chlorine (Cl) = 1s² 2s² 2p⁶ 3s² 3p⁵, outermost shell mein 2+5 = 7 electrons. Oxygen (O) = 1s² 2s² 2p⁴, valence electrons = 2+4 = 6. Valency calculate karne ka rule: Agar valence electrons ≤ 4 to valency = valence electrons. Agar > 4 to valency = 8 - valence electrons!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab Cl ki valency = 8-7 = 1? Par 7 electrons hain?"
+        }
+      ],
+      "navigation": {
+        "next": "card_52_valency_calculation",
+        "button_text": "Exactly! Octet rule ➔"
+      }
+    },
+    {
+      "card_id": "card_52_valency_calculation",
+      "card_slug": "card_52_valency_calculation",
+      "type": "chat",
+      "concept_id": "valency_calculation_octet",
+      "level": 2,
+      "progress": {
+        "current": 52,
+        "total": 80
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Bilkul sahi! Valency ≠ valence electrons necessarily. Valency depends on OCTET RULE - har atom 8 electrons (stable configuration like noble gas) achieve karna chahta hai outermost shell mein. Chlorine ke paas 7 hain, 1 aur chahiye, so valency = 1. Oxygen ke paas 6 hain, 2 chahiye, valency = 2. Carbon ke paas 4 hain, 4 share karega, valency = 4!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Accha! To valency batati hai kitne bonds banana chahiye atom!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Perfect! Examples: H (valence e⁻ = 1, valency = 1), He (2, valency = 0 kyunki stable), C (4, valency = 4), N (5, valency = 8-5 = 3), O (6, valency = 2), Na (1, valency = 1), Mg (2, valency = 2), Al (3, valency = 3). Noble gases (He, Ne, Ar) ki valency 0 hai kyunki outermost shell already complete hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Got it! Par Sir transition elements mein variable valency hoti hai?"
+        }
+      ],
+      "navigation": {
+        "next": "card_53_variable_valency",
+        "button_text": "Haan! Variable valency concept ➔"
+      }
+    },
+    {
+      "card_id": "card_53_variable_valency",
+      "card_slug": "card_53_variable_valency",
+      "type": "chat",
+      "concept_id": "variable_valency_transition",
+      "level": 2,
+      "progress": {
+        "current": 53,
+        "total": 80
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Haan! TRANSITION ELEMENTS (d-block) mein variable valency hoti hai kyunki unke (n-1)d aur ns dono electrons bonding mein participate kar sakte hain. Example: Iron (Fe) = [Ar] 3d⁶ 4s². Kabhi sirf 2 electrons donate karta hai (4s²) → Fe²⁺ (Ferrous, valency 2). Kabhi 3 electrons (2 from 4s + 1 from 3d) → Fe³⁺ (Ferric, valency 3)."
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab ek hi element ki alag-alag valency ho sakti hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! More examples: Copper (Cu⁺ aur Cu²⁺), Mercury (Hg⁺ aur Hg²⁺), Chromium (Cr²⁺, Cr³⁺, Cr⁶⁺), Manganese (Mn²⁺, Mn⁴⁺, Mn⁷⁺). Isiliye FeCl₂ (Ferrous chloride) aur FeCl₃ (Ferric chloride) dono alag compounds hain! Exam mein ye chemical formulas ke questions mein use hota hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Interesting! Ab isotopes kya hote hain Sir?"
+        }
+      ],
+      "navigation": {
+        "next": "card_54_isotopes_intro",
+        "button_text": "Important topic ➔"
+      }
+    },
+    {
+      "card_id": "card_54_isotopes_intro",
+      "card_slug": "card_54_isotopes_intro",
+      "type": "chat",
+      "concept_id": "isotopes_introduction",
+      "level": 2,
+      "progress": {
+        "current": 54,
+        "total": 80
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "ISOTOPES - Same element ke atoms jinki ATOMIC NUMBER (protons) same ho par MASS NUMBER (protons + neutrons) different ho! Matlab same number of protons par different number of neutrons. Example: Hydrogen ke teen isotopes - Protium (¹H, 1p + 0n), Deuterium (²H or D, 1p + 1n), Tritium (³H or T, 1p + 2n)."
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab teeno hydrogen hain par weight alag hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Exactly! Chemical properties same rahenge (kyunki electrons same, 1e⁻) par physical properties different (kyunki mass different). Carbon ke isotopes: C-12 (6p+6n, 98.9% abundant), C-13 (6p+7n), C-14 (6p+8n, radioactive, carbon dating mein use). C-14 half-life = 5730 years. Chlorine: Cl-35 aur Cl-37 (isiliye atomic mass 35.5 average hai!)"
+        },
+        {
+          "speaker": "raju",
+          "text": "Radioactive matlab dangerous? C-14 se dating kaise hoti hai?"
+        }
+      ],
+      "navigation": {
+        "next": "card_55_isobars_isotones",
+        "button_text": "Pehle related terms ➔"
+      }
+    },
+    {
+      "card_id": "card_55_isobars_isotones",
+      "card_slug": "card_55_isobars_isotones",
+      "type": "chat",
+      "concept_id": "isobars_isotones_concepts",
+      "level": 2,
+      "progress": {
+        "current": 55,
+        "total": 80
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Isotopes ke saath do aur terms hain jo confuse karte hain! ISOBARS - Different elements jinki MASS NUMBER same ho par atomic number different. Example: Argon-40 (18p+22n) aur Calcium-40 (20p+20n), dono ka mass 40. ISOTONES - Different elements jinki NEUTRON COUNT same ho. Example: C-14 (6p+8n) aur N-15 (7p+8n), dono mein 8 neutrons!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Ye to confusing hai Sir! Koi trick hai yaad rakhne ki?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! Mnemonic: 'ISOTOPES - same PROTONS (same Z), ISOBARS - same MASS (same A), ISOTONES - same NEUTRONS (same N)'. Aur ek - ISOELECTRONIC - same number of electrons. Example: Na⁺, Mg²⁺, Al³⁺, all have 10 electrons! Ye BPSC mein assertion-reason mein puchte hain! SSC mein direct matching type!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Okay yaad rakhna hai ye sab! Ab quiz?"
+        }
+      ],
+      "navigation": {
+        "next": "card_56_atomic_mass_quiz_1",
+        "button_text": "Haan! Consolidation quiz ➔"
+      }
+    },
+    {
+      "card_id": "card_56_atomic_mass_quiz_1",
+      "card_slug": "card_56_atomic_mass_quiz_1",
+      "type": "quiz",
+      "concept_id": "valency_calculation_quiz",
+      "level": 2,
+      "progress": {
+        "current": 56,
+        "total": 80
+      },
+      "quiz_payload": {
+        "question": "An element has 7 valence electrons. Its valency is: (SSC CHSL 2021 Pattern)",
+        "options": [
+          {
+            "id": "A",
+            "text": "7"
+          },
+          {
+            "id": "B",
+            "text": "1"
+          },
+          {
+            "id": "C",
+            "text": "3"
+          },
+          {
+            "id": "D",
+            "text": "5"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "When valence electrons are MORE than 4, valency = 8 - valence electrons. So for 7 valence electrons: Valency = 8 - 7 = 1. This applies to halogens like Chlorine, Fluorine, etc. They need 1 more electron to complete octet, hence valency = 1. This calculation method is frequently tested in SSC and Railway exams."
+      },
+      "navigation": {
+        "next": "card_57_atomic_mass_quiz_2",
+        "button_text": "Next Question (2/3) ➔"
+      }
+    },
+    {
+      "card_id": "card_57_atomic_mass_quiz_2",
+      "card_slug": "card_57_atomic_mass_quiz_2",
+      "type": "quiz",
+      "concept_id": "isotopes_definition_quiz",
+      "level": 2,
+      "progress": {
+        "current": 57,
+        "total": 80
+      },
+      "quiz_payload": {
+        "question": "Isotopes of an element have: (NEET 2018 Pattern)",
+        "options": [
+          {
+            "id": "A",
+            "text": "Same mass number but different atomic number"
+          },
+          {
+            "id": "B",
+            "text": "Same atomic number but different mass number"
+          },
+          {
+            "id": "C",
+            "text": "Different atomic number and different mass number"
+          },
+          {
+            "id": "D",
+            "text": "Same number of neutrons"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "ISOTOPES have the SAME ATOMIC NUMBER (same protons, same element) but DIFFERENT MASS NUMBER (different neutrons). Example: C-12, C-13, C-14 all have 6 protons but 6, 7, 8 neutrons respectively. Same chemical properties but different physical properties. This is the fundamental definition that appears in almost every competitive exam."
+      },
+      "navigation": {
+        "next": "card_58_atomic_mass_quiz_3",
+        "button_text": "Next Question (3/3) ➔"
+      }
+    },
+    {
+      "card_id": "card_58_atomic_mass_quiz_3",
+      "card_slug": "card_58_atomic_mass_quiz_3",
+      "type": "quiz",
+      "concept_id": "isobars_definition_quiz",
+      "level": 2,
+      "progress": {
+        "current": 58,
+        "total": 80
+      },
+      "quiz_payload": {
+        "question": "Atoms of DIFFERENT elements having SAME mass number are called: (Railway NTPC 2020 Pattern)",
+        "options": [
+          {
+            "id": "A",
+            "text": "Isotopes"
+          },
+          {
+            "id": "B",
+            "text": "Isobars"
+          },
+          {
+            "id": "C",
+            "text": "Isotones"
+          },
+          {
+            "id": "D",
+            "text": "Isomers"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "ISOBARS are atoms of DIFFERENT elements (different atomic numbers) having the SAME MASS NUMBER. Example: Argon-40 (Ar, Z=18) and Calcium-40 (Ca, Z=20) both have mass number 40 but are different elements. Don't confuse with isotopes (same element) or isotones (same neutrons)."
+      },
+      "navigation": {
+        "next": "card_59_milestone_concepts",
+        "button_text": "Check Progress ➔"
+      }
+    },
+    {
+      "card_id": "card_59_milestone_concepts",
+      "card_slug": "card_59_milestone_concepts",
+      "type": "milestone",
+      "concept_id": "advanced_concepts_complete",
+      "level": 2,
+      "progress": {
+        "current": 59,
+        "total": 80
+      },
+      "milestone_payload": {
+        "title": "💎 ADVANCED CONCEPTS UNLOCKED!",
+        "badge_emoji": "🎓",
+        "completed_topic": "Valency, Isotopes, Isobars Mastered",
+        "xp_earned": 50,
+        "milestone_progress": "Module 6/7 Complete",
+        "motivational_quote": "From atoms to isotopes - you're thinking like a chemistry professor now! One final push - revision & master quiz! 🚀"
+      },
+      "navigation": {
+        "next": "card_60_complete_revision",
+        "button_text": "Officer Level Revision ➔"
+      }
+    },
+    {
+      "card_id": "card_60_complete_revision",
+      "card_slug": "card_60_complete_revision",
+      "type": "summary",
+      "concept_id": "complete_chapter_revision",
+      "level": 2,
+      "progress": {
+        "current": 60,
+        "total": 80
+      },
+      "summary_payload": {
+        "title": "⚡ COMPLETE ATOMIC STRUCTURE - OFFICER REVISION",
+        "revision_points": [
+          {
+            "topic": "Subatomic Particles Discovery",
+            "point": "Electron: J.J. Thomson (1897, Cathode Rays, -1 charge, 9.1×10⁻³¹kg). Proton: Goldstein/Rutherford (1919, +1 charge, 1.67×10⁻²⁷kg). Neutron: James Chadwick (1932, 0 charge, mass ≈ proton). Mass ratio: proton/electron = 1836."
+          },
+          {
+            "topic": "Atomic Models Evolution",
+            "point": "Thomson (1904): Plum Pudding - positive sphere with embedded electrons. Rutherford (1911): Nuclear model - tiny dense nucleus, mostly empty space (Gold foil experiment). Bohr (1913): Fixed orbits, E = -13.6/n² eV for H. Quantum Mechanical: Schrödinger wave equation, orbitals not orbits."
+          },
+          {
+            "topic": "Quantum Numbers (n, l, m, s)",
+            "point": "n (1,2,3...) = shell/energy. l (0 to n-1) = subshell (s=0, p=1, d=2, f=3). m (-l to +l) = orientation, total 2l+1 orbitals. s (+½ or -½) = spin. Pauli: No two electrons with same 4 QNs. s=1 orbital, p=3, d=5, f=7."
+          },
+          {
+            "topic": "Electronic Configuration Rules",
+            "point": "Aufbau: Fill lowest energy first, (n+l) rule. Order: 1s 2s 2p 3s 3p 4s 3d 4p 5s 4d... Pauli: Max 2e⁻ per orbital, opposite spins. Hund: Singly occupy degenerate orbitals first. Exceptions: Cr=[Ar]3d⁵4s¹, Cu=[Ar]3d¹⁰4s¹ (half/full d stability)."
+          },
+          {
+            "topic": "Valency & Valence Electrons",
+            "point": "Valence e⁻ = outermost shell electrons. Valency: if ≤4 then valency=VE, if >4 then 8-VE. H=1, C=4, N=3, O=2, Cl=1, Na=1. Transition elements: variable valency (Fe²⁺/Fe³⁺, Cu⁺/Cu²⁺) as (n-1)d & ns both participate."
+          },
+          {
+            "topic": "Isotopes, Isobars, Isotones",
+            "point": "Isotopes: Same Z, different A (same protons, diff neutrons). Ex: ¹H, ²H, ³H or C-12, C-13, C-14. Isobars: Different Z, same A. Ex: Ar-40, Ca-40. Isotones: Different elements, same neutrons. Ex: C-14 (8n), N-15 (8n). Isoelectronic: same e⁻. Ex: Na⁺, Mg²⁺ (10e⁻)."
+          },
+          {
+            "topic": "Key Formulas & Constants",
+            "point": "Bohr: E_n = -13.6/n² eV, r_n = 0.529n² Å. Angular momentum = nh/2π. Energy gap: ΔE = E₂-E₁ = hν. de Broglie: λ = h/mv. Heisenberg: Δx·Δp ≥ h/4π. Planck: h = 6.626×10⁻³⁴ J·s. Atom radius ~ 10⁻¹⁰m, nucleus ~ 10⁻¹⁵m."
+          },
+          {
+            "topic": "BPSC/SSC/NEET Traps",
+            "point": "Statement: 'Bohr model works for all atoms' (FALSE - only H-like). 'Isotopes have different chemical properties' (FALSE - same). '4s fills after 3d' (FALSE - before). 'Electrons don't radiate in stationary orbits' (TRUE - Bohr postulate). 'Pauli allows 3e⁻ in one orbital' (FALSE - max 2)."
+          }
+        ]
+      },
+      "navigation": {
+        "next": "card_61_final_quiz_1",
+        "button_text": "Final Master Quiz ➔"
+      }
+    },
+    {
+      "card_id": "card_61_final_quiz_1",
+      "card_slug": "card_61_final_quiz_1",
+      "type": "final_quiz",
+      "concept_id": "final_bpsc_style_1",
+      "level": 2,
+      "progress": {
+        "current": 61,
+        "total": 80
+      },
+      "quiz_payload": {
+        "question": "Consider the following statements about atomic structure:\n\nI. J.J. Thomson discovered electron in 1897.\nII. Neutron was discovered by James Chadwick in 1932.\nIII. The mass of electron is approximately equal to the mass of proton.\nIV. Most of the mass of atom is concentrated in the nucleus.\n\nWhich of the above statements are CORRECT? (BPSC Multi-Statement Pattern)",
+        "options": [
+          {
+            "id": "A",
+            "text": "I, II and IV only"
+          },
+          {
+            "id": "B",
+            "text": "I, II and III only"
+          },
+          {
+            "id": "C",
+            "text": "II, III and IV only"
+          },
+          {
+            "id": "D",
+            "text": "All are correct"
+          }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Statement I: CORRECT - J.J. Thomson discovered electron in 1897 through cathode ray experiment. Statement II: CORRECT - James Chadwick discovered neutron in 1932, received Nobel Prize in 1935. Statement III: INCORRECT - Electron mass is 1/1836 times of proton mass, not equal. Statement IV: CORRECT - 99.9% mass is in nucleus (protons+neutrons). Therefore I, II, IV are correct."
+      },
+      "navigation": {
+        "next": "card_62_final_quiz_2",
+        "button_text": "Next Master Quiz (2/5) ➔"
+      }
+    },
+    {
+      "card_id": "card_62_final_quiz_2",
+      "card_slug": "card_62_final_quiz_2",
+      "type": "final_quiz",
+      "concept_id": "final_assertion_reason_1",
+      "level": 2,
+      "progress": {
+        "current": 62,
+        "total": 80
+      },
+      "quiz_payload": {
+        "question": "Assertion (A): In Rutherford's alpha scattering experiment, most alpha particles passed straight through the gold foil.\n\nReason (R): Atoms are mostly empty space with a small dense nucleus at the center.\n\n(BPSC/NEET Assertion-Reason Pattern)",
+        "options": [
+          {
+            "id": "A",
+            "text": "Both A and R are true, and R is the correct explanation of A"
+          },
+          {
+            "id": "B",
+            "text": "Both A and R are true, but R is NOT the correct explanation of A"
+          },
+          {
+            "id": "C",
+            "text": "A is true but R is false"
+          },
+          {
+            "id": "D",
+            "text": "A is false but R is true"
+          }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Both Assertion and Reason are TRUE, and R correctly explains A. Most alpha particles (99%) passed straight through because atoms ARE mostly empty space. Only when particles came close to the tiny dense nucleus (which occupies very small volume), they got deflected. This observation led to the nuclear model of atom, rejecting Thomson's uniform distribution model."
+      },
+      "navigation": {
+        "next": "card_63_final_quiz_3",
+        "button_text": "Next Master Quiz (3/5) ➔"
+      }
+    },
+    {
+      "card_id": "card_63_final_quiz_3",
+      "card_slug": "card_63_final_quiz_3",
+      "type": "final_quiz",
+      "concept_id": "final_quantum_numbers",
+      "level": 2,
+      "progress": {
+        "current": 63,
+        "total": 80
+      },
+      "quiz_payload": {
+        "question": "Which of the following sets of quantum numbers is NOT possible for an electron in an atom? (NEET Pattern)",
+        "options": [
+          {
+            "id": "A",
+            "text": "n = 3, l = 2, m = -2, s = +½"
+          },
+          {
+            "id": "B",
+            "text": "n = 3, l = 1, m = 0, s = -½"
+          },
+          {
+            "id": "C",
+            "text": "n = 2, l = 2, m = 0, s = +½"
+          },
+          {
+            "id": "D",
+            "text": "n = 4, l = 0, m = 0, s = -½"
+          }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Option C is NOT POSSIBLE because for n=2, the azimuthal quantum number l can only be 0 or 1 (l ranges from 0 to n-1). l=2 (d orbital) requires minimum n=3. All other options follow correct quantum number rules: A is 3d orbital, B is 3p orbital, D is 4s orbital. This type of QN validation is very common in NEET."
+      },
+      "navigation": {
+        "next": "card_64_final_quiz_4",
+        "button_text": "Next Master Quiz (4/5) ➔"
+      }
+    },
+    {
+      "card_id": "card_64_final_quiz_4",
+      "card_slug": "card_64_final_quiz_4",
+      "type": "final_quiz",
+      "concept_id": "final_electronic_config",
+      "level": 2,
+      "progress": {
+        "current": 64,
+        "total": 80
+      },
+      "quiz_payload": {
+        "question": "Consider the following statements about electronic configuration:\n\nI. Electronic configuration of Copper (Z=29) is [Ar] 3d⁹ 4s².\nII. Half-filled and fully-filled d orbitals provide extra stability.\nIII. According to Aufbau principle, 4s orbital is filled before 3d orbital.\n\nWhich statement(s) is/are CORRECT? (BPSC Multi-Statement Pattern)",
+        "options": [
+          {
+            "id": "A",
+            "text": "I and II only"
+          },
+          {
+            "id": "B",
+            "text": "II and III only"
+          },
+          {
+            "id": "C",
+            "text": "I and III only"
+          },
+          {
+            "id": "D",
+            "text": "All are correct"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Statement I: INCORRECT - Copper (Z=29) has exceptional configuration [Ar] 3d¹⁰ 4s¹, NOT 3d⁹ 4s². One electron shifts from 4s to achieve fully-filled d¹⁰ stability. Statement II: CORRECT - Half-filled (d⁵, f⁷) and fully-filled (d¹⁰, f¹⁴) provide extra stability. Statement III: CORRECT - By (n+l) rule, 4s fills before 3d. So II and III are correct."
+      },
+      "navigation": {
+        "next": "card_65_final_quiz_5",
+        "button_text": "Last Master Quiz (5/5) ➔"
+      }
+    },
+    {
+      "card_id": "card_65_final_quiz_5",
+      "card_slug": "card_65_final_quiz_5",
+      "type": "final_quiz",
+      "concept_id": "final_isotopes_isobars",
+      "level": 2,
+      "progress": {
+        "current": 65,
+        "total": 80
+      },
+      "quiz_payload": {
+        "question": "Assertion (A): C-12 and C-14 are isotopes of carbon.\n\nReason (R): Isotopes have same number of protons but different number of neutrons.\n\n(NEET Assertion-Reason Pattern)",
+        "options": [
+          {
+            "id": "A",
+            "text": "Both A and R are true, and R is the correct explanation of A"
+          },
+          {
+            "id": "B",
+            "text": "Both A and R are true, but R is NOT the correct explanation of A"
+          },
+          {
+            "id": "C",
+            "text": "A is true but R is false"
+          },
+          {
+            "id": "D",
+            "text": "A is false but R is true"
+          }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Both A and R are TRUE, and R correctly explains A. C-12 (6 protons + 6 neutrons) and C-14 (6 protons + 8 neutrons) ARE isotopes because they have same atomic number (6 protons, so both are carbon) but different mass numbers (different neutrons). This is the exact definition of isotopes, making R the perfect explanation of A."
+      },
+      "navigation": {
+        "next": "card_66_pyq_round_1",
+        "button_text": "Bonus PYQ Round ➔"
+      }
+    },
+    {
+      "card_id": "card_66_pyq_round_1",
+      "card_slug": "card_66_pyq_round_1",
+      "type": "quiz",
+      "concept_id": "pyq_ssc_2019",
+      "level": 2,
+      "progress": {
+        "current": 66,
+        "total": 80
+      },
+      "quiz_payload": {
+        "question": "The nucleus of an atom contains: (SSC CGL 2019 Actual PYQ)",
+        "options": [
+          {
+            "id": "A",
+            "text": "Protons and electrons"
+          },
+          {
+            "id": "B",
+            "text": "Protons and neutrons"
+          },
+          {
+            "id": "C",
+            "text": "Electrons and neutrons"
+          },
+          {
+            "id": "D",
+            "text": "Only protons"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "The nucleus contains PROTONS (positive charge) and NEUTRONS (neutral). Electrons revolve around the nucleus in shells/orbitals. The nucleus is extremely small (10⁻¹⁵ m) but contains 99.9% of the atom's mass. This is a fundamental fact established by Rutherford's experiment."
+      },
+      "navigation": {
+        "next": "card_67_pyq_round_2",
+        "button_text": "Next PYQ (2/5) ➔"
+      }
+    },
+    {
+      "card_id": "card_67_pyq_round_2",
+      "card_slug": "card_67_pyq_round_2",
+      "type": "quiz",
+      "concept_id": "pyq_railway_2020",
+      "level": 2,
+      "progress": {
+        "current": 67,
+        "total": 80
+      },
+      "quiz_payload": {
+        "question": "Which scientist proposed that electrons revolve around the nucleus in fixed orbits? (Railway NTPC 2020 Actual PYQ)",
+        "options": [
+          {
+            "id": "A",
+            "text": "J.J. Thomson"
+          },
+          {
+            "id": "B",
+            "text": "Ernest Rutherford"
+          },
+          {
+            "id": "C",
+            "text": "Niels Bohr"
+          },
+          {
+            "id": "D",
+            "text": "James Chadwick"
+          }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Niels Bohr (1913) proposed that electrons revolve in FIXED ORBITS (stationary states) with definite energy levels. Thomson proposed plum pudding model, Rutherford proposed nuclear model (but didn't explain stability), Chadwick discovered neutron. Bohr's model explained hydrogen spectrum and atom stability."
+      },
+      "navigation": {
+        "next": "card_68_pyq_round_3",
+        "button_text": "Next PYQ (3/5) ➔"
+      }
+    },
+    {
+      "card_id": "card_68_pyq_round_3",
+      "card_slug": "card_68_pyq_round_3",
+      "type": "quiz",
+      "concept_id": "pyq_neet_2021",
+      "level": 2,
+      "progress": {
+        "current": 68,
+        "total": 80
+      },
+      "quiz_payload": {
+        "question": "The maximum number of electrons that can be accommodated in a shell with principal quantum number n is: (NEET 2021 Actual PYQ)",
+        "options": [
+          {
+            "id": "A",
+            "text": "n²"
+          },
+          {
+            "id": "B",
+            "text": "2n"
+          },
+          {
+            "id": "C",
+            "text": "2n²"
+          },
+          {
+            "id": "D",
+            "text": "n² + n"
+          }
+        ],
+        "correct_option_id": "C",
+        "explanation": "The maximum number of electrons in a shell = 2n². For n=1 (K shell): 2(1)²=2, n=2 (L shell): 2(4)=8, n=3 (M shell): 2(9)=18, n=4 (N shell): 2(16)=32. This formula comes from combining all possible quantum numbers for a given n value. Essential formula for NEET!"
+      },
+      "navigation": {
+        "next": "card_69_pyq_round_4",
+        "button_text": "Next PYQ (4/5) ➔"
+      }
+    },
+    {
+      "card_id": "card_69_pyq_round_4",
+      "card_slug": "card_69_pyq_round_4",
+      "type": "quiz",
+      "concept_id": "pyq_bpsc_2020",
+      "level": 2,
+      "progress": {
+        "current": 69,
+        "total": 80
+      },
+      "quiz_payload": {
+        "question": "Isotopes of an element have different: (BPSC 2020 Actual PYQ)",
+        "options": [
+          {
+            "id": "A",
+            "text": "Atomic numbers"
+          },
+          {
+            "id": "B",
+            "text": "Electronic configurations"
+          },
+          {
+            "id": "C",
+            "text": "Number of neutrons"
+          },
+          {
+            "id": "D",
+            "text": "Chemical properties"
+          }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Isotopes have DIFFERENT number of NEUTRONS. They have same atomic number (same protons), same electronic configuration (same electrons), and therefore SAME chemical properties. Only physical properties differ due to mass difference. Example: C-12 (6n), C-13 (7n), C-14 (8n) - all have 6 protons and 6 electrons."
+      },
+      "navigation": {
+        "next": "card_70_pyq_round_5",
+        "button_text": "Last PYQ (5/5) ➔"
+      }
+    },
+    {
+      "card_id": "card_70_pyq_round_5",
+      "card_slug": "card_70_pyq_round_5",
+      "type": "quiz",
+      "concept_id": "pyq_ssc_chsl_2021",
+      "level": 2,
+      "progress": {
+        "current": 70,
+        "total": 80
+      },
+      "quiz_payload": {
+        "question": "The energy of electron in nth orbit of hydrogen atom is given by: (SSC CHSL 2021 Actual PYQ)",
+        "options": [
+          {
+            "id": "A",
+            "text": "E = -13.6 × n² eV"
+          },
+          {
+            "id": "B",
+            "text": "E = -13.6/n eV"
+          },
+          {
+            "id": "C",
+            "text": "E = -13.6/n² eV"
+          },
+          {
+            "id": "D",
+            "text": "E = 13.6/n² eV"
+          }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Bohr's energy formula for hydrogen atom: E_n = -13.6/n² eV. The negative sign indicates electron is bound to nucleus. For ground state (n=1): E₁ = -13.6 eV. For n=2: E₂ = -3.4 eV. As n increases, energy becomes less negative (increases), electron moves farther from nucleus. At n=∞, E=0 (ionization)."
+      },
+      "navigation": {
+        "next": "card_71_advanced_topic_1",
+        "button_text": "Bonus Advanced Concepts ➔"
+      }
+    },
+    {
+      "card_id": "card_71_advanced_topic_1",
+      "card_slug": "card_71_advanced_topic_1",
+      "type": "chat",
+      "concept_id": "de_broglie_wavelength",
+      "level": 2,
+      "progress": {
+        "current": 71,
+        "total": 80
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Kuch bonus advanced topics for NEET/UPSC level students! DE BROGLIE WAVELENGTH - Louis de Broglie (1924) ne kaha ki moving particles ko wave properties bhi hoti hain. Formula: λ = h/p = h/mv, jahan h = Planck's constant (6.626 × 10⁻³⁴ J·s), m = mass, v = velocity. Ye dual nature concept quantum mechanics ka foundation hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir electron ki wavelength calculate kar sakte hain?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! Example: Agar electron 10⁶ m/s velocity se move kar raha hai, to λ = (6.626×10⁻³⁴)/(9.1×10⁻³¹ × 10⁶) ≈ 7.27 × 10⁻¹⁰ m = 7.27 Å. Ye wavelength atomic dimensions ke comparable hai! Davisson-Germer experiment (1927) ne electron diffraction observe karke de Broglie ko experimentally prove kiya. De Broglie ko 1929 mein Nobel Prize mila!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Interesting! Aur NEET level concepts?"
+        }
+      ],
+      "navigation": {
+        "next": "card_72_advanced_topic_2",
+        "button_text": "Heisenberg Uncertainty ➔"
+      }
+    },
+    {
+      "card_id": "card_72_advanced_topic_2",
+      "card_slug": "card_72_advanced_topic_2",
+      "type": "chat",
+      "concept_id": "heisenberg_uncertainty_principle",
+      "level": 2,
+      "progress": {
+        "current": 72,
+        "total": 80
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "HEISENBERG UNCERTAINTY PRINCIPLE (1927) - Ye kehta hai ki kisi bhi particle ki POSITION (x) aur MOMENTUM (p) dono simultaneously accurately measure nahi ki ja sakti. Mathematically: Δx × Δp ≥ h/4π. Jitna accurately position pata karo, utna uncertain momentum ho jayega aur vice versa. Ye macroscopic objects ke liye negligible hai par electrons jaise tiny particles ke liye significant!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab electron ka exact path nahi bata sakte?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul sahi! Isiliye Bohr ka circular orbit concept wrong hai - wo exact path assume karta tha. Quantum mechanics mein hum sirf PROBABILITY bata sakte hain ki electron kahan MIL SAKTA hai (orbital concept). Isi principle ne Schrödinger Wave Equation ko justify kiya. Heisenberg ko 1932 mein Nobel Prize mila. UPSC Prelims mein conceptual questions aate hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Ye sab to bahut deep hai Sir!"
+        }
+      ],
+      "navigation": {
+        "next": "card_73_advanced_topic_3",
+        "button_text": "Photoelectric Effect ➔"
+      }
+    },
+    {
+      "card_id": "card_73_advanced_topic_3",
+      "card_slug": "card_73_advanced_topic_3",
+      "type": "chat",
+      "concept_id": "photoelectric_effect_einstein",
+      "level": 2,
+      "progress": {
+        "current": 73,
+        "total": 80
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "PHOTOELECTRIC EFFECT - Albert Einstein (1905) ne explain kiya. Jab certain frequency ki light metal surface par padti hai to electrons emit hote hain (photoelectrons). Light ka wave theory ise explain nahi kar paya. Einstein ne Planck's quantum theory use karke bataya - Light PHOTONS (energy packets) ke form mein aati hai. Energy of photon = hν (h = Planck constant, ν = frequency)."
+        },
+        {
+          "speaker": "raju",
+          "text": "To light particles jaisi bhi behave karti hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! Ye wave-particle duality hai. Einstein equation: KE of ejected electron = hν - W₀, jahan W₀ = work function (minimum energy to eject electron). Agar photon energy < W₀, to electron emit nahi hoga chahe intensity kitni bhi ho! Einstein ko is explanation ke liye 1921 mein Nobel Prize mila (not for relativity!). SSC mein Einstein-photoelectric connection puchte hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Wow! Physics aur chemistry connected hain!"
+        }
+      ],
+      "navigation": {
+        "next": "card_74_advanced_topic_4",
+        "button_text": "Spectral Lines concept ➔"
+      }
+    },
+    {
+      "card_id": "card_74_advanced_topic_4",
+      "card_slug": "card_74_advanced_topic_4",
+      "type": "chat",
+      "concept_id": "hydrogen_spectrum_series",
+      "level": 2,
+      "progress": {
+        "current": 74,
+        "total": 80
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "HYDROGEN SPECTRUM - Jab hydrogen gas ko discharge tube mein high voltage se excite karo to light emit hoti hai specific wavelengths ki (line spectrum, not continuous). Different series hain: LYMAN (UV region, transition to n=1), BALMER (Visible, to n=2), PASCHEN (IR, to n=3), BRACKETT (IR, to n=4), PFUND (far IR, to n=5)."
+        },
+        {
+          "speaker": "raju",
+          "text": "Ye series yaad rakhne ka koi trick hai Sir?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Mnemonic: 'Lazy Boys Playing Basketball Poorly' for Lyman, Balmer, Paschen, Brackett, Pfund! Balmer series visible light mein hai isiliye sabse famous hai. Formula: 1/λ = R(1/n₁² - 1/n₂²), jahan R = Rydberg constant = 1.097 × 10⁷ m⁻¹. Electron jab higher orbit se lower mein jump karta hai to photon emit hota hai! NEET mein numerical bhi aate hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Bahut helpful Sir! Aur concepts?"
+        }
+      ],
+      "navigation": {
+        "next": "card_75_advanced_topic_5",
+        "button_text": "Orbital shapes ➔"
+      }
+    },
+    {
+      "card_id": "card_75_advanced_topic_5",
+      "card_slug": "card_75_advanced_topic_5",
+      "type": "chat",
+      "concept_id": "orbital_shapes_visualization",
+      "level": 2,
+      "progress": {
+        "current": 75,
+        "total": 80
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "ORBITAL SHAPES (NEET/JEE important!) - s orbital SPHERICAL shape (symmetrical, all directions equal). p orbital DUMBBELL shape (two lobes, 3 orientations: px, py, pz along x, y, z axes). d orbital DOUBLE DUMBBELL/cloverleaf shape (5 orientations: dxy, dyz, dxz, dx²-y², dz²). f orbital COMPLEX shape (7 orientations). Shape depends on angular part of wave function!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir diagrams draw karne padte hain kya exam mein?"
+        },
+        {
+          "speaker": "aman",
+          "text": "NEET mein mostly MCQ hote hain par concept clear hona chahiye. Important points: s has no nodal plane, p has 1, d has 2. Node = region jahan electron milne ki probability zero hai. Orbital size: s < p < d < f for same n. Energy same shell mein: s < p < d < f. Ye orbital theory bonding samajhne ke liye base hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Clear Sir! Ab practice karna hai solid!"
+        }
+      ],
+      "navigation": {
+        "next": "card_76_trick_mnemonic_1",
+        "button_text": "Exam Tricks & Mnemonics ➔"
+      }
+    },
+    {
+      "card_id": "card_76_trick_mnemonic_1",
+      "card_slug": "card_76_trick_mnemonic_1",
+      "type": "chat",
+      "concept_id": "exam_tricks_mnemonics",
+      "level": 2,
+      "progress": {
+        "current": 76,
+        "total": 80
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Kuch powerful EXAM TRICKS! Aufbau order yaad karne ka DIAGONAL RULE: 1s → 2s → 2p → 3s → 3p → 4s → 3d → 4p → 5s → 4d → 5p → 6s → 4f → 5d → 6p. Ya sequence ratta: 'Sir Science Par Sabse Powerful Doctor Feels' (s, s-p, s-p-d, s-p-d-f pattern!)"
+        },
+        {
+          "speaker": "raju",
+          "text": "Aur quantum number ke liye?"
+        },
+        {
+          "speaker": "aman",
+          "text": "SPDF values: 'Smart People Don't Forget' (s=0, p=1, d=2, f=3). Maximum electrons formula yaad rakho: Shell = 2n², Subshell = 2(2l+1), Orbital = 2. Exceptions yaad karne ka: 'Copper aur Chromium Chalak hain - d¹⁰ aur d⁵ banate hain!' Mo aur Ag bhi same pattern! Full/half-filled = stable!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Ye tricks bahut kaam aayengi!"
+        }
+      ],
+      "navigation": {
+        "next": "card_77_common_mistakes",
+        "button_text": "Common Mistakes ➔"
+      }
+    },
+    {
+      "card_id": "card_77_common_mistakes",
+      "card_slug": "card_77_common_mistakes",
+      "type": "chat",
+      "concept_id": "common_exam_mistakes",
+      "level": 2,
+      "progress": {
+        "current": 77,
+        "total": 80
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "COMMON MISTAKES students karte hain! (1) Orbit aur Orbital confuse karna - Orbit = path (Bohr), Orbital = region (Quantum). (2) '3d fills before 4s' likhna - WRONG! 4s pehle fills, 3d baad mein. (3) 'Isotopes ke chemical properties different' - WRONG! Same hote hain. (4) 'Electron mass negligible hai to ignore karo' - Electronic config mein to electrons hi important hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Aur kya mistakes hain Sir?"
+        },
+        {
+          "speaker": "aman",
+          "text": "(5) Quantum numbers ke limits galat: l should be 0 to (n-1), NOT 1 to n. (6) Pauli principle: 'Same orbital mein 3 electrons' - IMPOSSIBLE! Max 2. (7) Hund's rule ignore karna - Nitrogen (2p³) ko ↑↓↑ likhna instead of ↑↑↑. (8) Valency = Valence electrons samajhna - Chlorine ki valency 1 hai, not 7! Ye sab BPSC ke traps hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "In mistakes se bachna hai! Ab final round?"
+        }
+      ],
+      "navigation": {
+        "next": "card_78_rapid_fire_facts",
+        "button_text": "Rapid Fire Facts ➔"
+      }
+    },
+    {
+      "card_id": "card_78_rapid_fire_facts",
+      "card_slug": "card_78_rapid_fire_facts",
+      "type": "chat",
+      "concept_id": "rapid_fire_important_facts",
+      "level": 2,
+      "progress": {
+        "current": 78,
+        "total": 80
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "RAPID FIRE FACTS for last minute revision! Atom size ~ 10⁻¹⁰ m, Nucleus ~ 10⁻¹⁵ m. Electron charge = -1.6×10⁻¹⁹ C. Proton/Electron mass ratio = 1836. Ground state of H = -13.6 eV. Rydberg constant = 1.097×10⁷ m⁻¹. Planck's h = 6.626×10⁻³⁴ J·s. Noble gas config = most stable (octet complete)."
+        },
+        {
+          "speaker": "raju",
+          "text": "Nobel Prizes bhi bata do Sir!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Thomson (1906), Rutherford (1908 in Chemistry!), Bohr (1922), de Broglie (1929), Heisenberg (1932), Chadwick (1935), Schrödinger (1933). Einstein (1921 for Photoelectric, not Relativity!). Max Born (1954 for probability interpretation). Ye scientists names SSC/Railway mein direct puchte hain with years!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Perfect Sir! Last tips?"
+        }
+      ],
+      "navigation": {
+        "next": "card_79_final_motivation",
+        "button_text": "Final Motivation ➔"
+      }
+    },
+    {
+      "card_id": "card_79_final_motivation",
+      "card_slug": "card_79_final_motivation",
+      "type": "chat",
+      "concept_id": "final_chapter_motivation",
+      "level": 2,
+      "progress": {
+        "current": 79,
+        "total": 80
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, tumne complete atomic structure master kar liya! Discovery of particles se lekar quantum mechanics tak, Thomson se Schrödinger tak, simple atoms se complex electronic configurations tak - sab kuch! Ye chapter sabhi competitive exams ka foundation hai. NEET, SSC, Railway, BPSC sabhi mein atomic structure se 10-15 questions pakke aate hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir ab confidence bahut badh gaya hai! Koi bhi question aa jaye, tackle kar loonga!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Perfect attitude! Remember key points: Subatomic particles (discovery, properties), Atomic models (evolution, limitations), Quantum numbers (4 types, rules), Electronic configuration (Aufbau, Pauli, Hund), Valency (calculation method), Isotopes/Isobars (definitions). Practice numerical problems bhi - Bohr energy, de Broglie wavelength, max electrons calculations. All the best! 🎯"
+        },
+        {
+          "speaker": "raju",
+          "text": "Thank you so much Sir! Atomic Structure ab mera strong topic hai! 💪⚛️"
+        }
+      ],
+      "navigation": {
+        "next": "card_80_final_trophy",
+        "button_text": "Claim Your Trophy! 🏆"
+      }
+    },
+    {
+      "card_id": "card_80_final_trophy",
+      "card_slug": "card_80_final_trophy",
+      "type": "milestone",
+      "concept_id": "chapter_completion_trophy",
+      "level": 2,
+      "progress": {
+        "current": 80,
+        "total": 80
+      },
+      "milestone_payload": {
+        "title": "🎉 ATOMIC STRUCTURE CHAMPION! 🎉",
+        "badge_emoji": "⚛️",
+        "completed_topic": "COMPLETE ATOMIC STRUCTURE MASTERY",
+        "xp_earned": 500,
+        "milestone_progress": "100% Complete - Officer Level Achieved!",
+        "motivational_quote": "From invisible particles to quantum orbitals - you've conquered the atomic universe! Thomson, Rutherford, Bohr, Schrödinger - all masters would be proud! You're not just exam-ready, you're OFFICER-READY! SSC, Railway, BPSC, NEET - bring it on! 🚀⚛️🏆"
+      },
+      "navigation": {
+        "next": null,
+        "button_text": "Back to Dashboard 🏠"
+      }
+    }
+  ]
+}
