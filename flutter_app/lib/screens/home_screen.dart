@@ -8,7 +8,7 @@ import 'package:url_launcher/url_launcher.dart';
 import '../models/question_model.dart';
 import '../services/telegram_tracker.dart';
 import '../widgets/home_widgets.dart';
-import 'learn_hub_screen.dart'; // 👈 Learn Hub Import
+import 'learn_hub_screen.dart'; // Learn Hub Import
 import 'profile_screen.dart';
 import 'revision_practice_screen.dart';
 import 'sectional_cbt_screen.dart';
@@ -208,7 +208,7 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
     );
   }
 
-  // 1️⃣ TAB 1: HOME TAB (REDESIGNED CARDS INTEGRATED)
+  // 1️⃣ TAB 1: HOME TAB (CLEANED UP - OLD HUB REMOVED)
   Widget _buildHomeTab(BuildContext context) {
     return RefreshIndicator(
       onRefresh: _loadAllConfigs,
@@ -226,23 +226,18 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
             HeroHeaderWidget(featuredData: _appConfig['featured_mock'] ?? {}),
             const SizedBox(height: 16),
 
-            // 📕 REDESIGNED FREE STUDY PDFs & NOTES
+            // 📕 NEW DESIGN: FREE STUDY PDFs & NOTES
             _buildPdfSection(context),
             const SizedBox(height: 16),
 
-            // 📢 REDESIGNED LATEST EXAM UPDATES
+            // 📢 NEW DESIGN: LATEST EXAM UPDATES
             _buildExamUpdatesSection(),
             const SizedBox(height: 16),
 
-            // 🗞️ REDESIGNED MONTHLY CURRENT AFFAIRS CAROUSEL
+            // 🗞️ NEW DESIGN: MONTHLY CURRENT AFFAIRS CAROUSEL
             _buildCurrentAffairsSection(),
             const SizedBox(height: 16),
 
-            WebHubCardWidget(
-              webHubSections: (_homeData['web_hub'] as List?) ?? [],
-              onTapUrl: _openWebsiteUrl,
-            ),
-            const SizedBox(height: 16),
             EligibilityCheckerWidget(isDarkMode: _isDarkMode, onTapUrl: _openWebsiteUrl),
             const SizedBox(height: 16),
             _buildLaunchRoadmapCard(),
@@ -301,9 +296,9 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
             ],
           ),
           const SizedBox(height: 14),
-          _buildPdfItem('Laxmikant Polity Short Notes', '12 MB • PDF'),
-          _buildPdfItem('Bihar Special 1000 One-Liners', '8 MB • PDF'),
-          _buildPdfItem('Lucent General Science Summary', '15 MB • PDF'),
+          _buildPdfItem('Laxmikant Polity Short Notes', '12 MB • PDF', 'https://mocktester.in/pdf-notes'),
+          _buildPdfItem('Bihar Special 1000 One-Liners', '8 MB • PDF', 'https://mocktester.in/pdf-notes'),
+          _buildPdfItem('Lucent General Science Summary', '15 MB • PDF', 'https://mocktester.in/pdf-notes'),
           const SizedBox(height: 12),
           SizedBox(
             width: double.infinity,
@@ -321,38 +316,41 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
     );
   }
 
-  Widget _buildPdfItem(String title, String size) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 6.0),
-      child: Row(
-        children: [
-          Container(
-            padding: const EdgeInsets.all(6),
-            decoration: BoxDecoration(
-              color: _isDarkMode ? const Color(0xFF0F172A) : const Color(0xFFF1F5F9),
-              borderRadius: BorderRadius.circular(8),
+  Widget _buildPdfItem(String title, String size, String url) {
+    return InkWell(
+      onTap: () => _openWebsiteUrl(title, url),
+      child: Padding(
+        padding: const EdgeInsets.symmetric(vertical: 6.0),
+        child: Row(
+          children: [
+            Container(
+              padding: const EdgeInsets.all(6),
+              decoration: BoxDecoration(
+                color: _isDarkMode ? const Color(0xFF0F172A) : const Color(0xFFF1F5F9),
+                borderRadius: BorderRadius.circular(8),
+              ),
+              child: const Icon(Icons.description_outlined, size: 18, color: Color(0xFF475569)),
             ),
-            child: const Icon(Icons.description_outlined, size: 18, color: Color(0xFF475569)),
-          ),
-          const SizedBox(width: 10),
-          Expanded(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  title,
-                  style: TextStyle(
-                    fontSize: 13,
-                    fontWeight: FontWeight.w600,
-                    color: _isDarkMode ? Colors.white : const Color(0xFF1E293B),
+            const SizedBox(width: 10),
+            Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    title,
+                    style: TextStyle(
+                      fontSize: 13,
+                      fontWeight: FontWeight.w600,
+                      color: _isDarkMode ? Colors.white : const Color(0xFF1E293B),
+                    ),
                   ),
-                ),
-                Text(size, style: const TextStyle(fontSize: 11, color: Color(0xFF94A3B8))),
-              ],
+                  Text(size, style: const TextStyle(fontSize: 11, color: Color(0xFF94A3B8))),
+                ],
+              ),
             ),
-          ),
-          const Icon(Icons.download_for_offline_outlined, color: Color(0xFF2563EB), size: 20),
-        ],
+            const Icon(Icons.download_for_offline_outlined, color: Color(0xFF2563EB), size: 20),
+          ],
+        ),
       ),
     );
   }
@@ -384,50 +382,53 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
             ],
           ),
           const SizedBox(height: 12),
-          _buildUpdateBadgeItem('BPSC 71th Notification Out', 'HOT', Colors.red),
-          _buildUpdateBadgeItem('BSSC Inter Level Exam Date Sheet', 'NEW', Colors.orange),
-          _buildUpdateBadgeItem('Bihar Police SI Cutoff Analysis', 'INFO', Colors.blue),
+          _buildUpdateBadgeItem('BPSC 71th Notification Out', 'HOT', Colors.red, 'https://mocktester.in/updates'),
+          _buildUpdateBadgeItem('BSSC Inter Level Exam Date Sheet', 'NEW', Colors.orange, 'https://mocktester.in/updates'),
+          _buildUpdateBadgeItem('Bihar Police SI Cutoff Analysis', 'INFO', Colors.blue, 'https://mocktester.in/updates'),
         ],
       ),
     );
   }
 
-  Widget _buildUpdateBadgeItem(String title, String badgeText, Color badgeColor) {
-    return Container(
-      margin: const EdgeInsets.symmetric(vertical: 4),
-      padding: const EdgeInsets.all(10),
-      decoration: BoxDecoration(
-        color: _isDarkMode ? const Color(0xFF0F172A) : const Color(0xFFF8FAFC),
-        borderRadius: BorderRadius.circular(10),
-      ),
-      child: Row(
-        children: [
-          Container(
-            padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
-            decoration: BoxDecoration(
-              color: badgeColor.withOpacity(0.15),
-              borderRadius: BorderRadius.circular(6),
-            ),
-            child: Text(
-              badgeText,
-              style: TextStyle(color: badgeColor, fontSize: 10, fontWeight: FontWeight.bold),
-            ),
-          ),
-          const SizedBox(width: 10),
-          Expanded(
-            child: Text(
-              title,
-              style: TextStyle(
-                fontSize: 13,
-                fontWeight: FontWeight.w500,
-                color: _isDarkMode ? Colors.white70 : const Color(0xFF334155),
+  Widget _buildUpdateBadgeItem(String title, String badgeText, Color badgeColor, String url) {
+    return InkWell(
+      onTap: () => _openWebsiteUrl(title, url),
+      child: Container(
+        margin: const EdgeInsets.symmetric(vertical: 4),
+        padding: const EdgeInsets.all(10),
+        decoration: BoxDecoration(
+          color: _isDarkMode ? const Color(0xFF0F172A) : const Color(0xFFF8FAFC),
+          borderRadius: BorderRadius.circular(10),
+        ),
+        child: Row(
+          children: [
+            Container(
+              padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
+              decoration: BoxDecoration(
+                color: badgeColor.withOpacity(0.15),
+                borderRadius: BorderRadius.circular(6),
               ),
-              maxLines: 1,
-              overflow: TextOverflow.ellipsis,
+              child: Text(
+                badgeText,
+                style: TextStyle(color: badgeColor, fontSize: 10, fontWeight: FontWeight.bold),
+              ),
             ),
-          ),
-          const Icon(Icons.arrow_forward_ios_rounded, size: 12, color: Color(0xFF94A3B8)),
-        ],
+            const SizedBox(width: 10),
+            Expanded(
+              child: Text(
+                title,
+                style: TextStyle(
+                  fontSize: 13,
+                  fontWeight: FontWeight.w500,
+                  color: _isDarkMode ? Colors.white70 : const Color(0xFF334155),
+                ),
+                maxLines: 1,
+                overflow: TextOverflow.ellipsis,
+              ),
+            ),
+            const Icon(Icons.open_in_browser_rounded, size: 14, color: Color(0xFF94A3B8)),
+          ],
+        ),
       ),
     );
   }
@@ -451,9 +452,9 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
           physics: const BouncingScrollPhysics(),
           child: Row(
             children: [
-              _buildAffairsCard('July 2026 Bihar CA Capsule', '120+ High Yield MCQs', Icons.menu_book_rounded, Colors.purple),
+              _buildAffairsCard('July 2026 Bihar CA Capsule', '120+ High Yield MCQs', Icons.menu_book_rounded, Colors.purple, 'https://mocktester.in/current-affairs'),
               const SizedBox(width: 12),
-              _buildAffairsCard('National & International News', 'Quick One-Liners', Icons.public_rounded, Colors.indigo),
+              _buildAffairsCard('National & International News', 'Quick One-Liners', Icons.public_rounded, Colors.indigo, 'https://mocktester.in/current-affairs'),
             ],
           ),
         ),
@@ -461,35 +462,38 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
     );
   }
 
-  Widget _buildAffairsCard(String title, String subtitle, IconData icon, Color themeColor) {
-    return Container(
-      width: 220,
-      padding: const EdgeInsets.all(14),
-      decoration: BoxDecoration(
-        color: themeColor.withOpacity(0.08),
-        borderRadius: BorderRadius.circular(14),
-        border: Border.all(color: themeColor.withOpacity(0.2)),
-      ),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          CircleAvatar(
-            backgroundColor: themeColor,
-            radius: 16,
-            child: Icon(icon, color: Colors.white, size: 18),
-          ),
-          const SizedBox(height: 10),
-          Text(
-            title,
-            style: TextStyle(
-              fontWeight: FontWeight.bold,
-              fontSize: 13,
-              color: _isDarkMode ? Colors.white : const Color(0xFF1E293B),
+  Widget _buildAffairsCard(String title, String subtitle, IconData icon, Color themeColor, String url) {
+    return InkWell(
+      onTap: () => _openWebsiteUrl(title, url),
+      child: Container(
+        width: 220,
+        padding: const EdgeInsets.all(14),
+        decoration: BoxDecoration(
+          color: themeColor.withOpacity(0.08),
+          borderRadius: BorderRadius.circular(14),
+          border: Border.all(color: themeColor.withOpacity(0.2)),
+        ),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            CircleAvatar(
+              backgroundColor: themeColor,
+              radius: 16,
+              child: Icon(icon, color: Colors.white, size: 18),
             ),
-          ),
-          const SizedBox(height: 2),
-          Text(subtitle, style: TextStyle(fontSize: 11, color: themeColor.withOpacity(0.9))),
-        ],
+            const SizedBox(height: 10),
+            Text(
+              title,
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+                fontSize: 13,
+                color: _isDarkMode ? Colors.white : const Color(0xFF1E293B),
+              ),
+            ),
+            const SizedBox(height: 2),
+            Text(subtitle, style: TextStyle(fontSize: 11, color: themeColor.withOpacity(0.9))),
+          ],
+        ),
       ),
     );
   }
@@ -757,14 +761,19 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
     return const SizedBox.shrink();
   }
 
-  // HELPER LAUNCHER FUNCTIONS
+  // 🌐 HELPER LAUNCHER FUNCTION (ENFORCED EXTERNAL BROWSER OPENING)
   Future<void> _openWebsiteUrl(String linkTitle, String url) async {
     TelegramTracker.logActivity("Opened Web Tool: $linkTitle");
     final Uri uri = Uri.parse(url);
     try {
+      // 👈 LaunchMode.externalApplication ensures it opens in Chrome/Default Browser
       await launchUrl(uri, mode: LaunchMode.externalApplication);
     } catch (e) {
-      if (mounted) ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('Could not launch website: $e')));
+      if (mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(content: Text('Could not launch website: $e')),
+        );
+      }
     }
   }
 
