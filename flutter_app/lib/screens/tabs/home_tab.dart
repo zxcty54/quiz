@@ -1,8 +1,10 @@
+import 'dart:convert';
 import 'package:flutter/material.dart';
+import 'package:http/http.dart' as http;
 import '../../widgets/home_widgets.dart';
 import '../sprint_challenge_screen.dart';
 
-class HomeTab extends StatelessWidget {
+class HomeTab extends StatefulWidget {
   final Map<String, dynamic> appConfig;
   final Map<String, dynamic> homeData;
   final Map<String, dynamic> subjectMapping;
@@ -29,6 +31,42 @@ class HomeTab extends StatelessWidget {
   });
 
   @override
+  State<HomeTab> createState() => _HomeTabState();
+}
+
+class _HomeTabState extends State<HomeTab> {
+  List<dynamic> _biharNewsList = [];
+  bool _isLoadingNews = true;
+
+  @override
+  void initState() {
+    super.initState();
+    _fetchBiharNews();
+  }
+
+  // 📰 FETCH LIVE BIHAR NEWS FROM JSDELIVR CDN
+  Future<void> _fetchBiharNews() async {
+    const String newsUrl = "https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/bihar_news.json";
+    try {
+      final res = await http.get(Uri.parse(newsUrl));
+      if (res.statusCode == 200) {
+        final data = jsonDecode(utf8.decode(res.bodyBytes));
+        if (mounted) {
+          setState(() {
+            _biharNewsList = data is List ? data : [data];
+            _isLoadingNews = false;
+          });
+        }
+      } else {
+        if (mounted) setState(() => _isLoadingNews = false);
+      }
+    } catch (e) {
+      debugPrint("Error fetching Bihar News via CDN: $e");
+      if (mounted) setState(() => _isLoadingNews = false);
+    }
+  }
+
+  @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
       physics: const AlwaysScrollableScrollPhysics(),
@@ -36,23 +74,163 @@ class HomeTab extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          if (appConfig['today_update']?['show'] == true) ...[
-            TodayUpdateTickerWidget(updateData: appConfig['today_update'], onTapUrl: onTapUrl),
+          // 1. TODAY TICKER
+          if (widget.appConfig['today_update']?['show'] == true) ...[
+            TodayUpdateTickerWidget(updateData: widget.appConfig['today_update'], onTapUrl: widget.onTapUrl),
             const SizedBox(height: 16),
           ],
+
+          // 2. TRUST HERO BANNER
           _buildTrustHeroBanner(),
           const SizedBox(height: 16),
+
+          // 📰 3. DAILY BIHAR SPECIAL BULLETIN (LIVE VIA CDN)
+          _buildBiharNewsSection(),
+          const SizedBox(height: 16),
+
+          // 4. LEARN PREVIEW CARD
           _buildLearnPreviewCard(context),
           const SizedBox(height: 16),
+
+          // ⚡ 5. SPEED RUN DUEL CARD
           _buildSpeedRunChallengeCard(context),
           const SizedBox(height: 16),
+
+          // 6. DYNAMIC WEB HUB
           _buildDynamicWebHubSection(context),
           const SizedBox(height: 16),
-          EligibilityCheckerWidget(isDarkMode: isDarkMode, onTapUrl: onTapUrl),
+
+          // 7. ELIGIBILITY CHECKER
+          EligibilityCheckerWidget(isDarkMode: widget.isDarkMode, onTapUrl: widget.onTapUrl),
           const SizedBox(height: 16),
+
+          // 8. LAUNCH ROADMAP
           _buildLaunchRoadmapCard(),
           const SizedBox(height: 16),
+
+          // 9. TELEGRAM COMMUNITY
           const TelegramCreatorWidget(),
+        ],
+      ),
+    );
+  }
+
+  // 📰 BIHAR NEWS WIDGET SECTION
+  Widget _buildBiharNewsSection() {
+    if (_isLoadingNews) {
+      return Container(
+        width: double.infinity,
+        padding: const EdgeInsets.all(16),
+        decoration: BoxDecoration(
+          color: widget.isDarkMode ? const Color(0xFF1E293B) : Colors.white,
+          borderRadius: BorderRadius.circular(16),
+        ),
+        child: const Center(
+          child: CircularProgressIndicator(color: Color(0xFF0284C7)),
+        ),
+      );
+    }
+
+    if (_biharNewsList.isEmpty) return const SizedBox.shrink();
+
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            const Text(
+              '📰 Daily Bihar Special Bulletin',
+              style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+            ),
+            Container(
+              padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
+              decoration: BoxDecoration(
+                color: const Color(0xFF0284C7).withOpacity(0.15),
+                borderRadius: BorderRadius.circular(12),
+              ),
+              child: const Text(
+                'LIVE UPDATE',
+                style: TextStyle(color: Color(0xFF0284C7), fontSize: 10, fontWeight: FontWeight.bold),
+              ),
+            ),
+          ],
+        ),
+        const SizedBox(height: 10),
+        ..._biharNewsList.map((news) => _buildNewsCard(news)),
+      ],
+    );
+  }
+
+  Widget _buildNewsCard(Map<String, dynamic> news) {
+    final List bullets = (news['bullets'] as List?) ?? [];
+
+    return Container(
+      width: double.infinity,
+      margin: const EdgeInsets.only(bottom: 12),
+      padding: const EdgeInsets.all(16),
+      decoration: BoxDecoration(
+        color: widget.isDarkMode ? const Color(0xFF1E293B) : const Color(0xFF0F172A),
+        borderRadius: BorderRadius.circular(16),
+        border: Border.all(color: const Color(0xFF38BDF8).withOpacity(0.3), width: 1.2),
+        boxShadow: [
+          BoxShadow(
+            color: Colors.black.withOpacity(0.08),
+            blurRadius: 8,
+            offset: const Offset(0, 3),
+          )
+        ],
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Container(
+                padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
+                decoration: BoxDecoration(
+                  color: const Color(0xFF0284C7),
+                  borderRadius: BorderRadius.circular(20),
+                ),
+                child: Text(
+                  news['exam_tag'] ?? '🎯 BPSC Special',
+                  style: const TextStyle(color: Colors.white, fontSize: 10, fontWeight: FontWeight.bold),
+                ),
+              ),
+              Row(
+                children: [
+                  const Icon(Icons.calendar_today_rounded, size: 12, color: Colors.amberAccent),
+                  const SizedBox(width: 4),
+                  Text(
+                    news['date'] ?? '',
+                    style: const TextStyle(color: Colors.amberAccent, fontSize: 11, fontWeight: FontWeight.bold),
+                  ),
+                ],
+              )
+            ],
+          ),
+          const SizedBox(height: 12),
+          Text(
+            news['title'] ?? '',
+            style: const TextStyle(color: Colors.white, fontSize: 16, fontWeight: FontWeight.bold, height: 1.35),
+          ),
+          const SizedBox(height: 10),
+          ...bullets.map((bullet) => Padding(
+                padding: const EdgeInsets.only(bottom: 6.0),
+                child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    const Text('🔹 ', style: TextStyle(color: Color(0xFF38BDF8), fontSize: 12)),
+                    Expanded(
+                      child: Text(
+                        bullet.toString(),
+                        style: const TextStyle(color: Colors.white70, fontSize: 12.5, height: 1.4),
+                      ),
+                    ),
+                  ],
+                ),
+              )),
         ],
       ),
     );
@@ -63,7 +241,7 @@ class HomeTab extends StatelessWidget {
       width: double.infinity,
       padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
-        color: isDarkMode ? const Color(0xFF111827) : const Color(0xFF1E293B),
+        color: widget.isDarkMode ? const Color(0xFF111827) : const Color(0xFF1E293B),
         borderRadius: BorderRadius.circular(16),
         boxShadow: [
           BoxShadow(
@@ -130,14 +308,14 @@ class HomeTab extends StatelessWidget {
   }
 
   Widget _buildLearnPreviewCard(BuildContext context) {
-    int percentDisplay = (lastLearnProgress * 100).toInt();
+    int percentDisplay = (widget.lastLearnProgress * 100).toInt();
 
     return Container(
       width: double.infinity,
       padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
         gradient: LinearGradient(
-          colors: isDarkMode 
+          colors: widget.isDarkMode
               ? [const Color(0xFF0F766E), const Color(0xFF115E59)]
               : [const Color(0xFF0F766E), const Color(0xFF0D9488)],
           begin: Alignment.topLeft,
@@ -168,7 +346,7 @@ class HomeTab extends StatelessWidget {
                   children: [
                     const Text('🧬 ', style: TextStyle(fontSize: 12)),
                     Text(
-                      hasLearningHistory ? 'CONTINUE LEARNING' : 'INTERACTIVE LEARNING (NEW)',
+                      widget.hasLearningHistory ? 'CONTINUE LEARNING' : 'INTERACTIVE LEARNING (NEW)',
                       style: const TextStyle(
                         color: Color(0xFF0F172A),
                         fontSize: 10,
@@ -186,7 +364,7 @@ class HomeTab extends StatelessWidget {
           ),
           const SizedBox(height: 12),
           Text(
-            lastLearnTitle,
+            widget.lastLearnTitle,
             style: const TextStyle(
               color: Colors.white,
               fontSize: 18,
@@ -195,7 +373,7 @@ class HomeTab extends StatelessWidget {
           ),
           const SizedBox(height: 4),
           Text(
-            lastNextTopic,
+            widget.lastNextTopic,
             maxLines: 1,
             overflow: TextOverflow.ellipsis,
             style: const TextStyle(color: Colors.white70, fontSize: 12),
@@ -221,7 +399,7 @@ class HomeTab extends StatelessWidget {
               ClipRRect(
                 borderRadius: BorderRadius.circular(10),
                 child: LinearProgressIndicator(
-                  value: lastLearnProgress,
+                  value: widget.lastLearnProgress,
                   minHeight: 6,
                   backgroundColor: Colors.white24,
                   valueColor: AlwaysStoppedAnimation<Color>(Colors.amber.shade400),
@@ -233,7 +411,7 @@ class HomeTab extends StatelessWidget {
           SizedBox(
             width: double.infinity,
             child: ElevatedButton(
-              onPressed: onNavigateToLearn,
+              onPressed: widget.onNavigateToLearn,
               style: ElevatedButton.styleFrom(
                 backgroundColor: Colors.white,
                 foregroundColor: const Color(0xFF0F766E),
@@ -247,7 +425,7 @@ class HomeTab extends StatelessWidget {
                   const Icon(Icons.play_arrow_rounded, size: 20),
                   const SizedBox(width: 6),
                   Text(
-                    hasLearningHistory ? 'Resume Learning →' : 'Start Learning →',
+                    widget.hasLearningHistory ? 'Resume Learning →' : 'Start Learning →',
                     style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 13.5),
                   ),
                 ],
@@ -333,7 +511,7 @@ class HomeTab extends StatelessWidget {
                   context,
                   MaterialPageRoute(
                     builder: (context) => SprintChallengeScreen(
-                      subjectMapping: subjectMapping,
+                      subjectMapping: widget.subjectMapping,
                     ),
                   ),
                 );
@@ -364,7 +542,7 @@ class HomeTab extends StatelessWidget {
   }
 
   Widget _buildDynamicWebHubSection(BuildContext context) {
-    final List webHubList = (homeData['web_hub'] as List?) ?? [];
+    final List webHubList = (widget.homeData['web_hub'] as List?) ?? [];
 
     if (webHubList.isEmpty) return const SizedBox.shrink();
 
@@ -386,10 +564,10 @@ class HomeTab extends StatelessWidget {
           margin: const EdgeInsets.only(bottom: 16),
           padding: const EdgeInsets.all(16),
           decoration: BoxDecoration(
-            color: isDarkMode ? const Color(0xFF1E293B) : Colors.white,
+            color: widget.isDarkMode ? const Color(0xFF1E293B) : Colors.white,
             borderRadius: BorderRadius.circular(16),
             border: Border.all(
-              color: isDarkMode ? Colors.blueGrey.shade700 : cardThemeColor.withOpacity(0.2),
+              color: widget.isDarkMode ? Colors.blueGrey.shade700 : cardThemeColor.withOpacity(0.2),
               width: 1.2,
             ),
             boxShadow: [
@@ -412,7 +590,7 @@ class HomeTab extends StatelessWidget {
                       style: TextStyle(
                         fontSize: 16,
                         fontWeight: FontWeight.bold,
-                        color: isDarkMode ? Colors.white : const Color(0xFF0F172A),
+                        color: widget.isDarkMode ? Colors.white : const Color(0xFF0F172A),
                       ),
                     ),
                   ),
@@ -436,7 +614,7 @@ class HomeTab extends StatelessWidget {
               const SizedBox(height: 12),
               ...items.map((itemText) {
                 return InkWell(
-                  onTap: () => onTapUrl(itemText.toString(), buttonUrl),
+                  onTap: () => widget.onTapUrl(itemText.toString(), buttonUrl),
                   borderRadius: BorderRadius.circular(8),
                   child: Padding(
                     padding: const EdgeInsets.symmetric(vertical: 6.0, horizontal: 4.0),
@@ -450,7 +628,7 @@ class HomeTab extends StatelessWidget {
                             style: TextStyle(
                               fontSize: 13,
                               fontWeight: FontWeight.w500,
-                              color: isDarkMode ? Colors.white70 : const Color(0xFF334155),
+                              color: widget.isDarkMode ? Colors.white70 : const Color(0xFF334155),
                             ),
                           ),
                         ),
@@ -464,7 +642,7 @@ class HomeTab extends StatelessWidget {
               SizedBox(
                 width: double.infinity,
                 child: OutlinedButton(
-                  onPressed: () => onTapUrl(title, buttonUrl),
+                  onPressed: () => widget.onTapUrl(title, buttonUrl),
                   style: OutlinedButton.styleFrom(
                     side: BorderSide(color: cardThemeColor),
                     shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
@@ -481,7 +659,7 @@ class HomeTab extends StatelessWidget {
   }
 
   Widget _buildLaunchRoadmapCard() {
-    final List roadmapList = appConfig['launch_roadmap'] ?? [
+    final List roadmapList = widget.appConfig['launch_roadmap'] ?? [
       {"text": "🔥 Coming Tomorrow: BSSC Inter Level Top 100 Qs", "color": "0xFFFF4757"},
       {"text": "✅ Just Added: Current Affairs Bulletin 2026", "color": "0xFF059669"},
       {"text": "📌 Next Week: BPSC Mains Answer Writing Practice", "color": "0xFF2563EB"}
