@@ -13,6 +13,7 @@ import 'learn_hub_screen.dart';
 import 'profile_screen.dart';
 import 'revision_practice_screen.dart';
 import 'sectional_cbt_screen.dart';
+import 'sprint_challenge_screen.dart'; // 👈 Sprint Challenge Screen Import
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -62,13 +63,11 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
         state == AppLifecycleState.inactive) {
       TelegramTracker.sendOnAppExitAlert();
     }
-    // Jab app resume ho, progress update ho jaye
     if (state == AppLifecycleState.resumed) {
       _loadRealtimeProgress();
     }
   }
 
-  // 📖 Pure External JSON Asset Loader
   Future<void> _loadAllConfigs() async {
     await _loadRealtimeProgress();
 
@@ -107,7 +106,6 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
     }
   }
 
-  // ⚡ READ REALTIME PROGRESS FROM LOCAL STORAGE
   Future<void> _loadRealtimeProgress() async {
     final prefs = await SharedPreferences.getInstance();
     if (mounted) {
@@ -203,7 +201,7 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
           selectedIndex: _currentBottomIndex,
           onDestinationSelected: (idx) {
             setState(() => _currentBottomIndex = idx);
-            if (idx == 0) _loadRealtimeProgress(); // Home tab par wapas aane par sync karein
+            if (idx == 0) _loadRealtimeProgress();
             List<String> tabs = ['Home Tab', 'Revision Hub', 'Sectional CBT', 'Learn Hub', 'Profile Tab'];
             TelegramTracker.logActivity("Switched to ${tabs[idx]}");
           },
@@ -255,30 +253,108 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
               const SizedBox(height: 16),
             ],
 
-            // 2. FEATURED MOCK BANNER
-            HeroHeaderWidget(featuredData: _appConfig['featured_mock'] ?? {}),
+            // 2. TRUST BANNER
+            _buildTrustHeroBanner(),
             const SizedBox(height: 16),
 
-            // 🔥 3. REALTIME LEARN TAB PREVIEW CARD
+            // 3. REALTIME LEARN TAB PREVIEW CARD
             _buildLearnPreviewCard(context),
             const SizedBox(height: 16),
 
-            // 4. DYNAMIC WEB HUB CARDS FROM home_data.json
+            // ⚡ 4. LIVE SPRINT CHALLENGE CARD
+            _buildSpeedRunChallengeCard(context),
+            const SizedBox(height: 16),
+
+            // 5. DYNAMIC WEB HUB CARDS
             _buildDynamicWebHubSection(context),
             const SizedBox(height: 16),
 
-            // 5. ELIGIBILITY CHECKER
+            // 6. ELIGIBILITY CHECKER
             EligibilityCheckerWidget(isDarkMode: _isDarkMode, onTapUrl: _openWebsiteUrl),
             const SizedBox(height: 16),
 
-            // 6. LAUNCH ROADMAP
+            // 7. LAUNCH ROADMAP
             _buildLaunchRoadmapCard(),
             const SizedBox(height: 16),
 
-            // 7. TELEGRAM COMMUNITY
+            // 8. TELEGRAM COMMUNITY
             const TelegramCreatorWidget(),
           ],
         ),
+      ),
+    );
+  }
+
+  // 🎨 TRUST HERO BANNER
+  Widget _buildTrustHeroBanner() {
+    final cardColor = _isDarkMode ? const Color(0xFF111827) : const Color(0xFF1E293B);
+
+    return Container(
+      width: double.infinity,
+      padding: const EdgeInsets.all(16),
+      decoration: BoxDecoration(
+        color: cardColor,
+        borderRadius: BorderRadius.circular(16),
+        boxShadow: [
+          BoxShadow(
+            color: Colors.black.withOpacity(0.08),
+            blurRadius: 12,
+            offset: const Offset(0, 4),
+          )
+        ],
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Row(
+            children: [
+              Container(
+                padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
+                decoration: BoxDecoration(
+                  color: Colors.amber.shade400,
+                  borderRadius: BorderRadius.circular(20),
+                ),
+                child: const Row(
+                  children: [
+                    Text('🛡️ ', style: TextStyle(fontSize: 11)),
+                    Text(
+                      'STUDENT-FIRST INITIATIVE',
+                      style: TextStyle(
+                        color: Color(0xFF0F172A),
+                        fontSize: 10,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              const SizedBox(width: 8),
+              const Text(
+                'BPSC • BSSC • SSC',
+                style: TextStyle(color: Colors.white60, fontSize: 10, fontWeight: FontWeight.bold),
+              )
+            ],
+          ),
+          const SizedBox(height: 14),
+          const Text(
+            'Mehnga Subscription Kyun?\nPadhai Pe Sabka Haq Hai!',
+            style: TextStyle(
+              color: Colors.white,
+              fontSize: 17,
+              fontWeight: FontWeight.bold,
+              height: 1.35,
+            ),
+          ),
+          const SizedBox(height: 8),
+          const Text(
+            'Paid Apps Repeat Old Questions. MockTester Tests What Came Yesterday.\n100% Free & Latest CBT Pattern Mocks.',
+            style: TextStyle(
+              color: Colors.white70,
+              fontSize: 11.5,
+              height: 1.4,
+            ),
+          ),
+        ],
       ),
     );
   }
@@ -310,7 +386,6 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          // BADGE & CHARACTERS TAG
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
@@ -340,10 +415,7 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
               ),
             ],
           ),
-
           const SizedBox(height: 12),
-
-          // REALTIME DYNAMIC CHAPTER TITLE
           Text(
             _lastLearnTitle,
             style: const TextStyle(
@@ -353,18 +425,13 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
             ),
           ),
           const SizedBox(height: 4),
-          
-          // REALTIME NEXT TOPIC
           Text(
             _lastNextTopic,
             maxLines: 1,
             overflow: TextOverflow.ellipsis,
             style: const TextStyle(color: Colors.white70, fontSize: 12),
           ),
-
           const SizedBox(height: 14),
-
-          // REALTIME PROGRESS BAR
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -393,16 +460,13 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
               ),
             ],
           ),
-
           const SizedBox(height: 14),
-
-          // ACTION RESUME BUTTON
           SizedBox(
             width: double.infinity,
             child: ElevatedButton(
               onPressed: () {
                 setState(() {
-                  _currentBottomIndex = 3; // Switch to Learn Hub Tab
+                  _currentBottomIndex = 3;
                 });
               },
               style: ElevatedButton.styleFrom(
@@ -420,6 +484,111 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
                   Text(
                     _hasLearningHistory ? 'Resume Learning →' : 'Start Learning →',
                     style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 13.5),
+                  ),
+                ],
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  // ⚔️ LIVE DUEL SPRINT CHALLENGE CARD
+  Widget _buildSpeedRunChallengeCard(BuildContext context) {
+    return Container(
+      width: double.infinity,
+      padding: const EdgeInsets.all(16),
+      decoration: BoxDecoration(
+        gradient: const LinearGradient(
+          colors: [Color(0xFFEA580C), Color(0xFFC2410C)],
+          begin: Alignment.topLeft,
+          end: Alignment.bottomRight,
+        ),
+        borderRadius: BorderRadius.circular(16),
+        boxShadow: [
+          BoxShadow(
+            color: const Color(0xFFEA580C).withOpacity(0.3),
+            blurRadius: 10,
+            offset: const Offset(0, 4),
+          ),
+        ],
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Container(
+                padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(20),
+                ),
+                child: const Row(
+                  children: [
+                    Text('⚔️ ', style: TextStyle(fontSize: 12)),
+                    Text(
+                      'LIVE DUEL SPRINT',
+                      style: TextStyle(
+                        color: Color(0xFFEA580C),
+                        fontSize: 10,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              const Text(
+                '⏱️ 5 Mins • 10 Levels',
+                style: TextStyle(color: Colors.white70, fontSize: 11, fontWeight: FontWeight.bold),
+              )
+            ],
+          ),
+          const SizedBox(height: 12),
+          const Text(
+            'Challenge Your Friend 🎯',
+            style: TextStyle(
+              color: Colors.white,
+              fontSize: 18,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+          const SizedBox(height: 4),
+          const Text(
+            '10 High-yield concepts solve karo, result dost ko WhatsApp/Telegram par bhejo aur dekho kon jeet-ta hai!',
+            style: TextStyle(color: Colors.white70, fontSize: 12, height: 1.3),
+          ),
+          const SizedBox(height: 14),
+          SizedBox(
+            width: double.infinity,
+            child: ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => SprintChallengeScreen(
+                      subjectMapping: _subjectMapping, // Pass Subject Mapping
+                    ),
+                  ),
+                );
+              },
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.white,
+                foregroundColor: const Color(0xFFEA580C),
+                elevation: 0,
+                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+                padding: const EdgeInsets.symmetric(vertical: 11),
+              ),
+              child: const Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Icon(Icons.bolt_rounded, size: 20),
+                  SizedBox(width: 6),
+                  Text(
+                    'Start Challenge Sprint 🚀',
+                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 13.5),
                   ),
                 ],
               ),
@@ -504,7 +673,6 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
                 ],
               ),
               const SizedBox(height: 12),
-
               ...items.map((itemText) {
                 return InkWell(
                   onTap: () => _openWebsiteUrl(itemText.toString(), buttonUrl),
@@ -539,9 +707,7 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
                   ),
                 );
               }),
-
               const SizedBox(height: 12),
-
               SizedBox(
                 width: double.infinity,
                 child: OutlinedButton(
