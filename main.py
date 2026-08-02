@@ -20,7 +20,7 @@ def fetch_raw_bihar_news():
     # -------------------------------------------------------------
     try:
         pib_url = "https://pib.gov.in/RssMain.aspx?ModId=6&Lang=2&Regid=3"
-        res = requests.get(pib_url, impersonate="chrome", timeout=15)
+        res = requests.get(pib_url, impersonate="chrome", timeout=15, verify=False)
         if res.status_code == 200:
             root = ET.fromstring(res.text)
             for item in root.findall('.//item')[:4]:
@@ -36,7 +36,7 @@ def fetch_raw_bihar_news():
     # -------------------------------------------------------------
     try:
         cmo_url = "https://cm.bihar.gov.in/users/preessrelease.aspx"
-        res = requests.get(cmo_url, impersonate="chrome", timeout=15)
+        res = requests.get(cmo_url, impersonate="chrome", timeout=15, verify=False)
         if res.status_code == 200:
             soup = BeautifulSoup(res.content, "html.parser")
             for row in soup.find_all('tr')[:5]:
@@ -53,9 +53,9 @@ def fetch_raw_bihar_news():
     # Source C: IPRD BIHAR (Information & Public Relations Dept)
     # -------------------------------------------------------------
     try:
-        # Updated official URL for IPRD Bihar portal
         iprd_url = "https://state.bihar.gov.in/prdbihar/CitizenHome.html"
-        res = requests.get(iprd_url, impersonate="chrome", timeout=15)
+        # verify=False added to bypass SSL Certificate verification error
+        res = requests.get(iprd_url, impersonate="chrome", timeout=15, verify=False)
         if res.status_code == 200:
             soup = BeautifulSoup(res.content, "html.parser")
             count = 0
@@ -102,9 +102,9 @@ def generate_app_summary_json(raw_text):
     ]
     """
     
-    # FIXED: Standard model name gemini-1.5-flash
+    # FIXED: Using latest supported model gemini-2.5-flash for google-genai SDK
     response = client.models.generate_content(
-        model="gemini-1.5-flash",
+        model="gemini-2.5-flash",
         contents=prompt
     )
     return response.text
