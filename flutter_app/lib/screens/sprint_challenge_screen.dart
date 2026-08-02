@@ -26,9 +26,9 @@ class SeededRandom {
 }
 
 class SprintChallengeScreen extends StatefulWidget {
-  final Map<String, dynamic> subjectMapping; // Subject Mapping Passed from Home
-  final String? roomSets; // e.g. "12-4-28-19"
-  final int? vsScore; // Friend's score
+  final Map<String, dynamic> subjectMapping;
+  final String? roomSets;
+  final int? vsScore;
 
   const SprintChallengeScreen({
     super.key,
@@ -49,7 +49,7 @@ class _SprintChallengeScreenState extends State<SprintChallengeScreen> {
 
   List<Map<String, dynamic>> _activeQuestions = [];
   int _currentQuestionIndex = 0;
-  Map<int, int> _userSelectedAnswers = {};
+  final Map<int, int> _userSelectedAnswers = {};
 
   Timer? _timer;
   int _timeRemaining = 300; // 5 Minutes
@@ -68,7 +68,6 @@ class _SprintChallengeScreenState extends State<SprintChallengeScreen> {
       _isLoading = true;
     });
 
-    // 1. Current Affairs chhor kar baaki saare JSON paths extract karo
     List<String> validMappedPaths = [];
     widget.subjectMapping.forEach((subjectKey, mappings) {
       if (subjectKey != 'current_mapping' && mappings is Map) {
@@ -83,20 +82,17 @@ class _SprintChallengeScreenState extends State<SprintChallengeScreen> {
     if (validMappedPaths.isEmpty) {
       setState(() => _isLoading = false);
       ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(content: Text('⚠️ Subject mapping empty or loading error!')),
+        const SnackBar(content: Text('⚠️ Subject mapping loading error!')),
       );
       return;
     }
 
     List<int> pickedIndices = [];
 
-    // 2. Room Signature Logic
     if (widget.roomSets != null && widget.roomSets!.contains('-')) {
       _activeRoomSignature = widget.roomSets!;
       pickedIndices = widget.roomSets!.split('-').map((e) => int.tryParse(e) ?? 0).toList();
     } else {
-      // Naya Challenge Link create karo (4 random chapters select honge)
-      validMappedPaths.shuffle();
       List<int> tempIndices = [];
       for (int i = 0; i < 4 && i < validMappedPaths.length; i++) {
         tempIndices.add((DateTime.now().microsecondsSinceEpoch + i * 7) % validMappedPaths.length);
@@ -107,7 +103,6 @@ class _SprintChallengeScreenState extends State<SprintChallengeScreen> {
 
     final prng = SeededRandom(_activeRoomSignature);
 
-    // 3. Pick JSON files using room signature
     List<String> selectedJsonPaths = [];
     for (int idx in pickedIndices) {
       int safeIdx = idx % validMappedPaths.length;
@@ -138,7 +133,6 @@ class _SprintChallengeScreenState extends State<SprintChallengeScreen> {
               mappedOptions.add({'text': rawOpts[optIdx].toString(), 'origIdx': optIdx});
             }
 
-            // Shuffle options reproducibly using Seeded PRNG
             for (int k = mappedOptions.length - 1; k > 0; k--) {
               int j = (prng.nextDouble() * (k + 1)).floor();
               var temp = mappedOptions[k];
@@ -165,7 +159,6 @@ class _SprintChallengeScreenState extends State<SprintChallengeScreen> {
         }
       }
 
-      // 4. Deterministic Shuffle on Master Mix Pool
       for (int i = masterMixPool.length - 1; i > 0; i--) {
         int j = (prng.nextDouble() * (i + 1)).floor();
         var temp = masterMixPool[i];
@@ -180,7 +173,7 @@ class _SprintChallengeScreenState extends State<SprintChallengeScreen> {
           _userSelectedAnswers.clear();
           _timeRemaining = 300;
           _isLoading = false;
-          _currentScreen = 1; // Move to Quiz
+          _currentScreen = 1;
         });
         _startTimer();
       }
@@ -188,7 +181,7 @@ class _SprintChallengeScreenState extends State<SprintChallengeScreen> {
       if (mounted) {
         setState(() => _isLoading = false);
         ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(content: Text('⚠️ Data Fetch Error: $e')),
+          SnackBar(content: Text('⚠️ Network Error: $e')),
         );
       }
     }
@@ -216,7 +209,7 @@ class _SprintChallengeScreenState extends State<SprintChallengeScreen> {
     }
     setState(() {
       _finalScore = correct;
-      _currentScreen = 2; // Move to Result Screen
+      _currentScreen = 2;
     });
   }
 
@@ -242,7 +235,7 @@ class _SprintChallengeScreenState extends State<SprintChallengeScreen> {
     } catch (e) {
       if (mounted) {
         ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(content: Text('Could not open $platform')),
+          SnackBar(content: Text('Could not launch $platform')),
         );
       }
     }
@@ -254,7 +247,7 @@ class _SprintChallengeScreenState extends State<SprintChallengeScreen> {
       backgroundColor: const Color(0xFFF8FAFC),
       appBar: AppBar(
         backgroundColor: const Color(0xFF1E3A8A),
-        title: const Text('🎯 Subject Accuracy Drill', style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 16)),
+        title: const Text('🎯 Accuracy Sprint Challenge', style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 16)),
         leading: IconButton(
           icon: const Icon(Icons.arrow_back_rounded, color: Colors.white),
           onPressed: () => Navigator.pop(context),
@@ -293,13 +286,8 @@ class _SprintChallengeScreenState extends State<SprintChallengeScreen> {
                 ),
               ],
 
-              // 🖥️ SCREEN 0: INTRO
               if (_currentScreen == 0) _buildIntroScreen(),
-
-              // 🖥️ SCREEN 1: QUIZ
               if (_currentScreen == 1) _buildQuizScreen(),
-
-              // 🖥️ SCREEN 2: RESULT
               if (_currentScreen == 2) _buildResultScreen(),
             ],
           ),
@@ -319,7 +307,7 @@ class _SprintChallengeScreenState extends State<SprintChallengeScreen> {
             Container(
               padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 4),
               decoration: BoxDecoration(color: const Color(0xFFEFF6FF), borderRadius: BorderRadius.circular(8)),
-              child: const Text('🎯 SUBJECT ACCURACY DRILL', style: TextStyle(color: Color(0xFF1E40AF), fontSize: 11, fontWeight: FontWeight.bold)),
+              child: const Text('🎯 ACCURACY DRILL', style: TextStyle(color: Color(0xFF1E40AF), fontSize: 11, fontWeight: FontWeight.bold)),
             ),
             const SizedBox(height: 14),
             const Text('Challenge Your Friend', style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold, color: Color(0xFF1E3A8A))),
