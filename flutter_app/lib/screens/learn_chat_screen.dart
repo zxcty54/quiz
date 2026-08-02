@@ -73,7 +73,7 @@ class _LearnChatScreenState extends State<LearnChatScreen> {
             visibleMessageCount = 1;
             isLoading = false;
           });
-          // Pehli baar load hone par bhi progress sync kar lo
+          // Pehli baar load hone par bhi Home Screen Progress Sync karo
           _saveProgress(savedIdx);
         }
       } else {
@@ -94,25 +94,27 @@ class _LearnChatScreenState extends State<LearnChatScreen> {
     }
   }
 
-  // ⚡ REALTIME PROGRESS SAVER FOR HOME SCREEN PREVIEW
+  // ⚡ REALTIME PROGRESS SAVER FOR HOME SCREEN PREVIEW (ERROR-FREE NULL SAFE)
   Future<void> _saveProgress(int index) async {
     if (chapterData == null || chapterData!.cardsList.isEmpty) return;
     final prefs = await SharedPreferences.getInstance();
     
-    // 1. Chapter wise progress save
+    // 1. Chapter-wise progress save
     await prefs.setInt('progress_idx_${chapterData!.id}', index);
 
     // 2. Home Screen Realtime Sync Data Save
     double progress = (index + 1) / chapterData!.cardsList.length;
     
-    // Find next topic title if available
     String nextTopic = "Continue Interactive Story";
     if (index + 1 < chapterData!.cardsList.length) {
       final nextCard = chapterData!.cardsList[index + 1];
-      if (nextCard.title != null && nextCard.title!.isNotEmpty) {
-        nextTopic = "Next: ${nextCard.title}";
-      } else if (nextCard.messages != null && nextCard.messages!.isNotEmpty) {
-        nextTopic = "Next: ${nextCard.messages!.first.text}";
+      
+      // ✅ SAFE READ: Read text from messages or cardSlug instead of undefined title getter
+      if (nextCard.messages != null && nextCard.messages!.isNotEmpty) {
+        final firstMsg = nextCard.messages!.first.text;
+        nextTopic = firstMsg.length > 30 ? "Next: ${firstMsg.substring(0, 30)}..." : "Next: $firstMsg";
+      } else if (nextCard.cardSlug != null && nextCard.cardSlug!.isNotEmpty) {
+        nextTopic = "Next: ${nextCard.cardSlug}";
       }
     } else {
       nextTopic = "Chapter Completed 🎉";
