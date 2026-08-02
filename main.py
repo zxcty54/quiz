@@ -1,15 +1,21 @@
 import os
 import json
 import xml.etree.ElementTree as ET
+from datetime import datetime, timedelta
 from curl_cffi import requests
 from bs4 import BeautifulSoup
 from groq import Groq
 
 # -------------------------------------------------------------
-# 1. API Client Setup (Using GROQ_API_KEY from GitHub Secret)
+# 1. API Client Setup (Groq API)
 # -------------------------------------------------------------
 GROQ_KEY = os.environ.get("GROQ_API_KEY")
 client = Groq(api_key=GROQ_KEY) if GROQ_KEY else None
+
+def get_yesterday_date_str():
+    """Subah 6:30 AM chalne par pichhle din ki date format karke deta hai (e.g., '02 August 2026')"""
+    yesterday = datetime.now() - timedelta(days=1)
+    return yesterday.strftime("%d %B %Y")
 
 def fetch_raw_bihar_news():
     """Teeno Official Sources (CMO, IPRD, PIB) se raw news text scrape karta hai"""
@@ -65,8 +71,8 @@ def fetch_raw_bihar_news():
 
     return "\n".join(news_titles)
 
-def generate_app_summary_json(raw_text):
-    """Groq API (Llama 3.3 70B) se strict JSON format me summary banwata hai"""
+def generate_app_summary_json(raw_text, target_date):
+    """Groq API se strict JSON format me summary banwata hai with dynamic date"""
     prompt = f"""
     Tum BPSC aur Bihar Competitive Exams ke Current Affairs Editor ho.
     Niche CMO Bihar, IPRD Bihar aur PIB Patna se li gayi latest raw news hai:
@@ -77,6 +83,7 @@ def generate_app_summary_json(raw_text):
     1. Politics, Crime, Elections, Murder, aur Raajneeti ki news ko Bilkul REJECT (discard) kar do.
     2. Sirf Education, Government Schemes, Infrastructure, Agriculture, aur Development ki TOP 4-5 news chuno.
     3. Output STRICTLY VALID JSON format me hona chahiye. Return ONLY raw JSON array without markdown wrapping.
+    4. Subah ke recap ke hisaab se "date" field me strictly "{target_date}" likhna.
     
     JSON SCHEMA OUTPUT:
     [
@@ -90,13 +97,13 @@ def generate_app_summary_json(raw_text):
           "Point 3: BPSC/SSC exam ke hisaab se kyo important hai"
         ],
         "exam_tag": "🎯 BPSC TRE / BSSC Special",
-        "date": "Today's Date"
+        "date": "{target_date}"
       }}
     ]
     """
     
     response = client.chat.completions.create(
-        model="llama-3.3-70b-versatile",  # Active Groq Model
+        model="llama-3.3-70b-versatile",
         messages=[{"role": "user", "content": prompt}],
         temperature=0.2
     )
@@ -107,12 +114,13 @@ if __name__ == "__main__":
         print("❌ Error: GROQ_API_KEY environment variable not found!")
         exit(1)
         
-    print("🔄 Scraping news from 3 official sources...")
+    news_date = get_yesterday_date_str()
+    print(f"🔄 Scraping news for date ({news_date}) from official sources...")
     raw_news = fetch_raw_bihar_news()
     
     if raw_news:
         print("🧠 Processing news summary with Groq (Llama-3.3-70b)...")
-        ai_response = generate_app_summary_json(raw_news)
+        ai_response = generate_app_summary_json(raw_news, news_date)
         
         # Cleanup Markdown code blocks
         clean_json_str = ai_response.strip()
