@@ -77,7 +77,7 @@ def generate_app_summary_json(raw_text):
     RULES:
     1. Politics, Crime, Elections, Murder, aur Raajneeti ki news ko Bilkul REJECT (discard) kar do.
     2. Sirf Education, Government Schemes, Infrastructure, Agriculture, aur Development ki TOP 4-5 news chuno.
-    3. Output STRICTLY VALID JSON format me hona chahiye (No Markdown formatting, No ```json tag).
+    3. Output STRICTLY VALID JSON format me hona chahiye. No markdown, no prose, strictly raw JSON array.
     
     JSON SCHEMA OUTPUT:
     [
@@ -99,7 +99,7 @@ def generate_app_summary_json(raw_text):
     max_retries = 3
     for attempt in range(max_retries):
         try:
-            # FIXED: Updated model name to official 'gemini-2.0-flash'
+            # FIXED: Updated model name for the google-genai SDK
             response = client.models.generate_content(
                 model="gemini-2.0-flash",
                 contents=prompt
@@ -126,8 +126,13 @@ if __name__ == "__main__":
         print("🧠 Processing news summary with Gemini AI...")
         ai_response = generate_app_summary_json(raw_news)
         
-        # Cleanup Markdown formatting if present
-        clean_json_str = ai_response.replace("```json", "").replace("```", "").strip()
+        # Cleanup Markdown code block formatting if returned by AI
+        clean_json_str = ai_response.strip()
+        if clean_json_str.startswith("```"):
+            clean_json_str = clean_json_str.split("\n", 1)[1]
+        if clean_json_str.endswith("```"):
+            clean_json_str = clean_json_str.rsplit("\n", 1)[0]
+        clean_json_str = clean_json_str.replace("```json", "").strip()
         
         # Validate and write JSON file
         try:
@@ -136,6 +141,6 @@ if __name__ == "__main__":
                 json.dump(json_data, f, ensure_ascii=False, indent=2)
             print("✅ bihar_news.json successfully updated with fresh news!")
         except Exception as e:
-            print(f"❌ JSON Parsing Error: {e}\nRaw Output: {ai_response}")
+            print(f"❌ JSON Parsing Error: {e}\nRaw Output:\n{ai_response}")
     else:
         print("❌ No news data scraped to process.")
