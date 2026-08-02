@@ -433,7 +433,7 @@ class _SprintChallengeScreenState extends State<SprintChallengeScreen> {
           children: [
             const Text('Sprint Completed!', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18)),
             const SizedBox(height: 6),
-            Text('Score: $_finalScore/10', style: const TextStyle(fontWeight: FontWeight.extrabold, fontSize: 28, color: Color(0xFF059669))),
+            Text('Score: $_finalScore/10', style: const TextStyle(fontWeight: FontWeight.w800, fontSize: 28, color: Color(0xFF059669))),
             const SizedBox(height: 16),
 
             if (duelStatusCard != null) ...[duelStatusCard, const SizedBox(height: 16)],
