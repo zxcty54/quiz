@@ -66,7 +66,7 @@ def fetch_raw_bihar_news():
     return "\n".join(news_titles)
 
 def generate_app_summary_json(raw_text):
-    """Groq API (Gemma2) se strict JSON format me summary banwata hai"""
+    """Groq API (Llama 3.3 70B) se strict JSON format me summary banwata hai"""
     prompt = f"""
     Tum BPSC aur Bihar Competitive Exams ke Current Affairs Editor ho.
     Niche CMO Bihar, IPRD Bihar aur PIB Patna se li gayi latest raw news hai:
@@ -96,7 +96,7 @@ def generate_app_summary_json(raw_text):
     """
     
     response = client.chat.completions.create(
-        model="gemma2-9b-it", # Direct Open-Source Gemma 2 Model via Groq API
+        model="llama-3.3-70b-versatile",  # Active Groq Model
         messages=[{"role": "user", "content": prompt}],
         temperature=0.2
     )
@@ -111,7 +111,7 @@ if __name__ == "__main__":
     raw_news = fetch_raw_bihar_news()
     
     if raw_news:
-        print("🧠 Processing news summary with Groq (Gemma 2)...")
+        print("🧠 Processing news summary with Groq (Llama-3.3-70b)...")
         ai_response = generate_app_summary_json(raw_news)
         
         # Cleanup Markdown code blocks
