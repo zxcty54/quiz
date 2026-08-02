@@ -16,7 +16,7 @@ class RevisionTab extends StatelessWidget {
       physics: const AlwaysScrollableScrollPhysics(),
       padding: const EdgeInsets.all(16),
       children: [
-        // 🛡️ TRUST & SYLLABUS FOCUS BANNER
+        // 🛡️ TRUST BANNER FOR REVISION HUB
         Container(
           padding: const EdgeInsets.all(16),
           decoration: BoxDecoration(
@@ -27,6 +27,13 @@ class RevisionTab extends StatelessWidget {
             ),
             borderRadius: BorderRadius.circular(16),
             border: Border.all(color: const Color(0xFF38BDF8).withOpacity(0.3), width: 1.2),
+            boxShadow: [
+              BoxShadow(
+                color: const Color(0xFF0F172A).withOpacity(0.2),
+                blurRadius: 10,
+                offset: const Offset(0, 4),
+              )
+            ],
           ),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -54,7 +61,12 @@ class RevisionTab extends StatelessWidget {
               const SizedBox(height: 12),
               const Text(
                 'No Irrelevant Questions.\nPure TCS & State Commission Pattern.',
-                style: TextStyle(color: Colors.white, fontSize: 16, fontWeight: FontWeight.bold, height: 1.3),
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 16,
+                  fontWeight: FontWeight.bold,
+                  height: 1.3,
+                ),
               ),
               const SizedBox(height: 6),
               const Text(
@@ -66,8 +78,10 @@ class RevisionTab extends StatelessWidget {
         ),
 
         const SizedBox(height: 18),
-        const Text('📚 Select Subject To Start Chapter Sprint', style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold)),
-        const SizedBox(height: 10),
+        const Text('📚 Chapterwise Revision Hub', style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
+        const SizedBox(height: 4),
+        const Text('Subject par click karein aur direct chapter button dabakar revision shuru karein', style: TextStyle(color: Colors.grey, fontSize: 12)),
+        const SizedBox(height: 14),
 
         _buildExpansionSubjectCategory(
           context: context,
@@ -105,7 +119,7 @@ class RevisionTab extends StatelessWidget {
           icon: '📰',
           color: const Color(0xFF7C3AED),
           subSections: [
-            {'title': '📰 Monthly Capsules & Bihar Special News', 'key': 'current_mapping'},
+            {'title': '📰 Monthly Sets & Bihar Special', 'key': 'current_mapping'},
           ],
         ),
       ],
@@ -158,7 +172,10 @@ class RevisionTab extends StatelessWidget {
                   child: Text(subTitle, style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 13, color: Color(0xFF334155))),
                 ),
                 rawChapters.isEmpty
-                    ? const Text("No chapters mapped yet.", style: TextStyle(fontSize: 11, color: Colors.grey))
+                    ? const Padding(
+                        padding: EdgeInsets.symmetric(vertical: 6.0),
+                        child: Text("Loading chapters...", style: TextStyle(fontSize: 11, color: Colors.grey)),
+                      )
                     : Wrap(
                         spacing: 8,
                         runSpacing: 8,
@@ -168,8 +185,13 @@ class RevisionTab extends StatelessWidget {
                             elevation: 1,
                             backgroundColor: color.withOpacity(0.08),
                             side: BorderSide(color: color.withOpacity(0.3)),
-                            label: Text("📖 ${entry.key}", style: TextStyle(fontSize: 12, fontWeight: FontWeight.w600, color: color)),
-                            onPressed: () => onLaunchPractice(context, entry.key, path),
+                            label: Text(
+                              "📖 ${entry.key}",
+                              style: TextStyle(fontSize: 12, fontWeight: FontWeight.w600, color: color),
+                            ),
+                            onPressed: () {
+                              onLaunchPractice(context, entry.key, path);
+                            },
                           );
                         }).toList(),
                       ),
