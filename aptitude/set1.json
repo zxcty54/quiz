@@ -32,14 +32,14 @@
     "a": 0,
     "e": "<b>Logic:</b> $\\sin A = \\cos B \\Rightarrow A + B = 90^\\circ$. <br/>$(x+y) + 3(x+y) = 90^\\circ \\Rightarrow 4(x+y) = 90^\\circ \\Rightarrow 2(x+y) = 45^\\circ$. <br/>$\\tan(45^\\circ) = <b>1</b>$."
   },
-  {
-    "p_id": "ob_adv_mains_05",
-    "qe": "<b>Number System:</b> Find the number of zeros at the end of the product: $5 \times 10 \times 15 \times 20 \times ... \times 500$.",
-    "qh": "<b>संख्या पद्धति:</b> गुणनफल $5 \times 10 \times 15 \times 20 \times ... \times 500$ के अंत में शून्यों की संख्या ज्ञात कीजिए।",
-    "o": ["124", "97", "100", "112"],
-    "a": 1,
-    "e": "<b>Solution:</b> $5^{100} (1 \times 2 \times ... \times 100) = 5^{100} \times 100!$. <br/>In $100!$, 2s are more than 5s. Total 5s in product = $100$ (from $5^{100}$) $+$ 5s in $100!$ ($20+4=24$) = 124. <br/>Wait, count of 2s in $100!$ is $50+25+12+6+3+1 = 97$. <br/>Since 2s are less than 5s, total zeros = <b>97</b>."
-  },
+ {
+  "p_id": "ob_adv_mains_05",
+  "qe": "<b>Number System:</b> Find the number of zeros at the end of the product: $5 \\times 10 \\times 15 \\times 20 \\times \\dots \\times 500$.",
+  "qh": "<b>संख्या पद्धति:</b> गुणनफल $5 \\times 10 \\times 15 \\times 20 \\times \\dots \\times 500$ के अंत में शून्यों की संख्या ज्ञात कीजिए।",
+  "o": ["124", "97", "100", "112"],
+  "a": 1,
+  "e": "<b>Solution:</b> $5^{100} \\times (1 \\times 2 \\times \\dots \\times 100) = 5^{100} \\times 100!$. <br/>In $100!$, 2s are fewer than 5s. Total 5s in product = $100$ (from $5^{100}$) $+$ 5s in $100!$ ($20+4=24$) = $124$. <br/>Count of 2s in $100!$ is $50+25+12+6+3+1 = 97$. <br/>Since 2s are fewer than 5s, total zeros = <b>97</b>."
+},
   {
     "p_id": "ob_adv_mains_06",
     "qe": "<b>Time & Work:</b> 4 men and 6 women can complete a work in 8 days, while 3 men and 7 women can complete it in 10 days. In how many days will 10 women complete it?",
