@@ -57,13 +57,13 @@
     "e": "<b>Solution:</b> Let original SP = 300. New SP = 100. <br/>At 100, Loss = 33.33% (1/3). So $CP \times 2/3 = 100 \\Rightarrow CP = 150$. <br/>60% of original SP = $300 \times 0.6 = 180$. <br/>Profit = $180 - 150 = 30$. Profit% = $(30/150) \\times 100 = <b>20%</b>$."
   },
   {
-    "p_id": "",
-    "qe": "<b>Algebra:</b> If $x^2 + y^2 + z^2 = xy + yz + zx$ and $x = 1$, find the value of $\frac{x^3 + y^3 + z^3}{3}$.",
-    "qh": "<b>बीजगणित:</b> यदि $x^2 + y^2 + z^2 = xy + yz + zx$ और $x = 1$ है, तो $\frac{x^3 + y^3 + z^3}{3}$ का मान ज्ञात कीजिए।",
-    "o": ["1", "3", "2", "0"],
-    "a": 0,
-    "e": "<b>Logic:</b> The identity holds true only when $x=y=z$. Since $x=1$, then $y=1$ and $z=1$. <br/>Value = $(1+1+1)/3 = 3/3 = <b>1</b>$."
-  },
+  "p_id": "alg_identity_01",
+  "qe": "<b>Algebra:</b> If $x^2 + y^2 + z^2 = xy + yz + zx$ and $x = 1$, find the value of $\\frac{x^3 + y^3 + z^3}{3}$.",
+  "qh": "<b>बीजगणित:</b> यदि $x^2 + y^2 + z^2 = xy + yz + zx$ और $x = 1$ है, तो $\\frac{x^3 + y^3 + z^3}{3}$ का मान ज्ञात कीजिए।",
+  "o": ["1", "3", "2", "0"],
+  "a": 0,
+  "e": "<b>Logic:</b> The identity holds true only when $x=y=z$. Since $x=1$, then $y=1$ and $z=1$. <br/>Value = $\\frac{1^3 + 1^3 + 1^3}{3} = \\frac{3}{3} = $ <b>1</b>."
+},
   {
     "p_id": "",
     "qe": "<b>Geometry:</b> The sides of a triangle are 11 cm, 60 cm and 61 cm. What is the radius of the circle circumscribing the triangle?",
