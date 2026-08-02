@@ -88,11 +88,11 @@ class _HomeTabState extends State<HomeTab> {
             const SizedBox(height: 16),
           ],
 
-          // 2. TRUST BANNER
+          // 2. TRUST HERO BANNER
           _buildTrustHeroBanner(),
           const SizedBox(height: 16),
 
-          // 📰 3. ULTRA-PREMIUM LIGHT MINIMALIST NEWS CAROUSEL
+          // 📰 3. ULTRA-PREMIUM MINIMALIST NEWS CAROUSEL
           _buildBiharNewsSection(),
           const SizedBox(height: 16),
 
@@ -123,7 +123,7 @@ class _HomeTabState extends State<HomeTab> {
     );
   }
 
-  // 📰 ULTRA-PREMIUM MINIMALIST NEWS WIDGET SECTION
+  // 📰 ULTRA-PREMIUM MINIMALIST NEWS WIDGET
   Widget _buildBiharNewsSection() {
     if (_isLoadingNews) {
       return Container(
@@ -168,7 +168,7 @@ class _HomeTabState extends State<HomeTab> {
                 style: const TextStyle(
                   color: Color(0xFF4338CA),
                   fontSize: 10,
-                  fontWeight: FontWeight.extrabold,
+                  fontWeight: FontWeight.w800, // 👈 FIX: FontWeight.w800 instead of FontWeight.extrabold
                 ),
               ),
             ),
