@@ -45,14 +45,12 @@ class _LearnChatScreenState extends State<LearnChatScreen> {
     if (targetUrl.isEmpty) {
       targetUrl = 'https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/learn/biology/cell.json';
     } else if (targetUrl.contains('raw.githubusercontent.com')) {
-      // Automatic Raw GitHub to Fast CDN Converter
       targetUrl = targetUrl
           .replaceAll('https://raw.githubusercontent.com/', 'https://cdn.jsdelivr.net/gh/')
           .replaceAll('/refs/heads/main/', '@main/')
           .replaceAll('/main/', '@main/');
     }
 
-    // ⚡ CACHE BUSTER FIX: Dynamic timestamp lagane se CDN cache issue khatam ho jayega aur hamesha LATEST JSON milega
     final String cacheBusterUrl = targetUrl.contains('?')
         ? '$targetUrl&v=${DateTime.now().millisecondsSinceEpoch}'
         : '$targetUrl?v=${DateTime.now().millisecondsSinceEpoch}';
@@ -75,6 +73,8 @@ class _LearnChatScreenState extends State<LearnChatScreen> {
             visibleMessageCount = 1;
             isLoading = false;
           });
+          // Pehli baar load hone par bhi progress sync kar lo
+          _saveProgress(savedIdx);
         }
       } else {
         if (mounted) {
@@ -94,10 +94,34 @@ class _LearnChatScreenState extends State<LearnChatScreen> {
     }
   }
 
+  // ⚡ REALTIME PROGRESS SAVER FOR HOME SCREEN PREVIEW
   Future<void> _saveProgress(int index) async {
-    if (chapterData == null) return;
+    if (chapterData == null || chapterData!.cardsList.isEmpty) return;
     final prefs = await SharedPreferences.getInstance();
+    
+    // 1. Chapter wise progress save
     await prefs.setInt('progress_idx_${chapterData!.id}', index);
+
+    // 2. Home Screen Realtime Sync Data Save
+    double progress = (index + 1) / chapterData!.cardsList.length;
+    
+    // Find next topic title if available
+    String nextTopic = "Continue Interactive Story";
+    if (index + 1 < chapterData!.cardsList.length) {
+      final nextCard = chapterData!.cardsList[index + 1];
+      if (nextCard.title != null && nextCard.title!.isNotEmpty) {
+        nextTopic = "Next: ${nextCard.title}";
+      } else if (nextCard.messages != null && nextCard.messages!.isNotEmpty) {
+        nextTopic = "Next: ${nextCard.messages!.first.text}";
+      }
+    } else {
+      nextTopic = "Chapter Completed 🎉";
+    }
+
+    await prefs.setString('last_learn_title', chapterData!.title);
+    await prefs.setDouble('last_learn_progress', progress);
+    await prefs.setString('last_next_topic', nextTopic);
+    await prefs.setBool('has_learning_history', true);
   }
 
   void _handleNextTap(LearnCardModel currentCard) {
@@ -105,7 +129,6 @@ class _LearnChatScreenState extends State<LearnChatScreen> {
     
     LearnEffects.playTap();
 
-    // 1. Chat cards ke liye progressive message reveal
     if (currentCard.type == 'chat') {
       int totalMsgs = currentCard.messages?.length ?? 0;
       if (visibleMessageCount < totalMsgs) {
@@ -129,7 +152,6 @@ class _LearnChatScreenState extends State<LearnChatScreen> {
       }
     }
 
-    // 2. Next Card Target Navigation
     int targetIndex = -1;
     final String? nextTarget = currentCard.nextSlug;
 
@@ -150,7 +172,7 @@ class _LearnChatScreenState extends State<LearnChatScreen> {
         isTyping = false;
       });
     } else {
-      _saveProgress(0);
+      _saveProgress(chapterData!.cardsList.length - 1);
       LearnEffects.playSuccess();
       ScaffoldMessenger.of(context).showSnackBar(
         const SnackBar(content: Text('🎉 Chapter Completed! Excellent Job!')),
@@ -241,7 +263,6 @@ class _LearnChatScreenState extends State<LearnChatScreen> {
     int totalMsgs = currentCard.messages?.length ?? 0;
     bool isAllMessagesRevealed = (visibleMessageCount >= totalMsgs && !isTyping) || currentCard.type != 'chat';
 
-    // 🌟 SMART BUTTON LABEL LOGIC FOR INTRO VS CHAT CARDS
     String buttonLabel = 'Tap to Read Next 💬';
 
     if (currentCard.type == 'intro') {
