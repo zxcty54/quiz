@@ -60,7 +60,7 @@ class _SectionalTabState extends State<SectionalTab> {
       return const Card(
         child: Padding(
           padding: EdgeInsets.all(20),
-          child: Center(child: Text("⚠️ Sets loading...", style: TextStyle(fontSize: 12, color: Colors.grey))),
+          child: Center(child: Text("⚠️ Sets loading... Please check connection.", style: TextStyle(fontSize: 12, color: Colors.grey))),
         ),
       );
     }
@@ -96,6 +96,42 @@ class _SectionalTabState extends State<SectionalTab> {
       );
     }
 
+    if (panelData is List) {
+      return Column(
+        children: panelData.map((item) {
+          String itemTitle = item['title'] ?? 'Sectional Mock';
+          int totalSets = item['sets'] ?? 5;
+          String folder = item['folder'] ?? 'bssc/science';
+
+          return Card(
+            margin: const EdgeInsets.only(bottom: 12),
+            child: Padding(
+              padding: const EdgeInsets.all(14),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(itemTitle, style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 14)),
+                  const SizedBox(height: 10),
+                  Wrap(
+                    spacing: 8, runSpacing: 8,
+                    children: List.generate(totalSets, (i) {
+                      final setNum = i + 1;
+                      return ActionChip(
+                        backgroundColor: const Color(0xFF2563EB).withOpacity(0.08),
+                        side: const BorderSide(color: Color(0xFF2563EB)),
+                        label: Text('Set 0$setNum', style: const TextStyle(fontWeight: FontWeight.bold, color: Color(0xFF2563EB))),
+                        onPressed: () => widget.onLaunchCbtMock(context, "$itemTitle Set $setNum", "$folder/set$setNum.json"),
+                      );
+                    }),
+                  ),
+                ],
+              ),
+            ),
+          );
+        }).toList(),
+      );
+    }
+
     return const SizedBox.shrink();
   }
 
@@ -106,9 +142,8 @@ class _SectionalTabState extends State<SectionalTab> {
       child: Card(
         color: isSelected ? color.withOpacity(0.12) : (widget.isDarkMode ? const Color(0xFF1E293B) : Colors.white),
         shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(10),
-          side: BorderSide(color: isSelected ? color : Colors.grey.shade300, width: isSelected ? 2 : 1),
-        ),
+            borderRadius: BorderRadius.circular(10),
+            side: BorderSide(color: isSelected ? color : Colors.grey.shade300, width: isSelected ? 2 : 1)),
         child: Padding(
           padding: const EdgeInsets.all(10),
           child: Column(
