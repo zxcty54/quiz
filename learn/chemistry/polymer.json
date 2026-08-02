@@ -1,0 +1,2508 @@
+{
+  "topic_id": "polymers_chemistry_complete",
+  "topic_title": "Polymers in Chemistry",
+  "target_exams": [
+    "BPSC",
+    "BSSC",
+    "RRB NTPC",
+    "SSC CGL",
+    "NEET",
+    "UPSC Prelims"
+  ],
+  "total_cards": 72,
+  "characters": {
+    "aman": {
+      "name": "Aman Sir",
+      "role": "teacher",
+      "avatar": "👨‍🏫"
+    },
+    "raju": {
+      "name": "Raju",
+      "role": "student",
+      "avatar": "👦"
+    }
+  },
+  "cards": [
+    {
+      "card_id": "card_01_intro",
+      "card_slug": "card_01_intro",
+      "type": "intro",
+      "concept_id": "polymers_intro_cover",
+      "level": 1,
+      "progress": {
+        "current": 1,
+        "total": 72
+      },
+      "intro_payload": {
+        "title": "🧪 Polymers in Chemistry",
+        "icon": "🧬",
+        "target_exams": [
+          "BPSC",
+          "BSSC",
+          "RRB NTPC",
+          "SSC CGL",
+          "NEET",
+          "UPSC Prelims"
+        ],
+        "learning_outcomes": [
+          "Master natural vs synthetic polymers with real-life examples",
+          "Understand polymerization mechanisms (Addition & Condensation)",
+          "Learn classification: Homopolymer, Copolymer, Thermoplastic, Thermosetting",
+          "Crack PYQs on Nylon, PVC, Teflon, Bakelite with exact structures",
+          "Memorize biodegradable polymers and environmental impact for BPSC/UPSC"
+        ],
+        "estimated_time": "25 mins",
+        "total_modules": 6
+      },
+      "navigation": {
+        "next": "card_02_daily_life_intro",
+        "button_text": "Start Learning 🚀"
+      }
+    },
+    {
+      "card_id": "card_02_daily_life_intro",
+      "card_slug": "card_02_daily_life_intro",
+      "type": "chat",
+      "concept_id": "polymer_daily_life",
+      "level": 1,
+      "progress": {
+        "current": 2,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, subah uthke brush kiya, plastic ki bottle se paani piya, school bag uthaya jo nylon ki bani hai... notice kiya kabhi ek common cheez?"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir sab plastic jaisi cheezein hain... light weight aur strong!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul sahi! Ye sab POLYMERS hain. Poly + mer... 'poly' matlab bahut saare, 'mer' matlab units. Matlab bahut saari chhoti units jud ke ek badi chain bana deti hain. Jaise ek train mein bahut saare coaches judte hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Achhaaaa... matlab plastic bhi ek polymer hai?"
+        }
+      ],
+      "navigation": {
+        "next": "card_03_monomer_concept",
+        "button_text": "Haan! Lekin pehle basic samjho ➔"
+      }
+    },
+    {
+      "card_id": "card_03_monomer_concept",
+      "card_slug": "card_03_monomer_concept",
+      "type": "chat",
+      "concept_id": "monomer_polymer_definition",
+      "level": 1,
+      "progress": {
+        "current": 3,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Dekho, jis chhoti unit se polymer banta hai use kehte hain MONOMER. Jaise train ka ek coach = monomer, puri train = polymer. Example: Ethene (C₂H₄) ek monomer hai, jab hazaron ethene jud jaate hain to banta hai Polyethene (polythene bag)!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir to polymerization matlab bahut saare monomers ka judna?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Exactly! POLYMERIZATION = wo chemical process jisme monomers aapas mein jud ke polymer banate hain. Ye reaction kai tarah se ho sakti hai... addition, condensation... wo aage detail mein dekhenge. Pehle types samjho!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Ji Sir! Types kitne hain polymers ke?"
+        }
+      ],
+      "navigation": {
+        "next": "card_04_natural_vs_synthetic",
+        "button_text": "Do major categories ➔"
+      }
+    },
+    {
+      "card_id": "card_04_natural_vs_synthetic",
+      "card_slug": "card_04_natural_vs_synthetic",
+      "type": "chat",
+      "concept_id": "natural_synthetic_polymers",
+      "level": 1,
+      "progress": {
+        "current": 4,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Polymers mainly do tarah ke hote hain source ke basis pe: NATURAL POLYMERS - jo nature mein already bane hote hain jaise Cotton (cellulose), Silk (protein), Rubber (natural latex), DNA, Starch. SYNTHETIC POLYMERS - jo lab/factory mein artificially banaye jaate hain jaise Plastic, Nylon, Teflon, PVC."
+        },
+        {
+          "speaker": "raju",
+          "text": "Hain?? DNA bhi polymer hai Sir? Biology wala DNA?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! DNA toh sabse fascinating polymer hai - nucleotides naam ke monomers se bana hai. Proteins bhi polymer hain - amino acids ke monomers se bane. Nature ne sabse pehle polymers banaye, humans ne baad mein copy kiya! SSC mein ye natural polymers ki list direct aati hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "Wow! Nature original scientist hai! 😄"
+        }
+      ],
+      "navigation": {
+        "next": "card_05_quiz_basics_1",
+        "button_text": "Quick check ➔"
+      }
+    },
+    {
+      "card_id": "card_05_quiz_basics_1",
+      "card_slug": "card_05_quiz_basics_1",
+      "type": "quiz",
+      "concept_id": "polymer_basics_quiz_1",
+      "level": 1,
+      "progress": {
+        "current": 5,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Which of the following is a NATURAL polymer?",
+        "options": [
+          {
+            "id": "A",
+            "text": "PVC (Polyvinyl Chloride)"
+          },
+          {
+            "id": "B",
+            "text": "Nylon"
+          },
+          {
+            "id": "C",
+            "text": "Cellulose"
+          },
+          {
+            "id": "D",
+            "text": "Teflon"
+          }
+        ],
+        "correct_option_id": "C",
+        "explanation": "CELLULOSE is a natural polymer found in plant cell walls (cotton, wood, paper). It's made up of glucose monomer units. PVC, Nylon, and Teflon are all SYNTHETIC polymers manufactured in labs/factories. This distinction between natural and synthetic polymers is frequently asked in SSC CGL and Railway exams."
+      },
+      "navigation": {
+        "next": "card_06_quiz_basics_2",
+        "button_text": "Next Question (2/3) ➔"
+      }
+    },
+    {
+      "card_id": "card_06_quiz_basics_2",
+      "card_slug": "card_06_quiz_basics_2",
+      "type": "quiz",
+      "concept_id": "polymer_basics_quiz_2",
+      "level": 1,
+      "progress": {
+        "current": 6,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "The small repeating units that join together to form a polymer are called:",
+        "options": [
+          {
+            "id": "A",
+            "text": "Isomers"
+          },
+          {
+            "id": "B",
+            "text": "Monomers"
+          },
+          {
+            "id": "C",
+            "text": "Oligomers"
+          },
+          {
+            "id": "D",
+            "text": "Polymers"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "MONOMERS are the small repeating units that chemically bond together to form large polymer chains. The term comes from 'mono' (one) + 'mer' (unit). For example, ethene is the monomer of polyethene. This fundamental terminology is essential for NEET and BPSC exams."
+      },
+      "navigation": {
+        "next": "card_07_quiz_basics_3",
+        "button_text": "Last Question (3/3) ➔"
+      }
+    },
+    {
+      "card_id": "card_07_quiz_basics_3",
+      "card_slug": "card_07_quiz_basics_3",
+      "type": "quiz",
+      "concept_id": "polymer_basics_quiz_3",
+      "level": 1,
+      "progress": {
+        "current": 7,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Which of the following is an example of a biological polymer?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Bakelite"
+          },
+          {
+            "id": "B",
+            "text": "Protein"
+          },
+          {
+            "id": "C",
+            "text": "Polystyrene"
+          },
+          {
+            "id": "D",
+            "text": "Polyethene"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "PROTEIN is a biological/natural polymer made up of amino acid monomers linked by peptide bonds. Other biological polymers include DNA, RNA, starch, cellulose, and natural rubber. Bakelite, Polystyrene, and Polyethene are all synthetic polymers. NEET heavily tests biological polymers."
+      },
+      "navigation": {
+        "next": "card_08_milestone_basics",
+        "button_text": "Check Result ➔"
+      }
+    },
+    {
+      "card_id": "card_08_milestone_basics",
+      "card_slug": "card_08_milestone_basics",
+      "type": "milestone",
+      "concept_id": "basics_module_complete",
+      "level": 1,
+      "progress": {
+        "current": 8,
+        "total": 72
+      },
+      "milestone_payload": {
+        "title": "🎉 POLYMER BASICS UNLOCKED!",
+        "badge_emoji": "🧬",
+        "completed_topic": "Introduction to Polymers",
+        "xp_earned": 50,
+        "milestone_progress": "Module 1/6 Clear",
+        "motivational_quote": "Monomers se polymers tak ka safar shuru ho gaya! Ab classification mein dive karte hain 🚀"
+      },
+      "navigation": {
+        "next": "card_09_classification_intro",
+        "button_text": "Start Classification Module ➔"
+      }
+    },
+    {
+      "card_id": "card_09_classification_intro",
+      "card_slug": "card_09_classification_intro",
+      "type": "chat",
+      "concept_id": "polymer_classification_start",
+      "level": 2,
+      "progress": {
+        "current": 9,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ab polymers ko classify karne ke teen main tarike hain: (1) Source ke basis pe - natural ya synthetic (ye dekh liya), (2) Structure ke basis pe - linear, branched, cross-linked, (3) Monomer composition ke basis pe - homopolymer ya copolymer. Ek-ek karke samjhte hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir structure wala thoda confusing lag raha hai... linear matlab seedhi line mein?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! LINEAR polymers mein monomers ek seedhi chain mein judte hain - jaise railway track. Example: High Density Polyethene (HDPE), Nylon, PVC. BRANCHED polymers mein main chain se side chains nikalti hain - jaise ped ki shakhaayein. Example: Low Density Polyethene (LDPE), Amylopectin (starch ka component)."
+        },
+        {
+          "speaker": "raju",
+          "text": "Achhaaaa... to ek hi polymer polyethene ke do types hain - linear aur branched?"
+        }
+      ],
+      "navigation": {
+        "next": "card_10_hdpe_ldpe",
+        "button_text": "Haan! Ye BPSC trap hai ➔"
+      }
+    },
+    {
+      "card_id": "card_10_hdpe_ldpe",
+      "card_slug": "card_10_hdpe_ldpe",
+      "type": "chat",
+      "concept_id": "hdpe_ldpe_difference",
+      "level": 2,
+      "progress": {
+        "current": 10,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Bilkul! HDPE (High Density Polyethene) - linear structure hai, chains tightly packed hoti hain, isliye zyada strong aur dense. Use: bottles, pipes, toys. LDPE (Low Density Polyethene) - branched structure hai, chains loosely packed, flexible aur soft. Use: polythene bags, squeeze bottles. Exam mein puchte hain ki kaunsa zyada strong!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir to HDPE zyada strong kyunki linear aur tightly packed! LDPE flexible kyunki branched!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Perfect! Ab CROSS-LINKED polymers - ismein different chains aapas mein cross-links (bridges) se judi hoti hain - 3D network ban jata hai. Ye sabse rigid aur strong hote hain. Example: Bakelite (electrical switches), Vulcanized Rubber (car tyres). Ek baar set ho jaye to reshape nahi hota!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab cross-linked ko dobara pighlaya nahi ja sakta?"
+        }
+      ],
+      "navigation": {
+        "next": "card_11_thermoplastic_thermosetting",
+        "button_text": "Ye important classification hai ➔"
+      }
+    },
+    {
+      "card_id": "card_11_thermoplastic_thermosetting",
+      "card_slug": "card_11_thermoplastic_thermosetting",
+      "type": "chat",
+      "concept_id": "thermoplastic_vs_thermosetting",
+      "level": 2,
+      "progress": {
+        "current": 11,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Exactly! Ye behaviour ke basis pe polymers do tarah ke hote hain: THERMOPLASTICS - heat se soften ho jaate hain, cool karne pe hard. Baar-baar remould kiye ja sakte hain. Structure: Linear ya Branched. Examples: Polythene, PVC, Polystyrene, Nylon. THERMOSETTING - ek baar heat karke set kiya to permanent hard. Dobara pighlaya nahi ja sakta. Structure: Cross-linked. Examples: Bakelite, Melamine, Urea-formaldehyde resin."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir to thermoplastic recyclable hai lekin thermosetting nahi?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul sahi observation! Thermoplastics ko recycle kar sakte ho kyunki dobara melt kar sakte ho. Thermosetting ek baar set ho gaya to tod sakte ho but reshape nahi kar sakte. Isliye environmental concern mein thermosetting plastics zyada problem hain. Ye UPSC mein environment wale section mein aata hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Samajh gaya Sir! Structure affects properties! 💡"
+        }
+      ],
+      "navigation": {
+        "next": "card_12_homopolymer_copolymer",
+        "button_text": "Ab composition wala classification ➔"
+      }
+    },
+    {
+      "card_id": "card_12_homopolymer_copolymer",
+      "card_slug": "card_12_homopolymer_copolymer",
+      "type": "chat",
+      "concept_id": "homopolymer_copolymer_types",
+      "level": 2,
+      "progress": {
+        "current": 12,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Monomer composition ke basis pe: HOMOPOLYMER - sirf ek hi type ka monomer repeat hota hai. Jaise Polyethene (sirf ethene repeat), Polystyrene (sirf styrene repeat), Teflon (sirf tetrafluoroethylene repeat). COPOLYMER - do ya do se zyada different monomers repeat hote hain. Examples: Nylon-6,6 (hexamethylene diamine + adipic acid), Buna-S rubber (styrene + butadiene)."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir Nylon-6,6 mein ye 6,6 ka matlab kya hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bahut smart question! Nylon-6,6 mein pehla '6' matlab hexamethylene diamine mein 6 carbon atoms hain, dusra '6' matlab adipic acid mein bhi 6 carbon atoms. Ye nomenclature SSC aur Railway mein direct fact ke roop mein puchte hain. Similarly Nylon-6 hota hai jo sirf caprolactam (6 carbon) se banta hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Ohhh... number carbon atoms batata hai! Cool! 😊"
+        }
+      ],
+      "navigation": {
+        "next": "card_13_quiz_classification_1",
+        "button_text": "Classification quiz ➔"
+      }
+    },
+    {
+      "card_id": "card_13_quiz_classification_1",
+      "card_slug": "card_13_quiz_classification_1",
+      "type": "quiz",
+      "concept_id": "classification_quiz_1",
+      "level": 2,
+      "progress": {
+        "current": 13,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Which of the following is a THERMOSETTING polymer?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Polythene"
+          },
+          {
+            "id": "B",
+            "text": "PVC"
+          },
+          {
+            "id": "C",
+            "text": "Bakelite"
+          },
+          {
+            "id": "D",
+            "text": "Nylon"
+          }
+        ],
+        "correct_option_id": "C",
+        "explanation": "BAKELITE is a thermosetting polymer with a cross-linked structure. Once molded and set by heating, it cannot be reshaped or remolded. Polythene, PVC, and Nylon are all thermoplastic polymers that can be repeatedly softened by heating and hardened by cooling. Bakelite is used in electrical switches, handles, and other heat-resistant applications. This is a classic BPSC/SSC trap question."
+      },
+      "navigation": {
+        "next": "card_14_quiz_classification_2",
+        "button_text": "Next Question (2/3) ➔"
+      }
+    },
+    {
+      "card_id": "card_14_quiz_classification_2",
+      "card_slug": "card_14_quiz_classification_2",
+      "type": "quiz",
+      "concept_id": "classification_quiz_2",
+      "level": 2,
+      "progress": {
+        "current": 14,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "HDPE (High Density Polyethene) differs from LDPE (Low Density Polyethene) primarily in:",
+        "options": [
+          {
+            "id": "A",
+            "text": "Monomer composition"
+          },
+          {
+            "id": "B",
+            "text": "Degree of branching"
+          },
+          {
+            "id": "C",
+            "text": "Type of polymerization"
+          },
+          {
+            "id": "D",
+            "text": "Presence of cross-linking"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "HDPE has a LINEAR structure with minimal branching, allowing polymer chains to pack tightly, resulting in higher density and strength. LDPE has a BRANCHED structure, causing chains to pack loosely, resulting in lower density and more flexibility. Both are made from the same monomer (ethene) and use addition polymerization. Neither has significant cross-linking. This structural difference is frequently tested in Railway and SSC exams."
+      },
+      "navigation": {
+        "next": "card_15_quiz_classification_3",
+        "button_text": "Last Question (3/3) ➔"
+      }
+    },
+    {
+      "card_id": "card_15_quiz_classification_3",
+      "card_slug": "card_15_quiz_classification_3",
+      "type": "quiz",
+      "concept_id": "classification_quiz_3",
+      "level": 2,
+      "progress": {
+        "current": 15,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Nylon-6,6 is an example of:",
+        "options": [
+          {
+            "id": "A",
+            "text": "Homopolymer"
+          },
+          {
+            "id": "B",
+            "text": "Natural polymer"
+          },
+          {
+            "id": "C",
+            "text": "Copolymer"
+          },
+          {
+            "id": "D",
+            "text": "Addition polymer"
+          }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Nylon-6,6 is a COPOLYMER because it is formed from TWO different monomers: hexamethylene diamine (6 carbons) and adipic acid (6 carbons). The '6,6' notation indicates the number of carbon atoms in each monomer. It is a synthetic condensation polymer. Homopolymers are made from only one type of monomer. This distinction is important for NEET and BPSC exams."
+      },
+      "navigation": {
+        "next": "card_16_milestone_classification",
+        "button_text": "Check Result ➔"
+      }
+    },
+    {
+      "card_id": "card_16_milestone_classification",
+      "card_slug": "card_16_milestone_classification",
+      "type": "milestone",
+      "concept_id": "classification_module_complete",
+      "level": 2,
+      "progress": {
+        "current": 16,
+        "total": 72
+      },
+      "milestone_payload": {
+        "title": "🎯 CLASSIFICATION MASTERED!",
+        "badge_emoji": "📊",
+        "completed_topic": "Polymer Classification Systems",
+        "xp_earned": 50,
+        "milestone_progress": "Module 2/6 Clear",
+        "motivational_quote": "Linear, Branched, Cross-linked... ab tum structure se properties predict kar sakte ho! Ab mechanism samjhte hain 🔬"
+      },
+      "navigation": {
+        "next": "card_17_polymerization_intro",
+        "button_text": "Start Polymerization Mechanisms ➔"
+      }
+    },
+    {
+      "card_id": "card_17_polymerization_intro",
+      "card_slug": "card_17_polymerization_intro",
+      "type": "chat",
+      "concept_id": "polymerization_mechanism_start",
+      "level": 3,
+      "progress": {
+        "current": 17,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ab samajhte hain ki monomers jud te kaise hain polymer banane ke liye. Do main mechanisms hain: (1) ADDITION POLYMERIZATION (Chain Growth) - monomers directly add hote hain without koi by-product nikle, (2) CONDENSATION POLYMERIZATION (Step Growth) - monomers jud te hain aur ek small molecule (H₂O, HCl, NH₃) by-product ke roop mein nikalta hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir addition mein kuch nahi nikalta, condensation mein kuch nikalkar nikalta hai... yahi difference hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Perfect summary! Addition mein sirf monomers add hote hain - total mass conserve rahta hai. Condensation mein jab monomers jud te hain to ek chhota molecule (usually water) eliminate hota hai. Isko ek example se samajhte hain - pehle addition dekho!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Ji Sir! Example chahiye! 🙏"
+        }
+      ],
+      "navigation": {
+        "next": "card_18_addition_polymerization",
+        "button_text": "Addition Polymerization detail ➔"
+      }
+    },
+    {
+      "card_id": "card_18_addition_polymerization",
+      "card_slug": "card_18_addition_polymerization",
+      "type": "chat",
+      "concept_id": "addition_polymerization_mechanism",
+      "level": 3,
+      "progress": {
+        "current": 18,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "ADDITION POLYMERIZATION mein monomers ke beech UNSATURATION (double/triple bonds) hona chahiye. Example: Ethene (CH₂=CH₂) ka double bond khulta hai aur doosre ethene se jud jata hai. Reaction: n(CH₂=CH₂) → (−CH₂−CH₂−)ₙ. Koi by-product nahi! Pure ethene hi polyethene ban gaya. Ye free radical mechanism se hota hai - initiator (peroxide) chahiye, heat/pressure bhi."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir double bond zaruri hai addition ke liye?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! Kyunki double bond = π bond weak hota hai, easily toot sakta hai aur naye single bonds ban sakte hain. Examples: Polythene (ethene se), Polypropene (propene se), Polystyrene (styrene se), PVC (vinyl chloride se), Teflon (tetrafluoroethylene se) - sabhi addition polymers hain! NEET mein structure draw karne ko bolte hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Samajh gaya Sir! Unsaturated monomer → addition polymer! 💡"
+        }
+      ],
+      "navigation": {
+        "next": "card_19_condensation_polymerization",
+        "button_text": "Ab condensation dekhte hain ➔"
+      }
+    },
+    {
+      "card_id": "card_19_condensation_polymerization",
+      "card_slug": "card_19_condensation_polymerization",
+      "type": "chat",
+      "concept_id": "condensation_polymerization_mechanism",
+      "level": 3,
+      "progress": {
+        "current": 19,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "CONDENSATION POLYMERIZATION mein monomers ke paas reactive functional groups hone chahiye - jaise −OH, −COOH, −NH₂, −CHO. Jab ye groups react karte hain to water (H₂O), HCl, NH₃ jaisa chhota molecule nikalkar nikalta hai. Example: Nylon-6,6 banane mein hexamethylene diamine (−NH₂ groups) aur adipic acid (−COOH groups) react karte hain, amide bond banta hai aur paani nikalta hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir to ye biochemistry ka peptide bond jaisa hai - amino acids jud te hain to paani nikalta hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Brilliant connection Raju! Bilkul wahi mechanism! Proteins bhi condensation polymers hain - amino acids (−NH₂ aur −COOH wale) jud te hain, peptide bond banta hai, water nikalti hai. Similarly, Polyesters (Terylene/Dacron), Bakelite, Melamine - sab condensation polymers hain. Ye cross-subject linking BPSC mein bahut aata hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Wow! Biology aur Chemistry connected hai! 🤯"
+        }
+      ],
+      "navigation": {
+        "next": "card_20_addition_vs_condensation",
+        "button_text": "Comparison table dekho ➔"
+      }
+    },
+    {
+      "card_id": "card_20_addition_vs_condensation",
+      "card_slug": "card_20_addition_vs_condensation",
+      "type": "chat",
+      "concept_id": "addition_condensation_comparison",
+      "level": 3,
+      "progress": {
+        "current": 20,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Quick comparison yaad rakho: ADDITION - (1) Unsaturated monomers (C=C), (2) Koi by-product nahi, (3) Examples: PVC, Teflon, Polythene, Polystyrene. CONDENSATION - (1) Monomers with reactive groups (−OH, −COOH, −NH₂), (2) Small molecule eliminated (H₂O, HCl, etc.), (3) Examples: Nylon, Terylene, Bakelite, Proteins. SSC mein direct puchte hain - 'Which is addition polymer?'"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir ek trick hai kya yaad rakhne ki?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! Addition mein 'ADD karo directly' - kuch minus nahi. Condensation mein 'CONDENSE ho raha' - paani bhaar nikal raha jaise clouds se rain! Aur naam dekho - PVC, Teflon, Poly(kuch) - usually addition. Nylon, Dacron, Bakelite - complex naam, usually condensation!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Perfect Sir! Ye trick kaam aayegi! 😄"
+        }
+      ],
+      "navigation": {
+        "next": "card_21_quiz_polymerization_1",
+        "button_text": "Mechanism quiz ➔"
+      }
+    },
+    {
+      "card_id": "card_21_quiz_polymerization_1",
+      "card_slug": "card_21_quiz_polymerization_1",
+      "type": "quiz",
+      "concept_id": "polymerization_quiz_1",
+      "level": 3,
+      "progress": {
+        "current": 21,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Which type of polymerization involves the elimination of small molecules like H₂O during polymer formation?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Addition polymerization"
+          },
+          {
+            "id": "B",
+            "text": "Condensation polymerization"
+          },
+          {
+            "id": "C",
+            "text": "Free radical polymerization"
+          },
+          {
+            "id": "D",
+            "text": "Chain growth polymerization"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "CONDENSATION POLYMERIZATION involves the joining of monomers with elimination of small molecules such as H₂O, HCl, or NH₃. Examples include Nylon-6,6 (water eliminated), Terylene/Dacron (water eliminated), and Bakelite (water eliminated). Addition polymerization involves direct joining of monomers without any by-product. This mechanism distinction is crucial for NEET and BPSC chemistry."
+      },
+      "navigation": {
+        "next": "card_22_quiz_polymerization_2",
+        "button_text": "Next Question (2/3) ➔"
+      }
+    },
+    {
+      "card_id": "card_22_quiz_polymerization_2",
+      "card_slug": "card_22_quiz_polymerization_2",
+      "type": "quiz",
+      "concept_id": "polymerization_quiz_2",
+      "level": 3,
+      "progress": {
+        "current": 22,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Which of the following is formed by ADDITION polymerization?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Nylon-6,6"
+          },
+          {
+            "id": "B",
+            "text": "Terylene (Dacron)"
+          },
+          {
+            "id": "C",
+            "text": "PVC (Polyvinyl Chloride)"
+          },
+          {
+            "id": "D",
+            "text": "Bakelite"
+          }
+        ],
+        "correct_option_id": "C",
+        "explanation": "PVC (Polyvinyl Chloride) is formed by ADDITION polymerization of vinyl chloride (CH₂=CHCl) monomer. The double bond opens up and monomers add together without any by-product. Nylon-6,6, Terylene, and Bakelite are all CONDENSATION polymers that eliminate water during formation. This is a standard SSC CGL and Railway exam question."
+      },
+      "navigation": {
+        "next": "card_23_quiz_polymerization_3",
+        "button_text": "Last Question (3/3) ➔"
+      }
+    },
+    {
+      "card_id": "card_23_quiz_polymerization_3",
+      "card_slug": "card_23_quiz_polymerization_3",
+      "type": "quiz",
+      "concept_id": "polymerization_quiz_3",
+      "level": 3,
+      "progress": {
+        "current": 23,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "The formation of protein from amino acids is an example of:",
+        "options": [
+          {
+            "id": "A",
+            "text": "Addition polymerization"
+          },
+          {
+            "id": "B",
+            "text": "Condensation polymerization"
+          },
+          {
+            "id": "C",
+            "text": "Free radical polymerization"
+          },
+          {
+            "id": "D",
+            "text": "Ionic polymerization"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Protein formation from amino acids is CONDENSATION polymerization. When the −COOH group of one amino acid reacts with the −NH₂ group of another, a peptide bond (−CO−NH−) is formed and a water molecule (H₂O) is eliminated. This is the same mechanism as synthetic condensation polymers like Nylon. This cross-concept question appears in NEET and BPSC exams."
+      },
+      "navigation": {
+        "next": "card_24_milestone_polymerization",
+        "button_text": "Check Result ➔"
+      }
+    },
+    {
+      "card_id": "card_24_milestone_polymerization",
+      "card_slug": "card_24_milestone_polymerization",
+      "type": "milestone",
+      "concept_id": "polymerization_module_complete",
+      "level": 3,
+      "progress": {
+        "current": 24,
+        "total": 72
+      },
+      "milestone_payload": {
+        "title": "⚗️ POLYMERIZATION MECHANISMS CONQUERED!",
+        "badge_emoji": "🔬",
+        "completed_topic": "Addition vs Condensation Polymerization",
+        "xp_earned": 50,
+        "milestone_progress": "Module 3/6 Clear",
+        "motivational_quote": "Addition mein add, Condensation mein eliminate - mechanism ka funda clear! Ab famous polymers detail mein padhte hain 🎯"
+      },
+      "navigation": {
+        "next": "card_25_important_polymers_intro",
+        "button_text": "Start Important Polymers Module ➔"
+      }
+    },
+    {
+      "card_id": "card_25_important_polymers_intro",
+      "card_slug": "card_25_important_polymers_intro",
+      "type": "chat",
+      "concept_id": "important_polymers_start",
+      "level": 4,
+      "progress": {
+        "current": 25,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ab kuch commercially important polymers detail mein padhte hain - structure, uses, properties. Exam mein naam, monomer, use - teen cheezein ek saath puchte hain. Main polymers: Polythene, PVC, Teflon, Polystyrene (Addition type), Nylon, Terylene, Bakelite (Condensation type). Ek-ek karke cover karte hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir sabse pehle Polythene - ye to sabse common hai bags mein!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Sahi pakda! POLYTHENE (Polyethylene) - monomer: Ethene (CH₂=CH₂). Addition polymer. Do types: HDPE (high density - bottles, toys, pipes) aur LDPE (low density - carry bags, packaging). Chemically inert hai, water absorb nahi karta, cheap hai. Lekin non-biodegradable - environment problem!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir HDPE aur LDPE mein difference structure wala tha na - linear vs branched?"
+        }
+      ],
+      "navigation": {
+        "next": "card_26_pvc_polymer",
+        "button_text": "Bilkul! Ab PVC ➔"
+      }
+    },
+    {
+      "card_id": "card_26_pvc_polymer",
+      "card_slug": "card_26_pvc_polymer",
+      "type": "chat",
+      "concept_id": "pvc_polyvinyl_chloride",
+      "level": 4,
+      "progress": {
+        "current": 26,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Perfect recall! Ab PVC (Polyvinyl Chloride) - monomer: Vinyl chloride (CH₂=CHCl). Addition polymer. Hard, tough, resistant to chemicals. Uses: pipes, electrical insulation, flooring, raincoats, handbags, credit cards. Plasticizer add karte hain to make it flexible. SSC mein poochte hain - 'PVC ka monomer kya hai?' - Answer: Vinyl chloride!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir plasticizer kya hota hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Good question! Plasticizer wo chemical hai jo polymer mein add karke usko flexible aur soft banata hai - jaise phthalates. Pure PVC rigid hota hai (pipes), plasticizer ke saath flexible (raincoats). Lekin kuch plasticizers health ke liye harmful hote hain - isliye phthalate-free products aate hain. Ye environmental chemistry ka part hai UPSC mein!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Achhaaaa... additives se properties change ho jaati hain!"
+        }
+      ],
+      "navigation": {
+        "next": "card_27_teflon_polymer",
+        "button_text": "Ab non-stick wala polymer ➔"
+      }
+    },
+    {
+      "card_id": "card_27_teflon_polymer",
+      "card_slug": "card_27_teflon_polymer",
+      "type": "chat",
+      "concept_id": "teflon_ptfe",
+      "level": 4,
+      "progress": {
+        "current": 27,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "TEFLON (Polytetrafluoroethylene - PTFE) - monomer: Tetrafluoroethylene (CF₂=CF₂). Addition polymer. Special property: Extremely CHEMICALLY INERT aur LOW FRICTION coefficient. Uses: Non-stick cookware coating, gaskets, seals, electrical insulation. Heat resistant bhi hai. Roy Plunkett ne accidentally 1938 mein discover kiya tha - DuPont company mein. Ye discovery story BPSC puchta hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Hain?? Accidentally discover hua? Kaise Sir?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! Plunkett refrigerant gas (tetrafluoroethylene) ke saath experiment kar raha tha, cylinder khola to gas nahi nikli - andar white waxy solid mila! Wo Teflon tha - polymerized ho gaya tha unexpectedly. Bahut saari great discoveries accidental hain - Penicillin, X-rays, Teflon! Ye trivia Railway mein bhi aata hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Wow! Accidental discovery but revolutionary product! 🤯"
+        }
+      ],
+      "navigation": {
+        "next": "card_28_polystyrene_polymer",
+        "button_text": "Ab Polystyrene ➔"
+      }
+    },
+    {
+      "card_id": "card_28_polystyrene_polymer",
+      "card_slug": "card_28_polystyrene_polymer",
+      "type": "chat",
+      "concept_id": "polystyrene_polymer",
+      "level": 4,
+      "progress": {
+        "current": 28,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "POLYSTYRENE - monomer: Styrene (C₆H₅CH=CH₂) - benzene ring wala! Addition polymer. Transparent, hard, brittle. Uses: Packaging material, disposable cups/plates, toys, CD cases. Special form: STYROFOAM (expanded polystyrene) - insulation aur packaging mein use hota hai, bahut light aur shock-absorbent. Lekin ye bhi non-biodegradable hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir Styrofoam mein foam kaise banta hai? Air bharti hain kya?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Exactly! Polystyrene ko manufacture karte waqt blowing agent (jaise pentane gas) add karte hain, heat se expand hota hai - millions of tiny air bubbles ban jaate hain. Result: 95% air, sirf 5% polystyrene - isliye itna light! Thermocol bhi yehi hai. Ye material science ka concept NEET mein aata hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab thermocol = expanded polystyrene! 💡"
+        }
+      ],
+      "navigation": {
+        "next": "card_29_nylon_polymer",
+        "button_text": "Ab condensation polymers - Nylon ➔"
+      }
+    },
+    {
+      "card_id": "card_29_nylon_polymer",
+      "card_slug": "card_29_nylon_polymer",
+      "type": "chat",
+      "concept_id": "nylon_polymer_types",
+      "level": 4,
+      "progress": {
+        "current": 29,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "NYLON - pehla fully synthetic fiber! Do main types: NYLON-6,6 (hexamethylene diamine + adipic acid se) aur NYLON-6 (caprolactam se). Condensation polymer. Strong, elastic, abrasion resistant, low moisture absorption. Uses: Fabrics (stockings, parachutes), ropes, tyre cords, bristles. Wallace Carothers ne 1935 mein DuPont mein invent kiya - commercial production 1939 mein shuru hua!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir Nylon-6,6 aur Nylon-6 mein kya difference hai properties mein?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Good question! Dono similar properties hain lekin Nylon-6,6 thoda zyada crystalline aur strong hai, higher melting point (265°C vs 220°C). Nylon-6 thoda zyada flexible aur dye easily absorb karta hai. Exam mein usually Nylon-6,6 ka structure zyada puchte hain - do monomers wala. BPSC mein scientist name aur year zaroor aata hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Wallace Carothers, 1935 - noted! 📝"
+        }
+      ],
+      "navigation": {
+        "next": "card_30_terylene_polymer",
+        "button_text": "Ab Terylene ➔"
+      }
+    },
+    {
+      "card_id": "card_30_terylene_polymer",
+      "card_slug": "card_30_terylene_polymer",
+      "type": "chat",
+      "concept_id": "terylene_dacron_polymer",
+      "level": 4,
+      "progress": {
+        "current": 30,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "TERYLENE (UK name) / DACRON (US name) - chemical naam: Polyethylene terephthalate (PET). Monomers: Ethylene glycol + Terephthalic acid. Condensation polymer (polyester family). Wrinkle-free, strong, crease-resistant, quick drying. Uses: Fabrics (shirts, sarees), bottles (PET bottles), sails, ropes, seat belts. Ye bhi synthetic fiber hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir PET bottles ka matlab Polyethylene terephthalate! Hain, ye naam itna bada hai! 😮"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! Lekin exam mein PET ka full form zaroor aata hai - SSC aur Railway mein direct question. Terylene ko natural fibers (cotton, wool) ke saath blend karke use karte hain - poly-cotton, poly-wool fabrics. Blending se strength aur durability badh jaati hai, wrinkle kam hote hain. Ye textile industry ka important concept hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Ohhh... isliye 'polyester' likhta hai shirts pe! 💡"
+        }
+      ],
+      "navigation": {
+        "next": "card_31_bakelite_polymer",
+        "button_text": "Ab thermosetting polymer - Bakelite ➔"
+      }
+    },
+    {
+      "card_id": "card_31_bakelite_polymer",
+      "card_slug": "card_31_bakelite_polymer",
+      "type": "chat",
+      "concept_id": "bakelite_polymer",
+      "level": 4,
+      "progress": {
+        "current": 31,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "BAKELITE - pehla commercially successful synthetic thermosetting plastic! Monomers: Phenol + Formaldehyde. Condensation polymer. Cross-linked structure - hard, rigid, heat resistant, electrical insulator. Uses: Electrical switches, plugs, handles, combs, billiard balls (originally ivory ki jagah!). Leo Baekeland ne 1907 mein invent kiya - inke naam pe 'Bakelite' rakha gaya!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir ye thermosetting hai matlab ek baar set ho gaya to reshape nahi hoga?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul sahi! Cross-linked 3D network hai - heating se decompose ho sakta hai but melt nahi. Isliye electrical switches mein perfect - heat se shape change nahi hoga. Color naturally dark brown/black hota hai (phenolic resin ki wajah se). Bakelite revolution tha us time - 'Material of a Thousand Uses' kehte the! Ye history UPSC mein industrial revolution wale section mein aata hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Leo Baekeland, 1907 - ye bhi note kar liya! 📝"
+        }
+      ],
+      "navigation": {
+        "next": "card_32_quiz_polymers_1",
+        "button_text": "Important polymers quiz ➔"
+      }
+    },
+    {
+      "card_id": "card_32_quiz_polymers_1",
+      "card_slug": "card_32_quiz_polymers_1",
+      "type": "quiz",
+      "concept_id": "important_polymers_quiz_1",
+      "level": 4,
+      "progress": {
+        "current": 32,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "The monomer of Teflon (PTFE) is:",
+        "options": [
+          {
+            "id": "A",
+            "text": "Ethylene"
+          },
+          {
+            "id": "B",
+            "text": "Vinyl chloride"
+          },
+          {
+            "id": "C",
+            "text": "Tetrafluoroethylene"
+          },
+          {
+            "id": "D",
+            "text": "Styrene"
+          }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Teflon (Polytetrafluoroethylene - PTFE) is made from TETRAFLUOROETHYLENE (CF₂=CF₂) monomer through addition polymerization. Teflon is known for its non-stick properties, chemical inertness, and low friction coefficient. It was accidentally discovered by Roy Plunkett in 1938. This monomer-polymer matching is frequently asked in SSC CGL and Railway exams."
+      },
+      "navigation": {
+        "next": "card_33_quiz_polymers_2",
+        "button_text": "Next Question (2/3) ➔"
+      }
+    },
+    {
+      "card_id": "card_33_quiz_polymers_2",
+      "card_slug": "card_33_quiz_polymers_2",
+      "type": "quiz",
+      "concept_id": "important_polymers_quiz_2",
+      "level": 4,
+      "progress": {
+        "current": 33,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Which polymer is known as the first fully synthetic fiber?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Terylene"
+          },
+          {
+            "id": "B",
+            "text": "Rayon"
+          },
+          {
+            "id": "C",
+            "text": "Nylon"
+          },
+          {
+            "id": "D",
+            "text": "Orlon"
+          }
+        ],
+        "correct_option_id": "C",
+        "explanation": "NYLON is recognized as the first fully synthetic fiber, invented by Wallace Carothers at DuPont in 1935 (commercial production began in 1939). Rayon is semi-synthetic (derived from cellulose), while Terylene and Orlon came later. Nylon-6,6 is the most common type. This historical fact is important for BPSC and UPSC Prelims exams."
+      },
+      "navigation": {
+        "next": "card_34_quiz_polymers_3",
+        "button_text": "Last Question (3/3) ➔"
+      }
+    },
+    {
+      "card_id": "card_34_quiz_polymers_3",
+      "card_slug": "card_34_quiz_polymers_3",
+      "type": "quiz",
+      "concept_id": "important_polymers_quiz_3",
+      "level": 4,
+      "progress": {
+        "current": 34,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Bakelite is prepared by the condensation polymerization of:",
+        "options": [
+          {
+            "id": "A",
+            "text": "Phenol and formaldehyde"
+          },
+          {
+            "id": "B",
+            "text": "Urea and formaldehyde"
+          },
+          {
+            "id": "C",
+            "text": "Ethylene glycol and terephthalic acid"
+          },
+          {
+            "id": "D",
+            "text": "Hexamethylene diamine and adipic acid"
+          }
+        ],
+        "correct_option_id": "A",
+        "explanation": "BAKELITE is formed by condensation polymerization of PHENOL and FORMALDEHYDE. It was invented by Leo Baekeland in 1907 and is a thermosetting polymer with cross-linked structure. Option B forms urea-formaldehyde resin, Option C forms Terylene/PET, and Option D forms Nylon-6,6. This is a standard NEET and SSC chemistry question."
+      },
+      "navigation": {
+        "next": "card_35_milestone_polymers",
+        "button_text": "Check Result ➔"
+      }
+    },
+    {
+      "card_id": "card_35_milestone_polymers",
+      "card_slug": "card_35_milestone_polymers",
+      "type": "milestone",
+      "concept_id": "important_polymers_module_complete",
+      "level": 4,
+      "progress": {
+        "current": 35,
+        "total": 72
+      },
+      "milestone_payload": {
+        "title": "🎖️ IMPORTANT POLYMERS MASTERED!",
+        "badge_emoji": "🏆",
+        "completed_topic": "Commercial Polymers with Uses",
+        "xp_earned": 50,
+        "milestone_progress": "Module 4/6 Clear",
+        "motivational_quote": "Polythene se Bakelite tak - ab tum har polymer ki story jaante ho! Ab rubber aur biodegradable polymers 🌱"
+      },
+      "navigation": {
+        "next": "card_36_rubber_intro",
+        "button_text": "Start Rubber & Special Polymers ➔"
+      }
+    },
+    {
+      "card_id": "card_36_rubber_intro",
+      "card_slug": "card_36_rubber_intro",
+      "type": "chat",
+      "concept_id": "rubber_introduction",
+      "level": 5,
+      "progress": {
+        "current": 36,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Rubber ek special polymer hai - natural bhi hai, synthetic bhi! NATURAL RUBBER (NR) - latex (milky fluid) from rubber tree (Hevea brasiliensis) se milta hai. Monomer: Isoprene (2-methyl-1,3-butadiene). Property: Elastic, waterproof, lekin temperature sensitive - garmi mein sticky, thandi mein hard ho jata hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir car tyres mein natural rubber use hota hai kya?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Nahi! Tyres mein VULCANIZED RUBBER use hota hai. Vulcanization = natural rubber ko sulphur ke saath heat karte hain (140-160°C), cross-links ban jaate hain - rubber strong, elastic, temperature resistant ban jata hai. Charles Goodyear ne 1839 mein accidentally discover kiya! Bina vulcanization ke natural rubber practical use ke liye achha nahi!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Ek aur accidental discovery! 😄 Sir synthetic rubber bhi hota hai?"
+        }
+      ],
+      "navigation": {
+        "next": "card_37_synthetic_rubber",
+        "button_text": "Haan! Bahut types ➔"
+      }
+    },
+    {
+      "card_id": "card_37_synthetic_rubber",
+      "card_slug": "card_37_synthetic_rubber",
+      "type": "chat",
+      "concept_id": "synthetic_rubber_types",
+      "level": 5,
+      "progress": {
+        "current": 37,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "SYNTHETIC RUBBERS - BUNA RUBBERS (B = Butadiene, U = derived, NA = Sodium catalyst originally). Types: BUNA-S (Butadiene + Styrene copolymer) - tyres, shoe soles. BUNA-N (Butadiene + Acrylonitrile) - oil-resistant, fuel hoses, gaskets. NEOPRENE (Polychloroprene) - weather resistant, wetsuits, gloves. Synthetic rubbers natural se better control properties dete hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir BUNA mein NA matlab Sodium? Lekin ab bhi use hota hai kya?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Good catch! Originally German scientists ne sodium (Natrium in German) catalyst use kiya tha, isliye NA. Ab modern processes mein different catalysts use hote hain lekin naam BUNA hi raha! Ye nomenclature history SSC mein aati hai. NEET mein structure aur properties focus hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Samajh gaya Sir! Historical names important hain! 📝"
+        }
+      ],
+      "navigation": {
+        "next": "card_38_biodegradable_intro",
+        "button_text": "Ab environment-friendly polymers ➔"
+      }
+    },
+    {
+      "card_id": "card_38_biodegradable_intro",
+      "card_slug": "card_38_biodegradable_intro",
+      "type": "chat",
+      "concept_id": "biodegradable_polymers_intro",
+      "level": 5,
+      "progress": {
+        "current": 38,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Plastic pollution ki wajah se ab BIODEGRADABLE POLYMERS ka importance badh gaya hai. Biodegradable = jo natural processes (bacteria, fungi, enzymes) se decompose ho jaye. Examples: PHBV (Poly-β-hydroxybutyrate-co-β-hydroxyvalerate), PLA (Polylactic acid), Starch-based polymers. Ye 'Green Plastics' kehlate hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir to ye environment mein decompose ho jayenge? Pollution nahi karenge?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Exactly! Microorganisms inka breakdown kar sakte hain - CO₂, H₂O, biomass banta hai. PHBV bacteria naturally produce karte hain (Alcaligenes eutrophus). PLA corn starch, sugarcane se banta hai. Uses: Packaging, medical sutures (internal stitches - body mein absorb ho jate hain!), agricultural films. Ye UPSC environment aur BPSC current affairs ka hot topic hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir medical sutures bhi polymer se bante hain? Wow! 🤯"
+        }
+      ],
+      "navigation": {
+        "next": "card_39_medical_polymers",
+        "button_text": "Haan! Special applications ➔"
+      }
+    },
+    {
+      "card_id": "card_39_medical_polymers",
+      "card_slug": "card_39_medical_polymers",
+      "type": "chat",
+      "concept_id": "medical_application_polymers",
+      "level": 5,
+      "progress": {
+        "current": 39,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Medical field mein polymers ka bahut use hai: ABSORBABLE SUTURES - PLGA (Poly lactic-co-glycolic acid), Polyglycolic acid - body mein dissolve ho jate hain, stitches nikalne ki zarurat nahi! CONTACT LENSES - HEMA (Hydroxyethyl methacrylate). ARTIFICIAL ORGANS - Silicone polymers. DRUG DELIVERY - Polymer capsules jo body mein slowly medicine release karte hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir ye to biotechnology aur chemistry ka combination hai! 😮"
+        },
+        {
+          "speaker": "aman",
+          "text": "Absolutely! BIOMATERIALS engineering kahlata hai ye field. Polymers biocompatible (body reject na kare) aur specific function ke liye design kiye jaate hain. NEET mein applied biology wale section mein ye concepts aate hain. BPSC mein science & technology current affairs mein polymer innovations puchte hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Amazing applications Sir! Polymers har jagah hain! 🔬"
+        }
+      ],
+      "navigation": {
+        "next": "card_40_quiz_special_1",
+        "button_text": "Special polymers quiz ➔"
+      }
+    },
+    {
+      "card_id": "card_40_quiz_special_1",
+      "card_slug": "card_40_quiz_special_1",
+      "type": "quiz",
+      "concept_id": "special_polymers_quiz_1",
+      "level": 5,
+      "progress": {
+        "current": 40,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Vulcanization of rubber involves heating natural rubber with:",
+        "options": [
+          {
+            "id": "A",
+            "text": "Carbon"
+          },
+          {
+            "id": "B",
+            "text": "Sulphur"
+          },
+          {
+            "id": "C",
+            "text": "Oxygen"
+          },
+          {
+            "id": "D",
+            "text": "Nitrogen"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "VULCANIZATION involves heating natural rubber with SULPHUR (typically 3-5%) at 140-160°C. This process creates cross-links between polymer chains, making rubber stronger, more elastic, and resistant to temperature changes. Charles Goodyear accidentally discovered this process in 1839. Vulcanized rubber is used in car tyres, shoe soles, and industrial products. This is a standard SSC and Railway exam question."
+      },
+      "navigation": {
+        "next": "card_41_quiz_special_2",
+        "button_text": "Next Question (2/3) ➔"
+      }
+    },
+    {
+      "card_id": "card_41_quiz_special_2",
+      "card_slug": "card_41_quiz_special_2",
+      "type": "quiz",
+      "concept_id": "special_polymers_quiz_2",
+      "level": 5,
+      "progress": {
+        "current": 41,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Which of the following is a biodegradable polymer?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Polythene"
+          },
+          {
+            "id": "B",
+            "text": "PVC"
+          },
+          {
+            "id": "C",
+            "text": "PHBV (Polyhydroxybutyrate)"
+          },
+          {
+            "id": "D",
+            "text": "Polystyrene"
+          }
+        ],
+        "correct_option_id": "C",
+        "explanation": "PHBV (Poly-β-hydroxybutyrate-co-β-hydroxyvalerate) is a BIODEGRADABLE polymer that can be decomposed by microorganisms into CO₂, H₂O, and biomass. It is naturally produced by certain bacteria. Polythene, PVC, and Polystyrene are all non-biodegradable synthetic polymers that persist in the environment. This environmental aspect is crucial for UPSC Prelims and BPSC current affairs."
+      },
+      "navigation": {
+        "next": "card_42_quiz_special_3",
+        "button_text": "Last Question (3/3) ➔"
+      }
+    },
+    {
+      "card_id": "card_42_quiz_special_3",
+      "card_slug": "card_42_quiz_special_3",
+      "type": "quiz",
+      "concept_id": "special_polymers_quiz_3",
+      "level": 5,
+      "progress": {
+        "current": 42,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "BUNA-N rubber is a copolymer of:",
+        "options": [
+          {
+            "id": "A",
+            "text": "Butadiene and Styrene"
+          },
+          {
+            "id": "B",
+            "text": "Butadiene and Acrylonitrile"
+          },
+          {
+            "id": "C",
+            "text": "Isoprene and Neoprene"
+          },
+          {
+            "id": "D",
+            "text": "Chloroprene and Butadiene"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "BUNA-N is a copolymer of BUTADIENE and ACRYLONITRILE. It is oil-resistant and used in fuel hoses, gaskets, and seals. BUNA-S is butadiene + styrene (used in tyres). The 'N' in BUNA-N stands for the nitrile group in acrylonitrile. This copolymer composition is frequently tested in NEET and SSC exams."
+      },
+      "navigation": {
+        "next": "card_43_milestone_special",
+        "button_text": "Check Result ➔"
+      }
+    },
+    {
+      "card_id": "card_43_milestone_special",
+      "card_slug": "card_43_milestone_special",
+      "type": "milestone",
+      "concept_id": "special_polymers_module_complete",
+      "level": 5,
+      "progress": {
+        "current": 43,
+        "total": 72
+      },
+      "milestone_payload": {
+        "title": "🌟 SPECIAL POLYMERS UNLOCKED!",
+        "badge_emoji": "🌱",
+        "completed_topic": "Rubber, Biodegradable & Medical Polymers",
+        "xp_earned": 50,
+        "milestone_progress": "Module 5/6 Clear",
+        "motivational_quote": "Vulcanized rubber se biodegradable plastics tak - future of polymers tumhare haath mein! Last module - Environment impact 🌍"
+      },
+      "navigation": {
+        "next": "card_44_environment_intro",
+        "button_text": "Start Environmental Impact Module ➔"
+      }
+    },
+    {
+      "card_id": "card_44_environment_intro",
+      "card_slug": "card_44_environment_intro",
+      "type": "chat",
+      "concept_id": "polymer_environment_impact",
+      "level": 6,
+      "progress": {
+        "current": 44,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Polymers ne life easy banayi lekin environment ko badi problem bhi di! Main issue: NON-BIODEGRADABLE nature. Plastic waste landfills mein hundreds of years tak pada rahta hai - decompose nahi hota. Ocean mein plastic pollution se marine life threat mein hai. Great Pacific Garbage Patch - plastic waste ka ek bada floating island!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir ye itna serious problem hai? Lekin plastic to convenient hai na? 😟"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan, convenience aur environmental cost ka balance zaroori hai. Problems: (1) Landfill overflow, (2) Ocean pollution - microplastics fish ke through food chain mein aa rahe hain, (3) Incineration se toxic gases (dioxins, furans) release, (4) Wildlife hazards - animals plastic khake mar jaate hain. UPSC environment paper mein ye detailed aata hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Koi solution hai Sir? Sab plastic ban kar denge kya?"
+        }
+      ],
+      "navigation": {
+        "next": "card_45_solutions_approach",
+        "button_text": "Solutions hain! ➔"
+      }
+    },
+    {
+      "card_id": "card_45_solutions_approach",
+      "card_slug": "card_45_solutions_approach",
+      "type": "chat",
+      "concept_id": "plastic_pollution_solutions",
+      "level": 6,
+      "progress": {
+        "current": 45,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ban completely possible nahi, lekin sustainable approach chahiye: (1) 3R's - REDUCE consumption, REUSE bags/bottles, RECYCLE plastic waste. (2) Replace with BIODEGRADABLE alternatives - jute bags, paper, PHBV plastics. (3) Develop efficient RECYCLING technologies - plastic se fuel, roads mein plastic use (plastic roads - India mein pilot projects!). (4) Policy measures - single-use plastic ban (India ne 2022 mein kuch items ban kiye)."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir plastic roads? Kaise banate hain?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Waste plastic ko shred karke, bitumen (tar) ke saath mix karte hain road construction mein. Benefits: plastic waste disposal + stronger roads! Prof. Rajagopalan Vasudevan (Thiagarajar College of Engineering) ne ye technology develop ki - 'Plastic Man of India' kehte hain unhe! Ye innovation BPSC current affairs ka part hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Wow! Waste se useful product! Jugaad level: India! 😄"
+        }
+      ],
+      "navigation": {
+        "next": "card_46_recycling_codes",
+        "button_text": "Recycling codes samjho ➔"
+      }
+    },
+    {
+      "card_id": "card_46_recycling_codes",
+      "card_slug": "card_46_recycling_codes",
+      "type": "chat",
+      "concept_id": "plastic_recycling_codes",
+      "level": 6,
+      "progress": {
+        "current": 46,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Plastic products pe ek triangle with number (1-7) dikhta hai - ye RECYCLING CODE hai. Identifies plastic type for sorting: 1=PET, 2=HDPE, 3=PVC, 4=LDPE, 5=PP (Polypropylene), 6=PS (Polystyrene), 7=Others. PET aur HDPE sabse easily recyclable hain. PVC aur PS recycle karna difficult. Ye codes recycling plants ko sorting mein help karte hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir to har plastic recyclable nahi hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Correct! THERMOPLASTICS (1,2,4,5,6) recyclable hain kyunki melt kar sakte hain. THERMOSETTING plastics (code 7 mein kuch) aur heavily contaminated plastics recycle nahi ho sakte. India mein recycling rate abhi 60% ke aas-paas hai - aur improve karna hai. SSC mein ye recycling symbols aur codes direct aate hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Samajh gaya Sir! Codes identify karne ke liye hain! 💡"
+        }
+      ],
+      "navigation": {
+        "next": "card_47_government_initiatives",
+        "button_text": "Government policies ➔"
+      }
+    },
+    {
+      "card_id": "card_47_government_initiatives",
+      "card_slug": "card_47_government_initiatives",
+      "type": "chat",
+      "concept_id": "plastic_ban_initiatives_india",
+      "level": 6,
+      "progress": {
+        "current": 47,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "India mein plastic management ke liye kai initiatives: (1) PLASTIC WASTE MANAGEMENT RULES, 2016 (amended 2021) - Extended Producer Responsibility (EPR). (2) SINGLE-USE PLASTIC BAN (July 2022) - ear buds, plates, cups, straws, certain packaging items banned. (3) SWACHH BHARAT MISSION - waste segregation aur collection. (4) BAN ON PLASTIC BAGS <50 microns thickness (zyada thin bags ban)."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir EPR ka matlab kya hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Extended Producer Responsibility = jo company plastic product banati/import karti hai, wo uske end-of-life disposal/recycling ke liye bhi responsible hai. Matlab Coca-Cola apni bottles collect karke recycle kare. Ye 'polluter pays' principle hai - UPSC environment section mein important concept!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Achha policy hai Sir! Responsibility fix ho gai! 👍"
+        }
+      ],
+      "navigation": {
+        "next": "card_48_quiz_environment_1",
+        "button_text": "Environment quiz ➔"
+      }
+    },
+    {
+      "card_id": "card_48_quiz_environment_1",
+      "card_slug": "card_48_quiz_environment_1",
+      "type": "quiz",
+      "concept_id": "environment_quiz_1",
+      "level": 6,
+      "progress": {
+        "current": 48,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "The '3R' principle for plastic waste management stands for:",
+        "options": [
+          {
+            "id": "A",
+            "text": "Reduce, Recycle, Reuse"
+          },
+          {
+            "id": "B",
+            "text": "Reduce, Reuse, Recycle"
+          },
+          {
+            "id": "C",
+            "text": "Reuse, Reduce, Recover"
+          },
+          {
+            "id": "D",
+            "text": "Reduce, Recover, Recycle"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "The correct order of the 3R principle is: REDUCE (minimize consumption), REUSE (use items multiple times), RECYCLE (convert waste into new products). This hierarchical order represents priority - reducing is most effective, recycling is last resort. This environmental concept is crucial for UPSC Prelims environment section and BPSC current affairs."
+      },
+      "navigation": {
+        "next": "card_49_quiz_environment_2",
+        "button_text": "Next Question (2/3) ➔"
+      }
+    },
+    {
+      "card_id": "card_49_quiz_environment_2",
+      "card_slug": "card_49_quiz_environment_2",
+      "type": "quiz",
+      "concept_id": "environment_quiz_2",
+      "level": 6,
+      "progress": {
+        "current": 49,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "India banned single-use plastics in which year?",
+        "options": [
+          {
+            "id": "A",
+            "text": "2019"
+          },
+          {
+            "id": "B",
+            "text": "2020"
+          },
+          {
+            "id": "C",
+            "text": "2021"
+          },
+          {
+            "id": "D",
+            "text": "2022"
+          }
+        ],
+        "correct_option_id": "D",
+        "explanation": "India implemented a ban on identified single-use plastic items (such as plastic ear buds, plates, cups, straws, certain packaging films) from JULY 1, 2022. This was part of the Plastic Waste Management Amendment Rules, 2021. Items banned were those with low utility and high littering potential. This current affairs fact is important for BPSC, SSC, and UPSC Prelims exams."
+      },
+      "navigation": {
+        "next": "card_50_quiz_environment_3",
+        "button_text": "Last Question (3/3) ➔"
+      }
+    },
+    {
+      "card_id": "card_50_quiz_environment_3",
+      "card_slug": "card_50_quiz_environment_3",
+      "type": "quiz",
+      "concept_id": "environment_quiz_3",
+      "level": 6,
+      "progress": {
+        "current": 50,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Who is known as the 'Plastic Man of India' for developing technology to use plastic waste in road construction?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Dr. APJ Abdul Kalam"
+          },
+          {
+            "id": "B",
+            "text": "Prof. Rajagopalan Vasudevan"
+          },
+          {
+            "id": "C",
+            "text": "Dr. Vikram Sarabhai"
+          },
+          {
+            "id": "D",
+            "text": "Prof. CNR Rao"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Prof. RAJAGOPALAN VASUDEVAN from Thiagarajar College of Engineering, Madurai, developed the technology to use plastic waste mixed with bitumen for road construction. He is popularly called the 'Plastic Man of India'. This innovation helps in plastic waste disposal and creates more durable roads. This is a frequently asked question in BPSC and Railway exams' current affairs section."
+      },
+      "navigation": {
+        "next": "card_51_milestone_environment",
+        "button_text": "Check Result ➔"
+      }
+    },
+    {
+      "card_id": "card_51_milestone_environment",
+      "card_slug": "card_51_milestone_environment",
+      "type": "milestone",
+      "concept_id": "environment_module_complete",
+      "level": 6,
+      "progress": {
+        "current": 51,
+        "total": 72
+      },
+      "milestone_payload": {
+        "title": "🌍 ENVIRONMENTAL IMPACT MASTERED!",
+        "badge_emoji": "♻️",
+        "completed_topic": "Plastic Pollution & Solutions",
+        "xp_earned": 50,
+        "milestone_progress": "Module 6/6 Clear - All Modules Done!",
+        "motivational_quote": "3R se EPR tak - responsible polymer use ka gyan mil gaya! Ab final revision aur master quiz 🎯"
+      },
+      "navigation": {
+        "next": "card_52_recap_intro",
+        "button_text": "Start Quick Revision ➔"
+      }
+    },
+    {
+      "card_id": "card_52_recap_intro",
+      "card_slug": "card_52_recap_intro",
+      "type": "chat",
+      "concept_id": "complete_recap_start",
+      "level": 7,
+      "progress": {
+        "current": 52,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, poora chapter cover ho gaya! Ab ek quick recap karte hain - main points jo exam mein directly puchhe jaate hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Ji Sir! Bahut kuch seekha hai... thoda dizzy feel ho raha hai! 😅"
+        },
+        {
+          "speaker": "aman",
+          "text": "Normal hai! Isliye structured revision zaroori hai. Main monomers aur polymers yaad hain? Ethene → Polythene, Vinyl chloride → PVC, Tetrafluoroethylene → Teflon, Styrene → Polystyrene. Condensation wale: Phenol + Formaldehyde → Bakelite, Diamine + Diacid → Nylon. Ye matching SSC ka favorite hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Haan Sir! Addition mein direct join, condensation mein paani nikle! 💡"
+        }
+      ],
+      "navigation": {
+        "next": "card_53_key_scientists",
+        "button_text": "Scientists yaad karo ➔"
+      }
+    },
+    {
+      "card_id": "card_53_key_scientists",
+      "card_slug": "card_53_key_scientists",
+      "type": "chat",
+      "concept_id": "polymer_scientists_discoveries",
+      "level": 7,
+      "progress": {
+        "current": 53,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "BPSC favorite - Scientists aur discoveries with years! LEO BAEKELAND (1907) - Bakelite. WALLACE CAROTHERS (1935) - Nylon. ROY PLUNKETT (1938) - Teflon (accidental). CHARLES GOODYEAR (1839) - Vulcanization (accidental). PROF. RAJAGOPALAN VASUDEVAN - Plastic roads technology (India). Ye exact names aur years note kar lo!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir do accidental discoveries hain - Teflon aur Vulcanization! Interesting! 😊"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! 'Serendipity' kehte hain - accidental discovery. Aur Herman Staudinger (Nobel Prize 1953) ne polymer ka macromolecular concept diya - prove kiya ki polymers chhote molecules nahi, bade chain molecules hain. Ye conceptual contribution NEET mein aata hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Nobel Prize bhi mila polymer pe! Important field hai! 🏅"
+        }
+      ],
+      "navigation": {
+        "next": "card_54_classification_recap",
+        "button_text": "Classification ek baar phir ➔"
+      }
+    },
+    {
+      "card_id": "card_54_classification_recap",
+      "card_slug": "card_54_classification_recap",
+      "type": "chat",
+      "concept_id": "classification_quick_recap",
+      "level": 7,
+      "progress": {
+        "current": 54,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Classification schemes yaad hain? (1) SOURCE: Natural (cellulose, rubber, DNA) vs Synthetic (PVC, Nylon, Teflon). (2) STRUCTURE: Linear (HDPE, Nylon), Branched (LDPE), Cross-linked (Bakelite, Vulcanized rubber). (3) THERMAL BEHAVIOR: Thermoplastic (remoldable - PVC, Nylon) vs Thermosetting (non-remoldable - Bakelite). (4) COMPOSITION: Homopolymer (ek monomer) vs Copolymer (do+ monomers - Nylon-6,6, BUNA-S)."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir structure affects properties - linear tightly packed (strong), branched loosely packed (flexible), cross-linked rigid!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Perfect! Structure-property relationship samajh gaya! Thermoplastic recyclable, thermosetting nahi - environmental angle! Ye multi-dimensional thinking BPSC mein zaroori hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Ji Sir! Interconnected concepts hain! 🧠"
+        }
+      ],
+      "navigation": {
+        "next": "card_55_uses_recap",
+        "button_text": "Uses quick fire ➔"
+      }
+    },
+    {
+      "card_id": "card_55_uses_recap",
+      "card_slug": "card_55_uses_recap",
+      "type": "chat",
+      "concept_id": "polymer_uses_rapid_fire",
+      "level": 7,
+      "progress": {
+        "current": 55,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Quick uses - Polythene: bags, bottles. PVC: pipes, cables. Teflon: non-stick pans. Polystyrene: packaging, cups. Nylon: fabrics, ropes. Terylene/Dacron: fabrics, bottles (PET). Bakelite: switches, handles. BUNA-S: tyres. BUNA-N: fuel hoses. Neoprene: wetsuits. Biodegradable: PHBV, PLA - packaging, sutures!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir har polymer ka specific use hai properties ke according! 👍"
+        },
+        {
+          "speaker": "aman",
+          "text": "Exactly! PVC electrical insulation kyunki insulator hai. Teflon non-stick kyunki chemically inert. Nylon strong kyunki amide bonds. Bakelite electrical switches kyunki heat resistant aur thermosetting. Property → Application logic samajho!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Samajh gaya Sir! Logic se yaad rahega! 💡"
+        }
+      ],
+      "navigation": {
+        "next": "card_56_exam_tips",
+        "button_text": "Exam strategy ➔"
+      }
+    },
+    {
+      "card_id": "card_56_exam_tips",
+      "card_slug": "card_56_exam_tips",
+      "type": "chat",
+      "concept_id": "polymer_exam_strategy",
+      "level": 7,
+      "progress": {
+        "current": 56,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Exam tips - SSC/Railway: Direct facts - 'PVC ka monomer?', 'Nylon-6,6 ke monomers?', 'Teflon discover kisne kiya?'. NEET: Structures draw karne ko bolte hain, mechanism steps, biodegradable polymers. BPSC: Multi-statement questions - 'Assertion: Bakelite is thermosetting. Reason: It has cross-linked structure.' UPSC: Environment angle - plastic ban policies, EPR, waste management!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir to level ke according preparation karna padega!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! Lekin base same hai - classification, mechanism, examples. NEET zyada depth chahiye (structures, bonding). BPSC/UPSC current affairs integrate karo (policies, innovations). SSC/Railway factual accuracy - names, years, uses! Ab tumhare paas sab hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Confidence aa gaya Sir! Ab practice chahiye! 💪"
+        }
+      ],
+      "navigation": {
+        "next": "card_57_summary_card",
+        "button_text": "Final Summary ➔"
+      }
+    },
+    {
+      "card_id": "card_57_summary_card",
+      "card_slug": "card_57_summary_card",
+      "type": "summary",
+      "concept_id": "polymer_complete_summary",
+      "level": 7,
+      "progress": {
+        "current": 57,
+        "total": 72
+      },
+      "summary_payload": {
+        "title": "⚡ OFFICER-LEVEL LIGHTNING REVISION",
+        "revision_points": [
+          {
+            "topic": "Polymer Definition & Classification",
+            "point": "Polymers = large molecules formed by joining monomers. Natural (cellulose, DNA, rubber) vs Synthetic (PVC, Nylon, Teflon). Structure: Linear/Branched/Cross-linked. Thermal: Thermoplastic (recyclable) vs Thermosetting (non-recyclable)."
+          },
+          {
+            "topic": "Polymerization Mechanisms",
+            "point": "ADDITION: Unsaturated monomers, NO by-product (PVC, Teflon, Polythene, Polystyrene). CONDENSATION: Reactive groups, small molecule eliminated like H₂O (Nylon, Terylene, Bakelite, Proteins)."
+          },
+          {
+            "topic": "HDPE vs LDPE",
+            "point": "HDPE = Linear structure, tightly packed, high density, strong (bottles, pipes). LDPE = Branched structure, loosely packed, low density, flexible (bags, packaging). Same monomer (ethene), different structure."
+          },
+          {
+            "topic": "Key Scientists & Years (BPSC Favorites)",
+            "point": "Leo Baekeland (1907) - Bakelite. Wallace Carothers (1935) - Nylon. Roy Plunkett (1938) - Teflon (accidental). Charles Goodyear (1839) - Vulcanization (accidental). Prof. Rajagopalan Vasudevan - Plastic roads (India)."
+          },
+          {
+            "topic": "Nylon Types",
+            "point": "Nylon-6,6 = Hexamethylene diamine (6C) + Adipic acid (6C), melting point 265°C. Nylon-6 = Caprolactam (6C), melting point 220°C. Both condensation polymers, first fully synthetic fiber."
+          },
+          {
+            "topic": "Teflon & Bakelite",
+            "point": "TEFLON (PTFE) = Tetrafluoroethylene monomer, addition polymer, non-stick, chemically inert, low friction. BAKELITE = Phenol + Formaldehyde, condensation polymer, thermosetting, cross-linked, electrical insulator."
+          },
+          {
+            "topic": "Rubber Types",
+            "point": "Natural Rubber (Isoprene monomer) → Vulcanization (+ Sulphur, heat) → Vulcanized rubber (strong, elastic, temperature resistant). Synthetic: BUNA-S (Butadiene + Styrene), BUNA-N (Butadiene + Acrylonitrile), Neoprene (Chloroprene)."
+          },
+          {
+            "topic": "Biodegradable Polymers",
+            "point": "PHBV (bacteria produce), PLA (corn/sugarcane), Starch-based. Decompose by microorganisms. Uses: packaging, medical sutures (PLGA), agricultural films. Environmental solution to plastic pollution."
+          },
+          {
+            "topic": "Recycling Codes",
+            "point": "1=PET, 2=HDPE, 3=PVC, 4=LDPE, 5=PP, 6=PS, 7=Others. PET & HDPE most recyclable. Thermoplastics recyclable, Thermosetting not. India recycling rate ~60%."
+          },
+          {
+            "topic": "Environmental Policies (Current Affairs)",
+            "point": "Single-use plastic ban (July 2022 India). Plastic Waste Management Rules 2016 (amended 2021) - EPR (Extended Producer Responsibility). 3R principle: Reduce, Reuse, Recycle. Plastic roads - Prof. Vasudevan innovation."
+          }
+        ]
+      },
+      "navigation": {
+        "next": "card_58_rapid_quiz_1",
+        "button_text": "Rapid Fire Quizzes ➔"
+      }
+    },
+    {
+      "card_id": "card_58_rapid_quiz_1",
+      "card_slug": "card_58_rapid_quiz_1",
+      "type": "quiz",
+      "concept_id": "rapid_fire_quiz_1",
+      "level": 7,
+      "progress": {
+        "current": 58,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Which polymer is used in non-stick cookware coating?",
+        "options": [
+          {
+            "id": "A",
+            "text": "PVC"
+          },
+          {
+            "id": "B",
+            "text": "Teflon"
+          },
+          {
+            "id": "C",
+            "text": "Bakelite"
+          },
+          {
+            "id": "D",
+            "text": "Nylon"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "TEFLON (Polytetrafluoroethylene - PTFE) is used in non-stick cookware coating due to its extremely low friction coefficient and chemical inertness. It was accidentally discovered by Roy Plunkett in 1938."
+      },
+      "navigation": {
+        "next": "card_59_rapid_quiz_2",
+        "button_text": "Next (2/15) ➔"
+      }
+    },
+    {
+      "card_id": "card_59_rapid_quiz_2",
+      "card_slug": "card_59_rapid_quiz_2",
+      "type": "quiz",
+      "concept_id": "rapid_fire_quiz_2",
+      "level": 7,
+      "progress": {
+        "current": 59,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "The monomer of PVC is:",
+        "options": [
+          {
+            "id": "A",
+            "text": "Ethylene"
+          },
+          {
+            "id": "B",
+            "text": "Vinyl chloride"
+          },
+          {
+            "id": "C",
+            "text": "Styrene"
+          },
+          {
+            "id": "D",
+            "text": "Propylene"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "PVC (Polyvinyl Chloride) is formed by addition polymerization of VINYL CHLORIDE (CH₂=CHCl) monomer. This is a standard SSC/Railway question."
+      },
+      "navigation": {
+        "next": "card_60_rapid_quiz_3",
+        "button_text": "Next (3/15) ➔"
+      }
+    },
+    {
+      "card_id": "card_60_rapid_quiz_3",
+      "card_slug": "card_60_rapid_quiz_3",
+      "type": "quiz",
+      "concept_id": "rapid_fire_quiz_3",
+      "level": 7,
+      "progress": {
+        "current": 60,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Vulcanization of rubber was discovered by:",
+        "options": [
+          {
+            "id": "A",
+            "text": "Wallace Carothers"
+          },
+          {
+            "id": "B",
+            "text": "Charles Goodyear"
+          },
+          {
+            "id": "C",
+            "text": "Leo Baekeland"
+          },
+          {
+            "id": "D",
+            "text": "Roy Plunkett"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "CHARLES GOODYEAR accidentally discovered vulcanization of rubber in 1839. The process involves heating natural rubber with sulphur to create cross-links, making it stronger and temperature-resistant."
+      },
+      "navigation": {
+        "next": "card_61_rapid_quiz_4",
+        "button_text": "Next (4/15) ➔"
+      }
+    },
+    {
+      "card_id": "card_61_rapid_quiz_4",
+      "card_slug": "card_61_rapid_quiz_4",
+      "type": "quiz",
+      "concept_id": "rapid_fire_quiz_4",
+      "level": 7,
+      "progress": {
+        "current": 61,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Which polymer is used for making electrical switches?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Polythene"
+          },
+          {
+            "id": "B",
+            "text": "PVC"
+          },
+          {
+            "id": "C",
+            "text": "Bakelite"
+          },
+          {
+            "id": "D",
+            "text": "Nylon"
+          }
+        ],
+        "correct_option_id": "C",
+        "explanation": "BAKELITE is used for electrical switches, plugs, and handles because it is a thermosetting polymer with excellent electrical insulation properties and heat resistance. It's made from phenol and formaldehyde."
+      },
+      "navigation": {
+        "next": "card_62_rapid_quiz_5",
+        "button_text": "Next (5/15) ➔"
+      }
+    },
+    {
+      "card_id": "card_62_rapid_quiz_5",
+      "card_slug": "card_62_rapid_quiz_5",
+      "type": "quiz",
+      "concept_id": "rapid_fire_quiz_5",
+      "level": 7,
+      "progress": {
+        "current": 62,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "PET (Polyethylene terephthalate) is commonly known as:",
+        "options": [
+          {
+            "id": "A",
+            "text": "Nylon"
+          },
+          {
+            "id": "B",
+            "text": "Bakelite"
+          },
+          {
+            "id": "C",
+            "text": "Terylene/Dacron"
+          },
+          {
+            "id": "D",
+            "text": "Teflon"
+          }
+        ],
+        "correct_option_id": "C",
+        "explanation": "PET (Polyethylene terephthalate) is commonly known as TERYLENE (UK) or DACRON (US). It's a condensation polymer used in fabrics and bottles. This nomenclature is frequently tested in exams."
+      },
+      "navigation": {
+        "next": "card_63_rapid_quiz_6",
+        "button_text": "Next (6/15) ➔"
+      }
+    },
+    {
+      "card_id": "card_63_rapid_quiz_6",
+      "card_slug": "card_63_rapid_quiz_6",
+      "type": "quiz",
+      "concept_id": "rapid_fire_quiz_6",
+      "level": 7,
+      "progress": {
+        "current": 63,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Natural rubber is a polymer of:",
+        "options": [
+          {
+            "id": "A",
+            "text": "Ethylene"
+          },
+          {
+            "id": "B",
+            "text": "Isoprene"
+          },
+          {
+            "id": "C",
+            "text": "Butadiene"
+          },
+          {
+            "id": "D",
+            "text": "Styrene"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Natural rubber is a polymer of ISOPRENE (2-methyl-1,3-butadiene). It is obtained from latex of the rubber tree (Hevea brasiliensis). This is a basic NEET/SSC fact."
+      },
+      "navigation": {
+        "next": "card_64_rapid_quiz_7",
+        "button_text": "Next (7/15) ➔"
+      }
+    },
+    {
+      "card_id": "card_64_rapid_quiz_7",
+      "card_slug": "card_64_rapid_quiz_7",
+      "type": "quiz",
+      "concept_id": "rapid_fire_quiz_7",
+      "level": 7,
+      "progress": {
+        "current": 64,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Which synthetic fiber is also known as artificial silk?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Nylon"
+          },
+          {
+            "id": "B",
+            "text": "Rayon"
+          },
+          {
+            "id": "C",
+            "text": "Terylene"
+          },
+          {
+            "id": "D",
+            "text": "Orlon"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "RAYON is known as artificial silk. It's a semi-synthetic fiber made from regenerated cellulose. Though not discussed in detail in this chapter, it's an important textile polymer frequently asked in exams."
+      },
+      "navigation": {
+        "next": "card_65_rapid_quiz_8",
+        "button_text": "Next (8/15) ➔"
+      }
+    },
+    {
+      "card_id": "card_65_rapid_quiz_8",
+      "card_slug": "card_65_rapid_quiz_8",
+      "type": "quiz",
+      "concept_id": "rapid_fire_quiz_8",
+      "level": 7,
+      "progress": {
+        "current": 65,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "BUNA-S rubber is a copolymer of butadiene and:",
+        "options": [
+          {
+            "id": "A",
+            "text": "Styrene"
+          },
+          {
+            "id": "B",
+            "text": "Acrylonitrile"
+          },
+          {
+            "id": "C",
+            "text": "Vinyl chloride"
+          },
+          {
+            "id": "D",
+            "text": "Isoprene"
+          }
+        ],
+        "correct_option_id": "A",
+        "explanation": "BUNA-S is a copolymer of butadiene and STYRENE. It's used in tyre manufacturing and shoe soles. BUNA-N is butadiene + acrylonitrile (oil-resistant)."
+      },
+      "navigation": {
+        "next": "card_66_rapid_quiz_9",
+        "button_text": "Next (9/15) ➔"
+      }
+    },
+    {
+      "card_id": "card_66_rapid_quiz_9",
+      "card_slug": "card_66_rapid_quiz_9",
+      "type": "quiz",
+      "concept_id": "rapid_fire_quiz_9",
+      "level": 7,
+      "progress": {
+        "current": 66,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Thermocol is chemically:",
+        "options": [
+          {
+            "id": "A",
+            "text": "Polyethylene"
+          },
+          {
+            "id": "B",
+            "text": "Expanded polystyrene"
+          },
+          {
+            "id": "C",
+            "text": "PVC"
+          },
+          {
+            "id": "D",
+            "text": "Bakelite"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Thermocol is EXPANDED POLYSTYRENE - polystyrene foam containing 95% air and 5% polystyrene. It's used for packaging and insulation due to its lightweight and shock-absorbent properties."
+      },
+      "navigation": {
+        "next": "card_67_rapid_quiz_10",
+        "button_text": "Next (10/15) ➔"
+      }
+    },
+    {
+      "card_id": "card_67_rapid_quiz_10",
+      "card_slug": "card_67_rapid_quiz_10",
+      "type": "quiz",
+      "concept_id": "rapid_fire_quiz_10",
+      "level": 7,
+      "progress": {
+        "current": 67,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Plastic recycling code '1' represents:",
+        "options": [
+          {
+            "id": "A",
+            "text": "HDPE"
+          },
+          {
+            "id": "B",
+            "text": "PVC"
+          },
+          {
+            "id": "C",
+            "text": "PET"
+          },
+          {
+            "id": "D",
+            "text": "LDPE"
+          }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Recycling code 1 represents PET (Polyethylene terephthalate), commonly used in bottles. Code 2=HDPE, 3=PVC, 4=LDPE, 5=PP, 6=PS, 7=Others. This is important for environmental awareness questions."
+      },
+      "navigation": {
+        "next": "card_68_rapid_quiz_11",
+        "button_text": "Next (11/15) ➔"
+      }
+    },
+    {
+      "card_id": "card_68_rapid_quiz_11",
+      "card_slug": "card_68_rapid_quiz_11",
+      "type": "quiz",
+      "concept_id": "rapid_fire_quiz_11",
+      "level": 7,
+      "progress": {
+        "current": 68,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "India banned single-use plastics in:",
+        "options": [
+          {
+            "id": "A",
+            "text": "January 2020"
+          },
+          {
+            "id": "B",
+            "text": "July 2021"
+          },
+          {
+            "id": "C",
+            "text": "July 2022"
+          },
+          {
+            "id": "D",
+            "text": "January 2023"
+          }
+        ],
+        "correct_option_id": "C",
+        "explanation": "India implemented a ban on identified single-use plastic items from JULY 1, 2022. This included plastic ear buds, plates, cups, straws, and certain packaging films. This current affairs fact is crucial for BPSC/UPSC."
+      },
+      "navigation": {
+        "next": "card_69_rapid_quiz_12",
+        "button_text": "Next (12/15) ➔"
+      }
+    },
+    {
+      "card_id": "card_69_rapid_quiz_12",
+      "card_slug": "card_69_rapid_quiz_12",
+      "type": "quiz",
+      "concept_id": "rapid_fire_quiz_12",
+      "level": 7,
+      "progress": {
+        "current": 69,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Which property makes HDPE stronger than LDPE?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Different monomer"
+          },
+          {
+            "id": "B",
+            "text": "Linear structure with tight packing"
+          },
+          {
+            "id": "C",
+            "text": "Presence of cross-linking"
+          },
+          {
+            "id": "D",
+            "text": "Higher molecular weight"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "HDPE has a LINEAR structure that allows polymer chains to pack tightly together, resulting in higher density and strength. LDPE has a branched structure with loose packing, making it more flexible but less strong. Both have the same monomer (ethylene)."
+      },
+      "navigation": {
+        "next": "card_70_final_quiz_bpsc",
+        "button_text": "Final BPSC-Style Challenge ➔"
+      }
+    },
+    {
+      "card_id": "card_70_final_quiz_bpsc",
+      "card_slug": "card_70_final_quiz_bpsc",
+      "type": "final_quiz",
+      "concept_id": "bpsc_style_final_quiz",
+      "level": 7,
+      "progress": {
+        "current": 70,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Consider the following statements about polymers:\n\n1. Bakelite is a thermosetting polymer with cross-linked structure.\n2. Nylon-6,6 is formed by condensation polymerization eliminating water.\n3. Teflon is chemically inert and has a high coefficient of friction.\n4. PHBV is a biodegradable polymer produced by certain bacteria.\n\nHow many of the above statements are CORRECT?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Only one"
+          },
+          {
+            "id": "B",
+            "text": "Only two"
+          },
+          {
+            "id": "C",
+            "text": "Only three"
+          },
+          {
+            "id": "D",
+            "text": "All four"
+          }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Statement-wise analysis:\n\n1. ✓ CORRECT - Bakelite (phenol-formaldehyde) is indeed a thermosetting polymer with a 3D cross-linked network structure.\n\n2. ✓ CORRECT - Nylon-6,6 is formed by condensation polymerization of hexamethylene diamine and adipic acid, with water (H₂O) being eliminated during bond formation.\n\n3. ✗ INCORRECT - Teflon IS chemically inert (correct part), but it has a LOW coefficient of friction (not high), which is why it's used in non-stick cookware.\n\n4. ✓ CORRECT - PHBV (Polyhydroxybutyrate-co-valerate) is a biodegradable polymer naturally produced by bacteria like Alcaligenes eutrophus.\n\nTherefore, THREE statements (1, 2, and 4) are correct. This multi-statement format with partial correctness is a classic BPSC/UPSC trap designed to test careful reading and precise knowledge!"
+      },
+      "navigation": {
+        "next": "card_71_final_milestone",
+        "button_text": "Complete Chapter ➔"
+      }
+    },
+    {
+      "card_id": "card_71_final_milestone",
+      "card_slug": "card_71_final_milestone",
+      "type": "milestone",
+      "concept_id": "chapter_complete_celebration",
+      "level": 7,
+      "progress": {
+        "current": 71,
+        "total": 72
+      },
+      "milestone_payload": {
+        "title": "🎊 POLYMERS CHAPTER CONQUERED!",
+        "badge_emoji": "🏆",
+        "completed_topic": "Complete Polymers in Chemistry",
+        "xp_earned": 500,
+        "milestone_progress": "100% Chapter Complete - Officer Level Achieved! 🎖️",
+        "motivational_quote": "From monomers to macromolecules, natural to synthetic, addition to condensation - tumne polymer chemistry ko master kar liya! BPSC/SSC/Railway/NEET mein ab ye topic tumhara strong point hai! Keep learning, keep growing! 🚀🧪"
+      },
+      "navigation": {
+        "next": "card_72_completion_screen",
+        "button_text": "View Certificate ➔"
+      }
+    },
+    {
+      "card_id": "card_72_completion_screen",
+      "card_slug": "card_72_completion_screen",
+      "type": "milestone",
+      "concept_id": "final_completion",
+      "level": 7,
+      "progress": {
+        "current": 72,
+        "total": 72
+      },
+      "milestone_payload": {
+        "title": "🌟 CERTIFICATE OF MASTERY 🌟",
+        "badge_emoji": "🎓",
+        "completed_topic": "Polymers in Chemistry - Complete Syllabus",
+        "xp_earned": 0,
+        "milestone_progress": "Ready for BPSC/SSC/Railway/NEET/UPSC Questions!",
+        "motivational_quote": "Knowledge Acquired:\n✓ Classification (Natural/Synthetic, Thermoplastic/Thermosetting)\n✓ Polymerization Mechanisms (Addition/Condensation)\n✓ Commercial Polymers (PVC, Teflon, Nylon, Bakelite, Terylene)\n✓ Rubber & Vulcanization\n✓ Biodegradable Polymers & Environmental Impact\n✓ Scientist Discoveries & Current Policies\n\nYou've completed 72 cards covering 100% NCERT + PYQ syllabus!\nRevise regularly and attempt mock tests.\nAll the best for your exams! 🎯📚"
+      },
+      "navigation": {
+        "next": null,
+        "button_text": "Back to Dashboard 🏠"
+      }
+    }
+  ]
+}
