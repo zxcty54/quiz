@@ -53,14 +53,15 @@ def fetch_raw_bihar_news():
     # Source C: IPRD BIHAR (Information & Public Relations Dept)
     # -------------------------------------------------------------
     try:
-        iprd_url = "https://iprd.bihar.gov.in"
+        # Updated official URL for IPRD Bihar portal
+        iprd_url = "https://state.bihar.gov.in/prdbihar/CitizenHome.html"
         res = requests.get(iprd_url, impersonate="chrome", timeout=15)
         if res.status_code == 200:
             soup = BeautifulSoup(res.content, "html.parser")
             count = 0
             for link in soup.find_all('a'):
                 title = link.text.strip()
-                if title and len(title) > 20 and any(keyword in title for keyword in ["योजना", "विकास", "विभाग", "बिहार"]):
+                if title and len(title) > 20 and any(keyword in title for keyword in ["योजना", "विकास", "विभाग", "बिहार", "सूचना"]):
                     news_titles.append(f"[IPRD Bihar] {title}")
                     count += 1
                     if count >= 4:
@@ -101,8 +102,9 @@ def generate_app_summary_json(raw_text):
     ]
     """
     
+    # FIXED: Standard model name gemini-1.5-flash
     response = client.models.generate_content(
-        model="gemini-2.5-flash",
+        model="gemini-1.5-flash",
         contents=prompt
     )
     return response.text
