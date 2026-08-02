@@ -67,7 +67,7 @@ def fetch_raw_bihar_news():
     return "\n".join(news_titles)
 
 def generate_app_summary_json(raw_text):
-    """Gemini AI se strict JSON format me summary banwata hai (With Retry Handling)"""
+    """Gemini AI se strict JSON format me summary banwata hai"""
     prompt = f"""
     Tum BPSC aur Bihar Competitive Exams ke Current Affairs Editor ho.
     Niche CMO Bihar, IPRD Bihar aur PIB Patna se li gayi latest raw news hai:
@@ -99,8 +99,9 @@ def generate_app_summary_json(raw_text):
     max_retries = 3
     for attempt in range(max_retries):
         try:
+            # FIXED: Updated model name to official 'gemini-2.0-flash'
             response = client.models.generate_content(
-                model="gemini-1.5-flash",
+                model="gemini-2.0-flash",
                 contents=prompt
             )
             return response.text
