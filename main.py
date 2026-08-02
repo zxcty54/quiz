@@ -54,7 +54,6 @@ def fetch_raw_bihar_news():
     # -------------------------------------------------------------
     try:
         iprd_url = "https://state.bihar.gov.in/prdbihar/CitizenHome.html"
-        # verify=False added to bypass SSL Certificate verification error
         res = requests.get(iprd_url, impersonate="chrome", timeout=15, verify=False)
         if res.status_code == 200:
             soup = BeautifulSoup(res.content, "html.parser")
@@ -102,9 +101,9 @@ def generate_app_summary_json(raw_text):
     ]
     """
     
-    # FIXED: Using latest supported model gemini-2.5-flash for google-genai SDK
+    # FIXED: Updated model name to gemini-2.0-flash
     response = client.models.generate_content(
-        model="gemini-2.5-flash",
+        model="gemini-2.0-flash",
         contents=prompt
     )
     return response.text
