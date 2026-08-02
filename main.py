@@ -1,16 +1,15 @@
 import os
 import json
-import time
 import xml.etree.ElementTree as ET
 from curl_cffi import requests
 from bs4 import BeautifulSoup
-from google import genai
+from groq import Groq
 
 # -------------------------------------------------------------
-# 1. API Client Setup (Using GOOGLE_API_KEY from GitHub Secret)
+# 1. API Client Setup (Using GROQ_API_KEY from GitHub Secret)
 # -------------------------------------------------------------
-GOOGLE_KEY = os.environ.get("GOOGLE_API_KEY")
-client = genai.Client(api_key=GOOGLE_KEY) if GOOGLE_KEY else None
+GROQ_KEY = os.environ.get("GROQ_API_KEY")
+client = Groq(api_key=GROQ_KEY) if GROQ_KEY else None
 
 def fetch_raw_bihar_news():
     """Teeno Official Sources (CMO, IPRD, PIB) se raw news text scrape karta hai"""
@@ -67,7 +66,7 @@ def fetch_raw_bihar_news():
     return "\n".join(news_titles)
 
 def generate_app_summary_json(raw_text):
-    """Gemini AI se strict JSON format me summary banwata hai"""
+    """Groq API (Gemma2) se strict JSON format me summary banwata hai"""
     prompt = f"""
     Tum BPSC aur Bihar Competitive Exams ke Current Affairs Editor ho.
     Niche CMO Bihar, IPRD Bihar aur PIB Patna se li gayi latest raw news hai:
@@ -77,7 +76,7 @@ def generate_app_summary_json(raw_text):
     RULES:
     1. Politics, Crime, Elections, Murder, aur Raajneeti ki news ko Bilkul REJECT (discard) kar do.
     2. Sirf Education, Government Schemes, Infrastructure, Agriculture, aur Development ki TOP 4-5 news chuno.
-    3. Output STRICTLY VALID JSON format me hona chahiye. No markdown, no prose, strictly raw JSON array.
+    3. Output STRICTLY VALID JSON format me hona chahiye. Return ONLY raw JSON array without markdown wrapping.
     
     JSON SCHEMA OUTPUT:
     [
@@ -96,37 +95,26 @@ def generate_app_summary_json(raw_text):
     ]
     """
     
-    max_retries = 3
-    for attempt in range(max_retries):
-        try:
-            # FIXED: Updated model name for the google-genai SDK
-            response = client.models.generate_content(
-                model="gemini-2.0-flash",
-                contents=prompt
-            )
-            return response.text
-        except Exception as e:
-            if "429" in str(e) or "RESOURCE_EXHAUSTED" in str(e):
-                wait_time = (attempt + 1) * 20
-                print(f"⚠️ Rate limit hit (429). Retrying in {wait_time}s... (Attempt {attempt+1}/{max_retries})")
-                time.sleep(wait_time)
-            else:
-                raise e
-    raise Exception("❌ Max retries reached for Gemini API due to Rate Limits.")
+    response = client.chat.completions.create(
+        model="gemma2-9b-it", # Direct Open-Source Gemma 2 Model via Groq API
+        messages=[{"role": "user", "content": prompt}],
+        temperature=0.2
+    )
+    return response.choices[0].message.content
 
 if __name__ == "__main__":
-    if not GOOGLE_KEY:
-        print("❌ Error: GOOGLE_API_KEY environment variable not found!")
+    if not GROQ_KEY:
+        print("❌ Error: GROQ_API_KEY environment variable not found!")
         exit(1)
         
     print("🔄 Scraping news from 3 official sources...")
     raw_news = fetch_raw_bihar_news()
     
     if raw_news:
-        print("🧠 Processing news summary with Gemini AI...")
+        print("🧠 Processing news summary with Groq (Gemma 2)...")
         ai_response = generate_app_summary_json(raw_news)
         
-        # Cleanup Markdown code block formatting if returned by AI
+        # Cleanup Markdown code blocks
         clean_json_str = ai_response.strip()
         if clean_json_str.startswith("```"):
             clean_json_str = clean_json_str.split("\n", 1)[1]
