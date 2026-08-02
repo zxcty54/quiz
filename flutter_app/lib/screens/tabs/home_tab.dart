@@ -38,11 +38,18 @@ class _HomeTabState extends State<HomeTab> {
   List<dynamic> _biharNewsList = [];
   bool _isLoadingNews = true;
   int _activeNewsIndex = 0;
+  final PageController _newsPageController = PageController();
 
   @override
   void initState() {
     super.initState();
     _fetchBiharNews();
+  }
+
+  @override
+  void dispose() {
+    _newsPageController.dispose();
+    super.dispose();
   }
 
   // 📰 FETCH LIVE BIHAR NEWS VIA JSDELIVR CDN
@@ -85,7 +92,7 @@ class _HomeTabState extends State<HomeTab> {
           _buildTrustHeroBanner(),
           const SizedBox(height: 16),
 
-          // 📰 3. HORIZONTAL COMPACT BIHAR NEWS CAROUSEL
+          // 📰 3. ULTRA-PREMIUM MINIMALIST NEWS CAROUSEL
           _buildBiharNewsSection(),
           const SizedBox(height: 16),
 
@@ -116,14 +123,21 @@ class _HomeTabState extends State<HomeTab> {
     );
   }
 
-  // 📰 COMPACT HORIZONTAL BIHAR NEWS WIDGET
+  // 📰 ULTRA-PREMIUM MINIMALIST NEWS WIDGET
   Widget _buildBiharNewsSection() {
     if (_isLoadingNews) {
       return Container(
         height: 120,
         decoration: BoxDecoration(
           color: widget.isDarkMode ? const Color(0xFF1E293B) : Colors.white,
-          borderRadius: BorderRadius.circular(14),
+          borderRadius: BorderRadius.circular(16),
+          boxShadow: [
+            if(!widget.isDarkMode) BoxShadow(
+              color: Colors.black.withOpacity(0.03),
+              blurRadius: 15,
+              offset: const Offset(0, 5),
+            )
+          ],
         ),
         child: const Center(
           child: CircularProgressIndicator(color: Color(0xFF0284C7), strokeWidth: 2),
@@ -136,42 +150,35 @@ class _HomeTabState extends State<HomeTab> {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        // HEADER WITH SLIDE COUNTER
-        Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        // CLEAN HEADER
+        const Row(
           children: [
-            const Row(
-              children: [
-                Text('📰 ', style: TextStyle(fontSize: 16)),
-                Text(
-                  'Bihar Special Bulletin',
-                  style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
-                ),
-              ],
-            ),
-            Container(
-              padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
-              decoration: BoxDecoration(
-                color: const Color(0xFF0284C7).withOpacity(0.12),
-                borderRadius: BorderRadius.circular(12),
-              ),
-              child: Text(
-                'SWIPE  •  ${_activeNewsIndex + 1}/${_biharNewsList.length}',
-                style: const TextStyle(
-                  color: Color(0xFF0284C7),
-                  fontSize: 10,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
+            Icon(Icons.bolt_rounded, color: Color(0xFF0284C7), size: 18),
+            SizedBox(width: 6),
+            Text(
+              'Bihar News Flash',
+              style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
             ),
           ],
         ),
         const SizedBox(height: 10),
 
-        // HORIZONTAL SWIPE CAROUSEL
-        SizedBox(
-          height: 195,
+        // ULTRA-MINIMALIST CAROUSEL
+        Container(
+          height: 190,
+          decoration: BoxDecoration(
+            color: widget.isDarkMode ? const Color(0xFF1E293B) : Colors.white,
+            borderRadius: BorderRadius.circular(16),
+            boxShadow: [
+              if(!widget.isDarkMode) BoxShadow(
+                color: Colors.black.withOpacity(0.04), // Ultra-subtle premium shadow
+                blurRadius: 20,
+                offset: const Offset(0, 8),
+              )
+            ],
+          ),
           child: PageView.builder(
+            controller: _newsPageController,
             itemCount: _biharNewsList.length,
             onPageChanged: (index) {
               setState(() {
@@ -180,114 +187,118 @@ class _HomeTabState extends State<HomeTab> {
             },
             itemBuilder: (context, index) {
               final news = _biharNewsList[index];
-              return _buildCompactNewsCard(news);
+              return _buildUltraMinimalistNewsCard(news);
             },
           ),
+        ),
+        const SizedBox(height: 8),
+
+        // CLEAN DOTS INDICATOR
+        Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: List.generate(_biharNewsList.length, (index) {
+            return Container(
+              width: _activeNewsIndex == index ? 14 : 6,
+              height: 6,
+              margin: const EdgeInsets.symmetric(horizontal: 3),
+              decoration: BoxDecoration(
+                color: _activeNewsIndex == index
+                    ? const Color(0xFF0284C7)
+                    : (widget.isDarkMode ? Colors.white24 : Colors.grey.shade300),
+                borderRadius: BorderRadius.circular(10),
+              ),
+            );
+          }),
         ),
       ],
     );
   }
 
-  // 📇 DISTINCT COMPACT NEWS CARD (Hero Banner Se Alag Design)
-  Widget _buildCompactNewsCard(Map<String, dynamic> news) {
+  // 📇 ULTRA-MINIMALIST NEWS CARD DESIGN
+  Widget _buildUltraMinimalistNewsCard(Map<String, dynamic> news) {
     final List bullets = (news['bullets'] as List?) ?? [];
 
-    return Container(
-      margin: const EdgeInsets.only(right: 6),
-      padding: const EdgeInsets.all(14),
-      decoration: BoxDecoration(
-        color: widget.isDarkMode ? const Color(0xFF1E293B) : Colors.white,
-        borderRadius: BorderRadius.circular(14),
-        border: Border.all(
-          color: widget.isDarkMode ? Colors.blueGrey.shade700 : const Color(0xFF0284C7).withOpacity(0.25),
-          width: 1.2,
-        ),
-        boxShadow: [
-          BoxShadow(
-            color: const Color(0xFF0284C7).withOpacity(0.05),
-            blurRadius: 8,
-            offset: const Offset(0, 3),
-          ),
-        ],
-      ),
+    return Padding(
+      padding: const EdgeInsets.all(16),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          // TAG & DATE ROW
+          // COMPACT TOP BAR
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Container(
                 padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
                 decoration: BoxDecoration(
-                  color: const Color(0xFF0284C7).withOpacity(0.12),
+                  color: const Color(0xFFEFF6FF), // Ultra-light blue accent
                   borderRadius: BorderRadius.circular(6),
                 ),
                 child: Text(
-                  news['exam_tag'] ?? '🎯 BPSC Special',
+                  news['exam_tag'] ?? '🎯 BPSC',
                   style: const TextStyle(
-                    color: Color(0xFF0284C7),
+                    color: Color(0xFF1E40AF),
                     fontSize: 10,
                     fontWeight: FontWeight.bold,
                   ),
                 ),
               ),
-              Row(
-                children: [
-                  Icon(Icons.calendar_today_rounded, size: 11, color: widget.isDarkMode ? Colors.amberAccent : const Color(0xFFD97706)),
-                  const SizedBox(width: 4),
-                  Text(
-                    news['date'] ?? '',
-                    style: TextStyle(
-                      color: widget.isDarkMode ? Colors.amberAccent : const Color(0xFFD97706),
-                      fontSize: 10.5,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                ],
-              )
+              Text(
+                news['date'] ?? '',
+                style: TextStyle(
+                  color: widget.isDarkMode ? Colors.white60 : Colors.grey.shade600,
+                  fontSize: 11,
+                  fontWeight: FontWeight.w600,
+                ),
+              ),
             ],
           ),
 
-          const SizedBox(height: 8),
+          const SizedBox(height: 12),
 
-          // TITLE
+          // TITLE (HEAVY BOLD)
           Text(
             news['title'] ?? '',
             maxLines: 2,
             overflow: TextOverflow.ellipsis,
             style: TextStyle(
-              fontSize: 14.5,
-              fontWeight: FontWeight.bold,
+              fontSize: 16,
+              fontWeight: FontWeight.w800, // Extra bold for premium feel
               color: widget.isDarkMode ? Colors.white : const Color(0xFF0F172A),
               height: 1.25,
             ),
           ),
 
-          const SizedBox(height: 8),
-          const Divider(height: 1),
-          const SizedBox(height: 8),
+          const SizedBox(height: 12),
 
-          // BULLET POINTS (MAX 2 BULLETS FOR CLEAN FIT)
+          // BULLET POINTS (CLEAN DOTS)
           Expanded(
             child: ListView(
               physics: const NeverScrollableScrollPhysics(),
               children: bullets.take(2).map((bullet) {
                 return Padding(
-                  padding: const EdgeInsets.only(bottom: 4.0),
+                  padding: const EdgeInsets.only(bottom: 6.0),
                   child: Row(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      const Text('• ', style: TextStyle(color: Color(0xFF0284C7), fontSize: 13, fontWeight: FontWeight.bold)),
+                      Container(
+                        margin: const EdgeInsets.only(top: 5),
+                        width: 5,
+                        height: 5,
+                        decoration: const BoxDecoration(
+                          color: Color(0xFF0284C7), // Minimalist blue dot
+                          shape: BoxShape.circle,
+                        ),
+                      ),
+                      const SizedBox(width: 8),
                       Expanded(
                         child: Text(
                           bullet.toString(),
                           maxLines: 2,
                           overflow: TextOverflow.ellipsis,
                           style: TextStyle(
-                            fontSize: 11.5,
-                            color: widget.isDarkMode ? Colors.white70 : const Color(0xFF475569),
-                            height: 1.3,
+                            fontSize: 12.5,
+                            color: widget.isDarkMode ? Colors.white70 : const Color(0xFF334155),
+                            height: 1.35,
                           ),
                         ),
                       ),
@@ -353,6 +364,13 @@ class _HomeTabState extends State<HomeTab> {
           end: Alignment.bottomRight,
         ),
         borderRadius: BorderRadius.circular(16),
+        boxShadow: [
+          BoxShadow(
+            color: const Color(0xFF0D9488).withOpacity(0.3),
+            blurRadius: 10,
+            offset: const Offset(0, 4),
+          ),
+        ],
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -373,25 +391,57 @@ class _HomeTabState extends State<HomeTab> {
           const SizedBox(height: 4),
           Text(widget.lastNextTopic, maxLines: 1, overflow: TextOverflow.ellipsis, style: const TextStyle(color: Colors.white70, fontSize: 12)),
           const SizedBox(height: 14),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const Text('Chapter Progress', style: TextStyle(color: Colors.white70, fontSize: 11)),
-              Text('$percentDisplay% Completed', style: const TextStyle(color: Colors.amberAccent, fontSize: 11, fontWeight: FontWeight.bold)),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  const Text(
+                    'Chapter Progress',
+                    style: TextStyle(color: Colors.white70, fontSize: 11, fontWeight: FontWeight.w500),
+                  ),
+                  Text(
+                    '$percentDisplay% Completed',
+                    style: const TextStyle(color: Colors.amberAccent, fontSize: 11, fontWeight: FontWeight.bold),
+                  ),
+                ],
+              ),
+              const SizedBox(height: 6),
+              ClipRRect(
+                borderRadius: BorderRadius.circular(10),
+                child: LinearProgressIndicator(
+                  value: widget.lastLearnProgress,
+                  minHeight: 6,
+                  backgroundColor: Colors.white24,
+                  valueColor: AlwaysStoppedAnimation<Color>(Colors.amber.shade400),
+                ),
+              ),
             ],
-          ),
-          const SizedBox(height: 6),
-          ClipRRect(
-            borderRadius: BorderRadius.circular(10),
-            child: LinearProgressIndicator(value: widget.lastLearnProgress, minHeight: 6, backgroundColor: Colors.white24, valueColor: AlwaysStoppedAnimation<Color>(Colors.amber.shade400)),
           ),
           const SizedBox(height: 14),
           SizedBox(
             width: double.infinity,
             child: ElevatedButton(
               onPressed: widget.onNavigateToLearn,
-              style: ElevatedButton.styleFrom(backgroundColor: Colors.white, foregroundColor: const Color(0xFF0F766E)),
-              child: Text(widget.hasLearningHistory ? 'Resume Learning →' : 'Start Learning →', style: const TextStyle(fontWeight: FontWeight.bold)),
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.white,
+                foregroundColor: const Color(0xFF0F766E),
+                elevation: 0,
+                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+                padding: const EdgeInsets.symmetric(vertical: 11),
+              ),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  const Icon(Icons.play_arrow_rounded, size: 20),
+                  const SizedBox(width: 6),
+                  Text(
+                    widget.hasLearningHistory ? 'Resume Learning →' : 'Start Learning →',
+                    style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 13.5),
+                  ),
+                ],
+              ),
             ),
           ),
         ],
@@ -404,8 +454,19 @@ class _HomeTabState extends State<HomeTab> {
       width: double.infinity,
       padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
-        gradient: const LinearGradient(colors: [Color(0xFFEA580C), Color(0xFFC2410C)]),
+        gradient: const LinearGradient(
+          colors: [Color(0xFFEA580C), Color(0xFFC2410C)],
+          begin: Alignment.topLeft,
+          end: Alignment.bottomRight,
+        ),
         borderRadius: BorderRadius.circular(16),
+        boxShadow: [
+          BoxShadow(
+            color: const Color(0xFFEA580C).withOpacity(0.3),
+            blurRadius: 10,
+            offset: const Offset(0, 4),
+          ),
+        ],
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -416,15 +477,40 @@ class _HomeTabState extends State<HomeTab> {
               Container(
                 padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
                 decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.circular(20)),
-                child: const Text('⚔️ LIVE DUEL SPRINT', style: TextStyle(color: Color(0xFFEA580C), fontSize: 10, fontWeight: FontWeight.bold)),
+                child: const Row(
+                  children: [
+                    Text('⚔️ ', style: TextStyle(fontSize: 12)),
+                    Text(
+                      'LIVE DUEL SPRINT',
+                      style: TextStyle(
+                        color: Color(0xFFEA580C),
+                        fontSize: 10,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ],
+                ),
               ),
-              const Text('⏱️ 5 Mins • 10 Levels', style: TextStyle(color: Colors.white70, fontSize: 11, fontWeight: FontWeight.bold)),
+              const Text(
+                '⏱️ 5 Mins • 10 Levels',
+                style: TextStyle(color: Colors.white70, fontSize: 11, fontWeight: FontWeight.bold),
+              )
             ],
           ),
           const SizedBox(height: 12),
-          const Text('Challenge Your Friend 🎯', style: TextStyle(color: Colors.white, fontSize: 18, fontWeight: FontWeight.bold)),
+          const Text(
+            'Challenge Your Friend 🎯',
+            style: TextStyle(
+              color: Colors.white,
+              fontSize: 18,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
           const SizedBox(height: 4),
-          const Text('10 High-yield concepts solve karo, result dost ko WhatsApp/Telegram par bhejo!', style: TextStyle(color: Colors.white70, fontSize: 12, height: 1.3)),
+          const Text(
+            '10 High-yield concepts solve karo, result dost ko WhatsApp/Telegram par bhejo aur dekho kon jeet-ta hai!',
+            style: TextStyle(color: Colors.white70, fontSize: 12, height: 1.3),
+          ),
           const SizedBox(height: 14),
           SizedBox(
             width: double.infinity,
@@ -432,11 +518,31 @@ class _HomeTabState extends State<HomeTab> {
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => SprintChallengeScreen(subjectMapping: widget.subjectMapping)),
+                  MaterialPageRoute(
+                    builder: (context) => SprintChallengeScreen(
+                      subjectMapping: widget.subjectMapping,
+                    ),
+                  ),
                 );
               },
-              style: ElevatedButton.styleFrom(backgroundColor: Colors.white, foregroundColor: const Color(0xFFEA580C)),
-              child: const Text('Start Challenge Sprint 🚀', style: TextStyle(fontWeight: FontWeight.bold)),
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.white,
+                foregroundColor: const Color(0xFFEA580C),
+                elevation: 0,
+                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+                padding: const EdgeInsets.symmetric(vertical: 11),
+              ),
+              child: const Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Icon(Icons.bolt_rounded, size: 20),
+                  SizedBox(width: 6),
+                  Text(
+                    'Start Challenge Sprint 🚀',
+                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 13.5),
+                  ),
+                ],
+              ),
             ),
           ),
         ],
@@ -446,6 +552,7 @@ class _HomeTabState extends State<HomeTab> {
 
   Widget _buildDynamicWebHubSection(BuildContext context) {
     final List webHubList = (widget.homeData['web_hub'] as List?) ?? [];
+
     if (webHubList.isEmpty) return const SizedBox.shrink();
 
     return Column(
@@ -455,30 +562,103 @@ class _HomeTabState extends State<HomeTab> {
         final String buttonUrl = hubItem['button_url'] ?? 'https://www.mocktester.online';
         final List items = (hubItem['items'] as List?) ?? [];
 
+        Color cardThemeColor = const Color(0xFF2563EB);
+        try {
+          if (hubItem['color'] != null) {
+            cardThemeColor = Color(int.parse(hubItem['color']));
+          }
+        } catch (_) {}
+
         return Container(
           margin: const EdgeInsets.only(bottom: 16),
           padding: const EdgeInsets.all(16),
           decoration: BoxDecoration(
             color: widget.isDarkMode ? const Color(0xFF1E293B) : Colors.white,
             borderRadius: BorderRadius.circular(16),
-            border: Border.all(color: Colors.blue.withOpacity(0.2)),
+            border: Border.all(
+              color: widget.isDarkMode ? Colors.blueGrey.shade700 : cardThemeColor.withOpacity(0.2),
+              width: 1.2,
+            ),
+            boxShadow: [
+              BoxShadow(
+                color: cardThemeColor.withOpacity(0.04),
+                blurRadius: 10,
+                offset: const Offset(0, 3),
+              ),
+            ],
           ),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text(title, style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
-              const SizedBox(height: 12),
-              ...items.map((itemText) => InkWell(
-                    onTap: () => widget.onTapUrl(itemText.toString(), buttonUrl),
-                    child: Padding(
-                      padding: const EdgeInsets.symmetric(vertical: 6.0),
-                      child: Row(children: [const Icon(Icons.arrow_right_rounded, size: 20), Expanded(child: Text(itemText.toString(), style: const TextStyle(fontSize: 13)))]),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Expanded(
+                    child: Text(
+                      title,
+                      style: TextStyle(
+                        fontSize: 16,
+                        fontWeight: FontWeight.bold,
+                        color: isDarkMode ? Colors.white : const Color(0xFF0F172A),
+                      ),
                     ),
-                  )),
+                  ),
+                  Container(
+                    padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
+                    decoration: BoxDecoration(
+                      color: cardThemeColor.withOpacity(0.1),
+                      borderRadius: BorderRadius.circular(12),
+                    ),
+                    child: Text(
+                      'UPDATED',
+                      style: TextStyle(
+                        color: cardThemeColor,
+                        fontSize: 9,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+              const SizedBox(height: 12),
+              ...items.map((itemText) {
+                return InkWell(
+                  onTap: () => widget.onTapUrl(itemText.toString(), buttonUrl),
+                  borderRadius: BorderRadius.circular(8),
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(vertical: 6.0, horizontal: 4.0),
+                    child: Row(
+                      children: [
+                        Icon(Icons.arrow_right_rounded, color: cardThemeColor, size: 20),
+                        const SizedBox(width: 6),
+                        Expanded(
+                          child: Text(
+                            itemText.toString(),
+                            style: TextStyle(
+                              fontSize: 13,
+                              fontWeight: FontWeight.w500,
+                              color: isDarkMode ? Colors.white70 : const Color(0xFF334155),
+                            ),
+                          ),
+                        ),
+                        Icon(Icons.open_in_new_rounded, size: 13, color: cardThemeColor.withOpacity(0.6)),
+                      ],
+                    ),
+                  ),
+                );
+              }),
               const SizedBox(height: 12),
               SizedBox(
                 width: double.infinity,
-                child: OutlinedButton(onPressed: () => widget.onTapUrl(title, buttonUrl), child: Text(buttonText)),
+                child: OutlinedButton(
+                  onPressed: () => widget.onTapUrl(title, buttonUrl),
+                  style: OutlinedButton.styleFrom(
+                    side: BorderSide(color: cardThemeColor),
+                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+                    padding: const EdgeInsets.symmetric(vertical: 10),
+                  ),
+                  child: Text(buttonText, style: TextStyle(color: cardThemeColor, fontWeight: FontWeight.bold, fontSize: 13)),
+                ),
               ),
             ],
           ),
@@ -490,10 +670,13 @@ class _HomeTabState extends State<HomeTab> {
   Widget _buildLaunchRoadmapCard() {
     final List roadmapList = widget.appConfig['launch_roadmap'] ?? [
       {"text": "🔥 Coming Tomorrow: BSSC Inter Level Top 100 Qs", "color": "0xFFFF4757"},
-      {"text": "✅ Just Added: Current Affairs Bulletin 2026", "color": "0xFF059669"}
+      {"text": "✅ Just Added: Current Affairs Bulletin 2026", "color": "0xFF059669"},
+      {"text": "📌 Next Week: BPSC Mains Answer Writing Practice", "color": "0xFF2563EB"}
     ];
 
     return Card(
+      elevation: 1,
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(14)),
       child: Padding(
         padding: const EdgeInsets.all(14),
         child: Column(
@@ -501,10 +684,18 @@ class _HomeTabState extends State<HomeTab> {
           children: [
             const Text('📅 Launch Roadmap & Live Updates', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 14)),
             const SizedBox(height: 10),
-            ...roadmapList.map((item) => Padding(
-                  padding: const EdgeInsets.symmetric(vertical: 3.0),
-                  child: Text(item['text'] ?? '', style: const TextStyle(fontSize: 12, color: Color(0xFF2563EB), fontWeight: FontWeight.w600)),
-                )),
+            ...roadmapList.map((item) {
+              final String text = item['text'] ?? '';
+              Color textColor = const Color(0xFF2563EB);
+              try {
+                if (item['color'] != null) textColor = Color(int.parse(item['color']));
+              } catch (_) {}
+
+              return Padding(
+                padding: const EdgeInsets.symmetric(vertical: 4.0),
+                child: Text(text, style: TextStyle(fontSize: 12, color: textColor, fontWeight: FontWeight.w600)),
+              );
+            }),
           ],
         ),
       ),
