@@ -1,0 +1,2510 @@
+{
+  "topic_id": "surface_chemistry_001",
+  "topic_title": "Surface Chemistry",
+  "target_exams": [
+    "BPSC",
+    "BSSC",
+    "RRB NTPC",
+    "SSC CGL",
+    "NEET",
+    "UPSC Prelims"
+  ],
+  "total_cards": 72,
+  "characters": {
+    "aman": {
+      "name": "Aman Sir",
+      "role": "teacher",
+      "avatar": "👨‍🏫"
+    },
+    "raju": {
+      "name": "Raju",
+      "role": "student",
+      "avatar": "👦"
+    }
+  },
+  "cards": [
+    {
+      "card_id": "card_01_intro",
+      "card_slug": "card_01_intro",
+      "type": "intro",
+      "concept_id": "surface_chemistry_overview",
+      "level": 1,
+      "progress": {
+        "current": 1,
+        "total": 72
+      },
+      "intro_payload": {
+        "chapter_title": "Surface Chemistry",
+        "chapter_icon": "🧪",
+        "target_exams": [
+          "BPSC",
+          "BSSC",
+          "RRB NTPC",
+          "SSC CGL",
+          "NEET",
+          "UPSC Prelims"
+        ],
+        "tagline": "From your morning chai to life-saving medicines — it all happens at the surface!",
+        "learning_outcomes": [
+          "Understand Adsorption vs Absorption — the #1 exam trap",
+          "Master types of Adsorption: Physisorption vs Chemisorption",
+          "Adsorption Isotherms: Freundlich & Langmuir equations",
+          "Catalysis: Homogeneous, Heterogeneous & Enzyme Catalysis",
+          "Colloids: Types, Properties, Tyndall Effect, Brownian Motion",
+          "Coagulation, Hardy-Schulze Rule & Peptization",
+          "Emulsions, Gels, Aerosols — complete classification",
+          "Real exam PYQ traps from BPSC, SSC, NEET & UPSC"
+        ],
+        "total_cards": 72,
+        "modules": [
+          "Module 1: Adsorption — The Surface Trap",
+          "Module 2: Catalysis — The Speed Controller",
+          "Module 3: Colloids — The In-Between World",
+          "Module 4: Emulsions & Special Colloids",
+          "Module 5: Final Officer Challenge"
+        ]
+      },
+      "navigation": {
+        "next": "card_02_daily_life_hook",
+        "button_text": "Start Learning ➔"
+      }
+    },
+    {
+      "card_id": "card_02_daily_life_hook",
+      "card_slug": "card_02_daily_life_hook",
+      "type": "chat",
+      "concept_id": "surface_phenomena_intro",
+      "level": 1,
+      "progress": {
+        "current": 2,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, ek kaam karo — aaj subah tune apna joota polish kiya? Ya ghar me charcoal ka dabba dekha hai jisme fridge ki smell khatam ho jaati hai?"
+        },
+        {
+          "speaker": "raju",
+          "text": "Haan sir, fridge me kala pathar jaisa kuch rakha tha Mummy ne. Kehti thi smell khatam ho jaata hai usse!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Ekdum sahi observation! Wo kala pathar — activated charcoal — smell ko apni surface pe chipka leta hai. Isko kehte hain 'Adsorption'. Aur yahi hai aaj ka topic — Surface Chemistry. Jahan action hoti hai surface pe, andar nahi!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Surface pe? Matlab andar kuch nahi hota? Ye to confusing lagta hai sir!"
+        }
+      ],
+      "navigation": {
+        "next": "card_03_adsorption_definition",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_03_adsorption_definition",
+      "card_slug": "card_03_adsorption_definition",
+      "type": "chat",
+      "concept_id": "adsorption_definition",
+      "level": 1,
+      "progress": {
+        "current": 3,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Dekho, Adsorption ka matlab hai — kisi substance ke molecules ka kisi solid ya liquid ki SURFACE pe chipakna. Surface ke UPAR chipakta hai, andar nahi jaata. Jo chipakta hai use 'Adsorbate' kehte hain, aur jis pe chipakta hai use 'Adsorbent' kehte hain. Charcoal = Adsorbent. Smell ke molecules = Adsorbate."
+        },
+        {
+          "speaker": "raju",
+          "text": "Adsorbent aur Adsorbate... ye to mix ho jayega sir! Dono itne similar lagte hain!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Easy trick — 'Adsorbent' woh hai jo karta hai kaam, matlab jis pe cheez chipakti hai. 'Adsorbate' woh hai jo chipakta hai. Jaise — NET me jo pakda jaata hai woh fish, aur NET khud pakadne wala. Adsorbent = NET, Adsorbate = Fish!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Ahhhh! Ab samajh aaya! Net aur fish — ye yaad rahega sir!"
+        }
+      ],
+      "navigation": {
+        "next": "card_04_adsorption_vs_absorption",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_04_adsorption_vs_absorption",
+      "card_slug": "card_04_adsorption_vs_absorption",
+      "type": "chat",
+      "concept_id": "adsorption_vs_absorption",
+      "level": 1,
+      "progress": {
+        "current": 4,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, yahin sabse bada exam trap hai — Adsorption aur Absorption. Dono alag hain! Adsorption mein substance sirf SURFACE pe chipakta hai — andar nahi jaata. Absorption mein substance ANDAR chala jaata hai — jaise sponge paani ko andar kheeench leta hai. Sponge = Absorption. Charcoal smell ko surface pe rokna = Adsorption."
+        },
+        {
+          "speaker": "raju",
+          "text": "Toh agar paani sponge ke andar gaya toh absorption, aur agar sirf upar chipka rahe toh adsorption? Sir ye BPSC me aata hai kya?"
+        },
+        {
+          "speaker": "aman",
+          "text": "BPSC ka favorite trap suno — 'Silica gel' dono karta hai — surface pe bhi chipkaata hai aur thoda andar bhi jaata hai. Isko kehte hain 'Sorption'. Exam me agar silica gel ka naam aaye toh answer hoga Sorption, na ki sirf Adsorption! Ye 2019 BPSC ka direct trap tha!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Whoa! Ye to pakka confuse karta sir... Sorption = dono ek saath. Likh liya!"
+        }
+      ],
+      "navigation": {
+        "next": "card_05_guess_adsorption",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_05_guess_adsorption",
+      "card_slug": "card_05_guess_adsorption",
+      "type": "guess",
+      "concept_id": "adsorption_vs_absorption",
+      "level": 1,
+      "progress": {
+        "current": 5,
+        "total": 72
+      },
+      "guess_payload": {
+        "question": "Raju ke ghar me paani ka filter hai jisme activated carbon laga hai. Woh paani ke haanikaarak chemicals ko apni surface pe rok leta hai. Ye process kya hai?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Absorption"
+          },
+          {
+            "id": "B",
+            "text": "Adsorption"
+          },
+          {
+            "id": "C",
+            "text": "Sorption"
+          },
+          {
+            "id": "D",
+            "text": "Desorption"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Activated carbon ke microscopic pores mein chemicals sirf surface pe chipakte hain — andar nahi jaate. Isliye ye Adsorption hai. Absorption mein cheez andar jaati hai (jaise sponge). Desorption Adsorption ka ulta process hai — jab surface se cheez wapas nikal jaaye."
+      },
+      "navigation": {
+        "next": "card_06_physisorption_intro",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_06_physisorption_intro",
+      "card_slug": "card_06_physisorption_intro",
+      "type": "chat",
+      "concept_id": "physisorption",
+      "level": 1,
+      "progress": {
+        "current": 6,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ab Adsorption ke do bade types hain. Pehla — Physisorption (Physical Adsorption). Isme adsorbate aur adsorbent ke beech sirf Van der Waals forces kaam karte hain — bahut weak forces. Matlab bonding itni weak hai ki thodi si energy de do toh cheez wapas nikal jaati hai surface se. Ye reversible hota hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Van der Waals forces? Matlab ye woh weak waali attraction hai jo gases mein hoti hai? Sir ye toh NEET mein bhi aata hai na?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul! NEET, BPSC, SSC — sab mein. Physisorption ki key properties yaad karo: (1) Low temperature pe zyada hota hai — temperature badhao toh kam ho jaata hai. (2) Enthalpy of adsorption bahut low hoti hai — 20 to 40 kJ/mol. (3) Easily reversible. (4) No specific sites — kahi bhi ho sakta hai surface pe."
+        },
+        {
+          "speaker": "raju",
+          "text": "Temperature badhao toh kam hota hai? Sir ye ulta nahi lagta? Zyada heat se zyada chipkana chahiye na?"
+        }
+      ],
+      "navigation": {
+        "next": "card_07_physisorption_temperature_trap",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_07_physisorption_temperature_trap",
+      "card_slug": "card_07_physisorption_temperature_trap",
+      "type": "chat",
+      "concept_id": "physisorption_temperature",
+      "level": 1,
+      "progress": {
+        "current": 7,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, bahut badhiya doubt! Dekho — Adsorption ek exothermic process hai. Matlab jab adsorbate surface pe chipakta hai toh heat release hoti hai. Ab Le Chatelier's principle se — agar tum heat add karo (temperature badhao), toh equilibrium wapas ki taraf shift hoga — matlab adsorbate surface se nikal jaayega. Isliye low temperature pe physisorption zyada hota hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Ahhh! Toh Adsorption always exothermic hota hai? Ye pakka yaad rakhna hai!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! Adsorption is ALWAYS exothermic — kyunki jab molecule surface pe stick hota hai, uski freedom (entropy) kam hoti hai. Lekin energy release hoti hai — isliye ΔH negative (exothermic) aur ΔS bhi negative (entropy decreases). BPSC trap: Adsorption spontaneous kyun hai? Kyunki ΔG = ΔH - TΔS. Low temperature pe ΔH dominates aur ΔG negative rehta hai — isliye spontaneous!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Whoa sir... ye toh thermodynamics bhi ghus gayi! ΔG negative = spontaneous. Got it!"
+        }
+      ],
+      "navigation": {
+        "next": "card_08_chemisorption_intro",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_08_chemisorption_intro",
+      "card_slug": "card_08_chemisorption_intro",
+      "type": "chat",
+      "concept_id": "chemisorption",
+      "level": 1,
+      "progress": {
+        "current": 8,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ab doosra type — Chemisorption (Chemical Adsorption). Isme adsorbate aur adsorbent ke beech actual CHEMICAL BOND banta hai — covalent ya ionic. Bond itna strong hai ki cheez wapas nikalna bahut mushkil hai. Ye irreversible hota hai aur highly specific — matlab specific molecule specific surface pe hi chipkta hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "Toh Chemisorption bahut strong chipkana hua! Aur Physisorption weak. Sir dono ka comparison kaise yaad rakhun?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Perfect question! Key difference table — Physisorption: Van der Waals, reversible, low enthalpy (20-40 kJ/mol), occurs at low temperature, multilayer possible. Chemisorption: Chemical bond, irreversible, HIGH enthalpy (40-400 kJ/mol), occurs at HIGH temperature, only monolayer. SSC CGL mein ye comparison direct aata hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Monolayer matlab sirf ek layer? Physisorption mein multiple layers ho sakti hain? Ye interesting hai sir!"
+        }
+      ],
+      "navigation": {
+        "next": "card_09_quiz_physi_chemi",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_09_quiz_physi_chemi",
+      "card_slug": "card_09_quiz_physi_chemi",
+      "type": "quiz",
+      "concept_id": "physisorption_vs_chemisorption",
+      "level": 1,
+      "progress": {
+        "current": 9,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Chemisorption ke baare mein kaunsa statement GALAT hai?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Isme chemical bond banta hai adsorbate aur adsorbent ke beech"
+          },
+          {
+            "id": "B",
+            "text": "Ye reversible hota hai aur multilayer bana sakta hai"
+          },
+          {
+            "id": "C",
+            "text": "Iska enthalpy value 40-400 kJ/mol hota hai"
+          },
+          {
+            "id": "D",
+            "text": "Ye high temperature pe favourable hota hai"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Chemisorption IRREVERSIBLE hota hai (strong chemical bond ki wajah se) aur sirf MONOLAYER banta hai. Multilayer aur reversibility Physisorption ki property hai. Baaki sab options chemisorption ke liye correct hain. Ye BPSC 2018 mein exactly aisa hi question aaya tha!"
+      },
+      "navigation": {
+        "next": "card_10_quiz_adsorption_enthalpy",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_10_quiz_adsorption_enthalpy",
+      "card_slug": "card_10_quiz_adsorption_enthalpy",
+      "type": "quiz",
+      "concept_id": "adsorption_thermodynamics",
+      "level": 1,
+      "progress": {
+        "current": 10,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Adsorption process mein entropy (ΔS) aur enthalpy (ΔH) ke signs kya hote hain?",
+        "options": [
+          {
+            "id": "A",
+            "text": "ΔH positive, ΔS positive"
+          },
+          {
+            "id": "B",
+            "text": "ΔH negative, ΔS positive"
+          },
+          {
+            "id": "C",
+            "text": "ΔH negative, ΔS negative"
+          },
+          {
+            "id": "D",
+            "text": "ΔH positive, ΔS negative"
+          }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Adsorption hamesha exothermic hota hai isliye ΔH negative. Jab adsorbate surface pe chipakta hai toh uski freedom of movement (entropy) kam hoti hai isliye ΔS bhi negative. Phir bhi adsorption spontaneous hota hai kyunki low temperature pe |ΔH| > |TΔS| isliye ΔG = ΔH - TΔS negative rehta hai. NEET aur BPSC dono mein ye thermodynamics angle bahut important hai!"
+      },
+      "navigation": {
+        "next": "card_11_quiz_adsorbent_examples",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_11_quiz_adsorbent_examples",
+      "card_slug": "card_11_quiz_adsorbent_examples",
+      "type": "quiz",
+      "concept_id": "adsorbents_examples",
+      "level": 1,
+      "progress": {
+        "current": 11,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Kaunsa substance ek adsorbent KA KAAM NAHI karta?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Activated Charcoal"
+          },
+          {
+            "id": "B",
+            "text": "Silica Gel"
+          },
+          {
+            "id": "C",
+            "text": "Fuller's Earth"
+          },
+          {
+            "id": "D",
+            "text": "Sodium Chloride (Table Salt)"
+          }
+        ],
+        "correct_option_id": "D",
+        "explanation": "Activated Charcoal, Silica Gel, aur Fuller's Earth — ye sab common adsorbents hain jinhe industry aur daily life mein use kiya jaata hai. NaCl (Table Salt) koi adsorbent nahi hai — ye sirf ek ionic compound hai. Fuller's Earth (Multani Mitti) ek important adsorbent hai jo oils aur grease adsorb karta hai — SSC CGL mein ye naam bahut popular hai!"
+      },
+      "navigation": {
+        "next": "card_12_milestone_adsorption_basics",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_12_milestone_adsorption_basics",
+      "card_slug": "card_12_milestone_adsorption_basics",
+      "type": "milestone",
+      "concept_id": "adsorption_basics_complete",
+      "level": 1,
+      "progress": {
+        "current": 12,
+        "total": 72
+      },
+      "milestone_payload": {
+        "title": "MODULE 1A COMPLETE! 🎉",
+        "badge_emoji": "🧲",
+        "completed_topic": "Adsorption — Basics & Types",
+        "xp_earned": 75,
+        "milestone_progress": "Module 1/5 Basics Clear",
+        "motivational_quote": "Surface Chemistry ki surface crack ho gayi! Ab depth mein chalte hain — Adsorption Isotherms aage hain!"
+      },
+      "navigation": {
+        "next": "card_13_freundlich_isotherm",
+        "button_text": "Start Isotherms Module ➔"
+      }
+    },
+    {
+      "card_id": "card_13_freundlich_isotherm",
+      "card_slug": "card_13_freundlich_isotherm",
+      "type": "chat",
+      "concept_id": "freundlich_isotherm",
+      "level": 2,
+      "progress": {
+        "current": 13,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, ab ek important question — pressure badhao toh adsorption zyada hoga ya kam? Aur ye relationship kisne measure kiya? Isko measure karne waale graphs ko kehte hain 'Adsorption Isotherms' — matlab ek fixed temperature pe pressure aur adsorption ka relationship. Pehla aur sabse important — Freundlich Adsorption Isotherm (1909, Herbert Freundlich ne diya)."
+        },
+        {
+          "speaker": "raju",
+          "text": "Isotherm matlab same temperature pe? Toh graph hoga pressure vs kitna adsorb hua? Sir formula kya hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Freundlich formula: x/m = k × P^(1/n). Yahan — x = mass of gas adsorbed, m = mass of adsorbent, P = pressure, k aur n = constants (n > 1 hamesha). x/m ko 'extent of adsorption' kehte hain. Jab log scale lein toh: log(x/m) = log k + (1/n) log P — ye ek straight line deta hai. Slope = 1/n, Intercept = log k."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir ye formula BPSC me aata hai? 1/n wala kya hota hai exactly?"
+        }
+      ],
+      "navigation": {
+        "next": "card_14_freundlich_graph_cases",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_14_freundlich_graph_cases",
+      "card_slug": "card_14_freundlich_graph_cases",
+      "type": "chat",
+      "concept_id": "freundlich_pressure_cases",
+      "level": 2,
+      "progress": {
+        "current": 14,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "1/n ki value 0 aur 1 ke beech hoti hai (0 < 1/n < 1). Iska matlab: Agar pressure bahut kam hao — x/m directly P ke proportional (x/m ∝ P). Agar pressure bahut zyada ho — x/m pressure se independent ho jaata hai (saturation). Beech mein — x/m ∝ P^(1/n). Ye Freundlich isotherm ka limitation hai — ye high pressure pe fail ho jaata hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Limitation bhi hai? Matlab ye perfect formula nahi hai? Toh sahi wala kaunsa hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Ruko — Langmuir Isotherm (1916, Irving Langmuir ne diya — Nobel Prize 1932!) ye correct karta hai. Langmuir ne assume kiya: (1) Surface pe fixed number of sites hain. (2) Har site pe sirf ek molecule chipak sakta hai — monolayer. (3) All sites have equal energy. Formula: x/m = (a×b×P)/(1+b×P). Linear form: P/(x/m) = 1/(ab) + P/a."
+        },
+        {
+          "speaker": "raju",
+          "text": "Nobel Prize mila tha Langmuir ko? 1932 mein? Sir ye toh BPSC mein zaroor aayega — scientists aur years wala!"
+        }
+      ],
+      "navigation": {
+        "next": "card_15_langmuir_vs_freundlich",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_15_langmuir_vs_freundlich",
+      "card_slug": "card_15_langmuir_vs_freundlich",
+      "type": "chat",
+      "concept_id": "langmuir_assumptions",
+      "level": 2,
+      "progress": {
+        "current": 15,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Langmuir vs Freundlich comparison exam mein bahut aata hai. Freundlich: Empirical formula hai (experimental observation pe based, theoretical proof nahi). Langmuir: Theoretical formula hai (assumptions pe based). Langmuir better hai kyunki high pressure pe bhi kaam karta hai aur monolayer saturation explain karta hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "Empirical matlab? Sir ye wala word confuse karta hai!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Empirical = sirf observation se banaya gaya, koi theory nahi. Jaise — tune notice kiya ki baarish ke baad khichdi acchi banती hai — ye tera empirical observation hai, scientific reason nahi diya tune. Freundlich ne bhi aise hi formula banaya — sirf data dekhke. Isliye isko 'empirical isotherm' kehte hain. Ye UPSC Prelims mein direct poochha gaya tha!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Hahaha! Khichdi wala example ekdum clear kar diya sir! Empirical = bina theory ke observation. Got it!"
+        }
+      ],
+      "navigation": {
+        "next": "card_16_quiz_freundlich",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_16_quiz_freundlich",
+      "card_slug": "card_16_quiz_freundlich",
+      "type": "quiz",
+      "concept_id": "freundlich_isotherm",
+      "level": 2,
+      "progress": {
+        "current": 16,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Freundlich adsorption isotherm ke log(x/m) vs log P graph mein slope aur y-intercept kya represent karte hain?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Slope = log k, Intercept = 1/n"
+          },
+          {
+            "id": "B",
+            "text": "Slope = 1/n, Intercept = log k"
+          },
+          {
+            "id": "C",
+            "text": "Slope = n, Intercept = k"
+          },
+          {
+            "id": "D",
+            "text": "Slope = k, Intercept = log n"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Freundlich equation ka log form: log(x/m) = log k + (1/n)log P. Ye y = mx + c form mein hai. Isliye slope = 1/n aur y-intercept = log k. Dhyan raho — slope (1/n) hamesha 0 aur 1 ke beech hoti hai. Ye NEET 2019 aur SSC CGL 2020 mein aaya tha!"
+      },
+      "navigation": {
+        "next": "card_17_quiz_langmuir",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_17_quiz_langmuir",
+      "card_slug": "card_17_quiz_langmuir",
+      "type": "quiz",
+      "concept_id": "langmuir_isotherm",
+      "level": 2,
+      "progress": {
+        "current": 17,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Langmuir Adsorption Isotherm ki kaunsi assumption GALAT hai?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Surface pe adsorption ke liye fixed number of sites hote hain"
+          },
+          {
+            "id": "B",
+            "text": "Multilayer adsorption hoti hai surface pe"
+          },
+          {
+            "id": "C",
+            "text": "Adsorbed molecules ek dusre ke saath interact nahi karte"
+          },
+          {
+            "id": "D",
+            "text": "Adsorption ek dynamic equilibrium mein hoti hai"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Langmuir Isotherm ki fundamental assumption hai ki sirf MONOLAYER adsorption hoti hai — multilayer nahi. Multilayer adsorption BET (Brunauer-Emmett-Teller) theory explain karta hai. Baaki sab — fixed sites, no interaction between adsorbed molecules, aur dynamic equilibrium — ye sab Langmuir ki valid assumptions hain. BPSC 2021 mein ye exact trap aaya tha!"
+      },
+      "navigation": {
+        "next": "card_18_quiz_isotherm_application",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_18_quiz_isotherm_application",
+      "card_slug": "card_18_quiz_isotherm_application",
+      "type": "quiz",
+      "concept_id": "adsorption_applications",
+      "level": 2,
+      "progress": {
+        "current": 18,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Activated charcoal ka use gas masks mein kyun hota hai — ismein kaunsa principle kaam karta hai?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Absorption — poisonous gases andar chali jaati hain"
+          },
+          {
+            "id": "B",
+            "text": "Adsorption — poisonous gases charcoal surface pe chipak jaati hain"
+          },
+          {
+            "id": "C",
+            "text": "Coagulation — gases coagulate ho jaati hain"
+          },
+          {
+            "id": "D",
+            "text": "Distillation — gases alag ho jaati hain"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Gas masks mein activated charcoal ek powerful adsorbent ki tarah kaam karta hai. Uski surface area bahut zyada hoti hai (microscopic pores ki wajah se) aur ye poisonous gases jaise chlorine, phosgene ko apni surface pe adsorb kar leta hai — woh gases pass nahi ho paatein. Ye Physisorption hai — Van der Waals forces se. Ye World War I mein pehli baar use hua tha gas masks ke roop mein!"
+      },
+      "navigation": {
+        "next": "card_19_milestone_isotherms",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_19_milestone_isotherms",
+      "card_slug": "card_19_milestone_isotherms",
+      "type": "milestone",
+      "concept_id": "adsorption_isotherms_complete",
+      "level": 2,
+      "progress": {
+        "current": 19,
+        "total": 72
+      },
+      "milestone_payload": {
+        "title": "ISOTHERMS CONQUERED! 📈",
+        "badge_emoji": "📊",
+        "completed_topic": "Freundlich & Langmuir Isotherms",
+        "xp_earned": 100,
+        "milestone_progress": "Module 1/5 Complete",
+        "motivational_quote": "Freundlich empirical, Langmuir theoretical — dono yaad hain! Ab Catalysis ka magic dekhte hain!"
+      },
+      "navigation": {
+        "next": "card_20_catalysis_intro",
+        "button_text": "Start Catalysis Module ➔"
+      }
+    },
+    {
+      "card_id": "card_20_catalysis_intro",
+      "card_slug": "card_20_catalysis_intro",
+      "type": "chat",
+      "concept_id": "catalysis_introduction",
+      "level": 2,
+      "progress": {
+        "current": 20,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, tune kabhi socha — hydrogen aur oxygen dono room mein hain, fir bhi paani nahi banta automatically. Lekin thoda platinum powder daalo — BOOM — turant paani banta hai! Platinum ne reaction kiya? Nahi! Sirf speed badhaya! Isko kehte hain Catalysis. Aur platinum ek Catalyst hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab catalyst khud nahi badalta lekin doosron ko badalta hai? Ye toh bahut smart hai sir! Kaise karta hai ye?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Catalyst reaction ki ACTIVATION ENERGY kam karta hai — ek alternative route provide karta hai jo easy hai. Soch — Patna se Delhi jaana hai. Direct highway pe ghanta lagta hai, lekin ek shortcut road se 30 minute mein pohunch jaao. Catalyst wo shortcut hai! Reaction ki speed badh jaati hai, lekin catalyst khud wapas aa jaata hai apni original form mein — consume nahi hota."
+        },
+        {
+          "speaker": "raju",
+          "text": "Shortcut road! Seedha samajh aaya! Toh catalyst paehle kuch banta hai reaction mein, phir wapas ho jaata hai?"
+        }
+      ],
+      "navigation": {
+        "next": "card_21_catalyst_properties",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_21_catalyst_properties",
+      "card_slug": "card_21_catalyst_properties",
+      "type": "chat",
+      "concept_id": "catalyst_properties",
+      "level": 2,
+      "progress": {
+        "current": 21,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Catalyst ki key properties — exam ke liye MUST KNOW: (1) Catalyst reaction ke end mein unchanged rehta hai — chemically aur physically. (2) Thodi si quantity bahut kafi hoti hai. (3) Catalyst reaction ki speed badhata hai — equilibrium position NAHI badalta. (4) Reversible reactions mein forward aur backward dono ki speed equally badhata hai — isliye equilibrium constant K nahi badalta!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir equilibrium constant nahi badalta? Matlab agar mujhe zyada product chahiye toh catalyst se kaam nahi chalega? Toh fir catalyst ka kya fayda?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bohot badhiya question Raju! Catalyst equilibrium tak JALDI pahuncha deta hai — lekin equilibrium position same rehti hai. Matlab product-reactant ratio same rahega, lekin tum ussi equilibrium tak zyada TEZI se pahuncho ge. Industrial mein time = money. Jaldi equilibrium = zyada production per day. Samjha? Ye BPSC ka direct multi-statement trap hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Ohh! Jaldi pohunchte hain same jagah pe — position nahi badli sirf speed badli! Ye clear ho gaya sir!"
+        }
+      ],
+      "navigation": {
+        "next": "card_22_homogeneous_heterogeneous",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_22_homogeneous_heterogeneous",
+      "card_slug": "card_22_homogeneous_heterogeneous",
+      "type": "chat",
+      "concept_id": "homogeneous_heterogeneous_catalysis",
+      "level": 2,
+      "progress": {
+        "current": 22,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Catalysis ke 2 main types: Homogeneous Catalysis — jahan catalyst aur reactants SAME phase mein hoon. Example: H2SO4 (liquid) catalyst — ester banane mein — acetic acid (liquid) + ethanol (liquid) = same phase. Heterogeneous Catalysis — jahan catalyst aur reactants ALAG phase mein hoon. Example: Platinum (solid) catalyst — H2(gas) + O2(gas) reaction mein."
+        },
+        {
+          "speaker": "raju",
+          "text": "Homogeneous = same phase, Heterogeneous = alag phase. Simple! Sir example aur do na industrial wale?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Industrial examples — Haber Process: N2(g) + 3H2(g) → 2NH3(g). Catalyst: Iron (Fe) — solid. Reactants: Gas. Ye Heterogeneous! Contact Process: 2SO2(g) + O2(g) → 2SO3(g). Catalyst: V2O5 (vanadium pentoxide) — solid. Reactants: Gas. Ye bhi Heterogeneous! SSC CGL mein Haber Process aur Contact Process ke catalysts bahut pooche jaate hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Haber = Iron, Contact = V2O5. Ye yaad kar liya sir! Aur NEET mein enzyme catalysis bhi hoti hai na?"
+        }
+      ],
+      "navigation": {
+        "next": "card_23_enzyme_catalysis",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_23_enzyme_catalysis",
+      "card_slug": "card_23_enzyme_catalysis",
+      "type": "chat",
+      "concept_id": "enzyme_catalysis",
+      "level": 2,
+      "progress": {
+        "current": 23,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Bilkul Raju! Enzyme Catalysis — ye biological catalysis hai. Enzymes protein-based catalysts hote hain. Ye Lock and Key model pe kaam karte hain — enzyme ka active site ek specific substrate ke saath fit hota hai. Ye extremely specific hote hain — ek enzyme sirf ek ya kuch specific reactions catalyze karta hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "Lock and Key! Toh enzyme = lock, substrate = key? Ya ulta?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Enzyme = Lock (active site ek specific shape hai), Substrate = Key (jo perfectly fit hoti hai). Jab key (substrate) lock (enzyme) mein fit hoti hai toh complex banta hai — phir product banta hai aur enzyme wapas free ho jaata hai. Examples: Zymase (glucose → ethanol + CO2), Invertase (sucrose → glucose + fructose), Diastase (starch → maltose). Enzyme efficiency bahut high hoti hai — ek enzyme ek second mein lakho reactions catalyze karta hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Zymase, Invertase, Diastase — ye sab yaad karney hain? NEET mein aate hain kya sir?"
+        }
+      ],
+      "navigation": {
+        "next": "card_24_promoters_poisons",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_24_promoters_poisons",
+      "card_slug": "card_24_promoters_poisons",
+      "type": "chat",
+      "concept_id": "promoters_catalytic_poisons",
+      "level": 2,
+      "progress": {
+        "current": 24,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Haan, NEET ke liye important hain. Ab ek aur important concept — Promoters aur Catalytic Poisons. Promoter = wo substance jo catalyst ki efficiency BADHATA hai. Example: Haber process mein Fe catalyst ka promoter hai Molybdenum (Mo) ya Al2O3. Mo directly react nahi karta — sirf Fe ki activity enhance karta hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Toh promoter catalyst ka assistant hua? Aur catalytic poison?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Catalytic Poison = wo substance jo catalyst ki activity KHATAM kar deta hai. Example: H2S (hydrogen sulfide) platinum catalyst ko poison kar deta hai — platinum ki surface pe chip jaata hai aur active sites block kar deta hai. Isliye Contact Process mein SO2 gas ko pehle purify karte hain taaki H2S na ho. Autocatalysis ek aur special case hai — jahan reaction ka ek product khud hi catalyst ban jaata hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Product khud catalyst ban jaata hai? Ye toh bahut unique hai sir! Koi example?"
+        }
+      ],
+      "navigation": {
+        "next": "card_25_autocatalysis_example",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_25_autocatalysis_example",
+      "card_slug": "card_25_autocatalysis_example",
+      "type": "chat",
+      "concept_id": "autocatalysis",
+      "level": 2,
+      "progress": {
+        "current": 25,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Autocatalysis ka classic example: Permanganate ion (MnO4-) ka oxalic acid se reaction. Is reaction mein Mn2+ ion produce hota hai jo khud hi aage ki reaction ko catalyze karta hai. Isliye starting mein reaction slow hoti hai, phir Mn2+ banne pe tezi aati hai, phir oxalic acid khatam hone pe slow ho jaati hai — S-shaped curve banta hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "S-shaped curve? Toh initially slow, beech mein fast, phir slow? Ye interesting hai sir!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul! Ye sigmoidal curve hota hai — autocatalysis ki pehchaan. Ab ek aur important concept — Shape Selectivity of Catalysts. Zeolites jaise catalysts ek specific size aur shape ke molecules ko hi catalyze karte hain — shape selective catalysts kehte hain. Petroleum refining mein bahut use hote hain. ZSM-5 zeolite ek famous example hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Zeolites? Ye kya hota hai sir? Pehli baar suna!"
+        }
+      ],
+      "navigation": {
+        "next": "card_26_quiz_catalysis_1",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_26_quiz_catalysis_1",
+      "card_slug": "card_26_quiz_catalysis_1",
+      "type": "quiz",
+      "concept_id": "catalysis_types",
+      "level": 2,
+      "progress": {
+        "current": 26,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Haber Process mein ammonia ke synthesis ke liye kaunsa catalyst use hota hai aur uska promoter kya hai?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Catalyst: V2O5, Promoter: Mo"
+          },
+          {
+            "id": "B",
+            "text": "Catalyst: Fe, Promoter: Mo ya Al2O3"
+          },
+          {
+            "id": "C",
+            "text": "Catalyst: Pt, Promoter: Fe"
+          },
+          {
+            "id": "D",
+            "text": "Catalyst: Ni, Promoter: V2O5"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Haber Process (N2 + 3H2 → 2NH3) mein Iron (Fe) main catalyst hai aur Molybdenum (Mo) ya Aluminium Oxide (Al2O3) promoter ka kaam karta hai. V2O5 Contact Process (SO2 → SO3) ka catalyst hai. Pt ek important catalyst hai lekin Haber Process mein nahi. Ye SSC CGL, RRB NTPC aur BPSC mein baar baar aata hai!"
+      },
+      "navigation": {
+        "next": "card_27_quiz_catalysis_2",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_27_quiz_catalysis_2",
+      "card_slug": "card_27_quiz_catalysis_2",
+      "type": "quiz",
+      "concept_id": "homogeneous_catalysis_example",
+      "level": 2,
+      "progress": {
+        "current": 27,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Kaunsa catalyst aur reaction Homogeneous Catalysis ka example hai?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Fe(solid) — N2 aur H2 ki reaction"
+          },
+          {
+            "id": "B",
+            "text": "V2O5(solid) — SO2 aur O2 ki reaction"
+          },
+          {
+            "id": "C",
+            "text": "NO(gas) — SO2 aur O2 ki reaction (Lead Chamber Process)"
+          },
+          {
+            "id": "D",
+            "text": "Ni(solid) — vegetable oil hydrogenation"
+          }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Lead Chamber Process mein NO gas (catalyst) SO2 aur O2 (gases) ke saath react karta hai — sab gas phase mein — ye Homogeneous Catalysis hai. Baaki sab mein solid catalyst aur gas reactants hain — isliye wo sab Heterogeneous Catalysis hain. Vegetable oil hydrogenation mein Ni solid catalyst aur H2 gas reactant hai — Heterogeneous. BPSC 2017 mein ye directly poochha gaya tha!"
+      },
+      "navigation": {
+        "next": "card_28_quiz_catalysis_3",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_28_quiz_catalysis_3",
+      "card_slug": "card_28_quiz_catalysis_3",
+      "type": "quiz",
+      "concept_id": "enzyme_catalysis_examples",
+      "level": 2,
+      "progress": {
+        "current": 28,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Sucrose (cane sugar) ko glucose aur fructose mein convert karne wala enzyme kaunsa hai?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Zymase"
+          },
+          {
+            "id": "B",
+            "text": "Diastase"
+          },
+          {
+            "id": "C",
+            "text": "Invertase (Sucrase)"
+          },
+          {
+            "id": "D",
+            "text": "Urease"
+          }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Invertase (ya Sucrase) sucrose ko glucose + fructose mein hydrolyze karta hai. Zymase glucose/fructose ko ethanol + CO2 mein convert karta hai (fermentation). Diastase starch ko maltose mein convert karta hai. Urease urea ko NH3 + CO2 mein convert karta hai. Ye sab enzymes NEET aur BPSC dono ke liye must-know hain!"
+      },
+      "navigation": {
+        "next": "card_29_milestone_catalysis",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_29_milestone_catalysis",
+      "card_slug": "card_29_milestone_catalysis",
+      "type": "milestone",
+      "concept_id": "catalysis_complete",
+      "level": 2,
+      "progress": {
+        "current": 29,
+        "total": 72
+      },
+      "milestone_payload": {
+        "title": "CATALYSIS MASTERED! ⚗️",
+        "badge_emoji": "🏆",
+        "completed_topic": "Catalysis — All Types & Industrial Examples",
+        "xp_earned": 125,
+        "milestone_progress": "Module 2/5 Complete",
+        "motivational_quote": "Fe, V2O5, Ni, Zymase — sab yaad hain! Ab Colloids ki mysterious duniya mein chalte hain!"
+      },
+      "navigation": {
+        "next": "card_30_colloids_intro",
+        "button_text": "Start Colloids Module ➔"
+      }
+    },
+    {
+      "card_id": "card_30_colloids_intro",
+      "card_slug": "card_30_colloids_intro",
+      "type": "chat",
+      "concept_id": "colloids_introduction",
+      "level": 2,
+      "progress": {
+        "current": 30,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, subah ka milk dekha hai? Na bilkul transparent hai, na ek jagah settle ho gaya. Beech mein hai! Ye hai Colloid. Matter ke teen states — solid, liquid, gas — unke mixtures bhi teen types: Solution (transparent, <1 nm particles), Colloid (1-1000 nm particles), Suspension (>1000 nm, settle ho jaata hai)."
+        },
+        {
+          "speaker": "raju",
+          "text": "Milk colloid hai? Seriously? Toh paani mein namak milaya woh kya hua?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Namak paani mein ghulta hai — solution banta hai! Particles itne chhote hain (<1 nm) ki aankhon se nahi dikhte aur filter paper se bhi nahi ruk paate. Colloid mein particles 1-1000 nm ke hote hain — aankhon se nahi dikhte lekin Tyndall Effect se detect hote hain. Suspension mein particles >1000 nm — aankhon se dikh jaate hain aur settle ho jaate hain."
+        },
+        {
+          "speaker": "raju",
+          "text": "Tyndall Effect? Ye kya hota hai sir? Naam sunke hi interesting laga!"
+        }
+      ],
+      "navigation": {
+        "next": "card_31_tyndall_effect",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_31_tyndall_effect",
+      "card_slug": "card_31_tyndall_effect",
+      "type": "chat",
+      "concept_id": "tyndall_effect",
+      "level": 2,
+      "progress": {
+        "current": 31,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, cinema hall ya mandir mein smoke mein se light beam jaati hai — toh beam clearly dikh jaati hai, path visible hota hai. Ye hai Tyndall Effect! Colloid ke particles light ko scatter karte hain — visible path banta hai. Pure solution mein ye nahi hota — particles itne chhote hain ki light scatter nahi hoti. 1869 mein John Tyndall ne discover kiya tha ye effect!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Ohh! Mandir mein dhuan aur dhoopbatti ka smoke — usme torch chalao toh beam dikh jaati hai! Ye Tyndall Effect hai! Sir ye pehle bhi dekha tha ye — naam nahi pata tha!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul! Aur ye effect sirf colloids mein hota hai — solutions mein nahi. Isliye Tyndall Effect use karke pata lagaa sakte ho ki koi mixture solution hai ya colloid. Dispersing medium ko solvent jaisa samjho — jisme colloid particles phele hote hain. Particles ko 'Dispersed Phase' kehte hain aur medium ko 'Dispersion Medium' kehte hain."
+        },
+        {
+          "speaker": "raju",
+          "text": "Dispersed phase aur Dispersion medium — dono alag! Sir milk mein kya dispersed phase hai aur kya medium?"
+        }
+      ],
+      "navigation": {
+        "next": "card_32_colloid_classification",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_32_colloid_classification",
+      "card_slug": "card_32_colloid_classification",
+      "type": "chat",
+      "concept_id": "colloid_classification_types",
+      "level": 2,
+      "progress": {
+        "current": 32,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Milk mein — fat (liquid) dispersed phase hai aur water (liquid) dispersion medium hai — isliye milk ek Emulsion hai! Colloids ko dispersed phase aur dispersion medium ke basis pe classify karte hain. 8 types hain: (1) Sol — solid in liquid (paint, ink). (2) Gel — liquid in solid (jelly, cheese). (3) Emulsion — liquid in liquid (milk, cream). (4) Foam — gas in liquid (shaving cream). (5) Aerosol (liquid) — liquid in gas (fog, cloud). (6) Aerosol (solid) — solid in gas (smoke, dust). (7) Solid sol — solid in solid (ruby glass). (8) Solid foam — gas in solid (pumice stone, foam rubber)."
+        },
+        {
+          "speaker": "raju",
+          "text": "8 types! Sir ye sab yaad kaise karein? Pumice stone foam hai? Seriously?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Pumice stone mein gas bubbles trapped hain solid mein — isliye solid foam! Easy trick for 8 types — 'Sol Gel Em Foam — Ae Ae Sol SoFo'. Sol, Gel, Emulsion, Foam, Aerosol-liquid, Aerosol-solid, Solid Sol, Solid Foam. BPSC aur SSC mein 'fog', 'smoke', 'milk', 'cheese', 'paint' wale examples — unka type poochha jaata hai. Fog = liquid aerosol. Smoke = solid aerosol. Paint = Sol."
+        },
+        {
+          "speaker": "raju",
+          "text": "Fog liquid aerosol hai — matlab liquid particles hava mein hain! Ab logical laga sir!"
+        }
+      ],
+      "navigation": {
+        "next": "card_33_lyophilic_lyophobic",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_33_lyophilic_lyophobic",
+      "card_slug": "card_33_lyophilic_lyophobic",
+      "type": "chat",
+      "concept_id": "lyophilic_lyophobic_colloids",
+      "level": 3,
+      "progress": {
+        "current": 33,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ab colloids ka ek aur important classification — medium ke saath interaction ke basis pe. Lyophilic Colloids — 'lyophilic' = solvent loving. Ye colloids medium ke saath strongly attract karte hain. Stable, reversible, easily prepared. Examples: Starch, proteins, gum, gelatin in water. Jab water medium ho toh 'Hydrophilic' kehte hain."
+        },
+        {
+          "speaker": "raju",
+          "text": "Hydrophilic matlab water loving — easy! Toh Lyophobic?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Lyophobic = solvent hating! Ye colloids medium ke saath attract nahi karte — unstable hote hain aur special methods se banate hain. Easily coagulate ho jaate hain. Examples: Gold sol, silver sol, sulfur sol, ferric hydroxide sol. Jab water medium ho — Hydrophobic. BPSC trap: Lyophilic colloids electrolyte se coagulate nahi hote easily — charge ki layer unhe protect karti hai. Lyophobic easily coagulate ho jaate hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Gold sol, silver sol — dono Lyophobic hain? Ye exam mein pakka aayega sir!"
+        }
+      ],
+      "navigation": {
+        "next": "card_34_quiz_colloids_1",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_34_quiz_colloids_1",
+      "card_slug": "card_34_quiz_colloids_1",
+      "type": "quiz",
+      "concept_id": "colloid_types_examples",
+      "level": 2,
+      "progress": {
+        "current": 34,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Neeche diye gaye mixtures mein se kaunsa ek COLLOID nahi hai?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Fog (Kohra)"
+          },
+          {
+            "id": "B",
+            "text": "Pumice Stone"
+          },
+          {
+            "id": "C",
+            "text": "Common Salt Solution (NaCl in water)"
+          },
+          {
+            "id": "D",
+            "text": "Smoke (Dhua)"
+          }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Common Salt (NaCl) paani mein poori tarah ghul jaata hai — iska particle size <1 nm hota hai — ye ek TRUE SOLUTION hai, colloid nahi. Fog (liquid aerosol — liquid in gas), Pumice Stone (solid foam — gas in solid), Smoke (solid aerosol — solid in gas) — ye sab colloids hain. RRB NTPC 2021 mein exactly aisa question aaya tha!"
+      },
+      "navigation": {
+        "next": "card_35_quiz_colloids_2",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_35_quiz_colloids_2",
+      "card_slug": "card_35_quiz_colloids_2",
+      "type": "quiz",
+      "concept_id": "tyndall_effect_application",
+      "level": 2,
+      "progress": {
+        "current": 35,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Tyndall Effect ke baare mein kaunsa statement SAHI hai?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Ye true solutions mein bhi hota hai"
+          },
+          {
+            "id": "B",
+            "text": "Ye colloid particles dwara light ke scattering se hota hai"
+          },
+          {
+            "id": "C",
+            "text": "Iska use solution aur colloid mein distinguish karne ke liye nahi kiya ja sakta"
+          },
+          {
+            "id": "D",
+            "text": "Ye effect sirf solid colloids mein hota hai"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Tyndall Effect specifically colloid particles (1-1000 nm size) dwara light ke scattering ki wajah se hota hai. True solutions mein particles itne chhote hote hain (<1 nm) ki light scatter nahi hoti — Tyndall Effect nahi dikhta. Isliye is effect ka use colloid aur true solution mein distinguish karne ke liye kiya jaata hai. Ye sirf liquid colloids mein nahi — sabhi colloids mein ho sakta hai. John Tyndall ne 1869 mein discover kiya tha!"
+      },
+      "navigation": {
+        "next": "card_36_quiz_colloids_3",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_36_quiz_colloids_3",
+      "card_slug": "card_36_quiz_colloids_3",
+      "type": "quiz",
+      "concept_id": "lyophilic_lyophobic",
+      "level": 3,
+      "progress": {
+        "current": 36,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Kaunsa colloid Lyophilic (Hydrophilic) hai?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Gold Sol"
+          },
+          {
+            "id": "B",
+            "text": "Silver Sol"
+          },
+          {
+            "id": "C",
+            "text": "Starch Sol"
+          },
+          {
+            "id": "D",
+            "text": "Ferric Hydroxide Sol"
+          }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Starch, gelatin, proteins, gum — ye sab lyophilic (hydrophilic) colloids hain — ye water medium ke saath strongly interact karte hain aur stable hote hain. Gold Sol, Silver Sol, Ferric Hydroxide Sol — ye sab lyophobic (hydrophobic) colloids hain — unstable aur easily coagulated. Ye classification NEET, BPSC aur UPSC Prelims mein frequently aata hai!"
+      },
+      "navigation": {
+        "next": "card_37_milestone_colloids_basics",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_37_milestone_colloids_basics",
+      "card_slug": "card_37_milestone_colloids_basics",
+      "type": "milestone",
+      "concept_id": "colloids_basics_complete",
+      "level": 2,
+      "progress": {
+        "current": 37,
+        "total": 72
+      },
+      "milestone_payload": {
+        "title": "COLLOIDS BASICS CLEAR! 🌫️",
+        "badge_emoji": "💧",
+        "completed_topic": "Colloids — Types, Tyndall Effect & Classification",
+        "xp_earned": 100,
+        "milestone_progress": "Module 3/5 — Part 1 Clear",
+        "motivational_quote": "Fog, smoke, milk, starch — sab identify kar sakte ho! Ab colloid properties aur coagulation sikhenge!"
+      },
+      "navigation": {
+        "next": "card_38_brownian_motion",
+        "button_text": "Continue to Colloid Properties ➔"
+      }
+    },
+    {
+      "card_id": "card_38_brownian_motion",
+      "card_slug": "card_38_brownian_motion",
+      "type": "chat",
+      "concept_id": "brownian_motion",
+      "level": 3,
+      "progress": {
+        "current": 38,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, ek aur amazing colloid property — Brownian Motion. 1827 mein Robert Brown ne microscope se pollen grains in water dekhe toh paya ki wo randomly zigzag move kar rahe hain — bina kisi direction ke! Ye Brownian Motion hai. Colloid particles medium ke molecules ke saath continuously collide karte hain — isliye unka motion random hota hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "Robert Brown ne 1827 mein dekha? Aur ye kyu important hai sir colloids ke liye?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Brownian Motion 2 kaam karta hai — (1) Ye colloid ko stable banata hai — particles settle nahi hote kyunki continuously move kar rahe hain. (2) Einstein ne 1905 mein mathematically prove kiya ki Brownian Motion atoms/molecules ke existence ka proof hai. Ye bhi exam mein aata hai — Einstein ki 1905 wali paper on Brownian Motion!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Einstein bhi Brownian Motion se connected hain? Ye toh nahi pata tha sir! Colloids interesting hai bilkul!"
+        }
+      ],
+      "navigation": {
+        "next": "card_39_electrophoresis_electroosmosis",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_39_electrophoresis_electroosmosis",
+      "card_slug": "card_39_electrophoresis_electroosmosis",
+      "type": "chat",
+      "concept_id": "electrophoresis_electroosmosis",
+      "level": 3,
+      "progress": {
+        "current": 39,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Colloid particles pe charge hota hai — positive ya negative. Jab electric field lagao toh charged particles move karte hain — isko kehte hain Electrophoresis. Agar particles positive charged hain toh cathode ki taraf move karenge. Agar negative charged — anode ki taraf. Ferric hydroxide sol = positively charged. Gold sol = negatively charged. As2S3 sol = negatively charged."
+        },
+        {
+          "speaker": "raju",
+          "text": "Ferric hydroxide positive, Gold negative — ye yaad karna zaroori hai kya sir?"
+        },
+        {
+          "speaker": "aman",
+          "text": "BPSC mein directly poochha jaata hai! Aur ek aur term — Electroosmosis — jab electric field mein colloid particles ke saath dispersion medium bhi move kare. Electrophoresis = particles move karte hain. Electroosmosis = medium move karta hai. Dono electric field ke effect mein hote hain. Hardy-Schulze Rule se coagulation samjhenge — wo bhi equally important hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Hardy-Schulze Rule? Ye kya hota hai sir?"
+        }
+      ],
+      "navigation": {
+        "next": "card_40_coagulation_hardy_schulze",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_40_coagulation_hardy_schulze",
+      "card_slug": "card_40_coagulation_hardy_schulze",
+      "type": "chat",
+      "concept_id": "coagulation_hardy_schulze",
+      "level": 3,
+      "progress": {
+        "current": 40,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Coagulation = colloid particles ka aapas mein mil jaana aur settle ho jaana. Lyophobic colloids pe charge hota hai jo unhe ek dusre se door rakhta hai. Agar ye charge remove ho jaaye — particles mil jaate hain aur precipitate ho jaate hain. Ye hai Coagulation. Hardy-Schulze Rule kehta hai — jis ion ki valency zyada hogi, woh utni hi zyada coagulation karegi!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Valency zyada = zyada coagulation? Kaise sir? Example do na!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Example: As2S3 sol (negative charge). Isko coagulate karne ke liye positive ions chahiye. NaCl mein Na+ (valency 1), MgCl2 mein Mg2+ (valency 2), AlCl3 mein Al3+ (valency 3). Hardy-Schulze Rule se: Al3+ > Mg2+ > Na+ coagulation power mein. Coagulation power ke liye use hoti hai 'Coagulation Value' (Flocculation Value) — kitni milligrams electrolyte chahiye 1 litre colloid coagulate karne ke liye. Kam value = zyada power!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Al3+ sabse powerful coagulant! Toh aluminium salts paani saaf karne mein use hote hain — isi wajah se?"
+        }
+      ],
+      "navigation": {
+        "next": "card_41_peptization_protection",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_41_peptization_protection",
+      "card_slug": "card_41_peptization_protection",
+      "type": "chat",
+      "concept_id": "peptization_protection",
+      "level": 3,
+      "progress": {
+        "current": 41,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju! Ekdum sahi connected kiya! Alum (phitkari) = Al2(SO4)3 — water treatment mein yahi use hota hai. Al3+ ions river ke colloidal impurities ko coagulate kar dete hain — phir filter ho jaata hai. Ab ulta process — Peptization: Jab ek precipitate phirse colloid mein convert ho jaaye — thoda sa electrolyte add karke. Jaise FeCl3 add karo fresh Fe(OH)3 precipitate mein — toh Fe(OH)3 sol banta hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Peptization = coagulation ka ulta? Toh ek dafa jo settle ho gaya woh phir colloid ban sakta hai? Amazing!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! Aur Protection of Colloids — Lyophilic colloids lyophobic colloids ko protect karte hain coagulation se. Gelatin (lyophilic) gold sol (lyophobic) ko protect karta hai. Isko 'protective colloid' kehte hain. Gold Number — minimum mass of protective colloid (in mg) jo 1 mL gold sol ko coagulate hone se bachaye. Gelatin ka Gold Number sabse kam = 0.005 to 0.01 (sabse effective protective colloid)!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Gold Number kam hai toh zyada protect karta hai? Ulta logic phir! Lekin samajh aaya sir!"
+        }
+      ],
+      "navigation": {
+        "next": "card_42_quiz_coagulation_1",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_42_quiz_coagulation_1",
+      "card_slug": "card_42_quiz_coagulation_1",
+      "type": "quiz",
+      "concept_id": "hardy_schulze_rule",
+      "level": 3,
+      "progress": {
+        "current": 42,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Fe(OH)3 sol (positively charged) ko coagulate karne mein kaunsa electrolyte sabse effective hoga? (Hardy-Schulze Rule ke anusar)",
+        "options": [
+          {
+            "id": "A",
+            "text": "NaCl"
+          },
+          {
+            "id": "B",
+            "text": "Na2SO4"
+          },
+          {
+            "id": "C",
+            "text": "Na3PO4"
+          },
+          {
+            "id": "D",
+            "text": "NaNO3"
+          }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Fe(OH)3 sol positively charged hai — isko coagulate karne ke liye negative ions chahiye. Hardy-Schulze Rule ke anusar — jitni zyada valency negative ion ki, utna zyada coagulation. NaCl mein Cl- (valency 1), Na2SO4 mein SO4 2- (valency 2), Na3PO4 mein PO4 3- (valency 3). Isliye Na3PO4 sabse effective hoga — PO4 3- ion ki valency sabse zyada. Ye BPSC 2019 aur NEET 2017 mein aaya tha!"
+      },
+      "navigation": {
+        "next": "card_43_quiz_coagulation_2",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_43_quiz_coagulation_2",
+      "card_slug": "card_43_quiz_coagulation_2",
+      "type": "quiz",
+      "concept_id": "gold_number",
+      "level": 3,
+      "progress": {
+        "current": 43,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Gold Number ke baare mein kaunsa statement sahi hai?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Gold Number zyada ho toh protective colloid zyada effective hai"
+          },
+          {
+            "id": "B",
+            "text": "Gelatin ka Gold Number 0.005-0.01 hai — ye sabse effective protective colloid hai"
+          },
+          {
+            "id": "C",
+            "text": "Gold Number ka concept Gold sol ke baare mein nahi hai"
+          },
+          {
+            "id": "D",
+            "text": "Gold Number = mass of gold required for coagulation"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Gold Number = minimum milligrams of protective colloid jo 10 mL standard gold sol ko NaCl se coagulate hone se bachaye. Gelatin ka gold number 0.005-0.01 (sabse kam) — isliye ye sabse EFFECTIVE protective colloid hai (kam quantity mein zyada protection). Gold Number JITNA KAM, protective colloid UTNA HI EFFECTIVE. Haemoglobin ka gold number 0.03-0.07 hai. Starch ka gold number 25 hai — least effective!"
+      },
+      "navigation": {
+        "next": "card_44_quiz_coagulation_3",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_44_quiz_coagulation_3",
+      "card_slug": "card_44_quiz_coagulation_3",
+      "type": "quiz",
+      "concept_id": "brownian_motion_electrophoresis",
+      "level": 3,
+      "progress": {
+        "current": 44,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Electrophoresis experiment mein As2S3 sol (negatively charged) ke particles kahan move karenge?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Cathode ki taraf"
+          },
+          {
+            "id": "B",
+            "text": "Anode ki taraf"
+          },
+          {
+            "id": "C",
+            "text": "Koi movement nahi hogi"
+          },
+          {
+            "id": "D",
+            "text": "Pehle cathode phir anode ki taraf"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Electrophoresis mein charged colloid particles electric field mein move karte hain. As2S3 sol ke particles NEGATIVELY charged hote hain. Opposite charges attract karte hain — isliye negative particles ANODE (positive electrode) ki taraf move karenge. Ferric hydroxide sol (Fe(OH)3) positively charged hota hai — wo CATHODE ki taraf move karta hai. Ye NEET 2020 aur SSC CGL 2022 mein aaya tha!"
+      },
+      "navigation": {
+        "next": "card_45_milestone_colloid_properties",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_45_milestone_colloid_properties",
+      "card_slug": "card_45_milestone_colloid_properties",
+      "type": "milestone",
+      "concept_id": "colloid_properties_complete",
+      "level": 3,
+      "progress": {
+        "current": 45,
+        "total": 72
+      },
+      "milestone_payload": {
+        "title": "COLLOID PROPERTIES CONQUERED! ⚡",
+        "badge_emoji": "🔬",
+        "completed_topic": "Coagulation, Peptization, Hardy-Schulze Rule & Gold Number",
+        "xp_earned": 150,
+        "milestone_progress": "Module 3/5 Complete",
+        "motivational_quote": "Brownian Motion se Gold Number tak — sab clear! Gelatin sabse effective protective colloid yaad raha? Ab Emulsions aur Special Colloids!"
+      },
+      "navigation": {
+        "next": "card_46_emulsions_intro",
+        "button_text": "Start Emulsions Module ➔"
+      }
+    },
+    {
+      "card_id": "card_46_emulsions_intro",
+      "card_slug": "card_46_emulsions_intro",
+      "type": "chat",
+      "concept_id": "emulsions_introduction",
+      "level": 3,
+      "progress": {
+        "current": 46,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, tune kabhi butter ya margarine dekha? Bread pe lagaate ho? Ye ek Emulsion hai! Emulsion = liquid in liquid colloid. Do immiscible liquids (jo normally mix nahi hote — jaise tel aur paani) ko force karke mix karaya jaata hai. Emulsion ke 2 types — O/W (Oil in Water) aur W/O (Water in Oil)."
+        },
+        {
+          "speaker": "raju",
+          "text": "Oil in Water aur Water in Oil — matlab ek mein oil ki droplets paani mein hain aur dusre mein paani ki droplets oil mein? Dono mein fark kya hoga practically?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul sahi! O/W emulsion = oil droplets paani mein. Example — milk (fat droplets in water), vanishing cream. W/O emulsion = water droplets oil mein. Example — butter, cold cream, margarine. Emulsions naturally unstable hote hain — isliye Emulsifying Agent chahiye hota hai jo dono liquids ke beech bridge banata hai aur emulsion stable rakhta hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "Emulsifying agent? Matlab bridge banane wala? Kaunse substances hote hain ye?"
+        }
+      ],
+      "navigation": {
+        "next": "card_47_emulsifying_agents",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_47_emulsifying_agents",
+      "card_slug": "card_47_emulsifying_agents",
+      "type": "chat",
+      "concept_id": "emulsifying_agents",
+      "level": 3,
+      "progress": {
+        "current": 47,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Emulsifying agents wo hote hain jinke molecule mein ek hydrophilic part (water loving) aur ek hydrophobic part (water hating / oil loving) hota hai. Hydrophilic part paani se chipakta hai, hydrophobic part oil se. Isliye ye dono ke beech bridge banata hai! Examples: Soap, bile salts (body mein fat digestion ke liye), proteins, lecithin. Body mein bile liver banata hai aur fat ko emulsify karta hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Bile salts khana digest karne mein emulsifying agent ka kaam karte hain? NEET mein ye biology se connected hua!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Ekdum! NEET mein ye chemistry aur biology dono se aata hai — isliye double important! Emulsion ko pahchanna: Cotton (cotton ball) paani mein daalo — surface pe ruk jaayega (cotton hydrophilic hai, O/W emulsion ke saath mix hoga). Demulsification = emulsion ko tod ke alag karna — centrifugation, heating, freezing ya electric field se. Cream making = O/W emulsion se W/O mein convert karna — churning se!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Dahi bilona se makkhan nikalta hai — toh O/W se W/O bana? Amazing sir!"
+        }
+      ],
+      "navigation": {
+        "next": "card_48_gels_aerosols",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_48_gels_aerosols",
+      "card_slug": "card_48_gels_aerosols",
+      "type": "chat",
+      "concept_id": "gels_aerosols_foam",
+      "level": 3,
+      "progress": {
+        "current": 48,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Kuch aur important colloid types rapidfire mein — Gels: Liquid in Solid colloid. Examples — jelly, cheese, butter (W/O gel), silica gel, boot polish. Gels mein liquid dispersed phase hoti hai solid continuous phase mein. Aerosols: Gas mein dispersed liquid ya solid. Fog/Mist = liquid aerosol. Smoke/Dust/Haze = solid aerosol. Insect sprays = liquid aerosol."
+        },
+        {
+          "speaker": "raju",
+          "text": "Insect spray aerosol hai? Wo to bottle se nikal ke hava mein phail jaata hai! Samajh aaya!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Aur Foam: Gas dispersed in liquid. Shaving cream, whipped cream, fire extinguisher foam — sab liquid foam hain. Solid foam = gas in solid — pumice stone, rubber foam, bread (CO2 trapped in bread dough!). Haan! Bread ka phoolna bhi solid foam ka example hai — yeast CO2 banata hai jo trapped hoti hai! Exam mein ye unexpected example bahut aata hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Bread solid foam hai?! Sir ye toh chemistry aur biology dono mein ek saath! Yeast se CO2 aur wo bread mein trap — nice!"
+        }
+      ],
+      "navigation": {
+        "next": "card_49_quiz_emulsions_1",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_49_quiz_emulsions_1",
+      "card_slug": "card_49_quiz_emulsions_1",
+      "type": "quiz",
+      "concept_id": "emulsion_types",
+      "level": 3,
+      "progress": {
+        "current": 49,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Butter aur Cold Cream kaunse type ke emulsion hain?",
+        "options": [
+          {
+            "id": "A",
+            "text": "O/W (Oil in Water) emulsion"
+          },
+          {
+            "id": "B",
+            "text": "W/O (Water in Oil) emulsion"
+          },
+          {
+            "id": "C",
+            "text": "Butter = O/W, Cold Cream = W/O"
+          },
+          {
+            "id": "D",
+            "text": "Butter = W/O, Cold Cream = O/W"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Butter aur Cold Cream dono W/O (Water in Oil) emulsions hain — in dono mein water ki droplets oil/fat mein dispersed hoti hain. O/W emulsions (oil dispersed in water) ke examples hain — Milk, Vanishing Cream, Hand Lotion. Easy way to remember: Butter aur Cold Cream oily feel dete hain — kyunki continuous phase oil hai. Milk watery feel deta hai — continuous phase water hai. SSC CGL 2019 mein ye directly aaya tha!"
+      },
+      "navigation": {
+        "next": "card_50_quiz_emulsions_2",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_50_quiz_emulsions_2",
+      "card_slug": "card_50_quiz_emulsions_2",
+      "type": "quiz",
+      "concept_id": "emulsifying_agents_examples",
+      "level": 3,
+      "progress": {
+        "current": 50,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Body mein fat ka emulsification kaun karta hai aur ye kahan hota hai?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Pepsin — Stomach mein"
+          },
+          {
+            "id": "B",
+            "text": "Amylase — Mouth mein"
+          },
+          {
+            "id": "C",
+            "text": "Bile Salts — Small Intestine mein"
+          },
+          {
+            "id": "D",
+            "text": "Lipase — Large Intestine mein"
+          }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Bile Salts (liver dwara produced, gallbladder mein store) Small Intestine mein fat ka emulsification karte hain — large fat globules ko chhoti chhoti droplets mein todkar surface area badhate hain. Fir Lipase enzyme in fat droplets pe kaam karta hai. Amylase starch digestion ke liye, Pepsin protein digestion ke liye (stomach). Ye NEET ka Biology + Surface Chemistry combined concept hai!"
+      },
+      "navigation": {
+        "next": "card_51_quiz_emulsions_3",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_51_quiz_emulsions_3",
+      "card_slug": "card_51_quiz_emulsions_3",
+      "type": "quiz",
+      "concept_id": "colloid_types_identification",
+      "level": 3,
+      "progress": {
+        "current": 51,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Neeche diye gaye pairs mein se kaunsa pair — Dispersed Phase aur Dispersion Medium — 'FOAM' ke liye correct hai?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Dispersed Phase: Solid, Dispersion Medium: Liquid"
+          },
+          {
+            "id": "B",
+            "text": "Dispersed Phase: Gas, Dispersion Medium: Liquid"
+          },
+          {
+            "id": "C",
+            "text": "Dispersed Phase: Liquid, Dispersion Medium: Gas"
+          },
+          {
+            "id": "D",
+            "text": "Dispersed Phase: Solid, Dispersion Medium: Gas"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Foam = Gas dispersed in Liquid. Examples: Shaving foam, whipped cream, soda bubbles. Sol = Solid in Liquid (paint). Aerosol (liquid) = Liquid in Gas (fog). Aerosol (solid) = Solid in Gas (smoke). Gel = Liquid in Solid. Solid foam = Gas in Solid (bread, pumice stone). Is table ko achhi tarah yaad karo — RRB NTPC, SSC CGL dono mein colloid type identification bahut aata hai!"
+      },
+      "navigation": {
+        "next": "card_52_milestone_emulsions",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_52_milestone_emulsions",
+      "card_slug": "card_52_milestone_emulsions",
+      "type": "milestone",
+      "concept_id": "emulsions_complete",
+      "level": 3,
+      "progress": {
+        "current": 52,
+        "total": 72
+      },
+      "milestone_payload": {
+        "title": "EMULSIONS & SPECIAL COLLOIDS DONE! 🧈",
+        "badge_emoji": "🥛",
+        "completed_topic": "Emulsions, Gels, Aerosols & Foam",
+        "xp_earned": 125,
+        "milestone_progress": "Module 4/5 Complete",
+        "motivational_quote": "Butter se bread tak — sab colloid samajh aaya! Ab Final Officer Challenge ke liye taiyar ho!"
+      },
+      "navigation": {
+        "next": "card_53_applications_adsorption",
+        "button_text": "Continue to Applications ➔"
+      }
+    },
+    {
+      "card_id": "card_53_applications_adsorption",
+      "card_slug": "card_53_applications_adsorption",
+      "type": "chat",
+      "concept_id": "adsorption_applications_realworld",
+      "level": 3,
+      "progress": {
+        "current": 53,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, ab real-world applications rapidfire mein — ye BPSC, SSC, Railway teenon ke liye must-know hain! Adsorption Applications: (1) Gas masks — activated charcoal, poisonous gas adsorb karta hai. (2) Water purification — Alum (phitkari) colloidal impurities coagulate karta hai. (3) Chromatography — different substances alag alag adsorb hoti hain. (4) Dehumidifiers — silica gel moisture adsorb karta hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "Chromatography bhi adsorption pe based hai? Matlab blood group test mein ya dye separation mein?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! Column chromatography aur TLC (Thin Layer Chromatography) mein different compounds alag-alag adsorb hoti hain surface pe — isliye alag ho jaate hain. Aur (5) Animal Charcoal — sugar solution bleach karna (rang hatana). (6) Silica gel — electronic items ke packet mein moisture absorb karta hai. (7) Fuller's Earth (Multani Mitti) — oils, greases ka rang hatana. Ye industry mein bahut use hota hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Electronic box mein jo silica gel ka packet hota hai — woh adsorption kar raha hota hai? Ek kaam ka concept toh hai ye!"
+        }
+      ],
+      "navigation": {
+        "next": "card_54_colloid_applications",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_54_colloid_applications",
+      "card_slug": "card_54_colloid_applications",
+      "type": "chat",
+      "concept_id": "colloid_applications_realworld",
+      "level": 3,
+      "progress": {
+        "current": 54,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Colloid Applications — BPSC ka favorite area: (1) Medicine — Colloidal gold injections arthritis ke liye. (2) Colloidal silver (Argyrol) — eye antiseptic. (3) Dialysis — kidney ki tarah kaam karta hai, colloidal particles dialysis membrane se nahi guzarte. (4) Delta formation — river ka colloidal clay sea ke salt (NaCl) ke Na+ se coagulate ho ke delta banata hai! Ye Geography + Chemistry combined!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Delta formation — Geography mein padha tha! Toh Ganga ka delta bhi colloidal clay ke coagulation se bana? Ye toh UPSC mein bhi aayega!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Exactly! UPSC Prelims mein ye interdisciplinary question bahut aata hai! Aur (5) Electrical precipitation — Cottrell Precipitator factory chimneys mein — smoke particles electrically charged hote hain, electrode pe collect hote hain. (6) Milk pasteurization — heating se milk proteins denature hote hain — stable colloid banta hai. (7) Ink, paint — sab colloidal systems hain. Rubber bhi natural latex se — colloidal system!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Ink bhi colloid hai? Paint bhi? Toh hum colloids se ghire hain sir literally!"
+        }
+      ],
+      "navigation": {
+        "next": "card_55_preparation_methods",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_55_preparation_methods",
+      "card_slug": "card_55_preparation_methods",
+      "type": "chat",
+      "concept_id": "colloid_preparation_purification",
+      "level": 3,
+      "progress": {
+        "current": 55,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Colloids banana kaise? 2 main methods — (1) Dispersion Methods — bade particles ko chhota banana: Mechanical dispersion (grinding), Electrical dispersion (Bredig's Arc method — gold, silver sols banane ke liye, 1898 mein Bredig ne develop kiya), Peptization. (2) Condensation Methods — chhote particles (solution) se bade banao jab bhi aggregate ho: Double decomposition, reduction, oxidation reactions."
+        },
+        {
+          "speaker": "raju",
+          "text": "Bredig's Arc method! Ye naam interesting hai sir! Electric arc se gold sol banta hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! Gold electrodes ko ek cold water container mein rakhke electric arc pass karte hain — gold vaporize hota hai aur fir condense ho ke colloidal particles bante hain — Gold Sol taiyar! Purification of Colloids — Dialysis se. Dialysis mein ek semi-permeable membrane use hoti hai — impurities (electrolytes, small molecules) membrane se nikal jaate hain, colloid particles andar rahte hain. Kidneys body mein yaahi kaam karte hain — biological dialysis!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Kidney biological dialysis machine hai! NEET mein ye bhi poochha hoga sir?"
+        }
+      ],
+      "navigation": {
+        "next": "card_56_quiz_applications_1",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_56_quiz_applications_1",
+      "card_slug": "card_56_quiz_applications_1",
+      "type": "quiz",
+      "concept_id": "applications_adsorption_colloid",
+      "level": 3,
+      "progress": {
+        "current": 56,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "River delta ka formation kaunse principle pe based hai?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Peptization — river clay phirse dissolve ho jaati hai"
+          },
+          {
+            "id": "B",
+            "text": "Coagulation — sea water ke electrolytes se river clay coagulate hoti hai"
+          },
+          {
+            "id": "C",
+            "text": "Adsorption — clay river bed pe adsorb ho jaati hai"
+          },
+          {
+            "id": "D",
+            "text": "Brownian Motion — clay particles random motion karte hain aur settle ho jaate hain"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "River mein colloidal clay particles negatively charged hote hain. Jab river sea mein milti hai, sea water mein Na+, Mg2+, Ca2+ jaise cations hote hain jo Hardy-Schulze Rule ke anusar colloidal clay ko coagulate karte hain. Ye coagulated clay ek jagah pe settle ho ke delta banati hai. Ye Ganga, Nile, Mississippi sab deltas ka mechanism hai. UPSC Prelims 2018 aur BPSC 2020 mein ye directly poochha gaya tha!"
+      },
+      "navigation": {
+        "next": "card_57_quiz_applications_2",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_57_quiz_applications_2",
+      "card_slug": "card_57_quiz_applications_2",
+      "type": "quiz",
+      "concept_id": "dialysis_cottrell",
+      "level": 3,
+      "progress": {
+        "current": 57,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Cottrell Precipitator ka use kaha hota hai aur ye kaunse principle pe kaam karta hai?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Factories mein — Tyndall Effect se smoke detect karne ke liye"
+          },
+          {
+            "id": "B",
+            "text": "Hospitals mein — Blood purification ke liye dialysis mein"
+          },
+          {
+            "id": "C",
+            "text": "Factory chimneys mein — Smoke particles ko electrically charge karke collect karne ke liye"
+          },
+          {
+            "id": "D",
+            "text": "Water treatment mein — Alum se coagulation ke liye"
+          }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Cottrell Precipitator factory chimneys mein use hota hai — industrial pollution control ke liye. Isme smoke particles ko high voltage se electrically charged kiya jaata hai. Ye charged particles electrodes pe collect ho jaate hain aur chimney se saaf hawa nikaiti hai. Ye Electrophoresis principle pe kaam karta hai. Frederick Cottrell ne 1907 mein invent kiya. Hospital wali kidney dialysis mein semi-permeable membrane use hoti hai — alag concept!"
+      },
+      "navigation": {
+        "next": "card_58_quiz_applications_3",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_58_quiz_applications_3",
+      "card_slug": "card_58_quiz_applications_3",
+      "type": "quiz",
+      "concept_id": "bredig_arc_preparation",
+      "level": 3,
+      "progress": {
+        "current": 58,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Bredig's Arc Method se kaunse type ke colloid banaye jaate hain?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Lyophilic colloids — starch aur protein sols"
+          },
+          {
+            "id": "B",
+            "text": "Metal sols — gold, silver, platinum ke colloidal solutions"
+          },
+          {
+            "id": "C",
+            "text": "Emulsions — oil in water type"
+          },
+          {
+            "id": "D",
+            "text": "Aerosols — solid in gas type"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Bredig's Arc Method (1898) se metal sols banaye jaate hain jaise Gold sol, Silver sol, Platinum sol. Isme metal electrodes ke beech electric arc pass ki jaati hai — metal vaporize hota hai aur cold water mein condense ho ke colloidal particles bante hain. Ye Dispersion Method ka ek type hai (bade → chhote particles). Lyophilic colloids (starch, gelatin) directly dissolve karke banate hain — alag method!"
+      },
+      "navigation": {
+        "next": "card_59_milestone_applications",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_59_milestone_applications",
+      "card_slug": "card_59_milestone_applications",
+      "type": "milestone",
+      "concept_id": "applications_complete",
+      "level": 3,
+      "progress": {
+        "current": 59,
+        "total": 72
+      },
+      "milestone_payload": {
+        "title": "APPLICATIONS MODULE DONE! 🌍",
+        "badge_emoji": "🏭",
+        "completed_topic": "Real World Applications — Adsorption & Colloids",
+        "xp_earned": 125,
+        "milestone_progress": "Module 4.5/5 Complete",
+        "motivational_quote": "Delta formation se gas masks tak — applications clear hain! Ab FINAL OFFICER CHALLENGE!"
+      },
+      "navigation": {
+        "next": "card_60_officer_revision_summary",
+        "button_text": "Start Final Revision ➔"
+      }
+    },
+    {
+      "card_id": "card_60_officer_revision_summary",
+      "card_slug": "card_60_officer_revision_summary",
+      "type": "summary",
+      "concept_id": "surface_chemistry_complete_revision",
+      "level": 4,
+      "progress": {
+        "current": 60,
+        "total": 72
+      },
+      "summary_payload": {
+        "title": "⚡ Officer Rapid Revision — Surface Chemistry",
+        "revision_points": [
+          {
+            "topic": "Adsorption vs Absorption — Multi-Statement Trap",
+            "point": "Consider: (A) Adsorption mein substance sirf surface pe chipakta hai. (B) Absorption mein substance andar chala jaata hai. (C) Silica gel mein dono hote hain isliye isko 'Sorption' kehte hain. (D) Adsorption hamesha exothermic hota hai. — Sab CORRECT hain!"
+          },
+          {
+            "topic": "Catalysis — Industrial Processes Speed Facts",
+            "point": "Haber Process → N2 + 3H2 → 2NH3, Catalyst: Fe, Promoter: Mo. Contact Process → 2SO2 + O2 → 2SO3, Catalyst: V2O5. Ostwald Process → NH3 oxidation, Catalyst: Pt/Rh. Hydrogenation of oils → Catalyst: Ni. Lead Chamber Process → Catalyst: NO gas (Homogeneous!)."
+          },
+          {
+            "topic": "Hardy-Schulze Rule + Gold Number — Officer Trap",
+            "point": "Fe(OH)3 sol (positive) ko PO4 3- > SO4 2- > Cl- coagulate karta hai (valency order). As2S3 sol (negative) ko Al3+ > Mg2+ > Na+ coagulate karta hai. Gold Number kam = protective colloid zyada effective. Gelatin Gold Number = 0.005-0.01 (MINIMUM = MOST EFFECTIVE). Starch Gold Number = 25 (maximum = least effective)."
+          },
+          {
+            "topic": "Colloid Types — 8 Types Complete Table",
+            "point": "Sol (S in L): paint, ink. Gel (L in S): jelly, cheese. Emulsion (L in L): milk(O/W), butter(W/O). Foam (G in L): shaving cream. Liquid Aerosol (L in G): fog, mist. Solid Aerosol (S in G): smoke, dust. Solid Sol (S in S): ruby glass. Solid Foam (G in S): bread, pumice. Tyndall Effect = only in colloids, not solutions!"
+          },
+          {
+            "topic": "Key Scientists & Years — BPSC Trap Zone",
+            "point": "Thomas Graham — dialysis discover kiya (1861). John Tyndall — Tyndall Effect (1869). Robert Brown — Brownian Motion (1827). Herbert Freundlich — Freundlich Isotherm (1909). Irving Langmuir — Langmuir Isotherm (1916), Nobel 1932. Bredig — Bredig's Arc method (1898). Frederick Cottrell — Cottrell Precipitator (1907)."
+          }
+        ]
+      },
+      "navigation": {
+        "next": "card_61_final_quiz_1",
+        "button_text": "Start Final Officer Quiz ➔"
+      }
+    },
+    {
+      "card_id": "card_61_final_quiz_1",
+      "card_slug": "card_61_final_quiz_1",
+      "type": "final_quiz",
+      "concept_id": "surface_chemistry_final_1",
+      "level": 4,
+      "progress": {
+        "current": 61,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "BPSC Officer Level — Neeche diye gaye statements ko consider karo aur SAHI statements choose karo:\n(I) Physisorption low temperature pe zyada hoti hai kyunki Van der Waals forces zyada effective hote hain.\n(II) Chemisorption ka enthalpy 20-40 kJ/mol hota hai.\n(III) Catalyst reaction ki equilibrium constant (K) badha deta hai.\n(IV) Gold Number jitna kam, protective colloid utna hi zyada effective hai.",
+        "options": [
+          {
+            "id": "A",
+            "text": "Sirf I aur IV"
+          },
+          {
+            "id": "B",
+            "text": "Sirf I, II aur IV"
+          },
+          {
+            "id": "C",
+            "text": "Sirf II aur III"
+          },
+          {
+            "id": "D",
+            "text": "Sirf I aur III"
+          }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Statement I — SAHI: Physisorption low temperature pe zyada hoti hai (adsorption exothermic hai — Le Chatelier's principle). Statement II — GALAT: Chemisorption ka enthalpy 40-400 kJ/mol hota hai (HIGH), Physisorption ka 20-40 kJ/mol. Statement III — GALAT: Catalyst equilibrium CONSTANT nahi badlaata — sirf equilibrium jaldi aata hai. K same rehta hai! Statement IV — SAHI: Gold Number kam = protective colloid zyada effective (Gelatin = 0.005). Isliye answer A — sirf I aur IV sahi hain!"
+      },
+      "navigation": {
+        "next": "card_62_final_quiz_2",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_62_final_quiz_2",
+      "card_slug": "card_62_final_quiz_2",
+      "type": "final_quiz",
+      "concept_id": "surface_chemistry_final_2",
+      "level": 4,
+      "progress": {
+        "current": 62,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Assertion-Reason Type (BPSC/UPSC): \nAssertion (A): River aur sea ke sangam par delta ka nirman hota hai.\nReason (R): Sea water ke electrolytes river ke colloidal clay ko coagulate karte hain — Hardy-Schulze Rule ke anusar.",
+        "options": [
+          {
+            "id": "A",
+            "text": "A sahi hai, R galat hai"
+          },
+          {
+            "id": "B",
+            "text": "A galat hai, R sahi hai"
+          },
+          {
+            "id": "C",
+            "text": "A sahi hai aur R sahi hai — R, A ki sahi explanation hai"
+          },
+          {
+            "id": "D",
+            "text": "A sahi hai aur R sahi hai — lekin R, A ki sahi explanation nahi hai"
+          }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Dono Assertion aur Reason dono correct hain aur R, A ki sahi scientific explanation hai! River water mein colloidal clay particles negatively charged hote hain. Sea water mein Na+, Mg2+, Ca2+ cations hote hain. Hardy-Schulze Rule ke anusar — higher valency cations zyada effectively coagulate karte hain. Colloidal clay particles coagulate ho ke delta banate hain. Ye UPSC Prelims 2018, BPSC 2020 mein aaya tha — perfect A-R question!"
+      },
+      "navigation": {
+        "next": "card_63_final_quiz_3",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_63_final_quiz_3",
+      "card_slug": "card_63_final_quiz_3",
+      "type": "final_quiz",
+      "concept_id": "surface_chemistry_final_3",
+      "level": 4,
+      "progress": {
+        "current": 63,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "NEET Level Multi-Statement: Enzyme catalysis ke baare mein kaunse statements SAHI hain?\n(I) Enzymes protein-based biological catalysts hain.\n(II) Lock and Key model mein enzyme = key aur substrate = lock hai.\n(III) Zymase glucose ko ethanol aur CO2 mein convert karta hai.\n(IV) Enzyme ki efficiency (turnover number) bahut high hoti hai — ek second mein lakho reactions.",
+        "options": [
+          {
+            "id": "A",
+            "text": "Sirf I, III aur IV"
+          },
+          {
+            "id": "B",
+            "text": "Sirf I aur II"
+          },
+          {
+            "id": "C",
+            "text": "Sirf II, III aur IV"
+          },
+          {
+            "id": "D",
+            "text": "Sab sahi hain"
+          }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Statement I — SAHI: Enzymes biological protein catalysts hain. Statement II — GALAT: Lock and Key model mein ENZYME = LOCK (active site fixed shape), SUBSTRATE = KEY (jo fit hoti hai). Raju wala confusion yaad karo! Statement III — SAHI: Zymase enzyme glucose → ethanol + CO2 (fermentation). Invertase = sucrose → glucose + fructose. Diastase = starch → maltose. Statement IV — SAHI: Enzyme ki turnover number bahut high hoti hai — 1 second mein 10^6 reactions possible. Isliye answer A — I, III aur IV sahi hain!"
+      },
+      "navigation": {
+        "next": "card_64_final_quiz_4",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_64_final_quiz_4",
+      "card_slug": "card_64_final_quiz_4",
+      "type": "final_quiz",
+      "concept_id": "surface_chemistry_final_4",
+      "level": 4,
+      "progress": {
+        "current": 64,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "SSC CGL Officer Level: Neeche diye examples mein se kaunse HETEROGENEOUS CATALYSIS ke examples hain?\n(I) Fe catalyst — Haber Process (N2 + H2 → NH3)\n(II) V2O5 catalyst — Contact Process (SO2 + O2 → SO3)\n(III) NO gas catalyst — Lead Chamber Process (SO2 + O2 → H2SO4)\n(IV) H2SO4 (liquid) catalyst — ester formation (liquid reactants)",
+        "options": [
+          {
+            "id": "A",
+            "text": "Sirf I aur II"
+          },
+          {
+            "id": "B",
+            "text": "Sirf I, II aur III"
+          },
+          {
+            "id": "C",
+            "text": "Sirf III aur IV"
+          },
+          {
+            "id": "D",
+            "text": "Sab I, II, III, IV"
+          }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Heterogeneous Catalysis = Catalyst aur Reactants alag phase mein. (I) Fe (solid) + N2 & H2 (gas) — HETEROGENEOUS ✓. (II) V2O5 (solid) + SO2 & O2 (gas) — HETEROGENEOUS ✓. (III) NO (gas) + SO2 & O2 (gas) — SAB GAS PHASE — ye HOMOGENEOUS catalysis hai ✗. (IV) H2SO4 (liquid) + acid aur alcohol (liquid) — SAAM phase — HOMOGENEOUS ✗. Isliye sirf I aur II Heterogeneous hain. SSC CGL 2021 mein exactly ye trap aaya tha!"
+      },
+      "navigation": {
+        "next": "card_65_final_quiz_5",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_65_final_quiz_5",
+      "card_slug": "card_65_final_quiz_5",
+      "type": "final_quiz",
+      "concept_id": "surface_chemistry_final_5",
+      "level": 4,
+      "progress": {
+        "current": 65,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "BPSC 2022 Style — Freundlich Adsorption Isotherm ke baare mein kaunse statements SAHI hain?\n(I) Ye ek empirical isotherm hai — experimental data se derived.\n(II) Isotherm equation: x/m = k.P^(1/n) — yahan n > 1 hamesha.\n(III) Langmuir isotherm Freundlich se better hai kyunki ye high pressure pe bhi valid hai.\n(IV) Freundlich isotherm multilayer adsorption explain karta hai.",
+        "options": [
+          {
+            "id": "A",
+            "text": "Sirf I, II aur III"
+          },
+          {
+            "id": "B",
+            "text": "Sirf I aur II"
+          },
+          {
+            "id": "C",
+            "text": "Sirf II, III aur IV"
+          },
+          {
+            "id": "D",
+            "text": "Sirf III aur IV"
+          }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Statement I — SAHI: Freundlich isotherm empirical hai (experimental observation based, no theory). Statement II — SAHI: x/m = k.P^(1/n) aur n > 1 hamesha (matlab 1/n < 1, yani 0 < 1/n < 1). Statement III — SAHI: Langmuir isotherm theoretical hai aur high pressure pe bhi valid — Freundlich high pressure pe fail ho jaata hai. Statement IV — GALAT: Freundlich isotherm multilayer explain nahi karta — wo sirf empirical relationship hai. Multilayer adsorption BET theory explain karta hai. Answer = A (I, II, III correct)!"
+      },
+      "navigation": {
+        "next": "card_66_final_quiz_6",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_66_final_quiz_6",
+      "card_slug": "card_66_final_quiz_6",
+      "type": "final_quiz",
+      "concept_id": "surface_chemistry_final_6",
+      "level": 4,
+      "progress": {
+        "current": 66,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "NEET/BPSC Combined Trap: Dialysis ke baare mein kaunsa kaunsa statement SAHI hai?\n(I) Dialysis mein semi-permeable membrane use hoti hai.\n(II) Colloid particles membrane se nahi guzarte lekin ions aur small molecules guzar jaate hain.\n(III) Graham ne dialysis discover kiya tha (1861).\n(IV) Kidney ek biological Cottrell Precipitator ki tarah kaam karti hai.",
+        "options": [
+          {
+            "id": "A",
+            "text": "Sirf I, II aur III"
+          },
+          {
+            "id": "B",
+            "text": "Sirf I aur II"
+          },
+          {
+            "id": "C",
+            "text": "Sirf II, III aur IV"
+          },
+          {
+            "id": "D",
+            "text": "Sab I, II, III, IV"
+          }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Statement I — SAHI: Dialysis mein semi-permeable membrane hoti hai. Statement II — SAHI: Colloid particles (large, 1-1000 nm) membrane se nahi guzarte — ions aur small molecules guzar jaate hain. Statement III — SAHI: Thomas Graham ne 1861 mein dialysis discover kiya (crystalloids vs colloids distinguish karne ke liye). Statement IV — GALAT: Kidney biological DIALYSIS MEMBRANE ki tarah kaam karti hai — Cottrell Precipitator nahi! Cottrell Precipitator chimneys mein smoke collect karta hai. Ye classic trap hai BPSC mein — isliye A (I, II, III) correct!"
+      },
+      "navigation": {
+        "next": "card_67_final_quiz_7",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_67_final_quiz_7",
+      "card_slug": "card_67_final_quiz_7",
+      "type": "final_quiz",
+      "concept_id": "surface_chemistry_final_7",
+      "level": 4,
+      "progress": {
+        "current": 67,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Assertion-Reason (UPSC Prelims Style):\nAssertion (A): Adsorption ek spontaneous process hai jisme ΔG negative hota hai.\nReason (R): Adsorption mein ΔH negative (exothermic) aur ΔS negative (entropy decrease) dono hote hain — lekin low temperature pe ΔH > TΔS hota hai isliye ΔG negative rahta hai.",
+        "options": [
+          {
+            "id": "A",
+            "text": "A sahi hai, R galat hai"
+          },
+          {
+            "id": "B",
+            "text": "A galat hai, R sahi hai"
+          },
+          {
+            "id": "C",
+            "text": "A sahi hai aur R sahi hai — R, A ki sahi explanation hai"
+          },
+          {
+            "id": "D",
+            "text": "A sahi hai, R sahi hai — lekin R, A ki explanation nahi hai"
+          }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Assertion SAHI: Adsorption spontaneous hai — ΔG < 0. Reason SAHI aur correct explanation: ΔG = ΔH - TΔS. Adsorption mein ΔH negative (exothermic — energy release hoti hai jab molecule surface se bind hota hai) aur ΔS bhi negative (molecule ki freedom kam hoti hai jab surface se bind hota hai). Low temperature pe |ΔH| > |TΔS| — isliye ΔG negative rahta hai aur adsorption spontaneous hota hai. High temperature pe TΔS dominant ho jaata hai aur desorption hota hai!"
+      },
+      "navigation": {
+        "next": "card_68_final_quiz_8",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_68_final_quiz_8",
+      "card_slug": "card_68_final_quiz_8",
+      "type": "final_quiz",
+      "concept_id": "surface_chemistry_final_8",
+      "level": 4,
+      "progress": {
+        "current": 68,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "RRB NTPC/SSC Speed Round: Neeche diye gaye pairs mein se kaunse pair galat hain?\n(I) Fog — Solid Aerosol\n(II) Cheese — Gel (Liquid in Solid)\n(III) Shaving Cream — Foam (Gas in Liquid)\n(IV) Ruby Glass — Solid Sol (Solid in Solid)\n(V) Smoke — Liquid Aerosol",
+        "options": [
+          {
+            "id": "A",
+            "text": "Sirf I aur V galat hain"
+          },
+          {
+            "id": "B",
+            "text": "Sirf I, II aur V galat hain"
+          },
+          {
+            "id": "C",
+            "text": "Sirf II aur IV galat hain"
+          },
+          {
+            "id": "D",
+            "text": "Sirf III aur IV galat hain"
+          }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Galat pairs: (I) Fog — LIQUID Aerosol hai (liquid droplets in gas) — Solid Aerosol nahi. Fog mein water droplets hain, solid nahi. (V) Smoke — SOLID Aerosol hai (solid particles in gas) — Liquid Aerosol nahi. Smoke mein carbon particles hain. Sahi pairs: (II) Cheese = Gel (liquid fat in solid matrix) ✓. (III) Shaving Cream = Foam (gas in liquid) ✓. (IV) Ruby Glass = Solid Sol (colloidal gold in glass — solid in solid) ✓. Answer = A — sirf I aur V galat hain!"
+      },
+      "navigation": {
+        "next": "card_69_final_quiz_9",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_69_final_quiz_9",
+      "card_slug": "card_69_final_quiz_9",
+      "type": "final_quiz",
+      "concept_id": "surface_chemistry_final_9",
+      "level": 4,
+      "progress": {
+        "current": 69,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "BPSC Combined Level — Surface Chemistry Applications mein se kaunse SAHI matched hain?\n(I) Gas Masks — Physisorption principle — Activated Charcoal\n(II) Water Purification — Coagulation — Alum (Phitkari)\n(III) Animal Charcoal — Adsorption — Sugar solution bleaching\n(IV) Chromatography — Distillation principle\n(V) Silica Gel — Moisture control in packed goods",
+        "options": [
+          {
+            "id": "A",
+            "text": "Sirf I, II, III aur V"
+          },
+          {
+            "id": "B",
+            "text": "Sirf II, III aur IV"
+          },
+          {
+            "id": "C",
+            "text": "Sirf I, II aur V"
+          },
+          {
+            "id": "D",
+            "text": "Sab sahi hain"
+          }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Sahi matches: (I) Gas Masks — Activated Charcoal physisorption se poisonous gases ko surface pe adsorb karta hai ✓. (II) Water Purification — Alum (Al2(SO4)3) ka Al3+ colloidal clay/bacteria ko coagulate karta hai ✓. (III) Animal Charcoal — bone charcoal sugar solution ka rang adsorb karke bleach karta hai ✓. (V) Silica Gel — electronic goods, medicine packets mein moisture (water vapor) adsorb karta hai ✓. Galat: (IV) Chromatography Distillation pe nahi — Differential Adsorption principle pe kaam karta hai — alag alag substances alag alag adsorb hote hain stationary phase pe. Answer = A!"
+      },
+      "navigation": {
+        "next": "card_70_final_quiz_10",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_70_final_quiz_10",
+      "card_slug": "card_70_final_quiz_10",
+      "type": "final_quiz",
+      "concept_id": "surface_chemistry_final_10",
+      "level": 4,
+      "progress": {
+        "current": 70,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "UPSC/NEET Ultimate Level — Kaunsa statement(s) Langmuir Isotherm ki assumptions ke AGAINST hai?\n(I) Surface uniform hai aur sab sites equivalent energy wale hain.\n(II) Adsorbed molecules ek dusre ke saath interact karte hain aur lateral forces hain.\n(III) Adsorption sirf monolayer tak hoti hai.\n(IV) Adsorption aur desorption ek dynamic equilibrium mein hain.\n(V) Multiple layers of adsorption possible hain at high pressure.",
+        "options": [
+          {
+            "id": "A",
+            "text": "Sirf II aur V Langmuir ke against hain"
+          },
+          {
+            "id": "B",
+            "text": "Sirf V Langmuir ke against hai"
+          },
+          {
+            "id": "C",
+            "text": "Sirf I aur III Langmuir ke against hain"
+          },
+          {
+            "id": "D",
+            "text": "Sirf II, IV aur V Langmuir ke against hain"
+          }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Langmuir ki actual assumptions: (I) ✓ SAHI assumption — uniform surface, equal energy sites. (II) ✗ AGAINST — Langmuir assume karta hai ki adsorbed molecules INTERACT NAHI karte. (III) ✓ SAHI assumption — monolayer only. (IV) ✓ SAHI assumption — dynamic equilibrium. (V) ✗ AGAINST — Langmuir mein multilayer NAHI hoti — ye BET (Brunauer-Emmett-Teller) theory allow karta hai. Isliye II aur V Langmuir assumptions ke VIRUDH (against) hain. Answer = A. Ye NEET 2022 aur UPSC Prelims 2021 level ka question hai!"
+      },
+      "navigation": {
+        "next": "card_71_chapter_trophy",
+        "button_text": "Claim Your Trophy! 🏆"
+      }
+    },
+    {
+      "card_id": "card_71_chapter_trophy",
+      "card_slug": "card_71_chapter_trophy",
+      "type": "milestone",
+      "concept_id": "surface_chemistry_chapter_complete",
+      "level": 4,
+      "progress": {
+        "current": 71,
+        "total": 72
+      },
+      "milestone_payload": {
+        "title": "🏆 SURFACE CHEMISTRY OFFICER CERTIFIED! 🏆",
+        "badge_emoji": "🥇",
+        "completed_topic": "Surface Chemistry — Complete Chapter",
+        "xp_earned": 500,
+        "milestone_progress": "ALL 5 MODULES COMPLETE — BPSC/NEET READY!",
+        "motivational_quote": "Tu ab Surface Chemistry ka OFFICER hai! Adsorption, Catalysis, Colloids — sab crystal clear! BPSC, SSC, NEET, UPSC — koi bhi exam trap karne ki koshish kare toh tu ready hai! 🔥"
+      },
+      "navigation": {
+        "next": "card_72_final_summary_card",
+        "button_text": "View Complete Summary ➔"
+      }
+    },
+    {
+      "card_id": "card_72_final_summary_card",
+      "card_slug": "card_72_final_summary_card",
+      "type": "summary",
+      "concept_id": "surface_chemistry_master_summary",
+      "level": 4,
+      "progress": {
+        "current": 72,
+        "total": 72
+      },
+      "summary_payload": {
+        "title": "⚡ Master Officer Summary — Surface Chemistry Complete",
+        "revision_points": [
+          {
+            "topic": "BPSC Trap 1 — Physisorption vs Chemisorption",
+            "point": "Physisorption: Van der Waals, reversible, 20-40 kJ/mol, multilayer, low temp favourable. Chemisorption: Chemical bond, irreversible, 40-400 kJ/mol, monolayer, high temp favourable. Adsorption ALWAYS exothermic (ΔH < 0), ALWAYS entropy decreases (ΔS < 0), ALWAYS spontaneous at low temp (ΔG < 0)."
+          },
+          {
+            "topic": "BPSC Trap 2 — Industrial Catalysts Exact Match",
+            "point": "Haber = Fe catalyst, Mo promoter. Contact = V2O5. Ostwald = Pt/Rh. Hydrogenation = Ni. Lead Chamber = NO gas (Homogeneous!). Freundlich (1909) = empirical. Langmuir (1916, Nobel 1932) = theoretical, monolayer, uniform sites, no lateral interaction."
+          },
+          {
+            "topic": "SSC/Railway Trap — Colloid Types Fast ID",
+            "point": "Fog = Liquid Aerosol. Smoke = Solid Aerosol. Milk = O/W Emulsion. Butter = W/O Emulsion. Cheese = Gel. Shaving Cream = Foam. Ruby Glass = Solid Sol. Bread = Solid Foam. Tyndall Effect = only colloids. Brownian Motion = 1827 Brown, stability cause. Electrophoresis = charged particles move in electric field."
+          },
+          {
+            "topic": "NEET Trap — Coagulation Rules Exact",
+            "point": "Fe(OH)3 sol = POSITIVE charge → moves to CATHODE in electrophoresis. As2S3 sol = NEGATIVE charge → moves to ANODE. Hardy-Schulze: Higher ion valency = more coagulation. Gold Number LOW = MORE effective protective colloid. Gelatin = 0.005-0.01 (best). Starch = 25 (worst). Delta formation = sea cations coagulate river clay (Hardy-Schulze)."
+          },
+          {
+            "topic": "UPSC Trap — Scientists & Discoveries Year-Exact",
+            "point": "1827 = Robert Brown (Brownian Motion). 1861 = Thomas Graham (Dialysis). 1869 = John Tyndall (Tyndall Effect). 1898 = Bredig (Arc Method). 1907 = Cottrell (Precipitator). 1909 = Freundlich (Isotherm). 1916 = Langmuir (Isotherm). 1932 = Langmuir Nobel Prize. Enzyme = Lock(enzyme) + Key(substrate). Zymase=glucose→ethanol. Invertase=sucrose→glucose+fructose. Diastase=starch→maltose."
+          }
+        ]
+      },
+      "navigation": {
+        "next": null,
+        "button_text": "Chapter Complete! Start Next Topic ➔"
+      }
+    }
+  ]
+}
