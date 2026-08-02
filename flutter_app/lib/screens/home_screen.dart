@@ -2,6 +2,7 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:http/http.dart' as http;
+import 'package:shared_preferences/shared_preferences.dart';
 import 'package:shimmer/shimmer.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -32,6 +33,12 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
   Map<String, dynamic> _subjectMapping = {};
   Map<String, dynamic> _sectionalData = {};
 
+  // ⚡ REALTIME LEARN PROGRESS STORAGE
+  String _lastLearnTitle = "Cell Biology & Organelles";
+  double _lastLearnProgress = 0.0;
+  String _lastNextTopic = "Start your interactive learning journey";
+  bool _hasLearningHistory = false;
+
   bool _isLoadingConfig = true;
 
   @override
@@ -55,10 +62,16 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
         state == AppLifecycleState.inactive) {
       TelegramTracker.sendOnAppExitAlert();
     }
+    // Jab app resume ho, progress update ho jaye
+    if (state == AppLifecycleState.resumed) {
+      _loadRealtimeProgress();
+    }
   }
 
   // 📖 Pure External JSON Asset Loader
   Future<void> _loadAllConfigs() async {
+    await _loadRealtimeProgress();
+
     try {
       final String configStr = await rootBundle.loadString('assets/data/app_config.json');
       _appConfig = jsonDecode(configStr);
@@ -90,6 +103,19 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
     if (mounted) {
       setState(() {
         _isLoadingConfig = false;
+      });
+    }
+  }
+
+  // ⚡ READ REALTIME PROGRESS FROM LOCAL STORAGE
+  Future<void> _loadRealtimeProgress() async {
+    final prefs = await SharedPreferences.getInstance();
+    if (mounted) {
+      setState(() {
+        _hasLearningHistory = prefs.getBool('has_learning_history') ?? false;
+        _lastLearnTitle = prefs.getString('last_learn_title') ?? "Cell Biology & Organelles";
+        _lastLearnProgress = prefs.getDouble('last_learn_progress') ?? 0.0;
+        _lastNextTopic = prefs.getString('last_next_topic') ?? "Start learning now";
       });
     }
   }
@@ -149,7 +175,7 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) => const LearnHubScreen()),
-                );
+                ).then((_) => _loadRealtimeProgress());
               },
             ),
           ],
@@ -177,6 +203,7 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
           selectedIndex: _currentBottomIndex,
           onDestinationSelected: (idx) {
             setState(() => _currentBottomIndex = idx);
+            if (idx == 0) _loadRealtimeProgress(); // Home tab par wapas aane par sync karein
             List<String> tabs = ['Home Tab', 'Revision Hub', 'Sectional CBT', 'Learn Hub', 'Profile Tab'];
             TelegramTracker.logActivity("Switched to ${tabs[idx]}");
           },
@@ -232,11 +259,11 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
             HeroHeaderWidget(featuredData: _appConfig['featured_mock'] ?? {}),
             const SizedBox(height: 16),
 
-            // 🔥 3. INTERACTIVE LEARN TAB PREVIEW CARD (NEW)
+            // 🔥 3. REALTIME LEARN TAB PREVIEW CARD
             _buildLearnPreviewCard(context),
             const SizedBox(height: 16),
 
-            // 4. DYNAMIC WEB HUB CARDS (PDFs, EXAM UPDATES, CURRENT AFFAIRS FROM home_data.json)
+            // 4. DYNAMIC WEB HUB CARDS FROM home_data.json
             _buildDynamicWebHubSection(context),
             const SizedBox(height: 16),
 
@@ -256,8 +283,10 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
     );
   }
 
-  // 🚀 INTERACTIVE LEARN TAB HIGH-CONVERSION PREVIEW CARD
+  // 🚀 REALTIME LEARN TAB PREVIEW CARD
   Widget _buildLearnPreviewCard(BuildContext context) {
+    int percentDisplay = (_lastLearnProgress * 100).toInt();
+
     return Container(
       width: double.infinity,
       padding: const EdgeInsets.all(16),
@@ -291,12 +320,12 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
                   color: Colors.amber.shade400,
                   borderRadius: BorderRadius.circular(20),
                 ),
-                child: const Row(
+                child: Row(
                   children: [
-                    Text('🧬 ', style: TextStyle(fontSize: 12)),
+                    const Text('🧬 ', style: TextStyle(fontSize: 12)),
                     Text(
-                      'INTERACTIVE LEARNING (NEW)',
-                      style: TextStyle(
+                      _hasLearningHistory ? 'CONTINUE LEARNING' : 'INTERACTIVE LEARNING (NEW)',
+                      style: const TextStyle(
                         color: Color(0xFF0F172A),
                         fontSize: 10,
                         fontWeight: FontWeight.bold,
@@ -314,37 +343,41 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
 
           const SizedBox(height: 12),
 
-          // TITLE & SUBTITLE
-          const Text(
-            'Cell Biology & Organelles',
-            style: TextStyle(
+          // REALTIME DYNAMIC CHAPTER TITLE
+          Text(
+            _lastLearnTitle,
+            style: const TextStyle(
               color: Colors.white,
               fontSize: 18,
               fontWeight: FontWeight.bold,
             ),
           ),
           const SizedBox(height: 4),
-          const Text(
-            'Next: Robert Hooke vs Leeuwenhoek Discovery',
-            style: TextStyle(color: Colors.white70, fontSize: 12),
+          
+          // REALTIME NEXT TOPIC
+          Text(
+            _lastNextTopic,
+            maxLines: 1,
+            overflow: TextOverflow.ellipsis,
+            style: const TextStyle(color: Colors.white70, fontSize: 12),
           ),
 
           const SizedBox(height: 14),
 
-          // VISUAL PROGRESS BAR
+          // REALTIME PROGRESS BAR
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: const [
-                  Text(
-                    'Continue Learning',
+                children: [
+                  const Text(
+                    'Chapter Progress',
                     style: TextStyle(color: Colors.white70, fontSize: 11, fontWeight: FontWeight.w500),
                   ),
                   Text(
-                    '60% Completed',
-                    style: TextStyle(color: Colors.amberAccent, fontSize: 11, fontWeight: FontWeight.bold),
+                    '$percentDisplay% Completed',
+                    style: const TextStyle(color: Colors.amberAccent, fontSize: 11, fontWeight: FontWeight.bold),
                   ),
                 ],
               ),
@@ -352,7 +385,7 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
               ClipRRect(
                 borderRadius: BorderRadius.circular(10),
                 child: LinearProgressIndicator(
-                  value: 0.60,
+                  value: _lastLearnProgress,
                   minHeight: 6,
                   backgroundColor: Colors.white24,
                   valueColor: AlwaysStoppedAnimation<Color>(Colors.amber.shade400),
@@ -363,7 +396,7 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
 
           const SizedBox(height: 14),
 
-          // ACTION RESUME BUTTON (JUMPS TO TAB INDEX 3)
+          // ACTION RESUME BUTTON
           SizedBox(
             width: double.infinity,
             child: ElevatedButton(
@@ -379,14 +412,14 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
                 shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
                 padding: const EdgeInsets.symmetric(vertical: 11),
               ),
-              child: const Row(
+              child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Icon(Icons.play_arrow_rounded, size: 20),
-                  SizedBox(width: 6),
+                  const Icon(Icons.play_arrow_rounded, size: 20),
+                  const SizedBox(width: 6),
                   Text(
-                    'Resume Learning →',
-                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 13.5),
+                    _hasLearningHistory ? 'Resume Learning →' : 'Start Learning →',
+                    style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 13.5),
                   ),
                 ],
               ),
@@ -397,7 +430,7 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
     );
   }
 
-  // 🌟 DYNAMICALLY RENDERS WEB_HUB ITEMS FROM assets/data/home_data.json
+  // 🌟 DYNAMICALLY RENDERS WEB_HUB ITEMS FROM home_data.json
   Widget _buildDynamicWebHubSection(BuildContext context) {
     final List webHubList = (_homeData['web_hub'] as List?) ?? [];
 
@@ -412,7 +445,6 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
         final String buttonUrl = hubItem['button_url'] ?? 'https://www.mocktester.online';
         final List items = (hubItem['items'] as List?) ?? [];
 
-        // Dynamic Color Parsing
         Color cardThemeColor = const Color(0xFF2563EB);
         try {
           if (hubItem['color'] != null) {
@@ -441,7 +473,6 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              // CARD HEADER TITLE
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -474,7 +505,6 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
               ),
               const SizedBox(height: 12),
 
-              // ITEMS LIST (CLICKABLE TO OPEN BROWSER)
               ...items.map((itemText) {
                 return InkWell(
                   onTap: () => _openWebsiteUrl(itemText.toString(), buttonUrl),
@@ -512,7 +542,6 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
 
               const SizedBox(height: 12),
 
-              // BOTTOM ACTION BUTTON (OPENS IN EXTERNAL BROWSER)
               SizedBox(
                 width: double.infinity,
                 child: OutlinedButton(
@@ -539,7 +568,7 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
     );
   }
 
-  // 📅 LAUNCH ROADMAP CARD FROM assets/data/app_config.json
+  // 📅 LAUNCH ROADMAP CARD
   Widget _buildLaunchRoadmapCard() {
     final List roadmapList = _appConfig['launch_roadmap'] ?? [
       {"text": "🔥 Coming Tomorrow: BSSC Inter Level Top 100 Qs", "color": "0xFFFF4757"},
@@ -828,7 +857,7 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
     return const SizedBox.shrink();
   }
 
-  // 🌐 HELPER LAUNCHER FUNCTION (ENFORCED EXTERNAL BROWSER OPENING)
+  // 🌐 EXTERNAL BROWSER LAUNCHER
   Future<void> _openWebsiteUrl(String linkTitle, String url) async {
     TelegramTracker.logActivity("Opened Web Tool: $linkTitle");
     final Uri uri = Uri.parse(url);
