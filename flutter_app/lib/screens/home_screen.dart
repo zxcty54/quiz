@@ -232,22 +232,167 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
             HeroHeaderWidget(featuredData: _appConfig['featured_mock'] ?? {}),
             const SizedBox(height: 16),
 
-            // 3. 🚀 DYNAMIC WEB HUB CARDS (PDFs, EXAM UPDATES, CURRENT AFFAIRS FROM home_data.json)
+            // 🔥 3. INTERACTIVE LEARN TAB PREVIEW CARD (NEW)
+            _buildLearnPreviewCard(context),
+            const SizedBox(height: 16),
+
+            // 4. DYNAMIC WEB HUB CARDS (PDFs, EXAM UPDATES, CURRENT AFFAIRS FROM home_data.json)
             _buildDynamicWebHubSection(context),
             const SizedBox(height: 16),
 
-            // 4. ELIGIBILITY CHECKER
+            // 5. ELIGIBILITY CHECKER
             EligibilityCheckerWidget(isDarkMode: _isDarkMode, onTapUrl: _openWebsiteUrl),
             const SizedBox(height: 16),
 
-            // 5. LAUNCH ROADMAP
+            // 6. LAUNCH ROADMAP
             _buildLaunchRoadmapCard(),
             const SizedBox(height: 16),
 
-            // 6. TELEGRAM COMMUNITY
+            // 7. TELEGRAM COMMUNITY
             const TelegramCreatorWidget(),
           ],
         ),
+      ),
+    );
+  }
+
+  // 🚀 INTERACTIVE LEARN TAB HIGH-CONVERSION PREVIEW CARD
+  Widget _buildLearnPreviewCard(BuildContext context) {
+    return Container(
+      width: double.infinity,
+      padding: const EdgeInsets.all(16),
+      decoration: BoxDecoration(
+        gradient: LinearGradient(
+          colors: _isDarkMode 
+              ? [const Color(0xFF0F766E), const Color(0xFF115E59)]
+              : [const Color(0xFF0F766E), const Color(0xFF0D9488)],
+          begin: Alignment.topLeft,
+          end: Alignment.bottomRight,
+        ),
+        borderRadius: BorderRadius.circular(16),
+        boxShadow: [
+          BoxShadow(
+            color: const Color(0xFF0D9488).withOpacity(0.3),
+            blurRadius: 10,
+            offset: const Offset(0, 4),
+          ),
+        ],
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          // BADGE & CHARACTERS TAG
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Container(
+                padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
+                decoration: BoxDecoration(
+                  color: Colors.amber.shade400,
+                  borderRadius: BorderRadius.circular(20),
+                ),
+                child: const Row(
+                  children: [
+                    Text('🧬 ', style: TextStyle(fontSize: 12)),
+                    Text(
+                      'INTERACTIVE LEARNING (NEW)',
+                      style: TextStyle(
+                        color: Color(0xFF0F172A),
+                        fontSize: 10,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              const Text(
+                '👨‍🏫 Aman Sir + 👦 Raju',
+                style: TextStyle(color: Colors.white70, fontSize: 11, fontWeight: FontWeight.w600),
+              ),
+            ],
+          ),
+
+          const SizedBox(height: 12),
+
+          // TITLE & SUBTITLE
+          const Text(
+            'Cell Biology & Organelles',
+            style: TextStyle(
+              color: Colors.white,
+              fontSize: 18,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+          const SizedBox(height: 4),
+          const Text(
+            'Next: Robert Hooke vs Leeuwenhoek Discovery',
+            style: TextStyle(color: Colors.white70, fontSize: 12),
+          ),
+
+          const SizedBox(height: 14),
+
+          // VISUAL PROGRESS BAR
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: const [
+                  Text(
+                    'Continue Learning',
+                    style: TextStyle(color: Colors.white70, fontSize: 11, fontWeight: FontWeight.w500),
+                  ),
+                  Text(
+                    '60% Completed',
+                    style: TextStyle(color: Colors.amberAccent, fontSize: 11, fontWeight: FontWeight.bold),
+                  ),
+                ],
+              ),
+              const SizedBox(height: 6),
+              ClipRRect(
+                borderRadius: BorderRadius.circular(10),
+                child: LinearProgressIndicator(
+                  value: 0.60,
+                  minHeight: 6,
+                  backgroundColor: Colors.white24,
+                  valueColor: AlwaysStoppedAnimation<Color>(Colors.amber.shade400),
+                ),
+              ),
+            ],
+          ),
+
+          const SizedBox(height: 14),
+
+          // ACTION RESUME BUTTON (JUMPS TO TAB INDEX 3)
+          SizedBox(
+            width: double.infinity,
+            child: ElevatedButton(
+              onPressed: () {
+                setState(() {
+                  _currentBottomIndex = 3; // Switch to Learn Hub Tab
+                });
+              },
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.white,
+                foregroundColor: const Color(0xFF0F766E),
+                elevation: 0,
+                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+                padding: const EdgeInsets.symmetric(vertical: 11),
+              ),
+              child: const Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Icon(Icons.play_arrow_rounded, size: 20),
+                  SizedBox(width: 6),
+                  Text(
+                    'Resume Learning →',
+                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 13.5),
+                  ),
+                ],
+              ),
+            ),
+          ),
+        ],
       ),
     );
   }
@@ -688,7 +833,6 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
     TelegramTracker.logActivity("Opened Web Tool: $linkTitle");
     final Uri uri = Uri.parse(url);
     try {
-      // 👈 LaunchMode.externalApplication ensures it ALWAYS opens in Chrome/External Browser
       await launchUrl(uri, mode: LaunchMode.externalApplication);
     } catch (e) {
       if (mounted) {
