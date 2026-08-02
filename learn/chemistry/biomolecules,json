@@ -1,0 +1,2493 @@
+{
+  "topic_id": "biomolecules_chemistry_complete",
+  "topic_title": "Biomolecules - The Chemistry of Life",
+  "target_exams": [
+    "BPSC",
+    "BSSC",
+    "RRB NTPC",
+    "SSC CGL",
+    "NEET",
+    "UPSC Prelims"
+  ],
+  "total_cards": 72,
+  "characters": {
+    "aman": {
+      "name": "Aman Sir",
+      "role": "teacher",
+      "avatar": "👨‍🏫"
+    },
+    "raju": {
+      "name": "Raju",
+      "role": "student",
+      "avatar": "👦"
+    }
+  },
+  "cards": [
+    {
+      "card_id": "card_01_intro",
+      "card_slug": "card_01_intro",
+      "type": "intro",
+      "concept_id": "biomolecules_chapter_intro",
+      "level": 1,
+      "progress": {
+        "current": 1,
+        "total": 72
+      },
+      "intro_payload": {
+        "title": "🧬 Biomolecules - The Chemistry of Life",
+        "icon": "🧬",
+        "target_exams": [
+          "BPSC",
+          "BSSC",
+          "RRB NTPC",
+          "SSC CGL",
+          "NEET",
+          "UPSC Prelims"
+        ],
+        "learning_outcomes": [
+          "Master all 4 major biomolecule classes (Carbohydrates, Proteins, Lipids, Nucleic Acids)",
+          "Understand chemical structures tested in NEET & SSC",
+          "Learn discovery timelines & scientist names for BPSC traps",
+          "Crack multi-statement questions on reducing sugars, peptide bonds, and DNA structure",
+          "Memorize enzyme classifications and vitamin deficiency diseases"
+        ],
+        "estimated_time": "45 mins",
+        "total_modules": 8
+      },
+      "navigation": {
+        "next": "card_02_what_is_biomolecule",
+        "button_text": "Start Learning 🚀"
+      }
+    },
+    {
+      "card_id": "card_02_what_is_biomolecule",
+      "card_slug": "card_02_what_is_biomolecule",
+      "type": "chat",
+      "concept_id": "biomolecule_definition",
+      "level": 1,
+      "progress": {
+        "current": 2,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, tumne kabhi socha hai ki roti khane ke baad energy kaise milti hai? Ya phir workout ke baad muscle kaise banti hai?"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir wo to khana digest hota hai na... lekin exact process kya hai? 🤔"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul sahi direction! Khane mein jo cheezein hoti hain - carbs, protein, fats - ye sab BIOMOLECULES kehlati hain. Bio matlab life, aur molecules matlab chemical compounds. Yaani LIVING organisms ke andar paaye jaane wale chemical compounds!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Ohhh... matlab sabhi living things mein same type ke chemicals hote hain?"
+        }
+      ],
+      "navigation": {
+        "next": "card_03_carbon_backbone",
+        "button_text": "Haan, lekin ek twist hai! ➔"
+      }
+    },
+    {
+      "card_id": "card_03_carbon_backbone",
+      "card_slug": "card_03_carbon_backbone",
+      "type": "chat",
+      "concept_id": "carbon_skeleton_biomolecules",
+      "level": 1,
+      "progress": {
+        "current": 3,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Haan! Sabhi biomolecules ki ek common cheez hai - sab CARBON (C) ke skeleton pe bane hote hain. Isko hum kehte hain 'Carbon Backbone'. Carbon ki speciality ye hai ki wo lambi chains bana sakta hai aur different atoms se bond kar sakta hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir carbon ke alawa aur kaunse atoms hote hain biomolecules mein?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Excellent question! Mainly 6 atoms hote hain - C, H, O, N, P, S. Yaani Carbon, Hydrogen, Oxygen, Nitrogen, Phosphorus, Sulphur. In 6 atoms se hi 99% biomolecules bante hain! NEET mein ye exact list pucha jata hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "Achhaaaa... lekin Sir ye biomolecules kitne types ke hote hain?"
+        }
+      ],
+      "navigation": {
+        "next": "card_04_four_major_classes",
+        "button_text": "4 Major Classes hain ➔"
+      }
+    },
+    {
+      "card_id": "card_04_four_major_classes",
+      "card_slug": "card_04_four_major_classes",
+      "type": "chat",
+      "concept_id": "four_biomolecule_classes",
+      "level": 1,
+      "progress": {
+        "current": 4,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Biomolecules ke 4 MAJOR CLASSES hain:\n1️⃣ CARBOHYDRATES (Energy source - roti, rice)\n2️⃣ PROTEINS (Body building - muscle, hair)\n3️⃣ LIPIDS (Energy storage - ghee, oil)\n4️⃣ NUCLEIC ACIDS (Genetic material - DNA, RNA)\n\nYe classification BPSC aur SSC mein direct fact ke roop mein aata hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir inke alawa koi aur bhi hote hain kya? Vitamins, minerals?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bahut smart question! Vitamins bhi biomolecules hain, lekin wo separate major class nahi - kuch vitamins lipid-soluble hain (A, D, E, K), kuch water-soluble (B, C). Minerals jaise calcium, iron - wo INORGANIC hote hain, biomolecules nahi. Yahin BPSC trap lagata hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab organic compounds = biomolecules?"
+        }
+      ],
+      "navigation": {
+        "next": "card_05_organic_definition",
+        "button_text": "Exact definition dekho ➔"
+      }
+    },
+    {
+      "card_id": "card_05_organic_definition",
+      "card_slug": "card_05_organic_definition",
+      "type": "chat",
+      "concept_id": "organic_vs_inorganic",
+      "level": 1,
+      "progress": {
+        "current": 5,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Almost sahi! ORGANIC COMPOUNDS = Carbon-containing compounds (mostly from living sources). Biomolecules ek specific category hain jo living organisms mein functional role play karte hain. Jaise petrol bhi organic hai (carbon hai), lekin biomolecule nahi."
+        },
+        {
+          "speaker": "raju",
+          "text": "Ohhh... to biomolecules must be biological function wale organic compounds!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Perfect! Ab main tumhe ek aur important classification batata hoon jo exam mein confusion create karta hai - MACROMOLECULES vs MICROMOLECULES. Macro matlab bade, Micro matlab chhote. Size ke basis pe classification!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir kaunse bade aur kaunse chhote hain?"
+        }
+      ],
+      "navigation": {
+        "next": "card_06_macro_micro",
+        "button_text": "Size classification ➔"
+      }
+    },
+    {
+      "card_id": "card_06_macro_micro",
+      "card_slug": "card_06_macro_micro",
+      "type": "chat",
+      "concept_id": "macromolecules_micromolecules",
+      "level": 1,
+      "progress": {
+        "current": 6,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "MACROMOLECULES (Polymers - bahut saare units jud ke bane):\n✅ Polysaccharides (starch, cellulose)\n✅ Proteins\n✅ Nucleic Acids (DNA, RNA)\n✅ Lipids (kuch cases mein)\n\nMICROMOLECULES (Monomers - chhote building blocks):\n✅ Monosaccharides (glucose)\n✅ Amino acids\n✅ Nucleotides\n✅ Fatty acids"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab macromolecules micromolecules se milkar bante hain?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Exactly! Jaise ek wall bricks se banti hai - bricks = monomers (micromolecules), wall = polymer (macromolecule). Is joining process ko POLYMERIZATION kehte hain. NEET mein ye term zaroor yaad rakho!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir ab detailed mein padhte hain na sabko? 😃"
+        }
+      ],
+      "navigation": {
+        "next": "card_07_quiz_biomolecule_basic_1",
+        "button_text": "Pehle quick check! ➔"
+      }
+    },
+    {
+      "card_id": "card_07_quiz_biomolecule_basic_1",
+      "card_slug": "card_07_quiz_biomolecule_basic_1",
+      "type": "quiz",
+      "concept_id": "biomolecule_definition_quiz",
+      "level": 1,
+      "progress": {
+        "current": 7,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Which of the following is NOT a major class of biomolecules?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Carbohydrates"
+          },
+          {
+            "id": "B",
+            "text": "Proteins"
+          },
+          {
+            "id": "C",
+            "text": "Vitamins"
+          },
+          {
+            "id": "D",
+            "text": "Nucleic Acids"
+          }
+        ],
+        "correct_option_id": "C",
+        "explanation": "The 4 MAJOR classes of biomolecules are: Carbohydrates, Proteins, Lipids, and Nucleic Acids. Vitamins are biomolecules but not classified as a separate major class - they fall under either lipid-soluble or water-soluble categories. This is a common BPSC/SSC trap question!"
+      },
+      "navigation": {
+        "next": "card_08_quiz_biomolecule_basic_2",
+        "button_text": "Next Question (2/3) ➔"
+      }
+    },
+    {
+      "card_id": "card_08_quiz_biomolecule_basic_2",
+      "card_slug": "card_08_quiz_biomolecule_basic_2",
+      "type": "quiz",
+      "concept_id": "carbon_backbone_quiz",
+      "level": 1,
+      "progress": {
+        "current": 8,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Which set of elements constitutes approximately 99% of all biomolecules?",
+        "options": [
+          {
+            "id": "A",
+            "text": "C, H, O, N only"
+          },
+          {
+            "id": "B",
+            "text": "C, H, O, N, P, S"
+          },
+          {
+            "id": "C",
+            "text": "C, H, O, Ca, Fe, Mg"
+          },
+          {
+            "id": "D",
+            "text": "C, H, O, N, Cl, Na"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "C (Carbon), H (Hydrogen), O (Oxygen), N (Nitrogen), P (Phosphorus), and S (Sulphur) together constitute about 99% of biomolecules by mass. Ca, Fe, Mg, Na, Cl are minerals (inorganic) and not primary biomolecule constituents. This exact list is frequently asked in NEET and SSC CGL!"
+      },
+      "navigation": {
+        "next": "card_09_quiz_biomolecule_basic_3",
+        "button_text": "Last Question (3/3) ➔"
+      }
+    },
+    {
+      "card_id": "card_09_quiz_biomolecule_basic_3",
+      "card_slug": "card_09_quiz_biomolecule_basic_3",
+      "type": "quiz",
+      "concept_id": "polymer_monomer_quiz",
+      "level": 1,
+      "progress": {
+        "current": 9,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Which of the following is a correct monomer-polymer pair?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Glucose - Cellulose"
+          },
+          {
+            "id": "B",
+            "text": "Fatty acid - DNA"
+          },
+          {
+            "id": "C",
+            "text": "Nucleotide - Protein"
+          },
+          {
+            "id": "D",
+            "text": "Monosaccharide - Nucleic acid"
+          }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Glucose (monosaccharide/monomer) polymerizes to form cellulose (polysaccharide/polymer). Other pairs: Fatty acids form lipids (not DNA), Nucleotides form DNA/RNA (not proteins - those are made from amino acids), Monosaccharides form polysaccharides (not nucleic acids). Railway and SSC love these matching questions!"
+      },
+      "navigation": {
+        "next": "card_10_milestone_intro",
+        "button_text": "Check Result ➔"
+      }
+    },
+    {
+      "card_id": "card_10_milestone_intro",
+      "card_slug": "card_10_milestone_intro",
+      "type": "milestone",
+      "concept_id": "intro_module_complete",
+      "level": 1,
+      "progress": {
+        "current": 10,
+        "total": 72
+      },
+      "milestone_payload": {
+        "title": "🎉 INTRODUCTION MODULE COMPLETE!",
+        "badge_emoji": "🧬",
+        "completed_topic": "Biomolecules Basics & Classification",
+        "xp_earned": 50,
+        "milestone_progress": "Module 1/8 Clear",
+        "motivational_quote": "You've unlocked the foundation! Now let's dive into the sweet world of Carbohydrates 🍬"
+      },
+      "navigation": {
+        "next": "card_11_carbs_intro",
+        "button_text": "Start Carbohydrates Module ➔"
+      }
+    },
+    {
+      "card_id": "card_11_carbs_intro",
+      "card_slug": "card_11_carbs_intro",
+      "type": "chat",
+      "concept_id": "carbohydrates_introduction",
+      "level": 2,
+      "progress": {
+        "current": 11,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, subah breakfast mein kya khaya tha?"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir paratha aur chai! 😋"
+        },
+        {
+          "speaker": "aman",
+          "text": "Perfect! Paratha (wheat = starch), aur chai mein sugar - dono CARBOHYDRATES hain! Carbohydrates naam kaise aaya ye pata hai? 'Carbo' = Carbon, 'hydrate' = water. Inhe 'Hydrates of Carbon' bhi kehte the kyunki inme C, H, O hota hai - generally formula (CH₂O)ₙ jaise form mein."
+        },
+        {
+          "speaker": "raju",
+          "text": "Ohhh matlab water (H₂O) + Carbon jaise composition! Lekin Sir ye sirf energy dete hain ya kuch aur bhi karte hain?"
+        }
+      ],
+      "navigation": {
+        "next": "card_12_carbs_functions",
+        "button_text": "Functions dekho ➔"
+      }
+    },
+    {
+      "card_id": "card_12_carbs_functions",
+      "card_slug": "card_12_carbs_functions",
+      "type": "chat",
+      "concept_id": "carbohydrate_functions",
+      "level": 2,
+      "progress": {
+        "current": 12,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Carbohydrates ke multiple functions hain:\n1️⃣ PRIMARY ENERGY SOURCE (glucose metabolism)\n2️⃣ STRUCTURAL SUPPORT (cellulose in plants, chitin in insects)\n3️⃣ ENERGY STORAGE (starch in plants, glycogen in animals)\n4️⃣ CELL RECOGNITION (glycoproteins on cell membrane)\n\nYe functional classification NEET mein bahut important hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir carbohydrates kitne types ke hote hain? Kuch simple, kuch complex?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul sahi direction! Size aur complexity ke basis pe 3 categories:\n🔹 MONOSACCHARIDES (simple sugars - 1 unit)\n🔹 DISACCHARIDES (double sugars - 2 units)\n🔹 POLYSACCHARIDES (complex carbs - bahut saare units)\n\nAb inhe detail mein samajhte hain ek-ek karke!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Ji Sir! Monosaccharides se start karte hain? 😊"
+        }
+      ],
+      "navigation": {
+        "next": "card_13_monosaccharides",
+        "button_text": "Monosaccharides ➔"
+      }
+    },
+    {
+      "card_id": "card_13_monosaccharides",
+      "card_slug": "card_13_monosaccharides",
+      "type": "chat",
+      "concept_id": "monosaccharides_definition",
+      "level": 2,
+      "progress": {
+        "current": 13,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "MONOSACCHARIDES = Simplest form of carbohydrates jo further hydrolysis (breakdown) nahi ho sakte. 'Mono' = one, 'saccharide' = sugar. Ye sweet taste wale, water-soluble, crystalline hote hain. Glucose, Fructose, Galactose - ye sabse important hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir glucose to blood mein hota hai na? Fructose kahan milta hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Perfect recall! Glucose = blood sugar (brain ka fuel), Fructose = fruits mein (sabse sweet sugar!), Galactose = milk sugar ka part. Teeno ka molecular formula SAME hai - C₆H₁₂O₆ - lekin structure different! Isko kehte hain ISOMERS. BPSC ye zaroor puchta hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Hain?? Same formula but different? Ye kaise possible hai Sir? 😮"
+        }
+      ],
+      "navigation": {
+        "next": "card_14_isomers_concept",
+        "button_text": "Isomer twist ➔"
+      }
+    },
+    {
+      "card_id": "card_14_isomers_concept",
+      "card_slug": "card_14_isomers_concept",
+      "type": "chat",
+      "concept_id": "isomers_monosaccharides",
+      "level": 2,
+      "progress": {
+        "current": 14,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Dekho Raju, same atoms lekin different arrangement! Jaise 'LISTEN' aur 'SILENT' same letters hain but different words. Chemistry mein isko ISOMERISM kehte hain. Glucose, Fructose, Galactose teeno C₆H₁₂O₆ hain lekin atoms ki arrangement different hai, isliye properties different!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Achhaaaa... matlab structure matter karta hai formula se zyada!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Exactly! Ab ek important classification aur - carbon atoms ki sankhya ke basis pe:\n🔸 TRIOSE (3 carbons) - rare\n🔸 PENTOSE (5 carbons) - Ribose, Deoxyribose (DNA/RNA mein!)\n🔸 HEXOSE (6 carbons) - Glucose, Fructose, Galactose (most common)\n\nHexoses sabse abundant hain nature mein. SSC mein direct pucha jata hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir pentose DNA/RNA mein hota hai? Ye to biology wala topic lag raha hai! 🤔"
+        }
+      ],
+      "navigation": {
+        "next": "card_15_pentose_importance",
+        "button_text": "DNA connection ➔"
+      }
+    },
+    {
+      "card_id": "card_15_pentose_importance",
+      "card_slug": "card_15_pentose_importance",
+      "type": "chat",
+      "concept_id": "pentose_sugar_dna_rna",
+      "level": 2,
+      "progress": {
+        "current": 15,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Bilkul! Biomolecules chemistry aur biology ek dusre se connected hain. DNA mein DEOXYRIBOSE sugar hota hai (5 carbon), RNA mein RIBOSE sugar (5 carbon). Dono pentoses hain! 'Deoxy' ka matlab hai 'one oxygen less'. Ye difference hi DNA ko stable banata hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Ohhh... to DNA aur RNA ka difference sugar se bhi aata hai! Mind-blowing! 🤯"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! NEET mein ye cross-concept questions aate hain. Ab ek aur important property - REDUCING SUGARS. Glucose, Fructose, Galactose sab reducing sugars hain. Matlab ye Benedict's test ya Fehling's test mein positive result dete hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir reducing sugar matlab kya hota hai exactly?"
+        }
+      ],
+      "navigation": {
+        "next": "card_16_reducing_sugars",
+        "button_text": "Reducing property ➔"
+      }
+    },
+    {
+      "card_id": "card_16_reducing_sugars",
+      "card_slug": "card_16_reducing_sugars",
+      "type": "chat",
+      "concept_id": "reducing_sugars_concept",
+      "level": 2,
+      "progress": {
+        "current": 16,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "REDUCING SUGAR = Jo sugar khud oxidize ho jaye (electron lose kare) aur dusre substance ko reduce kar de (electron de de). Iske liye FREE ALDEHYDE (-CHO) ya FREE KETONE (>C=O) group hona chahiye. Sabhi monosaccharides mein ye free group hota hai, isliye sab reducing hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir test kaise karte hain isko? Aapne Benedict's test bola..."
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! Benedict's test ya Fehling's test mein copper sulphate (blue color) ko heat karte hain sugar ke saath. Agar reducing sugar hai, to BRICK RED PRECIPITATE (Cu₂O) banta hai. Blue se red - color change = positive test! Ye practical NEET aur BPSC dono mein important hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Wow! To lab mein easily identify ho jayega sugar! 😃"
+        }
+      ],
+      "navigation": {
+        "next": "card_17_disaccharides_intro",
+        "button_text": "Ab Disaccharides ➔"
+      }
+    },
+    {
+      "card_id": "card_17_disaccharides_intro",
+      "card_slug": "card_17_disaccharides_intro",
+      "type": "chat",
+      "concept_id": "disaccharides_introduction",
+      "level": 2,
+      "progress": {
+        "current": 17,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ab aate hain DISACCHARIDES pe! 'Di' = two. Ye 2 monosaccharide units ke jodne se bante hain. Jab 2 monosaccharides jud te hain, to ek WATER molecule (H₂O) nikal jata hai. Is reaction ko CONDENSATION REACTION ya DEHYDRATION SYNTHESIS kehte hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir matlab 2 glucose jud jayenge to disaccharide ban jayega?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Exactly! Glucose + Glucose = MALTOSE (malt sugar). Iske alawa:\n🔹 Glucose + Fructose = SUCROSE (table sugar - ghar ki chini!)\n🔹 Glucose + Galactose = LACTOSE (milk sugar - doodh mein)\n\nYe 3 disaccharides - Maltose, Sucrose, Lactose - sabse zyada important hain. SSC aur Railway mein pakka 1 question!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir sucrose matlab normal sugar jo hum chai mein daalte hain? 😮"
+        }
+      ],
+      "navigation": {
+        "next": "card_18_sucrose_details",
+        "button_text": "Sucrose details ➔"
+      }
+    },
+    {
+      "card_id": "card_18_sucrose_details",
+      "card_slug": "card_18_sucrose_details",
+      "type": "chat",
+      "concept_id": "sucrose_properties",
+      "level": 2,
+      "progress": {
+        "current": 18,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Haan! Sucrose = common table sugar (chini). Ye sugarcane (ganna) aur sugar beet se milta hai. Molecular formula C₁₂H₂₂O₁₁ hai. Sabse interesting baat - Sucrose is a NON-REDUCING SUGAR! Yaani Benedict's test mein negative aayega!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Hain?? Lekin Sir aapne bola sabhi monosaccharides reducing hain... to glucose + fructose = sucrose kaise non-reducing ho gaya? 😕"
+        },
+        {
+          "speaker": "aman",
+          "text": "Brilliant confusion! Ye BPSC ka favorite trap hai! Jab glucose aur fructose jud te hain sucrose banane ke liye, DONO ke free aldehyde/ketone groups bond mein involve ho jate hain (glycosidic bond). Koi free group nahi bacha, isliye reducing property chali gayi!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Ohhhhh... to reducing property ke liye free group chahiye! Maltose aur lactose reducing hain kya?"
+        }
+      ],
+      "navigation": {
+        "next": "card_19_maltose_lactose",
+        "button_text": "Maltose & Lactose ➔"
+      }
+    },
+    {
+      "card_id": "card_19_maltose_lactose",
+      "card_slug": "card_19_maltose_lactose",
+      "type": "chat",
+      "concept_id": "maltose_lactose_properties",
+      "level": 2,
+      "progress": {
+        "current": 19,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Haan! MALTOSE aur LACTOSE dono REDUCING SUGARS hain kyunki inme ek free aldehyde group bachta hai bonding ke baad bhi. Maltose = 'malt sugar' (germinating seeds mein), Lactose = 'milk sugar' (mammals ke doodh mein). Formula dono ka C₁₂H₂₂O₁₁ hai - sucrose jitna!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir lactose intolerance ke baare mein suna hai... wo kya hota hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Excellent real-life connect! Lactose intolerance = body mein LACTASE enzyme ki kami. Lactase enzyme lactose ko glucose + galactose mein break karta hai. Jab ye enzyme nahi hota, lactose digest nahi hota, pet mein problem hoti hai. Enzyme deficiency - NEET ka hot topic!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Achhaaaa... to digestion ke liye enzymes chahiye!"
+        }
+      ],
+      "navigation": {
+        "next": "card_20_polysaccharides_intro",
+        "button_text": "Ab Complex Carbs ➔"
+      }
+    },
+    {
+      "card_id": "card_20_polysaccharides_intro",
+      "card_slug": "card_20_polysaccharides_intro",
+      "type": "chat",
+      "concept_id": "polysaccharides_introduction",
+      "level": 2,
+      "progress": {
+        "current": 20,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ab aate hain POLYSACCHARIDES! 'Poly' = many. Ye long chains hoti hain hundreds ya thousands of monosaccharide units ki. Generally NON-SWEET, NON-CRYSTALLINE, aur water mein insoluble ya partially soluble hote hain. Starch, Cellulose, Glycogen - ye teen sabse important!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir starch to roti, rice mein hota hai na?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Perfect! STARCH = plants ka storage polysaccharide. Glucose units ki polymer. Ye 2 types ka hota hai:\n1️⃣ AMYLOSE (15-20%) - unbranched chain, helix structure\n2️⃣ AMYLOPECTIN (80-85%) - highly branched chain\n\nIodine test se starch detect karte hain - BLUE-BLACK color aata hai! Ye test SSC mein zaroor aata hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir amylose aur amylopectin ka ratio yaad rakhna padega? 🤔"
+        }
+      ],
+      "navigation": {
+        "next": "card_21_starch_iodine",
+        "button_text": "Iodine Test ➔"
+      }
+    },
+    {
+      "card_id": "card_21_starch_iodine",
+      "card_slug": "card_21_starch_iodine",
+      "type": "chat",
+      "concept_id": "starch_iodine_test",
+      "level": 2,
+      "progress": {
+        "current": 21,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Haan, ratio important hai - Amylose 15-20%, Amylopectin 80-85%. Lekin exam mein zyada important hai IODINE TEST ka mechanism. Jab starch (specially amylose) ke helix structure ke andar iodine molecules enter karte hain, BLUE-BLACK COMPLEX banta hai. Ye specific test hai - sirf starch detect karta hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Ohhh... to iodine helix ke andar ghus jata hai! Cool! 😃"
+        },
+        {
+          "speaker": "aman",
+          "text": "Exactly! Ab GLYCOGEN - ye animals aur humans ka storage polysaccharide hai. Structure amylopectin jaisa (branched) but MORE highly branched! Liver aur muscles mein store hota hai. Jab body ko energy chahiye, glycogen glucose mein break hota hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir to starch = plants mein, glycogen = animals mein... perfect! Lekin cellulose kya hai?"
+        }
+      ],
+      "navigation": {
+        "next": "card_22_cellulose",
+        "button_text": "Cellulose ➔"
+      }
+    },
+    {
+      "card_id": "card_22_cellulose",
+      "card_slug": "card_22_cellulose",
+      "type": "chat",
+      "concept_id": "cellulose_structure_function",
+      "level": 2,
+      "progress": {
+        "current": 22,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "CELLULOSE = Earth's most abundant organic compound! Plant cell wall ka main component. Ye bhi glucose units ka polymer hai but bonding type different hai (β-1,4-glycosidic bonds). Is different bonding ki wajah se cellulose straight, rigid, fibrous structure banata hai - perfect for structural support!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir humara body isko digest kar sakta hai kya? Cotton, wood sab cellulose hi to hai..."
+        },
+        {
+          "speaker": "aman",
+          "text": "Bahut important question! Humans CANNOT digest cellulose kyunki humare paas CELLULASE enzyme nahi hai jo β-bonds tod sake. Lekin cows, termites, etc. ke paas special bacteria hote hain gut mein jo cellulase produce karte hain! Isliye wo grass digest kar lete hain, hum nahi!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Wow! To enzyme ka type matter karta hai! Starch digest hota hai but cellulose nahi - sirf bonding ka difference! 🤯"
+        }
+      ],
+      "navigation": {
+        "next": "card_23_chitin",
+        "button_text": "Ek aur polysaccharide ➔"
+      }
+    },
+    {
+      "card_id": "card_23_chitin",
+      "card_slug": "card_23_chitin",
+      "type": "chat",
+      "concept_id": "chitin_structure",
+      "level": 2,
+      "progress": {
+        "current": 23,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ek aur important polysaccharide hai - CHITIN! Ye insects, crustaceans (like crabs, prawns), aur fungi ke exoskeleton (bahari skeleton) ka main component hai. Structure cellulose jaisa but glucose ke jagah N-acetylglucosamine hota hai (nitrogen-containing derivative)."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir matlab chitin mein nitrogen bhi hai? To ye carbohydrate kaise hua? 🤔"
+        },
+        {
+          "speaker": "aman",
+          "text": "Good catch! Chitin technically MODIFIED polysaccharide hai - nitrogen group attach hai. Lekin base structure carbohydrate jaisa hi hai. Ye second most abundant natural polymer hai Earth pe (cellulose ke baad). NEET mein ye fact direct pucha jata hai - ranking order yaad rakho!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Ji Sir! Cellulose 1st, Chitin 2nd most abundant! 📝"
+        }
+      ],
+      "navigation": {
+        "next": "card_24_quiz_carbs_1",
+        "button_text": "Carbohydrates Quiz ➔"
+      }
+    },
+    {
+      "card_id": "card_24_quiz_carbs_1",
+      "card_slug": "card_24_quiz_carbs_1",
+      "type": "quiz",
+      "concept_id": "carbohydrates_quiz_1",
+      "level": 2,
+      "progress": {
+        "current": 24,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Which of the following is a NON-REDUCING sugar?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Glucose"
+          },
+          {
+            "id": "B",
+            "text": "Maltose"
+          },
+          {
+            "id": "C",
+            "text": "Sucrose"
+          },
+          {
+            "id": "D",
+            "text": "Lactose"
+          }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Sucrose is a NON-REDUCING sugar because both the free aldehyde group of glucose and the free ketone group of fructose are involved in the glycosidic bond formation, leaving no free reducing group. Glucose, Maltose, and Lactose all have free aldehyde groups and hence are reducing sugars. This is a classic BPSC/NEET trap question!"
+      },
+      "navigation": {
+        "next": "card_25_quiz_carbs_2",
+        "button_text": "Next Question (2/3) ➔"
+      }
+    },
+    {
+      "card_id": "card_25_quiz_carbs_2",
+      "card_slug": "card_25_quiz_carbs_2",
+      "type": "quiz",
+      "concept_id": "carbohydrates_quiz_2",
+      "level": 2,
+      "progress": {
+        "current": 25,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Iodine test gives blue-black color in the presence of:",
+        "options": [
+          {
+            "id": "A",
+            "text": "Cellulose"
+          },
+          {
+            "id": "B",
+            "text": "Glycogen"
+          },
+          {
+            "id": "C",
+            "text": "Starch"
+          },
+          {
+            "id": "D",
+            "text": "Sucrose"
+          }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Starch (specifically amylose) gives a characteristic blue-black color with iodine solution due to the formation of an iodine-starch complex where iodine molecules lodge in the helical structure of amylose. Cellulose does not give this test (different bonding), glycogen gives reddish-brown, and sucrose is a disaccharide (no reaction). This is asked frequently in SSC CGL and Railway exams!"
+      },
+      "navigation": {
+        "next": "card_26_quiz_carbs_3",
+        "button_text": "Last Question (3/3) ➔"
+      }
+    },
+    {
+      "card_id": "card_26_quiz_carbs_3",
+      "card_slug": "card_26_quiz_carbs_3",
+      "type": "quiz",
+      "concept_id": "carbohydrates_quiz_3",
+      "level": 2,
+      "progress": {
+        "current": 26,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Which polysaccharide forms the exoskeleton of arthropods?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Cellulose"
+          },
+          {
+            "id": "B",
+            "text": "Chitin"
+          },
+          {
+            "id": "C",
+            "text": "Starch"
+          },
+          {
+            "id": "D",
+            "text": "Glycogen"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Chitin is a nitrogen-containing polysaccharide that forms the exoskeleton of arthropods (insects, crustaceans) and the cell wall of fungi. It is the second most abundant natural polymer after cellulose. Cellulose is found in plant cell walls, starch in plant storage, and glycogen in animal storage. This is a NEET and UPSC favorite question!"
+      },
+      "navigation": {
+        "next": "card_27_milestone_carbs",
+        "button_text": "Check Result ➔"
+      }
+    },
+    {
+      "card_id": "card_27_milestone_carbs",
+      "card_slug": "card_27_milestone_carbs",
+      "type": "milestone",
+      "concept_id": "carbohydrates_module_complete",
+      "level": 2,
+      "progress": {
+        "current": 27,
+        "total": 72
+      },
+      "milestone_payload": {
+        "title": "🎉 CARBOHYDRATES MODULE MASTERED!",
+        "badge_emoji": "🍬",
+        "completed_topic": "Monosaccharides, Disaccharides & Polysaccharides",
+        "xp_earned": 100,
+        "milestone_progress": "Module 2/8 Clear",
+        "motivational_quote": "From glucose to glycogen - you've conquered the energy world! Now let's build muscles with Proteins 💪"
+      },
+      "navigation": {
+        "next": "card_28_proteins_intro",
+        "button_text": "Start Proteins Module ➔"
+      }
+    },
+    {
+      "card_id": "card_28_proteins_intro",
+      "card_slug": "card_28_proteins_intro",
+      "type": "chat",
+      "concept_id": "proteins_introduction",
+      "level": 3,
+      "progress": {
+        "current": 28,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, gym jaane wale log sabse zyada kya lete hain?"
+        },
+        {
+          "speaker": "raju",
+          "text": "Protein shake! 😄 Muscle building ke liye!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Perfect! PROTEINS = Body-building molecules! Greek word 'proteios' se aaya hai jiska matlab 'primary' ya 'of prime importance'. Hair, nails, muscles, enzymes, antibodies, hormones - sab proteins hain! Naam hi batata hai kitne important hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir proteins kisse bante hain? Carbs mein glucose tha..."
+        }
+      ],
+      "navigation": {
+        "next": "card_29_amino_acids",
+        "button_text": "Building blocks ➔"
+      }
+    },
+    {
+      "card_id": "card_29_amino_acids",
+      "card_slug": "card_29_amino_acids",
+      "type": "chat",
+      "concept_id": "amino_acids_structure",
+      "level": 3,
+      "progress": {
+        "current": 29,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Proteins bante hain AMINO ACIDS se! Amino acids = building blocks of proteins (jaise glucose carbohydrates ka building block tha). Ek amino acid ke paas 4 cheezein hoti hain:\n1️⃣ Amino group (-NH₂)\n2️⃣ Carboxyl group (-COOH)\n3️⃣ Hydrogen atom (-H)\n4️⃣ R group (side chain - har amino acid mein different!)"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir R group matlab kya hai? Ye different kaise hota hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "R group = Variable side chain jo har amino acid ko unique banata hai! Jaise ek amino acid GLYCINE hai (sabse simple - R = H), ek ALANINE hai (R = CH₃), ek CYSTEINE hai (R mein Sulphur hai). Ye R group ki wajah se hi different properties aati hain! Total 20 standard amino acids hote hain nature mein!"
+        },
+        {
+          "speaker": "raju",
+          "text": "20 amino acids! Ye sab yaad karne padenge Sir? 😰"
+        }
+      ],
+      "navigation": {
+        "next": "card_30_essential_amino_acids",
+        "button_text": "Essential vs Non-essential ➔"
+      }
+    },
+    {
+      "card_id": "card_30_essential_amino_acids",
+      "card_slug": "card_30_essential_amino_acids",
+      "type": "chat",
+      "concept_id": "essential_amino_acids",
+      "level": 3,
+      "progress": {
+        "current": 30,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Sabka naam nahi, lekin classification zaroor yaad rakho! 20 amino acids mein se:\n🔹 ESSENTIAL AMINO ACIDS (9) - body khud nahi bana sakti, food se lene padte hain\n🔹 NON-ESSENTIAL AMINO ACIDS (11) - body khud synthesize kar leti hai\n\nEssential amino acids NEET ka favorite topic hai! Mnemonic: 'PVT TIM HALL' - P(Phenylalanine), V(Valine), T(Threonine), T(Tryptophan), I(Isoleucine), M(Methionine), H(Histidine), A(Arginine - semi-essential), L(Leucine), L(Lysine)!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Wow Sir! PVT TIM HALL - ye to easy hai yaad rakhna! 😃"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! Exam mein yahi mnemonics kaam aate hain. Ab important question - amino acids aapas mein jud te kaise hain protein banane ke liye?"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir shayad condensation reaction jaise carbohydrates mein tha?"
+        }
+      ],
+      "navigation": {
+        "next": "card_31_peptide_bond",
+        "button_text": "Peptide Bond ➔"
+      }
+    },
+    {
+      "card_id": "card_31_peptide_bond",
+      "card_slug": "card_31_peptide_bond",
+      "type": "chat",
+      "concept_id": "peptide_bond_formation",
+      "level": 3,
+      "progress": {
+        "current": 31,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Absolutely correct! Jab 2 amino acids jud te hain, ek amino acid ka -COOH (carboxyl group) aur dusre ka -NH₂ (amino group) react karte hain, ek WATER molecule nikal jata hai, aur ban jata hai PEPTIDE BOND (-CO-NH-). Ye bond hi protein ki backbone banata hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Achhaaaa... to peptide bond = amino acids ko jodne wala bond! Sir protein aur peptide mein difference kya hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Brilliant question! Size ke basis pe classification:\n🔸 DIPEPTIDE = 2 amino acids (1 peptide bond)\n🔸 TRIPEPTIDE = 3 amino acids (2 peptide bonds)\n🔸 OLIGOPEPTIDE = few amino acids (2-10)\n🔸 POLYPEPTIDE = many amino acids (10-50)\n🔸 PROTEIN = very long chain (>50 amino acids)\n\nYe classification BPSC mein direct puchte hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir to protein ek bahut badi polypeptide chain hai! Got it! 💡"
+        }
+      ],
+      "navigation": {
+        "next": "card_32_protein_structure",
+        "button_text": "Protein Structure ➔"
+      }
+    },
+    {
+      "card_id": "card_32_protein_structure",
+      "card_slug": "card_32_protein_structure",
+      "type": "chat",
+      "concept_id": "protein_structure_levels",
+      "level": 3,
+      "progress": {
+        "current": 32,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ab aata hai protein structure ka sabse important concept! Proteins ke 4 LEVELS of structure hote hain:\n\n1️⃣ PRIMARY STRUCTURE - amino acids ka linear sequence (chain mein order)\n2️⃣ SECONDARY STRUCTURE - local folding (α-helix ya β-pleated sheet)\n3️⃣ TERTIARY STRUCTURE - 3D overall shape (complete folding)\n4️⃣ QUATERNARY STRUCTURE - multiple polypeptide chains together\n\nYe 4 levels NEET ka most important topic hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir thoda confusing lag raha hai... ek example se samjha sakte hain? 🤔"
+        }
+      ],
+      "navigation": {
+        "next": "card_33_structure_analogy",
+        "button_text": "Railway analogy ➔"
+      }
+    },
+    {
+      "card_id": "card_33_structure_analogy",
+      "card_slug": "card_33_structure_analogy",
+      "type": "chat",
+      "concept_id": "protein_structure_analogy",
+      "level": 3,
+      "progress": {
+        "current": 33,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Achha suno ek train ka example:\n\n🚂 PRIMARY = Train ke coaches ka sequence (A-B-C-D order)\n🌀 SECONDARY = Har coach ke andar seats ka arrangement (rows mein)\n🎯 TERTIARY = Pure train ka 3D shape jab wo track pe curve mein move kare\n🚄 QUATERNARY = Multiple trains ek hi platform pe (jaise 4 chains mil ke hemoglobin banati hain)\n\nSamjh aaya?"
+        },
+        {
+          "speaker": "raju",
+          "text": "Haan Sir! Ab clear hai! To hemoglobin mein quaternary structure hai? 😊"
+        },
+        {
+          "speaker": "aman",
+          "text": "Perfect! Hemoglobin = 4 polypeptide chains (2 alpha + 2 beta). Ye quaternary structure ka classic example hai! NEET mein ye exact structure pucha jata hai. Sabhi proteins mein quaternary nahi hota - sirf jinme multiple chains ho!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Got it Sir! 📝"
+        }
+      ],
+      "navigation": {
+        "next": "card_34_protein_functions",
+        "button_text": "Protein Functions ➔"
+      }
+    },
+    {
+      "card_id": "card_34_protein_functions",
+      "card_slug": "card_34_protein_functions",
+      "type": "chat",
+      "concept_id": "protein_functions",
+      "level": 3,
+      "progress": {
+        "current": 34,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Proteins ke functions itne diverse hain ki koi ek cheez nahi kar sakte body mein! Dekho major categories:\n\n1️⃣ STRUCTURAL - Collagen (skin, bones), Keratin (hair, nails)\n2️⃣ ENZYMATIC - Digestive enzymes (pepsin, trypsin)\n3️⃣ TRANSPORT - Hemoglobin (O₂ transport)\n4️⃣ DEFENSE - Antibodies (immune system)\n5️⃣ REGULATORY - Insulin (hormones)\n6️⃣ CONTRACTILE - Actin, Myosin (muscle contraction)"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir insulin bhi protein hai?? Diabetes wali medicine? 😮"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! Insulin ek peptide hormone hai (51 amino acids). Ye blood sugar ko regulate karta hai. Frederick Banting ne 1921 mein discover kiya tha - iske liye Nobel Prize mila 1923 mein! BPSC discovery timeline zaroor puchta hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Wow! To protein sirf muscle nahi, sab kuch karte hain body mein! 🤯"
+        }
+      ],
+      "navigation": {
+        "next": "card_35_denaturation",
+        "button_text": "Protein Denaturation ➔"
+      }
+    },
+    {
+      "card_id": "card_35_denaturation",
+      "card_slug": "card_35_denaturation",
+      "type": "chat",
+      "concept_id": "protein_denaturation",
+      "level": 3,
+      "progress": {
+        "current": 35,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ek important concept aur - DENATURATION! Jab protein ka 3D structure (secondary/tertiary) disturb ho jaye due to heat, pH change, chemicals - to kehte hain protein DENATURE ho gaya. Function loss ho jata hai but primary structure (sequence) same rahta hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir example? Daily life mein kab hota hai ye?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Perfect example - EGG! Jab tum ande ko fry karte ho, transparent egg white solid white ban jata hai. Wo DENATURATION hai! Heat se protein ki shape change ho gayi. Wapas liquid nahi ban sakta - irreversible hai most cases mein! Ye practical example SSC mein aata hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Ohhh... to cooking = denaturation! Mind-blowing connection! 🍳"
+        }
+      ],
+      "navigation": {
+        "next": "card_36_quiz_proteins_1",
+        "button_text": "Proteins Quiz ➔"
+      }
+    },
+    {
+      "card_id": "card_36_quiz_proteins_1",
+      "card_slug": "card_36_quiz_proteins_1",
+      "type": "quiz",
+      "concept_id": "proteins_quiz_1",
+      "level": 3,
+      "progress": {
+        "current": 36,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "How many ESSENTIAL amino acids are required by the human body from dietary sources?",
+        "options": [
+          {
+            "id": "A",
+            "text": "7"
+          },
+          {
+            "id": "B",
+            "text": "9"
+          },
+          {
+            "id": "C",
+            "text": "11"
+          },
+          {
+            "id": "D",
+            "text": "20"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "There are 9 essential amino acids that the human body cannot synthesize and must be obtained from food. The mnemonic 'PVT TIM HALL' helps remember them: Phenylalanine, Valine, Threonine, Tryptophan, Isoleucine, Methionine, Histidine, Arginine (semi-essential), Leucine, Lysine. The remaining 11 are non-essential (body can synthesize). This is frequently tested in NEET and SSC exams!"
+      },
+      "navigation": {
+        "next": "card_37_quiz_proteins_2",
+        "button_text": "Next Question (2/3) ➔"
+      }
+    },
+    {
+      "card_id": "card_37_quiz_proteins_2",
+      "card_slug": "card_37_quiz_proteins_2",
+      "type": "quiz",
+      "concept_id": "proteins_quiz_2",
+      "level": 3,
+      "progress": {
+        "current": 37,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "The bond formed between two amino acids during protein synthesis is called:",
+        "options": [
+          {
+            "id": "A",
+            "text": "Glycosidic bond"
+          },
+          {
+            "id": "B",
+            "text": "Peptide bond"
+          },
+          {
+            "id": "C",
+            "text": "Hydrogen bond"
+          },
+          {
+            "id": "D",
+            "text": "Ionic bond"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "A PEPTIDE BOND (-CO-NH-) is formed when the carboxyl group (-COOH) of one amino acid reacts with the amino group (-NH₂) of another amino acid, releasing a water molecule (condensation reaction). Glycosidic bonds join monosaccharides, while hydrogen and ionic bonds are involved in maintaining protein structure but are not the primary covalent bond joining amino acids. This is a standard NEET/Railway question!"
+      },
+      "navigation": {
+        "next": "card_38_quiz_proteins_3",
+        "button_text": "Last Question (3/3) ➔"
+      }
+    },
+    {
+      "card_id": "card_38_quiz_proteins_3",
+      "card_slug": "card_38_quiz_proteins_3",
+      "type": "quiz",
+      "concept_id": "proteins_quiz_3",
+      "level": 3,
+      "progress": {
+        "current": 38,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Hemoglobin exhibits which level of protein structure due to its multiple polypeptide chains?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Primary structure"
+          },
+          {
+            "id": "B",
+            "text": "Secondary structure"
+          },
+          {
+            "id": "C",
+            "text": "Tertiary structure"
+          },
+          {
+            "id": "D",
+            "text": "Quaternary structure"
+          }
+        ],
+        "correct_option_id": "D",
+        "explanation": "Hemoglobin exhibits QUATERNARY STRUCTURE because it consists of 4 polypeptide chains (2 alpha chains and 2 beta chains) assembled together. Quaternary structure only exists when multiple polypeptide subunits combine to form a functional protein. Primary = sequence, Secondary = local folding (helix/sheet), Tertiary = 3D shape of single chain. This structural hierarchy is heavily tested in NEET!"
+      },
+      "navigation": {
+        "next": "card_39_milestone_proteins",
+        "button_text": "Check Result ➔"
+      }
+    },
+    {
+      "card_id": "card_39_milestone_proteins",
+      "card_slug": "card_39_milestone_proteins",
+      "type": "milestone",
+      "concept_id": "proteins_module_complete",
+      "level": 3,
+      "progress": {
+        "current": 39,
+        "total": 72
+      },
+      "milestone_payload": {
+        "title": "💪 PROTEINS MODULE CONQUERED!",
+        "badge_emoji": "💪",
+        "completed_topic": "Amino Acids, Peptide Bonds & Protein Structure",
+        "xp_earned": 100,
+        "milestone_progress": "Module 3/8 Clear",
+        "motivational_quote": "From peptide bonds to quaternary structures - you're building knowledge like proteins build bodies! Now let's explore the energy reserves - Lipids 🧈"
+      },
+      "navigation": {
+        "next": "card_40_lipids_intro",
+        "button_text": "Start Lipids Module ➔"
+      }
+    },
+    {
+      "card_id": "card_40_lipids_intro",
+      "card_slug": "card_40_lipids_intro",
+      "type": "chat",
+      "concept_id": "lipids_introduction",
+      "level": 4,
+      "progress": {
+        "current": 40,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, gharpe koi dieting kar raha hai kya? Sabse pehle kya chhodenge?"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir ghee, butter, oil - sab fats! 😄"
+        },
+        {
+          "speaker": "aman",
+          "text": "Exactly! Ye sab LIPIDS hain! Lipids = biomolecules jo water mein INSOLUBLE hain but organic solvents (like chloroform, benzene) mein soluble hain. Ye property sabse important definition hai - HYDROPHOBIC (water-fearing) nature! Greek word 'lipos' = fat se aaya hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir to lipids = fats & oils? Kya difference hai dono mein?"
+        }
+      ],
+      "navigation": {
+        "next": "card_41_fats_vs_oils",
+        "button_text": "Fats vs Oils ➔"
+      }
+    },
+    {
+      "card_id": "card_41_fats_vs_oils",
+      "card_slug": "card_41_fats_vs_oils",
+      "type": "chat",
+      "concept_id": "fats_oils_difference",
+      "level": 4,
+      "progress": {
+        "current": 41,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Brilliant question! Physical state ka difference:\n\n🧈 FATS = Room temperature pe SOLID (ghee, butter) - generally from ANIMALS\n🌻 OILS = Room temperature pe LIQUID (mustard oil, sunflower oil) - generally from PLANTS\n\nChemical difference:\n✅ Fats = SATURATED fatty acids (single bonds)\n✅ Oils = UNSATURATED fatty acids (double bonds)\n\nYe BPSC ka favorite trap hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir saturated aur unsaturated ka matlab kya hai? Chemistry terms lag rahe hain! 🤔"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! Saturated = carbon chain mein sirf SINGLE BONDS (C-C), maximum hydrogen atoms attached. Unsaturated = carbon chain mein DOUBLE BONDS (C=C), kam hydrogen. Double bond ki wajah se bending aati hai chain mein, isliye liquid rahta hai! Ye concept NEET chemistry+biology dono mein aata hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Ohhh... structure ka effect physical state pe! Cool! 😃"
+        }
+      ],
+      "navigation": {
+        "next": "card_42_lipid_classification",
+        "button_text": "Lipid Types ➔"
+      }
+    },
+    {
+      "card_id": "card_42_lipid_classification",
+      "card_slug": "card_42_lipid_classification",
+      "type": "chat",
+      "concept_id": "lipid_classification",
+      "level": 4,
+      "progress": {
+        "current": 42,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Lipids ko mainly 3 categories mein divide karte hain:\n\n1️⃣ SIMPLE LIPIDS - Fats & Oils (fatty acids + glycerol)\n2️⃣ COMPOUND LIPIDS - Lipid + extra group (Phospholipids, Glycolipids)\n3️⃣ DERIVED LIPIDS - Cholesterol, Steroids, Vitamins (A, D, E, K)\n\nSabse important simple lipids ko detail mein samajhte hain pehle!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir simple lipids kisse bante hain? Building blocks?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Perfect question! Simple lipids = GLYCEROL (3-carbon alcohol) + FATTY ACIDS (long carbon chains with -COOH group). Teen fatty acids ek glycerol se jud te hain ester bonds se - banta hai TRIGLYCERIDE! Ye sabse common storage form hai body mein!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Triglyceride matlab teen fatty acids? Tri = three! 💡"
+        }
+      ],
+      "navigation": {
+        "next": "card_43_triglycerides",
+        "button_text": "Triglycerides detail ➔"
+      }
+    },
+    {
+      "card_id": "card_43_triglycerides",
+      "card_slug": "card_43_triglycerides",
+      "type": "chat",
+      "concept_id": "triglycerides_structure",
+      "level": 4,
+      "progress": {
+        "current": 43,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Exactly! TRIGLYCERIDE = 1 Glycerol + 3 Fatty Acids. Jab inki bonding hoti hai, 3 water molecules nikalte hain (esterification reaction). Blood test mein 'triglyceride level' check karte hain - high level heart disease ka risk factor hai! Doctors ye term use karte hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir to body mein energy storage triglycerides form mein hota hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Absolutely! Lipids give MAXIMUM energy - 9 kcal/gram (carbohydrates aur proteins sirf 4 kcal/gram dete hain). Isliye body long-term energy storage ke liye fats use karti hai. Adipose tissue (fat cells) mein ye stored rahta hai. Marathon runners ka fat utilize hota hai extended energy ke liye!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Wow! To fats = compact energy storage! 😮"
+        }
+      ],
+      "navigation": {
+        "next": "card_44_phospholipids",
+        "button_text": "Phospholipids ➔"
+      }
+    },
+    {
+      "card_id": "card_44_phospholipids",
+      "card_slug": "card_44_phospholipids",
+      "type": "chat",
+      "concept_id": "phospholipids_membrane",
+      "level": 4,
+      "progress": {
+        "current": 44,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ab compound lipids ki baat karte hain! Sabse important hain PHOSPHOLIPIDS - ye CELL MEMBRANE ka main structural component hain! Structure: Glycerol + 2 Fatty acids + 1 Phosphate group. Ye AMPHIPATHIC hote hain - matlab ek part hydrophilic (phosphate head - water loving), ek part hydrophobic (fatty acid tails - water fearing)!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir amphipathic matlab dono nature? Water ko like bhi karte hain, dislike bhi? 🤔"
+        },
+        {
+          "speaker": "aman",
+          "text": "Perfect understanding! Isliye cell membrane mein phospholipid BILAYER banta hai - heads bahar (water ki taraf), tails andar (away from water). Ye arrangement cell ko structure deta hai aur selectively permeable banata hai! Ye concept NEET mein sabse zyada questions deta hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Ohhh... to cell membrane lipid ki bani hai, protein ki nahi! 😮"
+        }
+      ],
+      "navigation": {
+        "next": "card_45_steroids_cholesterol",
+        "button_text": "Steroids & Cholesterol ➔"
+      }
+    },
+    {
+      "card_id": "card_45_steroids_cholesterol",
+      "card_slug": "card_45_steroids_cholesterol",
+      "type": "chat",
+      "concept_id": "steroids_cholesterol",
+      "level": 4,
+      "progress": {
+        "current": 45,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ab derived lipids! CHOLESTEROL = sabse famous steroid! Structure completely different - 4 fused carbon rings (no glycerol, no fatty acids). Ye lipid metabolism ka starting material hai. Cholesterol se bante hain:\n✅ Sex hormones (Testosterone, Estrogen)\n✅ Vitamin D\n✅ Bile salts (digestion mein help)\n\nLekin excess cholesterol = arterial blockage = heart disease!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir to cholesterol good bhi hai, bad bhi hai? Confusion! 😕"
+        },
+        {
+          "speaker": "aman",
+          "text": "Exactly the point! Cholesterol ESSENTIAL hai (cell membrane component, hormone synthesis), but EXCESS harmful hai. Doctors HDL (good cholesterol) aur LDL (bad cholesterol) check karte hain. HDL arteries ko clean rakhta hai, LDL blockage create karta hai. Balance chahiye! SSC mein ye HDL-LDL full form zaroor puchte hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir full forms kya hain? 😊"
+        }
+      ],
+      "navigation": {
+        "next": "card_46_hdl_ldl",
+        "button_text": "HDL vs LDL ➔"
+      }
+    },
+    {
+      "card_id": "card_46_hdl_ldl",
+      "card_slug": "card_46_hdl_ldl",
+      "type": "chat",
+      "concept_id": "hdl_ldl_full_forms",
+      "level": 4,
+      "progress": {
+        "current": 46,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Full forms yaad rakho:\n\n✅ HDL = High Density Lipoprotein (GOOD cholesterol - 'H' for Healthy!)\n✅ LDL = Low Density Lipoprotein (BAD cholesterol - 'L' for Lethal!)\n\nLipoproteins = lipid + protein complexes jo blood mein cholesterol transport karte hain. HDL liver ki taraf le jata hai (removal), LDL arteries mein deposit karta hai (blockage). Ye medical terms exam mein aate hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Perfect Sir! H for Healthy, L for Lethal - easy trick! 😄"
+        },
+        {
+          "speaker": "aman",
+          "text": "Exactly! Ek aur important group - FAT-SOLUBLE VITAMINS (A, D, E, K) - ye bhi lipid category mein aate hain kyunki ye fats mein dissolve hote hain. Water-soluble vitamins (B, C) proteins ke saath absorb hote hain. Ye classification Railway aur SSC mein direct aata hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir mnemonic hai kya fat-soluble ke liye?"
+        }
+      ],
+      "navigation": {
+        "next": "card_47_vitamins_lipid",
+        "button_text": "Vitamin trick ➔"
+      }
+    },
+    {
+      "card_id": "card_47_vitamins_lipid",
+      "card_slug": "card_47_vitamins_lipid",
+      "type": "chat",
+      "concept_id": "fat_soluble_vitamins",
+      "level": 4,
+      "progress": {
+        "current": 47,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Haan! Fat-soluble vitamins = A, D, E, K - mnemonic: 'A DEKh lo' (A-D-E-K)! 😄\n\n🥕 Vitamin A - Vision (retinol)\n☀️ Vitamin D - Bones (calcium absorption)\n🌰 Vitamin E - Antioxidant\n🥬 Vitamin K - Blood clotting ('K' for Koagulation!)\n\nYe fat ke saath absorb hote hain intestine mein, isliye biliary obstruction mein inki deficiency ho jati hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "A DEKh lo! 😂 Ye to kabhi nahi bhulega Sir!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Perfect! Ab lipids ka quick quiz lete hain - concepts clear hain ya nahi check karte hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Ready Sir! 💪"
+        }
+      ],
+      "navigation": {
+        "next": "card_48_quiz_lipids_1",
+        "button_text": "Lipids Quiz ➔"
+      }
+    },
+    {
+      "card_id": "card_48_quiz_lipids_1",
+      "card_slug": "card_48_quiz_lipids_1",
+      "type": "quiz",
+      "concept_id": "lipids_quiz_1",
+      "level": 4,
+      "progress": {
+        "current": 48,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "What is the primary structural component of cell membranes?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Triglycerides"
+          },
+          {
+            "id": "B",
+            "text": "Phospholipids"
+          },
+          {
+            "id": "C",
+            "text": "Cholesterol"
+          },
+          {
+            "id": "D",
+            "text": "Glycolipids"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "PHOSPHOLIPIDS form the primary structural component of cell membranes through their phospholipid bilayer arrangement. They are amphipathic molecules with hydrophilic phosphate heads facing outward (toward water) and hydrophobic fatty acid tails facing inward (away from water). While cholesterol and glycolipids are also present in membranes, phospholipids constitute the fundamental structural framework. This is a core NEET concept!"
+      },
+      "navigation": {
+        "next": "card_49_quiz_lipids_2",
+        "button_text": "Next Question (2/3) ➔"
+      }
+    },
+    {
+      "card_id": "card_49_quiz_lipids_2",
+      "card_slug": "card_49_quiz_lipids_2",
+      "type": "quiz",
+      "concept_id": "lipids_quiz_2",
+      "level": 4,
+      "progress": {
+        "current": 49,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Which of the following is considered 'good cholesterol'?",
+        "options": [
+          {
+            "id": "A",
+            "text": "LDL - Low Density Lipoprotein"
+          },
+          {
+            "id": "B",
+            "text": "HDL - High Density Lipoprotein"
+          },
+          {
+            "id": "C",
+            "text": "VLDL - Very Low Density Lipoprotein"
+          },
+          {
+            "id": "D",
+            "text": "Triglycerides"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "HDL (High Density Lipoprotein) is known as 'good cholesterol' because it transports cholesterol from arteries to the liver for removal, thereby preventing arterial blockage. LDL (Low Density Lipoprotein) is 'bad cholesterol' as it deposits cholesterol in arteries causing blockages. The mnemonic 'H for Healthy, L for Lethal' helps remember this. This is frequently asked in SSC and Railway exams!"
+      },
+      "navigation": {
+        "next": "card_50_quiz_lipids_3",
+        "button_text": "Last Question (3/3) ➔"
+      }
+    },
+    {
+      "card_id": "card_50_quiz_lipids_3",
+      "card_slug": "card_50_quiz_lipids_3",
+      "type": "quiz",
+      "concept_id": "lipids_quiz_3",
+      "level": 4,
+      "progress": {
+        "current": 50,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Which vitamins are classified as fat-soluble?",
+        "options": [
+          {
+            "id": "A",
+            "text": "B and C"
+          },
+          {
+            "id": "B",
+            "text": "A, D, E, K"
+          },
+          {
+            "id": "C",
+            "text": "B1, B2, B6, B12"
+          },
+          {
+            "id": "D",
+            "text": "C and K"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Fat-soluble vitamins are A, D, E, and K (mnemonic: 'A DEKh lo'). These vitamins dissolve in fats and are absorbed in the intestine along with dietary lipids. They can be stored in the body's fatty tissues. Vitamins B and C are water-soluble. Deficiency of fat-soluble vitamins can occur in conditions affecting fat absorption like biliary obstruction. This classification is heavily tested in BPSC and Railway exams!"
+      },
+      "navigation": {
+        "next": "card_51_milestone_lipids",
+        "button_text": "Check Result ➔"
+      }
+    },
+    {
+      "card_id": "card_51_milestone_lipids",
+      "card_slug": "card_51_milestone_lipids",
+      "type": "milestone",
+      "concept_id": "lipids_module_complete",
+      "level": 4,
+      "progress": {
+        "current": 51,
+        "total": 72
+      },
+      "milestone_payload": {
+        "title": "🧈 LIPIDS MODULE MASTERED!",
+        "badge_emoji": "🧈",
+        "completed_topic": "Fats, Phospholipids, Cholesterol & Fat-soluble Vitamins",
+        "xp_earned": 100,
+        "milestone_progress": "Module 4/8 Clear",
+        "motivational_quote": "From triglycerides to cell membranes - you've unlocked the energy vaults! Now decode the genetic blueprint - Nucleic Acids 🧬"
+      },
+      "navigation": {
+        "next": "card_52_nucleic_acids_intro",
+        "button_text": "Start Nucleic Acids Module ➔"
+      }
+    },
+    {
+      "card_id": "card_52_nucleic_acids_intro",
+      "card_slug": "card_52_nucleic_acids_intro",
+      "type": "chat",
+      "concept_id": "nucleic_acids_introduction",
+      "level": 5,
+      "progress": {
+        "current": 52,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, tumhare eyes ka color kahan se decide hota hai? Ya phir height, skin color - ye sab kahan se aata hai?"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir parents se! Genes se! DNA! 😊"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul sahi! DNA = Genetic material! Ye information store karta hai jo generation to generation transfer hota hai. DNA aur RNA dono NUCLEIC ACIDS hain. 'Nucleic' isliye kyunki ye sabse pehle cell NUCLEUS mein discover hue the. Friedrich Miescher ne 1869 mein discover kiya tha - 'nuclein' naam diya tha!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir DNA aur RNA mein kya difference hai? Dono genetic material hain?"
+        }
+      ],
+      "navigation": {
+        "next": "card_53_dna_vs_rna",
+        "button_text": "DNA vs RNA ➔"
+      }
+    },
+    {
+      "card_id": "card_53_dna_vs_rna",
+      "card_slug": "card_53_dna_vs_rna",
+      "type": "chat",
+      "concept_id": "dna_rna_differences",
+      "level": 5,
+      "progress": {
+        "current": 53,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Perfect question! Major differences:\n\n🧬 DNA (DeoxyriboNucleic Acid):\n- DOUBLE stranded (helix)\n- Sugar = Deoxyribose\n- Bases = A, T, G, C\n- Genetic STORAGE\n- Mainly in NUCLEUS\n\n🔬 RNA (RiboNucleic Acid):\n- SINGLE stranded\n- Sugar = Ribose\n- Bases = A, U, G, C (Uracil instead of Thymine!)\n- Genetic TRANSFER\n- Mainly in CYTOPLASM"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir RNA mein Uracil hai, DNA mein Thymine? Ye kya twist hai! 😮"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! Ye NEET ka most important difference hai! T (Thymine) sirf DNA mein, U (Uracil) sirf RNA mein. Aur 'Deoxy' ka matlab 'one oxygen less' - deoxyribose mein ribose se ek oxygen kam hai. Ye structural difference DNA ko MORE STABLE banata hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Achhaaaa... isliye DNA long-term storage ke liye perfect hai! 💡"
+        }
+      ],
+      "navigation": {
+        "next": "card_54_nucleotide_structure",
+        "button_text": "Building blocks ➔"
+      }
+    },
+    {
+      "card_id": "card_54_nucleotide_structure",
+      "card_slug": "card_54_nucleotide_structure",
+      "type": "chat",
+      "concept_id": "nucleotide_structure",
+      "level": 5,
+      "progress": {
+        "current": 54,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "DNA aur RNA dono NUCLEOTIDES se bane hote hain! Ek nucleotide ke 3 parts hote hain:\n\n1️⃣ NITROGENOUS BASE (A/T/G/C/U)\n2️⃣ PENTOSE SUGAR (Ribose ya Deoxyribose - 5 carbon)\n3️⃣ PHOSPHATE GROUP (PO₄³⁻)\n\nYe teen components mil ke ek nucleotide banate hain. Nucleotides ki chain = polynucleotide = DNA/RNA!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir ye bases - A, T, G, C, U - inke full names kya hain? 🤔"
+        },
+        {
+          "speaker": "aman",
+          "text": "Excellent question! Ye do types ke hote hain:\n\n🔸 PURINES (double ring) - Adenine (A), Guanine (G)\n🔸 PYRIMIDINES (single ring) - Cytosine (C), Thymine (T), Uracil (U)\n\nMnemonic: 'PURe As Gold' (Purines = A, G), 'CUT the PYRamid' (Pyrimidines = C, U, T). Ye classification NEET ka hot favorite hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "PURe As Gold! CUT the PYRamid! Awesome Sir! 😄"
+        }
+      ],
+      "navigation": {
+        "next": "card_55_chargaff_rule",
+        "button_text": "Base Pairing Rules ➔"
+      }
+    },
+    {
+      "card_id": "card_55_chargaff_rule",
+      "card_slug": "card_55_chargaff_rule",
+      "type": "chat",
+      "concept_id": "chargaff_base_pairing",
+      "level": 5,
+      "progress": {
+        "current": 55,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ab ek crucial rule - CHARGAFF'S RULE (Erwin Chargaff, 1950)! DNA mein base pairing specific hoti hai:\n\n✅ Adenine (A) always pairs with Thymine (T) - 2 hydrogen bonds\n✅ Guanine (G) always pairs with Cytosine (C) - 3 hydrogen bonds\n\nIsliye DNA mein: Amount of A = Amount of T, Amount of G = Amount of C. Ye Watson-Crick ko DNA double helix model banana mein help kiya!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir to A-T aur G-C hamesha saath mein! But why? Koi reason hai? 🤔"
+        },
+        {
+          "speaker": "aman",
+          "text": "Perfect curiosity! Complementary base pairing! Purine (double ring) hamesha Pyrimidine (single ring) ke saath pair karta hai - taaki width consistent rahe (2 rings + 1 ring = 3 total). A-T-A-T galat hai (2+2=4), G-C-G-C bhi galat (2+2=4). Sirf A-T aur G-C = perfect 3-ring width!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Wow! Structure ka perfect mathematics! Mind-blowing! 🤯"
+        }
+      ],
+      "navigation": {
+        "next": "card_56_watson_crick",
+        "button_text": "Double Helix Discovery ➔"
+      }
+    },
+    {
+      "card_id": "card_56_watson_crick",
+      "card_slug": "card_56_watson_crick",
+      "type": "chat",
+      "concept_id": "watson_crick_double_helix",
+      "level": 5,
+      "progress": {
+        "current": 56,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "DNA ka DOUBLE HELIX model - James Watson aur Francis Crick ne 1953 mein propose kiya! Rosalind Franklin ki X-ray crystallography images (Photo 51) se crucial data mila tha. Inhe 1962 mein Nobel Prize mila (unfortunately Franklin 1958 mein hi pass ho gayi thi - Nobel posthumously nahi milta)!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir ye to unfair hai! Franklin ka contribution sabse important tha! 😟"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan, history mein unfortunately aisa hua. Lekin ab sabko pata hai Franklin ki importance! DNA structure: 2 antiparallel strands (ek 5'→3' direction, dusra 3'→5'), sugar-phosphate backbone bahar, nitrogenous bases andar (paired). Helix ka diameter 2 nm, ek complete turn = 10 base pairs. Ye exact measurements BPSC puchta hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir antiparallel matlab kya? Opposite directions? 🤔"
+        }
+      ],
+      "navigation": {
+        "next": "card_57_antiparallel",
+        "button_text": "Antiparallel concept ➔"
+      }
+    },
+    {
+      "card_id": "card_57_antiparallel",
+      "card_slug": "card_57_antiparallel",
+      "type": "chat",
+      "concept_id": "antiparallel_strands",
+      "level": 5,
+      "progress": {
+        "current": 57,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Exactly! Antiparallel = opposite directions. Nucleotide chains mein directionality hoti hai - 5' end (phosphate side) aur 3' end (hydroxyl side). Ek strand 5'→3' chal rahi hai, to complementary strand 3'→5' hogi. Jaise ek seedhi pe do log opposite directions mein chadh rahe ho!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Ohhh... to proper fitting ke liye opposite directions! Got it! 😊"
+        },
+        {
+          "speaker": "aman",
+          "text": "Perfect! Ab RNA ki baat karte hain. RNA ke 3 main types hain:\n\n1️⃣ mRNA (messenger RNA) - genetic message le jata hai\n2️⃣ tRNA (transfer RNA) - amino acids transport karta hai\n3️⃣ rRNA (ribosomal RNA) - ribosome ka structural component\n\nTeeno protein synthesis mein involve hain - ye Central Dogma of Biology hai: DNA → RNA → Protein!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir ye Central Dogma kya hai? Important lagta hai! 🤔"
+        }
+      ],
+      "navigation": {
+        "next": "card_58_central_dogma",
+        "button_text": "Central Dogma ➔"
+      }
+    },
+    {
+      "card_id": "card_58_central_dogma",
+      "card_slug": "card_58_central_dogma",
+      "type": "chat",
+      "concept_id": "central_dogma_biology",
+      "level": 5,
+      "progress": {
+        "current": 58,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "CENTRAL DOGMA (Francis Crick, 1958) = Genetic information flow ka fundamental principle:\n\nDNA ➔ (Transcription) ➔ RNA ➔ (Translation) ➔ PROTEIN\n\n📖 TRANSCRIPTION = DNA se mRNA banna (nucleus mein)\n🔨 TRANSLATION = mRNA se Protein banna (ribosome pe)\n\nYe one-way flow hai normally - information DNA se protein tak jata hai. Ye NEET ka most fundamental concept hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Wow! To DNA blueprint hai, RNA messenger hai, Protein final product! Perfect flow! 💡"
+        },
+        {
+          "speaker": "aman",
+          "text": "Exactly! Biomolecules ka ye interconnection samajhna bahut important hai. Ab quick nucleic acids quiz lete hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Ready Sir! 🚀"
+        }
+      ],
+      "navigation": {
+        "next": "card_59_quiz_nucleic_1",
+        "button_text": "Nucleic Acids Quiz ➔"
+      }
+    },
+    {
+      "card_id": "card_59_quiz_nucleic_1",
+      "card_slug": "card_59_quiz_nucleic_1",
+      "type": "quiz",
+      "concept_id": "nucleic_acids_quiz_1",
+      "level": 5,
+      "progress": {
+        "current": 59,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Which nitrogenous base is found in RNA but NOT in DNA?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Adenine"
+          },
+          {
+            "id": "B",
+            "text": "Thymine"
+          },
+          {
+            "id": "C",
+            "text": "Uracil"
+          },
+          {
+            "id": "D",
+            "text": "Guanine"
+          }
+        ],
+        "correct_option_id": "C",
+        "explanation": "URACIL (U) is found only in RNA, while THYMINE (T) is found only in DNA. In RNA, Uracil pairs with Adenine just as Thymine pairs with Adenine in DNA. Both A and G (purines) and C (pyrimidine) are found in both DNA and RNA. This T vs U distinction is one of the most frequently tested concepts in NEET and SSC!"
+      },
+      "navigation": {
+        "next": "card_60_quiz_nucleic_2",
+        "button_text": "Next Question (2/3) ➔"
+      }
+    },
+    {
+      "card_id": "card_60_quiz_nucleic_2",
+      "card_slug": "card_60_quiz_nucleic_2",
+      "type": "quiz",
+      "concept_id": "nucleic_acids_quiz_2",
+      "level": 5,
+      "progress": {
+        "current": 60,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "According to Chargaff's rule, if a DNA sample contains 20% Adenine, what percentage of Cytosine will it contain?",
+        "options": [
+          {
+            "id": "A",
+            "text": "20%"
+          },
+          {
+            "id": "B",
+            "text": "30%"
+          },
+          {
+            "id": "C",
+            "text": "40%"
+          },
+          {
+            "id": "D",
+            "text": "60%"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "According to Chargaff's rule: A = T and G = C. If A = 20%, then T = 20% (total A+T = 40%). The remaining percentage = 60% must be G+C combined. Since G = C, each will be 30%. This calculation-based question is very common in NEET and BPSC exams!"
+      },
+      "navigation": {
+        "next": "card_61_quiz_nucleic_3",
+        "button_text": "Last Question (3/3) ➔"
+      }
+    },
+    {
+      "card_id": "card_61_quiz_nucleic_3",
+      "card_slug": "card_61_quiz_nucleic_3",
+      "type": "quiz",
+      "concept_id": "nucleic_acids_quiz_3",
+      "level": 5,
+      "progress": {
+        "current": 61,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Who proposed the Double Helix model of DNA structure in 1953?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Rosalind Franklin and Maurice Wilkins"
+          },
+          {
+            "id": "B",
+            "text": "James Watson and Francis Crick"
+          },
+          {
+            "id": "C",
+            "text": "Friedrich Miescher and Erwin Chargaff"
+          },
+          {
+            "id": "D",
+            "text": "Gregor Mendel and Thomas Hunt Morgan"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "James Watson and Francis Crick proposed the Double Helix model of DNA in 1953, using crucial X-ray crystallography data from Rosalind Franklin (Photo 51). They received the Nobel Prize in 1962 along with Maurice Wilkins. Friedrich Miescher discovered nuclein (1869), and Erwin Chargaff formulated base-pairing rules (1950). This historical timeline is heavily tested in BPSC and UPSC Prelims!"
+      },
+      "navigation": {
+        "next": "card_62_milestone_nucleic",
+        "button_text": "Check Result ➔"
+      }
+    },
+    {
+      "card_id": "card_62_milestone_nucleic",
+      "card_slug": "card_62_milestone_nucleic",
+      "type": "milestone",
+      "concept_id": "nucleic_acids_module_complete",
+      "level": 5,
+      "progress": {
+        "current": 62,
+        "total": 72
+      },
+      "milestone_payload": {
+        "title": "🧬 NUCLEIC ACIDS MODULE CONQUERED!",
+        "badge_emoji": "🧬",
+        "completed_topic": "DNA, RNA, Nucleotides & Central Dogma",
+        "xp_earned": 100,
+        "milestone_progress": "Module 5/8 Clear",
+        "motivational_quote": "From double helix to genetic code - you've unlocked life's blueprint! Now master the catalysts of life - Enzymes ⚡"
+      },
+      "navigation": {
+        "next": "card_63_enzymes_intro",
+        "button_text": "Start Enzymes Module ➔"
+      }
+    },
+    {
+      "card_id": "card_63_enzymes_intro",
+      "card_slug": "card_63_enzymes_intro",
+      "type": "chat",
+      "concept_id": "enzymes_introduction",
+      "level": 6,
+      "progress": {
+        "current": 63,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, khana khane ke 2-3 ghante mein digest ho jata hai. Lekin agar same khana lab mein beaker mein rakho bina enzymes ke - kitne din lagenge digest hone mein?"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir shayad kabhi digest hi nahi hoga? Ya bahut slow? 🤔"
+        },
+        {
+          "speaker": "aman",
+          "text": "Exactly! Weeks ya months lag sakte hain! Enzyme ki wajah se 2-3 hours mein ho jata hai - ye hai BIOLOGICAL CATALYSTS ka power! ENZYMES = protein molecules jo chemical reactions ko SPEED UP karte hain without themselves getting consumed. Greek word 'en' (in) + 'zyme' (yeast) se aaya hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir catalyst matlab chemistry mein padhaya tha... wo reaction fast karte hain but khud change nahi hote!"
+        }
+      ],
+      "navigation": {
+        "next": "card_64_enzyme_catalyst",
+        "button_text": "Biocatalyst properties ➔"
+      }
+    },
+    {
+      "card_id": "card_64_enzyme_catalyst",
+      "card_slug": "card_64_enzyme_catalyst",
+      "type": "chat",
+      "concept_id": "enzyme_as_catalyst",
+      "level": 6,
+      "progress": {
+        "current": 64,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Perfect recall! Enzymes bhi catalysts hain but BIOLOGICAL (living systems mein). Properties:\n\n✅ Speed up reactions (million times faster!)\n✅ Remain UNCHANGED after reaction\n✅ Required in SMALL amounts\n✅ Highly SPECIFIC (ek enzyme = ek reaction usually)\n✅ Work at body temperature (37°C)\n\nInorganic catalysts ko high temperature chahiye, enzymes mild conditions mein kaam karte hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir enzyme bhi protein hai na? To kya sab proteins enzymes hain? 😕"
+        },
+        {
+          "speaker": "aman",
+          "text": "Good confusion! MOST enzymes are proteins (structural proteins nahi - functional proteins hain). But exception bhi hai - kuch RNA molecules bhi catalytic activity dikhate hain, unhe RIBOZYMES kehte hain! Lekin generally exam mein 'enzymes = proteins' hi consider karte hain. NEET mein ye exception puch sakte hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Ribozymes! RNA + Enzyme! Cool name! 😄"
+        }
+      ],
+      "navigation": {
+        "next": "card_65_enzyme_nomenclature",
+        "button_text": "Enzyme Naming ➔"
+      }
+    },
+    {
+      "card_id": "card_65_enzyme_nomenclature",
+      "card_slug": "card_65_enzyme_nomenclature",
+      "type": "chat",
+      "concept_id": "enzyme_nomenclature",
+      "level": 6,
+      "progress": {
+        "current": 65,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Enzymes ka naam usually inka substrate (jis cheez pe kaam karte hain) + suffix '-ase' se banta hai:\n\n🔹 Maltose ko break kare = MALTASE\n🔹 Lipids ko break kare = LIPASE\n🔹 Proteins ko break kare = PROTEASE\n🔹 Starch ko break kare = AMYLASE\n\nKuch enzymes ke old traditional names bhi hain like Pepsin, Trypsin (ye '-ase' rule follow nahi karte)."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir to naam se hi pata chal jata hai enzyme kya karta hai! Smart naming! 😊"
+        },
+        {
+          "speaker": "aman",
+          "text": "Exactly! International Union of Biochemistry (IUB) ne enzymes ko 6 MAJOR CLASSES mein divide kiya hai:\n\n1️⃣ OXIDOREDUCTASES - oxidation-reduction\n2️⃣ TRANSFERASES - group transfer\n3️⃣ HYDROLASES - hydrolysis (water se break)\n4️⃣ LYASES - addition/removal without hydrolysis\n5️⃣ ISOMERASES - isomerization (rearrangement)\n6️⃣ LIGASES - joining with ATP\n\nYe classification NEET ka important topic hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir ye sab yaad kaise rakhe? 6 classes! 😰"
+        }
+      ],
+      "navigation": {
+        "next": "card_66_enzyme_mnemonic",
+        "button_text": "Mnemonic trick ➔"
+      }
+    },
+    {
+      "card_id": "card_66_enzyme_mnemonic",
+      "card_slug": "card_66_enzyme_mnemonic",
+      "type": "chat",
+      "concept_id": "enzyme_classification_mnemonic",
+      "level": 6,
+      "progress": {
+        "current": 66,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Mnemonic: 'Oh! TILL (Tomorrow I'll Ligase)'\n\nO - Oxidoreductases\nT - Transferases\nH - Hydrolases\nL - Lyases\nI - Isomerases\nL - Ligases\n\nIn 6 classes mein HYDROLASES sabse common hain digestive system mein - pepsin, trypsin, lipase, amylase sab hydrolases hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Oh TILL! Perfect Sir! Ab kabhi nahi bhulega! 😄"
+        },
+        {
+          "speaker": "aman",
+          "text": "Great! Ab mechanism samajhte hain - enzyme kaam kaise karta hai? Iske liye LOCK AND KEY model aur INDUCED FIT model hain. Pehle simple Lock-Key dekho!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Ji Sir! 🔑"
+        }
+      ],
+      "navigation": {
+        "next": "card_67_lock_key_model",
+        "button_text": "Lock & Key Model ➔"
+      }
+    },
+    {
+      "card_id": "card_67_lock_key_model",
+      "card_slug": "card_67_lock_key_model",
+      "type": "chat",
+      "concept_id": "lock_key_enzyme_model",
+      "level": 6,
+      "progress": {
+        "current": 67,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "LOCK AND KEY MODEL (Emil Fischer, 1894):\n\n🔒 ENZYME = Lock (fixed shape)\n🔑 SUBSTRATE = Key (specific shape)\n\nSubstrate enzyme ke ACTIVE SITE pe perfectly fit hota hai (jaise key lock mein). Active site = enzyme ka specific region jahan substrate bind hota hai. Reaction hota hai, products bante hain, enzyme free ho jata hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir to ek enzyme sirf ek substrate ke saath kaam karega? Perfect fit chahiye! 🔐"
+        },
+        {
+          "speaker": "aman",
+          "text": "Exactly! Ye SPECIFICITY explain karta hai. Lekin is model mein problem hai - enzyme completely RIGID assume karta hai. Actually enzyme thoda FLEXIBLE hota hai. Isliye better model aaya - INDUCED FIT MODEL (Daniel Koshland, 1958). Usme enzyme active site thoda change karta hai jab substrate bind hota hai - jaise glove hand pe fit hone ke liye adjust ho!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Ohhh... to enzyme rigid nahi, flexible hai! More realistic! 💡"
+        }
+      ],
+      "navigation": {
+        "next": "card_68_quiz_enzymes_1",
+        "button_text": "Enzymes Quiz ➔"
+      }
+    },
+    {
+      "card_id": "card_68_quiz_enzymes_1",
+      "card_slug": "card_68_quiz_enzymes_1",
+      "type": "quiz",
+      "concept_id": "enzymes_quiz_1",
+      "level": 6,
+      "progress": {
+        "current": 68,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Which class of enzymes catalyzes hydrolysis reactions (breaking bonds using water)?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Oxidoreductases"
+          },
+          {
+            "id": "B",
+            "text": "Transferases"
+          },
+          {
+            "id": "C",
+            "text": "Hydrolases"
+          },
+          {
+            "id": "D",
+            "text": "Ligases"
+          }
+        ],
+        "correct_option_id": "C",
+        "explanation": "HYDROLASES catalyze hydrolysis reactions where water is used to break chemical bonds. Most digestive enzymes are hydrolases - pepsin, trypsin (protein digestion), lipase (fat digestion), amylase (starch digestion). Oxidoreductases catalyze oxidation-reduction, transferases transfer groups, and ligases join molecules using ATP. This enzyme classification is crucial for NEET!"
+      },
+      "navigation": {
+        "next": "card_69_quiz_enzymes_2",
+        "button_text": "Next Question (2/3) ➔"
+      }
+    },
+    {
+      "card_id": "card_69_quiz_enzymes_2",
+      "card_slug": "card_69_quiz_enzymes_2",
+      "type": "quiz",
+      "concept_id": "enzymes_quiz_2",
+      "level": 6,
+      "progress": {
+        "current": 69,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "The specific region on an enzyme where the substrate binds is called:",
+        "options": [
+          {
+            "id": "A",
+            "text": "Allosteric site"
+          },
+          {
+            "id": "B",
+            "text": "Active site"
+          },
+          {
+            "id": "C",
+            "text": "Binding domain"
+          },
+          {
+            "id": "D",
+            "text": "Catalytic center"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "The ACTIVE SITE is the specific region on an enzyme where the substrate binds and the catalytic reaction occurs. According to the Lock and Key model, the substrate fits precisely into the active site. The Induced Fit model suggests the active site adjusts its shape slightly upon substrate binding. This is a fundamental concept tested in SSC and Railway exams!"
+      },
+      "navigation": {
+        "next": "card_70_quiz_enzymes_3",
+        "button_text": "Last Question (3/3) ➔"
+      }
+    },
+    {
+      "card_id": "card_70_quiz_enzymes_3",
+      "card_slug": "card_70_quiz_enzymes_3",
+      "type": "quiz",
+      "concept_id": "enzymes_quiz_3",
+      "level": 6,
+      "progress": {
+        "current": 70,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Ribozymes are:",
+        "options": [
+          {
+            "id": "A",
+            "text": "Protein enzymes found in ribosomes"
+          },
+          {
+            "id": "B",
+            "text": "RNA molecules with catalytic activity"
+          },
+          {
+            "id": "C",
+            "text": "Enzymes that synthesize ribose sugar"
+          },
+          {
+            "id": "D",
+            "text": "Ribosomal proteins with no enzymatic function"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "RIBOZYMES are RNA molecules that possess catalytic activity, acting as biological catalysts. This is an exception to the general rule that 'all enzymes are proteins'. The discovery of ribozymes was revolutionary and led to the Nobel Prize (Thomas Cech and Sidney Altman, 1989). This exception is a favorite NEET and BPSC trap question!"
+      },
+      "navigation": {
+        "next": "card_71_summary_revision",
+        "button_text": "Check Result ➔"
+      }
+    },
+    {
+      "card_id": "card_71_summary_revision",
+      "card_slug": "card_71_summary_revision",
+      "type": "summary",
+      "concept_id": "biomolecules_complete_revision",
+      "level": 6,
+      "progress": {
+        "current": 71,
+        "total": 72
+      },
+      "summary_payload": {
+        "title": "⚡ OFFICER-LEVEL QUICK REVISION",
+        "revision_points": [
+          {
+            "topic": "Biomolecule Elements",
+            "point": "99% biomolecules contain C, H, O, N, P, S. Minerals (Ca, Fe, Mg) are inorganic - NOT biomolecules. [BPSC trap]"
+          },
+          {
+            "topic": "Non-Reducing Sugar",
+            "point": "Sucrose is NON-REDUCING (both free groups involved in glycosidic bond). Glucose, Maltose, Lactose are reducing sugars. [NEET favorite]"
+          },
+          {
+            "topic": "Essential Amino Acids",
+            "point": "9 essential amino acids (PVT TIM HALL). 11 non-essential. Peptide bond = -CO-NH- linkage between amino acids. [SSC direct fact]"
+          },
+          {
+            "topic": "DNA vs RNA",
+            "point": "DNA: Double-stranded, Deoxyribose sugar, Thymine base. RNA: Single-stranded, Ribose sugar, Uracil base. [Most tested difference]"
+          },
+          {
+            "topic": "Chargaff's Rule",
+            "point": "In DNA: A = T, G = C (base pairing). Purines (A, G - double ring) pair with Pyrimidines (C, T, U - single ring). [Calculation questions]"
+          },
+          {
+            "topic": "Protein Structure Levels",
+            "point": "Primary (sequence) → Secondary (helix/sheet) → Tertiary (3D folding) → Quaternary (multiple chains). Hemoglobin has quaternary. [NEET hierarchy]"
+          },
+          {
+            "topic": "Lipid Classification",
+            "point": "Fats = saturated (solid), Oils = unsaturated (liquid). HDL = good cholesterol, LDL = bad cholesterol. Fat-soluble vitamins: A, D, E, K ('A DEKh lo'). [SSC+Railway]"
+          },
+          {
+            "topic": "Polysaccharides Ranking",
+            "point": "Cellulose (most abundant) > Chitin (2nd most) > Starch/Glycogen. Humans cannot digest cellulose (no cellulase enzyme). [UPSC fact]"
+          },
+          {
+            "topic": "Enzyme Classification",
+            "point": "6 classes: Oxidoreductases, Transferases, Hydrolases, Lyases, Isomerases, Ligases ('Oh TILL'). Most digestive enzymes = Hydrolases. [NEET classification]"
+          },
+          {
+            "topic": "Central Dogma",
+            "point": "DNA → (Transcription) → RNA → (Translation) → Protein. mRNA, tRNA, rRNA all involved in protein synthesis. [Fundamental concept]"
+          }
+        ]
+      },
+      "navigation": {
+        "next": "card_72_final_challenge",
+        "button_text": "Final Officer Challenge ➔"
+      }
+    },
+    {
+      "card_id": "card_72_final_challenge",
+      "card_slug": "card_72_final_challenge",
+      "type": "final_quiz",
+      "concept_id": "biomolecules_final_officer_quiz",
+      "level": 6,
+      "progress": {
+        "current": 72,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Consider the following statements about biomolecules:\n\n1. All enzymes are proteins, and ribozymes are the exception being catalytic RNA.\n2. Sucrose gives a positive Benedict's test due to its free reducing group.\n3. The pentose sugar in DNA is ribose, while in RNA it is deoxyribose.\n4. Cellulose is more abundant than chitin on Earth.\n\nHow many of the above statements are CORRECT?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Only one"
+          },
+          {
+            "id": "B",
+            "text": "Only two"
+          },
+          {
+            "id": "C",
+            "text": "Only three"
+          },
+          {
+            "id": "D",
+            "text": "All four"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Statement-wise analysis:\n\n1. ✅ CORRECT - Most enzymes are proteins, but ribozymes (catalytic RNA) are the exception.\n\n2. ❌ INCORRECT - Sucrose is a NON-REDUCING sugar (both free aldehyde/ketone groups involved in glycosidic bond), hence gives NEGATIVE Benedict's test.\n\n3. ❌ INCORRECT - REVERSED! DNA has DEOXYRIBOSE (one oxygen less - hence 'deoxy'), RNA has RIBOSE.\n\n4. ✅ CORRECT - Cellulose is the MOST abundant organic polymer on Earth, Chitin is the SECOND most abundant.\n\nOnly 2 statements (1 and 4) are correct. This multi-statement format is classic BPSC/UPSC Prelims style designed to test deep conceptual clarity!"
+      },
+      "navigation": {
+        "next": "card_73_completion",
+        "button_text": "Complete Chapter 🏆"
+      }
+    },
+    {
+      "card_id": "card_73_completion",
+      "card_slug": "card_73_completion",
+      "type": "milestone",
+      "concept_id": "biomolecules_chapter_complete",
+      "level": 6,
+      "progress": {
+        "current": 72,
+        "total": 72
+      },
+      "milestone_payload": {
+        "title": "🏆 BIOMOLECULES CHAPTER CONQUERED!",
+        "badge_emoji": "🧬",
+        "completed_topic": "Complete Biomolecules - Chemistry of Life",
+        "xp_earned": 500,
+        "milestone_progress": "Chapter 100% Complete - Officer Level Unlocked! 🎖️",
+        "motivational_quote": "From glucose to DNA, from enzymes to lipids - you've mastered the molecular foundation of life! You're now equipped to crack BPSC, SSC, Railway, NEET questions on Biomolecules. Keep this momentum going! 🚀💪"
+      },
+      "navigation": {
+        "next": null,
+        "button_text": "Back to Dashboard 🏠"
+      }
+    }
+  ]
+}
