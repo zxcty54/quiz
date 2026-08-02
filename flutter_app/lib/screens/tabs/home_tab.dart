@@ -92,7 +92,7 @@ class _HomeTabState extends State<HomeTab> {
           _buildTrustHeroBanner(),
           const SizedBox(height: 16),
 
-          // 📰 3. ULTRA-PREMIUM MINIMALIST NEWS CAROUSEL
+          // 📰 3. ULTRA-PREMIUM LIGHT MINIMALIST NEWS CAROUSEL
           _buildBiharNewsSection(),
           const SizedBox(height: 16),
 
@@ -123,24 +123,17 @@ class _HomeTabState extends State<HomeTab> {
     );
   }
 
-  // 📰 ULTRA-PREMIUM MINIMALIST NEWS WIDGET
+  // 📰 ULTRA-PREMIUM MINIMALIST NEWS WIDGET SECTION
   Widget _buildBiharNewsSection() {
     if (_isLoadingNews) {
       return Container(
-        height: 120,
+        height: 130,
         decoration: BoxDecoration(
-          color: widget.isDarkMode ? const Color(0xFF1E293B) : Colors.white,
+          color: widget.isDarkMode ? const Color(0xFF1E293B) : const Color(0xFFF8FAFC),
           borderRadius: BorderRadius.circular(16),
-          boxShadow: [
-            if(!widget.isDarkMode) BoxShadow(
-              color: Colors.black.withOpacity(0.03),
-              blurRadius: 15,
-              offset: const Offset(0, 5),
-            )
-          ],
         ),
         child: const Center(
-          child: CircularProgressIndicator(color: Color(0xFF0284C7), strokeWidth: 2),
+          child: CircularProgressIndicator(color: Color(0xFF4338CA), strokeWidth: 2),
         ),
       );
     }
@@ -150,33 +143,42 @@ class _HomeTabState extends State<HomeTab> {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        // CLEAN HEADER
-        const Row(
+        // CLEAN HEADER WITH PILL TAG
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Icon(Icons.bolt_rounded, color: Color(0xFF0284C7), size: 18),
-            SizedBox(width: 6),
-            Text(
-              'Bihar News Flash',
-              style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+            const Row(
+              children: [
+                Text('📰 ', style: TextStyle(fontSize: 16)),
+                Text(
+                  'Bihar Daily Bulletin',
+                  style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold, letterSpacing: -0.2),
+                ),
+              ],
+            ),
+            Container(
+              padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
+              decoration: BoxDecoration(
+                color: const Color(0xFFEEF2FF),
+                borderRadius: BorderRadius.circular(12),
+                border: Border.all(color: const Color(0xFFC7D2FE)),
+              ),
+              child: Text(
+                'LIVE • ${_activeNewsIndex + 1}/${_biharNewsList.length}',
+                style: const TextStyle(
+                  color: Color(0xFF4338CA),
+                  fontSize: 10,
+                  fontWeight: FontWeight.extrabold,
+                ),
+              ),
             ),
           ],
         ),
         const SizedBox(height: 10),
 
-        // ULTRA-MINIMALIST CAROUSEL
-        Container(
-          height: 190,
-          decoration: BoxDecoration(
-            color: widget.isDarkMode ? const Color(0xFF1E293B) : Colors.white,
-            borderRadius: BorderRadius.circular(16),
-            boxShadow: [
-              if(!widget.isDarkMode) BoxShadow(
-                color: Colors.black.withOpacity(0.04), // Ultra-subtle premium shadow
-                blurRadius: 20,
-                offset: const Offset(0, 8),
-              )
-            ],
-          ),
+        // ULTRA-PREMIUM HORIZONTAL CAROUSEL
+        SizedBox(
+          height: 195,
           child: PageView.builder(
             controller: _newsPageController,
             itemCount: _biharNewsList.length,
@@ -187,24 +189,26 @@ class _HomeTabState extends State<HomeTab> {
             },
             itemBuilder: (context, index) {
               final news = _biharNewsList[index];
-              return _buildUltraMinimalistNewsCard(news);
+              return _buildUltraPremiumNewsCard(news);
             },
           ),
         ),
-        const SizedBox(height: 8),
+        const SizedBox(height: 10),
 
-        // CLEAN DOTS INDICATOR
+        // MINIMALIST SMOOTH DOTS INDICATOR
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: List.generate(_biharNewsList.length, (index) {
-            return Container(
-              width: _activeNewsIndex == index ? 14 : 6,
-              height: 6,
-              margin: const EdgeInsets.symmetric(horizontal: 3),
+            bool isActive = _activeNewsIndex == index;
+            return AnimatedContainer(
+              duration: const Duration(milliseconds: 250),
+              margin: const EdgeInsets.symmetric(horizontal: 2.5),
+              height: 5,
+              width: isActive ? 16 : 5,
               decoration: BoxDecoration(
-                color: _activeNewsIndex == index
-                    ? const Color(0xFF0284C7)
-                    : (widget.isDarkMode ? Colors.white24 : Colors.grey.shade300),
+                color: isActive
+                    ? const Color(0xFF4338CA)
+                    : (widget.isDarkMode ? Colors.white24 : const Color(0xFFE2E8F0)),
                 borderRadius: BorderRadius.circular(10),
               ),
             );
@@ -214,63 +218,89 @@ class _HomeTabState extends State<HomeTab> {
     );
   }
 
-  // 📇 ULTRA-MINIMALIST NEWS CARD DESIGN
-  Widget _buildUltraMinimalistNewsCard(Map<String, dynamic> news) {
+  // 📇 ULTRA-PREMIUM LIGHT MINIMALIST CARD DESIGN
+  Widget _buildUltraPremiumNewsCard(Map<String, dynamic> news) {
     final List bullets = (news['bullets'] as List?) ?? [];
 
-    return Padding(
-      padding: const EdgeInsets.all(16),
+    return Container(
+      margin: const EdgeInsets.only(right: 6),
+      padding: const EdgeInsets.all(15),
+      decoration: BoxDecoration(
+        color: widget.isDarkMode ? const Color(0xFF1E293B) : Colors.white,
+        borderRadius: BorderRadius.circular(16),
+        border: Border.all(
+          color: widget.isDarkMode ? const Color(0xFF334155) : const Color(0xFFE0E7FF),
+          width: 1.2,
+        ),
+        boxShadow: [
+          BoxShadow(
+            color: const Color(0xFF4338CA).withOpacity(widget.isDarkMode ? 0.0 : 0.04),
+            blurRadius: 16,
+            offset: const Offset(0, 6),
+          ),
+        ],
+      ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          // COMPACT TOP BAR
+          // TOP TAGS ROW
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Container(
-                padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
+                padding: const EdgeInsets.symmetric(horizontal: 9, vertical: 3.5),
                 decoration: BoxDecoration(
-                  color: const Color(0xFFEFF6FF), // Ultra-light blue accent
-                  borderRadius: BorderRadius.circular(6),
+                  color: widget.isDarkMode ? const Color(0xFF312E81) : const Color(0xFFEEF2FF),
+                  borderRadius: BorderRadius.circular(8),
                 ),
                 child: Text(
-                  news['exam_tag'] ?? '🎯 BPSC',
-                  style: const TextStyle(
-                    color: Color(0xFF1E40AF),
+                  news['exam_tag'] ?? '🎯 BPSC Special',
+                  style: TextStyle(
+                    color: widget.isDarkMode ? const Color(0xFFC7D2FE) : const Color(0xFF3730A3),
                     fontSize: 10,
                     fontWeight: FontWeight.bold,
                   ),
                 ),
               ),
-              Text(
-                news['date'] ?? '',
-                style: TextStyle(
-                  color: widget.isDarkMode ? Colors.white60 : Colors.grey.shade600,
-                  fontSize: 11,
-                  fontWeight: FontWeight.w600,
-                ),
-              ),
+              Row(
+                children: [
+                  Icon(
+                    Icons.schedule_rounded,
+                    size: 12,
+                    color: widget.isDarkMode ? Colors.white60 : const Color(0xFF64748B),
+                  ),
+                  const SizedBox(width: 4),
+                  Text(
+                    news['date'] ?? '',
+                    style: TextStyle(
+                      color: widget.isDarkMode ? Colors.white60 : const Color(0xFF64748B),
+                      fontSize: 10.5,
+                      fontWeight: FontWeight.w600,
+                    ),
+                  ),
+                ],
+              )
             ],
           ),
 
-          const SizedBox(height: 12),
+          const SizedBox(height: 10),
 
-          // TITLE (HEAVY BOLD)
+          // NEWS TITLE
           Text(
             news['title'] ?? '',
             maxLines: 2,
             overflow: TextOverflow.ellipsis,
             style: TextStyle(
-              fontSize: 16,
-              fontWeight: FontWeight.w800, // Extra bold for premium feel
+              fontSize: 15,
+              fontWeight: FontWeight.bold,
               color: widget.isDarkMode ? Colors.white : const Color(0xFF0F172A),
-              height: 1.25,
+              height: 1.3,
             ),
           ),
 
-          const SizedBox(height: 12),
+          const SizedBox(height: 10),
 
-          // BULLET POINTS (CLEAN DOTS)
+          // BULLET POINTS (MAX 2 BULLETS WITH INDIGO ACCENT DOTS)
           Expanded(
             child: ListView(
               physics: const NeverScrollableScrollPhysics(),
@@ -281,11 +311,11 @@ class _HomeTabState extends State<HomeTab> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Container(
-                        margin: const EdgeInsets.only(top: 5),
+                        margin: const EdgeInsets.only(top: 6),
                         width: 5,
                         height: 5,
                         decoration: const BoxDecoration(
-                          color: Color(0xFF0284C7), // Minimalist blue dot
+                          color: Color(0xFF4338CA),
                           shape: BoxShape.circle,
                         ),
                       ),
@@ -296,7 +326,7 @@ class _HomeTabState extends State<HomeTab> {
                           maxLines: 2,
                           overflow: TextOverflow.ellipsis,
                           style: TextStyle(
-                            fontSize: 12.5,
+                            fontSize: 11.5,
                             color: widget.isDarkMode ? Colors.white70 : const Color(0xFF334155),
                             height: 1.35,
                           ),
@@ -359,7 +389,9 @@ class _HomeTabState extends State<HomeTab> {
       padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
         gradient: LinearGradient(
-          colors: widget.isDarkMode ? [const Color(0xFF0F766E), const Color(0xFF115E59)] : [const Color(0xFF0F766E), const Color(0xFF0D9488)],
+          colors: widget.isDarkMode
+              ? [const Color(0xFF0F766E), const Color(0xFF115E59)]
+              : [const Color(0xFF0F766E), const Color(0xFF0D9488)],
           begin: Alignment.topLeft,
           end: Alignment.bottomRight,
         ),
@@ -599,7 +631,7 @@ class _HomeTabState extends State<HomeTab> {
                       style: TextStyle(
                         fontSize: 16,
                         fontWeight: FontWeight.bold,
-                        color: isDarkMode ? Colors.white : const Color(0xFF0F172A),
+                        color: widget.isDarkMode ? Colors.white : const Color(0xFF0F172A),
                       ),
                     ),
                   ),
@@ -637,7 +669,7 @@ class _HomeTabState extends State<HomeTab> {
                             style: TextStyle(
                               fontSize: 13,
                               fontWeight: FontWeight.w500,
-                              color: isDarkMode ? Colors.white70 : const Color(0xFF334155),
+                              color: widget.isDarkMode ? Colors.white70 : const Color(0xFF334155),
                             ),
                           ),
                         ),
