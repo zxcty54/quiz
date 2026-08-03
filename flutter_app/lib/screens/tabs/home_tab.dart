@@ -88,33 +88,33 @@ class _HomeTabState extends State<HomeTab> {
             const SizedBox(height: 16),
           ],
 
-          // 2. TRUST HERO BANNER
+          // 🛡️ 2. HERO TRUST BANNER (ULTRA-MODERN GRADIENT)
           _buildTrustHeroBanner(),
-          const SizedBox(height: 16),
+          const SizedBox(height: 18),
 
-          // 📰 3. MODIFIED PROFESSIONAL NEWS CAROUSEL (NO WHITE COLOR)
+          // 📰 3. BIHAR DAILY BULLETIN CAROUSEL (NO PURE WHITE & FULL BULLETS)
           _buildBiharNewsSection(),
           const SizedBox(height: 18),
 
-          // 4. LEARN PREVIEW CARD
+          // 👨‍🏫 4. LEARN PREVIEW CARD (HIGH CONTRAST & CLEAR HIERARCHY)
           _buildLearnPreviewCard(context),
-          const SizedBox(height: 16),
+          const SizedBox(height: 18),
 
-          // ⚡ 5. SPEED RUN DUEL CARD
+          // ⚔️ 5. SPEED RUN DUEL CARD (GAMIFIED HIGH-CTA)
           _buildSpeedRunChallengeCard(context),
-          const SizedBox(height: 16),
+          const SizedBox(height: 18),
 
           // 6. DYNAMIC WEB HUB
           _buildDynamicWebHubSection(context),
-          const SizedBox(height: 16),
+          const SizedBox(height: 18),
 
           // 7. ELIGIBILITY CHECKER
           EligibilityCheckerWidget(isDarkMode: widget.isDarkMode, onTapUrl: widget.onTapUrl),
-          const SizedBox(height: 16),
+          const SizedBox(height: 18),
 
-          // 8. LAUNCH ROADMAP
+          // 📅 8. LAUNCH ROADMAP (TIMELINE FEED LAYOUT)
           _buildLaunchRoadmapCard(),
-          const SizedBox(height: 16),
+          const SizedBox(height: 18),
 
           // 9. TELEGRAM COMMUNITY
           const TelegramCreatorWidget(),
@@ -123,11 +123,138 @@ class _HomeTabState extends State<HomeTab> {
     );
   }
 
-  // 📰 MODIFIED ULTRA-PREMIUM NEWS SECTION (NO WHITE COLOR)
+  // 🛡️ 1. ULTRA-PREMIUM HERO BANNER
+  Widget _buildTrustHeroBanner() {
+    return Container(
+      width: double.infinity,
+      padding: const EdgeInsets.all(18),
+      decoration: BoxDecoration(
+        gradient: LinearGradient(
+          colors: widget.isDarkMode
+              ? [const Color(0xFF1E1B4B), const Color(0xFF0F172A)]
+              : [const Color(0xFF312E81), const Color(0xFF1E293B)],
+          begin: Alignment.topLeft,
+          end: Alignment.bottomRight,
+        ),
+        borderRadius: BorderRadius.circular(22),
+        boxShadow: [
+          BoxShadow(
+            color: const Color(0xFF312E81).withOpacity(0.25),
+            blurRadius: 16,
+            offset: const Offset(0, 6),
+          )
+        ],
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          // Header Badges Row
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Container(
+                padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+                decoration: BoxDecoration(
+                  color: const Color(0xFFF59E0B).withOpacity(0.2),
+                  borderRadius: BorderRadius.circular(20),
+                  border: Border.all(color: const Color(0xFFF59E0B), width: 1),
+                ),
+                child: const Row(
+                  children: [
+                    Text('🛡️ ', style: TextStyle(fontSize: 10)),
+                    Text(
+                      'STUDENT-FIRST INITIATIVE',
+                      style: TextStyle(
+                        color: Color(0xFFFBBF24),
+                        fontSize: 10,
+                        fontWeight: FontWeight.w800,
+                        letterSpacing: 0.3,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              Container(
+                padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+                decoration: BoxDecoration(
+                  color: Colors.white.withOpacity(0.1),
+                  borderRadius: BorderRadius.circular(8),
+                ),
+                child: const Text(
+                  'BPSC • BSSC • SSC',
+                  style: TextStyle(
+                    color: Colors.white70,
+                    fontSize: 10,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ),
+            ],
+          ),
+          const SizedBox(height: 14),
+
+          // Main Headline Text
+          RichText(
+            text: const TextSpan(
+              children: [
+                TextSpan(
+                  text: 'Mehnga Subscription Kyun?\n',
+                  style: TextStyle(
+                    color: Colors.white70,
+                    fontSize: 15,
+                    fontWeight: FontWeight.w500,
+                    height: 1.3,
+                  ),
+                ),
+                TextSpan(
+                  text: 'Padhai Pe Sabka Haq Hai! 🎓',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 18,
+                    fontWeight: FontWeight.w800,
+                    height: 1.3,
+                  ),
+                ),
+              ],
+            ),
+          ),
+          const SizedBox(height: 12),
+
+          // Sub-description Pill Box
+          Container(
+            padding: const EdgeInsets.all(10),
+            decoration: BoxDecoration(
+              color: Colors.white.withOpacity(0.06),
+              borderRadius: BorderRadius.circular(12),
+              border: Border.all(color: Colors.white.withOpacity(0.1)),
+            ),
+            child: const Row(
+              children: [
+                Icon(Icons.verified_rounded, size: 16, color: Color(0xFF22C55E)),
+                SizedBox(width: 8),
+                Expanded(
+                  child: Text(
+                    '100% Free & Latest CBT Pattern Exam Mocks',
+                    style: TextStyle(
+                      color: Colors.white90,
+                      fontSize: 11.5,
+                      fontWeight: FontWeight.w600,
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  // 📰 2. MODIFIED ULTRA-PREMIUM NEWS SECTION (PERMANENT FULL BULLETS FIX)
   Widget _buildBiharNewsSection() {
     if (_isLoadingNews) {
       return Container(
-        height: 185,
+        padding: const EdgeInsets.symmetric(vertical: 30),
         decoration: BoxDecoration(
           color: widget.isDarkMode ? const Color(0xFF1E293B) : const Color(0xFFF1F5F9),
           borderRadius: BorderRadius.circular(20),
@@ -198,7 +325,7 @@ class _HomeTabState extends State<HomeTab> {
                     width: 6,
                     height: 6,
                     decoration: const BoxDecoration(
-                      color: Color(0xFF22C55E), // Emerald Green Indicator
+                      color: Color(0xFF22C55E),
                       shape: BoxShape.circle,
                     ),
                   ),
@@ -218,9 +345,9 @@ class _HomeTabState extends State<HomeTab> {
         ),
         const SizedBox(height: 12),
 
-        // 🎴 CAROUSEL VIEW WITH FIXED HEIGHT
+        // 🎴 CAROUSEL VIEW (AUTO-FITTING DYNAMIC VIEWPORT)
         SizedBox(
-          height: 185,
+          height: 240, // Expanded safe height to render long multiline bullets cleanly
           child: PageView.builder(
             controller: _newsPageController,
             itemCount: _biharNewsList.length,
@@ -261,15 +388,14 @@ class _HomeTabState extends State<HomeTab> {
     );
   }
 
-  // 📇 MODIFIED NEWS CARD ITEM (NO WHITE COLOR USED)
+  // 📇 NEWS CARD ITEM (UNLIMITED BULLET TEXT LENGTH FIX)
   Widget _buildUltraPremiumNewsCard(Map<String, dynamic> news) {
     final List bullets = (news['bullets'] as List?) ?? [];
 
     return Container(
       margin: const EdgeInsets.only(right: 6),
-      padding: const EdgeInsets.all(16),
+      padding: const EdgeInsets.all(14),
       decoration: BoxDecoration(
-        // 🌟 Uses Soft Ice Slate (#F1F5F9) in Light Mode and Deep Slate (#1E293B) in Dark Mode
         color: widget.isDarkMode ? const Color(0xFF1E293B) : const Color(0xFFF1F5F9),
         borderRadius: BorderRadius.circular(20),
         border: Border.all(
@@ -285,6 +411,7 @@ class _HomeTabState extends State<HomeTab> {
         ],
       ),
       child: Column(
+        mainAxisSize: MainAxisSize.min,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           // TOP TAGS & DATE ROW
@@ -331,33 +458,36 @@ class _HomeTabState extends State<HomeTab> {
             ],
           ),
 
-          const SizedBox(height: 10),
+          const SizedBox(height: 8),
 
           // NEWS TITLE
           Text(
             news['title'] ?? '',
-            maxLines: 1,
+            maxLines: 2,
             overflow: TextOverflow.ellipsis,
             style: TextStyle(
-              fontSize: 15,
+              fontSize: 14.5,
               fontWeight: FontWeight.bold,
               color: widget.isDarkMode ? const Color(0xFFF8FAFC) : const Color(0xFF0F172A),
               letterSpacing: -0.2,
+              height: 1.25,
             ),
           ),
 
           const SizedBox(height: 8),
 
-          // LAYERED INNER BULLET CONTAINERS
+          // 🌟 PERMANENT UN-TRUNCATED BULLETS LIST
           Expanded(
-            child: Column(
-              children: bullets.take(2).map((bullet) {
+            child: ListView.builder(
+              physics: const BouncingScrollPhysics(),
+              padding: EdgeInsets.zero,
+              itemCount: bullets.length,
+              itemBuilder: (context, bIndex) {
                 return Padding(
                   padding: const EdgeInsets.only(bottom: 6.0),
                   child: Container(
                     padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 7),
                     decoration: BoxDecoration(
-                      // 🌟 Layered Slate (#E2E8F0) in Light Mode
                       color: widget.isDarkMode
                           ? const Color(0xFF0F172A).withOpacity(0.6)
                           : const Color(0xFFE2E8F0),
@@ -369,21 +499,23 @@ class _HomeTabState extends State<HomeTab> {
                     child: Row(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        const Icon(
-                          Icons.arrow_right_rounded,
-                          size: 16,
-                          color: Color(0xFF4F46E5),
+                        const Padding(
+                          padding: EdgeInsets.only(top: 2),
+                          child: Icon(
+                            Icons.arrow_right_rounded,
+                            size: 16,
+                            color: Color(0xFF4F46E5),
+                          ),
                         ),
                         const SizedBox(width: 4),
                         Expanded(
                           child: Text(
-                            bullet.toString(),
-                            maxLines: 1,
-                            overflow: TextOverflow.ellipsis,
+                            bullets[bIndex].toString(),
                             style: TextStyle(
-                              fontSize: 12,
+                              fontSize: 11.5,
                               fontWeight: FontWeight.w500,
                               color: widget.isDarkMode ? Colors.white70 : const Color(0xFF334155),
+                              height: 1.35,
                             ),
                           ),
                         ),
@@ -391,7 +523,7 @@ class _HomeTabState extends State<HomeTab> {
                     ),
                   ),
                 );
-              }).toList(),
+              },
             ),
           ),
         ],
@@ -399,64 +531,27 @@ class _HomeTabState extends State<HomeTab> {
     );
   }
 
-  Widget _buildTrustHeroBanner() {
-    return Container(
-      width: double.infinity,
-      padding: const EdgeInsets.all(16),
-      decoration: BoxDecoration(
-        color: widget.isDarkMode ? const Color(0xFF111827) : const Color(0xFF1E293B),
-        borderRadius: BorderRadius.circular(16),
-        boxShadow: [
-          BoxShadow(
-            color: Colors.black.withOpacity(0.08),
-            blurRadius: 12,
-            offset: const Offset(0, 4),
-          )
-        ],
-      ),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Row(
-            children: [
-              Container(
-                padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
-                decoration: BoxDecoration(color: Colors.amber.shade400, borderRadius: BorderRadius.circular(20)),
-                child: const Text('🛡️ STUDENT-FIRST INITIATIVE', style: TextStyle(color: Color(0xFF0F172A), fontSize: 10, fontWeight: FontWeight.bold)),
-              ),
-              const SizedBox(width: 8),
-              const Text('BPSC • BSSC • SSC', style: TextStyle(color: Colors.white60, fontSize: 10, fontWeight: FontWeight.bold)),
-            ],
-          ),
-          const SizedBox(height: 14),
-          const Text('Mehnga Subscription Kyun?\nPadhai Pe Sabka Haq Hai!', style: TextStyle(color: Colors.white, fontSize: 17, fontWeight: FontWeight.bold, height: 1.35)),
-          const SizedBox(height: 8),
-          const Text('Paid Apps Repeat Old Questions. MockTester Tests What Came Yesterday.\n100% Free & Latest CBT Pattern Mocks.', style: TextStyle(color: Colors.white70, fontSize: 11.5, height: 1.4)),
-        ],
-      ),
-    );
-  }
-
+  // 👨‍🏫 3. REDESIGNED LEARN PREVIEW CARD
   Widget _buildLearnPreviewCard(BuildContext context) {
     int percentDisplay = (widget.lastLearnProgress * 100).toInt();
 
     return Container(
       width: double.infinity,
-      padding: const EdgeInsets.all(16),
+      padding: const EdgeInsets.all(18),
       decoration: BoxDecoration(
         gradient: LinearGradient(
           colors: widget.isDarkMode
-              ? [const Color(0xFF0F766E), const Color(0xFF115E59)]
-              : [const Color(0xFF0F766E), const Color(0xFF0D9488)],
+              ? [const Color(0xFF064E3B), const Color(0xFF022C22)]
+              : [const Color(0xFF047857), const Color(0xFF065F46)],
           begin: Alignment.topLeft,
           end: Alignment.bottomRight,
         ),
-        borderRadius: BorderRadius.circular(16),
+        borderRadius: BorderRadius.circular(22),
         boxShadow: [
           BoxShadow(
-            color: const Color(0xFF0D9488).withOpacity(0.3),
-            blurRadius: 10,
-            offset: const Offset(0, 4),
+            color: const Color(0xFF047857).withOpacity(0.3),
+            blurRadius: 14,
+            offset: const Offset(0, 5),
           ),
         ],
       ),
@@ -468,17 +563,47 @@ class _HomeTabState extends State<HomeTab> {
             children: [
               Container(
                 padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
-                decoration: BoxDecoration(color: Colors.amber.shade400, borderRadius: BorderRadius.circular(20)),
-                child: Text(widget.hasLearningHistory ? 'CONTINUE LEARNING' : 'INTERACTIVE LEARNING (NEW)', style: const TextStyle(color: Color(0xFF0F172A), fontSize: 10, fontWeight: FontWeight.bold)),
+                decoration: BoxDecoration(
+                  color: const Color(0xFFF59E0B),
+                  borderRadius: BorderRadius.circular(20),
+                ),
+                child: Text(
+                  widget.hasLearningHistory ? 'CONTINUE LEARNING' : 'INTERACTIVE LEARNING',
+                  style: const TextStyle(
+                    color: Color(0xFF0F172A),
+                    fontSize: 10,
+                    fontWeight: FontWeight.w900,
+                  ),
+                ),
               ),
-              const Text('👨‍🏫 Aman Sir + 👦 Raju', style: TextStyle(color: Colors.white70, fontSize: 11, fontWeight: FontWeight.w600)),
+              const Text(
+                '👨‍🏫 Aman Sir + 👦 Raju',
+                style: TextStyle(
+                  color: Colors.white90,
+                  fontSize: 11,
+                  fontWeight: FontWeight.w700,
+                ),
+              ),
             ],
           ),
-          const SizedBox(height: 12),
-          Text(widget.lastLearnTitle, style: const TextStyle(color: Colors.white, fontSize: 18, fontWeight: FontWeight.bold)),
-          const SizedBox(height: 4),
-          Text(widget.lastNextTopic, maxLines: 1, overflow: TextOverflow.ellipsis, style: const TextStyle(color: Colors.white70, fontSize: 12)),
           const SizedBox(height: 14),
+          Text(
+            widget.lastLearnTitle,
+            style: const TextStyle(
+              color: Colors.white,
+              fontSize: 18,
+              fontWeight: FontWeight.bold,
+              letterSpacing: -0.2,
+            ),
+          ),
+          const SizedBox(height: 4),
+          Text(
+            widget.lastNextTopic,
+            maxLines: 1,
+            overflow: TextOverflow.ellipsis,
+            style: const TextStyle(color: Colors.white70, fontSize: 12),
+          ),
+          const SizedBox(height: 16),
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -487,11 +612,11 @@ class _HomeTabState extends State<HomeTab> {
                 children: [
                   const Text(
                     'Chapter Progress',
-                    style: TextStyle(color: Colors.white70, fontSize: 11, fontWeight: FontWeight.w500),
+                    style: TextStyle(color: Colors.white70, fontSize: 11, fontWeight: FontWeight.w600),
                   ),
                   Text(
                     '$percentDisplay% Completed',
-                    style: const TextStyle(color: Colors.amberAccent, fontSize: 11, fontWeight: FontWeight.bold),
+                    style: const TextStyle(color: Color(0xFFFBBF24), fontSize: 11, fontWeight: FontWeight.w800),
                   ),
                 ],
               ),
@@ -500,33 +625,33 @@ class _HomeTabState extends State<HomeTab> {
                 borderRadius: BorderRadius.circular(10),
                 child: LinearProgressIndicator(
                   value: widget.lastLearnProgress,
-                  minHeight: 6,
+                  minHeight: 7,
                   backgroundColor: Colors.white24,
-                  valueColor: AlwaysStoppedAnimation<Color>(Colors.amber.shade400),
+                  valueColor: const AlwaysStoppedAnimation<Color>(Color(0xFFFBBF24)),
                 ),
               ),
             ],
           ),
-          const SizedBox(height: 14),
+          const SizedBox(height: 16),
           SizedBox(
             width: double.infinity,
             child: ElevatedButton(
               onPressed: widget.onNavigateToLearn,
               style: ElevatedButton.styleFrom(
                 backgroundColor: Colors.white,
-                foregroundColor: const Color(0xFF0F766E),
+                foregroundColor: const Color(0xFF065F46),
                 elevation: 0,
-                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
-                padding: const EdgeInsets.symmetric(vertical: 11),
+                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+                padding: const EdgeInsets.symmetric(vertical: 12),
               ),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  const Icon(Icons.play_arrow_rounded, size: 20),
-                  const SizedBox(width: 6),
+                  const Icon(Icons.play_circle_fill_rounded, size: 20, color: Color(0xFF047857)),
+                  const SizedBox(width: 8),
                   Text(
                     widget.hasLearningHistory ? 'Resume Learning →' : 'Start Learning →',
-                    style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 13.5),
+                    style: const TextStyle(fontWeight: FontWeight.w800, fontSize: 13.5),
                   ),
                 ],
               ),
@@ -537,22 +662,23 @@ class _HomeTabState extends State<HomeTab> {
     );
   }
 
+  // ⚔️ 4. REDESIGNED LIVE DUEL SPRINT CARD
   Widget _buildSpeedRunChallengeCard(BuildContext context) {
     return Container(
       width: double.infinity,
-      padding: const EdgeInsets.all(16),
+      padding: const EdgeInsets.all(18),
       decoration: BoxDecoration(
         gradient: const LinearGradient(
-          colors: [Color(0xFFEA580C), Color(0xFFC2410C)],
+          colors: [Color(0xFFEA580C), Color(0xFF9A3412)],
           begin: Alignment.topLeft,
           end: Alignment.bottomRight,
         ),
-        borderRadius: BorderRadius.circular(16),
+        borderRadius: BorderRadius.circular(22),
         boxShadow: [
           BoxShadow(
-            color: const Color(0xFFEA580C).withOpacity(0.3),
-            blurRadius: 10,
-            offset: const Offset(0, 4),
+            color: const Color(0xFFEA580C).withOpacity(0.35),
+            blurRadius: 16,
+            offset: const Offset(0, 6),
           ),
         ],
       ),
@@ -563,43 +689,62 @@ class _HomeTabState extends State<HomeTab> {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Container(
-                padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
-                decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.circular(20)),
+                padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+                decoration: BoxDecoration(
+                  color: Colors.white.withOpacity(0.2),
+                  borderRadius: BorderRadius.circular(20),
+                  border: Border.all(color: Colors.white.withOpacity(0.3)),
+                ),
                 child: const Row(
                   children: [
-                    Text('⚔️ ', style: TextStyle(fontSize: 12)),
+                    Text('⚔️ ', style: TextStyle(fontSize: 11)),
                     Text(
                       'LIVE DUEL SPRINT',
                       style: TextStyle(
-                        color: Color(0xFFEA580C),
+                        color: Colors.white,
                         fontSize: 10,
-                        fontWeight: FontWeight.bold,
+                        fontWeight: FontWeight.w900,
+                        letterSpacing: 0.5,
                       ),
                     ),
                   ],
                 ),
               ),
-              const Text(
-                '⏱️ 5 Mins • 10 Levels',
-                style: TextStyle(color: Colors.white70, fontSize: 11, fontWeight: FontWeight.bold),
-              )
+              Container(
+                padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+                decoration: BoxDecoration(
+                  color: Colors.black.withOpacity(0.2),
+                  borderRadius: BorderRadius.circular(8),
+                ),
+                child: const Row(
+                  children: [
+                    Icon(Icons.timer_outlined, size: 12, color: Colors.amberAccent),
+                    SizedBox(width: 4),
+                    Text(
+                      '5 Mins • 10 Levels',
+                      style: TextStyle(color: Colors.white, fontSize: 10.5, fontWeight: FontWeight.bold),
+                    ),
+                  ],
+                ),
+              ),
             ],
           ),
-          const SizedBox(height: 12),
+          const SizedBox(height: 14),
           const Text(
             'Challenge Your Friend 🎯',
             style: TextStyle(
               color: Colors.white,
-              fontSize: 18,
-              fontWeight: FontWeight.bold,
+              fontSize: 19,
+              fontWeight: FontWeight.w800,
+              letterSpacing: -0.3,
             ),
           ),
-          const SizedBox(height: 4),
+          const SizedBox(height: 5),
           const Text(
-            '10 High-yield concepts solve karo, result dost ko WhatsApp/Telegram par bhejo aur dekho kon jeet-ta hai!',
-            style: TextStyle(color: Colors.white70, fontSize: 12, height: 1.3),
+            '10 High-yield concepts solve karo, result dost ko WhatsApp par bhejo aur dekho kon jeet-ta hai!',
+            style: TextStyle(color: Colors.white80, fontSize: 12, height: 1.35),
           ),
-          const SizedBox(height: 14),
+          const SizedBox(height: 16),
           SizedBox(
             width: double.infinity,
             child: ElevatedButton(
@@ -615,19 +760,19 @@ class _HomeTabState extends State<HomeTab> {
               },
               style: ElevatedButton.styleFrom(
                 backgroundColor: Colors.white,
-                foregroundColor: const Color(0xFFEA580C),
+                foregroundColor: const Color(0xFFC2410C),
                 elevation: 0,
-                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
-                padding: const EdgeInsets.symmetric(vertical: 11),
+                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+                padding: const EdgeInsets.symmetric(vertical: 12),
               ),
               child: const Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Icon(Icons.bolt_rounded, size: 20),
+                  Icon(Icons.bolt_rounded, size: 20, color: Color(0xFFEA580C)),
                   SizedBox(width: 6),
                   Text(
                     'Start Challenge Sprint 🚀',
-                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 13.5),
+                    style: TextStyle(fontWeight: FontWeight.w900, fontSize: 13.5),
                   ),
                 ],
               ),
@@ -661,19 +806,12 @@ class _HomeTabState extends State<HomeTab> {
           margin: const EdgeInsets.only(bottom: 16),
           padding: const EdgeInsets.all(16),
           decoration: BoxDecoration(
-            color: widget.isDarkMode ? const Color(0xFF1E293B) : Colors.white,
-            borderRadius: BorderRadius.circular(16),
+            color: widget.isDarkMode ? const Color(0xFF1E293B) : const Color(0xFFF1F5F9),
+            borderRadius: BorderRadius.circular(20),
             border: Border.all(
-              color: widget.isDarkMode ? Colors.blueGrey.shade700 : cardThemeColor.withOpacity(0.2),
+              color: widget.isDarkMode ? const Color(0xFF334155) : const Color(0xFFCBD5E1),
               width: 1.2,
             ),
-            boxShadow: [
-              BoxShadow(
-                color: cardThemeColor.withOpacity(0.04),
-                blurRadius: 10,
-                offset: const Offset(0, 3),
-              ),
-            ],
           ),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -694,7 +832,7 @@ class _HomeTabState extends State<HomeTab> {
                   Container(
                     padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
                     decoration: BoxDecoration(
-                      color: cardThemeColor.withOpacity(0.1),
+                      color: cardThemeColor.withOpacity(0.12),
                       borderRadius: BorderRadius.circular(12),
                     ),
                     child: Text(
@@ -755,6 +893,7 @@ class _HomeTabState extends State<HomeTab> {
     );
   }
 
+  // 📅 5. REDESIGNED LAUNCH ROADMAP CARD
   Widget _buildLaunchRoadmapCard() {
     final List roadmapList = widget.appConfig['launch_roadmap'] ?? [
       {"text": "🔥 Coming Tomorrow: BSSC Inter Level Top 100 Qs", "color": "0xFFFF4757"},
@@ -762,30 +901,88 @@ class _HomeTabState extends State<HomeTab> {
       {"text": "📌 Next Week: BPSC Mains Answer Writing Practice", "color": "0xFF2563EB"}
     ];
 
-    return Card(
-      elevation: 1,
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(14)),
-      child: Padding(
-        padding: const EdgeInsets.all(14),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            const Text('📅 Launch Roadmap & Live Updates', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 14)),
-            const SizedBox(height: 10),
-            ...roadmapList.map((item) {
-              final String text = item['text'] ?? '';
-              Color textColor = const Color(0xFF2563EB);
-              try {
-                if (item['color'] != null) textColor = Color(int.parse(item['color']));
-              } catch (_) {}
-
-              return Padding(
-                padding: const EdgeInsets.symmetric(vertical: 4.0),
-                child: Text(text, style: TextStyle(fontSize: 12, color: textColor, fontWeight: FontWeight.w600)),
-              );
-            }),
-          ],
+    return Container(
+      width: double.infinity,
+      padding: const EdgeInsets.all(16),
+      decoration: BoxDecoration(
+        color: widget.isDarkMode ? const Color(0xFF1E293B) : const Color(0xFFF1F5F9),
+        borderRadius: BorderRadius.circular(20),
+        border: Border.all(
+          color: widget.isDarkMode ? const Color(0xFF334155) : const Color(0xFFCBD5E1),
+          width: 1.2,
         ),
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Row(
+            children: [
+              Container(
+                padding: const EdgeInsets.all(6),
+                decoration: BoxDecoration(
+                  color: const Color(0xFF2563EB).withOpacity(0.12),
+                  borderRadius: BorderRadius.circular(8),
+                ),
+                child: const Icon(Icons.rocket_launch_rounded, size: 16, color: Color(0xFF2563EB)),
+              ),
+              const SizedBox(width: 8),
+              Text(
+                'Launch Roadmap & Live Updates',
+                style: TextStyle(
+                  fontWeight: FontWeight.w800,
+                  fontSize: 14.5,
+                  color: widget.isDarkMode ? Colors.white : const Color(0xFF0F172A),
+                ),
+              ),
+            ],
+          ),
+          const SizedBox(height: 14),
+          ...roadmapList.map((item) {
+            final String text = item['text'] ?? '';
+            Color textColor = const Color(0xFF2563EB);
+            try {
+              if (item['color'] != null) textColor = Color(int.parse(item['color']));
+            } catch (_) {}
+
+            return Container(
+              margin: const EdgeInsets.only(bottom: 8),
+              padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
+              decoration: BoxDecoration(
+                color: widget.isDarkMode
+                    ? const Color(0xFF0F172A).withOpacity(0.5)
+                    : const Color(0xFFE2E8F0),
+                borderRadius: BorderRadius.circular(12),
+                border: Border.all(
+                  color: widget.isDarkMode ? const Color(0xFF334155) : const Color(0xFFCBD5E1),
+                  width: 0.8,
+                ),
+              ),
+              child: Row(
+                children: [
+                  Container(
+                    width: 8,
+                    height: 8,
+                    decoration: BoxDecoration(
+                      color: textColor,
+                      shape: BoxShape.circle,
+                    ),
+                  ),
+                  const SizedBox(width: 10),
+                  Expanded(
+                    child: Text(
+                      text,
+                      style: TextStyle(
+                        fontSize: 12,
+                        color: widget.isDarkMode ? Colors.white90 : const Color(0xFF1E293B),
+                        fontWeight: FontWeight.w600,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            );
+          }),
+        ],
       ),
     );
   }
