@@ -2,8 +2,18 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:shared_preferences/shared_preferences.dart';
-import '../../widgets/home_widgets.dart';
-import '../sprint_challenge_screen.dart';
+import 'package:shimmer/shimmer.dart';
+import 'package:url_launcher/url_launcher.dart';
+
+import '../models/question_model.dart';
+import '../services/telegram_tracker.dart';
+import 'learn_hub_screen.dart';
+import 'profile_screen.dart';
+import 'revision_practice_screen.dart';
+import 'sectional_cbt_screen.dart';
+import 'tabs/home_tab.dart';
+import 'tabs/revision_tab.dart';
+import 'tabs/sectional_tab.dart';
 
 class HomeTab extends StatefulWidget {
   final Map<String, dynamic> appConfig;
@@ -60,14 +70,12 @@ class _HomeTabState extends State<HomeTab> {
     const String cacheKeyData = 'cached_bihar_news_json';
     const String cacheKeyDate = 'cached_bihar_news_date';
     
-    // Today's Date String (e.g., "2026-08-03")
     final String todayStr = DateTime.now().toIso8601String().split('T')[0];
     final String savedDate = prefs.getString(cacheKeyDate) ?? '';
 
     // 1. STEP A: Local Storage Check
     String? cachedJsonStr = prefs.getString(cacheKeyData);
 
-    // AGAR AAJ KA DATA PEHLE SE SAVED HAI -> ZERO NETWORK HIT!
     if (savedDate == todayStr && cachedJsonStr != null && cachedJsonStr.isNotEmpty) {
       try {
         final data = jsonDecode(cachedJsonStr);
@@ -84,13 +92,13 @@ class _HomeTabState extends State<HomeTab> {
           });
         }
         debugPrint("✅ News Loaded instantly from Local Cache (Zero Network Hit)");
-        return; // Network call bypassed!
+        return; 
       } catch (e) {
         debugPrint("Local Cache Read Error: $e");
       }
     }
 
-    // 2. STEP B: Agar naya din hai ya cache empty hai, tabhi 1 network request bhejo
+    // 2. STEP B: Network Fetch for New Day
     final String newsUrl = "https://raw.githubusercontent.com/zxcty54/quiz/main/bihar_news.json?v=${DateTime.now().day}";
     
     try {
@@ -114,7 +122,6 @@ class _HomeTabState extends State<HomeTab> {
           });
         }
 
-        // Naya Data & Today's Date Local Storage me save karo for rest of the day
         await prefs.setString(cacheKeyData, decodedBody);
         await prefs.setString(cacheKeyDate, todayStr);
         debugPrint("✅ Today's news cached locally!");
@@ -123,7 +130,6 @@ class _HomeTabState extends State<HomeTab> {
       }
     } catch (e) {
       debugPrint("Error fetching Bihar News: $e");
-      // Fallback: Network fail ho toh purana cache dikha do
       if (cachedJsonStr != null && mounted) {
         final data = jsonDecode(cachedJsonStr);
         setState(() {
@@ -156,19 +162,19 @@ class _HomeTabState extends State<HomeTab> {
             const SizedBox(height: 16),
           ],
 
-          // 🛡️ 2. HERO TRUST BANNER (ULTRA-MODERN GRADIENT)
+          // 🛡️ 2. HERO TRUST BANNER
           _buildTrustHeroBanner(),
           const SizedBox(height: 18),
 
-          // 📰 3. BIHAR DAILY BULLETIN CAROUSEL (NO VERTICAL SCROLL, SUFFICIENT HEIGHT)
+          // 📰 3. BIHAR DAILY BULLETIN CAROUSEL
           _buildBiharNewsSection(),
           const SizedBox(height: 18),
 
-          // 👨‍🏫 4. LEARN PREVIEW CARD (HIGH CONTRAST & CLEAR HIERARCHY)
+          // 👨‍🏫 4. LEARN PREVIEW CARD
           _buildLearnPreviewCard(context),
           const SizedBox(height: 18),
 
-          // ⚔️ 5. SPEED RUN DUEL CARD (GAMIFIED HIGH-CTA)
+          // ⚔️ 5. SPEED RUN DUEL CARD
           _buildSpeedRunChallengeCard(context),
           const SizedBox(height: 18),
 
@@ -180,7 +186,7 @@ class _HomeTabState extends State<HomeTab> {
           EligibilityCheckerWidget(isDarkMode: widget.isDarkMode, onTapUrl: widget.onTapUrl),
           const SizedBox(height: 18),
 
-          // 📅 8. LAUNCH ROADMAP (TIMELINE FEED LAYOUT)
+          // 📅 8. LAUNCH ROADMAP
           _buildLaunchRoadmapCard(),
           const SizedBox(height: 18),
 
@@ -313,7 +319,7 @@ class _HomeTabState extends State<HomeTab> {
     );
   }
 
-  // 📰 2. MODIFIED ULTRA-PREMIUM NEWS SECTION
+  // 📰 2. NEWS SECTION (SizedBox height increased to 360 to accommodate full text without scroll)
   Widget _buildBiharNewsSection() {
     if (_isLoadingNews) {
       return Container(
@@ -407,9 +413,9 @@ class _HomeTabState extends State<HomeTab> {
         ),
         const SizedBox(height: 12),
 
-        // CAROUSEL VIEW
+        // CAROUSEL VIEW (Height 360 for comfortable full text display)
         SizedBox(
-          height: 340,
+          height: 360,
           child: PageView.builder(
             controller: _newsPageController,
             itemCount: _biharNewsList.length,
@@ -450,7 +456,7 @@ class _HomeTabState extends State<HomeTab> {
     );
   }
 
-  // 📇 NEWS CARD ITEM
+  // 📇 NEWS CARD ITEM (FULL SENTENCES DISPLAY WITHOUT TRUNCATION/DOTS)
   Widget _buildUltraPremiumNewsCard(Map<String, dynamic> news) {
     final List bullets = (news['bullets'] as List?) ?? [];
 
@@ -537,13 +543,13 @@ class _HomeTabState extends State<HomeTab> {
 
           const SizedBox(height: 10),
 
-          // STATIC COLUMN FOR BULLETS
+          // STATIC COLUMN FOR BULLETS (FULL UNTRUNCATED TEXT)
           Column(
             children: bullets.map((bullet) {
               return Padding(
-                padding: const EdgeInsets.only(bottom: 8.0),
+                padding: const EdgeInsets.only(bottom: 6.0),
                 child: Container(
-                  padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+                  padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
                   decoration: BoxDecoration(
                     color: widget.isDarkMode
                         ? const Color(0xFF0F172A).withOpacity(0.6)
@@ -568,13 +574,12 @@ class _HomeTabState extends State<HomeTab> {
                       Expanded(
                         child: Text(
                           bullet.toString(),
-                          maxLines: 2,
-                          overflow: TextOverflow.ellipsis,
+                          // maxLines aur TextOverflow.ellipsis removed so full sentences display
                           style: TextStyle(
-                            fontSize: 12.5,
+                            fontSize: 12,
                             fontWeight: FontWeight.w500,
                             color: widget.isDarkMode ? Colors.white70 : const Color(0xFF334155),
-                            height: 1.35,
+                            height: 1.3,
                           ),
                         ),
                       ),
