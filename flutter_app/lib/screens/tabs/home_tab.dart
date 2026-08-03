@@ -52,16 +52,23 @@ class _HomeTabState extends State<HomeTab> {
     super.dispose();
   }
 
-  // 📰 FETCH LIVE BIHAR NEWS VIA JSDELIVR CDN
+  // 📰 FETCH LIVE BIHAR NEWS VIA JSDELIVR CDN (FIXED PARSING & CACHE BUSTER)
   Future<void> _fetchBiharNews() async {
-    const String newsUrl = "https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/bihar_news.json";
+    final String newsUrl = "https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/bihar_news.json?v=${DateTime.now().millisecondsSinceEpoch}";
     try {
       final res = await http.get(Uri.parse(newsUrl));
       if (res.statusCode == 200) {
         final data = jsonDecode(utf8.decode(res.bodyBytes));
         if (mounted) {
           setState(() {
-            _biharNewsList = data is List ? data : [data];
+            // ✅ FIXED PARSING: Map me se 'news_cards' key ko strictly read kiya gaya hai
+            if (data is Map && data.containsKey('news_cards')) {
+              _biharNewsList = data['news_cards'] as List<dynamic>;
+            } else if (data is List) {
+              _biharNewsList = data;
+            } else {
+              _biharNewsList = [];
+            }
             _isLoadingNews = false;
           });
         }
@@ -148,7 +155,6 @@ class _HomeTabState extends State<HomeTab> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          // Header Badges Row
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
@@ -192,8 +198,6 @@ class _HomeTabState extends State<HomeTab> {
             ],
           ),
           const SizedBox(height: 14),
-
-          // Main Headline Text
           RichText(
             text: const TextSpan(
               children: [
@@ -219,8 +223,6 @@ class _HomeTabState extends State<HomeTab> {
             ),
           ),
           const SizedBox(height: 12),
-
-          // Sub-description Pill Box
           Container(
             padding: const EdgeInsets.all(10),
             decoration: BoxDecoration(
@@ -250,7 +252,7 @@ class _HomeTabState extends State<HomeTab> {
     );
   }
 
-  // 📰 2. MODIFIED ULTRA-PREMIUM NEWS SECTION (HEIGHT = 340, NO SCROLL)
+  // 📰 2. MODIFIED ULTRA-PREMIUM NEWS SECTION
   Widget _buildBiharNewsSection() {
     if (_isLoadingNews) {
       return Container(
@@ -284,7 +286,6 @@ class _HomeTabState extends State<HomeTab> {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        // 🌟 HEADER WITH LIVE INDICATOR
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
@@ -345,7 +346,7 @@ class _HomeTabState extends State<HomeTab> {
         ),
         const SizedBox(height: 12),
 
-        // 🎴 CAROUSEL VIEW (HEIGHT INCREASED TO 340 TO FIT ALL BULLETS WITHOUT SCROLLING)
+        // CAROUSEL VIEW
         SizedBox(
           height: 340,
           child: PageView.builder(
@@ -364,7 +365,7 @@ class _HomeTabState extends State<HomeTab> {
         ),
         const SizedBox(height: 12),
 
-        // 🟢 ANIMATED INDICATOR DOTS
+        // ANIMATED INDICATOR DOTS
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: List.generate(_biharNewsList.length, (index) {
@@ -388,7 +389,7 @@ class _HomeTabState extends State<HomeTab> {
     );
   }
 
-  // 📇 NEWS CARD ITEM (STATIC COLUMN LAYOUT - NO SCROLLBAR)
+  // 📇 NEWS CARD ITEM
   Widget _buildUltraPremiumNewsCard(Map<String, dynamic> news) {
     final List bullets = (news['bullets'] as List?) ?? [];
 
@@ -475,7 +476,7 @@ class _HomeTabState extends State<HomeTab> {
 
           const SizedBox(height: 10),
 
-          // 🌟 NO-SCROLL STATIC COLUMN FOR BULLETS
+          // STATIC COLUMN FOR BULLETS
           Column(
             children: bullets.map((bullet) {
               return Padding(
@@ -506,6 +507,8 @@ class _HomeTabState extends State<HomeTab> {
                       Expanded(
                         child: Text(
                           bullet.toString(),
+                          maxLines: 2,
+                          overflow: TextOverflow.ellipsis,
                           style: TextStyle(
                             fontSize: 12.5,
                             fontWeight: FontWeight.w500,
@@ -525,7 +528,7 @@ class _HomeTabState extends State<HomeTab> {
     );
   }
 
-  // 👨‍🏫 3. REDESIGNED LEARN PREVIEW CARD
+  // 👨‍🏫 3. LEARN PREVIEW CARD
   Widget _buildLearnPreviewCard(BuildContext context) {
     int percentDisplay = (widget.lastLearnProgress * 100).toInt();
 
@@ -570,17 +573,13 @@ class _HomeTabState extends State<HomeTab> {
                   ),
                 ),
               ),
-              Row(
-                children: [
-                  Text(
-                    '👨‍🏫 Aman Sir + 👦 Raju',
-                    style: TextStyle(
-                      color: Colors.white.withOpacity(0.9),
-                      fontSize: 11,
-                      fontWeight: FontWeight.w700,
-                    ),
-                  ),
-                ],
+              Text(
+                '👨‍🏫 Aman Sir + 👦 Raju',
+                style: TextStyle(
+                  color: Colors.white.withOpacity(0.9),
+                  fontSize: 11,
+                  fontWeight: FontWeight.w700,
+                ),
               ),
             ],
           ),
@@ -660,7 +659,7 @@ class _HomeTabState extends State<HomeTab> {
     );
   }
 
-  // ⚔️ 4. REDESIGNED LIVE DUEL SPRINT CARD
+  // ⚔️ 4. LIVE DUEL SPRINT CARD
   Widget _buildSpeedRunChallengeCard(BuildContext context) {
     return Container(
       width: double.infinity,
@@ -895,7 +894,7 @@ class _HomeTabState extends State<HomeTab> {
     );
   }
 
-  // 📅 5. REDESIGNED LAUNCH ROADMAP CARD
+  // 📅 5. LAUNCH ROADMAP CARD
   Widget _buildLaunchRoadmapCard() {
     final List roadmapList = widget.appConfig['launch_roadmap'] ?? [
       {"text": "🔥 Coming Tomorrow: BSSC Inter Level Top 100 Qs", "color": "0xFFFF4757"},
