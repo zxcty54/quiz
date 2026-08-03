@@ -33,6 +33,7 @@ jobs:
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action Bot"
-          git add bihar_news.json
-          git diff-index --quiet HEAD || git commit -m "Auto-update Bihar News JSON [skip ci]"
+          # FIX: Dono JSON files ko git add me include kiya gaya hai
+          git add bihar_news.json all_bihar_news_history.json
+          git diff-index --quiet HEAD || git commit -m "Auto-update Bihar News & Master History JSON [skip ci]"
           git push
