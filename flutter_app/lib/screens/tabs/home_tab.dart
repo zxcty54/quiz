@@ -1,6 +1,7 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
+import 'package:shared_preferences/shared_preferences.dart';
 import '../../widgets/home_widgets.dart';
 import '../sprint_challenge_screen.dart';
 
@@ -52,16 +53,26 @@ class _HomeTabState extends State<HomeTab> {
     super.dispose();
   }
 
-  // 📰 FETCH LIVE BIHAR NEWS VIA JSDELIVR CDN (FIXED PARSING & CACHE BUSTER)
+  // 📰 SMART DAILY FETCHING (DAY ME SIRF 1 BAAR NETWORK HIT KAREGA)
   Future<void> _fetchBiharNews() async {
-    final String newsUrl = "https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/bihar_news.json?v=${DateTime.now().millisecondsSinceEpoch}";
-    try {
-      final res = await http.get(Uri.parse(newsUrl));
-      if (res.statusCode == 200) {
-        final data = jsonDecode(utf8.decode(res.bodyBytes));
+    final prefs = await SharedPreferences.getInstance();
+    
+    const String cacheKeyData = 'cached_bihar_news_json';
+    const String cacheKeyDate = 'cached_bihar_news_date';
+    
+    // Today's Date String (e.g., "2026-08-03")
+    final String todayStr = DateTime.now().toIso8601String().split('T')[0];
+    final String savedDate = prefs.getString(cacheKeyDate) ?? '';
+
+    // 1. STEP A: Local Storage Check
+    String? cachedJsonStr = prefs.getString(cacheKeyData);
+
+    // AGAR AAJ KA DATA PEHLE SE SAVED HAI -> ZERO NETWORK HIT!
+    if (savedDate == todayStr && cachedJsonStr != null && cachedJsonStr.isNotEmpty) {
+      try {
+        final data = jsonDecode(cachedJsonStr);
         if (mounted) {
           setState(() {
-            // ✅ FIXED PARSING: Map me se 'news_cards' key ko strictly read kiya gaya hai
             if (data is Map && data.containsKey('news_cards')) {
               _biharNewsList = data['news_cards'] as List<dynamic>;
             } else if (data is List) {
@@ -72,12 +83,62 @@ class _HomeTabState extends State<HomeTab> {
             _isLoadingNews = false;
           });
         }
+        debugPrint("✅ News Loaded instantly from Local Cache (Zero Network Hit)");
+        return; // Network call bypassed!
+      } catch (e) {
+        debugPrint("Local Cache Read Error: $e");
+      }
+    }
+
+    // 2. STEP B: Agar naya din hai ya cache empty hai, tabhi 1 network request bhejo
+    final String newsUrl = "https://raw.githubusercontent.com/zxcty54/quiz/main/bihar_news.json?v=${DateTime.now().day}";
+    
+    try {
+      debugPrint("🔄 Fetching Today's First News Update from GitHub...");
+      final res = await http.get(Uri.parse(newsUrl)).timeout(const Duration(seconds: 4));
+
+      if (res.statusCode == 200) {
+        final String decodedBody = utf8.decode(res.bodyBytes);
+        final data = jsonDecode(decodedBody);
+
+        if (mounted) {
+          setState(() {
+            if (data is Map && data.containsKey('news_cards')) {
+              _biharNewsList = data['news_cards'] as List<dynamic>;
+            } else if (data is List) {
+              _biharNewsList = data;
+            } else {
+              _biharNewsList = [];
+            }
+            _isLoadingNews = false;
+          });
+        }
+
+        // Naya Data & Today's Date Local Storage me save karo for rest of the day
+        await prefs.setString(cacheKeyData, decodedBody);
+        await prefs.setString(cacheKeyDate, todayStr);
+        debugPrint("✅ Today's news cached locally!");
       } else {
         if (mounted) setState(() => _isLoadingNews = false);
       }
     } catch (e) {
-      debugPrint("Error fetching Bihar News via CDN: $e");
-      if (mounted) setState(() => _isLoadingNews = false);
+      debugPrint("Error fetching Bihar News: $e");
+      // Fallback: Network fail ho toh purana cache dikha do
+      if (cachedJsonStr != null && mounted) {
+        final data = jsonDecode(cachedJsonStr);
+        setState(() {
+          if (data is Map && data.containsKey('news_cards')) {
+            _biharNewsList = data['news_cards'] as List<dynamic>;
+          } else if (data is List) {
+            _biharNewsList = data;
+          } else {
+            _biharNewsList = [];
+          }
+          _isLoadingNews = false;
+        });
+      } else {
+        if (mounted) setState(() => _isLoadingNews = false);
+      }
     }
   }
 
