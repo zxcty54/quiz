@@ -22,14 +22,13 @@ def get_yesterday_info():
     return yesterday_dt, date_str, key_str
 
 def is_yesterday_news(pub_date_str, target_dt):
-    """Check karta hai ki RSS item ki publish date kal ki hai ya recent 24-48 hours ki"""
+    """Check karta hai ki RSS item ki publish date recent 24-48 hours ki hai ya nahi"""
     if not pub_date_str:
         return True
     try:
         pub_tuple = email.utils.parsedate_tz(pub_date_str)
         if pub_tuple:
             pub_dt = datetime.fromtimestamp(email.utils.mktime_tz(pub_tuple))
-            # Within 2 days range to catch yesterday's full day coverage
             return (target_dt - timedelta(days=1)) <= pub_dt <= (target_dt + timedelta(days=1))
     except Exception as e:
         print(f"Date parsing error: {e}")
@@ -53,7 +52,7 @@ def fetch_raw_bihar_news(target_dt):
                 if title and is_yesterday_news(pub_date, target_dt):
                     news_titles.append(f"[Google News] {title}")
                     count += 1
-                    if count >= 12: # Max items to give AI options
+                    if count >= 15: # High limit for broad options
                         break
             print("✅ Google News RSS fetched successfully!")
     except Exception as e:
@@ -100,11 +99,12 @@ def fetch_raw_bihar_news(target_dt):
     return "\n".join(news_titles)
 
 def generate_clean_summary(raw_text, target_date_str):
-    """Groq AI se strict Categorized JSON summary banwata hai"""
+    """Groq AI se strict Fact-Based Categorized JSON summary banwata hai"""
+    current_year = datetime.now().year
 
     prompt = f"""
-    Tum BPSC, BSSC aur Bihar Teacher (TRE) Exams ke Current Affairs Editor ho.
-    Niche kal ki Google News, CMO Bihar aur IPRD Bihar se li gayi raw headlines hain:
+    Tum BPSC, BSSC aur Bihar Teacher (TRE) Exams ke Senior Current Affairs Editor ho.
+    Niche Google News, CMO Bihar aur IPRD Bihar se li gayi raw headlines hain:
     
     {raw_text}
     
@@ -117,24 +117,33 @@ def generate_clean_summary(raw_text, target_date_str):
     6. "Bihar Economy, Budget & Reports"
     7. "Art, Culture & Tourism"
 
-    STRICT FILTERING RULES:
-    1. STRICTLY REJECT: Murder, Crime, Accidents, Political Rallies, Raajneeti speeches, Entertainment, aur Purani saal ki news.
-    2. STRICTLY REJECT DUPLICATES: Ek event par multiple news nahi honi chahiye.
-    3. Output me EXACT 5 se 7 solid news cards hone chahiye jo KAL ki exam-oriented news cover karein.
-    4. Set "date": "{target_date_str}" in all news items.
-    5. Return STRICTLY valid JSON inside `news_cards` key without markdown syntax.
+    STRICT EXAM RELEVANCE & FACT-CHECKING RULES:
+    1. STRICTLY REJECT: 
+       - Murder, Crime, Accidents, Political Speeches, Rallies, Elections, Entertainment, aur previous years ({current_year-1} or older) ki news.
+       - Routine school timetable changes, local village school sanctions, motivational speeches, or general congratulatory statements.
+    2. ACCEPT ONLY HIGH-YIELD FACTUAL NEWS:
+       - Every card MUST contain at least ONE hard fact: Specific Scheme Name, Government Policy, Place Name, Budget/Amount, Committee Name, Rank, GI Tag, or Official Exam/Job Notification.
+    3. BULLETS MUST BE HIGHLY FACTUAL:
+       - Do NOT write generic filler lines like "यह निर्णय शिक्षा प्रणाली में सुधार के लिए महत्वपूर्ण है" or "इससे छात्रों को लाभ होगा".
+       - Bullet 1: Core factual news and decision.
+       - Bullet 2: Key numerical data, budget, target date, or scope.
+       - Bullet 3: Exact exam/subject relevance or ministry involved.
+    4. QUALITY OVER QUANTITY:
+       - Include ALL valid exam-oriented news (No fixed count like 5 or 7. If there are 3, output 3; if 8, output 8).
+    5. Set "date": "{target_date_str}" in all news items.
+    6. Return STRICTLY valid JSON inside `news_cards` key without markdown wrapping.
     
     JSON SCHEMA OUTPUT:
     {{
       "news_cards": [
         {{
           "id": "news_01",
-          "title": "Short Clean Headline in Hindi",
+          "title": "Clean Headline with Specific Keywords",
           "category": "Select exact matching name from 7 categories above",
           "bullets": [
-            "Point 1: Main update kya hai",
-            "Point 2: Key details / Benefit",
-            "Point 3: BPSC/SSC exam ke hisaab se kyo important hai"
+            "Fact 1: Exact decision and location/scheme details",
+            "Fact 2: Budget amount, target year or capacity data",
+            "Fact 3: BPSC/SSC exam point of view / Ministry involved"
           ],
           "exam_tag": "🎯 BPSC TRE / BSSC Special",
           "date": "{target_date_str}"
@@ -146,7 +155,7 @@ def generate_clean_summary(raw_text, target_date_str):
     response = client.chat.completions.create(
         model="llama-3.3-70b-versatile",
         messages=[{"role": "user", "content": prompt}],
-        temperature=0.2,
+        temperature=0.1,  # Low temperature forces exact factual adherence
         response_format={"type": "json_object"}
     )
     return response.choices[0].message.content
