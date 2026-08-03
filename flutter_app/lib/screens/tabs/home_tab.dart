@@ -92,9 +92,9 @@ class _HomeTabState extends State<HomeTab> {
           _buildTrustHeroBanner(),
           const SizedBox(height: 16),
 
-          // 📰 3. ULTRA-PREMIUM MINIMALIST NEWS CAROUSEL
+          // 📰 3. MODIFIED PROFESSIONAL NEWS CAROUSEL (NO WHITE COLOR)
           _buildBiharNewsSection(),
-          const SizedBox(height: 16),
+          const SizedBox(height: 18),
 
           // 4. LEARN PREVIEW CARD
           _buildLearnPreviewCard(context),
@@ -123,17 +123,31 @@ class _HomeTabState extends State<HomeTab> {
     );
   }
 
-  // 📰 ULTRA-PREMIUM MINIMALIST NEWS WIDGET
+  // 📰 MODIFIED ULTRA-PREMIUM NEWS SECTION (NO WHITE COLOR)
   Widget _buildBiharNewsSection() {
     if (_isLoadingNews) {
       return Container(
-        height: 130,
+        height: 185,
         decoration: BoxDecoration(
-          color: widget.isDarkMode ? const Color(0xFF1E293B) : const Color(0xFFF8FAFC),
-          borderRadius: BorderRadius.circular(16),
+          color: widget.isDarkMode ? const Color(0xFF1E293B) : const Color(0xFFF1F5F9),
+          borderRadius: BorderRadius.circular(20),
         ),
         child: const Center(
-          child: CircularProgressIndicator(color: Color(0xFF4338CA), strokeWidth: 2),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              SizedBox(
+                width: 24,
+                height: 24,
+                child: CircularProgressIndicator(color: Color(0xFF4F46E5), strokeWidth: 2.5),
+              ),
+              SizedBox(height: 10),
+              Text(
+                "Loading Live Bulletin...",
+                style: TextStyle(fontSize: 12, color: Color(0xFF64748B), fontWeight: FontWeight.w500),
+              ),
+            ],
+          ),
         ),
       );
     }
@@ -143,42 +157,70 @@ class _HomeTabState extends State<HomeTab> {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        // CLEAN HEADER WITH PILL TAG
+        // 🌟 HEADER WITH LIVE INDICATOR
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            const Row(
+            Row(
               children: [
-                Text('📰 ', style: TextStyle(fontSize: 16)),
+                Container(
+                  padding: const EdgeInsets.all(6),
+                  decoration: BoxDecoration(
+                    color: const Color(0xFF4F46E5).withOpacity(0.12),
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  child: const Icon(Icons.newspaper_rounded, size: 18, color: Color(0xFF4F46E5)),
+                ),
+                const SizedBox(width: 8),
                 Text(
                   'Bihar Daily Bulletin',
-                  style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold, letterSpacing: -0.2),
+                  style: TextStyle(
+                    fontSize: 16,
+                    fontWeight: FontWeight.w800,
+                    letterSpacing: -0.3,
+                    color: widget.isDarkMode ? const Color(0xFFF8FAFC) : const Color(0xFF0F172A),
+                  ),
                 ),
               ],
             ),
             Container(
-              padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
+              padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
               decoration: BoxDecoration(
-                color: const Color(0xFFEEF2FF),
-                borderRadius: BorderRadius.circular(12),
-                border: Border.all(color: const Color(0xFFC7D2FE)),
-              ),
-              child: Text(
-                'LIVE • ${_activeNewsIndex + 1}/${_biharNewsList.length}',
-                style: const TextStyle(
-                  color: Color(0xFF4338CA),
-                  fontSize: 10,
-                  fontWeight: FontWeight.w800, // 👈 FIX: FontWeight.w800 instead of FontWeight.extrabold
+                color: widget.isDarkMode ? const Color(0xFF1E293B) : const Color(0xFFEEF2FF),
+                borderRadius: BorderRadius.circular(20),
+                border: Border.all(
+                  color: widget.isDarkMode ? const Color(0xFF334155) : const Color(0xFFC7D2FE),
                 ),
+              ),
+              child: Row(
+                children: [
+                  Container(
+                    width: 6,
+                    height: 6,
+                    decoration: const BoxDecoration(
+                      color: Color(0xFF22C55E), // Emerald Green Indicator
+                      shape: BoxShape.circle,
+                    ),
+                  ),
+                  const SizedBox(width: 5),
+                  Text(
+                    '${_activeNewsIndex + 1}/${_biharNewsList.length}',
+                    style: TextStyle(
+                      color: widget.isDarkMode ? const Color(0xFFC7D2FE) : const Color(0xFF3730A3),
+                      fontSize: 11,
+                      fontWeight: FontWeight.w800,
+                    ),
+                  ),
+                ],
               ),
             ),
           ],
         ),
-        const SizedBox(height: 10),
+        const SizedBox(height: 12),
 
-        // ULTRA-PREMIUM HORIZONTAL CAROUSEL
+        // 🎴 CAROUSEL VIEW WITH FIXED HEIGHT
         SizedBox(
-          height: 195,
+          height: 185,
           child: PageView.builder(
             controller: _newsPageController,
             itemCount: _biharNewsList.length,
@@ -193,22 +235,23 @@ class _HomeTabState extends State<HomeTab> {
             },
           ),
         ),
-        const SizedBox(height: 10),
+        const SizedBox(height: 12),
 
-        // MINIMALIST SMOOTH DOTS INDICATOR
+        // 🟢 ANIMATED INDICATOR DOTS
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: List.generate(_biharNewsList.length, (index) {
             bool isActive = _activeNewsIndex == index;
             return AnimatedContainer(
-              duration: const Duration(milliseconds: 250),
-              margin: const EdgeInsets.symmetric(horizontal: 2.5),
+              duration: const Duration(milliseconds: 300),
+              curve: Curves.easeOutCubic,
+              margin: const EdgeInsets.symmetric(horizontal: 3),
               height: 5,
-              width: isActive ? 16 : 5,
+              width: isActive ? 22 : 6,
               decoration: BoxDecoration(
                 color: isActive
-                    ? const Color(0xFF4338CA)
-                    : (widget.isDarkMode ? Colors.white24 : const Color(0xFFE2E8F0)),
+                    ? const Color(0xFF4F46E5)
+                    : (widget.isDarkMode ? Colors.white24 : const Color(0xFFCBD5E1)),
                 borderRadius: BorderRadius.circular(10),
               ),
             );
@@ -218,46 +261,51 @@ class _HomeTabState extends State<HomeTab> {
     );
   }
 
-  // 📇 ULTRA-PREMIUM LIGHT MINIMALIST CARD DESIGN
+  // 📇 MODIFIED NEWS CARD ITEM (NO WHITE COLOR USED)
   Widget _buildUltraPremiumNewsCard(Map<String, dynamic> news) {
     final List bullets = (news['bullets'] as List?) ?? [];
 
     return Container(
       margin: const EdgeInsets.only(right: 6),
-      padding: const EdgeInsets.all(15),
+      padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
-        color: widget.isDarkMode ? const Color(0xFF1E293B) : Colors.white,
-        borderRadius: BorderRadius.circular(16),
+        // 🌟 Uses Soft Ice Slate (#F1F5F9) in Light Mode and Deep Slate (#1E293B) in Dark Mode
+        color: widget.isDarkMode ? const Color(0xFF1E293B) : const Color(0xFFF1F5F9),
+        borderRadius: BorderRadius.circular(20),
         border: Border.all(
-          color: widget.isDarkMode ? const Color(0xFF334155) : const Color(0xFFE0E7FF),
+          color: widget.isDarkMode ? const Color(0xFF334155) : const Color(0xFFCBD5E1),
           width: 1.2,
         ),
         boxShadow: [
           BoxShadow(
-            color: const Color(0xFF4338CA).withOpacity(widget.isDarkMode ? 0.0 : 0.04),
-            blurRadius: 16,
-            offset: const Offset(0, 6),
+            color: Colors.black.withOpacity(widget.isDarkMode ? 0.2 : 0.03),
+            blurRadius: 12,
+            offset: const Offset(0, 4),
           ),
         ],
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          // TOP TAGS ROW
+          // TOP TAGS & DATE ROW
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Container(
-                padding: const EdgeInsets.symmetric(horizontal: 9, vertical: 3.5),
+                padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
                 decoration: BoxDecoration(
                   color: widget.isDarkMode ? const Color(0xFF312E81) : const Color(0xFFEEF2FF),
                   borderRadius: BorderRadius.circular(8),
+                  border: Border.all(
+                    color: widget.isDarkMode ? const Color(0xFF4338CA) : const Color(0xFFC7D2FE),
+                    width: 0.8,
+                  ),
                 ),
                 child: Text(
                   news['exam_tag'] ?? '🎯 BPSC Special',
                   style: TextStyle(
                     color: widget.isDarkMode ? const Color(0xFFC7D2FE) : const Color(0xFF3730A3),
-                    fontSize: 10,
+                    fontSize: 10.5,
                     fontWeight: FontWeight.bold,
                   ),
                 ),
@@ -265,8 +313,8 @@ class _HomeTabState extends State<HomeTab> {
               Row(
                 children: [
                   Icon(
-                    Icons.schedule_rounded,
-                    size: 12,
+                    Icons.access_time_rounded,
+                    size: 13,
                     color: widget.isDarkMode ? Colors.white60 : const Color(0xFF64748B),
                   ),
                   const SizedBox(width: 4),
@@ -274,7 +322,7 @@ class _HomeTabState extends State<HomeTab> {
                     news['date'] ?? '',
                     style: TextStyle(
                       color: widget.isDarkMode ? Colors.white60 : const Color(0xFF64748B),
-                      fontSize: 10.5,
+                      fontSize: 11,
                       fontWeight: FontWeight.w600,
                     ),
                   ),
@@ -288,51 +336,59 @@ class _HomeTabState extends State<HomeTab> {
           // NEWS TITLE
           Text(
             news['title'] ?? '',
-            maxLines: 2,
+            maxLines: 1,
             overflow: TextOverflow.ellipsis,
             style: TextStyle(
               fontSize: 15,
               fontWeight: FontWeight.bold,
-              color: widget.isDarkMode ? Colors.white : const Color(0xFF0F172A),
-              height: 1.3,
+              color: widget.isDarkMode ? const Color(0xFFF8FAFC) : const Color(0xFF0F172A),
+              letterSpacing: -0.2,
             ),
           ),
 
-          const SizedBox(height: 10),
+          const SizedBox(height: 8),
 
-          // BULLET POINTS (MAX 2 BULLETS WITH INDIGO ACCENT DOTS)
+          // LAYERED INNER BULLET CONTAINERS
           Expanded(
-            child: ListView(
-              physics: const NeverScrollableScrollPhysics(),
+            child: Column(
               children: bullets.take(2).map((bullet) {
                 return Padding(
                   padding: const EdgeInsets.only(bottom: 6.0),
-                  child: Row(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Container(
-                        margin: const EdgeInsets.only(top: 6),
-                        width: 5,
-                        height: 5,
-                        decoration: const BoxDecoration(
-                          color: Color(0xFF4338CA),
-                          shape: BoxShape.circle,
-                        ),
+                  child: Container(
+                    padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 7),
+                    decoration: BoxDecoration(
+                      // 🌟 Layered Slate (#E2E8F0) in Light Mode
+                      color: widget.isDarkMode
+                          ? const Color(0xFF0F172A).withOpacity(0.6)
+                          : const Color(0xFFE2E8F0),
+                      borderRadius: BorderRadius.circular(10),
+                      border: Border.all(
+                        color: widget.isDarkMode ? const Color(0xFF1E293B) : const Color(0xFFCBD5E1),
                       ),
-                      const SizedBox(width: 8),
-                      Expanded(
-                        child: Text(
-                          bullet.toString(),
-                          maxLines: 2,
-                          overflow: TextOverflow.ellipsis,
-                          style: TextStyle(
-                            fontSize: 11.5,
-                            color: widget.isDarkMode ? Colors.white70 : const Color(0xFF334155),
-                            height: 1.35,
+                    ),
+                    child: Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        const Icon(
+                          Icons.arrow_right_rounded,
+                          size: 16,
+                          color: Color(0xFF4F46E5),
+                        ),
+                        const SizedBox(width: 4),
+                        Expanded(
+                          child: Text(
+                            bullet.toString(),
+                            maxLines: 1,
+                            overflow: TextOverflow.ellipsis,
+                            style: TextStyle(
+                              fontSize: 12,
+                              fontWeight: FontWeight.w500,
+                              color: widget.isDarkMode ? Colors.white70 : const Color(0xFF334155),
+                            ),
                           ),
                         ),
-                      ),
-                    ],
+                      ],
+                    ),
                   ),
                 );
               }).toList(),
