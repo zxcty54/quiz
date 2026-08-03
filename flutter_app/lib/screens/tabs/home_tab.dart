@@ -92,7 +92,7 @@ class _HomeTabState extends State<HomeTab> {
           _buildTrustHeroBanner(),
           const SizedBox(height: 18),
 
-          // 📰 3. BIHAR DAILY BULLETIN CAROUSEL (NO PURE WHITE & FULL BULLETS)
+          // 📰 3. BIHAR DAILY BULLETIN CAROUSEL (INCREASED HEIGHT & LARGER TEXT)
           _buildBiharNewsSection(),
           const SizedBox(height: 18),
 
@@ -250,7 +250,7 @@ class _HomeTabState extends State<HomeTab> {
     );
   }
 
-  // 📰 2. MODIFIED ULTRA-PREMIUM NEWS SECTION (PERMANENT FULL BULLETS FIX)
+  // 📰 2. MODIFIED ULTRA-PREMIUM NEWS SECTION (HEIGHT = 280)
   Widget _buildBiharNewsSection() {
     if (_isLoadingNews) {
       return Container(
@@ -296,13 +296,13 @@ class _HomeTabState extends State<HomeTab> {
                     color: const Color(0xFF4F46E5).withOpacity(0.12),
                     borderRadius: BorderRadius.circular(10),
                   ),
-                  child: const Icon(Icons.newspaper_rounded, size: 18, color: Color(0xFF4F46E5)),
+                  child: const Icon(Icons.newspaper_rounded, size: 20, color: Color(0xFF4F46E5)),
                 ),
                 const SizedBox(width: 8),
                 Text(
                   'Bihar Daily Bulletin',
                   style: TextStyle(
-                    fontSize: 16,
+                    fontSize: 17, // BADAYA GAYA FONT SIZE
                     fontWeight: FontWeight.w800,
                     letterSpacing: -0.3,
                     color: widget.isDarkMode ? const Color(0xFFF8FAFC) : const Color(0xFF0F172A),
@@ -334,7 +334,7 @@ class _HomeTabState extends State<HomeTab> {
                     '${_activeNewsIndex + 1}/${_biharNewsList.length}',
                     style: TextStyle(
                       color: widget.isDarkMode ? const Color(0xFFC7D2FE) : const Color(0xFF3730A3),
-                      fontSize: 11,
+                      fontSize: 11.5,
                       fontWeight: FontWeight.w800,
                     ),
                   ),
@@ -345,9 +345,9 @@ class _HomeTabState extends State<HomeTab> {
         ),
         const SizedBox(height: 12),
 
-        // 🎴 CAROUSEL VIEW (AUTO-FITTING DYNAMIC VIEWPORT)
+        // 🎴 CAROUSEL VIEW (HEIGHT BADHA KAR 280 KIYA GAYA)
         SizedBox(
-          height: 240,
+          height: 280, // BADHA HUA HEIGHT SPACE
           child: PageView.builder(
             controller: _newsPageController,
             itemCount: _biharNewsList.length,
@@ -388,13 +388,13 @@ class _HomeTabState extends State<HomeTab> {
     );
   }
 
-  // 📇 NEWS CARD ITEM (UNLIMITED BULLET TEXT LENGTH FIX)
+  // 📇 NEWS CARD ITEM (TEXT SIZES BADHAYE GAYE HAIN)
   Widget _buildUltraPremiumNewsCard(Map<String, dynamic> news) {
     final List bullets = (news['bullets'] as List?) ?? [];
 
     return Container(
       margin: const EdgeInsets.only(right: 6),
-      padding: const EdgeInsets.all(14),
+      padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
         color: widget.isDarkMode ? const Color(0xFF1E293B) : const Color(0xFFF1F5F9),
         borderRadius: BorderRadius.circular(20),
@@ -419,7 +419,7 @@ class _HomeTabState extends State<HomeTab> {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Container(
-                padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
+                padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
                 decoration: BoxDecoration(
                   color: widget.isDarkMode ? const Color(0xFF312E81) : const Color(0xFFEEF2FF),
                   borderRadius: BorderRadius.circular(8),
@@ -432,7 +432,7 @@ class _HomeTabState extends State<HomeTab> {
                   news['exam_tag'] ?? '🎯 BPSC Special',
                   style: TextStyle(
                     color: widget.isDarkMode ? const Color(0xFFC7D2FE) : const Color(0xFF3730A3),
-                    fontSize: 10.5,
+                    fontSize: 11.5, // BADAYA GAYA FONT SIZE
                     fontWeight: FontWeight.bold,
                   ),
                 ),
@@ -441,7 +441,7 @@ class _HomeTabState extends State<HomeTab> {
                 children: [
                   Icon(
                     Icons.access_time_rounded,
-                    size: 13,
+                    size: 14,
                     color: widget.isDarkMode ? Colors.white60 : const Color(0xFF64748B),
                   ),
                   const SizedBox(width: 4),
@@ -449,7 +449,7 @@ class _HomeTabState extends State<HomeTab> {
                     news['date'] ?? '',
                     style: TextStyle(
                       color: widget.isDarkMode ? Colors.white60 : const Color(0xFF64748B),
-                      fontSize: 11,
+                      fontSize: 12, // BADAYA GAYA FONT SIZE
                       fontWeight: FontWeight.w600,
                     ),
                   ),
@@ -458,7 +458,7 @@ class _HomeTabState extends State<HomeTab> {
             ],
           ),
 
-          const SizedBox(height: 8),
+          const SizedBox(height: 10),
 
           // NEWS TITLE
           Text(
@@ -466,17 +466,17 @@ class _HomeTabState extends State<HomeTab> {
             maxLines: 2,
             overflow: TextOverflow.ellipsis,
             style: TextStyle(
-              fontSize: 14.5,
-              fontWeight: FontWeight.bold,
+              fontSize: 16, // BADAYA GAYA TITLE FONT SIZE (14.5 -> 16)
+              fontWeight: FontWeight.w800,
               color: widget.isDarkMode ? const Color(0xFFF8FAFC) : const Color(0xFF0F172A),
               letterSpacing: -0.2,
-              height: 1.25,
+              height: 1.3,
             ),
           ),
 
-          const SizedBox(height: 8),
+          const SizedBox(height: 10),
 
-          // 🌟 PERMANENT UN-TRUNCATED BULLETS LIST
+          // 🌟 BULLETS LIST WITH LARGER READABLE TEXT
           Expanded(
             child: ListView.builder(
               physics: const BouncingScrollPhysics(),
@@ -484,9 +484,9 @@ class _HomeTabState extends State<HomeTab> {
               itemCount: bullets.length,
               itemBuilder: (context, bIndex) {
                 return Padding(
-                  padding: const EdgeInsets.only(bottom: 6.0),
+                  padding: const EdgeInsets.only(bottom: 8.0),
                   child: Container(
-                    padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 7),
+                    padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
                     decoration: BoxDecoration(
                       color: widget.isDarkMode
                           ? const Color(0xFF0F172A).withOpacity(0.6)
@@ -503,7 +503,7 @@ class _HomeTabState extends State<HomeTab> {
                           padding: EdgeInsets.only(top: 2),
                           child: Icon(
                             Icons.arrow_right_rounded,
-                            size: 16,
+                            size: 18, // BADAYA GAYA ICON SIZE
                             color: Color(0xFF4F46E5),
                           ),
                         ),
@@ -512,10 +512,10 @@ class _HomeTabState extends State<HomeTab> {
                           child: Text(
                             bullets[bIndex].toString(),
                             style: TextStyle(
-                              fontSize: 11.5,
+                              fontSize: 13, // BADAYA GAYA BULLET FONT SIZE (11.5 -> 13)
                               fontWeight: FontWeight.w500,
                               color: widget.isDarkMode ? Colors.white70 : const Color(0xFF334155),
-                              height: 1.35,
+                              height: 1.4,
                             ),
                           ),
                         ),
