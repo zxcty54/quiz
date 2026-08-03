@@ -228,15 +228,15 @@ class _HomeTabState extends State<HomeTab> {
               borderRadius: BorderRadius.circular(12),
               border: Border.all(color: Colors.white.withOpacity(0.1)),
             ),
-            child: const Row(
+            child: Row(
               children: [
-                Icon(Icons.verified_rounded, size: 16, color: Color(0xFF22C55E)),
-                SizedBox(width: 8),
+                const Icon(Icons.verified_rounded, size: 16, color: Color(0xFF22C55E)),
+                const SizedBox(width: 8),
                 Expanded(
                   child: Text(
                     '100% Free & Latest CBT Pattern Exam Mocks',
                     style: TextStyle(
-                      color: Colors.white90,
+                      color: Colors.white.withOpacity(0.9),
                       fontSize: 11.5,
                       fontWeight: FontWeight.w600,
                     ),
@@ -347,7 +347,7 @@ class _HomeTabState extends State<HomeTab> {
 
         // 🎴 CAROUSEL VIEW (AUTO-FITTING DYNAMIC VIEWPORT)
         SizedBox(
-          height: 240, // Expanded safe height to render long multiline bullets cleanly
+          height: 240,
           child: PageView.builder(
             controller: _newsPageController,
             itemCount: _biharNewsList.length,
@@ -576,13 +576,17 @@ class _HomeTabState extends State<HomeTab> {
                   ),
                 ),
               ),
-              const Text(
-                '👨‍🏫 Aman Sir + 👦 Raju',
-                style: TextStyle(
-                  color: Colors.white90,
-                  fontSize: 11,
-                  fontWeight: FontWeight.w700,
-                ),
+              Row(
+                children: [
+                  Text(
+                    '👨‍🏫 Aman Sir + 👦 Raju',
+                    style: TextStyle(
+                      color: Colors.white.withOpacity(0.9),
+                      fontSize: 11,
+                      fontWeight: FontWeight.w700,
+                    ),
+                  ),
+                ],
               ),
             ],
           ),
@@ -740,9 +744,13 @@ class _HomeTabState extends State<HomeTab> {
             ),
           ),
           const SizedBox(height: 5),
-          const Text(
+          Text(
             '10 High-yield concepts solve karo, result dost ko WhatsApp par bhejo aur dekho kon jeet-ta hai!',
-            style: TextStyle(color: Colors.white80, fontSize: 12, height: 1.35),
+            style: TextStyle(
+              color: Colors.white.withOpacity(0.8),
+              fontSize: 12,
+              height: 1.35,
+            ),
           ),
           const SizedBox(height: 16),
           SizedBox(
@@ -973,7 +981,7 @@ class _HomeTabState extends State<HomeTab> {
                       text,
                       style: TextStyle(
                         fontSize: 12,
-                        color: widget.isDarkMode ? Colors.white90 : const Color(0xFF1E293B),
+                        color: widget.isDarkMode ? Colors.white.withOpacity(0.9) : const Color(0xFF1E293B),
                         fontWeight: FontWeight.w600,
                       ),
                     ),
