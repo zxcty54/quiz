@@ -35,6 +35,7 @@ def is_yesterday_news(pub_date_str, target_dt):
     return True
 
 def fetch_raw_bihar_news(target_dt):
+    """Multiple Official & Media sources se Bihar Current Affairs raw text scrape karta hai"""
     news_titles = []
     
     # -------------------------------------------------------------
@@ -52,7 +53,7 @@ def fetch_raw_bihar_news(target_dt):
                 if title and is_yesterday_news(pub_date, target_dt):
                     news_titles.append(f"[Google News] {title}")
                     count += 1
-                    if count >= 15: # High limit for broad options
+                    if count >= 15:
                         break
             print("✅ Google News RSS fetched successfully!")
     except Exception as e:
@@ -96,6 +97,27 @@ def fetch_raw_bihar_news(target_dt):
     except Exception as e:
         print(f"⚠️ Error fetching IPRD Bihar: {e}")
 
+    # -------------------------------------------------------------
+    # Source D: PRABHAT KHABAR BIHAR (RSS Feed)
+    # -------------------------------------------------------------
+    try:
+        pk_url = "https://www.prabhatkhabar.com/state/bihar/feed"
+        res = requests.get(pk_url, impersonate="chrome", timeout=15, verify=False)
+        if res.status_code == 200:
+            root = ET.fromstring(res.text)
+            count = 0
+            for item in root.findall('.//item'):
+                title = item.find('title').text if item.find('title') is not None else ""
+                pub_date = item.find('pubDate').text if item.find('pubDate') is not None else ""
+                if title and is_yesterday_news(pub_date, target_dt):
+                    news_titles.append(f"[Prabhat Khabar] {title.strip()}")
+                    count += 1
+                    if count >= 10:
+                        break
+            print("✅ Prabhat Khabar Bihar news fetched successfully!")
+    except Exception as e:
+        print(f"⚠️ Error fetching Prabhat Khabar: {e}")
+
     return "\n".join(news_titles)
 
 def generate_clean_summary(raw_text, target_date_str):
@@ -104,7 +126,7 @@ def generate_clean_summary(raw_text, target_date_str):
 
     prompt = f"""
     Tum BPSC, BSSC aur Bihar Teacher (TRE) Exams ke Senior Current Affairs Editor ho.
-    Niche Google News, CMO Bihar aur IPRD Bihar se li gayi raw headlines hain:
+    Niche Google News, CMO Bihar, IPRD Bihar aur Prabhat Khabar se li gayi raw headlines hain:
     
     {raw_text}
     
