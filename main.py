@@ -125,8 +125,8 @@ def generate_clean_summary(raw_text, target_date_str):
     current_year = datetime.now().year
 
     prompt = f"""
-    You are a Senior Current Affairs Editor for BPSC and Bihar Competitive Exams.
-    Below is raw news text scraped from Bihar official and news portals:
+    You are a Senior Current Affairs Editor for BPSC and Bihar State Competitive Exams.
+    Below is raw news text scraped from Bihar official portals and news feeds:
     
     {raw_text}
     
@@ -137,34 +137,38 @@ def generate_clean_summary(raw_text, target_date_str):
     4. "Appointments, Awards & Persons in News"
     5. "Bihar Economy, Budget & Reports"
 
-    STRICT BLACKLIST & REJECTION RULES:
-    1. REJECT ALL Education, Schools, University, Exam Notices, Admit Cards, Job Recruitment, Bahaali, and Exam Results.
-    2. REJECT Felicitations, speeches ("gaurav badhaya"), political rallies, crime, accidents, or routine municipal directives.
+    STRICT REJECTION & DISCARD RULES (CRITICAL):
+    1. REJECT ALL routine administrative instructions, CM directives ("nirdesh diye"), smooth traffic arrangements, RERA routine meetings, or generic press statements.
+    2. REJECT ALL Education, Schools, University, Recruitment, Vacancies, Exam Notices, Admit Cards, and Results.
     3. STRICT INFRASTRUCTURE FILTER:
        - For "Infrastructure & Projects", REJECT small/routine road repairs or local city traffic directives.
        - ACCEPT ONLY MAJOR MEGA-INFRASTRUCTURE PROJECTS that make national/state headlines (e.g., Metro lines, Mega Expressways, Major Ganga Bridges, Airports, Power Plants, or Mega Investment projects).
-    4. REJECT Generic news without hard facts. Every card MUST contain specific facts (Budget Amount, Location, Department, MoU Partner, Project Capacity, etc.).
+    4. REJECT ALL news that lacks hard facts. EVERY card MUST contain AT LEAST ONE hard fact:
+       - Exact Budget/Investment Outlay in Crores (e.g. 500 Cr, 6000 Cr)
+       - Specific Scheme/Act Name (e.g. Bihar Investment Promotion Policy)
+       - MoU Partner Name
+       - Exact Location, Highway Length, or Capacity Numbers.
+    5. NEVER WRITE DISCLAIMERS: It is STRICTLY FORBIDDEN to write statements like "Koi vishisht budget/yojana nahi di gayi", "Yeh vikas ke liye avashyak hai", or "Isse logon ko labh hoga".
+    6. IF NO FACTUAL NEWS IS FOUND: Return an empty list: {{"news_cards": []}}. It is 100x better to return 0 or 1 card than to generate useless generic news.
 
-    BULLET POINT RULES (VERY IMPORTANT):
-    1. WRITE EXACTLY 3 BULLET POINTS FOR EVERY CARD.
-    2. Write all Titles and Bullets in **HINGLISH** (Hindi written in Roman English script, e.g., "Bihar Govt ne Gaya me 6000 Cr ki Steel Plant ke liye MoU sign kiya").
-    3. Provide DEEP & CLEAR EXPLANATIONS with facts. Avoid short or generic one-line summaries.
-       - Bullet 1 (Core Decision): Detailed explanation of what action/decision was taken, which Department/Ministry was involved, and the exact project location or scheme name in Hinglish.
-       - Bullet 2 (Factual Data): Exact numerical data, financial budget outlay, MoU partner details, target implementation date, or physical capacity/length in Hinglish.
-       - Bullet 3 (Policy Context & Impact): Deep explanation of how this policy/project fits into Bihar's development frameworks (e.g., Saat Nischay-2, Krishi Road Map 4, Economic Survey, or Industrial Policy) in Hinglish.
-    4. DO NOT write filler lines like "Yeh BPSC ke liye important hai" or "Isse vikas hoga". Provide REAL factual context instead.
+    BULLET POINT RULES (IF A CARD QUALIFIES):
+    1. WRITE EXACTLY 3 DEEP FACTUAL BULLET POINTS IN HINGLISH (Hindi written in Roman English script).
+       - Bullet 1 (Core Decision): Detailed explanation of what specific project/scheme was launched, which Ministry/Dept is involved, and exact location in Hinglish.
+       - Bullet 2 (Exact Figures): Specific budget amount, MoU partner name, capacity, target year, or numerical facts in Hinglish.
+       - Bullet 3 (Policy Framework): Deep explanation of which government policy or framework it falls under (e.g., Saat Nischay-2, Krishi Road Map 4, Economic Survey) in Hinglish.
+    2. DO NOT write filler lines like "Yeh BPSC ke liye important hai" or "Isse vikas hoga". Provide REAL factual context instead.
 
     JSON SCHEMA OUTPUT:
     {{
       "news_cards": [
         {{
           "id": "news_01",
-          "title": "Clean Detailed Hinglish Headline",
+          "title": "Clean Detailed Hinglish Headline with Specific Fact",
           "category": "Select EXACT matching category from the 5 allowed categories above",
           "bullets": [
-            "Bullet 1: Clear and detailed explanation of the decision, ministry, and location in Hinglish",
-            "Bullet 2: Specific numerical data, budget outlay, MoU partner, or project scale details in Hinglish",
-            "Bullet 3: Deep explanation of policy framework, objective, or state development context in Hinglish"
+            "Bullet 1: Detailed factual explanation of decision, department, and location in Hinglish",
+            "Bullet 2: Exact numerical data, budget outlay, MoU partner, or project scale details in Hinglish",
+            "Bullet 3: Deep explanation of policy framework or state development context in Hinglish"
           ],
           "exam_tag": "🎯 BPSC Special / Bihar Current Affairs",
           "date": "{target_date_str}"
@@ -176,7 +180,7 @@ def generate_clean_summary(raw_text, target_date_str):
     response = client.chat.completions.create(
         model="llama-3.3-70b-versatile",
         messages=[{"role": "user", "content": prompt}],
-        temperature=0.05,
+        temperature=0.01,  # Ultra-low temperature prevents generic filler text
         response_format={"type": "json_object"}
     )
     return response.choices[0].message.content
