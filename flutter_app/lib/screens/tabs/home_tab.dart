@@ -2,18 +2,8 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:shimmer/shimmer.dart';
-import 'package:url_launcher/url_launcher.dart';
-
-import '../models/question_model.dart';
-import '../services/telegram_tracker.dart';
-import 'learn_hub_screen.dart';
-import 'profile_screen.dart';
-import 'revision_practice_screen.dart';
-import 'sectional_cbt_screen.dart';
-import 'tabs/home_tab.dart';
-import 'tabs/revision_tab.dart';
-import 'tabs/sectional_tab.dart';
+import '../../widgets/home_widgets.dart';
+import '../sprint_challenge_screen.dart';
 
 class HomeTab extends StatefulWidget {
   final Map<String, dynamic> appConfig;
@@ -319,7 +309,7 @@ class _HomeTabState extends State<HomeTab> {
     );
   }
 
-  // 📰 2. NEWS SECTION (SizedBox height increased to 360 to accommodate full text without scroll)
+  // 📰 2. MODIFIED ULTRA-PREMIUM NEWS SECTION (SizedBox height increased to 460)
   Widget _buildBiharNewsSection() {
     if (_isLoadingNews) {
       return Container(
@@ -413,9 +403,9 @@ class _HomeTabState extends State<HomeTab> {
         ),
         const SizedBox(height: 12),
 
-        // CAROUSEL VIEW (Height 360 for comfortable full text display)
+        // CAROUSEL VIEW (Height = 460px ensures 3 deep bullets fit without scrollbar)
         SizedBox(
-          height: 360,
+          height: 460,
           child: PageView.builder(
             controller: _newsPageController,
             itemCount: _biharNewsList.length,
@@ -456,7 +446,7 @@ class _HomeTabState extends State<HomeTab> {
     );
   }
 
-  // 📇 NEWS CARD ITEM (FULL SENTENCES DISPLAY WITHOUT TRUNCATION/DOTS)
+  // 📇 NEWS CARD ITEM (STATIC NO-SCROLL LAYOUT)
   Widget _buildUltraPremiumNewsCard(Map<String, dynamic> news) {
     final List bullets = (news['bullets'] as List?) ?? [];
 
@@ -480,6 +470,7 @@ class _HomeTabState extends State<HomeTab> {
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
+        mainAxisSize: MainAxisSize.min,
         children: [
           // TOP TAGS & DATE ROW
           Row(
@@ -533,7 +524,7 @@ class _HomeTabState extends State<HomeTab> {
             maxLines: 2,
             overflow: TextOverflow.ellipsis,
             style: TextStyle(
-              fontSize: 15.5,
+              fontSize: 15,
               fontWeight: FontWeight.w800,
               color: widget.isDarkMode ? const Color(0xFFF8FAFC) : const Color(0xFF0F172A),
               letterSpacing: -0.2,
@@ -543,13 +534,13 @@ class _HomeTabState extends State<HomeTab> {
 
           const SizedBox(height: 10),
 
-          // STATIC COLUMN FOR BULLETS (FULL UNTRUNCATED TEXT)
+          // STATIC COLUMN FOR BULLETS (NO SCROLLBAR)
           Column(
             children: bullets.map((bullet) {
               return Padding(
                 padding: const EdgeInsets.only(bottom: 6.0),
                 child: Container(
-                  padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
+                  padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 7),
                   decoration: BoxDecoration(
                     color: widget.isDarkMode
                         ? const Color(0xFF0F172A).withOpacity(0.6)
@@ -574,9 +565,8 @@ class _HomeTabState extends State<HomeTab> {
                       Expanded(
                         child: Text(
                           bullet.toString(),
-                          // maxLines aur TextOverflow.ellipsis removed so full sentences display
                           style: TextStyle(
-                            fontSize: 12,
+                            fontSize: 11.8,
                             fontWeight: FontWeight.w500,
                             color: widget.isDarkMode ? Colors.white70 : const Color(0xFF334155),
                             height: 1.3,
