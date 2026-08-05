@@ -39,10 +39,10 @@ def fetch_raw_bihar_news(target_dt):
     news_titles = []
     
     # -------------------------------------------------------------
-    # Source A: GOOGLE NEWS RSS (Bihar Govt & Education)
+    # Source A: GOOGLE NEWS RSS (Govt Schemes, Infrastructure, Economy, Agriculture)
     # -------------------------------------------------------------
     try:
-        google_url = "https://news.google.com/rss/search?q=Bihar+Government+Schemes+OR+Education+OR+BPSC+OR+Infrastructure&hl=hi&gl=IN&ceid=IN:hi"
+        google_url = "https://news.google.com/rss/search?q=Bihar+Government+Schemes+OR+Infrastructure+OR+Economy+OR+Agriculture&hl=hi&gl=IN&ceid=IN:hi"
         res = requests.get(google_url, impersonate="chrome", timeout=15, verify=False)
         if res.status_code == 200:
             root = ET.fromstring(res.text)
@@ -121,50 +121,52 @@ def fetch_raw_bihar_news(target_dt):
     return "\n".join(news_titles)
 
 def generate_clean_summary(raw_text, target_date_str):
-    """Groq AI se Hinglish Fact-Based BPSC/BSSC Exam JSON summary banwata hai"""
+    """Groq AI se Strict Fact-Based Detailed Hinglish BPSC Exam JSON summary banwata hai"""
     current_year = datetime.now().year
 
     prompt = f"""
-    You are a Senior Current Affairs Editor for BPSC, BSSC, and Bihar Competitive Exams.
+    You are a Senior Current Affairs Editor for BPSC and Bihar Competitive Exams.
     Below is raw news text scraped from Bihar official and news portals:
     
     {raw_text}
     
-    STRICT CATEGORIES (Pick ONLY from these 7 exact names):
+    STRICT ALLOWED CATEGORIES (Pick ONLY from these 5 exact names):
     1. "Govt Schemes & Policies"
     2. "Infrastructure & Projects"
-    3. "Education & Recruitment Updates"
-    4. "Agriculture, Environment & GI Tags"
-    5. "Appointments, Awards & Persons in News"
-    6. "Bihar Economy, Budget & Reports"
-    7. "Art, Culture & Tourism"
+    3. "Agriculture, Environment & GI Tags"
+    4. "Appointments, Awards & Persons in News"
+    5. "Bihar Economy, Budget & Reports"
 
-    LANGUAGE REQUIREMENT:
-    - Write ALL Titles and Bullets in **HINGLISH** (Hindi written in Roman English script, e.g. "Bihar Cabinet ne 38 jilon me Nasha Mukti Abhiyan ke liye MoU sign kiya").
-
-    CRITICAL REJECTION RULES (REJECT Generic / Non-Exam News):
-    1. REJECT: Routine school timetable updates, local village school approvals, general motivational statements, political speeches, rallies, crime, accidents.
-    2. REJECT cards without hard facts. Every card MUST contain at least ONE hard fact: Scheme Name, Budget/Outlay Amount, Location, Ministry/Department, MoU Partner, Highway/Bridge Length, Ranking, or Official Exam Notice.
+    STRICT BLACKLIST & REJECTION RULES:
+    1. REJECT ALL Education, Schools, University, Exam Notices, Admit Cards, Job Recruitment, Bahaali, and Exam Results.
+    2. REJECT Felicitations, speeches ("gaurav badhaya"), political rallies, crime, accidents, or routine municipal directives.
+    3. STRICT INFRASTRUCTURE FILTER:
+       - For "Infrastructure & Projects", REJECT small/routine road repairs or local city traffic directives.
+       - ACCEPT ONLY MAJOR MEGA-INFRASTRUCTURE PROJECTS that make national/state headlines (e.g., Metro lines, Mega Expressways, Major Ganga Bridges, Airports, Power Plants, or Mega Investment projects).
+    4. REJECT Generic news without hard facts. Every card MUST contain specific facts (Budget Amount, Location, Department, MoU Partner, Project Capacity, etc.).
 
     BULLET POINT RULES (VERY IMPORTANT):
-    - DO NOT WRITE filler sentences like "This is relevant for BPSC exam" OR "This reflects government efforts".
-    - Bullet 1: Core news update (What happened, Where, and which Department/Ministry was involved).
-    - Bullet 2: Exact numerical data (Budget amount, target year, project capacity, length, or MoU partner name).
-    - Bullet 3: Key exam-oriented factual context or specific scheme provision.
+    1. WRITE EXACTLY 3 BULLET POINTS FOR EVERY CARD.
+    2. Write all Titles and Bullets in **HINGLISH** (Hindi written in Roman English script, e.g., "Bihar Govt ne Gaya me 6000 Cr ki Steel Plant ke liye MoU sign kiya").
+    3. Provide DEEP & CLEAR EXPLANATIONS with facts. Avoid short or generic one-line summaries.
+       - Bullet 1 (Core Decision): Detailed explanation of what action/decision was taken, which Department/Ministry was involved, and the exact project location or scheme name in Hinglish.
+       - Bullet 2 (Factual Data): Exact numerical data, financial budget outlay, MoU partner details, target implementation date, or physical capacity/length in Hinglish.
+       - Bullet 3 (Policy Context & Impact): Deep explanation of how this policy/project fits into Bihar's development frameworks (e.g., Saat Nischay-2, Krishi Road Map 4, Economic Survey, or Industrial Policy) in Hinglish.
+    4. DO NOT write filler lines like "Yeh BPSC ke liye important hai" or "Isse vikas hoga". Provide REAL factual context instead.
 
     JSON SCHEMA OUTPUT:
     {{
       "news_cards": [
         {{
           "id": "news_01",
-          "title": "Clean Hinglish Headline with specific keywords",
-          "category": "Select exact matching name from 7 categories above",
+          "title": "Clean Detailed Hinglish Headline",
+          "category": "Select EXACT matching category from the 5 allowed categories above",
           "bullets": [
-            "Point 1: Exact decision, scheme or project update in Hinglish",
-            "Point 2: Key numerical facts, budget amount or MoU details in Hinglish",
-            "Point 3: Department, ministry or scheme objective details in Hinglish"
+            "Bullet 1: Clear and detailed explanation of the decision, ministry, and location in Hinglish",
+            "Bullet 2: Specific numerical data, budget outlay, MoU partner, or project scale details in Hinglish",
+            "Bullet 3: Deep explanation of policy framework, objective, or state development context in Hinglish"
           ],
-          "exam_tag": "🎯 BPSC TRE / BSSC Special",
+          "exam_tag": "🎯 BPSC Special / Bihar Current Affairs",
           "date": "{target_date_str}"
         }}
       ]
@@ -174,7 +176,7 @@ def generate_clean_summary(raw_text, target_date_str):
     response = client.chat.completions.create(
         model="llama-3.3-70b-versatile",
         messages=[{"role": "user", "content": prompt}],
-        temperature=0.1,  # Low temperature forces exact factual Hinglish adherence
+        temperature=0.05,
         response_format={"type": "json_object"}
     )
     return response.choices[0].message.content
