@@ -121,16 +121,16 @@ def fetch_raw_bihar_news(target_dt):
     return "\n".join(news_titles)
 
 def generate_clean_summary(raw_text, target_date_str):
-    """Groq AI se strict Fact-Based Categorized JSON summary banwata hai"""
+    """Groq AI se Hinglish Fact-Based BPSC/BSSC Exam JSON summary banwata hai"""
     current_year = datetime.now().year
 
     prompt = f"""
-    Tum BPSC, BSSC aur Bihar Teacher (TRE) Exams ke Senior Current Affairs Editor ho.
-    Niche Google News, CMO Bihar, IPRD Bihar aur Prabhat Khabar se li gayi raw headlines hain:
+    You are a Senior Current Affairs Editor for BPSC, BSSC, and Bihar Competitive Exams.
+    Below is raw news text scraped from Bihar official and news portals:
     
     {raw_text}
     
-    STRICT CATEGORIES (Pick ONLY from these 7 exact category names):
+    STRICT CATEGORIES (Pick ONLY from these 7 exact names):
     1. "Govt Schemes & Policies"
     2. "Infrastructure & Projects"
     3. "Education & Recruitment Updates"
@@ -139,33 +139,30 @@ def generate_clean_summary(raw_text, target_date_str):
     6. "Bihar Economy, Budget & Reports"
     7. "Art, Culture & Tourism"
 
-    STRICT EXAM RELEVANCE & FACT-CHECKING RULES:
-    1. STRICTLY REJECT: 
-       - Murder, Crime, Accidents, Political Speeches, Rallies, Elections, Entertainment, aur previous years ({current_year-1} or older) ki news.
-       - Routine school timetable changes, local village school sanctions, motivational speeches, or general congratulatory statements.
-    2. ACCEPT ONLY HIGH-YIELD FACTUAL NEWS:
-       - Every card MUST contain at least ONE hard fact: Specific Scheme Name, Government Policy, Place Name, Budget/Amount, Committee Name, Rank, GI Tag, or Official Exam/Job Notification.
-    3. BULLETS MUST BE HIGHLY FACTUAL:
-       - Do NOT write generic filler lines like "यह निर्णय शिक्षा प्रणाली में सुधार के लिए महत्वपूर्ण है" or "इससे छात्रों को लाभ होगा".
-       - Bullet 1: Core factual news and decision.
-       - Bullet 2: Key numerical data, budget, target date, or scope.
-       - Bullet 3: Exact exam/subject relevance or ministry involved.
-    4. QUALITY OVER QUANTITY:
-       - Include ALL valid exam-oriented news (No fixed count like 5 or 7. If there are 3, output 3; if 8, output 8).
-    5. Set "date": "{target_date_str}" in all news items.
-    6. Return STRICTLY valid JSON inside `news_cards` key without markdown wrapping.
-    
+    LANGUAGE REQUIREMENT:
+    - Write ALL Titles and Bullets in **HINGLISH** (Hindi written in Roman English script, e.g. "Bihar Cabinet ne 38 jilon me Nasha Mukti Abhiyan ke liye MoU sign kiya").
+
+    CRITICAL REJECTION RULES (REJECT Generic / Non-Exam News):
+    1. REJECT: Routine school timetable updates, local village school approvals, general motivational statements, political speeches, rallies, crime, accidents.
+    2. REJECT cards without hard facts. Every card MUST contain at least ONE hard fact: Scheme Name, Budget/Outlay Amount, Location, Ministry/Department, MoU Partner, Highway/Bridge Length, Ranking, or Official Exam Notice.
+
+    BULLET POINT RULES (VERY IMPORTANT):
+    - DO NOT WRITE filler sentences like "This is relevant for BPSC exam" OR "This reflects government efforts".
+    - Bullet 1: Core news update (What happened, Where, and which Department/Ministry was involved).
+    - Bullet 2: Exact numerical data (Budget amount, target year, project capacity, length, or MoU partner name).
+    - Bullet 3: Key exam-oriented factual context or specific scheme provision.
+
     JSON SCHEMA OUTPUT:
     {{
       "news_cards": [
         {{
           "id": "news_01",
-          "title": "Clean Headline with Specific Keywords",
+          "title": "Clean Hinglish Headline with specific keywords",
           "category": "Select exact matching name from 7 categories above",
           "bullets": [
-            "Fact 1: Exact decision and location/scheme details",
-            "Fact 2: Budget amount, target year or capacity data",
-            "Fact 3: BPSC/SSC exam point of view / Ministry involved"
+            "Point 1: Exact decision, scheme or project update in Hinglish",
+            "Point 2: Key numerical facts, budget amount or MoU details in Hinglish",
+            "Point 3: Department, ministry or scheme objective details in Hinglish"
           ],
           "exam_tag": "🎯 BPSC TRE / BSSC Special",
           "date": "{target_date_str}"
@@ -177,7 +174,7 @@ def generate_clean_summary(raw_text, target_date_str):
     response = client.chat.completions.create(
         model="llama-3.3-70b-versatile",
         messages=[{"role": "user", "content": prompt}],
-        temperature=0.1,  # Low temperature forces exact factual adherence
+        temperature=0.1,  # Low temperature forces exact factual Hinglish adherence
         response_format={"type": "json_object"}
     )
     return response.choices[0].message.content
