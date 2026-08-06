@@ -28,10 +28,10 @@ def clean_html_text(text):
     return BeautifulSoup(text, "html.parser").get_text().strip()
 
 # -------------------------------------------------------------
-# 2. SCRAPING FUNCTIONS (Titles + Snippets)
+# 2. UNLIMITED MULTI-SOURCE SCRAPING FUNCTIONS
 # -------------------------------------------------------------
 def fetch_raw_bihar_news(target_dt):
-    """Bihar Specific Current Affairs Raw Text Scraper"""
+    """Bihar Specific Raw News Scraper"""
     news_titles = []
     
     # Source A: Google News Bihar
@@ -40,14 +40,11 @@ def fetch_raw_bihar_news(target_dt):
         res = requests.get(google_url, impersonate="chrome", timeout=15, verify=False)
         if res.status_code == 200:
             root = ET.fromstring(res.text)
-            count = 0
             for item in root.findall('.//item'):
                 title = item.find('title').text if item.find('title') is not None else ""
                 desc = clean_html_text(item.find('description').text if item.find('description') is not None else "")
                 if title:
-                    news_titles.append(f"[Google News] Title: {title} | Details: {desc[:150]}")
-                    count += 1
-                    if count >= 15: break
+                    news_titles.append(f"[Google News Bihar] Title: {title} | Details: {desc[:200]}")
             print("✅ Google News Bihar RSS fetched!")
     except Exception as e:
         print(f"⚠️ Error Bihar Google News: {e}")
@@ -58,7 +55,7 @@ def fetch_raw_bihar_news(target_dt):
         res = requests.get(cmo_url, impersonate="chrome", timeout=15, verify=False)
         if res.status_code == 200:
             soup = BeautifulSoup(res.content, "html.parser")
-            for row in soup.find_all('tr')[:10]:
+            for row in soup.find_all('tr'):
                 cols = row.find_all('td')
                 if len(cols) >= 2:
                     title = cols[1].text.strip()
@@ -74,13 +71,10 @@ def fetch_raw_bihar_news(target_dt):
         res = requests.get(iprd_url, impersonate="chrome", timeout=15, verify=False)
         if res.status_code == 200:
             soup = BeautifulSoup(res.content, "html.parser")
-            count = 0
             for link in soup.find_all('a'):
                 title = link.text.strip()
                 if title and len(title) > 15:
                     news_titles.append(f"[IPRD Bihar] {title}")
-                    count += 1
-                    if count >= 8: break
             print("✅ IPRD Bihar news fetched!")
     except Exception as e:
         print(f"⚠️ Error IPRD Bihar: {e}")
@@ -91,14 +85,11 @@ def fetch_raw_bihar_news(target_dt):
         res = requests.get(pk_url, impersonate="chrome", timeout=15, verify=False)
         if res.status_code == 200:
             root = ET.fromstring(res.text)
-            count = 0
             for item in root.findall('.//item'):
                 title = item.find('title').text if item.find('title') is not None else ""
                 desc = clean_html_text(item.find('description').text if item.find('description') is not None else "")
                 if title:
-                    news_titles.append(f"[Prabhat Khabar] Title: {title} | Details: {desc[:150]}")
-                    count += 1
-                    if count >= 10: break
+                    news_titles.append(f"[Prabhat Khabar] Title: {title} | Details: {desc[:200]}")
             print("✅ Prabhat Khabar Bihar fetched!")
     except Exception as e:
         print(f"⚠️ Error Prabhat Khabar: {e}")
@@ -107,56 +98,125 @@ def fetch_raw_bihar_news(target_dt):
 
 
 def fetch_raw_national_news(target_dt):
-    """National Current Affairs Scraper (PIB India + Google National)"""
+    """National Current Affairs Scraper (PIB + Google + AIR + The Hindu)"""
     national_titles = []
     
-    # Source A: PIB (Press Information Bureau India - XML Parser)
+    # Source A: PIB (Press Information Bureau India)
     try:
         pib_url = "https://pib.gov.in/RssMain.aspx?Mod=1&Lang=1"
         res = requests.get(pib_url, timeout=15, verify=False)
         if res.status_code == 200:
             soup = BeautifulSoup(res.content, "xml")
-            count = 0
             for item in soup.find_all('item'):
                 title = item.find('title').text if item.find('title') is not None else ""
                 desc = clean_html_text(item.find('description').text if item.find('description') is not None else "")
                 if title:
-                    national_titles.append(f"[PIB India] Title: {title.strip()} | Summary: {desc[:200]}")
-                    count += 1
-                    if count >= 15: break
-            print("✅ PIB National RSS fetched successfully!")
+                    national_titles.append(f"[PIB India] Title: {title.strip()} | Summary: {desc[:250]}")
+            print("✅ PIB National RSS fetched!")
     except Exception as e:
         print(f"⚠️ Error PIB India: {e}")
 
     # Source B: Google News National
     try:
-        g_url = "https://news.google.com/rss/search?q=Cabinet+Approves+OR+ISRO+OR+RBI+Policy+OR+National+Highway+OR+Union+Government+Scheme&hl=hi&gl=IN&ceid=IN:hi"
+        g_url = "https://news.google.com/rss/search?q=Cabinet+Approves+OR+ISRO+OR+RBI+OR+National+Highway+OR+Military+Exercise+OR+NITI+Aayog&hl=hi&gl=IN&ceid=IN:hi"
         res = requests.get(g_url, impersonate="chrome", timeout=15, verify=False)
         if res.status_code == 200:
             root = ET.fromstring(res.text)
-            count = 0
             for item in root.findall('.//item'):
                 title = item.find('title').text if item.find('title') is not None else ""
                 desc = clean_html_text(item.find('description').text if item.find('description') is not None else "")
                 if title:
-                    national_titles.append(f"[Google National] Title: {title.strip()} | Summary: {desc[:150]}")
-                    count += 1
-                    if count >= 15: break
-            print("✅ Google National RSS fetched successfully!")
+                    national_titles.append(f"[Google National] Title: {title.strip()} | Summary: {desc[:200]}")
+            print("✅ Google National RSS fetched!")
     except Exception as e:
         print(f"⚠️ Error Google National: {e}")
+
+    # Source C: AIR News
+    try:
+        air_url = "https://newsonair.gov.in/feed/"
+        res = requests.get(air_url, timeout=15, verify=False)
+        if res.status_code == 200:
+            soup = BeautifulSoup(res.content, "xml")
+            for item in soup.find_all('item'):
+                title = item.find('title').text if item.find('title') is not None else ""
+                desc = clean_html_text(item.find('description').text if item.find('description') is not None else "")
+                if title:
+                    national_titles.append(f"[AIR News] Title: {title.strip()} | Summary: {desc[:200]}")
+            print("✅ AIR National News fetched!")
+    except Exception as e:
+        print(f"⚠️ Error AIR News: {e}")
+
+    # Source D: The Hindu
+    try:
+        hindu_url = "https://www.thehindu.com/news/national/feeder/default.rss"
+        res = requests.get(hindu_url, timeout=15, verify=False)
+        if res.status_code == 200:
+            soup = BeautifulSoup(res.content, "xml")
+            for item in soup.find_all('item'):
+                title = item.find('title').text if item.find('title') is not None else ""
+                desc = clean_html_text(item.find('description').text if item.find('description') is not None else "")
+                if title:
+                    national_titles.append(f"[The Hindu] Title: {title.strip()} | Summary: {desc[:200]}")
+            print("✅ The Hindu National fetched!")
+    except Exception as e:
+        print(f"⚠️ Error The Hindu: {e}")
 
     return "\n".join(national_titles)
 
 # -------------------------------------------------------------
-# 3. AI SUMMARY GENERATOR (NATIONAL & BIHAR)
+# 3. AI SUMMARY GENERATOR (EXAM SYLLABUS GRID)
 # -------------------------------------------------------------
 def generate_clean_summary(raw_text, target_date_str, is_national=False):
-    """Groq AI se Fact-Based Hinglish JSON summary banwata hai"""
+    """Groq AI se Factual Hinglish JSON summary banwata hai"""
     
-    scope_name = "India National Level" if is_national else "Bihar State Level"
-    tag_name = "🎯 National Special / India Affairs" if is_national else "🎯 BPSC Special / Bihar Current Affairs"
-    economy_category = "National Economy, Budget & Reports" if is_national else "Bihar Economy, Budget & Reports"
+    if is_national:
+        scope_name = "India National & International Level"
+        tag_name = "🎯 National Special / India Affairs"
+        category_instruction = """
+        STRICT ALLOWED NATIONAL CATEGORIES (Pick ONLY from these 7 exact names):
+        1. "Policies, Acts & Flagship Schemes"
+        2. "Science, Defense & ISRO"
+        3. "Indices, Reports & Economic Affairs"
+        4. "International Relations & Summits"
+        5. "Environment, Ramsar Sites & Wildlife"
+        6. "Appointments, Awards & Places in News"
+        7. "Sports & Joint Military Exercises"
+        """
+        rejection_rules = """
+        STRICT REJECTION RULES (NATIONAL):
+        1. REJECT political rallies, speeches, party disputes, crime, accidents, local state transfers.
+        2. REJECT ALL Education, Schools, Recruitment, Vacancies, Exam Notices, Admit Cards, and Results.
+        3. REJECT generic news without facts.
+        """
+        bullet_rules = """
+        EXAMINER FOCUS BULLET RULES (NATIONAL):
+        - Bullet 1 (Core Update): Core event/decision, Nodal Ministry/Org, Location/Theme.
+        - Bullet 2 (Factual Data): Exact numbers, Launch Vehicle (e.g. PSLV/LVM3), Budget Outlay, Rank & Publishing Body (for Indices), or Participating Countries (for Military Exercises).
+        - Bullet 3 (Context/Impact): Key objective, policy framework, or scientific importance.
+        """
+    else:
+        scope_name = "Bihar State Level"
+        tag_name = "🎯 BPSC Special / Bihar Current Affairs"
+        category_instruction = """
+        STRICT ALLOWED BIHAR CATEGORIES (Pick ONLY from these 5 exact names):
+        1. "Govt Schemes & Policies"
+        2. "Infrastructure & Projects"
+        3. "Agriculture, Environment & GI Tags"
+        4. "Appointments, Awards & Persons in News"
+        5. "Bihar Economy, Budget & Reports"
+        """
+        rejection_rules = """
+        STRICT REJECTION RULES (BIHAR):
+        1. REJECT political speeches, rallies, local city traffic orders, crime, accidents.
+        2. REJECT ALL Education, Schools, Recruitment, Vacancies, Exam Notices, Admit Cards, and Results.
+        3. REJECT local small road repairs. Accept only Mega Projects.
+        """
+        bullet_rules = """
+        BULLET RULES (BIHAR):
+        - Bullet 1 (Core Decision): Detailed explanation of decision, ministry/department, and location.
+        - Bullet 2 (Factual Data): Specific budget outlay, capacity, target year, or MoU partner.
+        - Bullet 3 (Policy Context): Policy framework (e.g., Saat Nischay-2, Krishi Road Map 4, etc.).
+        """
 
     prompt = f"""
     You are a Senior Current Affairs Editor for BPSC, SSC, and Civil Services Competitive Exams.
@@ -164,36 +224,30 @@ def generate_clean_summary(raw_text, target_date_str, is_national=False):
     
     {raw_text}
     
-    STRICT ALLOWED CATEGORIES (Pick ONLY from these 5 exact names):
-    1. "Govt Schemes & Policies"
-    2. "Infrastructure & Projects"
-    3. "Agriculture, Environment & GI Tags"
-    4. "Appointments, Awards & Persons in News"
-    5. "{economy_category}"
+    {category_instruction}
 
-    STRICT REJECTION RULES:
-    1. REJECT ALL routine political rallies, speeches ("gaurav badhaya"), local crime, accidents, local road repairs, or routine city notices.
-    2. REJECT ALL Education, Schools, University, Recruitment, Vacancies, Exam Notices, Admit Cards, and Results.
-    3. FOR NATIONAL NEWS: Accept key Union Cabinet approvals, ISRO/Space missions, RBI policy updates, Major Expressway/Infrastructure projects, National Schemes, and High-profile Govt Appointments/Awards.
+    {rejection_rules}
 
-    BULLET POINT RULES (IF A CARD QUALIFIES):
-    1. WRITE EXACTLY 3 DEEP FACTUAL BULLET POINTS IN HINGLISH (Hindi written in Roman English script).
-       - Bullet 1 (Core Decision): What project/scheme was launched, Ministry/Department involved, and location.
-       - Bullet 2 (Factual Data): Specific numerical figures, budget outlay, capacity, target year, or partner organization details.
-       - Bullet 3 (Context & Impact): Why this is important for India/State development and policy context.
-    2. DO NOT write meta filler like "Yeh exam ke liye zaroori hai" or "Isse labh hoga".
+    DEDUPLICATION RULE:
+    - MERGE duplicate reports of the same event into ONE single card. No duplicate cards allowed.
+    - NO CARD LIMIT: Generate cards for ALL valid unique exam-relevant events found.
+
+    LANGUAGE & BULLETS:
+    - WRITE ALL TITLES AND BULLETS IN **HINGLISH** (Hindi written in Roman English Script, e.g. "Cabinet ne 10 new nuclear reactors ke liye MoU ko manzuri di").
+    - ALWAYS WRITE EXACTLY 3 BULLET POINTS FOR EVERY CARD.
+    {bullet_rules}
 
     JSON SCHEMA OUTPUT:
     {{
       "news_cards": [
         {{
           "id": "news_01",
-          "title": "Clean Detailed Hinglish Headline",
-          "category": "Select EXACT matching category from the 5 allowed above",
+          "title": "Clean Factual Hinglish Headline",
+          "category": "Select EXACT matching category name from the list above",
           "bullets": [
-            "Bullet 1: Clear factual explanation in Hinglish",
-            "Bullet 2: Specific figures, budget outlay, or technical facts in Hinglish",
-            "Bullet 3: Policy framework or development impact in Hinglish"
+            "Point 1 in Hinglish",
+            "Point 2 in Hinglish",
+            "Point 3 in Hinglish"
           ],
           "exam_tag": "{tag_name}",
           "date": "{target_date_str}"
@@ -211,7 +265,7 @@ def generate_clean_summary(raw_text, target_date_str, is_national=False):
         )
         return response.choices[0].message.content
     except Exception as e:
-        print(f"⚠️ Groq API Call Failed for {scope_name}: {e}")
+        print(f"⚠️ Groq API Failed for {scope_name}: {e}")
         return '{"news_cards": []}'
 
 # -------------------------------------------------------------
