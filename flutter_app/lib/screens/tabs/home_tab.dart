@@ -37,14 +37,18 @@ class HomeTab extends StatefulWidget {
 
 class _HomeTabState extends State<HomeTab> {
   List<dynamic> _biharNewsList = [];
+  List<dynamic> _nationalNewsList = [];
   bool _isLoadingNews = true;
+  
+  // TOGGLE STATE: 0 = Bihar, 1 = National
+  int _selectedNewsTab = 0; 
   int _activeNewsIndex = 0;
   final PageController _newsPageController = PageController();
 
   @override
   void initState() {
     super.initState();
-    _fetchBiharNews();
+    _fetchDailyBulletins();
   }
 
   @override
@@ -53,88 +57,72 @@ class _HomeTabState extends State<HomeTab> {
     super.dispose();
   }
 
-  // 📰 SMART DAILY FETCHING (DAY ME SIRF 1 BAAR NETWORK HIT KAREGA)
-  Future<void> _fetchBiharNews() async {
+  // 📰 FETCH BIHAR & NATIONAL NEWS WITH LOCAL CACHING
+  Future<void> _fetchDailyBulletins() async {
     final prefs = await SharedPreferences.getInstance();
-    
-    const String cacheKeyData = 'cached_bihar_news_json';
-    const String cacheKeyDate = 'cached_bihar_news_date';
-    
     final String todayStr = DateTime.now().toIso8601String().split('T')[0];
-    final String savedDate = prefs.getString(cacheKeyDate) ?? '';
+    
+    // CACHE KEYS
+    const String cacheBiharData = 'cached_bihar_news_json';
+    const String cacheNationalData = 'cached_national_news_json';
+    const String cacheDate = 'cached_bulletin_date';
 
-    // 1. STEP A: Local Storage Check
-    String? cachedJsonStr = prefs.getString(cacheKeyData);
+    final String savedDate = prefs.getString(cacheDate) ?? '';
 
-    if (savedDate == todayStr && cachedJsonStr != null && cachedJsonStr.isNotEmpty) {
-      try {
-        final data = jsonDecode(cachedJsonStr);
-        if (mounted) {
-          setState(() {
-            if (data is Map && data.containsKey('news_cards')) {
-              _biharNewsList = data['news_cards'] as List<dynamic>;
-            } else if (data is List) {
-              _biharNewsList = data;
-            } else {
-              _biharNewsList = [];
-            }
-            _isLoadingNews = false;
-          });
-        }
-        debugPrint("✅ News Loaded instantly from Local Cache (Zero Network Hit)");
-        return; 
-      } catch (e) {
-        debugPrint("Local Cache Read Error: $e");
+    // Step 1: Check Local Storage
+    if (savedDate == todayStr) {
+      String? cachedBihar = prefs.getString(cacheBiharData);
+      String? cachedNat = prefs.getString(cacheNationalData);
+
+      if (cachedBihar != null && cachedNat != null) {
+        try {
+          final bData = jsonDecode(cachedBihar);
+          final nData = jsonDecode(cachedNat);
+          if (mounted) {
+            setState(() {
+              _biharNewsList = (bData is Map && bData.containsKey('news_cards')) ? bData['news_cards'] : [];
+              _nationalNewsList = (nData is Map && nData.containsKey('news_cards')) ? nData['news_cards'] : [];
+              _isLoadingNews = false;
+            });
+          }
+          debugPrint("✅ News Loaded from Local Cache!");
+          return;
+        } catch (_) {}
       }
     }
 
-    // 2. STEP B: Network Fetch for New Day
-    final String newsUrl = "https://raw.githubusercontent.com/zxcty54/quiz/main/bihar_news.json?v=${DateTime.now().day}";
-    
-    try {
-      debugPrint("🔄 Fetching Today's First News Update from GitHub...");
-      final res = await http.get(Uri.parse(newsUrl)).timeout(const Duration(seconds: 4));
+    // Step 2: Network Fetch
+    final String biharUrl = "https://raw.githubusercontent.com/zxcty54/quiz/main/bihar_news.json?v=${DateTime.now().day}";
+    final String nationalUrl = "https://raw.githubusercontent.com/zxcty54/quiz/main/national_news.json?v=${DateTime.now().day}";
 
-      if (res.statusCode == 200) {
-        final String decodedBody = utf8.decode(res.bodyBytes);
-        final data = jsonDecode(decodedBody);
+    try {
+      final resBihar = await http.get(Uri.parse(biharUrl)).timeout(const Duration(seconds: 4));
+      final resNational = await http.get(Uri.parse(nationalUrl)).timeout(const Duration(seconds: 4));
+
+      if (resBihar.statusCode == 200 || resNational.statusCode == 200) {
+        String bDecoded = resBihar.statusCode == 200 ? utf8.decode(resBihar.bodyBytes) : "{}";
+        String nDecoded = resNational.statusCode == 200 ? utf8.decode(resNational.bodyBytes) : "{}";
+
+        final bData = jsonDecode(bDecoded);
+        final nData = jsonDecode(nDecoded);
 
         if (mounted) {
           setState(() {
-            if (data is Map && data.containsKey('news_cards')) {
-              _biharNewsList = data['news_cards'] as List<dynamic>;
-            } else if (data is List) {
-              _biharNewsList = data;
-            } else {
-              _biharNewsList = [];
-            }
+            _biharNewsList = (bData is Map && bData.containsKey('news_cards')) ? bData['news_cards'] : [];
+            _nationalNewsList = (nData is Map && nData.containsKey('news_cards')) ? nData['news_cards'] : [];
             _isLoadingNews = false;
           });
         }
 
-        await prefs.setString(cacheKeyData, decodedBody);
-        await prefs.setString(cacheKeyDate, todayStr);
-        debugPrint("✅ Today's news cached locally!");
+        await prefs.setString(cacheBiharData, bDecoded);
+        await prefs.setString(cacheNationalData, nDecoded);
+        await prefs.setString(cacheDate, todayStr);
       } else {
         if (mounted) setState(() => _isLoadingNews = false);
       }
     } catch (e) {
-      debugPrint("Error fetching Bihar News: $e");
-      if (cachedJsonStr != null && mounted) {
-        final data = jsonDecode(cachedJsonStr);
-        setState(() {
-          if (data is Map && data.containsKey('news_cards')) {
-            _biharNewsList = data['news_cards'] as List<dynamic>;
-          } else if (data is List) {
-            _biharNewsList = data;
-          } else {
-            _biharNewsList = [];
-          }
-          _isLoadingNews = false;
-        });
-      } else {
-        if (mounted) setState(() => _isLoadingNews = false);
-      }
+      debugPrint("Error fetching Bulletins: $e");
+      if (mounted) setState(() => _isLoadingNews = false);
     }
   }
 
@@ -156,8 +144,8 @@ class _HomeTabState extends State<HomeTab> {
           _buildTrustHeroBanner(),
           const SizedBox(height: 18),
 
-          // 📰 3. BIHAR DAILY BULLETIN CAROUSEL
-          _buildBiharNewsSection(),
+          // 📰 3. DAILY BULLETIN CAROUSEL WITH TOGGLE SWITCH
+          _buildDailyBulletinSection(),
           const SizedBox(height: 18),
 
           // 👨‍🏫 4. LEARN PREVIEW CARD
@@ -187,7 +175,7 @@ class _HomeTabState extends State<HomeTab> {
     );
   }
 
-  // 🛡️ 1. ULTRA-PREMIUM HERO BANNER
+  // 🛡️ 1. HERO BANNER
   Widget _buildTrustHeroBanner() {
     return Container(
       width: double.infinity,
@@ -309,8 +297,8 @@ class _HomeTabState extends State<HomeTab> {
     );
   }
 
-  // 📰 2. MODIFIED ULTRA-PREMIUM NEWS SECTION (SizedBox height increased to 460)
-  Widget _buildBiharNewsSection() {
+  // 📰 2. DAILY BULLETIN SECTION WITH TOGGLE BUTTONS
+  Widget _buildDailyBulletinSection() {
     if (_isLoadingNews) {
       return Container(
         padding: const EdgeInsets.symmetric(vertical: 30),
@@ -338,11 +326,12 @@ class _HomeTabState extends State<HomeTab> {
       );
     }
 
-    if (_biharNewsList.isEmpty) return const SizedBox.shrink();
+    final activeList = _selectedNewsTab == 0 ? _biharNewsList : _nationalNewsList;
 
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
+        // HEADER ROW WITH TOGGLE BUTTON
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
@@ -358,7 +347,7 @@ class _HomeTabState extends State<HomeTab> {
                 ),
                 const SizedBox(width: 8),
                 Text(
-                  'Bihar Daily Bulletin',
+                  'Daily Bulletin',
                   style: TextStyle(
                     fontSize: 17,
                     fontWeight: FontWeight.w800,
@@ -368,34 +357,21 @@ class _HomeTabState extends State<HomeTab> {
                 ),
               ],
             ),
+
+            // 🎯 SEGMENTED TOGGLE SWITCH
             Container(
-              padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
+              padding: const EdgeInsets.all(3),
               decoration: BoxDecoration(
-                color: widget.isDarkMode ? const Color(0xFF1E293B) : const Color(0xFFEEF2FF),
+                color: widget.isDarkMode ? const Color(0xFF1E293B) : const Color(0xFFE2E8F0),
                 borderRadius: BorderRadius.circular(20),
                 border: Border.all(
-                  color: widget.isDarkMode ? const Color(0xFF334155) : const Color(0xFFC7D2FE),
+                  color: widget.isDarkMode ? const Color(0xFF334155) : const Color(0xFFCBD5E1),
                 ),
               ),
               child: Row(
                 children: [
-                  Container(
-                    width: 6,
-                    height: 6,
-                    decoration: const BoxDecoration(
-                      color: Color(0xFF22C55E),
-                      shape: BoxShape.circle,
-                    ),
-                  ),
-                  const SizedBox(width: 5),
-                  Text(
-                    '${_activeNewsIndex + 1}/${_biharNewsList.length}',
-                    style: TextStyle(
-                      color: widget.isDarkMode ? const Color(0xFFC7D2FE) : const Color(0xFF3730A3),
-                      fontSize: 11.5,
-                      fontWeight: FontWeight.w800,
-                    ),
-                  ),
+                  _buildNewsToggleChip('📍 Bihar', 0),
+                  _buildNewsToggleChip('🇮🇳 National', 1),
                 ],
               ),
             ),
@@ -403,46 +379,93 @@ class _HomeTabState extends State<HomeTab> {
         ),
         const SizedBox(height: 12),
 
-        // CAROUSEL VIEW (Height = 460px ensures 3 deep bullets fit without scrollbar)
-        SizedBox(
-          height: 460,
-          child: PageView.builder(
-            controller: _newsPageController,
-            itemCount: _biharNewsList.length,
-            onPageChanged: (index) {
-              setState(() {
-                _activeNewsIndex = index;
-              });
-            },
-            itemBuilder: (context, index) {
-              final news = _biharNewsList[index];
-              return _buildUltraPremiumNewsCard(news);
-            },
+        // CAROUSEL VIEW
+        if (activeList.isEmpty)
+          Container(
+            padding: const EdgeInsets.all(20),
+            width: double.infinity,
+            decoration: BoxDecoration(
+              color: widget.isDarkMode ? const Color(0xFF1E293B) : const Color(0xFFF1F5F9),
+              borderRadius: BorderRadius.circular(20),
+            ),
+            child: const Center(
+              child: Text("No High-Yield Updates Today", style: TextStyle(color: Colors.grey, fontSize: 13, fontWeight: FontWeight.bold)),
+            ),
+          )
+        else ...[
+          SizedBox(
+            height: 460, // Full height ensures 3 deep bullets fit without scrollbar
+            child: PageView.builder(
+              controller: _newsPageController,
+              itemCount: activeList.length,
+              onPageChanged: (index) {
+                setState(() => _activeNewsIndex = index);
+              },
+              itemBuilder: (context, index) {
+                return _buildUltraPremiumNewsCard(activeList[index]);
+              },
+            ),
+          ),
+          const SizedBox(height: 12),
+
+          // INDICATOR DOTS
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: List.generate(activeList.length, (index) {
+              bool isActive = _activeNewsIndex == index;
+              return AnimatedContainer(
+                duration: const Duration(milliseconds: 300),
+                curve: Curves.easeOutCubic,
+                margin: const EdgeInsets.symmetric(horizontal: 3),
+                height: 5,
+                width: isActive ? 22 : 6,
+                decoration: BoxDecoration(
+                  color: isActive
+                      ? const Color(0xFF4F46E5)
+                      : (widget.isDarkMode ? Colors.white24 : const Color(0xFFCBD5E1)),
+                  borderRadius: BorderRadius.circular(10),
+                ),
+              );
+            }),
+          ),
+        ],
+      ],
+    );
+  }
+
+  // 🔘 TOGGLE CHIP BUTTON
+  Widget _buildNewsToggleChip(String label, int index) {
+    bool isSelected = _selectedNewsTab == index;
+    return GestureDetector(
+      onTap: () {
+        if (_selectedNewsTab != index) {
+          setState(() {
+            _selectedNewsTab = index;
+            _activeNewsIndex = 0;
+          });
+          if (_newsPageController.hasClients) {
+            _newsPageController.jumpToPage(0);
+          }
+        }
+      },
+      child: AnimatedContainer(
+        duration: const Duration(milliseconds: 200),
+        padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+        decoration: BoxDecoration(
+          color: isSelected ? const Color(0xFF4F46E5) : Colors.transparent,
+          borderRadius: BorderRadius.circular(16),
+        ),
+        child: Text(
+          label,
+          style: TextStyle(
+            color: isSelected
+                ? Colors.white
+                : (widget.isDarkMode ? Colors.white60 : const Color(0xFF64748B)),
+            fontSize: 11,
+            fontWeight: isSelected ? FontWeight.w800 : FontWeight.w600,
           ),
         ),
-        const SizedBox(height: 12),
-
-        // ANIMATED INDICATOR DOTS
-        Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: List.generate(_biharNewsList.length, (index) {
-            bool isActive = _activeNewsIndex == index;
-            return AnimatedContainer(
-              duration: const Duration(milliseconds: 300),
-              curve: Curves.easeOutCubic,
-              margin: const EdgeInsets.symmetric(horizontal: 3),
-              height: 5,
-              width: isActive ? 22 : 6,
-              decoration: BoxDecoration(
-                color: isActive
-                    ? const Color(0xFF4F46E5)
-                    : (widget.isDarkMode ? Colors.white24 : const Color(0xFFCBD5E1)),
-                borderRadius: BorderRadius.circular(10),
-              ),
-            );
-          }),
-        ),
-      ],
+      ),
     );
   }
 
@@ -472,7 +495,6 @@ class _HomeTabState extends State<HomeTab> {
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisSize: MainAxisSize.min,
         children: [
-          // TOP TAGS & DATE ROW
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
@@ -487,7 +509,7 @@ class _HomeTabState extends State<HomeTab> {
                   ),
                 ),
                 child: Text(
-                  news['exam_tag'] ?? '🎯 BPSC Special',
+                  news['exam_tag'] ?? '🎯 Exam Special',
                   style: TextStyle(
                     color: widget.isDarkMode ? const Color(0xFFC7D2FE) : const Color(0xFF3730A3),
                     fontSize: 11.5,
@@ -534,7 +556,7 @@ class _HomeTabState extends State<HomeTab> {
 
           const SizedBox(height: 10),
 
-          // STATIC COLUMN FOR BULLETS (NO SCROLLBAR)
+          // STATIC COLUMN FOR BULLETS
           Column(
             children: bullets.map((bullet) {
               return Padding(
