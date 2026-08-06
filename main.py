@@ -17,8 +17,8 @@ client = Groq(api_key=GROQ_KEY) if GROQ_KEY else None
 def get_yesterday_info():
     """Subah 6 AM run hone par kal ki date aur formatted strings generate karta hai"""
     yesterday_dt = datetime.now() - timedelta(days=1)
-    date_str = yesterday_dt.strftime("%d %b %Y")   # e.g., '02 Aug 2026'
-    key_str = yesterday_dt.strftime("%Y-%m-%d")    # e.g., '2026-08-02'
+    date_str = yesterday_dt.strftime("%d %b %Y")   # e.g., '05 Aug 2026'
+    key_str = yesterday_dt.strftime("%Y-%m-%d")    # e.g., '2026-08-05'
     return yesterday_dt, date_str, key_str
 
 def is_yesterday_news(pub_date_str, target_dt):
@@ -123,10 +123,10 @@ def fetch_raw_bihar_news(target_dt):
 
 
 def fetch_raw_national_news(target_dt):
-    """PURE NATIONAL Current Affairs Scraper (PIB + Central RSS Feeds)"""
+    """PURE UNION / CENTRAL GOVT Current Affairs Scraper"""
     national_titles = []
     
-    # Source A: PIB India (Central Releases)
+    # Source A: PIB India (Central Releases Only)
     try:
         pib_url = "https://pib.gov.in/RssMain.aspx?Mod=1&Lang=1"
         res = requests.get(pib_url, timeout=15, verify=False)
@@ -141,9 +141,9 @@ def fetch_raw_national_news(target_dt):
     except Exception as e:
         print(f"⚠️ Error PIB India: {e}")
 
-    # Source B: Google News Central
+    # Source B: Google News - CENTRAL / UNION GOVT ONLY
     try:
-        g_url = "https://news.google.com/rss/search?q=%22Union+Cabinet%22+OR+%22Central+Government%22+OR+ISRO+OR+DRDO+OR+%22RBI%22+OR+%22NITI+Aayog%22+OR+%22Military+Exercise%22+OR+%22G20%22+OR+%22BRICS%22&hl=hi&gl=IN&ceid=IN:hi"
+        g_url = "https://news.google.com/rss/search?q=%22Union+Cabinet%22+OR+%22Central+Government%22+OR+ISRO+OR+DRDO+OR+%22RBI%22+OR+%22NITI+Aayog%22+OR+%22Military+Exercise%22+OR+%22Union+Budget%22&hl=hi&gl=IN&ceid=IN:hi"
         res = requests.get(g_url, impersonate="chrome", timeout=15, verify=False)
         if res.status_code == 200:
             root = ET.fromstring(res.text)
@@ -157,7 +157,7 @@ def fetch_raw_national_news(target_dt):
     except Exception as e:
         print(f"⚠️ Error Google National: {e}")
 
-    # Source C: AIR News Central
+    # Source C: AIR News (Central Broadcasts)
     try:
         air_url = "https://newsonair.gov.in/feed/"
         res = requests.get(air_url, timeout=15, verify=False)
@@ -172,25 +172,10 @@ def fetch_raw_national_news(target_dt):
     except Exception as e:
         print(f"⚠️ Error AIR News: {e}")
 
-    # Source D: The Hindu National Desk
-    try:
-        hindu_url = "https://www.thehindu.com/news/national/feeder/default.rss"
-        res = requests.get(hindu_url, timeout=15, verify=False)
-        if res.status_code == 200:
-            soup = BeautifulSoup(res.content, "xml")
-            for item in soup.find_all('item'):
-                title = item.find('title').text if item.find('title') is not None else ""
-                desc = clean_html_text(item.find('description').text if item.find('description') is not None else "")
-                if title:
-                    national_titles.append(f"[The Hindu National] Title: {title.strip()} | Summary: {desc[:200]}")
-            print("✅ The Hindu National fetched successfully!")
-    except Exception as e:
-        print(f"⚠️ Error The Hindu: {e}")
-
     return "\n".join(national_titles)
 
 # -------------------------------------------------------------
-# 3. AI SUMMARY GENERATOR
+# 3. AI SUMMARY GENERATOR (WITH STRICT STATE REJECTION BARRIER)
 # -------------------------------------------------------------
 def generate_clean_summary(raw_text, target_date_str, is_national=False):
     """Groq AI se Fact-Based Detailed Hinglish JSON summary banwata hai"""
@@ -209,9 +194,15 @@ def generate_clean_summary(raw_text, target_date_str, is_national=False):
         7. "Sports & Joint Military Exercises"
         """
         rejection_rules = """
-        STRICT REJECTION RULES (PURE NATIONAL FILTER):
-        1. REJECT ALL STATE-SPECIFIC NEWS: Strictly reject news specific to individual states (e.g., UP govt schemes, MP politics, Rajasthan local events, Delhi municipal news).
-        2. ACCEPT ONLY PURE NATIONAL / CENTRAL EVENTS: Union Cabinet decisions, Central Ministries, ISRO/DRDO/Defense, RBI, NITI Aayog, International Bilateral Relations, National Level Indices/Reports, Global Summits, and National/International Sports/Awards.
+        STRICT REJECTION RULES (ABSOLUTE NATIONAL FILTER):
+        1. REJECT ALL STATE GOVERNMENT NEWS: Strictly REJECT any news that belongs to or originates from a SPECIFIC STATE GOVERNMENT (e.g., REJECT State Budgets like Tamil Nadu Budget, UP Govt Schemes, Rajasthan State announcements, MP Cabinet decisions, Delhi State affairs).
+        2. ACCEPT ONLY UNION / CENTRAL LEVEL NEWS:
+           - Union Cabinet / CCEA approvals & Acts passed by Parliament.
+           - Central Flagship Schemes (Union Ministries).
+           - ISRO, DRDO, Defense, Missiles & Joint Military Exercises.
+           - RBI Monetary Policy, Union Budget, NITI Aayog Reports, Global Indices.
+           - International Summits (G20, BRICS, SCO, COP) & Bilateral Relations.
+           - National Constitutional Appointments & National Awards (Padma, Bharat Ratna, Nobel).
         3. REJECT political rallies, speeches, party disputes, crime, accidents.
         4. REJECT ALL Education, Schools, Recruitment, Vacancies, Exam Notices, Admit Cards, and Results.
         """
