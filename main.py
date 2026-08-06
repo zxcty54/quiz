@@ -21,21 +21,14 @@ def get_yesterday_info():
     key_str = yesterday_dt.strftime("%Y-%m-%d")    # e.g., '2026-08-02'
     return yesterday_dt, date_str, key_str
 
-def is_yesterday_news(pub_date_str, target_dt):
-    """Check karta hai ki RSS item ki publish date recent 24-48 hours ki hai ya nahi"""
-    if not pub_date_str:
-        return True
-    try:
-        pub_tuple = email.utils.parsedate_tz(pub_date_str)
-        if pub_tuple:
-            pub_dt = datetime.fromtimestamp(email.utils.mktime_tz(pub_tuple))
-            return (target_dt - timedelta(days=1)) <= pub_dt <= (target_dt + timedelta(days=1))
-    except Exception as e:
-        print(f"Date parsing error: {e}")
-    return True
+def clean_html_text(text):
+    """HTML tags ko clean text me convert karta hai"""
+    if not text:
+        return ""
+    return BeautifulSoup(text, "html.parser").get_text().strip()
 
 # -------------------------------------------------------------
-# 2. SCRAPING FUNCTIONS
+# 2. SCRAPING FUNCTIONS (Titles + Snippets)
 # -------------------------------------------------------------
 def fetch_raw_bihar_news(target_dt):
     """Bihar Specific Current Affairs Raw Text Scraper"""
@@ -50,9 +43,9 @@ def fetch_raw_bihar_news(target_dt):
             count = 0
             for item in root.findall('.//item'):
                 title = item.find('title').text if item.find('title') is not None else ""
-                pub_date = item.find('pubDate').text if item.find('pubDate') is not None else ""
-                if title and is_yesterday_news(pub_date, target_dt):
-                    news_titles.append(f"[Google News] {title}")
+                desc = clean_html_text(item.find('description').text if item.find('description') is not None else "")
+                if title:
+                    news_titles.append(f"[Google News] Title: {title} | Details: {desc[:150]}")
                     count += 1
                     if count >= 15: break
             print("✅ Google News Bihar RSS fetched!")
@@ -101,9 +94,9 @@ def fetch_raw_bihar_news(target_dt):
             count = 0
             for item in root.findall('.//item'):
                 title = item.find('title').text if item.find('title') is not None else ""
-                pub_date = item.find('pubDate').text if item.find('pubDate') is not None else ""
-                if title and is_yesterday_news(pub_date, target_dt):
-                    news_titles.append(f"[Prabhat Khabar] {title.strip()}")
+                desc = clean_html_text(item.find('description').text if item.find('description') is not None else "")
+                if title:
+                    news_titles.append(f"[Prabhat Khabar] Title: {title} | Details: {desc[:150]}")
                     count += 1
                     if count >= 10: break
             print("✅ Prabhat Khabar Bihar fetched!")
@@ -117,7 +110,7 @@ def fetch_raw_national_news(target_dt):
     """National Current Affairs Scraper (PIB India + Google National)"""
     national_titles = []
     
-    # Source A: PIB (Press Information Bureau India - XML BeautifulSoup Parser)
+    # Source A: PIB (Press Information Bureau India - XML Parser)
     try:
         pib_url = "https://pib.gov.in/RssMain.aspx?Mod=1&Lang=1"
         res = requests.get(pib_url, timeout=15, verify=False)
@@ -126,28 +119,29 @@ def fetch_raw_national_news(target_dt):
             count = 0
             for item in soup.find_all('item'):
                 title = item.find('title').text if item.find('title') is not None else ""
+                desc = clean_html_text(item.find('description').text if item.find('description') is not None else "")
                 if title:
-                    national_titles.append(f"[PIB India] {title.strip()}")
+                    national_titles.append(f"[PIB India] Title: {title.strip()} | Summary: {desc[:200]}")
                     count += 1
-                    if count >= 12: break
+                    if count >= 15: break
             print("✅ PIB National RSS fetched successfully!")
     except Exception as e:
         print(f"⚠️ Error PIB India: {e}")
 
     # Source B: Google News National
     try:
-        g_url = "https://news.google.com/rss/search?q=India+Cabinet+Decisions+OR+National+Schemes+OR+ISRO+OR+RBI+OR+National+Highways&hl=hi&gl=IN&ceid=IN:hi"
+        g_url = "https://news.google.com/rss/search?q=Cabinet+Approves+OR+ISRO+OR+RBI+Policy+OR+National+Highway+OR+Union+Government+Scheme&hl=hi&gl=IN&ceid=IN:hi"
         res = requests.get(g_url, impersonate="chrome", timeout=15, verify=False)
         if res.status_code == 200:
             root = ET.fromstring(res.text)
             count = 0
             for item in root.findall('.//item'):
                 title = item.find('title').text if item.find('title') is not None else ""
-                pub_date = item.find('pubDate').text if item.find('pubDate') is not None else ""
-                if title and is_yesterday_news(pub_date, target_dt):
-                    national_titles.append(f"[National News] {title.strip()}")
+                desc = clean_html_text(item.find('description').text if item.find('description') is not None else "")
+                if title:
+                    national_titles.append(f"[Google National] Title: {title.strip()} | Summary: {desc[:150]}")
                     count += 1
-                    if count >= 12: break
+                    if count >= 15: break
             print("✅ Google National RSS fetched successfully!")
     except Exception as e:
         print(f"⚠️ Error Google National: {e}")
@@ -155,19 +149,18 @@ def fetch_raw_national_news(target_dt):
     return "\n".join(national_titles)
 
 # -------------------------------------------------------------
-# 3. AI SUMMARY GENERATOR (STRICT FILTERS)
+# 3. AI SUMMARY GENERATOR (NATIONAL & BIHAR)
 # -------------------------------------------------------------
 def generate_clean_summary(raw_text, target_date_str, is_national=False):
-    """Groq AI se Strict Fact-Based Detailed Hinglish JSON summary banwata hai"""
+    """Groq AI se Fact-Based Hinglish JSON summary banwata hai"""
     
-    scope_name = "India National" if is_national else "Bihar State"
+    scope_name = "India National Level" if is_national else "Bihar State Level"
     tag_name = "🎯 National Special / India Affairs" if is_national else "🎯 BPSC Special / Bihar Current Affairs"
-    
     economy_category = "National Economy, Budget & Reports" if is_national else "Bihar Economy, Budget & Reports"
 
     prompt = f"""
-    You are a Senior Current Affairs Editor for Competitive Exams in India.
-    Below is raw news text scraped for {scope_name} Level:
+    You are a Senior Current Affairs Editor for BPSC, SSC, and Civil Services Competitive Exams.
+    Below is raw news text scraped for {scope_name}:
     
     {raw_text}
     
@@ -178,31 +171,29 @@ def generate_clean_summary(raw_text, target_date_str, is_national=False):
     4. "Appointments, Awards & Persons in News"
     5. "{economy_category}"
 
-    STRICT REJECTION & DISCARD RULES:
-    1. REJECT ALL routine administrative instructions, CM/PM directives ("nirdesh diye"), traffic directives, or generic press statements.
+    STRICT REJECTION RULES:
+    1. REJECT ALL routine political rallies, speeches ("gaurav badhaya"), local crime, accidents, local road repairs, or routine city notices.
     2. REJECT ALL Education, Schools, University, Recruitment, Vacancies, Exam Notices, Admit Cards, and Results.
-    3. REJECT small/routine road repairs or local city directives. ACCEPT ONLY MEGA INFRASTRUCTURE PROJECTS (Expressways, Airports, Space Missions, Power Plants).
-    4. REJECT ALL news that lacks hard facts (Budget outlay, Scheme Name, MoU Partner, Ministry Name).
-    5. NEVER WRITE DISCLAIMERS: Forbidden to write "Koi budget/yojana nahi di gayi", "Yeh vikas ke liye avashyak hai".
-    6. IF NO FACTUAL NEWS FOUND: Return empty list {{"news_cards": []}}.
+    3. FOR NATIONAL NEWS: Accept key Union Cabinet approvals, ISRO/Space missions, RBI policy updates, Major Expressway/Infrastructure projects, National Schemes, and High-profile Govt Appointments/Awards.
 
     BULLET POINT RULES (IF A CARD QUALIFIES):
     1. WRITE EXACTLY 3 DEEP FACTUAL BULLET POINTS IN HINGLISH (Hindi written in Roman English script).
-       - Bullet 1 (Core Decision): Detailed explanation of what project/scheme was launched, Ministry involved, and exact location.
-       - Bullet 2 (Exact Figures): Specific budget amount, MoU partner name, capacity, target year, or numerical facts.
-       - Bullet 3 (Policy Framework): Deep explanation of government framework or national/state development context.
+       - Bullet 1 (Core Decision): What project/scheme was launched, Ministry/Department involved, and location.
+       - Bullet 2 (Factual Data): Specific numerical figures, budget outlay, capacity, target year, or partner organization details.
+       - Bullet 3 (Context & Impact): Why this is important for India/State development and policy context.
+    2. DO NOT write meta filler like "Yeh exam ke liye zaroori hai" or "Isse labh hoga".
 
     JSON SCHEMA OUTPUT:
     {{
       "news_cards": [
         {{
           "id": "news_01",
-          "title": "Clean Detailed Hinglish Headline with Specific Fact",
+          "title": "Clean Detailed Hinglish Headline",
           "category": "Select EXACT matching category from the 5 allowed above",
           "bullets": [
-            "Bullet 1: Detailed factual explanation in Hinglish",
-            "Bullet 2: Exact numerical data/budget outlay in Hinglish",
-            "Bullet 3: Deep explanation of policy framework in Hinglish"
+            "Bullet 1: Clear factual explanation in Hinglish",
+            "Bullet 2: Specific figures, budget outlay, or technical facts in Hinglish",
+            "Bullet 3: Policy framework or development impact in Hinglish"
           ],
           "exam_tag": "{tag_name}",
           "date": "{target_date_str}"
@@ -215,7 +206,7 @@ def generate_clean_summary(raw_text, target_date_str, is_national=False):
         response = client.chat.completions.create(
             model="llama-3.3-70b-versatile",
             messages=[{"role": "user", "content": prompt}],
-            temperature=0.01,
+            temperature=0.05,
             response_format={"type": "json_object"}
         )
         return response.choices[0].message.content
@@ -235,13 +226,13 @@ def append_to_master_history(news_cards, yesterday_key, is_national=False):
             with open(master_file, "r", encoding="utf-8") as f:
                 master_data = json.load(f)
         except Exception as e:
-            print(f"⚠️ Master History file read error ({master_file}): {e}")
+            print(f"⚠️ Master History read error ({master_file}): {e}")
             
     master_data[yesterday_key] = news_cards
     
     with open(master_file, "w", encoding="utf-8") as f:
         json.dump(master_data, f, ensure_ascii=False, indent=2)
-    print(f"✅ Appended under key '{yesterday_key}' into '{master_file}'!")
+    print(f"✅ Master History appended under key '{yesterday_key}' into '{master_file}'!")
 
 # -------------------------------------------------------------
 # 5. MAIN EXECUTION PIPELINE
@@ -273,15 +264,12 @@ if __name__ == "__main__":
     else:
         with open("bihar_news.json", "w", encoding="utf-8") as f:
             json.dump({"news_cards": []}, f, ensure_ascii=False, indent=2)
-        print("ℹ️ Empty bihar_news.json created (No raw text).")
 
     print("\n------------------------------------\n")
 
     # === B. PROCESS NATIONAL NEWS ===
     print("🇮🇳 --- PROCESS NATIONAL NEWS ---")
     raw_national = fetch_raw_national_news(target_dt)
-    
-    # ALWAYS MANDATORY WRITE national_news.json
     if raw_national:
         ai_national = generate_clean_summary(raw_national, date_str, is_national=True)
         try:
@@ -296,8 +284,6 @@ if __name__ == "__main__":
             print(f"❌ National JSON Parsing Error: {e}")
             with open("national_news.json", "w", encoding="utf-8") as f:
                 json.dump({"news_cards": []}, f, ensure_ascii=False, indent=2)
-            print("⚠️ Fallback empty national_news.json written.")
     else:
         with open("national_news.json", "w", encoding="utf-8") as f:
             json.dump({"news_cards": []}, f, ensure_ascii=False, indent=2)
-        print("ℹ️ Created empty national_news.json (No raw headlines fetched).")
