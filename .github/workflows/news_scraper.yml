@@ -1,10 +1,13 @@
-name: Auto Bihar News Summarizer
+name: Auto Bihar & National News Summarizer
 
 on:
   schedule:
     # Daily Subah 6:30 AM IST (1:00 AM UTC)
     - cron: '0 1 * * *'
   workflow_dispatch: # GitHub UI me Manual Run ke liye
+
+permissions:
+  contents: write # Repository me Push & Write permissions allow karta hai
 
 jobs:
   run-news-pipeline:
@@ -33,7 +36,7 @@ jobs:
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action Bot"
-          # FIX: Dono JSON files ko git add me include kiya gaya hai
-          git add bihar_news.json all_bihar_news_history.json
-          git diff-index --quiet HEAD || git commit -m "Auto-update Bihar News & Master History JSON [skip ci]"
+          # ✅ FIX: Sabhi 4 JSON files (Bihar + National) ko Git me add kiya gaya hai
+          git add bihar_news.json national_news.json all_bihar_news_history.json all_national_news_history.json
+          git diff-index --quiet HEAD || git commit -m "Auto-update Bihar & National News JSONs [skip ci]"
           git push
