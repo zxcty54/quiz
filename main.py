@@ -117,7 +117,7 @@ def fetch_raw_national_news(target_dt):
     """National Current Affairs Scraper (PIB India + Google National)"""
     national_titles = []
     
-    # Source A: PIB (Press Information Bureau India - Safe XML Parser)
+    # Source A: PIB (Press Information Bureau India - Beautiful Soup XML Parser)
     try:
         pib_url = "https://pib.gov.in/RssMain.aspx?Mod=1&Lang=1"
         res = requests.get(pib_url, timeout=15, verify=False)
@@ -134,7 +134,7 @@ def fetch_raw_national_news(target_dt):
     except Exception as e:
         print(f"⚠️ Error PIB India: {e}")
 
-    # Source B: Google News National (Cabinet, ISRO, Economy, Schemes)
+    # Source B: Google News National
     try:
         g_url = "https://news.google.com/rss/search?q=India+Cabinet+Decisions+OR+National+Schemes+OR+ISRO+OR+RBI+OR+National+Highways&hl=hi&gl=IN&ceid=IN:hi"
         res = requests.get(g_url, impersonate="chrome", timeout=15, verify=False)
@@ -209,13 +209,17 @@ def generate_clean_summary(raw_text, target_date_str, is_national=False):
     }}
     """
     
-    response = client.chat.completions.create(
-        model="llama-3.3-70b-versatile",
-        messages=[{"role": "user", "content": prompt}],
-        temperature=0.01,
-        response_format={"type": "json_object"}
-    )
-    return response.choices[0].message.content
+    try:
+        response = client.chat.completions.create(
+            model="llama-3.3-70b-versatile",
+            messages=[{"role": "user", "content": prompt}],
+            temperature=0.01,
+            response_format={"type": "json_object"}
+        )
+        return response.choices[0].message.content
+    except Exception as e:
+        print(f"⚠️ Groq API Error for {scope_name}: {e}")
+        return '{"news_cards": []}'
 
 # -------------------------------------------------------------
 # 4. MASTER HISTORY APPEND FUNCTIONS
@@ -262,12 +266,18 @@ if __name__ == "__main__":
                 append_to_master_history(parsed_bihar["news_cards"], key_str, is_national=False)
         except Exception as e:
             print(f"❌ Bihar JSON Error: {e}")
+    else:
+        with open("bihar_news.json", "w", encoding="utf-8") as f:
+            json.dump({"news_cards": []}, f, ensure_ascii=False, indent=2)
+        print("ℹ️ Empty bihar_news.json created (No raw text).")
 
     print("\n------------------------------------\n")
 
     # === B. PROCESS NATIONAL NEWS ===
     print("🇮🇳 --- PROCESS NATIONAL NEWS ---")
     raw_national = fetch_raw_national_news(target_dt)
+    
+    # Always ensure national_news.json gets created even if raw text or AI output is empty
     if raw_national:
         ai_national = generate_clean_summary(raw_national, date_str, is_national=True)
         try:
@@ -275,7 +285,15 @@ if __name__ == "__main__":
             with open("national_news.json", "w", encoding="utf-8") as f:
                 json.dump(parsed_national, f, ensure_ascii=False, indent=2)
             print("✅ national_news.json successfully updated!")
+            
             if "news_cards" in parsed_national:
                 append_to_master_history(parsed_national["news_cards"], key_str, is_national=True)
         except Exception as e:
-            print(f"❌ National JSON Error: {e}")
+            print(f"❌ National JSON Parsing Error: {e}")
+            with open("national_news.json", "w", encoding="utf-8") as f:
+                json.dump({"news_cards": []}, f, ensure_ascii=False, indent=2)
+            print("⚠️ Created fallback empty national_news.json due to parse error.")
+    else:
+        with open("national_news.json", "w", encoding="utf-8") as f:
+            json.dump({"news_cards": []}, f, ensure_ascii=False, indent=2)
+        print("ℹ️ Created empty national_news.json (No raw headlines fetched).")
