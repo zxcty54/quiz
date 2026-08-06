@@ -117,20 +117,20 @@ def fetch_raw_national_news(target_dt):
     """National Current Affairs Scraper (PIB India + Google National)"""
     national_titles = []
     
-    # Source A: PIB (Press Information Bureau India)
+    # Source A: PIB (Press Information Bureau India - Safe XML Parser)
     try:
         pib_url = "https://pib.gov.in/RssMain.aspx?Mod=1&Lang=1"
         res = requests.get(pib_url, timeout=15, verify=False)
         if res.status_code == 200:
-            root = ET.fromstring(res.text)
+            soup = BeautifulSoup(res.content, "xml")
             count = 0
-            for item in root.findall('.//item'):
+            for item in soup.find_all('item'):
                 title = item.find('title').text if item.find('title') is not None else ""
                 if title:
                     national_titles.append(f"[PIB India] {title.strip()}")
                     count += 1
                     if count >= 12: break
-            print("✅ PIB National RSS fetched!")
+            print("✅ PIB National RSS fetched successfully!")
     except Exception as e:
         print(f"⚠️ Error PIB India: {e}")
 
@@ -148,7 +148,7 @@ def fetch_raw_national_news(target_dt):
                     national_titles.append(f"[National News] {title.strip()}")
                     count += 1
                     if count >= 12: break
-            print("✅ Google National RSS fetched!")
+            print("✅ Google National RSS fetched successfully!")
     except Exception as e:
         print(f"⚠️ Error Google National: {e}")
 
