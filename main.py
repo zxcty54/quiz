@@ -117,7 +117,7 @@ def fetch_raw_national_news(target_dt):
     """National Current Affairs Scraper (PIB India + Google National)"""
     national_titles = []
     
-    # Source A: PIB (Press Information Bureau India - Beautiful Soup XML Parser)
+    # Source A: PIB (Press Information Bureau India - XML BeautifulSoup Parser)
     try:
         pib_url = "https://pib.gov.in/RssMain.aspx?Mod=1&Lang=1"
         res = requests.get(pib_url, timeout=15, verify=False)
@@ -162,9 +162,11 @@ def generate_clean_summary(raw_text, target_date_str, is_national=False):
     
     scope_name = "India National" if is_national else "Bihar State"
     tag_name = "🎯 National Special / India Affairs" if is_national else "🎯 BPSC Special / Bihar Current Affairs"
+    
+    economy_category = "National Economy, Budget & Reports" if is_national else "Bihar Economy, Budget & Reports"
 
     prompt = f"""
-    You are a Senior Current Affairs Editor for BPSC and Competitive Exams in India.
+    You are a Senior Current Affairs Editor for Competitive Exams in India.
     Below is raw news text scraped for {scope_name} Level:
     
     {raw_text}
@@ -174,7 +176,7 @@ def generate_clean_summary(raw_text, target_date_str, is_national=False):
     2. "Infrastructure & Projects"
     3. "Agriculture, Environment & GI Tags"
     4. "Appointments, Awards & Persons in News"
-    5. "Bihar Economy, Budget & Reports" (Use "National Economy, Budget & Reports" for National news)
+    5. "{economy_category}"
 
     STRICT REJECTION & DISCARD RULES:
     1. REJECT ALL routine administrative instructions, CM/PM directives ("nirdesh diye"), traffic directives, or generic press statements.
@@ -196,7 +198,7 @@ def generate_clean_summary(raw_text, target_date_str, is_national=False):
         {{
           "id": "news_01",
           "title": "Clean Detailed Hinglish Headline with Specific Fact",
-          "category": "Select EXACT matching category",
+          "category": "Select EXACT matching category from the 5 allowed above",
           "bullets": [
             "Bullet 1: Detailed factual explanation in Hinglish",
             "Bullet 2: Exact numerical data/budget outlay in Hinglish",
@@ -218,7 +220,7 @@ def generate_clean_summary(raw_text, target_date_str, is_national=False):
         )
         return response.choices[0].message.content
     except Exception as e:
-        print(f"⚠️ Groq API Error for {scope_name}: {e}")
+        print(f"⚠️ Groq API Call Failed for {scope_name}: {e}")
         return '{"news_cards": []}'
 
 # -------------------------------------------------------------
@@ -265,7 +267,9 @@ if __name__ == "__main__":
             if "news_cards" in parsed_bihar:
                 append_to_master_history(parsed_bihar["news_cards"], key_str, is_national=False)
         except Exception as e:
-            print(f"❌ Bihar JSON Error: {e}")
+            print(f"❌ Bihar JSON Parsing Error: {e}")
+            with open("bihar_news.json", "w", encoding="utf-8") as f:
+                json.dump({"news_cards": []}, f, ensure_ascii=False, indent=2)
     else:
         with open("bihar_news.json", "w", encoding="utf-8") as f:
             json.dump({"news_cards": []}, f, ensure_ascii=False, indent=2)
@@ -277,7 +281,7 @@ if __name__ == "__main__":
     print("🇮🇳 --- PROCESS NATIONAL NEWS ---")
     raw_national = fetch_raw_national_news(target_dt)
     
-    # Always ensure national_news.json gets created even if raw text or AI output is empty
+    # ALWAYS MANDATORY WRITE national_news.json
     if raw_national:
         ai_national = generate_clean_summary(raw_national, date_str, is_national=True)
         try:
@@ -292,7 +296,7 @@ if __name__ == "__main__":
             print(f"❌ National JSON Parsing Error: {e}")
             with open("national_news.json", "w", encoding="utf-8") as f:
                 json.dump({"news_cards": []}, f, ensure_ascii=False, indent=2)
-            print("⚠️ Created fallback empty national_news.json due to parse error.")
+            print("⚠️ Fallback empty national_news.json written.")
     else:
         with open("national_news.json", "w", encoding="utf-8") as f:
             json.dump({"news_cards": []}, f, ensure_ascii=False, indent=2)
