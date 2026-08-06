@@ -21,6 +21,19 @@ def get_yesterday_info():
     key_str = yesterday_dt.strftime("%Y-%m-%d")    # e.g., '2026-08-02'
     return yesterday_dt, date_str, key_str
 
+def is_yesterday_news(pub_date_str, target_dt):
+    """Check karta hai ki RSS item ki publish date recent 24-48 hours ki hai ya nahi"""
+    if not pub_date_str:
+        return True
+    try:
+        pub_tuple = email.utils.parsedate_tz(pub_date_str)
+        if pub_tuple:
+            pub_dt = datetime.fromtimestamp(email.utils.mktime_tz(pub_tuple))
+            return (target_dt - timedelta(days=1)) <= pub_dt <= (target_dt + timedelta(days=1))
+    except Exception as e:
+        print(f"Date parsing error: {e}")
+    return True
+
 def clean_html_text(text):
     """HTML tags ko clean text me convert karta hai"""
     if not text:
@@ -31,77 +44,89 @@ def clean_html_text(text):
 # 2. SCRAPING FUNCTIONS
 # -------------------------------------------------------------
 def fetch_raw_bihar_news(target_dt):
-    """Bihar Specific Raw News Scraper"""
+    """Multiple Official & Media sources se Bihar Current Affairs raw text scrape karta hai"""
     news_titles = []
     
-    # Source A: Google News Bihar
+    # Source A: GOOGLE NEWS RSS
     try:
         google_url = "https://news.google.com/rss/search?q=Bihar+Government+Schemes+OR+Infrastructure+OR+Economy+OR+Agriculture&hl=hi&gl=IN&ceid=IN:hi"
         res = requests.get(google_url, impersonate="chrome", timeout=15, verify=False)
         if res.status_code == 200:
             root = ET.fromstring(res.text)
+            count = 0
             for item in root.findall('.//item'):
                 title = item.find('title').text if item.find('title') is not None else ""
-                desc = clean_html_text(item.find('description').text if item.find('description') is not None else "")
-                if title:
-                    news_titles.append(f"[Google News Bihar] Title: {title} | Details: {desc[:200]}")
-            print("✅ Google News Bihar RSS fetched!")
+                pub_date = item.find('pubDate').text if item.find('pubDate') is not None else ""
+                if title and is_yesterday_news(pub_date, target_dt):
+                    news_titles.append(f"[Google News] {title}")
+                    count += 1
+                    if count >= 15:
+                        break
+            print("✅ Google News Bihar RSS fetched successfully!")
     except Exception as e:
-        print(f"⚠️ Error Bihar Google News: {e}")
+        print(f"⚠️ Error fetching Google News Bihar: {e}")
 
-    # Source B: CMO Bihar
+    # Source B: CMO BIHAR
     try:
         cmo_url = "https://cm.bihar.gov.in/users/preessrelease.aspx"
         res = requests.get(cmo_url, impersonate="chrome", timeout=15, verify=False)
         if res.status_code == 200:
             soup = BeautifulSoup(res.content, "html.parser")
-            for row in soup.find_all('tr'):
+            for row in soup.find_all('tr')[:10]:
                 cols = row.find_all('td')
                 if len(cols) >= 2:
                     title = cols[1].text.strip()
                     if title and len(title) > 10:
                         news_titles.append(f"[CMO Bihar] {title}")
-            print("✅ CMO Bihar news fetched!")
+            print("✅ CMO Bihar news fetched successfully!")
     except Exception as e:
-        print(f"⚠️ Error CMO Bihar: {e}")
+        print(f"⚠️ Error fetching CMO Bihar: {e}")
 
-    # Source C: IPRD Bihar
+    # Source C: IPRD BIHAR
     try:
         iprd_url = "https://state.bihar.gov.in/prdbihar/CitizenHome.html"
         res = requests.get(iprd_url, impersonate="chrome", timeout=15, verify=False)
         if res.status_code == 200:
             soup = BeautifulSoup(res.content, "html.parser")
+            count = 0
             for link in soup.find_all('a'):
                 title = link.text.strip()
                 if title and len(title) > 15:
                     news_titles.append(f"[IPRD Bihar] {title}")
-            print("✅ IPRD Bihar news fetched!")
+                    count += 1
+                    if count >= 8:
+                        break
+            print("✅ IPRD Bihar news fetched successfully!")
     except Exception as e:
-        print(f"⚠️ Error IPRD Bihar: {e}")
+        print(f"⚠️ Error fetching IPRD Bihar: {e}")
 
-    # Source D: Prabhat Khabar
+    # Source D: PRABHAT KHABAR BIHAR
     try:
         pk_url = "https://www.prabhatkhabar.com/state/bihar/feed"
         res = requests.get(pk_url, impersonate="chrome", timeout=15, verify=False)
         if res.status_code == 200:
             root = ET.fromstring(res.text)
+            count = 0
             for item in root.findall('.//item'):
                 title = item.find('title').text if item.find('title') is not None else ""
-                desc = clean_html_text(item.find('description').text if item.find('description') is not None else "")
-                if title:
-                    news_titles.append(f"[Prabhat Khabar] Title: {title} | Details: {desc[:200]}")
-            print("✅ Prabhat Khabar Bihar fetched!")
+                pub_date = item.find('pubDate').text if item.find('pubDate') is not None else ""
+                if title and is_yesterday_news(pub_date, target_dt):
+                    news_titles.append(f"[Prabhat Khabar] {title.strip()}")
+                    count += 1
+                    if count >= 10:
+                        break
+            print("✅ Prabhat Khabar Bihar news fetched successfully!")
     except Exception as e:
-        print(f"⚠️ Error Prabhat Khabar: {e}")
+        print(f"⚠️ Error fetching Prabhat Khabar: {e}")
 
     return "\n".join(news_titles)
 
 
 def fetch_raw_national_news(target_dt):
-    """PURE NATIONAL Current Affairs Scraper (No State News Allowed)"""
+    """PURE NATIONAL Current Affairs Scraper (PIB + Central RSS Feeds)"""
     national_titles = []
     
-    # Source A: PIB (Press Information Bureau India - Pure Central Govt Releases)
+    # Source A: PIB India (Central Releases)
     try:
         pib_url = "https://pib.gov.in/RssMain.aspx?Mod=1&Lang=1"
         res = requests.get(pib_url, timeout=15, verify=False)
@@ -112,11 +137,11 @@ def fetch_raw_national_news(target_dt):
                 desc = clean_html_text(item.find('description').text if item.find('description') is not None else "")
                 if title:
                     national_titles.append(f"[PIB Union Govt] Title: {title.strip()} | Summary: {desc[:250]}")
-            print("✅ PIB Union Govt RSS fetched!")
+            print("✅ PIB Union Govt RSS fetched successfully!")
     except Exception as e:
         print(f"⚠️ Error PIB India: {e}")
 
-    # Source B: Google News - PURE CENTRAL / UNION GOVT SEARCH
+    # Source B: Google News Central
     try:
         g_url = "https://news.google.com/rss/search?q=%22Union+Cabinet%22+OR+%22Central+Government%22+OR+ISRO+OR+DRDO+OR+%22RBI%22+OR+%22NITI+Aayog%22+OR+%22Military+Exercise%22+OR+%22G20%22+OR+%22BRICS%22&hl=hi&gl=IN&ceid=IN:hi"
         res = requests.get(g_url, impersonate="chrome", timeout=15, verify=False)
@@ -124,14 +149,15 @@ def fetch_raw_national_news(target_dt):
             root = ET.fromstring(res.text)
             for item in root.findall('.//item'):
                 title = item.find('title').text if item.find('title') is not None else ""
+                pub_date = item.find('pubDate').text if item.find('pubDate') is not None else ""
                 desc = clean_html_text(item.find('description').text if item.find('description') is not None else "")
-                if title:
+                if title and is_yesterday_news(pub_date, target_dt):
                     national_titles.append(f"[Central News] Title: {title.strip()} | Summary: {desc[:200]}")
-            print("✅ Google Central/National RSS fetched!")
+            print("✅ Google Central/National RSS fetched successfully!")
     except Exception as e:
         print(f"⚠️ Error Google National: {e}")
 
-    # Source C: AIR News (All India Radio Central Bulletin)
+    # Source C: AIR News Central
     try:
         air_url = "https://newsonair.gov.in/feed/"
         res = requests.get(air_url, timeout=15, verify=False)
@@ -142,11 +168,11 @@ def fetch_raw_national_news(target_dt):
                 desc = clean_html_text(item.find('description').text if item.find('description') is not None else "")
                 if title:
                     national_titles.append(f"[AIR National] Title: {title.strip()} | Summary: {desc[:200]}")
-            print("✅ AIR Central News fetched!")
+            print("✅ AIR Central News fetched successfully!")
     except Exception as e:
         print(f"⚠️ Error AIR News: {e}")
 
-    # Source D: The Hindu (National Desk)
+    # Source D: The Hindu National Desk
     try:
         hindu_url = "https://www.thehindu.com/news/national/feeder/default.rss"
         res = requests.get(hindu_url, timeout=15, verify=False)
@@ -157,17 +183,17 @@ def fetch_raw_national_news(target_dt):
                 desc = clean_html_text(item.find('description').text if item.find('description') is not None else "")
                 if title:
                     national_titles.append(f"[The Hindu National] Title: {title.strip()} | Summary: {desc[:200]}")
-            print("✅ The Hindu National fetched!")
+            print("✅ The Hindu National fetched successfully!")
     except Exception as e:
         print(f"⚠️ Error The Hindu: {e}")
 
     return "\n".join(national_titles)
 
 # -------------------------------------------------------------
-# 3. AI SUMMARY GENERATOR (EXAM SYLLABUS GRID ENFORCED)
+# 3. AI SUMMARY GENERATOR
 # -------------------------------------------------------------
 def generate_clean_summary(raw_text, target_date_str, is_national=False):
-    """Groq AI se Factual Hinglish JSON summary banwata hai"""
+    """Groq AI se Fact-Based Detailed Hinglish JSON summary banwata hai"""
     
     if is_national:
         scope_name = "India National & International Level ONLY"
@@ -184,7 +210,7 @@ def generate_clean_summary(raw_text, target_date_str, is_national=False):
         """
         rejection_rules = """
         STRICT REJECTION RULES (PURE NATIONAL FILTER):
-        1. REJECT ALL STATE-SPECIFIC NEWS: Strictly reject news specific to individual states (e.g. UP govt schemes, MP politics, Rajasthan local events, Delhi municipal news, State assembly debates).
+        1. REJECT ALL STATE-SPECIFIC NEWS: Strictly reject news specific to individual states (e.g., UP govt schemes, MP politics, Rajasthan local events, Delhi municipal news).
         2. ACCEPT ONLY PURE NATIONAL / CENTRAL EVENTS: Union Cabinet decisions, Central Ministries, ISRO/DRDO/Defense, RBI, NITI Aayog, International Bilateral Relations, National Level Indices/Reports, Global Summits, and National/International Sports/Awards.
         3. REJECT political rallies, speeches, party disputes, crime, accidents.
         4. REJECT ALL Education, Schools, Recruitment, Vacancies, Exam Notices, Admit Cards, and Results.
@@ -211,16 +237,27 @@ def generate_clean_summary(raw_text, target_date_str, is_national=False):
         5. "Bihar Economy, Budget & Reports"
         """
         rejection_rules = """
-        STRICT REJECTION RULES (BIHAR):
-        1. REJECT political speeches, rallies, local city traffic orders, crime, accidents.
-        2. REJECT ALL Education, Schools, Recruitment, Vacancies, Exam Notices, Admit Cards, and Results.
-        3. REJECT local small road repairs. Accept only Mega Projects.
+        STRICT REJECTION & DISCARD RULES (CRITICAL):
+        1. REJECT ALL routine administrative instructions, CM directives ("nirdesh diye"), smooth traffic arrangements, RERA routine meetings, or generic press statements.
+        2. REJECT ALL Education, Schools, University, Recruitment, Vacancies, Exam Notices, Admit Cards, and Results.
+        3. STRICT INFRASTRUCTURE FILTER:
+           - For "Infrastructure & Projects", REJECT small/routine road repairs or local city traffic directives.
+           - ACCEPT ONLY MAJOR MEGA-INFRASTRUCTURE PROJECTS that make national/state headlines (e.g., Metro lines, Mega Expressways, Major Ganga Bridges, Airports, Power Plants, or Mega Investment projects).
+        4. REJECT ALL news that lacks hard facts. EVERY card MUST contain AT LEAST ONE hard fact:
+           - Exact Budget/Investment Outlay in Crores (e.g. 500 Cr, 6000 Cr)
+           - Specific Scheme/Act Name (e.g. Bihar Investment Promotion Policy)
+           - MoU Partner Name
+           - Exact Location, Highway Length, or Capacity Numbers.
+        5. NEVER WRITE DISCLAIMERS: It is STRICTLY FORBIDDEN to write statements like "Koi vishisht budget/yojana nahi di gayi", "Yeh vikas ke liye avashyak hai", or "Isse logon ko labh hoga".
+        6. IF NO FACTUAL NEWS IS FOUND: Return an empty list: {"news_cards": []}. It is 100x better to return 0 or 1 card than to generate useless generic news.
         """
         bullet_rules = """
-        BULLET RULES (BIHAR):
-        - Bullet 1 (Core Decision): Detailed explanation of decision, ministry/department, and location.
-        - Bullet 2 (Factual Data): Specific budget outlay, capacity, target year, or MoU partner.
-        - Bullet 3 (Policy Context): Policy framework (e.g., Saat Nischay-2, Krishi Road Map 4, etc.).
+        BULLET POINT RULES (IF A CARD QUALIFIES):
+        1. WRITE EXACTLY 3 DEEP FACTUAL BULLET POINTS IN HINGLISH (Hindi written in Roman English script).
+           - Bullet 1 (Core Decision): Detailed explanation of what specific project/scheme was launched, which Ministry/Dept is involved, and exact location in Hinglish.
+           - Bullet 2 (Exact Figures): Specific budget amount, MoU partner name, capacity, target year, or numerical facts in Hinglish.
+           - Bullet 3 (Policy Framework): Deep explanation of which government policy or framework it falls under (e.g., Saat Nischay-2, Krishi Road Map 4, Economic Survey) in Hinglish.
+        2. DO NOT write filler lines like "Yeh BPSC ke liye important hai" or "Isse vikas hoga". Provide REAL factual context instead.
         """
 
     prompt = f"""
@@ -235,10 +272,9 @@ def generate_clean_summary(raw_text, target_date_str, is_national=False):
 
     DEDUPLICATION RULE:
     - MERGE duplicate reports of the same event into ONE single card. No duplicate cards allowed.
-    - NO CARD LIMIT: Generate cards for ALL valid unique exam-relevant events found.
 
     LANGUAGE & BULLETS:
-    - WRITE ALL TITLES AND BULLETS IN **HINGLISH** (Hindi written in Roman English Script, e.g. "India aur Japan ke beech Dharma Guardian exercise Rajasthan me shuru hui").
+    - WRITE ALL TITLES AND BULLETS IN **HINGLISH** (Hindi written in Roman English Script).
     - ALWAYS WRITE EXACTLY 3 BULLET POINTS FOR EVERY CARD.
     {bullet_rules}
 
@@ -247,12 +283,12 @@ def generate_clean_summary(raw_text, target_date_str, is_national=False):
       "news_cards": [
         {{
           "id": "news_01",
-          "title": "Clean Factual Hinglish Headline",
+          "title": "Clean Detailed Hinglish Headline with Specific Fact",
           "category": "Select EXACT matching category name from the list above",
           "bullets": [
-            "Point 1 in Hinglish",
-            "Point 2 in Hinglish",
-            "Point 3 in Hinglish"
+            "Bullet 1: Detailed factual explanation in Hinglish",
+            "Bullet 2: Exact numerical data/budget outlay in Hinglish",
+            "Bullet 3: Deep explanation of policy framework in Hinglish"
           ],
           "exam_tag": "{tag_name}",
           "date": "{target_date_str}"
@@ -265,13 +301,13 @@ def generate_clean_summary(raw_text, target_date_str, is_national=False):
         response = client.chat.completions.create(
             model="llama-3.3-70b-versatile",
             messages=[{"role": "user", "content": prompt}],
-            temperature=0.05,
+            temperature=0.01,
             response_format={"type": "json_object"}
         )
         return response.choices[0].message.content
     except Exception as e:
         print(f"⚠️ Groq API Failed for {scope_name}: {e}")
-        return '{"news_cards": []}'
+        return ""
 
 # -------------------------------------------------------------
 # 4. MASTER HISTORY APPEND FUNCTIONS
@@ -294,7 +330,7 @@ def append_to_master_history(news_cards, yesterday_key, is_national=False):
     print(f"✅ Master History appended under key '{yesterday_key}' into '{master_file}'!")
 
 # -------------------------------------------------------------
-# 5. MAIN EXECUTION PIPELINE
+# 5. MAIN EXECUTION PIPELINE (SAFE RETENTION LOGIC)
 # -------------------------------------------------------------
 if __name__ == "__main__":
     if not GROQ_KEY:
@@ -309,20 +345,23 @@ if __name__ == "__main__":
     raw_bihar = fetch_raw_bihar_news(target_dt)
     if raw_bihar:
         ai_bihar = generate_clean_summary(raw_bihar, date_str, is_national=False)
-        try:
-            parsed_bihar = json.loads(ai_bihar.strip())
-            with open("bihar_news.json", "w", encoding="utf-8") as f:
-                json.dump(parsed_bihar, f, ensure_ascii=False, indent=2)
-            print("✅ bihar_news.json successfully updated!")
-            if "news_cards" in parsed_bihar:
-                append_to_master_history(parsed_bihar["news_cards"], key_str, is_national=False)
-        except Exception as e:
-            print(f"❌ Bihar JSON Parsing Error: {e}")
-            with open("bihar_news.json", "w", encoding="utf-8") as f:
-                json.dump({"news_cards": []}, f, ensure_ascii=False, indent=2)
+        if ai_bihar:
+            try:
+                parsed_bihar = json.loads(ai_bihar.strip())
+                cards = parsed_bihar.get("news_cards", [])
+                
+                # SAFEGUARD: Update file ONLY IF news_cards is NOT empty!
+                if cards and len(cards) > 0:
+                    with open("bihar_news.json", "w", encoding="utf-8") as f:
+                        json.dump(parsed_bihar, f, ensure_ascii=False, indent=2)
+                    print(f"✅ bihar_news.json successfully updated with {len(cards)} new cards!")
+                    append_to_master_history(cards, key_str, is_national=False)
+                else:
+                    print("🛡️ SAFEGUARD ACTIVATED: AI returned 0 cards. Retaining existing bihar_news.json data!")
+            except Exception as e:
+                print(f"❌ Bihar JSON Parsing Error: {e}. Retaining existing file!")
     else:
-        with open("bihar_news.json", "w", encoding="utf-8") as f:
-            json.dump({"news_cards": []}, f, ensure_ascii=False, indent=2)
+        print("🛡️ SAFEGUARD ACTIVATED: No raw text scraped. Retaining existing bihar_news.json data!")
 
     print("\n------------------------------------\n")
 
@@ -331,18 +370,20 @@ if __name__ == "__main__":
     raw_national = fetch_raw_national_news(target_dt)
     if raw_national:
         ai_national = generate_clean_summary(raw_national, date_str, is_national=True)
-        try:
-            parsed_national = json.loads(ai_national.strip())
-            with open("national_news.json", "w", encoding="utf-8") as f:
-                json.dump(parsed_national, f, ensure_ascii=False, indent=2)
-            print("✅ national_news.json successfully updated!")
-            
-            if "news_cards" in parsed_national:
-                append_to_master_history(parsed_national["news_cards"], key_str, is_national=True)
-        except Exception as e:
-            print(f"❌ National JSON Parsing Error: {e}")
-            with open("national_news.json", "w", encoding="utf-8") as f:
-                json.dump({"news_cards": []}, f, ensure_ascii=False, indent=2)
+        if ai_national:
+            try:
+                parsed_national = json.loads(ai_national.strip())
+                cards_nat = parsed_national.get("news_cards", [])
+                
+                # SAFEGUARD: Update file ONLY IF news_cards is NOT empty!
+                if cards_nat and len(cards_nat) > 0:
+                    with open("national_news.json", "w", encoding="utf-8") as f:
+                        json.dump(parsed_national, f, ensure_ascii=False, indent=2)
+                    print(f"✅ national_news.json successfully updated with {len(cards_nat)} new cards!")
+                    append_to_master_history(cards_nat, key_str, is_national=True)
+                else:
+                    print("🛡️ SAFEGUARD ACTIVATED: AI returned 0 national cards. Retaining existing national_news.json data!")
+            except Exception as e:
+                print(f"❌ National JSON Parsing Error: {e}. Retaining existing file!")
     else:
-        with open("national_news.json", "w", encoding="utf-8") as f:
-            json.dump({"news_cards": []}, f, ensure_ascii=False, indent=2)
+        print("🛡️ SAFEGUARD ACTIVATED: No national raw text scraped. Retaining existing national_news.json data!")
