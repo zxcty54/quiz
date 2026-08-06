@@ -57,8 +57,8 @@ class _HomeTabState extends State<HomeTab> {
     super.dispose();
   }
 
-  // 📰 FETCH BIHAR & NATIONAL NEWS WITH LOCAL CACHING
-  Future<void> _fetchDailyBulletins() async {
+  // 📰 FETCH BIHAR & NATIONAL NEWS WITH INSTANT NETWORK REFRESH
+  Future<void> _fetchDailyBulletins({bool forceRefresh = false}) async {
     final prefs = await SharedPreferences.getInstance();
     final String todayStr = DateTime.now().toIso8601String().split('T')[0];
     
@@ -69,8 +69,8 @@ class _HomeTabState extends State<HomeTab> {
 
     final String savedDate = prefs.getString(cacheDate) ?? '';
 
-    // Step 1: Check Local Storage
-    if (savedDate == todayStr) {
+    // Step 1: Check Local Storage (Skip if user pulled-to-refresh manually)
+    if (!forceRefresh && savedDate == todayStr) {
       String? cachedBihar = prefs.getString(cacheBiharData);
       String? cachedNat = prefs.getString(cacheNationalData);
 
@@ -85,15 +85,16 @@ class _HomeTabState extends State<HomeTab> {
               _isLoadingNews = false;
             });
           }
-          debugPrint("✅ News Loaded from Local Cache!");
+          debugPrint("✅ News Loaded instantly from Local Cache!");
           return;
         } catch (_) {}
       }
     }
 
-    // Step 2: Network Fetch
-    final String biharUrl = "https://raw.githubusercontent.com/zxcty54/quiz/main/bihar_news.json?v=${DateTime.now().day}";
-    final String nationalUrl = "https://raw.githubusercontent.com/zxcty54/quiz/main/national_news.json?v=${DateTime.now().day}";
+    // Step 2: Dynamic Network Fetch with Millisecond Timestamp (Bypasses GitHub CDN Cache)
+    final int timestamp = DateTime.now().millisecondsSinceEpoch;
+    final String biharUrl = "https://raw.githubusercontent.com/zxcty54/quiz/main/bihar_news.json?t=$timestamp";
+    final String nationalUrl = "https://raw.githubusercontent.com/zxcty54/quiz/main/national_news.json?t=$timestamp";
 
     try {
       final resBihar = await http.get(Uri.parse(biharUrl)).timeout(const Duration(seconds: 4));
@@ -117,6 +118,7 @@ class _HomeTabState extends State<HomeTab> {
         await prefs.setString(cacheBiharData, bDecoded);
         await prefs.setString(cacheNationalData, nDecoded);
         await prefs.setString(cacheDate, todayStr);
+        debugPrint("✅ Fresh News Refetched and Cached!");
       } else {
         if (mounted) setState(() => _isLoadingNews = false);
       }
@@ -128,49 +130,57 @@ class _HomeTabState extends State<HomeTab> {
 
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      physics: const AlwaysScrollableScrollPhysics(),
-      padding: const EdgeInsets.all(16),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          // 1. TODAY TICKER
-          if (widget.appConfig['today_update']?['show'] == true) ...[
-            TodayUpdateTickerWidget(updateData: widget.appConfig['today_update'], onTapUrl: widget.onTapUrl),
-            const SizedBox(height: 16),
+    return RefreshIndicator(
+      color: const Color(0xFF4F46E5), // Pull Refresh Spinner Color
+      backgroundColor: widget.isDarkMode ? const Color(0xFF1E293B) : Colors.white,
+      onRefresh: () async {
+        // 🔄 PULL-TO-REFRESH ACTION
+        await _fetchDailyBulletins(forceRefresh: true);
+      },
+      child: SingleChildScrollView(
+        physics: const AlwaysScrollableScrollPhysics(), // Ensures pull-down works even when list is short
+        padding: const EdgeInsets.all(16),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            // 1. TODAY TICKER
+            if (widget.appConfig['today_update']?['show'] == true) ...[
+              TodayUpdateTickerWidget(updateData: widget.appConfig['today_update'], onTapUrl: widget.onTapUrl),
+              const SizedBox(height: 16),
+            ],
+
+            // 🛡️ 2. HERO TRUST BANNER
+            _buildTrustHeroBanner(),
+            const SizedBox(height: 18),
+
+            // 📰 3. DAILY BULLETIN CAROUSEL WITH TOGGLE SWITCH
+            _buildDailyBulletinSection(),
+            const SizedBox(height: 18),
+
+            // 👨‍🏫 4. LEARN PREVIEW CARD
+            _buildLearnPreviewCard(context),
+            const SizedBox(height: 18),
+
+            // ⚔️ 5. SPEED RUN DUEL CARD
+            _buildSpeedRunChallengeCard(context),
+            const SizedBox(height: 18),
+
+            // 6. DYNAMIC WEB HUB
+            _buildDynamicWebHubSection(context),
+            const SizedBox(height: 18),
+
+            // 7. ELIGIBILITY CHECKER
+            EligibilityCheckerWidget(isDarkMode: widget.isDarkMode, onTapUrl: widget.onTapUrl),
+            const SizedBox(height: 18),
+
+            // 📅 8. LAUNCH ROADMAP
+            _buildLaunchRoadmapCard(),
+            const SizedBox(height: 18),
+
+            // 9. TELEGRAM COMMUNITY
+            const TelegramCreatorWidget(),
           ],
-
-          // 🛡️ 2. HERO TRUST BANNER
-          _buildTrustHeroBanner(),
-          const SizedBox(height: 18),
-
-          // 📰 3. DAILY BULLETIN CAROUSEL WITH TOGGLE SWITCH
-          _buildDailyBulletinSection(),
-          const SizedBox(height: 18),
-
-          // 👨‍🏫 4. LEARN PREVIEW CARD
-          _buildLearnPreviewCard(context),
-          const SizedBox(height: 18),
-
-          // ⚔️ 5. SPEED RUN DUEL CARD
-          _buildSpeedRunChallengeCard(context),
-          const SizedBox(height: 18),
-
-          // 6. DYNAMIC WEB HUB
-          _buildDynamicWebHubSection(context),
-          const SizedBox(height: 18),
-
-          // 7. ELIGIBILITY CHECKER
-          EligibilityCheckerWidget(isDarkMode: widget.isDarkMode, onTapUrl: widget.onTapUrl),
-          const SizedBox(height: 18),
-
-          // 📅 8. LAUNCH ROADMAP
-          _buildLaunchRoadmapCard(),
-          const SizedBox(height: 18),
-
-          // 9. TELEGRAM COMMUNITY
-          const TelegramCreatorWidget(),
-        ],
+        ),
       ),
     );
   }
@@ -394,7 +404,7 @@ class _HomeTabState extends State<HomeTab> {
           )
         else ...[
           SizedBox(
-            height: 460, // Full height ensures 3 deep bullets fit without scrollbar
+            height: 480, 
             child: PageView.builder(
               controller: _newsPageController,
               itemCount: activeList.length,
@@ -469,7 +479,7 @@ class _HomeTabState extends State<HomeTab> {
     );
   }
 
-  // 📇 NEWS CARD ITEM (STATIC NO-SCROLL LAYOUT)
+  // 📇 NEWS CARD ITEM (RESPONSIVE NO-CUT LAYOUT)
   Widget _buildUltraPremiumNewsCard(Map<String, dynamic> news) {
     final List bullets = (news['bullets'] as List?) ?? [];
 
@@ -556,7 +566,7 @@ class _HomeTabState extends State<HomeTab> {
 
           const SizedBox(height: 10),
 
-          // STATIC COLUMN FOR BULLETS
+          // FLEXIBLE BULLETS
           Column(
             children: bullets.map((bullet) {
               return Padding(
@@ -591,7 +601,7 @@ class _HomeTabState extends State<HomeTab> {
                             fontSize: 11.8,
                             fontWeight: FontWeight.w500,
                             color: widget.isDarkMode ? Colors.white70 : const Color(0xFF334155),
-                            height: 1.3,
+                            height: 1.35,
                           ),
                         ),
                       ),
