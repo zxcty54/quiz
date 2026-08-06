@@ -28,7 +28,7 @@ def clean_html_text(text):
     return BeautifulSoup(text, "html.parser").get_text().strip()
 
 # -------------------------------------------------------------
-# 2. UNLIMITED MULTI-SOURCE SCRAPING FUNCTIONS
+# 2. SCRAPING FUNCTIONS
 # -------------------------------------------------------------
 def fetch_raw_bihar_news(target_dt):
     """Bihar Specific Raw News Scraper"""
@@ -98,10 +98,10 @@ def fetch_raw_bihar_news(target_dt):
 
 
 def fetch_raw_national_news(target_dt):
-    """National Current Affairs Scraper (PIB + Google + AIR + The Hindu)"""
+    """PURE NATIONAL Current Affairs Scraper (No State News Allowed)"""
     national_titles = []
     
-    # Source A: PIB (Press Information Bureau India)
+    # Source A: PIB (Press Information Bureau India - Pure Central Govt Releases)
     try:
         pib_url = "https://pib.gov.in/RssMain.aspx?Mod=1&Lang=1"
         res = requests.get(pib_url, timeout=15, verify=False)
@@ -111,14 +111,14 @@ def fetch_raw_national_news(target_dt):
                 title = item.find('title').text if item.find('title') is not None else ""
                 desc = clean_html_text(item.find('description').text if item.find('description') is not None else "")
                 if title:
-                    national_titles.append(f"[PIB India] Title: {title.strip()} | Summary: {desc[:250]}")
-            print("✅ PIB National RSS fetched!")
+                    national_titles.append(f"[PIB Union Govt] Title: {title.strip()} | Summary: {desc[:250]}")
+            print("✅ PIB Union Govt RSS fetched!")
     except Exception as e:
         print(f"⚠️ Error PIB India: {e}")
 
-    # Source B: Google News National
+    # Source B: Google News - PURE CENTRAL / UNION GOVT SEARCH
     try:
-        g_url = "https://news.google.com/rss/search?q=Cabinet+Approves+OR+ISRO+OR+RBI+OR+National+Highway+OR+Military+Exercise+OR+NITI+Aayog&hl=hi&gl=IN&ceid=IN:hi"
+        g_url = "https://news.google.com/rss/search?q=%22Union+Cabinet%22+OR+%22Central+Government%22+OR+ISRO+OR+DRDO+OR+%22RBI%22+OR+%22NITI+Aayog%22+OR+%22Military+Exercise%22+OR+%22G20%22+OR+%22BRICS%22&hl=hi&gl=IN&ceid=IN:hi"
         res = requests.get(g_url, impersonate="chrome", timeout=15, verify=False)
         if res.status_code == 200:
             root = ET.fromstring(res.text)
@@ -126,12 +126,12 @@ def fetch_raw_national_news(target_dt):
                 title = item.find('title').text if item.find('title') is not None else ""
                 desc = clean_html_text(item.find('description').text if item.find('description') is not None else "")
                 if title:
-                    national_titles.append(f"[Google National] Title: {title.strip()} | Summary: {desc[:200]}")
-            print("✅ Google National RSS fetched!")
+                    national_titles.append(f"[Central News] Title: {title.strip()} | Summary: {desc[:200]}")
+            print("✅ Google Central/National RSS fetched!")
     except Exception as e:
         print(f"⚠️ Error Google National: {e}")
 
-    # Source C: AIR News
+    # Source C: AIR News (All India Radio Central Bulletin)
     try:
         air_url = "https://newsonair.gov.in/feed/"
         res = requests.get(air_url, timeout=15, verify=False)
@@ -141,12 +141,12 @@ def fetch_raw_national_news(target_dt):
                 title = item.find('title').text if item.find('title') is not None else ""
                 desc = clean_html_text(item.find('description').text if item.find('description') is not None else "")
                 if title:
-                    national_titles.append(f"[AIR News] Title: {title.strip()} | Summary: {desc[:200]}")
-            print("✅ AIR National News fetched!")
+                    national_titles.append(f"[AIR National] Title: {title.strip()} | Summary: {desc[:200]}")
+            print("✅ AIR Central News fetched!")
     except Exception as e:
         print(f"⚠️ Error AIR News: {e}")
 
-    # Source D: The Hindu
+    # Source D: The Hindu (National Desk)
     try:
         hindu_url = "https://www.thehindu.com/news/national/feeder/default.rss"
         res = requests.get(hindu_url, timeout=15, verify=False)
@@ -156,7 +156,7 @@ def fetch_raw_national_news(target_dt):
                 title = item.find('title').text if item.find('title') is not None else ""
                 desc = clean_html_text(item.find('description').text if item.find('description') is not None else "")
                 if title:
-                    national_titles.append(f"[The Hindu] Title: {title.strip()} | Summary: {desc[:200]}")
+                    national_titles.append(f"[The Hindu National] Title: {title.strip()} | Summary: {desc[:200]}")
             print("✅ The Hindu National fetched!")
     except Exception as e:
         print(f"⚠️ Error The Hindu: {e}")
@@ -164,13 +164,13 @@ def fetch_raw_national_news(target_dt):
     return "\n".join(national_titles)
 
 # -------------------------------------------------------------
-# 3. AI SUMMARY GENERATOR (EXAM SYLLABUS GRID)
+# 3. AI SUMMARY GENERATOR (EXAM SYLLABUS GRID ENFORCED)
 # -------------------------------------------------------------
 def generate_clean_summary(raw_text, target_date_str, is_national=False):
     """Groq AI se Factual Hinglish JSON summary banwata hai"""
     
     if is_national:
-        scope_name = "India National & International Level"
+        scope_name = "India National & International Level ONLY"
         tag_name = "🎯 National Special / India Affairs"
         category_instruction = """
         STRICT ALLOWED NATIONAL CATEGORIES (Pick ONLY from these 7 exact names):
@@ -183,16 +183,21 @@ def generate_clean_summary(raw_text, target_date_str, is_national=False):
         7. "Sports & Joint Military Exercises"
         """
         rejection_rules = """
-        STRICT REJECTION RULES (NATIONAL):
-        1. REJECT political rallies, speeches, party disputes, crime, accidents, local state transfers.
-        2. REJECT ALL Education, Schools, Recruitment, Vacancies, Exam Notices, Admit Cards, and Results.
-        3. REJECT generic news without facts.
+        STRICT REJECTION RULES (PURE NATIONAL FILTER):
+        1. REJECT ALL STATE-SPECIFIC NEWS: Strictly reject news specific to individual states (e.g. UP govt schemes, MP politics, Rajasthan local events, Delhi municipal news, State assembly debates).
+        2. ACCEPT ONLY PURE NATIONAL / CENTRAL EVENTS: Union Cabinet decisions, Central Ministries, ISRO/DRDO/Defense, RBI, NITI Aayog, International Bilateral Relations, National Level Indices/Reports, Global Summits, and National/International Sports/Awards.
+        3. REJECT political rallies, speeches, party disputes, crime, accidents.
+        4. REJECT ALL Education, Schools, Recruitment, Vacancies, Exam Notices, Admit Cards, and Results.
         """
         bullet_rules = """
         EXAMINER FOCUS BULLET RULES (NATIONAL):
-        - Bullet 1 (Core Update): Core event/decision, Nodal Ministry/Org, Location/Theme.
-        - Bullet 2 (Factual Data): Exact numbers, Launch Vehicle (e.g. PSLV/LVM3), Budget Outlay, Rank & Publishing Body (for Indices), or Participating Countries (for Military Exercises).
-        - Bullet 3 (Context/Impact): Key objective, policy framework, or scientific importance.
+        - Bullet 1 (Core Event & Details): Core event/decision, Nodal Union Ministry/Org, Location/Host City or Theme.
+        - Bullet 2 (Exact High-Yield Exam Facts): 
+          * For Military Exercises: Mention Participating Countries + Exact Exercise Location.
+          * For ISRO/Defense: Mention Missile/Satellite Type + Launch Vehicle (e.g. LVM3, PSLV).
+          * For Indices/Reports: Mention Issuing Body + India's Rank/Score.
+          * For Schemes: Mention Budget Outlay + Eligibility/Nodal Ministry.
+        - Bullet 3 (Context & Strategic Objective): Core objective, strategic importance, or policy framework in Hinglish.
         """
     else:
         scope_name = "Bihar State Level"
@@ -233,7 +238,7 @@ def generate_clean_summary(raw_text, target_date_str, is_national=False):
     - NO CARD LIMIT: Generate cards for ALL valid unique exam-relevant events found.
 
     LANGUAGE & BULLETS:
-    - WRITE ALL TITLES AND BULLETS IN **HINGLISH** (Hindi written in Roman English Script, e.g. "Cabinet ne 10 new nuclear reactors ke liye MoU ko manzuri di").
+    - WRITE ALL TITLES AND BULLETS IN **HINGLISH** (Hindi written in Roman English Script, e.g. "India aur Japan ke beech Dharma Guardian exercise Rajasthan me shuru hui").
     - ALWAYS WRITE EXACTLY 3 BULLET POINTS FOR EVERY CARD.
     {bullet_rules}
 
