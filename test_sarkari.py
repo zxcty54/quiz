@@ -2,18 +2,14 @@ import os
 import json
 import re
 from datetime import datetime
-from urllib.parse import quote
+from urllib.parse import quote, urljoin
 import requests
 from bs4 import BeautifulSoup
-from groq import Groq
 
 # -------------------------------------------------------------
-# Configuration & API Setup
+# Setup & Configurations
 # -------------------------------------------------------------
 SCRAPINGANT_API_KEY = os.environ.get("SCRAPINGANT_API_KEY", "f2dac73c566b4f60b9ca989beedeb5de")
-GROQ_API_KEY = os.environ.get("GROQ_API_KEY")
-
-client = Groq(api_key=GROQ_API_KEY) if GROQ_API_KEY else None
 
 TARGET_URL = "https://www.sarkariresult.com/latestjob/"
 JSON_FILENAME = "sarkarijob.json"
@@ -72,7 +68,7 @@ CENTRAL_BOARDS = [
     ("epfo", "Employees' Provident Fund Organisation (EPFO)")
 ]
 
-def clean_html_text(text):
+def clean_text(text):
     if not text:
         return ""
     return BeautifulSoup(text, "html.parser").get_text().strip()
@@ -89,32 +85,24 @@ def is_nav_link(text, url):
         return True
     return False
 
-# ⏰ DATE EXPIRY CHECKER
 def is_date_expired(last_date_str):
     if not last_date_str:
         return False
-
     date_match = re.search(r'(\d{1,2})[/-](\d{1,2})[/-](\d{2,4})', last_date_str)
     if date_match:
         try:
             day, month, year = map(int, date_match.groups())
             if year < 100:
                 year += 2000
-            
             last_dt = datetime(year, month, day).date()
-            today_dt = datetime.now().date()
-
-            # Agar last date beet chuki hai -> True (Expired)
-            if last_dt < today_dt:
+            if last_dt < datetime.now().date():
                 return True
         except Exception:
             pass
-
     return False
 
 def classify_job_board(title):
     title_lower = title.lower()
-    
     if is_hard_rejected(title):
         return None, None
         
@@ -136,41 +124,58 @@ def fetch_page_via_scrapingant(url):
         if res.status_code == 200:
             return res.text
     except Exception as e:
-        print(f"⚠️ ScrapingAnt error for {url}: {e}")
+        print(f"⚠️ ScrapingAnt fetch error for {url}: {e}")
     return None
 
-def extract_inner_details_ai(page_text):
-    if not client or not page_text:
+# 🔍 Detail Page Parser (Visits Article Link & Scrapes Exact Vacancy, Dates & Qualification)
+def parse_inner_article_page(html_content):
+    if not html_content:
         return {}
 
-    prompt = f"""
-    Extract the following details strictly from the text in JSON format:
-    - start_date: Application Start Date (e.g. "05/08/2026")
-    - last_date: Application Last Date (e.g. "28/08/2026")
-    - total_vacancies: Total Posts (e.g. "34 Posts")
-    - qualification: Required Educational Qualification (e.g. "10th / 12th / Degree / B.Tech")
+    soup = BeautifulSoup(html_content, 'html.parser')
+    page_text = soup.get_text()
 
-    Text:
-    {page_text[:3500]}
-    """
+    # 1. Total Vacancies Extraction
+    vacancies = "Various Posts"
+    vac_match = re.search(r'(Total\s*(?:Post|Vacancy|Vacancies)?\s*:?\s*)(\d+\s*(?:Posts|Vacancies)?)', page_text, re.IGNORECASE)
+    if not vac_match:
+        vac_match = re.search(r'(\d{2,6})\s*(?:Post|Posts|Vacancies|Vacancy)', page_text, re.IGNORECASE)
+    if vac_match:
+        vacancies = f"{vac_match.group(2 if len(vac_match.groups())>=2 else 1).strip()} Posts"
+        vacancies = re.sub(r'Posts\s*Posts', 'Posts', vacancies, flags=re.IGNORECASE)
 
-    try:
-        response = client.chat.completions.create(
-            model="llama-3.1-8b-instant",
-            messages=[
-                {"role": "system", "content": "You extract government job details into strict JSON."},
-                {"role": "user", "content": prompt}
-            ],
-            temperature=0.01,
-            response_format={"type": "json_object"}
-        )
-        return json.loads(response.choices[0].message.content)
-    except Exception as e:
-        print(f"⚠️ AI Parsing Warning: {e}")
-        return {}
+    # 2. Application Start Date
+    start_date = "Online Active"
+    start_match = re.search(r'(Application\s*Begin\s*:?\s*)(\d{1,2}[/-]\d{1,2}[/-]\d{2,4})', page_text, re.IGNORECASE)
+    if start_match:
+        start_date = start_match.group(2).strip()
+
+    # 3. Application Last Date
+    last_date = None
+    last_match = re.search(r'(Last\s*Date\s*(?:for\s*Apply|Online)?\s*:?\s*)(\d{1,2}[/-]\d{1,2}[/-]\d{2,4})', page_text, re.IGNORECASE)
+    if last_match:
+        last_date = last_match.group(2).strip()
+
+    # 4. Educational Qualification Extraction
+    qualification = "Refer Official Notification"
+    if "10th" in page_text or "High School" in page_text:
+        qualification = "Class 10th Pass / ITI"
+    elif "12th" in page_text or "Intermediate" in page_text:
+        qualification = "Class 12th Pass"
+    elif "Bachelor" in page_text or "Degree" in page_text or "Graduation" in page_text:
+        qualification = "Bachelor Degree in Any Stream"
+    elif "Diploma" in page_text or "B.E" in page_text or "B.Tech" in page_text:
+        qualification = "Diploma / Engineering Degree"
+
+    return {
+        "total_vacancies": vacancies,
+        "qualification": qualification,
+        "start_date": start_date,
+        "last_date": last_date
+    }
 
 # -------------------------------------------------------------
-# Main Pipeline
+# Main Execution Pipeline
 # -------------------------------------------------------------
 def run_sarkari_job_scraper():
     print("🔄 Fetching Main SarkariResult Page via ScrapingAnt...")
@@ -188,19 +193,11 @@ def run_sarkari_job_scraper():
     processed_urls = set()
 
     for link in links:
-        title = clean_html_text(link.text)
+        title = clean_text(link.text)
         detail_url = link['href'].strip()
 
         if len(title) > 10 and "sarkariresult.com" in detail_url and detail_url not in processed_urls:
             if is_nav_link(title, detail_url):
-                continue
-
-            # 1. Check title-embedded date for fast filter
-            title_date_match = re.search(r'Last\s*Date\s*:?\s*(\d{1,2}[/-]\d{1,2}[/-]\d{2,4})', title, re.IGNORECASE)
-            title_last_date = title_date_match.group(1) if title_date_match else None
-
-            if title_last_date and is_date_expired(title_last_date):
-                print(f"⏰ [EXPIRED SKIPPED]: {title} (Last Date: {title_last_date})")
                 continue
 
             clean_title = re.sub(r'Last\s*Date\s*:?.*$', '', title, flags=re.IGNORECASE).strip()
@@ -211,16 +208,20 @@ def run_sarkari_job_scraper():
 
             processed_urls.add(detail_url)
 
-            print(f"🔍 Extracting Valid Job [{len(job_cards)+1}]: {clean_title}")
+            # 🌐 Inside Navigation: Fetch Inner Article Page using detail_url
+            print(f"🔗 [INSIDE ARTICLE] Scrape link: {detail_url}")
             inner_html = fetch_page_via_scrapingant(detail_url)
-            inner_text = clean_html_text(inner_html) if inner_html else ""
+            
+            # Extract Inner Article Details
+            inner_data = parse_inner_article_page(inner_html)
 
-            ai_data = extract_inner_details_ai(inner_text)
-            final_last_date = ai_data.get("last_date") or title_last_date or "Refer Notification"
+            # Extract Last Date (Fallback to Title Date if Inner Page fails)
+            title_date_match = re.search(r'Last\s*Date\s*:?\s*(\d{1,2}[/-]\d{1,2}[/-]\d{2,4})', title, re.IGNORECASE)
+            final_last_date = inner_data.get("last_date") or (title_date_match.group(1) if title_date_match else None) or "Refer Notification"
 
-            # 2. Re-verify after inner page AI parse
+            # ⏰ Expired Check
             if is_date_expired(final_last_date):
-                print(f"⏰ [EXPIRED INNER SKIPPED]: {clean_title} (Last Date: {final_last_date})")
+                print(f"⏰ [EXPIRED SKIPPED]: {clean_title} (Last Date: {final_last_date})")
                 continue
 
             job_card = {
@@ -229,13 +230,15 @@ def run_sarkari_job_scraper():
                 "organization": organization,
                 "job_type": job_type,
                 "post_name": clean_title,
-                "total_vacancies": ai_data.get("total_vacancies") or "Various Posts",
-                "qualification": ai_data.get("qualification") or "Refer Official Notification",
-                "start_date": ai_data.get("start_date") or "Online Active",
+                "total_vacancies": inner_data.get("total_vacancies", "Various Posts"),
+                "qualification": inner_data.get("qualification", "Refer Official Notification"),
+                "start_date": inner_data.get("start_date", "Online Active"),
                 "last_date": final_last_date,
                 "apply_url": "https://www.mocktester.online"
             }
+            
             job_cards.append(job_card)
+            print(f"✅ Added [{len(job_cards)}]: {clean_title} | Vacancies: {job_card['total_vacancies']} | Last Date: {job_card['last_date']}\n")
 
             if len(job_cards) >= 20:
                 break
@@ -247,7 +250,7 @@ def run_sarkari_job_scraper():
     with open(JSON_FILENAME, "w", encoding="utf-8") as f:
         json.dump(output_data, f, ensure_ascii=False, indent=2)
 
-    print(f"\n✅ Data saved to '{JSON_FILENAME}'! Active Bihar/Central Jobs: {len(job_cards)}")
+    print(f"🎉 Complete! Saved {len(job_cards)} active jobs into '{JSON_FILENAME}'.")
 
 if __name__ == "__main__":
     run_sarkari_job_scraper()
