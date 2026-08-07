@@ -38,6 +38,7 @@ class HomeTab extends StatefulWidget {
 class _HomeTabState extends State<HomeTab> {
   List<dynamic> _biharNewsList = [];
   List<dynamic> _nationalNewsList = [];
+  List<dynamic> _savedNewsList = []; // 📌 Saved Current Affairs state
   bool _isLoadingNews = true;
   
   // TOGGLE STATE: 0 = Bihar, 1 = National
@@ -48,6 +49,7 @@ class _HomeTabState extends State<HomeTab> {
   @override
   void initState() {
     super.initState();
+    _loadSavedNews(); // Load saved bulletins from local storage
     _fetchDailyBulletins();
   }
 
@@ -55,6 +57,52 @@ class _HomeTabState extends State<HomeTab> {
   void dispose() {
     _newsPageController.dispose();
     super.dispose();
+  }
+
+  // 💾 LOAD SAVED BULLETINS FROM LOCAL STORAGE
+  Future<void> _loadSavedNews() async {
+    final prefs = await SharedPreferences.getInstance();
+    final String? savedJson = prefs.getString('saved_daily_bulletins');
+    if (savedJson != null) {
+      try {
+        if (mounted) {
+          setState(() {
+            _savedNewsList = jsonDecode(savedJson);
+          });
+        }
+      } catch (e) {
+        debugPrint("Error loading saved bulletins: $e");
+      }
+    }
+  }
+
+  // 📌 TOGGLE SAVE / UNSAVE BULLETIN
+  Future<void> _toggleSaveNews(Map<String, dynamic> news) async {
+    final prefs = await SharedPreferences.getInstance();
+    
+    setState(() {
+      bool isAlreadySaved = _savedNewsList.any((item) => item['title'] == news['title']);
+
+      if (isAlreadySaved) {
+        _savedNewsList.removeWhere((item) => item['title'] == news['title']);
+        ScaffoldMessenger.of(context).showSnackBar(
+          const SnackBar(
+            content: Text("Removed from Saved Current Affairs"),
+            duration: Duration(seconds: 1),
+          ),
+        );
+      } else {
+        _savedNewsList.add(news);
+        ScaffoldMessenger.of(context).showSnackBar(
+          const SnackBar(
+            content: Text("Saved to Current Affairs! 📌"),
+            duration: Duration(seconds: 1),
+          ),
+        );
+      }
+    });
+
+    await prefs.setString('saved_daily_bulletins', jsonEncode(_savedNewsList));
   }
 
   // 📰 FETCH BIHAR & NATIONAL NEWS WITH INSTANT NETWORK REFRESH
@@ -485,9 +533,12 @@ class _HomeTabState extends State<HomeTab> {
     );
   }
 
-  // 📇 NEWS CARD ITEM (NO BULLET PADDING & ZERO SCROLLING)
+  // 📇 NEWS CARD ITEM (WITH BOOKMARK TOGGLE BUTTON)
   Widget _buildUltraPremiumNewsCard(Map<String, dynamic> news) {
     final List bullets = (news['bullets'] as List?) ?? [];
+    
+    // Check if current news card is saved
+    bool isSaved = _savedNewsList.any((item) => item['title'] == news['title']);
 
     return Container(
       margin: const EdgeInsets.only(right: 6),
@@ -511,7 +562,7 @@ class _HomeTabState extends State<HomeTab> {
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisSize: MainAxisSize.min,
         children: [
-          // 1. TAG & DATE ROW
+          // 1. TAG, DATE & BOOKMARK ROW
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
@@ -548,6 +599,23 @@ class _HomeTabState extends State<HomeTab> {
                       color: widget.isDarkMode ? Colors.white60 : const Color(0xFF64748B),
                       fontSize: 11,
                       fontWeight: FontWeight.w600,
+                    ),
+                  ),
+                  const SizedBox(width: 6),
+
+                  // 📌 BOOKMARK ICON BUTTON
+                  InkWell(
+                    onTap: () => _toggleSaveNews(news),
+                    borderRadius: BorderRadius.circular(20),
+                    child: Padding(
+                      padding: const EdgeInsets.all(4.0),
+                      child: Icon(
+                        isSaved ? Icons.bookmark_rounded : Icons.bookmark_border_rounded,
+                        size: 20,
+                        color: isSaved 
+                            ? const Color(0xFFF59E0B) // Amber accent when saved
+                            : (widget.isDarkMode ? Colors.white60 : const Color(0xFF64748B)),
+                      ),
                     ),
                   ),
                 ],
