@@ -31,73 +31,79 @@ def remove_markdown_stars(data):
     return data
 
 # -------------------------------------------------------------
-# 2. MULTI-SOURCE HYBRID JOB, ADMIT CARD & RESULT SCRAPER
+# 2. DEEP INNER-PAGE SCRAPER (FETCHES EXACT FEES & QUALIFICATION)
 # -------------------------------------------------------------
 def fetch_raw_jobs():
+    """Fetches full page content from SarkariResult Latest Jobs Page & FreeJobAlert Inner Pages"""
     job_records = []
     headers = {
-        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
     }
 
-    # SOURCE A: FreeJobAlert RSS Feeds (State, Central, SSC, Railway, Banking)
+    # 1. SarkariResult Dedicated Latest Jobs Page & Detail Links
+    try:
+        sr_jobs_url = "https://www.sarkariresult.com/latestjob.php"
+        res = requests.get(sr_jobs_url, headers=headers, timeout=12, verify=False)
+        if res.status_code == 200:
+            soup = BeautifulSoup(res.content, "html.parser")
+            post_div = soup.find('div', id='post') or soup.find('div', class_='post')
+            if post_div:
+                job_links = []
+                for a in post_div.find_all('a', href=True):
+                    href = a['href']
+                    txt = a.text.strip()
+                    if len(txt) > 8 and "sarkariresult.com" in href:
+                        job_links.append((txt, href))
+                
+                print(f"✅ SarkariResult: Found {len(job_links[:12])} Active Job Links. Fetching inner pages for Fees & Dates...")
+                
+                # Scrape inner detail pages for top 12 links (where Fee, Age & Dates tables exist)
+                for txt, link in job_links[:12]:
+                    try:
+                        inner_res = requests.get(link, headers=headers, timeout=8, verify=False)
+                        if inner_res.status_code == 200:
+                            inner_soup = BeautifulSoup(inner_res.content, "html.parser")
+                            content_div = inner_soup.find('div', id='post') or inner_soup.find('body')
+                            if content_div:
+                                page_text = clean_html_text(content_div.text)
+                                job_records.append(f"[SarkariResult Full Detail Page] Title: {txt} | Page Content: {page_text[:3000]}")
+                        time.sleep(0.5)
+                    except Exception as ie:
+                        print(f"⚠️ Inner link fetch error ({link}): {ie}")
+    except Exception as e:
+        print(f"⚠️ Error SarkariResult Scraping: {e}")
+
+    # 2. FreeJobAlert Central Feeds (SSC, Railway, Banking, State)
     fja_feeds = [
-        "https://www.freejobalert.com/feed/",
-        "https://www.freejobalert.com/state-government-jobs/feed/",
         "https://www.freejobalert.com/ssc-job-notifications/feed/",
         "https://www.freejobalert.com/railway-jobs/feed/",
-        "https://www.freejobalert.com/bank-jobs/feed/"
+        "https://www.freejobalert.com/bank-jobs/feed/",
+        "https://www.freejobalert.com/state-government-jobs/feed/"
     ]
     for feed_url in fja_feeds:
         try:
             res = requests.get(feed_url, headers=headers, timeout=12, verify=False)
             if res.status_code == 200:
                 soup = BeautifulSoup(res.content, "xml")
-                for item in soup.find_all('item')[:25]:
+                for item in soup.find_all('item')[:15]:
                     title = item.find('title').text if item.find('title') is not None else ""
                     content_node = item.find('{http://purl.org/rss/1.0/modules/content/}encoded')
                     content = clean_html_text(content_node.text) if content_node is not None else ""
                     if title:
-                        job_records.append(f"[FreeJobAlert Feed] Title: {title} | Content: {content[:1500]}")
+                        job_records.append(f"[FreeJobAlert Central Feed] Title: {title} | Content: {content[:2000]}")
             print(f"✅ FreeJobAlert Feed Parsed: {feed_url}")
         except Exception as e:
             print(f"⚠️ Error FJA Feed ({feed_url}): {e}")
 
-    # SOURCE B: SarkariResult Live Updates (Jobs, Admit Cards, Results)
-    try:
-        sr_url = "https://www.sarkariresult.com/"
-        res = requests.get(sr_url, headers=headers, timeout=12, verify=False)
-        if res.status_code == 200:
-            soup = BeautifulSoup(res.content, "html.parser")
-            
-            # Scrape Latest Jobs Box
-            job_box = soup.find('div', id='post') or soup.find('div', class_='post')
-            if job_box:
-                for link in job_box.find_all('a')[:30]:
-                    t = link.text.strip()
-                    if t and len(t) > 6:
-                        job_records.append(f"[SarkariResult Job] {t}")
-            
-            # Scrape Admit Card Box
-            for a_tag in soup.find_all('a', href=True):
-                t = a_tag.text.strip()
-                if "Admit Card" in t or "Hall Ticket" in t or "Call Letter" in t:
-                    job_records.append(f"[SarkariResult Admit Card] {t}")
-                elif "Result" in t or "Merit List" in t or "Cut Off" in t or "Answer Key" in t:
-                    job_records.append(f"[SarkariResult Result] {t}")
-
-            print("✅ SarkariResult Live Jobs, Admit Cards & Results Scraped!")
-    except Exception as e:
-        print(f"⚠️ Error SarkariResult Scraping: {e}")
-
-    # SOURCE C: Bihar Job Portal Updates
+    # 3. Bihar Job Portal Updates
     try:
         bjp_url = "https://biharjobportal.com/"
         res = requests.get(bjp_url, headers=headers, timeout=12, verify=False)
         if res.status_code == 200:
             soup = BeautifulSoup(res.content, "html.parser")
-            posts = [a.text.strip() for a in soup.find_all('a') if len(a.text.strip()) > 10][:30]
+            posts = [a.text.strip() for a in soup.find_all('a') if len(a.text.strip()) > 10][:20]
             for p in posts:
-                job_records.append(f"[BiharJobPortal Post] Title: {p}")
+                job_records.append(f"[BiharJobPortal Entry] Title: {p}")
             print("✅ BiharJobPortal Posts Scraped!")
     except Exception as e:
         print(f"⚠️ Error BiharJobPortal Scraping: {e}")
@@ -132,24 +138,22 @@ def call_groq_safe(prompt, system_role="You are a JSON generator assistant."):
 
 def generate_job_summary(raw_text):
     today_str = datetime.now().strftime("%d %b %Y")
-    truncated_raw = raw_text[:15000]
+    truncated_raw = raw_text[:16000]
 
     prompt = f"""
     You are an expert Government Recruitment Portal Data Editor.
-    Extract Bihar State Govt & Central Govt Recruitment Jobs, Admit Cards, and Results from the raw text into structured JSON.
+    Extract Bihar State Govt & Central Govt Recruitment Jobs, Admit Cards, and Results from the scraped raw text into structured JSON.
 
-    RAW TEXT:
+    RAW TEXT (Includes full detail page text with Application Fee tables, Dates, and Qualification tables):
     {truncated_raw}
 
-    MANDATORY RULES:
-    1. ALLOWED JURISDICTIONS (EXTRACT BOTH BIHAR & CENTRAL GOVT):
-       - Bihar Govt Jobs: BPSC, BSSC, CSBC, BPSSC, Bihar Teacher, Patna High Court, Civil Court, Beltron, Bihar Health Dept, etc.
-       - Central Govt Jobs: SSC (CGL, CHSL, MTS, GD Constable, CPO), Railways (RRB NTPC, Group D, ALP, Technician), Banking (IBPS PO/Clerk, SBI PO/Clerk, RBI), UPSC, NTA, Defence (Army, Navy, Air Force, CAPF), Postal Circle.
-    2. STRICT REJECTION OF OTHER STATES: Reject jobs belonging to UP, MP, Rajasthan, Haryana, Maharashtra, Tamil Nadu, Andhra Pradesh, Telangana, Karnataka, Kerala, Gujarat, West Bengal, Odisha, Assam, etc.
-    3. STRICT REJECTION OF NON-JOB NOTICES: Reject College Admissions, Counselling Schedules, Seat Allotments, Entrance Tests (TANCET, CET, NEET, GATE).
-    4. REJECT APPRENTICE & MBBS DOCTOR POSTS: Do NOT include Trade Apprentice or MBBS/Doctor/Medical Officer posts.
-    5. MINIMUM 50 VACANCIES: Only include recruitments with 50+ vacancies or 'Various Posts'.
-    6. THREE SECTIONS REQUIRED: Populate 'latest_jobs', 'admit_cards', and 'results' lists in the JSON output.
+    STRICT INSTRUCTIONS:
+    1. BALANCE BIHAR & CENTRAL JOBS: Ensure a strong mix of both Bihar Govt Jobs (BPSC, BSSC, BPSSC, CSBC, Bihar Teacher, Patna High Court, Beltron) AND Central Govt Jobs (SSC CGL/CHSL/MTS/GD, Railways RRB NTPC/Group D/ALP, Banking IBPS/SBI, UPSC, Defence Agniveer/CAPF, Postal Circle).
+    2. REAL APPLICATION FEE EXTRACTION: Read the inner page text carefully and extract the ACTUAL category-wise Application Fee (e.g. "General / OBC / EWS: ₹500 | SC / ST / PH / Female: ₹250"). Do NOT write "As per notification" if numbers or fee details are present in the raw text!
+    3. STRICT REJECTION OF OTHER STATES: Reject UP, MP, Rajasthan, Haryana, Delhi Govt, Maharashtra, Tamil Nadu, Andhra Pradesh, Telangana, Karnataka, Kerala, Gujarat, West Bengal, Odisha, Assam, etc.
+    4. REJECT NON-JOB NOTICES: Reject College Admissions, Counselling Schedules, Entrance Tests (TANCET, CET, NEET), School/University news.
+    5. REJECT APPRENTICE & MBBS DOCTOR POSTS: Do NOT include Trade Apprentice or MBBS/Doctor/Medical Officer posts.
+    6. MINIMUM 50 VACANCIES: Only include recruitments with 50+ vacancies or 'Various Posts'.
     7. NO MARKDOWN SYMBOLS: Plain text only, no asterisks (**).
     8. Set "apply_url" to "https://www.mocktester.online" for ALL items.
 
@@ -165,7 +169,7 @@ def generate_job_summary(raw_text):
           "total_vacancies": "Posts Count e.g. 1,957 Posts or Various Posts",
           "qualification": "Full Detailed Educational Qualification Criteria",
           "age_limit": "Min & Max Age Criteria with Relaxation",
-          "application_fee": "Detailed Fee Breakdown e.g. General: ₹600 | SC/ST: ₹150",
+          "application_fee": "Exact Category-Wise Fee Breakdown from text (e.g. General/OBC: ₹500 | SC/ST/Female: ₹125)",
           "start_date": "Exact Start Date e.g. 28 Aug 2026 or Online Active",
           "last_date": "Exact Last Date e.g. 30 Sep 2026",
           "apply_url": "https://www.mocktester.online",
@@ -240,14 +244,12 @@ def is_vacancy_less_than_50(vacancies_str):
     return False
 
 def simplify_title(title):
-    """Clean title string for deduplication comparison"""
     clean = re.sub(r'[^a-zA-Z0-9]', '', title.lower())
-    return clean[:30]  # First 30 normalized chars
+    return clean[:30]
 
 def filter_valid_jobs(parsed_jobs):
     seen_titles = set()
 
-    # Filter Jobs
     clean_latest_jobs = []
     for job in parsed_jobs.get("latest_jobs", []):
         title = job.get("title", "")
@@ -259,18 +261,15 @@ def filter_valid_jobs(parsed_jobs):
         if not title or len(title) < 5:
             continue
 
-        # Check 1: Deduplication
         simple_t = simplify_title(title)
         if simple_t in seen_titles:
             print(f"🔄 Dropped Duplicate Job: {title}")
             continue
 
-        # Check 2: Invalid Keywords / State Filter
         if is_invalid_job(title, org, post_name, qual):
             print(f"❌ Dropped (Keyword/State/Apprentice/Doctor Filter): {title}")
             continue
 
-        # Check 3: Vacancies < 50
         if is_vacancy_less_than_50(vacancies):
             print(f"❌ Dropped (Vacancies < 50): {title} ({vacancies})")
             continue
@@ -278,7 +277,6 @@ def filter_valid_jobs(parsed_jobs):
         seen_titles.add(simple_t)
         clean_latest_jobs.append(job)
 
-    # Filter Admit Cards
     clean_admit_cards = []
     for card in parsed_jobs.get("admit_cards", []):
         title = card.get("title", "")
@@ -291,7 +289,6 @@ def filter_valid_jobs(parsed_jobs):
 
         simple_t = simplify_title(title)
         if simple_t in seen_titles:
-            print(f"🔄 Dropped Duplicate Admit Card: {title}")
             continue
 
         if is_invalid_job(title, org, post_name, qual):
@@ -300,7 +297,6 @@ def filter_valid_jobs(parsed_jobs):
         seen_titles.add(simple_t)
         clean_admit_cards.append(card)
 
-    # Filter Results
     clean_results = []
     for res_item in parsed_jobs.get("results", []):
         title = res_item.get("title", "")
@@ -313,7 +309,6 @@ def filter_valid_jobs(parsed_jobs):
 
         simple_t = simplify_title(title)
         if simple_t in seen_titles:
-            print(f"🔄 Dropped Duplicate Result: {title}")
             continue
 
         if is_invalid_job(title, org, post_name, qual):
