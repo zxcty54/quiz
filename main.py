@@ -18,8 +18,8 @@ client = Groq(api_key=GROQ_KEY) if GROQ_KEY else None
 def get_yesterday_info():
     """Subah 6 AM run hone par kal ki date aur formatted strings generate karta hai"""
     yesterday_dt = datetime.now() - timedelta(days=1)
-    date_str = yesterday_dt.strftime("%d %b %Y")   # e.g., '05 Aug 2026'
-    key_str = yesterday_dt.strftime("%Y-%m-%d")    # e.g., '2026-08-05'
+    date_str = yesterday_dt.strftime("%d %b %Y")   # e.g., '06 Aug 2026'
+    key_str = yesterday_dt.strftime("%Y-%m-%d")    # e.g., '2026-08-06'
     return yesterday_dt, date_str, key_str
 
 def is_yesterday_news(pub_date_str, target_dt):
@@ -468,41 +468,63 @@ def generate_job_summary(raw_text):
 
 
 # -------------------------------------------------------------
-# 🌟 STRICT PYTHON ACCURACY FILTER FOR JOBS
+# 🌟 NORMALIZATION HELPER & ULTRA-STRICT PYTHON FILTER FOR JOBS
 # -------------------------------------------------------------
+def normalize_text(text):
+    """Cleans whitespace, lowercase, and strips common trailing punctuation."""
+    if not text:
+        return ""
+    cleaned = str(text).lower().strip()
+    # Remove trailing periods, dashes, colons, commas
+    cleaned = re.sub(r'[\.\-:\,\s]+$', '', cleaned)
+    return cleaned
+
 def filter_valid_jobs(parsed_jobs):
-    """Hard Python Filter: Guarantees that only complete jobs with numeric vacancies, valid dates, and fee details remain."""
+    """
+    Ultra-Strict Python Filter:
+    Guarantees that jobs containing 'Not specified' or missing dates/vacancies
+    are completely removed from the output.
+    """
     invalid_keywords = [
-        "tba", "to be announced", "to be notified", "not mentioned", 
-        "not specified", "to be updated", "not announced", "unknown", 
-        "n/a", "check notification", "null", "none", ""
+        "tba", "to be announced", "to be notified", "to be updated",
+        "not mentioned", "not specified", "not announced", "not available",
+        "unknown", "n/a", "check notification", "null", "none", ""
     ]
-    
+
     clean_latest_jobs = []
+
     for job in parsed_jobs.get("latest_jobs", []):
-        s_date = str(job.get("start_date", "")).strip().lower()
-        l_date = str(job.get("last_date", "")).strip().lower()
-        vacancies = str(job.get("total_vacancies", "")).strip().lower()
-        fee = str(job.get("application_fee", "")).strip().lower()
-        qual = str(job.get("qualification", "")).strip().lower()
+        title = job.get("title", "Unknown Job")
+        s_date = normalize_text(job.get("start_date", ""))
+        l_date = normalize_text(job.get("last_date", ""))
+        vacancies = normalize_text(job.get("total_vacancies", ""))
+        fee = normalize_text(job.get("application_fee", ""))
+        qual = normalize_text(job.get("qualification", ""))
 
-        # Step 1: Mandatory non-empty string check
+        # 1. Non-empty string check
         if not s_date or not l_date or not vacancies or not fee or not qual:
-            print(f"❌ Dropped incomplete job: {job.get('title')} (Missing mandatory field)")
+            print(f"❌ Dropped (Missing Field): {title}")
             continue
 
-        # Step 2: Placeholder phrase check
-        if any(kw in s_date for kw in invalid_keywords) or \
-           any(kw in l_date for kw in invalid_keywords) or \
-           any(kw in vacancies for kw in invalid_keywords) or \
-           any(kw in fee for kw in invalid_keywords) or \
-           any(kw in qual for kw in invalid_keywords):
-            print(f"❌ Dropped incomplete job: {job.get('title')} (Contains placeholder/Not Specified text)")
+        # 2. Check for invalid placeholder phrases in any key field
+        is_invalid = False
+        for field_val in [s_date, l_date, vacancies, fee, qual]:
+            if any(kw == field_val or kw in field_val for kw in invalid_keywords):
+                is_invalid = True
+                break
+
+        if is_invalid:
+            print(f"❌ Dropped (Contains 'Not Specified' or placeholder): {title}")
             continue
 
-        # Step 3: Numeric Check for Vacancies (Must contain at least one digit)
+        # 3. Vacancy MUST contain digits (e.g., '120 Posts' or '1,957')
         if not re.search(r'\d+', vacancies):
-            print(f"❌ Dropped incomplete job: {job.get('title')} (No numeric vacancy count found)")
+            print(f"❌ Dropped (No digits in total_vacancies): {title}")
+            continue
+
+        # 4. Dates MUST contain digits (e.g., '28 Aug 2026' or '28/08/2026')
+        if not re.search(r'\d+', s_date) or not re.search(r'\d+', l_date):
+            print(f"❌ Dropped (Invalid date format without numbers): {title}")
             continue
 
         clean_latest_jobs.append(job)
