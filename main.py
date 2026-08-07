@@ -1,6 +1,7 @@
 import os
 import json
 import time
+import re
 from datetime import datetime, timedelta
 import email.utils
 import xml.etree.ElementTree as ET
@@ -14,14 +15,13 @@ from groq import Groq
 GROQ_KEY = os.environ.get("GROQ_API_KEY")
 client = Groq(api_key=GROQ_KEY) if GROQ_KEY else None
 
-# Multi-Model Queue for 100% Reliability
 MODELS = ["llama-3.1-8b-instant", "mixtral-8x7b-32768", "llama-3.3-70b-versatile"]
 
 def get_yesterday_info():
     """Subah 6 AM run hone par kal ki date aur formatted strings generate karta hai"""
     yesterday_dt = datetime.now() - timedelta(days=1)
-    date_str = yesterday_dt.strftime("%d %b %Y")   # e.g., '05 Aug 2026'
-    key_str = yesterday_dt.strftime("%Y-%m-%d")    # e.g., '2026-08-05'
+    date_str = yesterday_dt.strftime("%d %b %Y")   # e.g., '06 Aug 2026'
+    key_str = yesterday_dt.strftime("%Y-%m-%d")    # e.g., '2026-08-06'
     return yesterday_dt, date_str, key_str
 
 def is_yesterday_news(pub_date_str, target_dt):
@@ -44,7 +44,7 @@ def clean_html_text(text):
     return BeautifulSoup(text, "html.parser").get_text().strip()
 
 # -------------------------------------------------------------
-# 2. SCRAPING FUNCTIONS (NEWS + JOBS)
+# 2. SCRAPING FUNCTIONS (NEWS - UNCHANGED & PRESERVED)
 # -------------------------------------------------------------
 def fetch_raw_bihar_news(target_dt):
     """Multiple Official & Media sources se Bihar Current Affairs raw text scrape karta hai"""
@@ -63,7 +63,7 @@ def fetch_raw_bihar_news(target_dt):
                 if title and is_yesterday_news(pub_date, target_dt):
                     news_titles.append(f"[Google News] {title}")
                     count += 1
-                    if count >= 15:
+                    if count >= 20:
                         break
             print("✅ Google News Bihar RSS fetched successfully!")
     except Exception as e:
@@ -75,7 +75,7 @@ def fetch_raw_bihar_news(target_dt):
         res = requests.get(cmo_url, impersonate="chrome", timeout=15, verify=False)
         if res.status_code == 200:
             soup = BeautifulSoup(res.content, "html.parser")
-            for row in soup.find_all('tr')[:12]:
+            for row in soup.find_all('tr')[:15]:
                 cols = row.find_all('td')
                 if len(cols) >= 2:
                     title = cols[1].text.strip()
@@ -85,7 +85,25 @@ def fetch_raw_bihar_news(target_dt):
     except Exception as e:
         print(f"⚠️ Error fetching CMO Bihar: {e}")
 
-    # Source C: PRABHAT KHABAR BIHAR
+    # Source C: IPRD BIHAR
+    try:
+        iprd_url = "https://state.bihar.gov.in/prdbihar/CitizenHome.html"
+        res = requests.get(iprd_url, impersonate="chrome", timeout=15, verify=False)
+        if res.status_code == 200:
+            soup = BeautifulSoup(res.content, "html.parser")
+            count = 0
+            for link in soup.find_all('a'):
+                title = link.text.strip()
+                if title and len(title) > 15:
+                    news_titles.append(f"[IPRD Bihar] {title}")
+                    count += 1
+                    if count >= 12:
+                        break
+            print("✅ IPRD Bihar news fetched successfully!")
+    except Exception as e:
+        print(f"⚠️ Error fetching IPRD Bihar: {e}")
+
+    # Source D: PRABHAT KHABAR BIHAR
     try:
         pk_url = "https://www.prabhatkhabar.com/state/bihar/feed"
         res = requests.get(pk_url, impersonate="chrome", timeout=15, verify=False)
@@ -98,7 +116,7 @@ def fetch_raw_bihar_news(target_dt):
                 if title and is_yesterday_news(pub_date, target_dt):
                     news_titles.append(f"[Prabhat Khabar] {title.strip()}")
                     count += 1
-                    if count >= 12:
+                    if count >= 15:
                         break
             print("✅ Prabhat Khabar Bihar news fetched successfully!")
     except Exception as e:
@@ -117,65 +135,89 @@ def fetch_raw_national_news(target_dt):
         res = requests.get(pib_url, timeout=15, verify=False)
         if res.status_code == 200:
             soup = BeautifulSoup(res.content, "xml")
-            for item in soup.find_all('item')[:15]:
+            for item in soup.find_all('item'):
                 title = item.find('title').text if item.find('title') is not None else ""
                 desc = clean_html_text(item.find('description').text if item.find('description') is not None else "")
                 if title:
-                    national_titles.append(f"[PIB Central] Title: {title.strip()} | Summary: {desc[:200]}")
+                    national_titles.append(f"[PIB Central] Title: {title.strip()} | Summary: {desc[:250]}")
             print("✅ PIB Central RSS fetched successfully!")
     except Exception as e:
         print(f"⚠️ Error PIB India: {e}")
 
-    # Source B: Google News - Central Query
+    # Source B: Google News - Multi-Topic Central Query
     queries = [
-        '%22Union+Cabinet%22+OR+%22Cabinet+Approves%22',
-        'ISRO+OR+DRDO+OR+%22Military+Exercise%22',
-        '%22RBI%22+OR+%22NITI+Aayog%22+OR+Index'
+        '%22Union+Cabinet%22+OR+%22Central+Government%22+OR+%22Cabinet+Approves%22',
+        'ISRO+OR+DRDO+OR+%22Military+Exercise%22+OR+Missile',
+        '%22RBI%22+OR+%22NITI+Aayog%22+OR+%22Union+Budget%22+OR+Index',
+        '%22G20%22+OR+%22BRICS%22+OR+%22SCO%22+OR+%22COP29%22+OR+%22Summit%22',
+        '%22Ramsar+Site%22+OR+%22Tiger+Reserve%22+OR+%22Sports+World+Cup%22'
     ]
     for q in queries:
         try:
             g_url = f"https://news.google.com/rss/search?q={q}&hl=hi&gl=IN&ceid=IN:hi"
-            res = requests.get(g_url, impersonate="chrome", timeout=10, verify=False)
+            res = requests.get(g_url, impersonate="chrome", timeout=12, verify=False)
             if res.status_code == 200:
                 root = ET.fromstring(res.text)
-                for item in root.findall('.//item')[:8]:
+                for item in root.findall('.//item')[:10]:
                     title = item.find('title').text if item.find('title') is not None else ""
                     pub_date = item.find('pubDate').text if item.find('pubDate') is not None else ""
                     desc = clean_html_text(item.find('description').text if item.find('description') is not None else "")
                     if title and is_yesterday_news(pub_date, target_dt):
-                        national_titles.append(f"[Google Central] Title: {title.strip()} | Summary: {desc[:150]}")
+                        national_titles.append(f"[Google Central] Title: {title.strip()} | Summary: {desc[:200]}")
         except Exception as e:
             print(f"⚠️ Error Google National Query ({q}): {e}")
     print("✅ Google Central Multi-Queries fetched successfully!")
 
-    # Source C: The Hindu National
+    # Source C: AIR News
+    try:
+        air_url = "https://newsonair.gov.in/feed/"
+        res = requests.get(air_url, timeout=15, verify=False)
+        if res.status_code == 200:
+            soup = BeautifulSoup(res.content, "xml")
+            for item in soup.find_all('item'):
+                title = item.find('title').text if item.find('title') is not None else ""
+                desc = clean_html_text(item.find('description').text if item.find('description') is not None else "")
+                if title:
+                    national_titles.append(f"[AIR Central] Title: {title.strip()} | Summary: {desc[:200]}")
+            print("✅ AIR Central News fetched successfully!")
+    except Exception as e:
+        print(f"⚠️ Error AIR News: {e}")
+
+    # Source D: The Hindu National
     try:
         hindu_url = "https://www.thehindu.com/news/national/feeder/default.rss"
         res = requests.get(hindu_url, timeout=15, verify=False)
         if res.status_code == 200:
             soup = BeautifulSoup(res.content, "xml")
-            for item in soup.find_all('item')[:15]:
+            for item in soup.find_all('item'):
                 title = item.find('title').text if item.find('title') is not None else ""
                 desc = clean_html_text(item.find('description').text if item.find('description') is not None else "")
                 if title:
-                    national_titles.append(f"[The Hindu National] Title: {title.strip()} | Summary: {desc[:150]}")
+                    national_titles.append(f"[The Hindu National] Title: {title.strip()} | Summary: {desc[:200]}")
             print("✅ The Hindu National fetched successfully!")
     except Exception as e:
         print(f"⚠️ Error The Hindu: {e}")
 
     return "\n".join(national_titles)
 
-
+# -------------------------------------------------------------
+# 3. HIGH-YIELD MULTI-PORTAL JOB, ADMIT CARD & RESULT SCRAPER
+# -------------------------------------------------------------
 def fetch_raw_jobs():
-    """HIGH-VOLUME SCRAPER FOR JOBS, ADMIT CARDS & RESULTS"""
+    """High-yield Scraper fetching Jobs, Admit Cards & Results directly from major feeds"""
     job_notices = []
-    headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'}
+    headers = {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
+    }
 
-    # 1. Google Job Queries
+    # 1. Google News Queries (Bihar + Central ONLY)
     job_queries = [
-        "Bihar+BPSC+OR+BSSC+OR+CSBC+OR+Patna+High+Court+Recruitment+Qualification+Fees",
-        "SSC+CGL+OR+CHSL+OR+MTS+OR+Railway+RRB+NTPC+Notification+Start+Date+Fees",
-        "Banking+IBPS+PO+Clerk+OR+SBI+PO+Clerk+OR+Govt+Job+Admit+Card+Result"
+        "Bihar+BPSC+OR+BSSC+OR+CSBC+OR+BPSSC+OR+Patna+High+Court+Recruitment+Start+Date+Last+Date+Fees",
+        "SSC+CGL+OR+CHSL+OR+MTS+OR+GD+Constable+Notification+Start+Date+Fees",
+        "Railway+RRB+NTPC+OR+Group+D+OR+ALP+OR+Technician+Vacancy+Eligibility",
+        "Banking+IBPS+PO+Clerk+OR+SBI+PO+Clerk+OR+UPSC+Notification",
+        "Bihar+OR+SSC+OR+RRB+OR+IBPS+Admit+Card+Release+Exam+Date",
+        "Bihar+OR+SSC+OR+RRB+OR+IBPS+Result+Merit+List+Answer+Key"
     ]
     for q in job_queries:
         try:
@@ -183,40 +225,58 @@ def fetch_raw_jobs():
             res = requests.get(g_url, impersonate="chrome", timeout=10, verify=False)
             if res.status_code == 200:
                 root = ET.fromstring(res.text)
-                for item in root.findall('.//item')[:10]:
+                for item in root.findall('.//item')[:12]:
                     title = item.find('title').text if item.find('title') is not None else ""
                     desc = clean_html_text(item.find('description').text if item.find('description') is not None else "")
                     if title:
-                        job_notices.append(f"[Google Job Alert] Title: {title} | Snippet: {desc[:400]}")
+                        job_notices.append(f"[Google Alert] Title: {title} | Snippet: {desc[:800]}")
         except Exception as e:
             print(f"⚠️ Error Job Query ({q}): {e}")
     print("✅ Google Job Alerts fetched successfully!")
 
-    # 2. FreeJobAlert Main Content Feed
+    # 2. FreeJobAlert Main Deep Content Feed
     try:
         fja_url = "https://www.freejobalert.com/feed/"
         res = requests.get(fja_url, headers=headers, timeout=12, verify=False)
         if res.status_code == 200:
             soup = BeautifulSoup(res.content, "xml")
-            for item in soup.find_all('item')[:25]:
+            for item in soup.find_all('item')[:40]:
                 title = item.find('title').text if item.find('title') is not None else ""
                 desc = clean_html_text(item.find('description').text if item.find('description') is not None else "")
-                content_encoded = clean_html_text(item.find('{http://purl.org/rss/1.0/modules/content/}encoded').text if item.find('{http://purl.org/rss/1.0/modules/content/}encoded') is not None else "")
+                content_node = item.find('{http://purl.org/rss/1.0/modules/content/}encoded')
+                content_encoded = clean_html_text(content_node.text) if content_node is not None else ""
                 full_text = f"{desc} {content_encoded}".strip()
                 if title:
-                    job_notices.append(f"[FreeJobAlert Entry] Title: {title} | Details: {full_text[:600]}")
+                    job_notices.append(f"[FreeJobAlert Entry] Title: {title} | Details: {full_text[:1200]}")
             print("✅ Direct FreeJobAlert Content Feed fetched successfully!")
     except Exception as e:
         print(f"⚠️ Error FreeJobAlert Feed: {e}")
 
+    # 3. Sarkari Result Direct Latest Box Scraping (Live Market Proof)
+    try:
+        sr_url = "https://www.sarkariresult.com/"
+        res = requests.get(sr_url, headers=headers, timeout=12, verify=False)
+        if res.status_code == 200:
+            soup = BeautifulSoup(res.content, "html.parser")
+            # Result Column, Admit Card Column, Latest Jobs Column
+            boxes = soup.find_all('div', id=re.compile(r'box|post'))
+            for box in boxes:
+                for link in box.find_all('a')[:15]:
+                    title = link.text.strip()
+                    if title and len(title) > 8:
+                        job_notices.append(f"[SarkariResult Entry] Title: {title}")
+            print("✅ SarkariResult Live Updates fetched successfully!")
+    except Exception as e:
+        print(f"⚠️ Error SarkariResult Scraping: {e}")
+
     return "\n".join(job_notices)
 
 # -------------------------------------------------------------
-# 3. AI SUMMARY GENERATORS (ROBUST CALLER WITH FALLBACK)
+# 4. GROQ AI EXECUTOR (WITH MULTI-MODEL FALLBACK)
 # -------------------------------------------------------------
 def call_groq_safe(prompt, system_role="You are a JSON generator assistant."):
     """Multi-Model Fallback Executor (TPM & TPD Safe)"""
-    time.sleep(3)  # Short 3-second delay between pipeline steps to reset TPM window
+    time.sleep(2)
     
     for model_name in MODELS:
         try:
@@ -241,8 +301,6 @@ def call_groq_safe(prompt, system_role="You are a JSON generator assistant."):
 
 def generate_clean_summary(raw_text, target_date_str, is_national=False):
     """Groq AI se Fact-Based Detailed Hinglish JSON news summary banwata hai"""
-    
-    # Cap size to 6000 chars to strictly respect 6000 TPM limits
     truncated_raw = raw_text[:6000]
     
     if is_national:
@@ -337,10 +395,8 @@ def generate_clean_summary(raw_text, target_date_str, is_national=False):
 
 
 def generate_job_summary(raw_text):
-    """Groq AI se Pure English Detailed FreeJobAlert Structure JSON Job Portal data banwata hai"""
+    """Groq AI se Pure English Structured JSON Job Portal data banwata hai"""
     today_str = datetime.now().strftime("%d %b %Y")
-    
-    # Cap size to 6500 chars to strictly stay below 6000 TPM limit
     truncated_raw = raw_text[:6500]
 
     prompt = f"""
@@ -349,24 +405,23 @@ def generate_job_summary(raw_text):
 
     {truncated_raw}
 
-    MANDATORY FIELDS FOR "latest_jobs":
-    - "start_date": Must be exact date (e.g., "28 Aug 2026"). Never write TBA or To be announced.
-    - "last_date": Must be exact date (e.g., "30 Sep 2026"). Never write TBA or To be announced.
-    - "total_vacancies": Must specify exact post count (e.g., "1,957 Posts").
-    - "qualification": Full comprehensive eligibility criteria.
+    MANDATORY RULES FOR "latest_jobs":
+    - "start_date": Must be an exact date (e.g., "28 Aug 2026").
+    - "last_date": Must be an exact date (e.g., "30 Sep 2026").
+    - "total_vacancies": Must specify post count (e.g., "1,957 Posts").
+    - "qualification": Comprehensive eligibility criteria.
     - "application_fee": Complete category-wise fee breakdown (e.g. "General/OBC: ₹600 | SC/ST/PH: ₹150").
+    - NEVER write generic "TBA" or "To be announced". Provide actual values.
 
-    STRICT GEOGRAPHICAL RULES:
+    STRICT GEOGRAPHICAL RULES (APPLIES TO latest_jobs, admit_cards, AND results):
     1. WRITE EVERYTHING IN 100% PURE ENGLISH ONLY.
     2. ALLOWED JURISDICTION ONLY:
        - BIHAR STATE GOVT: BPSC, BSSC, BPSSC, CSBC, Bihar Teacher (TRE), Patna High Court, Civil Court, Beltron, Health Dept Bihar, etc.
        - CENTRAL GOVT (ALL INDIA): Staff Selection Commission (SSC), Indian Railways (RRB), Banking (IBPS, SBI, RBI), UPSC, Defence (Army, Navy, Air Force, CAPF).
-    3. ABSOLUTE BAN ON OTHER STATES: REJECT any Job, Admit Card, or Result from UP, MP, Rajasthan, Haryana, Delhi DSSSB, Maharashtra, etc.
+    3. ABSOLUTE BAN ON OTHER STATES: REJECT any Job, Admit Card, or Result from UP, MP, Rajasthan, Haryana, Delhi DSSSB, Maharashtra, Jharkhand, etc.
 
-    EXTRACTION DETAILS:
-    - Extract "pay_scale" / Salary details if available.
-    - Extract "selection_process" details.
-    - Always set "apply_url" to "https://www.mocktester.online".
+    LINK MAPPING:
+    - Set "apply_url" to "https://www.mocktester.online" for ALL items.
 
     JSON SCHEMA OUTPUT (Return EXACTLY this structure):
     {{
@@ -376,10 +431,10 @@ def generate_job_summary(raw_text):
           "title": "Full Official Recruitment Title 2026",
           "organization": "Official Recruitment Body (e.g., Bihar Public Service Commission - BPSC)",
           "job_type": "Bihar Govt Job OR Central Govt Job",
-          "post_name": "Specific Posts Name with Post-wise Breakdown if available",
-          "total_vacancies": "Exact Number of Posts (e.g., 1,957 Posts)",
-          "qualification": "Full Comprehensive Educational Qualification Criteria without shortening any detail",
-          "age_limit": "Complete Min & Max Age limit with gender & category relaxation details",
+          "post_name": "Specific Posts Name",
+          "total_vacancies": "Exact Post Count e.g., 1,957 Posts",
+          "qualification": "Full Comprehensive Educational Qualification Criteria",
+          "age_limit": "Complete Min & Max Age limit with relaxation details",
           "pay_scale": "Pay Scale / Salary Level details",
           "application_fee": "Complete Category-wise Application Fee Breakdown",
           "selection_process": "Detailed Selection Steps (e.g., Written CBT, Physical Test, DV)",
@@ -424,41 +479,78 @@ def generate_job_summary(raw_text):
 
     return call_groq_safe(prompt, system_role="Government Recruitment Data Editor")
 
+# -------------------------------------------------------------
+# 5. PYTHON POST-PROCESSING SMART FILTER
+# -------------------------------------------------------------
+STATE_BLACKLIST = [
+    "uttar pradesh", " up police", " up board", "uppsc", " up govt",
+    "madhya pradesh", "mppsc", "rajasthan", "rpsc", "haryana", "hpsc",
+    "dsssb", "delhi govt", "maharashtra", "mpsc", "jharkhand", "jpsc",
+    "west bengal", "wbpsc", "punjab", "ppsc", "gujarat", "gpsc",
+    "karnataka", "kpsc", "tamil nadu", "tnpsc", "kerala psc",
+    "odisha", "opsc", "assam psc", "apsc", "telangana", "tspsc"
+]
+
+INVALID_KEYWORDS = ["tba", "to be announced", "to be notified", "not mentioned", "unknown", "n/a", "check notification", "null", ""]
+
+def is_other_state(title, org):
+    combined = f"{title} {org}".lower()
+    return any(state in combined for state in STATE_BLACKLIST)
 
 def filter_valid_jobs(parsed_jobs):
-    """Python Hard-Filter: Strictly Drops jobs missing Start Date, Last Date, Vacancies OR Application Fee"""
-    invalid_keywords = ["tba", "to be announced", "to be notified", "not mentioned", "unknown", "n/a", "check notification", "null"]
-    
+    """Smart Python Filter: Validates complete data and drops other states"""
     clean_latest_jobs = []
     for job in parsed_jobs.get("latest_jobs", []):
+        title = job.get("title", "")
+        org = job.get("organization", "")
         s_date = str(job.get("start_date", "")).strip().lower()
         l_date = str(job.get("last_date", "")).strip().lower()
         vacancies = str(job.get("total_vacancies", "")).strip().lower()
-        fee = str(job.get("application_fee", "")).strip().lower()
 
-        # Check 1: Must not be empty
-        if not s_date or not l_date or not vacancies or not fee:
-            print(f"❌ Dropped incomplete job: {job.get('title')} (Empty required fields)")
+        # Rule 1: Other state check
+        if is_other_state(title, org):
+            print(f"❌ Dropped job (Other state): {title}")
             continue
 
-        # Check 2: Must not contain TBA / To be announced keywords
-        if any(kw in s_date for kw in invalid_keywords) or \
-           any(kw in l_date for kw in invalid_keywords) or \
-           any(kw in vacancies for kw in invalid_keywords) or \
-           any(kw in fee for kw in invalid_keywords):
-            print(f"❌ Dropped incomplete job: {job.get('title')} (Contains TBA/Missing data)")
+        # Rule 2: Mandatory fields check
+        if not s_date or not l_date or not vacancies:
+            print(f"❌ Dropped job (Missing mandatory fields): {title}")
+            continue
+
+        # Rule 3: TBA / Placeholder check
+        if any(kw in s_date for kw in INVALID_KEYWORDS) or \
+           any(kw in l_date for kw in INVALID_KEYWORDS) or \
+           any(kw in vacancies for kw in INVALID_KEYWORDS):
+            print(f"❌ Dropped job (Placeholder value): {title}")
             continue
 
         clean_latest_jobs.append(job)
 
+    # Filter Admit Cards
+    clean_admit_cards = []
+    for card in parsed_jobs.get("admit_cards", []):
+        title = card.get("title", "")
+        org = card.get("organization", "")
+        if not is_other_state(title, org) and card.get("exam_date"):
+            clean_admit_cards.append(card)
+
+    # Filter Results
+    clean_results = []
+    for res_item in parsed_jobs.get("results", []):
+        title = res_item.get("title", "")
+        org = res_item.get("organization", "")
+        if not is_other_state(title, org) and res_item.get("result_status"):
+            clean_results.append(res_item)
+
     parsed_jobs["latest_jobs"] = clean_latest_jobs
+    parsed_jobs["admit_cards"] = clean_admit_cards
+    parsed_jobs["results"] = clean_results
     return parsed_jobs
 
 # -------------------------------------------------------------
-# 4. MASTER HISTORY APPEND FUNCTIONS (UNCHANGED & PRESERVED)
+# 6. MASTER HISTORY APPEND FUNCTIONS
 # -------------------------------------------------------------
 def append_to_master_history(news_cards, yesterday_key, is_national=False):
-    """Appends daily news cards to the master history JSON files"""
     master_file = "all_national_news_history.json" if is_national else "all_bihar_news_history.json"
     
     master_data = {}
@@ -476,7 +568,7 @@ def append_to_master_history(news_cards, yesterday_key, is_national=False):
     print(f"✅ Master History appended under key '{yesterday_key}' into '{master_file}'!")
 
 # -------------------------------------------------------------
-# 5. MAIN EXECUTION PIPELINE (SAFE RETENTION LOGIC)
+# 7. MAIN EXECUTION PIPELINE
 # -------------------------------------------------------------
 if __name__ == "__main__":
     if not GROQ_KEY:
@@ -539,7 +631,7 @@ if __name__ == "__main__":
             try:
                 parsed_jobs = json.loads(ai_jobs.strip())
                 
-                # 🌟 HARD PYTHON FILTERING: Strictly Drops any incomplete job missing mandatory fields
+                # Filter Jobs
                 parsed_jobs = filter_valid_jobs(parsed_jobs)
                 
                 has_data = (
@@ -550,9 +642,11 @@ if __name__ == "__main__":
                 if has_data:
                     with open("bihar_jobs.json", "w", encoding="utf-8") as f:
                         json.dump(parsed_jobs, f, ensure_ascii=False, indent=2)
-                    print("✅ bihar_jobs.json updated (Rate-Limit Proof & Guaranteed Complete Jobs Only)!")
+                    print(f"✅ bihar_jobs.json updated! Jobs: {len(parsed_jobs.get('latest_jobs', []))} | "
+                          f"Admit Cards: {len(parsed_jobs.get('admit_cards', []))} | "
+                          f"Results: {len(parsed_jobs.get('results', []))}")
                 else:
-                    print("🛡️ SAFEGUARD ACTIVATED: 0 complete job notifications found. Retaining existing file!")
+                    print("🛡️ SAFEGUARD ACTIVATED: 0 job notifications found. Retaining existing file!")
             except Exception as e:
                 print(f"❌ Jobs JSON Parsing Error: {e}")
 
