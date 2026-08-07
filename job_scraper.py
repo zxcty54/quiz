@@ -147,14 +147,12 @@ def extract_fields_with_regex(text):
     return extracted
 
 # -------------------------------------------------------------
-# 4. DEEP SCRAPER WITH HEAVY DEBUG LOGGING
+# 4. DEEP SCRAPER WITH PDF CRAWLER
 # -------------------------------------------------------------
 def fetch_deep_page_and_pdf(url):
     print(f"  🌐 [FETCH] Requesting URL: {url}")
     try:
         res = requests.get(url, headers=HEADERS, timeout=12, verify=False, allow_redirects=True)
-        print(f"  🌐 [RESPONSE] Status Code: {res.status_code} | Length: {len(res.content)} bytes")
-        
         if res.status_code != 200:
             return ""
 
@@ -164,7 +162,6 @@ def fetch_deep_page_and_pdf(url):
 
         pdf_candidates = []
         all_links = soup.find_all('a', href=True)
-        print(f"  🔗 [SCRAPE] Total <a> tags found on page: {len(all_links)}")
 
         for a_tag in all_links:
             href = a_tag['href'].strip()
@@ -173,29 +170,24 @@ def fetch_deep_page_and_pdf(url):
                 full_pdf_url = requests.compat.urljoin(url, href)
                 pdf_candidates.append(full_pdf_url)
 
-        print(f"  📄 [PDF SEARCH] Potential PDF links identified: {len(pdf_candidates)}")
-
         best_pdf_bytes = None
         best_pdf_size = 0
         winning_url = ""
 
-        for idx, c_url in enumerate(pdf_candidates[:5]):
-            print(f"    📥 [DOWNLOADING PDF candidate {idx+1}/{len(pdf_candidates[:5])}]: {c_url}")
+        for idx, c_url in enumerate(pdf_candidates[:4]):
             try:
-                c_res = requests.get(c_url, headers=HEADERS, timeout=10, verify=False)
+                c_res = requests.get(c_url, headers=HEADERS, timeout=8, verify=False)
                 c_len = len(c_res.content)
-                print(f"      -> Response: {c_res.status_code} | Size: {c_len // 1024} KB")
-                
                 if c_res.status_code == 200 and c_len > best_pdf_size:
                     best_pdf_size = c_len
                     best_pdf_bytes = c_res.content
                     winning_url = c_url
-            except Exception as e:
-                print(f"      ⚠️ Fetch error on candidate: {e}")
+            except Exception:
+                pass
 
         if best_pdf_bytes and best_pdf_size > 5000:
             try:
-                print(f"  ⚡ [PyMuPDF] Parsing Main Selected PDF: {winning_url} ({best_pdf_size // 1024} KB)")
+                print(f"  ⚡ [PyMuPDF] Parsing Main Selected PDF: ({best_pdf_size // 1024} KB)")
                 doc = pymupdf.open(stream=best_pdf_bytes, filetype="pdf")
                 pages_count = len(doc)
                 pdf_text = ""
@@ -203,19 +195,17 @@ def fetch_deep_page_and_pdf(url):
                     pdf_text += doc[page_num].get_text("text") + "\n"
                 
                 clean_extracted = clean_html_text(pdf_text[:12000])
-                print(f"  ✅ [PyMuPDF SUCCESS] Extracted {len(clean_extracted)} characters from {min(pages_count, 10)}/{pages_count} pages!")
+                print(f"  ✅ [PyMuPDF SUCCESS] Extracted {len(clean_extracted)} characters from PDF!")
                 return clean_extracted
             except Exception as pe:
                 print(f"  ❌ [PyMuPDF ERROR] Stream parse error: {pe}")
 
-        print("  ⚠️ [FALLBACK] No suitable PDF parsed. Extracting HTML body text instead...")
         content = soup.find('div', id=re.compile(r'post|content|entry')) or soup.find('body')
         html_text = clean_html_text(content.text if content else "")[:8000]
-        print(f"  ℹ️ [HTML FALLBACK] Extracted {len(html_text)} characters from HTML Body.")
         return html_text
 
     except Exception as e:
-        print(f"  ❌ [FETCH ERROR] Deep Page/PDF Error ({url}): {e}")
+        print(f"  ❌ [FETCH ERROR] Deep Page Error ({url}): {e}")
     return ""
 
 # -------------------------------------------------------------
@@ -225,7 +215,6 @@ def fill_missing_fields_with_ai(title, raw_snippet, missing_keys):
     if not GROQ_KEY or not missing_keys:
         return {}
 
-    print(f"  🤖 [GROQ AI] Requesting AI to fill missing fields: {missing_keys}")
     prompt = f"""
     Title: {title}
     Context: {raw_snippet[:2000]}
@@ -236,7 +225,7 @@ def fill_missing_fields_with_ai(title, raw_snippet, missing_keys):
       "application_fee": "Category fee or 'Refer Official Notification'",
       "start_date": "Exact start date or 'Online Active'",
       "last_date": "Exact last date or 'Refer Official Notification'",
-      "age_limit": "Min/Max age criteria",
+      "age_limit": "Min and Max age criteria",
       "qualification": "Exact Educational Qualification",
       "post_name": "Post Name"
     }}
@@ -256,10 +245,9 @@ def fill_missing_fields_with_ai(title, raw_snippet, missing_keys):
                 max_tokens=500,
                 timeout=15
             )
-            print(f"  ⚡ [GROQ AI SUCCESS] Response received using [{model}]!")
             return json.loads(res.choices[0].message.content.strip())
-        except Exception as e:
-            print(f"  ⚠️ [GROQ AI ERROR] Model [{model}] failed: {e}")
+        except Exception:
+            pass
     return {}
 
 # -------------------------------------------------------------
@@ -288,7 +276,40 @@ def clean_post_name(title):
     return clean.strip()[:50]
 
 # -------------------------------------------------------------
-# 7. MAIN PIPELINE EXECUTION WITH VERBOSE LOGS
+# 7. SARKARI RESULT DIRECT BOX SCRAPER (FALLBACK & PRIMARY)
+# -------------------------------------------------------------
+def fetch_sarkari_result_boxes():
+    items = []
+    try:
+        sr_url = "https://www.sarkariresult.com/"
+        res = requests.get(sr_url, headers=HEADERS, timeout=12, verify=False)
+        if res.status_code == 200:
+            soup = BeautifulSoup(res.content, "html.parser")
+            
+            # Find Boxes for Result, Admit Card, Latest Jobs
+            boxes = soup.find_all('div', id=re.compile(r'box|post')) or soup.find_all('div', class_=re.compile(r'box|post'))
+            for box in boxes:
+                header = box.find(['h2', 'h3', 'div', 'b'])
+                box_title = header.text.strip().lower() if header else ""
+                
+                category_type = "job"
+                if "admit" in box_title or "hall ticket" in box_title:
+                    category_type = "admit"
+                elif "result" in box_title or "answer key" in box_title:
+                    category_type = "result"
+
+                for a_tag in box.find_all('a', href=True)[:15]:
+                    title = a_tag.text.strip()
+                    href = a_tag['href'].strip()
+                    if title and len(title) > 6:
+                        items.append((title, href, category_type))
+            print(f"✅ SarkariResult Live Homepage Scraped: Found {len(items)} items.")
+    except Exception as e:
+        print(f"⚠️ SarkariResult Direct Scrape Warning: {e}")
+    return items
+
+# -------------------------------------------------------------
+# 8. MAIN PIPELINE EXECUTION
 # -------------------------------------------------------------
 def run_job_pipeline():
     today_str = datetime.now().strftime("%d %b %Y")
@@ -296,20 +317,17 @@ def run_job_pipeline():
     latest_jobs = []
     admit_cards = []
     results = []
-
-    sources = [
-        ("SSC Central", "https://www.freejobalert.com/ssc-job-notifications/feed/", "job"),
-        ("Railway Central", "https://www.freejobalert.com/railway-jobs/feed/", "job"),
-        ("Bank Central", "https://www.freejobalert.com/bank-jobs/feed/", "job"),
-        ("UPSC Central", "https://www.freejobalert.com/upsc-job-notifications/feed/", "job"),
-        ("Bihar Govt", "https://www.freejobalert.com/state-government-jobs/feed/", "job"),
-        ("Admit Cards", "https://www.freejobalert.com/admit-card/feed/", "admit"),
-        ("Results", "https://www.freejobalert.com/exam-result/feed/", "result")
-    ]
-
     seen_titles = set()
 
-    for label, feed_url, item_type in sources:
+    # Active Working Sources
+    sources = [
+        ("Main FreeJobAlert Feed", "https://www.freejobalert.com/feed/", "job"),
+        ("Bihar Job Portal", "https://biharjobportal.com/feed/", "job"),
+        ("JagranJosh Govt Jobs", "https://www.jagranjosh.com/rss/josh/jobs.xml", "job")
+    ]
+
+    # 1. PROCESS RSS FEEDS
+    for label, feed_url, default_type in sources:
         print(f"\n=======================================================")
         print(f"📡 [SOURCE START] Fetching RSS Feed: {label}")
         print(f"=======================================================")
@@ -320,45 +338,43 @@ def run_job_pipeline():
                 continue
 
             soup = BeautifulSoup(res.content, "xml")
-            items = soup.find_all('item')[:10]
-            print(f"  📡 Found {len(items)} items in RSS Feed.")
+            rss_items = soup.find_all('item')[:15]
+            print(f"  📡 Found {len(rss_items)} items in RSS Feed.")
 
-            for idx, item in enumerate(items):
+            for idx, item in enumerate(rss_items):
                 title = item.find('title').text.strip() if item.find('title') is not None else ""
                 link = item.find('link').text.strip() if item.find('link') is not None else ""
                 
-                print(f"\n[{idx+1}/{len(items)}] 🔍 Item: {title}")
-
-                # Title rejection check
-                reject_reason = check_rejection_reason(title)
-                if reject_reason:
-                    print(f"  🚫 [REJECTED TITLE] Matched keyword pattern: {reject_reason}")
+                if not title or len(title) < 5 or check_rejection_reason(title):
                     continue
 
                 simple_title = re.sub(r'[^a-zA-Z0-9]', '', title.lower())[:30]
                 if simple_title in seen_titles:
-                    print(f"  🔄 [DUPLICATE] Skipped already processed title.")
                     continue
                 seen_titles.add(simple_title)
 
-                # Fetch Deep Page & PDF
+                # Determine item type from title
+                item_type = default_type
+                if "admit card" in title.lower() or "hall ticket" in title.lower():
+                    item_type = "admit"
+                elif "result" in title.lower() or "answer key" in title.lower() or "merit list" in title.lower():
+                    item_type = "result"
+
+                print(f"[{idx+1}/{len(rss_items)}] 🔍 Processing [{item_type.upper()}]: {title}")
+
                 content_node = item.find('{http://purl.org/rss/1.0/modules/content/}encoded')
                 rss_text = clean_html_text(content_node.text) if content_node is not None else ""
                 
                 raw_snippet = fetch_deep_page_and_pdf(link) if link else ""
                 full_text_context = f"{title}\n{raw_snippet}\n{rss_text}"
 
-                # Inner text rejection check
-                inner_reject_reason = check_rejection_reason(full_text_context)
-                if inner_reject_reason:
-                    print(f"  🚫 [REJECTED INNER TEXT] Matched keyword pattern: {inner_reject_reason}")
+                if check_rejection_reason(full_text_context):
+                    print(f"  ❌ Inner text matched rejection keyword.")
                     continue
 
-                # Regex Extraction
                 extracted = extract_fields_with_regex(full_text_context)
                 missing_keys = [k for k, v in extracted.items() if v is None]
 
-                # Micro LLM fallback for jobs
                 if missing_keys and GROQ_KEY and item_type == "job":
                     ai_res = fill_missing_fields_with_ai(title, full_text_context, missing_keys)
                     for key in missing_keys:
@@ -368,7 +384,7 @@ def run_job_pipeline():
                 org_name = detect_organization(full_text_context)
 
                 if item_type == "job":
-                    job_card = {
+                    latest_jobs.append({
                         "id": f"job_{len(latest_jobs)+1:02d}",
                         "title": title,
                         "organization": org_name,
@@ -383,12 +399,9 @@ def run_job_pipeline():
                         "apply_url": "https://www.mocktester.online",
                         "exam_tag": "🔥 Govt Job Alert",
                         "date": today_str
-                    }
-                    latest_jobs.append(job_card)
-                    print(f"  ✅ [ADDED TO JOBS] Total jobs so far: {len(latest_jobs)}")
-
+                    })
                 elif item_type == "admit":
-                    admit_card = {
+                    admit_cards.append({
                         "id": f"admit_{len(admit_cards)+1:02d}",
                         "title": title,
                         "organization": org_name,
@@ -400,12 +413,9 @@ def run_job_pipeline():
                         "apply_url": "https://www.mocktester.online",
                         "exam_tag": "🎫 Hall Ticket",
                         "date": today_str
-                    }
-                    admit_cards.append(admit_card)
-                    print(f"  ✅ [ADDED TO ADMIT CARDS] Total so far: {len(admit_cards)}")
-
+                    })
                 elif item_type == "result":
-                    res_card = {
+                    results.append({
                         "id": f"result_{len(results)+1:02d}",
                         "title": title,
                         "organization": org_name,
@@ -416,12 +426,71 @@ def run_job_pipeline():
                         "apply_url": "https://www.mocktester.online",
                         "exam_tag": "🏆 Result",
                         "date": today_str
-                    }
-                    results.append(res_card)
-                    print(f"  ✅ [ADDED TO RESULTS] Total so far: {len(results)}")
+                    })
 
         except Exception as e:
             print(f"⚠️ Source Error ({label}): {e}")
+
+    # 2. PROCESS SARKARI RESULT HOMEPAGE DIRECT SCRAPE (FALLBACK / ENRICHMENT)
+    print(f"\n=======================================================")
+    print(f"🌐 [SOURCE START] Scraping SarkariResult Direct Homepage")
+    print(f"=======================================================")
+    sr_items = fetch_sarkari_result_boxes()
+    for title, link, item_type in sr_items:
+        if check_rejection_reason(title):
+            continue
+
+        simple_title = re.sub(r'[^a-zA-Z0-9]', '', title.lower())[:30]
+        if simple_title in seen_titles:
+            continue
+        seen_titles.add(simple_title)
+
+        org_name = detect_organization(title)
+        
+        if item_type == "job":
+            latest_jobs.append({
+                "id": f"job_{len(latest_jobs)+1:02d}",
+                "title": title,
+                "organization": org_name,
+                "job_type": "Bihar Govt Job" if "bihar" in title.lower() or "bpsc" in title.lower() else "Central Govt Job",
+                "post_name": clean_post_name(title),
+                "total_vacancies": "Check Official Notification",
+                "qualification": "Refer Official Notification",
+                "age_limit": "18-37 Years (Relaxation Applicable)",
+                "application_fee": "Refer Official Notification",
+                "start_date": "Online Active",
+                "last_date": "Refer Official Notification",
+                "apply_url": "https://www.mocktester.online",
+                "exam_tag": "🔥 Govt Job Alert",
+                "date": today_str
+            })
+        elif item_type == "admit":
+            admit_cards.append({
+                "id": f"admit_{len(admit_cards)+1:02d}",
+                "title": title,
+                "organization": org_name,
+                "job_type": "Bihar Govt Job" if "bihar" in title.lower() else "Central Govt Job",
+                "post_name": clean_post_name(title),
+                "total_vacancies": "As per Rules",
+                "exam_date": "As Scheduled",
+                "status": "Admit Card Released / Active",
+                "apply_url": "https://www.mocktester.online",
+                "exam_tag": "🎫 Hall Ticket",
+                "date": today_str
+            })
+        elif item_type == "result":
+            results.append({
+                "id": f"result_{len(results)+1:02d}",
+                "title": title,
+                "organization": org_name,
+                "job_type": "Bihar Govt Job" if "bihar" in title.lower() else "Central Govt Job",
+                "post_name": clean_post_name(title),
+                "total_vacancies": "As per Rules",
+                "result_status": "Merit List / Result Released",
+                "apply_url": "https://www.mocktester.online",
+                "exam_tag": "🏆 Result",
+                "date": today_str
+            })
 
     # Build Final Output
     final_output = {
