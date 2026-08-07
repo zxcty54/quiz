@@ -6,7 +6,7 @@ from datetime import datetime
 from curl_cffi import requests
 from bs4 import BeautifulSoup
 from groq import Groq
-import pymupdf  # ✅ Updated import to remove deprecation warning
+import pymupdf  # PyMuPDF clean import
 
 # -------------------------------------------------------------
 # 1. API Client Setup (Groq API)
@@ -89,7 +89,7 @@ def remove_markdown_stars(data):
     return data
 
 # -------------------------------------------------------------
-# 3. ROBUST MULTI-PATTERN REGEX PARSER (0-TOKEN COST)
+# 3. ROBUST MULTI-PATTERN REGEX PARSER
 # -------------------------------------------------------------
 def extract_fields_with_regex(text):
     extracted = {
@@ -100,7 +100,7 @@ def extract_fields_with_regex(text):
         "total_vacancies": None
     }
 
-    # 1. Multi-Pattern Application Fee
+    # 1. Application Fee Pattern
     fee_patterns = [
         r'(?:Application\s*Fee|Exam\s*Fee|Fee\s*Details)[\s\S]{1,250}?(?=\n\s*\n|Important|Age|Qualification|$)',
         r'(?:General\s*/?\s*OBC|UR\s*/?\s*EWS)[^.\n]*[₹\d]+[^.\n]*',
@@ -117,7 +117,7 @@ def extract_fields_with_regex(text):
         if re.search(r'\b(no fee|free of cost|nil|exempted)\b', text, re.IGNORECASE):
             extracted["application_fee"] = "General / OBC / SC / ST: ₹0 (No Fee)"
 
-    # 2. Multi-Pattern Important Dates
+    # 2. Dates Pattern
     date_matches = re.findall(r'\b\d{1,2}[/-]\d{1,2}[/-]\d{2,4}\b|\b\d{1,2}\s+(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)[a-z]*\s+\d{2,4}\b', text, re.IGNORECASE)
     if len(date_matches) >= 2:
         extracted["start_date"] = date_matches[0]
@@ -125,7 +125,7 @@ def extract_fields_with_regex(text):
     elif len(date_matches) == 1:
         extracted["last_date"] = date_matches[0]
 
-    # 3. Multi-Pattern Age Limit
+    # 3. Age Limit Pattern
     age_patterns = [
         r'(\d{2}\s*to\s*\d{2}\s*years)',
         r'(\d{2}\s*-\s*\d{2}\s*years)',
@@ -139,7 +139,7 @@ def extract_fields_with_regex(text):
             extracted["age_limit"] = clean_age
             break
 
-    # 4. Multi-Pattern Vacancies
+    # 4. Vacancies Pattern
     vac_match = re.search(r'\b(\d{2,6})\s*(Posts|Vacancies|Seat|Seats)\b', text, re.IGNORECASE)
     if vac_match:
         extracted["total_vacancies"] = f"{vac_match.group(1)} Posts"
@@ -147,90 +147,52 @@ def extract_fields_with_regex(text):
     return extracted
 
 # -------------------------------------------------------------
-# 4. ADVANCED PDF CRAWLER & PRIORITIZER (USING PYMUPDF)
+# 4. DEEP SCRAPER & PDF CRAWLER
 # -------------------------------------------------------------
-def is_pdf_url(url):
-    if url.lower().endswith('.pdf'):
-        return True
-    try:
-        h_res = requests.head(url, headers=HEADERS, timeout=4, verify=False, allow_redirects=True)
-        if 'application/pdf' in h_res.headers.get('Content-Type', '').lower():
-            return True
-    except Exception:
-        pass
-    return False
-
 def fetch_deep_page_and_pdf(url):
     try:
-        res = requests.get(url, headers=HEADERS, timeout=8, verify=False, allow_redirects=True)
+        res = requests.get(url, headers=HEADERS, timeout=6, verify=False, allow_redirects=True)
         if res.status_code != 200:
             return ""
 
-        # Case A: Direct PDF URL
-        if is_pdf_url(url):
-            doc = pymupdf.open(stream=res.content, filetype="pdf")  # ✅ pymupdf
-            text = ""
-            for page_num in range(min(len(doc), 10)):
-                text += doc[page_num].get_text("text") + "\n"
-            return clean_html_text(text[:12000])
-
-        # Case B: HTML Page -> Scan for Notification PDF Links
         soup = BeautifulSoup(res.content, "html.parser")
         for tag in soup.find_all(['script', 'style', 'nav', 'footer', 'header', 'aside']):
             tag.decompose()
 
         pdf_candidates = []
-        notification_keywords = [
-            "detailed notification", "official notification", "download notice", 
-            "advertisement", "full notification", "click here", "notification", "notice"
-        ]
-
         for a_tag in soup.find_all('a', href=True):
             href = a_tag['href'].strip()
-            anchor_text = a_tag.text.strip().lower()
-            a_title = a_tag.get('title', '').lower()
-
-            if not href or href.startswith('javascript:') or href.startswith('#'):
-                continue
-
-            full_href = requests.compat.urljoin(url, href)
-            is_match = any(kw in anchor_text or kw in a_title for kw in notification_keywords)
-
-            if href.endswith('.pdf') or is_match:
-                pdf_candidates.append(full_href)
+            if href.endswith('.pdf') or "notification" in a_tag.text.lower():
+                pdf_candidates.append(requests.compat.urljoin(url, href))
 
         best_pdf_bytes = None
         best_pdf_size = 0
 
-        for candidate_url in pdf_candidates[:5]:
+        for c_url in pdf_candidates[:3]:
             try:
-                c_res = requests.get(candidate_url, headers=HEADERS, timeout=6, verify=False, allow_redirects=True)
-                if c_res.status_code == 200:
-                    is_pdf = candidate_url.endswith('.pdf') or 'application/pdf' in c_res.headers.get('Content-Type', '').lower()
-                    if is_pdf:
-                        content_size = len(c_res.content)
-                        if content_size > best_pdf_size:
-                            best_pdf_size = content_size
-                            best_pdf_bytes = c_res.content
+                c_res = requests.get(c_url, headers=HEADERS, timeout=5, verify=False)
+                if c_res.status_code == 200 and len(c_res.content) > best_pdf_size:
+                    best_pdf_size = len(c_res.content)
+                    best_pdf_bytes = c_res.content
             except Exception:
                 pass
 
         if best_pdf_bytes and best_pdf_size > 10000:
             try:
-                doc = pymupdf.open(stream=best_pdf_bytes, filetype="pdf")  # ✅ pymupdf
+                doc = pymupdf.open(stream=best_pdf_bytes, filetype="pdf")
                 pdf_text = ""
                 for page_num in range(min(len(doc), 10)):
                     pdf_text += doc[page_num].get_text("text") + "\n"
-                print(f"  📄 Selected Main PDF ({best_pdf_size // 1024} KB)")
+                print(f"  📄 Selected PDF ({best_pdf_size // 1024} KB)")
                 return clean_html_text(pdf_text[:12000])
-            except Exception as pe:
-                print(f"  ⚠️ PyMuPDF stream parse error: {pe}")
+            except Exception:
+                pass
 
         content = soup.find('div', id=re.compile(r'post|content|entry')) or soup.find('body')
         return clean_html_text(content.text if content else "")[:8000]
 
     except Exception as e:
-        print(f"  ⚠️ Deep Fetch Error ({url}): {e}")
+        print(f"  ⚠️ Fetch Warning ({url}): {e}")
     return ""
 
 # -------------------------------------------------------------
@@ -241,22 +203,22 @@ def fill_missing_fields_with_ai(title, raw_snippet, missing_keys):
         return {}
 
     prompt = f"""
-    Item Title: {title}
-    Context: {raw_snippet[:2000]}
+    Title: {title}
+    Context: {raw_snippet[:1500]}
 
-    Extract ONLY missing fields ({', '.join(missing_keys)}) for this government notification in JSON.
+    Extract missing fields ({', '.join(missing_keys)}) for this gov notification in JSON.
     Schema:
     {{
-      "application_fee": "Category-wise fee breakdown or 'Refer Official Notification'",
+      "application_fee": "Category fee or 'Refer Official Notification'",
       "start_date": "Exact start date or 'Online Active'",
       "last_date": "Exact last date or 'Refer Official Notification'",
-      "age_limit": "Min and Max age criteria",
+      "age_limit": "Min/Max age criteria",
       "qualification": "Exact Educational Qualification",
-      "post_name": "Specific Post Name"
+      "post_name": "Post Name"
     }}
     """
 
-    time.sleep(1)
+    time.sleep(0.5)
     for model in MODELS:
         try:
             res = client.chat.completions.create(
@@ -267,8 +229,8 @@ def fill_missing_fields_with_ai(title, raw_snippet, missing_keys):
                 ],
                 temperature=0.01,
                 response_format={"type": "json_object"},
-                max_tokens=600,
-                timeout=15
+                max_tokens=500,
+                timeout=10
             )
             return json.loads(res.choices[0].message.content.strip())
         except Exception:
@@ -276,7 +238,7 @@ def fill_missing_fields_with_ai(title, raw_snippet, missing_keys):
     return {}
 
 # -------------------------------------------------------------
-# 6. HARD REJECTION KEYWORDS
+# 6. RELAXED & PRECISE REJECTION KEYWORDS
 # -------------------------------------------------------------
 REJECT_KEYWORDS = [
     r'\buniversity\b', r'\bcollege\b', r'\bsemester\b', r'\bba part\b', r'\bbsc\b', r'\bbcom\b',
@@ -324,7 +286,7 @@ def run_job_pipeline():
 
     for label, feed_url, item_type in sources:
         try:
-            res = requests.get(feed_url, headers=HEADERS, timeout=12, verify=False)
+            res = requests.get(feed_url, headers=HEADERS, timeout=10, verify=False)
             if res.status_code != 200:
                 continue
 
@@ -335,6 +297,7 @@ def run_job_pipeline():
                 title = item.find('title').text.strip() if item.find('title') is not None else ""
                 link = item.find('link').text.strip() if item.find('link') is not None else ""
                 
+                # Title check
                 if not title or len(title) < 5 or is_rejected(title):
                     continue
 
@@ -343,36 +306,33 @@ def run_job_pipeline():
                     continue
                 seen_titles.add(simple_title)
 
-                print(f"\n🔍 Processing [{item_type.upper()}]: {title}")
+                print(f"🔍 Processing [{item_type.upper()}]: {title}")
 
-                # Deep Scrape: Article Page + PDF Crawler
-                raw_snippet = ""
-                if link:
-                    raw_snippet = fetch_deep_page_and_pdf(link)
+                # Deep Scrape or RSS fallback
+                content_node = item.find('{http://purl.org/rss/1.0/modules/content/}encoded')
+                rss_text = clean_html_text(content_node.text) if content_node is not None else ""
+                
+                raw_snippet = fetch_deep_page_and_pdf(link) if link else ""
+                full_text_context = f"{title}\n{raw_snippet}\n{rss_text}"
 
-                full_text_context = f"{title}\n{raw_snippet}"
-
+                # Inner text rejection check
                 if is_rejected(full_text_context):
-                    print(f"  ❌ Inner text triggered rejection rule")
+                    print(f"  ❌ Rejection rule matched in inner text")
                     continue
 
-                # --- STEP A: REGEX EXTRACTION (0 TOKENS) ---
+                # Regex Extraction
                 extracted = extract_fields_with_regex(full_text_context)
-
-                # --- STEP B: CHECK MISSING FIELDS ---
                 missing_keys = [k for k, v in extracted.items() if v is None]
 
-                # --- STEP C: MICRO-LLM CALL (MISSING FIELDS ONLY) ---
+                # Micro LLM fallback for jobs
                 if missing_keys and GROQ_KEY and item_type == "job":
-                    print(f"  ⚡ Missing {missing_keys} -> Micro-LLM call")
-                    ai_res = fill_missing_fields_with_ai(title, raw_snippet, missing_keys)
+                    ai_res = fill_missing_fields_with_ai(title, full_text_context, missing_keys)
                     for key in missing_keys:
                         if ai_res.get(key):
                             extracted[key] = ai_res[key]
 
                 org_name = detect_organization(full_text_context)
 
-                # --- STEP D: MAP TO FINAL JSON STRUCTURE ---
                 if item_type == "job":
                     job_card = {
                         "id": f"job_{len(latest_jobs)+1:02d}",
@@ -438,7 +398,7 @@ def run_job_pipeline():
     if latest_jobs or admit_cards or results:
         with open("bihar_jobs.json", "w", encoding="utf-8") as f:
             json.dump(final_output, f, ensure_ascii=False, indent=2)
-        print(f"\n✅ bihar_jobs.json successfully generated!\n"
+        print(f"\n✅ bihar_jobs.json successfully updated!\n"
               f"👉 Jobs: {len(latest_jobs)}\n"
               f"👉 Admit Cards: {len(admit_cards)}\n"
               f"👉 Results: {len(results)}")
