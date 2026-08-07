@@ -2,8 +2,7 @@ import os
 import json
 import time
 import re
-from datetime import datetime, timedelta
-import email.utils
+from datetime import datetime
 import xml.etree.ElementTree as ET
 from curl_cffi import requests
 from bs4 import BeautifulSoup
@@ -18,13 +17,11 @@ client = Groq(api_key=GROQ_KEY) if GROQ_KEY else None
 MODELS = ["llama-3.1-8b-instant", "mixtral-8x7b-32768", "llama-3.3-70b-versatile"]
 
 def clean_html_text(text):
-    """HTML tags ko clean text mein convert karta hai"""
     if not text:
         return ""
     return BeautifulSoup(text, "html.parser").get_text().strip()
 
 def remove_markdown_stars(data):
-    """JSON ke andar se ** aur markdown symbols ko completely clean karta hai"""
     if isinstance(data, dict):
         return {k: remove_markdown_stars(v) for k, v in data.items()}
     elif isinstance(data, list):
@@ -37,13 +34,11 @@ def remove_markdown_stars(data):
 # 2. MULTI-SOURCE HYBRID JOB SCRAPER
 # -------------------------------------------------------------
 def fetch_raw_jobs():
-    """Scrapes raw job updates from FreeJobAlert, SarkariResult & BiharJobPortal"""
     job_records = []
     headers = {
-        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
     }
 
-    # SOURCE A: FreeJobAlert Multi-Feeds (State, SSC, Railway, Banking, All-India)
     fja_feeds = [
         "https://www.freejobalert.com/feed/",
         "https://www.freejobalert.com/state-government-jobs/feed/",
@@ -66,7 +61,6 @@ def fetch_raw_jobs():
         except Exception as e:
             print(f"⚠️ Error FJA Feed ({feed_url}): {e}")
 
-    # SOURCE B: Sarkari Result Live Updates
     try:
         sr_url = "https://www.sarkariresult.com/"
         res = requests.get(sr_url, headers=headers, timeout=12, verify=False)
@@ -82,7 +76,6 @@ def fetch_raw_jobs():
     except Exception as e:
         print(f"⚠️ Error SarkariResult Scraping: {e}")
 
-    # SOURCE C: Bihar Job Portal Updates
     try:
         bjp_url = "https://biharjobportal.com/"
         res = requests.get(bjp_url, headers=headers, timeout=12, verify=False)
@@ -129,25 +122,24 @@ def generate_job_summary(raw_text):
 
     prompt = f"""
     You are an expert Government Recruitment Portal Data Editor.
-    Below is raw text scraped from FreeJobAlert, SarkariResult, and BiharJobPortal:
+    Below is raw text scraped from job portals:
 
     RAW TEXT:
     {truncated_raw}
 
-    HIGH QUANTITY & COMPLETENESS INSTRUCTIONS:
-    1. EXTRACT ALL VALID JOBS: Generate AT LEAST 15 to 25 job entries in the 'latest_jobs' list. Do not stop early.
-    2. ALLOWED JURISDICTIONS ONLY:
+    STRICT FILTERING & REJECTION RULES:
+    1. ALLOWED JURISDICTIONS ONLY:
        - Bihar Govt Jobs: BPSC, BSSC, CSBC, BPSSC, Bihar Teacher, Patna High Court, Civil Court, Beltron, Health Dept.
        - Central Govt Jobs: SSC (CGL/CHSL/MTS/GD), Railways (RRB NTPC/Group D/ALP), Banking (IBPS/SBI/RBI), UPSC, Defence.
-    3. STRICT REJECTION OF OTHER STATES: REJECT any job belonging to UP, MP, Rajasthan, Haryana, Delhi DSSSB, Maharashtra, etc.
-    4. NO MARKDOWN SYMBOLS: DO NOT USE ANY ASTERISKS (**), BOLD SYMBOLS, OR MARKDOWN IN ANY TEXT FIELD. Keep text strictly plain.
-    5. FIELD COMPLETENESS:
-       - Provide detailed Educational Qualification.
-       - Provide category-wise Application Fee (e.g. "General/OBC: ₹600 | SC/ST/Female: ₹150"). If exact fee is not in text, write "As per Official Notification".
-       - Provide Age Limit with relaxation.
-    6. Set "apply_url" to "https://www.mocktester.online" for ALL items.
+    2. STRICTLY REJECT ALL OTHER STATES: Reject UP, MP, Rajasthan, Haryana, Delhi, Maharashtra, Tamil Nadu, Andhra Pradesh, Telangana, Karnataka, Kerala, Gujarat, West Bengal, Odisha, Assam, etc.
+    3. STRICTLY REJECT NON-JOB NOTICES: Reject College Admissions, Counselling Schedules, Seat Allotments, Entrance Tests (TANCET, CET, NEET, GATE), School/University news.
+    4. STRICTLY REJECT APPRENTICE POSTS: Do NOT include any Trade Apprentice, Graduate Apprentice, or Apprenticeship training notices.
+    5. STRICTLY REJECT MBBS / DOCTOR POSTS: Do NOT include Medical Officer, Specialist Doctor, Dental Officer, or MBBS-level doctor posts.
+    6. MINIMUM 50 VACANCIES MANDATORY: Only include recruitments with 50 or MORE vacancies (or large 'Various Posts'). REJECT posts with less than 50 total vacancies.
+    7. NO MARKDOWN SYMBOLS: Plain text only, no asterisks (**).
+    8. Set "apply_url" to "https://www.mocktester.online" for ALL items.
 
-    JSON SCHEMA OUTPUT (Return EXACTLY this structure):
+    JSON SCHEMA OUTPUT:
     {{
       "latest_jobs": [
         {{
@@ -203,29 +195,62 @@ def generate_job_summary(raw_text):
 # -------------------------------------------------------------
 # 4. PYTHON POST-PROCESSING SMART FILTER
 # -------------------------------------------------------------
-STATE_BLACKLIST = [
+REJECT_KEYWORDS = [
+    # Other States & Organizations
     "uttar pradesh", " up police", " up board", "uppsc", " up govt",
     "madhya pradesh", "mppsc", "rajasthan", "rpsc", "haryana", "hpsc",
-    "dsssb", "delhi govt", "maharashtra", "mpsc", "jharkhand", "jpsc",
-    "west bengal", "wbpsc", "punjab", "ppsc", "gujarat", "gpsc"
+    "dsssb", "delhi govt", "maharashtra", "mpsc", "madc", "jharkhand", "jpsc",
+    "west bengal", "wbpsc", "punjab", "ppsc", "gujarat", "gpsc",
+    "tamil nadu", "tnpsc", "tancet", "andhra pradesh", "appsc", "narasapuram",
+    "telangana", "tspsc", "kerala", "kpsc", "karnataka", "odisha", "opsc",
+
+    # Non-Job Admissions & Counselling Keywords
+    "counselling", "allotment", "admission", "entrance test", "seat allotment",
+
+    # Rule 1: No Apprentice Posts
+    "apprentice", "apprenticeship",
+
+    # Rule 2: No MBBS / Doctor / Medical Officer Posts
+    "mbbs", "medical officer", "doctor", "dental officer", "specialist medical officer"
 ]
 
-def is_other_state(title, org):
-    combined = f"{title} {org}".lower()
-    return any(state in combined for state in STATE_BLACKLIST)
+def is_invalid_job(title, org, post_name, qualification):
+    combined = f"{title} {org} {post_name} {qualification}".lower()
+    return any(bad_word in combined for bad_word in REJECT_KEYWORDS)
+
+def is_vacancy_less_than_50(vacancies_str):
+    """Checks if vacancy count is explicitly stated and is less than 50"""
+    if not vacancies_str:
+        return False
+    # Numbers search karega (e.g. "12 Posts", "35 Vacancies")
+    nums = re.findall(r'\b\d+\b', vacancies_str)
+    if nums:
+        # First principal number extract karke check karta hai
+        count = int(nums[0])
+        if count < 50:
+            return True
+    return False
 
 def filter_valid_jobs(parsed_jobs):
     clean_latest_jobs = []
     for job in parsed_jobs.get("latest_jobs", []):
         title = job.get("title", "")
         org = job.get("organization", "")
+        post_name = job.get("post_name", "")
+        qual = job.get("qualification", "")
+        vacancies = job.get("total_vacancies", "")
 
-        if is_other_state(title, org):
-            print(f"❌ Dropped job (Other state): {title}")
+        # Check 1: Keyword filters (Other state / Admissions / Apprentice / Doctor)
+        if is_invalid_job(title, org, post_name, qual):
+            print(f"❌ Dropped (Keyword/State/Apprentice/Doctor Filter): {title}")
+            continue
+
+        # Check 2: Vacancies less than 50 check
+        if is_vacancy_less_than_50(vacancies):
+            print(f"❌ Dropped (Vacancies < 50): {title} ({vacancies})")
             continue
 
         if not title or len(title) < 5:
-            print(f"❌ Dropped job (Invalid title): {title}")
             continue
 
         clean_latest_jobs.append(job)
@@ -234,14 +259,18 @@ def filter_valid_jobs(parsed_jobs):
     for card in parsed_jobs.get("admit_cards", []):
         title = card.get("title", "")
         org = card.get("organization", "")
-        if not is_other_state(title, org) and title:
+        post_name = card.get("post_name", "")
+        qual = card.get("qualification", "")
+        if not is_invalid_job(title, org, post_name, qual) and title:
             clean_admit_cards.append(card)
 
     clean_results = []
     for res_item in parsed_jobs.get("results", []):
         title = res_item.get("title", "")
         org = res_item.get("organization", "")
-        if not is_other_state(title, org) and title:
+        post_name = res_item.get("post_name", "")
+        qual = res_item.get("qualification", "")
+        if not is_invalid_job(title, org, post_name, qual) and title:
             clean_results.append(res_item)
 
     parsed_jobs["latest_jobs"] = clean_latest_jobs
@@ -266,7 +295,7 @@ if __name__ == "__main__":
             try:
                 parsed_jobs = json.loads(ai_jobs.strip())
                 parsed_jobs = filter_valid_jobs(parsed_jobs)
-                parsed_jobs = remove_markdown_stars(parsed_jobs) # Automatically clean all ** stars
+                parsed_jobs = remove_markdown_stars(parsed_jobs)
                 
                 has_data = (
                     len(parsed_jobs.get("latest_jobs", [])) > 0 or
