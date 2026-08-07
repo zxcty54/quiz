@@ -42,8 +42,18 @@ def clean_html_text(text):
         return ""
     return BeautifulSoup(text, "html.parser").get_text().strip()
 
+def remove_markdown_stars(data):
+    """JSON ke andar se ** aur markdown symbols ko completely clean karta hai"""
+    if isinstance(data, dict):
+        return {k: remove_markdown_stars(v) for k, v in data.items()}
+    elif isinstance(data, list):
+        return [remove_markdown_stars(item) for item in data]
+    elif isinstance(data, str):
+        return data.replace("**", "").replace("##", "").strip()
+    return data
+
 # -------------------------------------------------------------
-# 2. NEWS SCRAPING FUNCTIONS (WITH DEEP DATA SCRAPING)
+# 2. NEWS SCRAPING FUNCTIONS
 # -------------------------------------------------------------
 def fetch_raw_bihar_news(target_dt):
     """Multiple Official & Media sources se Bihar Current Affairs raw text scrape karta hai"""
@@ -138,7 +148,6 @@ def fetch_raw_national_news(target_dt):
                 title = item.find('title').text if item.find('title') is not None else ""
                 desc = clean_html_text(item.find('description').text if item.find('description') is not None else "")
                 if title:
-                    # Raised character limit from 250 -> 800 for deeper AI explanation
                     national_titles.append(f"[PIB Central] Title: {title.strip()} | Summary: {desc[:800]}")
             print("✅ PIB Central RSS fetched successfully!")
     except Exception as e:
@@ -161,7 +170,6 @@ def fetch_raw_national_news(target_dt):
                     pub_date = item.find('pubDate').text if item.find('pubDate') is not None else ""
                     desc = clean_html_text(item.find('description').text if item.find('description') is not None else "")
                     if title and is_yesterday_news(pub_date, target_dt):
-                        # Raised limit 200 -> 600
                         national_titles.append(f"[Google Central] Title: {title.strip()} | Summary: {desc[:600]}")
         except Exception as e:
             print(f"⚠️ Error Google National Query ({q}): {e}")
@@ -185,7 +193,7 @@ def fetch_raw_national_news(target_dt):
     return "\n".join(national_titles)
 
 # -------------------------------------------------------------
-# 3. AI SUMMARY GENERATOR (ENHANCED DEEP EXPLANATION PROMPT)
+# 3. AI SUMMARY GENERATOR
 # -------------------------------------------------------------
 def call_groq_safe(prompt, system_role="You are a JSON generator assistant."):
     """Multi-Model Fallback Executor (TPM & TPD Safe)"""
@@ -238,8 +246,9 @@ def generate_clean_summary(raw_text, target_date_str, is_national=False):
         bullet_rules = """
         EXAMINER FOCUS DEEP BULLET RULES (NATIONAL) - MANDATORY DETAILED EXPLANATIONS:
         - WRITE EXACTLY 3 DEEP, COMPREHENSIVE, AND DETAILED BULLET POINTS IN HINGLISH FOR EVERY CARD.
+        - DO NOT USE ANY ASTERISKS (**), BOLD TAGS, OR MARKDOWN SYMBOLS IN THE TEXT. Keep text plain.
         - DO NOT WRITE ONE-LINE SHORT SUMMARY BULLETS. Each bullet MUST be at least 20 to 35 words long with deep context.
-        - Bullet 1 (Core Announcement & Nodal Body): Detail what decision/policy/project was launched, which Central Ministry/Organization is responsible, location, and the key stakeholders in Hinglish.
+        - Bullet 1 (Core Announcement & Nodal Body): Detail what decision/policy/project was launched, which Central Ministry/Organization is responsible, location, and key stakeholders in Hinglish.
         - Bullet 2 (Numerical Data & Key High-Yield Exam Facts): Include exact numbers, financial budget outlay, target years, missile range, India's rank, or participating countries in Hinglish.
         - Bullet 3 (Strategic Purpose & Background Context): Explain WHY this was done, its strategic objective, long-term impact on economy/defense/policy, or background act/framework in Hinglish.
         """
@@ -264,7 +273,8 @@ def generate_clean_summary(raw_text, target_date_str, is_national=False):
         bullet_rules = """
         BULLET POINT RULES (IF A CARD QUALIFIES):
         - WRITE EXACTLY 3 DEEP FACTUAL BULLET POINTS IN HINGLISH.
-        - DO NOT write short filler lines. Provide detailed factual context in 20-30 words per bullet point.
+        - DO NOT USE ANY ASTERISKS (**), BOLD TAGS, OR MARKDOWN SYMBOLS.
+        - Provide detailed factual context in 20-30 words per bullet point.
         """
 
     prompt = f"""
@@ -283,6 +293,7 @@ def generate_clean_summary(raw_text, target_date_str, is_national=False):
 
     LANGUAGE & BULLETS:
     - WRITE ALL TITLES AND BULLETS IN **HINGLISH** (Hindi written in Roman English Script).
+    - NEVER USE ASTERISKS (**), BOLD SYMBOLS, OR MARKDOWN IN HEADLINES OR BULLETS. Plain text only.
     - ALWAYS WRITE EXACTLY 3 DETAILED BULLET POINTS FOR EVERY CARD.
     {bullet_rules}
 
@@ -311,7 +322,6 @@ def generate_clean_summary(raw_text, target_date_str, is_national=False):
 # 4. MASTER HISTORY APPEND FUNCTIONS
 # -------------------------------------------------------------
 def append_to_master_history(news_cards, yesterday_key, is_national=False):
-    """Appends daily news cards to the master history JSON files"""
     master_file = "all_national_news_history.json" if is_national else "all_bihar_news_history.json"
     
     master_data = {}
@@ -347,6 +357,7 @@ if __name__ == "__main__":
         if ai_bihar:
             try:
                 parsed_bihar = json.loads(ai_bihar.strip())
+                parsed_bihar = remove_markdown_stars(parsed_bihar) # Clean stars automatically
                 cards = parsed_bihar.get("news_cards", [])
                 
                 if cards and len(cards) > 0:
@@ -369,6 +380,7 @@ if __name__ == "__main__":
         if ai_national:
             try:
                 parsed_national = json.loads(ai_national.strip())
+                parsed_national = remove_markdown_stars(parsed_national) # Clean stars automatically
                 cards_nat = parsed_national.get("news_cards", [])
                 
                 if cards_nat and len(cards_nat) > 0:
