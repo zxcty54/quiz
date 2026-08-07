@@ -186,17 +186,17 @@ def run_job_pipeline():
         job_card = {
             "id": f"job_{len(latest_jobs)+1:02d}",
             "title": title,
-            "organization": cand["organization"],
-            "job_type": "Bihar Govt Job" if "bihar" in (title + cand["post_name"]).lower() else "Central Govt Job",
-            "post_name": cand["post_name"],
-            "total_vacancies": cand["total_vacancies"],
-            "qualification": cand["qualification"],
-            "age_limit": deep_data["age_limit"] or "18-37 Years (Relaxation Applicable)",
-            "application_fee": deep_data["application_fee"] or "Refer Official Notification",
-            "start_date": today_str,
-            "last_date": cand["last_date"],
-            "apply_url": deep_data["apply_url"] or detail_url,
-            "notification_pdf": deep_data["pdf_url"] or "Refer Official Notification",
+            "organization": cand.get("organization") or "Central / Bihar Govt Agency",
+            "job_type": "Bihar Govt Job" if "bihar" in (title + cand.get("post_name", "")).lower() else "Central Govt Job",
+            "post_name": cand.get("post_name") or None,
+            "total_vacancies": cand.get("total_vacancies") or None,
+            "qualification": cand.get("qualification") or None,
+            "age_limit": deep_data.get("age_limit") or None,
+            "application_fee": deep_data.get("application_fee") or None,
+            "start_date": cand.get("start_date") or today_str,
+            "last_date": cand.get("last_date") or None,
+            "apply_url": deep_data.get("apply_url") or detail_url,
+            "notification_pdf": deep_data.get("pdf_url") or None,
             "date": today_str
         }
         latest_jobs.append(job_card)
