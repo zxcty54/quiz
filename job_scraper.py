@@ -1,15 +1,44 @@
+"""
+Bihar & Central Govt Jobs Pipeline (mocktester.online)
+--------------------------------------------------------
+WHAT THIS SCRIPT GUARANTEES:
+1. ONLY Bihar state govt + Central (all-India) govt jobs/admit-cards/results.
+   Every other state is explicitly rejected.
+2. A job in "latest_jobs" ONLY appears if it has BOTH a real start_date and
+   a real last_date (actual calendar dates - not "TBA", not "Online Active",
+   not missing).
+3. A job is only kept if it is still LIVE - i.e. its last_date has not
+   already passed as of today. Expired jobs are dropped automatically.
+4. Deep-scrapes each post's actual detail page (not just the RSS/listing
+   summary) because fee/age/date tables usually live only on that page.
+5. No hallucination: the AI is told to OMIT an item entirely rather than
+   invent a fee/date/vacancy figure it can't find in the scraped text.
+
+Requires: pip install groq curl_cffi beautifulsoup4 lxml python-dateutil
+(python-dateutil is optional but strongly recommended for robust date
+parsing - the script still works without it via a regex fallback.)
+"""
+
 import os
 import json
 import time
 import re
-from datetime import datetime
+from datetime import datetime, date
 import xml.etree.ElementTree as ET
 from curl_cffi import requests
 from bs4 import BeautifulSoup
 from groq import Groq
 
+try:
+    from dateutil import parser as date_parser
+    HAS_DATEUTIL = True
+except ImportError:
+    HAS_DATEUTIL = False
+    print("⚠️ python-dateutil not installed - using basic date fallback. "
+          "Run: pip install python-dateutil for more reliable date parsing.")
+
 # -------------------------------------------------------------
-# 1. API Client Setup (Groq API)
+# 1. SETUP
 # -------------------------------------------------------------
 GROQ_KEY = os.environ.get("GROQ_API_KEY")
 client = Groq(api_key=GROQ_KEY) if GROQ_KEY else None
@@ -35,7 +64,72 @@ def remove_markdown_stars(data):
     return data
 
 # -------------------------------------------------------------
-# 1b. GENERIC INNER-PAGE FULL-TEXT EXTRACTOR
+# 2. DATE PARSING (for the "live job" check)
+# -------------------------------------------------------------
+MONTHS = {
+    'jan': 1, 'january': 1, 'feb': 2, 'february': 2, 'mar': 3, 'march': 3,
+    'apr': 4, 'april': 4, 'may': 5, 'jun': 6, 'june': 6, 'jul': 7, 'july': 7,
+    'aug': 8, 'august': 8, 'sep': 9, 'sept': 9, 'september': 9, 'oct': 10,
+    'october': 10, 'nov': 11, 'november': 11, 'dec': 12, 'december': 12
+}
+
+def parse_date_flexible(date_str):
+    """
+    Tries to parse a date string in whatever format the AI/source gave it
+    (e.g. '30 Sep 2026', '30-09-2026', '2026-09-30', '30th September 2026').
+    Returns a date object, or None if it genuinely isn't a real date
+    (e.g. 'Online Active', 'TBA', empty).
+    """
+    if not date_str or not date_str.strip():
+        return None
+    s = date_str.strip()
+
+    if HAS_DATEUTIL:
+        try:
+            dt = date_parser.parse(s, fuzzy=True, dayfirst=True)
+            # Sanity check: reject obviously wrong years (parser hallucinating on junk text)
+            if 2020 <= dt.year <= 2035:
+                return dt.date()
+        except Exception:
+            pass
+
+    # Manual fallback: "30 Sep 2026" / "30-09-2026" / "30/09/2026"
+    m = re.search(r'(\d{1,2})[\s\-/]+([A-Za-z]{3,9}|\d{1,2})[\s\-/]+(\d{4})', s)
+    if m:
+        try:
+            day = int(m.group(1))
+            mon_raw = m.group(2).lower()
+            year = int(m.group(3))
+            month = int(mon_raw) if mon_raw.isdigit() else MONTHS.get(mon_raw[:3])
+            if month:
+                return datetime(year, month, day).date()
+        except (ValueError, KeyError):
+            return None
+
+    # ISO format: "2026-09-30"
+    m2 = re.search(r'(\d{4})-(\d{1,2})-(\d{1,2})', s)
+    if m2:
+        try:
+            return datetime(int(m2.group(1)), int(m2.group(2)), int(m2.group(3))).date()
+        except ValueError:
+            return None
+
+    return None
+
+def is_job_still_live(last_date_str, today=None):
+    """A job is 'live' only if its last_date is a real, parseable date
+    that has NOT already passed."""
+    today = today or date.today()
+    parsed = parse_date_flexible(last_date_str)
+    if parsed is None:
+        return False, None
+    return parsed >= today, parsed
+
+# -------------------------------------------------------------
+# 3. INNER-PAGE FULL-TEXT EXTRACTOR
+#    FreeJobAlert's RSS feed and SarkariResult's listing page only give a
+#    short summary - the actual fee table, age limit, qualification, and
+#    important-dates block live on the individual post's own page.
 # -------------------------------------------------------------
 CONTENT_SELECTORS = [
     ("div", {"class": "entry-content"}),
@@ -78,7 +172,7 @@ def fetch_inner_page_text(url, char_limit=3500, timeout=8):
         return ""
 
 # -------------------------------------------------------------
-# 2. STEP 1 & 2: MULTI-SOURCE & DEEP INNER PAGE SCRAPER
+# 4. SCRAPER: FreeJobAlert (deep) + SarkariResult (deep)
 # -------------------------------------------------------------
 def fetch_raw_jobs():
     job_records = []
@@ -132,7 +226,6 @@ def fetch_raw_jobs():
         res = requests.get(sr_url, headers=HEADERS, timeout=12, verify=False)
         if res.status_code == 200:
             soup = BeautifulSoup(res.content, "html.parser")
-
             boxes = soup.find_all('div', id=re.compile(r'box|post')) or soup.find_all('div', class_=re.compile(r'box|post'))
             inner_fetch_count = 0
             for box in boxes:
@@ -165,7 +258,7 @@ def fetch_raw_jobs():
     return "\n".join(job_records)
 
 # -------------------------------------------------------------
-# 3. STEP 3: GROQ AI STRUCTURING & STRICT EXTRACTION
+# 5. GROQ AI CALL (robust: timeout + max_tokens + fallback models)
 # -------------------------------------------------------------
 def call_groq_safe(prompt, system_role="You are a JSON generator assistant."):
     time.sleep(2)
@@ -182,9 +275,8 @@ def call_groq_safe(prompt, system_role="You are a JSON generator assistant."):
                 max_tokens=8000,
                 timeout=120,
             )
-            finish_reason = response.choices[0].finish_reason
-            if finish_reason == "length":
-                print(f"⚠️ Model [{model_name}] response was CUT OFF (hit max_tokens). Trying next model...")
+            if response.choices[0].finish_reason == "length":
+                print(f"⚠️ Model [{model_name}] response CUT OFF (hit max_tokens). Trying next model...")
                 continue
             print(f"⚡ Groq LLM Success using [{model_name}]!")
             return response.choices[0].message.content
@@ -202,27 +294,54 @@ def generate_job_summary(raw_text):
 
     prompt = f"""
     You are an expert Government Recruitment Data Editor for FreeJobAlert & SarkariResult.
-    Below is raw text scraped from government job portals. Extract ONLY Govt Job Notifications, Govt Competitive Exam Admit Cards, and Govt Exam Results.
+    Below is raw text scraped from multiple government job portals, INCLUDING each post's
+    full inner detail page (fee tables, age limit tables, qualification, and important dates
+    live on these inner pages, not just the listing/RSS summary):
 
     RAW TEXT:
     {truncated_raw}
 
     STRICT REJECTION RULES (CRITICAL):
-    1. STRICTLY REJECT ALL UNIVERSITY / COLLEGE EXAMS & ADMISSIONS:
-       - REJECT any BA, BSc, BCom, MA, MSc, Semester Exams, University Merit Lists, University Results, College Admissions, Counselling Schedules.
-       - ONLY include Competitive Exam Results (e.g. BPSC Result, SSC CGL Result, Railway NTPC Result, IBPS PO Result).
-    2. STRICTLY REJECT SCHOLARSHIPS & YOJNAS:
-       - REJECT Scholarship, Post Matric, NSP, Yojna, Scheme, Pension, Allowance.
-    3. STRICTLY REJECT OTHER STATES:
-       - INCLUDE ONLY: Bihar Govt Jobs/Exams AND Central Govt Jobs/Exams (SSC, Railways, IBPS/SBI, UPSC, Defence).
-       - REJECT: UP, MP, Rajasthan, Haryana, Delhi Govt, Maharashtra, Tamil Nadu, AP, Telangana, Karnataka, Kerala, Gujarat, WB, Odisha, etc.
+    1. STRICTLY REJECT SCHOLARSHIPS & YOJNAS:
+       - REJECT any item containing "Scholarship", "Post Matric", "NSP", "Yojna", "Scheme", "Pension", "Allowance".
+    2. STRICTLY REJECT ADMISSIONS & COUNSELLING:
+       - REJECT College Admissions, Seat Allotments, Counselling Schedules, Entrance Tests (TANCET, CET, NEET, GATE).
+    3. STRICTLY REJECT OTHER STATES - THIS IS THE MOST IMPORTANT RULE:
+       - INCLUDE ONLY: (a) Bihar State Govt jobs (BPSC, BSSC, BPSSC, CSBC, Bihar Teacher/TRE,
+         Patna High Court, Bihar Civil Court, Beltron, Bihar Health Dept, Bihar Police) AND
+         (b) Central/All-India Govt jobs (SSC, Indian Railways/RRB, Banking IBPS/SBI/RBI,
+         UPSC, Defence - Army/Navy/Air Force/CAPF, NTA).
+       - REJECT ANY job tied to a specific OTHER state's own government/PSC/board, including
+         but not limited to: UP, MP, Rajasthan, Haryana, Delhi, Maharashtra, Tamil Nadu,
+         Andhra Pradesh, Telangana, Karnataka, Kerala, Gujarat, West Bengal, Odisha, Punjab,
+         Jharkhand, Chhattisgarh, Uttarakhand, Himachal Pradesh, Assam, and all others.
+       - If you are not sure whether a job is Bihar/Central or another state, LEAVE IT OUT.
     4. REJECT APPRENTICE & MBBS DOCTOR POSTS:
        - REJECT Trade Apprentice, Graduate Apprentice, MBBS, Medical Officer, Dental Officer posts.
 
-    DATA EXTRACTION RULES:
+    DATE RULE (CRITICAL - THIS DETERMINES IF A JOB IS INCLUDED AT ALL):
+    - Every item in "latest_jobs" MUST have a real, exact calendar start_date AND a real,
+      exact calendar last_date, written EXACTLY as found in the raw text (e.g. "28 Aug 2026",
+      "30-09-2026"). 
+    - Do NOT write "Online Active", "TBA", "As per notification", "Ongoing", or any
+      non-calendar-date phrase in start_date or last_date.
+    - If either the exact start_date or the exact last_date is not explicitly present
+      anywhere in the raw text for an item, DO NOT include that item in "latest_jobs" at all.
+      Do not guess a date. Leaving the job out entirely is the correct behavior.
+
+    DATA EXTRACTION RULES (NO HALLUCINATION / NO 'VARIOUS'):
+    - Read the Application Fee tables in the "Full Content" / "Page Text" sections and extract
+      the exact category-wise fee breakdown (e.g. "General / OBC: ₹500 | SC / ST: ₹250").
+    - Extract the exact Educational Qualification requirement as written on the page.
+    - ONLY use facts that are literally present in the raw text above. Do not use typical/
+      default values from your own general knowledge.
+    - If fee or qualification is genuinely not present anywhere in the raw text for that item,
+      write "Refer Official Notification" instead of "Various" - do NOT invent a number.
     - Populate all 3 arrays: 'latest_jobs', 'admit_cards', and 'results'.
-    - Read the Application Fee tables and extract Category-wise fee breakdown (e.g. "General / OBC: ₹500 | SC / ST: ₹250").
-    - If fee or qualification is not in the text, write "Refer Official Notification" instead of "Various".
+      - For "admit_cards", only include an item if an exam_date or CBT schedule is explicitly
+        stated in the raw text. Otherwise omit it.
+      - For "results", only include an item if a result_status (merit list / answer key /
+        result declared) is explicitly stated in the raw text. Otherwise omit it.
     - Do NOT use markdown asterisks (**).
     - Set "apply_url" to "https://www.mocktester.online" for ALL items.
 
@@ -239,7 +358,7 @@ def generate_job_summary(raw_text):
           "qualification": "Exact Educational Qualification Criteria",
           "age_limit": "Min & Max Age Criteria with Relaxation",
           "application_fee": "Category-Wise Application Fee Breakdown",
-          "start_date": "Exact Start Date e.g. 28 Aug 2026 or Online Active",
+          "start_date": "Exact Start Date e.g. 28 Aug 2026",
           "last_date": "Exact Last Date e.g. 30 Sep 2026",
           "apply_url": "https://www.mocktester.online",
           "exam_tag": "🔥 Govt Job Alert",
@@ -249,7 +368,7 @@ def generate_job_summary(raw_text):
       "admit_cards": [
         {{
           "id": "admit_01",
-          "title": "Official Competitive Exam Admit Card Title 2026",
+          "title": "Official Admit Card Title 2026",
           "organization": "Recruitment Body Name (e.g. SSC / RRB / BPSC)",
           "job_type": "Bihar Govt Job OR Central Govt Job",
           "post_name": "Post Name",
@@ -264,7 +383,7 @@ def generate_job_summary(raw_text):
       "results": [
         {{
           "id": "result_01",
-          "title": "Official Competitive Exam Result Title 2026",
+          "title": "Official Result Title 2026",
           "organization": "Recruitment Body Name (e.g. SSC / RRB / BPSC)",
           "job_type": "Bihar Govt Job OR Central Govt Job",
           "post_name": "Post Name",
@@ -280,41 +399,28 @@ def generate_job_summary(raw_text):
     return call_groq_safe(prompt, system_role="Government Recruitment Data Editor")
 
 # -------------------------------------------------------------
-# 4. STEP 4: PYTHON HARD FILTER & DEDUPLICATION
+# 6. PYTHON HARD FILTER (state, dedup, live-only, mandatory dates)
 # -------------------------------------------------------------
 REJECT_KEYWORDS = [
-    # University, College & Academic Results (STRICTLY BLOCKED)
-    "university", "college", "semester", "ba Part", "bsc ", "bcom", "ma ", "msc ", 
-    "degree college", "annual exam", "admissions", "counselling", "allotment", "entrance test",
-
-    # Non-Job Items (Scholarships, Yojnas)
     "scholarship", "post matric", "nsp scholarship", "yojna", "scheme", "pension",
+    "counselling", "allotment", "admission", "entrance test", "seat allotment",
 
-    # Other States
     "uttar pradesh", " up police", " up board", "uppsc", " up govt",
     "madhya pradesh", "mppsc", "rajasthan", "rpsc", "haryana", "hpsc",
     "dsssb", "maharashtra", "mpsc", "madc", "jharkhand", "jpsc",
     "west bengal", "wbpsc", "punjab", "ppsc", "gujarat", "gpsc",
     "tamil nadu", "tnpsc", "tancet", "andhra pradesh", "appsc", "narasapuram",
     "telangana", "tspsc", "kerala", "kpsc", "karnataka", "odisha", "opsc",
+    "chhattisgarh", "cgpsc", "uttarakhand", "ukpsc", "himachal", "hppsc",
+    "goa psc", "assam", "apsc", "manipur", "meghalaya", "nagaland",
+    "tripura", "sikkim", "mizoram", "delhi govt", "delhi police",
 
-    # Apprentice & Doctors
     "apprentice", "apprenticeship", "mbbs", "medical officer", "specialist medical officer"
 ]
 
-def is_invalid_item(title, org, post_name="", qualification=""):
+def is_invalid_item(title, org, post_name, qualification=""):
     combined = f"{title} {org} {post_name} {qualification}".lower()
-    return any(bad_word.lower() in combined for bad_word in REJECT_KEYWORDS)
-
-def is_vacancy_less_than_50(vacancies_str):
-    if not vacancies_str or "various" in vacancies_str.lower():
-        return False
-    nums = re.findall(r'\b\d+\b', vacancies_str)
-    if nums:
-        count = int(nums[0])
-        if count < 50:
-            return True
-    return False
+    return any(bad_word in combined for bad_word in REJECT_KEYWORDS)
 
 def simplify_title(title):
     clean = re.sub(r'[^a-zA-Z0-9]', '', title.lower())
@@ -322,15 +428,17 @@ def simplify_title(title):
 
 def filter_valid_jobs(parsed_jobs):
     seen_titles = set()
+    today = date.today()
 
-    # 1. Filter Jobs
+    # ---- 1. latest_jobs: state check + mandatory real dates + must be LIVE ----
     clean_latest_jobs = []
     for job in parsed_jobs.get("latest_jobs", []):
         title = job.get("title", "")
         org = job.get("organization", "")
         post_name = job.get("post_name", "")
         qual = job.get("qualification", "")
-        vacancies = job.get("total_vacancies", "")
+        start_date_str = job.get("start_date", "")
+        last_date_str = job.get("last_date", "")
 
         if not title or len(title) < 5:
             continue
@@ -341,21 +449,36 @@ def filter_valid_jobs(parsed_jobs):
             continue
 
         if is_invalid_item(title, org, post_name, qual):
-            print(f"❌ Dropped (University/Scholarship/Other State): {title}")
+            print(f"❌ Dropped (Scholarship/Other State/Apprentice): {title}")
             continue
 
-        if is_vacancy_less_than_50(vacancies):
-            print(f"❌ Dropped (Vacancies < 50): {title} ({vacancies})")
+        if not start_date_str or not last_date_str:
+            print(f"❌ Dropped (Missing start_date or last_date): {title}")
+            continue
+
+        start_parsed = parse_date_flexible(start_date_str)
+        if start_parsed is None:
+            print(f"❌ Dropped (start_date not a real date: '{start_date_str}'): {title}")
+            continue
+
+        is_live, last_parsed = is_job_still_live(last_date_str, today)
+        if last_parsed is None:
+            print(f"❌ Dropped (last_date not a real date: '{last_date_str}'): {title}")
+            continue
+        if not is_live:
+            print(f"❌ Dropped (EXPIRED - last date {last_parsed} already passed): {title}")
             continue
 
         seen_titles.add(simple_t)
         clean_latest_jobs.append(job)
 
-    # 2. Filter Admit Cards (Check title and org ONLY so it doesn't drop empty qualification items)
+    # ---- 2. admit_cards: state check + must have exam_date ----
     clean_admit_cards = []
     for card in parsed_jobs.get("admit_cards", []):
         title = card.get("title", "")
         org = card.get("organization", "")
+        post_name = card.get("post_name", "")
+        exam_date = card.get("exam_date", "")
 
         if not title or len(title) < 5:
             continue
@@ -364,18 +487,24 @@ def filter_valid_jobs(parsed_jobs):
         if simple_t in seen_titles:
             continue
 
-        if is_invalid_item(title, org):
-            print(f"❌ Dropped Admit Card (University/Other State): {title}")
+        if is_invalid_item(title, org, post_name):
+            print(f"❌ Dropped Admit Card (Other State/Invalid): {title}")
+            continue
+
+        if not exam_date or not exam_date.strip():
+            print(f"❌ Dropped Admit Card (Missing exam_date): {title}")
             continue
 
         seen_titles.add(simple_t)
         clean_admit_cards.append(card)
 
-    # 3. Filter Results (Check title and org ONLY so it doesn't drop valid competitive results)
+    # ---- 3. results: state check + must have result_status ----
     clean_results = []
     for res_item in parsed_jobs.get("results", []):
         title = res_item.get("title", "")
         org = res_item.get("organization", "")
+        post_name = res_item.get("post_name", "")
+        result_status = res_item.get("result_status", "")
 
         if not title or len(title) < 5:
             continue
@@ -384,8 +513,12 @@ def filter_valid_jobs(parsed_jobs):
         if simple_t in seen_titles:
             continue
 
-        if is_invalid_item(title, org):
-            print(f"❌ Dropped Result (University/Other State): {title}")
+        if is_invalid_item(title, org, post_name):
+            print(f"❌ Dropped Result (Other State/Invalid): {title}")
+            continue
+
+        if not result_status or not result_status.strip():
+            print(f"❌ Dropped Result (Missing result_status): {title}")
             continue
 
         seen_titles.add(simple_t)
@@ -397,7 +530,7 @@ def filter_valid_jobs(parsed_jobs):
     return parsed_jobs
 
 # -------------------------------------------------------------
-# 5. STEP 5: MAIN EXECUTION PIPELINE
+# 7. MAIN EXECUTION PIPELINE
 # -------------------------------------------------------------
 if __name__ == "__main__":
     if not GROQ_KEY:
@@ -431,7 +564,7 @@ if __name__ == "__main__":
                     with open("bihar_jobs.json", "w", encoding="utf-8") as f:
                         json.dump(parsed_jobs, f, ensure_ascii=False, indent=2)
                     print(f"✅ bihar_jobs.json successfully updated!\n"
-                          f"👉 Jobs Count: {len(parsed_jobs.get('latest_jobs', []))}\n"
+                          f"👉 Live Jobs Count: {len(parsed_jobs.get('latest_jobs', []))}\n"
                           f"👉 Admit Cards Count: {len(parsed_jobs.get('admit_cards', []))}\n"
                           f"👉 Results Count: {len(parsed_jobs.get('results', []))}")
                 else:
