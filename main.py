@@ -41,7 +41,7 @@ def clean_html_text(text):
     return BeautifulSoup(text, "html.parser").get_text().strip()
 
 # -------------------------------------------------------------
-# 2. SCRAPING FUNCTIONS
+# 2. SCRAPING FUNCTIONS (NEWS + JOBS)
 # -------------------------------------------------------------
 def fetch_raw_bihar_news(target_dt):
     """Multiple Official & Media sources se Bihar Current Affairs raw text scrape karta hai"""
@@ -197,11 +197,56 @@ def fetch_raw_national_news(target_dt):
 
     return "\n".join(national_titles)
 
+
+def fetch_raw_jobs():
+    """Scrapes Raw Jobs data for Bihar & Central Government Exams"""
+    job_notices = []
+    headers = {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
+    }
+
+    # Source A: Google News Jobs RSS
+    queries = [
+        "Bihar+Recruitment+OR+BPSC+Notification+OR+BSSC+Vacancy+OR+Patna+High+Court",
+        "SSC+CGL+OR+SSC+CHSL+OR+Railway+RRB+NTPC+OR+IBPS+PO+OR+SBI+Clerk+Vacancy"
+    ]
+    for q in queries:
+        try:
+            g_url = f"https://news.google.com/rss/search?q={q}&hl=en&gl=IN&ceid=IN:en"
+            res = requests.get(g_url, impersonate="chrome", timeout=12, verify=False)
+            if res.status_code == 200:
+                root = ET.fromstring(res.text)
+                for item in root.findall('.//item')[:12]:
+                    title = item.find('title').text if item.find('title') is not None else ""
+                    desc = clean_html_text(item.find('description').text if item.find('description') is not None else "")
+                    if title:
+                        job_notices.append(f"[Google Job Alert] Title: {title} | Summary: {desc[:250]}")
+        except Exception as e:
+            print(f"⚠️ Error Job Query ({q}): {e}")
+    print("✅ Google Job Alerts fetched successfully!")
+
+    # Source B: FreeJobAlert RSS Feed
+    try:
+        fja_url = "https://www.freejobalert.com/feed/"
+        res = requests.get(fja_url, headers=headers, timeout=15, verify=False)
+        if res.status_code == 200:
+            soup = BeautifulSoup(res.content, "xml")
+            for item in soup.find_all('item')[:20]:
+                title = item.find('title').text if item.find('title') is not None else ""
+                desc = clean_html_text(item.find('description').text if item.find('description') is not None else "")
+                if title:
+                    job_notices.append(f"[FreeJobAlert] Title: {title} | Summary: {desc[:250]}")
+            print("✅ Direct FreeJobAlert Feed fetched successfully!")
+    except Exception as e:
+        print(f"⚠️ Error FreeJobAlert Feed: {e}")
+
+    return "\n".join(job_notices)
+
 # -------------------------------------------------------------
-# 3. AI SUMMARY GENERATOR (STRICT SYLLABUS FILTERS)
+# 3. AI SUMMARY GENERATORS (NEWS & JOBS)
 # -------------------------------------------------------------
 def generate_clean_summary(raw_text, target_date_str, is_national=False):
-    """Groq AI se Fact-Based Detailed Hinglish JSON summary banwata hai"""
+    """Groq AI se Fact-Based Detailed Hinglish JSON news summary banwata hai"""
     
     if is_national:
         scope_name = "India National & International Level ONLY"
@@ -218,26 +263,15 @@ def generate_clean_summary(raw_text, target_date_str, is_national=False):
         """
         rejection_rules = """
         STRICT REJECTION RULES (CRITICAL):
-        1. REJECT ALL RECRUITMENT & EXAM NEWS: Strictly REJECT any news related to Jobs, Vacancies, Recruitment, Exam Notices, Admit Cards, University/School Notices, and Results.
-        2. REJECT ALL STATE-SPECIFIC LOCAL NEWS: Strictly REJECT any news that belongs to a specific State Government (e.g., REJECT State Budgets like Tamil Nadu Budget, UP Govt Schemes, State local politics/announcements).
+        1. REJECT ALL RECRUITMENT & EXAM NEWS: Strictly REJECT Jobs, Vacancies, Recruitment, Exam Notices, Admit Cards, University/School Notices, and Results.
+        2. REJECT ALL STATE-SPECIFIC LOCAL NEWS: Strictly REJECT news specific to individual states (e.g. Tamil Nadu Budget, UP Govt Schemes, State local politics).
         3. REJECT ALL Politics, Crime, & Accidents: REJECT political rallies, speeches, party disputes, political statements, crime, and local accidents.
-        4. ACCEPT ONLY PURE NATIONAL / CENTRAL / INTERNATIONAL EVENTS:
-           - Central Acts, Bills, Union Policies, Central Flagship Schemes (Target, Eligibility, Outlay).
-           - ISRO/NASA Space Missions (Launch Vehicle name e.g. LVM3/PSLV), Defense Missiles & Joint Military Exercises (Countries + Venue).
-           - RBI Monetary Policy, Union Budget, Economic Survey, NITI Aayog Reports, Global Indices (Issuing Body + India's Rank).
-           - International Summits (G20, BRICS, SCO, COP) - Theme, Venue & Declarations.
-           - Ramsar Sites, Tiger Reserves, National Parks.
-           - Constitutional Appointments (CJI, CEC, CAG, UPSC Chief) & Major Awards (Nobel, Bharat Ratna, Padma).
-           - Major Sports Events (Olympics, Asian Games, World Cups).
+        4. ACCEPT ONLY PURE NATIONAL / CENTRAL / INTERNATIONAL EVENTS.
         """
         bullet_rules = """
         EXAMINER FOCUS BULLET RULES (NATIONAL):
         - Bullet 1 (Core Decision/Event): Core decision, Nodal Central Ministry/Org, Location/Venue, or Theme in Hinglish.
-        - Bullet 2 (Exact High-Yield Exam Facts):
-          * For Military Exercises: Mention Participating Countries + Exact Location.
-          * For ISRO/Defense: Mention Satellite/Missile Type + Launch Vehicle name.
-          * For Indices/Reports: Mention Issuing Body + India's Rank/Score.
-          * For Schemes: Mention Budget Outlay + Eligibility/Nodal Ministry.
+        - Bullet 2 (Exact High-Yield Exam Facts): Countries, Missile/Launch Vehicle name, India's Rank, Budget Outlay.
         - Bullet 3 (Context & Strategic Objective): Core objective, strategic importance, or policy framework in Hinglish.
         """
     else:
@@ -254,25 +288,14 @@ def generate_clean_summary(raw_text, target_date_str, is_national=False):
         rejection_rules = """
         STRICT REJECTION & DISCARD RULES (CRITICAL):
         1. REJECT ALL RECRUITMENT & EXAM NEWS: Strictly REJECT any Education, Schools, University, Recruitment, Vacancies, Exam Notices, Admit Cards, and Results.
-        2. REJECT ALL routine administrative instructions, CM directives ("nirdesh diye"), smooth traffic arrangements, RERA routine meetings, political speeches, crime, and accidents.
-        3. STRICT INFRASTRUCTURE FILTER:
-           - For "Infrastructure & Projects", REJECT small/routine road repairs or local city traffic directives.
-           - ACCEPT ONLY MAJOR MEGA-INFRASTRUCTURE PROJECTS that make national/state headlines (e.g., Metro lines, Mega Expressways, Major Ganga Bridges, Airports, Power Plants, or Mega Investment projects).
-        4. REJECT ALL news that lacks hard facts. EVERY card MUST contain AT LEAST ONE hard fact:
-           - Exact Budget/Investment Outlay in Crores (e.g. 500 Cr, 6000 Cr)
-           - Specific Scheme/Act Name (e.g. Bihar Investment Promotion Policy)
-           - MoU Partner Name
-           - Exact Location, Highway Length, or Capacity Numbers.
-        5. NEVER WRITE DISCLAIMERS: It is STRICTLY FORBIDDEN to write statements like "Koi vishisht budget/yojana nahi di gayi", "Yeh vikas ke liye avashyak hai", or "Isse logon ko labh hoga".
-        6. IF NO FACTUAL NEWS IS FOUND: Return an empty list: {"news_cards": []}. It is 100x better to return 0 or 1 card than to generate useless generic news.
+        2. REJECT ALL routine administrative instructions, CM directives, political speeches, crime, and accidents.
+        3. STRICT INFRASTRUCTURE FILTER: ACCEPT ONLY MAJOR MEGA-INFRASTRUCTURE PROJECTS.
+        4. EVERY card MUST contain AT LEAST ONE hard fact (Outlay, Specific Act Name, MoU partner).
         """
         bullet_rules = """
         BULLET POINT RULES (IF A CARD QUALIFIES):
-        1. WRITE EXACTLY 3 DEEP FACTUAL BULLET POINTS IN HINGLISH (Hindi written in Roman English script).
-           - Bullet 1 (Core Decision): Detailed explanation of what specific project/scheme was launched, which Ministry/Dept is involved, and exact location in Hinglish.
-           - Bullet 2 (Exact Figures): Specific budget amount, MoU partner name, capacity, target year, or numerical facts in Hinglish.
-           - Bullet 3 (Policy Framework): Deep explanation of which government policy or framework it falls under (e.g., Saat Nischay-2, Krishi Road Map 4, Economic Survey) in Hinglish.
-        2. DO NOT write filler lines like "Yeh BPSC ke liye important hai" or "Isse vikas hoga". Provide REAL factual context instead.
+        1. WRITE EXACTLY 3 DEEP FACTUAL BULLET POINTS IN HINGLISH.
+        2. DO NOT write filler lines like "Yeh BPSC ke liye important hai". Provide REAL factual context.
         """
 
     prompt = f"""
@@ -287,7 +310,7 @@ def generate_clean_summary(raw_text, target_date_str, is_national=False):
 
     DEDUPLICATION & QUANTITY RULE:
     - MERGE duplicate reports of the same event into ONE single card. No duplicate cards allowed.
-    - GENERATE ALL VALID CARDS: Extract ALL unique qualifying news items from the input text (target generating at least 8-15 high-yield cards if raw data exists).
+    - GENERATE ALL VALID CARDS: Extract ALL unique qualifying news items from the input text (target 8-15 cards).
 
     LANGUAGE & BULLETS:
     - WRITE ALL TITLES AND BULLETS IN **HINGLISH** (Hindi written in Roman English Script).
@@ -325,6 +348,92 @@ def generate_clean_summary(raw_text, target_date_str, is_national=False):
         print(f"⚠️ Groq API Failed for {scope_name}: {e}")
         return ""
 
+
+def generate_job_summary(raw_text):
+    """Groq AI se Pure English Structured JSON Job Portal data banwata hai"""
+    today_str = datetime.now().strftime("%d %b %Y")
+
+    prompt = f"""
+    You are an expert Government Recruitment Portal Data Editor.
+    Below is raw text scraped regarding Government Job Notifications:
+
+    {raw_text}
+
+    STRICT GEOGRAPHICAL & JURISDICTION RULES:
+    1. WRITE EVERYTHING IN 100% PURE ENGLISH ONLY. DO NOT USE HINGLISH OR HINDI.
+    2. ALLOWED RECRUITMENT BODIES ONLY:
+       - ALL BIHAR STATE GOVT JOBS: BPSC, BSSC, BPSSC, CSBC, Bihar Teacher (TRE), Patna High Court, Civil Court, Beltron, Health Dept Bihar, etc.
+       - ALL ALL-INDIA CENTRAL GOVT JOBS: Staff Selection Commission (SSC CGL/CHSL/MTS/GD), Indian Railways (RRB NTPC/Group D/ALP), Banking (IBPS, SBI, RBI), UPSC, Defence (Army, Navy, Air Force, CAPF).
+    3. STRICT REJECTION (ABSOLUTE BAN):
+       - STRICTLY REJECT ANY OTHER STATE GOVERNMENT JOBS (e.g., REJECT UP Police, Rajasthan REET, MPPSC, Haryana CET, Maharashtra Govt, etc.).
+       - REJECT private jobs, fake rumors, or unverified claims.
+
+    CATEGORIZATION RULES (Group into 3 explicit arrays):
+    - "latest_jobs": For new official job notifications, vacancies, and open online applications.
+    - "admit_cards": For exam date announcements, hall ticket releases, and CBT city intimations.
+    - "results": For written exam results, final merit lists, answer keys, and cut-off marks.
+
+    JSON SCHEMA OUTPUT (Return EXACTLY this structure):
+    {{
+      "latest_jobs": [
+        {{
+          "id": "job_01",
+          "title": "Clean Official Exam Title",
+          "organization": "Recruitment Body Name (e.g. BPSC / SSC / RRB)",
+          "job_type": "Bihar Govt Job OR Central Govt Job",
+          "post_name": "Specific Posts Name",
+          "total_vacancies": "Total Number of Posts (e.g., 1,957 Posts)",
+          "qualification": "Required Educational Qualification in English",
+          "age_limit": "Age Criteria in English",
+          "application_fee": "Fee details for General/SC/ST",
+          "start_date": "Online Application Start Date",
+          "last_date": "Last Date to Apply",
+          "exam_tag": "🔥 Govt Job Alert",
+          "date": "{today_str}"
+        }}
+      ],
+      "admit_cards": [
+        {{
+          "id": "admit_01",
+          "title": "Clean Official Admit Card Title",
+          "organization": "Recruitment Body Name",
+          "job_type": "Bihar Govt Job OR Central Govt Job",
+          "post_name": "Post Name",
+          "total_vacancies": "Total Posts",
+          "exam_date": "Exact Exam Date / City Intimation Date",
+          "status": "Admit Card Status / Release Link Status",
+          "exam_tag": "🎫 Hall Ticket",
+          "date": "{today_str}"
+        }}
+      ],
+      "results": [
+        {{
+          "id": "result_01",
+          "title": "Clean Official Result Title",
+          "organization": "Recruitment Body Name",
+          "job_type": "Bihar Govt Job OR Central Govt Job",
+          "post_name": "Post Name",
+          "total_vacancies": "Total Posts",
+          "result_status": "Merit List PDF / Answer Key Status",
+          "exam_tag": "🏆 Result",
+          "date": "{today_str}"
+        }}
+      ]
+    }}
+    """
+
+    try:
+        response = client.chat.completions.create(
+            model="llama-3.3-70b-versatile",
+            messages=[{"role": "user", "content": prompt}],
+            temperature=0.01,
+            response_format={"type": "json_object"}
+        )
+        return response.choices[0].message.content
+    except Exception as e:
+        print(f"⚠️ Groq API Job Summary Error: {e}")
+        return '{"latest_jobs": [], "admit_cards": [], "results": []}'
+
 # -------------------------------------------------------------
 # 4. MASTER HISTORY APPEND FUNCTIONS
 # -------------------------------------------------------------
@@ -354,7 +463,7 @@ if __name__ == "__main__":
         exit(1)
         
     target_dt, date_str, key_str = get_yesterday_info()
-    print(f"🔄 Starting Scraping for Yesterday ({date_str})...\n")
+    print(f"🔄 Starting Complete Current Affairs & Jobs Pipeline ({date_str})...\n")
 
     # === A. PROCESS BIHAR NEWS ===
     print("📍 --- PROCESS BIHAR NEWS ---")
@@ -365,19 +474,15 @@ if __name__ == "__main__":
             try:
                 parsed_bihar = json.loads(ai_bihar.strip())
                 cards = parsed_bihar.get("news_cards", [])
-                
-                # SAFEGUARD: Update file ONLY IF news_cards is NOT empty!
                 if cards and len(cards) > 0:
                     with open("bihar_news.json", "w", encoding="utf-8") as f:
                         json.dump(parsed_bihar, f, ensure_ascii=False, indent=2)
                     print(f"✅ bihar_news.json successfully updated with {len(cards)} new cards!")
                     append_to_master_history(cards, key_str, is_national=False)
                 else:
-                    print("🛡️ SAFEGUARD ACTIVATED: AI returned 0 cards. Retaining existing bihar_news.json data!")
+                    print("🛡️ SAFEGUARD ACTIVATED: 0 Bihar news cards. Retaining existing file!")
             except Exception as e:
-                print(f"❌ Bihar JSON Parsing Error: {e}. Retaining existing file!")
-    else:
-        print("🛡️ SAFEGUARD ACTIVATED: No raw text scraped. Retaining existing bihar_news.json data!")
+                print(f"❌ Bihar JSON Parsing Error: {e}")
 
     print("\n------------------------------------\n")
 
@@ -390,16 +495,38 @@ if __name__ == "__main__":
             try:
                 parsed_national = json.loads(ai_national.strip())
                 cards_nat = parsed_national.get("news_cards", [])
-                
-                # SAFEGUARD: Update file ONLY IF news_cards is NOT empty!
                 if cards_nat and len(cards_nat) > 0:
                     with open("national_news.json", "w", encoding="utf-8") as f:
                         json.dump(parsed_national, f, ensure_ascii=False, indent=2)
                     print(f"✅ national_news.json successfully updated with {len(cards_nat)} new cards!")
                     append_to_master_history(cards_nat, key_str, is_national=True)
                 else:
-                    print("🛡️ SAFEGUARD ACTIVATED: AI returned 0 national cards. Retaining existing national_news.json data!")
+                    print("🛡️ SAFEGUARD ACTIVATED: 0 National news cards. Retaining existing file!")
             except Exception as e:
-                print(f"❌ National JSON Parsing Error: {e}. Retaining existing file!")
-    else:
-        print("🛡️ SAFEGUARD ACTIVATED: No national raw text scraped. Retaining existing national_news.json data!")
+                print(f"❌ National JSON Parsing Error: {e}")
+
+    print("\n------------------------------------\n")
+
+    # === C. PROCESS BIHAR & CENTRAL JOBS ===
+    print("💼 --- PROCESS BIHAR & CENTRAL JOBS ---")
+    raw_jobs = fetch_raw_jobs()
+    if raw_jobs:
+        ai_jobs = generate_job_summary(raw_jobs)
+        if ai_jobs:
+            try:
+                parsed_jobs = json.loads(ai_jobs.strip())
+                has_data = (
+                    len(parsed_jobs.get("latest_jobs", [])) > 0 or
+                    len(parsed_jobs.get("admit_cards", [])) > 0 or
+                    len(parsed_jobs.get("results", [])) > 0
+                )
+                if has_data:
+                    with open("bihar_jobs.json", "w", encoding="utf-8") as f:
+                        json.dump(parsed_jobs, f, ensure_ascii=False, indent=2)
+                    print("✅ bihar_jobs.json successfully updated in Pure English (FreeJobAlert Format)!")
+                else:
+                    print("🛡️ SAFEGUARD ACTIVATED: 0 job notifications found. Retaining existing file!")
+            except Exception as e:
+                print(f"❌ Jobs JSON Parsing Error: {e}")
+
+    print("\n🎉 Pipeline Execution Finished Successfully!")
