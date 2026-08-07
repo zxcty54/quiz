@@ -34,6 +34,12 @@ jobs:
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
         run: python job_scraper.py
 
+      # 🧪 Added SarkariResult Test Step
+      - name: Run SarkariResult Test
+        env:
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+        run: python test_sarkari.py
+
       - name: Auto-Commit and Push Updated Jobs JSON
         run: |
           git config --local user.email "action@github.com"
