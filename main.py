@@ -201,21 +201,21 @@ def fetch_raw_national_news(target_dt):
     return "\n".join(national_titles)
 
 # -------------------------------------------------------------
-# 3. HIGH-YIELD MULTI-PORTAL JOB, ADMIT CARD & RESULT SCRAPER
+# 3. HIGH-YIELD LIVE & UPCOMING JOBS SCRAPER
 # -------------------------------------------------------------
 def fetch_raw_jobs():
-    """High-yield Scraper fetching Jobs, Admit Cards & Results directly from major feeds"""
+    """Scrapes both Newly Announced AND Currently Live/Active Jobs, Admit Cards & Results"""
     job_notices = []
     headers = {
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
     }
 
-    # 1. Google News Queries (Bihar + Central ONLY)
+    # 1. Google News Queries (Targeting Both Live Active Applications & Upcoming Jobs)
     job_queries = [
-        "Bihar+BPSC+OR+BSSC+OR+CSBC+OR+BPSSC+OR+Patna+High+Court+Recruitment+Start+Date+Last+Date+Fees",
-        "SSC+CGL+OR+CHSL+OR+MTS+OR+GD+Constable+Notification+Start+Date+Fees",
-        "Railway+RRB+NTPC+OR+Group+D+OR+ALP+OR+Technician+Vacancy+Eligibility",
-        "Banking+IBPS+PO+Clerk+OR+SBI+PO+Clerk+OR+UPSC+Notification",
+        "Bihar+BPSC+OR+BSSC+OR+CSBC+OR+BPSSC+OR+Patna+High+Court+Apply+Online+Last+Date",
+        "SSC+CGL+OR+CHSL+OR+MTS+OR+GD+Constable+Apply+Online+Last+Date+Fees",
+        "Railway+RRB+NTPC+OR+Group+D+OR+ALP+OR+Technician+Apply+Online+Eligibility",
+        "Banking+IBPS+PO+Clerk+OR+SBI+PO+Clerk+OR+UPSC+Apply+Online+Notification",
         "Bihar+OR+SSC+OR+RRB+OR+IBPS+Admit+Card+Release+Exam+Date",
         "Bihar+OR+SSC+OR+RRB+OR+IBPS+Result+Merit+List+Answer+Key"
     ]
@@ -225,7 +225,7 @@ def fetch_raw_jobs():
             res = requests.get(g_url, impersonate="chrome", timeout=10, verify=False)
             if res.status_code == 200:
                 root = ET.fromstring(res.text)
-                for item in root.findall('.//item')[:12]:
+                for item in root.findall('.//item')[:15]:
                     title = item.find('title').text if item.find('title') is not None else ""
                     desc = clean_html_text(item.find('description').text if item.find('description') is not None else "")
                     if title:
@@ -240,7 +240,7 @@ def fetch_raw_jobs():
         res = requests.get(fja_url, headers=headers, timeout=12, verify=False)
         if res.status_code == 200:
             soup = BeautifulSoup(res.content, "xml")
-            for item in soup.find_all('item')[:40]:
+            for item in soup.find_all('item')[:45]:
                 title = item.find('title').text if item.find('title') is not None else ""
                 desc = clean_html_text(item.find('description').text if item.find('description') is not None else "")
                 content_node = item.find('{http://purl.org/rss/1.0/modules/content/}encoded')
@@ -258,10 +258,9 @@ def fetch_raw_jobs():
         res = requests.get(sr_url, headers=headers, timeout=12, verify=False)
         if res.status_code == 200:
             soup = BeautifulSoup(res.content, "html.parser")
-            # Result Column, Admit Card Column, Latest Jobs Column
             boxes = soup.find_all('div', id=re.compile(r'box|post'))
             for box in boxes:
-                for link in box.find_all('a')[:15]:
+                for link in box.find_all('a')[:20]:
                     title = link.text.strip()
                     if title and len(title) > 8:
                         job_notices.append(f"[SarkariResult Entry] Title: {title}")
@@ -397,7 +396,7 @@ def generate_clean_summary(raw_text, target_date_str, is_national=False):
 def generate_job_summary(raw_text):
     """Groq AI se Pure English Structured JSON Job Portal data banwata hai"""
     today_str = datetime.now().strftime("%d %b %Y")
-    truncated_raw = raw_text[:6500]
+    truncated_raw = raw_text[:7000]
 
     prompt = f"""
     You are an expert Government Recruitment Portal Data Editor for FreeJobAlert & Sarkari Result.
@@ -405,13 +404,17 @@ def generate_job_summary(raw_text):
 
     {truncated_raw}
 
-    MANDATORY RULES FOR "latest_jobs":
-    - "start_date": Must be an exact date (e.g., "28 Aug 2026").
-    - "last_date": Must be an exact date (e.g., "30 Sep 2026").
-    - "total_vacancies": Must specify post count (e.g., "1,957 Posts").
-    - "qualification": Comprehensive eligibility criteria.
-    - "application_fee": Complete category-wise fee breakdown (e.g. "General/OBC: ₹600 | SC/ST/PH: ₹150").
-    - NEVER write generic "TBA" or "To be announced". Provide actual values.
+    JOB SELECTION RULES (CRITICAL):
+    1. INCLUDE BOTH:
+       - Newly Announced Jobs (Starting soon)
+       - Currently LIVE / ACTIVE Jobs (Forms currently open, where last_date is valid or open)
+    2. MANDATORY FIELDS FOR "latest_jobs":
+       - "start_date": Exact date (e.g., "28 Aug 2026").
+       - "last_date": Exact date (e.g., "30 Sep 2026").
+       - "total_vacancies": Exact post count (e.g., "1,957 Posts").
+       - "qualification": Comprehensive eligibility criteria.
+       - "application_fee": Complete category-wise fee breakdown (e.g. "General/OBC: ₹600 | SC/ST/PH: ₹150").
+       - NEVER write generic "TBA" or "To be announced".
 
     STRICT GEOGRAPHICAL RULES (APPLIES TO latest_jobs, admit_cards, AND results):
     1. WRITE EVERYTHING IN 100% PURE ENGLISH ONLY.
