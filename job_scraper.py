@@ -2,20 +2,18 @@ import os
 import json
 import time
 import re
+import traceback
 from datetime import datetime
 from urllib.parse import urljoin
 from curl_cffi import requests
 from bs4 import BeautifulSoup
 from groq import Groq
-import fitz  # PyMuPDF
 
 # -------------------------------------------------------------
 # 1. API Client Setup (Groq API)
 # -------------------------------------------------------------
 GROQ_KEY = os.environ.get("GROQ_API_KEY")
 client = Groq(api_key=GROQ_KEY) if GROQ_KEY else None
-
-MODELS = ["llama-3.3-70b-versatile", "llama-3.1-8b-instant"]
 
 HEADERS = {
     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
@@ -50,26 +48,35 @@ def clean_html_text(text):
     return BeautifulSoup(text, "html.parser").get_text().strip()
 
 # -------------------------------------------------------------
-# STEP 1: Main Page Crawl -> Extracts Job Titles & "Get Details" Links
+# STEP 1: Main Page Crawl with Detailed Debug Logs
 # -------------------------------------------------------------
 def fetch_job_list_from_main_page(url):
     candidates = []
+    print(f"\n[DEBUG Step 1] 🌐 Connecting to Main URL: {url}")
+    
     try:
+        start_time = time.time()
         res = requests.get(url, headers=HEADERS, timeout=15, verify=False, impersonate="chrome")
+        elapsed = round(time.time() - start_time, 2)
+        
+        print(f"[DEBUG Step 1] 📡 HTTP Status: {res.status_code} | Time Taken: {elapsed}s | Content Size: {len(res.content)} bytes")
+
         if res.status_code != 200:
-            print(f"Failed to fetch main page. Status: {res.status_code}")
+            print(f"[DEBUG Step 1] ❌ FAILED to fetch main page. Status Code is not 200.")
             return candidates
 
         soup = BeautifulSoup(res.content, "html.parser")
-        
-        # FreeJobAlert ke Notification Tables target karenge
         tables = soup.find_all('table')
-        for table in tables:
+        print(f"[DEBUG Step 1] 📊 Total Tables Found on Page: {len(tables)}")
+
+        total_rows_scanned = 0
+        for t_idx, table in enumerate(tables):
             rows = table.find_all('tr')
+            total_rows_scanned += len(rows)
+
             for row in rows:
                 cols = row.find_all(['td', 'th'])
                 if len(cols) >= 2:
-                    # Find 'Get Details' or Title Links
                     a_tags = row.find_all('a', href=True)
                     detail_url = None
                     title_text = ""
@@ -82,8 +89,7 @@ def fetch_job_list_from_main_page(url):
                         elif len(a.text.strip()) > 10 and not title_text:
                             title_text = a.text.strip()
 
-                    # Fallback title from table text
-                    if not title_text:
+                    if not title_text and cols:
                         title_text = cols[0].text.strip()
 
                     if detail_url and len(title_text) > 5:
@@ -92,13 +98,17 @@ def fetch_job_list_from_main_page(url):
                             "detail_url": detail_url
                         })
 
+        print(f"[DEBUG Step 1] 🔍 Scanned {total_rows_scanned} rows across {len(tables)} tables.")
+        print(f"[DEBUG Step 1] ✅ Extracted {len(candidates)} valid 'Get Details' job items.")
+
     except Exception as e:
-        print(f"⚠️ Error fetching main job list: {e}")
+        print(f"[DEBUG Step 1] 🚨 EXCEPTION in Main Page Fetch:")
+        print(traceback.format_exc())
 
     return candidates
 
 # -------------------------------------------------------------
-# STEP 2: Inner Page Deep Scrape -> PDF, Apply Link & Content
+# STEP 2: Inner Page Scrape with Detailed Debug Logs
 # -------------------------------------------------------------
 def fetch_deep_details(detail_url):
     details = {
@@ -106,37 +116,54 @@ def fetch_deep_details(detail_url):
         "pdf_url": None,
         "apply_url": None
     }
+    print(f"  [DEBUG Step 2] 🔗 Fetching Inner Detail Page: {detail_url}")
+    
     try:
+        start_time = time.time()
         res = requests.get(detail_url, headers=HEADERS, timeout=15, verify=False, impersonate="chrome")
+        elapsed = round(time.time() - start_time, 2)
+        
+        print(f"  [DEBUG Step 2] 📡 HTTP Status: {res.status_code} | Time: {elapsed}s")
+
         if res.status_code != 200:
+            print(f"  [DEBUG Step 2] ⚠️ Skip: Received Status Code {res.status_code}")
             return details
 
         soup = BeautifulSoup(res.content, "html.parser")
 
-        # 1. Parse Links (Apply Online & Notification PDF)
-        for a_tag in soup.find_all('a', href=True):
+        # 1. Parse Links
+        all_a_tags = soup.find_all('a', href=True)
+        print(f"  [DEBUG Step 2] 🔎 Found {len(all_a_tags)} anchor tags in inner page.")
+
+        for a_tag in all_a_tags:
             href = a_tag['href'].strip()
             text = a_tag.text.strip().lower()
             full_link = urljoin(detail_url, href)
 
             if href.lower().endswith('.pdf') and not details["pdf_url"]:
                 details["pdf_url"] = full_link
+                print(f"  [DEBUG Step 2] 📄 Found Direct PDF Link: {full_link}")
             elif any(k in text for k in ["apply online", "apply link", "registration"]) and not details["apply_url"]:
                 details["apply_url"] = full_link
+                print(f"  [DEBUG Step 2] 🎯 Found Apply Online Link: {full_link}")
             elif any(k in text for k in ["notification", "advt"]) and not details["pdf_url"]:
                 details["pdf_url"] = full_link
+                print(f"  [DEBUG Step 2] 📋 Found Notification Link: {full_link}")
 
         # 2. Extract Body Content
         content_div = soup.find('div', id=re.compile(r'post|content|entry')) or soup.find('body')
-        details["text_content"] = clean_html_text(content_div.text if content_div else "")[:8000]
+        raw_text = content_div.text if content_div else ""
+        details["text_content"] = clean_html_text(raw_text)[:8000]
+        print(f"  [DEBUG Step 2] 📝 Extracted {len(details['text_content'])} chars of body text.")
 
     except Exception as e:
-        print(f"⚠️ Error in Step 2 Deep Fetch ({detail_url}): {e}")
+        print(f"  [DEBUG Step 2] 🚨 EXCEPTION in Deep Fetch:")
+        print(traceback.format_exc())
 
     return details
 
 # -------------------------------------------------------------
-# REGEX & AI EXTRACTION HELPER
+# REGEX & FIELD EXTRACTION WITH DEBUG
 # -------------------------------------------------------------
 def extract_fields_with_regex(text):
     extracted = {}
@@ -157,10 +184,11 @@ def extract_fields_with_regex(text):
     extracted["start_date"] = dates[0] if len(dates) >= 1 else None
     extracted["last_date"] = dates[1] if len(dates) >= 2 else (dates[0] if len(dates) == 1 else None)
 
+    print(f"  [DEBUG Regex] Extracted -> Vacancies: {extracted['total_vacancies']} | Dates: {extracted['start_date']} to {extracted['last_date']}")
     return extracted
 
 # -------------------------------------------------------------
-# MAIN PIPELINE
+# MAIN PIPELINE EXECUTION
 # -------------------------------------------------------------
 def run_job_pipeline():
     today_str = datetime.now().strftime("%d %b %Y")
@@ -170,35 +198,40 @@ def run_job_pipeline():
     results = []
     seen_titles = set()
 
-    print("\n=======================================================")
-    print("🚀 2-STEP FREEJOBALERT SCRAPER STARTED")
+    print("=======================================================")
+    print("🚀 PIPELINE STARTED WITH VERBOSE DEBUGGING")
     print("=======================================================")
 
-    # Step 1: Main Notification Page URL Visit
     main_url = "https://www.freejobalert.com/latest-notifications/"
-    print(f"📡 STEP 1: Crawling Main Listing -> {main_url}")
     job_candidates = fetch_job_list_from_main_page(main_url)
-    print(f"✅ Found {len(job_candidates)} potential jobs with 'Get Details' links!")
 
-    # Step 2: Loop through each candidate & Fetch Deep Page Details
-    for idx, job in enumerate(job_candidates[:30]): # Process top 30 latest jobs
+    if not job_candidates:
+        print("\n[DEBUG Main Pipeline] ❌ ERROR: No candidates fetched from Step 1. Pipeline Stopping.")
+        return
+
+    process_limit = min(len(job_candidates), 15) # Process top 15 for quick debug testing
+    print(f"\n[DEBUG Main Pipeline] ⚙️ Processing Top {process_limit} Jobs...")
+
+    for idx, job in enumerate(job_candidates[:process_limit]):
         title = job["title"]
         detail_url = job["detail_url"]
 
+        print(f"\n-------------------------------------------------------")
+        print(f"[{idx+1}/{process_limit}] 📌 Processing Item: {title}")
+
         clean_key = re.sub(r'[^a-zA-Z0-9]', '', title.lower())[:30]
         if clean_key in seen_titles:
+            print(f"  [DEBUG Pipeline] ⏭️ Skipping Duplicate Title.")
             continue
         seen_titles.add(clean_key)
 
-        print(f"\n[{idx+1}/{min(len(job_candidates), 30)}] 🔍 STEP 2: Scrape Details -> {title}")
-        
         deep_data = fetch_deep_details(detail_url)
         full_context = title + "\n" + deep_data["text_content"]
 
         extracted = extract_fields_with_regex(full_context)
         org_name = detect_organization(full_context)
+        print(f"  [DEBUG Pipeline] Identified Organization: {org_name}")
 
-        # Categorize item
         t_lower = title.lower()
         if "admit card" in t_lower:
             admit_cards.append({
@@ -209,6 +242,7 @@ def run_job_pipeline():
                 "apply_url": deep_data["apply_url"] or detail_url,
                 "date": today_str
             })
+            print("  [DEBUG Pipeline] 💾 Saved to Admit Cards category.")
         elif "result" in t_lower:
             results.append({
                 "id": f"result_{len(results)+1:02d}",
@@ -218,6 +252,7 @@ def run_job_pipeline():
                 "apply_url": deep_data["apply_url"] or detail_url,
                 "date": today_str
             })
+            print("  [DEBUG Pipeline] 💾 Saved to Results category.")
         else:
             latest_jobs.append({
                 "id": f"job_{len(latest_jobs)+1:02d}",
@@ -234,20 +269,27 @@ def run_job_pipeline():
                 "notification_pdf": deep_data["pdf_url"] or "Refer Official Notification",
                 "date": today_str
             })
+            print("  [DEBUG Pipeline] 💾 Saved to Latest Jobs category.")
 
-    # Save to JSON
+    print("\n=======================================================")
+    print("💾 SAVING OUTPUT TO bihar_jobs.json...")
+    
     final_output = {
         "latest_jobs": latest_jobs,
         "admit_cards": admit_cards,
         "results": results
     }
 
-    with open("bihar_jobs.json", "w", encoding="utf-8") as f:
-        json.dump(final_output, f, ensure_ascii=False, indent=2)
+    try:
+        with open("bihar_jobs.json", "w", encoding="utf-8") as f:
+            json.dump(final_output, f, ensure_ascii=False, indent=2)
+        print("✅ bihar_jobs.json written successfully!")
+    except Exception as e:
+        print(f"❌ ERROR Writing JSON File: {e}")
 
     print("\n=======================================================")
-    print(f"📊 FINAL REPORT")
-    print(f"Jobs: {len(latest_jobs)} | Admit Cards: {len(admit_cards)} | Results: {len(results)}")
+    print(f"📊 FINAL DEBUG REPORT")
+    print(f"Jobs Saved: {len(latest_jobs)} | Admit Cards: {len(admit_cards)} | Results: {len(results)}")
     print("=======================================================")
 
 if __name__ == "__main__":
