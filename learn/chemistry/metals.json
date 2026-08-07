@@ -1,0 +1,2442 @@
+{
+  "topic_id": "metals_chemistry_comprehensive",
+  "topic_title": "Metals in Chemistry",
+  "target_exams": [
+    "BPSC",
+    "BPSC TRE",
+    "BSSC",
+    "RRB NTPC",
+    "SSC CGL",
+    "NEET",
+    "UPSC Prelims"
+  ],
+  "total_cards": 72,
+  "characters": {
+    "aman": {
+      "name": "Aman Sir",
+      "role": "teacher",
+      "avatar": "👨‍🏫"
+    },
+    "raju": {
+      "name": "Raju",
+      "role": "student",
+      "avatar": "👦"
+    }
+  },
+  "cards": [
+    {
+      "card_id": "card_01_intro",
+      "card_slug": "card_01_intro",
+      "type": "intro",
+      "concept_id": "metals_introduction",
+      "level": 1,
+      "progress": {
+        "current": 1,
+        "total": 72
+      },
+      "intro_payload": {
+        "title": "⚡ Metals in Chemistry",
+        "icon": "🔩",
+        "tagline": "From Your Kitchen Utensils to BPSC Answer Sheets",
+        "target_exams": [
+          "BPSC",
+          "BPSC TRE",
+          "BSSC",
+          "RRB NTPC",
+          "SSC CGL",
+          "NEET",
+          "UPSC Prelims"
+        ],
+        "learning_outcomes": [
+          "Physical & Chemical Properties of Metals",
+          "Reactivity Series & Displacement Reactions",
+          "Extraction & Refining Processes",
+          "Corrosion & Prevention Methods",
+          "Alloys & Their Applications",
+          "BPSC/SSC/NEET PYQ Traps on Metal Reactions"
+        ],
+        "estimated_time": "45 min",
+        "total_xp": 500
+      },
+      "navigation": {
+        "next": "card_02_kitchen_observation",
+        "button_text": "शुरू करें ➔"
+      }
+    },
+    {
+      "card_id": "card_02_kitchen_observation",
+      "card_slug": "card_02_kitchen_observation",
+      "type": "chat",
+      "concept_id": "metals_daily_life",
+      "level": 1,
+      "progress": {
+        "current": 2,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, kal raat khana khate waqt tune kya notice kiya? Tumhari plate kaunse material ki thi?"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir steel ki plate thi... aur spoon bhi steel ka tha. Haan, aur Mummy ke kangan sone ke hain!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul sahi! Steel, gold, aluminium, iron... ye sab ek special category ke materials hain jinhe hum METALS kehte hain. Aaj hum samjhenge ki metals ko metals kya banata hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir par metals mein aisa kya special hai jo wood ya plastic mein nahi?"
+        }
+      ],
+      "navigation": {
+        "next": "card_03_shiny_property",
+        "button_text": "Pehli Property Dekho ➔"
+      }
+    },
+    {
+      "card_id": "card_03_shiny_property",
+      "card_slug": "card_03_shiny_property",
+      "type": "chat",
+      "concept_id": "metallic_lustre",
+      "level": 1,
+      "progress": {
+        "current": 3,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Pehli cheez... jab tumhari Mummy apna gold kangan polish karti hain, to wo chamakne lagta hai na? Us chamak ko hum METALLIC LUSTRE kehte hain. Sirf metals mein ye property hoti hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Achhaaaa... matlab jab ghar ki railing polish hoti hai to wo bhi chamakti hai, wo bhi metal hai isliye?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Exactly! Iron railing polish karne par chamakti hai kyunki iron ek metal hai. Par dhyan do... agar usko polish nahi karoge to rust lag jata hai aur chamak chali jati hai. Ye corrosion ka effect hai, iske baare mein aage padhenge!"
+        },
+        {
+          "speaker": "raju",
+          "text": "To kya plastic ya wood kabhi chamak nahi sakte?"
+        }
+      ],
+      "navigation": {
+        "next": "card_04_lustre_exception",
+        "button_text": "Exception Dekho ➔"
+      }
+    },
+    {
+      "card_id": "card_04_lustre_exception",
+      "card_slug": "card_04_lustre_exception",
+      "type": "chat",
+      "concept_id": "lustre_exceptions",
+      "level": 1,
+      "progress": {
+        "current": 4,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ruko! Yahin BPSC wale tumhe fasate hain. Plastic ko polish karke chamka sakte ho, par wo METALLIC lustre nahi hoga. Sirf metals ki natural chamak ko hi Metallic Lustre kehte hain."
+        },
+        {
+          "speaker": "raju",
+          "text": "Hain?? To agar exam mein puchhe ki 'Lustrous objects are always metals' - ye sahi hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul GALAT! Ye BPSC ka favourite trap hai. Sahi statement hai: 'Metals show metallic lustre when polished, but not all lustrous objects are metals.' Iodine bhi shiny hota hai par wo non-metal hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Ohh matlab exam mein dhyan rakhna padega... Metals lustrous hote hain, par lustrous cheez metal ho ye zaroori nahi!"
+        }
+      ],
+      "navigation": {
+        "next": "card_05_hardness_property",
+        "button_text": "Agle Property ➔"
+      }
+    },
+    {
+      "card_id": "card_05_hardness_property",
+      "card_slug": "card_05_hardness_property",
+      "type": "chat",
+      "concept_id": "metal_hardness",
+      "level": 1,
+      "progress": {
+        "current": 5,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Dusri property: HARDNESS. Zyaadatar metals hard hote hain. Iron, copper, aluminium sabko todna mushkil hai. Par ek exception yaad rakho..."
+        },
+        {
+          "speaker": "raju",
+          "text": "Exception?? Koi soft metal bhi hota hai kya Sir?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! SODIUM aur POTASSIUM itne soft hain ki knife se kaat sakte ho jaise butter! Ye ALKALI METALS kehlaate hain. SSC aur Railway mein ye pakka puchte hain."
+        },
+        {
+          "speaker": "raju",
+          "text": "Seriously?? Metal ko knife se kaat sakte hain? Ye to exam mein confuse kar dega!"
+        }
+      ],
+      "navigation": {
+        "next": "card_06_hardness_quiz",
+        "button_text": "Test Karo ➔"
+      }
+    },
+    {
+      "card_id": "card_06_hardness_quiz",
+      "card_slug": "card_06_hardness_quiz",
+      "type": "quiz",
+      "concept_id": "metal_hardness_test",
+      "level": 1,
+      "progress": {
+        "current": 6,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Which metal can be cut with a knife? (SSC CGL 2019)",
+        "options": [
+          {
+            "id": "A",
+            "text": "Iron (लोहा)"
+          },
+          {
+            "id": "B",
+            "text": "Copper (तांबा)"
+          },
+          {
+            "id": "C",
+            "text": "Sodium (सोडियम)"
+          },
+          {
+            "id": "D",
+            "text": "Aluminium (एल्युमिनियम)"
+          }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Sodium (Na) और Potassium (K) alkali metals हैं जो इतने soft होते हैं कि knife से काटे जा सकते हैं। ये पानी में विस्फोटक रूप से react करते हैं इसलिए kerosene में store किए जाते हैं। Iron, Copper, Aluminium hard metals हैं। ⭐ BPSC/SSC Favorite!"
+      },
+      "navigation": {
+        "next": "card_07_malleability_intro",
+        "button_text": "Next Property ➔"
+      }
+    },
+    {
+      "card_id": "card_07_malleability_intro",
+      "card_slug": "card_07_malleability_intro",
+      "type": "chat",
+      "concept_id": "malleability_concept",
+      "level": 1,
+      "progress": {
+        "current": 7,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Teesri super important property: MALLEABILITY. Matlab metals ko hammer se peetkar patli sheet banai ja sakti hai bina toote!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab jaise aluminium foil banate hain?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Ekdum sahi! Aluminium foil metal ki malleability ka perfect example hai. Gold itna malleable hai ki uski 1 gram से 1 square meter area की sheet बनाई जा सकती है! Isliye सोनार (goldsmith) गहने आसानी से बनाते हैं।"
+        },
+        {
+          "speaker": "raju",
+          "text": "Wow! To sabse zyada malleable metal kaun sa hai Sir?"
+        }
+      ],
+      "navigation": {
+        "next": "card_08_gold_most_malleable",
+        "button_text": "Answer Dekho ➔"
+      }
+    },
+    {
+      "card_id": "card_08_gold_most_malleable",
+      "card_slug": "card_08_gold_most_malleable",
+      "type": "chat",
+      "concept_id": "gold_malleability",
+      "level": 1,
+      "progress": {
+        "current": 8,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "GOLD (सोना) is the MOST malleable metal! Iske baad Silver, Aluminium aur Copper aate hain. Ye ranking exam mein direct puchh lete hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir ek doubt hai... agar metal ko peeto to tut kyon nahi jata?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Brilliant question! Metals के atoms layers में arrange होते हैं। जब hammer मारो, तो layers एक दूसरे पर slide कर जाती हैं bina bond toote। Ye metallic bonding की वजह से होता है - electrons freely move कर सकते हैं!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab atoms chipke रहते हैं par shift हो जाते हैं... samajh aaya!"
+        }
+      ],
+      "navigation": {
+        "next": "card_09_ductility_intro",
+        "button_text": "Agle Property ➔"
+      }
+    },
+    {
+      "card_id": "card_09_ductility_intro",
+      "card_slug": "card_09_ductility_intro",
+      "type": "chat",
+      "concept_id": "ductility_concept",
+      "level": 1,
+      "progress": {
+        "current": 9,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Chauthi property: DUCTILITY. Matlab metals को खींचकर पतला तार (wire) बनाया जा सकता है बिना टूटे!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Jaise bijli ke तार copper के होते hain?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Perfect example! Copper wires electrical wiring में use होते हैं क्योंकि copper ductile + good conductor दोनों है। एक gram सोने से 2 किलोमीटर लंबा तार खींचा जा सकता है!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir malleability और ductility में confusion ho जाता है... difference kya hai?"
+        }
+      ],
+      "navigation": {
+        "next": "card_10_malleability_vs_ductility",
+        "button_text": "Confusion Clear Karo ➔"
+      }
+    },
+    {
+      "card_id": "card_10_malleability_vs_ductility",
+      "card_slug": "card_10_malleability_vs_ductility",
+      "type": "chat",
+      "concept_id": "malleability_ductility_difference",
+      "level": 1,
+      "progress": {
+        "current": 10,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Yaad rakho: MALLEABILITY = hammer से SHEET बनाओ (जैसे aluminium foil). DUCTILITY = खींचकर WIRE बनाओ (जैसे तार)। दोनों अलग हैं पर often साथ पूछे जाते हैं!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab Gold sheet भी बन सकता है और wire भी?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Exactly! Gold सबसे ज्यादा malleable + ductile दोनों है। Exam trick: सभी metals malleable और ductile होते हैं (except Sodium, Potassium जो बहुत soft हैं)। Non-metals brittle होते हैं - तुरंत टूट जाते हैं!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Brittle matlab?"
+        }
+      ],
+      "navigation": {
+        "next": "card_11_brittle_concept",
+        "button_text": "Brittle Samjho ➔"
+      }
+    },
+    {
+      "card_id": "card_11_brittle_concept",
+      "card_slug": "card_11_brittle_concept",
+      "type": "chat",
+      "concept_id": "brittle_property",
+      "level": 1,
+      "progress": {
+        "current": 11,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "BRITTLE = जरा सा pressure डालो और चीज़ टूट जाती है। जैसे chalk, glass, या coal. Ye सब non-metals हैं। Inko न sheet बना सकते हो, न wire!"
+        },
+        {
+          "speaker": "raju",
+          "text": "To agar exam में पूछे 'All non-metals are brittle' - sahi hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Dhyan se! Almost सभी non-metals brittle हैं - पर GRAPHITE (carbon का form) exception है। Wo layers में होता है तो थोड़ा flexible है। BPSC TRE में ये पूछा जा सकता है!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Exception फिर से! Har property में exception याद रखना पड़ेगा..."
+        }
+      ],
+      "navigation": {
+        "next": "card_12_sonorous_property",
+        "button_text": "Next Property ➔"
+      }
+    },
+    {
+      "card_id": "card_12_sonorous_property",
+      "card_slug": "card_12_sonorous_property",
+      "type": "chat",
+      "concept_id": "sonorous_property",
+      "level": 1,
+      "progress": {
+        "current": 12,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Paanchvi property: SONOROUS - metals को मारो तो आवाज़ निकलती है! School bell, temple की घंटी, दरवाजे का knocker सब metals के बने होते हैं इसी वजह से।"
+        },
+        {
+          "speaker": "raju",
+          "text": "Haan Sir! Jab gate पर लोहे का रॉड मारता हूँ तो 'टन्न' की आवाज़ आती है!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul! Wo sonorous property है। Musical instruments जैसे harmonium, tabla के paarti, सभी में metals use होते हैं। Non-metals में ऐसी आवाज़ नहीं आती - वो dull sound देते हैं।"
+        },
+        {
+          "speaker": "raju",
+          "text": "To agar plastic knocker लगाएं तो कम आवाज़ आएगी?"
+        }
+      ],
+      "navigation": {
+        "next": "card_13_conductivity_intro",
+        "button_text": "Agle Property ➔"
+      }
+    },
+    {
+      "card_id": "card_13_conductivity_intro",
+      "card_slug": "card_13_conductivity_intro",
+      "type": "chat",
+      "concept_id": "thermal_electrical_conductivity",
+      "level": 1,
+      "progress": {
+        "current": 13,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Chhathi aur saatwi property ek saath: METALS अच्छे HEAT और ELECTRICITY के CONDUCTOR होते हैं। Isliye खाना बनाने के बर्तन metals के होते हैं और electrical तार भी!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Conductor matlab?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Conductor = जो heat या electricity को pass होने दे। Metals में free electrons होते हैं जो energy को आगे transfer करते हैं। इसीलिए चम्मच का एक सिरा गरम करो तो दूसरा सिरा भी गरम हो जाता है!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab agar कोई चीज़ conductor नहीं तो?"
+        }
+      ],
+      "navigation": {
+        "next": "card_14_insulator_concept",
+        "button_text": "Insulator Dekho ➔"
+      }
+    },
+    {
+      "card_id": "card_14_insulator_concept",
+      "card_slug": "card_14_insulator_concept",
+      "type": "chat",
+      "concept_id": "insulator_concept",
+      "level": 1,
+      "progress": {
+        "current": 14,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Tab wo INSULATOR कहलाता है। Wood, plastic, rubber सब insulators हैं - न heat अच्छे से pass करते, न electricity। इसीलिए तार के ऊपर plastic coating होती है और कड़ाही के handle लकड़ी के!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Achhaaa... safety के लिए!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Exactly! Ab conductor metals की ranking yaad rakho - सबसे बढ़िया conductor: SILVER, फिर COPPER, फिर GOLD, फिर ALUMINIUM। BPSC और SSC में direct पूछते हैं!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Par Sir गहने में तो सोना use करते हैं तार में नहीं... copper क्यों?"
+        }
+      ],
+      "navigation": {
+        "next": "card_15_conductor_ranking",
+        "button_text": "Confusion Clear ➔"
+      }
+    },
+    {
+      "card_id": "card_15_conductor_ranking",
+      "card_slug": "card_15_conductor_ranking",
+      "type": "chat",
+      "concept_id": "conductor_practical",
+      "level": 1,
+      "progress": {
+        "current": 15,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Brilliant question! Silver सबसे बढ़िया conductor है पर बहुत महंगा। Copper थोड़ा कम conductor है पर सस्ता और आसानी से मिलता है। Isliye electrical wiring में copper use होता है!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab cost vs efficiency का balance!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Perfect understanding! Gold oxidise (खराब) नहीं होता इसलिए jewelry और computer chips में use होता है। Aluminium हल्का है इसलिए overhead power transmission lines में। Har metal का अपना use है!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Ye sab exam में आता hai kya?"
+        }
+      ],
+      "navigation": {
+        "next": "card_16_physical_properties_quiz_1",
+        "button_text": "Quiz Attempt Karo ➔"
+      }
+    },
+    {
+      "card_id": "card_16_physical_properties_quiz_1",
+      "card_slug": "card_16_physical_properties_quiz_1",
+      "type": "quiz",
+      "concept_id": "physical_properties_test_1",
+      "level": 1,
+      "progress": {
+        "current": 16,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Which is the BEST conductor of electricity? (BPSC 2022, Railway NTPC 2021)",
+        "options": [
+          {
+            "id": "A",
+            "text": "Copper (तांबा)"
+          },
+          {
+            "id": "B",
+            "text": "Silver (चांदी)"
+          },
+          {
+            "id": "C",
+            "text": "Aluminium (एल्युमिनियम)"
+          },
+          {
+            "id": "D",
+            "text": "Gold (सोना)"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Silver (Ag) सबसे बढ़िया electrical और thermal conductor है। Ranking: Silver > Copper > Gold > Aluminium. परंतु practical use में Copper ज्यादा होता है क्योंकि silver महंगा है। ⭐ BPSC/Railway/SSC में repeatedly पूछा गया!"
+      },
+      "navigation": {
+        "next": "card_17_physical_properties_quiz_2",
+        "button_text": "Next Question (2/3) ➔"
+      }
+    },
+    {
+      "card_id": "card_17_physical_properties_quiz_2",
+      "card_slug": "card_17_physical_properties_quiz_2",
+      "type": "quiz",
+      "concept_id": "physical_properties_test_2",
+      "level": 1,
+      "progress": {
+        "current": 17,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Which metal is the MOST malleable? (SSC CGL 2020, BPSC TRE 2019)",
+        "options": [
+          {
+            "id": "A",
+            "text": "Silver (चांदी)"
+          },
+          {
+            "id": "B",
+            "text": "Copper (तांबा)"
+          },
+          {
+            "id": "C",
+            "text": "Gold (सोना)"
+          },
+          {
+            "id": "D",
+            "text": "Aluminium (एल्युमिनियम)"
+          }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Gold (Au) सबसे ज्यादा malleable और ductile दोनों है। एक gram सोने से 1 square meter sheet या 2 km तार बनाया जा सकता है। Malleability ranking: Gold > Silver > Aluminium > Copper. ⭐ BPSC TRE Favorite!"
+      },
+      "navigation": {
+        "next": "card_18_physical_properties_quiz_3",
+        "button_text": "Next Question (3/3) ➔"
+      }
+    },
+    {
+      "card_id": "card_18_physical_properties_quiz_3",
+      "card_slug": "card_18_physical_properties_quiz_3",
+      "type": "quiz",
+      "concept_id": "physical_properties_test_3",
+      "level": 1,
+      "progress": {
+        "current": 18,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Which metal can be cut with a knife? (SSC CHSL 2018, BSSC 2020)",
+        "options": [
+          {
+            "id": "A",
+            "text": "Magnesium (मैग्नीशियम)"
+          },
+          {
+            "id": "B",
+            "text": "Potassium (पोटैशियम)"
+          },
+          {
+            "id": "C",
+            "text": "Calcium (कैल्शियम)"
+          },
+          {
+            "id": "D",
+            "text": "Iron (लोहा)"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Sodium (Na) और Potassium (K) दोनों alkali metals हैं जो इतने soft हैं कि knife से काटे जा सकते हैं। ये पानी में explosive reaction देते हैं इसलिए kerosene में store किए जाते हैं। Iron, Magnesium, Calcium hard metals हैं। ⭐ SSC/Railway Favorite!"
+      },
+      "navigation": {
+        "next": "card_19_milestone_physical_properties",
+        "button_text": "Module Complete ➔"
+      }
+    },
+    {
+      "card_id": "card_19_milestone_physical_properties",
+      "card_slug": "card_19_milestone_physical_properties",
+      "type": "milestone",
+      "concept_id": "physical_properties_complete",
+      "level": 1,
+      "progress": {
+        "current": 19,
+        "total": 72
+      },
+      "milestone_payload": {
+        "title": "🎉 MODULE 1 CLEARED!",
+        "badge_emoji": "🔩",
+        "completed_topic": "Physical Properties of Metals",
+        "xp_earned": 50,
+        "milestone_progress": "Module 1/6 Complete",
+        "motivational_quote": "Tumne sare physical properties master kar liye! Ab chemical properties ki taraf chalte hain जहाँ BPSC के सबसे ज्यादा traps हैं! 🔥"
+      },
+      "navigation": {
+        "next": "card_20_chemical_intro",
+        "button_text": "Start Chemical Properties ➔"
+      }
+    },
+    {
+      "card_id": "card_20_chemical_intro",
+      "card_slug": "card_20_chemical_intro",
+      "type": "chat",
+      "concept_id": "chemical_properties_intro",
+      "level": 2,
+      "progress": {
+        "current": 20,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ab tak humne dekha metals kaise DIKHTE hain (physical). Ab dekhenge metals REACT kaise karte hain (chemical)! Ye section exam का सबसे high-scoring area hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "React matlab Sir?"
+        },
+        {
+          "speaker": "aman",
+          "text": "React = दूसरी चीज़ों के साथ mix होकर नई चीज़ बनाना। जैसे लोहे पर पानी लगे तो ज़ंग (rust) लग जाता है - ये एक chemical reaction है। Metals हवा, पानी, acid सब से react करते हैं!"
+        },
+        {
+          "speaker": "raju",
+          "text": "To सभी metals equally react करते हैं?"
+        }
+      ],
+      "navigation": {
+        "next": "card_21_reactivity_series_intro",
+        "button_text": "Reactivity Series Dekho ➔"
+      }
+    },
+    {
+      "card_id": "card_21_reactivity_series_intro",
+      "card_slug": "card_21_reactivity_series_intro",
+      "type": "chat",
+      "concept_id": "reactivity_series_concept",
+      "level": 2,
+      "progress": {
+        "current": 21,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Nahi! Kuch metals bohot jaldi react karte hain (Sodium), kuch slowly (Iron), kuch bilkul nahi (Gold). Is order ko hum REACTIVITY SERIES kehte hain। Ye exam का सबसे important concept hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab एक list है metals की?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Exactly! Sabse ज्यादा reactive से sabse कम reactive की list: Potassium > Sodium > Calcium > Magnesium > Aluminium > Zinc > Iron > Lead > Copper > Silver > Gold. Isko ratta nahi मारना, samajh ke yaad karna hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Itni lambi list kaise yaad rakhu Sir??"
+        }
+      ],
+      "navigation": {
+        "next": "card_22_reactivity_mnemonic",
+        "button_text": "Mnemonic Dekho ➔"
+      }
+    },
+    {
+      "card_id": "card_22_reactivity_mnemonic",
+      "card_slug": "card_22_reactivity_mnemonic",
+      "type": "chat",
+      "concept_id": "reactivity_mnemonic",
+      "level": 2,
+      "progress": {
+        "current": 22,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Mnemonic trick yaad rakho: 'Please Send Cats, Monkeys And Zebras In Lead Cages, Straight to Gold'. P=Potassium, S=Sodium, C=Calcium, M=Magnesium, A=Aluminium, Z=Zinc, I=Iron, L=Lead, C=Copper, S=Silver, G=Gold!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Hahaha! Ye to funny hai... yaad reh jayega! Par iska practical matlab kya hai Sir?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Matlab: जो ऊपर है (Potassium) wo सबसे ज्यादा reactive - पानी में डालो तो आग लग जाती है! जो नीचे (Gold) wo almost react नहीं करता - इसीलिए हज़ारों साल बाद भी सोने के गहने चमकते रहते हैं!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Wow! To Iron बीच में है तो थोड़ा react करता है इसीलिए rust लगता है?"
+        }
+      ],
+      "navigation": {
+        "next": "card_23_reactivity_with_oxygen",
+        "button_text": "Reactions Dekho ➔"
+      }
+    },
+    {
+      "card_id": "card_23_reactivity_with_oxygen",
+      "card_slug": "card_23_reactivity_with_oxygen",
+      "type": "chat",
+      "concept_id": "metal_oxygen_reaction",
+      "level": 2,
+      "progress": {
+        "current": 23,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Pehla chemical reaction: METALS + OXYGEN = METAL OXIDE. Jab metals हवा में react करते हैं तो oxide layer बनती है। Sodium इतना reactive है कि इसे हवा में नहीं रख सकते!"
+        },
+        {
+          "speaker": "raju",
+          "text": "To Sodium ko kaise रखते हैं?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Kerosene oil में डूबाकर! Taaki oxygen से contact न हो। जब Magnesium जलाते हैं तो चमकीली white light आती है - MgO बनता है। Diwali के patakhe में Magnesium powder इसी वजह से use होता है!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Achhaaa... to exam में पूछ सकते हैं कि Sodium kerosene में क्यों रखते हैं?"
+        }
+      ],
+      "navigation": {
+        "next": "card_24_amphoteric_oxides",
+        "button_text": "Special Oxides ➔"
+      }
+    },
+    {
+      "card_id": "card_24_amphoteric_oxides",
+      "card_slug": "card_24_amphoteric_oxides",
+      "type": "chat",
+      "concept_id": "amphoteric_oxides",
+      "level": 2,
+      "progress": {
+        "current": 24,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Dhyan do! Zyaadatar metal oxides BASIC होते हैं (जैसे Na₂O, MgO), पर कुछ AMPHOTERIC होते हैं - acid और base दोनों से react करते हैं। Aluminium Oxide (Al₂O₃) और Zinc Oxide (ZnO) amphoteric हैं!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Amphoteric?? Ye to पहली बार सुना!"
+        },
+        {
+          "speaker": "aman",
+          "text": "BPSC और SSC का favourite trap! Amphoteric = जो acid और base दोनों के साथ react करके salt बनाए। Al₂O₃ + HCl = AlCl₃ (acid से), Al₂O₃ + NaOH = NaAlO₂ (base से). Dono reactions possible!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab ye flexible oxides hain... dono taraf जा सकते हैं!"
+        }
+      ],
+      "navigation": {
+        "next": "card_25_reactivity_with_water",
+        "button_text": "Water Reaction ➔"
+      }
+    },
+    {
+      "card_id": "card_25_reactivity_with_water",
+      "card_slug": "card_25_reactivity_with_water",
+      "type": "chat",
+      "concept_id": "metal_water_reaction",
+      "level": 2,
+      "progress": {
+        "current": 25,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Dusra reaction: METALS + WATER. Reactivity series के top metals (Na, K, Ca) पानी में violently react करते हैं - hydrogen gas निकलती है और explosion हो सकता है!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Hain?? Explosion?? Kabhi dekha nahi!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Lab में Sodium को पानी में डालो तो fizzing sound, तेज heat, और yellow flame दिखेगी। Reaction: 2Na + 2H₂O → 2NaOH + H₂↑. Hydrogen gas निकलती है जो जल सकती है! Isliye kabhi aisa घर पर mat karna!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Scary! To Iron पानी में डालें तो?"
+        }
+      ],
+      "navigation": {
+        "next": "card_26_iron_water_reaction",
+        "button_text": "Iron Case ➔"
+      }
+    },
+    {
+      "card_id": "card_26_iron_water_reaction",
+      "card_slug": "card_26_iron_water_reaction",
+      "type": "chat",
+      "concept_id": "iron_water_slow",
+      "level": 2,
+      "progress": {
+        "current": 26,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Iron reactivity series में बीच में है, तो ये normal temperature पर पानी से react नहीं करता। पर नमी (moisture) और oxygen के साथ slowly react करके RUST (Fe₂O₃·xH₂O) बनाता है।"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab बारिश में cycle खड़ी रखो तो ज़ंग लग जाता है!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Exactly! Rust लगना = corrosion (ये later में detail में padhenge). Par agar Iron को STEAM (भाप) के साथ react कराओ to reaction hoga: 3Fe + 4H₂O (steam) → Fe₃O₄ + 4H₂↑. Black oxide बनता है!"
+        },
+        {
+          "speaker": "raju",
+          "text": "To temperature matter करता है reaction में?"
+        }
+      ],
+      "navigation": {
+        "next": "card_27_metals_no_water_reaction",
+        "button_text": "Noble Metals ➔"
+      }
+    },
+    {
+      "card_id": "card_27_metals_no_water_reaction",
+      "card_slug": "card_27_metals_no_water_reaction",
+      "type": "chat",
+      "concept_id": "noble_metals_water",
+      "level": 2,
+      "progress": {
+        "current": 27,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Reactivity series के नीचे वाले metals (Copper, Silver, Gold) पानी से बिल्कुल react नहीं करते - इन्हें NOBLE METALS या LESS REACTIVE METALS कहते हैं। Isliye पुराने ज़माने में पानी पीने के लिए तांबे के बर्तन use करते थे!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Haan Nani अभी भी copper के लोटे में पानी रखती हैं!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Scientific reason: Copper पानी को contaminate नहीं करता क्योंकि wo react नहीं करता। Gold और Silver भी - इसीलिए राजाओं के सोने-चांदी के बर्तन सदियों बाद भी सुरक्षित हैं!"
+        },
+        {
+          "speaker": "raju",
+          "text": "To summary: Na/K explosive, Iron slow rust, Gold/Silver/Copper no reaction!"
+        }
+      ],
+      "navigation": {
+        "next": "card_28_reactivity_with_acid",
+        "button_text": "Acid Reactions ➔"
+      }
+    },
+    {
+      "card_id": "card_28_reactivity_with_acid",
+      "card_slug": "card_28_reactivity_with_acid",
+      "type": "chat",
+      "concept_id": "metal_acid_reaction",
+      "level": 2,
+      "progress": {
+        "current": 28,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Teesra important reaction: METALS + ACID = SALT + HYDROGEN GAS. General formula yaad rakho: Metal + Acid → Salt + H₂↑. Example: Zn + H₂SO₄ → ZnSO₄ + H₂↑. Ye reaction lab में experiment के लिए use होता है!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Hydrogen gas कैसे पता चलेगी कि निकली?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Perfect question! Hydrogen gas test: जलती हुई matchstick पास लाओ तो 'pop' sound के साथ जलती है। Ye BPSC और SSC में practical question के रूप में पूछा जाता है - 'Which gas burns with pop sound?'"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab agar pop sound sune tो समझ जाओ hydrogen gas hai!"
+        }
+      ],
+      "navigation": {
+        "next": "card_29_exceptions_acid_reaction",
+        "button_text": "Exceptions Dekho ➔"
+      }
+    },
+    {
+      "card_id": "card_29_exceptions_acid_reaction",
+      "card_slug": "card_29_exceptions_acid_reaction",
+      "type": "chat",
+      "concept_id": "acid_reaction_exceptions",
+      "level": 2,
+      "progress": {
+        "current": 29,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Par ruko! BPSC का biggest trap yahin hai। Copper (Cu), Silver (Ag), Gold (Au) dilute acids से react NAHI करते! Why? Kyunki ये reactivity series में hydrogen से NEECHE hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab सिर्फ hydrogen से ऊपर वाले metals ही acid से react करते हैं?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul sahi understanding! Jो metals hydrogen से ऊपर (K, Na, Ca, Mg, Al, Zn, Fe) वो acid से hydrogen निकालते हैं। Jo नीचे (Cu, Ag, Au) वो नहीं निकालते। Ye DISPLACEMENT का concept hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Displacement?"
+        }
+      ],
+      "navigation": {
+        "next": "card_30_displacement_reaction",
+        "button_text": "Displacement Samjho ➔"
+      }
+    },
+    {
+      "card_id": "card_30_displacement_reaction",
+      "card_slug": "card_30_displacement_reaction",
+      "type": "chat",
+      "concept_id": "displacement_reaction",
+      "level": 2,
+      "progress": {
+        "current": 30,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "DISPLACEMENT REACTION: जब ज्यादा reactive metal कम reactive metal को उसके compound से बाहर निकाल देता है। Rule: MORE REACTIVE METAL displaces LESS REACTIVE METAL. Example: Zn + CuSO₄ → ZnSO₄ + Cu"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab Zinc ने Copper को हटा दिया?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Exactly! Kyunki Zinc reactivity series में Copper से ऊपर है (ज्यादा reactive)। Practical: नीले CuSO₄ solution में Zinc की plate डालो - blue colour गायब होकर colorless ZnSO₄ बनता है और brown copper metal deposit होता है!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Ye to color change experiment है... agar ulta karें?"
+        }
+      ],
+      "navigation": {
+        "next": "card_31_reverse_displacement",
+        "button_text": "Reverse Test ➔"
+      }
+    },
+    {
+      "card_id": "card_31_reverse_displacement",
+      "card_slug": "card_31_reverse_displacement",
+      "type": "chat",
+      "concept_id": "reverse_displacement_fail",
+      "level": 2,
+      "progress": {
+        "current": 31,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Agar Copper को ZnSO₄ में डालो to KUCH NAHI HOGA! Kyunki Copper कम reactive है, wo Zinc को displace नहीं कर सकता। Ye BPSC में multi-statement question बनाकर पूछते हैं!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab direction matter करती है - sirf ऊपर वाला नीचे वाले को हटा सकता है!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Perfect! Ek aur example: Fe + CuSO₄ → FeSO₄ + Cu (होगा, kyunki Fe > Cu). Par Cu + FeSO₄ → NO REACTION (nahi hoga, kyunki Cu < Fe). Isko thermite reaction भी कहते हैं!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Thermite reaction??"
+        }
+      ],
+      "navigation": {
+        "next": "card_32_thermite_reaction",
+        "button_text": "Thermite Dekho ➔"
+      }
+    },
+    {
+      "card_id": "card_32_thermite_reaction",
+      "card_slug": "card_32_thermite_reaction",
+      "type": "chat",
+      "concept_id": "thermite_reaction",
+      "level": 2,
+      "progress": {
+        "current": 32,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "THERMITE REACTION: Fe₂O₃ + 2Al → Al₂O₃ + 2Fe + HEAT. Aluminium itna reactive hai ki Iron oxide से oxygen छीन लेता है। इतनी heat निकलती है कि molten iron बनता है - railway tracks जोड़ने में use होता है!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Railway tracks ko weld करने में ye reaction use होता hai??"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! Aluminium powder + Iron oxide मिलाकर ignite करो तो 2500°C temperature पैदा होता है। Molten iron निकलता है जो tracks को जोड़ देता है। Isko ALUMINOTHERMY या GOLDSCHMIDT PROCESS भी कहते हैं!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Ye to railway exam में zaroor पूछेंगे!"
+        }
+      ],
+      "navigation": {
+        "next": "card_33_reactivity_quiz_1",
+        "button_text": "Test Karo (1/3) ➔"
+      }
+    },
+    {
+      "card_id": "card_33_reactivity_quiz_1",
+      "card_slug": "card_33_reactivity_quiz_1",
+      "type": "quiz",
+      "concept_id": "reactivity_test_1",
+      "level": 2,
+      "progress": {
+        "current": 33,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Which metal is stored in kerosene to prevent reaction with air and moisture? (BPSC 2021, SSC CGL 2019)",
+        "options": [
+          {
+            "id": "A",
+            "text": "Magnesium (मैग्नीशियम)"
+          },
+          {
+            "id": "B",
+            "text": "Sodium (सोडियम)"
+          },
+          {
+            "id": "C",
+            "text": "Calcium (कैल्शियम)"
+          },
+          {
+            "id": "D",
+            "text": "Aluminium (एल्युमिनियम)"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Sodium (Na) और Potassium (K) इतने reactive हैं कि हवा की oxygen और moisture से तुरंत react करते हैं। इन्हें kerosene oil में डूबाकर रखा जाता है ताकि oxygen से contact न हो। ⭐ BPSC/SSC में repeatedly पूछा गया! Magnesium कम reactive है, खुली हवा में रखा जा सकता है।"
+      },
+      "navigation": {
+        "next": "card_34_reactivity_quiz_2",
+        "button_text": "Next Question (2/3) ➔"
+      }
+    },
+    {
+      "card_id": "card_34_reactivity_quiz_2",
+      "card_slug": "card_34_reactivity_quiz_2",
+      "type": "quiz",
+      "concept_id": "reactivity_test_2",
+      "level": 2,
+      "progress": {
+        "current": 34,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Which reaction is used for welding railway tracks? (Railway NTPC 2020, BPSC TRE 2018)",
+        "options": [
+          {
+            "id": "A",
+            "text": "Reduction of Iron oxide by Carbon"
+          },
+          {
+            "id": "B",
+            "text": "Thermite reaction (Aluminothermy)"
+          },
+          {
+            "id": "C",
+            "text": "Electrolysis of molten Iron"
+          },
+          {
+            "id": "D",
+            "text": "Displacement of Copper by Iron"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Thermite Reaction (Fe₂O₃ + 2Al → Al₂O₃ + 2Fe + Heat) railway tracks की welding में use होता है। Aluminium, Iron oxide को reduce करता है और इतनी heat पैदा होती है कि molten iron बनता है जो tracks को जोड़ देता है। ⭐ Railway/BPSC TRE Favorite! इसे Goldschmidt Process या Aluminothermy भी कहते हैं।"
+      },
+      "navigation": {
+        "next": "card_35_reactivity_quiz_3",
+        "button_text": "Next Question (3/3) ➔"
+      }
+    },
+    {
+      "card_id": "card_35_reactivity_quiz_3",
+      "card_slug": "card_35_reactivity_quiz_3",
+      "type": "quiz",
+      "concept_id": "reactivity_test_3",
+      "level": 2,
+      "progress": {
+        "current": 35,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "When a burning splinter is brought near a test tube containing hydrogen gas, what happens? (SSC CHSL 2019, BSSC 2020)",
+        "options": [
+          {
+            "id": "A",
+            "text": "Burns with blue flame"
+          },
+          {
+            "id": "B",
+            "text": "Burns with pop sound"
+          },
+          {
+            "id": "C",
+            "text": "Extinguishes immediately"
+          },
+          {
+            "id": "D",
+            "text": "Burns with yellow flame"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Hydrogen gas जलती हुई matchstick के पास लाने पर 'POP' sound के साथ जलती है। Ye hydrogen gas की confirmatory test है। Reaction: 2H₂ + O₂ → 2H₂O + Energy. Metal + Acid reactions में hydrogen gas बनती है, इसी test से confirm करते हैं। ⭐ SSC/BSSC में practical questions में पूछा जाता है!"
+      },
+      "navigation": {
+        "next": "card_36_milestone_chemical_properties",
+        "button_text": "Module Complete ➔"
+      }
+    },
+    {
+      "card_id": "card_36_milestone_chemical_properties",
+      "card_slug": "card_36_milestone_chemical_properties",
+      "type": "milestone",
+      "concept_id": "chemical_properties_complete",
+      "level": 2,
+      "progress": {
+        "current": 36,
+        "total": 72
+      },
+      "milestone_payload": {
+        "title": "🔥 MODULE 2 MASTERED!",
+        "badge_emoji": "⚗️",
+        "completed_topic": "Chemical Reactions of Metals",
+        "xp_earned": 75,
+        "milestone_progress": "Module 2/6 Complete",
+        "motivational_quote": "Reactivity Series aur Displacement tumhare हाथ में! Ab extraction methods देखेंगे जहां असली engineering आती है! 🚀"
+      },
+      "navigation": {
+        "next": "card_37_extraction_intro",
+        "button_text": "Start Extraction Methods ➔"
+      }
+    },
+    {
+      "card_id": "card_37_extraction_intro",
+      "card_slug": "card_37_extraction_intro",
+      "type": "chat",
+      "concept_id": "extraction_introduction",
+      "level": 3,
+      "progress": {
+        "current": 37,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, ये steel का spoon, aluminium की plate, gold के gahne... ye सब कहाँ से aate hain?"
+        },
+        {
+          "speaker": "raju",
+          "text": "Factory से banate hain na Sir?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Pehle zyada deep jao! Metals जमीन के नीचे पत्थरों (rocks) में होते हैं - उन्हें ORE कहते हैं। Ore से शुद्ध metal निकालने की process को EXTRACTION कहते हैं। Ye BPSC/SSC/UPSC सब में पूछा जाता है!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Ore matlab?"
+        }
+      ],
+      "navigation": {
+        "next": "card_38_ore_mineral_concept",
+        "button_text": "Ore vs Mineral ➔"
+      }
+    },
+    {
+      "card_id": "card_38_ore_mineral_concept",
+      "card_slug": "card_38_ore_mineral_concept",
+      "type": "chat",
+      "concept_id": "ore_mineral_difference",
+      "level": 3,
+      "progress": {
+        "current": 38,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "MINERAL = Earth की crust में naturally पाई जाने वाली कोई भी compound जिसमें metal हो। ORE = वो mineral जिससे metal को निकालना PROFITABLE हो। Matlab हर ore एक mineral है, पर हर mineral ore नहीं!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab agar metal निकालना महंगा पड़े तो ore नहीं बोलेंगे?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Exactly! Example: Aluminium clay (मिट्टी) में भी होता है पर clay से निकालना बहुत costly है, तो clay aluminium का ore नहीं। पर BAUXITE (Al₂O₃·2H₂O) से निकालना profitable है, तो bauxite aluminium का ORE है!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Achhaaa... to सभी metals के अलग-अलग ores होते हैं?"
+        }
+      ],
+      "navigation": {
+        "next": "card_39_common_ores",
+        "button_text": "Important Ores ➔"
+      }
+    },
+    {
+      "card_id": "card_39_common_ores",
+      "card_slug": "card_39_common_ores",
+      "type": "chat",
+      "concept_id": "important_ores_list",
+      "level": 3,
+      "progress": {
+        "current": 39,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Exam के लिए important ores yaad rakho: Iron - Haematite (Fe₂O₃), Magnetite (Fe₃O₄). Aluminium - Bauxite (Al₂O₃·2H₂O). Copper - Copper Pyrites (CuFeS₂). Zinc - Zinc Blende (ZnS). ⭐ BPSC/SSC में matching questions aate hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Itne सारे formulas yaad karne padenge??"
+        },
+        {
+          "speaker": "aman",
+          "text": "Pattern dekho: ज्यादातर ores OXIDES (O युक्त) या SULPHIDES (S युक्त) होते हैं। क्योंकि metals naturally oxygen या sulphur से combine होकर मिलते हैं। Pure metal form में sirf GOLD, SILVER, PLATINUM मिलते हैं - inhe NOBLE METALS कहते हैं!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab इन्हें extract नहीं करना पड़ता?"
+        }
+      ],
+      "navigation": {
+        "next": "card_40_noble_metals_native",
+        "button_text": "Noble Metals ➔"
+      }
+    },
+    {
+      "card_id": "card_40_noble_metals_native",
+      "card_slug": "card_40_noble_metals_native",
+      "type": "chat",
+      "concept_id": "noble_metals_native_state",
+      "level": 3,
+      "progress": {
+        "current": 40,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Bilkul! Gold, Silver, Platinum कम reactive हैं तो ये Earth में NATIVE STATE (free metallic form) में मिलते हैं। Isliye पुराने ज़माने में लोग नदियों में सोना ढूंढते थे - already shudh hota tha!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Wow! Baaki सब metals compounds में होते hain?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan, kyunki wo reactive hain तो oxygen/sulphur से combine हो जाते हैं। Extraction process का main aim: Metal को उसके compound से SEPARATE करना। Iske लिए 3 main methods hain reactivity पर depend करते हुए!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Teen methods? Kaun se?"
+        }
+      ],
+      "navigation": {
+        "next": "card_41_extraction_methods_overview",
+        "button_text": "3 Methods Dekho ➔"
+      }
+    },
+    {
+      "card_id": "card_41_extraction_methods_overview",
+      "card_slug": "card_41_extraction_methods_overview",
+      "type": "chat",
+      "concept_id": "extraction_methods_classification",
+      "level": 3,
+      "progress": {
+        "current": 41,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Teen extraction methods: (1) ELECTROLYTIC REDUCTION - highly reactive metals (Na, K, Ca, Mg, Al) ke liye. (2) REDUCTION by CARBON/CO - moderately reactive (Zn, Fe, Pb, Cu). (3) SIMPLE HEATING - least reactive (Hg, Ag). Reactivity series याद है na?"
+        },
+        {
+          "speaker": "raju",
+          "text": "Haan! Please Send Cats... wala! To ऊपर वाले metals को extract करना मुश्किल?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Exactly! Jो ज्यादा reactive, wo oxygen से जोर से chipakte hain, unhe todna mushkil. Isliye electricity चाहिए (Electrolysis)। Kam reactive easily carbon से reduce हो जाते hैं। Ye BPSC का multi-statement favourite topic है!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab method metal की reactivity पर depend करता है!"
+        }
+      ],
+      "navigation": {
+        "next": "card_42_electrolytic_reduction",
+        "button_text": "Method 1 Detail ➔"
+      }
+    },
+    {
+      "card_id": "card_42_electrolytic_reduction",
+      "card_slug": "card_42_electrolytic_reduction",
+      "type": "chat",
+      "concept_id": "electrolytic_reduction_process",
+      "level": 3,
+      "progress": {
+        "current": 42,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "ELECTROLYTIC REDUCTION: Molten ore में electricity pass करके metal extract करते हैं। Example: Aluminium को Bauxite (Al₂O₃) से निकालना - HALL-HEROULT PROCESS. Cathode (-) पर Al³⁺ electrons लेकर Al metal बनता है!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Cathode matlab negative terminal? Anode kya hota hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! CATHODE = negative electrode (reduction होता है), ANODE = positive electrode (oxidation होता है)। Sodium भी electrolysis से निकलता है - DOWN'S PROCESS (molten NaCl का electrolysis). Ye costly methods हैं - बहुत electricity लगती है!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Isliye aluminium के utensils थोड़े महंगे होते हैं?"
+        }
+      ],
+      "navigation": {
+        "next": "card_43_carbon_reduction",
+        "button_text": "Method 2 Detail ➔"
+      }
+    },
+    {
+      "card_id": "card_43_carbon_reduction",
+      "card_slug": "card_43_carbon_reduction",
+      "type": "chat",
+      "concept_id": "carbon_reduction_process",
+      "level": 3,
+      "progress": {
+        "current": 43,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "REDUCTION BY CARBON: Medium reactive metals (Zn, Fe, Pb) को extract करने का सबसे common method। Metal oxide + Carbon/Coke → Metal + CO/CO₂. Example: ZnO + C → Zn + CO. Carbon, oxygen को छीन लेता है!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Ye तो thermite reaction जैसा लगता hai!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul similar concept! Par yahin BLAST FURNACE use होती है Iron ke लिए। Fe₂O₃ + 3CO → 2Fe + 3CO₂. Temperature 1500°C+ रहता है। Molten iron नीचे इकट्ठा होता है - isko PIG IRON कहते हैं। ⭐ BPSC/Railway favourite!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Pig iron?? Naam ajeeb hai!"
+        }
+      ],
+      "navigation": {
+        "next": "card_44_blast_furnace",
+        "button_text": "Blast Furnace ➔"
+      }
+    },
+    {
+      "card_id": "card_44_blast_furnace",
+      "card_slug": "card_44_blast_furnace",
+      "type": "chat",
+      "concept_id": "blast_furnace_iron",
+      "level": 3,
+      "progress": {
+        "current": 44,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "BLAST FURNACE में तीन चीज़ें डालते हैं: (1) Iron ore (Haematite), (2) Coke (Carbon), (3) Limestone (CaCO₃). Hot air blast करते हैं। Coke जलकर CO बनाता है जो Fe₂O₃ को reduce करता है। Limestone impurities हटाता है - slag बनता है!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Slag kya hota hai Sir?"
+        },
+        {
+          "speaker": "aman",
+          "text": "SLAG = impurities (SiO₂ etc.) जो limestone के साथ combine होकर ऊपर float करते हैं। CaCO₃ → CaO + CO₂, फिर CaO + SiO₂ → CaSiO₃ (slag). Slag को हटा देते हैं। Neeche molten iron collect होता है - 4% carbon युक्त - ये PIG IRON है।"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab pig iron शुद्ध नहीं होता?"
+        }
+      ],
+      "navigation": {
+        "next": "card_45_refining_process",
+        "button_text": "Refining Dekho ➔"
+      }
+    },
+    {
+      "card_id": "card_45_refining_process",
+      "card_slug": "card_45_refining_process",
+      "type": "chat",
+      "concept_id": "refining_metals",
+      "level": 3,
+      "progress": {
+        "current": 45,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Extraction के बाद metal में impurities होती हैं। Unhe हटाने को REFINING कहते hैं। Methods: (1) ELECTROLYTIC REFINING - copper, silver के लिए. (2) LIQUATION - tin, lead. (3) DISTILLATION - zinc, mercury. BPSC में पूछते हैं 'Which metal is refined by...?'"
+        },
+        {
+          "speaker": "raju",
+          "text": "Electrolytic refining kaise hoti hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Impure metal को ANODE (+) बनाते हैं, pure metal की thin sheet को CATHODE (-). Electrolyte = metal का salt solution (जैसे CuSO₄). Anode dissolve होता है, pure metal cathode पर जमता है। Impurities नीचे गिरती हैं - ANODE MUD बनती है!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab impure से pure metal बना लिया!"
+        }
+      ],
+      "navigation": {
+        "next": "card_46_extraction_quiz_1",
+        "button_text": "Test Karo (1/3) ➔"
+      }
+    },
+    {
+      "card_id": "card_46_extraction_quiz_1",
+      "card_slug": "card_46_extraction_quiz_1",
+      "type": "quiz",
+      "concept_id": "extraction_test_1",
+      "level": 3,
+      "progress": {
+        "current": 46,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "The ore of Aluminium is: (BPSC 2020, SSC CGL 2018)",
+        "options": [
+          {
+            "id": "A",
+            "text": "Calamine (कैलामाइन)"
+          },
+          {
+            "id": "B",
+            "text": "Bauxite (बॉक्साइट)"
+          },
+          {
+            "id": "C",
+            "text": "Haematite (हेमेटाइट)"
+          },
+          {
+            "id": "D",
+            "text": "Magnetite (मैग्नेटाइट)"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Aluminium का principal ore BAUXITE (Al₂O₃·2H₂O) है। Calamine = Zinc का ore (ZnCO₃), Haematite और Magnetite = Iron के ores (Fe₂O₃, Fe₃O₄). ⭐ BPSC/SSC में ore-metal matching repeatedly पूछा जाता है! Aluminium को Hall-Heroult process से extract किया जाता है।"
+      },
+      "navigation": {
+        "next": "card_47_extraction_quiz_2",
+        "button_text": "Next Question (2/3) ➔"
+      }
+    },
+    {
+      "card_id": "card_47_extraction_quiz_2",
+      "card_slug": "card_47_extraction_quiz_2",
+      "type": "quiz",
+      "concept_id": "extraction_test_2",
+      "level": 3,
+      "progress": {
+        "current": 47,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Which metals occur in FREE STATE (native state) in nature? (UPSC Prelims 2019, BPSC TRE 2021)",
+        "options": [
+          {
+            "id": "A",
+            "text": "Iron and Copper"
+          },
+          {
+            "id": "B",
+            "text": "Sodium and Potassium"
+          },
+          {
+            "id": "C",
+            "text": "Gold and Silver"
+          },
+          {
+            "id": "D",
+            "text": "Zinc and Aluminium"
+          }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Gold (Au), Silver (Ag), Platinum (Pt) least reactive (noble metals) हैं, इसलिए ये Earth's crust में FREE METALLIC STATE (native state) में मिलते हैं। बाकी metals reactive होने के कारण compounds (oxides/sulphides) में पाए जाते हैं। ⭐ UPSC/BPSC TRE में conceptual question के रूप में आता है!"
+      },
+      "navigation": {
+        "next": "card_48_extraction_quiz_3",
+        "button_text": "Next Question (3/3) ➔"
+      }
+    },
+    {
+      "card_id": "card_48_extraction_quiz_3",
+      "card_slug": "card_48_extraction_quiz_3",
+      "type": "quiz",
+      "concept_id": "extraction_test_3",
+      "level": 3,
+      "progress": {
+        "current": 48,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "In electrolytic refining of copper, impure copper is used as: (SSC CGL 2017, Railway NTPC 2019)",
+        "options": [
+          {
+            "id": "A",
+            "text": "Cathode (कैथोड)"
+          },
+          {
+            "id": "B",
+            "text": "Anode (एनोड)"
+          },
+          {
+            "id": "C",
+            "text": "Electrolyte (इलेक्ट्रोलाइट)"
+          },
+          {
+            "id": "D",
+            "text": "Both anode and cathode"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Electrolytic refining में IMPURE METAL को ANODE (+) बनाते हैं और PURE METAL की thin plate को CATHODE (-). Electrolysis में anode dissolve होता है, pure metal ions cathode पर deposit होते हैं। Impurities नीचे गिरती हैं (anode mud)। ⭐ SSC/Railway में direct पूछा जाता है!"
+      },
+      "navigation": {
+        "next": "card_49_milestone_extraction",
+        "button_text": "Module Complete ➔"
+      }
+    },
+    {
+      "card_id": "card_49_milestone_extraction",
+      "card_slug": "card_49_milestone_extraction",
+      "type": "milestone",
+      "concept_id": "extraction_complete",
+      "level": 3,
+      "progress": {
+        "current": 49,
+        "total": 72
+      },
+      "milestone_payload": {
+        "title": "⚙️ MODULE 3 CONQUERED!",
+        "badge_emoji": "⛏️",
+        "completed_topic": "Extraction & Refining of Metals",
+        "xp_earned": 80,
+        "milestone_progress": "Module 3/6 Complete",
+        "motivational_quote": "Ore से लेकर Pure Metal तक का journey complete! Ab corrosion और prevention देखेंगे - daily life का सबसे practical topic! 🛡️"
+      },
+      "navigation": {
+        "next": "card_50_corrosion_intro",
+        "button_text": "Start Corrosion ➔"
+      }
+    },
+    {
+      "card_id": "card_50_corrosion_intro",
+      "card_slug": "card_50_corrosion_intro",
+      "type": "chat",
+      "concept_id": "corrosion_introduction",
+      "level": 4,
+      "progress": {
+        "current": 50,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, तुम्हारी पुरानी cycle में जो भूरा-लाल रंग का layer चढ़ जाता है, usse kya kehte hain?"
+        },
+        {
+          "speaker": "raju",
+          "text": "Zang (rust) Sir! Mummy बोलती हैं ki oil लगा दो nahi tो puri cycle kharab ho jayegi!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul sahi! Rust lagना एक chemical process hai जिसे CORROSION कहते हैं। Definition: जब metal surface, moisture और atmospheric gases (O₂, CO₂, SO₂) से react करके slowly खराब होता है, उसे CORROSION कहते हैं।"
+        },
+        {
+          "speaker": "raju",
+          "text": "To corrosion sirf iron में hoti hai?"
+        }
+      ],
+      "navigation": {
+        "next": "card_51_corrosion_types",
+        "button_text": "Different Types ➔"
+      }
+    },
+    {
+      "card_id": "card_51_corrosion_types",
+      "card_slug": "card_51_corrosion_types",
+      "type": "chat",
+      "concept_id": "corrosion_different_metals",
+      "level": 4,
+      "progress": {
+        "current": 51,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Nahi! सभी metals corrode होते हैं पर अलग-अलग तरीके से। IRON → RUST (brown Fe₂O₃·xH₂O), COPPER → GREEN coating (CuCO₃·Cu(OH)₂ called VERDIGRIS), SILVER → BLACK tarnish (Ag₂S)। Statue of Liberty का green color copper की corrosion है!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Wow! To green coating भी corrosion hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! Par interesting baat: Aluminium भी corrode होता है, पर उसकी oxide layer (Al₂O₃) बहुत strong होती है जो further corrosion रोक देती है - PROTECTIVE LAYER बन जाती है। इसीलिए aluminium utensils लंबे समय तक चलते हैं!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab aluminium apni raksha khud करता है?"
+        }
+      ],
+      "navigation": {
+        "next": "card_52_rust_formation",
+        "button_text": "Rust Detail ➔"
+      }
+    },
+    {
+      "card_id": "card_52_rust_formation",
+      "card_slug": "card_52_rust_formation",
+      "type": "chat",
+      "concept_id": "rust_chemistry",
+      "level": 4,
+      "progress": {
+        "current": 52,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "RUSTING (Iron का corrosion) के लिए तीन चीज़ें ज़रूरी हैं: (1) IRON, (2) OXYGEN (air), (3) MOISTURE (water)। Formula: 4Fe + 3O₂ + xH₂O → 2Fe₂O₃·xH₂O (Hydrated Iron(III) Oxide = RUST)। तीनों में से एक भी हटा दो, rusting रुक जाएगी!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Isliye oil लगाने से rust नहीं लगता?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Perfect! Oil एक barrier बना देता है - oxygen और moisture iron surface तक नहीं पहुंच पाते। Paint लगाना भी same reason। BPSC/SSC में पूछते हैं: 'What are conditions necessary for rusting?' - याद रखो ये तीनों!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Aur ways हैं rust रोकने के?"
+        }
+      ],
+      "navigation": {
+        "next": "card_53_corrosion_prevention",
+        "button_text": "Prevention Methods ➔"
+      }
+    },
+    {
+      "card_id": "card_53_corrosion_prevention",
+      "card_slug": "card_53_corrosion_prevention",
+      "type": "chat",
+      "concept_id": "corrosion_prevention_methods",
+      "level": 4,
+      "progress": {
+        "current": 53,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Corrosion Prevention Methods: (1) PAINTING/OILING - barrier बनाना, (2) GALVANIZATION - iron पर zinc की coating, (3) ELECTROPLATING - chromium/nickel की coating, (4) ALLOYING - stainless steel बनाना। Sabse important GALVANIZATION है!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Galvanization matlab?"
+        },
+        {
+          "speaker": "aman",
+          "text": "GALVANIZATION = Iron articles (pipes, sheets, buckets) को molten zinc में dip करना। Zinc की thin layer चढ़ जाती है। Zinc, iron से ज्यादा reactive है तो wo पहले corrode होता है, iron को बचाता है - SACRIFICIAL PROTECTION!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab zinc अपनी कुर्बानी देकर iron को बचाता है??"
+        }
+      ],
+      "navigation": {
+        "next": "card_54_electroplating",
+        "button_text": "Electroplating ➔"
+      }
+    },
+    {
+      "card_id": "card_54_electroplating",
+      "card_slug": "card_54_electroplating",
+      "type": "chat",
+      "concept_id": "electroplating_process",
+      "level": 4,
+      "progress": {
+        "current": 54,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "ELECTROPLATING: Electrolysis से एक metal की surface पर दूसरी metal की coating चढ़ाना। Example: Iron पर CHROMIUM plating (car bumpers, taps) - shine और corrosion resistance दोनों। Object को CATHODE बनाते हैं, coating metal को ANODE!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Ye galvanization से alag kaise hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Galvanization = sirf ZINC coating, dipping method. Electroplating = koi bhi metal (Cr, Ni, Au, Ag), electricity use karke, uniform thin layer। Jewelry में सस्ते metal पर gold electroplating करते हैं। BPSC में difference पूछते हैं!"
+        },
+        {
+          "speaker": "raju",
+          "text": "To artificial jewelry में gold coating electroplating se hoti hai?"
+        }
+      ],
+      "navigation": {
+        "next": "card_55_corrosion_quiz_1",
+        "button_text": "Test Karo (1/3) ➔"
+      }
+    },
+    {
+      "card_id": "card_55_corrosion_quiz_1",
+      "card_slug": "card_55_corrosion_quiz_1",
+      "type": "quiz",
+      "concept_id": "corrosion_test_1",
+      "level": 4,
+      "progress": {
+        "current": 55,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Which THREE conditions are essential for rusting of iron? (BPSC 2018, SSC CGL 2020)",
+        "options": [
+          {
+            "id": "A",
+            "text": "Iron, Oxygen, Water"
+          },
+          {
+            "id": "B",
+            "text": "Iron, Carbon dioxide, Heat"
+          },
+          {
+            "id": "C",
+            "text": "Iron, Nitrogen, Moisture"
+          },
+          {
+            "id": "D",
+            "text": "Iron, Hydrogen, Air"
+          }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Rusting के लिए तीन चीज़ें necessary हैं: (1) IRON, (2) OXYGEN (हवा से), (3) MOISTURE/WATER। तीनों में से कोई एक हटा दो तो rusting रुक जाएगी। Chemical reaction: 4Fe + 3O₂ + xH₂O → 2Fe₂O₃·xH₂O (Rust). ⭐ BPSC/SSC का repeatedly asked question!"
+      },
+      "navigation": {
+        "next": "card_56_corrosion_quiz_2",
+        "button_text": "Next Question (2/3) ➔"
+      }
+    },
+    {
+      "card_id": "card_56_corrosion_quiz_2",
+      "card_slug": "card_56_corrosion_quiz_2",
+      "type": "quiz",
+      "concept_id": "corrosion_test_2",
+      "level": 4,
+      "progress": {
+        "current": 56,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "The process of coating iron with zinc is called: (Railway NTPC 2016, BSSC 2019)",
+        "options": [
+          {
+            "id": "A",
+            "text": "Electroplating (इलेक्ट्रोप्लेटिंग)"
+          },
+          {
+            "id": "B",
+            "text": "Anodizing (एनोडाइजिंग)"
+          },
+          {
+            "id": "C",
+            "text": "Galvanization (गैल्वनाइजेशन)"
+          },
+          {
+            "id": "D",
+            "text": "Alloying (मिश्र धातु बनाना)"
+          }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Iron को zinc से coat करने की process को GALVANIZATION कहते हैं। Iron articles को molten zinc में dip करते हैं। Zinc layer corrosion से बचाती है क्योंकि zinc अधिक reactive है और sacrificial protection देता है। Galvanized pipes, buckets, sheets common examples हैं। ⭐ Railway/BSSC में direct terminology पूछी जाती है!"
+      },
+      "navigation": {
+        "next": "card_57_corrosion_quiz_3",
+        "button_text": "Next Question (3/3) ➔"
+      }
+    },
+    {
+      "card_id": "card_57_corrosion_quiz_3",
+      "card_slug": "card_57_corrosion_quiz_3",
+      "type": "quiz",
+      "concept_id": "corrosion_test_3",
+      "level": 4,
+      "progress": {
+        "current": 57,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "The green coating on copper vessels is: (SSC CHSL 2017, BPSC TRE 2020)",
+        "options": [
+          {
+            "id": "A",
+            "text": "Copper oxide (CuO)"
+          },
+          {
+            "id": "B",
+            "text": "Copper sulphate (CuSO₄)"
+          },
+          {
+            "id": "C",
+            "text": "Basic copper carbonate [CuCO₃·Cu(OH)₂]"
+          },
+          {
+            "id": "D",
+            "text": "Copper chloride (CuCl₂)"
+          }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Copper vessels पर बनने वाली green coating BASIC COPPER CARBONATE [CuCO₃·Cu(OH)₂] है, जिसे VERDIGRIS भी कहते हैं। ये copper का atmospheric CO₂ और moisture से corrosion है। Statue of Liberty का green color भी यही compound है। ⭐ BPSC TRE/SSC में visual identification questions में पूछा जाता है!"
+      },
+      "navigation": {
+        "next": "card_58_milestone_corrosion",
+        "button_text": "Module Complete ➔"
+      }
+    },
+    {
+      "card_id": "card_58_milestone_corrosion",
+      "card_slug": "card_58_milestone_corrosion",
+      "type": "milestone",
+      "concept_id": "corrosion_complete",
+      "level": 4,
+      "progress": {
+        "current": 58,
+        "total": 72
+      },
+      "milestone_payload": {
+        "title": "🛡️ MODULE 4 PROTECTED!",
+        "badge_emoji": "🔧",
+        "completed_topic": "Corrosion & Prevention",
+        "xp_earned": 70,
+        "milestone_progress": "Module 4/6 Complete",
+        "motivational_quote": "Rust से लेकर Galvanization तक - अब तुम किसी भी metal को बचा सकते हो! Ab ALLOYS की duniya देखते हैं! 🎖️"
+      },
+      "navigation": {
+        "next": "card_59_alloys_intro",
+        "button_text": "Start Alloys ➔"
+      }
+    },
+    {
+      "card_id": "card_59_alloys_intro",
+      "card_slug": "card_59_alloys_intro",
+      "type": "chat",
+      "concept_id": "alloys_introduction",
+      "level": 5,
+      "progress": {
+        "current": 59,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, तुम्हारे गले में जो chain है, क्या wo pure सोने की है?"
+        },
+        {
+          "speaker": "raju",
+          "text": "Nahi Sir... Mummy बोली थी ki ये 22 carat gold hai, pure नहीं!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Exactly! Pure gold (24 carat) बहुत soft होता है - easily टूट जाता है। Isliye उसमें copper/silver मिलाकर hard बनाते हैं। Ye mixture जो बनता है use ALLOY कहते हैं। Definition: दो या अधिक metals (या metal + non-metal) का homogeneous mixture = ALLOY!"
+        },
+        {
+          "speaker": "raju",
+          "text": "To alloy mixture hai, compound नहीं?"
+        }
+      ],
+      "navigation": {
+        "next": "card_60_alloy_vs_compound",
+        "button_text": "Alloy vs Compound ➔"
+      }
+    },
+    {
+      "card_id": "card_60_alloy_vs_compound",
+      "card_slug": "card_60_alloy_vs_compound",
+      "type": "chat",
+      "concept_id": "alloy_compound_difference",
+      "level": 5,
+      "progress": {
+        "current": 60,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Brilliant doubt! ALLOY = MIXTURE (physical mixing, no fixed ratio, metals अपनी properties retain करते हैं)। COMPOUND = chemical bonding, fixed ratio, completely new properties। Example: Steel (alloy) vs Fe₃O₄ (compound). BPSC trap question!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab alloy में अलग-अलग metals मिले होते हैं पर react नहीं किए?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Exactly! Alloys बनाने का reason: Pure metals की weaknesses को दूर करना। Pure iron soft है तो carbon मिलाकर STEEL बनाते हैं - hard और strong। Pure aluminium weak, तो magnesium मिलाकर DURALUMIN बनाते हैं - aircraft में use होता है!"
+        },
+        {
+          "speaker": "raju",
+          "text": "To sabse common alloy kaunsa hai?"
+        }
+      ],
+      "navigation": {
+        "next": "card_61_common_alloys",
+        "button_text": "Important Alloys ➔"
+      }
+    },
+    {
+      "card_id": "card_61_common_alloys",
+      "card_slug": "card_61_common_alloys",
+      "type": "chat",
+      "concept_id": "common_alloys_list",
+      "level": 5,
+      "progress": {
+        "current": 61,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Exam के लिए important alloys: STEEL (Fe+C), STAINLESS STEEL (Fe+C+Cr+Ni), BRASS (Cu+Zn), BRONZE (Cu+Sn), SOLDER (Pb+Sn), DURALUMIN (Al+Cu+Mg+Mn), AMALGAM (Hg + any metal). ⭐ BPSC/SSC में composition matching pakka aata hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Itne saare! Steel और stainless steel में kya farak?"
+        },
+        {
+          "speaker": "aman",
+          "text": "STEEL = Iron + Carbon (0.1-1.5%), hard पर rust लगता है। STAINLESS STEEL = Iron + Carbon + CHROMIUM (12-18%) + NICKEL, rust-proof होता है। Utensils, surgical instruments में stainless steel use होता है। Chromium oxide protective layer बनाता है!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Achhaaa... isliye stainless steel के bartan नहीं rust होते!"
+        }
+      ],
+      "navigation": {
+        "next": "card_62_brass_bronze",
+        "button_text": "Brass vs Bronze ➔"
+      }
+    },
+    {
+      "card_id": "card_62_brass_bronze",
+      "card_slug": "card_62_brass_bronze",
+      "type": "chat",
+      "concept_id": "brass_bronze_difference",
+      "level": 5,
+      "progress": {
+        "current": 62,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "BRASS vs BRONZE - ye BPSC का evergreen confusion! BRASS = Copper (Cu) + Zinc (Zn), golden color, decorative items, door handles में। BRONZE = Copper (Cu) + Tin (Sn), medals, statues, bells में। Bronze पुराना है - Bronze Age था history में!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab दोनों में copper common hai, बाकी metal अलग?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Perfect! Memory trick: BRASS में 'Z' sound = Zinc. BRONZE में 'T' missing = Tin. Brass ज्यादा malleable है, Bronze ज्यादा hard। Temple की घंटी bronze की होती है क्योंकि wo ज्यादा sonorous है!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Aur solder kya hota hai Sir?"
+        }
+      ],
+      "navigation": {
+        "next": "card_63_solder_amalgam",
+        "button_text": "Solder & Amalgam ➔"
+      }
+    },
+    {
+      "card_id": "card_63_solder_amalgam",
+      "card_slug": "card_63_solder_amalgam",
+      "type": "chat",
+      "concept_id": "solder_amalgam_uses",
+      "level": 5,
+      "progress": {
+        "current": 63,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "SOLDER = Lead (Pb) + Tin (Sn), LOW melting point (around 200°C) - electrical wires जोड़ने में use होता है। AMALGAM = Mercury (Hg) + any other metal (usually Silver/Tin) - dental fillings में पुराने time में use होता था।"
+        },
+        {
+          "speaker": "raju",
+          "text": "Low melting point क्यों चाहिए solder में?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Kyunki soldering iron से आसानी से melt होना चाहिए। Agar high melting point होगा तो wires खराब हो जाएंगे। Mercury room temperature पर liquid है - ye special property amalgam formation में use होती है। Gold/Silver की coating gold amalgam से की जाती थी!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Aircraft में kaunsa alloy use hota hai?"
+        }
+      ],
+      "navigation": {
+        "next": "card_64_duralumin",
+        "button_text": "Duralumin ➔"
+      }
+    },
+    {
+      "card_id": "card_64_duralumin",
+      "card_slug": "card_64_duralumin",
+      "type": "chat",
+      "concept_id": "duralumin_aircraft",
+      "level": 5,
+      "progress": {
+        "current": 64,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "DURALUMIN = Aluminium (95%) + Copper (4%) + Magnesium (0.5%) + Manganese (0.5%). Ye light + strong दोनों है - aircraft bodies, automobile parts में use होता है। Pure aluminium weak होता है, ये alloy बहुत मजबूत बना देता है!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab जहाज़ को हल्का रखना है पर मजबूत भी चाहिए - duralumin perfect!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Exactly! Ek aur: MAGNALIUM = Al + Mg, bahut हल्का, camera frames में। Alloys की properties उनके constituent metals से बेहतर होती हैं - ये concept ही alloying का purpose है। BPSC में पूछते हैं 'Why are alloys preferred over pure metals?'"
+        },
+        {
+          "speaker": "raju",
+          "text": "Answer: Better properties - hardness, strength, corrosion resistance!"
+        }
+      ],
+      "navigation": {
+        "next": "card_65_alloys_quiz_1",
+        "button_text": "Test Karo (1/3) ➔"
+      }
+    },
+    {
+      "card_id": "card_65_alloys_quiz_1",
+      "card_slug": "card_65_alloys_quiz_1",
+      "type": "quiz",
+      "concept_id": "alloys_test_1",
+      "level": 5,
+      "progress": {
+        "current": 65,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Stainless steel is an alloy of: (BPSC 2019, SSC CGL 2021)",
+        "options": [
+          {
+            "id": "A",
+            "text": "Iron, Carbon, Chromium, Nickel"
+          },
+          {
+            "id": "B",
+            "text": "Iron, Carbon, Copper"
+          },
+          {
+            "id": "C",
+            "text": "Copper, Zinc"
+          },
+          {
+            "id": "D",
+            "text": "Aluminium, Copper, Magnesium"
+          }
+        ],
+        "correct_option_id": "A",
+        "explanation": "STAINLESS STEEL = Iron + Carbon + Chromium (12-18%) + Nickel. Chromium oxide की protective layer बनती है जो corrosion रोकती है, इसलिए ये rust-proof होता है। Utensils, surgical instruments, cutlery में use होता है। Normal steel में chromium नहीं होता। ⭐ BPSC/SSC का favorite composition question!"
+      },
+      "navigation": {
+        "next": "card_66_alloys_quiz_2",
+        "button_text": "Next Question (2/3) ➔"
+      }
+    },
+    {
+      "card_id": "card_66_alloys_quiz_2",
+      "card_slug": "card_66_alloys_quiz_2",
+      "type": "quiz",
+      "concept_id": "alloys_test_2",
+      "level": 5,
+      "progress": {
+        "current": 66,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Which alloy is used in making aircraft bodies? (Railway NTPC 2018, UPSC Prelims 2020)",
+        "options": [
+          {
+            "id": "A",
+            "text": "Brass (पीतल)"
+          },
+          {
+            "id": "B",
+            "text": "Bronze (कांसा)"
+          },
+          {
+            "id": "C",
+            "text": "Duralumin (ड्यूरालुमिन)"
+          },
+          {
+            "id": "D",
+            "text": "Solder (सोल्डर)"
+          }
+        ],
+        "correct_option_id": "C",
+        "explanation": "DURALUMIN (Al 95% + Cu 4% + Mg 0.5% + Mn 0.5%) aircraft bodies में use होता है क्योंकि ये LIGHT + STRONG दोनों है। Pure aluminium weak होता है। Brass (Cu+Zn) decorative, Bronze (Cu+Sn) medals/statues, Solder (Pb+Sn) electrical wiring में। ⭐ Railway/UPSC में application-based questions!"
+      },
+      "navigation": {
+        "next": "card_67_alloys_quiz_3",
+        "button_text": "Next Question (3/3) ➔"
+      }
+    },
+    {
+      "card_id": "card_67_alloys_quiz_3",
+      "card_slug": "card_67_alloys_quiz_3",
+      "type": "quiz",
+      "concept_id": "alloys_test_3",
+      "level": 5,
+      "progress": {
+        "current": 67,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Brass is an alloy of: (SSC CHSL 2016, BSSC 2021)",
+        "options": [
+          {
+            "id": "A",
+            "text": "Copper and Tin (तांबा और टिन)"
+          },
+          {
+            "id": "B",
+            "text": "Copper and Zinc (तांबा और जस्ता)"
+          },
+          {
+            "id": "C",
+            "text": "Copper and Nickel (तांबा और निकल)"
+          },
+          {
+            "id": "D",
+            "text": "Iron and Carbon (लोहा और कार्बन)"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "BRASS = Copper (Cu) + Zinc (Zn), golden appearance, decorative items, door handles, utensils में। BRONZE = Copper + Tin (याद रखो: Bronze में 'B' = Bell, medals, statues)। ⭐ SSC/BSSC का evergreen confusion question! Memory trick: BRASS में 'Z' sound = Zinc."
+      },
+      "navigation": {
+        "next": "card_68_milestone_alloys",
+        "button_text": "Module Complete ➔"
+      }
+    },
+    {
+      "card_id": "card_68_milestone_alloys",
+      "card_slug": "card_68_milestone_alloys",
+      "type": "milestone",
+      "concept_id": "alloys_complete",
+      "level": 5,
+      "progress": {
+        "current": 68,
+        "total": 72
+      },
+      "milestone_payload": {
+        "title": "🎖️ MODULE 5 ALLOYED!",
+        "badge_emoji": "🔗",
+        "completed_topic": "Alloys & Applications",
+        "xp_earned": 65,
+        "milestone_progress": "Module 5/6 Complete",
+        "motivational_quote": "Pure से Mixed तक का सफर complete! अब last Officer-level revision और final boss quiz! 🏆"
+      },
+      "navigation": {
+        "next": "card_69_officer_revision",
+        "button_text": "Officer Revision ➔"
+      }
+    },
+    {
+      "card_id": "card_69_officer_revision",
+      "card_slug": "card_69_officer_revision",
+      "type": "summary",
+      "concept_id": "metals_complete_revision",
+      "level": 6,
+      "progress": {
+        "current": 69,
+        "total": 72
+      },
+      "summary_payload": {
+        "title": "⚡ METALS - Officer Revision Lightning Round",
+        "revision_points": [
+          {
+            "topic": "Physical Properties Ranking",
+            "point": "Best Conductor: Silver > Copper > Gold > Al. Most Malleable/Ductile: Gold > Silver > Al. Softest: Na, K (cut by knife, stored in kerosene). ⭐ BPSC/SSC Direct"
+          },
+          {
+            "topic": "Reactivity Series Trick",
+            "point": "Please Send Cats, Monkeys And Zebras In Lead Cages, Straight to Gold (K>Na>Ca>Mg>Al>Zn>Fe>Pb>Cu>Ag>Au). Above H = react with acid. Below H = NO reaction. ⭐ Displacement Rule"
+          },
+          {
+            "topic": "Chemical Reactions Multi-Statement",
+            "point": "Metal+O₂→Oxide (Na in kerosene). Metal+H₂O→Hydroxide+H₂↑ (Na violent, Fe needs steam). Metal+Acid→Salt+H₂↑ (pop sound test, only above H). Amphoteric: Al₂O₃, ZnO. ⭐ BPSC Trap"
+          },
+          {
+            "topic": "Extraction Classification",
+            "point": "Electrolysis: Na, K, Ca, Mg, Al (Hall-Heroult). Carbon Reduction: Zn, Fe, Pb, Cu (Blast Furnace). Simple Heating: Hg, Ag. Native State: Au, Ag, Pt. ⭐ UPSC/Railway Favorite"
+          },
+          {
+            "topic": "Corrosion & Alloys Assertion-Reason",
+            "point": "Rusting: Fe+O₂+H₂O→Fe₂O₃·xH₂O (3 conditions). Prevention: Galvanization (Zn coat), Electroplating (Cr/Ni). Alloys: Steel(Fe+C), Stainless(+Cr+Ni), Brass(Cu+Zn), Bronze(Cu+Sn), Duralumin(Al+Cu+Mg). ⭐ Composition Matching"
+          }
+        ]
+      },
+      "navigation": {
+        "next": "card_70_final_boss_quiz",
+        "button_text": "Take Final Boss Quiz ➔"
+      }
+    },
+    {
+      "card_id": "card_70_final_boss_quiz",
+      "card_slug": "card_70_final_boss_quiz",
+      "type": "final_quiz",
+      "concept_id": "metals_final_assessment",
+      "level": 6,
+      "progress": {
+        "current": 70,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Consider the following statements about metals (BPSC Pattern Multi-Statement):\n\n1. All lustrous objects are metals.\n2. Copper cannot displace zinc from zinc sulphate solution.\n3. Aluminium oxide is amphoteric in nature.\n4. Duralumin is lighter than pure aluminium.\n\nWhich of the above statements are CORRECT?",
+        "options": [
+          {
+            "id": "A",
+            "text": "1, 2 and 3 only"
+          },
+          {
+            "id": "B",
+            "text": "2 and 3 only"
+          },
+          {
+            "id": "C",
+            "text": "2, 3 and 4 only"
+          },
+          {
+            "id": "D",
+            "text": "1, 3 and 4 only"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Statement Analysis:\n\n(1) INCORRECT - Iodine (non-metal) भी lustrous है। सही: Metals are lustrous, but not all lustrous objects are metals.\n\n(2) CORRECT - Copper reactivity series में Zinc से NICHE है (कम reactive), इसलिए displacement NAHI होगा। Rule: More reactive displaces less reactive.\n\n(3) CORRECT - Al₂O₃ AMPHOTERIC है - acid और base दोनों से react करता है। Al₂O₃ + HCl और Al₂O₃ + NaOH दोनों संभव।\n\n(4) INCORRECT - Duralumin (Al+Cu+Mg+Mn) pure aluminium से HEAVIER है (alloy है), पर STRONGER है। Light property aluminium से आती है पर pure से हल्का नहीं।\n\n✅ Correct Statements: 2 and 3 only.\n\n⭐ BPSC 2023 pattern! Multi-statement questions में हर statement को independently verify करो।"
+      },
+      "navigation": {
+        "next": "card_71_personalized_feedback",
+        "button_text": "See Your Report ➔"
+      }
+    },
+    {
+      "card_id": "card_71_personalized_feedback",
+      "card_slug": "card_71_personalized_feedback",
+      "type": "chat",
+      "concept_id": "journey_complete_feedback",
+      "level": 6,
+      "progress": {
+        "current": 71,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, kya journey rahi! Kitchen के utensils से लेकर BPSC के multi-statement questions तक - tumne METALS ko पूरी तरह समझ लिया!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir अब लगता है कि exam में कहीं से भी metals पर सवाल आए, मैं handle कर लूंगा! Reactivity series, extraction, corrosion, alloys सब clear हैं!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Perfect confidence! याद रखो: Physical properties (lustre, malleability, ductility, conductivity), Chemical reactions (oxygen, water, acid, displacement), Extraction methods (electrolysis vs carbon reduction), Corrosion prevention, और Alloys composition - ये 5 pillars सब exams में repeated होते हैं!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Thank you Sir! Ab Chemistry में metals मेरा strong topic ban गया! 🔥"
+        }
+      ],
+      "navigation": {
+        "next": "card_72_trophy",
+        "button_text": "Claim Your Trophy ➔"
+      }
+    },
+    {
+      "card_id": "card_72_trophy",
+      "card_slug": "card_72_trophy",
+      "type": "milestone",
+      "concept_id": "chapter_complete_trophy",
+      "level": 6,
+      "progress": {
+        "current": 72,
+        "total": 72
+      },
+      "milestone_payload": {
+        "title": "🏆 CHAPTER MASTERED!",
+        "badge_emoji": "⚡",
+        "completed_topic": "METALS IN CHEMISTRY - Complete Syllabus",
+        "xp_earned": 500,
+        "milestone_progress": "100% Complete",
+        "motivational_quote": "From Zero to Officer Level! तुमने Physical Properties, Reactivity Series, Extraction Methods, Corrosion, और Alloys - सबकुछ conquer किया! BPSC/SSC/Railway/NEET - कहीं भी Metals के questions अब तुम्हारे हाथ की मिट्टी! 🚀🔥 Keep Learning, Keep Rising!"
+      },
+      "navigation": {
+        "next": null,
+        "button_text": "Back to Dashboard 🏠"
+      }
+    }
+  ]
+}
