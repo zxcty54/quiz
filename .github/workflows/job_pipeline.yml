@@ -27,8 +27,8 @@ jobs:
       - name: Install Dependencies
         run: |
           python -m pip install --upgrade pip
-          # ✅ PyMuPDF (fitz) yahan add kar diya gaya hai PDF reading ke liye
-          pip install curl_cffi beautifulsoup4 groq lxml PyMuPDF
+          # ✅ Added requests to avoid ModuleNotFoundError
+          pip install requests curl_cffi beautifulsoup4 groq lxml PyMuPDF
 
       - name: Run Job Scraper & AI Summarizer
         env:
