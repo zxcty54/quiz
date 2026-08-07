@@ -1,294 +1,851 @@
 import os
-import re
+
 import json
-import logging
+
+import time
+
+import re
+
 from datetime import datetime
-import requests
+
+from curl_cffi import requests
+
 from bs4 import BeautifulSoup
 
-# ==========================================
-# CONFIGURATION & CONSTANTS
-# ==========================================
+from groq import Groq
+
+import fitz # PyMuPDF
+
+
+
+# -------------------------------------------------------------
+
+# 1. API Client Setup (Groq API)
+
+# -------------------------------------------------------------
+
+GROQ_KEY = os.environ.get("GROQ_API_KEY")
+
+client = Groq(api_key=GROQ_KEY) if GROQ_KEY else None
+
+
+
+MODELS = ["llama-3.1-8b-instant", "mixtral-8x7b-32768", "llama-3.3-70b-versatile"]
+
+
 
 HEADERS = {
-    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+
+'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
+
 }
 
-# Specific mapping keys to avoid false positives (e.g. generic 'post', 'army', 'navy')
+
+
+# -------------------------------------------------------------
+
+# 2. ORGANIZATION MAPPING DICTIONARY (NO "Government Body")
+
+# -------------------------------------------------------------
+
 ORG_MAP = {
-    "india post": "India Post / Department of Posts",
-    "indian army": "Indian Army",
-    "indian navy": "Indian Navy",
-    "indian air force": "Indian Air Force",
-    "bpsc": "Bihar Public Service Commission (BPSC)",
-    "bssc": "Bihar Staff Selection Commission (BSSC)",
-    "btsc": "Bihar Technical Service Commission (BTSC)",
-    "csbc": "Central Selection Board of Constable (CSBC)",
-    "bpssc": "Bihar Police Subordinate Services Commission (BPSSC)",
-    "ssc": "Staff Selection Commission (SSC)",
-    "rrb": "Railway Recruitment Board (RRB)",
-    "sbi": "State Bank of India (SBI)",
-    "ibps": "Institute of Banking Personnel Selection (IBPS)",
-    "upsc": "Union Public Service Commission (UPSC)",
-    "nta": "National Testing Agency (NTA)",
-    "lic": "Life Insurance Corporation (LIC)"
+
+# Bihar State Bodies
+
+"bpsc": "Bihar Public Service Commission (BPSC)",
+
+"bssc": "Bihar Staff Selection Commission (BSSC)",
+
+"csbc": "Central Selection Board of Constable (CSBC)",
+
+"bpssc": "Bihar Police Subordinate Services Commission (BPSSC)",
+
+"btsc": "Bihar Technical Service Commission (BTSC)",
+
+"bceceb": "Bihar Combined Entrance Competitive Examination Board (BCECEB)",
+
+"beltron": "Bihar State Electronics Development Corporation (BELTRON)",
+
+"vidhan sabha": "Bihar Vidhan Sabha",
+
+"vidhan parishad": "Bihar Vidhan Parishad",
+
+"civil court": "Bihar Civil Court",
+
+"patna high court": "Patna High Court",
+
+"bihar health": "Bihar State Health Society (SHSB)",
+
+"bihar teacher": "Bihar School Examination Board (BSEB / TRE)",
+
+
+# Central Govt & PSU Bodies
+
+"ssc": "Staff Selection Commission (SSC)",
+
+"rrb": "Railway Recruitment Board (RRB)",
+
+"railway": "Indian Railways",
+
+"ibps": "Institute of Banking Personnel Selection (IBPS)",
+
+"sbi": "State Bank of India (SBI)",
+
+"rbi": "Reserve Bank of India (RBI)",
+
+"upsc": "Union Public Service Commission (UPSC)",
+
+"epfo": "Employees' Provident Fund Organisation (EPFO)",
+
+"esic": "Employees' State Insurance Corporation (ESIC)",
+
+"lic": "Life Insurance Corporation of India (LIC)",
+
+"fci": "Food Corporation of India (FCI)",
+
+"aiims": "All India Institute of Medical Sciences (AIIMS)",
+
+"drdo": "Defence Research and Development Organisation (DRDO)",
+
+"isro": "Indian Space Research Organisation (ISRO)",
+
+"nta": "National Testing Agency (NTA)",
+
+"icar": "Indian Council of Agricultural Research (ICAR)",
+
+"post": "India Post / Department of Posts",
+
+"coast guard": "Indian Coast Guard",
+
+"navy": "Indian Navy",
+
+"army": "Indian Army",
+
+"air force": "Indian Air Force",
+
+"bsf": "Border Security Force (BSF)",
+
+"crpf": "Central Reserve Police Force (CRPF)",
+
+"cisf": "Central Industrial Security Force (CISF)",
+
+"itbp": "Indo-Tibetan Border Police (ITBP)"
+
 }
 
-REJECT_TITLE_KEYWORDS = [
-    "admit card coming soon", "result declared soon", "syllabus", 
-    "answer key", "cut off", "model paper", "previous year paper"
+
+
+def detect_organization(text):
+
+text_lower = text.lower()
+
+for key, full_name in ORG_MAP.items():
+
+if key in text_lower:
+
+return full_name
+
+return "Central / Bihar Govt Agency"
+
+
+
+def clean_html_text(text):
+
+if not text:
+
+return ""
+
+return BeautifulSoup(text, "html.parser").get_text().strip()
+
+
+
+def remove_markdown_stars(data):
+
+if isinstance(data, dict):
+
+return {k: remove_markdown_stars(v) for k, v in data.items()}
+
+elif isinstance(data, list):
+
+return [remove_markdown_stars(item) for item in data]
+
+elif isinstance(data, str):
+
+return data.replace("**", "").replace("##", "").strip()
+
+return data
+
+
+
+# -------------------------------------------------------------
+
+# 3. ROBUST MULTI-PATTERN REGEX PARSER
+
+# -------------------------------------------------------------
+
+def extract_fields_with_regex(text):
+
+extracted = {
+
+"application_fee": None,
+
+"start_date": None,
+
+"last_date": None,
+
+"age_limit": None,
+
+"total_vacancies": None
+
+}
+
+
+
+# 1. Multi-Pattern Application Fee (Handles General/OBC: ₹500 | SC/ST: ₹125)
+
+fee_patterns = [
+
+r'(?:Application\s*Fee|Exam\s*Fee|Fee\s*Details)[\s\S]{1,200}?(?=\n\s*\n|Important|Age|Qualification|$)',
+
+r'(?:General\s*/?\s*OBC|UR\s*/?\s*EWS)[^.\n]*[₹\d]+[^.\n]*',
+
+r'(?:Gen\s*/?\s*OBC\s*:\s*₹?\d+[\s\S]{1,100}?SC\s*/?\s*ST\s*:\s*₹?\d+)'
+
 ]
 
-REJECT_INNER_KEYWORDS = [
-    "fake news", "not official yet", "expected date"
+for pattern in fee_patterns:
+
+match = re.search(pattern, text, re.IGNORECASE)
+
+if match:
+
+clean_fee = re.sub(r'\s+', ' ', match.group(0)).strip()
+
+extracted["application_fee"] = clean_fee[:150]
+
+break
+
+
+
+if not extracted["application_fee"]:
+
+if re.search(r'\b(no fee|free of cost|nil|exempted)\b', text, re.IGNORECASE):
+
+extracted["application_fee"] = "General / OBC / SC / ST: ₹0 (No Fee)"
+
+
+
+# 2. Multi-Pattern Dates (DD/MM/YYYY, DD-MM-YYYY, DD Month YYYY)
+
+date_matches = re.findall(r'\b\d{1,2}[/-]\d{1,2}[/-]\d{2,4}\b|\b\d{1,2}\s+(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)[a-z]*\s+\d{2,4}\b', text, re.IGNORECASE)
+
+if len(date_matches) >= 2:
+
+extracted["start_date"] = date_matches[0]
+
+extracted["last_date"] = date_matches[1]
+
+elif len(date_matches) == 1:
+
+extracted["last_date"] = date_matches[0]
+
+
+
+# 3. Multi-Pattern Age Limit
+
+age_patterns = [
+
+r'(\d{2}\s*to\s*\d{2}\s*years)',
+
+r'(\d{2}\s*-\s*\d{2}\s*years)',
+
+r'(Minimum\s*Age\s*:\s*\d{2}[\s\S]{1,50}?Maximum\s*Age\s*:\s*\d{2})',
+
+r'(Min\.?\s*\d{2}\s*Yrs?[\s\S]{1,30}?Max\.?\s*\d{2}\s*Yrs?)'
+
 ]
 
-# ==========================================
-# HELPER FUNCTIONS & PARSERS
-# ==========================================
+for pattern in age_patterns:
 
-def clean_html_text(text: str) -> str:
-    """Removes extra spaces, tabs, and newlines from scraped HTML text."""
-    if not text:
-        return ""
-    return re.sub(r'\s+', ' ', text).strip()
+match = re.search(pattern, text, re.IGNORECASE)
 
-def check_title_rejection(title: str) -> bool:
-    """Checks if the title contains invalid or unwanted keywords."""
-    title_lower = title.lower()
-    for kw in REJECT_TITLE_KEYWORDS:
-        if kw in title_lower:
-            return True
-    return False
+if match:
 
-def check_inner_rejection(text: str) -> bool:
-    """Checks if the internal page text contains rejection keywords."""
-    text_lower = text.lower()
-    for kw in REJECT_INNER_KEYWORDS:
-        if kw in text_lower:
-            return True
-    return False
+clean_age = re.sub(r'\s+', ' ', match.group(0)).strip()
 
-def clean_post_name(title: str) -> str:
-    """Extracts a cleaner post name from the full notification title."""
-    clean = re.sub(r'(?i)(recruitment|online form|apply online|202\d|notice)', '', title)
-    return clean.strip()
+extracted["age_limit"] = clean_age
 
-def fetch_and_parse_pdf(pdf_url: str) -> str:
-    """Placeholder function for PDF parsing logic."""
-    try:
-        # Custom PDF parsing logic (e.g. using pypdf / pdfplumber) can go here
-        return "PDF Content Placeholder"
-    except Exception as e:
-        print(f"Error reading PDF {pdf_url}: {e}")
-        return ""
+break
 
-def extract_fields_with_regex(context: str) -> dict:
-    """Extracts structured fields like vacancy count, age limit, fees, and dates using regex patterns."""
-    context_lower = context.lower()
-    
-    # 1. Total Vacancies
-    vacancies_match = re.search(r'(\d+[\d,]*)\s*(posts|vacancies|seats)', context_lower)
-    total_vacancies = vacancies_match.group(1) if vacancies_match else None
 
-    # 2. Qualification
-    qual_match = re.search(r'(10th|12th|graduate|diploma|b\.tech|m\.tech|degree|passed)', context_lower)
-    qualification = qual_match.group(0).upper() if qual_match else None
 
-    # 3. Age Limit
-    age_match = re.search(r'(\d{2}\s*-\s*\d{2}\s*years|\d{2}\s*to\s*\d{2}\s*years)', context_lower)
-    age_limit = age_match.group(0) if age_match else None
+# 4. Multi-Pattern Total Vacancies
 
-    # 4. Application Fee
-    fee_match = re.search(r'(rs\.?\s*\d+|₹\s*\d+|free|nil)', context_lower)
-    application_fee = fee_match.group(0) if fee_match else None
+vac_match = re.search(r'\b(\d{2,6})\s*(Posts|Vacancies|Seat|Seats)\b', text, re.IGNORECASE)
 
-    # 5. Start & Last Date
-    start_match = re.search(r'(start date|apply date)\s*:\s*([\d\/\-]+)', context_lower)
-    start_date = start_match.group(2) if start_match else None
+if vac_match:
 
-    last_match = re.search(r'(last date)\s*:\s*([\d\/\-]+)', context_lower)
-    last_date = last_match.group(2) if last_match else None
+extracted["total_vacancies"] = f"{vac_match.group(1)} Posts"
 
-    return {
-        "total_vacancies": total_vacancies,
-        "qualification": qualification,
-        "age_limit": age_limit,
-        "application_fee": application_fee,
-        "start_date": start_date,
-        "last_date": last_date
-    }
 
-# ==========================================
-# SCRAPING & DATA SOURCES
-# ==========================================
 
-def scrape_official_websites() -> list:
-    """Scrapes official source sites (Mock implementation)."""
-    # Dummy candidates structure for pipeline demonstration
-    return [
-        {
-            "title": "BPSC Assistant Professor Recruitment 2026 Apply Online",
-            "url": "https://bpsc.bih.nic.in/example-job",
-            "type": "job",
-            "org": "Bihar Public Service Commission (BPSC)"
-        },
-        {
-            "title": "India Post GDS Online Form 2026 - 30000 Posts",
-            "url": "https://indiapost.gov.in/gds-job",
-            "type": "job",
-            "org": ORG_MAP.get("india post", "India Post")
-        }
-    ]
+return extracted
 
-def fetch_backup_rss_and_web() -> list:
-    """Fetches candidates from backup RSS feeds and secondary web sources."""
-    return [
-        {
-            "title": "Indian Army Agniveer Rally Admit Card 2026",
-            "url": "https://joinindianarmy.nic.in/admit-card",
-            "type": "admit",
-            "org": ORG_MAP.get("indian army", "Indian Army")
-        },
-        {
-            "title": "SSC CGL 2026 Final Result Declared",
-            "url": "https://ssc.gov.in/result",
-            "type": "result",
-            "org": ORG_MAP.get("ssc", "Staff Selection Commission")
-        }
-    ]
 
-# ==========================================
-# MAIN PIPELINE EXECUTION
-# ==========================================
+
+# -------------------------------------------------------------
+
+# 4. REAL PDF LINK CRAWLER & DEEP PARSER (UP TO PAGE 10)
+
+# -------------------------------------------------------------
+
+def fetch_deep_page_and_pdf(url):
+
+"""
+
+Crawls HTML page, finds official Notification PDF link (.pdf),
+
+and uses PyMuPDF (fitz) to read up to 10 pages deep.
+
+"""
+
+try:
+
+res = requests.get(url, headers=HEADERS, timeout=10, verify=False)
+
+if res.status_code != 200:
+
+return ""
+
+
+
+# Case A: Direct PDF URL
+
+if url.endswith('.pdf') or 'application/pdf' in res.headers.get('Content-Type', ''):
+
+doc = fitz.open(stream=res.content, filetype="pdf")
+
+text = ""
+
+for page_num in range(min(len(doc), 10)): # Scans up to 10 Pages
+
+text += doc[page_num].get_text("text") + "\n"
+
+return clean_html_text(text[:12000])
+
+
+
+# Case B: Article Page -> Find embedded official PDF Link
+
+soup = BeautifulSoup(res.content, "html.parser")
+
+for tag in soup.find_all(['script', 'style', 'nav', 'footer', 'header', 'aside']):
+
+tag.decompose()
+
+
+
+pdf_link = None
+
+for a_tag in soup.find_all('a', href=True):
+
+href = a_tag['href']
+
+text_a = a_tag.text.lower()
+
+if href.endswith('.pdf') or "notification" in text_a or "advertisement" in text_a:
+
+pdf_link = href
+
+if not pdf_link.startswith('http'):
+
+pdf_link = requests.compat.urljoin(url, pdf_link)
+
+break
+
+
+
+# If PDF link found inside article -> Download & Parse PDF
+
+if pdf_link and pdf_link != url:
+
+try:
+
+pdf_res = requests.get(pdf_link, headers=HEADERS, timeout=10, verify=False)
+
+if pdf_res.status_code == 200 and len(pdf_res.content) > 5000:
+
+doc = fitz.open(stream=pdf_res.content, filetype="pdf")
+
+text = ""
+
+for page_num in range(min(len(doc), 10)):
+
+text += doc[page_num].get_text("text") + "\n"
+
+print(f"📄 Successfully Parsed Embedded Official PDF ({pdf_link})!")
+
+return clean_html_text(text[:12000])
+
+except Exception as e:
+
+print(f"⚠️ Embedded PDF fetch error: {e}")
+
+
+
+# Fallback: Extract HTML Body Text
+
+content = soup.find('div', id=re.compile(r'post|content|entry')) or soup.find('body')
+
+return clean_html_text(content.text if content else "")[:8000]
+
+
+
+except Exception as e:
+
+print(f"⚠️ Page/PDF fetch failed ({url}): {e}")
+
+return ""
+
+
+
+# -------------------------------------------------------------
+
+# 5. MICRO-PROMPT GROQ AI FALLBACK (PER SINGLE NOTIFICATION)
+
+# -------------------------------------------------------------
+
+def fill_missing_fields_with_ai(title, raw_snippet, missing_keys):
+
+if not GROQ_KEY or not missing_keys:
+
+return {}
+
+
+
+prompt = f"""
+
+Item Title: {title}
+
+Notification Text Context: {raw_snippet[:2000]}
+
+
+
+Extract ONLY the missing fields ({', '.join(missing_keys)}) for this government notification.
+
+
+JSON Output Schema:
+
+{{
+
+"application_fee": "Category-wise fee breakdown or 'Refer Official Notification'",
+
+"start_date": "Exact start date or 'Online Active'",
+
+"last_date": "Exact last date or 'Refer Official Notification'",
+
+"age_limit": "Min and Max age criteria",
+
+"qualification": "Exact Educational Qualification",
+
+"post_name": "Specific Post Name"
+
+}}
+
+"""
+
+
+
+time.sleep(1)
+
+for model in MODELS:
+
+try:
+
+res = client.chat.completions.create(
+
+model=model,
+
+messages=[
+
+{"role": "system", "content": "You are a recruitment data extractor. Output strictly JSON."},
+
+{"role": "user", "content": prompt}
+
+],
+
+temperature=0.01,
+
+response_format={"type": "json_object"},
+
+max_tokens=600,
+
+timeout=20
+
+)
+
+return json.loads(res.choices[0].message.content.strip())
+
+except Exception as e:
+
+print(f"⚠️ Micro-LLM Call Failed ({model}): {e}")
+
+return {}
+
+
+
+# -------------------------------------------------------------
+
+# 6. HARD REJECTION KEYWORDS
+
+# -------------------------------------------------------------
+
+REJECT_KEYWORDS = [
+
+# University, College & Academic Results
+
+"university", "college", "semester", "ba part", "bsc ", "bcom", "ma ", "msc ",
+
+"degree college", "annual exam", "admissions", "counselling", "allotment", "entrance test",
+
+
+
+# Scholarships & Yojnas
+
+"scholarship", "post matric", "nsp scholarship", "yojna", "scheme", "pension",
+
+
+
+# Other States
+
+"uttar pradesh", " up police", " up board", "uppsc", " up govt",
+
+"madhya pradesh", "mppsc", "rajasthan", "rpsc", "haryana", "hpsc",
+
+"dsssb", "maharashtra", "mpsc", "madc", "jharkhand", "jpsc",
+
+"west bengal", "wbpsc", "punjab", "ppsc", "gujarat", "gpsc",
+
+"tamil nadu", "tnpsc", "tancet", "andhra pradesh", "appsc",
+
+"telangana", "tspsc", "kerala", "kpsc", "karnataka", "odisha", "opsc",
+
+
+
+# Apprentice & Doctors
+
+"apprentice", "apprenticeship", "mbbs", "medical officer", "specialist medical officer"
+
+]
+
+
+
+def is_rejected(text):
+
+t_lower = text.lower()
+
+return any(keyword in t_lower for keyword in REJECT_KEYWORDS)
+
+
+
+def clean_post_name(title):
+
+clean = re.sub(r'(Recruitment|Notification|Online Form|Apply Online|2025|2026)', '', title, flags=re.IGNORECASE)
+
+return clean.strip()[:50]
+
+
+
+# -------------------------------------------------------------
+
+# 7. MAIN PIPELINE EXECUTION
+
+# -------------------------------------------------------------
 
 def run_job_pipeline():
-    today_str = datetime.now().strftime("%d %b %Y")
 
-    latest_jobs = []
-    admit_cards = []
-    results = []
-    seen_titles = set()
+today_str = datetime.now().strftime("%d %b %Y")
 
-    print("\n=======================================================")
-    print("🚀 JOB SCRAPER STARTED")
-    print("=======================================================")
 
-    # Step 1: Official sources
-    raw_candidates = scrape_official_websites()
+latest_jobs = []
 
-    print("\n=======================================================")
-    print("🔄 BACKUP SOURCES FETCH")
-    print("=======================================================")
+admit_cards = []
 
-    backup_candidates = fetch_backup_rss_and_web()
-    raw_candidates.extend(backup_candidates)
+results = []
 
-    print(f"📊 Total Candidates: {len(raw_candidates)}")
 
-    for idx, candidate in enumerate(raw_candidates):
 
-        title = candidate["title"]
-        url = candidate["url"]
-        item_type = candidate["type"]
-        org_name = candidate["org"]
+sources = [
 
-        if check_title_rejection(title):
-            continue
+("SSC Central", "https://www.freejobalert.com/ssc-job-notifications/feed/", "job"),
 
-        clean_key = re.sub(r'[^a-zA-Z0-9]', '', title.lower())[:40]
+("Railway Central", "https://www.freejobalert.com/railway-jobs/feed/", "job"),
 
-        if clean_key in seen_titles:
-            continue
+("Bank Central", "https://www.freejobalert.com/bank-jobs/feed/", "job"),
 
-        seen_titles.add(clean_key)
+("UPSC Central", "https://www.freejobalert.com/upsc-job-notifications/feed/", "job"),
 
-        print(f"\n[{idx+1}/{len(raw_candidates)}] 🔍 {title}")
+("Bihar Govt", "https://www.freejobalert.com/state-government-jobs/feed/", "job"),
 
-        raw_text = ""
+("Admit Cards", "https://www.freejobalert.com/admit-card/feed/", "admit"),
 
-        try:
-            if url.lower().endswith(".pdf"):
-                raw_text = fetch_and_parse_pdf(url)
-            else:
-                # Custom requests call
-                page = requests.get(
-                    url,
-                    headers=HEADERS,
-                    timeout=10,
-                    verify=False
-                )
+("Results", "https://www.freejobalert.com/exam-result/feed/", "result")
 
-                if page.status_code == 200:
-                    soup = BeautifulSoup(page.content, "html.parser")
-                    raw_text = clean_html_text(soup.text[:6000])
+]
 
-        except Exception as e:
-            print("Fetch error:", e)
 
-        full_context = title + "\n" + raw_text
 
-        if check_inner_rejection(full_context):
-            print("❌ Rejected inner text")
-            continue
+seen_titles = set()
 
-        extracted = extract_fields_with_regex(full_context)
 
-        if item_type == "job":
-            latest_jobs.append({
-                "id": f"job_{len(latest_jobs)+1:02d}",
-                "title": title,
-                "organization": org_name,
-                "job_type": (
-                    "Bihar Govt Job"
-                    if "bihar" in full_context.lower()
-                    else "Central Govt Job"
-                ),
-                "post_name": clean_post_name(title),
-                "total_vacancies": extracted["total_vacancies"] or "Check Official Notification",
-                "qualification": extracted["qualification"] or "Refer Official Notification",
-                "age_limit": extracted["age_limit"] or "Refer Official Notification",
-                "application_fee": extracted["application_fee"] or "Refer Official Notification",
-                "start_date": extracted["start_date"] or "Online Active",
-                "last_date": extracted["last_date"] or "Refer Official Notification",
-                "apply_url": "https://www.mocktester.online",
-                "exam_tag": "🔥 Govt Job Alert",
-                "date": today_str
-            })
 
-        elif item_type == "admit":
-            admit_cards.append({
-                "id": f"admit_{len(admit_cards)+1:02d}",
-                "title": title,
-                "organization": org_name,
-                "status": "Admit Card Released",
-                "date": today_str
-            })
+for label, feed_url, item_type in sources:
 
-        elif item_type == "result":
-            results.append({
-                "id": f"result_{len(results)+1:02d}",
-                "title": title,
-                "organization": org_name,
-                "status": "Result Released",
-                "date": today_str
-            })
+try:
 
-    final_output = {
-        "latest_jobs": latest_jobs,
-        "admit_cards": admit_cards,
-        "results": results
-    }
+res = requests.get(feed_url, headers=HEADERS, timeout=12, verify=False)
 
-    with open("bihar_jobs.json", "w", encoding="utf-8") as f:
-        json.dump(final_output, f, ensure_ascii=False, indent=2)
+if res.status_code != 200:
 
-    print("\n=======================================================")
-    print("📊 FINAL REPORT")
-    print("Jobs:", len(latest_jobs))
-    print("Admit:", len(admit_cards))
-    print("Results:", len(results))
-    print("=======================================================")
+continue
+
+
+
+soup = BeautifulSoup(res.content, "xml")
+
+items = soup.find_all('item')[:12]
+
+
+
+for item in items:
+
+title = item.find('title').text.strip() if item.find('title') is not None else ""
+
+link = item.find('link').text.strip() if item.find('link') is not None else ""
+
+
+if not title or len(title) < 5 or is_rejected(title):
+
+continue
+
+
+
+simple_title = re.sub(r'[^a-zA-Z0-9]', '', title.lower())[:30]
+
+if simple_title in seen_titles:
+
+continue
+
+seen_titles.add(simple_title)
+
+
+
+print(f"\n🔍 Processing [{item_type.upper()}]: {title}")
+
+
+
+# Deep Scrape: Article Page + PDF Crawler
+
+raw_snippet = ""
+
+if link:
+
+raw_snippet = fetch_deep_page_and_pdf(link)
+
+
+
+full_text_context = f"{title}\n{raw_snippet}"
+
+
+
+if is_rejected(full_text_context):
+
+print(f"❌ Python Inner Filter Blocked: {title}")
+
+continue
+
+
+
+# --- STEP A: REGEX EXTRACTION (0 TOKENS) ---
+
+extracted = extract_fields_with_regex(full_text_context)
+
+
+
+# --- STEP B: CHECK MISSING FIELDS ---
+
+missing_keys = [k for k, v in extracted.items() if v is None]
+
+
+
+# --- STEP C: MICRO-LLM CALL (MISSING FIELDS ONLY) ---
+
+if missing_keys and GROQ_KEY and item_type == "job":
+
+print(f"⚡ Missing fields {missing_keys} -> Calling Micro-LLM...")
+
+ai_res = fill_missing_fields_with_ai(title, raw_snippet, missing_keys)
+
+for key in missing_keys:
+
+if ai_res.get(key):
+
+extracted[key] = ai_res[key]
+
+
+
+# Detect Exact Recruitment Body
+
+org_name = detect_organization(full_text_context)
+
+
+
+# --- STEP D: MAP TO FINAL JSON STRUCTURE ---
+
+if item_type == "job":
+
+job_card = {
+
+"id": f"job_{len(latest_jobs)+1:02d}",
+
+"title": title,
+
+"organization": org_name,
+
+"job_type": "Bihar Govt Job" if "bihar" in full_text_context.lower() or "bpsc" in full_text_context.lower() else "Central Govt Job",
+
+"post_name": extracted.get("post_name") or clean_post_name(title),
+
+"total_vacancies": extracted.get("total_vacancies") or "Check Official Notification",
+
+"qualification": extracted.get("qualification") or "Refer Official Notification", # Dangerous fallback fixed
+
+"age_limit": extracted.get("age_limit") or "18-37 Years (Relaxation Applicable)",
+
+"application_fee": extracted.get("application_fee") or "Refer Official Notification",
+
+"start_date": extracted.get("start_date") or "Online Active",
+
+"last_date": extracted.get("last_date") or "Refer Official Notification",
+
+"apply_url": "https://www.mocktester.online",
+
+"exam_tag": "🔥 Govt Job Alert",
+
+"date": today_str
+
+}
+
+latest_jobs.append(job_card)
+
+
+
+elif item_type == "admit":
+
+admit_card = {
+
+"id": f"admit_{len(admit_cards)+1:02d}",
+
+"title": title,
+
+"organization": org_name,
+
+"job_type": "Bihar Govt Job" if "bihar" in full_text_context.lower() else "Central Govt Job",
+
+"post_name": clean_post_name(title),
+
+"total_vacancies": "As per Rules",
+
+"exam_date": extracted.get("start_date") or "As Scheduled",
+
+"status": "Admit Card Released / Active",
+
+"apply_url": "https://www.mocktester.online",
+
+"exam_tag": "🎫 Hall Ticket",
+
+"date": today_str
+
+}
+
+admit_cards.append(admit_card)
+
+
+
+elif item_type == "result":
+
+res_card = {
+
+"id": f"result_{len(results)+1:02d}",
+
+"title": title,
+
+"organization": org_name,
+
+"job_type": "Bihar Govt Job" if "bihar" in full_text_context.lower() else "Central Govt Job",
+
+"post_name": clean_post_name(title),
+
+"total_vacancies": "As per Rules",
+
+"result_status": "Merit List / Result Released",
+
+"apply_url": "https://www.mocktester.online",
+
+"exam_tag": "🏆 Result",
+
+"date": today_str
+
+}
+
+results.append(res_card)
+
+
+
+except Exception as e:
+
+print(f"⚠️ Source Error ({label}): {e}")
+
+
+
+# Build Final Output
+
+final_output = {
+
+"latest_jobs": latest_jobs,
+
+"admit_cards": admit_cards,
+
+"results": results
+
+}
+
+
+
+final_output = remove_markdown_stars(final_output)
+
+
+
+if latest_jobs or admit_cards or results:
+
+with open("bihar_jobs.json", "w", encoding="utf-8") as f:
+
+json.dump(final_output, f, ensure_ascii=False, indent=2)
+
+print(f"\n✅ bihar_jobs.json successfully generated!\n"
+
+f"👉 Jobs: {len(latest_jobs)}\n"
+
+f"👉 Admit Cards: {len(admit_cards)}\n"
+
+f"👉 Results: {len(results)}")
+
+else:
+
+print("\n🛡️ SAFEGUARD: No valid items found. Retaining existing file.")
+
+
 
 if __name__ == "__main__":
-    run_job_pipeline()
+
+run_job_pipeline()
