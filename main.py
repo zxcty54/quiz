@@ -199,15 +199,19 @@ def fetch_raw_national_news(target_dt):
 
 
 def fetch_raw_jobs():
-    """Scrapes Detailed Raw Jobs, Admit Cards & Results for Bihar & Central Exams"""
+    """HIGH-DEPTH Scraper for Full Job Notifications & FreeJobAlert Feeds"""
     job_notices = []
     headers = {
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
     }
 
     queries = [
-        "Bihar+BPSC+BSSC+CSBC+BPSSC+Patna+High+Court+Recruitment+Admit+Card+Result",
-        "SSC+CGL+CHSL+MTS+Railway+RRB+NTPC+ALP+Bank+IBPS+SBI+UPSC+Admit+Card+Result"
+        "Bihar+BPSC+OR+BSSC+OR+CSBC+OR+BPSSC+OR+Patna+High+Court+Recruitment+Qualification+Fees",
+        "Bihar+Teacher+TRE+OR+Bihar+Health+Dept+OR+Beltron+OR+Civil+Court+Vacancy+Eligibility",
+        "SSC+CGL+OR+CHSL+OR+MTS+OR+GD+Constable+Notification+Qualification+Dates",
+        "Railway+RRB+NTPC+OR+Group+D+OR+ALP+OR+Technician+Vacancy+Eligibility",
+        "Banking+IBPS+PO+Clerk+OR+SBI+PO+Clerk+OR+UPSC+Notification+Details",
+        "Govt+Job+Admit+Card+OR+Result+2026+Bihar+SSC+Railway"
     ]
     for q in queries:
         try:
@@ -219,22 +223,25 @@ def fetch_raw_jobs():
                     title = item.find('title').text if item.find('title') is not None else ""
                     desc = clean_html_text(item.find('description').text if item.find('description') is not None else "")
                     if title:
-                        job_notices.append(f"[Google Alert] Title: {title} | Summary: {desc[:400]}")
+                        job_notices.append(f"[Google Alert] Title: {title} | Full Content Snippet: {desc[:800]}")
         except Exception as e:
             print(f"⚠️ Error Job Query ({q}): {e}")
-    print("✅ Google Job Alerts fetched successfully!")
+    print("✅ Google Job Alerts (Deep Snippets) fetched successfully!")
 
+    # FreeJobAlert Main Feed (Deep Scrape)
     try:
         fja_url = "https://www.freejobalert.com/feed/"
         res = requests.get(fja_url, headers=headers, timeout=15, verify=False)
         if res.status_code == 200:
             soup = BeautifulSoup(res.content, "xml")
-            for item in soup.find_all('item')[:30]:
+            for item in soup.find_all('item')[:40]:
                 title = item.find('title').text if item.find('title') is not None else ""
                 desc = clean_html_text(item.find('description').text if item.find('description') is not None else "")
+                content_encoded = clean_html_text(item.find('{http://purl.org/rss/1.0/modules/content/}encoded').text if item.find('{http://purl.org/rss/1.0/modules/content/}encoded') is not None else "")
+                full_text = f"{desc} {content_encoded}".strip()
                 if title:
-                    job_notices.append(f"[FreeJobAlert] Title: {title} | Summary: {desc[:500]}")
-            print("✅ Direct FreeJobAlert Feed fetched successfully!")
+                    job_notices.append(f"[FreeJobAlert Raw Entry] Title: {title} | Full FreeJobAlert Content: {full_text[:1200]}")
+            print("✅ Direct FreeJobAlert Deep Content Feed fetched successfully!")
     except Exception as e:
         print(f"⚠️ Error FreeJobAlert Feed: {e}")
 
@@ -348,7 +355,7 @@ def generate_clean_summary(raw_text, target_date_str, is_national=False):
 
 
 def generate_job_summary(raw_text):
-    """Groq AI se Pure English Detailed FreeJobAlert Structure JSON Job Portal data banwata hai"""
+    """Groq AI se Pure English Detailed Granular FreeJobAlert Structure JSON banwata hai"""
     today_str = datetime.now().strftime("%d %b %Y")
 
     prompt = f"""
@@ -357,36 +364,42 @@ def generate_job_summary(raw_text):
 
     {raw_text}
 
-    STRICT GEOGRAPHICAL & JURISDICTION RULES (APPLIES TO ALL 3 CATEGORIES - JOBS, ADMIT CARDS, & RESULTS):
+    🚨 STRICT MANDATORY DATA COMPLETENESS RULE FOR "latest_jobs" (CRITICAL):
+    For any item to be included in "latest_jobs", ALL FOUR (4) OF THE FOLLOWING FIELDS MUST BE CLEARLY AVAILABLE IN THE TEXT:
+    1. start_date: Exact application start date (e.g., "28 Aug 2026").
+    2. last_date: Exact application deadline date (e.g., "30 Sep 2026").
+    3. qualification: Comprehensive educational qualification criteria extracted from raw text without truncation. Include degree name, required stream, minimum percentage marks, and experience if mentioned.
+    4. application_fee: Exact category-wise application fee breakdown (e.g. "General/OBC/EWS: ₹600 | SC/ST/PH: ₹150").
+
+    ❌ IF ANY OF THESE 4 FIELDS IS MISSING, UNKNOWN, OR NOT MENTIONED IN THE RAW TEXT, STRICTLY REJECT AND DISCARD THAT JOB ITEM! DO NOT INCLUDE IT IN "latest_jobs"!
+
+    STRICT GEOGRAPHICAL RULES:
     1. WRITE EVERYTHING IN 100% PURE ENGLISH ONLY.
-    2. STRICT ALLOWED JURISDICTION:
+    2. STRICT ALLOWED JURISDICTION ONLY:
        - BIHAR STATE GOVT: BPSC, BSSC, BPSSC, CSBC, Bihar Teacher (TRE), Patna High Court, Civil Court, Beltron, Health Dept Bihar, etc.
        - CENTRAL GOVT (ALL INDIA): Staff Selection Commission (SSC), Indian Railways (RRB), Banking (IBPS, SBI, RBI), UPSC, Defence (Army, Navy, Air Force, CAPF).
-    3. STRICT REJECTION OF OTHER STATES (ABSOLUTE BAN ON ALL 3 SECTIONS):
-       - STRICTLY REJECT any Job, Admit Card, or Result belonging to OTHER STATES (e.g., REJECT UP Police Admit Card, Rajasthan Result, MPPSC Admit Card, Haryana CET, Delhi DSSSB, Maharashtra Govt, etc.).
-       - If an Admit Card or Result is from UP, MP, Rajasthan, Haryana, etc., DO NOT include it in any array!
+    3. ABSOLUTE BAN ON OTHER STATES: REJECT any Job, Admit Card, or Result from UP, MP, Rajasthan, Haryana, Delhi DSSSB, Maharashtra, etc.
 
-    DATA ACCURACY & FULL ELIGIBILITY RULES:
-    1. DO NOT SHORTEN OR TRUNCATE QUALIFICATION: Write full educational criteria.
-    2. DETAILED CATEGORY-WISE APPLICATION FEE: Break down fees clearly e.g., "General/OBC: ₹600 | SC/ST/PH: ₹150".
-    3. DETAILED AGE LIMIT: Provide min/max age with gender/category relaxation.
-    4. NO "TO BE ANNOUNCED": Provide exact dates and figures.
-    5. WEBSITE MAPPING: Set "apply_url" to "https://www.mocktester.online" for ALL items.
+    FULL FREEJOBALERT PARAMETER EXTRACTION:
+    - Extract "pay_scale" / Salary details if available (e.g., "Level-7 (₹44,900 - ₹1,42,400)").
+    - Extract "selection_process" details (e.g., "Prelims Exam, Mains Exam, Interview, Medical Test").
+    - Always set "apply_url" to "https://www.mocktester.online".
 
     JSON SCHEMA OUTPUT (Return EXACTLY this structure):
     {{
       "latest_jobs": [
         {{
           "id": "job_01",
-          "title": "Detailed Exam / Recruitment Title 2026",
-          "organization": "Official Body (e.g., Bihar Public Service Commission - BPSC)",
+          "title": "Full Official Recruitment Title 2026",
+          "organization": "Official Recruitment Body (e.g., Bihar Public Service Commission - BPSC)",
           "job_type": "Bihar Govt Job OR Central Govt Job",
-          "post_name": "Specific Posts Name",
+          "post_name": "Specific Posts Name with Post-wise Breakdown if available",
           "total_vacancies": "Exact Number of Posts (e.g., 1,957 Posts)",
-          "qualification": "Full Detailed Educational Qualification",
-          "age_limit": "Complete Min & Max Age limit with relaxation details",
+          "qualification": "Full Comprehensive Educational Qualification Criteria without shortening any detail",
+          "age_limit": "Complete Min & Max Age limit with gender & category relaxation details",
+          "pay_scale": "Pay Scale / Salary Level details",
           "application_fee": "Complete Category-wise Application Fee Breakdown",
-          "selection_process": "Written Exam, Physical Test, Interview",
+          "selection_process": "Detailed Selection Steps (e.g., Written CBT, Physical Test, DV)",
           "start_date": "Exact Application Start Date e.g., 28 Aug 2026",
           "last_date": "Exact Application Last Date e.g., 30 Sep 2026",
           "apply_url": "https://www.mocktester.online",
@@ -397,7 +410,7 @@ def generate_job_summary(raw_text):
       "admit_cards": [
         {{
           "id": "admit_01",
-          "title": "Clean Official Admit Card Title (BIHAR OR CENTRAL ONLY)",
+          "title": "Clean Official Admit Card Title",
           "organization": "Recruitment Body Name (e.g., BSSC / SSC / RRB)",
           "job_type": "Bihar Govt Job OR Central Govt Job",
           "post_name": "Post Name",
@@ -412,7 +425,7 @@ def generate_job_summary(raw_text):
       "results": [
         {{
           "id": "result_01",
-          "title": "Clean Official Result Title (BIHAR OR CENTRAL ONLY)",
+          "title": "Clean Official Result Title",
           "organization": "Recruitment Body Name (e.g., CSBC / BPSC / SSC)",
           "job_type": "Bihar Govt Job OR Central Govt Job",
           "post_name": "Post Name",
@@ -530,7 +543,7 @@ if __name__ == "__main__":
                 if has_data:
                     with open("bihar_jobs.json", "w", encoding="utf-8") as f:
                         json.dump(parsed_jobs, f, ensure_ascii=False, indent=2)
-                    print("✅ bihar_jobs.json successfully updated (Strict Bihar + Central ONLY for Jobs, Admit Cards & Results)!")
+                    print("✅ bihar_jobs.json updated with Full FreeJobAlert Parameters & mocktester.online link!")
                 else:
                     print("🛡️ SAFEGUARD ACTIVATED: 0 job notifications found. Retaining existing file!")
             except Exception as e:
