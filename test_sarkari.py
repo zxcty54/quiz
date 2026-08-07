@@ -13,8 +13,21 @@ from groq import Groq
 GROQ_KEY = os.environ.get("GROQ_API_KEY")
 client = Groq(api_key=GROQ_KEY) if GROQ_KEY else None
 
+# Full Real Chrome Browser Headers to Bypass 403 Forbidden
 HEADERS = {
-    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
+    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36',
+    'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8',
+    'Accept-Language': 'en-US,en;q=0.9',
+    'Accept-Encoding': 'gzip, deflate, br',
+    'Referer': 'https://www.google.com/',
+    'Sec-Ch-Ua': '"Chromium";v="124", "Google Chrome";v="124", "Not-A.Brand";v="99"',
+    'Sec-Ch-Ua-Mobile': '?0',
+    'Sec-Ch-Ua-Platform': '"Windows"',
+    'Sec-Fetch-Dest': 'document',
+    'Sec-Fetch-Mode': 'navigate',
+    'Sec-Fetch-Site': 'cross-site',
+    'Sec-Fetch-User': '?1',
+    'Upgrade-Insecure-Requests': '1'
 }
 
 OTHER_STATES_REJECT = [
@@ -66,17 +79,27 @@ def is_date_expired(last_date_str):
     return False
 
 # -------------------------------------------------------------
-# SarkariResult Specific Testing Function
+# SarkariResult Testing Function
 # -------------------------------------------------------------
 def test_sarkari_result_scraper():
     url = "https://www.sarkariresult.com/latestjob/"
     print(f"🧪 [TEST MODE] Scraping SarkariResult directly: {url}\n")
 
     try:
-        res = requests.get(url, headers=HEADERS, timeout=15, verify=False, impersonate="chrome")
+        # Impersonate chrome124 to bypass 403 Cloudflare WAF Block
+        res = requests.get(
+            url, 
+            headers=HEADERS, 
+            timeout=20, 
+            verify=False, 
+            impersonate="chrome124"
+        )
+
         if res.status_code != 200:
             print(f"❌ Failed to reach SarkariResult! Status Code: {res.status_code}")
             return
+
+        print("✅ Successfully Bypassed 403! Status Code 200 OK\n")
 
         soup = BeautifulSoup(res.content, "html.parser")
         post_div = soup.find('div', id='post') or soup.find('body')
@@ -84,7 +107,7 @@ def test_sarkari_result_scraper():
 
         valid_links = []
 
-        for a in a_tags[:30]:
+        for a in a_tags[:40]:
             href = a['href'].strip()
             full_text = clean_html_text(a.text)
 
@@ -96,7 +119,7 @@ def test_sarkari_result_scraper():
                 print(f"🚫 [REJECTED STATE/ENTITY]: {full_text}")
                 continue
 
-            # 2. Extract Last Date from Hyperlink Text
+            # 2. Extract Last Date
             last_date_match = re.search(r'Last\s*Date\s*:?\s*(\d{1,2}[/-]\d{1,2}[/-]\d{2,4})', full_text, re.IGNORECASE)
             extracted_last_date = last_date_match.group(1) if last_date_match else None
 
@@ -114,8 +137,8 @@ def test_sarkari_result_scraper():
             })
 
         print(f"\n✅ Total Active/Valid SarkariResult Links Found: {len(valid_links)}\n")
-        print("--- TOP 5 EXTRACTED ACTIVE LINKS ---")
-        for idx, item in enumerate(valid_links[:5], 1):
+        print("--- TOP EXTRACTED ACTIVE LINKS ---")
+        for idx, item in enumerate(valid_links[:10], 1):
             print(f"{idx}. Title: {item['title']}")
             print(f"   Last Date: {item['last_date']}")
             print(f"   Blue URL: {item['url']}\n")
