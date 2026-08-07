@@ -17,13 +17,15 @@ client = Groq(api_key=GROQ_API_KEY) if GROQ_API_KEY else None
 TARGET_URL = "https://www.sarkariresult.com/latestjob/"
 JSON_FILENAME = "sarkarijob.json"
 
+# 🛑 OTHER STATES STRICT REJECTION LIST (Block UP, MP, Haryana, Jharkhand, etc.)
 OTHER_STATES_REJECT = [
-    "aiims", "cuttack", "odisha", "orissa", "khordha", "balipatna", "oav ", 
-    "uttar pradesh", " up ", "uppsc", "madhya pradesh", "mppsc", 
-    "rajasthan", "rpsc", "haryana", "hpsc", "maharashtra", "mpsc", 
-    "jharkhand", "jpsc", "west bengal", "wbpsc", "punjab", "gujarat", 
-    "kerala", "karnataka", "tamil nadu", "andhra", " ap ", "ap mahesh", "mahesh bank",
-    "telangana", "tspsc", "assam", "chhattisgarh", "delhi", "dsssb"
+    "upsss", "upsssc", "upeida", "upscidc", "upsrtc", "mpesb", "jssc", "hartron", 
+    "skau", "kurukshetra", "banda", "lucknow", "uttar pradesh", " up ", "uppsc", 
+    "madhya pradesh", " mp ", "mppsc", "rajasthan", "rpsc", "haryana", "hpsc", 
+    "maharashtra", "mpsc", "jharkhand", "jpsc", "west bengal", "wbpsc", "punjab", 
+    "gujarat", "kerala", "karnataka", "tamil nadu", "andhra", " ap ", "telangana", 
+    "tspsc", "assam", "chhattisgarh", "delhi", "dsssb", "uttarakhand", "ukpsc", "uksssc",
+    "aiims", "cuttack", "odisha", "orissa", "khordha", "balipatna", "oav "
 ]
 
 SKIP_NAV_KEYWORDS = [
@@ -32,21 +34,42 @@ SKIP_NAV_KEYWORDS = [
     "about us", "home", "syllabus", "answer key", "certificate verification"
 ]
 
-BIHAR_KEYWORDS = ["bihar", "bpsc", "bssc", "bpssc", "csbc", "btsc", "patna", "wcdc", "beltron", "bcece", "amin"]
+# 🟢 STRICT BIHAR BOARDS WHITELIST
+BIHAR_BOARDS = [
+    ("bpsc", "Bihar Public Service Commission (BPSC)"),
+    ("bssc", "Bihar Staff Selection Commission (BSSC)"),
+    ("bpssc", "Bihar Police Subordinate Services Commission (BPSSC)"),
+    ("csbc", "Central Selection Board of Constable (CSBC)"),
+    ("btsc", "Bihar Technical Service Commission (BTSC)"),
+    ("patna high court", "Patna High Court"),
+    ("high court patna", "Patna High Court"),
+    ("wcdc", "Women and Child Development Corporation Bihar"),
+    ("beltron", "BELTRON Bihar"),
+    ("bihar amin", "Bihar Revenue Dept (Amin)"),
+    ("bihar", "Bihar State Govt Department")
+]
 
+# 🟢 STRICT CENTRAL BOARDS WHITELIST
 CENTRAL_BOARDS = [
     ("upsc", "Union Public Service Commission (UPSC)"),
     ("ssc", "Staff Selection Commission (SSC)"),
     ("rrb", "Railway Recruitment Board (RRB)"),
+    ("railway", "Indian Railways"),
     ("ibps", "Institute of Banking Personnel Selection (IBPS)"),
     ("sbi", "State Bank of India (SBI)"),
-    ("navy", "Indian Navy"),
-    ("army", "Indian Army"),
-    ("air force", "Indian Air Force"),
-    ("airforce", "Indian Air Force"),
+    ("bank of baroda", "Bank of Baroda"),
+    ("union bank", "Union Bank of India"),
+    ("pnb", "Punjab National Bank"),
+    ("indian army", "Indian Army"),
+    ("indian navy", "Indian Navy"),
+    ("indian air force", "Indian Air Force"),
+    ("indian airforce", "Indian Air Force"),
     ("drdo", "Defence Research and Development Organisation (DRDO)"),
     ("isro", "Indian Space Research Organisation (ISRO)"),
-    ("india post", "Department of Posts / India Post")
+    ("india post", "Department of Posts / India Post"),
+    ("post office", "Department of Posts / India Post"),
+    ("lic", "Life Insurance Corporation (LIC)"),
+    ("epfo", "Employees' Provident Fund Organisation (EPFO)")
 ]
 
 def clean_html_text(text):
@@ -66,17 +89,25 @@ def is_nav_link(text, url):
         return True
     return False
 
-def detect_organization_and_type(title):
+def classify_job_board(title):
     title_lower = title.lower()
-    for key in BIHAR_KEYWORDS:
+    
+    # 1. First check if it's from another state (Strict Reject)
+    if is_hard_rejected(title):
+        return None, None
+        
+    # 2. Check Bihar Whitelist
+    for key, full_name in BIHAR_BOARDS:
         if key in title_lower:
-            return "Bihar Govt Agency / Commission", "Bihar Govt Job"
+            return full_name, "Bihar Govt Job"
             
-    for key, org_full_name in CENTRAL_BOARDS:
+    # 3. Check Central Whitelist
+    for key, full_name in CENTRAL_BOARDS:
         if key in title_lower:
-            return org_full_name, "Central Govt Job"
-            
-    return "Central / Bihar Govt Agency", "Central Govt Job"
+            return full_name, "Central Govt Job"
+
+    # If it's neither Bihar nor Central Whitelisted -> Reject it!
+    return None, None
 
 def fetch_page_via_scrapingant(url):
     encoded_url = quote(url)
@@ -142,14 +173,20 @@ def run_sarkari_job_scraper():
         detail_url = link['href'].strip()
 
         if len(title) > 10 and "sarkariresult.com" in detail_url and detail_url not in processed_urls:
-            if is_nav_link(title, detail_url) or is_hard_rejected(title):
+            if is_nav_link(title, detail_url):
+                continue
+
+            clean_title = re.sub(r'Last\s*Date\s*:?.*$', '', title, flags=re.IGNORECASE).strip()
+            
+            # Whitelist Classification Check (Reject UP/MP/Other states)
+            organization, job_type = classify_job_board(clean_title)
+            if not organization:
+                print(f"🚫 [REJECTED NON-BIHAR/NON-CENTRAL]: {clean_title}")
                 continue
 
             processed_urls.add(detail_url)
-            clean_title = re.sub(r'Last\s*Date\s*:?.*$', '', title, flags=re.IGNORECASE).strip()
-            organization, job_type = detect_organization_and_type(clean_title)
 
-            print(f"🔍 Extracting [{len(job_cards)+1}]: {clean_title}")
+            print(f"🔍 Extracting Valid Job [{len(job_cards)+1}]: {clean_title}")
             inner_html = fetch_page_via_scrapingant(detail_url)
             inner_text = clean_html_text(inner_html) if inner_html else ""
 
@@ -169,18 +206,18 @@ def run_sarkari_job_scraper():
             }
             job_cards.append(job_card)
 
-            if len(job_cards) >= 20:  # Top 20 active Bihar/Central jobs
+            if len(job_cards) >= 20:
                 break
 
     output_data = {
         "latest_jobs": job_cards
     }
 
-    # Save directly to sarkarijob.json
+    # Save to sarkarijob.json
     with open(JSON_FILENAME, "w", encoding="utf-8") as f:
         json.dump(output_data, f, ensure_ascii=False, indent=2)
 
-    print(f"\n✅ Data successfully saved to '{JSON_FILENAME}'! Total Jobs: {len(job_cards)}")
+    print(f"\n✅ Data successfully saved to '{JSON_FILENAME}'! Total Valid Bihar/Central Jobs: {len(job_cards)}")
 
 if __name__ == "__main__":
     run_sarkari_job_scraper()
