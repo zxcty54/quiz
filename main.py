@@ -14,9 +14,8 @@ from groq import Groq
 GROQ_KEY = os.environ.get("GROQ_API_KEY")
 client = Groq(api_key=GROQ_KEY) if GROQ_KEY else None
 
-# Models: Primary lightweight model with 500k TPD, secondary 70b fallback
-MODEL_PRIMARY = "llama-3.1-8b-instant"
-MODEL_FALLBACK = "llama-3.3-70b-versatile"
+# Multi-Model Queue for 100% Reliability
+MODELS = ["llama-3.1-8b-instant", "mixtral-8x7b-32768", "llama-3.3-70b-versatile"]
 
 def get_yesterday_info():
     """Subah 6 AM run hone par kal ki date aur formatted strings generate karta hai"""
@@ -64,7 +63,7 @@ def fetch_raw_bihar_news(target_dt):
                 if title and is_yesterday_news(pub_date, target_dt):
                     news_titles.append(f"[Google News] {title}")
                     count += 1
-                    if count >= 20:
+                    if count >= 15:
                         break
             print("✅ Google News Bihar RSS fetched successfully!")
     except Exception as e:
@@ -76,7 +75,7 @@ def fetch_raw_bihar_news(target_dt):
         res = requests.get(cmo_url, impersonate="chrome", timeout=15, verify=False)
         if res.status_code == 200:
             soup = BeautifulSoup(res.content, "html.parser")
-            for row in soup.find_all('tr')[:15]:
+            for row in soup.find_all('tr')[:12]:
                 cols = row.find_all('td')
                 if len(cols) >= 2:
                     title = cols[1].text.strip()
@@ -86,25 +85,7 @@ def fetch_raw_bihar_news(target_dt):
     except Exception as e:
         print(f"⚠️ Error fetching CMO Bihar: {e}")
 
-    # Source C: IPRD BIHAR
-    try:
-        iprd_url = "https://state.bihar.gov.in/prdbihar/CitizenHome.html"
-        res = requests.get(iprd_url, impersonate="chrome", timeout=15, verify=False)
-        if res.status_code == 200:
-            soup = BeautifulSoup(res.content, "html.parser")
-            count = 0
-            for link in soup.find_all('a'):
-                title = link.text.strip()
-                if title and len(title) > 15:
-                    news_titles.append(f"[IPRD Bihar] {title}")
-                    count += 1
-                    if count >= 12:
-                        break
-            print("✅ IPRD Bihar news fetched successfully!")
-    except Exception as e:
-        print(f"⚠️ Error fetching IPRD Bihar: {e}")
-
-    # Source D: PRABHAT KHABAR BIHAR
+    # Source C: PRABHAT KHABAR BIHAR
     try:
         pk_url = "https://www.prabhatkhabar.com/state/bihar/feed"
         res = requests.get(pk_url, impersonate="chrome", timeout=15, verify=False)
@@ -117,7 +98,7 @@ def fetch_raw_bihar_news(target_dt):
                 if title and is_yesterday_news(pub_date, target_dt):
                     news_titles.append(f"[Prabhat Khabar] {title.strip()}")
                     count += 1
-                    if count >= 15:
+                    if count >= 12:
                         break
             print("✅ Prabhat Khabar Bihar news fetched successfully!")
     except Exception as e:
@@ -136,66 +117,48 @@ def fetch_raw_national_news(target_dt):
         res = requests.get(pib_url, timeout=15, verify=False)
         if res.status_code == 200:
             soup = BeautifulSoup(res.content, "xml")
-            for item in soup.find_all('item'):
+            for item in soup.find_all('item')[:15]:
                 title = item.find('title').text if item.find('title') is not None else ""
                 desc = clean_html_text(item.find('description').text if item.find('description') is not None else "")
                 if title:
-                    national_titles.append(f"[PIB Central] Title: {title.strip()} | Summary: {desc[:250]}")
+                    national_titles.append(f"[PIB Central] Title: {title.strip()} | Summary: {desc[:200]}")
             print("✅ PIB Central RSS fetched successfully!")
     except Exception as e:
         print(f"⚠️ Error PIB India: {e}")
 
-    # Source B: Google News - Multi-Topic Central Query
+    # Source B: Google News - Central Query
     queries = [
-        '%22Union+Cabinet%22+OR+%22Central+Government%22+OR+%22Cabinet+Approves%22',
-        'ISRO+OR+DRDO+OR+%22Military+Exercise%22+OR+Missile',
-        '%22RBI%22+OR+%22NITI+Aayog%22+OR+%22Union+Budget%22+OR+Index',
-        '%22G20%22+OR+%22BRICS%22+OR+%22SCO%22+OR+%22COP29%22+OR+%22Summit%22',
-        '%22Ramsar+Site%22+OR+%22Tiger+Reserve%22+OR+%22Sports+World+Cup%22'
+        '%22Union+Cabinet%22+OR+%22Cabinet+Approves%22',
+        'ISRO+OR+DRDO+OR+%22Military+Exercise%22',
+        '%22RBI%22+OR+%22NITI+Aayog%22+OR+Index'
     ]
     for q in queries:
         try:
             g_url = f"https://news.google.com/rss/search?q={q}&hl=hi&gl=IN&ceid=IN:hi"
-            res = requests.get(g_url, impersonate="chrome", timeout=12, verify=False)
+            res = requests.get(g_url, impersonate="chrome", timeout=10, verify=False)
             if res.status_code == 200:
                 root = ET.fromstring(res.text)
-                for item in root.findall('.//item')[:10]:
+                for item in root.findall('.//item')[:8]:
                     title = item.find('title').text if item.find('title') is not None else ""
                     pub_date = item.find('pubDate').text if item.find('pubDate') is not None else ""
                     desc = clean_html_text(item.find('description').text if item.find('description') is not None else "")
                     if title and is_yesterday_news(pub_date, target_dt):
-                        national_titles.append(f"[Google Central] Title: {title.strip()} | Summary: {desc[:200]}")
+                        national_titles.append(f"[Google Central] Title: {title.strip()} | Summary: {desc[:150]}")
         except Exception as e:
             print(f"⚠️ Error Google National Query ({q}): {e}")
     print("✅ Google Central Multi-Queries fetched successfully!")
 
-    # Source C: AIR News (Timeout handled safely)
-    try:
-        air_url = "https://newsonair.gov.in/feed/"
-        headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'}
-        res = requests.get(air_url, headers=headers, timeout=10, verify=False)
-        if res.status_code == 200:
-            soup = BeautifulSoup(res.content, "xml")
-            for item in soup.find_all('item'):
-                title = item.find('title').text if item.find('title') is not None else ""
-                desc = clean_html_text(item.find('description').text if item.find('description') is not None else "")
-                if title:
-                    national_titles.append(f"[AIR Central] Title: {title.strip()} | Summary: {desc[:200]}")
-            print("✅ AIR Central News fetched successfully!")
-    except Exception as e:
-        print(f"⚠️ AIR News skipped (Handled Safely): {e}")
-
-    # Source D: The Hindu National
+    # Source C: The Hindu National
     try:
         hindu_url = "https://www.thehindu.com/news/national/feeder/default.rss"
         res = requests.get(hindu_url, timeout=15, verify=False)
         if res.status_code == 200:
             soup = BeautifulSoup(res.content, "xml")
-            for item in soup.find_all('item'):
+            for item in soup.find_all('item')[:15]:
                 title = item.find('title').text if item.find('title') is not None else ""
                 desc = clean_html_text(item.find('description').text if item.find('description') is not None else "")
                 if title:
-                    national_titles.append(f"[The Hindu National] Title: {title.strip()} | Summary: {desc[:200]}")
+                    national_titles.append(f"[The Hindu National] Title: {title.strip()} | Summary: {desc[:150]}")
             print("✅ The Hindu National fetched successfully!")
     except Exception as e:
         print(f"⚠️ Error The Hindu: {e}")
@@ -204,20 +167,15 @@ def fetch_raw_national_news(target_dt):
 
 
 def fetch_raw_jobs():
-    """HIGH-VOLUME MULTI-SOURCE SCRAPER FOR JOBS, ADMIT CARDS & RESULTS"""
+    """HIGH-VOLUME SCRAPER FOR JOBS, ADMIT CARDS & RESULTS"""
     job_notices = []
-    headers = {
-        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
-    }
+    headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'}
 
-    # Broad Search Queries
+    # 1. Google Job Queries
     job_queries = [
-        "Bihar+BPSC+OR+BSSC+OR+CSBC+OR+BPSSC+OR+Patna+High+Court+Recruitment+Start+Date+Last+Date+Fees",
-        "Bihar+Teacher+TRE+OR+Bihar+Health+Dept+OR+Beltron+OR+Civil+Court+Vacancy+Eligibility+Posts",
-        "SSC+CGL+OR+CHSL+OR+MTS+OR+GD+Constable+Notification+Start+Date+Fees",
-        "Railway+RRB+NTPC+OR+Group+D+OR+ALP+OR+Technician+Vacancy+Eligibility+Posts",
-        "Banking+IBPS+PO+Clerk+OR+SBI+PO+Clerk+OR+UPSC+Notification+Application+Fee",
-        "Govt+Job+Admit+Card+OR+Result+2026+Bihar+SSC+Railway"
+        "Bihar+BPSC+OR+BSSC+OR+CSBC+OR+Patna+High+Court+Recruitment+Qualification+Fees",
+        "SSC+CGL+OR+CHSL+OR+MTS+OR+Railway+RRB+NTPC+Notification+Start+Date+Fees",
+        "Banking+IBPS+PO+Clerk+OR+SBI+PO+Clerk+OR+Govt+Job+Admit+Card+Result"
     ]
     for q in job_queries:
         try:
@@ -225,42 +183,42 @@ def fetch_raw_jobs():
             res = requests.get(g_url, impersonate="chrome", timeout=10, verify=False)
             if res.status_code == 200:
                 root = ET.fromstring(res.text)
-                for item in root.findall('.//item')[:12]:
+                for item in root.findall('.//item')[:10]:
                     title = item.find('title').text if item.find('title') is not None else ""
                     desc = clean_html_text(item.find('description').text if item.find('description') is not None else "")
                     if title:
-                        job_notices.append(f"[Google Job Alert] Title: {title} | Snippet: {desc[:600]}")
+                        job_notices.append(f"[Google Job Alert] Title: {title} | Snippet: {desc[:400]}")
         except Exception as e:
             print(f"⚠️ Error Job Query ({q}): {e}")
     print("✅ Google Job Alerts fetched successfully!")
 
-    # Direct FreeJobAlert Feed
+    # 2. FreeJobAlert Main Content Feed
     try:
         fja_url = "https://www.freejobalert.com/feed/"
         res = requests.get(fja_url, headers=headers, timeout=12, verify=False)
         if res.status_code == 200:
             soup = BeautifulSoup(res.content, "xml")
-            for item in soup.find_all('item')[:35]:
+            for item in soup.find_all('item')[:25]:
                 title = item.find('title').text if item.find('title') is not None else ""
                 desc = clean_html_text(item.find('description').text if item.find('description') is not None else "")
                 content_encoded = clean_html_text(item.find('{http://purl.org/rss/1.0/modules/content/}encoded').text if item.find('{http://purl.org/rss/1.0/modules/content/}encoded') is not None else "")
                 full_text = f"{desc} {content_encoded}".strip()
                 if title:
-                    job_notices.append(f"[FreeJobAlert Entry] Title: {title} | Full Text: {full_text[:1000]}")
-            print("✅ Direct FreeJobAlert Deep Content Feed fetched successfully!")
+                    job_notices.append(f"[FreeJobAlert Entry] Title: {title} | Details: {full_text[:600]}")
+            print("✅ Direct FreeJobAlert Content Feed fetched successfully!")
     except Exception as e:
         print(f"⚠️ Error FreeJobAlert Feed: {e}")
 
     return "\n".join(job_notices)
 
 # -------------------------------------------------------------
-# 3. AI SUMMARY GENERATORS (WITH TOKEN OPTIMISER & FALLBACK)
+# 3. AI SUMMARY GENERATORS (ROBUST CALLER WITH FALLBACK)
 # -------------------------------------------------------------
 def call_groq_safe(prompt, system_role="You are a JSON generator assistant."):
-    """Robust Groq Caller with automatic fallback and retry logic"""
-    models_to_try = [MODEL_PRIMARY, MODEL_FALLBACK]
+    """Multi-Model Fallback Executor (TPM & TPD Safe)"""
+    time.sleep(3)  # Short 3-second delay between pipeline steps to reset TPM window
     
-    for model_name in models_to_try:
+    for model_name in MODELS:
         try:
             response = client.chat.completions.create(
                 model=model_name,
@@ -274,17 +232,18 @@ def call_groq_safe(prompt, system_role="You are a JSON generator assistant."):
             print(f"⚡ Groq LLM Success using [{model_name}]!")
             return response.choices[0].message.content
         except Exception as e:
-            print(f"⚠️ Groq Model [{model_name}] failed/rate-limited: {e}")
-            time.sleep(2)  # Short pause before fallback
+            print(f"⚠️ Model [{model_name}] rate-limited/failed: {e}. Trying fallback...")
+            time.sleep(2)
             
+    print("❌ All Groq models failed/rate-limited for this call.")
     return ""
 
 
 def generate_clean_summary(raw_text, target_date_str, is_national=False):
     """Groq AI se Fact-Based Detailed Hinglish JSON news summary banwata hai"""
     
-    # 🌟 TOKEN OPTIMISER: Truncate raw text to fit within daily limits cleanly
-    truncated_raw = raw_text[:10000]
+    # Cap size to 6000 chars to strictly respect 6000 TPM limits
+    truncated_raw = raw_text[:6000]
     
     if is_national:
         scope_name = "India National & International Level ONLY"
@@ -381,8 +340,8 @@ def generate_job_summary(raw_text):
     """Groq AI se Pure English Detailed FreeJobAlert Structure JSON Job Portal data banwata hai"""
     today_str = datetime.now().strftime("%d %b %Y")
     
-    # 🌟 TOKEN OPTIMISER: Truncate raw text safely
-    truncated_raw = raw_text[:12000]
+    # Cap size to 6500 chars to strictly stay below 6000 TPM limit
+    truncated_raw = raw_text[:6500]
 
     prompt = f"""
     You are an expert Government Recruitment Portal Data Editor for FreeJobAlert & Sarkari Result.
@@ -580,7 +539,7 @@ if __name__ == "__main__":
             try:
                 parsed_jobs = json.loads(ai_jobs.strip())
                 
-                # 🌟 HARD PYTHON FILTERING: Drops any incomplete job missing mandatory fields
+                # 🌟 HARD PYTHON FILTERING: Strictly Drops any incomplete job missing mandatory fields
                 parsed_jobs = filter_valid_jobs(parsed_jobs)
                 
                 has_data = (
