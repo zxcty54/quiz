@@ -41,7 +41,7 @@ def clean_html_text(text):
     return BeautifulSoup(text, "html.parser").get_text().strip()
 
 # -------------------------------------------------------------
-# 2. SCRAPING FUNCTIONS (NEWS + JOBS)
+# 2. SCRAPING FUNCTIONS (NEWS + HIGH-VOLUME JOBS)
 # -------------------------------------------------------------
 def fetch_raw_bihar_news(target_dt):
     """Multiple Official & Media sources se Bihar Current Affairs raw text scrape karta hai"""
@@ -199,21 +199,22 @@ def fetch_raw_national_news(target_dt):
 
 
 def fetch_raw_jobs():
-    """HIGH-DEPTH Scraper for Full Job Notifications & FreeJobAlert Feeds"""
+    """HIGH-VOLUME MULTI-SOURCE SCRAPER FOR JOBS, ADMIT CARDS & RESULTS"""
     job_notices = []
     headers = {
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
     }
 
-    queries = [
-        "Bihar+BPSC+OR+BSSC+OR+CSBC+OR+BPSSC+OR+Patna+High+Court+Recruitment+Qualification+Fees",
-        "Bihar+Teacher+TRE+OR+Bihar+Health+Dept+OR+Beltron+OR+Civil+Court+Vacancy+Eligibility",
-        "SSC+CGL+OR+CHSL+OR+MTS+OR+GD+Constable+Notification+Qualification+Dates",
-        "Railway+RRB+NTPC+OR+Group+D+OR+ALP+OR+Technician+Vacancy+Eligibility",
-        "Banking+IBPS+PO+Clerk+OR+SBI+PO+Clerk+OR+UPSC+Notification+Details",
+    # 1. Broad Multi-Topic Search Queries
+    job_queries = [
+        "Bihar+BPSC+OR+BSSC+OR+CSBC+OR+BPSSC+OR+Patna+High+Court+Recruitment+Start+Date+Last+Date+Fees",
+        "Bihar+Teacher+TRE+OR+Bihar+Health+Dept+OR+Beltron+OR+Civil+Court+Vacancy+Eligibility+Posts",
+        "SSC+CGL+OR+CHSL+OR+MTS+OR+GD+Constable+Notification+Start+Date+Fees",
+        "Railway+RRB+NTPC+OR+Group+D+OR+ALP+OR+Technician+Vacancy+Eligibility+Posts",
+        "Banking+IBPS+PO+Clerk+OR+SBI+PO+Clerk+OR+UPSC+Notification+Application+Fee",
         "Govt+Job+Admit+Card+OR+Result+2026+Bihar+SSC+Railway"
     ]
-    for q in queries:
+    for q in job_queries:
         try:
             g_url = f"https://news.google.com/rss/search?q={q}&hl=en&gl=IN&ceid=IN:en"
             res = requests.get(g_url, impersonate="chrome", timeout=12, verify=False)
@@ -223,24 +224,24 @@ def fetch_raw_jobs():
                     title = item.find('title').text if item.find('title') is not None else ""
                     desc = clean_html_text(item.find('description').text if item.find('description') is not None else "")
                     if title:
-                        job_notices.append(f"[Google Alert] Title: {title} | Full Content Snippet: {desc[:800]}")
+                        job_notices.append(f"[Google Job Alert] Title: {title} | Snippet: {desc[:800]}")
         except Exception as e:
             print(f"⚠️ Error Job Query ({q}): {e}")
     print("✅ Google Job Alerts (Deep Snippets) fetched successfully!")
 
-    # FreeJobAlert Main Feed (Deep Scrape)
+    # 2. FreeJobAlert Main Deep Content Feed
     try:
         fja_url = "https://www.freejobalert.com/feed/"
         res = requests.get(fja_url, headers=headers, timeout=15, verify=False)
         if res.status_code == 200:
             soup = BeautifulSoup(res.content, "xml")
-            for item in soup.find_all('item')[:40]:
+            for item in soup.find_all('item')[:50]:  # Increased to 50 items
                 title = item.find('title').text if item.find('title') is not None else ""
                 desc = clean_html_text(item.find('description').text if item.find('description') is not None else "")
                 content_encoded = clean_html_text(item.find('{http://purl.org/rss/1.0/modules/content/}encoded').text if item.find('{http://purl.org/rss/1.0/modules/content/}encoded') is not None else "")
                 full_text = f"{desc} {content_encoded}".strip()
                 if title:
-                    job_notices.append(f"[FreeJobAlert Raw Entry] Title: {title} | Full FreeJobAlert Content: {full_text[:1200]}")
+                    job_notices.append(f"[FreeJobAlert Entry] Title: {title} | Full Text: {full_text[:1500]}")
             print("✅ Direct FreeJobAlert Deep Content Feed fetched successfully!")
     except Exception as e:
         print(f"⚠️ Error FreeJobAlert Feed: {e}")
@@ -355,7 +356,7 @@ def generate_clean_summary(raw_text, target_date_str, is_national=False):
 
 
 def generate_job_summary(raw_text):
-    """Groq AI se Pure English Detailed Granular FreeJobAlert Structure JSON banwata hai"""
+    """Groq AI se Pure English Detailed FreeJobAlert Structure JSON Job Portal data banwata hai"""
     today_str = datetime.now().strftime("%d %b %Y")
 
     prompt = f"""
@@ -364,25 +365,23 @@ def generate_job_summary(raw_text):
 
     {raw_text}
 
-    🚨 STRICT MANDATORY DATA COMPLETENESS RULE FOR "latest_jobs" (CRITICAL):
-    For any item to be included in "latest_jobs", ALL FOUR (4) OF THE FOLLOWING FIELDS MUST BE CLEARLY AVAILABLE IN THE TEXT:
-    1. start_date: Exact application start date (e.g., "28 Aug 2026").
-    2. last_date: Exact application deadline date (e.g., "30 Sep 2026").
-    3. qualification: Comprehensive educational qualification criteria extracted from raw text without truncation. Include degree name, required stream, minimum percentage marks, and experience if mentioned.
-    4. application_fee: Exact category-wise application fee breakdown (e.g. "General/OBC/EWS: ₹600 | SC/ST/PH: ₹150").
-
-    ❌ IF ANY OF THESE 4 FIELDS IS MISSING, UNKNOWN, OR NOT MENTIONED IN THE RAW TEXT, STRICTLY REJECT AND DISCARD THAT JOB ITEM! DO NOT INCLUDE IT IN "latest_jobs"!
+    MANDATORY FIELDS FOR "latest_jobs":
+    - "start_date": Must be exact date (e.g., "28 Aug 2026"). Never write TBA or To be announced.
+    - "last_date": Must be exact date (e.g., "30 Sep 2026"). Never write TBA or To be announced.
+    - "total_vacancies": Must specify exact post count (e.g., "1,957 Posts").
+    - "qualification": Full comprehensive eligibility criteria.
+    - "application_fee": Complete category-wise fee breakdown (e.g. "General/OBC: ₹600 | SC/ST/PH: ₹150").
 
     STRICT GEOGRAPHICAL RULES:
     1. WRITE EVERYTHING IN 100% PURE ENGLISH ONLY.
-    2. STRICT ALLOWED JURISDICTION ONLY:
+    2. ALLOWED JURISDICTION ONLY:
        - BIHAR STATE GOVT: BPSC, BSSC, BPSSC, CSBC, Bihar Teacher (TRE), Patna High Court, Civil Court, Beltron, Health Dept Bihar, etc.
        - CENTRAL GOVT (ALL INDIA): Staff Selection Commission (SSC), Indian Railways (RRB), Banking (IBPS, SBI, RBI), UPSC, Defence (Army, Navy, Air Force, CAPF).
     3. ABSOLUTE BAN ON OTHER STATES: REJECT any Job, Admit Card, or Result from UP, MP, Rajasthan, Haryana, Delhi DSSSB, Maharashtra, etc.
 
-    FULL FREEJOBALERT PARAMETER EXTRACTION:
-    - Extract "pay_scale" / Salary details if available (e.g., "Level-7 (₹44,900 - ₹1,42,400)").
-    - Extract "selection_process" details (e.g., "Prelims Exam, Mains Exam, Interview, Medical Test").
+    EXTRACTION DETAILS:
+    - Extract "pay_scale" / Salary details if available.
+    - Extract "selection_process" details.
     - Always set "apply_url" to "https://www.mocktester.online".
 
     JSON SCHEMA OUTPUT (Return EXACTLY this structure):
@@ -450,6 +449,36 @@ def generate_job_summary(raw_text):
     except Exception as e:
         print(f"⚠️ Groq API Job Summary Error: {e}")
         return '{"latest_jobs": [], "admit_cards": [], "results": []}'
+
+
+def filter_valid_jobs(parsed_jobs):
+    """Python Hard-Filter: Strictly Drops jobs missing Start Date, Last Date, Vacancies OR Application Fee"""
+    invalid_keywords = ["tba", "to be announced", "to be notified", "not mentioned", "unknown", "n/a", "check notification", "null"]
+    
+    clean_latest_jobs = []
+    for job in parsed_jobs.get("latest_jobs", []):
+        s_date = str(job.get("start_date", "")).strip().lower()
+        l_date = str(job.get("last_date", "")).strip().lower()
+        vacancies = str(job.get("total_vacancies", "")).strip().lower()
+        fee = str(job.get("application_fee", "")).strip().lower()
+
+        # Check 1: Must not be empty
+        if not s_date or not l_date or not vacancies or not fee:
+            print(f"❌ Dropped incomplete job: {job.get('title')} (Empty required fields)")
+            continue
+
+        # Check 2: Must not contain TBA / To be announced keywords
+        if any(kw in s_date for kw in invalid_keywords) or \
+           any(kw in l_date for kw in invalid_keywords) or \
+           any(kw in vacancies for kw in invalid_keywords) or \
+           any(kw in fee for kw in invalid_keywords):
+            print(f"❌ Dropped incomplete job: {job.get('title')} (Contains TBA/Missing data)")
+            continue
+
+        clean_latest_jobs.append(job)
+
+    parsed_jobs["latest_jobs"] = clean_latest_jobs
+    return parsed_jobs
 
 # -------------------------------------------------------------
 # 4. MASTER HISTORY APPEND FUNCTIONS (UNCHANGED & PRESERVED)
@@ -535,6 +564,10 @@ if __name__ == "__main__":
         if ai_jobs:
             try:
                 parsed_jobs = json.loads(ai_jobs.strip())
+                
+                # 🌟 HARD PYTHON FILTERING: Strictly Drops any incomplete job missing dates, fee, or vacancies
+                parsed_jobs = filter_valid_jobs(parsed_jobs)
+                
                 has_data = (
                     len(parsed_jobs.get("latest_jobs", [])) > 0 or
                     len(parsed_jobs.get("admit_cards", [])) > 0 or
@@ -543,9 +576,9 @@ if __name__ == "__main__":
                 if has_data:
                     with open("bihar_jobs.json", "w", encoding="utf-8") as f:
                         json.dump(parsed_jobs, f, ensure_ascii=False, indent=2)
-                    print("✅ bihar_jobs.json updated with Full FreeJobAlert Parameters & mocktester.online link!")
+                    print("✅ bihar_jobs.json updated (ONLY Guaranteed Complete Jobs with Fees, Dates & Vacancies)!")
                 else:
-                    print("🛡️ SAFEGUARD ACTIVATED: 0 job notifications found. Retaining existing file!")
+                    print("🛡️ SAFEGUARD ACTIVATED: 0 complete job notifications found. Retaining existing file!")
             except Exception as e:
                 print(f"❌ Jobs JSON Parsing Error: {e}")
 
