@@ -1,4 +1,4 @@
-Import 'dart:convert';
+import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:shared_preferences/shared_preferences.dart';
@@ -148,7 +148,7 @@ class _HomeTabState extends State<HomeTab> {
               const SizedBox(height: 16),
             ],
 
-            // 🛡️ 2. HERO TRUST BANNER
+            // 🛡️ 2. HERO TRUST BANNER (CLEAN MODERN GRADIENT)
             _buildTrustHeroBanner(),
             const SizedBox(height: 18),
 
@@ -184,7 +184,7 @@ class _HomeTabState extends State<HomeTab> {
     );
   }
 
-  // 🛡️ 1. HERO BANNER
+  // 🛡️ 1. HERO BANNER (CLEAN & SHARP MODERN GRADIENT)
   Widget _buildTrustHeroBanner() {
     return Container(
       width: double.infinity,
@@ -200,18 +200,20 @@ class _HomeTabState extends State<HomeTab> {
         borderRadius: BorderRadius.circular(22),
         boxShadow: [
           BoxShadow(
-            color: const Color(0xFF312E81).withOpacity(0.25),
+            color: const Color(0xFF312E81).withOpacity(widget.isDarkMode ? 0.35 : 0.2),
             blurRadius: 16,
             offset: const Offset(0, 6),
-          )
+          ),
         ],
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
+          // TOP BADGES ROW
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
+              // Pill Badge
               Container(
                 padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
                 decoration: BoxDecoration(
@@ -234,10 +236,12 @@ class _HomeTabState extends State<HomeTab> {
                   ],
                 ),
               ),
+
+              // Exam Categories Tag
               Container(
                 padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
                 decoration: BoxDecoration(
-                  color: Colors.white.withOpacity(0.1),
+                  color: Colors.white.withOpacity(0.12),
                   borderRadius: BorderRadius.circular(8),
                 ),
                 child: const Text(
@@ -252,6 +256,8 @@ class _HomeTabState extends State<HomeTab> {
             ],
           ),
           const SizedBox(height: 14),
+
+          // MAIN HEADLINE
           RichText(
             text: const TextSpan(
               children: [
@@ -277,12 +283,14 @@ class _HomeTabState extends State<HomeTab> {
             ),
           ),
           const SizedBox(height: 12),
+
+          // FEATURE HIGHLIGHT CONTAINER
           Container(
             padding: const EdgeInsets.all(10),
             decoration: BoxDecoration(
               color: Colors.white.withOpacity(0.06),
               borderRadius: BorderRadius.circular(12),
-              border: Border.all(color: Colors.white.withOpacity(0.1)),
+              border: Border.all(color: Colors.white.withOpacity(0.12)),
             ),
             child: Row(
               children: [
@@ -501,7 +509,7 @@ class _HomeTabState extends State<HomeTab> {
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
-        mainAxisSize: MainAxisSize.min, // 🌟 Container adapts to content size
+        mainAxisSize: MainAxisSize.min,
         children: [
           // 1. TAG & DATE ROW
           Row(
@@ -1063,7 +1071,6 @@ class _HomeTabState extends State<HomeTab> {
 }
 
 // 🌟 EXPANDABLE PAGE VIEW HELPER
-// Measures and resizes the viewport to match the active page height dynamically
 class ExpandablePageView extends StatefulWidget {
   final PageController controller;
   final int itemCount;
