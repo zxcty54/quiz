@@ -151,81 +151,68 @@ def fetch_raw_national_news(target_dt):
     return "\n".join(national_titles)
 
 # -------------------------------------------------------------
-# 3. MULTI-SOURCE HYBRID JOB SCRAPER (FREEJOBALERT + ENRICHMENT)
+# 3. HIGH-VOLUME HYBRID JOB SCRAPER (EXTENDED SOURCES)
 # -------------------------------------------------------------
 def fetch_raw_jobs():
-    """
-    Step 1: FreeJobAlert se Base Job List (Title, Vacancies, Last Date)
-    Step 2: Secondary Sources (SarkariResult / BiharJobPortal) se Fees, Age & Qualification
-    """
+    """Fetches high volume raw job entries from multiple feeds for maximum yield"""
     job_records = []
     headers = {
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
     }
 
-    # === SOURCE A: BASE DATA FROM FREEJOBALERT RSS & BIHAR PAGE ===
-    fja_base_items = []
-    try:
-        fja_url = "https://www.freejobalert.com/feed/"
-        res = requests.get(fja_url, headers=headers, timeout=12, verify=False)
-        if res.status_code == 200:
-            soup = BeautifulSoup(res.content, "xml")
-            for item in soup.find_all('item')[:30]:
-                title = item.find('title').text if item.find('title') is not None else ""
-                content_node = item.find('{http://purl.org/rss/1.0/modules/content/}encoded')
-                content = clean_html_text(content_node.text) if content_node is not None else ""
-                if title:
-                    fja_base_items.append({"title": title, "content": content})
-            print("✅ Base Jobs Fetched from FreeJobAlert RSS!")
-    except Exception as e:
-        print(f"⚠️ Error FreeJobAlert Base Fetch: {e}")
+    # SOURCE A: FreeJobAlert Multi-Feeds (State, SSC, Railway, Banking, All-India)
+    fja_feeds = [
+        "https://www.freejobalert.com/feed/",
+        "https://www.freejobalert.com/state-government-jobs/feed/",
+        "https://www.freejobalert.com/ssc-job-notifications/feed/",
+        "https://www.freejobalert.com/railway-jobs/feed/",
+        "https://www.freejobalert.com/bank-jobs/feed/"
+    ]
+    for feed_url in fja_feeds:
+        try:
+            res = requests.get(feed_url, headers=headers, timeout=12, verify=False)
+            if res.status_code == 200:
+                soup = BeautifulSoup(res.content, "xml")
+                for item in soup.find_all('item')[:30]:
+                    title = item.find('title').text if item.find('title') is not None else ""
+                    content_node = item.find('{http://purl.org/rss/1.0/modules/content/}encoded')
+                    content = clean_html_text(content_node.text) if content_node is not None else ""
+                    if title:
+                        job_records.append(f"[FreeJobAlert Feed] Title: {title} | Content: {content[:1500]}")
+            print(f"✅ FreeJobAlert Feed Parsed: {feed_url}")
+        except Exception as e:
+            print(f"⚠️ Error FJA Feed ({feed_url}): {e}")
 
-    # === SOURCE B: SECONDARY ENRICHMENT FROM SARKARI RESULT ===
-    sarkari_result_text = ""
+    # SOURCE B: Sarkari Result Live Updates
     try:
         sr_url = "https://www.sarkariresult.com/"
         res = requests.get(sr_url, headers=headers, timeout=12, verify=False)
         if res.status_code == 200:
             soup = BeautifulSoup(res.content, "html.parser")
             boxes = soup.find_all('div', id=re.compile(r'box|post'))
-            sr_items = []
             for box in boxes:
                 for link in box.find_all('a')[:25]:
                     t = link.text.strip()
                     if t and len(t) > 6:
-                        sr_items.append(t)
-            sarkari_result_text = "\n".join(sr_items)
-            print("✅ Secondary Data (SarkariResult) Scraped for Enrichment!")
+                        job_records.append(f"[SarkariResult Live Box] Title: {t}")
+            print("✅ SarkariResult Live Posts Scraped!")
     except Exception as e:
         print(f"⚠️ Error SarkariResult Scraping: {e}")
 
-    # === SOURCE C: BIHAR JOB PORTAL ENRICHMENT ===
-    bjp_text = ""
+    # SOURCE C: Bihar Job Portal Updates
     try:
         bjp_url = "https://biharjobportal.com/"
         res = requests.get(bjp_url, headers=headers, timeout=12, verify=False)
         if res.status_code == 200:
             soup = BeautifulSoup(res.content, "html.parser")
-            posts = [a.text.strip() for a in soup.find_all('a') if len(a.text.strip()) > 10][:20]
-            bjp_text = "\n".join(posts)
-            print("✅ Secondary Data (BiharJobPortal) Scraped for Enrichment!")
+            posts = [a.text.strip() for a in soup.find_all('a') if len(a.text.strip()) > 10][:25]
+            for p in posts:
+                job_records.append(f"[BiharJobPortal Post] Title: {p}")
+            print("✅ BiharJobPortal Posts Scraped!")
     except Exception as e:
         print(f"⚠️ Error BiharJobPortal Scraping: {e}")
 
-    # Merge Base Items with Secondary Context for Groq
-    combined_prompt_text = []
-    for base in fja_base_items:
-        combined_prompt_text.append(
-            f"--- JOB ENTRY ---\n"
-            f"[BASE SOURCE: FreeJobAlert]\n"
-            f"Title: {base['title']}\n"
-            f"Details: {base['content'][:1500]}\n"
-            f"[SECONDARY ENRICHMENT CONTEXT (SarkariResult/BiharJobPortal)]\n"
-            f"{sarkari_result_text[:1000]}\n"
-            f"{bjp_text[:1000]}\n"
-        )
-
-    return "\n".join(combined_prompt_text)
+    return "\n".join(job_records)
 
 # -------------------------------------------------------------
 # 4. GROQ AI EXECUTOR
@@ -283,21 +270,26 @@ def generate_clean_summary(raw_text, target_date_str, is_national=False):
 
 def generate_job_summary(raw_text):
     today_str = datetime.now().strftime("%d %b %Y")
-    truncated_raw = raw_text[:12000]
+    truncated_raw = raw_text[:14000]
 
     prompt = f"""
     You are an expert Government Recruitment Portal Data Editor.
-    Below is raw text consisting of Base Job entries from FreeJobAlert combined with Secondary Source Context (SarkariResult / BiharJobPortal):
+    Below is raw text scraped from FreeJobAlert, SarkariResult, and BiharJobPortal:
 
     RAW TEXT:
     {truncated_raw}
 
-    MERGING & ENRICHMENT RULES:
-    1. Base job titles, post names, and vacancy counts should come primarily from FreeJobAlert.
-    2. Fill in any missing Application Fees, Age Limits, and Qualifications by matching the job in the Secondary Context.
-    3. WRITE EVERYTHING IN 100% PURE ENGLISH ONLY.
-    4. REJECT ANY OTHER STATE JOBS (STRICTLY REJECT UP, MP, Rajasthan, Haryana, Delhi, Maharashtra, etc.). Include ONLY Bihar State Govt & Central Govt (SSC, Railway, Banking, UPSC, Defence) jobs.
-    5. Set "apply_url" to "https://www.mocktester.online" for EVERY job item.
+    HIGH QUANTITY & COMPLETENESS INSTRUCTIONS:
+    1. EXTRACT ALL VALID JOBS: Generate AT LEAST 15 to 25 job entries in the 'latest_jobs' list. Do not stop early.
+    2. ALLOWED JURISDICTIONS ONLY:
+       - Bihar Govt Jobs: BPSC, BSSC, CSBC, BPSSC, Bihar Teacher, Patna High Court, Civil Court, Beltron, Health Dept.
+       - Central Govt Jobs: SSC (CGL/CHSL/MTS/GD), Railways (RRB NTPC/Group D/ALP), Banking (IBPS/SBI/RBI), UPSC, Defence.
+    3. STRICT REJECTION OF OTHER STATES: REJECT any job belonging to UP, MP, Rajasthan, Haryana, Delhi DSSSB, Maharashtra, etc.
+    4. FIELD COMPLETENESS:
+       - Provide detailed Educational Qualification.
+       - Provide category-wise Application Fee (e.g. "General/OBC: ₹600 | SC/ST/Female: ₹150"). If exact fee is not in text, write "As per Official Notification".
+       - Provide Age Limit with relaxation.
+    5. Set "apply_url" to "https://www.mocktester.online" for ALL items.
 
     JSON SCHEMA OUTPUT (Return EXACTLY this structure):
     {{
@@ -308,10 +300,10 @@ def generate_job_summary(raw_text):
           "organization": "Recruitment Body (e.g., BPSC / BSSC / SSC / RRB / IBPS)",
           "job_type": "Bihar Govt Job OR Central Govt Job",
           "post_name": "Specific Post Name",
-          "total_vacancies": "Posts Count e.g. 1,957 Posts",
-          "qualification": "Full Detailed Educational Qualification",
+          "total_vacancies": "Posts Count e.g. 1,957 Posts or Various Posts",
+          "qualification": "Full Detailed Educational Qualification Criteria",
           "age_limit": "Min & Max Age Criteria with Relaxation",
-          "application_fee": "Detailed Category-Wise Fee Breakdown e.g. General: ₹600 | SC/ST: ₹150",
+          "application_fee": "Detailed Fee Breakdown e.g. General: ₹600 | SC/ST: ₹150",
           "start_date": "Exact Start Date e.g. 28 Aug 2026 or Online Active",
           "last_date": "Exact Last Date e.g. 30 Sep 2026",
           "apply_url": "https://www.mocktester.online",
@@ -328,7 +320,7 @@ def generate_job_summary(raw_text):
           "post_name": "Post Name",
           "total_vacancies": "Total Posts",
           "exam_date": "Exam Date / CBT Schedule",
-          "status": "Admit Card Released / Hall Ticket Active",
+          "status": "Admit Card Released",
           "apply_url": "https://www.mocktester.online",
           "exam_tag": "🎫 Hall Ticket",
           "date": "{today_str}"
@@ -342,7 +334,7 @@ def generate_job_summary(raw_text):
           "job_type": "Bihar Govt Job OR Central Govt Job",
           "post_name": "Post Name",
           "total_vacancies": "Total Posts",
-          "result_status": "Merit List PDF Released / Answer Key Declared",
+          "result_status": "Merit List / Result Declared",
           "apply_url": "https://www.mocktester.online",
           "exam_tag": "🏆 Result",
           "date": "{today_str}"
