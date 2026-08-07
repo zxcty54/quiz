@@ -1,6 +1,7 @@
 import os
 import json
 import re
+from datetime import datetime
 from urllib.parse import quote
 import requests
 from bs4 import BeautifulSoup
@@ -17,7 +18,7 @@ client = Groq(api_key=GROQ_API_KEY) if GROQ_API_KEY else None
 TARGET_URL = "https://www.sarkariresult.com/latestjob/"
 JSON_FILENAME = "sarkarijob.json"
 
-# 🛑 OTHER STATES STRICT REJECTION LIST (Block UP, MP, Haryana, Jharkhand, etc.)
+# 🛑 OTHER STATES REJECTION LIST
 OTHER_STATES_REJECT = [
     "upsss", "upsssc", "upeida", "upscidc", "upsrtc", "mpesb", "jssc", "hartron", 
     "skau", "kurukshetra", "banda", "lucknow", "uttar pradesh", " up ", "uppsc", 
@@ -34,7 +35,7 @@ SKIP_NAV_KEYWORDS = [
     "about us", "home", "syllabus", "answer key", "certificate verification"
 ]
 
-# 🟢 STRICT BIHAR BOARDS WHITELIST
+# 🟢 WHITELIST BOARDS
 BIHAR_BOARDS = [
     ("bpsc", "Bihar Public Service Commission (BPSC)"),
     ("bssc", "Bihar Staff Selection Commission (BSSC)"),
@@ -49,7 +50,6 @@ BIHAR_BOARDS = [
     ("bihar", "Bihar State Govt Department")
 ]
 
-# 🟢 STRICT CENTRAL BOARDS WHITELIST
 CENTRAL_BOARDS = [
     ("upsc", "Union Public Service Commission (UPSC)"),
     ("ssc", "Staff Selection Commission (SSC)"),
@@ -89,24 +89,43 @@ def is_nav_link(text, url):
         return True
     return False
 
+# ⏰ DATE EXPIRY CHECKER
+def is_date_expired(last_date_str):
+    if not last_date_str:
+        return False
+
+    date_match = re.search(r'(\d{1,2})[/-](\d{1,2})[/-](\d{2,4})', last_date_str)
+    if date_match:
+        try:
+            day, month, year = map(int, date_match.groups())
+            if year < 100:
+                year += 2000
+            
+            last_dt = datetime(year, month, day).date()
+            today_dt = datetime.now().date()
+
+            # Agar last date beet chuki hai -> True (Expired)
+            if last_dt < today_dt:
+                return True
+        except Exception:
+            pass
+
+    return False
+
 def classify_job_board(title):
     title_lower = title.lower()
     
-    # 1. First check if it's from another state (Strict Reject)
     if is_hard_rejected(title):
         return None, None
         
-    # 2. Check Bihar Whitelist
     for key, full_name in BIHAR_BOARDS:
         if key in title_lower:
             return full_name, "Bihar Govt Job"
             
-    # 3. Check Central Whitelist
     for key, full_name in CENTRAL_BOARDS:
         if key in title_lower:
             return full_name, "Central Govt Job"
 
-    # If it's neither Bihar nor Central Whitelisted -> Reject it!
     return None, None
 
 def fetch_page_via_scrapingant(url):
@@ -151,7 +170,7 @@ def extract_inner_details_ai(page_text):
         return {}
 
 # -------------------------------------------------------------
-# Main Execution Pipeline
+# Main Pipeline
 # -------------------------------------------------------------
 def run_sarkari_job_scraper():
     print("🔄 Fetching Main SarkariResult Page via ScrapingAnt...")
@@ -176,12 +195,18 @@ def run_sarkari_job_scraper():
             if is_nav_link(title, detail_url):
                 continue
 
+            # 1. Check title-embedded date for fast filter
+            title_date_match = re.search(r'Last\s*Date\s*:?\s*(\d{1,2}[/-]\d{1,2}[/-]\d{2,4})', title, re.IGNORECASE)
+            title_last_date = title_date_match.group(1) if title_date_match else None
+
+            if title_last_date and is_date_expired(title_last_date):
+                print(f"⏰ [EXPIRED SKIPPED]: {title} (Last Date: {title_last_date})")
+                continue
+
             clean_title = re.sub(r'Last\s*Date\s*:?.*$', '', title, flags=re.IGNORECASE).strip()
             
-            # Whitelist Classification Check (Reject UP/MP/Other states)
             organization, job_type = classify_job_board(clean_title)
             if not organization:
-                print(f"🚫 [REJECTED NON-BIHAR/NON-CENTRAL]: {clean_title}")
                 continue
 
             processed_urls.add(detail_url)
@@ -191,6 +216,12 @@ def run_sarkari_job_scraper():
             inner_text = clean_html_text(inner_html) if inner_html else ""
 
             ai_data = extract_inner_details_ai(inner_text)
+            final_last_date = ai_data.get("last_date") or title_last_date or "Refer Notification"
+
+            # 2. Re-verify after inner page AI parse
+            if is_date_expired(final_last_date):
+                print(f"⏰ [EXPIRED INNER SKIPPED]: {clean_title} (Last Date: {final_last_date})")
+                continue
 
             job_card = {
                 "id": f"job_{len(job_cards)+1:02d}",
@@ -201,7 +232,7 @@ def run_sarkari_job_scraper():
                 "total_vacancies": ai_data.get("total_vacancies") or "Various Posts",
                 "qualification": ai_data.get("qualification") or "Refer Official Notification",
                 "start_date": ai_data.get("start_date") or "Online Active",
-                "last_date": ai_data.get("last_date") or "Refer Notification",
+                "last_date": final_last_date,
                 "apply_url": "https://www.mocktester.online"
             }
             job_cards.append(job_card)
@@ -213,11 +244,10 @@ def run_sarkari_job_scraper():
         "latest_jobs": job_cards
     }
 
-    # Save to sarkarijob.json
     with open(JSON_FILENAME, "w", encoding="utf-8") as f:
         json.dump(output_data, f, ensure_ascii=False, indent=2)
 
-    print(f"\n✅ Data successfully saved to '{JSON_FILENAME}'! Total Valid Bihar/Central Jobs: {len(job_cards)}")
+    print(f"\n✅ Data saved to '{JSON_FILENAME}'! Active Bihar/Central Jobs: {len(job_cards)}")
 
 if __name__ == "__main__":
     run_sarkari_job_scraper()
