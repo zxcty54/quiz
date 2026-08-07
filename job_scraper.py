@@ -3,6 +3,7 @@ import json
 import time
 import re
 from datetime import datetime
+from urllib.parse import urljoin  # Standard URL Joiner (No curl_cffi crash)
 from curl_cffi import requests
 from bs4 import BeautifulSoup
 from groq import Groq
@@ -38,6 +39,8 @@ ORG_MAP = {
     "patna high court": "Patna High Court",
     "bihar health": "Bihar State Health Society (SHSB)",
     "bihar teacher": "Bihar School Examination Board (BSEB / TRE)",
+    "wcdc": "Women and Child Development Corporation (WCDC Bihar)",
+    "anganwadi": "Bihar Social Welfare Dept (Anganwadi)",
     
     # Central Govt & PSU Bodies
     "ssc": "Staff Selection Commission (SSC)",
@@ -147,12 +150,12 @@ def extract_fields_with_regex(text):
     return extracted
 
 # -------------------------------------------------------------
-# 4. DEEP SCRAPER WITH PDF CRAWLER
+# 4. DEEP SCRAPER WITH FIX FOR URL JOIN (NO CURL_CFFI CRASH)
 # -------------------------------------------------------------
 def fetch_deep_page_and_pdf(url):
     print(f"  🌐 [FETCH] Requesting URL: {url}")
     try:
-        res = requests.get(url, headers=HEADERS, timeout=12, verify=False, allow_redirects=True)
+        res = requests.get(url, headers=HEADERS, timeout=10, verify=False, allow_redirects=True)
         if res.status_code != 200:
             return ""
 
@@ -167,7 +170,7 @@ def fetch_deep_page_and_pdf(url):
             href = a_tag['href'].strip()
             text_label = a_tag.text.strip().lower()
             if href.endswith('.pdf') or "notification" in text_label or "advertisement" in text_label or "click here" in text_label:
-                full_pdf_url = requests.compat.urljoin(url, href)
+                full_pdf_url = urljoin(url, href)  # ✅ Standard urllib urljoin
                 pdf_candidates.append(full_pdf_url)
 
         best_pdf_bytes = None
@@ -176,7 +179,7 @@ def fetch_deep_page_and_pdf(url):
 
         for idx, c_url in enumerate(pdf_candidates[:4]):
             try:
-                c_res = requests.get(c_url, headers=HEADERS, timeout=8, verify=False)
+                c_res = requests.get(c_url, headers=HEADERS, timeout=6, verify=False)
                 c_len = len(c_res.content)
                 if c_res.status_code == 200 and c_len > best_pdf_size:
                     best_pdf_size = c_len
@@ -187,7 +190,7 @@ def fetch_deep_page_and_pdf(url):
 
         if best_pdf_bytes and best_pdf_size > 5000:
             try:
-                print(f"  ⚡ [PyMuPDF] Parsing Main Selected PDF: ({best_pdf_size // 1024} KB)")
+                print(f"  ⚡ [PyMuPDF] Parsing Main Selected PDF ({best_pdf_size // 1024} KB)")
                 doc = pymupdf.open(stream=best_pdf_bytes, filetype="pdf")
                 pages_count = len(doc)
                 pdf_text = ""
@@ -243,7 +246,7 @@ def fill_missing_fields_with_ai(title, raw_snippet, missing_keys):
                 temperature=0.01,
                 response_format={"type": "json_object"},
                 max_tokens=500,
-                timeout=15
+                timeout=12
             )
             return json.loads(res.choices[0].message.content.strip())
         except Exception:
@@ -276,17 +279,16 @@ def clean_post_name(title):
     return clean.strip()[:50]
 
 # -------------------------------------------------------------
-# 7. SARKARI RESULT DIRECT BOX SCRAPER (FALLBACK & PRIMARY)
+# 7. SARKARI RESULT HOMEPAGE DIRECT SCRAPER
 # -------------------------------------------------------------
 def fetch_sarkari_result_boxes():
     items = []
     try:
         sr_url = "https://www.sarkariresult.com/"
-        res = requests.get(sr_url, headers=HEADERS, timeout=12, verify=False)
+        res = requests.get(sr_url, headers=HEADERS, timeout=10, verify=False)
         if res.status_code == 200:
             soup = BeautifulSoup(res.content, "html.parser")
             
-            # Find Boxes for Result, Admit Card, Latest Jobs
             boxes = soup.find_all('div', id=re.compile(r'box|post')) or soup.find_all('div', class_=re.compile(r'box|post'))
             for box in boxes:
                 header = box.find(['h2', 'h3', 'div', 'b'])
@@ -300,7 +302,7 @@ def fetch_sarkari_result_boxes():
 
                 for a_tag in box.find_all('a', href=True)[:15]:
                     title = a_tag.text.strip()
-                    href = a_tag['href'].strip()
+                    href = urljoin(sr_url, a_tag['href'].strip())
                     if title and len(title) > 6:
                         items.append((title, href, category_type))
             print(f"✅ SarkariResult Live Homepage Scraped: Found {len(items)} items.")
@@ -319,14 +321,11 @@ def run_job_pipeline():
     results = []
     seen_titles = set()
 
-    # Active Working Sources
     sources = [
-        ("Main FreeJobAlert Feed", "https://www.freejobalert.com/feed/", "job"),
-        ("Bihar Job Portal", "https://biharjobportal.com/feed/", "job"),
-        ("JagranJosh Govt Jobs", "https://www.jagranjosh.com/rss/josh/jobs.xml", "job")
+        ("FreeJobAlert Main Feed", "https://www.freejobalert.com/feed/", "job"),
+        ("Bihar Job Portal Feed", "https://biharjobportal.com/feed/", "job")
     ]
 
-    # 1. PROCESS RSS FEEDS
     for label, feed_url, default_type in sources:
         print(f"\n=======================================================")
         print(f"📡 [SOURCE START] Fetching RSS Feed: {label}")
@@ -353,7 +352,6 @@ def run_job_pipeline():
                     continue
                 seen_titles.add(simple_title)
 
-                # Determine item type from title
                 item_type = default_type
                 if "admit card" in title.lower() or "hall ticket" in title.lower():
                     item_type = "admit"
@@ -369,7 +367,7 @@ def run_job_pipeline():
                 full_text_context = f"{title}\n{raw_snippet}\n{rss_text}"
 
                 if check_rejection_reason(full_text_context):
-                    print(f"  ❌ Inner text matched rejection keyword.")
+                    print(f"  ❌ Rejection rule matched in inner text")
                     continue
 
                 extracted = extract_fields_with_regex(full_text_context)
@@ -431,7 +429,7 @@ def run_job_pipeline():
         except Exception as e:
             print(f"⚠️ Source Error ({label}): {e}")
 
-    # 2. PROCESS SARKARI RESULT HOMEPAGE DIRECT SCRAPE (FALLBACK / ENRICHMENT)
+    # 2. PROCESS SARKARI RESULT DIRECT HOMEPAGE
     print(f"\n=======================================================")
     print(f"🌐 [SOURCE START] Scraping SarkariResult Direct Homepage")
     print(f"=======================================================")
