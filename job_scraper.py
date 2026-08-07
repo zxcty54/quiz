@@ -6,7 +6,7 @@ from datetime import datetime
 from curl_cffi import requests
 from bs4 import BeautifulSoup
 from groq import Groq
-import fitz  # PyMuPDF
+import pymupdf  # ✅ Updated import to remove deprecation warning
 
 # -------------------------------------------------------------
 # 1. API Client Setup (Groq API)
@@ -100,7 +100,7 @@ def extract_fields_with_regex(text):
         "total_vacancies": None
     }
 
-    # 1. Multi-Pattern Application Fee (Gen/OBC: ₹500 | SC/ST: ₹125)
+    # 1. Multi-Pattern Application Fee
     fee_patterns = [
         r'(?:Application\s*Fee|Exam\s*Fee|Fee\s*Details)[\s\S]{1,250}?(?=\n\s*\n|Important|Age|Qualification|$)',
         r'(?:General\s*/?\s*OBC|UR\s*/?\s*EWS)[^.\n]*[₹\d]+[^.\n]*',
@@ -147,7 +147,7 @@ def extract_fields_with_regex(text):
     return extracted
 
 # -------------------------------------------------------------
-# 4. ADVANCED PDF CRAWLER & PRIORITIZER (UP TO PAGE 10)
+# 4. ADVANCED PDF CRAWLER & PRIORITIZER (USING PYMUPDF)
 # -------------------------------------------------------------
 def is_pdf_url(url):
     if url.lower().endswith('.pdf'):
@@ -161,18 +161,14 @@ def is_pdf_url(url):
     return False
 
 def fetch_deep_page_and_pdf(url):
-    """
-    Crawls URL, finds candidate PDF links by anchor text/attributes,
-    downloads the LARGEST PDF (Main Advertisement), and parses up to 10 pages.
-    """
     try:
-        res = requests.get(url, headers=HEADERS, timeout=10, verify=False, allow_redirects=True)
+        res = requests.get(url, headers=HEADERS, timeout=8, verify=False, allow_redirects=True)
         if res.status_code != 200:
             return ""
 
         # Case A: Direct PDF URL
         if is_pdf_url(url):
-            doc = fitz.open(stream=res.content, filetype="pdf")
+            doc = pymupdf.open(stream=res.content, filetype="pdf")  # ✅ pymupdf
             text = ""
             for page_num in range(min(len(doc), 10)):
                 text += doc[page_num].get_text("text") + "\n"
@@ -203,13 +199,12 @@ def fetch_deep_page_and_pdf(url):
             if href.endswith('.pdf') or is_match:
                 pdf_candidates.append(full_href)
 
-        # Download candidates and pick the LARGEST PDF (Main Advertisement)
         best_pdf_bytes = None
         best_pdf_size = 0
 
-        for candidate_url in pdf_candidates[:6]:
+        for candidate_url in pdf_candidates[:5]:
             try:
-                c_res = requests.get(candidate_url, headers=HEADERS, timeout=8, verify=False, allow_redirects=True)
+                c_res = requests.get(candidate_url, headers=HEADERS, timeout=6, verify=False, allow_redirects=True)
                 if c_res.status_code == 200:
                     is_pdf = candidate_url.endswith('.pdf') or 'application/pdf' in c_res.headers.get('Content-Type', '').lower()
                     if is_pdf:
@@ -217,31 +212,29 @@ def fetch_deep_page_and_pdf(url):
                         if content_size > best_pdf_size:
                             best_pdf_size = content_size
                             best_pdf_bytes = c_res.content
-            except Exception as ce:
-                print(f"⚠️ PDF Candidate fetch error ({candidate_url}): {ce}")
+            except Exception:
+                pass
 
-        # Parse largest PDF if found
-        if best_pdf_bytes and best_pdf_size > 15000:
+        if best_pdf_bytes and best_pdf_size > 10000:
             try:
-                doc = fitz.open(stream=best_pdf_bytes, filetype="pdf")
+                doc = pymupdf.open(stream=best_pdf_bytes, filetype="pdf")  # ✅ pymupdf
                 pdf_text = ""
                 for page_num in range(min(len(doc), 10)):
                     pdf_text += doc[page_num].get_text("text") + "\n"
-                print(f"📄 Successfully Crawled & Selected Main Official PDF ({best_pdf_size // 1024} KB)!")
+                print(f"  📄 Selected Main PDF ({best_pdf_size // 1024} KB)")
                 return clean_html_text(pdf_text[:12000])
             except Exception as pe:
-                print(f"⚠️ PyMuPDF stream parsing error: {pe}")
+                print(f"  ⚠️ PyMuPDF stream parse error: {pe}")
 
-        # Fallback: Extract HTML Body Text
         content = soup.find('div', id=re.compile(r'post|content|entry')) or soup.find('body')
         return clean_html_text(content.text if content else "")[:8000]
 
     except Exception as e:
-        print(f"⚠️ Deep Fetch Error ({url}): {e}")
+        print(f"  ⚠️ Deep Fetch Error ({url}): {e}")
     return ""
 
 # -------------------------------------------------------------
-# 5. MICRO-PROMPT GROQ AI FALLBACK (PER SINGLE NOTIFICATION)
+# 5. MICRO-PROMPT GROQ AI FALLBACK
 # -------------------------------------------------------------
 def fill_missing_fields_with_ai(title, raw_snippet, missing_keys):
     if not GROQ_KEY or not missing_keys:
@@ -249,11 +242,10 @@ def fill_missing_fields_with_ai(title, raw_snippet, missing_keys):
 
     prompt = f"""
     Item Title: {title}
-    Notification Text Context: {raw_snippet[:2000]}
+    Context: {raw_snippet[:2000]}
 
-    Extract ONLY the missing fields ({', '.join(missing_keys)}) for this government notification.
-    
-    JSON Output Schema:
+    Extract ONLY missing fields ({', '.join(missing_keys)}) for this government notification in JSON.
+    Schema:
     {{
       "application_fee": "Category-wise fee breakdown or 'Refer Official Notification'",
       "start_date": "Exact start date or 'Online Active'",
@@ -276,39 +268,33 @@ def fill_missing_fields_with_ai(title, raw_snippet, missing_keys):
                 temperature=0.01,
                 response_format={"type": "json_object"},
                 max_tokens=600,
-                timeout=20
+                timeout=15
             )
             return json.loads(res.choices[0].message.content.strip())
-        except Exception as e:
-            print(f"⚠️ Micro-LLM Call Failed ({model}): {e}")
+        except Exception:
+            pass
     return {}
 
 # -------------------------------------------------------------
 # 6. HARD REJECTION KEYWORDS
 # -------------------------------------------------------------
 REJECT_KEYWORDS = [
-    # University, College & Academic Results
-    "university", "college", "semester", "ba part", "bsc ", "bcom", "ma ", "msc ",
-    "degree college", "annual exam", "admissions", "counselling", "allotment", "entrance test",
-
-    # Scholarships & Yojnas
-    "scholarship", "post matric", "nsp scholarship", "yojna", "scheme", "pension",
-
-    # Other States
-    "uttar pradesh", " up police", " up board", "uppsc", " up govt",
-    "madhya pradesh", "mppsc", "rajasthan", "rpsc", "haryana", "hpsc",
-    "dsssb", "maharashtra", "mpsc", "madc", "jharkhand", "jpsc",
-    "west bengal", "wbpsc", "punjab", "ppsc", "gujarat", "gpsc",
-    "tamil nadu", "tnpsc", "tancet", "andhra pradesh", "appsc",
-    "telangana", "tspsc", "kerala", "kpsc", "karnataka", "odisha", "opsc",
-
-    # Apprentice & Doctors
-    "apprentice", "apprenticeship", "mbbs", "medical officer", "specialist medical officer"
+    r'\buniversity\b', r'\bcollege\b', r'\bsemester\b', r'\bba part\b', r'\bbsc\b', r'\bbcom\b',
+    r'\bdegree college\b', r'\bannual exam\b', r'\badmissions?\b', r'\bcounselling\b', r'\ballotment\b',
+    r'\bscholarship\b', r'\bpost matric\b', r'\bnsp scholarship\b', r'\byojna\b', r'\bpension\b',
+    r'\buttar pradesh\b', r'\bup police\b', r'\buppsc\b', r'\bmadhya pradesh\b', r'\bmppsc\b',
+    r'\brajasthan\b', r'\brpsc\b', r'\bharyana\b', r'\bhpsc\b', r'\bdsssb\b', r'\bmaharashtra\b',
+    r'\bmpsc\b', r'\bjharkhand\b', r'\bjpsc\b', r'\bwest bengal\b', r'\bpunjab\b', r'\bgujarat\b',
+    r'\btamil nadu\b', r'\btnpsc\b', r'\bandhra pradesh\b', r'\btelangana\b', r'\bkerala\b', r'\bkarnataka\b',
+    r'\bapprentice\b', r'\bapprenticeship\b', r'\bmbbs\b', r'\bmedical officer\b'
 ]
 
 def is_rejected(text):
     t_lower = text.lower()
-    return any(keyword in t_lower for keyword in REJECT_KEYWORDS)
+    for pattern in REJECT_KEYWORDS:
+        if re.search(pattern, t_lower):
+            return True
+    return False
 
 def clean_post_name(title):
     clean = re.sub(r'(Recruitment|Notification|Online Form|Apply Online|2025|2026)', '', title, flags=re.IGNORECASE)
@@ -343,7 +329,7 @@ def run_job_pipeline():
                 continue
 
             soup = BeautifulSoup(res.content, "xml")
-            items = soup.find_all('item')[:12]
+            items = soup.find_all('item')[:15]
 
             for item in items:
                 title = item.find('title').text.strip() if item.find('title') is not None else ""
@@ -359,7 +345,7 @@ def run_job_pipeline():
 
                 print(f"\n🔍 Processing [{item_type.upper()}]: {title}")
 
-                # Deep Scrape: Crawls page + Main Official PDF
+                # Deep Scrape: Article Page + PDF Crawler
                 raw_snippet = ""
                 if link:
                     raw_snippet = fetch_deep_page_and_pdf(link)
@@ -367,7 +353,7 @@ def run_job_pipeline():
                 full_text_context = f"{title}\n{raw_snippet}"
 
                 if is_rejected(full_text_context):
-                    print(f"❌ Python Inner Filter Blocked: {title}")
+                    print(f"  ❌ Inner text triggered rejection rule")
                     continue
 
                 # --- STEP A: REGEX EXTRACTION (0 TOKENS) ---
@@ -378,13 +364,12 @@ def run_job_pipeline():
 
                 # --- STEP C: MICRO-LLM CALL (MISSING FIELDS ONLY) ---
                 if missing_keys and GROQ_KEY and item_type == "job":
-                    print(f"⚡ Missing fields {missing_keys} -> Calling Micro-LLM...")
+                    print(f"  ⚡ Missing {missing_keys} -> Micro-LLM call")
                     ai_res = fill_missing_fields_with_ai(title, raw_snippet, missing_keys)
                     for key in missing_keys:
                         if ai_res.get(key):
                             extracted[key] = ai_res[key]
 
-                # Detect Exact Recruitment Body
                 org_name = detect_organization(full_text_context)
 
                 # --- STEP D: MAP TO FINAL JSON STRUCTURE ---
