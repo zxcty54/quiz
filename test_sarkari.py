@@ -4,12 +4,12 @@ from urllib.parse import quote
 import requests
 from bs4 import BeautifulSoup
 
-# Secret se API Key uthayega, ya fallback key use karega
+# Secret se API Key uthayega
 SCRAPINGANT_API_KEY = os.environ.get("SCRAPINGANT_API_KEY", "f2dac73c566b4f60b9ca989beedeb5de")
 
 TARGET_URL = "https://www.sarkariresult.com/latestjob/"
 
-# Correct ScrapingAnt V2 Endpoint
+# ScrapingAnt V2 Official API Endpoint
 encoded_target_url = quote(TARGET_URL)
 api_endpoint = f"https://api.scrapingant.com/v2/general?url={encoded_target_url}&x-api-key={SCRAPINGANT_API_KEY}&browser=true"
 
@@ -37,7 +37,7 @@ def test_sarkari_scrapingant():
         response = requests.get(api_endpoint, timeout=35)
         
         if response.status_code == 200:
-            print("✅ Successfully Bypassed Cloudflare! Status 200 OK\n")
+            print("✅ Successfully Bypassed Cloudflare via ScrapingAnt! Status 200 OK\n")
             soup = BeautifulSoup(response.text, 'html.parser')
             
             post_div = soup.find('div', id='post') or soup.find('body')
