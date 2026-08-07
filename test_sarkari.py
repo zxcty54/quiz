@@ -2,19 +2,18 @@ import os
 import json
 import re
 from datetime import datetime
-from urllib.parse import quote, urljoin
+from urllib.parse import quote
 import requests
 from bs4 import BeautifulSoup
 
 # -------------------------------------------------------------
-# Setup & Configurations
+# Configuration
 # -------------------------------------------------------------
 SCRAPINGANT_API_KEY = os.environ.get("SCRAPINGANT_API_KEY", "f2dac73c566b4f60b9ca989beedeb5de")
-
 TARGET_URL = "https://www.sarkariresult.com/latestjob/"
 JSON_FILENAME = "sarkarijob.json"
 
-# 🛑 OTHER STATES REJECTION LIST
+# Rejection Lists
 OTHER_STATES_REJECT = [
     "upsss", "upsssc", "upeida", "upscidc", "upsrtc", "mpesb", "jssc", "hartron", 
     "skau", "kurukshetra", "banda", "lucknow", "uttar pradesh", " up ", "uppsc", 
@@ -31,7 +30,6 @@ SKIP_NAV_KEYWORDS = [
     "about us", "home", "syllabus", "answer key", "certificate verification"
 ]
 
-# 🟢 WHITELIST BOARDS
 BIHAR_BOARDS = [
     ("bpsc", "Bihar Public Service Commission (BPSC)"),
     ("bssc", "Bihar Staff Selection Commission (BSSC)"),
@@ -124,39 +122,72 @@ def fetch_page_via_scrapingant(url):
         if res.status_code == 200:
             return res.text
     except Exception as e:
-        print(f"⚠️ ScrapingAnt fetch error for {url}: {e}")
+        print(f"⚠️ ScrapingAnt error for {url}: {e}")
     return None
 
-# 🔍 Detail Page Parser (Visits Article Link & Scrapes Exact Vacancy, Dates & Qualification)
-def parse_inner_article_page(html_content):
+# 🎯 Targeted HTML Table Parser for "Total Post" Cell
+def parse_inner_article_table(html_content):
     if not html_content:
         return {}
 
     soup = BeautifulSoup(html_content, 'html.parser')
+
+    vacancies = None
+    multi_post_count = 0
+
+    # Search all HTML tables
+    tables = soup.find_all('table')
+    for table in tables:
+        rows = table.find_all('tr')
+        for row in rows:
+            cells = row.find_all(['td', 'th'])
+            cell_texts = [clean_text(c.text) for c in cells]
+
+            for idx, cell_text in enumerate(cell_texts):
+                # Target "Total Post" table header or cell
+                if re.search(r'total\s*post', cell_text, re.IGNORECASE):
+                    # Check next cell in same row or next row cell
+                    if idx + 1 < len(cell_texts):
+                        val = cell_texts[idx + 1]
+                        if re.search(r'\d+', val):
+                            vacancies = val
+                            multi_post_count += 1
+                
+                # Check for direct vacancy digits in table cells
+                elif re.search(r'^\d+\s*(posts|vacancies)?$', cell_text, re.IGNORECASE):
+                    if not vacancies:
+                        vacancies = cell_text
+                    multi_post_count += 1
+
+    # Logic: Only set "Various Posts" if multiple post entries exist and no single exact total is found
     page_text = soup.get_text()
+    if not vacancies:
+        match = re.search(r'Total\s*Post\s*:?\s*(\d+)', page_text, re.IGNORECASE)
+        if match:
+            vacancies = f"{match.group(1)} Posts"
+        elif multi_post_count > 1 or "various post" in page_text.lower():
+            vacancies = "Various Posts"
+        else:
+            vacancies = "Refer Official Notification"
 
-    # 1. Total Vacancies Extraction
-    vacancies = "Various Posts"
-    vac_match = re.search(r'(Total\s*(?:Post|Vacancy|Vacancies)?\s*:?\s*)(\d+\s*(?:Posts|Vacancies)?)', page_text, re.IGNORECASE)
-    if not vac_match:
-        vac_match = re.search(r'(\d{2,6})\s*(?:Post|Posts|Vacancies|Vacancy)', page_text, re.IGNORECASE)
-    if vac_match:
-        vacancies = f"{vac_match.group(2 if len(vac_match.groups())>=2 else 1).strip()} Posts"
-        vacancies = re.sub(r'Posts\s*Posts', 'Posts', vacancies, flags=re.IGNORECASE)
+    # Format output vacancy string cleanly
+    if vacancies and vacancies != "Various Posts" and vacancies != "Refer Official Notification":
+        num_match = re.search(r'\d+', vacancies)
+        if num_match:
+            vacancies = f"{num_match.group(0)} Posts"
 
-    # 2. Application Start Date
+    # Extract Start Date & Last Date from Table
     start_date = "Online Active"
     start_match = re.search(r'(Application\s*Begin\s*:?\s*)(\d{1,2}[/-]\d{1,2}[/-]\d{2,4})', page_text, re.IGNORECASE)
     if start_match:
         start_date = start_match.group(2).strip()
 
-    # 3. Application Last Date
     last_date = None
     last_match = re.search(r'(Last\s*Date\s*(?:for\s*Apply|Online)?\s*:?\s*)(\d{1,2}[/-]\d{1,2}[/-]\d{2,4})', page_text, re.IGNORECASE)
     if last_match:
         last_date = last_match.group(2).strip()
 
-    # 4. Educational Qualification Extraction
+    # Qualification Extraction
     qualification = "Refer Official Notification"
     if "10th" in page_text or "High School" in page_text:
         qualification = "Class 10th Pass / ITI"
@@ -175,7 +206,7 @@ def parse_inner_article_page(html_content):
     }
 
 # -------------------------------------------------------------
-# Main Execution Pipeline
+# Main Execution
 # -------------------------------------------------------------
 def run_sarkari_job_scraper():
     print("🔄 Fetching Main SarkariResult Page via ScrapingAnt...")
@@ -201,25 +232,20 @@ def run_sarkari_job_scraper():
                 continue
 
             clean_title = re.sub(r'Last\s*Date\s*:?.*$', '', title, flags=re.IGNORECASE).strip()
-            
             organization, job_type = classify_job_board(clean_title)
             if not organization:
                 continue
 
             processed_urls.add(detail_url)
 
-            # 🌐 Inside Navigation: Fetch Inner Article Page using detail_url
-            print(f"🔗 [INSIDE ARTICLE] Scrape link: {detail_url}")
+            print(f"🔗 [INSIDE ARTICLE TABLE] Scraping: {clean_title}")
             inner_html = fetch_page_via_scrapingant(detail_url)
-            
-            # Extract Inner Article Details
-            inner_data = parse_inner_article_page(inner_html)
+            inner_data = parse_inner_article_table(inner_html)
 
-            # Extract Last Date (Fallback to Title Date if Inner Page fails)
+            # Date fallback
             title_date_match = re.search(r'Last\s*Date\s*:?\s*(\d{1,2}[/-]\d{1,2}[/-]\d{2,4})', title, re.IGNORECASE)
             final_last_date = inner_data.get("last_date") or (title_date_match.group(1) if title_date_match else None) or "Refer Notification"
 
-            # ⏰ Expired Check
             if is_date_expired(final_last_date):
                 print(f"⏰ [EXPIRED SKIPPED]: {clean_title} (Last Date: {final_last_date})")
                 continue
@@ -238,7 +264,7 @@ def run_sarkari_job_scraper():
             }
             
             job_cards.append(job_card)
-            print(f"✅ Added [{len(job_cards)}]: {clean_title} | Vacancies: {job_card['total_vacancies']} | Last Date: {job_card['last_date']}\n")
+            print(f"✅ Added [{len(job_cards)}]: {clean_title} | Total Post: {job_card['total_vacancies']} | Last Date: {job_card['last_date']}\n")
 
             if len(job_cards) >= 20:
                 break
@@ -250,7 +276,7 @@ def run_sarkari_job_scraper():
     with open(JSON_FILENAME, "w", encoding="utf-8") as f:
         json.dump(output_data, f, ensure_ascii=False, indent=2)
 
-    print(f"🎉 Complete! Saved {len(job_cards)} active jobs into '{JSON_FILENAME}'.")
+    print(f"🎉 Complete! Processed and saved into '{JSON_FILENAME}'.")
 
 if __name__ == "__main__":
     run_sarkari_job_scraper()
