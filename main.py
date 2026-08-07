@@ -199,16 +199,15 @@ def fetch_raw_national_news(target_dt):
 
 
 def fetch_raw_jobs():
-    """Scrapes Detailed Raw Jobs data for Bihar & Central Government Exams"""
+    """Scrapes Detailed Raw Jobs, Admit Cards & Results for Bihar & Central Exams"""
     job_notices = []
     headers = {
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
     }
 
     queries = [
-        "Bihar+Recruitment+Notification+Qualification+Eligibility+Last+Date+Fees",
-        "BPSC+BSSC+CSBC+Patna+High+Court+Vacancy+Complete+Details+Notification",
-        "SSC+CGL+CHSL+Railway+RRB+NTPC+Bank+IBPS+SBI+Notification+Eligibility+Fees"
+        "Bihar+BPSC+BSSC+CSBC+BPSSC+Patna+High+Court+Recruitment+Admit+Card+Result",
+        "SSC+CGL+CHSL+MTS+Railway+RRB+NTPC+ALP+Bank+IBPS+SBI+UPSC+Admit+Card+Result"
     ]
     for q in queries:
         try:
@@ -220,17 +219,17 @@ def fetch_raw_jobs():
                     title = item.find('title').text if item.find('title') is not None else ""
                     desc = clean_html_text(item.find('description').text if item.find('description') is not None else "")
                     if title:
-                        job_notices.append(f"[Google Job Alert] Title: {title} | Summary: {desc[:400]}")
+                        job_notices.append(f"[Google Alert] Title: {title} | Summary: {desc[:400]}")
         except Exception as e:
             print(f"⚠️ Error Job Query ({q}): {e}")
-    print("✅ Google Detailed Job Alerts fetched successfully!")
+    print("✅ Google Job Alerts fetched successfully!")
 
     try:
         fja_url = "https://www.freejobalert.com/feed/"
         res = requests.get(fja_url, headers=headers, timeout=15, verify=False)
         if res.status_code == 200:
             soup = BeautifulSoup(res.content, "xml")
-            for item in soup.find_all('item')[:25]:
+            for item in soup.find_all('item')[:30]:
                 title = item.find('title').text if item.find('title') is not None else ""
                 desc = clean_html_text(item.find('description').text if item.find('description') is not None else "")
                 if title:
@@ -354,23 +353,25 @@ def generate_job_summary(raw_text):
 
     prompt = f"""
     You are an expert Government Recruitment Portal Data Editor for FreeJobAlert & Sarkari Result.
-    Below is raw text scraped regarding Government Job Notifications:
+    Below is raw text scraped regarding Government Job Notifications, Admit Cards, and Results:
 
     {raw_text}
 
-    CRITICAL INSTRUCTION - NO DATA TRUNCATION / FULL DETAILED ELIGIBILITY:
+    STRICT GEOGRAPHICAL & JURISDICTION RULES (APPLIES TO ALL 3 CATEGORIES - JOBS, ADMIT CARDS, & RESULTS):
     1. WRITE EVERYTHING IN 100% PURE ENGLISH ONLY.
-    2. DO NOT SHORTEN OR TRUNCATE QUALIFICATION: Write complete, comprehensive eligibility criteria. Include degree name, required stream, minimum percentage marks, and experience if mentioned (e.g. "Bachelor Degree in Engineering / Technology in relevant branch OR Master Degree in Science with 55% marks").
-    3. DETAILED CATEGORY-WISE APPLICATION FEE: Break down fees clearly by category e.g., "General / OBC / EWS: ₹600 | SC / ST / PH: ₹150 | Female Candidates: ₹150".
-    4. DETAILED AGE LIMIT & RELAXATION: Provide min/max age along with category relaxation e.g., "21 to 37 Years for Male | 21 to 40 Years for Female (Age relaxation applicable as per rules)".
-    5. STRICT NO "TO BE ANNOUNCED" RULE: Never write generic phrases like "TBA" or "To be announced". Provide actual dates and figures.
-    6. WEBSITE LINK MAPPING: Always set "apply_url" to "https://www.mocktester.online".
+    2. STRICT ALLOWED JURISDICTION:
+       - BIHAR STATE GOVT: BPSC, BSSC, BPSSC, CSBC, Bihar Teacher (TRE), Patna High Court, Civil Court, Beltron, Health Dept Bihar, etc.
+       - CENTRAL GOVT (ALL INDIA): Staff Selection Commission (SSC), Indian Railways (RRB), Banking (IBPS, SBI, RBI), UPSC, Defence (Army, Navy, Air Force, CAPF).
+    3. STRICT REJECTION OF OTHER STATES (ABSOLUTE BAN ON ALL 3 SECTIONS):
+       - STRICTLY REJECT any Job, Admit Card, or Result belonging to OTHER STATES (e.g., REJECT UP Police Admit Card, Rajasthan Result, MPPSC Admit Card, Haryana CET, Delhi DSSSB, Maharashtra Govt, etc.).
+       - If an Admit Card or Result is from UP, MP, Rajasthan, Haryana, etc., DO NOT include it in any array!
 
-    ALLOWED RECRUITMENT BODIES ONLY:
-    - ALL BIHAR STATE GOVT JOBS: BPSC, BSSC, BPSSC, CSBC, Bihar Teacher (TRE), Patna High Court, Civil Court, Beltron, Health Dept Bihar, etc.
-    - ALL ALL-INDIA CENTRAL GOVT JOBS: Staff Selection Commission (SSC CGL/CHSL/MTS/GD), Indian Railways (RRB NTPC/Group D/ALP), Banking (IBPS, SBI, RBI), UPSC, Defence (Army, Navy, Air Force, CAPF).
-    
-    STRICT REJECTION: REJECT ANY OTHER STATE GOVERNMENT JOBS (e.g., UP Police, Rajasthan REET, MPPSC, Haryana, Delhi DSSSB, etc.) and private jobs.
+    DATA ACCURACY & FULL ELIGIBILITY RULES:
+    1. DO NOT SHORTEN OR TRUNCATE QUALIFICATION: Write full educational criteria.
+    2. DETAILED CATEGORY-WISE APPLICATION FEE: Break down fees clearly e.g., "General/OBC: ₹600 | SC/ST/PH: ₹150".
+    3. DETAILED AGE LIMIT: Provide min/max age with gender/category relaxation.
+    4. NO "TO BE ANNOUNCED": Provide exact dates and figures.
+    5. WEBSITE MAPPING: Set "apply_url" to "https://www.mocktester.online" for ALL items.
 
     JSON SCHEMA OUTPUT (Return EXACTLY this structure):
     {{
@@ -380,12 +381,12 @@ def generate_job_summary(raw_text):
           "title": "Detailed Exam / Recruitment Title 2026",
           "organization": "Official Body (e.g., Bihar Public Service Commission - BPSC)",
           "job_type": "Bihar Govt Job OR Central Govt Job",
-          "post_name": "Specific Posts Name with Post-wise Breakdown if available",
+          "post_name": "Specific Posts Name",
           "total_vacancies": "Exact Number of Posts (e.g., 1,957 Posts)",
-          "qualification": "Full Detailed Educational Qualification without shortening any requirement",
-          "age_limit": "Complete Min & Max Age limit with gender & category relaxation details",
+          "qualification": "Full Detailed Educational Qualification",
+          "age_limit": "Complete Min & Max Age limit with relaxation details",
           "application_fee": "Complete Category-wise Application Fee Breakdown",
-          "selection_process": "Written Exam, Physical Test, Interview, Document Verification",
+          "selection_process": "Written Exam, Physical Test, Interview",
           "start_date": "Exact Application Start Date e.g., 28 Aug 2026",
           "last_date": "Exact Application Last Date e.g., 30 Sep 2026",
           "apply_url": "https://www.mocktester.online",
@@ -396,13 +397,13 @@ def generate_job_summary(raw_text):
       "admit_cards": [
         {{
           "id": "admit_01",
-          "title": "Clean Official Admit Card Title",
-          "organization": "Recruitment Body Name",
+          "title": "Clean Official Admit Card Title (BIHAR OR CENTRAL ONLY)",
+          "organization": "Recruitment Body Name (e.g., BSSC / SSC / RRB)",
           "job_type": "Bihar Govt Job OR Central Govt Job",
           "post_name": "Post Name",
           "total_vacancies": "Exact Total Posts",
           "exam_date": "Exact Exam Date / CBT Schedule",
-          "status": "Admit Card Released / Download Hall Ticket Active",
+          "status": "Admit Card Released / Hall Ticket Link Active",
           "apply_url": "https://www.mocktester.online",
           "exam_tag": "🎫 Hall Ticket",
           "date": "{today_str}"
@@ -411,12 +412,12 @@ def generate_job_summary(raw_text):
       "results": [
         {{
           "id": "result_01",
-          "title": "Clean Official Result / Answer Key Title",
-          "organization": "Recruitment Body Name",
+          "title": "Clean Official Result Title (BIHAR OR CENTRAL ONLY)",
+          "organization": "Recruitment Body Name (e.g., CSBC / BPSC / SSC)",
           "job_type": "Bihar Govt Job OR Central Govt Job",
           "post_name": "Post Name",
           "total_vacancies": "Exact Total Posts",
-          "result_status": "Merit List PDF / Final Result Declared",
+          "result_status": "Merit List PDF Released / Answer Key Declared",
           "apply_url": "https://www.mocktester.online",
           "exam_tag": "🏆 Result",
           "date": "{today_str}"
@@ -529,7 +530,7 @@ if __name__ == "__main__":
                 if has_data:
                     with open("bihar_jobs.json", "w", encoding="utf-8") as f:
                         json.dump(parsed_jobs, f, ensure_ascii=False, indent=2)
-                    print("✅ bihar_jobs.json successfully updated with Full Detailed Eligibility & mocktester.online link!")
+                    print("✅ bihar_jobs.json successfully updated (Strict Bihar + Central ONLY for Jobs, Admit Cards & Results)!")
                 else:
                     print("🛡️ SAFEGUARD ACTIVATED: 0 job notifications found. Retaining existing file!")
             except Exception as e:
