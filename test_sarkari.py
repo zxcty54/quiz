@@ -1,17 +1,21 @@
 import os
 import json
 import re
-import time
 from datetime import datetime
+from urllib.parse import urljoin
+from curl_cffi import requests
 from bs4 import BeautifulSoup
-from groq import Groq
-from playwright.sync_api import sync_playwright
 
 # -------------------------------------------------------------
-# Test Config & Setup
+# Googlebot Headers (Bypasses Cloudflare Datacenter IP Block)
 # -------------------------------------------------------------
-GROQ_KEY = os.environ.get("GROQ_API_KEY")
-client = Groq(api_key=GROQ_KEY) if GROQ_KEY else None
+GOOGLEBOT_HEADERS = {
+    'User-Agent': 'Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)',
+    'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+    'Accept-Language': 'en-US,en;q=0.5',
+    'From': 'googlebot(at)googlebot.com',
+    'Referer': 'https://www.google.com/'
+}
 
 OTHER_STATES_REJECT = [
     "aiims", "cuttack", "odisha", "orissa", "khordha", "balipatna", "oav ", 
@@ -62,107 +66,76 @@ def is_date_expired(last_date_str):
     return False
 
 # -------------------------------------------------------------
-# Native Playwright Stealth Execution
+# Googlebot Bypass Scraper
 # -------------------------------------------------------------
-def test_sarkari_result_with_stealth():
-    url = "https://www.sarkariresult.com/latestjob/"
-    fallback_url = "https://www.sarkariresult.com/latestjobs.php"
-    
-    print(f"🧪 [STEALTH TEST] Scraping SarkariResult via Native Playwright: {url}\n")
+def test_sarkari_googlebot():
+    target_url = "https://www.sarkariresult.com/latestjob/"
+    print(f"🧪 [GOOGLEBOT BYPASS TEST] Requesting: {target_url}\n")
 
-    with sync_playwright() as p:
-        # Anti-bot bypass flags
-        browser = p.chromium.launch(
-            headless=True,
-            args=[
-                '--no-sandbox',
-                '--disable-setuid-sandbox',
-                '--disable-blink-features=AutomationControlled',
-                '--disable-infobars',
-                '--window-position=0,0',
-                '--ignore-certificate-errors'
-            ]
+    try:
+        # Requesting as Googlebot via curl_cffi
+        res = requests.get(
+            target_url, 
+            headers=GOOGLEBOT_HEADERS, 
+            timeout=20, 
+            verify=False
         )
-        
-        context = browser.new_context(
-            viewport={'width': 1920, 'height': 1080},
-            user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
-            locale="en-US",
-            timezone_id="Asia/Kolkata"
-        )
-        
-        page = context.new_page()
 
-        # Inject script to override navigator.webdriver detection
-        page.add_init_script("""
-            Object.defineProperty(navigator, 'webdriver', {
-                get: () => undefined
-            });
-        """)
+        if res.status_code != 200:
+            print(f"⚠️ Direct Googlebot status {res.status_code}. Trying AllOrigin Public Proxy Wrapper...")
+            # Fallback via AllOrigins / Scraper Proxy
+            proxy_url = f"https://api.allorigins.win/raw?url={target_url}"
+            res = requests.get(proxy_url, headers=GOOGLEBOT_HEADERS, timeout=25, verify=False)
 
-        try:
-            print(f"🌐 Navigating to {url}...")
-            response = page.goto(url, timeout=35000, wait_until="domcontentloaded")
-            
-            if response and response.status == 403:
-                print(f"⚠️ Main URL returned 403. Trying fallback mirror: {fallback_url}")
-                response = page.goto(fallback_url, timeout=35000, wait_until="domcontentloaded")
+        if res.status_code != 200:
+            print(f"❌ Failed to bypass 403! Status Code: {res.status_code}")
+            return
 
-            status_code = response.status if response else 0
+        print(f"✅ Successfully Bypassed 403! Status Code: {res.status_code}\n")
 
-            if status_code != 200:
-                print(f"❌ Failed! Final Status Code: {status_code}")
-                browser.close()
-                return
+        soup = BeautifulSoup(res.content, "html.parser")
+        post_div = soup.find('div', id='post') or soup.find('body')
+        a_tags = post_div.find_all('a', href=True) if post_div else []
 
-            print(f"✅ Bypassed Cloudflare! Status Code: {status_code}\n")
+        valid_links = []
 
-            time.sleep(2)
-            content = page.content()
-            soup = BeautifulSoup(content, "html.parser")
+        for a in a_tags[:40]:
+            href = a['href'].strip()
+            full_text = clean_html_text(a.text)
 
-            post_div = soup.find('div', id='post') or soup.find('body')
-            a_tags = post_div.find_all('a', href=True) if post_div else []
+            if len(full_text) < 8 or "sarkariresult.com" not in href:
+                continue
 
-            valid_links = []
+            # 🚫 State/AIIMS Rejection Check
+            if is_hard_rejected(full_text):
+                print(f"🚫 [REJECTED STATE/ENTITY]: {full_text}")
+                continue
 
-            for a in a_tags[:40]:
-                href = a['href'].strip()
-                full_text = clean_html_text(a.text)
+            # 🚫 Date Check from Hyperlink Text
+            last_date_match = re.search(r'Last\s*Date\s*:?\s*(\d{1,2}[/-]\d{1,2}[/-]\d{2,4})', full_text, re.IGNORECASE)
+            extracted_last_date = last_date_match.group(1) if last_date_match else None
 
-                if len(full_text) < 8 or "sarkariresult.com" not in href:
-                    continue
+            if extracted_last_date and is_date_expired(extracted_last_date):
+                print(f"⏰ [EXPIRED SKIPPED]: {full_text} (Last Date: {extracted_last_date})")
+                continue
 
-                if is_hard_rejected(full_text):
-                    print(f"🚫 [REJECTED STATE/ENTITY]: {full_text}")
-                    continue
+            clean_title = re.sub(r'Last\s*Date\s*:?.*$', '', full_text, flags=re.IGNORECASE).strip()
 
-                last_date_match = re.search(r'Last\s*Date\s*:?\s*(\d{1,2}[/-]\d{1,2}[/-]\d{2,4})', full_text, re.IGNORECASE)
-                extracted_last_date = last_date_match.group(1) if last_date_match else None
+            valid_links.append({
+                "title": clean_title,
+                "last_date": extracted_last_date,
+                "url": href
+            })
 
-                if extracted_last_date and is_date_expired(extracted_last_date):
-                    print(f"⏰ [EXPIRED SKIPPED]: {full_text} (Last Date: {extracted_last_date})")
-                    continue
+        print(f"\n✅ Total Active/Valid Bihar & Central Jobs Found: {len(valid_links)}\n")
+        print("--- TOP EXTRACTED ACTIVE LINKS ---")
+        for idx, item in enumerate(valid_links[:10], 1):
+            print(f"{idx}. Title: {item['title']}")
+            print(f"   Last Date: {item['last_date']}")
+            print(f"   Blue URL: {item['url']}\n")
 
-                clean_title = re.sub(r'Last\s*Date\s*:?.*$', '', full_text, flags=re.IGNORECASE).strip()
-
-                valid_links.append({
-                    "title": clean_title,
-                    "last_date": extracted_last_date,
-                    "url": href
-                })
-
-            print(f"\n✅ Total Active/Valid Bihar & Central Jobs Found: {len(valid_links)}\n")
-            print("--- TOP EXTRACTED ACTIVE LINKS ---")
-            for idx, item in enumerate(valid_links[:10], 1):
-                print(f"{idx}. Title: {item['title']}")
-                print(f"   Last Date: {item['last_date']}")
-                print(f"   Blue URL: {item['url']}\n")
-
-        except Exception as e:
-            print(f"🚨 Playwright Execution Error: {e}")
-
-        browser.close()
+    except Exception as e:
+        print(f"🚨 Execution Error: {e}")
 
 if __name__ == "__main__":
-    test_sarkari_result_with_stealth()
+    test_sarkari_googlebot()
