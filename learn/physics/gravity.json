@@ -1,0 +1,1232 @@
+{
+  "topic_id": "gravity_physics",
+  "topic_title": "गुरुत्वाकर्षण (Gravitation)",
+  "target_exams": ["BPSC", "BSSC", "RRB NTPC", "SSC CGL", "NEET", "UPSC Prelims", "BPSC TRE"],
+  "total_cards": 69,
+  "characters": {
+    "aman": {
+      "name": "Aman Sir",
+      "role": "teacher",
+      "avatar": "👨‍🏫"
+    },
+    "raju": {
+      "name": "Raju",
+      "role": "student",
+      "avatar": "👦"
+    }
+  },
+  "cards": [
+    {
+      "card_id": "card_01_intro",
+      "card_slug": "card_01_intro",
+      "type": "intro",
+      "concept_id": "chapter_intro",
+      "level": 1,
+      "progress": { "current": 1, "total": 69 },
+      "intro_payload": {
+        "title": "🍎 गुरुत्वाकर्षण (Gravitation)",
+        "icon": "🌍",
+        "target_exams": ["BPSC", "BSSC", "RRB NTPC", "SSC CGL", "NEET", "UPSC Prelims", "BPSC TRE"],
+        "learning_outcomes": [
+          "Newton का Universal Law of Gravitation पूरी तरह समझो",
+          "G और g में अंतर — BPSC/SSC का all-time trap",
+          "Mass vs Weight — Moon पर वज़न क्यों कम?",
+          "Free Fall और Galileo का Experiment",
+          "Kepler के तीनों नियम (Planetary Motion)",
+          "Satellites, Escape Velocity और ज्वार-भाटा (Tides)"
+        ],
+        "estimated_time": "45 minutes",
+        "total_modules": 6
+      },
+      "navigation": { "next": "card_02_why_things_fall", "button_text": "शुरू करें 🚀" }
+    },
+    {
+      "card_id": "card_02_why_things_fall",
+      "card_slug": "card_02_why_things_fall",
+      "type": "chat",
+      "concept_id": "gravity_observation",
+      "level": 1,
+      "progress": { "current": 2, "total": 69 },
+      "messages": [
+        { "speaker": "aman", "text": "Raju, agar tum chhat pe khade ho aur haath se ek patthar chhodo, wo kya karega?" },
+        { "speaker": "raju", "text": "Sir wo neeche girega! Ye to baccha bhi jaanta hai 😅" },
+        { "speaker": "aman", "text": "Sahi hai! Lekin ab socho — patthar NEECHE hi kyun gira? Upar kyun nahi gaya? Right ya Left kyun nahi gaya? 🤔" },
+        { "speaker": "raju", "text": "Hmm... ye to maine kabhi socha hi nahi! Hamesha neeche hi kyun?? 😯" }
+      ],
+      "navigation": { "next": "card_03_moon_guess", "button_text": "Jawaab Jaano ➔" }
+    },
+    {
+      "card_id": "card_03_moon_guess",
+      "card_slug": "card_03_moon_guess",
+      "type": "guess",
+      "concept_id": "moon_falling_mystery",
+      "level": 1,
+      "progress": { "current": 3, "total": 69 },
+      "guess_payload": {
+        "question": "चाँद (Moon) पृथ्वी के चारों ओर घूमता है। अगर पृथ्वी चाँद को अपनी ओर खींचती है, तो चाँद पृथ्वी पर गिरता क्यों नहीं? 🌙🌍",
+        "options": [
+          { "id": "A", "text": "चाँद बहुत हल्का है इसलिए नहीं गिरता" },
+          { "id": "B", "text": "चाँद पर कोई बल ही नहीं लगता" },
+          { "id": "C", "text": "चाँद लगातार गिर रहा है, लेकिन उसकी गति उसे सीधा गिरने नहीं देती" },
+          { "id": "D", "text": "सूर्य चाँद को ऊपर उठाता है" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "बहुत ज़बरदस्त सवाल! चाँद वाकई में पृथ्वी की तरफ 'गिर' रहा है — लगातार! लेकिन उसकी orbital velocity (तेज़ गति) उसे curved path में रखती है। वो गिरता जाता है, लेकिन पृथ्वी की surface भी curve होती है — इसलिए चाँद कभी टकराता नहीं, बस घूमता रहता है! Newton ने यही समझा था। 🎯"
+      },
+      "navigation": { "next": "card_04_newton_apple", "button_text": "Newton की कहानी ➔" }
+    },
+    {
+      "card_id": "card_04_newton_apple",
+      "card_slug": "card_04_newton_apple",
+      "type": "chat",
+      "concept_id": "newton_gravity_discovery",
+      "level": 1,
+      "progress": { "current": 4, "total": 69 },
+      "messages": [
+        { "speaker": "aman", "text": "1665 में Sir Isaac Newton अपने Woolsthorpe farm पर बैठे थे। पेड़ से एक सेब गिरा। Newton ने सोचा — 'अगर ये सेब नीचे गिर रहा है, तो क्या यही बल चाँद पर भी लगता है?' 🍎🌙" },
+        { "speaker": "raju", "text": "Matlab Newton ने ये connect किया कि सेब गिरना और चाँद का घूमना — SAME बल की वजह से है? 😲" },
+        { "speaker": "aman", "text": "Bilkul! 1687 में अपनी किताब 'Principia Mathematica' में Newton ने Universal Law of Gravitation publish किया। ⭐ BPSC TRE Favorite: Principia Mathematica = 1687! SSC में year directly पूछते हैं!" },
+        { "speaker": "raju", "text": "Newton, 1687, Principia — pakka yaad! Lekin ये law kehta kya hai exactly? 🤔" }
+      ],
+      "navigation": { "next": "card_05_universal_law", "button_text": "Universal Law Jaano ➔" }
+    },
+    {
+      "card_id": "card_05_universal_law",
+      "card_slug": "card_05_universal_law",
+      "type": "chat",
+      "concept_id": "universal_law_statement",
+      "level": 1,
+      "progress": { "current": 5, "total": 69 },
+      "messages": [
+        { "speaker": "aman", "text": "Newton's Universal Law of Gravitation: 'ब्रह्मांड में प्रत्येक पिंड (body) हर दूसरे पिंड को अपनी ओर एक बल से आकर्षित करता है।' ✨ Ye बल दोनों objects के masses पर depend करता है और उनके बीच की दूरी पर भी!" },
+        { "speaker": "raju", "text": "Matlab मैं और ये table भी एक-दूसरे को attract कर रहे हैं?? 😅" },
+        { "speaker": "aman", "text": "Haan! Lekin tumhare aur table ke mass बहुत छोटे हैं, इसलिए ये बल इतना tiny है कि feel ही नहीं होता। Earth जैसे massive body के साथ ये बल बड़ा हो जाता है — इसीलिए तुम ज़मीन पर टिके हो! 🌍" },
+        { "speaker": "raju", "text": "Achhaaaa... to ये बल mass बड़ा हो तो ज़्यादा, mass छोटा हो तो कम! 💡" }
+      ],
+      "navigation": { "next": "card_06_formula_explain", "button_text": "Formula Samjho ➔" }
+    },
+    {
+      "card_id": "card_06_formula_explain",
+      "card_slug": "card_06_formula_explain",
+      "type": "chat",
+      "concept_id": "gravitational_formula",
+      "level": 1,
+      "progress": { "current": 6, "total": 69 },
+      "messages": [
+        { "speaker": "aman", "text": "Formula: F = G × (m₁ × m₂) / r²\nF = Gravitational Force, m₁ & m₂ = दोनों bodies के mass, r = उनके centers के बीच की दूरी, G = Gravitational Constant 📐" },
+        { "speaker": "raju", "text": "Sir matlab Force दोनों masses के गुणनफल (product) के समानुपाती (proportional) है? 🤔" },
+        { "speaker": "aman", "text": "Exactly! F ∝ m₁ × m₂ — Mass बढ़ेगा तो Force बढ़ेगा। और F ∝ 1/r² — दूरी बढ़ेगी तो Force तेज़ी से कम होगा (square में)! Ye 'Inverse Square Law' कहलाता है। 📉" },
+        { "speaker": "raju", "text": "Matlab दूरी double करूँ, तो force एक-चौथाई हो जाएगा? Ye to important hai! 😮" }
+      ],
+      "navigation": { "next": "card_07_inverse_square", "button_text": "Inverse Square Samjho ➔" }
+    },
+    {
+      "card_id": "card_07_inverse_square",
+      "card_slug": "card_07_inverse_square",
+      "type": "chat",
+      "concept_id": "inverse_square_law",
+      "level": 1,
+      "progress": { "current": 7, "total": 69 },
+      "messages": [
+        { "speaker": "aman", "text": "Haan bilkul sahi! Inverse Square Law ka matlab: दूरी 2 गुना → Force 1/4, दूरी 3 गुना → Force 1/9, दूरी 10 गुना → Force 1/100! Force बहुत तेज़ी से गिरता है! 📉⚡" },
+        { "speaker": "raju", "text": "Isliye door ke planets पर Sun ka gravitational pull कम hai! Samajh aa gaya Sir! 🪐" },
+        { "speaker": "aman", "text": "Exactly! Aur ek important baat — ये बल UNIVERSAL है, matlab ये sirf Earth pe nahi, poore UNIVERSE mein हर दो objects ke beech काम करता है। Isliye Newton ने 'Universal' bola! 🌌" },
+        { "speaker": "raju", "text": "Wow! Sach mein universal hai... lekin Sir wo G kya hai formula mein? 🤔" }
+      ],
+      "navigation": { "next": "card_08_gravitational_constant", "button_text": "G ki Kahaani ➔" }
+    },
+    {
+      "card_id": "card_08_gravitational_constant",
+      "card_slug": "card_08_gravitational_constant",
+      "type": "chat",
+      "concept_id": "gravitational_constant_G",
+      "level": 1,
+      "progress": { "current": 8, "total": 69 },
+      "messages": [
+        { "speaker": "aman", "text": "G = Universal Gravitational Constant। इसका मान = 6.674 × 10⁻¹¹ N m² kg⁻²। ये value poore universe mein SAME hai — Earth पर, Mars पर, Galaxy के किसी भी कोने में! 🌌" },
+        { "speaker": "raju", "text": "Sir इसे measure किसने किया? 🤔" },
+        { "speaker": "aman", "text": "Henry Cavendish (English scientist) ने 1798 में Torsion Balance experiment से G की value measure की। ⭐ BPSC TRE Favorite: Cavendish ने G मापा, Newton ने Law दिया — दोनों अलग! SSC/Railway में name trap आता है! ⚠️" },
+        { "speaker": "raju", "text": "Matlab Newton ने law दिया but G की exact value बाद में Cavendish ने निकाली! Got it! ✅" }
+      ],
+      "navigation": { "next": "card_09_gravity_properties", "button_text": "Properties Dekho ➔" }
+    },
+    {
+      "card_id": "card_09_gravity_properties",
+      "card_slug": "card_09_gravity_properties",
+      "type": "chat",
+      "concept_id": "gravitational_force_properties",
+      "level": 1,
+      "progress": { "current": 9, "total": 69 },
+      "messages": [
+        { "speaker": "aman", "text": "Gravitational Force की 4 key properties:\n1️⃣ हमेशा ATTRACTIVE (कभी repulsive नहीं)\n2️⃣ Central Force (दो objects के centers को जोड़ने वाली line पर काम करता है)\n3️⃣ Long Range Force (अनंत दूरी तक काम करता है)\n4️⃣ प्रकृति का सबसे WEAK force है!" },
+        { "speaker": "raju", "text": "Hain?? WEAK force? Lekin gravity to itni powerful hai — hume ज़मीन पर चिपकाए रखती है! 😵" },
+        { "speaker": "aman", "text": "Compare करो: एक छोटा सा magnet paperclip उठा लेता है — poori Earth ki gravity से लड़कर! Magnetic force, Gravitational force से 10³⁶ गुना ज़्यादा strong है! Gravity weak है, but Earth ka mass इतना HUGE है कि effect दिखता है! 🧲🌍" },
+        { "speaker": "raju", "text": "Wow! Gravity weakest lekin mass zyada hone se powerful feel hota hai! Mind blown! 🤯" }
+      ],
+      "navigation": { "next": "card_10_mutual_attraction", "button_text": "Ek Aur Twist ➔" }
+    },
+    {
+      "card_id": "card_10_mutual_attraction",
+      "card_slug": "card_10_mutual_attraction",
+      "type": "chat",
+      "concept_id": "mutual_attraction_newton_third",
+      "level": 1,
+      "progress": { "current": 10, "total": 69 },
+      "messages": [
+        { "speaker": "aman", "text": "Ek zabardast concept: Jab seb zameen ki taraf girta hai, kya Earth bhi seb ki taraf attract hoti hai? 🍎🌍" },
+        { "speaker": "raju", "text": "Earth seb ki taraf?? Pagal baat lag rahi hai Sir! Earth to apni jagah rahi! 😂" },
+        { "speaker": "aman", "text": "Newton ke Third Law ke according — YES! Earth bhi seb ki taraf attract hoti hai EQUALLY! Same force dono pe lagta hai (F = F'). Lekin Earth ka mass इतना विशाल है (6 × 10²⁴ kg) ki uska acceleration negligible ho jaata hai — isliye Earth hilti nahi! ⚠️" },
+        { "speaker": "raju", "text": "Achhaaaa... Force same hai lekin acceleration alag hai kyunki mass alag hai! F = ma se samajh aa gaya! 💡" }
+      ],
+      "navigation": { "next": "card_11_m1_quiz1", "button_text": "Test Karo ➔" }
+    },
+    {
+      "card_id": "card_11_m1_quiz1",
+      "card_slug": "card_11_m1_quiz1",
+      "type": "quiz",
+      "concept_id": "universal_law_quiz",
+      "level": 1,
+      "progress": { "current": 11, "total": 69 },
+      "quiz_payload": {
+        "question": "Newton का Universal Law of Gravitation किस पुस्तक में प्रकाशित हुआ था?",
+        "options": [
+          { "id": "A", "text": "Opticks (1704)" },
+          { "id": "B", "text": "Principia Mathematica (1687)" },
+          { "id": "C", "text": "On the Origin of Species (1859)" },
+          { "id": "D", "text": "Philosophiæ Naturalis (1543)" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "✅ Newton ने अपना Universal Law of Gravitation 1687 में अपनी प्रसिद्ध पुस्तक 'Philosophiæ Naturalis Principia Mathematica' (संक्षेप में Principia) में प्रकाशित किया। ⭐ SSC/Railway में direct year और book name पूछा जाता है। Option D trap है — 1543 में Copernicus की किताब आई थी!"
+      },
+      "navigation": { "next": "card_12_m1_quiz2", "button_text": "Next Question (2/3) ➔" }
+    },
+    {
+      "card_id": "card_12_m1_quiz2",
+      "card_slug": "card_12_m1_quiz2",
+      "type": "quiz",
+      "concept_id": "gravitational_constant_quiz",
+      "level": 1,
+      "progress": { "current": 12, "total": 69 },
+      "quiz_payload": {
+        "question": "गुरुत्वाकर्षण स्थिरांक (G) का मान सर्वप्रथम किसने मापा?",
+        "options": [
+          { "id": "A", "text": "Isaac Newton" },
+          { "id": "B", "text": "Galileo Galilei" },
+          { "id": "C", "text": "Henry Cavendish" },
+          { "id": "D", "text": "Johannes Kepler" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "✅ Henry Cavendish ने 1798 में Torsion Balance experiment से G का मान मापा। ⚠️ Trap: Newton ने Law दिया लेकिन G की value measure नहीं की — यही SSC/BPSC का classic confusion point है! Newton ने 1687 में Law दिया, Cavendish ने 111 साल बाद 1798 में G मापा!"
+      },
+      "navigation": { "next": "card_13_m1_quiz3", "button_text": "Next Question (3/3) ➔" }
+    },
+    {
+      "card_id": "card_13_m1_quiz3",
+      "card_slug": "card_13_m1_quiz3",
+      "type": "quiz",
+      "concept_id": "gravity_properties_quiz",
+      "level": 1,
+      "progress": { "current": 13, "total": 69 },
+      "quiz_payload": {
+        "question": "गुरुत्वाकर्षण बल के बारे में कौन-सा कथन सत्य है?",
+        "options": [
+          { "id": "A", "text": "यह आकर्षक और प्रतिकर्षक दोनों हो सकता है" },
+          { "id": "B", "text": "यह प्रकृति का सबसे प्रबल (strongest) बल है" },
+          { "id": "C", "text": "यह सदैव आकर्षक (attractive) होता है और प्रकृति का सबसे दुर्बल बल है" },
+          { "id": "D", "text": "यह केवल पृथ्वी पर कार्य करता है" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "✅ Gravitational force हमेशा ATTRACTIVE होता है (कभी repulsive नहीं — electromagnetic और nuclear forces repulsive हो सकते हैं)। यह प्रकृति के चार मूल बलों (Gravitational, Electromagnetic, Strong Nuclear, Weak Nuclear) में सबसे WEAK है। ⭐ BPSC Multi-statement trap: 'Universal' = हर जगह, 'Always attractive' = कभी repulsive नहीं!"
+      },
+      "navigation": { "next": "card_14_m1_milestone", "button_text": "Check Answer ➔" }
+    },
+    {
+      "card_id": "card_14_m1_milestone",
+      "card_slug": "card_14_m1_milestone",
+      "type": "milestone",
+      "concept_id": "module1_complete",
+      "level": 1,
+      "progress": { "current": 14, "total": 69 },
+      "milestone_payload": {
+        "title": "🎉 MODULE 1 CLEARED!",
+        "badge_emoji": "🍎",
+        "completed_topic": "Universal Law of Gravitation",
+        "xp_earned": 50,
+        "milestone_progress": "Module 1/6 Complete",
+        "motivational_quote": "Newton ने सेब से Universe समझा, तुमने Module 1 से! 🚀 अब Acceleration due to Gravity (g) समझते हैं!"
+      },
+      "navigation": { "next": "card_15_what_is_g", "button_text": "Module 2 Start ➔" }
+    },
+    {
+      "card_id": "card_15_what_is_g",
+      "card_slug": "card_15_what_is_g",
+      "type": "chat",
+      "concept_id": "acceleration_due_to_gravity",
+      "level": 2,
+      "progress": { "current": 15, "total": 69 },
+      "messages": [
+        { "speaker": "aman", "text": "Raju, जब तुम ऊपर से पत्थर गिराते हो, वो तेज़ होता जाता है — neeche girate girate speed बढ़ती hai, hai na? Ye acceleration kahan se aa raha hai? 🪨⬇️" },
+        { "speaker": "raju", "text": "Earth ka pull! Earth खींच रही है इसलिए speed बढ़ रही है! 😮" },
+        { "speaker": "aman", "text": "Correct! Earth ki gravity जो acceleration देती है उसे 'g' कहते हैं — Acceleration due to Gravity! Earth की surface पर g ≈ 9.8 m/s² होता है। Matlab हर second में velocity 9.8 m/s बढ़ जाती है! ⚡" },
+        { "speaker": "raju", "text": "Sir lekin ये 'g' aur pehle wala 'G' — dono same hain kya? 🤔" }
+      ],
+      "navigation": { "next": "card_16_g_vs_G", "button_text": "G vs g Samjho ➔" }
+    },
+    {
+      "card_id": "card_16_g_vs_G",
+      "card_slug": "card_16_g_vs_G",
+      "type": "chat",
+      "concept_id": "G_versus_g_difference",
+      "level": 2,
+      "progress": { "current": 16, "total": 69 },
+      "messages": [
+        { "speaker": "aman", "text": "⚠️ BPSC/SSC का all-time BIGGEST trap! G aur g BILKUL ALAG hain!\n\n🔹 G = Universal Gravitational Constant = 6.674 × 10⁻¹¹ (poore universe mein SAME)\n🔹 g = Acceleration due to gravity = 9.8 m/s² on Earth (har jagah ALAG)" },
+        { "speaker": "raju", "text": "Matlab G kabhi change nahi hota, lekin g jagah-jagah change hota hai? 😲" },
+        { "speaker": "aman", "text": "Bilkul! G is a UNIVERSAL CONSTANT — Moon pe bhi same, Mars pe bhi same। But g depends on mass and radius of planet — Earth pe 9.8, Moon pe ~1.63, Jupiter pe ~24.8! 🪐" },
+        { "speaker": "raju", "text": "Ye to exam me pakka confuse karega! G = Constant, g = Variable! 📝" }
+      ],
+      "navigation": { "next": "card_17_g_altitude", "button_text": "g कब बदलता है? ➔" }
+    },
+    {
+      "card_id": "card_17_g_altitude",
+      "card_slug": "card_17_g_altitude",
+      "type": "chat",
+      "concept_id": "g_variation_altitude",
+      "level": 2,
+      "progress": { "current": 17, "total": 69 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab samjho g कब-कब change hota hai। पहला case: ALTITUDE (ऊँचाई) 🏔️\n\nJab tum ऊँचाई pe jaate ho (parvat, aeroplane), to Earth ke center se दूरी (r) बढ़ जाती है। F = Gm₁m₂/r² mein r badha to F ghatega — matlab g KAMM hota hai! 📉" },
+        { "speaker": "raju", "text": "Matlab Everest pe g Earth surface se KAMM hoga? 🏔️" },
+        { "speaker": "aman", "text": "Haan! Aur space mein bahut door ja kar g almost zero ho jayega! Isliye astronauts float karte hain. Simple rule: Upar jao → g ghate! ⬆️📉" },
+        { "speaker": "raju", "text": "Got it Sir! Altitude badhao → g ghate! Ab neeche jaane pe kya? 🤔" }
+      ],
+      "navigation": { "next": "card_18_g_depth", "button_text": "Depth pe g? ➔" }
+    },
+    {
+      "card_id": "card_18_g_depth",
+      "card_slug": "card_18_g_depth",
+      "type": "chat",
+      "concept_id": "g_variation_depth",
+      "level": 2,
+      "progress": { "current": 18, "total": 69 },
+      "messages": [
+        { "speaker": "aman", "text": "Zabardast sawaal! Jab tum Earth ke andar jaate ho (mine/coal mine mein), to g KAMM hota hai! 🕳️ Kyunki Earth ke center se neeche wale hisse ka effective mass ghatta hai!" },
+        { "speaker": "raju", "text": "Sir ruko... oopar jao tab bhi g kamm, neeche jao tab bhi g kamm? Matlab g sabse ZYADA surface pe hai?? 😵" },
+        { "speaker": "aman", "text": "BILKUL SAHI! g ki maximum value Earth ki SURFACE pe hoti hai! Upar jao ghate, neeche jao ghate! ⭐ BPSC TRE Favorite: Ye fact direct PYQ mein aata hai — 'g is maximum at...' Answer: Surface of Earth! 🎯" },
+        { "speaker": "raju", "text": "Surface pe max! Both sides se decrease! Ye to diagram mein bell curve jaisa hoga! 🔔" }
+      ],
+      "navigation": { "next": "card_19_g_center_zero", "button_text": "Center pe kya? ➔" }
+    },
+    {
+      "card_id": "card_19_g_center_zero",
+      "card_slug": "card_19_g_center_zero",
+      "type": "chat",
+      "concept_id": "g_at_center_zero",
+      "level": 2,
+      "progress": { "current": 19, "total": 69 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab sabse dramatic fact! Earth ke bilkul CENTER mein g = ZERO! 😲 Kyunki center pe tumhare charon taraf se EQUAL mass pull kar raha hai — sab cancel out! Net pull = Zero! ⚖️" },
+        { "speaker": "raju", "text": "Hain?? To agar main Earth ke center mein pohnch jaun, to main FLOAT karunga? 😱" },
+        { "speaker": "aman", "text": "Theoretically — haan! Tumhara weight zero ho jayega kyunki g = 0. Gravity charon taraf se equally pull karegi aur sab cancel! ⭐ NEET/BPSC: 'Value of g at the center of earth' = ZERO. Direct question aata hai! 🎯" },
+        { "speaker": "raju", "text": "Sir ye to next level physics hai! Center pe zero, surface pe max! 🤯" }
+      ],
+      "navigation": { "next": "card_20_g_poles_equator", "button_text": "Poles vs Equator ➔" }
+    },
+    {
+      "card_id": "card_20_g_poles_equator",
+      "card_slug": "card_20_g_poles_equator",
+      "type": "chat",
+      "concept_id": "g_latitude_variation",
+      "level": 2,
+      "progress": { "current": 20, "total": 69 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab surface pe bhi g same nahi hota! Earth perfect गोला (sphere) nahi hai — ye ध्रुवों (poles) से chapti aur भूमध्य रेखा (equator) se phuli hui hai (oblate spheroid) 🌍\n\nPoles pe radius KAMM → g ZYADA!\nEquator pe radius ZYADA → g KAMM!" },
+        { "speaker": "raju", "text": "Plus Earth ghoom (rotate) bhi rahi hai na equator pe zyada speed se? 🤔" },
+        { "speaker": "aman", "text": "Brilliant! Haan! Earth ke rotation ka centrifugal effect equator pe maximum hai, jo g ko aur KAMM karta hai! Dono effects milke: g at poles > g at equator! ⭐ BPSC/SSC Trap: g pole = 9.832, g equator = 9.780 m/s²! 📊" },
+        { "speaker": "raju", "text": "Matlab Poles pe cheezein BHAARI lageingi aur Equator pe halki! 😮 Do reasons: shape + rotation!" }
+      ],
+      "navigation": { "next": "card_21_g_guess", "button_text": "Guess Karo ➔" }
+    },
+    {
+      "card_id": "card_21_g_guess",
+      "card_slug": "card_21_g_guess",
+      "type": "guess",
+      "concept_id": "g_variation_guess",
+      "level": 2,
+      "progress": { "current": 21, "total": 69 },
+      "guess_payload": {
+        "question": "यदि पृथ्वी अपनी axis पर TEZZ घूमने लगे (faster rotation), तो Equator पर g का मान: 🌍💫",
+        "options": [
+          { "id": "A", "text": "बढ़ जाएगा" },
+          { "id": "B", "text": "कम हो जाएगा" },
+          { "id": "C", "text": "समान रहेगा" },
+          { "id": "D", "text": "शून्य से नीचे हो जाएगा" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "✅ Earth faster rotate करेगी → centrifugal effect बढ़ेगा (equator pe maximum) → g effective कम होगा! अगर Earth इतनी fast घूमने लगे कि centrifugal force = gravitational force, तो equator पर g = 0 हो जाएगा और चीज़ें उड़ने लगेंगी! 😲 ⭐ NEET/UPSC Conceptual Question!"
+      },
+      "navigation": { "next": "card_22_m2_quiz1", "button_text": "Quiz Time ➔" }
+    },
+    {
+      "card_id": "card_22_m2_quiz1",
+      "card_slug": "card_22_m2_quiz1",
+      "type": "quiz",
+      "concept_id": "g_max_location",
+      "level": 2,
+      "progress": { "current": 22, "total": 69 },
+      "quiz_payload": {
+        "question": "गुरुत्वीय त्वरण (g) का मान सबसे अधिक कहाँ होता है?",
+        "options": [
+          { "id": "A", "text": "भूमध्य रेखा (Equator) पर" },
+          { "id": "B", "text": "पृथ्वी के केन्द्र पर" },
+          { "id": "C", "text": "ध्रुवों (Poles) पर" },
+          { "id": "D", "text": "पृथ्वी की सतह से ऊपर" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "✅ g सबसे अधिक Poles पर होता है (9.832 m/s²) क्योंकि:\n1️⃣ Poles पर Earth का radius कम है (oblate shape)\n2️⃣ Poles पर rotation का centrifugal effect शून्य है\n\nEquator पर g कम (9.780 m/s²) — radius ज्यादा + rotation effect maximum!\nCenter पर g = 0!\n⭐ BPSC/SSC/Railway में बार-बार आने वाला factual question!"
+      },
+      "navigation": { "next": "card_23_m2_quiz2", "button_text": "Next (2/3) ➔" }
+    },
+    {
+      "card_id": "card_23_m2_quiz2",
+      "card_slug": "card_23_m2_quiz2",
+      "type": "quiz",
+      "concept_id": "G_vs_g_quiz",
+      "level": 2,
+      "progress": { "current": 23, "total": 69 },
+      "quiz_payload": {
+        "question": "निम्नलिखित में से कौन-सा कथन सत्य है?",
+        "options": [
+          { "id": "A", "text": "G और g दोनों सार्वत्रिक नियतांक (universal constant) हैं" },
+          { "id": "B", "text": "G एक सार्वत्रिक नियतांक है, g स्थान के अनुसार बदलता है" },
+          { "id": "C", "text": "g एक सार्वत्रिक नियतांक है, G स्थान के अनुसार बदलता है" },
+          { "id": "D", "text": "G और g दोनों स्थान के अनुसार बदलते हैं" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "✅ G (Universal Gravitational Constant) = 6.674 × 10⁻¹¹ → हर जगह SAME (Moon, Mars, Galaxy कहीं भी)। g (Acceleration due to gravity) = स्थान के अनुसार बदलता है (Earth = 9.8, Moon = 1.63, Jupiter = 24.8 m/s²)। ⭐ BPSC/SSC All-Time Trap: G ≠ g! G constant, g variable!"
+      },
+      "navigation": { "next": "card_24_m2_quiz3", "button_text": "Next (3/3) ➔" }
+    },
+    {
+      "card_id": "card_24_m2_quiz3",
+      "card_slug": "card_24_m2_quiz3",
+      "type": "quiz",
+      "concept_id": "g_depth_quiz",
+      "level": 2,
+      "progress": { "current": 24, "total": 69 },
+      "quiz_payload": {
+        "question": "पृथ्वी के केन्द्र पर गुरुत्वीय त्वरण (g) का मान होता है:",
+        "options": [
+          { "id": "A", "text": "9.8 m/s²" },
+          { "id": "B", "text": "अनन्त (Infinite)" },
+          { "id": "C", "text": "शून्य (Zero)" },
+          { "id": "D", "text": "19.6 m/s²" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "✅ Earth के center पर चारों ओर से EQUAL gravitational pull लगता है जो एक-दूसरे को cancel कर देता है। Net gravitational force = 0, इसलिए g = 0! यदि कोई व्यक्ति Earth के center पर हो, तो उसका weight zero होगा (W = mg = m × 0 = 0)। ⭐ NEET/BPSC Direct Question!"
+      },
+      "navigation": { "next": "card_25_m2_milestone", "button_text": "Check Answer ➔" }
+    },
+    {
+      "card_id": "card_25_m2_milestone",
+      "card_slug": "card_25_m2_milestone",
+      "type": "milestone",
+      "concept_id": "module2_complete",
+      "level": 2,
+      "progress": { "current": 25, "total": 69 },
+      "milestone_payload": {
+        "title": "🎉 MODULE 2 CLEARED!",
+        "badge_emoji": "📊",
+        "completed_topic": "Acceleration due to Gravity (g) & its Variations",
+        "xp_earned": 50,
+        "milestone_progress": "Module 2/6 Complete",
+        "motivational_quote": "G vs g — ab exam mein koi confuse nahi kar payega! 💪🔥"
+      },
+      "navigation": { "next": "card_26_mass_definition", "button_text": "Mass vs Weight ➔" }
+    },
+    {
+      "card_id": "card_26_mass_definition",
+      "card_slug": "card_26_mass_definition",
+      "type": "chat",
+      "concept_id": "mass_definition",
+      "level": 2,
+      "progress": { "current": 26, "total": 69 },
+      "messages": [
+        { "speaker": "aman", "text": "Raju, tumhara 'wajan' kitna hai? 😊" },
+        { "speaker": "raju", "text": "Sir, 50 kg hai mera wajan! 😅" },
+        { "speaker": "aman", "text": "Ruko! Tumne abhi ek bohot badi galti ki jo poora India karta hai — 50 kg tumhara MASS hai, Weight nahi! Mass aur Weight alag cheezein hain! 😎⚠️" },
+        { "speaker": "raju", "text": "Hain?? Mass aur weight alag? Ye to pehli baar sun raha hun! 😵" }
+      ],
+      "navigation": { "next": "card_27_weight_definition", "button_text": "Farak Samjho ➔" }
+    },
+    {
+      "card_id": "card_27_weight_definition",
+      "card_slug": "card_27_weight_definition",
+      "type": "chat",
+      "concept_id": "weight_definition",
+      "level": 2,
+      "progress": { "current": 27, "total": 69 },
+      "messages": [
+        { "speaker": "aman", "text": "MASS (द्रव्यमान) = तुम्हारे शरीर में कितना matter (पदार्थ) है। Ye कभी CHANGE nahi hota — Earth pe 50 kg, Moon pe bhi 50 kg, Space mein bhi 50 kg! Unit: kg ⚖️" },
+        { "speaker": "raju", "text": "Aur WEIGHT? 🤔" },
+        { "speaker": "aman", "text": "WEIGHT (भार) = Gravity ki wajah se tumhare body pe jo FORCE lagta hai! Formula: W = m × g। Ye JAGAH ke sath CHANGE hota hai kyunki g change hota hai! Unit: Newton (N), kg nahi! ⚡" },
+        { "speaker": "raju", "text": "Ohhh! Matlab bazaar mein 50 kg bolta hun wo actually mass hai! Mera weight to 50 × 9.8 = 490 Newton hai! 😮" }
+      ],
+      "navigation": { "next": "card_28_mass_vs_weight", "button_text": "Comparison ➔" }
+    },
+    {
+      "card_id": "card_28_mass_vs_weight",
+      "card_slug": "card_28_mass_vs_weight",
+      "type": "chat",
+      "concept_id": "mass_weight_comparison",
+      "level": 2,
+      "progress": { "current": 28, "total": 69 },
+      "messages": [
+        { "speaker": "aman", "text": "Quick comparison (BPSC/SSC ka favorite table):\n\n🔹 Mass: Scalar, kg में, कभी zero नहीं, हर जगह same\n🔹 Weight: Vector (direction = नीचे), Newton में, zero हो सकता है, जगह बदलने पर बदलता है!" },
+        { "speaker": "raju", "text": "Weight ZERO कब हो सकता है Sir? 😱" },
+        { "speaker": "aman", "text": "Jab g = 0 ho! Yaani Earth ke center pe, ya Space mein dur jaake! Tab W = m × 0 = 0! Mass to 50 kg rahega, but weight zero! ⚖️✨" },
+        { "speaker": "raju", "text": "Mind blowing! Mass hamesha hai but weight bina gravity ke zero! Ab moon pe kya hoga? 🌙" }
+      ],
+      "navigation": { "next": "card_29_weight_moon", "button_text": "Moon Weight ➔" }
+    },
+    {
+      "card_id": "card_29_weight_moon",
+      "card_slug": "card_29_weight_moon",
+      "type": "chat",
+      "concept_id": "weight_on_moon",
+      "level": 2,
+      "progress": { "current": 29, "total": 69 },
+      "messages": [
+        { "speaker": "aman", "text": "Moon pe g = 1.63 m/s² (Earth ka लगभग 1/6 भाग)! So agar tumhara Earth weight = 490 N hai, to Moon pe weight = 490/6 ≈ 81.7 N! ⭐ SSC/Railway Direct Fact: Moon pe weight = Earth weight ÷ 6! 🌙" },
+        { "speaker": "raju", "text": "Matlab Moon pe main 6 guna ooncha kood sakta hun! 🦘😂" },
+        { "speaker": "aman", "text": "Conceptually haan! Isliye astronauts Moon pe bouncing करते दिखते हain! Lekin mass SAME 50 kg rahega — matter to wahi hai tumhare body mein! 👨‍🚀" },
+        { "speaker": "raju", "text": "Mass constant, Weight changeable — exam mein kabhi nahi bhoolunga! ✅" }
+      ],
+      "navigation": { "next": "card_30_weightlessness_space", "button_text": "Weightlessness ➔" }
+    },
+    {
+      "card_id": "card_30_weightlessness_space",
+      "card_slug": "card_30_weightlessness_space",
+      "type": "chat",
+      "concept_id": "weightlessness_concept",
+      "level": 2,
+      "progress": { "current": 30, "total": 69 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab weightlessness (भारहीनता) samjho! ISS (International Space Station) mein astronauts float kyun karte hain? Kya wahan gravity nahi hai? 🛸" },
+        { "speaker": "raju", "text": "Haan Sir! Space mein gravity nahi hogi isliye float karte hain! 😊" },
+        { "speaker": "aman", "text": "GALAT! ❌ ISS 400 km ki height pe hai — wahan bhi gravity ~8.9 m/s² hai (Earth surface ka 90%)! Gravity HAI lekin astronauts aur ISS DONO saath mein 'free fall' mein hain! Jaise gir rahe hain continuously — isliye RELATIVE weight feel nahi hota! 😲" },
+        { "speaker": "raju", "text": "Matlab weightlessness = gravity nahi hai GALAT, weightlessness = free fall mein hain SAHI! Ye to BPSC trap lag raha hai! 🎯" }
+      ],
+      "navigation": { "next": "card_31_weightlessness_elevator", "button_text": "Elevator Mein? ➔" }
+    },
+    {
+      "card_id": "card_31_weightlessness_elevator",
+      "card_slug": "card_31_weightlessness_elevator",
+      "type": "chat",
+      "concept_id": "weightlessness_elevator",
+      "level": 2,
+      "progress": { "current": 31, "total": 69 },
+      "messages": [
+        { "speaker": "aman", "text": "Lift (elevator) mein feel kiya hai? Jab lift neeche aati hai tezzi se, to pet halka lagta hai — partial weightlessness! 🛗 Aur agar lift ki dori toot jaaye (free fall), to complete weightlessness feel hogi!" },
+        { "speaker": "raju", "text": "Sir to astronauts bhi basically free-falling lift mein hain? 😮" },
+        { "speaker": "aman", "text": "Perfect analogy! ISS = Earth ke around ghumti hui 'free-falling lift'! Gravity hai, lekin sab kuch saath mein gir raha hai isliye APPARENT WEIGHT zero! Real weight exist karta hai! ⚠️" },
+        { "speaker": "raju", "text": "Apparent weight vs Real weight — ye distinction bohot important hai exam ke liye! 📝" }
+      ],
+      "navigation": { "next": "card_32_weight_guess", "button_text": "Guess Karo ➔" }
+    },
+    {
+      "card_id": "card_32_weight_guess",
+      "card_slug": "card_32_weight_guess",
+      "type": "guess",
+      "concept_id": "weight_guess_trap",
+      "level": 2,
+      "progress": { "current": 32, "total": 69 },
+      "guess_payload": {
+        "question": "एक अंतरिक्ष यात्री (astronaut) अंतरिक्ष स्टेशन में तैर रहा है (floating)। उसका MASS: 🧑‍🚀",
+        "options": [
+          { "id": "A", "text": "शून्य (Zero) हो जाता है" },
+          { "id": "B", "text": "पृथ्वी से कम हो जाता है" },
+          { "id": "C", "text": "पृथ्वी जितना ही रहता है (unchanged)" },
+          { "id": "D", "text": "बढ़ जाता है" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "✅ Mass (द्रव्यमान) = शरीर में matter की मात्रा — यह कभी नहीं बदलता, चाहे कहीं भी हो! Space, Moon, Jupiter — mass SAME! बदलता है Weight (W = mg), क्योंकि g बदलता है। Float करने = Weight apparent zero, Mass same! ⭐ BPSC TRE Favorite trap!"
+      },
+      "navigation": { "next": "card_33_m3_quiz1", "button_text": "Quiz Time ➔" }
+    },
+    {
+      "card_id": "card_33_m3_quiz1",
+      "card_slug": "card_33_m3_quiz1",
+      "type": "quiz",
+      "concept_id": "mass_weight_unit_quiz",
+      "level": 2,
+      "progress": { "current": 33, "total": 69 },
+      "quiz_payload": {
+        "question": "भार (Weight) का SI मात्रक क्या है?",
+        "options": [
+          { "id": "A", "text": "किलोग्राम (kg)" },
+          { "id": "B", "text": "न्यूटन (N)" },
+          { "id": "C", "text": "जूल (J)" },
+          { "id": "D", "text": "पास्कल (Pa)" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "✅ Weight एक FORCE है (W = mg), इसलिए इसका SI unit = Newton (N)। Kg mass का unit है, weight का नहीं! ⚠️ SSC/BPSC Trap: Daily life में हम कहते हैं 'मेरा वज़न 50 kg' — यह scientifically WRONG है! 50 kg = Mass, Weight = 50 × 9.8 = 490 N!"
+      },
+      "navigation": { "next": "card_34_m3_quiz2", "button_text": "Next (2/3) ➔" }
+    },
+    {
+      "card_id": "card_34_m3_quiz2",
+      "card_slug": "card_34_m3_quiz2",
+      "type": "quiz",
+      "concept_id": "weight_moon_quiz",
+      "level": 2,
+      "progress": { "current": 34, "total": 69 },
+      "quiz_payload": {
+        "question": "चन्द्रमा (Moon) पर किसी वस्तु का भार (Weight) पृथ्वी की तुलना में होगा:",
+        "options": [
+          { "id": "A", "text": "समान" },
+          { "id": "B", "text": "1/6 भाग" },
+          { "id": "C", "text": "6 गुना" },
+          { "id": "D", "text": "शून्य" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "✅ Moon पर g ≈ 1.63 m/s² = Earth के g (9.8 m/s²) का लगभग 1/6 भाग। चूंकि Weight = m × g, और g Moon पर 1/6 है, तो Weight भी 1/6 हो जाएगा। ⭐ SSC/Railway Direct Fact: Moon weight = Earth weight ÷ 6। Mass दोनों जगह SAME रहेगा!"
+      },
+      "navigation": { "next": "card_35_m3_quiz3", "button_text": "Next (3/3) ➔" }
+    },
+    {
+      "card_id": "card_35_m3_quiz3",
+      "card_slug": "card_35_m3_quiz3",
+      "type": "quiz",
+      "concept_id": "weightlessness_quiz",
+      "level": 2,
+      "progress": { "current": 35, "total": 69 },
+      "quiz_payload": {
+        "question": "अंतरिक्ष स्टेशन (ISS) में अंतरिक्ष यात्री भारहीनता (weightlessness) अनुभव करते हैं क्योंकि:",
+        "options": [
+          { "id": "A", "text": "वहाँ गुरुत्वाकर्षण बल शून्य हो जाता है" },
+          { "id": "B", "text": "वे पृथ्वी से बहुत दूर हैं" },
+          { "id": "C", "text": "वे और स्टेशन दोनों मुक्त पतन (free fall) की स्थिति में हैं" },
+          { "id": "D", "text": "अंतरिक्ष में वायु नहीं होती" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "✅ ISS (~400 km ऊँचाई) पर gravity ≈ 8.9 m/s² (Earth surface का ~90%) — gravity HAI! लेकिन astronauts + ISS दोनों साथ में Earth के around free fall में हैं (orbital motion = continuous free fall)। चूंकि दोनों समान acceleration से 'गिर' रहे हैं, relative weight (apparent weight) = 0! ⭐ BPSC/NEET: Weightlessness ≠ No gravity! Weightlessness = Free fall!"
+      },
+      "navigation": { "next": "card_36_m3_milestone", "button_text": "Check Answer ➔" }
+    },
+    {
+      "card_id": "card_36_m3_milestone",
+      "card_slug": "card_36_m3_milestone",
+      "type": "milestone",
+      "concept_id": "module3_complete",
+      "level": 2,
+      "progress": { "current": 36, "total": 69 },
+      "milestone_payload": {
+        "title": "🎉 MODULE 3 CLEARED!",
+        "badge_emoji": "⚖️",
+        "completed_topic": "Mass, Weight & Weightlessness",
+        "xp_earned": 50,
+        "milestone_progress": "Module 3/6 Complete",
+        "motivational_quote": "Ab tum Mass aur Weight ke beech perfectly distinguish kar sakte ho! 50% candidates ye nahi kar paate! 🏆"
+      },
+      "navigation": { "next": "card_37_freefall_intro", "button_text": "Free Fall Module ➔" }
+    },
+    {
+      "card_id": "card_37_freefall_intro",
+      "card_slug": "card_37_freefall_intro",
+      "type": "chat",
+      "concept_id": "freefall_definition",
+      "level": 3,
+      "progress": { "current": 37, "total": 69 },
+      "messages": [
+        { "speaker": "aman", "text": "Raju, agar main ek patthar aur ek kagaz ka tukda dono saath mein chhodu, to pehle kya girega? 🪨📄" },
+        { "speaker": "raju", "text": "Sir patthar pehle girega! Bhaari cheez tez girti hai! Ye to sabko pata hai! 😊" },
+        { "speaker": "aman", "text": "Ruko... ye wahi galati hai jo 2000 saal pehle Aristotle ne ki thi! Aristotle (Greek philosopher) kehte the — bhaari cheez tez girti hai! But ye GALAT hai! 😲" },
+        { "speaker": "raju", "text": "Hain?? Aristotle galat?? To sach kya hai? 😵" }
+      ],
+      "navigation": { "next": "card_38_galileo_experiment", "button_text": "Galileo ki Sacchai ➔" }
+    },
+    {
+      "card_id": "card_38_galileo_experiment",
+      "card_slug": "card_38_galileo_experiment",
+      "type": "chat",
+      "concept_id": "galileo_free_fall",
+      "level": 3,
+      "progress": { "current": 38, "total": 69 },
+      "messages": [
+        { "speaker": "aman", "text": "Galileo Galilei (Italian scientist, 1564-1642) ने Aristotle ko challenge kiya! Galileo ne bola: 'Agar air resistance (hawa ka resistance) hata do, to SAARI cheezein — bhaari ya halki — EQUALLY FAST gireingi!' 🎯" },
+        { "speaker": "raju", "text": "Lekin Sir kagaz to slowly girti hai patthar se! 📄" },
+        { "speaker": "aman", "text": "Wo HAWA ki wajah se hai! Kagaz ka surface area zyada hai, hawa zyada resist karti hai! Agar VACUUM mein giraao (jahan hawa nahi), to kagaz aur patthar SAATH mein girenge! 😲 Free Fall = Only gravity acting, no air resistance!" },
+        { "speaker": "raju", "text": "Galileo ne ye prove kaise kiya? Leaning Tower of Pisa wali story sachi hai kya? 🏗️" }
+      ],
+      "navigation": { "next": "card_39_feather_vacuum", "button_text": "Sach Jaano ➔" }
+    },
+    {
+      "card_id": "card_39_feather_vacuum",
+      "card_slug": "card_39_feather_vacuum",
+      "type": "chat",
+      "concept_id": "feather_coin_vacuum",
+      "level": 3,
+      "progress": { "current": 39, "total": 69 },
+      "messages": [
+        { "speaker": "aman", "text": "Leaning Tower of Pisa wali kahani likely MYTH hai — historians mein debate hai! 🏗️ Lekin Galileo ne inclined plane experiments se free fall samjhi! ⭐ BPSC TRE: 'Galileo ने मुक्त पतन (free fall) का अध्ययन किया' — direct statement aata hai!" },
+        { "speaker": "raju", "text": "Aur vacuum wala proof? 🤔" },
+        { "speaker": "aman", "text": "Feather & Coin experiment: Glass tube se hawa nikaal do (vacuum banao)। Ab feather (पंख) aur coin saath mein giraaao — DONO SAATH mein girte hain! 🪶🪙 1971 mein Apollo 15 astronaut David Scott ne Moon pe ye LIVE demonstrate kiya — feather aur hammer saath gire! 🌙🔨" },
+        { "speaker": "raju", "text": "Moon pe no air, to naturally vacuum! Feather aur hammer SAME speed se gire! 🤯 Galileo sahi the!" }
+      ],
+      "navigation": { "next": "card_40_freefall_guess", "button_text": "Guess Karo ➔" }
+    },
+    {
+      "card_id": "card_40_freefall_guess",
+      "card_slug": "card_40_freefall_guess",
+      "type": "guess",
+      "concept_id": "freefall_guess",
+      "level": 3,
+      "progress": { "current": 40, "total": 69 },
+      "guess_payload": {
+        "question": "निर्वात (Vacuum) में एक लोहे की गेंद और एक कागज़ का टुकड़ा एक ही ऊँचाई से गिराए जाते हैं। ज़मीन पर पहले कौन पहुँचेगा? 🪶⚽",
+        "options": [
+          { "id": "A", "text": "लोहे की गेंद पहले" },
+          { "id": "B", "text": "कागज़ पहले" },
+          { "id": "C", "text": "दोनों साथ-साथ पहुँचेंगे" },
+          { "id": "D", "text": "कोई नहीं गिरेगा" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "✅ Vacuum में air resistance = ZERO। Free fall में सभी वस्तुएँ SAME acceleration (g) से गिरती हैं, चाहे mass कुछ भी हो! इसलिए लोहे की गेंद और कागज़ SAME time में ज़मीन पर पहुँचेंगे! Galileo ने Aristotle को 2000 साल बाद wrong prove किया! ⭐ NEET/BPSC Conceptual Trap!"
+      },
+      "navigation": { "next": "card_41_m4_quiz1", "button_text": "Quiz ➔" }
+    },
+    {
+      "card_id": "card_41_m4_quiz1",
+      "card_slug": "card_41_m4_quiz1",
+      "type": "quiz",
+      "concept_id": "freefall_quiz_1",
+      "level": 3,
+      "progress": { "current": 41, "total": 69 },
+      "quiz_payload": {
+        "question": "मुक्त पतन (Free Fall) में गुरुत्वीय त्वरण (g) के बारे में कौन-सा कथन सत्य है?",
+        "options": [
+          { "id": "A", "text": "भारी वस्तुओं के लिए g अधिक होता है" },
+          { "id": "B", "text": "हल्की वस्तुओं के लिए g अधिक होता है" },
+          { "id": "C", "text": "g सभी वस्तुओं के लिए समान होता है (same location पर)" },
+          { "id": "D", "text": "g वस्तु के आकार पर निर्भर करता है" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "✅ Free fall में g = सभी वस्तुओं के लिए SAME (एक ही स्थान पर)! g केवल स्थान (location) पर depend करता है (latitude, altitude, depth), वस्तु के mass, size, या shape पर नहीं! Galileo ने यही सिद्ध किया — Aristotle को गलत साबित करके! ⭐ BPSC/SSC Direct Concept!"
+      },
+      "navigation": { "next": "card_42_m4_quiz2", "button_text": "Next (2/3) ➔" }
+    },
+    {
+      "card_id": "card_42_m4_quiz2",
+      "card_slug": "card_42_m4_quiz2",
+      "type": "quiz",
+      "concept_id": "galileo_aristotle_quiz",
+      "level": 3,
+      "progress": { "current": 42, "total": 69 },
+      "quiz_payload": {
+        "question": "अरस्तू (Aristotle) का मुक्त पतन के बारे में विचार था कि भारी वस्तुएँ तेज़ गिरती हैं। इसे किसने गलत सिद्ध किया?",
+        "options": [
+          { "id": "A", "text": "Isaac Newton" },
+          { "id": "B", "text": "Galileo Galilei" },
+          { "id": "C", "text": "Johannes Kepler" },
+          { "id": "D", "text": "Henry Cavendish" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "✅ Galileo Galilei (1564-1642, Italian) ने Aristotle के 2000 साल पुराने विचार को गलत साबित किया। Galileo ने सिद्ध किया कि vacuum में सभी वस्तुएँ समान acceleration से गिरती हैं। ⭐ SSC/Railway Favorite: Galileo = Free Fall, Newton = Gravitation Law, Kepler = Planetary Motion, Cavendish = G मापा!"
+      },
+      "navigation": { "next": "card_43_m4_quiz3", "button_text": "Next (3/3) ➔" }
+    },
+    {
+      "card_id": "card_43_m4_quiz3",
+      "card_slug": "card_43_m4_quiz3",
+      "type": "quiz",
+      "concept_id": "moon_freefall_demo",
+      "level": 3,
+      "progress": { "current": 43, "total": 69 },
+      "quiz_payload": {
+        "question": "Apollo 15 मिशन (1971) के दौरान चन्द्रमा पर पंख (feather) और हथौड़ा (hammer) साथ गिराए गए। क्या हुआ?",
+        "options": [
+          { "id": "A", "text": "हथौड़ा पहले गिरा" },
+          { "id": "B", "text": "पंख पहले गिरा" },
+          { "id": "C", "text": "दोनों एक साथ गिरे" },
+          { "id": "D", "text": "कोई नहीं गिरा — वे तैरने लगे" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "✅ Moon पर वायुमंडल (atmosphere) नहीं है — naturally vacuum! इसलिए air resistance = zero। Astronaut David Scott ने hammer और falcon feather साथ गिराए — दोनों EXACTLY SAME time पर surface पर पहुँचे! यह Galileo के theory की live demonstration थी! 🌙🔨🪶 ⭐ BPSC TRE/UPSC Interesting Fact!"
+      },
+      "navigation": { "next": "card_44_m4_milestone", "button_text": "Check Answer ➔" }
+    },
+    {
+      "card_id": "card_44_m4_milestone",
+      "card_slug": "card_44_m4_milestone",
+      "type": "milestone",
+      "concept_id": "module4_complete",
+      "level": 3,
+      "progress": { "current": 44, "total": 69 },
+      "milestone_payload": {
+        "title": "🎉 MODULE 4 CLEARED!",
+        "badge_emoji": "🪶",
+        "completed_topic": "Free Fall & Galileo's Discovery",
+        "xp_earned": 50,
+        "milestone_progress": "Module 4/6 Complete",
+        "motivational_quote": "Aristotle 2000 saal galat rahe, Galileo ne seedha kar diya! Tum ab sach jaante ho! 💪🔥"
+      },
+      "navigation": { "next": "card_45_geocentric_heliocentric", "button_text": "Kepler's Laws ➔" }
+    },
+    {
+      "card_id": "card_45_geocentric_heliocentric",
+      "card_slug": "card_45_geocentric_heliocentric",
+      "type": "chat",
+      "concept_id": "geocentric_heliocentric",
+      "level": 3,
+      "progress": { "current": 45, "total": 69 },
+      "messages": [
+        { "speaker": "aman", "text": "Raju, ancient times mein log kya maante the — Earth ghumti hai ya Sooraj? ☀️🌍" },
+        { "speaker": "raju", "text": "Pehle log kehte the Sooraj Earth ke around ghumta hai! Ab pata hai Earth Sooraj ke around ghumti hai! 🌞" },
+        { "speaker": "aman", "text": "Correct! Pehla model = GEOCENTRIC (Earth center mein — Ptolemy ne dia). 1543 mein Nicolaus Copernicus (Polish astronomer) ne HELIOCENTRIC model diya — Sun center mein, planets around! ☀️ ⭐ BPSC TRE Favorite: Copernicus = Heliocentric = 1543!" },
+        { "speaker": "raju", "text": "Copernicus ne duniya ka nazariya badal diya! But planets kaise ghumte hain exactly — wo kisne bataya? 🤔" }
+      ],
+      "navigation": { "next": "card_46_kepler_first_law", "button_text": "Kepler Entry ➔" }
+    },
+    {
+      "card_id": "card_46_kepler_first_law",
+      "card_slug": "card_46_kepler_first_law",
+      "type": "chat",
+      "concept_id": "kepler_first_law",
+      "level": 3,
+      "progress": { "current": 46, "total": 69 },
+      "messages": [
+        { "speaker": "aman", "text": "Johannes Kepler (German, 1571-1630) ने Tycho Brahe (Danish astronomer) ke observational data ka analysis kiya aur 3 laws diye! Kepler's FIRST LAW (Law of Orbits): 'हर ग्रह सूर्य के चारों ओर दीर्घवृत्ताकार (ELLIPTICAL) कक्षा में घूमता है, जिसके एक FOCUS पर सूर्य स्थित होता है।' 🪐☀️" },
+        { "speaker": "raju", "text": "Elliptical matlab? Gol circle nahi? 🤔" },
+        { "speaker": "aman", "text": "Nahi! Ellipse = oval shape (anda jaisi, thodi lambi gol!) Circle perfect गोल hota hai, Ellipse thoda chapti gol! Aur Sun bilkul center mein nahi — ek focus pe hota hai (Ellipse ke do focus hote hain)! ⭐ BPSC/SSC Trap: Orbit CIRCULAR nahi ELLIPTICAL hai! 🎯" },
+        { "speaker": "raju", "text": "Oval orbit, Sun ek focus pe — got it! Ye to circular wale confusion se bach gaye! ✅" }
+      ],
+      "navigation": { "next": "card_47_kepler_second_law", "button_text": "Second Law ➔" }
+    },
+    {
+      "card_id": "card_47_kepler_second_law",
+      "card_slug": "card_47_kepler_second_law",
+      "type": "chat",
+      "concept_id": "kepler_second_law",
+      "level": 3,
+      "progress": { "current": 47, "total": 69 },
+      "messages": [
+        { "speaker": "aman", "text": "Kepler's SECOND LAW (Law of Areas): 'ग्रह और सूर्य को जोड़ने वाली रेखा (radius vector) समान समय में समान क्षेत्रफल sweep करती है।' 🔄📐" },
+        { "speaker": "raju", "text": "Sir ye practical mein matlab kya hai? 😅" },
+        { "speaker": "aman", "text": "Simple: Jab planet Sun ke PAAS hota hai (Perihelion), toh TEZZ chalta hai! Jab DUR hota hai (Aphelion), toh DHEERE chalta hai! Taaki equal time mein equal area cover ho! 🏃💨🐢" },
+        { "speaker": "raju", "text": "Achhaaaa! Paas = Fast, Dur = Slow! Earth bhi January mein Sun ke paas hoti hai (Perihelion) aur July mein dur (Aphelion)! 😮" }
+      ],
+      "navigation": { "next": "card_48_kepler_third_law", "button_text": "Third Law ➔" }
+    },
+    {
+      "card_id": "card_48_kepler_third_law",
+      "card_slug": "card_48_kepler_third_law",
+      "type": "chat",
+      "concept_id": "kepler_third_law",
+      "level": 3,
+      "progress": { "current": 48, "total": 69 },
+      "messages": [
+        { "speaker": "aman", "text": "Kepler's THIRD LAW (Law of Periods): 'किसी ग्रह के परिक्रमण काल (Time Period T) का वर्ग, उसकी कक्षा की अर्ध-दीर्घ अक्ष (semi-major axis, a) के घन के समानुपाती होता है।' T² ∝ a³ 📏⏰" },
+        { "speaker": "raju", "text": "Sir simple bhasha mein? 😅" },
+        { "speaker": "aman", "text": "Matlab: Jo planet Sun se JITNA DUR, uska ek chakkar lagane mein UTNA ZYADA TIME! Mercury (sabse paas) = 88 din, Earth = 365 din, Neptune (sabse dur) = 165 SAAL! 🪐⏳" },
+        { "speaker": "raju", "text": "Wow! Distance badhi to time bhi drastically badha! Neptune ko 165 saal lagein? 😲 Kepler ne ye 1609 aur 1619 mein publish kiya tha na?" }
+      ],
+      "navigation": { "next": "card_49_kepler_guess", "button_text": "Test Karo ➔" }
+    },
+    {
+      "card_id": "card_49_kepler_guess",
+      "card_slug": "card_49_kepler_guess",
+      "type": "guess",
+      "concept_id": "kepler_guess_trap",
+      "level": 3,
+      "progress": { "current": 49, "total": 69 },
+      "guess_payload": {
+        "question": "Kepler के नियमों के अनुसार, ग्रहों की कक्षा (orbit) किस आकार की होती है? 🪐",
+        "options": [
+          { "id": "A", "text": "पूर्ण वृत्ताकार (Perfectly Circular)" },
+          { "id": "B", "text": "दीर्घवृत्ताकार (Elliptical)" },
+          { "id": "C", "text": "परवलयाकार (Parabolic)" },
+          { "id": "D", "text": "सीधी रेखा (Straight Line)" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "✅ Kepler's First Law (Law of Orbits): सभी ग्रह सूर्य के चारों ओर ELLIPTICAL (दीर्घवृत्ताकार) कक्षा में घूमते हैं, जिसके एक focus पर सूर्य होता है। Circle perfect गोल है, Ellipse = oval/अंडाकार। ⚠️ Trap: Circular WRONG answer है! Kepler ने specifically elliptical बताया था। ⭐ SSC/BPSC Direct Question!"
+      },
+      "navigation": { "next": "card_50_m5_quiz1", "button_text": "Quiz ➔" }
+    },
+    {
+      "card_id": "card_50_m5_quiz1",
+      "card_slug": "card_50_m5_quiz1",
+      "type": "quiz",
+      "concept_id": "kepler_law_matching",
+      "level": 3,
+      "progress": { "current": 50, "total": 69 },
+      "quiz_payload": {
+        "question": "Kepler के तीसरे नियम (Law of Periods) के अनुसार, T² ∝ a³ का क्या अर्थ है?",
+        "options": [
+          { "id": "A", "text": "जो ग्रह सूर्य के पास है, उसका परिक्रमण काल अधिक है" },
+          { "id": "B", "text": "जो ग्रह सूर्य से दूर है, उसका परिक्रमण काल अधिक है" },
+          { "id": "C", "text": "सभी ग्रहों का परिक्रमण काल समान है" },
+          { "id": "D", "text": "परिक्रमण काल कक्षा की दूरी पर निर्भर नहीं करता" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "✅ T² ∝ a³ का मतलब: कक्षा का size (a) बड़ा → Time period (T) भी बड़ा! जो ग्रह सूर्य से जितना DUR, उसका ek chakkar lagane mein UTNA ZYADA time! Mercury (nearest) = 88 days, Earth = 365 days, Neptune (farthest) = ~165 years! ⭐ BPSC/NEET Conceptual Understanding!"
+      },
+      "navigation": { "next": "card_51_m5_quiz2", "button_text": "Next (2/3) ➔" }
+    },
+    {
+      "card_id": "card_51_m5_quiz2",
+      "card_slug": "card_51_m5_quiz2",
+      "type": "quiz",
+      "concept_id": "kepler_second_law_quiz",
+      "level": 3,
+      "progress": { "current": 51, "total": 69 },
+      "quiz_payload": {
+        "question": "Kepler के दूसरे नियम के अनुसार, कोई ग्रह अपनी कक्षा में सबसे तेज़ कब चलता है?",
+        "options": [
+          { "id": "A", "text": "जब वह सूर्य से सबसे दूर हो (Aphelion)" },
+          { "id": "B", "text": "जब वह सूर्य के सबसे निकट हो (Perihelion)" },
+          { "id": "C", "text": "हमेशा एक ही गति से चलता है" },
+          { "id": "D", "text": "कक्षा के मध्य में" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "✅ Kepler's Second Law (Law of Areas): ग्रह-सूर्य रेखा समान समय में समान area sweep करती है। Perihelion (nearest to Sun) पर arc लंबा cover करना पड़ता है ताकि area equal रहे — इसलिए speed MAXIMUM! Aphelion (farthest) पर speed MINIMUM! 🏃💨🐢\n\n⭐ BPSC Trap: Perihelion = paas = fast, Aphelion = dur = slow! Earth ka Perihelion ≈ 3 January, Aphelion ≈ 4 July!"
+      },
+      "navigation": { "next": "card_52_m5_quiz3", "button_text": "Next (3/3) ➔" }
+    },
+    {
+      "card_id": "card_52_m5_quiz3",
+      "card_slug": "card_52_m5_quiz3",
+      "type": "quiz",
+      "concept_id": "heliocentric_quiz",
+      "level": 3,
+      "progress": { "current": 52, "total": 69 },
+      "quiz_payload": {
+        "question": "सूर्यकेन्द्रित (Heliocentric) मॉडल — जिसमें सूर्य केन्द्र में है — किसने प्रस्तावित किया?",
+        "options": [
+          { "id": "A", "text": "Ptolemy (टॉलेमी)" },
+          { "id": "B", "text": "Aristotle (अरस्तू)" },
+          { "id": "C", "text": "Nicolaus Copernicus (कॉपरनिकस)" },
+          { "id": "D", "text": "Isaac Newton (न्यूटन)" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "✅ Nicolaus Copernicus (Polish, 1473-1543) ने 1543 में अपनी पुस्तक 'De Revolutionibus' में Heliocentric model दिया (Sun = center)। इससे पहले Ptolemy का Geocentric model (Earth = center) प्रचलित था। ⭐ SSC/Railway Direct Fact: Copernicus = Heliocentric, Ptolemy = Geocentric। Kepler ने बाद में orbits का shape (elliptical) बताया!"
+      },
+      "navigation": { "next": "card_53_m5_milestone", "button_text": "Check Answer ➔" }
+    },
+    {
+      "card_id": "card_53_m5_milestone",
+      "card_slug": "card_53_m5_milestone",
+      "type": "milestone",
+      "concept_id": "module5_complete",
+      "level": 3,
+      "progress": { "current": 53, "total": 69 },
+      "milestone_payload": {
+        "title": "🎉 MODULE 5 CLEARED!",
+        "badge_emoji": "🪐",
+        "completed_topic": "Kepler's Laws of Planetary Motion",
+        "xp_earned": 50,
+        "milestone_progress": "Module 5/6 Complete",
+        "motivational_quote": "Kepler ne planets ka raaz khola, tumne module ka! Last module: Satellites & Escape Velocity! 🛰️🚀"
+      },
+      "navigation": { "next": "card_54_satellites_intro", "button_text": "Final Module ➔" }
+    },
+    {
+      "card_id": "card_54_satellites_intro",
+      "card_slug": "card_54_satellites_intro",
+      "type": "chat",
+      "concept_id": "satellite_definition",
+      "level": 3,
+      "progress": { "current": 54, "total": 69 },
+      "messages": [
+        { "speaker": "aman", "text": "Raju, TV channels kaise aate hain tumhare ghar? DTH dish lagaya hai na? Wo signal kahan se aata hai? 📡📺" },
+        { "speaker": "raju", "text": "Sir satellite se aata hai! Wo space mein ghoomta hai aur signal bhejta hai! 🛰️" },
+        { "speaker": "aman", "text": "Correct! Satellite = कोई भी object जो किसी बड़े body के around orbit करे। Moon = Earth ka NATURAL satellite। DTH dish wala = ARTIFICIAL satellite (मानव-निर्मित)! 🌙🛰️" },
+        { "speaker": "raju", "text": "Achhaaaa... Moon natural satellite hai aur INSAT jaise artificial! Lekin ye satellite girta kyun nahi? 🤔" }
+      ],
+      "navigation": { "next": "card_55_escape_velocity", "button_text": "Escape Velocity ➔" }
+    },
+    {
+      "card_id": "card_55_escape_velocity",
+      "card_slug": "card_55_escape_velocity",
+      "type": "chat",
+      "concept_id": "escape_velocity_concept",
+      "level": 3,
+      "progress": { "current": 55, "total": 69 },
+      "messages": [
+        { "speaker": "aman", "text": "Pehle ek aur concept — Escape Velocity (पलायन वेग)! Agar tum ek ball oopar phenko, wo wapas aa jaati hai (gravity kheenchti hai). Lekin agar BAHUT TEZZ phenko, to wo Earth ki gravity se CHHUT ke chali jayegi — kabhi wapas nahi aayegi! 🚀" },
+        { "speaker": "raju", "text": "Wo minimum speed jis pe chhut jaaye = Escape Velocity? 😮" },
+        { "speaker": "aman", "text": "Bilkul sahi! Earth ka Escape Velocity = 11.2 km/s (≈ 40,320 km/h)! Agar koi object 11.2 km/s se oopar jaaye, wo Earth ki gravity se permanently free ho jayega! 🌍➡️🚀 ⭐ SSC/Railway Direct Fact: Earth Escape Velocity = 11.2 km/s!" },
+        { "speaker": "raju", "text": "11.2 km per SECOND?? Sound speed (340 m/s) se 33 guna tezz! 🤯 Pakka yaad!" }
+      ],
+      "navigation": { "next": "card_56_geostationary", "button_text": "Geostationary Satellite ➔" }
+    },
+    {
+      "card_id": "card_56_geostationary",
+      "card_slug": "card_56_geostationary",
+      "type": "chat",
+      "concept_id": "geostationary_satellite",
+      "level": 3,
+      "progress": { "current": 56, "total": 69 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab Geostationary Satellite samjho — DTH, TV broadcasting, weather monitoring ke liye use hota hai! 📡☁️\n\nYe Earth ke equator ke exactly oopar, ~36,000 km ki height pe orbit karta hai. Aur iski khaas baat: iska TIME PERIOD = 24 hours (Earth ke rotation ke BARABAR)!" },
+        { "speaker": "raju", "text": "Matlab Earth ke saath ghoomta hai? Zameen se dekhne pe RUKA hua lagega? 😮" },
+        { "speaker": "aman", "text": "Exactly! Isliye 'GEO-STATIONARY' — Earth ke relative STATIONARY (ruka hua) dikhta hai! Isi wajah se dish antenna ek baar set karke chhod dete hain — satellite move nahi karta dikhta! 📡✅" },
+        { "speaker": "raju", "text": "36,000 km, 24 hours, Equator ke oopar — teeno yaad! ⭐" }
+      ],
+      "navigation": { "next": "card_57_polar_satellites", "button_text": "Polar Satellite ➔" }
+    },
+    {
+      "card_id": "card_57_polar_satellites",
+      "card_slug": "card_57_polar_satellites",
+      "type": "chat",
+      "concept_id": "polar_satellite",
+      "level": 3,
+      "progress": { "current": 57, "total": 69 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab Polar Satellite! Ye Earth ke POLES ke oopar se guzarta hai (North-South direction mein orbit). Height kam hoti hai — ~700-800 km! 🌍🔄" },
+        { "speaker": "raju", "text": "Ye geostationary se alag kaise hai? 🤔" },
+        { "speaker": "aman", "text": "Polar satellite LOWER orbit mein hai (closer to Earth) → zyada detail dikhta hai! Earth rotate karti hai aur satellite N-S ghoomta hai, so gradually POORI Earth cover ho jaati hai! Remote sensing, mapping, spy satellites — sab polar hain! 🛰️🗺️" },
+        { "speaker": "raju", "text": "To Geostationary = TV/Communication (high orbit), Polar = Mapping/Spying (low orbit)! 📡🗺️ Got it!" }
+      ],
+      "navigation": { "next": "card_58_india_satellites", "button_text": "India's Satellites ➔" }
+    },
+    {
+      "card_id": "card_58_india_satellites",
+      "card_slug": "card_58_india_satellites",
+      "type": "chat",
+      "concept_id": "india_satellite_programs",
+      "level": 3,
+      "progress": { "current": 58, "total": 69 },
+      "messages": [
+        { "speaker": "aman", "text": "India ke satellite programs — BPSC/SSC mein direct puchte hain! 🇮🇳\n🔹 Aryabhata (1975) — India ka FIRST satellite (USSR ne launch kiya)\n🔹 INSAT series — Communication & Weather (Geostationary)\n🔹 IRS series — Remote Sensing (Polar)\n🔹 ISRO = Indian Space Research Organisation (Headquarters: Bengaluru)" },
+        { "speaker": "raju", "text": "Aryabhata 1975 — India ka first! Kya ye mathematician Aryabhata ke naam pe hai? 😮" },
+        { "speaker": "aman", "text": "Haan! Ancient Indian mathematician-astronomer Aryabhata (476 AD) ke naam pe! ⭐ BPSC TRE Favorite: Aryabhata satellite = 1975, ISRO founded = 1969, Vikram Sarabhai = Father of Indian Space Programme! 🚀" },
+        { "speaker": "raju", "text": "Vikram Sarabhai = ISRO Father, 1969 founded, Aryabhata = First satellite 1975! Solid facts! 📝" }
+      ],
+      "navigation": { "next": "card_59_tides", "button_text": "Tides (ज्वार-भाटा) ➔" }
+    },
+    {
+      "card_id": "card_59_tides",
+      "card_slug": "card_59_tides",
+      "type": "chat",
+      "concept_id": "tides_gravity",
+      "level": 3,
+      "progress": { "current": 59, "total": 69 },
+      "messages": [
+        { "speaker": "aman", "text": "Gravity ka ek aur effect — Tides (ज्वार-भाटा)! Samundar ka paani din mein 2 baar uthta (high tide) aur girta (low tide) hai! Ye Moon aur Sun ki gravitational pull ki wajah se hota hai! 🌊🌙" },
+        { "speaker": "raju", "text": "Moon ka pull! Isliye Full Moon aur New Moon pe zyada bade tides aate hain? 🌕🌑" },
+        { "speaker": "aman", "text": "Bilkul! Full Moon/New Moon pe Sun, Moon, Earth EK LINE mein → combined gravitational pull MAXIMUM → SPRING TIDE (ज्वार) — sabse UNCHA! Quarter Moon pe Sun-Moon 90° angle pe → partially cancel → NEAP TIDE (भाटा) — sabse NICHLA! 🌊📉📈" },
+        { "speaker": "raju", "text": "Spring Tide = Full/New Moon = Max, Neap Tide = Quarter Moon = Min! ⭐ BPSC Geography mein bhi yahi aata hai! 🎯" }
+      ],
+      "navigation": { "next": "card_60_sat_guess", "button_text": "Guess Karo ➔" }
+    },
+    {
+      "card_id": "card_60_sat_guess",
+      "card_slug": "card_60_sat_guess",
+      "type": "guess",
+      "concept_id": "geostationary_height_guess",
+      "level": 3,
+      "progress": { "current": 60, "total": 69 },
+      "guess_payload": {
+        "question": "भू-स्थिर (Geostationary) उपग्रह की पृथ्वी की सतह से लगभग ऊँचाई कितनी होती है? 🛰️",
+        "options": [
+          { "id": "A", "text": "200 km" },
+          { "id": "B", "text": "800 km" },
+          { "id": "C", "text": "36,000 km" },
+          { "id": "D", "text": "3,84,000 km" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "✅ Geostationary satellite ≈ 36,000 km (35,786 km exact) की ऊँचाई पर equator के ऊपर orbit करता है। Time period = 24 hours (Earth rotation = satellite rotation)। ⚠️ Traps: 200 km = ISS नहीं, इतनी कम नहीं! 800 km = Polar satellite की height! 3,84,000 km = Moon की दूरी! ⭐ SSC/Railway Direct Factual Question!"
+      },
+      "navigation": { "next": "card_61_m6_quiz1", "button_text": "Quiz Time ➔" }
+    },
+    {
+      "card_id": "card_61_m6_quiz1",
+      "card_slug": "card_61_m6_quiz1",
+      "type": "quiz",
+      "concept_id": "escape_velocity_quiz",
+      "level": 3,
+      "progress": { "current": 61, "total": 69 },
+      "quiz_payload": {
+        "question": "पृथ्वी का पलायन वेग (Escape Velocity) लगभग कितना है?",
+        "options": [
+          { "id": "A", "text": "3.2 km/s" },
+          { "id": "B", "text": "7.9 km/s" },
+          { "id": "C", "text": "11.2 km/s" },
+          { "id": "D", "text": "29.8 km/s" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "✅ Earth ka Escape Velocity = 11.2 km/s (≈ 40,320 km/h)। इस speed से ऊपर फेंकी गई वस्तु Earth की gravity से permanently free हो जाएगी। ⚠️ Trap: 7.9 km/s = Earth की orbital velocity (satellite speed) है — Escape velocity नहीं! 3.2 km/s ≈ Mars escape velocity, 29.8 km/s ≈ Earth's orbital speed around Sun। ⭐ SSC/BPSC Direct Fact!"
+      },
+      "navigation": { "next": "card_62_m6_quiz2", "button_text": "Next (2/3) ➔" }
+    },
+    {
+      "card_id": "card_62_m6_quiz2",
+      "card_slug": "card_62_m6_quiz2",
+      "type": "quiz",
+      "concept_id": "tides_quiz",
+      "level": 3,
+      "progress": { "current": 62, "total": 69 },
+      "quiz_payload": {
+        "question": "वृहत् ज्वार (Spring Tide) कब आता है?",
+        "options": [
+          { "id": "A", "text": "केवल पूर्णिमा (Full Moon) पर" },
+          { "id": "B", "text": "केवल अमावस्या (New Moon) पर" },
+          { "id": "C", "text": "पूर्णिमा और अमावस्या दोनों पर" },
+          { "id": "D", "text": "अर्धचन्द्र (Quarter Moon) पर" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "✅ Spring Tide (वृहत् ज्वार) = पूर्णिमा (Full Moon) AND अमावस्या (New Moon) DONO pe aata hai! Kyunki दोनों situations mein Sun, Moon, Earth एक सीधी रेखा में आ जाते हैं → combined gravitational pull maximum → highest tides! ⚠️ Trap: Sirf Full Moon nahi — New Moon pe bhi aata hai! Quarter Moon pe = Neap Tide (laghu ज्वार)! ⭐ BPSC/SSC Geography + Science Crossover Question!"
+      },
+      "navigation": { "next": "card_63_m6_quiz3", "button_text": "Next (3/3) ➔" }
+    },
+    {
+      "card_id": "card_63_m6_quiz3",
+      "card_slug": "card_63_m6_quiz3",
+      "type": "quiz",
+      "concept_id": "india_first_satellite_quiz",
+      "level": 3,
+      "progress": { "current": 63, "total": 69 },
+      "quiz_payload": {
+        "question": "भारत का प्रथम उपग्रह (First Satellite) कौन-सा था और कब प्रक्षेपित हुआ?",
+        "options": [
+          { "id": "A", "text": "भास्कर — 1969" },
+          { "id": "B", "text": "आर्यभट्ट — 1975" },
+          { "id": "C", "text": "रोहिणी — 1980" },
+          { "id": "D", "text": "INSAT-1A — 1982" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "✅ आर्यभट्ट (Aryabhata) = भारत का प्रथम उपग्रह, 19 अप्रैल 1975 को Soviet Union (USSR) की मदद से Kapustin Yar से launch किया गया। प्राचीन भारतीय गणितज्ञ-खगोलविद् आर्यभट्ट (476 AD) के नाम पर! ⭐ BPSC/SSC/Railway All-Time Direct Question! Rohini (1980) = ISRO के SLV-3 से launch हुआ पहला satellite!"
+      },
+      "navigation": { "next": "card_64_m6_milestone", "button_text": "Check Answer ➔" }
+    },
+    {
+      "card_id": "card_64_m6_milestone",
+      "card_slug": "card_64_m6_milestone",
+      "type": "milestone",
+      "concept_id": "module6_complete",
+      "level": 3,
+      "progress": { "current": 64, "total": 69 },
+      "milestone_payload": {
+        "title": "🎉 MODULE 6 CLEARED!",
+        "badge_emoji": "🛰️",
+        "completed_topic": "Satellites, Escape Velocity & Tides",
+        "xp_earned": 50,
+        "milestone_progress": "Module 6/6 Complete — ALL MODULES DONE! 🏆",
+        "motivational_quote": "Sabhi 6 modules clear! Ab Officer-level revision aur Final Quiz baaki hai! Tayyar ho? 🔥💪"
+      },
+      "navigation": { "next": "card_65_officer_revision", "button_text": "Officer Revision ➔" }
+    },
+    {
+      "card_id": "card_65_officer_revision",
+      "card_slug": "card_65_officer_revision",
+      "type": "summary",
+      "concept_id": "chapter_officer_revision",
+      "level": 4,
+      "progress": { "current": 65, "total": 69 },
+      "summary_payload": {
+        "title": "⚡ OFFICER REVISION — Lightning Bullets",
+        "revision_points": [
+          {
+            "topic": "Universal Law of Gravitation",
+            "point": "F = Gm₁m₂/r² | G = 6.674×10⁻¹¹ (Cavendish, 1798 measured) | Newton, 1687 Principia | Always attractive | Weakest fundamental force | Inverse Square Law!"
+          },
+          {
+            "topic": "g vs G & Variations",
+            "point": "G = Universal Constant (same everywhere) | g = variable (location dependent) | g max at Poles (9.832), min at Equator (9.780) | g = 0 at Earth center | Altitude ↑ g ↓ | Depth ↑ g ↓ | Surface pe MAX!"
+          },
+          {
+            "topic": "Mass vs Weight",
+            "point": "Mass = matter amount (kg, scalar, constant everywhere) | Weight = mg (Newton, vector, changes with g) | Moon weight = 1/6th Earth | Weightlessness ≠ No gravity, = Free Fall! ISS mein gravity ~90% Earth!"
+          },
+          {
+            "topic": "Free Fall & Kepler's Laws",
+            "point": "Galileo disproved Aristotle | Vacuum mein sab SAME speed se girte hain | Kepler: 1st = Elliptical orbit | 2nd = Equal area equal time (Perihelion=fast) | 3rd = T²∝a³ | Copernicus = Heliocentric (1543)!"
+          },
+          {
+            "topic": "Satellites, Escape Velocity & Tides",
+            "point": "Escape velocity Earth = 11.2 km/s | Geostationary: 36,000 km, 24h, Equator | Polar: 700-800 km, N-S | Aryabhata = 1975 First Indian Satellite | Spring Tide = Full+New Moon | Neap = Quarter Moon!"
+          }
+        ]
+      },
+      "navigation": { "next": "card_66_final_quiz1", "button_text": "FINAL Officer Quiz ➔" }
+    },
+    {
+      "card_id": "card_66_final_quiz1",
+      "card_slug": "card_66_final_quiz1",
+      "type": "final_quiz",
+      "concept_id": "final_multistatement_1",
+      "level": 4,
+      "progress": { "current": 66, "total": 69 },
+      "quiz_payload": {
+        "question": "निम्नलिखित कथनों पर विचार कीजिए:\n1. गुरुत्वाकर्षण स्थिरांक (G) का मान ब्रह्मांड में सर्वत्र समान है।\n2. गुरुत्वीय त्वरण (g) का मान पृथ्वी के ध्रुवों पर भूमध्य रेखा से कम होता है।\n3. गुरुत्वीय बल सदैव आकर्षक (attractive) होता है।\n4. Henry Cavendish ने गुरुत्वाकर्षण का नियम (Law of Gravitation) दिया।\n\nसही कथन हैं:",
+        "options": [
+          { "id": "A", "text": "1, 2 और 3" },
+          { "id": "B", "text": "1 और 3 केवल" },
+          { "id": "C", "text": "1, 3 और 4" },
+          { "id": "D", "text": "1, 2, 3 और 4" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "✅ Statement Analysis:\n\n1️⃣ सही! G = Universal Constant — हर जगह same (6.674 × 10⁻¹¹)।\n\n2️⃣ गलत! ❌ g ध्रुवों (Poles) पर ZYADA (9.832) और भूमध्य रेखा (Equator) पर KAM (9.780) होता है! Statement उल्टा कह रहा है!\n\n3️⃣ सही! Gravitational force ALWAYS attractive — कभी repulsive नहीं!\n\n4️⃣ गलत! ❌ Law of Gravitation NEWTON ने दिया (1687)! Cavendish ने G की VALUE मापी (1798) — Law नहीं दिया!\n\nCorrect: 1 और 3 केवल ➔ Option B ✅\n\n⭐ BPSC/UPSC Prelims Level Multi-Statement Trap!"
+      },
+      "navigation": { "next": "card_67_final_quiz2", "button_text": "Next Final Question ➔" }
+    },
+    {
+      "card_id": "card_67_final_quiz2",
+      "card_slug": "card_67_final_quiz2",
+      "type": "final_quiz",
+      "concept_id": "final_assertion_reason",
+      "level": 4,
+      "progress": { "current": 67, "total": 69 },
+      "quiz_payload": {
+        "question": "Assertion (A): अंतरिक्ष स्टेशन (ISS) में अंतरिक्ष यात्री भारहीनता अनुभव करते हैं।\nReason (R): अंतरिक्ष स्टेशन की ऊँचाई पर गुरुत्वाकर्षण बल पूर्णतः शून्य हो जाता है।\n\nसही विकल्प चुनिए:",
+        "options": [
+          { "id": "A", "text": "A और R दोनों सत्य हैं और R, A की सही व्याख्या है" },
+          { "id": "B", "text": "A और R दोनों सत्य हैं लेकिन R, A की सही व्याख्या नहीं है" },
+          { "id": "C", "text": "A सत्य है लेकिन R असत्य है" },
+          { "id": "D", "text": "A असत्य है लेकिन R सत्य है" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "✅ Assertion (A): सत्य! ISS में astronauts weightlessness अनुभव करते हैं।\n\n❌ Reason (R): असत्य! ISS (~400 km) पर gravity ≈ 8.9 m/s² है — यह Earth surface (9.8) का ~90% है! Gravity शून्य नहीं है!\n\n✅ वास्तविक कारण: ISS और astronauts दोनों साथ में FREE FALL (मुक्त पतन) में हैं — Earth के around continuous orbital free fall। Relative acceleration = 0 → Apparent weight = 0!\n\nA सत्य, R असत्य → Option C ✅\n\n⭐ BPSC/NEET All-Time Top Trap: Weightlessness ≠ Zero Gravity!"
+      },
+      "navigation": { "next": "card_68_final_quiz3", "button_text": "Last Final Question ➔" }
+    },
+    {
+      "card_id": "card_68_final_quiz3",
+      "card_slug": "card_68_final_quiz3",
+      "type": "final_quiz",
+      "concept_id": "final_matching_quiz",
+      "level": 4,
+      "progress": { "current": 68, "total": 69 },
+      "quiz_payload": {
+        "question": "निम्नलिखित कथनों में से कितने सही हैं?\n\n(i) Kepler के प्रथम नियम के अनुसार ग्रहों की कक्षा वृत्ताकार (circular) होती है।\n(ii) पृथ्वी का पलायन वेग (Escape Velocity) 11.2 km/s है।\n(iii) भू-स्थिर (Geostationary) उपग्रह का परिक्रमण काल 24 घंटे होता है।\n(iv) Spring Tide (वृहत् ज्वार) केवल पूर्णिमा (Full Moon) पर आता है।",
+        "options": [
+          { "id": "A", "text": "केवल एक" },
+          { "id": "B", "text": "केवल दो" },
+          { "id": "C", "text": "केवल तीन" },
+          { "id": "D", "text": "सभी चार" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "✅ Statement-wise Analysis:\n\n(i) ❌ गलत! Kepler's First Law = ELLIPTICAL (दीर्घवृत्ताकार) orbit, NOT circular! यही सबसे common trap है!\n\n(ii) ✅ सही! Earth Escape Velocity = 11.2 km/s\n\n(iii) ✅ सही! Geostationary satellite = 24 hours time period = Earth rotation period!\n\n(iv) ❌ गलत! Spring Tide पूर्णिमा (Full Moon) AND अमावस्या (New Moon) DONO pe आता है — 'केवल Full Moon' कहना गलत!\n\nसही कथन = (ii) और (iii) = केवल दो → Option B ✅\n\n⭐ BPSC Officer Level: Multi-statement mein 'केवल' (only) shabd pe dhyan do — trap hota hai!"
+      },
+      "navigation": { "next": "card_69_chapter_trophy", "button_text": "Check & Get Trophy ➔" }
+    },
+    {
+      "card_id": "card_69_chapter_trophy",
+      "card_slug": "card_69_chapter_trophy",
+      "type": "milestone",
+      "concept_id": "chapter_completion",
+      "level": 4,
+      "progress": { "current": 69, "total": 69 },
+      "milestone_payload": {
+        "title": "🏆 CHAPTER MASTERED! 🏆",
+        "badge_emoji": "🌍",
+        "completed_topic": "गुरुत्वाकर्षण (Gravitation) — Complete Chapter",
+        "xp_earned": 500,
+        "milestone_progress": "100% Complete — All 6 Modules + Final Quiz Cleared!",
+        "motivational_quote": "Newton ने सेब से Universe समझा... तुमने 69 cards से पूरा Gravitation master किया! 🍎🌌\n\nAb exam mein gravity ka koi bhi sawaal tumhe neeche nahi gira sakta — kyunki tum ab khud Gravity ke Master ho! 💪🚀🔥\n\n'What goes up must come down... but your score will only go UP!' 🏆⚡"
+      },
+      "navigation": { "next": null, "button_text": "Back to Dashboard 🏠" }
+    }
+  ]
+}
