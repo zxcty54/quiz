@@ -6,7 +6,6 @@ from datetime import datetime
 from bs4 import BeautifulSoup
 from groq import Groq
 from playwright.sync_api import sync_playwright
-from playwright_stealth import stealth_sync
 
 # -------------------------------------------------------------
 # Test Config & Setup
@@ -63,17 +62,16 @@ def is_date_expired(last_date_str):
     return False
 
 # -------------------------------------------------------------
-# Stealth-Enabled Playwright Scraper
+# Native Playwright Stealth Execution
 # -------------------------------------------------------------
 def test_sarkari_result_with_stealth():
-    # Primary URL with Fallback Mirror
     url = "https://www.sarkariresult.com/latestjob/"
     fallback_url = "https://www.sarkariresult.com/latestjobs.php"
     
-    print(f"🧪 [STEALTH TEST] Scraping SarkariResult via Stealth Playwright: {url}\n")
+    print(f"🧪 [STEALTH TEST] Scraping SarkariResult via Native Playwright: {url}\n")
 
     with sync_playwright() as p:
-        # Launch Chromium with anti-detection flags
+        # Anti-bot bypass flags
         browser = p.chromium.launch(
             headless=True,
             args=[
@@ -82,9 +80,7 @@ def test_sarkari_result_with_stealth():
                 '--disable-blink-features=AutomationControlled',
                 '--disable-infobars',
                 '--window-position=0,0',
-                '--ignore-certificate-errors',
-                '--ignore-certificate-errors-spki-list',
-                '--user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36'
+                '--ignore-certificate-errors'
             ]
         )
         
@@ -96,30 +92,32 @@ def test_sarkari_result_with_stealth():
         )
         
         page = context.new_page()
-        
-        # Apply Stealth mode bypass
-        stealth_sync(page)
+
+        # Inject script to override navigator.webdriver detection
+        page.add_init_script("""
+            Object.defineProperty(navigator, 'webdriver', {
+                get: () => undefined
+            });
+        """)
 
         try:
-            # 1. Try Main URL
             print(f"🌐 Navigating to {url}...")
-            response = page.goto(url, timeout=35000, wait_until="networkidle")
+            response = page.goto(url, timeout=35000, wait_until="domcontentloaded")
             
-            # If 403 occurs on main URL, try fallback URL
-            if response.status == 403:
+            if response and response.status == 403:
                 print(f"⚠️ Main URL returned 403. Trying fallback mirror: {fallback_url}")
-                response = page.goto(fallback_url, timeout=35000, wait_until="networkidle")
+                response = page.goto(fallback_url, timeout=35000, wait_until="domcontentloaded")
 
-            if response.status != 200:
-                print(f"❌ Failed! Final Status Code: {response.status}")
+            status_code = response.status if response else 0
+
+            if status_code != 200:
+                print(f"❌ Failed! Final Status Code: {status_code}")
                 browser.close()
                 return
 
-            print(f"✅ Bypassed Cloudflare! Status Code: {response.status}\n")
+            print(f"✅ Bypassed Cloudflare! Status Code: {status_code}\n")
 
-            # Allow dynamic JS rendering if any
             time.sleep(2)
-
             content = page.content()
             soup = BeautifulSoup(content, "html.parser")
 
@@ -135,12 +133,10 @@ def test_sarkari_result_with_stealth():
                 if len(full_text) < 8 or "sarkariresult.com" not in href:
                     continue
 
-                # 🚫 State/AIIMS Rejection
                 if is_hard_rejected(full_text):
                     print(f"🚫 [REJECTED STATE/ENTITY]: {full_text}")
                     continue
 
-                # 🚫 Date Expired Check
                 last_date_match = re.search(r'Last\s*Date\s*:?\s*(\d{1,2}[/-]\d{1,2}[/-]\d{2,4})', full_text, re.IGNORECASE)
                 extracted_last_date = last_date_match.group(1) if last_date_match else None
 
@@ -164,7 +160,7 @@ def test_sarkari_result_with_stealth():
                 print(f"   Blue URL: {item['url']}\n")
 
         except Exception as e:
-            print(f"🚨 Stealth Playwright Execution Error: {e}")
+            print(f"🚨 Playwright Execution Error: {e}")
 
         browser.close()
 
