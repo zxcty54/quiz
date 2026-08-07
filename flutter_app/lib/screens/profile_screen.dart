@@ -1,5 +1,7 @@
+import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import '../services/user_stats_service.dart';
 import 'saved_questions_screen.dart';
 import 'wrong_questions_screen.dart';
@@ -24,6 +26,232 @@ class ProfileScreen extends StatefulWidget {
 
 class _ProfileScreenState extends State<ProfileScreen> {
   final List<String> _weekDays = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
+  
+  // 📌 SAVED CURRENT AFFAIRS STATE
+  List<dynamic> _savedNewsList = [];
+
+  @override
+  void initState() {
+    super.initState();
+    _loadSavedNews();
+  }
+
+  // 💾 FETCH SAVED CURRENT AFFAIRS FROM LOCAL STORAGE
+  Future<void> _loadSavedNews() async {
+    final prefs = await SharedPreferences.getInstance();
+    final String? savedJson = prefs.getString('saved_daily_bulletins');
+    if (savedJson != null) {
+      try {
+        if (mounted) {
+          setState(() {
+            _savedNewsList = jsonDecode(savedJson);
+          });
+        }
+      } catch (e) {
+        debugPrint("Error loading saved news in Profile: $e");
+      }
+    }
+  }
+
+  // 🗑️ DELETE ITEM FROM SAVED CURRENT AFFAIRS
+  Future<void> _removeSavedNews(int index) async {
+    final prefs = await SharedPreferences.getInstance();
+    setState(() {
+      _savedNewsList.removeAt(index);
+    });
+    await prefs.setString('saved_daily_bulletins', jsonEncode(_savedNewsList));
+
+    if (mounted) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(
+          content: Text("Removed from Saved Current Affairs"),
+          duration: Duration(seconds: 1),
+        ),
+      );
+    }
+  }
+
+  // 📜 SHOW SAVED CURRENT AFFAIRS BOTTOM SHEET
+  void _openSavedBulletinsSheet() {
+    showModalBottomSheet(
+      context: context,
+      isScrollControlled: true,
+      backgroundColor: widget.isDarkMode ? const Color(0xFF1E293B) : Colors.white,
+      shape: const RoundedRectangleBorder(
+        borderRadius: BorderRadius.vertical(top: Radius.circular(24)),
+      ),
+      builder: (context) {
+        return StatefulBuilder(
+          builder: (context, setSheetState) {
+            return Container(
+              height: MediaQuery.of(context).size.height * 0.75,
+              padding: const EdgeInsets.all(20),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  // DRAG HANDLE & HEADER
+                  Center(
+                    child: Container(
+                      width: 40,
+                      height: 4,
+                      decoration: BoxDecoration(
+                        color: widget.isDarkMode ? Colors.white24 : const Color(0xFFCBD5E1),
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                    ),
+                  ),
+                  const SizedBox(height: 16),
+
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Row(
+                        children: [
+                          const Icon(Icons.bookmark_rounded, color: Color(0xFFF59E0B), size: 22),
+                          const SizedBox(width: 8),
+                          Text(
+                            "Saved Current Affairs (${_savedNewsList.length})",
+                            style: TextStyle(
+                              fontSize: 16,
+                              fontWeight: FontWeight.w800,
+                              color: widget.isDarkMode ? Colors.white : const Color(0xFF0F172A),
+                            ),
+                          ),
+                        ],
+                      ),
+                      IconButton(
+                        icon: const Icon(Icons.close_rounded),
+                        onPressed: () => Navigator.pop(context),
+                      ),
+                    ],
+                  ),
+                  const Divider(),
+                  const SizedBox(height: 10),
+
+                  // SAVED BULLETINS LIST
+                  Expanded(
+                    child: _savedNewsList.isEmpty
+                        ? Center(
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Icon(
+                                  Icons.bookmark_border_rounded,
+                                  size: 48,
+                                  color: widget.isDarkMode ? Colors.white38 : Colors.grey,
+                                ),
+                                const SizedBox(height: 12),
+                                Text(
+                                  "No Saved Current Affairs Yet 📌",
+                                  style: TextStyle(
+                                    fontSize: 15,
+                                    fontWeight: FontWeight.bold,
+                                    color: widget.isDarkMode ? Colors.white70 : const Color(0xFF475569),
+                                  ),
+                                ),
+                                const SizedBox(height: 4),
+                                Text(
+                                  "Home tab se daily bulletins ko bookmark karke yahan revise karein.",
+                                  textAlign: TextAlign.center,
+                                  style: TextStyle(
+                                    fontSize: 12,
+                                    color: widget.isDarkMode ? Colors.white38 : Colors.grey[600],
+                                  ),
+                                ),
+                              ],
+                            ),
+                          )
+                        : ListView.builder(
+                            itemCount: _savedNewsList.length,
+                            itemBuilder: (context, index) {
+                              final news = _savedNewsList[index];
+                              final List bullets = (news['bullets'] as List?) ?? [];
+
+                              return Container(
+                                margin: const EdgeInsets.only(bottom: 12),
+                                padding: const EdgeInsets.all(12),
+                                decoration: BoxDecoration(
+                                  color: widget.isDarkMode ? const Color(0xFF0F172A) : const Color(0xFFF1F5F9),
+                                  borderRadius: BorderRadius.circular(16),
+                                  border: Border.all(
+                                    color: widget.isDarkMode ? const Color(0xFF334155) : const Color(0xFFCBD5E1),
+                                  ),
+                                ),
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Row(
+                                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                      children: [
+                                        Container(
+                                          padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
+                                          decoration: BoxDecoration(
+                                            color: widget.isDarkMode ? const Color(0xFF312E81) : const Color(0xFFEEF2FF),
+                                            borderRadius: BorderRadius.circular(6),
+                                          ),
+                                          child: Text(
+                                            news['exam_tag'] ?? '🎯 Bulletin',
+                                            style: TextStyle(
+                                              color: widget.isDarkMode ? const Color(0xFFC7D2FE) : const Color(0xFF3730A3),
+                                              fontSize: 10,
+                                              fontWeight: FontWeight.bold,
+                                            ),
+                                          ),
+                                        ),
+                                        IconButton(
+                                          icon: const Icon(Icons.delete_outline_rounded, size: 18, color: Colors.redAccent),
+                                          onPressed: () {
+                                            _removeSavedNews(index);
+                                            setSheetState(() {});
+                                          },
+                                        ),
+                                      ],
+                                    ),
+                                    const SizedBox(height: 6),
+                                    Text(
+                                      news['title'] ?? '',
+                                      style: TextStyle(
+                                        fontSize: 14,
+                                        fontWeight: FontWeight.w800,
+                                        color: widget.isDarkMode ? Colors.white : const Color(0xFF0F172A),
+                                      ),
+                                    ),
+                                    const SizedBox(height: 8),
+                                    ...bullets.map((bullet) {
+                                      return Padding(
+                                        padding: const EdgeInsets.only(bottom: 4.0),
+                                        child: Row(
+                                          crossAxisAlignment: CrossAxisAlignment.start,
+                                          children: [
+                                            const Icon(Icons.arrow_right_rounded, size: 16, color: Color(0xFF4F46E5)),
+                                            const SizedBox(width: 4),
+                                            Expanded(
+                                              child: Text(
+                                                bullet.toString(),
+                                                style: TextStyle(
+                                                  fontSize: 12,
+                                                  color: widget.isDarkMode ? Colors.white70 : const Color(0xFF334155),
+                                                ),
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                      );
+                                    }),
+                                  ],
+                                ),
+                              );
+                            },
+                          ),
+                  ),
+                ],
+              ),
+            );
+          },
+        );
+      },
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -43,7 +271,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
 
         final List<int> weeklyCounts = List<int>.from(stats['weekly_progress'] ?? [0, 0, 0, 0, 0, 0, 0]);
         int maxCount = weeklyCounts.reduce((a, b) => a > b ? a : b);
-        if (maxCount == 0) maxCount = 1; // Prevent division by zero
+        if (maxCount == 0) maxCount = 1;
 
         final int solvedQs = stats['questions'] as int? ?? 0;
         final int attemptedMocks = stats['mocks'] as int? ?? 0;
@@ -152,7 +380,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
             ),
             const SizedBox(height: 20),
 
-            // 📂 4. QUICK ACCESS REVISION ZONE (FULLY FUNCTIONAL NAVIGATIONS)
+            // 📂 4. QUICK ACCESS REVISION ZONE
             const Text('📂 Quick Access', style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
             const SizedBox(height: 10),
             Card(
@@ -185,17 +413,16 @@ class _ProfileScreenState extends State<ProfileScreen> {
                     },
                   ),
                   const Divider(height: 1),
+                  
+                  // 📌 REPLACED "CONTINUE LAST CHAPTER" WITH "SAVED CURRENT AFFAIRS"
                   ListTile(
-                    leading: const Text('📖', style: TextStyle(fontSize: 20)),
-                    title: const Text('Continue Last Chapter', style: TextStyle(fontSize: 13, fontWeight: FontWeight.bold)),
-                    subtitle: Text('${stats['last_chapter_name']}', style: const TextStyle(fontSize: 11, color: Colors.grey)),
-                    trailing: const Icon(Icons.play_arrow_rounded, color: Color(0xFF2563EB), size: 24),
+                    leading: const Text('📌', style: TextStyle(fontSize: 20)),
+                    title: const Text('Saved Current Affairs', style: TextStyle(fontSize: 13, fontWeight: FontWeight.bold)),
+                    subtitle: Text('${_savedNewsList.length} Saved Bulletins', style: const TextStyle(fontSize: 11, color: Colors.grey)),
+                    trailing: const Icon(Icons.arrow_forward_ios_rounded, size: 14),
                     onTap: () {
-                      if (stats['last_chapter_name'] != 'No chapter started') {
-                        ScaffoldMessenger.of(context).showSnackBar(
-                          SnackBar(content: Text('Resuming ${stats['last_chapter_name']}...')),
-                        );
-                      }
+                      _loadSavedNews(); // Reload latest saved bulletins before showing sheet
+                      _openSavedBulletinsSheet();
                     },
                   ),
                 ],
