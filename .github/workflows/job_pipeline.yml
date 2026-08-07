@@ -26,7 +26,7 @@ jobs:
       - name: Install Dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install requests curl_cffi beautifulsoup4 groq lxml PyMuPDF playwright
+          pip install requests curl_cffi beautifulsoup4 groq lxml PyMuPDF playwright playwright-stealth
           playwright install chromium --with-deps
 
       - name: Run Main Job Scraper
@@ -34,7 +34,7 @@ jobs:
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
         run: python job_scraper.py
 
-      # 🧪 Playwright-powered SarkariResult Test
+      # 🧪 Stealth Playwright-powered SarkariResult Test
       - name: Run SarkariResult Test
         env:
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
