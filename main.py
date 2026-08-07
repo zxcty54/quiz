@@ -1,8 +1,8 @@
 import os
 import json
 import time
-from datetime import datetime, timedelta
-import email.utils
+import re
+from datetime import datetime
 import xml.etree.ElementTree as ET
 from curl_cffi import requests
 from bs4 import BeautifulSoup
@@ -16,34 +16,16 @@ client = Groq(api_key=GROQ_KEY) if GROQ_KEY else None
 
 MODELS = ["llama-3.1-8b-instant", "mixtral-8x7b-32768", "llama-3.3-70b-versatile"]
 
-def get_yesterday_info():
-    """Subah 6 AM run hone par kal ki date aur formatted strings generate karta hai"""
-    yesterday_dt = datetime.now() - timedelta(days=1)
-    date_str = yesterday_dt.strftime("%d %b %Y")   # e.g., '06 Aug 2026'
-    key_str = yesterday_dt.strftime("%Y-%m-%d")    # e.g., '2026-08-06'
-    return yesterday_dt, date_str, key_str
-
-def is_yesterday_news(pub_date_str, target_dt):
-    """Check karta hai ki RSS item ki publish date recent 24-48 hours ki hai ya nahi"""
-    if not pub_date_str:
-        return True
-    try:
-        pub_tuple = email.utils.parsedate_tz(pub_date_str)
-        if pub_tuple:
-            pub_dt = datetime.fromtimestamp(email.utils.mktime_tz(pub_tuple))
-            return (target_dt - timedelta(days=1)) <= pub_dt <= (target_dt + timedelta(days=1))
-    except Exception as e:
-        print(f"Date parsing error: {e}")
-    return True
+HEADERS = {
+    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
+}
 
 def clean_html_text(text):
-    """HTML tags ko clean text me convert karta hai"""
     if not text:
         return ""
     return BeautifulSoup(text, "html.parser").get_text().strip()
 
 def remove_markdown_stars(data):
-    """JSON ke andar se ** aur markdown symbols ko completely clean karta hai"""
     if isinstance(data, dict):
         return {k: remove_markdown_stars(v) for k, v in data.items()}
     elif isinstance(data, list):
@@ -53,150 +35,139 @@ def remove_markdown_stars(data):
     return data
 
 # -------------------------------------------------------------
-# 2. NEWS SCRAPING FUNCTIONS
+# 1b. GENERIC INNER-PAGE FULL-TEXT EXTRACTOR
 # -------------------------------------------------------------
-def fetch_raw_bihar_news(target_dt):
-    """Multiple Official & Media sources se Bihar Current Affairs raw text scrape karta hai"""
-    news_titles = []
-    
-    # Source A: GOOGLE NEWS RSS
+CONTENT_SELECTORS = [
+    ("div", {"class": "entry-content"}),
+    ("div", {"class": "td-post-content"}),
+    ("div", {"class": "post-content"}),
+    ("div", {"class": "article-content"}),
+    ("div", {"class": "content-area"}),
+    ("div", {"id": "post"}),
+    ("div", {"id": "content"}),
+    ("article", {}),
+]
+
+def fetch_inner_page_text(url, char_limit=3500, timeout=8):
     try:
-        google_url = "https://news.google.com/rss/search?q=Bihar+Government+Schemes+OR+Infrastructure+OR+Economy+OR+Agriculture&hl=hi&gl=IN&ceid=IN:hi"
-        res = requests.get(google_url, impersonate="chrome", timeout=15, verify=False)
-        if res.status_code == 200:
-            root = ET.fromstring(res.text)
-            count = 0
-            for item in root.findall('.//item'):
-                title = item.find('title').text if item.find('title') is not None else ""
-                pub_date = item.find('pubDate').text if item.find('pubDate') is not None else ""
-                if title and is_yesterday_news(pub_date, target_dt):
-                    news_titles.append(f"[Google News] {title}")
-                    count += 1
-                    if count >= 20:
-                        break
-            print("✅ Google News Bihar RSS fetched successfully!")
+        res = requests.get(url, headers=HEADERS, timeout=timeout, verify=False)
+        if res.status_code != 200:
+            return ""
+        soup = BeautifulSoup(res.content, "html.parser")
+
+        for tag in soup.find_all(['script', 'style', 'nav', 'footer', 'header', 'aside']):
+            tag.decompose()
+
+        for tag_name, attrs in CONTENT_SELECTORS:
+            node = soup.find(tag_name, attrs=attrs) if attrs else soup.find(tag_name)
+            if node:
+                text = clean_html_text(str(node))
+                if len(text) > 200:
+                    return text[:char_limit]
+
+        candidates = soup.find_all('div')
+        if candidates:
+            best = max(candidates, key=lambda d: len(d.get_text(strip=True)))
+            text = clean_html_text(str(best))
+            if len(text) > 200:
+                return text[:char_limit]
+
+        return clean_html_text(soup.get_text())[:char_limit]
     except Exception as e:
-        print(f"⚠️ Error fetching Google News Bihar: {e}")
+        print(f"⚠️ Inner page fetch failed ({url}): {e}")
+        return ""
 
-    # Source B: CMO BIHAR
-    try:
-        cmo_url = "https://cm.bihar.gov.in/users/preessrelease.aspx"
-        res = requests.get(cmo_url, impersonate="chrome", timeout=15, verify=False)
-        if res.status_code == 200:
-            soup = BeautifulSoup(res.content, "html.parser")
-            for row in soup.find_all('tr')[:15]:
-                cols = row.find_all('td')
-                if len(cols) >= 2:
-                    title = cols[1].text.strip()
-                    if title and len(title) > 10:
-                        news_titles.append(f"[CMO Bihar] {title}")
-            print("✅ CMO Bihar news fetched successfully!")
-    except Exception as e:
-        print(f"⚠️ Error fetching CMO Bihar: {e}")
+# -------------------------------------------------------------
+# 2. STEP 1 & 2: MULTI-SOURCE & DEEP INNER PAGE SCRAPER
+# -------------------------------------------------------------
+def fetch_raw_jobs():
+    job_records = []
 
-    # Source C: IPRD BIHAR
-    try:
-        iprd_url = "https://state.bihar.gov.in/prdbihar/CitizenHome.html"
-        res = requests.get(iprd_url, impersonate="chrome", timeout=15, verify=False)
-        if res.status_code == 200:
-            soup = BeautifulSoup(res.content, "html.parser")
-            count = 0
-            for link in soup.find_all('a'):
-                title = link.text.strip()
-                if title and len(title) > 15:
-                    news_titles.append(f"[IPRD Bihar] {title}")
-                    count += 1
-                    if count >= 12:
-                        break
-            print("✅ IPRD Bihar news fetched successfully!")
-    except Exception as e:
-        print(f"⚠️ Error fetching IPRD Bihar: {e}")
-
-    # Source D: PRABHAT KHABAR BIHAR
-    try:
-        pk_url = "https://www.prabhatkhabar.com/state/bihar/feed"
-        res = requests.get(pk_url, impersonate="chrome", timeout=15, verify=False)
-        if res.status_code == 200:
-            root = ET.fromstring(res.text)
-            count = 0
-            for item in root.findall('.//item'):
-                title = item.find('title').text if item.find('title') is not None else ""
-                pub_date = item.find('pubDate').text if item.find('pubDate') is not None else ""
-                if title and is_yesterday_news(pub_date, target_dt):
-                    news_titles.append(f"[Prabhat Khabar] {title.strip()}")
-                    count += 1
-                    if count >= 15:
-                        break
-            print("✅ Prabhat Khabar Bihar news fetched successfully!")
-    except Exception as e:
-        print(f"⚠️ Error fetching Prabhat Khabar: {e}")
-
-    return "\n".join(news_titles)
-
-
-def fetch_raw_national_news(target_dt):
-    """HIGH-YIELD MULTI-SOURCE PURE NATIONAL Current Affairs Scraper (With Full Summaries)"""
-    national_titles = []
-    
-    # Source A: PIB India (Central Govt Releases)
-    try:
-        pib_url = "https://pib.gov.in/RssMain.aspx?Mod=1&Lang=1"
-        res = requests.get(pib_url, timeout=15, verify=False)
-        if res.status_code == 200:
-            soup = BeautifulSoup(res.content, "xml")
-            for item in soup.find_all('item')[:15]:
-                title = item.find('title').text if item.find('title') is not None else ""
-                desc = clean_html_text(item.find('description').text if item.find('description') is not None else "")
-                if title:
-                    national_titles.append(f"[PIB Central] Title: {title.strip()} | Summary: {desc[:800]}")
-            print("✅ PIB Central RSS fetched successfully!")
-    except Exception as e:
-        print(f"⚠️ Error PIB India: {e}")
-
-    # Source B: Google News - Multi-Topic Central Query
-    queries = [
-        '%22Union+Cabinet%22+OR+%22Cabinet+Approves%22',
-        'ISRO+OR+DRDO+OR+%22Military+Exercise%22',
-        '%22RBI%22+OR+%22NITI+Aayog%22+OR+Index'
+    fja_feeds = [
+        ("Central SSC Jobs", "https://www.freejobalert.com/ssc-job-notifications/feed/"),
+        ("Central Railway Jobs", "https://www.freejobalert.com/railway-jobs/feed/"),
+        ("Central Bank Jobs", "https://www.freejobalert.com/bank-jobs/feed/"),
+        ("Central UPSC Jobs", "https://www.freejobalert.com/upsc-job-notifications/feed/"),
+        ("Bihar State Govt Jobs", "https://www.freejobalert.com/state-government-jobs/feed/"),
+        ("Admit Cards Feed", "https://www.freejobalert.com/admit-card/feed/"),
+        ("Results Feed", "https://www.freejobalert.com/exam-result/feed/")
     ]
-    for q in queries:
+
+    MAX_INNER_FETCHES_PER_FEED = 10
+    for category_name, feed_url in fja_feeds:
         try:
-            g_url = f"https://news.google.com/rss/search?q={q}&hl=hi&gl=IN&ceid=IN:hi"
-            res = requests.get(g_url, impersonate="chrome", timeout=12, verify=False)
+            res = requests.get(feed_url, headers=HEADERS, timeout=12, verify=False)
             if res.status_code == 200:
-                root = ET.fromstring(res.text)
-                for item in root.findall('.//item')[:10]:
+                soup = BeautifulSoup(res.content, "xml")
+                items = soup.find_all('item')[:15]
+                fetched = 0
+                for item in items:
                     title = item.find('title').text if item.find('title') is not None else ""
-                    pub_date = item.find('pubDate').text if item.find('pubDate') is not None else ""
-                    desc = clean_html_text(item.find('description').text if item.find('description') is not None else "")
-                    if title and is_yesterday_news(pub_date, target_dt):
-                        national_titles.append(f"[Google Central] Title: {title.strip()} | Summary: {desc[:600]}")
+                    link_node = item.find('link')
+                    link = link_node.text.strip() if link_node is not None else ""
+
+                    content_node = item.find('{http://purl.org/rss/1.0/modules/content/}encoded')
+                    rss_summary = clean_html_text(content_node.text) if content_node is not None else ""
+
+                    if not title:
+                        continue
+
+                    full_text = rss_summary
+                    if link and fetched < MAX_INNER_FETCHES_PER_FEED:
+                        inner_text = fetch_inner_page_text(link, char_limit=3500)
+                        if inner_text and len(inner_text) > len(rss_summary):
+                            full_text = inner_text
+                        fetched += 1
+                        time.sleep(0.25)
+
+                    job_records.append(
+                        f"[{category_name}] Title: {title} | Source URL: {link} | Full Content: {full_text[:3500]}"
+                    )
+                print(f"✅ {category_name} Feed Scraped (deep inner-page: {fetched} pages)!")
         except Exception as e:
-            print(f"⚠️ Error Google National Query ({q}): {e}")
-    print("✅ Google Central Multi-Queries fetched successfully!")
+            print(f"⚠️ Error Feed ({category_name}): {e}")
 
-    # Source C: The Hindu National
     try:
-        hindu_url = "https://www.thehindu.com/news/national/feeder/default.rss"
-        res = requests.get(hindu_url, timeout=15, verify=False)
+        sr_url = "https://www.sarkariresult.com/"
+        res = requests.get(sr_url, headers=HEADERS, timeout=12, verify=False)
         if res.status_code == 200:
-            soup = BeautifulSoup(res.content, "xml")
-            for item in soup.find_all('item')[:15]:
-                title = item.find('title').text if item.find('title') is not None else ""
-                desc = clean_html_text(item.find('description').text if item.find('description') is not None else "")
-                if title:
-                    national_titles.append(f"[The Hindu National] Title: {title.strip()} | Summary: {desc[:600]}")
-            print("✅ The Hindu National fetched successfully!")
-    except Exception as e:
-        print(f"⚠️ Error The Hindu: {e}")
+            soup = BeautifulSoup(res.content, "html.parser")
 
-    return "\n".join(national_titles)
+            boxes = soup.find_all('div', id=re.compile(r'box|post')) or soup.find_all('div', class_=re.compile(r'box|post'))
+            inner_fetch_count = 0
+            for box in boxes:
+                header = box.find(['h2', 'h3', 'div', 'b'])
+                box_type = header.text.strip() if header else "General"
+
+                for link in box.find_all('a', href=True)[:10]:
+                    t = link.text.strip()
+                    href = link['href']
+                    if not t or len(t) <= 6:
+                        continue
+
+                    if "sarkariresult.com" in href and inner_fetch_count < 40:
+                        inner_text = fetch_inner_page_text(href, char_limit=3000)
+                        inner_fetch_count += 1
+                        if inner_text:
+                            job_records.append(
+                                f"[SarkariResult Inner Page - {box_type}] Title: {t} | Page Text: {inner_text}"
+                            )
+                        else:
+                            job_records.append(f"[SarkariResult Table - {box_type}] {t} | URL: {href}")
+                        time.sleep(0.25)
+                    else:
+                        job_records.append(f"[SarkariResult Table - {box_type}] {t} | URL: {href}")
+
+            print(f"✅ SarkariResult Deep Pages Scraped Successfully! ({inner_fetch_count} inner pages fetched)")
+    except Exception as e:
+        print(f"⚠️ Error SarkariResult Scraping: {e}")
+
+    return "\n".join(job_records)
 
 # -------------------------------------------------------------
-# 3. AI SUMMARY GENERATOR
+# 3. STEP 3: GROQ AI STRUCTURING & STRICT EXTRACTION
 # -------------------------------------------------------------
 def call_groq_safe(prompt, system_role="You are a JSON generator assistant."):
-    """Multi-Model Fallback Executor (TPM & TPD Safe)"""
     time.sleep(2)
     for model_name in MODELS:
         try:
@@ -207,190 +178,265 @@ def call_groq_safe(prompt, system_role="You are a JSON generator assistant."):
                     {"role": "user", "content": prompt}
                 ],
                 temperature=0.01,
-                response_format={"type": "json_object"}
+                response_format={"type": "json_object"},
+                max_tokens=8000,
+                timeout=120,
             )
+            finish_reason = response.choices[0].finish_reason
+            if finish_reason == "length":
+                print(f"⚠️ Model [{model_name}] response was CUT OFF (hit max_tokens). Trying next model...")
+                continue
             print(f"⚡ Groq LLM Success using [{model_name}]!")
             return response.choices[0].message.content
         except Exception as e:
-            print(f"⚠️ Model [{model_name}] rate-limited/failed: {e}. Trying fallback...")
+            print(f"⚠️ Model [{model_name}] rate-limited/failed/timed-out: {e}. Trying fallback...")
             time.sleep(2)
-            
+
     print("❌ All Groq models failed for this call.")
     return ""
 
 
-def generate_clean_summary(raw_text, target_date_str, is_national=False):
-    """Groq AI se Fact-Based Detailed Hinglish JSON news summary banwata hai"""
-    truncated_raw = raw_text[:8000]
-    
-    if is_national:
-        scope_name = "India National & International Level ONLY"
-        tag_name = "🎯 National Special / India Affairs"
-        category_instruction = """
-        STRICT ALLOWED NATIONAL CATEGORIES (Pick ONLY from these 7 exact names):
-        1. "Policies, Acts & Flagship Schemes"
-        2. "Science, Defense & ISRO"
-        3. "Indices, Reports & Economic Affairs"
-        4. "International Relations & Summits"
-        5. "Environment, Ramsar Sites & Wildlife"
-        6. "Appointments, Awards & Places in News"
-        7. "Sports & Joint Military Exercises"
-        """
-        rejection_rules = """
-        STRICT REJECTION RULES (CRITICAL):
-        1. REJECT ALL RECRUITMENT & EXAM NEWS: Strictly REJECT Jobs, Vacancies, Recruitment, Exam Notices, Admit Cards, University/School Notices, and Results.
-        2. REJECT ALL STATE-SPECIFIC LOCAL NEWS: Strictly REJECT news specific to individual states (e.g. Tamil Nadu Budget, UP Govt Schemes, State local politics).
-        3. REJECT ALL Politics, Crime, & Accidents: REJECT political rallies, speeches, party disputes, political statements, crime, and local accidents.
-        4. ACCEPT ONLY PURE NATIONAL / CENTRAL / INTERNATIONAL EVENTS.
-        """
-        bullet_rules = """
-        EXAMINER FOCUS DEEP BULLET RULES (NATIONAL) - MANDATORY DETAILED EXPLANATIONS:
-        - WRITE EXACTLY 3 DEEP, COMPREHENSIVE, AND DETAILED BULLET POINTS IN HINGLISH FOR EVERY CARD.
-        - DO NOT USE ANY ASTERISKS (**), BOLD TAGS, OR MARKDOWN SYMBOLS IN THE TEXT. Keep text plain.
-        - DO NOT WRITE ONE-LINE SHORT SUMMARY BULLETS. Each bullet MUST be at least 20 to 35 words long with deep context.
-        - Bullet 1 (Core Announcement & Nodal Body): Detail what decision/policy/project was launched, which Central Ministry/Organization is responsible, location, and key stakeholders in Hinglish.
-        - Bullet 2 (Numerical Data & Key High-Yield Exam Facts): Include exact numbers, financial budget outlay, target years, missile range, India's rank, or participating countries in Hinglish.
-        - Bullet 3 (Strategic Purpose & Background Context): Explain WHY this was done, its strategic objective, long-term impact on economy/defense/policy, or background act/framework in Hinglish.
-        """
-    else:
-        scope_name = "Bihar State Level"
-        tag_name = "🎯 BPSC Special / Bihar Current Affairs"
-        category_instruction = """
-        STRICT ALLOWED BIHAR CATEGORIES (Pick ONLY from these 5 exact names):
-        1. "Govt Schemes & Policies"
-        2. "Infrastructure & Projects"
-        3. "Agriculture, Environment & GI Tags"
-        4. "Appointments, Awards & Persons in News"
-        5. "Bihar Economy, Budget & Reports"
-        """
-        rejection_rules = """
-        STRICT REJECTION & DISCARD RULES (CRITICAL):
-        1. REJECT ALL RECRUITMENT & EXAM NEWS: Strictly REJECT any Education, Schools, University, Recruitment, Vacancies, Exam Notices, Admit Cards, and Results.
-        2. REJECT ALL routine administrative instructions, CM directives, political speeches, crime, and accidents.
-        3. STRICT INFRASTRUCTURE FILTER: ACCEPT ONLY MAJOR MEGA-INFRASTRUCTURE PROJECTS.
-        4. EVERY card MUST contain AT LEAST ONE hard fact (Outlay, Specific Act Name, MoU partner).
-        """
-        bullet_rules = """
-        BULLET POINT RULES (IF A CARD QUALIFIES):
-        - WRITE EXACTLY 3 DEEP FACTUAL BULLET POINTS IN HINGLISH.
-        - DO NOT USE ANY ASTERISKS (**), BOLD TAGS, OR MARKDOWN SYMBOLS.
-        - Provide detailed factual context in 20-30 words per bullet point.
-        """
+def generate_job_summary(raw_text):
+    today_str = datetime.now().strftime("%d %b %Y")
+    truncated_raw = raw_text[:20000]
 
     prompt = f"""
-    You are a Senior Current Affairs Editor for BPSC, SSC, and Civil Services Competitive Exams.
-    Below is raw news text scraped for {scope_name}:
-    
+    You are an expert Government Recruitment Data Editor for FreeJobAlert & SarkariResult.
+    Below is raw text scraped from government job portals. Extract ONLY Govt Job Notifications, Govt Competitive Exam Admit Cards, and Govt Exam Results.
+
+    RAW TEXT:
     {truncated_raw}
-    
-    {category_instruction}
 
-    {rejection_rules}
+    STRICT REJECTION RULES (CRITICAL):
+    1. STRICTLY REJECT ALL UNIVERSITY / COLLEGE EXAMS & ADMISSIONS:
+       - REJECT any BA, BSc, BCom, MA, MSc, Semester Exams, University Merit Lists, University Results, College Admissions, Counselling Schedules.
+       - ONLY include Competitive Exam Results (e.g. BPSC Result, SSC CGL Result, Railway NTPC Result, IBPS PO Result).
+    2. STRICTLY REJECT SCHOLARSHIPS & YOJNAS:
+       - REJECT Scholarship, Post Matric, NSP, Yojna, Scheme, Pension, Allowance.
+    3. STRICTLY REJECT OTHER STATES:
+       - INCLUDE ONLY: Bihar Govt Jobs/Exams AND Central Govt Jobs/Exams (SSC, Railways, IBPS/SBI, UPSC, Defence).
+       - REJECT: UP, MP, Rajasthan, Haryana, Delhi Govt, Maharashtra, Tamil Nadu, AP, Telangana, Karnataka, Kerala, Gujarat, WB, Odisha, etc.
+    4. REJECT APPRENTICE & MBBS DOCTOR POSTS:
+       - REJECT Trade Apprentice, Graduate Apprentice, MBBS, Medical Officer, Dental Officer posts.
 
-    DEDUPLICATION & QUANTITY RULE:
-    - MERGE duplicate reports of the same event into ONE single card. No duplicate cards allowed.
-    - GENERATE ALL VALID CARDS: Extract ALL unique qualifying news items from the input text (target 8-15 cards).
-
-    LANGUAGE & BULLETS:
-    - WRITE ALL TITLES AND BULLETS IN **HINGLISH** (Hindi written in Roman English Script).
-    - NEVER USE ASTERISKS (**), BOLD SYMBOLS, OR MARKDOWN IN HEADLINES OR BULLETS. Plain text only.
-    - ALWAYS WRITE EXACTLY 3 DETAILED BULLET POINTS FOR EVERY CARD.
-    {bullet_rules}
+    DATA EXTRACTION RULES:
+    - Populate all 3 arrays: 'latest_jobs', 'admit_cards', and 'results'.
+    - Read the Application Fee tables and extract Category-wise fee breakdown (e.g. "General / OBC: ₹500 | SC / ST: ₹250").
+    - If fee or qualification is not in the text, write "Refer Official Notification" instead of "Various".
+    - Do NOT use markdown asterisks (**).
+    - Set "apply_url" to "https://www.mocktester.online" for ALL items.
 
     JSON SCHEMA OUTPUT:
     {{
-      "news_cards": [
+      "latest_jobs": [
         {{
-          "id": "news_01",
-          "title": "Clean Detailed Hinglish Headline with Specific Fact",
-          "category": "Select EXACT matching category name from the list above",
-          "bullets": [
-            "Bullet 1: Comprehensive explanation of the decision, nodal ministry, and scope in Hinglish",
-            "Bullet 2: Exact numerical data, financial budget outlay, or participating nations in Hinglish",
-            "Bullet 3: Strategic objective, policy impact, and deep background context in Hinglish"
-          ],
-          "exam_tag": "{tag_name}",
-          "date": "{target_date_str}"
+          "id": "job_01",
+          "title": "Full Official Recruitment Title 2026",
+          "organization": "Recruitment Body (e.g. BPSC / BSSC / SSC / RRB / IBPS)",
+          "job_type": "Bihar Govt Job OR Central Govt Job",
+          "post_name": "Specific Post Name",
+          "total_vacancies": "Posts Count e.g. 1,957 Posts",
+          "qualification": "Exact Educational Qualification Criteria",
+          "age_limit": "Min & Max Age Criteria with Relaxation",
+          "application_fee": "Category-Wise Application Fee Breakdown",
+          "start_date": "Exact Start Date e.g. 28 Aug 2026 or Online Active",
+          "last_date": "Exact Last Date e.g. 30 Sep 2026",
+          "apply_url": "https://www.mocktester.online",
+          "exam_tag": "🔥 Govt Job Alert",
+          "date": "{today_str}"
+        }}
+      ],
+      "admit_cards": [
+        {{
+          "id": "admit_01",
+          "title": "Official Competitive Exam Admit Card Title 2026",
+          "organization": "Recruitment Body Name (e.g. SSC / RRB / BPSC)",
+          "job_type": "Bihar Govt Job OR Central Govt Job",
+          "post_name": "Post Name",
+          "total_vacancies": "Total Posts or As per Rules",
+          "exam_date": "Exam Date or CBT Schedule",
+          "status": "Admit Card Released",
+          "apply_url": "https://www.mocktester.online",
+          "exam_tag": "🎫 Hall Ticket",
+          "date": "{today_str}"
+        }}
+      ],
+      "results": [
+        {{
+          "id": "result_01",
+          "title": "Official Competitive Exam Result Title 2026",
+          "organization": "Recruitment Body Name (e.g. SSC / RRB / BPSC)",
+          "job_type": "Bihar Govt Job OR Central Govt Job",
+          "post_name": "Post Name",
+          "total_vacancies": "Total Posts or As per Rules",
+          "result_status": "Merit List / Result Declared",
+          "apply_url": "https://www.mocktester.online",
+          "exam_tag": "🏆 Result",
+          "date": "{today_str}"
         }}
       ]
     }}
     """
-    
-    return call_groq_safe(prompt, system_role="Senior Current Affairs Editor")
+    return call_groq_safe(prompt, system_role="Government Recruitment Data Editor")
 
 # -------------------------------------------------------------
-# 4. MASTER HISTORY APPEND FUNCTIONS
+# 4. STEP 4: PYTHON HARD FILTER & DEDUPLICATION
 # -------------------------------------------------------------
-def append_to_master_history(news_cards, yesterday_key, is_national=False):
-    master_file = "all_national_news_history.json" if is_national else "all_bihar_news_history.json"
-    
-    master_data = {}
-    if os.path.exists(master_file):
-        try:
-            with open(master_file, "r", encoding="utf-8") as f:
-                master_data = json.load(f)
-        except Exception as e:
-            print(f"⚠️ Master History read error ({master_file}): {e}")
-            
-    master_data[yesterday_key] = news_cards
-    
-    with open(master_file, "w", encoding="utf-8") as f:
-        json.dump(master_data, f, ensure_ascii=False, indent=2)
-    print(f"✅ Master History appended under key '{yesterday_key}' into '{master_file}'!")
+REJECT_KEYWORDS = [
+    # University, College & Academic Results (STRICTLY BLOCKED)
+    "university", "college", "semester", "ba Part", "bsc ", "bcom", "ma ", "msc ", 
+    "degree college", "annual exam", "admissions", "counselling", "allotment", "entrance test",
+
+    # Non-Job Items (Scholarships, Yojnas)
+    "scholarship", "post matric", "nsp scholarship", "yojna", "scheme", "pension",
+
+    # Other States
+    "uttar pradesh", " up police", " up board", "uppsc", " up govt",
+    "madhya pradesh", "mppsc", "rajasthan", "rpsc", "haryana", "hpsc",
+    "dsssb", "maharashtra", "mpsc", "madc", "jharkhand", "jpsc",
+    "west bengal", "wbpsc", "punjab", "ppsc", "gujarat", "gpsc",
+    "tamil nadu", "tnpsc", "tancet", "andhra pradesh", "appsc", "narasapuram",
+    "telangana", "tspsc", "kerala", "kpsc", "karnataka", "odisha", "opsc",
+
+    # Apprentice & Doctors
+    "apprentice", "apprenticeship", "mbbs", "medical officer", "specialist medical officer"
+]
+
+def is_invalid_item(title, org, post_name="", qualification=""):
+    combined = f"{title} {org} {post_name} {qualification}".lower()
+    return any(bad_word.lower() in combined for bad_word in REJECT_KEYWORDS)
+
+def is_vacancy_less_than_50(vacancies_str):
+    if not vacancies_str or "various" in vacancies_str.lower():
+        return False
+    nums = re.findall(r'\b\d+\b', vacancies_str)
+    if nums:
+        count = int(nums[0])
+        if count < 50:
+            return True
+    return False
+
+def simplify_title(title):
+    clean = re.sub(r'[^a-zA-Z0-9]', '', title.lower())
+    return clean[:30]
+
+def filter_valid_jobs(parsed_jobs):
+    seen_titles = set()
+
+    # 1. Filter Jobs
+    clean_latest_jobs = []
+    for job in parsed_jobs.get("latest_jobs", []):
+        title = job.get("title", "")
+        org = job.get("organization", "")
+        post_name = job.get("post_name", "")
+        qual = job.get("qualification", "")
+        vacancies = job.get("total_vacancies", "")
+
+        if not title or len(title) < 5:
+            continue
+
+        simple_t = simplify_title(title)
+        if simple_t in seen_titles:
+            print(f"🔄 Dropped Duplicate Job: {title}")
+            continue
+
+        if is_invalid_item(title, org, post_name, qual):
+            print(f"❌ Dropped (University/Scholarship/Other State): {title}")
+            continue
+
+        if is_vacancy_less_than_50(vacancies):
+            print(f"❌ Dropped (Vacancies < 50): {title} ({vacancies})")
+            continue
+
+        seen_titles.add(simple_t)
+        clean_latest_jobs.append(job)
+
+    # 2. Filter Admit Cards (Check title and org ONLY so it doesn't drop empty qualification items)
+    clean_admit_cards = []
+    for card in parsed_jobs.get("admit_cards", []):
+        title = card.get("title", "")
+        org = card.get("organization", "")
+
+        if not title or len(title) < 5:
+            continue
+
+        simple_t = simplify_title(title)
+        if simple_t in seen_titles:
+            continue
+
+        if is_invalid_item(title, org):
+            print(f"❌ Dropped Admit Card (University/Other State): {title}")
+            continue
+
+        seen_titles.add(simple_t)
+        clean_admit_cards.append(card)
+
+    # 3. Filter Results (Check title and org ONLY so it doesn't drop valid competitive results)
+    clean_results = []
+    for res_item in parsed_jobs.get("results", []):
+        title = res_item.get("title", "")
+        org = res_item.get("organization", "")
+
+        if not title or len(title) < 5:
+            continue
+
+        simple_t = simplify_title(title)
+        if simple_t in seen_titles:
+            continue
+
+        if is_invalid_item(title, org):
+            print(f"❌ Dropped Result (University/Other State): {title}")
+            continue
+
+        seen_titles.add(simple_t)
+        clean_results.append(res_item)
+
+    parsed_jobs["latest_jobs"] = clean_latest_jobs
+    parsed_jobs["admit_cards"] = clean_admit_cards
+    parsed_jobs["results"] = clean_results
+    return parsed_jobs
 
 # -------------------------------------------------------------
-# 5. MAIN EXECUTION PIPELINE
+# 5. STEP 5: MAIN EXECUTION PIPELINE
 # -------------------------------------------------------------
 if __name__ == "__main__":
     if not GROQ_KEY:
         print("❌ Error: GROQ_API_KEY environment variable not found!")
         exit(1)
-        
-    target_dt, date_str, key_str = get_yesterday_info()
-    print(f"🔄 Starting News-Only Current Affairs Pipeline ({date_str})...\n")
 
-    # === A. PROCESS BIHAR NEWS ===
-    print("📍 --- PROCESS BIHAR NEWS ---")
-    raw_bihar = fetch_raw_bihar_news(target_dt)
-    if raw_bihar:
-        ai_bihar = generate_clean_summary(raw_bihar, date_str, is_national=False)
-        if ai_bihar:
+    print("🔄 Starting Bihar & Central Jobs Scraper Pipeline...\n")
+
+    raw_jobs = fetch_raw_jobs()
+    print(f"\nℹ️ Total raw characters scraped (incl. inner pages): {len(raw_jobs)}\n")
+
+    if raw_jobs:
+        ai_jobs = generate_job_summary(raw_jobs)
+        if ai_jobs:
             try:
-                parsed_bihar = json.loads(ai_bihar.strip())
-                parsed_bihar = remove_markdown_stars(parsed_bihar) # Clean stars automatically
-                cards = parsed_bihar.get("news_cards", [])
-                
-                if cards and len(cards) > 0:
-                    with open("bihar_news.json", "w", encoding="utf-8") as f:
-                        json.dump(parsed_bihar, f, ensure_ascii=False, indent=2)
-                    print(f"✅ bihar_news.json successfully updated with {len(cards)} new cards!")
-                    append_to_master_history(cards, key_str, is_national=False)
+                parsed_jobs = json.loads(ai_jobs.strip())
+
+                print(f"ℹ️ AI returned before filtering -> Jobs: {len(parsed_jobs.get('latest_jobs', []))} | "
+                      f"Admit Cards: {len(parsed_jobs.get('admit_cards', []))} | "
+                      f"Results: {len(parsed_jobs.get('results', []))}")
+
+                parsed_jobs = filter_valid_jobs(parsed_jobs)
+                parsed_jobs = remove_markdown_stars(parsed_jobs)
+
+                has_data = (
+                    len(parsed_jobs.get("latest_jobs", [])) > 0 or
+                    len(parsed_jobs.get("admit_cards", [])) > 0 or
+                    len(parsed_jobs.get("results", [])) > 0
+                )
+                if has_data:
+                    with open("bihar_jobs.json", "w", encoding="utf-8") as f:
+                        json.dump(parsed_jobs, f, ensure_ascii=False, indent=2)
+                    print(f"✅ bihar_jobs.json successfully updated!\n"
+                          f"👉 Jobs Count: {len(parsed_jobs.get('latest_jobs', []))}\n"
+                          f"👉 Admit Cards Count: {len(parsed_jobs.get('admit_cards', []))}\n"
+                          f"👉 Results Count: {len(parsed_jobs.get('results', []))}")
                 else:
-                    print("🛡️ SAFEGUARD ACTIVATED: 0 Bihar news cards. Retaining existing file!")
+                    print("🛡️ SAFEGUARD ACTIVATED: 0 valid job notifications found. Retaining existing file!")
             except Exception as e:
-                print(f"❌ Bihar JSON Parsing Error: {e}")
+                print(f"❌ Jobs JSON Parsing Error: {e}")
 
-    print("\n------------------------------------\n")
-
-    # === B. PROCESS NATIONAL NEWS ===
-    print("🇮🇳 --- PROCESS NATIONAL NEWS ---")
-    raw_national = fetch_raw_national_news(target_dt)
-    if raw_national:
-        ai_national = generate_clean_summary(raw_national, date_str, is_national=True)
-        if ai_national:
-            try:
-                parsed_national = json.loads(ai_national.strip())
-                parsed_national = remove_markdown_stars(parsed_national) # Clean stars automatically
-                cards_nat = parsed_national.get("news_cards", [])
-                
-                if cards_nat and len(cards_nat) > 0:
-                    with open("national_news.json", "w", encoding="utf-8") as f:
-                        json.dump(parsed_national, f, ensure_ascii=False, indent=2)
-                    print(f"✅ national_news.json successfully updated with {len(cards_nat)} new cards!")
-                    append_to_master_history(cards_nat, key_str, is_national=True)
-                else:
-                    print("🛡️ SAFEGUARD ACTIVATED: 0 National news cards. Retaining existing file!")
-            except Exception as e:
-                print(f"❌ National JSON Parsing Error: {e}")
-
-    print("\n🎉 Pipeline Execution Finished Successfully!")
+    print("\n🎉 Jobs Pipeline Execution Finished Successfully!")
