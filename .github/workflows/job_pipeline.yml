@@ -29,27 +29,31 @@ jobs:
           python -m pip install --upgrade pip
           pip install requests curl_cffi beautifulsoup4 groq lxml PyMuPDF cloudscraper
 
+      # 1️⃣ FreeJobAlert Scraper (UNTOUCHED)
       - name: Run Main Job Scraper
         env:
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
           SCRAPINGANT_API_KEY: ${{ secrets.SCRAPINGANT_API_KEY }}
         run: python job_scraper.py
 
-      # 🧪 Corrected Step Name to test_sarkari.py
-      - name: Run SarkariResult Test
+      # 2️⃣ SarkariResult Scraper (Generates sarkarijob.json)
+      - name: Run SarkariResult Scraper
         env:
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
           SCRAPINGANT_API_KEY: ${{ secrets.SCRAPINGANT_API_KEY }}
         run: python test_sarkari.py
 
+      # 3️⃣ Auto-Commit and Push Both JSON Files
       - name: Auto-Commit and Push Updated Jobs JSON
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action Bot"
-          git add bihar_jobs.json
+          
+          # Adding both JSON files to Git tracking
+          git add bihar_jobs.json sarkarijob.json
           
           # Conflict se bachne ke liye pull-rebase step
           git pull origin main --rebase || true
           
-          git diff-index --quiet HEAD || git commit -m "Auto-update Bihar & Central Jobs JSON [skip ci]"
+          git diff-index --quiet HEAD || git commit -m "Auto-update Bihar & Sarkari Jobs JSON [skip ci]"
           git push origin main
