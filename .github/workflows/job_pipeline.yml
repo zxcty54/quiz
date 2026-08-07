@@ -35,12 +35,12 @@ jobs:
           SCRAPINGANT_API_KEY: ${{ secrets.SCRAPINGANT_API_KEY }}
         run: python job_scraper.py
 
-      # 🧪 Added ScrapingAnt SarkariResult Test Step
-      - name: Run SarkariResult Test via ScrapingAnt
+      # 🧪 Corrected Step Name to test_sarkari.py
+      - name: Run SarkariResult Test
         env:
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
           SCRAPINGANT_API_KEY: ${{ secrets.SCRAPINGANT_API_KEY }}
-        run: python test_sarkari_ant.py
+        run: python test_sarkari.py
 
       - name: Auto-Commit and Push Updated Jobs JSON
         run: |
