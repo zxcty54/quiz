@@ -199,37 +199,29 @@ def fetch_raw_national_news(target_dt):
     return "\n".join(national_titles)
 
 # -------------------------------------------------------------
-# 3. ENHANCED DEEP JOB SCRAPER
+# 3. ENHANCED JOB SCRAPER WITH DIRECT PORTAL SOURCES
+#    (UPDATED: bigger truncation limits so fee/date/vacancy details
+#     don't get cut off before reaching the AI, and Sarkari Result
+#     entries — which only carry a title+URL and no real fields —
+#     are no longer fed into the job JSON generator, since they
+#     gave the AI nothing to work with except invent data.)
 # -------------------------------------------------------------
 def fetch_raw_jobs():
-    """Scrapes FreeJobAlert and SarkariResult feeds for full table contents."""
+    """HIGH-VOLUME ACCURATE SCRAPER FOR JOBS, ADMIT CARDS & RESULTS WITH DEEP DATA PARSING"""
     job_notices = []
     headers = {
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
     }
 
-    # 1. FreeJobAlert Main Deep Content Feed
-    try:
-        fja_url = "https://www.freejobalert.com/feed/"
-        res = requests.get(fja_url, headers=headers, timeout=15, verify=False)
-        if res.status_code == 200:
-            soup = BeautifulSoup(res.content, "xml")
-            for item in soup.find_all('item')[:40]:
-                title = item.find('title').text if item.find('title') is not None else ""
-                desc = clean_html_text(item.find('description').text if item.find('description') is not None else "")
-                content_node = item.find('{http://purl.org/rss/1.0/modules/content/}encoded')
-                content_encoded = clean_html_text(content_node.text) if content_node is not None else ""
-                full_text = f"{desc} {content_encoded}".strip()
-                if title:
-                    job_notices.append(f"[FreeJobAlert Entry] Title: {title} | Details: {full_text[:2000]}")
-            print("✅ Direct FreeJobAlert Deep Content Feed fetched successfully!")
-    except Exception as e:
-        print(f"⚠️ Error FreeJobAlert Feed: {e}")
-
-    # 2. Google Job Search Queries
+    # 1. Broad Multi-Topic Search Queries (Bihar + Central only)
     job_queries = [
-        "Bihar+BPSC+OR+BSSC+OR+CSBC+OR+BPSSC+Recruitment+Start+Date+Last+Date+Fees",
-        "SSC+CGL+OR+CHSL+OR+RRB+NTPC+Vacancy+Start+Date+Last+Date+Fees"
+        "Bihar+BPSC+OR+BSSC+OR+CSBC+OR+BPSSC+OR+Patna+High+Court+Recruitment+Start+Date+Last+Date+Fees",
+        "Bihar+Teacher+TRE+OR+Bihar+Health+Dept+OR+Beltron+OR+Civil+Court+Vacancy+Eligibility+Posts",
+        "SSC+CGL+OR+CHSL+OR+MTS+OR+GD+Constable+Notification+Start+Date+Fees",
+        "Railway+RRB+NTPC+OR+Group+D+OR+ALP+OR+Technician+Vacancy+Eligibility+Posts",
+        "Banking+IBPS+PO+Clerk+OR+SBI+PO+Clerk+OR+UPSC+Notification+Application+Fee",
+        "Bihar+OR+SSC+OR+RRB+OR+UPSC+Admit+Card+Download+Exam+Date",
+        "Bihar+OR+SSC+OR+RRB+OR+UPSC+Result+Merit+List+Answer+Key"
     ]
     for q in job_queries:
         try:
@@ -237,21 +229,64 @@ def fetch_raw_jobs():
             res = requests.get(g_url, impersonate="chrome", timeout=12, verify=False)
             if res.status_code == 200:
                 root = ET.fromstring(res.text)
-                for item in root.findall('.//item')[:10]:
+                for item in root.findall('.//item')[:15]:
                     title = item.find('title').text if item.find('title') is not None else ""
                     desc = clean_html_text(item.find('description').text if item.find('description') is not None else "")
                     if title:
-                        job_notices.append(f"[Google Job Alert] Title: {title} | Snippet: {desc[:800]}")
+                        # Truncation raised 800 -> 1500 so fee/date/vacancy text isn't cut off
+                        job_notices.append(f"[Google Job Alert] Title: {title} | Snippet: {desc[:1500]}")
         except Exception as e:
             print(f"⚠️ Error Job Query ({q}): {e}")
+
+    # 2. FreeJobAlert Main Deep Content Feed
+    try:
+        fja_url = "https://www.freejobalert.com/feed/"
+        res = requests.get(fja_url, headers=headers, timeout=15, verify=False)
+        if res.status_code == 200:
+            soup = BeautifulSoup(res.content, "xml")
+            for item in soup.find_all('item')[:50]:
+                title = item.find('title').text if item.find('title') is not None else ""
+                desc = clean_html_text(item.find('description').text if item.find('description') is not None else "")
+                content_node = item.find('{http://purl.org/rss/1.0/modules/content/}encoded')
+                content_encoded = clean_html_text(content_node.text) if content_node is not None else ""
+                full_text = f"{desc} {content_encoded}".strip()
+                if title:
+                    # Truncation raised 1500 -> 3000 so full fee/date tables survive
+                    job_notices.append(f"[FreeJobAlert Entry] Title: {title} | Full Text: {full_text[:3000]}")
+            print("✅ Direct FreeJobAlert Deep Content Feed fetched successfully!")
+    except Exception as e:
+        print(f"⚠️ Error FreeJobAlert Feed: {e}")
+
+    # 3. Sarkari Result Recent Posts Table
+    #    NOTE: This source only yields a title + URL, no fee/date/vacancy
+    #    data. Feeding it to the AI as if it were a full notice caused the
+    #    model to invent structured details from thin air. We now only use
+    #    it to confirm a job's title is currently live in the market —
+    #    it is NOT allowed to be the sole source for a job entry, and the
+    #    grounding filter below will drop anything that relies only on this.
+    try:
+        sr_url = "https://www.sarkariresult.com/latestjob/"
+        res = requests.get(sr_url, headers=headers, timeout=15, verify=False)
+        if res.status_code == 200:
+            soup = BeautifulSoup(res.content, "html.parser")
+            job_links = soup.select("#post a")[:20]
+            for link in job_links:
+                title = link.text.strip()
+                href = link.get('href', '')
+                if title and href:
+                    job_notices.append(f"[Sarkari Result Reference Only - Title/URL only, no fee/date data] Title: {title} | URL: {href}")
+            print("✅ Sarkari Result direct jobs fetched successfully!")
+    except Exception as e:
+        print(f"⚠️ Error SarkariResult Scraping: {e}")
 
     return "\n".join(job_notices)
 
 # -------------------------------------------------------------
-# 4. AI SUMMARY GENERATORS
+# 4. AI SUMMARY GENERATORS (NEWS & JOBS)
 # -------------------------------------------------------------
 def generate_clean_summary(raw_text, target_date_str, is_national=False):
     """Groq AI se Fact-Based Detailed Hinglish JSON news summary banwata hai (UNCHANGED)"""
+    
     if is_national:
         scope_name = "India National & International Level ONLY"
         tag_name = "🎯 National Special / India Affairs"
@@ -354,7 +389,15 @@ def generate_clean_summary(raw_text, target_date_str, is_national=False):
 
 
 def generate_job_summary(raw_text):
-    """Groq AI se Pure English Detailed Job Portal data banwata hai with ABSOLUTE ENFORCEMENT against 'Not specified'"""
+    """
+    Groq AI se Pure English Detailed Job Portal data banwata hai.
+    UPDATED: Instead of forcing the AI to NEVER write "Not specified"
+    (which pushed it to invent plausible-looking fake dates/fees when the
+    source text lacked them), we now explicitly tell it to DROP any job
+    it cannot fully ground in the raw text. This removes the incentive
+    to hallucinate. The Python-side filter_valid_jobs() then double-checks
+    every field is actually present in the raw source before keeping it.
+    """
     today_str = datetime.now().strftime("%d %b %Y")
 
     prompt = f"""
@@ -363,17 +406,33 @@ def generate_job_summary(raw_text):
 
     {raw_text}
 
-    ABSOLUTE MANDATORY REJECTION RULE:
-    You MUST completely EXCLUDE any job where start_date, last_date, total_vacancies, or application_fee is missing or unannounced.
-    - DO NOT write "Not specified", "TBA", "To be announced", "Check notification", "Unknown", or "N/A" for ANY field.
-    - If a job does not have exact start_date, last_date, total_vacancies, and application_fee in the source text, DISCARD IT ENTIRELY.
+    ABSOLUTE MANDATORY GROUNDING RULE (CRITICAL - READ CAREFULLY):
+    You may ONLY extract facts that are EXPLICITLY written in the raw text above.
+    - Do NOT use your own general knowledge of "typical" government exam fees, dates, or age limits.
+    - Do NOT estimate, guess, or infer a value that is not literally present in the raw text.
+    - If start_date, last_date, total_vacancies, application_fee, or qualification is NOT
+      explicitly stated in the raw text for a job, you MUST completely OMIT that job from
+      "latest_jobs" entirely. It is far better to return FEWER jobs than to invent even one field.
+    - Never write "Not specified", "TBA", "To be announced", "Check notification", "Unknown", or "N/A" —
+      but the correct way to handle a missing field is to DROP THE ENTIRE JOB, not to fill in a fake value.
+    - The [Sarkari Result Reference Only] entries contain ONLY a title and URL - they have NO fee, date,
+      or vacancy data. NEVER use a Sarkari Result Reference Only entry as your only source for a job's
+      details. If a job appears only in a Sarkari Result Reference Only line and nowhere else with full
+      details, DO NOT include it in "latest_jobs".
+    - For "admit_cards": only include an entry if the raw text explicitly states an exam date /
+      CBT schedule / admit card release status. Otherwise omit it.
+    - For "results": only include an entry if the raw text explicitly states a result status
+      (merit list released, answer key declared, etc). Otherwise omit it.
 
-    STRICT GEOGRAPHICAL RULES:
+    STRICT GEOGRAPHICAL RULES (APPLIES TO latest_jobs, admit_cards, AND results):
     1. WRITE EVERYTHING IN 100% PURE ENGLISH ONLY.
     2. ALLOWED JURISDICTION ONLY:
        - BIHAR STATE GOVT: BPSC, BSSC, BPSSC, CSBC, Bihar Teacher (TRE), Patna High Court, Civil Court, Beltron, Health Dept Bihar, etc.
-       - CENTRAL GOVT (ALL INDIA): Staff Selection Commission (SSC), Indian Railways (RRB), Banking (IBPS, SBI, RBI), UPSC, Defence.
-    3. ABSOLUTE BAN ON OTHER STATES: REJECT any Job, Admit Card, or Result from UP, MP, Rajasthan, Haryana, Delhi DSSSB, Maharashtra, etc.
+       - CENTRAL GOVT (ALL INDIA): Staff Selection Commission (SSC), Indian Railways (RRB), Banking (IBPS, SBI, RBI), UPSC, Defence (Army, Navy, Air Force, CAPF).
+    3. ABSOLUTE BAN ON OTHER STATES: REJECT any Job, Admit Card, or Result from UP, MP, Rajasthan, Haryana,
+       Delhi DSSSB, Maharashtra, Jharkhand, West Bengal, Punjab, Gujarat, Karnataka, Tamil Nadu, Kerala,
+       Odisha, Assam, Telangana, Andhra Pradesh, or any other individual state. This ban applies to
+       latest_jobs, admit_cards, AND results equally - not just latest_jobs.
 
     JSON SCHEMA OUTPUT (Return EXACTLY this structure):
     {{
@@ -397,8 +456,35 @@ def generate_job_summary(raw_text):
           "date": "{today_str}"
         }}
       ],
-      "admit_cards": [],
-      "results": []
+      "admit_cards": [
+        {{
+          "id": "admit_01",
+          "title": "Clean Official Admit Card Title",
+          "organization": "Recruitment Body Name (e.g., BSSC / SSC / RRB)",
+          "job_type": "Bihar Govt Job OR Central Govt Job",
+          "post_name": "Post Name",
+          "total_vacancies": "Exact Total Posts",
+          "exam_date": "Exact Exam Date / CBT Schedule",
+          "status": "Admit Card Released / Hall Ticket Link Active",
+          "apply_url": "https://www.mocktester.online",
+          "exam_tag": "🎫 Hall Ticket",
+          "date": "{today_str}"
+        }}
+      ],
+      "results": [
+        {{
+          "id": "result_01",
+          "title": "Clean Official Result Title",
+          "organization": "Recruitment Body Name (e.g., CSBC / BPSC / SSC)",
+          "job_type": "Bihar Govt Job OR Central Govt Job",
+          "post_name": "Post Name",
+          "total_vacancies": "Exact Total Posts",
+          "result_status": "Merit List PDF Released / Answer Key Declared",
+          "apply_url": "https://www.mocktester.online",
+          "exam_tag": "🏆 Result",
+          "date": "{today_str}"
+        }}
+      ]
     }}
     """
 
@@ -416,82 +502,163 @@ def generate_job_summary(raw_text):
 
 
 # -------------------------------------------------------------
-# 5. STRICT FILTER & FILE SANITIZATION
+# 🌟 NORMALIZATION HELPER & ULTRA-STRICT PYTHON FILTER FOR JOBS
+#    (UPDATED: added grounding-in-source check + non-Bihar/Central
+#     state blacklist, applied to latest_jobs, admit_cards, AND results)
 # -------------------------------------------------------------
 def normalize_text(text):
     """Cleans whitespace, lowercase, and strips common trailing punctuation."""
     if not text:
         return ""
     cleaned = str(text).lower().strip()
+    # Remove trailing periods, dashes, colons, commas
     cleaned = re.sub(r'[\.\-:\,\s]+$', '', cleaned)
     return cleaned
 
-def is_invalid_field(value):
-    """Check if a field value contains placeholder / missing text."""
-    val = normalize_text(value)
-    if not val:
-        return True
-    invalid_keywords = [
-        "tba", "to be announced", "to be notified", "to be updated",
-        "not mentioned", "not specified", "not announced", "not available",
-        "unknown", "n/a", "check notification", "null", "none"
-    ]
-    return any(kw == val or kw in val for kw in invalid_keywords)
+INVALID_KEYWORDS = [
+    "tba", "to be announced", "to be notified", "to be updated",
+    "not mentioned", "not specified", "not announced", "not available",
+    "unknown", "n/a", "check notification", "null", "none", ""
+]
 
-def filter_valid_jobs(parsed_jobs):
+# Any of these appearing in title/organization means it's NOT Bihar/Central
+# and must be dropped from latest_jobs, admit_cards, and results alike.
+STATE_BLACKLIST = [
+    "uttar pradesh", " up police", " up board", "uppsc", "up govt",
+    "madhya pradesh", "mppsc", "rajasthan", "rpsc", "haryana", "hpsc",
+    "dsssb", "delhi govt", "maharashtra", "mpsc", "jharkhand", "jpsc",
+    "west bengal", "wbpsc", "punjab", "ppsc", "gujarat", "gpsc",
+    "karnataka", "kpsc", "tamil nadu", "tnpsc", "kerala", "kpsc",
+    "odisha", "opsc", "assam", "apsc", "telangana", "tspsc",
+    "andhra pradesh", "appsc", "chhattisgarh", "cgpsc", "uttarakhand",
+    "ukpsc", "himachal", "hppsc", "goa psc", "manipur", "meghalaya",
+    "nagaland", "tripura", "sikkim", "mizoram"
+]
+
+def normalize_text_for_search(text):
+    return str(text or "").lower()
+
+def is_state_specific(*fields):
+    """Returns True if any field mentions a non-Bihar/non-Central state body."""
+    combined = " ".join(normalize_text_for_search(f) for f in fields)
+    return any(kw in combined for kw in STATE_BLACKLIST)
+
+def value_grounded_in_source(value, raw_text):
+    """
+    Loose check: does the extracted value actually appear (in substance)
+    in the raw scraped text? Prevents the AI from inventing a fee/date/
+    vacancy figure that was never in the source.
+    """
+    if not value:
+        return False
+    raw_lower = raw_text.lower()
+    tokens = re.findall(r'\d[\d,]*|\b[A-Za-z]{4,}\b', value.lower())
+    if not tokens:
+        return False
+    hits = sum(1 for t in tokens if t in raw_lower)
+    # require at least a third of meaningful tokens to actually appear in source
+    return hits >= max(1, len(tokens) // 3)
+
+def filter_valid_jobs(parsed_jobs, raw_text=""):
     """
     Ultra-Strict Python Filter:
-    Guarantees that jobs containing 'Not specified' or missing dates/vacancies
-    are completely removed from the output.
+    1. Drops jobs/admit-cards/results with missing or placeholder fields.
+    2. Drops anything not grounded in the actual scraped raw text
+       (kills hallucinated dates/fees/vacancies).
+    3. Drops anything specific to a non-Bihar/non-Central state.
     """
     clean_latest_jobs = []
-
     for job in parsed_jobs.get("latest_jobs", []):
         title = job.get("title", "Unknown Job")
-        s_date = str(job.get("start_date", ""))
-        l_date = str(job.get("last_date", ""))
-        vacancies = str(job.get("total_vacancies", ""))
-        fee = str(job.get("application_fee", ""))
-        qual = str(job.get("qualification", ""))
+        org = job.get("organization", "")
+        s_date = normalize_text(job.get("start_date", ""))
+        l_date = normalize_text(job.get("last_date", ""))
+        vacancies = normalize_text(job.get("total_vacancies", ""))
+        fee = normalize_text(job.get("application_fee", ""))
+        qual = normalize_text(job.get("qualification", ""))
 
-        # 1. Invalid keyword check
-        if is_invalid_field(s_date) or is_invalid_field(l_date) or \
-           is_invalid_field(vacancies) or is_invalid_field(fee) or is_invalid_field(qual):
-            print(f"❌ Dropped (Contains 'Not Specified' or placeholder): {title}")
+        if not s_date or not l_date or not vacancies or not fee or not qual:
+            print(f"❌ Dropped job (Missing Field): {title}")
             continue
 
-        # 2. Vacancy MUST contain digits (e.g., '120 Posts' or '1,957')
+        is_invalid = False
+        for field_val in [s_date, l_date, vacancies, fee, qual]:
+            if any(kw == field_val or kw in field_val for kw in INVALID_KEYWORDS):
+                is_invalid = True
+                break
+        if is_invalid:
+            print(f"❌ Dropped job (Placeholder value): {title}")
+            continue
+
         if not re.search(r'\d+', vacancies):
-            print(f"❌ Dropped (No digits in total_vacancies): {title}")
+            print(f"❌ Dropped job (No digits in total_vacancies): {title}")
             continue
 
-        # 3. Dates MUST contain digits (e.g., '28 Aug 2026' or '28/08/2026')
         if not re.search(r'\d+', s_date) or not re.search(r'\d+', l_date):
-            print(f"❌ Dropped (Invalid date format without numbers): {title}")
+            print(f"❌ Dropped job (Invalid date format without numbers): {title}")
+            continue
+
+        if is_state_specific(title, org):
+            print(f"❌ Dropped job (Non-Bihar/Central state): {title}")
+            continue
+
+        if raw_text and not (
+            value_grounded_in_source(job.get("start_date", ""), raw_text) and
+            value_grounded_in_source(job.get("last_date", ""), raw_text) and
+            value_grounded_in_source(job.get("total_vacancies", ""), raw_text)
+        ):
+            print(f"❌ Dropped job (Not grounded in raw scraped source): {title}")
             continue
 
         clean_latest_jobs.append(job)
 
+    clean_admit_cards = []
+    for card in parsed_jobs.get("admit_cards", []):
+        title = card.get("title", "Unknown Admit Card")
+        org = card.get("organization", "")
+        exam_date = normalize_text(card.get("exam_date", ""))
+        status = normalize_text(card.get("status", ""))
+
+        if not exam_date or not status:
+            print(f"❌ Dropped admit card (Missing Field): {title}")
+            continue
+        if any(kw == exam_date or kw in exam_date for kw in INVALID_KEYWORDS):
+            print(f"❌ Dropped admit card (Placeholder exam_date): {title}")
+            continue
+        if is_state_specific(title, org):
+            print(f"❌ Dropped admit card (Non-Bihar/Central state): {title}")
+            continue
+        if raw_text and not value_grounded_in_source(card.get("exam_date", ""), raw_text):
+            print(f"❌ Dropped admit card (exam_date not grounded in source): {title}")
+            continue
+
+        clean_admit_cards.append(card)
+
+    clean_results = []
+    for res_item in parsed_jobs.get("results", []):
+        title = res_item.get("title", "Unknown Result")
+        org = res_item.get("organization", "")
+        status = normalize_text(res_item.get("result_status", ""))
+
+        if not status:
+            print(f"❌ Dropped result (Missing result_status): {title}")
+            continue
+        if any(kw == status or kw in status for kw in INVALID_KEYWORDS):
+            print(f"❌ Dropped result (Placeholder result_status): {title}")
+            continue
+        if is_state_specific(title, org):
+            print(f"❌ Dropped result (Non-Bihar/Central state): {title}")
+            continue
+
+        clean_results.append(res_item)
+
     parsed_jobs["latest_jobs"] = clean_latest_jobs
+    parsed_jobs["admit_cards"] = clean_admit_cards
+    parsed_jobs["results"] = clean_results
     return parsed_jobs
 
-def sanitize_existing_file(filepath):
-    """Purges any legacy 'Not specified' jobs from existing local JSON file on startup."""
-    if not os.path.exists(filepath):
-        return
-    try:
-        with open(filepath, "r", encoding="utf-8") as f:
-            data = json.load(f)
-        
-        cleaned = filter_valid_jobs(data)
-        with open(filepath, "w", encoding="utf-8") as f:
-            json.dump(cleaned, f, ensure_ascii=False, indent=2)
-        print(f"🧹 Existing file '{filepath}' sanitized on startup.")
-    except Exception as e:
-        print(f"⚠️ Error sanitizing file {filepath}: {e}")
-
 # -------------------------------------------------------------
-# 6. MASTER HISTORY APPEND FUNCTIONS
+# 5. MASTER HISTORY APPEND FUNCTIONS (UNCHANGED & PRESERVED)
 # -------------------------------------------------------------
 def append_to_master_history(news_cards, yesterday_key, is_national=False):
     """Appends daily news cards to the master history JSON files"""
@@ -512,7 +679,7 @@ def append_to_master_history(news_cards, yesterday_key, is_national=False):
     print(f"✅ Master History appended under key '{yesterday_key}' into '{master_file}'!")
 
 # -------------------------------------------------------------
-# 7. MAIN EXECUTION PIPELINE
+# 6. MAIN EXECUTION PIPELINE
 # -------------------------------------------------------------
 if __name__ == "__main__":
     if not GROQ_KEY:
@@ -522,11 +689,8 @@ if __name__ == "__main__":
     target_dt, date_str, key_str = get_yesterday_info()
     print(f"🔄 Starting Complete Current Affairs & Jobs Pipeline ({date_str})...\n")
 
-    # 🧹 STEP 0: Sanitize local bihar_jobs.json to purge legacy "Not specified" data
-    sanitize_existing_file("bihar_jobs.json")
-
     # === A. PROCESS BIHAR NEWS (UNCHANGED) ===
-    print("\n📍 --- PROCESS BIHAR NEWS ---")
+    print("📍 --- PROCESS BIHAR NEWS ---")
     raw_bihar = fetch_raw_bihar_news(target_dt)
     if raw_bihar:
         ai_bihar = generate_clean_summary(raw_bihar, date_str, is_national=False)
@@ -578,16 +742,25 @@ if __name__ == "__main__":
             try:
                 parsed_jobs = json.loads(ai_jobs.strip())
                 
-                # 🌟 HARD PYTHON FILTERING: Drops any job missing Start Date, Last Date, Fee, Qualification, or Vacancies
-                parsed_jobs = filter_valid_jobs(parsed_jobs)
+                # 🌟 HARD PYTHON FILTERING: drops any job/admit-card/result that is
+                # missing required fields, contains placeholder text, is not grounded
+                # in the actual scraped source text, or is specific to a non-Bihar/
+                # non-Central state.
+                parsed_jobs = filter_valid_jobs(parsed_jobs, raw_jobs)
                 
-                has_data = len(parsed_jobs.get("latest_jobs", [])) > 0
+                has_data = (
+                    len(parsed_jobs.get("latest_jobs", [])) > 0 or
+                    len(parsed_jobs.get("admit_cards", [])) > 0 or
+                    len(parsed_jobs.get("results", [])) > 0
+                )
                 if has_data:
                     with open("bihar_jobs.json", "w", encoding="utf-8") as f:
                         json.dump(parsed_jobs, f, ensure_ascii=False, indent=2)
-                    print(f"✅ bihar_jobs.json updated! Total valid jobs: {len(parsed_jobs.get('latest_jobs', []))}")
+                    print(f"✅ bihar_jobs.json updated! Jobs: {len(parsed_jobs.get('latest_jobs', []))} | "
+                          f"Admit Cards: {len(parsed_jobs.get('admit_cards', []))} | "
+                          f"Results: {len(parsed_jobs.get('results', []))}")
                 else:
-                    print("🛡️ SAFEGUARD ACTIVATED: 0 complete job notifications found today.")
+                    print("🛡️ SAFEGUARD ACTIVATED: 0 complete job/admit-card/result entries found. Retaining existing file!")
             except Exception as e:
                 print(f"❌ Jobs JSON Parsing Error: {e}")
 
