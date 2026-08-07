@@ -2,11 +2,12 @@ name: Auto Bihar & Central Jobs Pipeline
 
 on:
   schedule:
+    # Daily Subah 7:00 AM IST (1:30 AM UTC)
     - cron: '30 1 * * *'
-  workflow_dispatch:
+  workflow_dispatch: # GitHub UI me Manual Run ke liye
 
 permissions:
-  contents: write
+  contents: write # Repository me Push & Write permissions allow karta hai
 
 jobs:
   run-jobs-pipeline:
@@ -16,7 +17,7 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0
+          fetch-depth: 0 # Conflict-free rebase ke liye
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -26,19 +27,12 @@ jobs:
       - name: Install Dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install requests curl_cffi beautifulsoup4 groq lxml PyMuPDF playwright playwright-stealth
-          playwright install chromium --with-deps
+          pip install requests curl_cffi beautifulsoup4 groq lxml PyMuPDF cloudscraper
 
       - name: Run Main Job Scraper
         env:
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
         run: python job_scraper.py
-
-      # 🧪 Stealth Playwright-powered SarkariResult Test
-      - name: Run SarkariResult Test
-        env:
-          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
-        run: python test_sarkari.py
 
       - name: Auto-Commit and Push Updated Jobs JSON
         run: |
@@ -46,6 +40,8 @@ jobs:
           git config --local user.name "GitHub Action Bot"
           git add bihar_jobs.json
           
+          # Conflict se bachne ke liye pull-rebase step
           git pull origin main --rebase || true
+          
           git diff-index --quiet HEAD || git commit -m "Auto-update Bihar & Central Jobs JSON [skip ci]"
           git push origin main
