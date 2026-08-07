@@ -19,14 +19,20 @@ HEADERS = {
     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
 }
 
-# Token and Rate Limit Saver: Multi-tier fallback hierarchy (Lowest -> Highest cost)
 AI_MODELS_TIERS = [
-    "llama-3.1-8b-instant",     # Tier 1: Fast, highly economical
-    "mixtral-8x7b-32768",       # Tier 2: Mid-range MoE model
-    "llama-3.3-70b-versatile"   # Tier 3: Heavy duty, used ONLY as a final fallback
+    "llama-3.1-8b-instant",
+    "mixtral-8x7b-32768",
+    "llama-3.3-70b-versatile"
 ]
 
-# Priority Boards Mapping
+# Strict Non-Bihar / Other States Rejection Keywords
+OTHER_STATES_REJECT = [
+    "cuttack", "odisha", "orissa", "uttar pradesh", " up ", "uppsc", 
+    "madhya pradesh", "mppsc", "rajasthan", "rpsc", "haryana", "hpsc", 
+    "maharashtra", "mpsc", "jharkhand", "jpsc", "west bengal", "wbpsc", 
+    "punjab", "gujarat", "kerala", "karnataka", "tamil nadu", "andhra"
+]
+
 BIHAR_BOARDS = [
     ("bpsc", "Bihar Public Service Commission (BPSC)"),
     ("bssc", "Bihar Staff Selection Commission (BSSC)"),
@@ -36,9 +42,9 @@ BIHAR_BOARDS = [
     ("patna high court", "Patna High Court"),
     ("high court patna", "Patna High Court"),
     ("wcdc", "Women and Child Development Corporation (WCDC) Bihar"),
-    ("amin", "Bihar Revenue & Land Reforms Dept (Amin)"),
     ("beltron", "Bihar State Electronics Development Corporation (BELTRON)"),
-    ("civil court", "Bihar Civil Court")
+    ("bihar amin", "Bihar Revenue & Land Reforms Dept (Amin)"),
+    ("civil court bihar", "Bihar Civil Court")
 ]
 
 CENTRAL_BOARDS = [
@@ -56,6 +62,10 @@ CENTRAL_BOARDS = [
 
 ALL_BOARDS = BIHAR_BOARDS + CENTRAL_BOARDS
 
+def is_other_state_job(text):
+    text_lower = text.lower()
+    return any(state in text_lower for state in OTHER_STATES_REJECT)
+
 def detect_organization(text):
     text_lower = text.lower()
     for key, full_name in ALL_BOARDS:
@@ -64,7 +74,7 @@ def detect_organization(text):
     return "Central / Bihar Govt Agency"
 
 def is_bihar_job(text):
-    bihar_keywords = ["bihar", "bpsc", "bssc", "bpssc", "csbc", "btsc", "patna", "wcdc", "amin", "beltron"]
+    bihar_keywords = ["bihar", "bpsc", "bssc", "bpssc", "csbc", "btsc", "patna", "wcdc", "beltron"]
     return any(kw in text.lower() for kw in bihar_keywords)
 
 def clean_html_text(text):
@@ -73,31 +83,25 @@ def clean_html_text(text):
     return BeautifulSoup(text, "html.parser").get_text().strip()
 
 # -------------------------------------------------------------
-# 2. Multi-Tier AI Parser (Token-Saving Fallback Hierarchy)
+# 2. Multi-Tier AI Parser (Real Dates & Details)
 # -------------------------------------------------------------
 def parse_job_data_with_ai(context_text):
-    """
-    Tries AI extraction with cheaper/faster models first to save tokens & rate limits.
-    Falls back to heavier models only if lighter ones fail.
-    """
     if not client:
         return {}
 
     prompt = f"""
     Extract recruitment notification details from the text below.
-    Return strictly valid JSON without markdown formatting or code blocks.
+    Return strictly valid JSON without markdown formatting.
 
     Expected JSON Schema:
     {{
-      "last_date": "Exact Last Date to apply (e.g., '28/08/2026') or null",
+      "start_date": "Exact Application Start Date (e.g., '15/07/2026') or null",
+      "last_date": "Exact Application Last Date (e.g., '28/08/2026') or null",
       "age_limit": "Age criteria (e.g., '20 to 28 Years') or null",
       "application_fee": "Fee details (e.g., 'Rs. 850 for Gen/OBC, Rs. 175 for SC/ST') or null",
       "qualification": "Educational requirement or null",
       "total_vacancies": "Total posts count (e.g., '11403 Posts') or null"
     }}
-
-    Rules:
-    - DO NOT confuse Advt No / Exam Code (e.g., 'CRP CSA-XVI') for last_date. last_date MUST be a valid date string.
 
     Text Context:
     {context_text[:3000]}
@@ -118,15 +122,13 @@ def parse_job_data_with_ai(context_text):
             parsed_json = json.loads(res.choices[0].message.content)
             print(f"  [AI Success] Extracted using model: {model_name}")
             return parsed_json
-
         except Exception as e:
-            print(f"  [AI Tier Fallback] Model '{model_name}' failed/rate-limited: {e}. Trying next tier...")
+            print(f"  [AI Tier Fallback] Model '{model_name}' failed. Trying next tier...")
 
-    print("  [AI Exhausted] All AI models failed/rate-limited. Retaining local scraped values.")
     return {}
 
 # -------------------------------------------------------------
-# 3. Step 1: Main Table Direct Field Scraper
+# 3. Step 1: Main Table Scraper (Scrapes Post Date as Start Date)
 # -------------------------------------------------------------
 def fetch_main_table_data(url):
     candidates = []
@@ -135,7 +137,6 @@ def fetch_main_table_data(url):
     try:
         res = requests.get(url, headers=HEADERS, timeout=20, verify=False, impersonate="chrome")
         if res.status_code != 200:
-            print(f"[STEP 1] ❌ HTTP Error: {res.status_code}")
             return candidates
 
         soup = BeautifulSoup(res.content, "html.parser")
@@ -149,23 +150,34 @@ def fetch_main_table_data(url):
                 if len(cols) >= 5:
                     col_texts = [clean_html_text(c.text) for c in cols]
                     
-                    if "post name" in col_texts[1].lower() or "post date" in col_texts[0].lower() or "qualification" in col_texts[2].lower():
+                    if "post name" in col_texts[1].lower() or "post date" in col_texts[0].lower():
                         continue
 
+                    # Table Column Structure:
+                    # Col 0: Post Date (Scraped as Start Date)
+                    # Col 1: Board Name
+                    # Col 2: Post Name & Vacancies
+                    # Col 3: Qualification
+                    # Col 4: Last Date
+                    post_date = col_texts[0]
                     raw_board = col_texts[1]
                     raw_post_and_vacancies = col_texts[2]
                     qualification = col_texts[3] if len(col_texts) > 3 else None
-                    raw_col_4 = col_texts[4] if len(col_texts) > 4 else ""
+                    raw_last_date = col_texts[4] if len(col_texts) > 4 else None
 
-                    # Extract Vacancy Count
+                    title = f"{raw_board} {raw_post_and_vacancies}".strip()
+
+                    # 🚫 REJECT OTHER STATES (Cuttack, Odisha, UP, MP, etc.)
+                    if is_other_state_job(title):
+                        print(f"  [Rejected Other State]: {title}")
+                        continue
+
                     vac_match = re.search(r'(\d+[\d,]*)\s*(Posts|Vacancies)?', raw_post_and_vacancies, re.IGNORECASE)
                     vacancies = vac_match.group(0) if vac_match else None
 
-                    # Extract Clean Post Name
                     clean_post = re.sub(r'[\s–-]+\d+\s*(Posts|Vacancies)?.*$', '', raw_post_and_vacancies, flags=re.IGNORECASE).strip()
 
-                    # Fallback Regex for Last Date if column has date string
-                    date_match = re.search(r'\b\d{1,2}[/-]\d{1,2}[/-]\d{2,4}\b', raw_col_4)
+                    date_match = re.search(r'\b\d{1,2}[/-]\d{1,2}[/-]\d{2,4}\b', raw_last_date) if raw_last_date else None
                     extracted_last_date = date_match.group(0) if date_match else None
 
                     detail_url = None
@@ -176,22 +188,22 @@ def fetch_main_table_data(url):
                             detail_url = urljoin(url, href)
                             break
 
-                    title = f"{raw_board} {clean_post}".strip()
                     org_name = detect_organization(f"{raw_board} {clean_post}")
 
                     if detail_url and len(title) > 5 and not re.match(r'^\d{2}/\d{2}/\d{4}$', title):
                         candidates.append({
-                            "title": title,
+                            "title": f"{raw_board} {clean_post}",
                             "post_name": clean_post,
                             "organization": org_name,
                             "qualification": qualification,
                             "total_vacancies": vacancies,
+                            "post_date": post_date, # Scraped real post date
                             "last_date": extracted_last_date,
                             "detail_url": detail_url,
-                            "is_bihar": is_bihar_job(title + " " + raw_board)
+                            "is_bihar": is_bihar_job(title)
                         })
 
-        print(f"[STEP 1] ✅ Extracted {len(candidates)} jobs from table!")
+        print(f"[STEP 1] ✅ Extracted {len(candidates)} valid Bihar/Central jobs from table!")
 
     except Exception as e:
         print(f"[STEP 1] 🚨 Error: {e}")
@@ -199,7 +211,7 @@ def fetch_main_table_data(url):
     return candidates
 
 # -------------------------------------------------------------
-# 4. Step 2: Inner Page Deep Scrape (PDF Link Extraction)
+# 4. Step 2: Inner Page Scrape (PDF & Inner Context)
 # -------------------------------------------------------------
 def fetch_deep_details(detail_url):
     details = {"text_content": "", "pdf_url": None}
@@ -218,12 +230,12 @@ def fetch_deep_details(detail_url):
             content_div = soup.find('div', id=re.compile(r'post|content|entry')) or soup.find('body')
             details["text_content"] = clean_html_text(content_div.text if content_div else "")
     except Exception as e:
-        print(f"⚠️ Inner page fetch warning: {e}")
+        print(f"⚠️ Inner page warning: {e}")
 
     return details
 
 # -------------------------------------------------------------
-# 5. Main Pipeline Execution
+# 5. Main Execution
 # -------------------------------------------------------------
 def run_job_pipeline():
     today_str = datetime.now().strftime("%d %b %Y")
@@ -232,7 +244,6 @@ def run_job_pipeline():
     main_url = "https://www.freejobalert.com/latest-notifications/"
     candidates = fetch_main_table_data(main_url)
 
-    # Prioritize Bihar Jobs to top of list
     candidates.sort(key=lambda x: x["is_bihar"], reverse=True)
 
     for idx, cand in enumerate(candidates[:25]):
@@ -247,9 +258,9 @@ def run_job_pipeline():
         print(f"[{idx+1}/{len(candidates[:25])}] 🔍 Processing: {title}")
 
         deep_data = fetch_deep_details(detail_url)
-        full_context = f"{title}\nQualification: {cand['qualification']}\n{deep_data['text_content']}"
+        full_context = f"{title}\nPost Date: {cand['post_date']}\nQualification: {cand['qualification']}\n{deep_data['text_content']}"
 
-        # Call Multi-Tier AI Parser
+        # Call AI Parser
         ai_data = parse_job_data_with_ai(full_context)
 
         job_card = {
@@ -262,7 +273,7 @@ def run_job_pipeline():
             "qualification": ai_data.get("qualification") or cand["qualification"] or None,
             "age_limit": ai_data.get("age_limit") or None,
             "application_fee": ai_data.get("application_fee") or None,
-            "start_date": today_str,
+            "start_date": ai_data.get("start_date") or cand["post_date"] or None, # Real scraped date used!
             "last_date": ai_data.get("last_date") or cand["last_date"] or None,
             "apply_url": "https://www.mocktester.online",
             "notification_pdf": deep_data["pdf_url"] or None,
@@ -279,7 +290,7 @@ def run_job_pipeline():
     with open("bihar_jobs.json", "w", encoding="utf-8") as f:
         json.dump(final_output, f, ensure_ascii=False, indent=2)
 
-    print(f"\n✅ bihar_jobs.json generated successfully with {len(latest_jobs)} items!")
+    print(f"\n✅ Clean bihar_jobs.json generated with {len(latest_jobs)} items!")
 
 if __name__ == "__main__":
     run_job_pipeline()
