@@ -138,7 +138,7 @@ class _HomeTabState extends State<HomeTab> {
         await _fetchDailyBulletins(forceRefresh: true);
       },
       child: SingleChildScrollView(
-        physics: const AlwaysScrollableScrollPhysics(), // Ensures pull-down works even when list is short
+        physics: const AlwaysScrollableScrollPhysics(), // Ensures pull-down works everywhere
         padding: const EdgeInsets.all(16),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -307,11 +307,11 @@ class _HomeTabState extends State<HomeTab> {
     );
   }
 
-  // 📰 2. DAILY BULLETIN SECTION WITH TOGGLE BUTTONS
+  // 📰 2. DAILY BULLETIN SECTION WITH TOGGLE BUTTONS (COMPACT ZERO-WHITE-SPACE)
   Widget _buildDailyBulletinSection() {
     if (_isLoadingNews) {
       return Container(
-        padding: const EdgeInsets.symmetric(vertical: 30),
+        padding: const EdgeInsets.symmetric(vertical: 24),
         decoration: BoxDecoration(
           color: widget.isDarkMode ? const Color(0xFF1E293B) : const Color(0xFFF1F5F9),
           borderRadius: BorderRadius.circular(20),
@@ -321,11 +321,11 @@ class _HomeTabState extends State<HomeTab> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               SizedBox(
-                width: 24,
-                height: 24,
+                width: 22,
+                height: 22,
                 child: CircularProgressIndicator(color: Color(0xFF4F46E5), strokeWidth: 2.5),
               ),
-              SizedBox(height: 10),
+              SizedBox(height: 8),
               Text(
                 "Loading Live Bulletin...",
                 style: TextStyle(fontSize: 12, color: Color(0xFF64748B), fontWeight: FontWeight.w500),
@@ -340,6 +340,7 @@ class _HomeTabState extends State<HomeTab> {
 
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
+      mainAxisSize: MainAxisSize.min,
       children: [
         // HEADER ROW WITH TOGGLE BUTTON
         Row(
@@ -387,7 +388,7 @@ class _HomeTabState extends State<HomeTab> {
             ),
           ],
         ),
-        const SizedBox(height: 12),
+        const SizedBox(height: 10),
 
         // CAROUSEL VIEW
         if (activeList.isEmpty)
@@ -403,8 +404,9 @@ class _HomeTabState extends State<HomeTab> {
             ),
           )
         else ...[
+          // OPTIMIZED COMPACT CONTAINER (ELIMINATES BOTTOM WHITE SPACE & OVERFLOW)
           SizedBox(
-            height: 480, 
+            height: 385, 
             child: PageView.builder(
               controller: _newsPageController,
               itemCount: activeList.length,
@@ -416,7 +418,7 @@ class _HomeTabState extends State<HomeTab> {
               },
             ),
           ),
-          const SizedBox(height: 12),
+          const SizedBox(height: 8),
 
           // INDICATOR DOTS
           Row(
@@ -479,16 +481,16 @@ class _HomeTabState extends State<HomeTab> {
     );
   }
 
-  // 📇 NEWS CARD ITEM (RESPONSIVE NO-CUT LAYOUT)
+  // 📇 NEWS CARD ITEM (COMPACT NO-WHITE-SPACE LAYOUT)
   Widget _buildUltraPremiumNewsCard(Map<String, dynamic> news) {
     final List bullets = (news['bullets'] as List?) ?? [];
 
     return Container(
       margin: const EdgeInsets.only(right: 6),
-      padding: const EdgeInsets.all(14),
+      padding: const EdgeInsets.all(12),
       decoration: BoxDecoration(
         color: widget.isDarkMode ? const Color(0xFF1E293B) : const Color(0xFFF1F5F9),
-        borderRadius: BorderRadius.circular(20),
+        borderRadius: BorderRadius.circular(18),
         border: Border.all(
           color: widget.isDarkMode ? const Color(0xFF334155) : const Color(0xFFCBD5E1),
           width: 1.2,
@@ -496,23 +498,24 @@ class _HomeTabState extends State<HomeTab> {
         boxShadow: [
           BoxShadow(
             color: Colors.black.withOpacity(widget.isDarkMode ? 0.2 : 0.03),
-            blurRadius: 12,
-            offset: const Offset(0, 4),
+            blurRadius: 8,
+            offset: const Offset(0, 3),
           ),
         ],
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
-        mainAxisSize: MainAxisSize.min,
+        mainAxisSize: MainAxisSize.min, // 🌟 Column tightly wraps content
         children: [
+          // 1. TAG & DATE ROW
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Container(
-                padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+                padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3.5),
                 decoration: BoxDecoration(
                   color: widget.isDarkMode ? const Color(0xFF312E81) : const Color(0xFFEEF2FF),
-                  borderRadius: BorderRadius.circular(8),
+                  borderRadius: BorderRadius.circular(6),
                   border: Border.all(
                     color: widget.isDarkMode ? const Color(0xFF4338CA) : const Color(0xFFC7D2FE),
                     width: 0.8,
@@ -522,7 +525,7 @@ class _HomeTabState extends State<HomeTab> {
                   news['exam_tag'] ?? '🎯 Exam Special',
                   style: TextStyle(
                     color: widget.isDarkMode ? const Color(0xFFC7D2FE) : const Color(0xFF3730A3),
-                    fontSize: 11.5,
+                    fontSize: 10.5,
                     fontWeight: FontWeight.bold,
                   ),
                 ),
@@ -531,7 +534,7 @@ class _HomeTabState extends State<HomeTab> {
                 children: [
                   Icon(
                     Icons.access_time_rounded,
-                    size: 14,
+                    size: 12,
                     color: widget.isDarkMode ? Colors.white60 : const Color(0xFF64748B),
                   ),
                   const SizedBox(width: 4),
@@ -539,7 +542,7 @@ class _HomeTabState extends State<HomeTab> {
                     news['date'] ?? '',
                     style: TextStyle(
                       color: widget.isDarkMode ? Colors.white60 : const Color(0xFF64748B),
-                      fontSize: 12,
+                      fontSize: 11,
                       fontWeight: FontWeight.w600,
                     ),
                   ),
@@ -548,60 +551,63 @@ class _HomeTabState extends State<HomeTab> {
             ],
           ),
 
-          const SizedBox(height: 10),
+          const SizedBox(height: 8),
 
-          // NEWS TITLE
+          // 2. NEWS TITLE
           Text(
             news['title'] ?? '',
             maxLines: 2,
             overflow: TextOverflow.ellipsis,
             style: TextStyle(
-              fontSize: 15,
+              fontSize: 14,
               fontWeight: FontWeight.w800,
               color: widget.isDarkMode ? const Color(0xFFF8FAFC) : const Color(0xFF0F172A),
               letterSpacing: -0.2,
-              height: 1.3,
+              height: 1.25,
             ),
           ),
 
-          const SizedBox(height: 10),
+          const SizedBox(height: 8),
 
-          // FLEXIBLE BULLETS
+          // 3. COMPACT BULLETS (FITS PERFECTLY IN ALL SCREENS)
           Column(
             children: bullets.map((bullet) {
               return Padding(
-                padding: const EdgeInsets.only(bottom: 6.0),
+                padding: const EdgeInsets.only(bottom: 4.0),
                 child: Container(
-                  padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 7),
+                  padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 5),
                   decoration: BoxDecoration(
                     color: widget.isDarkMode
                         ? const Color(0xFF0F172A).withOpacity(0.6)
                         : const Color(0xFFE2E8F0),
-                    borderRadius: BorderRadius.circular(10),
+                    borderRadius: BorderRadius.circular(8),
                     border: Border.all(
                       color: widget.isDarkMode ? const Color(0xFF1E293B) : const Color(0xFFCBD5E1),
+                      width: 0.8,
                     ),
                   ),
                   child: Row(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       const Padding(
-                        padding: EdgeInsets.only(top: 2),
+                        padding: EdgeInsets.only(top: 1),
                         child: Icon(
                           Icons.arrow_right_rounded,
-                          size: 18,
+                          size: 16,
                           color: Color(0xFF4F46E5),
                         ),
                       ),
-                      const SizedBox(width: 4),
+                      const SizedBox(width: 2),
                       Expanded(
                         child: Text(
                           bullet.toString(),
+                          maxLines: 3,
+                          overflow: TextOverflow.ellipsis,
                           style: TextStyle(
-                            fontSize: 11.8,
+                            fontSize: 11.2,
                             fontWeight: FontWeight.w500,
                             color: widget.isDarkMode ? Colors.white70 : const Color(0xFF334155),
-                            height: 1.35,
+                            height: 1.28,
                           ),
                         ),
                       ),
