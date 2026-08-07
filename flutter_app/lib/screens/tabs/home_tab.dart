@@ -91,7 +91,7 @@ class _HomeTabState extends State<HomeTab> {
       }
     }
 
-    // Step 2: Dynamic Network Fetch with Millisecond Timestamp (Bypasses GitHub CDN Cache)
+    // Step 2: Dynamic Network Fetch with Millisecond Timestamp
     final int timestamp = DateTime.now().millisecondsSinceEpoch;
     final String biharUrl = "https://raw.githubusercontent.com/zxcty54/quiz/main/bihar_news.json?t=$timestamp";
     final String nationalUrl = "https://raw.githubusercontent.com/zxcty54/quiz/main/national_news.json?t=$timestamp";
@@ -131,14 +131,13 @@ class _HomeTabState extends State<HomeTab> {
   @override
   Widget build(BuildContext context) {
     return RefreshIndicator(
-      color: const Color(0xFF4F46E5), // Pull Refresh Spinner Color
+      color: const Color(0xFF4F46E5),
       backgroundColor: widget.isDarkMode ? const Color(0xFF1E293B) : Colors.white,
       onRefresh: () async {
-        // 🔄 PULL-TO-REFRESH ACTION
         await _fetchDailyBulletins(forceRefresh: true);
       },
       child: SingleChildScrollView(
-        physics: const AlwaysScrollableScrollPhysics(), // Ensures pull-down works everywhere
+        physics: const AlwaysScrollableScrollPhysics(),
         padding: const EdgeInsets.all(16),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -307,7 +306,7 @@ class _HomeTabState extends State<HomeTab> {
     );
   }
 
-  // 📰 2. DAILY BULLETIN SECTION WITH TOGGLE BUTTONS (COMPACT ZERO-WHITE-SPACE)
+  // 📰 2. DAILY BULLETIN SECTION WITH DYNAMIC EXPANDABLE HEIGHT
   Widget _buildDailyBulletinSection() {
     if (_isLoadingNews) {
       return Container(
@@ -369,7 +368,7 @@ class _HomeTabState extends State<HomeTab> {
               ],
             ),
 
-            // 🎯 SEGMENTED TOGGLE SWITCH
+            // TOGGLE SWITCH
             Container(
               padding: const EdgeInsets.all(3),
               decoration: BoxDecoration(
@@ -404,19 +403,16 @@ class _HomeTabState extends State<HomeTab> {
             ),
           )
         else ...[
-          // OPTIMIZED COMPACT CONTAINER (ELIMINATES BOTTOM WHITE SPACE & OVERFLOW)
-          SizedBox(
-            height: 385, 
-            child: PageView.builder(
-              controller: _newsPageController,
-              itemCount: activeList.length,
-              onPageChanged: (index) {
-                setState(() => _activeNewsIndex = index);
-              },
-              itemBuilder: (context, index) {
-                return _buildUltraPremiumNewsCard(activeList[index]);
-              },
-            ),
+          // DYNAMIC HEIGHT PAGE VIEW (NO EXTRA WHITE SPACE AT BOTTOM)
+          ExpandablePageView(
+            controller: _newsPageController,
+            itemCount: activeList.length,
+            onPageChanged: (index) {
+              setState(() => _activeNewsIndex = index);
+            },
+            itemBuilder: (context, index) {
+              return _buildUltraPremiumNewsCard(activeList[index]);
+            },
           ),
           const SizedBox(height: 8),
 
@@ -481,7 +477,7 @@ class _HomeTabState extends State<HomeTab> {
     );
   }
 
-  // 📇 NEWS CARD ITEM (COMPACT NO-WHITE-SPACE LAYOUT)
+  // 📇 NEWS CARD ITEM (NO BULLET PADDING & ZERO SCROLLING)
   Widget _buildUltraPremiumNewsCard(Map<String, dynamic> news) {
     final List bullets = (news['bullets'] as List?) ?? [];
 
@@ -505,7 +501,7 @@ class _HomeTabState extends State<HomeTab> {
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
-        mainAxisSize: MainAxisSize.min, // 🌟 Column tightly wraps content
+        mainAxisSize: MainAxisSize.min, // 🌟 Container adapts to content size
         children: [
           // 1. TAG & DATE ROW
           Row(
@@ -556,10 +552,8 @@ class _HomeTabState extends State<HomeTab> {
           // 2. NEWS TITLE
           Text(
             news['title'] ?? '',
-            maxLines: 2,
-            overflow: TextOverflow.ellipsis,
             style: TextStyle(
-              fontSize: 14,
+              fontSize: 14.5,
               fontWeight: FontWeight.w800,
               color: widget.isDarkMode ? const Color(0xFFF8FAFC) : const Color(0xFF0F172A),
               letterSpacing: -0.2,
@@ -569,50 +563,35 @@ class _HomeTabState extends State<HomeTab> {
 
           const SizedBox(height: 8),
 
-          // 3. COMPACT BULLETS (FITS PERFECTLY IN ALL SCREENS)
+          // 3. BULLETS (ZERO INNER PADDING & NO SCROLL)
           Column(
             children: bullets.map((bullet) {
               return Padding(
-                padding: const EdgeInsets.only(bottom: 4.0),
-                child: Container(
-                  padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 5),
-                  decoration: BoxDecoration(
-                    color: widget.isDarkMode
-                        ? const Color(0xFF0F172A).withOpacity(0.6)
-                        : const Color(0xFFE2E8F0),
-                    borderRadius: BorderRadius.circular(8),
-                    border: Border.all(
-                      color: widget.isDarkMode ? const Color(0xFF1E293B) : const Color(0xFFCBD5E1),
-                      width: 0.8,
+                padding: const EdgeInsets.only(bottom: 6.0),
+                child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    const Padding(
+                      padding: EdgeInsets.only(top: 1),
+                      child: Icon(
+                        Icons.arrow_right_rounded,
+                        size: 16,
+                        color: Color(0xFF4F46E5),
+                      ),
                     ),
-                  ),
-                  child: Row(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      const Padding(
-                        padding: EdgeInsets.only(top: 1),
-                        child: Icon(
-                          Icons.arrow_right_rounded,
-                          size: 16,
-                          color: Color(0xFF4F46E5),
+                    const SizedBox(width: 2),
+                    Expanded(
+                      child: Text(
+                        bullet.toString(),
+                        style: TextStyle(
+                          fontSize: 12,
+                          fontWeight: FontWeight.w500,
+                          color: widget.isDarkMode ? Colors.white70 : const Color(0xFF334155),
+                          height: 1.3,
                         ),
                       ),
-                      const SizedBox(width: 2),
-                      Expanded(
-                        child: Text(
-                          bullet.toString(),
-                          maxLines: 3,
-                          overflow: TextOverflow.ellipsis,
-                          style: TextStyle(
-                            fontSize: 11.2,
-                            fontWeight: FontWeight.w500,
-                            color: widget.isDarkMode ? Colors.white70 : const Color(0xFF334155),
-                            height: 1.28,
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
+                    ),
+                  ],
                 ),
               );
             }).toList(),
@@ -1080,5 +1059,125 @@ class _HomeTabState extends State<HomeTab> {
         ],
       ),
     );
+  }
+}
+
+// 🌟 EXPANDABLE PAGE VIEW HELPER
+// Measures and resizes the viewport to match the active page height dynamically
+class ExpandablePageView extends StatefulWidget {
+  final PageController controller;
+  final int itemCount;
+  final IndexedWidgetBuilder itemBuilder;
+  final ValueChanged<int>? onPageChanged;
+
+  const ExpandablePageView({
+    super.key,
+    required this.controller,
+    required this.itemCount,
+    required this.itemBuilder,
+    this.onPageChanged,
+  });
+
+  @override
+  State<ExpandablePageView> createState() => _ExpandablePageViewState();
+}
+
+class _ExpandablePageViewState extends State<ExpandablePageView> {
+  late List<double> _heights;
+  int _currentPage = 0;
+
+  double get _currentHeight =>
+      _heights.isEmpty ? 200 : _heights[_currentPage];
+
+  @override
+  void initState() {
+    super.initState();
+    _heights = List.filled(widget.itemCount, 0.0);
+    widget.controller.addListener(_updatePage);
+  }
+
+  void _updatePage() {
+    final newPage = widget.controller.page?.round() ?? 0;
+    if (_currentPage != newPage) {
+      setState(() {
+        _currentPage = newPage;
+      });
+    }
+  }
+
+  @override
+  void dispose() {
+    widget.controller.removeListener(_updatePage);
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return TweenAnimationBuilder<double>(
+      curve: Curves.easeInOutCubic,
+      duration: const Duration(milliseconds: 200),
+      tween: Tween<double>(begin: _currentHeight, end: _currentHeight),
+      builder: (context, height, child) {
+        return SizedBox(
+          height: height == 0 ? null : height,
+          child: child,
+        );
+      },
+      child: PageView.builder(
+        controller: widget.controller,
+        itemCount: widget.itemCount,
+        onPageChanged: widget.onPageChanged,
+        itemBuilder: (context, index) {
+          return OverflowBox(
+            minHeight: 0,
+            maxHeight: double.infinity,
+            alignment: Alignment.topCenter,
+            child: SizeReportingWidget(
+              onSizeChange: (size) {
+                if (_heights[index] != size.height) {
+                  setState(() {
+                    _heights[index] = size.height;
+                  });
+                }
+              },
+              child: widget.itemBuilder(context, index),
+            ),
+          );
+        },
+      ),
+    );
+  }
+}
+
+// 📏 SIZE REPORTING HELPER
+class SizeReportingWidget extends StatefulWidget {
+  final Widget child;
+  final ValueChanged<Size> onSizeChange;
+
+  const SizeReportingWidget({
+    super.key,
+    required this.child,
+    required this.onSizeChange,
+  });
+
+  @override
+  State<SizeReportingWidget> createState() => _SizeReportingWidgetState();
+}
+
+class _SizeReportingWidgetState extends State<SizeReportingWidget> {
+  Size _oldSize = Size.zero;
+
+  @override
+  Widget build(BuildContext context) {
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      if (mounted) {
+        final newSize = context.size;
+        if (newSize != null && _oldSize != newSize) {
+          _oldSize = newSize;
+          widget.onSizeChange(newSize);
+        }
+      }
+    });
+    return widget.child;
   }
 }
