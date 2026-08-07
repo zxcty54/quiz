@@ -199,7 +199,7 @@ def fetch_raw_national_news(target_dt):
     return "\n".join(national_titles)
 
 # -------------------------------------------------------------
-# 🌟 ENHANCED JOB SCRAPER WITH DETAILED FIELD PARSING
+# 3. ENHANCED JOB SCRAPER WITH DIRECT PORTAL SOURCES
 # -------------------------------------------------------------
 def fetch_raw_jobs():
     """HIGH-VOLUME ACCURATE SCRAPER FOR JOBS, ADMIT CARDS & RESULTS WITH DEEP DATA PARSING"""
@@ -267,7 +267,7 @@ def fetch_raw_jobs():
     return "\n".join(job_notices)
 
 # -------------------------------------------------------------
-# 3. AI SUMMARY GENERATORS (NEWS & JOBS)
+# 4. AI SUMMARY GENERATORS (NEWS & JOBS)
 # -------------------------------------------------------------
 def generate_clean_summary(raw_text, target_date_str, is_national=False):
     """Groq AI se Fact-Based Detailed Hinglish JSON news summary banwata hai (UNCHANGED)"""
@@ -374,7 +374,7 @@ def generate_clean_summary(raw_text, target_date_str, is_national=False):
 
 
 def generate_job_summary(raw_text):
-    """Groq AI se Pure English Detailed Job Portal data banwata hai with STRICT Field Enforcement"""
+    """Groq AI se Pure English Detailed Job Portal data banwata hai with ABSOLUTE ENFORCEMENT against 'Not specified'"""
     today_str = datetime.now().strftime("%d %b %Y")
 
     prompt = f"""
@@ -383,13 +383,15 @@ def generate_job_summary(raw_text):
 
     {raw_text}
 
-    STRICT DATA COMPLETENESS MANDATE:
-    You MUST extract complete details for ALL 5 mandatory fields below. If ANY of these 5 fields is missing or unknown in the source text, DO NOT include that job in "latest_jobs":
-    1. "start_date": Exact date string (e.g., "28 Aug 2026"). Never output TBA/To be announced.
-    2. "last_date": Exact date string (e.g., "30 Sep 2026"). Never output TBA/To be announced.
-    3. "total_vacancies": Exact post count (e.g., "1,957 Posts" or "120 Posts").
-    4. "application_fee": Complete category-wise fee breakdown (e.g., "General/OBC: ₹500 | SC/ST: ₹150").
-    5. "qualification": Full eligibility criteria (e.g., "12th Pass or Bachelor Degree in related stream").
+    ABSOLUTE MANDATORY REJECTION RULE:
+    You MUST completely EXCLUDE any job that is missing exact dates, vacancies, or fee information.
+    - NEVER write "Not specified", "TBA", "To be announced", "Check notification", "Unknown", or "N/A" for any field.
+    - Every job in "latest_jobs" MUST have:
+      1. "start_date": Exact date string (e.g., "28 Aug 2026").
+      2. "last_date": Exact date string (e.g., "30 Sep 2026").
+      3. "total_vacancies": Exact number of posts with digits (e.g., "1,957 Posts" or "120 Posts").
+      4. "application_fee": Complete category-wise fee breakdown (e.g., "General/OBC: ₹500 | SC/ST: ₹150").
+      5. "qualification": Full educational eligibility criteria.
 
     STRICT GEOGRAPHICAL RULES:
     1. WRITE EVERYTHING IN 100% PURE ENGLISH ONLY.
@@ -407,7 +409,7 @@ def generate_job_summary(raw_text):
           "organization": "Official Recruitment Body (e.g., Bihar Public Service Commission - BPSC)",
           "job_type": "Bihar Govt Job OR Central Govt Job",
           "post_name": "Specific Posts Name with Post-wise Breakdown",
-          "total_vacancies": "Exact Post Count (e.g., 1,957 Posts)",
+          "total_vacancies": "Exact Post Count e.g., 1,957 Posts",
           "qualification": "Full Comprehensive Educational Qualification Criteria",
           "age_limit": "Complete Min & Max Age limit with category relaxation details",
           "pay_scale": "Pay Scale / Salary Level details",
@@ -469,10 +471,11 @@ def generate_job_summary(raw_text):
 # 🌟 STRICT PYTHON ACCURACY FILTER FOR JOBS
 # -------------------------------------------------------------
 def filter_valid_jobs(parsed_jobs):
-    """Hard Python Filter: Guarantees that only complete jobs with start_date, last_date, fee, vacancies & qualification remain in JSON"""
+    """Hard Python Filter: Guarantees that only complete jobs with numeric vacancies, valid dates, and fee details remain."""
     invalid_keywords = [
         "tba", "to be announced", "to be notified", "not mentioned", 
-        "unknown", "n/a", "check notification", "null", "none", ""
+        "not specified", "to be updated", "not announced", "unknown", 
+        "n/a", "check notification", "null", "none", ""
     ]
     
     clean_latest_jobs = []
@@ -483,18 +486,23 @@ def filter_valid_jobs(parsed_jobs):
         fee = str(job.get("application_fee", "")).strip().lower()
         qual = str(job.get("qualification", "")).strip().lower()
 
-        # Check 1: Mandatory non-empty string check
+        # Step 1: Mandatory non-empty string check
         if not s_date or not l_date or not vacancies or not fee or not qual:
             print(f"❌ Dropped incomplete job: {job.get('title')} (Missing mandatory field)")
             continue
 
-        # Check 2: Invalid keyword / placeholder check
-        if any(kw == s_date or kw in s_date for kw in invalid_keywords) or \
-           any(kw == l_date or kw in l_date for kw in invalid_keywords) or \
-           any(kw == vacancies or kw in vacancies for kw in invalid_keywords) or \
-           any(kw == fee or kw in fee for kw in invalid_keywords) or \
-           any(kw == qual or kw in qual for kw in invalid_keywords):
-            print(f"❌ Dropped incomplete job: {job.get('title')} (Contains placeholder/TBA text)")
+        # Step 2: Placeholder phrase check
+        if any(kw in s_date for kw in invalid_keywords) or \
+           any(kw in l_date for kw in invalid_keywords) or \
+           any(kw in vacancies for kw in invalid_keywords) or \
+           any(kw in fee for kw in invalid_keywords) or \
+           any(kw in qual for kw in invalid_keywords):
+            print(f"❌ Dropped incomplete job: {job.get('title')} (Contains placeholder/Not Specified text)")
+            continue
+
+        # Step 3: Numeric Check for Vacancies (Must contain at least one digit)
+        if not re.search(r'\d+', vacancies):
+            print(f"❌ Dropped incomplete job: {job.get('title')} (No numeric vacancy count found)")
             continue
 
         clean_latest_jobs.append(job)
@@ -503,7 +511,7 @@ def filter_valid_jobs(parsed_jobs):
     return parsed_jobs
 
 # -------------------------------------------------------------
-# 4. MASTER HISTORY APPEND FUNCTIONS (UNCHANGED & PRESERVED)
+# 5. MASTER HISTORY APPEND FUNCTIONS (UNCHANGED & PRESERVED)
 # -------------------------------------------------------------
 def append_to_master_history(news_cards, yesterday_key, is_national=False):
     """Appends daily news cards to the master history JSON files"""
@@ -524,7 +532,7 @@ def append_to_master_history(news_cards, yesterday_key, is_national=False):
     print(f"✅ Master History appended under key '{yesterday_key}' into '{master_file}'!")
 
 # -------------------------------------------------------------
-# 5. MAIN EXECUTION PIPELINE
+# 6. MAIN EXECUTION PIPELINE
 # -------------------------------------------------------------
 if __name__ == "__main__":
     if not GROQ_KEY:
