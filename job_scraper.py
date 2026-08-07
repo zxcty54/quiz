@@ -16,7 +16,7 @@ HEADERS = {
     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
 }
 
-# Optimized Priority-based ORG MAP (Prevents false bank/generic matches)
+# Priority-based ORG MAP (Fixed Tuple Syntax)
 ORG_MAP = [
     ("upsc", "Union Public Service Commission (UPSC)"),
     ("bpsc", "Bihar Public Service Commission (BPSC)"),
@@ -24,7 +24,7 @@ ORG_MAP = [
     ("csbc", "Central Selection Board of Constable (CSBC)"),
     ("bpssc", "Bihar Police Subordinate Services Commission (BPSSC)"),
     ("ssc", "Staff Selection Commission (SSC)"),
-    "rrb", "Railway Recruitment Board (RRB)"),
+    ("rrb", "Railway Recruitment Board (RRB)"), # Syntax fixed here
     ("ibps", "Institute of Banking Personnel Selection (IBPS)"),
     ("sbi", "State Bank of India (SBI)"),
     ("union bank", "Union Bank of India"),
@@ -68,11 +68,9 @@ def fetch_main_table_data(url):
             for row in rows:
                 cols = row.find_all(['td', 'th'])
                 
-                # FreeJobAlert table has 5-6 columns
                 if len(cols) >= 5:
                     col_texts = [clean_html_text(c.text) for c in cols]
                     
-                    # Ignore Header Rows
                     if "post name" in col_texts[1].lower() or "qualification" in col_texts[2].lower():
                         continue
 
@@ -82,7 +80,6 @@ def fetch_main_table_data(url):
                     vacancies = col_texts[3] if len(col_texts) > 3 else "Check Official Notification"
                     last_date = col_texts[4] if len(col_texts) > 4 else "Refer Official Notification"
 
-                    # Get "Get Details" link
                     detail_url = None
                     for a in row.find_all('a', href=True):
                         link_text = a.text.strip().lower()
@@ -91,7 +88,6 @@ def fetch_main_table_data(url):
                             detail_url = urljoin(url, href)
                             break
 
-                    # Title Cleanup
                     title = f"{exam_board} {post_name}".strip()
                     if detail_url and len(title) > 8 and not re.match(r'^\d{2}/\d{2}/\d{4}$', title):
                         candidates.append({
@@ -130,7 +126,6 @@ def fetch_deep_details(detail_url):
 
         soup = BeautifulSoup(res.content, "html.parser")
 
-        # Extract Official PDF and Apply Links
         for table in soup.find_all('table'):
             for row in table.find_all('tr'):
                 row_text = row.text.lower()
@@ -142,19 +137,16 @@ def fetch_deep_details(detail_url):
                     elif "notification" in row_text or "advt" in row_text or href.endswith('.pdf'):
                         details["pdf_url"] = href
 
-        # Extract Text for Fee & Age Regex Parsing
         content_div = soup.find('div', id=re.compile(r'post|content|entry')) or soup.find('body')
         raw_text = clean_html_text(content_div.text if content_div else "")
         details["text_content"] = raw_text[:8000]
 
-        # Fee Parsing
         fee_match = re.search(r'(?:Application Fee|Exam Fee)[^.\n]*[₹\d]+[^.\n]*', raw_text, re.IGNORECASE)
         if fee_match:
             details["application_fee"] = fee_match.group(0)[:120]
         elif re.search(r'\b(no fee|free of cost|nil)\b', raw_text, re.IGNORECASE):
             details["application_fee"] = "General / OBC / SC / ST: ₹0 (No Fee)"
 
-        # Age Parsing
         age_match = re.search(r'(\d{2}\s*to\s*\d{2}\s*years|\d{2}\s*-\s*\d{2}\s*years)', raw_text, re.IGNORECASE)
         if age_match:
             details["age_limit"] = age_match.group(0)
@@ -178,7 +170,7 @@ def run_job_pipeline():
     main_url = "https://www.freejobalert.com/latest-notifications/"
     candidates = fetch_main_table_data(main_url)
 
-    for idx, cand in enumerate(candidates[:25]): # Process top 25 items
+    for idx, cand in enumerate(candidates[:25]):
         title = cand["title"]
         detail_url = cand["detail_url"]
 
@@ -189,10 +181,8 @@ def run_job_pipeline():
 
         print(f"[{idx+1}/{len(candidates[:25])}] 🔍 Deep Scraping: {title}")
 
-        # Step 2 Call
         deep_data = fetch_deep_details(detail_url)
 
-        # Build Clean Standardized Job Object
         job_card = {
             "id": f"job_{len(latest_jobs)+1:02d}",
             "title": title,
@@ -204,7 +194,7 @@ def run_job_pipeline():
             "age_limit": deep_data["age_limit"] or "18-37 Years (Relaxation Applicable)",
             "application_fee": deep_data["application_fee"] or "Refer Official Notification",
             "start_date": today_str,
-            "last_date": cand["last_date"], # Directly accurately taken from Main Table
+            "last_date": cand["last_date"],
             "apply_url": deep_data["apply_url"] or detail_url,
             "notification_pdf": deep_data["pdf_url"] or "Refer Official Notification",
             "date": today_str
