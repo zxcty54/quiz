@@ -1,7 +1,6 @@
 import os
 import json
 import time
-import re
 from datetime import datetime, timedelta
 import email.utils
 import xml.etree.ElementTree as ET
@@ -18,8 +17,8 @@ client = Groq(api_key=GROQ_KEY) if GROQ_KEY else None
 def get_yesterday_info():
     """Subah 6 AM run hone par kal ki date aur formatted strings generate karta hai"""
     yesterday_dt = datetime.now() - timedelta(days=1)
-    date_str = yesterday_dt.strftime("%d %b %Y")   # e.g., '06 Aug 2026'
-    key_str = yesterday_dt.strftime("%Y-%m-%d")    # e.g., '2026-08-06'
+    date_str = yesterday_dt.strftime("%d %b %Y")   # e.g., '05 Aug 2026'
+    key_str = yesterday_dt.strftime("%Y-%m-%d")    # e.g., '2026-08-05'
     return yesterday_dt, date_str, key_str
 
 def is_yesterday_news(pub_date_str, target_dt):
@@ -42,7 +41,7 @@ def clean_html_text(text):
     return BeautifulSoup(text, "html.parser").get_text().strip()
 
 # -------------------------------------------------------------
-# 2. SCRAPING FUNCTIONS (NEWS - UNCHANGED & PRESERVED)
+# 2. SCRAPING FUNCTIONS (NEWS + JOBS)
 # -------------------------------------------------------------
 def fetch_raw_bihar_news(target_dt):
     """Multiple Official & Media sources se Bihar Current Affairs raw text scrape karta hai"""
@@ -198,25 +197,20 @@ def fetch_raw_national_news(target_dt):
 
     return "\n".join(national_titles)
 
-# -------------------------------------------------------------
-# 3. ENHANCED JOB SCRAPER WITH DIRECT PORTAL SOURCES
-# -------------------------------------------------------------
+
 def fetch_raw_jobs():
-    """HIGH-VOLUME ACCURATE SCRAPER FOR JOBS, ADMIT CARDS & RESULTS WITH DEEP DATA PARSING"""
+    """Scrapes Detailed Raw Jobs data for Bihar & Central Government Exams"""
     job_notices = []
     headers = {
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
     }
 
-    # 1. Broad Multi-Topic Search Queries
-    job_queries = [
-        "Bihar+BPSC+OR+BSSC+OR+CSBC+OR+BPSSC+OR+Patna+High+Court+Recruitment+Start+Date+Last+Date+Fees",
-        "Bihar+Teacher+TRE+OR+Bihar+Health+Dept+OR+Beltron+OR+Civil+Court+Vacancy+Eligibility+Posts",
-        "SSC+CGL+OR+CHSL+OR+MTS+OR+GD+Constable+Notification+Start+Date+Fees",
-        "Railway+RRB+NTPC+OR+Group+D+OR+ALP+OR+Technician+Vacancy+Eligibility+Posts",
-        "Banking+IBPS+PO+Clerk+OR+SBI+PO+Clerk+OR+UPSC+Notification+Application+Fee"
+    queries = [
+        "Bihar+Recruitment+Notification+Qualification+Eligibility+Last+Date+Fees",
+        "BPSC+BSSC+CSBC+Patna+High+Court+Vacancy+Complete+Details+Notification",
+        "SSC+CGL+CHSL+Railway+RRB+NTPC+Bank+IBPS+SBI+Notification+Eligibility+Fees"
     ]
-    for q in job_queries:
+    for q in queries:
         try:
             g_url = f"https://news.google.com/rss/search?q={q}&hl=en&gl=IN&ceid=IN:en"
             res = requests.get(g_url, impersonate="chrome", timeout=12, verify=False)
@@ -226,51 +220,32 @@ def fetch_raw_jobs():
                     title = item.find('title').text if item.find('title') is not None else ""
                     desc = clean_html_text(item.find('description').text if item.find('description') is not None else "")
                     if title:
-                        job_notices.append(f"[Google Job Alert] Title: {title} | Snippet: {desc[:800]}")
+                        job_notices.append(f"[Google Job Alert] Title: {title} | Summary: {desc[:400]}")
         except Exception as e:
             print(f"⚠️ Error Job Query ({q}): {e}")
+    print("✅ Google Detailed Job Alerts fetched successfully!")
 
-    # 2. FreeJobAlert Main Deep Content Feed
     try:
         fja_url = "https://www.freejobalert.com/feed/"
         res = requests.get(fja_url, headers=headers, timeout=15, verify=False)
         if res.status_code == 200:
             soup = BeautifulSoup(res.content, "xml")
-            for item in soup.find_all('item')[:50]:
+            for item in soup.find_all('item')[:25]:
                 title = item.find('title').text if item.find('title') is not None else ""
                 desc = clean_html_text(item.find('description').text if item.find('description') is not None else "")
-                content_node = item.find('{http://purl.org/rss/1.0/modules/content/}encoded')
-                content_encoded = clean_html_text(content_node.text) if content_node is not None else ""
-                full_text = f"{desc} {content_encoded}".strip()
                 if title:
-                    job_notices.append(f"[FreeJobAlert Entry] Title: {title} | Full Text: {full_text[:1500]}")
-            print("✅ Direct FreeJobAlert Deep Content Feed fetched successfully!")
+                    job_notices.append(f"[FreeJobAlert] Title: {title} | Summary: {desc[:500]}")
+            print("✅ Direct FreeJobAlert Feed fetched successfully!")
     except Exception as e:
         print(f"⚠️ Error FreeJobAlert Feed: {e}")
-
-    # 3. Direct Scraping from Sarkari Result Recent Posts Table
-    try:
-        sr_url = "https://www.sarkariresult.com/latestjob/"
-        res = requests.get(sr_url, headers=headers, timeout=15, verify=False)
-        if res.status_code == 200:
-            soup = BeautifulSoup(res.content, "html.parser")
-            job_links = soup.select("#post a")[:20]
-            for link in job_links:
-                title = link.text.strip()
-                href = link.get('href', '')
-                if title and href:
-                    job_notices.append(f"[Sarkari Result Job] Title: {title} | URL: {href}")
-            print("✅ Sarkari Result direct jobs fetched successfully!")
-    except Exception as e:
-        print(f"⚠️ Error SarkariResult Scraping: {e}")
 
     return "\n".join(job_notices)
 
 # -------------------------------------------------------------
-# 4. AI SUMMARY GENERATORS (NEWS & JOBS)
+# 3. AI SUMMARY GENERATORS (NEWS & JOBS)
 # -------------------------------------------------------------
 def generate_clean_summary(raw_text, target_date_str, is_national=False):
-    """Groq AI se Fact-Based Detailed Hinglish JSON news summary banwata hai (UNCHANGED)"""
+    """Groq AI se Fact-Based Detailed Hinglish JSON news summary banwata hai"""
     
     if is_national:
         scope_name = "India National & International Level ONLY"
@@ -374,47 +349,43 @@ def generate_clean_summary(raw_text, target_date_str, is_national=False):
 
 
 def generate_job_summary(raw_text):
-    """Groq AI se Pure English Detailed Job Portal data banwata hai with ABSOLUTE ENFORCEMENT against 'Not specified'"""
+    """Groq AI se Pure English Detailed FreeJobAlert Structure JSON Job Portal data banwata hai"""
     today_str = datetime.now().strftime("%d %b %Y")
 
     prompt = f"""
     You are an expert Government Recruitment Portal Data Editor for FreeJobAlert & Sarkari Result.
-    Below is raw text scraped regarding Government Job Notifications, Admit Cards, and Results:
+    Below is raw text scraped regarding Government Job Notifications:
 
     {raw_text}
 
-    ABSOLUTE MANDATORY REJECTION RULE:
-    You MUST completely EXCLUDE any job that is missing exact dates, vacancies, or fee information.
-    - NEVER write "Not specified", "TBA", "To be announced", "Check notification", "Unknown", or "N/A" for any field.
-    - Every job in "latest_jobs" MUST have:
-      1. "start_date": Exact date string (e.g., "28 Aug 2026").
-      2. "last_date": Exact date string (e.g., "30 Sep 2026").
-      3. "total_vacancies": Exact number of posts with digits (e.g., "1,957 Posts" or "120 Posts").
-      4. "application_fee": Complete category-wise fee breakdown (e.g., "General/OBC: ₹500 | SC/ST: ₹150").
-      5. "qualification": Full educational eligibility criteria.
-
-    STRICT GEOGRAPHICAL RULES:
+    CRITICAL INSTRUCTION - NO DATA TRUNCATION / FULL DETAILED ELIGIBILITY:
     1. WRITE EVERYTHING IN 100% PURE ENGLISH ONLY.
-    2. ALLOWED JURISDICTION ONLY:
-       - BIHAR STATE GOVT: BPSC, BSSC, BPSSC, CSBC, Bihar Teacher (TRE), Patna High Court, Civil Court, Beltron, Health Dept Bihar, etc.
-       - CENTRAL GOVT (ALL INDIA): Staff Selection Commission (SSC), Indian Railways (RRB), Banking (IBPS, SBI, RBI), UPSC, Defence (Army, Navy, Air Force, CAPF).
-    3. ABSOLUTE BAN ON OTHER STATES: REJECT any Job, Admit Card, or Result from UP, MP, Rajasthan, Haryana, Delhi DSSSB, Maharashtra, etc.
+    2. DO NOT SHORTEN OR TRUNCATE QUALIFICATION: Write complete, comprehensive eligibility criteria. Include degree name, required stream, minimum percentage marks, and experience if mentioned (e.g. "Bachelor Degree in Engineering / Technology in relevant branch OR Master Degree in Science with 55% marks").
+    3. DETAILED CATEGORY-WISE APPLICATION FEE: Break down fees clearly by category e.g., "General / OBC / EWS: ₹600 | SC / ST / PH: ₹150 | Female Candidates: ₹150".
+    4. DETAILED AGE LIMIT & RELAXATION: Provide min/max age along with category relaxation e.g., "21 to 37 Years for Male | 21 to 40 Years for Female (Age relaxation applicable as per rules)".
+    5. STRICT NO "TO BE ANNOUNCED" RULE: Never write generic phrases like "TBA" or "To be announced". Provide actual dates and figures.
+    6. WEBSITE LINK MAPPING: Always set "apply_url" to "https://www.mocktester.online".
+
+    ALLOWED RECRUITMENT BODIES ONLY:
+    - ALL BIHAR STATE GOVT JOBS: BPSC, BSSC, BPSSC, CSBC, Bihar Teacher (TRE), Patna High Court, Civil Court, Beltron, Health Dept Bihar, etc.
+    - ALL ALL-INDIA CENTRAL GOVT JOBS: Staff Selection Commission (SSC CGL/CHSL/MTS/GD), Indian Railways (RRB NTPC/Group D/ALP), Banking (IBPS, SBI, RBI), UPSC, Defence (Army, Navy, Air Force, CAPF).
+    
+    STRICT REJECTION: REJECT ANY OTHER STATE GOVERNMENT JOBS (e.g., UP Police, Rajasthan REET, MPPSC, Haryana, Delhi DSSSB, etc.) and private jobs.
 
     JSON SCHEMA OUTPUT (Return EXACTLY this structure):
     {{
       "latest_jobs": [
         {{
           "id": "job_01",
-          "title": "Full Official Recruitment Title 2026",
-          "organization": "Official Recruitment Body (e.g., Bihar Public Service Commission - BPSC)",
+          "title": "Detailed Exam / Recruitment Title 2026",
+          "organization": "Official Body (e.g., Bihar Public Service Commission - BPSC)",
           "job_type": "Bihar Govt Job OR Central Govt Job",
-          "post_name": "Specific Posts Name with Post-wise Breakdown",
-          "total_vacancies": "Exact Post Count e.g., 1,957 Posts",
-          "qualification": "Full Comprehensive Educational Qualification Criteria",
-          "age_limit": "Complete Min & Max Age limit with category relaxation details",
-          "pay_scale": "Pay Scale / Salary Level details",
+          "post_name": "Specific Posts Name with Post-wise Breakdown if available",
+          "total_vacancies": "Exact Number of Posts (e.g., 1,957 Posts)",
+          "qualification": "Full Detailed Educational Qualification without shortening any requirement",
+          "age_limit": "Complete Min & Max Age limit with gender & category relaxation details",
           "application_fee": "Complete Category-wise Application Fee Breakdown",
-          "selection_process": "Detailed Selection Steps (e.g., Written CBT, Physical Test, DV)",
+          "selection_process": "Written Exam, Physical Test, Interview, Document Verification",
           "start_date": "Exact Application Start Date e.g., 28 Aug 2026",
           "last_date": "Exact Application Last Date e.g., 30 Sep 2026",
           "apply_url": "https://www.mocktester.online",
@@ -426,12 +397,12 @@ def generate_job_summary(raw_text):
         {{
           "id": "admit_01",
           "title": "Clean Official Admit Card Title",
-          "organization": "Recruitment Body Name (e.g., BSSC / SSC / RRB)",
+          "organization": "Recruitment Body Name",
           "job_type": "Bihar Govt Job OR Central Govt Job",
           "post_name": "Post Name",
           "total_vacancies": "Exact Total Posts",
           "exam_date": "Exact Exam Date / CBT Schedule",
-          "status": "Admit Card Released / Hall Ticket Link Active",
+          "status": "Admit Card Released / Download Hall Ticket Active",
           "apply_url": "https://www.mocktester.online",
           "exam_tag": "🎫 Hall Ticket",
           "date": "{today_str}"
@@ -440,12 +411,12 @@ def generate_job_summary(raw_text):
       "results": [
         {{
           "id": "result_01",
-          "title": "Clean Official Result Title",
-          "organization": "Recruitment Body Name (e.g., CSBC / BPSC / SSC)",
+          "title": "Clean Official Result / Answer Key Title",
+          "organization": "Recruitment Body Name",
           "job_type": "Bihar Govt Job OR Central Govt Job",
           "post_name": "Post Name",
           "total_vacancies": "Exact Total Posts",
-          "result_status": "Merit List PDF Released / Answer Key Declared",
+          "result_status": "Merit List PDF / Final Result Declared",
           "apply_url": "https://www.mocktester.online",
           "exam_tag": "🏆 Result",
           "date": "{today_str}"
@@ -466,74 +437,8 @@ def generate_job_summary(raw_text):
         print(f"⚠️ Groq API Job Summary Error: {e}")
         return '{"latest_jobs": [], "admit_cards": [], "results": []}'
 
-
 # -------------------------------------------------------------
-# 🌟 NORMALIZATION HELPER & ULTRA-STRICT PYTHON FILTER FOR JOBS
-# -------------------------------------------------------------
-def normalize_text(text):
-    """Cleans whitespace, lowercase, and strips common trailing punctuation."""
-    if not text:
-        return ""
-    cleaned = str(text).lower().strip()
-    # Remove trailing periods, dashes, colons, commas
-    cleaned = re.sub(r'[\.\-:\,\s]+$', '', cleaned)
-    return cleaned
-
-def filter_valid_jobs(parsed_jobs):
-    """
-    Ultra-Strict Python Filter:
-    Guarantees that jobs containing 'Not specified' or missing dates/vacancies
-    are completely removed from the output.
-    """
-    invalid_keywords = [
-        "tba", "to be announced", "to be notified", "to be updated",
-        "not mentioned", "not specified", "not announced", "not available",
-        "unknown", "n/a", "check notification", "null", "none", ""
-    ]
-
-    clean_latest_jobs = []
-
-    for job in parsed_jobs.get("latest_jobs", []):
-        title = job.get("title", "Unknown Job")
-        s_date = normalize_text(job.get("start_date", ""))
-        l_date = normalize_text(job.get("last_date", ""))
-        vacancies = normalize_text(job.get("total_vacancies", ""))
-        fee = normalize_text(job.get("application_fee", ""))
-        qual = normalize_text(job.get("qualification", ""))
-
-        # 1. Non-empty string check
-        if not s_date or not l_date or not vacancies or not fee or not qual:
-            print(f"❌ Dropped (Missing Field): {title}")
-            continue
-
-        # 2. Check for invalid placeholder phrases in any key field
-        is_invalid = False
-        for field_val in [s_date, l_date, vacancies, fee, qual]:
-            if any(kw == field_val or kw in field_val for kw in invalid_keywords):
-                is_invalid = True
-                break
-
-        if is_invalid:
-            print(f"❌ Dropped (Contains 'Not Specified' or placeholder): {title}")
-            continue
-
-        # 3. Vacancy MUST contain digits (e.g., '120 Posts' or '1,957')
-        if not re.search(r'\d+', vacancies):
-            print(f"❌ Dropped (No digits in total_vacancies): {title}")
-            continue
-
-        # 4. Dates MUST contain digits (e.g., '28 Aug 2026' or '28/08/2026')
-        if not re.search(r'\d+', s_date) or not re.search(r'\d+', l_date):
-            print(f"❌ Dropped (Invalid date format without numbers): {title}")
-            continue
-
-        clean_latest_jobs.append(job)
-
-    parsed_jobs["latest_jobs"] = clean_latest_jobs
-    return parsed_jobs
-
-# -------------------------------------------------------------
-# 5. MASTER HISTORY APPEND FUNCTIONS (UNCHANGED & PRESERVED)
+# 4. MASTER HISTORY APPEND FUNCTIONS (UNCHANGED & PRESERVED)
 # -------------------------------------------------------------
 def append_to_master_history(news_cards, yesterday_key, is_national=False):
     """Appends daily news cards to the master history JSON files"""
@@ -554,7 +459,7 @@ def append_to_master_history(news_cards, yesterday_key, is_national=False):
     print(f"✅ Master History appended under key '{yesterday_key}' into '{master_file}'!")
 
 # -------------------------------------------------------------
-# 6. MAIN EXECUTION PIPELINE
+# 5. MAIN EXECUTION PIPELINE (SAFE RETENTION LOGIC)
 # -------------------------------------------------------------
 if __name__ == "__main__":
     if not GROQ_KEY:
@@ -564,7 +469,7 @@ if __name__ == "__main__":
     target_dt, date_str, key_str = get_yesterday_info()
     print(f"🔄 Starting Complete Current Affairs & Jobs Pipeline ({date_str})...\n")
 
-    # === A. PROCESS BIHAR NEWS (UNCHANGED) ===
+    # === A. PROCESS BIHAR NEWS ===
     print("📍 --- PROCESS BIHAR NEWS ---")
     raw_bihar = fetch_raw_bihar_news(target_dt)
     if raw_bihar:
@@ -586,7 +491,7 @@ if __name__ == "__main__":
 
     print("\n------------------------------------\n")
 
-    # === B. PROCESS NATIONAL NEWS (UNCHANGED) ===
+    # === B. PROCESS NATIONAL NEWS ===
     print("🇮🇳 --- PROCESS NATIONAL NEWS ---")
     raw_national = fetch_raw_national_news(target_dt)
     if raw_national:
@@ -608,18 +513,14 @@ if __name__ == "__main__":
 
     print("\n------------------------------------\n")
 
-    # === C. PROCESS ACCURATE BIHAR & CENTRAL JOBS ===
-    print("💼 --- PROCESS ACCURATE BIHAR & CENTRAL JOBS ---")
+    # === C. PROCESS BIHAR & CENTRAL JOBS ===
+    print("💼 --- PROCESS BIHAR & CENTRAL JOBS ---")
     raw_jobs = fetch_raw_jobs()
     if raw_jobs:
         ai_jobs = generate_job_summary(raw_jobs)
         if ai_jobs:
             try:
                 parsed_jobs = json.loads(ai_jobs.strip())
-                
-                # 🌟 HARD PYTHON FILTERING: Drops any job missing Start Date, Last Date, Fee, Qualification, or Vacancies
-                parsed_jobs = filter_valid_jobs(parsed_jobs)
-                
                 has_data = (
                     len(parsed_jobs.get("latest_jobs", [])) > 0 or
                     len(parsed_jobs.get("admit_cards", [])) > 0 or
@@ -628,9 +529,9 @@ if __name__ == "__main__":
                 if has_data:
                     with open("bihar_jobs.json", "w", encoding="utf-8") as f:
                         json.dump(parsed_jobs, f, ensure_ascii=False, indent=2)
-                    print(f"✅ bihar_jobs.json updated! Total valid jobs: {len(parsed_jobs.get('latest_jobs', []))}")
+                    print("✅ bihar_jobs.json successfully updated with Full Detailed Eligibility & mocktester.online link!")
                 else:
-                    print("🛡️ SAFEGUARD ACTIVATED: 0 complete job notifications found. Retaining existing file!")
+                    print("🛡️ SAFEGUARD ACTIVATED: 0 job notifications found. Retaining existing file!")
             except Exception as e:
                 print(f"❌ Jobs JSON Parsing Error: {e}")
 
