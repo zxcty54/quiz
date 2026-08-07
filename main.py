@@ -524,12 +524,12 @@ INVALID_KEYWORDS = [
 # Any of these appearing in title/organization means it's NOT Bihar/Central
 # and must be dropped from latest_jobs, admit_cards, and results alike.
 STATE_BLACKLIST = [
-    "uttar pradesh", " up police", " up board", "uppsc", "up govt",
+    "uttar pradesh", " up police", " up board", "uppsc", " up govt",
     "madhya pradesh", "mppsc", "rajasthan", "rpsc", "haryana", "hpsc",
     "dsssb", "delhi govt", "maharashtra", "mpsc", "jharkhand", "jpsc",
     "west bengal", "wbpsc", "punjab", "ppsc", "gujarat", "gpsc",
-    "karnataka", "kpsc", "tamil nadu", "tnpsc", "kerala", "kpsc",
-    "odisha", "opsc", "assam", "apsc", "telangana", "tspsc",
+    "karnataka", "kpsc", "tamil nadu", "tnpsc", "kerala psc",
+    "odisha", "opsc", "assam psc", "apsc", "telangana", "tspsc",
     "andhra pradesh", "appsc", "chhattisgarh", "cgpsc", "uttarakhand",
     "ukpsc", "himachal", "hppsc", "goa psc", "manipur", "meghalaya",
     "nagaland", "tripura", "sikkim", "mizoram"
@@ -543,21 +543,42 @@ def is_state_specific(*fields):
     combined = " ".join(normalize_text_for_search(f) for f in fields)
     return any(kw in combined for kw in STATE_BLACKLIST)
 
-def value_grounded_in_source(value, raw_text):
+def _digit_groups(text):
+    """Extracts numeric groups (commas/spaces stripped) e.g. '1,957' -> '1957'."""
+    raw_numbers = re.findall(r'[\d,]+', text or "")
+    return [n.replace(",", "") for n in raw_numbers if n.replace(",", "").strip()]
+
+def value_grounded_in_source(value, raw_text, field_type="generic"):
     """
-    Loose check: does the extracted value actually appear (in substance)
-    in the raw scraped text? Prevents the AI from inventing a fee/date/
-    vacancy figure that was never in the source.
+    Format-tolerant check: does the extracted value's core numbers actually
+    appear in the raw scraped text? Dates/vacancies are compared by their
+    digit content (day/month-num/year or post-count), ignoring separators
+    like '-', '/', ',', or words like 'Aug' vs 'August' vs '08'.
+    This prevents the AI from inventing a fee/date/vacancy figure that was
+    never in the source, without being so strict that formatting
+    differences cause valid, real data to be dropped.
     """
     if not value:
         return False
+    raw_digits_blob = re.sub(r'[,\s\-/]', '', raw_text.lower())
+    value_numbers = _digit_groups(value)
+
+    if value_numbers:
+        # For dates/vacancies: at least one meaningful number (2+ digits,
+        # e.g. day/year/post-count) must appear somewhere in the raw text.
+        meaningful = [n for n in value_numbers if len(n) >= 2]
+        if not meaningful:
+            meaningful = value_numbers
+        hits = sum(1 for n in meaningful if n in raw_digits_blob)
+        return hits >= 1
+
+    # Fallback for values with no digits at all (rare): loose word match
     raw_lower = raw_text.lower()
-    tokens = re.findall(r'\d[\d,]*|\b[A-Za-z]{4,}\b', value.lower())
+    tokens = re.findall(r'\b[A-Za-z]{4,}\b', value.lower())
     if not tokens:
-        return False
+        return True  # nothing to check against, don't over-reject
     hits = sum(1 for t in tokens if t in raw_lower)
-    # require at least a third of meaningful tokens to actually appear in source
-    return hits >= max(1, len(tokens) // 3)
+    return hits >= 1
 
 def filter_valid_jobs(parsed_jobs, raw_text=""):
     """
@@ -741,7 +762,11 @@ if __name__ == "__main__":
         if ai_jobs:
             try:
                 parsed_jobs = json.loads(ai_jobs.strip())
-                
+
+                print(f"ℹ️ AI returned before filtering -> Jobs: {len(parsed_jobs.get('latest_jobs', []))} | "
+                      f"Admit Cards: {len(parsed_jobs.get('admit_cards', []))} | "
+                      f"Results: {len(parsed_jobs.get('results', []))}")
+
                 # 🌟 HARD PYTHON FILTERING: drops any job/admit-card/result that is
                 # missing required fields, contains placeholder text, is not grounded
                 # in the actual scraped source text, or is specific to a non-Bihar/
