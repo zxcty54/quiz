@@ -125,7 +125,7 @@ def fetch_page_via_scrapingant(url):
         print(f"⚠️ ScrapingAnt error for {url}: {e}")
     return None
 
-# 🎯 EXACT HTML STRUCTURE PARSER
+# 🌐 UNIVERSAL ALL-JOBS VACANCY & DETAILS PARSER
 def parse_inner_article_page(html_content):
     if not html_content:
         return {}
@@ -133,13 +133,21 @@ def parse_inner_article_page(html_content):
     soup = BeautifulSoup(html_content, 'html.parser')
     page_text = soup.get_text()
     extracted_vacancies = None
+    vacancy_numbers = []
 
-    # Step 1: Direct Heading Search (Matches "Vacancy Details Total : 1538 Post")
-    heading_match = re.search(r'Vacancy\s*Details\s*Total\s*:?\s*(\d+)\s*(?:Post|Posts|Vacancies)?', page_text, re.IGNORECASE)
-    if heading_match:
-        extracted_vacancies = f"{heading_match.group(1)} Posts"
+    # Strategy 1: Heading Match (e.g., "Vacancy Details Total : 1538 Post" or "Total Vacancy : 5647")
+    heading_patterns = [
+        r'Vacancy\s*Details\s*Total\s*:?\s*(\d+)',
+        r'Total\s*(?:Post|Vacancy|Vacancies)\s*:?\s*(\d+)',
+        r'(\d+)\s*(?:Post|Posts|Vacancy|Vacancies)\s*Total'
+    ]
+    for pattern in heading_patterns:
+        match = re.search(pattern, page_text, re.IGNORECASE)
+        if match:
+            extracted_vacancies = f"{match.group(1)} Posts"
+            break
 
-    # Step 2: Table Search (Matches Header Column 'Total Post' and extracts from next row)
+    # Strategy 2: Scan HTML Tables for "Total Post" / "No. of Post" Columns
     if not extracted_vacancies:
         tables = soup.find_all('table')
         for table in tables:
@@ -148,32 +156,40 @@ def parse_inner_article_page(html_content):
                 cells = row.find_all(['td', 'th'])
                 cell_texts = [clean_text(c.text) for c in cells]
 
-                # Find column index for "Total Post"
-                total_post_col_idx = -1
-                for c_idx, text in enumerate(cell_texts):
-                    if re.search(r'total\s*post', text, re.IGNORECASE):
-                        total_post_col_idx = c_idx
+                # Check for "Total Post" in cell text directly
+                for text in cell_texts:
+                    m = re.search(r'Total\s*Post\s*:?\s*(\d+)', text, re.IGNORECASE)
+                    if m:
+                        extracted_vacancies = f"{m.group(1)} Posts"
                         break
 
-                # If found, extract value from next data row
-                if total_post_col_idx != -1 and r_idx + 1 < len(rows):
-                    next_row_cells = rows[r_idx + 1].find_all(['td', 'th'])
-                    if total_post_col_idx < len(next_row_cells):
-                        val_str = clean_text(next_row_cells[total_post_col_idx].text)
-                        digits = re.search(r'(\d+)', val_str)
-                        if digits:
-                            extracted_vacancies = f"{digits.group(1)} Posts"
-                            break
+                if extracted_vacancies:
+                    break
+
+                # Column Header Index Search
+                col_idx = -1
+                for c_idx, text in enumerate(cell_texts):
+                    if re.search(r'(total\s*post|no\.?\s*of\s*post|vacancy|vacancies)', text, re.IGNORECASE):
+                        col_idx = c_idx
+                        break
+
+                if col_idx != -1 and r_idx + 1 < len(rows):
+                    for next_r in range(r_idx + 1, len(rows)):
+                        next_cells = rows[next_r].find_all(['td', 'th'])
+                        if col_idx < len(next_cells):
+                            val_str = clean_text(next_cells[col_idx].text)
+                            digits = re.findall(r'\b\d+\b', val_str)
+                            if digits:
+                                vacancy_numbers.extend([int(d) for d in digits if int(d) < 100000])
+
             if extracted_vacancies:
                 break
 
-    # Step 3: General Text Regex Match
-    if not extracted_vacancies:
-        gen_match = re.search(r'Total\s*Post\s*:?\s*(\d+)', page_text, re.IGNORECASE)
-        if gen_match:
-            extracted_vacancies = f"{gen_match.group(1)} Posts"
+    # Strategy 3: Sum Category-wise Breakdown Numbers if multiple rows found
+    if not extracted_vacancies and vacancy_numbers:
+        extracted_vacancies = f"{sum(vacancy_numbers)} Posts"
 
-    # Step 4: Fallback Logic
+    # Strategy 4: Fallback Logic
     if not extracted_vacancies:
         if "various post" in page_text.lower():
             extracted_vacancies = "Various Posts"
@@ -280,7 +296,7 @@ def run_sarkari_job_scraper():
     with open(JSON_FILENAME, "w", encoding="utf-8") as f:
         json.dump(output_data, f, ensure_ascii=False, indent=2)
 
-    print(f"🎉 Complete! Successfully saved active jobs into '{JSON_FILENAME}'.")
+    print(f"🎉 Complete! Successfully processed and saved all active jobs into '{JSON_FILENAME}'.")
 
 if __name__ == "__main__":
     run_sarkari_job_scraper()
