@@ -1,0 +1,2172 @@
+{
+  "topic_id": "carbon_compounds_complete",
+  "topic_title": "Carbon and Its Compounds",
+  "target_exams": ["BPSC", "BPSC TRE", "BSSC", "RRB NTPC", "SSC CGL", "NEET", "UPSC Prelims"],
+  "total_cards": 72,
+  "characters": {
+    "aman": {
+      "name": "Aman Sir",
+      "role": "teacher",
+      "avatar": "👨‍🏫"
+    },
+    "raju": {
+      "name": "Raju",
+      "role": "student",
+      "avatar": "👦"
+    }
+  },
+  "cards": [
+    {
+      "card_id": "card_01_intro",
+      "card_slug": "card_01_intro",
+      "type": "intro",
+      "concept_id": "carbon_introduction",
+      "level": 1,
+      "progress": {
+        "current": 1,
+        "total": 72
+      },
+      "intro_payload": {
+        "title": "⚫ Carbon and Its Compounds",
+        "icon": "💎",
+        "tagline": "From Pencil Lead to Diamond Rings - The Miracle Element",
+        "target_exams": ["BPSC", "BPSC TRE", "BSSC", "RRB NTPC", "SSC CGL", "NEET", "UPSC Prelims"],
+        "learning_outcomes": [
+          "Uniqueness of Carbon - Catenation & Tetravalency",
+          "Allotropes: Diamond, Graphite, Fullerene",
+          "Covalent Bonding in Carbon",
+          "Hydrocarbons: Alkanes, Alkenes, Alkynes",
+          "Functional Groups & Homologous Series",
+          "IUPAC Nomenclature Rules",
+          "Chemical Reactions: Combustion, Oxidation, Addition, Substitution",
+          "Important Compounds: Ethanol, Ethanoic Acid, Soaps & Detergents"
+        ],
+        "estimated_time": "60 min",
+        "total_xp": 650
+      },
+      "navigation": {
+        "next": "card_02_carbon_everywhere",
+        "button_text": "शुरू करें ➔"
+      }
+    },
+    {
+      "card_id": "card_02_carbon_everywhere",
+      "card_slug": "card_02_carbon_everywhere",
+      "type": "chat",
+      "concept_id": "carbon_daily_life",
+      "level": 1,
+      "progress": {
+        "current": 2,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, ek game khelte hain! Batao subah se ab tak kya-kya use kiya hai tumne?"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir... toothpaste, breakfast mein bread-butter, pencil se homework, plastic bottle mein pani, petrol scooter mein!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Kamaal ki baat batau? In sab mein ek common element hai - CARBON! Pencil ka lead, plastic, food, petrol, medicines, kapde - sab CARBON compounds hain. Isliye Carbon ko 'KING OF ELEMENTS' kehte hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Hain?? Ek hi element itni saari cheezein banata hai? Aisa kaise?"
+        }
+      ],
+      "navigation": {
+        "next": "card_03_carbon_uniqueness",
+        "button_text": "Raaz Dekho ➔"
+      }
+    },
+    {
+      "card_id": "card_03_carbon_uniqueness",
+      "card_slug": "card_03_carbon_uniqueness",
+      "type": "chat",
+      "concept_id": "carbon_special_properties",
+      "level": 1,
+      "progress": {
+        "current": 3,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Carbon ke paas 2 SUPER-POWERS hain: (1) CATENATION - carbon atoms ek dusre se lambi chains banane ki ability, (2) TETRAVALENCY - carbon ke paas 4 valence electrons hain to 4 bonds bana sakta hai! In do properties se hi millions of compounds bante hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Catenation matlab chains? Jaise chain ki links?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul! CATENATION = self-linking of atoms of same element. Carbon-Carbon bonds itne strong hote hain ki lambi-lambi chains ban sakti hain (hazaron atoms tak). Silicon bhi thoda catenation kar sakta hai par carbon jaisa nahi. Ye BPSC ka favorite trap: 'Which element shows maximum catenation?' - CARBON!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Aur tetravalency matlab 4 bonds?"
+        }
+      ],
+      "navigation": {
+        "next": "card_04_tetravalency",
+        "button_text": "Tetravalency Detail ➔"
+      }
+    },
+    {
+      "card_id": "card_04_tetravalency",
+      "card_slug": "card_04_tetravalency",
+      "type": "chat",
+      "concept_id": "carbon_tetravalency_concept",
+      "level": 1,
+      "progress": {
+        "current": 4,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Carbon ka atomic number = 6, electronic configuration = 2,4. Matlab outermost shell mein 4 electrons hain. Stable hone ke liye 8 electrons chahiye (octet rule) - to Carbon 4 electrons SHARE karta hai other atoms se. Ye 4 bonds = TETRAVALENCY!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Share karta hai matlab covalent bond?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Exactly! Carbon 4 electrons kho nahi sakta (bahut energy chahiye C⁴⁺ banane mein) aur 4 gain bhi nahi kar sakta (bahut energy C⁴⁻ mein). Isliye SHARING karta hai - COVALENT BONDS banata hai. Isliye carbon compounds electricity conduct nahi karte (no ions)!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Achhaaa! Ionic bond mein transfer, covalent mein sharing!"
+        }
+      ],
+      "navigation": {
+        "next": "card_05_covalent_bond",
+        "button_text": "Covalent Bond ➔"
+      }
+    },
+    {
+      "card_id": "card_05_covalent_bond",
+      "card_slug": "card_05_covalent_bond",
+      "type": "chat",
+      "concept_id": "covalent_bonding_carbon",
+      "level": 1,
+      "progress": {
+        "current": 5,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "COVALENT BOND properties yaad rakho: (1) SHARING of electrons, (2) Low melting/boiling points, (3) Poor conductors of electricity (no free ions), (4) Generally insoluble in water. Example: CH₄ (Methane) - 1 Carbon shares 4 pairs with 4 Hydrogen!"
+        },
+        {
+          "speaker": "raju",
+          "text": "To methane mein 4 single bonds hain C-H?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Perfect! Aur types hote hain: SINGLE BOND (1 pair shared - C-C, C-H), DOUBLE BOND (2 pairs shared - C=C, O=O), TRIPLE BOND (3 pairs shared - C≡C, N≡N). Jitna zyada bond, utna stronger and shorter. NEET mein bond types identify karne ke questions aate hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Triple bond sabse strong? To break karna sabse mushkil?"
+        }
+      ],
+      "navigation": {
+        "next": "card_06_allotropes_intro",
+        "button_text": "Allotropes Dekho ➔"
+      }
+    },
+    {
+      "card_id": "card_06_allotropes_intro",
+      "card_slug": "card_06_allotropes_intro",
+      "type": "chat",
+      "concept_id": "allotropes_introduction",
+      "level": 1,
+      "progress": {
+        "current": 6,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, ek shocking fact - Diamond aur Coal dono CARBON hi hain! Aur pencil ka lead bhi carbon hai. Ek hi element ke different physical forms ko ALLOTROPES kehte hain. Carbon ke 3 famous allotropes hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Hain?? Diamond aur coal same element?? Par diamond to itna hard aur coal soft!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Yahin sabse bada twist hai! Difference sirf ARRANGEMENT of atoms mein hai. Diamond mein 3D tightly packed, Graphite mein layers, Fullerene mein football-like sphere! 3 allotropes: DIAMOND, GRAPHITE, FULLERENE. Ab detail dekhte hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Diamond kaise itna hard banta hai fir?"
+        }
+      ],
+      "navigation": {
+        "next": "card_07_diamond_structure",
+        "button_text": "Diamond Detail ➔"
+      }
+    },
+    {
+      "card_id": "card_07_diamond_structure",
+      "card_slug": "card_07_diamond_structure",
+      "type": "chat",
+      "concept_id": "diamond_properties",
+      "level": 1,
+      "progress": {
+        "current": 7,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "DIAMOND: Har carbon atom 4 dusre carbons se bonded (tetrahedral, 3D rigid structure). Isliye HARDEST NATURAL SUBSTANCE hai. Uses: Cutting glass, drilling rocks, jewelry. Density = 3.5 g/cm³. HIGH melting point (3500°C+). POOR conductor of electricity (no free electrons)!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Diamond electricity nahi conduct karta?? Metal to karti hai!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Yaad rakho - Diamond mein sab 4 electrons bonds mein use ho gaye, koi free electron nahi bacha. Isliye INSULATOR hai. Par HEAT ka best conductor hai! ⭐ BPSC TRE Favorite: 'Hardest naturally occurring substance?' - DIAMOND!"
+        },
+        {
+          "speaker": "raju",
+          "text": "To graphite alag hai kya iss se?"
+        }
+      ],
+      "navigation": {
+        "next": "card_08_graphite_structure",
+        "button_text": "Graphite Detail ➔"
+      }
+    },
+    {
+      "card_id": "card_08_graphite_structure",
+      "card_slug": "card_08_graphite_structure",
+      "type": "chat",
+      "concept_id": "graphite_properties",
+      "level": 1,
+      "progress": {
+        "current": 8,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "GRAPHITE: Har carbon atom sirf 3 carbons se bonded (hexagonal layers). Ek electron FREE hai layer mein - isliye ELECTRICITY CONDUCT karta hai (only non-metal jo electricity conduct karta hai)! Layers slide kar sakti hain isliye SOFT aur SLIPPERY!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Isliye pencil se likhne pe kagaz pe nishaan aata hai - layers alag hoti hain?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Perfect! Uses: Pencil lead (HB, 2B etc), lubricant in machines, electrodes in batteries and dry cells, nuclear reactors mein moderator. Density = 2.2 g/cm³. ⭐ NEET/BPSC Favorite: 'Non-metal that conducts electricity?' - GRAPHITE!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Wow! To diamond hard hai par insulator, graphite soft par conductor - ulta scene!"
+        }
+      ],
+      "navigation": {
+        "next": "card_09_fullerene",
+        "button_text": "Fullerene Dekho ➔"
+      }
+    },
+    {
+      "card_id": "card_09_fullerene",
+      "card_slug": "card_09_fullerene",
+      "type": "chat",
+      "concept_id": "fullerene_buckminsterfullerene",
+      "level": 1,
+      "progress": {
+        "current": 9,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "FULLERENE: Third allotrope, discovered in 1985 by Kroto, Curl, and Smalley (Nobel Prize 1996). Formula: C₆₀ (60 carbon atoms arranged like a football/soccer ball). Full name: BUCKMINSTERFULLERENE (named after architect Buckminster Fuller)!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Football shape wala carbon?? Ye to first time suna!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! Also called 'BUCKYBALLS'. Uses: Drug delivery, nanotechnology, superconductors research. Later CARBON NANOTUBES (CNTs) aur GRAPHENE bhi discover hue - ye sab carbon ke different arrangements hain! ⭐ SSC/Railway: Discovery year 1985, formula C₆₀!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Discovery year 1985 - noted! Ab aur allotropes bhi hote hain?"
+        }
+      ],
+      "navigation": {
+        "next": "card_10_amorphous_carbon",
+        "button_text": "Amorphous Forms ➔"
+      }
+    },
+    {
+      "card_id": "card_10_amorphous_carbon",
+      "card_slug": "card_10_amorphous_carbon",
+      "type": "chat",
+      "concept_id": "amorphous_carbon_forms",
+      "level": 1,
+      "progress": {
+        "current": 10,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Haan! AMORPHOUS forms (no fixed structure): Coal, Coke, Charcoal, Lampblack, Wood charcoal, Sugar charcoal. Ye impure carbon forms hain. Coal se electricity banti hai (thermal power plants), Charcoal fuel aur medicine mein (activated charcoal poisoning treatment)!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Activated charcoal poisoning ke liye?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! Activated charcoal poison molecules ko ADSORB kar leta hai (surface pe stick karta hai). Water purifiers mein bhi use hota hai. ⭐ BPSC TRE: Coal India Limited HQ Kolkata mein hai, India's largest coal producing state Jharkhand hai (though Bihar mein Jharia coal field pehle tha - ab Jharkhand mein)!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Bihar aur Jharkhand ka coal connection! Ab quiz time?"
+        }
+      ],
+      "navigation": {
+        "next": "card_11_carbon_quiz_1",
+        "button_text": "Quiz 1/3 ➔"
+      }
+    },
+    {
+      "card_id": "card_11_carbon_quiz_1",
+      "card_slug": "card_11_carbon_quiz_1",
+      "type": "quiz",
+      "concept_id": "carbon_test_1",
+      "level": 1,
+      "progress": {
+        "current": 11,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Which allotrope of carbon is the BEST conductor of electricity? (SSC CGL 2019, BPSC 2020)",
+        "options": [
+          {"id": "A", "text": "Diamond (हीरा)"},
+          {"id": "B", "text": "Graphite (ग्रेफाइट)"},
+          {"id": "C", "text": "Fullerene (फुलरीन)"},
+          {"id": "D", "text": "Coal (कोयला)"}
+        ],
+        "correct_option_id": "B",
+        "explanation": "GRAPHITE electricity conduct करता है क्योंकि इसमें हर carbon atom सिर्फ 3 दूसरे carbons से bonded है, एक electron FREE है layers में। यह ONLY NON-METAL है जो electricity conduct करता है! Diamond insulator है (सब 4 electrons bonds में)। Uses: Electrodes, dry cells, pencil lead, lubricant. ⭐ SSC/BPSC का classic conceptual trap!"
+      },
+      "navigation": {
+        "next": "card_12_carbon_quiz_2",
+        "button_text": "Quiz 2/3 ➔"
+      }
+    },
+    {
+      "card_id": "card_12_carbon_quiz_2",
+      "card_slug": "card_12_carbon_quiz_2",
+      "type": "quiz",
+      "concept_id": "carbon_test_2",
+      "level": 1,
+      "progress": {
+        "current": 12,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Fullerene (C₆₀) was discovered in which year? (NEET 2018, BPSC TRE 2019)",
+        "options": [
+          {"id": "A", "text": "1975"},
+          {"id": "B", "text": "1985"},
+          {"id": "C", "text": "1995"},
+          {"id": "D", "text": "2005"}
+        ],
+        "correct_option_id": "B",
+        "explanation": "FULLERENE (C₆₀) की discovery 1985 में हुई थी Harold Kroto, Robert Curl, और Richard Smalley द्वारा। इसके लिए उन्हें 1996 में NOBEL PRIZE मिला। Named after architect Buckminster Fuller (isliye Buckminsterfullerene कहते हैं)। Structure = 60 carbon atoms in football/soccer ball shape। ⭐ NEET/BPSC TRE में discovery years directly पूछे जाते हैं!"
+      },
+      "navigation": {
+        "next": "card_13_carbon_quiz_3",
+        "button_text": "Quiz 3/3 ➔"
+      }
+    },
+    {
+      "card_id": "card_13_carbon_quiz_3",
+      "card_slug": "card_13_carbon_quiz_3",
+      "type": "quiz",
+      "concept_id": "carbon_test_3",
+      "level": 1,
+      "progress": {
+        "current": 13,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "The property of carbon by which it forms long chains with other carbon atoms is called: (Railway NTPC 2020, BSSC 2019)",
+        "options": [
+          {"id": "A", "text": "Tetravalency (चतुःसंयोजकता)"},
+          {"id": "B", "text": "Catenation (श्रृंखलन)"},
+          {"id": "C", "text": "Isomerism (समावयवता)"},
+          {"id": "D", "text": "Allotropy (अपररूपता)"}
+        ],
+        "correct_option_id": "B",
+        "explanation": "CATENATION = same element के atoms का self-linking करके long chains बनाने की property। Carbon में यह property MAXIMUM है (bond strength strongest) इसलिए millions of compounds बनते हैं। Silicon भी catenation करता है पर बहुत limited। Tetravalency = 4 bonds बनाने की ability. Isomerism = same formula different structures. ⭐ Railway/BSSC का Direct question!"
+      },
+      "navigation": {
+        "next": "card_14_milestone_intro",
+        "button_text": "Module Complete ➔"
+      }
+    },
+    {
+      "card_id": "card_14_milestone_intro",
+      "card_slug": "card_14_milestone_intro",
+      "type": "milestone",
+      "concept_id": "carbon_intro_complete",
+      "level": 1,
+      "progress": {
+        "current": 14,
+        "total": 72
+      },
+      "milestone_payload": {
+        "title": "🎉 MODULE 1 CLEARED!",
+        "badge_emoji": "💎",
+        "completed_topic": "Uniqueness of Carbon & Allotropes",
+        "xp_earned": 80,
+        "milestone_progress": "Module 1/6 Complete",
+        "motivational_quote": "Diamond, Graphite, Fullerene - सब master! अब Hydrocarbons की duniya देखेंगे जहाँ real chemistry शुरू होती है! ⚗️"
+      },
+      "navigation": {
+        "next": "card_15_hydrocarbons_intro",
+        "button_text": "Hydrocarbons Start ➔"
+      }
+    },
+    {
+      "card_id": "card_15_hydrocarbons_intro",
+      "card_slug": "card_15_hydrocarbons_intro",
+      "type": "chat",
+      "concept_id": "hydrocarbons_introduction",
+      "level": 2,
+      "progress": {
+        "current": 15,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, jab tumhare ghar mein khana pakta hai LPG cylinder se, ya scooter mein petrol dalte ho - ye sab kya hain?"
+        },
+        {
+          "speaker": "raju",
+          "text": "Fuels hain Sir... par ye chemistry se kaise related?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Ye sab HYDROCARBONS hain! Definition: Compounds containing ONLY Carbon and Hydrogen. LPG mein Butane, petrol mein Octane, natural gas mein Methane - sab hydrocarbons hain. Ye 4 categories mein divide hote hain based on bonds!"
+        },
+        {
+          "speaker": "raju",
+          "text": "4 categories?? Kaunse Sir?"
+        }
+      ],
+      "navigation": {
+        "next": "card_16_saturated_unsaturated",
+        "button_text": "Categories Dekho ➔"
+      }
+    },
+    {
+      "card_id": "card_16_saturated_unsaturated",
+      "card_slug": "card_16_saturated_unsaturated",
+      "type": "chat",
+      "concept_id": "saturated_unsaturated_hydrocarbons",
+      "level": 2,
+      "progress": {
+        "current": 16,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Pehla division: (1) SATURATED - sirf SINGLE bonds C-C (called ALKANES), (2) UNSATURATED - contain DOUBLE bond C=C (ALKENES) or TRIPLE bond C≡C (ALKYNES). Aur (3) CYCLIC - ring structure jaise Benzene!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Saturated matlab bhara hua? Unsaturated adhoora?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Perfect analogy! Saturated = carbon ke sab 4 bonds hydrogen se full ho gaye. Unsaturated = double/triple bond ki wajah se hydrogen kam hai. Saturated STABLE hote hain, Unsaturated REACTIVE (double/triple bond easily break hota hai). Isliye ghee (saturated) vs vanaspati oil (unsaturated)!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Ohh! To health mein bhi ye relevant hai?"
+        }
+      ],
+      "navigation": {
+        "next": "card_17_alkanes",
+        "button_text": "Alkanes Detail ➔"
+      }
+    },
+    {
+      "card_id": "card_17_alkanes",
+      "card_slug": "card_17_alkanes",
+      "type": "chat",
+      "concept_id": "alkanes_general_formula",
+      "level": 2,
+      "progress": {
+        "current": 17,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "ALKANES: General formula CₙH₂ₙ₊₂. All C-C single bonds. Yaad rakho: n=1: CH₄ (Methane), n=2: C₂H₆ (Ethane), n=3: C₃H₈ (Propane), n=4: C₄H₁₀ (Butane), n=5: C₅H₁₂ (Pentane). Names end in '-ane'!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Formula lambi hai! Kaise yaad karun?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Mnemonic: 'Meth Eth Prop But Pent Hex Hept Oct Non Dec' (Methane to Decane). LPG = Butane + Propane. CNG = Methane. Petrol = mixture around Octane (C₈H₁₈). Marsh gas (jheelon mein bubble) = Methane. ⭐ BPSC/SSC Favorite pattern!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Marsh gas methane hoti hai! To alkenes kya hote hain?"
+        }
+      ],
+      "navigation": {
+        "next": "card_18_alkenes",
+        "button_text": "Alkenes Dekho ➔"
+      }
+    },
+    {
+      "card_id": "card_18_alkenes",
+      "card_slug": "card_18_alkenes",
+      "type": "chat",
+      "concept_id": "alkenes_general_formula",
+      "level": 2,
+      "progress": {
+        "current": 18,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "ALKENES: General formula CₙH₂ₙ. Contains ONE double bond C=C. Examples: C₂H₄ (Ethene/Ethylene), C₃H₆ (Propene), C₄H₈ (Butene). Names end in '-ene'. n starts from 2 (methene possible nahi - 1 carbon mein double bond kis se karega?)!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Ethylene? Ye to fruits ripen karne mein use hota hai na?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul! ETHYLENE (C₂H₄) plant hormone hai - artificial ripening of fruits (mango, banana). Calcium carbide + water → Acetylene, which converts ethylene-like effect. But direct use of CaC₂ banned in India (food safety)! ⭐ BPSC TRE Favorite: 'Which gas ripens fruits?' - Ethylene!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Wow! Aur alkynes?"
+        }
+      ],
+      "navigation": {
+        "next": "card_19_alkynes",
+        "button_text": "Alkynes Dekho ➔"
+      }
+    },
+    {
+      "card_id": "card_19_alkynes",
+      "card_slug": "card_19_alkynes",
+      "type": "chat",
+      "concept_id": "alkynes_general_formula",
+      "level": 2,
+      "progress": {
+        "current": 19,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "ALKYNES: General formula CₙH₂ₙ₋₂. Contains ONE triple bond C≡C. Examples: C₂H₂ (Ethyne/Acetylene), C₃H₄ (Propyne). Names end in '-yne'. Most famous: ACETYLENE (C₂H₂) used in oxy-acetylene welding torch!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Welding wala flame acetylene ka hota hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! Acetylene + Oxygen jalane par 3000°C temperature - metals cut/weld kar sakte hain. Preparation: CaC₂ + 2H₂O → Ca(OH)₂ + C₂H₂. ⭐ NEET/Railway Favorite: General formula wisely yaad rakho - Alkane CₙH₂ₙ₊₂, Alkene CₙH₂ₙ, Alkyne CₙH₂ₙ₋₂!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Formula pattern samajh aa gaya! +2, 0, -2 hydrogens!"
+        }
+      ],
+      "navigation": {
+        "next": "card_20_homologous_series",
+        "button_text": "Homologous Series ➔"
+      }
+    },
+    {
+      "card_id": "card_20_homologous_series",
+      "card_slug": "card_20_homologous_series",
+      "type": "chat",
+      "concept_id": "homologous_series_concept",
+      "level": 2,
+      "progress": {
+        "current": 20,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "HOMOLOGOUS SERIES: Series of compounds with SAME general formula, SAME functional group, SAME chemical properties, DIFFER by -CH₂- group. Example: Alkanes - Methane (CH₄), Ethane (C₂H₆), Propane (C₃H₈)... each differs by CH₂!"
+        },
+        {
+          "speaker": "raju",
+          "text": "To alkanes puri ek series hai - homologous series?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Exactly! Properties gradually change hoti hain jaise chain lambi hoti hai - melting point, boiling point badhta hai. First 4 alkanes GASES (CH₄ to C₄H₁₀), C₅ to C₁₇ LIQUIDS (petrol, kerosene), C₁₈+ SOLIDS (wax). Ye BPSC favorite trend question!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Chain lambi = physical state solid ki taraf jayega!"
+        }
+      ],
+      "navigation": {
+        "next": "card_21_isomerism_intro",
+        "button_text": "Isomerism ➔"
+      }
+    },
+    {
+      "card_id": "card_21_isomerism_intro",
+      "card_slug": "card_21_isomerism_intro",
+      "type": "chat",
+      "concept_id": "isomerism_concept",
+      "level": 2,
+      "progress": {
+        "current": 21,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "ISOMERISM: SAME molecular formula, but DIFFERENT structural arrangements. Example: Butane (C₄H₁₀) ke 2 isomers hain - (1) n-Butane (straight chain) aur (2) Isobutane (branched chain). Both C₄H₁₀ par different properties!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab same formula par alag structure? Rearrangement?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul! Butane 2 isomers, Pentane (C₅H₁₂) ke 3 isomers, Hexane ke 5 isomers. Isomerism sirf C₄ se shuru hoti hai (methane, ethane, propane mein possible nahi). ⭐ NEET Favorite: 'Minimum C atoms needed for isomerism in alkanes?' - 4 carbons (Butane)!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Minimum 4 carbons - noted! Nomenclature kaise karte hain?"
+        }
+      ],
+      "navigation": {
+        "next": "card_22_iupac_naming",
+        "button_text": "IUPAC Naming ➔"
+      }
+    },
+    {
+      "card_id": "card_22_iupac_naming",
+      "card_slug": "card_22_iupac_naming",
+      "type": "chat",
+      "concept_id": "iupac_nomenclature_basic",
+      "level": 2,
+      "progress": {
+        "current": 22,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "IUPAC NOMENCLATURE = International system to name organic compounds. Rules: (1) Count carbons in longest chain, (2) Use prefix (Meth, Eth, Prop, But etc), (3) Add suffix (-ane for alkane, -ene for alkene, -yne for alkyne). Example: 3 carbons single bond = Prop + ane = PROPANE!"
+        },
+        {
+          "speaker": "raju",
+          "text": "To 2 carbons double bond ETHENE hoga?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul! Eth + ene = ETHENE (C₂H₄). Aur 2 carbons triple bond = Eth + yne = ETHYNE (C₂H₂). Common names bhi hain: Ethene = Ethylene, Ethyne = Acetylene. Exam mein dono naam accept karte hain. Ab functional groups dekhte hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Functional groups?"
+        }
+      ],
+      "navigation": {
+        "next": "card_23_hydrocarbon_quiz_1",
+        "button_text": "Quiz 1/3 ➔"
+      }
+    },
+    {
+      "card_id": "card_23_hydrocarbon_quiz_1",
+      "card_slug": "card_23_hydrocarbon_quiz_1",
+      "type": "quiz",
+      "concept_id": "hydrocarbons_test_1",
+      "level": 2,
+      "progress": {
+        "current": 23,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "The main constituent of LPG (Liquefied Petroleum Gas) is: (SSC CGL 2018, BPSC 2019)",
+        "options": [
+          {"id": "A", "text": "Methane (मीथेन)"},
+          {"id": "B", "text": "Ethane (एथेन)"},
+          {"id": "C", "text": "Butane (ब्यूटेन)"},
+          {"id": "D", "text": "Propane (प्रोपेन)"}
+        ],
+        "correct_option_id": "C",
+        "explanation": "LPG का main constituent BUTANE (C₄H₁₀) है, इसमें Propane भी होता है। Formula: LPG = Butane + Propane (mainly)। CNG = Methane। Biogas = Methane। Natural gas = Methane। Marsh gas = Methane। ⭐ SSC/BPSC favorite differentiation question - LPG vs CNG को अलग-अलग याद रखो!"
+      },
+      "navigation": {
+        "next": "card_24_hydrocarbon_quiz_2",
+        "button_text": "Quiz 2/3 ➔"
+      }
+    },
+    {
+      "card_id": "card_24_hydrocarbon_quiz_2",
+      "card_slug": "card_24_hydrocarbon_quiz_2",
+      "type": "quiz",
+      "concept_id": "hydrocarbons_test_2",
+      "level": 2,
+      "progress": {
+        "current": 24,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "The gas used for artificial ripening of fruits is: (BPSC TRE 2020, Railway NTPC 2019)",
+        "options": [
+          {"id": "A", "text": "Methane (मीथेन)"},
+          {"id": "B", "text": "Ethylene (एथिलीन)"},
+          {"id": "C", "text": "Acetylene (एसिटिलीन)"},
+          {"id": "D", "text": "Carbon dioxide"}
+        ],
+        "correct_option_id": "B",
+        "explanation": "ETHYLENE (C₂H₄) एक natural plant hormone है जो fruits (mango, banana) को ripen करता है। Calcium Carbide (CaC₂) + पानी से Acetylene बनती है जो ethylene-like effect देती है, पर CaC₂ का direct use India में BANNED है food safety के कारण (arsenic/phosphorus contamination)। ⭐ BPSC TRE/Railway में repeatedly पूछा जाता है!"
+      },
+      "navigation": {
+        "next": "card_25_hydrocarbon_quiz_3",
+        "button_text": "Quiz 3/3 ➔"
+      }
+    },
+    {
+      "card_id": "card_25_hydrocarbon_quiz_3",
+      "card_slug": "card_25_hydrocarbon_quiz_3",
+      "type": "quiz",
+      "concept_id": "hydrocarbons_test_3",
+      "level": 2,
+      "progress": {
+        "current": 25,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "General formula of alkenes is: (NEET 2019, BSSC 2020)",
+        "options": [
+          {"id": "A", "text": "CₙH₂ₙ₊₂"},
+          {"id": "B", "text": "CₙH₂ₙ"},
+          {"id": "C", "text": "CₙH₂ₙ₋₂"},
+          {"id": "D", "text": "CₙHₙ"}
+        ],
+        "correct_option_id": "B",
+        "explanation": "ALKENES का general formula CₙH₂ₙ है (contains one C=C double bond)। ALKANES = CₙH₂ₙ₊₂ (single bonds only)। ALKYNES = CₙH₂ₙ₋₂ (contains one C≡C triple bond)। Pattern याद रखो: +2, 0, -2 hydrogens। Examples: Ethene (C₂H₄), Propene (C₃H₆), Butene (C₄H₈)। ⭐ NEET/BSSC का direct formula question!"
+      },
+      "navigation": {
+        "next": "card_26_milestone_hydrocarbons",
+        "button_text": "Module Complete ➔"
+      }
+    },
+    {
+      "card_id": "card_26_milestone_hydrocarbons",
+      "card_slug": "card_26_milestone_hydrocarbons",
+      "type": "milestone",
+      "concept_id": "hydrocarbons_complete",
+      "level": 2,
+      "progress": {
+        "current": 26,
+        "total": 72
+      },
+      "milestone_payload": {
+        "title": "🔥 MODULE 2 MASTERED!",
+        "badge_emoji": "⛽",
+        "completed_topic": "Hydrocarbons - Alkanes, Alkenes, Alkynes",
+        "xp_earned": 90,
+        "milestone_progress": "Module 2/6 Complete",
+        "motivational_quote": "LPG, CNG, Petrol - सब की chemistry समझ गई! अब Functional Groups की duniya देखेंगे! 🧪"
+      },
+      "navigation": {
+        "next": "card_27_functional_groups_intro",
+        "button_text": "Functional Groups ➔"
+      }
+    },
+    {
+      "card_id": "card_27_functional_groups_intro",
+      "card_slug": "card_27_functional_groups_intro",
+      "type": "chat",
+      "concept_id": "functional_groups_introduction",
+      "level": 3,
+      "progress": {
+        "current": 27,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, hydrocarbons mein sirf C aur H hote hain. Par jab kisi carbon compound mein OTHER atoms (like O, N, Cl) attach hote hain, wo compound ki properties determine karte hain - inhe FUNCTIONAL GROUPS kehte hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab woh cheez jo compound ka behaviour decide karti hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Exactly! Functional group = atoms or group of atoms jo compound ka chemical behavior determine karte hain. Example: Alcohol mein -OH group, Acid mein -COOH group. Same functional group wale compounds similar reactions dete hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Kitne functional groups hote hain?"
+        }
+      ],
+      "navigation": {
+        "next": "card_28_important_functional_groups",
+        "button_text": "Groups List ➔"
+      }
+    },
+    {
+      "card_id": "card_28_important_functional_groups",
+      "card_slug": "card_28_important_functional_groups",
+      "type": "chat",
+      "concept_id": "functional_groups_list",
+      "level": 3,
+      "progress": {
+        "current": 28,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Important functional groups exam ke liye: (1) -OH = HYDROXYL (Alcohol), (2) -CHO = ALDEHYDE, (3) >C=O = KETONE, (4) -COOH = CARBOXYLIC ACID, (5) -X (Cl, Br, I) = HALIDE, (6) -NH₂ = AMINE, (7) -OR = ETHER!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Ye to bahut saare hain! Kaise yaad karun?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Focus 3 main pe: -OH (Alcohol like Ethanol), -COOH (Acid like Vinegar), -CHO (Aldehyde like Formaldehyde). Each functional group ka apna suffix hai: -OH → '-ol', -COOH → '-oic acid', -CHO → '-al', >C=O → '-one'. Naming systematic hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "To ethanol matlab eth + ol?"
+        }
+      ],
+      "navigation": {
+        "next": "card_29_alcohol_details",
+        "button_text": "Alcohol Detail ➔"
+      }
+    },
+    {
+      "card_id": "card_29_alcohol_details",
+      "card_slug": "card_29_alcohol_details",
+      "type": "chat",
+      "concept_id": "alcohol_ethanol_methanol",
+      "level": 3,
+      "progress": {
+        "current": 29,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "ALCOHOL (-OH group): Two important types - (1) METHANOL (CH₃OH) - POISONOUS! Blindness aur death cause karta hai. Also called wood spirit. (2) ETHANOL (C₂H₅OH) - Alcoholic drinks mein, sanitizers mein, biofuel!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Hain?? Methanol pi lene se andha ho jate hain??"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! Illegal liquor (nakli sharab) mein methanol milaya jata hai - bahut tragedies hui hain isse. Body mein methanol → formaldehyde → formic acid → optic nerve damage → blindness/death. Isliye 'hooch tragedies' hoti hain! ⭐ BPSC TRE Bihar-specific: Bihar Prohibition Law 2016!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Ye to serious topic hai! Ethanol safe hai?"
+        }
+      ],
+      "navigation": {
+        "next": "card_30_ethanol_properties",
+        "button_text": "Ethanol Detail ➔"
+      }
+    },
+    {
+      "card_id": "card_30_ethanol_properties",
+      "card_slug": "card_30_ethanol_properties",
+      "type": "chat",
+      "concept_id": "ethanol_uses_reactions",
+      "level": 3,
+      "progress": {
+        "current": 30,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "ETHANOL (C₂H₅OH): Also called ETHYL ALCOHOL or GRAIN ALCOHOL. Colorless liquid, BP 78°C. Uses: (1) Alcoholic beverages, (2) Solvent in medicines/perfumes, (3) Antiseptic (hand sanitizers 70% ethanol), (4) Biofuel/Gasohol (petrol + ethanol mixture)!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Hand sanitizer mein alcohol hota hai isliye chubta hai injury pe!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Perfect! Important reactions of ethanol: (1) With Sodium: 2C₂H₅OH + 2Na → 2C₂H₅ONa + H₂↑ (H₂ gas test!). (2) DEHYDRATION with conc. H₂SO₄ at 170°C: C₂H₅OH → C₂H₄ + H₂O (ethene banata hai). (3) OXIDATION: Ethanol → Ethanoic acid!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Ethanoic acid to sirka mein hota hai na?"
+        }
+      ],
+      "navigation": {
+        "next": "card_31_ethanoic_acid",
+        "button_text": "Ethanoic Acid ➔"
+      }
+    },
+    {
+      "card_id": "card_31_ethanoic_acid",
+      "card_slug": "card_31_ethanoic_acid",
+      "type": "chat",
+      "concept_id": "ethanoic_acid_vinegar",
+      "level": 3,
+      "progress": {
+        "current": 31,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "ETHANOIC ACID (CH₃COOH): Common name = ACETIC ACID. 5-8% solution in water = VINEGAR (sirka). Sour taste, weak acid. Melting point 17°C (winter mein solid ho jata hai - isliye GLACIAL ACETIC ACID kehte hain pure form ko)!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sirka carbon compound hai?? Wow!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! Important reactions: (1) With NaHCO₃: CH₃COOH + NaHCO₃ → CH₃COONa + H₂O + CO₂↑ (baking soda + vinegar - bubbles!). (2) ESTERIFICATION with alcohol: Acid + Alcohol → ESTER (sweet smelling used in perfumes/flavors) + H₂O. ⭐ NEET Favorite reaction!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Baking soda vinegar bubbles - ye school experiment tha!"
+        }
+      ],
+      "navigation": {
+        "next": "card_32_esterification",
+        "button_text": "Esterification Detail ➔"
+      }
+    },
+    {
+      "card_id": "card_32_esterification",
+      "card_slug": "card_32_esterification",
+      "type": "chat",
+      "concept_id": "esterification_reaction",
+      "level": 3,
+      "progress": {
+        "current": 32,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "ESTERIFICATION: Alcohol + Carboxylic Acid → ESTER + Water (with conc. H₂SO₄ catalyst). Example: C₂H₅OH + CH₃COOH → CH₃COOC₂H₅ (Ethyl ethanoate/Ethyl acetate) + H₂O. Esters have SWEET FRUITY SMELL - used in perfumes and artificial flavors!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Isliye fruity flavored ice creams mein esters use hote hain?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Exactly! REVERSE reaction = SAPONIFICATION: Ester + NaOH → Sodium salt + Alcohol. Ye SOAP banane ka process hai! Fats/oils (esters of long chain acids) + NaOH → SOAP + Glycerol. ⭐ BPSC Favorite: 'Saponification is used to make?' - SOAP!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Wow! Soap banana bhi carbon chemistry hai!"
+        }
+      ],
+      "navigation": {
+        "next": "card_33_functional_quiz_1",
+        "button_text": "Quiz 1/3 ➔"
+      }
+    },
+    {
+      "card_id": "card_33_functional_quiz_1",
+      "card_slug": "card_33_functional_quiz_1",
+      "type": "quiz",
+      "concept_id": "functional_test_1",
+      "level": 3,
+      "progress": {
+        "current": 33,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Vinegar contains: (SSC CGL 2019, BPSC 2020)",
+        "options": [
+          {"id": "A", "text": "Citric acid (साइट्रिक अम्ल)"},
+          {"id": "B", "text": "Acetic acid (एसीटिक अम्ल)"},
+          {"id": "C", "text": "Tartaric acid (टार्टरिक अम्ल)"},
+          {"id": "D", "text": "Lactic acid (लैक्टिक अम्ल)"}
+        ],
+        "correct_option_id": "B",
+        "explanation": "VINEGAR (सिरका) में 5-8% ACETIC ACID (Ethanoic acid, CH₃COOH) होता है पानी में। Pure form को GLACIAL ACETIC ACID कहते हैं (winter में 17°C पर solid हो जाता है)। Citric acid = नींबू/संतरा में, Tartaric acid = इमली/अंगूर में, Lactic acid = दही/खट्टे दूध में। ⭐ SSC/BPSC का food-acid matching classic question!"
+      },
+      "navigation": {
+        "next": "card_34_functional_quiz_2",
+        "button_text": "Quiz 2/3 ➔"
+      }
+    },
+    {
+      "card_id": "card_34_functional_quiz_2",
+      "card_slug": "card_34_functional_quiz_2",
+      "type": "quiz",
+      "concept_id": "functional_test_2",
+      "level": 3,
+      "progress": {
+        "current": 34,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Consumption of which alcohol causes BLINDNESS and DEATH? (BPSC TRE 2019, NEET 2020)",
+        "options": [
+          {"id": "A", "text": "Ethanol (एथेनॉल)"},
+          {"id": "B", "text": "Methanol (मेथेनॉल)"},
+          {"id": "C", "text": "Propanol (प्रोपेनॉल)"},
+          {"id": "D", "text": "Butanol (ब्यूटेनॉल)"}
+        ],
+        "correct_option_id": "B",
+        "explanation": "METHANOL (CH₃OH) - Wood Spirit consumption से BLINDNESS और DEATH होती है। Body में methanol → formaldehyde → formic acid → optic nerve damage → blindness। Illegal liquor (नकली शराब) में अक्सर methanol मिलाया जाता है - इससे 'hooch tragedies' होती हैं। Ethanol beverages में safe amount में होता है। ⭐ BPSC TRE Bihar Prohibition context में repeatedly पूछा जाता है!"
+      },
+      "navigation": {
+        "next": "card_35_functional_quiz_3",
+        "button_text": "Quiz 3/3 ➔"
+      }
+    },
+    {
+      "card_id": "card_35_functional_quiz_3",
+      "card_slug": "card_35_functional_quiz_3",
+      "type": "quiz",
+      "concept_id": "functional_test_3",
+      "level": 3,
+      "progress": {
+        "current": 35,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Esterification reaction takes place between: (Railway NTPC 2020, BSSC 2019)",
+        "options": [
+          {"id": "A", "text": "Alcohol and Aldehyde"},
+          {"id": "B", "text": "Acid and Alcohol"},
+          {"id": "C", "text": "Alcohol and Water"},
+          {"id": "D", "text": "Acid and Base"}
+        ],
+        "correct_option_id": "B",
+        "explanation": "ESTERIFICATION = Carboxylic ACID + ALCOHOL → ESTER + Water (with conc. H₂SO₄ catalyst)। Example: CH₃COOH + C₂H₅OH → CH₃COOC₂H₅ + H₂O. Esters का sweet fruity smell होता है - perfumes, artificial fruit flavors में use। Reverse reaction = SAPONIFICATION (soap making)। ⭐ Railway/BSSC का important reaction question!"
+      },
+      "navigation": {
+        "next": "card_36_milestone_functional",
+        "button_text": "Module Complete ➔"
+      }
+    },
+    {
+      "card_id": "card_36_milestone_functional",
+      "card_slug": "card_36_milestone_functional",
+      "type": "milestone",
+      "concept_id": "functional_complete",
+      "level": 3,
+      "progress": {
+        "current": 36,
+        "total": 72
+      },
+      "milestone_payload": {
+        "title": "⚗️ MODULE 3 MASTERED!",
+        "badge_emoji": "🧪",
+        "completed_topic": "Functional Groups & Important Compounds",
+        "xp_earned": 100,
+        "milestone_progress": "Module 3/6 Complete",
+        "motivational_quote": "Ethanol, Ethanoic Acid, Esters सब master! अब Chemical Reactions of carbon compounds देखेंगे! 🔥"
+      },
+      "navigation": {
+        "next": "card_37_combustion_intro",
+        "button_text": "Combustion Start ➔"
+      }
+    },
+    {
+      "card_id": "card_37_combustion_intro",
+      "card_slug": "card_37_combustion_intro",
+      "type": "chat",
+      "concept_id": "combustion_carbon_compounds",
+      "level": 4,
+      "progress": {
+        "current": 37,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, gas stove pe blue flame dekha hai kabhi? Aur candle mein yellow flame kyun aata hai?"
+        },
+        {
+          "speaker": "raju",
+          "text": "Haan Sir! Par ye difference kyun hota hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Ye COMBUSTION ki wajah se hai! Combustion = burning in oxygen. Two types: (1) COMPLETE combustion (enough O₂) → CO₂ + H₂O + Heat + BLUE flame (LPG stove). (2) INCOMPLETE combustion (less O₂) → CO + Soot + YELLOW flame (candle, wick lamps)!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Achhaaa! Isliye kabhi kabhi bartan kaale ho jate hain?"
+        }
+      ],
+      "navigation": {
+        "next": "card_38_combustion_types",
+        "button_text": "Complete vs Incomplete ➔"
+      }
+    },
+    {
+      "card_id": "card_38_combustion_types",
+      "card_slug": "card_38_combustion_types",
+      "type": "chat",
+      "concept_id": "complete_incomplete_combustion",
+      "level": 4,
+      "progress": {
+        "current": 38,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Yes! Bartan kaale = SOOT (carbon particles from incomplete combustion). Equations: COMPLETE: CH₄ + 2O₂ → CO₂ + 2H₂O + Heat. INCOMPLETE: 2CH₄ + 3O₂ → 2CO + 4H₂O + Heat. CO (Carbon monoxide) POISONOUS gas hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "CO poisonous?? Kaise?"
+        },
+        {
+          "speaker": "aman",
+          "text": "CO khoon ke hemoglobin se attach ho jati hai (200 times more strongly than O₂). Body mein oxygen delivery band ho jati hai → death. Isliye closed room mein coal jalane se log mar jate hain - CO poisoning. Symptoms: headache, dizziness, unconsciousness!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Isliye winter mein sagri jalake sone se death hoti hai!"
+        }
+      ],
+      "navigation": {
+        "next": "card_39_saturated_flame_types",
+        "button_text": "Flame Types ➔"
+      }
+    },
+    {
+      "card_id": "card_39_saturated_flame_types",
+      "card_slug": "card_39_saturated_flame_types",
+      "type": "chat",
+      "concept_id": "flame_saturated_unsaturated",
+      "level": 4,
+      "progress": {
+        "current": 39,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "IMPORTANT trap: SATURATED hydrocarbons (alkanes) → CLEAN BLUE FLAME (enough O₂ access). UNSATURATED hydrocarbons (alkenes/alkynes) → YELLOW SOOTY FLAME (more carbon, incomplete combustion). Isliye burning candle wax (long chain saturated) sometimes yellow flame - depends on air supply!"
+        },
+        {
+          "speaker": "raju",
+          "text": "To alkane blue, alkene/alkyne yellow flame?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Generally haan, jab air supply limited hoti hai. Alkynes (acetylene) mein bahut soot bnati hai. Isliye oxy-acetylene torch mein PURE oxygen supply karte hain complete combustion ke liye. ⭐ BPSC TRE Favorite: 'Sooty flame indicates?' - Unsaturated hydrocarbon!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sooty flame test se saturated/unsaturated identify karte hain!"
+        }
+      ],
+      "navigation": {
+        "next": "card_40_oxidation_reactions",
+        "button_text": "Oxidation ➔"
+      }
+    },
+    {
+      "card_id": "card_40_oxidation_reactions",
+      "card_slug": "card_40_oxidation_reactions",
+      "type": "chat",
+      "concept_id": "oxidation_alcohols",
+      "level": 4,
+      "progress": {
+        "current": 40,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "OXIDATION: Addition of oxygen or removal of hydrogen. Alcohols oxidize to acids using OXIDIZING AGENTS. Example: Ethanol + [O] (from alkaline KMnO₄ or acidified K₂Cr₂O₇) → Ethanoic Acid. Isliye wine kharab hoke sirka ban jati hai (oxidation by air/bacteria)!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Wine se sirka?? Wow!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! KMnO₄ (purple) - color goes colorless when oxidation happens. K₂Cr₂O₇ (orange) - turns green. Ye TEST hai for alcohol/reducing agents. ⭐ NEET Favorite: 'Alkaline KMnO₄ is used as?' - Oxidizing agent. Its purple color disappears = confirms alcohol!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Color change test - important!"
+        }
+      ],
+      "navigation": {
+        "next": "card_41_addition_reactions",
+        "button_text": "Addition Reactions ➔"
+      }
+    },
+    {
+      "card_id": "card_41_addition_reactions",
+      "card_slug": "card_41_addition_reactions",
+      "type": "chat",
+      "concept_id": "addition_reactions_hydrogenation",
+      "level": 4,
+      "progress": {
+        "current": 41,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "ADDITION REACTIONS: Only UNSATURATED hydrocarbons (double/triple bonds break, atoms add). Most famous: HYDROGENATION - Vegetable oils (unsaturated) + H₂ (with Ni catalyst) → Vanaspati Ghee (saturated). Liquid oil → solid ghee!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Isliye Dalda/vanaspati banti hai oil se??"
+        },
+        {
+          "speaker": "aman",
+          "text": "Exactly! Process: R-CH=CH-R + H₂ (Ni catalyst, 200°C) → R-CH₂-CH₂-R. Unsaturated oils healthier than saturated ghee (cholesterol difference). ⭐ BPSC TRE: 'Catalyst used in hydrogenation of oils?' - NICKEL (Ni). Aur addition reactions saturated alkanes mein NAHI hoti - koi double bond nahi to add karne ki jagah nahi!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Ni catalyst - noted! Substitution reactions bhi hoti hain?"
+        }
+      ],
+      "navigation": {
+        "next": "card_42_substitution_reactions",
+        "button_text": "Substitution ➔"
+      }
+    },
+    {
+      "card_id": "card_42_substitution_reactions",
+      "card_slug": "card_42_substitution_reactions",
+      "type": "chat",
+      "concept_id": "substitution_reactions_alkanes",
+      "level": 4,
+      "progress": {
+        "current": 42,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "SUBSTITUTION REACTIONS: Only SATURATED hydrocarbons (alkanes). One atom REPLACED by another. Example: CH₄ + Cl₂ (sunlight) → CH₃Cl + HCl. Chlorine replaces hydrogen one by one. Chain reaction hai - CH₃Cl → CH₂Cl₂ → CHCl₃ (Chloroform) → CCl₄!"
+        },
+        {
+          "speaker": "raju",
+          "text": "CHCl₃ chloroform hai?? Wo to anesthesia mein use hoti hai!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Perfect! CHLOROFORM (CHCl₃) - initially used as anesthesia (banned now due to liver damage). Sunlight = essential catalyst for substitution - isliye dark mein reaction nahi hoti. ⭐ Summary Rule: Alkanes → Substitution (single bonds intact), Alkenes/Alkynes → Addition (double/triple break)!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Alkane substitution, unsaturated addition - clear rule!"
+        }
+      ],
+      "navigation": {
+        "next": "card_43_reactions_quiz_1",
+        "button_text": "Quiz 1/3 ➔"
+      }
+    },
+    {
+      "card_id": "card_43_reactions_quiz_1",
+      "card_slug": "card_43_reactions_quiz_1",
+      "type": "quiz",
+      "concept_id": "reactions_test_1",
+      "level": 4,
+      "progress": {
+        "current": 43,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "The catalyst used in the hydrogenation of vegetable oils is: (BPSC 2019, SSC CGL 2020)",
+        "options": [
+          {"id": "A", "text": "Platinum (प्लैटिनम)"},
+          {"id": "B", "text": "Nickel (निकल)"},
+          {"id": "C", "text": "Iron (लोहा)"},
+          {"id": "D", "text": "Copper (तांबा)"}
+        ],
+        "correct_option_id": "B",
+        "explanation": "NICKEL (Ni) vegetable oils के hydrogenation में catalyst के रूप में use होता है 200°C temperature पर। Unsaturated liquid oils + H₂ → Saturated solid Vanaspati ghee। यह ADDITION REACTION है क्योंकि double bonds पर hydrogen add होता है। Platinum भी catalyst है पर costly। ⭐ BPSC/SSC का classic hydrogenation question!"
+      },
+      "navigation": {
+        "next": "card_44_reactions_quiz_2",
+        "button_text": "Quiz 2/3 ➔"
+      }
+    },
+    {
+      "card_id": "card_44_reactions_quiz_2",
+      "card_slug": "card_44_reactions_quiz_2",
+      "type": "quiz",
+      "concept_id": "reactions_test_2",
+      "level": 4,
+      "progress": {
+        "current": 44,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Incomplete combustion of carbon compounds produces: (BPSC TRE 2020, NEET 2019)",
+        "options": [
+          {"id": "A", "text": "Carbon dioxide (CO₂)"},
+          {"id": "B", "text": "Carbon monoxide (CO)"},
+          {"id": "C", "text": "Hydrogen gas (H₂)"},
+          {"id": "D", "text": "Only water vapor"}
+        ],
+        "correct_option_id": "B",
+        "explanation": "INCOMPLETE COMBUSTION (limited oxygen) से CARBON MONOXIDE (CO) बनता है जो POISONOUS gas है। CO hemoglobin से 200 गुना ज्यादा strongly bind करता है O₂ से - oxygen delivery बंद → death। Complete combustion से CO₂ + H₂O बनता है। Closed room में coal जलाने से CO poisoning होती है। ⭐ BPSC TRE/NEET का important safety-related question!"
+      },
+      "navigation": {
+        "next": "card_45_reactions_quiz_3",
+        "button_text": "Quiz 3/3 ➔"
+      }
+    },
+    {
+      "card_id": "card_45_reactions_quiz_3",
+      "card_slug": "card_45_reactions_quiz_3",
+      "type": "quiz",
+      "concept_id": "reactions_test_3",
+      "level": 4,
+      "progress": {
+        "current": 45,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Substitution reactions are characteristic of: (Railway NTPC 2019, BSSC 2020)",
+        "options": [
+          {"id": "A", "text": "Alkanes (saturated hydrocarbons)"},
+          {"id": "B", "text": "Alkenes (with double bond)"},
+          {"id": "C", "text": "Alkynes (with triple bond)"},
+          {"id": "D", "text": "All hydrocarbons equally"}
+        ],
+        "correct_option_id": "A",
+        "explanation": "SUBSTITUTION REACTIONS ALKANES (saturated hydrocarbons) की characteristic हैं क्योंकि इनमें single bonds होते हैं - एक H atom को दूसरे atom से replace किया जाता है। Example: CH₄ + Cl₂ (sunlight) → CH₃Cl + HCl. Alkenes/Alkynes में ADDITION reactions होती हैं (double/triple bonds टूटते हैं)। Sunlight essential catalyst है substitution के लिए। ⭐ Railway/BSSC का type-identification question!"
+      },
+      "navigation": {
+        "next": "card_46_milestone_reactions",
+        "button_text": "Module Complete ➔"
+      }
+    },
+    {
+      "card_id": "card_46_milestone_reactions",
+      "card_slug": "card_46_milestone_reactions",
+      "type": "milestone",
+      "concept_id": "reactions_complete",
+      "level": 4,
+      "progress": {
+        "current": 46,
+        "total": 72
+      },
+      "milestone_payload": {
+        "title": "🔥 MODULE 4 IGNITED!",
+        "badge_emoji": "⚗️",
+        "completed_topic": "Chemical Reactions of Carbon Compounds",
+        "xp_earned": 95,
+        "milestone_progress": "Module 4/6 Complete",
+        "motivational_quote": "Combustion, Oxidation, Addition, Substitution - सब master! अब Soaps aur Detergents की practical chemistry! 🧼"
+      },
+      "navigation": {
+        "next": "card_47_soaps_intro",
+        "button_text": "Soaps Chemistry ➔"
+      }
+    },
+    {
+      "card_id": "card_47_soaps_intro",
+      "card_slug": "card_47_soaps_intro",
+      "type": "chat",
+      "concept_id": "soaps_introduction",
+      "level": 5,
+      "progress": {
+        "current": 47,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, subah nahate waqt soap use karta hai na? Kabhi socha soap kaise ganda saaf karta hai?"
+        },
+        {
+          "speaker": "raju",
+          "text": "Nahi Sir... jhaag banta hai bas... par mail kahan jaati hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Ye ek beautiful chemistry hai! SOAPS = Sodium/Potassium salts of long chain carboxylic acids. Made by SAPONIFICATION: Fat/Oil + NaOH → SOAP + Glycerol. Sodium soap = hard soap (bathing bar), Potassium soap = soft soap (shaving cream, liquid soap)!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Ohh! Shaving cream soap hi hai but soft type?"
+        }
+      ],
+      "navigation": {
+        "next": "card_48_soap_structure",
+        "button_text": "Soap Structure ➔"
+      }
+    },
+    {
+      "card_id": "card_48_soap_structure",
+      "card_slug": "card_48_soap_structure",
+      "type": "chat",
+      "concept_id": "soap_micelle_action",
+      "level": 5,
+      "progress": {
+        "current": 48,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Soap molecule ka SPECIAL structure hota hai: (1) HYDROPHILIC HEAD (water-loving) - ionic COO⁻Na⁺, dissolves in water. (2) HYDROPHOBIC TAIL (water-hating, oil-loving) - long hydrocarbon chain, dissolves in oil/grease. Ye dual nature hi cleaning ka secret hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Do sides wala molecule?? Ek water pasand, ek oil pasand?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Exactly! Cleaning process: (1) Soap tail grease/dirt mein ghusti hai, (2) Head paani ki taraf rehti hai, (3) Soap molecules dirt ke around ball banate hain = MICELLE. (4) Water micelles ko wash away kar deta hai. Isliye 'chikni miti' bhi paani se saaf hoti hai soap se!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Micelle - soap balls jo dirt ko trap kar leti hain!"
+        }
+      ],
+      "navigation": {
+        "next": "card_49_hard_water_problem",
+        "button_text": "Hard Water Problem ➔"
+      }
+    },
+    {
+      "card_id": "card_49_hard_water_problem",
+      "card_slug": "card_49_hard_water_problem",
+      "type": "chat",
+      "concept_id": "hard_water_soap_scum",
+      "level": 5,
+      "progress": {
+        "current": 49,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ek problem: HARD WATER (contains Ca²⁺, Mg²⁺ ions) mein soap kaam nahi karta. Soap Ca/Mg salts react karke SCUM (safed chipchipa) banata hai. Isliye kapde kharab dhulte hain hard water mein - jhaag hi nahi banta!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Hain?? Isliye kabhi kabhi soap se jhaag hi nahi banta?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Exactly! Solution: DETERGENTS invent kiye gaye. Detergents = sodium salts of long chain sulphonic acids/benzene sulphonic acids. Ye Ca/Mg se scum nahi banate - hard water mein bhi jhaag deta hai! Isliye washing powders (detergents) soap se better hain hard water areas mein!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Detergent hard water mein bhi kaam karta hai! Aur farak?"
+        }
+      ],
+      "navigation": {
+        "next": "card_50_soap_vs_detergent",
+        "button_text": "Soap vs Detergent ➔"
+      }
+    },
+    {
+      "card_id": "card_50_soap_vs_detergent",
+      "card_slug": "card_50_soap_vs_detergent",
+      "type": "chat",
+      "concept_id": "soap_detergent_difference",
+      "level": 5,
+      "progress": {
+        "current": 50,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "SOAPS: (1) Sodium salt of long chain fatty acid, (2) Biodegradable (nature mein decompose ho jate), (3) Poor with hard water. DETERGENTS: (1) Sodium salt of long chain benzene sulphonic acid, (2) Non-biodegradable (pollution problem!), (3) Work in hard water!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Detergent pollution karta hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! River/water body mein detergent bacteria decompose nahi kar pate - foam collect hoke aquatic life ko harm karta hai. Ab BIODEGRADABLE detergents bhi develop ho rahe hain. ⭐ BPSC/NEET Environmental Chemistry: 'Which causes water pollution?' - Non-biodegradable detergents!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Environment ka bhi effect padta hai!"
+        }
+      ],
+      "navigation": {
+        "next": "card_51_soaps_quiz_1",
+        "button_text": "Quiz 1/3 ➔"
+      }
+    },
+    {
+      "card_id": "card_51_soaps_quiz_1",
+      "card_slug": "card_51_soaps_quiz_1",
+      "type": "quiz",
+      "concept_id": "soaps_test_1",
+      "level": 5,
+      "progress": {
+        "current": 51,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Soap is a sodium or potassium salt of: (SSC CGL 2020, BPSC 2019)",
+        "options": [
+          {"id": "A", "text": "Short chain fatty acids"},
+          {"id": "B", "text": "Long chain fatty acids"},
+          {"id": "C", "text": "Sulphonic acid"},
+          {"id": "D", "text": "Nitric acid"}
+        ],
+        "correct_option_id": "B",
+        "explanation": "SOAPS = Sodium या Potassium salts of LONG CHAIN FATTY ACIDS (carboxylic acids)। Bnne ka process: SAPONIFICATION = Fat/Oil + NaOH → Soap + Glycerol। Sodium soap = hard soap (nahane का साबुन), Potassium soap = soft soap (shaving cream)। DETERGENTS = sodium salts of sulphonic acids (different chemistry)। ⭐ SSC/BPSC का classic soap composition question!"
+      },
+      "navigation": {
+        "next": "card_52_soaps_quiz_2",
+        "button_text": "Quiz 2/3 ➔"
+      }
+    },
+    {
+      "card_id": "card_52_soaps_quiz_2",
+      "card_slug": "card_52_soaps_quiz_2",
+      "type": "quiz",
+      "concept_id": "soaps_test_2",
+      "level": 5,
+      "progress": {
+        "current": 52,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "The cleansing action of soap is due to formation of: (NEET 2018, Railway NTPC 2020)",
+        "options": [
+          {"id": "A", "text": "Emulsion (पायस)"},
+          {"id": "B", "text": "Micelle (मिसेल)"},
+          {"id": "C", "text": "Suspension (निलंबन)"},
+          {"id": "D", "text": "Colloid (कोलाइड)"}
+        ],
+        "correct_option_id": "B",
+        "explanation": "Soap के cleansing action का cause है MICELLE formation। Soap molecule में HYDROPHILIC head (water-loving) और HYDROPHOBIC tail (oil-loving) होता है। Water में soap molecules अपनी tails अंदर (oil में) और heads बाहर (water में) करके ball जैसी structure बनाते हैं = MICELLE जो dirt/grease को trap करके wash away कर देती है। ⭐ NEET/Railway का important mechanism question!"
+      },
+      "navigation": {
+        "next": "card_53_soaps_quiz_3",
+        "button_text": "Quiz 3/3 ➔"
+      }
+    },
+    {
+      "card_id": "card_53_soaps_quiz_3",
+      "card_slug": "card_53_soaps_quiz_3",
+      "type": "quiz",
+      "concept_id": "soaps_test_3",
+      "level": 5,
+      "progress": {
+        "current": 53,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Detergents work better than soaps in hard water because: (BPSC TRE 2019, BSSC 2020)",
+        "options": [
+          {"id": "A", "text": "They are cheaper"},
+          {"id": "B", "text": "They don't form scum with Ca²⁺ and Mg²⁺ ions"},
+          {"id": "C", "text": "They are biodegradable"},
+          {"id": "D", "text": "They dissolve faster"}
+        ],
+        "correct_option_id": "B",
+        "explanation": "DETERGENTS hard water में better काम करते हैं क्योंकि ये Ca²⁺ और Mg²⁺ ions के साथ SCUM (chipchipa insoluble mass) नहीं बनाते। Soaps hard water में scum बनाते हैं और jhaag नहीं देते। Detergents = sodium salts of sulphonic acids जो calcium/magnesium salts के रूप में soluble रहते हैं। Note: Detergents मुख्यतः non-biodegradable होते हैं (pollution problem)। ⭐ BPSC TRE/BSSC का environmental chemistry question!"
+      },
+      "navigation": {
+        "next": "card_54_milestone_soaps",
+        "button_text": "Module Complete ➔"
+      }
+    },
+    {
+      "card_id": "card_54_milestone_soaps",
+      "card_slug": "card_54_milestone_soaps",
+      "type": "milestone",
+      "concept_id": "soaps_complete",
+      "level": 5,
+      "progress": {
+        "current": 54,
+        "total": 72
+      },
+      "milestone_payload": {
+        "title": "🧼 MODULE 5 CLEAN!",
+        "badge_emoji": "🫧",
+        "completed_topic": "Soaps, Detergents & Micelle Action",
+        "xp_earned": 90,
+        "milestone_progress": "Module 5/6 Complete",
+        "motivational_quote": "Soap ki chemistry ne cleaning ka scientific secret khol diya! Ab last module - Advanced concepts aur Officer Level challenges! 🎯"
+      },
+      "navigation": {
+        "next": "card_55_coal_petroleum",
+        "button_text": "Coal & Petroleum ➔"
+      }
+    },
+    {
+      "card_id": "card_55_coal_petroleum",
+      "card_slug": "card_55_coal_petroleum",
+      "type": "chat",
+      "concept_id": "coal_petroleum_origin",
+      "level": 6,
+      "progress": {
+        "current": 55,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, ab last important carbon compounds - FOSSIL FUELS! Coal, Petroleum, Natural Gas. Ye millions of years pehle plants/animals ke bury hone se bane. Anaerobic decomposition + heat + pressure = fossil fuels!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab jaanwar aur paudhe hi coal ban gaye time ke saath??"
+        },
+        {
+          "speaker": "aman",
+          "text": "Exactly! Non-renewable resources hain - once used, gone forever. Coal types by carbon content: Peat (60%) < Lignite (70%) < Bituminous (80%) < Anthracite (95% - best quality!). ⭐ BPSC TRE Bihar: Jharia (Jharkhand, pehle Bihar mein tha), Raniganj coalfields - India's major!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Anthracite best coal! Petroleum kya hai?"
+        }
+      ],
+      "navigation": {
+        "next": "card_56_petroleum_fractions",
+        "button_text": "Petroleum Details ➔"
+      }
+    },
+    {
+      "card_id": "card_56_petroleum_fractions",
+      "card_slug": "card_56_petroleum_fractions",
+      "type": "chat",
+      "concept_id": "petroleum_refining_fractions",
+      "level": 6,
+      "progress": {
+        "current": 56,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "PETROLEUM = 'Rock oil' (Latin: petra=rock, oleum=oil). Also called CRUDE OIL - black viscous liquid. Complex mixture of hydrocarbons. FRACTIONAL DISTILLATION mein separated: LPG (top, lowest BP), Petrol/Gasoline, Kerosene, Diesel, Lubricating oil, Paraffin wax, Asphalt (bottom, highest BP)!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Ek crude oil se itni saari cheezein!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! India's petroleum: Digboi (Assam) - first refinery 1901, Mumbai High (offshore), Bombay Refinery. World: Middle East countries mein maximum. NATURAL GAS = CNG (Compressed Natural Gas) - mainly Methane. India: Krishna-Godavari basin, Bombay High!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Digboi Assam mein first refinery - noted!"
+        }
+      ],
+      "navigation": {
+        "next": "card_57_biogas",
+        "button_text": "Biogas ➔"
+      }
+    },
+    {
+      "card_id": "card_57_biogas",
+      "card_slug": "card_57_biogas",
+      "type": "chat",
+      "concept_id": "biogas_gobar_gas",
+      "level": 6,
+      "progress": {
+        "current": 57,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "BIOGAS: Renewable fuel from cattle dung/agricultural waste. Composition: METHANE (75%) + CO₂ + H₂S + traces of others. Produced by anaerobic bacteria in biogas plants. Also called GOBAR GAS. India mein important for rural energy!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Gobar se bijli/gas bana lete hain!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Exactly! Advantages: (1) Smokeless burning, (2) Left-over slurry = manure, (3) Renewable, (4) Clean fuel. ⭐ BPSC TRE: 'Main constituent of biogas?' - METHANE. Bihar has many gobar gas plants under national biogas programmes!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Rural India ke liye best solution!"
+        }
+      ],
+      "navigation": {
+        "next": "card_58_polymers_intro",
+        "button_text": "Polymers ➔"
+      }
+    },
+    {
+      "card_id": "card_58_polymers_intro",
+      "card_slug": "card_58_polymers_intro",
+      "type": "chat",
+      "concept_id": "polymers_plastics",
+      "level": 6,
+      "progress": {
+        "current": 58,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "POLYMERS: Large molecules made by repeating small units (MONOMERS). Example: Polythene (poly + ethene) = repeating -CH₂-CH₂- units. Types: (1) Natural - Rubber, cellulose, silk, wool. (2) Synthetic - Plastic, nylon, polyester, PVC!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Plastic bhi carbon compound hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! Common plastics: POLYTHENE (bags), PVC (pipes), BAKELITE (electric switches, first synthetic plastic - Leo Baekeland 1907!), TEFLON (non-stick cookware), NYLON (clothes/ropes). Plastic pollution big issue - non-biodegradable!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Bakelite 1907! Ye first plastic tha!"
+        }
+      ],
+      "navigation": {
+        "next": "card_59_biomolecules",
+        "button_text": "Biomolecules ➔"
+      }
+    },
+    {
+      "card_id": "card_59_biomolecules",
+      "card_slug": "card_59_biomolecules",
+      "type": "chat",
+      "concept_id": "biomolecules_carbs_proteins",
+      "level": 6,
+      "progress": {
+        "current": 59,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "BIOMOLECULES: Carbon compounds essential for life! (1) CARBOHYDRATES (C, H, O in 1:2:1) - sugars, starch (energy). (2) PROTEINS (C, H, O, N, S) - muscles, enzymes. (3) FATS/LIPIDS - energy storage. (4) NUCLEIC ACIDS (DNA, RNA) - genetic material!"
+        },
+        {
+          "speaker": "raju",
+          "text": "DNA bhi carbon compound hai??"
+        },
+        {
+          "speaker": "aman",
+          "text": "Sab kuch! Life itself is carbon-based chemistry! Carbohydrate examples: Glucose (C₆H₁₂O₆), Sucrose (chini C₁₂H₂₂O₁₁), Cellulose (paudhon ki cell wall). Proteins made of AMINO ACIDS (20 types). ⭐ NEET Favorite: 'Building blocks of proteins?' - Amino acids!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Life ki foundation carbon hai!"
+        }
+      ],
+      "navigation": {
+        "next": "card_60_advanced_quiz_1",
+        "button_text": "Quiz 1/3 ➔"
+      }
+    },
+    {
+      "card_id": "card_60_advanced_quiz_1",
+      "card_slug": "card_60_advanced_quiz_1",
+      "type": "quiz",
+      "concept_id": "advanced_test_1",
+      "level": 6,
+      "progress": {
+        "current": 60,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "The main constituent of biogas is: (SSC CGL 2019, BPSC TRE 2020)",
+        "options": [
+          {"id": "A", "text": "Ethane (एथेन)"},
+          {"id": "B", "text": "Methane (मीथेन)"},
+          {"id": "C", "text": "Butane (ब्यूटेन)"},
+          {"id": "D", "text": "Propane (प्रोपेन)"}
+        ],
+        "correct_option_id": "B",
+        "explanation": "BIOGAS (Gobar Gas) का main constituent METHANE (CH₄) है - लगभग 75%। इसमें CO₂, H₂S और traces of other gases भी होती हैं। Cattle dung + agricultural waste के anaerobic decomposition से बनता है। Advantages: renewable, smokeless, slurry = manure। ⭐ SSC/BPSC TRE Bihar में rural energy context में repeatedly पूछा जाता है!"
+      },
+      "navigation": {
+        "next": "card_61_advanced_quiz_2",
+        "button_text": "Quiz 2/3 ➔"
+      }
+    },
+    {
+      "card_id": "card_61_advanced_quiz_2",
+      "card_slug": "card_61_advanced_quiz_2",
+      "type": "quiz",
+      "concept_id": "advanced_test_2",
+      "level": 6,
+      "progress": {
+        "current": 61,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "The highest quality of coal is: (Railway NTPC 2020, BSSC 2019)",
+        "options": [
+          {"id": "A", "text": "Peat (पीट)"},
+          {"id": "B", "text": "Lignite (लिग्नाइट)"},
+          {"id": "C", "text": "Bituminous (बिटुमिनस)"},
+          {"id": "D", "text": "Anthracite (एन्थ्रासाइट)"}
+        ],
+        "correct_option_id": "D",
+        "explanation": "ANTHRACITE सबसे high quality coal है जिसमें Carbon content 95% से ऊपर होता है। Quality ranking (low to high): PEAT (60%) < LIGNITE (70%) < BITUMINOUS (80%) < ANTHRACITE (95%+)। ज्यादा carbon = ज्यादा calorific value = better fuel। India's major coalfields: Jharia (Jharkhand), Raniganj (West Bengal), Singareni (Telangana)। ⭐ Railway/BSSC का Direct question!"
+      },
+      "navigation": {
+        "next": "card_62_advanced_quiz_3",
+        "button_text": "Quiz 3/3 ➔"
+      }
+    },
+    {
+      "card_id": "card_62_advanced_quiz_3",
+      "card_slug": "card_62_advanced_quiz_3",
+      "type": "quiz",
+      "concept_id": "advanced_test_3",
+      "level": 6,
+      "progress": {
+        "current": 62,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "The first synthetic plastic Bakelite was invented in: (NEET 2019, UPSC Prelims 2020)",
+        "options": [
+          {"id": "A", "text": "1885 by Baekeland"},
+          {"id": "B", "text": "1907 by Leo Baekeland"},
+          {"id": "C", "text": "1920 by Charles Goodyear"},
+          {"id": "D", "text": "1935 by Wallace Carothers"}
+        ],
+        "correct_option_id": "B",
+        "explanation": "BAKELITE - first SYNTHETIC PLASTIC - 1907 में LEO BAEKELAND (Belgian-American chemist) ने invent किया था। Formula: Phenol + Formaldehyde condensation polymer। Uses: Electric switches, telephone parts, cookware handles (heat-resistant)। Wallace Carothers = Nylon inventor (1935), Charles Goodyear = Vulcanized rubber (1839)। ⭐ NEET/UPSC में plastic history के dates directly पूछे जाते हैं!"
+      },
+      "navigation": {
+        "next": "card_63_milestone_advanced",
+        "button_text": "Module Complete ➔"
+      }
+    },
+    {
+      "card_id": "card_63_milestone_advanced",
+      "card_slug": "card_63_milestone_advanced",
+      "type": "milestone",
+      "concept_id": "advanced_complete",
+      "level": 6,
+      "progress": {
+        "current": 63,
+        "total": 72
+      },
+      "milestone_payload": {
+        "title": "⚡ MODULE 6 CONQUERED!",
+        "badge_emoji": "🌍",
+        "completed_topic": "Fossil Fuels, Polymers & Biomolecules",
+        "xp_earned": 100,
+        "milestone_progress": "All 6 Modules Complete!",
+        "motivational_quote": "Carbon ki puri chemistry conquered! Coal, Petroleum, Biogas, Polymers, DNA - सब समझ आ गया! Ab final Officer revision aur Boss Battle! 🏆"
+      },
+      "navigation": {
+        "next": "card_64_officer_revision",
+        "button_text": "Officer Revision ➔"
+      }
+    },
+    {
+      "card_id": "card_64_officer_revision",
+      "card_slug": "card_64_officer_revision",
+      "type": "summary",
+      "concept_id": "carbon_complete_revision",
+      "level": 6,
+      "progress": {
+        "current": 64,
+        "total": 72
+      },
+      "summary_payload": {
+        "title": "⚡ CARBON - Officer Lightning Revision",
+        "revision_points": [
+          {
+            "topic": "Uniqueness & Allotropes Multi-Statement",
+            "point": "Carbon (Z=6, config 2,4): TETRAVALENCY (4 bonds) + CATENATION (max self-linking) = millions of compounds. Allotropes: Diamond (hardest, insulator, 3D), Graphite (soft, conductor, layers), Fullerene C₆₀ (1985, Nobel 1996). ⭐ BPSC: 'Diamond conducts electricity' - FALSE. 'Graphite is only non-metal conducting electricity' - TRUE!"
+          },
+          {
+            "topic": "Hydrocarbons Formula Bank",
+            "point": "ALKANES CₙH₂ₙ₊₂ (single bonds, saturated, substitution reactions). ALKENES CₙH₂ₙ (double bond, unsaturated). ALKYNES CₙH₂ₙ₋₂ (triple bond). LPG = Butane+Propane, CNG=Methane, Petrol≈Octane, Marsh gas=Methane, Ripening=Ethylene, Welding=Acetylene. ⭐ Isomerism starts from C₄!"
+          },
+          {
+            "topic": "Functional Groups Assertion-Reason",
+            "point": "-OH (Alcohol), -COOH (Acid), -CHO (Aldehyde), >C=O (Ketone). Methanol POISONOUS (blindness/death), Ethanol in beverages/sanitizers. Vinegar = 5-8% acetic acid. Glacial acetic acid = pure CH₃COOH (solid below 17°C). Esterification: Acid + Alcohol → Ester + H₂O (fruity smell). ⭐ Bihar Prohibition Law 2016!"
+          },
+          {
+            "topic": "Reactions Type-Identification",
+            "point": "Complete combustion = BLUE flame + CO₂. Incomplete = YELLOW sooty + CO (POISONOUS!). Saturated → blue flame, Unsaturated → sooty flame. Hydrogenation (Ni catalyst, 200°C): oils → vanaspati ghee. KMnO₄/K₂Cr₂O₇ = oxidizing agents (color change test). Substitution in Alkanes (needs sunlight), Addition in Alkenes/Alkynes."
+          },
+          {
+            "topic": "Soaps, Fuels & Polymers Speed Facts",
+            "point": "Soap = Na/K salt of long chain fatty acid (Saponification). Micelle formation → cleaning. Hard water forms SCUM with soap (Ca²⁺/Mg²⁺). Detergents work in hard water (non-biodegradable). Coal quality: Peat<Lignite<Bituminous<Anthracite (95% C). Digboi Assam - first refinery (1901). Biogas = 75% Methane. Bakelite - Leo Baekeland 1907 (first synthetic plastic)."
+          }
+        ]
+      },
+      "navigation": {
+        "next": "card_65_final_boss_quiz",
+        "button_text": "Take Final Boss Quiz 🏆 ➔"
+      }
+    },
+    {
+      "card_id": "card_65_final_boss_quiz",
+      "card_slug": "card_65_final_boss_quiz",
+      "type": "final_quiz",
+      "concept_id": "carbon_final_assessment",
+      "level": 6,
+      "progress": {
+        "current": 65,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Consider the following statements about Carbon and its Compounds (BPSC Pattern Multi-Statement):\n\n1. Diamond and Graphite are allotropes of Carbon.\n2. Graphite is a good conductor of electricity due to free electrons in its layers.\n3. LPG mainly consists of Methane and Ethane.\n4. Ethylene is used for artificial ripening of fruits.\n5. Ethanoic acid is the main constituent of vinegar.\n\nWhich of the above statements are CORRECT?",
+        "options": [
+          {"id": "A", "text": "1, 2, 4 and 5 only"},
+          {"id": "B", "text": "1, 3, 4 and 5 only"},
+          {"id": "C", "text": "2, 3 and 4 only"},
+          {"id": "D", "text": "All are correct"}
+        ],
+        "correct_option_id": "A",
+        "explanation": "Statement Analysis:\n\n(1) CORRECT - Diamond, Graphite और Fullerene सब Carbon के allotropes हैं (same element, different structures)।\n\n(2) CORRECT - Graphite में हर carbon atom 3 दूसरे carbons से bonded है, एक electron layers में FREE है - इसलिए electricity conduct करता है। यह only non-metal है जो electricity conduct करता है।\n\n(3) INCORRECT - LPG mainly BUTANE (C₄H₁₀) और PROPANE (C₃H₈) से बना है, NOT methane/ethane। Methane = CNG/Natural gas का main constituent।\n\n(4) CORRECT - ETHYLENE (C₂H₄) एक plant hormone है जो mangoes, bananas को artificially ripen करता है।\n\n(5) CORRECT - VINEGAR (सिरका) में 5-8% ETHANOIC ACID (Acetic acid, CH₃COOH) होता है पानी में।\n\n✅ Correct Statements: 1, 2, 4 and 5 only.\n\n⭐ BPSC 2023 pattern! LPG vs CNG की trap frequently आती है - LPG=Butane+Propane, CNG=Methane!"
+      },
+      "navigation": {
+        "next": "card_66_assertion_reason_quiz",
+        "button_text": "Assertion-Reason ➔"
+      }
+    },
+    {
+      "card_id": "card_66_assertion_reason_quiz",
+      "card_slug": "card_66_assertion_reason_quiz",
+      "type": "quiz",
+      "concept_id": "assertion_reason_test",
+      "level": 6,
+      "progress": {
+        "current": 66,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "ASSERTION-REASON (NEET/UPSC Pattern):\n\nAssertion (A): Carbon forms an extremely large number of compounds.\n\nReason (R): Carbon has the property of catenation and tetravalency.\n\nWhich is correct?",
+        "options": [
+          {"id": "A", "text": "Both A and R are true, R is correct explanation of A"},
+          {"id": "B", "text": "Both A and R are true, R is NOT correct explanation"},
+          {"id": "C", "text": "A is true, R is false"},
+          {"id": "D", "text": "A is false, R is true"}
+        ],
+        "correct_option_id": "A",
+        "explanation": "BOTH Assertion and Reason TRUE, और Reason Assertion की CORRECT EXPLANATION है।\n\nAssertion TRUE: Carbon के 10 million से ज्यादा compounds known हैं - सबसे ज्यादा किसी भी element के मुकाबले।\n\nReason TRUE और CORRECT EXPLANATION: \n(1) CATENATION - Carbon atoms strong C-C bonds से lambi chains, rings, branches बना सकते हैं (hazaron atoms तक)।\n(2) TETRAVALENCY - Carbon के 4 valence electrons हैं, wo 4 bonds बना सकता है with C, H, O, N, S, halogens etc.\n\nDono properties combine होकर carbon को unique बनाती हैं - straight chains, branched chains, rings, aromatic compounds, functional groups की endless variety possible है।\n\n∴ यही cause है carbon के itne compounds का!\n\n⭐ NEET/UPSC में यह fundamental assertion-reason frequently पूछा जाता है!"
+      },
+      "navigation": {
+        "next": "card_67_scientist_year_quiz",
+        "button_text": "Scientist-Year Match ➔"
+      }
+    },
+    {
+      "card_id": "card_67_scientist_year_quiz",
+      "card_slug": "card_67_scientist_year_quiz",
+      "type": "quiz",
+      "concept_id": "scientist_year_test",
+      "level": 6,
+      "progress": {
+        "current": 67,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Match the following (BPSC/UPSC Matching Pattern):\n\nList-I (Discovery/Invention) - List-II (Year)\nA. Fullerene C₆₀ - 1. 1907\nB. Bakelite - 2. 1985\nC. Nylon (Wallace Carothers) - 3. 1901\nD. Digboi Refinery - 4. 1935\n\nCorrect matching:",
+        "options": [
+          {"id": "A", "text": "A-2, B-1, C-4, D-3"},
+          {"id": "B", "text": "A-1, B-2, C-3, D-4"},
+          {"id": "C", "text": "A-2, B-3, C-4, D-1"},
+          {"id": "D", "text": "A-4, B-1, C-2, D-3"}
+        ],
+        "correct_option_id": "A",
+        "explanation": "Correct Matching:\n\nA. Fullerene C₆₀ - 1985 (Kroto, Curl, Smalley - Nobel Prize 1996)\nB. Bakelite - 1907 (Leo Baekeland, first synthetic plastic)\nC. Nylon - 1935 (Wallace Carothers, DuPont company)\nD. Digboi Refinery - 1901 (India's first oil refinery, Assam)\n\n∴ Answer: A-2, B-1, C-4, D-3\n\nOther Important Dates:\n- Brownian Motion: Robert Brown (1827)\n- Tyndall Effect: John Tyndall (1869)\n- Vulcanized Rubber: Charles Goodyear (1839)\n- Periodic Table: Mendeleev (1869)\n\n⭐ BPSC/UPSC में scientist-year matching frequently पूछा जाता है। Dates को exactly याद रखो - options mein similar years देकर confuse करते हैं!"
+      },
+      "navigation": {
+        "next": "card_68_naming_quiz",
+        "button_text": "IUPAC Naming Test ➔"
+      }
+    },
+    {
+      "card_id": "card_68_naming_quiz",
+      "card_slug": "card_68_naming_quiz",
+      "type": "quiz",
+      "concept_id": "iupac_naming_test",
+      "level": 6,
+      "progress": {
+        "current": 68,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "The IUPAC name of common alcohol (present in alcoholic beverages) is: (NEET 2020, SSC CGL 2021)",
+        "options": [
+          {"id": "A", "text": "Methanol (मेथेनॉल)"},
+          {"id": "B", "text": "Ethanol (एथेनॉल)"},
+          {"id": "C", "text": "Propanol (प्रोपेनॉल)"},
+          {"id": "D", "text": "Butanol (ब्यूटेनॉल)"}
+        ],
+        "correct_option_id": "B",
+        "explanation": "ETHANOL (C₂H₅OH) alcoholic beverages में पाया जाता है। IUPAC name = Ethanol (Eth + an + ol), Common name = Ethyl Alcohol या Grain Alcohol।\n\nMEMORY:\n- Meth = 1 carbon\n- Eth = 2 carbons\n- Prop = 3 carbons\n- But = 4 carbons\n- Suffix -ol = alcohol (-OH group)\n\nDifference between alcohols:\n- METHANOL (CH₃OH) = POISONOUS (blindness/death), wood spirit\n- ETHANOL (C₂H₅OH) = Safe in moderation, beverages/sanitizers/biofuel\n\n⭐ NEET/SSC में IUPAC nomenclature aur poisonous vs safe alcohols पर confuse करते हैं। Bihar Prohibition context में BPSC TRE का favorite topic है!"
+      },
+      "navigation": {
+        "next": "card_69_journey_feedback",
+        "button_text": "Journey Feedback ➔"
+      }
+    },
+    {
+      "card_id": "card_69_journey_feedback",
+      "card_slug": "card_69_journey_feedback",
+      "type": "chat",
+      "concept_id": "journey_complete_feedback",
+      "level": 6,
+      "progress": {
+        "current": 69,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, ye rahi journey - toothpaste, LPG, sanitizer, sirka, plastic bag - sab kuch carbon compound hai! Tumne 'King of Elements' ko master kar liya!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir sach mein! Diamond se lekar DNA tak sab carbon hai. Ab exam mein carbon compounds ke koi bhi question aa jaye, main handle kar sakta hun!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Perfect confidence! 6 pillars yaad rakho: (1) Uniqueness (Catenation+Tetravalency), (2) Allotropes, (3) Hydrocarbons+Formulas, (4) Functional Groups+Reactions, (5) Soaps/Detergents+Micelle, (6) Fossil Fuels+Polymers. Har exam mein ye recurrent hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Thank you Sir! Organic chemistry ab strong hai! 🔥"
+        }
+      ],
+      "navigation": {
+        "next": "card_70_bonus_tips",
+        "button_text": "Bonus Tips ➔"
+      }
+    },
+    {
+      "card_id": "card_70_bonus_tips",
+      "card_slug": "card_70_bonus_tips",
+      "type": "chat",
+      "concept_id": "exam_strategy_carbon",
+      "level": 6,
+      "progress": {
+        "current": 70,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Final exam tips: (1) BPSC: Multi-statement (Diamond+Graphite properties, allotropes), Assertion-Reason (Catenation-compounds). (2) SSC/Railway: Direct facts (LPG=Butane, CNG=Methane, Vinegar=Acetic Acid). (3) NEET: Reactions (Esterification, Saponification, Hydrogenation, Combustion equations)!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Har exam ka pattern different!"
+        },
+        {
+          "speaker": "aman",
+          "text": "⭐ BPSC TRE Bihar-specific: Bihar Prohibition (methanol), Jharia/Raniganj coalfields, Bihar biogas programs, rural chemistry. Common traps: 'Diamond conducts electricity' (FALSE), 'LPG=Methane' (FALSE=Butane), 'Detergents biodegradable' (mostly FALSE)!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Trap questions ke liye ab tayyar hun!"
+        }
+      ],
+      "navigation": {
+        "next": "card_71_final_bonus_quiz",
+        "button_text": "One Last Challenge ➔"
+      }
+    },
+    {
+      "card_id": "card_71_final_bonus_quiz",
+      "card_slug": "card_71_final_bonus_quiz",
+      "type": "quiz",
+      "concept_id": "final_bonus_test",
+      "level": 6,
+      "progress": {
+        "current": 71,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Which of the following statements about ethanol is INCORRECT? (UPSC Prelims 2020, BPSC TRE 2021)",
+        "options": [
+          {"id": "A", "text": "It is used as a fuel in gasohol"},
+          {"id": "B", "text": "It reacts with sodium to produce hydrogen gas"},
+          {"id": "C", "text": "It causes blindness and death when consumed"},
+          {"id": "D", "text": "It undergoes oxidation to form ethanoic acid"}
+        ],
+        "correct_option_id": "C",
+        "explanation": "Statement C is INCORRECT! ETHANOL (C₂H₅OH) safe है in moderate amounts - alcoholic beverages, sanitizers, biofuel में use होता है। यह METHANOL (CH₃OH, wood spirit) है जो blindness और death cause करता है।\n\nOther statements correct:\nA. Gasohol = Petrol + Ethanol mixture (biofuel, eco-friendly) - CORRECT\nB. 2C₂H₅OH + 2Na → 2C₂H₅ONa + H₂↑ (hydrogen test) - CORRECT\nD. Ethanol + [O] (alk. KMnO₄) → Ethanoic acid - CORRECT\n\nMEMORY TRICK:\n- 'M' in Methanol = 'M' in Mortal (deadly)\n- 'E' in Ethanol = 'E' in Enjoyable (in moderation)\n\n⭐ UPSC/BPSC TRE Bihar Prohibition context: Illegal liquor tragedies में methanol contamination होती है, ethanol NOT। यह common trap question है!"
+      },
+      "navigation": {
+        "next": "card_72_trophy",
+        "button_text": "Claim Trophy 🏆 ➔"
+      }
+    },
+    {
+      "card_id": "card_72_trophy",
+      "card_slug": "card_72_trophy",
+      "type": "milestone",
+      "concept_id": "chapter_mastery_complete",
+      "level": 6,
+      "progress": {
+        "current": 72,
+        "total": 72
+      },
+      "milestone_payload": {
+        "title": "🏆 CHAPTER CONQUERED!",
+        "badge_emoji": "💎",
+        "completed_topic": "CARBON & ITS COMPOUNDS - Complete Mastery",
+        "xp_earned": 650,
+        "milestone_progress": "100% Complete - All 6 Modules Mastered!",
+        "motivational_quote": "From Toothpaste to DNA - CARBON's entire universe conquered! 🌍\n\n✅ Uniqueness (Catenation + Tetravalency)\n✅ Allotropes (Diamond, Graphite, Fullerene)\n✅ Hydrocarbons (Alkanes, Alkenes, Alkynes)\n✅ Functional Groups (Alcohols, Acids, Esters)\n✅ Reactions (Combustion, Oxidation, Addition, Substitution)\n✅ Soaps, Detergents & Micelle Action\n✅ Fossil Fuels, Polymers, Biomolecules\n\nBPSC/SSC/Railway/NEET/UPSC - कहीं भी Carbon Compounds के questions अब तुम्हारे हाथ की मिट्टी! 🚀🔥\n\nRemember: CARBON is the KING OF ELEMENTS, aur tum ab uske EXPERT ho! Chemistry की aisi hi har chapter conquer karenge!\n\nAll the Best for your exams! 📚✨🎯"
+      },
+      "navigation": {
+        "next": null,
+        "button_text": "Back to Dashboard 🏠"
+      }
+    }
+  ]
+}
