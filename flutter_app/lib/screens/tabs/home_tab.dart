@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:shared_preferences/shared_preferences.dart';
 import '../../widgets/home_widgets.dart';
+import '../../widgets/latest_jobs_widget.dart'; // 👈 1. IMPORT LATEST JOBS WIDGET
 import '../sprint_challenge_screen.dart';
 
 class HomeTab extends StatefulWidget {
@@ -38,7 +39,7 @@ class HomeTab extends StatefulWidget {
 class _HomeTabState extends State<HomeTab> {
   List<dynamic> _biharNewsList = [];
   List<dynamic> _nationalNewsList = [];
-  List<dynamic> _savedNewsList = []; // 📌 Saved Current Affairs state
+  List<dynamic> _savedNewsList = [];
   bool _isLoadingNews = true;
   
   // TOGGLE STATE: 0 = Bihar, 1 = National
@@ -49,7 +50,7 @@ class _HomeTabState extends State<HomeTab> {
   @override
   void initState() {
     super.initState();
-    _loadSavedNews(); // Load saved bulletins from local storage
+    _loadSavedNews();
     _fetchDailyBulletins();
   }
 
@@ -110,14 +111,12 @@ class _HomeTabState extends State<HomeTab> {
     final prefs = await SharedPreferences.getInstance();
     final String todayStr = DateTime.now().toIso8601String().split('T')[0];
     
-    // CACHE KEYS
     const String cacheBiharData = 'cached_bihar_news_json';
     const String cacheNationalData = 'cached_national_news_json';
     const String cacheDate = 'cached_bulletin_date';
 
     final String savedDate = prefs.getString(cacheDate) ?? '';
 
-    // Step 1: Check Local Storage (Skip if user pulled-to-refresh manually)
     if (!forceRefresh && savedDate == todayStr) {
       String? cachedBihar = prefs.getString(cacheBiharData);
       String? cachedNat = prefs.getString(cacheNationalData);
@@ -139,7 +138,6 @@ class _HomeTabState extends State<HomeTab> {
       }
     }
 
-    // Step 2: Dynamic Network Fetch with Millisecond Timestamp
     final int timestamp = DateTime.now().millisecondsSinceEpoch;
     final String biharUrl = "https://raw.githubusercontent.com/zxcty54/quiz/main/bihar_news.json?t=$timestamp";
     final String nationalUrl = "https://raw.githubusercontent.com/zxcty54/quiz/main/national_news.json?t=$timestamp";
@@ -196,35 +194,38 @@ class _HomeTabState extends State<HomeTab> {
               const SizedBox(height: 16),
             ],
 
-            // 🛡️ 2. HERO TRUST BANNER (CLEAN MODERN GRADIENT)
+            // 🛡️ 2. HERO TRUST BANNER
             _buildTrustHeroBanner(),
             const SizedBox(height: 18),
 
-            // 📰 3. DAILY BULLETIN CAROUSEL WITH TOGGLE SWITCH
+            // 📰 3. DAILY BULLETIN CAROUSEL
             _buildDailyBulletinSection(),
             const SizedBox(height: 18),
 
-            // 👨‍🏫 4. LEARN PREVIEW CARD
+            // 📢 4. LATEST JOBS ALERT WIDGET (TRIAL FEATURE) 👈 INTEGRATED HERE
+            LatestJobsWidget(isDarkMode: widget.isDarkMode),
+
+            // 👨‍🏫 5. LEARN PREVIEW CARD
             _buildLearnPreviewCard(context),
             const SizedBox(height: 18),
 
-            // ⚔️ 5. SPEED RUN DUEL CARD
+            // ⚔️ 6. SPEED RUN DUEL CARD
             _buildSpeedRunChallengeCard(context),
             const SizedBox(height: 18),
 
-            // 6. DYNAMIC WEB HUB
+            // 🌐 7. DYNAMIC WEB HUB
             _buildDynamicWebHubSection(context),
             const SizedBox(height: 18),
 
-            // 7. ELIGIBILITY CHECKER
+            // 8. ELIGIBILITY CHECKER
             EligibilityCheckerWidget(isDarkMode: widget.isDarkMode, onTapUrl: widget.onTapUrl),
             const SizedBox(height: 18),
 
-            // 📅 8. LAUNCH ROADMAP
+            // 📅 9. LAUNCH ROADMAP
             _buildLaunchRoadmapCard(),
             const SizedBox(height: 18),
 
-            // 9. TELEGRAM COMMUNITY
+            // 10. TELEGRAM COMMUNITY
             const TelegramCreatorWidget(),
           ],
         ),
@@ -232,7 +233,7 @@ class _HomeTabState extends State<HomeTab> {
     );
   }
 
-  // 🛡️ 1. HERO BANNER (CLEAN & SHARP MODERN GRADIENT)
+  // 🛡️ HERO BANNER
   Widget _buildTrustHeroBanner() {
     return Container(
       width: double.infinity,
@@ -257,11 +258,9 @@ class _HomeTabState extends State<HomeTab> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          // TOP BADGES ROW
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              // Pill Badge
               Container(
                 padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
                 decoration: BoxDecoration(
@@ -284,8 +283,6 @@ class _HomeTabState extends State<HomeTab> {
                   ],
                 ),
               ),
-
-              // Exam Categories Tag
               Container(
                 padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
                 decoration: BoxDecoration(
@@ -304,8 +301,6 @@ class _HomeTabState extends State<HomeTab> {
             ],
           ),
           const SizedBox(height: 14),
-
-          // MAIN HEADLINE
           RichText(
             text: const TextSpan(
               children: [
@@ -331,8 +326,6 @@ class _HomeTabState extends State<HomeTab> {
             ),
           ),
           const SizedBox(height: 12),
-
-          // FEATURE HIGHLIGHT CONTAINER
           Container(
             padding: const EdgeInsets.all(10),
             decoration: BoxDecoration(
@@ -362,7 +355,7 @@ class _HomeTabState extends State<HomeTab> {
     );
   }
 
-  // 📰 2. DAILY BULLETIN SECTION WITH DYNAMIC EXPANDABLE HEIGHT
+  // 📰 DAILY BULLETIN SECTION
   Widget _buildDailyBulletinSection() {
     if (_isLoadingNews) {
       return Container(
@@ -397,7 +390,6 @@ class _HomeTabState extends State<HomeTab> {
       crossAxisAlignment: CrossAxisAlignment.start,
       mainAxisSize: MainAxisSize.min,
       children: [
-        // HEADER ROW WITH TOGGLE BUTTON
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
@@ -423,8 +415,6 @@ class _HomeTabState extends State<HomeTab> {
                 ),
               ],
             ),
-
-            // TOGGLE SWITCH
             Container(
               padding: const EdgeInsets.all(3),
               decoration: BoxDecoration(
@@ -444,8 +434,6 @@ class _HomeTabState extends State<HomeTab> {
           ],
         ),
         const SizedBox(height: 10),
-
-        // CAROUSEL VIEW
         if (activeList.isEmpty)
           Container(
             padding: const EdgeInsets.all(20),
@@ -459,7 +447,6 @@ class _HomeTabState extends State<HomeTab> {
             ),
           )
         else ...[
-          // DYNAMIC HEIGHT PAGE VIEW (NO EXTRA WHITE SPACE AT BOTTOM)
           ExpandablePageView(
             controller: _newsPageController,
             itemCount: activeList.length,
@@ -471,8 +458,6 @@ class _HomeTabState extends State<HomeTab> {
             },
           ),
           const SizedBox(height: 8),
-
-          // INDICATOR DOTS
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: List.generate(activeList.length, (index) {
@@ -497,7 +482,6 @@ class _HomeTabState extends State<HomeTab> {
     );
   }
 
-  // 🔘 TOGGLE CHIP BUTTON
   Widget _buildNewsToggleChip(String label, int index) {
     bool isSelected = _selectedNewsTab == index;
     return GestureDetector(
@@ -533,11 +517,8 @@ class _HomeTabState extends State<HomeTab> {
     );
   }
 
-  // 📇 NEWS CARD ITEM (WITH BOOKMARK TOGGLE BUTTON)
   Widget _buildUltraPremiumNewsCard(Map<String, dynamic> news) {
     final List bullets = (news['bullets'] as List?) ?? [];
-    
-    // Check if current news card is saved
     bool isSaved = _savedNewsList.any((item) => item['title'] == news['title']);
 
     return Container(
@@ -562,7 +543,6 @@ class _HomeTabState extends State<HomeTab> {
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisSize: MainAxisSize.min,
         children: [
-          // 1. TAG, DATE & BOOKMARK ROW
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
@@ -602,8 +582,6 @@ class _HomeTabState extends State<HomeTab> {
                     ),
                   ),
                   const SizedBox(width: 6),
-
-                  // 📌 BOOKMARK ICON BUTTON
                   InkWell(
                     onTap: () => _toggleSaveNews(news),
                     borderRadius: BorderRadius.circular(20),
@@ -612,8 +590,8 @@ class _HomeTabState extends State<HomeTab> {
                       child: Icon(
                         isSaved ? Icons.bookmark_rounded : Icons.bookmark_border_rounded,
                         size: 20,
-                        color: isSaved 
-                            ? const Color(0xFFF59E0B) // Amber accent when saved
+                        color: isSaved
+                            ? const Color(0xFFF59E0B)
                             : (widget.isDarkMode ? Colors.white60 : const Color(0xFF64748B)),
                       ),
                     ),
@@ -622,10 +600,7 @@ class _HomeTabState extends State<HomeTab> {
               )
             ],
           ),
-
           const SizedBox(height: 8),
-
-          // 2. NEWS TITLE
           Text(
             news['title'] ?? '',
             style: TextStyle(
@@ -636,10 +611,7 @@ class _HomeTabState extends State<HomeTab> {
               height: 1.25,
             ),
           ),
-
           const SizedBox(height: 8),
-
-          // 3. BULLETS (ZERO INNER PADDING & NO SCROLL)
           Column(
             children: bullets.map((bullet) {
               return Padding(
@@ -677,7 +649,7 @@ class _HomeTabState extends State<HomeTab> {
     );
   }
 
-  // 👨‍🏫 3. LEARN PREVIEW CARD
+  // 👨‍🏫 LEARN PREVIEW CARD
   Widget _buildLearnPreviewCard(BuildContext context) {
     int percentDisplay = (widget.lastLearnProgress * 100).toInt();
 
@@ -808,7 +780,7 @@ class _HomeTabState extends State<HomeTab> {
     );
   }
 
-  // ⚔️ 4. LIVE DUEL SPRINT CARD
+  // ⚔️ LIVE DUEL SPRINT CARD
   Widget _buildSpeedRunChallengeCard(BuildContext context) {
     return Container(
       width: double.infinity,
@@ -1043,7 +1015,6 @@ class _HomeTabState extends State<HomeTab> {
     );
   }
 
-  // 📅 5. LAUNCH ROADMAP CARD
   Widget _buildLaunchRoadmapCard() {
     final List roadmapList = widget.appConfig['launch_roadmap'] ?? [
       {"text": "🔥 Coming Tomorrow: BSSC Inter Level Top 100 Qs", "color": "0xFFFF4757"},
