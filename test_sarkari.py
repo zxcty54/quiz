@@ -125,74 +125,62 @@ def fetch_page_via_scrapingant(url):
         print(f"⚠️ ScrapingAnt error for {url}: {e}")
     return None
 
-# 🎯 ADVANCED DOM TABLE PARSER (Exact Target for Total Post Cells)
+# 🎯 EXACT HTML STRUCTURE PARSER
 def parse_inner_article_page(html_content):
     if not html_content:
         return {}
 
     soup = BeautifulSoup(html_content, 'html.parser')
+    page_text = soup.get_text()
     extracted_vacancies = None
-    vacancy_numbers = []
 
-    # 1. SCAN ALL HTML TABLES FOR "TOTAL POST"
-    tables = soup.find_all('table')
-    for table in tables:
-        rows = table.find_all('tr')
-        target_col_idx = -1
+    # Step 1: Direct Heading Search (Matches "Vacancy Details Total : 1538 Post")
+    heading_match = re.search(r'Vacancy\s*Details\s*Total\s*:?\s*(\d+)\s*(?:Post|Posts|Vacancies)?', page_text, re.IGNORECASE)
+    if heading_match:
+        extracted_vacancies = f"{heading_match.group(1)} Posts"
 
-        for r_idx, row in enumerate(rows):
-            cells = row.find_all(['td', 'th'])
-            cell_texts = [clean_text(c.text) for c in cells]
+    # Step 2: Table Search (Matches Header Column 'Total Post' and extracts from next row)
+    if not extracted_vacancies:
+        tables = soup.find_all('table')
+        for table in tables:
+            rows = table.find_all('tr')
+            for r_idx, row in enumerate(rows):
+                cells = row.find_all(['td', 'th'])
+                cell_texts = [clean_text(c.text) for c in cells]
 
-            # Level 1: Check if "Total Post : 6171" is directly inside a single cell
-            for cell_text in cell_texts:
-                match = re.search(r'Total\s*Post\s*:?\s*(\d+)', cell_text, re.IGNORECASE)
-                if match:
-                    extracted_vacancies = f"{match.group(1)} Posts"
-                    break
+                # Find column index for "Total Post"
+                total_post_col_idx = -1
+                for c_idx, text in enumerate(cell_texts):
+                    if re.search(r'total\s*post', text, re.IGNORECASE):
+                        total_post_col_idx = c_idx
+                        break
 
+                # If found, extract value from next data row
+                if total_post_col_idx != -1 and r_idx + 1 < len(rows):
+                    next_row_cells = rows[r_idx + 1].find_all(['td', 'th'])
+                    if total_post_col_idx < len(next_row_cells):
+                        val_str = clean_text(next_row_cells[total_post_col_idx].text)
+                        digits = re.search(r'(\d+)', val_str)
+                        if digits:
+                            extracted_vacancies = f"{digits.group(1)} Posts"
+                            break
             if extracted_vacancies:
                 break
 
-            # Level 2: Detect "Total Post" Column Header Index
-            for c_idx, cell_text in enumerate(cell_texts):
-                if re.search(r'total\s*post', cell_text, re.IGNORECASE):
-                    target_col_idx = c_idx
-                    break
-
-            # If Header Index found, read data from next rows in that column
-            if target_col_idx != -1 and r_idx + 1 < len(rows):
-                for next_r in range(r_idx + 1, len(rows)):
-                    next_cells = rows[next_r].find_all(['td', 'th'])
-                    if target_col_idx < len(next_cells):
-                        val_str = clean_text(next_cells[target_col_idx].text)
-                        digits = re.findall(r'\b\d+\b', val_str)
-                        if digits:
-                            vacancy_numbers.extend([int(d) for d in digits if int(d) < 100000])
-
-        if extracted_vacancies:
-            break
-
-    # Level 3: Calculate Total if multiple row numbers were found
-    if not extracted_vacancies and vacancy_numbers:
-        total_sum = sum(vacancy_numbers)
-        extracted_vacancies = f"{total_sum} Posts"
-
-    # Level 4: Full Page Text Regex Backup
-    page_text = soup.get_text()
+    # Step 3: General Text Regex Match
     if not extracted_vacancies:
-        match = re.search(r'Total\s*(?:Post|Vacancy)\s*:?\s*(\d+)', page_text, re.IGNORECASE)
-        if match:
-            extracted_vacancies = f"{match.group(1)} Posts"
+        gen_match = re.search(r'Total\s*Post\s*:?\s*(\d+)', page_text, re.IGNORECASE)
+        if gen_match:
+            extracted_vacancies = f"{gen_match.group(1)} Posts"
 
-    # Final Fallback Check
+    # Step 4: Fallback Logic
     if not extracted_vacancies:
         if "various post" in page_text.lower():
             extracted_vacancies = "Various Posts"
         else:
             extracted_vacancies = "Refer Official Notification"
 
-    # 2. EXTRACT DATES
+    # EXTRACT DATES
     start_date = "Online Active"
     start_match = re.search(r'(Application\s*Begin\s*:?\s*)(\d{1,2}[/-]\d{1,2}[/-]\d{2,4})', page_text, re.IGNORECASE)
     if start_match:
@@ -203,7 +191,7 @@ def parse_inner_article_page(html_content):
     if last_match:
         last_date = last_match.group(2).strip()
 
-    # 3. EXTRACT QUALIFICATION
+    # EXTRACT QUALIFICATION
     qualification = "Refer Official Notification"
     if "10th" in page_text or "High School" in page_text:
         qualification = "Class 10th Pass / ITI"
