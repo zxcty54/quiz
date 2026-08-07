@@ -2,7 +2,6 @@ import os
 import json
 import time
 import re
-import traceback
 from datetime import datetime
 from urllib.parse import urljoin
 from curl_cffi import requests
@@ -10,7 +9,7 @@ from bs4 import BeautifulSoup
 from groq import Groq
 
 # -------------------------------------------------------------
-# 1. API Client Setup (Groq API)
+# 1. Setup & Config
 # -------------------------------------------------------------
 GROQ_KEY = os.environ.get("GROQ_API_KEY")
 client = Groq(api_key=GROQ_KEY) if GROQ_KEY else None
@@ -25,12 +24,18 @@ AI_MODELS_TIERS = [
     "llama-3.3-70b-versatile"
 ]
 
-# Strict Non-Bihar / Other States Rejection Keywords
-OTHER_STATES_REJECT = [
-    "cuttack", "odisha", "orissa", "uttar pradesh", " up ", "uppsc", 
-    "madhya pradesh", "mppsc", "rajasthan", "rpsc", "haryana", "hpsc", 
-    "maharashtra", "mpsc", "jharkhand", "jpsc", "west bengal", "wbpsc", 
-    "punjab", "gujarat", "kerala", "karnataka", "tamil nadu", "andhra"
+# Strict Rejection List (AIIMS + Other States + Local Districts)
+HARD_REJECT_KEYWORDS = [
+    # AIIMS Rejection
+    "aiims", 
+
+    # Non-Bihar States & Local Places
+    "cuttack", "odisha", "orissa", "khordha", "balipatna", "oav ", 
+    "uttar pradesh", " up ", "uppsc", "madhya pradesh", "mppsc", 
+    "rajasthan", "rpsc", "haryana", "hpsc", "maharashtra", "mpsc", 
+    "jharkhand", "jpsc", "west bengal", "wbpsc", "punjab", "gujarat", 
+    "kerala", "karnataka", "tamil nadu", "andhra", " ap ", "mahesh bank",
+    "telangana", "tspsc", "assam", "chhattisgarh"
 ]
 
 BIHAR_BOARDS = [
@@ -62,9 +67,18 @@ CENTRAL_BOARDS = [
 
 ALL_BOARDS = BIHAR_BOARDS + CENTRAL_BOARDS
 
-def is_other_state_job(text):
-    text_lower = text.lower()
-    return any(state in text_lower for state in OTHER_STATES_REJECT)
+def is_hard_rejected(text):
+    text_lower = f" {text.lower()} "
+    return any(keyword in text_lower for keyword in HARD_REJECT_KEYWORDS)
+
+def parse_vacancy_count(vac_str):
+    """Extracts numeric integer count from vacancy string."""
+    if not vac_str:
+        return None
+    match = re.search(r'\b(\d+)\b', str(vac_str))
+    if match:
+        return int(match.group(1))
+    return None
 
 def detect_organization(text):
     text_lower = text.lower()
@@ -83,24 +97,23 @@ def clean_html_text(text):
     return BeautifulSoup(text, "html.parser").get_text().strip()
 
 # -------------------------------------------------------------
-# 2. Multi-Tier AI Parser (Real Dates & Details)
+# 2. Multi-Tier AI Parser
 # -------------------------------------------------------------
 def parse_job_data_with_ai(context_text):
     if not client:
         return {}
 
     prompt = f"""
-    Extract recruitment notification details from the text below.
-    Return strictly valid JSON without markdown formatting.
+    Extract recruitment details from the text below into strictly valid JSON.
 
-    Expected JSON Schema:
+    Expected Schema:
     {{
       "start_date": "Exact Application Start Date (e.g., '15/07/2026') or null",
       "last_date": "Exact Application Last Date (e.g., '28/08/2026') or null",
-      "age_limit": "Age criteria (e.g., '20 to 28 Years') or null",
-      "application_fee": "Fee details (e.g., 'Rs. 850 for Gen/OBC, Rs. 175 for SC/ST') or null",
+      "age_limit": "Age criteria or null",
+      "application_fee": "Fee details or null",
       "qualification": "Educational requirement or null",
-      "total_vacancies": "Total posts count (e.g., '11403 Posts') or null"
+      "total_vacancies": "Total posts count string or null"
     }}
 
     Text Context:
@@ -120,15 +133,15 @@ def parse_job_data_with_ai(context_text):
                 timeout=10
             )
             parsed_json = json.loads(res.choices[0].message.content)
-            print(f"  [AI Success] Extracted using model: {model_name}")
+            print(f"  [AI Success] Model: {model_name}")
             return parsed_json
         except Exception as e:
-            print(f"  [AI Tier Fallback] Model '{model_name}' failed. Trying next tier...")
+            print(f"  [AI Tier Fallback] Model '{model_name}' failed. Trying next...")
 
     return {}
 
 # -------------------------------------------------------------
-# 3. Step 1: Main Table Scraper (Scrapes Post Date as Start Date)
+# 3. Step 1: Main Table Scraper with Min-30 Vacancy Filter
 # -------------------------------------------------------------
 def fetch_main_table_data(url):
     candidates = []
@@ -153,12 +166,6 @@ def fetch_main_table_data(url):
                     if "post name" in col_texts[1].lower() or "post date" in col_texts[0].lower():
                         continue
 
-                    # Table Column Structure:
-                    # Col 0: Post Date (Scraped as Start Date)
-                    # Col 1: Board Name
-                    # Col 2: Post Name & Vacancies
-                    # Col 3: Qualification
-                    # Col 4: Last Date
                     post_date = col_texts[0]
                     raw_board = col_texts[1]
                     raw_post_and_vacancies = col_texts[2]
@@ -167,13 +174,19 @@ def fetch_main_table_data(url):
 
                     title = f"{raw_board} {raw_post_and_vacancies}".strip()
 
-                    # 🚫 REJECT OTHER STATES (Cuttack, Odisha, UP, MP, etc.)
-                    if is_other_state_job(title):
-                        print(f"  [Rejected Other State]: {title}")
+                    # 🚫 FILTER 1: REJECT AIIMS & OTHER STATES
+                    if is_hard_rejected(title):
+                        print(f"  [Rejected AIIMS/State/Local]: {title}")
                         continue
 
                     vac_match = re.search(r'(\d+[\d,]*)\s*(Posts|Vacancies)?', raw_post_and_vacancies, re.IGNORECASE)
-                    vacancies = vac_match.group(0) if vac_match else None
+                    vacancies_str = vac_match.group(0) if vac_match else None
+                    vac_num = parse_vacancy_count(vacancies_str)
+
+                    # 🚫 FILTER 2: REJECT IF VACANCIES ARE LESS THAN 30
+                    if vac_num is not None and vac_num < 30:
+                        print(f"  [Rejected Low Vacancy ({vac_num} < 30)]: {title}")
+                        continue
 
                     clean_post = re.sub(r'[\s–-]+\d+\s*(Posts|Vacancies)?.*$', '', raw_post_and_vacancies, flags=re.IGNORECASE).strip()
 
@@ -196,14 +209,14 @@ def fetch_main_table_data(url):
                             "post_name": clean_post,
                             "organization": org_name,
                             "qualification": qualification,
-                            "total_vacancies": vacancies,
-                            "post_date": post_date, # Scraped real post date
+                            "total_vacancies": vacancies_str,
+                            "post_date": post_date,
                             "last_date": extracted_last_date,
                             "detail_url": detail_url,
                             "is_bihar": is_bihar_job(title)
                         })
 
-        print(f"[STEP 1] ✅ Extracted {len(candidates)} valid Bihar/Central jobs from table!")
+        print(f"[STEP 1] ✅ Extracted {len(candidates)} valid jobs (Filtered <30 posts & AIIMS)!")
 
     except Exception as e:
         print(f"[STEP 1] 🚨 Error: {e}")
@@ -211,7 +224,7 @@ def fetch_main_table_data(url):
     return candidates
 
 # -------------------------------------------------------------
-# 4. Step 2: Inner Page Scrape (PDF & Inner Context)
+# 4. Step 2: Inner Page Deep Scrape
 # -------------------------------------------------------------
 def fetch_deep_details(detail_url):
     details = {"text_content": "", "pdf_url": None}
@@ -235,7 +248,7 @@ def fetch_deep_details(detail_url):
     return details
 
 # -------------------------------------------------------------
-# 5. Main Execution
+# 5. Main Execution Pipeline
 # -------------------------------------------------------------
 def run_job_pipeline():
     today_str = datetime.now().strftime("%d %b %Y")
@@ -260,8 +273,19 @@ def run_job_pipeline():
         deep_data = fetch_deep_details(detail_url)
         full_context = f"{title}\nPost Date: {cand['post_date']}\nQualification: {cand['qualification']}\n{deep_data['text_content']}"
 
-        # Call AI Parser
+        # Additional Safety Rejection check on deep page content
+        if is_hard_rejected(full_context):
+            print(f"  [Inner Rejected AIIMS/State]: {title}")
+            continue
+
         ai_data = parse_job_data_with_ai(full_context)
+
+        # Final Post-AI Vacancy Check (if AI found a refined vacancy number < 30)
+        final_vac_str = ai_data.get("total_vacancies") or cand["total_vacancies"]
+        final_vac_num = parse_vacancy_count(final_vac_str)
+        if final_vac_num is not None and final_vac_num < 30:
+            print(f"  [AI-Refined Rejected Low Vacancy ({final_vac_num} < 30)]: {title}")
+            continue
 
         job_card = {
             "id": f"job_{len(latest_jobs)+1:02d}",
@@ -269,11 +293,11 @@ def run_job_pipeline():
             "organization": cand["organization"],
             "job_type": "Bihar Govt Job" if cand["is_bihar"] else "Central Govt Job",
             "post_name": cand["post_name"] or None,
-            "total_vacancies": ai_data.get("total_vacancies") or cand["total_vacancies"] or None,
+            "total_vacancies": final_vac_str or None,
             "qualification": ai_data.get("qualification") or cand["qualification"] or None,
             "age_limit": ai_data.get("age_limit") or None,
             "application_fee": ai_data.get("application_fee") or None,
-            "start_date": ai_data.get("start_date") or cand["post_date"] or None, # Real scraped date used!
+            "start_date": ai_data.get("start_date") or cand["post_date"] or None,
             "last_date": ai_data.get("last_date") or cand["last_date"] or None,
             "apply_url": "https://www.mocktester.online",
             "notification_pdf": deep_data["pdf_url"] or None,
@@ -290,7 +314,7 @@ def run_job_pipeline():
     with open("bihar_jobs.json", "w", encoding="utf-8") as f:
         json.dump(final_output, f, ensure_ascii=False, indent=2)
 
-    print(f"\n✅ Clean bihar_jobs.json generated with {len(latest_jobs)} items!")
+    print(f"\n✅ Clean bihar_jobs.json generated! Total Valid Jobs: {len(latest_jobs)}")
 
 if __name__ == "__main__":
     run_job_pipeline()
