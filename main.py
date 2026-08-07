@@ -167,11 +167,10 @@ def fetch_raw_jobs():
         res = requests.get(fja_bihar_url, headers=headers, timeout=15, verify=False)
         if res.status_code == 200:
             soup = BeautifulSoup(res.content, "html.parser")
-            # Parse Job Tables directly
             tables = soup.find_all("table")
             for table in tables:
                 rows = table.find_all("tr")
-                for row in rows[1:30]:  # Scan top rows with full details
+                for row in rows[1:30]:
                     text = clean_html_text(row.text)
                     if text and len(text) > 15:
                         job_notices.append(f"[FreeJobAlert Bihar Page Table Row] {text}")
@@ -289,11 +288,11 @@ def generate_job_summary(raw_text):
     1. WRITE EVERYTHING IN 100% PURE ENGLISH ONLY.
     2. REJECT ANY OTHER STATE JOBS (REJECT UP, MP, Rajasthan, Haryana, Delhi, Maharashtra, etc.).
     3. INCLUDE BOTH: Newly Announced Jobs AND Currently Active/Live Jobs (where form submission is open).
-    4. Extract complete details: start_date, last_date, total_vacancies, qualification, application_fee, age_limit, pay_scale.
+    4. Extract complete details for: start_date, last_date, total_vacancies, qualification, age_limit, application_fee.
     5. If exact fee or vacancies are not explicitly stated in the text, write "As per Official Rules" or "Various Posts" instead of empty string.
     6. Always set "apply_url" to "https://www.mocktester.online".
 
-    JSON SCHEMA OUTPUT:
+    JSON SCHEMA OUTPUT (Return EXACTLY this structure):
     {{
       "latest_jobs": [
         {{
@@ -304,10 +303,8 @@ def generate_job_summary(raw_text):
           "post_name": "Post Name",
           "total_vacancies": "Posts Count e.g. 1,957 Posts or Various Posts",
           "qualification": "Full Eligibility criteria",
-          "age_limit": "Age criteria",
-          "pay_scale": "Pay scale or Level",
+          "age_limit": "Min & Max Age limit with relaxation details",
           "application_fee": "Fee details e.g. General: ₹600 | SC/ST: ₹150 or As per Rules",
-          "selection_process": "Selection steps",
           "start_date": "Start Date e.g. 28 Aug 2026 or Online Active",
           "last_date": "Last Date e.g. 30 Sep 2026",
           "apply_url": "https://www.mocktester.online",
