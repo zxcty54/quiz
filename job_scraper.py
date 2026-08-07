@@ -6,7 +6,7 @@ from datetime import datetime
 from curl_cffi import requests
 from bs4 import BeautifulSoup
 from groq import Groq
-import pymupdf  # PyMuPDF clean import
+import pymupdf  # PyMuPDF
 
 # -------------------------------------------------------------
 # 1. API Client Setup (Groq API)
@@ -100,7 +100,7 @@ def extract_fields_with_regex(text):
         "total_vacancies": None
     }
 
-    # 1. Application Fee Pattern
+    # Fee Patterns
     fee_patterns = [
         r'(?:Application\s*Fee|Exam\s*Fee|Fee\s*Details)[\s\S]{1,250}?(?=\n\s*\n|Important|Age|Qualification|$)',
         r'(?:General\s*/?\s*OBC|UR\s*/?\s*EWS)[^.\n]*[₹\d]+[^.\n]*',
@@ -117,7 +117,7 @@ def extract_fields_with_regex(text):
         if re.search(r'\b(no fee|free of cost|nil|exempted)\b', text, re.IGNORECASE):
             extracted["application_fee"] = "General / OBC / SC / ST: ₹0 (No Fee)"
 
-    # 2. Dates Pattern
+    # Dates Pattern
     date_matches = re.findall(r'\b\d{1,2}[/-]\d{1,2}[/-]\d{2,4}\b|\b\d{1,2}\s+(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)[a-z]*\s+\d{2,4}\b', text, re.IGNORECASE)
     if len(date_matches) >= 2:
         extracted["start_date"] = date_matches[0]
@@ -125,7 +125,7 @@ def extract_fields_with_regex(text):
     elif len(date_matches) == 1:
         extracted["last_date"] = date_matches[0]
 
-    # 3. Age Limit Pattern
+    # Age Limit Pattern
     age_patterns = [
         r'(\d{2}\s*to\s*\d{2}\s*years)',
         r'(\d{2}\s*-\s*\d{2}\s*years)',
@@ -139,7 +139,7 @@ def extract_fields_with_regex(text):
             extracted["age_limit"] = clean_age
             break
 
-    # 4. Vacancies Pattern
+    # Vacancies Pattern
     vac_match = re.search(r'\b(\d{2,6})\s*(Posts|Vacancies|Seat|Seats)\b', text, re.IGNORECASE)
     if vac_match:
         extracted["total_vacancies"] = f"{vac_match.group(1)} Posts"
@@ -147,11 +147,14 @@ def extract_fields_with_regex(text):
     return extracted
 
 # -------------------------------------------------------------
-# 4. DEEP SCRAPER & PDF CRAWLER
+# 4. DEEP SCRAPER WITH HEAVY DEBUG LOGGING
 # -------------------------------------------------------------
 def fetch_deep_page_and_pdf(url):
+    print(f"  🌐 [FETCH] Requesting URL: {url}")
     try:
-        res = requests.get(url, headers=HEADERS, timeout=6, verify=False, allow_redirects=True)
+        res = requests.get(url, headers=HEADERS, timeout=12, verify=False, allow_redirects=True)
+        print(f"  🌐 [RESPONSE] Status Code: {res.status_code} | Length: {len(res.content)} bytes")
+        
         if res.status_code != 200:
             return ""
 
@@ -160,39 +163,59 @@ def fetch_deep_page_and_pdf(url):
             tag.decompose()
 
         pdf_candidates = []
-        for a_tag in soup.find_all('a', href=True):
+        all_links = soup.find_all('a', href=True)
+        print(f"  🔗 [SCRAPE] Total <a> tags found on page: {len(all_links)}")
+
+        for a_tag in all_links:
             href = a_tag['href'].strip()
-            if href.endswith('.pdf') or "notification" in a_tag.text.lower():
-                pdf_candidates.append(requests.compat.urljoin(url, href))
+            text_label = a_tag.text.strip().lower()
+            if href.endswith('.pdf') or "notification" in text_label or "advertisement" in text_label or "click here" in text_label:
+                full_pdf_url = requests.compat.urljoin(url, href)
+                pdf_candidates.append(full_pdf_url)
+
+        print(f"  📄 [PDF SEARCH] Potential PDF links identified: {len(pdf_candidates)}")
 
         best_pdf_bytes = None
         best_pdf_size = 0
+        winning_url = ""
 
-        for c_url in pdf_candidates[:3]:
+        for idx, c_url in enumerate(pdf_candidates[:5]):
+            print(f"    📥 [DOWNLOADING PDF candidate {idx+1}/{len(pdf_candidates[:5])}]: {c_url}")
             try:
-                c_res = requests.get(c_url, headers=HEADERS, timeout=5, verify=False)
-                if c_res.status_code == 200 and len(c_res.content) > best_pdf_size:
-                    best_pdf_size = len(c_res.content)
+                c_res = requests.get(c_url, headers=HEADERS, timeout=10, verify=False)
+                c_len = len(c_res.content)
+                print(f"      -> Response: {c_res.status_code} | Size: {c_len // 1024} KB")
+                
+                if c_res.status_code == 200 and c_len > best_pdf_size:
+                    best_pdf_size = c_len
                     best_pdf_bytes = c_res.content
-            except Exception:
-                pass
+                    winning_url = c_url
+            except Exception as e:
+                print(f"      ⚠️ Fetch error on candidate: {e}")
 
-        if best_pdf_bytes and best_pdf_size > 10000:
+        if best_pdf_bytes and best_pdf_size > 5000:
             try:
+                print(f"  ⚡ [PyMuPDF] Parsing Main Selected PDF: {winning_url} ({best_pdf_size // 1024} KB)")
                 doc = pymupdf.open(stream=best_pdf_bytes, filetype="pdf")
+                pages_count = len(doc)
                 pdf_text = ""
-                for page_num in range(min(len(doc), 10)):
+                for page_num in range(min(pages_count, 10)):
                     pdf_text += doc[page_num].get_text("text") + "\n"
-                print(f"  📄 Selected PDF ({best_pdf_size // 1024} KB)")
-                return clean_html_text(pdf_text[:12000])
-            except Exception:
-                pass
+                
+                clean_extracted = clean_html_text(pdf_text[:12000])
+                print(f"  ✅ [PyMuPDF SUCCESS] Extracted {len(clean_extracted)} characters from {min(pages_count, 10)}/{pages_count} pages!")
+                return clean_extracted
+            except Exception as pe:
+                print(f"  ❌ [PyMuPDF ERROR] Stream parse error: {pe}")
 
+        print("  ⚠️ [FALLBACK] No suitable PDF parsed. Extracting HTML body text instead...")
         content = soup.find('div', id=re.compile(r'post|content|entry')) or soup.find('body')
-        return clean_html_text(content.text if content else "")[:8000]
+        html_text = clean_html_text(content.text if content else "")[:8000]
+        print(f"  ℹ️ [HTML FALLBACK] Extracted {len(html_text)} characters from HTML Body.")
+        return html_text
 
     except Exception as e:
-        print(f"  ⚠️ Fetch Warning ({url}): {e}")
+        print(f"  ❌ [FETCH ERROR] Deep Page/PDF Error ({url}): {e}")
     return ""
 
 # -------------------------------------------------------------
@@ -202,9 +225,10 @@ def fill_missing_fields_with_ai(title, raw_snippet, missing_keys):
     if not GROQ_KEY or not missing_keys:
         return {}
 
+    print(f"  🤖 [GROQ AI] Requesting AI to fill missing fields: {missing_keys}")
     prompt = f"""
     Title: {title}
-    Context: {raw_snippet[:1500]}
+    Context: {raw_snippet[:2000]}
 
     Extract missing fields ({', '.join(missing_keys)}) for this gov notification in JSON.
     Schema:
@@ -230,15 +254,16 @@ def fill_missing_fields_with_ai(title, raw_snippet, missing_keys):
                 temperature=0.01,
                 response_format={"type": "json_object"},
                 max_tokens=500,
-                timeout=10
+                timeout=15
             )
+            print(f"  ⚡ [GROQ AI SUCCESS] Response received using [{model}]!")
             return json.loads(res.choices[0].message.content.strip())
-        except Exception:
-            pass
+        except Exception as e:
+            print(f"  ⚠️ [GROQ AI ERROR] Model [{model}] failed: {e}")
     return {}
 
 # -------------------------------------------------------------
-# 6. RELAXED & PRECISE REJECTION KEYWORDS
+# 6. HARD REJECTION KEYWORDS
 # -------------------------------------------------------------
 REJECT_KEYWORDS = [
     r'\buniversity\b', r'\bcollege\b', r'\bsemester\b', r'\bba part\b', r'\bbsc\b', r'\bbcom\b',
@@ -251,19 +276,19 @@ REJECT_KEYWORDS = [
     r'\bapprentice\b', r'\bapprenticeship\b', r'\bmbbs\b', r'\bmedical officer\b'
 ]
 
-def is_rejected(text):
+def check_rejection_reason(text):
     t_lower = text.lower()
     for pattern in REJECT_KEYWORDS:
         if re.search(pattern, t_lower):
-            return True
-    return False
+            return pattern
+    return None
 
 def clean_post_name(title):
     clean = re.sub(r'(Recruitment|Notification|Online Form|Apply Online|2025|2026)', '', title, flags=re.IGNORECASE)
     return clean.strip()[:50]
 
 # -------------------------------------------------------------
-# 7. MAIN PIPELINE EXECUTION
+# 7. MAIN PIPELINE EXECUTION WITH VERBOSE LOGS
 # -------------------------------------------------------------
 def run_job_pipeline():
     today_str = datetime.now().strftime("%d %b %Y")
@@ -285,30 +310,38 @@ def run_job_pipeline():
     seen_titles = set()
 
     for label, feed_url, item_type in sources:
+        print(f"\n=======================================================")
+        print(f"📡 [SOURCE START] Fetching RSS Feed: {label}")
+        print(f"=======================================================")
         try:
-            res = requests.get(feed_url, headers=HEADERS, timeout=10, verify=False)
+            res = requests.get(feed_url, headers=HEADERS, timeout=12, verify=False)
+            print(f"  📡 RSS Response: {res.status_code}")
             if res.status_code != 200:
                 continue
 
             soup = BeautifulSoup(res.content, "xml")
-            items = soup.find_all('item')[:15]
+            items = soup.find_all('item')[:10]
+            print(f"  📡 Found {len(items)} items in RSS Feed.")
 
-            for item in items:
+            for idx, item in enumerate(items):
                 title = item.find('title').text.strip() if item.find('title') is not None else ""
                 link = item.find('link').text.strip() if item.find('link') is not None else ""
                 
-                # Title check
-                if not title or len(title) < 5 or is_rejected(title):
+                print(f"\n[{idx+1}/{len(items)}] 🔍 Item: {title}")
+
+                # Title rejection check
+                reject_reason = check_rejection_reason(title)
+                if reject_reason:
+                    print(f"  🚫 [REJECTED TITLE] Matched keyword pattern: {reject_reason}")
                     continue
 
                 simple_title = re.sub(r'[^a-zA-Z0-9]', '', title.lower())[:30]
                 if simple_title in seen_titles:
+                    print(f"  🔄 [DUPLICATE] Skipped already processed title.")
                     continue
                 seen_titles.add(simple_title)
 
-                print(f"🔍 Processing [{item_type.upper()}]: {title}")
-
-                # Deep Scrape or RSS fallback
+                # Fetch Deep Page & PDF
                 content_node = item.find('{http://purl.org/rss/1.0/modules/content/}encoded')
                 rss_text = clean_html_text(content_node.text) if content_node is not None else ""
                 
@@ -316,8 +349,9 @@ def run_job_pipeline():
                 full_text_context = f"{title}\n{raw_snippet}\n{rss_text}"
 
                 # Inner text rejection check
-                if is_rejected(full_text_context):
-                    print(f"  ❌ Rejection rule matched in inner text")
+                inner_reject_reason = check_rejection_reason(full_text_context)
+                if inner_reject_reason:
+                    print(f"  🚫 [REJECTED INNER TEXT] Matched keyword pattern: {inner_reject_reason}")
                     continue
 
                 # Regex Extraction
@@ -351,6 +385,7 @@ def run_job_pipeline():
                         "date": today_str
                     }
                     latest_jobs.append(job_card)
+                    print(f"  ✅ [ADDED TO JOBS] Total jobs so far: {len(latest_jobs)}")
 
                 elif item_type == "admit":
                     admit_card = {
@@ -367,6 +402,7 @@ def run_job_pipeline():
                         "date": today_str
                     }
                     admit_cards.append(admit_card)
+                    print(f"  ✅ [ADDED TO ADMIT CARDS] Total so far: {len(admit_cards)}")
 
                 elif item_type == "result":
                     res_card = {
@@ -382,6 +418,7 @@ def run_job_pipeline():
                         "date": today_str
                     }
                     results.append(res_card)
+                    print(f"  ✅ [ADDED TO RESULTS] Total so far: {len(results)}")
 
         except Exception as e:
             print(f"⚠️ Source Error ({label}): {e}")
@@ -395,15 +432,19 @@ def run_job_pipeline():
 
     final_output = remove_markdown_stars(final_output)
 
+    print(f"\n=======================================================")
+    print(f"📊 SUMMARY REPORT:")
+    print(f"👉 Total Latest Jobs: {len(latest_jobs)}")
+    print(f"👉 Total Admit Cards: {len(admit_cards)}")
+    print(f"👉 Total Results: {len(results)}")
+    print(f"=======================================================")
+
     if latest_jobs or admit_cards or results:
         with open("bihar_jobs.json", "w", encoding="utf-8") as f:
             json.dump(final_output, f, ensure_ascii=False, indent=2)
-        print(f"\n✅ bihar_jobs.json successfully updated!\n"
-              f"👉 Jobs: {len(latest_jobs)}\n"
-              f"👉 Admit Cards: {len(admit_cards)}\n"
-              f"👉 Results: {len(results)}")
+        print("✅ bihar_jobs.json successfully updated!")
     else:
-        print("\n🛡️ SAFEGUARD: No valid items found. Retaining existing file.")
+        print("🛡️ SAFEGUARD: No valid items found. Retaining existing file.")
 
 if __name__ == "__main__":
     run_job_pipeline()
