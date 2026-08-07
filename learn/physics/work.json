@@ -1,0 +1,2473 @@
+{
+  "topic_id": "work_energy_power_physics",
+  "topic_title": "Work, Energy & Power",
+  "target_exams": [
+    "BPSC",
+    "BSSC",
+    "RRB NTPC",
+    "SSC CGL",
+    "NEET",
+    "UPSC Prelims",
+    "BPSC TRE"
+  ],
+  "total_cards": 72,
+  "characters": {
+    "aman": {
+      "name": "Aman Sir",
+      "role": "teacher",
+      "avatar": "👨‍🏫"
+    },
+    "raju": {
+      "name": "Raju",
+      "role": "student",
+      "avatar": "👦"
+    }
+  },
+  "cards": [
+    {
+      "card_id": "card_01_intro",
+      "card_slug": "card_01_intro",
+      "type": "intro",
+      "concept_id": "chapter_intro",
+      "level": 1,
+      "progress": {
+        "current": 1,
+        "total": 72
+      },
+      "intro_payload": {
+        "title": "⚡ Work, Energy & Power",
+        "icon": "🔋",
+        "target_exams": [
+          "BPSC",
+          "BSSC",
+          "RRB NTPC",
+          "SSC CGL",
+          "NEET",
+          "UPSC Prelims",
+          "BPSC TRE"
+        ],
+        "learning_outcomes": [
+          "Master the scientific definition of Work and resolve BPSC multi-statement traps",
+          "Understand Energy transformations from kitchen to NEET questions",
+          "Calculate Power and differentiate human vs machine efficiency",
+          "Solve Kinetic & Potential Energy numerical for SSC/Railway",
+          "Apply Work-Energy Theorem like an Officer",
+          "Decode Conservation of Energy in real-world scenarios"
+        ],
+        "estimated_time": "45 minutes",
+        "total_modules": 6
+      },
+      "navigation": {
+        "next": "card_02_work_intro",
+        "button_text": "शुरू करें 🚀"
+      }
+    },
+    {
+      "card_id": "card_02_work_intro",
+      "card_slug": "card_02_work_intro",
+      "type": "chat",
+      "concept_id": "work_daily_life",
+      "level": 1,
+      "progress": {
+        "current": 2,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, kal Sunday tha... ghar pe kya kiya tha?"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir, poora din padhai ki... bahut hard work kiya! Thak gaya hun 😫"
+        },
+        {
+          "speaker": "aman",
+          "text": "Achhaaaa... to Physics ke hisaab se tumne kitna 'Work' kiya? 🤔"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir wo hi to bol raha hun... 6 ghante padhai = bahut zyada work! 😅"
+        }
+      ],
+      "navigation": {
+        "next": "card_03_work_trap",
+        "button_text": "Next ➔"
+      }
+    },
+    {
+      "card_id": "card_03_work_trap",
+      "card_slug": "card_03_work_trap",
+      "type": "chat",
+      "concept_id": "work_definition_intro",
+      "level": 1,
+      "progress": {
+        "current": 3,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ruko ruko... yahin BPSC exam mein sabko fas-aate hain! 😎 Physics mein 'Work' ka matlab bilkul alag hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab? Work ka matlab work nahi hota? 😵"
+        },
+        {
+          "speaker": "aman",
+          "text": "Dekho... agar tum 20 kg ka bag pakad ke 2 ghante khade raho, to bahut mehnat lagegi na? But Physics mein Work = ZERO! 😲"
+        },
+        {
+          "speaker": "raju",
+          "text": "Hainn?? Itni mehnat ke baad bhi zero?? Ye to unfair hai Sir! 😤"
+        }
+      ],
+      "navigation": {
+        "next": "card_04_work_rule",
+        "button_text": "Samjho ➔"
+      }
+    },
+    {
+      "card_id": "card_04_work_rule",
+      "card_slug": "card_04_work_rule",
+      "type": "chat",
+      "concept_id": "work_universal_definition",
+      "level": 1,
+      "progress": {
+        "current": 4,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Yaad rakho UNIVERSAL RULE: Work sirf tab hota hai jab FORCE lagane se koi object MOVE ho! Force + Displacement = Work ✅"
+        },
+        {
+          "speaker": "raju",
+          "text": "Ohh... matlab bag pakad ke khada rahun to displacement zero, isliye work zero! 😮"
+        },
+        {
+          "speaker": "aman",
+          "text": "Ekdum correct! Lekin agar tum wahi bag utha ke 10 meter chale, to ab displacement hai, to Work hua! ✅"
+        },
+        {
+          "speaker": "raju",
+          "text": "Achhaaaa... to deewar ko dhakka lagaun aur wo na hile, to bhi work zero! 🧱"
+        }
+      ],
+      "navigation": {
+        "next": "card_05_work_formula",
+        "button_text": "Formula Dekho ➔"
+      }
+    },
+    {
+      "card_id": "card_05_work_formula",
+      "card_slug": "card_05_work_formula",
+      "type": "chat",
+      "concept_id": "work_basic_formula",
+      "level": 1,
+      "progress": {
+        "current": 5,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ab Officer level formula: W = F × s × cos θ\nJahan W=Work, F=Force, s=Displacement, θ=Force aur Displacement ke beech ka angle 📐"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir ye cos θ kyun aaya? Seedha F × s kyun nahi? 🤔"
+        },
+        {
+          "speaker": "aman",
+          "text": "Kyunki agar tum box ko PUSH karte hue seedha chalo, to Force ki direction aur Motion ki direction SAME hai (θ=0°, cos 0°=1). Tab W = F × s × 1 = F × s ✅"
+        },
+        {
+          "speaker": "raju",
+          "text": "Aur agar angle ho to? 😯"
+        }
+      ],
+      "navigation": {
+        "next": "card_06_work_angle",
+        "button_text": "Angle Concept ➔"
+      }
+    },
+    {
+      "card_id": "card_06_work_angle",
+      "card_slug": "card_06_work_angle",
+      "type": "chat",
+      "concept_id": "work_angle_effect",
+      "level": 1,
+      "progress": {
+        "current": 6,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Agar Force SLANT mein lage (jaise rope se box kheench rahe ho), to sirf Force ka ek COMPONENT hi kaam aata hai jo motion ki direction mein ho! Isliye cos θ multiply karte hain 🎯"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab agar θ = 90° ho (Force perpendicular) to cos 90° = 0... Work = 0! 😲"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul sahi! Yahin BPSC trap hai: Coolie apne sir pe bag rakh ke horizontal chalta hai. Bag ka weight (Force) neeche ki taraf, Motion horizontal (90°), to Coolie ka Work = 0! 🚶‍♂️"
+        },
+        {
+          "speaker": "raju",
+          "text": "Lekin Sir, coolie thakta to hai! 😅"
+        }
+      ],
+      "navigation": {
+        "next": "card_07_work_internal",
+        "button_text": "Clarification ➔"
+      }
+    },
+    {
+      "card_id": "card_07_work_internal",
+      "card_slug": "card_07_work_internal",
+      "type": "chat",
+      "concept_id": "work_internal_energy",
+      "level": 1,
+      "progress": {
+        "current": 7,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Good observation! Coolie thakta hai kyunki uski INTERNAL MUSCLES work kar rahi hain (biochemical energy use ho raha). Lekin BAG pe externally koi work nahi! Samjhe? 💪"
+        },
+        {
+          "speaker": "raju",
+          "text": "Ohhh... Physics sirf external object ke displacement se work naapti hai! 😮"
+        },
+        {
+          "speaker": "aman",
+          "text": "Exactly! BPSC exam mein yahi confusion test karte hain: 'Coolie ne kitna work kiya?' Answer: Zero (on the bag). ⭐ BPSC TRE Favorite trap!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Pakka yaad rakhunga Sir! 📝"
+        }
+      ],
+      "navigation": {
+        "next": "card_08_work_unit",
+        "button_text": "Unit Dekho ➔"
+      }
+    },
+    {
+      "card_id": "card_08_work_unit",
+      "card_slug": "card_08_work_unit",
+      "type": "chat",
+      "concept_id": "work_si_unit",
+      "level": 1,
+      "progress": {
+        "current": 8,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Work ka SI unit = Joule (J). 1 Joule = 1 Newton × 1 meter. Yaani 1 N force laga ke 1 m move karo to 1 J work! ⚡"
+        },
+        {
+          "speaker": "raju",
+          "text": "Joule kis scientist ke naam pe hai Sir? 🤔"
+        },
+        {
+          "speaker": "aman",
+          "text": "James Prescott Joule (English physicist, 1818-1889). Unhone heat aur mechanical work ka relation discover kiya! SSC/Railway mein naam पूछते hain 📌"
+        },
+        {
+          "speaker": "raju",
+          "text": "Noted Sir! James Joule = Work & Heat scientist ✅"
+        }
+      ],
+      "navigation": {
+        "next": "card_09_work_positive_negative",
+        "button_text": "Positive/Negative Work ➔"
+      }
+    },
+    {
+      "card_id": "card_09_work_positive_negative",
+      "card_slug": "card_09_work_positive_negative",
+      "type": "chat",
+      "concept_id": "work_sign_convention",
+      "level": 1,
+      "progress": {
+        "current": 9,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ab twist: Work POSITIVE bhi ho sakta hai aur NEGATIVE bhi! Ye θ (angle) pe depend karta hai 🎯"
+        },
+        {
+          "speaker": "raju",
+          "text": "Negative work matlab? Work to ho gaya, uska sign kaise negative hoga? 😵"
+        },
+        {
+          "speaker": "aman",
+          "text": "Dekho: Agar Force aur Displacement SAME direction (θ < 90°), to cos θ positive ➔ Work POSITIVE ✅\nAgar OPPOSITE direction (θ > 90°), to cos θ negative ➔ Work NEGATIVE ❌"
+        },
+        {
+          "speaker": "raju",
+          "text": "Example chahiye Sir! 🙏"
+        }
+      ],
+      "navigation": {
+        "next": "card_10_work_examples",
+        "button_text": "Examples ➔"
+      }
+    },
+    {
+      "card_id": "card_10_work_examples",
+      "card_slug": "card_10_work_examples",
+      "type": "chat",
+      "concept_id": "work_positive_negative_examples",
+      "level": 1,
+      "progress": {
+        "current": 10,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Example 1 (Positive Work): Tum cycle chala rahe ho, pedal pe force laga rahe ho aur cycle aage ja rahi hai ➔ θ=0°, cos 0°=1 ➔ W = +ve 🚴"
+        },
+        {
+          "speaker": "raju",
+          "text": "Ye to simple hai! Aur negative wala? 🤔"
+        },
+        {
+          "speaker": "aman",
+          "text": "Example 2 (Negative Work): Cycle chala rahe ho aur BRAKES laga diye! Ab friction force OPPOSITE direction mein (motion ko rok raha hai) ➔ θ=180°, cos 180°=-1 ➔ W = -ve 🛑"
+        },
+        {
+          "speaker": "raju",
+          "text": "Achhaaaa... friction hamesha negative work karta hai kyunki wo motion ko oppose karta hai! 😮"
+        }
+      ],
+      "navigation": {
+        "next": "card_11_work_zero_case",
+        "button_text": "Zero Work Case ➔"
+      }
+    },
+    {
+      "card_id": "card_11_work_zero_case",
+      "card_slug": "card_11_work_zero_case",
+      "type": "chat",
+      "concept_id": "work_zero_scenarios",
+      "level": 1,
+      "progress": {
+        "current": 11,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ab 3 scenarios jab Work = ZERO:\n1️⃣ Force hai, Displacement NAHI (deewar dhakka)\n2️⃣ Displacement hai, Force NAHI (space mein freely floating)\n3️⃣ Force ⊥ Displacement (θ=90°, cos 90°=0)"
+        },
+        {
+          "speaker": "raju",
+          "text": "Third wala samjhao Sir! Example chahiye 🙏"
+        },
+        {
+          "speaker": "aman",
+          "text": "Perfect example: Moon Earth ke around घूम raha hai. Earth ka Gravitational Force Moon pe CENTRIPETAL force provide karta hai (Center ki taraf), lekin Moon ki Motion TANGENTIAL (circle ke along). Force ⊥ Motion ➔ Work = 0! 🌙🌍"
+        },
+        {
+          "speaker": "raju",
+          "text": "Wow! To gravity Moon ko orbit mein रख rahi hai but koi work nahi kar rahi! 😲"
+        }
+      ],
+      "navigation": {
+        "next": "card_12_work_quiz_1",
+        "button_text": "Test Karo ➔"
+      }
+    },
+    {
+      "card_id": "card_12_work_quiz_1",
+      "card_slug": "card_12_work_quiz_1",
+      "type": "quiz",
+      "concept_id": "work_basic_definition",
+      "level": 1,
+      "progress": {
+        "current": 12,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "एक व्यक्ति 20 kg का बैग अपने सिर पर रखकर 100 m क्षैतिज (horizontal) दिशा में चलता है। बैग पर किया गया कार्य (Work) कितना है? (g = 10 m/s²)",
+        "options": [
+          {
+            "id": "A",
+            "text": "20,000 J"
+          },
+          {
+            "id": "B",
+            "text": "2000 J"
+          },
+          {
+            "id": "C",
+            "text": "200 J"
+          },
+          {
+            "id": "D",
+            "text": "0 J"
+          }
+        ],
+        "correct_option_id": "D",
+        "explanation": "✅ बैग का भार (Force) = 20 × 10 = 200 N, जो नीचे की ओर (vertically downward) लग रहा है। लेकिन व्यक्ति का Displacement क्षैतिज (horizontal) है। Force और Displacement के बीच angle θ = 90°। चूंकि cos 90° = 0, इसलिए W = F × s × cos 90° = 200 × 100 × 0 = 0 J। ⭐ BPSC/SSC favorite trap: Physical effort ≠ Physics Work!"
+      },
+      "navigation": {
+        "next": "card_13_work_quiz_2",
+        "button_text": "Next Question (2/3) ➔"
+      }
+    },
+    {
+      "card_id": "card_13_work_quiz_2",
+      "card_slug": "card_13_work_quiz_2",
+      "type": "quiz",
+      "concept_id": "work_angle_based",
+      "level": 1,
+      "progress": {
+        "current": 13,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "यदि किसी वस्तु पर 50 N का बल 30° के कोण पर लगाकर उसे 10 m विस्थापित किया जाता है, तो किया गया कार्य कितना होगा? (cos 30° = 0.866)",
+        "options": [
+          {
+            "id": "A",
+            "text": "500 J"
+          },
+          {
+            "id": "B",
+            "text": "433 J"
+          },
+          {
+            "id": "C",
+            "text": "250 J"
+          },
+          {
+            "id": "D",
+            "text": "866 J"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "✅ Work W = F × s × cos θ = 50 × 10 × cos 30° = 50 × 10 × 0.866 = 433 J। जब बल विस्थापन की दिशा में नहीं होता (कोण बनाता है), तो केवल बल का component (F cos θ) ही उपयोगी कार्य करता है। SSC/Railway में numerical ऐसे ही पूछते हैं!"
+      },
+      "navigation": {
+        "next": "card_14_work_quiz_3",
+        "button_text": "Next Question (3/3) ➔"
+      }
+    },
+    {
+      "card_id": "card_14_work_quiz_3",
+      "card_slug": "card_14_work_quiz_3",
+      "type": "quiz",
+      "concept_id": "work_negative_work",
+      "level": 1,
+      "progress": {
+        "current": 14,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "एक गतिशील कार पर ब्रेक लगाया जाता है और वह 20 m चलकर रुक जाती है। घर्षण बल (friction force) द्वारा किया गया कार्य होगा:",
+        "options": [
+          {
+            "id": "A",
+            "text": "धनात्मक (Positive)"
+          },
+          {
+            "id": "B",
+            "text": "ऋणात्मक (Negative)"
+          },
+          {
+            "id": "C",
+            "text": "शून्य (Zero)"
+          },
+          {
+            "id": "D",
+            "text": "निर्भर करता है कार के द्रव्यमान पर"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "✅ घर्षण बल (friction) हमेशा गति की विपरीत दिशा में लगता है। यहाँ कार आगे जा रही है, लेकिन friction पीछे की ओर बल लगा रहा है (θ = 180°)। इसलिए W = F × s × cos 180° = F × s × (-1) = Negative Work। ⭐ BPSC/NEET Concept: Negative work का मतलब है वस्तु की ऊर्जा (energy) कम हो रही है!"
+      },
+      "navigation": {
+        "next": "card_15_work_milestone",
+        "button_text": "Check Answer ➔"
+      }
+    },
+    {
+      "card_id": "card_15_work_milestone",
+      "card_slug": "card_15_work_milestone",
+      "type": "milestone",
+      "concept_id": "work_module_complete",
+      "level": 1,
+      "progress": {
+        "current": 15,
+        "total": 72
+      },
+      "milestone_payload": {
+        "title": "🎉 MODULE 1 CLEARED!",
+        "badge_emoji": "⚙️",
+        "completed_topic": "Work (कार्य) - Definition, Formula & Types",
+        "xp_earned": 50,
+        "milestone_progress": "Module 1/6 Complete",
+        "motivational_quote": "You just decoded what 90% students get wrong in BPSC! 🔥 Officers बनने की राह पर चल पड़े हो!"
+      },
+      "navigation": {
+        "next": "card_16_energy_intro",
+        "button_text": "Start Energy Module ➔"
+      }
+    },
+    {
+      "card_id": "card_16_energy_intro",
+      "card_slug": "card_16_energy_intro",
+      "type": "chat",
+      "concept_id": "energy_daily_life",
+      "level": 2,
+      "progress": {
+        "current": 16,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, subah uthne ke baad sabse pehle kya karte ho? ☀️"
+        },
+        {
+          "speaker": "raju",
+          "text": "Chai peeta hun Sir! Bina chai ke kuch karne ka mann nahi karta 😅☕"
+        },
+        {
+          "speaker": "aman",
+          "text": "Kyun? Chai peene se kya hota hai? 🤔"
+        },
+        {
+          "speaker": "raju",
+          "text": "Energy mil jati hai Sir! Tab jaake padhai ya kaam kar pata hun 💪"
+        }
+      ],
+      "navigation": {
+        "next": "card_17_energy_definition",
+        "button_text": "Energy Kya Hai ➔"
+      }
+    },
+    {
+      "card_id": "card_17_energy_definition",
+      "card_slug": "card_17_energy_definition",
+      "type": "chat",
+      "concept_id": "energy_universal_definition",
+      "level": 2,
+      "progress": {
+        "current": 17,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Bilkul sahi! Physics mein bhi yahi hai: Energy = Kaam karne ki क्षमता (Capacity to do Work)। Jisके पास Energy hai, wo Work kar sakta hai! ⚡"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab Energy aur Work related hain? 🤔"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! Energy ka SI unit bhi JOULE (J) hai, same as Work। Yaad rakho: Energy stored capacity hai, Work uska result/output hai! 💡"
+        },
+        {
+          "speaker": "raju",
+          "text": "Achhaaaa... jaise phone mein battery (energy) hai, to wo kaam (work) kar sakta hai! 📱🔋"
+        }
+      ],
+      "navigation": {
+        "next": "card_18_energy_forms",
+        "button_text": "Energy Ke Types ➔"
+      }
+    },
+    {
+      "card_id": "card_18_energy_forms",
+      "card_slug": "card_18_energy_forms",
+      "type": "chat",
+      "concept_id": "energy_types_overview",
+      "level": 2,
+      "progress": {
+        "current": 18,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Energy kai रूप में hoti hai:\n🔹 Kinetic Energy (गति ऊर्जा)\n🔹 Potential Energy (स्थितिज ऊर्जा)\n🔹 Heat, Light, Sound, Chemical, Nuclear, Electrical... bahut saari! 🌈"
+        },
+        {
+          "speaker": "raju",
+          "text": "Itni saari! 😵 Sabka exam mein alag-alag formula hai kya Sir?"
+        },
+        {
+          "speaker": "aman",
+          "text": "SSC/NEET ke liye Mechanical Energy focus karo: Kinetic + Potential। Baaki forms sirf conversion (transformation) mein test karte hain। Pehle Kinetic Energy samajhte hain! 🚀"
+        },
+        {
+          "speaker": "raju",
+          "text": "Chalo Sir, Kinetic Energy se shuru karte hain! 💪"
+        }
+      ],
+      "navigation": {
+        "next": "card_19_kinetic_energy",
+        "button_text": "Kinetic Energy ➔"
+      }
+    },
+    {
+      "card_id": "card_19_kinetic_energy",
+      "card_slug": "card_19_kinetic_energy",
+      "type": "chat",
+      "concept_id": "kinetic_energy_definition",
+      "level": 2,
+      "progress": {
+        "current": 19,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Kinetic Energy (KE) = Energy of Motion। Matlab jो चीज चल रही है, उसके पास KE hai! जितनी तेज़ चलेगी, उतनी ज़्यादा KE! 🏃💨"
+        },
+        {
+          "speaker": "raju",
+          "text": "Example: Chalti gaadi mein KE hai, khadi gaadi mein nahi! 🚗"
+        },
+        {
+          "speaker": "aman",
+          "text": "Perfect! Formula: KE = ½ m v²\nJahan m = mass (kg), v = velocity (m/s)। Dekho, velocity ka SQUARE hai, matlab speed double karo to KE चार गुना हो जाती है! 😲"
+        },
+        {
+          "speaker": "raju",
+          "text": "Wow! Speed ka square effect! Ye to numerical mein bahut kaam aayega Sir! 📝"
+        }
+      ],
+      "navigation": {
+        "next": "card_20_kinetic_energy_example",
+        "button_text": "Example Dekho ➔"
+      }
+    },
+    {
+      "card_id": "card_20_kinetic_energy_example",
+      "card_slug": "card_20_kinetic_energy_example",
+      "type": "chat",
+      "concept_id": "kinetic_energy_calculation",
+      "level": 2,
+      "progress": {
+        "current": 20,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Example: 2 kg की गेंद 10 m/s से फेंकी गई। Kinetic Energy = ½ × 2 × (10)² = ½ × 2 × 100 = 100 J ✅"
+        },
+        {
+          "speaker": "raju",
+          "text": "Simple! Agar speed 20 m/s karte to? 🤔"
+        },
+        {
+          "speaker": "aman",
+          "text": "KE = ½ × 2 × (20)² = ½ × 2 × 400 = 400 J। Dekha? Speed double (10→20), but KE चार गुना (100→400)! Ye BPSC/SSC trap hai! 🎯"
+        },
+        {
+          "speaker": "raju",
+          "text": "Samajh gaya Sir! v² wala effect bahut powerful hai! 💡"
+        }
+      ],
+      "navigation": {
+        "next": "card_21_potential_energy",
+        "button_text": "Potential Energy ➔"
+      }
+    },
+    {
+      "card_id": "card_21_potential_energy",
+      "card_slug": "card_21_potential_energy",
+      "type": "chat",
+      "concept_id": "potential_energy_intro",
+      "level": 2,
+      "progress": {
+        "current": 21,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ab Potential Energy (PE)। Ye Energy of Position/Configuration hai। Matlab जो चीज height पर रखी है, stretched/compressed hai, उसमें PE store होती है! 🏔️"
+        },
+        {
+          "speaker": "raju",
+          "text": "Position matlab? Example chahiye Sir! 🙏"
+        },
+        {
+          "speaker": "aman",
+          "text": "Dekho: Paani tank में ऊपर stored है। Neeche aane की क्षमता (potential) है। Jab neeche aayega, tap से निकलेगा - ye PE convert हो गई KE mein! 💧⬇️"
+        },
+        {
+          "speaker": "raju",
+          "text": "Ohhh... isliye height wale paani mein zyada pressure! 😮"
+        }
+      ],
+      "navigation": {
+        "next": "card_22_gravitational_pe",
+        "button_text": "Formula Dekho ➔"
+      }
+    },
+    {
+      "card_id": "card_22_gravitational_pe",
+      "card_slug": "card_22_gravitational_pe",
+      "type": "chat",
+      "concept_id": "gravitational_potential_energy",
+      "level": 2,
+      "progress": {
+        "current": 22,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Gravitational Potential Energy (जो सबसे common hai exam mein): PE = m × g × h\nJahan m=mass (kg), g=9.8 m/s² (acceleration due to gravity), h=height from ground (m) 📏"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab जितनी ऊँचाई ज्यादा, उतनी PE ज्यादा! Simple! 😊"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan, but ek choti सी बात: Height हमेशा किसी REFERENCE point (usually ground) से मापते hain। Reference change karo to PE value change ho sakti hai! ⚠️"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab agar मैं तीसरी मंज़िल पर खड़ा हूँ, to ground से alag height, first floor se alag height! 🏢"
+        }
+      ],
+      "navigation": {
+        "next": "card_23_pe_example",
+        "button_text": "Calculation ➔"
+      }
+    },
+    {
+      "card_id": "card_23_pe_example",
+      "card_slug": "card_23_pe_example",
+      "type": "chat",
+      "concept_id": "potential_energy_calculation",
+      "level": 2,
+      "progress": {
+        "current": 23,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Example: 5 kg का पत्थर 20 m ऊँचाई से गिराया जाता है। PE (at top) = mgh = 5 × 10 × 20 = 1000 J (g≈10 लेते हैं simplicity के लिए) 🪨"
+        },
+        {
+          "speaker": "raju",
+          "text": "Aur जब ये गिर के ground पर पहुँचेगा, तो PE = 0 (kyunki h=0)! 😮"
+        },
+        {
+          "speaker": "aman",
+          "text": "Correct! Lekin सवाल ये है: Wo 1000 J energy गई कहाँ? Lost to nahi ho sakti na (Energy can't be destroyed)! 🤔💡"
+        },
+        {
+          "speaker": "raju",
+          "text": "Haann! Ye to suspicious hai! 🕵️"
+        }
+      ],
+      "navigation": {
+        "next": "card_24_energy_transformation",
+        "button_text": "Mystery Solve Karo ➔"
+      }
+    },
+    {
+      "card_id": "card_24_energy_transformation",
+      "card_slug": "card_24_energy_transformation",
+      "type": "chat",
+      "concept_id": "energy_transformation_intro",
+      "level": 2,
+      "progress": {
+        "current": 24,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Yahin Officer concept hai! PE convert ho gayi KINETIC ENERGY (KE) mein! Jaise-jaise पत्थर नीचे गिरता है, uski speed बढ़ती है (KE बढ़ती है), height घटती है (PE घटती है)! 🔄"
+        },
+        {
+          "speaker": "raju",
+          "text": "Achhaaaa... PE kam, KE zyada! Energy रूप बदल रही है! 😲"
+        },
+        {
+          "speaker": "aman",
+          "text": "Exactly! Is process ko Energy Transformation कहते हैं। Total Energy (PE + KE) = CONSTANT रहती है (if no friction/air resistance)। Ye Law of Conservation of Energy hai! ⚖️✨"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab: At top: PE max, KE=0. At bottom: PE=0, KE max. But total same! 🎯"
+        }
+      ],
+      "navigation": {
+        "next": "card_25_energy_quiz_1",
+        "button_text": "Quiz Time ➔"
+      }
+    },
+    {
+      "card_id": "card_25_energy_quiz_1",
+      "card_slug": "card_25_energy_quiz_1",
+      "type": "quiz",
+      "concept_id": "kinetic_energy_numerical",
+      "level": 2,
+      "progress": {
+        "current": 25,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "एक 1000 kg की कार 20 m/s की चाल से चल रही है। इसकी Kinetic Energy कितनी होगी?",
+        "options": [
+          {
+            "id": "A",
+            "text": "20,000 J"
+          },
+          {
+            "id": "B",
+            "text": "200,000 J"
+          },
+          {
+            "id": "C",
+            "text": "400,000 J"
+          },
+          {
+            "id": "D",
+            "text": "10,000 J"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "✅ KE = ½ m v² = ½ × 1000 × (20)² = 500 × 400 = 200,000 J = 200 kJ। ध्यान दें: velocity का square लेना है! SSC/Railway में अक्सर students m × v कर देते हैं और गलत answer चुन लेते हैं। Formula: KE = ½ m v² (v² mandatory!)"
+      },
+      "navigation": {
+        "next": "card_26_energy_quiz_2",
+        "button_text": "Next Question (2/3) ➔"
+      }
+    },
+    {
+      "card_id": "card_26_energy_quiz_2",
+      "card_slug": "card_26_energy_quiz_2",
+      "type": "quiz",
+      "concept_id": "potential_energy_numerical",
+      "level": 2,
+      "progress": {
+        "current": 26,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "10 kg द्रव्यमान की एक वस्तु को जमीन से 5 m ऊँचाई पर रखा गया है। इसकी Gravitational Potential Energy कितनी है? (g = 10 m/s²)",
+        "options": [
+          {
+            "id": "A",
+            "text": "50 J"
+          },
+          {
+            "id": "B",
+            "text": "500 J"
+          },
+          {
+            "id": "C",
+            "text": "250 J"
+          },
+          {
+            "id": "D",
+            "text": "100 J"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "✅ PE = m × g × h = 10 × 10 × 5 = 500 J। यह formula NCERT Class 9 Chapter 11 (Work & Energy) से directly है। ⭐ BPSC/SSC Tip: हमेशा SI units check करें - यहाँ सब SI में हैं, so सीधा multiply करो!"
+      },
+      "navigation": {
+        "next": "card_27_energy_quiz_3",
+        "button_text": "Next Question (3/3) ➔"
+      }
+    },
+    {
+      "card_id": "card_27_energy_quiz_3",
+      "card_slug": "card_27_energy_quiz_3",
+      "type": "quiz",
+      "concept_id": "energy_transformation",
+      "level": 2,
+      "progress": {
+        "current": 27,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "एक गेंद को ऊँचाई से गिराया जाता है। गिरते समय निम्न में से क्या होता है?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Potential Energy बढ़ती है, Kinetic Energy घटती है"
+          },
+          {
+            "id": "B",
+            "text": "Potential Energy घटती है, Kinetic Energy बढ़ती है"
+          },
+          {
+            "id": "C",
+            "text": "दोनों बढ़ती हैं"
+          },
+          {
+            "id": "D",
+            "text": "दोनों घटती हैं"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "✅ जब गेंद नीचे गिरती है, तो height (h) घटती है ➔ PE = mgh घटती है। साथ ही, velocity (v) बढ़ती है ➔ KE = ½mv² बढ़ती है। यह Energy Transformation का classic example है। ⭐ NEET/BPSC Favorite: Total Mechanical Energy (PE + KE) = constant (यदि air resistance negligible हो)।"
+      },
+      "navigation": {
+        "next": "card_28_energy_milestone",
+        "button_text": "Check & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_28_energy_milestone",
+      "card_slug": "card_28_energy_milestone",
+      "type": "milestone",
+      "concept_id": "energy_module_complete",
+      "level": 2,
+      "progress": {
+        "current": 28,
+        "total": 72
+      },
+      "milestone_payload": {
+        "title": "🎉 MODULE 2 CLEARED!",
+        "badge_emoji": "⚡",
+        "completed_topic": "Energy - Kinetic, Potential & Transformation",
+        "xp_earned": 50,
+        "milestone_progress": "Module 2/6 Complete",
+        "motivational_quote": "Energy can neither be created nor destroyed... but you just MASTERED it! 🔥💪"
+      },
+      "navigation": {
+        "next": "card_29_conservation_intro",
+        "button_text": "Conservation Law ➔"
+      }
+    },
+    {
+      "card_id": "card_29_conservation_intro",
+      "card_slug": "card_29_conservation_intro",
+      "type": "chat",
+      "concept_id": "conservation_law_intro",
+      "level": 2,
+      "progress": {
+        "current": 29,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, tumne abhi dekha: Falling ball mein PE → KE convert hui। Total energy same रही। Ye Universe का सबसे fundamental law hai! 🌌"
+        },
+        {
+          "speaker": "raju",
+          "text": "Law of Conservation of Energy! Energy na बनती है, na नष्ट होती है, sirf रूप बदलती है! 😎"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul perfect! Statement yaad rakho: 'Energy can neither be created nor destroyed; it can only be transformed from one form to another.' ✨📖"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir iska matlab kya duniya mein kabhi energy खत्म nahi hogi? 😮"
+        }
+      ],
+      "navigation": {
+        "next": "card_30_conservation_examples",
+        "button_text": "Examples Dekho ➔"
+      }
+    },
+    {
+      "card_id": "card_30_conservation_examples",
+      "card_slug": "card_30_conservation_examples",
+      "type": "chat",
+      "concept_id": "conservation_daily_examples",
+      "level": 2,
+      "progress": {
+        "current": 30,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Haan! Total cosmic energy constant hai। Examples dekho:\n🔹 Bulb: Electrical → Light + Heat\n🔹 Photosynthesis: Light → Chemical (glucose)\n🔹 Thermal Power Plant: Chemical (coal) → Heat → Mechanical → Electrical ⚡"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab हर जगह energy बस form change कर रही है! 😲"
+        },
+        {
+          "speaker": "aman",
+          "text": "Exactly! BPSC/SSC mein पूछते हैं: 'Hydroelectric dam mein कौन-सी energy conversion होती है?' Answer: Potential (water at height) → Kinetic (falling water) → Mechanical (turbine) → Electrical! 💧⚡"
+        },
+        {
+          "speaker": "raju",
+          "text": "Wow! Chain of transformations! 🔗"
+        }
+      ],
+      "navigation": {
+        "next": "card_31_pendulum_example",
+        "button_text": "Pendulum Example ➔"
+      }
+    },
+    {
+      "card_id": "card_31_pendulum_example",
+      "card_slug": "card_31_pendulum_example",
+      "type": "chat",
+      "concept_id": "pendulum_energy_conservation",
+      "level": 2,
+      "progress": {
+        "current": 31,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Classic NEET/BPSC example: Simple Pendulum! 🪢\nAt extreme position (highest point): PE maximum, KE = 0 (velocity=0)\nAt mean position (lowest point): KE maximum, PE = 0 (h=0, relative to mean)"
+        },
+        {
+          "speaker": "raju",
+          "text": "Aur beech mein dono mix hain! PE + KE = Total constant! 😮"
+        },
+        {
+          "speaker": "aman",
+          "text": "Perfect! Lekin real life mein थोड़ा friction/air resistance hota hai, so energy थोड़ी heat में convert हो जाती है। That's why pendulum eventually रुक जाता है। But total energy (including heat) conserved रहती है! 🔥"
+        },
+        {
+          "speaker": "raju",
+          "text": "Achhaaaa... ideal condition mein perpetually चलता रहेगा, real mein stop हो जाएगा! Got it! ✅"
+        }
+      ],
+      "navigation": {
+        "next": "card_32_free_fall",
+        "button_text": "Free Fall Case ➔"
+      }
+    },
+    {
+      "card_id": "card_32_free_fall",
+      "card_slug": "card_32_free_fall",
+      "type": "chat",
+      "concept_id": "free_fall_conservation",
+      "level": 2,
+      "progress": {
+        "current": 32,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Free fall example (NEET favorite numerical): Object को h height से गिराया। Initial: PE = mgh, KE = 0। Just before hitting ground: PE = 0, KE = ½mv²। Conservation law se: mgh = ½mv² ➔ v = √(2gh) 🚀"
+        },
+        {
+          "speaker": "raju",
+          "text": "Wow Sir! Bina equations of motion use kiye directly velocity निकाल ली! 😲"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! Energy method बहुत powerful hai। BPSC/SSC में दोनों approaches test करते हैं - kinematics (v² = u² + 2gh) और energy (PE = KE)। Same answer! ✅"
+        },
+        {
+          "speaker": "raju",
+          "text": "Double weapon mil gaya Sir! 💪📝"
+        }
+      ],
+      "navigation": {
+        "next": "card_33_conservation_quiz_1",
+        "button_text": "Test Karo ➔"
+      }
+    },
+    {
+      "card_id": "card_33_conservation_quiz_1",
+      "card_slug": "card_33_conservation_quiz_1",
+      "type": "quiz",
+      "concept_id": "conservation_statement",
+      "level": 2,
+      "progress": {
+        "current": 33,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "ऊर्जा संरक्षण का नियम (Law of Conservation of Energy) क्या कहता है?",
+        "options": [
+          {
+            "id": "A",
+            "text": "ऊर्जा को बनाया जा सकता है लेकिन नष्ट नहीं किया जा सकता"
+          },
+          {
+            "id": "B",
+            "text": "ऊर्जा को नष्ट किया जा सकता है लेकिन बनाया नहीं जा सकता"
+          },
+          {
+            "id": "C",
+            "text": "ऊर्जा को न बनाया जा सकता है, न नष्ट किया जा सकता है; केवल एक रूप से दूसरे रूप में परिवर्तित की जा सकती है"
+          },
+          {
+            "id": "D",
+            "text": "ऊर्जा हमेशा नष्ट होती रहती है"
+          }
+        ],
+        "correct_option_id": "C",
+        "explanation": "✅ Law of Conservation of Energy: 'Energy can neither be created nor destroyed; it can only be transformed from one form to another.' यह Physics का सबसे fundamental law है। Total energy of an isolated system remains constant। ⭐ BPSC/SSC में direct statement-based questions पूछे जाते हैं!"
+      },
+      "navigation": {
+        "next": "card_34_conservation_quiz_2",
+        "button_text": "Next Question (2/3) ➔"
+      }
+    },
+    {
+      "card_id": "card_34_conservation_quiz_2",
+      "card_slug": "card_34_conservation_quiz_2",
+      "type": "quiz",
+      "concept_id": "pendulum_energy",
+      "level": 2,
+      "progress": {
+        "current": 34,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "एक साधारण लोलक (simple pendulum) में ऊर्जा रूपांतरण कैसे होता है?",
+        "options": [
+          {
+            "id": "A",
+            "text": "केवल Kinetic Energy होती है"
+          },
+          {
+            "id": "B",
+            "text": "Extreme position पर KE अधिकतम, Mean position पर PE अधिकतम"
+          },
+          {
+            "id": "C",
+            "text": "Extreme position पर PE अधिकतम, Mean position पर KE अधिकतम"
+          },
+          {
+            "id": "D",
+            "text": "PE और KE दोनों हर समय समान रहती हैं"
+          }
+        ],
+        "correct_option_id": "C",
+        "explanation": "✅ Simple pendulum में:\n• Extreme position (सबसे ऊपर): Velocity = 0 ➔ KE = 0, PE = maximum (highest height)\n• Mean position (सबसे नीचे): Velocity = maximum ➔ KE = maximum, PE = 0 (reference level)\n\nEnergy continuously transform होती है: PE ↔ KE। Total mechanical energy (PE + KE) = constant (no friction)। ⭐ NEET/BPSC में diagram के साथ पूछा जाता है!"
+      },
+      "navigation": {
+        "next": "card_35_conservation_quiz_3",
+        "button_text": "Next Question (3/3) ➔"
+      }
+    },
+    {
+      "card_id": "card_35_conservation_quiz_3",
+      "card_slug": "card_35_conservation_quiz_3",
+      "type": "quiz",
+      "concept_id": "free_fall_energy",
+      "level": 2,
+      "progress": {
+        "current": 35,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "एक वस्तु को 20 m ऊँचाई से मुक्त रूप से गिराया जाता है। जमीन से टकराने से ठीक पहले उसकी चाल क्या होगी? (g = 10 m/s², वायु प्रतिरोध नगण्य)",
+        "options": [
+          {
+            "id": "A",
+            "text": "10 m/s"
+          },
+          {
+            "id": "B",
+            "text": "20 m/s"
+          },
+          {
+            "id": "C",
+            "text": "200 m/s"
+          },
+          {
+            "id": "D",
+            "text": "400 m/s"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "✅ Energy Conservation method:\n• Initially (at height): PE = mgh, KE = 0\n• Just before hitting ground: PE = 0, KE = ½mv²\n\nConservation: mgh = ½mv²\n➔ gh = ½v²\n➔ v² = 2gh = 2 × 10 × 20 = 400\n➔ v = √400 = 20 m/s ✅\n\nAlternate (Kinematics): v² = u² + 2gh = 0 + 2(10)(20) = 400 ➔ v = 20 m/s (same answer!)। ⭐ SSC/NEET में दोनों methods जानना जरूरी है!"
+      },
+      "navigation": {
+        "next": "card_36_conservation_milestone",
+        "button_text": "Check Answer ➔"
+      }
+    },
+    {
+      "card_id": "card_36_conservation_milestone",
+      "card_slug": "card_36_conservation_milestone",
+      "type": "milestone",
+      "concept_id": "conservation_module_complete",
+      "level": 2,
+      "progress": {
+        "current": 36,
+        "total": 72
+      },
+      "milestone_payload": {
+        "title": "🎉 MODULE 3 CLEARED!",
+        "badge_emoji": "♻️",
+        "completed_topic": "Conservation of Energy - Universal Law",
+        "xp_earned": 50,
+        "milestone_progress": "Module 3/6 Complete",
+        "motivational_quote": "You now understand the law that governs the entire Universe! 🌌✨ Keep transforming like energy!"
+      },
+      "navigation": {
+        "next": "card_37_power_intro",
+        "button_text": "Power Module Start ➔"
+      }
+    },
+    {
+      "card_id": "card_37_power_intro",
+      "card_slug": "card_37_power_intro",
+      "type": "chat",
+      "concept_id": "power_daily_life",
+      "level": 3,
+      "progress": {
+        "current": 37,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, tumhare paas aur tumhare dost ke paas same bag hai (20 kg)। Tum dono 3rd floor tak le jaate ho। Kisko zyada 'powerful' kahoge? 💪"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir dono ka work to same hai (same weight, same height)! 🤔"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan, lekin ek twist hai: Tum 2 minute mein le gaye, dost ne 5 minute liye। Ab batao, kaun zyada powerful? 🏃💨"
+        },
+        {
+          "speaker": "raju",
+          "text": "Main! Kyunki maine kam time mein same work kiya! 😎"
+        }
+      ],
+      "navigation": {
+        "next": "card_38_power_definition",
+        "button_text": "Power Definition ➔"
+      }
+    },
+    {
+      "card_id": "card_38_power_definition",
+      "card_slug": "card_38_power_definition",
+      "type": "chat",
+      "concept_id": "power_universal_definition",
+      "level": 3,
+      "progress": {
+        "current": 38,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ekdum correct! Physics mein Power = Rate of doing Work (कितनी तेज़ी से work हो रहा है)। Formula: Power (P) = Work (W) / Time (t) ⏱️⚡"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab same work, कम time = ज्यादा Power! 😮"
+        },
+        {
+          "speaker": "aman",
+          "text": "Yes! SI Unit: Watt (W)। 1 Watt = 1 Joule per second (1 W = 1 J/s)। Scientist James Watt (Scottish, 1736-1819) के नाम पर! 🏴󠁧󠁢󠁳󠁣󠁴󠁿⚙️"
+        },
+        {
+          "speaker": "raju",
+          "text": "Watt! Bulb pe likha hota hai - 60W, 100W! 💡"
+        }
+      ],
+      "navigation": {
+        "next": "card_39_power_bulb_example",
+        "button_text": "Bulb Example ➔"
+      }
+    },
+    {
+      "card_id": "card_39_power_bulb_example",
+      "card_slug": "card_39_power_bulb_example",
+      "type": "chat",
+      "concept_id": "power_electrical_example",
+      "level": 3,
+      "progress": {
+        "current": 39,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Perfect connection! 100W bulb matlab: Ye 1 second mein 100 Joule electrical energy consume करता है (और light+heat में convert करता है)! 💡🔥"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab 60W bulb कम energy लेगा per second, so कम bright! 😯"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul! BPSC/SSC में पूछते हैं: 'Which bulb consumes more energy in 1 hour - 60W or 100W?' Answer: 100W (kyunki higher power = faster energy consumption)! ⭐"
+        },
+        {
+          "speaker": "raju",
+          "text": "Samajh gaya Sir! Power = Speed of energy usage! ⚡"
+        }
+      ],
+      "navigation": {
+        "next": "card_40_power_formula_alternate",
+        "button_text": "Alternate Formula ➔"
+      }
+    },
+    {
+      "card_id": "card_40_power_formula_alternate",
+      "card_slug": "card_40_power_formula_alternate",
+      "type": "chat",
+      "concept_id": "power_energy_formula",
+      "level": 3,
+      "progress": {
+        "current": 40,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Power ko Energy terms mein bhi likh sakte hain: P = Energy / Time (kyunki Work = Energy transfer)। So: P = E / t ⚡"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab P = W/t aur P = E/t dono sahi hain? 🤔"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! Context pe depend karta hai। Mechanical work problems mein W/t use karo, Electrical/Heat problems mein E/t। Conceptually same! ✅"
+        },
+        {
+          "speaker": "raju",
+          "text": "Got it Sir! Dono formulas arsenal mein ready! 💪"
+        }
+      ],
+      "navigation": {
+        "next": "card_41_power_numerical",
+        "button_text": "Numerical Dekho ➔"
+      }
+    },
+    {
+      "card_id": "card_41_power_numerical",
+      "card_slug": "card_41_power_numerical",
+      "type": "chat",
+      "concept_id": "power_calculation_example",
+      "level": 3,
+      "progress": {
+        "current": 41,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Example: Ek motor 5000 J work 10 seconds mein करती है। Power? P = W/t = 5000/10 = 500 W = 0.5 kW ✅"
+        },
+        {
+          "speaker": "raju",
+          "text": "Simple! Agar same work 5 second mein kare to? 🤔"
+        },
+        {
+          "speaker": "aman",
+          "text": "P = 5000/5 = 1000 W = 1 kW। Dekha? Time half, Power double! Faster work = Higher Power! ⚡💨"
+        },
+        {
+          "speaker": "raju",
+          "text": "Inverse relation! Time ↓ Power ↑ 📈"
+        }
+      ],
+      "navigation": {
+        "next": "card_42_commercial_unit",
+        "button_text": "Commercial Unit ➔"
+      }
+    },
+    {
+      "card_id": "card_42_commercial_unit",
+      "card_slug": "card_42_commercial_unit",
+      "type": "chat",
+      "concept_id": "kilowatt_hour",
+      "level": 3,
+      "progress": {
+        "current": 42,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, ghar ka bijli ka bill kaise aata hai? Units mein na? Wo 'unit' actually ENERGY ka commercial unit hai - Kilowatt-hour (kWh)! 💡🏠"
+        },
+        {
+          "speaker": "raju",
+          "text": "Haan Sir! Bill mein likha hota hai '150 units consumed'। Ye kWh hai? 😮"
+        },
+        {
+          "speaker": "aman",
+          "text": "Exactly! 1 kWh = Energy consumed by a 1 kW appliance running for 1 hour। Let's calculate: 1 kWh = 1000 W × 3600 s = 3,600,000 J = 3.6 × 10⁶ J = 3.6 MJ ⚡"
+        },
+        {
+          "speaker": "raju",
+          "text": "Wow! 1 unit = 3.6 million Joules! Itni badi value! 😲"
+        }
+      ],
+      "navigation": {
+        "next": "card_43_kwh_calculation",
+        "button_text": "Bill Calculation ➔"
+      }
+    },
+    {
+      "card_id": "card_43_kwh_calculation",
+      "card_slug": "card_43_kwh_calculation",
+      "type": "chat",
+      "concept_id": "electricity_bill_calculation",
+      "level": 3,
+      "progress": {
+        "current": 43,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Bill numerical (SSC/Railway favorite): Ek 100W bulb 10 hours daily चलता है। 30 days mein kitne units (kWh) consume karega? 💡📅"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir formula batao! 🙏"
+        },
+        {
+          "speaker": "aman",
+          "text": "Energy (kWh) = Power (kW) × Time (hours)\n= (100W = 0.1 kW) × (10 hrs/day × 30 days)\n= 0.1 × 300 = 30 kWh = 30 units ✅"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab agar rate ₹5 per unit, to bill = 30 × 5 = ₹150! Practical math! 💰"
+        }
+      ],
+      "navigation": {
+        "next": "card_44_power_quiz_1",
+        "button_text": "Quiz Time ➔"
+      }
+    },
+    {
+      "card_id": "card_44_power_quiz_1",
+      "card_slug": "card_44_power_quiz_1",
+      "type": "quiz",
+      "concept_id": "power_definition_quiz",
+      "level": 3,
+      "progress": {
+        "current": 44,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Power की सही परिभाषा है:",
+        "options": [
+          {
+            "id": "A",
+            "text": "कार्य करने की क्षमता"
+          },
+          {
+            "id": "B",
+            "text": "प्रति इकाई समय में किया गया कार्य"
+          },
+          {
+            "id": "C",
+            "text": "बल × विस्थापन"
+          },
+          {
+            "id": "D",
+            "text": "द्रव्यमान × वेग"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "✅ Power (शक्ति) = Rate of doing work (कार्य करने की दर) = Work / Time = W/t। यह बताता है कि कितनी तेजी से work हो रहा है। SI unit: Watt (W) = Joule/second। ⚠️ Trap: Option A (कार्य करने की क्षमता) = Energy की definition है, Power की नहीं! ⭐ BPSC/SSC में यही confusion test करते हैं!"
+      },
+      "navigation": {
+        "next": "card_45_power_quiz_2",
+        "button_text": "Next Question (2/3) ➔"
+      }
+    },
+    {
+      "card_id": "card_45_power_quiz_2",
+      "card_slug": "card_45_power_quiz_2",
+      "type": "quiz",
+      "concept_id": "power_numerical_quiz",
+      "level": 3,
+      "progress": {
+        "current": 45,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "एक मशीन 20 seconds में 4000 J कार्य करती है। इसकी Power कितनी है?",
+        "options": [
+          {
+            "id": "A",
+            "text": "200 W"
+          },
+          {
+            "id": "B",
+            "text": "2000 W"
+          },
+          {
+            "id": "C",
+            "text": "20 W"
+          },
+          {
+            "id": "D",
+            "text": "400 W"
+          }
+        ],
+        "correct_option_id": "A",
+        "explanation": "✅ Power P = Work / Time = W / t = 4000 J / 20 s = 200 J/s = 200 W। ध्यान दें: 1 Watt = 1 Joule/second। यह SSC/Railway का standard numerical pattern है - सीधा formula apply करो!"
+      },
+      "navigation": {
+        "next": "card_46_power_quiz_3",
+        "button_text": "Next Question (3/3) ➔"
+      }
+    },
+    {
+      "card_id": "card_46_power_quiz_3",
+      "card_slug": "card_46_power_quiz_3",
+      "type": "quiz",
+      "concept_id": "kwh_conversion_quiz",
+      "level": 3,
+      "progress": {
+        "current": 46,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "1 kWh (kilowatt-hour) = ? Joules",
+        "options": [
+          {
+            "id": "A",
+            "text": "3.6 × 10³ J"
+          },
+          {
+            "id": "B",
+            "text": "3.6 × 10⁴ J"
+          },
+          {
+            "id": "C",
+            "text": "3.6 × 10⁵ J"
+          },
+          {
+            "id": "D",
+            "text": "3.6 × 10⁶ J"
+          }
+        ],
+        "correct_option_id": "D",
+        "explanation": "✅ 1 kWh = 1 kilowatt × 1 hour\n= 1000 Watt × 3600 seconds (1 hour = 3600 s)\n= 1000 × 3600 J (since 1 W = 1 J/s)\n= 3,600,000 J\n= 3.6 × 10⁶ J ✅\n\n⭐ BPSC/SSC Favorite: यह commercial unit of energy है (bijli bill में use होता है)। Yaad rakho: 1 unit = 1 kWh = 3.6 MJ!"
+      },
+      "navigation": {
+        "next": "card_47_power_milestone",
+        "button_text": "Check & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_47_power_milestone",
+      "card_slug": "card_47_power_milestone",
+      "type": "milestone",
+      "concept_id": "power_module_complete",
+      "level": 3,
+      "progress": {
+        "current": 47,
+        "total": 72
+      },
+      "milestone_payload": {
+        "title": "🎉 MODULE 4 CLEARED!",
+        "badge_emoji": "⚡",
+        "completed_topic": "Power - Definition, Units & Commercial Energy",
+        "xp_earned": 50,
+        "milestone_progress": "Module 4/6 Complete",
+        "motivational_quote": "You're now POWERFUL enough to calculate electricity bills and ace SSC numericals! 💡💪"
+      },
+      "navigation": {
+        "next": "card_48_work_energy_theorem",
+        "button_text": "Work-Energy Theorem ➔"
+      }
+    },
+    {
+      "card_id": "card_48_work_energy_theorem",
+      "card_slug": "card_48_work_energy_theorem",
+      "type": "chat",
+      "concept_id": "work_energy_theorem_intro",
+      "level": 3,
+      "progress": {
+        "current": 48,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ab Officer-level theorem! Work-Energy Theorem: 'Work done by net force on an object = Change in its Kinetic Energy' 🎯⚡"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab Sir? Formula mein batao! 🙏"
+        },
+        {
+          "speaker": "aman",
+          "text": "W_net = ΔKE = KE_final - KE_initial = ½m(v²−u²)\nJahan u = initial velocity, v = final velocity। Ye theorem bahut powerful hai numerical solve karne mein! 💪"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab work karo, object ki speed change hogi! 😮"
+        }
+      ],
+      "navigation": {
+        "next": "card_49_theorem_application",
+        "button_text": "Application Dekho ➔"
+      }
+    },
+    {
+      "card_id": "card_49_theorem_application",
+      "card_slug": "card_49_theorem_application",
+      "type": "chat",
+      "concept_id": "work_energy_theorem_example",
+      "level": 3,
+      "progress": {
+        "current": 49,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Example: Ek 5 kg block rest (u=0) se start karke 10 m/s velocity tak पहुँचता है। Net work done? W = ½ × 5 × (10² - 0²) = 2.5 × 100 = 250 J ✅"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab bina force/acceleration dekhe directly work निकाल लिया! 😲"
+        },
+        {
+          "speaker": "aman",
+          "text": "Exactly! Agar friction bhi ho, complex forces ho, to bhi ye theorem काम करेगा। NET work (सभी forces का total) = KE में change। NEET/BPSC का favorite shortcut! 🚀"
+        },
+        {
+          "speaker": "raju",
+          "text": "Powerful theorem Sir! Energy approach > Force approach! 💡"
+        }
+      ],
+      "navigation": {
+        "next": "card_50_theorem_stopping",
+        "button_text": "Stopping Example ➔"
+      }
+    },
+    {
+      "card_id": "card_50_theorem_stopping",
+      "card_slug": "card_50_theorem_stopping",
+      "type": "chat",
+      "concept_id": "work_energy_stopping_distance",
+      "level": 3,
+      "progress": {
+        "current": 50,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Reverse case (BPSC favorite): Ek car 20 m/s se चल रही है (m=1000 kg), brakes लगाकर रुकती है (v=0)। Friction force ne kitna work kiya? 🚗🛑"
+        },
+        {
+          "speaker": "raju",
+          "text": "W = ½m(v² - u²) = ½ × 1000 × (0² - 20²) = 500 × (-400) = -200,000 J! 😮"
+        },
+        {
+          "speaker": "aman",
+          "text": "Perfect! Negative sign matlab friction ne negative work kiya (opposite to motion)। Car ki KE 200 kJ reduce हो गई - wo energy heat में convert (brakes गरम हो गए)! 🔥"
+        },
+        {
+          "speaker": "raju",
+          "text": "Wow! Theorem se energy loss bhi calculate ho gaya! 🎯"
+        }
+      ],
+      "navigation": {
+        "next": "card_51_theorem_quiz_1",
+        "button_text": "Quiz Karo ➔"
+      }
+    },
+    {
+      "card_id": "card_51_theorem_quiz_1",
+      "card_slug": "card_51_theorem_quiz_1",
+      "type": "quiz",
+      "concept_id": "work_energy_theorem_statement",
+      "level": 3,
+      "progress": {
+        "current": 51,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Work-Energy Theorem के अनुसार:",
+        "options": [
+          {
+            "id": "A",
+            "text": "किसी वस्तु पर किया गया कुल कार्य = उसकी स्थितिज ऊर्जा में परिवर्तन"
+          },
+          {
+            "id": "B",
+            "text": "किसी वस्तु पर किया गया कुल कार्य = उसकी गतिज ऊर्जा में परिवर्तन"
+          },
+          {
+            "id": "C",
+            "text": "किसी वस्तु पर किया गया कुल कार्य = उसके संवेग में परिवर्तन"
+          },
+          {
+            "id": "D",
+            "text": "किसी वस्तु पर किया गया कुल कार्य = उसके वेग में परिवर्तन"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "✅ Work-Energy Theorem: Net work done on an object equals the change in its Kinetic Energy।\nW_net = ΔKE = KE_final - KE_initial = ½m(v² - u²)\n\n⚠️ Common Trap: Option A (PE में change) गलत है - वो gravitational work के specific case में होता है, universal theorem नहीं है। ⭐ BPSC/NEET में statement-based पूछा जाता है!"
+      },
+      "navigation": {
+        "next": "card_52_theorem_quiz_2",
+        "button_text": "Next Question (2/3) ➔"
+      }
+    },
+    {
+      "card_id": "card_52_theorem_quiz_2",
+      "card_slug": "card_52_theorem_quiz_2",
+      "type": "quiz",
+      "concept_id": "work_energy_numerical",
+      "level": 3,
+      "progress": {
+        "current": 52,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "2 kg द्रव्यमान की एक गेंद का वेग 5 m/s से बढ़कर 15 m/s हो जाता है। गेंद पर किया गया कुल कार्य कितना है?",
+        "options": [
+          {
+            "id": "A",
+            "text": "100 J"
+          },
+          {
+            "id": "B",
+            "text": "200 J"
+          },
+          {
+            "id": "C",
+            "text": "250 J"
+          },
+          {
+            "id": "D",
+            "text": "500 J"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "✅ Work-Energy Theorem: W = ΔKE = ½m(v² - u²)\n= ½ × 2 × (15² - 5²)\n= 1 × (225 - 25)\n= 1 × 200\n= 200 J ✅\n\nAlternate check:\nKE_initial = ½ × 2 × 5² = 25 J\nKE_final = ½ × 2 × 15² = 225 J\nW = 225 - 25 = 200 J ✅\n\n⭐ SSC/Railway Tip: Hamesha v² aur u² का square carefully calculate karo!"
+      },
+      "navigation": {
+        "next": "card_53_theorem_quiz_3",
+        "button_text": "Next Question (3/3) ➔"
+      }
+    },
+    {
+      "card_id": "card_53_theorem_quiz_3",
+      "card_slug": "card_53_theorem_quiz_3",
+      "type": "quiz",
+      "concept_id": "work_energy_negative_work",
+      "level": 3,
+      "progress": {
+        "current": 53,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "यदि किसी गतिशील वस्तु पर ऋणात्मक कार्य (negative work) किया जाए, तो:",
+        "options": [
+          {
+            "id": "A",
+            "text": "वस्तु की गतिज ऊर्जा बढ़ती है"
+          },
+          {
+            "id": "B",
+            "text": "वस्तु की गतिज ऊर्जा घटती है"
+          },
+          {
+            "id": "C",
+            "text": "वस्तु की गतिज ऊर्जा समान रहती है"
+          },
+          {
+            "id": "D",
+            "text": "वस्तु का द्रव्यमान बढ़ता है"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "✅ Work-Energy Theorem: W_net = ΔKE\n\nयदि W negative है (जैसे friction, braking force), तो:\nΔKE = negative ➔ KE_final < KE_initial ➔ Kinetic Energy घटती है ➔ Velocity घटती है ➔ वस्तु धीमी होती है!\n\n⭐ NEET/BPSC Concept: Negative work का मतलब है वस्तु की गति को oppose करना (slow down करना)। Example: Brakes, Air resistance, Friction - सभी negative work करते हैं!"
+      },
+      "navigation": {
+        "next": "card_54_theorem_milestone",
+        "button_text": "Check Answer ➔"
+      }
+    },
+    {
+      "card_id": "card_54_theorem_milestone",
+      "card_slug": "card_54_theorem_milestone",
+      "type": "milestone",
+      "concept_id": "theorem_module_complete",
+      "level": 3,
+      "progress": {
+        "current": 54,
+        "total": 72
+      },
+      "milestone_payload": {
+        "title": "🎉 MODULE 5 CLEARED!",
+        "badge_emoji": "🔧",
+        "completed_topic": "Work-Energy Theorem - Officer Shortcut Tool",
+        "xp_earned": 50,
+        "milestone_progress": "Module 5/6 Complete",
+        "motivational_quote": "You've unlocked the theorem that makes Physics problems 10x easier! 🚀✨"
+      },
+      "navigation": {
+        "next": "card_55_exam_traps_intro",
+        "button_text": "Final Module: Exam Traps ➔"
+      }
+    },
+    {
+      "card_id": "card_55_exam_traps_intro",
+      "card_slug": "card_55_exam_traps_intro",
+      "type": "chat",
+      "concept_id": "bpsc_traps_overview",
+      "level": 4,
+      "progress": {
+        "current": 55,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ab final module! BPSC/SSC exam mein बार-बार आने वाले conceptual traps aur multi-statement questions! Ye sabse dangerous hain 🎯⚠️"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir maine sab padh liya, ab kya trap ho sakta hai? 🤔"
+        },
+        {
+          "speaker": "aman",
+          "text": "Dekho, knowledge hai tumhare paas। But exam में presentation tricky hoti hai। Chalo ek-ek karke sabse common traps dekhte hain! 😎"
+        },
+        {
+          "speaker": "raju",
+          "text": "Ready Sir! Traps को expose karo! 🔥"
+        }
+      ],
+      "navigation": {
+        "next": "card_56_trap_coolie",
+        "button_text": "Trap #1 ➔"
+      }
+    },
+    {
+      "card_id": "card_56_trap_coolie",
+      "card_slug": "card_56_trap_coolie",
+      "type": "chat",
+      "concept_id": "coolie_horizontal_motion_trap",
+      "level": 4,
+      "progress": {
+        "current": 56,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "⭐ BPSC Favorite Trap #1: 'Coolie apne sir pe 50 kg ka samaan लेकर क्षैतिज (horizontal) platform पर 100 m चलता है। उसने सामान पर कितना work किया?' Most students: 'Bahut saara!' 😅"
+        },
+        {
+          "speaker": "raju",
+          "text": "Lekin Sir, answer to ZERO hai! Force (weight) vertical downward, Displacement horizontal → θ=90° → Work = 0! 😎"
+        },
+        {
+          "speaker": "aman",
+          "text": "Perfect! Coolie khud थकता है (internal muscular work), but SAAMAAN पर externally work = 0। BPSC यही confuse करता है! ✅"
+        },
+        {
+          "speaker": "raju",
+          "text": "Pakka trap nahi hoga ab! 💪"
+        }
+      ],
+      "navigation": {
+        "next": "card_57_trap_satellite",
+        "button_text": "Trap #2 ➔"
+      }
+    },
+    {
+      "card_id": "card_57_trap_satellite",
+      "card_slug": "card_57_trap_satellite",
+      "type": "chat",
+      "concept_id": "satellite_circular_motion_trap",
+      "level": 4,
+      "progress": {
+        "current": 57,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "⭐ Trap #2 (NEET/UPSC level): 'Satellite पृथ्वी के चारों ओर वृत्ताकार कक्षा (circular orbit) में घूम रहा है। गुरुत्वाकर्षण बल (gravitational force) द्वारा satellite पर कितना work?' 🛰️🌍"
+        },
+        {
+          "speaker": "raju",
+          "text": "Hmm... Gravity to constant force laga rahi hai, aur satellite चल भी रहा है... Work positive hoga? 🤔"
+        },
+        {
+          "speaker": "aman",
+          "text": "WRONG! ❌ Gravity (centripetal force) RADIALLY INWARD (center ki taraf) act करती है। Satellite की motion TANGENTIAL (circle ke along) है। Force ⊥ Motion → θ=90° → Work = ZERO! 🎯"
+        },
+        {
+          "speaker": "raju",
+          "text": "Ohhh! Perpendicular forces kabhi work nahi karte! Ye to important trap hai! 😮"
+        }
+      ],
+      "navigation": {
+        "next": "card_58_trap_friction",
+        "button_text": "Trap #3 ➔"
+      }
+    },
+    {
+      "card_id": "card_58_trap_friction",
+      "card_slug": "card_58_trap_friction",
+      "type": "chat",
+      "concept_id": "friction_always_negative_trap",
+      "level": 4,
+      "progress": {
+        "current": 58,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "⭐ Trap #3: 'Friction हमेशा negative work करता है।' TRUE or FALSE? Most students: 'TRUE!' But... 🤔"
+        },
+        {
+          "speaker": "raju",
+          "text": "Hain?? Friction to oppose karta hai motion ko, to hamesha negative! 😵"
+        },
+        {
+          "speaker": "aman",
+          "text": "Usually YES, but Exception: Tum treadmill पर चल rahe ho। Treadmill belt पीछे जा रही है, tumhare feet आगे जा रहे हैं। Friction (between feet & belt) तुम्हें FORWARD push कर रहा hai! Friction ka work POSITIVE! 🏃‍♂️⚡"
+        },
+        {
+          "speaker": "raju",
+          "text": "Wow! Exception याद रखना पड़ेगा Sir! Friction can do positive work (rare cases)! 🎯"
+        }
+      ],
+      "navigation": {
+        "next": "card_59_trap_energy_power",
+        "button_text": "Trap #4 ➔"
+      }
+    },
+    {
+      "card_id": "card_59_trap_energy_power",
+      "card_slug": "card_59_trap_energy_power",
+      "type": "chat",
+      "concept_id": "energy_power_confusion_trap",
+      "level": 4,
+      "progress": {
+        "current": 59,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "⭐ Trap #4 (SSC favorite): 'Higher Power wala appliance हमेशा ज्यादा energy consume करेगा।' TRUE/FALSE? 🤔💡"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir, higher power = faster energy use... to TRUE hoga na? 😕"
+        },
+        {
+          "speaker": "aman",
+          "text": "INCOMPLETE! ❌ Energy = Power × Time। Agar 1000W heater 1 hour चले aur 100W bulb 10 hours चले:\nHeater: 1000W × 1h = 1000 Wh\nBulb: 100W × 10h = 1000 Wh (SAME energy!) 😲"
+        },
+        {
+          "speaker": "raju",
+          "text": "Achhaaaa... TIME factor भी देखना पड़ेगा! High power ≠ Always high energy! 💡"
+        }
+      ],
+      "navigation": {
+        "next": "card_60_trap_quiz_1",
+        "button_text": "Trap Quiz ➔"
+      }
+    },
+    {
+      "card_id": "card_60_trap_quiz_1",
+      "card_slug": "card_60_trap_quiz_1",
+      "type": "quiz",
+      "concept_id": "bpsc_multistatement_trap",
+      "level": 4,
+      "progress": {
+        "current": 60,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "निम्नलिखित कथनों पर विचार कीजिए:\n1. किसी वस्तु को उठाकर क्षैतिज दिशा में ले जाने पर गुरुत्वाकर्षण बल कोई कार्य नहीं करता।\n2. वृत्ताकार पथ पर गति करते समय अभिकेन्द्र बल (centripetal force) सदैव धनात्मक कार्य करता है।\n\nसही कथन है/हैं:",
+        "options": [
+          {
+            "id": "A",
+            "text": "केवल 1"
+          },
+          {
+            "id": "B",
+            "text": "केवल 2"
+          },
+          {
+            "id": "C",
+            "text": "1 और 2 दोनों"
+          },
+          {
+            "id": "D",
+            "text": "न तो 1, न ही 2"
+          }
+        ],
+        "correct_option_id": "A",
+        "explanation": "✅ Statement 1: सही है! गुरुत्वाकर्षण बल vertically downward लगता है। Horizontal displacement के साथ angle 90° है। W = F × s × cos 90° = 0।\n\n❌ Statement 2: गलत है! Centripetal force हमेशा circle के CENTER की ओर (radially inward) होता है, जबकि motion TANGENTIAL (perpendicular) होती है। Force ⊥ Displacement ➔ Work = 0 (satellite example!)। यह कभी positive work नहीं करता।\n\n⭐ BPSC Multi-Statement Trap: Both statements science से related लगते हैं, लेकिन carefully analyze करना पड़ता है!"
+      },
+      "navigation": {
+        "next": "card_61_trap_quiz_2",
+        "button_text": "Next Question (2/3) ➔"
+      }
+    },
+    {
+      "card_id": "card_61_trap_quiz_2",
+      "card_slug": "card_61_trap_quiz_2",
+      "type": "quiz",
+      "concept_id": "assertion_reason_trap",
+      "level": 4,
+      "progress": {
+        "current": 61,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Assertion (A): एक वस्तु को ऊपर उठाने में किया गया कार्य धनात्मक होता है।\nReason (R): कार्य करने से वस्तु की स्थितिज ऊर्जा बढ़ती है।\n\nसही विकल्प चुनिए:",
+        "options": [
+          {
+            "id": "A",
+            "text": "A और R दोनों सत्य हैं और R, A की सही व्याख्या है"
+          },
+          {
+            "id": "B",
+            "text": "A और R दोनों सत्य हैं लेकिन R, A की सही व्याख्या नहीं है"
+          },
+          {
+            "id": "C",
+            "text": "A सत्य है लेकिन R असत्य है"
+          },
+          {
+            "id": "D",
+            "text": "A असत्य है लेकिन R सत्य है"
+          }
+        ],
+        "correct_option_id": "A",
+        "explanation": "✅ Assertion (A): सत्य है। जब हम वस्तु को ऊपर उठाते हैं, तो applied force और displacement दोनों upward (same direction, θ=0°) होते हैं। W = F × s × cos 0° = F × s (positive)।\n\n✅ Reason (R): सत्य है। Height बढ़ने से PE = mgh बढ़ती है। यह increase हमारे किए गए positive work के कारण ही होता है (W = ΔPE)।\n\n✅ R, A की CORRECT व्याख्या है क्योंकि positive work करने से ही PE बढ़ती है।\n\n⭐ BPSC/UPSC Prelims Pattern: Assertion-Reason questions में logical connection check करना crucial है!"
+      },
+      "navigation": {
+        "next": "card_62_trap_quiz_3",
+        "button_text": "Last Trap Question ➔"
+      }
+    },
+    {
+      "card_id": "card_62_trap_quiz_3",
+      "card_slug": "card_62_trap_quiz_3",
+      "type": "quiz",
+      "concept_id": "speed_doubling_energy_trap",
+      "level": 4,
+      "progress": {
+        "current": 62,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "यदि किसी गतिशील वस्तु की चाल (speed) दोगुनी कर दी जाए, तो उसकी गतिज ऊर्जा:",
+        "options": [
+          {
+            "id": "A",
+            "text": "दोगुनी हो जाती है"
+          },
+          {
+            "id": "B",
+            "text": "चार गुनी हो जाती है"
+          },
+          {
+            "id": "C",
+            "text": "आधी हो जाती है"
+          },
+          {
+            "id": "D",
+            "text": "समान रहती है"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "✅ Kinetic Energy KE = ½mv²\n\nध्यान दें: v² (velocity का square) है!\n\nयदि speed double (2v) हो जाए:\nKE_new = ½m(2v)² = ½m(4v²) = 4 × (½mv²) = 4 × KE_original\n\nSpeed double ➔ KE चार गुनी! ⚡\n\n⚠️ BPSC/SSC Trap: Most students सोचते हैं 'speed double to energy bhi double' (linear relation). लेकिन v² की वजह से quadratic relation है!\n\nExample:\nv = 10 m/s → KE = ½m(100) = 50m\nv = 20 m/s → KE = ½m(400) = 200m (चार गुना!)\n\n⭐ Railway/SSC में बार-बार पूछा जाता है!"
+      },
+      "navigation": {
+        "next": "card_63_exam_traps_milestone",
+        "button_text": "Check & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_63_exam_traps_milestone",
+      "card_slug": "card_63_exam_traps_milestone",
+      "type": "milestone",
+      "concept_id": "exam_traps_module_complete",
+      "level": 4,
+      "progress": {
+        "current": 63,
+        "total": 72
+      },
+      "milestone_payload": {
+        "title": "🎉 MODULE 6 CLEARED!",
+        "badge_emoji": "🎯",
+        "completed_topic": "BPSC/SSC Exam Traps & Multi-Statement Qs",
+        "xp_earned": 50,
+        "milestone_progress": "Module 6/6 Complete - All Modules Done! 🔥",
+        "motivational_quote": "You've mastered the TRAPS that trap 90% candidates! Now you're exam-ready! 💪⚡"
+      },
+      "navigation": {
+        "next": "card_64_officer_revision",
+        "button_text": "Officer Revision Summary ➔"
+      }
+    },
+    {
+      "card_id": "card_64_officer_revision",
+      "card_slug": "card_64_officer_revision",
+      "type": "summary",
+      "concept_id": "chapter_officer_revision",
+      "level": 4,
+      "progress": {
+        "current": 64,
+        "total": 72
+      },
+      "summary_payload": {
+        "title": "⚡ OFFICER REVISION - Lightning Facts",
+        "revision_points": [
+          {
+            "topic": "Work Formula (Angle-based)",
+            "point": "W = F × s × cos θ। θ=0° (Positive Work), θ=90° (Zero Work), θ=180° (Negative Work)। Coolie horizontal motion: W=0 (θ=90°)। ⭐ BPSC Trap!"
+          },
+          {
+            "topic": "Kinetic Energy (KE)",
+            "point": "KE = ½mv²। Speed double → KE चार गुना (v² effect)! SI unit: Joule। Scientist: James Joule (1818-1889, English)। SSC Favorite!"
+          },
+          {
+            "topic": "Potential Energy (PE)",
+            "point": "PE = mgh (Gravitational)। Height से depend करता है। Reference point change → PE value change। Free fall: PE → KE transformation।"
+          },
+          {
+            "topic": "Conservation of Energy",
+            "point": "'Energy can neither be created nor destroyed; only transformed.' Total energy = constant (isolated system)। Pendulum: PE ↔ KE। NEET/UPSC Statement!"
+          },
+          {
+            "topic": "Power",
+            "point": "P = W/t = E/t। SI unit: Watt (1W = 1J/s)। Commercial unit: kWh (1 kWh = 3.6 × 10⁶ J)। Scientist: James Watt (Scottish, 1736-1819)।"
+          },
+          {
+            "topic": "Work-Energy Theorem",
+            "point": "W_net = ΔKE = ½m(v² - u²)। Net work = Change in KE। Negative work → KE decreases (braking)। Officer-level shortcut!"
+          },
+          {
+            "topic": "Circular Motion Work",
+            "point": "Centripetal force ⊥ Motion → Work = 0 (Satellite, Moon orbit)। Force perpendicular to displacement kabhi work nahi karta! BPSC Multi-Statement Trap!"
+          },
+          {
+            "topic": "Energy Transformations",
+            "point": "Examples: Hydroelectric (PE→KE→Mechanical→Electrical), Bulb (Electrical→Light+Heat), Photosynthesis (Light→Chemical)। SSC में conversions पूछते हैं!"
+          }
+        ]
+      },
+      "navigation": {
+        "next": "card_65_final_quiz_1",
+        "button_text": "Final Officer Quiz ➔"
+      }
+    },
+    {
+      "card_id": "card_65_final_quiz_1",
+      "card_slug": "card_65_final_quiz_1",
+      "type": "final_quiz",
+      "concept_id": "final_master_quiz_1",
+      "level": 4,
+      "progress": {
+        "current": 65,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "निम्नलिखित कथनों पर विचार कीजिए:\n1. किसी वस्तु पर किया गया ऋणात्मक कार्य उसकी गतिज ऊर्जा को कम करता है।\n2. एक समान वृत्तीय गति में गुरुत्वाकर्षण बल सदैव कार्य करता है।\n3. Power का SI मात्रक Joule/second है।\n4. 1 kWh = 3.6 × 10⁶ J\n\nसही कथन हैं:",
+        "options": [
+          {
+            "id": "A",
+            "text": "1, 2 और 3"
+          },
+          {
+            "id": "B",
+            "text": "1, 3 और 4"
+          },
+          {
+            "id": "C",
+            "text": "2, 3 और 4"
+          },
+          {
+            "id": "D",
+            "text": "1, 2 और 4"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "✅ Statement Analysis:\n\n1️⃣ सही है! Work-Energy Theorem: W = ΔKE। Negative work → ΔKE negative → KE कम होती है (braking example)।\n\n2️⃣ गलत है! Uniform circular motion में centripetal force (जो gravity provide कर सकती है, जैसे satellite) हमेशा motion के perpendicular होता है (θ=90°) → Work = 0। ⭐ BPSC Trap!\n\n3️⃣ सही है! Power P = W/t = Joule/second = Watt। 1 W = 1 J/s।\n\n4️⃣ सही है! 1 kWh = 1000 W × 3600 s = 3,600,000 J = 3.6 MJ।\n\nCorrect statements: 1, 3, 4 ➔ Option B ✅\n\n⭐ BPSC/UPSC Prelims Level Multi-Statement Question!"
+      },
+      "navigation": {
+        "next": "card_66_final_quiz_2",
+        "button_text": "Next Final Question ➔"
+      }
+    },
+    {
+      "card_id": "card_66_final_quiz_2",
+      "card_slug": "card_66_final_quiz_2",
+      "type": "final_quiz",
+      "concept_id": "final_master_quiz_2",
+      "level": 4,
+      "progress": {
+        "current": 66,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "एक 1500 kg की कार 72 km/h की चाल से चल रही है। यदि इसकी चाल बढ़ाकर 108 km/h कर दी जाए, तो गतिज ऊर्जा में वृद्धि होगी:",
+        "options": [
+          {
+            "id": "A",
+            "text": "300 kJ"
+          },
+          {
+            "id": "B",
+            "text": "375 kJ"
+          },
+          {
+            "id": "C",
+            "text": "450 kJ"
+          },
+          {
+            "id": "D",
+            "text": "525 kJ"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "✅ Step-by-step Solution:\n\n🔹 पहले km/h को m/s में convert करो:\n• 72 km/h = 72 × (5/18) = 20 m/s\n• 108 km/h = 108 × (5/18) = 30 m/s\n\n🔹 Initial KE:\nKE₁ = ½ × 1500 × (20)²\n    = 750 × 400\n    = 300,000 J = 300 kJ\n\n🔹 Final KE:\nKE₂ = ½ × 1500 × (30)²\n    = 750 × 900\n    = 675,000 J = 675 kJ\n\n🔹 Increase in KE:\nΔKE = KE₂ - KE₁\n     = 675 - 300\n     = 375 kJ ✅\n\n⭐ SSC/Railway Numerical Pattern: Hamesha units carefully convert karo (km/h → m/s)। Formula: km/h × (5/18) = m/s!"
+      },
+      "navigation": {
+        "next": "card_67_final_quiz_3",
+        "button_text": "Next Final Question ➔"
+      }
+    },
+    {
+      "card_id": "card_67_final_quiz_3",
+      "card_slug": "card_67_final_quiz_3",
+      "type": "final_quiz",
+      "concept_id": "final_master_quiz_3",
+      "level": 4,
+      "progress": {
+        "current": 67,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Assertion (A): ऊर्जा संरक्षण का नियम केवल यांत्रिक ऊर्जा (mechanical energy) पर लागू होता है।\nReason (R): ऊष्मा (heat) और ध्वनि (sound) भी ऊर्जा के रूप हैं।\n\nसही विकल्प है:",
+        "options": [
+          {
+            "id": "A",
+            "text": "A और R दोनों सत्य हैं और R, A की सही व्याख्या है"
+          },
+          {
+            "id": "B",
+            "text": "A और R दोनों सत्य हैं लेकिन R, A की सही व्याख्या नहीं है"
+          },
+          {
+            "id": "C",
+            "text": "A असत्य है लेकिन R सत्य है"
+          },
+          {
+            "id": "D",
+            "text": "A सत्य है लेकिन R असत्य है"
+          }
+        ],
+        "correct_option_id": "C",
+        "explanation": "✅ Analysis:\n\n❌ Assertion (A): असत्य है! Law of Conservation of Energy UNIVERSAL law है - यह ऊर्जा के सभी रूपों (mechanical, heat, light, sound, chemical, nuclear, electrical, etc.) पर लागू होता है। Sirf mechanical energy पर limited नहीं है!\n\n✅ Reason (R): सत्य है! Heat और sound भी energy के valid forms हैं। जब mechanical energy 'loss' होती दिखती है (friction से), तो वो actually heat और sound में convert हो जाती है - total energy conserved रहती है!\n\nR सत्य है, लेकिन A को सही नहीं ठहराता (क्योंकि A ही गलत है)।\n\n⭐ BPSC/UPSC Conceptual Trap: Law केवल mechanical तक सीमित नहीं है - यह fundamental universal principle है!"
+      },
+      "navigation": {
+        "next": "card_68_final_quiz_4",
+        "button_text": "Next Question ➔"
+      }
+    },
+    {
+      "card_id": "card_68_final_quiz_4",
+      "card_slug": "card_68_final_quiz_4",
+      "type": "final_quiz",
+      "concept_id": "final_master_quiz_4",
+      "level": 4,
+      "progress": {
+        "current": 68,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "एक मशीन 25 kW की Power से 10 minutes तक कार्य करती है। इसके द्वारा उपयोग की गई कुल ऊर्जा (kWh में) है:",
+        "options": [
+          {
+            "id": "A",
+            "text": "4.17 kWh"
+          },
+          {
+            "id": "B",
+            "text": "250 kWh"
+          },
+          {
+            "id": "C",
+            "text": "2.5 kWh"
+          },
+          {
+            "id": "D",
+            "text": "0.417 kWh"
+          }
+        ],
+        "correct_option_id": "A",
+        "explanation": "✅ Formula: Energy (kWh) = Power (kW) × Time (hours)\n\nGiven:\n• Power = 25 kW\n• Time = 10 minutes = 10/60 hours = 1/6 hours ≈ 0.167 hours\n\nCalculation:\nEnergy = 25 × (10/60)\n       = 25 × (1/6)\n       = 25/6\n       ≈ 4.17 kWh ✅\n\n⚠️ Common Mistake: Students often forget to convert minutes to hours! kWh में time HOURS में होना चाहिए।\n\nAlternate Check (Joules में):\n25 kW = 25,000 W\n10 min = 600 s\nE = 25,000 × 600 = 15,000,000 J = 15 MJ\n= 15,000,000 / 3,600,000 kWh (since 1 kWh = 3.6 MJ)\n≈ 4.17 kWh ✅\n\n⭐ SSC/Railway Favorite: Unit conversion traps!"
+      },
+      "navigation": {
+        "next": "card_69_final_quiz_5",
+        "button_text": "Last Final Question ➔"
+      }
+    },
+    {
+      "card_id": "card_69_final_quiz_5",
+      "card_slug": "card_69_final_quiz_5",
+      "type": "final_quiz",
+      "concept_id": "final_master_quiz_5",
+      "level": 4,
+      "progress": {
+        "current": 69,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "एक पत्थर को h ऊँचाई से गिराया जाता है। जमीन से h/2 ऊँचाई पर इसकी गतिज ऊर्जा (KE) और स्थितिज ऊर्जा (PE) का अनुपात होगा: (वायु प्रतिरोध नगण्य)",
+        "options": [
+          {
+            "id": "A",
+            "text": "1 : 1"
+          },
+          {
+            "id": "B",
+            "text": "1 : 2"
+          },
+          {
+            "id": "C",
+            "text": "2 : 1"
+          },
+          {
+            "id": "D",
+            "text": "1 : 3"
+          }
+        ],
+        "correct_option_id": "A",
+        "explanation": "✅ Energy Conservation Approach:\n\n🔹 Initially (at height h):\n• PE = mgh, KE = 0\n• Total Energy E = mgh\n\n🔹 At height h/2:\n• PE = mg(h/2) = mgh/2\n• By Conservation: KE + PE = Total\n  ➔ KE + mgh/2 = mgh\n  ➔ KE = mgh - mgh/2 = mgh/2\n\n🔹 Ratio:\nKE : PE = (mgh/2) : (mgh/2) = 1 : 1 ✅\n\n💡 Beautiful Symmetry! h/2 ऊँचाई पर (आधे रास्ते), ऊर्जा बराबर बँटी होती है: आधी PE, आधी KE!\n\n⭐ NEET/BPSC Conceptual Favorite: Energy distribution during free fall!\n\nGeneral Pattern:\n• At height h: PE max, KE = 0\n• At height h/2: PE = KE (equal)\n• At ground: PE = 0, KE max"
+      },
+      "navigation": {
+        "next": "card_70_scientist_summary",
+        "button_text": "Scientist Summary ➔"
+      }
+    },
+    {
+      "card_id": "card_70_scientist_summary",
+      "card_slug": "card_70_scientist_summary",
+      "type": "chat",
+      "concept_id": "scientists_names_years",
+      "level": 4,
+      "progress": {
+        "current": 70,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Last important thing: Scientist names aur discovery years! BPSC/SSC mein direct पूछते हैं 📌\n\n🔹 James Prescott Joule (1818-1889, English): Work & Heat ka relation, Joule (unit) के नाम पर\n\n🔹 James Watt (1736-1819, Scottish): Steam engine improve किया, Watt (Power unit) के नाम पर"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir, Law of Conservation of Energy किसने दिया? 🤔"
+        },
+        {
+          "speaker": "aman",
+          "text": "Multiple scientists ka contribution hai (Joule, Helmholtz, Mayer), but generally Julius Robert von Mayer (German, 1814-1878) को credit मिलता है। NCERT में specific name नहीं, principle पे focus hai! ✅"
+        },
+        {
+          "speaker": "raju",
+          "text": "Noted Sir! Joule = Work/Energy unit, Watt = Power unit! 💯"
+        }
+      ],
+      "navigation": {
+        "next": "card_71_mnemonic_tricks",
+        "button_text": "Mnemonics ➔"
+      }
+    },
+    {
+      "card_id": "card_71_mnemonic_tricks",
+      "card_slug": "card_71_mnemonic_tricks",
+      "type": "chat",
+      "concept_id": "exam_mnemonics",
+      "level": 4,
+      "progress": {
+        "current": 71,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Exam-ready mnemonics! 🎯\n\n✅ Work formula: 'FaScinate' = F × s × Cosθ\n\n✅ KE formula: 'Half Mi-V-Square' = ½ m v²\n\n✅ PE formula: 'My Good Height' = m g h\n\n✅ Power: 'What/Time' = W/t (kya kaam kitne time mein)"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir ek aur: Energy types याद kaise rakhe? 😅"
+        },
+        {
+          "speaker": "aman",
+          "text": "Think 'K-P-H-L-S-C-E-N': Kinetic, Potential, Heat, Light, Sound, Chemical, Electrical, Nuclear। Sab एक-दूसरे में convert हो sakte hain! 🔄⚡"
+        },
+        {
+          "speaker": "raju",
+          "text": "Perfect Sir! Ab sab set hai! 💪🔥"
+        }
+      ],
+      "navigation": {
+        "next": "card_72_trophy",
+        "button_text": "Get Trophy ➔"
+      }
+    },
+    {
+      "card_id": "card_72_trophy",
+      "card_slug": "card_72_trophy",
+      "type": "milestone",
+      "concept_id": "chapter_completion",
+      "level": 4,
+      "progress": {
+        "current": 72,
+        "total": 72
+      },
+      "milestone_payload": {
+        "title": "🏆 CHAPTER MASTERED! 🏆",
+        "badge_emoji": "⚡",
+        "completed_topic": "Work, Energy & Power - Complete Chapter",
+        "xp_earned": 500,
+        "milestone_progress": "100% Complete - All 6 Modules Cleared!",
+        "motivational_quote": "From Zero to Officer Level! 🚀 You've mastered Work, Energy & Power like a BPSC topper! Now go crack those exams! 💪⚡🔥\n\n'Energy can neither be created nor destroyed... and now YOU can't be stopped!' 🌟"
+      },
+      "navigation": {
+        "next": null,
+        "button_text": "Back to Dashboard 🏠"
+      }
+    }
+  ]
+}
