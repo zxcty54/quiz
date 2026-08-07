@@ -36,14 +36,6 @@ def remove_markdown_stars(data):
 
 # -------------------------------------------------------------
 # 1b. GENERIC INNER-PAGE FULL-TEXT EXTRACTOR
-#     (UPDATED - the real fix)
-#     Both FreeJobAlert and SarkariResult put the RSS/listing entry as
-#     just a short summary/title - the actual fee table, age limit,
-#     qualification, and important-dates block live only on the post's
-#     own detail page. Different WordPress/CMS themes use different
-#     container class/id names, so this tries a ranked list of common
-#     selectors and falls back to the largest text block on the page
-#     instead of giving up.
 # -------------------------------------------------------------
 CONTENT_SELECTORS = [
     ("div", {"class": "entry-content"}),
@@ -57,32 +49,22 @@ CONTENT_SELECTORS = [
 ]
 
 def fetch_inner_page_text(url, char_limit=3500, timeout=8):
-    """
-    Fetches a detail/notification page and extracts the main body text
-    using a ranked list of common content-container selectors. Falls
-    back to the largest <div> text block on the page if none match,
-    so tables (fee/age/dates) buried deep in the page still get pulled.
-    """
     try:
         res = requests.get(url, headers=HEADERS, timeout=timeout, verify=False)
         if res.status_code != 200:
             return ""
         soup = BeautifulSoup(res.content, "html.parser")
 
-        # Remove obvious noise before extracting
         for tag in soup.find_all(['script', 'style', 'nav', 'footer', 'header', 'aside']):
             tag.decompose()
 
-        # Try known selectors first
         for tag_name, attrs in CONTENT_SELECTORS:
             node = soup.find(tag_name, attrs=attrs) if attrs else soup.find(tag_name)
             if node:
                 text = clean_html_text(str(node))
-                if len(text) > 200:  # sanity check: real content, not a stub
+                if len(text) > 200:
                     return text[:char_limit]
 
-        # Fallback: pick the <div> with the most text on the page
-        # (tables with fee/dates are usually inside the largest content block)
         candidates = soup.find_all('div')
         if candidates:
             best = max(candidates, key=lambda d: len(d.get_text(strip=True)))
@@ -90,7 +72,6 @@ def fetch_inner_page_text(url, char_limit=3500, timeout=8):
             if len(text) > 200:
                 return text[:char_limit]
 
-        # Last resort: whole page text
         return clean_html_text(soup.get_text())[:char_limit]
     except Exception as e:
         print(f"⚠️ Inner page fetch failed ({url}): {e}")
@@ -100,15 +81,8 @@ def fetch_inner_page_text(url, char_limit=3500, timeout=8):
 # 2. STEP 1 & 2: MULTI-SOURCE & DEEP INNER PAGE SCRAPER
 # -------------------------------------------------------------
 def fetch_raw_jobs():
-    """
-    Fetches raw feeds AND scrapes each item's actual detail page for
-    exact Fee, Age, Qualification, and Date tables - since neither
-    FreeJobAlert's RSS summary nor SarkariResult's listing page carries
-    that data; it only lives on the individual post/notification page.
-    """
     job_records = []
 
-    # Central Feeds & Bihar Feeds
     fja_feeds = [
         ("Central SSC Jobs", "https://www.freejobalert.com/ssc-job-notifications/feed/"),
         ("Central Railway Jobs", "https://www.freejobalert.com/railway-jobs/feed/"),
@@ -119,9 +93,7 @@ def fetch_raw_jobs():
         ("Results Feed", "https://www.freejobalert.com/exam-result/feed/")
     ]
 
-    # ---- FreeJobAlert: RSS gives title+link, but real fee/date tables
-    # ---- are only on the linked post page -> fetch it (deep scrape).
-    MAX_INNER_FETCHES_PER_FEED = 10  # keep runtime sane
+    MAX_INNER_FETCHES_PER_FEED = 10
     for category_name, feed_url in fja_feeds:
         try:
             res = requests.get(feed_url, headers=HEADERS, timeout=12, verify=False)
@@ -134,7 +106,6 @@ def fetch_raw_jobs():
                     link_node = item.find('link')
                     link = link_node.text.strip() if link_node is not None else ""
 
-                    # Short RSS summary as a fallback / context anchor
                     content_node = item.find('{http://purl.org/rss/1.0/modules/content/}encoded')
                     rss_summary = clean_html_text(content_node.text) if content_node is not None else ""
 
@@ -147,7 +118,7 @@ def fetch_raw_jobs():
                         if inner_text and len(inner_text) > len(rss_summary):
                             full_text = inner_text
                         fetched += 1
-                        time.sleep(0.25)  # be polite to the server
+                        time.sleep(0.25)
 
                     job_records.append(
                         f"[{category_name}] Title: {title} | Source URL: {link} | Full Content: {full_text[:3500]}"
@@ -156,7 +127,6 @@ def fetch_raw_jobs():
         except Exception as e:
             print(f"⚠️ Error Feed ({category_name}): {e}")
 
-    # ---- SarkariResult: listing page + inner page (kept, made more robust) ----
     try:
         sr_url = "https://www.sarkariresult.com/"
         res = requests.get(sr_url, headers=HEADERS, timeout=12, verify=False)
@@ -198,17 +168,6 @@ def fetch_raw_jobs():
 # 3. STEP 3: GROQ AI STRUCTURING & STRICT EXTRACTION
 # -------------------------------------------------------------
 def call_groq_safe(prompt, system_role="You are a JSON generator assistant."):
-    """
-    UPDATED:
-    - Explicit request timeout (120s) so a slow call fails fast and moves
-      to the next fallback model instead of hanging indefinitely.
-    - Explicit max_tokens=8000 so the JSON response (15+ detailed job
-      cards) doesn't get silently cut off mid-object by a low default
-      output limit, which would break json.loads() and look like the
-      AI "returned nothing".
-    - If a response comes back but is truncated (finish_reason == 'length'),
-      that's logged clearly instead of failing silently on JSON parse.
-    """
     time.sleep(2)
     for model_name in MODELS:
         try:
@@ -225,9 +184,8 @@ def call_groq_safe(prompt, system_role="You are a JSON generator assistant."):
             )
             finish_reason = response.choices[0].finish_reason
             if finish_reason == "length":
-                print(f"⚠️ Model [{model_name}] response was CUT OFF (hit max_tokens). "
-                      f"JSON likely incomplete - trying next model...")
-                continue  # don't return truncated JSON, try fallback model
+                print(f"⚠️ Model [{model_name}] response was CUT OFF (hit max_tokens). Trying next model...")
+                continue
             print(f"⚡ Groq LLM Success using [{model_name}]!")
             return response.choices[0].message.content
         except Exception as e:
@@ -240,41 +198,31 @@ def call_groq_safe(prompt, system_role="You are a JSON generator assistant."):
 
 def generate_job_summary(raw_text):
     today_str = datetime.now().strftime("%d %b %Y")
-    truncated_raw = raw_text[:20000]  # raised since inner pages add more text
+    truncated_raw = raw_text[:20000]
 
     prompt = f"""
     You are an expert Government Recruitment Data Editor for FreeJobAlert & SarkariResult.
-    Below is raw text scraped from multiple government job portals, INCLUDING each post's
-    full inner detail page (fee tables, age limit tables, qualification, and important dates
-    live on these inner pages, not just the listing/RSS summary):
+    Below is raw text scraped from government job portals. Extract ONLY Govt Job Notifications, Govt Competitive Exam Admit Cards, and Govt Exam Results.
 
     RAW TEXT:
     {truncated_raw}
 
     STRICT REJECTION RULES (CRITICAL):
-    1. STRICTLY REJECT SCHOLARSHIPS & YOJNAS:
-       - REJECT any item containing "Scholarship", "Post Matric", "NSP", "Yojna", "Scheme", "Pension", "Allowance".
-       - Scholarships MUST NOT be included under 'latest_jobs'.
-    2. STRICTLY REJECT ADMISSIONS & COUNSELLING:
-       - REJECT College Admissions, Seat Allotments, Counselling Schedules, Entrance Tests (TANCET, CET, NEET, GATE).
+    1. STRICTLY REJECT ALL UNIVERSITY / COLLEGE EXAMS & ADMISSIONS:
+       - REJECT any BA, BSc, BCom, MA, MSc, Semester Exams, University Merit Lists, University Results, College Admissions, Counselling Schedules.
+       - ONLY include Competitive Exam Results (e.g. BPSC Result, SSC CGL Result, Railway NTPC Result, IBPS PO Result).
+    2. STRICTLY REJECT SCHOLARSHIPS & YOJNAS:
+       - REJECT Scholarship, Post Matric, NSP, Yojna, Scheme, Pension, Allowance.
     3. STRICTLY REJECT OTHER STATES:
-       - INCLUDE ONLY: Bihar Govt Jobs AND Central Govt Jobs (SSC, Railways RRB, Banking IBPS/SBI, UPSC, Defence, NTA).
-       - REJECT: UP, MP, Rajasthan, Haryana, Delhi Govt, Maharashtra, Tamil Nadu, Andhra Pradesh, Telangana, Karnataka, Kerala, Gujarat, West Bengal, Odisha, etc.
+       - INCLUDE ONLY: Bihar Govt Jobs/Exams AND Central Govt Jobs/Exams (SSC, Railways, IBPS/SBI, UPSC, Defence).
+       - REJECT: UP, MP, Rajasthan, Haryana, Delhi Govt, Maharashtra, Tamil Nadu, AP, Telangana, Karnataka, Kerala, Gujarat, WB, Odisha, etc.
     4. REJECT APPRENTICE & MBBS DOCTOR POSTS:
        - REJECT Trade Apprentice, Graduate Apprentice, MBBS, Medical Officer, Dental Officer posts.
 
-    DATA EXTRACTION RULES (NO HALLUCINATION / NO 'VARIOUS'):
-    - Read the Application Fee tables in the "Full Content" / "Page Text" sections of the raw text
-      and extract the exact category-wise fee breakdown (e.g. "General / OBC: ₹500 | SC / ST: ₹250").
-    - Extract the exact Educational Qualification requirement as written on the page.
-    - Extract the exact Important Dates (start date, last date) as written on the page.
-    - ONLY use facts that are literally present in the raw text above. Do not guess or use
-      typical/default values from your own knowledge.
-    - If fee or qualification is genuinely not present anywhere in the raw text for that item,
-      write "Refer Official Notification" instead of "Various" - do NOT invent a number.
-    - If NEITHER start_date NOR last_date is present anywhere in the raw text for an item,
-      omit that item from "latest_jobs" entirely rather than guessing a date.
+    DATA EXTRACTION RULES:
     - Populate all 3 arrays: 'latest_jobs', 'admit_cards', and 'results'.
+    - Read the Application Fee tables and extract Category-wise fee breakdown (e.g. "General / OBC: ₹500 | SC / ST: ₹250").
+    - If fee or qualification is not in the text, write "Refer Official Notification" instead of "Various".
     - Do NOT use markdown asterisks (**).
     - Set "apply_url" to "https://www.mocktester.online" for ALL items.
 
@@ -301,7 +249,7 @@ def generate_job_summary(raw_text):
       "admit_cards": [
         {{
           "id": "admit_01",
-          "title": "Official Admit Card Title 2026",
+          "title": "Official Competitive Exam Admit Card Title 2026",
           "organization": "Recruitment Body Name (e.g. SSC / RRB / BPSC)",
           "job_type": "Bihar Govt Job OR Central Govt Job",
           "post_name": "Post Name",
@@ -316,7 +264,7 @@ def generate_job_summary(raw_text):
       "results": [
         {{
           "id": "result_01",
-          "title": "Official Result Title 2026",
+          "title": "Official Competitive Exam Result Title 2026",
           "organization": "Recruitment Body Name (e.g. SSC / RRB / BPSC)",
           "job_type": "Bihar Govt Job OR Central Govt Job",
           "post_name": "Post Name",
@@ -335,9 +283,12 @@ def generate_job_summary(raw_text):
 # 4. STEP 4: PYTHON HARD FILTER & DEDUPLICATION
 # -------------------------------------------------------------
 REJECT_KEYWORDS = [
-    # Non-Job Items (Scholarships, Yojna, Admissions)
+    # University, College & Academic Results (STRICTLY BLOCKED)
+    "university", "college", "semester", "ba Part", "bsc ", "bcom", "ma ", "msc ", 
+    "degree college", "annual exam", "admissions", "counselling", "allotment", "entrance test",
+
+    # Non-Job Items (Scholarships, Yojnas)
     "scholarship", "post matric", "nsp scholarship", "yojna", "scheme", "pension",
-    "counselling", "allotment", "admission", "entrance test", "seat allotment",
 
     # Other States
     "uttar pradesh", " up police", " up board", "uppsc", " up govt",
@@ -351,9 +302,9 @@ REJECT_KEYWORDS = [
     "apprentice", "apprenticeship", "mbbs", "medical officer", "specialist medical officer"
 ]
 
-def is_invalid_item(title, org, post_name, qualification):
+def is_invalid_item(title, org, post_name="", qualification=""):
     combined = f"{title} {org} {post_name} {qualification}".lower()
-    return any(bad_word in combined for bad_word in REJECT_KEYWORDS)
+    return any(bad_word.lower() in combined for bad_word in REJECT_KEYWORDS)
 
 def is_vacancy_less_than_50(vacancies_str):
     if not vacancies_str or "various" in vacancies_str.lower():
@@ -390,7 +341,7 @@ def filter_valid_jobs(parsed_jobs):
             continue
 
         if is_invalid_item(title, org, post_name, qual):
-            print(f"❌ Dropped (Scholarship/Other State/Apprentice): {title}")
+            print(f"❌ Dropped (University/Scholarship/Other State): {title}")
             continue
 
         if is_vacancy_less_than_50(vacancies):
@@ -400,13 +351,11 @@ def filter_valid_jobs(parsed_jobs):
         seen_titles.add(simple_t)
         clean_latest_jobs.append(job)
 
-    # 2. Filter Admit Cards
+    # 2. Filter Admit Cards (Check title and org ONLY so it doesn't drop empty qualification items)
     clean_admit_cards = []
     for card in parsed_jobs.get("admit_cards", []):
         title = card.get("title", "")
         org = card.get("organization", "")
-        post_name = card.get("post_name", "")
-        qual = card.get("qualification", "")
 
         if not title or len(title) < 5:
             continue
@@ -415,19 +364,18 @@ def filter_valid_jobs(parsed_jobs):
         if simple_t in seen_titles:
             continue
 
-        if is_invalid_item(title, org, post_name, qual):
+        if is_invalid_item(title, org):
+            print(f"❌ Dropped Admit Card (University/Other State): {title}")
             continue
 
         seen_titles.add(simple_t)
         clean_admit_cards.append(card)
 
-    # 3. Filter Results
+    # 3. Filter Results (Check title and org ONLY so it doesn't drop valid competitive results)
     clean_results = []
     for res_item in parsed_jobs.get("results", []):
         title = res_item.get("title", "")
         org = res_item.get("organization", "")
-        post_name = res_item.get("post_name", "")
-        qual = res_item.get("qualification", "")
 
         if not title or len(title) < 5:
             continue
@@ -436,7 +384,8 @@ def filter_valid_jobs(parsed_jobs):
         if simple_t in seen_titles:
             continue
 
-        if is_invalid_item(title, org, post_name, qual):
+        if is_invalid_item(title, org):
+            print(f"❌ Dropped Result (University/Other State): {title}")
             continue
 
         seen_titles.add(simple_t)
