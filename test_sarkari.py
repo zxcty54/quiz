@@ -12,7 +12,7 @@ from bs4 import BeautifulSoup
 SCRAPINGANT_API_KEY = os.environ.get("SCRAPINGANT_API_KEY", "f2dac73c566b4f60b9ca989beedeb5de")
 BASE_URL = "https://www.indgovtjobs.net/category/central-government-jobs/"
 JSON_FILENAME = "sarkarijob.json"
-MAX_PAGES = 20  # Kitne pages tak scrape karna hai
+MAX_PAGES = 2 
 
 # Non-Bihar / Other States Rejection List
 OTHER_STATES_REJECT = [
@@ -52,16 +52,23 @@ def is_date_expired(last_date_str):
             pass
     return False
 
-# 🌐 ScrapingAnt Fetcher to Bypass 403 Forbidden
+# 🌐 Fast ScrapingAnt Fetcher (browser=false prevents timeout)
 def fetch_via_scrapingant(target_url):
     encoded_url = quote(target_url)
-    api_endpoint = f"https://api.scrapingant.com/v2/general?url={encoded_url}&x-api-key={SCRAPINGANT_API_KEY}&browser=true"
+    # browser=false makes request 10x faster and prevents 35s timeout
+    api_endpoint = f"https://api.scrapingant.com/v2/general?url={encoded_url}&x-api-key={SCRAPINGANT_API_KEY}&browser=false"
+    
     try:
-        res = requests.get(api_endpoint, timeout=35)
+        res = requests.get(api_endpoint, timeout=60)
         if res.status_code == 200:
             return res.text
         else:
-            print(f"⚠️ ScrapingAnt returned status: {res.status_code}")
+            print(f"⚠️ ScrapingAnt status code: {res.status_code}")
+            # Fallback with browser=true if browser=false gives non-200
+            fallback_endpoint = f"https://api.scrapingant.com/v2/general?url={encoded_url}&x-api-key={SCRAPINGANT_API_KEY}&browser=true"
+            f_res = requests.get(fallback_endpoint, timeout=60)
+            if f_res.status_code == 200:
+                return f_res.text
     except Exception as e:
         print(f"⚠️ ScrapingAnt fetch error: {e}")
     return None
@@ -75,17 +82,17 @@ def run_indgovtjobs_table_scraper():
 
     for page_num in range(1, MAX_PAGES + 1):
         page_url = BASE_URL if page_num == 1 else f"{BASE_URL}page/{page_num}/"
-        print(f"🔄 Bypassing 403 via ScrapingAnt for Page {page_num}: {page_url}")
+        print(f"🔄 Fast Fetching Page {page_num} via ScrapingAnt: {page_url}")
 
         html_content = fetch_via_scrapingant(page_url)
         if not html_content:
             print(f"❌ Failed to load page {page_num}")
             break
 
-        print(f"✅ Successfully loaded Page {page_num} HTML (Status 200 OK)")
+        print(f"✅ Successfully fetched Page {page_num} HTML!")
         soup = BeautifulSoup(html_content, 'html.parser')
         
-        # Find all HTML Tables directly on the listing page
+        # Find all HTML Tables directly on the page
         tables = soup.find_all('table')
         print(f"📊 Total Tables Found on Page {page_num}: {len(tables)}")
 
@@ -106,27 +113,27 @@ def run_indgovtjobs_table_scraper():
                     val_cell = cells[1]
                     val_text = clean_text(val_cell.text)
 
-                    # Extract Title & Post Link
+                    # Title & Post Link
                     if any(k in key_text for k in ["name of post", "post name", "job title", "recruitment"]):
                         link_tag = val_cell.find('a', href=True) or row.find('a', href=True)
                         title = val_text
                         if link_tag:
                             post_url = urljoin(BASE_URL, link_tag['href'].strip())
 
-                    # Extract Total Vacancies
+                    # Total Vacancies
                     elif any(k in key_text for k in ["total vacancy", "total vacancies", "no. of post", "vacancies", "posts"]):
                         vacancies = val_text
 
-                    # Extract Qualification
+                    # Qualification
                     elif any(k in key_text for k in ["qualification", "educational", "eligibility"]):
                         qualification = val_text
 
-                    # Extract Closing / Last Date
+                    # Closing / Last Date
                     elif any(k in key_text for k in ["closing date", "last date", "end date"]):
                         date_match = re.search(r'\d{1,2}[/-]\d{1,2}[/-]\d{2,4}', val_text)
                         last_date = date_match.group(0) if date_match else val_text
 
-            # If no direct title in key-value, check preceding header tag
+            # Header fallback if title not inside cell
             if not title:
                 prev_header = table.find_previous(['h2', 'h3', 'h1'])
                 if prev_header:
@@ -152,7 +159,7 @@ def run_indgovtjobs_table_scraper():
 
                     processed_titles.add(clean_title)
 
-                    # Vacancy fallback if missing
+                    # Vacancy fallback
                     if not vacancies:
                         v_match = re.search(r'(\d+)\s*(?:Vacancies|Posts|Post)', clean_title, re.IGNORECASE)
                         vacancies = f"{v_match.group(1)} Posts" if v_match else "Various Posts"
@@ -189,7 +196,7 @@ def run_indgovtjobs_table_scraper():
     with open(JSON_FILENAME, "w", encoding="utf-8") as f:
         json.dump(output_data, f, ensure_ascii=False, indent=2)
 
-    print(f"🎉 Complete! Saved {len(job_cards)} active jobs into '{JSON_FILENAME}'.")
+    print(f"🎉 Complete! Successfully saved {len(job_cards)} active jobs into '{JSON_FILENAME}'.")
 
 if __name__ == "__main__":
     run_indgovtjobs_table_scraper()
