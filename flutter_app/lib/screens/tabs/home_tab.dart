@@ -184,7 +184,7 @@ class _HomeTabState extends State<HomeTab> {
       backgroundColor: widget.isDarkMode ? const Color(0xFF1E293B) : Colors.white,
       onRefresh: () async {
         // 🔄 PULL-TO-REFRESH: Dono Bulletins aur Latest Jobs Widget refresh honge
-        await Future.wait([
+        await Future.wait<dynamic>([
           _fetchDailyBulletins(forceRefresh: true),
           _jobsWidgetKey.currentState?.fetchLatestJobs() ?? Future.value(),
         ]);
