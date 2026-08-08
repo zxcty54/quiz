@@ -14,7 +14,7 @@ class LatestJobsWidget extends StatefulWidget {
 class _LatestJobsWidgetState extends State<LatestJobsWidget> {
   List<dynamic> _allJobs = [];
   bool _isLoading = true;
-  String _selectedCategory = 'all'; // 'all', 'bihar', 'central'
+  String _selectedCategory = 'all'; // Categories: 'all', 'bihar', 'central'
 
   @override
   void initState() {
@@ -22,7 +22,7 @@ class _LatestJobsWidgetState extends State<LatestJobsWidget> {
     _fetchLatestJobs();
   }
 
-  // 📰 FETCH LIVE JOBS FROM GITHUB CDN
+  // 1. FETCH LIVE JOBS FROM GITHUB CDN
   Future<void> _fetchLatestJobs() async {
     final String url =
         "https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/sarkarijob.json?t=${DateTime.now().millisecondsSinceEpoch}";
@@ -50,7 +50,7 @@ class _LatestJobsWidgetState extends State<LatestJobsWidget> {
     }
   }
 
-  // 🔍 CATEGORY FILTERING LOGIC
+  // 2. FILTERING LOGIC
   List<dynamic> get _filteredJobs {
     if (_selectedCategory == 'all') return _allJobs;
     return _allJobs.where((job) {
@@ -64,6 +64,7 @@ class _LatestJobsWidgetState extends State<LatestJobsWidget> {
     }).toList();
   }
 
+  // 3. LAUNCH EXTERNAL URL
   Future<void> _openLink(String link) async {
     if (link.isEmpty) return;
     final Uri uri = Uri.parse(link);
@@ -108,7 +109,7 @@ class _LatestJobsWidgetState extends State<LatestJobsWidget> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          // 1. MINIMAL HEADER ROW
+          // Header Row
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
@@ -140,7 +141,7 @@ class _LatestJobsWidgetState extends State<LatestJobsWidget> {
           ),
           const SizedBox(height: 12),
 
-          // 2. MINIMAL CATEGORY FILTER CHIPS
+          // Category Chips
           SingleChildScrollView(
             scrollDirection: Axis.horizontal,
             child: Row(
@@ -155,7 +156,7 @@ class _LatestJobsWidgetState extends State<LatestJobsWidget> {
           ),
           const SizedBox(height: 12),
 
-          // 3. MINIMAL JOBS LIST
+          // Jobs Scrollable Area
           SizedBox(
             height: 340,
             child: displayedJobs.isEmpty
@@ -177,7 +178,7 @@ class _LatestJobsWidgetState extends State<LatestJobsWidget> {
 
           const SizedBox(height: 8),
 
-          // 4. VIEW ALL BUTTON
+          // View All Action
           InkWell(
             onTap: _showAllJobsBottomSheet,
             borderRadius: BorderRadius.circular(8),
@@ -236,7 +237,7 @@ class _LatestJobsWidgetState extends State<LatestJobsWidget> {
     );
   }
 
-  // 📌 MINIMAL & CLEAN DETAILED JOB CARD
+  // DETAILED JOB CARD COMPONENT
   Widget _buildDetailedJobCard(Map<String, dynamic> job, Color textColor) {
     final String title = job['title'] ?? 'Job Notification';
     final String organization = job['organization'] ?? '';
@@ -261,7 +262,7 @@ class _LatestJobsWidgetState extends State<LatestJobsWidget> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          // Header: Category Tag & Vacancy Badge
+          // Category Tag & Vacancy Badge
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
@@ -277,10 +278,10 @@ class _LatestJobsWidgetState extends State<LatestJobsWidget> {
               if (vacancies.isNotEmpty)
                 Text(
                   vacancies,
-                  style: TextStyle(
+                  style: const TextStyle(
                     fontSize: 10.5,
                     fontWeight: FontWeight.w700,
-                    color: Colors.emerald.shade700,
+                    color: Color(0xFF047857), // Corrected Hex Emerald Color
                   ),
                 ),
             ],
@@ -299,7 +300,7 @@ class _LatestJobsWidgetState extends State<LatestJobsWidget> {
           ),
           const SizedBox(height: 6),
 
-          // Minimal Inline Info Row (Organization & Qualification)
+          // Organization & Qualification Meta Line
           Row(
             children: [
               if (organization.isNotEmpty) ...[
@@ -335,7 +336,7 @@ class _LatestJobsWidgetState extends State<LatestJobsWidget> {
           ),
           const SizedBox(height: 8),
 
-          // Last Date & Apply Button Row
+          // Last Date & Apply CTA Row
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
@@ -384,7 +385,7 @@ class _LatestJobsWidgetState extends State<LatestJobsWidget> {
     );
   }
 
-  // 📱 FULL BOTTOM SHEET FOR ALL JOBS
+  // BOTTOM SHEET FOR EXPANDED LIST VIEW
   void _showAllJobsBottomSheet() {
     showModalBottomSheet(
       context: context,
