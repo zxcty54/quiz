@@ -7,7 +7,7 @@ import requests
 from bs4 import BeautifulSoup
 
 # -------------------------------------------------------------
-# Configuration
+# 1. CONFIGURATION & HEADERS
 # -------------------------------------------------------------
 SCRAPINGANT_API_KEY = os.environ.get("SCRAPINGANT_API_KEY", "f2dac73c566b4f60b9ca989beedeb5de")
 TARGET_URL = "https://www.sarkariresult.com/latestjob/"
@@ -19,7 +19,7 @@ HEADERS = {
     'Referer': 'https://www.sarkariresult.com/'
 }
 
-# State Rejection Filter (Ignores irrelevant state notifications before inner page fetch)
+# 🚫 Rejection Filter for Non-Target States
 OTHER_STATES_REJECT = [
     "upsss", "upsssc", "upeida", "upscidc", "upsrtc", "mpesb", "jssc", "hartron", 
     "skau", "kurukshetra", "banda", "lucknow", "uttar pradesh", " up ", "uppsc", 
@@ -30,12 +30,14 @@ OTHER_STATES_REJECT = [
     "cuttack", "odisha", "orissa", "khordha", "balipatna"
 ]
 
+# 🚫 Navigation & Non-Job Link Filter
 SKIP_NAV_KEYWORDS = [
     "sarkari result", "latest job", "admit card", "admission", "result", 
     "terms and conditions", "contact us", "privacy policy", "disclaimer", 
     "about us", "home", "syllabus", "answer key", "certificate verification"
 ]
 
+# ✅ Bihar Boards Target List
 BIHAR_BOARDS = [
     ("bpsc", "Bihar Public Service Commission (BPSC)"),
     ("bssc", "Bihar Staff Selection Commission (BSSC)"),
@@ -50,6 +52,7 @@ BIHAR_BOARDS = [
     ("bihar", "Bihar State Govt Department")
 ]
 
+# ✅ Central Boards Target List
 CENTRAL_BOARDS = [
     ("sbi", "State Bank of India (SBI)"),
     ("bank of baroda", "Bank of Baroda (BOB)"),
@@ -73,16 +76,22 @@ CENTRAL_BOARDS = [
     ("epfo", "Employees' Provident Fund Organisation (EPFO)")
 ]
 
+# -------------------------------------------------------------
+# 2. HELPER & FILTER FUNCTIONS
+# -------------------------------------------------------------
 def clean_text(text):
+    """Converts HTML text to clean string without extra spaces."""
     if not text:
         return ""
     return BeautifulSoup(text, "html.parser").get_text().strip()
 
 def is_hard_rejected(text):
+    """Checks if job belongs to rejected non-target states."""
     text_lower = f" {text.lower()} "
     return any(keyword in text_lower for keyword in OTHER_STATES_REJECT)
 
 def is_nav_link(text, url):
+    """Filters out navigation, policy, and menu hyperlinks."""
     text_lower = text.lower().strip()
     if any(nav in text_lower for nav in SKIP_NAV_KEYWORDS) and len(text_lower) < 30:
         return True
@@ -91,6 +100,7 @@ def is_nav_link(text, url):
     return False
 
 def is_date_expired(last_date_str):
+    """Checks whether application deadline has passed."""
     if not last_date_str:
         return False
     date_match = re.search(r'(\d{1,2})[/-](\d{1,2})[/-](\d{2,4})', last_date_str)
@@ -107,6 +117,10 @@ def is_date_expired(last_date_str):
     return False
 
 def classify_job_board(title):
+    """
+    Classifies target organization and job type based on title.
+    Returns: (Organization Name, Job Type) or (None, None).
+    """
     title_lower = title.lower()
     if is_hard_rejected(title):
         return None, None
@@ -121,8 +135,11 @@ def classify_job_board(title):
 
     return None, None
 
+# -------------------------------------------------------------
+# 3. ARTICLE PARSER & SCRAPER
+# -------------------------------------------------------------
 def fetch_inner_article_html(url):
-    """Fetches full HTML of the individual job detail page."""
+    """Fetches complete HTML of a specific job article page."""
     try:
         res = requests.get(url, headers=HEADERS, timeout=15)
         if res.status_code == 200 and len(res.text) > 2000:
@@ -141,16 +158,9 @@ def fetch_inner_article_html(url):
 
     return None
 
-# -------------------------------------------------------------
-# 🎯 ENHANCED PARSER FOR SBI & BANKING JOB LAYOUTS
-# -------------------------------------------------------------
 def parse_inner_article_page(html_content):
     """
-    Parses inner SarkariResult page structure for SBI Clerk and similar banking posts:
-    - Vacancies: 'Vacancy Details Total : 1538 Post'
-    - Dates: 'Application Begin :07/08/2026' | 'Last Date for Apply Online :27/08/2026'
-    - Fee: 'OBC : 750/-' | 'SC / ST / PH : 0/-'
-    - Qualification: 'Passed / Appearing Bachelor Degree in Any Stream...'
+    Parses inner article HTML structure for Vacancies, Qualifications, Dates, and Application Fee.
     """
     if not html_content:
         return {}
@@ -158,7 +168,7 @@ def parse_inner_article_page(html_content):
     soup = BeautifulSoup(html_content, 'html.parser')
     page_text = soup.get_text()
 
-    # 1. TOTAL VACANCY EXTRACTION
+    # 1. TOTAL VACANCIES EXTRACTION
     extracted_vacancies = None
     v_patterns = [
         r'Vacancy\s*Details\s*Total\s*:\s*(\d+)',
@@ -172,7 +182,7 @@ def parse_inner_article_page(html_content):
             extracted_vacancies = f"{v_match.group(1)} Posts"
             break
 
-    # 2. TABLE PARSING FOR ELIGIBILITY & VACANCIES
+    # 2. TABLE PARSING FOR QUALIFICATION & VACANCY SUM
     qualification_list = []
     table_vacancy_sum = 0
     tables = soup.find_all('table')
@@ -229,17 +239,22 @@ def parse_inner_article_page(html_content):
     if last_match:
         last_date = last_match.group(1).strip()
 
-    # 5. APPLICATION FEE EXTRACTION (General/OBC + SC/ST)
+    # 5. APPLICATION FEE EXTRACTION
     fee_details = "Refer Notification"
-    gen_fee_match = re.search(r'((?:General\s*/\s*)?OBC\s*:\s*\d+/?-?)', page_text, re.IGNORECASE)
-    sc_fee_match = re.search(r'(SC\s*/\s*ST\s*/\s*PH\s*:\s*\d+/?-?)', page_text, re.IGNORECASE)
+    found_fees = []
 
-    if gen_fee_match and sc_fee_match:
-        fee_details = f"{gen_fee_match.group(1).strip()} | {sc_fee_match.group(1).strip()}"
-    elif gen_fee_match:
-        fee_details = gen_fee_match.group(1).strip()
+    gen_match = re.search(r'((?:General|Gen|OBC|EWS)[^\n\r<:]*:\s*\d+/?-?)', page_text, re.IGNORECASE)
+    if gen_match:
+        found_fees.append(gen_match.group(1).strip())
+
+    sc_match = re.search(r'((?:SC|ST|PH)[^\n\r<:]*:\s*(?:\d+/?-?|0/?-?|Nil))', page_text, re.IGNORECASE)
+    if sc_match:
+        found_fees.append(sc_match.group(1).strip())
+
+    if found_fees:
+        fee_details = " | ".join(found_fees)
     else:
-        fallback_fee = re.search(r'(General\s*/\s*OBC[^\n\r<]+)', page_text, re.IGNORECASE)
+        fallback_fee = re.search(r'(Application\s*Fee[^\n\r<:]*:\s*[^\n\r<]+)', page_text, re.IGNORECASE)
         if fallback_fee:
             fee_details = fallback_fee.group(1).strip()[:100]
 
@@ -252,7 +267,7 @@ def parse_inner_article_page(html_content):
     }
 
 # -------------------------------------------------------------
-# MAIN PIPELINE EXECUTION
+# 4. MAIN PIPELINE EXECUTION
 # -------------------------------------------------------------
 def run_sarkari_job_scraper():
     print("🔄 Step 1: Fetching Main SarkariResult Listing Page...")
