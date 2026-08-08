@@ -20,7 +20,7 @@ SCRAPINGANT_KEY = os.environ.get("SCRAPINGANT_API_KEY")
 client = Groq(api_key=GROQ_KEY) if GROQ_KEY else None
 
 # Active Groq Models
-MODELS = ["llama-3.3-70b-versatile", "llama-3.1-8b-instant"]
+MODELS = ["llama-3.1-8b-instant", "llama-3.3-70b-versatile"]
 
 def get_yesterday_info():
     yesterday_dt = datetime.now() - timedelta(days=1)
@@ -280,14 +280,14 @@ def call_groq_safe(prompt, system_role="You are a JSON generator assistant."):
                 ],
                 temperature=0.01,
                 response_format={"type": "json_object"},
-                max_tokens=3000,
+                max_tokens=2500,
                 timeout=45,
             )
             print(f"⚡ Groq LLM Success using [{model_name}]!")
             return response.choices[0].message.content
         except Exception as e:
             print(f"⚠️ Model [{model_name}] skipped ({e}). Trying next...")
-            time.sleep(1)
+            time.sleep(5)
     return ""
 
 def generate_clean_summary(raw_text, target_date_str, is_national=False):
@@ -396,6 +396,10 @@ if __name__ == "__main__":
             print(f"❌ Bihar JSON Error: {e}")
 
     print("\n------------------------------------\n")
+
+    # Cooling delay to reset Groq per-minute token rate limit
+    print("⏳ Waiting 15 seconds to reset Groq API Rate Limit Bucket...\n")
+    time.sleep(15)
 
     # === B. PROCESS NATIONAL NEWS ===
     raw_national = fetch_raw_national_news(target_dt)
