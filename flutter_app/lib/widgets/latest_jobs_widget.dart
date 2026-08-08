@@ -425,7 +425,7 @@ class _LatestJobsWidgetState extends State<LatestJobsWidget> {
         style: TextStyle(
           fontSize: 10.5,
           fontWeight: FontWeight.bold,
-          color: widget.isDarkMode ? Colors.white90 : textColor,
+          color: widget.isDarkMode ? Colors.white70 : textColor, // 👈 FIXED: Colors.white70 instead of Colors.white90
         ),
       ),
     );
