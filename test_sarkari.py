@@ -19,7 +19,7 @@ HEADERS = {
     'Referer': 'https://www.sarkariresult.com/'
 }
 
-# State Rejection Filter (Ignores other states before visiting inner links)
+# State Rejection Filter (Ignores irrelevant state notifications before inner page fetch)
 OTHER_STATES_REJECT = [
     "upsss", "upsssc", "upeida", "upscidc", "upsrtc", "mpesb", "jssc", "hartron", 
     "skau", "kurukshetra", "banda", "lucknow", "uttar pradesh", " up ", "uppsc", 
@@ -51,21 +51,21 @@ BIHAR_BOARDS = [
 ]
 
 CENTRAL_BOARDS = [
+    ("sbi", "State Bank of India (SBI)"),
+    ("bank of baroda", "Bank of Baroda (BOB)"),
+    ("drdo", "Defence Research and Development Organisation (DRDO)"),
     ("icsi", "Institute of Company Secretaries of India (ICSI)"),
     ("upsc", "Union Public Service Commission (UPSC)"),
     ("ssc", "Staff Selection Commission (SSC)"),
     ("rrb", "Railway Recruitment Board (RRB)"),
     ("railway", "Indian Railways"),
     ("ibps", "Institute of Banking Personnel Selection (IBPS)"),
-    ("sbi", "State Bank of India (SBI)"),
-    ("bank of baroda", "Bank of Baroda"),
     ("union bank", "Union Bank of India"),
     ("pnb", "Punjab National Bank"),
     ("indian army", "Indian Army"),
     ("indian navy", "Indian Navy"),
     ("indian air force", "Indian Air Force"),
     ("indian airforce", "Indian Air Force"),
-    ("drdo", "Defence Research and Development Organisation (DRDO)"),
     ("isro", "Indian Space Research Organisation (ISRO)"),
     ("india post", "Department of Posts / India Post"),
     ("post office", "Department of Posts / India Post"),
@@ -142,13 +142,15 @@ def fetch_inner_article_html(url):
     return None
 
 # -------------------------------------------------------------
-# 🎯 TARGETED INNER ARTICLE PARSER (BASED ON YOUR SCREENSHOT)
+# 🎯 ENHANCED PARSER FOR SBI & BANKING JOB LAYOUTS
 # -------------------------------------------------------------
 def parse_inner_article_page(html_content):
     """
-    Parses inner SarkariResult page structure shown in the screenshot:
-    - Heading: 'Vacancy Details Total : 20 Post'
-    - Table: Columns ['Post Name', 'Total Post', 'Exam Eligibility']
+    Parses inner SarkariResult page structure for SBI Clerk and similar banking posts:
+    - Vacancies: 'Vacancy Details Total : 1538 Post'
+    - Dates: 'Application Begin :07/08/2026' | 'Last Date for Apply Online :27/08/2026'
+    - Fee: 'OBC : 750/-' | 'SC / ST / PH : 0/-'
+    - Qualification: 'Passed / Appearing Bachelor Degree in Any Stream...'
     """
     if not html_content:
         return {}
@@ -156,19 +158,23 @@ def parse_inner_article_page(html_content):
     soup = BeautifulSoup(html_content, 'html.parser')
     page_text = soup.get_text()
 
-    # 1. TOTAL VACANCIES EXTRACTION
+    # 1. TOTAL VACANCY EXTRACTION
     extracted_vacancies = None
+    v_patterns = [
+        r'Vacancy\s*Details\s*Total\s*:\s*(\d+)',
+        r'Total\s*(?:Post|Vacancy|Vacancies)\s*:\s*(\d+)',
+        r'Total\s*:\s*(\d+)\s*Post',
+        r'(\d+)\s*Total\s*Post'
+    ]
+    for pat in v_patterns:
+        v_match = re.search(pat, page_text, re.IGNORECASE)
+        if v_match:
+            extracted_vacancies = f"{v_match.group(1)} Posts"
+            break
 
-    # Matches heading pattern from image: 'Vacancy Details Total : 20 Post'
-    v_match = re.search(r'Vacancy\s*Details\s*Total\s*:\s*(\d+)\s*Post', page_text, re.IGNORECASE)
-    if not v_match:
-        v_match = re.search(r'Total\s*(?:Post|Vacancy)\s*:\s*(\d+)', page_text, re.IGNORECASE)
-    
-    if v_match:
-        extracted_vacancies = f"{v_match.group(1)} Posts"
-
-    # 2. TABLE PARSING FOR ELIGIBILITY & VACANCY
+    # 2. TABLE PARSING FOR ELIGIBILITY & VACANCIES
     qualification_list = []
+    table_vacancy_sum = 0
     tables = soup.find_all('table')
 
     for table in tables:
@@ -178,43 +184,35 @@ def parse_inner_article_page(html_content):
 
         header_text = clean_text(rows[0].text).lower()
 
-        # Target table with headers: 'Post Name', 'Total Post', 'Eligibility'
-        if "post name" in header_text or "total post" in header_text or "eligibility" in header_text:
-            for row in rows[1:]:  # Skip table header row
+        if any(kw in header_text for kw in ["post name", "total post", "eligibility", "qualification"]):
+            for row in rows[1:]:
                 cols = row.find_all(['td', 'th'])
                 if len(cols) >= 3:
                     post_count = clean_text(cols[1].text)
                     elig_text = clean_text(cols[2].text)
 
-                    if not extracted_vacancies and post_count.isdigit():
-                        extracted_vacancies = f"{post_count} Posts"
+                    if post_count.isdigit():
+                        table_vacancy_sum += int(post_count)
 
-                    if elig_text and len(elig_text) > 5:
+                    if elig_text and len(elig_text) > 5 and "eligibility" not in elig_text.lower():
                         clean_elig = re.sub(r'\s+', ' ', elig_text).strip()
-                        qualification_list.append(clean_elig)
+                        if clean_elig not in qualification_list:
+                            qualification_list.append(clean_elig)
 
                 elif len(cols) == 2:
                     elig_text = clean_text(cols[1].text)
                     if elig_text and len(elig_text) > 5:
-                        qualification_list.append(clean_text(cols[1].text))
+                        clean_elig = re.sub(r'\s+', ' ', elig_text).strip()
+                        if clean_elig not in qualification_list:
+                            qualification_list.append(clean_elig)
 
-    # Format extracted qualification
+    if not extracted_vacancies and table_vacancy_sum > 0:
+        extracted_vacancies = f"{table_vacancy_sum} Posts"
+
     if qualification_list:
-        qualification = qualification_list[0]
+        qualification = " | ".join(qualification_list[:2])
     else:
-        page_text_lower = page_text.lower()
-        if "b.com" in page_text_lower or "commerce" in page_text_lower:
-            qualification = "Bachelor Degree in Commerce (B.Com)"
-        elif "bachelor" in page_text_lower or "graduation" in page_text_lower or "degree" in page_text_lower:
-            qualification = "Bachelor Degree in Any Stream"
-        elif "12th" in page_text_lower or "intermediate" in page_text_lower:
-            qualification = "Class 12th Pass"
-        elif "10th" in page_text_lower or "high school" in page_text_lower:
-            qualification = "Class 10th Pass / ITI"
-        elif "diploma" in page_text_lower or "b.e" in page_text_lower or "b.tech" in page_text_lower:
-            qualification = "Diploma / Engineering Degree"
-        else:
-            qualification = "Refer Official Notification"
+        qualification = "Refer Official Notification"
 
     if not extracted_vacancies:
         extracted_vacancies = "Refer Official Notification"
@@ -231,11 +229,19 @@ def parse_inner_article_page(html_content):
     if last_match:
         last_date = last_match.group(1).strip()
 
-    # 5. APPLICATION FEE
+    # 5. APPLICATION FEE EXTRACTION (General/OBC + SC/ST)
     fee_details = "Refer Notification"
-    fee_match = re.search(r'(General\s*/\s*OBC[^\n\r<]+)', page_text, re.IGNORECASE)
-    if fee_match:
-        fee_details = fee_match.group(1).strip()[:100]
+    gen_fee_match = re.search(r'((?:General\s*/\s*)?OBC\s*:\s*\d+/?-?)', page_text, re.IGNORECASE)
+    sc_fee_match = re.search(r'(SC\s*/\s*ST\s*/\s*PH\s*:\s*\d+/?-?)', page_text, re.IGNORECASE)
+
+    if gen_fee_match and sc_fee_match:
+        fee_details = f"{gen_fee_match.group(1).strip()} | {sc_fee_match.group(1).strip()}"
+    elif gen_fee_match:
+        fee_details = gen_fee_match.group(1).strip()
+    else:
+        fallback_fee = re.search(r'(General\s*/\s*OBC[^\n\r<]+)', page_text, re.IGNORECASE)
+        if fallback_fee:
+            fee_details = fallback_fee.group(1).strip()[:100]
 
     return {
         "total_vacancies": extracted_vacancies,
@@ -285,14 +291,12 @@ def run_sarkari_job_scraper():
 
             clean_title = re.sub(r'Last\s*Date\s*:?.*$', '', title, flags=re.IGNORECASE).strip()
             
-            # STAGE 1: Classify BEFORE fetching inner link!
             organization, job_type = classify_job_board(clean_title)
             if not organization:
                 continue
 
             processed_urls.add(detail_url)
 
-            # STAGE 2: VISIT TARGET JOB POST PAGE
             print(f"📄 [MATCHED TARGET JOB]: {clean_title}")
             print(f"🔗 [VISITING URL]: {detail_url}")
             
@@ -322,7 +326,7 @@ def run_sarkari_job_scraper():
             }
             
             job_cards.append(job_card)
-            print(f"✅ Extracted: Vacancies = {job_card['total_vacancies']} | Qualification = {job_card['qualification'][:60]}...\n")
+            print(f"✅ Extracted: Vacancies = {job_card['total_vacancies']} | Fee = {job_card['application_fee']}\n")
 
             if len(job_cards) >= 20:
                 break
