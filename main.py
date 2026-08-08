@@ -34,14 +34,16 @@ def is_yesterday_news(pub_date_str, target_dt):
         print(f"Date parsing error: {e}")
     return True
 
+# -------------------------------------------------------------
+# 2. SCRAPING FUNCTIONS
+# -------------------------------------------------------------
 def fetch_raw_bihar_news(target_dt):
+    """Bihar Specific Current Affairs Raw Text Scraper"""
     news_titles = []
     
-    # -------------------------------------------------------------
-    # Source A: GOOGLE NEWS RSS (Bihar Govt & Education)
-    # -------------------------------------------------------------
+    # Source A: Google News Bihar
     try:
-        google_url = "https://news.google.com/rss/search?q=Bihar+Government+Schemes+OR+Education+OR+BPSC+OR+Infrastructure&hl=hi&gl=IN&ceid=IN:hi"
+        google_url = "https://news.google.com/rss/search?q=Bihar+Government+Schemes+OR+Infrastructure+OR+Economy+OR+Agriculture&hl=hi&gl=IN&ceid=IN:hi"
         res = requests.get(google_url, impersonate="chrome", timeout=15, verify=False)
         if res.status_code == 200:
             root = ET.fromstring(res.text)
@@ -52,15 +54,12 @@ def fetch_raw_bihar_news(target_dt):
                 if title and is_yesterday_news(pub_date, target_dt):
                     news_titles.append(f"[Google News] {title}")
                     count += 1
-                    if count >= 15: # High limit for broad options
-                        break
-            print("✅ Google News RSS fetched successfully!")
+                    if count >= 15: break
+            print("✅ Google News Bihar RSS fetched!")
     except Exception as e:
-        print(f"⚠️ Error fetching Google News: {e}")
+        print(f"⚠️ Error Bihar Google News: {e}")
 
-    # -------------------------------------------------------------
-    # Source B: CMO BIHAR (Chief Minister Secretariat)
-    # -------------------------------------------------------------
+    # Source B: CMO Bihar
     try:
         cmo_url = "https://cm.bihar.gov.in/users/preessrelease.aspx"
         res = requests.get(cmo_url, impersonate="chrome", timeout=15, verify=False)
@@ -72,13 +71,11 @@ def fetch_raw_bihar_news(target_dt):
                     title = cols[1].text.strip()
                     if title and len(title) > 10:
                         news_titles.append(f"[CMO Bihar] {title}")
-            print("✅ CMO Bihar news fetched successfully!")
+            print("✅ CMO Bihar news fetched!")
     except Exception as e:
-        print(f"⚠️ Error fetching CMO Bihar: {e}")
+        print(f"⚠️ Error CMO Bihar: {e}")
 
-    # -------------------------------------------------------------
-    # Source C: IPRD BIHAR (Information & Public Relations Dept)
-    # -------------------------------------------------------------
+    # Source C: IPRD Bihar
     try:
         iprd_url = "https://state.bihar.gov.in/prdbihar/CitizenHome.html"
         res = requests.get(iprd_url, impersonate="chrome", timeout=15, verify=False)
@@ -90,62 +87,122 @@ def fetch_raw_bihar_news(target_dt):
                 if title and len(title) > 15:
                     news_titles.append(f"[IPRD Bihar] {title}")
                     count += 1
-                    if count >= 8:
-                        break
-            print("✅ IPRD Bihar news fetched successfully!")
+                    if count >= 8: break
+            print("✅ IPRD Bihar news fetched!")
     except Exception as e:
-        print(f"⚠️ Error fetching IPRD Bihar: {e}")
+        print(f"⚠️ Error IPRD Bihar: {e}")
+
+    # Source D: Prabhat Khabar
+    try:
+        pk_url = "https://www.prabhatkhabar.com/state/bihar/feed"
+        res = requests.get(pk_url, impersonate="chrome", timeout=15, verify=False)
+        if res.status_code == 200:
+            root = ET.fromstring(res.text)
+            count = 0
+            for item in root.findall('.//item'):
+                title = item.find('title').text if item.find('title') is not None else ""
+                pub_date = item.find('pubDate').text if item.find('pubDate') is not None else ""
+                if title and is_yesterday_news(pub_date, target_dt):
+                    news_titles.append(f"[Prabhat Khabar] {title.strip()}")
+                    count += 1
+                    if count >= 10: break
+            print("✅ Prabhat Khabar Bihar fetched!")
+    except Exception as e:
+        print(f"⚠️ Error Prabhat Khabar: {e}")
 
     return "\n".join(news_titles)
 
-def generate_clean_summary(raw_text, target_date_str):
-    """Groq AI se strict Fact-Based Categorized JSON summary banwata hai"""
-    current_year = datetime.now().year
+
+def fetch_raw_national_news(target_dt):
+    """National Current Affairs Scraper (PIB India + Google National)"""
+    national_titles = []
+    
+    # Source A: PIB (Press Information Bureau India)
+    try:
+        pib_url = "https://pib.gov.in/RssMain.aspx?Mod=1&Lang=1"
+        res = requests.get(pib_url, timeout=15, verify=False)
+        if res.status_code == 200:
+            root = ET.fromstring(res.text)
+            count = 0
+            for item in root.findall('.//item'):
+                title = item.find('title').text if item.find('title') is not None else ""
+                if title:
+                    national_titles.append(f"[PIB India] {title.strip()}")
+                    count += 1
+                    if count >= 12: break
+            print("✅ PIB National RSS fetched!")
+    except Exception as e:
+        print(f"⚠️ Error PIB India: {e}")
+
+    # Source B: Google News National (Cabinet, ISRO, Economy, Schemes)
+    try:
+        g_url = "https://news.google.com/rss/search?q=India+Cabinet+Decisions+OR+National+Schemes+OR+ISRO+OR+RBI+OR+National+Highways&hl=hi&gl=IN&ceid=IN:hi"
+        res = requests.get(g_url, impersonate="chrome", timeout=15, verify=False)
+        if res.status_code == 200:
+            root = ET.fromstring(res.text)
+            count = 0
+            for item in root.findall('.//item'):
+                title = item.find('title').text if item.find('title') is not None else ""
+                pub_date = item.find('pubDate').text if item.find('pubDate') is not None else ""
+                if title and is_yesterday_news(pub_date, target_dt):
+                    national_titles.append(f"[National News] {title.strip()}")
+                    count += 1
+                    if count >= 12: break
+            print("✅ Google National RSS fetched!")
+    except Exception as e:
+        print(f"⚠️ Error Google National: {e}")
+
+    return "\n".join(national_titles)
+
+# -------------------------------------------------------------
+# 3. AI SUMMARY GENERATOR (STRICT FILTERS)
+# -------------------------------------------------------------
+def generate_clean_summary(raw_text, target_date_str, is_national=False):
+    """Groq AI se Strict Fact-Based Detailed Hinglish JSON summary banwata hai"""
+    
+    scope_name = "India National" if is_national else "Bihar State"
+    tag_name = "🎯 National Special / India Affairs" if is_national else "🎯 BPSC Special / Bihar Current Affairs"
 
     prompt = f"""
-    Tum BPSC, BSSC aur Bihar Teacher (TRE) Exams ke Senior Current Affairs Editor ho.
-    Niche Google News, CMO Bihar aur IPRD Bihar se li gayi raw headlines hain:
+    You are a Senior Current Affairs Editor for BPSC and Competitive Exams in India.
+    Below is raw news text scraped for {scope_name} Level:
     
     {raw_text}
     
-    STRICT CATEGORIES (Pick ONLY from these 7 exact category names):
+    STRICT ALLOWED CATEGORIES (Pick ONLY from these 5 exact names):
     1. "Govt Schemes & Policies"
     2. "Infrastructure & Projects"
-    3. "Education & Recruitment Updates"
-    4. "Agriculture, Environment & GI Tags"
-    5. "Appointments, Awards & Persons in News"
-    6. "Bihar Economy, Budget & Reports"
-    7. "Art, Culture & Tourism"
+    3. "Agriculture, Environment & GI Tags"
+    4. "Appointments, Awards & Persons in News"
+    5. "Bihar Economy, Budget & Reports" (Use "National Economy, Budget & Reports" for National news)
 
-    STRICT EXAM RELEVANCE & FACT-CHECKING RULES:
-    1. STRICTLY REJECT: 
-       - Murder, Crime, Accidents, Political Speeches, Rallies, Elections, Entertainment, aur previous years ({current_year-1} or older) ki news.
-       - Routine school timetable changes, local village school sanctions, motivational speeches, or general congratulatory statements.
-    2. ACCEPT ONLY HIGH-YIELD FACTUAL NEWS:
-       - Every card MUST contain at least ONE hard fact: Specific Scheme Name, Government Policy, Place Name, Budget/Amount, Committee Name, Rank, GI Tag, or Official Exam/Job Notification.
-    3. BULLETS MUST BE HIGHLY FACTUAL:
-       - Do NOT write generic filler lines like "यह निर्णय शिक्षा प्रणाली में सुधार के लिए महत्वपूर्ण है" or "इससे छात्रों को लाभ होगा".
-       - Bullet 1: Core factual news and decision.
-       - Bullet 2: Key numerical data, budget, target date, or scope.
-       - Bullet 3: Exact exam/subject relevance or ministry involved.
-    4. QUALITY OVER QUANTITY:
-       - Include ALL valid exam-oriented news (No fixed count like 5 or 7. If there are 3, output 3; if 8, output 8).
-    5. Set "date": "{target_date_str}" in all news items.
-    6. Return STRICTLY valid JSON inside `news_cards` key without markdown wrapping.
-    
+    STRICT REJECTION & DISCARD RULES:
+    1. REJECT ALL routine administrative instructions, CM/PM directives ("nirdesh diye"), traffic directives, or generic press statements.
+    2. REJECT ALL Education, Schools, University, Recruitment, Vacancies, Exam Notices, Admit Cards, and Results.
+    3. REJECT small/routine road repairs or local city directives. ACCEPT ONLY MEGA INFRASTRUCTURE PROJECTS (Expressways, Airports, Space Missions, Power Plants).
+    4. REJECT ALL news that lacks hard facts (Budget outlay, Scheme Name, MoU Partner, Ministry Name).
+    5. NEVER WRITE DISCLAIMERS: Forbidden to write "Koi budget/yojana nahi di gayi", "Yeh vikas ke liye avashyak hai".
+    6. IF NO FACTUAL NEWS FOUND: Return empty list {{"news_cards": []}}.
+
+    BULLET POINT RULES (IF A CARD QUALIFIES):
+    1. WRITE EXACTLY 3 DEEP FACTUAL BULLET POINTS IN HINGLISH (Hindi written in Roman English script).
+       - Bullet 1 (Core Decision): Detailed explanation of what project/scheme was launched, Ministry involved, and exact location.
+       - Bullet 2 (Exact Figures): Specific budget amount, MoU partner name, capacity, target year, or numerical facts.
+       - Bullet 3 (Policy Framework): Deep explanation of government framework or national/state development context.
+
     JSON SCHEMA OUTPUT:
     {{
       "news_cards": [
         {{
           "id": "news_01",
-          "title": "Clean Headline with Specific Keywords",
-          "category": "Select exact matching name from 7 categories above",
+          "title": "Clean Detailed Hinglish Headline with Specific Fact",
+          "category": "Select EXACT matching category",
           "bullets": [
-            "Fact 1: Exact decision and location/scheme details",
-            "Fact 2: Budget amount, target year or capacity data",
-            "Fact 3: BPSC/SSC exam point of view / Ministry involved"
+            "Bullet 1: Detailed factual explanation in Hinglish",
+            "Bullet 2: Exact numerical data/budget outlay in Hinglish",
+            "Bullet 3: Deep explanation of policy framework in Hinglish"
           ],
-          "exam_tag": "🎯 BPSC TRE / BSSC Special",
+          "exam_tag": "{tag_name}",
           "date": "{target_date_str}"
         }}
       ]
@@ -155,14 +212,16 @@ def generate_clean_summary(raw_text, target_date_str):
     response = client.chat.completions.create(
         model="llama-3.3-70b-versatile",
         messages=[{"role": "user", "content": prompt}],
-        temperature=0.1,  # Low temperature forces exact factual adherence
+        temperature=0.01,
         response_format={"type": "json_object"}
     )
     return response.choices[0].message.content
 
-def append_to_master_history(news_cards, yesterday_key):
-    """Master Lifetime History File (all_bihar_news_history.json) me kal ki key me append karta hai"""
-    master_file = "all_bihar_news_history.json"
+# -------------------------------------------------------------
+# 4. MASTER HISTORY APPEND FUNCTIONS
+# -------------------------------------------------------------
+def append_to_master_history(news_cards, yesterday_key, is_national=False):
+    master_file = "all_national_news_history.json" if is_national else "all_bihar_news_history.json"
     
     master_data = {}
     if os.path.exists(master_file):
@@ -170,41 +229,53 @@ def append_to_master_history(news_cards, yesterday_key):
             with open(master_file, "r", encoding="utf-8") as f:
                 master_data = json.load(f)
         except Exception as e:
-            print(f"⚠️ Master History file read error: {e}")
+            print(f"⚠️ Master History file read error ({master_file}): {e}")
             
     master_data[yesterday_key] = news_cards
     
     with open(master_file, "w", encoding="utf-8") as f:
         json.dump(master_data, f, ensure_ascii=False, indent=2)
-    print(f"✅ Master History appended under key '{yesterday_key}' into '{master_file}'!")
+    print(f"✅ Appended under key '{yesterday_key}' into '{master_file}'!")
 
+# -------------------------------------------------------------
+# 5. MAIN EXECUTION PIPELINE
+# -------------------------------------------------------------
 if __name__ == "__main__":
     if not GROQ_KEY:
         print("❌ Error: GROQ_API_KEY environment variable not found!")
         exit(1)
         
     target_dt, date_str, key_str = get_yesterday_info()
-    print(f"🔄 Scraping news covering full day of yesterday ({date_str})...")
-    raw_news = fetch_raw_bihar_news(target_dt)
-    
-    if raw_news:
-        print("🧠 Categorizing news with Groq (Llama-3.3-70b)...")
-        ai_response = generate_clean_summary(raw_news, date_str)
-        clean_json_str = ai_response.strip()
-        
+    print(f"🔄 Starting Scraping for Yesterday ({date_str})...\n")
+
+    # === A. PROCESS BIHAR NEWS ===
+    print("📍 --- PROCESS BIHAR NEWS ---")
+    raw_bihar = fetch_raw_bihar_news(target_dt)
+    if raw_bihar:
+        ai_bihar = generate_clean_summary(raw_bihar, date_str, is_national=False)
         try:
-            parsed_json = json.loads(clean_json_str)
-            
-            # 1. Update Daily App JSON File
+            parsed_bihar = json.loads(ai_bihar.strip())
             with open("bihar_news.json", "w", encoding="utf-8") as f:
-                json.dump(parsed_json, f, ensure_ascii=False, indent=2)
+                json.dump(parsed_bihar, f, ensure_ascii=False, indent=2)
             print("✅ bihar_news.json successfully updated!")
-            
-            # 2. Append to Master History File with yesterday's YYYY-MM-DD key
-            if "news_cards" in parsed_json:
-                append_to_master_history(parsed_json["news_cards"], key_str)
-                
+            if "news_cards" in parsed_bihar:
+                append_to_master_history(parsed_bihar["news_cards"], key_str, is_national=False)
         except Exception as e:
-            print(f"❌ JSON Parsing Error: {e}\nRaw Output:\n{ai_response}")
-    else:
-        print("❌ No news data scraped to process.")
+            print(f"❌ Bihar JSON Error: {e}")
+
+    print("\n------------------------------------\n")
+
+    # === B. PROCESS NATIONAL NEWS ===
+    print("🇮🇳 --- PROCESS NATIONAL NEWS ---")
+    raw_national = fetch_raw_national_news(target_dt)
+    if raw_national:
+        ai_national = generate_clean_summary(raw_national, date_str, is_national=True)
+        try:
+            parsed_national = json.loads(ai_national.strip())
+            with open("national_news.json", "w", encoding="utf-8") as f:
+                json.dump(parsed_national, f, ensure_ascii=False, indent=2)
+            print("✅ national_news.json successfully updated!")
+            if "news_cards" in parsed_national:
+                append_to_master_history(parsed_national["news_cards"], key_str, is_national=True)
+        except Exception as e:
+            print(f"❌ National JSON Error: {e}")
