@@ -22,12 +22,23 @@ class LatestJobsWidgetState extends State<LatestJobsWidget> {
     fetchLatestJobs();
   }
 
-  // 1. FETCH LIVE JOBS FROM GITHUB CDN
+  // 1. FETCH LIVE JOBS FROM STATICALLY CDN (BLOCK-PROOF & UNLIMITED)
   Future<void> fetchLatestJobs() async {
+    final int timestamp = DateTime.now().millisecondsSinceEpoch;
     final String url =
-        "https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/sarkarijob.json?t=${DateTime.now().millisecondsSinceEpoch}";
+        "https://cdn.statically.io/gh/zxcty54/quiz/main/sarkarijob.json?t=$timestamp";
+
     try {
-      final res = await http.get(Uri.parse(url));
+      final res = await http.get(
+        Uri.parse(url),
+        headers: {
+          'Cache-Control': 'no-cache, no-store, must-revalidate',
+          'Pragma': 'no-cache',
+          'Expires': '0',
+          'User-Agent': 'Mozilla/5.0 (Linux; Android 10) AppleWebKit/537.36',
+        },
+      ).timeout(const Duration(seconds: 6));
+
       if (res.statusCode == 200) {
         final data = jsonDecode(utf8.decode(res.bodyBytes));
         if (mounted) {
@@ -125,7 +136,6 @@ class LatestJobsWidgetState extends State<LatestJobsWidget> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          // Header Row
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
@@ -157,7 +167,6 @@ class LatestJobsWidgetState extends State<LatestJobsWidget> {
           ),
           const SizedBox(height: 12),
 
-          // Category Chips
           SingleChildScrollView(
             scrollDirection: Axis.horizontal,
             child: Row(
@@ -172,7 +181,6 @@ class LatestJobsWidgetState extends State<LatestJobsWidget> {
           ),
           const SizedBox(height: 12),
 
-          // Jobs Scrollable Area
           SizedBox(
             height: 340,
             child: displayedJobs.isEmpty
@@ -194,7 +202,6 @@ class LatestJobsWidgetState extends State<LatestJobsWidget> {
 
           const SizedBox(height: 8),
 
-          // View All Action
           InkWell(
             onTap: _showAllJobsBottomSheet,
             borderRadius: BorderRadius.circular(8),
@@ -253,7 +260,6 @@ class LatestJobsWidgetState extends State<LatestJobsWidget> {
     );
   }
 
-  // DETAILED JOB CARD COMPONENT (WITH FEES ADDED)
   Widget _buildDetailedJobCard(Map<String, dynamic> job, Color textColor) {
     final String title = job['title'] ?? 'Job Notification';
     final String organization = job['organization'] ?? '';
@@ -283,7 +289,6 @@ class LatestJobsWidgetState extends State<LatestJobsWidget> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          // Category Tag & Vacancy Badge
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
@@ -309,7 +314,6 @@ class LatestJobsWidgetState extends State<LatestJobsWidget> {
           ),
           const SizedBox(height: 6),
 
-          // Main Title
           Text(
             title,
             style: TextStyle(
@@ -321,7 +325,6 @@ class LatestJobsWidgetState extends State<LatestJobsWidget> {
           ),
           const SizedBox(height: 6),
 
-          // Organization & Qualification Meta Line
           Row(
             children: [
               if (organization.isNotEmpty) ...[
@@ -356,7 +359,6 @@ class LatestJobsWidgetState extends State<LatestJobsWidget> {
             ],
           ),
 
-          // APPLICATION FEES ROW
           if (fee.isNotEmpty) ...[
             const SizedBox(height: 5),
             Text(
@@ -373,7 +375,6 @@ class LatestJobsWidgetState extends State<LatestJobsWidget> {
 
           const SizedBox(height: 8),
 
-          // Last Date & Apply CTA Row
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
@@ -422,7 +423,6 @@ class LatestJobsWidgetState extends State<LatestJobsWidget> {
     );
   }
 
-  // BOTTOM SHEET FOR EXPANDED LIST VIEW
   void _showAllJobsBottomSheet() {
     showModalBottomSheet(
       context: context,
