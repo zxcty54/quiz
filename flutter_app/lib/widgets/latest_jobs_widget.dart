@@ -50,7 +50,7 @@ class _LatestJobsWidgetState extends State<LatestJobsWidget> {
     }
   }
 
-  // 2. SMART MULTI-FIELD FILTERING LOGIC (FIXED FOR BIHAR GOVT TAB)
+  // 2. SMART MULTI-FIELD FILTERING LOGIC
   List<dynamic> get _filteredJobs {
     if (_selectedCategory == 'all') return _allJobs;
 
@@ -61,7 +61,6 @@ class _LatestJobsWidgetState extends State<LatestJobsWidget> {
       final String title = (job['title'] ?? '').toString().toLowerCase();
       final String org = (job['organization'] ?? '').toString().toLowerCase();
 
-      // Check if job belongs to Bihar across job_type, title, and organization
       final bool isBiharJob = jobType.contains('bihar') ||
           title.contains('bihar') ||
           title.contains('patna') ||
@@ -131,7 +130,7 @@ class _LatestJobsWidgetState extends State<LatestJobsWidget> {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text(
-                'Latest Job Notifications',
+                'Latest Notifications',
                 style: TextStyle(
                   fontSize: 16,
                   fontWeight: FontWeight.w700,
@@ -254,12 +253,13 @@ class _LatestJobsWidgetState extends State<LatestJobsWidget> {
     );
   }
 
-  // DETAILED JOB CARD COMPONENT
+  // DETAILED JOB CARD COMPONENT (WITH FEES ADDED)
   Widget _buildDetailedJobCard(Map<String, dynamic> job, Color textColor) {
     final String title = job['title'] ?? 'Job Notification';
     final String organization = job['organization'] ?? '';
     final String vacancies = job['total_vacancies'] ?? '';
     final String qualification = job['qualification'] ?? '';
+    final String fee = job['application_fee'] ?? ''; // 👈 Application Fee
     final String lastDate = job['last_date'] ?? '';
     final String applyUrl = job['apply_url'] ?? job['link'] ?? '';
     final String jobType = (job['job_type'] ?? '').toString().toLowerCase();
@@ -355,6 +355,22 @@ class _LatestJobsWidgetState extends State<LatestJobsWidget> {
                 ),
             ],
           ),
+
+          // 💳 APPLICATION FEES ROW (ADDED HERE)
+          if (fee.isNotEmpty) ...[
+            const SizedBox(height: 5),
+            Text(
+              '💳 Fee: $fee',
+              maxLines: 1,
+              overflow: TextOverflow.ellipsis,
+              style: TextStyle(
+                fontSize: 11,
+                fontWeight: FontWeight.w500,
+                color: widget.isDarkMode ? Colors.white70 : const Color(0xFF475569),
+              ),
+            ),
+          ],
+
           const SizedBox(height: 8),
 
           // Last Date & Apply CTA Row
