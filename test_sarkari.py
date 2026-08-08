@@ -20,7 +20,7 @@ BASE_URL = "https://www.indgovtjobs.net/category/central-government-jobs/"
 JSON_FILENAME = "sarkarijob.json"
 MAX_PAGES = 10 
 
-# Rejection Lists for non-job links & non-target states
+# Non-Bihar / Other State Rejection List
 OTHER_STATES_REJECT = [
     "upsss", "upsssc", "upeida", "upscidc", "upsrtc", "mpesb", "jssc", "hartron", 
     "skau", "kurukshetra", "banda", "uppsc", "mppsc", "rpsc", "hpsc", 
@@ -29,15 +29,10 @@ OTHER_STATES_REJECT = [
     "dsssb", "uttarakhand", "ukpsc"
 ]
 
-GARBAGE_TITLE_KEYWORDS = [
-    "typing test", "pdf", "editor", "quiz", "tools", "maharashtra jobs", 
+GARBAGE_KEYWORDS = [
+    "typing test", "pdf editor", "quiz", "image editor", "maharashtra jobs", 
     "ap jobs", "mh jobs", "tn jobs", "gk quiz", "mcq", "indian government jobs",
-    "indgovtjobs", "about us", "privacy policy", "disclaimer", "contact us"
-]
-
-JOB_MUST_KEYWORDS = [
-    "recruitment", "vacancy", "posts", "post", "apprentice", "officer", 
-    "manager", "assistant", "technician", "engineer", "cadre", "commission"
+    "about us", "privacy policy", "disclaimer", "contact us", "sitemap", "home"
 ]
 
 BIHAR_KEYWORDS = ["bihar", "bpsc", "bssc", "bpssc", "csbc", "btsc", "patna", "wcdc", "beltron", "bcece"]
@@ -51,47 +46,62 @@ def is_hard_rejected(text):
     text_lower = f" {text.lower()} "
     return any(keyword in text_lower for keyword in OTHER_STATES_REJECT)
 
-def is_garbage_link(text):
-    text_lower = text.lower()
-    # Reject if contains garbage keywords or doesn't contain a real job keyword
-    if any(g in text_lower for g in GARBAGE_TITLE_KEYWORDS):
+def is_garbage_link(text, url):
+    text_lower = text.lower().strip()
+    url_lower = url.lower()
+    
+    # Ignore short navigation texts
+    if len(text_lower) < 12:
         return True
-    if not any(j in text_lower for j in JOB_MUST_KEYWORDS):
+    # Ignore non-article URLs
+    if any(x in url_lower for x in ["/category/", "/tag/", "/page/", "#", "privacy-policy", "about-us", "contact-us", "disclaimer"]):
+        return True
+    # Ignore utility/menu cards
+    if any(g in text_lower for g in GARBAGE_KEYWORDS):
         return True
     return False
 
-# 🧹 Clean Title Function
+# 🧹 Clean Title String
 def sanitize_title(raw_title):
-    # Remove newlines
     title = raw_title.replace('\n', ' ')
-    # Remove leading category labels
     title = re.sub(r'^(?:Central|State|Bihar)\s*Govt\s*', '', title, flags=re.IGNORECASE)
-    # Remove trailing IndGovtjobs & Dates (e.g. IndGovtjobs 7 Aug 2026)
     title = re.sub(r'IndGovtjobs.*$', '', title, flags=re.IGNORECASE)
     title = re.sub(r'\b\d{1,2}\s+[A-Za-z]{3}\s+\d{4}\b.*$', '', title, flags=re.IGNORECASE)
     title = re.sub(r'Read\s*More.*$', '', title, flags=re.IGNORECASE)
-    # Strip whitespace
     return re.sub(r'\s+', ' ', title).strip()
 
-# ⏰ Date Expiry Check
+# ⏰ Smart Date Expiry Check (Supports DD/MM/YYYY, DD-Mon-YYYY, DD Month YYYY)
 def is_date_expired(last_date_str):
     if not last_date_str or "Refer" in last_date_str or "N/A" in last_date_str:
         return False
         
-    date_match = re.search(r'(\d{1,2})[/-](\d{1,2})[/-](\d{2,4})', last_date_str)
-    if date_match:
-        try:
-            day, month, year = map(int, date_match.groups())
-            if year < 100:
-                year += 2000
-            last_dt = datetime(year, month, day).date()
-            if last_dt < datetime.now().date():
-                return True
-        except Exception:
-            pass
+    date_patterns = [
+        r'(\d{1,2})[/-](\d{1,2})[/-](\d{2,4})',
+        r'(\d{1,2})[-/\s]([A-Za-z]{3,9})[-/\s](\d{4})'
+    ]
+    
+    for pattern in date_patterns:
+        match = re.search(pattern, last_date_str)
+        if match:
+            try:
+                g1, g2, g3 = match.groups()
+                if g2.isdigit():
+                    day, month, year = int(g1), int(g2), int(g3)
+                else:
+                    day, year = int(g1), int(g3)
+                    month_names = ["jan", "feb", "mar", "apr", "may", "jun", "jul", "aug", "sep", "oct", "nov", "dec"]
+                    month = month_names.index(g2.lower()[:3]) + 1
+                
+                if year < 100:
+                    year += 2000
+                last_dt = datetime(year, month, day).date()
+                if last_dt < datetime.now().date():
+                    return True
+            except Exception:
+                pass
     return False
 
-# 🏛️ Extract Organization Name from Title
+# 🏛️ Extract Organization Name
 def extract_organization_from_title(title):
     org_patterns = [
         (r'^\s*([A-Za-z0-9\s]{2,15})\s+Recruitment', 1),
@@ -132,7 +142,7 @@ def fetch_page_html(target_url):
 
     return None
 
-# 🎯 Inner Article Table & Text Parser
+# 🎯 STEP 2: Inner Article Page HTML Table & Paragraph Parser
 def parse_inner_article_table(article_url, clean_title):
     html = fetch_page_html(article_url)
     if not html:
@@ -147,7 +157,7 @@ def parse_inner_article_table(article_url, clean_title):
     last_date = None
     start_date = "Online Active"
 
-    # Search for Key-Value Tables inside the post
+    # 1. Search Table Cells
     tables = soup.find_all('table')
     for table in tables:
         rows = table.find_all('tr')
@@ -162,24 +172,23 @@ def parse_inner_article_table(article_url, clean_title):
                         organization = val_text
 
                 elif any(k in key_text for k in ["total vacancies", "total vacancy", "no. of post", "vacancies"]):
-                    # Don't match years (e.g. 2025, 2026, 2027) as vacancies!
                     nums = [n for n in re.findall(r'\b\d+\b', val_text) if int(n) not in [2024, 2025, 2026, 2027]]
                     if nums:
                         vacancies = f"{nums[0]} Posts"
 
                 elif any(k in key_text for k in ["closing date", "last date", "end date"]):
-                    d_match = re.search(r'\d{1,2}[/-]\d{1,2}[/-]\d{2,4}', val_text)
+                    d_match = re.search(r'(\d{1,2}[/-]\d{1,2}[/-]\d{2,4}|\d{1,2}\s+[A-Za-z]{3,9}\s+\d{4}|\d{1,2}[-][A-Za-z]{3,9}[-]\d{4})', val_text)
                     last_date = d_match.group(0) if d_match else val_text
 
                 elif any(k in key_text for k in ["opening date", "start date", "application begin"]):
-                    d_match = re.search(r'\d{1,2}[/-]\d{1,2}[/-]\d{2,4}', val_text)
+                    d_match = re.search(r'(\d{1,2}[/-]\d{1,2}[/-]\d{2,4}|\d{1,2}\s+[A-Za-z]{3,9}\s+\d{4})', val_text)
                     if d_match:
                         start_date = d_match.group(0)
 
                 elif any(k in key_text for k in ["qualification", "educational", "eligibility"]):
                     qualification = val_text
 
-    # Extract Vacancies from Title if Table missed it
+    # 2. Title Vacancy Fallback
     if not vacancies:
         v_match = re.search(r'[-–—]\s*(\d+)\s*(?:[A-Za-z\s,]+)?\s*Posts', clean_title, re.IGNORECASE)
         if not v_match:
@@ -190,13 +199,13 @@ def parse_inner_article_table(article_url, clean_title):
     if not vacancies:
         vacancies = "Various Posts" if "various" in page_text.lower() else "Refer Official Notification"
 
-    # Regex Fallback for Last Date
+    # 3. Regex Fallbacks for Last Date in Page Text (Matches 06-Sep-2026 / 12 August 2026 / 27/08/2026)
     if not last_date:
-        l_match = re.search(r'(?:Closing\s*Date|Last\s*Date)\s*:?\s*(\d{1,2}[/-]\d{1,2}[/-]\d{2,4})', page_text, re.IGNORECASE)
+        l_match = re.search(r'(?:Closing\s*Date|Last\s*Date|Apply\s*Last\s*Date)\s*:?\s*(\d{1,2}[/-]\d{1,2}[/-]\d{2,4}|\d{1,2}\s+[A-Za-z]{3,9}\s+\d{4}|\d{1,2}[-][A-Za-z]{3,9}[-]\d{4})', page_text, re.IGNORECASE)
         if l_match:
             last_date = l_match.group(1)
 
-    # Qualification Fallback
+    # 4. Qualification Fallback
     if qualification == "Refer Official Notification":
         if "10th" in page_text or "Matriculation" in page_text:
             qualification = "Class 10th Pass / ITI"
@@ -233,32 +242,31 @@ def run_indgovtjobs_scraper():
 
         soup = BeautifulSoup(page_html, 'html.parser')
         
-        # Scan links
-        all_a_tags = soup.find_all('a', href=True)
+        # 🟢 Extract ALL <a> tags across the entire page
+        all_links = soup.find_all('a', href=True)
         valid_job_links = []
 
-        for a in all_a_tags:
-            href = a['href'].strip()
-            full_url = urljoin(BASE_URL, href)
-            raw_text = clean_text(a.text)
+        for a_tag in all_links:
+            raw_href = a_tag['href'].strip()
+            full_url = urljoin(BASE_URL, raw_href)
+            raw_text = clean_text(a_tag.text)
 
-            if len(raw_text) > 10 and "indgovtjobs.net" in full_url:
-                if "/category/" not in full_url and "/tag/" not in full_url and "/page/" not in full_url:
-                    if not is_garbage_link(raw_text) and full_url not in processed_urls:
-                        valid_job_links.append((raw_text, full_url))
+            # Filter valid article links
+            if "indgovtjobs.net" in full_url and not is_garbage_link(raw_text, full_url):
+                if full_url not in processed_urls:
+                    valid_job_links.append((raw_text, full_url))
+                    processed_urls.add(full_url)
 
         print(f"📑 Found {len(valid_job_links)} clean job links on Page {page_num}")
 
         for raw_title, article_url in valid_job_links:
             clean_title = sanitize_title(raw_title)
 
-            if is_hard_rejected(clean_title) or is_garbage_link(clean_title):
-                print(f"🚫 [SKIPPED NON-JOB]: {clean_title}")
+            if is_hard_rejected(clean_title) or len(clean_title) < 12:
+                print(f"🚫 [SKIPPED]: {clean_title}")
                 continue
 
-            processed_urls.add(article_url)
-
-            # Step 2: Visit Inner Detail Page & Parse Table
+            # STEP 2: Visit Inner Detail Page & Parse Table
             print(f"🔗 [PARSING INNER PAGE]: {clean_title}")
             inner_data = parse_inner_article_table(article_url, clean_title)
 
@@ -285,7 +293,7 @@ def run_indgovtjobs_scraper():
             }
 
             job_cards.append(job_card)
-            print(f"✅ Clean Job Added [{len(job_cards)}]: {clean_title}")
+            print(f"✅ Added [{len(job_cards)}]: {clean_title}")
             print(f"   Org: {job_card['organization']} | Vacancies: {job_card['total_vacancies']} | Last Date: {job_card['last_date']}\n")
 
             if len(job_cards) >= 20:
