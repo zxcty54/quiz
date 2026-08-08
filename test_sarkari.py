@@ -2,17 +2,26 @@ import os
 import json
 import re
 from datetime import datetime
-from urllib.parse import urljoin
+from urllib.parse import quote, urljoin
 from bs4 import BeautifulSoup
-from curl_cffi import requests
+
+# Try importing curl_cffi, fallback to requests if not available
+try:
+    from curl_cffi import requests as cffi_requests
+except ImportError:
+    cffi_requests = None
+
+import requests
 
 # -------------------------------------------------------------
 # Configuration
 # -------------------------------------------------------------
+SCRAPINGANT_API_KEY = os.environ.get("SCRAPINGANT_API_KEY", "f2dac73c566b4f60b9ca989beedeb5de")
 BASE_URL = "https://www.indgovtjobs.net/category/central-government-jobs/"
 JSON_FILENAME = "sarkarijob.json"
-MAX_PAGES = 10  # Step 1: Page 1 aur Page 2 scrape karega
+MAX_PAGES = 10  # Category pages to scan
 
+# Other States Rejection List
 OTHER_STATES_REJECT = [
     "upsss", "upsssc", "upeida", "upscidc", "upsrtc", "mpesb", "jssc", "hartron", 
     "skau", "kurukshetra", "banda", "uppsc", "mppsc", "rpsc", "hpsc", 
@@ -32,7 +41,7 @@ def is_hard_rejected(text):
     text_lower = f" {text.lower()} "
     return any(keyword in text_lower for keyword in OTHER_STATES_REJECT)
 
-# ⏰ Date Expiry Filter
+# ⏰ Date Expiry Check Function
 def is_date_expired(last_date_str):
     if not last_date_str or "Refer" in last_date_str or "N/A" in last_date_str:
         return False
@@ -50,21 +59,40 @@ def is_date_expired(last_date_str):
             pass
     return False
 
-# 🌐 Fast Request Handler using Chrome Impersonation
-def fetch_html(url):
+# 🌐 Bulletproof Fetcher: Direct curl_cffi -> ScrapingAnt Fallback (Bypasses 403)
+def fetch_page_html(target_url):
+    # Method 1: Try curl_cffi Chrome Impersonation
+    if cffi_requests:
+        try:
+            res = cffi_requests.get(target_url, impersonate="chrome120", timeout=12)
+            if res.status_code == 200 and len(res.text) > 1000:
+                return res.text
+            else:
+                print(f"⚠️ Direct request got status {res.status_code}. Switching to ScrapingAnt...")
+        except Exception as e:
+            print(f"⚠️ Direct request failed ({e}). Switching to ScrapingAnt...")
+
+    # Method 2: ScrapingAnt API Proxy Fallback
+    encoded_url = quote(target_url)
+    api_endpoint = f"https://api.scrapingant.com/v2/general?url={encoded_url}&x-api-key={SCRAPINGANT_API_KEY}&browser=false"
     try:
-        res = requests.get(url, impersonate="chrome120", timeout=15)
+        res = requests.get(api_endpoint, timeout=30)
         if res.status_code == 200:
             return res.text
         else:
-            print(f"⚠️ Status Code {res.status_code} for {url}")
+            # Fallback with browser rendering
+            fallback_endpoint = f"https://api.scrapingant.com/v2/general?url={encoded_url}&x-api-key={SCRAPINGANT_API_KEY}&browser=true"
+            f_res = requests.get(fallback_endpoint, timeout=40)
+            if f_res.status_code == 200:
+                return f_res.text
     except Exception as e:
-        print(f"⚠️ Fetch error for {url}: {e}")
+        print(f"❌ ScrapingAnt API error for {target_url}: {e}")
+
     return None
 
-# 🎯 STEP 2: Detail Page Table Parser
+# 🎯 STEP 2: Inner Article Page HTML Table Parser
 def parse_inner_article_table(article_url):
-    html = fetch_html(article_url)
+    html = fetch_page_html(article_url)
     if not html:
         return {}
 
@@ -77,7 +105,7 @@ def parse_inner_article_table(article_url):
     last_date = None
     start_date = "Online Active"
 
-    # Search for Key-Value Tables inside the post
+    # Inspect Key-Value Tables inside the post
     tables = soup.find_all('table')
     for table in tables:
         rows = table.find_all('tr')
@@ -87,27 +115,32 @@ def parse_inner_article_table(article_url):
                 key_text = clean_text(cells[0].text).lower()
                 val_text = clean_text(cells[1].text)
 
+                # Organization Name
                 if any(k in key_text for k in ["organisation", "organization", "recruitment board"]):
                     if val_text and len(val_text) < 60:
                         organization = val_text
 
+                # Total Vacancies
                 elif any(k in key_text for k in ["total vacancies", "total vacancy", "no. of post", "vacancies"]):
                     num_match = re.search(r'(\d+)', val_text)
                     vacancies = f"{num_match.group(1)} Posts" if num_match else val_text
 
+                # Closing / Last Date
                 elif any(k in key_text for k in ["closing date", "last date", "end date"]):
                     d_match = re.search(r'\d{1,2}[/-]\d{1,2}[/-]\d{2,4}', val_text)
                     last_date = d_match.group(0) if d_match else val_text
 
+                # Opening / Start Date
                 elif any(k in key_text for k in ["opening date", "start date", "application begin"]):
                     d_match = re.search(r'\d{1,2}[/-]\d{1,2}[/-]\d{2,4}', val_text)
                     if d_match:
                         start_date = d_match.group(0)
 
+                # Qualification
                 elif any(k in key_text for k in ["qualification", "educational", "eligibility"]):
                     qualification = val_text
 
-    # Regex Fallback
+    # Text Regex Fallbacks if Table missing
     if not last_date:
         l_match = re.search(r'(?:Closing\s*Date|Last\s*Date)\s*:?\s*(\d{1,2}[/-]\d{1,2}[/-]\d{2,4})', page_text, re.IGNORECASE)
         if l_match:
@@ -139,15 +172,15 @@ def run_indgovtjobs_scraper():
         page_url = BASE_URL if page_num == 1 else f"{BASE_URL}page/{page_num}/"
         print(f"🌐 [STEP 1] Fetching Listing Page {page_num}: {page_url}")
 
-        page_html = fetch_html(page_url)
+        page_html = fetch_page_html(page_url)
         if not page_html:
-            print(f"❌ Could not load Category Page {page_num}")
+            print(f"❌ Failed to fetch Page {page_num}")
             break
 
         soup = BeautifulSoup(page_html, 'html.parser')
         
-        # Extract Post Links using Articles / Headings
-        post_links = soup.select('article a[href], h2.entry-title a[href], .post-title a[href]')
+        # Select Post Links from Articles / Headings
+        post_links = soup.select('article a[href], h2.entry-title a[href], .post-title a[href], h2 a[href]')
         print(f"📑 Found {len(post_links)} post links on Page {page_num}")
 
         for link_tag in post_links:
@@ -165,13 +198,13 @@ def run_indgovtjobs_scraper():
 
                 processed_urls.add(article_url)
 
-                # Step 2: Visit Inner Detail Page & Parse HTML Table
-                print(f"🔗 [STEP 2: INNER PARSE]: {clean_title}")
+                # STEP 2: Visit Inner Detail Page & Parse Table
+                print(f"🔗 [STEP 2: PARSING INNER TABLE]: {clean_title}")
                 inner_data = parse_inner_article_table(article_url)
 
                 final_last_date = inner_data.get("last_date", "Refer Notification")
 
-                # Date Expiry Check
+                # Filter Expired Jobs
                 if is_date_expired(final_last_date):
                     print(f"⏰ [EXPIRED SKIPPED]: {clean_title} (Last Date: {final_last_date})")
                     continue
@@ -193,7 +226,7 @@ def run_indgovtjobs_scraper():
 
                 job_cards.append(job_card)
                 print(f"✅ Added [{len(job_cards)}]: {clean_title}")
-                print(f"   Vacancies: {job_card['total_vacancies']} | Last Date: {job_card['last_date']}\n")
+                print(f"   Org: {job_card['organization']} | Vacancies: {job_card['total_vacancies']} | Last Date: {job_card['last_date']}\n")
 
                 if len(job_cards) >= 20:
                     break
@@ -208,7 +241,7 @@ def run_indgovtjobs_scraper():
     with open(JSON_FILENAME, "w", encoding="utf-8") as f:
         json.dump(output_data, f, ensure_ascii=False, indent=2)
 
-    print(f"🎉 Success! Processed and saved {len(job_cards)} active jobs into '{JSON_FILENAME}'.")
+    print(f"🎉 Process Complete! Successfully saved {len(job_cards)} active jobs into '{JSON_FILENAME}'.")
 
 if __name__ == "__main__":
     run_indgovtjobs_scraper()
