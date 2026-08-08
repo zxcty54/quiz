@@ -3,7 +3,7 @@ import json
 import time
 import urllib.parse
 import re
-from datetime import datetime, timedelta, timezone
+from datetime import datetime, timedelta
 import email.utils
 import xml.etree.ElementTree as ET
 from curl_cffi import requests
@@ -19,7 +19,8 @@ SCRAPINGANT_KEY = os.environ.get("SCRAPINGANT_API_KEY")
 
 client = Groq(api_key=GROQ_KEY) if GROQ_KEY else None
 
-MODELS = ["llama-3.1-8b-instant", "llama3-8b-8192", "llama-3.3-70b-versatile"]
+# Active Groq Models (Removed Decommissioned Llama3-8b-8192)
+MODELS = ["llama-3.3-70b-versatile", "llama-3.1-8b-instant"]
 
 def get_yesterday_info():
     yesterday_dt = datetime.now() - timedelta(days=1)
@@ -28,26 +29,16 @@ def get_yesterday_info():
     return yesterday_dt, date_str, key_str
 
 # -------------------------------------------------------------
-# UNIVERSAL MULTI-FORMAT DATE PARSER ENGINE
+# UNIVERSAL DATE PARSER ENGINE
 # -------------------------------------------------------------
 def parse_any_date(date_str):
-    """
-    Parses virtually ALL possible news date formats:
-    1. RFC 822 / 2822 (e.g. Mon, 07 Aug 2026 14:30:00 +0530)
-    2. ISO 8601 (e.g. 2026-08-07T14:30:00Z or 2026-08-07T14:30:00+05:30)
-    3. Standard Date Strings (e.g. 07 Aug 2026, August 7 2026)
-    4. Indian Slash/Dash Formats (e.g. 07/08/2026, 07-08-2026, 2026/08/07)
-    5. Epoch Timestamps (seconds or milliseconds)
-    6. Relative Strings (e.g. '2 hours ago', '1 day ago', 'yesterday')
-    """
     if not date_str:
         return None
 
     date_str = str(date_str).strip()
-
-    # Format Option 1: Relative strings ("x hours ago", "yesterday")
     now = datetime.now()
     lower_str = date_str.lower()
+
     if "yesterday" in lower_str:
         return now - timedelta(days=1)
     if "today" in lower_str:
@@ -63,17 +54,14 @@ def parse_any_date(date_str):
         elif "min" in unit:
             return now - timedelta(minutes=val)
 
-    # Format Option 2: Epoch Timestamps (e.g. 1723055400 or 1723055400000)
     if date_str.isdigit():
         try:
             ts = int(date_str)
-            if ts > 1e11:  # Milliseconds timestamp
-                ts /= 1000
+            if ts > 1e11: ts /= 1000
             return datetime.fromtimestamp(ts)
         except Exception:
             pass
 
-    # Format Option 3: RFC-822 / Email Parsedate (Standard RSS)
     try:
         pub_tuple = email.utils.parsedate_tz(date_str)
         if pub_tuple:
@@ -81,53 +69,26 @@ def parse_any_date(date_str):
     except Exception:
         pass
 
-    # Format Option 4: Fuzzy Python Dateutil Parser (Handles ISO, custom text, string dates)
     try:
-        # dayfirst=True ensures 07/08/2026 is parsed as 7th August, not 8th July
         parsed_dt = date_parser.parse(date_str, fuzzy=True, dayfirst=True)
-        # Convert offset-aware datetime to naive local datetime for comparison
         if parsed_dt.tzinfo is not None:
             parsed_dt = parsed_dt.astimezone().replace(tzinfo=None)
         return parsed_dt
     except Exception:
         pass
 
-    # Format Option 5: Manual Regex Fallbacks for non-standard RSS formats
-    patterns = [
-        r'%d %b %Y %H:%M:%S',
-        r'%Y-%m-%d %H:%M:%S',
-        r'%d/%m/%Y %H:%M:%S',
-        r'%d-%m-%Y %H:%M:%S',
-        r'%Y/%m/%d',
-        r'%d-%m-%Y',
-        r'%d/%m/%Y'
-    ]
-    for fmt in patterns:
-        try:
-            return datetime.strptime(date_str, fmt)
-        except ValueError:
-            continue
-
     return None
 
-
 def is_yesterday_news(pub_date_str, target_dt):
-    """
-    Checks if parsed date falls within yesterday's safe window (+/- 2.5 days for timezone buffer)
-    """
     if not pub_date_str:
-        return True # PubDate na mile toh keep news (Safety Fallback)
+        return True
 
     pub_dt = parse_any_date(pub_date_str)
-    
     if pub_dt:
-        # Timezone safety window (Target date ke +/- 2.5 days)
         start_window = target_dt - timedelta(days=2.5)
         end_window = target_dt + timedelta(days=1.5)
-        is_match = start_window <= pub_dt <= end_window
-        return is_match
+        return start_window <= pub_dt <= end_window
 
-    # Parsing failed -> Retain news to avoid dropping critical content
     return True
 
 def clean_html_text(text):
@@ -136,7 +97,6 @@ def clean_html_text(text):
     return " ".join(clean.split()).strip()
 
 def remove_duplicate_news(news_list):
-    """Semantic Deduplication with Debug Logging"""
     seen_titles = set()
     unique_news = []
     dropped_count = 0
@@ -150,7 +110,7 @@ def remove_duplicate_news(news_list):
         else:
             dropped_count += 1
             
-    print(f"🧹 Deduplication Debug: Total Input={len(news_list)} | Duplicates Dropped={dropped_count} | Unique Sent to LLM={len(unique_news)}")
+    print(f"🧹 Deduplication Debug: Total={len(news_list)} | Duplicates Dropped={dropped_count} | Unique Sent to LLM={len(unique_news)}")
     return unique_news
 
 # -------------------------------------------------------------
@@ -173,18 +133,17 @@ def safe_fetch(url, timeout=12):
             if sa_res.status_code == 200:
                 return sa_res.content
         except Exception as sa_e:
-            print(f"❌ ScrapingAnt also failed: {sa_e}")
+            print(f"❌ ScrapingAnt failed: {sa_e}")
     return None
 
 # -------------------------------------------------------------
-# 3. SCRAPING FUNCTIONS WITH SOURCE-WISE DEBUGGING
+# 3. SCRAPING FUNCTIONS
 # -------------------------------------------------------------
 def fetch_raw_bihar_news(target_dt):
     print("\n🔍 --- DEBUG: FETCHING BIHAR NEWS ---")
     news_titles = []
     source_stats = {}
 
-    # A. Google News Bihar
     content = safe_fetch("https://news.google.com/rss/search?q=Bihar+Government+Schemes+OR+Infrastructure+OR+Economy+OR+Agriculture+when:2d&hl=hi&gl=IN&ceid=IN:hi")
     if content:
         try:
@@ -193,22 +152,21 @@ def fetch_raw_bihar_news(target_dt):
             for item in root.findall('.//item'):
                 title = item.find('title').text if item.find('title') is not None else ""
                 desc = item.find('description').text if item.find('description') is not None else ""
-                clean_desc = clean_html_text(desc)[:300]
+                clean_desc = clean_html_text(desc)[:180] # Trimmed to manage tokens
                 pub_date = item.find('pubDate').text if item.find('pubDate') is not None else ""
                 if title and is_yesterday_news(pub_date, target_dt):
                     news_titles.append(f"[Google News Bihar] {title} | Context: {clean_desc}")
                     count += 1
-                    if count >= 20: break
+                    if count >= 12: break
             source_stats["Google News Bihar"] = count
         except Exception as e:
             print(f"⚠️ Google News Bihar parse error: {e}")
 
-    # B. CMO Bihar
     content = safe_fetch("https://cm.bihar.gov.in/users/preessrelease.aspx")
     if content:
         cmo_count = 0
         soup = BeautifulSoup(content, "html.parser")
-        for row in soup.find_all('tr')[:15]:
+        for row in soup.find_all('tr')[:10]:
             cols = row.find_all('td')
             if len(cols) >= 2:
                 title = cols[1].text.strip()
@@ -217,7 +175,6 @@ def fetch_raw_bihar_news(target_dt):
                     cmo_count += 1
         source_stats["CMO Bihar"] = cmo_count
 
-    # C. Prabhat Khabar
     content = safe_fetch("https://www.prabhatkhabar.com/state/bihar/feed")
     if content:
         try:
@@ -226,12 +183,12 @@ def fetch_raw_bihar_news(target_dt):
             for item in root.findall('.//item'):
                 title = item.find('title').text if item.find('title') is not None else ""
                 desc = item.find('description').text if item.find('description') is not None else ""
-                clean_desc = clean_html_text(desc)[:300]
+                clean_desc = clean_html_text(desc)[:180]
                 pub_date = item.find('pubDate').text if item.find('pubDate') is not None else ""
                 if title and is_yesterday_news(pub_date, target_dt):
                     news_titles.append(f"[Prabhat Khabar] {title.strip()} | Context: {clean_desc}")
                     count += 1
-                    if count >= 15: break
+                    if count >= 10: break
             source_stats["Prabhat Khabar"] = count
         except Exception as e:
             print(f"⚠️ Prabhat Khabar parse error: {e}")
@@ -245,8 +202,29 @@ def fetch_raw_national_news(target_dt):
     national_titles = []
     source_stats = {}
     
+    # 1. Direct Scrape PIB National Portal
+    pib_portal_releases = []
+    pib_content = safe_fetch("https://www.pib.gov.in/Allrel.aspx?reg=3&lang=1") # PIB National Portal
+    if pib_content:
+        try:
+            soup = BeautifulSoup(pib_content, "html.parser")
+            count = 0
+            for link in soup.find_all('a', href=True):
+                title = clean_html_text(link.text)
+                href = link['href']
+                if ("PressRelease" in href or "PRN" in href or "relid" in href) and len(title) > 20:
+                    if not any(x in title.lower() for x in ["home", "privacy", "terms", "contact", "back"]):
+                        pib_portal_releases.append(f"[PIB National Portal] {title}")
+                        count += 1
+                        if count >= 10: break
+        except Exception as e:
+            print(f"⚠️ PIB National Portal scrape error: {e}")
+    
+    national_titles.extend(pib_portal_releases)
+    source_stats["PIB National Portal"] = len(pib_portal_releases)
+
+    # 2. Standard RSS Sources (Max 6 per source to fit within token limit)
     national_rss_sources = [
-        ("PIB India", "https://pib.gov.in/RssMain.aspx?ModId=6&Lang=1&Regid=1"),
         ("The Hindu", "https://www.thehindu.com/news/national/feeder/default.rss"),
         ("Hindustan Times", "https://www.hindustantimes.com/feeds/rss/india-news/rssfeed.xml"),
         ("Economic Times", "https://economictimes.indiatimes.com/news/economy/rssfeeds/1373380680.cms"),
@@ -263,21 +241,20 @@ def fetch_raw_national_news(target_dt):
                 for item in items:
                     title = item.find('title').text.strip() if item.find('title') is not None else ""
                     desc = item.find('description').text if item.find('description') is not None else ""
-                    clean_desc = clean_html_text(desc)[:300]
+                    clean_desc = clean_html_text(desc)[:150] # Compact description
                     
-                    # Extract date tag safely
                     pub_date_tag = item.find('pubDate') or item.find('dc:date') or item.find('published') or item.find('updated')
                     pub_date = pub_date_tag.text if pub_date_tag is not None else ""
                     
                     if title and is_yesterday_news(pub_date, target_dt):
                         national_titles.append(f"[{source_name}] {title} | Context: {clean_desc}")
                         count += 1
-                        if count >= 15: break 
+                        if count >= 6: break # Reduced per-source limit to control TPM
             except Exception as e:
                 print(f"⚠️ Parsing error for {source_name}: {e}")
         source_stats[source_name] = count
 
-    # Google News National
+    # 3. Google News National
     content = safe_fetch("https://news.google.com/rss/search?q=India+Cabinet+Decisions+OR+National+Schemes+OR+ISRO+OR+RBI+OR+National+Highways+when:2d&hl=hi&gl=IN&ceid=IN:hi")
     gnews_count = 0
     if content:
@@ -286,12 +263,12 @@ def fetch_raw_national_news(target_dt):
             for item in root.findall('.//item'):
                 title = item.find('title').text if item.find('title') is not None else ""
                 desc = item.find('description').text if item.find('description') is not None else ""
-                clean_desc = clean_html_text(desc)[:300]
+                clean_desc = clean_html_text(desc)[:150]
                 pub_date = item.find('pubDate').text if item.find('pubDate') is not None else ""
                 if title and is_yesterday_news(pub_date, target_dt):
                     national_titles.append(f"[Google National] {title.strip()} | Context: {clean_desc}")
                     gnews_count += 1
-                    if gnews_count >= 20: break
+                    if gnews_count >= 8: break
         except Exception as e:
             print(f"⚠️ XML Parsing error for Google National: {e}")
     source_stats["Google National"] = gnews_count
@@ -300,7 +277,7 @@ def fetch_raw_national_news(target_dt):
     return "\n".join(remove_duplicate_news(national_titles))
 
 # -------------------------------------------------------------
-# 4. AI SUMMARY GENERATOR (STRICT ZERO HALLUCINATION)
+# 4. AI SUMMARY GENERATOR (TOKEN OPTIMIZED)
 # -------------------------------------------------------------
 def call_groq_safe(prompt, system_role="You are a JSON generator assistant."):
     time.sleep(1)
@@ -314,7 +291,7 @@ def call_groq_safe(prompt, system_role="You are a JSON generator assistant."):
                 ],
                 temperature=0.01,
                 response_format={"type": "json_object"},
-                max_tokens=4000,
+                max_tokens=2500, # Safely fits within API window
                 timeout=45,
             )
             print(f"⚡ Groq LLM Success using [{model_name}]!")
@@ -325,7 +302,8 @@ def call_groq_safe(prompt, system_role="You are a JSON generator assistant."):
     return ""
 
 def generate_clean_summary(raw_text, target_date_str, is_national=False):
-    truncated_raw = raw_text[:12000]
+    # Truncate raw input string to 4500 chars max to prevent Groq TPM 413 Error
+    truncated_raw = raw_text[:4500]
 
     scope_name = "India National" if is_national else "Bihar State"
     tag_name = "🎯 National Special / India Affairs" if is_national else "🎯 BPSC Special / Bihar Current Affairs"
@@ -361,7 +339,7 @@ def generate_clean_summary(raw_text, target_date_str, is_national=False):
     - Bullet 3: Policy framework / Scope / Operational mechanism.
     - Do NOT use Markdown asterisks (**).
 
-    Target Output: Select 8 to 14 high quality, unique news cards.
+    Target Output: Select 6 to 10 high quality, unique news cards.
 
     JSON SCHEMA OUTPUT:
     {{
