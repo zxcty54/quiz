@@ -1,116 +1,64 @@
 {
-  "status": "success",
-  "count": 10,
-  "latest_news": [
+  "news_cards": [
     {
       "id": "news_01",
-      "title": "Bihar Mein Bada Panchayat Chunav Se Pehle Gaon Ka Naksha Badalne Ki Taiyaari",
-      "category": "Bihar News",
-      "summary_bullets": [
-        "Bihar ke gaon mein pariseeman se aarakshan mein bada badlav hone wala hai",
-        "Panchayat chunav se pehle gaon ke naksha ko badalne ki taiyaari hai",
-        "Isse gaon ke vikas mein naye avsar aayenge"
+      "title": "Bihar Govt to Invest 51600 Crore in Industrial Sectors",
+      "category": "Bihar Economy, Budget & Reports",
+      "bullets": [
+        "The Bihar government has signed MoUs with major industrial groups to invest 51600 crore rupees in the state.",
+        "The investment will focus on developing Bihar as a steel hub, along with textile and nuclear energy sectors.",
+        "This development is relevant to BPSC and BSSC exams as it highlights the state's economic growth and industrial policies."
       ],
-      "date_added": "08 Aug 2026"
+      "exam_tag": "🎯 BPSC TRE / BSSC Special",
+      "date": "07 Aug 2026"
     },
     {
       "id": "news_02",
-      "title": "Bihar Ke Sarkari Schoolon Ki Haalath: Jhopdi Mein Class, Tin Shed Ke Neeche Padhai",
-      "category": "Bihar News",
-      "summary_bullets": [
-        "Bihar ke kai sarkari schoolon mein abhi bhi jhopdi mein class chal rahe hain",
-        "Tin shed ke neeche padhai ho rahi hai, jo bachchon ke liye surakshit nahin hai",
-        "Sarkar ko is samasya ka samadhan nikalna hoga"
+      "title": "Bihar to Develop Historical Sites into World-Class Tourism Centers",
+      "category": "Art, Culture & Tourism",
+      "bullets": [
+        "The Bihar government plans to conduct a scientific survey of historical sites like Maa Mundeshwari, Bodh Gaya, SultanGanj, and Mandar.",
+        "These sites will be developed into world-class tourism centers, promoting cultural heritage and tourism in the state.",
+        "This initiative is relevant to BPSC and BSSC exams as it highlights the state's efforts in preserving cultural heritage and promoting tourism."
       ],
-      "date_added": "08 Aug 2026"
+      "exam_tag": "🎯 BPSC TRE / BSSC Special",
+      "date": "07 Aug 2026"
     },
     {
       "id": "news_03",
-      "title": "Bihar Mein Rozgar Ki Samasya: 15-20 Hazaar Ki Job Ke Liye Shahar Chhodna Pad Raha Hai",
-      "category": "Bihar News",
-      "summary_bullets": [
-        "Bihar mein rozgar ki samasya bahut badi hai",
-        "15-20 hazaar ki job ke liye logon ko shahar chhodna pad raha hai",
-        "Sarkar ko is samasya ka samadhan nikalna hoga"
+      "title": "Bihar Govt to Mentor 20,000 Teachers",
+      "category": "Education & Recruitment Updates",
+      "bullets": [
+        "The Bihar government has launched a new education mission, where 20,000 teachers will be mentored to improve the state's education system.",
+        "This initiative aims to enhance the quality of education in the state by providing guidance and support to teachers.",
+        "This development is relevant to BPSC and BSSC exams as it highlights the state's efforts in improving education and teacher training."
       ],
-      "date_added": "08 Aug 2026"
+      "exam_tag": "🎯 BPSC TRE / BSSC Special",
+      "date": "07 Aug 2026"
     },
     {
       "id": "news_04",
-      "title": "Bihar Mein Baadh Ka Kahar: Gandak Nadi Ufnai, Darjon Gaon Mein Sadkon Par Bah Raha Hai Pani",
-      "category": "Bihar News",
-      "summary_bullets": [
-        "Bihar mein baadh ki samasya bahut badi hai",
-        "Gandak nadi ufnai, darjon gaon mein sadkon par bah raha hai pani",
-        "Logon ko surakshit sthanon par pahunchaya ja raha hai"
+      "title": "JP Ganga Path to Get World-Class Infrastructure",
+      "category": "Infrastructure & Projects",
+      "bullets": [
+        "The Bihar government has announced plans to develop the JP Ganga Path into a world-class infrastructure project.",
+        "The project will include the development of a 65-kilometer Ganga channel, promoting tourism and economic growth in the region.",
+        "This initiative is relevant to BPSC and BSSC exams as it highlights the state's efforts in developing infrastructure and promoting economic growth."
       ],
-      "date_added": "08 Aug 2026"
+      "exam_tag": "🎯 BPSC TRE / BSSC Special",
+      "date": "07 Aug 2026"
     },
     {
       "id": "news_05",
-      "title": "Bihar Mein TB Marizon Ko Badi Raahat: Prakhand Se Seedha Milega Yojana Ka Paisa",
-      "category": "Bihar News",
-      "summary_bullets": [
-        "Bihar mein TB marizon ko badi raahat mili hai",
-        "Prakhand se seedha milega yojana ka paisa",
-        "Bhugtan mein deri par karyavahi hogi"
+      "title": "Bihar Govt Signs MoU with Brahmakumari for Nasha Mukti Abhiyan",
+      "category": "Govt Schemes & Policies",
+      "bullets": [
+        "The Bihar government has signed an MoU with Brahmakumari to promote the Nasha Mukti Abhiyan in the state.",
+        "The initiative aims to create awareness and prevent drug abuse among youth, promoting a healthy and productive society.",
+        "This development is relevant to BPSC and BSSC exams as it highlights the state's efforts in promoting social welfare and public health."
       ],
-      "date_added": "08 Aug 2026"
-    },
-    {
-      "id": "news_06",
-      "title": "Bihar Ke Sarkari Schoolon Mein Half Day Vyavastha Phir Laagu",
-      "category": "Bihar News",
-      "summary_bullets": [
-        "Bihar ke sarkari schoolon mein half day vyavastha phir laagu ki gayi hai",
-        "Shiksha vibhag ne is sambandh mein adesh jari kiya hai",
-        "Shanivar ko 9:30 baje se school band ho jayenge"
-      ],
-      "date_added": "08 Aug 2026"
-    },
-    {
-      "id": "news_07",
-      "title": "Muzaffarpur Mein Aniyantrit Scorpiao ATM Mein Ghusi",
-      "category": "Bihar News",
-      "summary_bullets": [
-        "Muzaffarpur mein aniyantrit scorpiao ATM mein ghusi",
-        "Gadi chhodkar chalak farar ho gaya",
-        "Mamle ki jaanch mein jutti hai police"
-      ],
-      "date_added": "08 Aug 2026"
-    },
-    {
-      "id": "news_08",
-      "title": "Madhepura Mein Bhakpa Karyakartaon Ne Sadak Par Ropi Dhani",
-      "category": "Bihar News",
-      "summary_bullets": [
-        "Madhepura mein bhakpa karyakartaon ne sadak par ropi dhani",
-        "Jaljamav se virodh, shasan-prashasan ke khilaf nare",
-        "Jal nikasi ke liye karyavahi ki ja rahi hai"
-      ],
-      "date_added": "08 Aug 2026"
-    },
-    {
-      "id": "news_09",
-      "title": "Patna Ka JP Ganga Path Ban Gaya Yuvaon Ka Favorite Spot",
-      "category": "Bihar News",
-      "summary_bullets": [
-        "Patna ka JP ganga path ban gaya yuvaon ka favorite spot",
-        "Ganga kinare khubsurati aur sukoon ka perfect combination",
-        "Yuvaon ko yahaan bahut pasand aa raha hai"
-      ],
-      "date_added": "08 Aug 2026"
-    },
-    {
-      "id": "news_10",
-      "title": "13 Saal Ki Neha Banin Bihar Ki Sabse Kam Umar Ki Netradan",
-      "category": "Bihar News",
-      "summary_bullets": [
-        "13 saal ki neha banin bihar ki sabse kam umar ki netradan",
-        "Rajyastar par karyakram mein parivar hoga sammanit",
-        "Neha ki netradan ki kahaani bahut prernadayak hai"
-      ],
-      "date_added": "08 Aug 2026"
+      "exam_tag": "🎯 BPSC TRE / BSSC Special",
+      "date": "07 Aug 2026"
     }
   ]
 }
