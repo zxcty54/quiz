@@ -8,10 +8,10 @@ class LatestJobsWidget extends StatefulWidget {
   const LatestJobsWidget({super.key, required this.isDarkMode});
 
   @override
-  State<LatestJobsWidget> createState() => _LatestJobsWidgetState();
+  State<LatestJobsWidget> createState() => LatestJobsWidgetState();
 }
 
-class _LatestJobsWidgetState extends State<LatestJobsWidget> {
+class LatestJobsWidgetState extends State<LatestJobsWidget> {
   List<dynamic> _allJobs = [];
   bool _isLoading = true;
   String _selectedCategory = 'all'; // Categories: 'all', 'bihar', 'central'
@@ -19,11 +19,11 @@ class _LatestJobsWidgetState extends State<LatestJobsWidget> {
   @override
   void initState() {
     super.initState();
-    _fetchLatestJobs();
+    fetchLatestJobs();
   }
 
   // 1. FETCH LIVE JOBS FROM GITHUB CDN
-  Future<void> _fetchLatestJobs() async {
+  Future<void> fetchLatestJobs() async {
     final String url =
         "https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/sarkarijob.json?t=${DateTime.now().millisecondsSinceEpoch}";
     try {
@@ -259,7 +259,7 @@ class _LatestJobsWidgetState extends State<LatestJobsWidget> {
     final String organization = job['organization'] ?? '';
     final String vacancies = job['total_vacancies'] ?? '';
     final String qualification = job['qualification'] ?? '';
-    final String fee = job['application_fee'] ?? ''; // 👈 Application Fee
+    final String fee = job['application_fee'] ?? '';
     final String lastDate = job['last_date'] ?? '';
     final String applyUrl = job['apply_url'] ?? job['link'] ?? '';
     final String jobType = (job['job_type'] ?? '').toString().toLowerCase();
@@ -356,7 +356,7 @@ class _LatestJobsWidgetState extends State<LatestJobsWidget> {
             ],
           ),
 
-          // 💳 APPLICATION FEES ROW (ADDED HERE)
+          // APPLICATION FEES ROW
           if (fee.isNotEmpty) ...[
             const SizedBox(height: 5),
             Text(
