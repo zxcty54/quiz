@@ -37,6 +37,9 @@ class HomeTab extends StatefulWidget {
 }
 
 class _HomeTabState extends State<HomeTab> {
+  // 🔑 GlobalKey to trigger LatestJobsWidget refresh on Pull-to-Refresh
+  final GlobalKey<LatestJobsWidgetState> _jobsWidgetKey = GlobalKey<LatestJobsWidgetState>();
+
   List<dynamic> _biharNewsList = [];
   List<dynamic> _nationalNewsList = [];
   List<dynamic> _savedNewsList = [];
@@ -180,7 +183,11 @@ class _HomeTabState extends State<HomeTab> {
       color: const Color(0xFF4F46E5),
       backgroundColor: widget.isDarkMode ? const Color(0xFF1E293B) : Colors.white,
       onRefresh: () async {
-        await _fetchDailyBulletins(forceRefresh: true);
+        // 🔄 PULL-TO-REFRESH: Dono Bulletins aur Latest Jobs Widget refresh honge
+        await Future.wait([
+          _fetchDailyBulletins(forceRefresh: true),
+          _jobsWidgetKey.currentState?.fetchLatestJobs() ?? Future.value(),
+        ]);
       },
       child: SingleChildScrollView(
         physics: const AlwaysScrollableScrollPhysics(),
@@ -202,8 +209,11 @@ class _HomeTabState extends State<HomeTab> {
             _buildDailyBulletinSection(),
             const SizedBox(height: 18),
 
-            // 📢 4. LATEST JOBS ALERT WIDGET (TRIAL FEATURE) 👈 INTEGRATED HERE
-            LatestJobsWidget(isDarkMode: widget.isDarkMode),
+            // 📢 4. LATEST JOBS ALERT WIDGET (WITH REFRESH KEY)
+            LatestJobsWidget(
+              key: _jobsWidgetKey, // 👈 Key attached for Pull-to-Refresh
+              isDarkMode: widget.isDarkMode,
+            ),
 
             // 👨‍🏫 5. LEARN PREVIEW CARD
             _buildLearnPreviewCard(context),
