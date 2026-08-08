@@ -12,7 +12,7 @@ from bs4 import BeautifulSoup
 SCRAPINGANT_API_KEY = os.environ.get("SCRAPINGANT_API_KEY", "f2dac73c566b4f60b9ca989beedeb5de")
 BASE_URL = "https://www.indgovtjobs.net/category/central-government-jobs/"
 JSON_FILENAME = "sarkarijob.json"
-MAX_PAGES = 2  # Kitne pages tak scrape karna hai
+MAX_PAGES = 20  # Kitne pages tak scrape karna hai
 
 # Non-Bihar / Other States Rejection List
 OTHER_STATES_REJECT = [
