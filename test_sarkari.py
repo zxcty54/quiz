@@ -11,7 +11,7 @@ from curl_cffi import requests
 # -------------------------------------------------------------
 BASE_URL = "https://www.indgovtjobs.net/category/central-government-jobs/"
 JSON_FILENAME = "sarkarijob.json"
-MAX_PAGES = 2  # Step 1: Page 1 aur Page 2 scrape karega
+MAX_PAGES = 10  # Step 1: Page 1 aur Page 2 scrape karega
 
 OTHER_STATES_REJECT = [
     "upsss", "upsssc", "upeida", "upscidc", "upsrtc", "mpesb", "jssc", "hartron", 
