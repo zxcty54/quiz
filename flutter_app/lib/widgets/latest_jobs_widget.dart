@@ -50,15 +50,32 @@ class _LatestJobsWidgetState extends State<LatestJobsWidget> {
     }
   }
 
-  // 2. FILTERING LOGIC
+  // 2. SMART MULTI-FIELD FILTERING LOGIC (FIXED FOR BIHAR GOVT TAB)
   List<dynamic> get _filteredJobs {
     if (_selectedCategory == 'all') return _allJobs;
+
     return _allJobs.where((job) {
-      final jobType = (job['job_type'] ?? '').toString().toLowerCase();
+      if (job is! Map) return false;
+
+      final String jobType = (job['job_type'] ?? '').toString().toLowerCase();
+      final String title = (job['title'] ?? '').toString().toLowerCase();
+      final String org = (job['organization'] ?? '').toString().toLowerCase();
+
+      // Check if job belongs to Bihar across job_type, title, and organization
+      final bool isBiharJob = jobType.contains('bihar') ||
+          title.contains('bihar') ||
+          title.contains('patna') ||
+          title.contains('bpsc') ||
+          title.contains('bssc') ||
+          title.contains('bpssc') ||
+          title.contains('shs') ||
+          org.contains('bihar') ||
+          org.contains('patna');
+
       if (_selectedCategory == 'bihar') {
-        return jobType.contains('bihar');
+        return isBiharJob;
       } else if (_selectedCategory == 'central') {
-        return jobType.contains('central') || jobType.contains('bank');
+        return !isBiharJob || jobType.contains('central') || jobType.contains('bank');
       }
       return true;
     }).toList();
@@ -114,7 +131,7 @@ class _LatestJobsWidgetState extends State<LatestJobsWidget> {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text(
-                'Latest Notifications',
+                'Latest Job Notifications',
                 style: TextStyle(
                   fontSize: 16,
                   fontWeight: FontWeight.w700,
@@ -146,7 +163,7 @@ class _LatestJobsWidgetState extends State<LatestJobsWidget> {
             scrollDirection: Axis.horizontal,
             child: Row(
               children: [
-                _buildCategoryChip('all', 'All'),
+                _buildCategoryChip('all', 'All (${_allJobs.length})'),
                 const SizedBox(width: 8),
                 _buildCategoryChip('bihar', 'Bihar Govt'),
                 const SizedBox(width: 8),
@@ -162,7 +179,7 @@ class _LatestJobsWidgetState extends State<LatestJobsWidget> {
             child: displayedJobs.isEmpty
                 ? const Center(
                     child: Text(
-                      'No active notifications found.',
+                      'Is category mein koi notification nahi mila.',
                       style: TextStyle(fontSize: 12, color: Colors.grey),
                     ),
                   )
@@ -246,7 +263,11 @@ class _LatestJobsWidgetState extends State<LatestJobsWidget> {
     final String lastDate = job['last_date'] ?? '';
     final String applyUrl = job['apply_url'] ?? job['link'] ?? '';
     final String jobType = (job['job_type'] ?? '').toString().toLowerCase();
-    final bool isBihar = jobType.contains('bihar');
+
+    final bool isBihar = jobType.contains('bihar') ||
+        title.toLowerCase().contains('bihar') ||
+        title.toLowerCase().contains('patna') ||
+        organization.toLowerCase().contains('bihar');
 
     return Container(
       margin: const EdgeInsets.only(bottom: 10),
@@ -281,7 +302,7 @@ class _LatestJobsWidgetState extends State<LatestJobsWidget> {
                   style: const TextStyle(
                     fontSize: 10.5,
                     fontWeight: FontWeight.w700,
-                    color: Color(0xFF047857), // Corrected Hex Emerald Color
+                    color: Color(0xFF047857),
                   ),
                 ),
             ],
@@ -351,7 +372,7 @@ class _LatestJobsWidgetState extends State<LatestJobsWidget> {
                 )
               else
                 const SizedBox.shrink(),
-              
+
               InkWell(
                 onTap: () => _openLink(applyUrl),
                 borderRadius: BorderRadius.circular(6),
