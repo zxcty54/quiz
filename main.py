@@ -19,7 +19,7 @@ SCRAPINGANT_KEY = os.environ.get("SCRAPINGANT_API_KEY")
 
 client = Groq(api_key=GROQ_KEY) if GROQ_KEY else None
 
-# Active Groq Models (Removed Decommissioned Llama3-8b-8192)
+# Active Groq Models
 MODELS = ["llama-3.3-70b-versatile", "llama-3.1-8b-instant"]
 
 def get_yesterday_info():
@@ -110,11 +110,11 @@ def remove_duplicate_news(news_list):
         else:
             dropped_count += 1
             
-    print(f"🧹 Deduplication Debug: Total={len(news_list)} | Duplicates Dropped={dropped_count} | Unique Sent to LLM={len(unique_news)}")
+    print(f"🧹 Deduplication Debug: Total Input={len(news_list)} | Duplicates Dropped={dropped_count} | Unique Sent to LLM={len(unique_news)}")
     return unique_news
 
 # -------------------------------------------------------------
-# 2. SAFE FETCHER
+# 2. SAFE FETCHER & DEEP ARTICLE SCRAPER
 # -------------------------------------------------------------
 def safe_fetch(url, timeout=12):
     try:
@@ -125,7 +125,6 @@ def safe_fetch(url, timeout=12):
         print(f"⚠️ Direct fetch failed for {url[:40]}... Error: {e}")
 
     if SCRAPINGANT_KEY:
-        print(f"🔄 Switching to ScrapingAnt Fallback for {url[:40]}...")
         try:
             encoded_url = urllib.parse.quote(url, safe='')
             sa_url = f"https://api.scrapingant.com/v2/general?url={encoded_url}&x-api-key={SCRAPINGANT_KEY}&browser=false"
@@ -136,14 +135,39 @@ def safe_fetch(url, timeout=12):
             print(f"❌ ScrapingAnt failed: {sa_e}")
     return None
 
+def fetch_full_article_content(article_url):
+    """
+    Article link ke andar jaakar poora body text scrape karta hai
+    """
+    if not article_url or not article_url.startswith("http"):
+        return ""
+    
+    content = safe_fetch(article_url, timeout=8)
+    if not content:
+        return ""
+    
+    try:
+        soup = BeautifulSoup(content, "html.parser")
+        # Script aur style tags hatao
+        for script in soup(["script", "style", "nav", "footer", "header"]):
+            script.decompose()
+            
+        paragraphs = soup.find_all('p')
+        full_text = " ".join([p.text.strip() for p in paragraphs if len(p.text.strip()) > 35])
+        clean_text = " ".join(full_text.split())
+        return clean_text[:800] # Maximum 800 characters per article for deep context
+    except Exception as e:
+        return ""
+
 # -------------------------------------------------------------
-# 3. SCRAPING FUNCTIONS
+# 3. SCRAPING FUNCTIONS WITH FULL ARTICLE FETCHING
 # -------------------------------------------------------------
 def fetch_raw_bihar_news(target_dt):
-    print("\n🔍 --- DEBUG: FETCHING BIHAR NEWS ---")
-    news_titles = []
+    print("\n🔍 --- DEBUG: FETCHING BIHAR NEWS (FULL ARTICLE SCRAPE) ---")
+    news_items = []
     source_stats = {}
 
+    # A. Google News Bihar
     content = safe_fetch("https://news.google.com/rss/search?q=Bihar+Government+Schemes+OR+Infrastructure+OR+Economy+OR+Agriculture+when:2d&hl=hi&gl=IN&ceid=IN:hi")
     if content:
         try:
@@ -151,79 +175,64 @@ def fetch_raw_bihar_news(target_dt):
             count = 0
             for item in root.findall('.//item'):
                 title = item.find('title').text if item.find('title') is not None else ""
-                desc = item.find('description').text if item.find('description') is not None else ""
-                clean_desc = clean_html_text(desc)[:180] # Trimmed to manage tokens
+                link = item.find('link').text if item.find('link') is not None else ""
                 pub_date = item.find('pubDate').text if item.find('pubDate') is not None else ""
+                
                 if title and is_yesterday_news(pub_date, target_dt):
-                    news_titles.append(f"[Google News Bihar] {title} | Context: {clean_desc}")
+                    # Fetch Deep Content
+                    deep_text = fetch_full_article_content(link)
+                    context_str = deep_text if len(deep_text) > 100 else clean_html_text(item.find('description').text if item.find('description') is not None else "")[:250]
+                    news_items.append(f"[Google News Bihar] Title: {title} | Full Context: {context_str}")
                     count += 1
-                    if count >= 12: break
+                    if count >= 8: break
             source_stats["Google News Bihar"] = count
         except Exception as e:
             print(f"⚠️ Google News Bihar parse error: {e}")
 
+    # B. CMO Bihar
     content = safe_fetch("https://cm.bihar.gov.in/users/preessrelease.aspx")
     if content:
         cmo_count = 0
         soup = BeautifulSoup(content, "html.parser")
-        for row in soup.find_all('tr')[:10]:
+        for row in soup.find_all('tr')[:8]:
             cols = row.find_all('td')
             if len(cols) >= 2:
                 title = cols[1].text.strip()
                 if title and len(title) > 10:
-                    news_titles.append(f"[CMO Bihar] {title}")
+                    news_items.append(f"[CMO Bihar] Title: {title}")
                     cmo_count += 1
         source_stats["CMO Bihar"] = cmo_count
 
-    content = safe_fetch("https://www.prabhatkhabar.com/state/bihar/feed")
-    if content:
-        try:
-            root = ET.fromstring(content)
-            count = 0
-            for item in root.findall('.//item'):
-                title = item.find('title').text if item.find('title') is not None else ""
-                desc = item.find('description').text if item.find('description') is not None else ""
-                clean_desc = clean_html_text(desc)[:180]
-                pub_date = item.find('pubDate').text if item.find('pubDate') is not None else ""
-                if title and is_yesterday_news(pub_date, target_dt):
-                    news_titles.append(f"[Prabhat Khabar] {title.strip()} | Context: {clean_desc}")
-                    count += 1
-                    if count >= 10: break
-            source_stats["Prabhat Khabar"] = count
-        except Exception as e:
-            print(f"⚠️ Prabhat Khabar parse error: {e}")
-
     print(f"📊 Source Breakdown (Bihar): {json.dumps(source_stats, indent=2)}")
-    return "\n".join(remove_duplicate_news(news_titles))
+    return "\n".join(remove_duplicate_news(news_items))
 
 
 def fetch_raw_national_news(target_dt):
-    print("\n🔍 --- DEBUG: FETCHING NATIONAL NEWS ---")
-    national_titles = []
+    print("\n🔍 --- DEBUG: FETCHING NATIONAL NEWS (FULL ARTICLE SCRAPE) ---")
+    national_items = []
     source_stats = {}
     
-    # 1. Direct Scrape PIB National Portal
-    pib_portal_releases = []
-    pib_content = safe_fetch("https://www.pib.gov.in/Allrel.aspx?reg=3&lang=1") # PIB National Portal
+    # 1. Direct PIB National Portal (reg=48)
+    pib_count = 0
+    pib_content = safe_fetch("https://www.pib.gov.in/Allrel.aspx?reg=48&lang=1")
     if pib_content:
         try:
             soup = BeautifulSoup(pib_content, "html.parser")
-            count = 0
             for link in soup.find_all('a', href=True):
                 title = clean_html_text(link.text)
                 href = link['href']
-                if ("PressRelease" in href or "PRN" in href or "relid" in href) and len(title) > 20:
+                if ("PressRelease" in href or "PRN" in href or "relid" in href) and len(title) > 25:
                     if not any(x in title.lower() for x in ["home", "privacy", "terms", "contact", "back"]):
-                        pib_portal_releases.append(f"[PIB National Portal] {title}")
-                        count += 1
-                        if count >= 10: break
+                        full_url = href if href.startswith("http") else f"https://www.pib.gov.in/{href}"
+                        deep_text = fetch_full_article_content(full_url)
+                        national_items.append(f"[PIB National] Title: {title} | Full Context: {deep_text[:600]}")
+                        pib_count += 1
+                        if pib_count >= 8: break
         except Exception as e:
             print(f"⚠️ PIB National Portal scrape error: {e}")
-    
-    national_titles.extend(pib_portal_releases)
-    source_stats["PIB National Portal"] = len(pib_portal_releases)
+    source_stats["PIB National Portal"] = pib_count
 
-    # 2. Standard RSS Sources (Max 6 per source to fit within token limit)
+    # 2. Standard RSS Sources with Deep Page Scraping
     national_rss_sources = [
         ("The Hindu", "https://www.thehindu.com/news/national/feeder/default.rss"),
         ("Hindustan Times", "https://www.hindustantimes.com/feeds/rss/india-news/rssfeed.xml"),
@@ -237,47 +246,27 @@ def fetch_raw_national_news(target_dt):
         if content:
             try:
                 soup = BeautifulSoup(content, "xml")
-                items = soup.find_all('item')
-                for item in items:
+                for item in soup.find_all('item'):
                     title = item.find('title').text.strip() if item.find('title') is not None else ""
-                    desc = item.find('description').text if item.find('description') is not None else ""
-                    clean_desc = clean_html_text(desc)[:150] # Compact description
-                    
-                    pub_date_tag = item.find('pubDate') or item.find('dc:date') or item.find('published') or item.find('updated')
+                    link = item.find('link').text.strip() if item.find('link') is not None else ""
+                    pub_date_tag = item.find('pubDate') or item.find('dc:date') or item.find('published')
                     pub_date = pub_date_tag.text if pub_date_tag is not None else ""
                     
                     if title and is_yesterday_news(pub_date, target_dt):
-                        national_titles.append(f"[{source_name}] {title} | Context: {clean_desc}")
+                        deep_text = fetch_full_article_content(link)
+                        context_str = deep_text if len(deep_text) > 100 else clean_html_text(item.find('description').text if item.find('description') is not None else "")[:250]
+                        national_items.append(f"[{source_name}] Title: {title} | Full Context: {context_str}")
                         count += 1
-                        if count >= 6: break # Reduced per-source limit to control TPM
+                        if count >= 4: break # 4 articles per source (deep scraped)
             except Exception as e:
                 print(f"⚠️ Parsing error for {source_name}: {e}")
         source_stats[source_name] = count
 
-    # 3. Google News National
-    content = safe_fetch("https://news.google.com/rss/search?q=India+Cabinet+Decisions+OR+National+Schemes+OR+ISRO+OR+RBI+OR+National+Highways+when:2d&hl=hi&gl=IN&ceid=IN:hi")
-    gnews_count = 0
-    if content:
-        try:
-            root = ET.fromstring(content)
-            for item in root.findall('.//item'):
-                title = item.find('title').text if item.find('title') is not None else ""
-                desc = item.find('description').text if item.find('description') is not None else ""
-                clean_desc = clean_html_text(desc)[:150]
-                pub_date = item.find('pubDate').text if item.find('pubDate') is not None else ""
-                if title and is_yesterday_news(pub_date, target_dt):
-                    national_titles.append(f"[Google National] {title.strip()} | Context: {clean_desc}")
-                    gnews_count += 1
-                    if gnews_count >= 8: break
-        except Exception as e:
-            print(f"⚠️ XML Parsing error for Google National: {e}")
-    source_stats["Google National"] = gnews_count
-
     print(f"📊 Source Breakdown (National): {json.dumps(source_stats, indent=2)}")
-    return "\n".join(remove_duplicate_news(national_titles))
+    return "\n".join(remove_duplicate_news(national_items))
 
 # -------------------------------------------------------------
-# 4. AI SUMMARY GENERATOR (TOKEN OPTIMIZED)
+# 4. AI SUMMARY GENERATOR (STRICT ZERO FILLERS)
 # -------------------------------------------------------------
 def call_groq_safe(prompt, system_role="You are a JSON generator assistant."):
     time.sleep(1)
@@ -291,7 +280,7 @@ def call_groq_safe(prompt, system_role="You are a JSON generator assistant."):
                 ],
                 temperature=0.01,
                 response_format={"type": "json_object"},
-                max_tokens=2500, # Safely fits within API window
+                max_tokens=3000,
                 timeout=45,
             )
             print(f"⚡ Groq LLM Success using [{model_name}]!")
@@ -302,56 +291,49 @@ def call_groq_safe(prompt, system_role="You are a JSON generator assistant."):
     return ""
 
 def generate_clean_summary(raw_text, target_date_str, is_national=False):
-    # Truncate raw input string to 4500 chars max to prevent Groq TPM 413 Error
-    truncated_raw = raw_text[:4500]
+    # Safely fit within 5500 chars TPM limit
+    truncated_raw = raw_text[:5500]
 
     scope_name = "India National" if is_national else "Bihar State"
     tag_name = "🎯 National Special / India Affairs" if is_national else "🎯 BPSC Special / Bihar Current Affairs"
 
     prompt = f"""
-    You are a Senior Content Director for BPSC, UPSC & Competitive Exams.
-    Below is raw news text scraped for {scope_name} Level:
+    You are a Senior Current Affairs Content Director for BPSC, UPSC & Competitive Exams.
+    Below is raw scraped news text containing DEEP ARTICLE CONTEXT for {scope_name} Level:
     
     {truncated_raw}
     
-    STRICT CATEGORIES (Pick ONLY from these exact names):
+    STRICT ALLOWED CATEGORIES (Pick ONLY from these exact 5 names):
     1. "Govt Schemes & Policies"
     2. "Infrastructure & Projects"
     3. "Agriculture, Environment & GI Tags"
     4. "Appointments, Awards & Persons in News"
     5. "{"National Economy, Budget & Reports" if is_national else "Bihar Economy, Budget & Reports"}"
 
-    CRITICAL REJECTION RULES:
-    1. REJECT local train approvals, local road repairs, property expos, and local health centers.
-    2. REJECT political commentary, speeches, election fights, local crime, and accidents.
-    3. REJECT job vacancies, admit cards, exam notices.
-    4. REJECT duplicates of the same event.
+    STRICT DISQUALIFICATION RULES:
+    1. REJECT INCOMPLETE/VAGUE NEWS: If headline lacks exact organization, ministry name, or project scope (e.g., "Govt signs MoUs for startups"), DISQUALIFY IT.
+    2. REJECT ROUTINE SPEECHES: Speeches, convocation meets, ribbon cuttings, and motivational lectures without executive decisions.
+    3. REJECT LOCAL/TRIVIAL NEWS: District-level train halts, traffic advisories, local crime, and local political fights.
+    4. REJECT DUPLICATES of the same event.
 
-    CRITICAL FACTUAL INTEGRITY (NO HALLUCINATIONS):
-    - DO NOT invent numbers or negative statements like "nuksan hoga" unless explicitly written in the raw input text.
-    - If exact budget figure is missing, state objective facts (Ministries involved, locations, scope) instead of inventing numbers.
-
-    BULLET POINT RULES:
-    - Write EXACTLY 3 FACTUAL BULLET POINTS IN HINGLISH.
-    - ABSOLUTELY NO GENERIC FILLERS (e.g. NEVER write "This is crucial for welfare", "State ko fayda hoga").
-    - Bullet 1: Core event (Who launched/approved what, location, ministry).
-    - Bullet 2: Numerical facts / Target year / Objective provided in the raw text.
-    - Bullet 3: Policy framework / Scope / Operational mechanism.
-    - Do NOT use Markdown asterisks (**).
-
-    Target Output: Select 6 to 10 high quality, unique news cards.
+    BULLET POINT QUALITY & ZERO-FILLER RULES:
+    - Write EXACTLY 3 DEEP FACTUAL BULLET POINTS IN HINGLISH for each card.
+    - ABSOLUTELY NO FILLER SENTENCES (e.g. NEVER write "Isse kisanon ko labh hoga", "Yeh samaroh prerit karta hai", "Isse connectivity badhegi").
+    - Bullet 1 (Core Decision & Entities): Exact project/scheme name, Ministry/Department, Implementing Body, and Location.
+    - Bullet 2 (Numbers, Metrics & Outlay): Exact financial outlay, capacity, percentage, ratio, or target year.
+    - Bullet 3 (Policy Framework / Technical Context): Mention parent scheme (e.g. PM Matsya Sampada Yojana, APEDA Act 1985), nodal body, or statutory mechanism.
 
     JSON SCHEMA OUTPUT:
     {{
       "news_cards": [
         {{
           "id": "news_01",
-          "title": "Clean Detailed Hinglish Headline",
+          "title": "Clear Factual Headline with Specific Entities",
           "category": "Select EXACT matching category",
           "bullets": [
-            "Bullet 1: Deep factual details in Hinglish",
-            "Bullet 2: Specific figures/target/facts in Hinglish",
-            "Bullet 3: Operational scope or policy mechanism in Hinglish"
+            "Bullet 1: Deep factual details with exact names in Hinglish",
+            "Bullet 2: Specific figures, numbers, or financial metrics in Hinglish",
+            "Bullet 3: Parent scheme name, statutory body, or technical context in Hinglish"
           ],
           "exam_tag": "{tag_name}",
           "date": "{target_date_str}"
@@ -395,7 +377,7 @@ if __name__ == "__main__":
         exit(1)
         
     target_dt, date_str, key_str = get_yesterday_info()
-    print(f"🔄 Starting Pipeline Execution for Date: {date_str}...\n")
+    print(f"🔄 Starting Pipeline Execution with Deep Scraper for Date: {date_str}...\n")
 
     # === A. PROCESS BIHAR NEWS ===
     raw_bihar = fetch_raw_bihar_news(target_dt)
