@@ -7,13 +7,19 @@ import requests
 from bs4 import BeautifulSoup
 
 # -------------------------------------------------------------
-# Configuration & Setup
+# Configuration
 # -------------------------------------------------------------
 SCRAPINGANT_API_KEY = os.environ.get("SCRAPINGANT_API_KEY", "f2dac73c566b4f60b9ca989beedeb5de")
 TARGET_URL = "https://www.sarkariresult.com/latestjob/"
 JSON_FILENAME = "sarkarijob.json"
 
-# Rejection Lists for Non-Bihar / Non-Central States
+HEADERS = {
+    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+    'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+    'Referer': 'https://www.sarkariresult.com/'
+}
+
+# State Rejection Filter (Ignores other states before visiting inner links)
 OTHER_STATES_REJECT = [
     "upsss", "upsssc", "upeida", "upscidc", "upsrtc", "mpesb", "jssc", "hartron", 
     "skau", "kurukshetra", "banda", "lucknow", "uttar pradesh", " up ", "uppsc", 
@@ -21,7 +27,7 @@ OTHER_STATES_REJECT = [
     "maharashtra", "mpsc", "jharkhand", "jpsc", "west bengal", "wbpsc", "punjab", 
     "gujarat", "kerala", "karnataka", "tamil nadu", "andhra", " ap ", "telangana", 
     "tspsc", "assam", "chhattisgarh", "delhi", "dsssb", "uttarakhand", "ukpsc", "uksssc",
-    "aiims", "cuttack", "odisha", "orissa", "khordha", "balipatna", "oav "
+    "cuttack", "odisha", "orissa", "khordha", "balipatna"
 ]
 
 SKIP_NAV_KEYWORDS = [
@@ -45,6 +51,7 @@ BIHAR_BOARDS = [
 ]
 
 CENTRAL_BOARDS = [
+    ("icsi", "Institute of Company Secretaries of India (ICSI)"),
     ("upsc", "Union Public Service Commission (UPSC)"),
     ("ssc", "Staff Selection Commission (SSC)"),
     ("rrb", "Railway Recruitment Board (RRB)"),
@@ -114,124 +121,146 @@ def classify_job_board(title):
 
     return None, None
 
-def fetch_page_via_scrapingant(url):
-    encoded_url = quote(url)
-    api_endpoint = f"https://api.scrapingant.com/v2/general?url={encoded_url}&x-api-key={SCRAPINGANT_API_KEY}&browser=true"
+def fetch_inner_article_html(url):
+    """Fetches full HTML of the individual job detail page."""
     try:
-        res = requests.get(api_endpoint, timeout=35)
+        res = requests.get(url, headers=HEADERS, timeout=15)
+        if res.status_code == 200 and len(res.text) > 2000:
+            return res.text
+    except Exception:
+        pass
+
+    try:
+        encoded_url = quote(url)
+        api_endpoint = f"https://api.scrapingant.com/v2/general?url={encoded_url}&x-api-key={SCRAPINGANT_API_KEY}&browser=true"
+        res = requests.get(api_endpoint, timeout=30)
         if res.status_code == 200:
             return res.text
     except Exception as e:
         print(f"⚠️ ScrapingAnt error for {url}: {e}")
+
     return None
 
-# 🌐 UNIVERSAL ALL-JOBS VACANCY & DETAILS PARSER
+# -------------------------------------------------------------
+# 🎯 TARGETED INNER ARTICLE PARSER (BASED ON YOUR SCREENSHOT)
+# -------------------------------------------------------------
 def parse_inner_article_page(html_content):
+    """
+    Parses inner SarkariResult page structure shown in the screenshot:
+    - Heading: 'Vacancy Details Total : 20 Post'
+    - Table: Columns ['Post Name', 'Total Post', 'Exam Eligibility']
+    """
     if not html_content:
         return {}
 
     soup = BeautifulSoup(html_content, 'html.parser')
     page_text = soup.get_text()
+
+    # 1. TOTAL VACANCIES EXTRACTION
     extracted_vacancies = None
-    vacancy_numbers = []
 
-    # Strategy 1: Heading Match (e.g., "Vacancy Details Total : 1538 Post" or "Total Vacancy : 5647")
-    heading_patterns = [
-        r'Vacancy\s*Details\s*Total\s*:?\s*(\d+)',
-        r'Total\s*(?:Post|Vacancy|Vacancies)\s*:?\s*(\d+)',
-        r'(\d+)\s*(?:Post|Posts|Vacancy|Vacancies)\s*Total'
-    ]
-    for pattern in heading_patterns:
-        match = re.search(pattern, page_text, re.IGNORECASE)
-        if match:
-            extracted_vacancies = f"{match.group(1)} Posts"
-            break
+    # Matches heading pattern from image: 'Vacancy Details Total : 20 Post'
+    v_match = re.search(r'Vacancy\s*Details\s*Total\s*:\s*(\d+)\s*Post', page_text, re.IGNORECASE)
+    if not v_match:
+        v_match = re.search(r'Total\s*(?:Post|Vacancy)\s*:\s*(\d+)', page_text, re.IGNORECASE)
+    
+    if v_match:
+        extracted_vacancies = f"{v_match.group(1)} Posts"
 
-    # Strategy 2: Scan HTML Tables for "Total Post" / "No. of Post" Columns
-    if not extracted_vacancies:
-        tables = soup.find_all('table')
-        for table in tables:
-            rows = table.find_all('tr')
-            for r_idx, row in enumerate(rows):
-                cells = row.find_all(['td', 'th'])
-                cell_texts = [clean_text(c.text) for c in cells]
+    # 2. TABLE PARSING FOR ELIGIBILITY & VACANCY
+    qualification_list = []
+    tables = soup.find_all('table')
 
-                # Check for "Total Post" in cell text directly
-                for text in cell_texts:
-                    m = re.search(r'Total\s*Post\s*:?\s*(\d+)', text, re.IGNORECASE)
-                    if m:
-                        extracted_vacancies = f"{m.group(1)} Posts"
-                        break
+    for table in tables:
+        rows = table.find_all('tr')
+        if not rows:
+            continue
 
-                if extracted_vacancies:
-                    break
+        header_text = clean_text(rows[0].text).lower()
 
-                # Column Header Index Search
-                col_idx = -1
-                for c_idx, text in enumerate(cell_texts):
-                    if re.search(r'(total\s*post|no\.?\s*of\s*post|vacancy|vacancies)', text, re.IGNORECASE):
-                        col_idx = c_idx
-                        break
+        # Target table with headers: 'Post Name', 'Total Post', 'Eligibility'
+        if "post name" in header_text or "total post" in header_text or "eligibility" in header_text:
+            for row in rows[1:]:  # Skip table header row
+                cols = row.find_all(['td', 'th'])
+                if len(cols) >= 3:
+                    post_count = clean_text(cols[1].text)
+                    elig_text = clean_text(cols[2].text)
 
-                if col_idx != -1 and r_idx + 1 < len(rows):
-                    for next_r in range(r_idx + 1, len(rows)):
-                        next_cells = rows[next_r].find_all(['td', 'th'])
-                        if col_idx < len(next_cells):
-                            val_str = clean_text(next_cells[col_idx].text)
-                            digits = re.findall(r'\b\d+\b', val_str)
-                            if digits:
-                                vacancy_numbers.extend([int(d) for d in digits if int(d) < 100000])
+                    if not extracted_vacancies and post_count.isdigit():
+                        extracted_vacancies = f"{post_count} Posts"
 
-            if extracted_vacancies:
-                break
+                    if elig_text and len(elig_text) > 5:
+                        clean_elig = re.sub(r'\s+', ' ', elig_text).strip()
+                        qualification_list.append(clean_elig)
 
-    # Strategy 3: Sum Category-wise Breakdown Numbers if multiple rows found
-    if not extracted_vacancies and vacancy_numbers:
-        extracted_vacancies = f"{sum(vacancy_numbers)} Posts"
+                elif len(cols) == 2:
+                    elig_text = clean_text(cols[1].text)
+                    if elig_text and len(elig_text) > 5:
+                        qualification_list.append(clean_text(cols[1].text))
 
-    # Strategy 4: Fallback Logic
-    if not extracted_vacancies:
-        if "various post" in page_text.lower():
-            extracted_vacancies = "Various Posts"
+    # Format extracted qualification
+    if qualification_list:
+        qualification = qualification_list[0]
+    else:
+        page_text_lower = page_text.lower()
+        if "b.com" in page_text_lower or "commerce" in page_text_lower:
+            qualification = "Bachelor Degree in Commerce (B.Com)"
+        elif "bachelor" in page_text_lower or "graduation" in page_text_lower or "degree" in page_text_lower:
+            qualification = "Bachelor Degree in Any Stream"
+        elif "12th" in page_text_lower or "intermediate" in page_text_lower:
+            qualification = "Class 12th Pass"
+        elif "10th" in page_text_lower or "high school" in page_text_lower:
+            qualification = "Class 10th Pass / ITI"
+        elif "diploma" in page_text_lower or "b.e" in page_text_lower or "b.tech" in page_text_lower:
+            qualification = "Diploma / Engineering Degree"
         else:
-            extracted_vacancies = "Refer Official Notification"
+            qualification = "Refer Official Notification"
 
-    # EXTRACT DATES
+    if not extracted_vacancies:
+        extracted_vacancies = "Refer Official Notification"
+
+    # 3. APPLICATION START DATE
     start_date = "Online Active"
-    start_match = re.search(r'(Application\s*Begin\s*:?\s*)(\d{1,2}[/-]\d{1,2}[/-]\d{2,4})', page_text, re.IGNORECASE)
+    start_match = re.search(r'Application\s*Begin\s*:?\s*(\d{1,2}[/-]\d{1,2}[/-]\d{2,4})', page_text, re.IGNORECASE)
     if start_match:
-        start_date = start_match.group(2).strip()
+        start_date = start_match.group(1).strip()
 
+    # 4. APPLICATION LAST DATE
     last_date = None
-    last_match = re.search(r'(Last\s*Date\s*(?:for\s*Apply|Online)?\s*:?\s*)(\d{1,2}[/-]\d{1,2}[/-]\d{2,4})', page_text, re.IGNORECASE)
+    last_match = re.search(r'Last\s*Date\s*(?:for\s*Apply|Online)?\s*:?\s*(\d{1,2}[/-]\d{1,2}[/-]\d{2,4})', page_text, re.IGNORECASE)
     if last_match:
-        last_date = last_match.group(2).strip()
+        last_date = last_match.group(1).strip()
 
-    # EXTRACT QUALIFICATION
-    qualification = "Refer Official Notification"
-    if "10th" in page_text or "High School" in page_text:
-        qualification = "Class 10th Pass / ITI"
-    elif "12th" in page_text or "Intermediate" in page_text:
-        qualification = "Class 12th Pass"
-    elif "Bachelor" in page_text or "Degree" in page_text or "Graduation" in page_text:
-        qualification = "Bachelor Degree in Any Stream"
-    elif "Diploma" in page_text or "B.E" in page_text or "B.Tech" in page_text:
-        qualification = "Diploma / Engineering Degree"
+    # 5. APPLICATION FEE
+    fee_details = "Refer Notification"
+    fee_match = re.search(r'(General\s*/\s*OBC[^\n\r<]+)', page_text, re.IGNORECASE)
+    if fee_match:
+        fee_details = fee_match.group(1).strip()[:100]
 
     return {
         "total_vacancies": extracted_vacancies,
         "qualification": qualification,
         "start_date": start_date,
-        "last_date": last_date
+        "last_date": last_date,
+        "application_fee": fee_details
     }
 
 # -------------------------------------------------------------
-# Main Execution Pipeline
+# MAIN PIPELINE EXECUTION
 # -------------------------------------------------------------
 def run_sarkari_job_scraper():
-    print("🔄 Fetching Main SarkariResult Page via ScrapingAnt...")
-    main_html = fetch_page_via_scrapingant(TARGET_URL)
+    print("🔄 Step 1: Fetching Main SarkariResult Listing Page...")
     
+    encoded_url = quote(TARGET_URL)
+    api_endpoint = f"https://api.scrapingant.com/v2/general?url={encoded_url}&x-api-key={SCRAPINGANT_API_KEY}&browser=true"
+    
+    try:
+        res = requests.get(api_endpoint, timeout=35)
+        main_html = res.text if res.status_code == 200 else None
+    except Exception as e:
+        print(f"❌ Main page fetch error: {e}")
+        return
+
     if not main_html:
         print("❌ Main page fetch failed!")
         return
@@ -243,31 +272,39 @@ def run_sarkari_job_scraper():
     job_cards = []
     processed_urls = set()
 
+    print(f"🔎 Found {len(links)} links on main page. Filtering target board links FIRST...\n")
+
     for link in links:
         title = clean_text(link.text)
         detail_url = link['href'].strip()
 
         if len(title) > 10 and "sarkariresult.com" in detail_url and detail_url not in processed_urls:
+            
             if is_nav_link(title, detail_url):
                 continue
 
             clean_title = re.sub(r'Last\s*Date\s*:?.*$', '', title, flags=re.IGNORECASE).strip()
+            
+            # STAGE 1: Classify BEFORE fetching inner link!
             organization, job_type = classify_job_board(clean_title)
             if not organization:
                 continue
 
             processed_urls.add(detail_url)
 
-            print(f"🔗 [FETCHING INNER ARTICLE] Scraping: {clean_title}")
-            inner_html = fetch_page_via_scrapingant(detail_url)
+            # STAGE 2: VISIT TARGET JOB POST PAGE
+            print(f"📄 [MATCHED TARGET JOB]: {clean_title}")
+            print(f"🔗 [VISITING URL]: {detail_url}")
+            
+            inner_html = fetch_inner_article_html(detail_url)
             inner_data = parse_inner_article_page(inner_html)
 
-            # Date fallback
+            # Fallback for Last Date
             title_date_match = re.search(r'Last\s*Date\s*:?\s*(\d{1,2}[/-]\d{1,2}[/-]\d{2,4})', title, re.IGNORECASE)
             final_last_date = inner_data.get("last_date") or (title_date_match.group(1) if title_date_match else None) or "Refer Notification"
 
             if is_date_expired(final_last_date):
-                print(f"⏰ [EXPIRED SKIPPED]: {clean_title} (Last Date: {final_last_date})")
+                print(f"⏰ [SKIPPED EXPIRED]: {clean_title} (Last Date: {final_last_date})\n")
                 continue
 
             job_card = {
@@ -276,15 +313,16 @@ def run_sarkari_job_scraper():
                 "organization": organization,
                 "job_type": job_type,
                 "post_name": clean_title,
-                "total_vacancies": inner_data.get("total_vacancies", "Various Posts"),
+                "total_vacancies": inner_data.get("total_vacancies", "Refer Notification"),
                 "qualification": inner_data.get("qualification", "Refer Official Notification"),
+                "application_fee": inner_data.get("application_fee", "Refer Notification"),
                 "start_date": inner_data.get("start_date", "Online Active"),
                 "last_date": final_last_date,
                 "apply_url": "https://www.mocktester.online"
             }
             
             job_cards.append(job_card)
-            print(f"✅ Added [{len(job_cards)}]: {clean_title} | Vacancies: {job_card['total_vacancies']} | Last Date: {job_card['last_date']}\n")
+            print(f"✅ Extracted: Vacancies = {job_card['total_vacancies']} | Qualification = {job_card['qualification'][:60]}...\n")
 
             if len(job_cards) >= 20:
                 break
@@ -296,7 +334,7 @@ def run_sarkari_job_scraper():
     with open(JSON_FILENAME, "w", encoding="utf-8") as f:
         json.dump(output_data, f, ensure_ascii=False, indent=2)
 
-    print(f"🎉 Complete! Successfully processed and saved all active jobs into '{JSON_FILENAME}'.")
+    print(f"🎉 Complete! Saved {len(job_cards)} target jobs into '{JSON_FILENAME}'.")
 
 if __name__ == "__main__":
     run_sarkari_job_scraper()
