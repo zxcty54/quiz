@@ -25,7 +25,7 @@ TARGET_CATEGORIES = [
 ]
 
 JSON_FILENAME = "sarkarijob.json"
-MAX_PAGES_PER_CAT = 2 
+MAX_PAGES_PER_CAT = 30 
 
 # Non-Bihar State Rejection List (UP, MP, Rajasthan, JPSC, WB etc. block honge)
 OTHER_STATES_REJECT = [
