@@ -34,7 +34,7 @@ def is_yesterday_news(pub_date_str, target_dt):
         pub_tuple = email.utils.parsedate_tz(pub_date_str)
         if pub_tuple:
             pub_dt = datetime.fromtimestamp(email.utils.mktime_tz(pub_tuple))
-            # Timezone safety window: Target date ke +/- 1.5 days
+            # Timezone safety window (+/- 1.5 days)
             return (target_dt - timedelta(days=2)) <= pub_dt <= (target_dt + timedelta(days=1))
     except Exception:
         pass
@@ -44,6 +44,19 @@ def clean_html_text(text):
     if not text: return ""
     clean = BeautifulSoup(text, "html.parser").get_text()
     return " ".join(clean.split()).strip()
+
+def remove_duplicate_news(news_list):
+    """Semantic Deduplication to clean duplicate articles from multiple feeds."""
+    seen_titles = set()
+    unique_news = []
+    for news in news_list:
+        # Title ke pehle 35 clean characters ke aadhar par deduplication
+        clean_title = re.sub(r'\[.*?\]', '', news).strip().lower()[:35]
+        clean_title = re.sub(r'[^a-z0-9]', '', clean_title)
+        if clean_title and clean_title not in seen_titles:
+            seen_titles.add(clean_title)
+            unique_news.append(news)
+    return unique_news
 
 # -------------------------------------------------------------
 # 2. UNIVERSAL SAFE FETCHER (WITH SCRAPINGANT FALLBACK)
@@ -86,7 +99,7 @@ def fetch_raw_bihar_news(target_dt):
             for item in root.findall('.//item'):
                 title = item.find('title').text if item.find('title') is not None else ""
                 desc = item.find('description').text if item.find('description') is not None else ""
-                clean_desc = clean_html_text(desc)[:250]
+                clean_desc = clean_html_text(desc)[:300]
                 pub_date = item.find('pubDate').text if item.find('pubDate') is not None else ""
                 if title and is_yesterday_news(pub_date, target_dt):
                     news_titles.append(f"[Google News] {title} | Context: {clean_desc}")
@@ -117,7 +130,7 @@ def fetch_raw_bihar_news(target_dt):
             for item in root.findall('.//item'):
                 title = item.find('title').text if item.find('title') is not None else ""
                 desc = item.find('description').text if item.find('description') is not None else ""
-                clean_desc = clean_html_text(desc)[:250]
+                clean_desc = clean_html_text(desc)[:300]
                 pub_date = item.find('pubDate').text if item.find('pubDate') is not None else ""
                 if title and is_yesterday_news(pub_date, target_dt):
                     news_titles.append(f"[Prabhat Khabar] {title.strip()} | Context: {clean_desc}")
@@ -127,13 +140,15 @@ def fetch_raw_bihar_news(target_dt):
         except Exception as e:
             print(f"⚠️ Prabhat Khabar parse error: {e}")
 
-    return "\n".join(news_titles)
+    # Filter out duplicates before returning
+    deduped_news = remove_duplicate_news(news_titles)
+    return "\n".join(deduped_news)
 
 
 def fetch_raw_national_news(target_dt):
     national_titles = []
     
-    # Corrected RSS feeds
+    # Corrected & Working RSS sources
     national_rss_sources = [
         ("PIB India", "https://pib.gov.in/RssMain.aspx?ModId=6&Lang=1&Regid=1"),
         ("The Hindu", "https://www.thehindu.com/news/national/feeder/default.rss"),
@@ -150,7 +165,7 @@ def fetch_raw_national_news(target_dt):
                 for item in soup.find_all('item'):
                     title = item.find('title').text.strip() if item.find('title') is not None else ""
                     desc = item.find('description').text if item.find('description') is not None else ""
-                    clean_desc = clean_html_text(desc)[:250]
+                    clean_desc = clean_html_text(desc)[:300]
                     
                     pub_date = item.find('pubDate').text if item.find('pubDate') is not None else ""
                     if title and is_yesterday_news(pub_date, target_dt):
@@ -170,7 +185,7 @@ def fetch_raw_national_news(target_dt):
             for item in root.findall('.//item'):
                 title = item.find('title').text if item.find('title') is not None else ""
                 desc = item.find('description').text if item.find('description') is not None else ""
-                clean_desc = clean_html_text(desc)[:250]
+                clean_desc = clean_html_text(desc)[:300]
                 pub_date = item.find('pubDate').text if item.find('pubDate') is not None else ""
                 if title and is_yesterday_news(pub_date, target_dt):
                     national_titles.append(f"[Google National] {title.strip()} | Context: {clean_desc}")
@@ -180,7 +195,9 @@ def fetch_raw_national_news(target_dt):
         except Exception as e:
             print(f"⚠️ XML Parsing error for Google National: {e}")
 
-    return "\n".join(national_titles)
+    # Filter out duplicates before returning
+    deduped_news = remove_duplicate_news(national_titles)
+    return "\n".join(deduped_news)
 
 # -------------------------------------------------------------
 # 4. AI SUMMARY GENERATOR
@@ -197,7 +214,7 @@ def call_groq_safe(prompt, system_role="You are a JSON generator assistant."):
                 ],
                 temperature=0.01,
                 response_format={"type": "json_object"},
-                max_tokens=3000,
+                max_tokens=3500,
                 timeout=45,
             )
             print(f"⚡ Groq LLM Success using [{model_name}]!")
@@ -208,39 +225,40 @@ def call_groq_safe(prompt, system_role="You are a JSON generator assistant."):
     return ""
 
 def generate_clean_summary(raw_text, target_date_str, is_national=False):
-    truncated_raw = raw_text[:8000]
+    truncated_raw = raw_text[:9000]
 
     scope_name = "India National" if is_national else "Bihar State"
     tag_name = "🎯 National Special / India Affairs" if is_national else "🎯 BPSC Special / Bihar Current Affairs"
 
     prompt = f"""
-    You are a Senior Current Affairs Editor for BPSC, UPSC, and State Competitive Exams.
+    You are a Senior Content Director for BPSC, UPSC & Competitive Exams in India.
     Below is raw news text scraped for {scope_name} Level:
     
     {truncated_raw}
     
-    STRICT ALLOWED CATEGORIES (Pick ONLY from these exact names):
+    STRICT ALLOWED CATEGORIES (Pick ONLY from these exact 5 names):
     1. "Govt Schemes & Policies"
     2. "Infrastructure & Projects"
     3. "Agriculture, Environment & GI Tags"
     4. "Appointments, Awards & Persons in News"
     5. "{"National Economy, Budget & Reports" if is_national else "Bihar Economy, Budget & Reports"}"
 
-    STRICT REJECTION RULES:
-    1. REJECT political speeches, party rivalries, election campaigning, local accidents, crime, court trials.
-    2. REJECT recruitment vacancies, admit card updates, exam results, and educational institution news.
-    3. REJECT routine administrative/traffic directives.
+    STRICT REJECTION RULES (STRICTLY DISQUALIFY IF ANY MATCHES):
+    1. REJECT ALL duplicate/similar news covering the exact same event. Keep only the most detailed one.
+    2. REJECT local passenger train approvals, minor railway halts, local road repairs, property expos, and district-level health centers.
+    3. REJECT vague "Government considering / thinking / planning to give relief" news without official Cabinet approval or Gazette notification.
+    4. REJECT political statements, speeches, local crime, accidents, and state election campaigning.
+    5. REJECT job recruitment, exam dates, admit cards, and results notifications.
 
-    CONTENT SELECTION CRITERIA:
-    - Include ANY major Cabinet decision, National/State policy rollout, Infrastructure project approval, MoU agreement, Economic metric/report, or National award.
-    - If exact budget figure is missing from short text, extract available facts (Ministry, location, objective, context) without rejecting the card.
-    - Aim to select between 6 to 12 strong, exam-relevant news items.
+    ALLOW ONLY HIGH-VALUE EXAM NEWS:
+    - Cabinet decisions, Union/State Acts, official MoU agreements, major national highway/expressway/space/defense/power mega-projects, Economic Reports/Indexes, official GI tags, and High-level Appointments/Awards.
 
-    BULLET POINT RULES (IF A CARD QUALIFIES):
-    - WRITE EXACTLY 3 DEEP FACTUAL BULLET POINTS IN HINGLISH (Hindi written in Roman English script).
-    - Bullet 1 (Core Decision): Specific decision, scheme/project name, Ministry involved, and location/scope.
-    - Bullet 2 (Facts & Figures): Budget, target year, implementing body, partner org, or quantitative facts available.
-    - Bullet 3 (Exam Importance/Context): Strategic importance, policy objective, or exam background.
+    BULLET POINT RULES (STRICT QUALITY CONTROL):
+    - Write EXACTLY 3 DEEP FACTUAL BULLET POINTS IN HINGLISH (Hindi written in Roman English script).
+    - ABSOLUTELY NO GENERIC FILLERS (e.g. NEVER write "This decision will improve connectivity", "This decision is crucial for welfare", or "This will boost economic growth").
+    - Bullet 1 (Core Launch/Action): Full explanation of project/scheme name, Ministry/Department, Implementing agency, and location/scope.
+    - Bullet 2 (Numbers & Facts): Specific budget allocation, target year, capacity, ratio, percentage, or monetary values.
+    - Bullet 3 (Policy Mechanism/Background): Technical mechanism, related parent policy framework, underlying statutory act, or historical context.
     - Do NOT use Markdown asterisks (**).
 
     JSON SCHEMA OUTPUT:
@@ -248,12 +266,12 @@ def generate_clean_summary(raw_text, target_date_str, is_national=False):
       "news_cards": [
         {{
           "id": "news_01",
-          "title": "Clean Detailed Hinglish Headline with Main Fact",
+          "title": "Clean Detailed Hinglish Headline with Specific Key Fact",
           "category": "Select EXACT matching category",
           "bullets": [
-            "Bullet 1: Core decision and ministry detail in Hinglish",
-            "Bullet 2: Facts, numbers or partner info in Hinglish",
-            "Bullet 3: Policy framework or exam relevance in Hinglish"
+            "Bullet 1: Deep factual explanation of the launch or decision in Hinglish",
+            "Bullet 2: Specific figures, budget outlay, capacity or numerical data in Hinglish",
+            "Bullet 3: Technical policy mechanism, operational framework or statutory background in Hinglish"
           ],
           "exam_tag": "{tag_name}",
           "date": "{target_date_str}"
@@ -262,7 +280,7 @@ def generate_clean_summary(raw_text, target_date_str, is_national=False):
     }}
     """
     
-    return call_groq_safe(prompt, system_role="Senior Current Affairs Editor")
+    return call_groq_safe(prompt, system_role="Senior Current Affairs Content Director")
 
 # -------------------------------------------------------------
 # 5. MASTER HISTORY APPEND FUNCTIONS
@@ -280,6 +298,7 @@ def append_to_master_history(news_cards, yesterday_key, is_national=False):
             
     master_data[yesterday_key] = news_cards
     
+    # Keep only the last 60 days
     if len(master_data) > 60:
         oldest_key = sorted(master_data.keys())[0]
         del master_data[oldest_key]
