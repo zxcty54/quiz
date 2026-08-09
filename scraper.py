@@ -24,7 +24,7 @@ from bs4 import MarkupResemblesLocatorWarning
 
 OUTPUT_FILE = "rawnews.json"
 TIMEOUT = 25
-MAX_PER_SOURCE = 15
+MAX_PER_SOURCE = 10
 
 MIN_CONTENT_CHARS = 200
 MIN_CONTENT_WORDS = 40
@@ -458,7 +458,7 @@ def fetch_url(url):
 
 
 # ============================================================
-# DEFINITIVE STATIC PRINT PIB URL CONVERTER
+# PIB XML URL CONVERTER
 # ============================================================
 
 def convert_pib_article_url(url):
@@ -472,13 +472,29 @@ def convert_pib_article_url(url):
 
     prid = m.group(1)
 
-    # STATIC PRINT MODE (Bypasses ASP.NET rendering & ViewState)
-    return f"https://pib.gov.in/PressReleasePage.aspx?PRID={prid}&mode=print"
+    # ✅ Force XML output as requested
+    return f"https://pib.gov.in/PressReleasePage.aspx?PRID={prid}&outputType=xml"
 
 
 def pib_article_urls(url):
-    converted = convert_pib_article_url(url)
-    return [converted] if converted else []
+    url = clean_url(url)
+    if not url:
+        return []
+
+    m = re.search(r'PRID=(\d+)', url, flags=re.I)
+    if not m:
+        return [url]
+
+    prid = m.group(1)
+
+    # 1. outputType=xml (Primary)
+    # 2. format=xml (Secondary)
+    # 3. mode=print (Fallback)
+    return [
+        f"https://pib.gov.in/PressReleasePage.aspx?PRID={prid}&outputType=xml",
+        f"https://pib.gov.in/PressReleasePage.aspx?PRID={prid}&format=xml",
+        f"https://pib.gov.in/PressReleasePage.aspx?PRID={prid}&mode=print"
+    ]
 
 
 # ============================================================
@@ -489,7 +505,7 @@ def extract_article_content(soup, source=""):
     for tag in soup(["script", "style", "noscript", "svg", "canvas", "nav", "footer", "form", "aside"]):
         tag.decompose()
 
-    # Priority Target Divs for PIB Print Mode & Govt Portals
+    # High-Priority Target Containers for PIB & Govt Portals
     target_div = (
         soup.find(id="ContentPlaceHolder1_divpri") or
         soup.find(id="divpri") or
@@ -593,6 +609,20 @@ def fetch_generic_article_content(url, source=""):
     for candidate_url in candidate_urls:
         debug(f"{source} ARTICLE FETCH: {candidate_url}")
         html = fetch_url(candidate_url)
+
+        # ✅ PIB XML EXTRACTION LOGIC
+        if html and html.strip().startswith("<?xml"):
+            try:
+                soup_xml = BeautifulSoup(html, "xml")
+                body = soup_xml.find("content") or soup_xml.find("description") or soup_xml.find("articleBody")
+                if body:
+                    text = clean_text(body.get_text())
+                    if len(text) > 100:
+                        success(f"{source} XML CONTENT FOUND | {len(text)} chars | {word_count(text)} words")
+                        return text, None
+            except Exception as xml_err:
+                debug(f"XML parse error: {xml_err}")
+
         if not html:
             continue
 
@@ -857,7 +887,6 @@ def scrape_news_on_air():
     return results
 
 
-# ACTIVE CMO BIHAR URLS WITH news.aspx
 CMO_URLS = [
     "https://cm.bihar.gov.in/users/news.aspx",
     "https://cm.bihar.gov.in/users/preessrelease.aspx",
