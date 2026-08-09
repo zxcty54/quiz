@@ -1,0 +1,2313 @@
+{
+  "topic_id": "magnetism_in_physics",
+  "topic_title": "Magnetism in Physics",
+  "target_exams": [
+    "BPSC",
+    "BSSC",
+    "RRB NTPC",
+    "SSC CGL",
+    "NEET",
+    "BPSC TRE"
+  ],
+  "total_cards": 67,
+  "characters": {
+    "aman": {
+      "name": "Aman Sir",
+      "role": "teacher",
+      "avatar": "👨‍🏫"
+    },
+    "raju": {
+      "name": "Raju",
+      "role": "student",
+      "avatar": "👦"
+    }
+  },
+  "cards": [
+    {
+      "card_id": "card_01_intro",
+      "card_slug": "card_01_intro",
+      "type": "intro",
+      "concept_id": "chapter_intro",
+      "level": 1,
+      "progress": {
+        "current": 1,
+        "total": 67
+      },
+      "intro_payload": {
+        "chapter_title": "Magnetism — Fridge Magnet se Electric Motor Tak",
+        "icon": "🧲",
+        "target_exams": [
+          "BPSC",
+          "BSSC",
+          "RRB NTPC",
+          "SSC CGL",
+          "NEET",
+          "BPSC TRE"
+        ],
+        "learning_outcomes": [
+          "Magnet, poles aur field lines ko samjhna",
+          "Prithvi ka magnetism aur uske elements",
+          "Oersted ka experiment aur current ka magnetic effect",
+          "Straight wire, loop aur solenoid ka magnetic field",
+          "Current-carrying conductor par force aur electric motor",
+          "Dia, para, ferro-magnetic materials aur hysteresis",
+          "Magnetic flux, Gauss's law aur torque on dipole"
+        ]
+      },
+      "navigation": {
+        "next": "card_02_daily_magnet",
+        "button_text": "Chalo Shuru Karein ➔"
+      }
+    },
+    {
+      "card_id": "card_02_daily_magnet",
+      "card_slug": "card_02_daily_magnet",
+      "type": "chat",
+      "concept_id": "magnet_intro",
+      "level": 1,
+      "progress": {
+        "current": 2,
+        "total": 67
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, tumne fridge par wo chhota gol tukda dekha hai jispar photo ya list chipkakar rakhi jaati hai? Wo bina gum ke, bas seedha fridge ke darwaze se chipak jaata hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "Haan sir, wo toh bas ek push se chipak jaata hai! Maine kabhi socha hi nahi ki gum ke bina kaise ruk jaata hai."
+        },
+        {
+          "speaker": "aman",
+          "text": "Wo tukda ek magnet hota hai, aur fridge ka darwaza andar se loha (steel) ka bana hota hai. Magnet mein ek khaas takat hoti hai jisse wo loha aur kuch khaas dhaatuon ko apni taraf kheench leta hai — isko hum 'attraction' kehte hain."
+        },
+        {
+          "speaker": "raju",
+          "text": "Toh kya har cheez magnet ko chipakti hai sir? Meri copy bhi chipak jayegi kya?"
+        }
+      ],
+      "navigation": {
+        "next": "card_03_poles_pair",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_03_poles_pair",
+      "card_slug": "card_03_poles_pair",
+      "type": "chat",
+      "concept_id": "magnetic_poles",
+      "level": 1,
+      "progress": {
+        "current": 3,
+        "total": 67
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Nahi Raju, copy kaagaz ki hai, wo nahi chipkegi. Sirf loha, nickel, cobalt jaisi dhaatuein chipakti hain. Ab dekho — har magnet ke do sire hote hain, ek North pole aur ek South pole."
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab agar main magnet ko beech se kaat doon, toh sirf North wala tukda bachega na?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Yahi sabse bada twist hai! Agar tum magnet ko todoge, toh har tukde mein phir se ek naya North aur ek naya South pole ban jayega. Akela pole (monopole) kabhi nahi milta."
+        },
+        {
+          "speaker": "raju",
+          "text": "Hain?? Matlab jitni baar todo, utni baar dono pole wapas aa jayenge? Ye to exam me pakka confuse karega!"
+        }
+      ],
+      "navigation": {
+        "next": "card_04_attract_repel",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_04_attract_repel",
+      "card_slug": "card_04_attract_repel",
+      "type": "guess",
+      "concept_id": "like_unlike_poles",
+      "level": 1,
+      "progress": {
+        "current": 4,
+        "total": 67
+      },
+      "guess_payload": {
+        "question": "Agar do magnet ke North pole ek doosre ke saamne le aaye jaayein, toh kya hoga?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Dono aapas mein chipak jayenge"
+          },
+          {
+            "id": "B",
+            "text": "Dono ek doosre ko dhakkelenge (repel)"
+          },
+          {
+            "id": "C",
+            "text": "Kuch nahi hoga"
+          },
+          {
+            "id": "D",
+            "text": "Dono ghoomne lagenge"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Universal rule hamesha yaad rakho: samaan pole (Like Poles — North-North ya South-South) ek doosre ko repel karte hain, aur asamaan pole (Unlike Poles — North-South) ek doosre ko attract karte hain. Iska ulta karna BPSC/SSC ka sabse common trap hai."
+      },
+      "navigation": {
+        "next": "card_05_quiz1",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_05_quiz1",
+      "card_slug": "card_05_quiz1",
+      "type": "quiz",
+      "concept_id": "magnet_basics_quiz",
+      "level": 1,
+      "progress": {
+        "current": 5,
+        "total": 67
+      },
+      "quiz_payload": {
+        "question": "Ek bar magnet ko baar-baar do tukdon mein tod diya jaaye, toh (Q1/3):",
+        "options": [
+          {
+            "id": "A",
+            "text": "Sirf North pole wala magnet banega"
+          },
+          {
+            "id": "B",
+            "text": "Sirf South pole wala magnet banega"
+          },
+          {
+            "id": "C",
+            "text": "Har tukda apne aap mein poora magnet banega, dono pole ke saath"
+          },
+          {
+            "id": "D",
+            "text": "Magnetism khatam ho jayega"
+          }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Magnetic monopole ka astitva nahi hota (yeh Gauss's law of magnetism ka bhi core point hai). Har tukda apne aap mein complete magnet ban jaata hai, chahe pehle wala magnet kitna hi chhota kyun na tod diya jaaye."
+      },
+      "navigation": {
+        "next": "card_06_quiz2",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_06_quiz2",
+      "card_slug": "card_06_quiz2",
+      "type": "quiz",
+      "concept_id": "magnet_basics_quiz",
+      "level": 1,
+      "progress": {
+        "current": 6,
+        "total": 67
+      },
+      "quiz_payload": {
+        "question": "Nimnlikhit mein se kaun si dhaatu magnet dwara aakarshit (attract) nahi hoti? (Q2/3)",
+        "options": [
+          {
+            "id": "A",
+            "text": "Loha (Iron)"
+          },
+          {
+            "id": "B",
+            "text": "Nickel"
+          },
+          {
+            "id": "C",
+            "text": "Cobalt"
+          },
+          {
+            "id": "D",
+            "text": "Taamba (Copper)"
+          }
+        ],
+        "correct_option_id": "D",
+        "explanation": "Iron, Nickel, aur Cobalt ferromagnetic dhaatuein hain jo strongly attract hoti hain. Copper (taamba) ek non-magnetic dhaatu hai, magnet uspar effectively koi asar nahi dikhata (bahut halka diamagnetic effect hota hai jo daily life me dikhta nahi)."
+      },
+      "navigation": {
+        "next": "card_07_quiz3",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_07_quiz3",
+      "card_slug": "card_07_quiz3",
+      "type": "quiz",
+      "concept_id": "magnet_basics_quiz",
+      "level": 1,
+      "progress": {
+        "current": 7,
+        "total": 67
+      },
+      "quiz_payload": {
+        "question": "Ek magnet ke South pole ke paas doosre magnet ka North pole laaya jaaye, toh kya hoga? (Q3/3)",
+        "options": [
+          {
+            "id": "A",
+            "text": "Attraction hoga"
+          },
+          {
+            "id": "B",
+            "text": "Repulsion hoga"
+          },
+          {
+            "id": "C",
+            "text": "Dono sthir rahenge"
+          },
+          {
+            "id": "D",
+            "text": "Dono demagnetize ho jayenge"
+          }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Unlike poles (N-S) hamesha attract karte hain. Yaad rakho: 'Opposite attract, Same repel' — yehi universal rule har exam mein poocha jaata hai."
+      },
+      "navigation": {
+        "next": "card_08_milestone1",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_08_milestone1",
+      "card_slug": "card_08_milestone1",
+      "type": "milestone",
+      "concept_id": "module1_complete",
+      "level": 1,
+      "progress": {
+        "current": 8,
+        "total": 67
+      },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "🧲",
+        "completed_topic": "Magnets aur Poles ki Basics",
+        "xp_earned": 50,
+        "milestone_progress": "Module 1/9 Clear",
+        "motivational_quote": "Shandar Raju! Ab magnet ki basics tumhari pocket mein hai — chalo ab field lines dekhte hain!"
+      },
+      "navigation": {
+        "next": "card_09_field_concept",
+        "button_text": "Start Next Module ➔"
+      }
+    },
+    {
+      "card_id": "card_09_field_concept",
+      "card_slug": "card_09_field_concept",
+      "type": "chat",
+      "concept_id": "magnetic_field",
+      "level": 2,
+      "progress": {
+        "current": 9,
+        "total": 67
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, magnet apni taakat sirf touch karne par nahi dikhata — thoda door rakhe pin ko bhi khींच leta hai na?"
+        },
+        {
+          "speaker": "raju",
+          "text": "Haan sir, maine dekha hai, bina chhue hi pin uski taraf udh ke chali jaati hai!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Wahi region jahan magnet ka asar mehsoos hota hai, use hum 'Magnetic Field' kehte hain. Ise hum kaalpanik rekhaon se dikhate hain jinhe 'Magnetic Field Lines' kehte hain."
+        },
+        {
+          "speaker": "raju",
+          "text": "Ye lines asli mein hoti hain kya sir, ya bas samjhane ke liye banayi jaati hain?"
+        }
+      ],
+      "navigation": {
+        "next": "card_10_field_lines_properties",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_10_field_lines_properties",
+      "card_slug": "card_10_field_lines_properties",
+      "type": "chat",
+      "concept_id": "field_line_properties",
+      "level": 2,
+      "progress": {
+        "current": 10,
+        "total": 67
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ye kaalpanik hoti hain Raju, asli mein dikhti nahi, lekin inka behaviour fix hota hai. Rule yaad rakho: magnet ke bahar field lines hamesha North se South pole ki taraf jaati hain."
+        },
+        {
+          "speaker": "raju",
+          "text": "Aur andar? Matlab magnet ke andar bhi lines hoti hain kya?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul! Magnet ke andar ye lines South se North ki taraf chalti hain, jisse ek closed loop ban jaata hai. Aur ek important baat — do field lines kabhi ek doosre ko cross nahi karti."
+        },
+        {
+          "speaker": "raju",
+          "text": "Cross kyun nahi karti sir? Agar cross kar jaayein toh?"
+        }
+      ],
+      "navigation": {
+        "next": "card_11_field_lines_guess",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_11_field_lines_guess",
+      "card_slug": "card_11_field_lines_guess",
+      "type": "guess",
+      "concept_id": "field_line_direction_no_cross",
+      "level": 2,
+      "progress": {
+        "current": 11,
+        "total": 67
+      },
+      "guess_payload": {
+        "question": "Do magnetic field lines ek doosre ko cross kyun nahi karti?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Kyunki har point par magnetic field ki sirf ek hi direction hoti hai"
+          },
+          {
+            "id": "B",
+            "text": "Kyunki lines mein negative charge hota hai"
+          },
+          {
+            "id": "C",
+            "text": "Kyunki field lines bhaari hoti hain"
+          },
+          {
+            "id": "D",
+            "text": "Isका koi karan nahi hai"
+          }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Har point par magnetic field ka ek hi resultant direction ho sakta hai. Agar do lines cross karein, toh us point par do alag directions ban jayengi, jo possible nahi hai. Isliye field lines kabhi cross nahi hoti — yeh ek favourite conceptual question hai."
+      },
+      "navigation": {
+        "next": "card_12_quiz1",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_12_quiz1",
+      "card_slug": "card_12_quiz1",
+      "type": "quiz",
+      "concept_id": "field_lines_quiz",
+      "level": 2,
+      "progress": {
+        "current": 12,
+        "total": 67
+      },
+      "quiz_payload": {
+        "question": "Bar magnet ke bahar, magnetic field lines ki direction hoti hai (Q1/3):",
+        "options": [
+          {
+            "id": "A",
+            "text": "South se North"
+          },
+          {
+            "id": "B",
+            "text": "North se South"
+          },
+          {
+            "id": "C",
+            "text": "Koi fixed direction nahi"
+          },
+          {
+            "id": "D",
+            "text": "Sirf upar ki taraf"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Bahar field lines North pole se nikal kar South pole mein pravesh karti hain. Andar (magnet ke andar) ye South se North ki taraf jaati hain, isse ek continuous closed loop banta hai."
+      },
+      "navigation": {
+        "next": "card_13_quiz2",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_13_quiz2",
+      "card_slug": "card_13_quiz2",
+      "type": "quiz",
+      "concept_id": "field_lines_quiz",
+      "level": 2,
+      "progress": {
+        "current": 13,
+        "total": 67
+      },
+      "quiz_payload": {
+        "question": "Magnetic field lines jahan sabse close (paas-paas) hoti hain, wahan field ki taakat kaisi hoti hai? (Q2/3)",
+        "options": [
+          {
+            "id": "A",
+            "text": "Kamzor"
+          },
+          {
+            "id": "B",
+            "text": "Sabse zyada mazboot"
+          },
+          {
+            "id": "C",
+            "text": "Shunya (zero)"
+          },
+          {
+            "id": "D",
+            "text": "Field lines ki density ka field ki taakat se koi sambandh nahi"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Field lines ki density (kitni paas-paas hain) field ki strength ko dikhati hai — jahan lines close hain (jaise poles ke paas) wahan field sabse mazboot hoti hai, aur jahan spread ho jaati hain wahan field kamzor hoti hai."
+      },
+      "navigation": {
+        "next": "card_14_quiz3",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_14_quiz3",
+      "card_slug": "card_14_quiz3",
+      "type": "quiz",
+      "concept_id": "field_lines_quiz",
+      "level": 2,
+      "progress": {
+        "current": 14,
+        "total": 67
+      },
+      "quiz_payload": {
+        "question": "Do magnetic field lines aapas mein cross kyun nahi karti? (Q3/3)",
+        "options": [
+          {
+            "id": "A",
+            "text": "Kyunki wo ek doosre ko repel karti hain"
+          },
+          {
+            "id": "B",
+            "text": "Kyunki ek point par field ki sirf ek hi net direction ho sakti hai"
+          },
+          {
+            "id": "C",
+            "text": "Kyunki field lines magnetic nahi hoti"
+          },
+          {
+            "id": "D",
+            "text": "Koi definite karan nahi hai"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Ek point par resultant magnetic field ki sirf ek hi direction ho sakti hai, isliye do lines wahan se cross nahi ho sakti — agar hoti toh us point par field ki do directions ban jaati, jo asambhav hai."
+      },
+      "navigation": {
+        "next": "card_15_milestone2",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_15_milestone2",
+      "card_slug": "card_15_milestone2",
+      "type": "milestone",
+      "concept_id": "module2_complete",
+      "level": 2,
+      "progress": {
+        "current": 15,
+        "total": 67
+      },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "🧭",
+        "completed_topic": "Magnetic Field aur Field Lines",
+        "xp_earned": 55,
+        "milestone_progress": "Module 2/9 Clear",
+        "motivational_quote": "Bahut badhiya Raju! Ab dekhते hain ki poori Prithvi hi ek magnet kyun hai!"
+      },
+      "navigation": {
+        "next": "card_16_earth_magnet",
+        "button_text": "Start Next Module ➔"
+      }
+    },
+    {
+      "card_id": "card_16_earth_magnet",
+      "card_slug": "card_16_earth_magnet",
+      "type": "chat",
+      "concept_id": "earth_as_magnet",
+      "level": 2,
+      "progress": {
+        "current": 16,
+        "total": 67
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, tumne dekha hai compass hamesha North-South hi kyun dikhata hai, chahe tum Patna mein ho ya Delhi mein?"
+        },
+        {
+          "speaker": "raju",
+          "text": "Haan sir, gaon mein guard uncle ka compass bhi hamesha ek hi taraf ruk jaata tha!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Kyunki poori Prithvi khud ek bahut bada magnet hai! Iska South magnetic pole geographic North pole ke paas hai, aur North magnetic pole geographic South ke paas — isi wajah se compass ki needle ka North sir humesha bhoogolik North ki taraf point karta hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "Hain?? Matlab Earth ka North magnetic pole actually South mein hai?! Ye toh confusing naam hai sir!"
+        }
+      ],
+      "navigation": {
+        "next": "card_17_declination_inclination",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_17_declination_inclination",
+      "card_slug": "card_17_declination_inclination",
+      "type": "chat",
+      "concept_id": "magnetic_elements",
+      "level": 2,
+      "progress": {
+        "current": 17,
+        "total": 67
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Bilkul confusing hai, isliye BPSC isse pakadti hai! Ab teen important terms yaad rakho — Earth ke magnetism ko 'Magnetic Elements' kehte hain: Declination, Inclination (Dip), aur Horizontal Component."
+        },
+        {
+          "speaker": "raju",
+          "text": "Ye teeno alag-alag kya batate hain sir?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Declination batata hai ki geographic North aur magnetic North ke beech kितna angle hai. Inclination (Dip) batata hai ki magnetic field zameen ke andar kितna jhuki hui hai. Horizontal Component field ka wo hissa hai jo zameen ke samaantar (horizontal) hota hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "⭐ Sir ye toh lagta hai officer level ka concept hai, exam mein zaroor aayega!"
+        }
+      ],
+      "navigation": {
+        "next": "card_18_earth_guess",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_18_earth_guess",
+      "card_slug": "card_18_earth_guess",
+      "type": "guess",
+      "concept_id": "compass_needle_direction",
+      "level": 2,
+      "progress": {
+        "current": 18,
+        "total": 67
+      },
+      "guess_payload": {
+        "question": "Compass ki needle ka North-seeking sira hamesha Prithvi ke bhoogolik North ki taraf kyun point karta hai?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Kyunki Prithvi ka geographic North hi uska South magnetic pole hai"
+          },
+          {
+            "id": "B",
+            "text": "Kyunki Prithvi ka koi magnetism nahi hai"
+          },
+          {
+            "id": "C",
+            "text": "Kyunki compass sirf sूरज ki taraf dekhta hai"
+          },
+          {
+            "id": "D",
+            "text": "Random hota hai, fix nahi"
+          }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Attraction ka rule yaad karo — Unlike poles attract karte hain. Compass ka N-pole tabhi geographic North ki taraf khichega jab wahan actually ek South magnetic pole ho. Isliye Earth ka South magnetic pole geographic North ke paas sthित hai."
+      },
+      "navigation": {
+        "next": "card_19_quiz1",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_19_quiz1",
+      "card_slug": "card_19_quiz1",
+      "type": "quiz",
+      "concept_id": "earth_magnetism_quiz",
+      "level": 2,
+      "progress": {
+        "current": 19,
+        "total": 67
+      },
+      "quiz_payload": {
+        "question": "Geographic North aur Magnetic North ke beech ke angle ko kya kehte hain? (Q1/3)",
+        "options": [
+          {
+            "id": "A",
+            "text": "Inclination"
+          },
+          {
+            "id": "B",
+            "text": "Declination"
+          },
+          {
+            "id": "C",
+            "text": "Horizontal Component"
+          },
+          {
+            "id": "D",
+            "text": "Retention"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Declination wo angle hai jo bhoogolik meridian aur magnetic meridian ke beech banta hai. Inclination (Dip) field ki vertical se jhukav batata hai, jo alag concept hai — dono ko mix na karein."
+      },
+      "navigation": {
+        "next": "card_20_quiz2",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_20_quiz2",
+      "card_slug": "card_20_quiz2",
+      "type": "quiz",
+      "concept_id": "earth_magnetism_quiz",
+      "level": 2,
+      "progress": {
+        "current": 20,
+        "total": 67
+      },
+      "quiz_payload": {
+        "question": "Magnetic Equator par Angle of Dip (Inclination) ka maan kितna hota hai? (Q2/3)",
+        "options": [
+          {
+            "id": "A",
+            "text": "90°"
+          },
+          {
+            "id": "B",
+            "text": "45°"
+          },
+          {
+            "id": "C",
+            "text": "0°"
+          },
+          {
+            "id": "D",
+            "text": "180°"
+          }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Magnetic Equator par field lines zameen ke bilkul samaantar (horizontal) hoti hain, isliye Dip 0° hota hai. Magnetic poles par Dip 90° hota hai kyunki wahan field lines poori tarah vertical ho jaati hain — yeh SSC/Railway ka favourite direct fact hai."
+      },
+      "navigation": {
+        "next": "card_21_quiz3",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_21_quiz3",
+      "card_slug": "card_21_quiz3",
+      "type": "quiz",
+      "concept_id": "earth_magnetism_quiz",
+      "level": 2,
+      "progress": {
+        "current": 21,
+        "total": 67
+      },
+      "quiz_payload": {
+        "question": "Prithvi ke magnetic poles par Horizontal Component ka maan kितना hota hai? (Q3/3)",
+        "options": [
+          {
+            "id": "A",
+            "text": "Maximum"
+          },
+          {
+            "id": "B",
+            "text": "Zero"
+          },
+          {
+            "id": "C",
+            "text": "Infinite"
+          },
+          {
+            "id": "D",
+            "text": "Constant, equator jitna hi"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Poles par field poori tarah vertical hoti hai (Dip = 90°), isliye horizontal component zero ho jaata hai. Equator par ye maximum hota hai kyunki wahan field poori horizontal hoti hai — yeh do quiz ek doosre ko cross-verify karte hain."
+      },
+      "navigation": {
+        "next": "card_22_milestone3",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_22_milestone3",
+      "card_slug": "card_22_milestone3",
+      "type": "milestone",
+      "concept_id": "module3_complete",
+      "level": 2,
+      "progress": {
+        "current": 22,
+        "total": 67
+      },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "🌍",
+        "completed_topic": "Prithvi ka Magnetism",
+        "xp_earned": 55,
+        "milestone_progress": "Module 3/9 Clear",
+        "motivational_quote": "Ekdum solid Raju! Ab dekhते hain current bhi magnet ban sakta hai — yeh scene officer-level twist hai!"
+      },
+      "navigation": {
+        "next": "card_23_oersted",
+        "button_text": "Start Next Module ➔"
+      }
+    },
+    {
+      "card_id": "card_23_oersted",
+      "card_slug": "card_23_oersted",
+      "type": "chat",
+      "concept_id": "oersted_experiment",
+      "level": 3,
+      "progress": {
+        "current": 23,
+        "total": 67
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, ab tak humne dekha ki magnet ka apna field hota hai. Lekin ek scientist Hans Christian Oersted ne 1820 mein ek accidental discovery ki thi — jab bijli ka current ek taar se guzarta hai, toh uske paas rakha compass bhi hilne lagta hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Seriously?? Matlab bijli bhi magnet jaisa kaam karti hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul sahi pakde ho! Jab bhi current kisi taar se guzarta hai, uske charon taraf ek magnetic field ban jaata hai. Isi discovery ne 'Electromagnetism' ki neev rakhi."
+        },
+        {
+          "speaker": "raju",
+          "text": "Toh kya current jitna zyada hoga, magnetic field bhi utna hi strong hoga sir?"
+        }
+      ],
+      "navigation": {
+        "next": "card_24_right_hand_rule",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_24_right_hand_rule",
+      "card_slug": "card_24_right_hand_rule",
+      "type": "chat",
+      "concept_id": "right_hand_thumb_rule",
+      "level": 3,
+      "progress": {
+        "current": 24,
+        "total": 67
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Haan Raju, current jitna zyada hoga, field utni hi strong hogi. Ab direction pata karne ke liye ek trick hai — 'Right Hand Thumb Rule'. Apna right hand ka thumb current ki direction mein rakho, ungliyan jis taraf lipatengi wahi field ki direction hogi."
+        },
+        {
+          "speaker": "raju",
+          "text": "Achhaaaa, matlab hath se hi answer nikal sakte hain! Left hand se try kiya toh?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Left hand se galat answer aayega — BPSC mein yahi trap hota hai jab student jaldi mein left hand use kar leta hai. Hamesha Right Hand Thumb Rule hi current ke field ke liye use hota hai, Left Hand Rule toh force ke liye alag se hai jo hum aage padhenge."
+        },
+        {
+          "speaker": "raju",
+          "text": "Ruko sir, do alag rules hain? Ye toh yaad rakhna mushkil hoga!"
+        }
+      ],
+      "navigation": {
+        "next": "card_25_electromagnetism_guess",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_25_electromagnetism_guess",
+      "card_slug": "card_25_electromagnetism_guess",
+      "type": "guess",
+      "concept_id": "field_strength_current",
+      "level": 3,
+      "progress": {
+        "current": 25,
+        "total": 67
+      },
+      "guess_payload": {
+        "question": "Ek sidhe (straight) taar mein current double kar diya jaaye toh us taar ke paas magnetic field ka kya hoga?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Aadhi ho jayegi"
+          },
+          {
+            "id": "B",
+            "text": "Double ho jayegi"
+          },
+          {
+            "id": "C",
+            "text": "Same rahegi"
+          },
+          {
+            "id": "D",
+            "text": "Zero ho jayegi"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Straight wire ke paas magnetic field seedha current ke anupaati (directly proportional) hoti hai (B ∝ I). Current double karne se field bhi double ho jaayegi — yehi Biot-Savart Law ka core idea hai."
+      },
+      "navigation": {
+        "next": "card_26_quiz1",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_26_quiz1",
+      "card_slug": "card_26_quiz1",
+      "type": "quiz",
+      "concept_id": "oersted_quiz",
+      "level": 3,
+      "progress": {
+        "current": 26,
+        "total": 67
+      },
+      "quiz_payload": {
+        "question": "Current le jaane wale taar ke paas rakhe compass ki needle kyun deflect (hilti) ho jaati hai? (Q1/3)",
+        "options": [
+          {
+            "id": "A",
+            "text": "Kyunki taar garam ho jaati hai"
+          },
+          {
+            "id": "B",
+            "text": "Kyunki current apne charon taraf magnetic field paida karta hai"
+          },
+          {
+            "id": "C",
+            "text": "Kyunki compass mein loha hota hai jo apne aap hilta hai"
+          },
+          {
+            "id": "D",
+            "text": "Ye sirf ek galat fahmi hai"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Oersted ke experiment ne prove kiya ki current-carrying conductor apne aas-paas magnetic field banata hai, jisse compass ki needle deflect ho jaati hai. Isi se pehli baar current aur magnetism ka sambandh saamne aaya."
+      },
+      "navigation": {
+        "next": "card_27_quiz2",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_27_quiz2",
+      "card_slug": "card_27_quiz2",
+      "type": "quiz",
+      "concept_id": "oersted_quiz",
+      "level": 3,
+      "progress": {
+        "current": 27,
+        "total": 67
+      },
+      "quiz_payload": {
+        "question": "Right Hand Thumb Rule mein thumb kis cheez ki direction dikhata hai? (Q2/3)",
+        "options": [
+          {
+            "id": "A",
+            "text": "Magnetic field ki direction"
+          },
+          {
+            "id": "B",
+            "text": "Current ki direction"
+          },
+          {
+            "id": "C",
+            "text": "Force ki direction"
+          },
+          {
+            "id": "D",
+            "text": "Velocity ki direction"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Thumb current ki direction dikhata hai, aur lipeti hui ungliyan magnetic field ki direction batati hain. Isse ulta samajhna sabse common galti hai jo students exam mein kar dete hain."
+      },
+      "navigation": {
+        "next": "card_28_quiz3",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_28_quiz3",
+      "card_slug": "card_28_quiz3",
+      "type": "quiz",
+      "concept_id": "oersted_quiz",
+      "level": 3,
+      "progress": {
+        "current": 28,
+        "total": 67
+      },
+      "quiz_payload": {
+        "question": "Electromagnetism ki khoj kis scientist ne ki thi aur kis saal? (Q3/3)",
+        "options": [
+          {
+            "id": "A",
+            "text": "Michael Faraday, 1831"
+          },
+          {
+            "id": "B",
+            "text": "Hans Christian Oersted, 1820"
+          },
+          {
+            "id": "C",
+            "text": "James Clerk Maxwell, 1861"
+          },
+          {
+            "id": "D",
+            "text": "Andre-Marie Ampere, 1826"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Hans Christian Oersted ne 1820 mein accidental taur par dikhaya ki current magnetic field paida karta hai. Faraday ne 1831 mein electromagnetic induction (ulta process) discover kiya tha — BPSC mein dono scientists aur unke saal ko mix karke poocha jaata hai, isliye alag-alag yaad rakhna zaroori hai."
+      },
+      "navigation": {
+        "next": "card_29_milestone4",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_29_milestone4",
+      "card_slug": "card_29_milestone4",
+      "type": "milestone",
+      "concept_id": "module4_complete",
+      "level": 3,
+      "progress": {
+        "current": 29,
+        "total": 67
+      },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "⚡",
+        "completed_topic": "Oersted ka Experiment aur Electromagnetism",
+        "xp_earned": 60,
+        "milestone_progress": "Module 4/9 Clear",
+        "motivational_quote": "Superb Raju! Ab dekhते hain straight wire, loop aur solenoid ka field kaise banta hai!"
+      },
+      "navigation": {
+        "next": "card_30_straight_wire",
+        "button_text": "Start Next Module ➔"
+      }
+    },
+    {
+      "card_id": "card_30_straight_wire",
+      "card_slug": "card_30_straight_wire",
+      "type": "chat",
+      "concept_id": "straight_wire_field",
+      "level": 3,
+      "progress": {
+        "current": 30,
+        "total": 67
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, ek lambi seedhi taar mein current bahne par uske field lines ka shape kaisa hota hai pata hai? Ye concentric circles (gol chakron) mein banti hain, taar ko center maan kar."
+        },
+        {
+          "speaker": "raju",
+          "text": "Toh taar ke paas field strong hogi aur door jaane par kamzor?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul sahi! Field ki strength taar se doori (r) ke ulte anupaat mein hoti hai (B ∝ 1/r) aur current ke seedhe anupaat mein (B ∝ I). Iska formula hai B = μ₀I / (2πr)."
+        },
+        {
+          "speaker": "raju",
+          "text": "Ye μ₀ (mu-zero) kya cheez hai sir?"
+        }
+      ],
+      "navigation": {
+        "next": "card_31_circular_loop",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_31_circular_loop",
+      "card_slug": "card_31_circular_loop",
+      "type": "chat",
+      "concept_id": "circular_loop_field",
+      "level": 3,
+      "progress": {
+        "current": 31,
+        "total": 67
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "μ₀ ko 'Permeability of Free Space' kehte hain, ek constant value hai jo batata hai ki khaali space magnetic field ko kितна aasani se guzarne deta hai. Ab agar taar ko seedha na rakh kar circular loop bana diya jaaye toh?"
+        },
+        {
+          "speaker": "raju",
+          "text": "Center par field aur zyada strong ho jayegi shayad, kyunki saari loop ki current ek jagah asar dikha rahi hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Ekdum sahi socha! Circular loop ke center par field seedhi taar se zyada strong hoti hai, kyunki poori loop ki current ka effect ek hi point (center) par jama hota hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir agar loop ki jagah bahut saari coils ek saath lapet di jaayein toh?"
+        }
+      ],
+      "navigation": {
+        "next": "card_32_solenoid",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_32_solenoid",
+      "card_slug": "card_32_solenoid",
+      "type": "chat",
+      "concept_id": "solenoid_toroid",
+      "level": 3,
+      "progress": {
+        "current": 32,
+        "total": 67
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Tabhi ek 'Solenoid' ban jaata hai — taar ki bahut saari closely-wound coils. Solenoid ke andar field uniform aur bahut strong hoti hai, bilkul ek bar magnet jaisi, jiske ek sira North aur doosra South ban jaata hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "⭐ Ye toh electromagnet jaisa lagta hai sir!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul theek! Isi principle par electromagnet banaya jaata hai. Aur agar solenoid ko mod kar circle mein jod diya jaaye toh use 'Toroid' kehte hain, jiske andar field circular path mein rehti hai aur bahar field zero hoti hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab teen shapes — straight wire, circular loop, aur solenoid — teenon ka field pattern bilkul alag hai!"
+        }
+      ],
+      "navigation": {
+        "next": "card_33_quiz1",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_33_quiz1",
+      "card_slug": "card_33_quiz1",
+      "type": "quiz",
+      "concept_id": "field_shapes_quiz",
+      "level": 3,
+      "progress": {
+        "current": 33,
+        "total": 67
+      },
+      "quiz_payload": {
+        "question": "Ek lambi seedhi taar ke paas magnetic field, taar se doori 'r' ke saath kaise badalti hai? (Q1/3)",
+        "options": [
+          {
+            "id": "A",
+            "text": "B ∝ r"
+          },
+          {
+            "id": "B",
+            "text": "B ∝ 1/r"
+          },
+          {
+            "id": "C",
+            "text": "B ∝ r²"
+          },
+          {
+            "id": "D",
+            "text": "B doori par nirbhar nahi karti"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "B = μ₀I / (2πr) formula ke anusaar field doori ke ulte anupaat mein hoti hai — jitna door jaoge, field utni kamzor hoti jayegi."
+      },
+      "navigation": {
+        "next": "card_34_quiz2",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_34_quiz2",
+      "card_slug": "card_34_quiz2",
+      "type": "quiz",
+      "concept_id": "field_shapes_quiz",
+      "level": 3,
+      "progress": {
+        "current": 34,
+        "total": 67
+      },
+      "quiz_payload": {
+        "question": "Ek current-carrying solenoid ke andar utpann hone wala magnetic field kaisi hoti hai aur ye sabse zyada mildi-julti hai? (Q2/3)",
+        "options": [
+          {
+            "id": "A",
+            "text": "Non-uniform aur kisi bhi shape jaisi nahi"
+          },
+          {
+            "id": "B",
+            "text": "Uniform aur ek bar magnet ke field jaisi"
+          },
+          {
+            "id": "C",
+            "text": "Solenoid ke andar field hoti hi nahi"
+          },
+          {
+            "id": "D",
+            "text": "Sirf ends par field hoti hai"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Solenoid ke andar field uniform hoti hai aur bahar ka pattern exactly ek bar magnet jaisa hota hai — ek sira N-pole aur doosra S-pole ki tarah behave karta hai. Isi wajah se solenoid electromagnet banane ke liye use hota hai."
+      },
+      "navigation": {
+        "next": "card_35_quiz3",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_35_quiz3",
+      "card_slug": "card_35_quiz3",
+      "type": "quiz",
+      "concept_id": "field_shapes_quiz",
+      "level": 3,
+      "progress": {
+        "current": 35,
+        "total": 67
+      },
+      "quiz_payload": {
+        "question": "Ek circular current loop ke center par magnetic field kis cheez par nirbhar nahi karti? (Q3/3)",
+        "options": [
+          {
+            "id": "A",
+            "text": "Current ki value"
+          },
+          {
+            "id": "B",
+            "text": "Loop ki radius"
+          },
+          {
+            "id": "C",
+            "text": "Taar ka colour"
+          },
+          {
+            "id": "D",
+            "text": "Number of turns"
+          }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Field current (I), radius (r) aur turns ki sankhya (N) par nirbhar karti hai (formula: B = μ₀NI / 2r). Taar ka colour ek irrelevant physical property hai jiska field se koi lena-dena nahi — is tarah ke 'odd-one-out' factual traps SSC mein aate hain."
+      },
+      "navigation": {
+        "next": "card_36_milestone5",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_36_milestone5",
+      "card_slug": "card_36_milestone5",
+      "type": "milestone",
+      "concept_id": "module5_complete",
+      "level": 3,
+      "progress": {
+        "current": 36,
+        "total": 67
+      },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "🌀",
+        "completed_topic": "Straight Wire, Loop aur Solenoid ka Field",
+        "xp_earned": 60,
+        "milestone_progress": "Module 5/9 Clear",
+        "motivational_quote": "Zabardast Raju! Ab dekhते hain current-carrying taar par magnet khud kaise force lagata hai!"
+      },
+      "navigation": {
+        "next": "card_37_force_conductor",
+        "button_text": "Start Next Module ➔"
+      }
+    },
+    {
+      "card_id": "card_37_force_conductor",
+      "card_slug": "card_37_force_conductor",
+      "type": "chat",
+      "concept_id": "force_on_conductor",
+      "level": 4,
+      "progress": {
+        "current": 37,
+        "total": 67
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, humne dekha current magnetic field banata hai. Ab ulta socho — agar ek current-carrying taar ko pehle se maujood magnetic field ke andar rakh diya jaaye toh kya hoga?"
+        },
+        {
+          "speaker": "raju",
+          "text": "Achhaaaa... shayad taar par bhi ek force lagegi, jaisa hum magnet ke pinjre mein pin daalte hain?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Sahi socha! Taar par force lagta hai, jiska formula hai F = BIL sinθ, jahan θ current aur field ke beech ka angle hai. Agar current field ke bilkul samaantar (parallel) ho, toh force zero ho jaata hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "Aur agar dono perpendicular (90°) hon toh?"
+        }
+      ],
+      "navigation": {
+        "next": "card_38_flemings_rule",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_38_flemings_rule",
+      "card_slug": "card_38_flemings_rule",
+      "type": "chat",
+      "concept_id": "flemings_left_hand_rule",
+      "level": 4,
+      "progress": {
+        "current": 38,
+        "total": 67
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Perpendicular hone par sinθ = 1 hota hai, isliye force maximum (F = BIL) hoga. Ab direction pata karne ke liye ek naya rule hai — 'Fleming's Left Hand Rule'."
+        },
+        {
+          "speaker": "raju",
+          "text": "Ruko sir, pehle Right Hand Thumb Rule tha current ke field ke liye, ab Left Hand Rule force ke liye? Ye toh exam mein palat jaayega mera!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Yahi BPSC ka favourite trap hai! Yaad rakho — Left Hand Rule sirf 'force' ke liye hai. Apni pehli ungli (First finger) Field ki taraf, beech wali ungli (Middle finger) Current ki taraf, aur Thumb Force ki direction dega."
+        },
+        {
+          "speaker": "raju",
+          "text": "FBI trick! First-Field, seCond(middle)-Current, thumB-force! Ab main kabhi nahi bhoolunga sir!"
+        }
+      ],
+      "navigation": {
+        "next": "card_39_parallel_wires",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_39_parallel_wires",
+      "card_slug": "card_39_parallel_wires",
+      "type": "chat",
+      "concept_id": "force_between_parallel_wires",
+      "level": 4,
+      "progress": {
+        "current": 39,
+        "total": 67
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Badhiya trick Raju! Ab ek aur important scene — agar do parallel taar mein current ek hi direction mein bahe, toh dono taar ek doosre ko attract karte hain. Agar current opposite direction mein ho, toh dono repel karte hain."
+        },
+        {
+          "speaker": "raju",
+          "text": "Hain?? Yeh toh poles ke ulta hai — poles mein 'same repel karte hain', par yahan 'same direction attract karti hai'?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul, isliye BPSC isko poochkar confuse karti hai! Isi principle se hi 1 Ampere ki definition banayi gayi hai — 1 Ampere wo current hai jo do 1-meter door rakhi parallel taaron mein bahne par unke beech 2×10⁻⁷ N/m ka force paida kare."
+        },
+        {
+          "speaker": "raju",
+          "text": "Wow sir, matlab Ampere ki definition khud isी force wale concept se nikli hai!"
+        }
+      ],
+      "navigation": {
+        "next": "card_40_quiz1",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_40_quiz1",
+      "card_slug": "card_40_quiz1",
+      "type": "quiz",
+      "concept_id": "force_quiz",
+      "level": 4,
+      "progress": {
+        "current": 40,
+        "total": 67
+      },
+      "quiz_payload": {
+        "question": "Fleming's Left Hand Rule mein Thumb kis cheez ki direction dikhata hai? (Q1/3)",
+        "options": [
+          {
+            "id": "A",
+            "text": "Current"
+          },
+          {
+            "id": "B",
+            "text": "Magnetic Field"
+          },
+          {
+            "id": "C",
+            "text": "Force (Motion)"
+          },
+          {
+            "id": "D",
+            "text": "Voltage"
+          }
+        ],
+        "correct_option_id": "C",
+        "explanation": "FBI trick yaad rakho: First finger = Field, seCond/middle finger = Current, thumB = Force/Motion. Ye rule sirf current-carrying conductor par lagne wale force ki direction batane ke liye use hota hai."
+      },
+      "navigation": {
+        "next": "card_41_quiz2",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_41_quiz2",
+      "card_slug": "card_41_quiz2",
+      "type": "quiz",
+      "concept_id": "force_quiz",
+      "level": 4,
+      "progress": {
+        "current": 41,
+        "total": 67
+      },
+      "quiz_payload": {
+        "question": "Do parallel taaron mein current same direction mein bahe, toh dono taar aapas mein kya karte hain? (Q2/3)",
+        "options": [
+          {
+            "id": "A",
+            "text": "Repel karte hain"
+          },
+          {
+            "id": "B",
+            "text": "Attract karte hain"
+          },
+          {
+            "id": "C",
+            "text": "Koi force nahi lagta"
+          },
+          {
+            "id": "D",
+            "text": "Taar toot jaati hai"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Same direction ki currents wali parallel taar aapas mein attract karti hain, aur opposite direction ki currents repel karti hain — poles ke rule se ulta pattern, isliye BPSC ka favourite conceptual trap."
+      },
+      "navigation": {
+        "next": "card_42_quiz3",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_42_quiz3",
+      "card_slug": "card_42_quiz3",
+      "type": "quiz",
+      "concept_id": "force_quiz",
+      "level": 4,
+      "progress": {
+        "current": 42,
+        "total": 67
+      },
+      "quiz_payload": {
+        "question": "Agar current-carrying taar magnetic field ke bilkul samaantar (parallel, θ = 0°) rakhi ho, toh taar par lagne wala force kितना hoga? (Q3/3)",
+        "options": [
+          {
+            "id": "A",
+            "text": "Maximum"
+          },
+          {
+            "id": "B",
+            "text": "Zero"
+          },
+          {
+            "id": "C",
+            "text": "F = BIL"
+          },
+          {
+            "id": "D",
+            "text": "Infinite"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "F = BIL sinθ. θ = 0° par sin0° = 0, isliye force zero ho jaata hai. Force sirf tab maximum hota hai jab current field ke perpendicular (θ = 90°) ho."
+      },
+      "navigation": {
+        "next": "card_43_milestone6",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_43_milestone6",
+      "card_slug": "card_43_milestone6",
+      "type": "milestone",
+      "concept_id": "module6_complete",
+      "level": 4,
+      "progress": {
+        "current": 43,
+        "total": 67
+      },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "🤚",
+        "completed_topic": "Force on Conductor aur Fleming's Left Hand Rule",
+        "xp_earned": 65,
+        "milestone_progress": "Module 6/9 Clear",
+        "motivational_quote": "Kamaal Raju! Ab inhi concepts se electric motor kaise chalta hai, wo dekhते hain!"
+      },
+      "navigation": {
+        "next": "card_44_electromagnet",
+        "button_text": "Start Next Module ➔"
+      }
+    },
+    {
+      "card_id": "card_44_electromagnet",
+      "card_slug": "card_44_electromagnet",
+      "type": "chat",
+      "concept_id": "electromagnet_vs_permanent",
+      "level": 4,
+      "progress": {
+        "current": 44,
+        "total": 67
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, scrap yard mein bade-bade crane jo purani gaadiyon ko uthate hain, unme jab bijli band karte hain toh loha girता hai kyun?"
+        },
+        {
+          "speaker": "raju",
+          "text": "Achha sir maine video mein dekha hai, ekdum se sab gir jaata hai jaise magnet gayab ho gaya!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul theek dekha! Wo ek 'Electromagnet' hota hai — ek soft iron core ke upar taar lapet kar current bahayi jaati hai, aur ye tabhi tak magnet rehta hai jab tak current chal rahi hoti hai. Permanent magnet ke ulta, iski strength current control karke ghata-badha sakte hain."
+        },
+        {
+          "speaker": "raju",
+          "text": "Toh isमें permanent magnet se kya fayda hai sir?"
+        }
+      ],
+      "navigation": {
+        "next": "card_45_electric_motor",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_45_electric_motor",
+      "card_slug": "card_45_electric_motor",
+      "type": "chat",
+      "concept_id": "electric_motor_working",
+      "level": 4,
+      "progress": {
+        "current": 45,
+        "total": 67
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Fayda ye hai ki hum apni marzi se on/off aur strength control kar sakte hain. Ab yahi electromagnet ka principle 'Electric Motor' mein use hota hai — jo bijli ki energy ko ghumaav (rotational motion) mein badalta hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab wahi Fleming's Left Hand Rule wala force hi motor ko ghumata hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Ekdum sahi! Motor mein ek coil ko magnetic field ke andar rakha jaata hai. Current bahne par coil ki do sides par opposite direction ka force lagta hai (Fleming's Left Hand Rule se), jisse coil ghoomti hai — isi se pankha, mixer sab chalte hain."
+        },
+        {
+          "speaker": "raju",
+          "text": "⭐ Toh mera table fan bhi isी principle par chalta hai! Ab samajh aaya!"
+        }
+      ],
+      "navigation": {
+        "next": "card_46_motor_guess",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_46_motor_guess",
+      "card_slug": "card_46_motor_guess",
+      "type": "guess",
+      "concept_id": "motor_split_ring",
+      "level": 4,
+      "progress": {
+        "current": 46,
+        "total": 67
+      },
+      "guess_payload": {
+        "question": "Electric motor mein 'Split-Ring Commutator' ka kya kaam hai?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Motor ko thanda rakhta hai"
+          },
+          {
+            "id": "B",
+            "text": "Har half-rotation par current ki direction ulat deta hai, taaki coil ek hi direction mein ghumti rahe"
+          },
+          {
+            "id": "C",
+            "text": "Coil ko todne se bachata hai"
+          },
+          {
+            "id": "D",
+            "text": "Voltage badhata hai"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Split-ring commutator har half-turn ke baad current ki direction reverse kar deta hai, jisse coil par lagne wala force hamesha usी direction mein ghumaata rahe (agar direction reverse na ho toh coil jhoolne lagegi, ghoomna band kar degi)."
+      },
+      "navigation": {
+        "next": "card_47_quiz1",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_47_quiz1",
+      "card_slug": "card_47_quiz1",
+      "type": "quiz",
+      "concept_id": "electromagnet_motor_quiz",
+      "level": 4,
+      "progress": {
+        "current": 47,
+        "total": 67
+      },
+      "quiz_payload": {
+        "question": "Electromagnet mein core ke liye kaunsi dhaatu use hoti hai, aur kyun? (Q1/3)",
+        "options": [
+          {
+            "id": "A",
+            "text": "Steel, kyunki wo permanent magnet ke liye achha hai"
+          },
+          {
+            "id": "B",
+            "text": "Soft iron, kyunki current band hote hi ye jaldi apni magnetism kho deta hai"
+          },
+          {
+            "id": "C",
+            "text": "Copper, kyunki wo bijli ka conductor hai"
+          },
+          {
+            "id": "D",
+            "text": "Plastic, kyunki wo halka hota hai"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Soft iron easily magnetise aur demagnetise ho jaata hai, isliye jab current band hoti hai toh electromagnet turant apni magnetism kho deta hai — ye electromagnet ke temporary nature ke liye zaroori hai."
+      },
+      "navigation": {
+        "next": "card_48_quiz2",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_48_quiz2",
+      "card_slug": "card_48_quiz2",
+      "type": "quiz",
+      "concept_id": "electromagnet_motor_quiz",
+      "level": 4,
+      "progress": {
+        "current": 48,
+        "total": 67
+      },
+      "quiz_payload": {
+        "question": "Electric motor kis energy conversion ka udaharan hai? (Q2/3)",
+        "options": [
+          {
+            "id": "A",
+            "text": "Mechanical se Electrical"
+          },
+          {
+            "id": "B",
+            "text": "Electrical se Mechanical"
+          },
+          {
+            "id": "C",
+            "text": "Chemical se Thermal"
+          },
+          {
+            "id": "D",
+            "text": "Light se Electrical"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Electric motor bijli ki energy (Electrical) ko ghumaav ki gati (Mechanical) mein badalta hai. Iska ulta process — Mechanical se Electrical — Electric Generator mein hota hai, jo Faraday ke induction principle par kaam karta hai."
+      },
+      "navigation": {
+        "next": "card_49_quiz3",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_49_quiz3",
+      "card_slug": "card_49_quiz3",
+      "type": "quiz",
+      "concept_id": "electromagnet_motor_quiz",
+      "level": 4,
+      "progress": {
+        "current": 49,
+        "total": 67
+      },
+      "quiz_payload": {
+        "question": "Electric motor mein coil ki do sides par opposite forces kis rule se lagti hain, jisse coil ghoomti hai? (Q3/3)",
+        "options": [
+          {
+            "id": "A",
+            "text": "Right Hand Thumb Rule"
+          },
+          {
+            "id": "B",
+            "text": "Fleming's Left Hand Rule"
+          },
+          {
+            "id": "C",
+            "text": "Lenz's Law"
+          },
+          {
+            "id": "D",
+            "text": "Faraday's Law"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Coil ki dono sides mein current opposite directions mein bahti hai (kyunki ye ek loop hai), isliye Fleming's Left Hand Rule ke anusaar dono sides par force bhi opposite directions mein lagta hai — isi se rotation (torque) paida hoti hai."
+      },
+      "navigation": {
+        "next": "card_50_milestone7",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_50_milestone7",
+      "card_slug": "card_50_milestone7",
+      "type": "milestone",
+      "concept_id": "module7_complete",
+      "level": 4,
+      "progress": {
+        "current": 50,
+        "total": 67
+      },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "🔧",
+        "completed_topic": "Electromagnet aur Electric Motor",
+        "xp_earned": 65,
+        "milestone_progress": "Module 7/9 Clear",
+        "motivational_quote": "Bahut sahi Raju! Ab dekhते hain saari dhaatuein magnet se ek jaisa behave kyun nahi karti!"
+      },
+      "navigation": {
+        "next": "card_51_dia_para_ferro",
+        "button_text": "Start Next Module ➔"
+      }
+    },
+    {
+      "card_id": "card_51_dia_para_ferro",
+      "card_slug": "card_51_dia_para_ferro",
+      "type": "chat",
+      "concept_id": "magnetic_materials_types",
+      "level": 5,
+      "progress": {
+        "current": 51,
+        "total": 67
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, tumne dekha loha toh magnet se strongly chipakta hai, lekin taamba ya aluminium bilkul nahi chipakte. Materials teen categories mein baante jaate hain: Diamagnetic, Paramagnetic aur Ferromagnetic."
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab in teenon mein antar kya hai sir?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Diamagnetic materials (jaise copper, bismuth) magnetic field se halka sa repel hote hain. Paramagnetic materials (jaise aluminium, sodium) field se halka sa attract hote hain lekin field hatate hi magnetism kho dete hain. Ferromagnetic materials (jaise iron, cobalt, nickel) strongly attract hote hain aur field hatane ke baad bhi kuch magnetism retain kar sakte hain."
+        },
+        {
+          "speaker": "raju",
+          "text": "⭐ Toh sirf iron, cobalt, nickel hi asli 'magnet' ban paate hain sir?"
+        }
+      ],
+      "navigation": {
+        "next": "card_52_curie_temp",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_52_curie_temp",
+      "card_slug": "card_52_curie_temp",
+      "type": "chat",
+      "concept_id": "curie_temperature",
+      "level": 5,
+      "progress": {
+        "current": 52,
+        "total": 67
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Bilkul theek! Ye teeno ferromagnetic materials hi permanent magnet banane ke kaam aate hain. Lekin ek interesting baat — inhe bahut zyada garam kar dein toh ye apni magnetism kho dete hain."
+        },
+        {
+          "speaker": "raju",
+          "text": "Hain?? Garmi se magnet apni takat kho deta hai? Wo kितне temperature par?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Us khaas temperature ko 'Curie Temperature' kehte hain — jispar ferromagnetic material apni ferromagnetism kho kar paramagnetic ban jaata hai. Iron ka Curie temperature lagbhag 770°C hota hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "Toh isse zyada garam karne par iron ko magnet nahi bana sakte sir?"
+        }
+      ],
+      "navigation": {
+        "next": "card_53_hysteresis",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_53_hysteresis",
+      "card_slug": "card_53_hysteresis",
+      "type": "chat",
+      "concept_id": "hysteresis_material_choice",
+      "level": 5,
+      "progress": {
+        "current": 53,
+        "total": 67
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Sahi kaha, Curie temperature ke upar nahi bana sakte. Ab ek aur zaroori baat — jab ferromagnetic material ko magnetize karke phir demagnetize karte hain, toh field aur magnetization ka graph ek loop banata hai, jise 'Hysteresis Loop' kehte hain."
+        },
+        {
+          "speaker": "raju",
+          "text": "Isका exam mein kya use hai sir?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Isi loop se decide hota hai kaunsa material kis kaam ke liye best hai. Steel ka hysteresis loop bada hota hai, isliye wo apni magnetism zyada der retain karta hai — permanent magnet ke liye best. Soft iron ka loop chhota hota hai, isliye ye electromagnet ke liye best hai kyunki jaldi demagnetize ho jaata hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "Achhaaaa, matlab steel = permanent magnet, soft iron = electromagnet — ab clear ho gaya!"
+        }
+      ],
+      "navigation": {
+        "next": "card_54_quiz1",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_54_quiz1",
+      "card_slug": "card_54_quiz1",
+      "type": "quiz",
+      "concept_id": "materials_quiz",
+      "level": 5,
+      "progress": {
+        "current": 54,
+        "total": 67
+      },
+      "quiz_payload": {
+        "question": "Nimnlikhit mein se kaunsa material diamagnetic hai? (Q1/3)",
+        "options": [
+          {
+            "id": "A",
+            "text": "Iron"
+          },
+          {
+            "id": "B",
+            "text": "Aluminium"
+          },
+          {
+            "id": "C",
+            "text": "Copper (Bismuth)"
+          },
+          {
+            "id": "D",
+            "text": "Cobalt"
+          }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Copper aur Bismuth diamagnetic materials hain jo magnetic field se halka sa repel hote hain. Aluminium paramagnetic hai, jabki Iron aur Cobalt strongly ferromagnetic hain."
+      },
+      "navigation": {
+        "next": "card_55_quiz2",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_55_quiz2",
+      "card_slug": "card_55_quiz2",
+      "type": "quiz",
+      "concept_id": "materials_quiz",
+      "level": 5,
+      "progress": {
+        "current": 55,
+        "total": 67
+      },
+      "quiz_payload": {
+        "question": "Curie Temperature ke upar garam karne par ferromagnetic material kya ban jaata hai? (Q2/3)",
+        "options": [
+          {
+            "id": "A",
+            "text": "Diamagnetic"
+          },
+          {
+            "id": "B",
+            "text": "Paramagnetic"
+          },
+          {
+            "id": "C",
+            "text": "Superconductor"
+          },
+          {
+            "id": "D",
+            "text": "Zyada strong ferromagnetic"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Curie temperature ke upar thermal energy itni badh jaati hai ki atomic magnetic moments ka alignment toot jaata hai, aur material paramagnetic ban jaata hai — apni strong ferromagnetism kho deta hai."
+      },
+      "navigation": {
+        "next": "card_56_quiz3",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_56_quiz3",
+      "card_slug": "card_56_quiz3",
+      "type": "quiz",
+      "concept_id": "materials_quiz",
+      "level": 5,
+      "progress": {
+        "current": 56,
+        "total": 67
+      },
+      "quiz_payload": {
+        "question": "Permanent magnet banane ke liye kaunsa material behtar hota hai aur kyun? (Q3/3)",
+        "options": [
+          {
+            "id": "A",
+            "text": "Soft Iron, chhote hysteresis loop ki wajah se"
+          },
+          {
+            "id": "B",
+            "text": "Steel, bade hysteresis loop aur high retentivity ki wajah se"
+          },
+          {
+            "id": "C",
+            "text": "Copper, kyunki wo achha conductor hai"
+          },
+          {
+            "id": "D",
+            "text": "Aluminium, kyunki wo halka hai"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Steel ka hysteresis loop bada hota hai aur retentivity (magnetism ko retain karne ki capacity) zyada hoti hai, isliye permanent magnet ke liye best hai. Soft iron chhote loop ki wajah se electromagnet ke liye best hai, kyunki wo jaldi magnetize/demagnetize hota hai."
+      },
+      "navigation": {
+        "next": "card_57_milestone8",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_57_milestone8",
+      "card_slug": "card_57_milestone8",
+      "type": "milestone",
+      "concept_id": "module8_complete",
+      "level": 5,
+      "progress": {
+        "current": 57,
+        "total": 67
+      },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "🌡️",
+        "completed_topic": "Magnetic Materials: Dia, Para, Ferro aur Curie Temperature",
+        "xp_earned": 65,
+        "milestone_progress": "Module 8/9 Clear",
+        "motivational_quote": "Officer level knowledge Raju! Ek last module bacha hai — flux aur torque!"
+      },
+      "navigation": {
+        "next": "card_58_flux",
+        "button_text": "Start Next Module ➔"
+      }
+    },
+    {
+      "card_id": "card_58_flux",
+      "card_slug": "card_58_flux",
+      "type": "chat",
+      "concept_id": "magnetic_flux",
+      "level": 5,
+      "progress": {
+        "current": 58,
+        "total": 67
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, agar hum ek surface se guzarne wali field lines ki 'total quantity' naapна chahein, toh use 'Magnetic Flux' kehte hain, symbol Φ (phi)."
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab jitni zyada field lines surface se guzrengi, flux utna hi zyada hoga?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul sahi! Flux ka formula hai Φ = B·A·cosθ, jahan B field ki strength, A surface ka area, aur θ field aur surface ke 'normal' (perpendicular line) ke beech ka angle hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "Agar surface field ke bilkul parallel rakh dein toh flux kya hoga sir?"
+        }
+      ],
+      "navigation": {
+        "next": "card_59_gauss_law",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_59_gauss_law",
+      "card_slug": "card_59_gauss_law",
+      "type": "chat",
+      "concept_id": "gauss_law_magnetism",
+      "level": 5,
+      "progress": {
+        "current": 59,
+        "total": 67
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Tab θ = 90° hoga, aur cos90° = 0, isliye flux zero ho jaayega. Ab ek bahut important officer-level concept — 'Gauss's Law for Magnetism' kehta hai ki kisi bhi closed surface se guzarne wala total magnetic flux hamesha ZERO hota hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "Zero kyun sir, jabki electric field ke case mein toh flux nikalta hai charge ki wajah se?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Yahi sabse bada twist hai! Electricity mein isolated positive ya negative charge milta hai, isliye electric flux zero nahi hota. Lekin magnetism mein isolated monopole hota hi nahi (yaad hai humne module 1 mein padha tha?) — har field line jo closed surface mein ghusti hai wahi wapas bahar bhi nikalti hai, isliye net flux zero hota hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "Waah! Module 1 ka 'monopole nahi hota' wala concept yahan wapas kaam aaya — sab kुछ jud raha hai!"
+        }
+      ],
+      "navigation": {
+        "next": "card_60_torque_dipole",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_60_torque_dipole",
+      "card_slug": "card_60_torque_dipole",
+      "type": "chat",
+      "concept_id": "torque_bar_magnet",
+      "level": 5,
+      "progress": {
+        "current": 60,
+        "total": 67
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Bilkul! Ab last concept — agar ek bar magnet (jise 'magnetic dipole' kehte hain) ko ek uniform magnetic field mein rakh dein tirछा (angle par), toh usपर ek 'torque' (ghumane wali force) lagता hai jo use field ki direction mein align karne ki koshish karta hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "Jaise compass ki needle bhi hamesha ek hi direction mein align ho jaati hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Ekdum sahi udaharan! Torque ka formula hai τ = m × B × sinθ, jahan m magnetic dipole moment hai. Jab magnet field ke samaantar (θ=0°) hota hai tab torque zero hota hai — wahi stable equilibrium position hai, isliye compass needle wahin ruk jaati hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "Toh maximum torque tab lagega jab magnet field ke perpendicular (90°) ho?"
+        }
+      ],
+      "navigation": {
+        "next": "card_61_quiz1",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_61_quiz1",
+      "card_slug": "card_61_quiz1",
+      "type": "quiz",
+      "concept_id": "flux_torque_quiz",
+      "level": 5,
+      "progress": {
+        "current": 61,
+        "total": 67
+      },
+      "quiz_payload": {
+        "question": "Kisi bhi closed surface se guzarne wala total magnetic flux hamesha kितना hota hai, aur kyun? (Q1/3)",
+        "options": [
+          {
+            "id": "A",
+            "text": "Maximum, kyunki magnetic field bahut strong hoti hai"
+          },
+          {
+            "id": "B",
+            "text": "Zero, kyunki isolated magnetic monopole nahi hota"
+          },
+          {
+            "id": "C",
+            "text": "Charge ke barabar"
+          },
+          {
+            "id": "D",
+            "text": "Ye surface ke area par nirbhar karta hai"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Gauss's Law for Magnetism ke anusaar magnetic monopole ka astitva nahi hone ki wajah se, kisi bhi closed surface mein ghusne wali har field line wapas bahar bhi nikalti hai, isliye net flux hamesha zero hota hai."
+      },
+      "navigation": {
+        "next": "card_62_quiz2",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_62_quiz2",
+      "card_slug": "card_62_quiz2",
+      "type": "quiz",
+      "concept_id": "flux_torque_quiz",
+      "level": 5,
+      "progress": {
+        "current": 62,
+        "total": 67
+      },
+      "quiz_payload": {
+        "question": "Ek magnetic dipole (bar magnet) uniform field ke samaantar (θ = 0°) rakha ho, toh us par lagne wala torque kितना hoga? (Q2/3)",
+        "options": [
+          {
+            "id": "A",
+            "text": "Maximum"
+          },
+          {
+            "id": "B",
+            "text": "Zero"
+          },
+          {
+            "id": "C",
+            "text": "τ = mB"
+          },
+          {
+            "id": "D",
+            "text": "Infinite"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "τ = mB sinθ. θ = 0° par sin0° = 0, isliye torque zero hota hai — yehi stable equilibrium position hoti hai jahan compass needle aa kar ruk jaati hai."
+      },
+      "navigation": {
+        "next": "card_63_quiz3",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_63_quiz3",
+      "card_slug": "card_63_quiz3",
+      "type": "quiz",
+      "concept_id": "flux_torque_quiz",
+      "level": 5,
+      "progress": {
+        "current": 63,
+        "total": 67
+      },
+      "quiz_payload": {
+        "question": "Magnetic Flux (Φ) ka SI unit kya hai? (Q3/3)",
+        "options": [
+          {
+            "id": "A",
+            "text": "Tesla"
+          },
+          {
+            "id": "B",
+            "text": "Weber"
+          },
+          {
+            "id": "C",
+            "text": "Ampere"
+          },
+          {
+            "id": "D",
+            "text": "Henry"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Magnetic Flux ka SI unit Weber (Wb) hota hai, jabki Magnetic Field (B) ka unit Tesla hota hai. Ye dono units alag-alag quantities ke hain — SSC/Railway mein direct unit-based questions aate hain, isliye mix na karein."
+      },
+      "navigation": {
+        "next": "card_64_milestone9",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_64_milestone9",
+      "card_slug": "card_64_milestone9",
+      "type": "milestone",
+      "concept_id": "module9_complete",
+      "level": 5,
+      "progress": {
+        "current": 64,
+        "total": 67
+      },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "🎯",
+        "completed_topic": "Magnetic Flux, Gauss's Law aur Torque on Dipole",
+        "xp_earned": 70,
+        "milestone_progress": "Module 9/9 Clear",
+        "motivational_quote": "Zabardast Raju! Poora chapter clear! Ab final officer-level revision aur mega quiz baaki hai!"
+      },
+      "navigation": {
+        "next": "card_65_summary",
+        "button_text": "Continue to Revision ➔"
+      }
+    },
+    {
+      "card_id": "card_65_summary",
+      "card_slug": "card_65_summary",
+      "type": "summary",
+      "concept_id": "chapter_revision",
+      "level": 5,
+      "progress": {
+        "current": 65,
+        "total": 67
+      },
+      "summary_payload": {
+        "title": "⚡ Quick Officer Revision",
+        "revision_points": [
+          {
+            "topic": "Poles aur Monopole",
+            "point": "Statement I: Magnet ke do pole hamesha ek saath paaye jaate hain. Statement II: Isolated monopole possible hai. Sahi jawab: Sirf Statement I sahi hai — monopole possible nahi hai, isi se Gauss's law for magnetism bhi banti hai."
+          },
+          {
+            "topic": "Prithvi ka Magnetism",
+            "point": "Statement I: Magnetic Equator par Angle of Dip 0° hota hai. Statement II: Poles par Horizontal Component maximum hota hai. Sahi jawab: Sirf Statement I sahi hai — poles par Horizontal Component zero hota hai, na ki maximum."
+          },
+          {
+            "topic": "Right Hand vs Left Hand Rule",
+            "point": "Statement I: Right Hand Thumb Rule current ke field ki direction batata hai. Statement II: Fleming's Left Hand Rule conductor par lagne wale force ki direction batata hai. Sahi jawab: Dono Statements sahi hain — dono alag purpose ke liye hote hain, mix na karein."
+          },
+          {
+            "topic": "Parallel Wires ka Force",
+            "point": "Statement I: Same direction current wali parallel taar attract karti hain. Statement II: Opposite direction current wali parallel taar bhi attract karti hain. Sahi jawab: Sirf Statement I sahi hai — opposite direction wali taar repel karti hain."
+          },
+          {
+            "topic": "Curie Temperature aur Materials",
+            "point": "Statement I: Curie temperature ke upar ferromagnetic material paramagnetic ban jaata hai. Statement II: Permanent magnet ke liye soft iron behtar hota hai. Sahi jawab: Sirf Statement I sahi hai — permanent magnet ke liye steel behtar hota hai, soft iron electromagnet ke liye behtar hai."
+          }
+        ]
+      },
+      "navigation": {
+        "next": "card_66_final_quiz",
+        "button_text": "Start Final Officer Quiz ➔"
+      }
+    },
+    {
+      "card_id": "card_66_final_quiz",
+      "card_slug": "card_66_final_quiz",
+      "type": "final_quiz",
+      "concept_id": "master_officer_quiz",
+      "level": 5,
+      "progress": {
+        "current": 66,
+        "total": 67
+      },
+      "quiz_payload": {
+        "question": "Nimnlikhit statements par vichaar karein: (1) Ek current-carrying solenoid ke andar field bar magnet ke field jaisi hoti hai. (2) Fleming's Left Hand Rule mein Middle finger Field ki direction batata hai. (3) Diamagnetic materials magnetic field se attract hote hain. (4) Gauss's Law ke anusaar closed surface se total magnetic flux zero hota hai. Upar diye gaye kितने statements sahi hain?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Sirf ek statement sahi hai"
+          },
+          {
+            "id": "B",
+            "text": "Do statements sahi hain"
+          },
+          {
+            "id": "C",
+            "text": "Teen statements sahi hain"
+          },
+          {
+            "id": "D",
+            "text": "Sabhi chaar statements sahi hain"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Statement (1) sahi hai — solenoid ka external field bar magnet jaisa hota hai. Statement (2) galat hai — Fleming's Left Hand Rule mein First finger Field dikhata hai, Middle finger Current dikhata hai. Statement (3) galat hai — diamagnetic materials repel hote hain, attract nahi. Statement (4) sahi hai — Gauss's Law for Magnetism ke anusaar net flux zero hota hai monopole na hone ki wajah se. Isliye sirf 2 statements (1 aur 4) sahi hain."
+      },
+      "navigation": {
+        "next": "card_67_trophy",
+        "button_text": "Check Answer & Finish ➔"
+      }
+    },
+    {
+      "card_id": "card_67_trophy",
+      "card_slug": "card_67_trophy",
+      "type": "milestone",
+      "concept_id": "chapter_complete",
+      "level": 5,
+      "progress": {
+        "current": 67,
+        "total": 67
+      },
+      "milestone_payload": {
+        "title": "🏆 CHAPTER MASTERED!",
+        "badge_emoji": "🏆",
+        "completed_topic": "Magnetism in Physics — Full Chapter",
+        "xp_earned": 100,
+        "milestone_progress": "Chapter 100% Complete",
+        "motivational_quote": "Raju, ab tum fridge magnet se lekar electric motor tak, aur Prithvi ke magnetism se lekar Gauss's Law tak — sab kuछ officer level par samajhते ho! BPSC, SSC, Railway, NEET — sab exams ke liye taiyar ho!"
+      },
+      "navigation": {
+        "next": "chapter_end",
+        "button_text": "Finish Chapter ➔"
+      }
+    }
+  ]
+}
