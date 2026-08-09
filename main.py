@@ -19,7 +19,7 @@ SCRAPINGANT_KEY = os.environ.get("SCRAPINGANT_API_KEY")
 
 client = Groq(api_key=GROQ_KEY) if GROQ_KEY else None
 
-# Active Groq Models
+# Active Groq Models Priority
 MODELS = ["llama-3.1-8b-instant", "llama-3.3-70b-versatile"]
 
 def get_yesterday_info():
@@ -148,7 +148,6 @@ def fetch_full_article_content(article_url):
     
     try:
         soup = BeautifulSoup(content, "html.parser")
-        # Script aur style tags hatao
         for script in soup(["script", "style", "nav", "footer", "header"]):
             script.decompose()
             
@@ -179,7 +178,6 @@ def fetch_raw_bihar_news(target_dt):
                 pub_date = item.find('pubDate').text if item.find('pubDate') is not None else ""
                 
                 if title and is_yesterday_news(pub_date, target_dt):
-                    # Fetch Deep Content
                     deep_text = fetch_full_article_content(link)
                     context_str = deep_text if len(deep_text) > 100 else clean_html_text(item.find('description').text if item.find('description') is not None else "")[:250]
                     news_items.append(f"[Google News Bihar] Title: {title} | Full Context: {context_str}")
@@ -257,7 +255,7 @@ def fetch_raw_national_news(target_dt):
                         context_str = deep_text if len(deep_text) > 100 else clean_html_text(item.find('description').text if item.find('description') is not None else "")[:250]
                         national_items.append(f"[{source_name}] Title: {title} | Full Context: {context_str}")
                         count += 1
-                        if count >= 4: break # 4 articles per source (deep scraped)
+                        if count >= 4: break
             except Exception as e:
                 print(f"⚠️ Parsing error for {source_name}: {e}")
         source_stats[source_name] = count
@@ -266,7 +264,7 @@ def fetch_raw_national_news(target_dt):
     return "\n".join(remove_duplicate_news(national_items))
 
 # -------------------------------------------------------------
-# 4. AI SUMMARY GENERATOR (STRICT ZERO FILLERS)
+# 4. AI SUMMARY GENERATOR (8 EXAM-STANDARD CATEGORIES)
 # -------------------------------------------------------------
 def call_groq_safe(prompt, system_role="You are a JSON generator assistant."):
     time.sleep(1)
@@ -291,11 +289,11 @@ def call_groq_safe(prompt, system_role="You are a JSON generator assistant."):
     return ""
 
 def generate_clean_summary(raw_text, target_date_str, is_national=False):
-    # Safely fit within 5500 chars TPM limit
     truncated_raw = raw_text[:5500]
 
     scope_name = "India National" if is_national else "Bihar State"
     tag_name = "🎯 National Special / India Affairs" if is_national else "🎯 BPSC Special / Bihar Current Affairs"
+    economy_cat = "National Economy, Banking & Reports" if is_national else "Bihar Economy, Budget & Reports"
 
     prompt = f"""
     You are a Senior Current Affairs Content Director for BPSC, UPSC & Competitive Exams.
@@ -303,18 +301,22 @@ def generate_clean_summary(raw_text, target_date_str, is_national=False):
     
     {truncated_raw}
     
-    STRICT ALLOWED CATEGORIES (Pick ONLY from these exact 5 names):
-    1. "Govt Schemes & Policies"
-    2. "Infrastructure & Projects"
+    STRICT ALLOWED CATEGORIES (Pick ONLY from these exact 8 names):
+    1. "Govt Schemes, Policies & Governance"
+    2. "Infrastructure, Energy & Projects"
     3. "Agriculture, Environment & GI Tags"
-    4. "Appointments, Awards & Persons in News"
-    5. "{"National Economy, Budget & Reports" if is_national else "Bihar Economy, Budget & Reports"}"
+    4. "{economy_cat}"
+    5. "Science, Space & Defense Tech"
+    6. "International Relations & Summits"
+    7. "Appointments, Awards & Persons in News"
+    8. "Sports, Culture & Important Days"
 
     STRICT DISQUALIFICATION RULES:
     1. REJECT INCOMPLETE/VAGUE NEWS: If headline lacks exact organization, ministry name, or project scope (e.g., "Govt signs MoUs for startups"), DISQUALIFY IT.
     2. REJECT ROUTINE SPEECHES: Speeches, convocation meets, ribbon cuttings, and motivational lectures without executive decisions.
-    3. REJECT LOCAL/TRIVIAL NEWS: District-level train halts, traffic advisories, local crime, and local political fights.Reject other (except bihar) State based news which is not important for national and irrelevent for BPSC Exams.
-    4. REJECT DUPLICATES of the same event.
+    3. REJECT OTHER-STATE LOCAL NEWS: Disqualify news specific to other Indian states (e.g., Tamil Nadu, UP, MP, Karnataka local policies/schemes) UNLESS it has central Union Ministry involvement or national impact. Focus ONLY on pure Union/Central/Pan-India affairs.
+    4. REJECT LOCAL/TRIVIAL NEWS: District-level train halts, traffic advisories, local crime, and local political fights.
+    5. REJECT DUPLICATES of the same event.
 
     BULLET POINT QUALITY & ZERO-FILLER RULES:
     - Write EXACTLY 3 DEEP FACTUAL BULLET POINTS IN HINGLISH for each card.
@@ -329,7 +331,7 @@ def generate_clean_summary(raw_text, target_date_str, is_national=False):
         {{
           "id": "news_01",
           "title": "Clear Factual Headline with Specific Entities",
-          "category": "Select EXACT matching category",
+          "category": "Select EXACT matching category from the 8 allowed names",
           "bullets": [
             "Bullet 1: Deep factual details with exact names in Hinglish",
             "Bullet 2: Specific figures, numbers, or financial metrics in Hinglish",
