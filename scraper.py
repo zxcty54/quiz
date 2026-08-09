@@ -46,7 +46,6 @@ HEADERS = {
     ),
     "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
     "Accept-Language": "hi-IN,hi;q=0.9,en-IN;q=0.8,en;q=0.7",
-    "Referer": "https://pib.gov.in/",
     "Connection": "keep-alive",
 }
 
@@ -135,7 +134,7 @@ def clean_text(text):
 def clean_title(title):
     title = clean_text(title)
     title = re.sub(
-        r'\s*[-|–—]\s*(PIB|Press Information Bureau|News On AIR|Prasar Bharati).*$',
+        r'\s*[-|–—]\s*(News On AIR|Prasar Bharati).*$',
         '',
         title,
         flags=re.I
@@ -323,7 +322,7 @@ def extract_date_from_soup(soup):
 
 def is_within_rolling_window(parsed_date):
     if not parsed_date:
-        return True
+        return True  # Fallback: Accept active live items
 
     current_time = now_ist()
     if parsed_date.tzinfo is None:
@@ -458,46 +457,6 @@ def fetch_url(url):
 
 
 # ============================================================
-# PIB XML URL CONVERTER
-# ============================================================
-
-def convert_pib_article_url(url):
-    url = clean_url(url)
-    if not url:
-        return ""
-
-    m = re.search(r'PRID=(\d+)', url, flags=re.I)
-    if not m:
-        return url
-
-    prid = m.group(1)
-
-    # ✅ Force XML output as requested
-    return f"https://pib.gov.in/PressReleasePage.aspx?PRID={prid}&outputType=xml"
-
-
-def pib_article_urls(url):
-    url = clean_url(url)
-    if not url:
-        return []
-
-    m = re.search(r'PRID=(\d+)', url, flags=re.I)
-    if not m:
-        return [url]
-
-    prid = m.group(1)
-
-    # 1. outputType=xml (Primary)
-    # 2. format=xml (Secondary)
-    # 3. mode=print (Fallback)
-    return [
-        f"https://pib.gov.in/PressReleasePage.aspx?PRID={prid}&outputType=xml",
-        f"https://pib.gov.in/PressReleasePage.aspx?PRID={prid}&format=xml",
-        f"https://pib.gov.in/PressReleasePage.aspx?PRID={prid}&mode=print"
-    ]
-
-
-# ============================================================
 # DEEP ARTICLE CONTENT EXTRACTION
 # ============================================================
 
@@ -505,15 +464,13 @@ def extract_article_content(soup, source=""):
     for tag in soup(["script", "style", "noscript", "svg", "canvas", "nav", "footer", "form", "aside"]):
         tag.decompose()
 
-    # High-Priority Target Containers for PIB & Govt Portals
+    # Priority Target Containers for Govt Portals
     target_div = (
-        soup.find(id="ContentPlaceHolder1_divpri") or
-        soup.find(id="divpri") or
         soup.find(id="lblNewsDetail") or
         soup.find(id="lblContent") or
-        soup.find(class_="ReleaseIdText") or
-        soup.find(class_="release_text") or
-        soup.find(class_="innercontent")
+        soup.find(class_="innercontent") or
+        soup.find(class_="news-detail") or
+        soup.find(class_="pressrelease")
     )
 
     if target_div:
@@ -538,8 +495,7 @@ def extract_article_content(soup, source=""):
             pass
 
     selectors = [
-        "#ContentPlaceHolder1_divpri", "#divpri", "#lblNewsDetail", "#lblContent",
-        ".ReleaseIdText", ".release_text", "[itemprop='articleBody']", "article",
+        "#lblNewsDetail", "#lblContent", "[itemprop='articleBody']", "article",
         ".article-body", ".articleBody", ".article-content", ".articleContent",
         ".story-content", ".storyContent", ".news-content", ".newsContent",
         ".press-release", ".pressrelease", ".content-area", ".main-content", "main",
@@ -603,26 +559,10 @@ def fetch_generic_article_content(url, source=""):
         return "", None
 
     candidate_urls = [url]
-    if source == "PIB":
-        candidate_urls = pib_article_urls(url)
 
     for candidate_url in candidate_urls:
         debug(f"{source} ARTICLE FETCH: {candidate_url}")
         html = fetch_url(candidate_url)
-
-        # ✅ PIB XML EXTRACTION LOGIC
-        if html and html.strip().startswith("<?xml"):
-            try:
-                soup_xml = BeautifulSoup(html, "xml")
-                body = soup_xml.find("content") or soup_xml.find("description") or soup_xml.find("articleBody")
-                if body:
-                    text = clean_text(body.get_text())
-                    if len(text) > 100:
-                        success(f"{source} XML CONTENT FOUND | {len(text)} chars | {word_count(text)} words")
-                        return text, None
-            except Exception as xml_err:
-                debug(f"XML parse error: {xml_err}")
-
         if not html:
             continue
 
@@ -757,73 +697,6 @@ def deduplicate(items):
 # ACTIVE SCRAPER SOURCES
 # ============================================================
 
-PIB_FEEDS = [
-    "https://pib.gov.in/RssMain.aspx?ModId=6&Lang=1&Regid=1",
-    "https://pib.gov.in/RssMain.aspx?ModId=6&Lang=1&Regid=3",
-    "https://pib.gov.in/RssMain.aspx?ModId=6&Lang=1&Regid=5",
-    "https://pib.gov.in/RssMain.aspx?ModId=6&Lang=1&Regid=6",
-    "https://pib.gov.in/RssMain.aspx?ModId=6&Lang=1&Regid=17",
-    "https://pib.gov.in/RssMain.aspx?ModId=6&Lang=1&Regid=20",
-    "https://pib.gov.in/RssMain.aspx?ModId=6&Lang=1&Regid=22",
-    "https://pib.gov.in/RssMain.aspx?ModId=6&Lang=2&Regid=48",
-]
-
-
-def scrape_pib():
-    print("\n" + "=" * 70 + "\n🇮🇳 PIB\n" + "=" * 70)
-    entries = []
-
-    for feed_url in PIB_FEEDS:
-        html = fetch_url(feed_url)
-        if not html:
-            continue
-
-        parsed = feedparser.parse(html)
-        for entry in parsed.entries or []:
-            title = clean_title(entry.get("title", ""))
-            link = clean_url(entry.get("link", ""))
-            if not title or not link:
-                continue
-
-            date = None
-            for field in ["published", "updated", "pubDate", "date"]:
-                value = entry.get(field)
-                if value:
-                    date = parse_date(value)
-                    if date:
-                        break
-
-            entries.append({"title": title, "url": link, "date": date})
-
-    results = []
-    for item in entries[:MAX_PER_SOURCE * 2]:
-        content, article_date = fetch_generic_article_content(item["url"], "PIB")
-        if not content:
-            continue
-
-        final_date = article_date or item["date"]
-        obj = make_item(
-            source="PIB",
-            title=item["title"],
-            url=item["url"],
-            date=final_date,
-            content=content,
-            item_type="RSS + Article"
-        )
-        if obj:
-            results.append(obj)
-
-        if len(results) >= MAX_PER_SOURCE:
-            break
-
-    results = deduplicate(results)
-    if not results:
-        debug("PIB: Recent rolling window ka koi data nahi mila.")
-
-    print(f"✅ PIB usable: {len(results)}")
-    return results
-
-
 NEWS_ON_AIR_URLS = [
     "https://newsonair.gov.in/",
     "https://newsonair.gov.in/category/news/",
@@ -884,73 +757,6 @@ def scrape_news_on_air():
         debug("NEWS ON AIR: Recent rolling window ka koi data nahi mila.")
 
     print(f"✅ News On AIR usable: {len(results)}")
-    return results
-
-
-CMO_URLS = [
-    "https://cm.bihar.gov.in/users/news.aspx",
-    "https://cm.bihar.gov.in/users/preessrelease.aspx",
-    "https://cm.bihar.gov.in/",
-]
-
-
-def scrape_cmo_bihar():
-    print("\n" + "=" * 70 + "\n🏛️ CMO BIHAR\n" + "=" * 70)
-    candidates = []
-
-    for page_url in CMO_URLS:
-        html = fetch_url(page_url)
-        if not html:
-            continue
-
-        soup = BeautifulSoup(html, "lxml")
-        for a in soup.find_all("a", href=True):
-            href = clean_url(urljoin(page_url, a.get("href")))
-            title = clean_title(a.get_text(" ", strip=True))
-
-            if not href or len(title) < 15:
-                continue
-            if "cm.bihar.gov.in" not in href:
-                continue
-
-            low = title.lower()
-            if any(x in low for x in ["home", "contact", "login", "gallery", "photo", "feedback", "sitemap"]):
-                continue
-
-            candidates.append((title, href))
-
-    unique = []
-    seen = set()
-    for title, url in candidates:
-        if url not in seen:
-            seen.add(url)
-            unique.append((title, url))
-
-    results = []
-    for title, url in unique:
-        content, date = fetch_generic_article_content(url, "CMO Bihar")
-        if not content:
-            continue
-
-        obj = make_item(
-            source="CMO Bihar",
-            title=title,
-            url=url,
-            date=date,
-            content=content,
-            item_type="Press Release"
-        )
-        if obj:
-            results.append(obj)
-
-        if len(results) >= MAX_PER_SOURCE:
-            break
-
-    results = deduplicate(results)
-    if not results:
-        debug("CMO BIHAR: Recent rolling window ka koi data nahi mila.")
-
-    print(f"✅ CMO Bihar usable: {len(results)}")
     return results
 
 
@@ -1244,9 +1050,7 @@ def build_news():
     all_results = []
     source_results = {}
 
-    source_results["PIB"] = safe_source("PIB", scrape_pib)
     source_results["News On AIR"] = safe_source("News On AIR", scrape_news_on_air)
-    source_results["CMO Bihar"] = safe_source("CMO Bihar", scrape_cmo_bihar)
     source_results["IPRD Bihar"] = safe_source("IPRD Bihar", scrape_iprd_bihar)
     source_results["Bihar Cabinet"] = safe_source("Bihar Cabinet", scrape_bihar_cabinet)
     source_results["PTI"] = safe_source("PTI", scrape_pti)
@@ -1262,7 +1066,7 @@ def build_news():
 
     all_results = deduplicate(all_results)
 
-    bihar_sources = {"CMO Bihar", "IPRD Bihar", "Bihar Cabinet"}
+    bihar_sources = {"IPRD Bihar", "Bihar Cabinet"}
     bihar = []
     national = []
 
