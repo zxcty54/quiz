@@ -313,7 +313,7 @@ def generate_clean_summary(raw_text, target_date_str, is_national=False):
     STRICT DISQUALIFICATION RULES:
     1. REJECT INCOMPLETE/VAGUE NEWS: If headline lacks exact organization, ministry name, or project scope (e.g., "Govt signs MoUs for startups"), DISQUALIFY IT.
     2. REJECT ROUTINE SPEECHES: Speeches, convocation meets, ribbon cuttings, and motivational lectures without executive decisions.
-    3. REJECT LOCAL/TRIVIAL NEWS: District-level train halts, traffic advisories, local crime, and local political fights.
+    3. REJECT LOCAL/TRIVIAL NEWS: District-level train halts, traffic advisories, local crime, and local political fights.Reject State based news which is not imporatant for national.
     4. REJECT DUPLICATES of the same event.
 
     BULLET POINT QUALITY & ZERO-FILLER RULES:
