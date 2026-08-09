@@ -136,9 +136,6 @@ def safe_fetch(url, timeout=12):
     return None
 
 def fetch_full_article_content(article_url):
-    """
-    Article link ke andar jaakar poora body text scrape karta hai
-    """
     if not article_url or not article_url.startswith("http"):
         return ""
     
@@ -154,7 +151,7 @@ def fetch_full_article_content(article_url):
         paragraphs = soup.find_all('p')
         full_text = " ".join([p.text.strip() for p in paragraphs if len(p.text.strip()) > 35])
         clean_text = " ".join(full_text.split())
-        return clean_text[:800] # Maximum 800 characters per article for deep context
+        return clean_text[:800]
     except Exception as e:
         return ""
 
@@ -166,7 +163,6 @@ def fetch_raw_bihar_news(target_dt):
     news_items = []
     source_stats = {}
 
-    # A. Google News Bihar
     content = safe_fetch("https://news.google.com/rss/search?q=Bihar+Government+Schemes+OR+Infrastructure+OR+Economy+OR+Agriculture+when:2d&hl=hi&gl=IN&ceid=IN:hi")
     if content:
         try:
@@ -187,7 +183,6 @@ def fetch_raw_bihar_news(target_dt):
         except Exception as e:
             print(f"⚠️ Google News Bihar parse error: {e}")
 
-    # B. CMO Bihar
     content = safe_fetch("https://cm.bihar.gov.in/users/preessrelease.aspx")
     if content:
         cmo_count = 0
@@ -210,7 +205,6 @@ def fetch_raw_national_news(target_dt):
     national_items = []
     source_stats = {}
     
-    # 1. Direct PIB National Portal (reg=48)
     pib_count = 0
     pib_content = safe_fetch("https://www.pib.gov.in/Allrel.aspx?reg=48&lang=1")
     if pib_content:
@@ -230,7 +224,6 @@ def fetch_raw_national_news(target_dt):
             print(f"⚠️ PIB National Portal scrape error: {e}")
     source_stats["PIB National Portal"] = pib_count
 
-    # 2. Standard RSS Sources with Deep Page Scraping
     national_rss_sources = [
         ("The Hindu", "https://www.thehindu.com/news/national/feeder/default.rss"),
         ("Hindustan Times", "https://www.hindustantimes.com/feeds/rss/india-news/rssfeed.xml"),
@@ -264,9 +257,9 @@ def fetch_raw_national_news(target_dt):
     return "\n".join(remove_duplicate_news(national_items))
 
 # -------------------------------------------------------------
-# 4. AI SUMMARY GENERATOR (8 EXAM-STANDARD CATEGORIES)
+# 4. AI SUMMARY GENERATOR (UPDATED CUSTOM PROMPT)
 # -------------------------------------------------------------
-def call_groq_safe(prompt, system_role="You are a JSON generator assistant."):
+def call_groq_safe(prompt, system_role="You are a Senior Current Affairs Editor for BPSC (Civil Services) and State Competitive Exams."):
     time.sleep(1)
     for model_name in MODELS:
         try:
@@ -290,52 +283,75 @@ def call_groq_safe(prompt, system_role="You are a JSON generator assistant."):
 
 def generate_clean_summary(raw_text, target_date_str, is_national=False):
     truncated_raw = raw_text[:5500]
-
-    scope_name = "India National" if is_national else "Bihar State"
+    scope_name = "National / India Level" if is_national else "Bihar State Level"
     tag_name = "🎯 National Special / India Affairs" if is_national else "🎯 BPSC Special / Bihar Current Affairs"
-    economy_cat = "National Economy, Banking & Reports" if is_national else "Bihar Economy, Budget & Reports"
 
     prompt = f"""
-    You are a Senior Current Affairs Content Director for BPSC, UPSC & Competitive Exams.
-    Below is raw scraped news text containing DEEP ARTICLE CONTEXT for {scope_name} Level:
-    
+    You are a Senior Current Affairs Editor for BPSC (Civil Services) and State Competitive Exams.
+    Your task is to analyze raw news text scraped for Yesterday ({target_date_str}) at {scope_name} and generate high-yield exam-oriented news cards in structured JSON format.
+
+    RAW SCRAPED NEWS TEXT:
     {truncated_raw}
-    
-    STRICT ALLOWED CATEGORIES (Pick ONLY from these exact 8 names):
-    1. "Govt Schemes, Policies & Governance"
-    2. "Infrastructure, Energy & Projects"
-    3. "Agriculture, Environment & GI Tags"
-    4. "{economy_cat}"
-    5. "Science, Space & Defense Tech"
-    6. "International Relations & Summits"
-    7. "Appointments, Awards & Persons in News"
-    8. "Sports, Culture & Important Days"
 
-    STRICT DISQUALIFICATION RULES:
-    1. REJECT INCOMPLETE/VAGUE NEWS: If headline lacks exact organization, ministry name, or project scope (e.g., "Govt signs MoUs for startups"), DISQUALIFY IT.
-    2. REJECT ROUTINE SPEECHES: Speeches, convocation meets, ribbon cuttings, and motivational lectures without executive decisions.
-    3. REJECT OTHER-STATE LOCAL NEWS: Disqualify news specific to other Indian states (e.g., Tamil Nadu, UP, MP, Karnataka local policies/schemes) UNLESS it has central Union Ministry involvement or national impact. Focus ONLY on pure Union/Central/Pan-India affairs.
-    4. REJECT LOCAL/TRIVIAL NEWS: District-level train halts, traffic advisories, local crime, and local political fights.
-    5. REJECT DUPLICATES of the same event.
+    ======================================================================
+    STRICT ALLOWED CATEGORIES (Classify each news card into EXACTLY one):
+    ======================================================================
+    1. "Govt Schemes & Policies"
+       - Union Cabinet Decisions: Bills, Acts, Amendments, CCEA Approvals.
+       - Central Flagship Schemes: Outlay, Target Year, Nodal Ministry, Beneficiary Eligibility, Portals/Apps.
+       - Policy Frameworks: National Education Policy (NEP), Healthcare Initiatives, Digital India, Renewable Energy Policies.
 
-    BULLET POINT QUALITY & ZERO-FILLER RULES:
-    - Write EXACTLY 3 DEEP FACTUAL BULLET POINTS IN HINGLISH for each card.
-    - ABSOLUTELY NO FILLER SENTENCES (e.g. NEVER write "Isse kisanon ko labh hoga", "Yeh samaroh prerit karta hai", "Isse connectivity badhegi").
-    - Bullet 1 (Core Decision & Entities): Exact project/scheme name, Ministry/Department, Implementing Body, and Location.
-    - Bullet 2 (Numbers, Metrics & Outlay): Exact financial outlay, capacity, percentage, ratio, or target year.
-    - Bullet 3 (Policy Framework / Technical Context): Mention parent scheme (e.g. PM Matsya Sampada Yojana, APEDA Act 1985), nodal body, or statutory mechanism.
+    2. "Infrastructure, Economy & Reports"
+       - Union Budget & Economic Survey: GDP Growth Estimates, Fiscal Deficit, Tax Changes, Key Allocations.
+       - Reports & Indices: NITI Aayog Reports (SDG, Innovation Index), RBI Monetary Policy Rates, Global Indices (Human Development, Hunger, Press Freedom) with India's Rank & Score.
+       - Mega Infrastructure: Expressways, Dedicated Freight Corridors, Metro Extensions, Airports, Ports (Sagarmala), Vande Bharat, Power Plants.
+
+    3. "Science, Defense & Environment"
+       - Space & Tech: ISRO & NASA Missions (Satellite Type, Launch Vehicle e.g. LVM3/PSLV/GSLV, Orbit, Launch Site).
+       - Defense & Security: DRDO Missile Tests, Defense Purchases, Submarines, Warships, Drone Policies.
+       - Military Exercises: Joint Military/Naval/Air Exercises (Participating Countries + Exercise Name + Exact Location/Venue).
+       - Environment & Wildlife: Ramsar Sites, Tiger/Elephant Reserves, National Parks, COP Summits, Net-Zero Targets.
+
+    4. "International Affairs & Summits"
+       - Global Summits: G20, BRICS, SCO, ASEAN, QUAD, G7, COP Summits (Theme, Host City/Country, Declarations).
+       - Bilateral Relations: India's major MoUs, Treaties, Trade Deals, Strategic Alliances.
+       - Global Bodies: UN, IMF, World Bank, WHO, WTO, NATO headquarter updates and decisions.
+
+    5. "Appointments, Awards & Sports"
+       - National Appointments: CJI, Chief Election Commissioner, CAG, Attorney General, UPSC Chairman, Defense Chiefs, RBI Governor.
+       - Major Awards: Bharat Ratna, Padma Awards, Sahitya Akademi, Dadasaheb Phalke, Nobel Prize, Booker Prize.
+       - Sports: Olympics, Asian Games, Commonwealth Games, World Cups, Grand Slams (Winners/Runner-ups, Host Countries, India's Medal Tally).
+
+    ======================================================================
+    STRICT REJECTION & DISCARD RULES (MANDATORY):
+    ======================================================================
+    1. REJECT ALL Local Politics, Crime, Accidents, Protests, and Political Party Speeches/Rallies.
+    2. REJECT ALL Education, School/University Notices, Vacancies, Exam Dates, Admit Cards, and Results.
+    3. REJECT Routine Administrative Instructions and State-specific local affairs (Unless it is a Major Central Initiative).
+    4. ACCEPT ONLY factual, high-yield news relevant for BPSC/Civil Services Prelims & Mains.
+    5. DO NOT WRITE DISCLAIMERS OR FILLER TEXT. If no news qualifies, return {{"news_cards": []}}.
+
+    ======================================================================
+   CRITICAL BULLET POINT RULES (PURE NEWS EXPLANATION ONLY):
+    - Write ALL 3 Bullets in **Hinglish** (Hindi written in Roman English script).
+    - Focus STRICTLY on explaining WHAT happened in the news (Facts, Figures, Details).
+    - STRICTLY FORBIDDEN: Do NOT write "importance", "strategic significance", "exam value", or filler opinions.
+    - Bullet 1 (What Happened): Core event, decision, Ministry/Department, or location.
+    - Bullet 2 (Numbers & Facts): Specific budget outlay, target date, numerical figures, MoU amount, or rank.
+    - Bullet 3 (Further News Detail): Additional factual details about how the scheme/event works or implementation steps.
+    - Do NOT use Markdown asterisks (**).
 
     JSON SCHEMA OUTPUT:
     {{
       "news_cards": [
         {{
           "id": "news_01",
-          "title": "Clear Factual Headline with Specific Entities",
-          "category": "Select EXACT matching category from the 8 allowed names",
+          "title": "Clear Factual Title in Hinglish",
+          "category": "Select EXACT matching category name from allowed list",
           "bullets": [
-            "Bullet 1: Deep factual details with exact names in Hinglish",
-            "Bullet 2: Specific figures, numbers, or financial metrics in Hinglish",
-            "Bullet 3: Parent scheme name, statutory body, or technical context in Hinglish"
+            "Bullet 1: Core fact with Nodal Ministry/Location in Hinglish",
+            "Bullet 2: Exact numerical data, budget, target year, or rank in Hinglish",
+            "Bullet 3: Strategic policy significance/context in Hinglish"
           ],
           "exam_tag": "{tag_name}",
           "date": "{target_date_str}"
@@ -344,7 +360,7 @@ def generate_clean_summary(raw_text, target_date_str, is_national=False):
     }}
     """
     
-    return call_groq_safe(prompt, system_role="Senior Current Affairs Content Director")
+    return call_groq_safe(prompt, system_role="Senior Current Affairs Editor for BPSC (Civil Services) and State Competitive Exams.")
 
 # -------------------------------------------------------------
 # 5. MASTER HISTORY APPEND FUNCTIONS
