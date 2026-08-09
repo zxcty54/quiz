@@ -1,78 +1,4 @@
-Achha kaam hai 👍 — script **chalegi**, par abhi jo PIB ka **actual HTML** aapne khud paste kiya tha, uske hisaab se isme **3 bade bugs** hain. Neeche pehle problems, phir fixed version.
 
----
-
-# ❌ Problems in Your Code
-
-## 🔴 1. Content selectors PIB pe exist hi nahi karte
-
-Aap dhoondh rahe ho:
-
-```python
-class_="ReleaseContentText"   ❌ nahi hai
-class_="content-area"         ❌ nahi hai
-id="Title"                    ❌ (actual: h2 id="Titleh2")
-class_="text_just"            ❌ nahi hai
-```
-
-Actual PIB structure ye hai 👇
-
-| Cheez | Selector |
-|-------|----------|
-| **Full content (BEST)** | `input#ltrDescriptionn` (hidden, ready HTML) |
-| Visible content | `div.innner-page-main-about-us-content-right-part` |
-| Title | `h2#Titleh2` |
-| Date | `div#PrDateTime` |
-| Ministry | `div#MinistryName` |
-
-Matlab aapka code hamesha **fallback (saare `<p>` tags)** pe gir raha hai.
-
----
-
-## 🔴 2. Fallback se content **DOUBLE** ho raha hai 🔥
-
-PIB page pe ek hidden div hota hai:
-
-```html
-<div id="PdfDiv" style="display: none;">
-   ...same article dobara...
-</div>
-```
-
-Aap saare `<p>` uthaate ho → **har article 2 baar** save hoga.  
-Isliye `PdfDiv` ko **decompose karna zaroori hai**.
-
----
-
-## 🔴 3. Date galat / missing
-
-- PIB RSS me `pubDate` kaafi baar hota hi nahi
-- Aap raw string save kar rahe ho, parse nahi
-- Isse aage filtering/sorting kuch nahi ho payega
-
-Sahi date yaha hai:
-```html
-<div id="PrDateTime">Posted On: 09 AUG 2026 7:20PM by PIB Delhi</div>
-```
-
----
-
-## 🟡 Chhoti problems
-
-| Issue | Fix |
-|---|---|
-| `lang=1` hardcoded | RSS se lang derive karo |
-| `entry.get("pubDate")` | feedparser me ye key hoti hi nahi (`published` hota hai) |
-| JSON infinite grow karega | age-based prune add karo |
-| Dedup sirf URL se | PRID se karo (better) |
-| `re`, `urlencode` unused | remove |
-| No age filter | purani news bhi aa jayegi |
-
----
-
-# ✅ FIXED + PRODUCTION READY VERSION
-
-```python
 import os
 import re
 import json
@@ -391,36 +317,9 @@ if __name__ == "__main__":
     process_pib_rss()
 ```
 
----
 
-# 🔑 Sabse Bada Takeaway
 
-| Aapka code | Fixed code |
-|---|---|
-| Galat selectors → fallback | `input#ltrDescriptionn` (perfect clean content) |
-| Content 2x (PdfDiv) | PdfDiv decompose ✅ |
-| Raw/missing date | `#PrDateTime` parse → real datetime ✅ |
-| lang hardcoded | RSS se auto ✅ |
-| JSON infinite | 7-day prune ✅ |
-| URL dedupe | PRID dedupe ✅ |
-| Ministry missing | `#MinistryName` capture ✅ |
-
----
-
-# 💡 Multi-language / Multi-region chalana ho to
-
-```python
 PIB_FEEDS = [
     "https://pib.gov.in/RssMain.aspx?ModId=6&Lang=1&Regid=3",   # English
     "https://pib.gov.in/RssMain.aspx?ModId=6&Lang=2&Regid=3",   # Hindi
 ]
-```
-
-Loop me `PIB_LANG` ko har feed ke liye set kar dena (global ki jagah function argument bana lo).
-
----
-
-Batao next kya chahiye:
-- ✅ Multi-feed (Hindi + English) version
-- ✅ Isko aapke bade scraper (`build_news`) me merge karke
-- ✅ Ya ministry-wise filtering (sirf Cabinet/PMO/Finance etc.)
