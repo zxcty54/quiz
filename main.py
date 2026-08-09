@@ -98,7 +98,7 @@ def clean_html_text(text):
 
 def pre_filter_junk_news(raw_text):
     """
-    Token Saver: Python-Level Hard Rejection for Crime, Accidents, and Routine Political Tributes
+    Python-Level Hard Rejection for Crime, Accidents, and Routine Political Tributes
     """
     lines = raw_text.split("\n")
     cleaned_lines = []
@@ -147,22 +147,27 @@ def remove_duplicate_news(news_list):
 
 def validate_and_clean_cards(cards):
     """
-    Post-processing filter to eliminate cards with identical/repetitive bullets
+    Post-processing filter to eliminate cards with identical/repetitive bullets or low-value fillers
     """
     valid_cards = []
     for card in cards:
         bullets = card.get("bullets", [])
         if len(bullets) == 3:
             b1, b2, b3 = bullets[0].strip().lower(), bullets[1].strip().lower(), bullets[2].strip().lower()
-            # Ensure bullets are distinct and not copy-pasted
+            # Ensure bullets are distinct and not copy-pasted or generic
             if b1 != b2 and b2 != b3 and b1 != b3:
-                valid_cards.append(card)
+                # Reject if filler phrases exist
+                filler_check = any("prerna ka srot" in b or "naitik sarkar" in b or "shradhanjali dene" in b for b in [b1, b2, b3])
+                if not filler_check:
+                    valid_cards.append(card)
+                else:
+                    print(f"⚠️ Dropped card due to filler content: {card.get('title')}")
             else:
                 print(f"⚠️ Dropped card due to repetitive bullets: {card.get('title')}")
     return valid_cards
 
 # -------------------------------------------------------------
-# 2. SAFE FETCHER & DEEP ARTICLE SCRAPER
+# 2. SAFE FETCHER & DEEP ARTICLE SCRAPER (ENHANCED)
 # -------------------------------------------------------------
 def safe_fetch(url, timeout=12):
     try:
@@ -184,6 +189,9 @@ def safe_fetch(url, timeout=12):
     return None
 
 def fetch_full_article_content(article_url):
+    """
+    Article link ke andar jaakar REAL DEEP BODY TEXT scrape karta hai (Up to 1200 Chars)
+    """
     if not article_url or not article_url.startswith("http"):
         return ""
     
@@ -193,13 +201,23 @@ def fetch_full_article_content(article_url):
     
     try:
         soup = BeautifulSoup(content, "html.parser")
-        for script in soup(["script", "style", "nav", "footer", "header"]):
+        
+        # Unwanted UI tags decompose karo
+        for script in soup(["script", "style", "nav", "footer", "header", "aside", "form"]):
             script.decompose()
             
         paragraphs = soup.find_all('p')
-        full_text = " ".join([p.text.strip() for p in paragraphs if len(p.text.strip()) > 35])
+        valid_paragraphs = []
+        
+        for p in paragraphs:
+            text = p.text.strip()
+            # Ignore short junk lines, copyright notices, and share buttons
+            if len(text) > 45 and not any(junk in text.lower() for x in ["subscribe", "copyright", "rights reserved", "follow us"]):
+                valid_paragraphs.append(text)
+                
+        full_text = " ".join(valid_paragraphs)
         clean_text = " ".join(full_text.split())
-        return clean_text[:400] # Token Saver: Truncate deep text to 400 chars per article
+        return clean_text[:1200] # Expanded to 1200 characters for deep context
     except Exception as e:
         return ""
 
@@ -223,8 +241,8 @@ def fetch_raw_bihar_news(target_dt):
                 
                 if title and is_yesterday_news(pub_date, target_dt):
                     deep_text = fetch_full_article_content(link)
-                    context_str = deep_text if len(deep_text) > 80 else clean_html_text(item.find('description').text if item.find('description') is not None else "")[:180]
-                    news_items.append(f"[Source: Google News Bihar] Title: {title} | Context: {context_str}")
+                    context_str = deep_text if len(deep_text) > 120 else clean_html_text(item.find('description').text if item.find('description') is not None else "")[:300]
+                    news_items.append(f"[Source: Google News Bihar] Title: {title} | Article Content: {context_str}")
                     gnews_count += 1
                     if gnews_count >= 6: break
         except Exception as e:
@@ -266,9 +284,10 @@ def fetch_raw_national_news(target_dt):
                     if not any(x in title.lower() for x in ["home", "privacy", "terms", "contact", "back"]):
                         full_url = href if href.startswith("http") else f"https://www.pib.gov.in/{href}"
                         deep_text = fetch_full_article_content(full_url)
-                        national_items.append(f"[Source: PIB Central] Title: {title} | Context: {deep_text[:400]}")
-                        pib_count += 1
-                        if pib_count >= 6: break
+                        if len(deep_text) > 100:
+                            national_items.append(f"[Source: PIB Central] Title: {title} | Article Content: {deep_text}")
+                            pib_count += 1
+                            if pib_count >= 6: break
         except Exception as e:
             print(f"⚠️ PIB National Portal scrape error: {e}")
     source_stats["PIB Central"] = pib_count
@@ -285,9 +304,10 @@ def fetch_raw_national_news(target_dt):
                 if len(title) > 30 and ("newsonair" in link or link.startswith("/")):
                     full_url = link if link.startswith("http") else f"https://newsonair.gov.in{link}"
                     deep_text = fetch_full_article_content(full_url)
-                    national_items.append(f"[Source: NewsOnAir National] Title: {title} | Context: {deep_text[:400]}")
-                    air_count += 1
-                    if air_count >= 5: break
+                    if len(deep_text) > 100:
+                        national_items.append(f"[Source: NewsOnAir National] Title: {title} | Article Content: {deep_text}")
+                        air_count += 1
+                        if air_count >= 5: break
         except Exception as e:
             print(f"⚠️ NewsOnAir scrape error: {e}")
     source_stats["NewsOnAir National"] = air_count
@@ -305,8 +325,8 @@ def fetch_raw_national_news(target_dt):
                 
                 if title and is_yesterday_news(pub_date, target_dt):
                     deep_text = fetch_full_article_content(link)
-                    context_str = deep_text if len(deep_text) > 80 else clean_html_text(item.find('description').text if item.find('description') else "")[:180]
-                    national_items.append(f"[Source: Livemint Policy] Title: {title} | Context: {context_str}")
+                    context_str = deep_text if len(deep_text) > 100 else clean_html_text(item.find('description').text if item.find('description') else "")[:300]
+                    national_items.append(f"[Source: Livemint Policy] Title: {title} | Article Content: {context_str}")
                     mint_count += 1
                     if mint_count >= 5: break
         except Exception as e:
@@ -317,7 +337,7 @@ def fetch_raw_national_news(target_dt):
     return "\n".join(remove_duplicate_news(national_items))
 
 # -------------------------------------------------------------
-# 4. AI SUMMARY GENERATOR (TOKEN-SAVER SAFE PROMPT)
+# 4. AI SUMMARY GENERATOR (STRICT REAL FACTS PROMPT)
 # -------------------------------------------------------------
 def call_groq_safe(prompt, system_role="You are a Senior Current Affairs Editor for BPSC (Civil Services) and State Competitive Exams."):
     time.sleep(1)
@@ -331,7 +351,7 @@ def call_groq_safe(prompt, system_role="You are a Senior Current Affairs Editor 
                 ],
                 temperature=0.01,
                 response_format={"type": "json_object"},
-                max_tokens=1800, # Token Saver Budget limit
+                max_tokens=2200,
                 timeout=45,
             )
             print(f"⚡ Groq LLM Success using [{model_name}]!")
@@ -343,80 +363,57 @@ def call_groq_safe(prompt, system_role="You are a Senior Current Affairs Editor 
 
 def generate_clean_summary(raw_text, target_date_str, is_national=False):
     filtered_text = pre_filter_junk_news(raw_text)
-    
-    # Token Saver: Strict 3200 characters limit
-    truncated_raw = filtered_text[:3200]
+    truncated_raw = filtered_text[:4500]
     
     scope_name = "National / India Level" if is_national else "Bihar State Level"
     tag_name = "🎯 National Special / India Affairs" if is_national else "🎯 BPSC Special / Bihar Current Affairs"
 
     prompt = f"""
     You are a Senior Current Affairs Editor for BPSC (Civil Services) and State Competitive Exams.
-    Your task is to analyze raw news text scraped for Yesterday ({target_date_str}) at {scope_name} and generate high-yield exam-oriented news cards in structured JSON format.
+    Below is raw scraped news text containing DEEP ARTICLE TEXT for {scope_name}:
 
-    RAW SCRAPED NEWS TEXT WITH SOURCE TAGS:
+    RAW SCRAPED NEWS TEXT WITH FULL ARTICLE CONTENT:
     {truncated_raw}
 
     ======================================================================
     STRICT ALLOWED CATEGORIES (Classify each news card into EXACTLY one):
     ======================================================================
     1. "Govt Schemes & Policies"
-       - Union Cabinet Decisions: Bills, Acts, Amendments, CCEA Approvals.
-       - Central Flagship Schemes: Outlay, Target Year, Nodal Ministry, Beneficiary Eligibility, Portals/Apps.
-       - Policy Frameworks: NEP, Healthcare Initiatives, Digital India, Renewable Energy.
-
     2. "Infrastructure, Economy & Reports"
-       - Union Budget & Economic Survey: GDP Growth Estimates, Fiscal Deficit, Allocations.
-       - Reports & Indices: NITI Aayog Reports, RBI Policy Rates, Global Indices with India's Rank & Score.
-       - Mega Infrastructure: Expressways, Freight Corridors, Metro, Airports, Ports, Vande Bharat.
-
     3. "Science, Defense & Environment"
-       - Space & Tech: ISRO & NASA Missions (Satellite Type, Launch Vehicle e.g. LVM3/PSLV, Orbit).
-       - Defense & Security: DRDO Missile Tests, Defense Purchases, Submarines, Warships.
-       - Military Exercises: Joint Military/Naval/Air Exercises (Countries + Exercise Name + Venue).
-       - Environment & Wildlife: Ramsar Sites, Tiger Reserves, COP Summits, Net-Zero Targets.
-
     4. "International Affairs & Summits"
-       - Global Summits: G20, BRICS, SCO, ASEAN, QUAD, G7, COP Summits (Theme, Host City, Declarations).
-       - Bilateral Relations: India's major MoUs, Treaties, Trade Deals.
-       - Global Bodies: UN, IMF, World Bank, WHO, WTO, NATO.
-
     5. "Appointments, Awards & Sports"
-       - National Appointments: CJI, CEC, CAG, Attorney General, UPSC Chairman, Defense Chiefs, RBI Governor.
-       - Major Awards: Bharat Ratna, Padma Awards, Sahitya Akademi, Dadasaheb Phalke, Nobel Prize.
-       - Sports & Anniversaries: Olympics, Asian Games, World Cups, Grand Slams, Historical Anniversaries/Commemorations (e.g. Quit India Movement, Vande Mataram 150 years).
 
     ======================================================================
-    ABSOLUTE ZERO TOLERANCE DISQUALIFICATION RULES:
+    ABSOLUTE QUALITY & REJECTION RULES:
     ======================================================================
-    1. REJECT ALL CRIME & ACCIDENTS: Shootings, murders, police investigations, arrests, thefts.
-    2. REJECT ALL LOCAL PROTESTS & STUDENT TALKS: State student union demands, local strikes.
-    3. REJECT ALL PARTY POLITICS: TPCC appointments, Congress/BJP internal meets, election campaigning.
-    4. REJECT REPETITIVE / DUPLICATE NEWS covering the same event or tribute.
-    5. NEVER WRITE COPY-PASTE REPETITIVE BULLETS (Bullet 1, 2, and 3 MUST contain distinct factual statements).
-    6. IF NO NEWS QUALIFIES: Return {{"news_cards": []}}.
+    1. EXTRACT REAL FACTS ONLY: Do NOT fabricate or write generic statements like "Isse logon ko prerna milegi" or "Naitik sarkar ki disha mein kaam kiya".
+    2. REJECT ROUTINE SPEECHES & TRIBUTES: Simple tributes, political speeches, and ceremonial greetings without specific government policy decisions or data MUST BE REJECTED.
+    3. REJECT ALL Crime, Accidents, Party Politics, Local Strikes, and Other-State Local News.
+    4. IF ARTICLE HAS NO HARD FACTS: DISQUALIFY IT. It is better to return FEWER high-quality cards than junk/fabricated ones.
+    5. IF NO NEWS QUALIFIES: Return {{"news_cards": []}}.
 
     ======================================================================
-    BULLET POINT QUALITY RULES (EXACTLY 3 DISTINCT BULLETS PER CARD):
+    BULLET POINT RULES (EXACTLY 3 DISTINCT HARD-FACT BULLETS):
     ======================================================================
-    - Bullet 1 (Core Fact): What happened, Nodal Ministry/Department, Host Country/City or Location in Hinglish.
-    - Bullet 2 (Numerical/Exam Data): Specific budget outlay, target year, India's rank, percentage, or MoU details. If no number exists, state exact Nodal Agency or Act Name.
-    - Bullet 3 (Policy Significance): Strategic importance, policy objective, or context for exams in Hinglish.
+    - Bullet 1 (Core Action): Specific decision, scheme, project, or event name + Nodal Ministry/Department + Location in Hinglish.
+    - Bullet 2 (Exact Figures/Data): Specific budget amount, target year, India's rank, percentage, MoU partner, or statutory body mentioned in the article text.
+    - Bullet 3 (Policy Scope/Context): Objective, operational mechanism, or parent framework mentioned in the article text.
     - Write ALL Titles and Bullets in Hinglish (Hindi written in Roman English Script).
-    - Capture the "source_name" from the tag in raw input (e.g., "PIB Central", "NewsOnAir National", "Livemint Policy", "Google News Bihar", "CMO Bihar").
+    - Capture the exact "source_name" tag from the raw text (e.g., "PIB Central", "NewsOnAir National", "Livemint Policy", "Google News Bihar", "CMO Bihar").
 
     JSON SCHEMA OUTPUT:
     {{
       "news_cards": [
         {{
           "id": "news_01",
-          "title": "Clear Factual Title in Hinglish",
-          "source_name": "Name of extracted source e.g. PIB Central / NewsOnAir National",
+          "title": "Clear Detailed Factual Title in Hinglish",
+          "source_name": "Name of extracted source",
           "category": "Select EXACT matching category name from allowed list",
           "bullets": [
-            "Bullet 1: Core fact with Nodal Ministry/Location in Hinglish",
-            "Bullet 2: Specific numerical data, budget, target year, or nodal agency in Hinglish",
-            "Bullet 3: Strategic policy significance/context in Hinglish"
+            "Bullet 1: Deep factual details with exact names/ministry in Hinglish",
+            "Bullet 2: Specific figures, numbers, budget, or metrics from text in Hinglish",
+            "Bullet 3: Parent policy framework or operational scope in Hinglish"
           ],
           "exam_tag": "{tag_name}",
           "date": "{target_date_str}"
@@ -483,7 +480,6 @@ if __name__ == "__main__":
         ai_bihar = generate_clean_summary(raw_bihar, date_str, is_national=False)
         try:
             parsed_bihar = json.loads(ai_bihar.strip())
-            cards_count = len(parsed_bihar.get('news_cards', []))
             
             # Post-processing Token & Quality Validation
             clean_bihar_cards = validate_and_clean_cards(parsed_bihar.get("news_cards", []))
