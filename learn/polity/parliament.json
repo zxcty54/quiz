@@ -1,0 +1,2133 @@
+```json
+{
+  "topic_id": "parliament_polity_india",
+  "topic_title": "Indian Parliament - Complete Polity",
+  "target_exams": ["BPSC", "BSSC", "RRB NTPC", "SSC CGL", "UPSC Prelims", "BPSC TRE"],
+  "total_cards": 72,
+  "characters": {
+    "aman": {
+      "name": "Aman Sir",
+      "role": "teacher",
+      "avatar": "👨‍🏫"
+    },
+    "raju": {
+      "name": "Raju",
+      "role": "student",
+      "avatar": "👦"
+    }
+  },
+  "cards": [
+    {
+      "card_id": "card_01_intro",
+      "card_slug": "card_01_intro",
+      "type": "intro",
+      "concept_id": "parliament_introduction",
+      "level": 1,
+      "progress": {
+        "current": 1,
+        "total": 72
+      },
+      "intro_payload": {
+        "title": "Indian Parliament - Complete Mastery",
+        "icon": "🏛️",
+        "target_exams": ["BPSC", "BSSC", "RRB NTPC", "SSC CGL", "UPSC Prelims", "BPSC TRE"],
+        "learning_outcomes": [
+          "Structure: President + Lok Sabha + Rajya Sabha",
+          "Composition, Qualifications, Tenure, Powers",
+          "Parliamentary Sessions & Procedures",
+          "Legislative Process & Types of Bills",
+          "Budget Process & Financial Matters",
+          "Parliamentary Committees - Types & Functions",
+          "Special Powers & Privileges",
+          "Emergency Provisions & Parliament",
+          "BPSC/UPSC PYQ Traps on Articles 79-122"
+        ],
+        "estimated_time": "60 minutes",
+        "xp_reward": 600
+      },
+      "navigation": {
+        "next": "card_02_daily_connect",
+        "button_text": "Start Learning ➔"
+      }
+    },
+    {
+      "card_id": "card_02_daily_connect",
+      "card_slug": "card_02_daily_connect",
+      "type": "chat",
+      "concept_id": "parliament_daily_life",
+      "level": 1,
+      "progress": {
+        "current": 2,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, tumhare school mein jab koi bada decision lena hota hai - jaise annual function ka plan ya sports day - toh principal akele decide karte hain ya sabko pucha jata hai?"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir, sabko pucha jata hai! Class representatives milke decide karte hain, phir principal approve karte hain."
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul sahi! Ye choti si democracy hai tumhare school ki. Isi tarah poore desh ke liye decisions lene wali sabse badi body hai PARLIAMENT. Ye teen parts se banti hai - President, Lok Sabha aur Rajya Sabha. Sabko milke Bharat ki sansad kehte hain jo Article 79 mein define hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab teen cheezon ka combination hai Parliament?"
+        }
+      ],
+      "navigation": {
+        "next": "card_03_parliament_structure",
+        "button_text": "Structure Samjho ➔"
+      }
+    },
+    {
+      "card_id": "card_03_parliament_structure",
+      "card_slug": "card_03_parliament_structure",
+      "type": "chat",
+      "concept_id": "parliament_structure_basic",
+      "level": 1,
+      "progress": {
+        "current": 3,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Haan! Article 79 clearly kehta hai - 'There shall be a Parliament for the Union which shall consist of the President and two Houses'. Do Houses hain: Lok Sabha (Lower House / House of People) aur Rajya Sabha (Upper House / Council of States). Ye Bicameral system hai - do ghar wali vyavastha."
+        },
+        {
+          "speaker": "raju",
+          "text": "President bhi Parliament ka hissa hai? Main toh socha tha sirf Lok Sabha aur Rajya Sabha!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bahut important point pakda tumne! Ye ek classic BPSC trap hai. President technically Parliament ka integral part hai kyunki koi bhi bill law tab banta hai jab President sign kare. Lekin President Parliament ke kisi House ka member NAHI hota. Wo session mein baith ke debate nahi karta. Samjhe confusion?"
+        },
+        {
+          "speaker": "raju",
+          "text": "Achhaaaa... toh President part hai but member nahi hai!"
+        }
+      ],
+      "navigation": {
+        "next": "card_04_why_bicameral",
+        "button_text": "Why Two Houses? ➔"
+      }
+    },
+    {
+      "card_id": "card_04_why_bicameral",
+      "card_slug": "card_04_why_bicameral",
+      "type": "chat",
+      "concept_id": "bicameral_rationale",
+      "level": 1,
+      "progress": {
+        "current": 4,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ab question ye hai ki do houses kyun? Ek hi kyun nahi? Dekho, Lok Sabha PUBLIC ka direct representation hai - janta directly elect karti hai MPs ko. Lekin Rajya Sabha STATES ka representation hai - federal structure ko balance karta hai. Chhote states ka bhi awaaz sunai de, ye ensure karta hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab Lok Sabha people ke liye, Rajya Sabha states ke liye?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Exactly! Plus ek aur reason - checks and balances. Lok Sabha kabhi jaldi mein koi galat bill pass kar de, toh Rajya Sabha rethink karne ka mauka deta hai. Experienced log hote hain Rajya Sabha mein - scholars, artists, retired officers. ⭐ BPSC Favorite: India's bicameral system is borrowed from UK (Westminster model)!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Toh dono houses ki power equal hai kya?"
+        }
+      ],
+      "navigation": {
+        "next": "card_05_lok_sabha_intro",
+        "button_text": "Lok Sabha Detail ➔"
+      }
+    },
+    {
+      "card_id": "card_05_lok_sabha_intro",
+      "card_slug": "card_05_lok_sabha_intro",
+      "type": "chat",
+      "concept_id": "lok_sabha_basics",
+      "level": 1,
+      "progress": {
+        "current": 5,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Nahi! Power mein Lok Sabha zyada powerful hai. Ye hai LOWER HOUSE but real power isi ke paas hai. Kyunki PM aur Council of Ministers Lok Sabha ke liye accountable hote hain. Agar Lok Sabha no-confidence pass kar de, toh government gir sakti hai! Article 81 mein Lok Sabha ki composition di gayi hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "Lok Sabha mein kitne members hote hain Sir?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Maximum 552 members ho sakte hain: 530 states se (population basis pe), 20 Union Territories se, aur 2 Anglo-Indian community se (agar President nominate kare - ye provision abhi lapse ho chuka hai 104th Amendment se). Lekin currently 543 elected members hain + 0 nominated = total 543."
+        },
+        {
+          "speaker": "raju",
+          "text": "Population basis pe matlab zyada janta wale state ko zyada seats?"
+        }
+      ],
+      "navigation": {
+        "next": "card_06_ls_allocation",
+        "button_text": "Seat Allocation ➔"
+      }
+    },
+    {
+      "card_id": "card_06_ls_allocation",
+      "card_slug": "card_06_ls_allocation",
+      "type": "chat",
+      "concept_id": "lok_sabha_seat_allocation",
+      "level": 1,
+      "progress": {
+        "current": 6,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Bilkul sahi! UP sabse zyada populated state hai toh usko sabse zyada seats - 80 seats! Sabse kam population wale states ko 1-1 seat. Ye allocation 1971 ki census ke basis pe freeze kar diya gaya tha (42nd Amendment) taaki family planning promote karne wale states ko punish na ho. ⭐ UPSC/BPSC Trap: Seats frozen till 2026 (extended by 84th & 87th Amendments)."
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab abhi bhi 1971 census use ho raha hai seats ke liye?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! Lekin DELIMITATION (constituency boundaries fix karna) 2001 census se hua tha. Ye confusing lag sakta hai - seats ka number 1971 se fixed, lekin boundaries 2001 se drawn. Samjhe difference? Bihar ko 40 seats hain currently."
+        },
+        {
+          "speaker": "raju",
+          "text": "Haan Sir! Ab Lok Sabha member banne ke liye kya qualification chahiye?"
+        }
+      ],
+      "navigation": {
+        "next": "card_07_ls_qualifications",
+        "button_text": "Qualifications ➔"
+      }
+    },
+    {
+      "card_id": "card_07_ls_qualifications",
+      "card_slug": "card_07_ls_qualifications",
+      "type": "chat",
+      "concept_id": "lok_sabha_qualifications",
+      "level": 1,
+      "progress": {
+        "current": 7,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Article 84 mein qualifications di gayi hain - teen simple conditions: (1) Indian citizen hona chahiye, (2) Age minimum 25 years (Lok Sabha ke liye), (3) Parliament jo aur qualifications prescribe kare wo bhi (RPA Act 1951 mein detail hai). Plus disqualifications nahi honi chahiye - Article 102 mein listed hain."
+        },
+        {
+          "speaker": "raju",
+          "text": "Disqualifications matlab kya Sir?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Agar koi: (a) Profit ka office hold karta ho under government, (b) Unsound mind declare ho, (c) Undischarged insolvent ho (diwaaliya), (d) Citizen na ho ya dusre desh ki citizenship le le, (e) Parliament ke kisi Act dwara disqualify ho (jaise anti-defection law) - toh wo MP nahi ban sakta. ⭐ SSC Favorite: Office of Profit disqualification!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Lok Sabha kitne time ke liye elect hoti hai?"
+        }
+      ],
+      "navigation": {
+        "next": "card_08_ls_tenure",
+        "button_text": "Tenure & Dissolution ➔"
+      }
+    },
+    {
+      "card_id": "card_08_ls_tenure",
+      "card_slug": "card_08_ls_tenure",
+      "type": "chat",
+      "concept_id": "lok_sabha_tenure",
+      "level": 1,
+      "progress": {
+        "current": 8,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Lok Sabha ka normal tenure 5 YEARS hai (Article 83) - first sitting se lekar 5 years. Lekin do exceptions hain: (1) PM ki advice pe President DISSOLVE kar sakta hai 5 years se pehle (early dissolution), (2) EMERGENCY mein Parliament extend kar sakti hai tenure - but emergency khatam hone ke baad max 6 months tak hi extension valid hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab Lok Sabha kabhi bhi dissolve ho sakti hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! Ye Rajya Sabha se major difference hai. Rajya Sabha permanent house hai - kabhi dissolve nahi hoti. Lok Sabha dissolved ho sakti hai no-confidence ya PM ki recommendation pe. ⭐ BPSC Trap: Emergency mein 1 year extension at a time, but max 6 months after emergency ends."
+        },
+        {
+          "speaker": "raju",
+          "text": "Toh Rajya Sabha kaise kaam karti hai agar dissolve nahi hoti?"
+        }
+      ],
+      "navigation": {
+        "next": "card_09_quiz_ls_1",
+        "button_text": "Test Your Knowledge ➔"
+      }
+    },
+    {
+      "card_id": "card_09_quiz_ls_1",
+      "card_slug": "card_09_quiz_ls_1",
+      "type": "quiz",
+      "concept_id": "lok_sabha_quiz",
+      "level": 1,
+      "progress": {
+        "current": 9,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "What is the maximum strength of Lok Sabha as per Article 81?",
+        "options": [
+          {"id": "A", "text": "545 members"},
+          {"id": "B", "text": "552 members"},
+          {"id": "C", "text": "550 members"},
+          {"id": "D", "text": "543 members"}
+        ],
+        "correct_option_id": "B",
+        "explanation": "⭐ Railway/SSC Direct Fact! Maximum strength = 552 (530 from States + 20 from UTs + 2 Anglo-Indians nominated by President). Currently 543 elected + 0 nominated = 543 total (Anglo-Indian nomination abolished by 104th Amendment, 2019)."
+      },
+      "navigation": {
+        "next": "card_10_quiz_ls_2",
+        "button_text": "Next Question (2/3) ➔"
+      }
+    },
+    {
+      "card_id": "card_10_quiz_ls_2",
+      "card_slug": "card_10_quiz_ls_2",
+      "type": "quiz",
+      "concept_id": "lok_sabha_quiz",
+      "level": 1,
+      "progress": {
+        "current": 10,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Minimum age required to become a member of Lok Sabha is:",
+        "options": [
+          {"id": "A", "text": "21 years"},
+          {"id": "B", "text": "25 years"},
+          {"id": "C", "text": "30 years"},
+          {"id": "D", "text": "35 years"}
+        ],
+        "correct_option_id": "B",
+        "explanation": "⭐ BPSC/SSC Favorite! Article 84 - Minimum age for Lok Sabha = 25 years, for Rajya Sabha = 30 years. This is a common confusion trap in exams!"
+      },
+      "navigation": {
+        "next": "card_11_quiz_ls_3",
+        "button_text": "Next Question (3/3) ➔"
+      }
+    },
+    {
+      "card_id": "card_11_quiz_ls_3",
+      "card_slug": "card_11_quiz_ls_3",
+      "type": "quiz",
+      "concept_id": "lok_sabha_quiz",
+      "level": 1,
+      "progress": {
+        "current": 11,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "The allocation of seats in Lok Sabha to states is based on which census?",
+        "options": [
+          {"id": "A", "text": "1991 Census"},
+          {"id": "B", "text": "2001 Census"},
+          {"id": "C", "text": "1971 Census"},
+          {"id": "D", "text": "2011 Census"}
+        ],
+        "correct_option_id": "C",
+        "explanation": "⭐ UPSC/BPSC Trap Question! Seats are allocated based on 1971 Census (frozen by 42nd Amendment to not punish states doing family planning). Delimitation (boundary changes) was done using 2001 Census. Both frozen till 2026."
+      },
+      "navigation": {
+        "next": "card_12_milestone_lok_sabha",
+        "button_text": "Check Results ➔"
+      }
+    },
+    {
+      "card_id": "card_12_milestone_lok_sabha",
+      "card_slug": "card_12_milestone_lok_sabha",
+      "type": "milestone",
+      "concept_id": "lok_sabha_complete",
+      "level": 1,
+      "progress": {
+        "current": 12,
+        "total": 72
+      },
+      "milestone_payload": {
+        "title": "🎉 LOK SABHA MODULE CLEARED!",
+        "badge_emoji": "🏛️",
+        "completed_topic": "Lok Sabha - Structure & Composition",
+        "xp_earned": 75,
+        "milestone_progress": "Module 1/8 Complete",
+        "motivational_quote": "Great start! You've mastered the People's House. Now let's explore the Council of States!"
+      },
+      "navigation": {
+        "next": "card_13_rajya_sabha_intro",
+        "button_text": "Start Rajya Sabha Module ➔"
+      }
+    },
+    {
+      "card_id": "card_13_rajya_sabha_intro",
+      "card_slug": "card_13_rajya_sabha_intro",
+      "type": "chat",
+      "concept_id": "rajya_sabha_basics",
+      "level": 2,
+      "progress": {
+        "current": 13,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Rajya Sabha ko 'Council of States' kehte hain kyunki ye STATES ka representation karta hai Parliament mein. Article 80 mein iska composition diya gaya hai. Ye ek permanent body hai - kabhi dissolve nahi hoti. Members 6 years ke liye elect hote hain but har 2 saal mein 1/3rd members retire hote hain."
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab Rajya Sabha continuous chalti rehti hai? Aur 1/3rd retire hote hain har do saal?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul! Ye rotation system hai. Total strength maximum 250 ho sakti hai: 238 elected from States & UTs (indirectly - MLAs elect karte hain), aur 12 nominated by President (experts in art, literature, science, social service). Currently 245 members hain. ⭐ BPSC Favorite: Nominated members can't vote in Presidential election!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Indirect election matlab kya Sir?"
+        }
+      ],
+      "navigation": {
+        "next": "card_14_rs_election",
+        "button_text": "Indirect Election ➔"
+      }
+    },
+    {
+      "card_id": "card_14_rs_election",
+      "card_slug": "card_14_rs_election",
+      "type": "chat",
+      "concept_id": "rajya_sabha_election",
+      "level": 2,
+      "progress": {
+        "current": 14,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Rajya Sabha members DIRECT janta nahi elect karti. State Legislative Assembly ke ELECTED members (MLAs) vote karke Rajya Sabha MP elect karte hain - ye hai INDIRECT election. Proportional representation system use hota hai with Single Transferable Vote (STV) method. Har state ko seats population ke hisaab se allocate hoti hain - lekin ye fixed nahi hai jaise Lok Sabha."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sabse zyada seats kisko milti hain?"
+        },
+        {
+          "speaker": "aman",
+          "text": "UP ko sabse zyada - 31 seats Rajya Sabha mein. Chhote states ko minimum 1 seat. Bihar ko 16 seats hain. ⭐ BPSC TRE Favorite: Delhi & Puducherry UTs ko bhi Rajya Sabha representation hai (after 70th Amendment) but other UTs ko nahi!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Rajya Sabha member banne ki qualification?"
+        }
+      ],
+      "navigation": {
+        "next": "card_15_rs_qualifications",
+        "button_text": "RS Qualifications ➔"
+      }
+    },
+    {
+      "card_id": "card_15_rs_qualifications",
+      "card_slug": "card_15_rs_qualifications",
+      "type": "chat",
+      "concept_id": "rajya_sabha_qualifications",
+      "level": 2,
+      "progress": {
+        "current": 15,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Article 84 - same qualifications jaise Lok Sabha, bas ek difference: Minimum age 30 years (Lok Sabha mein 25 tha). Baki sab same - Indian citizen, no disqualifications under Article 102. Rajya Sabha member kisi bhi state se elect ho sakta hai - necessary nahi ki wo usi state ka resident ho!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab Delhi ka aadmi UP se Rajya Sabha member ban sakta hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! Ye flexibility hai. Lekin Lok Sabha mein wo constituency ka registered voter hona chahiye jahan se contest kar rahe ho. ⭐ SSC Trap: LS - must be voter of that constituency, RS - can be from anywhere!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Rajya Sabha ki power Lok Sabha se kam hai na?"
+        }
+      ],
+      "navigation": {
+        "next": "card_16_rs_powers_comparison",
+        "button_text": "Powers Comparison ➔"
+      }
+    },
+    {
+      "card_id": "card_16_rs_powers_comparison",
+      "card_slug": "card_16_rs_powers_comparison",
+      "type": "chat",
+      "concept_id": "rajya_sabha_vs_lok_sabha",
+      "level": 2,
+      "progress": {
+        "current": 16,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Haan, kuch matters mein Rajya Sabha less powerful hai: (1) MONEY BILL - RS sirf recommend kar sakti hai, pass nahi. LS override kar sakti hai. (2) CONFIDENCE MOTION - Council of Ministers sirf LS ke liye accountable hai. (3) Budget approval - RS delay kar sakti hai but ultimately LS wins. Lekin kuch powers mein EQUAL hai dono!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Equal powers kaunsi hain?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Ordinary Bills, Constitutional Amendment Bills (except money matters), Impeachment of President/Judges, Election of President & VP - in sab mein EQUAL powers! Plus Rajya Sabha ke paas do SPECIAL exclusive powers bhi hain jo Lok Sabha ke paas nahi! ⭐ UPSC Important: RS can authorize Parliament to make laws on State List subjects (Article 249)!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab kuch cheezon mein RS zyada powerful hai?"
+        }
+      ],
+      "navigation": {
+        "next": "card_17_rs_special_powers",
+        "button_text": "RS Special Powers ➔"
+      }
+    },
+    {
+      "card_id": "card_17_rs_special_powers",
+      "card_slug": "card_17_rs_special_powers",
+      "type": "chat",
+      "concept_id": "rajya_sabha_special_powers",
+      "level": 2,
+      "progress": {
+        "current": 17,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Do exclusive powers hain Rajya Sabha ki: (1) Article 249 - Agar Rajya Sabha 2/3rd majority se resolution pass kare, toh Parliament State List ke kisi subject pe national interest mein law bana sakti hai (max 1 year, renewable). (2) Article 312 - All India Services create karne ke liye Rajya Sabha 2/3rd majority se resolution pass kar sakti hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "Ye toh bahut important powers hain!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! Isliye Rajya Sabha ko 'House of Elders' ya 'Second Chamber' kehte hain - experienced logo ka ghar. ⭐ BPSC Trap: These powers reflect federal principle - protecting states' interests!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Ab clear hai Sir!"
+        }
+      ],
+      "navigation": {
+        "next": "card_18_quiz_rs_1",
+        "button_text": "Test Karo ➔"
+      }
+    },
+    {
+      "card_id": "card_18_quiz_rs_1",
+      "card_slug": "card_18_quiz_rs_1",
+      "type": "quiz",
+      "concept_id": "rajya_sabha_quiz",
+      "level": 2,
+      "progress": {
+        "current": 18,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Maximum strength of Rajya Sabha is:",
+        "options": [
+          {"id": "A", "text": "245 members"},
+          {"id": "B", "text": "250 members"},
+          {"id": "C", "text": "238 members"},
+          {"id": "D", "text": "252 members"}
+        ],
+        "correct_option_id": "B",
+        "explanation": "⭐ SSC/Railway Fact! Maximum strength of Rajya Sabha = 250 (238 elected from States/UTs + 12 nominated by President). Currently 245 members are there."
+      },
+      "navigation": {
+        "next": "card_19_quiz_rs_2",
+        "button_text": "Next (2/3) ➔"
+      }
+    },
+    {
+      "card_id": "card_19_quiz_rs_2",
+      "card_slug": "card_19_quiz_rs_2",
+      "type": "quiz",
+      "concept_id": "rajya_sabha_quiz",
+      "level": 2,
+      "progress": {
+        "current": 19,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Rajya Sabha members are elected for a term of:",
+        "options": [
+          {"id": "A", "text": "5 years"},
+          {"id": "B", "text": "6 years"},
+          {"id": "C", "text": "4 years"},
+          {"id": "D", "text": "Permanent (not fixed term)"}
+        ],
+        "correct_option_id": "B",
+        "explanation": "⭐ BPSC Favorite! Each RS member serves for 6 years, but 1/3rd retire every 2 years. This ensures continuity - Rajya Sabha never dissolves completely unlike Lok Sabha."
+      },
+      "navigation": {
+        "next": "card_20_quiz_rs_3",
+        "button_text": "Next (3/3) ➔"
+      }
+    },
+    {
+      "card_id": "card_20_quiz_rs_3",
+      "card_slug": "card_20_quiz_rs_3",
+      "type": "quiz",
+      "concept_id": "rajya_sabha_quiz",
+      "level": 2,
+      "progress": {
+        "current": 20,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Which of these is an EXCLUSIVE power of Rajya Sabha?",
+        "options": [
+          {"id": "A", "text": "Passing Money Bills"},
+          {"id": "B", "text": "Initiating No-Confidence Motion"},
+          {"id": "C", "text": "Authorizing Parliament to legislate on State List (Art. 249)"},
+          {"id": "D", "text": "Approving Budget"}
+        ],
+        "correct_option_id": "C",
+        "explanation": "⭐ UPSC/BPSC High-Value Question! Article 249 - Only Rajya Sabha (not LS) can pass resolution by 2/3rd majority authorizing Parliament to make laws on State List subjects in national interest. Other options are Lok Sabha's exclusive or superior powers."
+      },
+      "navigation": {
+        "next": "card_21_milestone_rs",
+        "button_text": "Check Results ➔"
+      }
+    },
+    {
+      "card_id": "card_21_milestone_rs",
+      "card_slug": "card_21_milestone_rs",
+      "type": "milestone",
+      "concept_id": "rajya_sabha_complete",
+      "level": 2,
+      "progress": {
+        "current": 21,
+        "total": 72
+      },
+      "milestone_payload": {
+        "title": "🎉 RAJYA SABHA MASTERED!",
+        "badge_emoji": "🏛️",
+        "completed_topic": "Rajya Sabha - Council of States",
+        "xp_earned": 85,
+        "milestone_progress": "Module 2/8 Complete",
+        "motivational_quote": "Excellent! Both Houses decoded. Now let's understand how Parliament functions!"
+      },
+      "navigation": {
+        "next": "card_22_parliament_officers",
+        "button_text": "Officers & Sessions ➔"
+      }
+    },
+    {
+      "card_id": "card_22_parliament_officers",
+      "card_slug": "card_22_parliament_officers",
+      "type": "chat",
+      "concept_id": "presiding_officers",
+      "level": 3,
+      "progress": {
+        "current": 22,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, jaise school mein class monitor hota hai, waise Parliament ki har house mein Presiding Officer hota hai. Lok Sabha ka SPEAKER (Article 93) aur Rajya Sabha ka CHAIRMAN (Vice President of India - Article 89). Dono houses ko smoothly chalane ki zimmedari inki hoti hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "Speaker ka election kaise hota hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Lok Sabha ke members apne beech se Speaker aur Deputy Speaker elect karte hain (Article 93). Usually ruling party ka senior member banta hai. Speaker politically neutral hona chahiye - election jeetne ke baad party membership chhod deta hai convention se. Rajya Sabha ka Chairman toh Vice President hota hai automatically!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Speaker ki kya power hai?"
+        }
+      ],
+      "navigation": {
+        "next": "card_23_speaker_powers",
+        "button_text": "Speaker Powers ➔"
+      }
+    },
+    {
+      "card_id": "card_23_speaker_powers",
+      "card_slug": "card_23_speaker_powers",
+      "type": "chat",
+      "concept_id": "speaker_powers_functions",
+      "level": 3,
+      "progress": {
+        "current": 23,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Speaker bahut powerful position hai! Powers: (1) House ki proceedings maintain karta hai - order & discipline, (2) Decides whether a bill is Money Bill or not (final decision!), (3) Anti-Defection cases decide karta hai (10th Schedule), (4) Joint sitting mein preside karta hai, (5) Normally vote nahi karta, only TIE ki condition mein casting vote!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Money Bill decide karna matlab bahut important power hai!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Absolutely! ⭐ UPSC/BPSC Critical Point: Speaker's decision on Money Bill is FINAL and cannot be questioned in any court (Article 110). Ye judicial review se beyond hai! Plus Speaker ko remove karne ke liye resolution chahiye with absolute majority (50%+1 of total strength)."
+        },
+        {
+          "speaker": "raju",
+          "text": "Parliamentary sessions kaise hote hain?"
+        }
+      ],
+      "navigation": {
+        "next": "card_24_sessions",
+        "button_text": "Sessions Samjho ➔"
+      }
+    },
+    {
+      "card_id": "card_24_sessions",
+      "card_slug": "card_24_sessions",
+      "type": "chat",
+      "concept_id": "parliamentary_sessions",
+      "level": 3,
+      "progress": {
+        "current": 24,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Parliament year mein normally teen sessions mein milti hai: (1) BUDGET SESSION (February-May) - budget present hota hai, (2) MONSOON SESSION (July-August), (3) WINTER SESSION (November-December). President summon karta hai Parliament ko (Article 85) - do sessions ke beech gap 6 months se zyada nahi hona chahiye!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab 6 months ke andar Parliament milna zaroori hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! Ye ensure karta hai ki Parliament regularly function kare. Session ke andar daily sittings hoti hain. Important terms: ADJOURNMENT (postpone for hours/days), ADJOURNMENT SINE DIE (indefinite postponement - Speaker/Chairman decide karta hai next meeting date bataye bina), PROROGATION (President formally ends session). ⭐ BPSC Trap: Prorogation vs Dissolution - Prorogation session end karta hai, Dissolution poori Lok Sabha end kar deta hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Ye toh technical terms hain!"
+        }
+      ],
+      "navigation": {
+        "next": "card_25_quorum",
+        "button_text": "Quorum & Devices ➔"
+      }
+    },
+    {
+      "card_id": "card_25_quorum",
+      "card_slug": "card_25_quorum",
+      "type": "chat",
+      "concept_id": "quorum_parliamentary_devices",
+      "level": 3,
+      "progress": {
+        "current": 25,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "QUORUM (Article 100) - Minimum members required for meeting to be valid. Parliament mein quorum hai 1/10th of total strength (55 in LS, 25 in RS including Presiding Officer). Agar quorum nahi hai toh meeting adjourn hoti hai. Ab kuch important Parliamentary Devices dekhte hain jo debates mein use hote hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Parliamentary devices matlab?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Ye wo tools hain jo opposition government ko question karne ke liye use karti hai: (1) QUESTION HOUR (first hour - ministers ko questions), (2) ZERO HOUR (12 noon - bina notice urgent matters), (3) ADJOURNMENT MOTION (urgent public importance matter discuss karne ke liye proceedings postpone), (4) NO-CONFIDENCE MOTION (government girane ki koshish - sirf Lok Sabha mein)."
+        },
+        {
+          "speaker": "raju",
+          "text": "Zero hour interesting naam hai!"
+        }
+      ],
+      "navigation": {
+        "next": "card_26_motions_resolutions",
+        "button_text": "Motions Detail ➔"
+      }
+    },
+    {
+      "card_id": "card_26_motions_resolutions",
+      "card_slug": "card_26_motions_resolutions",
+      "type": "chat",
+      "concept_id": "motions_resolutions_parliament",
+      "level": 3,
+      "progress": {
+        "current": 26,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Important motions: NO-CONFIDENCE MOTION - 50 MPs support chahiye to introduce, sirf Lok Sabha mein allowed (Rajya Sabha mein nahi!). CENSURE MOTION - specific policy/action criticize karta hai, reasons dene padte hain. ADJOURNMENT MOTION - urgent matter discuss karne ke liye. PRIVILEGE MOTION - agar kisi MP ki privilege breach ho. ⭐ SSC Favorite: No-confidence needs 50 MPs support, no reasons needed!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Confidence motion aur no-confidence mein difference?"
+        },
+        {
+          "speaker": "aman",
+          "text": "CONFIDENCE motion government khud la sakti hai apni majority prove karne ke liye. NO-CONFIDENCE motion opposition lati hai government girane ke liye. Dono sirf Lok Sabha mein hote hain kyunki government Lok Sabha ke liye accountable hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Samajh gaya!"
+        }
+      ],
+      "navigation": {
+        "next": "card_27_quiz_officers_1",
+        "button_text": "Test Karo ➔"
+      }
+    },
+    {
+      "card_id": "card_27_quiz_officers_1",
+      "card_slug": "card_27_quiz_officers_1",
+      "type": "quiz",
+      "concept_id": "officers_sessions_quiz",
+      "level": 3,
+      "progress": {
+        "current": 27,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Who is the ex-officio Chairman of Rajya Sabha?",
+        "options": [
+          {"id": "A", "text": "Prime Minister"},
+          {"id": "B", "text": "President of India"},
+          {"id": "C", "text": "Vice President of India"},
+          {"id": "D", "text": "Speaker of Lok Sabha"}
+        ],
+        "correct_option_id": "C",
+        "explanation": "⭐ Railway/SSC Direct Fact! Article 89 - The Vice President of India is the ex-officio Chairman of Rajya Sabha. This is different from Lok Sabha Speaker who is elected by LS members."
+      },
+      "navigation": {
+        "next": "card_28_quiz_officers_2",
+        "button_text": "Next (2/3) ➔"
+      }
+    },
+    {
+      "card_id": "card_28_quiz_officers_2",
+      "card_slug": "card_28_quiz_officers_2",
+      "type": "quiz",
+      "concept_id": "officers_sessions_quiz",
+      "level": 3,
+      "progress": {
+        "current": 28,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Maximum gap allowed between two sessions of Parliament is:",
+        "options": [
+          {"id": "A", "text": "3 months"},
+          {"id": "B", "text": "6 months"},
+          {"id": "C", "text": "9 months"},
+          {"id": "D", "text": "No such limit specified"}
+        ],
+        "correct_option_id": "B",
+        "explanation": "⭐ BPSC Important! Article 85 mandates that gap between two sessions cannot exceed 6 months. This ensures regular functioning of Parliament and legislative accountability."
+      },
+      "navigation": {
+        "next": "card_29_quiz_officers_3",
+        "button_text": "Next (3/3) ➔"
+      }
+    },
+    {
+      "card_id": "card_29_quiz_officers_3",
+      "card_slug": "card_29_quiz_officers_3",
+      "type": "quiz",
+      "concept_id": "officers_sessions_quiz",
+      "level": 3,
+      "progress": {
+        "current": 29,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "No-Confidence Motion can be introduced in:",
+        "options": [
+          {"id": "A", "text": "Lok Sabha only"},
+          {"id": "B", "text": "Rajya Sabha only"},
+          {"id": "C", "text": "Both Houses"},
+          {"id": "D", "text": "Joint sitting only"}
+        ],
+        "correct_option_id": "A",
+        "explanation": "⭐ UPSC/BPSC Critical! No-Confidence Motion can be introduced ONLY in Lok Sabha because Council of Ministers is collectively responsible to Lok Sabha (Article 75), not Rajya Sabha. Minimum 50 MPs' support needed."
+      },
+      "navigation": {
+        "next": "card_30_milestone_sessions",
+        "button_text": "Check Results ➔"
+      }
+    },
+    {
+      "card_id": "card_30_milestone_sessions",
+      "card_slug": "card_30_milestone_sessions",
+      "type": "milestone",
+      "concept_id": "sessions_complete",
+      "level": 3,
+      "progress": {
+        "current": 30,
+        "total": 72
+      },
+      "milestone_payload": {
+        "title": "🎉 SESSIONS & OFFICERS CLEARED!",
+        "badge_emoji": "⚖️",
+        "completed_topic": "Parliamentary Procedures",
+        "xp_earned": 95,
+        "milestone_progress": "Module 3/8 Complete",
+        "motivational_quote": "Superb! Now let's understand how laws are actually made!"
+      },
+      "navigation": {
+        "next": "card_31_legislative_process",
+        "button_text": "Legislative Process ➔"
+      }
+    },
+    {
+      "card_id": "card_31_legislative_process",
+      "card_slug": "card_31_legislative_process",
+      "type": "chat",
+      "concept_id": "bill_introduction",
+      "level": 4,
+      "progress": {
+        "current": 31,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ab dekhte hain bill kaise law banta hai! Pehle samjho BILL kya hai - ye ek proposal hai for a new law ya existing law mein amendment. Bills kai types ke hote hain: (1) ORDINARY BILL - general legislation, (2) MONEY BILL - taxation/expenditure related (Article 110), (3) FINANCIAL BILL - partially money matters, (4) CONSTITUTIONAL AMENDMENT BILL - Constitution change karne ke liye."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sab bills ka process same hai kya?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Nahi! Money Bill ka special process hai - sirf Lok Sabha mein introduce ho sakta hai, Rajya Sabha sirf recommend kar sakti hai. Ordinary Bill kisi bhi house mein introduce ho sakta hai. Constitutional Amendment Bill bhi alag process follow karta hai (Article 368). ⭐ BPSC Trap: Money Bill ONLY in LS, Ordinary Bill in ANY house!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Ordinary bill ka process batao Sir!"
+        }
+      ],
+      "navigation": {
+        "next": "card_32_bill_stages",
+        "button_text": "Bill Stages ➔"
+      }
+    },
+    {
+      "card_id": "card_32_bill_stages",
+      "card_slug": "card_32_bill_stages",
+      "type": "chat",
+      "concept_id": "stages_of_bill",
+      "level": 4,
+      "progress": {
+        "current": 32,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ordinary Bill ke stages: (1) FIRST READING - Introduction & publication, sirf title padha jata hai, (2) SECOND READING - General discussion, phir Clause-by-Clause discussion (Select/Standing Committee ko refer kar sakte hain), (3) THIRD READING - Final debate & voting. Pass hone ke baad dusre house jaata hai jahan phir same 3 stages!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Dono houses pass kar de toh law ban jata hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Nahi! Dono houses pass karne ke baad President ki ASSENT (approval) zaroori hai. President teen options mein se ek choose kar sakta hai: (1) Assent de de - bill law ban jata hai, (2) Withhold kare (pocket veto) - bill pending rehta hai, (3) Return kare with message (but Money Bill return nahi kar sakta!) - Parliament reconsider kare."
+        },
+        {
+          "speaker": "raju",
+          "text": "Agar dono houses disagree kare toh?"
+        }
+      ],
+      "navigation": {
+        "next": "card_33_joint_sitting",
+        "button_text": "Joint Sitting ➔"
+      }
+    },
+    {
+      "card_id": "card_33_joint_sitting",
+      "card_slug": "card_33_joint_sitting",
+      "type": "chat",
+      "concept_id": "joint_sitting_deadlock",
+      "level": 4,
+      "progress": {
+        "current": 33,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Agar dono houses mein DEADLOCK ho jaye Ordinary Bill pe, toh President JOINT SITTING bula sakta hai (Article 108). Dono houses ke members ek saath baith ke discuss aur vote karte hain. Speaker of Lok Sabha preside karta hai joint sitting mein. Simple majority se decision hota hai - aur obviously Lok Sabha ki strength zyada hai toh usually unka decision win karta hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Money Bill ka kya joint sitting hoti hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Nahi! Money Bill ke liye JOINT SITTING provision nahi hai kyunki deadlock ho hi nahi sakta - Rajya Sabha sirf 14 days mein recommendations de sakti hai, uske baad Lok Sabha ko power hai accept/reject karne ki. ⭐ UPSC Trap: Joint sitting ONLY for Ordinary Bills, NOT for Money Bills or Constitutional Amendment Bills!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Kabhi joint sitting hui hai India mein?"
+        }
+      ],
+      "navigation": {
+        "next": "card_34_money_bill_detail",
+        "button_text": "Money Bill Detail ➔"
+      }
+    },
+    {
+      "card_id": "card_34_money_bill_detail",
+      "card_slug": "card_34_money_bill_detail",
+      "type": "chat",
+      "concept_id": "money_bill_article_110",
+      "level": 4,
+      "progress": {
+        "current": 34,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Haan, teen baar joint sitting hui hai - 1961 (Dowry Prohibition), 1978 (Banking Service Commission), 2002 (POTA - Prevention of Terrorism Act). Ab Money Bill detail mein samjhte hain. Article 110 define karta hai kya Money Bill hai: Bill exclusively dealing with - taxation, government expenditure, borrowing, Consolidated Fund/Contingency Fund, etc."
+        },
+        {
+          "speaker": "raju",
+          "text": "Money Bill sirf Lok Sabha mein kyun?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Kyunki Lok Sabha directly elected hai janta se - taxation aur expenditure directly public ko affect karta hai toh janta ke elected representatives ko hi decide karna chahiye! Rajya Sabha 14 days mein recommendations de sakti hai, Lok Sabha accept/reject kar sakti hai. ⭐ BPSC Critical: Speaker decides if bill is Money Bill - decision FINAL, court challenge nahi kar sakta!"
+        },
+        {
+          "speaker": "raju",
+          "text": "President Money Bill reject kar sakta hai?"
+        }
+      ],
+      "navigation": {
+        "next": "card_35_presidential_assent",
+        "button_text": "Presidential Powers ➔"
+      }
+    },
+    {
+      "card_id": "card_35_presidential_assent",
+      "card_slug": "card_35_presidential_assent",
+      "type": "chat",
+      "concept_id": "president_legislative_powers",
+      "level": 4,
+      "progress": {
+        "current": 35,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Money Bill President MUST approve karna hai (bound hai constitutionally) - return nahi kar sakta! Lekin Ordinary Bill ko: (1) Assent de sakta hai, (2) Withhold kar sakta hai (Pocket Veto), (3) Return kar sakta hai with recommendations. Agar Parliament dobara pass kare (with/without changes), toh President ko assent dena hi padega - ye ABSOLUTE veto nahi hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Pocket veto matlab indefinitely rok sakta hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Theoretically haan, lekin practically nahi karta. Constitution mein koi time limit nahi di President ko assent/return karne ki. Ye gap exploit karke bill pending rakh sakta hai - that's pocket veto. ⭐ UPSC Example: President Giani Zail Singh ne 1986 mein Indian Post Office Bill ko pocket veto kiya tha!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Interesting!"
+        }
+      ],
+      "navigation": {
+        "next": "card_36_quiz_legislative_1",
+        "button_text": "Test Karo ➔"
+      }
+    },
+    {
+      "card_id": "card_36_quiz_legislative_1",
+      "card_slug": "card_36_quiz_legislative_1",
+      "type": "quiz",
+      "concept_id": "legislative_process_quiz",
+      "level": 4,
+      "progress": {
+        "current": 36,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "A Money Bill can be introduced in:",
+        "options": [
+          {"id": "A", "text": "Lok Sabha only"},
+          {"id": "B", "text": "Rajya Sabha only"},
+          {"id": "C", "text": "Either House"},
+          {"id": "D", "text": "Joint sitting only"}
+        ],
+        "correct_option_id": "A",
+        "explanation": "⭐ SSC/Railway High-Frequency! Article 110 - Money Bill can ONLY be introduced in Lok Sabha (not RS). This reflects principle of popular control over taxation and public expenditure."
+      },
+      "navigation": {
+        "next": "card_37_quiz_legislative_2",
+        "button_text": "Next (2/3) ➔"
+      }
+    },
+    {
+      "card_id": "card_37_quiz_legislative_2",
+      "card_slug": "card_37_quiz_legislative_2",
+      "type": "quiz",
+      "concept_id": "legislative_process_quiz",
+      "level": 4,
+      "progress": {
+        "current": 37,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Who decides whether a bill is a Money Bill or not?",
+        "options": [
+          {"id": "A", "text": "President of India"},
+          {"id": "B", "text": "Prime Minister"},
+          {"id": "C", "text": "Speaker of Lok Sabha"},
+          {"id": "D", "text": "Chairman of Rajya Sabha"}
+        ],
+        "correct_option_id": "C",
+        "explanation": "⭐ BPSC/UPSC Critical Point! Article 110(3) - The Speaker of Lok Sabha's decision on whether a bill is Money Bill is FINAL and cannot be questioned in any court. This decision is endorsed by Speaker's certificate."
+      },
+      "navigation": {
+        "next": "card_38_quiz_legislative_3",
+        "button_text": "Next (3/3) ➔"
+      }
+    },
+    {
+      "card_id": "card_38_quiz_legislative_3",
+      "card_slug": "card_38_quiz_legislative_3",
+      "type": "quiz",
+      "concept_id": "legislative_process_quiz",
+      "level": 4,
+      "progress": {
+        "current": 38,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Joint sitting of Parliament can be called for:",
+        "options": [
+          {"id": "A", "text": "Money Bills"},
+          {"id": "B", "text": "Ordinary Bills in case of deadlock"},
+          {"id": "C", "text": "Constitutional Amendment Bills"},
+          {"id": "D", "text": "All types of bills"}
+        ],
+        "correct_option_id": "B",
+        "explanation": "⭐ UPSC Major Trap! Article 108 - Joint sitting is ONLY for Ordinary Bills when there's deadlock between two Houses. NOT for Money Bills (RS has limited role) or Constitutional Amendment Bills (both houses must pass separately with special majority)."
+      },
+      "navigation": {
+        "next": "card_39_milestone_legislative",
+        "button_text": "Check Results ➔"
+      }
+    },
+    {
+      "card_id": "card_39_milestone_legislative",
+      "card_slug": "card_39_milestone_legislative",
+      "type": "milestone",
+      "concept_id": "legislative_complete",
+      "level": 4,
+      "progress": {
+        "current": 39,
+        "total": 72
+      },
+      "milestone_payload": {
+        "title": "🎉 LEGISLATIVE PROCESS MASTERED!",
+        "badge_emoji": "📜",
+        "completed_topic": "How Bills Become Laws",
+        "xp_earned": 100,
+        "milestone_progress": "Module 4/8 Complete",
+        "motivational_quote": "Outstanding! You know the law-making process. Now let's explore Budget & Finance!"
+      },
+      "navigation": {
+        "next": "card_40_budget_intro",
+        "button_text": "Budget Module ➔"
+      }
+    },
+    {
+      "card_id": "card_40_budget_intro",
+      "card_slug": "card_40_budget_intro",
+      "type": "chat",
+      "concept_id": "budget_financial_procedure",
+      "level": 5,
+      "progress": {
+        "current": 40,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, ghar mein Mummy planning karti hain ki kitna paisa kahan kharch hoga - groceries, school fees, electricity bill. Usi tarah Government bhi planning karti hai - ye BUDGET hai! Article 112 kehta hai President har financial year (1 April - 31 March) ke liye Annual Financial Statement (Budget) Lok Sabha mein present karayega."
+        },
+        {
+          "speaker": "raju",
+          "text": "Budget Finance Minister present karte hain na?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! President ke naam pe Finance Minister Budget speech deta hai Lok Sabha mein. Budget mein do parts hote hain: (1) REVENUE Budget - receipts & expenditure on revenue account, (2) CAPITAL Budget - receipts & expenditure on capital account. Plus distinguish karna hota hai Plan aur Non-Plan expenditure (though now changed to Revenue & Capital)."
+        },
+        {
+          "speaker": "raju",
+          "text": "Budget pass kaise hota hai?"
+        }
+      ],
+      "navigation": {
+        "next": "card_41_budget_procedure",
+        "button_text": "Budget Procedure ➔"
+      }
+    },
+    {
+      "card_id": "card_41_budget_procedure",
+      "card_slug": "card_41_budget_procedure",
+      "type": "chat",
+      "concept_id": "budget_passing_process",
+      "level": 5,
+      "progress": {
+        "current": 41,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Budget pass hone ki process: (1) Presentation (last week of February), (2) General Discussion in Lok Sabha, (3) Demands for Grants - ministry wise discussion & voting (Guillotine bhi use ho sakta hai time bachane ke liye), (4) Appropriation Bill - Parliament ki permission to withdraw money from Consolidated Fund, (5) Finance Bill - tax proposals implement karne ke liye."
+        },
+        {
+          "speaker": "raju",
+          "text": "Guillotine matlab?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Agar time kam hai aur bahut saare demands pending hain, toh Speaker ek saath sab demands ko vote pe rakh deta hai discussion ke bina - ye hai Guillotine! ⭐ BPSC Favorite: Appropriation Bill & Finance Bill dono pass hone chahiye - Appropriation gives authority to spend, Finance Bill legalizes taxation!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Rajya Sabha ka kya role hai budget mein?"
+        }
+      ],
+      "navigation": {
+        "next": "card_42_budget_rs_role",
+        "button_text": "RS Role in Budget ➔"
+      }
+    },
+    {
+      "card_id": "card_42_budget_rs_role",
+      "card_slug": "card_42_budget_rs_role",
+      "type": "chat",
+      "concept_id": "rajya_sabha_budget_role",
+      "level": 5,
+      "progress": {
+        "current": 42,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Rajya Sabha budget pe DISCUSS kar sakti hai but VOTE nahi kar sakti Demands for Grants pe! Appropriation Bill aur Finance Bill (dono Money Bills hain) Rajya Sabha mein jaate hain but RS 14 days mein recommendations de sakti hai, ultimately Lok Sabha decide karti hai. ⭐ UPSC Critical: Budget = Money Bill, so LS supremacy!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Vote on Account kya hota hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Brilliant question! Jab elections aane wale hote hain aur new government aayegi, toh caretaker government poora budget pass nahi kar sakti. Isliye Vote on Account (Article 116) - Parliament ko authority dete hain 2-4 months ka expenditure withdraw karne ki till new government apna full budget present kare. Ye interim arrangement hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Aur Supplementary Grant?"
+        }
+      ],
+      "navigation": {
+        "next": "card_43_grants_types",
+        "button_text": "Types of Grants ➔"
+      }
+    },
+    {
+      "card_id": "card_43_grants_types",
+      "card_slug": "card_43_grants_types",
+      "type": "chat",
+      "concept_id": "types_of_grants",
+      "level": 5,
+      "progress": {
+        "current": 43,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Different types of grants (Article 115-116): (1) SUPPLEMENTARY Grant - agar current year mein budget se zyada paisa chahiye, (2) ADDITIONAL Grant - naye services ke liye jo budget mein nahi the, (3) EXCESS Grant - agar paisa spend kar diya authorized amount se zyada (post-facto approval), (4) VOTE ON ACCOUNT - interim provision, (5) VOTE OF CREDIT - emergency/unexpected expenditure (amount bhi specify nahi hota), (6) EXCEPTIONAL Grant - special purpose!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Itne saare types! Consolidated Fund kya hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Article 266 - Teen funds hain: (1) CONSOLIDATED FUND of India - sabhi government revenues jaate hain yahan (taxes, loans, etc.), withdrawals Parliament ki permission se, (2) CONTINGENCY FUND - emergency unforeseen expenditure (President authorized, Parliament approval baad mein), (3) PUBLIC ACCOUNT - money held in trust (PF, small savings, etc.). ⭐ SSC Trap: Consolidated Fund = Parliament approval needed, Contingency Fund = President can authorize immediately!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Clear hai!"
+        }
+      ],
+      "navigation": {
+        "next": "card_44_quiz_budget_1",
+        "button_text": "Test Karo ➔"
+      }
+    },
+    {
+      "card_id": "card_44_quiz_budget_1",
+      "card_slug": "card_44_quiz_budget_1",
+      "type": "quiz",
+      "concept_id": "budget_quiz",
+      "level": 5,
+      "progress": {
+        "current": 44,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Annual Budget is presented in Parliament under which Article?",
+        "options": [
+          {"id": "A", "text": "Article 110"},
+          {"id": "B", "text": "Article 112"},
+          {"id": "C", "text": "Article 265"},
+          {"id": "D", "text": "Article 266"}
+        ],
+        "correct_option_id": "B",
+        "explanation": "⭐ Railway/SSC Direct Article! Article 112 mandates presentation of Annual Financial Statement (Budget) before Parliament for each financial year. This is distinct from Article 110 (Money Bill definition) and Article 266 (Funds)."
+      },
+      "navigation": {
+        "next": "card_45_quiz_budget_2",
+        "button_text": "Next (2/3) ➔"
+      }
+    },
+    {
+      "card_id": "card_45_quiz_budget_2",
+      "card_slug": "card_45_quiz_budget_2",
+      "type": "quiz",
+      "concept_id": "budget_quiz",
+      "level": 5,
+      "progress": {
+        "current": 45,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Vote on Account is granted for a period of:",
+        "options": [
+          {"id": "A", "text": "One month"},
+          {"id": "B", "text": "Two to four months"},
+          {"id": "C", "text": "Six months"},
+          {"id": "D", "text": "One year"}
+        ],
+        "correct_option_id": "B",
+        "explanation": "⭐ BPSC Important! Vote on Account (Article 116) is an interim arrangement granting expenditure authority for 2-4 months when full budget cannot be passed (typically during election period). It allows government to function till new government presents full budget."
+      },
+      "navigation": {
+        "next": "card_46_quiz_budget_3",
+        "button_text": "Next (3/3) ➔"
+      }
+    },
+    {
+      "card_id": "card_46_quiz_budget_3",
+      "card_slug": "card_46_quiz_budget_3",
+      "type": "quiz",
+      "concept_id": "budget_quiz",
+      "level": 5,
+      "progress": {
+        "current": 46,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Expenditure from which fund requires Parliament's approval?",
+        "options": [
+          {"id": "A", "text": "Consolidated Fund of India"},
+          {"id": "B", "text": "Contingency Fund of India"},
+          {"id": "C", "text": "Public Account of India"},
+          {"id": "D", "text": "All of the above"}
+        ],
+        "correct_option_id": "A",
+        "explanation": "⭐ UPSC Critical Distinction! Article 266 - CONSOLIDATED FUND requires Parliament's approval for withdrawal (through Appropriation Act). CONTINGENCY FUND can be used by President for unforeseen emergency expenditure (later regularized). PUBLIC ACCOUNT is money held in trust, not government money."
+      },
+      "navigation": {
+        "next": "card_47_milestone_budget",
+        "button_text": "Check Results ➔"
+      }
+    },
+    {
+      "card_id": "card_47_milestone_budget",
+      "card_slug": "card_47_milestone_budget",
+      "type": "milestone",
+      "concept_id": "budget_complete",
+      "level": 5,
+      "progress": {
+        "current": 47,
+        "total": 72
+      },
+      "milestone_payload": {
+        "title": "🎉 BUDGET MODULE CONQUERED!",
+        "badge_emoji": "💰",
+        "completed_topic": "Budget & Financial Procedures",
+        "xp_earned": 110,
+        "milestone_progress": "Module 5/8 Complete",
+        "motivational_quote": "Fantastic! Financial wisdom achieved. Now let's explore Parliamentary Committees!"
+      },
+      "navigation": {
+        "next": "card_48_committees_intro",
+        "button_text": "Committees Module ➔"
+      }
+    },
+    {
+      "card_id": "card_48_committees_intro",
+      "card_slug": "card_48_committees_intro",
+      "type": "chat",
+      "concept_id": "parliamentary_committees_basics",
+      "level": 6,
+      "progress": {
+        "current": 48,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, 543 MPs ek saath har detail discuss karenge toh bahut time lagega na? Isliye COMMITTEES banti hain - chhote groups jo specialized work karte hain. Parliamentary Committees do types ki hoti hain: (1) STANDING Committees - permanent, regularly kaam karti hain, (2) AD HOC Committees - specific purpose ke liye, temporary."
+        },
+        {
+          "speaker": "raju",
+          "text": "Standing Committees kaunsi hain?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Important Standing Committees: (a) Financial Committees - Public Accounts Committee (PAC), Estimates Committee, Committee on Public Undertakings (COPU), (b) Departmental Standing Committees (24 committees covering different ministries), (c) Other Standing Committees - Business Advisory Committee, Privileges Committee, Rules Committee, etc."
+        },
+        {
+          "speaker": "raju",
+          "text": "PAC sabse important lagti hai!"
+        }
+      ],
+      "navigation": {
+        "next": "card_49_pac_detail",
+        "button_text": "PAC Detail ➔"
+      }
+    },
+    {
+      "card_id": "card_49_pac_detail",
+      "card_slug": "card_49_pac_detail",
+      "type": "chat",
+      "concept_id": "public_accounts_committee",
+      "level": 6,
+      "progress": {
+        "current": 49,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "PUBLIC ACCOUNTS COMMITTEE (PAC) - oldest & most powerful financial committee! Composition: 22 members (15 from LS, 7 from RS), tenure 1 year. Chairman ALWAYS from Opposition (healthy convention). Kaam: CAG (Comptroller & Auditor General) ki reports examine karti hai, check karti hai government ne paisa properly spend kiya ya nahi. ⭐ UPSC Favorite: PAC Chairman = Opposition member (convention, not constitutional)!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Ministers bhi member ho sakte hain PAC ke?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Nahi! Koi bhi Minister (including Ministers of State) PAC ka member nahi ho sakta - ye rule hai! Kyunki PAC government ke expenditure ko scrutinize karti hai, toh conflict of interest hoga agar ministers members hote. Same rule Estimates Committee aur COPU ke liye bhi hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "Estimates Committee kya karta hai?"
+        }
+      ],
+      "navigation": {
+        "next": "card_50_other_committees",
+        "button_text": "Other Committees ➔"
+      }
+    },
+    {
+      "card_id": "card_50_other_committees",
+      "card_slug": "card_50_other_committees",
+      "type": "chat",
+      "concept_id": "estimates_copu_committees",
+      "level": 6,
+      "progress": {
+        "current": 50,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "ESTIMATES COMMITTEE - 30 members (all from Lok Sabha only!), examines budget estimates, suggests economies in administration. COPU (Committee on Public Undertakings) - 22 members (15 LS + 7 RS), examines reports on Public Sector Enterprises. ⭐ BPSC Trap: PAC & COPU have members from BOTH houses, Estimates Committee has ONLY LS members!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Ad hoc committees kaunsi hoti hain?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Ad hoc committees: SELECT Committee (examine specific bill - same house ke members), JOINT Committee (examine bill - both houses ke members), Conference Committee (resolve deadlock - not used in India), Inquiry Committee (investigate scandals). These are formed for specific purpose, dissolve after work complete hota hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "Samajh gaya!"
+        }
+      },
+      "navigation": {
+        "next": "card_51_quiz_committees_1",
+        "button_text": "Test Karo ➔"
+      }
+    },
+    {
+      "card_id": "card_51_quiz_committees_1",
+      "card_slug": "card_51_quiz_committees_1",
+      "type": "quiz",
+      "concept_id": "committees_quiz",
+      "level": 6,
+      "progress": {
+        "current": 51,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Who is conventionally the Chairman of Public Accounts Committee?",
+        "options": [
+          {"id": "A", "text": "Speaker of Lok Sabha"},
+          {"id": "B", "text": "Member from Ruling Party"},
+          {"id": "C", "text": "Member from Opposition"},
+          {"id": "D", "text": "Finance Minister"}
+        ],
+        "correct_option_id": "C",
+        "explanation": "⭐ UPSC/BPSC Convention Question! By healthy parliamentary convention (not constitutional provision), the Chairman of PAC is always a member from the Opposition. This ensures independent scrutiny of government expenditure."
+      },
+      "navigation": {
+        "next": "card_52_quiz_committees_2",
+        "button_text": "Next (2/3) ➔"
+      }
+    },
+    {
+      "card_id": "card_52_quiz_committees_2",
+      "card_slug": "card_52_quiz_committees_2",
+      "type": "quiz",
+      "concept_id": "committees_quiz",
+      "level": 6,
+      "progress": {
+        "current": 52,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Which committee has members ONLY from Lok Sabha?",
+        "options": [
+          {"id": "A", "text": "Public Accounts Committee"},
+          {"id": "B", "text": "Estimates Committee"},
+          {"id": "C", "text": "Committee on Public Undertakings"},
+          {"id": "D", "text": "Rules Committee"}
+        ],
+        "correct_option_id": "B",
+        "explanation": "⭐ SSC/Railway Trap! ESTIMATES COMMITTEE has all 30 members from Lok Sabha only. PAC and COPU have members from both Houses (15 LS + 7 RS for PAC, same for COPU). This is a frequent confusion point in exams."
+      },
+      "navigation": {
+        "next": "card_53_quiz_committees_3",
+        "button_text": "Next (3/3) ➔"
+      }
+    },
+    {
+      "card_id": "card_53_quiz_committees_3",
+      "card_slug": "card_53_quiz_committees_3",
+      "type": "quiz",
+      "concept_id": "committees_quiz",
+      "level": 6,
+      "progress": {
+        "current": 53,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Can a Minister be a member of Public Accounts Committee?",
+        "options": [
+          {"id": "A", "text": "Yes, any MP can be member"},
+          {"id": "B", "text": "Yes, but only Minister of State"},
+          {"id": "C", "text": "No, no minister can be member"},
+          {"id": "D", "text": "Only if appointed by Speaker"}
+        ],
+        "correct_option_id": "C",
+        "explanation": "⭐ BPSC Important Rule! NO minister can be a member of PAC, Estimates Committee, or COPU. This is to avoid conflict of interest as these committees scrutinize government's financial decisions and expenditure."
+      },
+      "navigation": {
+        "next": "card_54_milestone_committees",
+        "button_text": "Check Results ➔"
+      }
+    },
+    {
+      "card_id": "card_54_milestone_committees",
+      "card_slug": "card_54_milestone_committees",
+      "type": "milestone",
+      "concept_id": "committees_complete",
+      "level": 6,
+      "progress": {
+        "current": 54,
+        "total": 72
+      },
+      "milestone_payload": {
+        "title": "🎉 COMMITTEES MODULE MASTERED!",
+        "badge_emoji": "📊",
+        "completed_topic": "Parliamentary Committees",
+        "xp_earned": 115,
+        "milestone_progress": "Module 6/8 Complete",
+        "motivational_quote": "Excellent progress! Now let's understand special powers and privileges!"
+      },
+      "navigation": {
+        "next": "card_55_privileges_intro",
+        "button_text": "Powers & Privileges ➔"
+      }
+    },
+    {
+      "card_id": "card_55_privileges_intro",
+      "card_slug": "card_55_privileges_intro",
+      "type": "chat",
+      "concept_id": "parliamentary_privileges",
+      "level": 7,
+      "progress": {
+        "current": 55,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Parliament aur uske members ko kuch special rights aur immunities milti hain taaki wo freely function kar sakein - ye hain PARLIAMENTARY PRIVILEGES (Article 105). Do types: (1) COLLECTIVE Privileges (whole House ko), (2) INDIVIDUAL Privileges (MPs ko). Ye British Parliament se inherited hain."
+        },
+        {
+          "speaker": "raju",
+          "text": "Individual privileges matlab?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Important individual privileges: (1) FREEDOM OF SPEECH - MP Parliament mein jo bole uska koi court case nahi (Article 105(2)), (2) IMMUNITY FROM ARREST - Civil cases mein session ke 40 days pehle aur 40 days baad arrest nahi ho sakte (criminal arrest allowed), (3) Exemption from jury duty, (4) Right to refuse to give evidence! ⭐ UPSC Trap: Freedom of speech is ABSOLUTE in Parliament but can be regulated by presiding officer!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab kuch bhi bol sakte hain?"
+        }
+      ],
+      "navigation": {
+        "next": "card_56_privileges_limits",
+        "button_text": "Limits on Privileges ➔"
+      }
+    },
+    {
+      "card_id": "card_56_privileges_limits",
+      "card_slug": "card_56_privileges_limits",
+      "type": "chat",
+      "concept_id": "privileges_limitations",
+      "level": 7,
+      "progress": {
+        "current": 56,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Freedom of speech unlimited nahi hai! Presiding officer regulate kar sakta hai - agar koi offensive language use kare, defamatory remarks, unparliamentary words, toh Speaker expunge kar sakta hai (records se hata deta hai). Plus agar MP Parliament ke bahar same baat dohrayega toh privilege protect nahi karega - defamation case lag sakta hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Collective privileges kya hain?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Collective privileges of House: (1) Right to publish debates & proceedings, (2) Right to exclude strangers from proceedings, (3) Right to punish for contempt & breach of privilege, (4) Courts can't question Parliament proceedings. ⭐ BPSC Important: Article 122 - Courts cannot inquire into proceedings of Parliament on grounds of irregularity of procedure!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Breach of privilege hone pe kya hota hai?"
+        }
+      ],
+      "navigation": {
+        "next": "card_57_breach_contempt",
+        "button_text": "Breach & Contempt ➔"
+      }
+    },
+    {
+      "card_id": "card_57_breach_contempt",
+      "card_slug": "card_57_breach_contempt",
+      "type": "chat",
+      "concept_id": "breach_privilege_contempt",
+      "level": 7,
+      "progress": {
+        "current": 57,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Agar koi MP ki privilege violate kare ya House ki dignity ko harm kare, toh ye BREACH OF PRIVILEGE ya CONTEMPT of House ho sakta hai. Punishment: Warning, Reprimand, Suspension from service of House, Imprisonment (till duration of session), Fine (but rarely used). Speaker/Chairman decide karta hai breach hua ya nahi!"
+        },
+        {
+          "speaker": "raju",
+          "text": "MP ko suspend kar sakte hain?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! Agar MP unruly behavior kare, rules violate kare, toh Speaker suspend kar sakta hai session ke liye. Recent years mein bahut MPs suspend hue hain disturbance ke liye. ⭐ SSC Fact: Expulsion (permanent removal) different hai Suspension se - expulsion sirf House ke resolution se hota hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Ab Parliament ke powers samajh aa gaye!"
+        }
+      },
+      "navigation": {
+        "next": "card_58_quiz_privileges_1",
+        "button_text": "Test Karo ➔"
+      }
+    },
+    {
+      "card_id": "card_58_quiz_privileges_1",
+      "card_slug": "card_58_quiz_privileges_1",
+      "type": "quiz",
+      "concept_id": "privileges_quiz",
+      "level": 7,
+      "progress": {
+        "current": 58,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Freedom of speech in Parliament is guaranteed under which Article?",
+        "options": [
+          {"id": "A", "text": "Article 19"},
+          {"id": "B", "text": "Article 105"},
+          {"id": "C", "text": "Article 122"},
+          {"id": "D", "text": "Article 368"}
+        ],
+        "correct_option_id": "B",
+        "explanation": "⭐ Railway/BPSC Article-Based! Article 105(2) guarantees freedom of speech to MPs in Parliament. This is different from Article 19 (fundamental right to free speech for citizens). Parliamentary freedom is broader but regulated by presiding officer."
+      },
+      "navigation": {
+        "next": "card_59_quiz_privileges_2",
+        "button_text": "Next (2/3) ➔"
+      }
+    },
+    {
+      "card_id": "card_59_quiz_privileges_2",
+      "card_slug": "card_59_quiz_privileges_2",
+      "type": "quiz",
+      "concept_id": "privileges_quiz",
+      "level": 7,
+      "progress": {
+        "current": 59,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "MPs are immune from arrest during session and:",
+        "options": [
+          {"id": "A", "text": "40 days before and after session"},
+          {"id": "B", "text": "30 days before and after session"},
+          {"id": "C", "text": "60 days before and after session"},
+          {"id": "D", "text": "Only during session, no buffer period"}
+        ],
+        "correct_option_id": "A",
+        "explanation": "⭐ SSC Specific Detail! MPs enjoy immunity from arrest in CIVIL cases during session period and 40 days before commencement and 40 days after conclusion of session. Criminal arrest is NOT covered under this immunity."
+      },
+      "navigation": {
+        "next": "card_60_quiz_privileges_3",
+        "button_text": "Next (3/3) ➔"
+      }
+    },
+    {
+      "card_id": "card_60_quiz_privileges_3",
+      "card_slug": "card_60_quiz_privileges_3",
+      "type": "quiz",
+      "concept_id": "privileges_quiz",
+      "level": 7,
+      "progress": {
+        "current": 60,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Under Article 122, courts cannot inquire into:",
+        "options": [
+          {"id": "A", "text": "Qualifications of MPs"},
+          {"id": "B", "text": "Proceedings of Parliament on grounds of irregularity of procedure"},
+          {"id": "C", "text": "Disqualification of MPs"},
+          {"id": "D", "text": "Election disputes of MPs"}
+        ],
+        "correct_option_id": "B",
+        "explanation": "⭐ UPSC/BPSC Constitutional Provision! Article 122 prohibits courts from inquiring into proceedings of Parliament on the grounds of any alleged irregularity of procedure. This protects parliamentary autonomy, but courts CAN examine other matters like qualifications, disqualifications, and substantive ultra vires issues."
+      },
+      "navigation": {
+        "next": "card_61_milestone_privileges",
+        "button_text": "Check Results ➔"
+      }
+    },
+    {
+      "card_id": "card_61_milestone_privileges",
+      "card_slug": "card_61_milestone_privileges",
+      "type": "milestone",
+      "concept_id": "privileges_complete",
+      "level": 7,
+      "progress": {
+        "current": 61,
+        "total": 72
+      },
+      "milestone_payload": {
+        "title": "🎉 PRIVILEGES MODULE COMPLETE!",
+        "badge_emoji": "⚖️",
+        "completed_topic": "Parliamentary Powers & Privileges",
+        "xp_earned": 120,
+        "milestone_progress": "Module 7/8 Complete",
+        "motivational_quote": "Almost there! Just one final module on Emergency Provisions. Let's finish strong!"
+      },
+      "navigation": {
+        "next": "card_62_emergency_parliament",
+        "button_text": "Emergency Module ➔"
+      }
+    },
+    {
+      "card_id": "card_62_emergency_parliament",
+      "card_slug": "card_62_emergency_parliament",
+      "type": "chat",
+      "concept_id": "parliament_emergency",
+      "level": 8,
+      "progress": {
+        "current": 62,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Emergency provisions (Part XVIII, Articles 352-360) mein Parliament ki bahut important role hai. Teen types ki emergency hain: (1) National Emergency (Article 352 - war, external aggression, armed rebellion), (2) State Emergency / President's Rule (Article 356), (3) Financial Emergency (Article 360). Parliament approval zaroori hai sab ke liye!"
+        },
+        {
+          "speaker": "raju",
+          "text": "National Emergency mein Parliament ka kya role hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "National Emergency President declare karta hai but (42nd Amendment ke baad) WRITTEN recommendation chahiye Cabinet se. Parliament ko 1 month ke andar approve karna hota hai - special majority se (50%+ of total + 2/3rd of present & voting). Phir har 6 months mein renewal zaroor through Parliament resolution. ⭐ BPSC Critical: Emergency can be revoked by Lok Sabha through simple majority!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Emergency mein Parliament ki powers badh jati hain?"
+        }
+      ],
+      "navigation": {
+        "next": "card_63_emergency_powers",
+        "button_text": "Emergency Powers ➔"
+      }
+    },
+    {
+      "card_id": "card_63_emergency_powers",
+      "card_slug": "card_63_emergency_powers",
+      "type": "chat",
+      "concept_id": "parliament_emergency_powers",
+      "level": 8,
+      "progress": {
+        "current": 63,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "National Emergency ke dauran Parliament ke powers extend ho jate hain: (1) Parliament STATE LIST ke subjects pe bhi law bana sakti hai (normally state ka domain), (2) Fundamental Rights (Articles 19) suspend ho sakte hain, (3) Lok Sabha ka tenure extend ho sakta hai - but max 6 months after emergency ends (Article 83), (4) President's Rule ke case mein State Legislature suspend, President approves state budget!"
+        },
+        {
+          "speaker": "raju",
+          "text": "President's Rule matlab state mein Parliament rule karti hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! Article 356 - agar state mein constitutional machinery fail ho jaye, President's Rule lag jata hai. State Assembly suspend/dissolve, President (Governor through) rule karta hai. Parliament state ke liye laws bana sakti hai. Maximum 3 years tak President's Rule reh sakta hai (successive approvals se). ⭐ UPSC: S.R. Bommai case (1994) ne President's Rule pe judicial review allowed kiya!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Financial Emergency?"
+        }
+      ],
+      "navigation": {
+        "next": "card_64_financial_emergency",
+        "button_text": "Financial Emergency ➔"
+      }
+    },
+    {
+      "card_id": "card_64_financial_emergency",
+      "card_slug": "card_64_financial_emergency",
+      "type": "chat",
+      "concept_id": "financial_emergency_detail",
+      "level": 8,
+      "progress": {
+        "current": 64,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Article 360 - Financial Emergency jab financial stability ya credit of India threatened ho. Effects: (1) President directives de sakta hai states ko fiscal discipline ke liye, (2) Salaries reduce kar sakta hai including Judges ka (except Supreme Court CJI), (3) Money Bills state legislature se pass hone ke baad President ko reservation ke liye jaate hain. Interesting fact: Financial Emergency abhi tak KABHI declare nahi hua India mein!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Toh ye theoretical provision hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan, ready hai use karne ke liye agar extreme financial crisis aaye. ⭐ SSC Fact: Only National Emergency declared hua hai India mein - 1962 (China war), 1971 (Pakistan war), 1975 (Internal Emergency - most controversial!). President's Rule bahut baar laga hai states mein!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Ab Parliament ka complete picture aa gaya!"
+        }
+      },
+      "navigation": {
+        "next": "card_65_quiz_emergency_1",
+        "button_text": "Last Module Test ➔"
+      }
+    },
+    {
+      "card_id": "card_65_quiz_emergency_1",
+      "card_slug": "card_65_quiz_emergency_1",
+      "type": "quiz",
+      "concept_id": "emergency_quiz",
+      "level": 8,
+      "progress": {
+        "current": 65,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "National Emergency needs approval by Parliament within:",
+        "options": [
+          {"id": "A", "text": "15 days"},
+          {"id": "B", "text": "1 month"},
+          {"id": "C", "text": "2 months"},
+          {"id": "D", "text": "6 months"}
+        ],
+        "correct_option_id": "B",
+        "explanation": "⭐ BPSC/Railway Specific Timeline! National Emergency (Article 352) must be approved by both Houses of Parliament within ONE MONTH of proclamation. Approval requires special majority. Thereafter, continues for 6 months at a time with Parliament's approval."
+      },
+      "navigation": {
+        "next": "card_66_quiz_emergency_2",
+        "button_text": "Next (2/3) ➔"
+      }
+    },
+    {
+      "card_id": "card_66_quiz_emergency_2",
+      "card_slug": "card_66_quiz_emergency_2",
+      "type": "quiz",
+      "concept_id": "emergency_quiz",
+      "level": 8,
+      "progress": {
+        "current": 66,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "During National Emergency, Parliament can make laws on:",
+        "options": [
+          {"id": "A", "text": "Union List only"},
+          {"id": "B", "text": "Union List and Concurrent List only"},
+          {"id": "C", "text": "All three Lists including State List"},
+          {"id": "D", "text": "Only subjects mentioned in proclamation"}
+        ],
+        "correct_option_id": "C",
+        "explanation": "⭐ UPSC Constitutional Effect! During National Emergency, Parliament's legislative powers extend to State List subjects as well. This is a major shift in federal balance - normally states have exclusive authority over State List. Emergency centralizes power temporarily."
+      },
+      "navigation": {
+        "next": "card_67_quiz_emergency_3",
+        "button_text": "Next (3/3) ➔"
+      }
+    },
+    {
+      "card_id": "card_67_quiz_emergency_3",
+      "card_slug": "card_67_quiz_emergency_3",
+      "type": "quiz",
+      "concept_id": "emergency_quiz",
+      "level": 8,
+      "progress": {
+        "current": 67,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Which Emergency has NEVER been proclaimed in India?",
+        "options": [
+          {"id": "A", "text": "National Emergency (Article 352)"},
+          {"id": "B", "text": "President's Rule in States (Article 356)"},
+          {"id": "C", "text": "Financial Emergency (Article 360)"},
+          {"id": "D", "text": "All have been proclaimed"}
+        ],
+        "correct_option_id": "C",
+        "explanation": "⭐ SSC Historical Fact! FINANCIAL EMERGENCY (Article 360) has NEVER been proclaimed in India. National Emergency was declared 3 times (1962, 1971, 1975). President's Rule has been imposed many times in various states. Financial Emergency remains an unused provision."
+      },
+      "navigation": {
+        "next": "card_68_milestone_emergency",
+        "button_text": "Check Results ➔"
+      }
+    },
+    {
+      "card_id": "card_68_milestone_emergency",
+      "card_slug": "card_68_milestone_emergency",
+      "type": "milestone",
+      "concept_id": "emergency_complete",
+      "level": 8,
+      "progress": {
+        "current": 68,
+        "total": 72
+      },
+      "milestone_payload": {
+        "title": "🎉 ALL MODULES COMPLETED!",
+        "badge_emoji": "🏆",
+        "completed_topic": "Parliament & Emergency Provisions",
+        "xp_earned": 125,
+        "milestone_progress": "Module 8/8 Complete - Full Chapter Done!",
+        "motivational_quote": "Phenomenal achievement! You've mastered the entire Parliament chapter. Now let's revise like an officer!"
+      },
+      "navigation": {
+        "next": "card_69_final_summary",
+        "button_text": "Officer Revision ➔"
+      }
+    },
+    {
+      "card_id": "card_69_final_summary",
+      "card_slug": "card_69_final_summary",
+      "type": "summary",
+      "concept_id": "parliament_complete_revision",
+      "level": 8,
+      "progress": {
+        "current": 69,
+        "total": 72
+      },
+      "summary_payload": {
+        "title": "⚡ OFFICER-LEVEL RAPID REVISION",
+        "revision_points": [
+          {
+            "topic": "Structure & Composition",
+            "point": "Parliament = President + Lok Sabha (543) + Rajya Sabha (245). LS: 5 years, dissolvable, age 25+, direct election. RS: Permanent, 1/3rd retire every 2 years, age 30+, indirect election by MLAs. Seat allocation: LS frozen at 1971 census till 2026."
+          },
+          {
+            "topic": "Powers & Supremacy",
+            "point": "LS > RS in: Money Bills (Art 110 - LS only), Confidence/No-confidence, Budget approval. RS Exclusive: Art 249 (State List authorization), Art 312 (All India Services). Speaker decides Money Bill (final). Joint sitting for Ordinary Bills only."
+          },
+          {
+            "topic": "Legislative Process",
+            "point": "Ordinary Bill: Any house, 3 readings, both houses, President assent. Money Bill: LS only, RS 14 days, Speaker certificate, President bound to assent. Constitutional Amendment: Special majority both houses separately. Joint sitting: Art 108, Speaker presides, 3 times used."
+          },
+          {
+            "topic": "Budget & Committees",
+            "point": "Budget (Art 112): Presented Feb-end, Demands for Grants, Appropriation Bill + Finance Bill. Funds: Consolidated (Parliament approval), Contingency (President emergency), Public Account (trust). PAC: 22 members, Opposition Chairman, no Ministers. Estimates: 30 LS members only."
+          },
+          {
+            "topic": "Privileges & Emergency",
+            "point": "Art 105: Freedom of speech, immunity from arrest (civil, 40 days buffer). Art 122: Courts can't question proceedings. National Emergency: 1 month Parliament approval, 6-month renewal, special majority. Emer powers: State List legislation, FR suspension, tenure extension (max 6 months post-emergency)."
+          }
+        ]
+      },
+      "navigation": {
+        "next": "card_70_final_quiz",
+        "button_text": "Final Officer Test ➔"
+      }
+    },
+    {
+      "card_id": "card_70_final_quiz",
+      "card_slug": "card_70_final_quiz",
+      "type": "final_quiz",
+      "concept_id": "parliament_final_assessment",
+      "level": 8,
+      "progress": {
+        "current": 70,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Consider the following statements:\n1. Speaker's decision on whether a bill is Money Bill can be challenged in Supreme Court.\n2. Rajya Sabha can delay a Money Bill for maximum 14 days.\n3. Joint sitting can be called for Money Bills.\n4. President can return a Money Bill for reconsideration.\n\nWhich statements are CORRECT?",
+        "options": [
+          {"id": "A", "text": "Only 2"},
+          {"id": "B", "text": "1 and 2"},
+          {"id": "C", "text": "2 and 3"},
+          {"id": "D", "text": "1, 2 and 4"}
+        ],
+        "correct_option_id": "A",
+        "explanation": "⭐ UPSC/BPSC Multi-Statement Trap! Only statement 2 is CORRECT. (1) FALSE - Art 110(3): Speaker's decision is FINAL, cannot be questioned in courts. (2) TRUE - RS can recommend for 14 days maximum. (3) FALSE - No joint sitting for Money Bills. (4) FALSE - President CANNOT return Money Bill, must give assent."
+      },
+      "navigation": {
+        "next": "card_71_assertion_reason",
+        "button_text": "Assertion-Reason Challenge ➔"
+      }
+    },
+    {
+      "card_id": "card_71_assertion_reason",
+      "card_slug": "card_71_assertion_reason",
+      "type": "final_quiz",
+      "concept_id": "parliament_assertion_reason",
+      "level": 8,
+      "progress": {
+        "current": 71,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "ASSERTION (A): Rajya Sabha is more powerful than Lok Sabha in certain matters.\n\nREASON (R): Rajya Sabha represents States and has exclusive power to authorize Parliament to legislate on State List subjects.\n\nChoose correct option:",
+        "options": [
+          {"id": "A", "text": "Both A and R true, R correctly explains A"},
+          {"id": "B", "text": "Both A and R true, R does NOT explain A"},
+          {"id": "C", "text": "A true, R false"},
+          {"id": "D", "text": "A false, R true"}
+        ],
+        "correct_option_id": "A",
+        "explanation": "⭐ BPSC Assertion-Reason! Both A and R are TRUE, and R CORRECTLY explains A. Rajya Sabha IS more powerful in certain specific matters (Art 249 - State List authorization, Art 312 - All India Services creation) BECAUSE it represents States and protects federal interests. R is the correct reasoning for A."
+      },
+      "navigation": {
+        "next": "card_72_final_milestone",
+        "button_text": "Complete Chapter ➔"
+      }
+    },
+    {
+      "card_id": "card_72_final_milestone",
+      "card_slug": "card_72_final_milestone",
+      "type": "milestone",
+      "concept_id": "parliament_chapter_complete",
+      "level": 8,
+      "progress": {
+        "current": 72,
+        "total": 72
+      },
+      "milestone_payload": {
+        "title": "🏆 PARLIAMENT MASTERY ACHIEVED! 🏆",
+        "badge_emoji": "🎓",
+        "completed_topic": "Complete Indian Parliament - Polity",
+        "xp_earned": 600,
+        "milestone_progress": "100% Chapter Completion",
+        "motivational_quote": "OUTSTANDING! You've conquered one of Polity's toughest chapters! From Article 79 to Emergency provisions, from PAC to Presidential assent, from Lok Sabha to Rajya Sabha - you now command COMPLETE knowledge of India's supreme legislative body. BPSC/UPSC questions don't stand a chance. This is OFFICER-LEVEL preparation! Keep this momentum - you're unstoppable! 🇮🇳🎯"
+      },
+      "navigation": {
+        "next": null,
+        "button_text": "Back to Dashboard 🏠"
+      }
+    }
+  ]
+}
+```
