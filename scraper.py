@@ -26,11 +26,11 @@ OUTPUT_FILE = "rawnews.json"
 TIMEOUT = 25
 MAX_PER_SOURCE = 10
 
-MIN_CONTENT_CHARS = 250
+MIN_CONTENT_CHARS = 200
 MIN_CONTENT_WORDS = 40
 MAX_CONTENT_CHARS = 30000
 
-# Rolling 36 Hours Window for max coverage
+# Rolling 36 Hours Window for max flexibility
 MAX_NEWS_AGE_HOURS = 36
 
 SCRAPINGANT_API_KEY = os.environ.get("SCRAPINGANT_API_KEY", "").strip()
@@ -53,14 +53,11 @@ warnings.filterwarnings("ignore", category=MarkupResemblesLocatorWarning)
 
 
 # ============================================================
-# SPECIAL NIC BIHAR GOVT SSL ADAPTER (FIXES CONNECTION RESET)
+# SPECIAL NIC BIHAR GOVT SSL ADAPTER
 # ============================================================
 
 class CustomGovSSLAdapter(HTTPAdapter):
-    """
-    Forces legacy SSL/TLS ciphers and HTTP/1.1 to bypass
-    NIC Bihar Government ASP.NET server firewall blocks.
-    """
+    """Bypasses legacy SSL/TLS ciphers for Bihar Government portals"""
     def init_poolmanager(self, *args, **kwargs):
         ctx = create_urllib3_context()
         ctx.set_ciphers('DEFAULT@SECLEVEL=1')
@@ -205,7 +202,7 @@ def remove_common_boilerplate(text):
 
 
 # ============================================================
-# DATE PARSER & ROLLING WINDOW
+# HYPER-FLEXIBLE DATE PARSER ENGINE
 # ============================================================
 
 DATE_FORMATS = [
@@ -227,7 +224,7 @@ def parse_date(value):
     lower_val = value.lower()
     current_now = now_ist()
 
-    # Relative Time Parser (English + Hindi)
+    # Relative Time Parser (English & Hindi)
     if any(k in lower_val for k in ["ago", "today", "yesterday", "घंटे पहले", "दिन पहले", "आज", "कल"]):
         if "today" in lower_val or "आज" in lower_val:
             return current_now
@@ -325,7 +322,7 @@ def extract_date_from_soup(soup):
 
 def is_within_rolling_window(parsed_date):
     if not parsed_date:
-        return True  # Fallback: if no date is in HTML, accept active listing items
+        return True  # Fallback: Accept active live items
 
     current_time = now_ist()
     if parsed_date.tzinfo is None:
@@ -346,7 +343,6 @@ def is_within_rolling_window(parsed_date):
 # ============================================================
 
 def gov_special_fetch(url):
-    """Special Fetcher using Custom TLS Session for Govt ASP.NET Sites"""
     try:
         r = gov_session.get(url, headers=HEADERS, timeout=TIMEOUT, verify=False)
         if r.status_code == 200 and len(r.text) > 100:
@@ -419,7 +415,6 @@ def fetch_url(url):
     if not url:
         return None
 
-    # Priority 1 for Bihar Government Domains (.bihar.gov.in)
     if "bihar.gov.in" in url.lower():
         html = gov_special_fetch(url)
         if html:
@@ -428,7 +423,6 @@ def fetch_url(url):
         if html:
             return html
 
-    # Priority 2 for Other Government Domains (.gov.in)
     if ".gov.in" in url.lower():
         html = normal_fetch(url, verify=True)
         if html:
@@ -437,7 +431,6 @@ def fetch_url(url):
         if html:
             return html
 
-    # Priority 3: curl_cffi with Chrome impersonation
     html = curl_fetch(url, verify=True)
     if html:
         return html
@@ -446,7 +439,6 @@ def fetch_url(url):
     if html:
         return html
 
-    # Priority 4: Standard requests
     html = normal_fetch(url, verify=True)
     if html:
         return html
@@ -455,7 +447,6 @@ def fetch_url(url):
     if html:
         return html
 
-    # Priority 5: ScrapingAnt Fallback
     if SCRAPINGANT_API_KEY:
         html = scrapingant_fetch(url)
         if html:
@@ -466,7 +457,7 @@ def fetch_url(url):
 
 
 # ============================================================
-# PIB URL CONVERTER
+# PERFECT PIB URL CONVERTER (MOBILE HTML + DESKTOP FALLBACK)
 # ============================================================
 
 def convert_pib_article_url(url):
@@ -478,8 +469,8 @@ def convert_pib_article_url(url):
     query = parse_qs(parsed.query)
 
     prid = query.get("PRID", [None])[0]
-    reg = query.get("reg", ["48"])[0]
-    lang = query.get("lang", ["2"])[0]
+    reg = query.get("reg", ["3"])[0]
+    lang = query.get("lang", ["1"])[0]
 
     if not prid:
         m = re.search(r'PRID=(\d+)', url, flags=re.I)
@@ -489,23 +480,33 @@ def convert_pib_article_url(url):
     if not prid:
         return url
 
-    return f"https://www.pib.gov.in/PressReleasePage.aspx?PRID={prid}&reg={reg}&lang={lang}"
+    # Primary: Direct Mobile HTML endpoint (PressReleseDetailm.aspx - No heavy JS shell)
+    return f"https://www.pib.gov.in/PressReleseDetailm.aspx?PRID={prid}&reg={reg}&lang={lang}"
 
 
 def pib_article_urls(url):
     urls = []
     original = clean_url(url)
 
-    converted = convert_pib_article_url(original)
-    if converted:
-        urls.append(converted)
+    converted_mobile = convert_pib_article_url(original)
+    if converted_mobile:
+        urls.append(converted_mobile)
+
+    # Secondary: Desktop Page with www force
+    if "PRID=" in original:
+        prid_m = re.search(r'PRID=(\d+)', original, flags=re.I)
+        if prid_m:
+            prid = prid_m.group(1)
+            urls.append(f"https://www.pib.gov.in/PressReleasePage.aspx?PRID={prid}&reg=3&lang=1")
 
     if original and original not in urls:
         urls.append(original)
 
-    if converted and "PressReleasePage.aspx" in converted:
-        iframe = converted.replace("PressReleasePage.aspx", "PressReleaseIframePage.aspx")
-        urls.append(iframe)
+    # Tertiary: Iframe Container
+    if converted_mobile and "PRID=" in converted_mobile:
+        prid_m = re.search(r'PRID=(\d+)', converted_mobile, flags=re.I)
+        if prid_m:
+            urls.append(f"https://www.pib.gov.in/PressReleaseIframePage.aspx?PRID={prid_m.group(1)}")
 
     output = []
     seen = set()
@@ -525,7 +526,7 @@ def extract_article_content(soup, source=""):
     for tag in soup(["script", "style", "noscript", "svg", "canvas", "nav", "footer", "form", "aside"]):
         tag.decompose()
 
-    # Priority 1: High-Yield Target Divs for PIB & Bihar CMO
+    # High-Priority Target Containers for PIB & Bihar Portals
     target_div = (
         soup.find(id="ContentPlaceHolder1_divpri") or
         soup.find(id="divpri") or
@@ -543,7 +544,6 @@ def extract_article_content(soup, source=""):
         if len(extracted_text) >= 120:
             return extracted_text
 
-    # Priority 2: JSON-LD Schema
     jsonld_candidates = []
     for script in soup.find_all("script", type="application/ld+json"):
         try:
@@ -652,7 +652,7 @@ def fetch_generic_article_content(url, source=""):
 
 
 # ============================================================
-# ITEM BUILDER WITH FLEXIBLE DATE FALLBACKS
+# ITEM BUILDER WITH DYNAMIC DATE FALLBACKS
 # ============================================================
 
 def make_item(source, title, url, date=None, content="", item_type="Scraped"):
@@ -896,7 +896,7 @@ def scrape_news_on_air():
     return results
 
 
-# UPDATED CMO BIHAR URLS INCLUDING ACTIVE news.aspx
+# ACTIVE CMO BIHAR URLS INCLUDING WORKING news.aspx
 CMO_URLS = [
     "https://cm.bihar.gov.in/users/news.aspx",
     "https://cm.bihar.gov.in/users/preessrelease.aspx",
