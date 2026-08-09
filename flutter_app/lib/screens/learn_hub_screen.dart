@@ -9,7 +9,9 @@ class LearnHubScreen extends StatefulWidget {
 }
 
 class _LearnHubScreenState extends State<LearnHubScreen> {
+  // 📚 CDN BASE PATH: https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/learn/
   final List<Map<String, dynamic>> _subjects = [
+    // 🧬 1. BIOLOGY (11 Chapters - Tissues Removed)
     {
       'title': 'Biology',
       'icon': '🧬',
@@ -18,31 +20,142 @@ class _LearnHubScreenState extends State<LearnHubScreen> {
         {
           'id': 'bio_cell',
           'title': 'Cell (Koshika)',
-          'subtitle': '33 Micro-Learning Cards',
+          'subtitle': 'Micro-Learning Concept Cards',
           'isAvailable': true,
-          'jsonUrl': 'https://raw.githubusercontent.com/zxcty54/quiz/refs/heads/main/learn/biology/cell.json',
+          'jsonUrl': 'https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/learn/biology/cell.json',
         },
         {
-          'id': 'bio_tissue',
-          'title': 'Tissues (Ootak)',
-          'subtitle': 'Coming Soon',
-          'isAvailable': false,
+          'id': 'bio_digestive',
+          'title': 'Digestive System',
+          'subtitle': 'Micro-Learning Concept Cards',
+          'isAvailable': true,
+          'jsonUrl': 'https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/learn/biology/digestive.json',
+        },
+        {
+          'id': 'bio_circulatory',
+          'title': 'Circulatory System',
+          'subtitle': 'Micro-Learning Concept Cards',
+          'isAvailable': true,
+          'jsonUrl': 'https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/learn/biology/circulatory.json',
+        },
+        {
+          'id': 'bio_respiratory',
+          'title': 'Respiratory System',
+          'subtitle': 'Micro-Learning Concept Cards',
+          'isAvailable': true,
+          'jsonUrl': 'https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/learn/biology/respiratory.json',
+        },
+        {
+          'id': 'bio_nervous',
+          'title': 'Nervous System',
+          'subtitle': 'Micro-Learning Concept Cards',
+          'isAvailable': true,
+          'jsonUrl': 'https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/learn/biology/nervous.json',
+        },
+        {
+          'id': 'bio_excreatory',
+          'title': 'Excretory System',
+          'subtitle': 'Micro-Learning Concept Cards',
+          'isAvailable': true,
+          'jsonUrl': 'https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/learn/biology/excreatory.json',
+        },
+        {
+          'id': 'bio_disease',
+          'title': 'Human Diseases & Health',
+          'subtitle': 'Micro-Learning Concept Cards',
+          'isAvailable': true,
+          'jsonUrl': 'https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/learn/biology/disease.json',
+        },
+        {
+          'id': 'bio_classification',
+          'title': 'Classification of Organisms',
+          'subtitle': 'Micro-Learning Concept Cards',
+          'isAvailable': true,
+          'jsonUrl': 'https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/learn/biology/classification.json',
+        },
+        {
+          'id': 'bio_inheritance',
+          'title': 'Genetics & Inheritance',
+          'subtitle': 'Micro-Learning Concept Cards',
+          'isAvailable': true,
+          'jsonUrl': 'https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/learn/biology/inheritance.json',
+        },
+        {
+          'id': 'bio_ecosystem',
+          'title': 'Ecosystem & Environment',
+          'subtitle': 'Micro-Learning Concept Cards',
+          'isAvailable': true,
+          'jsonUrl': 'https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/learn/biology/ecosystem.json',
+        },
+        {
+          'id': 'bio_biotech',
+          'title': 'Biotechnology',
+          'subtitle': 'Micro-Learning Concept Cards',
+          'isAvailable': true,
+          'jsonUrl': 'https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/learn/biology/biotech.json',
         },
       ]
     },
+
+    // ⚡ 2. PHYSICS (7 Chapters)
     {
       'title': 'Physics',
       'icon': '⚡',
       'color': const Color(0xFF2563EB),
       'chapters': [
         {
-          'id': 'phy_units',
-          'title': 'Units & Measurement',
-          'subtitle': 'Coming Soon',
-          'isAvailable': false,
+          'id': 'phy_motion',
+          'title': 'Motion & Kinematics',
+          'subtitle': 'Micro-Learning Concept Cards',
+          'isAvailable': true,
+          'jsonUrl': 'https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/learn/physics/motion.json',
+        },
+        {
+          'id': 'phy_force',
+          'title': 'Force & Laws of Motion',
+          'subtitle': 'Micro-Learning Concept Cards',
+          'isAvailable': true,
+          'jsonUrl': 'https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/learn/physics/force.json',
+        },
+        {
+          'id': 'phy_gravity',
+          'title': 'Gravitation',
+          'subtitle': 'Micro-Learning Concept Cards',
+          'isAvailable': true,
+          'jsonUrl': 'https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/learn/physics/gravity.json',
+        },
+        {
+          'id': 'phy_work',
+          'title': 'Work, Energy & Power',
+          'subtitle': 'Micro-Learning Concept Cards',
+          'isAvailable': true,
+          'jsonUrl': 'https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/learn/physics/work.json',
+        },
+        {
+          'id': 'phy_electricity',
+          'title': 'Electricity & Current',
+          'subtitle': 'Micro-Learning Concept Cards',
+          'isAvailable': true,
+          'jsonUrl': 'https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/learn/physics/electricity.json',
+        },
+        {
+          'id': 'phy_magnetism',
+          'title': 'Magnetism',
+          'subtitle': 'Micro-Learning Concept Cards',
+          'isAvailable': true,
+          'jsonUrl': 'https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/learn/physics/magnetism.json',
+        },
+        {
+          'id': 'phy_lights',
+          'title': 'Light & Optics',
+          'subtitle': 'Micro-Learning Concept Cards',
+          'isAvailable': true,
+          'jsonUrl': 'https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/learn/physics/lights.json',
         },
       ]
     },
+
+    // 🧪 3. CHEMISTRY (11 Chapters)
     {
       'title': 'Chemistry',
       'icon': '🧪',
@@ -51,11 +164,84 @@ class _LearnHubScreenState extends State<LearnHubScreen> {
         {
           'id': 'chem_matter',
           'title': 'Matter & Its States',
-          'subtitle': 'Coming Soon',
-          'isAvailable': false,
+          'subtitle': 'Micro-Learning Concept Cards',
+          'isAvailable': true,
+          'jsonUrl': 'https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/learn/chemistry/matter.json',
+        },
+        {
+          'id': 'chem_atomic',
+          'title': 'Atomic Structure',
+          'subtitle': 'Micro-Learning Concept Cards',
+          'isAvailable': true,
+          'jsonUrl': 'https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/learn/chemistry/atomicstructure.json',
+        },
+        {
+          'id': 'chem_acidbase',
+          'title': 'Acids, Bases & Salts',
+          'subtitle': 'Micro-Learning Concept Cards',
+          'isAvailable': true,
+          'jsonUrl': 'https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/learn/chemistry/acidbasesalt.json',
+        },
+        {
+          'id': 'chem_metals',
+          'title': 'Metals & Metallurgy',
+          'subtitle': 'Micro-Learning Concept Cards',
+          'isAvailable': true,
+          'jsonUrl': 'https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/learn/chemistry/metals.json',
+        },
+        {
+          'id': 'chem_nonmetals',
+          'title': 'Non-Metals & Compounds',
+          'subtitle': 'Micro-Learning Concept Cards',
+          'isAvailable': true,
+          'jsonUrl': 'https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/learn/chemistry/nonmetal.json',
+        },
+        {
+          'id': 'chem_carbon',
+          'title': 'Carbon & Its Compounds',
+          'subtitle': 'Micro-Learning Concept Cards',
+          'isAvailable': true,
+          'jsonUrl': 'https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/learn/chemistry/carbon.json',
+        },
+        {
+          'id': 'chem_polymer',
+          'title': 'Polymers',
+          'subtitle': 'Micro-Learning Concept Cards',
+          'isAvailable': true,
+          'jsonUrl': 'https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/learn/chemistry/polymer.json',
+        },
+        {
+          'id': 'chem_biomolecules',
+          'title': 'Biomolecules',
+          'subtitle': 'Micro-Learning Concept Cards',
+          'isAvailable': true,
+          'jsonUrl': 'https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/learn/chemistry/biomolecules.json',
+        },
+        {
+          'id': 'chem_electro',
+          'title': 'Electrochemistry',
+          'subtitle': 'Micro-Learning Concept Cards',
+          'isAvailable': true,
+          'jsonUrl': 'https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/learn/chemistry/electrochemistry.json',
+        },
+        {
+          'id': 'chem_surface',
+          'title': 'Surface Chemistry',
+          'subtitle': 'Micro-Learning Concept Cards',
+          'isAvailable': true,
+          'jsonUrl': 'https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/learn/chemistry/surfacechem.json',
+        },
+        {
+          'id': 'chem_life',
+          'title': 'Chemistry in Everyday Life',
+          'subtitle': 'Micro-Learning Concept Cards',
+          'isAvailable': true,
+          'jsonUrl': 'https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/learn/chemistry/chemminlife.json',
         },
       ]
     },
+
+    // 📜 4. POLITY
     {
       'title': 'Polity',
       'icon': '📜',
@@ -64,8 +250,9 @@ class _LearnHubScreenState extends State<LearnHubScreen> {
         {
           'id': 'pol_preamble',
           'title': 'Preamble & Constitution',
-          'subtitle': 'Coming Soon',
-          'isAvailable': false,
+          'subtitle': 'Micro-Learning Concept Cards',
+          'isAvailable': true,
+          'jsonUrl': 'https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/learn/polity/preamble.json',
         },
       ]
     },
@@ -85,6 +272,7 @@ class _LearnHubScreenState extends State<LearnHubScreen> {
       ),
       body: Column(
         children: [
+          // Horizontal Subject Selector
           Container(
             height: 60,
             color: Theme.of(context).cardColor,
@@ -128,6 +316,8 @@ class _LearnHubScreenState extends State<LearnHubScreen> {
             ),
           ),
           const Divider(height: 1),
+
+          // Chapter List Builder
           Expanded(
             child: ListView.builder(
               padding: const EdgeInsets.all(16),
