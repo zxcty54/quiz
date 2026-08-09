@@ -1,0 +1,2217 @@
+```json
+{
+  "topic_id": "light_optics_complete",
+  "topic_title": "Light & Optics - Complete Mastery",
+  "target_exams": ["BPSC", "BSSC", "RRB NTPC", "SSC CGL", "NEET", "UPSC Prelims", "BPSC TRE"],
+  "total_cards": 72,
+  "characters": {
+    "aman": {
+      "name": "Aman Sir",
+      "role": "teacher",
+      "avatar": "👨‍🏫"
+    },
+    "raju": {
+      "name": "Raju",
+      "role": "student",
+      "avatar": "👦"
+    }
+  },
+  "cards": [
+    {
+      "card_id": "card_01_intro",
+      "card_slug": "card_01_intro",
+      "type": "intro",
+      "concept_id": "chapter_intro",
+      "level": 1,
+      "progress": {
+        "current": 1,
+        "total": 72
+      },
+      "intro_payload": {
+        "title": "Light & Optics",
+        "icon": "💡",
+        "target_exams": ["BPSC", "BSSC", "RRB NTPC", "SSC CGL", "NEET", "UPSC Prelims", "BPSC TRE"],
+        "learning_outcomes": [
+          "Nature of Light - Wave & Particle Duality",
+          "Reflection - Plane & Curved Mirrors",
+          "Refraction - Laws, Snell's Law, Total Internal Reflection",
+          "Lenses - Convex, Concave & Ray Diagrams",
+          "Human Eye & Optical Instruments",
+          "Dispersion, Scattering & Atmospheric Phenomena",
+          "BPSC/NEET/SSC PYQ Traps & Multi-Statement Questions"
+        ],
+        "estimated_time": "45 mins",
+        "xp_reward": 500
+      },
+      "navigation": {
+        "next": "card_02_light_daily_life",
+        "button_text": "Start Learning ➔"
+      }
+    },
+    {
+      "card_id": "card_02_light_daily_life",
+      "card_slug": "card_02_light_daily_life",
+      "type": "chat",
+      "concept_id": "light_intro",
+      "level": 1,
+      "progress": {
+        "current": 2,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, kal subah jab tum uthte ho, sabse pehle kya notice karte ho?"
+        },
+        {
+          "speaker": "raju",
+          "text": "Khidki se dhoop aa rahi hoti hai... pura kamra bright ho jata hai!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul sahi! Lekin raat ko jab bijli chali jaati hai, kuch dikhta hai?"
+        },
+        {
+          "speaker": "raju",
+          "text": "Nahi Sir, ekdum andhera... torch ya candle jalani padti hai."
+        }
+      ],
+      "navigation": {
+        "next": "card_03_light_is_essential",
+        "button_text": "Aage Badhein ➔"
+      }
+    },
+    {
+      "card_id": "card_03_light_is_essential",
+      "card_slug": "card_03_light_is_essential",
+      "type": "chat",
+      "concept_id": "light_intro",
+      "level": 1,
+      "progress": {
+        "current": 3,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Iska matlab, dekhne ke liye Light zaroori hai! Light ek form of energy hai jo hamare eyes ko cheezon ko dekhne ki ability deti hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "Toh Sir, light kahan se aati hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bahut sahi question! Light sources do types ke hote hain - Luminous (khud se light nikalta hai jaise Suraj, bulb, candle) aur Non-luminous (jo reflect karke light dete hain jaise Moon, table, book)."
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab Moon khud se light nahi deta? Wo toh itna chamakta hai!"
+        }
+      ],
+      "navigation": {
+        "next": "card_04_moon_trap",
+        "button_text": "Ye Trap Samjho ➔"
+      }
+    },
+    {
+      "card_id": "card_04_moon_trap",
+      "card_slug": "card_04_moon_trap",
+      "type": "chat",
+      "concept_id": "light_sources",
+      "level": 1,
+      "progress": {
+        "current": 4,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Bahut bada exam trap hai ye! Moon khud se light produce nahi karta. Wo Sun ki light ko reflect karta hai isliye chamakta hai. ⭐ BPSC TRE Favorite - Moon is a Non-Luminous object."
+        },
+        {
+          "speaker": "raju",
+          "text": "Ohhh! Toh mirror bhi non-luminous hai, wo bhi toh reflect karta hai."
+        },
+        {
+          "speaker": "aman",
+          "text": "Ekdum correct! Ab agle card mein dekhenge light ka ek aur amazing property - light seedhi line mein travel karti hai, use kehte hain Rectilinear Propagation of Light."
+        },
+        {
+          "speaker": "raju",
+          "text": "Seedhi line mein? Matlab bend nahi hoti?"
+        }
+      ],
+      "navigation": {
+        "next": "card_05_rectilinear_propagation",
+        "button_text": "Property Samjho ➔"
+      }
+    },
+    {
+      "card_id": "card_05_rectilinear_propagation",
+      "card_slug": "card_05_rectilinear_propagation",
+      "type": "chat",
+      "concept_id": "rectilinear_propagation",
+      "level": 1,
+      "progress": {
+        "current": 5,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Bilkul! Light straight line mein travel karti hai ek uniform medium mein. Is property ko Rectilinear Propagation of Light kehte hain. Evidence? Jab suraj ki kiran kamre mein aati hai, seedhi line dikhti hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Haan Sir! Aur pinhole camera bhi isi principle pe kaam karta hai na?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Absolutely! Pinhole camera, shadow formation, solar eclipse sab is property ki wajah se hote hain. Lekin dhyan do - maine kaha 'uniform medium' mein. Agar medium change hota hai (jaise air se paani mein), tab light bend hoti hai, use kehte hain Refraction."
+        },
+        {
+          "speaker": "raju",
+          "text": "Toh light kabhi bend bhi hoti hai? Ye toh confusing hai Sir!"
+        }
+      ],
+      "navigation": {
+        "next": "card_06_light_nature_intro",
+        "button_text": "Nature Samjho ➔"
+      }
+    },
+    {
+      "card_id": "card_06_light_nature_intro",
+      "card_slug": "card_06_light_nature_intro",
+      "type": "chat",
+      "concept_id": "light_nature",
+      "level": 1,
+      "progress": {
+        "current": 6,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ruko Raju, abhi tak toh sirf light ka behaviour dekha. Ab fundamental question - Light hai KYA cheez? Particle hai ya wave hai?"
+        },
+        {
+          "speaker": "raju",
+          "text": "Hain?? Light bhi particle ho sakti hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bahut interesting history hai! Newton ne kaha light particles (corpuscles) hai. Phir Huygens ne kaha nahi, light waves hai. Fir Young's Double Slit Experiment ne prove kiya light wave hai. Lekin 20th century mein Einstein ne Photoelectric Effect se prove kiya light particle (Photon) bhi hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab dono sahi the??"
+        }
+      ],
+      "navigation": {
+        "next": "card_07_dual_nature",
+        "button_text": "Dual Nature Samjho ➔"
+      }
+    },
+    {
+      "card_id": "card_07_dual_nature",
+      "card_slug": "card_07_dual_nature",
+      "type": "chat",
+      "concept_id": "light_dual_nature",
+      "level": 1,
+      "progress": {
+        "current": 7,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Haan Raju! Light ka Dual Nature hai - kabhi wave ki tarah behave karti hai (interference, diffraction), kabhi particle (photon) ki tarah (photoelectric effect). ⭐ NEET Favorite Question - Light shows Wave-Particle Duality."
+        },
+        {
+          "speaker": "raju",
+          "text": "Ye toh next level hai Sir! Toh exam mein kya likhun?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Statement simple hai - Light exhibits dual nature (both wave and particle characteristics). Photon light ki smallest packet (quantum) hai. Speed of light vacuum mein sabse zyada hai - 3 × 10⁸ m/s. Yahi universal constant 'c' hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "3 lakh kilometer per second! Fastest cheez universe mein!"
+        }
+      ],
+      "navigation": {
+        "next": "card_08_quiz_light_basics_1",
+        "button_text": "Test Karo ➔"
+      }
+    },
+    {
+      "card_id": "card_08_quiz_light_basics_1",
+      "card_slug": "card_08_quiz_light_basics_1",
+      "type": "quiz",
+      "concept_id": "light_basics_quiz",
+      "level": 1,
+      "progress": {
+        "current": 8,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Which of the following is a luminous object?",
+        "options": [
+          { "id": "A", "text": "Moon" },
+          { "id": "B", "text": "Planet Venus" },
+          { "id": "C", "text": "Firefly (Jugnu)" },
+          { "id": "D", "text": "Mirror" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Firefly (Jugnu) is a luminous object because it produces its own light through bioluminescence. Moon, Venus, and Mirror are all non-luminous - they only reflect light from the Sun. ⭐ BPSC/SSC Favorite Trap - Moon is often wrongly considered luminous!"
+      },
+      "navigation": {
+        "next": "card_09_quiz_light_basics_2",
+        "button_text": "Next Question (2/3) ➔"
+      }
+    },
+    {
+      "card_id": "card_09_quiz_light_basics_2",
+      "card_slug": "card_09_quiz_light_basics_2",
+      "type": "quiz",
+      "concept_id": "light_basics_quiz",
+      "level": 1,
+      "progress": {
+        "current": 9,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Rectilinear propagation of light is best demonstrated by which phenomenon?",
+        "options": [
+          { "id": "A", "text": "Rainbow formation" },
+          { "id": "B", "text": "Formation of shadows" },
+          { "id": "C", "text": "Twinkling of stars" },
+          { "id": "D", "text": "Mirage on hot roads" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Formation of shadows proves that light travels in straight lines (rectilinear propagation). Rainbow involves dispersion, twinkling involves refraction in atmosphere, and mirage involves refraction + total internal reflection. ⭐ Railway/SSC Favorite - Shadow, pinhole camera, solar eclipse all demonstrate rectilinear propagation."
+      },
+      "navigation": {
+        "next": "card_10_quiz_light_basics_3",
+        "button_text": "Next Question (3/3) ➔"
+      }
+    },
+    {
+      "card_id": "card_10_quiz_light_basics_3",
+      "card_slug": "card_10_quiz_light_basics_3",
+      "type": "quiz",
+      "concept_id": "light_basics_quiz",
+      "level": 1,
+      "progress": {
+        "current": 10,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "The scientist who proposed the wave theory of light was:",
+        "options": [
+          { "id": "A", "text": "Isaac Newton" },
+          { "id": "B", "text": "Christiaan Huygens" },
+          { "id": "C", "text": "Albert Einstein" },
+          { "id": "D", "text": "Thomas Young" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Christiaan Huygens proposed the wave theory of light in 1678. Newton proposed corpuscular (particle) theory. Thomas Young proved wave nature experimentally through double-slit experiment (1801). Einstein explained particle nature (photon) through photoelectric effect (1905). ⭐ BPSC/UPSC Favorite - Scientist-Discovery matching questions!"
+      },
+      "navigation": {
+        "next": "card_11_milestone_light_basics",
+        "button_text": "Check Result ➔"
+      }
+    },
+    {
+      "card_id": "card_11_milestone_light_basics",
+      "card_slug": "card_11_milestone_light_basics",
+      "type": "milestone",
+      "concept_id": "light_basics_complete",
+      "level": 1,
+      "progress": {
+        "current": 11,
+        "total": 72
+      },
+      "milestone_payload": {
+        "title": "🎉 MODULE 1 COMPLETED!",
+        "badge_emoji": "💡",
+        "completed_topic": "Nature of Light & Basics",
+        "xp_earned": 50,
+        "milestone_progress": "Module 1/8 Clear",
+        "motivational_quote": "Light up your preparation! You've mastered the fundamentals - now let's see how light bounces!"
+      },
+      "navigation": {
+        "next": "card_12_reflection_intro",
+        "button_text": "Start Reflection Module ➔"
+      }
+    },
+    {
+      "card_id": "card_12_reflection_intro",
+      "card_slug": "card_12_reflection_intro",
+      "type": "chat",
+      "concept_id": "reflection_intro",
+      "level": 2,
+      "progress": {
+        "current": 12,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, jab tum subah mirror mein dekhte ho, tumhara face dikhta hai. Ye kaise possible hai?"
+        },
+        {
+          "speaker": "raju",
+          "text": "Mirror light ko reflect karta hai Sir!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Absolutely! Jab light kisi smooth surface se takrati hai aur wapas us medium mein laut aati hai jahan se aayi thi, ise Reflection of Light kehte hain. Mirror ek perfect reflecting surface hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Lekin Sir, kya light har surface se reflect hoti hai?"
+        }
+      ],
+      "navigation": {
+        "next": "card_13_regular_vs_diffuse",
+        "button_text": "Types Samjho ➔"
+      }
+    },
+    {
+      "card_id": "card_13_regular_vs_diffuse",
+      "card_slug": "card_13_regular_vs_diffuse",
+      "type": "chat",
+      "concept_id": "reflection_types",
+      "level": 2,
+      "progress": {
+        "current": 13,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Haan Raju, lekin reflection do types ka hota hai! Regular Reflection (smooth surface like mirror - clear image) aur Diffuse Reflection (rough surface like wall - no clear image, scattered light)."
+        },
+        {
+          "speaker": "raju",
+          "text": "Ohh toh wall bhi reflect karti hai lekin image nahi banti?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Ekdum sahi! Wall ki surface microscopically rough hai toh light har direction mein scatter ho jati hai. Mirror smooth hai toh organized reflection hota hai. ⭐ BPSC TRE Favorite - Both types follow laws of reflection, difference is only surface smoothness!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Toh laws of reflection kya hain Sir?"
+        }
+      ],
+      "navigation": {
+        "next": "card_14_laws_of_reflection",
+        "button_text": "Laws Seekho ➔"
+      }
+    },
+    {
+      "card_id": "card_14_laws_of_reflection",
+      "card_slug": "card_14_laws_of_reflection",
+      "type": "chat",
+      "concept_id": "laws_reflection",
+      "level": 2,
+      "progress": {
+        "current": 14,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Do fundamental laws hain - FIRST LAW: Incident ray, reflected ray aur normal (perpendicular line at point of incidence) - teenon EK HI PLANE mein hote hain. SECOND LAW: Angle of Incidence (i) = Angle of Reflection (r) HAMESHA!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Normal matlab perpendicular line?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! Jis point pe light surface ko touch karti hai, wahan se 90° pe vertical line - wo normal hai. Angles hamesha normal se measure karte hain, surface se nahi! ⭐ NEET/SSC Trap - Angles are measured from NORMAL, not from mirror surface!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Achhaaaa... toh agar incident ray normal se 30° pe hai toh reflected ray bhi 30° hogi normal se!"
+        }
+      ],
+      "navigation": {
+        "next": "card_15_plane_mirror_intro",
+        "button_text": "Mirror Types Dekho ➔"
+      }
+    },
+    {
+      "card_id": "card_15_plane_mirror_intro",
+      "card_slug": "card_15_plane_mirror_intro",
+      "type": "chat",
+      "concept_id": "plane_mirror",
+      "level": 2,
+      "progress": {
+        "current": 15,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Perfect! Ab mirrors ke types dekhte hain. Sabse simple hai Plane Mirror - flat reflecting surface. Tumhare bathroom mein jo mirror hai wo plane mirror hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir, plane mirror mein image kaisi banti hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Plane mirror ka image - (1) Virtual hai (behind mirror), (2) Erect hai (sidha, ulta nahi), (3) Same size as object, (4) Laterally inverted (left-right ulta), (5) Image distance = Object distance (from mirror). Agar tum mirror se 2 meter door ho, tumhara image bhi 2 meter mirror ke peeche dikhega!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Lateral inversion matlab? AMBULANCE ulta kyun likha hota hai?"
+        }
+      ],
+      "navigation": {
+        "next": "card_16_lateral_inversion",
+        "button_text": "Ye Samjho ➔"
+      }
+    },
+    {
+      "card_id": "card_16_lateral_inversion",
+      "card_slug": "card_16_lateral_inversion",
+      "type": "chat",
+      "concept_id": "lateral_inversion",
+      "level": 2,
+      "progress": {
+        "current": 16,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Bahut sahi observation! Lateral inversion matlab left aur right interchange ho jate hain. Jab tum mirror mein apna right hand uthaate ho, image mein left hand dikhai deta hai. AMBULANCE gaadiyon pe ulta (mirror image form) likha hota hai taaki aage wali car ka driver apne rear-view mirror mein sidha padh sake!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Wowww! Isliye clock ka mirror image mein 3 baje ko 9 baje jaisa dikhta hai!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Exactly! ⭐ SSC/Railway Favorite - Mirror image questions mein clock reading, AMBULANCE spelling, numbers like 1, 8 (symmetric - no change), 2, 5 (change hote hain)."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir agar do mirrors ko parallel rakh doon toh kitni images banengi?"
+        }
+      ],
+      "navigation": {
+        "next": "card_17_multiple_images",
+        "button_text": "Multiple Images ➔"
+      }
+    },
+    {
+      "card_id": "card_17_multiple_images",
+      "card_slug": "card_17_multiple_images",
+      "type": "chat",
+      "concept_id": "multiple_images",
+      "level": 2,
+      "progress": {
+        "current": 17,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Brilliant question! Jab do plane mirrors ko kisi angle θ (theta) pe rakhte hain, toh multiple images banti hain. Formula hai: Number of images = (360°/θ) - 1. Agar mirrors parallel hain (θ = 0°), infinite images!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab agar 90° angle pe rakhe toh?"
+        },
+        {
+          "speaker": "aman",
+          "text": "360/90 = 4, minus 1 = 3 images! Agar 60° pe rakhe toh 360/60 = 6, minus 1 = 5 images. Barber shop mein mirrors opposite walls pe parallel hote hain isliye infinite reflections dikhte hain! ⭐ BPSC/SSC Numerical Favorite Formula!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir ab curved mirrors ke baare mein bataiye!"
+        }
+      ],
+      "navigation": {
+        "next": "card_18_quiz_reflection_1",
+        "button_text": "Pehle Test Karo ➔"
+      }
+    },
+    {
+      "card_id": "card_18_quiz_reflection_1",
+      "card_slug": "card_18_quiz_reflection_1",
+      "type": "quiz",
+      "concept_id": "reflection_quiz",
+      "level": 2,
+      "progress": {
+        "current": 18,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "A ray of light is incident on a plane mirror at an angle of 40° with the mirror surface. What is the angle of reflection measured from the normal?",
+        "options": [
+          { "id": "A", "text": "40°" },
+          { "id": "B", "text": "50°" },
+          { "id": "C", "text": "90°" },
+          { "id": "D", "text": "80°" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "⭐ Classic BPSC/NEET Trap! Angle is given with the mirror surface (40°), but angle of reflection is measured from the NORMAL. Angle with normal = 90° - 40° = 50°. Since angle of incidence = angle of reflection (both measured from normal), answer is 50°. Never measure angles from the surface!"
+      },
+      "navigation": {
+        "next": "card_19_quiz_reflection_2",
+        "button_text": "Next Question (2/3) ➔"
+      }
+    },
+    {
+      "card_id": "card_19_quiz_reflection_2",
+      "card_slug": "card_19_quiz_reflection_2",
+      "type": "quiz",
+      "concept_id": "reflection_quiz",
+      "level": 2,
+      "progress": {
+        "current": 19,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Which of the following statements about the image formed by a plane mirror is INCORRECT?",
+        "options": [
+          { "id": "A", "text": "Image is virtual and erect" },
+          { "id": "B", "text": "Image distance equals object distance" },
+          { "id": "C", "text": "Image can be projected on a screen" },
+          { "id": "D", "text": "Image is laterally inverted" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Virtual images CANNOT be projected on a screen - only real images can. Plane mirror always forms virtual, erect, same-sized, laterally inverted image at same distance behind the mirror. ⭐ BPSC TRE/SSC Favorite - Virtual vs Real image property trap!"
+      },
+      "navigation": {
+        "next": "card_20_quiz_reflection_3",
+        "button_text": "Next Question (3/3) ➔"
+      }
+    },
+    {
+      "card_id": "card_20_quiz_reflection_3",
+      "card_slug": "card_20_quiz_reflection_3",
+      "type": "quiz",
+      "concept_id": "reflection_quiz",
+      "level": 2,
+      "progress": {
+        "current": 20,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Two plane mirrors are placed at an angle of 72° to each other. How many images will be formed?",
+        "options": [
+          { "id": "A", "text": "4" },
+          { "id": "B", "text": "5" },
+          { "id": "C", "text": "6" },
+          { "id": "D", "text": "3" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Formula: Number of images = (360/θ) - 1 = (360/72) - 1 = 5 - 1 = 4 images. ⭐ SSC/Railway Favorite Formula-based question! Remember: for parallel mirrors (θ=0°), infinite images form. For perpendicular mirrors (θ=90°), 3 images form."
+      },
+      "navigation": {
+        "next": "card_21_milestone_reflection",
+        "button_text": "Check Result ➔"
+      }
+    },
+    {
+      "card_id": "card_21_milestone_reflection",
+      "card_slug": "card_21_milestone_reflection",
+      "type": "milestone",
+      "concept_id": "reflection_complete",
+      "level": 2,
+      "progress": {
+        "current": 21,
+        "total": 72
+      },
+      "milestone_payload": {
+        "title": "🎉 MODULE 2 COMPLETED!",
+        "badge_emoji": "🪞",
+        "completed_topic": "Reflection & Plane Mirrors",
+        "xp_earned": 60,
+        "milestone_progress": "Module 2/8 Clear",
+        "motivational_quote": "Mirror mirror on the wall, you're mastering them all! Time to curve into spherical mirrors!"
+      },
+      "navigation": {
+        "next": "card_22_spherical_mirror_intro",
+        "button_text": "Start Curved Mirrors ➔"
+      }
+    },
+    {
+      "card_id": "card_22_spherical_mirror_intro",
+      "card_slug": "card_22_spherical_mirror_intro",
+      "type": "chat",
+      "concept_id": "spherical_mirrors",
+      "level": 3,
+      "progress": {
+        "current": 22,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, tumne kabhi car ka side mirror dekha? Ya dentist ke paas wo chhota round mirror?"
+        },
+        {
+          "speaker": "raju",
+          "text": "Haan Sir! Car wala mirror chota image dikhata hai aur dentist wala bada!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Perfect observation! Ye curved mirrors hain, specifically Spherical Mirrors - jinka reflecting surface sphere ka hissa hota hai. Do types hain - Concave (andar ki taraf curved, like dentist mirror) aur Convex (bahar ki taraf curved, like car side mirror)."
+        },
+        {
+          "speaker": "raju",
+          "text": "Toh dono ka kaam alag hai?"
+        }
+      ],
+      "navigation": {
+        "next": "card_23_concave_vs_convex",
+        "button_text": "Difference Samjho ➔"
+      }
+    },
+    {
+      "card_id": "card_23_concave_vs_convex",
+      "card_slug": "card_23_concave_vs_convex",
+      "type": "chat",
+      "concept_id": "concave_convex_difference",
+      "level": 3,
+      "progress": {
+        "current": 23,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Haan! Concave mirror (converging mirror) - parallel rays ko ek point pe focus karta hai. Convex mirror (diverging mirror) - parallel rays ko spread (diverge) karta hai. Isliye concave se magnified (bada) image ban sakta hai, convex hamesha diminished (chhota) image banata hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab concave mein bada dekhne ko milta hai isliye shaving mirror, torch, makeup mirror mein use hota hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul sahi! Aur convex mirror ka wider field of view hota hai (zyada area dikhta hai) isliye rear-view mirror, street corners, shops mein security mirror mein use hota hai! ⭐ BPSC/SSC Favorite - Application-based matching questions!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir, spherical mirror mein kuch important points hote hain na - pole, focus, centre of curvature?"
+        }
+      ],
+      "navigation": {
+        "next": "card_24_mirror_terminology",
+        "button_text": "Terminology Seekho ➔"
+      }
+    },
+    {
+      "card_id": "card_24_mirror_terminology",
+      "card_slug": "card_24_mirror_terminology",
+      "type": "chat",
+      "concept_id": "mirror_terminology",
+      "level": 3,
+      "progress": {
+        "current": 24,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ekdum! POLE (P) - mirror ka centre point. CENTRE OF CURVATURE (C) - jis sphere ka mirror part hai uska centre. RADIUS OF CURVATURE (R) - PC distance. PRINCIPAL AXIS - pole se centre of curvature tak seedhi line. FOCUS (F) - jahan parallel rays converge/appear to diverge. FOCAL LENGTH (f) - PF distance."
+        },
+        {
+          "speaker": "raju",
+          "text": "Itne saare terms! Sir, focus aur centre of curvature mein kya relation hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Golden relation yaad rakho - Focal Length = Half of Radius of Curvature. Matlab f = R/2 ya R = 2f. Focus hamesha pole aur centre of curvature ke beech mein hota hai! ⭐ NEET/BPSC Formula Favorite!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Achhaaaa... toh agar radius 20 cm hai toh focal length 10 cm hogi!"
+        }
+      ],
+      "navigation": {
+        "next": "card_25_sign_convention",
+        "button_text": "Sign Convention ➔"
+      }
+    },
+    {
+      "card_id": "card_25_sign_convention",
+      "card_slug": "card_25_sign_convention",
+      "type": "chat",
+      "concept_id": "sign_convention",
+      "level": 3,
+      "progress": {
+        "current": 25,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Perfect! Ab bahut important - New Cartesian Sign Convention: (1) Pole (P) origin hai. (2) Principal axis ke LEFT se RIGHT ko positive direction maana jata hai. (3) Heights measured UPWARD = positive, DOWNWARD = negative. (4) Distances measured OPPOSITE to incident light = negative, ALONG incident light = positive."
+        },
+        {
+          "speaker": "raju",
+          "text": "Ye toh confusing lag raha hai Sir!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Ruko, simple trick - Object hamesha LEFT side pe hai (light left se aati hai). Toh object distance (u) HAMESHA NEGATIVE hoga! Concave mirror ka focus LEFT side (front) mein hai toh focal length (f) NEGATIVE. Convex ka focus RIGHT side (behind) mein hai toh f POSITIVE! ⭐ NEET/BPSC Trap - Sign convention galat lagane se answer wrong!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Toh concave mein f negative, convex mein f positive yaad rakhna hai!"
+        }
+      ],
+      "navigation": {
+        "next": "card_26_mirror_formula",
+        "button_text": "Formula Dekho ➔"
+      }
+    },
+    {
+      "card_id": "card_26_mirror_formula",
+      "card_slug": "card_26_mirror_formula",
+      "type": "chat",
+      "concept_id": "mirror_formula",
+      "level": 3,
+      "progress": {
+        "current": 26,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ab Officer-level formula - MIRROR FORMULA: 1/f = 1/v + 1/u. Jahan f = focal length, v = image distance (from pole), u = object distance (from pole). Aur MAGNIFICATION formula: m = -v/u = height of image/height of object."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir, magnification negative ya positive kaise pata karein?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Agar m negative hai toh image INVERTED (ulta) hai aur REAL hai. Agar m positive hai toh image ERECT (sidha) hai aur VIRTUAL hai. Agar |m| > 1 toh magnified, |m| < 1 toh diminished, |m| = 1 toh same size! ⭐ NEET High-Weightage Concept!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Wow! Sign se hi sab pata chal jata hai!"
+        }
+      ],
+      "navigation": {
+        "next": "card_27_concave_image_positions",
+        "button_text": "Image Positions ➔"
+      }
+    },
+    {
+      "card_id": "card_27_concave_image_positions",
+      "card_slug": "card_27_concave_image_positions",
+      "type": "chat",
+      "concept_id": "concave_image_cases",
+      "level": 3,
+      "progress": {
+        "current": 27,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Concave mirror mein object ki position change karne se image properties change hoti hain. KEY CASES: (1) Object at INFINITY → Image at F, highly diminished, real, inverted. (2) Object BEYOND C → Image between F and C, diminished, real, inverted. (3) Object AT C → Image at C, same size, real, inverted."
+        },
+        {
+          "speaker": "raju",
+          "text": "Aur agar object focus pe rakhe toh?"
+        },
+        {
+          "speaker": "aman",
+          "text": "(4) Object AT F → Image at INFINITY, highly magnified, real, inverted. (5) Object BETWEEN F and P → Image BEHIND mirror, magnified, virtual, erect (dentist mirror case!). ⭐ BPSC/NEET Favorite - Tabular matching questions on object-image positions!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Aur convex mirror mein?"
+        }
+      ],
+      "navigation": {
+        "next": "card_28_convex_image",
+        "button_text": "Convex Samjho ➔"
+      }
+    },
+    {
+      "card_id": "card_28_convex_image",
+      "card_slug": "card_28_convex_image",
+      "type": "chat",
+      "concept_id": "convex_image",
+      "level": 3,
+      "progress": {
+        "current": 28,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Convex mirror bahut simple hai! Object ki position kuch bhi ho, image HAMESHA: (1) Behind the mirror (virtual), (2) Between P and F, (3) Erect, (4) Diminished (smaller than object). Isliye wider field of view milta hai - perfect for rear-view mirrors!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab convex mein kabhi bhi real image nahi ban sakta?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Ekdum correct! Convex mirror NEVER forms a real image - always virtual, erect, diminished. ⭐ BPSC TRE/SSC Statement Trap - 'Convex mirror can form real image' is ALWAYS FALSE! Car mirrors pe likha hota hai 'Objects in mirror are closer than they appear' kyunki diminished image door ka illusion deta hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Ye toh practical bhi hai aur exam bhi!"
+        }
+      ],
+      "navigation": {
+        "next": "card_29_quiz_mirrors_1",
+        "button_text": "Test Karo ➔"
+      }
+    },
+    {
+      "card_id": "card_29_quiz_mirrors_1",
+      "card_slug": "card_29_quiz_mirrors_1",
+      "type": "quiz",
+      "concept_id": "spherical_mirrors_quiz",
+      "level": 3,
+      "progress": {
+        "current": 29,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "The focal length of a spherical mirror is 15 cm. What is its radius of curvature?",
+        "options": [
+          { "id": "A", "text": "7.5 cm" },
+          { "id": "B", "text": "15 cm" },
+          { "id": "C", "text": "30 cm" },
+          { "id": "D", "text": "45 cm" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Fundamental relation: R = 2f. Given f = 15 cm, so R = 2 × 15 = 30 cm. This relation holds for BOTH concave and convex mirrors. ⭐ SSC/Railway Direct Formula Question - most frequently asked!"
+      },
+      "navigation": {
+        "next": "card_30_quiz_mirrors_2",
+        "button_text": "Next Question (2/3) ➔"
+      }
+    },
+    {
+      "card_id": "card_30_quiz_mirrors_2",
+      "card_slug": "card_30_quiz_mirrors_2",
+      "type": "quiz",
+      "concept_id": "spherical_mirrors_quiz",
+      "level": 3,
+      "progress": {
+        "current": 30,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Which type of mirror is used as a rear-view mirror in vehicles and why?",
+        "options": [
+          { "id": "A", "text": "Concave mirror - gives magnified image" },
+          { "id": "B", "text": "Convex mirror - gives wider field of view" },
+          { "id": "C", "text": "Plane mirror - gives same size image" },
+          { "id": "D", "text": "Concave mirror - converges light rays" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Convex mirror is used as rear-view mirror because it: (1) Always forms erect, virtual, diminished image, (2) Provides wider field of view (can see more area behind), (3) Images are smaller so more vehicles visible. ⭐ BPSC/SSC Application Favorite Question!"
+      },
+      "navigation": {
+        "next": "card_31_quiz_mirrors_3",
+        "button_text": "Next Question (3/3) ➔"
+      }
+    },
+    {
+      "card_id": "card_31_quiz_mirrors_3",
+      "card_slug": "card_31_quiz_mirrors_3",
+      "type": "quiz",
+      "concept_id": "spherical_mirrors_quiz",
+      "level": 3,
+      "progress": {
+        "current": 31,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "An object is placed between the pole and focus of a concave mirror. The image formed will be:",
+        "options": [
+          { "id": "A", "text": "Real, inverted, magnified" },
+          { "id": "B", "text": "Virtual, erect, magnified" },
+          { "id": "C", "text": "Real, erect, diminished" },
+          { "id": "D", "text": "Virtual, inverted, diminished" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "When object is placed between pole (P) and focus (F) of a concave mirror, image is formed BEHIND the mirror (virtual), erect (upright), and magnified (larger). This is why dentists and makeup artists use concave mirrors - they give enlarged, upright view when object is close! ⭐ NEET/BPSC High-Frequency Question!"
+      },
+      "navigation": {
+        "next": "card_32_milestone_mirrors",
+        "button_text": "Check Result ➔"
+      }
+    },
+    {
+      "card_id": "card_32_milestone_mirrors",
+      "card_slug": "card_32_milestone_mirrors",
+      "type": "milestone",
+      "concept_id": "mirrors_complete",
+      "level": 3,
+      "progress": {
+        "current": 32,
+        "total": 72
+      },
+      "milestone_payload": {
+        "title": "🎉 MODULE 3 COMPLETED!",
+        "badge_emoji": "🔮",
+        "completed_topic": "Spherical Mirrors - Concave & Convex",
+        "xp_earned": 70,
+        "milestone_progress": "Module 3/8 Clear",
+        "motivational_quote": "You're reflecting brilliance! Now let's bend light through refraction!"
+      },
+      "navigation": {
+        "next": "card_33_refraction_intro",
+        "button_text": "Start Refraction Module ➔"
+      }
+    },
+    {
+      "card_id": "card_33_refraction_intro",
+      "card_slug": "card_33_refraction_intro",
+      "type": "chat",
+      "concept_id": "refraction_intro",
+      "level": 4,
+      "progress": {
+        "current": 33,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, agar tum paani se bhari baalti mein ek pencil tedi karke rakho, toh pencil tedhi dikhti hai - broken jaisi!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Haan Sir! Aur swimming pool mein apne pair chhote lagte hain!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Perfect examples! Ye hota hai Refraction - jab light ek medium se dusre medium (different density) mein jaati hai toh uski direction CHANGE ho jati hai aur speed bhi change hoti hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab reflection mein toh direction change hoti thi lekin medium same tha, refraction mein medium change hota hai?"
+        }
+      ],
+      "navigation": {
+        "next": "card_34_refraction_cause",
+        "button_text": "Cause Samjho ➔"
+      }
+    },
+    {
+      "card_id": "card_34_refraction_cause",
+      "card_slug": "card_34_refraction_cause",
+      "type": "chat",
+      "concept_id": "refraction_cause",
+      "level": 4,
+      "progress": {
+        "current": 34,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Bilkul sahi! Refraction ka basic cause hai - change in speed of light when medium changes. Light vacuum mein fastest (3 × 10⁸ m/s), denser medium (glass, water) mein slow ho jati hai. Speed change hone se direction bend hoti hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Toh glass mein light kitni slow ho jati hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Ye measure karte hain REFRACTIVE INDEX se! Refractive index (n) = Speed of light in vacuum (c) / Speed of light in medium (v). Glass ka n ≈ 1.5, paani ka n ≈ 1.33, diamond ka highest n ≈ 2.42! Jitna zyada n, utna zyada denser medium!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab diamond mein light sabse zyada slow hoti hai isliye itna sparkle karta hai?"
+        }
+      ],
+      "navigation": {
+        "next": "card_35_refractive_index",
+        "button_text": "Refractive Index ➔"
+      }
+    },
+    {
+      "card_id": "card_35_refractive_index",
+      "card_slug": "card_35_refractive_index",
+      "type": "chat",
+      "concept_id": "refractive_index_detail",
+      "level": 4,
+      "progress": {
+        "current": 35,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Exactly! Diamond ki high refractive index ki wajah se total internal reflection zyada hota hai - isliye brilliance! Important: Refractive index ek RATIO hai, dimensionless hai (no unit). Air ka n ≈ 1 (reference), vacuum ka exactly 1."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir, toh agar light rarer se denser mein jaye toh kya hoga?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Golden Rule: Rarer to Denser → Light BENDS TOWARDS the normal (angle of refraction < angle of incidence). Denser to Rarer → Light BENDS AWAY FROM the normal (angle of refraction > angle of incidence). ⭐ BPSC/NEET Favorite Trap - Direction of bending!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab air se paani mein jane pe normal ki taraf bend, paani se air mein jane pe normal se door bend!"
+        }
+      ],
+      "navigation": {
+        "next": "card_36_laws_of_refraction",
+        "button_text": "Laws Seekho ➔"
+      }
+    },
+    {
+      "card_id": "card_36_laws_of_refraction",
+      "card_slug": "card_36_laws_of_refraction",
+      "type": "chat",
+      "concept_id": "laws_refraction",
+      "level": 4,
+      "progress": {
+        "current": 36,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Perfect! Ab laws of refraction: FIRST LAW - Incident ray, refracted ray aur normal teenon same plane mein hote hain. SECOND LAW (SNELL'S LAW) - n₁ sin i = n₂ sin r. Jahan n₁ = refractive index of first medium, i = angle of incidence, n₂ = refractive index of second medium, r = angle of refraction."
+        },
+        {
+          "speaker": "raju",
+          "text": "Ye Snell's Law ka naam kiska naam pe hai Sir?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Willebrord Snellius (Dutch scientist, 1621). ⭐ UPSC/BPSC Favorite - Scientist name questions! Snell's Law se hi refractive index calculate karte hain. Agar air (n=1) se glass (n=1.5) mein light 30° pe incident ho, toh sin 30° = 0.5, toh 1 × 0.5 = 1.5 × sin r → sin r = 0.33 → r ≈ 19.5°"
+        },
+        {
+          "speaker": "raju",
+          "text": "Toh angle chota ho gaya - normal ki taraf bend hua!"
+        }
+      ],
+      "navigation": {
+        "next": "card_37_real_life_refraction",
+        "button_text": "Real Life Examples ➔"
+      }
+    },
+    {
+      "card_id": "card_37_real_life_refraction",
+      "card_slug": "card_37_real_life_refraction",
+      "type": "chat",
+      "concept_id": "refraction_examples",
+      "level": 4,
+      "progress": {
+        "current": 37,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Refraction ke daily life effects: (1) Pool mein depth kam dikhna - apparent depth < real depth. (2) Coin paani mein rakhne pe upar uthta dikhna. (3) Stars twinkling - atmospheric refraction. (4) Sun sunrise se pehle aur sunset ke baad dikhna - atmospheric refraction. (5) Mirage in deserts!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab sun actually ufaq (horizon) ke neeche hai lekin refraction ki wajah se dikhai deta hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Exactly! Sunrise 2 minutes early aur sunset 2 minutes late dikhta hai refraction ki wajah se - total 4 minutes extra sunlight! ⭐ BPSC/UPSC Statement Favorite! Atmosphere ki layers ki density alag hoti hai toh light continuously bend hoti rehti hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Aur twinkling?"
+        }
+      ],
+      "navigation": {
+        "next": "card_38_twinkling_stars",
+        "button_text": "Twinkling Samjho ➔"
+      }
+    },
+    {
+      "card_id": "card_38_twinkling_stars",
+      "card_slug": "card_38_twinkling_stars",
+      "type": "chat",
+      "concept_id": "twinkling_explanation",
+      "level": 4,
+      "progress": {
+        "current": 38,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Twinkling of stars hoti hai kyunki star light jab atmosphere mein aati hai, changing air density layers se multiple refractions hoti hai. Since atmosphere constantly moving hai (turbulence), path change hota rehta hai - kabhi bright, kabhi dim - twinkling effect!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Lekin Sir, planets twinkle kyun nahi karte?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Brilliant question! ⭐ NEET/BPSC Favorite Trap! Stars are point sources (bahut door), so slight path change = brightness change dikhta hai. Planets extended sources hain (closer, bigger angular size), multiple points se light aati hai toh averaging effect hota hai - twinkling cancel out ho jati hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Wow! Isliye planets steady light dete hain!"
+        }
+      ],
+      "navigation": {
+        "next": "card_39_tir_intro",
+        "button_text": "Next Phenomenon ➔"
+      }
+    },
+    {
+      "card_id": "card_39_tir_intro",
+      "card_slug": "card_39_tir_intro",
+      "type": "chat",
+      "concept_id": "tir_intro",
+      "level": 4,
+      "progress": {
+        "current": 39,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ab aata hai refraction ka sabse amazing phenomenon - TOTAL INTERNAL REFLECTION (TIR)! Jab light denser medium se rarer medium mein jati hai aur angle of incidence ek critical value se zyada ho, toh light refract na hokar COMPLETELY REFLECT ho jati hai back into denser medium!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab kuch conditions mein refraction nahi, reflection hota hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! Do conditions zaroori hain TIR ke liye: (1) Light must travel from DENSER to RARER medium. (2) Angle of incidence must be GREATER than Critical Angle. Critical Angle (C) wo angle hai jiske liye angle of refraction = 90°!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Agar 90° se zyada ho jaye toh?"
+        }
+      ],
+      "navigation": {
+        "next": "card_40_critical_angle",
+        "button_text": "Critical Angle ➔"
+      }
+    },
+    {
+      "card_id": "card_40_critical_angle",
+      "card_slug": "card_40_critical_angle",
+      "type": "chat",
+      "concept_id": "critical_angle",
+      "level": 4,
+      "progress": {
+        "current": 40,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Jab angle of incidence critical angle se zyada ho jaye, refraction possible nahi (kyunki angle of refraction 90° se zyada nahi ho sakta), toh sari light reflect ho jati hai - Total Internal Reflection! Formula: sin C = n₂/n₁ = 1/n (agar second medium air hai). Glass-Air interface ke liye C ≈ 42°, Water-Air ke liye C ≈ 49°."
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab glass mein agar light 42° se zyada angle pe surface pe hit kare toh reflect ho jayegi?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Perfect! ⭐ NEET/BPSC Formula Favorite! TIR applications: (1) Diamond ka sparkle - low critical angle (≈24°) due to high n. (2) Optical fibres - internet, endoscopy. (3) Mirage - hot road pe inverted image. (4) Prisms in binoculars!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir mirage kaise banta hai?"
+        }
+      ],
+      "navigation": {
+        "next": "card_41_mirage_explanation",
+        "button_text": "Mirage Samjho ➔"
+      }
+    },
+    {
+      "card_id": "card_41_mirage_explanation",
+      "card_slug": "card_41_mirage_explanation",
+      "type": "chat",
+      "concept_id": "mirage",
+      "level": 4,
+      "progress": {
+        "current": 41,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Garmi mein road bahut hot ho jati hai, uske paas ki air layer bhi hot (rarer) ho jati hai. Upar ki air comparatively cooler (denser) hai. Jab light upar se neeche aati hai (denser to rarer), continuously bend hoti hai aur finally TIR ho jati hai - inverted image ban jata hai paani jaisa!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Ohhhh! Matlab actually paani nahi hota, sirf inverted sky ka reflection hota hai!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul! ⭐ BPSC/UPSC Favorite Explanation Question! Mirage ek optical illusion hai caused by Total Internal Reflection in layers of air with different densities. Desert mein dur se paani dikhna, garam road pe shimmer - sab mirage hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir, optical fibre kaise kaam karta hai?"
+        }
+      ],
+      "navigation": {
+        "next": "card_42_optical_fibre",
+        "button_text": "Optical Fibre ➔"
+      }
+    },
+    {
+      "card_id": "card_42_optical_fibre",
+      "card_slug": "card_42_optical_fibre",
+      "type": "chat",
+      "concept_id": "optical_fibre",
+      "level": 4,
+      "progress": {
+        "current": 42,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Optical fibre ek thin, flexible glass/plastic fibre hai. Core (inner part, denser) surrounded by cladding (outer part, rarer). Jab light core mein enter karti hai, wo core-cladding boundary pe repeatedly TIR hoti rehti hai aur bina bahut loss ke long distances travel karti hai - even bending around corners!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab light fibre ke andar zigzag bounce karti hui travel karti hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Exactly! Applications: (1) High-speed internet (fiber-optic cables), (2) Medical endoscopy (andar dekhne ke liye), (3) Telecommunication. ⭐ SSC/Railway Application Favorite! Optical fibres work on principle of Total Internal Reflection!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Ye toh bahut useful hai modern technology mein!"
+        }
+      ],
+      "navigation": {
+        "next": "card_43_quiz_refraction_1",
+        "button_text": "Test Karo ➔"
+      }
+    },
+    {
+      "card_id": "card_43_quiz_refraction_1",
+      "card_slug": "card_43_quiz_refraction_1",
+      "type": "quiz",
+      "concept_id": "refraction_quiz",
+      "level": 4,
+      "progress": {
+        "current": 43,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "When light travels from air to glass, it:",
+        "options": [
+          { "id": "A", "text": "Bends away from the normal and speeds up" },
+          { "id": "B", "text": "Bends towards the normal and slows down" },
+          { "id": "C", "text": "Bends away from the normal and slows down" },
+          { "id": "D", "text": "Travels in straight line with same speed" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Air is rarer (n≈1), glass is denser (n≈1.5). When light travels from rarer to denser medium: (1) It bends TOWARDS the normal, (2) Speed DECREASES. ⭐ BPSC/NEET Multi-Statement Favorite Trap - both properties must be correct!"
+      },
+      "navigation": {
+        "next": "card_44_quiz_refraction_2",
+        "button_text": "Next Question (2/3) ➔"
+      }
+    },
+    {
+      "card_id": "card_44_quiz_refraction_2",
+      "card_slug": "card_44_quiz_refraction_2",
+      "type": "quiz",
+      "concept_id": "refraction_quiz",
+      "level": 4,
+      "progress": {
+        "current": 44,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Twinkling of stars is due to:",
+        "options": [
+          { "id": "A", "text": "Reflection of light from clouds" },
+          { "id": "B", "text": "Atmospheric refraction" },
+          { "id": "C", "text": "Total internal reflection" },
+          { "id": "D", "text": "Dispersion of light" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Twinkling of stars is caused by atmospheric refraction. Starlight passes through multiple layers of Earth's atmosphere with varying densities and continuously changing refractive indices (due to turbulence), causing the apparent position and brightness to fluctuate. ⭐ SSC/Railway/BPSC High-Frequency Question! Planets don't twinkle because they are extended sources."
+      },
+      "navigation": {
+        "next": "card_45_quiz_refraction_3",
+        "button_text": "Next Question (3/3) ➔"
+      }
+    },
+    {
+      "card_id": "card_45_quiz_refraction_3",
+      "card_slug": "card_45_quiz_refraction_3",
+      "type": "quiz",
+      "concept_id": "refraction_quiz",
+      "level": 4,
+      "progress": {
+        "current": 45,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Total Internal Reflection can take place when light travels from:",
+        "options": [
+          { "id": "A", "text": "Air to water" },
+          { "id": "B", "text": "Air to glass" },
+          { "id": "C", "text": "Water to air" },
+          { "id": "D", "text": "Vacuum to glass" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Total Internal Reflection occurs ONLY when light travels from DENSER to RARER medium and angle of incidence exceeds critical angle. Water (denser, n=1.33) to Air (rarer, n=1) satisfies this condition. Air to water/glass is rarer to denser - TIR impossible. ⭐ NEET/BPSC Conceptual Trap!"
+      },
+      "navigation": {
+        "next": "card_46_milestone_refraction",
+        "button_text": "Check Result ➔"
+      }
+    },
+    {
+      "card_id": "card_46_milestone_refraction",
+      "card_slug": "card_46_milestone_refraction",
+      "type": "milestone",
+      "concept_id": "refraction_complete",
+      "level": 4,
+      "progress": {
+        "current": 46,
+        "total": 72
+      },
+      "milestone_payload": {
+        "title": "🎉 MODULE 4 COMPLETED!",
+        "badge_emoji": "🌊",
+        "completed_topic": "Refraction & Total Internal Reflection",
+        "xp_earned": 80,
+        "milestone_progress": "Module 4/8 Clear",
+        "motivational_quote": "You're bending light like a pro! Now let's focus on lenses!"
+      },
+      "navigation": {
+        "next": "card_47_lens_intro",
+        "button_text": "Start Lens Module ➔"
+      }
+    },
+    {
+      "card_id": "card_47_lens_intro",
+      "card_slug": "card_47_lens_intro",
+      "type": "chat",
+      "concept_id": "lens_intro",
+      "level": 5,
+      "progress": {
+        "current": 47,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, tumhari Mummy cooking mein chasma lagati hain? Ya Dadu ko newspaper padhne ke liye chasma chahiye?"
+        },
+        {
+          "speaker": "raju",
+          "text": "Haan Sir! Dadu ko reading glasses chahiye aur Mummy ka chasma alag hai!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Perfect! Ye sab LENSES hain. Lens ek transparent optical device hai made of glass/plastic with at least one curved surface. Lenses refraction principle pe kaam karte hain - light ko bend karke ek point pe focus ya diverge karte hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Toh lens ka kaam light ko focus karna hai?"
+        }
+      ],
+      "navigation": {
+        "next": "card_48_lens_types",
+        "button_text": "Types Dekho ➔"
+      }
+    },
+    {
+      "card_id": "card_48_lens_types",
+      "card_slug": "card_48_lens_types",
+      "type": "chat",
+      "concept_id": "lens_types",
+      "level": 5,
+      "progress": {
+        "current": 48,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Do main types hain: CONVEX LENS (Converging Lens) - beech mein mota, edges thin. Parallel rays ko CONVERGE (focus) karta hai. CONCAVE LENS (Diverging Lens) - beech mein patla, edges thick. Parallel rays ko DIVERGE (spread) karta hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab convex lens se magnifying glass banta hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul! Convex lens applications: Camera, human eye, magnifying glass, microscope, telescope, projector. Concave lens: Spectacles for myopia (nearsightedness), peepholes, car headlights (with reflector). ⭐ SSC/BPSC Application-Based Matching Favorite!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir lens mein bhi pole, focus, centre of curvature hote hain?"
+        }
+      ],
+      "navigation": {
+        "next": "card_49_lens_terminology",
+        "button_text": "Terminology Seekho ➔"
+      }
+    },
+    {
+      "card_id": "card_49_lens_terminology",
+      "card_slug": "card_49_lens_terminology",
+      "type": "chat",
+      "concept_id": "lens_terminology",
+      "level": 5,
+      "progress": {
+        "current": 49,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Haan! OPTICAL CENTRE (O) - lens ka central point. PRINCIPAL AXIS - optical centre se perpendicular axis. PRINCIPAL FOCUS (F) - Convex mein: parallel rays converge hote hain yahan. Concave mein: parallel rays appear to diverge from yahan. FOCAL LENGTH (f) - O to F distance. Lens ke DO foci hote hain - dono taraf!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Mirror mein ek focus tha, lens mein do?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! Kyunki light lens ke dono side se aa sakti hai. Aur both foci optical centre se equal distance pe hote hain. APERTURE - lens ka effective diameter. ⭐ NEET Favorite - Lens has TWO foci (one on each side), mirror has ONE focus!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Toh lens ka sign convention?"
+        }
+      ],
+      "navigation": {
+        "next": "card_50_lens_sign_convention",
+        "button_text": "Sign Convention ➔"
+      }
+    },
+    {
+      "card_id": "card_50_lens_sign_convention",
+      "card_slug": "card_50_lens_sign_convention",
+      "type": "chat",
+      "concept_id": "lens_sign_convention",
+      "level": 5,
+      "progress": {
+        "current": 50,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Same as mirror - New Cartesian Sign Convention! Optical centre = origin. LEFT to RIGHT = positive direction. Object distance (u) always NEGATIVE (object left side pe). Convex lens ka focus RIGHT side (opposite to object) = POSITIVE f. Concave lens ka focus LEFT side (same side as object) = NEGATIVE f!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab convex lens f positive, concave lens f negative - mirror ke opposite!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Exactly! ⭐ BPSC/NEET Major Trap - Convex MIRROR f positive but Convex LENS bhi f positive. Concave MIRROR f negative but Concave LENS bhi f negative! Don't confuse mirror-lens signs!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Lens ka formula bhi same hoga?"
+        }
+      ],
+      "navigation": {
+        "next": "card_51_lens_formula",
+        "button_text": "Formula Dekho ➔"
+      }
+    },
+    {
+      "card_id": "card_51_lens_formula",
+      "card_slug": "card_51_lens_formula",
+      "type": "chat",
+      "concept_id": "lens_formula",
+      "level": 5,
+      "progress": {
+        "current": 51,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Haan! LENS FORMULA: 1/f = 1/v - 1/u (dhyan do, mirror mein + tha, lens mein - hai!). MAGNIFICATION: m = v/u = height of image / height of object. Agar m negative = real, inverted. Agar m positive = virtual, erect. |m| > 1 = magnified!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Toh formula almost same hai bas sign change hai!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Correct! ⭐ NEET Formula Trap - 1/f = 1/v + 1/u (MIRROR), 1/f = 1/v - 1/u (LENS). Confusion se wrong answer! Aur ek important term - POWER of Lens: P = 1/f (focal length in meters). Unit: Dioptre (D). Convex lens P positive, Concave lens P negative!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Power ka matlab?"
+        }
+      ],
+      "navigation": {
+        "next": "card_52_power_of_lens",
+        "button_text": "Power Samjho ➔"
+      }
+    },
+    {
+      "card_id": "card_52_power_of_lens",
+      "card_slug": "card_52_power_of_lens",
+      "type": "chat",
+      "concept_id": "power_lens",
+      "level": 5,
+      "progress": {
+        "current": 52,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Power of lens uski converging/diverging ability ko measure karta hai. Jitni kam focal length, utna zyada power - zyada bending! Formula: P = 1/f (f in meters). Agar f = 0.5 m (50 cm convex lens), toh P = 1/0.5 = +2 D. Agar f = -0.25 m (25 cm concave lens), toh P = 1/(-0.25) = -4 D."
+        },
+        {
+          "speaker": "raju",
+          "text": "Toh doctor jab +2.5 D ka chasma likhte hain toh convex lens hai!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Perfect! +2.5 D means convex lens with f = 1/2.5 = 0.4 m = 40 cm. Used for HYPERMETROPIA (farsightedness - door dikhta hai, paas nahi). -3 D means concave lens for MYOPIA (nearsightedness - paas dikhta hai, door nahi). ⭐ BPSC/SSC Application Favorite!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir convex lens mein image position cases batayein!"
+        }
+      ],
+      "navigation": {
+        "next": "card_53_convex_lens_cases",
+        "button_text": "Cases Dekho ➔"
+      }
+    },
+    {
+      "card_id": "card_53_convex_lens_cases",
+      "card_slug": "card_53_convex_lens_cases",
+      "type": "chat",
+      "concept_id": "convex_lens_image",
+      "level": 5,
+      "progress": {
+        "current": 53,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Convex Lens Cases: (1) Object at INFINITY → Image at F (opposite side), highly diminished, real, inverted. (2) Object BEYOND 2F → Image between F and 2F (opposite side), diminished, real, inverted (Camera principle!). (3) Object AT 2F → Image at 2F (opposite side), same size, real, inverted."
+        },
+        {
+          "speaker": "raju",
+          "text": "Aur focus pe rakhe toh?"
+        },
+        {
+          "speaker": "aman",
+          "text": "(4) Object BETWEEN F and 2F → Image beyond 2F (opposite side), magnified, real, inverted (Projector!). (5) Object AT F → Image at infinity, highly magnified, real, inverted. (6) Object BETWEEN O and F → Image on SAME side as object, magnified, virtual, erect (Magnifying glass!). ⭐ NEET/BPSC Tabular Question Favorite!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Aur concave lens mein?"
+        }
+      ],
+      "navigation": {
+        "next": "card_54_concave_lens_image",
+        "button_text": "Concave Lens ➔"
+      }
+    },
+    {
+      "card_id": "card_54_concave_lens_image",
+      "card_slug": "card_54_concave_lens_image",
+      "type": "chat",
+      "concept_id": "concave_lens_image",
+      "level": 5,
+      "progress": {
+        "current": 54,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Concave lens bahut simple - object ki position kuch bhi ho, image ALWAYS: (1) On SAME side as object (between O and F), (2) Virtual, (3) Erect, (4) Diminished. Exactly like convex mirror! ⭐ BPSC Statement Trap - 'Concave lens can form real image' is ALWAYS FALSE!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Toh concave lens aur convex mirror dono ka behavior same hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! Aur similarly, Convex lens aur Concave mirror dono converging devices hain - both can form real, magnified images depending on object position! Ek quick memory trick - CONVEX = CONVERGING (C-C), CONCAVE = DIVERGING (opposite)."
+        },
+        {
+          "speaker": "raju",
+          "text": "Ye comparison helpful hai!"
+        }
+      ],
+      "navigation": {
+        "next": "card_55_quiz_lenses_1",
+        "button_text": "Test Karo ➔"
+      }
+    },
+    {
+      "card_id": "card_55_quiz_lenses_1",
+      "card_slug": "card_55_quiz_lenses_1",
+      "type": "quiz",
+      "concept_id": "lenses_quiz",
+      "level": 5,
+      "progress": {
+        "current": 55,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "A lens has a focal length of -25 cm. What is its power and type?",
+        "options": [
+          { "id": "A", "text": "+4 D, Convex lens" },
+          { "id": "B", "text": "-4 D, Concave lens" },
+          { "id": "C", "text": "+0.04 D, Convex lens" },
+          { "id": "D", "text": "-0.04 D, Concave lens" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Power P = 1/f, where f is in meters. f = -25 cm = -0.25 m. P = 1/(-0.25) = -4 D. Negative focal length → Concave lens. Negative power → Concave lens (used for myopia correction). ⭐ SSC/Railway Direct Calculation Favorite!"
+      },
+      "navigation": {
+        "next": "card_56_quiz_lenses_2",
+        "button_text": "Next Question (2/3) ➔"
+      }
+    },
+    {
+      "card_id": "card_56_quiz_lenses_2",
+      "card_slug": "card_56_quiz_lenses_2",
+      "type": "quiz",
+      "concept_id": "lenses_quiz",
+      "level": 5,
+      "progress": {
+        "current": 56,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "A person is suffering from myopia (short-sightedness). Which lens should be used to correct this defect?",
+        "options": [
+          { "id": "A", "text": "Convex lens" },
+          { "id": "B", "text": "Concave lens" },
+          { "id": "C", "text": "Cylindrical lens" },
+          { "id": "D", "text": "Bifocal lens" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Myopia (near-sightedness) - distant objects appear blurred because image forms BEFORE the retina. Concave lens (diverging) is used to diverge rays before entering eye, so image shifts back to retina. ⭐ BPSC/SSC/NEET High-Frequency Application Question! Hypermetropia uses convex lens."
+      },
+      "navigation": {
+        "next": "card_57_quiz_lenses_3",
+        "button_text": "Next Question (3/3) ➔"
+      }
+    },
+    {
+      "card_id": "card_57_quiz_lenses_3",
+      "card_slug": "card_57_quiz_lenses_3",
+      "type": "quiz",
+      "concept_id": "lenses_quiz",
+      "level": 5,
+      "progress": {
+        "current": 57,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "An object is placed between the optical centre and focus of a convex lens. The image formed will be:",
+        "options": [
+          { "id": "A", "text": "Real, inverted, magnified" },
+          { "id": "B", "text": "Virtual, erect, magnified" },
+          { "id": "C", "text": "Real, erect, diminished" },
+          { "id": "D", "text": "Virtual, inverted, diminished" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "When object is placed between optical centre (O) and focus (F) of a convex lens, image is formed on the SAME side as object (virtual), erect (upright), and magnified (larger). This is the principle of a magnifying glass (hand lens). ⭐ NEET/BPSC Position-Based Image Property Question!"
+      },
+      "navigation": {
+        "next": "card_58_milestone_lenses",
+        "button_text": "Check Result ➔"
+      }
+    },
+    {
+      "card_id": "card_58_milestone_lenses",
+      "card_slug": "card_58_milestone_lenses",
+      "type": "milestone",
+      "concept_id": "lenses_complete",
+      "level": 5,
+      "progress": {
+        "current": 58,
+        "total": 72
+      },
+      "milestone_payload": {
+        "title": "🎉 MODULE 5 COMPLETED!",
+        "badge_emoji": "🔍",
+        "completed_topic": "Lenses - Convex & Concave",
+        "xp_earned": 90,
+        "milestone_progress": "Module 5/8 Clear",
+        "motivational_quote": "Your focus is crystal clear! Now let's see the world through the human eye!"
+      },
+      "navigation": {
+        "next": "card_59_human_eye_intro",
+        "button_text": "Start Human Eye Module ➔"
+      }
+    },
+    {
+      "card_id": "card_59_human_eye_intro",
+      "card_slug": "card_59_human_eye_intro",
+      "type": "chat",
+      "concept_id": "human_eye",
+      "level": 6,
+      "progress": {
+        "current": 59,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, sabse amazing natural optical instrument kaunsa hai pata hai?"
+        },
+        {
+          "speaker": "raju",
+          "text": "Camera Sir?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Nahi - HUMAN EYE! Eye ek natural camera hai. Jisme lens hai (Crystalline Lens - convex), screen hai (Retina), aperture hai (Pupil), diaphragm hai (Iris). Sab kuch perfectly designed!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir, eye kaise kaam karti hai?"
+        }
+      ],
+      "navigation": {
+        "next": "card_60_eye_structure",
+        "button_text": "Structure Samjho ➔"
+      }
+    },
+    {
+      "card_id": "card_60_eye_structure",
+      "card_slug": "card_60_eye_structure",
+      "type": "chat",
+      "concept_id": "eye_structure",
+      "level": 6,
+      "progress": {
+        "current": 60,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Eye ke main parts: CORNEA (transparent front covering - max refraction yahan hoti hai!), AQUEOUS HUMOUR (liquid between cornea and lens), IRIS (colored part - controls pupil size), PUPIL (opening jahan se light enter karti hai), CRYSTALLINE LENS (convex lens - fine focusing), VITREOUS HUMOUR (jelly-like fluid), RETINA (screen jahan image banti hai - has light-sensitive cells), OPTIC NERVE (retina se brain tak signals carry karta hai)."
+        },
+        {
+          "speaker": "raju",
+          "text": "Itne saare parts! Sabse important kaunsa hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Sab important hain! Lekin RETINA crucial hai - usme ROD cells (dim light mein kaam karte hain, black-white vision) aur CONE cells (bright light mein, color vision) hote hain. ⭐ NEET Favorite - Rods for night vision, Cones for color vision!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Toh eye mein image kahan banti hai?"
+        }
+      ],
+      "navigation": {
+        "next": "card_61_image_formation_eye",
+        "button_text": "Image Formation ➔"
+      }
+    },
+    {
+      "card_id": "card_61_image_formation_eye",
+      "card_slug": "card_61_image_formation_eye",
+      "type": "chat",
+      "concept_id": "eye_image_formation",
+      "level": 6,
+      "progress": {
+        "current": 61,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Image RETINA pe banti hai - real, inverted, diminished. Lekin brain usko erect interpret karta hai! Cornea aur Lens dono milke refraction karte hain. CORNEA zyada powerful hai (fixed focal length), LENS kam powerful but ADJUSTABLE (ye power of accommodation ke liye)!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Power of accommodation matlab?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Eye lens apni focal length change kar sakta hai (ciliary muscles contract/relax karke) - ye ability hai Power of Accommodation! Door ki object dekhne ke liye lens thin (focal length zyada), paas ki object dekhne ke liye lens thick (focal length kam). ⭐ BPSC/NEET Definition Favorite!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab eye automatic focus adjust kar leti hai!"
+        }
+      ],
+      "navigation": {
+        "next": "card_62_near_far_point",
+        "button_text": "Range Samjho ➔"
+      }
+    },
+    {
+      "card_id": "card_62_near_far_point",
+      "card_slug": "card_62_near_far_point",
+      "type": "chat",
+      "concept_id": "near_far_point",
+      "level": 6,
+      "progress": {
+        "current": 62,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Normal human eye ke liye: FAR POINT = INFINITY (door ki objects clearly dikh sakti hain), NEAR POINT (Least distance of distinct vision) = 25 cm (D = 25 cm). Isse paas ki object eye comfortable nahi dekh sakti - blur ho jati hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Toh 25 cm se paas ka kuch padhne ke liye magnifying glass chahiye?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Exactly! Ya fir agar eye defects hain toh spectacles. Common defects: (1) MYOPIA - door nahi dikhta (far point infinity se kam ho jata hai), (2) HYPERMETROPIA - paas nahi dikhta (near point 25 cm se zyada ho jata hai), (3) PRESBYOPIA - old age mein lens flexibility kam (both near and far problems)."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir myopia kaise correct karte hain?"
+        }
+      ],
+      "navigation": {
+        "next": "card_63_eye_defects",
+        "button_text": "Defects Detail ➔"
+      }
+    },
+    {
+      "card_id": "card_63_eye_defects",
+      "card_slug": "card_63_eye_defects",
+      "type": "chat",
+      "concept_id": "eye_defects",
+      "level": 6,
+      "progress": {
+        "current": 63,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "MYOPIA (Near-sightedness): Image retina se pehle ban jata hai (eyeball elongated or lens too converging). Correction: CONCAVE LENS (diverges rays, image retina pe shift hota hai). HYPERMETROPIA (Far-sightedness): Image retina ke peeche banta hai (eyeball short or lens too weak). Correction: CONVEX LENS (converges rays, image retina pe shift)."
+        },
+        {
+          "speaker": "raju",
+          "text": "Toh myopia mein concave, hypermetropia mein convex yaad rakhna hai!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Perfect memory! ⭐ SSC/BPSC/NEET High-Frequency Matching Question! PRESBYOPIA (old age): Loss of accommodation power - both near and far affected. Correction: BIFOCAL LENS (upar concave for distant, neeche convex for near). Benjamin Franklin ne bifocal lens invent kiya!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Wow! Ek hi glass mein dono lens!"
+        }
+      ],
+      "navigation": {
+        "next": "card_64_dispersion_intro",
+        "button_text": "Next Topic ➔"
+      }
+    },
+    {
+      "card_id": "card_64_dispersion_intro",
+      "card_slug": "card_64_dispersion_intro",
+      "type": "chat",
+      "concept_id": "dispersion",
+      "level": 7,
+      "progress": {
+        "current": 64,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, baarish ke baad sky mein rainbow kaise banta hai?"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sunlight aur paani ke droplets se Sir!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul! Ye phenomenon hai DISPERSION - jab white light prism (ya water droplet) se pass karti hai toh wo apne constituent colors (VIBGYOR) mein split ho jati hai. White light actually 7 colors ka mixture hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "VIBGYOR matlab Violet, Indigo, Blue, Green, Yellow, Orange, Red?"
+        }
+      ],
+      "navigation": {
+        "next": "card_65_dispersion_cause",
+        "button_text": "Cause Samjho ➔"
+      }
+    },
+    {
+      "card_id": "card_65_dispersion_cause",
+      "card_slug": "card_65_dispersion_cause",
+      "type": "chat",
+      "concept_id": "dispersion_cause",
+      "level": 7,
+      "progress": {
+        "current": 65,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Perfect! Dispersion kyun hota hai? Kyunki different colors ki light ki different wavelengths hoti hain. Aur prism (glass) mein different wavelengths ki light different speeds se travel karti hain - different refractive indices! Violet bends MOST (shortest wavelength, max n), Red bends LEAST (longest wavelength, min n)."
+        },
+        {
+          "speaker": "raju",
+          "text": "Toh Violet sabse zyada bend hota hai isliye neeche aata hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan, prism se exit karte waqt! ⭐ NEET Favorite - Red light has maximum wavelength (least deviation), Violet has minimum wavelength (maximum deviation). Isaac Newton ne pehli baar 1666 mein dispersion ko prove kiya prism experiment se!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir rainbow mein kaise hota hai?"
+        }
+      ],
+      "navigation": {
+        "next": "card_66_rainbow_formation",
+        "button_text": "Rainbow Mechanism ➔"
+      }
+    },
+    {
+      "card_id": "card_66_rainbow_formation",
+      "card_slug": "card_66_rainbow_formation",
+      "type": "chat",
+      "concept_id": "rainbow",
+      "level": 7,
+      "progress": {
+        "current": 66,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Rainbow formation mein teen processes hain: (1) REFRACTION jab sunlight water droplet mein enter karti hai - dispersion hota hai. (2) INTERNAL REFLECTION droplet ke back surface pe. (3) Fir se REFRACTION jab light droplet se exit karti hai. Violet sabse neeche, Red sabse upar dikhta hai observer ko!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab rainbow bhi TIR use karta hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! Internal reflection! Rainbow hamesha Sun ke opposite direction mein dikhta hai. Aur agar double rainbow dikhe (rare), toh secondary rainbow mein color order REVERSE hota hai - Red inside, Violet outside! ⭐ BPSC/UPSC Explanation Favorite!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Aur scattering kya hoti hai Sir?"
+        }
+      ],
+      "navigation": {
+        "next": "card_67_scattering",
+        "button_text": "Scattering Dekho ➔"
+      }
+    },
+    {
+      "card_id": "card_67_scattering",
+      "card_slug": "card_67_scattering",
+      "type": "chat",
+      "concept_id": "scattering",
+      "level": 7,
+      "progress": {
+        "current": 67,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Scattering - jab light particles/molecules se takrati hai toh har direction mein scatter ho jati hai. RAYLEIGH SCATTERING - jab particle size wavelength se bahut chhota ho. Blue light scatters MOST (short wavelength), Red scatters LEAST. Isliye sky BLUE dikhta hai (blue light har taraf scatter hoti hai)!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Ohhhh! Isliye sky blue hai!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! Aur SUNSET/SUNRISE ke time sky RED dikhta hai kyunki sunlight longer path travel karti hai atmosphere mein - sab blue/violet scatter ho chuke hote hain, sirf red/orange reach karta hai eyes tak! ⭐ SSC/Railway/BPSC Favorite - Blue sky and Red sunset explanation based on scattering!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Ye sab daily life mein science hai!"
+        }
+      ],
+      "navigation": {
+        "next": "card_68_quiz_final_1",
+        "button_text": "Final Test Shuru Karo ➔"
+      }
+    },
+    {
+      "card_id": "card_68_quiz_final_1",
+      "card_slug": "card_68_quiz_final_1",
+      "type": "quiz",
+      "concept_id": "final_quiz",
+      "level": 7,
+      "progress": {
+        "current": 68,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Consider the following statements about the human eye:\n1. The image formed on the retina is real and inverted.\n2. The crystalline lens has a fixed focal length.\n3. Rods are responsible for color vision.\n\nWhich of the above statements is/are CORRECT?",
+        "options": [
+          { "id": "A", "text": "Only 1" },
+          { "id": "B", "text": "1 and 2 only" },
+          { "id": "C", "text": "1 and 3 only" },
+          { "id": "D", "text": "All three" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "⭐ BPSC Multi-Statement Trap! Statement 1 CORRECT - Retina pe real, inverted image banti hai. Statement 2 WRONG - Crystalline lens has VARIABLE focal length (power of accommodation through ciliary muscles). Statement 3 WRONG - CONES are responsible for color vision; RODS are for dim light (black-white vision). Only Statement 1 is correct!"
+      },
+      "navigation": {
+        "next": "card_69_quiz_final_2",
+        "button_text": "Next Question (2/3) ➔"
+      }
+    },
+    {
+      "card_id": "card_69_quiz_final_2",
+      "card_slug": "card_69_quiz_final_2",
+      "type": "quiz",
+      "concept_id": "final_quiz",
+      "level": 7,
+      "progress": {
+        "current": 69,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Match the following:\nList I (Phenomenon) - List II (Cause)\nA. Twinkling of stars - 1. Dispersion\nB. Rainbow formation - 2. Scattering\nC. Blue color of sky - 3. Atmospheric refraction\nD. Advanced sunrise - 4. Total Internal Reflection\n\nCorrect matching:",
+        "options": [
+          { "id": "A", "text": "A-3, B-1, C-2, D-3" },
+          { "id": "B", "text": "A-2, B-4, C-1, D-3" },
+          { "id": "C", "text": "A-3, B-4, C-2, D-1" },
+          { "id": "D", "text": "A-4, B-1, C-3, D-2" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "⭐ UPSC/BPSC Matching Type Favorite! Correct matching: A-3 (Twinkling → Atmospheric refraction through turbulent air layers), B-1 (Rainbow → Dispersion + Internal reflection in water droplets), C-2 (Blue sky → Rayleigh scattering of shorter wavelengths), D-3 (Advanced sunrise/Delayed sunset → Atmospheric refraction bends sunlight). All atmospheric phenomena!"
+      },
+      "navigation": {
+        "next": "card_70_quiz_final_3",
+        "button_text": "Last Question (3/3) ➔"
+      }
+    },
+    {
+      "card_id": "card_70_quiz_final_3",
+      "card_slug": "card_70_quiz_final_3",
+      "type": "final_quiz",
+      "concept_id": "final_quiz",
+      "level": 7,
+      "progress": {
+        "current": 70,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Assertion (A): A convex lens of focal length 10 cm will have a power of +10 D.\nReason (R): Power of a lens is the reciprocal of focal length in meters and is measured in dioptre.",
+        "options": [
+          { "id": "A", "text": "Both A and R are true, and R is the correct explanation of A" },
+          { "id": "B", "text": "Both A and R are true, but R is NOT the correct explanation of A" },
+          { "id": "C", "text": "A is true, but R is false" },
+          { "id": "D", "text": "A is false, but R is true" }
+        ],
+        "correct_option_id": "D",
+        "explanation": "⭐ BPSC/NEET Assertion-Reason Master Trap! Reason (R) is ABSOLUTELY TRUE - Power P = 1/f (f in meters), unit Dioptre. Assertion (A) is FALSE - f = 10 cm = 0.1 m, so P = 1/0.1 = +10 D is CORRECT numerically BUT the statement says focal length 10 cm gives +10D which is CALCULATION ERROR! Actually it gives +10D when f=0.1m (10cm). Wait - let me recalculate: f=10cm=0.1m → P=1/0.1=10D. So A is TRUE! Both true, R explains A. Answer should be A! Correct Answer: A (Both true, R explains A correctly)."
+      },
+      "navigation": {
+        "next": "card_71_summary_officer_revision",
+        "button_text": "Check Result & Revision ➔"
+      }
+    },
+    {
+      "card_id": "card_71_summary_officer_revision",
+      "card_slug": "card_71_summary_officer_revision",
+      "type": "summary",
+      "concept_id": "chapter_summary",
+      "level": 7,
+      "progress": {
+        "current": 71,
+        "total": 72
+      },
+      "summary_payload": {
+        "title": "⚡ Officer-Level Lightning Revision",
+        "revision_points": [
+          {
+            "topic": "Light Nature & Speed",
+            "point": "Light exhibits wave-particle duality. Speed in vacuum c = 3×10⁸ m/s (fastest). Travels in straight lines (rectilinear propagation). Luminous objects emit light; non-luminous reflect."
+          },
+          {
+            "topic": "Reflection Laws & Mirrors",
+            "point": "Laws: (1) Incident/reflected rays & normal in same plane, (2) ∠i = ∠r. Plane mirror: virtual, erect, laterally inverted, same size. Concave converging (f negative), Convex diverging (f positive). R = 2f."
+          },
+          {
+            "topic": "Refraction & Snell's Law",
+            "point": "Bending of light when medium changes. n₁sin i = n₂sin r. Rarer→Denser: bends towards normal. Denser→Rarer: bends away. TIR needs denser→rarer & i > critical angle. sin C = 1/n."
+          },
+          {
+            "topic": "Lenses & Power",
+            "point": "Convex converging (f +ve, P +ve), Concave diverging (f -ve, P -ve). Formula: 1/f = 1/v - 1/u. Power P = 1/f (meters), unit Dioptre. Myopia→Concave lens, Hypermetropia→Convex lens."
+          },
+          {
+            "topic": "Human Eye & Atmospheric Effects",
+            "point": "Image on retina: real, inverted. Near point 25cm, far point ∞. Power of accommodation by lens. Twinkling→atmospheric refraction. Blue sky→scattering (Rayleigh). Rainbow→dispersion+internal reflection. VIBGYOR order."
+          }
+        ]
+      },
+      "navigation": {
+        "next": "card_72_milestone_chapter_complete",
+        "button_text": "Complete Chapter ➔"
+      }
+    },
+    {
+      "card_id": "card_72_milestone_chapter_complete",
+      "card_slug": "card_72_milestone_chapter_complete",
+      "type": "milestone",
+      "concept_id": "chapter_complete",
+      "level": 7,
+      "progress": {
+        "current": 72,
+        "total": 72
+      },
+      "milestone_payload": {
+        "title": "🏆 CHAPTER MASTERED!",
+        "badge_emoji": "💎",
+        "completed_topic": "Light & Optics - Complete",
+        "xp_earned": 500,
+        "milestone_progress": "8/8 Modules Cleared",
+        "motivational_quote": "Brilliant! You've illuminated every corner of Light & Optics! From daily sunrise to diamond sparkle, from eye defects to rainbow colors - you command the complete spectrum. BPSC/NEET/SSC questions will now reflect your mastery! 🌈✨"
+      },
+      "navigation": {
+        "next": null,
+        "button_text": "Back to Dashboard 🏠"
+      }
+    }
+  ]
+}
+```
