@@ -1,0 +1,2490 @@
+{
+  "topic_id": "force_in_physics_complete",
+  "topic_title": "Force in Physics",
+  "target_exams": [
+    "BPSC",
+    "BSSC",
+    "RRB NTPC",
+    "SSC CGL",
+    "NEET",
+    "UPSC Prelims",
+    "BPSC TRE"
+  ],
+  "total_cards": 72,
+  "characters": {
+    "aman": {
+      "name": "Aman Sir",
+      "role": "teacher",
+      "avatar": "👨‍🏫"
+    },
+    "raju": {
+      "name": "Raju",
+      "role": "student",
+      "avatar": "👦"
+    }
+  },
+  "cards": [
+    {
+      "card_id": "card_01_intro",
+      "card_slug": "card_01_intro",
+      "type": "intro",
+      "concept_id": "force_chapter_intro",
+      "level": 1,
+      "progress": {
+        "current": 1,
+        "total": 72
+      },
+      "intro_payload": {
+        "title": "Force in Physics",
+        "icon": "💪",
+        "target_exams": [
+          "BPSC",
+          "BSSC",
+          "RRB NTPC",
+          "SSC CGL",
+          "NEET",
+          "UPSC Prelims",
+          "BPSC TRE"
+        ],
+        "learning_outcomes": [
+          "Understanding Force from Daily Life to Newton's Laws",
+          "Types of Forces: Contact & Non-Contact",
+          "Effects of Force: Motion, Shape, Direction Changes",
+          "Balanced & Unbalanced Forces",
+          "Newton's Three Laws of Motion",
+          "Friction, Pressure, Thrust & Their Applications",
+          "Gravitational Force & Free Fall",
+          "PYQ Traps from BPSC, SSC, Railway & NEET"
+        ],
+        "estimated_time": "45 minutes",
+        "xp_reward": 500
+      },
+      "navigation": {
+        "next": "card_02_daily_life_push",
+        "button_text": "Start Learning ➔"
+      }
+    },
+    {
+      "card_id": "card_02_daily_life_push",
+      "card_slug": "card_02_daily_life_push",
+      "type": "chat",
+      "concept_id": "force_intro_daily_life",
+      "level": 1,
+      "progress": {
+        "current": 2,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, kal tumne cycle kaise chalaayi thi school jaane ke liye?"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir, maine paddle maara tha... aur cycle chalne lagi!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul sahi! Jab tum paddle maarte ho, tum actually cycle par ek DHAKKA (push) lagate ho. Isi dhakke ko Physics mein FORCE kehte hain. Force matlab kisi cheez ko push ya pull karna."
+        },
+        {
+          "speaker": "raju",
+          "text": "Ohhh... matlab jab main darwaza kholne ke liye kheenchta hoon, tab bhi force lagti hai?"
+        }
+      ],
+      "navigation": {
+        "next": "card_03_force_definition",
+        "button_text": "Haan, bilkul! ➔"
+      }
+    },
+    {
+      "card_id": "card_03_force_definition",
+      "card_slug": "card_03_force_definition",
+      "type": "chat",
+      "concept_id": "force_definition_scientific",
+      "level": 1,
+      "progress": {
+        "current": 3,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Exactly! FORCE ek PUSH ya PULL hai jo kisi object par lagayi jaati hai. Ye object ko move kar sakti hai, ruk sakti hai, ya uski shape change kar sakti hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir, force ko measure kaise karte hain?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Force ko measure karte hain NEWTON (N) mein. Iska naam scientist Isaac Newton ke naam par rakha gaya hai. 1 Newton matlab utna force jo 1 kg mass ko 1 meter/second² acceleration de."
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab bada force matlab zyada Newton?"
+        }
+      ],
+      "navigation": {
+        "next": "card_04_force_needs_two",
+        "button_text": "Haan sahi hai! ➔"
+      }
+    },
+    {
+      "card_id": "card_04_force_needs_two",
+      "card_slug": "card_04_force_needs_two",
+      "type": "chat",
+      "concept_id": "force_interaction",
+      "level": 1,
+      "progress": {
+        "current": 4,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, ek important baat yaad rakho: Force hamesha DO objects ke beech lagti hai. Ek object force lagata hai, doosra object force receive karta hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir example se samjhaiye na?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Dekho, jab tum football ko kick marte ho, tumhara pair (object 1) football (object 2) par force lagata hai. Akele object par force nahi lag sakti - interaction chahiye!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Achhaaaa... matlab force = interaction between two objects!"
+        }
+      ],
+      "navigation": {
+        "next": "card_05_guess_force_example",
+        "button_text": "Perfect understanding! ➔"
+      }
+    },
+    {
+      "card_id": "card_05_guess_force_example",
+      "card_slug": "card_05_guess_force_example",
+      "type": "guess",
+      "concept_id": "force_daily_examples",
+      "level": 1,
+      "progress": {
+        "current": 5,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Raju ek bhaari box ko zameen par se uthana chahta hai. Kaun sa action FORCE ka example hai?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Box ko dekhna"
+          },
+          {
+            "id": "B",
+            "text": "Box ko uthane ke liye upar kheenchna (pull)"
+          },
+          {
+            "id": "C",
+            "text": "Box ke paas khada hona"
+          },
+          {
+            "id": "D",
+            "text": "Box ka color dekhna"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Force ek PUSH ya PULL hai. Jab Raju box ko upar kheenchta hai, wo PULL force laga raha hai. Sirf dekhna ya khada hona force nahi hai - physical interaction chahiye!"
+      },
+      "navigation": {
+        "next": "card_06_effects_intro",
+        "button_text": "Check Answer ➔"
+      }
+    },
+    {
+      "card_id": "card_06_effects_intro",
+      "card_slug": "card_06_effects_intro",
+      "type": "chat",
+      "concept_id": "effects_of_force_intro",
+      "level": 1,
+      "progress": {
+        "current": 6,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ab samajhte hain ki force lagane se KYA HOTA HAI. Force ke 4 main effects hote hain jo BPSC aur SSC mein bahut puche jaate hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "4 effects? Kya hain wo Sir?"
+        },
+        {
+          "speaker": "aman",
+          "text": "1) Moving object ko STOP kar sakti hai, 2) Stationary object ko MOVE kar sakti hai, 3) Speed ya DIRECTION change kar sakti hai, 4) SHAPE change kar sakti hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "Wow! Matlab force bahut powerful hai!"
+        }
+      ],
+      "navigation": {
+        "next": "card_07_effect_stop_moving",
+        "button_text": "Examples dekhte hain ➔"
+      }
+    },
+    {
+      "card_id": "card_07_effect_stop_moving",
+      "card_slug": "card_07_effect_stop_moving",
+      "type": "chat",
+      "concept_id": "effect_stop_motion",
+      "level": 1,
+      "progress": {
+        "current": 7,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "EFFECT 1: Moving object ko STOP karna. Jab cricket mein fielder ball ko pakadta hai, wo apne haath se force lagata hai aur moving ball RUK jaati hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "Haan Sir! Goalkeeper bhi football ko rok leta hai force laga kar!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul! Brakes lagane se cycle rukti hai - ye bhi force ka effect hai. Moving → Stationary ho gaya."
+        },
+        {
+          "speaker": "raju",
+          "text": "Samajh gaya Sir!"
+        }
+      ],
+      "navigation": {
+        "next": "card_08_effect_start_motion",
+        "button_text": "Next Effect ➔"
+      }
+    },
+    {
+      "card_id": "card_08_effect_start_motion",
+      "card_slug": "card_08_effect_start_motion",
+      "type": "chat",
+      "concept_id": "effect_start_motion",
+      "level": 1,
+      "progress": {
+        "current": 8,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "EFFECT 2: Stationary object ko MOVE karna. Jab tum rukhi hui cycle ko paddle maarkar chalaate ho - stationary se moving ho gayi!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Aur jab main football ko kick maarta hoon, wo bhi toh pehle ruka hua tha!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Perfect example! Train bhi pehle platform par ruki hoti hai, engine force lagata hai toh chalne lagti hai. Stationary → Moving."
+        },
+        {
+          "speaker": "raju",
+          "text": "Ye toh easy hai Sir!"
+        }
+      ],
+      "navigation": {
+        "next": "card_09_effect_direction",
+        "button_text": "Aage badhte hain ➔"
+      }
+    },
+    {
+      "card_id": "card_09_effect_direction",
+      "card_slug": "card_09_effect_direction",
+      "type": "chat",
+      "concept_id": "effect_change_direction",
+      "level": 1,
+      "progress": {
+        "current": 9,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "EFFECT 3: Direction ya Speed change karna. Jab batsman ball ko hit karta hai, ball ki direction change ho jaati hai. Ya jab tum cycle chalate waqt handle ghumaate ho - direction badal gayi!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Ohhh... aur jab football goalkeeper ke haath se touch karke side mein chali jaati hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Exactly! Wo bhi direction change ka example hai. Similarly, jab car mein accelerator dabate ho toh speed INCREASE hoti hai, brake lagaate ho toh speed DECREASE - dono force ke effects hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab direction aur speed dono change ho sakte hain force se!"
+        }
+      ],
+      "navigation": {
+        "next": "card_10_effect_shape",
+        "button_text": "Last effect dekhte hain ➔"
+      }
+    },
+    {
+      "card_id": "card_10_effect_shape",
+      "card_slug": "card_10_effect_shape",
+      "type": "chat",
+      "concept_id": "effect_change_shape",
+      "level": 1,
+      "progress": {
+        "current": 10,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "EFFECT 4: Shape change karna. Jab tum balloon ko press karte ho, uski shape badal jaati hai. Jab spring ko dabate ho ya खींचते ho, wo compress ya stretch ho jaati hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir, aur jab atta goondh rahe hote hain toh bhi shape change hoti hai force se!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Zabardast example Raju! Jab lohaar lohe ko hammer se peetता hai toh shape change hoti hai. Rubber band खींचने par stretch hota hai. Ye sab FORCE ke shape-changing effect hain."
+        },
+        {
+          "speaker": "raju",
+          "text": "Toh force kisi bhi object ki shape badal sakti hai!"
+        }
+      ],
+      "navigation": {
+        "next": "card_11_quiz_effects_q1",
+        "button_text": "Ab quiz solve karo ➔"
+      }
+    },
+    {
+      "card_id": "card_11_quiz_effects_q1",
+      "card_slug": "card_11_quiz_effects_q1",
+      "type": "quiz",
+      "concept_id": "effects_quiz_1",
+      "level": 1,
+      "progress": {
+        "current": 11,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "⭐ BPSC Pattern: Ek moving cricket ball fielder ke haath se touch karke apni direction change kar deti hai. Yeh force ka kaun sa effect hai? (Q1/3)",
+        "options": [
+          {
+            "id": "A",
+            "text": "केवल गति को रोकना"
+          },
+          {
+            "id": "B",
+            "text": "दिशा परिवर्तन (Direction change)"
+          },
+          {
+            "id": "C",
+            "text": "आकार परिवर्तन (Shape change)"
+          },
+          {
+            "id": "D",
+            "text": "स्थिर वस्तु को गति देना"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "यह Force का तीसरा प्रभाव है - Direction Change. Ball पहले किसी दिशा में जा रही थी, fielder के हाथ से force लगने पर दूसरी दिशा में चली गई। SSC और Railway में यह प्रश्न बार-बार पूछा जाता है।"
+      },
+      "navigation": {
+        "next": "card_12_quiz_effects_q2",
+        "button_text": "Next Question ➔"
+      }
+    },
+    {
+      "card_id": "card_12_quiz_effects_q2",
+      "card_slug": "card_12_quiz_effects_q2",
+      "type": "quiz",
+      "concept_id": "effects_quiz_2",
+      "level": 1,
+      "progress": {
+        "current": 12,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "निम्नलिखित में से किस स्थिति में Force वस्तु की SHAPE को प्रभावित करती है? (Q2/3)",
+        "options": [
+          {
+            "id": "A",
+            "text": "फुटबॉल को किक मारना"
+          },
+          {
+            "id": "B",
+            "text": "स्प्रिंग को दबाना या खींचना"
+          },
+          {
+            "id": "C",
+            "text": "साइकिल में ब्रेक लगाना"
+          },
+          {
+            "id": "D",
+            "text": "क्रिकेट बॉल को फेंकना"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "स्प्रिंग को दबाने (compress) या खींचने (stretch) पर उसकी shape बदल जाती है - यह Force का 4th Effect है। बाकी options में motion या direction का effect है, shape का नहीं। NEET में spring-force questions बहुत आते हैं।"
+      },
+      "navigation": {
+        "next": "card_13_quiz_effects_q3",
+        "button_text": "Next Question ➔"
+      }
+    },
+    {
+      "card_id": "card_13_quiz_effects_q3",
+      "card_slug": "card_13_quiz_effects_q3",
+      "type": "quiz",
+      "concept_id": "effects_quiz_3",
+      "level": 1,
+      "progress": {
+        "current": 13,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "⭐ Railway Pattern: जब एक रुकी हुई गाड़ी को धक्का लगाकर चलाया जाता है, तो यह Force का कौन सा प्रभाव है? (Q3/3)",
+        "options": [
+          {
+            "id": "A",
+            "text": "चलती हुई वस्तु को रोकना"
+          },
+          {
+            "id": "B",
+            "text": "स्थिर वस्तु को गति प्रदान करना"
+          },
+          {
+            "id": "C",
+            "text": "दिशा परिवर्तन"
+          },
+          {
+            "id": "D",
+            "text": "आकार परिवर्तन"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "यह Force का दूसरा प्रभाव है - Stationary वस्तु को Motion देना। गाड़ी पहले रुकी थी (stationary), धक्का लगाने से चलने लगी (moving)। Railway RRB में इस concept से direct questions पूछे जाते हैं।"
+      },
+      "navigation": {
+        "next": "card_14_milestone_effects",
+        "button_text": "Check Answer ➔"
+      }
+    },
+    {
+      "card_id": "card_14_milestone_effects",
+      "card_slug": "card_14_milestone_effects",
+      "type": "milestone",
+      "concept_id": "milestone_effects_complete",
+      "level": 1,
+      "progress": {
+        "current": 14,
+        "total": 72
+      },
+      "milestone_payload": {
+        "title": "🎯 MODULE 1 COMPLETED!",
+        "badge_emoji": "💪",
+        "completed_topic": "Force की परिभाषा और Effects",
+        "xp_earned": 50,
+        "milestone_progress": "Module 1/8 Clear",
+        "motivational_quote": "Zabardast! Tumne Force के सभी 4 Effects master कर लिए! अब Types of Force समझने की तैयारी करो! 🚀"
+      },
+      "navigation": {
+        "next": "card_15_types_intro",
+        "button_text": "Start Types of Force ➔"
+      }
+    },
+    {
+      "card_id": "card_15_types_intro",
+      "card_slug": "card_15_types_intro",
+      "type": "chat",
+      "concept_id": "types_of_force_intro",
+      "level": 2,
+      "progress": {
+        "current": 15,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, ab hum dekhenge ki Force kitne TYPES ki hoti hai. Basically force ko 2 major categories mein divide karte hain."
+        },
+        {
+          "speaker": "raju",
+          "text": "Kaun si 2 categories Sir?"
+        },
+        {
+          "speaker": "aman",
+          "text": "1) CONTACT FORCE - jahan physical touch zaroori hai. 2) NON-CONTACT FORCE - jahan bina touch kiye bhi force lagti hai! Pehle Contact Force samajhte hain."
+        },
+        {
+          "speaker": "raju",
+          "text": "Bina touch kiye force? Ye kaise possible hai Sir?"
+        }
+      ],
+      "navigation": {
+        "next": "card_16_contact_force",
+        "button_text": "Pehle Contact देखते हैं ➔"
+      }
+    },
+    {
+      "card_id": "card_16_contact_force",
+      "card_slug": "card_16_contact_force",
+      "type": "chat",
+      "concept_id": "contact_force_definition",
+      "level": 2,
+      "progress": {
+        "current": 16,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "CONTACT FORCE woh force hai jahan दो objects को physically TOUCH karna zaroori hai. Jaise jab tum door ko push karte ho - tumhara haath door ko touch kar raha hai, tabhi force lag rahi hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "Toh agar main kisi cheez ko bina chhuye kahunga 'chalo', toh force nahi lagegi?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haha bilkul sahi! Bolne se force nahi lagti, touch karna zaroori hai. Contact Force ke main examples hain: Muscular Force, Friction Force, Tension Force, Spring Force, Normal Force."
+        },
+        {
+          "speaker": "raju",
+          "text": "Ye sab alag alag hain? Sir ek ek karke samjhaiye please!"
+        }
+      ],
+      "navigation": {
+        "next": "card_17_muscular_force",
+        "button_text": "Pehla type dekho ➔"
+      }
+    },
+    {
+      "card_id": "card_17_muscular_force",
+      "card_slug": "card_17_muscular_force",
+      "type": "chat",
+      "concept_id": "muscular_force_detail",
+      "level": 2,
+      "progress": {
+        "current": 17,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "MUSCULAR FORCE: Jab tum apni MUSCLES ka use karke kisi object par force lagate ho. Jaise ek bhaari box uthana, cycle chalana, ball फेंकना - ye sab muscular force hain."
+        },
+        {
+          "speaker": "raju",
+          "text": "Ohh... matlab मेरी body की power se jo force lagti hai wo muscular force hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Exactly! Jab bullock-cart mein bail gaadi खींचता hai, wo bhi muscular force laga raha hai. Humans aur animals apni muscles se force apply karte hain. ⭐ BPSC/BSSC में यह बहुत पूछा जाता है - 'बैल द्वारा गाड़ी खींचना कौन सा बल है?'"
+        },
+        {
+          "speaker": "raju",
+          "text": "Samajh gaya! Mera haath bhi muscle force use karta hai!"
+        }
+      ],
+      "navigation": {
+        "next": "card_18_friction_force",
+        "button_text": "Next Force Type ➔"
+      }
+    },
+    {
+      "card_id": "card_18_friction_force",
+      "card_slug": "card_18_friction_force",
+      "type": "chat",
+      "concept_id": "friction_force_intro",
+      "level": 2,
+      "progress": {
+        "current": 18,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "FRICTION (घर्षण बल): Jab ek surface doosri surface par slide/move karti hai, toh dono surfaces ke beech ek OPPOSING FORCE lagti hai jo motion ko RESIST karti hai. Isko FRICTION kehte hain."
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab friction motion ko rokti hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! Jab cycle chalate waqt tum pedal maarna band kar do, kuch der baad cycle apne aap ruk jaati hai. Kyunki tyres aur road ke beech FRICTION force lag rahi hai jo cycle ko slow kar rahi hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "Toh friction ek problem hai kya Sir?"
+        }
+      ],
+      "navigation": {
+        "next": "card_19_friction_importance",
+        "button_text": "Bahut important question! ➔"
+      }
+    },
+    {
+      "card_id": "card_19_friction_importance",
+      "card_slug": "card_19_friction_importance",
+      "type": "chat",
+      "concept_id": "friction_advantages_disadvantages",
+      "level": 2,
+      "progress": {
+        "current": 19,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ruko Raju! Friction ek villain nahi hai - wo kabhi helpful hai, kabhi problematic. Jaise tum road par चलते ho - agar friction na ho toh tum फिसल जाओगे! Shoes aur road ke beech friction tumhe grip deti hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "Haan Sir, jab floor geela hota hai toh फिसलते hain kyunki friction kam ho jaati hai!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Perfect! Brakes bhi friction ki wajah se hi काम करते hain. Lekin machine parts में friction energy waste karti hai aur heat पैदा करती है - isliye wahan oil/grease डालकर friction kam karte hain. ⭐ SSC/Railway favorite: 'Friction के लाभ और हानि लिखिए।'"
+        },
+        {
+          "speaker": "raju",
+          "text": "Toh friction kabhi friend, kabhi enemy!"
+        }
+      ],
+      "navigation": {
+        "next": "card_20_quiz_contact_q1",
+        "button_text": "Quiz time! ➔"
+      }
+    },
+    {
+      "card_id": "card_20_quiz_contact_q1",
+      "card_slug": "card_20_quiz_contact_q1",
+      "type": "quiz",
+      "concept_id": "contact_force_quiz_1",
+      "level": 2,
+      "progress": {
+        "current": 20,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "⭐ BSSC Pattern: एक बैल गाड़ी को खींच रहा है। यह किस प्रकार का बल है? (Q1/3)",
+        "options": [
+          {
+            "id": "A",
+            "text": "गुरुत्वाकर्षण बल (Gravitational Force)"
+          },
+          {
+            "id": "B",
+            "text": "पेशीय बल (Muscular Force)"
+          },
+          {
+            "id": "C",
+            "text": "चुंबकीय बल (Magnetic Force)"
+          },
+          {
+            "id": "D",
+            "text": "स्थिर वैद्युत बल (Electrostatic Force)"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "बैल अपनी मांसपेशियों (muscles) का उपयोग करके गाड़ी को खींच रहा है, इसलिए यह Muscular Force (पेशीय बल) है। यह एक Contact Force है क्योंकि बैल गाड़ी को physically touch कर रहा है। BPSC/BSSC में यह बहुत पूछा जाता है!"
+      },
+      "navigation": {
+        "next": "card_21_quiz_contact_q2",
+        "button_text": "Next Question ➔"
+      }
+    },
+    {
+      "card_id": "card_21_quiz_contact_q2",
+      "card_slug": "card_21_quiz_contact_q2",
+      "type": "quiz",
+      "concept_id": "contact_force_quiz_2",
+      "level": 2,
+      "progress": {
+        "current": 21,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "साइकिल चलाना बंद करने के बाद वह कुछ दूरी तय करके रुक जाती है। इसका कारण है: (Q2/3)",
+        "options": [
+          {
+            "id": "A",
+            "text": "गुरुत्वाकर्षण बल"
+          },
+          {
+            "id": "B",
+            "text": "घर्षण बल (Friction)"
+          },
+          {
+            "id": "C",
+            "text": "चुंबकीय बल"
+          },
+          {
+            "id": "D",
+            "text": "पेशीय बल"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "साइकिल के टायर और सड़क के बीच Friction (घर्षण बल) लगता है जो motion को oppose करता है और साइकिल को धीमा करके रोक देता है। यह एक Contact Force है। Railway/SSC में यह concept बार-बार पूछा जाता है।"
+      },
+      "navigation": {
+        "next": "card_22_quiz_contact_q3",
+        "button_text": "Next Question ➔"
+      }
+    },
+    {
+      "card_id": "card_22_quiz_contact_q3",
+      "card_slug": "card_22_quiz_contact_q3",
+      "type": "quiz",
+      "concept_id": "contact_force_quiz_3",
+      "level": 2,
+      "progress": {
+        "current": 22,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "⭐ SSC Pattern: घर्षण बल के लाभ का उदाहरण कौन सा है? (Q3/3)",
+        "options": [
+          {
+            "id": "A",
+            "text": "मशीन के पुर्जों में ऊष्मा उत्पन्न होना"
+          },
+          {
+            "id": "B",
+            "text": "जूते और सड़क के बीच पकड़ (Grip) मिलना"
+          },
+          {
+            "id": "C",
+            "text": "टायर का घिस जाना"
+          },
+          {
+            "id": "D",
+            "text": "ऊर्जा का व्यर्थ होना"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "जूते और सड़क के बीच Friction हमें चलने के लिए grip प्रदान करती है - यह Friction का लाभ है। बाकी सभी options Friction की हानियाँ हैं। SSC CGL में advantage-disadvantage based questions बहुत आते हैं।"
+      },
+      "navigation": {
+        "next": "card_23_milestone_contact",
+        "button_text": "Check Answer ➔"
+      }
+    },
+    {
+      "card_id": "card_23_milestone_contact",
+      "card_slug": "card_23_milestone_contact",
+      "type": "milestone",
+      "concept_id": "milestone_contact_complete",
+      "level": 2,
+      "progress": {
+        "current": 23,
+        "total": 72
+      },
+      "milestone_payload": {
+        "title": "🔥 MODULE 2 COMPLETED!",
+        "badge_emoji": "🤝",
+        "completed_topic": "Contact Force (Muscular & Friction)",
+        "xp_earned": 50,
+        "milestone_progress": "Module 2/8 Clear",
+        "motivational_quote": "Fantastic! अब तुम Contact Forces के expert हो! अब Non-Contact Forces की magical दुनिया में चलते हैं! 🌟"
+      },
+      "navigation": {
+        "next": "card_24_non_contact_intro",
+        "button_text": "Start Non-Contact Forces ➔"
+      }
+    },
+    {
+      "card_id": "card_24_non_contact_intro",
+      "card_slug": "card_24_non_contact_intro",
+      "type": "chat",
+      "concept_id": "non_contact_force_intro",
+      "level": 2,
+      "progress": {
+        "current": 24,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ab baat karte hain NON-CONTACT FORCES ki. Ye wo forces hain jo BINA TOUCH KIYE bhi काम करती hain! Imagine karo - koi object tumhe chhua bhi nahi aur force lag gayi!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Hain?? Ye kaise possible hai Sir? Koi jaadu hai kya?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haha jaadu nahi, science hai! Jaise jab tum कोई ball ऊपर फेंकते ho, wo vapas neeche aa jaati hai - kisne खींचा? Zameen ne! Par zameen ne ball ko touch kiya? Nahi! Ye GRAVITATIONAL FORCE hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "Ohhhh! Toh bina touch kiye bhi force lag sakti hai!"
+        }
+      ],
+      "navigation": {
+        "next": "card_25_gravitational_force",
+        "button_text": "Gravity detail में samjho ➔"
+      }
+    },
+    {
+      "card_id": "card_25_gravitational_force",
+      "card_slug": "card_25_gravitational_force",
+      "type": "chat",
+      "concept_id": "gravitational_force_detail",
+      "level": 2,
+      "progress": {
+        "current": 25,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "GRAVITATIONAL FORCE (गुरुत्वाकर्षण बल): हर object जिसमें mass है, वो दूसरे mass वाले object को ATTRACT करता है। पृथ्वी बहुत बड़ी है, इसलिए सभी चीजों को अपनी ओर खींचती है - इसे GRAVITY कहते हैं।"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir isliye sab kuch neeche गिरता hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul! Apple tree से नीचे गिरता है, rain ऊपर से नीचे आती है, jump करने के बाद hम वापस zameen पर आ जाते हैं - sab gravity ki wajah से! Sir Isaac Newton ने इसे discover किया था."
+        },
+        {
+          "speaker": "raju",
+          "text": "Wow! Toh gravity sabko neeche खींचती है!"
+        }
+      ],
+      "navigation": {
+        "next": "card_26_magnetic_force",
+        "button_text": "Aur bhi forces hain ➔"
+      }
+    },
+    {
+      "card_id": "card_26_magnetic_force",
+      "card_slug": "card_26_magnetic_force",
+      "type": "chat",
+      "concept_id": "magnetic_force_detail",
+      "level": 2,
+      "progress": {
+        "current": 26,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "MAGNETIC FORCE (चुंबकीय बल): Magnet (चुंबक) बिना छुए ही iron की चीजों को attract करता है। Tum dekhe hoge fridge पर magnet लगा होता है - wo chipka रहता है बिना glue के!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Haan Sir! Main toh magnet से pin उठाकर खेलता hoon - bina छुए ही attract हो जाती हैं!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Perfect! Magnet की दो poles होती हैं - North और South। Like poles REPEL करते हैं (N-N या S-S दूर होते हैं), Unlike poles ATTRACT करते हैं (N-S पास आते हैं). Ye bhi non-contact force है!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Toh magnet bhi bina touch kiye force lagata hai!"
+        }
+      ],
+      "navigation": {
+        "next": "card_27_electrostatic_force",
+        "button_text": "Ek aur magical force ➔"
+      }
+    },
+    {
+      "card_id": "card_27_electrostatic_force",
+      "card_slug": "card_27_electrostatic_force",
+      "type": "chat",
+      "concept_id": "electrostatic_force_detail",
+      "level": 2,
+      "progress": {
+        "current": 27,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "ELECTROSTATIC FORCE (स्थिर वैद्युत बल): Jab tum plastic scale ko baalon पर रगड़ते हो, फिर usse paper के छोटे टुकड़े पास लाते हो - wo चिपक जाते हैं! Ye electric charge की wajah se hota hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "Haan Sir maine kiya hai ye experiment! Scale paper को bina touch kiye attract kar leta hai!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Exactly! Jab tum woolen कपड़े पहनकर metal door को touch करते हो toh kabhi हल्का shock लगता है - wo bhi static electricity hai. Like charges REPEL, unlike charges ATTRACT - bilkul magnet ki tarah!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab teen non-contact forces hain: Gravity, Magnetic, Electrostatic!"
+        }
+      ],
+      "navigation": {
+        "next": "card_28_quiz_noncontact_q1",
+        "button_text": "Ab quiz karo! ➔"
+      }
+    },
+    {
+      "card_id": "card_28_quiz_noncontact_q1",
+      "card_slug": "card_28_quiz_noncontact_q1",
+      "type": "quiz",
+      "concept_id": "noncontact_quiz_1",
+      "level": 2,
+      "progress": {
+        "current": 28,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "⭐ BPSC Pattern: सेब का पेड़ से नीचे गिरना किस बल के कारण होता है? (Q1/3)",
+        "options": [
+          {
+            "id": "A",
+            "text": "पेशीय बल"
+          },
+          {
+            "id": "B",
+            "text": "घर्षण बल"
+          },
+          {
+            "id": "C",
+            "text": "गुरुत्वाकर्षण बल"
+          },
+          {
+            "id": "D",
+            "text": "चुंबकीय बल"
+          }
+        ],
+        "correct_option_id": "C",
+        "explanation": "सेब का नीचे गिरना Gravitational Force (गुरुत्वाकर्षण बल) के कारण होता है। पृथ्वी सभी वस्तुओं को अपनी ओर खींचती है। यह एक Non-Contact Force है। Sir Isaac Newton ने गिरते सेब को देखकर ही गुरुत्वाकर्षण की खोज की थी। BPSC/SSC में यह बहुत पूछा जाता है!"
+      },
+      "navigation": {
+        "next": "card_29_quiz_noncontact_q2",
+        "button_text": "Next Question ➔"
+      }
+    },
+    {
+      "card_id": "card_29_quiz_noncontact_q2",
+      "card_slug": "card_29_quiz_noncontact_q2",
+      "type": "quiz",
+      "concept_id": "noncontact_quiz_2",
+      "level": 2,
+      "progress": {
+        "current": 29,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "चुंबक की दो समान ध्रुवों (Like Poles) को पास लाने पर क्या होता है? (Q2/3)",
+        "options": [
+          {
+            "id": "A",
+            "text": "वे एक-दूसरे को आकर्षित करते हैं"
+          },
+          {
+            "id": "B",
+            "text": "वे एक-दूसरे को प्रतिकर्षित (Repel) करते हैं"
+          },
+          {
+            "id": "C",
+            "text": "कोई बल नहीं लगता"
+          },
+          {
+            "id": "D",
+            "text": "वे चिपक जाते हैं"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Like Poles (N-N या S-S) एक-दूसरे को Repel (प्रतिकर्षित) करते हैं - दूर होते हैं। Unlike Poles (N-S) Attract करते हैं। यह Magnetic Force का गुण है। Railway/SSC में magnet के properties बहुत पूछे जाते हैं।"
+      },
+      "navigation": {
+        "next": "card_30_quiz_noncontact_q3",
+        "button_text": "Next Question ➔"
+      }
+    },
+    {
+      "card_id": "card_30_quiz_noncontact_q3",
+      "card_slug": "card_30_quiz_noncontact_q3",
+      "type": "quiz",
+      "concept_id": "noncontact_quiz_3",
+      "level": 2,
+      "progress": {
+        "current": 30,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "⭐ Railway Pattern: प्लास्टिक की कंघी को बालों पर रगड़ने के बाद वह कागज के टुकड़ों को आकर्षित करती है। यह किस बल का उदाहरण है? (Q3/3)",
+        "options": [
+          {
+            "id": "A",
+            "text": "गुरुत्वाकर्षण बल"
+          },
+          {
+            "id": "B",
+            "text": "स्थिर वैद्युत बल (Electrostatic Force)"
+          },
+          {
+            "id": "C",
+            "text": "चुंबकीय बल"
+          },
+          {
+            "id": "D",
+            "text": "घर्षण बल"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "रगड़ने से कंघी में Static Electric Charge आ जाता है, जो कागज के टुकड़ों को बिना छुए attract करता है - यह Electrostatic Force (स्थिर वैद्युत बल) है। यह एक Non-Contact Force है। Railway/SSC में यह experiment-based question बहुत आता है!"
+      },
+      "navigation": {
+        "next": "card_31_milestone_noncontact",
+        "button_text": "Check Answer ➔"
+      }
+    },
+    {
+      "card_id": "card_31_milestone_noncontact",
+      "card_slug": "card_31_milestone_noncontact",
+      "type": "milestone",
+      "concept_id": "milestone_noncontact_complete",
+      "level": 2,
+      "progress": {
+        "current": 31,
+        "total": 72
+      },
+      "milestone_payload": {
+        "title": "🌟 MODULE 3 COMPLETED!",
+        "badge_emoji": "🧲",
+        "completed_topic": "Non-Contact Forces (Gravity, Magnetic, Electrostatic)",
+        "xp_earned": 50,
+        "milestone_progress": "Module 3/8 Clear",
+        "motivational_quote": "Outstanding! अब तुम Contact और Non-Contact दोनों Forces में expert हो! अब Balanced vs Unbalanced Forces समझते हैं! 💡"
+      },
+      "navigation": {
+        "next": "card_32_balanced_intro",
+        "button_text": "Start Balanced Forces ➔"
+      }
+    },
+    {
+      "card_id": "card_32_balanced_intro",
+      "card_slug": "card_32_balanced_intro",
+      "type": "chat",
+      "concept_id": "balanced_unbalanced_intro",
+      "level": 3,
+      "progress": {
+        "current": 32,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, ab ek interesting concept hai - jab kisi object par ek se zyada forces lag rahi hon, toh kya hoga? Kabhi forces एक-दूसरे को CANCEL kar deti hain, kabhi object ko move karti hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir matlab forces आपस में लड़ती हain?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haha अच्छा सवाल! Actually हम forces को दो categories में बांटते हैं: 1) BALANCED FORCES - jo cancel हो जाती हैं, 2) UNBALANCED FORCES - जो object को move करती हैं।"
+        },
+        {
+          "speaker": "raju",
+          "text": "Ye cancel hona kya hota hai Sir?"
+        }
+      ],
+      "navigation": {
+        "next": "card_33_balanced_detail",
+        "button_text": "Example से समझो ➔"
+      }
+    },
+    {
+      "card_id": "card_33_balanced_detail",
+      "card_slug": "card_33_balanced_detail",
+      "type": "chat",
+      "concept_id": "balanced_forces_detail",
+      "level": 3,
+      "progress": {
+        "current": 33,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "BALANCED FORCES: जब एक object पर दो या अधिक forces OPPOSITE DIRECTION में और EQUAL MAGNITUDE में लग रही हों, तो वे एक-दूसरे को cancel कर देती हैं। Net Force = ZERO हो जाता है!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir example दीजिए please!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Dekho, tum aur tumhara dost ek table को opposite sides से EQUAL force से धक्का दे रहे हो। Table हिलेगा? Nahi! Kyunki दोनों forces balanced hain - cancel ho गईं। Table की STATE OF MOTION change नहीं हुई।"
+        },
+        {
+          "speaker": "raju",
+          "text": "Ohhh toh balanced forces se motion change nahi hota?"
+        }
+      ],
+      "navigation": {
+        "next": "card_34_unbalanced_detail",
+        "button_text": "Bilkul sahi! Ab Unbalanced ➔"
+      }
+    },
+    {
+      "card_id": "card_34_unbalanced_detail",
+      "card_slug": "card_34_unbalanced_detail",
+      "type": "chat",
+      "concept_id": "unbalanced_forces_detail",
+      "level": 3,
+      "progress": {
+        "current": 34,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "UNBALANCED FORCES: जब forces EQUAL नहीं हैं या OPPOSITE DIRECTION में नहीं हैं, तो Net Force ZERO नहीं होता। Isse object की STATE OF MOTION CHANGE होती है - रुकी हुई चीज़ चलने लगती है या चलती चीज़ रुक जाती है!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir same table example में अगर main जोर से धक्का दूं aur dost कम force से?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Perfect! Tab forces UNBALANCED हैं - table तुम्हारी direction में move करेगा! Jab tum football को kick मारते हो - wo unbalanced force है, ball move करती है. ⭐ BPSC/Railway Trap: 'Motion produce करने के लिए कौन सी force चाहिए?' Answer: UNBALANCED!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Samajh गया! Unbalanced = Motion change, Balanced = No change!"
+        }
+      ],
+      "navigation": {
+        "next": "card_35_guess_balanced",
+        "button_text": "Ab guess karo ➔"
+      }
+    },
+    {
+      "card_id": "card_35_guess_balanced",
+      "card_slug": "card_35_guess_balanced",
+      "type": "guess",
+      "concept_id": "balanced_guess",
+      "level": 3,
+      "progress": {
+        "current": 35,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "एक रस्साकशी (Tug of War) में दोनों टीमें बराबर बल से खींच रही हैं। रस्सी की स्थिति क्या होगी?",
+        "options": [
+          {
+            "id": "A",
+            "text": "रस्सी टीम A की ओर खिसकेगी"
+          },
+          {
+            "id": "B",
+            "text": "रस्सी टीम B की ओर खिसकेगी"
+          },
+          {
+            "id": "C",
+            "text": "रस्सी अपनी जगह स्थिर रहेगी (No Motion)"
+          },
+          {
+            "id": "D",
+            "text": "रस्सी टूट जाएगी"
+          }
+        ],
+        "correct_option_id": "C",
+        "explanation": "जब दोनों टीमें बराबर बल लगा रही हैं, तो यह BALANCED FORCES की स्थिति है। Forces cancel हो जाती हैं, Net Force = 0, इसलिए रस्सी MOTION में नहीं आएगी - स्थिर रहेगी। यह concept SSC/Railway में बहुत पूछा जाता है!"
+      },
+      "navigation": {
+        "next": "card_36_quiz_balanced_q1",
+        "button_text": "Check Answer ➔"
+      }
+    },
+    {
+      "card_id": "card_36_quiz_balanced_q1",
+      "card_slug": "card_36_quiz_balanced_q1",
+      "type": "quiz",
+      "concept_id": "balanced_quiz_1",
+      "level": 3,
+      "progress": {
+        "current": 36,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "⭐ BPSC Multi-Statement: निम्नलिखित में से कौन सा कथन सही है? (Q1/3)\nA) संतुलित बल वस्तु की गति की अवस्था को बदल देते हैं।\nB) असंतुलित बल वस्तु में गति उत्पन्न कर सकते हैं।",
+        "options": [
+          {
+            "id": "A",
+            "text": "केवल A सही है"
+          },
+          {
+            "id": "B",
+            "text": "केवल B सही है"
+          },
+          {
+            "id": "C",
+            "text": "A और B दोनों सही हैं"
+          },
+          {
+            "id": "D",
+            "text": "न A, न B सही है"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Statement A गलत है - Balanced Forces वस्तु की motion की अवस्था को CHANGE नहीं करते। Statement B सही है - Unbalanced Forces ही वस्तु में motion produce करते हैं या motion change करते हैं। BPSC में ऐसे multi-statement questions बहुत आते हैं!"
+      },
+      "navigation": {
+        "next": "card_37_quiz_balanced_q2",
+        "button_text": "Next Question ➔"
+      }
+    },
+    {
+      "card_id": "card_37_quiz_balanced_q2",
+      "card_slug": "card_37_quiz_balanced_q2",
+      "type": "quiz",
+      "concept_id": "balanced_quiz_2",
+      "level": 3,
+      "progress": {
+        "current": 37,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "एक मेज पर रखी किताब स्थिर है। इस पर कौन से बल कार्यरत हैं? (Q2/3)",
+        "options": [
+          {
+            "id": "A",
+            "text": "केवल गुरुत्वाकर्षण बल नीचे की ओर"
+          },
+          {
+            "id": "B",
+            "text": "कोई बल नहीं लग रहा"
+          },
+          {
+            "id": "C",
+            "text": "गुरुत्वाकर्षण बल (नीचे) और मेज द्वारा Normal Force (ऊपर) - Balanced"
+          },
+          {
+            "id": "D",
+            "text": "केवल Normal Force ऊपर की ओर"
+          }
+        ],
+        "correct_option_id": "C",
+        "explanation": "किताब पर दो forces लग रही हैं: 1) गुरुत्वाकर्षण बल नीचे की ओर, 2) मेज द्वारा Normal Reaction Force ऊपर की ओर। दोनों बराबर और विपरीत हैं (Balanced), इसलिए किताब स्थिर है। यह NEET/SSC का favorite concept है!"
+      },
+      "navigation": {
+        "next": "card_38_quiz_balanced_q3",
+        "button_text": "Next Question ➔"
+      }
+    },
+    {
+      "card_id": "card_38_quiz_balanced_q3",
+      "card_slug": "card_38_quiz_balanced_q3",
+      "type": "quiz",
+      "concept_id": "balanced_quiz_3",
+      "level": 3,
+      "progress": {
+        "current": 38,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "⭐ Railway Pattern: स्थिर खड़ी बस में अचानक असंतुलित बल लगने से क्या होगा? (Q3/3)",
+        "options": [
+          {
+            "id": "A",
+            "text": "बस स्थिर ही रहेगी"
+          },
+          {
+            "id": "B",
+            "text": "बस गति में आ जाएगी"
+          },
+          {
+            "id": "C",
+            "text": "बस का रंग बदल जाएगा"
+          },
+          {
+            "id": "D",
+            "text": "कुछ नहीं होगा"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Unbalanced Force वस्तु की गति की अवस्था को बदलती है। स्थिर बस पर Unbalanced Force लगने से वह गति में आ जाएगी (motion produce होगी)। Railway RRB में motion और force का यह relation बहुत पूछा जाता है।"
+      },
+      "navigation": {
+        "next": "card_39_milestone_balanced",
+        "button_text": "Check Answer ➔"
+      }
+    },
+    {
+      "card_id": "card_39_milestone_balanced",
+      "card_slug": "card_39_milestone_balanced",
+      "type": "milestone",
+      "concept_id": "milestone_balanced_complete",
+      "level": 3,
+      "progress": {
+        "current": 39,
+        "total": 72
+      },
+      "milestone_payload": {
+        "title": "⚖️ MODULE 4 COMPLETED!",
+        "badge_emoji": "⚖️",
+        "completed_topic": "Balanced vs Unbalanced Forces",
+        "xp_earned": 50,
+        "milestone_progress": "Module 4/8 Clear",
+        "motivational_quote": "Superb! तुमने Force Balance का concept clear कर लिया! अब Newton के तीनों Laws समझने का समय आ गया! 🚀"
+      },
+      "navigation": {
+        "next": "card_40_newton_first_law_intro",
+        "button_text": "Start Newton's Laws ➔"
+      }
+    },
+    {
+      "card_id": "card_40_newton_first_law_intro",
+      "card_slug": "card_40_newton_first_law_intro",
+      "type": "chat",
+      "concept_id": "newton_first_law_intro",
+      "level": 3,
+      "progress": {
+        "current": 40,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ab hum padhenge सबसे famous laws - Sir Isaac NEWTON के तीन Laws of Motion! Ye laws पूरी physics की foundation हैं. BPSC, SSC, Railway, NEET - sabमें ये पूछे जाते हैं!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir teen laws hain? Sabसे पहला कौन sa hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "पहला है NEWTON'S FIRST LAW OF MOTION - जिसे LAW OF INERTIA भी कहते हैं. Ye कहता है: 'Koi object अपनी state of rest या uniform motion में तब तक रहता है, जब तक कोई EXTERNAL UNBALANCED FORCE उस पर न लगे.'"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab Sir? Thoda आसान भाषा में?"
+        }
+      ],
+      "navigation": {
+        "next": "card_41_inertia_rest",
+        "button_text": "आसान example देता हूं ➔"
+      }
+    },
+    {
+      "card_id": "card_41_inertia_rest",
+      "card_slug": "card_41_inertia_rest",
+      "type": "chat",
+      "concept_id": "inertia_of_rest",
+      "level": 3,
+      "progress": {
+        "current": 41,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Matlab agar कोई चीज़ रुकी हुई है, तो वो रुकी ही रहेगी जब तक कोई force न लगाओ. Jaise table पर रखी book - wo khud se उड़के नहीं जाएगी, तुम्हें उसे उठाना (force लगाना) padega!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Haan Sir! Aur चलती चीज़ों का kya?"
+        },
+        {
+          "speaker": "aman",
+          "text": "चलती चीज़ें भी बिना force के चलती ही रहेंगी! Par असल life में friction force लगती रहती है, इसलिए चीज़ें रुक जाती हैं. Space में friction नहीं है, तो वहां object हमेशा चलता रहता है!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Wow! Toh ye sब चीज़ों की 'आलस' की tendency है?"
+        }
+      ],
+      "navigation": {
+        "next": "card_42_inertia_name",
+        "button_text": "Perfect समझ! ➔"
+      }
+    },
+    {
+      "card_id": "card_42_inertia_name",
+      "card_slug": "card_42_inertia_name",
+      "type": "chat",
+      "concept_id": "inertia_definition",
+      "level": 3,
+      "progress": {
+        "current": 42,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "हा हा बिल्कुल! इस 'आलस' को Physics में INERTIA (जड़त्व) कहते हैं. INERTIA = Object की tendency to resist CHANGE in its state of motion. Rुकी चीज़ रुकना चाहती है, चलती चीज़ चलना चाहती है!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir सभी objects की inertia equal होती है kya?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Nahi! Inertia MASS पर depend करती है. ZYADA MASS = ZYADA INERTIA. Bhaari truck को रोकना मुश्किल, हल्की cycle को आसान. ⭐ BPSC/SSC Favorite: 'Inertia किस पर निर्भर करती है?' Answer: MASS!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Ohh! Heavy चीज़ों में ज़्यादा inertia!"
+        }
+      ],
+      "navigation": {
+        "next": "card_43_inertia_examples",
+        "button_text": "Daily life examples ➔"
+      }
+    },
+    {
+      "card_id": "card_43_inertia_examples",
+      "card_slug": "card_43_inertia_examples",
+      "type": "chat",
+      "concept_id": "inertia_daily_examples",
+      "level": 3,
+      "progress": {
+        "current": 43,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Daily life में inertia के examples: 1) चलती बस अचानक रुकने पर तुम आगे की ओर झुक जाते हो - तुम्हारा body MOTION में रहना चाहता था (Inertia of Motion)!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Haan Sir! Aur जब बस अचानक चलती है तो पीछे की ओर झुकते हैं!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Perfect! Wo Inertia of Rest है - तुम्हारा body REST में रहना चाहता था! 2) जब कंबल को झटका देते हो तो धूल गिर जाती है - कंबल तो हिला, पर धूल particles inertia के कारण वहीं रहना चाहते थे!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Ye toh मैं रोज़ करता हूं! Inertia ही काम कर रही थी!"
+        }
+      ],
+      "navigation": {
+        "next": "card_44_quiz_first_law_q1",
+        "button_text": "Quiz time! ➔"
+      }
+    },
+    {
+      "card_id": "card_44_quiz_first_law_q1",
+      "card_slug": "card_44_quiz_first_law_q1",
+      "type": "quiz",
+      "concept_id": "first_law_quiz_1",
+      "level": 3,
+      "progress": {
+        "current": 44,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "⭐ BPSC Pattern: Newton के प्रथम नियम को किस नाम से भी जाना जाता है? (Q1/3)",
+        "options": [
+          {
+            "id": "A",
+            "text": "Law of Acceleration"
+          },
+          {
+            "id": "B",
+            "text": "Law of Inertia (जड़त्व का नियम)"
+          },
+          {
+            "id": "C",
+            "text": "Law of Action-Reaction"
+          },
+          {
+            "id": "D",
+            "text": "Law of Gravitation"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Newton का First Law of Motion को 'Law of Inertia' (जड़त्व का नियम) कहते हैं क्योंकि यह वस्तुओं की inertia (अपनी अवस्था में रहने की प्रवृत्ति) को explain करता है। BPSC/SSC में यह direct पूछा जाता है - 'जड़त्व का नियम किसे कहते हैं?'"
+      },
+      "navigation": {
+        "next": "card_45_quiz_first_law_q2",
+        "button_text": "Next Question ➔"
+      }
+    },
+    {
+      "card_id": "card_45_quiz_first_law_q2",
+      "card_slug": "card_45_quiz_first_law_q2",
+      "type": "quiz",
+      "concept_id": "first_law_quiz_2",
+      "level": 3,
+      "progress": {
+        "current": 45,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "चलती हुई बस के अचानक रुकने पर यात्री आगे की ओर झुक जाते हैं। यह किसका उदाहरण है? (Q2/3)",
+        "options": [
+          {
+            "id": "A",
+            "text": "Inertia of Rest (विराम जड़त्व)"
+          },
+          {
+            "id": "B",
+            "text": "Inertia of Motion (गति जड़त्व)"
+          },
+          {
+            "id": "C",
+            "text": "Gravitational Force"
+          },
+          {
+            "id": "D",
+            "text": "Magnetic Force"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "जब बस रुकती है तो यात्री का शरीर गति में रहना चाहता है (Inertia of Motion), इसलिए आगे की ओर झुकता है। यह Newton के प्रथम नियम का उदाहरण है। Railway/SSC में यह बहुत पूछा जाता है!"
+      },
+      "navigation": {
+        "next": "card_46_quiz_first_law_q3",
+        "button_text": "Next Question ➔"
+      }
+    },
+    {
+      "card_id": "card_46_quiz_first_law_q3",
+      "card_slug": "card_46_quiz_first_law_q3",
+      "type": "quiz",
+      "concept_id": "first_law_quiz_3",
+      "level": 3,
+      "progress": {
+        "current": 46,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "⭐ SSC Pattern: जड़त्व (Inertia) किस पर निर्भर करती है? (Q3/3)",
+        "options": [
+          {
+            "id": "A",
+            "text": "वस्तु की Speed पर"
+          },
+          {
+            "id": "B",
+            "text": "वस्तु के Mass पर"
+          },
+          {
+            "id": "C",
+            "text": "वस्तु के Color पर"
+          },
+          {
+            "id": "D",
+            "text": "वस्तु की Shape पर"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Inertia सीधे वस्तु के MASS पर निर्भर करती है। जितना ज़्यादा mass, उतनी ज़्यादा inertia - यानी गति की अवस्था बदलना उतना ही मुश्किल। भारी truck को रोकना हल्की cycle से ज़्यादा मुश्किल है। SSC CGL में यह बार-बार पूछा जाता है!"
+      },
+      "navigation": {
+        "next": "card_47_newton_second_law",
+        "button_text": "Check Answer ➔"
+      }
+    },
+    {
+      "card_id": "card_47_newton_second_law",
+      "card_slug": "card_47_newton_second_law",
+      "type": "chat",
+      "concept_id": "newton_second_law_intro",
+      "level": 3,
+      "progress": {
+        "current": 47,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "अब आता है NEWTON'S SECOND LAW - सबसे important mathematical law! Ye कहता है: Force = Mass × Acceleration, यानी F = ma. ⭐ NEET/UPSC में यह formula बहुत पूछा जाता है!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir iska matlab kya hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Matlab: किसी object पर लगी force उसके mass और acceleration के गुणनफल के बराबर होती है। Zyada force = zyada acceleration. Zyada mass = kam acceleration (same force पर)."
+        },
+        {
+          "speaker": "raju",
+          "text": "Toh heavy object ko zyada force चाहिए move करने के लिए?"
+        }
+      ],
+      "navigation": {
+        "next": "card_48_second_law_example",
+        "button_text": "Bilkul sahi! ➔"
+      }
+    },
+    {
+      "card_id": "card_48_second_law_example",
+      "card_slug": "card_48_second_law_example",
+      "type": "chat",
+      "concept_id": "second_law_examples",
+      "level": 3,
+      "progress": {
+        "current": 48,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Perfect understanding! Example: एक empty cart को धक्का देना आसान है, पर वही cart जब भारी सामान से भरा हो तो उसे धक्का देना मुश्किल - क्योंकि mass बढ़ गया!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Haan Sir! Aur जब हम जोर से kick मारते हैं तो ball ज़्यादा तेज़ जाती है!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Exactly! Zyada Force → Zyada Acceleration → Zyada Speed! यही Second Law कहता है. Wicket-keeper मोटे gloves पहनता है ताकि ball की force को बड़े area पर spread करके acceleration (और चोट) कम हो!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Wow! Physics हर जगह है!"
+        }
+      ],
+      "navigation": {
+        "next": "card_49_newton_third_law",
+        "button_text": "अब तीसरा law ➔"
+      }
+    },
+    {
+      "card_id": "card_49_newton_third_law",
+      "card_slug": "card_49_newton_third_law",
+      "type": "chat",
+      "concept_id": "newton_third_law_intro",
+      "level": 3,
+      "progress": {
+        "current": 49,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "अब सबसे मज़ेदार law - NEWTON'S THIRD LAW! 'Every ACTION has an EQUAL and OPPOSITE REACTION.' हर क्रिया की बराबर और विपरीत प्रतिक्रिया होती है!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir matlab अगर मैं किसी को धक्का दूं तो मुझे भी धक्का लगेगा?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul! जब तुम दीवार को धक्का देते हो, दीवार भी तुम्हें उतनी ही force से वापस धक्का देती है! Par दीवार भारी है (zyada mass), इसलिए हिलती नहीं - पर तुम पीछे हट सकते हो!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Ye toh amazing है Sir!"
+        }
+      ],
+      "navigation": {
+        "next": "card_50_third_law_examples",
+        "button_text": "Aur examples dekho ➔"
+      }
+    },
+    {
+      "card_id": "card_50_third_law_examples",
+      "card_slug": "card_50_third_law_examples",
+      "type": "chat",
+      "concept_id": "third_law_examples",
+      "level": 3,
+      "progress": {
+        "current": 50,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Third Law के examples: 1) नाव से कूदने पर नाव पीछे हट जाती है - तुम नाव को धक्का देते हो (action), नाव तुम्हें धक्का देती है (reaction)!"
+        },
+        {
+          "speaker": "raju",
+          "text": "2) बंदूक से गोली चलाने पर पीछे की ओर झटका लगता है?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Perfect example! गोली आगे जाती है (action), बंदूक पीछे को धक्का खाती है (reaction) - इसे RECOIL कहते हैं! 3) Rocket उड़ता है क्योंकि गैसें नीचे निकलती हैं (action), rocket ऊपर जाता है (reaction)! ⭐ BPSC/NEET favorite!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Toh हर force की equal-opposite pair होती है!"
+        }
+      ],
+      "navigation": {
+        "next": "card_51_quiz_newton_q1",
+        "button_text": "Quiz करके पक्का करो ➔"
+      }
+    },
+    {
+      "card_id": "card_51_quiz_newton_q1",
+      "card_slug": "card_51_quiz_newton_q1",
+      "type": "quiz",
+      "concept_id": "newton_quiz_1",
+      "level": 3,
+      "progress": {
+        "current": 51,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "⭐ NEET Pattern: Newton के द्वितीय नियम का गणितीय रूप क्या है? (Q1/3)",
+        "options": [
+          {
+            "id": "A",
+            "text": "F = m/a"
+          },
+          {
+            "id": "B",
+            "text": "F = ma (Force = Mass × Acceleration)"
+          },
+          {
+            "id": "C",
+            "text": "F = m + a"
+          },
+          {
+            "id": "D",
+            "text": "F = a/m"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Newton का Second Law: F = ma (Force = Mass × Acceleration). यह बताता है कि किसी वस्तु पर लगने वाला बल उसके द्रव्यमान और त्वरण के गुणनफल के बराबर होता है। NEET/UPSC में यह formula बहुत important है!"
+      },
+      "navigation": {
+        "next": "card_52_quiz_newton_q2",
+        "button_text": "Next Question ➔"
+      }
+    },
+    {
+      "card_id": "card_52_quiz_newton_q2",
+      "card_slug": "card_52_quiz_newton_q2",
+      "type": "quiz",
+      "concept_id": "newton_quiz_2",
+      "level": 3,
+      "progress": {
+        "current": 52,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "⭐ BPSC Pattern: एक व्यक्ति नाव से किनारे पर कूदता है तो नाव पीछे हट जाती है। यह किस नियम का उदाहरण है? (Q2/3)",
+        "options": [
+          {
+            "id": "A",
+            "text": "Newton का प्रथम नियम"
+          },
+          {
+            "id": "B",
+            "text": "Newton का द्वितीय नियम"
+          },
+          {
+            "id": "C",
+            "text": "Newton का तृतीय नियम (Action-Reaction)"
+          },
+          {
+            "id": "D",
+            "text": "गुरुत्वाकर्षण का नियम"
+          }
+        ],
+        "correct_option_id": "C",
+        "explanation": "यह Newton के तृतीय नियम (Third Law - Action-Reaction) का उदाहरण है। व्यक्ति नाव को पीछे की ओर धक्का देता है (action), नाव उसे आगे की ओर धक्का देती है (reaction) - इसलिए नाव पीछे हटती है। BPSC/Railway में यह बहुत पूछा जाता है!"
+      },
+      "navigation": {
+        "next": "card_53_quiz_newton_q3",
+        "button_text": "Next Question ➔"
+      }
+    },
+    {
+      "card_id": "card_53_quiz_newton_q3",
+      "card_slug": "card_53_quiz_newton_q3",
+      "type": "quiz",
+      "concept_id": "newton_quiz_3",
+      "level": 3,
+      "progress": {
+        "current": 53,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "⭐ Railway Pattern: रॉकेट किस सिद्धांत पर कार्य करता है? (Q3/3)",
+        "options": [
+          {
+            "id": "A",
+            "text": "जड़त्व का नियम"
+          },
+          {
+            "id": "B",
+            "text": "क्रिया-प्रतिक्रिया का नियम (Newton's Third Law)"
+          },
+          {
+            "id": "C",
+            "text": "गुरुत्वाकर्षण का नियम"
+          },
+          {
+            "id": "D",
+            "text": "घर्षण का नियम"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "रॉकेट Newton के तृतीय नियम (Action-Reaction) पर काम करता है। गैसें तेज़ी से नीचे की ओर निकलती हैं (action), जिसकी प्रतिक्रिया में रॉकेट ऊपर की ओर जाता है (reaction)। Railway/SSC में यह बार-बार पूछा जाता है!"
+      },
+      "navigation": {
+        "next": "card_54_milestone_newton",
+        "button_text": "Check Answer ➔"
+      }
+    },
+    {
+      "card_id": "card_54_milestone_newton",
+      "card_slug": "card_54_milestone_newton",
+      "type": "milestone",
+      "concept_id": "milestone_newton_complete",
+      "level": 3,
+      "progress": {
+        "current": 54,
+        "total": 72
+      },
+      "milestone_payload": {
+        "title": "🏆 MODULE 5 COMPLETED!",
+        "badge_emoji": "🍎",
+        "completed_topic": "Newton's Three Laws of Motion",
+        "xp_earned": 75,
+        "milestone_progress": "Module 5/8 Clear",
+        "motivational_quote": "Phenomenal! तुमने Newton के तीनों Laws master कर लिए! अब Pressure और Thrust के concepts देखते हैं! 💯"
+      },
+      "navigation": {
+        "next": "card_55_pressure_intro",
+        "button_text": "Start Pressure & Thrust ➔"
+      }
+    },
+    {
+      "card_id": "card_55_pressure_intro",
+      "card_slug": "card_55_pressure_intro",
+      "type": "chat",
+      "concept_id": "pressure_thrust_intro",
+      "level": 4,
+      "progress": {
+        "current": 55,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, ab ek नया concept - PRESSURE! Tumने notice किया है ki पतली heels पहनकर soft ज़मीन पर चलना मुश्किल होता है, पर flat shoes में आसान?"
+        },
+        {
+          "speaker": "raju",
+          "text": "Haan Sir! Heels धंस जाती हैं!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Wo PRESSURE के कारण होता है! पहले समझते हैं THRUST क्या है - Thrust मतलब किसी surface पर लगने वाली PERPENDICULAR (लंबवत) force. Unit: Newton (N)."
+        },
+        {
+          "speaker": "raju",
+          "text": "Toh Thrust ek तरह की force है?"
+        }
+      ],
+      "navigation": {
+        "next": "card_56_pressure_definition",
+        "button_text": "Haan, ab Pressure samjho ➔"
+      }
+    },
+    {
+      "card_id": "card_56_pressure_definition",
+      "card_slug": "card_56_pressure_definition",
+      "type": "chat",
+      "concept_id": "pressure_definition_formula",
+      "level": 4,
+      "progress": {
+        "current": 56,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "PRESSURE = Thrust per unit Area. Formula: Pressure = Force / Area, यानी P = F/A. Unit: Pascal (Pa) या Newton/meter² (N/m²). ⭐ SSC/Railway में formula बहुत पूछा जाता है!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab अगर area कम हो तो pressure ज़्यादा?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Perfect! Same force को छोटे area पर लगाओ = High Pressure. Bade area पर = Low Pressure. Isliye तेज़ चाकू (कम area) आसानी से काटता है, कुंद चाकू (ज़्यादा area) मुश्किल से!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Aur heels का area कम है isliye pressure ज़्यादा और वो धंस जाती हैं!"
+        }
+      ],
+      "navigation": {
+        "next": "card_57_pressure_examples",
+        "button_text": "Zabardast logic! ➔"
+      }
+    },
+    {
+      "card_id": "card_57_pressure_examples",
+      "card_slug": "card_57_pressure_examples",
+      "type": "chat",
+      "concept_id": "pressure_daily_examples",
+      "level": 4,
+      "progress": {
+        "current": 57,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Pressure के daily examples: 1) ऊंट के पैर चौड़े होते हैं ताकि रेत में pressure कम हो और वो ना धंसें. 2) स्कूल bags में चौड़ी पट्टियां - कंधे पर pressure कम हो!"
+        },
+        {
+          "speaker": "raju",
+          "text": "3) Injection की सुई पतली क्यों होती है Sir?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Brilliant question! पतली सुई = कम area = ज़्यादा pressure = आसानी से त्वचा में घुस जाती है! 4) Railway tracks चौड़ी sleepers पर रखी जाती हैं ताकि ज़मीन पर pressure कम हो. ⭐ BPSC/Railway favorite examples!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Wow! हर जगह pressure की science है!"
+        }
+      ],
+      "navigation": {
+        "next": "card_58_quiz_pressure_q1",
+        "button_text": "Quiz से practice करो ➔"
+      }
+    },
+    {
+      "card_id": "card_58_quiz_pressure_q1",
+      "card_slug": "card_58_quiz_pressure_q1",
+      "type": "quiz",
+      "concept_id": "pressure_quiz_1",
+      "level": 4,
+      "progress": {
+        "current": 58,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "⭐ SSC Pattern: Pressure (दाब) का SI मात्रक क्या है? (Q1/3)",
+        "options": [
+          {
+            "id": "A",
+            "text": "Newton (N)"
+          },
+          {
+            "id": "B",
+            "text": "Pascal (Pa)"
+          },
+          {
+            "id": "C",
+            "text": "Joule (J)"
+          },
+          {
+            "id": "D",
+            "text": "Watt (W)"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Pressure का SI Unit Pascal (Pa) है, जो N/m² (Newton per square meter) के बराबर होता है। Formula: Pressure = Force/Area. SSC CGL में यह unit बहुत पूछा जाता है!"
+      },
+      "navigation": {
+        "next": "card_59_quiz_pressure_q2",
+        "button_text": "Next Question ➔"
+      }
+    },
+    {
+      "card_id": "card_59_quiz_pressure_q2",
+      "card_slug": "card_59_quiz_pressure_q2",
+      "type": "quiz",
+      "concept_id": "pressure_quiz_2",
+      "level": 4,
+      "progress": {
+        "current": 59,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "⭐ Railway Pattern: तेज़ चाकू आसानी से काटता है क्योंकि: (Q2/3)",
+        "options": [
+          {
+            "id": "A",
+            "text": "इसमें ज़्यादा Force होती है"
+          },
+          {
+            "id": "B",
+            "text": "इसका Area कम होने से Pressure अधिक होता है"
+          },
+          {
+            "id": "C",
+            "text": "इसका Mass ज़्यादा होता है"
+          },
+          {
+            "id": "D",
+            "text": "इसमें Friction कम होती है"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "तेज़ चाकू की धार का Area बहुत कम होता है। P = F/A के अनुसार, कम Area से Pressure बढ़ जाता है, इसलिए वह आसानी से काट देता है। Railway RRB में यह बहुत पूछा जाता है!"
+      },
+      "navigation": {
+        "next": "card_60_quiz_pressure_q3",
+        "button_text": "Next Question ➔"
+      }
+    },
+    {
+      "card_id": "card_60_quiz_pressure_q3",
+      "card_slug": "card_60_quiz_pressure_q3",
+      "type": "quiz",
+      "concept_id": "pressure_quiz_3",
+      "level": 4,
+      "progress": {
+        "current": 60,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "⭐ BPSC Pattern: ऊंट के पैर चौड़े होते हैं ताकि: (Q3/3)",
+        "options": [
+          {
+            "id": "A",
+            "text": "वे तेज़ दौड़ सकें"
+          },
+          {
+            "id": "B",
+            "text": "रेत पर Pressure कम हो और वे ना धंसें"
+          },
+          {
+            "id": "C",
+            "text": "उन्हें ज़्यादा Force मिले"
+          },
+          {
+            "id": "D",
+            "text": "Friction बढ़ जाए"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "ऊंट के पैर चौड़े होने से Area बढ़ जाता है। P = F/A के अनुसार, Area बढ़ने से Pressure कम हो जाता है, इसलिए वे रेत में नहीं धंसते। BPSC/BSSC में यह बहुत पूछा जाता है - 'Adaptation in desert animals'!"
+      },
+      "navigation": {
+        "next": "card_61_milestone_pressure",
+        "button_text": "Check Answer ➔"
+      }
+    },
+    {
+      "card_id": "card_61_milestone_pressure",
+      "card_slug": "card_61_milestone_pressure",
+      "type": "milestone",
+      "concept_id": "milestone_pressure_complete",
+      "level": 4,
+      "progress": {
+        "current": 61,
+        "total": 72
+      },
+      "milestone_payload": {
+        "title": "🎯 MODULE 6 COMPLETED!",
+        "badge_emoji": "⚡",
+        "completed_topic": "Pressure, Thrust & Applications",
+        "xp_earned": 50,
+        "milestone_progress": "Module 6/8 Clear",
+        "motivational_quote": "Excellent! Pressure concept पूरी तरह clear! अब Free Fall और Gravitation के गहरे concepts देखते हैं! 🌍"
+      },
+      "navigation": {
+        "next": "card_62_free_fall_intro",
+        "button_text": "Start Gravitation ➔"
+      }
+    },
+    {
+      "card_id": "card_62_free_fall_intro",
+      "card_slug": "card_62_free_fall_intro",
+      "type": "chat",
+      "concept_id": "free_fall_gravity_intro",
+      "level": 4,
+      "progress": {
+        "current": 62,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, पहले हमने देखा कि gravity सब चीज़ों को नीचे खींचती है. अब detail में समझते हैं - जब कोई object केवल GRAVITY के प्रभाव में गिर रहा हो (कोई और force नहीं), तो उसे FREE FALL कहते हैं!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir तो जब मैं पत्थर छोड़ता हूं तो वो free fall में है?"
+        },
+        {
+          "speaker": "aman",
+          "text": "हां, अगर हवा का resistance ignore करें तो हां! Free fall में सभी objects SAME ACCELERATION से गिरते हैं - चाहे वो पत्थर हो या पंख (vacuum में)! Ye acceleration को 'g' कहते हैं."
+        },
+        {
+          "speaker": "raju",
+          "text": "'g' की value कितनी होती है Sir?"
+        }
+      ],
+      "navigation": {
+        "next": "card_63_acceleration_gravity",
+        "button_text": "Important value है ➔"
+      }
+    },
+    {
+      "card_id": "card_63_acceleration_gravity",
+      "card_slug": "card_63_acceleration_gravity",
+      "type": "chat",
+      "concept_id": "acceleration_due_to_gravity",
+      "level": 4,
+      "progress": {
+        "current": 63,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "पृथ्वी पर 'g' (Acceleration due to Gravity) की value लगभग 9.8 m/s² या approximately 10 m/s² है. ⭐ NEET/BPSC में 'g का मान' बहुत पूछा जाता है!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab हर second velocity 9.8 m/s बढ़ती है?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Perfect! अगर तुम कोई ball ऊपर फेंकते हो, तो ऊपर जाते समय velocity हर second 9.8 m/s KAM होती है (gravity विपरीत दिशा में है). नीचे आते समय हर second 9.8 m/s BADH जाती है!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Toh gravity हमेशा नीचे की ओर खींचती है!"
+        }
+      ],
+      "navigation": {
+        "next": "card_64_mass_weight",
+        "button_text": "Ab Mass vs Weight ➔"
+      }
+    },
+    {
+      "card_id": "card_64_mass_weight",
+      "card_slug": "card_64_mass_weight",
+      "type": "chat",
+      "concept_id": "mass_vs_weight",
+      "level": 4,
+      "progress": {
+        "current": 64,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ek बहुत confusing concept - MASS vs WEIGHT! MASS = कितना matter है (kg में). WEIGHT = Gravitational force (Newton में). Formula: Weight = Mass × g, यानी W = mg."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir तो mass और weight अलग हैं?"
+        },
+        {
+          "speaker": "aman",
+          "text": "बिल्कुल! तुम्हारा MASS पृथ्वी पर 50 kg है तो चाँद पर भी 50 kg ही रहेगा. पर WEIGHT पृथ्वी पर 50 × 10 = 500 N है, चाँद पर कम होगा क्योंकि चाँद का g कम है! ⭐ BPSC/SSC Trap: 'Mass हर जगह same, Weight बदलता है!'"
+        },
+        {
+          "speaker": "raju",
+          "text": "Wow! Astronaut चाँद पर हल्का feel करता है!"
+        }
+      ],
+      "navigation": {
+        "next": "card_65_quiz_gravity_q1",
+        "button_text": "Quiz में test करो ➔"
+      }
+    },
+    {
+      "card_id": "card_65_quiz_gravity_q1",
+      "card_slug": "card_65_quiz_gravity_q1",
+      "type": "quiz",
+      "concept_id": "gravity_quiz_1",
+      "level": 4,
+      "progress": {
+        "current": 65,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "⭐ NEET Pattern: पृथ्वी पर गुरुत्वीय त्वरण (g) का मान लगभग कितना है? (Q1/3)",
+        "options": [
+          {
+            "id": "A",
+            "text": "9.8 km/s²"
+          },
+          {
+            "id": "B",
+            "text": "9.8 m/s²"
+          },
+          {
+            "id": "C",
+            "text": "98 m/s²"
+          },
+          {
+            "id": "D",
+            "text": "0.98 m/s²"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "पृथ्वी पर Acceleration due to Gravity (g) का मान लगभग 9.8 m/s² (या approximately 10 m/s²) होता है। Free fall में सभी objects इसी acceleration से गिरते हैं। NEET/BPSC में यह value बहुत पूछी जाती है!"
+      },
+      "navigation": {
+        "next": "card_66_quiz_gravity_q2",
+        "button_text": "Next Question ➔"
+      }
+    },
+    {
+      "card_id": "card_66_quiz_gravity_q2",
+      "card_slug": "card_66_quiz_gravity_q2",
+      "type": "quiz",
+      "concept_id": "gravity_quiz_2",
+      "level": 4,
+      "progress": {
+        "current": 66,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "⭐ BPSC Trap: Mass और Weight में क्या अंतर है? (Q2/3)",
+        "options": [
+          {
+            "id": "A",
+            "text": "दोनों एक ही हैं"
+          },
+          {
+            "id": "B",
+            "text": "Mass हर जगह समान रहता है, Weight बदलता है"
+          },
+          {
+            "id": "C",
+            "text": "Weight हर जगह समान रहता है, Mass बदलता है"
+          },
+          {
+            "id": "D",
+            "text": "दोनों बदलते रहते हैं"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "MASS (द्रव्यमान) matter की मात्रा है - यह हर जगह समान रहता है। WEIGHT (भार) = Mass × g, जो gravitational force है - यह स्थान बदलने पर बदलता है (g बदलने से)। पृथ्वी पर ज़्यादा, चाँद पर कम। BPSC/SSC में यह बहुत पूछा जाता है!"
+      },
+      "navigation": {
+        "next": "card_67_quiz_gravity_q3",
+        "button_text": "Next Question ➔"
+      }
+    },
+    {
+      "card_id": "card_67_quiz_gravity_q3",
+      "card_slug": "card_67_quiz_gravity_q3",
+      "type": "quiz",
+      "concept_id": "gravity_quiz_3",
+      "level": 4,
+      "progress": {
+        "current": 67,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "⭐ SSC Pattern: यदि किसी व्यक्ति का द्रव्यमान 60 kg है, तो पृथ्वी पर उसका भार लगभग कितना होगा? (g = 10 m/s²) (Q3/3)",
+        "options": [
+          {
+            "id": "A",
+            "text": "60 N"
+          },
+          {
+            "id": "B",
+            "text": "600 N"
+          },
+          {
+            "id": "C",
+            "text": "6 N"
+          },
+          {
+            "id": "D",
+            "text": "60 kg"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Weight = Mass × g = 60 kg × 10 m/s² = 600 N (Newton). ध्यान दें: Mass की unit kg है, Weight की unit Newton (N) है। SSC CGL में यह numerical बहुत पूछा जाता है!"
+      },
+      "navigation": {
+        "next": "card_68_milestone_gravity",
+        "button_text": "Check Answer ➔"
+      }
+    },
+    {
+      "card_id": "card_68_milestone_gravity",
+      "card_slug": "card_68_milestone_gravity",
+      "type": "milestone",
+      "concept_id": "milestone_gravity_complete",
+      "level": 4,
+      "progress": {
+        "current": 68,
+        "total": 72
+      },
+      "milestone_payload": {
+        "title": "🌍 MODULE 7 COMPLETED!",
+        "badge_emoji": "🌍",
+        "completed_topic": "Free Fall, Gravity, Mass vs Weight",
+        "xp_earned": 50,
+        "milestone_progress": "Module 7/8 Clear",
+        "motivational_quote": "Superb! Gravity concepts fully mastered! अब Final Revision और Officer Level Quiz का समय! 🔥"
+      },
+      "navigation": {
+        "next": "card_69_officer_revision",
+        "button_text": "Start Final Revision ➔"
+      }
+    },
+    {
+      "card_id": "card_69_officer_revision",
+      "card_slug": "card_69_officer_revision",
+      "type": "summary",
+      "concept_id": "officer_level_revision",
+      "level": 5,
+      "progress": {
+        "current": 69,
+        "total": 72
+      },
+      "summary_payload": {
+        "title": "⚡ OFFICER LEVEL QUICK REVISION",
+        "revision_points": [
+          {
+            "topic": "Force की परिभाषा",
+            "point": "Force = PUSH या PULL जो किसी object पर लगाई जाती है। Unit: Newton (N). Force हमेशा दो objects के बीच interaction है।"
+          },
+          {
+            "topic": "Force के 4 Effects",
+            "point": "1) Moving को Stop, 2) Stationary को Move, 3) Speed/Direction change, 4) Shape change। BPSC में चारों effects पूछे जाते हैं।"
+          },
+          {
+            "topic": "Types: Contact vs Non-Contact",
+            "point": "Contact: Muscular, Friction, Tension, Spring (touch चाहिए). Non-Contact: Gravitational, Magnetic, Electrostatic (बिना touch)।"
+          },
+          {
+            "topic": "Balanced vs Unbalanced Forces",
+            "point": "Balanced: Net Force = 0, No motion change. Unbalanced: Net Force ≠ 0, Motion change होता है। Motion के लिए Unbalanced force ज़रूरी।"
+          },
+          {
+            "topic": "Newton के तीन नियम",
+            "point": "1st: Law of Inertia (Inertia ∝ Mass). 2nd: F = ma. 3rd: Action-Reaction (equal & opposite). तीनों NEET/BPSC में बहुत important।"
+          },
+          {
+            "topic": "Pressure Formula",
+            "point": "Pressure = Force/Area (P = F/A). Unit: Pascal (Pa). कम Area = ज़्यादा Pressure (तेज़ चाकू, heels, सुई)।"
+          },
+          {
+            "topic": "Gravity Concepts",
+            "point": "g = 9.8 m/s². Weight = mg. Mass हर जगह same, Weight बदलता है। Free fall में सभी objects same acceleration से गिरते हैं।"
+          },
+          {
+            "topic": "PYQ Traps",
+            "point": "• जड़त्व Mass पर निर्भर करती है। • Like poles Repel, Unlike Attract। • रस्साकशी में equal force = Balanced। • रॉकेट = Action-Reaction।"
+          }
+        ]
+      },
+      "navigation": {
+        "next": "card_70_final_quiz",
+        "button_text": "Final Officer Quiz ➔"
+      }
+    },
+    {
+      "card_id": "card_70_final_quiz",
+      "card_slug": "card_70_final_quiz",
+      "type": "final_quiz",
+      "concept_id": "final_officer_quiz",
+      "level": 5,
+      "progress": {
+        "current": 70,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "🏆 BPSC OFFICER LEVEL MULTI-STATEMENT:\n\nकथन A: संतुलित बल वस्तु की गति की अवस्था को परिवर्तित नहीं करते।\nकथन B: जड़त्व (Inertia) वस्तु के वेग (Velocity) पर निर्भर करती है।\nकथन C: Newton का तृतीय नियम क्रिया-प्रतिक्रिया पर आधारित है।\nकथन D: दाब (Pressure) क्षेत्रफल के व्युत्क्रमानुपाती (inversely proportional) होता है।\n\nसही कथनों का चयन करें:",
+        "options": [
+          {
+            "id": "A",
+            "text": "केवल A, C और D सही हैं"
+          },
+          {
+            "id": "B",
+            "text": "केवल A और C सही हैं"
+          },
+          {
+            "id": "C",
+            "text": "सभी कथन सही हैं"
+          },
+          {
+            "id": "D",
+            "text": "केवल B और D सही हैं"
+          }
+        ],
+        "correct_option_id": "A",
+        "explanation": "✅ Statement A सही: Balanced forces Net Force = 0 देते हैं, motion में change नहीं होता।\n\n❌ Statement B गलत: Inertia केवल MASS पर निर्भर करती है, velocity पर नहीं! (BPSC का favorite trap)\n\n✅ Statement C सही: Newton's Third Law = Action-Reaction Law.\n\n✅ Statement D सही: P = F/A, इसलिए P ∝ 1/A (inversely proportional).\n\nइसलिए केवल A, C और D सही हैं। यह BPSC/UPSC Prelims level का multi-statement question है!"
+      },
+      "navigation": {
+        "next": "card_71_assertion_reason",
+        "button_text": "One More Challenge ➔"
+      }
+    },
+    {
+      "card_id": "card_71_assertion_reason",
+      "card_slug": "card_71_assertion_reason",
+      "type": "final_quiz",
+      "concept_id": "assertion_reason_quiz",
+      "level": 5,
+      "progress": {
+        "current": 71,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "🎯 NEET/BPSC ASSERTION-REASON PATTERN:\n\nअभिकथन (Assertion - A): ऊंट के पैर चौड़े होते हैं।\n\nकारण (Reason - R): चौड़े पैरों से क्षेत्रफल बढ़ जाता है, जिससे दाब कम हो जाता है और ऊंट रेत में नहीं धंसता।\n\nसही विकल्प चुनें:",
+        "options": [
+          {
+            "id": "A",
+            "text": "A और R दोनों सही हैं और R, A की सही व्याख्या है"
+          },
+          {
+            "id": "B",
+            "text": "A और R दोनों सही हैं लेकिन R, A की सही व्याख्या नहीं है"
+          },
+          {
+            "id": "C",
+            "text": "A सही है लेकिन R गलत है"
+          },
+          {
+            "id": "D",
+            "text": "A गलत है लेकिन R सही है"
+          }
+        ],
+        "correct_option_id": "A",
+        "explanation": "✅ Assertion सही है: ऊंट के पैर वास्तव में चौड़े होते हैं (यह एक biological adaptation है)।\n\n✅ Reason सही है: P = F/A के अनुसार, Area बढ़ने से Pressure कम हो जाता है।\n\n✅ Reason, Assertion की CORRECT व्याख्या है: ऊंट के पैर इसीलिए चौड़े evolved हुए ताकि रेगिस्तान की रेत में pressure कम हो और वे ना धंसें।\n\nइसलिए Answer: A (दोनों सही और R, A की सही व्याख्या)। NEET/AIIMS में Assertion-Reason pattern बहुत पूछा जाता है!"
+      },
+      "navigation": {
+        "next": "card_72_final_milestone",
+        "button_text": "Complete Chapter ➔"
+      }
+    },
+    {
+      "card_id": "card_72_final_milestone",
+      "card_slug": "card_72_final_milestone",
+      "type": "milestone",
+      "concept_id": "chapter_completion",
+      "level": 5,
+      "progress": {
+        "current": 72,
+        "total": 72
+      },
+      "milestone_payload": {
+        "title": "🏆 CHAPTER COMPLETED!",
+        "badge_emoji": "🎖️",
+        "completed_topic": "Force in Physics - Complete Mastery",
+        "xp_earned": 100,
+        "milestone_progress": "8/8 Modules Cleared ✅",
+        "motivational_quote": "🎉 PHENOMENAL ACHIEVEMENT! 🎉\n\nतुमने Force के हर concept को Daily Life से लेकर BPSC/NEET Officer Level तक master कर लिया है!\n\n✅ Force Definition & Effects\n✅ Contact & Non-Contact Forces\n✅ Balanced vs Unbalanced Forces\n✅ Newton's Three Laws of Motion\n✅ Pressure, Thrust & Applications\n✅ Gravity, Free Fall, Mass vs Weight\n✅ PYQ Traps & Multi-Statement Mastery\n\nअब तुम किसी भी competitive exam में Force के questions आसानी से solve कर सकते हो! 💪🔥\n\nKeep Learning, Keep Growing! 🚀"
+      },
+      "navigation": {
+        "next": null,
+        "button_text": "Back to Home 🏠"
+      }
+    }
+  ]
+}
