@@ -8,6 +8,9 @@ concurrency:
   group: news-scraper
   cancel-in-progress: false
 
+permissions:
+  contents: write
+
 jobs:
   scrape-news:
     runs-on: ubuntu-latest
@@ -21,22 +24,30 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
+          ref: main
 
       # =====================================================
-      # 2. PYTHON
+      # 2. SETUP PYTHON
       # =====================================================
       - name: Setup Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.10'
+          python-version: "3.10"
 
       # =====================================================
-      # 3. DEPENDENCIES
+      # 3. INSTALL DEPENDENCIES
       # =====================================================
       - name: Install Dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install curl_cffi beautifulsoup4 python-dateutil urllib3 lxml requests feedparser
+          pip install \
+            curl_cffi \
+            beautifulsoup4 \
+            python-dateutil \
+            urllib3 \
+            lxml \
+            requests \
+            feedparser
 
       # =====================================================
       # 4. RUN SCRAPER
@@ -57,12 +68,17 @@ jobs:
             exit 1
           fi
 
-          echo "✅ rawnews.json exists."
+          echo "========================================="
+          echo "✅ rawnews.json exists"
+          echo "========================================="
 
-          echo "File size:"
+          echo ""
+          echo "📦 File size:"
           du -h rawnews.json
 
-          echo "JSON validation:"
+          echo ""
+          echo "🔎 JSON validation:"
+
           python - <<'PY'
           import json
 
@@ -72,23 +88,139 @@ jobs:
           print("✅ Valid JSON")
 
           print(
-              "National:",
+              "🇮🇳 National:",
               data.get("national_raw_count", 0)
           )
 
           print(
-              "Bihar:",
+              "🏛️ Bihar:",
               data.get("bihar_raw_count", 0)
           )
 
           print(
-              "Sources:",
-              data.get("source_breakdown", {})
+              "📰 Sources:",
+              json.dumps(
+                  data.get("source_breakdown", {}),
+                  ensure_ascii=False,
+                  indent=2
+              )
           )
+
+          national = data.get("national_raw_news", [])
+          bihar = data.get("bihar_raw_news", [])
+
+          print("")
+          print("National records:", len(national))
+          print("Bihar records:", len(bihar))
+
+          # -----------------------------------------
+          # IMPORTANT:
+          # Do not allow an accidentally empty scrape
+          # to overwrite the existing JSON.
+          # -----------------------------------------
+
+          if len(national) == 0 and len(bihar) == 0:
+              print("")
+              print("❌ SCRAPER RETURNED ZERO NEWS")
+              print("❌ Existing rawnews.json will NOT be committed.")
+              raise SystemExit(2)
+
+          # -----------------------------------------
+          # Content validation
+          # -----------------------------------------
+
+          all_items = national + bihar
+
+          bad = 0
+
+          for i, item in enumerate(all_items, 1):
+
+              title = str(item.get("title", "")).strip()
+              content = str(item.get("content", "")).strip()
+              url = str(item.get("url", "")).strip()
+
+              if not title:
+                  print(f"⚠️ Item {i}: missing title")
+                  bad += 1
+
+              if not url:
+                  print(f"⚠️ Item {i}: missing URL")
+                  bad += 1
+
+              if not content:
+                  print(
+                      f"⚠️ Item {i}: EMPTY CONTENT | "
+                      f"{title[:100]}"
+                  )
+                  bad += 1
+
+              # Title must NEVER become content
+              if content == title:
+                  print(
+                      f"⚠️ Item {i}: CONTENT == TITLE | "
+                      f"{title[:100]}"
+                  )
+                  bad += 1
+
+          print("")
+          print(f"⚠️ Content validation warnings: {bad}")
+
+          print("")
+          print("✅ JSON check completed.")
           PY
 
       # =====================================================
-      # 6. COMMIT
+      # 6. SAVE GENERATED JSON TEMPORARILY
+      # =====================================================
+      - name: Protect Generated JSON
+        run: |
+          cp rawnews.json /tmp/rawnews.generated.json
+
+          echo "✅ Generated rawnews.json backed up."
+
+      # =====================================================
+      # 7. SYNC WITH LATEST MAIN
+      # =====================================================
+      - name: Sync With Latest Main
+        run: |
+          echo "🔄 Fetching latest main..."
+
+          git fetch origin main
+
+          echo "🔄 Resetting working tree to latest main..."
+
+          git reset --hard origin/main
+
+          echo "✅ Repository synchronized with latest main."
+
+      # =====================================================
+      # 8. RESTORE SCRAPED JSON
+      # =====================================================
+      - name: Restore Generated JSON
+        run: |
+          cp /tmp/rawnews.generated.json rawnews.json
+
+          echo "✅ New scraped rawnews.json restored."
+
+      # =====================================================
+      # 9. CHECK DIFF
+      # =====================================================
+      - name: Check Changes
+        run: |
+          echo "========================================="
+          echo "📊 Git changes"
+          echo "========================================="
+
+          git status --short
+
+          if git diff --quiet -- rawnews.json; then
+            echo "ℹ️ rawnews.json has no changes."
+          else
+            echo "📝 rawnews.json has changed."
+          fi
+
+      # =====================================================
+      # 10. COMMIT
       # =====================================================
       - name: Commit rawnews.json
         run: |
@@ -98,15 +230,21 @@ jobs:
           git add rawnews.json
 
           if git diff --cached --quiet; then
-            echo "ℹ️ No changes in rawnews.json."
+            echo "ℹ️ No changes to commit."
             exit 0
           fi
 
           git commit -m "Update rawnews.json [skip ci]"
 
+          echo "✅ Commit created."
+
       # =====================================================
-      # 7. PUSH
+      # 11. PUSH
       # =====================================================
       - name: Push rawnews.json
         run: |
+          echo "🚀 Pushing to main..."
+
           git push origin HEAD:main
+
+          echo "✅ rawnews.json pushed successfully."
