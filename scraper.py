@@ -24,13 +24,13 @@ from bs4 import MarkupResemblesLocatorWarning
 
 OUTPUT_FILE = "rawnews.json"
 TIMEOUT = 25
-MAX_PER_SOURCE = 10
+MAX_PER_SOURCE = 15
 
 MIN_CONTENT_CHARS = 200
 MIN_CONTENT_WORDS = 40
 MAX_CONTENT_CHARS = 30000
 
-# Rolling 36 Hours Window for max flexibility
+# Rolling 36 Hours Window for max coverage
 MAX_NEWS_AGE_HOURS = 36
 
 SCRAPINGANT_API_KEY = os.environ.get("SCRAPINGANT_API_KEY", "").strip()
@@ -46,6 +46,7 @@ HEADERS = {
     ),
     "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
     "Accept-Language": "hi-IN,hi;q=0.9,en-IN;q=0.8,en;q=0.7",
+    "Referer": "https://pib.gov.in/",
     "Connection": "keep-alive",
 }
 
@@ -322,7 +323,7 @@ def extract_date_from_soup(soup):
 
 def is_within_rolling_window(parsed_date):
     if not parsed_date:
-        return True  # Fallback: Accept active live items
+        return True
 
     current_time = now_ist()
     if parsed_date.tzinfo is None:
@@ -457,7 +458,7 @@ def fetch_url(url):
 
 
 # ============================================================
-# PERFECT PIB URL CONVERTER (MOBILE HTML + DESKTOP FALLBACK)
+# DEFINITIVE STATIC PRINT PIB URL CONVERTER
 # ============================================================
 
 def convert_pib_article_url(url):
@@ -465,57 +466,19 @@ def convert_pib_article_url(url):
     if not url:
         return ""
 
-    parsed = urlparse(url)
-    query = parse_qs(parsed.query)
-
-    prid = query.get("PRID", [None])[0]
-    reg = query.get("reg", ["3"])[0]
-    lang = query.get("lang", ["1"])[0]
-
-    if not prid:
-        m = re.search(r'PRID=(\d+)', url, flags=re.I)
-        if m:
-            prid = m.group(1)
-
-    if not prid:
+    m = re.search(r'PRID=(\d+)', url, flags=re.I)
+    if not m:
         return url
 
-    # Primary: Direct Mobile HTML endpoint (PressReleseDetailm.aspx - No heavy JS shell)
-    return f"https://www.pib.gov.in/PressReleseDetailm.aspx?PRID={prid}&reg={reg}&lang={lang}"
+    prid = m.group(1)
+
+    # STATIC PRINT MODE (Bypasses ASP.NET rendering & ViewState)
+    return f"https://pib.gov.in/PressReleasePage.aspx?PRID={prid}&mode=print"
 
 
 def pib_article_urls(url):
-    urls = []
-    original = clean_url(url)
-
-    converted_mobile = convert_pib_article_url(original)
-    if converted_mobile:
-        urls.append(converted_mobile)
-
-    # Secondary: Desktop Page with www force
-    if "PRID=" in original:
-        prid_m = re.search(r'PRID=(\d+)', original, flags=re.I)
-        if prid_m:
-            prid = prid_m.group(1)
-            urls.append(f"https://www.pib.gov.in/PressReleasePage.aspx?PRID={prid}&reg=3&lang=1")
-
-    if original and original not in urls:
-        urls.append(original)
-
-    # Tertiary: Iframe Container
-    if converted_mobile and "PRID=" in converted_mobile:
-        prid_m = re.search(r'PRID=(\d+)', converted_mobile, flags=re.I)
-        if prid_m:
-            urls.append(f"https://www.pib.gov.in/PressReleaseIframePage.aspx?PRID={prid_m.group(1)}")
-
-    output = []
-    seen = set()
-    for u in urls:
-        if u and u not in seen:
-            seen.add(u)
-            output.append(u)
-
-    return output
+    converted = convert_pib_article_url(url)
+    return [converted] if converted else []
 
 
 # ============================================================
@@ -526,7 +489,7 @@ def extract_article_content(soup, source=""):
     for tag in soup(["script", "style", "noscript", "svg", "canvas", "nav", "footer", "form", "aside"]):
         tag.decompose()
 
-    # High-Priority Target Containers for PIB & Bihar Portals
+    # Priority Target Divs for PIB Print Mode & Govt Portals
     target_div = (
         soup.find(id="ContentPlaceHolder1_divpri") or
         soup.find(id="divpri") or
@@ -534,9 +497,7 @@ def extract_article_content(soup, source=""):
         soup.find(id="lblContent") or
         soup.find(class_="ReleaseIdText") or
         soup.find(class_="release_text") or
-        soup.find(class_="innercontent") or
-        soup.find(class_="news-detail") or
-        soup.find(class_="pressrelease")
+        soup.find(class_="innercontent")
     )
 
     if target_div:
@@ -896,7 +857,7 @@ def scrape_news_on_air():
     return results
 
 
-# ACTIVE CMO BIHAR URLS INCLUDING WORKING news.aspx
+# ACTIVE CMO BIHAR URLS WITH news.aspx
 CMO_URLS = [
     "https://cm.bihar.gov.in/users/news.aspx",
     "https://cm.bihar.gov.in/users/preessrelease.aspx",
