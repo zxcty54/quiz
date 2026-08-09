@@ -9,7 +9,7 @@ from bs4 import BeautifulSoup
 from urllib.parse import urlparse, parse_qs, urlencode
 
 # -------------------------------------------------------------
-# Configuration
+# CONFIGURATION
 # -------------------------------------------------------------
 PIB_RSS_URL = "https://pib.gov.in/RssMain.aspx?ModId=6&Lang=1&Regid=3"
 OUTPUT_FILE = "rawnews.json"
@@ -33,6 +33,8 @@ def clean_text(text):
 
 def convert_pib_url(url):
     """RSS Iframe URL ko Full Article Page URL mein convert karta hai"""
+    if not url:
+        return ""
     parsed = urlparse(url)
     if "PressReleaseIframePage.aspx" in parsed.path:
         qs = parse_qs(parsed.query)
@@ -42,26 +44,45 @@ def convert_pib_url(url):
     return url
 
 def fetch_pib_full_article(article_url):
-    """Press Release URL se poora Body Text scrape karta hai"""
+    """Press Release Page se targeted body text extract karta hai"""
     try:
         res = requests.get(article_url, headers=HEADERS, timeout=15, impersonate="chrome", verify=False)
         if res.status_code == 200:
             soup = BeautifulSoup(res.content, "html.parser")
             
-            # Clean unwanted tags
-            for tag in soup(["script", "style", "nav", "footer", "header", "form"]):
+            # Clean unwanted UI components
+            for tag in soup(["script", "style", "nav", "footer", "header", "form", "aside"]):
                 tag.decompose()
                 
-            paragraphs = soup.find_all("p")
-            clean_paragraphs = [
-                clean_text(p.text) for p in paragraphs 
-                if len(clean_text(p.text)) > 35 and "copyright" not in p.text.lower()
-            ]
+            # PIB specific content containers
+            content_div = (
+                soup.find("div", class_="ReleaseContentText") or
+                soup.find("div", class_="content-area") or
+                soup.find("div", id="Title") or
+                soup.find("td", class_="text_just")
+            )
             
-            full_content = " ".join(clean_paragraphs)
-            return full_content[:15000] # Maximum 15k chars safety cap
+            if content_div:
+                paragraphs = content_div.find_all(["p", "div", "td"])
+                clean_paragraphs = []
+                for p in paragraphs:
+                    txt = clean_text(p.text)
+                    if len(txt) > 35 and not any(junk in txt.lower() for junk in ["copyright", "pib release", "posted on"]):
+                        clean_paragraphs.append(txt)
+                        
+                full_content = " ".join(clean_paragraphs)
+                if len(full_content) > 100:
+                    return full_content[:15000]
+
+            # Fallback: All paragraphs on the page
+            paragraphs = soup.find_all("p")
+            all_text = " ".join([clean_text(p.text) for p in paragraphs if len(clean_text(p.text)) > 30])
+            if len(all_text) > 100:
+                return all_text[:15000]
+
     except Exception as e:
-        print(f"⚠️ Failed to fetch full article from {article_url}: {e}")
+        print(f"⚠️ Failed to fetch full PIB article from {article_url}: {e}")
+        
     return ""
 
 def process_pib_rss():
@@ -95,9 +116,11 @@ def process_pib_rss():
 
         # Article ke andar jaakar full body text scraping
         full_content = fetch_pib_full_article(full_url)
+        
+        # STRICT CHECK: Agar body text nahi mila toh title ko content mat banao, skip kar do
         if not full_content or len(full_content) < 100:
-            # Fallback to RSS summary if full page scraping fails
-            full_content = clean_text(entry.get("summary", title))
+            print(f"⚠️ Skipped (No Body Content Scraped): {title[:60]}")
+            continue
 
         pib_items.append({
             "source": "PIB Central",
@@ -119,7 +142,7 @@ def process_pib_rss():
         try:
             with open(OUTPUT_FILE, "r", encoding="utf-8") as f:
                 raw_data = json.load(f)
-        except Exception as e:
+        except Exception:
             print(f"⚠️ Could not read existing {OUTPUT_FILE}, creating new structure.")
 
     # Deduplication check before adding
@@ -128,11 +151,11 @@ def process_pib_rss():
 
     for item in pib_items:
         if item["url"] not in existing_urls:
-            raw_data["national_raw_news"].insert(0, item) # Newest first
+            raw_data.setdefault("national_raw_news", []).insert(0, item) # Newest first
             existing_urls.add(item["url"])
             added_count += 1
 
-    # Update counts
+    # Update metadata counts
     raw_data["generated_at"] = datetime.now(IST).strftime("%Y-%m-%d %H:%M:%S")
     raw_data["national_raw_count"] = len(raw_data.get("national_raw_news", []))
     raw_data["bihar_raw_count"] = len(raw_data.get("bihar_raw_news", []))
