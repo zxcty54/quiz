@@ -1,1692 +1,2163 @@
-
 import os
-import json
 import re
+import json
 import time
-import email.utils
-import urllib.parse
-import xml.etree.ElementTree as ET
-from datetime import datetime, timedelta
-from collections import Counter
+import hashlib
+import warnings
+import feedparser
 
-import urllib3
-from curl_cffi import requests
+from datetime import datetime, timedelta, timezone
+from urllib.parse import urljoin, urlparse, parse_qs, urlencode, urlunparse
+
+from curl_cffi import requests as curl_requests
+import requests as normal_requests
+
 from bs4 import BeautifulSoup
-from dateutil import parser as date_parser
-
-urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+from bs4 import MarkupResemblesLocatorWarning
 
 
 # ============================================================
 # CONFIG
 # ============================================================
 
-SCRAPINGANT_KEY = os.environ.get("SCRAPINGANT_API_KEY")
+OUTPUT_FILE = "rawnews.json"
 
-# ------------------------------------------------------------
-# DATE
-# ------------------------------------------------------------
+TIMEOUT = 25
 
-NOW = datetime.now()
-TARGET_DT = NOW - timedelta(days=1)
+# Per source maximum
+MAX_PER_SOURCE = 10
 
-TARGET_DATE = TARGET_DT.date()
-TARGET_DATE_STR = TARGET_DT.strftime("%Y-%m-%d")
-TARGET_DISPLAY = TARGET_DT.strftime("%d %b %Y")
-
-print("=" * 80)
-print("🗓️ NEWS SCRAPER DATE ENGINE")
-print(f"🕒 Current date/time : {NOW.strftime('%Y-%m-%d %H:%M:%S')}")
-print(f"🎯 TARGET DATE       : {TARGET_DATE_STR}")
-print(f"🎯 TARGET DISPLAY    : {TARGET_DISPLAY}")
-print("=" * 80)
-
-
-# ============================================================
-# CONTENT LIMITS
-# ============================================================
-
-MAX_WORDS = 1500
-
-# Keep article if:
-#   >= 500 characters
-#       OR
-#   >= 300 words
+# Content quality requirement
 MIN_CONTENT_CHARS = 500
 MIN_CONTENT_WORDS = 300
+MAX_CONTENT_CHARS = 30000
 
-MAX_FETCH_CHARS = 30000
 
+# Article fetching attempts
+MAX_FETCH_ATTEMPTS = 3
 
-# ============================================================
-# HTTP
-# ============================================================
+# Optional ScrapingAnt
+SCRAPINGANT_API_KEY = os.environ.get("SCRAPINGANT_API_KEY", "").strip()
+
+# Current date
+IST = timezone(timedelta(hours=5, minutes=30))
+
 
 HEADERS = {
     "User-Agent": (
         "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
         "AppleWebKit/537.36 (KHTML, like Gecko) "
-        "Chrome/131.0.0.0 Safari/537.36"
+        "Chrome/150.0.0.0 Safari/537.36"
     ),
     "Accept": (
         "text/html,application/xhtml+xml,application/xml;"
         "q=0.9,image/avif,image/webp,*/*;q=0.8"
     ),
-    "Accept-Language": "en-US,en;q=0.9,hi;q=0.8",
+    "Accept-Language": "hi-IN,hi;q=0.9,en-IN;q=0.8,en;q=0.7",
     "Cache-Control": "no-cache",
+    "Pragma": "no-cache",
 }
 
 
-def safe_fetch(url, timeout=20):
-    """
-    Multi-level fetch:
-      1. curl_cffi normal
-      2. curl_cffi verify=False
-      3. normal requests verify=False
-      4. ScrapingAnt if API key exists
-    """
+warnings.filterwarnings(
+    "ignore",
+    category=MarkupResemblesLocatorWarning
+)
+
+
+# ============================================================
+# DATE
+# ============================================================
+
+def now_ist():
+    return datetime.now(IST)
+
+
+TODAY = now_ist().date()
+YESTERDAY = TODAY - timedelta(days=1)
+
+
+# ============================================================
+# DEBUG
+# ============================================================
+
+def debug(msg):
+    print(f"🔍 {msg}")
+
+
+def warn(msg):
+    print(f"⚠️ {msg}")
+
+
+def success(msg):
+    print(f"✅ {msg}")
+
+
+# ============================================================
+# URL CLEANING
+# ============================================================
+
+def clean_url(url):
 
     if not url:
-        return None
+        return ""
 
-    # --------------------------------------------------------
-    # 1. curl_cffi normal
-    # --------------------------------------------------------
+    url = str(url).strip()
 
-    try:
-        r = requests.get(
-            url,
-            impersonate="chrome",
-            headers=HEADERS,
-            timeout=timeout,
-            verify=True,
-            allow_redirects=True,
-        )
+    # Markdown:
+    # [https://example.com](https://example.com)
+    m = re.search(
+        r'\]\((https?://[^)]+)\)',
+        url
+    )
 
-        if r.status_code == 200 and r.content:
-            return r.content
+    if m:
+        url = m.group(1)
 
-        print(f"⚠️ HTTP {r.status_code}: {url}")
+    # Remove markdown wrapper
+    url = re.sub(
+        r'^\[.*?\]\(',
+        '',
+        url
+    )
 
-    except Exception as e:
-        print(f"⚠️ CURL normal failed: {url} | {str(e)[:180]}")
+    url = re.sub(
+        r'\)$',
+        '',
+        url
+    )
 
-    # --------------------------------------------------------
-    # 2. curl_cffi SSL disabled
-    # --------------------------------------------------------
+    # Escaped markdown characters
+    url = url.replace("\\&", "&")
+    url = url.replace("\\:", ":")
+    url = url.replace("\\_", "_")
 
-    try:
-        print(f"🔁 RETRY SSL OFF: {url}")
+    url = url.strip()
 
-        r = requests.get(
-            url,
-            impersonate="chrome",
-            headers=HEADERS,
-            timeout=timeout,
-            verify=False,
-            allow_redirects=True,
-        )
+    if url.startswith("javascript:"):
+        return ""
 
-        if r.status_code == 200 and r.content:
-            print("✅ SSL-disabled fetch succeeded")
-            return r.content
+    if url.startswith("mailto:"):
+        return ""
 
-        print(f"⚠️ HTTP {r.status_code} after SSL retry: {url}")
+    if not url.startswith(
+        ("http://", "https://")
+    ):
+        return ""
 
-    except Exception as e:
-        print(f"⚠️ CURL verify=False failed: {str(e)[:180]}")
-
-    # --------------------------------------------------------
-    # 3. ScrapingAnt
-    # --------------------------------------------------------
-
-    if SCRAPINGANT_KEY:
-
-        try:
-            encoded = urllib.parse.quote(url, safe="")
-
-            sa_url = (
-                "https://api.scrapingant.com/v2/general"
-                f"?url={encoded}"
-                f"&x-api-key={SCRAPINGANT_KEY}"
-                "&browser=false"
-            )
-
-            print(f"🌐 SCRAPINGANT FALLBACK: {url}")
-
-            r = requests.get(
-                sa_url,
-                headers=HEADERS,
-                timeout=30,
-                verify=False,
-            )
-
-            if r.status_code == 200 and r.content:
-                print("✅ ScrapingAnt succeeded")
-                return r.content
-
-            print(f"⚠️ ScrapingAnt HTTP {r.status_code}")
-
-        except Exception as e:
-            print(f"⚠️ ScrapingAnt failed: {str(e)[:180]}")
-
-    return None
+    return url
 
 
 # ============================================================
 # TEXT
 # ============================================================
 
-def normalize_text(text):
+def clean_text(text):
+
     if not text:
         return ""
 
-    text = str(text)
-
-    text = re.sub(
-        r"<!\[CDATA\[(.*?)\]\]>",
-        r"\1",
-        text,
-        flags=re.DOTALL,
+    text = BeautifulSoup(
+        str(text),
+        "html.parser"
+    ).get_text(
+        " ",
+        strip=True
     )
 
-    soup = BeautifulSoup(text, "html.parser")
+    text = text.replace("\xa0", " ")
+    text = text.replace("\u200b", " ")
+    text = text.replace("\ufeff", " ")
 
-    text = soup.get_text(" ", strip=True)
-
-    text = re.sub(r"\s+", " ", text)
+    text = re.sub(
+        r'\s+',
+        ' ',
+        text
+    )
 
     return text.strip()
 
 
+def clean_title(title):
+
+    title = clean_text(title)
+
+    title = re.sub(
+        r'\s*[-|–—]\s*'
+        r'(PIB|Press Information Bureau|News On AIR|'
+        r'Sansad TV|Prasar Bharati).*$',
+        '',
+        title,
+        flags=re.I
+    )
+
+    return title.strip()
+
+
+# ============================================================
+# CONTENT QUALITY
+# ============================================================
+
 def word_count(text):
-    return len(re.findall(r"\S+", text or ""))
 
-
-def limit_words(text, max_words=MAX_WORDS):
-    words = re.findall(r"\S+", text or "")
-
-    if len(words) <= max_words:
-        return " ".join(words)
-
-    return " ".join(words[:max_words])
-
-
-def content_is_useful(text):
     if not text:
-        return False
+        return 0
+
+    return len(
+        re.findall(
+            r'\S+',
+            text
+        )
+    )
+
+
+def content_quality(text):
+
+    text = clean_text(text)
 
     chars = len(text)
     words = word_count(text)
 
-    return (
+    # User requirement:
+    # >500 characters OR >300 words
+    valid = (
         chars >= MIN_CONTENT_CHARS
         or words >= MIN_CONTENT_WORDS
     )
 
+    return valid, chars, words
+
 
 # ============================================================
-# DATE ENGINE
+# BOILERPLATE
 # ============================================================
 
-def parse_any_date(value):
-    if not value:
-        return None
+PORTAL_BOILERPLATE = [
+    "accessibility options",
+    "skip to main content",
+    "previous next",
+    "state profile",
+    "governance profile",
+    "facts and figure",
+    "distribution of population",
+    "web information manager",
+    "website information",
+    "site owned by",
+    "copyright",
+    "privacy policy",
+    "terms and conditions",
+    "feedback",
+    "contact us",
+    "sitemap",
+    "login",
+    "forgot password",
+    "quick links",
+    "important links",
+    "useful links",
+    "read more",
+    "subscribe",
+    "newsletter",
+    "follow us",
+]
 
-    value = normalize_text(value)
 
-    if not value:
-        return None
+def boilerplate_score(text):
 
-    # --------------------------------------------------------
-    # Relative dates
-    # --------------------------------------------------------
+    if not text:
+        return 0
 
-    now = datetime.now()
+    low = text.lower()
 
-    low = value.lower()
+    return sum(
+        1
+        for x in PORTAL_BOILERPLATE
+        if x in low
+    )
 
-    if low in ("today", "आज"):
-        return now
 
-    if low in ("yesterday", "कल"):
-        return now - timedelta(days=1)
+def is_bad_portal_content(text):
 
-    # --------------------------------------------------------
-    # Unix timestamp
-    # --------------------------------------------------------
+    if not text:
+        return True
 
-    if value.isdigit():
+    score = boilerplate_score(text)
 
-        try:
-            ts = int(value)
+    # Very strong portal contamination
+    if score >= 7:
+        return True
 
-            if ts > 10**11:
-                ts = ts / 1000
+    return False
 
-            return datetime.fromtimestamp(ts)
 
-        except Exception:
-            pass
+# ============================================================
+# REMOVE BOILERPLATE FROM ARTICLE
+# ============================================================
 
-    # --------------------------------------------------------
-    # RFC date
-    # --------------------------------------------------------
+def remove_common_boilerplate(text):
 
-    try:
-        x = email.utils.parsedate_tz(value)
+    if not text:
+        return ""
 
-        if x:
-            return datetime.fromtimestamp(
-                email.utils.mktime_tz(x)
-            )
+    # Remove obvious footer areas
+    patterns = [
 
-    except Exception:
-        pass
+        r'Copyright.*?(?=$)',
 
-    # --------------------------------------------------------
-    # Generic date parser
-    # --------------------------------------------------------
+        r'Help Web Information Manager.*?(?=$)',
 
-    try:
+        r'We have tried to put most accurate.*?(?=$)',
 
-        dt = date_parser.parse(
-            value,
-            fuzzy=True,
-            dayfirst=True,
+        r'Website Information.*?(?=$)',
+
+        r'Feedback.*?(?=$)',
+    ]
+
+    for pattern in patterns:
+
+        text = re.sub(
+            pattern,
+            "",
+            text,
+            flags=re.I
         )
 
-        if dt.tzinfo:
-            dt = dt.astimezone().replace(
-                tzinfo=None
-            )
+    return clean_text(text)
 
-        return dt
+
+# ============================================================
+# DATE PARSER
+# ============================================================
+
+DATE_FORMATS = [
+
+    "%a, %d %b %Y %H:%M:%S %z",
+
+    "%a, %d %b %Y %H:%M:%S GMT",
+
+    "%d-%b-%Y",
+
+    "%d-%B-%Y",
+
+    "%d/%m/%Y",
+
+    "%d-%m-%Y",
+
+    "%Y-%m-%d",
+
+    "%Y-%m-%d %H:%M:%S",
+
+    "%d %b %Y",
+
+    "%d %B %Y",
+
+]
+
+
+def parse_date(value):
+
+    if not value:
+        return None
+
+    value = clean_text(value)
+
+    # feedparser date
+    try:
+
+        d = datetime.strptime(
+            value,
+            "%a, %d %b %Y %H:%M:%S %z"
+        )
+
+        return d.astimezone(IST)
 
     except Exception:
         pass
 
+    # GMT
+    try:
+
+        d = datetime.strptime(
+            value,
+            "%a, %d %b %Y %H:%M:%S GMT"
+        )
+
+        return d.replace(
+            tzinfo=timezone.utc
+        ).astimezone(IST)
+
+    except Exception:
+        pass
+
+    value2 = re.sub(
+        r'\b(IST|GMT|UTC)\b',
+        '',
+        value,
+        flags=re.I
+    ).strip()
+
+    for fmt in DATE_FORMATS:
+
+        try:
+
+            d = datetime.strptime(
+                value2,
+                fmt
+            )
+
+            if d.tzinfo is None:
+                d = d.replace(
+                    tzinfo=IST
+                )
+
+            return d.astimezone(IST)
+
+        except Exception:
+            continue
+
+    # Search inside text
+    patterns = [
+
+        r'\b\d{1,2}[-/]\d{1,2}[-/]\d{4}\b',
+
+        r'\b\d{1,2}[-/][A-Za-z]{3,9}[-/]\d{4}\b',
+
+        r'\b\d{1,2}\s+[A-Za-z]{3,9}\s+\d{4}\b',
+
+        r'\b\d{4}-\d{2}-\d{2}\b',
+
+    ]
+
+    for pattern in patterns:
+
+        m = re.search(
+            pattern,
+            value
+        )
+
+        if not m:
+            continue
+
+        for fmt in [
+
+            "%d-%m-%Y",
+            "%d/%m/%Y",
+            "%d-%b-%Y",
+            "%d-%B-%Y",
+            "%Y-%m-%d",
+
+        ]:
+
+            try:
+
+                d = datetime.strptime(
+                    m.group(0),
+                    fmt
+                )
+
+                return d.replace(
+                    tzinfo=IST
+                )
+
+            except Exception:
+                continue
+
     return None
 
 
-def extract_date_from_url(url):
-    if not url:
-        return None
-
-    url_low = url.lower()
-
-    # --------------------------------------------------------
-    # YYYY/MM/DD
-    # --------------------------------------------------------
-
-    m = re.search(
-        r"/(20\d{2})[/-](\d{1,2})[/-](\d{1,2})",
-        url_low,
-    )
-
-    if m:
-
-        try:
-            return datetime(
-                int(m.group(1)),
-                int(m.group(2)),
-                int(m.group(3)),
-            )
-
-        except Exception:
-            pass
-
-    # --------------------------------------------------------
-    # DD-Month-YYYY / DD_Month_YYYY
-    # --------------------------------------------------------
-
-    m = re.search(
-        r"(\d{1,2})[-_](january|february|march|april|may|june|"
-        r"july|august|september|october|november|december)[-_](20\d{2})",
-        url_low,
-    )
-
-    if m:
-
-        try:
-
-            return date_parser.parse(
-                f"{m.group(1)} {m.group(2)} {m.group(3)}"
-            )
-
-        except Exception:
-            pass
-
-    # --------------------------------------------------------
-    # Month-DD-YYYY
-    # --------------------------------------------------------
-
-    m = re.search(
-        r"(january|february|march|april|may|june|july|august|"
-        r"september|october|november|december)[-_](\d{1,2})[-_](20\d{2})",
-        url_low,
-    )
-
-    if m:
-
-        try:
-
-            return date_parser.parse(
-                f"{m.group(1)} {m.group(2)} {m.group(3)}"
-            )
-
-        except Exception:
-            pass
-
-    # --------------------------------------------------------
-    # DD Month YYYY
-    # --------------------------------------------------------
-
-    m = re.search(
-        r"(\d{1,2})[-_ ]"
-        r"(january|february|march|april|may|june|july|august|"
-        r"september|october|november|december)"
-        r"[-_ ](20\d{2})",
-        url_low,
-    )
-
-    if m:
-
-        try:
-
-            return date_parser.parse(
-                f"{m.group(1)} {m.group(2)} {m.group(3)}"
-            )
-
-        except Exception:
-            pass
-
-    return None
-
+# ============================================================
+# DATE FROM HTML
+# ============================================================
 
 def extract_date_from_soup(soup):
-    """
-    Generic metadata/date extraction.
-    """
 
     selectors = [
 
-        # HTML5
-        "time[datetime]",
+        "meta[property='article:published_time']",
+
+        "meta[property='og:published_time']",
+
+        "meta[name='publish-date']",
+
+        "meta[name='date']",
+
+        "meta[name='DC.date']",
+
+        "meta[itemprop='datePublished']",
+
+        "meta[itemprop='dateModified']",
+
         "time",
 
-        # Meta
-        'meta[property="article:published_time"]',
-        'meta[property="article:modified_time"]',
-        'meta[name="publish-date"]',
-        'meta[name="publication-date"]',
-        'meta[name="date"]',
-        'meta[name="DC.date"]',
-        'meta[name="dcterms.date"]',
+        ".date",
 
-        # OpenGraph
-        'meta[property="og:updated_time"]',
+        ".published",
+
+        ".publish-date",
+
+        ".news-date",
+
+        ".article-date",
+
+        ".date-time",
 
     ]
 
     for selector in selectors:
 
-        for tag in soup.select(selector):
-
-            value = (
-                tag.get("datetime")
-                or tag.get("content")
-                or tag.get_text(" ", strip=True)
-            )
-
-            dt = parse_any_date(value)
-
-            if dt:
-                return dt
-
-    # --------------------------------------------------------
-    # JSON-LD
-    # --------------------------------------------------------
-
-    for script in soup.find_all(
-        "script",
-        type="application/ld+json"
-    ):
-
-        raw = script.string or script.get_text()
-
-        if not raw:
-            continue
-
         try:
-
-            data = json.loads(raw)
-
-            objects = []
-
-            if isinstance(data, dict):
-                objects.append(data)
-
-                if isinstance(
-                    data.get("@graph"),
-                    list
-                ):
-                    objects.extend(
-                        data["@graph"]
-                    )
-
-            elif isinstance(data, list):
-                objects.extend(data)
-
-            for obj in objects:
-
-                if not isinstance(obj, dict):
-                    continue
-
-                for key in [
-                    "datePublished",
-                    "dateCreated",
-                    "dateModified",
-                ]:
-
-                    dt = parse_any_date(
-                        obj.get(key)
-                    )
-
-                    if dt:
-                        return dt
-
+            elements = soup.select(selector)
         except Exception:
             continue
+
+        for el in elements:
+
+            value = (
+                el.get("content")
+                or el.get("datetime")
+                or el.get_text(
+                    " ",
+                    strip=True
+                )
+            )
+
+            d = parse_date(value)
+
+            if d:
+                return d
 
     return None
 
 
-def date_matches_target(
-    found_dt,
-    source,
-    title,
-    url,
-    fallback_allowed=False,
-):
-    """
-    STRICT:
-      Only target date is accepted.
+# ============================================================
+# HTTP FETCH
+# ============================================================
 
-    Missing date:
-      Rejected unless fallback_allowed=True and a
-      reliable source-level fallback exists.
-    """
+def curl_fetch(url, verify=True):
 
-    if not found_dt:
+    try:
 
-        print(
-            f"❌ DATE MISSING | "
-            f"{source} | "
-            f"TARGET={TARGET_DATE_STR} | "
-            f"{title[:90]}"
+        r = curl_requests.get(
+            url,
+            headers=HEADERS,
+            timeout=TIMEOUT,
+            impersonate="chrome",
+            allow_redirects=True,
+            verify=verify
         )
 
-        return False
+        if r.status_code >= 400:
 
-    found_date = found_dt.date()
+            warn(
+                f"HTTP {r.status_code}: {url}"
+            )
 
-    print(
-        f"📅 DATE DEBUG | "
-        f"{source} | "
-        f"FOUND={found_date} | "
-        f"TARGET={TARGET_DATE_STR} | "
-        f"{'ACCEPT' if found_date == TARGET_DATE else 'REJECT'} | "
-        f"{title[:80]}"
+            return None
+
+        return r.text
+
+    except Exception as e:
+
+        warn(
+            f"CURL failed: {url} | {e}"
+        )
+
+        return None
+
+
+def normal_fetch(url, verify=True):
+
+    try:
+
+        r = normal_requests.get(
+            url,
+            headers=HEADERS,
+            timeout=TIMEOUT,
+            allow_redirects=True,
+            verify=verify
+        )
+
+        if r.status_code >= 400:
+
+            warn(
+                f"REQUESTS HTTP {r.status_code}: {url}"
+            )
+
+            return None
+
+        return r.text
+
+    except Exception as e:
+
+        warn(
+            f"Requests failed: {url} | {e}"
+        )
+
+        return None
+
+
+def scrapingant_fetch(url):
+
+    if not SCRAPINGANT_API_KEY:
+        return None
+
+    try:
+
+        endpoint = (
+            "https://api.scrapingant.com/v2/general"
+        )
+
+        params = {
+            "url": url,
+            "x-api-key": SCRAPINGANT_API_KEY,
+            "browser": "true",
+        }
+
+        r = normal_requests.get(
+            endpoint,
+            params=params,
+            timeout=60
+        )
+
+        if r.status_code >= 400:
+
+            warn(
+                f"ScrapingAnt HTTP {r.status_code}: {url}"
+            )
+
+            return None
+
+        return r.text
+
+    except Exception as e:
+
+        warn(
+            f"ScrapingAnt failed: {url} | {e}"
+        )
+
+        return None
+
+
+def fetch_url(url):
+
+    url = clean_url(url)
+
+    if not url:
+        return None
+
+    # -----------------------------------------
+    # Attempt 1: curl SSL
+    # -----------------------------------------
+
+    html = curl_fetch(
+        url,
+        verify=True
     )
 
-    return found_date == TARGET_DATE
+    if html:
+        return html
+
+    # -----------------------------------------
+    # Attempt 2: curl SSL disabled
+    # Useful for Sansad TV etc.
+    # -----------------------------------------
+
+    debug(
+        f"Retrying with SSL verification disabled: {url}"
+    )
+
+    html = curl_fetch(
+        url,
+        verify=False
+    )
+
+    if html:
+        return html
+
+    # -----------------------------------------
+    # Attempt 3: normal requests
+    # -----------------------------------------
+
+    html = normal_fetch(
+        url,
+        verify=True
+    )
+
+    if html:
+        return html
+
+    # -----------------------------------------
+    # Attempt 4: normal requests verify=False
+    # -----------------------------------------
+
+    debug(
+        f"Retrying normal requests verify=False: {url}"
+    )
+
+    html = normal_fetch(
+        url,
+        verify=False
+    )
+
+    if html:
+        return html
+
+    # -----------------------------------------
+    # Attempt 5: ScrapingAnt
+    # -----------------------------------------
+
+    if SCRAPINGANT_API_KEY:
+
+        debug(
+            f"Trying ScrapingAnt: {url}"
+        )
+
+        html = scrapingant_fetch(url)
+
+        if html:
+            return html
+
+    warn(
+        f"❌ ALL FETCH METHODS FAILED: {url}"
+    )
+
+    return None
 
 
 # ============================================================
-# HTML ARTICLE EXTRACTION
+# PIB URL CONVERTER
 # ============================================================
 
-NOISE_SELECTORS = [
-    "script",
-    "style",
-    "noscript",
-    "nav",
-    "footer",
-    "header",
-    "form",
-    "iframe",
-    "aside",
-    ".advertisement",
-    ".ads",
-    ".ad",
-    ".social-share",
-    ".share-box",
-    ".sharing",
-    ".breadcrumb",
-    ".breadcrumbs",
-    ".menu",
-    ".navbar",
-    ".navigation",
-    ".sidebar",
-    ".related",
-    ".recommended",
-    ".comments",
-    ".comment",
-    ".newsletter",
-    ".cookie",
-    ".popup",
-]
+def convert_pib_article_url(url):
+
+    url = clean_url(url)
+
+    if not url:
+        return ""
+
+    parsed = urlparse(url)
+
+    query = parse_qs(
+        parsed.query
+    )
+
+    prid = (
+        query.get("PRID", [None])[0]
+    )
+
+    if not prid:
+        m = re.search(
+            r'PRID=(\d+)',
+            url,
+            flags=re.I
+        )
+
+        if m:
+            prid = m.group(1)
+
+    if not prid:
+        return url
+
+    return (
+        "https://www.pib.gov.in/"
+        f"PressReleasePage.aspx?PRID={prid}"
+        "&reg=3&lang=1"
+    )
 
 
-def remove_noise(soup):
+# ============================================================
+# PIB ARTICLE CANDIDATE URLS
+# ============================================================
 
-    for selector in NOISE_SELECTORS:
+def pib_article_urls(url):
 
-        try:
-            for tag in soup.select(selector):
-                tag.decompose()
+    urls = []
 
-        except Exception:
-            pass
+    original = clean_url(url)
+
+    if original:
+        urls.append(original)
+
+    converted = convert_pib_article_url(
+        original
+    )
+
+    if converted:
+        urls.append(converted)
+
+    # iframe version
+    if "PressReleasePage.aspx" in converted:
+
+        iframe = converted.replace(
+            "PressReleasePage.aspx",
+            "PressReleaseIframePage.aspx"
+        )
+
+        urls.append(iframe)
+
+    # Remove duplicates
+    output = []
+
+    seen = set()
+
+    for u in urls:
+
+        if u and u not in seen:
+
+            seen.add(u)
+            output.append(u)
+
+    return output
 
 
-def extract_jsonld_article(soup):
+# ============================================================
+# GENERIC ARTICLE EXTRACTION
+# ============================================================
 
-    results = []
+def extract_article_content(
+    soup,
+    source=""
+):
+
+    # --------------------------------------------------------
+    # REMOVE NON ARTICLE ELEMENTS
+    # --------------------------------------------------------
+
+    for tag in soup([
+        "script",
+        "style",
+        "noscript",
+        "svg",
+        "canvas",
+        "iframe",
+        "nav",
+        "footer",
+        "form",
+        "aside"
+    ]):
+
+        tag.decompose()
+
+    # --------------------------------------------------------
+    # JSON-LD articleBody
+    # --------------------------------------------------------
+
+    jsonld_candidates = []
 
     for script in soup.find_all(
         "script",
         type="application/ld+json"
     ):
 
-        raw = script.string or script.get_text()
-
-        if not raw:
-            continue
-
         try:
 
-            data = json.loads(raw)
+            data = json.loads(
+                script.string or
+                script.get_text()
+            )
 
-            objects = []
-
-            if isinstance(data, dict):
-                objects.append(data)
-
-                if isinstance(
-                    data.get("@graph"),
-                    list
-                ):
-                    objects.extend(
-                        data["@graph"]
-                    )
-
-            elif isinstance(data, list):
-                objects.extend(data)
+            objects = (
+                data
+                if isinstance(data, list)
+                else [data]
+            )
 
             for obj in objects:
 
-                if not isinstance(obj, dict):
+                if not isinstance(
+                    obj,
+                    dict
+                ):
                     continue
 
-                article_body = obj.get(
+                body = obj.get(
                     "articleBody"
                 )
 
-                if article_body:
+                if body:
 
-                    text = normalize_text(
-                        article_body
-                    )
+                    txt = clean_text(body)
 
-                    if content_is_useful(text):
-                        results.append(text)
+                    if txt:
+                        jsonld_candidates.append(txt)
 
         except Exception:
-            continue
-
-    if not results:
-        return ""
-
-    return max(
-        results,
-        key=len
-    )
-
-
-def extract_article_text(soup):
+            pass
 
     # --------------------------------------------------------
-    # JSON-LD first
+    # Strong article selectors
     # --------------------------------------------------------
 
-    jsonld = extract_jsonld_article(soup)
+    selectors = [
 
-    if content_is_useful(jsonld):
-        return limit_words(jsonld)
+        "[itemprop='articleBody']",
 
-    # --------------------------------------------------------
-    # Remove portal noise
-    # --------------------------------------------------------
-
-    remove_noise(soup)
-
-    # --------------------------------------------------------
-    # Strong article containers
-    # --------------------------------------------------------
-
-    container_selectors = [
-
-        # Generic
         "article",
+
         ".article-body",
+
         ".articleBody",
+
         ".article-content",
-        ".article-content-body",
-        ".story-body",
+
+        ".articleContent",
+
         ".story-content",
-        ".story-element",
-        ".entry-content",
+
+        ".storyContent",
+
+        ".news-content",
+
+        ".newsContent",
+
+        ".press-release",
+
+        ".pressrelease",
+
+        ".press-release-content",
+
+        ".pressRelease",
+
+        ".release-content",
+
+        ".content-area",
+
+        ".main-content",
+
         ".post-content",
-        ".full-details",
-        ".content-body",
-        "#content-body",
 
-        # PIB
-        "#ContentPlaceHolder1_divpri",
-        "#divpri",
-        ".ReleaseIdText",
-        ".release_text",
-        ".innercontent",
+        ".entry-content",
 
-        # Government
-        ".view-content",
-        ".field--name-body",
-        ".field-name-body",
+        ".single-content",
 
-        # Sansad TV
-        ".episode-content",
-        ".episode-description",
+        ".td-post-content",
+
+        ".content",
+
+        "main",
 
     ]
 
     candidates = []
 
-    for selector in container_selectors:
+    candidates.extend(
+        jsonld_candidates
+    )
+
+    for selector in selectors:
 
         try:
 
-            for container in soup.select(
+            elements = soup.select(
                 selector
-            ):
-
-                paragraphs = container.find_all(
-                    ["p", "li", "td"]
-                )
-
-                blocks = []
-
-                for p in paragraphs:
-
-                    txt = normalize_text(
-                        p.get_text(" ", strip=True)
-                    )
-
-                    if len(txt) >= 35:
-                        blocks.append(txt)
-
-                text = " ".join(blocks)
-
-                if len(text) > 300:
-                    candidates.append(text)
+            )
 
         except Exception:
             continue
 
+        for el in elements:
+
+            txt = clean_text(
+                el.get_text(
+                    " ",
+                    strip=True
+                )
+            )
+
+            if len(txt) >= 300:
+                candidates.append(txt)
+
     # --------------------------------------------------------
-    # Generic paragraph extraction
+    # Paragraph extraction
     # --------------------------------------------------------
 
-    paragraphs = soup.find_all("p")
+    paragraphs = []
 
-    blocks = []
+    for p in soup.find_all("p"):
 
-    for p in paragraphs:
-
-        txt = normalize_text(
-            p.get_text(" ", strip=True)
+        txt = clean_text(
+            p.get_text(
+                " ",
+                strip=True
+            )
         )
 
-        if len(txt) >= 45:
-            blocks.append(txt)
+        if len(txt) >= 30:
+            paragraphs.append(txt)
 
-    generic_text = " ".join(blocks)
+    if paragraphs:
 
-    if len(generic_text) > 300:
-        candidates.append(generic_text)
+        joined = clean_text(
+            " ".join(paragraphs)
+        )
+
+        candidates.append(
+            joined
+        )
 
     # --------------------------------------------------------
-    # Choose largest meaningful candidate
+    # Div based article extraction
+    # --------------------------------------------------------
+
+    for div in soup.find_all(
+        ["div", "section"]
+    ):
+
+        txt = clean_text(
+            div.get_text(
+                " ",
+                strip=True
+            )
+        )
+
+        if (
+            len(txt) >= 500
+            and len(txt) <= 150000
+        ):
+
+            candidates.append(txt)
+
+    # --------------------------------------------------------
+    # Choose best candidate
     # --------------------------------------------------------
 
     if not candidates:
         return ""
 
-    candidates.sort(
-        key=len,
-        reverse=True
-    )
+    # Clean
+    cleaned = []
 
-    text = candidates[0]
+    for text in candidates:
 
-    # Remove common repeated portal strings
-    repeated_noise = [
-        "previous next",
-        "read more",
-        "share",
-        "follow us",
-        "copyright",
-        "all rights reserved",
-        "accessibility options",
-        "skip to main content",
-    ]
-
-    for noise in repeated_noise:
-        text = re.sub(
-            re.escape(noise),
-            " ",
-            text,
-            flags=re.I
+        text = remove_common_boilerplate(
+            text
         )
 
-    text = normalize_text(text)
+        if not text:
+            continue
 
-    return limit_words(text)
+        if is_bad_portal_content(
+            text
+        ):
+            continue
+
+        cleaned.append(text)
+
+    if not cleaned:
+        return ""
+
+    # Score by length + paragraph quality
+    def score(text):
+
+        words = word_count(text)
+
+        chars = len(text)
+
+        return (
+            min(chars, 100000)
+            + min(words * 2, 50000)
+        )
+
+    best = max(
+        cleaned,
+        key=score
+    )
+
+    return clean_text(best)
 
 
 # ============================================================
-# DEEP ARTICLE FETCH
+# GENERIC ARTICLE FETCH
 # ============================================================
 
-def fetch_article(
+def fetch_generic_article_content(
     url,
-    source,
-    title="",
-    listing_date=None,
+    source=""
 ):
 
-    print(
-        f"\n🔍 ARTICLE FETCH | "
-        f"{source} | {url}"
-    )
+    url = clean_url(url)
 
-    content = safe_fetch(
-        url,
-        timeout=25
-    )
+    if not url:
+        return "", None
 
-    if not content:
+    candidate_urls = [
+        url
+    ]
 
-        print(
-            f"❌ NO HTML | "
-            f"{source} | {title[:100]}"
-        )
+    # PIB special
+    if source == "PIB":
 
-        return {
-            "content": "",
-            "date": listing_date,
-            "date_source": "listing",
-        }
-
-    try:
-
-        soup = BeautifulSoup(
-            content,
-            "html.parser"
-        )
-
-    except Exception as e:
-
-        print(
-            f"❌ HTML PARSE ERROR | "
-            f"{source} | {e}"
-        )
-
-        return {
-            "content": "",
-            "date": listing_date,
-            "date_source": "listing",
-        }
-
-    # --------------------------------------------------------
-    # Deep date
-    # --------------------------------------------------------
-
-    article_date = extract_date_from_soup(
-        soup
-    )
-
-    date_source = "article_meta"
-
-    # URL date fallback
-    if not article_date:
-
-        article_date = extract_date_from_url(
+        candidate_urls = pib_article_urls(
             url
         )
 
-        date_source = "url"
+    for candidate_url in candidate_urls:
 
-    # Listing date fallback
-    if not article_date and listing_date:
-
-        article_date = parse_any_date(
-            listing_date
+        debug(
+            f"{source} ARTICLE FETCH: "
+            f"{candidate_url}"
         )
 
-        date_source = "listing"
+        html = fetch_url(
+            candidate_url
+        )
 
-    # --------------------------------------------------------
-    # Content
-    # --------------------------------------------------------
+        if not html:
 
-    text = extract_article_text(
-        soup
-    )
+            continue
 
-    words = word_count(text)
-    chars = len(text)
+        soup = BeautifulSoup(
+            html,
+            "lxml"
+        )
 
-    if text:
+        date = extract_date_from_soup(
+            soup
+        )
 
-        print(
-            f"📄 CONTENT DEBUG | "
-            f"{source} | "
+        content = extract_article_content(
+            soup,
+            source
+        )
+
+        valid, chars, words = content_quality(
+            content
+        )
+
+        if valid:
+
+            success(
+                f"{source} CONTENT FOUND | "
+                f"{chars} chars | "
+                f"{words} words"
+            )
+
+            return content, date
+
+        debug(
+            f"{source} CONTENT TOO SHORT | "
             f"{chars} chars | "
             f"{words} words | "
-            f"DATE={article_date.date() if article_date else 'NO DATE'}"
+            f"{candidate_url}"
         )
 
-    else:
+    warn(
+        f"{source} NO ARTICLE CONTENT: {url}"
+    )
 
-        print(
-            f"⚠️ CONTENT EMPTY | "
-            f"{source} | {title[:100]}"
-        )
-
-    return {
-        "content": text,
-        "date": article_date,
-        "date_source": date_source,
-    }
+    return "", None
 
 
 # ============================================================
-# NEWS OBJECT
+# ITEM BUILDER
 # ============================================================
 
 def make_item(
     source,
     title,
     url,
-    article_date,
-    content,
+    date=None,
+    content="",
+    item_type="Scraped"
 ):
 
-    if not article_date:
-        return None
-
-    if article_date.date() != TARGET_DATE:
-        return None
-
-    content = limit_words(
-        normalize_text(content)
+    title = clean_title(
+        title
     )
 
-    if not content_is_useful(content):
-        print(
-            f"❌ CONTENT TOO SHORT | "
-            f"{source} | "
-            f"{len(content)} chars | "
-            f"{word_count(content)} words | "
-            f"{title[:80]}"
+    url = clean_url(
+        url
+    )
+
+    content = clean_text(
+        content
+    )
+
+    # ========================================================
+    # YESTERDAY-ONLY DATE FILTER
+    # Keep ALL existing sources/scrapers unchanged.
+    # Only accept articles whose actual parsed publication date
+    # is exactly yesterday in IST.
+    # ========================================================
+    parsed_date = date
+
+    if isinstance(parsed_date, str):
+        parsed_date = parse_date(parsed_date)
+
+    if not parsed_date:
+        warn(
+            f"DEBUG DATE REJECTED | {source} | NO DATE | "
+            f"{title[:100]}"
         )
         return None
 
-    print(
-        f"✅ ACCEPTED | "
-        f"{source} | "
-        f"{article_date.strftime('%Y-%m-%d')} | "
-        f"{word_count(content)} words | "
-        f"{title[:80]}"
+    if parsed_date.tzinfo is None:
+        parsed_date = parsed_date.replace(tzinfo=IST)
+    else:
+        parsed_date = parsed_date.astimezone(IST)
+
+    article_day = parsed_date.date()
+
+    if article_day != YESTERDAY:
+        debug(
+            f"DATE FILTER REJECTED | {source} | "
+            f"article={article_day} | target={YESTERDAY} | "
+            f"{title[:100]}"
+        )
+        return None
+
+    debug(
+        f"DATE ACCEPTED | {source} | "
+        f"{article_day} | target={YESTERDAY} | "
+        f"{title[:100]}"
     )
+
+    date = parsed_date
+
+    if not title:
+        return None
+
+    if not url:
+        return None
+
+    # NEVER allow title as content
+    if (
+        not content
+        or content.lower() == title.lower()
+    ):
+
+        warn(
+            f"DEBUG NO CONTENT | "
+            f"{source} | {title[:120]}"
+        )
+
+        return None
+
+    valid, chars, words = content_quality(
+        content
+    )
+
+    if not valid:
+
+        warn(
+            f"DEBUG CONTENT TOO SHORT | "
+            f"{source} | "
+            f"{chars} chars | "
+            f"{words} words | "
+            f"{title[:100]}"
+        )
+
+        return None
+
+    if is_bad_portal_content(
+        content
+    ):
+
+        warn(
+            f"DEBUG PORTAL CONTENT REJECTED | "
+            f"{source} | "
+            f"{title[:100]}"
+        )
+
+        return None
 
     return {
         "source": source,
-        "title": normalize_text(title),
+
+        "title": title,
+
         "url": url,
-        "date": article_date.strftime(
-            "%Y-%m-%d"
+
+        "date": (
+            date.strftime(
+                "%a, %d %b %Y %H:%M:%S GMT"
+            )
+            if isinstance(
+                date,
+                datetime
+            )
+            else (
+                date or ""
+            )
         ),
+
         "content": content,
-        "word_count": word_count(content),
-        "char_count": len(content),
+
+        "content_chars": chars,
+
+        "content_words": words,
+
+        "type": item_type,
     }
 
 
 # ============================================================
-# RSS SCRAPER
+# HASH / DEDUP
 # ============================================================
 
-def scrape_rss(
-    source,
-    rss_url,
-    max_items=30,
-    category="national",
-):
+def normalize_for_hash(text):
 
-    print("\n" + "=" * 70)
-    print(f"📰 RSS SOURCE: {source}")
-    print(f"🔗 {rss_url}")
-    print("=" * 70)
+    text = clean_text(
+        text
+    ).lower()
 
-    result = []
-
-    content = safe_fetch(
-        rss_url,
-        timeout=25
+    text = re.sub(
+        r'[^a-z0-9\u0900-\u097f]+',
+        ' ',
+        text
     )
 
-    if not content:
-        print(
-            f"❌ RSS FETCH FAILED | {source}"
-        )
-        return result
+    return text.strip()
 
-    try:
 
-        soup = BeautifulSoup(
-            content,
-            "xml"
-        )
+def deduplicate(items):
 
-        items = soup.find_all("item")
+    seen = set()
 
-        print(
-            f"📦 RSS ITEMS FOUND: "
-            f"{len(items)}"
+    output = []
+
+    dropped = 0
+
+    for item in items:
+
+        url = clean_url(
+            item.get("url", "")
         )
 
-    except Exception as e:
-
-        print(
-            f"❌ RSS PARSE ERROR | "
-            f"{source} | {e}"
+        title = item.get(
+            "title",
+            ""
         )
 
-        return result
-
-    for item in items[:max_items]:
-
-        title_tag = item.find("title")
-        link_tag = item.find("link")
-
-        date_tag = (
-            item.find("pubDate")
-            or item.find("pubdate")
-            or item.find("dc:date")
-        )
-
-        desc_tag = item.find(
-            "description"
-        )
-
-        title = normalize_text(
-            title_tag.get_text()
-            if title_tag
-            else ""
-        )
-
-        url = normalize_text(
-            link_tag.get_text()
-            if link_tag
-            else ""
-        )
-
-        pub_date = normalize_text(
-            date_tag.get_text()
-            if date_tag
-            else ""
-        )
-
-        if not title or not url:
-            continue
-
-        dt = parse_any_date(
-            pub_date
-        )
-
-        if not dt:
-            dt = extract_date_from_url(
-                url
+        key = (
+            url
+            or title
+            or item.get(
+                "content",
+                ""
             )
-
-        print(
-            f"\n📝 {source} CANDIDATE"
-        )
-        print(
-            f"   TITLE : {title[:100]}"
-        )
-        print(
-            f"   DATE  : {pub_date or 'NO DATE'}"
-        )
-        print(
-            f"   PARSED: "
-            f"{dt.strftime('%Y-%m-%d') if dt else 'NO DATE'}"
-        )
-        print(
-            f"   TARGET: {TARGET_DATE_STR}"
         )
 
-        if not dt:
-
-            print(
-                f"❌ REJECT DATE MISSING | "
-                f"{source} | {title[:80]}"
+        key = hashlib.sha1(
+            normalize_for_hash(
+                key
+            ).encode(
+                "utf-8",
+                errors="ignore"
             )
+        ).hexdigest()
+
+        if key in seen:
+
+            dropped += 1
 
             continue
 
-        if dt.date() != TARGET_DATE:
+        seen.add(key)
 
-            print(
-                f"⏭️ REJECT OLD/NEW | "
-                f"{source} | "
-                f"FOUND={dt.date()} | "
-                f"TARGET={TARGET_DATE}"
-            )
-
-            continue
-
-        article = fetch_article(
-            url,
-            source,
-            title,
-            listing_date=dt
-        )
-
-        article_dt = article["date"]
-
-        if not article_dt:
-            continue
-
-        if article_dt.date() != TARGET_DATE:
-
-            print(
-                f"❌ ARTICLE DATE MISMATCH | "
-                f"{source} | "
-                f"LISTING={dt.date()} | "
-                f"ARTICLE={article_dt.date()} | "
-                f"TARGET={TARGET_DATE}"
-            )
-
-            continue
-
-        item_obj = make_item(
-            source,
-            title,
-            url,
-            article_dt,
-            article["content"],
-        )
-
-        if item_obj:
-            result.append(item_obj)
+        output.append(item)
 
     print(
-        f"\n✅ {source} usable: "
-        f"{len(result)}"
+        f"🧹 Deduplication: "
+        f"Input={len(items)} | "
+        f"Dropped={dropped} | "
+        f"Unique={len(output)}"
     )
 
-    return result
+    return output
 
 
 # ============================================================
-# PIB
+# RECENT DATE CHECK
 # ============================================================
+
+def recent_enough(
+    date,
+    days=3
+):
+
+    if not date:
+        return True
+
+    age = (
+        TODAY - date.date()
+    ).days
+
+    return age <= days
+
+
+# ============================================================
+# PIB RSS
+# ============================================================
+
+PIB_FEEDS = [
+
+    "https://pib.gov.in/RssMain.aspx?ModId=6&Lang=1&Regid=1",
+
+    "https://pib.gov.in/RssMain.aspx?ModId=6&Lang=1&Regid=3",
+
+    "https://pib.gov.in/RssMain.aspx?ModId=6&Lang=1&Regid=5",
+
+    "https://pib.gov.in/RssMain.aspx?ModId=6&Lang=1&Regid=6",
+
+    "https://pib.gov.in/RssMain.aspx?ModId=6&Lang=1&Regid=17",
+
+    "https://pib.gov.in/RssMain.aspx?ModId=6&Lang=1&Regid=20",
+
+    "https://pib.gov.in/RssMain.aspx?ModId=6&Lang=1&Regid=22",
+
+    "https://pib.gov.in/RssMain.aspx?ModId=6&Lang=9&Regid=1",
+]
+
 
 def scrape_pib():
 
-    source = "PIB"
+    print("\n")
+    print("=" * 70)
+    print("🇮🇳 PIB")
+    print("=" * 70)
 
-    print("\n" + "=" * 80)
-    print("🇮🇳 PIB DEEP SCRAPER")
-    print("=" * 80)
+    entries = []
 
-    feeds = [
-        "https://pib.gov.in/RssMain.aspx?ModId=6&Lang=1&Regid=1",
-        "https://pib.gov.in/RssMain.aspx?ModId=6&Lang=1&Regid=3",
-        "https://pib.gov.in/RssMain.aspx?ModId=6&Lang=1&Regid=5",
-        "https://pib.gov.in/RssMain.aspx?ModId=6&Lang=1&Regid=6",
-        "https://pib.gov.in/RssMain.aspx?ModId=6&Lang=1&Regid=17",
-        "https://pib.gov.in/RssMain.aspx?ModId=6&Lang=1&Regid=20",
-        "https://pib.gov.in/RssMain.aspx?ModId=6&Lang=1&Regid=22",
-        "https://pib.gov.in/RssMain.aspx?ModId=6&Lang=9&Regid=1",
-    ]
-
-    result = []
-
-    seen_urls = set()
-
-    for feed_url in feeds:
+    for feed_url in PIB_FEEDS:
 
         print(
-            f"\n🔎 PIB FEED: {feed_url}"
+            f"\n🔎 PIB RSS: {feed_url}"
         )
 
-        content = safe_fetch(
-            feed_url,
-            timeout=25
+        html = fetch_url(
+            feed_url
+        )
+
+        if not html:
+
+            continue
+
+        parsed = feedparser.parse(
+            html
+        )
+
+        rss_entries = (
+            parsed.entries or []
+        )
+
+        print(
+            f"Found RSS items: "
+            f"{len(rss_entries)}"
+        )
+
+        for entry in rss_entries:
+
+            title = clean_title(
+                entry.get(
+                    "title",
+                    ""
+                )
+            )
+
+            link = clean_url(
+                entry.get(
+                    "link",
+                    ""
+                )
+            )
+
+            if not title or not link:
+                continue
+
+            date = None
+
+            for field in [
+                "published",
+                "updated",
+                "pubDate",
+                "date",
+            ]:
+
+                value = entry.get(
+                    field
+                )
+
+                if value:
+
+                    date = parse_date(
+                        value
+                    )
+
+                    if date:
+                        break
+
+            if not date:
+
+                for field in [
+                    "published_parsed",
+                    "updated_parsed",
+                ]:
+
+                    st = entry.get(
+                        field
+                    )
+
+                    if st:
+
+                        try:
+
+                            date = datetime(
+                                st.tm_year,
+                                st.tm_mon,
+                                st.tm_mday,
+                                st.tm_hour,
+                                st.tm_min,
+                                st.tm_sec,
+                                tzinfo=timezone.utc
+                            ).astimezone(
+                                IST
+                            )
+
+                            break
+
+                        except Exception:
+                            pass
+
+            print(
+                "   PIB RSS:",
+                (
+                    date.strftime(
+                        "%Y-%m-%d %H:%M"
+                    )
+                    if date
+                    else "NO DATE"
+                ),
+                "|",
+                title[:100]
+            )
+
+            entries.append({
+                "title": title,
+                "url": link,
+                "date": date,
+            })
+
+    entries = deduplicate([
+        {
+            "source": "PIB",
+            "title": x["title"],
+            "url": x["url"],
+            "date": (
+                x["date"].strftime(
+                    "%Y-%m-%d"
+                )
+                if x["date"]
+                else ""
+            ),
+        }
+        for x in entries
+    ])
+
+    # --------------------------------------------------------
+    # Fetch every RSS article
+    # --------------------------------------------------------
+
+    results = []
+
+    for item in entries[
+        :MAX_PER_SOURCE * 2
+    ]:
+
+        content, article_date = (
+            fetch_generic_article_content(
+                item["url"],
+                "PIB"
+            )
         )
 
         if not content:
-            continue
-
-        try:
-
-            soup = BeautifulSoup(
-                content,
-                "xml"
-            )
-
-            items = soup.find_all("item")
 
             print(
-                f"📦 PIB ITEMS: {len(items)}"
-            )
-
-        except Exception as e:
-
-            print(
-                f"❌ PIB RSS ERROR: {e}"
+                f"⚠️ DEBUG PIB NO ARTICLE CONTENT | "
+                f"{item['title'][:120]}"
             )
 
             continue
 
-        for item in items[:30]:
-
-            title_tag = item.find(
-                "title"
+        final_date = (
+            article_date
+            or parse_date(
+                item["date"]
             )
+        )
 
-            link_tag = item.find(
-                "link"
-            )
+        obj = make_item(
+            source="PIB",
+            title=item["title"],
+            url=item["url"],
+            date=final_date,
+            content=content,
+            item_type="RSS + Article"
+        )
 
-            date_tag = (
-                item.find("pubDate")
-                or item.find("pubdate")
-            )
+        if obj:
+            results.append(obj)
 
-            if not title_tag or not link_tag:
-                continue
+        if len(results) >= MAX_PER_SOURCE:
+            break
 
-            title = normalize_text(
-                title_tag.get_text()
-            )
-
-            url = normalize_text(
-                link_tag.get_text()
-            )
-
-            pub_date = normalize_text(
-                date_tag.get_text()
-                if date_tag
-                else ""
-            )
-
-            if not title or not url:
-                continue
-
-            if url in seen_urls:
-                continue
-
-            seen_urls.add(url)
-
-            listing_dt = parse_any_date(
-                pub_date
-            )
-
-            print(
-                f"\n🔍 PIB CANDIDATE | "
-                f"{title[:100]}"
-            )
-
-            print(
-                f"📅 RSS DATE={pub_date or 'NO DATE'}"
-            )
-
-            if not listing_dt:
-
-                print(
-                    "❌ PIB DATE MISSING"
-                )
-
-                continue
-
-            print(
-                f"📅 FOUND={listing_dt.date()} "
-                f"TARGET={TARGET_DATE}"
-            )
-
-            if listing_dt.date() != TARGET_DATE:
-
-                print(
-                    "⏭️ PIB REJECT DATE"
-                )
-
-                continue
-
-            # ------------------------------------------------
-            # Force PressReleasePage URL
-            # ------------------------------------------------
-
-            prid = re.search(
-                r"PRID=(\d+)",
-                url,
-                re.I
-            )
-
-            if prid:
-
-                article_url = (
-                    "https://www.pib.gov.in/"
-                    "PressReleasePage.aspx?"
-                    f"PRID={prid.group(1)}"
-                )
-
-            else:
-
-                article_url = url
-
-            article = fetch_article(
-                article_url,
-                source,
-                title,
-                listing_date=listing_dt
-            )
-
-            article_dt = article["date"]
-
-            if not article_dt:
-                continue
-
-            if article_dt.date() != TARGET_DATE:
-
-                print(
-                    f"❌ PIB ARTICLE DATE MISMATCH | "
-                    f"{article_dt.date()} != "
-                    f"{TARGET_DATE}"
-                )
-
-                continue
-
-            obj = make_item(
-                source,
-                title,
-                article_url,
-                article_dt,
-                article["content"],
-            )
-
-            if obj:
-                result.append(obj)
+    results = deduplicate(
+        results
+    )
 
     print(
-        f"\n🇮🇳 PIB FINAL: {len(result)}"
+        f"✅ PIB usable: "
+        f"{len(results)}"
     )
 
-    return result
+    return results
 
 
 # ============================================================
-# GOOGLE NEWS BIHAR
+# NEWS ON AIR
 # ============================================================
 
-def scrape_google_bihar():
+NEWS_ON_AIR_URLS = [
 
-    url = (
-        "https://news.google.com/rss/search?"
-        "q=Bihar+Government+OR+Bihar+Cabinet+OR+"
-        "Bihar+Scheme+OR+Bihar+Infrastructure+"
-        "when:2d&hl=hi&gl=IN&ceid=IN:hi"
+    "https://newsonair.gov.in/",
+
+    "https://newsonair.gov.in/category/news/",
+
+    "https://newsonair.gov.in/category/national-news/",
+
+]
+
+
+def scrape_news_on_air():
+
+    print("\n")
+    print("=" * 70)
+    print("📻 NEWS ON AIR")
+    print("=" * 70)
+
+    candidates = []
+
+    for page_url in NEWS_ON_AIR_URLS:
+
+        print(
+            f"🔎 Listing: {page_url}"
+        )
+
+        html = fetch_url(
+            page_url
+        )
+
+        if not html:
+            continue
+
+        soup = BeautifulSoup(
+            html,
+            "lxml"
+        )
+
+        for a in soup.find_all(
+            "a",
+            href=True
+        ):
+
+            href = clean_url(
+                urljoin(
+                    page_url,
+                    a.get("href")
+                )
+            )
+
+            title = clean_title(
+                a.get_text(
+                    " ",
+                    strip=True
+                )
+            )
+
+            if (
+                not href
+                or len(title) < 25
+            ):
+                continue
+
+            if "newsonair.gov.in" not in href:
+                continue
+
+            candidates.append(
+                (
+                    title,
+                    href
+                )
+            )
+
+    # --------------------------------------------------------
+    # Unique
+    # --------------------------------------------------------
+
+    unique = []
+
+    seen = set()
+
+    for title, url in candidates:
+
+        if url in seen:
+            continue
+
+        seen.add(url)
+
+        unique.append(
+            (
+                title,
+                url
+            )
+        )
+
+    print(
+        f"🔗 News On AIR candidates: "
+        f"{len(unique)}"
     )
 
-    return scrape_rss(
-        "Google News Bihar",
-        url,
-        30,
-        "bihar"
+    results = []
+
+    for title, url in unique:
+
+        content, date = (
+            fetch_generic_article_content(
+                url,
+                "News On AIR"
+            )
+        )
+
+        if not content:
+
+            warn(
+                f"DEBUG AIR NO CONTENT | "
+                f"{title[:120]}"
+            )
+
+            continue
+
+        obj = make_item(
+            source="News On AIR",
+            title=title,
+            url=url,
+            date=date,
+            content=content,
+            item_type="Article"
+        )
+
+        if obj:
+            results.append(obj)
+
+        if len(results) >= MAX_PER_SOURCE:
+            break
+
+    results = deduplicate(
+        results
     )
+
+    print(
+        f"✅ News On AIR usable: "
+        f"{len(results)}"
+    )
+
+    return results
 
 
 # ============================================================
 # CMO BIHAR
 # ============================================================
 
+CMO_URLS = [
+
+    "https://cm.bihar.gov.in/users/preessrelease.aspx",
+
+    "https://cm.bihar.gov.in/",
+
+]
+
+
 def scrape_cmo_bihar():
 
-    source = "CMO Bihar"
-
-    print("\n" + "=" * 80)
+    print("\n")
+    print("=" * 70)
     print("🏛️ CMO BIHAR")
-    print("=" * 80)
+    print("=" * 70)
 
-    url = (
-        "https://cm.bihar.gov.in/"
-        "users/preessrelease.aspx"
-    )
+    candidates = []
 
-    html = safe_fetch(
-        url,
-        timeout=25
-    )
+    for page_url in CMO_URLS:
 
-    result = []
-
-    if not html:
-        print("❌ CMO LISTING FAILED")
-        return result
-
-    soup = BeautifulSoup(
-        html,
-        "html.parser"
-    )
-
-    rows = soup.find_all("tr")
-
-    print(
-        f"📦 CMO ROWS: {len(rows)}"
-    )
-
-    for row in rows:
-
-        cols = row.find_all("td")
-
-        if len(cols) < 2:
-            continue
-
-        row_text = normalize_text(
-            row.get_text(" ", strip=True)
+        print(
+            f"🔎 CMO Listing: {page_url}"
         )
 
-        # Search date anywhere in row
-        dt = None
+        html = fetch_url(
+            page_url
+        )
 
-        for value in [
-            row_text,
-            cols[0].get_text(
-                " ",
-                strip=True
-            ),
-        ]:
+        if not html:
+            continue
 
-            dt = parse_any_date(value)
+        soup = BeautifulSoup(
+            html,
+            "lxml"
+        )
 
-            if dt:
-                break
+        for a in soup.find_all(
+            "a",
+            href=True
+        ):
 
-        # Find links
-        links = row.find_all("a")
+            href = clean_url(
+                urljoin(
+                    page_url,
+                    a.get("href")
+                )
+            )
 
-        for a in links:
-
-            title = normalize_text(
+            title = clean_title(
                 a.get_text(
                     " ",
                     strip=True
                 )
             )
 
-            href = a.get(
-                "href"
-            )
-
-            if not title or not href:
+            if (
+                not href
+                or len(title) < 20
+            ):
                 continue
 
-            if len(title) < 10:
+            if "cm.bihar.gov.in" not in href:
                 continue
 
-            article_url = urllib.parse.urljoin(
-                url,
-                href
-            )
+            low = title.lower()
 
-            print(
-                f"\n🔍 CMO CANDIDATE | "
-                f"{title[:100]}"
-            )
+            if any(
+                x in low
+                for x in [
+                    "home",
+                    "contact",
+                    "login",
+                    "gallery",
+                    "photo",
+                    "feedback",
+                    "sitemap",
+                ]
+            ):
+                continue
 
-            print(
-                f"📅 ROW DATE="
-                f"{dt.date() if dt else 'NO DATE'}"
-            )
-
-            print(
-                f"🎯 TARGET={TARGET_DATE}"
-            )
-
-            if not dt:
-
-                # Try article itself for date
-                article = fetch_article(
-                    article_url,
-                    source,
-                    title
-                )
-
-                dt = article["date"]
-
-            else:
-
-                article = fetch_article(
-                    article_url,
-                    source,
+            candidates.append(
+                (
                     title,
-                    listing_date=dt
+                    href
                 )
-
-            if not dt:
-
-                print(
-                    "❌ CMO REJECT DATE MISSING"
-                )
-
-                continue
-
-            if dt.date() != TARGET_DATE:
-
-                print(
-                    f"⏭️ CMO REJECT | "
-                    f"FOUND={dt.date()} | "
-                    f"TARGET={TARGET_DATE}"
-                )
-
-                continue
-
-            obj = make_item(
-                source,
-                title,
-                article_url,
-                dt,
-                article["content"],
             )
 
-            if obj:
-                result.append(obj)
+    unique = []
 
-            if len(result) >= 20:
-                break
+    seen = set()
 
-        if len(result) >= 20:
-            break
+    for title, url in candidates:
+
+        if url in seen:
+            continue
+
+        seen.add(url)
+
+        unique.append(
+            (
+                title,
+                url
+            )
+        )
 
     print(
-        f"\n✅ CMO FINAL: {len(result)}"
+        f"🔗 CMO candidate articles: "
+        f"{len(unique)}"
     )
 
-    return result
+    results = []
+
+    for title, url in unique:
+
+        content, date = (
+            fetch_generic_article_content(
+                url,
+                "CMO Bihar"
+            )
+        )
+
+        if not content:
+
+            warn(
+                f"DEBUG CMO NO CONTENT | "
+                f"{title[:120]}"
+            )
+
+            continue
+
+        obj = make_item(
+            source="CMO Bihar",
+            title=title,
+            url=url,
+            date=date,
+            content=content,
+            item_type="Press Release"
+        )
+
+        if obj:
+            results.append(obj)
+
+        if len(results) >= MAX_PER_SOURCE:
+            break
+
+    results = deduplicate(
+        results
+    )
+
+    print(
+        f"✅ CMO Bihar usable: "
+        f"{len(results)}"
+    )
+
+    return results
 
 
 # ============================================================
 # IPRD BIHAR
 # ============================================================
 
+IPRD_PAGES = [
+
+    "https://state.bihar.gov.in/prdbihar/",
+
+    "https://state.bihar.gov.in/prdbihar/SectionInformation.html?editForm&rowId=8931",
+
+    "https://state.bihar.gov.in/prdbihar/SectionInformation.html?editForm&rowId=8930",
+
+    "https://state.bihar.gov.in/prdbihar/SectionInformation.html?editForm&rowId=6996",
+
+]
+
+
 def scrape_iprd_bihar():
 
-    source = "IPRD Bihar"
-
-    print("\n" + "=" * 80)
+    print("\n")
+    print("=" * 70)
     print("📢 IPRD BIHAR")
-    print("=" * 80)
+    print("=" * 70)
 
-    listing_url = (
-        "https://state.bihar.gov.in/"
-        "prdbihar/SectionInformation.html"
-    )
+    candidates = []
 
-    html = safe_fetch(
-        listing_url,
-        timeout=30
-    )
-
-    result = []
-
-    if not html:
-        print("❌ IPRD LISTING FAILED")
-        return result
-
-    soup = BeautifulSoup(
-        html,
-        "html.parser"
-    )
-
-    links = []
-
-    for a in soup.find_all("a"):
-
-        href = a.get("href")
-        title = normalize_text(
-            a.get_text(
-                " ",
-                strip=True
-            )
-        )
-
-        if not href or not title:
-            continue
-
-        if "SectionInformation" not in href:
-            continue
-
-        full_url = urllib.parse.urljoin(
-            listing_url,
-            href
-        )
-
-        if full_url not in [
-            x[0] for x in links
-        ]:
-
-            links.append(
-                (full_url, title)
-            )
-
-    print(
-        f"🔗 IPRD candidate links: "
-        f"{len(links)}"
-    )
-
-    for article_url, title in links[:80]:
+    for page_url in IPRD_PAGES:
 
         print(
-            f"\n🔍 IPRD checking: "
+            f"🔎 IPRD Listing: {page_url}"
+        )
+
+        html = fetch_url(
+            page_url
+        )
+
+        if not html:
+            continue
+
+        soup = BeautifulSoup(
+            html,
+            "lxml"
+        )
+
+        for a in soup.find_all(
+            "a",
+            href=True
+        ):
+
+            href = clean_url(
+                urljoin(
+                    page_url,
+                    a.get("href")
+                )
+            )
+
+            title = clean_title(
+                a.get_text(
+                    " ",
+                    strip=True
+                )
+            )
+
+            if (
+                not href
+                or len(title) < 25
+            ):
+                continue
+
+            if "state.bihar.gov.in/prdbihar" not in href.lower():
+                continue
+
+            low = title.lower()
+
+            if any(
+                x in low
+                for x in [
+                    "home",
+                    "contact",
+                    "feedback",
+                    "copyright",
+                    "web information manager",
+                    "accessibility",
+                    "previous",
+                    "next",
+                    "department",
+                ]
+            ):
+                continue
+
+            candidates.append(
+                (
+                    title,
+                    href
+                )
+            )
+
+    unique = []
+
+    seen = set()
+
+    for title, url in candidates:
+
+        if url in seen:
+            continue
+
+        seen.add(url)
+
+        unique.append(
+            (
+                title,
+                url
+            )
+        )
+
+    print(
+        f"🔗 IPRD candidate articles: "
+        f"{len(unique)}"
+    )
+
+    results = []
+
+    for title, url in unique:
+
+        print(
+            f"🔍 IPRD checking: "
             f"{title[:100]}"
         )
 
-        article = fetch_article(
-            article_url,
-            source,
-            title
+        content, date = (
+            fetch_generic_article_content(
+                url,
+                "IPRD Bihar"
+            )
         )
 
-        dt = article["date"]
+        if not content:
 
-        if not dt:
-
-            print(
-                "❌ IPRD DATE MISSING"
+            warn(
+                f"DEBUG IPRD NO ARTICLE CONTENT | "
+                f"{title[:120]}"
             )
 
             continue
 
-        print(
-            f"📅 IPRD DATE={dt.date()} "
-            f"TARGET={TARGET_DATE}"
-        )
+        # Reject huge portal/archive pages
+        if len(content) > 150000:
 
-        if dt.date() != TARGET_DATE:
+            warn(
+                f"DEBUG IPRD PORTAL/ARCHIVE TOO LARGE | "
+                f"{len(content)} chars | "
+                f"{title[:100]}"
+            )
 
-            print(
-                "⏭️ IPRD REJECT DATE"
+            continue
+
+        if date and not recent_enough(
+            date,
+            7
+        ):
+
+            debug(
+                f"IPRD OLD ARTICLE SKIPPED | "
+                f"{date.date()} | "
+                f"{title[:100]}"
             )
 
             continue
 
         obj = make_item(
-            source,
-            title,
-            article_url,
-            dt,
-            article["content"],
+            source="IPRD Bihar",
+            title=title,
+            url=url,
+            date=date,
+            content=content,
+            item_type="Press Release"
         )
 
         if obj:
-            result.append(obj)
+            results.append(obj)
 
-    print(
-        f"\n✅ IPRD FINAL: {len(result)}"
+        if len(results) >= MAX_PER_SOURCE:
+            break
+
+    results = deduplicate(
+        results
     )
 
-    return result
+    print(
+        f"✅ IPRD Bihar usable: "
+        f"{len(results)}"
+    )
+
+    return results
 
 
 # ============================================================
 # BIHAR CABINET
 # ============================================================
 
+CABINET_PAGES = [
+
+    "https://state.bihar.gov.in/csd/",
+
+    "https://state.bihar.gov.in/csd/CitizenHome.html",
+
+    "https://state.bihar.gov.in/csd/SectionInformation.html?editForm&rowId=2929",
+
+    "https://state.bihar.gov.in/csd/SectionInformation.html?editForm&rowId=1323",
+
+    "https://state.bihar.gov.in/csd/SectionInformation.html?editForm&rowId=4935",
+
+]
+
+
 def scrape_bihar_cabinet():
 
-    source = "Bihar Cabinet"
-
-    print("\n" + "=" * 80)
+    print("\n")
+    print("=" * 70)
     print("🏛️ BIHAR CABINET")
-    print("=" * 80)
+    print("=" * 70)
 
-    listing_urls = [
-        "https://cabinet.bihar.gov.in/",
-        "https://cabinet.bih.nic.in/",
-    ]
+    candidates = []
 
-    result = []
+    for page_url in CABINET_PAGES:
 
-    for listing_url in listing_urls:
+        print(
+            f"🔎 Cabinet Listing: "
+            f"{page_url}"
+        )
 
-        html = safe_fetch(
-            listing_url,
-            timeout=25
+        html = fetch_url(
+            page_url
         )
 
         if not html:
@@ -1694,274 +2165,161 @@ def scrape_bihar_cabinet():
 
         soup = BeautifulSoup(
             html,
-            "html.parser"
+            "lxml"
         )
 
-        for a in soup.find_all("a"):
+        for a in soup.find_all(
+            "a",
+            href=True
+        ):
 
-            href = a.get("href")
-            title = normalize_text(
+            href = clean_url(
+                urljoin(
+                    page_url,
+                    a.get("href")
+                )
+            )
+
+            title = clean_title(
                 a.get_text(
                     " ",
                     strip=True
                 )
             )
 
-            if not href or len(title) < 10:
+            if (
+                not href
+                or len(title) < 20
+            ):
                 continue
 
-            article_url = urllib.parse.urljoin(
-                listing_url,
-                href
-            )
+            if "state.bihar.gov.in/csd" not in href.lower():
+                continue
 
-            # Only cabinet-looking links
-            combined = (
-                title + " " + article_url
-            ).lower()
+            low = title.lower()
 
             if not any(
-                x in combined
+                x in low
                 for x in [
                     "cabinet",
                     "decision",
-                    "meeting",
+                    "decisions",
                     "press",
-                    "order",
-                    "nirnay",
+                    "approval",
+                    "approved",
                 ]
             ):
                 continue
 
-            print(
-                f"\n🔍 CABINET: "
-                f"{title[:100]}"
+            candidates.append(
+                (
+                    title,
+                    href
+                )
             )
 
-            article = fetch_article(
-                article_url,
-                source,
-                title
-            )
+    unique = []
 
-            dt = article["date"]
+    seen = set()
 
-            if not dt:
-                continue
+    for title, url in candidates:
 
-            print(
-                f"📅 FOUND={dt.date()} "
-                f"TARGET={TARGET_DATE}"
-            )
+        if url in seen:
+            continue
 
-            if dt.date() != TARGET_DATE:
-                continue
+        seen.add(url)
 
-            obj = make_item(
-                source,
+        unique.append(
+            (
                 title,
-                article_url,
-                dt,
-                article["content"],
+                url
             )
-
-            if obj:
-                result.append(obj)
+        )
 
     print(
-        f"\n✅ Bihar Cabinet FINAL: "
-        f"{len(result)}"
+        f"🔗 Cabinet candidates: "
+        f"{len(unique)}"
     )
 
-    return result
+    results = []
+
+    for title, url in unique:
+
+        content, date = (
+            fetch_generic_article_content(
+                url,
+                "Bihar Cabinet"
+            )
+        )
+
+        if not content:
+
+            warn(
+                f"DEBUG CABINET NO CONTENT | "
+                f"{title[:120]}"
+            )
+
+            continue
+
+        obj = make_item(
+            source="Bihar Cabinet",
+            title=title,
+            url=url,
+            date=date,
+            content=content,
+            item_type="Cabinet Decision"
+        )
+
+        if obj:
+            results.append(obj)
+
+        if len(results) >= MAX_PER_SOURCE:
+            break
+
+    results = deduplicate(
+        results
+    )
+
+    print(
+        f"✅ Bihar Cabinet usable: "
+        f"{len(results)}"
+    )
+
+    return results
 
 
 # ============================================================
 # SANSAD TV
 # ============================================================
 
+SANSAD_PAGES = [
+
+    "https://sansadtv.nic.in/",
+
+    "https://sansadtv.nic.in/show_type/sansad-mein-aaj",
+
+    "https://sansadtv.nic.in/category/news",
+
+]
+
+
 def scrape_sansad_tv():
 
-    source = "Sansad TV"
-
-    print("\n" + "=" * 80)
+    print("\n")
+    print("=" * 70)
     print("📺 SANSAD TV")
-    print("=" * 80)
+    print("=" * 70)
 
-    listing_urls = [
-        "https://sansadtv.nic.in/",
-        "https://sansadtv.nic.in/show_type/sansad-mein-aaj",
-        "https://sansadtv.nic.in/category/news",
-    ]
+    candidates = []
 
-    result = []
-
-    seen = set()
-
-    for listing_url in listing_urls:
+    for page_url in SANSAD_PAGES:
 
         print(
-            f"\n🔎 Listing: {listing_url}"
+            f"\n🔎 Listing: {page_url}"
         )
 
-        html = safe_fetch(
-            listing_url,
-            timeout=30
-        )
-
-        if not html:
-            print(
-                "⚠️ Sansad TV listing fetch failed"
-            )
-            continue
-
-        soup = BeautifulSoup(
-            html,
-            "html.parser"
-        )
-
-        for a in soup.find_all("a"):
-
-            href = a.get("href")
-            title = normalize_text(
-                a.get_text(
-                    " ",
-                    strip=True
-                )
-            )
-
-            if not href:
-                continue
-
-            article_url = urllib.parse.urljoin(
-                listing_url,
-                href
-            )
-
-            if (
-                "sansadtv.nic.in"
-                not in article_url
-            ):
-                continue
-
-            if article_url in seen:
-                continue
-
-            # Episode/article candidates
-            if not any(
-                x in article_url.lower()
-                for x in [
-                    "/episode/",
-                    "/news/",
-                    "/article/",
-                ]
-            ):
-                continue
-
-            seen.add(article_url)
-
-            if len(title) < 10:
-                title = (
-                    article_url
-                    .rstrip("/")
-                    .split("/")
-                    [-1]
-                    .replace("-", " ")
-                )
-
-            print(
-                f"\n🔍 SANSAD ARTICLE: "
-                f"{article_url}"
-            )
-
-            article = fetch_article(
-                article_url,
-                source,
-                title
-            )
-
-            dt = article["date"]
-
-            if not dt:
-
-                # Try URL date again
-                dt = extract_date_from_url(
-                    article_url
-                )
-
-            if not dt:
-
-                print(
-                    "❌ SANSAD DATE MISSING"
-                )
-
-                continue
-
-            print(
-                f"📅 SANSAD FOUND={dt.date()} "
-                f"TARGET={TARGET_DATE}"
-            )
-
-            if dt.date() != TARGET_DATE:
-
-                print(
-                    "⏭️ SANSAD REJECT DATE"
-                )
-
-                continue
-
-            obj = make_item(
-                source,
-                title,
-                article_url,
-                dt,
-                article["content"],
-            )
-
-            if obj:
-                result.append(obj)
-
-    print(
-        f"\n✅ Sansad TV FINAL: "
-        f"{len(result)}"
-    )
-
-    return result
-
-
-# ============================================================
-# PRS INDIA
-# ============================================================
-
-def scrape_prs():
-
-    source = "PRS India"
-
-    print("\n" + "=" * 80)
-    print("🏛️ PRS INDIA")
-    print("=" * 80)
-
-    listing_urls = [
-        "https://prsindia.org/",
-        "https://prsindia.org/latest-updates",
-        "https://prsindia.org/parliament",
-        "https://prsindia.org/parliamentary-committees",
-    ]
-
-    result = []
-
-    seen = set()
-
-    for listing_url in listing_urls:
-
-        print(
-            f"\n🔎 PRS LISTING: "
-            f"{listing_url}"
-        )
-
-        html = safe_fetch(
-            listing_url,
-            timeout=30
+        html = fetch_url(
+            page_url
         )
 
         if not html:
@@ -1969,461 +2327,161 @@ def scrape_prs():
 
         soup = BeautifulSoup(
             html,
-            "html.parser"
+            "lxml"
         )
 
-        for a in soup.find_all("a"):
+        for a in soup.find_all(
+            "a",
+            href=True
+        ):
 
-            href = a.get("href")
-            title = normalize_text(
+            href = clean_url(
+                urljoin(
+                    page_url,
+                    a.get("href")
+                )
+            )
+
+            title = clean_title(
                 a.get_text(
                     " ",
                     strip=True
                 )
             )
 
-            if not href:
-                continue
-
-            article_url = urllib.parse.urljoin(
-                listing_url,
-                href
-            )
-
             if (
-                "prsindia.org"
-                not in article_url
+                not href
+                or len(title) < 20
             ):
                 continue
 
-            if article_url in seen:
+            if "sansadtv.nic.in" not in href:
                 continue
 
-            seen.add(article_url)
+            low = title.lower()
 
-            # Avoid pure navigation
-            if len(title) < 15:
-                continue
-
-            print(
-                f"\n🔍 PRS ARTICLE FETCH: "
-                f"{article_url}"
-            )
-
-            article = fetch_article(
-                article_url,
-                source,
-                title
-            )
-
-            dt = article["date"]
-
-            if not dt:
-
-                print(
-                    f"❌ PRS DATE MISSING | "
-                    f"{title[:100]}"
-                )
-
-                continue
-
-            print(
-                f"📅 PRS FOUND={dt.date()} "
-                f"TARGET={TARGET_DATE}"
-            )
-
-            if dt.date() != TARGET_DATE:
-
-                print(
-                    "⏭️ PRS REJECT DATE"
-                )
-
-                continue
-
-            obj = make_item(
-                source,
-                title,
-                article_url,
-                dt,
-                article["content"],
-            )
-
-            if obj:
-                result.append(obj)
-
-    print(
-        f"\n✅ PRS FINAL: "
-        f"{len(result)}"
-    )
-
-    return result
-
-
-# ============================================================
-# INDIA.GOV.IN
-# ============================================================
-
-def scrape_india_gov():
-
-    source = "India.gov.in"
-
-    print("\n" + "=" * 80)
-    print("🇮🇳 INDIA.GOV.IN")
-    print("=" * 80)
-
-    listing_urls = [
-        "https://www.india.gov.in/news",
-        "https://www.india.gov.in/spotlight",
-    ]
-
-    result = []
-
-    seen = set()
-
-    for listing_url in listing_urls:
-
-        html = safe_fetch(
-            listing_url,
-            timeout=30
-        )
-
-        if not html:
-            continue
-
-        soup = BeautifulSoup(
-            html,
-            "html.parser"
-        )
-
-        for a in soup.find_all("a"):
-
-            href = a.get("href")
-            title = normalize_text(
-                a.get_text(
-                    " ",
-                    strip=True
-                )
-            )
-
-            if not href:
-                continue
-
-            article_url = urllib.parse.urljoin(
-                listing_url,
-                href
-            )
-
-            if (
-                "india.gov.in"
-                not in article_url
-            ):
-                continue
-
-            if article_url in seen:
-                continue
-
-            if len(title) < 15:
-                continue
-
-            seen.add(article_url)
-
-            print(
-                f"\n🔍 INDIA.GOV ARTICLE: "
-                f"{title[:100]}"
-            )
-
-            article = fetch_article(
-                article_url,
-                source,
-                title
-            )
-
-            dt = article["date"]
-
-            if not dt:
-                continue
-
-            print(
-                f"📅 FOUND={dt.date()} "
-                f"TARGET={TARGET_DATE}"
-            )
-
-            if dt.date() != TARGET_DATE:
-                continue
-
-            obj = make_item(
-                source,
-                title,
-                article_url,
-                dt,
-                article["content"],
-            )
-
-            if obj:
-                result.append(obj)
-
-    print(
-        f"\n✅ India.gov.in FINAL: "
-        f"{len(result)}"
-    )
-
-    return result
-
-
-# ============================================================
-# NEWS ON AIR NATIONAL
-# ============================================================
-
-def scrape_news_on_air():
-
-    source = "News On AIR"
-
-    print("\n" + "=" * 80)
-    print("📻 NEWS ON AIR NATIONAL")
-    print("=" * 80)
-
-    listing_urls = [
-        "https://www.newsonair.gov.in/",
-        "https://www.newsonair.gov.in/category/national/",
-        "https://www.newsonair.gov.in/category/top-news/",
-    ]
-
-    result = []
-
-    seen = set()
-
-    for listing_url in listing_urls:
-
-        html = safe_fetch(
-            listing_url,
-            timeout=30
-        )
-
-        if not html:
-            continue
-
-        soup = BeautifulSoup(
-            html,
-            "html.parser"
-        )
-
-        for a in soup.find_all("a"):
-
-            href = a.get("href")
-            title = normalize_text(
-                a.get_text(
-                    " ",
-                    strip=True
-                )
-            )
-
-            if not href:
-                continue
-
-            article_url = urllib.parse.urljoin(
-                listing_url,
-                href
-            )
-
-            if (
-                "newsonair.gov.in"
-                not in article_url
-            ):
-                continue
-
-            if article_url in seen:
-                continue
-
-            if len(title) < 15:
-                continue
-
-            # Skip category/menu pages
             if any(
-                x in article_url.rstrip("/")
+                x in low
                 for x in [
-                    "/category/",
-                    "/tag/",
-                    "/page/",
+                    "home",
+                    "login",
+                    "contact",
+                    "privacy",
+                    "terms",
                 ]
             ):
                 continue
 
-            seen.add(article_url)
-
-            print(
-                f"\n🔍 AIR ARTICLE: "
-                f"{title[:100]}"
-            )
-
-            article = fetch_article(
-                article_url,
-                source,
-                title
-            )
-
-            dt = article["date"]
-
-            if not dt:
-                continue
-
-            print(
-                f"📅 FOUND={dt.date()} "
-                f"TARGET={TARGET_DATE}"
-            )
-
-            if dt.date() != TARGET_DATE:
-                continue
-
-            obj = make_item(
-                source,
-                title,
-                article_url,
-                dt,
-                article["content"],
-            )
-
-            if obj:
-                result.append(obj)
-
-    print(
-        f"\n✅ News On AIR FINAL: "
-        f"{len(result)}"
-    )
-
-    return result
-
-
-# ============================================================
-# NEWS ON AIR BIHAR
-# ============================================================
-
-def scrape_news_on_air_bihar():
-
-    source = "News On AIR Bihar"
-
-    print("\n" + "=" * 80)
-    print("📻 NEWS ON AIR BIHAR")
-    print("=" * 80)
-
-    urls = [
-        "https://www.newsonair.gov.in/category/regional/",
-        "https://www.newsonair.gov.in/category/bihar/",
-    ]
-
-    result = []
-
-    seen = set()
-
-    for listing_url in urls:
-
-        html = safe_fetch(
-            listing_url,
-            timeout=25
-        )
-
-        if not html:
-            continue
-
-        soup = BeautifulSoup(
-            html,
-            "html.parser"
-        )
-
-        for a in soup.find_all("a"):
-
-            href = a.get("href")
-            title = normalize_text(
-                a.get_text(
-                    " ",
-                    strip=True
+            candidates.append(
+                (
+                    title,
+                    href
                 )
             )
 
-            if not href or len(title) < 15:
-                continue
+    unique = []
 
-            article_url = urllib.parse.urljoin(
-                listing_url,
-                href
-            )
+    seen = set()
 
-            if article_url in seen:
-                continue
+    for title, url in candidates:
 
-            if "newsonair.gov.in" not in article_url:
-                continue
+        if url in seen:
+            continue
 
-            seen.add(article_url)
+        seen.add(url)
 
-            print(
-                f"\n🔍 AIR BIHAR: "
-                f"{title[:100]}"
-            )
-
-            article = fetch_article(
-                article_url,
-                source,
-                title
-            )
-
-            dt = article["date"]
-
-            if not dt:
-                continue
-
-            print(
-                f"📅 FOUND={dt.date()} "
-                f"TARGET={TARGET_DATE}"
-            )
-
-            if dt.date() != TARGET_DATE:
-                continue
-
-            obj = make_item(
-                source,
+        unique.append(
+            (
                 title,
-                article_url,
-                dt,
-                article["content"],
+                url
             )
-
-            if obj:
-                result.append(obj)
+        )
 
     print(
-        f"\n✅ News On AIR Bihar FINAL: "
-        f"{len(result)}"
+        f"🔗 Sansad TV unique candidate articles: "
+        f"{len(unique)}"
     )
 
-    return result
+    results = []
+
+    for title, url in unique:
+
+        content, date = (
+            fetch_generic_article_content(
+                url,
+                "Sansad TV"
+            )
+        )
+
+        if not content:
+
+            warn(
+                f"DEBUG SANSAD NO CONTENT | "
+                f"{title[:120]}"
+            )
+
+            continue
+
+        obj = make_item(
+            source="Sansad TV",
+            title=title,
+            url=url,
+            date=date,
+            content=content,
+            item_type="Article"
+        )
+
+        if obj:
+            results.append(obj)
+
+        if len(results) >= MAX_PER_SOURCE:
+            break
+
+    results = deduplicate(
+        results
+    )
+
+    print(
+        f"✅ Sansad TV usable: "
+        f"{len(results)}"
+    )
+
+    return results
 
 
 # ============================================================
 # PTI
 # ============================================================
 
+PTI_PAGES = [
+
+    "https://www.ptinews.com/",
+
+    "https://www.ptinews.com/latest-news",
+
+    "https://www.ptinews.com/category/national",
+
+]
+
+
 def scrape_pti():
 
-    source = "PTI"
-
-    print("\n" + "=" * 80)
+    print("\n")
+    print("=" * 70)
     print("📰 PTI")
-    print("=" * 80)
+    print("=" * 70)
 
-    listing_urls = [
-        "https://www.ptinews.com/",
-        "https://www.ptinews.com/latest-news",
-    ]
+    candidates = []
 
-    result = []
+    for page_url in PTI_PAGES:
 
-    seen = set()
+        print(
+            f"🔎 PTI Listing: "
+            f"{page_url}"
+        )
 
-    for listing_url in listing_urls:
-
-        html = safe_fetch(
-            listing_url,
-            timeout=30
+        html = fetch_url(
+            page_url
         )
 
         if not html:
@@ -2431,505 +2489,746 @@ def scrape_pti():
 
         soup = BeautifulSoup(
             html,
-            "html.parser"
+            "lxml"
         )
 
-        for a in soup.find_all("a"):
+        for a in soup.find_all(
+            "a",
+            href=True
+        ):
 
-            href = a.get("href")
-            title = normalize_text(
+            href = clean_url(
+                urljoin(
+                    page_url,
+                    a.get("href")
+                )
+            )
+
+            title = clean_title(
                 a.get_text(
                     " ",
                     strip=True
                 )
             )
 
-            if not href:
+            if (
+                not href
+                or len(title) < 25
+            ):
                 continue
 
-            article_url = urllib.parse.urljoin(
-                listing_url,
-                href
+            if "ptinews.com" not in href:
+                continue
+
+            candidates.append(
+                (
+                    title,
+                    href
+                )
             )
 
-            if article_url in seen:
-                continue
+    unique = []
 
-            if "ptinews.com" not in article_url:
-                continue
+    seen = set()
 
-            if len(title) < 15:
-                continue
+    for title, url in candidates:
 
-            seen.add(article_url)
+        if url in seen:
+            continue
 
-            print(
-                f"\n🔍 PTI ARTICLE: "
-                f"{title[:100]}"
-            )
+        seen.add(url)
 
-            article = fetch_article(
-                article_url,
-                source,
-                title
-            )
-
-            dt = article["date"]
-
-            if not dt:
-                continue
-
-            print(
-                f"📅 FOUND={dt.date()} "
-                f"TARGET={TARGET_DATE}"
-            )
-
-            if dt.date() != TARGET_DATE:
-                continue
-
-            obj = make_item(
-                source,
+        unique.append(
+            (
                 title,
-                article_url,
-                dt,
-                article["content"],
-            )
-
-            if obj:
-                result.append(obj)
-
-    print(
-        f"\n✅ PTI FINAL: "
-        f"{len(result)}"
-    )
-
-    return result
-
-
-# ============================================================
-# NATIONAL RSS
-# ============================================================
-
-def scrape_national_sources():
-
-    result = []
-
-    rss_sources = [
-
-        (
-            "The Hindu",
-            "https://www.thehindu.com/news/national/feeder/default.rss",
-        ),
-
-        (
-            "Indian Express",
-            "https://indianexpress.com/section/india/feed/",
-        ),
-
-    ]
-
-    for source, url in rss_sources:
-
-        result.extend(
-            scrape_rss(
-                source,
-                url,
-                max_items=30
+                url
             )
         )
 
-    return result
-
-
-# ============================================================
-# DEDUPLICATION
-# ============================================================
-
-def normalize_title_for_dedupe(title):
-
-    title = normalize_text(title)
-
-    title = re.sub(
-        r"[^a-zA-Z0-9\u0900-\u097F]+",
-        "",
-        title.lower()
+    print(
+        f"🔗 PTI candidates: "
+        f"{len(unique)}"
     )
 
-    return title[:180]
+    results = []
+
+    for title, url in unique:
+
+        content, date = (
+            fetch_generic_article_content(
+                url,
+                "PTI"
+            )
+        )
+
+        if not content:
+
+            warn(
+                f"DEBUG PTI NO CONTENT | "
+                f"{title[:120]}"
+            )
+
+            continue
+
+        obj = make_item(
+            source="PTI",
+            title=title,
+            url=url,
+            date=date,
+            content=content,
+            item_type="PTI Article"
+        )
+
+        if obj:
+            results.append(obj)
+
+        if len(results) >= MAX_PER_SOURCE:
+            break
+
+    results = deduplicate(
+        results
+    )
+
+    print(
+        f"✅ PTI usable: "
+        f"{len(results)}"
+    )
+
+    return results
 
 
-def deduplicate(items):
+# ============================================================
+# PRS INDIA
+# ============================================================
 
-    seen_urls = set()
-    seen_titles = set()
+PRS_PAGES = [
 
-    result = []
+    "https://prsindia.org/",
 
-    dropped = 0
+    "https://prsindia.org/latest-updates",
 
-    for item in items:
+    "https://prsindia.org/theprsblog",
 
-        url = item.get(
-            "url",
+]
+
+
+def scrape_prs():
+
+    print("\n")
+    print("=" * 70)
+    print("🏛️ PRS INDIA")
+    print("=" * 70)
+
+    candidates = []
+
+    for page_url in PRS_PAGES:
+
+        print(
+            f"🔎 PRS Listing: "
+            f"{page_url}"
+        )
+
+        html = fetch_url(
+            page_url
+        )
+
+        if not html:
+            continue
+
+        soup = BeautifulSoup(
+            html,
+            "lxml"
+        )
+
+        for a in soup.find_all(
+            "a",
+            href=True
+        ):
+
+            href = clean_url(
+                urljoin(
+                    page_url,
+                    a.get("href")
+                )
+            )
+
+            title = clean_title(
+                a.get_text(
+                    " ",
+                    strip=True
+                )
+            )
+
+            if (
+                not href
+                or len(title) < 20
+            ):
+                continue
+
+            if "prsindia.org" not in href:
+                continue
+
+            low = title.lower()
+
+            if any(
+                x in low
+                for x in [
+                    "home",
+                    "about",
+                    "contact",
+                    "login",
+                    "donate",
+                ]
+            ):
+                continue
+
+            candidates.append(
+                (
+                    title,
+                    href
+                )
+            )
+
+    unique = []
+
+    seen = set()
+
+    for title, url in candidates:
+
+        if url in seen:
+            continue
+
+        seen.add(url)
+
+        unique.append(
+            (
+                title,
+                url
+            )
+        )
+
+    print(
+        f"🔗 PRS candidates: "
+        f"{len(unique)}"
+    )
+
+    results = []
+
+    for title, url in unique:
+
+        content, date = (
+            fetch_generic_article_content(
+                url,
+                "PRS India"
+            )
+        )
+
+        if not content:
+
+            warn(
+                f"DEBUG PRS NO CONTENT | "
+                f"{title[:120]}"
+            )
+
+            continue
+
+        obj = make_item(
+            source="PRS India",
+            title=title,
+            url=url,
+            date=date,
+            content=content,
+            item_type="PRS Article"
+        )
+
+        if obj:
+            results.append(obj)
+
+        if len(results) >= MAX_PER_SOURCE:
+            break
+
+    results = deduplicate(
+        results
+    )
+
+    print(
+        f"✅ PRS India usable: "
+        f"{len(results)}"
+    )
+
+    return results
+
+
+# ============================================================
+# INDIA.GOV.IN
+# ============================================================
+
+INDIA_GOV_PAGES = [
+
+    "https://www.india.gov.in/",
+
+    "https://www.india.gov.in/news",
+
+    "https://www.india.gov.in/spotlight",
+
+]
+
+
+def scrape_india_gov():
+
+    print("\n")
+    print("=" * 70)
+    print("🇮🇳 INDIA.GOV.IN")
+    print("=" * 70)
+
+    candidates = []
+
+    for page_url in INDIA_GOV_PAGES:
+
+        print(
+            f"🔎 India.gov.in Listing: "
+            f"{page_url}"
+        )
+
+        html = fetch_url(
+            page_url
+        )
+
+        if not html:
+            continue
+
+        soup = BeautifulSoup(
+            html,
+            "lxml"
+        )
+
+        for a in soup.find_all(
+            "a",
+            href=True
+        ):
+
+            href = clean_url(
+                urljoin(
+                    page_url,
+                    a.get("href")
+                )
+            )
+
+            title = clean_title(
+                a.get_text(
+                    " ",
+                    strip=True
+                )
+            )
+
+            if (
+                not href
+                or len(title) < 25
+            ):
+                continue
+
+            if "india.gov.in" not in href:
+                continue
+
+            low = title.lower()
+
+            if any(
+                x in low
+                for x in [
+                    "home",
+                    "about",
+                    "contact",
+                    "feedback",
+                    "sitemap",
+                    "login",
+                ]
+            ):
+                continue
+
+            candidates.append(
+                (
+                    title,
+                    href
+                )
+            )
+
+    unique = []
+
+    seen = set()
+
+    for title, url in candidates:
+
+        if url in seen:
+            continue
+
+        seen.add(url)
+
+        unique.append(
+            (
+                title,
+                url
+            )
+        )
+
+    print(
+        f"🔗 India.gov.in candidates: "
+        f"{len(unique)}"
+    )
+
+    results = []
+
+    for title, url in unique:
+
+        content, date = (
+            fetch_generic_article_content(
+                url,
+                "India.gov.in"
+            )
+        )
+
+        if not content:
+
+            warn(
+                f"DEBUG INDIA.GOV NO CONTENT | "
+                f"{title[:120]}"
+            )
+
+            continue
+
+        obj = make_item(
+            source="India.gov.in",
+            title=title,
+            url=url,
+            date=date,
+            content=content,
+            item_type="Government Article"
+        )
+
+        if obj:
+            results.append(obj)
+
+        if len(results) >= MAX_PER_SOURCE:
+            break
+
+    results = deduplicate(
+        results
+    )
+
+    print(
+        f"✅ India.gov.in usable: "
+        f"{len(results)}"
+    )
+
+    return results
+
+
+# ============================================================
+# SOURCE RUNNER
+# ============================================================
+
+def safe_source(
+    name,
+    function
+):
+
+    try:
+
+        return function()
+
+    except Exception as e:
+
+        print(
+            f"\n❌ {name} SCRAPER ERROR:"
+        )
+
+        print(
+            repr(e)
+        )
+
+        return []
+
+
+# ============================================================
+# BUILD ALL NEWS
+# ============================================================
+
+def build_news():
+
+    print("\n")
+    print("=" * 80)
+    print("🚀 STARTING ALL NEWS SOURCES")
+    print("=" * 80)
+
+    all_results = []
+
+    source_results = {}
+
+    # ========================================================
+    # EVERY SOURCE IS ALWAYS RUN
+    # NO FALLBACK DROPS ANY SOURCE
+    # ========================================================
+
+    source_results["PIB"] = safe_source(
+        "PIB",
+        scrape_pib
+    )
+
+    source_results["News On AIR"] = safe_source(
+        "News On AIR",
+        scrape_news_on_air
+    )
+
+    source_results["CMO Bihar"] = safe_source(
+        "CMO Bihar",
+        scrape_cmo_bihar
+    )
+
+    source_results["IPRD Bihar"] = safe_source(
+        "IPRD Bihar",
+        scrape_iprd_bihar
+    )
+
+    source_results["Bihar Cabinet"] = safe_source(
+        "Bihar Cabinet",
+        scrape_bihar_cabinet
+    )
+
+    source_results["Sansad TV"] = safe_source(
+        "Sansad TV",
+        scrape_sansad_tv
+    )
+
+    source_results["PTI"] = safe_source(
+        "PTI",
+        scrape_pti
+    )
+
+    source_results["PRS India"] = safe_source(
+        "PRS India",
+        scrape_prs
+    )
+
+    source_results["India.gov.in"] = safe_source(
+        "India.gov.in",
+        scrape_india_gov
+    )
+
+    # ========================================================
+    # SOURCE BREAKDOWN
+    # ========================================================
+
+    breakdown = {}
+
+    for source, items in source_results.items():
+
+        items = deduplicate(
+            items
+        )
+
+        source_results[source] = items
+
+        breakdown[source] = len(
+            items
+        )
+
+        all_results.extend(
+            items
+        )
+
+    all_results = deduplicate(
+        all_results
+    )
+
+    # ========================================================
+    # SEPARATE BIHAR / NATIONAL
+    # ========================================================
+
+    bihar_sources = {
+        "CMO Bihar",
+        "IPRD Bihar",
+        "Bihar Cabinet",
+    }
+
+    bihar = []
+
+    national = []
+
+    for item in all_results:
+
+        source = item.get(
+            "source",
             ""
         )
 
-        title_key = normalize_title_for_dedupe(
-            item.get(
-                "title",
-                ""
-            )
-        )
+        if source in bihar_sources:
 
-        if url and url in seen_urls:
-            dropped += 1
-            continue
-
-        if title_key and title_key in seen_titles:
-            dropped += 1
-            continue
-
-        if url:
-            seen_urls.add(url)
-
-        if title_key:
-            seen_titles.add(
-                title_key
+            bihar.append(
+                item
             )
 
-        result.append(item)
+        else:
+
+            national.append(
+                item
+            )
+
+    # ========================================================
+    # FINAL REPORT
+    # ========================================================
+
+    print("\n")
+    print("=" * 80)
+    print("📊 FINAL SOURCE BREAKDOWN")
+    print("=" * 80)
 
     print(
-        f"🧹 DEDUP | "
-        f"Input={len(items)} | "
-        f"Dropped={dropped} | "
-        f"Unique={len(result)}"
+        json.dumps(
+            breakdown,
+            ensure_ascii=False,
+            indent=2
+        )
     )
 
-    return result
+    print(
+        f"\n🇮🇳 National / Other : "
+        f"{len(national)}"
+    )
 
+    print(
+        f"🏛️ Bihar             : "
+        f"{len(bihar)}"
+    )
 
-# ============================================================
-# SOURCE STATS
-# ============================================================
+    print(
+        f"📰 Total              : "
+        f"{len(all_results)}"
+    )
 
-def get_source_stats(items):
+    # ========================================================
+    # SOURCES THAT RETURNED ZERO
+    # ========================================================
 
-    counter = Counter()
+    print("\n⚠️ SOURCE ZERO REPORT")
 
-    for item in items:
+    for source, count in breakdown.items():
 
-        counter[
-            item.get(
-                "source",
-                "Unknown"
+        if count == 0:
+
+            print(
+                f"❌ {source}: 0"
             )
-        ] += 1
 
-    return dict(
-        counter
+        else:
+
+            print(
+                f"✅ {source}: {count}"
+            )
+
+    return (
+        national,
+        bihar,
+        breakdown
     )
+
+
+# ============================================================
+# SAVE
+# ============================================================
+
+def save_output(
+    national,
+    bihar,
+    breakdown
+):
+
+    all_news = (
+        national
+        + bihar
+    )
+
+    output = {
+
+        "generated_at":
+            now_ist().strftime(
+                "%Y-%m-%d %H:%M:%S"
+            ),
+
+        "bihar_raw_count":
+            len(bihar),
+
+        "national_raw_count":
+            len(national),
+
+        "total_raw_count":
+            len(all_news),
+
+        "bihar_raw_news":
+            bihar,
+
+        "national_raw_news":
+            national,
+
+        "source_breakdown":
+            breakdown,
+    }
+
+    with open(
+        OUTPUT_FILE,
+        "w",
+        encoding="utf-8"
+    ) as f:
+
+        json.dump(
+            output,
+            f,
+            ensure_ascii=False,
+            indent=2
+        )
+
+    print("\n")
+    print("=" * 80)
+    print(
+        f"💾 {OUTPUT_FILE} saved"
+    )
+    print(
+        f"📦 Total records: "
+        f"{len(all_news)}"
+    )
+    print("=" * 80)
 
 
 # ============================================================
 # MAIN
 # ============================================================
 
-def run_scraper():
-
-    print("\n")
-    print("#" * 90)
-    print("🚀 DEEP GOVERNMENT + NATIONAL NEWS SCRAPER")
-    print("#" * 90)
-
-    print(
-        f"🎯 ONLY TARGET DATE: "
-        f"{TARGET_DATE_STR}"
-    )
-
-    national = []
-    bihar = []
-
-    # ========================================================
-    # NATIONAL
-    # ========================================================
-
-    # PIB
-    try:
-        national.extend(
-            scrape_pib()
-        )
-    except Exception as e:
-        print(
-            f"❌ PIB CRASH: {e}"
-        )
-
-    # Hindu + Indian Express
-    try:
-        national.extend(
-            scrape_national_sources()
-        )
-    except Exception as e:
-        print(
-            f"❌ NATIONAL RSS CRASH: {e}"
-        )
-
-    # PTI
-    try:
-        national.extend(
-            scrape_pti()
-        )
-    except Exception as e:
-        print(
-            f"❌ PTI CRASH: {e}"
-        )
-
-    # PRS
-    try:
-        national.extend(
-            scrape_prs()
-        )
-    except Exception as e:
-        print(
-            f"❌ PRS CRASH: {e}"
-        )
-
-    # India.gov.in
-    try:
-        national.extend(
-            scrape_india_gov()
-        )
-    except Exception as e:
-        print(
-            f"❌ INDIA.GOV CRASH: {e}"
-        )
-
-    # Sansad TV
-    try:
-        national.extend(
-            scrape_sansad_tv()
-        )
-    except Exception as e:
-        print(
-            f"❌ SANSAD TV CRASH: {e}"
-        )
-
-    # News On AIR National
-    try:
-        national.extend(
-            scrape_news_on_air()
-        )
-    except Exception as e:
-        print(
-            f"❌ NEWS ON AIR CRASH: {e}"
-        )
-
-    # ========================================================
-    # BIHAR
-    # ========================================================
-
-    # Google Bihar
-    try:
-        bihar.extend(
-            scrape_google_bihar()
-        )
-    except Exception as e:
-        print(
-            f"❌ GOOGLE BIHAR CRASH: {e}"
-        )
-
-    # CMO
-    try:
-        bihar.extend(
-            scrape_cmo_bihar()
-        )
-    except Exception as e:
-        print(
-            f"❌ CMO CRASH: {e}"
-        )
-
-    # IPRD
-    try:
-        bihar.extend(
-            scrape_iprd_bihar()
-        )
-    except Exception as e:
-        print(
-            f"❌ IPRD CRASH: {e}"
-        )
-
-    # Bihar Cabinet
-    try:
-        bihar.extend(
-            scrape_bihar_cabinet()
-        )
-    except Exception as e:
-        print(
-            f"❌ BIHAR CABINET CRASH: {e}"
-        )
-
-    # News On AIR Bihar
-    try:
-        bihar.extend(
-            scrape_news_on_air_bihar()
-        )
-    except Exception as e:
-        print(
-            f"❌ AIR BIHAR CRASH: {e}"
-        )
-
-    # ========================================================
-    # DEDUPE
-    # ========================================================
-
-    print("\n" + "=" * 80)
-    print("🧹 FINAL DEDUPLICATION")
-    print("=" * 80)
-
-    national = deduplicate(
-        national
-    )
-
-    bihar = deduplicate(
-        bihar
-    )
-
-    # ========================================================
-    # FINAL SOURCE STATS
-    # ========================================================
-
-    national_stats = get_source_stats(
-        national
-    )
-
-    bihar_stats = get_source_stats(
-        bihar
-    )
-
-    all_items = national + bihar
-
-    all_stats = get_source_stats(
-        all_items
-    )
-
-    print("\n" + "=" * 80)
-    print("📊 FINAL SOURCE BREAKDOWN")
-    print("=" * 80)
-
-    print(
-        json.dumps(
-            all_stats,
-            indent=2,
-            ensure_ascii=False
-        )
-    )
-
-    print("\n🇮🇳 NATIONAL:")
-    print(
-        json.dumps(
-            national_stats,
-            indent=2,
-            ensure_ascii=False
-        )
-    )
-
-    print("\n🏛️ BIHAR:")
-    print(
-        json.dumps(
-            bihar_stats,
-            indent=2,
-            ensure_ascii=False
-        )
-    )
-
-    # ========================================================
-    # RAW JSON
-    # ========================================================
-
-    payload = {
-
-        "generated_at":
-            datetime.now().strftime(
-                "%Y-%m-%d %H:%M:%S"
-            ),
-
-        "target_date":
-            TARGET_DATE_STR,
-
-        "target_date_display":
-            TARGET_DISPLAY,
-
-        "date_rule":
-            "ONLY EXACT TARGET DATE",
-
-        "content_rule":
-            "Minimum 500 chars OR 300 words; maximum 1500 words",
-
-        "national_raw_count":
-            len(national),
-
-        "bihar_raw_count":
-            len(bihar),
-
-        "total_raw_count":
-            len(all_items),
-
-        "source_breakdown":
-            all_stats,
-
-        "national_source_breakdown":
-            national_stats,
-
-        "bihar_source_breakdown":
-            bihar_stats,
-
-        "national_raw_news":
-            national,
-
-        "bihar_raw_news":
-            bihar,
-    }
-
-    with open(
-        "rawnews.json",
-        "w",
-        encoding="utf-8"
-    ) as f:
-
-        json.dump(
-            payload,
-            f,
-            ensure_ascii=False,
-            indent=2
-        )
-
-    print("\n" + "=" * 80)
-    print("💾 rawnews.json CREATED")
-    print("=" * 80)
-
-    print(
-        f"🎯 Target date : {TARGET_DATE_STR}"
-    )
-
-    print(
-        f"🇮🇳 National   : {len(national)}"
-    )
-
-    print(
-        f"🏛️ Bihar      : {len(bihar)}"
-    )
-
-    print(
-        f"📰 Total      : {len(all_items)}"
-    )
-
-    print(
-        f"📦 File       : rawnews.json"
-    )
-
-    print("=" * 80)
-
-
 if __name__ == "__main__":
-    run_scraper()
 
+    try:
+
+        national, bihar, breakdown = (
+            build_news()
+        )
+
+        save_output(
+            national,
+            bihar,
+            breakdown
+        )
+
+    except KeyboardInterrupt:
+
+        print(
+            "\n⛔ Scraper stopped by user."
+        )
+
+    except Exception as e:
+
+        print(
+            "\n❌ FATAL ERROR:"
+        )
+
+        print(
+            repr(e)
+        )
+
+        raise
