@@ -25,7 +25,7 @@ OUTPUT_FILE = "rawnews.json"
 TIMEOUT = 25
 
 # Per source maximum
-MAX_PER_SOURCE = 30
+MAX_PER_SOURCE = 10
 
 # Content quality requirement
 MIN_CONTENT_CHARS = 500
