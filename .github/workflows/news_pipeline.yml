@@ -1,0 +1,57 @@
+name: BPSC Current Affairs 2-Step Pipeline
+
+# Trigger: Har subah 6:00 AM IST (00:30 UTC) par chalega aur manual trigger bhi enabled hai
+on:
+  schedule:
+    - cron: '30 0 * * *'  # 00:30 UTC = 6:00 AM IST
+  workflow_dispatch:      # Manual 'Run workflow' button GitHub UI par
+
+jobs:
+  run-pipeline:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Step 1: Code Checkout
+      - name: Checkout Repository Code
+        uses: actions/checkout@v4
+
+      # Step 2: Python Environment Setup
+      - name: Setup Python 3.10
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+          cache: 'pip'
+
+      # Step 3: Install ALL Required Dependencies
+      - name: Install All Python Dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install curl_cffi beautifulsoup4 groq python-dateutil urllib3 lxml requests
+
+      # Step 4: Run Step 1 - Web Scraper (Outputs rawnews.json)
+      - name: Step 1 - Execute Web Scraper
+        env:
+          SCRAPINGANT_API_KEY: ${{ secrets.SCRAPINGANT_API_KEY }}
+        run: python scraper.py
+
+      # Step 5: Run Step 2 - AI Summarizer (Reads rawnews.json, outputs final JSONs)
+      - name: Step 2 - Execute AI Summarizer
+        env:
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+        run: python summarizer.py
+
+      # Step 6: Commit and Push Generated JSON Files to Repository
+      - name: Commit and Push Updated JSONs
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action Bot"
+          
+          # Add all created/updated JSON files
+          git add rawnews.json bihar_news.json national_news.json all_bihar_news_history.json all_national_news_history.json
+          
+          # Commit only if there are changes
+          git diff-index --quiet HEAD || git commit -m "Auto-update News JSONs (Scraped + Summarized) [skip ci]"
+          
+          # Rebase with remote main to prevent push rejection errors
+          git pull --rebase origin main
+          git push
