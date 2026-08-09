@@ -257,7 +257,7 @@ def fetch_raw_national_news(target_dt):
     return "\n".join(remove_duplicate_news(national_items))
 
 # -------------------------------------------------------------
-# 4. AI SUMMARY GENERATOR (UPDATED CUSTOM PROMPT)
+# 4. AI SUMMARY GENERATOR (STRICT ZERO TOLERANCE)
 # -------------------------------------------------------------
 def call_groq_safe(prompt, system_role="You are a Senior Current Affairs Editor for BPSC (Civil Services) and State Competitive Exams."):
     time.sleep(1)
@@ -323,23 +323,23 @@ def generate_clean_summary(raw_text, target_date_str, is_national=False):
        - Sports: Olympics, Asian Games, Commonwealth Games, World Cups, Grand Slams (Winners/Runner-ups, Host Countries, India's Medal Tally).
 
     ======================================================================
-    STRICT REJECTION & DISCARD RULES (MANDATORY):
+    STRICT REJECTION & DISCARD RULES (ABSOLUTE MANDATORY):
     ======================================================================
-    1. REJECT ALL Local Politics, Crime, Accidents, Protests, and Political Party Speeches/Rallies.
-    2. REJECT ALL Education, School/University Notices, Vacancies, Exam Dates, Admit Cards, and Results.
-    3. REJECT Routine Administrative Instructions and State-specific local affairs (Unless it is a Major Central Initiative).
-    4. ACCEPT ONLY factual, high-yield news relevant for BPSC/Civil Services Prelims & Mains.
-    5. DO NOT WRITE DISCLAIMERS OR FILLER TEXT. If no news qualifies, return {{"news_cards": []}}.
+    1. REJECT ALL Party Politics, Party Posts (e.g. TPCC, BJP State Presidents, Congress High Command), Election Rallies, and Political Comments.
+    2. REJECT ALL Other-State Specific News (e.g., Telangana Pradesh Congress, Andhra Pradesh CM weather updates, Karnataka/Tamil Nadu local policies). ALWAYS set "exam_tag": "{tag_name}". NEVER create tags for other states like "🎯 State Special / Andhra Pradesh".
+    3. REJECT ALL Local Crime, Accidents, Protests, and Routine Court Hearings.
+    4. REJECT ALL Education/School Notices, Job Vacancies, Exam Dates, Admit Cards, and Results.
+    5. REJECT Routine State Statements without Union Cabinet/Central Government Approval.
+    6. IF NO NEWS QUALIFIES: Return {{"news_cards": []}}. NEVER FORCE TRIVIAL NEWS.
 
     ======================================================================
-   CRITICAL BULLET POINT RULES (PURE NEWS EXPLANATION ONLY):
-    - Write ALL 3 Bullets in **Hinglish** (Hindi written in Roman English script).
-    - Focus STRICTLY on explaining WHAT happened in the news (Facts, Figures, Details).
-    - STRICTLY FORBIDDEN: Do NOT write "importance", "strategic significance", "exam value", or filler opinions.
-    - Bullet 1 (What Happened): Core event, decision, Ministry/Department, or location.
-    - Bullet 2 (Numbers & Facts): Specific budget outlay, target date, numerical figures, MoU amount, or rank.
-    - Bullet 3 (Further News Detail): Additional factual details about how the scheme/event works or implementation steps.
-    - Do NOT use Markdown asterisks (**).
+    BULLET POINT QUALITY RULES (EXACTLY 3 BULLETS PER CARD):
+    ======================================================================
+    - Bullet 1 (Core Fact): What happened, Nodal Ministry/Department, Host Country/City or Location in Hinglish.
+    - Bullet 2 (Numerical/Exam Data): Specific budget outlay, target year, India's rank, percentage, or MoU details. NEVER WRITE "No numerical data available". If no number exists, write exact Department/Nodal Agency or Scheme Name instead.
+    - Bullet 3 (Policy Significance): Strategic importance, policy objective, or context for exams in Hinglish.
+    - Write ALL Titles and Bullets in Hinglish (Hindi written in Roman English Script).
+    - Do NOT use Markdown asterisks (**) or special symbols inside text.
 
     JSON SCHEMA OUTPUT:
     {{
@@ -350,7 +350,7 @@ def generate_clean_summary(raw_text, target_date_str, is_national=False):
           "category": "Select EXACT matching category name from allowed list",
           "bullets": [
             "Bullet 1: Core fact with Nodal Ministry/Location in Hinglish",
-            "Bullet 2: Exact numerical data, budget, target year, or rank in Hinglish",
+            "Bullet 2: Specific numerical data, budget, target year, or nodal agency in Hinglish",
             "Bullet 3: Strategic policy significance/context in Hinglish"
           ],
           "exam_tag": "{tag_name}",
