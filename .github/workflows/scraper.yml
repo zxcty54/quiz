@@ -1,36 +1,112 @@
 name: 1. Run Web Scraper Only
 
 on:
-  workflow_dispatch: # GitHub Actions tab se manual run karne ke liye
+  workflow_dispatch:
+
+# Ek time par sirf ek scraper run hoga
+concurrency:
+  group: news-scraper
+  cancel-in-progress: false
 
 jobs:
   scrape-news:
     runs-on: ubuntu-latest
 
     steps:
+
+      # =====================================================
+      # 1. CHECKOUT
+      # =====================================================
       - name: Checkout Code
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
+      # =====================================================
+      # 2. PYTHON
+      # =====================================================
       - name: Setup Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.10'
 
+      # =====================================================
+      # 3. DEPENDENCIES
+      # =====================================================
       - name: Install Dependencies
         run: |
           python -m pip install --upgrade pip
           pip install curl_cffi beautifulsoup4 python-dateutil urllib3 lxml requests feedparser
 
+      # =====================================================
+      # 4. RUN SCRAPER
+      # =====================================================
       - name: Run Scraper Script
         env:
           SCRAPINGANT_API_KEY: ${{ secrets.SCRAPINGANT_API_KEY }}
-        run: python scraper.py
+        run: |
+          python scraper.py
 
-      - name: Commit and Push rawnews.json
+      # =====================================================
+      # 5. CHECK JSON
+      # =====================================================
+      - name: Check rawnews.json
+        run: |
+          if [ ! -f rawnews.json ]; then
+            echo "❌ rawnews.json was not created."
+            exit 1
+          fi
+
+          echo "✅ rawnews.json exists."
+
+          echo "File size:"
+          du -h rawnews.json
+
+          echo "JSON validation:"
+          python - <<'PY'
+          import json
+
+          with open("rawnews.json", "r", encoding="utf-8") as f:
+              data = json.load(f)
+
+          print("✅ Valid JSON")
+
+          print(
+              "National:",
+              data.get("national_raw_count", 0)
+          )
+
+          print(
+              "Bihar:",
+              data.get("bihar_raw_count", 0)
+          )
+
+          print(
+              "Sources:",
+              data.get("source_breakdown", {})
+          )
+          PY
+
+      # =====================================================
+      # 6. COMMIT
+      # =====================================================
+      - name: Commit rawnews.json
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action Bot"
+
           git add rawnews.json
-          git diff-index --quiet HEAD || git commit -m "Update rawnews.json [skip ci]"
-          git pull --rebase origin main
-          git push
+
+          if git diff --cached --quiet; then
+            echo "ℹ️ No changes in rawnews.json."
+            exit 0
+          fi
+
+          git commit -m "Update rawnews.json [skip ci]"
+
+      # =====================================================
+      # 7. PUSH
+      # =====================================================
+      - name: Push rawnews.json
+        run: |
+          git push origin HEAD:main
