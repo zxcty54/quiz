@@ -114,7 +114,7 @@ def remove_duplicate_news(news_list):
         else:
             dropped_count += 1
             
-    print(f"🧹 Deduplication Debug: Total Input={len(news_list)} | Duplicates Dropped={dropped_count} | Unique Sent={len(unique_news)}")
+    print(f"🧹 Deduplication Debug: Total Input={len(news_list)} | Duplicates Dropped={dropped_count} | Unique Sent to LLM={len(unique_news)}")
     return unique_news
 
 # -------------------------------------------------------------
@@ -140,6 +140,9 @@ def safe_fetch(url, timeout=12):
     return None
 
 def fetch_full_article_content(article_url):
+    """
+    In-depth core article parser tailored for PIB's distinct nested styling layout.
+    """
     if not article_url or not article_url.startswith("http"):
         return ""
     
@@ -157,7 +160,9 @@ def fetch_full_article_content(article_url):
         content_div = (
             soup.find(class_="innercontent") or 
             soup.find(class_="ReleaseIdText") or 
-            soup.find(id="divpri")
+            soup.find(id="divpri") or
+            soup.find(class_="release_text") or
+            soup.find(id="ContentPlaceHolder1_divpri")
         )
         
         if content_div:
@@ -172,14 +177,14 @@ def fetch_full_article_content(article_url):
             paragraphs = soup.find_all('p')
             full_text = " ".join([p.text.strip() for p in paragraphs if len(p.text.strip()) > 35])
             
-        clean_text_str = " ".join(full_text.split())
-        return clean_text_str[:1200]  
+        clean_text = " ".join(full_text.split())
+        return clean_text[:1200]  
     except Exception as e:
         print(f"⚠️ Error parsing deep content: {e}")
         return ""
 
 # -------------------------------------------------------------
-# 3. SCRAPING FUNCTIONS
+# 3. SCRAPING FUNCTIONS WITH FULL ARTICLE FETCHING
 # -------------------------------------------------------------
 def fetch_raw_bihar_news(target_dt):
     print("\n🔍 --- DEBUG: FETCHING BIHAR NEWS ---")
@@ -187,84 +192,4 @@ def fetch_raw_bihar_news(target_dt):
     source_stats = {}
 
     # A. Google News Bihar
-    g_url = "https://news.google.com/rss/search?q=Bihar+Government+Schemes+OR+Infrastructure+OR+Economy+when:2d&hl=hi&gl=IN&ceid=IN:hi"
-    content = safe_fetch(g_url)
-    if content:
-        try:
-            root = ET.fromstring(content)
-            count = 0
-            for item in root.findall('.//item'):
-                title = item.find('title').text if item.find('title') is not None else ""
-                link = item.find('link').text if item.find('link') is not None else ""
-                pub_date = item.find('pubDate').text if item.find('pubDate') is not None else ""
-                
-                if title and is_yesterday_news(pub_date, target_dt):
-                    deep_text = fetch_full_article_content(link)
-                    if len(deep_text) > 100:
-                        context_str = deep_text
-                    else:
-                        fallback = item.find('description').text if item.find('description') is not None else ""
-                        context_str = clean_html_text(fallback)[:250]
-                        
-                    news_items.append(f"[Google News Bihar] Title: {title} | Full Context: {context_str}")
-                    count += 1
-                    if count >= 8: break
-            source_stats["Google News Bihar"] = count
-        except Exception as e:
-            print(f"⚠️ Google News Bihar parse error: {e}")
-
-    # B. CMO Bihar
-    cmo_url = "https://cm.bihar.gov.in/users/preessrelease.aspx"
-    content = safe_fetch(cmo_url)
-    if content:
-        cmo_count = 0
-        soup = BeautifulSoup(content, "html.parser")
-        for row in soup.find_all('tr')[:8]:
-            cols = row.find_all('td')
-            if len(cols) >= 2:
-                title = cols[1].text.strip()
-                if title and len(title) > 10:
-                    news_items.append(f"[CMO Bihar] Title: {title}")
-                    cmo_count += 1
-        source_stats["CMO Bihar"] = cmo_count
-
-    print(f"📊 Source Breakdown: {json.dumps(source_stats)}")
-    return "\n".join(remove_duplicate_news(news_items))
-
-def fetch_raw_national_news(target_dt):
-    print("\n🔍 --- DEBUG: FETCHING NATIONAL NEWS ---")
-    national_items = []
-    source_stats = {}
-    
-    # Direct PIB National Portal
-    pib_count = 0
-    pib_url = "https://pib.gov.in/RssMain.aspx?Mod=1&Lang=1"
-    pib_content = safe_fetch(pib_url)
-    if pib_content:
-        try:
-            soup = BeautifulSoup(pib_content, "html.parser")
-            for item in soup.find_all('item')[:10]:
-                title = item.find('title').text if item.find('title') is not None else ""
-                link_node = item.find('link')
-                link = link_node.text.strip() if link_node is not None else ""
-                
-                deep_text = fetch_full_article_content(link) if link else ""
-                if title and len(title) > 15:
-                    national_items.append(f"[PIB India] Title: {title} | Content: {deep_text}")
-                    pib_count += 1
-            source_stats["PIB India"] = pib_count
-        except Exception as e:
-            print(f"❌ Error parsing PIB page: {e}")
-
-    print(f"📊 Source Breakdown: {json.dumps(source_stats)}")
-    return "\n".join(remove_duplicate_news(national_items))
-
-# -------------------------------------------------------------
-# 4. EXECUTION BLOCK
-# -------------------------------------------------------------
-if __name__ == "__main__":
-    target_dt, date_str, key_str = get_yesterday_info()
-    print(f"📅 Target Window: {date_str}")
-    bihar_raw = fetch_raw_bihar_news(target_dt)
-    national_raw = fetch_raw_national_news(target_dt)
-    print("\n🚀 Execution finished safely.")
+    g_url = "
