@@ -1,0 +1,2170 @@
+```json
+{
+  "topic_id": "motion_in_physics_complete",
+  "topic_title": "Motion in Physics",
+  "target_exams": ["BPSC", "BSSC", "RRB NTPC", "SSC CGL", "NEET", "UPSC Prelims", "BPSC TRE"],
+  "total_cards": 72,
+  "characters": {
+    "aman": {
+      "name": "Aman Sir",
+      "role": "teacher",
+      "avatar": "👨‍🏫"
+    },
+    "raju": {
+      "name": "Raju",
+      "role": "student",
+      "avatar": "👦"
+    }
+  },
+  "cards": [
+    {
+      "card_id": "card_01_intro",
+      "card_slug": "card_01_intro",
+      "type": "intro",
+      "concept_id": "motion_chapter_intro",
+      "level": 1,
+      "progress": {
+        "current": 1,
+        "total": 72
+      },
+      "intro_payload": {
+        "title": "Motion in Physics",
+        "icon": "🚀",
+        "target_exams": ["BPSC", "BSSC", "RRB NTPC", "SSC CGL", "NEET", "UPSC Prelims", "BPSC TRE"],
+        "learning_outcomes": [
+          "Understanding Motion from Daily Life Examples",
+          "Types of Motion: Linear, Circular, Oscillatory",
+          "Distance vs Displacement (BPSC Favorite Trap)",
+          "Speed vs Velocity vs Acceleration",
+          "Equations of Motion & Graphical Analysis",
+          "Uniform & Non-Uniform Motion",
+          "Circular Motion & Centripetal Force",
+          "PYQ Traps from BPSC, SSC, Railway & NEET"
+        ],
+        "estimated_time": "50 minutes",
+        "xp_reward": 600
+      },
+      "navigation": {
+        "next": "card_02_daily_motion",
+        "button_text": "Start Learning ➔"
+      }
+    },
+    {
+      "card_id": "card_02_daily_motion",
+      "card_slug": "card_02_daily_motion",
+      "type": "chat",
+      "concept_id": "motion_daily_life_intro",
+      "level": 1,
+      "progress": {
+        "current": 2,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, kal school jaate waqt tumne cycle chalayi thi na? Tumhara ghar se school tak jaana - ye ek example hai MOTION ka!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Haan Sir! Matlab jab koi cheez ek jagah se doosri jagah jaati hai, tab motion hoti hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul sahi! MOTION matlab jab kisi object ki POSITION time ke saath CHANGE hoti hai. Agar tum ek tree ke paas khade ho aur phir school gate ke paas pahunch gaye - tumhari position change hui, matlab tum MOTION mein the!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Toh agar main एक जगह खड़ा रहूं तो motion nahi hai?"
+        }
+      ],
+      "navigation": {
+        "next": "card_03_rest_vs_motion",
+        "button_text": "Perfect question! ➔"
+      }
+    },
+    {
+      "card_id": "card_03_rest_vs_motion",
+      "card_slug": "card_03_rest_vs_motion",
+      "type": "chat",
+      "concept_id": "rest_vs_motion",
+      "level": 1,
+      "progress": {
+        "current": 3,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Exactly! Agar tumhari position nahi badal rahi kisi reference point ke saath, toh tum REST (विराम) mein ho. Jaise ek पेड़ हमेशा एक ही जगह खड़ा रहता है - वो rest में है."
+        },
+        {
+          "speaker": "raju",
+          "text": "Par Sir, train में बैठे लोग तो rest में लगते hain apne seat पर, lekin actually motion में hain na?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Wah Raju! Brilliant observation! Ye concept hai RELATIVE MOTION ka. Train के अंदर के लोग relative to train (train के reference से) rest में hain, par relative to station/zameen (station के reference से) motion में hain! ⭐ BPSC/Railway में ये बहुत पूछा जाता है!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Ohhh... matlab motion और rest reference point पर depend करते hain!"
+        }
+      ],
+      "navigation": {
+        "next": "card_04_types_motion_intro",
+        "button_text": "Bilkul! Ab types देखते hain ➔"
+      }
+    },
+    {
+      "card_id": "card_04_types_motion_intro",
+      "card_slug": "card_04_types_motion_intro",
+      "type": "chat",
+      "concept_id": "types_of_motion_introduction",
+      "level": 1,
+      "progress": {
+        "current": 4,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ab dekhte hain motion kitne TYPES ki hoti hai. Broadly, teen main types hain: 1) LINEAR/TRANSLATORY (सीधी रेखा में), 2) CIRCULAR (गोलाकार), 3) OSCILLATORY (दोलन - आगे-पीछे)"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir examples se samjhaiye na!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Zaroor! LINEAR: Car सीधी road पर चलना. CIRCULAR: Fan का घूमना, Earth का Sun के चारों ओर घूमना. OSCILLATORY: Pendulum clock का आगे-पीछे हिलना, झूला झूलना!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Samajh gaya Sir! Har motion ki अपनी pattern hai!"
+        }
+      ],
+      "navigation": {
+        "next": "card_05_quiz_motion_types_q1",
+        "button_text": "Ab quiz try करो ➔"
+      }
+    },
+    {
+      "card_id": "card_05_quiz_motion_types_q1",
+      "card_slug": "card_05_quiz_motion_types_q1",
+      "type": "quiz",
+      "concept_id": "types_motion_quiz_1",
+      "level": 1,
+      "progress": {
+        "current": 5,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "⭐ BSSC Pattern: एक कार सीधी सड़क पर चल रही है। यह किस प्रकार की गति का उदाहरण है? (Q1/3)",
+        "options": [
+          { "id": "A", "text": "वृत्तीय गति (Circular Motion)" },
+          { "id": "B", "text": "रेखीय गति (Linear Motion)" },
+          { "id": "C", "text": "दोलन गति (Oscillatory Motion)" },
+          { "id": "D", "text": "घूर्णन गति (Rotational Motion)" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "सीधी सड़क पर चलना LINEAR/TRANSLATORY MOTION (रेखीय गति) का उदाहरण है। इसमें object एक सीधी line या path पर move करता है। BSSC/Railway में types of motion बहुत पूछे जाते हैं!"
+      },
+      "navigation": {
+        "next": "card_06_quiz_motion_types_q2",
+        "button_text": "Next Question ➔"
+      }
+    },
+    {
+      "card_id": "card_06_quiz_motion_types_q2",
+      "card_slug": "card_06_quiz_motion_types_q2",
+      "type": "quiz",
+      "concept_id": "types_motion_quiz_2",
+      "level": 1,
+      "progress": {
+        "current": 6,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "निम्नलिखित में से कौन सी OSCILLATORY MOTION का उदाहरण है? (Q2/3)",
+        "options": [
+          { "id": "A", "text": "पृथ्वी का सूर्य के चारों ओर घूमना" },
+          { "id": "B", "text": "पंखे का घूमना" },
+          { "id": "C", "text": "दीवार घड़ी के पेंडुलम का दोलन" },
+          { "id": "D", "text": "रेलगाड़ी का चलना" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "पेंडुलम का आगे-पीछे झूलना OSCILLATORY MOTION (दोलन गति) है। Option A और B Circular Motion हैं, Option D Linear Motion है। SSC/Railway में motion के types identify करने वाले questions आते हैं!"
+      },
+      "navigation": {
+        "next": "card_07_quiz_motion_types_q3",
+        "button_text": "Next Question ➔"
+      }
+    },
+    {
+      "card_id": "card_07_quiz_motion_types_q3",
+      "card_slug": "card_07_quiz_motion_types_q3",
+      "type": "quiz",
+      "concept_id": "types_motion_quiz_3",
+      "level": 1,
+      "progress": {
+        "current": 7,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "⭐ Railway Pattern: पृथ्वी का सूर्य के चारों ओर परिक्रमण किस प्रकार की गति है? (Q3/3)",
+        "options": [
+          { "id": "A", "text": "रेखीय गति" },
+          { "id": "B", "text": "दोलन गति" },
+          { "id": "C", "text": "वृत्तीय गति (Circular Motion)" },
+          { "id": "D", "text": "स्थिर अवस्था" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "पृथ्वी सूर्य के चारों ओर लगभग circular path में घूमती है - यह CIRCULAR MOTION (वृत्तीय गति) है। Earth की यह motion को Revolution कहते हैं। Railway/BPSC में planetary motion के questions आते हैं!"
+      },
+      "navigation": {
+        "next": "card_08_milestone_types",
+        "button_text": "Check Answer ➔"
+      }
+    },
+    {
+      "card_id": "card_08_milestone_types",
+      "card_slug": "card_08_milestone_types",
+      "type": "milestone",
+      "concept_id": "milestone_types_complete",
+      "level": 1,
+      "progress": {
+        "current": 8,
+        "total": 72
+      },
+      "milestone_payload": {
+        "title": "🎯 MODULE 1 COMPLETED!",
+        "badge_emoji": "🚀",
+        "completed_topic": "Motion की परिभाषा और Types",
+        "xp_earned": 50,
+        "milestone_progress": "Module 1/8 Clear",
+        "motivational_quote": "Zabardast! तुमने Motion के basics और types master कर लिए! अब Distance और Displacement के बीच का BPSC favorite trap समझने की तैयारी करो! 🔥"
+      },
+      "navigation": {
+        "next": "card_09_distance_intro",
+        "button_text": "Start Distance vs Displacement ➔"
+      }
+    },
+    {
+      "card_id": "card_09_distance_intro",
+      "card_slug": "card_09_distance_intro",
+      "type": "chat",
+      "concept_id": "distance_introduction",
+      "level": 2,
+      "progress": {
+        "current": 9,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ab aata hai sabse important aur tricky concept - DISTANCE vs DISPLACEMENT! Ye BPSC, SSC, Railway सभी exams में बहुत confuse करके पूछा जाता है!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir दोनों alag hain kya? Main toh dono ko same samajhta tha!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Ye sabki पहली गलती है! Pehle DISTANCE समझते hain. DISTANCE = जो भी रास्ता तुमने ACTUAL में तय किया, उसकी TOTAL LENGTH. Ye हमेशा POSITIVE होती है और ये एक SCALAR quantity है (सिर्फ magnitude है, direction नहीं)."
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab अगर मैं school जाते समय घूम-फिर कर गया तो पूरा रास्ता distance है?"
+        }
+      ],
+      "navigation": {
+        "next": "card_10_displacement_intro",
+        "button_text": "Bilkul! Ab Displacement ➔"
+      }
+    },
+    {
+      "card_id": "card_10_displacement_intro",
+      "card_slug": "card_10_displacement_intro",
+      "type": "chat",
+      "concept_id": "displacement_introduction",
+      "level": 2,
+      "progress": {
+        "current": 10,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Perfect understanding! Ab DISPLACEMENT: Ye है SHORTEST STRAIGHT LINE DISTANCE between INITIAL और FINAL position. Isme DIRECTION bhi matter करती है, इसलिए ye एक VECTOR quantity है!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir matlab चाहे main कितना भी घूमूं, displacement sirf starting से ending point तक की सीधी line?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Absolutely right! Example: Agar tum घर से 3 km North गए, phir 4 km East gए - तो DISTANCE = 3+4 = 7 km. Par DISPLACEMENT = सीधी line (Pythagoras से √(3²+4²) = 5 km North-East direction में)! ⭐ BPSC/SSC का favorite trap!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Wow! Toh displacement हमेशा distance से कम या बराबर होगा?"
+        }
+      ],
+      "navigation": {
+        "next": "card_11_distance_displacement_comparison",
+        "button_text": "Genius observation! ➔"
+      }
+    },
+    {
+      "card_id": "card_11_distance_displacement_comparison",
+      "card_slug": "card_11_distance_displacement_comparison",
+      "type": "chat",
+      "concept_id": "distance_displacement_key_differences",
+      "level": 2,
+      "progress": {
+        "current": 11,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Bilkul sahi Raju! KEY RULE: Displacement ≤ Distance (हमेशा). दोनों बराबर तभी होते हैं जब motion एकदम STRAIGHT LINE में हो. Important points: Distance कभी ZERO या NEGATIVE नहीं हो सकती. Displacement ZERO हो सकती है!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Displacement zero kab hogi Sir?"
+        },
+        {
+          "speaker": "aman",
+          "text": "जब तुम starting point पर वापस आ जाओ! Jaise park में round लगाकर वापस same जगह - Distance = पूरा round, Displacement = 0 (क्योंकि initial और final position same हैं)! ⭐ BPSC TRE/Railway में ये बहुत पूछा जाता है!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Achhaaa... circular track पर पूरा चक्कर = zero displacement!"
+        }
+      ],
+      "navigation": {
+        "next": "card_12_guess_distance_displacement",
+        "button_text": "Ab guess करो ➔"
+      }
+    },
+    {
+      "card_id": "card_12_guess_distance_displacement",
+      "card_slug": "card_12_guess_distance_displacement",
+      "type": "guess",
+      "concept_id": "distance_displacement_guess",
+      "level": 2,
+      "progress": {
+        "current": 12,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "राजू अपने घर से निकलकर 400m उत्तर की ओर गया, फिर 300m पूर्व की ओर गया। उसका DISTANCE कितना है?",
+        "options": [
+          { "id": "A", "text": "500 m" },
+          { "id": "B", "text": "700 m" },
+          { "id": "C", "text": "100 m" },
+          { "id": "D", "text": "400 m" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "DISTANCE = TOTAL PATH LENGTH = 400m + 300m = 700m. Distance में हम सभी paths को जोड़ते हैं, चाहे direction कुछ भी हो। ध्यान दो: Displacement इससे अलग होगा (500m using Pythagoras)!"
+      },
+      "navigation": {
+        "next": "card_13_quiz_distance_q1",
+        "button_text": "Check Answer ➔"
+      }
+    },
+    {
+      "card_id": "card_13_quiz_distance_q1",
+      "card_slug": "card_13_quiz_distance_q1",
+      "type": "quiz",
+      "concept_id": "distance_displacement_quiz_1",
+      "level": 2,
+      "progress": {
+        "current": 13,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "⭐ BPSC Pattern Multi-Statement:\nकथन A: Distance एक scalar quantity है।\nकथन B: Displacement एक vector quantity है।\nकथन C: Displacement का मान distance से अधिक हो सकता है। (Q1/3)",
+        "options": [
+          { "id": "A", "text": "केवल A और B सही हैं" },
+          { "id": "B", "text": "केवल B और C सही हैं" },
+          { "id": "C", "text": "A, B और C सभी सही हैं" },
+          { "id": "D", "text": "केवल A सही है" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Statement A सही: Distance scalar है (केवल magnitude)। Statement B सही: Displacement vector है (magnitude + direction)। Statement C गलत: Displacement कभी भी Distance से अधिक नहीं हो सकता! Displacement ≤ Distance हमेशा! ⭐ BPSC का favorite trap यही है - याद रखो!"
+      },
+      "navigation": {
+        "next": "card_14_quiz_distance_q2",
+        "button_text": "Next Question ➔"
+      }
+    },
+    {
+      "card_id": "card_14_quiz_distance_q2",
+      "card_slug": "card_14_quiz_distance_q2",
+      "type": "quiz",
+      "concept_id": "distance_displacement_quiz_2",
+      "level": 2,
+      "progress": {
+        "current": 14,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "⭐ SSC Pattern: एक व्यक्ति 200m वृत्ताकार पथ पर चलकर अपने प्रारंभिक बिंदु पर वापस आ गया। उसका displacement कितना है? (Q2/3)",
+        "options": [
+          { "id": "A", "text": "200 m" },
+          { "id": "B", "text": "400 m" },
+          { "id": "C", "text": "0 (Zero)" },
+          { "id": "D", "text": "100 m" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "जब initial position और final position SAME हो जाते हैं (वापस उसी जगह आ गया), तो Displacement = 0 (Zero)। Distance = 200m (पूरा path), लेकिन Displacement = 0। SSC/Railway में ये बहुत पूछा जाता है!"
+      },
+      "navigation": {
+        "next": "card_15_quiz_distance_q3",
+        "button_text": "Next Question ➔"
+      }
+    },
+    {
+      "card_id": "card_15_quiz_distance_q3",
+      "card_slug": "card_15_quiz_distance_q3",
+      "type": "quiz",
+      "concept_id": "distance_displacement_quiz_3",
+      "level": 2,
+      "progress": {
+        "current": 15,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "⭐ Railway Pattern: Distance और Displacement कब बराबर होते हैं? (Q3/3)",
+        "options": [
+          { "id": "A", "text": "जब गति वृत्तीय हो" },
+          { "id": "B", "text": "जब गति सीधी रेखा (straight line) में हो" },
+          { "id": "C", "text": "जब गति दोलन हो" },
+          { "id": "D", "text": "दोनों कभी बराबर नहीं होते" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Distance = Displacement तभी होता है जब motion एकदम STRAIGHT LINE में हो (बिना direction change के)। Circular या zigzag motion में Displacement हमेशा Distance से कम होगा। Railway/BPSC में यह concept बार-बार पूछा जाता है!"
+      },
+      "navigation": {
+        "next": "card_16_milestone_distance_displacement",
+        "button_text": "Check Answer ➔"
+      }
+    },
+    {
+      "card_id": "card_16_milestone_distance_displacement",
+      "card_slug": "card_16_milestone_distance_displacement",
+      "type": "milestone",
+      "concept_id": "milestone_distance_displacement_complete",
+      "level": 2,
+      "progress": {
+        "current": 16,
+        "total": 72
+      },
+      "milestone_payload": {
+        "title": "🏆 MODULE 2 COMPLETED!",
+        "badge_emoji": "📏",
+        "completed_topic": "Distance vs Displacement (BPSC Trap Cleared!)",
+        "xp_earned": 75,
+        "milestone_progress": "Module 2/8 Clear",
+        "motivational_quote": "Outstanding! अब तुम Distance और Displacement में कभी confuse नहीं होगे! अब Speed और Velocity के बीच का difference समझने चलते हैं! 💯"
+      },
+      "navigation": {
+        "next": "card_17_speed_intro",
+        "button_text": "Start Speed & Velocity ➔"
+      }
+    },
+    {
+      "card_id": "card_17_speed_intro",
+      "card_slug": "card_17_speed_intro",
+      "type": "chat",
+      "concept_id": "speed_introduction",
+      "level": 2,
+      "progress": {
+        "current": 17,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, ab dekhte hain कि कोई object कितनी TEZI se move कर रaha hai. इसे measure करने के लिए हम SPEED और VELOCITY use करते हैं. Pehle SPEED समझते हैं!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir speed matlab कितनी तेज़ चल रहे हैं?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Exactly! SPEED = Distance covered / Time taken. Formula: Speed = Distance/Time. Unit: meter/second (m/s) या kilometer/hour (km/h). Ye बताता है कि per unit time में कितनी distance cover हुई. Speed एक SCALAR quantity है!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Toh अगर कोई car 100 km distance 2 hours में cover करे, toh speed = 100/2 = 50 km/h?"
+        }
+      ],
+      "navigation": {
+        "next": "card_18_velocity_intro",
+        "button_text": "Perfect! Ab Velocity ➔"
+      }
+    },
+    {
+      "card_id": "card_18_velocity_intro",
+      "card_slug": "card_18_velocity_intro",
+      "type": "chat",
+      "concept_id": "velocity_introduction",
+      "level": 2,
+      "progress": {
+        "current": 18,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Bilkul sahi! Ab VELOCITY: Ye थोड़ा different है. VELOCITY = Displacement / Time. Formula: Velocity = Displacement/Time. Unit same (m/s या km/h). But ye एक VECTOR quantity है - matlab direction bhi matter करती है!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir matlab Speed और Velocity में बस Distance vs Displacement जैसा fark hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Exactly brilliant connection! Speed uses Distance (scalar), Velocity uses Displacement (vector). Agar कोई circular track पर चल रaha हो aur वापस same point पर आ जाए, toh Average Speed = Total Distance/Time, lekin Average Velocity = 0 (kyunki Displacement = 0)! ⭐ NEET/BPSC trap!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Wow! Same situation में speed positive, velocity zero!"
+        }
+      ],
+      "navigation": {
+        "next": "card_19_average_instantaneous",
+        "button_text": "Ek aur twist ➔"
+      }
+    },
+    {
+      "card_id": "card_19_average_instantaneous",
+      "card_slug": "card_19_average_instantaneous",
+      "type": "chat",
+      "concept_id": "average_vs_instantaneous",
+      "level": 2,
+      "progress": {
+        "current": 19,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Speed aur Velocity दोनों के दो types होते hain: 1) AVERAGE (पूरे journey का औसत), 2) INSTANTANEOUS (किसी particular moment पर). Speedometer में जो देखते हो वो INSTANTANEOUS SPEED है!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir average speed toh Total Distance/Total Time hoga na?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Perfect! AVERAGE SPEED = Total Distance / Total Time. AVERAGE VELOCITY = Total Displacement / Total Time. INSTANTANEOUS SPEED/VELOCITY = किसी particular instant पर speed/velocity (speedometer जैसे). ⭐ SSC/Railway में average vs instantaneous बहुत पूछा जाता है!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Samajh gaya! Average पूरे journey का, Instantaneous किसी moment का!"
+        }
+      ],
+      "navigation": {
+        "next": "card_20_quiz_speed_velocity_q1",
+        "button_text": "Quiz solve करो ➔"
+      }
+    },
+    {
+      "card_id": "card_20_quiz_speed_velocity_q1",
+      "card_slug": "card_20_quiz_speed_velocity_q1",
+      "type": "quiz",
+      "concept_id": "speed_velocity_quiz_1",
+      "level": 2,
+      "progress": {
+        "current": 20,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "⭐ NEET Pattern: एक कार 400m के वृत्तीय track पर दौड़ती है और एक चक्कर पूरा करके starting point पर लौट आती है। यदि समय 40 seconds लगा, तो average velocity क्या होगी? (Q1/3)",
+        "options": [
+          { "id": "A", "text": "10 m/s" },
+          { "id": "B", "text": "0 (Zero)" },
+          { "id": "C", "text": "400 m/s" },
+          { "id": "D", "text": "40 m/s" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Average Velocity = Total Displacement / Total Time. जब car starting point पर वापस आ गई, तो Displacement = 0। इसलिए Average Velocity = 0/40 = 0 (Zero)। ध्यान दें: Average Speed = 400/40 = 10 m/s होगी। NEET/BPSC में यह बहुत पूछा जाता है!"
+      },
+      "navigation": {
+        "next": "card_21_quiz_speed_velocity_q2",
+        "button_text": "Next Question ➔"
+      }
+    },
+    {
+      "card_id": "card_21_quiz_speed_velocity_q2",
+      "card_slug": "card_21_quiz_speed_velocity_q2",
+      "type": "quiz",
+      "concept_id": "speed_velocity_quiz_2",
+      "level": 2,
+      "progress": {
+        "current": 21,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "⭐ SSC Pattern: Speed और Velocity में मुख्य अंतर क्या है? (Q2/3)",
+        "options": [
+          { "id": "A", "text": "Speed vector है, Velocity scalar है" },
+          { "id": "B", "text": "Speed scalar है, Velocity vector है" },
+          { "id": "C", "text": "दोनों vector हैं" },
+          { "id": "D", "text": "दोनों scalar हैं" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "SPEED एक SCALAR quantity है (केवल magnitude, कोई direction नहीं)। VELOCITY एक VECTOR quantity है (magnitude + direction दोनों)। Speed = Distance/Time, Velocity = Displacement/Time। SSC CGL में यह बहुत पूछा जाता है!"
+      },
+      "navigation": {
+        "next": "card_22_quiz_speed_velocity_q3",
+        "button_text": "Next Question ➔"
+      }
+    },
+    {
+      "card_id": "card_22_quiz_speed_velocity_q3",
+      "card_slug": "card_22_quiz_speed_velocity_q3",
+      "type": "quiz",
+      "concept_id": "speed_velocity_quiz_3",
+      "level": 2,
+      "progress": {
+        "current": 22,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "⭐ Railway Pattern: गाड़ी के Speedometer में जो speed दिखती है, वह किस प्रकार की speed है? (Q3/3)",
+        "options": [
+          { "id": "A", "text": "Average Speed (औसत चाल)" },
+          { "id": "B", "text": "Instantaneous Speed (तात्क्षणिक चाल)" },
+          { "id": "C", "text": "Uniform Speed (एकसमान चाल)" },
+          { "id": "D", "text": "Variable Speed (परिवर्ती चाल)" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Speedometer उस particular moment (instant) पर speed दिखाता है, इसलिए यह INSTANTANEOUS SPEED है। Average Speed पूरे journey का होता है = Total Distance/Total Time। Railway/SSC में यह बहुत पूछा जाता है!"
+      },
+      "navigation": {
+        "next": "card_23_milestone_speed_velocity",
+        "button_text": "Check Answer ➔"
+      }
+    },
+    {
+      "card_id": "card_23_milestone_speed_velocity",
+      "card_slug": "card_23_milestone_speed_velocity",
+      "type": "milestone",
+      "concept_id": "milestone_speed_velocity_complete",
+      "level": 2,
+      "progress": {
+        "current": 23,
+        "total": 72
+      },
+      "milestone_payload": {
+        "title": "⚡ MODULE 3 COMPLETED!",
+        "badge_emoji": "🏃",
+        "completed_topic": "Speed vs Velocity (Scalar vs Vector Clear!)",
+        "xp_earned": 75,
+        "milestone_progress": "Module 3/8 Clear",
+        "motivational_quote": "Fantastic! Speed और Velocity के सभी traps clear हो गए! अब Acceleration की powerful concept समझने का समय! 🚀"
+      },
+      "navigation": {
+        "next": "card_24_acceleration_intro",
+        "button_text": "Start Acceleration ➔"
+      }
+    },
+    {
+      "card_id": "card_24_acceleration_intro",
+      "card_slug": "card_24_acceleration_intro",
+      "type": "chat",
+      "concept_id": "acceleration_introduction",
+      "level": 3,
+      "progress": {
+        "current": 24,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, jab tum bike पर accelerator दबाते ho, क्या होता है? Speed बढ़ती hai na! Isi RATE OF CHANGE OF VELOCITY को hum ACCELERATION कहते hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab acceleration बताता है कि velocity कितनी तेज़ी से बढ़ रही है?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Exactly! ACCELERATION = Change in Velocity / Time taken. Formula: a = (v - u) / t, जहाँ u = initial velocity, v = final velocity, t = time. Unit: m/s² (meter per second square). Acceleration एक VECTOR quantity है!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir अगर velocity घट रही हो toh?"
+        }
+      ],
+      "navigation": {
+        "next": "card_25_positive_negative_acceleration",
+        "button_text": "Important question! ➔"
+      }
+    },
+    {
+      "card_id": "card_25_positive_negative_acceleration",
+      "card_slug": "card_25_positive_negative_acceleration",
+      "type": "chat",
+      "concept_id": "positive_negative_acceleration",
+      "level": 3,
+      "progress": {
+        "current": 25,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Brilliant question Raju! Agar velocity BADH rahi hai = POSITIVE ACCELERATION. Agar velocity GHAT rahi hai = NEGATIVE ACCELERATION (इसे RETARDATION या DECELERATION भी कहते हैं). Jaise brake लगाने पर!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Ohhh... accelerator दबाना = positive acceleration, brake लगाना = negative acceleration (retardation)!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Perfect! Ek aur important point: अगर velocity CONSTANT hai (बदल नहीं रही), toh acceleration = ZERO! Uniform motion में acceleration zero होता है. ⭐ BPSC/Railway में ये बहुत पूछा जाता है!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Toh constant speed = zero acceleration!"
+        }
+      ],
+      "navigation": {
+        "next": "card_26_uniform_nonuniform_motion",
+        "button_text": "Ab Uniform Motion detail में ➔"
+      }
+    },
+    {
+      "card_id": "card_26_uniform_nonuniform_motion",
+      "card_slug": "card_26_uniform_nonuniform_motion",
+      "type": "chat",
+      "concept_id": "uniform_nonuniform_motion",
+      "level": 3,
+      "progress": {
+        "current": 26,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ab समझते hain UNIFORM vs NON-UNIFORM MOTION. UNIFORM MOTION: जब object EQUAL INTERVALS OF TIME में EQUAL DISTANCE cover करे. Matlab velocity constant रहे, acceleration = 0."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir example?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Car जो हर second में exactly 10 meter चलती है - uniform motion. NON-UNIFORM MOTION: जब velocity change होती रहे. Matlab कभी तेज़, कभी धीमे. City traffic में गाड़ी चलाना - non-uniform motion!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Samajh gaya! Uniform = constant speed, Non-uniform = changing speed!"
+        }
+      ],
+      "navigation": {
+        "next": "card_27_quiz_acceleration_q1",
+        "button_text": "Quiz करो ➔"
+      }
+    },
+    {
+      "card_id": "card_27_quiz_acceleration_q1",
+      "card_slug": "card_27_quiz_acceleration_q1",
+      "type": "quiz",
+      "concept_id": "acceleration_quiz_1",
+      "level": 3,
+      "progress": {
+        "current": 27,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "⭐ BPSC Pattern: एक कार की गति 20 m/s से बढ़कर 5 seconds में 40 m/s हो जाती है। Acceleration कितना है? (Q1/3)",
+        "options": [
+          { "id": "A", "text": "2 m/s²" },
+          { "id": "B", "text": "4 m/s²" },
+          { "id": "C", "text": "8 m/s²" },
+          { "id": "D", "text": "10 m/s²" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Acceleration = (v - u) / t = (40 - 20) / 5 = 20/5 = 4 m/s². यहाँ u = 20 m/s (initial), v = 40 m/s (final), t = 5 s. Positive acceleration है क्योंकि velocity बढ़ रही है। BPSC/SSC में numerical बहुत आते हैं!"
+      },
+      "navigation": {
+        "next": "card_28_quiz_acceleration_q2",
+        "button_text": "Next Question ➔"
+      }
+    },
+    {
+      "card_id": "card_28_quiz_acceleration_q2",
+      "card_slug": "card_28_quiz_acceleration_q2",
+      "type": "quiz",
+      "concept_id": "acceleration_quiz_2",
+      "level": 3,
+      "progress": {
+        "current": 28,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "⭐ Railway Pattern: Uniform motion में acceleration का मान क्या होता है? (Q2/3)",
+        "options": [
+          { "id": "A", "text": "धनात्मक (Positive)" },
+          { "id": "B", "text": "ऋणात्मक (Negative)" },
+          { "id": "C", "text": "शून्य (Zero)" },
+          { "id": "D", "text": "अनंत (Infinite)" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Uniform motion में velocity CONSTANT रहती है (change नहीं होती)। इसलिए Acceleration = Change in velocity / Time = 0/t = ZERO (शून्य)। Railway/SSC में यह बहुत पूछा जाता है!"
+      },
+      "navigation": {
+        "next": "card_29_quiz_acceleration_q3",
+        "button_text": "Next Question ➔"
+      }
+    },
+    {
+      "card_id": "card_29_quiz_acceleration_q3",
+      "card_slug": "card_29_quiz_acceleration_q3",
+      "type": "quiz",
+      "concept_id": "acceleration_quiz_3",
+      "level": 3,
+      "progress": {
+        "current": 29,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "⭐ SSC Pattern: जब किसी वाहन में brake लगाया जाता है, तो यह किस प्रकार का acceleration है? (Q3/3)",
+        "options": [
+          { "id": "A", "text": "Positive Acceleration (धनात्मक त्वरण)" },
+          { "id": "B", "text": "Negative Acceleration / Retardation (ऋणात्मक त्वरण / मंदन)" },
+          { "id": "C", "text": "Zero Acceleration (शून्य त्वरण)" },
+          { "id": "D", "text": "Uniform Acceleration (एकसमान त्वरण)" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Brake लगाने पर velocity DECREASE होती है, इसलिए यह NEGATIVE ACCELERATION है, जिसे RETARDATION या DECELERATION भी कहते हैं। SSC CGL में यह terminology बहुत पूछी जाती है!"
+      },
+      "navigation": {
+        "next": "card_30_milestone_acceleration",
+        "button_text": "Check Answer ➔"
+      }
+    },
+    {
+      "card_id": "card_30_milestone_acceleration",
+      "card_slug": "card_30_milestone_acceleration",
+      "type": "milestone",
+      "concept_id": "milestone_acceleration_complete",
+      "level": 3,
+      "progress": {
+        "current": 30,
+        "total": 72
+      },
+      "milestone_payload": {
+        "title": "🚀 MODULE 4 COMPLETED!",
+        "badge_emoji": "⚡",
+        "completed_topic": "Acceleration & Uniform Motion",
+        "xp_earned": 75,
+        "milestone_progress": "Module 4/8 Clear",
+        "motivational_quote": "Superb! Acceleration के सभी concepts clear! अब Equations of Motion के powerful formulas समझने का समय - NEET/BPSC में सबसे ज़्यादा marks यहीं से आते हैं! 💪"
+      },
+      "navigation": {
+        "next": "card_31_equations_motion_intro",
+        "button_text": "Start Equations of Motion ➔"
+      }
+    },
+    {
+      "card_id": "card_31_equations_motion_intro",
+      "card_slug": "card_31_equations_motion_intro",
+      "type": "chat",
+      "concept_id": "equations_of_motion_introduction",
+      "level": 3,
+      "progress": {
+        "current": 31,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ab aata hai sabse powerful tool - EQUATIONS OF MOTION! Ye तीन golden equations हैं जो UNIFORMLY ACCELERATED MOTION (constant acceleration) के लिए use होती हैं. ⭐ NEET/BPSC/Railway में इनसे सबसे ज़्यादा questions आते हैं!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir teen equations? Kya हैं वो?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! तीनों equations याद रखो: 1) v = u + at, 2) s = ut + ½at², 3) v² = u² + 2as. यहाँ u = initial velocity, v = final velocity, a = acceleration, t = time, s = distance/displacement."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir ye sab kab use karte hain? Mix ho jayega!"
+        }
+      ],
+      "navigation": {
+        "next": "card_32_first_equation",
+        "button_text": "Ek-ek karke samjhte hain ➔"
+      }
+    },
+    {
+      "card_id": "card_32_first_equation",
+      "card_slug": "card_32_first_equation",
+      "type": "chat",
+      "concept_id": "first_equation_motion",
+      "level": 3,
+      "progress": {
+        "current": 32,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "FIRST EQUATION: v = u + at. Ye बताता है कि t time बाद final velocity क्या होगी. Use तब करते हैं जब u, a, t दिया हो और v निकालना हो (या कोई एक unknown हो)."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir example?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Car की initial speed 10 m/s है, acceleration 2 m/s², 5 seconds बाद speed? v = u + at = 10 + (2×5) = 10 + 10 = 20 m/s! ⭐ SSC/Railway में direct substitution questions आते हैं!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Wow! Simple substitution!"
+        }
+      ],
+      "navigation": {
+        "next": "card_33_second_equation",
+        "button_text": "Second Equation ➔"
+      }
+    },
+    {
+      "card_id": "card_33_second_equation",
+      "card_slug": "card_33_second_equation",
+      "type": "chat",
+      "concept_id": "second_equation_motion",
+      "level": 3,
+      "progress": {
+        "current": 33,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "SECOND EQUATION: s = ut + ½at². Ye बताता है कि t time में कितनी DISTANCE (या displacement) cover होगी. Use तब करो जब u, a, t पता हो और distance निकालनी हो!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir उसी car का example?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! u = 10 m/s, a = 2 m/s², t = 5 s में distance? s = ut + ½at² = (10×5) + ½(2)(5)² = 50 + ½(2)(25) = 50 + 25 = 75 meters! ⭐ BPSC/NEET में ये बहुत आता है!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Samajh gaya! ½at² का part बढ़ता distance है acceleration से!"
+        }
+      ],
+      "navigation": {
+        "next": "card_34_third_equation",
+        "button_text": "Third Equation (Most useful!) ➔"
+      }
+    },
+    {
+      "card_id": "card_34_third_equation",
+      "card_slug": "card_34_third_equation",
+      "type": "chat",
+      "concept_id": "third_equation_motion",
+      "level": 3,
+      "progress": {
+        "current": 34,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "THIRD EQUATION: v² = u² + 2as. Ye सबसे useful है क्योंकि इसमें TIME नहीं है! Jab u, a, s पता हो और v निकालना हो (या time नहीं दिया हो), तब use करो!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir same example में 75 meters बाद final velocity check करें?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Perfect check! v² = u² + 2as = (10)² + 2(2)(75) = 100 + 300 = 400, तो v = √400 = 20 m/s. Dekho, पहले equation से भी 20 m/s आया था - match हो गया! ⭐ NEET में v² formula सबसे ज़्यादा useful है!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Wow! Equations आपस में consistent हैं!"
+        }
+      ],
+      "navigation": {
+        "next": "card_35_quiz_equations_q1",
+        "button_text": "Ab practice करो ➔"
+      }
+    },
+    {
+      "card_id": "card_35_quiz_equations_q1",
+      "card_slug": "card_35_quiz_equations_q1",
+      "type": "quiz",
+      "concept_id": "equations_motion_quiz_1",
+      "level": 3,
+      "progress": {
+        "current": 35,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "⭐ NEET Pattern: एक गाड़ी 5 m/s से चल रही है। यह 2 m/s² की दर से accelerate करती है। 4 seconds बाद उसकी velocity क्या होगी? (v = u + at) (Q1/3)",
+        "options": [
+          { "id": "A", "text": "9 m/s" },
+          { "id": "B", "text": "13 m/s" },
+          { "id": "C", "text": "17 m/s" },
+          { "id": "D", "text": "21 m/s" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "First Equation: v = u + at = 5 + (2 × 4) = 5 + 8 = 13 m/s। यहाँ u = 5 m/s, a = 2 m/s², t = 4 s। NEET/BPSC में ऐसे direct questions बहुत आते हैं - formula याद रखो!"
+      },
+      "navigation": {
+        "next": "card_36_quiz_equations_q2",
+        "button_text": "Next Question ➔"
+      }
+    },
+    {
+      "card_id": "card_36_quiz_equations_q2",
+      "card_slug": "card_36_quiz_equations_q2",
+      "type": "quiz",
+      "concept_id": "equations_motion_quiz_2",
+      "level": 3,
+      "progress": {
+        "current": 36,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "⭐ BPSC Pattern: एक वस्तु विरामावस्था (u=0) से 4 m/s² की दर से accelerate होती है। 5 seconds में वह कितनी दूरी तय करेगी? (s = ut + ½at²) (Q2/3)",
+        "options": [
+          { "id": "A", "text": "20 m" },
+          { "id": "B", "text": "40 m" },
+          { "id": "C", "text": "50 m" },
+          { "id": "D", "text": "100 m" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Second Equation: s = ut + ½at². यहाँ u = 0 (rest से शुरू), a = 4 m/s², t = 5 s। s = 0×5 + ½×4×(5)² = 0 + 2×25 = 50 m। Rest से start होने पर u = 0 लो - BPSC में यह trap है!"
+      },
+      "navigation": {
+        "next": "card_37_quiz_equations_q3",
+        "button_text": "Next Question ➔"
+      }
+    },
+    {
+      "card_id": "card_37_quiz_equations_q3",
+      "card_slug": "card_37_quiz_equations_q3",
+      "type": "quiz",
+      "concept_id": "equations_motion_quiz_3",
+      "level": 3,
+      "progress": {
+        "current": 37,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "⭐ Railway Pattern: एक train 10 m/s की गति से चल रही है। Brake लगाने पर -2 m/s² का retardation होता है। रुकने से पहले वह कितनी दूरी तय करेगी? (v² = u² + 2as) (Q3/3)",
+        "options": [
+          { "id": "A", "text": "15 m" },
+          { "id": "B", "text": "20 m" },
+          { "id": "C", "text": "25 m" },
+          { "id": "D", "text": "30 m" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Third Equation: v² = u² + 2as। रुकने पर v = 0, u = 10 m/s, a = -2 m/s² (retardation negative है)। 0² = (10)² + 2(-2)s → 0 = 100 - 4s → 4s = 100 → s = 25 m। Railway/SSC में braking distance बहुत पूछा जाता है!"
+      },
+      "navigation": {
+        "next": "card_38_milestone_equations",
+        "button_text": "Check Answer ➔"
+      }
+    },
+    {
+      "card_id": "card_38_milestone_equations",
+      "card_slug": "card_38_milestone_equations",
+      "type": "milestone",
+      "concept_id": "milestone_equations_complete",
+      "level": 3,
+      "progress": {
+        "current": 38,
+        "total": 72
+      },
+      "milestone_payload": {
+        "title": "🏆 MODULE 5 COMPLETED!",
+        "badge_emoji": "📐",
+        "completed_topic": "Equations of Motion (All 3 Mastered!)",
+        "xp_earned": 100,
+        "milestone_progress": "Module 5/8 Clear",
+        "motivational_quote": "Outstanding! तीनों Equations of Motion अब तुम्हारे हाथों की तरह आसान हैं! अब Graphical Analysis की visual power देखने का समय! 📊"
+      },
+      "navigation": {
+        "next": "card_39_graphs_intro",
+        "button_text": "Start Graphs of Motion ➔"
+      }
+    },
+    {
+      "card_id": "card_39_graphs_intro",
+      "card_slug": "card_39_graphs_intro",
+      "type": "chat",
+      "concept_id": "graphs_motion_introduction",
+      "level": 4,
+      "progress": {
+        "current": 39,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, ab hum motion को GRAPHS से समझेंगे - ye BPSC/NEET में बहुत पूछा जाता है! तीन important graphs हैं: 1) Distance-Time Graph, 2) Velocity-Time Graph, 3) Acceleration-Time Graph."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir graphs से क्या फायदा? Equations से toh solve ho जाता hai!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Graphs VISUALIZE करते hain motion को! Ek नज़र में पता चल जाता है object कब तेज़ था, कब धीमा, कब रुका. Plus, graph का SLOPE और AREA बहुत important information देते हैं - ye exam trick है! ⭐"
+        },
+        {
+          "speaker": "raju",
+          "text": "Slope? Area? Ye kya hain Sir?"
+        }
+      ],
+      "navigation": {
+        "next": "card_40_distance_time_graph",
+        "button_text": "Pehle Distance-Time Graph ➔"
+      }
+    },
+    {
+      "card_id": "card_40_distance_time_graph",
+      "card_slug": "card_40_distance_time_graph",
+      "type": "chat",
+      "concept_id": "distance_time_graph",
+      "level": 4,
+      "progress": {
+        "current": 40,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "DISTANCE-TIME GRAPH: X-axis पर Time, Y-axis पर Distance. Important: इस graph का SLOPE = SPEED! Steep slope (तीखी line) = ज़्यादा speed. Gentle slope (धीमी line) = कम speed. HORIZONTAL line (flat) = ZERO speed (rest में)!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab सीधी line = uniform speed, curved line = non-uniform speed?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Perfect! STRAIGHT LINE = Uniform motion (constant speed). CURVED LINE = Non-uniform motion (changing speed). ⭐ BPSC/Railway में graph देकर पूछते हैं 'कब speed ज़्यादा थी?' - steep slope वाली जगह!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Wow! Graph से motion का पूरा story पता चल गई!"
+        }
+      ],
+      "navigation": {
+        "next": "card_41_velocity_time_graph",
+        "button_text": "Ab Velocity-Time Graph ➔"
+      }
+    },
+    {
+      "card_id": "card_41_velocity_time_graph",
+      "card_slug": "card_41_velocity_time_graph",
+      "type": "chat",
+      "concept_id": "velocity_time_graph",
+      "level": 4,
+      "progress": {
+        "current": 41,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "VELOCITY-TIME GRAPH: Ye सबसे powerful है! TWO TRICKS: 1) Graph का SLOPE = ACCELERATION, 2) Graph के नीचे का AREA = DISTANCE COVERED! ⭐ NEET में ये दोनों बहुत पूछे जाते हैं!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir area से distance? Ye kaise?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! Velocity × Time = Distance. Toh graph में velocity (height) × time (width) = Area = Distance! HORIZONTAL line (flat) = constant velocity, zero acceleration. SLANT UP line = positive acceleration. SLANT DOWN line = negative acceleration (retardation)!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab slope से acceleration, area से distance - दो information एक graph से!"
+        }
+      ],
+      "navigation": {
+        "next": "card_42_graph_shapes",
+        "button_text": "Common graph shapes ➔"
+      }
+    },
+    {
+      "card_id": "card_42_graph_shapes",
+      "card_slug": "card_42_graph_shapes",
+      "type": "chat",
+      "concept_id": "common_graph_shapes",
+      "level": 4,
+      "progress": {
+        "current": 42,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Common Velocity-Time Graph Shapes: 1) HORIZONTAL LINE = Uniform motion (a=0), 2) UPWARD SLANT = Uniform positive acceleration, 3) DOWNWARD SLANT = Retardation, 4) CURVED LINE = Non-uniform acceleration!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir अगर graph X-axis को touch कर जाए?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Excellent question! Jab velocity-time graph X-axis (velocity = 0) को touch करे, matlab object RUK GAYA! ⭐ BPSC में ये trap है - 'कब object रुका?' - जहाँ graph X-axis पर आए!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Samajh gaya! Graph analysis bahut useful hai!"
+        }
+      ],
+      "navigation": {
+        "next": "card_43_quiz_graphs_q1",
+        "button_text": "Graph questions solve करो ➔"
+      }
+    },
+    {
+      "card_id": "card_43_quiz_graphs_q1",
+      "card_slug": "card_43_quiz_graphs_q1",
+      "type": "quiz",
+      "concept_id": "graphs_quiz_1",
+      "level": 4,
+      "progress": {
+        "current": 43,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "⭐ NEET Pattern: Velocity-Time graph का SLOPE क्या represent करता है? (Q1/3)",
+        "options": [
+          { "id": "A", "text": "Speed (चाल)" },
+          { "id": "B", "text": "Distance (दूरी)" },
+          { "id": "C", "text": "Acceleration (त्वरण)" },
+          { "id": "D", "text": "Displacement (विस्थापन)" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Velocity-Time graph का SLOPE = ACCELERATION। Change in velocity / Change in time = Acceleration (a = Δv/Δt)। Steep slope = ज़्यादा acceleration, Horizontal line (slope=0) = zero acceleration। NEET में यह बहुत पूछा जाता है!"
+      },
+      "navigation": {
+        "next": "card_44_quiz_graphs_q2",
+        "button_text": "Next Question ➔"
+      }
+    },
+    {
+      "card_id": "card_44_quiz_graphs_q2",
+      "card_slug": "card_44_quiz_graphs_q2",
+      "type": "quiz",
+      "concept_id": "graphs_quiz_2",
+      "level": 4,
+      "progress": {
+        "current": 44,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "⭐ BPSC Pattern: Distance-Time graph में HORIZONTAL LINE (flat) क्या दर्शाती है? (Q2/3)",
+        "options": [
+          { "id": "A", "text": "Uniform motion (एकसमान गति)" },
+          { "id": "B", "text": "वस्तु विराम (rest) में है" },
+          { "id": "C", "text": "Acceleration बढ़ रहा है" },
+          { "id": "D", "text": "Maximum speed है" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Distance-Time graph में HORIZONTAL LINE का मतलब है distance change नहीं हो रही (time बढ़ रहा है पर distance constant है) - यानी वस्तु REST (विराम) में है, Speed = 0। BPSC/Railway में यह trap बहुत आता है!"
+      },
+      "navigation": {
+        "next": "card_45_quiz_graphs_q3",
+        "button_text": "Next Question ➔"
+      }
+    },
+    {
+      "card_id": "card_45_quiz_graphs_q3",
+      "card_slug": "card_45_quiz_graphs_q3",
+      "type": "quiz",
+      "concept_id": "graphs_quiz_3",
+      "level": 4,
+      "progress": {
+        "current": 45,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "⭐ Railway Pattern: Velocity-Time graph के नीचे का AREA क्या दर्शाता है? (Q3/3)",
+        "options": [
+          { "id": "A", "text": "Acceleration (त्वरण)" },
+          { "id": "B", "text": "Speed (चाल)" },
+          { "id": "C", "text": "Distance covered (तय की गई दूरी)" },
+          { "id": "D", "text": "Time (समय)" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Velocity-Time graph के नीचे का AREA = DISTANCE COVERED। क्योंकि Velocity × Time = Distance। यह Railway/SSC/NEET में बहुत important concept है - area calculate करके distance निकालते हैं!"
+      },
+      "navigation": {
+        "next": "card_46_milestone_graphs",
+        "button_text": "Check Answer ➔"
+      }
+    },
+    {
+      "card_id": "card_46_milestone_graphs",
+      "card_slug": "card_46_milestone_graphs",
+      "type": "milestone",
+      "concept_id": "milestone_graphs_complete",
+      "level": 4,
+      "progress": {
+        "current": 46,
+        "total": 72
+      },
+      "milestone_payload": {
+        "title": "📊 MODULE 6 COMPLETED!",
+        "badge_emoji": "📈",
+        "completed_topic": "Graphical Analysis of Motion",
+        "xp_earned": 75,
+        "milestone_progress": "Module 6/8 Clear",
+        "motivational_quote": "Phenomenal! Graph analysis में अब तुम expert हो! अब Circular Motion की fascinating दुनिया में चलते हैं! 🎡"
+      },
+      "navigation": {
+        "next": "card_47_circular_motion_intro",
+        "button_text": "Start Circular Motion ➔"
+      }
+    },
+    {
+      "card_id": "card_47_circular_motion_intro",
+      "card_slug": "card_47_circular_motion_intro",
+      "type": "chat",
+      "concept_id": "circular_motion_introduction",
+      "level": 4,
+      "progress": {
+        "current": 47,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, ab ek special type of motion - CIRCULAR MOTION! Jab कोई object एक CIRCLE में घूमता है - jaise fan, merry-go-round, Earth का Sun के चारों ओर घूमना!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir circular motion में velocity constant रहती है kya?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Brilliant question! SPEED constant हो सकती है (uniform circular motion में), लेकिन VELOCITY कभी constant नहीं होती! Kyunki velocity एक vector है - DIRECTION लगातार बदल रही है, इसलिए velocity बदल रही है!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Ohhh... direction change = velocity change, matlab acceleration होगा?"
+        }
+      ],
+      "navigation": {
+        "next": "card_48_centripetal_acceleration",
+        "button_text": "Perfect logic! ➔"
+      }
+    },
+    {
+      "card_id": "card_48_centripetal_acceleration",
+      "card_slug": "card_48_centripetal_acceleration",
+      "type": "chat",
+      "concept_id": "centripetal_acceleration_force",
+      "level": 4,
+      "progress": {
+        "current": 48,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Absolutely right! Circular motion में हमेशा ACCELERATION होता है, जिसे CENTRIPETAL ACCELERATION कहते हैं. Ye acceleration हमेशा CENTER की ओर directed होता है (इसीलिए 'centripetal' = center की ओर)!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir तो इस acceleration के लिए force भी चाहिए?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Exactly! Newton के 2nd Law से F=ma, तो center की ओर force भी चाहिए - इसे CENTRIPETAL FORCE कहते हैं! Jaise पत्थर को रस्सी से घुमाते समय रस्सी का tension, planets को Sun की gravity - सब centripetal forces हैं! ⭐ NEET/BPSC favorite!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Toh circular motion के लिए center की ओर force ज़रूरी है!"
+        }
+      ],
+      "navigation": {
+        "next": "card_49_centrifugal_myth",
+        "button_text": "Ek confusion clear करते हैं ➔"
+      }
+    },
+    {
+      "card_id": "card_49_centrifugal_myth",
+      "card_slug": "card_49_centrifugal_myth",
+      "type": "chat",
+      "concept_id": "centrifugal_force_myth",
+      "level": 4,
+      "progress": {
+        "current": 49,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, bahut log 'CENTRIFUGAL FORCE' की बात करते हैं जो बाहर की ओर लगती है. Par सच्चाई ye hai ki CENTRIFUGAL FORCE एक PSEUDO FORCE (काल्पनिक बल) है - actually exist नहीं करती!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Hain?? Par jab मैं merry-go-round में बैठा hoon toh मुझे बाहर की ओर धक्का feel होता hai!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Wo तुम्हारी INERTIA है! Tumhara body सीधी line में जाना चाहता है (Newton's 1st Law), पर तुम्हें center की ओर force लग रही है. Rotating frame में बैठे होने से ऐसा लगता है कि बाहर की ओर force है - पर ये illusion है! ⭐ BPSC trap: Real force केवल CENTRIPETAL है!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Wow! Toh centrifugal = feeling, centripetal = real force!"
+        }
+      ],
+      "navigation": {
+        "next": "card_50_quiz_circular_q1",
+        "button_text": "Quiz में test करो ➔"
+      }
+    },
+    {
+      "card_id": "card_50_quiz_circular_q1",
+      "card_slug": "card_50_quiz_circular_q1",
+      "type": "quiz",
+      "concept_id": "circular_motion_quiz_1",
+      "level": 4,
+      "progress": {
+        "current": 50,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "⭐ NEET Pattern: Uniform circular motion में क्या constant रहता है? (Q1/3)",
+        "options": [
+          { "id": "A", "text": "Velocity (वेग)" },
+          { "id": "B", "text": "Speed (चाल)" },
+          { "id": "C", "text": "Acceleration (त्वरण)" },
+          { "id": "D", "text": "Displacement (विस्थापन)" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Uniform circular motion में SPEED (magnitude) constant रहती है, लेकिन VELOCITY नहीं (क्योंकि direction लगातार बदल रही है)। Acceleration भी constant नहीं (direction बदल रही है)। NEET में यह बहुत पूछा जाता है!"
+      },
+      "navigation": {
+        "next": "card_51_quiz_circular_q2",
+        "button_text": "Next Question ➔"
+      }
+    },
+    {
+      "card_id": "card_51_quiz_circular_q2",
+      "card_slug": "card_51_quiz_circular_q2",
+      "type": "quiz",
+      "concept_id": "circular_motion_quiz_2",
+      "level": 4,
+      "progress": {
+        "current": 51,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "⭐ BPSC Pattern: Centripetal force की दिशा क्या होती है? (Q2/3)",
+        "options": [
+          { "id": "A", "text": "वृत्त के बाहर की ओर" },
+          { "id": "B", "text": "वृत्त के केंद्र की ओर (Towards center)" },
+          { "id": "C", "text": "गति की दिशा में" },
+          { "id": "D", "text": "गति के लंबवत् (perpendicular)" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "CENTRIPETAL FORCE हमेशा वृत्त के CENTER की ओर directed होता है। 'Centripetal' शब्द का अर्थ ही है 'center-seeking'। यह force circular motion को maintain करता है। BPSC/Railway में direction बहुत पूछी जाती है!"
+      },
+      "navigation": {
+        "next": "card_52_quiz_circular_q3",
+        "button_text": "Next Question ➔"
+      }
+    },
+    {
+      "card_id": "card_52_quiz_circular_q3",
+      "card_slug": "card_52_quiz_circular_q3",
+      "type": "quiz",
+      "concept_id": "circular_motion_quiz_3",
+      "level": 4,
+      "progress": {
+        "current": 52,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "⭐ Railway Pattern Multi-Statement:\nकथन A: Centrifugal force एक real force है।\nकथन B: Circular motion में हमेशा acceleration होता है। (Q3/3)",
+        "options": [
+          { "id": "A", "text": "A और B दोनों सही हैं" },
+          { "id": "B", "text": "केवल A सही है" },
+          { "id": "C", "text": "केवल B सही है" },
+          { "id": "D", "text": "न A, न B सही है" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Statement A गलत: Centrifugal force एक PSEUDO FORCE (काल्पनिक बल) है, real नहीं। Statement B सही: Circular motion में direction लगातार बदल रही है, इसलिए velocity बदल रही है, मतलब acceleration है (centripetal)। Railway/BPSC trap यही है!"
+      },
+      "navigation": {
+        "next": "card_53_milestone_circular",
+        "button_text": "Check Answer ➔"
+      }
+    },
+    {
+      "card_id": "card_53_milestone_circular",
+      "card_slug": "card_53_milestone_circular",
+      "type": "milestone",
+      "concept_id": "milestone_circular_complete",
+      "level": 4,
+      "progress": {
+        "current": 53,
+        "total": 72
+      },
+      "milestone_payload": {
+        "title": "🎡 MODULE 7 COMPLETED!",
+        "badge_emoji": "🔄",
+        "completed_topic": "Circular Motion & Centripetal Force",
+        "xp_earned": 75,
+        "milestone_progress": "Module 7/8 Clear",
+        "motivational_quote": "Excellent! Circular motion के सभी concepts clear! अब कुछ Special Cases और PYQ Traps देखते हैं जो exams में बार-बार आते हैं! 🎯"
+      },
+      "navigation": {
+        "next": "card_54_special_cases",
+        "button_text": "Start Special Cases ➔"
+      }
+    },
+    {
+      "card_id": "card_54_special_cases",
+      "card_slug": "card_54_special_cases",
+      "type": "chat",
+      "concept_id": "special_motion_cases",
+      "level": 5,
+      "progress": {
+        "current": 54,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, ab कुछ special situations देखते हैं जो BPSC/SSC/Railway में trick questions के रूप में आते hain. पहला: Object को VERTICALLY UPWARD फेंकना (जैसे ball ऊपर फेंकना)!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir उसमें क्या special है?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Jab ball ऊपर जाती है: u = कोई positive value, a = -g (-9.8 m/s², gravity नीचे खींच रही), highest point पर v = 0! Equations use करो: v = u - gt (यहाँ a = -g), s = ut - ½gt². ⭐ NEET में maximum height = u²/2g formula बहुत आता है!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Aur वापस नीचे आते समय?"
+        }
+      ],
+      "navigation": {
+        "next": "card_55_free_fall_case",
+        "button_text": "Important point ➔"
+      }
+    },
+    {
+      "card_id": "card_55_free_fall_case",
+      "card_slug": "card_55_free_fall_case",
+      "type": "chat",
+      "concept_id": "free_fall_special_case",
+      "level": 5,
+      "progress": {
+        "current": 55,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "नीचे आते समय: u = 0 (top से शुरू), a = +g (नीचे की ओर), v बढ़ता है. Interesting fact: जितनी speed से ऊपर फेंका, उतनी ही speed से वापस हाथ में आएगा! Time to go up = Time to come down (same)! ⭐ BPSC favorite!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Wow! Symmetry hai!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Exactly! Second special case: FREE FALL (ऊपर से छोड़ना). यहाँ u = 0, a = g, s = h (height). Formula: h = ½gt², v = √(2gh). ⭐ Railway/SSC में 'किसी height से गिराने' के questions बहुत आते हैं!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Samajh gaya! Free fall = u=0, a=+g!"
+        }
+      ],
+      "navigation": {
+        "next": "card_56_relative_motion",
+        "button_text": "Ek aur tricky concept ➔"
+      }
+    },
+    {
+      "card_id": "card_56_relative_motion",
+      "card_slug": "card_56_relative_motion",
+      "type": "chat",
+      "concept_id": "relative_motion_detail",
+      "level": 5,
+      "progress": {
+        "current": 56,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "RELATIVE MOTION: जब दो objects motion में हों तो एक के relative to दूसरे की velocity निकालनी हो. Rule: अगर SAME DIRECTION में चल रहे हैं → Relative velocity = v₁ - v₂. OPPOSITE DIRECTION में → Relative velocity = v₁ + v₂!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir example?"
+        },
+        {
+          "speaker": "aman",
+          "text": "दो trains: एक 50 km/h, दूसरी 30 km/h। Same direction में: relative = 50-30 = 20 km/h (धीमी वाले से तेज़ वाली 20 km/h से दूर जाती दिखेगी). Opposite direction में: 50+30 = 80 km/h (बहुत तेज़ cross करेंगी)! ⭐ Railway exam में यही पूछते हैं!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Achhaaa! Same = घटाओ, Opposite = जोड़ो!"
+        }
+      ],
+      "navigation": {
+        "next": "card_57_quiz_special_q1",
+        "button_text": "Practice करो ➔"
+      }
+    },
+    {
+      "card_id": "card_57_quiz_special_q1",
+      "card_slug": "card_57_quiz_special_q1",
+      "type": "quiz",
+      "concept_id": "special_cases_quiz_1",
+      "level": 5,
+      "progress": {
+        "current": 57,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "⭐ NEET Pattern: एक गेंद को ऊपर की ओर फेंका जाता है। उच्चतम बिंदु (highest point) पर उसकी velocity क्या होगी? (Q1/3)",
+        "options": [
+          { "id": "A", "text": "Maximum (अधिकतम)" },
+          { "id": "B", "text": "Zero (शून्य)" },
+          { "id": "C", "text": "9.8 m/s" },
+          { "id": "D", "text": "Initial velocity के बराबर" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "जब ball सबसे ऊंचे point पर पहुंचती है, तो उसकी velocity = 0 (Zero) हो जाती है। उसके बाद वह नीचे गिरना शुरू करती है। v = u - gt में v = 0 हो जाता है highest point पर। NEET में यह बहुत पूछा जाता है!"
+      },
+      "navigation": {
+        "next": "card_58_quiz_special_q2",
+        "button_text": "Next Question ➔"
+      }
+    },
+    {
+      "card_id": "card_58_quiz_special_q2",
+      "card_slug": "card_58_quiz_special_q2",
+      "type": "quiz",
+      "concept_id": "special_cases_quiz_2",
+      "level": 5,
+      "progress": {
+        "current": 58,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "⭐ Railway Pattern: दो trains विपरीत दिशा (opposite direction) में 40 km/h और 60 km/h की गति से चल रही हैं। एक train के सापेक्ष दूसरी की relative velocity क्या होगी? (Q2/3)",
+        "options": [
+          { "id": "A", "text": "20 km/h" },
+          { "id": "B", "text": "100 km/h" },
+          { "id": "C", "text": "40 km/h" },
+          { "id": "D", "text": "60 km/h" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Opposite direction में Relative Velocity = v₁ + v₂ = 40 + 60 = 100 km/h। विपरीत दिशा में velocities जुड़ती हैं। Railway RRB में relative motion के questions बहुत आते हैं - formula याद रखो!"
+      },
+      "navigation": {
+        "next": "card_59_quiz_special_q3",
+        "button_text": "Next Question ➔"
+      }
+    },
+    {
+      "card_id": "card_59_quiz_special_q3",
+      "card_slug": "card_59_quiz_special_q3",
+      "type": "quiz",
+      "concept_id": "special_cases_quiz_3",
+      "level": 5,
+      "progress": {
+        "current": 59,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "⭐ BPSC Pattern: Free fall में किसी object का initial velocity (u) क्या होता है? (Q3/3)",
+        "options": [
+          { "id": "A", "text": "9.8 m/s" },
+          { "id": "B", "text": "0 (Zero)" },
+          { "id": "C", "text": "Maximum" },
+          { "id": "D", "text": "Variable (परिवर्तनशील)" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "FREE FALL में object को rest से छोड़ा जाता है (dropped from rest), इसलिए initial velocity u = 0 (Zero) होती है। फिर gravity के कारण वह accelerate होता है (a = g). BPSC/SSC में यह बहुत पूछा जाता है!"
+      },
+      "navigation": {
+        "next": "card_60_milestone_special",
+        "button_text": "Check Answer ➔"
+      }
+    },
+    {
+      "card_id": "card_60_milestone_special",
+      "card_slug": "card_60_milestone_special",
+      "type": "milestone",
+      "concept_id": "milestone_special_complete",
+      "level": 5,
+      "progress": {
+        "current": 60,
+        "total": 72
+      },
+      "milestone_payload": {
+        "title": "🌟 MODULE 8 COMPLETED!",
+        "badge_emoji": "🎓",
+        "completed_topic": "Special Cases & Relative Motion",
+        "xp_earned": 75,
+        "milestone_progress": "Module 8/8 Clear - All Topics Done!",
+        "motivational_quote": "Outstanding! सभी 8 modules complete! अब Officer Level Revision और Final Master Quiz के लिए तैयार हो जाओ! तुम अब Motion के complete expert हो! 🏆"
+      },
+      "navigation": {
+        "next": "card_61_officer_revision",
+        "button_text": "Start Officer Revision ➔"
+      }
+    },
+    {
+      "card_id": "card_61_officer_revision",
+      "card_slug": "card_61_officer_revision",
+      "type": "summary",
+      "concept_id": "officer_level_revision_summary",
+      "level": 5,
+      "progress": {
+        "current": 61,
+        "total": 72
+      },
+      "summary_payload": {
+        "title": "⚡ OFFICER LEVEL QUICK REVISION",
+        "revision_points": [
+          {
+            "topic": "Motion Types & Rest/Motion",
+            "point": "Motion = position change with time. Types: Linear (सीधी), Circular (गोलाकार), Oscillatory (दोलन). Rest/Motion relative होते हैं (reference frame पर depend)."
+          },
+          {
+            "topic": "Distance vs Displacement (BPSC Trap)",
+            "point": "Distance = Total path (scalar, always ≥0). Displacement = Shortest straight line (vector, can be 0). Displacement ≤ Distance always. Circular path पर पूरा चक्कर = Displacement 0."
+          },
+          {
+            "topic": "Speed vs Velocity",
+            "point": "Speed = Distance/Time (scalar). Velocity = Displacement/Time (vector). Average Velocity circular में 0 हो सकता है पर Average Speed नहीं. Instantaneous = particular moment पर."
+          },
+          {
+            "topic": "Acceleration & Motion Types",
+            "point": "Acceleration = (v-u)/t (m/s²). Positive = बढ़ रहा, Negative = घट रहा (Retardation). Uniform motion में a=0. Non-uniform में a≠0."
+          },
+          {
+            "topic": "3 Golden Equations",
+            "point": "1) v = u + at, 2) s = ut + ½at², 3) v² = u² + 2as. Uniform acceleration के लिए. Free fall: u=0, a=g. Upward throw: a=-g, top पर v=0."
+          },
+          {
+            "topic": "Graphs (NEET Favorite)",
+            "point": "Distance-Time: Slope = Speed. Velocity-Time: Slope = Acceleration, Area = Distance. Horizontal line in d-t = Rest. Straight line = Uniform motion."
+          },
+          {
+            "topic": "Circular Motion",
+            "point": "Speed constant हो सकती है पर Velocity नहीं (direction बदल रही). Centripetal acceleration/force = center की ओर. Centrifugal = pseudo force (fake)."
+          },
+          {
+            "topic": "Relative Motion & Units",
+            "point": "Same direction: v₁-v₂, Opposite: v₁+v₂. Speed unit: m/s, km/h. Acceleration: m/s². 1 km/h = 5/18 m/s. Railway favorite!"
+          }
+        ]
+      },
+      "navigation": {
+        "next": "card_62_pyq_traps_summary",
+        "button_text": "PYQ Traps देखो ➔"
+      }
+    },
+    {
+      "card_id": "card_62_pyq_traps_summary",
+      "card_slug": "card_62_pyq_traps_summary",
+      "type": "summary",
+      "concept_id": "pyq_traps_compilation",
+      "level": 5,
+      "progress": {
+        "current": 62,
+        "total": 72
+      },
+      "summary_payload": {
+        "title": "🎯 BPSC/SSC/Railway/NEET - Top PYQ Traps",
+        "revision_points": [
+          {
+            "topic": "⭐ BPSC Trap 1",
+            "point": "\"Displacement कभी Distance से अधिक नहीं हो सकती\" - Multi-statement में यह गलत option दिया जाता है। Always: Displacement ≤ Distance."
+          },
+          {
+            "topic": "⭐ SSC Trap 2",
+            "point": "\"Uniform motion में Acceleration = ?\" Answer: ZERO (not constant या कोई value). Velocity constant = acceleration zero."
+          },
+          {
+            "topic": "⭐ Railway Trap 3",
+            "point": "\"Speedometer क्या दिखाता है?\" Answer: INSTANTANEOUS Speed (not average). Particular moment की speed."
+          },
+          {
+            "topic": "⭐ NEET Trap 4",
+            "point": "\"Circular motion में जब starting point पर लौटे: Average Velocity = 0, Average Speed ≠ 0.\" Speed = Total Distance/Time."
+          },
+          {
+            "topic": "⭐ BPSC Trap 5",
+            "point": "\"Centrifugal Force एक real force है\" - यह गलत है! Centrifugal = Pseudo Force. Real force = Centripetal (center की ओर)."
+          },
+          {
+            "topic": "⭐ Railway Trap 6",
+            "point": "\"Free fall में u = ?\" Answer: 0 (Zero), a = g (+9.8). Upward throw में u = कोई value, a = -g."
+          },
+          {
+            "topic": "⭐ SSC Trap 7",
+            "point": "\"Velocity-Time graph का Area = ?\" Answer: DISTANCE covered (not displacement). Velocity × Time = Distance."
+          },
+          {
+            "topic": "⭐ NEET Trap 8",
+            "point": "\"Highest point पर velocity = 0 पर acceleration = ?\" Answer: g (not zero!). Gravity हमेशा काम कर रही है."
+          }
+        ]
+      },
+      "navigation": {
+        "next": "card_63_final_quiz_1",
+        "button_text": "Final Master Quiz Start ➔"
+      }
+    },
+    {
+      "card_id": "card_63_final_quiz_1",
+      "card_slug": "card_63_final_quiz_1",
+      "type": "final_quiz",
+      "concept_id": "final_master_quiz_1",
+      "level": 5,
+      "progress": {
+        "current": 63,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "🏆 BPSC OFFICER LEVEL - Multi-Statement Challenge:\n\nकथन A: एकसमान वृत्तीय गति में चाल (speed) नियत रहती है।\nकथन B: एकसमान वृत्तीय गति में वेग (velocity) नियत रहता है।\nकथन C: एकसमान वृत्तीय गति में त्वरण (acceleration) शून्य होता है।\nकथन D: अभिकेन्द्रीय बल (centripetal force) सदैव केंद्र की ओर कार्य करता है।\n\nसही कथनों का चयन करें:",
+        "options": [
+          { "id": "A", "text": "केवल A और D सही हैं" },
+          { "id": "B", "text": "केवल A, B और D सही हैं" },
+          { "id": "C", "text": "सभी कथन सही हैं" },
+          { "id": "D", "text": "केवल B और C सही हैं" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "✅ Statement A सही: Uniform circular motion में SPEED constant रहती है।\n\n❌ Statement B गलत: VELOCITY constant नहीं रहती क्योंकि direction लगातार बदल रही है (velocity = vector)।\n\n❌ Statement C गलत: Direction change हो रही है इसलिए acceleration ZERO नहीं है - centripetal acceleration होता है।\n\n✅ Statement D सही: Centripetal force हमेशा center की ओर directed होता है।\n\nइसलिए केवल A और D सही हैं। यह BPSC का classic trap है - Speed vs Velocity confusion!"
+      },
+      "navigation": {
+        "next": "card_64_final_quiz_2",
+        "button_text": "Next Challenge ➔"
+      }
+    },
+    {
+      "card_id": "card_64_final_quiz_2",
+      "card_slug": "card_64_final_quiz_2",
+      "type": "final_quiz",
+      "concept_id": "final_master_quiz_2",
+      "level": 5,
+      "progress": {
+        "current": 64,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "🎯 NEET LEVEL - Assertion-Reason Pattern:\n\nअभिकथन (Assertion): किसी वस्तु का विस्थापन (displacement) उसकी तय की गई दूरी (distance) से अधिक नहीं हो सकता।\n\nकारण (Reason): विस्थापन प्रारंभिक और अंतिम स्थिति के बीच की न्यूनतम दूरी होती है।\n\nसही विकल्प चुनें:",
+        "options": [
+          { "id": "A", "text": "A और R दोनों सही हैं और R, A की सही व्याख्या है" },
+          { "id": "B", "text": "A और R दोनों सही हैं लेकिन R, A की सही व्याख्या नहीं है" },
+          { "id": "C", "text": "A सही है लेकिन R गलत है" },
+          { "id": "D", "text": "A गलत है लेकिन R सही है" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "✅ Assertion सही है: Displacement कभी भी Distance से अधिक नहीं हो सकता। Mathematical relation: Displacement ≤ Distance (हमेशा)।\n\n✅ Reason सही है: Displacement वास्तव में initial और final position के बीच की SHORTEST STRAIGHT LINE distance है।\n\n✅ Reason, Assertion की CORRECT व्याख्या है: क्योंकि displacement shortest path है, इसलिए वह कभी भी actual path (distance) से अधिक नहीं हो सकता।\n\nइसलिए Answer: A (दोनों सही और R, A की सही व्याख्या करता है)। NEET/AIIMS में Assertion-Reason बहुत पूछा जाता है!"
+      },
+      "navigation": {
+        "next": "card_65_final_quiz_3",
+        "button_text": "Next Challenge ➔"
+      }
+    },
+    {
+      "card_id": "card_65_final_quiz_3",
+      "card_slug": "card_65_final_quiz_3",
+      "type": "final_quiz",
+      "concept_id": "final_master_quiz_3",
+      "level": 5,
+      "progress": {
+        "current": 65,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "🚂 Railway RRB LEVEL - Numerical Challenge:\n\nएक गाड़ी 20 m/s की गति से चल रही है। Brake लगाने पर वह 4 m/s² की दर से धीमी होती है (retardation = -4 m/s²)। गाड़ी पूरी तरह रुकने में कितनी दूरी तय करेगी?\n\n(Use: v² = u² + 2as)",
+        "options": [
+          { "id": "A", "text": "25 m" },
+          { "id": "B", "text": "50 m" },
+          { "id": "C", "text": "100 m" },
+          { "id": "D", "text": "200 m" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Third Equation of Motion: v² = u² + 2as\n\nDिया है:\n- u = 20 m/s (initial velocity)\n- v = 0 (final velocity, क्योंकि रुक जाएगी)\n- a = -4 m/s² (retardation, इसलिए negative)\n\nFormula में substitute करें:\n0² = (20)² + 2(-4)s\n0 = 400 - 8s\n8s = 400\ns = 50 m\n\nगाड़ी रुकने से पहले 50 meters तय करेगी। Railway RRB में braking distance के numerical बहुत आते हैं - v² = u² + 2as formula याद रखो!"
+      },
+      "navigation": {
+        "next": "card_66_final_quiz_4",
+        "button_text": "Next Challenge ➔"
+      }
+    },
+    {
+      "card_id": "card_66_final_quiz_4",
+      "card_slug": "card_66_final_quiz_4",
+      "type": "final_quiz",
+      "concept_id": "final_master_quiz_4",
+      "level": 5,
+      "progress": {
+        "current": 66,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "📊 SSC CGL LEVEL - Graph Analysis:\n\nएक Velocity-Time graph दिया गया है जो 0 से 10 seconds तक एक सीधी horizontal line है (velocity = 5 m/s constant)। इस graph से निम्न में से क्या निष्कर्ष निकलता है?",
+        "options": [
+          { "id": "A", "text": "वस्तु का acceleration 5 m/s² है" },
+          { "id": "B", "text": "वस्तु uniform motion में है, acceleration = 0" },
+          { "id": "C", "text": "वस्तु rest में है" },
+          { "id": "D", "text": "10 seconds में तय दूरी = 5 m" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Velocity-Time graph में HORIZONTAL LINE (flat) का मतलब है velocity CONSTANT है (5 m/s)।\n\nVelocity constant = Uniform Motion = Acceleration = 0 (Zero)।\n\nGraph का slope = acceleration। Horizontal line का slope = 0, इसलिए a = 0।\n\nOption A गलत: a = 0, not 5.\nOption C गलत: Velocity 5 m/s है, rest में नहीं.\nOption D गलत: Distance = Area under graph = 5 × 10 = 50 m (not 5 m).\n\n✅ Option B सही है। SSC CGL में graph interpretation बहुत पूछा जाता है!"
+      },
+      "navigation": {
+        "next": "card_67_final_quiz_5",
+        "button_text": "Next Challenge ➔"
+      }
+    },
+    {
+      "card_id": "card_67_final_quiz_5",
+      "card_slug": "card_67_final_quiz_5",
+      "type": "final_quiz",
+      "concept_id": "final_master_quiz_5",
+      "level": 5,
+      "progress": {
+        "current": 67,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "⭐ BPSC TRE LEVEL - Conceptual Trap:\n\nएक गेंद को ऊपर की ओर फेंका जाता है। उच्चतम बिंदु (highest point) पर:\n\nकथन I: गेंद का वेग (velocity) शून्य होता है।\nकथन II: गेंद का त्वरण (acceleration) शून्य होता है।\n\nसही विकल्प चुनें:",
+        "options": [
+          { "id": "A", "text": "केवल कथन I सही है" },
+          { "id": "B", "text": "केवल कथन II सही है" },
+          { "id": "C", "text": "दोनों कथन सही हैं" },
+          { "id": "D", "text": "दोनों कथन गलत हैं" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "✅ कथन I सही है: Highest point पर velocity = 0 (Zero) हो जाती है। यह वह moment है जब ball ऊपर जाना बंद करके नीचे आना शुरू करती है।\n\n❌ कथन II गलत है: Acceleration ZERO नहीं होता! Gravity (g = 9.8 m/s²) लगातार नीचे की ओर काम कर रही है - हर समय, हर point पर!\n\n⭐ यह BPSC/NEET का सबसे बड़ा trap है! Students सोचते हैं velocity = 0 तो acceleration भी 0 होगा - पर यह गलत है! Gravity कभी बंद नहीं होती!\n\nHighest point पर: v = 0, लेकिन a = g (downward) = -9.8 m/s²।\n\nइसीलिए केवल कथन I सही है। BPSC TRE में यह बहुत पूछा जाता है!"
+      },
+      "navigation": {
+        "next": "card_68_final_quiz_6",
+        "button_text": "Last Challenge ➔"
+      }
+    },
+    {
+      "card_id": "card_68_final_quiz_6",
+      "card_slug": "card_68_final_quiz_6",
+      "type": "final_quiz",
+      "concept_id": "final_master_quiz_6",
+      "level": 5,
+      "progress": {
+        "current": 68,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "🎓 UPSC PRELIMS LEVEL - Advanced Application:\n\nदो रेलगाड़ियाँ विपरीत दिशाओं में 72 km/h और 54 km/h की चाल से चल रही हैं। वे एक-दूसरे को कितने समय में पार कर लेंगी यदि प्रत्येक की लंबाई 100 m हो?\n\n(पहले relative velocity निकालो, फिर total distance/relative velocity)",
+        "options": [
+          { "id": "A", "text": "5.71 seconds" },
+          { "id": "B", "text": "10 seconds" },
+          { "id": "C", "text": "20 seconds" },
+          { "id": "D", "text": "40 seconds" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Step 1: Units convert करो (km/h → m/s):\n72 km/h = 72 × (5/18) = 20 m/s\n54 km/h = 54 × (5/18) = 15 m/s\n\nStep 2: Opposite direction में Relative Velocity:\nv_rel = v₁ + v₂ = 20 + 15 = 35 m/s\n\nStep 3: Total distance to cross:\nदोनों trains को पूरी तरह cross करने के लिए = Length₁ + Length₂ = 100 + 100 = 200 m\n\nStep 4: Time = Distance / Velocity:\nTime = 200 / 35 = 5.71 seconds\n\nUPSC Prelims में ऐसे multi-step problems आते हैं - relative motion + unit conversion + numerical calculation! याद रखो:\n- Opposite direction: velocities जोड़ो\n- Same direction: velocities घटाओ\n- km/h को m/s में convert करने के लिए × (5/18) करो"
+      },
+      "navigation": {
+        "next": "card_69_unit_conversion_bonus",
+        "button_text": "Bonus Trick ➔"
+      }
+    },
+    {
+      "card_id": "card_69_unit_conversion_bonus",
+      "card_slug": "card_69_unit_conversion_bonus",
+      "type": "chat",
+      "concept_id": "unit_conversion_trick",
+      "level": 5,
+      "progress": {
+        "current": 69,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, last bonus trick जो Railway/SSC में बहुत काम आएगी - UNIT CONVERSION! km/h को m/s में convert करने के लिए × (5/18) करो. m/s को km/h में करने के लिए × (18/5) करो!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir ये 5/18 कहाँ से आया?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Logic: 1 km = 1000 m, 1 hour = 3600 seconds. तो 1 km/h = 1000m/3600s = 10/36 = 5/18 m/s! Example: 36 km/h = 36 × (5/18) = 10 m/s. 20 m/s = 20 × (18/5) = 72 km/h!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Wow! Simple multiplication से ho jaata hai!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Exactly! ⭐ Railway exam में हर question में unit convert करनी पड़ती है - ये trick yaad rakho aur 30 seconds बचाओ! Exam में time = marks! अब तुम Motion के complete master हो Raju! 🏆"
+        }
+      ],
+      "navigation": {
+        "next": "card_70_formulae_sheet",
+        "button_text": "Final Formulae Sheet ➔"
+      }
+    },
+    {
+      "card_id": "card_70_formulae_sheet",
+      "card_slug": "card_70_formulae_sheet",
+      "type": "summary",
+      "concept_id": "complete_formulae_sheet",
+      "level": 5,
+      "progress": {
+        "current": 70,
+        "total": 72
+      },
+      "summary_payload": {
+        "title": "📋 COMPLETE MOTION FORMULAE SHEET",
+        "revision_points": [
+          {
+            "topic": "Basic Definitions",
+            "point": "Speed = Distance/Time | Velocity = Displacement/Time | Acceleration = (v-u)/t | Units: m/s, m/s²"
+          },
+          {
+            "topic": "3 Equations of Motion",
+            "point": "1️⃣ v = u + at | 2️⃣ s = ut + ½at² | 3️⃣ v² = u² + 2as (सबसे useful - time नहीं चाहिए)"
+          },
+          {
+            "topic": "Free Fall (u=0, a=g)",
+            "point": "v = gt | h = ½gt² | v² = 2gh | v = √(2gh) | g = 9.8 m/s² (या ~10 m/s²)"
+          },
+          {
+            "topic": "Vertical Throw (a = -g)",
+            "point": "Max Height: h = u²/2g | Time to reach top: t = u/g | Total time up+down: 2u/g | Return velocity = u"
+          },
+          {
+            "topic": "Circular Motion",
+            "point": "Centripetal acceleration = v²/r | Centripetal force = mv²/r | Speed constant पर Velocity variable"
+          },
+          {
+            "topic": "Relative Motion",
+            "point": "Same direction: v_rel = v₁ - v₂ | Opposite direction: v_rel = v₁ + v₂"
+          },
+          {
+            "topic": "Unit Conversion",
+            "point": "km/h → m/s: × (5/18) | m/s → km/h: × (18/5) | Example: 36 km/h = 10 m/s"
+          },
+          {
+            "topic": "Graph Tricks",
+            "point": "D-T graph: Slope = Speed | V-T graph: Slope = Acceleration, Area = Distance | Horizontal = constant/zero"
+          }
+        ]
+      },
+      "navigation": {
+        "next": "card_71_exam_strategy",
+        "button_text": "Exam Strategy ➔"
+      }
+    },
+    {
+      "card_id": "card_71_exam_strategy",
+      "card_slug": "card_71_exam_strategy",
+      "type": "summary",
+      "concept_id": "motion_exam_strategy",
+      "level": 5,
+      "progress": {
+        "current": 71,
+        "total": 72
+      },
+      "summary_payload": {
+        "title": "🎯 MOTION - EXAM CRACKING STRATEGY",
+        "revision_points": [
+          {
+            "topic": "BPSC Strategy",
+            "point": "Multi-statement questions: Distance/Displacement trap, Centrifugal force trap, Highest point acceleration trap पर focus करो। Assertion-Reason practice करो।"
+          },
+          {
+            "topic": "SSC CGL Strategy",
+            "point": "Graph interpretation, Unit conversion, Average vs Instantaneous, Uniform vs Non-uniform - ये topics बहुत आते हैं। Speed calculations practice करो।"
+          },
+          {
+            "topic": "Railway RRB Strategy",
+            "point": "Relative motion (trains crossing), Braking distance, Distance-time-speed problems - ये हर paper में हैं। Numerical practice ज़रूरी है।"
+          },
+          {
+            "topic": "NEET Strategy",
+            "point": "Equations of motion (सभी 3), Free fall, Projectile basics, Circular motion concepts, Graph area/slope - ये high weightage topics हैं।"
+          },
+          {
+            "topic": "Time Management",
+            "point": "Equation वाले questions: 30 sec. Graph वाले: 45 sec. Conceptual: 20 sec. Multi-statement: 40 sec. Practice से speed बढ़ाओ!"
+          },
+          {
+            "topic": "Common Mistakes to Avoid",
+            "point": "❌ Displacement > Distance मत सोचो | ❌ Uniform motion में a=0 भूलो मत | ❌ Centrifugal को real force मत मानो | ❌ Highest point पर a=0 मत सोचो"
+          },
+          {
+            "topic": "Quick Revision Checklist",
+            "point": "✅ तीनों equations याद? ✅ Graph slope/area trick याad? ✅ Unit conversion (5/18) याद? ✅ Relative motion formula याद? ✅ g = 9.8 m/s² याद?"
+          },
+          {
+            "topic": "Last Minute Tips",
+            "point": "Exam से 1 घंटा पहले: Formulae sheet देखो, PYQ traps revise करो, Unit conversion practice करो। Confidence रखो - तुमने पूरा chapter master कर लिया है! 💪"
+          }
+        ]
+      },
+      "navigation": {
+        "next": "card_72_final_milestone",
+        "button_text": "Complete Chapter! 🏆"
+      }
+    },
+    {
+      "card_id": "card_72_final_milestone",
+      "card_slug": "card_72_final_milestone",
+      "type": "milestone",
+      "concept_id": "motion_chapter_completion",
+      "level": 5,
+      "progress": {
+        "current": 72,
+        "total": 72
+      },
+      "milestone_payload": {
+        "title": "🏆 CHAPTER FULLY COMPLETED!",
+        "badge_emoji": "🎖️",
+        "completed_topic": "Motion in Physics - Complete Mastery Achieved!",
+        "xp_earned": 150,
+        "milestone_progress": "8/8 Modules + All Quizzes + Officer Level - 100% DONE! ✅",
+        "motivational_quote": "🎉 PHENOMENAL ACHIEVEMENT! 🎉\n\nराजू (और तुम), तुमने MOTION के हर concept को Daily Life examples से लेकर BPSC/NEET/Railway Officer Level तक master कर लिया है!\n\n✅ Motion Types & Rest/Motion (Relative)\n✅ Distance vs Displacement (BPSC Trap Cleared)\n✅ Speed vs Velocity (Scalar vs Vector)\n✅ Acceleration & Retardation\n✅ 3 Golden Equations of Motion\n✅ Graphical Analysis (Slope & Area Tricks)\n✅ Circular Motion & Centripetal Force\n✅ Special Cases (Free Fall, Relative Motion)\n✅ All PYQ Traps & Multi-Statement Mastery\n✅ Complete Formulae Sheet & Exam Strategy\n\nअब तुम किसी भी competitive exam (BPSC/SSC/Railway/NEET/UPSC) में Motion के सभी questions confidently solve कर सकते हो!\n\n📊 तुम्हारी Journey:\n• 72 Cards Completed\n• 600+ XP Earned\n• 8 Major Modules Mastered\n• 18 Quizzes Solved\n• 6 Officer Level Challenges Conquered\n\nYou are now a MOTION EXPERT! 🚀\n\nKeep Learning, Keep Growing, Keep Achieving! अगले chapter में मिलते हैं! 💪🔥"
+      },
+      "navigation": {
+        "next": null,
+        "button_text": "Back to Home 🏠"
+      }
+    }
+  ]
+}
+```
