@@ -1,12 +1,11 @@
 import os
-import re
 import json
+import re
 import time
-import hashlib
-import warnings
 import feedparser
 import ssl
 import html
+import warnings
 
 from datetime import datetime, timedelta, timezone
 from urllib.parse import urljoin, urlparse, parse_qs
@@ -20,7 +19,7 @@ from bs4 import BeautifulSoup
 from bs4 import MarkupResemblesLocatorWarning
 
 # ============================================================
-# CONFIG
+# CONFIGURATION
 # ============================================================
 
 OUTPUT_FILE = "rawnews.json"
@@ -31,8 +30,9 @@ MIN_CONTENT_CHARS = 200
 MIN_CONTENT_WORDS = 40
 MAX_CONTENT_CHARS = 30000
 
-# Rolling 36 Hours Window for max coverage
-MAX_NEWS_AGE_HOURS = 36
+# Rolling Window Limits
+DEFAULT_MAX_AGE_HOURS = 36         # Standard news portals (36 Hours)
+MYGOV_MAX_AGE_HOURS = 120          # MyGov Blog (Extended to 5 Days / 120 Hours)
 
 SCRAPINGANT_API_KEY = os.environ.get("SCRAPINGANT_API_KEY", "").strip()
 
@@ -59,7 +59,6 @@ warnings.filterwarnings("ignore", category=MarkupResemblesLocatorWarning)
 # ============================================================
 
 class CustomGovSSLAdapter(HTTPAdapter):
-    """Bypasses legacy SSL/TLS ciphers for Bihar Government portals"""
     def init_poolmanager(self, *args, **kwargs):
         ctx = create_urllib3_context()
         ctx.set_ciphers('DEFAULT@SECLEVEL=1')
@@ -94,40 +93,29 @@ def success(msg):
 
 
 # ============================================================
-# URL CLEANING
+# URL & TEXT CLEANING
 # ============================================================
 
 def clean_url(url):
     if not url:
         return ""
-
     url = str(url).strip()
     m = re.search(r'\]\((https?://[^)]+)\)', url)
     if m:
         url = m.group(1)
-
     url = re.sub(r'^\[.*?\]\(', '', url)
     url = re.sub(r'\)$', '', url)
-
     url = url.replace("\\&", "&").replace("\\:", ":").replace("\\_", "_").strip()
-
     if url.startswith("javascript:") or url.startswith("mailto:"):
         return ""
-
     if not url.startswith(("http://", "https://")):
         return ""
-
     return url
 
-
-# ============================================================
-# TEXT CLEANING
-# ============================================================
 
 def clean_text(text):
     if not text:
         return ""
-
     text = BeautifulSoup(str(text), "html.parser").get_text(" ", strip=True)
     text = text.replace("\xa0", " ").replace("\u200b", " ").replace("\ufeff", " ")
     return re.sub(r'\s+', ' ', text).strip()
@@ -144,10 +132,6 @@ def clean_title(title):
     return title.strip()
 
 
-# ============================================================
-# CONTENT QUALITY
-# ============================================================
-
 def word_count(text):
     if not text:
         return 0
@@ -162,49 +146,21 @@ def content_quality(text):
     return valid, chars, words
 
 
-# ============================================================
-# BOILERPLATE CLEANING
-# ============================================================
-
-PORTAL_BOILERPLATE = [
-    "accessibility options", "skip to main content", "state profile",
-    "facts and figure", "distribution of population", "web information manager",
-    "site owned by", "privacy policy", "terms and conditions",
-    "forgot password", "quick links", "important links", "useful links"
-]
-
-
-def boilerplate_score(text):
-    if not text:
-        return 0
-    low = text.lower()
-    return sum(1 for x in PORTAL_BOILERPLATE if x in low)
-
-
-def is_bad_portal_content(text):
-    if not text:
-        return True
-    return boilerplate_score(text) >= 6
-
-
 def remove_common_boilerplate(text):
     if not text:
         return ""
-
     patterns = [
         r'Help Web Information Manager.*?(?=$)',
         r'We have tried to put most accurate.*?(?=$)',
         r'Website Information.*?(?=$)',
     ]
-
     for pattern in patterns:
         text = re.sub(pattern, "", text, flags=re.I)
-
     return clean_text(text)
 
 
 # ============================================================
-# HYPER-FLEXIBLE DATE PARSER ENGINE
+# DATE PARSER ENGINE
 # ============================================================
 
 DATE_FORMATS = [
@@ -226,7 +182,6 @@ def parse_date(value):
     lower_val = value.lower()
     current_now = now_ist()
 
-    # Relative Time Parser (English & Hindi)
     if any(k in lower_val for k in ["ago", "today", "yesterday", "घंटे पहले", "दिन पहले", "आज", "कल"]):
         if "today" in lower_val or "आज" in lower_val:
             return current_now
@@ -267,7 +222,6 @@ def parse_date(value):
         m = re.search(pattern, value)
         if not m:
             continue
-
         raw_match = m.group(0)
         for fmt in ["%Y-%m-%dT%H:%M:%S", "%d-%m-%Y", "%d/%m/%Y", "%d-%b-%Y", "%d-%B-%Y", "%Y-%m-%d"]:
             try:
@@ -328,7 +282,7 @@ def extract_date_from_soup(soup):
     return None
 
 
-def is_within_rolling_window(parsed_date):
+def is_within_rolling_window(parsed_date, max_age_hours=DEFAULT_MAX_AGE_HOURS):
     if not parsed_date:
         return True  # Fallback
 
@@ -341,13 +295,13 @@ def is_within_rolling_window(parsed_date):
     time_difference = current_time - parsed_date
     hours_diff = time_difference.total_seconds() / 3600.0
 
-    if -2.0 <= hours_diff <= MAX_NEWS_AGE_HOURS:
+    if -2.0 <= hours_diff <= max_age_hours:
         return True
     return False
 
 
 # ============================================================
-# SMART FETCH WITH GOV.IN RESILIENCE
+# FETCH ENGINE
 # ============================================================
 
 def gov_special_fetch(url):
@@ -400,14 +354,9 @@ def curl_fetch(url, verify=True):
 def scrapingant_fetch(url):
     if not SCRAPINGANT_API_KEY:
         return None
-
     try:
         endpoint = "https://api.scrapingant.com/v2/general"
-        params = {
-            "url": url,
-            "x-api-key": SCRAPINGANT_API_KEY,
-            "browser": "false",
-        }
+        params = {"url": url, "x-api-key": SCRAPINGANT_API_KEY, "browser": "false"}
         r = normal_requests.get(endpoint, params=params, timeout=30)
         if r.status_code >= 400:
             warn(f"ScrapingAnt HTTP {r.status_code}: {url}")
@@ -465,11 +414,10 @@ def fetch_url(url):
 
 
 # ============================================================
-# DEEP ARTICLE CONTENT EXTRACTION
+# CONTENT EXTRACTION
 # ============================================================
 
 def extract_article_content(soup, source=""):
-    # PIB SPECIAL CASE (HIDDEN INPUT FIELD)
     if source.lower() == "pib":
         hidden = soup.find("input", id="ltrDescriptionn")
         if hidden and hidden.get("value"):
@@ -482,7 +430,6 @@ def extract_article_content(soup, source=""):
     for tag in soup(["script", "style", "noscript", "svg", "canvas", "nav", "footer", "form", "aside"]):
         tag.decompose()
 
-    # Priority Target Containers for Govt Portals & MyGov Blog
     target_div = (
         soup.find(id="lblNewsDetail") or
         soup.find(id="lblContent") or
@@ -599,10 +546,10 @@ def fetch_generic_article_content(url, source=""):
 
 
 # ============================================================
-# ITEM BUILDER WITH DYNAMIC DATE FALLBACKS
+# ITEM BUILDER WITH SOURCE-BASED ROLLING WINDOW
 # ============================================================
 
-def make_item(source, title, url, date=None, content="", item_type="Scraped"):
+def make_item(source, title, url, date=None, content="", item_type="Scraped", max_age_hours=DEFAULT_MAX_AGE_HOURS):
     clean_title_str = clean_title(title)
     clean_url_str = clean_url(url)
     clean_content_str = clean_text(content)
@@ -631,7 +578,7 @@ def make_item(source, title, url, date=None, content="", item_type="Scraped"):
         parsed_date = parsed_date.astimezone(IST)
 
     # Dynamic Rolling Window Filter
-    if not is_within_rolling_window(parsed_date):
+    if not is_within_rolling_window(parsed_date, max_age_hours=max_age_hours):
         debug(
             f"DATE OUTSIDE WINDOW REJECTED | {source} | "
             f"article_time={parsed_date.strftime('%Y-%m-%d %H:%M IST')} | "
@@ -658,10 +605,6 @@ def make_item(source, title, url, date=None, content="", item_type="Scraped"):
 
     if not valid:
         warn(f"DEBUG CONTENT TOO SHORT | {source} | {chars} chars | {words} words | {clean_title_str[:100]}")
-        return None
-
-    if is_bad_portal_content(clean_content_str):
-        warn(f"DEBUG PORTAL CONTENT REJECTED | {source} | {clean_title_str[:100]}")
         return None
 
     return {
@@ -732,6 +675,10 @@ def scrape_pib():
         content, date = fetch_generic_article_content(url, "PIB")
         if not content:
             continue
+
+        # Prefer RSS pubDate if HTML date parsing fails
+        if not date and hasattr(entry, 'published'):
+            date = parse_date(entry.published)
 
         obj = make_item(
             source="PIB",
@@ -809,14 +756,11 @@ def scrape_news_on_air():
             break
 
     results = deduplicate(results)
-    if not results:
-        debug("NEWS ON AIR: Recent rolling window ka koi data nahi mila.")
-
     print(f"✅ News On AIR usable: {len(results)}")
     return results
 
 
-# 3. MYGOV BLOG (NEW SOURCE 🆕)
+# 3. MYGOV BLOG (FIXED DATE OVERRIDE & EXTENDED AGE WINDOW)
 MYGOV_RSS = "https://blog.mygov.in/feed/"
 
 
@@ -831,9 +775,13 @@ def scrape_mygov():
         if not title or not url:
             continue
 
-        content, date = fetch_generic_article_content(url, "MyGov Blog")
+        # 🎯 FIX: Parse RSS Feed Official Date First
+        rss_date = None
+        if hasattr(entry, 'published') and entry.published:
+            rss_date = parse_date(entry.published)
 
-        # Fallback to RSS summary/description if direct page fetch is short
+        content, html_date = fetch_generic_article_content(url, "MyGov Blog")
+
         if not content:
             summary = clean_text(getattr(entry, 'summary', '') or getattr(entry, 'description', ''))
             if len(summary) >= MIN_CONTENT_CHARS:
@@ -842,16 +790,17 @@ def scrape_mygov():
         if not content:
             continue
 
-        if not date and hasattr(entry, 'published'):
-            date = parse_date(entry.published)
+        # 🎯 FIX: Give 1st Priority to Official RSS Feed Date over HTML Scraping
+        final_date = rss_date or html_date
 
         obj = make_item(
             source="MyGov Blog",
             title=title,
             url=url,
-            date=date,
+            date=final_date,
             content=content,
-            item_type="Blog Article"
+            item_type="Blog Article",
+            max_age_hours=MYGOV_MAX_AGE_HOURS  # Passes 120 Hours Window for MyGov
         )
         if obj:
             results.append(obj)
@@ -860,9 +809,6 @@ def scrape_mygov():
             break
 
     results = deduplicate(results)
-    if not results:
-        debug("MYGOV BLOG: Recent rolling window ka koi data nahi mila.")
-
     print(f"✅ MyGov Blog usable: {len(results)}")
     return results
 
@@ -929,9 +875,6 @@ def scrape_iprd_bihar():
             break
 
     results = deduplicate(results)
-    if not results:
-        debug("IPRD BIHAR: Recent rolling window ka koi data nahi mila.")
-
     print(f"✅ IPRD Bihar usable: {len(results)}")
     return results
 
@@ -999,9 +942,6 @@ def scrape_bihar_cabinet():
             break
 
     results = deduplicate(results)
-    if not results:
-        debug("BIHAR CABINET: Recent rolling window ka koi data nahi mila.")
-
     print(f"✅ Bihar Cabinet usable: {len(results)}")
     return results
 
@@ -1067,84 +1007,59 @@ def scrape_india_gov():
             break
 
     results = deduplicate(results)
-    if not results:
-        debug("INDIA.GOV.IN: Recent rolling window ka koi data nahi mila.")
-
     print(f"✅ India.gov.in usable: {len(results)}")
     return results
 
 
 # ============================================================
-# SOURCE RUNNER
+# BUILD & SAVE PIPELINE
 # ============================================================
 
 def safe_source(name, function):
     try:
         return function()
     except Exception as e:
-        print(f"\n❌ {name} SCRAPER ERROR:")
-        print(repr(e))
+        warn(f"{name} SCRAPER ERROR: {e}")
         return []
 
-
-# ============================================================
-# BUILD ALL NEWS
-# ============================================================
 
 def build_news():
     print("\n" + "=" * 80 + "\n🚀 STARTING ALL NEWS SOURCES\n" + "=" * 80)
 
-    all_results = []
     source_results = {}
-
-    source_results["PIB"] = safe_source("PIB", scrape_pib)
+    source_results["PIB Central"] = safe_source("PIB", scrape_pib)
     source_results["News On AIR"] = safe_source("News On AIR", scrape_news_on_air)
     source_results["MyGov Blog"] = safe_source("MyGov Blog", scrape_mygov)
     source_results["IPRD Bihar"] = safe_source("IPRD Bihar", scrape_iprd_bihar)
     source_results["Bihar Cabinet"] = safe_source("Bihar Cabinet", scrape_bihar_cabinet)
     source_results["India.gov.in"] = safe_source("India.gov.in", scrape_india_gov)
 
-    breakdown = {}
-
-    for source, items in source_results.items():
-        items = deduplicate(items)
-        source_results[source] = items
-        breakdown[source] = len(items)
-        all_results.extend(items)
-
-    all_results = deduplicate(all_results)
-
     bihar_sources = {"IPRD Bihar", "Bihar Cabinet"}
     bihar = []
     national = []
+    breakdown = {}
 
-    for item in all_results:
-        source = item.get("source", "")
-        if source in bihar_sources:
-            bihar.append(item)
+    for source_name, items in source_results.items():
+        clean_items = deduplicate(items)
+        breakdown[source_name] = len(clean_items)
+
+        if source_name in bihar_sources:
+            bihar.extend(clean_items)
         else:
-            national.append(item)
+            national.extend(clean_items)
+
+    national = deduplicate(national)
+    bihar = deduplicate(bihar)
+    all_news = national + bihar
 
     print("\n" + "=" * 80 + "\n📊 FINAL SOURCE BREAKDOWN\n" + "=" * 80)
     print(json.dumps(breakdown, ensure_ascii=False, indent=2))
-
-    print(f"\n🇮🇳 National / Other : {len(national)}")
-    print(f"🏛️ Bihar               : {len(bihar)}")
-    print(f"📰 Total               : {len(all_results)}")
-
-    print("\n⚠️ SOURCE ZERO REPORT")
-    for source, count in breakdown.items():
-        if count == 0:
-            print(f"❌ {source}: 0")
-        else:
-            print(f"✅ {source}: {count}")
+    print(f"\n🇮🇳 National : {len(national)}")
+    print(f"🏛️ Bihar    : {len(bihar)}")
+    print(f"📰 Total    : {len(all_news)}")
 
     return national, bihar, breakdown
 
-
-# ============================================================
-# SAVE OUTPUT
-# ============================================================
 
 def save_output(national, bihar, breakdown):
     all_news = national + bihar
@@ -1163,14 +1078,10 @@ def save_output(national, bihar, breakdown):
         json.dump(output, f, ensure_ascii=False, indent=2)
 
     print("\n" + "=" * 80)
-    print(f"💾 {OUTPUT_FILE} saved")
+    print(f"💾 {OUTPUT_FILE} saved successfully!")
     print(f"📦 Total records: {len(all_news)}")
     print("=" * 80)
 
-
-# ============================================================
-# MAIN
-# ============================================================
 
 if __name__ == "__main__":
     try:
@@ -1179,6 +1090,5 @@ if __name__ == "__main__":
     except KeyboardInterrupt:
         print("\n⛔ Scraper stopped by user.")
     except Exception as e:
-        print("\n❌ FATAL ERROR:")
-        print(repr(e))
+        print(f"\n❌ FATAL ERROR: {e}")
         raise
