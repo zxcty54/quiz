@@ -7,14 +7,13 @@ import warnings
 import feedparser
 
 from datetime import datetime, timedelta, timezone
-from urllib.parse import urljoin, urlparse, parse_qs
+from urllib.parse import urljoin, urlparse, parse_qs, urlencode
 
 from curl_cffi import requests as curl_requests
 import requests as normal_requests
 
 from bs4 import BeautifulSoup
 from bs4 import MarkupResemblesLocatorWarning
-
 
 # ============================================================
 # CONFIG
@@ -24,16 +23,16 @@ OUTPUT_FILE = "rawnews.json"
 TIMEOUT = 20
 MAX_PER_SOURCE = 10
 
-MIN_CONTENT_CHARS = 300
-MIN_CONTENT_WORDS = 60
+MIN_CONTENT_CHARS = 250
+MIN_CONTENT_WORDS = 50
 MAX_CONTENT_CHARS = 30000
 
-# Rolling 30 Hours Window for maximum coverage
-MAX_NEWS_AGE_HOURS = 30
+# Rolling 36 Hours Window for max flexibility
+MAX_NEWS_AGE_HOURS = 36
 
 SCRAPINGANT_API_KEY = os.environ.get("SCRAPINGANT_API_KEY", "").strip()
 
-# Current date in IST
+# Current date & time in IST
 IST = timezone(timedelta(hours=5, minutes=30))
 
 HEADERS = {
@@ -181,7 +180,7 @@ def remove_common_boilerplate(text):
 
 
 # ============================================================
-# DATE PARSER & ROLLING WINDOW
+# HYPER-FLEXIBLE DATE PARSER ENGINE
 # ============================================================
 
 DATE_FORMATS = [
@@ -203,22 +202,22 @@ def parse_date(value):
     lower_val = value.lower()
     current_now = now_ist()
 
-    # Relative Time Handling ("3 hours ago", "10 mins ago", "1 day ago")
-    if "ago" in lower_val or "today" in lower_val or "yesterday" in lower_val:
-        if "today" in lower_val:
+    # Relative Time Parser (English + Hindi Support)
+    if any(k in lower_val for k in ["ago", "today", "yesterday", "घंटे पहले", "दिन पहले", "आज", "कल"]):
+        if "today" in lower_val or "आज" in lower_val:
             return current_now
-        if "yesterday" in lower_val:
+        if "yesterday" in lower_val or "कल" in lower_val:
             return current_now - timedelta(days=1)
 
-        match = re.search(r'(\d+)\s*(hour|hr|day|min|minute)s?\s*ago', lower_val)
+        match = re.search(r'(\d+)\s*(hour|hr|day|min|minute|घंटे|मिनट|दिन)s?\s*(ago|पहले)?', lower_val)
         if match:
             num = int(match.group(1))
             unit = match.group(2)
-            if "day" in unit:
+            if "day" in unit or "दिन" in unit:
                 return current_now - timedelta(days=num)
-            elif "hour" in unit or "hr" in unit:
+            elif "hour" in unit or "hr" in unit or "घंटे" in unit:
                 return current_now - timedelta(hours=num)
-            elif "min" in unit:
+            elif "min" in unit or "मिनट" in unit:
                 return current_now - timedelta(minutes=num)
 
     value2 = re.sub(r'\b(IST|GMT|UTC)\b', '', value, flags=re.I).strip()
@@ -300,7 +299,7 @@ def extract_date_from_soup(soup):
 
 def is_within_rolling_window(parsed_date):
     if not parsed_date:
-        return False
+        return True  # Flexible Fallback
 
     current_time = now_ist()
     if parsed_date.tzinfo is None:
@@ -317,7 +316,7 @@ def is_within_rolling_window(parsed_date):
 
 
 # ============================================================
-# SMART HTTP FETCH (FIXES GOV.IN CONNECTION RESET ERRORS)
+# SMART HTTP FETCH ENGINE
 # ============================================================
 
 def normal_fetch(url, verify=True):
@@ -383,8 +382,7 @@ def fetch_url(url):
     if not url:
         return None
 
-    # Fix for Indian Govt Sites (.gov.in):
-    # Standard urllib3/requests handles gov.in TLS ciphers much better without curl_cffi Chrome impersonation
+    # Government sites (.gov.in) work better with standard requests SSL handling
     if ".gov.in" in url.lower():
         html = normal_fetch(url, verify=True)
         if html:
@@ -393,17 +391,14 @@ def fetch_url(url):
         if html:
             return html
 
-    # Attempt 1: curl_cffi with Chrome Impersonation
     html = curl_fetch(url, verify=True)
     if html:
         return html
 
-    # Attempt 2: curl_cffi without SSL verify
     html = curl_fetch(url, verify=False)
     if html:
         return html
 
-    # Attempt 3: Standard Requests
     html = normal_fetch(url, verify=True)
     if html:
         return html
@@ -412,7 +407,6 @@ def fetch_url(url):
     if html:
         return html
 
-    # Attempt 4: ScrapingAnt Fallback
     if SCRAPINGANT_API_KEY:
         html = scrapingant_fetch(url)
         if html:
@@ -423,7 +417,7 @@ def fetch_url(url):
 
 
 # ============================================================
-# PIB URL CONVERTER
+# PERFECT PIB URL CONVERTER (INCLUDES www & QUERY PARAMS)
 # ============================================================
 
 def convert_pib_article_url(url):
@@ -435,6 +429,9 @@ def convert_pib_article_url(url):
     query = parse_qs(parsed.query)
 
     prid = query.get("PRID", [None])[0]
+    reg = query.get("reg", ["3"])[0]
+    lang = query.get("lang", ["1"])[0]
+
     if not prid:
         m = re.search(r'PRID=(\d+)', url, flags=re.I)
         if m:
@@ -443,20 +440,23 @@ def convert_pib_article_url(url):
     if not prid:
         return url
 
-    return f"https://pib.gov.in/PressReleasePage.aspx?PRID={prid}"
+    # Guarantees full www domain with reg & lang parameters
+    return f"https://www.pib.gov.in/PressReleasePage.aspx?PRID={prid}&reg={reg}&lang={lang}"
 
 
 def pib_article_urls(url):
     urls = []
     original = clean_url(url)
-    if original:
-        urls.append(original)
 
     converted = convert_pib_article_url(original)
     if converted:
         urls.append(converted)
 
-    if "PressReleasePage.aspx" in converted:
+    if original and original not in urls:
+        urls.append(original)
+
+    # Fallback to PressReleaseIframePage if needed
+    if converted and "PressReleasePage.aspx" in converted:
         iframe = converted.replace("PressReleasePage.aspx", "PressReleaseIframePage.aspx")
         urls.append(iframe)
 
@@ -471,15 +471,14 @@ def pib_article_urls(url):
 
 
 # ============================================================
-# DEEP ARTICLE CONTENT EXTRACTION (FIXES PIB 0 CHARS ISSUE)
+# DEEP ARTICLE CONTENT EXTRACTION
 # ============================================================
 
 def extract_article_content(soup, source=""):
-    # Clean script/style noise
     for tag in soup(["script", "style", "noscript", "svg", "canvas", "nav", "footer", "form", "aside"]):
         tag.decompose()
 
-    # PIB Specific High-Priority Target Divs
+    # Priority 1: Target PIB Specific Containers
     pib_div = (
         soup.find(id="ContentPlaceHolder1_divpri") or
         soup.find(id="divpri") or
@@ -493,6 +492,7 @@ def extract_article_content(soup, source=""):
         if len(pib_text) >= 150:
             return pib_text
 
+    # Priority 2: JSON-LD Metadata
     jsonld_candidates = []
     for script in soup.find_all("script", type="application/ld+json"):
         try:
@@ -528,23 +528,23 @@ def extract_article_content(soup, source=""):
 
         for el in elements:
             txt = clean_text(el.get_text(" ", strip=True))
-            if len(txt) >= 250:
+            if len(txt) >= 200:
                 candidates.append(txt)
 
     paragraphs = []
-    for p in soup.find_all(["p", "tr"]):
+    for p in soup.find_all(["p", "tr", "li"]):
         txt = clean_text(p.get_text(" ", strip=True))
-        if len(txt) >= 25:
+        if len(txt) >= 20:
             paragraphs.append(txt)
 
     if paragraphs:
         joined = clean_text(" ".join(paragraphs))
-        if len(joined) >= 250:
+        if len(joined) >= 200:
             candidates.append(joined)
 
     for div in soup.find_all(["div", "section"]):
         txt = clean_text(div.get_text(" ", strip=True))
-        if 400 <= len(txt) <= 150000:
+        if 350 <= len(txt) <= 150000:
             candidates.append(txt)
 
     if not candidates:
@@ -601,67 +601,77 @@ def fetch_generic_article_content(url, source=""):
 
 
 # ============================================================
-# ITEM BUILDER WITH DYNAMIC TIME FILTERING
+# ITEM BUILDER WITH MULTI-LAYER DATE FALLBACK
 # ============================================================
 
 def make_item(source, title, url, date=None, content="", item_type="Scraped"):
-    title = clean_title(title)
-    url = clean_url(url)
-    content = clean_text(content)
+    clean_title_str = clean_title(title)
+    clean_url_str = clean_url(url)
+    clean_content_str = clean_text(content)
 
     parsed_date = date
+
+    # Fallback 1: Extract date from Title or Headline string
+    if not parsed_date:
+        parsed_date = parse_date(clean_title_str)
+
+    # Fallback 2: Extract date from start/end of Article Content
+    if not parsed_date:
+        parsed_date = parse_date(clean_content_str[:400]) or parse_date(clean_content_str[-400:])
+
     if isinstance(parsed_date, str):
         parsed_date = parse_date(parsed_date)
 
+    # Fallback 3: If came from active feed/listing, assign current time as last resort
     if not parsed_date:
-        warn(f"DEBUG DATE REJECTED | {source} | NO DATE FOUND | {title[:100]}")
-        return None
+        parsed_date = now_ist()
+        debug(f"FALLBACK CURRENT TIME ASSIGNED | {source} | {clean_title_str[:80]}")
 
     if parsed_date.tzinfo is None:
         parsed_date = parsed_date.replace(tzinfo=IST)
     else:
         parsed_date = parsed_date.astimezone(IST)
 
-    # Dynamic Rolling Window Filter
+    # Check against Rolling Window
     if not is_within_rolling_window(parsed_date):
         debug(
             f"DATE OUTSIDE WINDOW REJECTED | {source} | "
             f"article_time={parsed_date.strftime('%Y-%m-%d %H:%M IST')} | "
-            f"{title[:100]}"
+            f"{clean_title_str[:100]}"
         )
         return None
 
     debug(
         f"DATE ACCEPTED | {source} | "
         f"article_time={parsed_date.strftime('%Y-%m-%d %H:%M IST')} | "
-        f"{title[:100]}"
+        f"{clean_title_str[:100]}"
     )
 
     date = parsed_date
 
-    if not title or not url:
+    if not clean_title_str or not clean_url_str:
         return None
 
-    if not content or content.lower() == title.lower():
-        warn(f"DEBUG NO CONTENT | {source} | {title[:120]}")
+    if not clean_content_str or clean_content_str.lower() == clean_title_str.lower():
+        warn(f"DEBUG NO CONTENT | {source} | {clean_title_str[:120]}")
         return None
 
-    valid, chars, words = content_quality(content)
+    valid, chars, words = content_quality(clean_content_str)
 
     if not valid:
-        warn(f"DEBUG CONTENT TOO SHORT | {source} | {chars} chars | {words} words | {title[:100]}")
+        warn(f"DEBUG CONTENT TOO SHORT | {source} | {chars} chars | {words} words | {clean_title_str[:100]}")
         return None
 
-    if is_bad_portal_content(content):
-        warn(f"DEBUG PORTAL CONTENT REJECTED | {source} | {title[:100]}")
+    if is_bad_portal_content(clean_content_str):
+        warn(f"DEBUG PORTAL CONTENT REJECTED | {source} | {clean_title_str[:100]}")
         return None
 
     return {
         "source": source,
-        "title": title,
-        "url": url,
+        "title": clean_title_str,
+        "url": clean_url_str,
         "date": date.strftime("%a, %d %b %Y %H:%M:%S GMT"),
-        "content": content,
+        "content": clean_content_str,
         "content_chars": chars,
         "content_words": words,
         "type": item_type,
@@ -1191,7 +1201,6 @@ def build_news():
     all_results = []
     source_results = {}
 
-    # PRS India aur Sansad TV completely removed as requested
     source_results["PIB"] = safe_source("PIB", scrape_pib)
     source_results["News On AIR"] = safe_source("News On AIR", scrape_news_on_air)
     source_results["CMO Bihar"] = safe_source("CMO Bihar", scrape_cmo_bihar)
