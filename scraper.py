@@ -40,6 +40,7 @@ MAX_PER_SOURCE = 15
 
 MIN_CONTENT_CHARS = 400
 MIN_CONTENT_WORDS = 100
+MAX_CONTENT_WORDS = 500  # Strictly enforce max 500 words
 MAX_CONTENT_CHARS = 25000  # Strictly enforce max 25k characters (~4000-5000 words)
 
 # Rolling 24 Hours Window for max coverage
@@ -211,13 +212,23 @@ def clean_title(title):
 
 
 # ============================================================
-# CONTENT QUALITY
+# CONTENT QUALITY & WORD LIMITERS
 # ============================================================
 
 def word_count(text):
     if not text:
         return 0
     return len(re.findall(r'\S+', text))
+
+
+def trim_to_max_words(text, max_words=500):
+    """Trims content strictly to maximum 500 words"""
+    if not text:
+        return ""
+    words = text.split()
+    if len(words) > max_words:
+        return " ".join(words[:max_words]) + "..."
+    return text
 
 
 def content_quality(text):
@@ -554,7 +565,7 @@ def extract_article_content(soup, source=""):
     if target_div:
         extracted_text = clean_text(target_div.get_text(" ", strip=True))
         if len(extracted_text) >= 120:
-            return extracted_text
+            return trim_to_max_words(extracted_text, MAX_CONTENT_WORDS)
 
     jsonld_candidates = []
     for script in soup.find_all("script", type="application/ld+json"):
@@ -628,7 +639,8 @@ def extract_article_content(soup, source=""):
         return min(chars, MAX_CONTENT_CHARS) + min(words * 2, 50000)
 
     best = max(cleaned, key=score)
-    return clean_text(best)
+    clean_best = clean_text(best)
+    return trim_to_max_words(clean_best, MAX_CONTENT_WORDS)
 
 
 def fetch_generic_article_content(url, source=""):
@@ -668,16 +680,17 @@ def make_item(source, title, url, date=None, content="", item_type="Scraped"):
     if not clean_title_str or not clean_url_str:
         return None
 
-    # STRICT WORD COUNT CHECK: Discard short 20-30 word snippets
+    # STRICT WORD COUNT CHECK: Discard short snippets
     words_total = word_count(clean_content_str)
     if words_total < MIN_CONTENT_WORDS:
         warn(f"REJECTED TOO SHORT ({words_total} words < {MIN_CONTENT_WORDS}) | {source} | {clean_title_str[:45]}")
         return None
 
-    # Strictly enforce max character length
-    if len(clean_content_str) > MAX_CONTENT_CHARS:
-        clean_content_str = clean_content_str[:MAX_CONTENT_CHARS].rsplit(' ', 1)[0] + "..."
-        debug(f"CONTENT TRUNCATED | {source} | Exceeded {MAX_CONTENT_CHARS} chars | {clean_title_str[:50]}")
+    # Strictly enforce max words cap
+    if words_total > MAX_CONTENT_WORDS:
+        clean_content_str = trim_to_max_words(clean_content_str, MAX_CONTENT_WORDS)
+        words_total = word_count(clean_content_str)
+        debug(f"CONTENT CAPPED TO MAX {MAX_CONTENT_WORDS} WORDS | {source} | {clean_title_str[:45]}")
 
     parsed_date = date or parse_date(clean_title_str) or now_ist()
     if parsed_date.tzinfo is None:
@@ -1138,7 +1151,7 @@ def scrape_google_bihar():
                     real_url = get_real_publisher_url(link)
                     content, date = fetch_generic_article_content(real_url or link, "Google News Bihar")
 
-                    # STRICT WORD COUNT CHECK: Must have at least MIN_CONTENT_WORDS (60 words)
+                    # STRICT WORD COUNT CHECK: Must have at least MIN_CONTENT_WORDS (100 words)
                     if not content or word_count(content) < MIN_CONTENT_WORDS:
                         desc_tag = item.find('description')
                         desc_text = clean_text(desc_tag.text) if desc_tag is not None else ""
