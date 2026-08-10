@@ -8,12 +8,30 @@ import warnings
 from urllib.parse import quote
 from datetime import datetime, timedelta, timezone
 
-from googlenewsdecoder import gdecoderv1
 from curl_cffi import requests as curl_requests
 import requests as normal_requests
 
 from bs4 import BeautifulSoup
 from bs4 import MarkupResemblesLocatorWarning
+
+# ============================================================
+# SAFE GOOGLENEWSDECODER IMPORT (HANDLES ALL VERSIONS)
+# ============================================================
+decoding_func = None
+
+try:
+    from googlenewsdecoder import new_decodurl as decoding_func
+except ImportError:
+    try:
+        from googlenewsdecoder.new_decodurl import new_decodurl as decoding_func
+    except ImportError:
+        try:
+            from googlenewsdecoder import gdecoderv1 as decoding_func
+        except ImportError:
+            try:
+                from googlenewsdecoder import gdecoder as decoding_func
+            except ImportError:
+                decoding_func = None
 
 # ============================================================
 # CONFIGURATION
@@ -135,13 +153,29 @@ def is_content_too_similar_to_title(title, content):
 # ============================================================
 
 def get_real_publisher_url(google_rss_url):
-    try:
-        if "news.google.com" in google_rss_url:
-            decoded = gdecoderv1(google_rss_url)
-            if decoded.get("status") and decoded.get("decoded_url"):
+    """Safely decodes Google RSS URLs with library + fallback to HTTP redirect"""
+    if not google_rss_url or "news.google.com" not in google_rss_url:
+        return google_rss_url
+
+    # 1. Try googlenewsdecoder library
+    if decoding_func is not None:
+        try:
+            decoded = decoding_func(google_rss_url)
+            if isinstance(decoded, dict) and decoded.get("status") and decoded.get("decoded_url"):
                 return decoded["decoded_url"]
+            elif isinstance(decoded, str) and decoded.startswith("http"):
+                return decoded
+        except Exception:
+            pass
+
+    # 2. HTTP Redirect Fallback
+    try:
+        r = curl_requests.get(google_rss_url, headers=HEADERS, timeout=10, impersonate="chrome", allow_redirects=True)
+        if r.url and "news.google.com" not in r.url:
+            return r.url
     except Exception:
         pass
+
     return google_rss_url
 
 def fetch_web_article(url):
@@ -218,7 +252,7 @@ def make_item(source, title, url, date=None, content="", item_type="Google News"
     clean_url_str = clean_url(url)
     clean_content_str = clean_text(content)
 
-    # STRICT RULE 1: Reject if content is empty or basically title repeated
+    # STRICT RULE 1: Reject if content is empty or title repeated
     if not clean_content_str or is_content_too_similar_to_title(clean_title_str, clean_content_str):
         warn(f"REJECTED (Content same as Title) | {clean_title_str[:50]}")
         return None
@@ -301,7 +335,6 @@ def fetch_google_news_feed(categories_dict, source_label, is_bihar=False):
         debug(f"RSS returned {len(entries)} items for [{cat_name}]")
 
         count = 0
-        # Scan up to 15 articles to find 5 valid fully scraped ones
         for entry in entries[:MAX_PER_CATEGORY * 3]:
             title = clean_title(getattr(entry, 'title', ''))
             rss_link = clean_url(getattr(entry, 'link', ''))
