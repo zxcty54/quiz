@@ -1,4 +1,4 @@
-name: 1. Run Web Scraper Only
+Name: 1. Run Web Scraper Only
 
 on:
   workflow_dispatch:
@@ -47,7 +47,8 @@ jobs:
             urllib3 \
             lxml \
             requests \
-            feedparser
+            feedparser \
+            googlenewsdecoder
 
       # =====================================================
       # 4. RUN SCRAPER
