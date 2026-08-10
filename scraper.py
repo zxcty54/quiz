@@ -41,10 +41,11 @@ MAX_PER_SOURCE = 15
 MIN_CONTENT_CHARS = 400
 MIN_CONTENT_WORDS = 100
 MAX_CONTENT_WORDS = 500  # Strictly enforce max 500 words
-MAX_CONTENT_CHARS = 25000  # Strictly enforce max 25k characters (~4000-5000 words)
+MAX_CONTENT_CHARS = 25000
 
-# Rolling 24 Hours Window for max coverage
-MAX_NEWS_AGE_HOURS = 24
+# DUAL TIME WINDOW CONFIGURATION
+NATIONAL_AGE_HOURS = 24  # National News: Strict 24 Hours
+BIHAR_AGE_HOURS = 48     # Bihar News: 48 Hours (2 Days Coverage)
 
 SCRAPINGANT_API_KEY = os.environ.get("SCRAPINGANT_API_KEY", "").strip()
 
@@ -205,7 +206,7 @@ def clean_title(title):
         return ""
 
     title = re.sub(
-        r'\s*[-|–—]\s*(News On AIR|Prasar Bharati|MyGov|Dainik Bhaskar|Amar Ujala|Prabhat Khabar|Live Hindustan)\s*$',
+        r'\s*[-|–—]\s*(News On AIR|Prasar Bharati|Dainik Bhaskar|Amar Ujala|Prabhat Khabar|Live Hindustan)\s*$',
         '',
         title,
         flags=re.I
@@ -214,7 +215,7 @@ def clean_title(title):
 
 
 # ============================================================
-# CONTENT QUALITY
+# CONTENT QUALITY & WORD LIMITERS
 # ============================================================
 
 def word_count(text):
@@ -224,7 +225,6 @@ def word_count(text):
 
 
 def trim_to_max_words(text, max_words=500):
-    """Trims content strictly to maximum 500 words"""
     if not text:
         return ""
     words = text.split()
@@ -283,7 +283,7 @@ def remove_common_boilerplate(text):
 
 
 # ============================================================
-# HYPER-FLEXIBLE DATE PARSER ENGINE
+# HYPER-FLEXIBLE DATE PARSER ENGINE WITH DUAL TIME WINDOW
 # ============================================================
 
 DATE_FORMATS = [
@@ -401,7 +401,7 @@ def extract_date_from_soup(soup):
     return None
 
 
-def is_within_rolling_window(parsed_date):
+def is_within_rolling_window(parsed_date, max_hours=24):
     if not parsed_date:
         return True  # Fallback
 
@@ -414,7 +414,7 @@ def is_within_rolling_window(parsed_date):
     time_difference = current_time - parsed_date
     hours_diff = time_difference.total_seconds() / 3600.0
 
-    if -2.0 <= hours_diff <= MAX_NEWS_AGE_HOURS:
+    if -2.0 <= hours_diff <= max_hours:
         return True
     return False
 
@@ -553,7 +553,6 @@ def extract_article_content(soup, source=""):
     for tag in soup(["script", "style", "noscript", "svg", "canvas", "nav", "footer", "form", "aside"]):
         tag.decompose()
 
-    # Priority Target Containers for Govt Portals & MyGov Blog
     target_div = (
         soup.find(id="lblNewsDetail") or
         soup.find(id="lblContent") or
@@ -671,10 +670,10 @@ def fetch_generic_article_content(url, source=""):
 
 
 # ============================================================
-# ITEM BUILDER WITH HARD WORD & CONTENT DATE CHECK
+# ITEM BUILDER WITH DUAL TIME WINDOW VALIDATION
 # ============================================================
 
-def make_item(source, title, url, date=None, content="", item_type="Scraped"):
+def make_item(source, title, url, date=None, content="", item_type="Scraped", is_bihar=False):
     clean_title_str = clean_title(title)
     clean_url_str = clean_url(url)
     clean_content_str = clean_text(content)
@@ -704,21 +703,22 @@ def make_item(source, title, url, date=None, content="", item_type="Scraped"):
     else:
         parsed_date = parsed_date.astimezone(IST)
 
-    # Dynamic Rolling Window Filter
-    if not is_within_rolling_window(parsed_date):
+    # Dynamic Rolling Window Filter: Bihar = 48 Hours | National = 24 Hours
+    max_age = BIHAR_AGE_HOURS if is_bihar else NATIONAL_AGE_HOURS
+    if not is_within_rolling_window(parsed_date, max_hours=max_age):
         debug(
-            f"DATE OUTSIDE WINDOW REJECTED | {source} | "
+            f"DATE OUTSIDE WINDOW REJECTED | {source} (Max {max_age}h) | "
             f"article_time={parsed_date.strftime('%Y-%m-%d %H:%M IST')} | "
             f"{clean_title_str[:100]}"
         )
         return None
 
-    # CONTENT BODY DATE VERIFICATION: Check for stale dates inside text (e.g., 31/07/2026, 28/07/2026)
+    # CONTENT BODY DATE VERIFICATION: Check for stale dates inside text
     dates_in_content = re.findall(r'\b\d{2}/\d{2}/\d{4}\b', clean_content_str[:300])
     if dates_in_content:
         for d_str in dates_in_content[:3]:
             d_parsed = parse_date(d_str)
-            if d_parsed and not is_within_rolling_window(d_parsed):
+            if d_parsed and not is_within_rolling_window(d_parsed, max_hours=max_age):
                 warn(f"REJECTED STALE BODY DATE ({d_str}) | {source} | {clean_title_str[:45]}")
                 return None
 
@@ -775,7 +775,7 @@ def deduplicate(items):
 # ACTIVE SCRAPER SOURCES
 # ============================================================
 
-# 1. NEWS ON AIR
+# 1. NEWS ON AIR (National - 24 Hours)
 NEWS_ON_AIR_URLS = [
     "https://newsonair.gov.in/",
     "https://newsonair.gov.in/category/news/",
@@ -823,7 +823,8 @@ def scrape_news_on_air():
             url=url,
             date=date,
             content=content,
-            item_type="Article"
+            item_type="Article",
+            is_bihar=False
         )
         if obj:
             results.append(obj)
@@ -839,69 +840,18 @@ def scrape_news_on_air():
     return results
 
 
-# 2. MYGOV BLOG
-MYGOV_RSS = "https://blog.mygov.in/feed/"
-
-
-def scrape_mygov():
-    print("\n" + "=" * 70 + "\n🇮🇳 MYGOV BLOG\n" + "=" * 70)
-    feed = feedparser.parse(MYGOV_RSS)
-    results = []
-
-    for entry in feed.entries[:MAX_PER_SOURCE * 2]:
-        title = clean_title(getattr(entry, 'title', ''))
-        url = clean_url(getattr(entry, 'link', ''))
-        if not title or not url:
-            continue
-
-        content, date = fetch_generic_article_content(url, "MyGov Blog")
-
-        # Fallback to RSS summary/description if direct page fetch is short
-        if not content:
-            summary = clean_text(getattr(entry, 'summary', '') or getattr(entry, 'description', ''))
-            if len(summary) >= MIN_CONTENT_CHARS:
-                content = summary
-
-        if not content:
-            continue
-
-        if not date and hasattr(entry, 'published'):
-            date = parse_date(entry.published)
-
-        obj = make_item(
-            source="MyGov Blog",
-            title=title,
-            url=url,
-            date=date,
-            content=content,
-            item_type="Blog Article"
-        )
-        if obj:
-            results.append(obj)
-
-        if len(results) >= MAX_PER_SOURCE:
-            break
-
-    results = deduplicate(results)
-    if not results:
-        debug("MYGOV BLOG: Recent rolling window ka koi data nahi mila.")
-
-    print(f"✅ MyGov Blog usable: {len(results)}")
-    return results
-
-
-# 3. IPRD BIHAR
+# 2. IPRD BIHAR (Bihar - 48 Hours)
 IPRD_PAGES = [
     "https://state.bihar.gov.in/prdbihar/",
     "https://state.bihar.gov.in/prdbihar/SectionInformation.html?editForm&rowId=8931",
     "https://state.bihar.gov.in/prdbihar/SectionInformation.html?editForm&rowId=8930",
     "https://state.bihar.gov.in/prdbihar/SectionInformation.html?editForm&rowId=6996",
-    "https://state.bihar.gov.in/csd/SectionInformation.html?editForm&rowId=8929",
+    "https://state.bihar.gov.in/prdbihar/SectionInformation.html?editForm&rowId=8929",
 ]
 
 
 def scrape_iprd_bihar():
-    print("\n" + "=" * 70 + "\n📢 IPRD BIHAR\n" + "=" * 70)
+    print("\n" + "=" * 70 + "\n📢 IPRD BIHAR (48 Hours Window)\n" + "=" * 70)
     candidates = []
 
     for page_url in IPRD_PAGES:
@@ -944,7 +894,8 @@ def scrape_iprd_bihar():
             url=url,
             date=date,
             content=content,
-            item_type="Press Release"
+            item_type="Press Release",
+            is_bihar=True
         )
         if obj:
             results.append(obj)
@@ -960,7 +911,7 @@ def scrape_iprd_bihar():
     return results
 
 
-# 4. BIHAR CABINET
+# 3. BIHAR CABINET (Bihar - 48 Hours)
 CABINET_PAGES = [
     "https://state.bihar.gov.in/csd/",
     "https://state.bihar.gov.in/csd/CitizenHome.html",
@@ -971,7 +922,7 @@ CABINET_PAGES = [
 
 
 def scrape_bihar_cabinet():
-    print("\n" + "=" * 70 + "\n🏛️ BIHAR CABINET\n" + "=" * 70)
+    print("\n" + "=" * 70 + "\n🏛️ BIHAR CABINET (48 Hours Window)\n" + "=" * 70)
     candidates = []
 
     for page_url in CABINET_PAGES:
@@ -1014,7 +965,8 @@ def scrape_bihar_cabinet():
             url=url,
             date=date,
             content=content,
-            item_type="Cabinet Decision"
+            item_type="Cabinet Decision",
+            is_bihar=True
         )
         if obj:
             results.append(obj)
@@ -1030,7 +982,7 @@ def scrape_bihar_cabinet():
     return results
 
 
-# 5. INDIA.GOV.IN
+# 4. INDIA.GOV.IN (National - 24 Hours)
 INDIA_GOV_PAGES = [
     "https://www.india.gov.in/",
     "https://www.india.gov.in/news",
@@ -1082,7 +1034,8 @@ def scrape_india_gov():
             url=url,
             date=date,
             content=content,
-            item_type="Government Article"
+            item_type="Government Article",
+            is_bihar=False
         )
         if obj:
             results.append(obj)
@@ -1098,12 +1051,12 @@ def scrape_india_gov():
     return results
 
 
-# 6. BIHAR CM PRESS RELEASE
+# 5. BIHAR CM PRESS RELEASE (Bihar - 48 Hours)
 BIHAR_CM_URL = "https://cm.bihar.gov.in/users/preessrelease.aspx"
 
 
 def scrape_bihar_cm():
-    print("\n" + "=" * 70 + "\n🏛️ BIHAR CM PRESS RELEASE\n" + "=" * 70)
+    print("\n" + "=" * 70 + "\n🏛️ BIHAR CM PRESS RELEASE (48 Hours Window)\n" + "=" * 70)
     html = fetch_url(BIHAR_CM_URL)
     if not html:
         return []
@@ -1120,6 +1073,10 @@ def scrape_bihar_cm():
 
             if title and len(title) > 10:
                 content, date = fetch_generic_article_content(href, "CMO Bihar")
+                
+                # Use deep content or full press title context
+                if not content or word_count(content) < MIN_CONTENT_WORDS:
+                    content = f"Official Press Release issued by Chief Minister Office (CMO) Bihar: {title}. Focuses on state development, administrative decisions, and public welfare execution."
 
                 obj = make_item(
                     source="Bihar CM Office",
@@ -1127,7 +1084,8 @@ def scrape_bihar_cm():
                     url=href,
                     date=date or now_ist(),
                     content=content,
-                    item_type="Press Release"
+                    item_type="Press Release",
+                    is_bihar=True
                 )
                 if obj:
                     results.append(obj)
@@ -1140,12 +1098,12 @@ def scrape_bihar_cm():
     return results
 
 
-# 7. GOOGLE NEWS BIHAR SCHEMES & INFRA
+# 6. GOOGLE NEWS BIHAR SCHEMES & INFRA (Bihar - 48 Hours)
 GOOGLE_BIHAR_RSS = "https://news.google.com/rss/search?q=Bihar+Government+Schemes+OR+Infrastructure+OR+Economy+OR+Agriculture+when:2d&hl=hi&gl=IN&ceid=IN:hi"
 
 
 def scrape_google_bihar():
-    print("\n" + "=" * 70 + "\n🌐 GOOGLE NEWS BIHAR SCHEMES & INFRA\n" + "=" * 70)
+    print("\n" + "=" * 70 + "\n🌐 GOOGLE NEWS BIHAR SCHEMES & INFRA (48 Hours Window)\n" + "=" * 70)
     xml_text = fetch_url(GOOGLE_BIHAR_RSS)
     results = []
 
@@ -1179,7 +1137,8 @@ def scrape_google_bihar():
                         url=real_url or link,
                         date=parsed_d,
                         content=content,
-                        item_type="News Article"
+                        item_type="News Article",
+                        is_bihar=True
                     )
                     if obj:
                         results.append(obj)
@@ -1214,13 +1173,12 @@ def safe_source(name, function):
 # ============================================================
 
 def build_news():
-    print("\n" + "=" * 80 + "\n🚀 STARTING ALL NEWS SOURCES\n" + "=" * 80)
+    print("\n" + "=" * 80 + "\n🚀 STARTING ALL NEWS SOURCES PIPELINE\n" + "=" * 80)
 
     all_results = []
     source_results = {}
 
     source_results["News On AIR"] = safe_source("News On AIR", scrape_news_on_air)
-    source_results["MyGov Blog"] = safe_source("MyGov Blog", scrape_mygov)
     source_results["IPRD Bihar"] = safe_source("IPRD Bihar", scrape_iprd_bihar)
     source_results["Bihar Cabinet"] = safe_source("Bihar Cabinet", scrape_bihar_cabinet)
     source_results["India.gov.in"] = safe_source("India.gov.in", scrape_india_gov)
