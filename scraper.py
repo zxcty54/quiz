@@ -38,6 +38,9 @@ MAX_CONTENT_WORDS = 2000    # Max 2000 words limit
 
 IST = timezone(timedelta(hours=5, minutes=30))
 
+# Automatically pick up ScrapingAnt Key from GitHub Secrets
+SCRAPINGANT_API_KEY = os.environ.get("SCRAPINGANT_API_KEY", "").strip()
+
 HEADERS = {
     "User-Agent": (
         "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
@@ -119,6 +122,24 @@ def is_content_too_similar_to_title(title, content):
     return False
 
 # ============================================================
+# SCRAPINGANT PROXY FALLBACK (BYPASSES DATACENTER IP BLOCKS)
+# ============================================================
+
+def fetch_via_scrapingant(url):
+    """Uses ScrapingAnt API to bypass Cloudflare/Datacenter IP blocks on GitHub Actions"""
+    if not SCRAPINGANT_API_KEY:
+        return None
+    try:
+        sa_endpoint = f"https://api.scrapingant.com/v2/general?url={quote(url)}&x-api-key={SCRAPINGANT_API_KEY}&browser=false"
+        r = normal_requests.get(sa_endpoint, timeout=30)
+        if r.status_code == 200:
+            res_json = r.json()
+            return res_json.get("html", "")
+    except Exception as e:
+        warn(f"ScrapingAnt fallback failed for {url}: {e}")
+    return None
+
+# ============================================================
 # RELIABLE GOOGLE URL DECODER & NETWORK FETCHERS
 # ============================================================
 
@@ -128,10 +149,8 @@ def fallback_decode_google_url(google_url):
         match = re.search(r'articles/([^?]+)', google_url)
         if match:
             encoded_str = match.group(1)
-            # Add padding
             padded = encoded_str + '=' * (-len(encoded_str) % 4)
             decoded_bytes = base64.urlsafe_b64decode(padded)
-            # Find URLs inside raw binary protobuf response
             urls = re.findall(rb'https?://[^\s"<>\\{}|^\x00-\x1f\x7f-\xff]+', decoded_bytes)
             for u in urls:
                 u_str = u.decode('utf-8', errors='ignore')
@@ -202,18 +221,26 @@ def fetch_web_article(url):
     html_raw = None
     try:
         r = curl_requests.get(real_url, headers=HEADERS, timeout=TIMEOUT, impersonate="chrome", allow_redirects=True)
-        if r.status_code < 400: html_raw = r.text
+        if r.status_code < 400: 
+            html_raw = r.text
     except Exception:
         pass
 
     if not html_raw:
         try:
             r = normal_requests.get(real_url, headers=HEADERS, timeout=TIMEOUT, allow_redirects=True, verify=False)
-            if r.status_code < 400: html_raw = r.text
+            if r.status_code < 400: 
+                html_raw = r.text
         except Exception:
-            return "", real_url
+            pass
 
-    if not html_raw: return "", real_url
+    # FALLBACK: Use ScrapingAnt API if direct requests are blocked by Datacenter IP filters
+    if not html_raw and SCRAPINGANT_API_KEY:
+        debug(f"Direct request blocked. Retrying via ScrapingAnt: {real_url[:50]}")
+        html_raw = fetch_via_scrapingant(real_url)
+
+    if not html_raw: 
+        return "", real_url
 
     soup = BeautifulSoup(html_raw, "lxml")
     for tag in soup(["script", "style", "noscript", "svg", "nav", "footer", "form", "aside", "header"]):
@@ -325,17 +352,17 @@ def deduplicate(items):
 # ============================================================
 
 NATIONAL_CATEGORIES = {
-    "Polity & Governance": '("Supreme Court" OR "Cabinet Approves" OR "Act" OR "Bill")',
-    "Govt Schemes & Welfare": '("Govt Scheme" OR "Pradhan Mantri" OR "Welfare")',
-    "Economy & Banking": '("RBI Policy" OR "Union Budget" OR "Economic Survey" OR "GST Council")',
-    "International Relations": '("Bilateral" OR "G20" OR "BRICS" OR "Quad" OR "Summit")',
-    "Science, Tech & Defense": '("ISRO" OR "NASA" OR "Defense Exercise" OR "DRDO")',
-    "Environment & Infrastructure": '("Ramsar Site" OR "Expressway" OR "Renewable Energy" OR "GI Tag")'
+    "Polity & Governance": 'Supreme Court OR "Cabinet Approves" OR Act OR Bill',
+    "Govt Schemes & Welfare": '"Govt Scheme" OR "Pradhan Mantri" OR Welfare',
+    "Economy & Banking": '"RBI Policy" OR "Union Budget" OR "Economic Survey" OR "GST Council"',
+    "International Relations": 'Bilateral OR G20 OR BRICS OR Quad OR Summit',
+    "Science, Tech & Defense": 'ISRO OR NASA OR "Defense Exercise" OR DRDO',
+    "Environment & Infrastructure": '"Ramsar Site" OR Expressway OR "Renewable Energy" OR "GI Tag"'
 }
 
 BIHAR_CATEGORIES = {
-    "Bihar Schemes & Welfare": '("Bihar Scheme" OR "Mukhyamantri Scheme" OR "Bihar Welfare")',
-    "Bihar Development": '("Bihar Expressway" OR "Patna Metro" OR "Bihar Infrastructure" OR "Bihar Development")'
+    "Bihar Schemes & Welfare": 'Bihar scheme OR Mukhyamantri yojana OR Bihar welfare',
+    "Bihar Development": 'Patna Metro OR Bihar expressway OR Bihar infrastructure OR Bihar development'
 }
 
 PIB_HINDI_FEEDS = {
@@ -348,7 +375,7 @@ def fetch_google_news_feed(categories_dict, source_label, is_bihar=False):
     category_results = []
 
     for cat_name, query in categories_dict.items():
-        encoded_q = quote(f"{query} when:3d")
+        encoded_q = quote(query)
         rss_url = f"https://news.google.com/rss/search?q={encoded_q}&hl=en-IN&gl=IN&ceid=IN:en"
 
         xml_raw = fetch_rss_xml(rss_url)
