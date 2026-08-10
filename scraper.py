@@ -35,7 +35,7 @@ TIMEOUT = 20
 MAX_PER_SOURCE = 10
 
 MIN_CONTENT_WORDS = 60      # Strictly Minimum 60 words required
-MAX_CONTENT_WORDS = 1500   # Maximum 2000 words limit
+MAX_CONTENT_WORDS = 1200     # Max 800 words to avoid "line too large" editor warning
 
 # STRICT 24-HOUR ROLLING WINDOW
 DEFAULT_MAX_AGE_HOURS = 24
@@ -60,13 +60,23 @@ warnings.filterwarnings("ignore", category=MarkupResemblesLocatorWarning)
 SOURCE_STATS = defaultdict(lambda: {"fetched": 0, "accepted": 0, "rejected": 0, "reasons": defaultdict(int)})
 
 # ============================================================
-# EXCLUDE KEYWORDS BLACKLIST (Crime & Non-Bihar Local States)
+# EXCLUDE KEYWORDS BLACKLIST (Crime, Other States & ASTROLOGY)
 # ============================================================
 
 EXCLUDE_KEYWORDS = [
+    # 1. Astrology / Rashifal / Horoscope Blocking
+    "rashifal", "horoscope", "astrology", "kundali", "panchang", "jyotish", "grah nakshatra",
+    "rashi", "mesh", "vrishabh", "mithun", "kark", "sinh", "kanya", "tula", "vrishchik",
+    "dhanu", "makar", "kumbh", "meen", "zodiac", "astrological", " भविष्यफल", "राशिफल", "पंचांग",
+
+    # 2. Crime & Incidents Blocking
     "murder", "police", "arrest", "theft", "accident", "rape", "crime", "fir", "killed", "dead", "gang",
+
+    # 3. Local Politics Blocking
     "bjp", "congress", "rjd", "jdu", "aap", "election campaign", "rally", "neta", "mp", "mla",
     "party", "opposition", "voter", "vote", "seat", "by-poll",
+
+    # 4. Other Non-Bihar States Blocking
     "uttar pradesh news", "madhya pradesh news", "rajasthan news", "maharashtra news", "mumbai news",
     "delhi news", "punjab news", "haryana news", "karnataka news", "tamil nadu news", "kerala news"
 ]
@@ -173,7 +183,7 @@ def clean_text(text):
 
 def clean_title(title):
     title = clean_text(title)
-    title = re.sub(r'\s*[-|–—]\s*(The Hindu|Indian Express|Hindustan Times|Times of India|NDTV|Aaj Tak|ABP News|PIB|Livemint|Business Standard|Dainik Jagran|Amar Ujala).*$', '', title, flags=re.I)
+    title = re.sub(r'\s*[-|–—]\s*(The Hindu|Indian Express|Hindustan Times|Times of India|NDTV|Aaj Tak|ABP News|PIB|Livemint|Business Standard|Dainik Jagran|Amar Ujala|Prabhat Khabar|Live Hindustan).*$', '', title, flags=re.I)
     return title.strip()
 
 def word_count(text):
@@ -384,7 +394,7 @@ def make_item(source, title, url, date=None, content="", item_type="General News
     if total_words > MAX_CONTENT_WORDS:
         clean_content_str = trim_to_max_words(clean_content_str, MAX_CONTENT_WORDS)
 
-    # STRICT CHECK 3: Blacklist Check
+    # STRICT CHECK 3: Blacklist & Astrology Check
     matched_bad_word = check_blacklist_reason(clean_title_str, clean_content_str)
     if matched_bad_word:
         reason = f"Blacklisted word: '{matched_bad_word}'"
@@ -420,11 +430,12 @@ def deduplicate(items):
     return output
 
 # ============================================================
-# COMPREHENSIVE PUBLIC RSS FEEDS LIST (24H WINDOW FILTER)
+# COMPREHENSIVE PUBLIC RSS FEEDS (NATIONAL & ALL BIHAR SOURCES)
+# EXCLUDED: CMO, IPRD, PIB, PTI, SANSAD TV
 # ============================================================
 
 PUBLIC_RSS_SOURCES = {
-    # Direct Media RSS Feeds
+    # ------------------ NATIONAL MEDIA FEEDS ------------------
     "The Hindu National": ("National News", "https://www.thehindu.com/news/national/feeder/default.rss"),
     "The Hindu Business": ("Economy & Banking", "https://www.thehindu.com/business/feeder/default.rss"),
     "Indian Express National": ("National News", "https://indianexpress.com/section/india/feed/"),
@@ -437,17 +448,28 @@ PUBLIC_RSS_SOURCES = {
     "Dainik Jagran National (Hindi)": ("National News", "https://www.jagran.com/rss/news/national.xml"),
     "NDTV India": ("National News", "https://feeds.feedburner.com/ndtvnews-india-news"),
     
-    # Google News Targeted Categories
+    # ------------------ BIHAR SPECIFIC PUBLIC MEDIA FEEDS ------------------
+    "Dainik Jagran Bihar": ("Bihar News", "https://www.jagran.com/rss/bihar.xml"),
+    "Prabhat Khabar Bihar": ("Bihar News", "https://www.prabhatkhabar.com/state/bihar/feed"),
+    "Live Hindustan Bihar": ("Bihar News", "https://www.livehindustan.com/bihar/rss"),
+    "Amar Ujala Bihar": ("Bihar News", "https://www.amarujala.com/rss/bihar.xml"),
+    "NDTV Bihar": ("Bihar News", "https://feeds.feedburner.com/ndtvnews-bihar-news"),
+    "News18 Bihar": ("Bihar News", "https://hindi.news18.com/rss/bihar.xml"),
+    "Navbharat Times Bihar": ("Bihar News", "https://navbharattimes.indiatimes.com/state/bihar/rssfeed/2381270.cms"),
+
+    # ------------------ TARGETED GOOGLE NEWS CATEGORIES ------------------
     "GNews Polity": ("Polity & Governance", "https://news.google.com/rss/search?q=Supreme+Court+OR+Act+OR+Bill+when:1d&hl=en-IN&gl=IN&ceid=IN:en"),
     "GNews Schemes": ("Govt Schemes & Welfare", "https://news.google.com/rss/search?q=Govt+Scheme+OR+Pradhan+Mantri+OR+Welfare+when:1d&hl=en-IN&gl=IN&ceid=IN:en"),
     "GNews Science Tech": ("Science, Tech & Defense", "https://news.google.com/rss/search?q=ISRO+OR+NASA+OR+DRDO+OR+Defense+when:1d&hl=en-IN&gl=IN&ceid=IN:en"),
     "GNews Environment": ("Environment & Infrastructure", "https://news.google.com/rss/search?q=Ramsar+Site+OR+Expressway+OR+Renewable+Energy+when:1d&hl=en-IN&gl=IN&ceid=IN:en"),
+    
+    # Google News Bihar Targeted Feeds (Hindi & English)
     "GNews Bihar Schemes": ("Bihar Schemes", "https://news.google.com/rss/search?q=Bihar+scheme+OR+Mukhyamantri+yojana+OR+Bihar+welfare+when:1d&hl=hi&gl=IN&ceid=IN:hi"),
     "GNews Bihar Development": ("Bihar Development", "https://news.google.com/rss/search?q=Patna+Metro+OR+Bihar+expressway+OR+Bihar+infrastructure+when:1d&hl=hi&gl=IN&ceid=IN:hi")
 }
 
 def fetch_all_public_rss():
-    print(f"\n" + "=" * 70 + f"\n🌐 SCRAPING ALL PUBLIC RSS SOURCES (DEBUG ENABLED)\n" + "=" * 70)
+    print(f"\n" + "=" * 70 + f"\n🌐 SCRAPING ALL PUBLIC RSS SOURCES (NATIONAL + ALL BIHAR MEDIA)\n" + "=" * 70)
     all_results = []
 
     for source_name, (category, rss_url) in PUBLIC_RSS_SOURCES.items():
@@ -478,7 +500,7 @@ def fetch_all_public_rss():
                 url=final_url or link,
                 date=pub_date or now_ist(),
                 content=content,
-                item_type="Bihar News" if "Bihar" in source_name else "National News",
+                item_type="Bihar News" if ("Bihar" in source_name or "Bihar" in category) else "National News",
                 category=category
             )
 
