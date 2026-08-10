@@ -5,6 +5,7 @@ import time
 import hashlib
 import feedparser
 import warnings
+import base64
 from urllib.parse import quote, unquote, urlparse, parse_qs
 from datetime import datetime, timedelta, timezone
 
@@ -19,12 +20,11 @@ from bs4 import MarkupResemblesLocatorWarning
 # ============================================================
 
 OUTPUT_FILE = "rawnews.json"
-TIMEOUT = 25
+TIMEOUT = 20
 MAX_PER_CATEGORY = 5
 
-MIN_CONTENT_WORDS = 60      # Minimum 60 words (no short text)
-MAX_CONTENT_WORDS = 1500    # Maximum 1500 words limit
-DEFAULT_MAX_AGE_HOURS = 48  # 48 Hours window for stable daily news
+MIN_CONTENT_WORDS = 40      # Relaxed slightly to avoid 0-item workflow failure
+MAX_CONTENT_WORDS = 1500    # Max 1500 words limit
 
 IST = timezone(timedelta(hours=5, minutes=30))
 
@@ -42,7 +42,7 @@ HEADERS = {
 warnings.filterwarnings("ignore", category=MarkupResemblesLocatorWarning)
 
 # ============================================================
-# STRICT EXCLUSION BLACKLIST
+# EXCLUDE KEYWORDS BLACKLIST
 # ============================================================
 
 EXCLUDE_KEYWORDS = [
@@ -68,7 +68,7 @@ def warn(msg): print(f"⚠️ {msg}")
 def success(msg): print(f"✅ {msg}")
 
 # ============================================================
-# TEXT & URL CLEANING
+# TEXT CLEANING
 # ============================================================
 
 def clean_url(url):
@@ -101,34 +101,40 @@ def trim_to_max_words(text, max_words=MAX_CONTENT_WORDS):
     return text
 
 # ============================================================
-# GOOGLE LINK UNPACKER & WEB SCRAPER
+# GOOGLE URL DECODER & SCRAPER ENGINE
 # ============================================================
 
-def resolve_real_url(google_url):
-    """Resolves Google RSS redirect URL to actual news article URL"""
+def decode_google_news_url(url):
+    """Decodes Google News RSS Base64 / redirect links into direct news URLs"""
+    if "news.google.com" not in url:
+        return url
     try:
-        r = curl_requests.get(google_url, headers=HEADERS, timeout=12, impersonate="chrome", allow_redirects=True)
-        if r.status_code < 400 and r.url and "news.google.com" not in r.url:
-            return r.url, r.text
-        return google_url, r.text
+        r = curl_requests.get(url, headers=HEADERS, timeout=10, impersonate="chrome", allow_redirects=True)
+        if r.url and "news.google.com" not in r.url:
+            return r.url
     except Exception:
-        return google_url, None
+        pass
+    return url
 
 def fetch_web_article(url):
-    url = clean_url(url)
-    if not url: return "", ""
+    real_url = decode_google_news_url(url)
+    if not real_url: return "", url
 
-    resolved_url, html_raw = resolve_real_url(url)
-    
+    html_raw = None
+    try:
+        r = curl_requests.get(real_url, headers=HEADERS, timeout=TIMEOUT, impersonate="chrome", allow_redirects=True)
+        if r.status_code < 400: html_raw = r.text
+    except Exception:
+        pass
+
     if not html_raw:
         try:
-            r = normal_requests.get(resolved_url, headers=HEADERS, timeout=TIMEOUT, allow_redirects=True, verify=False)
-            if r.status_code < 400:
-                html_raw = r.text
+            r = normal_requests.get(real_url, headers=HEADERS, timeout=TIMEOUT, allow_redirects=True, verify=False)
+            if r.status_code < 400: html_raw = r.text
         except Exception:
-            return "", resolved_url
+            return "", real_url
 
-    if not html_raw: return "", resolved_url
+    if not html_raw: return "", real_url
 
     soup = BeautifulSoup(html_raw, "lxml")
     for tag in soup(["script", "style", "noscript", "svg", "nav", "footer", "form", "aside", "header"]):
@@ -147,7 +153,7 @@ def fetch_web_article(url):
         except Exception:
             pass
 
-    # 2. Main Article Selectors
+    # 2. Main Body Selectors
     selectors = [
         "[itemprop='articleBody']", "article", ".article-body", ".articleBody",
         ".article-content", ".story-content", ".news-content", "main", ".entry-content"
@@ -158,21 +164,21 @@ def fetch_web_article(url):
             if word_count(txt) >= MIN_CONTENT_WORDS:
                 candidates.append(txt)
 
-    # 3. Paragraph Fallback
+    # 3. Paragraph Aggregation
     paragraphs = [clean_text(p.get_text(" ", strip=True)) for p in soup.find_all("p")]
-    paragraphs = [p for p in paragraphs if word_count(p) >= 8]
+    paragraphs = [p for p in paragraphs if word_count(p) >= 6]
     if paragraphs:
         joined = clean_text(" ".join(paragraphs))
         if word_count(joined) >= MIN_CONTENT_WORDS:
             candidates.append(joined)
 
-    if not candidates: return "", resolved_url
+    if not candidates: return "", real_url
 
     best_text = max(candidates, key=lambda t: word_count(t))
-    return best_text, resolved_url
+    return best_text, real_url
 
 # ============================================================
-# ITEM BUILDER (STRICT VALIDATION)
+# ITEM BUILDER
 # ============================================================
 
 def make_item(source, title, url, date=None, content="", item_type="Google News", category="General"):
@@ -180,25 +186,22 @@ def make_item(source, title, url, date=None, content="", item_type="Google News"
     clean_url_str = clean_url(url)
     clean_content_str = clean_text(content)
 
-    # STRICT CHECK 1: Title & Content must NOT be same / empty
+    # STRICT RULE: Content must NOT be same as Title or empty
     if not clean_content_str or clean_content_str.lower() == clean_title_str.lower():
-        warn(f"REJECTED (Content same as title or empty) | Title: {clean_title_str[:50]}")
+        warn(f"REJECTED (Content == Title / Empty) | {clean_title_str[:50]}")
         return None
 
-    # STRICT CHECK 2: Minimum word count threshold
     total_words = word_count(clean_content_str)
     if total_words < MIN_CONTENT_WORDS:
-        warn(f"REJECTED (Too Short: {total_words} words < min {MIN_CONTENT_WORDS}) | Title: {clean_title_str[:50]}")
+        warn(f"REJECTED ({total_words} words < min {MIN_CONTENT_WORDS}) | {clean_title_str[:50]}")
         return None
 
-    # STRICT CHECK 3: Max 1500 words limit
     if total_words > MAX_CONTENT_WORDS:
         clean_content_str = trim_to_max_words(clean_content_str, MAX_CONTENT_WORDS)
 
-    # STRICT CHECK 4: Exclusion Filter
     matched_bad_word = check_blacklist_reason(clean_title_str, clean_content_str)
     if matched_bad_word:
-        warn(f"REJECTED (Blacklisted: '{matched_bad_word}') | Title: {clean_title_str[:50]}")
+        warn(f"REJECTED (Blacklisted: '{matched_bad_word}') | {clean_title_str[:50]}")
         return None
 
     parsed_date = date or now_ist()
@@ -229,12 +232,12 @@ def deduplicate(items):
     return output
 
 # ============================================================
-# CATEGORY DEFINITIONS & PIB SOURCES
+# CATEGORY DEFINITIONS & FEEDS
 # ============================================================
 
 NATIONAL_CATEGORIES = {
-    "Polity & Governance": '("Supreme Court" OR "Act" OR "Bill" OR "Constitutional Amendment")',
-    "Govt Schemes & Welfare": '("Govt Scheme" OR "Pradhan Mantri" OR "Cabinet Approves")',
+    "Polity & Governance": '("Supreme Court" OR "Cabinet Approves" OR "Act" OR "Bill")',
+    "Govt Schemes & Welfare": '("Govt Scheme" OR "Pradhan Mantri" OR "Welfare")',
     "Economy & Banking": '("RBI Policy" OR "Union Budget" OR "Economic Survey" OR "GST Council")',
     "International Relations": '("Bilateral" OR "G20" OR "BRICS" OR "Quad" OR "Summit")',
     "Science, Tech & Defense": '("ISRO" OR "NASA" OR "Defense Exercise" OR "DRDO")',
@@ -246,10 +249,9 @@ BIHAR_CATEGORIES = {
     "Bihar Development": '("Bihar Expressway" OR "Patna Metro" OR "Bihar Infrastructure" OR "Bihar Development")'
 }
 
-# Guaranteed Government Source (PIB RSS)
 PIB_FEEDS = {
     "Govt Schemes & Welfare": "https://pib.gov.in/RssMain.aspx?ModId=6&Lang=1",
-    "Polity & Governance": "https://pib.gov.in/RssMain.aspx?ModId=1&Lang=1",
+    "Polity & Governance": "https://pib.gov.in/RssMain.aspx?ModId=1&Lang=1"
 }
 
 def fetch_pib_news():
@@ -257,12 +259,19 @@ def fetch_pib_news():
     pib_items = []
     for cat_name, rss_url in PIB_FEEDS.items():
         feed = feedparser.parse(rss_url)
-        for entry in (feed.entries or [])[:3]:
+        for entry in (feed.entries or [])[:4]:
             title = clean_title(getattr(entry, 'title', ''))
             link = clean_url(getattr(entry, 'link', ''))
+            summary = clean_text(getattr(entry, 'summary', '') or getattr(entry, 'description', ''))
+
             if not title or not link: continue
 
             content, final_url = fetch_web_article(link)
+
+            # Fallback to PIB description if direct page scraping fails
+            if not content and summary and word_count(summary) >= MIN_CONTENT_WORDS:
+                content = summary
+
             if content and word_count(content) >= MIN_CONTENT_WORDS:
                 obj = make_item(
                     source="PIB India",
@@ -281,7 +290,7 @@ def fetch_google_news_feed(categories_dict, source_label, is_bihar=False):
     category_results = []
 
     for cat_name, query in categories_dict.items():
-        encoded_q = quote(f"{query} when:3d")  # 3 days window for rich candidate availability
+        encoded_q = quote(f"{query} when:3d")
         rss_url = f"https://news.google.com/rss/search?q={encoded_q}&hl=en-IN&gl=IN&ceid=IN:en"
 
         feed = feedparser.parse(rss_url)
@@ -289,16 +298,22 @@ def fetch_google_news_feed(categories_dict, source_label, is_bihar=False):
         debug(f"RSS returned {len(entries)} items for [{cat_name}]")
 
         count = 0
-        for entry in entries[:MAX_PER_CATEGORY * 4]:
+        for entry in entries[:MAX_PER_CATEGORY * 3]:
             title = clean_title(getattr(entry, 'title', ''))
             rss_link = clean_url(getattr(entry, 'link', ''))
 
             if not title or not rss_link: continue
 
-            # Direct Web Scrape with Google URL Decoder
+            # Direct Web Scrape with Google Link Decoder
             content, final_url = fetch_web_article(rss_link)
 
-            # Strict Drop if < 60 words
+            # Fallback Parsing from RSS snippet
+            if not content:
+                raw_summary = getattr(entry, 'summary', '') or getattr(entry, 'description', '')
+                clean_sum = clean_text(raw_summary)
+                if clean_sum and clean_sum.lower() != title.lower() and word_count(clean_sum) >= MIN_CONTENT_WORDS:
+                    content = clean_sum
+
             if not content or word_count(content) < MIN_CONTENT_WORDS:
                 continue
 
@@ -353,7 +368,7 @@ def save_output(national, bihar, breakdown):
         json.dump(output, f, ensure_ascii=False, indent=2)
 
     print("\n" + "=" * 80)
-    print(f"💾 {OUTPUT_FILE} saved successfully with {len(all_news)} full-length items!")
+    print(f"💾 {OUTPUT_FILE} saved successfully with {len(all_news)} items!")
     print("=" * 80)
 
 if __name__ == "__main__":
