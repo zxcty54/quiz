@@ -7,7 +7,6 @@ import warnings
 import feedparser
 import ssl
 import html
-import xml.etree.ElementTree as ET
 
 from datetime import datetime, timedelta, timezone
 from urllib.parse import urljoin, urlparse, parse_qs
@@ -19,16 +18,6 @@ from urllib3.util.ssl_ import create_urllib3_context
 
 from bs4 import BeautifulSoup
 from bs4 import MarkupResemblesLocatorWarning
-
-# Safe import for googlenewsdecoder
-decoding_func = None
-try:
-    from googlenewsdecoder import new_decodurl as decoding_func
-except ImportError:
-    try:
-        from googlenewsdecoder.new_decodurl import new_decodurl as decoding_func
-    except ImportError:
-        decoding_func = None
 
 # ============================================================
 # CONFIG
@@ -107,7 +96,7 @@ def success(msg):
 
 
 # ============================================================
-# URL CLEANING & GOOGLE DECODER
+# URL CLEANING
 # ============================================================
 
 def clean_url(url):
@@ -131,51 +120,6 @@ def clean_url(url):
         return ""
 
     return url
-
-
-def fallback_decode_google_url(google_url):
-    try:
-        match = re.search(r'articles/([^?]+)', google_url)
-        if match:
-            encoded_str = match.group(1)
-            padded = encoded_str + '=' * (-len(encoded_str) % 4)
-            decoded_bytes = base64.urlsafe_b64decode(padded)
-            urls = re.findall(rb'https?://[^\s"<>\\{}|^\x00-\x1f\x7f-\xff]+', decoded_bytes)
-            for u in urls:
-                u_str = u.decode('utf-8', errors='ignore')
-                if "news.google.com" not in u_str and "google.com" not in u_str:
-                    return u_str
-    except Exception:
-        pass
-    return google_url
-
-
-def get_real_publisher_url(google_rss_url):
-    if not google_rss_url or "news.google.com" not in google_rss_url:
-        return google_rss_url
-
-    if decoding_func is not None:
-        try:
-            decoded = decoding_func(google_rss_url)
-            if isinstance(decoded, dict) and decoded.get("status") and decoded.get("decoded_url"):
-                return decoded["decoded_url"]
-            elif isinstance(decoded, str) and decoded.startswith("http"):
-                return decoded
-        except Exception:
-            pass
-
-    decoded_url = fallback_decode_google_url(google_rss_url)
-    if decoded_url and "news.google.com" not in decoded_url:
-        return decoded_url
-
-    try:
-        r = curl_requests.get(google_rss_url, headers=HEADERS, timeout=10, impersonate="chrome", allow_redirects=True)
-        if r.url and "news.google.com" not in r.url:
-            return r.url
-    except Exception:
-        pass
-
-    return google_rss_url
 
 
 # ============================================================
@@ -846,7 +790,6 @@ IPRD_PAGES = [
     "https://state.bihar.gov.in/prdbihar/SectionInformation.html?editForm&rowId=8931",
     "https://state.bihar.gov.in/prdbihar/SectionInformation.html?editForm&rowId=8930",
     "https://state.bihar.gov.in/prdbihar/SectionInformation.html?editForm&rowId=6996",
-    "https://state.bihar.gov.in/prdbihar/SectionInformation.html?editForm&rowId=8929",
 ]
 
 
@@ -1098,63 +1041,6 @@ def scrape_bihar_cm():
     return results
 
 
-# 6. GOOGLE NEWS BIHAR SCHEMES & INFRA (Bihar - 48 Hours)
-GOOGLE_BIHAR_RSS = "https://news.google.com/rss/search?q=Bihar+Government+Schemes+OR+Infrastructure+OR+Economy+OR+Agriculture+when:2d&hl=hi&gl=IN&ceid=IN:hi"
-
-
-def scrape_google_bihar():
-    print("\n" + "=" * 70 + "\n🌐 GOOGLE NEWS BIHAR SCHEMES & INFRA (48 Hours Window)\n" + "=" * 70)
-    xml_text = fetch_url(GOOGLE_BIHAR_RSS)
-    results = []
-
-    if xml_text:
-        try:
-            root = ET.fromstring(xml_text)
-            count = 0
-            for item in root.findall('.//item'):
-                title = clean_title(item.find('title').text) if item.find('title') is not None else ""
-                link = item.find('link').text if item.find('link') is not None else ""
-                pub_date = item.find('pubDate').text if item.find('pubDate') is not None else ""
-
-                if title and link:
-                    real_url = get_real_publisher_url(link)
-                    content, date = fetch_generic_article_content(real_url or link, "Google News Bihar")
-
-                    if not content or word_count(content) < MIN_CONTENT_WORDS:
-                        desc_tag = item.find('description')
-                        desc_text = clean_text(desc_tag.text) if desc_tag is not None else ""
-                        if word_count(desc_text) >= MIN_CONTENT_WORDS:
-                            content = desc_text
-                        else:
-                            debug(f"DROP GOOGLE NEWS (Content too short: {word_count(content)} words) | {title[:45]}")
-                            continue
-
-                    parsed_d = parse_date(pub_date) or date or now_ist()
-
-                    obj = make_item(
-                        source="Google News Bihar",
-                        title=title,
-                        url=real_url or link,
-                        date=parsed_d,
-                        content=content,
-                        item_type="News Article",
-                        is_bihar=True
-                    )
-                    if obj:
-                        results.append(obj)
-                        count += 1
-                        if count >= MAX_PER_SOURCE: break
-        except Exception as e:
-            warn(f"⚠️ Google News Bihar XML Parse Error: {e}")
-
-    results = deduplicate(results)
-    if not results:
-        debug("GOOGLE NEWS BIHAR: Recent rolling window ka koi data nahi mila.")
-
-    print(f"✅ Google News Bihar usable: {len(results)}")
-    return results
-
-
 # ============================================================
 # SOURCE RUNNER
 # ============================================================
@@ -1183,7 +1069,6 @@ def build_news():
     source_results["Bihar Cabinet"] = safe_source("Bihar Cabinet", scrape_bihar_cabinet)
     source_results["India.gov.in"] = safe_source("India.gov.in", scrape_india_gov)
     source_results["Bihar CM Office"] = safe_source("Bihar CM Office", scrape_bihar_cm)
-    source_results["Google News Bihar"] = safe_source("Google News Bihar", scrape_google_bihar)
 
     breakdown = {}
 
@@ -1195,7 +1080,7 @@ def build_news():
 
     all_results = deduplicate(all_results)
 
-    bihar_sources = {"IPRD Bihar", "Bihar Cabinet", "Bihar CM Office", "Google News Bihar"}
+    bihar_sources = {"IPRD Bihar", "Bihar Cabinet", "Bihar CM Office"}
     bihar = []
     national = []
 
