@@ -41,7 +41,7 @@ OUTPUT_FILE = "rawnews.json"
 TIMEOUT = 25
 MAX_PER_CATEGORY = 5
 
-MIN_CONTENT_WORDS = 100     # Minimum 100 words strictly required
+MIN_CONTENT_WORDS = 60      # Minimum 60 words for full articles
 MAX_CONTENT_WORDS = 1500    # Maximum 1500 words limit
 
 IST = timezone(timedelta(hours=5, minutes=30))
@@ -68,21 +68,20 @@ EXCLUDE_KEYWORDS = [
     "murder", "police", "arrest", "theft", "accident", "rape", "crime", "fir", "killed", "dead", "gang",
     "bjp", "congress", "rjd", "jdu", "aap", "election campaign", "rally", "neta", "mp", "mla",
     "party", "opposition", "voter", "vote", "seat", "by-poll",
-    "uttar pradesh", "up news", "madhya pradesh", "rajasthan", "maharashtra", "mumbai",
-    "delhi news", "punjab", "haryana", "karnataka", "tamil nadu", "kerala", "gujarat", "bengal",
-    "chief minister", "yogi", "siddaramaiah", "stalin", "mamata", "kejriwal", "hemant",
-    "fadnavis", "shinde", "gehlot", "chouhan"
+    "uttar pradesh news", "madhya pradesh news", "rajasthan news", "maharashtra news", "mumbai news",
+    "delhi news", "punjab news", "haryana news", "karnataka news", "tamil nadu news", "kerala news",
+    "yogi", "siddaramaiah", "stalin", "mamata", "kejriwal", "hemant", "fadnavis", "shinde", "gehlot", "chouhan"
 ]
 
 CATEGORY_VERIFICATION_KEYWORDS = {
-    "Polity & Governance": ["supreme court", "high court", "bill", "act", "amendment", "constitutional", "election commission", "parliament", "judgement", "cabinet", "governance", "law"],
-    "Govt Schemes & Welfare": ["scheme", "yojana", "welfare", "pradhan mantri", "subsidy", "beneficiary", "mission", "pension", "portal", "grant", "allowance", "financial assistance"],
-    "Economy & Banking": ["rbi", "repo rate", "gdp", "inflation", "gst", "budget", "sebi", "banking", "economy", "finance", "fiscal", "export", "import", "taxation", "sensex"],
-    "International Relations": ["bilateral", "g20", "brics", "quad", "sco", "summit", "diplomatic", "mou", "pact", "foreign policy", "envoy", "ambassador", "treaty"],
-    "Science, Tech & Defense": ["isro", "nasa", "drdo", "satellite", "defense", "military", "exercise", "navy", "army", "air force", "missile", "artificial intelligence", "technology"],
-    "Environment & Infrastructure": ["ramsar", "expressway", "renewable energy", "gi tag", "tiger reserve", "solar", "climate change", "pollution", "smart city", "metro", "green hydrogen"],
-    "Bihar Schemes & Welfare": ["bihar", "mukhyamantri", "scheme", "yojana", "patna", "welfare", "subsidy", "bihar cabinet"],
-    "Bihar Development": ["bihar", "patna", "expressway", "metro", "infrastructure", "bridge", "development", "project"]
+    "Polity & Governance": ["supreme court", "high court", "bill", "act", "amendment", "constitutional", "election commission", "parliament", "judgement", "cabinet", "governance", "law", "मंत्रिमंडल", "विधेयक", "अधिनियम"],
+    "Govt Schemes & Welfare": ["scheme", "yojana", "welfare", "pradhan mantri", "subsidy", "beneficiary", "mission", "pension", "portal", "grant", "allowance", "financial assistance", "योजना", "कल्याण", "प्रधानमंत्री", "लाभार्थी"],
+    "Economy & Banking": ["rbi", "repo rate", "gdp", "inflation", "gst", "budget", "sebi", "banking", "economy", "finance", "fiscal", "export", "import", "taxation", "sensex", "वित्त", "आर्थिक", "बैंक", "बजट"],
+    "International Relations": ["bilateral", "g20", "brics", "quad", "sco", "summit", "diplomatic", "mou", "pact", "foreign policy", "envoy", "ambassador", "treaty", "द्विपक्षीय", "शिखर सम्मेलन", "समझौता"],
+    "Science, Tech & Defense": ["isro", "nasa", "drdo", "satellite", "defense", "military", "exercise", "navy", "army", "air force", "missile", "artificial intelligence", "technology", "अंतरिक्ष", "रक्षा", "सेना", "नौसेना", "उपग्रह"],
+    "Environment & Infrastructure": ["ramsar", "expressway", "renewable energy", "gi tag", "tiger reserve", "solar", "climate change", "pollution", "smart city", "metro", "green hydrogen", "पर्यावरण", "मेट्रो", "एक्सप्रेसवे"],
+    "Bihar Schemes & Welfare": ["bihar", "mukhyamantri", "scheme", "yojana", "patna", "welfare", "subsidy", "bihar cabinet", "बिहार", "मुख्यमंत्री", "पटना"],
+    "Bihar Development": ["bihar", "patna", "expressway", "metro", "infrastructure", "bridge", "development", "project", "बिहार", "पटना", "विकास", "पुल"]
 }
 
 def check_blacklist_reason(title, content=""):
@@ -149,7 +148,7 @@ def is_content_too_similar_to_title(title, content):
     return False
 
 # ============================================================
-# WEB SCRAPER ENGINE
+# WEB SCRAPER ENGINE (WITH PIB SUPPORT)
 # ============================================================
 
 def get_real_publisher_url(google_rss_url):
@@ -157,7 +156,6 @@ def get_real_publisher_url(google_rss_url):
     if not google_rss_url or "news.google.com" not in google_rss_url:
         return google_rss_url
 
-    # 1. Try googlenewsdecoder library
     if decoding_func is not None:
         try:
             decoded = decoding_func(google_rss_url)
@@ -168,7 +166,6 @@ def get_real_publisher_url(google_rss_url):
         except Exception:
             pass
 
-    # 2. HTTP Redirect Fallback
     try:
         r = curl_requests.get(google_rss_url, headers=HEADERS, timeout=10, impersonate="chrome", allow_redirects=True)
         if r.url and "news.google.com" not in r.url:
@@ -182,6 +179,10 @@ def fetch_web_article(url):
     real_url = get_real_publisher_url(url)
     if not real_url or "news.google.com" in real_url: 
         return "", real_url
+
+    # PIB Special URL Handling: Convert Iframe URL to Printable Full Page URL
+    if "pib.gov.in" in real_url and "PressReleaseIframePage.aspx" in real_url:
+        real_url = real_url.replace("PressReleaseIframePage.aspx", "PressReleasePage.aspx")
 
     html_raw = None
     try:
@@ -205,7 +206,15 @@ def fetch_web_article(url):
 
     candidates = []
 
-    # 1. JSON-LD Extraction
+    # 1. PIB Specific Selectors
+    pib_selectors = [".ReleaseText", "#pnlPrint", "#ReleaseText", ".content-area"]
+    for sel in pib_selectors:
+        for el in soup.select(sel):
+            txt = clean_text(el.get_text(" ", strip=True))
+            if word_count(txt) >= MIN_CONTENT_WORDS:
+                candidates.append(txt)
+
+    # 2. JSON-LD Extraction
     for script in soup.find_all("script", type="application/ld+json"):
         try:
             data = json.loads(script.string or script.get_text())
@@ -218,7 +227,7 @@ def fetch_web_article(url):
         except Exception:
             pass
 
-    # 2. Main Article Selectors
+    # 3. Main Article Selectors
     selectors = [
         "[itemprop='articleBody']", "article", ".article-body", ".articleBody",
         ".article-content", ".story-content", ".news-content", "main", ".entry-content",
@@ -230,9 +239,9 @@ def fetch_web_article(url):
             if word_count(txt) >= MIN_CONTENT_WORDS:
                 candidates.append(txt)
 
-    # 3. Paragraph Aggregation
+    # 4. Paragraph Aggregation Fallback
     paragraphs = [clean_text(p.get_text(" ", strip=True)) for p in soup.find_all("p")]
-    paragraphs = [p for p in paragraphs if word_count(p) >= 8]
+    paragraphs = [p for p in paragraphs if word_count(p) >= 6]
     if paragraphs:
         joined = clean_text(" ".join(paragraphs))
         if word_count(joined) >= MIN_CONTENT_WORDS:
@@ -322,6 +331,11 @@ BIHAR_CATEGORIES = {
     "Bihar Development": '("Bihar Expressway" OR "Patna Metro" OR "Bihar Infrastructure" OR "Bihar Development")'
 }
 
+PIB_HINDI_FEEDS = {
+    "Economy & Banking": "https://pib.gov.in/RssMain.aspx?ModId=6&Lang=1&Regid=3",
+    "Polity & Governance": "https://pib.gov.in/RssMain.aspx?ModId=6&Lang=1"
+}
+
 def fetch_google_news_feed(categories_dict, source_label, is_bihar=False):
     print(f"\n" + "=" * 70 + f"\n🌐 SCRAPING SOURCE: {source_label}\n" + "=" * 70)
     category_results = []
@@ -341,7 +355,6 @@ def fetch_google_news_feed(categories_dict, source_label, is_bihar=False):
 
             if not title or not rss_link: continue
 
-            # REAL SCRAPE ONLY (NO RSS FALLBACK)
             content, final_url = fetch_web_article(rss_link)
 
             if not content or word_count(content) < MIN_CONTENT_WORDS:
@@ -367,8 +380,48 @@ def fetch_google_news_feed(categories_dict, source_label, is_bihar=False):
 
     return deduplicate(category_results)
 
+def fetch_pib_news():
+    print(f"\n" + "=" * 70 + f"\n🌐 SCRAPING SOURCE: PIB Official Hindi Feeds\n" + "=" * 70)
+    pib_results = []
+
+    for cat_name, feed_url in PIB_HINDI_FEEDS.items():
+        feed = feedparser.parse(feed_url)
+        entries = feed.entries or []
+        debug(f"PIB RSS returned {len(entries)} items for [{cat_name}]")
+
+        count = 0
+        for entry in entries[:3]:
+            title = clean_title(getattr(entry, 'title', ''))
+            link = clean_url(getattr(entry, 'link', ''))
+
+            if not title or not link: continue
+
+            content, final_url = fetch_web_article(link)
+
+            if not content or word_count(content) < MIN_CONTENT_WORDS:
+                continue
+
+            obj = make_item(
+                source="PIB Press Release",
+                title=title,
+                url=final_url or link,
+                date=now_ist(),
+                content=content,
+                item_type="National News",
+                category=cat_name
+            )
+
+            if obj:
+                pib_results.append(obj)
+                count += 1
+
+    return deduplicate(pib_results)
+
 def build_news():
     national = fetch_google_news_feed(NATIONAL_CATEGORIES, "National", is_bihar=False)
+    pib_news = fetch_pib_news()
+    national = deduplicate(national + pib_news)
+    
     bihar = fetch_google_news_feed(BIHAR_CATEGORIES, "Bihar", is_bihar=True)
 
     breakdown = {
