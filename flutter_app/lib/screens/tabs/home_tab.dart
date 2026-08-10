@@ -40,8 +40,7 @@ class _HomeTabState extends State<HomeTab> {
   // 🔑 GlobalKey to trigger LatestJobsWidget refresh on Pull-to-Refresh
   final GlobalKey<LatestJobsWidgetState> _jobsWidgetKey = GlobalKey<LatestJobsWidgetState>();
 
-  List<dynamic> _biharNewsList = [];
-  List<dynamic> _nationalNewsList = [];
+  List<dynamic> _allNewsList = []; // Single List for all news
   List<dynamic> _savedNewsList = [];
   bool _isLoadingNews = true;
   
@@ -109,65 +108,55 @@ class _HomeTabState extends State<HomeTab> {
     await prefs.setString('saved_daily_bulletins', jsonEncode(_savedNewsList));
   }
 
-  // 📰 FETCH BIHAR & NATIONAL NEWS WITH INSTANT NETWORK REFRESH
+  // 📰 FETCH SINGLE NEWS JSON (finalnews.json)
   Future<void> _fetchDailyBulletins({bool forceRefresh = false}) async {
     final prefs = await SharedPreferences.getInstance();
     final String todayStr = DateTime.now().toIso8601String().split('T')[0];
     
-    const String cacheBiharData = 'cached_bihar_news_json';
-    const String cacheNationalData = 'cached_national_news_json';
+    const String cacheNewsData = 'cached_final_news_json_v2';
     const String cacheDate = 'cached_bulletin_date';
 
     final String savedDate = prefs.getString(cacheDate) ?? '';
 
+    // Step 1: Check Local Cache
     if (!forceRefresh && savedDate == todayStr) {
-      String? cachedBihar = prefs.getString(cacheBiharData);
-      String? cachedNat = prefs.getString(cacheNationalData);
-
-      if (cachedBihar != null && cachedNat != null) {
+      String? cachedJson = prefs.getString(cacheNewsData);
+      if (cachedJson != null) {
         try {
-          final bData = jsonDecode(cachedBihar);
-          final nData = jsonDecode(cachedNat);
+          final data = jsonDecode(cachedJson);
           if (mounted) {
             setState(() {
-              _biharNewsList = (bData is Map && bData.containsKey('news_cards')) ? bData['news_cards'] : [];
-              _nationalNewsList = (nData is Map && nData.containsKey('news_cards')) ? nData['news_cards'] : [];
+              _allNewsList = _parseNewsList(data);
               _isLoadingNews = false;
             });
+            debugPrint("✅ News Loaded instantly from Local Cache!");
+            return;
           }
-          debugPrint("✅ News Loaded instantly from Local Cache!");
-          return;
         } catch (_) {}
       }
     }
 
+    // Step 2: Fetch from finalnews.json
     final int timestamp = DateTime.now().millisecondsSinceEpoch;
-    final String biharUrl = "https://raw.githubusercontent.com/zxcty54/quiz/main/bihar_news.json?t=$timestamp";
-    final String nationalUrl = "https://raw.githubusercontent.com/zxcty54/quiz/main/national_news.json?t=$timestamp";
+    final String newsUrl = "https://raw.githubusercontent.com/zxcty54/quiz/main/finalnews.json?t=$timestamp";
 
     try {
-      final resBihar = await http.get(Uri.parse(biharUrl)).timeout(const Duration(seconds: 4));
-      final resNational = await http.get(Uri.parse(nationalUrl)).timeout(const Duration(seconds: 4));
+      final res = await http.get(Uri.parse(newsUrl)).timeout(const Duration(seconds: 5));
 
-      if (resBihar.statusCode == 200 || resNational.statusCode == 200) {
-        String bDecoded = resBihar.statusCode == 200 ? utf8.decode(resBihar.bodyBytes) : "{}";
-        String nDecoded = resNational.statusCode == 200 ? utf8.decode(resNational.bodyBytes) : "{}";
-
-        final bData = jsonDecode(bDecoded);
-        final nData = jsonDecode(nDecoded);
+      if (res.statusCode == 200) {
+        String decoded = utf8.decode(res.bodyBytes);
+        final data = jsonDecode(decoded);
 
         if (mounted) {
           setState(() {
-            _biharNewsList = (bData is Map && bData.containsKey('news_cards')) ? bData['news_cards'] : [];
-            _nationalNewsList = (nData is Map && nData.containsKey('news_cards')) ? nData['news_cards'] : [];
+            _allNewsList = _parseNewsList(data);
             _isLoadingNews = false;
           });
         }
 
-        await prefs.setString(cacheBiharData, bDecoded);
-        await prefs.setString(cacheNationalData, nDecoded);
+        await prefs.setString(cacheNewsData, decoded);
         await prefs.setString(cacheDate, todayStr);
-        debugPrint("✅ Fresh News Refetched and Cached!");
+        debugPrint("✅ Fresh News Refetched and Cached from finalnews.json!");
       } else {
         if (mounted) setState(() => _isLoadingNews = false);
       }
@@ -175,6 +164,46 @@ class _HomeTabState extends State<HomeTab> {
       debugPrint("Error fetching Bulletins: $e");
       if (mounted) setState(() => _isLoadingNews = false);
     }
+  }
+
+  // Helper to parse news array from direct List or Map
+  List<dynamic> _parseNewsList(dynamic data) {
+    if (data is List) {
+      return data;
+    } else if (data is Map) {
+      if (data.containsKey('bihar_news') || data.containsKey('national_news')) {
+        List combined = [];
+        if (data['bihar_news'] is List) combined.addAll(data['bihar_news']);
+        if (data['national_news'] is List) combined.addAll(data['national_news']);
+        return combined;
+      } else if (data.containsKey('news')) {
+        return data['news'] as List;
+      }
+    }
+    return [];
+  }
+
+  // 🔍 SMART FILTERING: BIHAR VS NATIONAL
+  List<dynamic> get _biharNewsList {
+    return _allNewsList.where((news) {
+      if (news is! Map) return false;
+      final id = (news['id'] ?? '').toString().toLowerCase();
+      final tag = (news['exam_tag'] ?? '').toString().toLowerCase();
+      final title = (news['title'] ?? '').toString().toLowerCase();
+      final cat = (news['category'] ?? '').toString().toLowerCase();
+
+      return id.startsWith('bih') ||
+          tag.contains('bpsc') ||
+          tag.contains('bssc') ||
+          tag.contains('bihar') ||
+          title.contains('bihar') ||
+          cat.contains('bihar');
+    }).toList();
+  }
+
+  List<dynamic> get _nationalNewsList {
+    final biharSet = _biharNewsList.toSet();
+    return _allNewsList.where((news) => !biharSet.contains(news)).toList();
   }
 
   @override
@@ -394,7 +423,9 @@ class _HomeTabState extends State<HomeTab> {
       );
     }
 
-    final activeList = _selectedNewsTab == 0 ? _biharNewsList : _nationalNewsList;
+    final biharList = _biharNewsList;
+    final nationalList = _nationalNewsList;
+    final activeList = _selectedNewsTab == 0 ? biharList : nationalList;
 
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
@@ -436,8 +467,8 @@ class _HomeTabState extends State<HomeTab> {
               ),
               child: Row(
                 children: [
-                  _buildNewsToggleChip('📍 Bihar', 0),
-                  _buildNewsToggleChip('🇮🇳 National', 1),
+                  _buildNewsToggleChip('📍 Bihar (${biharList.length})', 0),
+                  _buildNewsToggleChip('🇮🇳 National (${nationalList.length})', 1),
                 ],
               ),
             ),
