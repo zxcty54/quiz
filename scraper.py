@@ -32,10 +32,10 @@ except ImportError:
 
 OUTPUT_FILE = "rawnews.json"
 TIMEOUT = 20
-MAX_PER_SOURCE = 15
+MAX_PER_SOURCE = 10
 
 MIN_CONTENT_WORDS = 60      # Strictly Minimum 60 words required
-MAX_CONTENT_WORDS = 1200     # Max 800 words to prevent editor display overflow
+MAX_CONTENT_WORDS = 500     # Hard Limit 500 words to strictly avoid "line too large" editor warning
 
 # STRICT 24-HOUR ROLLING WINDOW
 DEFAULT_MAX_AGE_HOURS = 24
@@ -60,23 +60,28 @@ warnings.filterwarnings("ignore", category=MarkupResemblesLocatorWarning)
 SOURCE_STATS = defaultdict(lambda: {"fetched": 0, "accepted": 0, "rejected": 0, "reasons": defaultdict(int)})
 
 # ============================================================
-# EXCLUDE KEYWORDS BLACKLIST (Crime, Other States & ASTROLOGY)
+# EXCLUDE KEYWORDS BLACKLIST (Crime, Offtopic Local Incidents & Astrology)
 # ============================================================
 
 EXCLUDE_KEYWORDS = [
-    # 1. Astrology / Rashifal / Horoscope Blocking
+    # 1. Local Incidents, Offtopic & Domestic Affairs
+    "bride", "groom", "marriage", "wedding", "abscond", "dulhan", "dulha", "shadi", "vidai",
+    "love affair", "lover", "premi", "presika", "husband", "wife", "divorce", "suicide",
+    "दुल्हन", "दूल्हा", "शादी", "विदाई", "फरार", "प्रेमी", "प्रेमिका", "पति", "पत्नी", "खुदकुशी",
+
+    # 2. Astrology / Rashifal / Horoscope Blocking
     "rashifal", "horoscope", "astrology", "kundali", "panchang", "jyotish", "grah nakshatra",
     "rashi", "mesh", "vrishabh", "mithun", "kark", "sinh", "kanya", "tula", "vrishchik",
     "dhanu", "makar", "kumbh", "meen", "zodiac", "astrological", "भविष्यफल", "राशिफल", "पंचांग",
 
-    # 2. Crime & Incidents Blocking
+    # 3. Crime & Accidents Blocking
     "murder", "police", "arrest", "theft", "accident", "rape", "crime", "fir", "killed", "dead", "gang",
+    "हत्या", "गिरफ्तार", "हादसा", "चोरी", "मौत", "शव",
 
-    # 3. Local Politics Blocking
-    "bjp", "congress", "rjd", "jdu", "aap", "election campaign", "rally", "neta", "mp", "mla",
-    "party", "opposition", "voter", "vote", "seat", "by-poll",
+    # 4. Local Political Rallies
+    "election campaign", "rally", "by-poll",
 
-    # 4. Other Non-Bihar States Blocking
+    # 5. Other Non-Bihar States Blocking
     "uttar pradesh news", "madhya pradesh news", "rajasthan news", "maharashtra news", "mumbai news",
     "delhi news", "punjab news", "haryana news", "karnataka news", "tamil nadu news", "kerala news"
 ]
@@ -343,7 +348,7 @@ def fetch_web_article(url, source_name="Unknown"):
     return best_text, real_url
 
 # ============================================================
-# ITEM BUILDER WITH DEBUG LOGGING
+# ITEM BUILDER WITH HARD CONTENT TRIMMING
 # ============================================================
 
 def make_item(source, title, url, date=None, content="", item_type="General News", category="General"):
@@ -372,6 +377,11 @@ def make_item(source, title, url, date=None, content="", item_type="General News
         SOURCE_STATS[source]["reasons"][reason] += 1
         return None
 
+    # STRICT HARD LIMIT TRIMMING TO PREVENT EDITOR WARNINGS
+    if total_words > MAX_CONTENT_WORDS:
+        clean_content_str = trim_to_max_words(clean_content_str, MAX_CONTENT_WORDS)
+        total_words = word_count(clean_content_str)
+
     # STRICT CHECK 2: Last 24 Hours Date Filter Check
     parsed_date = date or now_ist()
     age_hrs = round(get_age_hours(parsed_date), 1)
@@ -381,10 +391,7 @@ def make_item(source, title, url, date=None, content="", item_type="General News
         SOURCE_STATS[source]["reasons"][reason] += 1
         return None
 
-    if total_words > MAX_CONTENT_WORDS:
-        clean_content_str = trim_to_max_words(clean_content_str, MAX_CONTENT_WORDS)
-
-    # STRICT CHECK 3: Blacklist & Astrology Check
+    # STRICT CHECK 3: Blacklist, Local Crime & Astrology Check
     matched_bad_word = check_blacklist_reason(clean_title_str, clean_content_str)
     if matched_bad_word:
         reason = f"Blacklisted word: '{matched_bad_word}'"
@@ -419,7 +426,7 @@ def deduplicate(items):
     return output
 
 # ============================================================
-# WORKING PUBLIC RSS FEEDS (FIXED BROKEN FEEDS & GOOGLE NEWS)
+# WORKING PUBLIC RSS FEEDS (NATIONAL & BIHAR)
 # ============================================================
 
 PUBLIC_RSS_SOURCES = {
@@ -542,7 +549,7 @@ def save_output(national, bihar, breakdown):
         json.dump(output, f, ensure_ascii=False, indent=2)
 
     print("\n" + "=" * 80)
-    print(f"💾 {OUTPUT_FILE} saved successfully with {len(all_news)} items (>60 words & <24h old)!")
+    print(f"💾 {OUTPUT_FILE} saved successfully with {len(all_news)} items (Cleaned & <=500 words)!")
     print("=" * 80)
 
 if __name__ == "__main__":
