@@ -1,456 +1,203 @@
 import os
 import json
-import re
 import time
-import hashlib
-import feedparser
-import warnings
-from urllib.parse import quote
-from datetime import datetime, timedelta, timezone
-
-from curl_cffi import requests as curl_requests
-import requests as normal_requests
-
-from bs4 import BeautifulSoup
-from bs4 import MarkupResemblesLocatorWarning
-
-# ============================================================
-# SAFE GOOGLENEWSDECODER IMPORT (HANDLES ALL VERSIONS)
-# ============================================================
-decoding_func = None
-
-try:
-    from googlenewsdecoder import new_decodurl as decoding_func
-except ImportError:
-    try:
-        from googlenewsdecoder.new_decodurl import new_decodurl as decoding_func
-    except ImportError:
-        try:
-            from googlenewsdecoder import gdecoderv1 as decoding_func
-        except ImportError:
-            try:
-                from googlenewsdecoder import gdecoder as decoding_func
-            except ImportError:
-                decoding_func = None
+from datetime import datetime, timezone, timedelta
+from groq import Groq
 
 # ============================================================
 # CONFIGURATION
 # ============================================================
 
-OUTPUT_FILE = "rawnews.json"
-TIMEOUT = 25
-MAX_PER_CATEGORY = 5
+INPUT_FILE = "rawnews.json"
+OUTPUT_FILE = "finalnews.json"
 
-MIN_CONTENT_WORDS = 60      # Minimum 60 words for full articles
-MAX_CONTENT_WORDS = 1500    # Maximum 1500 words limit
+GROQ_KEY = os.environ.get("GROQ_API_KEY")
+client = Groq(api_key=GROQ_KEY) if GROQ_KEY else None
+
+# Strictly Using 70B Versatile Model
+MODEL_NAME = "llama-3.3-70b-versatile"
 
 IST = timezone(timedelta(hours=5, minutes=30))
+TODAY_DATE = datetime.now(IST).strftime("%d %b %Y")
 
-HEADERS = {
-    "User-Agent": (
-        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
-        "AppleWebKit/537.36 (KHTML, like Gecko) "
-        "Chrome/124.0.0.0 Safari/537.36"
-    ),
-    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8",
-    "Accept-Language": "hi-IN,hi;q=0.9,en-IN;q=0.8,en;q=0.7",
-    "Referer": "https://www.google.com/",
-    "Upgrade-Insecure-Requests": "1"
-}
+SYSTEM_PROMPT = """
+You are an expert Current Affairs editor for competitive civil services exams (BPSC, SSC CGL, UPSC).
+Your strict task is to analyze the provided article's TITLE and CONTENT, then FILTER, CATEGORIZE, and SUMMARIZE it.
 
-warnings.filterwarnings("ignore", category=MarkupResemblesLocatorWarning)
+CRITICAL INSTRUCTION ON CATEGORIZATION:
+- IGNORE any pre-existing category or tags provided in the input.
+- Re-analyze the full text independently and assign the 'category' key ONLY from the strict list of ALLOWED TOPICS below.
 
-# ============================================================
-# EXCLUDE KEYWORDS BLACKLIST
-# ============================================================
+STRICT ALLOWED TOPICS (Assign 'category' strictly to one of these exact names):
+1. National Polity, Judiciary & Governance
+2. Govt Schemes, Policies & Social Welfare
+3. National Economy, Union Budget & Banking
+4. International Relations, Summits & Global Organizations
+5. Science, Technology, Defense & Space
+6. Agriculture, Environment, Climate & GI Tags
+7. Infrastructure, Energy & Digital Projects
+8. Awards, Appointments, Sports, Persons & Indexes
+9. Bihar Special Affairs (strictly for Bihar state news)
 
-EXCLUDE_KEYWORDS = [
-    "murder", "police", "arrest", "theft", "accident", "rape", "crime", "fir", "killed", "dead", "gang",
-    "bjp", "congress", "rjd", "jdu", "aap", "election campaign", "rally", "neta", "mp", "mla",
-    "party", "opposition", "voter", "vote", "seat", "by-poll",
-    "uttar pradesh news", "madhya pradesh news", "rajasthan news", "maharashtra news", "mumbai news",
-    "delhi news", "punjab news", "haryana news", "karnataka news", "tamil nadu news", "kerala news",
-    "yogi", "siddaramaiah", "stalin", "mamata", "kejriwal", "hemant", "fadnavis", "shinde", "gehlot", "chouhan"
-]
+REJECTION RULES (CRITICAL):
+- If the news is about local crime, accidents, viral videos, entertainment, gossip, local domestic dispute, murder, or un-important political rhetoric, set "is_relevant": false.
+- ONLY accept news that genuinely fits into one of the ALLOWED TOPICS above.
 
-CATEGORY_VERIFICATION_KEYWORDS = {
-    "Polity & Governance": ["supreme court", "high court", "bill", "act", "amendment", "constitutional", "election commission", "parliament", "judgement", "cabinet", "governance", "law", "मंत्रिमंडल", "विधेयक", "अधिनियम"],
-    "Govt Schemes & Welfare": ["scheme", "yojana", "welfare", "pradhan mantri", "subsidy", "beneficiary", "mission", "pension", "portal", "grant", "allowance", "financial assistance", "योजना", "कल्याण", "प्रधानमंत्री", "लाभार्थी"],
-    "Economy & Banking": ["rbi", "repo rate", "gdp", "inflation", "gst", "budget", "sebi", "banking", "economy", "finance", "fiscal", "export", "import", "taxation", "sensex", "वित्त", "आर्थिक", "बैंक", "बजट"],
-    "International Relations": ["bilateral", "g20", "brics", "quad", "sco", "summit", "diplomatic", "mou", "pact", "foreign policy", "envoy", "ambassador", "treaty", "द्विपक्षीय", "शिखर सम्मेलन", "समझौता"],
-    "Science, Tech & Defense": ["isro", "nasa", "drdo", "satellite", "defense", "military", "exercise", "navy", "army", "air force", "missile", "artificial intelligence", "technology", "अंतरिक्ष", "रक्षा", "सेना", "नौसेना", "उपग्रह"],
-    "Environment & Infrastructure": ["ramsar", "expressway", "renewable energy", "gi tag", "tiger reserve", "solar", "climate change", "pollution", "smart city", "metro", "green hydrogen", "पर्यावरण", "मेट्रो", "एक्सप्रेसवे"],
-    "Bihar Schemes & Welfare": ["bihar", "mukhyamantri", "scheme", "yojana", "patna", "welfare", "subsidy", "bihar cabinet", "बिहार", "मुख्यमंत्री", "पटना"],
-    "Bihar Development": ["bihar", "patna", "expressway", "metro", "infrastructure", "bridge", "development", "project", "बिहार", "पटना", "विकास", "पुल"]
-}
+OUTPUT FORMAT REQUIREMENTS:
+Output MUST be strictly valid JSON format with keys:
+- "is_relevant": true or false
+- "title": A crisp, factual headline in English
+- "category": Exact name matched from ALLOWED TOPICS
+- "bullets": Array of 2 to 3 exam-relevant factual bullet points
+- "exam_tag": 
+   - For National: "🎯 National Special / <Category Name>"
+   - For Bihar: "🏛️ Bihar Special / <Topic Name>"
+"""
 
-def check_blacklist_reason(title, content=""):
-    text = (title + " " + content).lower()
-    for bad_word in EXCLUDE_KEYWORDS:
-        if re.search(r'\b' + re.escape(bad_word) + r'\b', text):
-            return bad_word
+def call_groq_versatile(user_prompt, max_retries=5):
+    """Calls Groq llama-3.3-70b-versatile with backoff handling to prevent token expiry/limits"""
+    if not client:
+        print("❌ Groq Client is not initialized! Check GROQ_API_KEY.")
+        return None
+
+    for attempt in range(max_retries):
+        try:
+            response = client.chat.completions.create(
+                model=MODEL_NAME,
+                messages=[
+                    {"role": "system", "content": SYSTEM_PROMPT},
+                    {"role": "user", "content": user_prompt}
+                ],
+                response_format={"type": "json_object"},
+                temperature=0.2
+            )
+            return json.loads(response.choices[0].message.content.strip())
+
+        except Exception as e:
+            err_msg = str(e).lower()
+            if "429" in err_msg or "rate limit" in err_msg or "token" in err_msg:
+                # Exponential backoff: 15s, 30s, 45s wait if token limit hits
+                wait_time = (attempt + 1) * 15
+                print(f"⚠️ Rate/Token limit hit for {MODEL_NAME}. Pausing for {wait_time}s to reset limit (Retry {attempt + 1}/{max_retries})...")
+                time.sleep(wait_time)
+            else:
+                print(f"⚠️ Groq Error on attempt {attempt + 1}: {e}")
+                time.sleep(5)
+                
     return None
 
-def verify_category_relevance(title, content, category):
-    keywords = CATEGORY_VERIFICATION_KEYWORDS.get(category, [])
-    if not keywords: return True
-    full_text = (title + " " + content).lower()
-    for kw in keywords:
-        if re.search(r'\b' + re.escape(kw) + r'\b', full_text):
-            return True
-    return False
 
-def now_ist(): return datetime.now(IST)
-def debug(msg): print(f"🔍 {msg}")
-def warn(msg): print(f"⚠️ {msg}")
-def success(msg): print(f"✅ {msg}")
+def summarize_article(item, is_bihar=False):
+    title = item.get("title", "")
+    content = item.get("content", "")
 
-# ============================================================
-# TEXT CLEANING
-# ============================================================
+    news_type = "Bihar State News" if is_bihar else "National Current Affairs"
+    user_prompt = (
+        f"News Domain: {news_type}\n"
+        f"Title: {title}\n"
+        f"Content Body: {content}\n\n"
+        "Analyze text, filter, assign strict category from syllabus, and output JSON:"
+    )
 
-def clean_url(url):
-    if not url: return ""
-    url = str(url).strip()
-    m = re.search(r'\]\((https?://[^)]+)\)', url)
-    if m: url = m.group(1)
-    url = re.sub(r'^\[.*?\]\(', '', url)
-    url = re.sub(r'\)$', '', url)
-    return url if url.startswith(("http://", "https://")) else ""
+    parsed = call_groq_versatile(user_prompt)
 
-def clean_text(text):
-    if not text: return ""
-    text = BeautifulSoup(str(text), "html.parser").get_text(" ", strip=True)
-    text = text.replace("\xa0", " ").replace("\u200b", " ").replace("\ufeff", " ")
-    return re.sub(r'\s+', ' ', text).strip()
-
-def clean_title(title):
-    title = clean_text(title)
-    title = re.sub(r'\s*[-|–—]\s*(The Hindu|Indian Express|Hindustan Times|Times of India|NDTV|Aaj Tak|ABP News|PIB|Livemint|Business Standard).*$', '', title, flags=re.I)
-    return title.strip()
-
-def word_count(text):
-    return len(re.findall(r'\S+', text)) if text else 0
-
-def trim_to_max_words(text, max_words=MAX_CONTENT_WORDS):
-    words = re.findall(r'\S+', text)
-    if len(words) > max_words:
-        return " ".join(words[:max_words]) + "..."
-    return text
-
-def is_content_too_similar_to_title(title, content):
-    title_words = set(re.findall(r'\w+', title.lower()))
-    content_words = set(re.findall(r'\w+', content.lower()))
-    if not title_words or not content_words: return True
-    overlap = title_words.intersection(content_words)
-    if len(overlap) / len(title_words) > 0.70 and len(content_words) < len(title_words) + 15:
-        return True
-    return False
-
-# ============================================================
-# WEB SCRAPER ENGINE (WITH PIB SUPPORT)
-# ============================================================
-
-def get_real_publisher_url(google_rss_url):
-    """Safely decodes Google RSS URLs with library + fallback to HTTP redirect"""
-    if not google_rss_url or "news.google.com" not in google_rss_url:
-        return google_rss_url
-
-    if decoding_func is not None:
-        try:
-            decoded = decoding_func(google_rss_url)
-            if isinstance(decoded, dict) and decoded.get("status") and decoded.get("decoded_url"):
-                return decoded["decoded_url"]
-            elif isinstance(decoded, str) and decoded.startswith("http"):
-                return decoded
-        except Exception:
-            pass
-
-    try:
-        r = curl_requests.get(google_rss_url, headers=HEADERS, timeout=10, impersonate="chrome", allow_redirects=True)
-        if r.url and "news.google.com" not in r.url:
-            return r.url
-    except Exception:
-        pass
-
-    return google_rss_url
-
-def fetch_web_article(url):
-    real_url = get_real_publisher_url(url)
-    if not real_url or "news.google.com" in real_url: 
-        return "", real_url
-
-    # PIB Special URL Handling: Convert Iframe URL to Printable Full Page URL
-    if "pib.gov.in" in real_url and "PressReleaseIframePage.aspx" in real_url:
-        real_url = real_url.replace("PressReleaseIframePage.aspx", "PressReleasePage.aspx")
-
-    html_raw = None
-    try:
-        r = curl_requests.get(real_url, headers=HEADERS, timeout=TIMEOUT, impersonate="chrome", allow_redirects=True)
-        if r.status_code < 400: html_raw = r.text
-    except Exception:
-        pass
-
-    if not html_raw:
-        try:
-            r = normal_requests.get(real_url, headers=HEADERS, timeout=TIMEOUT, allow_redirects=True, verify=False)
-            if r.status_code < 400: html_raw = r.text
-        except Exception:
-            return "", real_url
-
-    if not html_raw: return "", real_url
-
-    soup = BeautifulSoup(html_raw, "lxml")
-    for tag in soup(["script", "style", "noscript", "svg", "nav", "footer", "form", "aside", "header"]):
-        tag.decompose()
-
-    candidates = []
-
-    # 1. PIB Specific Selectors
-    pib_selectors = [".ReleaseText", "#pnlPrint", "#ReleaseText", ".content-area"]
-    for sel in pib_selectors:
-        for el in soup.select(sel):
-            txt = clean_text(el.get_text(" ", strip=True))
-            if word_count(txt) >= MIN_CONTENT_WORDS:
-                candidates.append(txt)
-
-    # 2. JSON-LD Extraction
-    for script in soup.find_all("script", type="application/ld+json"):
-        try:
-            data = json.loads(script.string or script.get_text())
-            objects = data if isinstance(data, list) else [data]
-            for obj in objects:
-                if isinstance(obj, dict) and obj.get("articleBody"):
-                    txt = clean_text(obj.get("articleBody"))
-                    if word_count(txt) >= MIN_CONTENT_WORDS:
-                        candidates.append(txt)
-        except Exception:
-            pass
-
-    # 3. Main Article Selectors
-    selectors = [
-        "[itemprop='articleBody']", "article", ".article-body", ".articleBody",
-        ".article-content", ".story-content", ".news-content", "main", ".entry-content",
-        "#article-body", ".full-article", ".post-content"
-    ]
-    for selector in selectors:
-        for el in soup.select(selector):
-            txt = clean_text(el.get_text(" ", strip=True))
-            if word_count(txt) >= MIN_CONTENT_WORDS:
-                candidates.append(txt)
-
-    # 4. Paragraph Aggregation Fallback
-    paragraphs = [clean_text(p.get_text(" ", strip=True)) for p in soup.find_all("p")]
-    paragraphs = [p for p in paragraphs if word_count(p) >= 6]
-    if paragraphs:
-        joined = clean_text(" ".join(paragraphs))
-        if word_count(joined) >= MIN_CONTENT_WORDS:
-            candidates.append(joined)
-
-    if not candidates: return "", real_url
-
-    best_text = max(candidates, key=lambda t: word_count(t))
-    return best_text, real_url
-
-# ============================================================
-# ITEM BUILDER
-# ============================================================
-
-def make_item(source, title, url, date=None, content="", item_type="Google News", category="General"):
-    clean_title_str = clean_title(title)
-    clean_url_str = clean_url(url)
-    clean_content_str = clean_text(content)
-
-    # STRICT RULE 1: Reject if content is empty or title repeated
-    if not clean_content_str or is_content_too_similar_to_title(clean_title_str, clean_content_str):
-        warn(f"REJECTED (Content same as Title) | {clean_title_str[:50]}")
+    if not parsed:
+        print(f"❌ Skipping [{title[:30]}...] due to persistent API limits/failure.")
         return None
 
-    # STRICT RULE 2: Minimum word count check
-    total_words = word_count(clean_content_str)
-    if total_words < MIN_CONTENT_WORDS:
-        warn(f"REJECTED ({total_words} words < min {MIN_CONTENT_WORDS}) | {clean_title_str[:50]}")
+    if not parsed.get("is_relevant", True):
+        print(f"  ⏭️ SKIPPED (Unnecessary News): {title[:50]}...")
         return None
 
-    # STRICT RULE 3: Category Verification
-    if not verify_category_relevance(clean_title_str, clean_content_str, category):
-        warn(f"REJECTED (Category Mismatch '{category}') | {clean_title_str[:50]}")
-        return None
-
-    if total_words > MAX_CONTENT_WORDS:
-        clean_content_str = trim_to_max_words(clean_content_str, MAX_CONTENT_WORDS)
-
-    # STRICT RULE 4: Blacklist Check
-    matched_bad_word = check_blacklist_reason(clean_title_str, clean_content_str)
-    if matched_bad_word:
-        warn(f"REJECTED (Blacklisted: '{matched_bad_word}') | {clean_title_str[:50]}")
-        return None
-
-    parsed_date = date or now_ist()
-
-    success(f"ACCEPTED | Words: {word_count(clean_content_str)} | Category: {category} | Title: {clean_title_str[:50]}")
+    assigned_category = parsed.get("category") or ("Bihar Special Affairs" if is_bihar else "National Polity, Judiciary & Governance")
+    default_prefix = "🏛️ Bihar Special" if is_bihar else "🎯 National Special"
+    exam_tag = parsed.get("exam_tag") or f"{default_prefix} / {assigned_category}"
 
     return {
-        "source": source,
-        "category": category,
-        "title": clean_title_str,
-        "url": clean_url_str,
-        "date": parsed_date.strftime("%a, %d %b %Y %H:%M:%S GMT"),
-        "content": clean_content_str,
-        "content_chars": len(clean_content_str),
-        "content_words": word_count(clean_content_str),
-        "type": item_type,
+        "title": parsed.get("title", title),
+        "category": assigned_category,
+        "bullets": parsed.get("bullets", [content[:150] + "..."]),
+        "exam_tag": exam_tag,
+        "date": TODAY_DATE
     }
 
-def deduplicate(items):
-    seen = set()
-    output = []
-    for item in items:
-        key = item.get("url") or item.get("title")
-        key_hash = hashlib.sha1(key.lower().encode("utf-8")).hexdigest()
-        if key_hash not in seen:
-            seen.add(key_hash)
-            output.append(item)
-    return output
 
-# ============================================================
-# MAIN SCRAPING PIPELINE
-# ============================================================
+def process_all_news():
+    if not os.path.exists(INPUT_FILE):
+        print(f"❌ {INPUT_FILE} not found!")
+        return
 
-NATIONAL_CATEGORIES = {
-    "Polity & Governance": '("Supreme Court" OR "Cabinet Approves" OR "Act" OR "Bill")',
-    "Govt Schemes & Welfare": '("Govt Scheme" OR "Pradhan Mantri" OR "Welfare")',
-    "Economy & Banking": '("RBI Policy" OR "Union Budget" OR "Economic Survey" OR "GST Council")',
-    "International Relations": '("Bilateral" OR "G20" OR "BRICS" OR "Quad" OR "Summit")',
-    "Science, Tech & Defense": '("ISRO" OR "NASA" OR "Defense Exercise" OR "DRDO")',
-    "Environment & Infrastructure": '("Ramsar Site" OR "Expressway" OR "Renewable Energy" OR "GI Tag")'
-}
+    with open(INPUT_FILE, "r", encoding="utf-8") as f:
+        raw_data = json.load(f)
 
-BIHAR_CATEGORIES = {
-    "Bihar Schemes & Welfare": '("Bihar Scheme" OR "Mukhyamantri Scheme" OR "Bihar Welfare")',
-    "Bihar Development": '("Bihar Expressway" OR "Patna Metro" OR "Bihar Infrastructure" OR "Bihar Development")'
-}
+    national_raw = raw_data.get("national_raw_news", [])
+    bihar_raw = raw_data.get("bihar_raw_news", [])
 
-PIB_HINDI_FEEDS = {
-    "Economy & Banking": "https://pib.gov.in/RssMain.aspx?ModId=6&Lang=1&Regid=3",
-    "Polity & Governance": "https://pib.gov.in/RssMain.aspx?ModId=6&Lang=1"
-}
+    print(f"🚀 Starting AI Summarization using ONLY [{MODEL_NAME}]...")
+    print(f"📦 Raw Inputs -> National: {len(national_raw)} | Bihar: {len(bihar_raw)}")
 
-def fetch_google_news_feed(categories_dict, source_label, is_bihar=False):
-    print(f"\n" + "=" * 70 + f"\n🌐 SCRAPING SOURCE: {source_label}\n" + "=" * 70)
-    category_results = []
+    national_cards = []
+    bihar_cards = []
 
-    for cat_name, query in categories_dict.items():
-        encoded_q = quote(f"{query} when:3d")
-        rss_url = f"https://news.google.com/rss/search?q={encoded_q}&hl=en-IN&gl=IN&ceid=IN:en"
+    # Process National News
+    print("\n🇮🇳 Processing National News...")
+    nat_idx = 1
+    for item in national_raw:
+        print(f"[National {nat_idx}] Summarizing: {item.get('title', '')[:50]}...")
+        card_data = summarize_article(item, is_bihar=False)
+        
+        if card_data:
+            formatted_card = {
+                "id": f"nat_{nat_idx:02d}",
+                "title": card_data["title"],
+                "category": card_data["category"],
+                "bullets": card_data["bullets"],
+                "exam_tag": card_data["exam_tag"],
+                "date": card_data["date"]
+            }
+            national_cards.append(formatted_card)
+            nat_idx += 1
+            
+        time.sleep(5)  # 5-second safe delay for Versatile 70B model
 
-        feed = feedparser.parse(rss_url)
-        entries = feed.entries or []
-        debug(f"RSS returned {len(entries)} items for [{cat_name}]")
+    # Process Bihar News
+    print("\n🏛️ Processing Bihar News...")
+    bih_idx = 1
+    for item in bihar_raw:
+        print(f"[Bihar {bih_idx}] Summarizing: {item.get('title', '')[:50]}...")
+        card_data = summarize_article(item, is_bihar=True)
 
-        count = 0
-        for entry in entries[:MAX_PER_CATEGORY * 3]:
-            title = clean_title(getattr(entry, 'title', ''))
-            rss_link = clean_url(getattr(entry, 'link', ''))
+        if card_data:
+            formatted_card = {
+                "id": f"bih_{bih_idx:02d}",
+                "title": card_data["title"],
+                "category": card_data["category"],
+                "bullets": card_data["bullets"],
+                "exam_tag": card_data["exam_tag"],
+                "date": card_data["date"]
+            }
+            bihar_cards.append(formatted_card)
+            bih_idx += 1
+            
+        time.sleep(5)  # 5-second safe delay
 
-            if not title or not rss_link: continue
-
-            content, final_url = fetch_web_article(rss_link)
-
-            if not content or word_count(content) < MIN_CONTENT_WORDS:
-                warn(f"REJECTED (Scraping Failed/Blocked) | {title[:50]}")
-                continue
-
-            obj = make_item(
-                source="Google News Central" if not is_bihar else "Google News Bihar",
-                title=title,
-                url=final_url or rss_link,
-                date=now_ist(),
-                content=content,
-                item_type="National News" if not is_bihar else "Bihar News",
-                category=cat_name
-            )
-
-            if obj:
-                category_results.append(obj)
-                count += 1
-
-            if count >= MAX_PER_CATEGORY:
-                break
-
-    return deduplicate(category_results)
-
-def fetch_pib_news():
-    print(f"\n" + "=" * 70 + f"\n🌐 SCRAPING SOURCE: PIB Official Hindi Feeds\n" + "=" * 70)
-    pib_results = []
-
-    for cat_name, feed_url in PIB_HINDI_FEEDS.items():
-        feed = feedparser.parse(feed_url)
-        entries = feed.entries or []
-        debug(f"PIB RSS returned {len(entries)} items for [{cat_name}]")
-
-        count = 0
-        for entry in entries[:3]:
-            title = clean_title(getattr(entry, 'title', ''))
-            link = clean_url(getattr(entry, 'link', ''))
-
-            if not title or not link: continue
-
-            content, final_url = fetch_web_article(link)
-
-            if not content or word_count(content) < MIN_CONTENT_WORDS:
-                continue
-
-            obj = make_item(
-                source="PIB Press Release",
-                title=title,
-                url=final_url or link,
-                date=now_ist(),
-                content=content,
-                item_type="National News",
-                category=cat_name
-            )
-
-            if obj:
-                pib_results.append(obj)
-                count += 1
-
-    return deduplicate(pib_results)
-
-def build_news():
-    national = fetch_google_news_feed(NATIONAL_CATEGORIES, "National", is_bihar=False)
-    pib_news = fetch_pib_news()
-    national = deduplicate(national + pib_news)
-    
-    bihar = fetch_google_news_feed(BIHAR_CATEGORIES, "Bihar", is_bihar=True)
-
-    breakdown = {
-        "Google News National": len(national),
-        "Google News Bihar": len(bihar)
-    }
-
-    return national, bihar, breakdown
-
-def save_output(national, bihar, breakdown):
-    all_news = national + bihar
-
-    output = {
-        "generated_at": now_ist().strftime("%Y-%m-%d %H:%M:%S"),
-        "bihar_raw_count": len(bihar),
-        "national_raw_count": len(national),
-        "total_raw_count": len(all_news),
-        "bihar_raw_news": bihar,
-        "national_raw_news": national,
-        "source_breakdown": breakdown,
+    output_data = {
+        "generated_at": datetime.now(IST).strftime("%Y-%m-%d %H:%M:%S"),
+        "national_count": len(national_cards),
+        "bihar_count": len(bihar_cards),
+        "total_count": len(national_cards) + len(bihar_cards),
+        "national_news": national_cards,
+        "bihar_news": bihar_cards
     }
 
     with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
-        json.dump(output, f, ensure_ascii=False, indent=2)
+        json.dump(output_data, f, ensure_ascii=False, indent=2)
 
     print("\n" + "=" * 80)
-    print(f"💾 {OUTPUT_FILE} saved successfully with {len(all_news)} full-length items!")
+    print(f"💾 Successfully generated '{OUTPUT_FILE}' using {MODEL_NAME}!")
+    print(f"📊 Accepted -> National: {len(national_cards)} | Bihar: {len(bihar_cards)}")
     print("=" * 80)
 
+
 if __name__ == "__main__":
-    national, bihar, breakdown = build_news()
-    save_output(national, bihar, breakdown)
+    process_all_news()
