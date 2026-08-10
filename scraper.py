@@ -25,14 +25,14 @@ from bs4 import MarkupResemblesLocatorWarning
 
 OUTPUT_FILE = "rawnews.json"
 TIMEOUT = 25
-MAX_PER_SOURCE = 10
+MAX_PER_SOURCE = 15
 
 MIN_CONTENT_CHARS = 200
 MIN_CONTENT_WORDS = 40
-MAX_CONTENT_CHARS = 30000
+MAX_CONTENT_CHARS = 25000  # Strictly enforce max 25k characters (~4000-5000 words)
 
 # Rolling 36 Hours Window for max coverage
-MAX_NEWS_AGE_HOURS = 36
+MAX_NEWS_AGE_HOURS = 24
 
 SCRAPINGANT_API_KEY = os.environ.get("SCRAPINGANT_API_KEY", "").strip()
 
@@ -540,7 +540,8 @@ def extract_article_content(soup, source=""):
 
     for div in soup.find_all(["div", "section"]):
         txt = clean_text(div.get_text(" ", strip=True))
-        if 300 <= len(txt) <= 150000:
+        # Restricted max candidate length from 150000 to MAX_CONTENT_CHARS
+        if 300 <= len(txt) <= MAX_CONTENT_CHARS:
             candidates.append(txt)
 
     if not candidates:
@@ -559,7 +560,7 @@ def extract_article_content(soup, source=""):
     def score(text):
         words = word_count(text)
         chars = len(text)
-        return min(chars, 100000) + min(words * 2, 50000)
+        return min(chars, MAX_CONTENT_CHARS) + min(words * 2, 50000)
 
     best = max(cleaned, key=score)
     return clean_text(best)
@@ -591,13 +592,18 @@ def fetch_generic_article_content(url, source=""):
 
 
 # ============================================================
-# ITEM BUILDER WITH DYNAMIC DATE FALLBACKS
+# ITEM BUILDER WITH DYNAMIC DATE FALLBACKS & STRICT TRUNCATION
 # ============================================================
 
 def make_item(source, title, url, date=None, content="", item_type="Scraped"):
     clean_title_str = clean_title(title)
     clean_url_str = clean_url(url)
     clean_content_str = clean_text(content)
+
+    # Strictly enforce max character length
+    if len(clean_content_str) > MAX_CONTENT_CHARS:
+        clean_content_str = clean_content_str[:MAX_CONTENT_CHARS].rsplit(' ', 1)[0] + "..."
+        debug(f"CONTENT TRUNCATED | {source} | Exceeded {MAX_CONTENT_CHARS} chars | {clean_title_str[:50]}")
 
     parsed_date = date
 
